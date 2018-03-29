@@ -113,7 +113,7 @@ public class StructuredRegulatoryReporting2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredRegulatoryReporting2, Optional<Max3Text>> mmCode = new MMMessageAttribute<StructuredRegulatoryReporting2, Optional<Max3Text>>() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmObject();
@@ -125,6 +125,16 @@ public class StructuredRegulatoryReporting2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(StructuredRegulatoryReporting2 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(StructuredRegulatoryReporting2 obj, Optional<Max3Text> value) {
+			obj.setCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -164,7 +174,7 @@ public class StructuredRegulatoryReporting2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredRegulatoryReporting2, Optional<CurrencyAndAmount>> mmAmount = new MMMessageAttribute<StructuredRegulatoryReporting2, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmObject();
@@ -176,6 +186,16 @@ public class StructuredRegulatoryReporting2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(StructuredRegulatoryReporting2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(StructuredRegulatoryReporting2 obj, Optional<CurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Inf")
@@ -214,7 +234,7 @@ public class StructuredRegulatoryReporting2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredRegulatoryReporting2, Optional<Max35Text>> mmInformation = new MMMessageAttribute<StructuredRegulatoryReporting2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmObject();
@@ -226,6 +246,16 @@ public class StructuredRegulatoryReporting2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StructuredRegulatoryReporting2 obj) {
+			return obj.getInformation();
+		}
+
+		@Override
+		public void setValue(StructuredRegulatoryReporting2 obj, Optional<Max35Text> value) {
+			obj.setInformation(value.orElse(null));
 		}
 	};
 

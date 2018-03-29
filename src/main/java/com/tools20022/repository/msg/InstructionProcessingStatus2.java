@@ -106,7 +106,7 @@ public class InstructionProcessingStatus2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus2, Max350Text> mmPlaceAndName = new MMMessageAttribute<InstructionProcessingStatus2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus2.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class InstructionProcessingStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(InstructionProcessingStatus2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "RjctCd")
@@ -153,7 +163,7 @@ public class InstructionProcessingStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus2, Optional<Max8Text>> mmRejectCode = new MMMessageAttribute<InstructionProcessingStatus2, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus2.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class InstructionProcessingStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(InstructionProcessingStatus2 obj) {
+			return obj.getRejectCode();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus2 obj, Optional<Max8Text> value) {
+			obj.setRejectCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OutptRjctInd")
@@ -200,7 +220,7 @@ public class InstructionProcessingStatus2 {
 	 * definition} = "Indicates if the transaction has any errors."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOutputRejectIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus2, Optional<Max1NumericText>> mmOutputRejectIndicator = new MMMessageAttribute<InstructionProcessingStatus2, Optional<Max1NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus2.mmObject();
 			isDerived = false;
@@ -212,6 +232,16 @@ public class InstructionProcessingStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max1NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max1NumericText> getValue(InstructionProcessingStatus2 obj) {
+			return obj.getOutputRejectIndicator();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus2 obj, Optional<Max1NumericText> value) {
+			obj.setOutputRejectIndicator(value.orElse(null));
 		}
 	};
 

@@ -104,7 +104,7 @@ public class Role4Choice {
 	 * definition} = "Role of the party in the activity expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Role4Choice, InvestmentFundRole2Code> mmCode = new MMMessageAttribute<Role4Choice, InvestmentFundRole2Code>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role4Choice.mmObject();
@@ -116,6 +116,16 @@ public class Role4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundRole2Code.mmObject();
+		}
+
+		@Override
+		public InvestmentFundRole2Code getValue(Role4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Role4Choice obj, InvestmentFundRole2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -152,7 +162,7 @@ public class Role4Choice {
 	 * "Role of the party in the activity expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Role4Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<Role4Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role4Choice.mmObject();
@@ -165,6 +175,16 @@ public class Role4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(Role4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Role4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

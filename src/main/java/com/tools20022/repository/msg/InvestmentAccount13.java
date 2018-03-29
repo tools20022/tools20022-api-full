@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -124,7 +125,7 @@ public class InvestmentAccount13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount13, AccountIdentification1> mmAccountIdentification = new MMMessageAttribute<InvestmentAccount13, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
@@ -135,7 +136,17 @@ public class InvestmentAccount13 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(InvestmentAccount13 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount13 obj, AccountIdentification1 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctNm")
@@ -174,7 +185,7 @@ public class InvestmentAccount13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount13, Optional<Max35Text>> mmAccountName = new MMMessageAttribute<InvestmentAccount13, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
@@ -186,6 +197,16 @@ public class InvestmentAccount13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount13 obj) {
+			return obj.getAccountName();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount13 obj, Optional<Max35Text> value) {
+			obj.setAccountName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctDsgnt")
@@ -224,7 +245,7 @@ public class InvestmentAccount13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount13, Optional<Max35Text>> mmAccountDesignation = new MMMessageAttribute<InvestmentAccount13, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
@@ -236,6 +257,16 @@ public class InvestmentAccount13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount13 obj) {
+			return obj.getAccountDesignation();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount13 obj, Optional<Max35Text> value) {
+			obj.setAccountDesignation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OwnrId")
@@ -273,7 +304,7 @@ public class InvestmentAccount13 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount13, List<PartyIdentification2Choice>> mmOwnerIdentification = new MMMessageAttribute<InvestmentAccount13, List<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
@@ -284,6 +315,16 @@ public class InvestmentAccount13 {
 			definition = "Party that legally owns the account.";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification2Choice> getValue(InvestmentAccount13 obj) {
+			return obj.getOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount13 obj, List<PartyIdentification2Choice> value) {
+			obj.setOwnerIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -323,7 +364,7 @@ public class InvestmentAccount13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount13, Optional<PartyIdentification2Choice>> mmAccountServicer = new MMMessageAttribute<InvestmentAccount13, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
@@ -335,6 +376,16 @@ public class InvestmentAccount13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(InvestmentAccount13 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount13 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -357,7 +408,7 @@ public class InvestmentAccount13 {
 		return accountIdentification;
 	}
 
-	public InvestmentAccount13 setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
+	public InvestmentAccount13 setAccountIdentification(AccountIdentification1 accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}

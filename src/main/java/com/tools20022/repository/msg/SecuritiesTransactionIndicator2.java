@@ -110,7 +110,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWaiverIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, List<ReportingWaiverType1Code>> mmWaiverIndicator = new MMMessageAttribute<SecuritiesTransactionIndicator2, List<ReportingWaiverType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class SecuritiesTransactionIndicator2 {
 			definition = "Indicates whether the transaction was executed under a pre-trade waiver.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ReportingWaiverType1Code.mmObject();
+		}
+
+		@Override
+		public List<ReportingWaiverType1Code> getValue(SecuritiesTransactionIndicator2 obj) {
+			return obj.getWaiverIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionIndicator2 obj, List<ReportingWaiverType1Code> value) {
+			obj.setWaiverIndicator(value);
 		}
 	};
 	@XmlElement(name = "ShrtSellgInd")
@@ -153,7 +163,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortSellingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, Optional<Side5Code>> mmShortSellingIndicator = new MMMessageAttribute<SecuritiesTransactionIndicator2, Optional<Side5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class SecuritiesTransactionIndicator2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Side5Code.mmObject();
+		}
+
+		@Override
+		public Optional<Side5Code> getValue(SecuritiesTransactionIndicator2 obj) {
+			return obj.getShortSellingIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionIndicator2 obj, Optional<Side5Code> value) {
+			obj.setShortSellingIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OTCPstTradInd")
@@ -198,7 +218,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOTCPostTradeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, List<ReportingWaiverType3Code>> mmOTCPostTradeIndicator = new MMMessageAttribute<SecuritiesTransactionIndicator2, List<ReportingWaiverType3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -208,6 +228,16 @@ public class SecuritiesTransactionIndicator2 {
 			definition = "Indicates the type of transaction in accordance with the local regulation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ReportingWaiverType3Code.mmObject();
+		}
+
+		@Override
+		public List<ReportingWaiverType3Code> getValue(SecuritiesTransactionIndicator2 obj) {
+			return obj.getOTCPostTradeIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionIndicator2 obj, List<ReportingWaiverType3Code> value) {
+			obj.setOTCPostTradeIndicator(value);
 		}
 	};
 	@XmlElement(name = "RskRdcgTx")
@@ -242,7 +272,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRiskReducingTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, Optional<TrueFalseIndicator>> mmRiskReducingTransaction = new MMMessageAttribute<SecuritiesTransactionIndicator2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -253,6 +283,16 @@ public class SecuritiesTransactionIndicator2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(SecuritiesTransactionIndicator2 obj) {
+			return obj.getRiskReducingTransaction();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionIndicator2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setRiskReducingTransaction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesFincgTxInd", required = true)
@@ -287,7 +327,7 @@ public class SecuritiesTransactionIndicator2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesFinancingTransactionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionIndicator2, TrueFalseIndicator> mmSecuritiesFinancingTransactionIndicator = new MMMessageAttribute<SecuritiesTransactionIndicator2, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionIndicator2.mmObject();
 			isDerived = false;
@@ -298,6 +338,16 @@ public class SecuritiesTransactionIndicator2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(SecuritiesTransactionIndicator2 obj) {
+			return obj.getSecuritiesFinancingTransactionIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionIndicator2 obj, TrueFalseIndicator value) {
+			obj.setSecuritiesFinancingTransactionIndicator(value);
 		}
 	};
 

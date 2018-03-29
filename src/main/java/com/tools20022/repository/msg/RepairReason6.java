@@ -125,7 +125,7 @@ public class RepairReason6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepairReason6, RepairReason1Choice> mmCode = new MMMessageAssociationEnd<RepairReason6, RepairReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepairReason6.mmObject();
@@ -140,6 +140,16 @@ public class RepairReason6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RepairReason1Choice.mmObject();
+		}
+
+		@Override
+		public RepairReason1Choice getValue(RepairReason6 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RepairReason6 obj, RepairReason1Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -188,7 +198,7 @@ public class RepairReason6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepairReason6, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RepairReason6, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepairReason6.mmObject();
@@ -202,6 +212,16 @@ public class RepairReason6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(RepairReason6 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RepairReason6 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

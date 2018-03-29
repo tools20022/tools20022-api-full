@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class AccountIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification5, Max35Text> mmIdentification = new MMMessageAttribute<AccountIdentification5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification5.mmObject();
@@ -126,6 +127,16 @@ public class AccountIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentification5 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentification5 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -162,7 +173,7 @@ public class AccountIdentification5 {
 	 * definition} = "Description of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification5, Optional<Max35Text>> mmName = new MMMessageAttribute<AccountIdentification5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification5.mmObject();
@@ -174,6 +185,16 @@ public class AccountIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountIdentification5 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(AccountIdentification5 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -211,7 +232,7 @@ public class AccountIdentification5 {
 	 * definition} = "Specifies the type of account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification5, Optional<GenericIdentification30>> mmType = new MMMessageAttribute<AccountIdentification5, Optional<GenericIdentification30>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification5.mmObject();
@@ -222,7 +243,17 @@ public class AccountIdentification5 {
 			definition = "Specifies the type of account.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
+			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification30> getValue(AccountIdentification5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(AccountIdentification5 obj, Optional<GenericIdentification30> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 
@@ -263,7 +294,7 @@ public class AccountIdentification5 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public AccountIdentification5 setType(com.tools20022.repository.msg.GenericIdentification30 type) {
+	public AccountIdentification5 setType(GenericIdentification30 type) {
 		this.type = type;
 		return this;
 	}

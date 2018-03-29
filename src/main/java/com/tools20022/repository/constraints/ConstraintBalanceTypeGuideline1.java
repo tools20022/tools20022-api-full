@@ -51,11 +51,15 @@ public class ConstraintBalanceTypeGuideline1 {
 	 */
 	public static final MMConstraint<BalanceDetails5> forBalanceDetails5 = new MMConstraint<BalanceDetails5>() {
 		{
-			validator = ConstraintBalanceTypeGuideline1::checkBalanceDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTypeGuideline1";
 			definition = "Balance Type codes used are subject to market practice and/or bilateral service level agreements.";
 			owner_lazy = () -> BalanceDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BalanceDetails5 obj) throws Exception {
+			checkBalanceDetails5(obj);
 		}
 	};
 

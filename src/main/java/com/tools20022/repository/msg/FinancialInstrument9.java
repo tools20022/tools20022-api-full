@@ -145,7 +145,7 @@ public class FinancialInstrument9 {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument9, SecurityIdentification3Choice> mmIdentification = new MMMessageAttribute<FinancialInstrument9, SecurityIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
@@ -157,6 +157,16 @@ public class FinancialInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification3Choice getValue(FinancialInstrument9 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument9 obj, SecurityIdentification3Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -193,7 +203,7 @@ public class FinancialInstrument9 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument9, Optional<Max350Text>> mmName = new MMMessageAttribute<FinancialInstrument9, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
@@ -205,6 +215,16 @@ public class FinancialInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(FinancialInstrument9 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument9 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryId")
@@ -238,7 +258,7 @@ public class FinancialInstrument9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSupplementaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument9, Optional<Max35Text>> mmSupplementaryIdentification = new MMMessageAttribute<FinancialInstrument9, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
 			isDerived = false;
@@ -249,6 +269,16 @@ public class FinancialInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FinancialInstrument9 obj) {
+			return obj.getSupplementaryIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument9 obj, Optional<Max35Text> value) {
+			obj.setSupplementaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdNAVCcy")
@@ -288,7 +318,7 @@ public class FinancialInstrument9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument9, Optional<ActiveOrHistoricCurrencyCode>> mmRequestedNAVCurrency = new MMMessageAttribute<FinancialInstrument9, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
@@ -300,6 +330,16 @@ public class FinancialInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(FinancialInstrument9 obj) {
+			return obj.getRequestedNAVCurrency();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument9 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setRequestedNAVCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClssTp")
@@ -338,7 +378,7 @@ public class FinancialInstrument9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument9, Optional<Max35Text>> mmClassType = new MMMessageAttribute<FinancialInstrument9, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
@@ -350,6 +390,16 @@ public class FinancialInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FinancialInstrument9 obj) {
+			return obj.getClassType();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument9 obj, Optional<Max35Text> value) {
+			obj.setClassType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesForm")
@@ -391,7 +441,7 @@ public class FinancialInstrument9 {
 	 * "Form, ie, ownership, of the security, eg, registered or bearer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument9, Optional<FormOfSecurity1Code>> mmSecuritiesForm = new MMMessageAttribute<FinancialInstrument9, Optional<FormOfSecurity1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
@@ -404,6 +454,16 @@ public class FinancialInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<FormOfSecurity1Code> getValue(FinancialInstrument9 obj) {
+			return obj.getSecuritiesForm();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument9 obj, Optional<FormOfSecurity1Code> value) {
+			obj.setSecuritiesForm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DstrbtnPlcy")
@@ -443,7 +503,7 @@ public class FinancialInstrument9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDistributionPolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument9, Optional<DistributionPolicy1Code>> mmDistributionPolicy = new MMMessageAttribute<FinancialInstrument9, Optional<DistributionPolicy1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDistributionPolicy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
@@ -455,6 +515,16 @@ public class FinancialInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DistributionPolicy1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DistributionPolicy1Code> getValue(FinancialInstrument9 obj) {
+			return obj.getDistributionPolicy();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument9 obj, Optional<DistributionPolicy1Code> value) {
+			obj.setDistributionPolicy(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DualFndInd", required = true)
@@ -492,7 +562,7 @@ public class FinancialInstrument9 {
 	 * definition} = "Indicates whether the fund has two prices."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDualFundIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument9, YesNoIndicator> mmDualFundIndicator = new MMMessageAttribute<FinancialInstrument9, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDualFundIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument9.mmObject();
@@ -504,6 +574,16 @@ public class FinancialInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FinancialInstrument9 obj) {
+			return obj.getDualFundIndicator();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument9 obj, YesNoIndicator value) {
+			obj.setDualFundIndicator(value);
 		}
 	};
 

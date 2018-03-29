@@ -108,7 +108,7 @@ public class Price7 {
 	 * {@linkplain com.tools20022.repository.msg.Price2#mmType Price2.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Price7, YieldedOrValueType1Choice> mmType = new MMMessageAssociationEnd<Price7, YieldedOrValueType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Price7.mmObject();
@@ -122,6 +122,16 @@ public class Price7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> YieldedOrValueType1Choice.mmObject();
+		}
+
+		@Override
+		public YieldedOrValueType1Choice getValue(Price7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Price7 obj, YieldedOrValueType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -163,7 +173,7 @@ public class Price7 {
 	 * {@linkplain com.tools20022.repository.msg.Price2#mmValue Price2.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Price7, PriceRateOrAmount3Choice> mmValue = new MMMessageAttribute<Price7, PriceRateOrAmount3Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Price7.mmObject();
@@ -176,6 +186,16 @@ public class Price7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PriceRateOrAmount3Choice.mmObject();
+		}
+
+		@Override
+		public PriceRateOrAmount3Choice getValue(Price7 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(Price7 obj, PriceRateOrAmount3Choice value) {
+			obj.setValue(value);
 		}
 	};
 

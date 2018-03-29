@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Vote4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -145,7 +146,7 @@ public class DetailedInstructionStatus2 {
 	 * "Identifies the detailed instruction with an instruction message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus2, Max35Text> mmInstructionIdentification = new MMMessageAttribute<DetailedInstructionStatus2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> MeetingServicing.mmMeetingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus2.mmObject();
@@ -157,6 +158,16 @@ public class DetailedInstructionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DetailedInstructionStatus2 obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus2 obj, Max35Text value) {
+			obj.setInstructionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -193,7 +204,7 @@ public class DetailedInstructionStatus2 {
 	 * definition} = "Identifies the safekeeping account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus2, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<DetailedInstructionStatus2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus2.mmObject();
@@ -205,6 +216,16 @@ public class DetailedInstructionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DetailedInstructionStatus2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus2 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -241,7 +262,7 @@ public class DetailedInstructionStatus2 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedInstructionStatus2, Optional<PartyIdentification9Choice>> mmAccountOwner = new MMMessageAssociationEnd<DetailedInstructionStatus2, Optional<PartyIdentification9Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus2.mmObject();
@@ -254,6 +275,16 @@ public class DetailedInstructionStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification9Choice> getValue(DetailedInstructionStatus2 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus2 obj, Optional<PartyIdentification9Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubAcctId")
@@ -290,7 +321,7 @@ public class DetailedInstructionStatus2 {
 	 * definition} = "Identifies the subaccount of the safekeeping account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus2, Optional<Max35Text>> mmSubAccountIdentification = new MMMessageAttribute<DetailedInstructionStatus2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus2.mmObject();
@@ -302,6 +333,16 @@ public class DetailedInstructionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DetailedInstructionStatus2 obj) {
+			return obj.getSubAccountIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus2 obj, Optional<Max35Text> value) {
+			obj.setSubAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RghtsHldr")
@@ -338,7 +379,7 @@ public class DetailedInstructionStatus2 {
 	 * definition} = "Owner of the voting rights."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRightsHolder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedInstructionStatus2, List<PartyIdentification9Choice>> mmRightsHolder = new MMMessageAssociationEnd<DetailedInstructionStatus2, List<PartyIdentification9Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus2.mmObject();
@@ -351,6 +392,16 @@ public class DetailedInstructionStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification9Choice> getValue(DetailedInstructionStatus2 obj) {
+			return obj.getRightsHolder();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus2 obj, List<PartyIdentification9Choice> value) {
+			obj.setRightsHolder(value);
 		}
 	};
 	@XmlElement(name = "StgInstr", required = true)
@@ -389,7 +440,7 @@ public class DetailedInstructionStatus2 {
 	 * "Indicates whether standing instructions have been applied or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandingInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus2, YesNoIndicator> mmStandingInstruction = new MMMessageAttribute<DetailedInstructionStatus2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmStandingVotingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus2.mmObject();
@@ -402,9 +453,19 @@ public class DetailedInstructionStatus2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(DetailedInstructionStatus2 obj) {
+			return obj.getStandingInstruction();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus2 obj, YesNoIndicator value) {
+			obj.setStandingInstruction(value);
+		}
 	};
 	@XmlElement(name = "VotePerRsltn", required = true)
-	protected List<com.tools20022.repository.msg.Vote4> votePerResolution;
+	protected List<Vote4> votePerResolution;
 	/**
 	 * 
 	 <p>
@@ -435,7 +496,7 @@ public class DetailedInstructionStatus2 {
 	 * definition} = "Details of the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVotePerResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedInstructionStatus2, List<Vote4>> mmVotePerResolution = new MMMessageAssociationEnd<DetailedInstructionStatus2, List<Vote4>>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus2.mmObject();
@@ -447,7 +508,17 @@ public class DetailedInstructionStatus2 {
 			maxOccurs = 200;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Vote4.mmObject();
+			type_lazy = () -> Vote4.mmObject();
+		}
+
+		@Override
+		public List<Vote4> getValue(DetailedInstructionStatus2 obj) {
+			return obj.getVotePerResolution();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus2 obj, List<Vote4> value) {
+			obj.setVotePerResolution(value);
 		}
 	};
 
@@ -529,7 +600,7 @@ public class DetailedInstructionStatus2 {
 		return votePerResolution == null ? votePerResolution = new ArrayList<>() : votePerResolution;
 	}
 
-	public DetailedInstructionStatus2 setVotePerResolution(List<com.tools20022.repository.msg.Vote4> votePerResolution) {
+	public DetailedInstructionStatus2 setVotePerResolution(List<Vote4> votePerResolution) {
 		this.votePerResolution = Objects.requireNonNull(votePerResolution);
 		return this;
 	}

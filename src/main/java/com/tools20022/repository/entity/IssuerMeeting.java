@@ -26,7 +26,6 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -161,7 +160,7 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIssuerMeetingIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IssuerMeeting, Max35Text> mmIssuerMeetingIdentification = new MMBusinessAttribute<IssuerMeeting, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(MeetingNotice1.mmIssuerMeetingIdentification, MeetingNotice2.mmIssuerMeetingIdentification, MeetingNotice3.mmIssuerMeetingIdentification, MeetingReference1.mmIssuerMeetingIdentification,
 					MeetingReference2.mmIssuerMeetingIdentification, MeetingReference5.mmIssuerMeetingIdentification, MeetingReference3.mmIssuerMeetingIdentification, MeetingReference4.mmIssuerMeetingIdentification,
@@ -176,12 +175,14 @@ public class IssuerMeeting extends Meeting {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IssuerMeeting.class.getMethod("getIssuerMeetingIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(IssuerMeeting obj) {
+			return obj.getIssuerMeetingIdentification();
+		}
+
+		@Override
+		public void setValue(IssuerMeeting obj, Max35Text value) {
+			obj.setIssuerMeetingIdentification(value);
 		}
 	};
 	protected YesNoIndicator nomineePowerOfAttorneyIndicator;
@@ -213,7 +214,7 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNomineePowerOfAttorneyIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmNomineePowerOfAttorneyIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
@@ -225,12 +226,14 @@ public class IssuerMeeting extends Meeting {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IssuerMeeting.class.getMethod("getNomineePowerOfAttorneyIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(IssuerMeeting obj) {
+			return obj.getNomineePowerOfAttorneyIndicator();
+		}
+
+		@Override
+		public void setValue(IssuerMeeting obj, YesNoIndicator value) {
+			obj.setNomineePowerOfAttorneyIndicator(value);
 		}
 	};
 	protected YesNoIndicator nomineeVotingIndicator;
@@ -262,7 +265,7 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNomineeVotingIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmNomineeVotingIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
@@ -274,12 +277,14 @@ public class IssuerMeeting extends Meeting {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IssuerMeeting.class.getMethod("getNomineeVotingIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(IssuerMeeting obj) {
+			return obj.getNomineeVotingIndicator();
+		}
+
+		@Override
+		public void setValue(IssuerMeeting obj, YesNoIndicator value) {
+			obj.setNomineeVotingIndicator(value);
 		}
 	};
 	protected YesNoIndicator nomineeBeneficialOwnerIndicator;
@@ -311,7 +316,7 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNomineeBeneficialOwnerIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmNomineeBeneficialOwnerIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
@@ -323,12 +328,14 @@ public class IssuerMeeting extends Meeting {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IssuerMeeting.class.getMethod("getNomineeBeneficialOwnerIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(IssuerMeeting obj) {
+			return obj.getNomineeBeneficialOwnerIndicator();
+		}
+
+		@Override
+		public void setValue(IssuerMeeting obj, YesNoIndicator value) {
+			obj.setNomineeBeneficialOwnerIndicator(value);
 		}
 	};
 	protected YesNoIndicator proxyVotingIndicator;
@@ -360,7 +367,7 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmProxyVotingIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmProxyVotingIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
@@ -372,12 +379,14 @@ public class IssuerMeeting extends Meeting {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IssuerMeeting.class.getMethod("getProxyVotingIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(IssuerMeeting obj) {
+			return obj.getProxyVotingIndicator();
+		}
+
+		@Override
+		public void setValue(IssuerMeeting obj, YesNoIndicator value) {
+			obj.setProxyVotingIndicator(value);
 		}
 	};
 	protected YesNoIndicator proxyBeneficialOwnerIndicator;
@@ -409,7 +418,7 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmProxyBeneficialOwnerIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmProxyBeneficialOwnerIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
@@ -421,12 +430,14 @@ public class IssuerMeeting extends Meeting {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IssuerMeeting.class.getMethod("getProxyBeneficialOwnerIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(IssuerMeeting obj) {
+			return obj.getProxyBeneficialOwnerIndicator();
+		}
+
+		@Override
+		public void setValue(IssuerMeeting obj, YesNoIndicator value) {
+			obj.setProxyBeneficialOwnerIndicator(value);
 		}
 	};
 	protected YesNoIndicator proxyPowerOfAttorneyIndicator;
@@ -458,7 +469,7 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmProxyPowerOfAttorneyIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmProxyPowerOfAttorneyIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
@@ -470,12 +481,14 @@ public class IssuerMeeting extends Meeting {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IssuerMeeting.class.getMethod("getProxyPowerOfAttorneyIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(IssuerMeeting obj) {
+			return obj.getProxyPowerOfAttorneyIndicator();
+		}
+
+		@Override
+		public void setValue(IssuerMeeting obj, YesNoIndicator value) {
+			obj.setProxyPowerOfAttorneyIndicator(value);
 		}
 	};
 	protected YesNoIndicator validCreditorIndicator;
@@ -507,7 +520,7 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmValidCreditorIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IssuerMeeting, YesNoIndicator> mmValidCreditorIndicator = new MMBusinessAttribute<IssuerMeeting, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
@@ -519,12 +532,14 @@ public class IssuerMeeting extends Meeting {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IssuerMeeting.class.getMethod("getValidCreditorIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(IssuerMeeting obj) {
+			return obj.getValidCreditorIndicator();
+		}
+
+		@Override
+		public void setValue(IssuerMeeting obj, YesNoIndicator value) {
+			obj.setValidCreditorIndicator(value);
 		}
 	};
 	protected CurrencyAndAmount capitalStock;
@@ -556,7 +571,7 @@ public class IssuerMeeting extends Meeting {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCapitalStock = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IssuerMeeting, CurrencyAndAmount> mmCapitalStock = new MMBusinessAttribute<IssuerMeeting, CurrencyAndAmount>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IssuerMeeting.mmObject();
@@ -568,12 +583,14 @@ public class IssuerMeeting extends Meeting {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IssuerMeeting.class.getMethod("getCapitalStock", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(IssuerMeeting obj) {
+			return obj.getCapitalStock();
+		}
+
+		@Override
+		public void setValue(IssuerMeeting obj, CurrencyAndAmount value) {
+			obj.setCapitalStock(value);
 		}
 	};
 

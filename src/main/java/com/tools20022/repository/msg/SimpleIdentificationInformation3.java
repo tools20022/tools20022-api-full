@@ -105,7 +105,7 @@ public class SimpleIdentificationInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SimpleIdentificationInformation3, Max34Text> mmIdentification = new MMMessageAttribute<SimpleIdentificationInformation3, Max34Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SimpleIdentificationInformation3.mmObject();
@@ -117,6 +117,16 @@ public class SimpleIdentificationInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max34Text.mmObject();
+		}
+
+		@Override
+		public Max34Text getValue(SimpleIdentificationInformation3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SimpleIdentificationInformation3 obj, Max34Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

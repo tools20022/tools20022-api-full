@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DetailedAmount15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -155,7 +156,7 @@ public class CardPaymentTransactionDetails32 {
 	 * CardPaymentTransactionDetails25.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails32, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<CardPaymentTransactionDetails32, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmObject();
@@ -169,6 +170,16 @@ public class CardPaymentTransactionDetails32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(CardPaymentTransactionDetails32 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails32 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlAmt", required = true)
@@ -219,7 +230,7 @@ public class CardPaymentTransactionDetails32 {
 	 * CardPaymentTransactionDetails25.mmTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails32, ImpliedCurrencyAndAmount> mmTotalAmount = new MMMessageAttribute<CardPaymentTransactionDetails32, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmObject();
@@ -233,6 +244,16 @@ public class CardPaymentTransactionDetails32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(CardPaymentTransactionDetails32 obj) {
+			return obj.getTotalAmount();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails32 obj, ImpliedCurrencyAndAmount value) {
+			obj.setTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "DtldAmt")
@@ -282,7 +303,7 @@ public class CardPaymentTransactionDetails32 {
 	 * CardPaymentTransactionDetails25.mmDetailedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDetailedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransactionDetails32, Optional<DetailedAmount15>> mmDetailedAmount = new MMMessageAssociationEnd<CardPaymentTransactionDetails32, Optional<DetailedAmount15>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmDetailedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmObject();
@@ -296,7 +317,17 @@ public class CardPaymentTransactionDetails32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount15.mmObject();
+			type_lazy = () -> DetailedAmount15.mmObject();
+		}
+
+		@Override
+		public Optional<DetailedAmount15> getValue(CardPaymentTransactionDetails32 obj) {
+			return obj.getDetailedAmount();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails32 obj, Optional<DetailedAmount15> value) {
+			obj.setDetailedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvcAmt")
@@ -338,7 +369,7 @@ public class CardPaymentTransactionDetails32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails32, Optional<ImpliedCurrencyAndAmount>> mmInvoiceAmount = new MMMessageAttribute<CardPaymentTransactionDetails32, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmObject();
 			isDerived = false;
@@ -350,6 +381,16 @@ public class CardPaymentTransactionDetails32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CardPaymentTransactionDetails32 obj) {
+			return obj.getInvoiceAmount();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails32 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setInvoiceAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtyDt")
@@ -400,7 +441,7 @@ public class CardPaymentTransactionDetails32 {
 	 * CardPaymentTransactionDetails25.mmValidityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails32, Optional<ISODate>> mmValidityDate = new MMMessageAttribute<CardPaymentTransactionDetails32, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmValidityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmObject();
@@ -414,6 +455,16 @@ public class CardPaymentTransactionDetails32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CardPaymentTransactionDetails32 obj) {
+			return obj.getValidityDate();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails32 obj, Optional<ISODate> value) {
+			obj.setValidityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctTp")
@@ -464,7 +515,7 @@ public class CardPaymentTransactionDetails32 {
 	 * CardPaymentTransactionDetails25.mmAccountType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails32, Optional<CardAccountType3Code>> mmAccountType = new MMMessageAttribute<CardPaymentTransactionDetails32, Optional<CardAccountType3Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmRelatedAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmObject();
@@ -478,6 +529,16 @@ public class CardPaymentTransactionDetails32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardAccountType3Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardAccountType3Code> getValue(CardPaymentTransactionDetails32 obj) {
+			return obj.getAccountType();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails32 obj, Optional<CardAccountType3Code> value) {
+			obj.setAccountType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ICCRltdData")
@@ -528,7 +589,7 @@ public class CardPaymentTransactionDetails32 {
 	 * CardPaymentTransactionDetails25.mmICCRelatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransactionDetails32, Optional<Max10000Binary>> mmICCRelatedData = new MMMessageAttribute<CardPaymentTransactionDetails32, Optional<Max10000Binary>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmICCRelatedData;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails32.mmObject();
@@ -542,6 +603,16 @@ public class CardPaymentTransactionDetails32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max10000Binary> getValue(CardPaymentTransactionDetails32 obj) {
+			return obj.getICCRelatedData();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionDetails32 obj, Optional<Max10000Binary> value) {
+			obj.setICCRelatedData(value.orElse(null));
 		}
 	};
 
@@ -586,7 +657,7 @@ public class CardPaymentTransactionDetails32 {
 		return detailedAmount == null ? Optional.empty() : Optional.of(detailedAmount);
 	}
 
-	public CardPaymentTransactionDetails32 setDetailedAmount(com.tools20022.repository.msg.DetailedAmount15 detailedAmount) {
+	public CardPaymentTransactionDetails32 setDetailedAmount(DetailedAmount15 detailedAmount) {
 		this.detailedAmount = detailedAmount;
 		return this;
 	}

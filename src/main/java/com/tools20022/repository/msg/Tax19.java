@@ -123,7 +123,7 @@ public class Tax19 {
 	 * definition} = "Type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax19, TaxDetailsType1Choice> mmTaxType = new MMMessageAssociationEnd<Tax19, TaxDetailsType1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Tax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax19.mmObject();
@@ -136,6 +136,16 @@ public class Tax19 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TaxDetailsType1Choice.mmObject();
+		}
+
+		@Override
+		public TaxDetailsType1Choice getValue(Tax19 obj) {
+			return obj.getTaxType();
+		}
+
+		@Override
+		public void setValue(Tax19 obj, TaxDetailsType1Choice value) {
+			obj.setTaxType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -172,7 +182,7 @@ public class Tax19 {
 	 * "Amount of money resulting from the calculation of the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax19, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Tax19, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax19.mmObject();
@@ -184,6 +194,16 @@ public class Tax19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(Tax19 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Tax19 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -219,7 +239,7 @@ public class Tax19 {
 	 * definition} = "Rate used to calculate the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax19, Optional<PercentageRate>> mmRate = new MMMessageAttribute<Tax19, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax19.mmObject();
@@ -231,6 +251,16 @@ public class Tax19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Tax19 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Tax19 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -266,7 +296,7 @@ public class Tax19 {
 	 * definition} = "Country where the tax is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax19, Optional<CountryCode>> mmCountry = new MMMessageAttribute<Tax19, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmTaxationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax19.mmObject();
@@ -278,6 +308,16 @@ public class Tax19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(Tax19 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(Tax19 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EUDvddStsTp")
@@ -313,7 +353,7 @@ public class Tax19 {
 	 * definition} = "EU dividend status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEUDividendStatusType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax19, Optional<EUDividendStatusType1Choice>> mmEUDividendStatusType = new MMMessageAssociationEnd<Tax19, Optional<EUDividendStatusType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax19.mmObject();
@@ -326,6 +366,16 @@ public class Tax19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> EUDividendStatusType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<EUDividendStatusType1Choice> getValue(Tax19 obj) {
+			return obj.getEUDividendStatusType();
+		}
+
+		@Override
+		public void setValue(Tax19 obj, Optional<EUDividendStatusType1Choice> value) {
+			obj.setEUDividendStatusType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EUCptlGnTp")
@@ -361,7 +411,7 @@ public class Tax19 {
 	 * definition} = "EU capital gain."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEUCapitalGainType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax19, Optional<EUCapitalGainType1Choice>> mmEUCapitalGainType = new MMMessageAssociationEnd<Tax19, Optional<EUCapitalGainType1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax19.mmObject();
@@ -374,6 +424,16 @@ public class Tax19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> EUCapitalGainType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<EUCapitalGainType1Choice> getValue(Tax19 obj) {
+			return obj.getEUCapitalGainType();
+		}
+
+		@Override
+		public void setValue(Tax19 obj, Optional<EUCapitalGainType1Choice> value) {
+			obj.setEUCapitalGainType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -407,7 +467,7 @@ public class Tax19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax19, Optional<PartyIdentification2Choice>> mmRecipientIdentification = new MMMessageAttribute<Tax19, Optional<PartyIdentification2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax19.mmObject();
 			isDerived = false;
@@ -418,6 +478,16 @@ public class Tax19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Tax19 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Tax19 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XmptnInd", required = true)
@@ -454,7 +524,7 @@ public class Tax19 {
 	 * definition} = "Indicates whether a tax exemption applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax19, YesNoIndicator> mmExemptionIndicator = new MMMessageAttribute<Tax19, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmExemptionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax19.mmObject();
@@ -466,6 +536,16 @@ public class Tax19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Tax19 obj) {
+			return obj.getExemptionIndicator();
+		}
+
+		@Override
+		public void setValue(Tax19 obj, YesNoIndicator value) {
+			obj.setExemptionIndicator(value);
 		}
 	};
 	@XmlElement(name = "XmptnRsnTp")
@@ -501,7 +581,7 @@ public class Tax19 {
 	 * definition} = "Reason for the exemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExemptionReasonType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax19, Optional<ExemptionReasonType1Choice>> mmExemptionReasonType = new MMMessageAssociationEnd<Tax19, Optional<ExemptionReasonType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax19.mmObject();
@@ -514,6 +594,16 @@ public class Tax19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ExemptionReasonType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ExemptionReasonType1Choice> getValue(Tax19 obj) {
+			return obj.getExemptionReasonType();
+		}
+
+		@Override
+		public void setValue(Tax19 obj, Optional<ExemptionReasonType1Choice> value) {
+			obj.setExemptionReasonType(value.orElse(null));
 		}
 	};
 

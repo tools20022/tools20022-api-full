@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountLink;
 import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.SecuritiesAccount13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +136,7 @@ public class AccountLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLink1, SecuritiesAccount13> mmSecuritiesAccount = new MMMessageAssociationEnd<AccountLink1, SecuritiesAccount13>() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmSecuritiesAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
@@ -147,7 +149,17 @@ public class AccountLink1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			type_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount13 getValue(AccountLink1 obj) {
+			return obj.getSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(AccountLink1 obj, SecuritiesAccount13 value) {
+			obj.setSecuritiesAccount(value);
 		}
 	};
 	@XmlElement(name = "CshAcct", required = true)
@@ -189,7 +201,7 @@ public class AccountLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLink1, CashAccount24> mmCashAccount = new MMMessageAssociationEnd<AccountLink1, CashAccount24>() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
@@ -202,7 +214,17 @@ public class AccountLink1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public CashAccount24 getValue(AccountLink1 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(AccountLink1 obj, CashAccount24 value) {
+			obj.setCashAccount(value);
 		}
 	};
 	@XmlElement(name = "VldFr", required = true)
@@ -248,7 +270,7 @@ public class AccountLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLink1, DateAndDateTimeChoice> mmValidFrom = new MMMessageAttribute<AccountLink1, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
@@ -261,6 +283,16 @@ public class AccountLink1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(AccountLink1 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(AccountLink1 obj, DateAndDateTimeChoice value) {
+			obj.setValidFrom(value);
 		}
 	};
 	@XmlElement(name = "VldTo")
@@ -306,7 +338,7 @@ public class AccountLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLink1, Optional<DateAndDateTimeChoice>> mmValidTo = new MMMessageAttribute<AccountLink1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
@@ -319,6 +351,16 @@ public class AccountLink1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(AccountLink1 obj) {
+			return obj.getValidTo();
+		}
+
+		@Override
+		public void setValue(AccountLink1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setValidTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DfltInd", required = true)
@@ -365,7 +407,7 @@ public class AccountLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLink1, YesNoIndicator> mmDefaultIndicator = new MMMessageAttribute<AccountLink1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmDefaultIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
@@ -378,6 +420,16 @@ public class AccountLink1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(AccountLink1 obj) {
+			return obj.getDefaultIndicator();
+		}
+
+		@Override
+		public void setValue(AccountLink1 obj, YesNoIndicator value) {
+			obj.setDefaultIndicator(value);
 		}
 	};
 	@XmlElement(name = "CollstnInd", required = true)
@@ -424,7 +476,7 @@ public class AccountLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralisationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLink1, YesNoIndicator> mmCollateralisationIndicator = new MMMessageAttribute<AccountLink1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmCollateralisationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
@@ -437,6 +489,16 @@ public class AccountLink1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(AccountLink1 obj) {
+			return obj.getCollateralisationIndicator();
+		}
+
+		@Override
+		public void setValue(AccountLink1 obj, YesNoIndicator value) {
+			obj.setCollateralisationIndicator(value);
 		}
 	};
 	@XmlElement(name = "CshSttlmInd", required = true)
@@ -483,7 +545,7 @@ public class AccountLink1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashSettlementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLink1, YesNoIndicator> mmCashSettlementIndicator = new MMMessageAttribute<AccountLink1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmCashSettlementIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
@@ -496,6 +558,16 @@ public class AccountLink1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(AccountLink1 obj) {
+			return obj.getCashSettlementIndicator();
+		}
+
+		@Override
+		public void setValue(AccountLink1 obj, YesNoIndicator value) {
+			obj.setCashSettlementIndicator(value);
 		}
 	};
 
@@ -520,7 +592,7 @@ public class AccountLink1 {
 		return securitiesAccount;
 	}
 
-	public AccountLink1 setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccount) {
+	public AccountLink1 setSecuritiesAccount(SecuritiesAccount13 securitiesAccount) {
 		this.securitiesAccount = Objects.requireNonNull(securitiesAccount);
 		return this;
 	}
@@ -529,7 +601,7 @@ public class AccountLink1 {
 		return cashAccount;
 	}
 
-	public AccountLink1 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+	public AccountLink1 setCashAccount(CashAccount24 cashAccount) {
 		this.cashAccount = Objects.requireNonNull(cashAccount);
 		return this;
 	}

@@ -117,7 +117,7 @@ public class SegregatedIndependentAmountMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumTransferAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SegregatedIndependentAmountMargin1, ActiveCurrencyAndAmount> mmMinimumTransferAmount = new MMMessageAttribute<SegregatedIndependentAmountMargin1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmMinimumTransferAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmObject();
@@ -129,6 +129,16 @@ public class SegregatedIndependentAmountMargin1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(SegregatedIndependentAmountMargin1 obj) {
+			return obj.getMinimumTransferAmount();
+		}
+
+		@Override
+		public void setValue(SegregatedIndependentAmountMargin1 obj, ActiveCurrencyAndAmount value) {
+			obj.setMinimumTransferAmount(value);
 		}
 	};
 	@XmlElement(name = "RndgAmt")
@@ -168,7 +178,7 @@ public class SegregatedIndependentAmountMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SegregatedIndependentAmountMargin1, Optional<ActiveCurrencyAndAmount>> mmRoundingAmount = new MMMessageAttribute<SegregatedIndependentAmountMargin1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmObject();
@@ -180,6 +190,16 @@ public class SegregatedIndependentAmountMargin1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SegregatedIndependentAmountMargin1 obj) {
+			return obj.getRoundingAmount();
+		}
+
+		@Override
+		public void setValue(SegregatedIndependentAmountMargin1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setRoundingAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RndgMtd")
@@ -219,7 +239,7 @@ public class SegregatedIndependentAmountMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SegregatedIndependentAmountMargin1, Optional<RoundingMethod1Code>> mmRoundingMethod = new MMMessageAttribute<SegregatedIndependentAmountMargin1, Optional<RoundingMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SegregatedIndependentAmountMargin1.mmObject();
@@ -231,6 +251,16 @@ public class SegregatedIndependentAmountMargin1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RoundingMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<RoundingMethod1Code> getValue(SegregatedIndependentAmountMargin1 obj) {
+			return obj.getRoundingMethod();
+		}
+
+		@Override
+		public void setValue(SegregatedIndependentAmountMargin1 obj, Optional<RoundingMethod1Code> value) {
+			obj.setRoundingMethod(value.orElse(null));
 		}
 	};
 

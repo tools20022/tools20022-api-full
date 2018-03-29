@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReservationReport3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -80,7 +81,7 @@ public class CurrentAndDefaultReservation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "CurRsvatn")
-	protected List<com.tools20022.repository.msg.ReservationReport3> currentReservation;
+	protected List<ReservationReport3> currentReservation;
 	/**
 	 * 
 	 <p>
@@ -119,7 +120,7 @@ public class CurrentAndDefaultReservation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentReservation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrentAndDefaultReservation1, List<ReservationReport3>> mmCurrentReservation = new MMMessageAssociationEnd<CurrentAndDefaultReservation1, List<ReservationReport3>>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrentAndDefaultReservation1.mmObject();
@@ -131,11 +132,21 @@ public class CurrentAndDefaultReservation1 {
 			nextVersions_lazy = () -> Arrays.asList(CurrentAndDefaultReservation2.mmCurrentReservation);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReservationReport3.mmObject();
+			type_lazy = () -> ReservationReport3.mmObject();
+		}
+
+		@Override
+		public List<ReservationReport3> getValue(CurrentAndDefaultReservation1 obj) {
+			return obj.getCurrentReservation();
+		}
+
+		@Override
+		public void setValue(CurrentAndDefaultReservation1 obj, List<ReservationReport3> value) {
+			obj.setCurrentReservation(value);
 		}
 	};
 	@XmlElement(name = "DfltRsvatn")
-	protected List<com.tools20022.repository.msg.ReservationReport3> defaultReservation;
+	protected List<ReservationReport3> defaultReservation;
 	/**
 	 * 
 	 <p>
@@ -174,7 +185,7 @@ public class CurrentAndDefaultReservation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefaultReservation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrentAndDefaultReservation1, List<ReservationReport3>> mmDefaultReservation = new MMMessageAssociationEnd<CurrentAndDefaultReservation1, List<ReservationReport3>>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrentAndDefaultReservation1.mmObject();
@@ -186,7 +197,17 @@ public class CurrentAndDefaultReservation1 {
 			nextVersions_lazy = () -> Arrays.asList(CurrentAndDefaultReservation2.mmDefaultReservation);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReservationReport3.mmObject();
+			type_lazy = () -> ReservationReport3.mmObject();
+		}
+
+		@Override
+		public List<ReservationReport3> getValue(CurrentAndDefaultReservation1 obj) {
+			return obj.getDefaultReservation();
+		}
+
+		@Override
+		public void setValue(CurrentAndDefaultReservation1 obj, List<ReservationReport3> value) {
+			obj.setDefaultReservation(value);
 		}
 	};
 
@@ -209,7 +230,7 @@ public class CurrentAndDefaultReservation1 {
 		return currentReservation == null ? currentReservation = new ArrayList<>() : currentReservation;
 	}
 
-	public CurrentAndDefaultReservation1 setCurrentReservation(List<com.tools20022.repository.msg.ReservationReport3> currentReservation) {
+	public CurrentAndDefaultReservation1 setCurrentReservation(List<ReservationReport3> currentReservation) {
 		this.currentReservation = Objects.requireNonNull(currentReservation);
 		return this;
 	}
@@ -218,7 +239,7 @@ public class CurrentAndDefaultReservation1 {
 		return defaultReservation == null ? defaultReservation = new ArrayList<>() : defaultReservation;
 	}
 
-	public CurrentAndDefaultReservation1 setDefaultReservation(List<com.tools20022.repository.msg.ReservationReport3> defaultReservation) {
+	public CurrentAndDefaultReservation1 setDefaultReservation(List<ReservationReport3> defaultReservation) {
 		this.defaultReservation = Objects.requireNonNull(defaultReservation);
 		return this;
 	}

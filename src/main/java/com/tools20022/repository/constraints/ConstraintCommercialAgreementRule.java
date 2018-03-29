@@ -51,11 +51,15 @@ public class ConstraintCommercialAgreementRule {
 	 */
 	public static final MMConstraint<Commission11> forCommission11 = new MMConstraint<Commission11>() {
 		{
-			validator = ConstraintCommercialAgreementRule::checkCommission11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreementRule";
 			definition = "If CommercialAgreementReference is present, then NewCommercialAgreementReferenceIndicator must be present too.";
 			owner_lazy = () -> Commission11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Commission11 obj) throws Exception {
+			checkCommission11(obj);
 		}
 	};
 	/**
@@ -84,12 +88,16 @@ public class ConstraintCommercialAgreementRule {
 	 */
 	public static final MMConstraint<Fee3> forFee3 = new MMConstraint<Fee3>() {
 		{
-			validator = ConstraintCommercialAgreementRule::checkFee3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreementRule";
 			definition = "If CommercialAgreementReference is present, then NewCommercialAgreementReferenceIndicator must be present too.";
 			owner_lazy = () -> Fee3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/NewCommercialAgreementReferenceIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CommercialAgreementReference</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Fee3 obj) throws Exception {
+			checkFee3(obj);
 		}
 	};
 

@@ -122,7 +122,7 @@ public class UnitOfMeasure2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOfMeasure2Choice, UnitOfMeasure4Code> mmCode = new MMMessageAttribute<UnitOfMeasure2Choice, UnitOfMeasure4Code>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure2Choice.mmObject();
@@ -135,6 +135,16 @@ public class UnitOfMeasure2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasure4Code.mmObject();
+		}
+
+		@Override
+		public UnitOfMeasure4Code getValue(UnitOfMeasure2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnitOfMeasure2Choice obj, UnitOfMeasure4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class UnitOfMeasure2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnitOfMeasure2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<UnitOfMeasure2Choice, GenericIdentification40>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure2Choice.mmObject();
@@ -193,6 +203,16 @@ public class UnitOfMeasure2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(UnitOfMeasure2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnitOfMeasure2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

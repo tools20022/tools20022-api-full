@@ -112,7 +112,7 @@ public class TaxCalculationInformation9 {
 	 * TaxCalculationInformation8.mmBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation9, TaxBasis1Choice> mmBasis = new MMMessageAttribute<TaxCalculationInformation9, TaxBasis1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation9.mmObject();
@@ -125,6 +125,16 @@ public class TaxCalculationInformation9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TaxBasis1Choice.mmObject();
+		}
+
+		@Override
+		public TaxBasis1Choice getValue(TaxCalculationInformation9 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation9 obj, TaxBasis1Choice value) {
+			obj.setBasis(value);
 		}
 	};
 

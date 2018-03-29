@@ -27,6 +27,8 @@ import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BondDerivative2;
+import com.tools20022.repository.msg.FloatingInterestRate8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +128,7 @@ public class InterestRateDerivative5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateDerivative5, InterestRateDerivative2Choice> mmUnderlyingType = new MMMessageAssociationEnd<InterestRateDerivative5, InterestRateDerivative2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
@@ -139,6 +141,16 @@ public class InterestRateDerivative5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InterestRateDerivative2Choice.mmObject();
+		}
+
+		@Override
+		public InterestRateDerivative2Choice getValue(InterestRateDerivative5 obj) {
+			return obj.getUnderlyingType();
+		}
+
+		@Override
+		public void setValue(InterestRateDerivative5 obj, InterestRateDerivative2Choice value) {
+			obj.setUnderlyingType(value);
 		}
 	};
 	@XmlElement(name = "UndrlygBd")
@@ -175,7 +187,7 @@ public class InterestRateDerivative5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingBond = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateDerivative5, Optional<BondDerivative2>> mmUnderlyingBond = new MMMessageAssociationEnd<InterestRateDerivative5, Optional<BondDerivative2>>() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
@@ -187,7 +199,17 @@ public class InterestRateDerivative5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BondDerivative2.mmObject();
+			type_lazy = () -> BondDerivative2.mmObject();
+		}
+
+		@Override
+		public Optional<BondDerivative2> getValue(InterestRateDerivative5 obj) {
+			return obj.getUnderlyingBond();
+		}
+
+		@Override
+		public void setValue(InterestRateDerivative5 obj, Optional<BondDerivative2> value) {
+			obj.setUnderlyingBond(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SwptnNtnlCcy")
@@ -220,7 +242,7 @@ public class InterestRateDerivative5 {
 	 * definition} = "Notional currency of a swaption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSwaptionNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateDerivative5, Optional<ActiveCurrencyCode>> mmSwaptionNotionalCurrency = new MMMessageAttribute<InterestRateDerivative5, Optional<ActiveCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
 			isDerived = false;
@@ -231,6 +253,16 @@ public class InterestRateDerivative5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(InterestRateDerivative5 obj) {
+			return obj.getSwaptionNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(InterestRateDerivative5 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setSwaptionNotionalCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygSwpMtrtyDt")
@@ -269,7 +301,7 @@ public class InterestRateDerivative5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnderlyingSwapMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateDerivative5, Optional<ISODate>> mmUnderlyingSwapMaturityDate = new MMMessageAttribute<InterestRateDerivative5, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
@@ -281,6 +313,16 @@ public class InterestRateDerivative5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(InterestRateDerivative5 obj) {
+			return obj.getUnderlyingSwapMaturityDate();
+		}
+
+		@Override
+		public void setValue(InterestRateDerivative5 obj, Optional<ISODate> value) {
+			obj.setUnderlyingSwapMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InfltnIndx")
@@ -317,7 +359,7 @@ public class InterestRateDerivative5 {
 	 * definition} = "Populated to define the inflation index."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInflationIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateDerivative5, Optional<InflationIndex1Choice>> mmInflationIndex = new MMMessageAssociationEnd<InterestRateDerivative5, Optional<InflationIndex1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
@@ -330,6 +372,16 @@ public class InterestRateDerivative5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InflationIndex1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InflationIndex1Choice> getValue(InterestRateDerivative5 obj) {
+			return obj.getInflationIndex();
+		}
+
+		@Override
+		public void setValue(InterestRateDerivative5 obj, Optional<InflationIndex1Choice> value) {
+			obj.setInflationIndex(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstRateRef", required = true)
@@ -367,7 +419,7 @@ public class InterestRateDerivative5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterestRateReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateDerivative5, FloatingInterestRate8> mmInterestRateReference = new MMMessageAssociationEnd<InterestRateDerivative5, FloatingInterestRate8>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
@@ -379,7 +431,17 @@ public class InterestRateDerivative5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate8.mmObject();
+			type_lazy = () -> FloatingInterestRate8.mmObject();
+		}
+
+		@Override
+		public FloatingInterestRate8 getValue(InterestRateDerivative5 obj) {
+			return obj.getInterestRateReference();
+		}
+
+		@Override
+		public void setValue(InterestRateDerivative5 obj, FloatingInterestRate8 value) {
+			obj.setInterestRateReference(value);
 		}
 	};
 
@@ -412,7 +474,7 @@ public class InterestRateDerivative5 {
 		return underlyingBond == null ? Optional.empty() : Optional.of(underlyingBond);
 	}
 
-	public InterestRateDerivative5 setUnderlyingBond(com.tools20022.repository.msg.BondDerivative2 underlyingBond) {
+	public InterestRateDerivative5 setUnderlyingBond(BondDerivative2 underlyingBond) {
 		this.underlyingBond = underlyingBond;
 		return this;
 	}
@@ -448,7 +510,7 @@ public class InterestRateDerivative5 {
 		return interestRateReference;
 	}
 
-	public InterestRateDerivative5 setInterestRateReference(com.tools20022.repository.msg.FloatingInterestRate8 interestRateReference) {
+	public InterestRateDerivative5 setInterestRateReference(FloatingInterestRate8 interestRateReference) {
 		this.interestRateReference = Objects.requireNonNull(interestRateReference);
 		return this;
 	}

@@ -57,12 +57,16 @@ public class ConstraintNonGuaranteedTradePresenceRule {
 	 */
 	public static final MMConstraint<Clearing1> forClearing1 = new MMConstraint<Clearing1>() {
 		{
-			validator = ConstraintNonGuaranteedTradePresenceRule::checkClearing1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonGuaranteedTradePresenceRule";
 			definition = "If GuaranteedTrade Indicator is No then NonGuaranteed trade details must be present.";
 			owner_lazy = () -> Clearing1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/NonGuaranteedTrade</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GuaranteedTrade</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GuaranteedTrade</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Clearing1 obj) throws Exception {
+			checkClearing1(obj);
 		}
 	};
 	/**
@@ -99,13 +103,17 @@ public class ConstraintNonGuaranteedTradePresenceRule {
 	 */
 	public static final MMConstraint<Clearing2> forClearing2 = new MMConstraint<Clearing2>() {
 		{
-			validator = ConstraintNonGuaranteedTradePresenceRule::checkClearing2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonGuaranteedTradePresenceRule";
 			definition = "If GuaranteedTrade Indicator is No then NonGuaranteed trade details must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNonGuaranteedTradePresenceRule.forClearing4);
 			owner_lazy = () -> Clearing2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/NonGuaranteedTrade</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GuaranteedTrade</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GuaranteedTrade</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Clearing2 obj) throws Exception {
+			checkClearing2(obj);
 		}
 	};
 	/**
@@ -139,13 +147,17 @@ public class ConstraintNonGuaranteedTradePresenceRule {
 	 */
 	public static final MMConstraint<Clearing4> forClearing4 = new MMConstraint<Clearing4>() {
 		{
-			validator = ConstraintNonGuaranteedTradePresenceRule::checkClearing4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonGuaranteedTradePresenceRule";
 			definition = "If GuaranteedTrade Indicator is No then NonGuaranteed trade details must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonGuaranteedTradePresenceRule.forClearing2;
 			owner_lazy = () -> Clearing4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/NonGuaranteedTrade</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GuaranteedTrade</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GuaranteedTrade</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Clearing4 obj) throws Exception {
+			checkClearing4(obj);
 		}
 	};
 

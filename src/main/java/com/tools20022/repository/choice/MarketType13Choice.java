@@ -99,7 +99,7 @@ public class MarketType13Choice {
 	 * definition} = "Market type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketType13Choice, MarketType8Code> mmCode = new MMMessageAttribute<MarketType13Choice, MarketType8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketType13Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class MarketType13Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarketType8Code.mmObject();
+		}
+
+		@Override
+		public MarketType8Code getValue(MarketType13Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MarketType13Choice obj, MarketType8Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -140,7 +150,7 @@ public class MarketType13Choice {
 	 * definition} = "Market type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketType13Choice, Optional<GenericIdentification1>> mmProprietary = new MMMessageAssociationEnd<MarketType13Choice, Optional<GenericIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketType13Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class MarketType13Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification1> getValue(MarketType13Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MarketType13Choice obj, Optional<GenericIdentification1> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 

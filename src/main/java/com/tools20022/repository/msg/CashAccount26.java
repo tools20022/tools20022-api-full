@@ -25,6 +25,9 @@ import com.tools20022.repository.choice.InvestmentAccountType1Choice;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentificationAndName3;
+import com.tools20022.repository.msg.BranchData;
+import com.tools20022.repository.msg.GenericIdentification46;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +142,7 @@ public class CashAccount26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount26, AccountIdentificationAndName3> mmIdentification = new MMMessageAttribute<CashAccount26, AccountIdentificationAndName3>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount26.mmObject();
@@ -151,7 +154,17 @@ public class CashAccount26 {
 			nextVersions_lazy = () -> Arrays.asList(CashAccount32.mmIdentification, CashAccount33.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
+			complexType_lazy = () -> AccountIdentificationAndName3.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationAndName3 getValue(CashAccount26 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount26 obj, AccountIdentificationAndName3 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -198,7 +211,7 @@ public class CashAccount26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount26, Optional<PartyIdentification2Choice>> mmAccountOwner = new MMMessageAssociationEnd<CashAccount26, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount26.mmObject();
@@ -212,6 +225,16 @@ public class CashAccount26 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CashAccount26 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(CashAccount26 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -260,7 +283,7 @@ public class CashAccount26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount26, Optional<PartyIdentification2Choice>> mmAccountServicer = new MMMessageAssociationEnd<CashAccount26, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount26.mmObject();
@@ -274,6 +297,16 @@ public class CashAccount26 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CashAccount26 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount26 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrBrnch")
@@ -322,7 +355,7 @@ public class CashAccount26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount26, Optional<BranchData>> mmAccountServicerBranch = new MMMessageAttribute<CashAccount26, Optional<BranchData>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmBranch;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount26.mmObject();
@@ -334,7 +367,17 @@ public class CashAccount26 {
 			nextVersions_lazy = () -> Arrays.asList(CashAccount32.mmAccountServicerBranch, CashAccount33.mmAccountServicerBranch);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
+			complexType_lazy = () -> BranchData.mmObject();
+		}
+
+		@Override
+		public Optional<BranchData> getValue(CashAccount26 obj) {
+			return obj.getAccountServicerBranch();
+		}
+
+		@Override
+		public void setValue(CashAccount26 obj, Optional<BranchData> value) {
+			obj.setAccountServicerBranch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctTp")
@@ -381,7 +424,7 @@ public class CashAccount26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestmentAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount26, Optional<InvestmentAccountType1Choice>> mmInvestmentAccountType = new MMMessageAttribute<CashAccount26, Optional<InvestmentAccountType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmRelatedInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount26.mmObject();
@@ -395,9 +438,19 @@ public class CashAccount26 {
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccountType1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<InvestmentAccountType1Choice> getValue(CashAccount26 obj) {
+			return obj.getInvestmentAccountType();
+		}
+
+		@Override
+		public void setValue(CashAccount26 obj, Optional<InvestmentAccountType1Choice> value) {
+			obj.setInvestmentAccountType(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AcctOwnrOthrId")
-	protected List<com.tools20022.repository.msg.GenericIdentification46> accountOwnerOtherIdentification;
+	protected List<GenericIdentification46> accountOwnerOtherIdentification;
 	/**
 	 * 
 	 <p>
@@ -440,7 +493,7 @@ public class CashAccount26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerOtherIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount26, List<GenericIdentification46>> mmAccountOwnerOtherIdentification = new MMMessageAttribute<CashAccount26, List<GenericIdentification46>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount26.mmObject();
@@ -451,7 +504,17 @@ public class CashAccount26 {
 			definition = "Other identification such as national registration identification number, passport number.";
 			nextVersions_lazy = () -> Arrays.asList(CashAccount33.mmAccountOwnerOtherIdentification);
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification46.mmObject();
+			complexType_lazy = () -> GenericIdentification46.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification46> getValue(CashAccount26 obj) {
+			return obj.getAccountOwnerOtherIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount26 obj, List<GenericIdentification46> value) {
+			obj.setAccountOwnerOtherIdentification(value);
 		}
 	};
 
@@ -477,7 +540,7 @@ public class CashAccount26 {
 		return identification;
 	}
 
-	public CashAccount26 setIdentification(com.tools20022.repository.msg.AccountIdentificationAndName3 identification) {
+	public CashAccount26 setIdentification(AccountIdentificationAndName3 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -504,7 +567,7 @@ public class CashAccount26 {
 		return accountServicerBranch == null ? Optional.empty() : Optional.of(accountServicerBranch);
 	}
 
-	public CashAccount26 setAccountServicerBranch(com.tools20022.repository.msg.BranchData accountServicerBranch) {
+	public CashAccount26 setAccountServicerBranch(BranchData accountServicerBranch) {
 		this.accountServicerBranch = accountServicerBranch;
 		return this;
 	}
@@ -522,7 +585,7 @@ public class CashAccount26 {
 		return accountOwnerOtherIdentification == null ? accountOwnerOtherIdentification = new ArrayList<>() : accountOwnerOtherIdentification;
 	}
 
-	public CashAccount26 setAccountOwnerOtherIdentification(List<com.tools20022.repository.msg.GenericIdentification46> accountOwnerOtherIdentification) {
+	public CashAccount26 setAccountOwnerOtherIdentification(List<GenericIdentification46> accountOwnerOtherIdentification) {
 		this.accountOwnerOtherIdentification = Objects.requireNonNull(accountOwnerOtherIdentification);
 		return this;
 	}

@@ -113,7 +113,7 @@ public class NameAndAddress1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NameAndAddress1, Optional<Max35Text>> mmName = new MMMessageAttribute<NameAndAddress1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndAddress1.mmObject();
@@ -125,6 +125,16 @@ public class NameAndAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(NameAndAddress1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(NameAndAddress1 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Adr", required = true)
@@ -162,7 +172,7 @@ public class NameAndAddress1 {
 	 * definition} = "Postal address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NameAndAddress1, LongPostalAddress1Choice> mmAddress = new MMMessageAttribute<NameAndAddress1, LongPostalAddress1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndAddress1.mmObject();
@@ -174,6 +184,16 @@ public class NameAndAddress1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> LongPostalAddress1Choice.mmObject();
+		}
+
+		@Override
+		public LongPostalAddress1Choice getValue(NameAndAddress1 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(NameAndAddress1 obj, LongPostalAddress1Choice value) {
+			obj.setAddress(value);
 		}
 	};
 

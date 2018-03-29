@@ -111,7 +111,7 @@ public class AmountAndDirection31 {
 	 * definition} = "Currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection31, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection31, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
@@ -123,6 +123,16 @@ public class AmountAndDirection31 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(AmountAndDirection31 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection31 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "ShrtLngInd")
@@ -158,7 +168,7 @@ public class AmountAndDirection31 {
 	 * definition} = "Indication that the position is short or long."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection31, Optional<ShortLong1Code>> mmShortLongIndicator = new MMMessageAttribute<AmountAndDirection31, Optional<ShortLong1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class AmountAndDirection31 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ShortLong1Code> getValue(AmountAndDirection31 obj) {
+			return obj.getShortLongIndicator();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection31 obj, Optional<ShortLong1Code> value) {
+			obj.setShortLongIndicator(value.orElse(null));
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09;
+import com.tools20022.repository.choice.UnmatchedStatus16Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason4;
@@ -144,7 +145,7 @@ public class MatchingStatus24Choice {
 	 * MatchingStatus19Choice.mmMatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus24Choice, ProprietaryReason4> mmMatched = new MMMessageAssociationEnd<MatchingStatus24Choice, ProprietaryReason4>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus24Choice.mmObject();
@@ -158,6 +159,16 @@ public class MatchingStatus24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason4.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason4 getValue(MatchingStatus24Choice obj) {
+			return obj.getMatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus24Choice obj, ProprietaryReason4 value) {
+			obj.setMatched(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -199,7 +210,7 @@ public class MatchingStatus24Choice {
 	 * MatchingStatus19Choice.mmUnmatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus24Choice, UnmatchedStatus16Choice> mmUnmatched = new MMMessageAssociationEnd<MatchingStatus24Choice, UnmatchedStatus16Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus24Choice.mmObject();
@@ -212,7 +223,17 @@ public class MatchingStatus24Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus16Choice.mmObject();
+			type_lazy = () -> UnmatchedStatus16Choice.mmObject();
+		}
+
+		@Override
+		public UnmatchedStatus16Choice getValue(MatchingStatus24Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus24Choice obj, UnmatchedStatus16Choice value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -254,7 +275,7 @@ public class MatchingStatus24Choice {
 	 * MatchingStatus19Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus24Choice, ProprietaryStatusAndReason6> mmProprietary = new MMMessageAssociationEnd<MatchingStatus24Choice, ProprietaryStatusAndReason6>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus24Choice.mmObject();
@@ -268,6 +289,16 @@ public class MatchingStatus24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason6.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason6 getValue(MatchingStatus24Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus24Choice obj, ProprietaryStatusAndReason6 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -303,7 +334,7 @@ public class MatchingStatus24Choice {
 		return unmatched;
 	}
 
-	public MatchingStatus24Choice setUnmatched(com.tools20022.repository.choice.UnmatchedStatus16Choice unmatched) {
+	public MatchingStatus24Choice setUnmatched(UnmatchedStatus16Choice unmatched) {
 		this.unmatched = Objects.requireNonNull(unmatched);
 		return this;
 	}

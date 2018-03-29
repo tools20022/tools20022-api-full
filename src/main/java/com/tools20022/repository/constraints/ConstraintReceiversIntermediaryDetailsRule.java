@@ -52,11 +52,15 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation2> forReceiveInformation2 = new MMConstraint<ReceiveInformation2>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation2 obj) throws Exception {
+			checkReceiveInformation2(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation4> forReceiveInformation4 = new MMConstraint<ReceiveInformation4>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation4 obj) throws Exception {
+			checkReceiveInformation4(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation8> forReceiveInformation8 = new MMConstraint<ReceiveInformation8>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation8 obj) throws Exception {
+			checkReceiveInformation8(obj);
 		}
 	};
 	/**
@@ -142,11 +154,15 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation6> forReceiveInformation6 = new MMConstraint<ReceiveInformation6>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation6 obj) throws Exception {
+			checkReceiveInformation6(obj);
 		}
 	};
 	/**
@@ -180,12 +196,16 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation11> forReceiveInformation11 = new MMConstraint<ReceiveInformation11>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation12);
 			owner_lazy = () -> ReceiveInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation11 obj) throws Exception {
+			checkReceiveInformation11(obj);
 		}
 	};
 	/**
@@ -211,11 +231,15 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation1> forReceiveInformation1 = new MMConstraint<ReceiveInformation1>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation1 obj) throws Exception {
+			checkReceiveInformation1(obj);
 		}
 	};
 	/**
@@ -241,11 +265,15 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation3> forReceiveInformation3 = new MMConstraint<ReceiveInformation3>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation3 obj) throws Exception {
+			checkReceiveInformation3(obj);
 		}
 	};
 	/**
@@ -271,11 +299,15 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation7> forReceiveInformation7 = new MMConstraint<ReceiveInformation7>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation7 obj) throws Exception {
+			checkReceiveInformation7(obj);
 		}
 	};
 	/**
@@ -301,11 +333,15 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation5> forReceiveInformation5 = new MMConstraint<ReceiveInformation5>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation5 obj) throws Exception {
+			checkReceiveInformation5(obj);
 		}
 	};
 	/**
@@ -339,12 +375,16 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation9> forReceiveInformation9 = new MMConstraint<ReceiveInformation9>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation13);
 			owner_lazy = () -> ReceiveInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation9 obj) throws Exception {
+			checkReceiveInformation9(obj);
 		}
 	};
 	/**
@@ -383,13 +423,17 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation13> forReceiveInformation13 = new MMConstraint<ReceiveInformation13>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation15);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation9;
 			owner_lazy = () -> ReceiveInformation13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation13 obj) throws Exception {
+			checkReceiveInformation13(obj);
 		}
 	};
 	/**
@@ -428,13 +472,17 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation12> forReceiveInformation12 = new MMConstraint<ReceiveInformation12>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation14);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation11;
 			owner_lazy = () -> ReceiveInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation12 obj) throws Exception {
+			checkReceiveInformation12(obj);
 		}
 	};
 	/**
@@ -473,13 +521,17 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation15> forReceiveInformation15 = new MMConstraint<ReceiveInformation15>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediary1DetailsRule.forReceiveInformation16);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation13;
 			owner_lazy = () -> ReceiveInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation15 obj) throws Exception {
+			checkReceiveInformation15(obj);
 		}
 	};
 	/**
@@ -518,13 +570,17 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation14> forReceiveInformation14 = new MMConstraint<ReceiveInformation14>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation17);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation12;
 			owner_lazy = () -> ReceiveInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation14 obj) throws Exception {
+			checkReceiveInformation14(obj);
 		}
 	};
 	/**
@@ -563,13 +619,17 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation17> forReceiveInformation17 = new MMConstraint<ReceiveInformation17>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation18);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation14;
 			owner_lazy = () -> ReceiveInformation17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation17 obj) throws Exception {
+			checkReceiveInformation17(obj);
 		}
 	};
 	/**
@@ -600,12 +660,16 @@ public class ConstraintReceiversIntermediaryDetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation18> forReceiveInformation18 = new MMConstraint<ReceiveInformation18>() {
 		{
-			validator = ConstraintReceiversIntermediaryDetailsRule::checkReceiveInformation18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediaryDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediaryDetails is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation17;
 			owner_lazy = () -> ReceiveInformation18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation18 obj) throws Exception {
+			checkReceiveInformation18(obj);
 		}
 	};
 

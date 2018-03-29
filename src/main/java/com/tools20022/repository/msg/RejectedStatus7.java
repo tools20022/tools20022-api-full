@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +119,7 @@ public class RejectedStatus7 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus7, RejectedStatusReason8Code> mmReason = new MMMessageAttribute<RejectedStatus7, RejectedStatusReason8Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus7.mmObject();
@@ -130,6 +131,16 @@ public class RejectedStatus7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason8Code.mmObject();
+		}
+
+		@Override
+		public RejectedStatusReason8Code getValue(RejectedStatus7 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus7 obj, RejectedStatusReason8Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -162,7 +173,7 @@ public class RejectedStatus7 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus7, Extended350Code> mmExtendedReason = new MMMessageAttribute<RejectedStatus7, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus7.mmObject();
 			isDerived = false;
@@ -173,6 +184,16 @@ public class RejectedStatus7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(RejectedStatus7 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus7 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -209,7 +230,7 @@ public class RejectedStatus7 {
 	 * "Proprietary identification of the reason for the rejcted status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus7, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<RejectedStatus7, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus7.mmObject();
@@ -221,7 +242,17 @@ public class RejectedStatus7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(RejectedStatus7 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(RejectedStatus7 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	/**
@@ -316,7 +347,7 @@ public class RejectedStatus7 {
 		return dataSourceScheme;
 	}
 
-	public RejectedStatus7 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public RejectedStatus7 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

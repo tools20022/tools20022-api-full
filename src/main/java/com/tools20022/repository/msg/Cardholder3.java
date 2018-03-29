@@ -29,6 +29,9 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AddressVerification1;
+import com.tools20022.repository.msg.CardholderAuthentication3;
+import com.tools20022.repository.msg.CardholderIdentification1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -93,7 +96,7 @@ public class Cardholder3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Id")
-	protected List<com.tools20022.repository.msg.CardholderIdentification1> identification;
+	protected List<CardholderIdentification1> identification;
 	/**
 	 * 
 	 <p>
@@ -134,7 +137,7 @@ public class Cardholder3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Cardholder3, List<CardholderIdentification1>> mmIdentification = new MMMessageAssociationEnd<Cardholder3, List<CardholderIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cardholder3.mmObject();
@@ -146,7 +149,17 @@ public class Cardholder3 {
 			nextVersions_lazy = () -> Arrays.asList(Cardholder5.mmIdentification);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardholderIdentification1.mmObject();
+			type_lazy = () -> CardholderIdentification1.mmObject();
+		}
+
+		@Override
+		public List<CardholderIdentification1> getValue(Cardholder3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Cardholder3 obj, List<CardholderIdentification1> value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -189,7 +202,7 @@ public class Cardholder3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cardholder3, Optional<Max45Text>> mmName = new MMMessageAttribute<Cardholder3, Optional<Max45Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cardholder3.mmObject();
@@ -202,6 +215,16 @@ public class Cardholder3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max45Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max45Text> getValue(Cardholder3 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(Cardholder3 obj, Optional<Max45Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lang")
@@ -246,7 +269,7 @@ public class Cardholder3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cardholder3, Optional<ISO2ALanguageCode>> mmLanguage = new MMMessageAttribute<Cardholder3, Optional<ISO2ALanguageCode>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmLanguage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cardholder3.mmObject();
@@ -260,9 +283,19 @@ public class Cardholder3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISO2ALanguageCode.mmObject();
 		}
+
+		@Override
+		public Optional<ISO2ALanguageCode> getValue(Cardholder3 obj) {
+			return obj.getLanguage();
+		}
+
+		@Override
+		public void setValue(Cardholder3 obj, Optional<ISO2ALanguageCode> value) {
+			obj.setLanguage(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Authntcn")
-	protected List<com.tools20022.repository.msg.CardholderAuthentication3> authentication;
+	protected List<CardholderAuthentication3> authentication;
 	/**
 	 * 
 	 <p>
@@ -302,7 +335,7 @@ public class Cardholder3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthentication = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Cardholder3, List<CardholderAuthentication3>> mmAuthentication = new MMMessageAssociationEnd<Cardholder3, List<CardholderAuthentication3>>() {
 		{
 			businessElementTrace_lazy = () -> CardholderRole.mmAuthentication;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cardholder3.mmObject();
@@ -314,7 +347,17 @@ public class Cardholder3 {
 			nextVersions_lazy = () -> Arrays.asList(Cardholder5.mmAuthentication);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication3.mmObject();
+			type_lazy = () -> CardholderAuthentication3.mmObject();
+		}
+
+		@Override
+		public List<CardholderAuthentication3> getValue(Cardholder3 obj) {
+			return obj.getAuthentication();
+		}
+
+		@Override
+		public void setValue(Cardholder3 obj, List<CardholderAuthentication3> value) {
+			obj.setAuthentication(value);
 		}
 	};
 	@XmlElement(name = "AdrVrfctn")
@@ -353,7 +396,7 @@ public class Cardholder3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddressVerification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Cardholder3, Optional<AddressVerification1>> mmAddressVerification = new MMMessageAssociationEnd<Cardholder3, Optional<AddressVerification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cardholder3.mmObject();
 			isDerived = false;
@@ -365,7 +408,17 @@ public class Cardholder3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AddressVerification1.mmObject();
+			type_lazy = () -> AddressVerification1.mmObject();
+		}
+
+		@Override
+		public Optional<AddressVerification1> getValue(Cardholder3 obj) {
+			return obj.getAddressVerification();
+		}
+
+		@Override
+		public void setValue(Cardholder3 obj, Optional<AddressVerification1> value) {
+			obj.setAddressVerification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrsnlData")
@@ -403,7 +456,7 @@ public class Cardholder3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPersonalData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cardholder3, Optional<Max70Text>> mmPersonalData = new MMMessageAttribute<Cardholder3, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cardholder3.mmObject();
 			isDerived = false;
@@ -415,6 +468,16 @@ public class Cardholder3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(Cardholder3 obj) {
+			return obj.getPersonalData();
+		}
+
+		@Override
+		public void setValue(Cardholder3 obj, Optional<Max70Text> value) {
+			obj.setPersonalData(value.orElse(null));
 		}
 	};
 
@@ -439,7 +502,7 @@ public class Cardholder3 {
 		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public Cardholder3 setIdentification(List<com.tools20022.repository.msg.CardholderIdentification1> identification) {
+	public Cardholder3 setIdentification(List<CardholderIdentification1> identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -466,7 +529,7 @@ public class Cardholder3 {
 		return authentication == null ? authentication = new ArrayList<>() : authentication;
 	}
 
-	public Cardholder3 setAuthentication(List<com.tools20022.repository.msg.CardholderAuthentication3> authentication) {
+	public Cardholder3 setAuthentication(List<CardholderAuthentication3> authentication) {
 		this.authentication = Objects.requireNonNull(authentication);
 		return this;
 	}
@@ -475,7 +538,7 @@ public class Cardholder3 {
 		return addressVerification == null ? Optional.empty() : Optional.of(addressVerification);
 	}
 
-	public Cardholder3 setAddressVerification(com.tools20022.repository.msg.AddressVerification1 addressVerification) {
+	public Cardholder3 setAddressVerification(AddressVerification1 addressVerification) {
 		this.addressVerification = addressVerification;
 		return this;
 	}

@@ -118,7 +118,7 @@ public class RequestType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentControl = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType2Choice, RequestType1Code> mmPaymentControl = new MMMessageAttribute<RequestType2Choice, RequestType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType2Choice.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class RequestType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestType1Code.mmObject();
+		}
+
+		@Override
+		public RequestType1Code getValue(RequestType2Choice obj) {
+			return obj.getPaymentControl();
+		}
+
+		@Override
+		public void setValue(RequestType2Choice obj, RequestType1Code value) {
+			obj.setPaymentControl(value);
 		}
 	};
 	@XmlElement(name = "Enqry", required = true)
@@ -171,7 +181,7 @@ public class RequestType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEnquiry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType2Choice, RequestType2Code> mmEnquiry = new MMMessageAttribute<RequestType2Choice, RequestType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType2Choice.mmObject();
 			isDerived = false;
@@ -183,6 +193,16 @@ public class RequestType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestType2Code.mmObject();
+		}
+
+		@Override
+		public RequestType2Code getValue(RequestType2Choice obj) {
+			return obj.getEnquiry();
+		}
+
+		@Override
+		public void setValue(RequestType2Choice obj, RequestType2Code value) {
+			obj.setEnquiry(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -223,7 +243,7 @@ public class RequestType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType2Choice, GenericIdentification1> mmProprietary = new MMMessageAttribute<RequestType2Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType2Choice.mmObject();
 			isDerived = false;
@@ -235,6 +255,16 @@ public class RequestType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(RequestType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RequestType2Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

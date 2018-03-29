@@ -117,7 +117,7 @@ public class Collateral2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Collateral2, Max35Text> mmMarginCallRequestIdentification = new MMMessageAttribute<Collateral2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral2.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class Collateral2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Collateral2 obj) {
+			return obj.getMarginCallRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Collateral2 obj, Max35Text value) {
+			obj.setMarginCallRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "MrgnCallRspnId", required = true)
@@ -160,7 +170,7 @@ public class Collateral2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarginCallResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Collateral2, Max35Text> mmMarginCallResponseIdentification = new MMMessageAttribute<Collateral2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral2.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class Collateral2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Collateral2 obj) {
+			return obj.getMarginCallResponseIdentification();
+		}
+
+		@Override
+		public void setValue(Collateral2 obj, Max35Text value) {
+			obj.setMarginCallResponseIdentification(value);
 		}
 	};
 	@XmlElement(name = "StdSttlmInstrs", required = true)
@@ -206,7 +226,7 @@ public class Collateral2 {
 	 * definition} = "Identifies the standard settlement instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandardSettlementInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Collateral2, Max140Text> mmStandardSettlementInstructions = new MMMessageAttribute<Collateral2, Max140Text>() {
 		{
 			businessElementTrace_lazy = () -> CollateralAgreement.mmStandingSettlementInstructions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral2.mmObject();
@@ -218,6 +238,16 @@ public class Collateral2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(Collateral2 obj) {
+			return obj.getStandardSettlementInstructions();
+		}
+
+		@Override
+		public void setValue(Collateral2 obj, Max140Text value) {
+			obj.setStandardSettlementInstructions(value);
 		}
 	};
 	@XmlElement(name = "PrpslTp")
@@ -252,7 +282,7 @@ public class Collateral2 {
 	 * definition} = "Indicates the type of collateral that is proposed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProposalType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Collateral2, Optional<ProposalType1Choice>> mmProposalType = new MMMessageAssociationEnd<Collateral2, Optional<ProposalType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralManagement.mmCollateralProposal;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral2.mmObject();
@@ -265,6 +295,16 @@ public class Collateral2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProposalType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProposalType1Choice> getValue(Collateral2 obj) {
+			return obj.getProposalType();
+		}
+
+		@Override
+		public void setValue(Collateral2 obj, Optional<ProposalType1Choice> value) {
+			obj.setProposalType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollPrpslRspnId")
@@ -297,7 +337,7 @@ public class Collateral2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralProposalResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Collateral2, Optional<Max35Text>> mmCollateralProposalResponseIdentification = new MMMessageAttribute<Collateral2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral2.mmObject();
 			isDerived = false;
@@ -308,6 +348,16 @@ public class Collateral2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Collateral2 obj) {
+			return obj.getCollateralProposalResponseIdentification();
+		}
+
+		@Override
+		public void setValue(Collateral2 obj, Optional<Max35Text> value) {
+			obj.setCollateralProposalResponseIdentification(value.orElse(null));
 		}
 	};
 

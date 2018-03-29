@@ -124,7 +124,7 @@ public class RepurchaseType13Choice {
 	 * RepurchaseType8Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepurchaseType13Choice, RepurchaseType6Code> mmCode = new MMMessageAttribute<RepurchaseType13Choice, RepurchaseType6Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRepurchaseType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepurchaseType13Choice.mmObject();
@@ -138,6 +138,16 @@ public class RepurchaseType13Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RepurchaseType6Code.mmObject();
+		}
+
+		@Override
+		public RepurchaseType6Code getValue(RepurchaseType13Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RepurchaseType13Choice obj, RepurchaseType6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class RepurchaseType13Choice {
 	 * RepurchaseType8Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseType13Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<RepurchaseType13Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRepurchaseType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepurchaseType13Choice.mmObject();
@@ -199,6 +209,16 @@ public class RepurchaseType13Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(RepurchaseType13Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RepurchaseType13Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

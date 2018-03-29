@@ -111,7 +111,7 @@ public class Tranche2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttachmentPoint = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tranche2, Optional<BaseOneRate>> mmAttachmentPoint = new MMMessageAttribute<Tranche2, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tranche.mmAttachmentPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tranche2.mmObject();
@@ -123,6 +123,16 @@ public class Tranche2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(Tranche2 obj) {
+			return obj.getAttachmentPoint();
+		}
+
+		@Override
+		public void setValue(Tranche2 obj, Optional<BaseOneRate> value) {
+			obj.setAttachmentPoint(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtchmntPt")
@@ -160,7 +170,7 @@ public class Tranche2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDetachmentPoint = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tranche2, Optional<BaseOneRate>> mmDetachmentPoint = new MMMessageAttribute<Tranche2, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tranche.mmDetachmentPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tranche2.mmObject();
@@ -172,6 +182,16 @@ public class Tranche2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(Tranche2 obj) {
+			return obj.getDetachmentPoint();
+		}
+
+		@Override
+		public void setValue(Tranche2 obj, Optional<BaseOneRate> value) {
+			obj.setDetachmentPoint(value.orElse(null));
 		}
 	};
 

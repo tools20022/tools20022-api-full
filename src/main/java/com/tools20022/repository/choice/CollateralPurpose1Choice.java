@@ -107,7 +107,7 @@ public class CollateralPurpose1Choice {
 	 * definition} = "Provides the collateral purpose using an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralPurpose1Choice, CollateralPurpose1Code> mmCode = new MMMessageAttribute<CollateralPurpose1Choice, CollateralPurpose1Code>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralPurpose1Choice.mmObject();
@@ -119,6 +119,16 @@ public class CollateralPurpose1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralPurpose1Code.mmObject();
+		}
+
+		@Override
+		public CollateralPurpose1Code getValue(CollateralPurpose1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CollateralPurpose1Choice obj, CollateralPurpose1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class CollateralPurpose1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralPurpose1Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<CollateralPurpose1Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralPurpose1Choice.mmObject();
@@ -169,6 +179,16 @@ public class CollateralPurpose1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CollateralPurpose1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CollateralPurpose1Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

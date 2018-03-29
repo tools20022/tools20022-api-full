@@ -137,7 +137,7 @@ public class PaymentCard18 {
 	 * PaymentCard2.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard18, CardType1Code> mmType = new MMMessageAttribute<PaymentCard18, CardType1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard18.mmObject();
@@ -150,6 +150,16 @@ public class PaymentCard18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardType1Code.mmObject();
+		}
+
+		@Override
+		public CardType1Code getValue(PaymentCard18 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PaymentCard18 obj, CardType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Nb", required = true)
@@ -192,7 +202,7 @@ public class PaymentCard18 {
 	 * PaymentCard2.mmNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard18, Max35Text> mmNumber = new MMMessageAttribute<PaymentCard18, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard18.mmObject();
@@ -205,6 +215,16 @@ public class PaymentCard18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentCard18 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(PaymentCard18 obj, Max35Text value) {
+			obj.setNumber(value);
 		}
 	};
 	@XmlElement(name = "HldrNm", required = true)
@@ -245,7 +265,7 @@ public class PaymentCard18 {
 	 * PaymentCard2.mmHolderName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHolderName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard18, Max35Text> mmHolderName = new MMMessageAttribute<PaymentCard18, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> CardholderRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard18.mmObject();
@@ -258,6 +278,16 @@ public class PaymentCard18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentCard18 obj) {
+			return obj.getHolderName();
+		}
+
+		@Override
+		public void setValue(PaymentCard18 obj, Max35Text value) {
+			obj.setHolderName(value);
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -299,7 +329,7 @@ public class PaymentCard18 {
 	 * PaymentCard2.mmStartDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard18, Optional<ISOYearMonth>> mmStartDate = new MMMessageAttribute<PaymentCard18, Optional<ISOYearMonth>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmStartDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard18.mmObject();
@@ -312,6 +342,16 @@ public class PaymentCard18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public Optional<ISOYearMonth> getValue(PaymentCard18 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(PaymentCard18 obj, Optional<ISOYearMonth> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt", required = true)
@@ -353,7 +393,7 @@ public class PaymentCard18 {
 	 * PaymentCard2.mmExpiryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard18, ISOYearMonth> mmExpiryDate = new MMMessageAttribute<PaymentCard18, ISOYearMonth>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard18.mmObject();
@@ -366,6 +406,16 @@ public class PaymentCard18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public ISOYearMonth getValue(PaymentCard18 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(PaymentCard18 obj, ISOYearMonth value) {
+			obj.setExpiryDate(value);
 		}
 	};
 	@XmlElement(name = "CardIssrNm")
@@ -408,7 +458,7 @@ public class PaymentCard18 {
 	 * PaymentCard2.mmCardIssuerName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardIssuerName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard18, Optional<Max35Text>> mmCardIssuerName = new MMMessageAttribute<PaymentCard18, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard18.mmObject();
@@ -421,6 +471,16 @@ public class PaymentCard18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentCard18 obj) {
+			return obj.getCardIssuerName();
+		}
+
+		@Override
+		public void setValue(PaymentCard18 obj, Optional<Max35Text> value) {
+			obj.setCardIssuerName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardIssrId")
@@ -464,7 +524,7 @@ public class PaymentCard18 {
 	 * PaymentCard2.mmCardIssuerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardIssuerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard18, Optional<PartyIdentification70Choice>> mmCardIssuerIdentification = new MMMessageAttribute<PaymentCard18, Optional<PartyIdentification70Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard18.mmObject();
@@ -477,6 +537,16 @@ public class PaymentCard18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(PaymentCard18 obj) {
+			return obj.getCardIssuerIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentCard18 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setCardIssuerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyCd")
@@ -517,7 +587,7 @@ public class PaymentCard18 {
 	 * PaymentCard2.mmSecurityCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard18, Optional<Max35Text>> mmSecurityCode = new MMMessageAttribute<PaymentCard18, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmSecurityCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard18.mmObject();
@@ -530,6 +600,16 @@ public class PaymentCard18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentCard18 obj) {
+			return obj.getSecurityCode();
+		}
+
+		@Override
+		public void setValue(PaymentCard18 obj, Optional<Max35Text> value) {
+			obj.setSecurityCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeqNb")
@@ -572,7 +652,7 @@ public class PaymentCard18 {
 	 * PaymentCard2.mmSequenceNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard18, Optional<Max3Text>> mmSequenceNumber = new MMMessageAttribute<PaymentCard18, Optional<Max3Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmSequenceNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard18.mmObject();
@@ -585,6 +665,16 @@ public class PaymentCard18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(PaymentCard18 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(PaymentCard18 obj, Optional<Max3Text> value) {
+			obj.setSequenceNumber(value.orElse(null));
 		}
 	};
 

@@ -116,7 +116,7 @@ public class CRSForm1Choice {
 	 * FATCAForm1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CRSForm1Choice, CRSFormType1Code> mmCode = new MMMessageAttribute<CRSForm1Choice, CRSFormType1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountPartyRole.mmFATCAFormType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CRSForm1Choice.mmObject();
@@ -129,6 +129,16 @@ public class CRSForm1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CRSFormType1Code.mmObject();
+		}
+
+		@Override
+		public CRSFormType1Code getValue(CRSForm1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CRSForm1Choice obj, CRSFormType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class CRSForm1Choice {
 	 * FATCAForm1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CRSForm1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<CRSForm1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CRSForm1Choice.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class CRSForm1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CRSForm1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CRSForm1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

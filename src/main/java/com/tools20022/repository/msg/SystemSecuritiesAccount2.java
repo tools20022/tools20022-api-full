@@ -114,7 +114,7 @@ public class SystemSecuritiesAccount2 {
 	 * definition} = "Legal closing date for the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount2, Optional<ISODate>> mmClosingDate = new MMMessageAttribute<SystemSecuritiesAccount2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class SystemSecuritiesAccount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SystemSecuritiesAccount2 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount2 obj, Optional<ISODate> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldInd")
@@ -159,7 +169,7 @@ public class SystemSecuritiesAccount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount2, Optional<TrueFalseIndicator>> mmHoldIndicator = new MMMessageAttribute<SystemSecuritiesAccount2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class SystemSecuritiesAccount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(SystemSecuritiesAccount2 obj) {
+			return obj.getHoldIndicator();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setHoldIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NegPos")
@@ -204,7 +224,7 @@ public class SystemSecuritiesAccount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNegativePosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount2, Optional<YesNoIndicator>> mmNegativePosition = new MMMessageAttribute<SystemSecuritiesAccount2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class SystemSecuritiesAccount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SystemSecuritiesAccount2 obj) {
+			return obj.getNegativePosition();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount2 obj, Optional<YesNoIndicator> value) {
+			obj.setNegativePosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndInvstrFlg")
@@ -249,7 +279,7 @@ public class SystemSecuritiesAccount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount2, Optional<Exact4AlphaNumericText>> mmEndInvestorFlag = new MMMessageAttribute<SystemSecuritiesAccount2, Optional<Exact4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
@@ -260,6 +290,16 @@ public class SystemSecuritiesAccount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(SystemSecuritiesAccount2 obj) {
+			return obj.getEndInvestorFlag();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount2 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setEndInvestorFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricgSchme")
@@ -293,7 +333,7 @@ public class SystemSecuritiesAccount2 {
 	 * "Defines how the price is applied to the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount2, Optional<Exact4AlphaNumericText>> mmPricingScheme = new MMMessageAttribute<SystemSecuritiesAccount2, Optional<Exact4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
@@ -304,6 +344,16 @@ public class SystemSecuritiesAccount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(SystemSecuritiesAccount2 obj) {
+			return obj.getPricingScheme();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount2 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setPricingScheme(value.orElse(null));
 		}
 	};
 

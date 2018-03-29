@@ -49,11 +49,15 @@ public class ConstraintMarginPresenceRule {
 	 */
 	public static final MMConstraint<EndOfDayRequirement1> forEndOfDayRequirement1 = new MMConstraint<EndOfDayRequirement1>() {
 		{
-			validator = ConstraintMarginPresenceRule::checkEndOfDayRequirement1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginPresenceRule";
 			definition = "At least one margin (initial or variation) must be present.";
 			owner_lazy = () -> EndOfDayRequirement1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EndOfDayRequirement1 obj) throws Exception {
+			checkEndOfDayRequirement1(obj);
 		}
 	};
 

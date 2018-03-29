@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class PartyIdentificationAndAccount146 {
 	 * definition} = "Identification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount146, PartyIdentification104Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount146, PartyIdentification104Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount146.mmObject();
@@ -135,6 +136,16 @@ public class PartyIdentificationAndAccount146 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification104Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification104Choice getValue(PartyIdentificationAndAccount146 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount146 obj, PartyIdentification104Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -174,7 +185,7 @@ public class PartyIdentificationAndAccount146 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount146, Optional<LEIIdentifier>> mmLEI = new MMMessageAttribute<PartyIdentificationAndAccount146, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount146.mmObject();
@@ -186,6 +197,16 @@ public class PartyIdentificationAndAccount146 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(PartyIdentificationAndAccount146 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount146 obj, Optional<LEIIdentifier> value) {
+			obj.setLEI(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -224,7 +245,7 @@ public class PartyIdentificationAndAccount146 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount146, Optional<SecuritiesAccount30>> mmSafekeepingAccount = new MMMessageAssociationEnd<PartyIdentificationAndAccount146, Optional<SecuritiesAccount30>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount146.mmObject();
@@ -237,7 +258,17 @@ public class PartyIdentificationAndAccount146 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount30.mmObject();
+			type_lazy = () -> SecuritiesAccount30.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount30> getValue(PartyIdentificationAndAccount146 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount146 obj, Optional<SecuritiesAccount30> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -275,7 +306,7 @@ public class PartyIdentificationAndAccount146 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount146, Optional<RestrictedFINXMax16Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentificationAndAccount146, Optional<RestrictedFINXMax16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount146.mmObject();
 			isDerived = false;
@@ -287,6 +318,16 @@ public class PartyIdentificationAndAccount146 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(PartyIdentificationAndAccount146 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount146 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
 		}
 	};
 
@@ -327,7 +368,7 @@ public class PartyIdentificationAndAccount146 {
 		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public PartyIdentificationAndAccount146 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount30 safekeepingAccount) {
+	public PartyIdentificationAndAccount146 setSafekeepingAccount(SecuritiesAccount30 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
 		return this;
 	}

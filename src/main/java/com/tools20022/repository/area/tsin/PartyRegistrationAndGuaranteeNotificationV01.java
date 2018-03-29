@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.BusinessLetter1;
 import com.tools20022.repository.msg.EncapsulatedBusinessMessage1;
 import com.tools20022.repository.msg.FinancingAgreementList1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -132,7 +131,7 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, BusinessLetter1> mmHeader = new MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, BusinessLetter1>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +142,14 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyRegistrationAndGuaranteeNotificationV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BusinessLetter1 getValue(PartyRegistrationAndGuaranteeNotificationV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(PartyRegistrationAndGuaranteeNotificationV01 obj, BusinessLetter1 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "NtfctnList", required = true)
@@ -176,7 +177,7 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * definition} = "List of otifications."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationList = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, List<FinancingAgreementList1>> mmNotificationList = new MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, List<FinancingAgreementList1>>() {
 		{
 			xmlTag = "NtfctnList";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,12 +187,14 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			complexType_lazy = () -> FinancingAgreementList1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyRegistrationAndGuaranteeNotificationV01.class.getMethod("getNotificationList", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<FinancingAgreementList1> getValue(PartyRegistrationAndGuaranteeNotificationV01 obj) {
+			return obj.getNotificationList();
+		}
+
+		@Override
+		public void setValue(PartyRegistrationAndGuaranteeNotificationV01 obj, List<FinancingAgreementList1> value) {
+			obj.setNotificationList(value);
 		}
 	};
 	@XmlElement(name = "NtfctnCnt")
@@ -219,7 +222,7 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * definition} = "Number of notification lists as control value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, Optional<Max15NumericText>> mmNotificationCount = new MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, Optional<Max15NumericText>>() {
 		{
 			xmlTag = "NtfctnCnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +233,14 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyRegistrationAndGuaranteeNotificationV01.class.getMethod("getNotificationCount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max15NumericText> getValue(PartyRegistrationAndGuaranteeNotificationV01 obj) {
+			return obj.getNotificationCount();
+		}
+
+		@Override
+		public void setValue(PartyRegistrationAndGuaranteeNotificationV01 obj, Optional<Max15NumericText> value) {
+			obj.setNotificationCount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ItmCnt")
@@ -263,7 +268,7 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * definition} = "Total number of individual items in all lists."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmItemCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, Optional<Max15NumericText>> mmItemCount = new MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, Optional<Max15NumericText>>() {
 		{
 			xmlTag = "ItmCnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,12 +279,14 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyRegistrationAndGuaranteeNotificationV01.class.getMethod("getItemCount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max15NumericText> getValue(PartyRegistrationAndGuaranteeNotificationV01 obj) {
+			return obj.getItemCount();
+		}
+
+		@Override
+		public void setValue(PartyRegistrationAndGuaranteeNotificationV01 obj, Optional<Max15NumericText> value) {
+			obj.setItemCount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrlSum")
@@ -309,7 +316,7 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmControlSum = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, Optional<DecimalNumber>> mmControlSum = new MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, Optional<DecimalNumber>>() {
 		{
 			xmlTag = "CtrlSum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -320,12 +327,14 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyRegistrationAndGuaranteeNotificationV01.class.getMethod("getControlSum", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DecimalNumber> getValue(PartyRegistrationAndGuaranteeNotificationV01 obj) {
+			return obj.getControlSum();
+		}
+
+		@Override
+		public void setValue(PartyRegistrationAndGuaranteeNotificationV01 obj, Optional<DecimalNumber> value) {
+			obj.setControlSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttchdMsg")
@@ -353,7 +362,7 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 	 * definition} = "Referenced or related business message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, List<EncapsulatedBusinessMessage1>> mmAttachedMessage = new MMMessageBuildingBlock<PartyRegistrationAndGuaranteeNotificationV01, List<EncapsulatedBusinessMessage1>>() {
 		{
 			xmlTag = "AttchdMsg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -363,12 +372,14 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyRegistrationAndGuaranteeNotificationV01.class.getMethod("getAttachedMessage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<EncapsulatedBusinessMessage1> getValue(PartyRegistrationAndGuaranteeNotificationV01 obj) {
+			return obj.getAttachedMessage();
+		}
+
+		@Override
+		public void setValue(PartyRegistrationAndGuaranteeNotificationV01 obj, List<EncapsulatedBusinessMessage1> value) {
+			obj.setAttachedMessage(value);
 		}
 	};
 

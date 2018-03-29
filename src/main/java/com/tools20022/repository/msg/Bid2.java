@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesQuoteVariable;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BidResponsePrice1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -105,7 +106,7 @@ public class Bid2 {
 	 * definition} = "Unique and unambiguous identification of the bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid2, Optional<Max35Text>> mmBidIdentification = new MMMessageAttribute<Bid2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid2.mmObject();
 			isDerived = false;
@@ -116,6 +117,16 @@ public class Bid2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Bid2 obj) {
+			return obj.getBidIdentification();
+		}
+
+		@Override
+		public void setValue(Bid2 obj, Optional<Max35Text> value) {
+			obj.setBidIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntBidId")
@@ -147,7 +158,7 @@ public class Bid2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid2, Optional<Max35Text>> mmClientBidIdentification = new MMMessageAttribute<Bid2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid2.mmObject();
 			isDerived = false;
@@ -158,6 +169,16 @@ public class Bid2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Bid2 obj) {
+			return obj.getClientBidIdentification();
+		}
+
+		@Override
+		public void setValue(Bid2 obj, Optional<Max35Text> value) {
+			obj.setClientBidIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ListId", required = true)
@@ -194,7 +215,7 @@ public class Bid2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid2, Max35Text> mmListIdentification = new MMMessageAttribute<Bid2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid2.mmObject();
@@ -207,9 +228,19 @@ public class Bid2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Max35Text getValue(Bid2 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(Bid2 obj, Max35Text value) {
+			obj.setListIdentification(value);
+		}
 	};
 	@XmlElement(name = "BidRspnPricDtls", required = true)
-	protected List<com.tools20022.repository.msg.BidResponsePrice1> bidResponsePriceDetails;
+	protected List<BidResponsePrice1> bidResponsePriceDetails;
 	/**
 	 * 
 	 <p>
@@ -240,7 +271,7 @@ public class Bid2 {
 	 * "Provides details about the price linked to a particular bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBidResponsePriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Bid2, List<BidResponsePrice1>> mmBidResponsePriceDetails = new MMMessageAssociationEnd<Bid2, List<BidResponsePrice1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmBidSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid2.mmObject();
@@ -251,7 +282,17 @@ public class Bid2 {
 			definition = "Provides details about the price linked to a particular bid.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
+			type_lazy = () -> BidResponsePrice1.mmObject();
+		}
+
+		@Override
+		public List<BidResponsePrice1> getValue(Bid2 obj) {
+			return obj.getBidResponsePriceDetails();
+		}
+
+		@Override
+		public void setValue(Bid2 obj, List<BidResponsePrice1> value) {
+			obj.setBidResponsePriceDetails(value);
 		}
 	};
 
@@ -301,7 +342,7 @@ public class Bid2 {
 		return bidResponsePriceDetails == null ? bidResponsePriceDetails = new ArrayList<>() : bidResponsePriceDetails;
 	}
 
-	public Bid2 setBidResponsePriceDetails(List<com.tools20022.repository.msg.BidResponsePrice1> bidResponsePriceDetails) {
+	public Bid2 setBidResponsePriceDetails(List<BidResponsePrice1> bidResponsePriceDetails) {
 		this.bidResponsePriceDetails = Objects.requireNonNull(bidResponsePriceDetails);
 		return this;
 	}

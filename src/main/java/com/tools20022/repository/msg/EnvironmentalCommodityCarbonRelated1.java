@@ -103,7 +103,7 @@ public class EnvironmentalCommodityCarbonRelated1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnvironmentalCommodityCarbonRelated1, AssetClassProductType3Code> mmBaseProduct = new MMMessageAttribute<EnvironmentalCommodityCarbonRelated1, AssetClassProductType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class EnvironmentalCommodityCarbonRelated1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType3Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType3Code getValue(EnvironmentalCommodityCarbonRelated1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(EnvironmentalCommodityCarbonRelated1 obj, AssetClassProductType3Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -146,7 +156,7 @@ public class EnvironmentalCommodityCarbonRelated1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnvironmentalCommodityCarbonRelated1, AssetClassSubProductType29Code> mmSubProduct = new MMMessageAttribute<EnvironmentalCommodityCarbonRelated1, AssetClassSubProductType29Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvironmentalCommodityCarbonRelated1.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class EnvironmentalCommodityCarbonRelated1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType29Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType29Code getValue(EnvironmentalCommodityCarbonRelated1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(EnvironmentalCommodityCarbonRelated1 obj, AssetClassSubProductType29Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 

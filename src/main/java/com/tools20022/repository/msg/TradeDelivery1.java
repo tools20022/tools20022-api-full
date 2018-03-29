@@ -25,6 +25,10 @@ import com.tools20022.repository.area.tsin.FinancialInvoiceV01;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Consignment2;
+import com.tools20022.repository.msg.DocumentIdentification22;
+import com.tools20022.repository.msg.Period1;
+import com.tools20022.repository.msg.TradeParty1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -142,7 +146,7 @@ public class TradeDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDelivery1, Optional<Period1>> mmDeliveryPeriod = new MMMessageAttribute<TradeDelivery1, Optional<Period1>>() {
 		{
 			businessElementTrace_lazy = () -> ProductDelivery.mmDeliveryPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
@@ -154,7 +158,17 @@ public class TradeDelivery1 {
 			nextVersions_lazy = () -> Arrays.asList(TradeDelivery2.mmDeliveryPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();
+			complexType_lazy = () -> Period1.mmObject();
+		}
+
+		@Override
+		public Optional<Period1> getValue(TradeDelivery1 obj) {
+			return obj.getDeliveryPeriod();
+		}
+
+		@Override
+		public void setValue(TradeDelivery1 obj, Optional<Period1> value) {
+			obj.setDeliveryPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryDtTm")
@@ -199,7 +213,7 @@ public class TradeDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDelivery1, Optional<ISODateTime>> mmDeliveryDateTime = new MMMessageAttribute<TradeDelivery1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
@@ -212,6 +226,16 @@ public class TradeDelivery1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TradeDelivery1 obj) {
+			return obj.getDeliveryDateTime();
+		}
+
+		@Override
+		public void setValue(TradeDelivery1 obj, Optional<ISODateTime> value) {
+			obj.setDeliveryDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShipFr")
@@ -252,7 +276,7 @@ public class TradeDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShipFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDelivery1, Optional<TradeParty1>> mmShipFrom = new MMMessageAssociationEnd<TradeDelivery1, Optional<TradeParty1>>() {
 		{
 			businessComponentTrace_lazy = () -> ShipFrom.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
@@ -265,7 +289,17 @@ public class TradeDelivery1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
+			type_lazy = () -> TradeParty1.mmObject();
+		}
+
+		@Override
+		public Optional<TradeParty1> getValue(TradeDelivery1 obj) {
+			return obj.getShipFrom();
+		}
+
+		@Override
+		public void setValue(TradeDelivery1 obj, Optional<TradeParty1> value) {
+			obj.setShipFrom(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShipTo")
@@ -306,7 +340,7 @@ public class TradeDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShipTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDelivery1, Optional<TradeParty1>> mmShipTo = new MMMessageAssociationEnd<TradeDelivery1, Optional<TradeParty1>>() {
 		{
 			businessComponentTrace_lazy = () -> ShipTo.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
@@ -319,7 +353,17 @@ public class TradeDelivery1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
+			type_lazy = () -> TradeParty1.mmObject();
+		}
+
+		@Override
+		public Optional<TradeParty1> getValue(TradeDelivery1 obj) {
+			return obj.getShipTo();
+		}
+
+		@Override
+		public void setValue(TradeDelivery1 obj, Optional<TradeParty1> value) {
+			obj.setShipTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UltmtShipTo")
@@ -361,7 +405,7 @@ public class TradeDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUltimateShipTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDelivery1, Optional<TradeParty1>> mmUltimateShipTo = new MMMessageAssociationEnd<TradeDelivery1, Optional<TradeParty1>>() {
 		{
 			businessComponentTrace_lazy = () -> ShipTo.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
@@ -374,7 +418,17 @@ public class TradeDelivery1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
+			type_lazy = () -> TradeParty1.mmObject();
+		}
+
+		@Override
+		public Optional<TradeParty1> getValue(TradeDelivery1 obj) {
+			return obj.getUltimateShipTo();
+		}
+
+		@Override
+		public void setValue(TradeDelivery1 obj, Optional<TradeParty1> value) {
+			obj.setUltimateShipTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryNote")
@@ -419,7 +473,7 @@ public class TradeDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryNote = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDelivery1, Optional<DocumentIdentification22>> mmDeliveryNote = new MMMessageAttribute<TradeDelivery1, Optional<DocumentIdentification22>>() {
 		{
 			businessComponentTrace_lazy = () -> DeliveryNote.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
@@ -431,11 +485,21 @@ public class TradeDelivery1 {
 			nextVersions_lazy = () -> Arrays.asList(TradeDelivery2.mmDeliveryNote);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
+			complexType_lazy = () -> DocumentIdentification22.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentIdentification22> getValue(TradeDelivery1 obj) {
+			return obj.getDeliveryNote();
+		}
+
+		@Override
+		public void setValue(TradeDelivery1 obj, Optional<DocumentIdentification22> value) {
+			obj.setDeliveryNote(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Consgnmt")
-	protected List<com.tools20022.repository.msg.Consignment2> consignment;
+	protected List<Consignment2> consignment;
 	/**
 	 * 
 	 <p>
@@ -474,7 +538,7 @@ public class TradeDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsignment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDelivery1, List<Consignment2>> mmConsignment = new MMMessageAssociationEnd<TradeDelivery1, List<Consignment2>>() {
 		{
 			businessElementTrace_lazy = () -> ProductDelivery.mmRouting;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
@@ -486,7 +550,17 @@ public class TradeDelivery1 {
 			nextVersions_lazy = () -> Arrays.asList(TradeDelivery2.mmConsignment);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Consignment2.mmObject();
+			type_lazy = () -> Consignment2.mmObject();
+		}
+
+		@Override
+		public List<Consignment2> getValue(TradeDelivery1 obj) {
+			return obj.getConsignment();
+		}
+
+		@Override
+		public void setValue(TradeDelivery1 obj, List<Consignment2> value) {
+			obj.setConsignment(value);
 		}
 	};
 
@@ -512,7 +586,7 @@ public class TradeDelivery1 {
 		return deliveryPeriod == null ? Optional.empty() : Optional.of(deliveryPeriod);
 	}
 
-	public TradeDelivery1 setDeliveryPeriod(com.tools20022.repository.msg.Period1 deliveryPeriod) {
+	public TradeDelivery1 setDeliveryPeriod(Period1 deliveryPeriod) {
 		this.deliveryPeriod = deliveryPeriod;
 		return this;
 	}
@@ -530,7 +604,7 @@ public class TradeDelivery1 {
 		return shipFrom == null ? Optional.empty() : Optional.of(shipFrom);
 	}
 
-	public TradeDelivery1 setShipFrom(com.tools20022.repository.msg.TradeParty1 shipFrom) {
+	public TradeDelivery1 setShipFrom(TradeParty1 shipFrom) {
 		this.shipFrom = shipFrom;
 		return this;
 	}
@@ -539,7 +613,7 @@ public class TradeDelivery1 {
 		return shipTo == null ? Optional.empty() : Optional.of(shipTo);
 	}
 
-	public TradeDelivery1 setShipTo(com.tools20022.repository.msg.TradeParty1 shipTo) {
+	public TradeDelivery1 setShipTo(TradeParty1 shipTo) {
 		this.shipTo = shipTo;
 		return this;
 	}
@@ -548,7 +622,7 @@ public class TradeDelivery1 {
 		return ultimateShipTo == null ? Optional.empty() : Optional.of(ultimateShipTo);
 	}
 
-	public TradeDelivery1 setUltimateShipTo(com.tools20022.repository.msg.TradeParty1 ultimateShipTo) {
+	public TradeDelivery1 setUltimateShipTo(TradeParty1 ultimateShipTo) {
 		this.ultimateShipTo = ultimateShipTo;
 		return this;
 	}
@@ -557,7 +631,7 @@ public class TradeDelivery1 {
 		return deliveryNote == null ? Optional.empty() : Optional.of(deliveryNote);
 	}
 
-	public TradeDelivery1 setDeliveryNote(com.tools20022.repository.msg.DocumentIdentification22 deliveryNote) {
+	public TradeDelivery1 setDeliveryNote(DocumentIdentification22 deliveryNote) {
 		this.deliveryNote = deliveryNote;
 		return this;
 	}
@@ -566,7 +640,7 @@ public class TradeDelivery1 {
 		return consignment == null ? consignment = new ArrayList<>() : consignment;
 	}
 
-	public TradeDelivery1 setConsignment(List<com.tools20022.repository.msg.Consignment2> consignment) {
+	public TradeDelivery1 setConsignment(List<Consignment2> consignment) {
 		this.consignment = Objects.requireNonNull(consignment);
 		return this;
 	}

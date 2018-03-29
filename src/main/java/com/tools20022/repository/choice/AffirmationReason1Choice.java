@@ -111,7 +111,7 @@ public class AffirmationReason1Choice {
 	 * definition} = "Specifies the reason of the UnaffirmedStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AffirmationReason1Choice, List<AffirmationReason1>> mmReason = new MMMessageAssociationEnd<AffirmationReason1Choice, List<AffirmationReason1>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationReason1Choice.mmObject();
@@ -123,6 +123,16 @@ public class AffirmationReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AffirmationReason1.mmObject();
+		}
+
+		@Override
+		public List<AffirmationReason1> getValue(AffirmationReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AffirmationReason1Choice obj, List<AffirmationReason1> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -163,7 +173,7 @@ public class AffirmationReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AffirmationReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<AffirmationReason1Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationReason1Choice.mmObject();
@@ -176,6 +186,16 @@ public class AffirmationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AffirmationReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(AffirmationReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

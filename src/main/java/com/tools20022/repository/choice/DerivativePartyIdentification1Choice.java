@@ -119,7 +119,7 @@ public class DerivativePartyIdentification1Choice {
 	 * definition} = "Country of the reference entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativePartyIdentification1Choice, CountryCode> mmCountry = new MMMessageAttribute<DerivativePartyIdentification1Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmObject();
@@ -131,6 +131,16 @@ public class DerivativePartyIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(DerivativePartyIdentification1Choice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(DerivativePartyIdentification1Choice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "CtrySubDvsn", required = true)
@@ -169,7 +179,7 @@ public class DerivativePartyIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativePartyIdentification1Choice, CountrySubDivisionCode> mmCountrySubDivision = new MMMessageAttribute<DerivativePartyIdentification1Choice, CountrySubDivisionCode>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmState;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmObject();
@@ -181,6 +191,16 @@ public class DerivativePartyIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountrySubDivisionCode.mmObject();
+		}
+
+		@Override
+		public CountrySubDivisionCode getValue(DerivativePartyIdentification1Choice obj) {
+			return obj.getCountrySubDivision();
+		}
+
+		@Override
+		public void setValue(DerivativePartyIdentification1Choice obj, CountrySubDivisionCode value) {
+			obj.setCountrySubDivision(value);
 		}
 	};
 	@XmlElement(name = "LEI", required = true)
@@ -219,7 +239,7 @@ public class DerivativePartyIdentification1Choice {
 	 * "Identification of the reference party through Legal entity identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativePartyIdentification1Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<DerivativePartyIdentification1Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmObject();
@@ -231,6 +251,16 @@ public class DerivativePartyIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(DerivativePartyIdentification1Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(DerivativePartyIdentification1Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 

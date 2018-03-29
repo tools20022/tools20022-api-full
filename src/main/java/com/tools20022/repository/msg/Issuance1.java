@@ -29,6 +29,9 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Jurisdiction1;
+import com.tools20022.repository.msg.Organisation2;
+import com.tools20022.repository.msg.PriceValue1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -148,7 +151,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuePlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<MICIdentifier>> mmIssuePlace = new MMMessageAttribute<Issuance1, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -162,6 +165,16 @@ public class Issuance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(Issuance1 obj) {
+			return obj.getIssuePlace();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<MICIdentifier> value) {
+			obj.setIssuePlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfIsse")
@@ -208,7 +221,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<CountryCode>> mmCountryOfIssue = new MMMessageAttribute<Issuance1, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -222,6 +235,16 @@ public class Issuance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(Issuance1 obj) {
+			return obj.getCountryOfIssue();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<CountryCode> value) {
+			obj.setCountryOfIssue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseDt")
@@ -267,7 +290,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<ISODate>> mmIssueDate = new MMMessageAttribute<Issuance1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -281,6 +304,16 @@ public class Issuance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Issuance1 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<ISODate> value) {
+			obj.setIssueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AnncmntDt")
@@ -326,7 +359,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<ISODateTime>> mmAnnouncementDate = new MMMessageAttribute<Issuance1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -339,6 +372,16 @@ public class Issuance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Issuance1 obj) {
+			return obj.getAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<ISODateTime> value) {
+			obj.setAnnouncementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ISINVldFr")
@@ -383,7 +426,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISINValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<ISODate>> mmISINValidFrom = new MMMessageAttribute<Issuance1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -396,6 +439,16 @@ public class Issuance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Issuance1 obj) {
+			return obj.getISINValidFrom();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<ISODate> value) {
+			obj.setISINValidFrom(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrOrg")
@@ -437,7 +490,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuerOrganisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Issuance1, Optional<Organisation2>> mmIssuerOrganisation = new MMMessageAssociationEnd<Issuance1, Optional<Organisation2>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -450,7 +503,17 @@ public class Issuance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Organisation2.mmObject();
+			type_lazy = () -> Organisation2.mmObject();
+		}
+
+		@Override
+		public Optional<Organisation2> getValue(Issuance1 obj) {
+			return obj.getIssuerOrganisation();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<Organisation2> value) {
+			obj.setIssuerOrganisation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseNmnlAmt")
@@ -495,7 +558,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueNominalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<FinancialInstrumentQuantity1Choice>> mmIssueNominalAmount = new MMMessageAttribute<Issuance1, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueNominalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -508,6 +571,16 @@ public class Issuance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(Issuance1 obj) {
+			return obj.getIssueNominalAmount();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setIssueNominalAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FullIssdAmt")
@@ -554,7 +627,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullIssuedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<ActiveCurrencyAndAmount>> mmFullIssuedAmount = new MMMessageAttribute<Issuance1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueNominalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -567,6 +640,16 @@ public class Issuance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Issuance1 obj) {
+			return obj.getFullIssuedAmount();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setFullIssuedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseSz")
@@ -611,7 +694,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<Number>> mmIssueSize = new MMMessageAttribute<Issuance1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -624,6 +707,16 @@ public class Issuance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Issuance1 obj) {
+			return obj.getIssueSize();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<Number> value) {
+			obj.setIssueSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssePric")
@@ -666,7 +759,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<PriceValue1>> mmIssuePrice = new MMMessageAttribute<Issuance1, Optional<PriceValue1>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
@@ -678,7 +771,17 @@ public class Issuance1 {
 			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmIssuePrice);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public Optional<PriceValue1> getValue(Issuance1 obj) {
+			return obj.getIssuePrice();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<PriceValue1> value) {
+			obj.setIssuePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssncDstrbtn")
@@ -720,7 +823,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuanceDistribution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Issuance1, Optional<SecuritiesTransactionType17Choice>> mmIssuanceDistribution = new MMMessageAttribute<Issuance1, Optional<SecuritiesTransactionType17Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
@@ -733,9 +836,19 @@ public class Issuance1 {
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesTransactionType17Choice.mmObject();
 		}
+
+		@Override
+		public Optional<SecuritiesTransactionType17Choice> getValue(Issuance1 obj) {
+			return obj.getIssuanceDistribution();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, Optional<SecuritiesTransactionType17Choice> value) {
+			obj.setIssuanceDistribution(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "GovngLaw")
-	protected List<com.tools20022.repository.msg.Jurisdiction1> governingLaw;
+	protected List<Jurisdiction1> governingLaw;
 	/**
 	 * 
 	 <p>
@@ -769,7 +882,7 @@ public class Issuance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGoverningLaw = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Issuance1, List<Jurisdiction1>> mmGoverningLaw = new MMMessageAssociationEnd<Issuance1, List<Jurisdiction1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
@@ -780,7 +893,17 @@ public class Issuance1 {
 			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmGoverningLaw);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Jurisdiction1.mmObject();
+			type_lazy = () -> Jurisdiction1.mmObject();
+		}
+
+		@Override
+		public List<Jurisdiction1> getValue(Issuance1 obj) {
+			return obj.getGoverningLaw();
+		}
+
+		@Override
+		public void setValue(Issuance1 obj, List<Jurisdiction1> value) {
+			obj.setGoverningLaw(value);
 		}
 	};
 
@@ -851,7 +974,7 @@ public class Issuance1 {
 		return issuerOrganisation == null ? Optional.empty() : Optional.of(issuerOrganisation);
 	}
 
-	public Issuance1 setIssuerOrganisation(com.tools20022.repository.msg.Organisation2 issuerOrganisation) {
+	public Issuance1 setIssuerOrganisation(Organisation2 issuerOrganisation) {
 		this.issuerOrganisation = issuerOrganisation;
 		return this;
 	}
@@ -887,7 +1010,7 @@ public class Issuance1 {
 		return issuePrice == null ? Optional.empty() : Optional.of(issuePrice);
 	}
 
-	public Issuance1 setIssuePrice(com.tools20022.repository.msg.PriceValue1 issuePrice) {
+	public Issuance1 setIssuePrice(PriceValue1 issuePrice) {
 		this.issuePrice = issuePrice;
 		return this;
 	}
@@ -905,7 +1028,7 @@ public class Issuance1 {
 		return governingLaw == null ? governingLaw = new ArrayList<>() : governingLaw;
 	}
 
-	public Issuance1 setGoverningLaw(List<com.tools20022.repository.msg.Jurisdiction1> governingLaw) {
+	public Issuance1 setGoverningLaw(List<Jurisdiction1> governingLaw) {
 		this.governingLaw = Objects.requireNonNull(governingLaw);
 		return this;
 	}

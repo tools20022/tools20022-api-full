@@ -23,6 +23,7 @@ import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +121,7 @@ public class TransferCancellationRejectedStatus1 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferCancellationRejectedStatus1, CancellationRejectedReason1Code> mmReason = new MMMessageAttribute<TransferCancellationRejectedStatus1, CancellationRejectedReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmObject();
@@ -132,6 +133,16 @@ public class TransferCancellationRejectedStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationRejectedReason1Code.mmObject();
+		}
+
+		@Override
+		public CancellationRejectedReason1Code getValue(TransferCancellationRejectedStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(TransferCancellationRejectedStatus1 obj, CancellationRejectedReason1Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -164,7 +175,7 @@ public class TransferCancellationRejectedStatus1 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferCancellationRejectedStatus1, Extended350Code> mmExtendedReason = new MMMessageAttribute<TransferCancellationRejectedStatus1, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmObject();
 			isDerived = false;
@@ -176,9 +187,19 @@ public class TransferCancellationRejectedStatus1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
+
+		@Override
+		public Extended350Code getValue(TransferCancellationRejectedStatus1 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(TransferCancellationRejectedStatus1 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
+		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
-	protected List<com.tools20022.repository.msg.GenericIdentification1> dataSourceScheme;
+	protected List<GenericIdentification1> dataSourceScheme;
 	/**
 	 * 
 	 <p>
@@ -211,7 +232,7 @@ public class TransferCancellationRejectedStatus1 {
 	 * "Proprietary identification of the reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferCancellationRejectedStatus1, List<GenericIdentification1>> mmDataSourceScheme = new MMMessageAssociationEnd<TransferCancellationRejectedStatus1, List<GenericIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationRejectedStatus1.mmObject();
@@ -223,7 +244,17 @@ public class TransferCancellationRejectedStatus1 {
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification1> getValue(TransferCancellationRejectedStatus1 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(TransferCancellationRejectedStatus1 obj, List<GenericIdentification1> value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	/**
@@ -319,7 +350,7 @@ public class TransferCancellationRejectedStatus1 {
 		return dataSourceScheme == null ? dataSourceScheme = new ArrayList<>() : dataSourceScheme;
 	}
 
-	public TransferCancellationRejectedStatus1 setDataSourceScheme(List<com.tools20022.repository.msg.GenericIdentification1> dataSourceScheme) {
+	public TransferCancellationRejectedStatus1 setDataSourceScheme(List<GenericIdentification1> dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

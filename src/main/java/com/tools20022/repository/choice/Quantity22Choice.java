@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.Quantity23Choice;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryQuantity10;
@@ -99,7 +100,7 @@ public class Quantity22Choice {
 	 * definition} = "Choice between different quantity of security formats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity22Choice, Quantity23Choice> mmQuantityChoice = new MMMessageAssociationEnd<Quantity22Choice, Quantity23Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity22Choice.mmObject();
 			isDerived = false;
@@ -110,7 +111,17 @@ public class Quantity22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.Quantity23Choice.mmObject();
+			type_lazy = () -> Quantity23Choice.mmObject();
+		}
+
+		@Override
+		public Quantity23Choice getValue(Quantity22Choice obj) {
+			return obj.getQuantityChoice();
+		}
+
+		@Override
+		public void setValue(Quantity22Choice obj, Quantity23Choice value) {
+			obj.setQuantityChoice(value);
 		}
 	};
 	@XmlElement(name = "PrtryQty", required = true)
@@ -141,7 +152,7 @@ public class Quantity22Choice {
 	 * definition} = "Proprietary quantity of security format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity22Choice, ProprietaryQuantity10> mmProprietaryQuantity = new MMMessageAssociationEnd<Quantity22Choice, ProprietaryQuantity10>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity22Choice.mmObject();
 			isDerived = false;
@@ -153,6 +164,16 @@ public class Quantity22Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryQuantity10.mmObject();
+		}
+
+		@Override
+		public ProprietaryQuantity10 getValue(Quantity22Choice obj) {
+			return obj.getProprietaryQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity22Choice obj, ProprietaryQuantity10 value) {
+			obj.setProprietaryQuantity(value);
 		}
 	};
 
@@ -174,7 +195,7 @@ public class Quantity22Choice {
 		return quantityChoice;
 	}
 
-	public Quantity22Choice setQuantityChoice(com.tools20022.repository.choice.Quantity23Choice quantityChoice) {
+	public Quantity22Choice setQuantityChoice(Quantity23Choice quantityChoice) {
 		this.quantityChoice = Objects.requireNonNull(quantityChoice);
 		return this;
 	}

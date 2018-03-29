@@ -127,7 +127,7 @@ public class References39Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References39Choice, AdditionalReference3> mmPreviousReference = new MMMessageAssociationEnd<References39Choice, AdditionalReference3>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References39Choice.mmObject();
@@ -141,6 +141,16 @@ public class References39Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(References39Choice obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(References39Choice obj, AdditionalReference3 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "OthrRef", required = true)
@@ -189,7 +199,7 @@ public class References39Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References39Choice, AdditionalReference3> mmOtherReference = new MMMessageAssociationEnd<References39Choice, AdditionalReference3>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References39Choice.mmObject();
@@ -203,6 +213,16 @@ public class References39Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(References39Choice obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(References39Choice obj, AdditionalReference3 value) {
+			obj.setOtherReference(value);
 		}
 	};
 

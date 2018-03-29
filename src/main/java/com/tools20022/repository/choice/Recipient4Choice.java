@@ -126,7 +126,7 @@ public class Recipient4Choice {
 	 * Recipient3Choice.mmKeyTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient4Choice, KeyTransport4> mmKeyTransport = new MMMessageAssociationEnd<Recipient4Choice, KeyTransport4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient4Choice.mmObject();
 			isDerived = false;
@@ -140,6 +140,16 @@ public class Recipient4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> KeyTransport4.mmObject();
+		}
+
+		@Override
+		public KeyTransport4 getValue(Recipient4Choice obj) {
+			return obj.getKeyTransport();
+		}
+
+		@Override
+		public void setValue(Recipient4Choice obj, KeyTransport4 value) {
+			obj.setKeyTransport(value);
 		}
 	};
 	@XmlElement(name = "KEK", required = true)
@@ -182,7 +192,7 @@ public class Recipient4Choice {
 	 * Recipient3Choice.mmKEK}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKEK = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient4Choice, KEK4> mmKEK = new MMMessageAssociationEnd<Recipient4Choice, KEK4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient4Choice.mmObject();
 			isDerived = false;
@@ -196,6 +206,16 @@ public class Recipient4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> KEK4.mmObject();
+		}
+
+		@Override
+		public KEK4 getValue(Recipient4Choice obj) {
+			return obj.getKEK();
+		}
+
+		@Override
+		public void setValue(Recipient4Choice obj, KEK4 value) {
+			obj.setKEK(value);
 		}
 	};
 	@XmlElement(name = "KeyIdr", required = true)
@@ -244,7 +264,7 @@ public class Recipient4Choice {
 	 * Recipient3Choice.mmKeyIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient4Choice, KEKIdentifier2> mmKeyIdentifier = new MMMessageAssociationEnd<Recipient4Choice, KEKIdentifier2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient4Choice.mmObject();
 			isDerived = false;
@@ -258,6 +278,16 @@ public class Recipient4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> KEKIdentifier2.mmObject();
+		}
+
+		@Override
+		public KEKIdentifier2 getValue(Recipient4Choice obj) {
+			return obj.getKeyIdentifier();
+		}
+
+		@Override
+		public void setValue(Recipient4Choice obj, KEKIdentifier2 value) {
+			obj.setKeyIdentifier(value);
 		}
 	};
 

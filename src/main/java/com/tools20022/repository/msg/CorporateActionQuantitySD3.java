@@ -110,7 +110,7 @@ public class CorporateActionQuantitySD3 {
 	 * CorporateActionQuantitySD1.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionQuantitySD3, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionQuantitySD3, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantitySD3.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class CorporateActionQuantitySD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionQuantitySD3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantitySD3 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcptQty")
@@ -165,7 +175,7 @@ public class CorporateActionQuantitySD3 {
 	 * CorporateActionQuantitySD1.mmSubscriptionQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionQuantitySD3, Optional<RatioFormat23Choice>> mmSubscriptionQuantity = new MMMessageAttribute<CorporateActionQuantitySD3, Optional<RatioFormat23Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantitySD3.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class CorporateActionQuantitySD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RatioFormat23Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat23Choice> getValue(CorporateActionQuantitySD3 obj) {
+			return obj.getSubscriptionQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantitySD3 obj, Optional<RatioFormat23Choice> value) {
+			obj.setSubscriptionQuantity(value.orElse(null));
 		}
 	};
 

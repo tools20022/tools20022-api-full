@@ -119,7 +119,7 @@ public class PartyIdentification53Choice {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification53Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification53Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification53Choice.mmObject();
@@ -131,6 +131,16 @@ public class PartyIdentification53Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification53Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification53Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -166,7 +176,7 @@ public class PartyIdentification53Choice {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification53Choice, NameAndAddress12> mmNameAndAddress = new MMMessageAssociationEnd<PartyIdentification53Choice, NameAndAddress12>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification53Choice.mmObject();
@@ -179,6 +189,16 @@ public class PartyIdentification53Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NameAndAddress12.mmObject();
+		}
+
+		@Override
+		public NameAndAddress12 getValue(PartyIdentification53Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification53Choice obj, NameAndAddress12 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -215,7 +235,7 @@ public class PartyIdentification53Choice {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification53Choice, CountryCode> mmCountry = new MMMessageAttribute<PartyIdentification53Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification53Choice.mmObject();
@@ -227,6 +247,16 @@ public class PartyIdentification53Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PartyIdentification53Choice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PartyIdentification53Choice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

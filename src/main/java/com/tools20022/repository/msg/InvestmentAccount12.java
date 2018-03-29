@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.PartyIdentification1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
+import com.tools20022.repository.msg.Intermediary1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -130,7 +132,7 @@ public class InvestmentAccount12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount12, AccountIdentification1> mmIdentification = new MMMessageAttribute<InvestmentAccount12, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount12.mmObject();
@@ -141,7 +143,17 @@ public class InvestmentAccount12 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(InvestmentAccount12 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount12 obj, AccountIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -180,7 +192,7 @@ public class InvestmentAccount12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount12, Optional<Max35Text>> mmName = new MMMessageAttribute<InvestmentAccount12, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount12.mmObject();
@@ -192,6 +204,16 @@ public class InvestmentAccount12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount12 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount12 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dsgnt")
@@ -230,7 +252,7 @@ public class InvestmentAccount12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount12, Optional<Max35Text>> mmDesignation = new MMMessageAttribute<InvestmentAccount12, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount12.mmObject();
@@ -243,9 +265,19 @@ public class InvestmentAccount12 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount12 obj) {
+			return obj.getDesignation();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount12 obj, Optional<Max35Text> value) {
+			obj.setDesignation(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "IntrmyInf")
-	protected List<com.tools20022.repository.msg.Intermediary1> intermediaryInformation;
+	protected List<Intermediary1> intermediaryInformation;
 	/**
 	 * 
 	 <p>
@@ -280,7 +312,7 @@ public class InvestmentAccount12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediaryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount12, List<Intermediary1>> mmIntermediaryInformation = new MMMessageAttribute<InvestmentAccount12, List<Intermediary1>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount12.mmObject();
@@ -291,7 +323,17 @@ public class InvestmentAccount12 {
 			definition = "Party that provides services relating to financial products to investors, eg, advice on products and placement of orders for the investment fund.";
 			maxOccurs = 10;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Intermediary1.mmObject();
+			complexType_lazy = () -> Intermediary1.mmObject();
+		}
+
+		@Override
+		public List<Intermediary1> getValue(InvestmentAccount12 obj) {
+			return obj.getIntermediaryInformation();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount12 obj, List<Intermediary1> value) {
+			obj.setIntermediaryInformation(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -331,7 +373,7 @@ public class InvestmentAccount12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount12, Optional<PartyIdentification1Choice>> mmAccountServicer = new MMMessageAttribute<InvestmentAccount12, Optional<PartyIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount12.mmObject();
@@ -343,6 +385,16 @@ public class InvestmentAccount12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification1Choice> getValue(InvestmentAccount12 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount12 obj, Optional<PartyIdentification1Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -366,7 +418,7 @@ public class InvestmentAccount12 {
 		return identification;
 	}
 
-	public InvestmentAccount12 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public InvestmentAccount12 setIdentification(AccountIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -393,7 +445,7 @@ public class InvestmentAccount12 {
 		return intermediaryInformation == null ? intermediaryInformation = new ArrayList<>() : intermediaryInformation;
 	}
 
-	public InvestmentAccount12 setIntermediaryInformation(List<com.tools20022.repository.msg.Intermediary1> intermediaryInformation) {
+	public InvestmentAccount12 setIntermediaryInformation(List<Intermediary1> intermediaryInformation) {
 		this.intermediaryInformation = Objects.requireNonNull(intermediaryInformation);
 		return this;
 	}

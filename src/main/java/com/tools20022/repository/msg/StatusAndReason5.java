@@ -103,7 +103,7 @@ public class StatusAndReason5 {
 	 * definition} = "Status and reason for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason5, Status4Choice> mmStatusAndReason = new MMMessageAssociationEnd<StatusAndReason5, Status4Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason5.mmObject();
@@ -117,6 +117,16 @@ public class StatusAndReason5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Status4Choice.mmObject();
+		}
+
+		@Override
+		public Status4Choice getValue(StatusAndReason5 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(StatusAndReason5 obj, Status4Choice value) {
+			obj.setStatusAndReason(value);
 		}
 	};
 

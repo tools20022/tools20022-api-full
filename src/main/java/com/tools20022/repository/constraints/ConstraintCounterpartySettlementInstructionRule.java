@@ -50,11 +50,15 @@ public class ConstraintCounterpartySettlementInstructionRule {
 	 */
 	public static final MMConstraint<NetObligation1> forNetObligation1 = new MMConstraint<NetObligation1>() {
 		{
-			validator = ConstraintCounterpartySettlementInstructionRule::checkNetObligation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySettlementInstructionRule";
 			definition = "The CounterpartySettlementInstructions must not be present when the obligation direction value is DBIT.";
 			owner_lazy = () -> NetObligation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetObligation1 obj) throws Exception {
+			checkNetObligation1(obj);
 		}
 	};
 

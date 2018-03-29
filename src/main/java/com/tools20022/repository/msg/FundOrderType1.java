@@ -117,7 +117,7 @@ public class FundOrderType1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundOrderType1, FundOrderType2Code> mmStructured = new MMMessageAttribute<FundOrderType1, FundOrderType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderType1.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class FundOrderType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType2Code.mmObject();
+		}
+
+		@Override
+		public FundOrderType2Code getValue(FundOrderType1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(FundOrderType1 obj, FundOrderType2Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -158,7 +168,7 @@ public class FundOrderType1 {
 	 * definition} = "Additional information about the type of identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundOrderType1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<FundOrderType1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderType1.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class FundOrderType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(FundOrderType1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(FundOrderType1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

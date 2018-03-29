@@ -117,7 +117,7 @@ public class SolicitationFeeRateFormat9Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SolicitationFeeRateFormat9Choice, PercentageRate> mmRate = new MMMessageAttribute<SolicitationFeeRateFormat9Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat9Choice.mmObject();
@@ -130,6 +130,16 @@ public class SolicitationFeeRateFormat9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SolicitationFeeRateFormat9Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat9Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "AmtToQty", required = true)
@@ -169,7 +179,7 @@ public class SolicitationFeeRateFormat9Choice {
 	 * definition} = "Ratio expressed as an amount to quantity ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SolicitationFeeRateFormat9Choice, AmountAndQuantityRatio5> mmAmountToQuantity = new MMMessageAssociationEnd<SolicitationFeeRateFormat9Choice, AmountAndQuantityRatio5>() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat9Choice.mmObject();
@@ -183,6 +193,16 @@ public class SolicitationFeeRateFormat9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndQuantityRatio5.mmObject();
+		}
+
+		@Override
+		public AmountAndQuantityRatio5 getValue(SolicitationFeeRateFormat9Choice obj) {
+			return obj.getAmountToQuantity();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat9Choice obj, AmountAndQuantityRatio5 value) {
+			obj.setAmountToQuantity(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -220,7 +240,7 @@ public class SolicitationFeeRateFormat9Choice {
 	 * definition} = "Cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SolicitationFeeRateFormat9Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<SolicitationFeeRateFormat9Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat9Choice.mmObject();
@@ -232,6 +252,16 @@ public class SolicitationFeeRateFormat9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(SolicitationFeeRateFormat9Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat9Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

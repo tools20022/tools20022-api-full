@@ -122,7 +122,7 @@ public class NonEligibleProceedsIndicator3Choice {
 	 * NonEligibleProceedsIndicator1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonEligibleProceedsIndicator3Choice, NonEligibleProceedsIndicator1Code> mmCode = new MMMessageAttribute<NonEligibleProceedsIndicator3Choice, NonEligibleProceedsIndicator1Code>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmNonEligibleProceedsIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NonEligibleProceedsIndicator3Choice.mmObject();
@@ -135,6 +135,16 @@ public class NonEligibleProceedsIndicator3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NonEligibleProceedsIndicator1Code.mmObject();
+		}
+
+		@Override
+		public NonEligibleProceedsIndicator1Code getValue(NonEligibleProceedsIndicator3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(NonEligibleProceedsIndicator3Choice obj, NonEligibleProceedsIndicator1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -178,7 +188,7 @@ public class NonEligibleProceedsIndicator3Choice {
 	 * NonEligibleProceedsIndicator1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonEligibleProceedsIndicator3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<NonEligibleProceedsIndicator3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmNonEligibleProceedsIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NonEligibleProceedsIndicator3Choice.mmObject();
@@ -192,6 +202,16 @@ public class NonEligibleProceedsIndicator3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(NonEligibleProceedsIndicator3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(NonEligibleProceedsIndicator3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

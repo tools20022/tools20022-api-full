@@ -22,9 +22,10 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.InformationQualifier;
+import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -223,7 +224,7 @@ public class SystemBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmQualifier = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SystemBusinessInformation, InformationQualifier> mmQualifier = new MMBusinessAssociationEnd<SystemBusinessInformation, InformationQualifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmQualifier, GeneralBusinessInformationSearchCriteria.mmQualifier, GeneralBusinessInformationSearchCriteria1.mmQualifier, GeneralBusinessInformation1.mmQualifier);
 			isDerived = false;
@@ -240,9 +241,19 @@ public class SystemBusinessInformation {
 			definition = "Further information about the criticality or importance of a general business information system.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InformationQualifier.mmSystemBusinessInformation;
+			opposite_lazy = () -> InformationQualifier.mmSystemBusinessInformation;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InformationQualifier.mmObject();
+			type_lazy = () -> InformationQualifier.mmObject();
+		}
+
+		@Override
+		public InformationQualifier getValue(SystemBusinessInformation obj) {
+			return obj.getQualifier();
+		}
+
+		@Override
+		public void setValue(SystemBusinessInformation obj, InformationQualifier value) {
+			obj.setQualifier(value);
 		}
 	};
 	protected Max35Text subject;
@@ -301,7 +312,7 @@ public class SystemBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSubject = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SystemBusinessInformation, Max35Text> mmSubject = new MMBusinessAttribute<SystemBusinessInformation, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmSubject, GeneralBusinessInformationSearchCriteria.mmSubject, GeneralBusinessInformationSearchCriteria1.mmSubject, GeneralBusinessInformation1.mmSubject);
 			isDerived = false;
@@ -321,12 +332,14 @@ public class SystemBusinessInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemBusinessInformation.class.getMethod("getSubject", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SystemBusinessInformation obj) {
+			return obj.getSubject();
+		}
+
+		@Override
+		public void setValue(SystemBusinessInformation obj, Max35Text value) {
+			obj.setSubject(value);
 		}
 	};
 	protected Max350Text subjectDetails;
@@ -377,7 +390,7 @@ public class SystemBusinessInformation {
 	 * definition} = "General business information, in unstructured form."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSubjectDetails = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SystemBusinessInformation, Max350Text> mmSubjectDetails = new MMBusinessAttribute<SystemBusinessInformation, Max350Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmSubjectDetails, GeneralBusinessInformation1.mmSubjectDetails);
 			isDerived = false;
@@ -397,12 +410,14 @@ public class SystemBusinessInformation {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemBusinessInformation.class.getMethod("getSubjectDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(SystemBusinessInformation obj) {
+			return obj.getSubjectDetails();
+		}
+
+		@Override
+		public void setValue(SystemBusinessInformation obj, Max350Text value) {
+			obj.setSubjectDetails(value);
 		}
 	};
 	protected Max35Text identification;
@@ -453,7 +468,7 @@ public class SystemBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SystemBusinessInformation, Max35Text> mmIdentification = new MMBusinessAttribute<SystemBusinessInformation, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessReport.mmBusinessInformationReference, GeneralBusinessReport2.mmBusinessInformationReference, GeneralBusinessReport3.mmBusinessInformationReference,
 					GeneralBusinessReport4.mmBusinessInformationReference, GeneralBusinessReport5.mmBusinessInformationReference);
@@ -467,12 +482,14 @@ public class SystemBusinessInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemBusinessInformation.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SystemBusinessInformation obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SystemBusinessInformation obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	protected Max35Text reference;
@@ -525,7 +542,7 @@ public class SystemBusinessInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmReference = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SystemBusinessInformation, Max35Text> mmReference = new MMBusinessAttribute<SystemBusinessInformation, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria.mmReference, GeneralBusinessInformationSearchCriteria1.mmReference);
 			isDerived = false;
@@ -545,12 +562,14 @@ public class SystemBusinessInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemBusinessInformation.class.getMethod("getReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SystemBusinessInformation obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(SystemBusinessInformation obj, Max35Text value) {
+			obj.setReference(value);
 		}
 	};
 	protected System system;
@@ -586,7 +605,7 @@ public class SystemBusinessInformation {
 	 * definition} = "System for which business information is generated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SystemBusinessInformation, Optional<System>> mmSystem = new MMBusinessAssociationEnd<SystemBusinessInformation, Optional<System>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
@@ -595,9 +614,19 @@ public class SystemBusinessInformation {
 			definition = "System for which business information is generated.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.System.mmSystemGeneratedInformation;
+			opposite_lazy = () -> System.mmSystemGeneratedInformation;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
+			type_lazy = () -> System.mmObject();
+		}
+
+		@Override
+		public Optional<System> getValue(SystemBusinessInformation obj) {
+			return obj.getSystem();
+		}
+
+		@Override
+		public void setValue(SystemBusinessInformation obj, Optional<System> value) {
+			obj.setSystem(value.orElse(null));
 		}
 	};
 
@@ -608,7 +637,7 @@ public class SystemBusinessInformation {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemBusinessInformation";
 				definition = "Details about business information related to a system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmSystemGeneratedInformation, com.tools20022.repository.entity.InformationQualifier.mmSystemBusinessInformation);
+				associationDomain_lazy = () -> Arrays.asList(System.mmSystemGeneratedInformation, InformationQualifier.mmSystemBusinessInformation);
 				derivationElement_lazy = () -> Arrays.asList(GeneralBusinessReport.mmGeneralBusinessInformation, GeneralBusinessReport2.mmGeneralBusinessInformation, GeneralBusinessReport3.mmGeneralBusinessOrError,
 						GeneralBusinessReport4.mmGeneralBusinessOrError, GeneralBusinessReport5.mmGeneralBusinessOrError);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemBusinessInformation.mmQualifier, com.tools20022.repository.entity.SystemBusinessInformation.mmSubject,
@@ -632,7 +661,7 @@ public class SystemBusinessInformation {
 		return qualifier;
 	}
 
-	public SystemBusinessInformation setQualifier(com.tools20022.repository.entity.InformationQualifier qualifier) {
+	public SystemBusinessInformation setQualifier(InformationQualifier qualifier) {
 		this.qualifier = Objects.requireNonNull(qualifier);
 		return this;
 	}
@@ -677,7 +706,7 @@ public class SystemBusinessInformation {
 		return system == null ? Optional.empty() : Optional.of(system);
 	}
 
-	public SystemBusinessInformation setSystem(com.tools20022.repository.entity.System system) {
+	public SystemBusinessInformation setSystem(System system) {
 		this.system = system;
 		return this;
 	}

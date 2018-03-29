@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -147,7 +146,7 @@ public class MarginReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginReportV02, ReportParameters3> mmReportParameters = new MMMessageBuildingBlock<MarginReportV02, ReportParameters3>() {
 		{
 			xmlTag = "RptParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,12 +157,14 @@ public class MarginReportV02 {
 			complexType_lazy = () -> ReportParameters3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginReportV02.class.getMethod("getReportParameters", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportParameters3 getValue(MarginReportV02 obj) {
+			return obj.getReportParameters();
+		}
+
+		@Override
+		public void setValue(MarginReportV02 obj, ReportParameters3 value) {
+			obj.setReportParameters(value);
 		}
 	};
 	@XmlElement(name = "Pgntn", required = true)
@@ -192,7 +193,7 @@ public class MarginReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginReportV02, Pagination> mmPagination = new MMMessageBuildingBlock<MarginReportV02, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,12 +204,14 @@ public class MarginReportV02 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginReportV02.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(MarginReportV02 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(MarginReportV02 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "ClrMmb", required = true)
@@ -238,7 +241,7 @@ public class MarginReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginReportV02, PartyIdentification35Choice> mmClearingMember = new MMMessageBuildingBlock<MarginReportV02, PartyIdentification35Choice>() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,12 +252,14 @@ public class MarginReportV02 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginReportV02.class.getMethod("getClearingMember", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification35Choice getValue(MarginReportV02 obj) {
+			return obj.getClearingMember();
+		}
+
+		@Override
+		public void setValue(MarginReportV02 obj, PartyIdentification35Choice value) {
+			obj.setClearingMember(value);
 		}
 	};
 	@XmlElement(name = "RptSummry")
@@ -283,7 +288,7 @@ public class MarginReportV02 {
 	 * "Provides details on the valuation of the collateral on deposit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportSummary = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginReportV02, Optional<MarginCalculation1>> mmReportSummary = new MMMessageBuildingBlock<MarginReportV02, Optional<MarginCalculation1>>() {
 		{
 			xmlTag = "RptSummry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,12 +299,14 @@ public class MarginReportV02 {
 			complexType_lazy = () -> MarginCalculation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginReportV02.class.getMethod("getReportSummary", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarginCalculation1> getValue(MarginReportV02 obj) {
+			return obj.getReportSummary();
+		}
+
+		@Override
+		public void setValue(MarginReportV02 obj, Optional<MarginCalculation1> value) {
+			obj.setReportSummary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptDtls", required = true)
@@ -326,7 +333,7 @@ public class MarginReportV02 {
 	 * definition} = "Provides the margin report details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginReportV02, List<MarginReport2>> mmReportDetails = new MMMessageBuildingBlock<MarginReportV02, List<MarginReport2>>() {
 		{
 			xmlTag = "RptDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,12 +343,14 @@ public class MarginReportV02 {
 			complexType_lazy = () -> MarginReport2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginReportV02.class.getMethod("getReportDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MarginReport2> getValue(MarginReportV02 obj) {
+			return obj.getReportDetails();
+		}
+
+		@Override
+		public void setValue(MarginReportV02 obj, List<MarginReport2> value) {
+			obj.setReportDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -371,7 +380,7 @@ public class MarginReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginReportV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MarginReportV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,12 +390,14 @@ public class MarginReportV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginReportV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MarginReportV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MarginReportV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

@@ -26,6 +26,9 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactDetails2;
+import com.tools20022.repository.msg.OrganisationIdentification8;
+import com.tools20022.repository.msg.PostalAddress6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +125,7 @@ public class OrganisationIdentification28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification28, Optional<Max140Text>> mmName = new MMMessageAttribute<OrganisationIdentification28, Optional<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification28.mmObject();
@@ -134,6 +137,16 @@ public class OrganisationIdentification28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(OrganisationIdentification28 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification28 obj, Optional<Max140Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -170,7 +183,7 @@ public class OrganisationIdentification28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrganisationIdentification28, Optional<PostalAddress6>> mmPostalAddress = new MMMessageAssociationEnd<OrganisationIdentification28, Optional<PostalAddress6>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification28.mmObject();
@@ -182,7 +195,17 @@ public class OrganisationIdentification28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress6.mmObject();
+			type_lazy = () -> PostalAddress6.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress6> getValue(OrganisationIdentification28 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification28 obj, Optional<PostalAddress6> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -219,7 +242,7 @@ public class OrganisationIdentification28 {
 	 * definition} = "Unique and unambiguous identification of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrganisationIdentification28, Optional<OrganisationIdentification8>> mmIdentification = new MMMessageAssociationEnd<OrganisationIdentification28, Optional<OrganisationIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification28.mmObject();
@@ -231,7 +254,17 @@ public class OrganisationIdentification28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification8.mmObject();
+			type_lazy = () -> OrganisationIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationIdentification8> getValue(OrganisationIdentification28 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification28 obj, Optional<OrganisationIdentification8> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfRes")
@@ -270,7 +303,7 @@ public class OrganisationIdentification28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfResidence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification28, Optional<CountryCode>> mmCountryOfResidence = new MMMessageAttribute<OrganisationIdentification28, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmPlaceOfRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification28.mmObject();
@@ -282,6 +315,16 @@ public class OrganisationIdentification28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(OrganisationIdentification28 obj) {
+			return obj.getCountryOfResidence();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification28 obj, Optional<CountryCode> value) {
+			obj.setCountryOfResidence(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctDtls", required = true)
@@ -318,7 +361,7 @@ public class OrganisationIdentification28 {
 	 * "Set of elements used to indicate how to contact the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrganisationIdentification28, ContactDetails2> mmContactDetails = new MMMessageAssociationEnd<OrganisationIdentification28, ContactDetails2>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification28.mmObject();
@@ -330,7 +373,17 @@ public class OrganisationIdentification28 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactDetails2.mmObject();
+			type_lazy = () -> ContactDetails2.mmObject();
+		}
+
+		@Override
+		public ContactDetails2 getValue(OrganisationIdentification28 obj) {
+			return obj.getContactDetails();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification28 obj, ContactDetails2 value) {
+			obj.setContactDetails(value);
 		}
 	};
 
@@ -363,7 +416,7 @@ public class OrganisationIdentification28 {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public OrganisationIdentification28 setPostalAddress(com.tools20022.repository.msg.PostalAddress6 postalAddress) {
+	public OrganisationIdentification28 setPostalAddress(PostalAddress6 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}
@@ -372,7 +425,7 @@ public class OrganisationIdentification28 {
 		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public OrganisationIdentification28 setIdentification(com.tools20022.repository.msg.OrganisationIdentification8 identification) {
+	public OrganisationIdentification28 setIdentification(OrganisationIdentification8 identification) {
 		this.identification = identification;
 		return this;
 	}
@@ -390,7 +443,7 @@ public class OrganisationIdentification28 {
 		return contactDetails;
 	}
 
-	public OrganisationIdentification28 setContactDetails(com.tools20022.repository.msg.ContactDetails2 contactDetails) {
+	public OrganisationIdentification28 setContactDetails(ContactDetails2 contactDetails) {
 		this.contactDetails = Objects.requireNonNull(contactDetails);
 		return this;
 	}

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstitutionIdentification5Choice;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchData;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class BranchAndFinancialInstitutionIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstitutionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BranchAndFinancialInstitutionIdentification3, FinancialInstitutionIdentification5Choice> mmFinancialInstitutionIdentification = new MMMessageAssociationEnd<BranchAndFinancialInstitutionIdentification3, FinancialInstitutionIdentification5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
@@ -126,6 +127,16 @@ public class BranchAndFinancialInstitutionIdentification3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstitutionIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification5Choice getValue(BranchAndFinancialInstitutionIdentification3 obj) {
+			return obj.getFinancialInstitutionIdentification();
+		}
+
+		@Override
+		public void setValue(BranchAndFinancialInstitutionIdentification3 obj, FinancialInstitutionIdentification5Choice value) {
+			obj.setFinancialInstitutionIdentification(value);
 		}
 	};
 	@XmlElement(name = "BrnchId")
@@ -162,7 +173,7 @@ public class BranchAndFinancialInstitutionIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBranchIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BranchAndFinancialInstitutionIdentification3, Optional<BranchData>> mmBranchIdentification = new MMMessageAssociationEnd<BranchAndFinancialInstitutionIdentification3, Optional<BranchData>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3.mmObject();
@@ -174,7 +185,17 @@ public class BranchAndFinancialInstitutionIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
+			type_lazy = () -> BranchData.mmObject();
+		}
+
+		@Override
+		public Optional<BranchData> getValue(BranchAndFinancialInstitutionIdentification3 obj) {
+			return obj.getBranchIdentification();
+		}
+
+		@Override
+		public void setValue(BranchAndFinancialInstitutionIdentification3 obj, Optional<BranchData> value) {
+			obj.setBranchIdentification(value.orElse(null));
 		}
 	};
 
@@ -206,7 +227,7 @@ public class BranchAndFinancialInstitutionIdentification3 {
 		return branchIdentification == null ? Optional.empty() : Optional.of(branchIdentification);
 	}
 
-	public BranchAndFinancialInstitutionIdentification3 setBranchIdentification(com.tools20022.repository.msg.BranchData branchIdentification) {
+	public BranchAndFinancialInstitutionIdentification3 setBranchIdentification(BranchData branchIdentification) {
 		this.branchIdentification = branchIdentification;
 		return this;
 	}

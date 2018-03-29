@@ -122,7 +122,7 @@ public class Product5 {
 	 * Product3.mmProductCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProductCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Product5, Max70Text> mmProductCode = new MMMessageAttribute<Product5, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> ProductIdentification.mmIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Product5.mmObject();
@@ -135,6 +135,16 @@ public class Product5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(Product5 obj) {
+			return obj.getProductCode();
+		}
+
+		@Override
+		public void setValue(Product5 obj, Max70Text value) {
+			obj.setProductCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlPdctCd")
@@ -170,7 +180,7 @@ public class Product5 {
 	 * Product3.mmAdditionalProductCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalProductCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Product5, Optional<Max70Text>> mmAdditionalProductCode = new MMMessageAttribute<Product5, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Product5.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class Product5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(Product5 obj) {
+			return obj.getAdditionalProductCode();
+		}
+
+		@Override
+		public void setValue(Product5 obj, Optional<Max70Text> value) {
+			obj.setAdditionalProductCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmtLmt")
@@ -218,7 +238,7 @@ public class Product5 {
 	 * Product3.mmProductAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Product5, Optional<ImpliedCurrencyAndAmount>> mmAmountLimit = new MMMessageAttribute<Product5, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Product5.mmObject();
 			isDerived = false;
@@ -230,6 +250,16 @@ public class Product5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(Product5 obj) {
+			return obj.getAmountLimit();
+		}
+
+		@Override
+		public void setValue(Product5 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setAmountLimit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtyLmt")
@@ -271,7 +301,7 @@ public class Product5 {
 	 * Product3.mmProductQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Product5, Optional<DecimalNumber>> mmQuantityLimit = new MMMessageAttribute<Product5, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Product5.mmObject();
@@ -284,6 +314,16 @@ public class Product5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Product5 obj) {
+			return obj.getQuantityLimit();
+		}
+
+		@Override
+		public void setValue(Product5 obj, Optional<DecimalNumber> value) {
+			obj.setQuantityLimit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnitOfMeasr")
@@ -325,7 +365,7 @@ public class Product5 {
 	 * Product3.mmUnitOfMeasure}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Product5, Optional<UnitOfMeasure6Code>> mmUnitOfMeasure = new MMMessageAttribute<Product5, Optional<UnitOfMeasure6Code>>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Product5.mmObject();
@@ -338,6 +378,16 @@ public class Product5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnitOfMeasure6Code.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOfMeasure6Code> getValue(Product5 obj) {
+			return obj.getUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(Product5 obj, Optional<UnitOfMeasure6Code> value) {
+			obj.setUnitOfMeasure(value.orElse(null));
 		}
 	};
 

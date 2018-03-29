@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LimitReturnCriteria2;
+import com.tools20022.repository.msg.LimitSearchCriteria4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -134,7 +136,7 @@ public class LimitCriteria4 {
 	 * LimitCriteria3.mmNewQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitCriteria4, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<LimitCriteria4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitCriteria4.mmObject();
 			isDerived = false;
@@ -148,9 +150,19 @@ public class LimitCriteria4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(LimitCriteria4 obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(LimitCriteria4 obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.LimitSearchCriteria4> searchCriteria;
+	protected List<LimitSearchCriteria4> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -189,7 +201,7 @@ public class LimitCriteria4 {
 	 * LimitCriteria3.mmSearchCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitCriteria4, List<LimitSearchCriteria4>> mmSearchCriteria = new MMMessageAssociationEnd<LimitCriteria4, List<LimitSearchCriteria4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitCriteria4.mmObject();
 			isDerived = false;
@@ -201,7 +213,17 @@ public class LimitCriteria4 {
 			previousVersion_lazy = () -> LimitCriteria3.mmSearchCriteria;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria4.mmObject();
+			type_lazy = () -> LimitSearchCriteria4.mmObject();
+		}
+
+		@Override
+		public List<LimitSearchCriteria4> getValue(LimitCriteria4 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(LimitCriteria4 obj, List<LimitSearchCriteria4> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -244,7 +266,7 @@ public class LimitCriteria4 {
 	 * LimitCriteria3.mmReturnCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitCriteria4, Optional<LimitReturnCriteria2>> mmReturnCriteria = new MMMessageAssociationEnd<LimitCriteria4, Optional<LimitReturnCriteria2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitCriteria4.mmObject();
 			isDerived = false;
@@ -257,7 +279,17 @@ public class LimitCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitReturnCriteria2.mmObject();
+			type_lazy = () -> LimitReturnCriteria2.mmObject();
+		}
+
+		@Override
+		public Optional<LimitReturnCriteria2> getValue(LimitCriteria4 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(LimitCriteria4 obj, Optional<LimitReturnCriteria2> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -292,7 +324,7 @@ public class LimitCriteria4 {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public LimitCriteria4 setSearchCriteria(List<com.tools20022.repository.msg.LimitSearchCriteria4> searchCriteria) {
+	public LimitCriteria4 setSearchCriteria(List<LimitSearchCriteria4> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -301,7 +333,7 @@ public class LimitCriteria4 {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public LimitCriteria4 setReturnCriteria(com.tools20022.repository.msg.LimitReturnCriteria2 returnCriteria) {
+	public LimitCriteria4 setReturnCriteria(LimitReturnCriteria2 returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

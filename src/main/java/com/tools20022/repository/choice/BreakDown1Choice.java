@@ -97,7 +97,7 @@ public class BreakDown1Choice {
 	 * definition} = "The intention to pay is based on a purchase order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmByPurchaseOrder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakDown1Choice, ReportLine5> mmByPurchaseOrder = new MMMessageAssociationEnd<BreakDown1Choice, ReportLine5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BreakDown1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class BreakDown1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReportLine5.mmObject();
+		}
+
+		@Override
+		public ReportLine5 getValue(BreakDown1Choice obj) {
+			return obj.getByPurchaseOrder();
+		}
+
+		@Override
+		public void setValue(BreakDown1Choice obj, ReportLine5 value) {
+			obj.setByPurchaseOrder(value);
 		}
 	};
 	@XmlElement(name = "ByComrclInvc", required = true)
@@ -139,7 +149,7 @@ public class BreakDown1Choice {
 	 * definition} = "The intention to pay is based on a commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmByCommercialInvoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakDown1Choice, ReportLine6> mmByCommercialInvoice = new MMMessageAssociationEnd<BreakDown1Choice, ReportLine6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BreakDown1Choice.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class BreakDown1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReportLine6.mmObject();
+		}
+
+		@Override
+		public ReportLine6 getValue(BreakDown1Choice obj) {
+			return obj.getByCommercialInvoice();
+		}
+
+		@Override
+		public void setValue(BreakDown1Choice obj, ReportLine6 value) {
+			obj.setByCommercialInvoice(value);
 		}
 	};
 

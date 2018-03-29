@@ -113,7 +113,7 @@ public class ResponseType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType1, Response1Code> mmResponse = new MMMessageAttribute<ResponseType1, Response1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType1.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class ResponseType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Response1Code.mmObject();
+		}
+
+		@Override
+		public Response1Code getValue(ResponseType1 obj) {
+			return obj.getResponse();
+		}
+
+		@Override
+		public void setValue(ResponseType1 obj, Response1Code value) {
+			obj.setResponse(value);
 		}
 	};
 	@XmlElement(name = "RspnRsn")
@@ -168,7 +178,7 @@ public class ResponseType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResponseType1, Optional<Max35Text>> mmResponseReason = new MMMessageAttribute<ResponseType1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Response.mmResponseReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType1.mmObject();
@@ -181,6 +191,16 @@ public class ResponseType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ResponseType1 obj) {
+			return obj.getResponseReason();
+		}
+
+		@Override
+		public void setValue(ResponseType1 obj, Optional<Max35Text> value) {
+			obj.setResponseReason(value.orElse(null));
 		}
 	};
 

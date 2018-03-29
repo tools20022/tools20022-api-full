@@ -116,7 +116,7 @@ public class IdentificationType1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationType1, PersonIdentificationType1Code> mmStructured = new MMMessageAttribute<IdentificationType1, PersonIdentificationType1Code>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationType1.mmObject();
@@ -128,6 +128,16 @@ public class IdentificationType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType1Code.mmObject();
+		}
+
+		@Override
+		public PersonIdentificationType1Code getValue(IdentificationType1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(IdentificationType1 obj, PersonIdentificationType1Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -159,7 +169,7 @@ public class IdentificationType1 {
 	 * definition} = "Additional information about the type of identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationType1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<IdentificationType1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationType1.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class IdentificationType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(IdentificationType1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(IdentificationType1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

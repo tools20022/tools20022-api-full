@@ -111,7 +111,7 @@ public class PartyIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification3, AnyBICIdentifier> mmBICOrBEI = new MMMessageAttribute<PartyIdentification3, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification3.mmObject();
@@ -123,6 +123,16 @@ public class PartyIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification3 obj) {
+			return obj.getBICOrBEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification3 obj, AnyBICIdentifier value) {
+			obj.setBICOrBEI(value);
 		}
 	};
 

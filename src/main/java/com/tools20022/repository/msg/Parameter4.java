@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm11Code;
 import com.tools20022.repository.codeset.EncryptionFormat1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -118,7 +119,7 @@ public class Parameter4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptionFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter4, Optional<EncryptionFormat1Code>> mmEncryptionFormat = new MMMessageAttribute<Parameter4, Optional<EncryptionFormat1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter4.mmObject();
 			isDerived = false;
@@ -130,6 +131,16 @@ public class Parameter4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EncryptionFormat1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EncryptionFormat1Code> getValue(Parameter4 obj) {
+			return obj.getEncryptionFormat();
+		}
+
+		@Override
+		public void setValue(Parameter4 obj, Optional<EncryptionFormat1Code> value) {
+			obj.setEncryptionFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgstAlgo")
@@ -177,7 +188,7 @@ public class Parameter4 {
 	 * Parameter2.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter4, Optional<Algorithm11Code>> mmDigestAlgorithm = new MMMessageAttribute<Parameter4, Optional<Algorithm11Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter4.mmObject();
 			isDerived = false;
@@ -190,6 +201,16 @@ public class Parameter4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
+		}
+
+		@Override
+		public Optional<Algorithm11Code> getValue(Parameter4 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter4 obj, Optional<Algorithm11Code> value) {
+			obj.setDigestAlgorithm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MskGnrtrAlgo")
@@ -238,7 +259,7 @@ public class Parameter4 {
 	 * Parameter2.mmMaskGeneratorAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter4, Optional<AlgorithmIdentification12>> mmMaskGeneratorAlgorithm = new MMMessageAttribute<Parameter4, Optional<AlgorithmIdentification12>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter4.mmObject();
 			isDerived = false;
@@ -250,7 +271,17 @@ public class Parameter4 {
 			previousVersion_lazy = () -> Parameter2.mmMaskGeneratorAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification12.mmObject();
+			complexType_lazy = () -> AlgorithmIdentification12.mmObject();
+		}
+
+		@Override
+		public Optional<AlgorithmIdentification12> getValue(Parameter4 obj) {
+			return obj.getMaskGeneratorAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter4 obj, Optional<AlgorithmIdentification12> value) {
+			obj.setMaskGeneratorAlgorithm(value.orElse(null));
 		}
 	};
 
@@ -292,7 +323,7 @@ public class Parameter4 {
 		return maskGeneratorAlgorithm == null ? Optional.empty() : Optional.of(maskGeneratorAlgorithm);
 	}
 
-	public Parameter4 setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification12 maskGeneratorAlgorithm) {
+	public Parameter4 setMaskGeneratorAlgorithm(AlgorithmIdentification12 maskGeneratorAlgorithm) {
 		this.maskGeneratorAlgorithm = maskGeneratorAlgorithm;
 		return this;
 	}

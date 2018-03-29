@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.entity.SecuritiesEntry;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount8;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,7 +126,7 @@ public class UnderlyingSecurityMovement1 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityMovement1, SecurityIdentification7> mmSecurityIdentification = new MMMessageAttribute<UnderlyingSecurityMovement1, SecurityIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmObject();
@@ -135,7 +137,17 @@ public class UnderlyingSecurityMovement1 {
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(UnderlyingSecurityMovement1 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityMovement1 obj, SecurityIdentification7 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesQty", required = true)
@@ -173,7 +185,7 @@ public class UnderlyingSecurityMovement1 {
 	 * definition} = "Quantity of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityMovement1, UnitOrFaceAmount1Choice> mmSecuritiesQuantity = new MMMessageAttribute<UnderlyingSecurityMovement1, UnitOrFaceAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesEntry.mmFinancialInstrumentQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmObject();
@@ -186,9 +198,19 @@ public class UnderlyingSecurityMovement1 {
 			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
+
+		@Override
+		public UnitOrFaceAmount1Choice getValue(UnderlyingSecurityMovement1 obj) {
+			return obj.getSecuritiesQuantity();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityMovement1 obj, UnitOrFaceAmount1Choice value) {
+			obj.setSecuritiesQuantity(value);
+		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
-	protected List<com.tools20022.repository.msg.SecuritiesAccount8> accountDetails;
+	protected List<SecuritiesAccount8> accountDetails;
 	/**
 	 * 
 	 <p>
@@ -221,7 +243,7 @@ public class UnderlyingSecurityMovement1 {
 	 * "Provides information about the debited/credited securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingSecurityMovement1, List<SecuritiesAccount8>> mmAccountDetails = new MMMessageAssociationEnd<UnderlyingSecurityMovement1, List<SecuritiesAccount8>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesEntry.mmSecuritiesAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmObject();
@@ -233,7 +255,17 @@ public class UnderlyingSecurityMovement1 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
+			type_lazy = () -> SecuritiesAccount8.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount8> getValue(UnderlyingSecurityMovement1 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityMovement1 obj, List<SecuritiesAccount8> value) {
+			obj.setAccountDetails(value);
 		}
 	};
 
@@ -257,7 +289,7 @@ public class UnderlyingSecurityMovement1 {
 		return securityIdentification;
 	}
 
-	public UnderlyingSecurityMovement1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+	public UnderlyingSecurityMovement1 setSecurityIdentification(SecurityIdentification7 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}
@@ -275,7 +307,7 @@ public class UnderlyingSecurityMovement1 {
 		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public UnderlyingSecurityMovement1 setAccountDetails(List<com.tools20022.repository.msg.SecuritiesAccount8> accountDetails) {
+	public UnderlyingSecurityMovement1 setAccountDetails(List<SecuritiesAccount8> accountDetails) {
 		this.accountDetails = Objects.requireNonNull(accountDetails);
 		return this;
 	}

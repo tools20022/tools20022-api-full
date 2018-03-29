@@ -24,6 +24,9 @@ import com.tools20022.repository.area.setr.SubscriptionOrderCancellationRequestV
 import com.tools20022.repository.entity.SubscriptionOrder;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.Intermediary8;
+import com.tools20022.repository.msg.SubscriptionMultipleOrder3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,7 +133,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 	 * "Common information related to all the orders to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultipleOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionMultipleOrderInstruction2, SubscriptionMultipleOrder3> mmMultipleOrderDetails = new MMMessageAssociationEnd<SubscriptionMultipleOrderInstruction2, SubscriptionMultipleOrder3>() {
 		{
 			businessComponentTrace_lazy = () -> SubscriptionOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmObject();
@@ -142,11 +145,21 @@ public class SubscriptionMultipleOrderInstruction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleOrder3.mmObject();
+			type_lazy = () -> SubscriptionMultipleOrder3.mmObject();
+		}
+
+		@Override
+		public SubscriptionMultipleOrder3 getValue(SubscriptionMultipleOrderInstruction2 obj) {
+			return obj.getMultipleOrderDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderInstruction2 obj, SubscriptionMultipleOrder3 value) {
+			obj.setMultipleOrderDetails(value);
 		}
 	};
 	@XmlElement(name = "RltdPtyDtls")
-	protected List<com.tools20022.repository.msg.Intermediary8> relatedPartyDetails;
+	protected List<Intermediary8> relatedPartyDetails;
 	/**
 	 * 
 	 <p>
@@ -178,7 +191,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 	 * definition} = "Information about parties related to the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionMultipleOrderInstruction2, List<Intermediary8>> mmRelatedPartyDetails = new MMMessageAssociationEnd<SubscriptionMultipleOrderInstruction2, List<Intermediary8>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmObject();
@@ -190,11 +203,21 @@ public class SubscriptionMultipleOrderInstruction2 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary8.mmObject();
+			type_lazy = () -> Intermediary8.mmObject();
+		}
+
+		@Override
+		public List<Intermediary8> getValue(SubscriptionMultipleOrderInstruction2 obj) {
+			return obj.getRelatedPartyDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderInstruction2 obj, List<Intermediary8> value) {
+			obj.setRelatedPartyDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -222,7 +245,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionMultipleOrderInstruction2, List<Extension1>> mmExtension = new MMMessageAssociationEnd<SubscriptionMultipleOrderInstruction2, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleOrderInstruction2.mmObject();
 			isDerived = false;
@@ -232,7 +255,17 @@ public class SubscriptionMultipleOrderInstruction2 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(SubscriptionMultipleOrderInstruction2 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderInstruction2 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -257,7 +290,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 		return multipleOrderDetails;
 	}
 
-	public SubscriptionMultipleOrderInstruction2 setMultipleOrderDetails(com.tools20022.repository.msg.SubscriptionMultipleOrder3 multipleOrderDetails) {
+	public SubscriptionMultipleOrderInstruction2 setMultipleOrderDetails(SubscriptionMultipleOrder3 multipleOrderDetails) {
 		this.multipleOrderDetails = Objects.requireNonNull(multipleOrderDetails);
 		return this;
 	}
@@ -266,7 +299,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 		return relatedPartyDetails == null ? relatedPartyDetails = new ArrayList<>() : relatedPartyDetails;
 	}
 
-	public SubscriptionMultipleOrderInstruction2 setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary8> relatedPartyDetails) {
+	public SubscriptionMultipleOrderInstruction2 setRelatedPartyDetails(List<Intermediary8> relatedPartyDetails) {
 		this.relatedPartyDetails = Objects.requireNonNull(relatedPartyDetails);
 		return this;
 	}
@@ -275,7 +308,7 @@ public class SubscriptionMultipleOrderInstruction2 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public SubscriptionMultipleOrderInstruction2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public SubscriptionMultipleOrderInstruction2 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

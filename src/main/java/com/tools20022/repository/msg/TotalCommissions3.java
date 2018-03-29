@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Commission10;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -106,7 +107,7 @@ public class TotalCommissions3 {
 	 * definition} = "Total value of the commissions for a specific order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmountOfCommissions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalCommissions3, Optional<ActiveCurrencyAnd13DecimalAmount>> mmTotalAmountOfCommissions = new MMMessageAttribute<TotalCommissions3, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalCommissions3.mmObject();
@@ -119,9 +120,19 @@ public class TotalCommissions3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(TotalCommissions3 obj) {
+			return obj.getTotalAmountOfCommissions();
+		}
+
+		@Override
+		public void setValue(TotalCommissions3 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setTotalAmountOfCommissions(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ComssnDtls", required = true)
-	protected List<com.tools20022.repository.msg.Commission10> commissionDetails;
+	protected List<Commission10> commissionDetails;
 	/**
 	 * 
 	 <p>
@@ -152,7 +163,7 @@ public class TotalCommissions3 {
 	 * definition} = "Information related to a specific commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalCommissions3, List<Commission10>> mmCommissionDetails = new MMMessageAssociationEnd<TotalCommissions3, List<Commission10>>() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalCommissions3.mmObject();
@@ -163,7 +174,17 @@ public class TotalCommissions3 {
 			definition = "Information related to a specific commission.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Commission10.mmObject();
+			type_lazy = () -> Commission10.mmObject();
+		}
+
+		@Override
+		public List<Commission10> getValue(TotalCommissions3 obj) {
+			return obj.getCommissionDetails();
+		}
+
+		@Override
+		public void setValue(TotalCommissions3 obj, List<Commission10> value) {
+			obj.setCommissionDetails(value);
 		}
 	};
 
@@ -194,7 +215,7 @@ public class TotalCommissions3 {
 		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public TotalCommissions3 setCommissionDetails(List<com.tools20022.repository.msg.Commission10> commissionDetails) {
+	public TotalCommissions3 setCommissionDetails(List<Commission10> commissionDetails) {
 		this.commissionDetails = Objects.requireNonNull(commissionDetails);
 		return this;
 	}

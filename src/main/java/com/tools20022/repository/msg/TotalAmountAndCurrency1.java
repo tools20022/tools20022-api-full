@@ -105,7 +105,7 @@ public class TotalAmountAndCurrency1 {
 	 * "Total net amount for all operations taken into account in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalAmountAndCurrency1, ImpliedCurrencyAndAmount> mmTotalAmount = new MMMessageAttribute<TotalAmountAndCurrency1, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalAmountAndCurrency1.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class TotalAmountAndCurrency1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(TotalAmountAndCurrency1 obj) {
+			return obj.getTotalAmount();
+		}
+
+		@Override
+		public void setValue(TotalAmountAndCurrency1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -149,7 +159,7 @@ public class TotalAmountAndCurrency1 {
 	 * "Indicates whether the total amount is a credit or a debit amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalAmountAndCurrency1, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<TotalAmountAndCurrency1, Optional<CreditDebitCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalAmountAndCurrency1.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class TotalAmountAndCurrency1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(TotalAmountAndCurrency1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(TotalAmountAndCurrency1 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -192,7 +212,7 @@ public class TotalAmountAndCurrency1 {
 	 * definition} = "Currency in which the total amount is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalAmountAndCurrency1, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<TotalAmountAndCurrency1, Optional<ActiveCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalAmountAndCurrency1.mmObject();
 			isDerived = false;
@@ -203,6 +223,16 @@ public class TotalAmountAndCurrency1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(TotalAmountAndCurrency1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(TotalAmountAndCurrency1 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 

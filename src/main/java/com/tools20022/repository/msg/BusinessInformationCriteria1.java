@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria1;
+import com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +123,7 @@ public class BusinessInformationCriteria1 {
 	 * BusinessInformationCriteria.mmNewQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessInformationCriteria1, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<BusinessInformationCriteria1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationCriteria1.mmObject();
 			isDerived = false;
@@ -134,9 +136,19 @@ public class BusinessInformationCriteria1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(BusinessInformationCriteria1 obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(BusinessInformationCriteria1 obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1> searchCriteria;
+	protected List<GeneralBusinessInformationSearchCriteria1> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -170,7 +182,7 @@ public class BusinessInformationCriteria1 {
 	 * BusinessInformationCriteria.mmSearchCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessInformationCriteria1, List<GeneralBusinessInformationSearchCriteria1>> mmSearchCriteria = new MMMessageAssociationEnd<BusinessInformationCriteria1, List<GeneralBusinessInformationSearchCriteria1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationCriteria1.mmObject();
 			isDerived = false;
@@ -181,7 +193,17 @@ public class BusinessInformationCriteria1 {
 			previousVersion_lazy = () -> BusinessInformationCriteria.mmSearchCriteria;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1.mmObject();
+			type_lazy = () -> GeneralBusinessInformationSearchCriteria1.mmObject();
+		}
+
+		@Override
+		public List<GeneralBusinessInformationSearchCriteria1> getValue(BusinessInformationCriteria1 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessInformationCriteria1 obj, List<GeneralBusinessInformationSearchCriteria1> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -218,7 +240,7 @@ public class BusinessInformationCriteria1 {
 	 * BusinessInformationCriteria.mmReturnCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessInformationCriteria1, Optional<GeneralBusinessInformationReturnCriteria1>> mmReturnCriteria = new MMMessageAssociationEnd<BusinessInformationCriteria1, Optional<GeneralBusinessInformationReturnCriteria1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationCriteria1.mmObject();
 			isDerived = false;
@@ -230,7 +252,17 @@ public class BusinessInformationCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria1.mmObject();
+			type_lazy = () -> GeneralBusinessInformationReturnCriteria1.mmObject();
+		}
+
+		@Override
+		public Optional<GeneralBusinessInformationReturnCriteria1> getValue(BusinessInformationCriteria1 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessInformationCriteria1 obj, Optional<GeneralBusinessInformationReturnCriteria1> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -263,7 +295,7 @@ public class BusinessInformationCriteria1 {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public BusinessInformationCriteria1 setSearchCriteria(List<com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1> searchCriteria) {
+	public BusinessInformationCriteria1 setSearchCriteria(List<GeneralBusinessInformationSearchCriteria1> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -272,7 +304,7 @@ public class BusinessInformationCriteria1 {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public BusinessInformationCriteria1 setReturnCriteria(com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria1 returnCriteria) {
+	public BusinessInformationCriteria1 setReturnCriteria(GeneralBusinessInformationReturnCriteria1 returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

@@ -132,7 +132,7 @@ public class PaymentInstructionReferenceDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstructionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionReferenceDetails3, Max35Text> mmPaymentInstructionReference = new MMMessageAttribute<PaymentInstructionReferenceDetails3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmObject();
@@ -144,6 +144,16 @@ public class PaymentInstructionReferenceDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentInstructionReferenceDetails3 obj) {
+			return obj.getPaymentInstructionReference();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionReferenceDetails3 obj, Max35Text value) {
+			obj.setPaymentInstructionReference(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmAmt", required = true)
@@ -183,7 +193,7 @@ public class PaymentInstructionReferenceDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionReferenceDetails3, ImpliedCurrencyAndAmount> mmInterbankSettlementAmount = new MMMessageAttribute<PaymentInstructionReferenceDetails3, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmObject();
@@ -195,6 +205,16 @@ public class PaymentInstructionReferenceDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(PaymentInstructionReferenceDetails3 obj) {
+			return obj.getInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionReferenceDetails3 obj, ImpliedCurrencyAndAmount value) {
+			obj.setInterbankSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrBkValDt", required = true)
@@ -233,7 +253,7 @@ public class PaymentInstructionReferenceDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionReferenceDetails3, ISODate> mmInterbankValueDate = new MMMessageAttribute<PaymentInstructionReferenceDetails3, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmObject();
@@ -245,6 +265,16 @@ public class PaymentInstructionReferenceDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PaymentInstructionReferenceDetails3 obj) {
+			return obj.getInterbankValueDate();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionReferenceDetails3 obj, ISODate value) {
+			obj.setInterbankValueDate(value);
 		}
 	};
 	@XmlElement(name = "PmtMtd")
@@ -283,7 +313,7 @@ public class PaymentInstructionReferenceDetails3 {
 	 * "The message type with which the instruction has been initiated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionReferenceDetails3, Optional<PaymentOrigin1Choice>> mmPaymentMethod = new MMMessageAttribute<PaymentInstructionReferenceDetails3, Optional<PaymentOrigin1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentInstrument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmObject();
@@ -295,6 +325,16 @@ public class PaymentInstructionReferenceDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentOrigin1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentOrigin1Choice> getValue(PaymentInstructionReferenceDetails3 obj) {
+			return obj.getPaymentMethod();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionReferenceDetails3 obj, Optional<PaymentOrigin1Choice> value) {
+			obj.setPaymentMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstgAgtId", required = true)
@@ -334,7 +374,7 @@ public class PaymentInstructionReferenceDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructingAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionReferenceDetails3, BICIdentifier> mmInstructingAgentIdentification = new MMMessageAttribute<PaymentInstructionReferenceDetails3, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmObject();
@@ -346,6 +386,16 @@ public class PaymentInstructionReferenceDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(PaymentInstructionReferenceDetails3 obj) {
+			return obj.getInstructingAgentIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionReferenceDetails3 obj, BICIdentifier value) {
+			obj.setInstructingAgentIdentification(value);
 		}
 	};
 	@XmlElement(name = "InstdAgtId", required = true)
@@ -384,7 +434,7 @@ public class PaymentInstructionReferenceDetails3 {
 	 * "The identification of the instructed agent in the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionReferenceDetails3, BICIdentifier> mmInstructedAgentIdentification = new MMMessageAttribute<PaymentInstructionReferenceDetails3, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmObject();
@@ -396,6 +446,16 @@ public class PaymentInstructionReferenceDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(PaymentInstructionReferenceDetails3 obj) {
+			return obj.getInstructedAgentIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionReferenceDetails3 obj, BICIdentifier value) {
+			obj.setInstructedAgentIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -428,7 +488,7 @@ public class PaymentInstructionReferenceDetails3 {
 	 * "The related reference as stipulated in the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionReferenceDetails3, Optional<Max35Text>> mmRelatedReference = new MMMessageAttribute<PaymentInstructionReferenceDetails3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionReferenceDetails3.mmObject();
 			isDerived = false;
@@ -439,6 +499,16 @@ public class PaymentInstructionReferenceDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentInstructionReferenceDetails3 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionReferenceDetails3 obj, Optional<Max35Text> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 

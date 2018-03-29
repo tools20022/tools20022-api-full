@@ -117,7 +117,7 @@ public class BlockedStatusReason2 {
 	 * "Type of transaction for which the account has a blocked status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BlockedStatusReason2, TransactionType5Choice> mmTransactionType = new MMMessageAssociationEnd<BlockedStatusReason2, TransactionType5Choice>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedStatusReason2.mmObject();
@@ -130,6 +130,16 @@ public class BlockedStatusReason2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransactionType5Choice.mmObject();
+		}
+
+		@Override
+		public TransactionType5Choice getValue(BlockedStatusReason2 obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(BlockedStatusReason2 obj, TransactionType5Choice value) {
+			obj.setTransactionType(value);
 		}
 	};
 	@XmlElement(name = "Blckd", required = true)
@@ -167,7 +177,7 @@ public class BlockedStatusReason2 {
 	 * definition} = "Indicates whether the account is blocked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBlocked = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockedStatusReason2, YesNoIndicator> mmBlocked = new MMMessageAttribute<BlockedStatusReason2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmBlocked;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedStatusReason2.mmObject();
@@ -179,6 +189,16 @@ public class BlockedStatusReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(BlockedStatusReason2 obj) {
+			return obj.getBlocked();
+		}
+
+		@Override
+		public void setValue(BlockedStatusReason2 obj, YesNoIndicator value) {
+			obj.setBlocked(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -215,7 +235,7 @@ public class BlockedStatusReason2 {
 	 * definition} = "Reason for the blocked status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BlockedStatusReason2, List<BlockedReason2Choice>> mmReason = new MMMessageAssociationEnd<BlockedStatusReason2, List<BlockedReason2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmBlockedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedStatusReason2.mmObject();
@@ -227,6 +247,16 @@ public class BlockedStatusReason2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BlockedReason2Choice.mmObject();
+		}
+
+		@Override
+		public List<BlockedReason2Choice> getValue(BlockedStatusReason2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(BlockedStatusReason2 obj, List<BlockedReason2Choice> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf", required = true)
@@ -258,7 +288,7 @@ public class BlockedStatusReason2 {
 	 * definition} = "Additional information about the blocked account status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockedStatusReason2, Max350Text> mmAdditionalInformation = new MMMessageAttribute<BlockedStatusReason2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedStatusReason2.mmObject();
 			isDerived = false;
@@ -269,6 +299,16 @@ public class BlockedStatusReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(BlockedStatusReason2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(BlockedStatusReason2 obj, Max350Text value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

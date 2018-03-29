@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.TradePositionReport4Choice;
+import com.tools20022.repository.choice.TradeTransactionReport4Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -95,7 +97,7 @@ public class TradeReport3Choice {
 	 * definition} = "Information concerning the reporting at position level."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeReport3Choice, TradePositionReport4Choice> mmPosition = new MMMessageAssociationEnd<TradeReport3Choice, TradePositionReport4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeReport3Choice.mmObject();
 			isDerived = false;
@@ -106,7 +108,17 @@ public class TradeReport3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.TradePositionReport4Choice.mmObject();
+			type_lazy = () -> TradePositionReport4Choice.mmObject();
+		}
+
+		@Override
+		public TradePositionReport4Choice getValue(TradeReport3Choice obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(TradeReport3Choice obj, TradePositionReport4Choice value) {
+			obj.setPosition(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -139,7 +151,7 @@ public class TradeReport3Choice {
 	 * "Information concerning the reporting at transaction level."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeReport3Choice, TradeTransactionReport4Choice> mmTransaction = new MMMessageAssociationEnd<TradeReport3Choice, TradeTransactionReport4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeReport3Choice.mmObject();
 			isDerived = false;
@@ -150,7 +162,17 @@ public class TradeReport3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.TradeTransactionReport4Choice.mmObject();
+			type_lazy = () -> TradeTransactionReport4Choice.mmObject();
+		}
+
+		@Override
+		public TradeTransactionReport4Choice getValue(TradeReport3Choice obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(TradeReport3Choice obj, TradeTransactionReport4Choice value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -171,7 +193,7 @@ public class TradeReport3Choice {
 		return position;
 	}
 
-	public TradeReport3Choice setPosition(com.tools20022.repository.choice.TradePositionReport4Choice position) {
+	public TradeReport3Choice setPosition(TradePositionReport4Choice position) {
 		this.position = Objects.requireNonNull(position);
 		return this;
 	}
@@ -180,7 +202,7 @@ public class TradeReport3Choice {
 		return transaction;
 	}
 
-	public TradeReport3Choice setTransaction(com.tools20022.repository.choice.TradeTransactionReport4Choice transaction) {
+	public TradeReport3Choice setTransaction(TradeTransactionReport4Choice transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

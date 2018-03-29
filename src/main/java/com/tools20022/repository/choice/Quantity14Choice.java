@@ -124,7 +124,7 @@ public class Quantity14Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity14Choice, Unit4> mmUnit = new MMMessageAttribute<Quantity14Choice, Unit4>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity14Choice.mmObject();
@@ -137,6 +137,16 @@ public class Quantity14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Unit4.mmObject();
+		}
+
+		@Override
+		public Unit4 getValue(Quantity14Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(Quantity14Choice obj, Unit4 value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "PctgRate", required = true)
@@ -177,7 +187,7 @@ public class Quantity14Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity14Choice, PercentageRate> mmPercentageRate = new MMMessageAttribute<Quantity14Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity14Choice.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class Quantity14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Quantity14Choice obj) {
+			return obj.getPercentageRate();
+		}
+
+		@Override
+		public void setValue(Quantity14Choice obj, PercentageRate value) {
+			obj.setPercentageRate(value);
 		}
 	};
 

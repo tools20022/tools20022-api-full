@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.Standardisation1Code;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InterestRateContractTerm1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -110,7 +111,7 @@ public class FinancialInstrumentAttributes88 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContractTerm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes88, Optional<InterestRateContractTerm1>> mmContractTerm = new MMMessageAssociationEnd<FinancialInstrumentAttributes88, Optional<InterestRateContractTerm1>>() {
 		{
 			businessComponentTrace_lazy = () -> Interest.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes88.mmObject();
@@ -122,7 +123,17 @@ public class FinancialInstrumentAttributes88 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm1.mmObject();
+			type_lazy = () -> InterestRateContractTerm1.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRateContractTerm1> getValue(FinancialInstrumentAttributes88 obj) {
+			return obj.getContractTerm();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes88 obj, Optional<InterestRateContractTerm1> value) {
+			obj.setContractTerm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Stdstn")
@@ -162,7 +173,7 @@ public class FinancialInstrumentAttributes88 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandardisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes88, List<Standardisation1Code>> mmStandardisation = new MMMessageAttribute<FinancialInstrumentAttributes88, List<Standardisation1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmTypeOfInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes88.mmObject();
@@ -174,6 +185,16 @@ public class FinancialInstrumentAttributes88 {
 			maxOccurs = 3;
 			minOccurs = 0;
 			simpleType_lazy = () -> Standardisation1Code.mmObject();
+		}
+
+		@Override
+		public List<Standardisation1Code> getValue(FinancialInstrumentAttributes88 obj) {
+			return obj.getStandardisation();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes88 obj, List<Standardisation1Code> value) {
+			obj.setStandardisation(value);
 		}
 	};
 	@XmlElement(name = "PmtFrqcy", required = true)
@@ -211,7 +232,7 @@ public class FinancialInstrumentAttributes88 {
 	 * definition} = "Schedule for leg payments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes88, Frequency11Code> mmPaymentFrequency = new MMMessageAttribute<FinancialInstrumentAttributes88, Frequency11Code>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmPaymentFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes88.mmObject();
@@ -223,6 +244,16 @@ public class FinancialInstrumentAttributes88 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Frequency11Code.mmObject();
+		}
+
+		@Override
+		public Frequency11Code getValue(FinancialInstrumentAttributes88 obj) {
+			return obj.getPaymentFrequency();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes88 obj, Frequency11Code value) {
+			obj.setPaymentFrequency(value);
 		}
 	};
 
@@ -245,7 +276,7 @@ public class FinancialInstrumentAttributes88 {
 		return contractTerm == null ? Optional.empty() : Optional.of(contractTerm);
 	}
 
-	public FinancialInstrumentAttributes88 setContractTerm(com.tools20022.repository.msg.InterestRateContractTerm1 contractTerm) {
+	public FinancialInstrumentAttributes88 setContractTerm(InterestRateContractTerm1 contractTerm) {
 		this.contractTerm = contractTerm;
 		return this;
 	}

@@ -103,7 +103,7 @@ public class AgreementClauses1 {
 	 * "Description of agreement clauses, given in a textual form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreementClauses1, Optional<Max256Text>> mmDescription = new MMMessageAttribute<AgreementClauses1, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreementClauses1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class AgreementClauses1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(AgreementClauses1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(AgreementClauses1 obj, Optional<Max256Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DocURL")
@@ -152,7 +162,7 @@ public class AgreementClauses1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentURL = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreementClauses1, Optional<Max350Text>> mmDocumentURL = new MMMessageAttribute<AgreementClauses1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreementClauses1.mmObject();
@@ -164,6 +174,16 @@ public class AgreementClauses1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(AgreementClauses1 obj) {
+			return obj.getDocumentURL();
+		}
+
+		@Override
+		public void setValue(AgreementClauses1 obj, Optional<Max350Text> value) {
+			obj.setDocumentURL(value.orElse(null));
 		}
 	};
 

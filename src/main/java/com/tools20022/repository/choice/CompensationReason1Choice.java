@@ -98,7 +98,7 @@ public class CompensationReason1Choice {
 	 * definition} = "Reason for the payment compensation, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CompensationReason1Choice, ExternalPaymentCompensationReason1Code> mmCode = new MMMessageAttribute<CompensationReason1Choice, ExternalPaymentCompensationReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CompensationReason1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class CompensationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalPaymentCompensationReason1Code.mmObject();
+		}
+
+		@Override
+		public ExternalPaymentCompensationReason1Code getValue(CompensationReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CompensationReason1Choice obj, ExternalPaymentCompensationReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class CompensationReason1Choice {
 	 * "Reason for the payment compensation, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CompensationReason1Choice, Max35Text> mmProprietary = new MMMessageAttribute<CompensationReason1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CompensationReason1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class CompensationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CompensationReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CompensationReason1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

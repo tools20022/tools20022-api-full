@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.entity.ContactPersonRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class ContactPerson1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContactPerson1, ContactIdentification4> mmContactPerson = new MMMessageAssociationEnd<ContactPerson1, ContactIdentification4>() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactPerson1.mmObject();
@@ -144,7 +145,17 @@ public class ContactPerson1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification4.mmObject();
+			type_lazy = () -> ContactIdentification4.mmObject();
+		}
+
+		@Override
+		public ContactIdentification4 getValue(ContactPerson1 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(ContactPerson1 obj, ContactIdentification4 value) {
+			obj.setContactPerson(value);
 		}
 	};
 	@XmlElement(name = "InstnId")
@@ -182,7 +193,7 @@ public class ContactPerson1 {
 	 * "Identification of the institution that the contact person represents."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstitutionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactPerson1, Optional<PartyIdentification2Choice>> mmInstitutionIdentification = new MMMessageAttribute<ContactPerson1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactPerson1.mmObject();
@@ -194,6 +205,16 @@ public class ContactPerson1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(ContactPerson1 obj) {
+			return obj.getInstitutionIdentification();
+		}
+
+		@Override
+		public void setValue(ContactPerson1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setInstitutionIdentification(value.orElse(null));
 		}
 	};
 
@@ -217,7 +238,7 @@ public class ContactPerson1 {
 		return contactPerson;
 	}
 
-	public ContactPerson1 setContactPerson(com.tools20022.repository.msg.ContactIdentification4 contactPerson) {
+	public ContactPerson1 setContactPerson(ContactIdentification4 contactPerson) {
 		this.contactPerson = Objects.requireNonNull(contactPerson);
 		return this;
 	}

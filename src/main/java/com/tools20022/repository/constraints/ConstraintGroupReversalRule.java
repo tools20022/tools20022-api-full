@@ -51,11 +51,15 @@ public class ConstraintGroupReversalRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
 		{
-			validator = ConstraintGroupReversalRule::checkFIToFIPaymentReversalV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalRule";
 			definition = "If GroupHeader/GroupReversal is false, then GroupHeader/NumberOfTransactions must equal the number of occurrences of TransactionInformation.";
 			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
+			checkFIToFIPaymentReversalV01(obj);
 		}
 	};
 

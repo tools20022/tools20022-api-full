@@ -51,11 +51,15 @@ public class ConstraintMandatory1Rule {
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestV01> forInvoiceFinancingRequestV01 = new MMConstraint<InvoiceFinancingRequestV01>() {
 		{
-			validator = ConstraintMandatory1Rule::checkInvoiceFinancingRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory1Rule";
 			definition = "If financing requester is not the same physical person of the supplier, then InvoiceRequestInformation/Supplier must be present.";
 			owner_lazy = () -> InvoiceFinancingRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvoiceFinancingRequestV01 obj) throws Exception {
+			checkInvoiceFinancingRequestV01(obj);
 		}
 	};
 

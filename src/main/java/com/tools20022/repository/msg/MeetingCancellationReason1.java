@@ -136,7 +136,7 @@ public class MeetingCancellationReason1 {
 	 * "Specifies the reason for cancelling a meeting in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingCancellationReason1, MeetingCancellationReason2Code> mmCode = new MMMessageAttribute<MeetingCancellationReason1, MeetingCancellationReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmMeetingCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingCancellationReason1.mmObject();
@@ -148,6 +148,16 @@ public class MeetingCancellationReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingCancellationReason2Code.mmObject();
+		}
+
+		@Override
+		public MeetingCancellationReason2Code getValue(MeetingCancellationReason1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationReason1 obj, MeetingCancellationReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "XtndedCd", required = true)
@@ -186,7 +196,7 @@ public class MeetingCancellationReason1 {
 	 * "Specifies the reason for cancelling a meeting in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingCancellationReason1, Extended350Code> mmExtendedCode = new MMMessageAttribute<MeetingCancellationReason1, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmMeetingCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingCancellationReason1.mmObject();
@@ -198,6 +208,16 @@ public class MeetingCancellationReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(MeetingCancellationReason1 obj) {
+			return obj.getExtendedCode();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationReason1 obj, Extended350Code value) {
+			obj.setExtendedCode(value);
 		}
 	};
 	@XmlElement(name = "CxlRsn")
@@ -236,7 +256,7 @@ public class MeetingCancellationReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingCancellationReason1, Optional<Max140Text>> mmCancellationReason = new MMMessageAttribute<MeetingCancellationReason1, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingCancellationReason1.mmObject();
@@ -248,6 +268,16 @@ public class MeetingCancellationReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(MeetingCancellationReason1 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationReason1 obj, Optional<Max140Text> value) {
+			obj.setCancellationReason(value.orElse(null));
 		}
 	};
 	/**

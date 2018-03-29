@@ -52,11 +52,15 @@ public class ConstraintMultiplicity1Rule {
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestStatusV01> forInvoiceFinancingRequestStatusV01 = new MMConstraint<InvoiceFinancingRequestStatusV01>() {
 		{
-			validator = ConstraintMultiplicity1Rule::checkInvoiceFinancingRequestStatusV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multiplicity1Rule";
 			definition = "The status message must contain one occurrence of the InvoiceFinancingDetails block for every single invoice request present into the original bulk invoice financing request message.";
 			owner_lazy = () -> InvoiceFinancingRequestStatusV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvoiceFinancingRequestStatusV01 obj) throws Exception {
+			checkInvoiceFinancingRequestStatusV01(obj);
 		}
 	};
 

@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DirectoryAccountInformation1;
+import com.tools20022.repository.msg.DirectoryParticipantInformation1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,7 +104,7 @@ public class DirectoryInformation1 {
 	 * definition} = "Information about participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryInformation1, DirectoryParticipantInformation1> mmParticipantInformation = new MMMessageAssociationEnd<DirectoryInformation1, DirectoryParticipantInformation1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryInformation1.mmObject();
 			isDerived = false;
@@ -113,7 +115,17 @@ public class DirectoryInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
+			type_lazy = () -> DirectoryParticipantInformation1.mmObject();
+		}
+
+		@Override
+		public DirectoryParticipantInformation1 getValue(DirectoryInformation1 obj) {
+			return obj.getParticipantInformation();
+		}
+
+		@Override
+		public void setValue(DirectoryInformation1 obj, DirectoryParticipantInformation1 value) {
+			obj.setParticipantInformation(value);
 		}
 	};
 	@XmlElement(name = "PtcptSwiftIdrsList")
@@ -146,7 +158,7 @@ public class DirectoryInformation1 {
 	 * definition} = "SWIFT assigned BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParticipantSWIFTIdentifiersList = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryInformation1, List<BICFIIdentifier>> mmParticipantSWIFTIdentifiersList = new MMMessageAttribute<DirectoryInformation1, List<BICFIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryInformation1.mmObject();
 			isDerived = false;
@@ -157,9 +169,19 @@ public class DirectoryInformation1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
+
+		@Override
+		public List<BICFIIdentifier> getValue(DirectoryInformation1 obj) {
+			return obj.getParticipantSWIFTIdentifiersList();
+		}
+
+		@Override
+		public void setValue(DirectoryInformation1 obj, List<BICFIIdentifier> value) {
+			obj.setParticipantSWIFTIdentifiersList(value);
+		}
 	};
 	@XmlElement(name = "Accts")
-	protected List<com.tools20022.repository.msg.DirectoryAccountInformation1> accounts;
+	protected List<DirectoryAccountInformation1> accounts;
 	/**
 	 * 
 	 <p>
@@ -187,7 +209,7 @@ public class DirectoryInformation1 {
 	 * definition} = "Account information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryInformation1, List<DirectoryAccountInformation1>> mmAccounts = new MMMessageAssociationEnd<DirectoryInformation1, List<DirectoryAccountInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryInformation1.mmObject();
 			isDerived = false;
@@ -197,7 +219,17 @@ public class DirectoryInformation1 {
 			definition = "Account information.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DirectoryAccountInformation1.mmObject();
+			type_lazy = () -> DirectoryAccountInformation1.mmObject();
+		}
+
+		@Override
+		public List<DirectoryAccountInformation1> getValue(DirectoryInformation1 obj) {
+			return obj.getAccounts();
+		}
+
+		@Override
+		public void setValue(DirectoryInformation1 obj, List<DirectoryAccountInformation1> value) {
+			obj.setAccounts(value);
 		}
 	};
 
@@ -219,7 +251,7 @@ public class DirectoryInformation1 {
 		return participantInformation;
 	}
 
-	public DirectoryInformation1 setParticipantInformation(com.tools20022.repository.msg.DirectoryParticipantInformation1 participantInformation) {
+	public DirectoryInformation1 setParticipantInformation(DirectoryParticipantInformation1 participantInformation) {
 		this.participantInformation = Objects.requireNonNull(participantInformation);
 		return this;
 	}
@@ -237,7 +269,7 @@ public class DirectoryInformation1 {
 		return accounts == null ? accounts = new ArrayList<>() : accounts;
 	}
 
-	public DirectoryInformation1 setAccounts(List<com.tools20022.repository.msg.DirectoryAccountInformation1> accounts) {
+	public DirectoryInformation1 setAccounts(List<DirectoryAccountInformation1> accounts) {
 		this.accounts = Objects.requireNonNull(accounts);
 		return this;
 	}

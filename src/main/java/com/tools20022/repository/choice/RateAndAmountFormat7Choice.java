@@ -119,7 +119,7 @@ public class RateAndAmountFormat7Choice {
 	 * definition} = "Value expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat7Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat7Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat7Choice.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class RateAndAmountFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat7Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat7Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -166,7 +176,7 @@ public class RateAndAmountFormat7Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat7Choice, RateValueType6Code> mmNotSpecifiedRate = new MMMessageAttribute<RateAndAmountFormat7Choice, RateValueType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat7Choice.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class RateAndAmountFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType6Code.mmObject();
+		}
+
+		@Override
+		public RateValueType6Code getValue(RateAndAmountFormat7Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat7Choice obj, RateValueType6Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -213,7 +233,7 @@ public class RateAndAmountFormat7Choice {
 	 * definition} = "Value is expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat7Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat7Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat7Choice.mmObject();
 			isDerived = false;
@@ -225,6 +245,16 @@ public class RateAndAmountFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat7Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat7Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

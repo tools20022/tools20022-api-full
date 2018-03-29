@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UKTaxGroupUnitCode;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class Unit5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit5, FinancialInstrumentQuantity1> mmUnitsNumber = new MMMessageAttribute<Unit5, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit5.mmObject();
@@ -131,7 +132,17 @@ public class Unit5 {
 			nextVersions_lazy = () -> Arrays.asList(Unit10.mmUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(Unit5 obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(Unit5 obj, FinancialInstrumentQuantity1 value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "Grp1Or2Units", required = true)
@@ -177,7 +188,7 @@ public class Unit5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit5, UKTaxGroupUnitCode> mmGroup1Or2Units = new MMMessageAttribute<Unit5, UKTaxGroupUnitCode>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit5.mmObject();
@@ -190,6 +201,16 @@ public class Unit5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UKTaxGroupUnitCode.mmObject();
+		}
+
+		@Override
+		public UKTaxGroupUnitCode getValue(Unit5 obj) {
+			return obj.getGroup1Or2Units();
+		}
+
+		@Override
+		public void setValue(Unit5 obj, UKTaxGroupUnitCode value) {
+			obj.setGroup1Or2Units(value);
 		}
 	};
 
@@ -213,7 +234,7 @@ public class Unit5 {
 		return unitsNumber;
 	}
 
-	public Unit5 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+	public Unit5 setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
 		this.unitsNumber = Objects.requireNonNull(unitsNumber);
 		return this;
 	}

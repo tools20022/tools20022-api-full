@@ -26,6 +26,10 @@ import com.tools20022.repository.choice.Quantity6Choice;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification98;
+import com.tools20022.repository.msg.QuantityBreakdown30;
+import com.tools20022.repository.msg.SafeKeepingPlace1;
+import com.tools20022.repository.msg.SecuritiesAccount19;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -162,7 +166,7 @@ public class QuantityAndAccount43 {
 	 * QuantityAndAccount30.mmSettlementQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityAndAccount43, Optional<Quantity6Choice>> mmSettlementQuantity = new MMMessageAssociationEnd<QuantityAndAccount43, Optional<Quantity6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount43.mmObject();
@@ -177,6 +181,16 @@ public class QuantityAndAccount43 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Quantity6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity6Choice> getValue(QuantityAndAccount43 obj) {
+			return obj.getSettlementQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityAndAccount43 obj, Optional<Quantity6Choice> value) {
+			obj.setSettlementQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DnmtnChc")
@@ -227,7 +241,7 @@ public class QuantityAndAccount43 {
 	 * QuantityAndAccount30.mmDenominationChoice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDenominationChoice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityAndAccount43, Optional<Max210Text>> mmDenominationChoice = new MMMessageAttribute<QuantityAndAccount43, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmDenominationChoice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount43.mmObject();
@@ -241,6 +255,16 @@ public class QuantityAndAccount43 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(QuantityAndAccount43 obj) {
+			return obj.getDenominationChoice();
+		}
+
+		@Override
+		public void setValue(QuantityAndAccount43 obj, Optional<Max210Text> value) {
+			obj.setDenominationChoice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -289,7 +313,7 @@ public class QuantityAndAccount43 {
 	 * QuantityAndAccount30.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityAndAccount43, Optional<PartyIdentification98>> mmAccountOwner = new MMMessageAssociationEnd<QuantityAndAccount43, Optional<PartyIdentification98>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount43.mmObject();
@@ -303,7 +327,17 @@ public class QuantityAndAccount43 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification98.mmObject();
+			type_lazy = () -> PartyIdentification98.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification98> getValue(QuantityAndAccount43 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(QuantityAndAccount43 obj, Optional<PartyIdentification98> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -352,7 +386,7 @@ public class QuantityAndAccount43 {
 	 * QuantityAndAccount30.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityAndAccount43, Optional<SecuritiesAccount19>> mmSafekeepingAccount = new MMMessageAssociationEnd<QuantityAndAccount43, Optional<SecuritiesAccount19>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount43.mmObject();
@@ -366,7 +400,17 @@ public class QuantityAndAccount43 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount19> getValue(QuantityAndAccount43 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(QuantityAndAccount43 obj, Optional<SecuritiesAccount19> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -416,7 +460,7 @@ public class QuantityAndAccount43 {
 	 * QuantityAndAccount30.mmCashAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityAndAccount43, Optional<CashAccountIdentification5Choice>> mmCashAccount = new MMMessageAssociationEnd<QuantityAndAccount43, Optional<CashAccountIdentification5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount43.mmObject();
@@ -431,6 +475,16 @@ public class QuantityAndAccount43 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CashAccountIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountIdentification5Choice> getValue(QuantityAndAccount43 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(QuantityAndAccount43 obj, Optional<CashAccountIdentification5Choice> value) {
+			obj.setCashAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -481,7 +535,7 @@ public class QuantityAndAccount43 {
 	 * QuantityAndAccount30.mmSafekeepingPlace}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityAndAccount43, Optional<SafeKeepingPlace1>> mmSafekeepingPlace = new MMMessageAssociationEnd<QuantityAndAccount43, Optional<SafeKeepingPlace1>>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount43.mmObject();
@@ -495,11 +549,21 @@ public class QuantityAndAccount43 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmObject();
+			type_lazy = () -> SafeKeepingPlace1.mmObject();
+		}
+
+		@Override
+		public Optional<SafeKeepingPlace1> getValue(QuantityAndAccount43 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(QuantityAndAccount43 obj, Optional<SafeKeepingPlace1> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtyBrkdwn")
-	protected List<com.tools20022.repository.msg.QuantityBreakdown30> quantityBreakdown;
+	protected List<QuantityBreakdown30> quantityBreakdown;
 	/**
 	 * 
 	 <p>
@@ -546,7 +610,7 @@ public class QuantityAndAccount43 {
 	 * QuantityAndAccount30.mmQuantityBreakdown}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityAndAccount43, List<QuantityBreakdown30>> mmQuantityBreakdown = new MMMessageAssociationEnd<QuantityAndAccount43, List<QuantityBreakdown30>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAccount43.mmObject();
@@ -559,7 +623,17 @@ public class QuantityAndAccount43 {
 			previousVersion_lazy = () -> QuantityAndAccount30.mmQuantityBreakdown;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown30.mmObject();
+			type_lazy = () -> QuantityBreakdown30.mmObject();
+		}
+
+		@Override
+		public List<QuantityBreakdown30> getValue(QuantityAndAccount43 obj) {
+			return obj.getQuantityBreakdown();
+		}
+
+		@Override
+		public void setValue(QuantityAndAccount43 obj, List<QuantityBreakdown30> value) {
+			obj.setQuantityBreakdown(value);
 		}
 	};
 
@@ -605,7 +679,7 @@ public class QuantityAndAccount43 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public QuantityAndAccount43 setAccountOwner(com.tools20022.repository.msg.PartyIdentification98 accountOwner) {
+	public QuantityAndAccount43 setAccountOwner(PartyIdentification98 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -614,7 +688,7 @@ public class QuantityAndAccount43 {
 		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public QuantityAndAccount43 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount19 safekeepingAccount) {
+	public QuantityAndAccount43 setSafekeepingAccount(SecuritiesAccount19 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
 		return this;
 	}
@@ -632,7 +706,7 @@ public class QuantityAndAccount43 {
 		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public QuantityAndAccount43 setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace1 safekeepingPlace) {
+	public QuantityAndAccount43 setSafekeepingPlace(SafeKeepingPlace1 safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
 		return this;
 	}
@@ -641,7 +715,7 @@ public class QuantityAndAccount43 {
 		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public QuantityAndAccount43 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown30> quantityBreakdown) {
+	public QuantityAndAccount43 setQuantityBreakdown(List<QuantityBreakdown30> quantityBreakdown) {
 		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
 		return this;
 	}

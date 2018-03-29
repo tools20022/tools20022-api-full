@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionIdentifier1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -114,7 +115,7 @@ public class ATMTransaction27 {
 	 * ATMTransaction25.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction27, Optional<TransactionIdentifier1>> mmTransactionIdentification = new MMMessageAssociationEnd<ATMTransaction27, Optional<TransactionIdentifier1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction27.mmObject();
 			isDerived = false;
@@ -126,7 +127,17 @@ public class ATMTransaction27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionIdentifier1> getValue(ATMTransaction27 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction27 obj, Optional<TransactionIdentifier1> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcncltnId")
@@ -163,7 +174,7 @@ public class ATMTransaction27 {
 	 * ATMTransaction25.mmReconciliationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction27, Optional<Max35Text>> mmReconciliationIdentification = new MMMessageAttribute<ATMTransaction27, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction27.mmObject();
 			isDerived = false;
@@ -175,6 +186,16 @@ public class ATMTransaction27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMTransaction27 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction27 obj, Optional<Max35Text> value) {
+			obj.setReconciliationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xcptn", required = true)
@@ -207,7 +228,7 @@ public class ATMTransaction27 {
 	 * definition} = "Exception occurring outside the service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmException = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction27, List<FailureReason8Code>> mmException = new MMMessageAttribute<ATMTransaction27, List<FailureReason8Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction27.mmObject();
 			isDerived = false;
@@ -217,6 +238,16 @@ public class ATMTransaction27 {
 			definition = "Exception occurring outside the service.";
 			minOccurs = 1;
 			simpleType_lazy = () -> FailureReason8Code.mmObject();
+		}
+
+		@Override
+		public List<FailureReason8Code> getValue(ATMTransaction27 obj) {
+			return obj.getException();
+		}
+
+		@Override
+		public void setValue(ATMTransaction27 obj, List<FailureReason8Code> value) {
+			obj.setException(value);
 		}
 	};
 	@XmlElement(name = "XcptnDtl")
@@ -248,7 +279,7 @@ public class ATMTransaction27 {
 	 * definition} = "Explanation of the exception."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExceptionDetail = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction27, List<Max70Text>> mmExceptionDetail = new MMMessageAttribute<ATMTransaction27, List<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction27.mmObject();
 			isDerived = false;
@@ -258,6 +289,16 @@ public class ATMTransaction27 {
 			definition = "Explanation of the exception.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public List<Max70Text> getValue(ATMTransaction27 obj) {
+			return obj.getExceptionDetail();
+		}
+
+		@Override
+		public void setValue(ATMTransaction27 obj, List<Max70Text> value) {
+			obj.setExceptionDetail(value);
 		}
 	};
 	@XmlElement(name = "ElctrncPrsBal")
@@ -290,7 +331,7 @@ public class ATMTransaction27 {
 	 * definition} = "Balance of the captured card or epurse if available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectronicPurseBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction27, Optional<CurrencyAndAmount>> mmElectronicPurseBalance = new MMMessageAttribute<ATMTransaction27, Optional<CurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction27.mmObject();
 			isDerived = false;
@@ -301,6 +342,16 @@ public class ATMTransaction27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(ATMTransaction27 obj) {
+			return obj.getElectronicPurseBalance();
+		}
+
+		@Override
+		public void setValue(ATMTransaction27 obj, Optional<CurrencyAndAmount> value) {
+			obj.setElectronicPurseBalance(value.orElse(null));
 		}
 	};
 
@@ -323,7 +374,7 @@ public class ATMTransaction27 {
 		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public ATMTransaction27 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public ATMTransaction27 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
 		return this;
 	}

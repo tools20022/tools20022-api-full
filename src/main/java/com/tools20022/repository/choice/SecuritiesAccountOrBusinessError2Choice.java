@@ -113,7 +113,7 @@ public class SecuritiesAccountOrBusinessError2Choice {
 	 * SecuritiesAccountOrBusinessError1Choice.mmSecuritiesAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountOrBusinessError2Choice, SystemSecuritiesAccount3> mmSecuritiesAccount = new MMMessageAssociationEnd<SecuritiesAccountOrBusinessError2Choice, SystemSecuritiesAccount3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrBusinessError2Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class SecuritiesAccountOrBusinessError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemSecuritiesAccount3.mmObject();
+		}
+
+		@Override
+		public SystemSecuritiesAccount3 getValue(SecuritiesAccountOrBusinessError2Choice obj) {
+			return obj.getSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountOrBusinessError2Choice obj, SystemSecuritiesAccount3 value) {
+			obj.setSecuritiesAccount(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -161,7 +171,7 @@ public class SecuritiesAccountOrBusinessError2Choice {
 	 * SecuritiesAccountOrBusinessError1Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountOrBusinessError2Choice, List<ErrorHandling4>> mmBusinessError = new MMMessageAssociationEnd<SecuritiesAccountOrBusinessError2Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrBusinessError2Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class SecuritiesAccountOrBusinessError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(SecuritiesAccountOrBusinessError2Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountOrBusinessError2Choice obj, List<ErrorHandling4> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

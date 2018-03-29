@@ -53,11 +53,15 @@ public class ConstraintPEPOrISARule {
 	 */
 	public static final MMConstraint<PEPISACashTransfer1> forPEPISACashTransfer1 = new MMConstraint<PEPISACashTransfer1>() {
 		{
-			validator = ConstraintPEPOrISARule::checkPEPISACashTransfer1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEPOrISARule";
 			definition = " If Type is PEPT, then Year/PEP is mandatory. If Type is PEPT, then Year/ISA is not allowed. If Type is ISAT then Year/ISA is mandatory. If Type is ISAT, then Year/PEP is not allowed.";
 			owner_lazy = () -> PEPISACashTransfer1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPISACashTransfer1 obj) throws Exception {
+			checkPEPISACashTransfer1(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintPEPOrISARule {
 	 */
 	public static final MMConstraint<PEPISACashTransfer2> forPEPISACashTransfer2 = new MMConstraint<PEPISACashTransfer2>() {
 		{
-			validator = ConstraintPEPOrISARule::checkPEPISACashTransfer2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEPOrISARule";
 			definition = " If Type is PEPT, then Year/PEP is mandatory. If Type is PEPT, then Year/ISA is not allowed. If Type is ISAT then Year/ISA is mandatory. If Type is ISAT, then Year/PEP is not allowed.";
 			owner_lazy = () -> PEPISACashTransfer2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPISACashTransfer2 obj) throws Exception {
+			checkPEPISACashTransfer2(obj);
 		}
 	};
 

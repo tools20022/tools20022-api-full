@@ -99,7 +99,7 @@ public class AdditionalInformation1 {
 	 * definition} = "Specifies the type of additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalInformation1, InformationType1Choice> mmInformationType = new MMMessageAttribute<AdditionalInformation1, InformationType1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class AdditionalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InformationType1Choice.mmObject();
+		}
+
+		@Override
+		public InformationType1Choice getValue(AdditionalInformation1 obj) {
+			return obj.getInformationType();
+		}
+
+		@Override
+		public void setValue(AdditionalInformation1 obj, InformationType1Choice value) {
+			obj.setInformationType(value);
 		}
 	};
 	@XmlElement(name = "InfVal", required = true)
@@ -141,7 +151,7 @@ public class AdditionalInformation1 {
 	 * definition} = "Contents of the additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalInformation1, Max350Text> mmInformationValue = new MMMessageAttribute<AdditionalInformation1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class AdditionalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(AdditionalInformation1 obj) {
+			return obj.getInformationValue();
+		}
+
+		@Override
+		public void setValue(AdditionalInformation1 obj, Max350Text value) {
+			obj.setInformationValue(value);
 		}
 	};
 

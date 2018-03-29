@@ -114,7 +114,7 @@ public class PurposeCode4Choice {
 	 * definition} = "Securities account purpose as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PurposeCode4Choice, SecuritiesAccountPurposeType1Code> mmCode = new MMMessageAttribute<PurposeCode4Choice, SecuritiesAccountPurposeType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PurposeCode4Choice.mmObject();
@@ -127,6 +127,16 @@ public class PurposeCode4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccountPurposeType1Code getValue(PurposeCode4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PurposeCode4Choice obj, SecuritiesAccountPurposeType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class PurposeCode4Choice {
 	 * definition} = "Securities account purpose as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PurposeCode4Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<PurposeCode4Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PurposeCode4Choice.mmObject();
@@ -180,6 +190,16 @@ public class PurposeCode4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(PurposeCode4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PurposeCode4Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

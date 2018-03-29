@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument17;
+import com.tools20022.repository.msg.ReportParameters;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -113,7 +115,7 @@ public class FundCashForecastParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashForecastParameters2, Optional<FinancialInstrument17>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<FundCashForecastParameters2, Optional<FinancialInstrument17>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters2.mmObject();
 			isDerived = false;
@@ -124,7 +126,17 @@ public class FundCashForecastParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
+			type_lazy = () -> FinancialInstrument17.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrument17> getValue(FundCashForecastParameters2 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(FundCashForecastParameters2 obj, Optional<FinancialInstrument17> value) {
+			obj.setFinancialInstrumentDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDtTm")
@@ -163,7 +175,7 @@ public class FundCashForecastParameters2 {
 	 * "Date and, if required, the time, at which the price has been applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecastParameters2, Optional<DateAndDateTimeChoice>> mmTradeDateTime = new MMMessageAttribute<FundCashForecastParameters2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters2.mmObject();
@@ -175,6 +187,16 @@ public class FundCashForecastParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(FundCashForecastParameters2 obj) {
+			return obj.getTradeDateTime();
+		}
+
+		@Override
+		public void setValue(FundCashForecastParameters2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setTradeDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtldRptParam")
@@ -206,7 +228,7 @@ public class FundCashForecastParameters2 {
 	 * "Parameters to be used in the detailed cash forecast report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDetailedReportParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashForecastParameters2, Optional<ReportParameters>> mmDetailedReportParameter = new MMMessageAssociationEnd<FundCashForecastParameters2, Optional<ReportParameters>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters2.mmObject();
 			isDerived = false;
@@ -217,7 +239,17 @@ public class FundCashForecastParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
+			type_lazy = () -> ReportParameters.mmObject();
+		}
+
+		@Override
+		public Optional<ReportParameters> getValue(FundCashForecastParameters2 obj) {
+			return obj.getDetailedReportParameter();
+		}
+
+		@Override
+		public void setValue(FundCashForecastParameters2 obj, Optional<ReportParameters> value) {
+			obj.setDetailedReportParameter(value.orElse(null));
 		}
 	};
 
@@ -241,7 +273,7 @@ public class FundCashForecastParameters2 {
 		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public FundCashForecastParameters2 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument17 financialInstrumentDetails) {
+	public FundCashForecastParameters2 setFinancialInstrumentDetails(FinancialInstrument17 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 		return this;
 	}
@@ -259,7 +291,7 @@ public class FundCashForecastParameters2 {
 		return detailedReportParameter == null ? Optional.empty() : Optional.of(detailedReportParameter);
 	}
 
-	public FundCashForecastParameters2 setDetailedReportParameter(com.tools20022.repository.msg.ReportParameters detailedReportParameter) {
+	public FundCashForecastParameters2 setDetailedReportParameter(ReportParameters detailedReportParameter) {
 		this.detailedReportParameter = detailedReportParameter;
 		return this;
 	}

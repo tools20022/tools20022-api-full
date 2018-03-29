@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -123,7 +124,7 @@ public class FinancialInstrumentAttributesSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredDisbursedSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD2, Optional<SecurityIdentification15>> mmDeclaredDisbursedSecurityIdentification = new MMMessageAttribute<FinancialInstrumentAttributesSD2, Optional<SecurityIdentification15>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmObject();
 			isDerived = false;
@@ -135,7 +136,17 @@ public class FinancialInstrumentAttributesSD2 {
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD18.mmDeclaredDisbursedSecurityIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
+			complexType_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification15> getValue(FinancialInstrumentAttributesSD2 obj) {
+			return obj.getDeclaredDisbursedSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD2 obj, Optional<SecurityIdentification15> value) {
+			obj.setDeclaredDisbursedSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdDsbrsdSctyDesc")
@@ -180,7 +191,7 @@ public class FinancialInstrumentAttributesSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredDisbursedSecurityDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD2, Optional<Max140Text>> mmDeclaredDisbursedSecurityDescription = new MMMessageAttribute<FinancialInstrumentAttributesSD2, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD2.mmObject();
 			isDerived = false;
@@ -193,6 +204,16 @@ public class FinancialInstrumentAttributesSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(FinancialInstrumentAttributesSD2 obj) {
+			return obj.getDeclaredDisbursedSecurityDescription();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD2 obj, Optional<Max140Text> value) {
+			obj.setDeclaredDisbursedSecurityDescription(value.orElse(null));
 		}
 	};
 
@@ -215,7 +236,7 @@ public class FinancialInstrumentAttributesSD2 {
 		return declaredDisbursedSecurityIdentification == null ? Optional.empty() : Optional.of(declaredDisbursedSecurityIdentification);
 	}
 
-	public FinancialInstrumentAttributesSD2 setDeclaredDisbursedSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 declaredDisbursedSecurityIdentification) {
+	public FinancialInstrumentAttributesSD2 setDeclaredDisbursedSecurityIdentification(SecurityIdentification15 declaredDisbursedSecurityIdentification) {
 		this.declaredDisbursedSecurityIdentification = declaredDisbursedSecurityIdentification;
 		return this;
 	}

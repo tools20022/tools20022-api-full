@@ -53,11 +53,15 @@ public class ConstraintLimitedPartnershipRule {
 	 */
 	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {
 		{
-			validator = ConstraintLimitedPartnershipRule::checkRedemptionExecution10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedPartnershipRule";
 			definition = "If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType, then OrderedAmount must be present.";
 			owner_lazy = () -> RedemptionExecution10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution10 obj) throws Exception {
+			checkRedemptionExecution10(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintLimitedPartnershipRule {
 	 */
 	public static final MMConstraint<RedemptionOrder9> forRedemptionOrder9 = new MMConstraint<RedemptionOrder9>() {
 		{
-			validator = ConstraintLimitedPartnershipRule::checkRedemptionOrder9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedPartnershipRule";
 			definition = "If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType, then OrderedAmount must be present.";
 			owner_lazy = () -> RedemptionOrder9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder9 obj) throws Exception {
+			checkRedemptionOrder9(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintLimitedPartnershipRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder9> forSubscriptionOrder9 = new MMConstraint<SubscriptionOrder9>() {
 		{
-			validator = ConstraintLimitedPartnershipRule::checkSubscriptionOrder9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedPartnershipRule";
 			definition = "If HedgeFundOrderType is NUNI in any occurrence of HedgeFundOrderType, then OrderedAmount must be present.";
 			owner_lazy = () -> SubscriptionOrder9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder9 obj) throws Exception {
+			checkSubscriptionOrder9(obj);
 		}
 	};
 

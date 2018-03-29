@@ -155,7 +155,7 @@ public class ResolutionInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResolutionInformation1, Optional<ActiveOrHistoricCurrencyAndAmount>> mmInterbankSettlementAmount = new MMMessageAttribute<ResolutionInformation1, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResolutionInformation1.mmObject();
@@ -168,6 +168,16 @@ public class ResolutionInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(ResolutionInformation1 obj) {
+			return obj.getInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(ResolutionInformation1 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setInterbankSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt")
@@ -214,7 +224,7 @@ public class ResolutionInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResolutionInformation1, Optional<ISODate>> mmInterbankSettlementDate = new MMMessageAttribute<ResolutionInformation1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResolutionInformation1.mmObject();
@@ -227,6 +237,16 @@ public class ResolutionInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ResolutionInformation1 obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(ResolutionInformation1 obj, Optional<ISODate> value) {
+			obj.setInterbankSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrChanl")
@@ -274,7 +294,7 @@ public class ResolutionInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResolutionInformation1, Optional<ClearingChannel2Code>> mmClearingChannel = new MMMessageAttribute<ResolutionInformation1, Optional<ClearingChannel2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResolutionInformation1.mmObject();
@@ -287,6 +307,16 @@ public class ResolutionInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingChannel2Code> getValue(ResolutionInformation1 obj) {
+			return obj.getClearingChannel();
+		}
+
+		@Override
+		public void setValue(ResolutionInformation1 obj, Optional<ClearingChannel2Code> value) {
+			obj.setClearingChannel(value.orElse(null));
 		}
 	};
 

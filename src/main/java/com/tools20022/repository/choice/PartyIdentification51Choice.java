@@ -126,7 +126,7 @@ public class PartyIdentification51Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification51Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification51Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification51Choice.mmObject();
@@ -138,6 +138,16 @@ public class PartyIdentification51Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification51Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification51Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -179,7 +189,7 @@ public class PartyIdentification51Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification51Choice, GenericIdentification24> mmProprietaryIdentification = new MMMessageAssociationEnd<PartyIdentification51Choice, GenericIdentification24>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification51Choice.mmObject();
@@ -193,6 +203,16 @@ public class PartyIdentification51Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification24.mmObject();
+		}
+
+		@Override
+		public GenericIdentification24 getValue(PartyIdentification51Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification51Choice obj, GenericIdentification24 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

@@ -167,7 +167,7 @@ public class TransactionTypeAndAdditionalParameters9 {
 	 * mmSecuritiesFinancingTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesFinancingTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters9, SecuritiesFinancingTransactionType1Code> mmSecuritiesFinancingTransactionType = new MMMessageAttribute<TransactionTypeAndAdditionalParameters9, SecuritiesFinancingTransactionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters9.mmObject();
@@ -182,6 +182,16 @@ public class TransactionTypeAndAdditionalParameters9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesFinancingTransactionType1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesFinancingTransactionType1Code getValue(TransactionTypeAndAdditionalParameters9 obj) {
+			return obj.getSecuritiesFinancingTransactionType();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters9 obj, SecuritiesFinancingTransactionType1Code value) {
+			obj.setSecuritiesFinancingTransactionType(value);
 		}
 	};
 	@XmlElement(name = "Pmt", required = true)
@@ -237,7 +247,7 @@ public class TransactionTypeAndAdditionalParameters9 {
 	 * TransactionTypeAndAdditionalParameters1.mmPayment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters9, DeliveryReceiptType2Code> mmPayment = new MMMessageAttribute<TransactionTypeAndAdditionalParameters9, DeliveryReceiptType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters9.mmObject();
@@ -252,6 +262,16 @@ public class TransactionTypeAndAdditionalParameters9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
+		}
+
+		@Override
+		public DeliveryReceiptType2Code getValue(TransactionTypeAndAdditionalParameters9 obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters9 obj, DeliveryReceiptType2Code value) {
+			obj.setPayment(value);
 		}
 	};
 	@XmlElement(name = "CmonId")
@@ -306,7 +326,7 @@ public class TransactionTypeAndAdditionalParameters9 {
 	 * TransactionTypeAndAdditionalParameters1.mmCommonIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters9, Optional<Max35Text>> mmCommonIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters9, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters9.mmObject();
@@ -321,6 +341,16 @@ public class TransactionTypeAndAdditionalParameters9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionTypeAndAdditionalParameters9 obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters9 obj, Optional<Max35Text> value) {
+			obj.setCommonIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcncltnInd")
@@ -371,7 +401,7 @@ public class TransactionTypeAndAdditionalParameters9 {
 	 * TransactionTypeAndAdditionalParameters1.mmReconciliationIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters9, Optional<YesNoIndicator>> mmReconciliationIndicator = new MMMessageAttribute<TransactionTypeAndAdditionalParameters9, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters9.mmObject();
 			isDerived = false;
@@ -385,6 +415,16 @@ public class TransactionTypeAndAdditionalParameters9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(TransactionTypeAndAdditionalParameters9 obj) {
+			return obj.getReconciliationIndicator();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters9 obj, Optional<YesNoIndicator> value) {
+			obj.setReconciliationIndicator(value.orElse(null));
 		}
 	};
 

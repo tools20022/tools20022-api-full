@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -175,7 +174,7 @@ public class DataSetMatchReportV03 {
 	 * definition} = "Identifies the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, MessageIdentification1> mmReportIdentification = new MMMessageBuildingBlock<DataSetMatchReportV03, MessageIdentification1>() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,12 +185,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(DataSetMatchReportV03 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, MessageIdentification1 value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -221,7 +222,7 @@ public class DataSetMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<DataSetMatchReportV03, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,12 +233,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(DataSetMatchReportV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId", required = true)
@@ -267,7 +270,7 @@ public class DataSetMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, DocumentIdentification3> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<DataSetMatchReportV03, DocumentIdentification3>() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,12 +281,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification3 getValue(DataSetMatchReportV03 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, DocumentIdentification3 value) {
+			obj.setEstablishedBaselineIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -312,7 +317,7 @@ public class DataSetMatchReportV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, TransactionStatus4> mmTransactionStatus = new MMMessageBuildingBlock<DataSetMatchReportV03, TransactionStatus4>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,12 +328,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus4 getValue(DataSetMatchReportV03 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, TransactionStatus4 value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
@@ -358,7 +365,7 @@ public class DataSetMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<DataSetMatchReportV03, List<DocumentIdentification5>>() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -369,12 +376,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getUserTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification5> getValue(DataSetMatchReportV03 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, List<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -403,7 +412,7 @@ public class DataSetMatchReportV03 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, PartyIdentification26> mmBuyer = new MMMessageBuildingBlock<DataSetMatchReportV03, PartyIdentification26>() {
 		{
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -414,12 +423,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getBuyer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification26 getValue(DataSetMatchReportV03 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, PartyIdentification26 value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "Sellr", required = true)
@@ -448,7 +459,7 @@ public class DataSetMatchReportV03 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSeller = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, PartyIdentification26> mmSeller = new MMMessageBuildingBlock<DataSetMatchReportV03, PartyIdentification26>() {
 		{
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -459,12 +470,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getSeller", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification26 getValue(DataSetMatchReportV03 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, PartyIdentification26 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "BuyrBk", required = true)
@@ -494,7 +507,7 @@ public class DataSetMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, BICIdentification1> mmBuyerBank = new MMMessageBuildingBlock<DataSetMatchReportV03, BICIdentification1>() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -505,12 +518,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getBuyerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(DataSetMatchReportV03 obj) {
+			return obj.getBuyerBank();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, BICIdentification1 value) {
+			obj.setBuyerBank(value);
 		}
 	};
 	@XmlElement(name = "SellrBk", required = true)
@@ -540,7 +555,7 @@ public class DataSetMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, BICIdentification1> mmSellerBank = new MMMessageBuildingBlock<DataSetMatchReportV03, BICIdentification1>() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -551,12 +566,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getSellerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(DataSetMatchReportV03 obj) {
+			return obj.getSellerBank();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, BICIdentification1 value) {
+			obj.setSellerBank(value);
 		}
 	};
 	@XmlElement(name = "CmpardDocRef", required = true)
@@ -584,7 +601,7 @@ public class DataSetMatchReportV03 {
 	 * definition} = "Identifies the documents compared in this report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmComparedDocumentReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, List<DocumentIdentification10>> mmComparedDocumentReference = new MMMessageBuildingBlock<DataSetMatchReportV03, List<DocumentIdentification10>>() {
 		{
 			xmlTag = "CmpardDocRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -594,12 +611,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> DocumentIdentification10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getComparedDocumentReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification10> getValue(DataSetMatchReportV03 obj) {
+			return obj.getComparedDocumentReference();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, List<DocumentIdentification10> value) {
+			obj.setComparedDocumentReference(value);
 		}
 	};
 	@XmlElement(name = "SubmissnTp", required = true)
@@ -627,7 +646,7 @@ public class DataSetMatchReportV03 {
 	 * "Specifies whether the data set was submitted for match or pre-match."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubmissionType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, ReportType3> mmSubmissionType = new MMMessageBuildingBlock<DataSetMatchReportV03, ReportType3>() {
 		{
 			xmlTag = "SubmissnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -638,12 +657,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> ReportType3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getSubmissionType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportType3 getValue(DataSetMatchReportV03 obj) {
+			return obj.getSubmissionType();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, ReportType3 value) {
+			obj.setSubmissionType(value);
 		}
 	};
 	@XmlElement(name = "Rpt", required = true)
@@ -672,7 +693,7 @@ public class DataSetMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, MisMatchReport3> mmReport = new MMMessageBuildingBlock<DataSetMatchReportV03, MisMatchReport3>() {
 		{
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -683,12 +704,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> MisMatchReport3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MisMatchReport3 getValue(DataSetMatchReportV03 obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, MisMatchReport3 value) {
+			obj.setReport(value);
 		}
 	};
 	@XmlElement(name = "ReqForActn")
@@ -716,7 +739,7 @@ public class DataSetMatchReportV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DataSetMatchReportV03, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<DataSetMatchReportV03, Optional<PendingActivity2>>() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -727,12 +750,14 @@ public class DataSetMatchReportV03 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DataSetMatchReportV03.class.getMethod("getRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PendingActivity2> getValue(DataSetMatchReportV03 obj) {
+			return obj.getRequestForAction();
+		}
+
+		@Override
+		public void setValue(DataSetMatchReportV03 obj, Optional<PendingActivity2> value) {
+			obj.setRequestForAction(value.orElse(null));
 		}
 	};
 

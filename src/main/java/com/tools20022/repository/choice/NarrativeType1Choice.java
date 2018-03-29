@@ -98,7 +98,7 @@ public class NarrativeType1Choice {
 	 * definition} = "Type of narrative.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NarrativeType1Choice, ExternalNarrativeType1Code> mmCode = new MMMessageAttribute<NarrativeType1Choice, ExternalNarrativeType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NarrativeType1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class NarrativeType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalNarrativeType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalNarrativeType1Code getValue(NarrativeType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(NarrativeType1Choice obj, ExternalNarrativeType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -139,7 +149,7 @@ public class NarrativeType1Choice {
 	 * definition} = "Type of narrative expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NarrativeType1Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<NarrativeType1Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NarrativeType1Choice.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class NarrativeType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(NarrativeType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(NarrativeType1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -171,7 +171,7 @@ public class AmountsAndValueDate1 {
 	 * definition} = "Currency and amount bought in a foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingSideBuyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountsAndValueDate1, ActiveOrHistoricCurrencyAndAmount> mmTradingSideBuyAmount = new MMMessageAttribute<AmountsAndValueDate1, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmBuyAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
@@ -183,6 +183,16 @@ public class AmountsAndValueDate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(AmountsAndValueDate1 obj) {
+			return obj.getTradingSideBuyAmount();
+		}
+
+		@Override
+		public void setValue(AmountsAndValueDate1 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setTradingSideBuyAmount(value);
 		}
 	};
 	@XmlElement(name = "TradgSdSellAmt", required = true)
@@ -220,7 +230,7 @@ public class AmountsAndValueDate1 {
 	 * definition} = "Currency and amount sold in a foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingSideSellAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountsAndValueDate1, ActiveOrHistoricCurrencyAndAmount> mmTradingSideSellAmount = new MMMessageAttribute<AmountsAndValueDate1, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmSellAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
@@ -232,6 +242,16 @@ public class AmountsAndValueDate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(AmountsAndValueDate1 obj) {
+			return obj.getTradingSideSellAmount();
+		}
+
+		@Override
+		public void setValue(AmountsAndValueDate1 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setTradingSideSellAmount(value);
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -269,7 +289,7 @@ public class AmountsAndValueDate1 {
 	 * "Date on which the trade is settled, ie, the amounts are due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountsAndValueDate1, ISODate> mmSettlementDate = new MMMessageAttribute<AmountsAndValueDate1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
@@ -281,6 +301,16 @@ public class AmountsAndValueDate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(AmountsAndValueDate1 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(AmountsAndValueDate1 obj, ISODate value) {
+			obj.setSettlementDate(value);
 		}
 	};
 

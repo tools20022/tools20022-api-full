@@ -129,7 +129,7 @@ public class CommunicationAddress4 {
 	 * definition} = "Address for electronic mail (e-mail)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationAddress4, Optional<Max256Text>> mmEmailAddress = new MMMessageAttribute<CommunicationAddress4, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress4.mmObject();
@@ -141,6 +141,16 @@ public class CommunicationAddress4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(CommunicationAddress4 obj) {
+			return obj.getEmailAddress();
+		}
+
+		@Override
+		public void setValue(CommunicationAddress4 obj, Optional<Max256Text> value) {
+			obj.setEmailAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "URLAdr")
@@ -179,7 +189,7 @@ public class CommunicationAddress4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationAddress4, Optional<Max256Text>> mmURLAddress = new MMMessageAttribute<CommunicationAddress4, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress4.mmObject();
@@ -191,6 +201,16 @@ public class CommunicationAddress4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(CommunicationAddress4 obj) {
+			return obj.getURLAddress();
+		}
+
+		@Override
+		public void setValue(CommunicationAddress4 obj, Optional<Max256Text> value) {
+			obj.setURLAddress(value.orElse(null));
 		}
 	};
 

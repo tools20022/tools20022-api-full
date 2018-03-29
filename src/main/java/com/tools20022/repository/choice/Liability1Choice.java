@@ -98,7 +98,7 @@ public class Liability1Choice {
 	 * definition} = "Liability expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Liability1Choice, Liability1Code> mmCode = new MMMessageAttribute<Liability1Choice, Liability1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Liability1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class Liability1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Liability1Code.mmObject();
+		}
+
+		@Override
+		public Liability1Code getValue(Liability1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Liability1Choice obj, Liability1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -140,7 +150,7 @@ public class Liability1Choice {
 	 * definition} = "Liability expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Liability1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<Liability1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Liability1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class Liability1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(Liability1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Liability1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -124,7 +124,7 @@ public class CardTransaction3 {
 	 * CardTransaction15.mmAcceptorTransactionDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptorTransactionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransaction3, ISODateTime> mmAcceptorTransactionDateTime = new MMMessageAttribute<CardTransaction3, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction3.mmObject();
@@ -137,6 +137,16 @@ public class CardTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CardTransaction3 obj) {
+			return obj.getAcceptorTransactionDateTime();
+		}
+
+		@Override
+		public void setValue(CardTransaction3 obj, ISODateTime value) {
+			obj.setAcceptorTransactionDateTime(value);
 		}
 	};
 	@XmlElement(name = "InitrTxId", required = true)
@@ -179,7 +189,7 @@ public class CardTransaction3 {
 	 * CardTransaction15.mmInitiatorTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitiatorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransaction3, Max35Text> mmInitiatorTransactionIdentification = new MMMessageAttribute<CardTransaction3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction3.mmObject();
@@ -192,6 +202,16 @@ public class CardTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CardTransaction3 obj) {
+			return obj.getInitiatorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CardTransaction3 obj, Max35Text value) {
+			obj.setInitiatorTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "InitrId", required = true)
@@ -229,7 +249,7 @@ public class CardTransaction3 {
 	 * "Identification of the entity, initiator of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitiatorIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransaction3, Max35Text> mmInitiatorIdentification = new MMMessageAttribute<CardTransaction3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction3.mmObject();
@@ -241,6 +261,16 @@ public class CardTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CardTransaction3 obj) {
+			return obj.getInitiatorIdentification();
+		}
+
+		@Override
+		public void setValue(CardTransaction3 obj, Max35Text value) {
+			obj.setInitiatorIdentification(value);
 		}
 	};
 

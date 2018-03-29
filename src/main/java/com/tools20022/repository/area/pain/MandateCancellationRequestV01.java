@@ -25,7 +25,6 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader31;
 import com.tools20022.repository.msg.MandateCancellation1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +133,7 @@ public class MandateCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCancellationRequestV01, GroupHeader31> mmGroupHeader = new MMMessageBuildingBlock<MandateCancellationRequestV01, GroupHeader31>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +144,14 @@ public class MandateCancellationRequestV01 {
 			complexType_lazy = () -> GroupHeader31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCancellationRequestV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader31 getValue(MandateCancellationRequestV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(MandateCancellationRequestV01 obj, GroupHeader31 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "UndrlygCxlDtls", required = true)
@@ -179,7 +180,7 @@ public class MandateCancellationRequestV01 {
 	 * "Set of elements used to provide details on the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlyingCancellationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCancellationRequestV01, MandateCancellation1> mmUnderlyingCancellationDetails = new MMMessageBuildingBlock<MandateCancellationRequestV01, MandateCancellation1>() {
 		{
 			xmlTag = "UndrlygCxlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class MandateCancellationRequestV01 {
 			complexType_lazy = () -> MandateCancellation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCancellationRequestV01.class.getMethod("getUnderlyingCancellationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MandateCancellation1 getValue(MandateCancellationRequestV01 obj) {
+			return obj.getUnderlyingCancellationDetails();
+		}
+
+		@Override
+		public void setValue(MandateCancellationRequestV01 obj, MandateCancellation1 value) {
+			obj.setUnderlyingCancellationDetails(value);
 		}
 	};
 

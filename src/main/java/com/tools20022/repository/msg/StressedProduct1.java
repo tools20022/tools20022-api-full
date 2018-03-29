@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.StressSize1Choice;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification172;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class StressedProduct1 {
 	 * GenericIdentification172.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StressedProduct1, GenericIdentification172> mmIdentification = new MMMessageAttribute<StressedProduct1, GenericIdentification172>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StressedProduct1.mmObject();
@@ -128,10 +129,20 @@ public class StressedProduct1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the product.";
-			previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification172.mmIdentification;
+			previousVersion_lazy = () -> GenericIdentification172.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification172.mmObject();
+			complexType_lazy = () -> GenericIdentification172.mmObject();
+		}
+
+		@Override
+		public GenericIdentification172 getValue(StressedProduct1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(StressedProduct1 obj, GenericIdentification172 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "MaxStrssSz", required = true)
@@ -163,7 +174,7 @@ public class StressedProduct1 {
 	 * "Maximum move across the curve for the stressed product.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMaximumStressSize = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StressedProduct1, StressSize1Choice> mmMaximumStressSize = new MMMessageAssociationEnd<StressedProduct1, StressSize1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StressedProduct1.mmObject();
 			isDerived = false;
@@ -175,6 +186,16 @@ public class StressedProduct1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StressSize1Choice.mmObject();
+		}
+
+		@Override
+		public StressSize1Choice getValue(StressedProduct1 obj) {
+			return obj.getMaximumStressSize();
+		}
+
+		@Override
+		public void setValue(StressedProduct1 obj, StressSize1Choice value) {
+			obj.setMaximumStressSize(value);
 		}
 	};
 	@XmlElement(name = "MinStrssSz", required = true)
@@ -206,7 +227,7 @@ public class StressedProduct1 {
 	 * "Minimum move across the curve for the stressed product.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumStressSize = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StressedProduct1, StressSize1Choice> mmMinimumStressSize = new MMMessageAssociationEnd<StressedProduct1, StressSize1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StressedProduct1.mmObject();
 			isDerived = false;
@@ -218,6 +239,16 @@ public class StressedProduct1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StressSize1Choice.mmObject();
+		}
+
+		@Override
+		public StressSize1Choice getValue(StressedProduct1 obj) {
+			return obj.getMinimumStressSize();
+		}
+
+		@Override
+		public void setValue(StressedProduct1 obj, StressSize1Choice value) {
+			obj.setMinimumStressSize(value);
 		}
 	};
 
@@ -231,7 +262,7 @@ public class StressedProduct1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StressedProduct1";
 				definition = "Financial instrument stressed under a stress test scenario.";
-				previousVersion_lazy = () -> com.tools20022.repository.msg.GenericIdentification172.mmObject();
+				previousVersion_lazy = () -> GenericIdentification172.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
@@ -241,7 +272,7 @@ public class StressedProduct1 {
 		return identification;
 	}
 
-	public StressedProduct1 setIdentification(com.tools20022.repository.msg.GenericIdentification172 identification) {
+	public StressedProduct1 setIdentification(GenericIdentification172 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

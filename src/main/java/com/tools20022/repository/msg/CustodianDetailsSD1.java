@@ -31,6 +31,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +130,7 @@ public class CustodianDetailsSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianDetailsSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CustodianDetailsSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -140,6 +141,16 @@ public class CustodianDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CustodianDetailsSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "CtdnCorpActnRcrdId", required = true)
@@ -176,7 +187,7 @@ public class CustodianDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustodianCorporateActionRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianDetailsSD1, Max35Text> mmCustodianCorporateActionRecordIdentification = new MMMessageAttribute<CustodianDetailsSD1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -188,6 +199,16 @@ public class CustodianDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CustodianDetailsSD1 obj) {
+			return obj.getCustodianCorporateActionRecordIdentification();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, Max35Text value) {
+			obj.setCustodianCorporateActionRecordIdentification(value);
 		}
 	};
 	@XmlElement(name = "AgrInd", required = true)
@@ -225,7 +246,7 @@ public class CustodianDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianDetailsSD1, CustodianRecordAgreementType1Code> mmAgreeIndicator = new MMMessageAttribute<CustodianDetailsSD1, CustodianRecordAgreementType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -237,6 +258,16 @@ public class CustodianDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CustodianRecordAgreementType1Code.mmObject();
+		}
+
+		@Override
+		public CustodianRecordAgreementType1Code getValue(CustodianDetailsSD1 obj) {
+			return obj.getAgreeIndicator();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, CustodianRecordAgreementType1Code value) {
+			obj.setAgreeIndicator(value);
 		}
 	};
 	@XmlElement(name = "CmpltnsInd", required = true)
@@ -274,7 +305,7 @@ public class CustodianDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompletenessIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianDetailsSD1, CustodianRecordCompletenessType1Code> mmCompletenessIndicator = new MMMessageAttribute<CustodianDetailsSD1, CustodianRecordCompletenessType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -286,6 +317,16 @@ public class CustodianDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CustodianRecordCompletenessType1Code.mmObject();
+		}
+
+		@Override
+		public CustodianRecordCompletenessType1Code getValue(CustodianDetailsSD1 obj) {
+			return obj.getCompletenessIndicator();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, CustodianRecordCompletenessType1Code value) {
+			obj.setCompletenessIndicator(value);
 		}
 	};
 	@XmlElement(name = "CtdnActnInd")
@@ -322,7 +363,7 @@ public class CustodianDetailsSD1 {
 	 * "Represents the status of custodian activity when applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustodianActionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianDetailsSD1, Optional<CustodianAction1Code>> mmCustodianActionIndicator = new MMMessageAttribute<CustodianDetailsSD1, Optional<CustodianAction1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -334,6 +375,16 @@ public class CustodianDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CustodianAction1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CustodianAction1Code> getValue(CustodianDetailsSD1 obj) {
+			return obj.getCustodianActionIndicator();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, Optional<CustodianAction1Code> value) {
+			obj.setCustodianActionIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GCAActnInd")
@@ -371,7 +422,7 @@ public class CustodianDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGCAActionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianDetailsSD1, Optional<GCAActionType1Code>> mmGCAActionIndicator = new MMMessageAttribute<CustodianDetailsSD1, Optional<GCAActionType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -383,6 +434,16 @@ public class CustodianDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> GCAActionType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<GCAActionType1Code> getValue(CustodianDetailsSD1 obj) {
+			return obj.getGCAActionIndicator();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, Optional<GCAActionType1Code> value) {
+			obj.setGCAActionIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvgBIC", required = true)
@@ -420,7 +481,7 @@ public class CustodianDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceivingBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianDetailsSD1, AnyBICIdentifier> mmReceivingBIC = new MMMessageAttribute<CustodianDetailsSD1, AnyBICIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -432,6 +493,16 @@ public class CustodianDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(CustodianDetailsSD1 obj) {
+			return obj.getReceivingBIC();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, AnyBICIdentifier value) {
+			obj.setReceivingBIC(value);
 		}
 	};
 	@XmlElement(name = "OrgtgBIC", required = true)
@@ -469,7 +540,7 @@ public class CustodianDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginatingBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianDetailsSD1, AnyBICIdentifier> mmOriginatingBIC = new MMMessageAttribute<CustodianDetailsSD1, AnyBICIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -481,6 +552,16 @@ public class CustodianDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(CustodianDetailsSD1 obj) {
+			return obj.getOriginatingBIC();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, AnyBICIdentifier value) {
+			obj.setOriginatingBIC(value);
 		}
 	};
 	@XmlElement(name = "CmpsitNotInSbcptFlg", required = true)
@@ -518,7 +599,7 @@ public class CustodianDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompositeNotInSubscriptionFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustodianDetailsSD1, YesNoIndicator> mmCompositeNotInSubscriptionFlag = new MMMessageAttribute<CustodianDetailsSD1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -531,9 +612,19 @@ public class CustodianDetailsSD1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(CustodianDetailsSD1 obj) {
+			return obj.getCompositeNotInSubscriptionFlag();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, YesNoIndicator value) {
+			obj.setCompositeNotInSubscriptionFlag(value);
+		}
 	};
 	@XmlElement(name = "RltdCtdnMsgDtls")
-	protected List<com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1> relatedCustodianMessageDetails;
+	protected List<RelatedCustodianMessageDetailsSD1> relatedCustodianMessageDetails;
 	/**
 	 * 
 	 <p>
@@ -566,7 +657,7 @@ public class CustodianDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedCustodianMessageDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CustodianDetailsSD1, List<RelatedCustodianMessageDetailsSD1>> mmRelatedCustodianMessageDetails = new MMMessageAssociationEnd<CustodianDetailsSD1, List<RelatedCustodianMessageDetailsSD1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustodianDetailsSD1.mmObject();
 			isDerived = false;
@@ -577,7 +668,17 @@ public class CustodianDetailsSD1 {
 			definition = "Provides selected corporate action events message details extracted from the related custodian messages received. Applicable to custodian service only.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1.mmObject();
+			type_lazy = () -> RelatedCustodianMessageDetailsSD1.mmObject();
+		}
+
+		@Override
+		public List<RelatedCustodianMessageDetailsSD1> getValue(CustodianDetailsSD1 obj) {
+			return obj.getRelatedCustodianMessageDetails();
+		}
+
+		@Override
+		public void setValue(CustodianDetailsSD1 obj, List<RelatedCustodianMessageDetailsSD1> value) {
+			obj.setRelatedCustodianMessageDetails(value);
 		}
 	};
 
@@ -683,7 +784,7 @@ public class CustodianDetailsSD1 {
 		return relatedCustodianMessageDetails == null ? relatedCustodianMessageDetails = new ArrayList<>() : relatedCustodianMessageDetails;
 	}
 
-	public CustodianDetailsSD1 setRelatedCustodianMessageDetails(List<com.tools20022.repository.msg.RelatedCustodianMessageDetailsSD1> relatedCustodianMessageDetails) {
+	public CustodianDetailsSD1 setRelatedCustodianMessageDetails(List<RelatedCustodianMessageDetailsSD1> relatedCustodianMessageDetails) {
 		this.relatedCustodianMessageDetails = Objects.requireNonNull(relatedCustodianMessageDetails);
 		return this;
 	}

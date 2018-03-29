@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification125;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -130,7 +131,7 @@ public class StatusReasonInformation11 {
 	 * StatusReasonInformation9.mmOriginator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation11, Optional<PartyIdentification125>> mmOriginator = new MMMessageAssociationEnd<StatusReasonInformation11, Optional<PartyIdentification125>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation11.mmObject();
@@ -143,7 +144,17 @@ public class StatusReasonInformation11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification125.mmObject();
+			type_lazy = () -> PartyIdentification125.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification125> getValue(StatusReasonInformation11 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation11 obj, Optional<PartyIdentification125> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -184,7 +195,7 @@ public class StatusReasonInformation11 {
 	 * StatusReasonInformation9.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation11, Optional<StatusReason6Choice>> mmReason = new MMMessageAssociationEnd<StatusReasonInformation11, Optional<StatusReason6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation11.mmObject();
@@ -198,6 +209,16 @@ public class StatusReasonInformation11 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> StatusReason6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatusReason6Choice> getValue(StatusReasonInformation11 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation11 obj, Optional<StatusReason6Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -241,7 +262,7 @@ public class StatusReasonInformation11 {
 	 * StatusReasonInformation9.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReasonInformation11, List<Max105Text>> mmAdditionalInformation = new MMMessageAttribute<StatusReasonInformation11, List<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation11.mmObject();
@@ -253,6 +274,16 @@ public class StatusReasonInformation11 {
 			previousVersion_lazy = () -> StatusReasonInformation9.mmAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(StatusReasonInformation11 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation11 obj, List<Max105Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -277,7 +308,7 @@ public class StatusReasonInformation11 {
 		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public StatusReasonInformation11 setOriginator(com.tools20022.repository.msg.PartyIdentification125 originator) {
+	public StatusReasonInformation11 setOriginator(PartyIdentification125 originator) {
 		this.originator = originator;
 		return this;
 	}

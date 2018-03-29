@@ -112,7 +112,7 @@ public class PendingOpeningStatusReason1Choice {
 	 * PendingStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingOpeningStatusReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<PendingOpeningStatusReason1Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingOpeningStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class PendingOpeningStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingOpeningStatusReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingOpeningStatusReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -160,7 +170,7 @@ public class PendingOpeningStatusReason1Choice {
 	 * PendingStatusReason1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingOpeningStatusReason1Choice, List<PendingOpeningStatusReason1>> mmReason = new MMMessageAssociationEnd<PendingOpeningStatusReason1Choice, List<PendingOpeningStatusReason1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingOpeningStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class PendingOpeningStatusReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingOpeningStatusReason1.mmObject();
+		}
+
+		@Override
+		public List<PendingOpeningStatusReason1> getValue(PendingOpeningStatusReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingOpeningStatusReason1Choice obj, List<PendingOpeningStatusReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

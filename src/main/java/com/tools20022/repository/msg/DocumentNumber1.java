@@ -135,7 +135,7 @@ public class DocumentNumber1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentNumber1, DocumentNumber1Choice> mmNumber = new MMMessageAssociationEnd<DocumentNumber1, DocumentNumber1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentNumber1.mmObject();
 			isDerived = false;
@@ -149,6 +149,16 @@ public class DocumentNumber1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber1Choice.mmObject();
+		}
+
+		@Override
+		public DocumentNumber1Choice getValue(DocumentNumber1 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber1 obj, DocumentNumber1Choice value) {
+			obj.setNumber(value);
 		}
 	};
 

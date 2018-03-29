@@ -106,7 +106,7 @@ public class LongQuantityToQuantityRatio2 {
 	 * definition} = "High precision numerator of the quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongQuantity1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongQuantityToQuantityRatio2, LongDecimalNumber> mmLongQuantity1 = new MMMessageAttribute<LongQuantityToQuantityRatio2, LongDecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity1;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmObject();
@@ -118,6 +118,16 @@ public class LongQuantityToQuantityRatio2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LongDecimalNumber.mmObject();
+		}
+
+		@Override
+		public LongDecimalNumber getValue(LongQuantityToQuantityRatio2 obj) {
+			return obj.getLongQuantity1();
+		}
+
+		@Override
+		public void setValue(LongQuantityToQuantityRatio2 obj, LongDecimalNumber value) {
+			obj.setLongQuantity1(value);
 		}
 	};
 	@XmlElement(name = "LngQty2", required = true)
@@ -156,7 +166,7 @@ public class LongQuantityToQuantityRatio2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongQuantity2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongQuantityToQuantityRatio2, LongDecimalNumber> mmLongQuantity2 = new MMMessageAttribute<LongQuantityToQuantityRatio2, LongDecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity2;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmObject();
@@ -168,6 +178,16 @@ public class LongQuantityToQuantityRatio2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LongDecimalNumber.mmObject();
+		}
+
+		@Override
+		public LongDecimalNumber getValue(LongQuantityToQuantityRatio2 obj) {
+			return obj.getLongQuantity2();
+		}
+
+		@Override
+		public void setValue(LongQuantityToQuantityRatio2 obj, LongDecimalNumber value) {
+			obj.setLongQuantity2(value);
 		}
 	};
 

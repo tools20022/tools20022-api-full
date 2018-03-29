@@ -117,7 +117,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Ammonia fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmmonia = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityAmmonia1> mmAmmonia = new MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityAmmonia1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
@@ -130,6 +130,16 @@ public class AssetClassCommodityFertilizer1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FertilizerCommodityAmmonia1.mmObject();
+		}
+
+		@Override
+		public FertilizerCommodityAmmonia1 getValue(AssetClassCommodityFertilizer1Choice obj) {
+			return obj.getAmmonia();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityFertilizer1Choice obj, FertilizerCommodityAmmonia1 value) {
+			obj.setAmmonia(value);
 		}
 	};
 	@XmlElement(name = "DmmnmPhspht", required = true)
@@ -166,7 +176,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Diammonium phosphate fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDiammoniumPhosphate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityDiammoniumPhosphate1> mmDiammoniumPhosphate = new MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityDiammoniumPhosphate1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
@@ -179,6 +189,16 @@ public class AssetClassCommodityFertilizer1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FertilizerCommodityDiammoniumPhosphate1.mmObject();
+		}
+
+		@Override
+		public FertilizerCommodityDiammoniumPhosphate1 getValue(AssetClassCommodityFertilizer1Choice obj) {
+			return obj.getDiammoniumPhosphate();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityFertilizer1Choice obj, FertilizerCommodityDiammoniumPhosphate1 value) {
+			obj.setDiammoniumPhosphate(value);
 		}
 	};
 	@XmlElement(name = "Ptsh", required = true)
@@ -215,7 +235,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Potash fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPotash = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityPotash1> mmPotash = new MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityPotash1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
@@ -228,6 +248,16 @@ public class AssetClassCommodityFertilizer1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FertilizerCommodityPotash1.mmObject();
+		}
+
+		@Override
+		public FertilizerCommodityPotash1 getValue(AssetClassCommodityFertilizer1Choice obj) {
+			return obj.getPotash();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityFertilizer1Choice obj, FertilizerCommodityPotash1 value) {
+			obj.setPotash(value);
 		}
 	};
 	@XmlElement(name = "Slphr", required = true)
@@ -264,7 +294,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Sulphur fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSulphur = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommoditySulphur1> mmSulphur = new MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommoditySulphur1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
@@ -277,6 +307,16 @@ public class AssetClassCommodityFertilizer1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FertilizerCommoditySulphur1.mmObject();
+		}
+
+		@Override
+		public FertilizerCommoditySulphur1 getValue(AssetClassCommodityFertilizer1Choice obj) {
+			return obj.getSulphur();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityFertilizer1Choice obj, FertilizerCommoditySulphur1 value) {
+			obj.setSulphur(value);
 		}
 	};
 	@XmlElement(name = "Urea", required = true)
@@ -313,7 +353,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * definition} = "Urea fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUrea = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityUrea1> mmUrea = new MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityUrea1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
@@ -326,6 +366,16 @@ public class AssetClassCommodityFertilizer1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FertilizerCommodityUrea1.mmObject();
+		}
+
+		@Override
+		public FertilizerCommodityUrea1 getValue(AssetClassCommodityFertilizer1Choice obj) {
+			return obj.getUrea();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityFertilizer1Choice obj, FertilizerCommodityUrea1 value) {
+			obj.setUrea(value);
 		}
 	};
 	@XmlElement(name = "UreaAndAmmnmNtrt", required = true)
@@ -363,7 +413,7 @@ public class AssetClassCommodityFertilizer1Choice {
 	 * "Urea and ammonium nitrate fertilizer commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUreaAndAmmoniumNitrate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityUreaAndAmmoniumNitrate1> mmUreaAndAmmoniumNitrate = new MMMessageAssociationEnd<AssetClassCommodityFertilizer1Choice, FertilizerCommodityUreaAndAmmoniumNitrate1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFertilizer1Choice.mmObject();
@@ -376,6 +426,16 @@ public class AssetClassCommodityFertilizer1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FertilizerCommodityUreaAndAmmoniumNitrate1.mmObject();
+		}
+
+		@Override
+		public FertilizerCommodityUreaAndAmmoniumNitrate1 getValue(AssetClassCommodityFertilizer1Choice obj) {
+			return obj.getUreaAndAmmoniumNitrate();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityFertilizer1Choice obj, FertilizerCommodityUreaAndAmmoniumNitrate1 value) {
+			obj.setUreaAndAmmoniumNitrate(value);
 		}
 	};
 

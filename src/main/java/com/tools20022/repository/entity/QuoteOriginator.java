@@ -26,7 +26,6 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Quote1;
 import com.tools20022.repository.msg.Quote3;
 import com.tools20022.repository.msg.Quote4;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +120,7 @@ public class QuoteOriginator extends InformationPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmQuoteOriginatorType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<QuoteOriginator, OriginatorRoleCode> mmQuoteOriginatorType = new MMBusinessAttribute<QuoteOriginator, OriginatorRoleCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quote3.mmQuoteOriginatorRole, Quote1.mmQuoteOriginatorRole, Quote4.mmQuoteOriginatorRole);
 			isDerived = false;
@@ -134,12 +133,14 @@ public class QuoteOriginator extends InformationPartyRole {
 			simpleType_lazy = () -> OriginatorRoleCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return QuoteOriginator.class.getMethod("getQuoteOriginatorType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginatorRoleCode getValue(QuoteOriginator obj) {
+			return obj.getQuoteOriginatorType();
+		}
+
+		@Override
+		public void setValue(QuoteOriginator obj, OriginatorRoleCode value) {
+			obj.setQuoteOriginatorType(value);
 		}
 	};
 

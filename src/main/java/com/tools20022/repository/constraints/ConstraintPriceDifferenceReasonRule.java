@@ -60,12 +60,16 @@ public class ConstraintPriceDifferenceReasonRule {
 	 */
 	public static final MMConstraint<RedemptionExecution5> forRedemptionExecution5 = new MMConstraint<RedemptionExecution5>() {
 		{
-			validator = ConstraintPriceDifferenceReasonRule::checkRedemptionExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDifferenceReasonRule";
 			definition = "Any occurrence of InformativePriceDetails/PriceDifferenceReason may not be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPriceDifferenceReasonRule.forRedemptionExecution16);
 			owner_lazy = () -> RedemptionExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution5 obj) throws Exception {
+			checkRedemptionExecution5(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintPriceDifferenceReasonRule {
 	 */
 	public static final MMConstraint<RedemptionExecution6> forRedemptionExecution6 = new MMConstraint<RedemptionExecution6>() {
 		{
-			validator = ConstraintPriceDifferenceReasonRule::checkRedemptionExecution6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDifferenceReasonRule";
 			definition = "Any occurrence of InformativePriceDetails/PriceDifferenceReason may not be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPriceDifferenceReasonRule.forRedemptionExecution15);
 			owner_lazy = () -> RedemptionExecution6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution6 obj) throws Exception {
+			checkRedemptionExecution6(obj);
 		}
 	};
 	/**
@@ -138,12 +146,16 @@ public class ConstraintPriceDifferenceReasonRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution5> forSubscriptionExecution5 = new MMConstraint<SubscriptionExecution5>() {
 		{
-			validator = ConstraintPriceDifferenceReasonRule::checkSubscriptionExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDifferenceReasonRule";
 			definition = "Any occurrence of InformativePriceDetails/PriceDifferenceReason may not be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPriceDifferenceReasonRule.forSubscriptionExecution12);
 			owner_lazy = () -> SubscriptionExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution5 obj) throws Exception {
+			checkSubscriptionExecution5(obj);
 		}
 	};
 	/**
@@ -177,12 +189,16 @@ public class ConstraintPriceDifferenceReasonRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution6> forSubscriptionExecution6 = new MMConstraint<SubscriptionExecution6>() {
 		{
-			validator = ConstraintPriceDifferenceReasonRule::checkSubscriptionExecution6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDifferenceReasonRule";
 			definition = "Any occurrence of InformativePriceDetails/PriceDifferenceReason may not be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPriceDifferenceReasonRule.forSubscriptionExecution13);
 			owner_lazy = () -> SubscriptionExecution6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution6 obj) throws Exception {
+			checkSubscriptionExecution6(obj);
 		}
 	};
 	/**
@@ -213,12 +229,16 @@ public class ConstraintPriceDifferenceReasonRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution13> forSubscriptionExecution13 = new MMConstraint<SubscriptionExecution13>() {
 		{
-			validator = ConstraintPriceDifferenceReasonRule::checkSubscriptionExecution13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDifferenceReasonRule";
 			definition = "Any occurrence of InformativePriceDetails/PriceDifferenceReason may not be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPriceDifferenceReasonRule.forSubscriptionExecution6;
 			owner_lazy = () -> SubscriptionExecution13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution13 obj) throws Exception {
+			checkSubscriptionExecution13(obj);
 		}
 	};
 	/**
@@ -249,12 +269,16 @@ public class ConstraintPriceDifferenceReasonRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution12> forSubscriptionExecution12 = new MMConstraint<SubscriptionExecution12>() {
 		{
-			validator = ConstraintPriceDifferenceReasonRule::checkSubscriptionExecution12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDifferenceReasonRule";
 			definition = "Any occurrence of InformativePriceDetails/PriceDifferenceReason may not be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPriceDifferenceReasonRule.forSubscriptionExecution5;
 			owner_lazy = () -> SubscriptionExecution12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution12 obj) throws Exception {
+			checkSubscriptionExecution12(obj);
 		}
 	};
 	/**
@@ -285,12 +309,16 @@ public class ConstraintPriceDifferenceReasonRule {
 	 */
 	public static final MMConstraint<RedemptionExecution16> forRedemptionExecution16 = new MMConstraint<RedemptionExecution16>() {
 		{
-			validator = ConstraintPriceDifferenceReasonRule::checkRedemptionExecution16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDifferenceReasonRule";
 			definition = "Any occurrence of InformativePriceDetails/PriceDifferenceReason may not be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPriceDifferenceReasonRule.forRedemptionExecution5;
 			owner_lazy = () -> RedemptionExecution16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution16 obj) throws Exception {
+			checkRedemptionExecution16(obj);
 		}
 	};
 	/**
@@ -321,12 +349,16 @@ public class ConstraintPriceDifferenceReasonRule {
 	 */
 	public static final MMConstraint<RedemptionExecution15> forRedemptionExecution15 = new MMConstraint<RedemptionExecution15>() {
 		{
-			validator = ConstraintPriceDifferenceReasonRule::checkRedemptionExecution15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDifferenceReasonRule";
 			definition = "Any occurrence of InformativePriceDetails/PriceDifferenceReason may not be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPriceDifferenceReasonRule.forRedemptionExecution6;
 			owner_lazy = () -> RedemptionExecution15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution15 obj) throws Exception {
+			checkRedemptionExecution15(obj);
 		}
 	};
 

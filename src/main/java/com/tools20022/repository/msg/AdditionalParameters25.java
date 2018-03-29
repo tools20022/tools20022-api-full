@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V07;
 import com.tools20022.repository.codeset.PartialSettlement2Code;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.*;
@@ -83,6 +84,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06#mmAdditionalParameters
  * IntraPositionMovementConfirmation002V06.mmAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V07#mmAdditionalParameters
+ * IntraPositionMovementConfirmation002V07.mmAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
@@ -145,7 +149,7 @@ public class AdditionalParameters25 {
 	 * definition} = "Specifies partial settlement information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters25, Optional<PartialSettlement2Code>> mmPartialSettlement = new MMMessageAttribute<AdditionalParameters25, Optional<PartialSettlement2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPartialSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters25.mmObject();
@@ -158,6 +162,16 @@ public class AdditionalParameters25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartialSettlement2Code.mmObject();
+		}
+
+		@Override
+		public Optional<PartialSettlement2Code> getValue(AdditionalParameters25 obj) {
+			return obj.getPartialSettlement();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters25 obj, Optional<PartialSettlement2Code> value) {
+			obj.setPartialSettlement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsPrtlConfId")
@@ -200,7 +214,7 @@ public class AdditionalParameters25 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousPartialConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>> mmPreviousPartialConfirmationIdentification = new MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters25.mmObject();
@@ -213,6 +227,16 @@ public class AdditionalParameters25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(AdditionalParameters25 obj) {
+			return obj.getPreviousPartialConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters25 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setPreviousPartialConfirmationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrTxId")
@@ -255,7 +279,7 @@ public class AdditionalParameters25 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters25.mmObject();
@@ -268,6 +292,16 @@ public class AdditionalParameters25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(AdditionalParameters25 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters25 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setAccountOwnerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -310,7 +344,7 @@ public class AdditionalParameters25 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters25.mmObject();
@@ -323,6 +357,16 @@ public class AdditionalParameters25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(AdditionalParameters25 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters25 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolId")
@@ -363,7 +407,7 @@ public class AdditionalParameters25 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>> mmPoolIdentification = new MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters25.mmObject();
@@ -376,6 +420,16 @@ public class AdditionalParameters25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(AdditionalParameters25 obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters25 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setPoolIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -418,7 +472,7 @@ public class AdditionalParameters25 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters25.mmObject();
@@ -431,6 +485,16 @@ public class AdditionalParameters25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(AdditionalParameters25 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters25 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId")
@@ -474,7 +538,7 @@ public class AdditionalParameters25 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters25.mmObject();
@@ -487,6 +551,16 @@ public class AdditionalParameters25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(AdditionalParameters25 obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters25 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setMarketInfrastructureTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcrTxId")
@@ -526,7 +600,7 @@ public class AdditionalParameters25 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>> mmProcessorTransactionIdentification = new MMMessageAttribute<AdditionalParameters25, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters25.mmObject();
@@ -539,6 +613,16 @@ public class AdditionalParameters25 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(AdditionalParameters25 obj) {
+			return obj.getProcessorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters25 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setProcessorTransactionIdentification(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -548,7 +632,8 @@ public class AdditionalParameters25 {
 						com.tools20022.repository.msg.AdditionalParameters25.mmAccountOwnerTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters25.mmAccountServicerTransactionIdentification,
 						com.tools20022.repository.msg.AdditionalParameters25.mmPoolIdentification, com.tools20022.repository.msg.AdditionalParameters25.mmCorporateActionEventIdentification,
 						com.tools20022.repository.msg.AdditionalParameters25.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters25.mmProcessorTransactionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementConfirmation002V05.mmAdditionalParameters, IntraPositionMovementConfirmation002V06.mmAdditionalParameters);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementConfirmation002V05.mmAdditionalParameters, IntraPositionMovementConfirmation002V06.mmAdditionalParameters,
+						IntraPositionMovementConfirmation002V07.mmAdditionalParameters);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

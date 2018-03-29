@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CryptographicKey10;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -132,7 +133,7 @@ public class SecurityParameters7 {
 	 * SecurityParameters4.mmKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters7, Optional<CryptographicKey10>> mmKey = new MMMessageAttribute<SecurityParameters7, Optional<CryptographicKey10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters7.mmObject();
 			isDerived = false;
@@ -144,7 +145,17 @@ public class SecurityParameters7 {
 			previousVersion_lazy = () -> SecurityParameters4.mmKey;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey10.mmObject();
+			complexType_lazy = () -> CryptographicKey10.mmObject();
+		}
+
+		@Override
+		public Optional<CryptographicKey10> getValue(SecurityParameters7 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(SecurityParameters7 obj, Optional<CryptographicKey10> value) {
+			obj.setKey(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SgntrChc", required = true)
@@ -183,7 +194,7 @@ public class SecurityParameters7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignatureChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityParameters7, ATMSignature1Choice> mmSignatureChoice = new MMMessageAssociationEnd<SecurityParameters7, ATMSignature1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters7.mmObject();
 			isDerived = false;
@@ -196,6 +207,16 @@ public class SecurityParameters7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ATMSignature1Choice.mmObject();
+		}
+
+		@Override
+		public ATMSignature1Choice getValue(SecurityParameters7 obj) {
+			return obj.getSignatureChoice();
+		}
+
+		@Override
+		public void setValue(SecurityParameters7 obj, ATMSignature1Choice value) {
+			obj.setSignatureChoice(value);
 		}
 	};
 	@XmlElement(name = "Cert")
@@ -243,7 +264,7 @@ public class SecurityParameters7 {
 	 * SecurityParameters4.mmCertificate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters7, List<Max5000Binary>> mmCertificate = new MMMessageAttribute<SecurityParameters7, List<Max5000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters7.mmObject();
 			isDerived = false;
@@ -255,6 +276,16 @@ public class SecurityParameters7 {
 			previousVersion_lazy = () -> SecurityParameters4.mmCertificate;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
+		}
+
+		@Override
+		public List<Max5000Binary> getValue(SecurityParameters7 obj) {
+			return obj.getCertificate();
+		}
+
+		@Override
+		public void setValue(SecurityParameters7 obj, List<Max5000Binary> value) {
+			obj.setCertificate(value);
 		}
 	};
 	@XmlElement(name = "ATMChllng")
@@ -300,7 +331,7 @@ public class SecurityParameters7 {
 	 * SecurityParameters4.mmATMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters7, Optional<Max140Binary>> mmATMChallenge = new MMMessageAttribute<SecurityParameters7, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters7.mmObject();
 			isDerived = false;
@@ -313,6 +344,16 @@ public class SecurityParameters7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(SecurityParameters7 obj) {
+			return obj.getATMChallenge();
+		}
+
+		@Override
+		public void setValue(SecurityParameters7 obj, Optional<Max140Binary> value) {
+			obj.setATMChallenge(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdKey")
@@ -359,7 +400,7 @@ public class SecurityParameters7 {
 	 * SecurityParameters4.mmRequestedKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters7, Optional<Max35Text>> mmRequestedKey = new MMMessageAttribute<SecurityParameters7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters7.mmObject();
 			isDerived = false;
@@ -372,6 +413,16 @@ public class SecurityParameters7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecurityParameters7 obj) {
+			return obj.getRequestedKey();
+		}
+
+		@Override
+		public void setValue(SecurityParameters7 obj, Optional<Max35Text> value) {
+			obj.setRequestedKey(value.orElse(null));
 		}
 	};
 
@@ -395,7 +446,7 @@ public class SecurityParameters7 {
 		return key == null ? Optional.empty() : Optional.of(key);
 	}
 
-	public SecurityParameters7 setKey(com.tools20022.repository.msg.CryptographicKey10 key) {
+	public SecurityParameters7 setKey(CryptographicKey10 key) {
 		this.key = key;
 		return this;
 	}

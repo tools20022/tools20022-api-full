@@ -109,7 +109,7 @@ public class RateTypeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateTypeChoice, PercentageRate> mmPercentageRate = new MMMessageAttribute<RateTypeChoice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateTypeChoice.mmObject();
@@ -121,6 +121,16 @@ public class RateTypeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateTypeChoice obj) {
+			return obj.getPercentageRate();
+		}
+
+		@Override
+		public void setValue(RateTypeChoice obj, PercentageRate value) {
+			obj.setPercentageRate(value);
 		}
 	};
 	@XmlElement(name = "TxtlRate", required = true)
@@ -157,7 +167,7 @@ public class RateTypeChoice {
 	 * definition} = "Rate is expressed as a text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTextualRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateTypeChoice, Max35Text> mmTextualRate = new MMMessageAttribute<RateTypeChoice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateTypeChoice.mmObject();
@@ -169,6 +179,16 @@ public class RateTypeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RateTypeChoice obj) {
+			return obj.getTextualRate();
+		}
+
+		@Override
+		public void setValue(RateTypeChoice obj, Max35Text value) {
+			obj.setTextualRate(value);
 		}
 	};
 

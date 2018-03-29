@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.CommissionWaiver;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.WaivingType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +108,7 @@ public class CommissionWaiver2 {
 	 * definition} = "Form of the rebate, eg, cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommissionWaiver2, WaivingType1> mmInstructionBasis = new MMMessageAttribute<CommissionWaiver2, WaivingType1>() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionWaiver2.mmObject();
@@ -118,7 +119,17 @@ public class CommissionWaiver2 {
 			definition = "Form of the rebate, eg, cash.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.WaivingType1.mmObject();
+			complexType_lazy = () -> WaivingType1.mmObject();
+		}
+
+		@Override
+		public WaivingType1 getValue(CommissionWaiver2 obj) {
+			return obj.getInstructionBasis();
+		}
+
+		@Override
+		public void setValue(CommissionWaiver2 obj, WaivingType1 value) {
+			obj.setInstructionBasis(value);
 		}
 	};
 	@XmlElement(name = "WvdRate", required = true)
@@ -158,7 +169,7 @@ public class CommissionWaiver2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWaivedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommissionWaiver2, PercentageRate> mmWaivedRate = new MMMessageAttribute<CommissionWaiver2, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmWaivedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionWaiver2.mmObject();
@@ -170,6 +181,16 @@ public class CommissionWaiver2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(CommissionWaiver2 obj) {
+			return obj.getWaivedRate();
+		}
+
+		@Override
+		public void setValue(CommissionWaiver2 obj, PercentageRate value) {
+			obj.setWaivedRate(value);
 		}
 	};
 
@@ -191,7 +212,7 @@ public class CommissionWaiver2 {
 		return instructionBasis;
 	}
 
-	public CommissionWaiver2 setInstructionBasis(com.tools20022.repository.msg.WaivingType1 instructionBasis) {
+	public CommissionWaiver2 setInstructionBasis(WaivingType1 instructionBasis) {
 		this.instructionBasis = Objects.requireNonNull(instructionBasis);
 		return this;
 	}

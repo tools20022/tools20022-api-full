@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.CashClearingSystem;
 import com.tools20022.repository.entity.Country;
@@ -107,7 +108,7 @@ public class SystemIdentification2Choice {
 	 * definition} = "Clearing service selected for a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketInfrastructureIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemIdentification2Choice, MarketInfrastructureIdentification1Choice> mmMarketInfrastructureIdentification = new MMMessageAssociationEnd<SystemIdentification2Choice, MarketInfrastructureIdentification1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CashClearingSystem.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemIdentification2Choice.mmObject();
@@ -119,7 +120,17 @@ public class SystemIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmObject();
+			type_lazy = () -> MarketInfrastructureIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public MarketInfrastructureIdentification1Choice getValue(SystemIdentification2Choice obj) {
+			return obj.getMarketInfrastructureIdentification();
+		}
+
+		@Override
+		public void setValue(SystemIdentification2Choice obj, MarketInfrastructureIdentification1Choice value) {
+			obj.setMarketInfrastructureIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -156,7 +167,7 @@ public class SystemIdentification2Choice {
 	 * definition} = "Country in which the system is located."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemIdentification2Choice, CountryCode> mmCountry = new MMMessageAttribute<SystemIdentification2Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemIdentification2Choice.mmObject();
@@ -168,6 +179,16 @@ public class SystemIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(SystemIdentification2Choice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(SystemIdentification2Choice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 
@@ -189,7 +210,7 @@ public class SystemIdentification2Choice {
 		return marketInfrastructureIdentification;
 	}
 
-	public SystemIdentification2Choice setMarketInfrastructureIdentification(com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice marketInfrastructureIdentification) {
+	public SystemIdentification2Choice setMarketInfrastructureIdentification(MarketInfrastructureIdentification1Choice marketInfrastructureIdentification) {
 		this.marketInfrastructureIdentification = Objects.requireNonNull(marketInfrastructureIdentification);
 		return this;
 	}

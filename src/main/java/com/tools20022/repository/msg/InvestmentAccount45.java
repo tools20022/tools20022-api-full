@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -152,7 +153,7 @@ public class InvestmentAccount45 {
 	 * InvestmentAccount14.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount45, AccountIdentification1> mmAccountIdentification = new MMMessageAttribute<InvestmentAccount45, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount45.mmObject();
@@ -165,7 +166,17 @@ public class InvestmentAccount45 {
 			previousVersion_lazy = () -> InvestmentAccount14.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(InvestmentAccount45 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount45 obj, AccountIdentification1 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctNm")
@@ -217,7 +228,7 @@ public class InvestmentAccount45 {
 	 * InvestmentAccount14.mmAccountName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount45, Optional<Max35Text>> mmAccountName = new MMMessageAttribute<InvestmentAccount45, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount45.mmObject();
@@ -231,6 +242,16 @@ public class InvestmentAccount45 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount45 obj) {
+			return obj.getAccountName();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount45 obj, Optional<Max35Text> value) {
+			obj.setAccountName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctDsgnt")
@@ -282,7 +303,7 @@ public class InvestmentAccount45 {
 	 * InvestmentAccount14.mmAccountDesignation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount45, Optional<Max35Text>> mmAccountDesignation = new MMMessageAttribute<InvestmentAccount45, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount45.mmObject();
@@ -296,6 +317,16 @@ public class InvestmentAccount45 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount45 obj) {
+			return obj.getAccountDesignation();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount45 obj, Optional<Max35Text> value) {
+			obj.setAccountDesignation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OwnrId")
@@ -335,7 +366,7 @@ public class InvestmentAccount45 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOwnerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount45, Optional<OwnerIdentification1Choice>> mmOwnerIdentification = new MMMessageAssociationEnd<InvestmentAccount45, Optional<OwnerIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount45.mmObject();
 			isDerived = false;
@@ -348,6 +379,16 @@ public class InvestmentAccount45 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OwnerIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OwnerIdentification1Choice> getValue(InvestmentAccount45 obj) {
+			return obj.getOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount45 obj, Optional<OwnerIdentification1Choice> value) {
+			obj.setOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -399,7 +440,7 @@ public class InvestmentAccount45 {
 	 * InvestmentAccount14.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount45, Optional<PartyIdentification2Choice>> mmAccountServicer = new MMMessageAssociationEnd<InvestmentAccount45, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount45.mmObject();
@@ -414,6 +455,16 @@ public class InvestmentAccount45 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(InvestmentAccount45 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount45 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -438,7 +489,7 @@ public class InvestmentAccount45 {
 		return accountIdentification;
 	}
 
-	public InvestmentAccount45 setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
+	public InvestmentAccount45 setAccountIdentification(AccountIdentification1 accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}

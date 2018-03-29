@@ -50,11 +50,15 @@ public class ConstraintOtherAddressCode1Rule {
 	 */
 	public static final MMConstraint<AttendanceCard1> forAttendanceCard1 = new MMConstraint<AttendanceCard1>() {
 		{
-			validator = ConstraintOtherAddressCode1Rule::checkAttendanceCard1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAddressCode1Rule";
 			definition = "If DeliveryMethod is OADR, then OtherAddress must be present.";
 			owner_lazy = () -> AttendanceCard1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AttendanceCard1 obj) throws Exception {
+			checkAttendanceCard1(obj);
 		}
 	};
 	/**
@@ -84,12 +88,16 @@ public class ConstraintOtherAddressCode1Rule {
 	 */
 	public static final MMConstraint<AttendanceCard2> forAttendanceCard2 = new MMConstraint<AttendanceCard2>() {
 		{
-			validator = ConstraintOtherAddressCode1Rule::checkAttendanceCard2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAddressCode1Rule";
 			definition = "If DeliveryMethod is OtherAddress \"OADR\", then OtherAddress must be present.";
 			owner_lazy = () -> AttendanceCard2.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherAddress</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DeliveryMethod</leftOperand><rightOperand>OtherAddress</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(AttendanceCard2 obj) throws Exception {
+			checkAttendanceCard2(obj);
 		}
 	};
 

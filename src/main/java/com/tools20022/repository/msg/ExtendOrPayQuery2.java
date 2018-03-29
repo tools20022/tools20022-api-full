@@ -26,6 +26,8 @@ import com.tools20022.repository.codeset.DemandStatus1Code;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Demand4;
+import com.tools20022.repository.msg.Undertaking9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +121,7 @@ public class ExtendOrPayQuery2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExtendOrPayQuery2, Undertaking9> mmUndertakingIdentification = new MMMessageAssociationEnd<ExtendOrPayQuery2, Undertaking9>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery2.mmObject();
@@ -131,7 +133,17 @@ public class ExtendOrPayQuery2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
+			type_lazy = () -> Undertaking9.mmObject();
+		}
+
+		@Override
+		public Undertaking9 getValue(ExtendOrPayQuery2 obj) {
+			return obj.getUndertakingIdentification();
+		}
+
+		@Override
+		public void setValue(ExtendOrPayQuery2 obj, Undertaking9 value) {
+			obj.setUndertakingIdentification(value);
 		}
 	};
 	@XmlElement(name = "DmndDtls", required = true)
@@ -166,7 +178,7 @@ public class ExtendOrPayQuery2 {
 	 * definition} = "Details related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDemandDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExtendOrPayQuery2, Demand4> mmDemandDetails = new MMMessageAssociationEnd<ExtendOrPayQuery2, Demand4>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmDemand;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery2.mmObject();
@@ -178,7 +190,17 @@ public class ExtendOrPayQuery2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Demand4.mmObject();
+			type_lazy = () -> Demand4.mmObject();
+		}
+
+		@Override
+		public Demand4 getValue(ExtendOrPayQuery2 obj) {
+			return obj.getDemandDetails();
+		}
+
+		@Override
+		public void setValue(ExtendOrPayQuery2 obj, Demand4 value) {
+			obj.setDemandDetails(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -216,7 +238,7 @@ public class ExtendOrPayQuery2 {
 	 * definition} = "Processing status reported by the applicant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExtendOrPayQuery2, DemandStatus1Code> mmStatus = new MMMessageAttribute<ExtendOrPayQuery2, DemandStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmDemandStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendOrPayQuery2.mmObject();
@@ -228,6 +250,16 @@ public class ExtendOrPayQuery2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DemandStatus1Code.mmObject();
+		}
+
+		@Override
+		public DemandStatus1Code getValue(ExtendOrPayQuery2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(ExtendOrPayQuery2 obj, DemandStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 
@@ -251,7 +283,7 @@ public class ExtendOrPayQuery2 {
 		return undertakingIdentification;
 	}
 
-	public ExtendOrPayQuery2 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
+	public ExtendOrPayQuery2 setUndertakingIdentification(Undertaking9 undertakingIdentification) {
 		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
 		return this;
 	}
@@ -260,7 +292,7 @@ public class ExtendOrPayQuery2 {
 		return demandDetails;
 	}
 
-	public ExtendOrPayQuery2 setDemandDetails(com.tools20022.repository.msg.Demand4 demandDetails) {
+	public ExtendOrPayQuery2 setDemandDetails(Demand4 demandDetails) {
 		this.demandDetails = Objects.requireNonNull(demandDetails);
 		return this;
 	}

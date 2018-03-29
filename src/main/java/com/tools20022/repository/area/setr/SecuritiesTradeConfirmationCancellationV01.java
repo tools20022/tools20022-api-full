@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactiontIdentification4;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -139,7 +138,7 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTradeConfirmationCancellationV01, TransactiontIdentification4> mmIdentification = new MMMessageBuildingBlock<SecuritiesTradeConfirmationCancellationV01, TransactiontIdentification4>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,12 +149,14 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			complexType_lazy = () -> TransactiontIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeConfirmationCancellationV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactiontIdentification4 getValue(SecuritiesTradeConfirmationCancellationV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeConfirmationCancellationV01 obj, TransactiontIdentification4 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Refs")
@@ -184,7 +185,7 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTradeConfirmationCancellationV01, List<Linkages15>> mmReferences = new MMMessageBuildingBlock<SecuritiesTradeConfirmationCancellationV01, List<Linkages15>>() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +195,14 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			complexType_lazy = () -> Linkages15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeConfirmationCancellationV01.class.getMethod("getReferences", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Linkages15> getValue(SecuritiesTradeConfirmationCancellationV01 obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeConfirmationCancellationV01 obj, List<Linkages15> value) {
+			obj.setReferences(value);
 		}
 	};
 	@XmlElement(name = "OthrBizPties")
@@ -228,7 +231,7 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherBusinessParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTradeConfirmationCancellationV01, Optional<OtherParties18>> mmOtherBusinessParties = new MMMessageBuildingBlock<SecuritiesTradeConfirmationCancellationV01, Optional<OtherParties18>>() {
 		{
 			xmlTag = "OthrBizPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,12 +242,14 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			complexType_lazy = () -> OtherParties18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeConfirmationCancellationV01.class.getMethod("getOtherBusinessParties", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<OtherParties18> getValue(SecuritiesTradeConfirmationCancellationV01 obj) {
+			return obj.getOtherBusinessParties();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeConfirmationCancellationV01 obj, Optional<OtherParties18> value) {
+			obj.setOtherBusinessParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -274,7 +279,7 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTradeConfirmationCancellationV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<SecuritiesTradeConfirmationCancellationV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,12 +289,14 @@ public class SecuritiesTradeConfirmationCancellationV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeConfirmationCancellationV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesTradeConfirmationCancellationV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeConfirmationCancellationV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

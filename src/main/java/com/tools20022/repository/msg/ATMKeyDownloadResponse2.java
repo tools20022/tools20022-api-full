@@ -24,6 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCommand7;
+import com.tools20022.repository.msg.ATMEnvironment7;
+import com.tools20022.repository.msg.ATMSecurityContext2;
+import com.tools20022.repository.msg.SecurityParameters5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -132,7 +136,7 @@ public class ATMKeyDownloadResponse2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMKeyDownloadResponse2, ATMEnvironment7> mmEnvironment = new MMMessageAssociationEnd<ATMKeyDownloadResponse2, ATMEnvironment7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
@@ -144,7 +148,17 @@ public class ATMKeyDownloadResponse2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment7.mmObject();
+			type_lazy = () -> ATMEnvironment7.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment7 getValue(ATMKeyDownloadResponse2 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMKeyDownloadResponse2 obj, ATMEnvironment7 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "ATMSctyCntxt", required = true)
@@ -183,7 +197,7 @@ public class ATMKeyDownloadResponse2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATMSecurityContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMKeyDownloadResponse2, ATMSecurityContext2> mmATMSecurityContext = new MMMessageAssociationEnd<ATMKeyDownloadResponse2, ATMSecurityContext2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
@@ -195,7 +209,17 @@ public class ATMKeyDownloadResponse2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext2.mmObject();
+			type_lazy = () -> ATMSecurityContext2.mmObject();
+		}
+
+		@Override
+		public ATMSecurityContext2 getValue(ATMKeyDownloadResponse2 obj) {
+			return obj.getATMSecurityContext();
+		}
+
+		@Override
+		public void setValue(ATMKeyDownloadResponse2 obj, ATMSecurityContext2 value) {
+			obj.setATMSecurityContext(value);
 		}
 	};
 	@XmlElement(name = "ATMChllng")
@@ -237,7 +261,7 @@ public class ATMKeyDownloadResponse2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMKeyDownloadResponse2, Optional<Max140Binary>> mmATMChallenge = new MMMessageAttribute<ATMKeyDownloadResponse2, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
@@ -249,6 +273,16 @@ public class ATMKeyDownloadResponse2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(ATMKeyDownloadResponse2 obj) {
+			return obj.getATMChallenge();
+		}
+
+		@Override
+		public void setValue(ATMKeyDownloadResponse2 obj, Optional<Max140Binary> value) {
+			obj.setATMChallenge(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HstSctyParams", required = true)
@@ -287,7 +321,7 @@ public class ATMKeyDownloadResponse2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHostSecurityParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMKeyDownloadResponse2, SecurityParameters5> mmHostSecurityParameters = new MMMessageAssociationEnd<ATMKeyDownloadResponse2, SecurityParameters5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
@@ -299,11 +333,21 @@ public class ATMKeyDownloadResponse2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityParameters5.mmObject();
+			type_lazy = () -> SecurityParameters5.mmObject();
+		}
+
+		@Override
+		public SecurityParameters5 getValue(ATMKeyDownloadResponse2 obj) {
+			return obj.getHostSecurityParameters();
+		}
+
+		@Override
+		public void setValue(ATMKeyDownloadResponse2 obj, SecurityParameters5 value) {
+			obj.setHostSecurityParameters(value);
 		}
 	};
 	@XmlElement(name = "Cmd")
-	protected List<com.tools20022.repository.msg.ATMCommand7> command;
+	protected List<ATMCommand7> command;
 	/**
 	 * 
 	 <p>
@@ -338,7 +382,7 @@ public class ATMKeyDownloadResponse2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMKeyDownloadResponse2, List<ATMCommand7>> mmCommand = new MMMessageAssociationEnd<ATMKeyDownloadResponse2, List<ATMCommand7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMKeyDownloadResponse2.mmObject();
 			isDerived = false;
@@ -349,7 +393,17 @@ public class ATMKeyDownloadResponse2 {
 			nextVersions_lazy = () -> Arrays.asList(ATMKeyDownloadResponse3.mmCommand);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand7.mmObject();
+			type_lazy = () -> ATMCommand7.mmObject();
+		}
+
+		@Override
+		public List<ATMCommand7> getValue(ATMKeyDownloadResponse2 obj) {
+			return obj.getCommand();
+		}
+
+		@Override
+		public void setValue(ATMKeyDownloadResponse2 obj, List<ATMCommand7> value) {
+			obj.setCommand(value);
 		}
 	};
 
@@ -373,7 +427,7 @@ public class ATMKeyDownloadResponse2 {
 		return environment;
 	}
 
-	public ATMKeyDownloadResponse2 setEnvironment(com.tools20022.repository.msg.ATMEnvironment7 environment) {
+	public ATMKeyDownloadResponse2 setEnvironment(ATMEnvironment7 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -382,7 +436,7 @@ public class ATMKeyDownloadResponse2 {
 		return aTMSecurityContext;
 	}
 
-	public ATMKeyDownloadResponse2 setATMSecurityContext(com.tools20022.repository.msg.ATMSecurityContext2 aTMSecurityContext) {
+	public ATMKeyDownloadResponse2 setATMSecurityContext(ATMSecurityContext2 aTMSecurityContext) {
 		this.aTMSecurityContext = Objects.requireNonNull(aTMSecurityContext);
 		return this;
 	}
@@ -400,7 +454,7 @@ public class ATMKeyDownloadResponse2 {
 		return hostSecurityParameters;
 	}
 
-	public ATMKeyDownloadResponse2 setHostSecurityParameters(com.tools20022.repository.msg.SecurityParameters5 hostSecurityParameters) {
+	public ATMKeyDownloadResponse2 setHostSecurityParameters(SecurityParameters5 hostSecurityParameters) {
 		this.hostSecurityParameters = Objects.requireNonNull(hostSecurityParameters);
 		return this;
 	}
@@ -409,7 +463,7 @@ public class ATMKeyDownloadResponse2 {
 		return command == null ? command = new ArrayList<>() : command;
 	}
 
-	public ATMKeyDownloadResponse2 setCommand(List<com.tools20022.repository.msg.ATMCommand7> command) {
+	public ATMKeyDownloadResponse2 setCommand(List<ATMCommand7> command) {
 		this.command = Objects.requireNonNull(command);
 		return this;
 	}

@@ -138,7 +138,7 @@ public class ChargeOrCommissionDiscount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeOrCommissionDiscount1, Optional<ActiveCurrencyAndAmount>> mmAmount = new MMMessageAttribute<ChargeOrCommissionDiscount1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmObject();
@@ -151,6 +151,16 @@ public class ChargeOrCommissionDiscount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ChargeOrCommissionDiscount1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ChargeOrCommissionDiscount1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -198,7 +208,7 @@ public class ChargeOrCommissionDiscount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeOrCommissionDiscount1, Optional<PercentageRate>> mmRate = new MMMessageAttribute<ChargeOrCommissionDiscount1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmObject();
@@ -211,6 +221,16 @@ public class ChargeOrCommissionDiscount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(ChargeOrCommissionDiscount1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(ChargeOrCommissionDiscount1 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bsis")
@@ -255,7 +275,7 @@ public class ChargeOrCommissionDiscount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ChargeOrCommissionDiscount1, Optional<WaivingInstruction2Choice>> mmBasis = new MMMessageAssociationEnd<ChargeOrCommissionDiscount1, Optional<WaivingInstruction2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionWaiving;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargeOrCommissionDiscount1.mmObject();
@@ -269,6 +289,16 @@ public class ChargeOrCommissionDiscount1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> WaivingInstruction2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<WaivingInstruction2Choice> getValue(ChargeOrCommissionDiscount1 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(ChargeOrCommissionDiscount1 obj, Optional<WaivingInstruction2Choice> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 

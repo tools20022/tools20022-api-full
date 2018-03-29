@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PhysicalDelivery;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class DeliveryParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegisteredAddressIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryParameters2, YesNoIndicator> mmRegisteredAddressIndicator = new MMMessageAttribute<DeliveryParameters2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PhysicalDelivery.mmRegisteredAddressIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveryParameters2.mmObject();
@@ -130,6 +131,16 @@ public class DeliveryParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DeliveryParameters2 obj) {
+			return obj.getRegisteredAddressIndicator();
+		}
+
+		@Override
+		public void setValue(DeliveryParameters2 obj, YesNoIndicator value) {
+			obj.setRegisteredAddressIndicator(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr")
@@ -168,7 +179,7 @@ public class DeliveryParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryParameters2, Optional<NameAndAddress1>> mmNameAndAddress = new MMMessageAttribute<DeliveryParameters2, Optional<NameAndAddress1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveryParameters2.mmObject();
@@ -179,7 +190,17 @@ public class DeliveryParameters2 {
 			definition = "Name and address to/from which the physical delivery/receipt of the financial instrument must take place.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress1.mmObject();
+			complexType_lazy = () -> NameAndAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress1> getValue(DeliveryParameters2 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(DeliveryParameters2 obj, Optional<NameAndAddress1> value) {
+			obj.setNameAndAddress(value.orElse(null));
 		}
 	};
 
@@ -211,7 +232,7 @@ public class DeliveryParameters2 {
 		return nameAndAddress == null ? Optional.empty() : Optional.of(nameAndAddress);
 	}
 
-	public DeliveryParameters2 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress1 nameAndAddress) {
+	public DeliveryParameters2 setNameAndAddress(NameAndAddress1 nameAndAddress) {
 		this.nameAndAddress = nameAndAddress;
 		return this;
 	}

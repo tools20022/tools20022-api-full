@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesLatestVersion;
 import com.tools20022.repository.msg.DemandRefusal1;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -110,7 +109,7 @@ public class DemandRefusalNotificationV01 {
 	 * definition} = "Details of the demand refusal notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDemandRefusalNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DemandRefusalNotificationV01, List<DemandRefusal1>> mmDemandRefusalNotificationDetails = new MMMessageBuildingBlock<DemandRefusalNotificationV01, List<DemandRefusal1>>() {
 		{
 			xmlTag = "DmndRfslNtfctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,12 +119,14 @@ public class DemandRefusalNotificationV01 {
 			complexType_lazy = () -> DemandRefusal1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DemandRefusalNotificationV01.class.getMethod("getDemandRefusalNotificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DemandRefusal1> getValue(DemandRefusalNotificationV01 obj) {
+			return obj.getDemandRefusalNotificationDetails();
+		}
+
+		@Override
+		public void setValue(DemandRefusalNotificationV01 obj, List<DemandRefusal1> value) {
+			obj.setDemandRefusalNotificationDetails(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -153,7 +154,7 @@ public class DemandRefusalNotificationV01 {
 	 * definition} = "Digital signature of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DemandRefusalNotificationV01, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageBuildingBlock<DemandRefusalNotificationV01, Optional<PartyAndSignature2>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,12 +165,14 @@ public class DemandRefusalNotificationV01 {
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DemandRefusalNotificationV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyAndSignature2> getValue(DemandRefusalNotificationV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(DemandRefusalNotificationV01 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 

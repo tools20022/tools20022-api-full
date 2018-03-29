@@ -27,6 +27,8 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.QuantityToQuantityRatio1;
+import com.tools20022.repository.msg.SecurityIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -213,7 +215,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, SecurityIdentification19> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, SecurityIdentification19>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -228,7 +230,17 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification19 getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, SecurityIdentification19 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "PlcOfListg")
@@ -282,7 +294,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmPlaceOfListing}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlaceOfListing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<MarketIdentification3Choice>> mmPlaceOfListing = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<MarketIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -298,6 +310,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification3Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getPlaceOfListing();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<MarketIdentification3Choice> value) {
+			obj.setPlaceOfListing(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DayCntBsis")
@@ -352,7 +374,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmDayCountBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDayCountBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<InterestComputationMethodFormat4Choice>> mmDayCountBasis = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<InterestComputationMethodFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -368,6 +390,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestComputationMethodFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestComputationMethodFormat4Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getDayCountBasis();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<InterestComputationMethodFormat4Choice> value) {
+			obj.setDayCountBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClssfctnTp")
@@ -422,7 +454,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmClassificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClassificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<ClassificationType32Choice>> mmClassificationType = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<ClassificationType32Choice>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -438,6 +470,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ClassificationType32Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ClassificationType32Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getClassificationType();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ClassificationType32Choice> value) {
+			obj.setClassificationType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnStyle")
@@ -489,7 +531,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmOptionStyle}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionStyle = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<OptionStyle8Choice>> mmOptionStyle = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<OptionStyle8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -505,6 +547,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OptionStyle8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OptionStyle8Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getOptionStyle();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<OptionStyle8Choice> value) {
+			obj.setOptionStyle(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DnmtnCcy")
@@ -559,7 +611,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmDenominationCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDenominationCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ActiveOrHistoricCurrencyCode>> mmDenominationCurrency = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmDenominationCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -574,6 +626,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getDenominationCurrency();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setDenominationCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtCpnDt")
@@ -627,7 +689,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmNextCouponDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextCouponDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>> mmNextCouponDate = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmNextCouponDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -642,6 +704,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getNextCouponDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ISODate> value) {
+			obj.setNextCouponDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt")
@@ -696,7 +768,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmExpiryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>> mmExpiryDate = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -711,6 +783,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ISODate> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FltgRateFxgDt")
@@ -765,7 +847,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmFloatingRateFixingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFloatingRateFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>> mmFloatingRateFixingDate = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmFixingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -780,6 +862,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getFloatingRateFixingDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ISODate> value) {
+			obj.setFloatingRateFixingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -834,7 +926,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>> mmMaturityDate = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -849,6 +941,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ISODate> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseDt")
@@ -901,7 +1003,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmIssueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>> mmIssueDate = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -916,6 +1018,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ISODate> value) {
+			obj.setIssueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtCllblDt")
@@ -970,7 +1082,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmNextCallableDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextCallableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>> mmNextCallableDate = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmNextCallableDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -985,6 +1097,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getNextCallableDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ISODate> value) {
+			obj.setNextCallableDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PutblDt")
@@ -1039,7 +1161,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmPutableDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPutableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>> mmPutableDate = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPutableDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1054,6 +1176,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getPutableDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ISODate> value) {
+			obj.setPutableDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtdDt")
@@ -1108,7 +1240,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmDatedDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>> mmDatedDate = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmDatedDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1123,6 +1255,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getDatedDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ISODate> value) {
+			obj.setDatedDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConvsDt")
@@ -1177,7 +1319,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmConversionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConversionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>> mmConversionDate = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1192,6 +1334,16 @@ public class FinancialInstrumentAttributes66 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getConversionDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<ISODate> value) {
+			obj.setConversionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstRate")
@@ -1243,7 +1395,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmInterestRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat3Choice>> mmInterestRate = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1259,6 +1411,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat3Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getInterestRate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<RateFormat3Choice> value) {
+			obj.setInterestRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtIntrstRate")
@@ -1312,7 +1474,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmNextInterestRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNextInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat3Choice>> mmNextInterestRate = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1328,6 +1490,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat3Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getNextInterestRate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<RateFormat3Choice> value) {
+			obj.setNextInterestRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgOfDebtClm")
@@ -1381,7 +1553,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmPercentageOfDebtClaim}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPercentageOfDebtClaim = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat3Choice>> mmPercentageOfDebtClaim = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1397,6 +1569,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat3Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getPercentageOfDebtClaim();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<RateFormat3Choice> value) {
+			obj.setPercentageOfDebtClaim(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsFctr")
@@ -1450,7 +1632,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmPreviousFactor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousFactor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat12Choice>> mmPreviousFactor = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1466,6 +1648,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat12Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getPreviousFactor();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<RateFormat12Choice> value) {
+			obj.setPreviousFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtFctr")
@@ -1519,7 +1711,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmNextFactor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNextFactor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat12Choice>> mmNextFactor = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<RateFormat12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1535,6 +1727,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat12Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getNextFactor();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<RateFormat12Choice> value) {
+			obj.setNextFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WarrtParity")
@@ -1587,7 +1789,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmWarrantParity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWarrantParity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes66, Optional<QuantityToQuantityRatio1>> mmWarrantParity = new MMMessageAttribute<FinancialInstrumentAttributes66, Optional<QuantityToQuantityRatio1>>() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmWarrantParity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1600,7 +1802,17 @@ public class FinancialInstrumentAttributes66 {
 			previousVersion_lazy = () -> FinancialInstrumentAttributes48.mmWarrantParity;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio1.mmObject();
+			complexType_lazy = () -> QuantityToQuantityRatio1.mmObject();
+		}
+
+		@Override
+		public Optional<QuantityToQuantityRatio1> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getWarrantParity();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<QuantityToQuantityRatio1> value) {
+			obj.setWarrantParity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinNmnlQty")
@@ -1653,7 +1865,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmMinimumNominalQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumNominalQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<FinancialInstrumentQuantity1Choice>> mmMinimumNominalQuantity = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmMinimumQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1669,6 +1881,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getMinimumNominalQuantity();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setMinimumNominalQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrctSz")
@@ -1723,7 +1945,7 @@ public class FinancialInstrumentAttributes66 {
 	 * FinancialInstrumentAttributes48.mmContractSize}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContractSize = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<FinancialInstrumentQuantity1Choice>> mmContractSize = new MMMessageAssociationEnd<FinancialInstrumentAttributes66, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmContractSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes66.mmObject();
@@ -1739,6 +1961,16 @@ public class FinancialInstrumentAttributes66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(FinancialInstrumentAttributes66 obj) {
+			return obj.getContractSize();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes66 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setContractSize(value.orElse(null));
 		}
 	};
 
@@ -1775,7 +2007,7 @@ public class FinancialInstrumentAttributes66 {
 		return financialInstrumentIdentification;
 	}
 
-	public FinancialInstrumentAttributes66 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+	public FinancialInstrumentAttributes66 setFinancialInstrumentIdentification(SecurityIdentification19 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -1955,7 +2187,7 @@ public class FinancialInstrumentAttributes66 {
 		return warrantParity == null ? Optional.empty() : Optional.of(warrantParity);
 	}
 
-	public FinancialInstrumentAttributes66 setWarrantParity(com.tools20022.repository.msg.QuantityToQuantityRatio1 warrantParity) {
+	public FinancialInstrumentAttributes66 setWarrantParity(QuantityToQuantityRatio1 warrantParity) {
 		this.warrantParity = warrantParity;
 		return this;
 	}

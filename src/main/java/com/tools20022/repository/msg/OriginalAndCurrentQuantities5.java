@@ -119,7 +119,7 @@ public class OriginalAndCurrentQuantities5 {
 	 * definition} = "Sign of the quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAndCurrentQuantities5, ShortLong1Code> mmShortLongPosition = new MMMessageAttribute<OriginalAndCurrentQuantities5, ShortLong1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities5.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class OriginalAndCurrentQuantities5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public ShortLong1Code getValue(OriginalAndCurrentQuantities5 obj) {
+			return obj.getShortLongPosition();
+		}
+
+		@Override
+		public void setValue(OriginalAndCurrentQuantities5 obj, ShortLong1Code value) {
+			obj.setShortLongPosition(value);
 		}
 	};
 	@XmlElement(name = "FaceAmt", required = true)
@@ -172,7 +182,7 @@ public class OriginalAndCurrentQuantities5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAndCurrentQuantities5, RestrictedFINImpliedCurrencyAndAmount> mmFaceAmount = new MMMessageAttribute<OriginalAndCurrentQuantities5, RestrictedFINImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities5.mmObject();
@@ -185,6 +195,16 @@ public class OriginalAndCurrentQuantities5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINImpliedCurrencyAndAmount getValue(OriginalAndCurrentQuantities5 obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(OriginalAndCurrentQuantities5 obj, RestrictedFINImpliedCurrencyAndAmount value) {
+			obj.setFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtsdVal", required = true)
@@ -227,7 +247,7 @@ public class OriginalAndCurrentQuantities5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAndCurrentQuantities5, RestrictedFINImpliedCurrencyAndAmount> mmAmortisedValue = new MMMessageAttribute<OriginalAndCurrentQuantities5, RestrictedFINImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAndCurrentQuantities5.mmObject();
@@ -240,6 +260,16 @@ public class OriginalAndCurrentQuantities5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINImpliedCurrencyAndAmount getValue(OriginalAndCurrentQuantities5 obj) {
+			return obj.getAmortisedValue();
+		}
+
+		@Override
+		public void setValue(OriginalAndCurrentQuantities5 obj, RestrictedFINImpliedCurrencyAndAmount value) {
+			obj.setAmortisedValue(value);
 		}
 	};
 

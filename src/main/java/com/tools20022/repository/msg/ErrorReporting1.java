@@ -95,7 +95,7 @@ public class ErrorReporting1 {
 	 * definition} = "Type of error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorReporting1, Max35Text> mmType = new MMMessageAttribute<ErrorReporting1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorReporting1.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class ErrorReporting1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ErrorReporting1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ErrorReporting1 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -137,7 +147,7 @@ public class ErrorReporting1 {
 	 * definition} = "Detailed description of the error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorReporting1, Max500Text> mmDescription = new MMMessageAttribute<ErrorReporting1, Max500Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorReporting1.mmObject();
 			isDerived = false;
@@ -148,6 +158,16 @@ public class ErrorReporting1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Max500Text getValue(ErrorReporting1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(ErrorReporting1 obj, Max500Text value) {
+			obj.setDescription(value);
 		}
 	};
 

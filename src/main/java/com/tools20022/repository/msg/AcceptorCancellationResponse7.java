@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorCancellationResponseV07;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment69;
+import com.tools20022.repository.msg.CardPaymentTransaction57;
+import com.tools20022.repository.msg.CardPaymentTransaction68;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -71,7 +74,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorCancellationResponse7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -125,7 +128,7 @@ public class AcceptorCancellationResponse7 {
 	 * AcceptorCancellationResponse6.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCancellationResponse7, CardPaymentEnvironment69> mmEnvironment = new MMMessageAssociationEnd<AcceptorCancellationResponse7, CardPaymentEnvironment69>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationResponse7.mmObject();
@@ -138,7 +141,17 @@ public class AcceptorCancellationResponse7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment69.mmObject();
+			type_lazy = () -> CardPaymentEnvironment69.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment69 getValue(AcceptorCancellationResponse7 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationResponse7 obj, CardPaymentEnvironment69 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -180,7 +193,7 @@ public class AcceptorCancellationResponse7 {
 	 * AcceptorCancellationResponse6.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCancellationResponse7, CardPaymentTransaction57> mmTransaction = new MMMessageAssociationEnd<AcceptorCancellationResponse7, CardPaymentTransaction57>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationResponse7.mmObject();
@@ -193,7 +206,17 @@ public class AcceptorCancellationResponse7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction57.mmObject();
+			type_lazy = () -> CardPaymentTransaction57.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction57 getValue(AcceptorCancellationResponse7 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationResponse7 obj, CardPaymentTransaction57 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -235,7 +258,7 @@ public class AcceptorCancellationResponse7 {
 	 * AcceptorCancellationResponse6.mmTransactionResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCancellationResponse7, CardPaymentTransaction68> mmTransactionResponse = new MMMessageAssociationEnd<AcceptorCancellationResponse7, CardPaymentTransaction68>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationResponse7.mmObject();
@@ -248,7 +271,17 @@ public class AcceptorCancellationResponse7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction68.mmObject();
+			type_lazy = () -> CardPaymentTransaction68.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction68 getValue(AcceptorCancellationResponse7 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationResponse7 obj, CardPaymentTransaction68 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 
@@ -260,7 +293,7 @@ public class AcceptorCancellationResponse7 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCancellationResponseV07.mmCancellationResponse);
 				trace_lazy = () -> CardPayment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationResponse7";
 				definition = "Cancellation response from the acquirer.";
 				previousVersion_lazy = () -> AcceptorCancellationResponse6.mmObject();
@@ -273,7 +306,7 @@ public class AcceptorCancellationResponse7 {
 		return environment;
 	}
 
-	public AcceptorCancellationResponse7 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment69 environment) {
+	public AcceptorCancellationResponse7 setEnvironment(CardPaymentEnvironment69 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -282,7 +315,7 @@ public class AcceptorCancellationResponse7 {
 		return transaction;
 	}
 
-	public AcceptorCancellationResponse7 setTransaction(com.tools20022.repository.msg.CardPaymentTransaction57 transaction) {
+	public AcceptorCancellationResponse7 setTransaction(CardPaymentTransaction57 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
@@ -291,7 +324,7 @@ public class AcceptorCancellationResponse7 {
 		return transactionResponse;
 	}
 
-	public AcceptorCancellationResponse7 setTransactionResponse(com.tools20022.repository.msg.CardPaymentTransaction68 transactionResponse) {
+	public AcceptorCancellationResponse7 setTransactionResponse(CardPaymentTransaction68 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}

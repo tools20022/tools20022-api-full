@@ -52,11 +52,15 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails1> forRequestDetails1 = new MMConstraint<RequestDetails1>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			owner_lazy = () -> RequestDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails1 obj) throws Exception {
+			checkRequestDetails1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails2> forRequestDetails2 = new MMConstraint<RequestDetails2>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			owner_lazy = () -> RequestDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails2 obj) throws Exception {
+			checkRequestDetails2(obj);
 		}
 	};
 	/**
@@ -121,12 +129,16 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails6> forRequestDetails6 = new MMConstraint<RequestDetails6>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails18);
 			owner_lazy = () -> RequestDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails6 obj) throws Exception {
+			checkRequestDetails6(obj);
 		}
 	};
 	/**
@@ -152,11 +164,15 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails7> forRequestDetails7 = new MMConstraint<RequestDetails7>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			owner_lazy = () -> RequestDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails7 obj) throws Exception {
+			checkRequestDetails7(obj);
 		}
 	};
 	/**
@@ -182,11 +198,15 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails8> forRequestDetails8 = new MMConstraint<RequestDetails8>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			owner_lazy = () -> RequestDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails8 obj) throws Exception {
+			checkRequestDetails8(obj);
 		}
 	};
 	/**
@@ -212,11 +232,15 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails9> forRequestDetails9 = new MMConstraint<RequestDetails9>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			owner_lazy = () -> RequestDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails9 obj) throws Exception {
+			checkRequestDetails9(obj);
 		}
 	};
 	/**
@@ -251,12 +275,16 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails11> forRequestDetails11 = new MMConstraint<RequestDetails11>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails13);
 			owner_lazy = () -> RequestDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails11 obj) throws Exception {
+			checkRequestDetails11(obj);
 		}
 	};
 	/**
@@ -282,11 +310,15 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails12> forRequestDetails12 = new MMConstraint<RequestDetails12>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			owner_lazy = () -> RequestDetails12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails12 obj) throws Exception {
+			checkRequestDetails12(obj);
 		}
 	};
 	/**
@@ -327,13 +359,17 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails13> forRequestDetails13 = new MMConstraint<RequestDetails13>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails15);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails11;
 			owner_lazy = () -> RequestDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails13 obj) throws Exception {
+			checkRequestDetails13(obj);
 		}
 	};
 	/**
@@ -359,11 +395,15 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails14> forRequestDetails14 = new MMConstraint<RequestDetails14>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			owner_lazy = () -> RequestDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails14 obj) throws Exception {
+			checkRequestDetails14(obj);
 		}
 	};
 	/**
@@ -395,12 +435,16 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails15> forRequestDetails15 = new MMConstraint<RequestDetails15>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails13;
 			owner_lazy = () -> RequestDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails15 obj) throws Exception {
+			checkRequestDetails15(obj);
 		}
 	};
 	/**
@@ -426,11 +470,15 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails16> forRequestDetails16 = new MMConstraint<RequestDetails16>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			owner_lazy = () -> RequestDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails16 obj) throws Exception {
+			checkRequestDetails16(obj);
 		}
 	};
 	/**
@@ -462,12 +510,16 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 */
 	public static final MMConstraint<RequestDetails18> forRequestDetails18 = new MMConstraint<RequestDetails18>() {
 		{
-			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails6;
 			owner_lazy = () -> RequestDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestDetails18 obj) throws Exception {
+			checkRequestDetails18(obj);
 		}
 	};
 

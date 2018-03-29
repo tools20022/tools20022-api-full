@@ -132,7 +132,7 @@ public class AlternatePartyIdentification7 {
 	 * AlternatePartyIdentification2.mmIdentificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternatePartyIdentification7, IdentificationType42Choice> mmIdentificationType = new MMMessageAttribute<AlternatePartyIdentification7, IdentificationType42Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification7.mmObject();
@@ -146,6 +146,16 @@ public class AlternatePartyIdentification7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationType42Choice.mmObject();
+		}
+
+		@Override
+		public IdentificationType42Choice getValue(AlternatePartyIdentification7 obj) {
+			return obj.getIdentificationType();
+		}
+
+		@Override
+		public void setValue(AlternatePartyIdentification7 obj, IdentificationType42Choice value) {
+			obj.setIdentificationType(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -192,7 +202,7 @@ public class AlternatePartyIdentification7 {
 	 * AlternatePartyIdentification2.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternatePartyIdentification7, CountryCode> mmCountry = new MMMessageAttribute<AlternatePartyIdentification7, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification7.mmObject();
@@ -206,6 +216,16 @@ public class AlternatePartyIdentification7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(AlternatePartyIdentification7 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(AlternatePartyIdentification7 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "AltrnId", required = true)
@@ -250,7 +270,7 @@ public class AlternatePartyIdentification7 {
 	 * AlternatePartyIdentification2.mmAlternateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternatePartyIdentification7, Max35Text> mmAlternateIdentification = new MMMessageAttribute<AlternatePartyIdentification7, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification7.mmObject();
@@ -264,6 +284,16 @@ public class AlternatePartyIdentification7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AlternatePartyIdentification7 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(AlternatePartyIdentification7 obj, Max35Text value) {
+			obj.setAlternateIdentification(value);
 		}
 	};
 

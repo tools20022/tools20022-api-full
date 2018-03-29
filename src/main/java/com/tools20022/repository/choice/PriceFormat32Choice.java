@@ -171,7 +171,7 @@ public class PriceFormat32Choice {
 	 * PriceFormat20Choice.mmPercentagePrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat32Choice, PercentagePrice1> mmPercentagePrice = new MMMessageAssociationEnd<PriceFormat32Choice, PercentagePrice1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat32Choice.mmObject();
@@ -187,6 +187,16 @@ public class PriceFormat32Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PercentagePrice1.mmObject();
+		}
+
+		@Override
+		public PercentagePrice1 getValue(PriceFormat32Choice obj) {
+			return obj.getPercentagePrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat32Choice obj, PercentagePrice1 value) {
+			obj.setPercentagePrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPric", required = true)
@@ -238,7 +248,7 @@ public class PriceFormat32Choice {
 	 * PriceFormat20Choice.mmAmountPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat32Choice, AmountPrice3> mmAmountPrice = new MMMessageAssociationEnd<PriceFormat32Choice, AmountPrice3>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat32Choice.mmObject();
@@ -254,6 +264,16 @@ public class PriceFormat32Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPrice3.mmObject();
+		}
+
+		@Override
+		public AmountPrice3 getValue(PriceFormat32Choice obj) {
+			return obj.getAmountPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat32Choice obj, AmountPrice3 value) {
+			obj.setAmountPrice(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdPric", required = true)
@@ -302,7 +322,7 @@ public class PriceFormat32Choice {
 	 * PriceFormat20Choice.mmNotSpecifiedPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat32Choice, PriceValueType8Code> mmNotSpecifiedPrice = new MMMessageAttribute<PriceFormat32Choice, PriceValueType8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat32Choice.mmObject();
 			isDerived = false;
@@ -316,6 +336,16 @@ public class PriceFormat32Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType8Code.mmObject();
+		}
+
+		@Override
+		public PriceValueType8Code getValue(PriceFormat32Choice obj) {
+			return obj.getNotSpecifiedPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat32Choice obj, PriceValueType8Code value) {
+			obj.setNotSpecifiedPrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
@@ -370,7 +400,7 @@ public class PriceFormat32Choice {
 	 * PriceFormat20Choice.mmAmountPricePerFinancialInstrumentQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat32Choice, AmountPricePerFinancialInstrumentQuantity3> mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd<PriceFormat32Choice, AmountPricePerFinancialInstrumentQuantity3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat32Choice.mmObject();
@@ -386,6 +416,16 @@ public class PriceFormat32Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity3.mmObject();
+		}
+
+		@Override
+		public AmountPricePerFinancialInstrumentQuantity3 getValue(PriceFormat32Choice obj) {
+			return obj.getAmountPricePerFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(PriceFormat32Choice obj, AmountPricePerFinancialInstrumentQuantity3 value) {
+			obj.setAmountPricePerFinancialInstrumentQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerAmt", required = true)
@@ -437,7 +477,7 @@ public class PriceFormat32Choice {
 	 * PriceFormat20Choice.mmAmountPricePerAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat32Choice, AmountPricePerAmount2> mmAmountPricePerAmount = new MMMessageAssociationEnd<PriceFormat32Choice, AmountPricePerAmount2>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat32Choice.mmObject();
@@ -453,6 +493,16 @@ public class PriceFormat32Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerAmount2.mmObject();
+		}
+
+		@Override
+		public AmountPricePerAmount2 getValue(PriceFormat32Choice obj) {
+			return obj.getAmountPricePerAmount();
+		}
+
+		@Override
+		public void setValue(PriceFormat32Choice obj, AmountPricePerAmount2 value) {
+			obj.setAmountPricePerAmount(value);
 		}
 	};
 	@XmlElement(name = "IndxPts", required = true)
@@ -501,7 +551,7 @@ public class PriceFormat32Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat32Choice, DecimalNumber> mmIndexPoints = new MMMessageAttribute<PriceFormat32Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexPoints;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat32Choice.mmObject();
@@ -515,6 +565,16 @@ public class PriceFormat32Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(PriceFormat32Choice obj) {
+			return obj.getIndexPoints();
+		}
+
+		@Override
+		public void setValue(PriceFormat32Choice obj, DecimalNumber value) {
+			obj.setIndexPoints(value);
 		}
 	};
 

@@ -19,12 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMText;
-import com.tools20022.repository.datatype.RestrictedFINXMax34Text.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.String;
 import java.util.concurrent.atomic.AtomicReference;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * Specifies a character string with a maximum length of 34 characters. It has a
@@ -55,10 +55,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </li>
  * </ul>
  */
-@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class RestrictedFINXMax34Text {
 
 	final static private AtomicReference<MMText> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
 	protected String value;
 
 	final static public MMText mmObject() {
@@ -76,24 +78,23 @@ public class RestrictedFINXMax34Text {
 		return mmObject_lazy.get();
 	}
 
+	public RestrictedFINXMax34Text() {
+	}
+
 	public RestrictedFINXMax34Text(String value) {
+		this.value = value;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
 		this.value = value;
 	}
 
 	@Override
 	public String toString() {
-		return value;
-	}
-
-	protected static class InternalXmlAdapter extends XmlAdapter<String, RestrictedFINXMax34Text> {
-		@Override
-		public RestrictedFINXMax34Text unmarshal(String value) {
-			return new RestrictedFINXMax34Text(value);
-		}
-
-		@Override
-		public String marshal(RestrictedFINXMax34Text typedData) {
-			return typedData.value;
-		}
+		return value == null ? null : value.toString();
 	}
 }

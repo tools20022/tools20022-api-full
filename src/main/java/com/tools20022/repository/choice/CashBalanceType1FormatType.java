@@ -25,8 +25,11 @@ import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -60,8 +63,9 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = March 3, 2019</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CashBalanceType1FormatType"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -108,7 +112,7 @@ public class CashBalanceType1FormatType {
 	 * definition} = "Standard code to specify the type of cash balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceType1FormatType, CashBalanceType1Code> mmCode = new MMMessageAttribute<CashBalanceType1FormatType, CashBalanceType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashBalanceType1FormatType.mmObject();
@@ -120,6 +124,16 @@ public class CashBalanceType1FormatType {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashBalanceType1Code.mmObject();
+		}
+
+		@Override
+		public CashBalanceType1Code getValue(CashBalanceType1FormatType obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CashBalanceType1FormatType obj, CashBalanceType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +171,7 @@ public class CashBalanceType1FormatType {
 	 * definition} = "Proprietary code to express the type of cash balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceType1FormatType, GenericIdentification13> mmProprietary = new MMMessageAttribute<CashBalanceType1FormatType, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashBalanceType1FormatType.mmObject();
@@ -170,6 +184,16 @@ public class CashBalanceType1FormatType {
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
 		}
+
+		@Override
+		public GenericIdentification13 getValue(CashBalanceType1FormatType obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CashBalanceType1FormatType obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -178,7 +202,14 @@ public class CashBalanceType1FormatType {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CashBalanceType1FormatType.mmCode, com.tools20022.repository.choice.CashBalanceType1FormatType.mmProprietary);
 				trace_lazy = () -> CashBalance.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("March 3, 2019");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "CashBalanceType1FormatType";
 				definition = "Choice of formats to express the type of cash balance.";
 			}

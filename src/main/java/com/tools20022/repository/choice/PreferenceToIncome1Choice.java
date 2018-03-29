@@ -106,7 +106,7 @@ public class PreferenceToIncome1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreferenceToIncome1Choice, PreferenceToIncome1Code> mmCode = new MMMessageAttribute<PreferenceToIncome1Choice, PreferenceToIncome1Code>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreferenceToIncome1Choice.mmObject();
@@ -118,6 +118,16 @@ public class PreferenceToIncome1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncome1Code.mmObject();
+		}
+
+		@Override
+		public PreferenceToIncome1Code getValue(PreferenceToIncome1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PreferenceToIncome1Choice obj, PreferenceToIncome1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class PreferenceToIncome1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreferenceToIncome1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<PreferenceToIncome1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreferenceToIncome1Choice.mmObject();
@@ -169,6 +179,16 @@ public class PreferenceToIncome1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(PreferenceToIncome1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PreferenceToIncome1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

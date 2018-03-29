@@ -110,7 +110,7 @@ public class SystemPartyIdentification1 {
 	 * definition} = "Starting date from which the identification is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification1, ISODate> mmValidFrom = new MMMessageAttribute<SystemPartyIdentification1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification1.mmObject();
@@ -122,6 +122,16 @@ public class SystemPartyIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SystemPartyIdentification1 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification1 obj, ISODate value) {
+			obj.setValidFrom(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -159,7 +169,7 @@ public class SystemPartyIdentification1 {
 	 * definition} = "Unique and unambiguous way to identify a system party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification1, BICFIIdentifier> mmIdentification = new MMMessageAttribute<SystemPartyIdentification1, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification1.mmObject();
@@ -171,6 +181,16 @@ public class SystemPartyIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(SystemPartyIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification1 obj, BICFIIdentifier value) {
+			obj.setIdentification(value);
 		}
 	};
 

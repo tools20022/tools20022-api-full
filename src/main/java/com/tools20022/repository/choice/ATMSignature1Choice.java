@@ -114,7 +114,7 @@ public class ATMSignature1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSignature1Choice, Optional<ContentInformationType14>> mmDigitalSignature = new MMMessageAssociationEnd<ATMSignature1Choice, Optional<ContentInformationType14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMSignature1Choice.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class ATMSignature1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ContentInformationType14.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType14> getValue(ATMSignature1Choice obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(ATMSignature1Choice obj, Optional<ContentInformationType14> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TRRltdData")
@@ -167,7 +177,7 @@ public class ATMSignature1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTRRelatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSignature1Choice, Optional<TRRelatedData1>> mmTRRelatedData = new MMMessageAssociationEnd<ATMSignature1Choice, Optional<TRRelatedData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ATMSignature1Choice.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class ATMSignature1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TRRelatedData1.mmObject();
+		}
+
+		@Override
+		public Optional<TRRelatedData1> getValue(ATMSignature1Choice obj) {
+			return obj.getTRRelatedData();
+		}
+
+		@Override
+		public void setValue(ATMSignature1Choice obj, Optional<TRRelatedData1> value) {
+			obj.setTRRelatedData(value.orElse(null));
 		}
 	};
 

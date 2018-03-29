@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccountReferenceDataChange1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,7 +100,7 @@ public class CashAccountStatement1 {
 	 * definition} = "Date for which the statement is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountStatement1, ISODate> mmSystemDate = new MMMessageAttribute<CashAccountStatement1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountStatement1.mmObject();
 			isDerived = false;
@@ -111,9 +112,19 @@ public class CashAccountStatement1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public ISODate getValue(CashAccountStatement1 obj) {
+			return obj.getSystemDate();
+		}
+
+		@Override
+		public void setValue(CashAccountStatement1 obj, ISODate value) {
+			obj.setSystemDate(value);
+		}
 	};
 	@XmlElement(name = "Chng")
-	protected List<com.tools20022.repository.msg.CashAccountReferenceDataChange1> change;
+	protected List<CashAccountReferenceDataChange1> change;
 	/**
 	 * 
 	 <p>
@@ -143,7 +154,7 @@ public class CashAccountStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountStatement1, List<CashAccountReferenceDataChange1>> mmChange = new MMMessageAssociationEnd<CashAccountStatement1, List<CashAccountReferenceDataChange1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountStatement1.mmObject();
 			isDerived = false;
@@ -153,7 +164,17 @@ public class CashAccountStatement1 {
 			definition = "Provides information on the actual change occurred to the cash account.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccountReferenceDataChange1.mmObject();
+			type_lazy = () -> CashAccountReferenceDataChange1.mmObject();
+		}
+
+		@Override
+		public List<CashAccountReferenceDataChange1> getValue(CashAccountStatement1 obj) {
+			return obj.getChange();
+		}
+
+		@Override
+		public void setValue(CashAccountStatement1 obj, List<CashAccountReferenceDataChange1> value) {
+			obj.setChange(value);
 		}
 	};
 
@@ -183,7 +204,7 @@ public class CashAccountStatement1 {
 		return change == null ? change = new ArrayList<>() : change;
 	}
 
-	public CashAccountStatement1 setChange(List<com.tools20022.repository.msg.CashAccountReferenceDataChange1> change) {
+	public CashAccountStatement1 setChange(List<CashAccountReferenceDataChange1> change) {
 		this.change = Objects.requireNonNull(change);
 		return this;
 	}

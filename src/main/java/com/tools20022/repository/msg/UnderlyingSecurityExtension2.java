@@ -133,7 +133,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Max350Text> mmPlaceAndName = new MMMessageAttribute<UnderlyingSecurityExtension2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "CtryOfListg")
@@ -178,7 +188,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "Country in which the security was issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfListing = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<CountryCode>> mmCountryOfListing = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getCountryOfListing();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<CountryCode> value) {
+			obj.setCountryOfListing(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfIncorprtn")
@@ -224,7 +244,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "Country of incorporation of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfIncorporation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<CountryCode>> mmCountryOfIncorporation = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -236,6 +256,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getCountryOfIncorporation();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<CountryCode> value) {
+			obj.setCountryOfIncorporation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmSrcCtry")
@@ -270,7 +300,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "Country of source income for the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncomeSourceCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<CountryCode>> mmIncomeSourceCountry = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -282,6 +312,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getIncomeSourceCountry();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<CountryCode> value) {
+			obj.setIncomeSourceCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrDesc")
@@ -316,7 +356,7 @@ public class UnderlyingSecurityExtension2 {
 	 * definition} = "Name of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<Max70Text>> mmIssuerDescription = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -328,6 +368,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getIssuerDescription();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<Max70Text> value) {
+			obj.setIssuerDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCAsstClss")
@@ -365,7 +415,7 @@ public class UnderlyingSecurityExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<AssetClass1Code>> mmDTCAssetClass = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<AssetClass1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -377,6 +427,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClass1Code> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getDTCAssetClass();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<AssetClass1Code> value) {
+			obj.setDTCAssetClass(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCAsstTp")
@@ -414,7 +474,7 @@ public class UnderlyingSecurityExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<DTCAssetType1Code>> mmDTCAssetType = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<DTCAssetType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -426,6 +486,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAssetType1Code> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getDTCAssetType();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<DTCAssetType1Code> value) {
+			obj.setDTCAssetType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmryXchgFlg")
@@ -463,7 +533,7 @@ public class UnderlyingSecurityExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrimaryExchangeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<YesNoIndicator>> mmPrimaryExchangeFlag = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -475,6 +545,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getPrimaryExchangeFlag();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<YesNoIndicator> value) {
+			obj.setPrimaryExchangeFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyElgbltyInd")
@@ -511,7 +591,7 @@ public class UnderlyingSecurityExtension2 {
 	 * "Indicates whether the security is eligible for holding at DTC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityEligibilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<YesNoIndicator>> mmSecurityEligibilityIndicator = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -523,6 +603,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getSecurityEligibilityIndicator();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<YesNoIndicator> value) {
+			obj.setSecurityEligibilityIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SECRegdFlg")
@@ -560,7 +650,7 @@ public class UnderlyingSecurityExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSECRegisteredFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<YesNoIndicator>> mmSECRegisteredFlag = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -572,6 +662,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getSECRegisteredFlag();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<YesNoIndicator> value) {
+			obj.setSECRegisteredFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TckrSymb")
@@ -607,7 +707,7 @@ public class UnderlyingSecurityExtension2 {
 	 * "Ticket symbol for the event security (underlying security)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension2, Optional<Max35Text>> mmTickerSymbol = new MMMessageAttribute<UnderlyingSecurityExtension2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension2.mmObject();
 			isDerived = false;
@@ -619,6 +719,16 @@ public class UnderlyingSecurityExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UnderlyingSecurityExtension2 obj) {
+			return obj.getTickerSymbol();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension2 obj, Optional<Max35Text> value) {
+			obj.setTickerSymbol(value.orElse(null));
 		}
 	};
 

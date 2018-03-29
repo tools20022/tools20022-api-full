@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader47;
 import com.tools20022.repository.msg.Mandate7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsMandatesISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -165,7 +164,7 @@ public class MandateInitiationRequestV04 {
 	 * MandateInitiationRequestV03.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateInitiationRequestV04, GroupHeader47> mmGroupHeader = new MMMessageBuildingBlock<MandateInitiationRequestV04, GroupHeader47>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +177,14 @@ public class MandateInitiationRequestV04 {
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateInitiationRequestV04.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader47 getValue(MandateInitiationRequestV04 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(MandateInitiationRequestV04 obj, GroupHeader47 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Mndt", required = true)
@@ -225,7 +226,7 @@ public class MandateInitiationRequestV04 {
 	 * MandateInitiationRequestV03.mmMandate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMandate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateInitiationRequestV04, List<Mandate7>> mmMandate = new MMMessageBuildingBlock<MandateInitiationRequestV04, List<Mandate7>>() {
 		{
 			xmlTag = "Mndt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,12 +238,14 @@ public class MandateInitiationRequestV04 {
 			complexType_lazy = () -> Mandate7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateInitiationRequestV04.class.getMethod("getMandate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Mandate7> getValue(MandateInitiationRequestV04 obj) {
+			return obj.getMandate();
+		}
+
+		@Override
+		public void setValue(MandateInitiationRequestV04 obj, List<Mandate7> value) {
+			obj.setMandate(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -285,7 +288,7 @@ public class MandateInitiationRequestV04 {
 	 * MandateInitiationRequestV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateInitiationRequestV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MandateInitiationRequestV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,12 +300,14 @@ public class MandateInitiationRequestV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateInitiationRequestV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MandateInitiationRequestV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MandateInitiationRequestV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

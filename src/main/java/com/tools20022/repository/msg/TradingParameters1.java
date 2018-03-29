@@ -131,7 +131,7 @@ public class TradingParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingParameters1, Optional<MICIdentifier>> mmMarketIdentification = new MMMessageAttribute<TradingParameters1, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
@@ -143,6 +143,16 @@ public class TradingParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(TradingParameters1 obj) {
+			return obj.getMarketIdentification();
+		}
+
+		@Override
+		public void setValue(TradingParameters1 obj, Optional<MICIdentifier> value) {
+			obj.setMarketIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RndLot")
@@ -182,7 +192,7 @@ public class TradingParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundLot = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingParameters1, Optional<FinancialInstrumentQuantity1Choice>> mmRoundLot = new MMMessageAttribute<TradingParameters1, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmRoundLot;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
@@ -194,6 +204,16 @@ public class TradingParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(TradingParameters1 obj) {
+			return obj.getRoundLot();
+		}
+
+		@Override
+		public void setValue(TradingParameters1 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setRoundLot(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradLotSz")
@@ -231,7 +251,7 @@ public class TradingParameters1 {
 	 * definition} = "Minimum number of securities that can be traded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeLotSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingParameters1, Optional<FinancialInstrumentQuantity1Choice>> mmTradeLotSize = new MMMessageAttribute<TradingParameters1, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmTradeLotSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
@@ -243,6 +263,16 @@ public class TradingParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(TradingParameters1 obj) {
+			return obj.getTradeLotSize();
+		}
+
+		@Override
+		public void setValue(TradingParameters1 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setTradeLotSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryPlcOfListg")
@@ -280,7 +310,7 @@ public class TradingParameters1 {
 	 * definition} = "Market(s) on which the security is listed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondaryPlaceOfListing = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingParameters1, List<MICIdentifier>> mmSecondaryPlaceOfListing = new MMMessageAttribute<TradingParameters1, List<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
@@ -292,6 +322,16 @@ public class TradingParameters1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public List<MICIdentifier> getValue(TradingParameters1 obj) {
+			return obj.getSecondaryPlaceOfListing();
+		}
+
+		@Override
+		public void setValue(TradingParameters1 obj, List<MICIdentifier> value) {
+			obj.setSecondaryPlaceOfListing(value);
 		}
 	};
 	@XmlElement(name = "MinTraddNmnlQty")
@@ -329,7 +369,7 @@ public class TradingParameters1 {
 	 * definition} = "Minimum number of securities that can be traded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumTradedNominalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingParameters1, Optional<UnitOrFaceAmountChoice>> mmMinimumTradedNominalQuantity = new MMMessageAttribute<TradingParameters1, Optional<UnitOrFaceAmountChoice>>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmMinimumTradedNominalQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
@@ -341,6 +381,16 @@ public class TradingParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOrFaceAmountChoice> getValue(TradingParameters1 obj) {
+			return obj.getMinimumTradedNominalQuantity();
+		}
+
+		@Override
+		public void setValue(TradingParameters1 obj, Optional<UnitOrFaceAmountChoice> value) {
+			obj.setMinimumTradedNominalQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxTraddNmnlQty")
@@ -378,7 +428,7 @@ public class TradingParameters1 {
 	 * definition} = "Maximum number of securities that can be traded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumTradedNominalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingParameters1, Optional<UnitOrFaceAmountChoice>> mmMaximumTradedNominalQuantity = new MMMessageAttribute<TradingParameters1, Optional<UnitOrFaceAmountChoice>>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmMaximumTradedNominalQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
@@ -390,6 +440,16 @@ public class TradingParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOrFaceAmountChoice> getValue(TradingParameters1 obj) {
+			return obj.getMaximumTradedNominalQuantity();
+		}
+
+		@Override
+		public void setValue(TradingParameters1 obj, Optional<UnitOrFaceAmountChoice> value) {
+			obj.setMaximumTradedNominalQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinTradgPricgIncrmt")
@@ -431,7 +491,7 @@ public class TradingParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumTradingPricingIncrement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingParameters1, Optional<Number>> mmMinimumTradingPricingIncrement = new MMMessageAttribute<TradingParameters1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmMinimumTradingPricingIncrement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
@@ -444,6 +504,16 @@ public class TradingParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TradingParameters1 obj) {
+			return obj.getMinimumTradingPricingIncrement();
+		}
+
+		@Override
+		public void setValue(TradingParameters1 obj, Optional<Number> value) {
+			obj.setMinimumTradingPricingIncrement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmryPlcOfListgId")
@@ -484,7 +554,7 @@ public class TradingParameters1 {
 	 * definition} = "Market(s) on which the security is listed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrimaryPlaceOfListingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingParameters1, Optional<MICIdentifier>> mmPrimaryPlaceOfListingIdentification = new MMMessageAttribute<TradingParameters1, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingParameters1.mmObject();
@@ -497,6 +567,16 @@ public class TradingParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(TradingParameters1 obj) {
+			return obj.getPrimaryPlaceOfListingIdentification();
+		}
+
+		@Override
+		public void setValue(TradingParameters1 obj, Optional<MICIdentifier> value) {
+			obj.setPrimaryPlaceOfListingIdentification(value.orElse(null));
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PaymentIdentification4Choice;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentInstruction12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +132,7 @@ public class TransactionModification3 {
 	 * TransactionModification2.mmPaymentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionModification3, PaymentIdentification4Choice> mmPaymentIdentification = new MMMessageAssociationEnd<TransactionModification3, PaymentIdentification4Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionModification3.mmObject();
@@ -146,6 +147,16 @@ public class TransactionModification3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaymentIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public PaymentIdentification4Choice getValue(TransactionModification3 obj) {
+			return obj.getPaymentIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionModification3 obj, PaymentIdentification4Choice value) {
+			obj.setPaymentIdentification(value);
 		}
 	};
 	@XmlElement(name = "NewPmtValSet", required = true)
@@ -194,7 +205,7 @@ public class TransactionModification3 {
 	 * TransactionModification2.mmNewPaymentValueSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewPaymentValueSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionModification3, PaymentInstruction12> mmNewPaymentValueSet = new MMMessageAssociationEnd<TransactionModification3, PaymentInstruction12>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionModification3.mmObject();
@@ -208,7 +219,17 @@ public class TransactionModification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentInstruction12.mmObject();
+			type_lazy = () -> PaymentInstruction12.mmObject();
+		}
+
+		@Override
+		public PaymentInstruction12 getValue(TransactionModification3 obj) {
+			return obj.getNewPaymentValueSet();
+		}
+
+		@Override
+		public void setValue(TransactionModification3 obj, PaymentInstruction12 value) {
+			obj.setNewPaymentValueSet(value);
 		}
 	};
 
@@ -241,7 +262,7 @@ public class TransactionModification3 {
 		return newPaymentValueSet;
 	}
 
-	public TransactionModification3 setNewPaymentValueSet(com.tools20022.repository.msg.PaymentInstruction12 newPaymentValueSet) {
+	public TransactionModification3 setNewPaymentValueSet(PaymentInstruction12 newPaymentValueSet) {
 		this.newPaymentValueSet = Objects.requireNonNull(newPaymentValueSet);
 		return this;
 	}

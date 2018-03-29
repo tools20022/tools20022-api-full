@@ -98,7 +98,7 @@ public class EntityIdentification {
 	 * definition} = "Type of identification, eg, BIC or URI."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntityIdentification, Max4Text> mmType = new MMMessageAttribute<EntityIdentification, Max4Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntityIdentification.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class EntityIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Max4Text getValue(EntityIdentification obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(EntityIdentification obj, Max4Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -140,7 +150,7 @@ public class EntityIdentification {
 	 * definition} = "Actual identification of the entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntityIdentification, Max30Text> mmEntityIdentifier = new MMMessageAttribute<EntityIdentification, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntityIdentification.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class EntityIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(EntityIdentification obj) {
+			return obj.getEntityIdentifier();
+		}
+
+		@Override
+		public void setValue(EntityIdentification obj, Max30Text value) {
+			obj.setEntityIdentifier(value);
 		}
 	};
 

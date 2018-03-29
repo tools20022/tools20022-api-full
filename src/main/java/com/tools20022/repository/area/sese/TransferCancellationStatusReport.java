@@ -22,7 +22,6 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.AdditionalReference2;
 import com.tools20022.repository.msg.CancellationStatusAndReason;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -183,7 +182,7 @@ public class TransferCancellationStatusReport {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferCancellationStatusReport, List<AdditionalReference2>> mmRelatedReference = new MMMessageBuildingBlock<TransferCancellationStatusReport, List<AdditionalReference2>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +193,14 @@ public class TransferCancellationStatusReport {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferCancellationStatusReport.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference2> getValue(TransferCancellationStatusReport obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatusReport obj, List<AdditionalReference2> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "OthrRef", required = true)
@@ -229,7 +230,7 @@ public class TransferCancellationStatusReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferCancellationStatusReport, AdditionalReference2> mmOtherReference = new MMMessageBuildingBlock<TransferCancellationStatusReport, AdditionalReference2>() {
 		{
 			xmlTag = "OthrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +241,14 @@ public class TransferCancellationStatusReport {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferCancellationStatusReport.class.getMethod("getOtherReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference2 getValue(TransferCancellationStatusReport obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatusReport obj, AdditionalReference2 value) {
+			obj.setOtherReference(value);
 		}
 	};
 	@XmlElement(name = "StsRpt", required = true)
@@ -273,7 +276,7 @@ public class TransferCancellationStatusReport {
 	 * definition} = "Status of the transfer cancellation instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferCancellationStatusReport, CancellationStatusAndReason> mmStatusReport = new MMMessageBuildingBlock<TransferCancellationStatusReport, CancellationStatusAndReason>() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,12 +287,14 @@ public class TransferCancellationStatusReport {
 			complexType_lazy = () -> CancellationStatusAndReason.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferCancellationStatusReport.class.getMethod("getStatusReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CancellationStatusAndReason getValue(TransferCancellationStatusReport obj) {
+			return obj.getStatusReport();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatusReport obj, CancellationStatusAndReason value) {
+			obj.setStatusReport(value);
 		}
 	};
 

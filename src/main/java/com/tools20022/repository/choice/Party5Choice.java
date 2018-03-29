@@ -112,7 +112,7 @@ public class Party5Choice {
 	 * "Unique and unambiguous way of identifying an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party5Choice, OrganisationIdentification2> mmOrganisationIdentification = new MMMessageAssociationEnd<Party5Choice, OrganisationIdentification2>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party5Choice.mmObject();
@@ -125,6 +125,16 @@ public class Party5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification2.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification2 getValue(Party5Choice obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(Party5Choice obj, OrganisationIdentification2 value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvtId", required = true)
@@ -160,7 +170,7 @@ public class Party5Choice {
 	 * "Unique and unambiguous identification of a person, eg, passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party5Choice, PersonIdentification3> mmPrivateIdentification = new MMMessageAssociationEnd<Party5Choice, PersonIdentification3>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party5Choice.mmObject();
@@ -173,6 +183,16 @@ public class Party5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentification3.mmObject();
+		}
+
+		@Override
+		public PersonIdentification3 getValue(Party5Choice obj) {
+			return obj.getPrivateIdentification();
+		}
+
+		@Override
+		public void setValue(Party5Choice obj, PersonIdentification3 value) {
+			obj.setPrivateIdentification(value);
 		}
 	};
 

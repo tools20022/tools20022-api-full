@@ -109,7 +109,7 @@ public class PendingStatus20Choice {
 	 * definition} = "Allegement is forwarded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForwarded = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatus20Choice, NoSpecifiedReason1> mmForwarded = new MMMessageAssociationEnd<PendingStatus20Choice, NoSpecifiedReason1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingStatus20Choice.mmObject();
@@ -123,6 +123,16 @@ public class PendingStatus20Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NoSpecifiedReason1.mmObject();
+		}
+
+		@Override
+		public NoSpecifiedReason1 getValue(PendingStatus20Choice obj) {
+			return obj.getForwarded();
+		}
+
+		@Override
+		public void setValue(PendingStatus20Choice obj, NoSpecifiedReason1 value) {
+			obj.setForwarded(value);
 		}
 	};
 	@XmlElement(name = "UdrInvstgtn", required = true)
@@ -158,7 +168,7 @@ public class PendingStatus20Choice {
 	 * definition} = "Allegement is under investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderInvestigation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatus20Choice, NoSpecifiedReason1> mmUnderInvestigation = new MMMessageAssociationEnd<PendingStatus20Choice, NoSpecifiedReason1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingStatus20Choice.mmObject();
@@ -171,6 +181,16 @@ public class PendingStatus20Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NoSpecifiedReason1.mmObject();
+		}
+
+		@Override
+		public NoSpecifiedReason1 getValue(PendingStatus20Choice obj) {
+			return obj.getUnderInvestigation();
+		}
+
+		@Override
+		public void setValue(PendingStatus20Choice obj, NoSpecifiedReason1 value) {
+			obj.setUnderInvestigation(value);
 		}
 	};
 

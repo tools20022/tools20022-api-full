@@ -111,7 +111,7 @@ public class CorporateActionStandingInstructionCancellationRejectionStatus1 {
 	 * definition} = "The rejection reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionStandingInstructionCancellationRejectionStatus1, List<RejectionReason10FormatChoice>> mmReason = new MMMessageAttribute<CorporateActionStandingInstructionCancellationRejectionStatus1, List<RejectionReason10FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmCorporateActionStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationRejectionStatus1.mmObject();
@@ -122,6 +122,16 @@ public class CorporateActionStandingInstructionCancellationRejectionStatus1 {
 			definition = "The rejection reason.";
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason10FormatChoice.mmObject();
+		}
+
+		@Override
+		public List<RejectionReason10FormatChoice> getValue(CorporateActionStandingInstructionCancellationRejectionStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionStandingInstructionCancellationRejectionStatus1 obj, List<RejectionReason10FormatChoice> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -158,7 +168,7 @@ public class CorporateActionStandingInstructionCancellationRejectionStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionStandingInstructionCancellationRejectionStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CorporateActionStandingInstructionCancellationRejectionStatus1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionStandingInstructionCancellationRejectionStatus1.mmObject();
@@ -170,6 +180,16 @@ public class CorporateActionStandingInstructionCancellationRejectionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionStandingInstructionCancellationRejectionStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionStandingInstructionCancellationRejectionStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

@@ -118,7 +118,7 @@ public class GenericOrganisationIdentification2 {
 	 * definition} = "Identification assigned by an institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericOrganisationIdentification2, RestrictedFINXMax35Text> mmIdentification = new MMMessageAttribute<GenericOrganisationIdentification2, RestrictedFINXMax35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericOrganisationIdentification2.mmObject();
@@ -130,6 +130,16 @@ public class GenericOrganisationIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(GenericOrganisationIdentification2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericOrganisationIdentification2 obj, RestrictedFINXMax35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SchmeNm")
@@ -166,7 +176,7 @@ public class GenericOrganisationIdentification2 {
 	 * definition} = "Name of the identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSchemeName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GenericOrganisationIdentification2, Optional<OrganisationIdentificationSchemeName2Choice>> mmSchemeName = new MMMessageAssociationEnd<GenericOrganisationIdentification2, Optional<OrganisationIdentificationSchemeName2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericOrganisationIdentification2.mmObject();
@@ -179,6 +189,16 @@ public class GenericOrganisationIdentification2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentificationSchemeName2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationIdentificationSchemeName2Choice> getValue(GenericOrganisationIdentification2 obj) {
+			return obj.getSchemeName();
+		}
+
+		@Override
+		public void setValue(GenericOrganisationIdentification2 obj, Optional<OrganisationIdentificationSchemeName2Choice> value) {
+			obj.setSchemeName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -216,7 +236,7 @@ public class GenericOrganisationIdentification2 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericOrganisationIdentification2, Optional<RestrictedFINXMax35Text>> mmIssuer = new MMMessageAttribute<GenericOrganisationIdentification2, Optional<RestrictedFINXMax35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericOrganisationIdentification2.mmObject();
@@ -228,6 +248,16 @@ public class GenericOrganisationIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax35Text> getValue(GenericOrganisationIdentification2 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericOrganisationIdentification2 obj, Optional<RestrictedFINXMax35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 

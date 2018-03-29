@@ -121,7 +121,7 @@ public class Investment1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnsecuredCashDeposit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Investment1Choice, Deposit1> mmUnsecuredCashDeposit = new MMMessageAssociationEnd<Investment1Choice, Deposit1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Investment1Choice.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class Investment1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Deposit1.mmObject();
+		}
+
+		@Override
+		public Deposit1 getValue(Investment1Choice obj) {
+			return obj.getUnsecuredCashDeposit();
+		}
+
+		@Override
+		public void setValue(Investment1Choice obj, Deposit1 value) {
+			obj.setUnsecuredCashDeposit(value);
 		}
 	};
 	@XmlElement(name = "CntrlBkDpst", required = true)
@@ -163,7 +173,7 @@ public class Investment1Choice {
 	 * "Indicates that the bank deposit is placed at a central bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCentralBankDeposit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Investment1Choice, Deposit1> mmCentralBankDeposit = new MMMessageAssociationEnd<Investment1Choice, Deposit1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Investment1Choice.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class Investment1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Deposit1.mmObject();
+		}
+
+		@Override
+		public Deposit1 getValue(Investment1Choice obj) {
+			return obj.getCentralBankDeposit();
+		}
+
+		@Override
+		public void setValue(Investment1Choice obj, Deposit1 value) {
+			obj.setCentralBankDeposit(value);
 		}
 	};
 	@XmlElement(name = "RpAgrmt", required = true)
@@ -206,7 +226,7 @@ public class Investment1Choice {
 	 * "Indicates that the investment was made in a repurchase agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepurchaseAgreement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Investment1Choice, RepurchaseAgreement2> mmRepurchaseAgreement = new MMMessageAssociationEnd<Investment1Choice, RepurchaseAgreement2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Investment1Choice.mmObject();
 			isDerived = false;
@@ -218,6 +238,16 @@ public class Investment1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RepurchaseAgreement2.mmObject();
+		}
+
+		@Override
+		public RepurchaseAgreement2 getValue(Investment1Choice obj) {
+			return obj.getRepurchaseAgreement();
+		}
+
+		@Override
+		public void setValue(Investment1Choice obj, RepurchaseAgreement2 value) {
+			obj.setRepurchaseAgreement(value);
 		}
 	};
 	@XmlElement(name = "OthrInvstmts", required = true)
@@ -250,7 +280,7 @@ public class Investment1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherInvestments = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Investment1Choice, OtherInvestment1> mmOtherInvestments = new MMMessageAssociationEnd<Investment1Choice, OtherInvestment1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Investment1Choice.mmObject();
 			isDerived = false;
@@ -262,6 +292,16 @@ public class Investment1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OtherInvestment1.mmObject();
+		}
+
+		@Override
+		public OtherInvestment1 getValue(Investment1Choice obj) {
+			return obj.getOtherInvestments();
+		}
+
+		@Override
+		public void setValue(Investment1Choice obj, OtherInvestment1 value) {
+			obj.setOtherInvestments(value);
 		}
 	};
 	@XmlElement(name = "OutrghtInvstmt", required = true)
@@ -295,7 +335,7 @@ public class Investment1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOutrightInvestment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Investment1Choice, SecurityIdentificationAndAmount1> mmOutrightInvestment = new MMMessageAssociationEnd<Investment1Choice, SecurityIdentificationAndAmount1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Investment1Choice.mmObject();
 			isDerived = false;
@@ -307,6 +347,16 @@ public class Investment1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentificationAndAmount1.mmObject();
+		}
+
+		@Override
+		public SecurityIdentificationAndAmount1 getValue(Investment1Choice obj) {
+			return obj.getOutrightInvestment();
+		}
+
+		@Override
+		public void setValue(Investment1Choice obj, SecurityIdentificationAndAmount1 value) {
+			obj.setOutrightInvestment(value);
 		}
 	};
 

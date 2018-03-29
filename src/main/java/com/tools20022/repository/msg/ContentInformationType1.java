@@ -28,6 +28,7 @@ import com.tools20022.repository.area.catm.ManagementPlanReplacementV01;
 import com.tools20022.repository.area.catm.StatusReportV01;
 import com.tools20022.repository.codeset.ContentType1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -145,7 +146,7 @@ public class ContentInformationType1 {
 	 * definition} = "Type of data protection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContentInformationType1, ContentType1Code> mmContentType = new MMMessageAttribute<ContentInformationType1, ContentType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType1.mmObject();
 			isDerived = false;
@@ -156,6 +157,16 @@ public class ContentInformationType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
+		}
+
+		@Override
+		public ContentType1Code getValue(ContentInformationType1 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(ContentInformationType1 obj, ContentType1Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "EnvlpdData")
@@ -186,7 +197,7 @@ public class ContentInformationType1 {
 	 * definition} = "Data protection by encryption, with a session key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType1, Optional<EnvelopedData1>> mmEnvelopedData = new MMMessageAssociationEnd<ContentInformationType1, Optional<EnvelopedData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType1.mmObject();
 			isDerived = false;
@@ -197,7 +208,17 @@ public class ContentInformationType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EnvelopedData1.mmObject();
+			type_lazy = () -> EnvelopedData1.mmObject();
+		}
+
+		@Override
+		public Optional<EnvelopedData1> getValue(ContentInformationType1 obj) {
+			return obj.getEnvelopedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType1 obj, Optional<EnvelopedData1> value) {
+			obj.setEnvelopedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthntcdData")
@@ -228,7 +249,7 @@ public class ContentInformationType1 {
 	 * definition} = "Data protection by a message authentication code (MAC)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType1, Optional<AuthenticatedData1>> mmAuthenticatedData = new MMMessageAssociationEnd<ContentInformationType1, Optional<AuthenticatedData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType1.mmObject();
 			isDerived = false;
@@ -239,7 +260,17 @@ public class ContentInformationType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData1.mmObject();
+			type_lazy = () -> AuthenticatedData1.mmObject();
+		}
+
+		@Override
+		public Optional<AuthenticatedData1> getValue(ContentInformationType1 obj) {
+			return obj.getAuthenticatedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType1 obj, Optional<AuthenticatedData1> value) {
+			obj.setAuthenticatedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SgndData")
@@ -270,7 +301,7 @@ public class ContentInformationType1 {
 	 * definition} = "Data protected by digital signatures."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType1, Optional<SignedData1>> mmSignedData = new MMMessageAssociationEnd<ContentInformationType1, Optional<SignedData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType1.mmObject();
 			isDerived = false;
@@ -281,7 +312,17 @@ public class ContentInformationType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
+			type_lazy = () -> SignedData1.mmObject();
+		}
+
+		@Override
+		public Optional<SignedData1> getValue(ContentInformationType1 obj) {
+			return obj.getSignedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType1 obj, Optional<SignedData1> value) {
+			obj.setSignedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgstdData")
@@ -312,7 +353,7 @@ public class ContentInformationType1 {
 	 * definition} = "Data protected by a digest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigestedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType1, Optional<DigestedData1>> mmDigestedData = new MMMessageAssociationEnd<ContentInformationType1, Optional<DigestedData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType1.mmObject();
 			isDerived = false;
@@ -323,7 +364,17 @@ public class ContentInformationType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DigestedData1.mmObject();
+			type_lazy = () -> DigestedData1.mmObject();
+		}
+
+		@Override
+		public Optional<DigestedData1> getValue(ContentInformationType1 obj) {
+			return obj.getDigestedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType1 obj, Optional<DigestedData1> value) {
+			obj.setDigestedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NmdKeyNcrptdData")
@@ -356,7 +407,7 @@ public class ContentInformationType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNamedKeyEncryptedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType1, Optional<NamedKeyEncryptedData1>> mmNamedKeyEncryptedData = new MMMessageAssociationEnd<ContentInformationType1, Optional<NamedKeyEncryptedData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType1.mmObject();
 			isDerived = false;
@@ -367,7 +418,17 @@ public class ContentInformationType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NamedKeyEncryptedData1.mmObject();
+			type_lazy = () -> NamedKeyEncryptedData1.mmObject();
+		}
+
+		@Override
+		public Optional<NamedKeyEncryptedData1> getValue(ContentInformationType1 obj) {
+			return obj.getNamedKeyEncryptedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType1 obj, Optional<NamedKeyEncryptedData1> value) {
+			obj.setNamedKeyEncryptedData(value.orElse(null));
 		}
 	};
 
@@ -402,7 +463,7 @@ public class ContentInformationType1 {
 		return envelopedData == null ? Optional.empty() : Optional.of(envelopedData);
 	}
 
-	public ContentInformationType1 setEnvelopedData(com.tools20022.repository.msg.EnvelopedData1 envelopedData) {
+	public ContentInformationType1 setEnvelopedData(EnvelopedData1 envelopedData) {
 		this.envelopedData = envelopedData;
 		return this;
 	}
@@ -411,7 +472,7 @@ public class ContentInformationType1 {
 		return authenticatedData == null ? Optional.empty() : Optional.of(authenticatedData);
 	}
 
-	public ContentInformationType1 setAuthenticatedData(com.tools20022.repository.msg.AuthenticatedData1 authenticatedData) {
+	public ContentInformationType1 setAuthenticatedData(AuthenticatedData1 authenticatedData) {
 		this.authenticatedData = authenticatedData;
 		return this;
 	}
@@ -420,7 +481,7 @@ public class ContentInformationType1 {
 		return signedData == null ? Optional.empty() : Optional.of(signedData);
 	}
 
-	public ContentInformationType1 setSignedData(com.tools20022.repository.msg.SignedData1 signedData) {
+	public ContentInformationType1 setSignedData(SignedData1 signedData) {
 		this.signedData = signedData;
 		return this;
 	}
@@ -429,7 +490,7 @@ public class ContentInformationType1 {
 		return digestedData == null ? Optional.empty() : Optional.of(digestedData);
 	}
 
-	public ContentInformationType1 setDigestedData(com.tools20022.repository.msg.DigestedData1 digestedData) {
+	public ContentInformationType1 setDigestedData(DigestedData1 digestedData) {
 		this.digestedData = digestedData;
 		return this;
 	}
@@ -438,7 +499,7 @@ public class ContentInformationType1 {
 		return namedKeyEncryptedData == null ? Optional.empty() : Optional.of(namedKeyEncryptedData);
 	}
 
-	public ContentInformationType1 setNamedKeyEncryptedData(com.tools20022.repository.msg.NamedKeyEncryptedData1 namedKeyEncryptedData) {
+	public ContentInformationType1 setNamedKeyEncryptedData(NamedKeyEncryptedData1 namedKeyEncryptedData) {
 		this.namedKeyEncryptedData = namedKeyEncryptedData;
 		return this;
 	}

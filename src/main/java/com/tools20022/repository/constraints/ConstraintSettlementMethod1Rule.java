@@ -52,11 +52,15 @@ public class ConstraintSettlementMethod1Rule {
 	 */
 	public static final MMConstraint<SettlementInformation1> forSettlementInformation1 = new MMConstraint<SettlementInformation1>() {
 		{
-			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
 			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation1 obj) throws Exception {
+			checkSettlementInformation1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintSettlementMethod1Rule {
 	 */
 	public static final MMConstraint<SettlementInformation2> forSettlementInformation2 = new MMConstraint<SettlementInformation2>() {
 		{
-			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
 			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation2 obj) throws Exception {
+			checkSettlementInformation2(obj);
 		}
 	};
 	/**
@@ -116,12 +124,16 @@ public class ConstraintSettlementMethod1Rule {
 	 */
 	public static final MMConstraint<SettlementInformation6> forSettlementInformation6 = new MMConstraint<SettlementInformation6>() {
 		{
-			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
 			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ThirdReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation6 obj) throws Exception {
+			checkSettlementInformation6(obj);
 		}
 	};
 	/**
@@ -151,12 +163,16 @@ public class ConstraintSettlementMethod1Rule {
 	 */
 	public static final MMConstraint<SettlementInformation11> forSettlementInformation11 = new MMConstraint<SettlementInformation11>() {
 		{
-			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
 			definition = "If SettlementMethod is equal to INDA or INGA then ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation11.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation11 obj) throws Exception {
+			checkSettlementInformation11(obj);
 		}
 	};
 	/**
@@ -186,12 +202,16 @@ public class ConstraintSettlementMethod1Rule {
 	 */
 	public static final MMConstraint<SettlementInformation12> forSettlementInformation12 = new MMConstraint<SettlementInformation12>() {
 		{
-			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
 			definition = "If SettlementMethod is equal to INDA or INGA then ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation12.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation12 obj) throws Exception {
+			checkSettlementInformation12(obj);
 		}
 	};
 	/**
@@ -221,12 +241,16 @@ public class ConstraintSettlementMethod1Rule {
 	 */
 	public static final MMConstraint<SettlementInformation8> forSettlementInformation8 = new MMConstraint<SettlementInformation8>() {
 		{
-			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
 			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ThirdReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation8 obj) throws Exception {
+			checkSettlementInformation8(obj);
 		}
 	};
 	/**
@@ -256,12 +280,16 @@ public class ConstraintSettlementMethod1Rule {
 	 */
 	public static final MMConstraint<SettlementInformation9> forSettlementInformation9 = new MMConstraint<SettlementInformation9>() {
 		{
-			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
 			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation9 obj) throws Exception {
+			checkSettlementInformation9(obj);
 		}
 	};
 

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -141,7 +142,7 @@ public class StatusReasonInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation9, Optional<PartyIdentification43>> mmOriginator = new MMMessageAssociationEnd<StatusReasonInformation9, Optional<PartyIdentification43>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation9.mmObject();
@@ -154,7 +155,17 @@ public class StatusReasonInformation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(StatusReasonInformation9 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation9 obj, Optional<PartyIdentification43> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -201,7 +212,7 @@ public class StatusReasonInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation9, Optional<StatusReason6Choice>> mmReason = new MMMessageAssociationEnd<StatusReasonInformation9, Optional<StatusReason6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation9.mmObject();
@@ -215,6 +226,16 @@ public class StatusReasonInformation9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> StatusReason6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatusReason6Choice> getValue(StatusReasonInformation9 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation9 obj, Optional<StatusReason6Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -264,7 +285,7 @@ public class StatusReasonInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReasonInformation9, List<Max105Text>> mmAdditionalInformation = new MMMessageAttribute<StatusReasonInformation9, List<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation9.mmObject();
@@ -276,6 +297,16 @@ public class StatusReasonInformation9 {
 			nextVersions_lazy = () -> Arrays.asList(ValidationStatusReason1.mmAdditionalInformation, StatusReasonInformation11.mmAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(StatusReasonInformation9 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation9 obj, List<Max105Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -300,7 +331,7 @@ public class StatusReasonInformation9 {
 		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public StatusReasonInformation9 setOriginator(com.tools20022.repository.msg.PartyIdentification43 originator) {
+	public StatusReasonInformation9 setOriginator(PartyIdentification43 originator) {
 		this.originator = originator;
 		return this;
 	}

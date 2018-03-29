@@ -114,7 +114,7 @@ public class InitialPhysicalForm2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InitialPhysicalForm2Choice, InitialPhysicalForm1Code> mmCode = new MMMessageAttribute<InitialPhysicalForm2Choice, InitialPhysicalForm1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InitialPhysicalForm2Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class InitialPhysicalForm2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InitialPhysicalForm1Code.mmObject();
+		}
+
+		@Override
+		public InitialPhysicalForm1Code getValue(InitialPhysicalForm2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InitialPhysicalForm2Choice obj, InitialPhysicalForm1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class InitialPhysicalForm2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InitialPhysicalForm2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<InitialPhysicalForm2Choice, GenericIdentification40>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InitialPhysicalForm2Choice.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class InitialPhysicalForm2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(InitialPhysicalForm2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InitialPhysicalForm2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

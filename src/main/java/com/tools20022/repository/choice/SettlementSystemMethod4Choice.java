@@ -117,7 +117,7 @@ public class SettlementSystemMethod4Choice {
 	 * SettlementSystemMethod1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSystemMethod4Choice, SettlementSystemMethod1Code> mmCode = new MMMessageAttribute<SettlementSystemMethod4Choice, SettlementSystemMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementSystemMethod4Choice.mmObject();
@@ -131,6 +131,16 @@ public class SettlementSystemMethod4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementSystemMethod1Code.mmObject();
+		}
+
+		@Override
+		public SettlementSystemMethod1Code getValue(SettlementSystemMethod4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementSystemMethod4Choice obj, SettlementSystemMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -176,7 +186,7 @@ public class SettlementSystemMethod4Choice {
 	 * SettlementSystemMethod1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSystemMethod4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<SettlementSystemMethod4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementSystemMethod4Choice.mmObject();
@@ -190,6 +200,16 @@ public class SettlementSystemMethod4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(SettlementSystemMethod4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementSystemMethod4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -50,11 +50,15 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 */
 	public static final MMConstraint<Intermediary8> forIntermediary8 = new MMConstraint<Intermediary8>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility1Rule::checkIntermediary8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility1Rule";
 			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2.";
 			owner_lazy = () -> Intermediary8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Intermediary8 obj) throws Exception {
+			checkIntermediary8(obj);
 		}
 	};
 	/**
@@ -79,11 +83,15 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 */
 	public static final MMConstraint<Intermediary9> forIntermediary9 = new MMConstraint<Intermediary9>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility1Rule::checkIntermediary9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility1Rule";
 			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2.";
 			owner_lazy = () -> Intermediary9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Intermediary9 obj) throws Exception {
+			checkIntermediary9(obj);
 		}
 	};
 	/**
@@ -108,11 +116,15 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 */
 	public static final MMConstraint<Intermediary29> forIntermediary29 = new MMConstraint<Intermediary29>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility1Rule::checkIntermediary29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility1Rule";
 			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 or UCL2.";
 			owner_lazy = () -> Intermediary29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Intermediary29 obj) throws Exception {
+			checkIntermediary29(obj);
 		}
 	};
 	/**
@@ -137,11 +149,15 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 */
 	public static final MMConstraint<Intermediary39> forIntermediary39 = new MMConstraint<Intermediary39>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility1Rule::checkIntermediary39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility1Rule";
 			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 (UnderlyingClient1) or UCL2 (UnderlyingClient2).";
 			owner_lazy = () -> Intermediary39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Intermediary39 obj) throws Exception {
+			checkIntermediary39(obj);
 		}
 	};
 	/**
@@ -166,11 +182,15 @@ public class ConstraintOrderOriginatorEligibility1Rule {
 	 */
 	public static final MMConstraint<Intermediary40> forIntermediary40 = new MMConstraint<Intermediary40>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility1Rule::checkIntermediary40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility1Rule";
 			definition = "OrderOriginatorEligibility may only be present if Role is either UCL1 (UnderlyingClient1) or UCL2 (UnderlyingClient2).";
 			owner_lazy = () -> Intermediary40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Intermediary40 obj) throws Exception {
+			checkIntermediary40(obj);
 		}
 	};
 

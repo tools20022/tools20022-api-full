@@ -98,7 +98,7 @@ public class ConfirmationType1Choice {
 	 * definition} = "Confirmation type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationType1Choice, AccountManagementType2Code> mmCode = new MMMessageAttribute<ConfirmationType1Choice, AccountManagementType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationType1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class ConfirmationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType2Code.mmObject();
+		}
+
+		@Override
+		public AccountManagementType2Code getValue(ConfirmationType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ConfirmationType1Choice obj, AccountManagementType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class ConfirmationType1Choice {
 	 * definition} = "Confirmation type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationType1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<ConfirmationType1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationType1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class ConfirmationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(ConfirmationType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ConfirmationType1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

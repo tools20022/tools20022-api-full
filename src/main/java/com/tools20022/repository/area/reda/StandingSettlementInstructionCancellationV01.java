@@ -29,7 +29,6 @@ import com.tools20022.repository.msg.AccountIdentification26;
 import com.tools20022.repository.msg.EffectiveDate1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.SSIforSecuritiesPaymentsandForeignExchange;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -149,7 +148,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	 * definition} = "Reference of this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageReferenceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, Max35Text> mmMessageReferenceIdentification = new MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, Max35Text>() {
 		{
 			xmlTag = "MsgRefId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,12 +159,14 @@ public class StandingSettlementInstructionCancellationV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StandingSettlementInstructionCancellationV01.class.getMethod("getMessageReferenceIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(StandingSettlementInstructionCancellationV01 obj) {
+			return obj.getMessageReferenceIdentification();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstructionCancellationV01 obj, Max35Text value) {
+			obj.setMessageReferenceIdentification(value);
 		}
 	};
 	@XmlElement(name = "FctvDtDtls")
@@ -192,7 +193,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	 * definition} = "Date on which the SSI is effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEffectiveDateDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, Optional<EffectiveDate1>> mmEffectiveDateDetails = new MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, Optional<EffectiveDate1>>() {
 		{
 			xmlTag = "FctvDtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,12 +204,14 @@ public class StandingSettlementInstructionCancellationV01 {
 			complexType_lazy = () -> EffectiveDate1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StandingSettlementInstructionCancellationV01.class.getMethod("getEffectiveDateDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<EffectiveDate1> getValue(StandingSettlementInstructionCancellationV01 obj) {
+			return obj.getEffectiveDateDetails();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstructionCancellationV01 obj, Optional<EffectiveDate1> value) {
+			obj.setEffectiveDateDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId", required = true)
@@ -238,7 +241,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, List<AccountIdentification26>> mmAccountIdentification = new MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, List<AccountIdentification26>>() {
 		{
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,12 +251,14 @@ public class StandingSettlementInstructionCancellationV01 {
 			complexType_lazy = () -> AccountIdentification26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StandingSettlementInstructionCancellationV01.class.getMethod("getAccountIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountIdentification26> getValue(StandingSettlementInstructionCancellationV01 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstructionCancellationV01 obj, List<AccountIdentification26> value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "MktId", required = true)
@@ -282,7 +287,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	 * "Identifies the market for the standing settlement instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarketIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, MarketIdentificationOrCashPurpose1Choice> mmMarketIdentification = new MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, MarketIdentificationOrCashPurpose1Choice>() {
 		{
 			xmlTag = "MktId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,12 +298,14 @@ public class StandingSettlementInstructionCancellationV01 {
 			complexType_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StandingSettlementInstructionCancellationV01.class.getMethod("getMarketIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MarketIdentificationOrCashPurpose1Choice getValue(StandingSettlementInstructionCancellationV01 obj) {
+			return obj.getMarketIdentification();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstructionCancellationV01 obj, MarketIdentificationOrCashPurpose1Choice value) {
+			obj.setMarketIdentification(value);
 		}
 	};
 	@XmlElement(name = "SttlmDtls", required = true)
@@ -328,7 +335,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, PartyOrCurrency1Choice> mmSettlementDetails = new MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, PartyOrCurrency1Choice>() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,12 +346,14 @@ public class StandingSettlementInstructionCancellationV01 {
 			complexType_lazy = () -> PartyOrCurrency1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StandingSettlementInstructionCancellationV01.class.getMethod("getSettlementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyOrCurrency1Choice getValue(StandingSettlementInstructionCancellationV01 obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstructionCancellationV01 obj, PartyOrCurrency1Choice value) {
+			obj.setSettlementDetails(value);
 		}
 	};
 	@XmlElement(name = "PrvsMsgRef", required = true)
@@ -371,7 +380,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, Max35Text> mmPreviousMessageReference = new MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, Max35Text>() {
 		{
 			xmlTag = "PrvsMsgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,12 +391,14 @@ public class StandingSettlementInstructionCancellationV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StandingSettlementInstructionCancellationV01.class.getMethod("getPreviousMessageReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(StandingSettlementInstructionCancellationV01 obj) {
+			return obj.getPreviousMessageReference();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstructionCancellationV01 obj, Max35Text value) {
+			obj.setPreviousMessageReference(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -417,7 +428,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<StandingSettlementInstructionCancellationV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -427,12 +438,14 @@ public class StandingSettlementInstructionCancellationV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StandingSettlementInstructionCancellationV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(StandingSettlementInstructionCancellationV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(StandingSettlementInstructionCancellationV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

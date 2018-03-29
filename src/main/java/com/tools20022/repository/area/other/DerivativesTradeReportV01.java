@@ -27,7 +27,6 @@ import com.tools20022.repository.choice.TradeData3Choice;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TradeQueryHeader3;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTradeRepositoryReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +120,7 @@ public class DerivativesTradeReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DerivativesTradeReportV01, TradeQueryHeader3> mmReportHeader = new MMMessageBuildingBlock<DerivativesTradeReportV01, TradeQueryHeader3>() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +131,14 @@ public class DerivativesTradeReportV01 {
 			complexType_lazy = () -> TradeQueryHeader3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DerivativesTradeReportV01.class.getMethod("getReportHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeQueryHeader3 getValue(DerivativesTradeReportV01 obj) {
+			return obj.getReportHeader();
+		}
+
+		@Override
+		public void setValue(DerivativesTradeReportV01 obj, TradeQueryHeader3 value) {
+			obj.setReportHeader(value);
 		}
 	};
 	@XmlElement(name = "TradData", required = true)
@@ -165,7 +166,7 @@ public class DerivativesTradeReportV01 {
 	 * definition} = "Data concerning the reporting trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DerivativesTradeReportV01, TradeData3Choice> mmTradeData = new MMMessageBuildingBlock<DerivativesTradeReportV01, TradeData3Choice>() {
 		{
 			xmlTag = "TradData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +177,14 @@ public class DerivativesTradeReportV01 {
 			complexType_lazy = () -> TradeData3Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DerivativesTradeReportV01.class.getMethod("getTradeData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeData3Choice getValue(DerivativesTradeReportV01 obj) {
+			return obj.getTradeData();
+		}
+
+		@Override
+		public void setValue(DerivativesTradeReportV01 obj, TradeData3Choice value) {
+			obj.setTradeData(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -211,7 +214,7 @@ public class DerivativesTradeReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DerivativesTradeReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<DerivativesTradeReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,12 +224,14 @@ public class DerivativesTradeReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DerivativesTradeReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(DerivativesTradeReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(DerivativesTradeReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

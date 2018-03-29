@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.CardPaymentBatchTransferResponse3;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header12;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -137,7 +136,7 @@ public class AcceptorBatchTransferResponseV04 {
 	 * AcceptorBatchTransferResponseV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferResponseV04, Header12> mmHeader = new MMMessageBuildingBlock<AcceptorBatchTransferResponseV04, Header12>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,12 +149,14 @@ public class AcceptorBatchTransferResponseV04 {
 			complexType_lazy = () -> Header12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferResponseV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header12 getValue(AcceptorBatchTransferResponseV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferResponseV04 obj, Header12 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "BtchTrfRspn", required = true)
@@ -197,7 +198,7 @@ public class AcceptorBatchTransferResponseV04 {
 	 * AcceptorBatchTransferResponseV03.mmBatchTransferResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBatchTransferResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferResponseV04, CardPaymentBatchTransferResponse3> mmBatchTransferResponse = new MMMessageBuildingBlock<AcceptorBatchTransferResponseV04, CardPaymentBatchTransferResponse3>() {
 		{
 			xmlTag = "BtchTrfRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +211,14 @@ public class AcceptorBatchTransferResponseV04 {
 			complexType_lazy = () -> CardPaymentBatchTransferResponse3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferResponseV04.class.getMethod("getBatchTransferResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CardPaymentBatchTransferResponse3 getValue(AcceptorBatchTransferResponseV04 obj) {
+			return obj.getBatchTransferResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferResponseV04 obj, CardPaymentBatchTransferResponse3 value) {
+			obj.setBatchTransferResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -257,7 +260,7 @@ public class AcceptorBatchTransferResponseV04 {
 	 * AcceptorBatchTransferResponseV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferResponseV04, ContentInformationType12> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorBatchTransferResponseV04, ContentInformationType12>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +273,14 @@ public class AcceptorBatchTransferResponseV04 {
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferResponseV04.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType12 getValue(AcceptorBatchTransferResponseV04 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferResponseV04 obj, ContentInformationType12 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

@@ -21,10 +21,11 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ChequeDeliveryCode;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Cheque;
 import com.tools20022.repository.entity.CreditInstrument;
+import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -230,7 +231,7 @@ public class ChequeIssue extends CreditInstrument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ChequeIssue, com.tools20022.repository.entity.Cheque> mmCheque = new MMBusinessAssociationEnd<ChequeIssue, com.tools20022.repository.entity.Cheque>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ChequeIssue.mmObject();
@@ -242,6 +243,16 @@ public class ChequeIssue extends CreditInstrument {
 			opposite_lazy = () -> com.tools20022.repository.entity.Cheque.mmChequeDelivery;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Cheque getValue(ChequeIssue obj) {
+			return obj.getCheque();
+		}
+
+		@Override
+		public void setValue(ChequeIssue obj, com.tools20022.repository.entity.Cheque value) {
+			obj.setCheque(value);
 		}
 	};
 	protected ChequeDeliveryCode deliveryMethod;
@@ -288,7 +299,7 @@ public class ChequeIssue extends CreditInstrument {
 	 * "Specifies the delivery method of the cheque by the debtor's agent."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDeliveryMethod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ChequeIssue, ChequeDeliveryCode> mmDeliveryMethod = new MMBusinessAttribute<ChequeIssue, ChequeDeliveryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ChequeDeliveryMethod1Choice.mmCode, ChequeDeliveryMethod1Choice.mmProprietary, Cheque5.mmDeliveryMethod, Cheque6.mmDeliveryMethod, Cheque7.mmDeliveryMethod);
 			isDerived = false;
@@ -301,12 +312,14 @@ public class ChequeIssue extends CreditInstrument {
 			simpleType_lazy = () -> ChequeDeliveryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ChequeIssue.class.getMethod("getDeliveryMethod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ChequeDeliveryCode getValue(ChequeIssue obj) {
+			return obj.getDeliveryMethod();
+		}
+
+		@Override
+		public void setValue(ChequeIssue obj, ChequeDeliveryCode value) {
+			obj.setDeliveryMethod(value);
 		}
 	};
 	protected PostalAddress deliverTo;
@@ -355,7 +368,7 @@ public class ChequeIssue extends CreditInstrument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDeliverTo = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ChequeIssue, PostalAddress> mmDeliverTo = new MMBusinessAssociationEnd<ChequeIssue, PostalAddress>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmDeliverTo, Cheque6.mmDeliverTo, Cheque7.mmDeliverTo);
 			isDerived = false;
@@ -365,9 +378,19 @@ public class ChequeIssue extends CreditInstrument {
 			definition = "Identifies the party to whom the debtor's agent should send the cheque.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmChequeIssue;
+			opposite_lazy = () -> PostalAddress.mmChequeIssue;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PostalAddress.mmObject();
+			type_lazy = () -> PostalAddress.mmObject();
+		}
+
+		@Override
+		public PostalAddress getValue(ChequeIssue obj) {
+			return obj.getDeliverTo();
+		}
+
+		@Override
+		public void setValue(ChequeIssue obj, PostalAddress value) {
+			obj.setDeliverTo(value);
 		}
 	};
 	protected Max35Text printLocation;
@@ -406,7 +429,7 @@ public class ChequeIssue extends CreditInstrument {
 	 * definition} = "Specifies the print location of the cheque."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPrintLocation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ChequeIssue, Max35Text> mmPrintLocation = new MMBusinessAttribute<ChequeIssue, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Cheque5.mmPrintLocation, Cheque6.mmPrintLocation, Cheque7.mmPrintLocation);
 			isDerived = false;
@@ -419,12 +442,14 @@ public class ChequeIssue extends CreditInstrument {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ChequeIssue.class.getMethod("getPrintLocation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ChequeIssue obj) {
+			return obj.getPrintLocation();
+		}
+
+		@Override
+		public void setValue(ChequeIssue obj, Max35Text value) {
+			obj.setPrintLocation(value);
 		}
 	};
 
@@ -435,7 +460,7 @@ public class ChequeIssue extends CreditInstrument {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChequeIssue";
 				definition = "Action to issue a cheque in order to settle an amount due to a creditor.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PostalAddress.mmChequeIssue, com.tools20022.repository.entity.Cheque.mmChequeDelivery);
+				associationDomain_lazy = () -> Arrays.asList(PostalAddress.mmChequeIssue, com.tools20022.repository.entity.Cheque.mmChequeDelivery);
 				derivationElement_lazy = () -> Arrays.asList(PaymentInstrument6.mmCheque, PaymentInstrument9.mmChequeDetails, PaymentInstrument9.mmBankersDraftDetails, PaymentInstrument16Choice.mmChequeDetails,
 						PaymentInstrument16Choice.mmBankersDraftDetails, CreditTransferTransactionInformation1.mmChequeInstruction, CreditTransferTransactionInformation10.mmChequeInstruction, CreditTransferTransaction1.mmChequeInstruction,
 						CreditTransferTransaction6.mmChequeInstruction, CreditTransferTransactionInformation14.mmChequeInstruction, CreditTransferTransaction5.mmChequeInstruction, CreditTransferTransaction10.mmChequeInstruction,
@@ -480,7 +505,7 @@ public class ChequeIssue extends CreditInstrument {
 		return deliverTo;
 	}
 
-	public ChequeIssue setDeliverTo(com.tools20022.repository.entity.PostalAddress deliverTo) {
+	public ChequeIssue setDeliverTo(PostalAddress deliverTo) {
 		this.deliverTo = Objects.requireNonNull(deliverTo);
 		return this;
 	}

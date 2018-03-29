@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.CorporateActionEventRegistration;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification21;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -147,7 +148,7 @@ public class CorporateActionGeneralInformation121 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation121, RestrictedFINXMax16Text> mmCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation121, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation121.mmObject();
@@ -160,6 +161,16 @@ public class CorporateActionGeneralInformation121 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(CorporateActionGeneralInformation121 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation121 obj, RestrictedFINXMax16Text value) {
+			obj.setCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "OffclCorpActnEvtId")
@@ -203,7 +214,7 @@ public class CorporateActionGeneralInformation121 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation121, Optional<RestrictedFINXMax16Text>> mmOfficialCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation121, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation121.mmObject();
@@ -216,6 +227,16 @@ public class CorporateActionGeneralInformation121 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(CorporateActionGeneralInformation121 obj) {
+			return obj.getOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation121 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setOfficialCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp", required = true)
@@ -255,7 +276,7 @@ public class CorporateActionGeneralInformation121 {
 	 * definition} = "Type of corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionGeneralInformation121, CorporateActionEventType58Choice> mmEventType = new MMMessageAssociationEnd<CorporateActionGeneralInformation121, CorporateActionEventType58Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation121.mmObject();
@@ -269,6 +290,16 @@ public class CorporateActionGeneralInformation121 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventType58Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType58Choice getValue(CorporateActionGeneralInformation121 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation121 obj, CorporateActionEventType58Choice value) {
+			obj.setEventType(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmId")
@@ -309,7 +340,7 @@ public class CorporateActionGeneralInformation121 {
 	 * "Identification of the security concerned by the corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionGeneralInformation121, Optional<SecurityIdentification21>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<CorporateActionGeneralInformation121, Optional<SecurityIdentification21>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation121.mmObject();
@@ -322,7 +353,17 @@ public class CorporateActionGeneralInformation121 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification21.mmObject();
+			type_lazy = () -> SecurityIdentification21.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification21> getValue(CorporateActionGeneralInformation121 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation121 obj, Optional<SecurityIdentification21> value) {
+			obj.setFinancialInstrumentIdentification(value.orElse(null));
 		}
 	};
 
@@ -376,7 +417,7 @@ public class CorporateActionGeneralInformation121 {
 		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public CorporateActionGeneralInformation121 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification21 financialInstrumentIdentification) {
+	public CorporateActionGeneralInformation121 setFinancialInstrumentIdentification(SecurityIdentification21 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 		return this;
 	}

@@ -55,11 +55,15 @@ public class ConstraintBulkCashSettlementDetails3Rule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrder2> forSubscriptionBulkOrder2 = new MMConstraint<SubscriptionBulkOrder2>() {
 		{
-			validator = ConstraintBulkCashSettlementDetails3Rule::checkSubscriptionBulkOrder2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails3Rule";
 			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionBulkOrder2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder2 obj) throws Exception {
+			checkSubscriptionBulkOrder2(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintBulkCashSettlementDetails3Rule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrder3> forSubscriptionBulkOrder3 = new MMConstraint<SubscriptionBulkOrder3>() {
 		{
-			validator = ConstraintBulkCashSettlementDetails3Rule::checkSubscriptionBulkOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails3Rule";
 			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			owner_lazy = () -> SubscriptionBulkOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder3 obj) throws Exception {
+			checkSubscriptionBulkOrder3(obj);
 		}
 	};
 	/**
@@ -123,12 +131,16 @@ public class ConstraintBulkCashSettlementDetails3Rule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrder4> forSubscriptionBulkOrder4 = new MMConstraint<SubscriptionBulkOrder4>() {
 		{
-			validator = ConstraintBulkCashSettlementDetails3Rule::checkSubscriptionBulkOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails3Rule";
 			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails3Rule.forSubscriptionBulkOrder5);
 			owner_lazy = () -> SubscriptionBulkOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder4 obj) throws Exception {
+			checkSubscriptionBulkOrder4(obj);
 		}
 	};
 	/**
@@ -159,12 +171,16 @@ public class ConstraintBulkCashSettlementDetails3Rule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrder5> forSubscriptionBulkOrder5 = new MMConstraint<SubscriptionBulkOrder5>() {
 		{
-			validator = ConstraintBulkCashSettlementDetails3Rule::checkSubscriptionBulkOrder5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetails3Rule";
 			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails3Rule.forSubscriptionBulkOrder4;
 			owner_lazy = () -> SubscriptionBulkOrder5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder5 obj) throws Exception {
+			checkSubscriptionBulkOrder5(obj);
 		}
 	};
 

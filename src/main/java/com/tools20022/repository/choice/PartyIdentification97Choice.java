@@ -138,7 +138,7 @@ public class PartyIdentification97Choice {
 	 * PartyIdentification70Choice.mmAnyBIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification97Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification97Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification97Choice.mmObject();
@@ -151,6 +151,16 @@ public class PartyIdentification97Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification97Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification97Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "LglNttyIdr", required = true)
@@ -190,7 +200,7 @@ public class PartyIdentification97Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification97Choice, LEIIdentifier> mmLegalEntityIdentifier = new MMMessageAttribute<PartyIdentification97Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification97Choice.mmObject();
@@ -202,6 +212,16 @@ public class PartyIdentification97Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(PartyIdentification97Choice obj) {
+			return obj.getLegalEntityIdentifier();
+		}
+
+		@Override
+		public void setValue(PartyIdentification97Choice obj, LEIIdentifier value) {
+			obj.setLegalEntityIdentifier(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -243,7 +263,7 @@ public class PartyIdentification97Choice {
 	 * PartyIdentification70Choice.mmNameAndAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification97Choice, NameAndAddress5> mmNameAndAddress = new MMMessageAttribute<PartyIdentification97Choice, NameAndAddress5>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification97Choice.mmObject();
@@ -256,6 +276,16 @@ public class PartyIdentification97Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public NameAndAddress5 getValue(PartyIdentification97Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification97Choice obj, NameAndAddress5 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -300,7 +330,7 @@ public class PartyIdentification97Choice {
 	 * PartyIdentification70Choice.mmProprietaryIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification97Choice, GenericIdentification1> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification97Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification97Choice.mmObject();
@@ -313,6 +343,16 @@ public class PartyIdentification97Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(PartyIdentification97Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification97Choice obj, GenericIdentification1 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

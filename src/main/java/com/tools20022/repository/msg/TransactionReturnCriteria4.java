@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountCashEntryReturnCriteria3;
+import com.tools20022.repository.msg.PaymentReturnCriteria3;
+import com.tools20022.repository.msg.SystemReturnCriteria2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -126,7 +129,7 @@ public class TransactionReturnCriteria4 {
 	 * TransactionReturnCriteria3.mmPaymentToReturnCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentToReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReturnCriteria4, Optional<SystemReturnCriteria2>> mmPaymentToReturnCriteria = new MMMessageAssociationEnd<TransactionReturnCriteria4, Optional<SystemReturnCriteria2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria4.mmObject();
 			isDerived = false;
@@ -139,7 +142,17 @@ public class TransactionReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
+			type_lazy = () -> SystemReturnCriteria2.mmObject();
+		}
+
+		@Override
+		public Optional<SystemReturnCriteria2> getValue(TransactionReturnCriteria4 obj) {
+			return obj.getPaymentToReturnCriteria();
+		}
+
+		@Override
+		public void setValue(TransactionReturnCriteria4 obj, Optional<SystemReturnCriteria2> value) {
+			obj.setPaymentToReturnCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtFrRtrCrit")
@@ -184,7 +197,7 @@ public class TransactionReturnCriteria4 {
 	 * TransactionReturnCriteria3.mmPaymentFromReturnCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentFromReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReturnCriteria4, Optional<SystemReturnCriteria2>> mmPaymentFromReturnCriteria = new MMMessageAssociationEnd<TransactionReturnCriteria4, Optional<SystemReturnCriteria2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria4.mmObject();
 			isDerived = false;
@@ -197,7 +210,17 @@ public class TransactionReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
+			type_lazy = () -> SystemReturnCriteria2.mmObject();
+		}
+
+		@Override
+		public Optional<SystemReturnCriteria2> getValue(TransactionReturnCriteria4 obj) {
+			return obj.getPaymentFromReturnCriteria();
+		}
+
+		@Override
+		public void setValue(TransactionReturnCriteria4 obj, Optional<SystemReturnCriteria2> value) {
+			obj.setPaymentFromReturnCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctCshNtryRtrCrit")
@@ -242,7 +265,7 @@ public class TransactionReturnCriteria4 {
 	 * TransactionReturnCriteria3.mmAccountCashEntryReturnCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountCashEntryReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReturnCriteria4, Optional<AccountCashEntryReturnCriteria3>> mmAccountCashEntryReturnCriteria = new MMMessageAssociationEnd<TransactionReturnCriteria4, Optional<AccountCashEntryReturnCriteria3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria4.mmObject();
 			isDerived = false;
@@ -255,7 +278,17 @@ public class TransactionReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountCashEntryReturnCriteria3.mmObject();
+			type_lazy = () -> AccountCashEntryReturnCriteria3.mmObject();
+		}
+
+		@Override
+		public Optional<AccountCashEntryReturnCriteria3> getValue(TransactionReturnCriteria4 obj) {
+			return obj.getAccountCashEntryReturnCriteria();
+		}
+
+		@Override
+		public void setValue(TransactionReturnCriteria4 obj, Optional<AccountCashEntryReturnCriteria3> value) {
+			obj.setAccountCashEntryReturnCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtRtrCrit")
@@ -299,7 +332,7 @@ public class TransactionReturnCriteria4 {
 	 * TransactionReturnCriteria3.mmPaymentReturnCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReturnCriteria4, Optional<PaymentReturnCriteria3>> mmPaymentReturnCriteria = new MMMessageAssociationEnd<TransactionReturnCriteria4, Optional<PaymentReturnCriteria3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria4.mmObject();
 			isDerived = false;
@@ -312,7 +345,17 @@ public class TransactionReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
+			type_lazy = () -> PaymentReturnCriteria3.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentReturnCriteria3> getValue(TransactionReturnCriteria4 obj) {
+			return obj.getPaymentReturnCriteria();
+		}
+
+		@Override
+		public void setValue(TransactionReturnCriteria4 obj, Optional<PaymentReturnCriteria3> value) {
+			obj.setPaymentReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -336,7 +379,7 @@ public class TransactionReturnCriteria4 {
 		return paymentToReturnCriteria == null ? Optional.empty() : Optional.of(paymentToReturnCriteria);
 	}
 
-	public TransactionReturnCriteria4 setPaymentToReturnCriteria(com.tools20022.repository.msg.SystemReturnCriteria2 paymentToReturnCriteria) {
+	public TransactionReturnCriteria4 setPaymentToReturnCriteria(SystemReturnCriteria2 paymentToReturnCriteria) {
 		this.paymentToReturnCriteria = paymentToReturnCriteria;
 		return this;
 	}
@@ -345,7 +388,7 @@ public class TransactionReturnCriteria4 {
 		return paymentFromReturnCriteria == null ? Optional.empty() : Optional.of(paymentFromReturnCriteria);
 	}
 
-	public TransactionReturnCriteria4 setPaymentFromReturnCriteria(com.tools20022.repository.msg.SystemReturnCriteria2 paymentFromReturnCriteria) {
+	public TransactionReturnCriteria4 setPaymentFromReturnCriteria(SystemReturnCriteria2 paymentFromReturnCriteria) {
 		this.paymentFromReturnCriteria = paymentFromReturnCriteria;
 		return this;
 	}
@@ -354,7 +397,7 @@ public class TransactionReturnCriteria4 {
 		return accountCashEntryReturnCriteria == null ? Optional.empty() : Optional.of(accountCashEntryReturnCriteria);
 	}
 
-	public TransactionReturnCriteria4 setAccountCashEntryReturnCriteria(com.tools20022.repository.msg.AccountCashEntryReturnCriteria3 accountCashEntryReturnCriteria) {
+	public TransactionReturnCriteria4 setAccountCashEntryReturnCriteria(AccountCashEntryReturnCriteria3 accountCashEntryReturnCriteria) {
 		this.accountCashEntryReturnCriteria = accountCashEntryReturnCriteria;
 		return this;
 	}
@@ -363,7 +406,7 @@ public class TransactionReturnCriteria4 {
 		return paymentReturnCriteria == null ? Optional.empty() : Optional.of(paymentReturnCriteria);
 	}
 
-	public TransactionReturnCriteria4 setPaymentReturnCriteria(com.tools20022.repository.msg.PaymentReturnCriteria3 paymentReturnCriteria) {
+	public TransactionReturnCriteria4 setPaymentReturnCriteria(PaymentReturnCriteria3 paymentReturnCriteria) {
 		this.paymentReturnCriteria = paymentReturnCriteria;
 		return this;
 	}

@@ -30,6 +30,9 @@ import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesTradeExecution;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount2;
+import com.tools20022.repository.msg.SecuritiesSettlement2;
+import com.tools20022.repository.msg.TradingSession1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +134,7 @@ public class DisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisclosedBid1, Optional<Side1Code>> mmSide = new MMMessageAttribute<DisclosedBid1, Optional<Side1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisclosedBid1.mmObject();
@@ -144,6 +147,16 @@ public class DisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Side1Code> getValue(DisclosedBid1 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(DisclosedBid1 obj, Optional<Side1Code> value) {
+			obj.setSide(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrssInd", required = true)
@@ -185,7 +198,7 @@ public class DisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisclosedBid1, TrueFalseIndicator> mmGrossIndicator = new MMMessageAttribute<DisclosedBid1, TrueFalseIndicator>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisclosedBid1.mmObject();
@@ -198,6 +211,16 @@ public class DisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(DisclosedBid1 obj) {
+			return obj.getGrossIndicator();
+		}
+
+		@Override
+		public void setValue(DisclosedBid1 obj, TrueFalseIndicator value) {
+			obj.setGrossIndicator(value);
 		}
 	};
 	@XmlElement(name = "ListId")
@@ -238,7 +261,7 @@ public class DisclosedBid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisclosedBid1, Optional<Max35Text>> mmListIdentification = new MMMessageAttribute<DisclosedBid1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisclosedBid1.mmObject();
@@ -251,6 +274,16 @@ public class DisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DisclosedBid1 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(DisclosedBid1 obj, Optional<Max35Text> value) {
+			obj.setListIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgSsn")
@@ -285,7 +318,7 @@ public class DisclosedBid1 {
 	 * definition} = "Established constraints under which a market operates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingSession = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DisclosedBid1, Optional<TradingSession1>> mmTradingSession = new MMMessageAssociationEnd<DisclosedBid1, Optional<TradingSession1>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListTradingSession;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisclosedBid1.mmObject();
@@ -297,7 +330,17 @@ public class DisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
+			type_lazy = () -> TradingSession1.mmObject();
+		}
+
+		@Override
+		public Optional<TradingSession1> getValue(DisclosedBid1 obj) {
+			return obj.getTradingSession();
+		}
+
+		@Override
+		public void setValue(DisclosedBid1 obj, Optional<TradingSession1> value) {
+			obj.setTradingSession(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BiddgAcct")
@@ -332,7 +375,7 @@ public class DisclosedBid1 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBiddingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DisclosedBid1, Optional<SecuritiesAccount2>> mmBiddingAccount = new MMMessageAssociationEnd<DisclosedBid1, Optional<SecuritiesAccount2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderingAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisclosedBid1.mmObject();
@@ -344,7 +387,17 @@ public class DisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
+			type_lazy = () -> SecuritiesAccount2.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount2> getValue(DisclosedBid1 obj) {
+			return obj.getBiddingAccount();
+		}
+
+		@Override
+		public void setValue(DisclosedBid1 obj, Optional<SecuritiesAccount2> value) {
+			obj.setBiddingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDtls")
@@ -380,7 +433,7 @@ public class DisclosedBid1 {
 	 * "Parameters applied to the settlement of a security transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DisclosedBid1, Optional<SecuritiesSettlement2>> mmSettlementDetails = new MMMessageAssociationEnd<DisclosedBid1, Optional<SecuritiesSettlement2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisclosedBid1.mmObject();
@@ -392,7 +445,17 @@ public class DisclosedBid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
+			type_lazy = () -> SecuritiesSettlement2.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesSettlement2> getValue(DisclosedBid1 obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(DisclosedBid1 obj, Optional<SecuritiesSettlement2> value) {
+			obj.setSettlementDetails(value.orElse(null));
 		}
 	};
 
@@ -442,7 +505,7 @@ public class DisclosedBid1 {
 		return tradingSession == null ? Optional.empty() : Optional.of(tradingSession);
 	}
 
-	public DisclosedBid1 setTradingSession(com.tools20022.repository.msg.TradingSession1 tradingSession) {
+	public DisclosedBid1 setTradingSession(TradingSession1 tradingSession) {
 		this.tradingSession = tradingSession;
 		return this;
 	}
@@ -451,7 +514,7 @@ public class DisclosedBid1 {
 		return biddingAccount == null ? Optional.empty() : Optional.of(biddingAccount);
 	}
 
-	public DisclosedBid1 setBiddingAccount(com.tools20022.repository.msg.SecuritiesAccount2 biddingAccount) {
+	public DisclosedBid1 setBiddingAccount(SecuritiesAccount2 biddingAccount) {
 		this.biddingAccount = biddingAccount;
 		return this;
 	}
@@ -460,7 +523,7 @@ public class DisclosedBid1 {
 		return settlementDetails == null ? Optional.empty() : Optional.of(settlementDetails);
 	}
 
-	public DisclosedBid1 setSettlementDetails(com.tools20022.repository.msg.SecuritiesSettlement2 settlementDetails) {
+	public DisclosedBid1 setSettlementDetails(SecuritiesSettlement2 settlementDetails) {
 		this.settlementDetails = settlementDetails;
 		return this;
 	}

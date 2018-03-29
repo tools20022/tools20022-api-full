@@ -117,7 +117,7 @@ public class CurrencyExchangeDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchangeDetails, BaseOneRate> mmExchangeRate = new MMMessageAttribute<CurrencyExchangeDetails, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeDetails.mmObject();
@@ -129,6 +129,16 @@ public class CurrencyExchangeDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(CurrencyExchangeDetails obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeDetails obj, BaseOneRate value) {
+			obj.setExchangeRate(value);
 		}
 	};
 	@XmlElement(name = "QtdCcy", required = true)
@@ -167,7 +177,7 @@ public class CurrencyExchangeDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchangeDetails, CurrencyCode> mmQuotedCurrency = new MMMessageAttribute<CurrencyExchangeDetails, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeDetails.mmObject();
@@ -179,6 +189,16 @@ public class CurrencyExchangeDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CurrencyExchangeDetails obj) {
+			return obj.getQuotedCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeDetails obj, CurrencyCode value) {
+			obj.setQuotedCurrency(value);
 		}
 	};
 	@XmlElement(name = "QtnDt", required = true)
@@ -215,7 +235,7 @@ public class CurrencyExchangeDetails {
 	 * definition} = "Date and time at which an exchange rate is quoted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchangeDetails, ISODateTime> mmQuotationDate = new MMMessageAttribute<CurrencyExchangeDetails, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeDetails.mmObject();
@@ -227,6 +247,16 @@ public class CurrencyExchangeDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CurrencyExchangeDetails obj) {
+			return obj.getQuotationDate();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeDetails obj, ISODateTime value) {
+			obj.setQuotationDate(value);
 		}
 	};
 

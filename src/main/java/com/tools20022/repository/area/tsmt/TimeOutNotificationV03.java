@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -138,7 +137,7 @@ public class TimeOutNotificationV03 {
 	 * definition} = "Identifies the notification message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TimeOutNotificationV03, MessageIdentification1> mmNotificationIdentification = new MMMessageBuildingBlock<TimeOutNotificationV03, MessageIdentification1>() {
 		{
 			xmlTag = "NtfctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +148,14 @@ public class TimeOutNotificationV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeOutNotificationV03.class.getMethod("getNotificationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(TimeOutNotificationV03 obj) {
+			return obj.getNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(TimeOutNotificationV03 obj, MessageIdentification1 value) {
+			obj.setNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -184,7 +185,7 @@ public class TimeOutNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TimeOutNotificationV03, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<TimeOutNotificationV03, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,12 +196,14 @@ public class TimeOutNotificationV03 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeOutNotificationV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(TimeOutNotificationV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TimeOutNotificationV03 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId")
@@ -230,7 +233,7 @@ public class TimeOutNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TimeOutNotificationV03, Optional<DocumentIdentification3>> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<TimeOutNotificationV03, Optional<DocumentIdentification3>>() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,12 +244,14 @@ public class TimeOutNotificationV03 {
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeOutNotificationV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification3> getValue(TimeOutNotificationV03 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(TimeOutNotificationV03 obj, Optional<DocumentIdentification3> value) {
+			obj.setEstablishedBaselineIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -275,7 +280,7 @@ public class TimeOutNotificationV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TimeOutNotificationV03, TransactionStatus4> mmTransactionStatus = new MMMessageBuildingBlock<TimeOutNotificationV03, TransactionStatus4>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,12 +291,14 @@ public class TimeOutNotificationV03 {
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeOutNotificationV03.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus4 getValue(TimeOutNotificationV03 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(TimeOutNotificationV03 obj, TransactionStatus4 value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
@@ -321,7 +328,7 @@ public class TimeOutNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TimeOutNotificationV03, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<TimeOutNotificationV03, List<DocumentIdentification5>>() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,12 +339,14 @@ public class TimeOutNotificationV03 {
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeOutNotificationV03.class.getMethod("getUserTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification5> getValue(TimeOutNotificationV03 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(TimeOutNotificationV03 obj, List<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "TmOutDesc", required = true)
@@ -364,7 +373,7 @@ public class TimeOutNotificationV03 {
 	 * definition} = "Describes the time-out consequences."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTimeOutDescription = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TimeOutNotificationV03, TimeOutResult2> mmTimeOutDescription = new MMMessageBuildingBlock<TimeOutNotificationV03, TimeOutResult2>() {
 		{
 			xmlTag = "TmOutDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,12 +384,14 @@ public class TimeOutNotificationV03 {
 			complexType_lazy = () -> TimeOutResult2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeOutNotificationV03.class.getMethod("getTimeOutDescription", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TimeOutResult2 getValue(TimeOutNotificationV03 obj) {
+			return obj.getTimeOutDescription();
+		}
+
+		@Override
+		public void setValue(TimeOutNotificationV03 obj, TimeOutResult2 value) {
+			obj.setTimeOutDescription(value);
 		}
 	};
 	@XmlElement(name = "ReqForActn")
@@ -408,7 +419,7 @@ public class TimeOutNotificationV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TimeOutNotificationV03, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<TimeOutNotificationV03, Optional<PendingActivity2>>() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -419,12 +430,14 @@ public class TimeOutNotificationV03 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeOutNotificationV03.class.getMethod("getRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PendingActivity2> getValue(TimeOutNotificationV03 obj) {
+			return obj.getRequestForAction();
+		}
+
+		@Override
+		public void setValue(TimeOutNotificationV03 obj, Optional<PendingActivity2> value) {
+			obj.setRequestForAction(value.orElse(null));
 		}
 	};
 

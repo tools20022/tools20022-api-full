@@ -61,12 +61,50 @@ public class ConstraintInterestPaymentRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV08> forCorporateActionNotificationV08 = new MMConstraint<CorporateActionNotificationV08>() {
 		{
-			validator = ConstraintInterestPaymentRule::checkCorporateActionNotificationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRule";
 			definition = "CorporateActionDetails/RateAndAmountDetails/InterestRate and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. InterestRate is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPaymentRule.forCorporateActionNotificationV07;
 			owner_lazy = () -> CorporateActionNotificationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV08 obj) throws Exception {
+			checkCorporateActionNotificationV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V08
+	 * CorporateActionNotification002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterestPaymentRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CorporateActionDetails/RateAndAmountDetails/InterestRate and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. InterestRate is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotification002V08> forCorporateActionNotification002V08 = new MMConstraint<CorporateActionNotification002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InterestPaymentRule";
+			definition = "CorporateActionDetails/RateAndAmountDetails/InterestRate and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. InterestRate is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
+			owner_lazy = () -> CorporateActionNotification002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotification002V08 obj) throws Exception {
+			checkCorporateActionNotification002V08(obj);
 		}
 	};
 	/**
@@ -105,7 +143,6 @@ public class ConstraintInterestPaymentRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV07> forCorporateActionNotificationV07 = new MMConstraint<CorporateActionNotificationV07>() {
 		{
-			validator = ConstraintInterestPaymentRule::checkCorporateActionNotificationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRule";
 			definition = "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
@@ -113,35 +150,10 @@ public class ConstraintInterestPaymentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPaymentRule.forCorporateActionNotificationV06;
 			owner_lazy = () -> CorporateActionNotificationV07.mmObject();
 		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07
-	 * CorporateActionNotification002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InterestPaymentRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotification002V07> forCorporateActionNotification002V07 = new MMConstraint<CorporateActionNotification002V07>() {
-		{
-			validator = ConstraintInterestPaymentRule::checkCorporateActionNotification002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InterestPaymentRule";
-			definition = "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
-			owner_lazy = () -> CorporateActionNotification002V07.mmObject();
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV07 obj) throws Exception {
+			checkCorporateActionNotificationV07(obj);
 		}
 	};
 	/**
@@ -167,11 +179,15 @@ public class ConstraintInterestPaymentRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV02> forCorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
 		{
-			validator = ConstraintInterestPaymentRule::checkCorporateActionNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRule";
 			definition = "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
 			owner_lazy = () -> CorporateActionNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV02 obj) throws Exception {
+			checkCorporateActionNotificationV02(obj);
 		}
 	};
 	/**
@@ -197,11 +213,15 @@ public class ConstraintInterestPaymentRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV03> forCorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
 		{
-			validator = ConstraintInterestPaymentRule::checkCorporateActionNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRule";
 			definition = "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
 			owner_lazy = () -> CorporateActionNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV03 obj) throws Exception {
+			checkCorporateActionNotificationV03(obj);
 		}
 	};
 	/**
@@ -235,12 +255,16 @@ public class ConstraintInterestPaymentRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
-			validator = ConstraintInterestPaymentRule::checkCorporateActionNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRule";
 			definition = "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPaymentRule.forCorporateActionNotificationV05);
 			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
+			checkCorporateActionNotificationV04(obj);
 		}
 	};
 	/**
@@ -279,13 +303,17 @@ public class ConstraintInterestPaymentRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV05> forCorporateActionNotificationV05 = new MMConstraint<CorporateActionNotificationV05>() {
 		{
-			validator = ConstraintInterestPaymentRule::checkCorporateActionNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRule";
 			definition = "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPaymentRule.forCorporateActionNotificationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPaymentRule.forCorporateActionNotificationV04;
 			owner_lazy = () -> CorporateActionNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV05 obj) throws Exception {
+			checkCorporateActionNotificationV05(obj);
 		}
 	};
 	/**
@@ -324,13 +352,51 @@ public class ConstraintInterestPaymentRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV06> forCorporateActionNotificationV06 = new MMConstraint<CorporateActionNotificationV06>() {
 		{
-			validator = ConstraintInterestPaymentRule::checkCorporateActionNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentRule";
 			definition = "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPaymentRule.forCorporateActionNotificationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPaymentRule.forCorporateActionNotificationV05;
 			owner_lazy = () -> CorporateActionNotificationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV06 obj) throws Exception {
+			checkCorporateActionNotificationV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V06
+	 * CorporateActionNotification002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterestPaymentRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotification002V06> forCorporateActionNotification002V06 = new MMConstraint<CorporateActionNotification002V06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InterestPaymentRule";
+			definition = "CorporateActionDetails/RateAndAmountDetails/Interest and CorporateActionOptionsDetails/RateAndAmountDetails/InterestRateUsedforPayment must not be mixed. Interest is used to provide the annual rate of the financial instrument. InterestRateUsedforPayment is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
+			owner_lazy = () -> CorporateActionNotification002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotification002V06 obj) throws Exception {
+			checkCorporateActionNotification002V06(obj);
 		}
 	};
 
@@ -348,15 +414,15 @@ public class ConstraintInterestPaymentRule {
 	}
 
 	/**
-	 * CorporateActionDetails/RateAndAmountDetails/Interest and
+	 * CorporateActionDetails/RateAndAmountDetails/InterestRate and
 	 * CorporateActionOptionsDetails
 	 * /RateAndAmountDetails/InterestRateUsedforPayment must not be mixed.
-	 * Interest is used to provide the annual rate of the financial instrument.
-	 * InterestRateUsedforPayment is used to provide the applicable rate for the
-	 * current payment, after all calculations have been performed, that is,
-	 * application of period and method of interest computation.
+	 * InterestRate is used to provide the annual rate of the financial
+	 * instrument. InterestRateUsedforPayment is used to provide the applicable
+	 * rate for the current payment, after all calculations have been performed,
+	 * that is, application of period and method of interest computation.
 	 */
-	public static void checkCorporateActionNotificationV07(CorporateActionNotificationV07 obj) throws Exception {
+	public static void checkCorporateActionNotification002V08(CorporateActionNotification002V08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -369,7 +435,7 @@ public class ConstraintInterestPaymentRule {
 	 * current payment, after all calculations have been performed, that is,
 	 * application of period and method of interest computation.
 	 */
-	public static void checkCorporateActionNotification002V07(CorporateActionNotification002V07 obj) throws Exception {
+	public static void checkCorporateActionNotificationV07(CorporateActionNotificationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -435,6 +501,19 @@ public class ConstraintInterestPaymentRule {
 	 * application of period and method of interest computation.
 	 */
 	public static void checkCorporateActionNotificationV06(CorporateActionNotificationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * CorporateActionDetails/RateAndAmountDetails/Interest and
+	 * CorporateActionOptionsDetails
+	 * /RateAndAmountDetails/InterestRateUsedforPayment must not be mixed.
+	 * Interest is used to provide the annual rate of the financial instrument.
+	 * InterestRateUsedforPayment is used to provide the applicable rate for the
+	 * current payment, after all calculations have been performed, that is,
+	 * application of period and method of interest computation.
+	 */
+	public static void checkCorporateActionNotification002V06(CorporateActionNotification002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

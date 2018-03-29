@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount5;
+import com.tools20022.repository.msg.SubAccount3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +121,7 @@ public class InvestmentAccount30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount30, SecuritiesAccount5> mmAccount = new MMMessageAssociationEnd<InvestmentAccount30, SecuritiesAccount5>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmSecuritiesAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
@@ -131,7 +133,17 @@ public class InvestmentAccount30 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount5.mmObject();
+			type_lazy = () -> SecuritiesAccount5.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount5 getValue(InvestmentAccount30 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount30 obj, SecuritiesAccount5 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "Dsgnt")
@@ -170,7 +182,7 @@ public class InvestmentAccount30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount30, Optional<Max35Text>> mmDesignation = new MMMessageAttribute<InvestmentAccount30, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
@@ -182,6 +194,16 @@ public class InvestmentAccount30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount30 obj) {
+			return obj.getDesignation();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount30 obj, Optional<Max35Text> value) {
+			obj.setDesignation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ownr")
@@ -218,7 +240,7 @@ public class InvestmentAccount30 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount30, List<PartyIdentification2Choice>> mmOwner = new MMMessageAssociationEnd<InvestmentAccount30, List<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
@@ -230,6 +252,16 @@ public class InvestmentAccount30 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification2Choice> getValue(InvestmentAccount30 obj) {
+			return obj.getOwner();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount30 obj, List<PartyIdentification2Choice> value) {
+			obj.setOwner(value);
 		}
 	};
 	@XmlElement(name = "Svcr")
@@ -268,7 +300,7 @@ public class InvestmentAccount30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount30, Optional<PartyIdentification2Choice>> mmServicer = new MMMessageAssociationEnd<InvestmentAccount30, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
@@ -281,6 +313,16 @@ public class InvestmentAccount30 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(InvestmentAccount30 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount30 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubAcct")
@@ -317,7 +359,7 @@ public class InvestmentAccount30 {
 	 * "Sub-accounts that are grouped in a master or omnibus account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount30, Optional<SubAccount3>> mmSubAccount = new MMMessageAssociationEnd<InvestmentAccount30, Optional<SubAccount3>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
@@ -329,7 +371,17 @@ public class InvestmentAccount30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubAccount3.mmObject();
+			type_lazy = () -> SubAccount3.mmObject();
+		}
+
+		@Override
+		public Optional<SubAccount3> getValue(InvestmentAccount30 obj) {
+			return obj.getSubAccount();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount30 obj, Optional<SubAccount3> value) {
+			obj.setSubAccount(value.orElse(null));
 		}
 	};
 
@@ -352,7 +404,7 @@ public class InvestmentAccount30 {
 		return account;
 	}
 
-	public InvestmentAccount30 setAccount(com.tools20022.repository.msg.SecuritiesAccount5 account) {
+	public InvestmentAccount30 setAccount(SecuritiesAccount5 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -388,7 +440,7 @@ public class InvestmentAccount30 {
 		return subAccount == null ? Optional.empty() : Optional.of(subAccount);
 	}
 
-	public InvestmentAccount30 setSubAccount(com.tools20022.repository.msg.SubAccount3 subAccount) {
+	public InvestmentAccount30 setSubAccount(SubAccount3 subAccount) {
 		this.subAccount = subAccount;
 		return this;
 	}

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxExemptionReason1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +118,7 @@ public class SettlementSubTotalCalculatedTax1 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax1, Optional<Max4Text>> mmTypeCode = new MMMessageAttribute<SettlementSubTotalCalculatedTax1, Optional<Max4Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmObject();
@@ -129,6 +130,16 @@ public class SettlementSubTotalCalculatedTax1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(SettlementSubTotalCalculatedTax1 obj) {
+			return obj.getTypeCode();
+		}
+
+		@Override
+		public void setValue(SettlementSubTotalCalculatedTax1 obj, Optional<Max4Text> value) {
+			obj.setTypeCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtgyCd")
@@ -167,7 +178,7 @@ public class SettlementSubTotalCalculatedTax1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax1, Optional<Max4Text>> mmCategoryCode = new MMMessageAttribute<SettlementSubTotalCalculatedTax1, Optional<Max4Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmObject();
@@ -179,6 +190,16 @@ public class SettlementSubTotalCalculatedTax1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(SettlementSubTotalCalculatedTax1 obj) {
+			return obj.getCategoryCode();
+		}
+
+		@Override
+		public void setValue(SettlementSubTotalCalculatedTax1 obj, Optional<Max4Text> value) {
+			obj.setCategoryCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClctdAmt")
@@ -217,7 +238,7 @@ public class SettlementSubTotalCalculatedTax1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax1, List<CurrencyAndAmount>> mmCalculatedAmount = new MMMessageAttribute<SettlementSubTotalCalculatedTax1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmObject();
@@ -228,6 +249,16 @@ public class SettlementSubTotalCalculatedTax1 {
 			definition = "Monetary value resulting from the calculation of this tax, levy or duty.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementSubTotalCalculatedTax1 obj) {
+			return obj.getCalculatedAmount();
+		}
+
+		@Override
+		public void setValue(SettlementSubTotalCalculatedTax1 obj, List<CurrencyAndAmount> value) {
+			obj.setCalculatedAmount(value);
 		}
 	};
 	@XmlElement(name = "BsisAmt")
@@ -266,7 +297,7 @@ public class SettlementSubTotalCalculatedTax1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasisAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax1, List<CurrencyAndAmount>> mmBasisAmount = new MMMessageAttribute<SettlementSubTotalCalculatedTax1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmObject();
@@ -277,6 +308,16 @@ public class SettlementSubTotalCalculatedTax1 {
 			definition = "Monetary value used as the basis on which this tax, levy or duty is calculated.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementSubTotalCalculatedTax1 obj) {
+			return obj.getBasisAmount();
+		}
+
+		@Override
+		public void setValue(SettlementSubTotalCalculatedTax1 obj, List<CurrencyAndAmount> value) {
+			obj.setBasisAmount(value);
 		}
 	};
 	@XmlElement(name = "ClctdRate")
@@ -314,7 +355,7 @@ public class SettlementSubTotalCalculatedTax1 {
 	 * "Rate used to calculate the amount of this tax, levy or duty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculatedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax1, Optional<PercentageRate>> mmCalculatedRate = new MMMessageAttribute<SettlementSubTotalCalculatedTax1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmObject();
@@ -326,6 +367,16 @@ public class SettlementSubTotalCalculatedTax1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(SettlementSubTotalCalculatedTax1 obj) {
+			return obj.getCalculatedRate();
+		}
+
+		@Override
+		public void setValue(SettlementSubTotalCalculatedTax1 obj, Optional<PercentageRate> value) {
+			obj.setCalculatedRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XmptnRsn")
@@ -363,7 +414,7 @@ public class SettlementSubTotalCalculatedTax1 {
 	 * definition} = "Reason for a tax exemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSubTotalCalculatedTax1, Optional<TaxExemptionReason1>> mmExemptionReason = new MMMessageAttribute<SettlementSubTotalCalculatedTax1, Optional<TaxExemptionReason1>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementSubTotalCalculatedTax1.mmObject();
@@ -374,7 +425,17 @@ public class SettlementSubTotalCalculatedTax1 {
 			definition = "Reason for a tax exemption.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxExemptionReason1.mmObject();
+			complexType_lazy = () -> TaxExemptionReason1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxExemptionReason1> getValue(SettlementSubTotalCalculatedTax1 obj) {
+			return obj.getExemptionReason();
+		}
+
+		@Override
+		public void setValue(SettlementSubTotalCalculatedTax1 obj, Optional<TaxExemptionReason1> value) {
+			obj.setExemptionReason(value.orElse(null));
 		}
 	};
 
@@ -443,7 +504,7 @@ public class SettlementSubTotalCalculatedTax1 {
 		return exemptionReason == null ? Optional.empty() : Optional.of(exemptionReason);
 	}
 
-	public SettlementSubTotalCalculatedTax1 setExemptionReason(com.tools20022.repository.msg.TaxExemptionReason1 exemptionReason) {
+	public SettlementSubTotalCalculatedTax1 setExemptionReason(TaxExemptionReason1 exemptionReason) {
 		this.exemptionReason = exemptionReason;
 		return this;
 	}

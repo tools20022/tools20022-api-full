@@ -27,7 +27,6 @@ import com.tools20022.repository.choice.UnderlyingTransaction1Choice;
 import com.tools20022.repository.msg.Case2;
 import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -170,7 +169,7 @@ public class UnableToApplyV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UnableToApplyV03, CaseAssignment2> mmAssignment = new MMMessageBuildingBlock<UnableToApplyV03, CaseAssignment2>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +180,14 @@ public class UnableToApplyV03 {
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnableToApplyV03.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment2 getValue(UnableToApplyV03 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(UnableToApplyV03 obj, CaseAssignment2 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -212,7 +213,7 @@ public class UnableToApplyV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UnableToApplyV03, Case2> mmCase = new MMMessageBuildingBlock<UnableToApplyV03, Case2>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,12 +224,14 @@ public class UnableToApplyV03 {
 			complexType_lazy = () -> Case2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnableToApplyV03.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case2 getValue(UnableToApplyV03 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(UnableToApplyV03 obj, Case2 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -258,7 +261,7 @@ public class UnableToApplyV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UnableToApplyV03, UnderlyingTransaction1Choice> mmUnderlying = new MMMessageBuildingBlock<UnableToApplyV03, UnderlyingTransaction1Choice>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +272,14 @@ public class UnableToApplyV03 {
 			complexType_lazy = () -> UnderlyingTransaction1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnableToApplyV03.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnderlyingTransaction1Choice getValue(UnableToApplyV03 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(UnableToApplyV03 obj, UnderlyingTransaction1Choice value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Justfn", required = true)
@@ -304,7 +309,7 @@ public class UnableToApplyV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UnableToApplyV03, UnableToApplyJustification2Choice> mmJustification = new MMMessageBuildingBlock<UnableToApplyV03, UnableToApplyJustification2Choice>() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,12 +320,14 @@ public class UnableToApplyV03 {
 			complexType_lazy = () -> UnableToApplyJustification2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnableToApplyV03.class.getMethod("getJustification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnableToApplyJustification2Choice getValue(UnableToApplyV03 obj) {
+			return obj.getJustification();
+		}
+
+		@Override
+		public void setValue(UnableToApplyV03 obj, UnableToApplyJustification2Choice value) {
+			obj.setJustification(value);
 		}
 	};
 

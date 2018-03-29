@@ -114,7 +114,7 @@ public class GenericDocumentIdentification4 {
 	 * GenericDocumentIdentification1.mmMessageNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericDocumentIdentification4, Optional<DocumentNumber5Choice>> mmMessageNumber = new MMMessageAttribute<GenericDocumentIdentification4, Optional<DocumentNumber5Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification4.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class GenericDocumentIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentNumber5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber5Choice> getValue(GenericDocumentIdentification4 obj) {
+			return obj.getMessageNumber();
+		}
+
+		@Override
+		public void setValue(GenericDocumentIdentification4 obj, Optional<DocumentNumber5Choice> value) {
+			obj.setMessageNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -166,7 +176,7 @@ public class GenericDocumentIdentification4 {
 	 * GenericDocumentIdentification1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericDocumentIdentification4, Max35Text> mmIdentification = new MMMessageAttribute<GenericDocumentIdentification4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification4.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class GenericDocumentIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericDocumentIdentification4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericDocumentIdentification4 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

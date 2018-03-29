@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionEventAndBalance3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -148,7 +149,7 @@ public class AccountIdentification16 {
 	 * definition} = "Account where financial instruments are maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification16, Max35Text> mmSafekeepingAccount = new MMMessageAttribute<AccountIdentification16, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification16.mmObject();
@@ -161,6 +162,16 @@ public class AccountIdentification16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentification16 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(AccountIdentification16 obj, Max35Text value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -200,7 +211,7 @@ public class AccountIdentification16 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification16, Optional<PartyIdentification36Choice>> mmAccountOwner = new MMMessageAssociationEnd<AccountIdentification16, Optional<PartyIdentification36Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification16.mmObject();
@@ -214,6 +225,16 @@ public class AccountIdentification16 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification36Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification36Choice> getValue(AccountIdentification16 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(AccountIdentification16 obj, Optional<PartyIdentification36Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -254,7 +275,7 @@ public class AccountIdentification16 {
 	 * "Location where the financial instruments are/will be safekept."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification16, Optional<SafekeepingPlaceFormat2Choice>> mmSafekeepingPlace = new MMMessageAssociationEnd<AccountIdentification16, Optional<SafekeepingPlaceFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSafekeepingPlace;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification16.mmObject();
@@ -269,9 +290,19 @@ public class AccountIdentification16 {
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat2Choice.mmObject();
 		}
+
+		@Override
+		public Optional<SafekeepingPlaceFormat2Choice> getValue(AccountIdentification16 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(AccountIdentification16 obj, Optional<SafekeepingPlaceFormat2Choice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CorpActnEvtAndBal")
-	protected List<com.tools20022.repository.msg.CorporateActionEventAndBalance3> corporateActionEventAndBalance;
+	protected List<CorporateActionEventAndBalance3> corporateActionEventAndBalance;
 	/**
 	 * 
 	 <p>
@@ -306,7 +337,7 @@ public class AccountIdentification16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorporateActionEventAndBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification16, List<CorporateActionEventAndBalance3>> mmCorporateActionEventAndBalance = new MMMessageAssociationEnd<AccountIdentification16, List<CorporateActionEventAndBalance3>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmCorporateEvent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification16.mmObject();
@@ -317,7 +348,17 @@ public class AccountIdentification16 {
 			definition = "Detailed account holdings information report for a corporate action event.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance3.mmObject();
+			type_lazy = () -> CorporateActionEventAndBalance3.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionEventAndBalance3> getValue(AccountIdentification16 obj) {
+			return obj.getCorporateActionEventAndBalance();
+		}
+
+		@Override
+		public void setValue(AccountIdentification16 obj, List<CorporateActionEventAndBalance3> value) {
+			obj.setCorporateActionEventAndBalance(value);
 		}
 	};
 
@@ -370,7 +411,7 @@ public class AccountIdentification16 {
 		return corporateActionEventAndBalance == null ? corporateActionEventAndBalance = new ArrayList<>() : corporateActionEventAndBalance;
 	}
 
-	public AccountIdentification16 setCorporateActionEventAndBalance(List<com.tools20022.repository.msg.CorporateActionEventAndBalance3> corporateActionEventAndBalance) {
+	public AccountIdentification16 setCorporateActionEventAndBalance(List<CorporateActionEventAndBalance3> corporateActionEventAndBalance) {
 		this.corporateActionEventAndBalance = Objects.requireNonNull(corporateActionEventAndBalance);
 		return this;
 	}

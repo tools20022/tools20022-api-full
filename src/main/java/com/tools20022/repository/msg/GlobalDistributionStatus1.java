@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DistributionProcessingStatus1;
+import com.tools20022.repository.msg.DistributionRejectionStatus1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +122,7 @@ public class GlobalDistributionStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GlobalDistributionStatus1, DistributionProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<GlobalDistributionStatus1, DistributionProcessingStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GlobalDistributionStatus1.mmObject();
 			isDerived = false;
@@ -131,7 +133,17 @@ public class GlobalDistributionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DistributionProcessingStatus1.mmObject();
+			type_lazy = () -> DistributionProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public DistributionProcessingStatus1 getValue(GlobalDistributionStatus1 obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(GlobalDistributionStatus1 obj, DistributionProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -163,7 +175,7 @@ public class GlobalDistributionStatus1 {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GlobalDistributionStatus1, DistributionRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<GlobalDistributionStatus1, DistributionRejectionStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GlobalDistributionStatus1.mmObject();
 			isDerived = false;
@@ -174,7 +186,17 @@ public class GlobalDistributionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DistributionRejectionStatus1.mmObject();
+			type_lazy = () -> DistributionRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public DistributionRejectionStatus1 getValue(GlobalDistributionStatus1 obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(GlobalDistributionStatus1 obj, DistributionRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 	/**
@@ -244,7 +266,7 @@ public class GlobalDistributionStatus1 {
 		return processedStatus;
 	}
 
-	public GlobalDistributionStatus1 setProcessedStatus(com.tools20022.repository.msg.DistributionProcessingStatus1 processedStatus) {
+	public GlobalDistributionStatus1 setProcessedStatus(DistributionProcessingStatus1 processedStatus) {
 		this.processedStatus = Objects.requireNonNull(processedStatus);
 		return this;
 	}
@@ -253,7 +275,7 @@ public class GlobalDistributionStatus1 {
 		return rejectedStatus;
 	}
 
-	public GlobalDistributionStatus1 setRejectedStatus(com.tools20022.repository.msg.DistributionRejectionStatus1 rejectedStatus) {
+	public GlobalDistributionStatus1 setRejectedStatus(DistributionRejectionStatus1 rejectedStatus) {
 		this.rejectedStatus = Objects.requireNonNull(rejectedStatus);
 		return this;
 	}

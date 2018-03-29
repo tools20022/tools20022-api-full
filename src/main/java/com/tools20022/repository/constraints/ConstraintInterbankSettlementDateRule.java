@@ -54,11 +54,15 @@ public class ConstraintInterbankSettlementDateRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV01> forFIToFICustomerCreditTransferV01 = new MMConstraint<FIToFICustomerCreditTransferV01>() {
 		{
-			validator = ConstraintInterbankSettlementDateRule::checkFIToFICustomerCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDateRule";
 			definition = "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV01 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV01(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintInterbankSettlementDateRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV01> forFIToFICustomerDirectDebitV01 = new MMConstraint<FIToFICustomerDirectDebitV01>() {
 		{
-			validator = ConstraintInterbankSettlementDateRule::checkFIToFICustomerDirectDebitV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDateRule";
 			definition = "If GroupHeader/InterbankSettlementDate is present, then DirectDebitTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then DirectDebitTransactionInformation/InterbankSettlementDate must be present.";
 			owner_lazy = () -> FIToFICustomerDirectDebitV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV01 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV01(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintInterbankSettlementDateRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
 		{
-			validator = ConstraintInterbankSettlementDateRule::checkFIToFIPaymentReversalV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDateRule";
 			definition = "If GroupHeader/InterbankSettlementDate is present, then TransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then TransactionInformation/InterbankSettlementDate must be present.";
 			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
+			checkFIToFIPaymentReversalV01(obj);
 		}
 	};
 	/**
@@ -144,11 +156,15 @@ public class ConstraintInterbankSettlementDateRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV01> forFinancialInstitutionCreditTransferV01 = new MMConstraint<FinancialInstitutionCreditTransferV01>() {
 		{
-			validator = ConstraintInterbankSettlementDateRule::checkFinancialInstitutionCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDateRule";
 			definition = "If GroupHeader/InterbankSettlementDate is present, then CreditTransferTransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then CreditTransferTransactionInformation/InterbankSettlementDate must be present.";
 			owner_lazy = () -> FinancialInstitutionCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV01 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV01(obj);
 		}
 	};
 	/**
@@ -174,11 +190,15 @@ public class ConstraintInterbankSettlementDateRule {
 	 */
 	public static final MMConstraint<PaymentReturnV01> forPaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
 		{
-			validator = ConstraintInterbankSettlementDateRule::checkPaymentReturnV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDateRule";
 			definition = "If GroupHeader/InterbankSettlementDate is present, then TransactionInformation/InterbankSettlementDate is not allowed. \nIf GroupHeader/InterbankSettlementDate is not present, then TransactionInformation/InterbankSettlementDate must be present.";
 			owner_lazy = () -> PaymentReturnV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV01 obj) throws Exception {
+			checkPaymentReturnV01(obj);
 		}
 	};
 	/**
@@ -208,12 +228,16 @@ public class ConstraintInterbankSettlementDateRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction9> forCreditTransferTransaction9 = new MMConstraint<CreditTransferTransaction9>() {
 		{
-			validator = ConstraintInterbankSettlementDateRule::checkCreditTransferTransaction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDateRule";
 			definition = "If InterbankSettlementDate is present, then DirectDebitTransactionInformation/InterbankSettlementDate is not allowed.";
 			owner_lazy = () -> CreditTransferTransaction9.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction9 obj) throws Exception {
+			checkCreditTransferTransaction9(obj);
 		}
 	};
 

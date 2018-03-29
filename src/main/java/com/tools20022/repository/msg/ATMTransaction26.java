@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMOperation1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -112,7 +113,7 @@ public class ATMTransaction26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfOperation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction26, Optional<ATMOperation1Code>> mmTypeOfOperation = new MMMessageAttribute<ATMTransaction26, Optional<ATMOperation1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction26.mmObject();
 			isDerived = false;
@@ -123,6 +124,16 @@ public class ATMTransaction26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ATMOperation1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ATMOperation1Code> getValue(ATMTransaction26 obj) {
+			return obj.getTypeOfOperation();
+		}
+
+		@Override
+		public void setValue(ATMTransaction26 obj, Optional<ATMOperation1Code> value) {
+			obj.setTypeOfOperation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -153,7 +164,7 @@ public class ATMTransaction26 {
 	 * definition} = "Identification of the reconciliation transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction26, TransactionIdentifier1> mmTransactionIdentification = new MMMessageAssociationEnd<ATMTransaction26, TransactionIdentifier1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction26.mmObject();
 			isDerived = false;
@@ -164,7 +175,17 @@ public class ATMTransaction26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(ATMTransaction26 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction26 obj, TransactionIdentifier1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RcncltnId", required = true)
@@ -197,7 +218,7 @@ public class ATMTransaction26 {
 	 * "Identification of the reconciliation period assigned by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction26, Max35Text> mmReconciliationIdentification = new MMMessageAttribute<ATMTransaction26, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction26.mmObject();
 			isDerived = false;
@@ -208,6 +229,16 @@ public class ATMTransaction26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ATMTransaction26 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction26 obj, Max35Text value) {
+			obj.setReconciliationIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -238,7 +269,7 @@ public class ATMTransaction26 {
 	 * definition} = "Result of the reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction26, ResponseType7> mmTransactionResponse = new MMMessageAssociationEnd<ATMTransaction26, ResponseType7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction26.mmObject();
 			isDerived = false;
@@ -249,11 +280,21 @@ public class ATMTransaction26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType7.mmObject();
+			type_lazy = () -> ResponseType7.mmObject();
+		}
+
+		@Override
+		public ResponseType7 getValue(ATMTransaction26 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(ATMTransaction26 obj, ResponseType7 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 	@XmlElement(name = "ATMTtls")
-	protected List<com.tools20022.repository.msg.ATMTotals1> aTMTotals;
+	protected List<ATMTotals1> aTMTotals;
 	/**
 	 * 
 	 <p>
@@ -279,7 +320,7 @@ public class ATMTransaction26 {
 	 * definition} = "Current totals of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATMTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction26, List<ATMTotals1>> mmATMTotals = new MMMessageAssociationEnd<ATMTransaction26, List<ATMTotals1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction26.mmObject();
 			isDerived = false;
@@ -289,11 +330,21 @@ public class ATMTransaction26 {
 			definition = "Current totals of the ATM.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTotals1.mmObject();
+			type_lazy = () -> ATMTotals1.mmObject();
+		}
+
+		@Override
+		public List<ATMTotals1> getValue(ATMTransaction26 obj) {
+			return obj.getATMTotals();
+		}
+
+		@Override
+		public void setValue(ATMTransaction26 obj, List<ATMTotals1> value) {
+			obj.setATMTotals(value);
 		}
 	};
 	@XmlElement(name = "Csstt")
-	protected List<com.tools20022.repository.msg.ATMCassette2> cassette;
+	protected List<ATMCassette2> cassette;
 	/**
 	 * 
 	 <p>
@@ -320,7 +371,7 @@ public class ATMTransaction26 {
 	 * definition} = "Information on the cassettes of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCassette = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction26, List<ATMCassette2>> mmCassette = new MMMessageAssociationEnd<ATMTransaction26, List<ATMCassette2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction26.mmObject();
 			isDerived = false;
@@ -330,11 +381,21 @@ public class ATMTransaction26 {
 			definition = "Information on the cassettes of the ATM.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCassette2.mmObject();
+			type_lazy = () -> ATMCassette2.mmObject();
+		}
+
+		@Override
+		public List<ATMCassette2> getValue(ATMTransaction26 obj) {
+			return obj.getCassette();
+		}
+
+		@Override
+		public void setValue(ATMTransaction26 obj, List<ATMCassette2> value) {
+			obj.setCassette(value);
 		}
 	};
 	@XmlElement(name = "Cmd")
-	protected List<com.tools20022.repository.msg.ATMCommand7> command;
+	protected List<ATMCommand7> command;
 	/**
 	 * 
 	 <p>
@@ -361,7 +422,7 @@ public class ATMTransaction26 {
 	 * definition} = "Maintenance command to perform on the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction26, List<ATMCommand7>> mmCommand = new MMMessageAssociationEnd<ATMTransaction26, List<ATMCommand7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction26.mmObject();
 			isDerived = false;
@@ -371,7 +432,17 @@ public class ATMTransaction26 {
 			definition = "Maintenance command to perform on the ATM.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand7.mmObject();
+			type_lazy = () -> ATMCommand7.mmObject();
+		}
+
+		@Override
+		public List<ATMCommand7> getValue(ATMTransaction26 obj) {
+			return obj.getCommand();
+		}
+
+		@Override
+		public void setValue(ATMTransaction26 obj, List<ATMCommand7> value) {
+			obj.setCommand(value);
 		}
 	};
 
@@ -403,7 +474,7 @@ public class ATMTransaction26 {
 		return transactionIdentification;
 	}
 
-	public ATMTransaction26 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public ATMTransaction26 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
 		return this;
 	}
@@ -421,7 +492,7 @@ public class ATMTransaction26 {
 		return transactionResponse;
 	}
 
-	public ATMTransaction26 setTransactionResponse(com.tools20022.repository.msg.ResponseType7 transactionResponse) {
+	public ATMTransaction26 setTransactionResponse(ResponseType7 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}
@@ -430,7 +501,7 @@ public class ATMTransaction26 {
 		return aTMTotals == null ? aTMTotals = new ArrayList<>() : aTMTotals;
 	}
 
-	public ATMTransaction26 setATMTotals(List<com.tools20022.repository.msg.ATMTotals1> aTMTotals) {
+	public ATMTransaction26 setATMTotals(List<ATMTotals1> aTMTotals) {
 		this.aTMTotals = Objects.requireNonNull(aTMTotals);
 		return this;
 	}
@@ -439,7 +510,7 @@ public class ATMTransaction26 {
 		return cassette == null ? cassette = new ArrayList<>() : cassette;
 	}
 
-	public ATMTransaction26 setCassette(List<com.tools20022.repository.msg.ATMCassette2> cassette) {
+	public ATMTransaction26 setCassette(List<ATMCassette2> cassette) {
 		this.cassette = Objects.requireNonNull(cassette);
 		return this;
 	}
@@ -448,7 +519,7 @@ public class ATMTransaction26 {
 		return command == null ? command = new ArrayList<>() : command;
 	}
 
-	public ATMTransaction26 setCommand(List<com.tools20022.repository.msg.ATMCommand7> command) {
+	public ATMTransaction26 setCommand(List<ATMCommand7> command) {
 		this.command = Objects.requireNonNull(command);
 		return this;
 	}

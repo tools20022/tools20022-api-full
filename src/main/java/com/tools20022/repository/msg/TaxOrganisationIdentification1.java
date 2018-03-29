@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactDetails2;
+import com.tools20022.repository.msg.PostalAddress6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +121,7 @@ public class TaxOrganisationIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxOrganisationIdentification1, Max140Text> mmName = new MMMessageAttribute<TaxOrganisationIdentification1, Max140Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmPartyName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxOrganisationIdentification1.mmObject();
@@ -131,6 +133,16 @@ public class TaxOrganisationIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(TaxOrganisationIdentification1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(TaxOrganisationIdentification1 obj, Max140Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -168,7 +180,7 @@ public class TaxOrganisationIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxOrganisationIdentification1, Optional<PostalAddress6>> mmPostalAddress = new MMMessageAssociationEnd<TaxOrganisationIdentification1, Optional<PostalAddress6>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxOrganisationIdentification1.mmObject();
@@ -180,7 +192,17 @@ public class TaxOrganisationIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress6.mmObject();
+			type_lazy = () -> PostalAddress6.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress6> getValue(TaxOrganisationIdentification1 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(TaxOrganisationIdentification1 obj, Optional<PostalAddress6> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctDtls")
@@ -217,7 +239,7 @@ public class TaxOrganisationIdentification1 {
 	 * "Set of elements used to indicate how to contact the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxOrganisationIdentification1, Optional<ContactDetails2>> mmContactDetails = new MMMessageAssociationEnd<TaxOrganisationIdentification1, Optional<ContactDetails2>>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxOrganisationIdentification1.mmObject();
@@ -229,7 +251,17 @@ public class TaxOrganisationIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactDetails2.mmObject();
+			type_lazy = () -> ContactDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<ContactDetails2> getValue(TaxOrganisationIdentification1 obj) {
+			return obj.getContactDetails();
+		}
+
+		@Override
+		public void setValue(TaxOrganisationIdentification1 obj, Optional<ContactDetails2> value) {
+			obj.setContactDetails(value.orElse(null));
 		}
 	};
 
@@ -261,7 +293,7 @@ public class TaxOrganisationIdentification1 {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public TaxOrganisationIdentification1 setPostalAddress(com.tools20022.repository.msg.PostalAddress6 postalAddress) {
+	public TaxOrganisationIdentification1 setPostalAddress(PostalAddress6 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}
@@ -270,7 +302,7 @@ public class TaxOrganisationIdentification1 {
 		return contactDetails == null ? Optional.empty() : Optional.of(contactDetails);
 	}
 
-	public TaxOrganisationIdentification1 setContactDetails(com.tools20022.repository.msg.ContactDetails2 contactDetails) {
+	public TaxOrganisationIdentification1 setContactDetails(ContactDetails2 contactDetails) {
 		this.contactDetails = contactDetails;
 		return this;
 	}

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V06;
 import com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V07;
+import com.tools20022.repository.choice.UnmatchedStatus19Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason5;
@@ -128,7 +129,7 @@ public class MatchingStatus29Choice {
 	 * definition} = "Status is matched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus29Choice, ProprietaryReason5> mmMatched = new MMMessageAssociationEnd<MatchingStatus29Choice, ProprietaryReason5>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus29Choice.mmObject();
@@ -141,6 +142,16 @@ public class MatchingStatus29Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason5.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason5 getValue(MatchingStatus29Choice obj) {
+			return obj.getMatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus29Choice obj, ProprietaryReason5 value) {
+			obj.setMatched(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -177,7 +188,7 @@ public class MatchingStatus29Choice {
 	 * definition} = "Status is unmatched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus29Choice, UnmatchedStatus19Choice> mmUnmatched = new MMMessageAssociationEnd<MatchingStatus29Choice, UnmatchedStatus19Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus29Choice.mmObject();
@@ -189,7 +200,17 @@ public class MatchingStatus29Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus19Choice.mmObject();
+			type_lazy = () -> UnmatchedStatus19Choice.mmObject();
+		}
+
+		@Override
+		public UnmatchedStatus19Choice getValue(MatchingStatus29Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus29Choice obj, UnmatchedStatus19Choice value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -226,7 +247,7 @@ public class MatchingStatus29Choice {
 	 * definition} = "Proprietary status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus29Choice, ProprietaryStatusAndReason7> mmProprietary = new MMMessageAssociationEnd<MatchingStatus29Choice, ProprietaryStatusAndReason7>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus29Choice.mmObject();
@@ -239,6 +260,16 @@ public class MatchingStatus29Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason7.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason7 getValue(MatchingStatus29Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus29Choice obj, ProprietaryStatusAndReason7 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -272,7 +303,7 @@ public class MatchingStatus29Choice {
 		return unmatched;
 	}
 
-	public MatchingStatus29Choice setUnmatched(com.tools20022.repository.choice.UnmatchedStatus19Choice unmatched) {
+	public MatchingStatus29Choice setUnmatched(UnmatchedStatus19Choice unmatched) {
 		this.unmatched = Objects.requireNonNull(unmatched);
 		return this;
 	}

@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Fee2;
+import com.tools20022.repository.msg.Tax31;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -138,7 +140,7 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalOverheadApplied = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalFeesAndTaxes40, Optional<ActiveCurrencyAndAmount>> mmTotalOverheadApplied = new MMMessageAttribute<TotalFeesAndTaxes40, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmObject();
@@ -150,6 +152,16 @@ public class TotalFeesAndTaxes40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(TotalFeesAndTaxes40 obj) {
+			return obj.getTotalOverheadApplied();
+		}
+
+		@Override
+		public void setValue(TotalFeesAndTaxes40 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalOverheadApplied(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlFees")
@@ -188,7 +200,7 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalFeesAndTaxes40, Optional<ActiveCurrencyAndAmount>> mmTotalFees = new MMMessageAttribute<TotalFeesAndTaxes40, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmObject();
@@ -200,6 +212,16 @@ public class TotalFeesAndTaxes40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(TotalFeesAndTaxes40 obj) {
+			return obj.getTotalFees();
+		}
+
+		@Override
+		public void setValue(TotalFeesAndTaxes40 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalFees(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlTaxs")
@@ -239,7 +261,7 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTaxes = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalFeesAndTaxes40, Optional<ActiveCurrencyAndAmount>> mmTotalTaxes = new MMMessageAttribute<TotalFeesAndTaxes40, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmObject();
@@ -251,6 +273,16 @@ public class TotalFeesAndTaxes40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(TotalFeesAndTaxes40 obj) {
+			return obj.getTotalTaxes();
+		}
+
+		@Override
+		public void setValue(TotalFeesAndTaxes40 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalTaxes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ComrclAgrmtRef")
@@ -289,7 +321,7 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalFeesAndTaxes40, Optional<Max35Text>> mmCommercialAgreementReference = new MMMessageAttribute<TotalFeesAndTaxes40, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmObject();
@@ -302,9 +334,19 @@ public class TotalFeesAndTaxes40 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(TotalFeesAndTaxes40 obj) {
+			return obj.getCommercialAgreementReference();
+		}
+
+		@Override
+		public void setValue(TotalFeesAndTaxes40 obj, Optional<Max35Text> value) {
+			obj.setCommercialAgreementReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "IndvFee")
-	protected List<com.tools20022.repository.msg.Fee2> individualFee;
+	protected List<Fee2> individualFee;
 	/**
 	 * 
 	 <p>
@@ -341,7 +383,7 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualFee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalFeesAndTaxes40, List<Fee2>> mmIndividualFee = new MMMessageAssociationEnd<TotalFeesAndTaxes40, List<Fee2>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmObject();
@@ -353,11 +395,21 @@ public class TotalFeesAndTaxes40 {
 			nextVersions_lazy = () -> Arrays.asList(FeeAndTax1.mmIndividualFee);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Fee2.mmObject();
+			type_lazy = () -> Fee2.mmObject();
+		}
+
+		@Override
+		public List<Fee2> getValue(TotalFeesAndTaxes40 obj) {
+			return obj.getIndividualFee();
+		}
+
+		@Override
+		public void setValue(TotalFeesAndTaxes40 obj, List<Fee2> value) {
+			obj.setIndividualFee(value);
 		}
 	};
 	@XmlElement(name = "IndvTax")
-	protected List<com.tools20022.repository.msg.Tax31> individualTax;
+	protected List<Tax31> individualTax;
 	/**
 	 * 
 	 <p>
@@ -395,7 +447,7 @@ public class TotalFeesAndTaxes40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalFeesAndTaxes40, List<Tax31>> mmIndividualTax = new MMMessageAssociationEnd<TotalFeesAndTaxes40, List<Tax31>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmObject();
@@ -407,7 +459,17 @@ public class TotalFeesAndTaxes40 {
 			nextVersions_lazy = () -> Arrays.asList(FeeAndTax1.mmIndividualTax);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Tax31.mmObject();
+			type_lazy = () -> Tax31.mmObject();
+		}
+
+		@Override
+		public List<Tax31> getValue(TotalFeesAndTaxes40 obj) {
+			return obj.getIndividualTax();
+		}
+
+		@Override
+		public void setValue(TotalFeesAndTaxes40 obj, List<Tax31> value) {
+			obj.setIndividualTax(value);
 		}
 	};
 
@@ -470,7 +532,7 @@ public class TotalFeesAndTaxes40 {
 		return individualFee == null ? individualFee = new ArrayList<>() : individualFee;
 	}
 
-	public TotalFeesAndTaxes40 setIndividualFee(List<com.tools20022.repository.msg.Fee2> individualFee) {
+	public TotalFeesAndTaxes40 setIndividualFee(List<Fee2> individualFee) {
 		this.individualFee = Objects.requireNonNull(individualFee);
 		return this;
 	}
@@ -479,7 +541,7 @@ public class TotalFeesAndTaxes40 {
 		return individualTax == null ? individualTax = new ArrayList<>() : individualTax;
 	}
 
-	public TotalFeesAndTaxes40 setIndividualTax(List<com.tools20022.repository.msg.Tax31> individualTax) {
+	public TotalFeesAndTaxes40 setIndividualTax(List<Tax31> individualTax) {
 		this.individualTax = Objects.requireNonNull(individualTax);
 		return this;
 	}

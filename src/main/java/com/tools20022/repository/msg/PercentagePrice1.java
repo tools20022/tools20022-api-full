@@ -110,7 +110,7 @@ public class PercentagePrice1 {
 	 * definition} = "Specifies the type of percentage price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentagePriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentagePrice1, PriceRateType3Code> mmPercentagePriceType = new MMMessageAttribute<PercentagePrice1, PriceRateType3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PercentagePrice1.mmObject();
@@ -123,6 +123,16 @@ public class PercentagePrice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceRateType3Code.mmObject();
+		}
+
+		@Override
+		public PriceRateType3Code getValue(PercentagePrice1 obj) {
+			return obj.getPercentagePriceType();
+		}
+
+		@Override
+		public void setValue(PercentagePrice1 obj, PriceRateType3Code value) {
+			obj.setPercentagePriceType(value);
 		}
 	};
 	@XmlElement(name = "PricVal", required = true)
@@ -163,7 +173,7 @@ public class PercentagePrice1 {
 	 * definition} = "Specifies the value of price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentagePrice1, PercentageRate> mmPriceValue = new MMMessageAttribute<PercentagePrice1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PercentagePrice1.mmObject();
@@ -176,6 +186,16 @@ public class PercentagePrice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PercentagePrice1 obj) {
+			return obj.getPriceValue();
+		}
+
+		@Override
+		public void setValue(PercentagePrice1 obj, PercentageRate value) {
+			obj.setPriceValue(value);
 		}
 	};
 

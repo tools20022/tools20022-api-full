@@ -104,7 +104,7 @@ public class DatePeriod1Choice {
 	 * definition} = "Time span defined by a specific date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DatePeriod1Choice, ISODate> mmDate = new MMMessageAttribute<DatePeriod1Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriod1Choice.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class DatePeriod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DatePeriod1Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DatePeriod1Choice obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtMnth", required = true)
@@ -147,7 +157,7 @@ public class DatePeriod1Choice {
 	 * definition} = "Time span defined by a month and a year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateMonth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DatePeriod1Choice, ISOYearMonth> mmDateMonth = new MMMessageAttribute<DatePeriod1Choice, ISOYearMonth>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriod1Choice.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class DatePeriod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public ISOYearMonth getValue(DatePeriod1Choice obj) {
+			return obj.getDateMonth();
+		}
+
+		@Override
+		public void setValue(DatePeriod1Choice obj, ISOYearMonth value) {
+			obj.setDateMonth(value);
 		}
 	};
 	@XmlElement(name = "FrDtToDt", required = true)
@@ -187,7 +207,7 @@ public class DatePeriod1Choice {
 	 * definition} = "Time span defined by a start date and an end date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromDateToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DatePeriod1Choice, Period2> mmFromDateToDate = new MMMessageAssociationEnd<DatePeriod1Choice, Period2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriod1Choice.mmObject();
 			isDerived = false;
@@ -199,6 +219,16 @@ public class DatePeriod1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Period2.mmObject();
+		}
+
+		@Override
+		public Period2 getValue(DatePeriod1Choice obj) {
+			return obj.getFromDateToDate();
+		}
+
+		@Override
+		public void setValue(DatePeriod1Choice obj, Period2 value) {
+			obj.setFromDateToDate(value);
 		}
 	};
 

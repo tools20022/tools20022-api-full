@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentStatus1;
+import com.tools20022.repository.msg.PaymentTransactionParty2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -161,7 +163,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<Max35Text>> mmMessageIdentification = new MMMessageAttribute<PaymentInstruction1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -174,6 +176,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentInstruction1 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<Max35Text> value) {
+			obj.setMessageIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt")
@@ -221,7 +233,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<DateAndDateTimeChoice>> mmRequestedExecutionDate = new MMMessageAttribute<PaymentInstruction1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -235,9 +247,19 @@ public class PaymentInstruction1 {
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PaymentInstruction1 obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setRequestedExecutionDate(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Sts")
-	protected List<com.tools20022.repository.msg.PaymentStatus1> status;
+	protected List<PaymentStatus1> status;
 	/**
 	 * 
 	 <p>
@@ -278,7 +300,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction1, List<PaymentStatus1>> mmStatus = new MMMessageAssociationEnd<PaymentInstruction1, List<PaymentStatus1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -290,7 +312,17 @@ public class PaymentInstruction1 {
 			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction14.mmStatus);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmObject();
+			type_lazy = () -> PaymentStatus1.mmObject();
+		}
+
+		@Override
+		public List<PaymentStatus1> getValue(PaymentInstruction1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, List<PaymentStatus1> value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "InstdAmt")
@@ -338,7 +370,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<Amount3Choice>> mmInstructedAmount = new MMMessageAttribute<PaymentInstruction1, Optional<Amount3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -351,6 +383,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount3Choice> getValue(PaymentInstruction1 obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<Amount3Choice> value) {
+			obj.setInstructedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmAmt")
@@ -398,7 +440,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<Amount2Choice>> mmInterbankSettlementAmount = new MMMessageAttribute<PaymentInstruction1, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -411,6 +453,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(PaymentInstruction1 obj) {
+			return obj.getInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<Amount2Choice> value) {
+			obj.setInterbankSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Purp")
@@ -455,7 +507,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<Max10Text>> mmPurpose = new MMMessageAttribute<PaymentInstruction1, Optional<Max10Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -468,6 +520,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max10Text> getValue(PaymentInstruction1 obj) {
+			return obj.getPurpose();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<Max10Text> value) {
+			obj.setPurpose(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtMtd")
@@ -514,7 +576,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction1, Optional<PaymentOrigin1Choice>> mmPaymentMethod = new MMMessageAssociationEnd<PaymentInstruction1, Optional<PaymentOrigin1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -528,6 +590,16 @@ public class PaymentInstruction1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentOrigin1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentOrigin1Choice> getValue(PaymentInstruction1 obj) {
+			return obj.getPaymentMethod();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<PaymentOrigin1Choice> value) {
+			obj.setPaymentMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -575,7 +647,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<PriorityCodeChoice>> mmPriority = new MMMessageAttribute<PaymentInstruction1, Optional<PriorityCodeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -588,6 +660,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityCodeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<PriorityCodeChoice> getValue(PaymentInstruction1 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<PriorityCodeChoice> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgVldtyTm")
@@ -635,7 +717,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<DateTimePeriodChoice>> mmProcessingValidityTime = new MMMessageAttribute<PaymentInstruction1, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmProcessingValidityTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -648,6 +730,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(PaymentInstruction1 obj) {
+			return obj.getProcessingValidityTime();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setProcessingValidityTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrCpy")
@@ -688,7 +780,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionCopy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<Max20000Text>> mmInstructionCopy = new MMMessageAttribute<PaymentInstruction1, Optional<Max20000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
 			isDerived = false;
@@ -700,6 +792,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max20000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max20000Text> getValue(PaymentInstruction1 obj) {
+			return obj.getInstructionCopy();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<Max20000Text> value) {
+			obj.setInstructionCopy(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -744,7 +846,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction1, Optional<PaymentType3Choice>> mmType = new MMMessageAssociationEnd<PaymentInstruction1, Optional<PaymentType3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -758,6 +860,16 @@ public class PaymentInstruction1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentType3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentType3Choice> getValue(PaymentInstruction1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<PaymentType3Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GnrtdOrdr")
@@ -800,7 +912,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGeneratedOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<TrueFalseIndicator>> mmGeneratedOrder = new MMMessageAttribute<PaymentInstruction1, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
 			isDerived = false;
@@ -812,6 +924,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(PaymentInstruction1 obj) {
+			return obj.getGeneratedOrder();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<TrueFalseIndicator> value) {
+			obj.setGeneratedOrder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxId")
@@ -858,7 +980,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<Max35Text>> mmTransactionIdentification = new MMMessageAttribute<PaymentInstruction1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -871,6 +993,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentInstruction1 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<Max35Text> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt")
@@ -917,7 +1049,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<ISODate>> mmInterbankSettlementDate = new MMMessageAttribute<PaymentInstruction1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -930,6 +1062,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PaymentInstruction1 obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<ISODate> value) {
+			obj.setInterbankSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndToEndId")
@@ -976,7 +1118,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction1, Optional<Max35Text>> mmEndToEndIdentification = new MMMessageAttribute<PaymentInstruction1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -989,6 +1131,16 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentInstruction1 obj) {
+			return obj.getEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<Max35Text> value) {
+			obj.setEndToEndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pties")
@@ -1033,7 +1185,7 @@ public class PaymentInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction1, Optional<PaymentTransactionParty2>> mmParties = new MMMessageAssociationEnd<PaymentInstruction1, Optional<PaymentTransactionParty2>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction1.mmObject();
@@ -1046,7 +1198,17 @@ public class PaymentInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty2.mmObject();
+			type_lazy = () -> PaymentTransactionParty2.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTransactionParty2> getValue(PaymentInstruction1 obj) {
+			return obj.getParties();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction1 obj, Optional<PaymentTransactionParty2> value) {
+			obj.setParties(value.orElse(null));
 		}
 	};
 
@@ -1092,7 +1254,7 @@ public class PaymentInstruction1 {
 		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public PaymentInstruction1 setStatus(List<com.tools20022.repository.msg.PaymentStatus1> status) {
+	public PaymentInstruction1 setStatus(List<PaymentStatus1> status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}
@@ -1209,7 +1371,7 @@ public class PaymentInstruction1 {
 		return parties == null ? Optional.empty() : Optional.of(parties);
 	}
 
-	public PaymentInstruction1 setParties(com.tools20022.repository.msg.PaymentTransactionParty2 parties) {
+	public PaymentInstruction1 setParties(PaymentTransactionParty2 parties) {
 		this.parties = parties;
 		return this;
 	}

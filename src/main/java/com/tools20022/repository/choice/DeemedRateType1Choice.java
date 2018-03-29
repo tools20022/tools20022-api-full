@@ -125,7 +125,7 @@ public class DeemedRateType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeemedRateType1Choice, DeemedRateType1Code> mmCode = new MMMessageAttribute<DeemedRateType1Choice, DeemedRateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmWithholdingTaxType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeemedRateType1Choice.mmObject();
@@ -138,6 +138,16 @@ public class DeemedRateType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeemedRateType1Code.mmObject();
+		}
+
+		@Override
+		public DeemedRateType1Code getValue(DeemedRateType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DeemedRateType1Choice obj, DeemedRateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class DeemedRateType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeemedRateType1Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<DeemedRateType1Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmWithholdingTaxType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeemedRateType1Choice.mmObject();
@@ -196,6 +206,16 @@ public class DeemedRateType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(DeemedRateType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DeemedRateType1Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

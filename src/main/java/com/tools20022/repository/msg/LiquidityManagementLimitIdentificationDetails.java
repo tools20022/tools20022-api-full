@@ -116,7 +116,7 @@ public class LiquidityManagementLimitIdentificationDetails {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityManagementLimitIdentificationDetails, Optional<SystemIdentificationChoice>> mmSystemIdentification = new MMMessageAttribute<LiquidityManagementLimitIdentificationDetails, Optional<SystemIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmObject();
@@ -128,6 +128,16 @@ public class LiquidityManagementLimitIdentificationDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentificationChoice> getValue(LiquidityManagementLimitIdentificationDetails obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(LiquidityManagementLimitIdentificationDetails obj, Optional<SystemIdentificationChoice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -165,7 +175,7 @@ public class LiquidityManagementLimitIdentificationDetails {
 	 * definition} = "Type of liquidity management limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityManagementLimitIdentificationDetails, LiquidityLimitType1Code> mmType = new MMMessageAttribute<LiquidityManagementLimitIdentificationDetails, LiquidityLimitType1Code>() {
 		{
 			businessElementTrace_lazy = () -> LiquidityManagementLimit.mmLiquidityLimitType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmObject();
@@ -177,6 +187,16 @@ public class LiquidityManagementLimitIdentificationDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LiquidityLimitType1Code.mmObject();
+		}
+
+		@Override
+		public LiquidityLimitType1Code getValue(LiquidityManagementLimitIdentificationDetails obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(LiquidityManagementLimitIdentificationDetails obj, LiquidityLimitType1Code value) {
+			obj.setType(value);
 		}
 	};
 

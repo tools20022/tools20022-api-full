@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LiquidityAndStatistics1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -147,7 +148,7 @@ public class Bid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Max35Text> mmClientBidIdentification = new MMMessageAttribute<Bid1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
@@ -159,6 +160,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Bid1 obj) {
+			return obj.getClientBidIdentification();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Max35Text value) {
+			obj.setClientBidIdentification(value);
 		}
 	};
 	@XmlElement(name = "ListNm")
@@ -196,7 +207,7 @@ public class Bid1 {
 	 * definition} = "Provides the name of the order list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Optional<Max128Text>> mmListName = new MMMessageAttribute<Bid1, Optional<Max128Text>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -209,6 +220,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max128Text> getValue(Bid1 obj) {
+			return obj.getListName();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Optional<Max128Text> value) {
+			obj.setListName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BidId")
@@ -241,7 +262,7 @@ public class Bid1 {
 	 * definition} = "Unique and unambiguous identification of the bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Optional<Max35Text>> mmBidIdentification = new MMMessageAttribute<Bid1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
@@ -253,6 +274,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Bid1 obj) {
+			return obj.getBidIdentification();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Optional<Max35Text> value) {
+			obj.setBidIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbScties", required = true)
@@ -292,7 +323,7 @@ public class Bid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Number> mmTotalNumberSecurities = new MMMessageAttribute<Bid1, Number>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -305,6 +336,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Bid1 obj) {
+			return obj.getTotalNumberSecurities();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Number value) {
+			obj.setTotalNumberSecurities(value);
 		}
 	};
 	@XmlElement(name = "XchgForPhysInd", required = true)
@@ -343,7 +384,7 @@ public class Bid1 {
 	 * definition} = "Indicates whether or not to exchange for physical."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeForPhysicalIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, YesNoIndicator> mmExchangeForPhysicalIndicator = new MMMessageAttribute<Bid1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmExchangeForPhysicalTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -356,6 +397,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Bid1 obj) {
+			return obj.getExchangeForPhysicalIndicator();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, YesNoIndicator value) {
+			obj.setExchangeForPhysicalIndicator(value);
 		}
 	};
 	@XmlElement(name = "FrgnXchgExctnReqdInd", required = true)
@@ -396,7 +447,7 @@ public class Bid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignExchangeExecutionRequestedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, YesNoIndicator> mmForeignExchangeExecutionRequestedIndicator = new MMMessageAttribute<Bid1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmForeignExchangeExecutionRequested;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -409,6 +460,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Bid1 obj) {
+			return obj.getForeignExchangeExecutionRequestedIndicator();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, YesNoIndicator value) {
+			obj.setForeignExchangeExecutionRequestedIndicator(value);
 		}
 	};
 	@XmlElement(name = "TradTp", required = true)
@@ -448,7 +509,7 @@ public class Bid1 {
 	 * "Indicates the type of transaction of which the order is a component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, TradeType2Code> mmTradeType = new MMMessageAttribute<Bid1, TradeType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -461,6 +522,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeType2Code.mmObject();
+		}
+
+		@Override
+		public TradeType2Code getValue(Bid1 obj) {
+			return obj.getTradeType();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, TradeType2Code value) {
+			obj.setTradeType(value);
 		}
 	};
 	@XmlElement(name = "TtlNbTckts")
@@ -499,7 +570,7 @@ public class Bid1 {
 	 * "Expected total number of tickets/allocations to be fully executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberTickets = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Optional<Number>> mmTotalNumberTickets = new MMMessageAttribute<Bid1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSecuritiesOrderAllocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -512,6 +583,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Bid1 obj) {
+			return obj.getTotalNumberTickets();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Optional<Number> value) {
+			obj.setTotalNumberTickets(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrgrsRptInd")
@@ -547,7 +628,7 @@ public class Bid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProgressReportIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Optional<YesNoIndicator>> mmProgressReportIndicator = new MMMessageAttribute<Bid1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
@@ -559,6 +640,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Bid1 obj) {
+			return obj.getProgressReportIndicator();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Optional<YesNoIndicator> value) {
+			obj.setProgressReportIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrgrsPrdIntrvl")
@@ -593,7 +684,7 @@ public class Bid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProgressPeriodInterval = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Optional<ISOTime>> mmProgressPeriodInterval = new MMMessageAttribute<Bid1, Optional<ISOTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
@@ -605,6 +696,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISOTime> getValue(Bid1 obj) {
+			return obj.getProgressPeriodInterval();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Optional<ISOTime> value) {
+			obj.setProgressPeriodInterval(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfBddrs")
@@ -640,7 +741,7 @@ public class Bid1 {
 	 * "Indicates the total number of bidders participating to a list trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfBidders = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Optional<Number>> mmTotalNumberOfBidders = new MMMessageAttribute<Bid1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmNumberOfBidders;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -652,6 +753,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Bid1 obj) {
+			return obj.getTotalNumberOfBidders();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Optional<Number> value) {
+			obj.setTotalNumberOfBidders(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -689,7 +800,7 @@ public class Bid1 {
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Optional<ISODateTime>> mmTradeDate = new MMMessageAttribute<Bid1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -702,6 +813,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Bid1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Optional<ISODateTime> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrkTm")
@@ -741,7 +862,7 @@ public class Bid1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikeTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Bid1, Optional<ISODateTime>> mmStrikeTime = new MMMessageAttribute<Bid1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmStrikeTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -754,6 +875,16 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Bid1 obj) {
+			return obj.getStrikeTime();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, Optional<ISODateTime> value) {
+			obj.setStrikeTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BsisPricTp", required = true)
@@ -789,7 +920,7 @@ public class Bid1 {
 	 * "Represents the basis price type in a bid order (list trading)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBasisPriceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Bid1, BasisPriceType1Choice> mmBasisPriceType = new MMMessageAssociationEnd<Bid1, BasisPriceType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmBasisPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -802,6 +933,16 @@ public class Bid1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BasisPriceType1Choice.mmObject();
+		}
+
+		@Override
+		public BasisPriceType1Choice getValue(Bid1 obj) {
+			return obj.getBasisPriceType();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, BasisPriceType1Choice value) {
+			obj.setBasisPriceType(value);
 		}
 	};
 	@XmlElement(name = "LqdtyAndSttstcs", required = true)
@@ -837,7 +978,7 @@ public class Bid1 {
 	 * "General details about the liquidity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLiquidityAndStatistics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Bid1, LiquidityAndStatistics1> mmLiquidityAndStatistics = new MMMessageAssociationEnd<Bid1, LiquidityAndStatistics1>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmLiquidity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
@@ -849,7 +990,17 @@ public class Bid1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
+			type_lazy = () -> LiquidityAndStatistics1.mmObject();
+		}
+
+		@Override
+		public LiquidityAndStatistics1 getValue(Bid1 obj) {
+			return obj.getLiquidityAndStatistics();
+		}
+
+		@Override
+		public void setValue(Bid1 obj, LiquidityAndStatistics1 value) {
+			obj.setLiquidityAndStatistics(value);
 		}
 	};
 
@@ -1002,7 +1153,7 @@ public class Bid1 {
 		return liquidityAndStatistics;
 	}
 
-	public Bid1 setLiquidityAndStatistics(com.tools20022.repository.msg.LiquidityAndStatistics1 liquidityAndStatistics) {
+	public Bid1 setLiquidityAndStatistics(LiquidityAndStatistics1 liquidityAndStatistics) {
 		this.liquidityAndStatistics = Objects.requireNonNull(liquidityAndStatistics);
 		return this;
 	}

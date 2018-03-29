@@ -111,7 +111,7 @@ public class RegistrationReason4 {
 	 * definition} = "Specifies the reaoson of the holding status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RegistrationReason4, Registration8Choice> mmCode = new MMMessageAssociationEnd<RegistrationReason4, Registration8Choice>() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmRegistrationInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationReason4.mmObject();
@@ -124,6 +124,16 @@ public class RegistrationReason4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Registration8Choice.mmObject();
+		}
+
+		@Override
+		public Registration8Choice getValue(RegistrationReason4 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RegistrationReason4 obj, Registration8Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -158,7 +168,7 @@ public class RegistrationReason4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegistrationReason4, Optional<RestrictedFINXMax210Text>> mmAdditionalInformation = new MMMessageAttribute<RegistrationReason4, Optional<RestrictedFINXMax210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationReason4.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class RegistrationReason4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(RegistrationReason4 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(RegistrationReason4 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

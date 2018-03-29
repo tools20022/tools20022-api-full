@@ -101,7 +101,7 @@ public class TradeQueryExecutionFrequency1Choice {
 	 * definition} = "Query is executed on a daily basis."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDaily = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeQueryExecutionFrequency1Choice, NoReasonCode> mmDaily = new MMMessageAttribute<TradeQueryExecutionFrequency1Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeQueryExecutionFrequency1Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class TradeQueryExecutionFrequency1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(TradeQueryExecutionFrequency1Choice obj) {
+			return obj.getDaily();
+		}
+
+		@Override
+		public void setValue(TradeQueryExecutionFrequency1Choice obj, NoReasonCode value) {
+			obj.setDaily(value);
 		}
 	};
 	@XmlElement(name = "Wkly", required = true)
@@ -145,7 +155,7 @@ public class TradeQueryExecutionFrequency1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWeekly = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeQueryExecutionFrequency1Choice, WeekDay2Code> mmWeekly = new MMMessageAttribute<TradeQueryExecutionFrequency1Choice, WeekDay2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeQueryExecutionFrequency1Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class TradeQueryExecutionFrequency1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WeekDay2Code.mmObject();
+		}
+
+		@Override
+		public WeekDay2Code getValue(TradeQueryExecutionFrequency1Choice obj) {
+			return obj.getWeekly();
+		}
+
+		@Override
+		public void setValue(TradeQueryExecutionFrequency1Choice obj, WeekDay2Code value) {
+			obj.setWeekly(value);
 		}
 	};
 	@XmlElement(name = "Mnthly", required = true)
@@ -189,7 +209,7 @@ public class TradeQueryExecutionFrequency1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMonthly = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeQueryExecutionFrequency1Choice, Max3Number> mmMonthly = new MMMessageAttribute<TradeQueryExecutionFrequency1Choice, Max3Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeQueryExecutionFrequency1Choice.mmObject();
 			isDerived = false;
@@ -200,6 +220,16 @@ public class TradeQueryExecutionFrequency1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3Number.mmObject();
+		}
+
+		@Override
+		public Max3Number getValue(TradeQueryExecutionFrequency1Choice obj) {
+			return obj.getMonthly();
+		}
+
+		@Override
+		public void setValue(TradeQueryExecutionFrequency1Choice obj, Max3Number value) {
+			obj.setMonthly(value);
 		}
 	};
 

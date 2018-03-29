@@ -122,7 +122,7 @@ public class ReferredDocumentType1 {
 	 * definition} = "Document type in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentType1, DocumentType2Code> mmCode = new MMMessageAttribute<ReferredDocumentType1, DocumentType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
@@ -134,6 +134,16 @@ public class ReferredDocumentType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DocumentType2Code.mmObject();
+		}
+
+		@Override
+		public DocumentType2Code getValue(ReferredDocumentType1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentType1 obj, DocumentType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -171,7 +181,7 @@ public class ReferredDocumentType1 {
 	 * "Proprietary identification of the type of the remittance document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentType1, Max35Text> mmProprietary = new MMMessageAttribute<ReferredDocumentType1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
@@ -183,6 +193,16 @@ public class ReferredDocumentType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReferredDocumentType1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentType1 obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -220,7 +240,7 @@ public class ReferredDocumentType1 {
 	 * "Identification of the issuer of the reference document type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentType1, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<ReferredDocumentType1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> DocumentIssuer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
@@ -232,6 +252,16 @@ public class ReferredDocumentType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReferredDocumentType1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentType1 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	/**

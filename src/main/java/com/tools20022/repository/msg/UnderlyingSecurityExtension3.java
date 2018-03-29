@@ -100,7 +100,7 @@ public class UnderlyingSecurityExtension3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension3, Max350Text> mmPlaceAndName = new MMMessageAttribute<UnderlyingSecurityExtension3, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension3.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class UnderlyingSecurityExtension3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(UnderlyingSecurityExtension3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension3 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCAsstTp")
@@ -148,7 +158,7 @@ public class UnderlyingSecurityExtension3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension3, Optional<DTCAssetType1Code>> mmDTCAssetType = new MMMessageAttribute<UnderlyingSecurityExtension3, Optional<DTCAssetType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension3.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class UnderlyingSecurityExtension3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAssetType1Code> getValue(UnderlyingSecurityExtension3 obj) {
+			return obj.getDTCAssetType();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension3 obj, Optional<DTCAssetType1Code> value) {
+			obj.setDTCAssetType(value.orElse(null));
 		}
 	};
 

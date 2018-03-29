@@ -121,7 +121,7 @@ public class SettlementTransactionCondition18Choice {
 	 * SettlementTransactionCondition7Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTransactionCondition18Choice, SettlementTransactionCondition6Code> mmCode = new MMMessageAttribute<SettlementTransactionCondition18Choice, SettlementTransactionCondition6Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition18Choice.mmObject();
@@ -135,6 +135,16 @@ public class SettlementTransactionCondition18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementTransactionCondition6Code.mmObject();
+		}
+
+		@Override
+		public SettlementTransactionCondition6Code getValue(SettlementTransactionCondition18Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionCondition18Choice obj, SettlementTransactionCondition6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class SettlementTransactionCondition18Choice {
 	 * SettlementTransactionCondition7Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTransactionCondition18Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<SettlementTransactionCondition18Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition18Choice.mmObject();
@@ -194,6 +204,16 @@ public class SettlementTransactionCondition18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(SettlementTransactionCondition18Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionCondition18Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

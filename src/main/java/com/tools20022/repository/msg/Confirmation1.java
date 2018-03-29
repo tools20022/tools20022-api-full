@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.Max35NumericText;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MessageIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -149,7 +150,7 @@ public class Confirmation1 {
 	 * definition} = "Identifies the status of the confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, TradeConfirmationStatus1Code> mmConfirmationStatus = new MMMessageAttribute<Confirmation1, TradeConfirmationStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -160,6 +161,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeConfirmationStatus1Code.mmObject();
+		}
+
+		@Override
+		public TradeConfirmationStatus1Code getValue(Confirmation1 obj) {
+			return obj.getConfirmationStatus();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, TradeConfirmationStatus1Code value) {
+			obj.setConfirmationStatus(value);
 		}
 	};
 	@XmlElement(name = "ConfTm")
@@ -190,7 +201,7 @@ public class Confirmation1 {
 	 * definition} = "Time that both of parties confirm the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, Optional<ISODateTime>> mmConfirmationTime = new MMMessageAttribute<Confirmation1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -201,6 +212,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Confirmation1 obj) {
+			return obj.getConfirmationTime();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, Optional<ISODateTime> value) {
+			obj.setConfirmationTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradPtyConfTm")
@@ -231,7 +252,7 @@ public class Confirmation1 {
 	 * definition} = "Time that the trade party confirms the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradePartyConfirmationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, Optional<ISODateTime>> mmTradePartyConfirmationTime = new MMMessageAttribute<Confirmation1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -242,6 +263,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Confirmation1 obj) {
+			return obj.getTradePartyConfirmationTime();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, Optional<ISODateTime> value) {
+			obj.setTradePartyConfirmationTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitgPtyConfTm")
@@ -272,7 +303,7 @@ public class Confirmation1 {
 	 * definition} = "Time that the initiating party confirms the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitiatingPartyConfirmationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, Optional<ISODateTime>> mmInitiatingPartyConfirmationTime = new MMMessageAttribute<Confirmation1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -283,6 +314,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Confirmation1 obj) {
+			return obj.getInitiatingPartyConfirmationTime();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, Optional<ISODateTime> value) {
+			obj.setInitiatingPartyConfirmationTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConfTp", required = true)
@@ -314,7 +355,7 @@ public class Confirmation1 {
 	 * definition} = "Identifies the type of confirmation message being sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, ConfirmationRequest1Code> mmConfirmationType = new MMMessageAttribute<Confirmation1, ConfirmationRequest1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -325,6 +366,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConfirmationRequest1Code.mmObject();
+		}
+
+		@Override
+		public ConfirmationRequest1Code getValue(Confirmation1 obj) {
+			return obj.getConfirmationType();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, ConfirmationRequest1Code value) {
+			obj.setConfirmationType(value);
 		}
 	};
 	@XmlElement(name = "ReqId", required = true)
@@ -354,7 +405,7 @@ public class Confirmation1 {
 	 * definition} = "Identifies the confirm request messge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Confirmation1, MessageIdentification1> mmRequestIdentification = new MMMessageAssociationEnd<Confirmation1, MessageIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -365,7 +416,17 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification1.mmObject();
+			type_lazy = () -> MessageIdentification1.mmObject();
+		}
+
+		@Override
+		public MessageIdentification1 getValue(Confirmation1 obj) {
+			return obj.getRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, MessageIdentification1 value) {
+			obj.setRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "QryStartNb", required = true)
@@ -397,7 +458,7 @@ public class Confirmation1 {
 	 * definition} = "Start number in request result."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryStartNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, Max35NumericText> mmQueryStartNumber = new MMMessageAttribute<Confirmation1, Max35NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -408,6 +469,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
+		}
+
+		@Override
+		public Max35NumericText getValue(Confirmation1 obj) {
+			return obj.getQueryStartNumber();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, Max35NumericText value) {
+			obj.setQueryStartNumber(value);
 		}
 	};
 	@XmlElement(name = "TtlNbOfRpts", required = true)
@@ -439,7 +510,7 @@ public class Confirmation1 {
 	 * "Total number of reports returned in response to a request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfReports = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, Number> mmTotalNumberOfReports = new MMMessageAttribute<Confirmation1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -450,6 +521,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Confirmation1 obj) {
+			return obj.getTotalNumberOfReports();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, Number value) {
+			obj.setTotalNumberOfReports(value);
 		}
 	};
 	@XmlElement(name = "PgNb", required = true)
@@ -483,7 +564,7 @@ public class Confirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, Max35NumericText> mmPageNumber = new MMMessageAttribute<Confirmation1, Max35NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -494,6 +575,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
+		}
+
+		@Override
+		public Max35NumericText getValue(Confirmation1 obj) {
+			return obj.getPageNumber();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, Max35NumericText value) {
+			obj.setPageNumber(value);
 		}
 	};
 	@XmlElement(name = "QryPgNb", required = true)
@@ -525,7 +616,7 @@ public class Confirmation1 {
 	 * definition} = "Page number in request result."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryPageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, Max35NumericText> mmQueryPageNumber = new MMMessageAttribute<Confirmation1, Max35NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -536,6 +627,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
+		}
+
+		@Override
+		public Max35NumericText getValue(Confirmation1 obj) {
+			return obj.getQueryPageNumber();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, Max35NumericText value) {
+			obj.setQueryPageNumber(value);
 		}
 	};
 	@XmlElement(name = "MsgNbOfCurPg", required = true)
@@ -566,7 +667,7 @@ public class Confirmation1 {
 	 * definition} = "Number of messages in current page."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageNumberOfCurrentPage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, Number> mmMessageNumberOfCurrentPage = new MMMessageAttribute<Confirmation1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -577,6 +678,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Confirmation1 obj) {
+			return obj.getMessageNumberOfCurrentPage();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, Number value) {
+			obj.setMessageNumberOfCurrentPage(value);
 		}
 	};
 	@XmlElement(name = "ListOrdrNb", required = true)
@@ -607,7 +718,7 @@ public class Confirmation1 {
 	 * definition} = "Number of reports at current page."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListOrderNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, Number> mmListOrderNumber = new MMMessageAttribute<Confirmation1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -618,6 +729,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Confirmation1 obj) {
+			return obj.getListOrderNumber();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, Number value) {
+			obj.setListOrderNumber(value);
 		}
 	};
 	@XmlElement(name = "LastPgInd", required = true)
@@ -651,7 +772,7 @@ public class Confirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastPageIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, YesNoIndicator> mmLastPageIndicator = new MMMessageAttribute<Confirmation1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -662,6 +783,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Confirmation1 obj) {
+			return obj.getLastPageIndicator();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, YesNoIndicator value) {
+			obj.setLastPageIndicator(value);
 		}
 	};
 	@XmlElement(name = "LastRptReqd", required = true)
@@ -695,7 +826,7 @@ public class Confirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastReportRequested = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Confirmation1, YesNoIndicator> mmLastReportRequested = new MMMessageAttribute<Confirmation1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Confirmation1.mmObject();
 			isDerived = false;
@@ -706,6 +837,16 @@ public class Confirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Confirmation1 obj) {
+			return obj.getLastReportRequested();
+		}
+
+		@Override
+		public void setValue(Confirmation1 obj, YesNoIndicator value) {
+			obj.setLastReportRequested(value);
 		}
 	};
 
@@ -777,7 +918,7 @@ public class Confirmation1 {
 		return requestIdentification;
 	}
 
-	public Confirmation1 setRequestIdentification(com.tools20022.repository.msg.MessageIdentification1 requestIdentification) {
+	public Confirmation1 setRequestIdentification(MessageIdentification1 requestIdentification) {
 		this.requestIdentification = Objects.requireNonNull(requestIdentification);
 		return this;
 	}

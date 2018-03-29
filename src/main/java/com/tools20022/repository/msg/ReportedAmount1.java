@@ -99,7 +99,7 @@ public class ReportedAmount1 {
 	 * definition} = "Identification of the reported amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportedAmount1, Max35Text> mmIdentification = new MMMessageAttribute<ReportedAmount1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportedAmount1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class ReportedAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportedAmount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ReportedAmount1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -142,7 +152,7 @@ public class ReportedAmount1 {
 	 * definition} = "Type of reported amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportedAmount1, ExternalUndertakingAmountType1Code> mmType = new MMMessageAttribute<ReportedAmount1, ExternalUndertakingAmountType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportedAmount1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class ReportedAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingAmountType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalUndertakingAmountType1Code getValue(ReportedAmount1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReportedAmount1 obj, ExternalUndertakingAmountType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -185,7 +205,7 @@ public class ReportedAmount1 {
 	 * definition} = "Amount reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportedAmount1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<ReportedAmount1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportedAmount1.mmObject();
 			isDerived = false;
@@ -196,6 +216,16 @@ public class ReportedAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ReportedAmount1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ReportedAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

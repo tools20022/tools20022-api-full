@@ -117,7 +117,7 @@ public class PlaceOfPresentation1 {
 	 * definition} = "Place of the presentation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfPresentation1, ExternalTypeOfParty1Code> mmPlace = new MMMessageAttribute<PlaceOfPresentation1, ExternalTypeOfParty1Code>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlaceOfPresentation1.mmObject();
@@ -129,6 +129,16 @@ public class PlaceOfPresentation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalTypeOfParty1Code.mmObject();
+		}
+
+		@Override
+		public ExternalTypeOfParty1Code getValue(PlaceOfPresentation1 obj) {
+			return obj.getPlace();
+		}
+
+		@Override
+		public void setValue(PlaceOfPresentation1 obj, ExternalTypeOfParty1Code value) {
+			obj.setPlace(value);
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -165,7 +175,7 @@ public class PlaceOfPresentation1 {
 	 * definition} = "Country where a presentation is to be made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfPresentation1, Optional<CountryCode>> mmCountry = new MMMessageAttribute<PlaceOfPresentation1, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlaceOfPresentation1.mmObject();
@@ -177,6 +187,16 @@ public class PlaceOfPresentation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(PlaceOfPresentation1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PlaceOfPresentation1 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 

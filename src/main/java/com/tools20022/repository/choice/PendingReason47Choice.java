@@ -111,7 +111,7 @@ public class PendingReason47Choice {
 	 * "Specifies the reason why the instruction has a pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingReason47Choice, PendingReason8Code> mmCode = new MMMessageAttribute<PendingReason47Choice, PendingReason8Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingReason47Choice.mmObject();
@@ -123,6 +123,16 @@ public class PendingReason47Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingReason8Code.mmObject();
+		}
+
+		@Override
+		public PendingReason8Code getValue(PendingReason47Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingReason47Choice obj, PendingReason8Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -160,7 +170,7 @@ public class PendingReason47Choice {
 	 * "Specifies the reason why the instruction has a pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingReason47Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<PendingReason47Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingReason47Choice.mmObject();
@@ -173,6 +183,16 @@ public class PendingReason47Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(PendingReason47Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingReason47Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.DateCode11Choice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateCodeAndTimeFormat1;
 import java.util.Arrays;
@@ -120,7 +122,7 @@ public class DateFormat20Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat20Choice, DateAndDateTimeChoice> mmDate = new MMMessageAssociationEnd<DateFormat20Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat20Choice.mmObject();
 			isDerived = false;
@@ -133,7 +135,17 @@ public class DateFormat20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat20Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat20Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCdAndTm", required = true)
@@ -172,7 +184,7 @@ public class DateFormat20Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCodeAndTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat20Choice, DateCodeAndTimeFormat1> mmDateCodeAndTime = new MMMessageAssociationEnd<DateFormat20Choice, DateCodeAndTimeFormat1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat20Choice.mmObject();
 			isDerived = false;
@@ -185,6 +197,16 @@ public class DateFormat20Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateCodeAndTimeFormat1.mmObject();
+		}
+
+		@Override
+		public DateCodeAndTimeFormat1 getValue(DateFormat20Choice obj) {
+			return obj.getDateCodeAndTime();
+		}
+
+		@Override
+		public void setValue(DateFormat20Choice obj, DateCodeAndTimeFormat1 value) {
+			obj.setDateCodeAndTime(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -226,7 +248,7 @@ public class DateFormat20Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat20Choice, DateCode11Choice> mmDateCode = new MMMessageAssociationEnd<DateFormat20Choice, DateCode11Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat20Choice.mmObject();
 			isDerived = false;
@@ -239,7 +261,17 @@ public class DateFormat20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateCode11Choice.mmObject();
+			type_lazy = () -> DateCode11Choice.mmObject();
+		}
+
+		@Override
+		public DateCode11Choice getValue(DateFormat20Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat20Choice obj, DateCode11Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -262,7 +294,7 @@ public class DateFormat20Choice {
 		return date;
 	}
 
-	public DateFormat20Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat20Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -280,7 +312,7 @@ public class DateFormat20Choice {
 		return dateCode;
 	}
 
-	public DateFormat20Choice setDateCode(com.tools20022.repository.choice.DateCode11Choice dateCode) {
+	public DateFormat20Choice setDateCode(DateCode11Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

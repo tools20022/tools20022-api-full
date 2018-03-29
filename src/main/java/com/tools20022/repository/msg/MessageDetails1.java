@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CBRFReportEntry1;
+import com.tools20022.repository.msg.Pagination;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -108,7 +110,7 @@ public class MessageDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageDetails1, Optional<Max35Text>> mmReportIdentification = new MMMessageAttribute<MessageDetails1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
@@ -119,6 +121,16 @@ public class MessageDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MessageDetails1 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(MessageDetails1 obj, Optional<Max35Text> value) {
+			obj.setReportIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptPgntn")
@@ -150,7 +162,7 @@ public class MessageDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportPagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageDetails1, Optional<Pagination>> mmReportPagination = new MMMessageAssociationEnd<MessageDetails1, Optional<Pagination>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
@@ -161,7 +173,17 @@ public class MessageDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			type_lazy = () -> Pagination.mmObject();
+		}
+
+		@Override
+		public Optional<Pagination> getValue(MessageDetails1 obj) {
+			return obj.getReportPagination();
+		}
+
+		@Override
+		public void setValue(MessageDetails1 obj, Optional<Pagination> value) {
+			obj.setReportPagination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfNtries", required = true)
@@ -194,7 +216,7 @@ public class MessageDetails1 {
 	 * definition} = "Number of entries in the pool."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfEntries = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageDetails1, Max9NumericText> mmTotalNumberOfEntries = new MMMessageAttribute<MessageDetails1, Max9NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
@@ -206,9 +228,19 @@ public class MessageDetails1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
+
+		@Override
+		public Max9NumericText getValue(MessageDetails1 obj) {
+			return obj.getTotalNumberOfEntries();
+		}
+
+		@Override
+		public void setValue(MessageDetails1 obj, Max9NumericText value) {
+			obj.setTotalNumberOfEntries(value);
+		}
 	};
 	@XmlElement(name = "SntNtry")
-	protected List<com.tools20022.repository.msg.CBRFReportEntry1> sentEntry;
+	protected List<CBRFReportEntry1> sentEntry;
 	/**
 	 * 
 	 <p>
@@ -237,7 +269,7 @@ public class MessageDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSentEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageDetails1, List<CBRFReportEntry1>> mmSentEntry = new MMMessageAssociationEnd<MessageDetails1, List<CBRFReportEntry1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
@@ -247,11 +279,21 @@ public class MessageDetails1 {
 			definition = "Set of elements used to provide details of the report of sent messages.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CBRFReportEntry1.mmObject();
+			type_lazy = () -> CBRFReportEntry1.mmObject();
+		}
+
+		@Override
+		public List<CBRFReportEntry1> getValue(MessageDetails1 obj) {
+			return obj.getSentEntry();
+		}
+
+		@Override
+		public void setValue(MessageDetails1 obj, List<CBRFReportEntry1> value) {
+			obj.setSentEntry(value);
 		}
 	};
 	@XmlElement(name = "RcvdNtry")
-	protected List<com.tools20022.repository.msg.CBRFReportEntry1> receivedEntry;
+	protected List<CBRFReportEntry1> receivedEntry;
 	/**
 	 * 
 	 <p>
@@ -280,7 +322,7 @@ public class MessageDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivedEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageDetails1, List<CBRFReportEntry1>> mmReceivedEntry = new MMMessageAssociationEnd<MessageDetails1, List<CBRFReportEntry1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageDetails1.mmObject();
 			isDerived = false;
@@ -290,7 +332,17 @@ public class MessageDetails1 {
 			definition = "Set of elements used to provide details of the report of received messages.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CBRFReportEntry1.mmObject();
+			type_lazy = () -> CBRFReportEntry1.mmObject();
+		}
+
+		@Override
+		public List<CBRFReportEntry1> getValue(MessageDetails1 obj) {
+			return obj.getReceivedEntry();
+		}
+
+		@Override
+		public void setValue(MessageDetails1 obj, List<CBRFReportEntry1> value) {
+			obj.setReceivedEntry(value);
 		}
 	};
 
@@ -321,7 +373,7 @@ public class MessageDetails1 {
 		return reportPagination == null ? Optional.empty() : Optional.of(reportPagination);
 	}
 
-	public MessageDetails1 setReportPagination(com.tools20022.repository.msg.Pagination reportPagination) {
+	public MessageDetails1 setReportPagination(Pagination reportPagination) {
 		this.reportPagination = reportPagination;
 		return this;
 	}
@@ -339,7 +391,7 @@ public class MessageDetails1 {
 		return sentEntry == null ? sentEntry = new ArrayList<>() : sentEntry;
 	}
 
-	public MessageDetails1 setSentEntry(List<com.tools20022.repository.msg.CBRFReportEntry1> sentEntry) {
+	public MessageDetails1 setSentEntry(List<CBRFReportEntry1> sentEntry) {
 		this.sentEntry = Objects.requireNonNull(sentEntry);
 		return this;
 	}
@@ -348,7 +400,7 @@ public class MessageDetails1 {
 		return receivedEntry == null ? receivedEntry = new ArrayList<>() : receivedEntry;
 	}
 
-	public MessageDetails1 setReceivedEntry(List<com.tools20022.repository.msg.CBRFReportEntry1> receivedEntry) {
+	public MessageDetails1 setReceivedEntry(List<CBRFReportEntry1> receivedEntry) {
 		this.receivedEntry = Objects.requireNonNull(receivedEntry);
 		return this;
 	}

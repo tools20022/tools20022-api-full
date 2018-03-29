@@ -128,7 +128,7 @@ public class BankContactPerson1Choice {
 	 * definition} = "Person to be contacted in the buyer's bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyerBankContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BankContactPerson1Choice, List<ContactIdentification1>> mmBuyerBankContactPerson = new MMMessageAssociationEnd<BankContactPerson1Choice, List<ContactIdentification1>>() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BankContactPerson1Choice.mmObject();
@@ -140,6 +140,16 @@ public class BankContactPerson1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		@Override
+		public List<ContactIdentification1> getValue(BankContactPerson1Choice obj) {
+			return obj.getBuyerBankContactPerson();
+		}
+
+		@Override
+		public void setValue(BankContactPerson1Choice obj, List<ContactIdentification1> value) {
+			obj.setBuyerBankContactPerson(value);
 		}
 	};
 	@XmlElement(name = "SellrBkCtctPrsn", required = true)
@@ -175,7 +185,7 @@ public class BankContactPerson1Choice {
 	 * definition} = "Person to be contacted in the seller's bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSellerBankContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BankContactPerson1Choice, List<ContactIdentification1>> mmSellerBankContactPerson = new MMMessageAssociationEnd<BankContactPerson1Choice, List<ContactIdentification1>>() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BankContactPerson1Choice.mmObject();
@@ -187,6 +197,16 @@ public class BankContactPerson1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		@Override
+		public List<ContactIdentification1> getValue(BankContactPerson1Choice obj) {
+			return obj.getSellerBankContactPerson();
+		}
+
+		@Override
+		public void setValue(BankContactPerson1Choice obj, List<ContactIdentification1> value) {
+			obj.setSellerBankContactPerson(value);
 		}
 	};
 

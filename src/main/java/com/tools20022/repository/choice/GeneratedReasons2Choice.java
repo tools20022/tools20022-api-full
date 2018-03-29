@@ -113,7 +113,7 @@ public class GeneratedReasons2Choice {
 	 * definition} = "Specifies the reason why the transaction was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneratedReasons2Choice, GeneratedReason2Code> mmCode = new MMMessageAttribute<GeneratedReasons2Choice, GeneratedReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmGeneratedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedReasons2Choice.mmObject();
@@ -126,6 +126,16 @@ public class GeneratedReasons2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GeneratedReason2Code.mmObject();
+		}
+
+		@Override
+		public GeneratedReason2Code getValue(GeneratedReasons2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(GeneratedReasons2Choice obj, GeneratedReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class GeneratedReasons2Choice {
 	 * definition} = "Specifies the reason why the transaction was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneratedReasons2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<GeneratedReasons2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmGeneratedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedReasons2Choice.mmObject();
@@ -179,6 +189,16 @@ public class GeneratedReasons2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(GeneratedReasons2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(GeneratedReasons2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

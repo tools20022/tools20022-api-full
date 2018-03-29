@@ -113,7 +113,7 @@ public class Limit1 {
 	 * definition} = "Number of occurrences of a particular event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit1, Max3NumericText> mmCurrent = new MMMessageAttribute<Limit1, Max3NumericText>() {
 		{
 			businessComponentTrace_lazy = () -> Limit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit1.mmObject();
@@ -125,6 +125,16 @@ public class Limit1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Max3NumericText getValue(Limit1 obj) {
+			return obj.getCurrent();
+		}
+
+		@Override
+		public void setValue(Limit1 obj, Max3NumericText value) {
+			obj.setCurrent(value);
 		}
 	};
 	@XmlElement(name = "Lmt", required = true)
@@ -161,7 +171,7 @@ public class Limit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit1, Max3NumericText> mmLimit = new MMMessageAttribute<Limit1, Max3NumericText>() {
 		{
 			businessComponentTrace_lazy = () -> Limit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit1.mmObject();
@@ -173,6 +183,16 @@ public class Limit1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Max3NumericText getValue(Limit1 obj) {
+			return obj.getLimit();
+		}
+
+		@Override
+		public void setValue(Limit1 obj, Max3NumericText value) {
+			obj.setLimit(value);
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -120,7 +121,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccountAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountAuditTrailReport1, AuditTrailOrBusinessError1Choice> mmSecuritiesAccountAuditTrailOrError = new MMMessageAssociationEnd<SecuritiesAccountAuditTrailReport1, AuditTrailOrBusinessError1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -133,6 +134,16 @@ public class SecuritiesAccountAuditTrailReport1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
+		}
+
+		@Override
+		public AuditTrailOrBusinessError1Choice getValue(SecuritiesAccountAuditTrailReport1 obj) {
+			return obj.getSecuritiesAccountAuditTrailOrError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountAuditTrailReport1 obj, AuditTrailOrBusinessError1Choice value) {
+			obj.setSecuritiesAccountAuditTrailOrError(value);
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -173,7 +184,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountAuditTrailReport1, Optional<DateSearchChoice>> mmDatePeriod = new MMMessageAttribute<SecuritiesAccountAuditTrailReport1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -185,6 +196,16 @@ public class SecuritiesAccountAuditTrailReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(SecuritiesAccountAuditTrailReport1 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountAuditTrailReport1 obj, Optional<DateSearchChoice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesAcctId", required = true)
@@ -227,7 +248,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountAuditTrailReport1, SecuritiesAccount13> mmSecuritiesAccountIdentification = new MMMessageAttribute<SecuritiesAccountAuditTrailReport1, SecuritiesAccount13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -238,7 +259,17 @@ public class SecuritiesAccountAuditTrailReport1 {
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailReport2.mmSecuritiesAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			complexType_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount13 getValue(SecuritiesAccountAuditTrailReport1 obj) {
+			return obj.getSecuritiesAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountAuditTrailReport1 obj, SecuritiesAccount13 value) {
+			obj.setSecuritiesAccountIdentification(value);
 		}
 	};
 
@@ -279,7 +310,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 		return securitiesAccountIdentification;
 	}
 
-	public SecuritiesAccountAuditTrailReport1 setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccountIdentification) {
+	public SecuritiesAccountAuditTrailReport1 setSecuritiesAccountIdentification(SecuritiesAccount13 securitiesAccountIdentification) {
 		this.securitiesAccountIdentification = Objects.requireNonNull(securitiesAccountIdentification);
 		return this;
 	}

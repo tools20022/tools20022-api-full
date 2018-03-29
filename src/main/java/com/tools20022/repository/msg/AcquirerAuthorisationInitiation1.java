@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardTransaction15;
+import com.tools20022.repository.msg.CardTransactionContext1;
+import com.tools20022.repository.msg.CardTransactionEnvironment1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +111,7 @@ public class AcquirerAuthorisationInitiation1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerAuthorisationInitiation1, CardTransactionEnvironment1> mmEnvironment = new MMMessageAssociationEnd<AcquirerAuthorisationInitiation1, CardTransactionEnvironment1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmObject();
 			isDerived = false;
@@ -119,7 +122,17 @@ public class AcquirerAuthorisationInitiation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment1.mmObject();
+			type_lazy = () -> CardTransactionEnvironment1.mmObject();
+		}
+
+		@Override
+		public CardTransactionEnvironment1 getValue(AcquirerAuthorisationInitiation1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcquirerAuthorisationInitiation1 obj, CardTransactionEnvironment1 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cntxt", required = true)
@@ -151,7 +164,7 @@ public class AcquirerAuthorisationInitiation1 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerAuthorisationInitiation1, CardTransactionContext1> mmContext = new MMMessageAssociationEnd<AcquirerAuthorisationInitiation1, CardTransactionContext1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmObject();
 			isDerived = false;
@@ -162,7 +175,17 @@ public class AcquirerAuthorisationInitiation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransactionContext1.mmObject();
+			type_lazy = () -> CardTransactionContext1.mmObject();
+		}
+
+		@Override
+		public CardTransactionContext1 getValue(AcquirerAuthorisationInitiation1 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(AcquirerAuthorisationInitiation1 obj, CardTransactionContext1 value) {
+			obj.setContext(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -194,7 +217,7 @@ public class AcquirerAuthorisationInitiation1 {
 	 * "Card transaction for which the authorisation is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerAuthorisationInitiation1, CardTransaction15> mmTransaction = new MMMessageAssociationEnd<AcquirerAuthorisationInitiation1, CardTransaction15>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmObject();
 			isDerived = false;
@@ -205,7 +228,17 @@ public class AcquirerAuthorisationInitiation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransaction15.mmObject();
+			type_lazy = () -> CardTransaction15.mmObject();
+		}
+
+		@Override
+		public CardTransaction15 getValue(AcquirerAuthorisationInitiation1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcquirerAuthorisationInitiation1 obj, CardTransaction15 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -228,7 +261,7 @@ public class AcquirerAuthorisationInitiation1 {
 		return environment;
 	}
 
-	public AcquirerAuthorisationInitiation1 setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment1 environment) {
+	public AcquirerAuthorisationInitiation1 setEnvironment(CardTransactionEnvironment1 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -237,7 +270,7 @@ public class AcquirerAuthorisationInitiation1 {
 		return context;
 	}
 
-	public AcquirerAuthorisationInitiation1 setContext(com.tools20022.repository.msg.CardTransactionContext1 context) {
+	public AcquirerAuthorisationInitiation1 setContext(CardTransactionContext1 context) {
 		this.context = Objects.requireNonNull(context);
 		return this;
 	}
@@ -246,7 +279,7 @@ public class AcquirerAuthorisationInitiation1 {
 		return transaction;
 	}
 
-	public AcquirerAuthorisationInitiation1 setTransaction(com.tools20022.repository.msg.CardTransaction15 transaction) {
+	public AcquirerAuthorisationInitiation1 setTransaction(CardTransaction15 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

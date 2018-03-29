@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount17;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -111,7 +113,7 @@ public class CashParties2 {
 	 * definition} = "Party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashParties2, Optional<PartyIdentificationAndAccount17>> mmCreditor = new MMMessageAttribute<CashParties2, Optional<PartyIdentificationAndAccount17>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties2.mmObject();
@@ -123,7 +125,17 @@ public class CashParties2 {
 			definition = "Party to which an amount of money is due.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount17.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount17.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount17> getValue(CashParties2 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(CashParties2 obj, Optional<PartyIdentificationAndAccount17> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -164,7 +176,7 @@ public class CashParties2 {
 	 * "Financial institution servicing an account for the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashParties2, Optional<PartyIdentificationAndAccount18>> mmCreditorAgent = new MMMessageAttribute<CashParties2, Optional<PartyIdentificationAndAccount18>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties2.mmObject();
@@ -176,7 +188,17 @@ public class CashParties2 {
 			definition = "Financial institution servicing an account for the creditor.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount18.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount18.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount18> getValue(CashParties2 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties2 obj, Optional<PartyIdentificationAndAccount18> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktClmCtrPty")
@@ -218,7 +240,7 @@ public class CashParties2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketClaimCounterparty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashParties2, Optional<PartyIdentificationAndAccount17>> mmMarketClaimCounterparty = new MMMessageAttribute<CashParties2, Optional<PartyIdentificationAndAccount17>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties2.mmObject();
@@ -230,7 +252,17 @@ public class CashParties2 {
 			definition = "Party that has reimbursed the account owner with funds to which they were legally entitled.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount17.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount17.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount17> getValue(CashParties2 obj) {
+			return obj.getMarketClaimCounterparty();
+		}
+
+		@Override
+		public void setValue(CashParties2 obj, Optional<PartyIdentificationAndAccount17> value) {
+			obj.setMarketClaimCounterparty(value.orElse(null));
 		}
 	};
 
@@ -253,7 +285,7 @@ public class CashParties2 {
 		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public CashParties2 setCreditor(com.tools20022.repository.msg.PartyIdentificationAndAccount17 creditor) {
+	public CashParties2 setCreditor(PartyIdentificationAndAccount17 creditor) {
 		this.creditor = creditor;
 		return this;
 	}
@@ -262,7 +294,7 @@ public class CashParties2 {
 		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public CashParties2 setCreditorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount18 creditorAgent) {
+	public CashParties2 setCreditorAgent(PartyIdentificationAndAccount18 creditorAgent) {
 		this.creditorAgent = creditorAgent;
 		return this;
 	}
@@ -271,7 +303,7 @@ public class CashParties2 {
 		return marketClaimCounterparty == null ? Optional.empty() : Optional.of(marketClaimCounterparty);
 	}
 
-	public CashParties2 setMarketClaimCounterparty(com.tools20022.repository.msg.PartyIdentificationAndAccount17 marketClaimCounterparty) {
+	public CashParties2 setMarketClaimCounterparty(PartyIdentificationAndAccount17 marketClaimCounterparty) {
 		this.marketClaimCounterparty = marketClaimCounterparty;
 		return this;
 	}

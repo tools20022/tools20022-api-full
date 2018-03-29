@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification70;
+import com.tools20022.repository.msg.ResponseType1;
+import com.tools20022.repository.msg.TMSTrigger1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -146,7 +149,7 @@ public class AuthorisationResult6 {
 	 * AuthorisationResult3.mmAuthorisationEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisationEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthorisationResult6, Optional<GenericIdentification70>> mmAuthorisationEntity = new MMMessageAssociationEnd<AuthorisationResult6, Optional<GenericIdentification70>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.mmObject();
@@ -160,7 +163,17 @@ public class AuthorisationResult6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification70.mmObject();
+			type_lazy = () -> GenericIdentification70.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification70> getValue(AuthorisationResult6 obj) {
+			return obj.getAuthorisationEntity();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult6 obj, Optional<GenericIdentification70> value) {
+			obj.setAuthorisationEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnToAuthstn", required = true)
@@ -212,7 +225,7 @@ public class AuthorisationResult6 {
 	 * AuthorisationResult3.mmResponseToAuthorisation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponseToAuthorisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthorisationResult6, ResponseType1> mmResponseToAuthorisation = new MMMessageAssociationEnd<AuthorisationResult6, ResponseType1>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.mmObject();
@@ -226,7 +239,17 @@ public class AuthorisationResult6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType1.mmObject();
+			type_lazy = () -> ResponseType1.mmObject();
+		}
+
+		@Override
+		public ResponseType1 getValue(AuthorisationResult6 obj) {
+			return obj.getResponseToAuthorisation();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult6 obj, ResponseType1 value) {
+			obj.setResponseToAuthorisation(value);
 		}
 	};
 	@XmlElement(name = "AuthstnCd")
@@ -280,7 +303,7 @@ public class AuthorisationResult6 {
 	 * AuthorisationResult3.mmAuthorisationCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthorisationResult6, Optional<Min6Max8Text>> mmAuthorisationCode = new MMMessageAttribute<AuthorisationResult6, Optional<Min6Max8Text>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmAuthorisationCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.mmObject();
@@ -294,6 +317,16 @@ public class AuthorisationResult6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min6Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Min6Max8Text> getValue(AuthorisationResult6 obj) {
+			return obj.getAuthorisationCode();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult6 obj, Optional<Min6Max8Text> value) {
+			obj.setAuthorisationCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TMSTrggr")
@@ -344,7 +377,7 @@ public class AuthorisationResult6 {
 	 * AuthorisationResult3.mmTMSTrigger}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMSTrigger = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthorisationResult6, Optional<TMSTrigger1>> mmTMSTrigger = new MMMessageAttribute<AuthorisationResult6, Optional<TMSTrigger1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult6.mmObject();
@@ -357,7 +390,17 @@ public class AuthorisationResult6 {
 			previousVersion_lazy = () -> AuthorisationResult3.mmTMSTrigger;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
+			complexType_lazy = () -> TMSTrigger1.mmObject();
+		}
+
+		@Override
+		public Optional<TMSTrigger1> getValue(AuthorisationResult6 obj) {
+			return obj.getTMSTrigger();
+		}
+
+		@Override
+		public void setValue(AuthorisationResult6 obj, Optional<TMSTrigger1> value) {
+			obj.setTMSTrigger(value.orElse(null));
 		}
 	};
 
@@ -382,7 +425,7 @@ public class AuthorisationResult6 {
 		return authorisationEntity == null ? Optional.empty() : Optional.of(authorisationEntity);
 	}
 
-	public AuthorisationResult6 setAuthorisationEntity(com.tools20022.repository.msg.GenericIdentification70 authorisationEntity) {
+	public AuthorisationResult6 setAuthorisationEntity(GenericIdentification70 authorisationEntity) {
 		this.authorisationEntity = authorisationEntity;
 		return this;
 	}
@@ -391,7 +434,7 @@ public class AuthorisationResult6 {
 		return responseToAuthorisation;
 	}
 
-	public AuthorisationResult6 setResponseToAuthorisation(com.tools20022.repository.msg.ResponseType1 responseToAuthorisation) {
+	public AuthorisationResult6 setResponseToAuthorisation(ResponseType1 responseToAuthorisation) {
 		this.responseToAuthorisation = Objects.requireNonNull(responseToAuthorisation);
 		return this;
 	}
@@ -409,7 +452,7 @@ public class AuthorisationResult6 {
 		return tMSTrigger == null ? Optional.empty() : Optional.of(tMSTrigger);
 	}
 
-	public AuthorisationResult6 setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
+	public AuthorisationResult6 setTMSTrigger(TMSTrigger1 tMSTrigger) {
 		this.tMSTrigger = tMSTrigger;
 		return this;
 	}

@@ -24,7 +24,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPoint;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -171,7 +170,7 @@ public class PhoneAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPhoneNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PhoneAddress, Max35Text> mmPhoneNumber = new MMBusinessAttribute<PhoneAddress, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmPhoneNumber, OrderDeskContactDetails.mmPhoneNumber, ContactAttributes1.mmPhoneNumber, CommunicationAddress3.mmPhone, ContactDetails2.mmPhoneNumber,
 					ContactIdentification2.mmPhoneNumber, ContactIdentification1.mmPhoneNumber, Contacts3.mmPhoneNumber, ContactInformation1.mmTelephoneNumber, ContactIdentification4.mmPhoneNumber, ContactIdentification3.mmPhoneNumber,
@@ -187,12 +186,14 @@ public class PhoneAddress extends ContactPoint {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PhoneAddress.class.getMethod("getPhoneNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PhoneAddress obj) {
+			return obj.getPhoneNumber();
+		}
+
+		@Override
+		public void setValue(PhoneAddress obj, Max35Text value) {
+			obj.setPhoneNumber(value);
 		}
 	};
 	protected Max35Text faxNumber;
@@ -271,7 +272,7 @@ public class PhoneAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFaxNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PhoneAddress, Max35Text> mmFaxNumber = new MMBusinessAttribute<PhoneAddress, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmFaxNumber, OrderDeskContactDetails.mmFaxNumber, ContactAttributes1.mmFaxNumber, CommunicationAddress3.mmFaxNumber, ContactDetails2.mmFaxNumber,
 					ContactIdentification2.mmFaxNumber, ContactIdentification1.mmFaxNumber, Contacts3.mmFaxNumber, ContactInformation1.mmFaxNumber, ContactIdentification4.mmFaxNumber, ContactIdentification3.mmFaxNumber,
@@ -286,12 +287,14 @@ public class PhoneAddress extends ContactPoint {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PhoneAddress.class.getMethod("getFaxNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PhoneAddress obj) {
+			return obj.getFaxNumber();
+		}
+
+		@Override
+		public void setValue(PhoneAddress obj, Max35Text value) {
+			obj.setFaxNumber(value);
 		}
 	};
 	protected Max35Text mobileNumber;
@@ -343,7 +346,7 @@ public class PhoneAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMobileNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PhoneAddress, Max35Text> mmMobileNumber = new MMBusinessAttribute<PhoneAddress, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommunicationAddress3.mmMobile, ContactDetails2.mmMobileNumber, ContactIdentification2.mmMobileNumber, Contacts3.mmMobileNumber, ContactDetails3.mmMobileNumber,
 					CommunicationAddress6.mmMobile);
@@ -357,12 +360,14 @@ public class PhoneAddress extends ContactPoint {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PhoneAddress.class.getMethod("getMobileNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PhoneAddress obj) {
+			return obj.getMobileNumber();
+		}
+
+		@Override
+		public void setValue(PhoneAddress obj, Max35Text value) {
+			obj.setMobileNumber(value);
 		}
 	};
 

@@ -62,12 +62,16 @@ public class ConstraintLinkedReferenceOrAccountApplicationIdentificationRule {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference2> forAccountManagementMessageReference2 = new MMConstraint<AccountManagementMessageReference2>() {
 		{
-			validator = ConstraintLinkedReferenceOrAccountApplicationIdentificationRule::checkAccountManagementMessageReference2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedReferenceOrAccountApplicationIdentificationRule";
 			definition = "Either LinkedReference or AccountApplicationIdentification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.forAccountManagementMessageReference3);
 			owner_lazy = () -> AccountManagementMessageReference2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference2 obj) throws Exception {
+			checkAccountManagementMessageReference2(obj);
 		}
 	};
 	/**
@@ -108,13 +112,17 @@ public class ConstraintLinkedReferenceOrAccountApplicationIdentificationRule {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference3> forAccountManagementMessageReference3 = new MMConstraint<AccountManagementMessageReference3>() {
 		{
-			validator = ConstraintLinkedReferenceOrAccountApplicationIdentificationRule::checkAccountManagementMessageReference3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedReferenceOrAccountApplicationIdentificationRule";
 			definition = "Either LinkedReference or AccountApplicationIdentification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.forAccountManagementMessageReference4);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.forAccountManagementMessageReference2;
 			owner_lazy = () -> AccountManagementMessageReference3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference3 obj) throws Exception {
+			checkAccountManagementMessageReference3(obj);
 		}
 	};
 	/**
@@ -146,12 +154,16 @@ public class ConstraintLinkedReferenceOrAccountApplicationIdentificationRule {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference4> forAccountManagementMessageReference4 = new MMConstraint<AccountManagementMessageReference4>() {
 		{
-			validator = ConstraintLinkedReferenceOrAccountApplicationIdentificationRule::checkAccountManagementMessageReference4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedReferenceOrAccountApplicationIdentificationRule";
 			definition = "Either LinkedReference or AccountApplicationIdentification must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.forAccountManagementMessageReference3;
 			owner_lazy = () -> AccountManagementMessageReference4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference4 obj) throws Exception {
+			checkAccountManagementMessageReference4(obj);
 		}
 	};
 

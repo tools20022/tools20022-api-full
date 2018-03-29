@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalItemReference4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +139,7 @@ public class OriginalItemAndStatus5 {
 	 * OriginalItemAndStatus4.mmOriginalItemIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalItemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItemAndStatus5, Max35Text> mmOriginalItemIdentification = new MMMessageAttribute<OriginalItemAndStatus5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemAndStatus5.mmObject();
@@ -151,6 +152,16 @@ public class OriginalItemAndStatus5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalItemAndStatus5 obj) {
+			return obj.getOriginalItemIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalItemAndStatus5 obj, Max35Text value) {
+			obj.setOriginalItemIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlEndToEndId")
@@ -194,7 +205,7 @@ public class OriginalItemAndStatus5 {
 	 * OriginalItemAndStatus4.mmOriginalEndToEndIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItemAndStatus5, Optional<Max35Text>> mmOriginalEndToEndIdentification = new MMMessageAttribute<OriginalItemAndStatus5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemAndStatus5.mmObject();
@@ -207,6 +218,16 @@ public class OriginalItemAndStatus5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OriginalItemAndStatus5 obj) {
+			return obj.getOriginalEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalItemAndStatus5 obj, Optional<Max35Text> value) {
+			obj.setOriginalEndToEndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -251,7 +272,7 @@ public class OriginalItemAndStatus5 {
 	 * OriginalItemAndStatus4.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItemAndStatus5, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<OriginalItemAndStatus5, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemAndStatus5.mmObject();
@@ -264,6 +285,16 @@ public class OriginalItemAndStatus5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(OriginalItemAndStatus5 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(OriginalItemAndStatus5 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "XpctdValDt")
@@ -306,7 +337,7 @@ public class OriginalItemAndStatus5 {
 	 * OriginalItemAndStatus4.mmExpectedValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItemAndStatus5, Optional<ISODate>> mmExpectedValueDate = new MMMessageAttribute<OriginalItemAndStatus5, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemAndStatus5.mmObject();
@@ -319,6 +350,16 @@ public class OriginalItemAndStatus5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(OriginalItemAndStatus5 obj) {
+			return obj.getExpectedValueDate();
+		}
+
+		@Override
+		public void setValue(OriginalItemAndStatus5 obj, Optional<ISODate> value) {
+			obj.setExpectedValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ItmSts", required = true)
@@ -361,7 +402,7 @@ public class OriginalItemAndStatus5 {
 	 * OriginalItemAndStatus4.mmItemStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItemStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItemAndStatus5, NotificationStatus3Code> mmItemStatus = new MMMessageAttribute<OriginalItemAndStatus5, NotificationStatus3Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmNotificationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemAndStatus5.mmObject();
@@ -374,6 +415,16 @@ public class OriginalItemAndStatus5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NotificationStatus3Code.mmObject();
+		}
+
+		@Override
+		public NotificationStatus3Code getValue(OriginalItemAndStatus5 obj) {
+			return obj.getItemStatus();
+		}
+
+		@Override
+		public void setValue(OriginalItemAndStatus5 obj, NotificationStatus3Code value) {
+			obj.setItemStatus(value);
 		}
 	};
 	@XmlElement(name = "AddtlStsInf")
@@ -410,7 +461,7 @@ public class OriginalItemAndStatus5 {
 	 * OriginalItemAndStatus4.mmAdditionalStatusInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalStatusInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItemAndStatus5, Optional<Max105Text>> mmAdditionalStatusInformation = new MMMessageAttribute<OriginalItemAndStatus5, Optional<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemAndStatus5.mmObject();
 			isDerived = false;
@@ -422,6 +473,16 @@ public class OriginalItemAndStatus5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(OriginalItemAndStatus5 obj) {
+			return obj.getAdditionalStatusInformation();
+		}
+
+		@Override
+		public void setValue(OriginalItemAndStatus5 obj, Optional<Max105Text> value) {
+			obj.setAdditionalStatusInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlItmRef")
@@ -463,7 +524,7 @@ public class OriginalItemAndStatus5 {
 	 * OriginalItemAndStatus4.mmOriginalItemReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalItemReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalItemAndStatus5, Optional<OriginalItemReference4>> mmOriginalItemReference = new MMMessageAssociationEnd<OriginalItemAndStatus5, Optional<OriginalItemReference4>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItemAndStatus5.mmObject();
@@ -476,7 +537,17 @@ public class OriginalItemAndStatus5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalItemReference4.mmObject();
+			type_lazy = () -> OriginalItemReference4.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalItemReference4> getValue(OriginalItemAndStatus5 obj) {
+			return obj.getOriginalItemReference();
+		}
+
+		@Override
+		public void setValue(OriginalItemAndStatus5 obj, Optional<OriginalItemReference4> value) {
+			obj.setOriginalItemReference(value.orElse(null));
 		}
 	};
 
@@ -555,7 +626,7 @@ public class OriginalItemAndStatus5 {
 		return originalItemReference == null ? Optional.empty() : Optional.of(originalItemReference);
 	}
 
-	public OriginalItemAndStatus5 setOriginalItemReference(com.tools20022.repository.msg.OriginalItemReference4 originalItemReference) {
+	public OriginalItemAndStatus5 setOriginalItemReference(OriginalItemReference4 originalItemReference) {
 		this.originalItemReference = originalItemReference;
 		return this;
 	}

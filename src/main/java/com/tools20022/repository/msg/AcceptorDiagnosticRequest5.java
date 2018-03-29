@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV05;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment55;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +135,7 @@ public class AcceptorDiagnosticRequest5 {
 	 * AcceptorDiagnosticRequest4.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorDiagnosticRequest5, CardPaymentEnvironment55> mmEnvironment = new MMMessageAssociationEnd<AcceptorDiagnosticRequest5, CardPaymentEnvironment55>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticRequest5.mmObject();
@@ -148,7 +149,17 @@ public class AcceptorDiagnosticRequest5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment55.mmObject();
+			type_lazy = () -> CardPaymentEnvironment55.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment55 getValue(AcceptorDiagnosticRequest5 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticRequest5 obj, CardPaymentEnvironment55 value) {
+			obj.setEnvironment(value);
 		}
 	};
 
@@ -173,7 +184,7 @@ public class AcceptorDiagnosticRequest5 {
 		return environment;
 	}
 
-	public AcceptorDiagnosticRequest5 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment55 environment) {
+	public AcceptorDiagnosticRequest5 setEnvironment(CardPaymentEnvironment55 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}

@@ -106,7 +106,7 @@ public class ConfirmationDetails1 {
 	 * definition} = "Reference to the pay in schedule confirmed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayInScheduleReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationDetails1, Max35Text> mmPayInScheduleReference = new MMMessageAttribute<ConfirmationDetails1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationDetails1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class ConfirmationDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ConfirmationDetails1 obj) {
+			return obj.getPayInScheduleReference();
+		}
+
+		@Override
+		public void setValue(ConfirmationDetails1 obj, Max35Text value) {
+			obj.setPayInScheduleReference(value);
 		}
 	};
 

@@ -101,7 +101,7 @@ public class Notification2 {
 	 * definition} = "Type of notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Notification2, Max35Text> mmNotificationType = new MMMessageAttribute<Notification2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Notification2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class Notification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Notification2 obj) {
+			return obj.getNotificationType();
+		}
+
+		@Override
+		public void setValue(Notification2 obj, Max35Text value) {
+			obj.setNotificationType(value);
 		}
 	};
 	@XmlElement(name = "Reqrd", required = true)
@@ -143,7 +153,7 @@ public class Notification2 {
 	 * definition} = "Indicates whether the notification is required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Notification2, YesNoIndicator> mmRequired = new MMMessageAttribute<Notification2, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Notification2.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class Notification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Notification2 obj) {
+			return obj.getRequired();
+		}
+
+		@Override
+		public void setValue(Notification2 obj, YesNoIndicator value) {
+			obj.setRequired(value);
 		}
 	};
 	@XmlElement(name = "DstrbtnTp")
@@ -184,7 +204,7 @@ public class Notification2 {
 	 * definition} = "Specifies how the notification is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDistributionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Notification2, Optional<InformationDistribution1Choice>> mmDistributionType = new MMMessageAssociationEnd<Notification2, Optional<InformationDistribution1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Notification2.mmObject();
 			isDerived = false;
@@ -196,6 +216,16 @@ public class Notification2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InformationDistribution1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InformationDistribution1Choice> getValue(Notification2 obj) {
+			return obj.getDistributionType();
+		}
+
+		@Override
+		public void setValue(Notification2 obj, Optional<InformationDistribution1Choice> value) {
+			obj.setDistributionType(value.orElse(null));
 		}
 	};
 

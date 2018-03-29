@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
+import com.tools20022.repository.msg.RejectedStatusReason6;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -81,7 +83,7 @@ public class RejectedStatus3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Rsn", required = true)
-	protected List<com.tools20022.repository.msg.RejectedStatusReason6> reason;
+	protected List<RejectedStatusReason6> reason;
 	/**
 	 * 
 	 <p>
@@ -113,7 +115,7 @@ public class RejectedStatus3 {
 	 * definition} = "Reason for a rejected status in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus3, List<RejectedStatusReason6>> mmReason = new MMMessageAssociationEnd<RejectedStatus3, List<RejectedStatusReason6>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus3.mmObject();
@@ -125,11 +127,21 @@ public class RejectedStatus3 {
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason6.mmObject();
+			type_lazy = () -> RejectedStatusReason6.mmObject();
+		}
+
+		@Override
+		public List<RejectedStatusReason6> getValue(RejectedStatus3 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus3 obj, List<RejectedStatusReason6> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
-	protected List<com.tools20022.repository.msg.GenericIdentification1> dataSourceScheme;
+	protected List<GenericIdentification1> dataSourceScheme;
 	/**
 	 * 
 	 <p>
@@ -163,7 +175,7 @@ public class RejectedStatus3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus3, List<GenericIdentification1>> mmDataSourceScheme = new MMMessageAssociationEnd<RejectedStatus3, List<GenericIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus3.mmObject();
@@ -175,7 +187,17 @@ public class RejectedStatus3 {
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification1> getValue(RejectedStatus3 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(RejectedStatus3 obj, List<GenericIdentification1> value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	/**
@@ -245,7 +267,7 @@ public class RejectedStatus3 {
 		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public RejectedStatus3 setReason(List<com.tools20022.repository.msg.RejectedStatusReason6> reason) {
+	public RejectedStatus3 setReason(List<RejectedStatusReason6> reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}
@@ -254,7 +276,7 @@ public class RejectedStatus3 {
 		return dataSourceScheme == null ? dataSourceScheme = new ArrayList<>() : dataSourceScheme;
 	}
 
-	public RejectedStatus3 setDataSourceScheme(List<com.tools20022.repository.msg.GenericIdentification1> dataSourceScheme) {
+	public RejectedStatus3 setDataSourceScheme(List<GenericIdentification1> dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

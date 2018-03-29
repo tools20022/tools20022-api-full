@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -174,7 +173,7 @@ public class OrderConfirmationStatusReportV02 {
 	 * OrderConfirmationStatusReportV01.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderConfirmationStatusReportV02, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<OrderConfirmationStatusReportV02, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,12 +185,14 @@ public class OrderConfirmationStatusReportV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderConfirmationStatusReportV02.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(OrderConfirmationStatusReportV02 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OrderConfirmationStatusReportV02 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ref")
@@ -221,7 +222,7 @@ public class OrderConfirmationStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderConfirmationStatusReportV02, Optional<References61Choice>> mmReference = new MMMessageBuildingBlock<OrderConfirmationStatusReportV02, Optional<References61Choice>>() {
 		{
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,12 +233,14 @@ public class OrderConfirmationStatusReportV02 {
 			complexType_lazy = () -> References61Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderConfirmationStatusReportV02.class.getMethod("getReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<References61Choice> getValue(OrderConfirmationStatusReportV02 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(OrderConfirmationStatusReportV02 obj, Optional<References61Choice> value) {
+			obj.setReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndvOrdrConfDtlsRpt", required = true)
@@ -272,7 +275,7 @@ public class OrderConfirmationStatusReportV02 {
 	 * mmIndividualOrderConfirmationDetailsReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIndividualOrderConfirmationDetailsReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderConfirmationStatusReportV02, List<IndividualOrderConfirmationStatusAndReason2>> mmIndividualOrderConfirmationDetailsReport = new MMMessageBuildingBlock<OrderConfirmationStatusReportV02, List<IndividualOrderConfirmationStatusAndReason2>>() {
 		{
 			xmlTag = "IndvOrdrConfDtlsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,12 +286,14 @@ public class OrderConfirmationStatusReportV02 {
 			complexType_lazy = () -> IndividualOrderConfirmationStatusAndReason2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderConfirmationStatusReportV02.class.getMethod("getIndividualOrderConfirmationDetailsReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<IndividualOrderConfirmationStatusAndReason2> getValue(OrderConfirmationStatusReportV02 obj) {
+			return obj.getIndividualOrderConfirmationDetailsReport();
+		}
+
+		@Override
+		public void setValue(OrderConfirmationStatusReportV02 obj, List<IndividualOrderConfirmationStatusAndReason2> value) {
+			obj.setIndividualOrderConfirmationDetailsReport(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -322,7 +327,7 @@ public class OrderConfirmationStatusReportV02 {
 	 * OrderConfirmationStatusReportV01.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderConfirmationStatusReportV02, List<Extension1>> mmExtension = new MMMessageBuildingBlock<OrderConfirmationStatusReportV02, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,12 +338,14 @@ public class OrderConfirmationStatusReportV02 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderConfirmationStatusReportV02.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(OrderConfirmationStatusReportV02 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(OrderConfirmationStatusReportV02 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

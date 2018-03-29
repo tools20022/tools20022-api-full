@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SidePocket;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SidePocketQuantityAndAmount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -113,7 +114,7 @@ public class SidePocketInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSidePocketInclusionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SidePocketInformation2, Optional<YesNoIndicator>> mmSidePocketInclusionIndicator = new MMMessageAttribute<SidePocketInformation2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SidePocket.mmSidePocketInclusionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SidePocketInformation2.mmObject();
@@ -125,6 +126,16 @@ public class SidePocketInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SidePocketInformation2 obj) {
+			return obj.getSidePocketInclusionIndicator();
+		}
+
+		@Override
+		public void setValue(SidePocketInformation2 obj, Optional<YesNoIndicator> value) {
+			obj.setSidePocketInclusionIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SdPcktId")
@@ -161,7 +172,7 @@ public class SidePocketInformation2 {
 	 * definition} = "Identification of the side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSidePocketIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SidePocketInformation2, Optional<Max35Text>> mmSidePocketIdentification = new MMMessageAttribute<SidePocketInformation2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SidePocket.mmSidePocketIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SidePocketInformation2.mmObject();
@@ -173,6 +184,16 @@ public class SidePocketInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SidePocketInformation2 obj) {
+			return obj.getSidePocketIdentification();
+		}
+
+		@Override
+		public void setValue(SidePocketInformation2 obj, Optional<Max35Text> value) {
+			obj.setSidePocketIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SdPcktQty")
@@ -209,7 +230,7 @@ public class SidePocketInformation2 {
 	 * definition} = "Quantity of the side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSidePocketQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SidePocketInformation2, Optional<SidePocketQuantityAndAmount1>> mmSidePocketQuantity = new MMMessageAssociationEnd<SidePocketInformation2, Optional<SidePocketQuantityAndAmount1>>() {
 		{
 			businessElementTrace_lazy = () -> SidePocket.mmSidePocketQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SidePocketInformation2.mmObject();
@@ -221,7 +242,17 @@ public class SidePocketInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmObject();
+			type_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
+		}
+
+		@Override
+		public Optional<SidePocketQuantityAndAmount1> getValue(SidePocketInformation2 obj) {
+			return obj.getSidePocketQuantity();
+		}
+
+		@Override
+		public void setValue(SidePocketInformation2 obj, Optional<SidePocketQuantityAndAmount1> value) {
+			obj.setSidePocketQuantity(value.orElse(null));
 		}
 	};
 
@@ -262,7 +293,7 @@ public class SidePocketInformation2 {
 		return sidePocketQuantity == null ? Optional.empty() : Optional.of(sidePocketQuantity);
 	}
 
-	public SidePocketInformation2 setSidePocketQuantity(com.tools20022.repository.msg.SidePocketQuantityAndAmount1 sidePocketQuantity) {
+	public SidePocketInformation2 setSidePocketQuantity(SidePocketQuantityAndAmount1 sidePocketQuantity) {
 		this.sidePocketQuantity = sidePocketQuantity;
 		return this;
 	}

@@ -104,7 +104,7 @@ public class DateFormat42Choice {
 	 * definition} = "Year and month."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYearMonth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat42Choice, ISOYearMonth> mmYearMonth = new MMMessageAttribute<DateFormat42Choice, ISOYearMonth>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat42Choice.mmObject();
@@ -116,6 +116,16 @@ public class DateFormat42Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public ISOYearMonth getValue(DateFormat42Choice obj) {
+			return obj.getYearMonth();
+		}
+
+		@Override
+		public void setValue(DateFormat42Choice obj, ISOYearMonth value) {
+			obj.setYearMonth(value);
 		}
 	};
 	@XmlElement(name = "YrMnthDay", required = true)
@@ -152,7 +162,7 @@ public class DateFormat42Choice {
 	 * definition} = "Year, month and day."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYearMonthDay = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat42Choice, ISODate> mmYearMonthDay = new MMMessageAttribute<DateFormat42Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat42Choice.mmObject();
@@ -164,6 +174,16 @@ public class DateFormat42Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DateFormat42Choice obj) {
+			return obj.getYearMonthDay();
+		}
+
+		@Override
+		public void setValue(DateFormat42Choice obj, ISODate value) {
+			obj.setYearMonthDay(value);
 		}
 	};
 

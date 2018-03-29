@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.CancellationRight1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IndividualPerson12;
+import com.tools20022.repository.msg.InvestmentAccount21;
+import com.tools20022.repository.msg.PaymentTransaction24;
+import com.tools20022.repository.msg.SubscriptionExecution6;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -194,7 +198,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionMultipleExecution3, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<SubscriptionMultipleExecution3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -207,6 +211,16 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfTrad")
@@ -253,7 +267,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionMultipleExecution3, Optional<PlaceOfTradeIdentification1Choice>> mmPlaceOfTrade = new MMMessageAttribute<SubscriptionMultipleExecution3, Optional<PlaceOfTradeIdentification1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -266,6 +280,16 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PlaceOfTradeIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PlaceOfTradeIdentification1Choice> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<PlaceOfTradeIdentification1Choice> value) {
+			obj.setPlaceOfTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrDtTm")
@@ -311,7 +335,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionMultipleExecution3, Optional<ISODateTime>> mmOrderDateTime = new MMMessageAttribute<SubscriptionMultipleExecution3, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -324,6 +348,16 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getOrderDateTime();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<ISODateTime> value) {
+			obj.setOrderDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdFutrTradDt")
@@ -370,7 +404,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedFutureTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionMultipleExecution3, Optional<ISODate>> mmRequestedFutureTradeDate = new MMMessageAttribute<SubscriptionMultipleExecution3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedExecutionDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -383,6 +417,16 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getRequestedFutureTradeDate();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<ISODate> value) {
+			obj.setRequestedFutureTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRght")
@@ -422,7 +466,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationRight = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionMultipleExecution3, Optional<CancellationRight1Code>> mmCancellationRight = new MMMessageAttribute<SubscriptionMultipleExecution3, Optional<CancellationRight1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -434,6 +478,16 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CancellationRight1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CancellationRight1Code> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getCancellationRight();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<CancellationRight1Code> value) {
+			obj.setCancellationRight(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedCxlRght")
@@ -473,7 +527,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedCancellationRight = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionMultipleExecution3, Optional<Extended350Code>> mmExtendedCancellationRight = new MMMessageAttribute<SubscriptionMultipleExecution3, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmCancellationRight;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -485,6 +539,16 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getExtendedCancellationRight();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<Extended350Code> value) {
+			obj.setExtendedCancellationRight(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls", required = true)
@@ -528,7 +592,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionMultipleExecution3, InvestmentAccount21> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SubscriptionMultipleExecution3, InvestmentAccount21>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -541,7 +605,17 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount21.mmObject();
+			type_lazy = () -> InvestmentAccount21.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount21 getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, InvestmentAccount21 value) {
+			obj.setInvestmentAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "BnfcryDtls")
@@ -584,7 +658,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficiaryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionMultipleExecution3, Optional<IndividualPerson12>> mmBeneficiaryDetails = new MMMessageAssociationEnd<SubscriptionMultipleExecution3, Optional<IndividualPerson12>>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -597,11 +671,21 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson12.mmObject();
+			type_lazy = () -> IndividualPerson12.mmObject();
+		}
+
+		@Override
+		public Optional<IndividualPerson12> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getBeneficiaryDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<IndividualPerson12> value) {
+			obj.setBeneficiaryDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndvExctnDtls", required = true)
-	protected List<com.tools20022.repository.msg.SubscriptionExecution6> individualExecutionDetails;
+	protected List<SubscriptionExecution6> individualExecutionDetails;
 	/**
 	 * 
 	 <p>
@@ -641,7 +725,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualExecutionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionMultipleExecution3, List<SubscriptionExecution6>> mmIndividualExecutionDetails = new MMMessageAssociationEnd<SubscriptionMultipleExecution3, List<SubscriptionExecution6>>() {
 		{
 			businessComponentTrace_lazy = () -> SubscriptionExecution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -653,7 +737,17 @@ public class SubscriptionMultipleExecution3 {
 			nextVersions_lazy = () -> Arrays.asList(SubscriptionMultipleExecution5.mmIndividualExecutionDetails);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubscriptionExecution6.mmObject();
+			type_lazy = () -> SubscriptionExecution6.mmObject();
+		}
+
+		@Override
+		public List<SubscriptionExecution6> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getIndividualExecutionDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, List<SubscriptionExecution6> value) {
+			obj.setIndividualExecutionDetails(value);
 		}
 	};
 	@XmlElement(name = "TtlSttlmAmt")
@@ -701,7 +795,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionMultipleExecution3, Optional<ActiveCurrencyAndAmount>> mmTotalSettlementAmount = new MMMessageAttribute<SubscriptionMultipleExecution3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -714,6 +808,16 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getTotalSettlementAmount();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshSttlmDt")
@@ -750,7 +854,7 @@ public class SubscriptionMultipleExecution3 {
 	 * definition} = "Date on which cash is available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionMultipleExecution3, Optional<ISODate>> mmCashSettlementDate = new MMMessageAttribute<SubscriptionMultipleExecution3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -762,6 +866,16 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getCashSettlementDate();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<ISODate> value) {
+			obj.setCashSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlkCshSttlmDtls")
@@ -806,7 +920,7 @@ public class SubscriptionMultipleExecution3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBulkCashSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionMultipleExecution3, Optional<PaymentTransaction24>> mmBulkCashSettlementDetails = new MMMessageAssociationEnd<SubscriptionMultipleExecution3, Optional<PaymentTransaction24>>() {
 		{
 			businessComponentTrace_lazy = () -> BulkPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionMultipleExecution3.mmObject();
@@ -819,7 +933,17 @@ public class SubscriptionMultipleExecution3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction24.mmObject();
+			type_lazy = () -> PaymentTransaction24.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTransaction24> getValue(SubscriptionMultipleExecution3 obj) {
+			return obj.getBulkCashSettlementDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleExecution3 obj, Optional<PaymentTransaction24> value) {
+			obj.setBulkCashSettlementDetails(value.orElse(null));
 		}
 	};
 	/**
@@ -956,7 +1080,7 @@ public class SubscriptionMultipleExecution3 {
 		return investmentAccountDetails;
 	}
 
-	public SubscriptionMultipleExecution3 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount21 investmentAccountDetails) {
+	public SubscriptionMultipleExecution3 setInvestmentAccountDetails(InvestmentAccount21 investmentAccountDetails) {
 		this.investmentAccountDetails = Objects.requireNonNull(investmentAccountDetails);
 		return this;
 	}
@@ -965,7 +1089,7 @@ public class SubscriptionMultipleExecution3 {
 		return beneficiaryDetails == null ? Optional.empty() : Optional.of(beneficiaryDetails);
 	}
 
-	public SubscriptionMultipleExecution3 setBeneficiaryDetails(com.tools20022.repository.msg.IndividualPerson12 beneficiaryDetails) {
+	public SubscriptionMultipleExecution3 setBeneficiaryDetails(IndividualPerson12 beneficiaryDetails) {
 		this.beneficiaryDetails = beneficiaryDetails;
 		return this;
 	}
@@ -974,7 +1098,7 @@ public class SubscriptionMultipleExecution3 {
 		return individualExecutionDetails == null ? individualExecutionDetails = new ArrayList<>() : individualExecutionDetails;
 	}
 
-	public SubscriptionMultipleExecution3 setIndividualExecutionDetails(List<com.tools20022.repository.msg.SubscriptionExecution6> individualExecutionDetails) {
+	public SubscriptionMultipleExecution3 setIndividualExecutionDetails(List<SubscriptionExecution6> individualExecutionDetails) {
 		this.individualExecutionDetails = Objects.requireNonNull(individualExecutionDetails);
 		return this;
 	}
@@ -1001,7 +1125,7 @@ public class SubscriptionMultipleExecution3 {
 		return bulkCashSettlementDetails == null ? Optional.empty() : Optional.of(bulkCashSettlementDetails);
 	}
 
-	public SubscriptionMultipleExecution3 setBulkCashSettlementDetails(com.tools20022.repository.msg.PaymentTransaction24 bulkCashSettlementDetails) {
+	public SubscriptionMultipleExecution3 setBulkCashSettlementDetails(PaymentTransaction24 bulkCashSettlementDetails) {
 		this.bulkCashSettlementDetails = bulkCashSettlementDetails;
 		return this;
 	}

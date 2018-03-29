@@ -111,7 +111,7 @@ public class TradingSession1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingSessionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingSession1, Optional<Max128Text>> mmTradingSessionIdentification = new MMMessageAttribute<TradingSession1, Optional<Max128Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradingSession.mmTradingSessionName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
@@ -124,6 +124,16 @@ public class TradingSession1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max128Text> getValue(TradingSession1 obj) {
+			return obj.getTradingSessionIdentification();
+		}
+
+		@Override
+		public void setValue(TradingSession1 obj, Optional<Max128Text> value) {
+			obj.setTradingSessionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgSsnSubId")
@@ -165,7 +175,7 @@ public class TradingSession1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingSessionSubIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingSession1, Optional<Max128Text>> mmTradingSessionSubIdentification = new MMMessageAttribute<TradingSession1, Optional<Max128Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradingSession.mmTradingSessionName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
@@ -178,6 +188,16 @@ public class TradingSession1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max128Text> getValue(TradingSession1 obj) {
+			return obj.getTradingSessionSubIdentification();
+		}
+
+		@Override
+		public void setValue(TradingSession1 obj, Optional<Max128Text> value) {
+			obj.setTradingSessionSubIdentification(value.orElse(null));
 		}
 	};
 

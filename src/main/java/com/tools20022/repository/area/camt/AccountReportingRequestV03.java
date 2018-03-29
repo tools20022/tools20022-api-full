@@ -25,10 +25,8 @@ import com.tools20022.repository.area.CashManagementPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader59;
 import com.tools20022.repository.msg.ReportingRequest3;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestversion;
 import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -69,9 +67,6 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestversion
- * BanktoCustomerCashManagementISOLatestversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion
  * BanktoCustomerCashManagementISOPreviousversion}</li>
@@ -151,7 +146,7 @@ public class AccountReportingRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountReportingRequestV03, GroupHeader59> mmGroupHeader = new MMMessageBuildingBlock<AccountReportingRequestV03, GroupHeader59>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,12 +158,14 @@ public class AccountReportingRequestV03 {
 			complexType_lazy = () -> GroupHeader59.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountReportingRequestV03.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader59 getValue(AccountReportingRequestV03 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(AccountReportingRequestV03 obj, GroupHeader59 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "RptgReq", required = true)
@@ -206,7 +203,7 @@ public class AccountReportingRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportingRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountReportingRequestV03, List<ReportingRequest3>> mmReportingRequest = new MMMessageBuildingBlock<AccountReportingRequestV03, List<ReportingRequest3>>() {
 		{
 			xmlTag = "RptgReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,12 +214,14 @@ public class AccountReportingRequestV03 {
 			complexType_lazy = () -> ReportingRequest3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountReportingRequestV03.class.getMethod("getReportingRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ReportingRequest3> getValue(AccountReportingRequestV03 obj) {
+			return obj.getReportingRequest();
+		}
+
+		@Override
+		public void setValue(AccountReportingRequestV03 obj, List<ReportingRequest3> value) {
+			obj.setReportingRequest(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -260,7 +259,7 @@ public class AccountReportingRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountReportingRequestV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<AccountReportingRequestV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,12 +270,14 @@ public class AccountReportingRequestV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountReportingRequestV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(AccountReportingRequestV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AccountReportingRequestV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -288,7 +289,7 @@ public class AccountReportingRequestV03 {
 				definition = "Scope\r\nThe AccountReportingRequest message is sent by the account owner, either directly or through a forwarding agent, to one of its account servicing institutions. It is used to ask the account servicing institution to send a report on the account owner's account in a BankToCustomerAccountReport (camt.052.001.03), a BankToCustomerStatement (camt.053.001.03) or a BankToCustomerDebitCreditNotification (camt.054.001.03).\r\nUsage\r\nThe AccountReportingRequest message is used to advise the account servicing institution of funds that the account owner expects to have credited to its account. The message can be used in either a direct or a relay scenario.";
 				nextVersions_lazy = () -> Arrays.asList(AccountReportingRequestV04.mmObject());
 				previousVersion_lazy = () -> AccountReportingRequestV02.mmObject();
-				messageSet_lazy = () -> Arrays.asList(BanktoCustomerCashManagementISOLatestversion.mmObject(), BanktoCustomerCashManagementISOPreviousversion.mmObject(), ISOArchive.mmObject());
+				messageSet_lazy = () -> Arrays.asList(BanktoCustomerCashManagementISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctRptgReq";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();

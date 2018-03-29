@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument58;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,7 +112,7 @@ public class BasketDescription3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BasketDescription3, List<ISINOct2015Identifier>> mmISIN = new MMMessageAttribute<BasketDescription3, List<ISINOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BasketDescription3.mmObject();
@@ -123,9 +124,19 @@ public class BasketDescription3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
+
+		@Override
+		public List<ISINOct2015Identifier> getValue(BasketDescription3 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(BasketDescription3 obj, List<ISINOct2015Identifier> value) {
+			obj.setISIN(value);
+		}
 	};
 	@XmlElement(name = "Indx")
-	protected List<com.tools20022.repository.msg.FinancialInstrument58> index;
+	protected List<FinancialInstrument58> index;
 	/**
 	 * 
 	 <p>
@@ -157,7 +168,7 @@ public class BasketDescription3 {
 	 * definition} = "Index on which the financial instrument is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BasketDescription3, List<FinancialInstrument58>> mmIndex = new MMMessageAssociationEnd<BasketDescription3, List<FinancialInstrument58>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmIndex;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BasketDescription3.mmObject();
@@ -168,7 +179,17 @@ public class BasketDescription3 {
 			definition = "Index on which the financial instrument is based.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument58.mmObject();
+			type_lazy = () -> FinancialInstrument58.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrument58> getValue(BasketDescription3 obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(BasketDescription3 obj, List<FinancialInstrument58> value) {
+			obj.setIndex(value);
 		}
 	};
 
@@ -199,7 +220,7 @@ public class BasketDescription3 {
 		return index == null ? index = new ArrayList<>() : index;
 	}
 
-	public BasketDescription3 setIndex(List<com.tools20022.repository.msg.FinancialInstrument58> index) {
+	public BasketDescription3 setIndex(List<FinancialInstrument58> index) {
 		this.index = Objects.requireNonNull(index);
 		return this;
 	}

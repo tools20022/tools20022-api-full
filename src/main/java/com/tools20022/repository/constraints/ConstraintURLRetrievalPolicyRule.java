@@ -48,11 +48,15 @@ public class ConstraintURLRetrievalPolicyRule {
 	 */
 	public static final MMConstraint<QualifiedDocumentInformation1> forQualifiedDocumentInformation1 = new MMConstraint<QualifiedDocumentInformation1>() {
 		{
-			validator = ConstraintURLRetrievalPolicyRule::checkQualifiedDocumentInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLRetrievalPolicyRule";
 			definition = "URL retrieval SHOULD NOT be totally automatic.";
 			owner_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QualifiedDocumentInformation1 obj) throws Exception {
+			checkQualifiedDocumentInformation1(obj);
 		}
 	};
 

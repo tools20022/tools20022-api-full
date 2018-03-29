@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CountryAndResidentialStatusType1;
+import com.tools20022.repository.msg.GenericIdentification12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -122,7 +124,7 @@ public class IndividualPerson15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson15, Optional<Max350Text>> mmName = new MMMessageAttribute<IndividualPerson15, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
@@ -134,6 +136,16 @@ public class IndividualPerson15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(IndividualPerson15 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson15 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BirthDt")
@@ -170,7 +182,7 @@ public class IndividualPerson15 {
 	 * definition} = "Date on which a person is born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson15, Optional<ISODate>> mmBirthDate = new MMMessageAttribute<IndividualPerson15, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
@@ -182,6 +194,16 @@ public class IndividualPerson15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(IndividualPerson15 obj) {
+			return obj.getBirthDate();
+		}
+
+		@Override
+		public void setValue(IndividualPerson15 obj, Optional<ISODate> value) {
+			obj.setBirthDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryAndResdtlSts")
@@ -221,7 +243,7 @@ public class IndividualPerson15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryAndResidentialStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson15, Optional<CountryAndResidentialStatusType1>> mmCountryAndResidentialStatus = new MMMessageAttribute<IndividualPerson15, Optional<CountryAndResidentialStatusType1>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmResidentialStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
@@ -232,7 +254,17 @@ public class IndividualPerson15 {
 			definition = "Country and residential status of an individual, for example, non-permanent resident.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmObject();
+			complexType_lazy = () -> CountryAndResidentialStatusType1.mmObject();
+		}
+
+		@Override
+		public Optional<CountryAndResidentialStatusType1> getValue(IndividualPerson15 obj) {
+			return obj.getCountryAndResidentialStatus();
+		}
+
+		@Override
+		public void setValue(IndividualPerson15 obj, Optional<CountryAndResidentialStatusType1> value) {
+			obj.setCountryAndResidentialStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrId")
@@ -271,7 +303,7 @@ public class IndividualPerson15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson15, Optional<GenericIdentification12>> mmOtherIdentification = new MMMessageAssociationEnd<IndividualPerson15, Optional<GenericIdentification12>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
@@ -283,7 +315,17 @@ public class IndividualPerson15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification12.mmObject();
+			type_lazy = () -> GenericIdentification12.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification12> getValue(IndividualPerson15 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(IndividualPerson15 obj, Optional<GenericIdentification12> value) {
+			obj.setOtherIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BnfcryCertfctnCmpltn")
@@ -323,7 +365,7 @@ public class IndividualPerson15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficiaryCertificationCompletion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson15, Optional<BeneficiaryCertificationCompletion1Code>> mmBeneficiaryCertificationCompletion = new MMMessageAttribute<IndividualPerson15, Optional<BeneficiaryCertificationCompletion1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmBeneficiaryCertificationCompletion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
@@ -335,6 +377,16 @@ public class IndividualPerson15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BeneficiaryCertificationCompletion1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BeneficiaryCertificationCompletion1Code> getValue(IndividualPerson15 obj) {
+			return obj.getBeneficiaryCertificationCompletion();
+		}
+
+		@Override
+		public void setValue(IndividualPerson15 obj, Optional<BeneficiaryCertificationCompletion1Code> value) {
+			obj.setBeneficiaryCertificationCompletion(value.orElse(null));
 		}
 	};
 
@@ -376,7 +428,7 @@ public class IndividualPerson15 {
 		return countryAndResidentialStatus == null ? Optional.empty() : Optional.of(countryAndResidentialStatus);
 	}
 
-	public IndividualPerson15 setCountryAndResidentialStatus(com.tools20022.repository.msg.CountryAndResidentialStatusType1 countryAndResidentialStatus) {
+	public IndividualPerson15 setCountryAndResidentialStatus(CountryAndResidentialStatusType1 countryAndResidentialStatus) {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 		return this;
 	}
@@ -385,7 +437,7 @@ public class IndividualPerson15 {
 		return otherIdentification == null ? Optional.empty() : Optional.of(otherIdentification);
 	}
 
-	public IndividualPerson15 setOtherIdentification(com.tools20022.repository.msg.GenericIdentification12 otherIdentification) {
+	public IndividualPerson15 setOtherIdentification(GenericIdentification12 otherIdentification) {
 		this.otherIdentification = otherIdentification;
 		return this;
 	}

@@ -108,7 +108,7 @@ public class ClearingSystemIdentification1Choice {
 	 * "Infrastructure through which the payment instruction is processed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemIdentification1Choice, CashClearingSystem3Code> mmClearingSystemIdentification = new MMMessageAttribute<ClearingSystemIdentification1Choice, CashClearingSystem3Code>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystem.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemIdentification1Choice.mmObject();
@@ -120,6 +120,16 @@ public class ClearingSystemIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashClearingSystem3Code.mmObject();
+		}
+
+		@Override
+		public CashClearingSystem3Code getValue(ClearingSystemIdentification1Choice obj) {
+			return obj.getClearingSystemIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemIdentification1Choice obj, CashClearingSystem3Code value) {
+			obj.setClearingSystemIdentification(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class ClearingSystemIdentification1Choice {
 	 * "Proprietary clearing system service selected for a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemIdentification1Choice, Max35Text> mmProprietary = new MMMessageAttribute<ClearingSystemIdentification1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystem.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemIdentification1Choice.mmObject();
@@ -169,6 +179,16 @@ public class ClearingSystemIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ClearingSystemIdentification1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ClearingSystemIdentification1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account23;
+import com.tools20022.repository.msg.AccountStatus2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -153,7 +155,7 @@ public class AccountManagementStatusAndReason5 {
 	 * AccountManagementStatusAndReason4.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason5, Status25Choice> mmStatus = new MMMessageAttribute<AccountManagementStatusAndReason5, Status25Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
@@ -166,6 +168,16 @@ public class AccountManagementStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Status25Choice.mmObject();
+		}
+
+		@Override
+		public Status25Choice getValue(AccountManagementStatusAndReason5 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason5 obj, Status25Choice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "StsRsn")
@@ -203,7 +215,7 @@ public class AccountManagementStatusAndReason5 {
 	 * "Reason for the status of the account management instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountManagementStatusAndReason5, List<AcceptedStatusReason1Choice>> mmStatusReason = new MMMessageAssociationEnd<AccountManagementStatusAndReason5, List<AcceptedStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
@@ -215,6 +227,16 @@ public class AccountManagementStatusAndReason5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AcceptedStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public List<AcceptedStatusReason1Choice> getValue(AccountManagementStatusAndReason5 obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason5 obj, List<AcceptedStatusReason1Choice> value) {
+			obj.setStatusReason(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -253,7 +275,7 @@ public class AccountManagementStatusAndReason5 {
 	 * AccountManagementStatusAndReason4.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason5, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<AccountManagementStatusAndReason5, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
@@ -266,9 +288,19 @@ public class AccountManagementStatusAndReason5 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementStatusAndReason5 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason5 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ExstgAcctId")
-	protected List<com.tools20022.repository.msg.Account23> existingAccountIdentification;
+	protected List<Account23> existingAccountIdentification;
 	/**
 	 * 
 	 <p>
@@ -304,7 +336,7 @@ public class AccountManagementStatusAndReason5 {
 	 * AccountManagementStatusAndReason4.mmExistingAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExistingAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountManagementStatusAndReason5, List<Account23>> mmExistingAccountIdentification = new MMMessageAssociationEnd<AccountManagementStatusAndReason5, List<Account23>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
@@ -316,7 +348,17 @@ public class AccountManagementStatusAndReason5 {
 			previousVersion_lazy = () -> AccountManagementStatusAndReason4.mmExistingAccountIdentification;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account23.mmObject();
+			type_lazy = () -> Account23.mmObject();
+		}
+
+		@Override
+		public List<Account23> getValue(AccountManagementStatusAndReason5 obj) {
+			return obj.getExistingAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason5 obj, List<Account23> value) {
+			obj.setExistingAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -355,7 +397,7 @@ public class AccountManagementStatusAndReason5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason5, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<AccountManagementStatusAndReason5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
@@ -367,6 +409,16 @@ public class AccountManagementStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementStatusAndReason5 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason5 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSts")
@@ -402,7 +454,7 @@ public class AccountManagementStatusAndReason5 {
 	 * definition} = "Status of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountManagementStatusAndReason5, Optional<AccountStatus2>> mmAccountStatus = new MMMessageAssociationEnd<AccountManagementStatusAndReason5, Optional<AccountStatus2>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
@@ -414,7 +466,17 @@ public class AccountManagementStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
+			type_lazy = () -> AccountStatus2.mmObject();
+		}
+
+		@Override
+		public Optional<AccountStatus2> getValue(AccountManagementStatusAndReason5 obj) {
+			return obj.getAccountStatus();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason5 obj, Optional<AccountStatus2> value) {
+			obj.setAccountStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlckdSts")
@@ -454,7 +516,7 @@ public class AccountManagementStatusAndReason5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBlockedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason5, Optional<BlockedStatusReason2Choice>> mmBlockedStatus = new MMMessageAttribute<AccountManagementStatusAndReason5, Optional<BlockedStatusReason2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
@@ -466,6 +528,16 @@ public class AccountManagementStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BlockedStatusReason2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BlockedStatusReason2Choice> getValue(AccountManagementStatusAndReason5 obj) {
+			return obj.getBlockedStatus();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason5 obj, Optional<BlockedStatusReason2Choice> value) {
+			obj.setBlockedStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FATCARptgDt")
@@ -504,7 +576,7 @@ public class AccountManagementStatusAndReason5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFATCAReportingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason5, Optional<ISODate>> mmFATCAReportingDate = new MMMessageAttribute<AccountManagementStatusAndReason5, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> FATCAStatus.mmFATCAReportingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
@@ -516,6 +588,16 @@ public class AccountManagementStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AccountManagementStatusAndReason5 obj) {
+			return obj.getFATCAReportingDate();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason5 obj, Optional<ISODate> value) {
+			obj.setFATCAReportingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CRSRptgDt")
@@ -554,7 +636,7 @@ public class AccountManagementStatusAndReason5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCRSReportingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason5, Optional<ISODate>> mmCRSReportingDate = new MMMessageAttribute<AccountManagementStatusAndReason5, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CRSStatus.mmCRSReportingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
@@ -566,6 +648,16 @@ public class AccountManagementStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AccountManagementStatusAndReason5 obj) {
+			return obj.getCRSReportingDate();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason5 obj, Optional<ISODate> value) {
+			obj.setCRSReportingDate(value.orElse(null));
 		}
 	};
 
@@ -620,7 +712,7 @@ public class AccountManagementStatusAndReason5 {
 		return existingAccountIdentification == null ? existingAccountIdentification = new ArrayList<>() : existingAccountIdentification;
 	}
 
-	public AccountManagementStatusAndReason5 setExistingAccountIdentification(List<com.tools20022.repository.msg.Account23> existingAccountIdentification) {
+	public AccountManagementStatusAndReason5 setExistingAccountIdentification(List<Account23> existingAccountIdentification) {
 		this.existingAccountIdentification = Objects.requireNonNull(existingAccountIdentification);
 		return this;
 	}
@@ -638,7 +730,7 @@ public class AccountManagementStatusAndReason5 {
 		return accountStatus == null ? Optional.empty() : Optional.of(accountStatus);
 	}
 
-	public AccountManagementStatusAndReason5 setAccountStatus(com.tools20022.repository.msg.AccountStatus2 accountStatus) {
+	public AccountManagementStatusAndReason5 setAccountStatus(AccountStatus2 accountStatus) {
 		this.accountStatus = accountStatus;
 		return this;
 	}

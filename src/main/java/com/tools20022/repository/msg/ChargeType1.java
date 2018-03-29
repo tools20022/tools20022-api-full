@@ -113,7 +113,7 @@ public class ChargeType1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType1, ChargeType6Code> mmStructured = new MMMessageAttribute<ChargeType1, ChargeType6Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargeType1.mmObject();
@@ -125,6 +125,16 @@ public class ChargeType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType6Code.mmObject();
+		}
+
+		@Override
+		public ChargeType6Code getValue(ChargeType1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(ChargeType1 obj, ChargeType6Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -160,7 +170,7 @@ public class ChargeType1 {
 	 * definition} = "Additional information about the type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<ChargeType1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargeType1.mmObject();
@@ -172,6 +182,16 @@ public class ChargeType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ChargeType1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ChargeType1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

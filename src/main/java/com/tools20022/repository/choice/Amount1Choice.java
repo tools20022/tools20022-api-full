@@ -107,7 +107,7 @@ public class Amount1Choice {
 	 * definition} = "Amount of increase, and currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncreaseAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount1Choice, ActiveCurrencyAndAmount> mmIncreaseAmount = new MMMessageAttribute<Amount1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmChangeOfAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Amount1Choice.mmObject();
@@ -119,6 +119,16 @@ public class Amount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Amount1Choice obj) {
+			return obj.getIncreaseAmount();
+		}
+
+		@Override
+		public void setValue(Amount1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setIncreaseAmount(value);
 		}
 	};
 	@XmlElement(name = "DcrAmt", required = true)
@@ -156,7 +166,7 @@ public class Amount1Choice {
 	 * definition} = "Amount of decrease, and currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDecreaseAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount1Choice, ActiveCurrencyAndAmount> mmDecreaseAmount = new MMMessageAttribute<Amount1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmChangeOfAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Amount1Choice.mmObject();
@@ -168,6 +178,16 @@ public class Amount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Amount1Choice obj) {
+			return obj.getDecreaseAmount();
+		}
+
+		@Override
+		public void setValue(Amount1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setDecreaseAmount(value);
 		}
 	};
 

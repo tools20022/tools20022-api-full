@@ -116,7 +116,7 @@ public class TransferCancellationStatus {
 	 * definition} = "Status of the transfer cancellation instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferCancellationStatus, CancellationStatus1Code> mmStatus = new MMMessageAttribute<TransferCancellationStatus, CancellationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCancellationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationStatus.mmObject();
@@ -128,6 +128,16 @@ public class TransferCancellationStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationStatus1Code.mmObject();
+		}
+
+		@Override
+		public CancellationStatus1Code getValue(TransferCancellationStatus obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatus obj, CancellationStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -159,7 +169,7 @@ public class TransferCancellationStatus {
 	 * definition} = "Additional information about the status in textual form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferCancellationStatus, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<TransferCancellationStatus, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationStatus.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class TransferCancellationStatus {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransferCancellationStatus obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatus obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

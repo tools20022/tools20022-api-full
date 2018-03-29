@@ -48,11 +48,15 @@ public class ConstraintNumberRule {
 	 */
 	public static final MMConstraint<Max3Number> forMax3Number = new MMConstraint<Max3Number>() {
 		{
-			validator = ConstraintNumberRule::checkMax3Number;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberRule";
 			definition = "If Number is negative, then Sign must be present.";
 			owner_lazy = () -> Max3Number.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Max3Number obj) throws Exception {
+			checkMax3Number(obj);
 		}
 	};
 	/**
@@ -75,11 +79,15 @@ public class ConstraintNumberRule {
 	 */
 	public static final MMConstraint<Max5Number> forMax5Number = new MMConstraint<Max5Number>() {
 		{
-			validator = ConstraintNumberRule::checkMax5Number;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberRule";
 			definition = "If Number is negative, then Sign must be present.";
 			owner_lazy = () -> Max5Number.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Max5Number obj) throws Exception {
+			checkMax5Number(obj);
 		}
 	};
 

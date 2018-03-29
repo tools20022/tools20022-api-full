@@ -124,7 +124,7 @@ public class OrderWaiverReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderWaiverReason1Choice, OrderWaiverReason1Code> mmReason = new MMMessageAttribute<OrderWaiverReason1Choice, OrderWaiverReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrderWaiverReason1Choice.mmObject();
@@ -137,6 +137,16 @@ public class OrderWaiverReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderWaiverReason1Code.mmObject();
+		}
+
+		@Override
+		public OrderWaiverReason1Code getValue(OrderWaiverReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(OrderWaiverReason1Choice obj, OrderWaiverReason1Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class OrderWaiverReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderWaiverReason1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<OrderWaiverReason1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrderWaiverReason1Choice.mmObject();
@@ -197,6 +207,16 @@ public class OrderWaiverReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(OrderWaiverReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OrderWaiverReason1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

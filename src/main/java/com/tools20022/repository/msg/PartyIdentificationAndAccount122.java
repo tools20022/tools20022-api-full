@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternatePartyIdentification7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -136,7 +137,7 @@ public class PartyIdentificationAndAccount122 {
 	 * PartyIdentificationAndAccount51.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount122, PartyIdentification71Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount122, PartyIdentification71Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount122.mmObject();
@@ -151,6 +152,16 @@ public class PartyIdentificationAndAccount122 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification71Choice getValue(PartyIdentificationAndAccount122 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount122 obj, PartyIdentification71Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -195,7 +206,7 @@ public class PartyIdentificationAndAccount122 {
 	 * PartyIdentificationAndAccount51.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount122, Optional<Max35Text>> mmSafekeepingAccount = new MMMessageAttribute<PartyIdentificationAndAccount122, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount122.mmObject();
@@ -209,6 +220,16 @@ public class PartyIdentificationAndAccount122 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentificationAndAccount122 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount122 obj, Optional<Max35Text> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -248,7 +269,7 @@ public class PartyIdentificationAndAccount122 {
 	 * PartyIdentificationAndAccount51.mmProcessingIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount122, Optional<Max35Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentificationAndAccount122, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount122.mmObject();
 			isDerived = false;
@@ -262,9 +283,19 @@ public class PartyIdentificationAndAccount122 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentificationAndAccount122 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount122 obj, Optional<Max35Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AltrnId")
-	protected List<com.tools20022.repository.msg.AlternatePartyIdentification7> alternateIdentification;
+	protected List<AlternatePartyIdentification7> alternateIdentification;
 	/**
 	 * 
 	 <p>
@@ -305,7 +336,7 @@ public class PartyIdentificationAndAccount122 {
 	 * PartyIdentificationAndAccount51.mmAlternateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount122, List<AlternatePartyIdentification7>> mmAlternateIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount122, List<AlternatePartyIdentification7>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount122.mmObject();
@@ -318,7 +349,17 @@ public class PartyIdentificationAndAccount122 {
 			previousVersion_lazy = () -> PartyIdentificationAndAccount51.mmAlternateIdentification;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification7.mmObject();
+			type_lazy = () -> AlternatePartyIdentification7.mmObject();
+		}
+
+		@Override
+		public List<AlternatePartyIdentification7> getValue(PartyIdentificationAndAccount122 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount122 obj, List<AlternatePartyIdentification7> value) {
+			obj.setAlternateIdentification(value);
 		}
 	};
 
@@ -370,7 +411,7 @@ public class PartyIdentificationAndAccount122 {
 		return alternateIdentification == null ? alternateIdentification = new ArrayList<>() : alternateIdentification;
 	}
 
-	public PartyIdentificationAndAccount122 setAlternateIdentification(List<com.tools20022.repository.msg.AlternatePartyIdentification7> alternateIdentification) {
+	public PartyIdentificationAndAccount122 setAlternateIdentification(List<AlternatePartyIdentification7> alternateIdentification) {
 		this.alternateIdentification = Objects.requireNonNull(alternateIdentification);
 		return this;
 	}

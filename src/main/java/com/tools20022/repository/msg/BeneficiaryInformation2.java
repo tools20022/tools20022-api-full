@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.BeneficialOwner;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IndividualPerson15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -124,7 +125,7 @@ public class BeneficiaryInformation2 {
 	 * definition} = "Identification of the beneficial owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficiaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BeneficiaryInformation2, Optional<IndividualPerson15>> mmBeneficiaryIdentification = new MMMessageAssociationEnd<BeneficiaryInformation2, Optional<IndividualPerson15>>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation2.mmObject();
@@ -136,7 +137,17 @@ public class BeneficiaryInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
+			type_lazy = () -> IndividualPerson15.mmObject();
+		}
+
+		@Override
+		public Optional<IndividualPerson15> getValue(BeneficiaryInformation2 obj) {
+			return obj.getBeneficiaryIdentification();
+		}
+
+		@Override
+		public void setValue(BeneficiaryInformation2 obj, Optional<IndividualPerson15> value) {
+			obj.setBeneficiaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ERISAElgblty")
@@ -175,7 +186,7 @@ public class BeneficiaryInformation2 {
 	 * "Eligibility to federal Employee Retirement Income Security Act."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmERISAEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficiaryInformation2, Optional<ERISAEligibility1Code>> mmERISAEligibility = new MMMessageAttribute<BeneficiaryInformation2, Optional<ERISAEligibility1Code>>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmERISAEligibility;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation2.mmObject();
@@ -187,6 +198,16 @@ public class BeneficiaryInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ERISAEligibility1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ERISAEligibility1Code> getValue(BeneficiaryInformation2 obj) {
+			return obj.getERISAEligibility();
+		}
+
+		@Override
+		public void setValue(BeneficiaryInformation2 obj, Optional<ERISAEligibility1Code> value) {
+			obj.setERISAEligibility(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ERISARate")
@@ -225,7 +246,7 @@ public class BeneficiaryInformation2 {
 	 * "Federal Employee Retirement Income Security Act (ERISA) rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmERISARate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficiaryInformation2, Optional<PercentageRate>> mmERISARate = new MMMessageAttribute<BeneficiaryInformation2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmERISARate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation2.mmObject();
@@ -237,6 +258,16 @@ public class BeneficiaryInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(BeneficiaryInformation2 obj) {
+			return obj.getERISARate();
+		}
+
+		@Override
+		public void setValue(BeneficiaryInformation2 obj, Optional<PercentageRate> value) {
+			obj.setERISARate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BnftPlanDclrtnInd")
@@ -275,7 +306,7 @@ public class BeneficiaryInformation2 {
 	 * "Indicates whether the investor is a benefit plan investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBenefitPlanDeclarationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficiaryInformation2, Optional<YesNoIndicator>> mmBenefitPlanDeclarationIndicator = new MMMessageAttribute<BeneficiaryInformation2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmBenefitPlanDeclarationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation2.mmObject();
@@ -287,6 +318,16 @@ public class BeneficiaryInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(BeneficiaryInformation2 obj) {
+			return obj.getBenefitPlanDeclarationIndicator();
+		}
+
+		@Override
+		public void setValue(BeneficiaryInformation2 obj, Optional<YesNoIndicator> value) {
+			obj.setBenefitPlanDeclarationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NoChngToBnfcryDtlsInd")
@@ -321,7 +362,7 @@ public class BeneficiaryInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoChangeToBeneficiaryDetailsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficiaryInformation2, Optional<YesNoIndicator>> mmNoChangeToBeneficiaryDetailsIndicator = new MMMessageAttribute<BeneficiaryInformation2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation2.mmObject();
 			isDerived = false;
@@ -332,6 +373,16 @@ public class BeneficiaryInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(BeneficiaryInformation2 obj) {
+			return obj.getNoChangeToBeneficiaryDetailsIndicator();
+		}
+
+		@Override
+		public void setValue(BeneficiaryInformation2 obj, Optional<YesNoIndicator> value) {
+			obj.setNoChangeToBeneficiaryDetailsIndicator(value.orElse(null));
 		}
 	};
 
@@ -356,7 +407,7 @@ public class BeneficiaryInformation2 {
 		return beneficiaryIdentification == null ? Optional.empty() : Optional.of(beneficiaryIdentification);
 	}
 
-	public BeneficiaryInformation2 setBeneficiaryIdentification(com.tools20022.repository.msg.IndividualPerson15 beneficiaryIdentification) {
+	public BeneficiaryInformation2 setBeneficiaryIdentification(IndividualPerson15 beneficiaryIdentification) {
 		this.beneficiaryIdentification = beneficiaryIdentification;
 		return this;
 	}

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.BuyIn;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public class CashCompensation1 {
 	 * definition} = "Provides the original amount to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashCompensation1, AmountAndDirection20> mmSettlementAmount = new MMMessageAssociationEnd<CashCompensation1, AmountAndDirection20>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCompensation1.mmObject();
@@ -123,7 +124,17 @@ public class CashCompensation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
+			type_lazy = () -> AmountAndDirection20.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection20 getValue(CashCompensation1 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(CashCompensation1 obj, AmountAndDirection20 value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "Fees")
@@ -158,7 +169,7 @@ public class CashCompensation1 {
 	 * definition} = "Amount of fees linked to the cash compensation process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashCompensation1, Optional<AmountAndDirection20>> mmFees = new MMMessageAssociationEnd<CashCompensation1, Optional<AmountAndDirection20>>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmFees;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCompensation1.mmObject();
@@ -170,7 +181,17 @@ public class CashCompensation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
+			type_lazy = () -> AmountAndDirection20.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection20> getValue(CashCompensation1 obj) {
+			return obj.getFees();
+		}
+
+		@Override
+		public void setValue(CashCompensation1 obj, Optional<AmountAndDirection20> value) {
+			obj.setFees(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -207,7 +228,7 @@ public class CashCompensation1 {
 	 * definition} = "Indicates the value date of the cash compensation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCompensation1, Optional<ISODate>> mmValueDate = new MMMessageAttribute<CashCompensation1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCompensation1.mmObject();
@@ -219,6 +240,16 @@ public class CashCompensation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CashCompensation1 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(CashCompensation1 obj, Optional<ISODate> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 
@@ -241,7 +272,7 @@ public class CashCompensation1 {
 		return settlementAmount;
 	}
 
-	public CashCompensation1 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+	public CashCompensation1 setSettlementAmount(AmountAndDirection20 settlementAmount) {
 		this.settlementAmount = Objects.requireNonNull(settlementAmount);
 		return this;
 	}
@@ -250,7 +281,7 @@ public class CashCompensation1 {
 		return fees == null ? Optional.empty() : Optional.of(fees);
 	}
 
-	public CashCompensation1 setFees(com.tools20022.repository.msg.AmountAndDirection20 fees) {
+	public CashCompensation1 setFees(AmountAndDirection20 fees) {
 		this.fees = fees;
 		return this;
 	}

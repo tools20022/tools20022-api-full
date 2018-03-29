@@ -117,7 +117,7 @@ public class Status21Choice {
 	 * "Status of the transfer cancellation is accepted or sent to next party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status21Choice, TransferCancellationStatus2> mmStatus = new MMMessageAssociationEnd<Status21Choice, TransferCancellationStatus2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status21Choice.mmObject();
@@ -130,6 +130,16 @@ public class Status21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferCancellationStatus2.mmObject();
+		}
+
+		@Override
+		public TransferCancellationStatus2 getValue(Status21Choice obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(Status21Choice obj, TransferCancellationStatus2 value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -164,7 +174,7 @@ public class Status21Choice {
 	 * definition} = "Status of the transfer cancellation is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status21Choice, RejectionReason33> mmRejected = new MMMessageAssociationEnd<Status21Choice, RejectionReason33>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status21Choice.mmObject();
@@ -177,6 +187,16 @@ public class Status21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionReason33.mmObject();
+		}
+
+		@Override
+		public RejectionReason33 getValue(Status21Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(Status21Choice obj, RejectionReason33 value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "Cmplt", required = true)
@@ -214,7 +234,7 @@ public class Status21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmComplete = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status21Choice, CancelledCompleteReason1> mmComplete = new MMMessageAssociationEnd<Status21Choice, CancelledCompleteReason1>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status21Choice.mmObject();
@@ -227,6 +247,16 @@ public class Status21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancelledCompleteReason1.mmObject();
+		}
+
+		@Override
+		public CancelledCompleteReason1 getValue(Status21Choice obj) {
+			return obj.getComplete();
+		}
+
+		@Override
+		public void setValue(Status21Choice obj, CancelledCompleteReason1 value) {
+			obj.setComplete(value);
 		}
 	};
 	@XmlElement(name = "Pdg", required = true)
@@ -263,7 +293,7 @@ public class Status21Choice {
 	 * definition} = "Status of the transfer cancellation is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status21Choice, TransferCancellationPendingStatus1> mmPending = new MMMessageAssociationEnd<Status21Choice, TransferCancellationPendingStatus1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status21Choice.mmObject();
@@ -276,6 +306,16 @@ public class Status21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferCancellationPendingStatus1.mmObject();
+		}
+
+		@Override
+		public TransferCancellationPendingStatus1 getValue(Status21Choice obj) {
+			return obj.getPending();
+		}
+
+		@Override
+		public void setValue(Status21Choice obj, TransferCancellationPendingStatus1 value) {
+			obj.setPending(value);
 		}
 	};
 

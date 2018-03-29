@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.PresentationMedium1Choice;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Document8;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -113,7 +114,7 @@ public class Presentation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMedium = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Presentation1, Optional<PresentationMedium1Choice>> mmMedium = new MMMessageAttribute<Presentation1, Optional<PresentationMedium1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmMedium;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation1.mmObject();
@@ -125,6 +126,16 @@ public class Presentation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PresentationMedium1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PresentationMedium1Choice> getValue(Presentation1 obj) {
+			return obj.getMedium();
+		}
+
+		@Override
+		public void setValue(Presentation1 obj, Optional<PresentationMedium1Choice> value) {
+			obj.setMedium(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfPresntnOrUdrConfChc")
@@ -155,7 +166,7 @@ public class Presentation1 {
 	 * definition} = "Choice of representation for the place of presentation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlaceOfPresentationOrUnderConfirmationChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Presentation1, Optional<PlaceOrUnderConfirmationChoice1>> mmPlaceOfPresentationOrUnderConfirmationChoice = new MMMessageAssociationEnd<Presentation1, Optional<PlaceOrUnderConfirmationChoice1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation1.mmObject();
 			isDerived = false;
@@ -168,9 +179,19 @@ public class Presentation1 {
 			isComposite = true;
 			type_lazy = () -> PlaceOrUnderConfirmationChoice1.mmObject();
 		}
+
+		@Override
+		public Optional<PlaceOrUnderConfirmationChoice1> getValue(Presentation1 obj) {
+			return obj.getPlaceOfPresentationOrUnderConfirmationChoice();
+		}
+
+		@Override
+		public void setValue(Presentation1 obj, Optional<PlaceOrUnderConfirmationChoice1> value) {
+			obj.setPlaceOfPresentationOrUnderConfirmationChoice(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Doc")
-	protected List<com.tools20022.repository.msg.Document8> document;
+	protected List<Document8> document;
 	/**
 	 * 
 	 <p>
@@ -200,7 +221,7 @@ public class Presentation1 {
 	 * definition} = "Document required to be presented."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Presentation1, List<Document8>> mmDocument = new MMMessageAssociationEnd<Presentation1, List<Document8>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmPresentedDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation1.mmObject();
@@ -211,7 +232,17 @@ public class Presentation1 {
 			definition = "Document required to be presented.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Document8.mmObject();
+			type_lazy = () -> Document8.mmObject();
+		}
+
+		@Override
+		public List<Document8> getValue(Presentation1 obj) {
+			return obj.getDocument();
+		}
+
+		@Override
+		public void setValue(Presentation1 obj, List<Document8> value) {
+			obj.setDocument(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -242,7 +273,7 @@ public class Presentation1 {
 	 * definition} = "Additional information related to the presentation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Presentation1, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<Presentation1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation1.mmObject();
 			isDerived = false;
@@ -253,6 +284,16 @@ public class Presentation1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(Presentation1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Presentation1 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -293,7 +334,7 @@ public class Presentation1 {
 		return document == null ? document = new ArrayList<>() : document;
 	}
 
-	public Presentation1 setDocument(List<com.tools20022.repository.msg.Document8> document) {
+	public Presentation1 setDocument(List<Document8> document) {
 		this.document = Objects.requireNonNull(document);
 		return this;
 	}

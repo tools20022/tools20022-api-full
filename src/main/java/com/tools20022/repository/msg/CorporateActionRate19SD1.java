@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LongQuantityToQuantityRatio2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -99,7 +100,7 @@ public class CorporateActionRate19SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate19SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionRate19SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate19SD1.mmObject();
 			isDerived = false;
@@ -110,6 +111,16 @@ public class CorporateActionRate19SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionRate19SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate19SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LngQtyToQty", required = true)
@@ -143,7 +154,7 @@ public class CorporateActionRate19SD1 {
 	 * "Ratio expressed as a quotient of high precision quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongQuantityToQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate19SD1, LongQuantityToQuantityRatio2> mmLongQuantityToQuantity = new MMMessageAttribute<CorporateActionRate19SD1, LongQuantityToQuantityRatio2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate19SD1.mmObject();
 			isDerived = false;
@@ -153,7 +164,17 @@ public class CorporateActionRate19SD1 {
 			definition = "Ratio expressed as a quotient of high precision quantities.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.LongQuantityToQuantityRatio2.mmObject();
+			complexType_lazy = () -> LongQuantityToQuantityRatio2.mmObject();
+		}
+
+		@Override
+		public LongQuantityToQuantityRatio2 getValue(CorporateActionRate19SD1 obj) {
+			return obj.getLongQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate19SD1 obj, LongQuantityToQuantityRatio2 value) {
+			obj.setLongQuantityToQuantity(value);
 		}
 	};
 
@@ -183,7 +204,7 @@ public class CorporateActionRate19SD1 {
 		return longQuantityToQuantity;
 	}
 
-	public CorporateActionRate19SD1 setLongQuantityToQuantity(com.tools20022.repository.msg.LongQuantityToQuantityRatio2 longQuantityToQuantity) {
+	public CorporateActionRate19SD1 setLongQuantityToQuantity(LongQuantityToQuantityRatio2 longQuantityToQuantity) {
 		this.longQuantityToQuantity = Objects.requireNonNull(longQuantityToQuantity);
 		return this;
 	}

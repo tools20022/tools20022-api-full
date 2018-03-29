@@ -113,7 +113,7 @@ public class RevaluationIndicator4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RevaluationIndicator4Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<RevaluationIndicator4Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RevaluationIndicator4Choice.mmObject();
@@ -126,6 +126,16 @@ public class RevaluationIndicator4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(RevaluationIndicator4Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(RevaluationIndicator4Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class RevaluationIndicator4Choice {
 	 * definition} = "Revaluation information provided as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RevaluationIndicator4Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<RevaluationIndicator4Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RevaluationIndicator4Choice.mmObject();
@@ -179,6 +189,16 @@ public class RevaluationIndicator4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(RevaluationIndicator4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RevaluationIndicator4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -224,7 +224,7 @@ public class CopyInformation4 {
 	 * CopyInformation2.mmCopyIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CopyInformation4, YesNoIndicator> mmCopyIndicator = new MMMessageAttribute<CopyInformation4, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CopyInformation4.mmObject();
 			isDerived = false;
@@ -236,6 +236,16 @@ public class CopyInformation4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CopyInformation4 obj) {
+			return obj.getCopyIndicator();
+		}
+
+		@Override
+		public void setValue(CopyInformation4 obj, YesNoIndicator value) {
+			obj.setCopyIndicator(value);
 		}
 	};
 	@XmlElement(name = "OrgnlRcvr")
@@ -274,7 +284,7 @@ public class CopyInformation4 {
 	 * CopyInformation2.mmOriginalReceiver}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalReceiver = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CopyInformation4, Optional<AnyBICIdentifier>> mmOriginalReceiver = new MMMessageAttribute<CopyInformation4, Optional<AnyBICIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CopyInformation4.mmObject();
 			isDerived = false;
@@ -286,6 +296,16 @@ public class CopyInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<AnyBICIdentifier> getValue(CopyInformation4 obj) {
+			return obj.getOriginalReceiver();
+		}
+
+		@Override
+		public void setValue(CopyInformation4 obj, Optional<AnyBICIdentifier> value) {
+			obj.setOriginalReceiver(value.orElse(null));
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.HaircutValuation;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class BasicCollateralValuation1Details {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationHaircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BasicCollateralValuation1Details, PercentageRate> mmValuationHaircut = new MMMessageAttribute<BasicCollateralValuation1Details, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BasicCollateralValuation1Details.mmObject();
@@ -122,6 +123,16 @@ public class BasicCollateralValuation1Details {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(BasicCollateralValuation1Details obj) {
+			return obj.getValuationHaircut();
+		}
+
+		@Override
+		public void setValue(BasicCollateralValuation1Details obj, PercentageRate value) {
+			obj.setValuationHaircut(value);
 		}
 	};
 	@XmlElement(name = "HrcutSrc")
@@ -159,7 +170,7 @@ public class BasicCollateralValuation1Details {
 	 * definition} = "Place where the valuation haircut was calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHaircutSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BasicCollateralValuation1Details, Optional<PartyIdentification15>> mmHaircutSource = new MMMessageAttribute<BasicCollateralValuation1Details, Optional<PartyIdentification15>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BasicCollateralValuation1Details.mmObject();
@@ -170,7 +181,17 @@ public class BasicCollateralValuation1Details {
 			definition = "Place where the valuation haircut was calculated.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification15.mmObject();
+			complexType_lazy = () -> PartyIdentification15.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification15> getValue(BasicCollateralValuation1Details obj) {
+			return obj.getHaircutSource();
+		}
+
+		@Override
+		public void setValue(BasicCollateralValuation1Details obj, Optional<PartyIdentification15> value) {
+			obj.setHaircutSource(value.orElse(null));
 		}
 	};
 
@@ -201,7 +222,7 @@ public class BasicCollateralValuation1Details {
 		return haircutSource == null ? Optional.empty() : Optional.of(haircutSource);
 	}
 
-	public BasicCollateralValuation1Details setHaircutSource(com.tools20022.repository.msg.PartyIdentification15 haircutSource) {
+	public BasicCollateralValuation1Details setHaircutSource(PartyIdentification15 haircutSource) {
 		this.haircutSource = haircutSource;
 		return this;
 	}

@@ -114,7 +114,7 @@ public class RateAndAmountFormat4Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat4Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat4Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat4Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class RateAndAmountFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat4Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat4Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -161,7 +171,7 @@ public class RateAndAmountFormat4Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat4Choice, RateValueType6Code> mmNotSpecifiedRate = new MMMessageAttribute<RateAndAmountFormat4Choice, RateValueType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat4Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class RateAndAmountFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType6Code.mmObject();
+		}
+
+		@Override
+		public RateValueType6Code getValue(RateAndAmountFormat4Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat4Choice obj, RateValueType6Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

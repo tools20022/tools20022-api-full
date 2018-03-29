@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.AccountIdentification1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
@@ -115,7 +116,7 @@ public class AccountIdentificationOrNameChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationOrNameChoice, Max35Text> mmName = new MMMessageAttribute<AccountIdentificationOrNameChoice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmObject();
@@ -127,6 +128,16 @@ public class AccountIdentificationOrNameChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentificationOrNameChoice obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationOrNameChoice obj, Max35Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -166,7 +177,7 @@ public class AccountIdentificationOrNameChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationOrNameChoice, AccountIdentification1Choice> mmIdentification = new MMMessageAttribute<AccountIdentificationOrNameChoice, AccountIdentification1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmObject();
@@ -177,7 +188,17 @@ public class AccountIdentificationOrNameChoice {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.AccountIdentification1Choice.mmObject();
+			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1Choice getValue(AccountIdentificationOrNameChoice obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationOrNameChoice obj, AccountIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndId", required = true)
@@ -216,7 +237,7 @@ public class AccountIdentificationOrNameChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentificationOrNameChoice, AccountIdentificationAndName2> mmNameAndIdentification = new MMMessageAssociationEnd<AccountIdentificationOrNameChoice, AccountIdentificationAndName2>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationOrNameChoice.mmObject();
@@ -229,6 +250,16 @@ public class AccountIdentificationOrNameChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentificationAndName2.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationAndName2 getValue(AccountIdentificationOrNameChoice obj) {
+			return obj.getNameAndIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationOrNameChoice obj, AccountIdentificationAndName2 value) {
+			obj.setNameAndIdentification(value);
 		}
 	};
 
@@ -260,7 +291,7 @@ public class AccountIdentificationOrNameChoice {
 		return identification;
 	}
 
-	public AccountIdentificationOrNameChoice setIdentification(com.tools20022.repository.choice.AccountIdentification1Choice identification) {
+	public AccountIdentificationOrNameChoice setIdentification(AccountIdentification1Choice identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

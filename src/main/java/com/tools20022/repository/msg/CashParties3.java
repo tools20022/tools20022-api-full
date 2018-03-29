@@ -26,6 +26,8 @@ import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount15;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -144,7 +146,7 @@ public class CashParties3 {
 	 * "Party that owes an amount of money to the (ultimate) creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashParties3, Optional<PartyIdentificationAndAccount20>> mmDebtor = new MMMessageAttribute<CashParties3, Optional<PartyIdentificationAndAccount20>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties3.mmObject();
@@ -156,7 +158,17 @@ public class CashParties3 {
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount20.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount20.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount20> getValue(CashParties3 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(CashParties3 obj, Optional<PartyIdentificationAndAccount20> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt")
@@ -198,7 +210,7 @@ public class CashParties3 {
 	 * "Financial institution servicing an account for the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashParties3, Optional<PartyIdentificationAndAccount15>> mmDebtorAgent = new MMMessageAttribute<CashParties3, Optional<PartyIdentificationAndAccount15>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties3.mmObject();
@@ -210,7 +222,17 @@ public class CashParties3 {
 			definition = "Financial institution servicing an account for the debtor.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount15.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount15.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount15> getValue(CashParties3 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties3 obj, Optional<PartyIdentificationAndAccount15> value) {
+			obj.setDebtorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr")
@@ -251,7 +273,7 @@ public class CashParties3 {
 	 * definition} = "Party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashParties3, Optional<PartyIdentificationAndAccount20>> mmCreditor = new MMMessageAttribute<CashParties3, Optional<PartyIdentificationAndAccount20>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties3.mmObject();
@@ -263,7 +285,17 @@ public class CashParties3 {
 			definition = "Party to which an amount of money is due.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount20.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount20.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount20> getValue(CashParties3 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(CashParties3 obj, Optional<PartyIdentificationAndAccount20> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -305,7 +337,7 @@ public class CashParties3 {
 	 * "Financial institution servicing an account for the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashParties3, Optional<PartyIdentificationAndAccount15>> mmCreditorAgent = new MMMessageAttribute<CashParties3, Optional<PartyIdentificationAndAccount15>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties3.mmObject();
@@ -317,7 +349,17 @@ public class CashParties3 {
 			definition = "Financial institution servicing an account for the creditor.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount15.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount15.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount15> getValue(CashParties3 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties3 obj, Optional<PartyIdentificationAndAccount15> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 
@@ -343,7 +385,7 @@ public class CashParties3 {
 		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public CashParties3 setDebtor(com.tools20022.repository.msg.PartyIdentificationAndAccount20 debtor) {
+	public CashParties3 setDebtor(PartyIdentificationAndAccount20 debtor) {
 		this.debtor = debtor;
 		return this;
 	}
@@ -352,7 +394,7 @@ public class CashParties3 {
 		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public CashParties3 setDebtorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount15 debtorAgent) {
+	public CashParties3 setDebtorAgent(PartyIdentificationAndAccount15 debtorAgent) {
 		this.debtorAgent = debtorAgent;
 		return this;
 	}
@@ -361,7 +403,7 @@ public class CashParties3 {
 		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public CashParties3 setCreditor(com.tools20022.repository.msg.PartyIdentificationAndAccount20 creditor) {
+	public CashParties3 setCreditor(PartyIdentificationAndAccount20 creditor) {
 		this.creditor = creditor;
 		return this;
 	}
@@ -370,7 +412,7 @@ public class CashParties3 {
 		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public CashParties3 setCreditorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount15 creditorAgent) {
+	public CashParties3 setCreditorAgent(PartyIdentificationAndAccount15 creditorAgent) {
 		this.creditorAgent = creditorAgent;
 		return this;
 	}

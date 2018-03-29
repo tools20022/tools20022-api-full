@@ -105,7 +105,7 @@ public class FXCancellation2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FXCancellation2Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<FXCancellation2Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FXCancellation2Choice.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class FXCancellation2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FXCancellation2Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(FXCancellation2Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -152,7 +162,7 @@ public class FXCancellation2Choice {
 	 * "FX Cancellation information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FXCancellation2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<FXCancellation2Choice, GenericIdentification25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FXCancellation2Choice.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class FXCancellation2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(FXCancellation2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FXCancellation2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

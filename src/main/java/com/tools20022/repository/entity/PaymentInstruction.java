@@ -22,10 +22,12 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.InstructionCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.entity.CashSettlement;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.PaymentExecution;
+import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -705,7 +707,7 @@ public class PaymentInstruction extends PaymentExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmProcessingValidityTime = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PaymentInstruction, DateTimePeriod> mmProcessingValidityTime = new MMBusinessAssociationEnd<PaymentInstruction, DateTimePeriod>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentSearch2.mmProcessingValidityTime, PaymentSearch3.mmProcessingValidityTime, PaymentSearch4.mmProcessingValidityTime, PaymentDetails2.mmProcessingValidityTime,
 					PaymentDetails4.mmProcessingValidityTime, PaymentInstruction2.mmProcessingValidityTime, PaymentDetails5.mmProcessingValidityTime, PaymentDetails6.mmProcessingValidityTime, PaymentDetails7.mmProcessingValidityTime,
@@ -718,9 +720,19 @@ public class PaymentInstruction extends PaymentExecution {
 			definition = "Date and time range within which the payment instruction must be processed.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmPaymentInstruction;
+			opposite_lazy = () -> DateTimePeriod.mmPaymentInstruction;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod getValue(PaymentInstruction obj) {
+			return obj.getProcessingValidityTime();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction obj, DateTimePeriod value) {
+			obj.setProcessingValidityTime(value);
 		}
 	};
 	protected InstructionCode instructionForNextAgent;
@@ -886,7 +898,7 @@ public class PaymentInstruction extends PaymentExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInstructionForNextAgent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentInstruction, InstructionCode> mmInstructionForNextAgent = new MMBusinessAttribute<PaymentInstruction, InstructionCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentSearch4.mmInstruction, PaymentDetails2.mmInstruction, PaymentDetails4.mmInstruction, PaymentInstruction2.mmInstruction, InstructionForNextAgent1.mmCode,
 					CreditTransferTransactionInformation2.mmInstructionForNextAgent, CreditTransferTransactionInformation11.mmInstructionForNextAgent, CreditTransferTransaction2.mmInstructionForNextAgent,
@@ -910,12 +922,14 @@ public class PaymentInstruction extends PaymentExecution {
 			simpleType_lazy = () -> InstructionCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentInstruction.class.getMethod("getInstructionForNextAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InstructionCode getValue(PaymentInstruction obj) {
+			return obj.getInstructionForNextAgent();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction obj, InstructionCode value) {
+			obj.setInstructionForNextAgent(value);
 		}
 	};
 	protected CashSettlement settlementInstruction;
@@ -1234,7 +1248,7 @@ public class PaymentInstruction extends PaymentExecution {
 	 * "Instruction for the cash settlement between two clearing agents."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSettlementInstruction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PaymentInstruction, CashSettlement> mmSettlementInstruction = new MMBusinessAssociationEnd<PaymentInstruction, CashSettlement>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentStatusCode5Choice.mmSettlement, OriginalTransactionReference1.mmSettlementInformation, OriginalTransactionReference13.mmSettlementInformation,
 					OriginalTransactionReference16.mmSettlementInformation, GroupHeader2.mmSettlementInformation, CreditTransferTransactionInformation2.mmSettlementTimeIndication, GroupHeader33.mmSettlementInformation,
@@ -1266,9 +1280,19 @@ public class PaymentInstruction extends PaymentExecution {
 			definition = "Instruction for the cash settlement between two clearing agents.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmRelatedPaymentInstruction;
+			opposite_lazy = () -> CashSettlement.mmRelatedPaymentInstruction;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
+			type_lazy = () -> CashSettlement.mmObject();
+		}
+
+		@Override
+		public CashSettlement getValue(PaymentInstruction obj) {
+			return obj.getSettlementInstruction();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction obj, CashSettlement value) {
+			obj.setSettlementInstruction(value);
 		}
 	};
 	protected CurrencyAndAmount clearingChargeAmount;
@@ -1341,7 +1365,7 @@ public class PaymentInstruction extends PaymentExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmClearingChargeAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentInstruction, CurrencyAndAmount> mmClearingChargeAmount = new MMBusinessAttribute<PaymentInstruction, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTransactionInformation5.mmCompensationAmount, PaymentTransactionInformation29.mmCompensationAmount, PaymentTransactionInformation2.mmCompensationAmount,
 					PaymentTransactionInformation27.mmCompensationAmount, PaymentTransactionInformation13.mmCompensationAmount, PaymentTransactionInformation18.mmCompensationAmount, PaymentTransactionInformation16.mmCompensationAmount,
@@ -1357,12 +1381,14 @@ public class PaymentInstruction extends PaymentExecution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentInstruction.class.getMethod("getClearingChargeAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(PaymentInstruction obj) {
+			return obj.getClearingChargeAmount();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction obj, CurrencyAndAmount value) {
+			obj.setClearingChargeAmount(value);
 		}
 	};
 	protected StandingOrder standingOrder;
@@ -1401,7 +1427,7 @@ public class PaymentInstruction extends PaymentExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmStandingOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PaymentInstruction, com.tools20022.repository.entity.StandingOrder> mmStandingOrder = new MMBusinessAssociationEnd<PaymentInstruction, com.tools20022.repository.entity.StandingOrder>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmObject();
@@ -1413,6 +1439,16 @@ public class PaymentInstruction extends PaymentExecution {
 			opposite_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmPaymentInstructionTrigger;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.StandingOrder.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.StandingOrder getValue(PaymentInstruction obj) {
+			return obj.getStandingOrder();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction obj, com.tools20022.repository.entity.StandingOrder value) {
+			obj.setStandingOrder(value);
 		}
 	};
 	protected List<PaymentExecution> previous;
@@ -1451,7 +1487,7 @@ public class PaymentInstruction extends PaymentExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPrevious = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PaymentInstruction, List<PaymentExecution>> mmPrevious = new MMBusinessAssociationEnd<PaymentInstruction, List<PaymentExecution>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmObject();
@@ -1463,6 +1499,16 @@ public class PaymentInstruction extends PaymentExecution {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> PaymentExecution.mmObject();
 		}
+
+		@Override
+		public List<PaymentExecution> getValue(PaymentInstruction obj) {
+			return obj.getPrevious();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction obj, List<PaymentExecution> value) {
+			obj.setPrevious(value);
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -1472,7 +1518,7 @@ public class PaymentInstruction extends PaymentExecution {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstruction";
 				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmPaymentInstruction, PaymentExecution.mmNext, com.tools20022.repository.entity.CashSettlement.mmRelatedPaymentInstruction,
+				associationDomain_lazy = () -> Arrays.asList(DateTimePeriod.mmPaymentInstruction, PaymentExecution.mmNext, CashSettlement.mmRelatedPaymentInstruction,
 						com.tools20022.repository.entity.StandingOrder.mmPaymentInstructionTrigger);
 				derivationElement_lazy = () -> Arrays.asList(PaymentIdentificationChoice.mmShortBusinessIdentification, PaymentIdentificationChoice.mmLongBusinessIdentification, PaymentIdentification2Choice.mmLongBusinessIdentification,
 						PaymentIdentification2Choice.mmShortBusinessIdentification, PaymentIdentification3Choice.mmLongBusinessIdentification, PaymentIdentification3Choice.mmShortBusinessIdentification,
@@ -1540,7 +1586,7 @@ public class PaymentInstruction extends PaymentExecution {
 		return processingValidityTime;
 	}
 
-	public PaymentInstruction setProcessingValidityTime(com.tools20022.repository.entity.DateTimePeriod processingValidityTime) {
+	public PaymentInstruction setProcessingValidityTime(DateTimePeriod processingValidityTime) {
 		this.processingValidityTime = Objects.requireNonNull(processingValidityTime);
 		return this;
 	}
@@ -1558,7 +1604,7 @@ public class PaymentInstruction extends PaymentExecution {
 		return settlementInstruction;
 	}
 
-	public PaymentInstruction setSettlementInstruction(com.tools20022.repository.entity.CashSettlement settlementInstruction) {
+	public PaymentInstruction setSettlementInstruction(CashSettlement settlementInstruction) {
 		this.settlementInstruction = Objects.requireNonNull(settlementInstruction);
 		return this;
 	}

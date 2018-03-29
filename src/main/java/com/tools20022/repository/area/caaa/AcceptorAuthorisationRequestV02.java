@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorAuthorisationRequest2;
 import com.tools20022.repository.msg.ContentInformationType6;
 import com.tools20022.repository.msg.Header1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +133,7 @@ public class AcceptorAuthorisationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationRequestV02, Header1> mmHeader = new MMMessageBuildingBlock<AcceptorAuthorisationRequestV02, Header1>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,12 +145,14 @@ public class AcceptorAuthorisationRequestV02 {
 			complexType_lazy = () -> Header1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationRequestV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header1 getValue(AcceptorAuthorisationRequestV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequestV02 obj, Header1 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "AuthstnReq", required = true)
@@ -187,7 +188,7 @@ public class AcceptorAuthorisationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAuthorisationRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationRequestV02, AcceptorAuthorisationRequest2> mmAuthorisationRequest = new MMMessageBuildingBlock<AcceptorAuthorisationRequestV02, AcceptorAuthorisationRequest2>() {
 		{
 			xmlTag = "AuthstnReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,12 +200,14 @@ public class AcceptorAuthorisationRequestV02 {
 			complexType_lazy = () -> AcceptorAuthorisationRequest2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationRequestV02.class.getMethod("getAuthorisationRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorAuthorisationRequest2 getValue(AcceptorAuthorisationRequestV02 obj) {
+			return obj.getAuthorisationRequest();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequestV02 obj, AcceptorAuthorisationRequest2 value) {
+			obj.setAuthorisationRequest(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -240,7 +243,7 @@ public class AcceptorAuthorisationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationRequestV02, ContentInformationType6> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorAuthorisationRequestV02, ContentInformationType6>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,12 +255,14 @@ public class AcceptorAuthorisationRequestV02 {
 			complexType_lazy = () -> ContentInformationType6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationRequestV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType6 getValue(AcceptorAuthorisationRequestV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequestV02 obj, ContentInformationType6 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

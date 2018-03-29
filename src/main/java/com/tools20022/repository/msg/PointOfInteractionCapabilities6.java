@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.PointOfInteraction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DisplayCapabilities4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -141,7 +142,7 @@ public class PointOfInteractionCapabilities6 {
 	 * PointOfInteractionCapabilities3.mmCardReadingCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardReadingCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionCapabilities6, List<CardDataReading5Code>> mmCardReadingCapabilities = new MMMessageAttribute<PointOfInteractionCapabilities6, List<CardDataReading5Code>>() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmObject();
@@ -153,6 +154,16 @@ public class PointOfInteractionCapabilities6 {
 			previousVersion_lazy = () -> PointOfInteractionCapabilities3.mmCardReadingCapabilities;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
+		}
+
+		@Override
+		public List<CardDataReading5Code> getValue(PointOfInteractionCapabilities6 obj) {
+			return obj.getCardReadingCapabilities();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionCapabilities6 obj, List<CardDataReading5Code> value) {
+			obj.setCardReadingCapabilities(value);
 		}
 	};
 	@XmlElement(name = "CrdhldrVrfctnCpblties")
@@ -197,7 +208,7 @@ public class PointOfInteractionCapabilities6 {
 	 * PointOfInteractionCapabilities3.mmCardholderVerificationCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardholderVerificationCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionCapabilities6, List<CardholderVerificationCapability4Code>> mmCardholderVerificationCapabilities = new MMMessageAttribute<PointOfInteractionCapabilities6, List<CardholderVerificationCapability4Code>>() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmCardholderVerificationCapabilities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmObject();
@@ -209,6 +220,16 @@ public class PointOfInteractionCapabilities6 {
 			previousVersion_lazy = () -> PointOfInteractionCapabilities3.mmCardholderVerificationCapabilities;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardholderVerificationCapability4Code.mmObject();
+		}
+
+		@Override
+		public List<CardholderVerificationCapability4Code> getValue(PointOfInteractionCapabilities6 obj) {
+			return obj.getCardholderVerificationCapabilities();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionCapabilities6 obj, List<CardholderVerificationCapability4Code> value) {
+			obj.setCardholderVerificationCapabilities(value);
 		}
 	};
 	@XmlElement(name = "PINLngthCpblties")
@@ -247,7 +268,7 @@ public class PointOfInteractionCapabilities6 {
 	 * PointOfInteractionCapabilities3.mmPINLengthCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPINLengthCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionCapabilities6, Optional<Number>> mmPINLengthCapabilities = new MMMessageAttribute<PointOfInteractionCapabilities6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmObject();
 			isDerived = false;
@@ -259,6 +280,16 @@ public class PointOfInteractionCapabilities6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(PointOfInteractionCapabilities6 obj) {
+			return obj.getPINLengthCapabilities();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionCapabilities6 obj, Optional<Number> value) {
+			obj.setPINLengthCapabilities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ApprvlCdLngth")
@@ -297,7 +328,7 @@ public class PointOfInteractionCapabilities6 {
 	 * PointOfInteractionCapabilities3.mmApprovalCodeLength}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApprovalCodeLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionCapabilities6, Optional<Number>> mmApprovalCodeLength = new MMMessageAttribute<PointOfInteractionCapabilities6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmObject();
 			isDerived = false;
@@ -309,6 +340,16 @@ public class PointOfInteractionCapabilities6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(PointOfInteractionCapabilities6 obj) {
+			return obj.getApprovalCodeLength();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionCapabilities6 obj, Optional<Number> value) {
+			obj.setApprovalCodeLength(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MxScrptLngth")
@@ -342,7 +383,7 @@ public class PointOfInteractionCapabilities6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaxScriptLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionCapabilities6, Optional<Number>> mmMaxScriptLength = new MMMessageAttribute<PointOfInteractionCapabilities6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmObject();
 			isDerived = false;
@@ -353,6 +394,16 @@ public class PointOfInteractionCapabilities6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(PointOfInteractionCapabilities6 obj) {
+			return obj.getMaxScriptLength();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionCapabilities6 obj, Optional<Number> value) {
+			obj.setMaxScriptLength(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardCaptrCpbl")
@@ -390,7 +441,7 @@ public class PointOfInteractionCapabilities6 {
 	 * PointOfInteractionCapabilities3.mmCardCaptureCapable}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardCaptureCapable = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionCapabilities6, Optional<TrueFalseIndicator>> mmCardCaptureCapable = new MMMessageAttribute<PointOfInteractionCapabilities6, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmObject();
 			isDerived = false;
@@ -402,6 +453,16 @@ public class PointOfInteractionCapabilities6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(PointOfInteractionCapabilities6 obj) {
+			return obj.getCardCaptureCapable();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionCapabilities6 obj, Optional<TrueFalseIndicator> value) {
+			obj.setCardCaptureCapable(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OnLineCpblties")
@@ -445,7 +506,7 @@ public class PointOfInteractionCapabilities6 {
 	 * PointOfInteractionCapabilities3.mmOnLineCapabilities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOnLineCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionCapabilities6, Optional<OnLineCapability1Code>> mmOnLineCapabilities = new MMMessageAttribute<PointOfInteractionCapabilities6, Optional<OnLineCapability1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmOnLineCapabilities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmObject();
@@ -459,9 +520,19 @@ public class PointOfInteractionCapabilities6 {
 			minOccurs = 0;
 			simpleType_lazy = () -> OnLineCapability1Code.mmObject();
 		}
+
+		@Override
+		public Optional<OnLineCapability1Code> getValue(PointOfInteractionCapabilities6 obj) {
+			return obj.getOnLineCapabilities();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionCapabilities6 obj, Optional<OnLineCapability1Code> value) {
+			obj.setOnLineCapabilities(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "MsgCpblties")
-	protected List<com.tools20022.repository.msg.DisplayCapabilities4> messageCapabilities;
+	protected List<DisplayCapabilities4> messageCapabilities;
 	/**
 	 * 
 	 <p>
@@ -490,7 +561,7 @@ public class PointOfInteractionCapabilities6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageCapabilities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PointOfInteractionCapabilities6, List<DisplayCapabilities4>> mmMessageCapabilities = new MMMessageAssociationEnd<PointOfInteractionCapabilities6, List<DisplayCapabilities4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities6.mmObject();
 			isDerived = false;
@@ -500,7 +571,17 @@ public class PointOfInteractionCapabilities6 {
 			definition = "Capabilities of the terminal to display or print message to the cardholder and the merchant.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities4.mmObject();
+			type_lazy = () -> DisplayCapabilities4.mmObject();
+		}
+
+		@Override
+		public List<DisplayCapabilities4> getValue(PointOfInteractionCapabilities6 obj) {
+			return obj.getMessageCapabilities();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionCapabilities6 obj, List<DisplayCapabilities4> value) {
+			obj.setMessageCapabilities(value);
 		}
 	};
 
@@ -590,7 +671,7 @@ public class PointOfInteractionCapabilities6 {
 		return messageCapabilities == null ? messageCapabilities = new ArrayList<>() : messageCapabilities;
 	}
 
-	public PointOfInteractionCapabilities6 setMessageCapabilities(List<com.tools20022.repository.msg.DisplayCapabilities4> messageCapabilities) {
+	public PointOfInteractionCapabilities6 setMessageCapabilities(List<DisplayCapabilities4> messageCapabilities) {
 		this.messageCapabilities = Objects.requireNonNull(messageCapabilities);
 		return this;
 	}

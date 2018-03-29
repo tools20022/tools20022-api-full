@@ -111,7 +111,7 @@ public class EnergyCommodityInterEnergy1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyCommodityInterEnergy1, AssetClassProductType2Code> mmBaseProduct = new MMMessageAttribute<EnergyCommodityInterEnergy1, AssetClassProductType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityInterEnergy1.mmObject();
@@ -123,6 +123,16 @@ public class EnergyCommodityInterEnergy1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType2Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType2Code getValue(EnergyCommodityInterEnergy1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(EnergyCommodityInterEnergy1 obj, AssetClassProductType2Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -160,7 +170,7 @@ public class EnergyCommodityInterEnergy1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyCommodityInterEnergy1, AssetClassSubProductType26Code> mmSubProduct = new MMMessageAttribute<EnergyCommodityInterEnergy1, AssetClassSubProductType26Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityInterEnergy1.mmObject();
@@ -172,6 +182,16 @@ public class EnergyCommodityInterEnergy1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType26Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType26Code getValue(EnergyCommodityInterEnergy1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(EnergyCommodityInterEnergy1 obj, AssetClassSubProductType26Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 

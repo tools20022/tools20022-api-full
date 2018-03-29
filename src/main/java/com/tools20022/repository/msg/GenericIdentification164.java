@@ -126,7 +126,7 @@ public class GenericIdentification164 {
 	 * GenericIdentification11.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification164, Max35Text> mmIdentification = new MMMessageAttribute<GenericIdentification164, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification164.mmObject();
@@ -139,6 +139,16 @@ public class GenericIdentification164 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification164 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification164 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdTp", required = true)
@@ -181,7 +191,7 @@ public class GenericIdentification164 {
 	 * GenericIdentification11.mmIdentificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification164, OtherIdentification3Choice> mmIdentificationType = new MMMessageAttribute<GenericIdentification164, OtherIdentification3Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification164.mmObject();
@@ -194,6 +204,16 @@ public class GenericIdentification164 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OtherIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public OtherIdentification3Choice getValue(GenericIdentification164 obj) {
+			return obj.getIdentificationType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification164 obj, OtherIdentification3Choice value) {
+			obj.setIdentificationType(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -235,7 +255,7 @@ public class GenericIdentification164 {
 	 * GenericIdentification11.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification164, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<GenericIdentification164, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification164.mmObject();
@@ -248,6 +268,16 @@ public class GenericIdentification164 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentification164 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification164 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 

@@ -52,11 +52,15 @@ public class ConstraintInstructedAmountAndRequestedExecutionDateRule {
 	 */
 	public static final MMConstraint<PaymentInstructionExtract2> forPaymentInstructionExtract2 = new MMConstraint<PaymentInstructionExtract2>() {
 		{
-			validator = ConstraintInstructedAmountAndRequestedExecutionDateRule::checkPaymentInstructionExtract2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndRequestedExecutionDateRule";
 			definition = "If InstructedAmount is present, then RequestedExecutionDate is mandatory.\nIf InstructedAmount is not present, then RequestedExecutionDate is not allowed.";
 			owner_lazy = () -> PaymentInstructionExtract2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionExtract2 obj) throws Exception {
+			checkPaymentInstructionExtract2(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintInstructedAmountAndRequestedExecutionDateRule {
 	 */
 	public static final MMConstraint<CorrectivePaymentInstructionExtract> forCorrectivePaymentInstructionExtract = new MMConstraint<CorrectivePaymentInstructionExtract>() {
 		{
-			validator = ConstraintInstructedAmountAndRequestedExecutionDateRule::checkCorrectivePaymentInstructionExtract;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndRequestedExecutionDateRule";
 			definition = "If InstructedAmount is present, then RequestedExecutionDate is mandatory.\nIf InstructedAmount is not present, then RequestedExecutionDate is not allowed.";
 			owner_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorrectivePaymentInstructionExtract obj) throws Exception {
+			checkCorrectivePaymentInstructionExtract(obj);
 		}
 	};
 

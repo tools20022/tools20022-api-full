@@ -105,7 +105,7 @@ public class RejectedCancellationJustification {
 	 * definition} = "Justification for the rejection of the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedCancellationJustification, PaymentCancellationRejection1Code> mmReasonCode = new MMMessageAttribute<RejectedCancellationJustification, PaymentCancellationRejection1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedCancellationJustification.mmObject();
@@ -117,6 +117,16 @@ public class RejectedCancellationJustification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentCancellationRejection1Code.mmObject();
+		}
+
+		@Override
+		public PaymentCancellationRejection1Code getValue(RejectedCancellationJustification obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(RejectedCancellationJustification obj, PaymentCancellationRejection1Code value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -153,7 +163,7 @@ public class RejectedCancellationJustification {
 	 * definition} = "Free text justification for rejecting a cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedCancellationJustification, Optional<Max140Text>> mmReason = new MMMessageAttribute<RejectedCancellationJustification, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedCancellationJustification.mmObject();
@@ -165,6 +175,16 @@ public class RejectedCancellationJustification {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(RejectedCancellationJustification obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedCancellationJustification obj, Optional<Max140Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

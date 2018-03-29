@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +116,7 @@ public class PartyIdentification60 {
 	 * definition} = "Identification of a fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFundIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification60, Max35Text> mmFundIdentification = new MMMessageAttribute<PartyIdentification60, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification60.mmObject();
@@ -127,6 +128,16 @@ public class PartyIdentification60 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PartyIdentification60 obj) {
+			return obj.getFundIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification60 obj, Max35Text value) {
+			obj.setFundIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr")
@@ -164,7 +175,7 @@ public class PartyIdentification60 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification60, Optional<NameAndAddress8>> mmNameAndAddress = new MMMessageAssociationEnd<PartyIdentification60, Optional<NameAndAddress8>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification60.mmObject();
@@ -176,7 +187,17 @@ public class PartyIdentification60 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress8.mmObject();
+			type_lazy = () -> NameAndAddress8.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress8> getValue(PartyIdentification60 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification60 obj, Optional<NameAndAddress8> value) {
+			obj.setNameAndAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglNttyIdr")
@@ -216,7 +237,7 @@ public class PartyIdentification60 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification60, Optional<LEIIdentifier>> mmLegalEntityIdentifier = new MMMessageAttribute<PartyIdentification60, Optional<LEIIdentifier>>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification60.mmObject();
@@ -228,6 +249,16 @@ public class PartyIdentification60 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(PartyIdentification60 obj) {
+			return obj.getLegalEntityIdentifier();
+		}
+
+		@Override
+		public void setValue(PartyIdentification60 obj, Optional<LEIIdentifier> value) {
+			obj.setLegalEntityIdentifier(value.orElse(null));
 		}
 	};
 
@@ -259,7 +290,7 @@ public class PartyIdentification60 {
 		return nameAndAddress == null ? Optional.empty() : Optional.of(nameAndAddress);
 	}
 
-	public PartyIdentification60 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress8 nameAndAddress) {
+	public PartyIdentification60 setNameAndAddress(NameAndAddress8 nameAndAddress) {
 		this.nameAndAddress = nameAndAddress;
 		return this;
 	}

@@ -112,7 +112,7 @@ public class AmountType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountType1Choice, CurrencyAndAmount> mmInstructedAmount = new MMMessageAttribute<AmountType1Choice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountType1Choice.mmObject();
@@ -124,6 +124,16 @@ public class AmountType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(AmountType1Choice obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(AmountType1Choice obj, CurrencyAndAmount value) {
+			obj.setInstructedAmount(value);
 		}
 	};
 	@XmlElement(name = "EqvtAmt", required = true)
@@ -161,7 +171,7 @@ public class AmountType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEquivalentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountType1Choice, EquivalentAmount> mmEquivalentAmount = new MMMessageAssociationEnd<AmountType1Choice, EquivalentAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmEquivalentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountType1Choice.mmObject();
@@ -174,6 +184,16 @@ public class AmountType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EquivalentAmount.mmObject();
+		}
+
+		@Override
+		public EquivalentAmount getValue(AmountType1Choice obj) {
+			return obj.getEquivalentAmount();
+		}
+
+		@Override
+		public void setValue(AmountType1Choice obj, EquivalentAmount value) {
+			obj.setEquivalentAmount(value);
 		}
 	};
 

@@ -125,7 +125,7 @@ public class FATCAStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FATCAStatus1Choice, FATCAStatus1Code> mmCode = new MMMessageAttribute<FATCAStatus1Choice, FATCAStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> FATCAStatus.mmFATCAStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FATCAStatus1Choice.mmObject();
@@ -138,6 +138,16 @@ public class FATCAStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FATCAStatus1Code.mmObject();
+		}
+
+		@Override
+		public FATCAStatus1Code getValue(FATCAStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FATCAStatus1Choice obj, FATCAStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class FATCAStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FATCAStatus1Choice, GenericIdentification29> mmProprietary = new MMMessageAssociationEnd<FATCAStatus1Choice, GenericIdentification29>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FATCAStatus1Choice.mmObject();
 			isDerived = false;
@@ -192,6 +202,16 @@ public class FATCAStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification29.mmObject();
+		}
+
+		@Override
+		public GenericIdentification29 getValue(FATCAStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FATCAStatus1Choice obj, GenericIdentification29 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -52,11 +52,15 @@ public class ConstraintGroupCancellationAndTransactionInformationRule {
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
 		{
-			validator = ConstraintGroupCancellationAndTransactionInformationRule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationAndTransactionInformationRule";
 			definition = "If GroupHeader/GroupCancellation is true, then TransactionInformation is not allowed.\nIf GroupHeader/GroupCancellation is false, then at least one occurrence of TransactionInformation must be present.";
 			owner_lazy = () -> PaymentCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentCancellationRequestV01 obj) throws Exception {
+			checkPaymentCancellationRequestV01(obj);
 		}
 	};
 

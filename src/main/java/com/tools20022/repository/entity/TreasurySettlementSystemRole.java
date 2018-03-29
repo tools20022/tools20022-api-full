@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.TreasurySettlementPartyRole;
+import com.tools20022.repository.entity.TreasurySettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -79,7 +80,7 @@ import java.util.Objects;
 public class TreasurySettlementSystemRole extends TreasurySettlementPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
-	protected List<com.tools20022.repository.entity.TreasurySettlementSystem> system;
+	protected List<TreasurySettlementSystem> system;
 	/**
 	 * 
 	 <p>
@@ -116,7 +117,7 @@ public class TreasurySettlementSystemRole extends TreasurySettlementPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TreasurySettlementSystemRole, List<TreasurySettlementSystem>> mmSystem = new MMBusinessAssociationEnd<TreasurySettlementSystemRole, List<TreasurySettlementSystem>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TreasurySettlementSystemRole.mmObject();
@@ -124,9 +125,19 @@ public class TreasurySettlementSystemRole extends TreasurySettlementPartyRole {
 			name = "System";
 			definition = "Specifies the system which plays a role in the settlement of a treasury trade.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.TreasurySettlementSystem.mmSystemRole;
+			opposite_lazy = () -> TreasurySettlementSystem.mmSystemRole;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.TreasurySettlementSystem.mmObject();
+			type_lazy = () -> TreasurySettlementSystem.mmObject();
+		}
+
+		@Override
+		public List<TreasurySettlementSystem> getValue(TreasurySettlementSystemRole obj) {
+			return obj.getSystem();
+		}
+
+		@Override
+		public void setValue(TreasurySettlementSystemRole obj, List<TreasurySettlementSystem> value) {
+			obj.setSystem(value);
 		}
 	};
 
@@ -137,7 +148,7 @@ public class TreasurySettlementSystemRole extends TreasurySettlementPartyRole {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TreasurySettlementSystemRole";
 				definition = "System involved in the settlement chain of one leg of a treasury trade.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasurySettlementSystem.mmSystemRole);
+				associationDomain_lazy = () -> Arrays.asList(TreasurySettlementSystem.mmSystemRole);
 				superType_lazy = () -> TreasurySettlementPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TreasurySettlementSystemRole.mmSystem);
 			}
@@ -154,7 +165,7 @@ public class TreasurySettlementSystemRole extends TreasurySettlementPartyRole {
 		return system == null ? system = new ArrayList<>() : system;
 	}
 
-	public TreasurySettlementSystemRole setSystem(List<com.tools20022.repository.entity.TreasurySettlementSystem> system) {
+	public TreasurySettlementSystemRole setSystem(List<TreasurySettlementSystem> system) {
 		this.system = Objects.requireNonNull(system);
 		return this;
 	}

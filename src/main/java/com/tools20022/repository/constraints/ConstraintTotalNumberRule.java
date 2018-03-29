@@ -48,11 +48,15 @@ public class ConstraintTotalNumberRule {
 	 */
 	public static final MMConstraint<Unit2> forUnit2 = new MMConstraint<Unit2>() {
 		{
-			validator = ConstraintTotalNumberRule::checkUnit2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberRule";
 			definition = "TotalNumber must be the sum of Group1Number and Group2Number.";
 			owner_lazy = () -> Unit2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Unit2 obj) throws Exception {
+			checkUnit2(obj);
 		}
 	};
 

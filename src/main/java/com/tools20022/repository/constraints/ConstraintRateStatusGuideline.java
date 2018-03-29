@@ -61,12 +61,16 @@ public class ConstraintRateStatusGuideline {
 	 */
 	public static final MMConstraint<RateStatus1Choice> forRateStatus1Choice = new MMConstraint<RateStatus1Choice>() {
 		{
-			validator = ConstraintRateStatusGuideline::checkRateStatus1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateStatusGuideline";
 			definition = "The code value ACTU is the default value for a rate status.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRateStatusGuideline.forRateStatus3Choice);
 			owner_lazy = () -> RateStatus1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateStatus1Choice obj) throws Exception {
+			checkRateStatus1Choice(obj);
 		}
 	};
 	/**
@@ -91,11 +95,15 @@ public class ConstraintRateStatusGuideline {
 	 */
 	public static final MMConstraint<RateStatus2Choice> forRateStatus2Choice = new MMConstraint<RateStatus2Choice>() {
 		{
-			validator = ConstraintRateStatusGuideline::checkRateStatus2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateStatusGuideline";
 			definition = "The code value ACTU is the default value for a rate status.";
 			owner_lazy = () -> RateStatus2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateStatus2Choice obj) throws Exception {
+			checkRateStatus2Choice(obj);
 		}
 	};
 	/**
@@ -125,12 +133,16 @@ public class ConstraintRateStatusGuideline {
 	 */
 	public static final MMConstraint<RateStatus3Choice> forRateStatus3Choice = new MMConstraint<RateStatus3Choice>() {
 		{
-			validator = ConstraintRateStatusGuideline::checkRateStatus3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateStatusGuideline";
 			definition = "The code value ACTU is the default value for a rate status.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRateStatusGuideline.forRateStatus1Choice;
 			owner_lazy = () -> RateStatus3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateStatus3Choice obj) throws Exception {
+			checkRateStatus3Choice(obj);
 		}
 	};
 	/**
@@ -155,11 +167,15 @@ public class ConstraintRateStatusGuideline {
 	 */
 	public static final MMConstraint<RateStatus4Choice> forRateStatus4Choice = new MMConstraint<RateStatus4Choice>() {
 		{
-			validator = ConstraintRateStatusGuideline::checkRateStatus4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateStatusGuideline";
 			definition = "The code value ACTU is the default value for a rate status.";
 			owner_lazy = () -> RateStatus4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RateStatus4Choice obj) throws Exception {
+			checkRateStatus4Choice(obj);
 		}
 	};
 

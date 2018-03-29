@@ -139,7 +139,7 @@ public class InterestChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, ISODateTime> mmFixingDate = new MMMessageAttribute<InterestChange1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmFixingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -151,6 +151,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(InterestChange1 obj) {
+			return obj.getFixingDate();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, ISODateTime value) {
+			obj.setFixingDate(value);
 		}
 	};
 	@XmlElement(name = "RptgDt", required = true)
@@ -188,7 +198,7 @@ public class InterestChange1 {
 	 * "Last date the new interest rate must be reported to the market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, ISODateTime> mmReportingDate = new MMMessageAttribute<InterestChange1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmReportingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -200,6 +210,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(InterestChange1 obj) {
+			return obj.getReportingDate();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, ISODateTime value) {
+			obj.setReportingDate(value);
 		}
 	};
 	@XmlElement(name = "RstDt", required = true)
@@ -238,7 +258,7 @@ public class InterestChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResetDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, ISODateTime> mmResetDate = new MMMessageAttribute<InterestChange1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmResetDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -250,6 +270,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(InterestChange1 obj) {
+			return obj.getResetDate();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, ISODateTime value) {
+			obj.setResetDate(value);
 		}
 	};
 	@XmlElement(name = "SprdRate", required = true)
@@ -289,7 +319,7 @@ public class InterestChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpreadRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, PercentageRate> mmSpreadRate = new MMMessageAttribute<InterestChange1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmSpreadRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -301,6 +331,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(InterestChange1 obj) {
+			return obj.getSpreadRate();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, PercentageRate value) {
+			obj.setSpreadRate(value);
 		}
 	};
 	@XmlElement(name = "VarblRateChngFrqcy", required = true)
@@ -340,7 +380,7 @@ public class InterestChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVariableRateChangeFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, Frequency1Code> mmVariableRateChangeFrequency = new MMMessageAttribute<InterestChange1, Frequency1Code>() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmVariableRateChangeFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -352,6 +392,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Frequency1Code.mmObject();
+		}
+
+		@Override
+		public Frequency1Code getValue(InterestChange1 obj) {
+			return obj.getVariableRateChangeFrequency();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, Frequency1Code value) {
+			obj.setVariableRateChangeFrequency(value);
 		}
 	};
 	@XmlElement(name = "RateRstSrc", required = true)
@@ -390,7 +440,7 @@ public class InterestChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateResetSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, Max35Text> mmRateResetSource = new MMMessageAttribute<InterestChange1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmReferenceSource;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -402,6 +452,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InterestChange1 obj) {
+			return obj.getRateResetSource();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, Max35Text value) {
+			obj.setRateResetSource(value);
 		}
 	};
 	@XmlElement(name = "Arrs", required = true)
@@ -440,7 +500,7 @@ public class InterestChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmArriers = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, Max16Text> mmArriers = new MMMessageAttribute<InterestChange1, Max16Text>() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmArrears;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -452,6 +512,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(InterestChange1 obj) {
+			return obj.getArriers();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, Max16Text value) {
+			obj.setArriers(value);
 		}
 	};
 	@XmlElement(name = "IndxRateBsis", required = true)
@@ -491,7 +561,7 @@ public class InterestChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexRateBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, PercentageRate> mmIndexRateBasis = new MMMessageAttribute<InterestChange1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexRateBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -503,6 +573,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(InterestChange1 obj) {
+			return obj.getIndexRateBasis();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, PercentageRate value) {
+			obj.setIndexRateBasis(value);
 		}
 	};
 	@XmlElement(name = "IndxRateCcy", required = true)
@@ -541,7 +621,7 @@ public class InterestChange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexRateCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, CurrencyCode> mmIndexRateCurrency = new MMMessageAttribute<InterestChange1, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexRateCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -553,6 +633,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(InterestChange1 obj) {
+			return obj.getIndexRateCurrency();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, CurrencyCode value) {
+			obj.setIndexRateCurrency(value);
 		}
 	};
 	@XmlElement(name = "IndxRateFrqcy", required = true)
@@ -590,7 +680,7 @@ public class InterestChange1 {
 	 * definition} = "Frequency at which the variable rate changes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexRateFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, Frequency1Code> mmIndexRateFrequency = new MMMessageAttribute<InterestChange1, Frequency1Code>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexRateFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -602,6 +692,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Frequency1Code.mmObject();
+		}
+
+		@Override
+		public Frequency1Code getValue(InterestChange1 obj) {
+			return obj.getIndexRateFrequency();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, Frequency1Code value) {
+			obj.setIndexRateFrequency(value);
 		}
 	};
 	@XmlElement(name = "IndxRateMltplr", required = true)
@@ -639,7 +739,7 @@ public class InterestChange1 {
 	 * definition} = "Multiplier for the variable rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexRateMultiplier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestChange1, DecimalNumber> mmIndexRateMultiplier = new MMMessageAttribute<InterestChange1, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexRateMultiplier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestChange1.mmObject();
@@ -651,6 +751,16 @@ public class InterestChange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(InterestChange1 obj) {
+			return obj.getIndexRateMultiplier();
+		}
+
+		@Override
+		public void setValue(InterestChange1 obj, DecimalNumber value) {
+			obj.setIndexRateMultiplier(value);
 		}
 	};
 

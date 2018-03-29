@@ -125,7 +125,7 @@ public class UnsecuredMarketReport4Choice {
 	 * UnsecuredMarketReport3Choice.mmDataSetAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketReport4Choice, ReportPeriodActivity3Code> mmDataSetAction = new MMMessageAttribute<UnsecuredMarketReport4Choice, ReportPeriodActivity3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnsecuredMarketReport4Choice.mmObject();
 			isDerived = false;
@@ -137,6 +137,16 @@ public class UnsecuredMarketReport4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity3Code.mmObject();
+		}
+
+		@Override
+		public ReportPeriodActivity3Code getValue(UnsecuredMarketReport4Choice obj) {
+			return obj.getDataSetAction();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketReport4Choice obj, ReportPeriodActivity3Code value) {
+			obj.setDataSetAction(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -175,7 +185,7 @@ public class UnsecuredMarketReport4Choice {
 	 * UnsecuredMarketReport3Choice.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnsecuredMarketReport4Choice, List<UnsecuredMarketTransaction4>> mmTransaction = new MMMessageAssociationEnd<UnsecuredMarketReport4Choice, List<UnsecuredMarketTransaction4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnsecuredMarketReport4Choice.mmObject();
 			isDerived = false;
@@ -187,6 +197,16 @@ public class UnsecuredMarketReport4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnsecuredMarketTransaction4.mmObject();
+		}
+
+		@Override
+		public List<UnsecuredMarketTransaction4> getValue(UnsecuredMarketReport4Choice obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketReport4Choice obj, List<UnsecuredMarketTransaction4> value) {
+			obj.setTransaction(value);
 		}
 	};
 

@@ -118,7 +118,7 @@ public class LimitJournalReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitJournalReportOrError1Choice, List<LimitJournalReport1>> mmBusinessReport = new MMMessageAssociationEnd<LimitJournalReportOrError1Choice, List<LimitJournalReport1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitJournalReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class LimitJournalReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitJournalReport1.mmObject();
+		}
+
+		@Override
+		public List<LimitJournalReport1> getValue(LimitJournalReportOrError1Choice obj) {
+			return obj.getBusinessReport();
+		}
+
+		@Override
+		public void setValue(LimitJournalReportOrError1Choice obj, List<LimitJournalReport1> value) {
+			obj.setBusinessReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -170,7 +180,7 @@ public class LimitJournalReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitJournalReportOrError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<LimitJournalReportOrError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitJournalReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class LimitJournalReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(LimitJournalReportOrError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(LimitJournalReportOrError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

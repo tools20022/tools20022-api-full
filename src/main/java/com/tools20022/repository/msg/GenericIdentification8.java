@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.IdentificationIssuerRole;
 import com.tools20022.repository.entity.Scheme;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IdentificationType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class GenericIdentification8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification8, Max35Text> mmIdentification = new MMMessageAttribute<GenericIdentification8, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification8.mmObject();
@@ -128,6 +129,16 @@ public class GenericIdentification8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification8 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification8 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdTp", required = true)
@@ -165,7 +176,7 @@ public class GenericIdentification8 {
 	 * definition} = "Specifies the nature of the identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification8, IdentificationType1> mmIdentificationType = new MMMessageAttribute<GenericIdentification8, IdentificationType1>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification8.mmObject();
@@ -176,7 +187,17 @@ public class GenericIdentification8 {
 			definition = "Specifies the nature of the identifier.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.IdentificationType1.mmObject();
+			complexType_lazy = () -> IdentificationType1.mmObject();
+		}
+
+		@Override
+		public IdentificationType1 getValue(GenericIdentification8 obj) {
+			return obj.getIdentificationType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification8 obj, IdentificationType1 value) {
+			obj.setIdentificationType(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -213,7 +234,7 @@ public class GenericIdentification8 {
 	 * definition} = "Entity that assigns the identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification8, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<GenericIdentification8, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification8.mmObject();
@@ -225,6 +246,16 @@ public class GenericIdentification8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentification8 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification8 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 
@@ -256,7 +287,7 @@ public class GenericIdentification8 {
 		return identificationType;
 	}
 
-	public GenericIdentification8 setIdentificationType(com.tools20022.repository.msg.IdentificationType1 identificationType) {
+	public GenericIdentification8 setIdentificationType(IdentificationType1 identificationType) {
 		this.identificationType = Objects.requireNonNull(identificationType);
 		return this;
 	}

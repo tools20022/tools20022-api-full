@@ -130,7 +130,7 @@ public class SettlementTypeAndIdentification6 {
 	 * "Provides unambiguous transaction identification information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTypeAndIdentification6, RestrictedFINXMax16Text> mmTransactionIdentification = new MMMessageAttribute<SettlementTypeAndIdentification6, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification6.mmObject();
@@ -143,6 +143,16 @@ public class SettlementTypeAndIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(SettlementTypeAndIdentification6 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementTypeAndIdentification6 obj, RestrictedFINXMax16Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesMvmntTp")
@@ -185,7 +195,7 @@ public class SettlementTypeAndIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTypeAndIdentification6, Optional<ReceiveDelivery1Code>> mmSecuritiesMovementType = new MMMessageAttribute<SettlementTypeAndIdentification6, Optional<ReceiveDelivery1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification6.mmObject();
@@ -198,6 +208,16 @@ public class SettlementTypeAndIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ReceiveDelivery1Code> getValue(SettlementTypeAndIdentification6 obj) {
+			return obj.getSecuritiesMovementType();
+		}
+
+		@Override
+		public void setValue(SettlementTypeAndIdentification6 obj, Optional<ReceiveDelivery1Code> value) {
+			obj.setSecuritiesMovementType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pmt")
@@ -240,7 +260,7 @@ public class SettlementTypeAndIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTypeAndIdentification6, Optional<DeliveryReceiptType2Code>> mmPayment = new MMMessageAttribute<SettlementTypeAndIdentification6, Optional<DeliveryReceiptType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification6.mmObject();
@@ -253,6 +273,16 @@ public class SettlementTypeAndIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveryReceiptType2Code> getValue(SettlementTypeAndIdentification6 obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(SettlementTypeAndIdentification6 obj, Optional<DeliveryReceiptType2Code> value) {
+			obj.setPayment(value.orElse(null));
 		}
 	};
 

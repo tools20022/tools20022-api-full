@@ -110,7 +110,7 @@ public class TypeOfPrice45Choice {
 	 * definition} = "Type of price expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TypeOfPrice45Choice, TypeOfPrice16Code> mmCode = new MMMessageAttribute<TypeOfPrice45Choice, TypeOfPrice16Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TypeOfPrice45Choice.mmObject();
@@ -123,6 +123,16 @@ public class TypeOfPrice45Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPrice16Code.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice16Code getValue(TypeOfPrice45Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TypeOfPrice45Choice obj, TypeOfPrice16Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class TypeOfPrice45Choice {
 	 * definition} = "Type of price expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TypeOfPrice45Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<TypeOfPrice45Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TypeOfPrice45Choice.mmObject();
@@ -176,6 +186,16 @@ public class TypeOfPrice45Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(TypeOfPrice45Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TypeOfPrice45Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

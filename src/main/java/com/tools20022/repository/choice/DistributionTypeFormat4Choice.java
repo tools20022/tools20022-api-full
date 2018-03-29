@@ -139,7 +139,7 @@ public class DistributionTypeFormat4Choice {
 	 * DistributionTypeFormat3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionTypeFormat4Choice, DistributionType3Code> mmCode = new MMMessageAttribute<DistributionTypeFormat4Choice, DistributionType3Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionTypeFormat4Choice.mmObject();
@@ -153,6 +153,16 @@ public class DistributionTypeFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionType3Code.mmObject();
+		}
+
+		@Override
+		public DistributionType3Code getValue(DistributionTypeFormat4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DistributionTypeFormat4Choice obj, DistributionType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -202,7 +212,7 @@ public class DistributionTypeFormat4Choice {
 	 * DistributionTypeFormat3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DistributionTypeFormat4Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<DistributionTypeFormat4Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionTypeFormat4Choice.mmObject();
@@ -217,6 +227,16 @@ public class DistributionTypeFormat4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(DistributionTypeFormat4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DistributionTypeFormat4Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

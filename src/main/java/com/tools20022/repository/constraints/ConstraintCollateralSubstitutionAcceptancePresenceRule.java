@@ -55,12 +55,16 @@ public class ConstraintCollateralSubstitutionAcceptancePresenceRule {
 	 */
 	public static final MMConstraint<SubstitutionResponse1> forSubstitutionResponse1 = new MMConstraint<SubstitutionResponse1>() {
 		{
-			validator = ConstraintCollateralSubstitutionAcceptancePresenceRule::checkSubstitutionResponse1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionAcceptancePresenceRule";
 			definition = "If Response Type equals Accepted then CollateralSubstitutionAcceptanceDetails must be present.";
 			owner_lazy = () -> SubstitutionResponse1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CollateralSubstitutionAcceptanceDetails</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CollateralSubstitutionRejectionDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ResponseType</leftOperand><rightOperand>Accepted</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SubstitutionResponse1 obj) throws Exception {
+			checkSubstitutionResponse1(obj);
 		}
 	};
 

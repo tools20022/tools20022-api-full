@@ -112,7 +112,7 @@ public class SecurityIdentification4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification4Choice, ISINIdentifier> mmISIN = new MMMessageAttribute<SecurityIdentification4Choice, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification4Choice.mmObject();
@@ -124,6 +124,16 @@ public class SecurityIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(SecurityIdentification4Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification4Choice obj, ISINIdentifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class SecurityIdentification4Choice {
 	 * "Proprietary identification of an underlying financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification4Choice, AlternateSecurityIdentification2> mmProprietary = new MMMessageAssociationEnd<SecurityIdentification4Choice, AlternateSecurityIdentification2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification4Choice.mmObject();
@@ -174,6 +184,16 @@ public class SecurityIdentification4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AlternateSecurityIdentification2.mmObject();
+		}
+
+		@Override
+		public AlternateSecurityIdentification2 getValue(SecurityIdentification4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification4Choice obj, AlternateSecurityIdentification2 value) {
+			obj.setProprietary(value);
 		}
 	};
 

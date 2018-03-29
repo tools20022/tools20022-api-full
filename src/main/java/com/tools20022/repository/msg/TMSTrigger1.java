@@ -115,7 +115,7 @@ public class TMSTrigger1 {
 	 * definition} = "Level of urgency in contacting the maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMSContactLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSTrigger1, TMSContactLevel1Code> mmTMSContactLevel = new MMMessageAttribute<TMSTrigger1, TMSContactLevel1Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementSystem.mmContactLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
@@ -127,6 +127,16 @@ public class TMSTrigger1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TMSContactLevel1Code.mmObject();
+		}
+
+		@Override
+		public TMSContactLevel1Code getValue(TMSTrigger1 obj) {
+			return obj.getTMSContactLevel();
+		}
+
+		@Override
+		public void setValue(TMSTrigger1 obj, TMSContactLevel1Code value) {
+			obj.setTMSContactLevel(value);
 		}
 	};
 	@XmlElement(name = "TMSId")
@@ -158,7 +168,7 @@ public class TMSTrigger1 {
 	 * "Identification of the host to contact for the maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMSIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSTrigger1, Optional<Max35Text>> mmTMSIdentification = new MMMessageAttribute<TMSTrigger1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class TMSTrigger1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSTrigger1 obj) {
+			return obj.getTMSIdentification();
+		}
+
+		@Override
+		public void setValue(TMSTrigger1 obj, Optional<Max35Text> value) {
+			obj.setTMSIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TMSCtctDtTm")
@@ -204,7 +224,7 @@ public class TMSTrigger1 {
 	 * definition} = "Date and time for calling the maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMSContactDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSTrigger1, Optional<ISODateTime>> mmTMSContactDateTime = new MMMessageAttribute<TMSTrigger1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementSystem.mmContactDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
@@ -216,6 +236,16 @@ public class TMSTrigger1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TMSTrigger1 obj) {
+			return obj.getTMSContactDateTime();
+		}
+
+		@Override
+		public void setValue(TMSTrigger1 obj, Optional<ISODateTime> value) {
+			obj.setTMSContactDateTime(value.orElse(null));
 		}
 	};
 

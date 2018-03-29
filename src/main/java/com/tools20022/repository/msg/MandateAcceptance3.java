@@ -27,6 +27,9 @@ import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.Mandate;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AcceptanceResult6;
+import com.tools20022.repository.msg.OriginalMessageInformation1;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -142,7 +145,7 @@ public class MandateAcceptance3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAcceptance3, Optional<OriginalMessageInformation1>> mmOriginalMessageInformation = new MMMessageAssociationEnd<MandateAcceptance3, Optional<OriginalMessageInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAcceptance3.mmObject();
@@ -155,7 +158,17 @@ public class MandateAcceptance3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
+			type_lazy = () -> OriginalMessageInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalMessageInformation1> getValue(MandateAcceptance3 obj) {
+			return obj.getOriginalMessageInformation();
+		}
+
+		@Override
+		public void setValue(MandateAcceptance3 obj, Optional<OriginalMessageInformation1> value) {
+			obj.setOriginalMessageInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AccptncRslt", required = true)
@@ -199,7 +212,7 @@ public class MandateAcceptance3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcceptanceResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAcceptance3, AcceptanceResult6> mmAcceptanceResult = new MMMessageAssociationEnd<MandateAcceptance3, AcceptanceResult6>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAcceptance3.mmObject();
@@ -212,7 +225,17 @@ public class MandateAcceptance3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AcceptanceResult6.mmObject();
+			type_lazy = () -> AcceptanceResult6.mmObject();
+		}
+
+		@Override
+		public AcceptanceResult6 getValue(MandateAcceptance3 obj) {
+			return obj.getAcceptanceResult();
+		}
+
+		@Override
+		public void setValue(MandateAcceptance3 obj, AcceptanceResult6 value) {
+			obj.setAcceptanceResult(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMndt", required = true)
@@ -257,7 +280,7 @@ public class MandateAcceptance3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAcceptance3, OriginalMandate2Choice> mmOriginalMandate = new MMMessageAssociationEnd<MandateAcceptance3, OriginalMandate2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmOriginalMandate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAcceptance3.mmObject();
@@ -272,9 +295,19 @@ public class MandateAcceptance3 {
 			isComposite = true;
 			type_lazy = () -> OriginalMandate2Choice.mmObject();
 		}
+
+		@Override
+		public OriginalMandate2Choice getValue(MandateAcceptance3 obj) {
+			return obj.getOriginalMandate();
+		}
+
+		@Override
+		public void setValue(MandateAcceptance3 obj, OriginalMandate2Choice value) {
+			obj.setOriginalMandate(value);
+		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -313,7 +346,7 @@ public class MandateAcceptance3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSupplementaryData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateAcceptance3, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAttribute<MandateAcceptance3, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAcceptance3.mmObject();
 			isDerived = false;
@@ -323,7 +356,17 @@ public class MandateAcceptance3 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			nextVersions_lazy = () -> Arrays.asList(MandateAcceptance4.mmSupplementaryData);
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			complexType_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(MandateAcceptance3 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MandateAcceptance3 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -349,7 +392,7 @@ public class MandateAcceptance3 {
 		return originalMessageInformation == null ? Optional.empty() : Optional.of(originalMessageInformation);
 	}
 
-	public MandateAcceptance3 setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+	public MandateAcceptance3 setOriginalMessageInformation(OriginalMessageInformation1 originalMessageInformation) {
 		this.originalMessageInformation = originalMessageInformation;
 		return this;
 	}
@@ -358,7 +401,7 @@ public class MandateAcceptance3 {
 		return acceptanceResult;
 	}
 
-	public MandateAcceptance3 setAcceptanceResult(com.tools20022.repository.msg.AcceptanceResult6 acceptanceResult) {
+	public MandateAcceptance3 setAcceptanceResult(AcceptanceResult6 acceptanceResult) {
 		this.acceptanceResult = Objects.requireNonNull(acceptanceResult);
 		return this;
 	}
@@ -376,7 +419,7 @@ public class MandateAcceptance3 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public MandateAcceptance3 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public MandateAcceptance3 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

@@ -28,6 +28,9 @@ import com.tools20022.repository.datatype.Max10KBinary;
 import com.tools20022.repository.datatype.Max20000Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CertificationRequest1;
+import com.tools20022.repository.msg.GenericIdentification72;
+import com.tools20022.repository.msg.PointOfInteraction6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -137,7 +140,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateManagementRequest1, GenericIdentification72> mmPOIIdentification = new MMMessageAssociationEnd<CertificateManagementRequest1, GenericIdentification72>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -148,7 +151,17 @@ public class CertificateManagementRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
+			type_lazy = () -> GenericIdentification72.mmObject();
+		}
+
+		@Override
+		public GenericIdentification72 getValue(CertificateManagementRequest1 obj) {
+			return obj.getPOIIdentification();
+		}
+
+		@Override
+		public void setValue(CertificateManagementRequest1 obj, GenericIdentification72 value) {
+			obj.setPOIIdentification(value);
 		}
 	};
 	@XmlElement(name = "TMId")
@@ -182,7 +195,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTMIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateManagementRequest1, Optional<GenericIdentification72>> mmTMIdentification = new MMMessageAssociationEnd<CertificateManagementRequest1, Optional<GenericIdentification72>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -193,7 +206,17 @@ public class CertificateManagementRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification72.mmObject();
+			type_lazy = () -> GenericIdentification72.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification72> getValue(CertificateManagementRequest1 obj) {
+			return obj.getTMIdentification();
+		}
+
+		@Override
+		public void setValue(CertificateManagementRequest1 obj, Optional<GenericIdentification72> value) {
+			obj.setTMIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertSvc", required = true)
@@ -226,7 +249,7 @@ public class CertificateManagementRequest1 {
 	 * definition} = "Requested certificate management service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateManagementRequest1, CardPaymentServiceType10Code> mmCertificateService = new MMMessageAttribute<CertificateManagementRequest1, CardPaymentServiceType10Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -237,6 +260,16 @@ public class CertificateManagementRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardPaymentServiceType10Code.mmObject();
+		}
+
+		@Override
+		public CardPaymentServiceType10Code getValue(CertificateManagementRequest1 obj) {
+			return obj.getCertificateService();
+		}
+
+		@Override
+		public void setValue(CertificateManagementRequest1 obj, CardPaymentServiceType10Code value) {
+			obj.setCertificateService(value);
 		}
 	};
 	@XmlElement(name = "SctyDomn")
@@ -270,7 +303,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityDomain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateManagementRequest1, Optional<Max70Text>> mmSecurityDomain = new MMMessageAttribute<CertificateManagementRequest1, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -281,6 +314,16 @@ public class CertificateManagementRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CertificateManagementRequest1 obj) {
+			return obj.getSecurityDomain();
+		}
+
+		@Override
+		public void setValue(CertificateManagementRequest1 obj, Optional<Max70Text> value) {
+			obj.setSecurityDomain(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BinryCertfctnReq")
@@ -315,7 +358,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBinaryCertificationRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateManagementRequest1, Optional<Max20000Text>> mmBinaryCertificationRequest = new MMMessageAttribute<CertificateManagementRequest1, Optional<Max20000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -326,6 +369,16 @@ public class CertificateManagementRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max20000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max20000Text> getValue(CertificateManagementRequest1 obj) {
+			return obj.getBinaryCertificationRequest();
+		}
+
+		@Override
+		public void setValue(CertificateManagementRequest1 obj, Optional<Max20000Text> value) {
+			obj.setBinaryCertificationRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertfctnReq")
@@ -358,7 +411,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertificationRequest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateManagementRequest1, Optional<CertificationRequest1>> mmCertificationRequest = new MMMessageAssociationEnd<CertificateManagementRequest1, Optional<CertificationRequest1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -369,7 +422,17 @@ public class CertificateManagementRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmObject();
+			type_lazy = () -> CertificationRequest1.mmObject();
+		}
+
+		@Override
+		public Optional<CertificationRequest1> getValue(CertificateManagementRequest1 obj) {
+			return obj.getCertificationRequest();
+		}
+
+		@Override
+		public void setValue(CertificateManagementRequest1 obj, Optional<CertificationRequest1> value) {
+			obj.setCertificationRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntCert")
@@ -404,7 +467,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateManagementRequest1, Optional<Max10KBinary>> mmClientCertificate = new MMMessageAttribute<CertificateManagementRequest1, Optional<Max10KBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -415,6 +478,16 @@ public class CertificateManagementRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
+		}
+
+		@Override
+		public Optional<Max10KBinary> getValue(CertificateManagementRequest1 obj) {
+			return obj.getClientCertificate();
+		}
+
+		@Override
+		public void setValue(CertificateManagementRequest1 obj, Optional<Max10KBinary> value) {
+			obj.setClientCertificate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WhtListId")
@@ -447,7 +520,7 @@ public class CertificateManagementRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWhiteListIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateManagementRequest1, Optional<PointOfInteraction6>> mmWhiteListIdentification = new MMMessageAssociationEnd<CertificateManagementRequest1, Optional<PointOfInteraction6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateManagementRequest1.mmObject();
 			isDerived = false;
@@ -458,7 +531,17 @@ public class CertificateManagementRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction6.mmObject();
+			type_lazy = () -> PointOfInteraction6.mmObject();
+		}
+
+		@Override
+		public Optional<PointOfInteraction6> getValue(CertificateManagementRequest1 obj) {
+			return obj.getWhiteListIdentification();
+		}
+
+		@Override
+		public void setValue(CertificateManagementRequest1 obj, Optional<PointOfInteraction6> value) {
+			obj.setWhiteListIdentification(value.orElse(null));
 		}
 	};
 
@@ -483,7 +566,7 @@ public class CertificateManagementRequest1 {
 		return pOIIdentification;
 	}
 
-	public CertificateManagementRequest1 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification72 pOIIdentification) {
+	public CertificateManagementRequest1 setPOIIdentification(GenericIdentification72 pOIIdentification) {
 		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
 		return this;
 	}
@@ -492,7 +575,7 @@ public class CertificateManagementRequest1 {
 		return tMIdentification == null ? Optional.empty() : Optional.of(tMIdentification);
 	}
 
-	public CertificateManagementRequest1 setTMIdentification(com.tools20022.repository.msg.GenericIdentification72 tMIdentification) {
+	public CertificateManagementRequest1 setTMIdentification(GenericIdentification72 tMIdentification) {
 		this.tMIdentification = tMIdentification;
 		return this;
 	}
@@ -528,7 +611,7 @@ public class CertificateManagementRequest1 {
 		return certificationRequest == null ? Optional.empty() : Optional.of(certificationRequest);
 	}
 
-	public CertificateManagementRequest1 setCertificationRequest(com.tools20022.repository.msg.CertificationRequest1 certificationRequest) {
+	public CertificateManagementRequest1 setCertificationRequest(CertificationRequest1 certificationRequest) {
 		this.certificationRequest = certificationRequest;
 		return this;
 	}
@@ -546,7 +629,7 @@ public class CertificateManagementRequest1 {
 		return whiteListIdentification == null ? Optional.empty() : Optional.of(whiteListIdentification);
 	}
 
-	public CertificateManagementRequest1 setWhiteListIdentification(com.tools20022.repository.msg.PointOfInteraction6 whiteListIdentification) {
+	public CertificateManagementRequest1 setWhiteListIdentification(PointOfInteraction6 whiteListIdentification) {
 		this.whiteListIdentification = whiteListIdentification;
 		return this;
 	}

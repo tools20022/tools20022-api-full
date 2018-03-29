@@ -107,7 +107,7 @@ public class UpdatedAdditionalInformation6SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD2, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<UpdatedAdditionalInformation6SD2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class UpdatedAdditionalInformation6SD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(UpdatedAdditionalInformation6SD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation6SD2 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FullLclLangSctyNm")
@@ -155,7 +165,7 @@ public class UpdatedAdditionalInformation6SD2 {
 	 * "Full and formal name of underlying securities in the local language."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD2, Optional<Max240Text>> mmFullLocalLanguageSecurityName = new MMMessageAttribute<UpdatedAdditionalInformation6SD2, Optional<Max240Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmObject();
@@ -167,6 +177,16 @@ public class UpdatedAdditionalInformation6SD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max240Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max240Text> getValue(UpdatedAdditionalInformation6SD2 obj) {
+			return obj.getFullLocalLanguageSecurityName();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation6SD2 obj, Optional<Max240Text> value) {
+			obj.setFullLocalLanguageSecurityName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
@@ -200,7 +220,7 @@ public class UpdatedAdditionalInformation6SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD2, Max240Text> mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute<UpdatedAdditionalInformation6SD2, Max240Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
@@ -211,6 +231,16 @@ public class UpdatedAdditionalInformation6SD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();
+		}
+
+		@Override
+		public Max240Text getValue(UpdatedAdditionalInformation6SD2 obj) {
+			return obj.getAbbreviatedLocalLanguageSecurityName();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation6SD2 obj, Max240Text value) {
+			obj.setAbbreviatedLocalLanguageSecurityName(value);
 		}
 	};
 

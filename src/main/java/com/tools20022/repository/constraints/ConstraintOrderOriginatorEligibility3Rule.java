@@ -53,11 +53,15 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionOrder5> forRedemptionOrder5 = new MMConstraint<RedemptionOrder5>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionOrder5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> RedemptionOrder5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder5 obj) throws Exception {
+			checkRedemptionOrder5(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionExecution5> forRedemptionExecution5 = new MMConstraint<RedemptionExecution5>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionExecution16);
 			owner_lazy = () -> RedemptionExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution5 obj) throws Exception {
+			checkRedemptionExecution5(obj);
 		}
 	};
 	/**
@@ -130,12 +138,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionOrder7> forRedemptionOrder7 = new MMConstraint<RedemptionOrder7>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionOrder7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionOrder15);
 			owner_lazy = () -> RedemptionOrder7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder7 obj) throws Exception {
+			checkRedemptionOrder7(obj);
 		}
 	};
 	/**
@@ -161,11 +173,15 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrder3> forRedemptionMultipleOrder3 = new MMConstraint<RedemptionMultipleOrder3>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionMultipleOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> RedemptionMultipleOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder3 obj) throws Exception {
+			checkRedemptionMultipleOrder3(obj);
 		}
 	};
 	/**
@@ -200,12 +216,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionMultipleExecution3> forRedemptionMultipleExecution3 = new MMConstraint<RedemptionMultipleExecution3>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionMultipleExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of \nIndividualExecutionDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionMultipleExecution5);
 			owner_lazy = () -> RedemptionMultipleExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleExecution3 obj) throws Exception {
+			checkRedemptionMultipleExecution3(obj);
 		}
 	};
 	/**
@@ -239,12 +259,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrder4> forRedemptionMultipleOrder4 = new MMConstraint<RedemptionMultipleOrder4>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionMultipleOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionMultipleOrder6);
 			owner_lazy = () -> RedemptionMultipleOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder4 obj) throws Exception {
+			checkRedemptionMultipleOrder4(obj);
 		}
 	};
 	/**
@@ -270,11 +294,15 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionOrder5> forSubscriptionOrder5 = new MMConstraint<SubscriptionOrder5>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionOrder5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> SubscriptionOrder5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder5 obj) throws Exception {
+			checkSubscriptionOrder5(obj);
 		}
 	};
 	/**
@@ -308,12 +336,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionExecution5> forSubscriptionExecution5 = new MMConstraint<SubscriptionExecution5>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSubscriptionExecution12);
 			owner_lazy = () -> SubscriptionExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution5 obj) throws Exception {
+			checkSubscriptionExecution5(obj);
 		}
 	};
 	/**
@@ -347,12 +379,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionOrder7> forSubscriptionOrder7 = new MMConstraint<SubscriptionOrder7>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionOrder7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSubscriptionOrder15);
 			owner_lazy = () -> SubscriptionOrder7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder7 obj) throws Exception {
+			checkSubscriptionOrder7(obj);
 		}
 	};
 	/**
@@ -378,11 +414,15 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder3> forSubscriptionMultipleOrder3 = new MMConstraint<SubscriptionMultipleOrder3>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionMultipleOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> SubscriptionMultipleOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrder3 obj) throws Exception {
+			checkSubscriptionMultipleOrder3(obj);
 		}
 	};
 	/**
@@ -417,12 +457,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleExecution3> forSubscriptionMultipleExecution3 = new MMConstraint<SubscriptionMultipleExecution3>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionMultipleExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualExecutionDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSubscriptionMultipleExecution5);
 			owner_lazy = () -> SubscriptionMultipleExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleExecution3 obj) throws Exception {
+			checkSubscriptionMultipleExecution3(obj);
 		}
 	};
 	/**
@@ -456,12 +500,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder4> forSubscriptionMultipleOrder4 = new MMConstraint<SubscriptionMultipleOrder4>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionMultipleOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility or (one or more instances of InvestmentAccountDetails/OrderOriginatorEligibility) may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSubscriptionMultipleOrder6);
 			owner_lazy = () -> SubscriptionMultipleOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrder4 obj) throws Exception {
+			checkSubscriptionMultipleOrder4(obj);
 		}
 	};
 	/**
@@ -492,12 +540,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SwitchExecution7> forSwitchExecution7 = new MMConstraint<SwitchExecution7>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSwitchExecution7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of RedemptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of SubscriptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility should be only present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibilityRule.forSwitchExecution4;
 			owner_lazy = () -> SwitchExecution7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchExecution7 obj) throws Exception {
+			checkSwitchExecution7(obj);
 		}
 	};
 	/**
@@ -529,12 +581,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionMultipleExecution5> forRedemptionMultipleExecution5 = new MMConstraint<RedemptionMultipleExecution5>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionMultipleExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of IndividualExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionMultipleExecution3;
 			owner_lazy = () -> RedemptionMultipleExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleExecution5 obj) throws Exception {
+			checkRedemptionMultipleExecution5(obj);
 		}
 	};
 	/**
@@ -565,12 +621,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrder6> forRedemptionMultipleOrder6 = new MMConstraint<RedemptionMultipleOrder6>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionMultipleOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of IndividualOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionMultipleOrder4;
 			owner_lazy = () -> RedemptionMultipleOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder6 obj) throws Exception {
+			checkRedemptionMultipleOrder6(obj);
 		}
 	};
 	/**
@@ -601,12 +661,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder6> forSubscriptionMultipleOrder6 = new MMConstraint<SubscriptionMultipleOrder6>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionMultipleOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either one or more occurrences of IndividualOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility or InvestmentAccountDetails/OrderOriginatorEligibility may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSubscriptionMultipleOrder4;
 			owner_lazy = () -> SubscriptionMultipleOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrder6 obj) throws Exception {
+			checkSubscriptionMultipleOrder6(obj);
 		}
 	};
 	/**
@@ -636,12 +700,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SwitchOrder7> forSwitchOrder7 = new MMConstraint<SwitchOrder7>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSwitchOrder7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of RedemptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of SubscriptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility should be only present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibilityRule.forSwitchOrder4;
 			owner_lazy = () -> SwitchOrder7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder7 obj) throws Exception {
+			checkSwitchOrder7(obj);
 		}
 	};
 	/**
@@ -673,12 +741,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleExecution5> forSubscriptionMultipleExecution5 = new MMConstraint<SubscriptionMultipleExecution5>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionMultipleExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of IndividualExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSubscriptionMultipleExecution3;
 			owner_lazy = () -> SubscriptionMultipleExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleExecution5 obj) throws Exception {
+			checkSubscriptionMultipleExecution5(obj);
 		}
 	};
 	/**
@@ -709,12 +781,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionExecution12> forSubscriptionExecution12 = new MMConstraint<SubscriptionExecution12>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionExecution12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSubscriptionExecution5;
 			owner_lazy = () -> SubscriptionExecution12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution12 obj) throws Exception {
+			checkSubscriptionExecution12(obj);
 		}
 	};
 	/**
@@ -745,12 +821,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<SubscriptionOrder15> forSubscriptionOrder15 = new MMConstraint<SubscriptionOrder15>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionOrder15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSubscriptionOrder7;
 			owner_lazy = () -> SubscriptionOrder15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder15 obj) throws Exception {
+			checkSubscriptionOrder15(obj);
 		}
 	};
 	/**
@@ -781,12 +861,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionOrder15> forRedemptionOrder15 = new MMConstraint<RedemptionOrder15>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionOrder15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionOrder7;
 			owner_lazy = () -> RedemptionOrder15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder15 obj) throws Exception {
+			checkRedemptionOrder15(obj);
 		}
 	};
 	/**
@@ -817,12 +901,16 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 */
 	public static final MMConstraint<RedemptionExecution16> forRedemptionExecution16 = new MMConstraint<RedemptionExecution16>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionExecution16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or one or more occurrences of RelatedPartyDetails/OrderOriginatorEligibility may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionExecution5;
 			owner_lazy = () -> RedemptionExecution16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution16 obj) throws Exception {
+			checkRedemptionExecution16(obj);
 		}
 	};
 

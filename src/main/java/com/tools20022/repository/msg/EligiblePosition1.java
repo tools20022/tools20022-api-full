@@ -109,7 +109,7 @@ public class EligiblePosition1 {
 	 * definition} = "Identification of the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligiblePosition1, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<EligiblePosition1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition1.mmObject();
@@ -121,6 +121,16 @@ public class EligiblePosition1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(EligiblePosition1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(EligiblePosition1 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -157,7 +167,7 @@ public class EligiblePosition1 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EligiblePosition1, Optional<PartyIdentification7Choice>> mmAccountOwner = new MMMessageAssociationEnd<EligiblePosition1, Optional<PartyIdentification7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligiblePosition1.mmObject();
@@ -170,6 +180,16 @@ public class EligiblePosition1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification7Choice> getValue(EligiblePosition1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(EligiblePosition1 obj, Optional<PartyIdentification7Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 

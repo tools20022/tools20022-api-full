@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardSequenceNumberRange1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -136,7 +137,7 @@ public class CardAggregated1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAggregated1, Optional<CardPaymentServiceType2Code>> mmAdditionalService = new MMMessageAttribute<CardAggregated1, Optional<CardPaymentServiceType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAggregated1.mmObject();
@@ -149,6 +150,16 @@ public class CardAggregated1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardPaymentServiceType2Code> getValue(CardAggregated1 obj) {
+			return obj.getAdditionalService();
+		}
+
+		@Override
+		public void setValue(CardAggregated1 obj, Optional<CardPaymentServiceType2Code> value) {
+			obj.setAdditionalService(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxCtgy")
@@ -196,7 +207,7 @@ public class CardAggregated1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAggregated1, Optional<ExternalCardTransactionCategory1Code>> mmTransactionCategory = new MMMessageAttribute<CardAggregated1, Optional<ExternalCardTransactionCategory1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAggregated1.mmObject();
@@ -209,6 +220,16 @@ public class CardAggregated1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalCardTransactionCategory1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExternalCardTransactionCategory1Code> getValue(CardAggregated1 obj) {
+			return obj.getTransactionCategory();
+		}
+
+		@Override
+		public void setValue(CardAggregated1 obj, Optional<ExternalCardTransactionCategory1Code> value) {
+			obj.setTransactionCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SaleRcncltnId")
@@ -250,7 +271,7 @@ public class CardAggregated1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSaleReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAggregated1, Optional<Max35Text>> mmSaleReconciliationIdentification = new MMMessageAttribute<CardAggregated1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAggregated1.mmObject();
 			isDerived = false;
@@ -262,6 +283,16 @@ public class CardAggregated1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CardAggregated1 obj) {
+			return obj.getSaleReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(CardAggregated1 obj, Optional<Max35Text> value) {
+			obj.setSaleReconciliationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeqNbRg")
@@ -302,7 +333,7 @@ public class CardAggregated1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSequenceNumberRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAggregated1, Optional<CardSequenceNumberRange1>> mmSequenceNumberRange = new MMMessageAssociationEnd<CardAggregated1, Optional<CardSequenceNumberRange1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAggregated1.mmObject();
 			isDerived = false;
@@ -314,7 +345,17 @@ public class CardAggregated1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardSequenceNumberRange1.mmObject();
+			type_lazy = () -> CardSequenceNumberRange1.mmObject();
+		}
+
+		@Override
+		public Optional<CardSequenceNumberRange1> getValue(CardAggregated1 obj) {
+			return obj.getSequenceNumberRange();
+		}
+
+		@Override
+		public void setValue(CardAggregated1 obj, Optional<CardSequenceNumberRange1> value) {
+			obj.setSequenceNumberRange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDtRg")
@@ -354,7 +395,7 @@ public class CardAggregated1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionDateRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAggregated1, Optional<DateOrDateTimePeriodChoice>> mmTransactionDateRange = new MMMessageAssociationEnd<CardAggregated1, Optional<DateOrDateTimePeriodChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAggregated1.mmObject();
 			isDerived = false;
@@ -367,6 +408,16 @@ public class CardAggregated1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateOrDateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateOrDateTimePeriodChoice> getValue(CardAggregated1 obj) {
+			return obj.getTransactionDateRange();
+		}
+
+		@Override
+		public void setValue(CardAggregated1 obj, Optional<DateOrDateTimePeriodChoice> value) {
+			obj.setTransactionDateRange(value.orElse(null));
 		}
 	};
 
@@ -418,7 +469,7 @@ public class CardAggregated1 {
 		return sequenceNumberRange == null ? Optional.empty() : Optional.of(sequenceNumberRange);
 	}
 
-	public CardAggregated1 setSequenceNumberRange(com.tools20022.repository.msg.CardSequenceNumberRange1 sequenceNumberRange) {
+	public CardAggregated1 setSequenceNumberRange(CardSequenceNumberRange1 sequenceNumberRange) {
 		this.sequenceNumberRange = sequenceNumberRange;
 		return this;
 	}

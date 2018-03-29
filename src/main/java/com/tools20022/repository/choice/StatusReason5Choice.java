@@ -106,7 +106,7 @@ public class StatusReason5Choice {
 	 * definition} = "Reason for the status in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReason5Choice, TransactionRejectReason7Code> mmCode = new MMMessageAttribute<StatusReason5Choice, TransactionRejectReason7Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusReason5Choice.mmObject();
@@ -118,6 +118,16 @@ public class StatusReason5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionRejectReason7Code.mmObject();
+		}
+
+		@Override
+		public TransactionRejectReason7Code getValue(StatusReason5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(StatusReason5Choice obj, TransactionRejectReason7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class StatusReason5Choice {
 	 * "Reason for the status not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReason5Choice, RestrictedRR01SL01CodeText> mmProprietary = new MMMessageAttribute<StatusReason5Choice, RestrictedRR01SL01CodeText>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusReason5Choice.mmObject();
@@ -168,6 +178,16 @@ public class StatusReason5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedRR01SL01CodeText.mmObject();
+		}
+
+		@Override
+		public RestrictedRR01SL01CodeText getValue(StatusReason5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StatusReason5Choice obj, RestrictedRR01SL01CodeText value) {
+			obj.setProprietary(value);
 		}
 	};
 

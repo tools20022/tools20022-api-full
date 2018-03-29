@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancingAllowedSummary1;
+import com.tools20022.repository.msg.InvoiceFinancingDetails1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +121,7 @@ public class FinancingInformationAndStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancingAllowedSummary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancingInformationAndStatus1, FinancingAllowedSummary1> mmFinancingAllowedSummary = new MMMessageAssociationEnd<FinancingInformationAndStatus1, FinancingAllowedSummary1>() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingInformationAndStatus1.mmObject();
@@ -131,11 +133,21 @@ public class FinancingInformationAndStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancingAllowedSummary1.mmObject();
+			type_lazy = () -> FinancingAllowedSummary1.mmObject();
+		}
+
+		@Override
+		public FinancingAllowedSummary1 getValue(FinancingInformationAndStatus1 obj) {
+			return obj.getFinancingAllowedSummary();
+		}
+
+		@Override
+		public void setValue(FinancingInformationAndStatus1 obj, FinancingAllowedSummary1 value) {
+			obj.setFinancingAllowedSummary(value);
 		}
 	};
 	@XmlElement(name = "InvcFincgDtls", required = true)
-	protected List<com.tools20022.repository.msg.InvoiceFinancingDetails1> invoiceFinancingDetails;
+	protected List<InvoiceFinancingDetails1> invoiceFinancingDetails;
 	/**
 	 * 
 	 <p>
@@ -170,7 +182,7 @@ public class FinancingInformationAndStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoiceFinancingDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancingInformationAndStatus1, List<InvoiceFinancingDetails1>> mmInvoiceFinancingDetails = new MMMessageAssociationEnd<FinancingInformationAndStatus1, List<InvoiceFinancingDetails1>>() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingAgreement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingInformationAndStatus1.mmObject();
@@ -181,7 +193,17 @@ public class FinancingInformationAndStatus1 {
 			definition = "Specifies detailed information about single invoice/instalment financing result, such as result of request (financed or not financed), amount, percentage applied.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvoiceFinancingDetails1.mmObject();
+			type_lazy = () -> InvoiceFinancingDetails1.mmObject();
+		}
+
+		@Override
+		public List<InvoiceFinancingDetails1> getValue(FinancingInformationAndStatus1 obj) {
+			return obj.getInvoiceFinancingDetails();
+		}
+
+		@Override
+		public void setValue(FinancingInformationAndStatus1 obj, List<InvoiceFinancingDetails1> value) {
+			obj.setInvoiceFinancingDetails(value);
 		}
 	};
 
@@ -204,7 +226,7 @@ public class FinancingInformationAndStatus1 {
 		return financingAllowedSummary;
 	}
 
-	public FinancingInformationAndStatus1 setFinancingAllowedSummary(com.tools20022.repository.msg.FinancingAllowedSummary1 financingAllowedSummary) {
+	public FinancingInformationAndStatus1 setFinancingAllowedSummary(FinancingAllowedSummary1 financingAllowedSummary) {
 		this.financingAllowedSummary = Objects.requireNonNull(financingAllowedSummary);
 		return this;
 	}
@@ -213,7 +235,7 @@ public class FinancingInformationAndStatus1 {
 		return invoiceFinancingDetails == null ? invoiceFinancingDetails = new ArrayList<>() : invoiceFinancingDetails;
 	}
 
-	public FinancingInformationAndStatus1 setInvoiceFinancingDetails(List<com.tools20022.repository.msg.InvoiceFinancingDetails1> invoiceFinancingDetails) {
+	public FinancingInformationAndStatus1 setInvoiceFinancingDetails(List<InvoiceFinancingDetails1> invoiceFinancingDetails) {
 		this.invoiceFinancingDetails = Objects.requireNonNull(invoiceFinancingDetails);
 		return this;
 	}

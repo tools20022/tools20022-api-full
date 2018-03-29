@@ -104,7 +104,7 @@ public class CashAccount10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount10, AccountIdentification3Choice> mmIdentification = new MMMessageAttribute<CashAccount10, AccountIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount10.mmObject();
@@ -116,6 +116,16 @@ public class CashAccount10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification3Choice getValue(CashAccount10 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount10 obj, AccountIdentification3Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 

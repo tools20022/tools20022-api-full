@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
+import com.tools20022.repository.msg.NameAndAddress5;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,7 +132,7 @@ public class PartyIdentification23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification23, AnyBICIdentifier> mmBICOrBEI = new MMMessageAttribute<PartyIdentification23, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
@@ -142,6 +144,16 @@ public class PartyIdentification23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification23 obj) {
+			return obj.getBICOrBEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification23 obj, AnyBICIdentifier value) {
+			obj.setBICOrBEI(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -181,7 +193,7 @@ public class PartyIdentification23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification23, GenericIdentification1> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification23, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
@@ -192,7 +204,17 @@ public class PartyIdentification23 {
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(PartyIdentification23 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification23 obj, GenericIdentification1 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr")
@@ -231,7 +253,7 @@ public class PartyIdentification23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification23, Optional<NameAndAddress5>> mmNameAndAddress = new MMMessageAttribute<PartyIdentification23, Optional<NameAndAddress5>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
@@ -242,7 +264,17 @@ public class PartyIdentification23 {
 			definition = "Name by which a party is known and which is usually used to identify that party.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
+			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress5> getValue(PartyIdentification23 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification23 obj, Optional<NameAndAddress5> value) {
+			obj.setNameAndAddress(value.orElse(null));
 		}
 	};
 	/**
@@ -325,7 +357,7 @@ public class PartyIdentification23 {
 		return proprietaryIdentification;
 	}
 
-	public PartyIdentification23 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification1 proprietaryIdentification) {
+	public PartyIdentification23 setProprietaryIdentification(GenericIdentification1 proprietaryIdentification) {
 		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
 		return this;
 	}
@@ -334,7 +366,7 @@ public class PartyIdentification23 {
 		return nameAndAddress == null ? Optional.empty() : Optional.of(nameAndAddress);
 	}
 
-	public PartyIdentification23 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress5 nameAndAddress) {
+	public PartyIdentification23 setNameAndAddress(NameAndAddress5 nameAndAddress) {
 		this.nameAndAddress = nameAndAddress;
 		return this;
 	}

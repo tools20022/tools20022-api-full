@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.InvestmentFund;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification60;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +123,7 @@ public class FundIdentification4 {
 	 * definition} = "Identification of the investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFundIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundIdentification4, PartyIdentification60> mmFundIdentification = new MMMessageAttribute<FundIdentification4, PartyIdentification60>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundIdentification4.mmObject();
@@ -133,7 +134,17 @@ public class FundIdentification4 {
 			definition = "Identification of the investment fund.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification60.mmObject();
+			complexType_lazy = () -> PartyIdentification60.mmObject();
+		}
+
+		@Override
+		public PartyIdentification60 getValue(FundIdentification4 obj) {
+			return obj.getFundIdentification();
+		}
+
+		@Override
+		public void setValue(FundIdentification4 obj, PartyIdentification60 value) {
+			obj.setFundIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctIdWthCtdn")
@@ -171,7 +182,7 @@ public class FundIdentification4 {
 	 * "Identifies the account of the fund held with the custodian."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentificationWithCustodian = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundIdentification4, Optional<Max35Text>> mmAccountIdentificationWithCustodian = new MMMessageAttribute<FundIdentification4, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundIdentification4.mmObject();
@@ -183,6 +194,16 @@ public class FundIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FundIdentification4 obj) {
+			return obj.getAccountIdentificationWithCustodian();
+		}
+
+		@Override
+		public void setValue(FundIdentification4 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentificationWithCustodian(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtdnId")
@@ -221,7 +242,7 @@ public class FundIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCustodianIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundIdentification4, Optional<PartyIdentification73Choice>> mmCustodianIdentification = new MMMessageAssociationEnd<FundIdentification4, Optional<PartyIdentification73Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundIdentification4.mmObject();
@@ -234,6 +255,16 @@ public class FundIdentification4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(FundIdentification4 obj) {
+			return obj.getCustodianIdentification();
+		}
+
+		@Override
+		public void setValue(FundIdentification4 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setCustodianIdentification(value.orElse(null));
 		}
 	};
 
@@ -257,7 +288,7 @@ public class FundIdentification4 {
 		return fundIdentification;
 	}
 
-	public FundIdentification4 setFundIdentification(com.tools20022.repository.msg.PartyIdentification60 fundIdentification) {
+	public FundIdentification4 setFundIdentification(PartyIdentification60 fundIdentification) {
 		this.fundIdentification = Objects.requireNonNull(fundIdentification);
 		return this;
 	}

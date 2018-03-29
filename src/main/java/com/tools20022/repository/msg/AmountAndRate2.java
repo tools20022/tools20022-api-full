@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -98,7 +99,7 @@ public class AmountAndRate2 {
 	 * definition} = "Amount expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndRate2, Optional<AmountAndDirection30>> mmAmount = new MMMessageAttribute<AmountAndRate2, Optional<AmountAndDirection30>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndRate2.mmObject();
 			isDerived = false;
@@ -109,7 +110,17 @@ public class AmountAndRate2 {
 			definition = "Amount expressed as an amount of money.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection30> getValue(AmountAndRate2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndRate2 obj, Optional<AmountAndDirection30> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -141,7 +152,7 @@ public class AmountAndRate2 {
 	 * definition} = "Amount expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndRate2, Optional<PercentageRate>> mmRate = new MMMessageAttribute<AmountAndRate2, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndRate2.mmObject();
 			isDerived = false;
@@ -152,6 +163,16 @@ public class AmountAndRate2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(AmountAndRate2 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(AmountAndRate2 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 
@@ -172,7 +193,7 @@ public class AmountAndRate2 {
 		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public AmountAndRate2 setAmount(com.tools20022.repository.msg.AmountAndDirection30 amount) {
+	public AmountAndRate2 setAmount(AmountAndDirection30 amount) {
 		this.amount = amount;
 		return this;
 	}

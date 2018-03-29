@@ -114,7 +114,7 @@ public class UnableToApplyJustificationChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnableToApplyJustificationChoice, YesNoIndicator> mmAnyInformation = new MMMessageAttribute<UnableToApplyJustificationChoice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustificationChoice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class UnableToApplyJustificationChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(UnableToApplyJustificationChoice obj) {
+			return obj.getAnyInformation();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustificationChoice obj, YesNoIndicator value) {
+			obj.setAnyInformation(value);
 		}
 	};
 	@XmlElement(name = "MssngOrIncrrctInf", required = true)
@@ -156,7 +166,7 @@ public class UnableToApplyJustificationChoice {
 	 * definition} = "Missing or incorrect information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMissingOrIncorrectInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnableToApplyJustificationChoice, MissingOrIncorrectInformation> mmMissingOrIncorrectInformation = new MMMessageAssociationEnd<UnableToApplyJustificationChoice, MissingOrIncorrectInformation>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustificationChoice.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class UnableToApplyJustificationChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MissingOrIncorrectInformation.mmObject();
+		}
+
+		@Override
+		public MissingOrIncorrectInformation getValue(UnableToApplyJustificationChoice obj) {
+			return obj.getMissingOrIncorrectInformation();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustificationChoice obj, MissingOrIncorrectInformation value) {
+			obj.setMissingOrIncorrectInformation(value);
 		}
 	};
 

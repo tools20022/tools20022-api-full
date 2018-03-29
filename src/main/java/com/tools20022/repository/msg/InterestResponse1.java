@@ -133,7 +133,7 @@ public class InterestResponse1 {
 	 * "Provides the type of the response, either accepted or rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestResponse1, Status4Code> mmResponseType = new MMMessageAttribute<InterestResponse1, Status4Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestResponse1.mmObject();
@@ -145,6 +145,16 @@ public class InterestResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
+		}
+
+		@Override
+		public Status4Code getValue(InterestResponse1 obj) {
+			return obj.getResponseType();
+		}
+
+		@Override
+		public void setValue(InterestResponse1 obj, Status4Code value) {
+			obj.setResponseType(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -184,7 +194,7 @@ public class InterestResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestResponse1, Optional<RejectionReason21FormatChoice>> mmRejectionReason = new MMMessageAttribute<InterestResponse1, Optional<RejectionReason21FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmInterestRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestResponse1.mmObject();
@@ -196,6 +206,16 @@ public class InterestResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RejectionReason21FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<RejectionReason21FormatChoice> getValue(InterestResponse1 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(InterestResponse1 obj, Optional<RejectionReason21FormatChoice> value) {
+			obj.setRejectionReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctnRsnInf")
@@ -232,7 +252,7 @@ public class InterestResponse1 {
 	 * definition} = "Provides additional information on the rejection reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestResponse1, Optional<Max140Text>> mmRejectionReasonInformation = new MMMessageAttribute<InterestResponse1, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestResponse1.mmObject();
@@ -244,6 +264,16 @@ public class InterestResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(InterestResponse1 obj) {
+			return obj.getRejectionReasonInformation();
+		}
+
+		@Override
+		public void setValue(InterestResponse1 obj, Optional<Max140Text> value) {
+			obj.setRejectionReasonInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstPmtReqId", required = true)
@@ -275,7 +305,7 @@ public class InterestResponse1 {
 	 * definition} = "Provides the reference to the interest payment request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestPaymentRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestResponse1, Max35Text> mmInterestPaymentRequestIdentification = new MMMessageAttribute<InterestResponse1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestResponse1.mmObject();
 			isDerived = false;
@@ -286,6 +316,16 @@ public class InterestResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InterestResponse1 obj) {
+			return obj.getInterestPaymentRequestIdentification();
+		}
+
+		@Override
+		public void setValue(InterestResponse1 obj, Max35Text value) {
+			obj.setInterestPaymentRequestIdentification(value);
 		}
 	};
 

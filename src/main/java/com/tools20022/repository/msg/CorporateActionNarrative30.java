@@ -143,7 +143,7 @@ public class CorporateActionNarrative30 {
 	 * CorporateActionNarrative21.mmRegistrationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative30, List<Max350Text>> mmRegistrationDetails = new MMMessageAttribute<CorporateActionNarrative30, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative30.mmObject();
@@ -156,6 +156,16 @@ public class CorporateActionNarrative30 {
 			previousVersion_lazy = () -> CorporateActionNarrative21.mmRegistrationDetails;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative30 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative30 obj, List<Max350Text> value) {
+			obj.setRegistrationDetails(value);
 		}
 	};
 	@XmlElement(name = "PtyCtctNrrtv")
@@ -202,7 +212,7 @@ public class CorporateActionNarrative30 {
 	 * CorporateActionNarrative21.mmPartyContactNarrative}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative30, List<Max350Text>> mmPartyContactNarrative = new MMMessageAttribute<CorporateActionNarrative30, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative30.mmObject();
@@ -215,6 +225,16 @@ public class CorporateActionNarrative30 {
 			previousVersion_lazy = () -> CorporateActionNarrative21.mmPartyContactNarrative;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative30 obj) {
+			return obj.getPartyContactNarrative();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative30 obj, List<Max350Text> value) {
+			obj.setPartyContactNarrative(value);
 		}
 	};
 	@XmlElement(name = "CertfctnBrkdwn")
@@ -252,7 +272,7 @@ public class CorporateActionNarrative30 {
 	 * CorporateActionNarrative21.mmCertificationBreakdown}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationBreakdown = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative30, List<Max350Text>> mmCertificationBreakdown = new MMMessageAttribute<CorporateActionNarrative30, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative30.mmObject();
 			isDerived = false;
@@ -263,6 +283,16 @@ public class CorporateActionNarrative30 {
 			previousVersion_lazy = () -> CorporateActionNarrative21.mmCertificationBreakdown;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative30 obj) {
+			return obj.getCertificationBreakdown();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative30 obj, List<Max350Text> value) {
+			obj.setCertificationBreakdown(value);
 		}
 	};
 

@@ -57,12 +57,16 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV06> forTransferCancellationStatusReportV06 = new MMConstraint<TransferCancellationStatusReportV06>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferCancellationStatusReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If Reference/RelatedReference/MessageName is present, it must start with sese.002, sese.006, sese.009 or sese.014.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferCancellationStatusReportV05;
 			owner_lazy = () -> TransferCancellationStatusReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV06 obj) throws Exception {
+			checkTransferCancellationStatusReportV06(obj);
 		}
 	};
 	/**
@@ -93,12 +97,16 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV06> forTransferInstructionStatusReportV06 = new MMConstraint<TransferInstructionStatusReportV06>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferInstructionStatusReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If Reference/RelatedReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.009, sese.012 or sese.014.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV05;
 			owner_lazy = () -> TransferInstructionStatusReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV06 obj) throws Exception {
+			checkTransferInstructionStatusReportV06(obj);
 		}
 	};
 	/**
@@ -137,13 +145,17 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV05> forTransferInstructionStatusReportV05 = new MMConstraint<TransferInstructionStatusReportV05>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferInstructionStatusReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If Reference/RelatedReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.009, sese.012 or sese.014.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV04;
 			owner_lazy = () -> TransferInstructionStatusReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV05 obj) throws Exception {
+			checkTransferInstructionStatusReportV05(obj);
 		}
 	};
 	/**
@@ -182,13 +194,17 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV05> forTransferCancellationStatusReportV05 = new MMConstraint<TransferCancellationStatusReportV05>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferCancellationStatusReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If Reference/RelatedReference/MessageName is present, it must start with sese.002, sese.006, sese.009 or sese.014.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferCancellationStatusReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferCancellationStatusReportV04;
 			owner_lazy = () -> TransferCancellationStatusReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV05 obj) throws Exception {
+			checkTransferCancellationStatusReportV05(obj);
 		}
 	};
 	/**
@@ -214,11 +230,15 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV02> forTransferCancellationStatusReportV02 = new MMConstraint<TransferCancellationStatusReportV02>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferCancellationStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If RelatedReference/MessageName is present, it must contain 540 or 542 or must start with sese.002, sese.006 or sese.009 and the RelatedReference/Reference must contain the reference of a message in this list.";
 			owner_lazy = () -> TransferCancellationStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV02 obj) throws Exception {
+			checkTransferCancellationStatusReportV02(obj);
 		}
 	};
 	/**
@@ -252,12 +272,16 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV03> forTransferCancellationStatusReportV03 = new MMConstraint<TransferCancellationStatusReportV03>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferCancellationStatusReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If RelatedReference/MessageName is present, it must contain 540 or 542 or must start with sese.002, sese.006 or sese.009 and the RelatedReference/Reference must contain the reference of a message in this list.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferCancellationStatusReportV04);
 			owner_lazy = () -> TransferCancellationStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV03 obj) throws Exception {
+			checkTransferCancellationStatusReportV03(obj);
 		}
 	};
 	/**
@@ -283,11 +307,15 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV02> forTransferInstructionStatusReportV02 = new MMConstraint<TransferInstructionStatusReportV02>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferInstructionStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If RelatedReference/MessageName is present, it must contain 540 or 542 or must start with sese.001, sese.002, sese.005, sese.006 or sese.009 and the RelatedReference/Reference must contain the reference of a message in this list.";
 			owner_lazy = () -> TransferInstructionStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV02 obj) throws Exception {
+			checkTransferInstructionStatusReportV02(obj);
 		}
 	};
 	/**
@@ -321,12 +349,16 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV03> forTransferInstructionStatusReportV03 = new MMConstraint<TransferInstructionStatusReportV03>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferInstructionStatusReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If RelatedReference/MessageName is present, it must contain 540 or 542 or must start with sese.001, sese.002, sese.005, sese.006 or sese.009 and the RelatedReference/Reference must contain the reference of a message in this list.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV04);
 			owner_lazy = () -> TransferInstructionStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV03 obj) throws Exception {
+			checkTransferInstructionStatusReportV03(obj);
 		}
 	};
 	/**
@@ -365,13 +397,17 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV04> forTransferInstructionStatusReportV04 = new MMConstraint<TransferInstructionStatusReportV04>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferInstructionStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If Reference/RelatedReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.009, sese.012 or sese.014.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferInstructionStatusReportV03;
 			owner_lazy = () -> TransferInstructionStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV04 obj) throws Exception {
+			checkTransferInstructionStatusReportV04(obj);
 		}
 	};
 	/**
@@ -410,13 +446,17 @@ public class ConstraintRelatedReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV04> forTransferCancellationStatusReportV04 = new MMConstraint<TransferCancellationStatusReportV04>() {
 		{
-			validator = ConstraintRelatedReferenceRule::checkTransferCancellationStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceRule";
 			definition = "If Reference/RelatedReference/MessageName is present, it must start with sese.002, sese.006, sese.009 or sese.014.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferCancellationStatusReportV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRelatedReferenceRule.forTransferCancellationStatusReportV03;
 			owner_lazy = () -> TransferCancellationStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV04 obj) throws Exception {
+			checkTransferCancellationStatusReportV04(obj);
 		}
 	};
 

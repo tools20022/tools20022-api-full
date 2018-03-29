@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMService2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -104,7 +105,7 @@ public class ATMContext2 {
 	 * ATMContext1.mmSessionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSessionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMContext2, Optional<Max35Text>> mmSessionReference = new MMMessageAttribute<ATMContext2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMContext2.mmObject();
 			isDerived = false;
@@ -116,6 +117,16 @@ public class ATMContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMContext2 obj) {
+			return obj.getSessionReference();
+		}
+
+		@Override
+		public void setValue(ATMContext2 obj, Optional<Max35Text> value) {
+			obj.setSessionReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Svc")
@@ -151,7 +162,7 @@ public class ATMContext2 {
 	 * ATMContext1.mmService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmService = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMContext2, Optional<ATMService2>> mmService = new MMMessageAssociationEnd<ATMContext2, Optional<ATMService2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMContext2.mmObject();
 			isDerived = false;
@@ -163,7 +174,17 @@ public class ATMContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMService2.mmObject();
+			type_lazy = () -> ATMService2.mmObject();
+		}
+
+		@Override
+		public Optional<ATMService2> getValue(ATMContext2 obj) {
+			return obj.getService();
+		}
+
+		@Override
+		public void setValue(ATMContext2 obj, Optional<ATMService2> value) {
+			obj.setService(value.orElse(null));
 		}
 	};
 
@@ -194,7 +215,7 @@ public class ATMContext2 {
 		return service == null ? Optional.empty() : Optional.of(service);
 	}
 
-	public ATMContext2 setService(com.tools20022.repository.msg.ATMService2 service) {
+	public ATMContext2 setService(ATMService2 service) {
 		this.service = service;
 		return this;
 	}

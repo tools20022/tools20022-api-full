@@ -130,7 +130,7 @@ public class SolicitationFeeRateFormat7Choice {
 	 * SolicitationFeeRateFormat5Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SolicitationFeeRateFormat7Choice, PercentageRate> mmRate = new MMMessageAttribute<SolicitationFeeRateFormat7Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat7Choice.mmObject();
@@ -144,6 +144,16 @@ public class SolicitationFeeRateFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SolicitationFeeRateFormat7Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat7Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "AmtToQty", required = true)
@@ -188,7 +198,7 @@ public class SolicitationFeeRateFormat7Choice {
 	 * SolicitationFeeRateFormat5Choice.mmAmountToQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SolicitationFeeRateFormat7Choice, AmountAndQuantityRatio4> mmAmountToQuantity = new MMMessageAssociationEnd<SolicitationFeeRateFormat7Choice, AmountAndQuantityRatio4>() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat7Choice.mmObject();
@@ -203,6 +213,16 @@ public class SolicitationFeeRateFormat7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndQuantityRatio4.mmObject();
+		}
+
+		@Override
+		public AmountAndQuantityRatio4 getValue(SolicitationFeeRateFormat7Choice obj) {
+			return obj.getAmountToQuantity();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat7Choice obj, AmountAndQuantityRatio4 value) {
+			obj.setAmountToQuantity(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -245,7 +265,7 @@ public class SolicitationFeeRateFormat7Choice {
 	 * SolicitationFeeRateFormat5Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SolicitationFeeRateFormat7Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<SolicitationFeeRateFormat7Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat7Choice.mmObject();
@@ -258,6 +278,16 @@ public class SolicitationFeeRateFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(SolicitationFeeRateFormat7Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat7Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -298,7 +328,7 @@ public class SolicitationFeeRateFormat7Choice {
 	 * SolicitationFeeRateFormat5Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SolicitationFeeRateFormat7Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<SolicitationFeeRateFormat7Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat7Choice.mmObject();
 			isDerived = false;
@@ -311,6 +341,16 @@ public class SolicitationFeeRateFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(SolicitationFeeRateFormat7Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat7Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

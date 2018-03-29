@@ -127,7 +127,7 @@ public class CorporateActionPrice52 {
 	 * "Indicates whether the price is an indicative price or a market price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndicativeOrMarketPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice52, Optional<IndicativeOrMarketPrice4Choice>> mmIndicativeOrMarketPrice = new MMMessageAssociationEnd<CorporateActionPrice52, Optional<IndicativeOrMarketPrice4Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice52.mmObject();
@@ -141,6 +141,16 @@ public class CorporateActionPrice52 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> IndicativeOrMarketPrice4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<IndicativeOrMarketPrice4Choice> getValue(CorporateActionPrice52 obj) {
+			return obj.getIndicativeOrMarketPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice52 obj, Optional<IndicativeOrMarketPrice4Choice> value) {
+			obj.setIndicativeOrMarketPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssePric")
@@ -179,7 +189,7 @@ public class CorporateActionPrice52 {
 	 * definition} = "Initial issue price of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice52, Optional<PriceFormat17Choice>> mmIssuePrice = new MMMessageAssociationEnd<CorporateActionPrice52, Optional<PriceFormat17Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice52.mmObject();
@@ -193,6 +203,16 @@ public class CorporateActionPrice52 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat17Choice> getValue(CorporateActionPrice52 obj) {
+			return obj.getIssuePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice52 obj, Optional<PriceFormat17Choice> value) {
+			obj.setIssuePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricRcvdPerPdct")
@@ -233,7 +253,7 @@ public class CorporateActionPrice52 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice52, Optional<PriceFormat40Choice>> mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd<CorporateActionPrice52, Optional<PriceFormat40Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice52.mmObject();
@@ -247,6 +267,16 @@ public class CorporateActionPrice52 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat40Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat40Choice> getValue(CorporateActionPrice52 obj) {
+			return obj.getGenericCashPriceReceivedPerProduct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice52 obj, Optional<PriceFormat40Choice> value) {
+			obj.setGenericCashPriceReceivedPerProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricPdPerPdct")
@@ -287,7 +317,7 @@ public class CorporateActionPrice52 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice52, Optional<PriceFormat17Choice>> mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd<CorporateActionPrice52, Optional<PriceFormat17Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice52.mmObject();
@@ -301,6 +331,16 @@ public class CorporateActionPrice52 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat17Choice> getValue(CorporateActionPrice52 obj) {
+			return obj.getGenericCashPricePaidPerProduct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice52 obj, Optional<PriceFormat17Choice> value) {
+			obj.setGenericCashPricePaidPerProduct(value.orElse(null));
 		}
 	};
 

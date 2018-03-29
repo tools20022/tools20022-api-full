@@ -122,7 +122,7 @@ public class SecurityIdentification20Choice {
 	 * SecurityIdentification19Choice.mmISIN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification20Choice, ISINOct2015Identifier> mmISIN = new MMMessageAttribute<SecurityIdentification20Choice, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification20Choice.mmObject();
@@ -135,6 +135,16 @@ public class SecurityIdentification20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(SecurityIdentification20Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification20Choice obj, ISINOct2015Identifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -178,7 +188,7 @@ public class SecurityIdentification20Choice {
 	 * SecurityIdentification19Choice.mmIndex}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification20Choice, Max25Text> mmName = new MMMessageAttribute<SecurityIdentification20Choice, Max25Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification20Choice.mmObject();
@@ -191,6 +201,16 @@ public class SecurityIdentification20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
+		}
+
+		@Override
+		public Max25Text getValue(SecurityIdentification20Choice obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification20Choice obj, Max25Text value) {
+			obj.setName(value);
 		}
 	};
 

@@ -144,7 +144,7 @@ public class IntraBalanceReport3 {
 	 * IntraBalanceReport1.mmReportNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceReport3, Optional<Number3Choice>> mmReportNumber = new MMMessageAttribute<IntraBalanceReport3, Optional<Number3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport3.mmObject();
 			isDerived = false;
@@ -157,6 +157,16 @@ public class IntraBalanceReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Number3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Number3Choice> getValue(IntraBalanceReport3 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(IntraBalanceReport3 obj, Optional<Number3Choice> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryRef")
@@ -197,7 +207,7 @@ public class IntraBalanceReport3 {
 	 * IntraBalanceReport1.mmQueryReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceReport3, Optional<Max35Text>> mmQueryReference = new MMMessageAttribute<IntraBalanceReport3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport3.mmObject();
 			isDerived = false;
@@ -210,6 +220,16 @@ public class IntraBalanceReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalanceReport3 obj) {
+			return obj.getQueryReference();
+		}
+
+		@Override
+		public void setValue(IntraBalanceReport3 obj, Optional<Max35Text> value) {
+			obj.setQueryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptId")
@@ -246,7 +266,7 @@ public class IntraBalanceReport3 {
 	 * IntraBalanceReport1.mmReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceReport3, Optional<Max35Text>> mmReportIdentification = new MMMessageAttribute<IntraBalanceReport3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport3.mmObject();
 			isDerived = false;
@@ -258,6 +278,16 @@ public class IntraBalanceReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalanceReport3 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceReport3 obj, Optional<Max35Text> value) {
+			obj.setReportIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptDtTm")
@@ -298,7 +328,7 @@ public class IntraBalanceReport3 {
 	 * IntraBalanceReport1.mmReportDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceReport3, Optional<DateAndDateTimeChoice>> mmReportDateTime = new MMMessageAttribute<IntraBalanceReport3, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport3.mmObject();
 			isDerived = false;
@@ -311,6 +341,16 @@ public class IntraBalanceReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(IntraBalanceReport3 obj) {
+			return obj.getReportDateTime();
+		}
+
+		@Override
+		public void setValue(IntraBalanceReport3 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setReportDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptPrd")
@@ -351,7 +391,7 @@ public class IntraBalanceReport3 {
 	 * IntraBalanceReport1.mmReportPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceReport3, Optional<Period2Choice>> mmReportPeriod = new MMMessageAttribute<IntraBalanceReport3, Optional<Period2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport3.mmObject();
 			isDerived = false;
@@ -364,6 +404,16 @@ public class IntraBalanceReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Period2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period2Choice> getValue(IntraBalanceReport3 obj) {
+			return obj.getReportPeriod();
+		}
+
+		@Override
+		public void setValue(IntraBalanceReport3 obj, Optional<Period2Choice> value) {
+			obj.setReportPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryTp")
@@ -404,7 +454,7 @@ public class IntraBalanceReport3 {
 	 * IntraBalanceReport1.mmQueryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceReport3, Optional<MovementResponseType1Code>> mmQueryType = new MMMessageAttribute<IntraBalanceReport3, Optional<MovementResponseType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport3.mmObject();
 			isDerived = false;
@@ -417,6 +467,16 @@ public class IntraBalanceReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<MovementResponseType1Code> getValue(IntraBalanceReport3 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(IntraBalanceReport3 obj, Optional<MovementResponseType1Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -455,7 +515,7 @@ public class IntraBalanceReport3 {
 	 * IntraBalanceReport1.mmFrequency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceReport3, Optional<Frequency22Choice>> mmFrequency = new MMMessageAssociationEnd<IntraBalanceReport3, Optional<Frequency22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport3.mmObject();
 			isDerived = false;
@@ -469,6 +529,16 @@ public class IntraBalanceReport3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Frequency22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency22Choice> getValue(IntraBalanceReport3 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(IntraBalanceReport3 obj, Optional<Frequency22Choice> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdTp", required = true)
@@ -508,7 +578,7 @@ public class IntraBalanceReport3 {
 	 * IntraBalanceReport1.mmUpdateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceReport3, UpdateType15Choice> mmUpdateType = new MMMessageAssociationEnd<IntraBalanceReport3, UpdateType15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport3.mmObject();
 			isDerived = false;
@@ -522,6 +592,16 @@ public class IntraBalanceReport3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UpdateType15Choice.mmObject();
+		}
+
+		@Override
+		public UpdateType15Choice getValue(IntraBalanceReport3 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(IntraBalanceReport3 obj, UpdateType15Choice value) {
+			obj.setUpdateType(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -564,7 +644,7 @@ public class IntraBalanceReport3 {
 	 * IntraBalanceReport1.mmActivityIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceReport3, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<IntraBalanceReport3, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceReport3.mmObject();
 			isDerived = false;
@@ -577,6 +657,16 @@ public class IntraBalanceReport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(IntraBalanceReport3 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(IntraBalanceReport3 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 

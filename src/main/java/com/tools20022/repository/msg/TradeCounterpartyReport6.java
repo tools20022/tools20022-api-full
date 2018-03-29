@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.OrganisationIdentification3Choice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Counterparty16;
+import com.tools20022.repository.msg.Counterparty2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +118,7 @@ public class TradeCounterpartyReport6 {
 	 * definition} = "Definition of the reporting counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeCounterpartyReport6, Counterparty16> mmReportingCounterparty = new MMMessageAssociationEnd<TradeCounterpartyReport6, Counterparty16>() {
 		{
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCounterpartyReport6.mmObject();
@@ -128,7 +130,17 @@ public class TradeCounterpartyReport6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Counterparty16.mmObject();
+			type_lazy = () -> Counterparty16.mmObject();
+		}
+
+		@Override
+		public Counterparty16 getValue(TradeCounterpartyReport6 obj) {
+			return obj.getReportingCounterparty();
+		}
+
+		@Override
+		public void setValue(TradeCounterpartyReport6 obj, Counterparty16 value) {
+			obj.setReportingCounterparty(value);
 		}
 	};
 	@XmlElement(name = "OthrCtrPty", required = true)
@@ -164,7 +176,7 @@ public class TradeCounterpartyReport6 {
 	 * definition} = "Definition of the other counterparty in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeCounterpartyReport6, Counterparty2> mmOtherCounterparty = new MMMessageAssociationEnd<TradeCounterpartyReport6, Counterparty2>() {
 		{
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCounterpartyReport6.mmObject();
@@ -176,7 +188,17 @@ public class TradeCounterpartyReport6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Counterparty2.mmObject();
+			type_lazy = () -> Counterparty2.mmObject();
+		}
+
+		@Override
+		public Counterparty2 getValue(TradeCounterpartyReport6 obj) {
+			return obj.getOtherCounterparty();
+		}
+
+		@Override
+		public void setValue(TradeCounterpartyReport6 obj, Counterparty2 value) {
+			obj.setOtherCounterparty(value);
 		}
 	};
 	@XmlElement(name = "Brkr")
@@ -214,7 +236,7 @@ public class TradeCounterpartyReport6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBroker = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeCounterpartyReport6, Optional<OrganisationIdentification3Choice>> mmBroker = new MMMessageAssociationEnd<TradeCounterpartyReport6, Optional<OrganisationIdentification3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Broker.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCounterpartyReport6.mmObject();
@@ -227,6 +249,16 @@ public class TradeCounterpartyReport6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationIdentification3Choice> getValue(TradeCounterpartyReport6 obj) {
+			return obj.getBroker();
+		}
+
+		@Override
+		public void setValue(TradeCounterpartyReport6 obj, Optional<OrganisationIdentification3Choice> value) {
+			obj.setBroker(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubmitgAgt")
@@ -265,7 +297,7 @@ public class TradeCounterpartyReport6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmittingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeCounterpartyReport6, Optional<OrganisationIdentification3Choice>> mmSubmittingAgent = new MMMessageAssociationEnd<TradeCounterpartyReport6, Optional<OrganisationIdentification3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCounterpartyReport6.mmObject();
@@ -278,6 +310,16 @@ public class TradeCounterpartyReport6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationIdentification3Choice> getValue(TradeCounterpartyReport6 obj) {
+			return obj.getSubmittingAgent();
+		}
+
+		@Override
+		public void setValue(TradeCounterpartyReport6 obj, Optional<OrganisationIdentification3Choice> value) {
+			obj.setSubmittingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrMmb")
@@ -316,7 +358,7 @@ public class TradeCounterpartyReport6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeCounterpartyReport6, Optional<OrganisationIdentification3Choice>> mmClearingMember = new MMMessageAssociationEnd<TradeCounterpartyReport6, Optional<OrganisationIdentification3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> ClearingBroker.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCounterpartyReport6.mmObject();
@@ -329,6 +371,16 @@ public class TradeCounterpartyReport6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationIdentification3Choice> getValue(TradeCounterpartyReport6 obj) {
+			return obj.getClearingMember();
+		}
+
+		@Override
+		public void setValue(TradeCounterpartyReport6 obj, Optional<OrganisationIdentification3Choice> value) {
+			obj.setClearingMember(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bnfcry", required = true)
@@ -367,7 +419,7 @@ public class TradeCounterpartyReport6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficiary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeCounterpartyReport6, OrganisationIdentification3Choice> mmBeneficiary = new MMMessageAssociationEnd<TradeCounterpartyReport6, OrganisationIdentification3Choice>() {
 		{
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCounterpartyReport6.mmObject();
@@ -380,6 +432,16 @@ public class TradeCounterpartyReport6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification3Choice getValue(TradeCounterpartyReport6 obj) {
+			return obj.getBeneficiary();
+		}
+
+		@Override
+		public void setValue(TradeCounterpartyReport6 obj, OrganisationIdentification3Choice value) {
+			obj.setBeneficiary(value);
 		}
 	};
 
@@ -403,7 +465,7 @@ public class TradeCounterpartyReport6 {
 		return reportingCounterparty;
 	}
 
-	public TradeCounterpartyReport6 setReportingCounterparty(com.tools20022.repository.msg.Counterparty16 reportingCounterparty) {
+	public TradeCounterpartyReport6 setReportingCounterparty(Counterparty16 reportingCounterparty) {
 		this.reportingCounterparty = Objects.requireNonNull(reportingCounterparty);
 		return this;
 	}
@@ -412,7 +474,7 @@ public class TradeCounterpartyReport6 {
 		return otherCounterparty;
 	}
 
-	public TradeCounterpartyReport6 setOtherCounterparty(com.tools20022.repository.msg.Counterparty2 otherCounterparty) {
+	public TradeCounterpartyReport6 setOtherCounterparty(Counterparty2 otherCounterparty) {
 		this.otherCounterparty = Objects.requireNonNull(otherCounterparty);
 		return this;
 	}

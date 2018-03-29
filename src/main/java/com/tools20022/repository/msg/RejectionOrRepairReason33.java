@@ -125,7 +125,7 @@ public class RejectionOrRepairReason33 {
 	 * RejectionOrRepairReason22.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairReason33, RejectionAndRepairReason33Choice> mmCode = new MMMessageAssociationEnd<RejectionOrRepairReason33, RejectionAndRepairReason33Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionOrRepairReason33.mmObject();
@@ -140,6 +140,16 @@ public class RejectionOrRepairReason33 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionAndRepairReason33Choice.mmObject();
+		}
+
+		@Override
+		public RejectionAndRepairReason33Choice getValue(RejectionOrRepairReason33 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairReason33 obj, RejectionAndRepairReason33Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -186,7 +196,7 @@ public class RejectionOrRepairReason33 {
 	 * RejectionOrRepairReason22.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairReason33, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RejectionOrRepairReason33, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionOrRepairReason33.mmObject();
@@ -200,6 +210,16 @@ public class RejectionOrRepairReason33 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(RejectionOrRepairReason33 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairReason33 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

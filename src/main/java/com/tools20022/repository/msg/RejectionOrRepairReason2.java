@@ -131,7 +131,7 @@ public class RejectionOrRepairReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairReason2, RejectionAndRepairReason2Choice> mmCode = new MMMessageAssociationEnd<RejectionOrRepairReason2, RejectionAndRepairReason2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionOrRepairReason2.mmObject();
@@ -146,6 +146,16 @@ public class RejectionOrRepairReason2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionAndRepairReason2Choice.mmObject();
+		}
+
+		@Override
+		public RejectionAndRepairReason2Choice getValue(RejectionOrRepairReason2 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairReason2 obj, RejectionAndRepairReason2Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -195,7 +205,7 @@ public class RejectionOrRepairReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairReason2, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RejectionOrRepairReason2, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionOrRepairReason2.mmObject();
@@ -209,6 +219,16 @@ public class RejectionOrRepairReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(RejectionOrRepairReason2 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairReason2 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

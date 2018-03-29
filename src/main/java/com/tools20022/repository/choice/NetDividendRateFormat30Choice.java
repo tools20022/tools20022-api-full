@@ -122,7 +122,7 @@ public class NetDividendRateFormat30Choice {
 	 * NetDividendRateFormat23Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateFormat30Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<NetDividendRateFormat30Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat30Choice.mmObject();
@@ -135,6 +135,16 @@ public class NetDividendRateFormat30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(NetDividendRateFormat30Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat30Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtAndRateSts", required = true)
@@ -175,7 +185,7 @@ public class NetDividendRateFormat30Choice {
 	 * NetDividendRateFormat23Choice.mmAmountAndRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetDividendRateFormat30Choice, AmountAndRateStatus1> mmAmountAndRateStatus = new MMMessageAssociationEnd<NetDividendRateFormat30Choice, AmountAndRateStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat30Choice.mmObject();
@@ -189,6 +199,16 @@ public class NetDividendRateFormat30Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndRateStatus1.mmObject();
+		}
+
+		@Override
+		public AmountAndRateStatus1 getValue(NetDividendRateFormat30Choice obj) {
+			return obj.getAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat30Choice obj, AmountAndRateStatus1 value) {
+			obj.setAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -228,7 +248,7 @@ public class NetDividendRateFormat30Choice {
 	 * NetDividendRateFormat23Choice.mmRateTypeAndAmountAndRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetDividendRateFormat30Choice, RateTypeAndAmountAndStatus39> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<NetDividendRateFormat30Choice, RateTypeAndAmountAndStatus39>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat30Choice.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class NetDividendRateFormat30Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus39.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus39 getValue(NetDividendRateFormat30Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat30Choice obj, RateTypeAndAmountAndStatus39 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

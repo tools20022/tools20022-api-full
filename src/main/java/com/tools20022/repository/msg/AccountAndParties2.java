@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.AccountOwnerRole;
 import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountRole1;
+import com.tools20022.repository.msg.CustomerAccount1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +122,7 @@ public class AccountAndParties2 {
 	 * definition} = "Description of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountAndParties2, CustomerAccount1> mmAccount = new MMMessageAssociationEnd<AccountAndParties2, CustomerAccount1>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndParties2.mmObject();
@@ -132,11 +134,21 @@ public class AccountAndParties2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CustomerAccount1.mmObject();
+			type_lazy = () -> CustomerAccount1.mmObject();
+		}
+
+		@Override
+		public CustomerAccount1 getValue(AccountAndParties2 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountAndParties2 obj, CustomerAccount1 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "Role", required = true)
-	protected List<com.tools20022.repository.msg.AccountRole1> role;
+	protected List<AccountRole1> role;
 	/**
 	 * 
 	 <p>
@@ -168,7 +180,7 @@ public class AccountAndParties2 {
 	 * definition} = "Specifies the role related to the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRole = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountAndParties2, List<AccountRole1>> mmRole = new MMMessageAssociationEnd<AccountAndParties2, List<AccountRole1>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountOwnerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndParties2.mmObject();
@@ -179,7 +191,17 @@ public class AccountAndParties2 {
 			definition = "Specifies the role related to the account.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
+			type_lazy = () -> AccountRole1.mmObject();
+		}
+
+		@Override
+		public List<AccountRole1> getValue(AccountAndParties2 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(AccountAndParties2 obj, List<AccountRole1> value) {
+			obj.setRole(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -211,7 +233,7 @@ public class AccountAndParties2 {
 	 * definition} = "Additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountAndParties2, List<Max256Text>> mmAdditionalInformation = new MMMessageAttribute<AccountAndParties2, List<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndParties2.mmObject();
 			isDerived = false;
@@ -221,6 +243,16 @@ public class AccountAndParties2 {
 			definition = "Additional information.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public List<Max256Text> getValue(AccountAndParties2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AccountAndParties2 obj, List<Max256Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -244,7 +276,7 @@ public class AccountAndParties2 {
 		return account;
 	}
 
-	public AccountAndParties2 setAccount(com.tools20022.repository.msg.CustomerAccount1 account) {
+	public AccountAndParties2 setAccount(CustomerAccount1 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -253,7 +285,7 @@ public class AccountAndParties2 {
 		return role == null ? role = new ArrayList<>() : role;
 	}
 
-	public AccountAndParties2 setRole(List<com.tools20022.repository.msg.AccountRole1> role) {
+	public AccountAndParties2 setRole(List<AccountRole1> role) {
 		this.role = Objects.requireNonNull(role);
 		return this;
 	}

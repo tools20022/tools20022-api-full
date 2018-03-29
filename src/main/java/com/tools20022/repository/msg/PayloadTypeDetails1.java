@@ -94,7 +94,7 @@ public class PayloadTypeDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PayloadTypeDetails1, Max256Text> mmType = new MMMessageAttribute<PayloadTypeDetails1, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadTypeDetails1.mmObject();
 			isDerived = false;
@@ -105,6 +105,16 @@ public class PayloadTypeDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(PayloadTypeDetails1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PayloadTypeDetails1 obj, Max256Text value) {
+			obj.setType(value);
 		}
 	};
 

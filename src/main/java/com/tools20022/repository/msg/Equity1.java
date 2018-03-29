@@ -130,7 +130,7 @@ public class Equity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreferenceToIncome = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity1, PreferenceToIncome1Code> mmPreferenceToIncome = new MMMessageAttribute<Equity1, PreferenceToIncome1Code>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
@@ -142,6 +142,16 @@ public class Equity1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncome1Code.mmObject();
+		}
+
+		@Override
+		public PreferenceToIncome1Code getValue(Equity1 obj) {
+			return obj.getPreferenceToIncome();
+		}
+
+		@Override
+		public void setValue(Equity1 obj, PreferenceToIncome1Code value) {
+			obj.setPreferenceToIncome(value);
 		}
 	};
 	@XmlElement(name = "PmtSts")
@@ -178,7 +188,7 @@ public class Equity1 {
 	 * definition} = "Status of payment of a security at a particular time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity1, Optional<SecuritiesPaymentStatus1Code>> mmPaymentStatus = new MMMessageAttribute<Equity1, Optional<SecuritiesPaymentStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
@@ -190,6 +200,16 @@ public class Equity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesPaymentStatus1Code> getValue(Equity1 obj) {
+			return obj.getPaymentStatus();
+		}
+
+		@Override
+		public void setValue(Equity1 obj, Optional<SecuritiesPaymentStatus1Code> value) {
+			obj.setPaymentStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConvtblInd")
@@ -227,7 +247,7 @@ public class Equity1 {
 	 * "Indicates whether the investor or the issuer has a conversion option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConvertibleIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity1, Optional<YesNoIndicator>> mmConvertibleIndicator = new MMMessageAttribute<Equity1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmConvertibleIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
@@ -239,6 +259,16 @@ public class Equity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Equity1 obj) {
+			return obj.getConvertibleIndicator();
+		}
+
+		@Override
+		public void setValue(Equity1 obj, Optional<YesNoIndicator> value) {
+			obj.setConvertibleIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -276,7 +306,7 @@ public class Equity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity1, Optional<ISODateTime>> mmMaturityDate = new MMMessageAttribute<Equity1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
@@ -288,6 +318,16 @@ public class Equity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Equity1 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(Equity1 obj, Optional<ISODateTime> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonPdAmt")
@@ -324,7 +364,7 @@ public class Equity1 {
 	 * definition} = "Nominal amount which is not paid yet."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonPaidAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity1, Optional<ActiveCurrencyAndAmount>> mmNonPaidAmount = new MMMessageAttribute<Equity1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmNonPaidAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
@@ -336,6 +376,16 @@ public class Equity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Equity1 obj) {
+			return obj.getNonPaidAmount();
+		}
+
+		@Override
+		public void setValue(Equity1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNonPaidAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ParVal")
@@ -372,7 +422,7 @@ public class Equity1 {
 	 * definition} = "Nominal value of an equity security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity1, Optional<ActiveCurrencyAndAmount>> mmParValue = new MMMessageAttribute<Equity1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmParValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
@@ -384,6 +434,16 @@ public class Equity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Equity1 obj) {
+			return obj.getParValue();
+		}
+
+		@Override
+		public void setValue(Equity1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setParValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VtngRghtsPerShr")
@@ -419,7 +479,7 @@ public class Equity1 {
 	 * definition} = "Number of voting rights per share."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVotingRightsPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity1, Optional<Number>> mmVotingRightsPerShare = new MMMessageAttribute<Equity1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmVotingRightsPerShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity1.mmObject();
@@ -431,6 +491,16 @@ public class Equity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Equity1 obj) {
+			return obj.getVotingRightsPerShare();
+		}
+
+		@Override
+		public void setValue(Equity1 obj, Optional<Number> value) {
+			obj.setVotingRightsPerShare(value.orElse(null));
 		}
 	};
 

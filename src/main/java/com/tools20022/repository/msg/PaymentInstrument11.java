@@ -113,7 +113,7 @@ public class PaymentInstrument11 {
 	 * definition} = "Currency associated with the payment instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument11, ActiveCurrencyCode> mmSettlementCurrency = new MMMessageAttribute<PaymentInstrument11, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument11.mmObject();
@@ -125,6 +125,16 @@ public class PaymentInstrument11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(PaymentInstrument11 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument11 obj, ActiveCurrencyCode value) {
+			obj.setSettlementCurrency(value);
 		}
 	};
 	@XmlElement(name = "PmtInstrm", required = true)
@@ -162,7 +172,7 @@ public class PaymentInstrument11 {
 	 * definition} = "Choice of payment instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument11, PaymentInstrument17Choice> mmPaymentInstrument = new MMMessageAttribute<PaymentInstrument11, PaymentInstrument17Choice>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCreditMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument11.mmObject();
@@ -174,6 +184,16 @@ public class PaymentInstrument11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentInstrument17Choice.mmObject();
+		}
+
+		@Override
+		public PaymentInstrument17Choice getValue(PaymentInstrument11 obj) {
+			return obj.getPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument11 obj, PaymentInstrument17Choice value) {
+			obj.setPaymentInstrument(value);
 		}
 	};
 

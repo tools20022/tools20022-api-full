@@ -25,7 +25,6 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.AccountStatement2;
 import com.tools20022.repository.msg.GroupHeader42;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -139,7 +138,7 @@ public class BankToCustomerStatementV02 {
 	 * definition} = "Common information for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerStatementV02, GroupHeader42> mmGroupHeader = new MMMessageBuildingBlock<BankToCustomerStatementV02, GroupHeader42>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,12 +149,14 @@ public class BankToCustomerStatementV02 {
 			complexType_lazy = () -> GroupHeader42.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerStatementV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader42 getValue(BankToCustomerStatementV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(BankToCustomerStatementV02 obj, GroupHeader42 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Stmt", required = true)
@@ -184,7 +185,7 @@ public class BankToCustomerStatementV02 {
 	 * "Reports on booked entries and balances for a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerStatementV02, List<AccountStatement2>> mmStatement = new MMMessageBuildingBlock<BankToCustomerStatementV02, List<AccountStatement2>>() {
 		{
 			xmlTag = "Stmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +195,14 @@ public class BankToCustomerStatementV02 {
 			complexType_lazy = () -> AccountStatement2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerStatementV02.class.getMethod("getStatement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountStatement2> getValue(BankToCustomerStatementV02 obj) {
+			return obj.getStatement();
+		}
+
+		@Override
+		public void setValue(BankToCustomerStatementV02 obj, List<AccountStatement2> value) {
+			obj.setStatement(value);
 		}
 	};
 

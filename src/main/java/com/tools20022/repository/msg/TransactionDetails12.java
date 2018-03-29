@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount13;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,7 +135,7 @@ public class TransactionDetails12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionDetails12, References3Choice> mmReference = new MMMessageAssociationEnd<TransactionDetails12, References3Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails12.mmObject();
 			isDerived = false;
@@ -147,6 +148,16 @@ public class TransactionDetails12 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> References3Choice.mmObject();
+		}
+
+		@Override
+		public References3Choice getValue(TransactionDetails12 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(TransactionDetails12 obj, References3Choice value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -186,7 +197,7 @@ public class TransactionDetails12 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionDetails12, Optional<PartyIdentification13Choice>> mmAccountOwner = new MMMessageAssociationEnd<TransactionDetails12, Optional<PartyIdentification13Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails12.mmObject();
@@ -200,6 +211,16 @@ public class TransactionDetails12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification13Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification13Choice> getValue(TransactionDetails12 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(TransactionDetails12 obj, Optional<PartyIdentification13Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -238,7 +259,7 @@ public class TransactionDetails12 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionDetails12, SecuritiesAccount13> mmSafekeepingAccount = new MMMessageAssociationEnd<TransactionDetails12, SecuritiesAccount13>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails12.mmObject();
@@ -251,7 +272,17 @@ public class TransactionDetails12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			type_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount13 getValue(TransactionDetails12 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(TransactionDetails12 obj, SecuritiesAccount13 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 
@@ -301,7 +332,7 @@ public class TransactionDetails12 {
 		return safekeepingAccount;
 	}
 
-	public TransactionDetails12 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+	public TransactionDetails12 setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
 		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
 		return this;
 	}

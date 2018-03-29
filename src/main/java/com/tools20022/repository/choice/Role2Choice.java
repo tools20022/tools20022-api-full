@@ -126,7 +126,7 @@ public class Role2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Role2Choice, InvestmentFundRole2Code> mmCode = new MMMessageAttribute<Role2Choice, InvestmentFundRole2Code>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role2Choice.mmObject();
@@ -139,6 +139,16 @@ public class Role2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundRole2Code.mmObject();
+		}
+
+		@Override
+		public InvestmentFundRole2Code getValue(Role2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Role2Choice obj, InvestmentFundRole2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -187,7 +197,7 @@ public class Role2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Role2Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<Role2Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role2Choice.mmObject();
@@ -200,6 +210,16 @@ public class Role2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(Role2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Role2Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "Txt", required = true)
@@ -237,7 +257,7 @@ public class Role2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Role2Choice, Max350Text> mmText = new MMMessageAttribute<Role2Choice, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Role2Choice.mmObject();
 			isDerived = false;
@@ -249,6 +269,16 @@ public class Role2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(Role2Choice obj) {
+			return obj.getText();
+		}
+
+		@Override
+		public void setValue(Role2Choice obj, Max350Text value) {
+			obj.setText(value);
 		}
 	};
 

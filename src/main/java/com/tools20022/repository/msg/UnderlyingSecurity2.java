@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class UnderlyingSecurity2 {
 	 * definition} = "Identifies the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingSecurity2, SecurityIdentification12> mmSecurityIdentification = new MMMessageAssociationEnd<UnderlyingSecurity2, SecurityIdentification12>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurity2.mmObject();
@@ -118,7 +119,17 @@ public class UnderlyingSecurity2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification12.mmObject();
+			type_lazy = () -> SecurityIdentification12.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification12 getValue(UnderlyingSecurity2 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurity2 obj, SecurityIdentification12 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 
@@ -140,7 +151,7 @@ public class UnderlyingSecurity2 {
 		return securityIdentification;
 	}
 
-	public UnderlyingSecurity2 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification12 securityIdentification) {
+	public UnderlyingSecurity2 setSecurityIdentification(SecurityIdentification12 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}

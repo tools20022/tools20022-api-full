@@ -29,7 +29,6 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.SystemPartyIdentification3;
 import com.tools20022.repository.msg.SystemPartyModification1;
 import com.tools20022.repository.msgset._T2S_Party_Reference_Data_ForRegistration;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -136,7 +135,7 @@ public class PartyModificationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyModificationRequestV01, DocumentIdentification50> mmMessageIdentification = new MMMessageBuildingBlock<PartyModificationRequestV01, DocumentIdentification50>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,12 +146,14 @@ public class PartyModificationRequestV01 {
 			complexType_lazy = () -> DocumentIdentification50.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyModificationRequestV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification50 getValue(PartyModificationRequestV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(PartyModificationRequestV01 obj, DocumentIdentification50 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -182,7 +183,7 @@ public class PartyModificationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyModificationRequestV01, Optional<PartyIdentification71Choice>> mmMessageOriginator = new MMMessageBuildingBlock<PartyModificationRequestV01, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,12 +194,14 @@ public class PartyModificationRequestV01 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyModificationRequestV01.class.getMethod("getMessageOriginator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(PartyModificationRequestV01 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(PartyModificationRequestV01 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -228,7 +231,7 @@ public class PartyModificationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyModificationRequestV01, Optional<PartyIdentification71Choice>> mmMessageRecipient = new MMMessageBuildingBlock<PartyModificationRequestV01, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,12 +242,14 @@ public class PartyModificationRequestV01 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyModificationRequestV01.class.getMethod("getMessageRecipient", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(PartyModificationRequestV01 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(PartyModificationRequestV01 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysPtyId", required = true)
@@ -274,7 +279,7 @@ public class PartyModificationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSystemPartyIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyModificationRequestV01, SystemPartyIdentification3> mmSystemPartyIdentification = new MMMessageBuildingBlock<PartyModificationRequestV01, SystemPartyIdentification3>() {
 		{
 			xmlTag = "SysPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,12 +290,14 @@ public class PartyModificationRequestV01 {
 			complexType_lazy = () -> SystemPartyIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyModificationRequestV01.class.getMethod("getSystemPartyIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SystemPartyIdentification3 getValue(PartyModificationRequestV01 obj) {
+			return obj.getSystemPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyModificationRequestV01 obj, SystemPartyIdentification3 value) {
+			obj.setSystemPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
@@ -320,7 +327,7 @@ public class PartyModificationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmModification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyModificationRequestV01, List<SystemPartyModification1>> mmModification = new MMMessageBuildingBlock<PartyModificationRequestV01, List<SystemPartyModification1>>() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,12 +337,14 @@ public class PartyModificationRequestV01 {
 			complexType_lazy = () -> SystemPartyModification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyModificationRequestV01.class.getMethod("getModification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SystemPartyModification1> getValue(PartyModificationRequestV01 obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(PartyModificationRequestV01 obj, List<SystemPartyModification1> value) {
+			obj.setModification(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -365,7 +374,7 @@ public class PartyModificationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyModificationRequestV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<PartyModificationRequestV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,12 +384,14 @@ public class PartyModificationRequestV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyModificationRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(PartyModificationRequestV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(PartyModificationRequestV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

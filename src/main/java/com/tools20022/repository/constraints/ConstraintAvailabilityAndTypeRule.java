@@ -49,11 +49,15 @@ public class ConstraintAvailabilityAndTypeRule {
 	 */
 	public static final MMConstraint<CashBalance1> forCashBalance1 = new MMConstraint<CashBalance1>() {
 		{
-			validator = ConstraintAvailabilityAndTypeRule::checkCashBalance1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailabilityAndTypeRule";
 			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
 			owner_lazy = () -> CashBalance1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashBalance1 obj) throws Exception {
+			checkCashBalance1(obj);
 		}
 	};
 	/**
@@ -77,11 +81,15 @@ public class ConstraintAvailabilityAndTypeRule {
 	 */
 	public static final MMConstraint<CashBalance2> forCashBalance2 = new MMConstraint<CashBalance2>() {
 		{
-			validator = ConstraintAvailabilityAndTypeRule::checkCashBalance2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailabilityAndTypeRule";
 			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
 			owner_lazy = () -> CashBalance2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashBalance2 obj) throws Exception {
+			checkCashBalance2(obj);
 		}
 	};
 

@@ -119,7 +119,7 @@ public class PriceValueChange1 {
 	 * definition} = "Amount by which the price has changed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValueChange1, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>> mmAmount = new MMMessageAttribute<PriceValueChange1, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
@@ -131,6 +131,16 @@ public class PriceValueChange1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getValue(PriceValueChange1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PriceValueChange1 obj, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmtSgn")
@@ -163,7 +173,7 @@ public class PriceValueChange1 {
 	 * definition} = "Indicates a positive or negative amount change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValueChange1, Optional<PlusOrMinusIndicator>> mmAmountSign = new MMMessageAttribute<PriceValueChange1, Optional<PlusOrMinusIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class PriceValueChange1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<PlusOrMinusIndicator> getValue(PriceValueChange1 obj) {
+			return obj.getAmountSign();
+		}
+
+		@Override
+		public void setValue(PriceValueChange1 obj, Optional<PlusOrMinusIndicator> value) {
+			obj.setAmountSign(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -211,7 +231,7 @@ public class PriceValueChange1 {
 	 * definition} = "Rate by which the price has changed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValueChange1, Optional<PercentageRate>> mmRate = new MMMessageAttribute<PriceValueChange1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
@@ -223,6 +243,16 @@ public class PriceValueChange1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(PriceValueChange1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PriceValueChange1 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 

@@ -115,7 +115,7 @@ public class ATMSecurityConfiguration4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumCertificates = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration4, Optional<Number>> mmMaximumCertificates = new MMMessageAttribute<ATMSecurityConfiguration4, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration4.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class ATMSecurityConfiguration4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMSecurityConfiguration4 obj) {
+			return obj.getMaximumCertificates();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration4 obj, Optional<Number> value) {
+			obj.setMaximumCertificates(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxSgntrs")
@@ -159,7 +169,7 @@ public class ATMSecurityConfiguration4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumSignatures = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration4, Optional<Number>> mmMaximumSignatures = new MMMessageAttribute<ATMSecurityConfiguration4, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration4.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class ATMSecurityConfiguration4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMSecurityConfiguration4 obj) {
+			return obj.getMaximumSignatures();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration4 obj, Optional<Number> value) {
+			obj.setMaximumSignatures(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgtlSgntrAlgo")
@@ -208,7 +228,7 @@ public class ATMSecurityConfiguration4 {
 	 * ATMSecurityConfiguration3.mmSymmetricTransportKeyAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigitalSignatureAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration4, List<Algorithm14Code>> mmDigitalSignatureAlgorithm = new MMMessageAttribute<ATMSecurityConfiguration4, List<Algorithm14Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration4.mmObject();
 			isDerived = false;
@@ -219,6 +239,16 @@ public class ATMSecurityConfiguration4 {
 			previousVersion_lazy = () -> ATMSecurityConfiguration3.mmSymmetricTransportKeyAlgorithm;
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm14Code.mmObject();
+		}
+
+		@Override
+		public List<Algorithm14Code> getValue(ATMSecurityConfiguration4 obj) {
+			return obj.getDigitalSignatureAlgorithm();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration4 obj, List<Algorithm14Code> value) {
+			obj.setDigitalSignatureAlgorithm(value);
 		}
 	};
 

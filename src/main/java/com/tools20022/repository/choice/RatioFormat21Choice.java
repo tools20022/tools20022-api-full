@@ -108,7 +108,7 @@ public class RatioFormat21Choice {
 	 * definition} = "Ratio expressed as a quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat21Choice, QuantityToQuantityRatio2> mmQuantityToQuantity = new MMMessageAssociationEnd<RatioFormat21Choice, QuantityToQuantityRatio2>() {
 		{
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat21Choice.mmObject();
@@ -122,6 +122,16 @@ public class RatioFormat21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuantityToQuantityRatio2.mmObject();
+		}
+
+		@Override
+		public QuantityToQuantityRatio2 getValue(RatioFormat21Choice obj) {
+			return obj.getQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat21Choice obj, QuantityToQuantityRatio2 value) {
+			obj.setQuantityToQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtToAmt", required = true)
@@ -159,7 +169,7 @@ public class RatioFormat21Choice {
 	 * definition} = "Ratio expressed as a quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat21Choice, AmountToAmountRatio3> mmAmountToAmount = new MMMessageAssociationEnd<RatioFormat21Choice, AmountToAmountRatio3>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat21Choice.mmObject();
@@ -173,6 +183,16 @@ public class RatioFormat21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountToAmountRatio3.mmObject();
+		}
+
+		@Override
+		public AmountToAmountRatio3 getValue(RatioFormat21Choice obj) {
+			return obj.getAmountToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat21Choice obj, AmountToAmountRatio3 value) {
+			obj.setAmountToAmount(value);
 		}
 	};
 

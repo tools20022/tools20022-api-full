@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msg.TransactionStatus3;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +133,7 @@ public class StatusChangeRequestAcceptanceV02 {
 	 * definition} = "Identifies the acceptance message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAcceptanceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusChangeRequestAcceptanceV02, MessageIdentification1> mmAcceptanceIdentification = new MMMessageBuildingBlock<StatusChangeRequestAcceptanceV02, MessageIdentification1>() {
 		{
 			xmlTag = "AccptncId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +144,14 @@ public class StatusChangeRequestAcceptanceV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusChangeRequestAcceptanceV02.class.getMethod("getAcceptanceIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(StatusChangeRequestAcceptanceV02 obj) {
+			return obj.getAcceptanceIdentification();
+		}
+
+		@Override
+		public void setValue(StatusChangeRequestAcceptanceV02 obj, MessageIdentification1 value) {
+			obj.setAcceptanceIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -180,7 +181,7 @@ public class StatusChangeRequestAcceptanceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusChangeRequestAcceptanceV02, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<StatusChangeRequestAcceptanceV02, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,12 +192,14 @@ public class StatusChangeRequestAcceptanceV02 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusChangeRequestAcceptanceV02.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(StatusChangeRequestAcceptanceV02 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(StatusChangeRequestAcceptanceV02 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubmitrTxRef")
@@ -225,7 +228,7 @@ public class StatusChangeRequestAcceptanceV02 {
 	 * "Reference to the transaction for the requesting financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusChangeRequestAcceptanceV02, Optional<SimpleIdentificationInformation>> mmSubmitterTransactionReference = new MMMessageBuildingBlock<StatusChangeRequestAcceptanceV02, Optional<SimpleIdentificationInformation>>() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,12 +239,14 @@ public class StatusChangeRequestAcceptanceV02 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusChangeRequestAcceptanceV02.class.getMethod("getSubmitterTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SimpleIdentificationInformation> getValue(StatusChangeRequestAcceptanceV02 obj) {
+			return obj.getSubmitterTransactionReference();
+		}
+
+		@Override
+		public void setValue(StatusChangeRequestAcceptanceV02 obj, Optional<SimpleIdentificationInformation> value) {
+			obj.setSubmitterTransactionReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AccptdSts", required = true)
@@ -269,7 +274,7 @@ public class StatusChangeRequestAcceptanceV02 {
 	 * definition} = "Specifies the status accepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAcceptedStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusChangeRequestAcceptanceV02, TransactionStatus3> mmAcceptedStatus = new MMMessageBuildingBlock<StatusChangeRequestAcceptanceV02, TransactionStatus3>() {
 		{
 			xmlTag = "AccptdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,12 +285,14 @@ public class StatusChangeRequestAcceptanceV02 {
 			complexType_lazy = () -> TransactionStatus3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusChangeRequestAcceptanceV02.class.getMethod("getAcceptedStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus3 getValue(StatusChangeRequestAcceptanceV02 obj) {
+			return obj.getAcceptedStatus();
+		}
+
+		@Override
+		public void setValue(StatusChangeRequestAcceptanceV02 obj, TransactionStatus3 value) {
+			obj.setAcceptedStatus(value);
 		}
 	};
 

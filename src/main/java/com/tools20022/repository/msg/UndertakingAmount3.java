@@ -108,7 +108,7 @@ public class UndertakingAmount3 {
 	 * definition} = "Amount and currency of the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAmount3, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<UndertakingAmount3, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount3.mmObject();
@@ -120,6 +120,16 @@ public class UndertakingAmount3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(UndertakingAmount3 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(UndertakingAmount3 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -151,7 +161,7 @@ public class UndertakingAmount3 {
 	 * definition} = "Additional information concerning the demand amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAmount3, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<UndertakingAmount3, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount3.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class UndertakingAmount3 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(UndertakingAmount3 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UndertakingAmount3 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

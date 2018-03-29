@@ -52,11 +52,15 @@ public class ConstraintTypeAndFixedIncomeGuideline {
 	 */
 	public static final MMConstraint<OrderParameters1> forOrderParameters1 = new MMConstraint<OrderParameters1>() {
 		{
-			validator = ConstraintTypeAndFixedIncomeGuideline::checkOrderParameters1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAndFixedIncomeGuideline";
 			definition = "It is recommended that for fixed income orders, Type only contains the value MRKT(Market) or LMTO (Limit) or PRQT (PreviouslyQuoted) or PRID (PreviouslyIndicated).";
 			owner_lazy = () -> OrderParameters1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderParameters1 obj) throws Exception {
+			checkOrderParameters1(obj);
 		}
 	};
 

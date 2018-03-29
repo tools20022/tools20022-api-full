@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.HostToATMAcknowledgementV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMEnvironment9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +105,7 @@ public class HostToATMAcknowledgement1 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HostToATMAcknowledgement1, ATMEnvironment9> mmEnvironment = new MMMessageAssociationEnd<HostToATMAcknowledgement1, ATMEnvironment9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostToATMAcknowledgement1.mmObject();
 			isDerived = false;
@@ -115,7 +116,17 @@ public class HostToATMAcknowledgement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment9.mmObject();
+			type_lazy = () -> ATMEnvironment9.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment9 getValue(HostToATMAcknowledgement1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(HostToATMAcknowledgement1 obj, ATMEnvironment9 value) {
+			obj.setEnvironment(value);
 		}
 	};
 
@@ -137,7 +148,7 @@ public class HostToATMAcknowledgement1 {
 		return environment;
 	}
 
-	public HostToATMAcknowledgement1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment9 environment) {
+	public HostToATMAcknowledgement1 setEnvironment(ATMEnvironment9 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}

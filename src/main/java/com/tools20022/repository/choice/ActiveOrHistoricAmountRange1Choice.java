@@ -128,7 +128,7 @@ public class ActiveOrHistoricAmountRange1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ActiveOrHistoricAmountRange1Choice, ImpliedCurrencyAndAmountRange> mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd<ActiveOrHistoricAmountRange1Choice, ImpliedCurrencyAndAmountRange>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ActiveOrHistoricAmountRange1Choice.mmObject();
@@ -142,6 +142,16 @@ public class ActiveOrHistoricAmountRange1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmountRange getValue(ActiveOrHistoricAmountRange1Choice obj) {
+			return obj.getImpliedCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(ActiveOrHistoricAmountRange1Choice obj, ImpliedCurrencyAndAmountRange value) {
+			obj.setImpliedCurrencyAndAmountRange(value);
 		}
 	};
 	@XmlElement(name = "CcyAndAmtRg", required = true)
@@ -187,7 +197,7 @@ public class ActiveOrHistoricAmountRange1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ActiveOrHistoricAmountRange1Choice, ActiveOrHistoricCurrencyAndAmountRange1> mmCurrencyAndAmountRange = new MMMessageAssociationEnd<ActiveOrHistoricAmountRange1Choice, ActiveOrHistoricCurrencyAndAmountRange1>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ActiveOrHistoricAmountRange1Choice.mmObject();
@@ -201,6 +211,16 @@ public class ActiveOrHistoricAmountRange1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmountRange1 getValue(ActiveOrHistoricAmountRange1Choice obj) {
+			return obj.getCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(ActiveOrHistoricAmountRange1Choice obj, ActiveOrHistoricCurrencyAndAmountRange1 value) {
+			obj.setCurrencyAndAmountRange(value);
 		}
 	};
 

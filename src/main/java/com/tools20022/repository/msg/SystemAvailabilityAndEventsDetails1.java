@@ -27,6 +27,9 @@ import com.tools20022.repository.entity.SystemAvailability;
 import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.entity.TransactionAdministrator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemClosureDetails;
+import com.tools20022.repository.msg.SystemEvent1;
+import com.tools20022.repository.msg.TimePeriodDetails;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +124,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemAvailabilityAndEventsDetails1, CurrencyCode> mmSystemCurrency = new MMMessageAttribute<SystemAvailabilityAndEventsDetails1, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmObject();
@@ -133,6 +136,16 @@ public class SystemAvailabilityAndEventsDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(SystemAvailabilityAndEventsDetails1 obj) {
+			return obj.getSystemCurrency();
+		}
+
+		@Override
+		public void setValue(SystemAvailabilityAndEventsDetails1 obj, CurrencyCode value) {
+			obj.setSystemCurrency(value);
 		}
 	};
 	@XmlElement(name = "SsnPrd")
@@ -170,7 +183,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * definition} = "Time window of system activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSessionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemAvailabilityAndEventsDetails1, Optional<TimePeriodDetails>> mmSessionPeriod = new MMMessageAttribute<SystemAvailabilityAndEventsDetails1, Optional<TimePeriodDetails>>() {
 		{
 			businessElementTrace_lazy = () -> SystemAvailability.mmAvailableSessionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmObject();
@@ -181,11 +194,21 @@ public class SystemAvailabilityAndEventsDetails1 {
 			definition = "Time window of system activity.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TimePeriodDetails.mmObject();
+			complexType_lazy = () -> TimePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<TimePeriodDetails> getValue(SystemAvailabilityAndEventsDetails1 obj) {
+			return obj.getSessionPeriod();
+		}
+
+		@Override
+		public void setValue(SystemAvailabilityAndEventsDetails1 obj, Optional<TimePeriodDetails> value) {
+			obj.setSessionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Evt")
-	protected List<com.tools20022.repository.msg.SystemEvent1> event;
+	protected List<SystemEvent1> event;
 	/**
 	 * 
 	 <p>
@@ -219,7 +242,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemAvailabilityAndEventsDetails1, List<SystemEvent1>> mmEvent = new MMMessageAssociationEnd<SystemAvailabilityAndEventsDetails1, List<SystemEvent1>>() {
 		{
 			businessComponentTrace_lazy = () -> SystemEventInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmObject();
@@ -230,11 +253,21 @@ public class SystemAvailabilityAndEventsDetails1 {
 			definition = "Detailed information about an event occurring on a system, whether planned, eg, cut-off time for a specific type of eligible transfer, or unplanned, eg, an unsolicited failure, as stipulated in the specifications of the system.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemEvent1.mmObject();
+			type_lazy = () -> SystemEvent1.mmObject();
+		}
+
+		@Override
+		public List<SystemEvent1> getValue(SystemAvailabilityAndEventsDetails1 obj) {
+			return obj.getEvent();
+		}
+
+		@Override
+		public void setValue(SystemAvailabilityAndEventsDetails1 obj, List<SystemEvent1> value) {
+			obj.setEvent(value);
 		}
 	};
 	@XmlElement(name = "ClsrInf")
-	protected List<com.tools20022.repository.msg.SystemClosureDetails> closureInformation;
+	protected List<SystemClosureDetails> closureInformation;
 	/**
 	 * 
 	 <p>
@@ -261,7 +294,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 	 * definition} = "Information about inactivity of a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosureInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemAvailabilityAndEventsDetails1, List<SystemClosureDetails>> mmClosureInformation = new MMMessageAssociationEnd<SystemAvailabilityAndEventsDetails1, List<SystemClosureDetails>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1.mmObject();
 			isDerived = false;
@@ -271,7 +304,17 @@ public class SystemAvailabilityAndEventsDetails1 {
 			definition = "Information about inactivity of a system.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemClosureDetails.mmObject();
+			type_lazy = () -> SystemClosureDetails.mmObject();
+		}
+
+		@Override
+		public List<SystemClosureDetails> getValue(SystemAvailabilityAndEventsDetails1 obj) {
+			return obj.getClosureInformation();
+		}
+
+		@Override
+		public void setValue(SystemAvailabilityAndEventsDetails1 obj, List<SystemClosureDetails> value) {
+			obj.setClosureInformation(value);
 		}
 	};
 
@@ -310,7 +353,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 		return sessionPeriod == null ? Optional.empty() : Optional.of(sessionPeriod);
 	}
 
-	public SystemAvailabilityAndEventsDetails1 setSessionPeriod(com.tools20022.repository.msg.TimePeriodDetails sessionPeriod) {
+	public SystemAvailabilityAndEventsDetails1 setSessionPeriod(TimePeriodDetails sessionPeriod) {
 		this.sessionPeriod = sessionPeriod;
 		return this;
 	}
@@ -319,7 +362,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 		return event == null ? event = new ArrayList<>() : event;
 	}
 
-	public SystemAvailabilityAndEventsDetails1 setEvent(List<com.tools20022.repository.msg.SystemEvent1> event) {
+	public SystemAvailabilityAndEventsDetails1 setEvent(List<SystemEvent1> event) {
 		this.event = Objects.requireNonNull(event);
 		return this;
 	}
@@ -328,7 +371,7 @@ public class SystemAvailabilityAndEventsDetails1 {
 		return closureInformation == null ? closureInformation = new ArrayList<>() : closureInformation;
 	}
 
-	public SystemAvailabilityAndEventsDetails1 setClosureInformation(List<com.tools20022.repository.msg.SystemClosureDetails> closureInformation) {
+	public SystemAvailabilityAndEventsDetails1 setClosureInformation(List<SystemClosureDetails> closureInformation) {
 		this.closureInformation = Objects.requireNonNull(closureInformation);
 		return this;
 	}

@@ -118,7 +118,7 @@ public class CancelledStatus14Choice {
 	 * definition} = "Reason not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatus14Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<CancelledStatus14Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancelledStatus14Choice.mmObject();
@@ -131,6 +131,16 @@ public class CancelledStatus14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CancelledStatus14Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatus14Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -170,7 +180,7 @@ public class CancelledStatus14Choice {
 	 * definition} = "Reason for the cancelled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancelledStatus14Choice, List<CancelledStatusReason13>> mmReason = new MMMessageAssociationEnd<CancelledStatus14Choice, List<CancelledStatusReason13>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancelledStatus14Choice.mmObject();
@@ -183,6 +193,16 @@ public class CancelledStatus14Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancelledStatusReason13.mmObject();
+		}
+
+		@Override
+		public List<CancelledStatusReason13> getValue(CancelledStatus14Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatus14Choice obj, List<CancelledStatusReason13> value) {
+			obj.setReason(value);
 		}
 	};
 

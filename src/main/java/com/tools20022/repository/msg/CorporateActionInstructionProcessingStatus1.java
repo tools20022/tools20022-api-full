@@ -108,7 +108,7 @@ public class CorporateActionInstructionProcessingStatus1 {
 	 * definition} = "The processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionProcessingStatus1, ProcessedStatus3FormatChoice> mmStatus = new MMMessageAttribute<CorporateActionInstructionProcessingStatus1, ProcessedStatus3FormatChoice>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionProcessingStatus1.mmObject();
@@ -120,6 +120,16 @@ public class CorporateActionInstructionProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProcessedStatus3FormatChoice.mmObject();
+		}
+
+		@Override
+		public ProcessedStatus3FormatChoice getValue(CorporateActionInstructionProcessingStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionProcessingStatus1 obj, ProcessedStatus3FormatChoice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -156,7 +166,7 @@ public class CorporateActionInstructionProcessingStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionProcessingStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CorporateActionInstructionProcessingStatus1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionProcessingStatus1.mmObject();
@@ -168,6 +178,16 @@ public class CorporateActionInstructionProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionInstructionProcessingStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionProcessingStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

@@ -128,7 +128,7 @@ public class SafekeepingPlaceTypeAndText5 {
 	 * definition} = "Place of safekeeping as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingPlaceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceTypeAndText5, SafekeepingPlace2Code> mmSafekeepingPlaceType = new MMMessageAttribute<SafekeepingPlaceTypeAndText5, SafekeepingPlace2Code>() {
 		{
 			businessElementTrace_lazy = () -> SafekeepingPlace.mmSafekeepingPlaceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingPlaceTypeAndText5.mmObject();
@@ -141,6 +141,16 @@ public class SafekeepingPlaceTypeAndText5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingPlace2Code.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlace2Code getValue(SafekeepingPlaceTypeAndText5 obj) {
+			return obj.getSafekeepingPlaceType();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceTypeAndText5 obj, SafekeepingPlace2Code value) {
+			obj.setSafekeepingPlaceType(value);
 		}
 	};
 	@XmlElement(name = "Id")
@@ -178,7 +188,7 @@ public class SafekeepingPlaceTypeAndText5 {
 	 * definition} = "Additional information about the place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceTypeAndText5, Optional<RestrictedFINXMax30Text>> mmIdentification = new MMMessageAttribute<SafekeepingPlaceTypeAndText5, Optional<RestrictedFINXMax30Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingPlaceTypeAndText5.mmObject();
@@ -190,6 +200,16 @@ public class SafekeepingPlaceTypeAndText5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax30Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax30Text> getValue(SafekeepingPlaceTypeAndText5 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceTypeAndText5 obj, Optional<RestrictedFINXMax30Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 

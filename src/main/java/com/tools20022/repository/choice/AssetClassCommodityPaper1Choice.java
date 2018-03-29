@@ -114,7 +114,7 @@ public class AssetClassCommodityPaper1Choice {
 	 * definition} = "Container board commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContainerBoard = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityPaper1Choice, PaperCommodityContainerBoard1> mmContainerBoard = new MMMessageAssociationEnd<AssetClassCommodityPaper1Choice, PaperCommodityContainerBoard1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmObject();
@@ -127,6 +127,16 @@ public class AssetClassCommodityPaper1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaperCommodityContainerBoard1.mmObject();
+		}
+
+		@Override
+		public PaperCommodityContainerBoard1 getValue(AssetClassCommodityPaper1Choice obj) {
+			return obj.getContainerBoard();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityPaper1Choice obj, PaperCommodityContainerBoard1 value) {
+			obj.setContainerBoard(value);
 		}
 	};
 	@XmlElement(name = "Nwsprnt", required = true)
@@ -163,7 +173,7 @@ public class AssetClassCommodityPaper1Choice {
 	 * definition} = "Newsprint commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewsprint = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityPaper1Choice, PaperCommodityNewsprint1> mmNewsprint = new MMMessageAssociationEnd<AssetClassCommodityPaper1Choice, PaperCommodityNewsprint1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmObject();
@@ -176,6 +186,16 @@ public class AssetClassCommodityPaper1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaperCommodityNewsprint1.mmObject();
+		}
+
+		@Override
+		public PaperCommodityNewsprint1 getValue(AssetClassCommodityPaper1Choice obj) {
+			return obj.getNewsprint();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityPaper1Choice obj, PaperCommodityNewsprint1 value) {
+			obj.setNewsprint(value);
 		}
 	};
 	@XmlElement(name = "Pulp", required = true)
@@ -211,7 +231,7 @@ public class AssetClassCommodityPaper1Choice {
 	 * definition} = "Pulp commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPulp = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityPaper1Choice, PaperCommodityPulp1> mmPulp = new MMMessageAssociationEnd<AssetClassCommodityPaper1Choice, PaperCommodityPulp1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmObject();
@@ -224,6 +244,16 @@ public class AssetClassCommodityPaper1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaperCommodityPulp1.mmObject();
+		}
+
+		@Override
+		public PaperCommodityPulp1 getValue(AssetClassCommodityPaper1Choice obj) {
+			return obj.getPulp();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityPaper1Choice obj, PaperCommodityPulp1 value) {
+			obj.setPulp(value);
 		}
 	};
 	@XmlElement(name = "RcvrdPpr", required = true)
@@ -260,7 +290,7 @@ public class AssetClassCommodityPaper1Choice {
 	 * definition} = "Recovered paper commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecoveredPaper = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityPaper1Choice, PaperCommodityRecoveredPaper1> mmRecoveredPaper = new MMMessageAssociationEnd<AssetClassCommodityPaper1Choice, PaperCommodityRecoveredPaper1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityPaper1Choice.mmObject();
@@ -273,6 +303,16 @@ public class AssetClassCommodityPaper1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaperCommodityRecoveredPaper1.mmObject();
+		}
+
+		@Override
+		public PaperCommodityRecoveredPaper1 getValue(AssetClassCommodityPaper1Choice obj) {
+			return obj.getRecoveredPaper();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityPaper1Choice obj, PaperCommodityRecoveredPaper1 value) {
+			obj.setRecoveredPaper(value);
 		}
 	};
 

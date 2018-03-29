@@ -201,7 +201,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllOrNone = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<AllOrNoneIndicator>> mmAllOrNone = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<AllOrNoneIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmAllOrNone;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -213,6 +213,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AllOrNoneIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<AllOrNoneIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getAllOrNone();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<AllOrNoneIndicator> value) {
+			obj.setAllOrNone(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CallFrst")
@@ -252,7 +262,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCallFirst = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCallFirst = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCallFirst;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -264,6 +274,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getCallFirst();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setCallFirst(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cross")
@@ -301,7 +321,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} = "Allow crossing of an order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCross = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCross = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCross;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -313,6 +333,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getCross();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setCross(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrDisp")
@@ -352,7 +382,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerDisplay = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCustomerDisplay = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCustomerDisplay;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -364,6 +394,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getCustomerDisplay();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setCustomerDisplay(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Hld")
@@ -403,7 +443,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHold = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmHold = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmHold;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -415,6 +455,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getHold();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setHold(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Incr")
@@ -454,7 +504,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncrease = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmIncrease = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmIncrease;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -466,6 +516,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getIncrease();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setIncrease(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstnsOnly")
@@ -505,7 +565,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstitutionsOnly = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmInstitutionsOnly = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmInstitutionsOnly;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -517,6 +577,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getInstitutionsOnly();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setInstitutionsOnly(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonNgtbl")
@@ -556,7 +626,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonNegotiable = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmNonNegotiable = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmNonNegotiable;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -568,6 +638,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getNonNegotiable();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setNonNegotiable(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OverTheDay")
@@ -607,7 +687,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOverTheDay = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmOverTheDay = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmOverTheDay;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -619,6 +699,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getOverTheDay();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setOverTheDay(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtcpDontInit")
@@ -658,7 +748,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParticipateDontInitiate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmParticipateDontInitiate = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmParticipateDontInitiate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -670,6 +760,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getParticipateDontInitiate();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setParticipateDontInitiate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctOfVol")
@@ -709,7 +809,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentOfVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmPercentOfVolume = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmPercentOfVolume;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -721,6 +821,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getPercentOfVolume();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setPercentOfVolume(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Scale")
@@ -760,7 +870,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScale = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmScale = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmScale;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -772,6 +882,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getScale();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setScale(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StayOnSd")
@@ -811,7 +931,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStayOnSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<StayOnSideType1Code>> mmStayOnSide = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<StayOnSideType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmStayOnSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -823,6 +943,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> StayOnSideType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<StayOnSideType1Code> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getStayOnSide();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<StayOnSideType1Code> value) {
+			obj.setStayOnSide(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Work")
@@ -860,7 +990,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * definition} = "Make the order active until notified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWork = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmWork = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmWork;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -872,6 +1002,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getWork();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setWork(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GoAlong")
@@ -911,7 +1051,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGoAlong = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmGoAlong = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmGoAlong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -923,6 +1063,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getGoAlong();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setGoAlong(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TryScale")
@@ -962,7 +1112,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTryScale = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmTryScale = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmTryScale;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -974,6 +1124,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getTryScale();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setTryScale(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DoNotRdc")
@@ -1013,7 +1173,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDoNotReduce = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmDoNotReduce = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmDoNotReduce;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1025,6 +1185,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getDoNotReduce();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setDoNotReduce(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CclOnSysFailr")
@@ -1064,7 +1234,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancelOnSystemFailure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCancelOnSystemFailure = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCancelOnSystemFailure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1076,6 +1246,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getCancelOnSystemFailure();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setCancelOnSystemFailure(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CclOnTradgHalt")
@@ -1115,7 +1295,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancelOnTradingHalt = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCancelOnTradingHalt = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCancelOnTradingHalt;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1127,6 +1307,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getCancelOnTradingHalt();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setCancelOnTradingHalt(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradAlong")
@@ -1166,7 +1356,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeAlong = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmTradeAlong = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmTradeAlong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1178,6 +1368,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getTradeAlong();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setTradeAlong(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrctLmt")
@@ -1217,7 +1417,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrictLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmStrictLimit = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmStrictLimit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1229,6 +1429,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getStrictLimit();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setStrictLimit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IgnrPricVldtyChcks")
@@ -1268,7 +1478,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIgnorePriceValidityChecks = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmIgnorePriceValidityChecks = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmIgnorePriceValidityChecks;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1280,6 +1490,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getIgnorePriceValidityChecks();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setIgnorePriceValidityChecks(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinsttOnSysFailr")
@@ -1319,7 +1539,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinstateOnSystemFailure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmReinstateOnSystemFailure = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmReinstateOnSystemFailure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1331,6 +1551,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getReinstateOnSystemFailure();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setReinstateOnSystemFailure(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinsttOnTradgHalt")
@@ -1370,7 +1600,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinstateOnTradingHalt = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmReinstateOnTradingHalt = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmReinstateOnTradingHalt;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1382,6 +1612,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getReinstateOnTradingHalt();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setReinstateOnTradingHalt(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CclIfNotBest")
@@ -1421,7 +1661,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancelIfNotBest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmCancelIfNotBest = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCancelIfNotBest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1433,6 +1673,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getCancelIfNotBest();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setCancelIfNotBest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtrnlRtgAllwd")
@@ -1472,7 +1722,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExternalRoutingAllowed = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmExternalRoutingAllowed = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmExternalRoutingAllowed;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1484,6 +1734,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getExternalRoutingAllowed();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setExternalRoutingAllowed(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtrnlRtgNotAllwd")
@@ -1523,7 +1783,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExternalRoutingNotAllowed = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmExternalRoutingNotAllowed = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmExternalRoutingNotAllowed;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1535,6 +1795,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getExternalRoutingNotAllowed();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setExternalRoutingNotAllowed(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ImbalOnly")
@@ -1574,7 +1844,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmImbalanceOnly = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmImbalanceOnly = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmImbalanceOnly;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1586,6 +1856,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getImbalanceOnly();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setImbalanceOnly(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmktSweep")
@@ -1625,7 +1905,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermarketSweep = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmIntermarketSweep = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmIntermarketSweep;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1637,6 +1917,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getIntermarketSweep();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setIntermarketSweep(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Netg")
@@ -1676,7 +1966,7 @@ public class SecuritiesExecutionInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetting = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>> mmNetting = new MMMessageAttribute<SecuritiesExecutionInstructions1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmNetting;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
@@ -1688,6 +1978,16 @@ public class SecuritiesExecutionInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesExecutionInstructions1 obj) {
+			return obj.getNetting();
+		}
+
+		@Override
+		public void setValue(SecuritiesExecutionInstructions1 obj, Optional<YesNoIndicator> value) {
+			obj.setNetting(value.orElse(null));
 		}
 	};
 

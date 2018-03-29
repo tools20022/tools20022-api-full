@@ -110,7 +110,7 @@ public class DeliveryReturn4Choice {
 	 * definition} = "Delivery return expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryReturn4Choice, DeliveryReturn1Code> mmCode = new MMMessageAttribute<DeliveryReturn4Choice, DeliveryReturn1Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeliveryReturn4Choice.mmObject();
@@ -123,6 +123,16 @@ public class DeliveryReturn4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReturn1Code.mmObject();
+		}
+
+		@Override
+		public DeliveryReturn1Code getValue(DeliveryReturn4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DeliveryReturn4Choice obj, DeliveryReturn1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class DeliveryReturn4Choice {
 	 * definition} = "Delivery return expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryReturn4Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<DeliveryReturn4Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeliveryReturn4Choice.mmObject();
@@ -176,6 +186,16 @@ public class DeliveryReturn4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(DeliveryReturn4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DeliveryReturn4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

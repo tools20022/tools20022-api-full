@@ -120,7 +120,7 @@ public class CorporateActionReversalReason2 {
 	 * definition} = "Specifies the reason for the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionReversalReason2, CorporateActionReversalReason2Choice> mmReason = new MMMessageAssociationEnd<CorporateActionReversalReason2, CorporateActionReversalReason2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionReversalReason2.mmObject();
@@ -133,6 +133,16 @@ public class CorporateActionReversalReason2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionReversalReason2Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionReversalReason2Choice getValue(CorporateActionReversalReason2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionReversalReason2 obj, CorporateActionReversalReason2Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -171,7 +181,7 @@ public class CorporateActionReversalReason2 {
 	 * "Provides additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionReversalReason2, Optional<RestrictedFINXMax256Text>> mmAdditionalReasonInformation = new MMMessageAttribute<CorporateActionReversalReason2, Optional<RestrictedFINXMax256Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionReversalReason2.mmObject();
@@ -183,6 +193,16 @@ public class CorporateActionReversalReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax256Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax256Text> getValue(CorporateActionReversalReason2 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionReversalReason2 obj, Optional<RestrictedFINXMax256Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

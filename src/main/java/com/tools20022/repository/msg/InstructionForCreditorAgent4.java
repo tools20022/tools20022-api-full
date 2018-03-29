@@ -113,7 +113,7 @@ public class InstructionForCreditorAgent4 {
 	 * InstructionForCreditorAgent2.mmInstructionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionForCreditorAgent4, Optional<RestrictedFINXMax35Text>> mmInstructionInformation = new MMMessageAttribute<InstructionForCreditorAgent4, Optional<RestrictedFINXMax35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionForCreditorAgent4.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class InstructionForCreditorAgent4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax35Text> getValue(InstructionForCreditorAgent4 obj) {
+			return obj.getInstructionInformation();
+		}
+
+		@Override
+		public void setValue(InstructionForCreditorAgent4 obj, Optional<RestrictedFINXMax35Text> value) {
+			obj.setInstructionInformation(value.orElse(null));
 		}
 	};
 

@@ -114,7 +114,7 @@ public class SettlementUnitType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementUnitType2Choice, SettlementUnitType1Code> mmCode = new MMMessageAttribute<SettlementUnitType2Choice, SettlementUnitType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementUnitType2Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class SettlementUnitType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementUnitType1Code.mmObject();
+		}
+
+		@Override
+		public SettlementUnitType1Code getValue(SettlementUnitType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementUnitType2Choice obj, SettlementUnitType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class SettlementUnitType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementUnitType2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<SettlementUnitType2Choice, GenericIdentification40>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementUnitType2Choice.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class SettlementUnitType2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(SettlementUnitType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementUnitType2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

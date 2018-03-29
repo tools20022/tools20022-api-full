@@ -120,7 +120,7 @@ public class InvestmentFundTransactionInType1 {
 	 * definition} = "Type of transaction, expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionInType1, InvestmentFundTransactionInType3Code> mmStructured = new MMMessageAttribute<InvestmentFundTransactionInType1, InvestmentFundTransactionInType3Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionInType1.mmObject();
@@ -132,6 +132,16 @@ public class InvestmentFundTransactionInType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundTransactionInType3Code.mmObject();
+		}
+
+		@Override
+		public InvestmentFundTransactionInType3Code getValue(InvestmentFundTransactionInType1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionInType1 obj, InvestmentFundTransactionInType3Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -163,7 +173,7 @@ public class InvestmentFundTransactionInType1 {
 	 * definition} = "Additional information about the type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionInType1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<InvestmentFundTransactionInType1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransactionInType1.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class InvestmentFundTransactionInType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(InvestmentFundTransactionInType1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionInType1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

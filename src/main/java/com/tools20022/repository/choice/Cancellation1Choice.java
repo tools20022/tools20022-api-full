@@ -136,7 +136,7 @@ public class Cancellation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation1Choice, TransferReference1> mmReference = new MMMessageAttribute<Cancellation1Choice, TransferReference1>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation1Choice.mmObject();
@@ -149,6 +149,16 @@ public class Cancellation1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferReference1.mmObject();
+		}
+
+		@Override
+		public TransferReference1 getValue(Cancellation1Choice obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Cancellation1Choice obj, TransferReference1 value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "TrfOutDtls", required = true)
@@ -193,7 +203,7 @@ public class Cancellation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferOutDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation1Choice, TransferOut9> mmTransferOutDetails = new MMMessageAttribute<Cancellation1Choice, TransferOut9>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation1Choice.mmObject();
@@ -206,6 +216,16 @@ public class Cancellation1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferOut9.mmObject();
+		}
+
+		@Override
+		public TransferOut9 getValue(Cancellation1Choice obj) {
+			return obj.getTransferOutDetails();
+		}
+
+		@Override
+		public void setValue(Cancellation1Choice obj, TransferOut9 value) {
+			obj.setTransferOutDetails(value);
 		}
 	};
 

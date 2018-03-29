@@ -125,7 +125,7 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>> mmInformationConditions = new MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmInformationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative1.mmObject();
@@ -137,6 +137,16 @@ public class CorporateActionNarrative1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative1 obj) {
+			return obj.getInformationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative1 obj, Optional<Max350Text> value) {
+			obj.setInformationConditions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InfToCmplyWth")
@@ -175,7 +185,7 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>> mmInformationToComplyWith = new MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative1.mmObject();
@@ -187,6 +197,16 @@ public class CorporateActionNarrative1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative1 obj) {
+			return obj.getInformationToComplyWith();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative1 obj, Optional<Max350Text> value) {
+			obj.setInformationToComplyWith(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxtnConds")
@@ -225,7 +245,7 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>> mmTaxationConditions = new MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative1.mmObject();
@@ -237,6 +257,16 @@ public class CorporateActionNarrative1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative1 obj) {
+			return obj.getTaxationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative1 obj, Optional<Max350Text> value) {
+			obj.setTaxationConditions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewCpnyNm")
@@ -269,7 +299,7 @@ public class CorporateActionNarrative1 {
 	 * "Provide the new name of a company following a name change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewCompanyName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>> mmNewCompanyName = new MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative1.mmObject();
 			isDerived = false;
@@ -280,6 +310,16 @@ public class CorporateActionNarrative1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative1 obj) {
+			return obj.getNewCompanyName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative1 obj, Optional<Max350Text> value) {
+			obj.setNewCompanyName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Offerr")
@@ -319,7 +359,7 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfferor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative1, Optional<PartyIdentification2Choice>> mmOfferor = new MMMessageAttribute<CorporateActionNarrative1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative1.mmObject();
@@ -331,6 +371,16 @@ public class CorporateActionNarrative1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CorporateActionNarrative1 obj) {
+			return obj.getOfferor();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setOfferor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "URLAdr")
@@ -369,7 +419,7 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative1, Optional<Max256Text>> mmURLAddress = new MMMessageAttribute<CorporateActionNarrative1, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative1.mmObject();
@@ -381,6 +431,16 @@ public class CorporateActionNarrative1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(CorporateActionNarrative1 obj) {
+			return obj.getURLAddress();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative1 obj, Optional<Max256Text> value) {
+			obj.setURLAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlTxt")
@@ -414,7 +474,7 @@ public class CorporateActionNarrative1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>> mmAdditionalText = new MMMessageAttribute<CorporateActionNarrative1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative1.mmObject();
 			isDerived = false;
@@ -425,6 +485,16 @@ public class CorporateActionNarrative1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative1 obj) {
+			return obj.getAdditionalText();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalText(value.orElse(null));
 		}
 	};
 

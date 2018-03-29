@@ -108,7 +108,7 @@ public class MarketIdentification1Choice {
 	 * definition} = "ISO 10383 Market Identification Code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketIdentifierCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification1Choice, MICIdentifier> mmMarketIdentifierCode = new MMMessageAttribute<MarketIdentification1Choice, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketIdentification1Choice.mmObject();
@@ -120,6 +120,16 @@ public class MarketIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(MarketIdentification1Choice obj) {
+			return obj.getMarketIdentifierCode();
+		}
+
+		@Override
+		public void setValue(MarketIdentification1Choice obj, MICIdentifier value) {
+			obj.setMarketIdentifierCode(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -152,7 +162,7 @@ public class MarketIdentification1Choice {
 	 * "Description of the market when no Market Identifier Code is available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification1Choice, Max35Text> mmDescription = new MMMessageAttribute<MarketIdentification1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketIdentification1Choice.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class MarketIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MarketIdentification1Choice obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(MarketIdentification1Choice obj, Max35Text value) {
+			obj.setDescription(value);
 		}
 	};
 

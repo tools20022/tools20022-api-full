@@ -105,7 +105,7 @@ public class Charge26 {
 	 * definition} = "Type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Charge26, ChargeType4Choice> mmType = new MMMessageAssociationEnd<Charge26, ChargeType4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge26.mmObject();
@@ -118,6 +118,16 @@ public class Charge26 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ChargeType4Choice.mmObject();
+		}
+
+		@Override
+		public ChargeType4Choice getValue(Charge26 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Charge26 obj, ChargeType4Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "ChrgApld", required = true)
@@ -152,7 +162,7 @@ public class Charge26 {
 	 * definition} = "Charge amount or charge rate applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeApplied = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Charge26, AmountOrRate3Choice> mmChargeApplied = new MMMessageAssociationEnd<Charge26, AmountOrRate3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge26.mmObject();
@@ -165,6 +175,16 @@ public class Charge26 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountOrRate3Choice.mmObject();
+		}
+
+		@Override
+		public AmountOrRate3Choice getValue(Charge26 obj) {
+			return obj.getChargeApplied();
+		}
+
+		@Override
+		public void setValue(Charge26 obj, AmountOrRate3Choice value) {
+			obj.setChargeApplied(value);
 		}
 	};
 

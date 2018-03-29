@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -181,7 +182,7 @@ public class ATMTransaction2 {
 	 * ATMTransaction1.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, TransactionIdentifier1> mmTransactionIdentification = new MMMessageAssociationEnd<ATMTransaction2, TransactionIdentifier1>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
@@ -195,7 +196,17 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(ATMTransaction2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, TransactionIdentifier1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RcncltnId")
@@ -244,7 +255,7 @@ public class ATMTransaction2 {
 	 * ATMTransaction1.mmReconciliationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction2, Optional<Max35Text>> mmReconciliationIdentification = new MMMessageAttribute<ATMTransaction2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -257,6 +268,16 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMTransaction2 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<Max35Text> value) {
+			obj.setReconciliationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmpltnReqrd")
@@ -299,7 +320,7 @@ public class ATMTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompletionRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction2, Optional<TrueFalseIndicator>> mmCompletionRequired = new MMMessageAttribute<ATMTransaction2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -311,6 +332,16 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMTransaction2 obj) {
+			return obj.getCompletionRequired();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setCompletionRequired(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctData")
@@ -359,7 +390,7 @@ public class ATMTransaction2 {
 	 * ATMTransaction1.mmAccountData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, Optional<CardAccount4>> mmAccountData = new MMMessageAssociationEnd<ATMTransaction2, Optional<CardAccount4>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
@@ -373,7 +404,17 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardAccount4.mmObject();
+			type_lazy = () -> CardAccount4.mmObject();
+		}
+
+		@Override
+		public Optional<CardAccount4> getValue(ATMTransaction2 obj) {
+			return obj.getAccountData();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<CardAccount4> value) {
+			obj.setAccountData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctdAcctData")
@@ -418,7 +459,7 @@ public class ATMTransaction2 {
 	 * ATMTransaction1.mmProtectedAccountData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectedAccountData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, Optional<ContentInformationType10>> mmProtectedAccountData = new MMMessageAssociationEnd<ATMTransaction2, Optional<ContentInformationType10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -431,7 +472,17 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
+			type_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMTransaction2 obj) {
+			return obj.getProtectedAccountData();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedAccountData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlAuthrsdAmt", required = true)
@@ -462,7 +513,7 @@ public class ATMTransaction2 {
 	 * definition} = "Total authorised amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalAuthorisedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, AmountAndCurrency1> mmTotalAuthorisedAmount = new MMMessageAssociationEnd<ATMTransaction2, AmountAndCurrency1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -473,7 +524,17 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndCurrency1.mmObject();
+			type_lazy = () -> AmountAndCurrency1.mmObject();
+		}
+
+		@Override
+		public AmountAndCurrency1 getValue(ATMTransaction2 obj) {
+			return obj.getTotalAuthorisedAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, AmountAndCurrency1 value) {
+			obj.setTotalAuthorisedAmount(value);
 		}
 	};
 	@XmlElement(name = "TtlReqdAmt")
@@ -506,7 +567,7 @@ public class ATMTransaction2 {
 	 * definition} = "Total requested amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalRequestedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction2, Optional<ImpliedCurrencyAndAmount>> mmTotalRequestedAmount = new MMMessageAttribute<ATMTransaction2, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -517,6 +578,16 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTransaction2 obj) {
+			return obj.getTotalRequestedAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setTotalRequestedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtldReqdAmt")
@@ -548,7 +619,7 @@ public class ATMTransaction2 {
 	 * "Detail of the requested amounts for the withdrawal transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDetailedRequestedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, Optional<DetailedAmount12>> mmDetailedRequestedAmount = new MMMessageAssociationEnd<ATMTransaction2, Optional<DetailedAmount12>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -559,7 +630,17 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount12.mmObject();
+			type_lazy = () -> DetailedAmount12.mmObject();
+		}
+
+		@Override
+		public Optional<DetailedAmount12> getValue(ATMTransaction2 obj) {
+			return obj.getDetailedRequestedAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<DetailedAmount12> value) {
+			obj.setDetailedRequestedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyConvs")
@@ -610,7 +691,7 @@ public class ATMTransaction2 {
 	 * ATMTransaction1.mmCurrencyConversion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyConversion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, Optional<CurrencyConversion4>> mmCurrencyConversion = new MMMessageAssociationEnd<ATMTransaction2, Optional<CurrencyConversion4>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
@@ -624,11 +705,21 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion4.mmObject();
+			type_lazy = () -> CurrencyConversion4.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyConversion4> getValue(ATMTransaction2 obj) {
+			return obj.getCurrencyConversion();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<CurrencyConversion4> value) {
+			obj.setCurrencyConversion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlChrg")
-	protected List<com.tools20022.repository.msg.DetailedAmount13> additionalCharge;
+	protected List<DetailedAmount13> additionalCharge;
 	/**
 	 * 
 	 <p>
@@ -655,7 +746,7 @@ public class ATMTransaction2 {
 	 * definition} = "Additional charge (for instance tax or fee)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalCharge = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, List<DetailedAmount13>> mmAdditionalCharge = new MMMessageAssociationEnd<ATMTransaction2, List<DetailedAmount13>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -665,7 +756,17 @@ public class ATMTransaction2 {
 			definition = "Additional charge (for instance tax or fee).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount13.mmObject();
+			type_lazy = () -> DetailedAmount13.mmObject();
+		}
+
+		@Override
+		public List<DetailedAmount13> getValue(ATMTransaction2 obj) {
+			return obj.getAdditionalCharge();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, List<DetailedAmount13> value) {
+			obj.setAdditionalCharge(value);
 		}
 	};
 	@XmlElement(name = "Lmts")
@@ -708,7 +809,7 @@ public class ATMTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, Optional<ATMTransactionAmounts2>> mmLimits = new MMMessageAssociationEnd<ATMTransaction2, Optional<ATMTransactionAmounts2>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmLimit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
@@ -721,7 +822,17 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
+			type_lazy = () -> ATMTransactionAmounts2.mmObject();
+		}
+
+		@Override
+		public Optional<ATMTransactionAmounts2> getValue(ATMTransaction2 obj) {
+			return obj.getLimits();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<ATMTransactionAmounts2> value) {
+			obj.setLimits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MixTp")
@@ -760,7 +871,7 @@ public class ATMTransaction2 {
 	 * ATMTransaction1.mmSelectedMixType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMixType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction2, Optional<Max35Text>> mmMixType = new MMMessageAttribute<ATMTransaction2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -773,9 +884,19 @@ public class ATMTransaction2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMTransaction2 obj) {
+			return obj.getMixType();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<Max35Text> value) {
+			obj.setMixType(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Mix")
-	protected List<com.tools20022.repository.msg.ATMMediaMix1> mix;
+	protected List<ATMMediaMix1> mix;
 	/**
 	 * 
 	 <p>
@@ -807,7 +928,7 @@ public class ATMTransaction2 {
 	 * ATMTransaction1.mmSelectedMix}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMix = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, List<ATMMediaMix1>> mmMix = new MMMessageAssociationEnd<ATMTransaction2, List<ATMMediaMix1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -818,7 +939,17 @@ public class ATMTransaction2 {
 			previousVersion_lazy = () -> ATMTransaction1.mmSelectedMix;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.mmObject();
+			type_lazy = () -> ATMMediaMix1.mmObject();
+		}
+
+		@Override
+		public List<ATMMediaMix1> getValue(ATMTransaction2 obj) {
+			return obj.getMix();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, List<ATMMediaMix1> value) {
+			obj.setMix(value);
 		}
 	};
 	@XmlElement(name = "AuthstnRslt", required = true)
@@ -862,7 +993,7 @@ public class ATMTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, AuthorisationResult9> mmAuthorisationResult = new MMMessageAssociationEnd<ATMTransaction2, AuthorisationResult9>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmValidation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
@@ -875,7 +1006,17 @@ public class ATMTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult9.mmObject();
+			type_lazy = () -> AuthorisationResult9.mmObject();
+		}
+
+		@Override
+		public AuthorisationResult9 getValue(ATMTransaction2 obj) {
+			return obj.getAuthorisationResult();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, AuthorisationResult9 value) {
+			obj.setAuthorisationResult(value);
 		}
 	};
 	@XmlElement(name = "ICCRltdData")
@@ -929,7 +1070,7 @@ public class ATMTransaction2 {
 	 * ATMTransaction1.mmICCRelatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction2, Optional<Max10000Binary>> mmICCRelatedData = new MMMessageAttribute<ATMTransaction2, Optional<Max10000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -943,9 +1084,19 @@ public class ATMTransaction2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
+
+		@Override
+		public Optional<Max10000Binary> getValue(ATMTransaction2 obj) {
+			return obj.getICCRelatedData();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, Optional<Max10000Binary> value) {
+			obj.setICCRelatedData(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Cmd")
-	protected List<com.tools20022.repository.msg.ATMCommand1> command;
+	protected List<ATMCommand1> command;
 	/**
 	 * 
 	 <p>
@@ -981,7 +1132,7 @@ public class ATMTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction2, List<ATMCommand1>> mmCommand = new MMMessageAssociationEnd<ATMTransaction2, List<ATMCommand1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction2.mmObject();
 			isDerived = false;
@@ -992,7 +1143,17 @@ public class ATMTransaction2 {
 			nextVersions_lazy = () -> Arrays.asList(ATMTransaction4.mmCommand, ATMTransaction10.mmCommand);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmObject();
+			type_lazy = () -> ATMCommand1.mmObject();
+		}
+
+		@Override
+		public List<ATMCommand1> getValue(ATMTransaction2 obj) {
+			return obj.getCommand();
+		}
+
+		@Override
+		public void setValue(ATMTransaction2 obj, List<ATMCommand1> value) {
+			obj.setCommand(value);
 		}
 	};
 
@@ -1021,7 +1182,7 @@ public class ATMTransaction2 {
 		return transactionIdentification;
 	}
 
-	public ATMTransaction2 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public ATMTransaction2 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
 		return this;
 	}
@@ -1048,7 +1209,7 @@ public class ATMTransaction2 {
 		return accountData == null ? Optional.empty() : Optional.of(accountData);
 	}
 
-	public ATMTransaction2 setAccountData(com.tools20022.repository.msg.CardAccount4 accountData) {
+	public ATMTransaction2 setAccountData(CardAccount4 accountData) {
 		this.accountData = accountData;
 		return this;
 	}
@@ -1057,7 +1218,7 @@ public class ATMTransaction2 {
 		return protectedAccountData == null ? Optional.empty() : Optional.of(protectedAccountData);
 	}
 
-	public ATMTransaction2 setProtectedAccountData(com.tools20022.repository.msg.ContentInformationType10 protectedAccountData) {
+	public ATMTransaction2 setProtectedAccountData(ContentInformationType10 protectedAccountData) {
 		this.protectedAccountData = protectedAccountData;
 		return this;
 	}
@@ -1066,7 +1227,7 @@ public class ATMTransaction2 {
 		return totalAuthorisedAmount;
 	}
 
-	public ATMTransaction2 setTotalAuthorisedAmount(com.tools20022.repository.msg.AmountAndCurrency1 totalAuthorisedAmount) {
+	public ATMTransaction2 setTotalAuthorisedAmount(AmountAndCurrency1 totalAuthorisedAmount) {
 		this.totalAuthorisedAmount = Objects.requireNonNull(totalAuthorisedAmount);
 		return this;
 	}
@@ -1084,7 +1245,7 @@ public class ATMTransaction2 {
 		return detailedRequestedAmount == null ? Optional.empty() : Optional.of(detailedRequestedAmount);
 	}
 
-	public ATMTransaction2 setDetailedRequestedAmount(com.tools20022.repository.msg.DetailedAmount12 detailedRequestedAmount) {
+	public ATMTransaction2 setDetailedRequestedAmount(DetailedAmount12 detailedRequestedAmount) {
 		this.detailedRequestedAmount = detailedRequestedAmount;
 		return this;
 	}
@@ -1093,7 +1254,7 @@ public class ATMTransaction2 {
 		return currencyConversion == null ? Optional.empty() : Optional.of(currencyConversion);
 	}
 
-	public ATMTransaction2 setCurrencyConversion(com.tools20022.repository.msg.CurrencyConversion4 currencyConversion) {
+	public ATMTransaction2 setCurrencyConversion(CurrencyConversion4 currencyConversion) {
 		this.currencyConversion = currencyConversion;
 		return this;
 	}
@@ -1102,7 +1263,7 @@ public class ATMTransaction2 {
 		return additionalCharge == null ? additionalCharge = new ArrayList<>() : additionalCharge;
 	}
 
-	public ATMTransaction2 setAdditionalCharge(List<com.tools20022.repository.msg.DetailedAmount13> additionalCharge) {
+	public ATMTransaction2 setAdditionalCharge(List<DetailedAmount13> additionalCharge) {
 		this.additionalCharge = Objects.requireNonNull(additionalCharge);
 		return this;
 	}
@@ -1111,7 +1272,7 @@ public class ATMTransaction2 {
 		return limits == null ? Optional.empty() : Optional.of(limits);
 	}
 
-	public ATMTransaction2 setLimits(com.tools20022.repository.msg.ATMTransactionAmounts2 limits) {
+	public ATMTransaction2 setLimits(ATMTransactionAmounts2 limits) {
 		this.limits = limits;
 		return this;
 	}
@@ -1129,7 +1290,7 @@ public class ATMTransaction2 {
 		return mix == null ? mix = new ArrayList<>() : mix;
 	}
 
-	public ATMTransaction2 setMix(List<com.tools20022.repository.msg.ATMMediaMix1> mix) {
+	public ATMTransaction2 setMix(List<ATMMediaMix1> mix) {
 		this.mix = Objects.requireNonNull(mix);
 		return this;
 	}
@@ -1138,7 +1299,7 @@ public class ATMTransaction2 {
 		return authorisationResult;
 	}
 
-	public ATMTransaction2 setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult9 authorisationResult) {
+	public ATMTransaction2 setAuthorisationResult(AuthorisationResult9 authorisationResult) {
 		this.authorisationResult = Objects.requireNonNull(authorisationResult);
 		return this;
 	}
@@ -1156,7 +1317,7 @@ public class ATMTransaction2 {
 		return command == null ? command = new ArrayList<>() : command;
 	}
 
-	public ATMTransaction2 setCommand(List<com.tools20022.repository.msg.ATMCommand1> command) {
+	public ATMTransaction2 setCommand(List<ATMCommand1> command) {
 		this.command = Objects.requireNonNull(command);
 		return this;
 	}

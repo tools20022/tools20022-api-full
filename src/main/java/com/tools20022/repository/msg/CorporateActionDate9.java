@@ -123,7 +123,7 @@ public class CorporateActionDate9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate9, DateFormat6Choice> mmPaymentDate = new MMMessageAttribute<CorporateActionDate9, DateFormat6Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate9.mmObject();
@@ -136,6 +136,16 @@ public class CorporateActionDate9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat6Choice getValue(CorporateActionDate9 obj) {
+			return obj.getPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate9 obj, DateFormat6Choice value) {
+			obj.setPaymentDate(value);
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -178,7 +188,7 @@ public class CorporateActionDate9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate9, Optional<DateFormat11Choice>> mmValueDate = new MMMessageAttribute<CorporateActionDate9, Optional<DateFormat11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate9.mmObject();
@@ -191,6 +201,16 @@ public class CorporateActionDate9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat11Choice> getValue(CorporateActionDate9 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate9 obj, Optional<DateFormat11Choice> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FXRateFxgDt")
@@ -232,7 +252,7 @@ public class CorporateActionDate9 {
 	 * "Date/time at which a foreign exchange rate will be determined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignExchangeRateFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate9, Optional<DateFormat6Choice>> mmForeignExchangeRateFixingDate = new MMMessageAttribute<CorporateActionDate9, Optional<DateFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate9.mmObject();
@@ -245,6 +265,16 @@ public class CorporateActionDate9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat6Choice> getValue(CorporateActionDate9 obj) {
+			return obj.getForeignExchangeRateFixingDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate9 obj, Optional<DateFormat6Choice> value) {
+			obj.setForeignExchangeRateFixingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EarlstPmtDt")
@@ -287,7 +317,7 @@ public class CorporateActionDate9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarliestPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDate9, Optional<DateFormat6Choice>> mmEarliestPaymentDate = new MMMessageAttribute<CorporateActionDate9, Optional<DateFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmEarliestPaymentDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate9.mmObject();
@@ -300,6 +330,16 @@ public class CorporateActionDate9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat6Choice> getValue(CorporateActionDate9 obj) {
+			return obj.getEarliestPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate9 obj, Optional<DateFormat6Choice> value) {
+			obj.setEarliestPaymentDate(value.orElse(null));
 		}
 	};
 

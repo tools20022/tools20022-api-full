@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.FinancingRateOrAmountChoice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -144,7 +145,7 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoiceGeneralInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, DocumentGeneralInformation1> mmInvoiceGeneralInformation = new MMMessageAssociationEnd<InvoiceRequestInformation1, DocumentGeneralInformation1>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
@@ -156,7 +157,17 @@ public class InvoiceRequestInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation1.mmObject();
+			type_lazy = () -> DocumentGeneralInformation1.mmObject();
+		}
+
+		@Override
+		public DocumentGeneralInformation1 getValue(InvoiceRequestInformation1 obj) {
+			return obj.getInvoiceGeneralInformation();
+		}
+
+		@Override
+		public void setValue(InvoiceRequestInformation1 obj, DocumentGeneralInformation1 value) {
+			obj.setInvoiceGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "InvcTtlsInf", required = true)
@@ -194,7 +205,7 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoiceTotalsInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, InvoiceTotals1> mmInvoiceTotalsInformation = new MMMessageAssociationEnd<InvoiceRequestInformation1, InvoiceTotals1>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
@@ -206,7 +217,17 @@ public class InvoiceRequestInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvoiceTotals1.mmObject();
+			type_lazy = () -> InvoiceTotals1.mmObject();
+		}
+
+		@Override
+		public InvoiceTotals1 getValue(InvoiceRequestInformation1 obj) {
+			return obj.getInvoiceTotalsInformation();
+		}
+
+		@Override
+		public void setValue(InvoiceRequestInformation1 obj, InvoiceTotals1 value) {
+			obj.setInvoiceTotalsInformation(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtNoteAmt")
@@ -245,7 +266,7 @@ public class InvoiceRequestInformation1 {
 	 * "Amount of credit/debit note related to the invoice to be financed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitNoteAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceRequestInformation1, Optional<ActiveCurrencyAndAmount>> mmCreditDebitNoteAmount = new MMMessageAttribute<InvoiceRequestInformation1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmCreditDebitNoteAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
@@ -258,9 +279,19 @@ public class InvoiceRequestInformation1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(InvoiceRequestInformation1 obj) {
+			return obj.getCreditDebitNoteAmount();
+		}
+
+		@Override
+		public void setValue(InvoiceRequestInformation1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCreditDebitNoteAmount(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "InstlmtInf")
-	protected List<com.tools20022.repository.msg.Instalment1> instalmentInformation;
+	protected List<Instalment1> instalmentInformation;
 	/**
 	 * 
 	 <p>
@@ -293,7 +324,7 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstalmentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, List<Instalment1>> mmInstalmentInformation = new MMMessageAssociationEnd<InvoiceRequestInformation1, List<Instalment1>>() {
 		{
 			businessComponentTrace_lazy = () -> Instalment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
@@ -304,7 +335,17 @@ public class InvoiceRequestInformation1 {
 			definition = "Details of a single instalment to be financed, related to an invoice settlement (amount, payment due date).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Instalment1.mmObject();
+			type_lazy = () -> Instalment1.mmObject();
+		}
+
+		@Override
+		public List<Instalment1> getValue(InvoiceRequestInformation1 obj) {
+			return obj.getInstalmentInformation();
+		}
+
+		@Override
+		public void setValue(InvoiceRequestInformation1 obj, List<Instalment1> value) {
+			obj.setInstalmentInformation(value);
 		}
 	};
 	@XmlElement(name = "ReqdAmt")
@@ -343,7 +384,7 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, Optional<FinancingRateOrAmountChoice>> mmRequestedAmount = new MMMessageAssociationEnd<InvoiceRequestInformation1, Optional<FinancingRateOrAmountChoice>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmRequestedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
@@ -356,6 +397,16 @@ public class InvoiceRequestInformation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancingRateOrAmountChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancingRateOrAmountChoice> getValue(InvoiceRequestInformation1 obj) {
+			return obj.getRequestedAmount();
+		}
+
+		@Override
+		public void setValue(InvoiceRequestInformation1 obj, Optional<FinancingRateOrAmountChoice> value) {
+			obj.setRequestedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Spplr", required = true)
@@ -394,7 +445,7 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, PartyAndAccountIdentificationAndContactInformation1> mmSupplier = new MMMessageAssociationEnd<InvoiceRequestInformation1, PartyAndAccountIdentificationAndContactInformation1>() {
 		{
 			businessComponentTrace_lazy = () -> FinancingRequestorRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
@@ -406,7 +457,17 @@ public class InvoiceRequestInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1.mmObject();
+			type_lazy = () -> PartyAndAccountIdentificationAndContactInformation1.mmObject();
+		}
+
+		@Override
+		public PartyAndAccountIdentificationAndContactInformation1 getValue(InvoiceRequestInformation1 obj) {
+			return obj.getSupplier();
+		}
+
+		@Override
+		public void setValue(InvoiceRequestInformation1 obj, PartyAndAccountIdentificationAndContactInformation1 value) {
+			obj.setSupplier(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -445,7 +506,7 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, PartyIdentificationAndContactInformation1> mmBuyer = new MMMessageAssociationEnd<InvoiceRequestInformation1, PartyIdentificationAndContactInformation1>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
@@ -457,7 +518,17 @@ public class InvoiceRequestInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmObject();
+			type_lazy = () -> PartyIdentificationAndContactInformation1.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndContactInformation1 getValue(InvoiceRequestInformation1 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(InvoiceRequestInformation1 obj, PartyIdentificationAndContactInformation1 value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "InvcPmtInf", required = true)
@@ -490,7 +561,7 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoicePaymentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, PaymentInformation15> mmInvoicePaymentInformation = new MMMessageAssociationEnd<InvoiceRequestInformation1, PaymentInformation15>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
@@ -501,11 +572,21 @@ public class InvoiceRequestInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentInformation15.mmObject();
+			type_lazy = () -> PaymentInformation15.mmObject();
+		}
+
+		@Override
+		public PaymentInformation15 getValue(InvoiceRequestInformation1 obj) {
+			return obj.getInvoicePaymentInformation();
+		}
+
+		@Override
+		public void setValue(InvoiceRequestInformation1 obj, PaymentInformation15 value) {
+			obj.setInvoicePaymentInformation(value);
 		}
 	};
 	@XmlElement(name = "RfrdDoc")
-	protected List<com.tools20022.repository.msg.ReferredDocumentInformation2> referredDocument;
+	protected List<ReferredDocumentInformation2> referredDocument;
 	/**
 	 * 
 	 <p>
@@ -540,7 +621,7 @@ public class InvoiceRequestInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferredDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvoiceRequestInformation1, List<ReferredDocumentInformation2>> mmReferredDocument = new MMMessageAssociationEnd<InvoiceRequestInformation1, List<ReferredDocumentInformation2>>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialDocument.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
@@ -551,7 +632,17 @@ public class InvoiceRequestInformation1 {
 			definition = "Information about a document related to the invoice to be financed, in structured form.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation2.mmObject();
+			type_lazy = () -> ReferredDocumentInformation2.mmObject();
+		}
+
+		@Override
+		public List<ReferredDocumentInformation2> getValue(InvoiceRequestInformation1 obj) {
+			return obj.getReferredDocument();
+		}
+
+		@Override
+		public void setValue(InvoiceRequestInformation1 obj, List<ReferredDocumentInformation2> value) {
+			obj.setReferredDocument(value);
 		}
 	};
 
@@ -577,7 +668,7 @@ public class InvoiceRequestInformation1 {
 		return invoiceGeneralInformation;
 	}
 
-	public InvoiceRequestInformation1 setInvoiceGeneralInformation(com.tools20022.repository.msg.DocumentGeneralInformation1 invoiceGeneralInformation) {
+	public InvoiceRequestInformation1 setInvoiceGeneralInformation(DocumentGeneralInformation1 invoiceGeneralInformation) {
 		this.invoiceGeneralInformation = Objects.requireNonNull(invoiceGeneralInformation);
 		return this;
 	}
@@ -586,7 +677,7 @@ public class InvoiceRequestInformation1 {
 		return invoiceTotalsInformation;
 	}
 
-	public InvoiceRequestInformation1 setInvoiceTotalsInformation(com.tools20022.repository.msg.InvoiceTotals1 invoiceTotalsInformation) {
+	public InvoiceRequestInformation1 setInvoiceTotalsInformation(InvoiceTotals1 invoiceTotalsInformation) {
 		this.invoiceTotalsInformation = Objects.requireNonNull(invoiceTotalsInformation);
 		return this;
 	}
@@ -604,7 +695,7 @@ public class InvoiceRequestInformation1 {
 		return instalmentInformation == null ? instalmentInformation = new ArrayList<>() : instalmentInformation;
 	}
 
-	public InvoiceRequestInformation1 setInstalmentInformation(List<com.tools20022.repository.msg.Instalment1> instalmentInformation) {
+	public InvoiceRequestInformation1 setInstalmentInformation(List<Instalment1> instalmentInformation) {
 		this.instalmentInformation = Objects.requireNonNull(instalmentInformation);
 		return this;
 	}
@@ -622,7 +713,7 @@ public class InvoiceRequestInformation1 {
 		return supplier;
 	}
 
-	public InvoiceRequestInformation1 setSupplier(com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1 supplier) {
+	public InvoiceRequestInformation1 setSupplier(PartyAndAccountIdentificationAndContactInformation1 supplier) {
 		this.supplier = Objects.requireNonNull(supplier);
 		return this;
 	}
@@ -631,7 +722,7 @@ public class InvoiceRequestInformation1 {
 		return buyer;
 	}
 
-	public InvoiceRequestInformation1 setBuyer(com.tools20022.repository.msg.PartyIdentificationAndContactInformation1 buyer) {
+	public InvoiceRequestInformation1 setBuyer(PartyIdentificationAndContactInformation1 buyer) {
 		this.buyer = Objects.requireNonNull(buyer);
 		return this;
 	}
@@ -640,7 +731,7 @@ public class InvoiceRequestInformation1 {
 		return invoicePaymentInformation;
 	}
 
-	public InvoiceRequestInformation1 setInvoicePaymentInformation(com.tools20022.repository.msg.PaymentInformation15 invoicePaymentInformation) {
+	public InvoiceRequestInformation1 setInvoicePaymentInformation(PaymentInformation15 invoicePaymentInformation) {
 		this.invoicePaymentInformation = Objects.requireNonNull(invoicePaymentInformation);
 		return this;
 	}
@@ -649,7 +740,7 @@ public class InvoiceRequestInformation1 {
 		return referredDocument == null ? referredDocument = new ArrayList<>() : referredDocument;
 	}
 
-	public InvoiceRequestInformation1 setReferredDocument(List<com.tools20022.repository.msg.ReferredDocumentInformation2> referredDocument) {
+	public InvoiceRequestInformation1 setReferredDocument(List<ReferredDocumentInformation2> referredDocument) {
 		this.referredDocument = Objects.requireNonNull(referredDocument);
 		return this;
 	}

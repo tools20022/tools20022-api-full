@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.entity.Expiry;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExpiryTerms1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -103,7 +104,7 @@ public class ExpiryDetails1 {
 	 * "Terms defining when the undertaking will cease to be available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExpiryTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExpiryDetails1, Optional<ExpiryTerms1>> mmExpiryTerms = new MMMessageAssociationEnd<ExpiryDetails1, Optional<ExpiryTerms1>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmExpiry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryDetails1.mmObject();
@@ -115,7 +116,17 @@ public class ExpiryDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExpiryTerms1.mmObject();
+			type_lazy = () -> ExpiryTerms1.mmObject();
+		}
+
+		@Override
+		public Optional<ExpiryTerms1> getValue(ExpiryDetails1 obj) {
+			return obj.getExpiryTerms();
+		}
+
+		@Override
+		public void setValue(ExpiryDetails1 obj, Optional<ExpiryTerms1> value) {
+			obj.setExpiryTerms(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlXpryInf")
@@ -147,7 +158,7 @@ public class ExpiryDetails1 {
 	 * "Additional information related to the expiry and expiry extension."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalExpiryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpiryDetails1, List<Max2000Text>> mmAdditionalExpiryInformation = new MMMessageAttribute<ExpiryDetails1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpiryDetails1.mmObject();
 			isDerived = false;
@@ -158,6 +169,16 @@ public class ExpiryDetails1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(ExpiryDetails1 obj) {
+			return obj.getAdditionalExpiryInformation();
+		}
+
+		@Override
+		public void setValue(ExpiryDetails1 obj, List<Max2000Text> value) {
+			obj.setAdditionalExpiryInformation(value);
 		}
 	};
 
@@ -179,7 +200,7 @@ public class ExpiryDetails1 {
 		return expiryTerms == null ? Optional.empty() : Optional.of(expiryTerms);
 	}
 
-	public ExpiryDetails1 setExpiryTerms(com.tools20022.repository.msg.ExpiryTerms1 expiryTerms) {
+	public ExpiryDetails1 setExpiryTerms(ExpiryTerms1 expiryTerms) {
 		this.expiryTerms = expiryTerms;
 		return this;
 	}

@@ -124,7 +124,7 @@ public class SecuritiesPaymentStatus5Choice {
 	 * SecuritiesPaymentStatus2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesPaymentStatus5Choice, SecuritiesPaymentStatus1Code> mmCode = new MMMessageAttribute<SecuritiesPaymentStatus5Choice, SecuritiesPaymentStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice.mmObject();
@@ -138,6 +138,16 @@ public class SecuritiesPaymentStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesPaymentStatus1Code getValue(SecuritiesPaymentStatus5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesPaymentStatus5Choice obj, SecuritiesPaymentStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class SecuritiesPaymentStatus5Choice {
 	 * SecuritiesPaymentStatus2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesPaymentStatus5Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<SecuritiesPaymentStatus5Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesPaymentStatus5Choice.mmObject();
@@ -198,6 +208,16 @@ public class SecuritiesPaymentStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(SecuritiesPaymentStatus5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesPaymentStatus5Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

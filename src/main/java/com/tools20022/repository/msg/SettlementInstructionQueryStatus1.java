@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeSearch2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SettlementTransactionStatusType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class SettlementInstructionQueryStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryStatus1, SettlementTransactionStatusType1> mmType = new MMMessageAssociationEnd<SettlementInstructionQueryStatus1, SettlementTransactionStatusType1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmObject();
 			isDerived = false;
@@ -128,7 +129,17 @@ public class SettlementInstructionQueryStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
+			type_lazy = () -> SettlementTransactionStatusType1.mmObject();
+		}
+
+		@Override
+		public SettlementTransactionStatusType1 getValue(SettlementInstructionQueryStatus1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryStatus1 obj, SettlementTransactionStatusType1 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -168,7 +179,7 @@ public class SettlementInstructionQueryStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDatePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryStatus1, Optional<DateAndDateTimeSearch2Choice>> mmDatePeriod = new MMMessageAssociationEnd<SettlementInstructionQueryStatus1, Optional<DateAndDateTimeSearch2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmObject();
 			isDerived = false;
@@ -181,6 +192,16 @@ public class SettlementInstructionQueryStatus1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeSearch2Choice> getValue(SettlementInstructionQueryStatus1 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryStatus1 obj, Optional<DateAndDateTimeSearch2Choice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 
@@ -202,7 +223,7 @@ public class SettlementInstructionQueryStatus1 {
 		return type;
 	}
 
-	public SettlementInstructionQueryStatus1 setType(com.tools20022.repository.msg.SettlementTransactionStatusType1 type) {
+	public SettlementInstructionQueryStatus1 setType(SettlementTransactionStatusType1 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}

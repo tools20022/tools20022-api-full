@@ -128,7 +128,7 @@ public class PreviousYear2Choice {
 	 * PreviousYearChoice.mmAllPreviousYears}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreviousYear2Choice, PreviousAll> mmAllPreviousYears = new MMMessageAttribute<PreviousYear2Choice, PreviousAll>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreviousYear2Choice.mmObject();
@@ -141,6 +141,16 @@ public class PreviousYear2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreviousAll.mmObject();
+		}
+
+		@Override
+		public PreviousAll getValue(PreviousYear2Choice obj) {
+			return obj.getAllPreviousYears();
+		}
+
+		@Override
+		public void setValue(PreviousYear2Choice obj, PreviousAll value) {
+			obj.setAllPreviousYears(value);
 		}
 	};
 	@XmlElement(name = "SpcfcPrvsYrs", required = true)
@@ -183,7 +193,7 @@ public class PreviousYear2Choice {
 	 * PreviousYearChoice.mmSpecificPreviousYears}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpecificPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreviousYear2Choice, List<ISOYear>> mmSpecificPreviousYears = new MMMessageAttribute<PreviousYear2Choice, List<ISOYear>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredYear;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreviousYear2Choice.mmObject();
@@ -195,6 +205,16 @@ public class PreviousYear2Choice {
 			previousVersion_lazy = () -> PreviousYearChoice.mmSpecificPreviousYears;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYear.mmObject();
+		}
+
+		@Override
+		public List<ISOYear> getValue(PreviousYear2Choice obj) {
+			return obj.getSpecificPreviousYears();
+		}
+
+		@Override
+		public void setValue(PreviousYear2Choice obj, List<ISOYear> value) {
+			obj.setSpecificPreviousYears(value);
 		}
 	};
 

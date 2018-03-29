@@ -117,7 +117,7 @@ public class BusinessInformationQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessInformationQueryDefinition2, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<BusinessInformationQueryDefinition2, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationQueryDefinition2.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class BusinessInformationQueryDefinition2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(BusinessInformationQueryDefinition2 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(BusinessInformationQueryDefinition2 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GnlBizInfCrit")
@@ -169,7 +179,7 @@ public class BusinessInformationQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralBusinessInformationCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessInformationQueryDefinition2, Optional<GeneralBusinessInformationCriteriaDefinitionChoice>> mmGeneralBusinessInformationCriteria = new MMMessageAssociationEnd<BusinessInformationQueryDefinition2, Optional<GeneralBusinessInformationCriteriaDefinitionChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationQueryDefinition2.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class BusinessInformationQueryDefinition2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> GeneralBusinessInformationCriteriaDefinitionChoice.mmObject();
+		}
+
+		@Override
+		public Optional<GeneralBusinessInformationCriteriaDefinitionChoice> getValue(BusinessInformationQueryDefinition2 obj) {
+			return obj.getGeneralBusinessInformationCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessInformationQueryDefinition2 obj, Optional<GeneralBusinessInformationCriteriaDefinitionChoice> value) {
+			obj.setGeneralBusinessInformationCriteria(value.orElse(null));
 		}
 	};
 

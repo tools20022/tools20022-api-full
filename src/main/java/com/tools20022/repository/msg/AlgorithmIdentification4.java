@@ -118,7 +118,7 @@ public class AlgorithmIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmIdentification4, Algorithm4Code> mmAlgorithm = new MMMessageAttribute<AlgorithmIdentification4, Algorithm4Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification4.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class AlgorithmIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm4Code.mmObject();
+		}
+
+		@Override
+		public Algorithm4Code getValue(AlgorithmIdentification4 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification4 obj, Algorithm4Code value) {
+			obj.setAlgorithm(value);
 		}
 	};
 

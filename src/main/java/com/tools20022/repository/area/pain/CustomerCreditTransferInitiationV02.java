@@ -25,7 +25,6 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader1;
 import com.tools20022.repository.msg.PaymentInstructionInformation1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -176,7 +175,7 @@ public class CustomerCreditTransferInitiationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerCreditTransferInitiationV02, GroupHeader1> mmGroupHeader = new MMMessageBuildingBlock<CustomerCreditTransferInitiationV02, GroupHeader1>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,12 +186,14 @@ public class CustomerCreditTransferInitiationV02 {
 			complexType_lazy = () -> GroupHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerCreditTransferInitiationV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader1 getValue(CustomerCreditTransferInitiationV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CustomerCreditTransferInitiationV02 obj, GroupHeader1 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "PmtInf", required = true)
@@ -222,7 +223,7 @@ public class CustomerCreditTransferInitiationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPaymentInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerCreditTransferInitiationV02, List<PaymentInstructionInformation1>> mmPaymentInformation = new MMMessageBuildingBlock<CustomerCreditTransferInitiationV02, List<PaymentInstructionInformation1>>() {
 		{
 			xmlTag = "PmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,12 +233,14 @@ public class CustomerCreditTransferInitiationV02 {
 			complexType_lazy = () -> PaymentInstructionInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerCreditTransferInitiationV02.class.getMethod("getPaymentInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentInstructionInformation1> getValue(CustomerCreditTransferInitiationV02 obj) {
+			return obj.getPaymentInformation();
+		}
+
+		@Override
+		public void setValue(CustomerCreditTransferInitiationV02 obj, List<PaymentInstructionInformation1> value) {
+			obj.setPaymentInformation(value);
 		}
 	};
 

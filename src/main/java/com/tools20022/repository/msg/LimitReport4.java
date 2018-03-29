@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LimitOrError1Choice;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LimitIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class LimitReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitReport4, LimitIdentification1> mmLimitIdentification = new MMMessageAssociationEnd<LimitReport4, LimitIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport4.mmObject();
@@ -131,7 +132,17 @@ public class LimitReport4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitIdentification1.mmObject();
+			type_lazy = () -> LimitIdentification1.mmObject();
+		}
+
+		@Override
+		public LimitIdentification1 getValue(LimitReport4 obj) {
+			return obj.getLimitIdentification();
+		}
+
+		@Override
+		public void setValue(LimitReport4 obj, LimitIdentification1 value) {
+			obj.setLimitIdentification(value);
 		}
 	};
 	@XmlElement(name = "LmtOrErr", required = true)
@@ -171,7 +182,7 @@ public class LimitReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitReport4, LimitOrError1Choice> mmLimitOrError = new MMMessageAssociationEnd<LimitReport4, LimitOrError1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport4.mmObject();
 			isDerived = false;
@@ -184,6 +195,16 @@ public class LimitReport4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitOrError1Choice.mmObject();
+		}
+
+		@Override
+		public LimitOrError1Choice getValue(LimitReport4 obj) {
+			return obj.getLimitOrError();
+		}
+
+		@Override
+		public void setValue(LimitReport4 obj, LimitOrError1Choice value) {
+			obj.setLimitOrError(value);
 		}
 	};
 
@@ -206,7 +227,7 @@ public class LimitReport4 {
 		return limitIdentification;
 	}
 
-	public LimitReport4 setLimitIdentification(com.tools20022.repository.msg.LimitIdentification1 limitIdentification) {
+	public LimitReport4 setLimitIdentification(LimitIdentification1 limitIdentification) {
 		this.limitIdentification = Objects.requireNonNull(limitIdentification);
 		return this;
 	}

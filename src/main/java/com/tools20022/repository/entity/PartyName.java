@@ -20,9 +20,9 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -448,9 +448,6 @@ public class PartyName {
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmName
 	 * PartyIdentification125.mmName}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification126#mmName
-	 * PartyIdentification126.mmName}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ContactIdentification5#mmName
 	 * ContactIdentification5.mmName}</li>
 	 * <li>
@@ -481,7 +478,7 @@ public class PartyName {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PartyName, Max140Text> mmName = new MMBusinessAttribute<PartyName, Max140Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmName, OrderDeskContactDetails.mmName, ContactAttributes1.mmName, NameAndAddress2.mmName, NameAndAddress5.mmName, NameAndAddress1.mmName, NameAndAddress4.mmName,
 					BranchData.mmName, PaymentCard2.mmCardIssuerName, Organisation13.mmName, FinancialInstitutionIdentification8.mmName, BranchData2.mmName, PartyIdentification8.mmName, ContactDetails2.mmName, PartyIdentification32.mmName,
@@ -503,7 +500,7 @@ public class PartyName {
 					IndividualPerson19.mmPreviousName, Organisation22.mmName, Organisation23.mmName, Organisation24.mmName, PersonalInformation1.mmMaidenNameOfMother, PaymentCard18.mmCardIssuerName, NameAndAddress15.mmName,
 					Organisation25.mmCommonName, Organisation26.mmCommonName, PartyIdentification112.mmName, OrganisationIdentification3Choice.mmClientIdentification, OrganisationIdentification2Choice.mmClientIdentification,
 					Organisation30.mmName, PaymentCard25.mmCardIssuerName, Organisation29.mmName, MarketIdentification92.mmInstitutionName, ContactIdentificationAndAddress1.mmName, Member4.mmName, PartyIdentification125.mmName,
-					PartyIdentification126.mmName, ContactIdentification5.mmName, DeceasedStatusSD1.mmBeneficialOwnerName, Organisation32.mmCommonName, PartyIdentification129.mmName);
+					ContactIdentification5.mmName, DeceasedStatusSD1.mmBeneficialOwnerName, Organisation32.mmCommonName, PartyIdentification129.mmName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PartyName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -514,12 +511,14 @@ public class PartyName {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyName.class.getMethod("getName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max140Text getValue(PartyName obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyName obj, Max140Text value) {
+			obj.setName(value);
 		}
 	};
 	protected PartyIdentificationInformation partyIdentification;
@@ -556,7 +555,7 @@ public class PartyName {
 	 * definition} = "Party identification which contains a name."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PartyName, Optional<PartyIdentificationInformation>> mmPartyIdentification = new MMBusinessAssociationEnd<PartyName, Optional<PartyIdentificationInformation>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PartyName.mmObject();
@@ -565,9 +564,19 @@ public class PartyName {
 			definition = "Party identification which contains a name.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyName;
+			opposite_lazy = () -> PartyIdentificationInformation.mmPartyName;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
+			type_lazy = () -> PartyIdentificationInformation.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationInformation> getValue(PartyName obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyName obj, Optional<PartyIdentificationInformation> value) {
+			obj.setPartyIdentification(value.orElse(null));
 		}
 	};
 
@@ -578,7 +587,7 @@ public class PartyName {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyName";
 				definition = "Name by which a party is known and which is usually used to identify that party.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PartyIdentificationInformation.mmPartyName);
+				associationDomain_lazy = () -> Arrays.asList(PartyIdentificationInformation.mmPartyName);
 				subType_lazy = () -> Arrays.asList(PersonName.mmObject(), OrganisationName.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PartyName.mmName, com.tools20022.repository.entity.PartyName.mmPartyIdentification);
 			}
@@ -604,7 +613,7 @@ public class PartyName {
 		return partyIdentification == null ? Optional.empty() : Optional.of(partyIdentification);
 	}
 
-	public PartyName setPartyIdentification(com.tools20022.repository.entity.PartyIdentificationInformation partyIdentification) {
+	public PartyName setPartyIdentification(PartyIdentificationInformation partyIdentification) {
 		this.partyIdentification = partyIdentification;
 		return this;
 	}

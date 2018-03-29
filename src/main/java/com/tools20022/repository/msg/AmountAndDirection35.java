@@ -114,7 +114,7 @@ public class AmountAndDirection35 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection35, NonNegativeDecimalNumber> mmAmount = new MMMessageAttribute<AmountAndDirection35, NonNegativeDecimalNumber>() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection35.mmObject();
@@ -126,6 +126,16 @@ public class AmountAndDirection35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NonNegativeDecimalNumber.mmObject();
+		}
+
+		@Override
+		public NonNegativeDecimalNumber getValue(AmountAndDirection35 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection35 obj, NonNegativeDecimalNumber value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -164,7 +174,7 @@ public class AmountAndDirection35 {
 	 * "Indicates whether the amount is a credit or a debit amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection35, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<AmountAndDirection35, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection35.mmObject();
@@ -176,6 +186,16 @@ public class AmountAndDirection35 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(AmountAndDirection35 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection35 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 

@@ -166,7 +166,7 @@ public class CorporateActionOption42 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption42, OptionNumber1Choice> mmOptionNumber = new MMMessageAssociationEnd<CorporateActionOption42, OptionNumber1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption42.mmObject();
@@ -181,6 +181,16 @@ public class CorporateActionOption42 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OptionNumber1Choice.mmObject();
+		}
+
+		@Override
+		public OptionNumber1Choice getValue(CorporateActionOption42 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption42 obj, OptionNumber1Choice value) {
+			obj.setOptionNumber(value);
 		}
 	};
 	@XmlElement(name = "OptnTp", required = true)
@@ -229,7 +239,7 @@ public class CorporateActionOption42 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption42, CorporateActionOption12Choice> mmOptionType = new MMMessageAssociationEnd<CorporateActionOption42, CorporateActionOption12Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption42.mmObject();
@@ -244,6 +254,16 @@ public class CorporateActionOption42 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionOption12Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption12Choice getValue(CorporateActionOption42 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption42 obj, CorporateActionOption12Choice value) {
+			obj.setOptionType(value);
 		}
 	};
 	@XmlElement(name = "InstdOrQtyToRcv", required = true)
@@ -285,7 +305,7 @@ public class CorporateActionOption42 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedOrQuantityToReceive = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption42, InstructedOrQuantityToReceive1Choice> mmInstructedOrQuantityToReceive = new MMMessageAssociationEnd<CorporateActionOption42, InstructedOrQuantityToReceive1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption42.mmObject();
@@ -299,6 +319,16 @@ public class CorporateActionOption42 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InstructedOrQuantityToReceive1Choice.mmObject();
+		}
+
+		@Override
+		public InstructedOrQuantityToReceive1Choice getValue(CorporateActionOption42 obj) {
+			return obj.getInstructedOrQuantityToReceive();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption42 obj, InstructedOrQuantityToReceive1Choice value) {
+			obj.setInstructedOrQuantityToReceive(value);
 		}
 	};
 

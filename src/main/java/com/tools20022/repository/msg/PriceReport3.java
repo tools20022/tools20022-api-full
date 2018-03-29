@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.reda.PriceReportCancellationV04;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValuation4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -80,7 +81,7 @@ public class PriceReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "PricValtnDtls", required = true)
-	protected List<com.tools20022.repository.msg.PriceValuation4> priceValuationDetails;
+	protected List<PriceValuation4> priceValuationDetails;
 	/**
 	 * 
 	 <p>
@@ -112,7 +113,7 @@ public class PriceReport3 {
 	 * "Information related to the price valuation of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceValuationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceReport3, List<PriceValuation4>> mmPriceValuationDetails = new MMMessageAssociationEnd<PriceReport3, List<PriceValuation4>>() {
 		{
 			businessComponentTrace_lazy = () -> NetAssetValueCalculation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceReport3.mmObject();
@@ -123,7 +124,17 @@ public class PriceReport3 {
 			definition = "Information related to the price valuation of a financial instrument.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PriceValuation4.mmObject();
+			type_lazy = () -> PriceValuation4.mmObject();
+		}
+
+		@Override
+		public List<PriceValuation4> getValue(PriceReport3 obj) {
+			return obj.getPriceValuationDetails();
+		}
+
+		@Override
+		public void setValue(PriceReport3 obj, List<PriceValuation4> value) {
+			obj.setPriceValuationDetails(value);
 		}
 	};
 
@@ -146,7 +157,7 @@ public class PriceReport3 {
 		return priceValuationDetails == null ? priceValuationDetails = new ArrayList<>() : priceValuationDetails;
 	}
 
-	public PriceReport3 setPriceValuationDetails(List<com.tools20022.repository.msg.PriceValuation4> priceValuationDetails) {
+	public PriceReport3 setPriceValuationDetails(List<PriceValuation4> priceValuationDetails) {
 		this.priceValuationDetails = Objects.requireNonNull(priceValuationDetails);
 		return this;
 	}

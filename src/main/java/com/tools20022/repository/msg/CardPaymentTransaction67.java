@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -152,7 +153,7 @@ public class CardPaymentTransaction67 {
 	 * CardPaymentTransaction54.mmAuthorisationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction67, AuthorisationResult10> mmAuthorisationResult = new MMMessageAssociationEnd<CardPaymentTransaction67, AuthorisationResult10>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmValidation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
@@ -166,11 +167,21 @@ public class CardPaymentTransaction67 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult10.mmObject();
+			type_lazy = () -> AuthorisationResult10.mmObject();
+		}
+
+		@Override
+		public AuthorisationResult10 getValue(CardPaymentTransaction67 obj) {
+			return obj.getAuthorisationResult();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction67 obj, AuthorisationResult10 value) {
+			obj.setAuthorisationResult(value);
 		}
 	};
 	@XmlElement(name = "TxVrfctnRslt")
-	protected List<com.tools20022.repository.msg.TransactionVerificationResult4> transactionVerificationResult;
+	protected List<TransactionVerificationResult4> transactionVerificationResult;
 	/**
 	 * 
 	 <p>
@@ -213,7 +224,7 @@ public class CardPaymentTransaction67 {
 	 * CardPaymentTransaction54.mmTransactionVerificationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionVerificationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction67, List<TransactionVerificationResult4>> mmTransactionVerificationResult = new MMMessageAssociationEnd<CardPaymentTransaction67, List<TransactionVerificationResult4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
 			isDerived = false;
@@ -225,11 +236,21 @@ public class CardPaymentTransaction67 {
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmTransactionVerificationResult;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmObject();
+			type_lazy = () -> TransactionVerificationResult4.mmObject();
+		}
+
+		@Override
+		public List<TransactionVerificationResult4> getValue(CardPaymentTransaction67 obj) {
+			return obj.getTransactionVerificationResult();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction67 obj, List<TransactionVerificationResult4> value) {
+			obj.setTransactionVerificationResult(value);
 		}
 	};
 	@XmlElement(name = "AllwdPdctCd")
-	protected List<com.tools20022.repository.msg.Product4> allowedProductCode;
+	protected List<Product4> allowedProductCode;
 	/**
 	 * 
 	 <p>
@@ -268,7 +289,7 @@ public class CardPaymentTransaction67 {
 	 * CardPaymentTransaction54.mmAllowedProductCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAllowedProductCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction67, List<Product4>> mmAllowedProductCode = new MMMessageAssociationEnd<CardPaymentTransaction67, List<Product4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
 			isDerived = false;
@@ -280,11 +301,21 @@ public class CardPaymentTransaction67 {
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmAllowedProductCode;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Product4.mmObject();
+			type_lazy = () -> Product4.mmObject();
+		}
+
+		@Override
+		public List<Product4> getValue(CardPaymentTransaction67 obj) {
+			return obj.getAllowedProductCode();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction67 obj, List<Product4> value) {
+			obj.setAllowedProductCode(value);
 		}
 	};
 	@XmlElement(name = "NotAllwdPdctCd")
-	protected List<com.tools20022.repository.msg.Product4> notAllowedProductCode;
+	protected List<Product4> notAllowedProductCode;
 	/**
 	 * 
 	 <p>
@@ -323,7 +354,7 @@ public class CardPaymentTransaction67 {
 	 * CardPaymentTransaction54.mmNotAllowedProductCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNotAllowedProductCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction67, List<Product4>> mmNotAllowedProductCode = new MMMessageAssociationEnd<CardPaymentTransaction67, List<Product4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
 			isDerived = false;
@@ -335,11 +366,21 @@ public class CardPaymentTransaction67 {
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmNotAllowedProductCode;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Product4.mmObject();
+			type_lazy = () -> Product4.mmObject();
+		}
+
+		@Override
+		public List<Product4> getValue(CardPaymentTransaction67 obj) {
+			return obj.getNotAllowedProductCode();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction67 obj, List<Product4> value) {
+			obj.setNotAllowedProductCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlAvlblPdct")
-	protected List<com.tools20022.repository.msg.Product5> additionalAvailableProduct;
+	protected List<Product5> additionalAvailableProduct;
 	/**
 	 * 
 	 <p>
@@ -379,7 +420,7 @@ public class CardPaymentTransaction67 {
 	 * CardPaymentTransaction54.mmAdditionalAvailableProduct}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalAvailableProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction67, List<Product5>> mmAdditionalAvailableProduct = new MMMessageAssociationEnd<CardPaymentTransaction67, List<Product5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
 			isDerived = false;
@@ -391,7 +432,17 @@ public class CardPaymentTransaction67 {
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmAdditionalAvailableProduct;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Product5.mmObject();
+			type_lazy = () -> Product5.mmObject();
+		}
+
+		@Override
+		public List<Product5> getValue(CardPaymentTransaction67 obj) {
+			return obj.getAdditionalAvailableProduct();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction67 obj, List<Product5> value) {
+			obj.setAdditionalAvailableProduct(value);
 		}
 	};
 	@XmlElement(name = "Bal")
@@ -442,7 +493,7 @@ public class CardPaymentTransaction67 {
 	 * CardPaymentTransaction54.mmBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransaction67, Optional<AmountAndDirection41>> mmBalance = new MMMessageAttribute<CardPaymentTransaction67, Optional<AmountAndDirection41>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
@@ -455,7 +506,17 @@ public class CardPaymentTransaction67 {
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
+			complexType_lazy = () -> AmountAndDirection41.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection41> getValue(CardPaymentTransaction67 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction67 obj, Optional<AmountAndDirection41> value) {
+			obj.setBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctdBal")
@@ -500,7 +561,7 @@ public class CardPaymentTransaction67 {
 	 * CardPaymentTransaction54.mmProtectedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction67, Optional<ContentInformationType10>> mmProtectedBalance = new MMMessageAssociationEnd<CardPaymentTransaction67, Optional<ContentInformationType10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
 			isDerived = false;
@@ -513,11 +574,21 @@ public class CardPaymentTransaction67 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
+			type_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType10> getValue(CardPaymentTransaction67 obj) {
+			return obj.getProtectedBalance();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction67 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Actn")
-	protected List<com.tools20022.repository.msg.Action8> action;
+	protected List<Action8> action;
 	/**
 	 * 
 	 <p>
@@ -558,7 +629,7 @@ public class CardPaymentTransaction67 {
 	 * CardPaymentTransaction54.mmAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction67, List<Action8>> mmAction = new MMMessageAssociationEnd<CardPaymentTransaction67, List<Action8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
 			isDerived = false;
@@ -570,7 +641,17 @@ public class CardPaymentTransaction67 {
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmAction;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Action8.mmObject();
+			type_lazy = () -> Action8.mmObject();
+		}
+
+		@Override
+		public List<Action8> getValue(CardPaymentTransaction67 obj) {
+			return obj.getAction();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction67 obj, List<Action8> value) {
+			obj.setAction(value);
 		}
 	};
 	@XmlElement(name = "CcyConvsElgblty")
@@ -621,7 +702,7 @@ public class CardPaymentTransaction67 {
 	 * CardPaymentTransaction54.mmCurrencyConversionEligibility}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyConversionEligibility = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction67, Optional<CurrencyConversion12>> mmCurrencyConversionEligibility = new MMMessageAssociationEnd<CardPaymentTransaction67, Optional<CurrencyConversion12>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
@@ -635,7 +716,17 @@ public class CardPaymentTransaction67 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion12.mmObject();
+			type_lazy = () -> CurrencyConversion12.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyConversion12> getValue(CardPaymentTransaction67 obj) {
+			return obj.getCurrencyConversionEligibility();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction67 obj, Optional<CurrencyConversion12> value) {
+			obj.setCurrencyConversionEligibility(value.orElse(null));
 		}
 	};
 
@@ -663,7 +754,7 @@ public class CardPaymentTransaction67 {
 		return authorisationResult;
 	}
 
-	public CardPaymentTransaction67 setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult10 authorisationResult) {
+	public CardPaymentTransaction67 setAuthorisationResult(AuthorisationResult10 authorisationResult) {
 		this.authorisationResult = Objects.requireNonNull(authorisationResult);
 		return this;
 	}
@@ -672,7 +763,7 @@ public class CardPaymentTransaction67 {
 		return transactionVerificationResult == null ? transactionVerificationResult = new ArrayList<>() : transactionVerificationResult;
 	}
 
-	public CardPaymentTransaction67 setTransactionVerificationResult(List<com.tools20022.repository.msg.TransactionVerificationResult4> transactionVerificationResult) {
+	public CardPaymentTransaction67 setTransactionVerificationResult(List<TransactionVerificationResult4> transactionVerificationResult) {
 		this.transactionVerificationResult = Objects.requireNonNull(transactionVerificationResult);
 		return this;
 	}
@@ -681,7 +772,7 @@ public class CardPaymentTransaction67 {
 		return allowedProductCode == null ? allowedProductCode = new ArrayList<>() : allowedProductCode;
 	}
 
-	public CardPaymentTransaction67 setAllowedProductCode(List<com.tools20022.repository.msg.Product4> allowedProductCode) {
+	public CardPaymentTransaction67 setAllowedProductCode(List<Product4> allowedProductCode) {
 		this.allowedProductCode = Objects.requireNonNull(allowedProductCode);
 		return this;
 	}
@@ -690,7 +781,7 @@ public class CardPaymentTransaction67 {
 		return notAllowedProductCode == null ? notAllowedProductCode = new ArrayList<>() : notAllowedProductCode;
 	}
 
-	public CardPaymentTransaction67 setNotAllowedProductCode(List<com.tools20022.repository.msg.Product4> notAllowedProductCode) {
+	public CardPaymentTransaction67 setNotAllowedProductCode(List<Product4> notAllowedProductCode) {
 		this.notAllowedProductCode = Objects.requireNonNull(notAllowedProductCode);
 		return this;
 	}
@@ -699,7 +790,7 @@ public class CardPaymentTransaction67 {
 		return additionalAvailableProduct == null ? additionalAvailableProduct = new ArrayList<>() : additionalAvailableProduct;
 	}
 
-	public CardPaymentTransaction67 setAdditionalAvailableProduct(List<com.tools20022.repository.msg.Product5> additionalAvailableProduct) {
+	public CardPaymentTransaction67 setAdditionalAvailableProduct(List<Product5> additionalAvailableProduct) {
 		this.additionalAvailableProduct = Objects.requireNonNull(additionalAvailableProduct);
 		return this;
 	}
@@ -708,7 +799,7 @@ public class CardPaymentTransaction67 {
 		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public CardPaymentTransaction67 setBalance(com.tools20022.repository.msg.AmountAndDirection41 balance) {
+	public CardPaymentTransaction67 setBalance(AmountAndDirection41 balance) {
 		this.balance = balance;
 		return this;
 	}
@@ -717,7 +808,7 @@ public class CardPaymentTransaction67 {
 		return protectedBalance == null ? Optional.empty() : Optional.of(protectedBalance);
 	}
 
-	public CardPaymentTransaction67 setProtectedBalance(com.tools20022.repository.msg.ContentInformationType10 protectedBalance) {
+	public CardPaymentTransaction67 setProtectedBalance(ContentInformationType10 protectedBalance) {
 		this.protectedBalance = protectedBalance;
 		return this;
 	}
@@ -726,7 +817,7 @@ public class CardPaymentTransaction67 {
 		return action == null ? action = new ArrayList<>() : action;
 	}
 
-	public CardPaymentTransaction67 setAction(List<com.tools20022.repository.msg.Action8> action) {
+	public CardPaymentTransaction67 setAction(List<Action8> action) {
 		this.action = Objects.requireNonNull(action);
 		return this;
 	}
@@ -735,7 +826,7 @@ public class CardPaymentTransaction67 {
 		return currencyConversionEligibility == null ? Optional.empty() : Optional.of(currencyConversionEligibility);
 	}
 
-	public CardPaymentTransaction67 setCurrencyConversionEligibility(com.tools20022.repository.msg.CurrencyConversion12 currencyConversionEligibility) {
+	public CardPaymentTransaction67 setCurrencyConversionEligibility(CurrencyConversion12 currencyConversionEligibility) {
 		this.currencyConversionEligibility = currencyConversionEligibility;
 		return this;
 	}

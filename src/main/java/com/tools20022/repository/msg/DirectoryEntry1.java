@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DirectoryInformation1;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification9;
+import com.tools20022.repository.msg.ParticipantProfile1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +109,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Owner of the account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryEntry1, FinancialInstitutionIdentification9> mmAccountOwner = new MMMessageAssociationEnd<DirectoryEntry1, FinancialInstitutionIdentification9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -117,7 +120,17 @@ public class DirectoryEntry1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification9 getValue(DirectoryEntry1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(DirectoryEntry1 obj, FinancialInstitutionIdentification9 value) {
+			obj.setAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "ChngTp")
@@ -149,7 +162,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Type of the change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChangeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryEntry1, Optional<Max35Text>> mmChangeType = new MMMessageAttribute<DirectoryEntry1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -160,6 +173,16 @@ public class DirectoryEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DirectoryEntry1 obj) {
+			return obj.getChangeType();
+		}
+
+		@Override
+		public void setValue(DirectoryEntry1 obj, Optional<Max35Text> value) {
+			obj.setChangeType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChngId")
@@ -191,7 +214,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Identification number of the entry change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryEntry1, Optional<Number>> mmChangeIdentification = new MMMessageAttribute<DirectoryEntry1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -202,6 +225,16 @@ public class DirectoryEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(DirectoryEntry1 obj) {
+			return obj.getChangeIdentification();
+		}
+
+		@Override
+		public void setValue(DirectoryEntry1 obj, Optional<Number> value) {
+			obj.setChangeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrctryCmonDtls", required = true)
@@ -232,7 +265,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Information details from National BIC directory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDirectoryCommonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryEntry1, DirectoryInformation1> mmDirectoryCommonDetails = new MMMessageAssociationEnd<DirectoryEntry1, DirectoryInformation1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -243,7 +276,17 @@ public class DirectoryEntry1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DirectoryInformation1.mmObject();
+			type_lazy = () -> DirectoryInformation1.mmObject();
+		}
+
+		@Override
+		public DirectoryInformation1 getValue(DirectoryEntry1 obj) {
+			return obj.getDirectoryCommonDetails();
+		}
+
+		@Override
+		public void setValue(DirectoryEntry1 obj, DirectoryInformation1 value) {
+			obj.setDirectoryCommonDetails(value);
 		}
 	};
 	@XmlElement(name = "PtcptPrfl")
@@ -274,7 +317,7 @@ public class DirectoryEntry1 {
 	 * definition} = "Participant information from National BIC Directory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantProfile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryEntry1, Optional<ParticipantProfile1>> mmParticipantProfile = new MMMessageAssociationEnd<DirectoryEntry1, Optional<ParticipantProfile1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryEntry1.mmObject();
 			isDerived = false;
@@ -285,7 +328,17 @@ public class DirectoryEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ParticipantProfile1.mmObject();
+			type_lazy = () -> ParticipantProfile1.mmObject();
+		}
+
+		@Override
+		public Optional<ParticipantProfile1> getValue(DirectoryEntry1 obj) {
+			return obj.getParticipantProfile();
+		}
+
+		@Override
+		public void setValue(DirectoryEntry1 obj, Optional<ParticipantProfile1> value) {
+			obj.setParticipantProfile(value.orElse(null));
 		}
 	};
 
@@ -307,7 +360,7 @@ public class DirectoryEntry1 {
 		return accountOwner;
 	}
 
-	public DirectoryEntry1 setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 accountOwner) {
+	public DirectoryEntry1 setAccountOwner(FinancialInstitutionIdentification9 accountOwner) {
 		this.accountOwner = Objects.requireNonNull(accountOwner);
 		return this;
 	}
@@ -334,7 +387,7 @@ public class DirectoryEntry1 {
 		return directoryCommonDetails;
 	}
 
-	public DirectoryEntry1 setDirectoryCommonDetails(com.tools20022.repository.msg.DirectoryInformation1 directoryCommonDetails) {
+	public DirectoryEntry1 setDirectoryCommonDetails(DirectoryInformation1 directoryCommonDetails) {
 		this.directoryCommonDetails = Objects.requireNonNull(directoryCommonDetails);
 		return this;
 	}
@@ -343,7 +396,7 @@ public class DirectoryEntry1 {
 		return participantProfile == null ? Optional.empty() : Optional.of(participantProfile);
 	}
 
-	public DirectoryEntry1 setParticipantProfile(com.tools20022.repository.msg.ParticipantProfile1 participantProfile) {
+	public DirectoryEntry1 setParticipantProfile(ParticipantProfile1 participantProfile) {
 		this.participantProfile = participantProfile;
 		return this;
 	}

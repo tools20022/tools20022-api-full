@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommunicationCharacteristics2;
+import com.tools20022.repository.msg.MemoryCharacteristics1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -92,7 +94,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Mmry")
-	protected List<com.tools20022.repository.msg.MemoryCharacteristics1> memory;
+	protected List<MemoryCharacteristics1> memory;
 	/**
 	 * 
 	 <p>
@@ -134,7 +136,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 	 * PointOfInteractionComponentCharacteristics1.mmMemory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentCharacteristics2, List<MemoryCharacteristics1>> mmMemory = new MMMessageAttribute<PointOfInteractionComponentCharacteristics2, List<MemoryCharacteristics1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmObject();
 			isDerived = false;
@@ -145,11 +147,21 @@ public class PointOfInteractionComponentCharacteristics2 {
 			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics3.mmMemory);
 			previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics1.mmMemory;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.MemoryCharacteristics1.mmObject();
+			complexType_lazy = () -> MemoryCharacteristics1.mmObject();
+		}
+
+		@Override
+		public List<MemoryCharacteristics1> getValue(PointOfInteractionComponentCharacteristics2 obj) {
+			return obj.getMemory();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics2 obj, List<MemoryCharacteristics1> value) {
+			obj.setMemory(value);
 		}
 	};
 	@XmlElement(name = "Com")
-	protected List<com.tools20022.repository.msg.CommunicationCharacteristics2> communication;
+	protected List<CommunicationCharacteristics2> communication;
 	/**
 	 * 
 	 <p>
@@ -193,7 +205,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 	 * PointOfInteractionComponentCharacteristics1.mmCommunication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommunication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentCharacteristics2, List<CommunicationCharacteristics2>> mmCommunication = new MMMessageAttribute<PointOfInteractionComponentCharacteristics2, List<CommunicationCharacteristics2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmObject();
 			isDerived = false;
@@ -204,7 +216,17 @@ public class PointOfInteractionComponentCharacteristics2 {
 			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics3.mmCommunication);
 			previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics1.mmCommunication;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics2.mmObject();
+			complexType_lazy = () -> CommunicationCharacteristics2.mmObject();
+		}
+
+		@Override
+		public List<CommunicationCharacteristics2> getValue(PointOfInteractionComponentCharacteristics2 obj) {
+			return obj.getCommunication();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics2 obj, List<CommunicationCharacteristics2> value) {
+			obj.setCommunication(value);
 		}
 	};
 	@XmlElement(name = "SctyAccsMdls")
@@ -249,7 +271,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 	 * PointOfInteractionComponentCharacteristics1.mmSecurityAccessModules}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityAccessModules = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentCharacteristics2, Optional<Number>> mmSecurityAccessModules = new MMMessageAttribute<PointOfInteractionComponentCharacteristics2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmObject();
 			isDerived = false;
@@ -262,6 +284,16 @@ public class PointOfInteractionComponentCharacteristics2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(PointOfInteractionComponentCharacteristics2 obj) {
+			return obj.getSecurityAccessModules();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics2 obj, Optional<Number> value) {
+			obj.setSecurityAccessModules(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcbrIdntyMdls")
@@ -306,7 +338,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 	 * PointOfInteractionComponentCharacteristics1.mmSubscriberIdentityModules}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriberIdentityModules = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentCharacteristics2, Optional<Number>> mmSubscriberIdentityModules = new MMMessageAttribute<PointOfInteractionComponentCharacteristics2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmObject();
 			isDerived = false;
@@ -319,6 +351,16 @@ public class PointOfInteractionComponentCharacteristics2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(PointOfInteractionComponentCharacteristics2 obj) {
+			return obj.getSubscriberIdentityModules();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics2 obj, Optional<Number> value) {
+			obj.setSubscriberIdentityModules(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KeyChckVal")
@@ -364,7 +406,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 	 * PointOfInteractionComponentCharacteristics1.mmKeyCheckValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyCheckValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentCharacteristics2, Optional<Max35Binary>> mmKeyCheckValue = new MMMessageAttribute<PointOfInteractionComponentCharacteristics2, Optional<Max35Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2.mmObject();
 			isDerived = false;
@@ -377,6 +419,16 @@ public class PointOfInteractionComponentCharacteristics2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Binary> getValue(PointOfInteractionComponentCharacteristics2 obj) {
+			return obj.getKeyCheckValue();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics2 obj, Optional<Max35Binary> value) {
+			obj.setKeyCheckValue(value.orElse(null));
 		}
 	};
 
@@ -401,7 +453,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 		return memory == null ? memory = new ArrayList<>() : memory;
 	}
 
-	public PointOfInteractionComponentCharacteristics2 setMemory(List<com.tools20022.repository.msg.MemoryCharacteristics1> memory) {
+	public PointOfInteractionComponentCharacteristics2 setMemory(List<MemoryCharacteristics1> memory) {
 		this.memory = Objects.requireNonNull(memory);
 		return this;
 	}
@@ -410,7 +462,7 @@ public class PointOfInteractionComponentCharacteristics2 {
 		return communication == null ? communication = new ArrayList<>() : communication;
 	}
 
-	public PointOfInteractionComponentCharacteristics2 setCommunication(List<com.tools20022.repository.msg.CommunicationCharacteristics2> communication) {
+	public PointOfInteractionComponentCharacteristics2 setCommunication(List<CommunicationCharacteristics2> communication) {
 		this.communication = Objects.requireNonNull(communication);
 		return this;
 	}

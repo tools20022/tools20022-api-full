@@ -1437,9 +1437,9 @@ public class SystemBalanceTypeCode extends MMCode {
 	};
 	/**
 	 * Balance representing the fictive forecast of automated direct debits or
-	 * payment based on standing arrangements between the a central securities
-	 * depository and the user.
-	 * 
+	 * payment based on standing arrangements between a central securities
+	 * depository and the user.<br>
+	 * <br>
 	 * Usage: Pay-Ins and Pay-Outs can be different based on individual payment
 	 * instructions or available funds.
 	 * <p>
@@ -1459,7 +1459,7 @@ public class SystemBalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance representing the fictive forecast of automated direct debits or payment based on standing arrangements between the a central securities depository and the user.\n\nUsage: Pay-Ins and Pay-Outs can be different based on individual payment instructions or available funds."
+	 * "Balance representing the fictive forecast of automated direct debits or payment based on standing arrangements between a central securities depository and the user.\r\n\r\nUsage: Pay-Ins and Pay-Outs can be different based on individual payment instructions or available funds."
 	 * </li>
 	 * </ul>
 	 */
@@ -1467,7 +1467,7 @@ public class SystemBalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PayInPayOut";
-			definition = "Balance representing the fictive forecast of automated direct debits or payment based on standing arrangements between the a central securities depository and the user.\n\nUsage: Pay-Ins and Pay-Outs can be different based on individual payment instructions or available funds.";
+			definition = "Balance representing the fictive forecast of automated direct debits or payment based on standing arrangements between a central securities depository and the user.\r\n\r\nUsage: Pay-Ins and Pay-Outs can be different based on individual payment instructions or available funds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SystemBalanceTypeCode.mmObject();
 			codeName = "PIPO";
 		}

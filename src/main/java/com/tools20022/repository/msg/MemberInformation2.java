@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MemberReport2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -66,7 +67,7 @@ public class MemberInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "MmbRpt", required = true)
-	protected List<com.tools20022.repository.msg.MemberReport2> memberReport;
+	protected List<MemberReport2> memberReport;
 	/**
 	 * 
 	 <p>
@@ -93,7 +94,7 @@ public class MemberInformation2 {
 	 * definition} = "Reports either member information or a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMemberReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberInformation2, List<MemberReport2>> mmMemberReport = new MMMessageAssociationEnd<MemberInformation2, List<MemberReport2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberInformation2.mmObject();
 			isDerived = false;
@@ -103,7 +104,17 @@ public class MemberInformation2 {
 			definition = "Reports either member information or a business error.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MemberReport2.mmObject();
+			type_lazy = () -> MemberReport2.mmObject();
+		}
+
+		@Override
+		public List<MemberReport2> getValue(MemberInformation2 obj) {
+			return obj.getMemberReport();
+		}
+
+		@Override
+		public void setValue(MemberInformation2 obj, List<MemberReport2> value) {
+			obj.setMemberReport(value);
 		}
 	};
 
@@ -124,7 +135,7 @@ public class MemberInformation2 {
 		return memberReport == null ? memberReport = new ArrayList<>() : memberReport;
 	}
 
-	public MemberInformation2 setMemberReport(List<com.tools20022.repository.msg.MemberReport2> memberReport) {
+	public MemberInformation2 setMemberReport(List<MemberReport2> memberReport) {
 		this.memberReport = Objects.requireNonNull(memberReport);
 		return this;
 	}

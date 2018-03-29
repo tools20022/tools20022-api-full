@@ -107,7 +107,7 @@ public class CollateralBalance1 {
 	 * definition} = "Collateral currently held by party A."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHeldByPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralBalance1, ActiveCurrencyAndAmount> mmHeldByPartyA = new MMMessageAttribute<CollateralBalance1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralBalance1.mmObject();
@@ -119,6 +119,16 @@ public class CollateralBalance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralBalance1 obj) {
+			return obj.getHeldByPartyA();
+		}
+
+		@Override
+		public void setValue(CollateralBalance1 obj, ActiveCurrencyAndAmount value) {
+			obj.setHeldByPartyA(value);
 		}
 	};
 	@XmlElement(name = "HeldByPtyB", required = true)
@@ -156,7 +166,7 @@ public class CollateralBalance1 {
 	 * definition} = "Collateral currently held by party B."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHeldByPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralBalance1, ActiveCurrencyAndAmount> mmHeldByPartyB = new MMMessageAttribute<CollateralBalance1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralBalance1.mmObject();
@@ -168,6 +178,16 @@ public class CollateralBalance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralBalance1 obj) {
+			return obj.getHeldByPartyB();
+		}
+
+		@Override
+		public void setValue(CollateralBalance1 obj, ActiveCurrencyAndAmount value) {
+			obj.setHeldByPartyB(value);
 		}
 	};
 

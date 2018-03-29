@@ -23,9 +23,10 @@ import com.tools20022.repository.codeset.DisruptionFallbackCode;
 import com.tools20022.repository.codeset.FinancialCenterCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.entity.NonDeliverableTrade;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -222,7 +223,7 @@ public class FixingCondition {
 	 * definition} = "Date and time at which a rate is observed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFixingDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<FixingCondition, ISODateTime> mmFixingDateTime = new MMBusinessAttribute<FixingCondition, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate7.mmForeignExchangeRateFixingDate, CorporateActionDate24.mmForeignExchangeRateFixingDate, CorporateActionDate9.mmForeignExchangeRateFixingDate,
 					CorporateActionDate12.mmForeignExchangeRateFixingDate, CorporateActionDate17.mmForeignExchangeRateFixingDate, CorporateActionDate20.mmForeignExchangeRateFixingDate, CorporateActionDate23.mmForeignExchangeRateFixingDate,
@@ -239,12 +240,14 @@ public class FixingCondition {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FixingCondition.class.getMethod("getFixingDateTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(FixingCondition obj) {
+			return obj.getFixingDateTime();
+		}
+
+		@Override
+		public void setValue(FixingCondition obj, ISODateTime value) {
+			obj.setFixingDateTime(value);
 		}
 	};
 	protected NonDeliverableTrade nonDeliverableTrade;
@@ -293,7 +296,7 @@ public class FixingCondition {
 	 * "Non Deliverable trade for which fixing conditions are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNonDeliverableTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<FixingCondition, Optional<NonDeliverableTrade>> mmNonDeliverableTrade = new MMBusinessAssociationEnd<FixingCondition, Optional<NonDeliverableTrade>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClosingData1.mmTradeAmounts, ClosingData2.mmTradeAmounts);
 			isDerived = false;
@@ -303,9 +306,19 @@ public class FixingCondition {
 			definition = "Non Deliverable trade for which fixing conditions are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmFixingConditions;
+			opposite_lazy = () -> NonDeliverableTrade.mmFixingConditions;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.NonDeliverableTrade.mmObject();
+			type_lazy = () -> NonDeliverableTrade.mmObject();
+		}
+
+		@Override
+		public Optional<NonDeliverableTrade> getValue(FixingCondition obj) {
+			return obj.getNonDeliverableTrade();
+		}
+
+		@Override
+		public void setValue(FixingCondition obj, Optional<NonDeliverableTrade> value) {
+			obj.setNonDeliverableTrade(value.orElse(null));
 		}
 	};
 	protected CurrencyExchange fixingRate;
@@ -355,7 +368,7 @@ public class FixingCondition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmFixingRate = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<FixingCondition, Optional<CurrencyExchange>> mmFixingRate = new MMBusinessAssociationEnd<FixingCondition, Optional<CurrencyExchange>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClosingData1.mmValuationRate, ClosingData2.mmValuationRate);
 			isDerived = false;
@@ -365,9 +378,19 @@ public class FixingCondition {
 			definition = "Rate obtained at fixing time by following the fixing conditions (agreed upon by the trading parties).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmFixingConditions;
+			opposite_lazy = () -> CurrencyExchange.mmFixingConditions;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
+			type_lazy = () -> CurrencyExchange.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyExchange> getValue(FixingCondition obj) {
+			return obj.getFixingRate();
+		}
+
+		@Override
+		public void setValue(FixingCondition obj, Optional<CurrencyExchange> value) {
+			obj.setFixingRate(value.orElse(null));
 		}
 	};
 	protected Max35Text settlementRateOption;
@@ -406,7 +429,7 @@ public class FixingCondition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementRateOption = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<FixingCondition, Max35Text> mmSettlementRateOption = new MMBusinessAttribute<FixingCondition, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OpeningConditions1.mmSettlementRateSource);
 			isDerived = false;
@@ -419,12 +442,14 @@ public class FixingCondition {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FixingCondition.class.getMethod("getSettlementRateOption", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(FixingCondition obj) {
+			return obj.getSettlementRateOption();
+		}
+
+		@Override
+		public void setValue(FixingCondition obj, Max35Text value) {
+			obj.setSettlementRateOption(value);
 		}
 	};
 	protected FinancialCenterCode financialCenter;
@@ -456,7 +481,7 @@ public class FixingCondition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFinancialCenter = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<FixingCondition, FinancialCenterCode> mmFinancialCenter = new MMBusinessAttribute<FixingCondition, FinancialCenterCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmObject();
@@ -468,12 +493,14 @@ public class FixingCondition {
 			simpleType_lazy = () -> FinancialCenterCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FixingCondition.class.getMethod("getFinancialCenter", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FinancialCenterCode getValue(FixingCondition obj) {
+			return obj.getFinancialCenter();
+		}
+
+		@Override
+		public void setValue(FixingCondition obj, FinancialCenterCode value) {
+			obj.setFinancialCenter(value);
 		}
 	};
 	protected DisruptionFallbackCode disruptionFallback;
@@ -505,7 +532,7 @@ public class FixingCondition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDisruptionFallback = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<FixingCondition, DisruptionFallbackCode> mmDisruptionFallback = new MMBusinessAttribute<FixingCondition, DisruptionFallbackCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmObject();
@@ -517,12 +544,14 @@ public class FixingCondition {
 			simpleType_lazy = () -> DisruptionFallbackCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FixingCondition.class.getMethod("getDisruptionFallback", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DisruptionFallbackCode getValue(FixingCondition obj) {
+			return obj.getDisruptionFallback();
+		}
+
+		@Override
+		public void setValue(FixingCondition obj, DisruptionFallbackCode value) {
+			obj.setDisruptionFallback(value);
 		}
 	};
 	protected BusinessDayConventionCode businessDayConvention;
@@ -553,7 +582,7 @@ public class FixingCondition {
 	 * "Convention used for adjusting a date when it is not a business day."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBusinessDayConvention = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<FixingCondition, BusinessDayConventionCode> mmBusinessDayConvention = new MMBusinessAttribute<FixingCondition, BusinessDayConventionCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmObject();
@@ -565,12 +594,14 @@ public class FixingCondition {
 			simpleType_lazy = () -> BusinessDayConventionCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FixingCondition.class.getMethod("getBusinessDayConvention", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BusinessDayConventionCode getValue(FixingCondition obj) {
+			return obj.getBusinessDayConvention();
+		}
+
+		@Override
+		public void setValue(FixingCondition obj, BusinessDayConventionCode value) {
+			obj.setBusinessDayConvention(value);
 		}
 	};
 
@@ -581,7 +612,7 @@ public class FixingCondition {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FixingCondition";
 				definition = "Set of parameters used to calculate a rate for instance the fixing rate to be applied to a non-deliverable agreement.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CurrencyExchange.mmFixingConditions, com.tools20022.repository.entity.NonDeliverableTrade.mmFixingConditions);
+				associationDomain_lazy = () -> Arrays.asList(CurrencyExchange.mmFixingConditions, NonDeliverableTrade.mmFixingConditions);
 				derivationElement_lazy = () -> Arrays.asList(ClosingData1.mmValuationInformation, ClosingData2.mmValuationInformation, NonDeliverableForwardConditions2.mmOpeningConditions,
 						NonDeliverableForwardConditions2.mmFixingConditions);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.FixingCondition.mmFixingDateTime, com.tools20022.repository.entity.FixingCondition.mmNonDeliverableTrade,
@@ -612,7 +643,7 @@ public class FixingCondition {
 		return nonDeliverableTrade == null ? Optional.empty() : Optional.of(nonDeliverableTrade);
 	}
 
-	public FixingCondition setNonDeliverableTrade(com.tools20022.repository.entity.NonDeliverableTrade nonDeliverableTrade) {
+	public FixingCondition setNonDeliverableTrade(NonDeliverableTrade nonDeliverableTrade) {
 		this.nonDeliverableTrade = nonDeliverableTrade;
 		return this;
 	}
@@ -621,7 +652,7 @@ public class FixingCondition {
 		return fixingRate == null ? Optional.empty() : Optional.of(fixingRate);
 	}
 
-	public FixingCondition setFixingRate(com.tools20022.repository.entity.CurrencyExchange fixingRate) {
+	public FixingCondition setFixingRate(CurrencyExchange fixingRate) {
 		this.fixingRate = fixingRate;
 		return this;
 	}

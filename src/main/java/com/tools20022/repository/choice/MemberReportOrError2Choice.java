@@ -123,7 +123,7 @@ public class MemberReportOrError2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberReportOrError2Choice, Member1> mmMember = new MMMessageAssociationEnd<MemberReportOrError2Choice, Member1>() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberReportOrError2Choice.mmObject();
@@ -137,6 +137,16 @@ public class MemberReportOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Member1.mmObject();
+		}
+
+		@Override
+		public Member1 getValue(MemberReportOrError2Choice obj) {
+			return obj.getMember();
+		}
+
+		@Override
+		public void setValue(MemberReportOrError2Choice obj, Member1 value) {
+			obj.setMember(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -175,7 +185,7 @@ public class MemberReportOrError2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberReportOrError2Choice, ErrorHandling3> mmBusinessError = new MMMessageAssociationEnd<MemberReportOrError2Choice, ErrorHandling3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -188,6 +198,16 @@ public class MemberReportOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public ErrorHandling3 getValue(MemberReportOrError2Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(MemberReportOrError2Choice obj, ErrorHandling3 value) {
+			obj.setBusinessError(value);
 		}
 	};
 

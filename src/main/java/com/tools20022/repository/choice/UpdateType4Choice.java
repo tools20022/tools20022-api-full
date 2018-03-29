@@ -97,7 +97,7 @@ public class UpdateType4Choice {
 	 * definition} = "Update type expressed in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdateType4Choice, StatementUpdateType1Code> mmCode = new MMMessageAttribute<UpdateType4Choice, StatementUpdateType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType4Choice.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class UpdateType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
+		}
+
+		@Override
+		public StatementUpdateType1Code getValue(UpdateType4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UpdateType4Choice obj, StatementUpdateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -140,7 +150,7 @@ public class UpdateType4Choice {
 	 * definition} = "Update type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdateType4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<UpdateType4Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType4Choice.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class UpdateType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(UpdateType4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UpdateType4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

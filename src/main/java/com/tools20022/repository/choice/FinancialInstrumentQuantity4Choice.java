@@ -119,7 +119,7 @@ public class FinancialInstrumentQuantity4Choice {
 	 * definition} = "Quantity of investment fund units to be subscribed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity4Choice, FinancialInstrumentQuantity1> mmUnitsNumber = new MMMessageAttribute<FinancialInstrumentQuantity4Choice, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity4Choice.mmObject();
@@ -131,6 +131,16 @@ public class FinancialInstrumentQuantity4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(FinancialInstrumentQuantity4Choice obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity4Choice obj, FinancialInstrumentQuantity1 value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "PctgOfTtlRedAmt", required = true)
@@ -170,7 +180,7 @@ public class FinancialInstrumentQuantity4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageOfTotalRedemptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity4Choice, PercentageRate> mmPercentageOfTotalRedemptionAmount = new MMMessageAttribute<FinancialInstrumentQuantity4Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SwitchSubscriptionLeg.mmPercentageOfTotalRedemptionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity4Choice.mmObject();
@@ -182,6 +192,16 @@ public class FinancialInstrumentQuantity4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(FinancialInstrumentQuantity4Choice obj) {
+			return obj.getPercentageOfTotalRedemptionAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity4Choice obj, PercentageRate value) {
+			obj.setPercentageOfTotalRedemptionAmount(value);
 		}
 	};
 	@XmlElement(name = "NetAmt", required = true)
@@ -221,7 +241,7 @@ public class FinancialInstrumentQuantity4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity4Choice, CurrencyAndAmount> mmNetAmount = new MMMessageAttribute<FinancialInstrumentQuantity4Choice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNetAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity4Choice.mmObject();
@@ -233,6 +253,16 @@ public class FinancialInstrumentQuantity4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(FinancialInstrumentQuantity4Choice obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity4Choice obj, CurrencyAndAmount value) {
+			obj.setNetAmount(value);
 		}
 	};
 	@XmlElement(name = "GrssAmt", required = true)
@@ -272,7 +302,7 @@ public class FinancialInstrumentQuantity4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity4Choice, ActiveCurrencyAndAmount> mmGrossAmount = new MMMessageAttribute<FinancialInstrumentQuantity4Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity4Choice.mmObject();
@@ -284,6 +314,16 @@ public class FinancialInstrumentQuantity4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(FinancialInstrumentQuantity4Choice obj) {
+			return obj.getGrossAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity4Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setGrossAmount(value);
 		}
 	};
 

@@ -127,7 +127,7 @@ public class TransactiontIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactiontIdentification4, Max35Text> mmTransactionIdentification = new MMMessageAttribute<TransactiontIdentification4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactiontIdentification4.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class TransactiontIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransactiontIdentification4 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactiontIdentification4 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 

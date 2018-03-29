@@ -135,7 +135,7 @@ public class PaymentInstrument12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentCardDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument12Choice, PaymentCard2> mmPaymentCardDetails = new MMMessageAssociationEnd<PaymentInstrument12Choice, PaymentCard2>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument12Choice.mmObject();
@@ -149,6 +149,16 @@ public class PaymentInstrument12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaymentCard2.mmObject();
+		}
+
+		@Override
+		public PaymentCard2 getValue(PaymentInstrument12Choice obj) {
+			return obj.getPaymentCardDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument12Choice obj, PaymentCard2 value) {
+			obj.setPaymentCardDetails(value);
 		}
 	};
 	@XmlElement(name = "CdtTrfDtls", required = true)
@@ -194,7 +204,7 @@ public class PaymentInstrument12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument12Choice, CreditTransfer6> mmCreditTransferDetails = new MMMessageAssociationEnd<PaymentInstrument12Choice, CreditTransfer6>() {
 		{
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument12Choice.mmObject();
@@ -208,6 +218,16 @@ public class PaymentInstrument12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditTransfer6.mmObject();
+		}
+
+		@Override
+		public CreditTransfer6 getValue(PaymentInstrument12Choice obj) {
+			return obj.getCreditTransferDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument12Choice obj, CreditTransfer6 value) {
+			obj.setCreditTransferDetails(value);
 		}
 	};
 	@XmlElement(name = "DrctDbtDtls", required = true)
@@ -252,7 +272,7 @@ public class PaymentInstrument12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDirectDebitDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument12Choice, DirectDebitMandate4> mmDirectDebitDetails = new MMMessageAssociationEnd<PaymentInstrument12Choice, DirectDebitMandate4>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument12Choice.mmObject();
@@ -266,6 +286,16 @@ public class PaymentInstrument12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DirectDebitMandate4.mmObject();
+		}
+
+		@Override
+		public DirectDebitMandate4 getValue(PaymentInstrument12Choice obj) {
+			return obj.getDirectDebitDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument12Choice obj, DirectDebitMandate4 value) {
+			obj.setDirectDebitDetails(value);
 		}
 	};
 	@XmlElement(name = "ChqDtls", required = true)
@@ -309,7 +339,7 @@ public class PaymentInstrument12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument12Choice, Cheque3> mmChequeDetails = new MMMessageAssociationEnd<PaymentInstrument12Choice, Cheque3>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument12Choice.mmObject();
@@ -323,6 +353,16 @@ public class PaymentInstrument12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Cheque3.mmObject();
+		}
+
+		@Override
+		public Cheque3 getValue(PaymentInstrument12Choice obj) {
+			return obj.getChequeDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument12Choice obj, Cheque3 value) {
+			obj.setChequeDetails(value);
 		}
 	};
 	@XmlElement(name = "BkrsDrftDtls", required = true)
@@ -366,7 +406,7 @@ public class PaymentInstrument12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBankersDraftDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument12Choice, Cheque3> mmBankersDraftDetails = new MMMessageAssociationEnd<PaymentInstrument12Choice, Cheque3>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument12Choice.mmObject();
@@ -380,6 +420,16 @@ public class PaymentInstrument12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Cheque3.mmObject();
+		}
+
+		@Override
+		public Cheque3 getValue(PaymentInstrument12Choice obj) {
+			return obj.getBankersDraftDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument12Choice obj, Cheque3 value) {
+			obj.setBankersDraftDetails(value);
 		}
 	};
 	@XmlElement(name = "CshAcctDtls", required = true)
@@ -424,7 +474,7 @@ public class PaymentInstrument12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument12Choice, InvestmentAccount20> mmCashAccountDetails = new MMMessageAssociationEnd<PaymentInstrument12Choice, InvestmentAccount20>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument12Choice.mmObject();
@@ -438,6 +488,16 @@ public class PaymentInstrument12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccount20.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount20 getValue(PaymentInstrument12Choice obj) {
+			return obj.getCashAccountDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument12Choice obj, InvestmentAccount20 value) {
+			obj.setCashAccountDetails(value);
 		}
 	};
 

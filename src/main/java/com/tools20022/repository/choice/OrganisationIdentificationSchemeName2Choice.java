@@ -114,7 +114,7 @@ public class OrganisationIdentificationSchemeName2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentificationSchemeName2Choice, ExternalOrganisationIdentification1Code> mmCode = new MMMessageAttribute<OrganisationIdentificationSchemeName2Choice, ExternalOrganisationIdentification1Code>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentificationSchemeName2Choice.mmObject();
@@ -126,6 +126,16 @@ public class OrganisationIdentificationSchemeName2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalOrganisationIdentification1Code.mmObject();
+		}
+
+		@Override
+		public ExternalOrganisationIdentification1Code getValue(OrganisationIdentificationSchemeName2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentificationSchemeName2Choice obj, ExternalOrganisationIdentification1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class OrganisationIdentificationSchemeName2Choice {
 	 * definition} = "Name of the identification scheme, in a free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentificationSchemeName2Choice, RestrictedFINXMax35Text> mmProprietary = new MMMessageAttribute<OrganisationIdentificationSchemeName2Choice, RestrictedFINXMax35Text>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentificationSchemeName2Choice.mmObject();
@@ -175,6 +185,16 @@ public class OrganisationIdentificationSchemeName2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(OrganisationIdentificationSchemeName2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentificationSchemeName2Choice obj, RestrictedFINXMax35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingIssuer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class Undertaking9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking9, Max35Text> mmIdentification = new MMMessageAttribute<Undertaking9, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
@@ -122,6 +123,16 @@ public class Undertaking9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Undertaking9 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Undertaking9 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -156,7 +167,7 @@ public class Undertaking9 {
 	 * definition} = "Party that issues the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Undertaking9, PartyIdentification43> mmIssuer = new MMMessageAssociationEnd<Undertaking9, PartyIdentification43>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingIssuer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
@@ -168,7 +179,17 @@ public class Undertaking9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public PartyIdentification43 getValue(Undertaking9 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(Undertaking9 obj, PartyIdentification43 value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "ApplcntRefNb")
@@ -201,7 +222,7 @@ public class Undertaking9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicantReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking9, Optional<Max35Text>> mmApplicantReferenceNumber = new MMMessageAttribute<Undertaking9, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
 			isDerived = false;
@@ -212,6 +233,16 @@ public class Undertaking9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Undertaking9 obj) {
+			return obj.getApplicantReferenceNumber();
+		}
+
+		@Override
+		public void setValue(Undertaking9 obj, Optional<Max35Text> value) {
+			obj.setApplicantReferenceNumber(value.orElse(null));
 		}
 	};
 
@@ -243,7 +274,7 @@ public class Undertaking9 {
 		return issuer;
 	}
 
-	public Undertaking9 setIssuer(com.tools20022.repository.msg.PartyIdentification43 issuer) {
+	public Undertaking9 setIssuer(PartyIdentification43 issuer) {
 		this.issuer = Objects.requireNonNull(issuer);
 		return this;
 	}

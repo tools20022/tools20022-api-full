@@ -125,7 +125,7 @@ public class PartyIdentification96 {
 	 * PartyIdentification95.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification96, Optional<PartyIdentification96Choice>> mmIdentification = new MMMessageAttribute<PartyIdentification96, Optional<PartyIdentification96Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification96.mmObject();
@@ -138,6 +138,16 @@ public class PartyIdentification96 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification96Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification96Choice> getValue(PartyIdentification96 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification96 obj, Optional<PartyIdentification96Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglNttyIdr")
@@ -182,7 +192,7 @@ public class PartyIdentification96 {
 	 * PartyIdentification95.mmLegalEntityIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification96, Optional<LEIIdentifier>> mmLegalEntityIdentifier = new MMMessageAttribute<PartyIdentification96, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification96.mmObject();
@@ -195,6 +205,16 @@ public class PartyIdentification96 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(PartyIdentification96 obj) {
+			return obj.getLegalEntityIdentifier();
+		}
+
+		@Override
+		public void setValue(PartyIdentification96 obj, Optional<LEIIdentifier> value) {
+			obj.setLegalEntityIdentifier(value.orElse(null));
 		}
 	};
 

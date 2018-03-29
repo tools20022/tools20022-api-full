@@ -108,7 +108,7 @@ public class FinancialInstrumentClassification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentClassification1, SecurityClassificationType1Choice> mmClassificationType = new MMMessageAttribute<FinancialInstrumentClassification1, SecurityClassificationType1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AssetClassification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentClassification1.mmObject();
@@ -120,6 +120,16 @@ public class FinancialInstrumentClassification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityClassificationType1Choice.mmObject();
+		}
+
+		@Override
+		public SecurityClassificationType1Choice getValue(FinancialInstrumentClassification1 obj) {
+			return obj.getClassificationType();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentClassification1 obj, SecurityClassificationType1Choice value) {
+			obj.setClassificationType(value);
 		}
 	};
 

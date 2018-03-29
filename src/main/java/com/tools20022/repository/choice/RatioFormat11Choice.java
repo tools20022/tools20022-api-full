@@ -143,7 +143,7 @@ public class RatioFormat11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat11Choice, QuantityToQuantityRatio1> mmQuantityToQuantity = new MMMessageAssociationEnd<RatioFormat11Choice, QuantityToQuantityRatio1>() {
 		{
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat11Choice.mmObject();
@@ -158,6 +158,16 @@ public class RatioFormat11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuantityToQuantityRatio1.mmObject();
+		}
+
+		@Override
+		public QuantityToQuantityRatio1 getValue(RatioFormat11Choice obj) {
+			return obj.getQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat11Choice obj, QuantityToQuantityRatio1 value) {
+			obj.setQuantityToQuantity(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -201,7 +211,7 @@ public class RatioFormat11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormat11Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<RatioFormat11Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat11Choice.mmObject();
 			isDerived = false;
@@ -214,6 +224,16 @@ public class RatioFormat11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(RatioFormat11Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RatioFormat11Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "AmtToAmt", required = true)
@@ -259,7 +279,7 @@ public class RatioFormat11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat11Choice, AmountToAmountRatio2> mmAmountToAmount = new MMMessageAssociationEnd<RatioFormat11Choice, AmountToAmountRatio2>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat11Choice.mmObject();
@@ -274,6 +294,16 @@ public class RatioFormat11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountToAmountRatio2.mmObject();
+		}
+
+		@Override
+		public AmountToAmountRatio2 getValue(RatioFormat11Choice obj) {
+			return obj.getAmountToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat11Choice obj, AmountToAmountRatio2 value) {
+			obj.setAmountToAmount(value);
 		}
 	};
 

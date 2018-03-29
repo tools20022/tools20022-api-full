@@ -23,10 +23,10 @@ import com.tools20022.repository.choice.AdditionalRightThreshold1Choice;
 import com.tools20022.repository.codeset.AdditionalRightCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AdditionalRights1;
 import com.tools20022.repository.msg.AdditionalRights2;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +135,7 @@ public class AdditionalRight {
 	 * definition} = "Meeting for which additional rights are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AdditionalRight, Optional<Meeting>> mmMeeting = new MMBusinessAssociationEnd<AdditionalRight, Optional<Meeting>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AdditionalRight.mmObject();
@@ -144,9 +144,19 @@ public class AdditionalRight {
 			definition = "Meeting for which additional rights are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmAdditionalRight;
+			opposite_lazy = () -> Meeting.mmAdditionalRight;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
+			type_lazy = () -> Meeting.mmObject();
+		}
+
+		@Override
+		public Optional<Meeting> getValue(AdditionalRight obj) {
+			return obj.getMeeting();
+		}
+
+		@Override
+		public void setValue(AdditionalRight obj, Optional<Meeting> value) {
+			obj.setMeeting(value.orElse(null));
 		}
 	};
 	protected AdditionalRightCode type;
@@ -193,7 +203,7 @@ public class AdditionalRight {
 	 * definition} = "Specifies the additional right type."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AdditionalRight, AdditionalRightCode> mmType = new MMBusinessAttribute<AdditionalRight, AdditionalRightCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AdditionalRightCode1Choice.mmCode, AdditionalRightCode1Choice.mmProprietary, AdditionalRights1.mmAdditionalRight, AdditionalRights2.mmAdditionalRight);
 			isDerived = false;
@@ -206,12 +216,14 @@ public class AdditionalRight {
 			simpleType_lazy = () -> AdditionalRightCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalRight.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalRightCode getValue(AdditionalRight obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(AdditionalRight obj, AdditionalRightCode value) {
+			obj.setType(value);
 		}
 	};
 	protected Max350Text additionalRightThreshold;
@@ -256,7 +268,7 @@ public class AdditionalRight {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAdditionalRightThreshold = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AdditionalRight, Max350Text> mmAdditionalRightThreshold = new MMBusinessAttribute<AdditionalRight, Max350Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AdditionalRightThreshold1Choice.mmAdditionalRightThreshold, AdditionalRights1.mmAdditionalRightThreshold, AdditionalRights2.mmAdditionalRightThreshold);
 			isDerived = false;
@@ -269,12 +281,14 @@ public class AdditionalRight {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalRight.class.getMethod("getAdditionalRightThreshold", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(AdditionalRight obj) {
+			return obj.getAdditionalRightThreshold();
+		}
+
+		@Override
+		public void setValue(AdditionalRight obj, Max350Text value) {
+			obj.setAdditionalRightThreshold(value);
 		}
 	};
 	protected PercentageRate additionalRightThresholdPercentage;
@@ -314,7 +328,7 @@ public class AdditionalRight {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAdditionalRightThresholdPercentage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AdditionalRight, PercentageRate> mmAdditionalRightThresholdPercentage = new MMBusinessAttribute<AdditionalRight, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AdditionalRightThreshold1Choice.mmAdditionalRightThresholdPercentage);
 			isDerived = false;
@@ -327,12 +341,14 @@ public class AdditionalRight {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalRight.class.getMethod("getAdditionalRightThresholdPercentage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(AdditionalRight obj) {
+			return obj.getAdditionalRightThresholdPercentage();
+		}
+
+		@Override
+		public void setValue(AdditionalRight obj, PercentageRate value) {
+			obj.setAdditionalRightThresholdPercentage(value);
 		}
 	};
 
@@ -343,7 +359,7 @@ public class AdditionalRight {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRight";
 				definition = "Specifies how the additional rights can be granted to the shareholder. These rights can be exercised at shareholders meetings (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions).";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmAdditionalRight);
+				associationDomain_lazy = () -> Arrays.asList(Meeting.mmAdditionalRight);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AdditionalRight.mmMeeting, com.tools20022.repository.entity.AdditionalRight.mmType,
 						com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThreshold, com.tools20022.repository.entity.AdditionalRight.mmAdditionalRightThresholdPercentage);
 				derivationComponent_lazy = () -> Arrays.asList(AdditionalRightCode1Choice.mmObject(), AdditionalRightThreshold1Choice.mmObject(), AdditionalRights1.mmObject(), AdditionalRights2.mmObject());
@@ -361,7 +377,7 @@ public class AdditionalRight {
 		return meeting == null ? Optional.empty() : Optional.of(meeting);
 	}
 
-	public AdditionalRight setMeeting(com.tools20022.repository.entity.Meeting meeting) {
+	public AdditionalRight setMeeting(Meeting meeting) {
 		this.meeting = meeting;
 		return this;
 	}

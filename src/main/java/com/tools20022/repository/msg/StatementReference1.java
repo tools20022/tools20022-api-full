@@ -25,6 +25,7 @@ import com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportSt
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Pagination;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class StatementReference1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementReference1, Max35Text> mmStatementIdentification = new MMMessageAttribute<StatementReference1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementReference1.mmObject();
 			isDerived = false;
@@ -128,6 +129,16 @@ public class StatementReference1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(StatementReference1 obj) {
+			return obj.getStatementIdentification();
+		}
+
+		@Override
+		public void setValue(StatementReference1 obj, Max35Text value) {
+			obj.setStatementIdentification(value);
 		}
 	};
 	@XmlElement(name = "StmtDtTm", required = true)
@@ -160,7 +171,7 @@ public class StatementReference1 {
 	 * definition} = "Date and time the statement was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementReference1, DateAndDateTimeChoice> mmStatementDateTime = new MMMessageAttribute<StatementReference1, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementReference1.mmObject();
 			isDerived = false;
@@ -171,6 +182,16 @@ public class StatementReference1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(StatementReference1 obj) {
+			return obj.getStatementDateTime();
+		}
+
+		@Override
+		public void setValue(StatementReference1 obj, DateAndDateTimeChoice value) {
+			obj.setStatementDateTime(value);
 		}
 	};
 	@XmlElement(name = "Pgntn")
@@ -202,7 +223,7 @@ public class StatementReference1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatementReference1, Optional<Pagination>> mmPagination = new MMMessageAssociationEnd<StatementReference1, Optional<Pagination>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementReference1.mmObject();
 			isDerived = false;
@@ -213,7 +234,17 @@ public class StatementReference1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			type_lazy = () -> Pagination.mmObject();
+		}
+
+		@Override
+		public Optional<Pagination> getValue(StatementReference1 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(StatementReference1 obj, Optional<Pagination> value) {
+			obj.setPagination(value.orElse(null));
 		}
 	};
 
@@ -254,7 +285,7 @@ public class StatementReference1 {
 		return pagination == null ? Optional.empty() : Optional.of(pagination);
 	}
 
-	public StatementReference1 setPagination(com.tools20022.repository.msg.Pagination pagination) {
+	public StatementReference1 setPagination(Pagination pagination) {
 		this.pagination = pagination;
 		return this;
 	}

@@ -128,7 +128,7 @@ public class AcknowledgementReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcknowledgementReason1, AcknowledgementReason1Choice> mmCode = new MMMessageAssociationEnd<AcknowledgementReason1, AcknowledgementReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason1.mmObject();
@@ -143,6 +143,16 @@ public class AcknowledgementReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcknowledgementReason1Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason1Choice getValue(AcknowledgementReason1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason1 obj, AcknowledgementReason1Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -192,7 +202,7 @@ public class AcknowledgementReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason1, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AcknowledgementReason1, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason1.mmObject();
@@ -206,6 +216,16 @@ public class AcknowledgementReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(AcknowledgementReason1 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

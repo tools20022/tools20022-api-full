@@ -101,7 +101,7 @@ public class AccountQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountQueryDefinition2, Optional<QueryType1Code>> mmQueryType = new MMMessageAttribute<AccountQueryDefinition2, Optional<QueryType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountQueryDefinition2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class AccountQueryDefinition2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType1Code> getValue(AccountQueryDefinition2 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(AccountQueryDefinition2 obj, Optional<QueryType1Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctCrit")
@@ -143,7 +153,7 @@ public class AccountQueryDefinition2 {
 	 * definition} = " Definition of the account query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountQueryDefinition2, Optional<AccountCriteriaDefinition2Choice>> mmAccountCriteria = new MMMessageAssociationEnd<AccountQueryDefinition2, Optional<AccountCriteriaDefinition2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountQueryDefinition2.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class AccountQueryDefinition2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountCriteriaDefinition2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountCriteriaDefinition2Choice> getValue(AccountQueryDefinition2 obj) {
+			return obj.getAccountCriteria();
+		}
+
+		@Override
+		public void setValue(AccountQueryDefinition2 obj, Optional<AccountCriteriaDefinition2Choice> value) {
+			obj.setAccountCriteria(value.orElse(null));
 		}
 	};
 

@@ -99,7 +99,7 @@ public class RateName2 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateName2, Optional<RestrictedFINXMax8Text>> mmIssuer = new MMMessageAttribute<RateName2, Optional<RestrictedFINXMax8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateName2.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class RateName2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax8Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax8Text> getValue(RateName2 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(RateName2 obj, Optional<RestrictedFINXMax8Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RateNm", required = true)
@@ -143,7 +153,7 @@ public class RateName2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateName2, RestrictedFINXMax24Text> mmRateName = new MMMessageAttribute<RateName2, RestrictedFINXMax24Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateName2.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class RateName2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax24Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax24Text getValue(RateName2 obj) {
+			return obj.getRateName();
+		}
+
+		@Override
+		public void setValue(RateName2 obj, RestrictedFINXMax24Text value) {
+			obj.setRateName(value);
 		}
 	};
 

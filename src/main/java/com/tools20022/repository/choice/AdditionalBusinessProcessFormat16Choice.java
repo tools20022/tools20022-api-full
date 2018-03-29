@@ -126,7 +126,7 @@ public class AdditionalBusinessProcessFormat16Choice {
 	 * AdditionalBusinessProcessFormat15Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalBusinessProcessFormat16Choice, AdditionalBusinessProcess8Code> mmCode = new MMMessageAttribute<AdditionalBusinessProcessFormat16Choice, AdditionalBusinessProcess8Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalBusinessProcessFormat16Choice.mmObject();
@@ -140,6 +140,16 @@ public class AdditionalBusinessProcessFormat16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdditionalBusinessProcess8Code.mmObject();
+		}
+
+		@Override
+		public AdditionalBusinessProcess8Code getValue(AdditionalBusinessProcessFormat16Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AdditionalBusinessProcessFormat16Choice obj, AdditionalBusinessProcess8Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -186,7 +196,7 @@ public class AdditionalBusinessProcessFormat16Choice {
 	 * AdditionalBusinessProcessFormat15Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AdditionalBusinessProcessFormat16Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<AdditionalBusinessProcessFormat16Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalBusinessProcessFormat16Choice.mmObject();
@@ -201,6 +211,16 @@ public class AdditionalBusinessProcessFormat16Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(AdditionalBusinessProcessFormat16Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AdditionalBusinessProcessFormat16Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

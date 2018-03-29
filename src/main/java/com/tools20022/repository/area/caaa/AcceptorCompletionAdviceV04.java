@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorCompletionAdvice4;
 import com.tools20022.repository.msg.ContentInformationType11;
 import com.tools20022.repository.msg.Header11;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -141,7 +140,7 @@ public class AcceptorCompletionAdviceV04 {
 	 * AcceptorCompletionAdviceV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCompletionAdviceV04, Header11> mmHeader = new MMMessageBuildingBlock<AcceptorCompletionAdviceV04, Header11>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class AcceptorCompletionAdviceV04 {
 			complexType_lazy = () -> Header11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCompletionAdviceV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header11 getValue(AcceptorCompletionAdviceV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceV04 obj, Header11 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "CmpltnAdvc", required = true)
@@ -200,7 +201,7 @@ public class AcceptorCompletionAdviceV04 {
 	 * AcceptorCompletionAdviceV03.mmCompletionAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCompletionAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCompletionAdviceV04, AcceptorCompletionAdvice4> mmCompletionAdvice = new MMMessageBuildingBlock<AcceptorCompletionAdviceV04, AcceptorCompletionAdvice4>() {
 		{
 			xmlTag = "CmpltnAdvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,12 +214,14 @@ public class AcceptorCompletionAdviceV04 {
 			complexType_lazy = () -> AcceptorCompletionAdvice4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCompletionAdviceV04.class.getMethod("getCompletionAdvice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorCompletionAdvice4 getValue(AcceptorCompletionAdviceV04 obj) {
+			return obj.getCompletionAdvice();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceV04 obj, AcceptorCompletionAdvice4 value) {
+			obj.setCompletionAdvice(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -259,7 +262,7 @@ public class AcceptorCompletionAdviceV04 {
 	 * AcceptorCompletionAdviceV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCompletionAdviceV04, ContentInformationType11> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorCompletionAdviceV04, ContentInformationType11>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +275,14 @@ public class AcceptorCompletionAdviceV04 {
 			complexType_lazy = () -> ContentInformationType11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCompletionAdviceV04.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType11 getValue(AcceptorCompletionAdviceV04 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceV04 obj, ContentInformationType11 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

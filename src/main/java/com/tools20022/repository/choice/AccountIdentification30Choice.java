@@ -145,7 +145,7 @@ public class AccountIdentification30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCard = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification30Choice, Min8Max28NumericText> mmCard = new MMMessageAttribute<AccountIdentification30Choice, Min8Max28NumericText>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
@@ -158,6 +158,16 @@ public class AccountIdentification30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Min8Max28NumericText.mmObject();
+		}
+
+		@Override
+		public Min8Max28NumericText getValue(AccountIdentification30Choice obj) {
+			return obj.getCard();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30Choice obj, Min8Max28NumericText value) {
+			obj.setCard(value);
 		}
 	};
 	@XmlElement(name = "MSISDN", required = true)
@@ -204,7 +214,7 @@ public class AccountIdentification30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMSISDN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification30Choice, Max16Text> mmMSISDN = new MMMessageAttribute<AccountIdentification30Choice, Max16Text>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
@@ -217,6 +227,16 @@ public class AccountIdentification30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(AccountIdentification30Choice obj) {
+			return obj.getMSISDN();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30Choice obj, Max16Text value) {
+			obj.setMSISDN(value);
 		}
 	};
 	@XmlElement(name = "EMail", required = true)
@@ -261,7 +281,7 @@ public class AccountIdentification30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEMail = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification30Choice, Max35Text> mmEMail = new MMMessageAttribute<AccountIdentification30Choice, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
@@ -274,6 +294,16 @@ public class AccountIdentification30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentification30Choice obj) {
+			return obj.getEMail();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30Choice obj, Max35Text value) {
+			obj.setEMail(value);
 		}
 	};
 	@XmlElement(name = "IBAN", required = true)
@@ -326,7 +356,7 @@ public class AccountIdentification30Choice {
 	 * AccountIdentification1Choice.mmIBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification30Choice, IBANIdentifier> mmIBAN = new MMMessageAttribute<AccountIdentification30Choice, IBANIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
@@ -340,6 +370,16 @@ public class AccountIdentification30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
+		}
+
+		@Override
+		public IBANIdentifier getValue(AccountIdentification30Choice obj) {
+			return obj.getIBAN();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30Choice obj, IBANIdentifier value) {
+			obj.setIBAN(value);
 		}
 	};
 	@XmlElement(name = "BBAN", required = true)
@@ -392,7 +432,7 @@ public class AccountIdentification30Choice {
 	 * AccountIdentification1Choice.mmBBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification30Choice, BBANIdentifier> mmBBAN = new MMMessageAttribute<AccountIdentification30Choice, BBANIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmBBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
@@ -406,6 +446,16 @@ public class AccountIdentification30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
+		}
+
+		@Override
+		public BBANIdentifier getValue(AccountIdentification30Choice obj) {
+			return obj.getBBAN();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30Choice obj, BBANIdentifier value) {
+			obj.setBBAN(value);
 		}
 	};
 	@XmlElement(name = "UPIC", required = true)
@@ -458,7 +508,7 @@ public class AccountIdentification30Choice {
 	 * AccountIdentification1Choice.mmUPIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification30Choice, UPICIdentifier> mmUPIC = new MMMessageAttribute<AccountIdentification30Choice, UPICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmUPIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
@@ -472,6 +522,16 @@ public class AccountIdentification30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
+		}
+
+		@Override
+		public UPICIdentifier getValue(AccountIdentification30Choice obj) {
+			return obj.getUPIC();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30Choice obj, UPICIdentifier value) {
+			obj.setUPIC(value);
 		}
 	};
 	@XmlElement(name = "Dmst", required = true)
@@ -518,7 +578,7 @@ public class AccountIdentification30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomestic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification30Choice, Max35Text> mmDomestic = new MMMessageAttribute<AccountIdentification30Choice, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
@@ -531,6 +591,16 @@ public class AccountIdentification30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentification30Choice obj) {
+			return obj.getDomestic();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30Choice obj, Max35Text value) {
+			obj.setDomestic(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -575,7 +645,7 @@ public class AccountIdentification30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification30Choice, Max35Text> mmOther = new MMMessageAttribute<AccountIdentification30Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
@@ -588,6 +658,16 @@ public class AccountIdentification30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentification30Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(AccountIdentification30Choice obj, Max35Text value) {
+			obj.setOther(value);
 		}
 	};
 

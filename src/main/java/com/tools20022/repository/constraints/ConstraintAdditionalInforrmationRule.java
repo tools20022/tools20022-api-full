@@ -53,11 +53,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentification35> forPartyIdentification35 = new MMConstraint<PartyIdentification35>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentification35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification35 obj) throws Exception {
+			checkPartyIdentification35(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount14> forPartyIdentificationAndAccount14 = new MMConstraint<PartyIdentificationAndAccount14>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount14 obj) throws Exception {
+			checkPartyIdentificationAndAccount14(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount17> forPartyIdentificationAndAccount17 = new MMConstraint<PartyIdentificationAndAccount17>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount17 obj) throws Exception {
+			checkPartyIdentificationAndAccount17(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount18> forPartyIdentificationAndAccount18 = new MMConstraint<PartyIdentificationAndAccount18>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount18 obj) throws Exception {
+			checkPartyIdentificationAndAccount18(obj);
 		}
 	};
 	/**
@@ -173,11 +189,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentification37> forPartyIdentification37 = new MMConstraint<PartyIdentification37>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentification37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification37 obj) throws Exception {
+			checkPartyIdentification37(obj);
 		}
 	};
 	/**
@@ -203,11 +223,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount22> forPartyIdentificationAndAccount22 = new MMConstraint<PartyIdentificationAndAccount22>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount22 obj) throws Exception {
+			checkPartyIdentificationAndAccount22(obj);
 		}
 	};
 	/**
@@ -233,11 +257,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount23> forPartyIdentificationAndAccount23 = new MMConstraint<PartyIdentificationAndAccount23>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount23 obj) throws Exception {
+			checkPartyIdentificationAndAccount23(obj);
 		}
 	};
 	/**
@@ -263,11 +291,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount24> forPartyIdentificationAndAccount24 = new MMConstraint<PartyIdentificationAndAccount24>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount24 obj) throws Exception {
+			checkPartyIdentificationAndAccount24(obj);
 		}
 	};
 	/**
@@ -301,12 +333,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentification47> forPartyIdentification47 = new MMConstraint<PartyIdentification47>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentification92);
 			owner_lazy = () -> PartyIdentification47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification47 obj) throws Exception {
+			checkPartyIdentification47(obj);
 		}
 	};
 	/**
@@ -341,12 +377,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount51> forPartyIdentificationAndAccount51 = new MMConstraint<PartyIdentificationAndAccount51>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount122);
 			owner_lazy = () -> PartyIdentificationAndAccount51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount51 obj) throws Exception {
+			checkPartyIdentificationAndAccount51(obj);
 		}
 	};
 	/**
@@ -381,12 +421,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount52> forPartyIdentificationAndAccount52 = new MMConstraint<PartyIdentificationAndAccount52>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount121);
 			owner_lazy = () -> PartyIdentificationAndAccount52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount52 obj) throws Exception {
+			checkPartyIdentificationAndAccount52(obj);
 		}
 	};
 	/**
@@ -421,12 +465,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount54> forPartyIdentificationAndAccount54 = new MMConstraint<PartyIdentificationAndAccount54>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount101);
 			owner_lazy = () -> PartyIdentificationAndAccount54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount54 obj) throws Exception {
+			checkPartyIdentificationAndAccount54(obj);
 		}
 	};
 	/**
@@ -452,11 +500,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentification49> forPartyIdentification49 = new MMConstraint<PartyIdentification49>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentification49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification49 obj) throws Exception {
+			checkPartyIdentification49(obj);
 		}
 	};
 	/**
@@ -482,11 +534,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount56> forPartyIdentificationAndAccount56 = new MMConstraint<PartyIdentificationAndAccount56>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount56 obj) throws Exception {
+			checkPartyIdentificationAndAccount56(obj);
 		}
 	};
 	/**
@@ -512,11 +568,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount57> forPartyIdentificationAndAccount57 = new MMConstraint<PartyIdentificationAndAccount57>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount57 obj) throws Exception {
+			checkPartyIdentificationAndAccount57(obj);
 		}
 	};
 	/**
@@ -542,11 +602,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount58> forPartyIdentificationAndAccount58 = new MMConstraint<PartyIdentificationAndAccount58>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount58 obj) throws Exception {
+			checkPartyIdentificationAndAccount58(obj);
 		}
 	};
 	/**
@@ -572,11 +636,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative5> forCorporateActionNarrative5 = new MMConstraint<CorporateActionNarrative5>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative5 obj) throws Exception {
+			checkCorporateActionNarrative5(obj);
 		}
 	};
 	/**
@@ -610,12 +678,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative6> forCorporateActionNarrative6 = new MMConstraint<CorporateActionNarrative6>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionNarrative28);
 			owner_lazy = () -> CorporateActionNarrative6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative6 obj) throws Exception {
+			checkCorporateActionNarrative6(obj);
 		}
 	};
 	/**
@@ -641,11 +713,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative15> forCorporateActionNarrative15 = new MMConstraint<CorporateActionNarrative15>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative15 obj) throws Exception {
+			checkCorporateActionNarrative15(obj);
 		}
 	};
 	/**
@@ -671,11 +747,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative16> forCorporateActionNarrative16 = new MMConstraint<CorporateActionNarrative16>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative16 obj) throws Exception {
+			checkCorporateActionNarrative16(obj);
 		}
 	};
 	/**
@@ -709,12 +789,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative20> forCorporateActionNarrative20 = new MMConstraint<CorporateActionNarrative20>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionNarrative29);
 			owner_lazy = () -> CorporateActionNarrative20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative20 obj) throws Exception {
+			checkCorporateActionNarrative20(obj);
 		}
 	};
 	/**
@@ -740,11 +824,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative22> forCorporateActionNarrative22 = new MMConstraint<CorporateActionNarrative22>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative22 obj) throws Exception {
+			checkCorporateActionNarrative22(obj);
 		}
 	};
 	/**
@@ -770,11 +858,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative3> forCorporateActionNarrative3 = new MMConstraint<CorporateActionNarrative3>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative3 obj) throws Exception {
+			checkCorporateActionNarrative3(obj);
 		}
 	};
 	/**
@@ -808,12 +900,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation2> forUpdatedAdditionalInformation2 = new MMConstraint<UpdatedAdditionalInformation2>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkUpdatedAdditionalInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The Additionalnformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forUpdatedAdditionalInformation8);
 			owner_lazy = () -> UpdatedAdditionalInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedAdditionalInformation2 obj) throws Exception {
+			checkUpdatedAdditionalInformation2(obj);
 		}
 	};
 	/**
@@ -847,12 +943,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative11> forCorporateActionNarrative11 = new MMConstraint<CorporateActionNarrative11>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionNarrative27);
 			owner_lazy = () -> CorporateActionNarrative11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative11 obj) throws Exception {
+			checkCorporateActionNarrative11(obj);
 		}
 	};
 	/**
@@ -878,11 +978,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative18> forCorporateActionNarrative18 = new MMConstraint<CorporateActionNarrative18>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative18 obj) throws Exception {
+			checkCorporateActionNarrative18(obj);
 		}
 	};
 	/**
@@ -908,11 +1012,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation4> forUpdatedAdditionalInformation4 = new MMConstraint<UpdatedAdditionalInformation4>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkUpdatedAdditionalInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The Additionalnformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> UpdatedAdditionalInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedAdditionalInformation4 obj) throws Exception {
+			checkUpdatedAdditionalInformation4(obj);
 		}
 	};
 	/**
@@ -938,11 +1046,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative17> forCorporateActionNarrative17 = new MMConstraint<CorporateActionNarrative17>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative17 obj) throws Exception {
+			checkCorporateActionNarrative17(obj);
 		}
 	};
 	/**
@@ -976,12 +1088,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative24> forCorporateActionNarrative24 = new MMConstraint<CorporateActionNarrative24>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionNarrative26);
 			owner_lazy = () -> CorporateActionNarrative24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative24 obj) throws Exception {
+			checkCorporateActionNarrative24(obj);
 		}
 	};
 	/**
@@ -1007,11 +1123,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrative25> forCorporateActionNarrative25 = new MMConstraint<CorporateActionNarrative25>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrative25 obj) throws Exception {
+			checkCorporateActionNarrative25(obj);
 		}
 	};
 	/**
@@ -1037,11 +1157,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount34> forPartyIdentificationAndAccount34 = new MMConstraint<PartyIdentificationAndAccount34>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount34 obj) throws Exception {
+			checkPartyIdentificationAndAccount34(obj);
 		}
 	};
 	/**
@@ -1067,11 +1191,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation7> forUpdatedAdditionalInformation7 = new MMConstraint<UpdatedAdditionalInformation7>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkUpdatedAdditionalInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The Additionalnformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> UpdatedAdditionalInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedAdditionalInformation7 obj) throws Exception {
+			checkUpdatedAdditionalInformation7(obj);
 		}
 	};
 	/**
@@ -1102,12 +1230,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount101> forPartyIdentificationAndAccount101 = new MMConstraint<PartyIdentificationAndAccount101>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount54;
 			owner_lazy = () -> PartyIdentificationAndAccount101.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount101 obj) throws Exception {
+			checkPartyIdentificationAndAccount101(obj);
 		}
 	};
 	/**
@@ -1133,11 +1265,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount104> forPartyIdentificationAndAccount104 = new MMConstraint<PartyIdentificationAndAccount104>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount104;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount104.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount104 obj) throws Exception {
+			checkPartyIdentificationAndAccount104(obj);
 		}
 	};
 	/**
@@ -1168,12 +1304,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount122> forPartyIdentificationAndAccount122 = new MMConstraint<PartyIdentificationAndAccount122>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount122;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount51;
 			owner_lazy = () -> PartyIdentificationAndAccount122.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount122 obj) throws Exception {
+			checkPartyIdentificationAndAccount122(obj);
 		}
 	};
 	/**
@@ -1204,12 +1344,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentification92> forPartyIdentification92 = new MMConstraint<PartyIdentification92>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification92;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentification47;
 			owner_lazy = () -> PartyIdentification92.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification92 obj) throws Exception {
+			checkPartyIdentification92(obj);
 		}
 	};
 	/**
@@ -1235,11 +1379,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount120> forPartyIdentificationAndAccount120 = new MMConstraint<PartyIdentificationAndAccount120>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount120;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount120.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount120 obj) throws Exception {
+			checkPartyIdentificationAndAccount120(obj);
 		}
 	};
 	/**
@@ -1270,12 +1418,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount121> forPartyIdentificationAndAccount121 = new MMConstraint<PartyIdentificationAndAccount121>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount121;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount52;
 			owner_lazy = () -> PartyIdentificationAndAccount121.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount121 obj) throws Exception {
+			checkPartyIdentificationAndAccount121(obj);
 		}
 	};
 	/**
@@ -1309,12 +1461,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentification102> forPartyIdentification102 = new MMConstraint<PartyIdentification102>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification102;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentification120);
 			owner_lazy = () -> PartyIdentification102.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification102 obj) throws Exception {
+			checkPartyIdentification102(obj);
 		}
 	};
 	/**
@@ -1340,11 +1496,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount129> forPartyIdentificationAndAccount129 = new MMConstraint<PartyIdentificationAndAccount129>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount129;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount129.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount129 obj) throws Exception {
+			checkPartyIdentificationAndAccount129(obj);
 		}
 	};
 	/**
@@ -1370,11 +1530,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount130> forPartyIdentificationAndAccount130 = new MMConstraint<PartyIdentificationAndAccount130>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount130;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount130.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount130 obj) throws Exception {
+			checkPartyIdentificationAndAccount130(obj);
 		}
 	};
 	/**
@@ -1400,11 +1564,15 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount128> forPartyIdentificationAndAccount128 = new MMConstraint<PartyIdentificationAndAccount128>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount128;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount128.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount128 obj) throws Exception {
+			checkPartyIdentificationAndAccount128(obj);
 		}
 	};
 	/**
@@ -1435,12 +1603,16 @@ public class ConstraintAdditionalInforrmationRule {
 	 */
 	public static final MMConstraint<PartyIdentification120> forPartyIdentification120 = new MMConstraint<PartyIdentification120>() {
 		{
-			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification120;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
 			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentification102;
 			owner_lazy = () -> PartyIdentification120.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification120 obj) throws Exception {
+			checkPartyIdentification120(obj);
 		}
 	};
 

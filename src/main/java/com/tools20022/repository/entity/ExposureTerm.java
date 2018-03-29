@@ -22,9 +22,9 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ExposureTypeCode;
 import com.tools20022.repository.codeset.RoundingMethodCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.CollateralAgreement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -472,7 +472,7 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmExposureType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ExposureTerm, ExposureTypeCode> mmExposureType = new MMBusinessAttribute<ExposureTerm, ExposureTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExposureType1Choice.mmCode, ExposureType1Choice.mmProprietary, ExposureType3Choice.mmCode, ExposureType3Choice.mmProprietary, SettlementDetails50.mmExposureType, ExposureType7Choice.mmCode,
 					ExposureType7Choice.mmProprietary, SettlementDetails51.mmExposureType, SettlementDetails6.mmExposureType, ExposureType2Choice.mmCode, ExposureType2Choice.mmProprietary, SettlementDetails20.mmExposureType,
@@ -501,12 +501,14 @@ public class ExposureTerm {
 			simpleType_lazy = () -> ExposureTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ExposureTerm.class.getMethod("getExposureType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ExposureTypeCode getValue(ExposureTerm obj) {
+			return obj.getExposureType();
+		}
+
+		@Override
+		public void setValue(ExposureTerm obj, ExposureTypeCode value) {
+			obj.setExposureType(value);
 		}
 	};
 	protected ActiveCurrencyAndAmount minimumTransferAmount;
@@ -551,7 +553,7 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMinimumTransferAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ExposureTerm, ActiveCurrencyAndAmount> mmMinimumTransferAmount = new MMBusinessAttribute<ExposureTerm, ActiveCurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(VariationMargin1.mmMinimumTransferAmount, SegregatedIndependentAmountMargin1.mmMinimumTransferAmount, SummaryAmounts1.mmMinimumTransferAmount);
 			isDerived = false;
@@ -564,12 +566,14 @@ public class ExposureTerm {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ExposureTerm.class.getMethod("getMinimumTransferAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveCurrencyAndAmount getValue(ExposureTerm obj) {
+			return obj.getMinimumTransferAmount();
+		}
+
+		@Override
+		public void setValue(ExposureTerm obj, ActiveCurrencyAndAmount value) {
+			obj.setMinimumTransferAmount(value);
 		}
 	};
 	protected ActiveCurrencyAndAmount roundingAmount;
@@ -614,7 +618,7 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRoundingAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ExposureTerm, ActiveCurrencyAndAmount> mmRoundingAmount = new MMBusinessAttribute<ExposureTerm, ActiveCurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(VariationMargin1.mmRoundingAmount, SegregatedIndependentAmountMargin1.mmRoundingAmount, SummaryAmounts1.mmRoundingAmount);
 			isDerived = false;
@@ -627,12 +631,14 @@ public class ExposureTerm {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ExposureTerm.class.getMethod("getRoundingAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveCurrencyAndAmount getValue(ExposureTerm obj) {
+			return obj.getRoundingAmount();
+		}
+
+		@Override
+		public void setValue(ExposureTerm obj, ActiveCurrencyAndAmount value) {
+			obj.setRoundingAmount(value);
 		}
 	};
 	protected RoundingMethodCode roundingMethod;
@@ -674,7 +680,7 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRoundingMethod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ExposureTerm, RoundingMethodCode> mmRoundingMethod = new MMBusinessAttribute<ExposureTerm, RoundingMethodCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(VariationMargin1.mmRoundingMethod, SegregatedIndependentAmountMargin1.mmRoundingMethod);
 			isDerived = false;
@@ -687,12 +693,14 @@ public class ExposureTerm {
 			simpleType_lazy = () -> RoundingMethodCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ExposureTerm.class.getMethod("getRoundingMethod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RoundingMethodCode getValue(ExposureTerm obj) {
+			return obj.getRoundingMethod();
+		}
+
+		@Override
+		public void setValue(ExposureTerm obj, RoundingMethodCode value) {
+			obj.setRoundingMethod(value);
 		}
 	};
 	protected CollateralAgreement relatedCollateralAgreement;
@@ -728,7 +736,7 @@ public class ExposureTerm {
 	 * definition} = "Agreement in which the exposure terms are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedCollateralAgreement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ExposureTerm, Optional<CollateralAgreement>> mmRelatedCollateralAgreement = new MMBusinessAssociationEnd<ExposureTerm, Optional<CollateralAgreement>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmObject();
@@ -737,9 +745,19 @@ public class ExposureTerm {
 			definition = "Agreement in which the exposure terms are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmExposureTerm;
+			opposite_lazy = () -> CollateralAgreement.mmExposureTerm;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
+			type_lazy = () -> CollateralAgreement.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralAgreement> getValue(ExposureTerm obj) {
+			return obj.getRelatedCollateralAgreement();
+		}
+
+		@Override
+		public void setValue(ExposureTerm obj, Optional<CollateralAgreement> value) {
+			obj.setRelatedCollateralAgreement(value.orElse(null));
 		}
 	};
 	protected ActiveCurrencyAndAmount minimumRequirementDeposit;
@@ -784,7 +802,7 @@ public class ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMinimumRequirementDeposit = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ExposureTerm, ActiveCurrencyAndAmount> mmMinimumRequirementDeposit = new MMBusinessAttribute<ExposureTerm, ActiveCurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Margin2.mmMinimumRequirementDeposit, MarginCalculation1.mmMinimumRequirementDeposit, MarginCalculation2.mmMinimumRequirementDeposit);
 			isDerived = false;
@@ -797,12 +815,14 @@ public class ExposureTerm {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ExposureTerm.class.getMethod("getMinimumRequirementDeposit", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveCurrencyAndAmount getValue(ExposureTerm obj) {
+			return obj.getMinimumRequirementDeposit();
+		}
+
+		@Override
+		public void setValue(ExposureTerm obj, ActiveCurrencyAndAmount value) {
+			obj.setMinimumRequirementDeposit(value);
 		}
 	};
 
@@ -813,7 +833,7 @@ public class ExposureTerm {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExposureTerm";
 				definition = "Specifies the terms used to calculate a risk exposure and its coverage.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralAgreement.mmExposureTerm);
+				associationDomain_lazy = () -> Arrays.asList(CollateralAgreement.mmExposureTerm);
 				derivationElement_lazy = () -> Arrays.asList(MarginTerms1Choice.mmMarginDetails);
 				subType_lazy = () -> Arrays.asList(IndependentAmountTerm.mmObject(), VariationMarginTerm.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureTerm.mmExposureType, com.tools20022.repository.entity.ExposureTerm.mmMinimumTransferAmount,
@@ -872,7 +892,7 @@ public class ExposureTerm {
 		return relatedCollateralAgreement == null ? Optional.empty() : Optional.of(relatedCollateralAgreement);
 	}
 
-	public ExposureTerm setRelatedCollateralAgreement(com.tools20022.repository.entity.CollateralAgreement relatedCollateralAgreement) {
+	public ExposureTerm setRelatedCollateralAgreement(CollateralAgreement relatedCollateralAgreement) {
 		this.relatedCollateralAgreement = relatedCollateralAgreement;
 		return this;
 	}

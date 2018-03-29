@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress9;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +120,7 @@ public class VoteInstructionForMeetingResolution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVoteIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VoteInstructionForMeetingResolution1, VoteInstructionAtMeeting1Code> mmVoteIndication = new MMMessageAttribute<VoteInstructionForMeetingResolution1, VoteInstructionAtMeeting1Code>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstructionForMeetingResolution1.mmObject();
@@ -131,6 +132,16 @@ public class VoteInstructionForMeetingResolution1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
+		}
+
+		@Override
+		public VoteInstructionAtMeeting1Code getValue(VoteInstructionForMeetingResolution1 obj) {
+			return obj.getVoteIndication();
+		}
+
+		@Override
+		public void setValue(VoteInstructionForMeetingResolution1 obj, VoteInstructionAtMeeting1Code value) {
+			obj.setVoteIndication(value);
 		}
 	};
 	@XmlElement(name = "Shrhldr", required = true)
@@ -168,7 +179,7 @@ public class VoteInstructionForMeetingResolution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShareholder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteInstructionForMeetingResolution1, NameAndAddress9> mmShareholder = new MMMessageAssociationEnd<VoteInstructionForMeetingResolution1, NameAndAddress9>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstructionForMeetingResolution1.mmObject();
@@ -180,7 +191,17 @@ public class VoteInstructionForMeetingResolution1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress9.mmObject();
+			type_lazy = () -> NameAndAddress9.mmObject();
+		}
+
+		@Override
+		public NameAndAddress9 getValue(VoteInstructionForMeetingResolution1 obj) {
+			return obj.getShareholder();
+		}
+
+		@Override
+		public void setValue(VoteInstructionForMeetingResolution1 obj, NameAndAddress9 value) {
+			obj.setShareholder(value);
 		}
 	};
 	/**
@@ -260,7 +281,7 @@ public class VoteInstructionForMeetingResolution1 {
 		return shareholder;
 	}
 
-	public VoteInstructionForMeetingResolution1 setShareholder(com.tools20022.repository.msg.NameAndAddress9 shareholder) {
+	public VoteInstructionForMeetingResolution1 setShareholder(NameAndAddress9 shareholder) {
 		this.shareholder = Objects.requireNonNull(shareholder);
 		return this;
 	}

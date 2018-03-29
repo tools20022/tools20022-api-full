@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CreditTransferTransaction23;
+import com.tools20022.repository.msg.GroupHeader70;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -105,7 +108,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FIToFICreditTransferTransactionInformationDetails1, GroupHeader70> mmGroupHeader = new MMMessageAssociationEnd<FIToFICreditTransferTransactionInformationDetails1, GroupHeader70>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
@@ -116,11 +119,21 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GroupHeader70.mmObject();
+			type_lazy = () -> GroupHeader70.mmObject();
+		}
+
+		@Override
+		public GroupHeader70 getValue(FIToFICreditTransferTransactionInformationDetails1 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFICreditTransferTransactionInformationDetails1 obj, GroupHeader70 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "CdtTrfTxInf", required = true)
-	protected List<com.tools20022.repository.msg.CreditTransferTransaction23> creditTransferTransactionInformation;
+	protected List<CreditTransferTransaction23> creditTransferTransactionInformation;
 	/**
 	 * 
 	 <p>
@@ -150,7 +163,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditTransferTransactionInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FIToFICreditTransferTransactionInformationDetails1, List<CreditTransferTransaction23>> mmCreditTransferTransactionInformation = new MMMessageAssociationEnd<FIToFICreditTransferTransactionInformationDetails1, List<CreditTransferTransaction23>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
@@ -160,11 +173,21 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			definition = "Provide further details specific to the individual transaction(s) included in the message.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CreditTransferTransaction23.mmObject();
+			type_lazy = () -> CreditTransferTransaction23.mmObject();
+		}
+
+		@Override
+		public List<CreditTransferTransaction23> getValue(FIToFICreditTransferTransactionInformationDetails1 obj) {
+			return obj.getCreditTransferTransactionInformation();
+		}
+
+		@Override
+		public void setValue(FIToFICreditTransferTransactionInformationDetails1 obj, List<CreditTransferTransaction23> value) {
+			obj.setCreditTransferTransactionInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -193,7 +216,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FIToFICreditTransferTransactionInformationDetails1, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<FIToFICreditTransferTransactionInformationDetails1, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFICreditTransferTransactionInformationDetails1.mmObject();
 			isDerived = false;
@@ -203,7 +226,17 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(FIToFICreditTransferTransactionInformationDetails1 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FIToFICreditTransferTransactionInformationDetails1 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -226,7 +259,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 		return groupHeader;
 	}
 
-	public FIToFICreditTransferTransactionInformationDetails1 setGroupHeader(com.tools20022.repository.msg.GroupHeader70 groupHeader) {
+	public FIToFICreditTransferTransactionInformationDetails1 setGroupHeader(GroupHeader70 groupHeader) {
 		this.groupHeader = Objects.requireNonNull(groupHeader);
 		return this;
 	}
@@ -235,7 +268,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 		return creditTransferTransactionInformation == null ? creditTransferTransactionInformation = new ArrayList<>() : creditTransferTransactionInformation;
 	}
 
-	public FIToFICreditTransferTransactionInformationDetails1 setCreditTransferTransactionInformation(List<com.tools20022.repository.msg.CreditTransferTransaction23> creditTransferTransactionInformation) {
+	public FIToFICreditTransferTransactionInformationDetails1 setCreditTransferTransactionInformation(List<CreditTransferTransaction23> creditTransferTransactionInformation) {
 		this.creditTransferTransactionInformation = Objects.requireNonNull(creditTransferTransactionInformation);
 		return this;
 	}
@@ -244,7 +277,7 @@ public class FIToFICreditTransferTransactionInformationDetails1 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public FIToFICreditTransferTransactionInformationDetails1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public FIToFICreditTransferTransactionInformationDetails1 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

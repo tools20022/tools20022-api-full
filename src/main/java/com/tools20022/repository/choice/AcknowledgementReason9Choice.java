@@ -130,7 +130,7 @@ public class AcknowledgementReason9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason9Choice, AcknowledgementReason6Code> mmCode = new MMMessageAttribute<AcknowledgementReason9Choice, AcknowledgementReason6Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason9Choice.mmObject();
@@ -144,6 +144,16 @@ public class AcknowledgementReason9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AcknowledgementReason6Code.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason6Code getValue(AcknowledgementReason9Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason9Choice obj, AcknowledgementReason6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -193,7 +203,7 @@ public class AcknowledgementReason9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason9Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<AcknowledgementReason9Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason9Choice.mmObject();
@@ -207,6 +217,16 @@ public class AcknowledgementReason9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(AcknowledgementReason9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason9Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

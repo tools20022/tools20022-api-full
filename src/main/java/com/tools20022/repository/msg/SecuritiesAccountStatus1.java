@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount13;
+import com.tools20022.repository.msg.StatusReasonInformation10;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +128,7 @@ public class SecuritiesAccountStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedSecuritiesAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountStatus1, Optional<SecuritiesAccount13>> mmRelatedSecuritiesAccount = new MMMessageAssociationEnd<SecuritiesAccountStatus1, Optional<SecuritiesAccount13>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
@@ -138,7 +140,17 @@ public class SecuritiesAccountStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			type_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount13> getValue(SecuritiesAccountStatus1 obj) {
+			return obj.getRelatedSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountStatus1 obj, Optional<SecuritiesAccount13> value) {
+			obj.setRelatedSecuritiesAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -179,7 +191,7 @@ public class SecuritiesAccountStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountStatus1, Status6Code> mmStatus = new MMMessageAttribute<SecuritiesAccountStatus1, Status6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
@@ -192,9 +204,19 @@ public class SecuritiesAccountStatus1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
+
+		@Override
+		public Status6Code getValue(SecuritiesAccountStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountStatus1 obj, Status6Code value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "StsRsn")
-	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
+	protected List<StatusReasonInformation10> statusReason;
 	/**
 	 * 
 	 <p>
@@ -231,7 +253,7 @@ public class SecuritiesAccountStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountStatus1, List<StatusReasonInformation10>> mmStatusReason = new MMMessageAssociationEnd<SecuritiesAccountStatus1, List<StatusReasonInformation10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
@@ -242,7 +264,17 @@ public class SecuritiesAccountStatus1 {
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountStatus2.mmStatusReason);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
+			type_lazy = () -> StatusReasonInformation10.mmObject();
+		}
+
+		@Override
+		public List<StatusReasonInformation10> getValue(SecuritiesAccountStatus1 obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountStatus1 obj, List<StatusReasonInformation10> value) {
+			obj.setStatusReason(value);
 		}
 	};
 
@@ -266,7 +298,7 @@ public class SecuritiesAccountStatus1 {
 		return relatedSecuritiesAccount == null ? Optional.empty() : Optional.of(relatedSecuritiesAccount);
 	}
 
-	public SecuritiesAccountStatus1 setRelatedSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 relatedSecuritiesAccount) {
+	public SecuritiesAccountStatus1 setRelatedSecuritiesAccount(SecuritiesAccount13 relatedSecuritiesAccount) {
 		this.relatedSecuritiesAccount = relatedSecuritiesAccount;
 		return this;
 	}
@@ -284,7 +316,7 @@ public class SecuritiesAccountStatus1 {
 		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public SecuritiesAccountStatus1 setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+	public SecuritiesAccountStatus1 setStatusReason(List<StatusReasonInformation10> statusReason) {
 		this.statusReason = Objects.requireNonNull(statusReason);
 		return this;
 	}

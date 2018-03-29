@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.reda.PriceReportCorrectionV02;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.PriceValuation2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -108,7 +110,7 @@ public class PriceCorrection2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviouslySentPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceCorrection2, PriceValuation2> mmPreviouslySentPriceDetails = new MMMessageAssociationEnd<PriceCorrection2, PriceValuation2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceCorrection2.mmObject();
 			isDerived = false;
@@ -119,7 +121,17 @@ public class PriceCorrection2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
+			type_lazy = () -> PriceValuation2.mmObject();
+		}
+
+		@Override
+		public PriceValuation2 getValue(PriceCorrection2 obj) {
+			return obj.getPreviouslySentPriceDetails();
+		}
+
+		@Override
+		public void setValue(PriceCorrection2 obj, PriceValuation2 value) {
+			obj.setPreviouslySentPriceDetails(value);
 		}
 	};
 	@XmlElement(name = "CrrctdPricDtls")
@@ -152,7 +164,7 @@ public class PriceCorrection2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorrectedPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceCorrection2, Optional<PriceValuation2>> mmCorrectedPriceDetails = new MMMessageAssociationEnd<PriceCorrection2, Optional<PriceValuation2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceCorrection2.mmObject();
 			isDerived = false;
@@ -163,11 +175,21 @@ public class PriceCorrection2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
+			type_lazy = () -> PriceValuation2.mmObject();
+		}
+
+		@Override
+		public Optional<PriceValuation2> getValue(PriceCorrection2 obj) {
+			return obj.getCorrectedPriceDetails();
+		}
+
+		@Override
+		public void setValue(PriceCorrection2 obj, Optional<PriceValuation2> value) {
+			obj.setCorrectedPriceDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -195,7 +217,7 @@ public class PriceCorrection2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceCorrection2, List<Extension1>> mmExtension = new MMMessageAssociationEnd<PriceCorrection2, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceCorrection2.mmObject();
 			isDerived = false;
@@ -205,7 +227,17 @@ public class PriceCorrection2 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(PriceCorrection2 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(PriceCorrection2 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -228,7 +260,7 @@ public class PriceCorrection2 {
 		return previouslySentPriceDetails;
 	}
 
-	public PriceCorrection2 setPreviouslySentPriceDetails(com.tools20022.repository.msg.PriceValuation2 previouslySentPriceDetails) {
+	public PriceCorrection2 setPreviouslySentPriceDetails(PriceValuation2 previouslySentPriceDetails) {
 		this.previouslySentPriceDetails = Objects.requireNonNull(previouslySentPriceDetails);
 		return this;
 	}
@@ -237,7 +269,7 @@ public class PriceCorrection2 {
 		return correctedPriceDetails == null ? Optional.empty() : Optional.of(correctedPriceDetails);
 	}
 
-	public PriceCorrection2 setCorrectedPriceDetails(com.tools20022.repository.msg.PriceValuation2 correctedPriceDetails) {
+	public PriceCorrection2 setCorrectedPriceDetails(PriceValuation2 correctedPriceDetails) {
 		this.correctedPriceDetails = correctedPriceDetails;
 		return this;
 	}
@@ -246,7 +278,7 @@ public class PriceCorrection2 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public PriceCorrection2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public PriceCorrection2 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

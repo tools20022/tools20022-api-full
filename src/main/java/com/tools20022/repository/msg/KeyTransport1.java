@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification1;
+import com.tools20022.repository.msg.CertificateIdentifier1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +110,7 @@ public class KeyTransport1 {
 	 * definition} = "Version of the cryptographic key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KeyTransport1, Number> mmVersion = new MMMessageAttribute<KeyTransport1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport1.mmObject();
 			isDerived = false;
@@ -119,6 +121,16 @@ public class KeyTransport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(KeyTransport1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(KeyTransport1 obj, Number value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "RcptId", required = true)
@@ -149,7 +161,7 @@ public class KeyTransport1 {
 	 * "Transport key or key encryption key (KEK) for the recipient."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KeyTransport1, CertificateIdentifier1> mmRecipientIdentification = new MMMessageAssociationEnd<KeyTransport1, CertificateIdentifier1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport1.mmObject();
 			isDerived = false;
@@ -160,7 +172,17 @@ public class KeyTransport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CertificateIdentifier1.mmObject();
+			type_lazy = () -> CertificateIdentifier1.mmObject();
+		}
+
+		@Override
+		public CertificateIdentifier1 getValue(KeyTransport1 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(KeyTransport1 obj, CertificateIdentifier1 value) {
+			obj.setRecipientIdentification(value);
 		}
 	};
 	@XmlElement(name = "KeyNcrptnAlgo", required = true)
@@ -191,7 +213,7 @@ public class KeyTransport1 {
 	 * definition} = "Algorithm to encrypt the key encryption key (KEK)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyEncryptionAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KeyTransport1, AlgorithmIdentification1> mmKeyEncryptionAlgorithm = new MMMessageAssociationEnd<KeyTransport1, AlgorithmIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport1.mmObject();
 			isDerived = false;
@@ -202,7 +224,17 @@ public class KeyTransport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification1.mmObject();
+			type_lazy = () -> AlgorithmIdentification1.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification1 getValue(KeyTransport1 obj) {
+			return obj.getKeyEncryptionAlgorithm();
+		}
+
+		@Override
+		public void setValue(KeyTransport1 obj, AlgorithmIdentification1 value) {
+			obj.setKeyEncryptionAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcrptdKey", required = true)
@@ -234,7 +266,7 @@ public class KeyTransport1 {
 	 * definition} = "Encrypted key encryption key (KEK)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptedKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KeyTransport1, Max140Binary> mmEncryptedKey = new MMMessageAttribute<KeyTransport1, Max140Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport1.mmObject();
 			isDerived = false;
@@ -245,6 +277,16 @@ public class KeyTransport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Max140Binary getValue(KeyTransport1 obj) {
+			return obj.getEncryptedKey();
+		}
+
+		@Override
+		public void setValue(KeyTransport1 obj, Max140Binary value) {
+			obj.setEncryptedKey(value);
 		}
 	};
 
@@ -276,7 +318,7 @@ public class KeyTransport1 {
 		return recipientIdentification;
 	}
 
-	public KeyTransport1 setRecipientIdentification(com.tools20022.repository.msg.CertificateIdentifier1 recipientIdentification) {
+	public KeyTransport1 setRecipientIdentification(CertificateIdentifier1 recipientIdentification) {
 		this.recipientIdentification = Objects.requireNonNull(recipientIdentification);
 		return this;
 	}
@@ -285,7 +327,7 @@ public class KeyTransport1 {
 		return keyEncryptionAlgorithm;
 	}
 
-	public KeyTransport1 setKeyEncryptionAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification1 keyEncryptionAlgorithm) {
+	public KeyTransport1 setKeyEncryptionAlgorithm(AlgorithmIdentification1 keyEncryptionAlgorithm) {
 		this.keyEncryptionAlgorithm = Objects.requireNonNull(keyEncryptionAlgorithm);
 		return this;
 	}

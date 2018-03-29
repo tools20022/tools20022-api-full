@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Case3;
+import com.tools20022.repository.msg.PaymentCancellationReason3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -150,7 +152,7 @@ public class OriginalGroupHeader6 {
 	 * OriginalGroupHeader4.mmGroupCancellationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupCancellationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader6, Optional<Max35Text>> mmGroupCancellationIdentification = new MMMessageAttribute<OriginalGroupHeader6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader6.mmObject();
 			isDerived = false;
@@ -163,6 +165,16 @@ public class OriginalGroupHeader6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OriginalGroupHeader6 obj) {
+			return obj.getGroupCancellationIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader6 obj, Optional<Max35Text> value) {
+			obj.setGroupCancellationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Case")
@@ -212,7 +224,7 @@ public class OriginalGroupHeader6 {
 	 * OriginalGroupHeader4.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCase = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupHeader6, Optional<Case3>> mmCase = new MMMessageAssociationEnd<OriginalGroupHeader6, Optional<Case3>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRelatedInvestigationCase;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader6.mmObject();
@@ -226,7 +238,17 @@ public class OriginalGroupHeader6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Case3.mmObject();
+			type_lazy = () -> Case3.mmObject();
+		}
+
+		@Override
+		public Optional<Case3> getValue(OriginalGroupHeader6 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader6 obj, Optional<Case3> value) {
+			obj.setCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlMsgId", required = true)
@@ -278,7 +300,7 @@ public class OriginalGroupHeader6 {
 	 * OriginalGroupHeader4.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader6, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalGroupHeader6, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader6.mmObject();
@@ -292,6 +314,16 @@ public class OriginalGroupHeader6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupHeader6 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader6 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -338,7 +370,7 @@ public class OriginalGroupHeader6 {
 	 * OriginalGroupHeader4.mmOriginalMessageNameIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader6, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalGroupHeader6, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader6.mmObject();
 			isDerived = false;
@@ -351,6 +383,16 @@ public class OriginalGroupHeader6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupHeader6 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader6 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCreDtTm")
@@ -400,7 +442,7 @@ public class OriginalGroupHeader6 {
 	 * OriginalGroupHeader4.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader6, Optional<ISODateTime>> mmOriginalCreationDateTime = new MMMessageAttribute<OriginalGroupHeader6, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader6.mmObject();
@@ -414,6 +456,16 @@ public class OriginalGroupHeader6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(OriginalGroupHeader6 obj) {
+			return obj.getOriginalCreationDateTime();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader6 obj, Optional<ISODateTime> value) {
+			obj.setOriginalCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfTxs")
@@ -460,7 +512,7 @@ public class OriginalGroupHeader6 {
 	 * OriginalGroupHeader4.mmNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader6, Optional<Max15NumericText>> mmNumberOfTransactions = new MMMessageAttribute<OriginalGroupHeader6, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader6.mmObject();
 			isDerived = false;
@@ -473,6 +525,16 @@ public class OriginalGroupHeader6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(OriginalGroupHeader6 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader6 obj, Optional<Max15NumericText> value) {
+			obj.setNumberOfTransactions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrlSum")
@@ -520,7 +582,7 @@ public class OriginalGroupHeader6 {
 	 * OriginalGroupHeader4.mmControlSum}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader6, Optional<DecimalNumber>> mmControlSum = new MMMessageAttribute<OriginalGroupHeader6, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader6.mmObject();
 			isDerived = false;
@@ -533,6 +595,16 @@ public class OriginalGroupHeader6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(OriginalGroupHeader6 obj) {
+			return obj.getControlSum();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader6 obj, Optional<DecimalNumber> value) {
+			obj.setControlSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrpCxl")
@@ -580,7 +652,7 @@ public class OriginalGroupHeader6 {
 	 * OriginalGroupHeader4.mmGroupCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupCancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader6, Optional<GroupCancellationIndicator>> mmGroupCancellation = new MMMessageAttribute<OriginalGroupHeader6, Optional<GroupCancellationIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader6.mmObject();
 			isDerived = false;
@@ -594,9 +666,19 @@ public class OriginalGroupHeader6 {
 			minOccurs = 0;
 			simpleType_lazy = () -> GroupCancellationIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<GroupCancellationIndicator> getValue(OriginalGroupHeader6 obj) {
+			return obj.getGroupCancellation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader6 obj, Optional<GroupCancellationIndicator> value) {
+			obj.setGroupCancellation(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CxlRsnInf")
-	protected List<com.tools20022.repository.msg.PaymentCancellationReason3> cancellationReasonInformation;
+	protected List<PaymentCancellationReason3> cancellationReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -643,7 +725,7 @@ public class OriginalGroupHeader6 {
 	 * OriginalGroupHeader4.mmCancellationReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupHeader6, List<PaymentCancellationReason3>> mmCancellationReasonInformation = new MMMessageAssociationEnd<OriginalGroupHeader6, List<PaymentCancellationReason3>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader6.mmObject();
@@ -656,7 +738,17 @@ public class OriginalGroupHeader6 {
 			previousVersion_lazy = () -> OriginalGroupHeader4.mmCancellationReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCancellationReason3.mmObject();
+			type_lazy = () -> PaymentCancellationReason3.mmObject();
+		}
+
+		@Override
+		public List<PaymentCancellationReason3> getValue(OriginalGroupHeader6 obj) {
+			return obj.getCancellationReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader6 obj, List<PaymentCancellationReason3> value) {
+			obj.setCancellationReasonInformation(value);
 		}
 	};
 
@@ -693,7 +785,7 @@ public class OriginalGroupHeader6 {
 		return case_ == null ? Optional.empty() : Optional.of(case_);
 	}
 
-	public OriginalGroupHeader6 setCase(com.tools20022.repository.msg.Case3 case_) {
+	public OriginalGroupHeader6 setCase(Case3 case_) {
 		this.case_ = case_;
 		return this;
 	}
@@ -756,7 +848,7 @@ public class OriginalGroupHeader6 {
 		return cancellationReasonInformation == null ? cancellationReasonInformation = new ArrayList<>() : cancellationReasonInformation;
 	}
 
-	public OriginalGroupHeader6 setCancellationReasonInformation(List<com.tools20022.repository.msg.PaymentCancellationReason3> cancellationReasonInformation) {
+	public OriginalGroupHeader6 setCancellationReasonInformation(List<PaymentCancellationReason3> cancellationReasonInformation) {
 		this.cancellationReasonInformation = Objects.requireNonNull(cancellationReasonInformation);
 		return this;
 	}

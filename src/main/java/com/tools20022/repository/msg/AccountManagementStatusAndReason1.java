@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RejectedStatus5;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -144,7 +145,7 @@ public class AccountManagementStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason1, AccountManagementStatus1Code> mmStatus = new MMMessageAttribute<AccountManagementStatusAndReason1, AccountManagementStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmManagementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason1.mmObject();
@@ -156,6 +157,16 @@ public class AccountManagementStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementStatus1Code.mmObject();
+		}
+
+		@Override
+		public AccountManagementStatus1Code getValue(AccountManagementStatusAndReason1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason1 obj, AccountManagementStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -191,7 +202,7 @@ public class AccountManagementStatusAndReason1 {
 	 * definition} = "Status of the order is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountManagementStatusAndReason1, RejectedStatus5> mmRejected = new MMMessageAssociationEnd<AccountManagementStatusAndReason1, RejectedStatus5>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason1.mmObject();
@@ -203,7 +214,17 @@ public class AccountManagementStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RejectedStatus5.mmObject();
+			type_lazy = () -> RejectedStatus5.mmObject();
+		}
+
+		@Override
+		public RejectedStatus5 getValue(AccountManagementStatusAndReason1 obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason1 obj, RejectedStatus5 value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -237,7 +258,7 @@ public class AccountManagementStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason1, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<AccountManagementStatusAndReason1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason1.mmObject();
 			isDerived = false;
@@ -248,6 +269,16 @@ public class AccountManagementStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementStatusAndReason1 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason1 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 	/**
@@ -329,7 +360,7 @@ public class AccountManagementStatusAndReason1 {
 		return rejected;
 	}
 
-	public AccountManagementStatusAndReason1 setRejected(com.tools20022.repository.msg.RejectedStatus5 rejected) {
+	public AccountManagementStatusAndReason1 setRejected(RejectedStatus5 rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}

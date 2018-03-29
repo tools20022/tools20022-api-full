@@ -21,12 +21,11 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion;
+import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.AcceptorDiagnosticResponse4;
 import com.tools20022.repository.msg.ContentInformationType11;
 import com.tools20022.repository.msg.Header10;
-import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -56,9 +55,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion
- * CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -67,8 +64,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AccptrDgnstcRspn"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion
- * AcceptortoAcquirerCardTransactionPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
+ * AcceptortoAcquirerCardTransactionArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.014.001.04}</li>
@@ -138,7 +135,7 @@ public class AcceptorDiagnosticResponseV04 {
 	 * AcceptorDiagnosticResponseV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorDiagnosticResponseV04, Header10> mmHeader = new MMMessageBuildingBlock<AcceptorDiagnosticResponseV04, Header10>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,12 +148,14 @@ public class AcceptorDiagnosticResponseV04 {
 			complexType_lazy = () -> Header10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorDiagnosticResponseV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header10 getValue(AcceptorDiagnosticResponseV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticResponseV04 obj, Header10 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "DgnstcRspn", required = true)
@@ -197,7 +196,7 @@ public class AcceptorDiagnosticResponseV04 {
 	 * AcceptorDiagnosticResponseV03.mmDiagnosticResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDiagnosticResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorDiagnosticResponseV04, AcceptorDiagnosticResponse4> mmDiagnosticResponse = new MMMessageBuildingBlock<AcceptorDiagnosticResponseV04, AcceptorDiagnosticResponse4>() {
 		{
 			xmlTag = "DgnstcRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +209,14 @@ public class AcceptorDiagnosticResponseV04 {
 			complexType_lazy = () -> AcceptorDiagnosticResponse4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorDiagnosticResponseV04.class.getMethod("getDiagnosticResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorDiagnosticResponse4 getValue(AcceptorDiagnosticResponseV04 obj) {
+			return obj.getDiagnosticResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticResponseV04 obj, AcceptorDiagnosticResponse4 value) {
+			obj.setDiagnosticResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -256,7 +257,7 @@ public class AcceptorDiagnosticResponseV04 {
 	 * AcceptorDiagnosticResponseV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorDiagnosticResponseV04, ContentInformationType11> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorDiagnosticResponseV04, ContentInformationType11>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +270,14 @@ public class AcceptorDiagnosticResponseV04 {
 			complexType_lazy = () -> ContentInformationType11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorDiagnosticResponseV04.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType11 getValue(AcceptorDiagnosticResponseV04 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticResponseV04 obj, ContentInformationType11 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 
@@ -286,10 +289,10 @@ public class AcceptorDiagnosticResponseV04 {
 				definition = "The AcceptorDiagnosticResponse message is sent by the acquirer (or its agent) to provide to the acceptor the result of the diagnostic request.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticResponseV05.mmObject());
 				previousVersion_lazy = () -> AcceptorDiagnosticResponseV03.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrDgnstcRspn";
-				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
+				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV04.mmHeader, com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV04.mmDiagnosticResponse,
 						com.tools20022.repository.area.caaa.AcceptorDiagnosticResponseV04.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

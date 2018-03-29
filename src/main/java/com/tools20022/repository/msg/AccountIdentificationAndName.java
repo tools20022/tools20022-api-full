@@ -110,7 +110,7 @@ public class AccountIdentificationAndName {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationAndName, AccountIdentification1Choice> mmAccountIdentification = new MMMessageAttribute<AccountIdentificationAndName, AccountIdentification1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName.mmObject();
@@ -122,6 +122,16 @@ public class AccountIdentificationAndName {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1Choice getValue(AccountIdentificationAndName obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationAndName obj, AccountIdentification1Choice value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctNm")
@@ -160,7 +170,7 @@ public class AccountIdentificationAndName {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationAndName, Optional<Max35Text>> mmAccountName = new MMMessageAttribute<AccountIdentificationAndName, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName.mmObject();
@@ -172,6 +182,16 @@ public class AccountIdentificationAndName {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountIdentificationAndName obj) {
+			return obj.getAccountName();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationAndName obj, Optional<Max35Text> value) {
+			obj.setAccountName(value.orElse(null));
 		}
 	};
 

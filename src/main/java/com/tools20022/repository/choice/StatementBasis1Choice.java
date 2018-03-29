@@ -98,7 +98,7 @@ public class StatementBasis1Choice {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementBasis1Choice, StatementBasis1Code> mmCode = new MMMessageAttribute<StatementBasis1Choice, StatementBasis1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementBasis1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class StatementBasis1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementBasis1Code.mmObject();
+		}
+
+		@Override
+		public StatementBasis1Code getValue(StatementBasis1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(StatementBasis1Choice obj, StatementBasis1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class StatementBasis1Choice {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementBasis1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<StatementBasis1Choice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementBasis1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class StatementBasis1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(StatementBasis1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StatementBasis1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

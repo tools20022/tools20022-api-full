@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class EncryptedContent3 {
 	 * EncryptedContent2.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EncryptedContent3, ContentType2Code> mmContentType = new MMMessageAttribute<EncryptedContent3, ContentType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncryptedContent3.mmObject();
 			isDerived = false;
@@ -139,6 +140,16 @@ public class EncryptedContent3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
+		}
+
+		@Override
+		public ContentType2Code getValue(EncryptedContent3 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(EncryptedContent3 obj, ContentType2Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "CnttNcrptnAlgo", required = true)
@@ -183,7 +194,7 @@ public class EncryptedContent3 {
 	 * EncryptedContent2.mmContentEncryptionAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContentEncryptionAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EncryptedContent3, AlgorithmIdentification14> mmContentEncryptionAlgorithm = new MMMessageAssociationEnd<EncryptedContent3, AlgorithmIdentification14>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncryptedContent3.mmObject();
 			isDerived = false;
@@ -196,7 +207,17 @@ public class EncryptedContent3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification14.mmObject();
+			type_lazy = () -> AlgorithmIdentification14.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification14 getValue(EncryptedContent3 obj) {
+			return obj.getContentEncryptionAlgorithm();
+		}
+
+		@Override
+		public void setValue(EncryptedContent3 obj, AlgorithmIdentification14 value) {
+			obj.setContentEncryptionAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcrptdData", required = true)
@@ -242,7 +263,7 @@ public class EncryptedContent3 {
 	 * EncryptedContent2.mmEncryptedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EncryptedContent3, Max100KBinary> mmEncryptedData = new MMMessageAttribute<EncryptedContent3, Max100KBinary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncryptedContent3.mmObject();
 			isDerived = false;
@@ -255,6 +276,16 @@ public class EncryptedContent3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
+		}
+
+		@Override
+		public Max100KBinary getValue(EncryptedContent3 obj) {
+			return obj.getEncryptedData();
+		}
+
+		@Override
+		public void setValue(EncryptedContent3 obj, Max100KBinary value) {
+			obj.setEncryptedData(value);
 		}
 	};
 
@@ -287,7 +318,7 @@ public class EncryptedContent3 {
 		return contentEncryptionAlgorithm;
 	}
 
-	public EncryptedContent3 setContentEncryptionAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification14 contentEncryptionAlgorithm) {
+	public EncryptedContent3 setContentEncryptionAlgorithm(AlgorithmIdentification14 contentEncryptionAlgorithm) {
 		this.contentEncryptionAlgorithm = Objects.requireNonNull(contentEncryptionAlgorithm);
 		return this;
 	}

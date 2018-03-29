@@ -54,11 +54,15 @@ public class ConstraintContractDates2Rule {
 	 */
 	public static final MMConstraint<AccountReport1> forAccountReport1 = new MMConstraint<AccountReport1>() {
 		{
-			validator = ConstraintContractDates2Rule::checkAccountReport1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates2Rule ";
 			definition = "ContractDates/ClosingDate should not be used as part of an account opening and maintenance process.";
 			owner_lazy = () -> AccountReport1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountReport1 obj) throws Exception {
+			checkAccountReport1(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintContractDates2Rule {
 	 */
 	public static final MMConstraint<AccountReport15> forAccountReport15 = new MMConstraint<AccountReport15>() {
 		{
-			validator = ConstraintContractDates2Rule::checkAccountReport15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates2Rule ";
 			definition = "ContractDates/ClosingDate should not be used as part of an account opening and maintenance process.";
 			owner_lazy = () -> AccountReport15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountReport15 obj) throws Exception {
+			checkAccountReport15(obj);
 		}
 	};
 	/**
@@ -122,12 +130,16 @@ public class ConstraintContractDates2Rule {
 	 */
 	public static final MMConstraint<AccountReport14> forAccountReport14 = new MMConstraint<AccountReport14>() {
 		{
-			validator = ConstraintContractDates2Rule::checkAccountReport14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates2Rule ";
 			definition = "ContractDates/ClosingDate should not be used as part of an account opening and maintenance process.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintContractDates2Rule.forAccountReport20);
 			owner_lazy = () -> AccountReport14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountReport14 obj) throws Exception {
+			checkAccountReport14(obj);
 		}
 	};
 	/**
@@ -158,12 +170,16 @@ public class ConstraintContractDates2Rule {
 	 */
 	public static final MMConstraint<AccountReport20> forAccountReport20 = new MMConstraint<AccountReport20>() {
 		{
-			validator = ConstraintContractDates2Rule::checkAccountReport20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates2Rule ";
 			definition = "ContractDates/ClosingDate should not be used as part of an account opening and maintenance process.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintContractDates2Rule.forAccountReport14;
 			owner_lazy = () -> AccountReport20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountReport20 obj) throws Exception {
+			checkAccountReport20(obj);
 		}
 	};
 

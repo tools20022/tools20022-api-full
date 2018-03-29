@@ -49,11 +49,15 @@ public class ConstraintDigestCalculationRule {
 	 */
 	public static final MMConstraint<QualifiedDocumentInformation1> forQualifiedDocumentInformation1 = new MMConstraint<QualifiedDocumentInformation1>() {
 		{
-			validator = ConstraintDigestCalculationRule::checkQualifiedDocumentInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestCalculationRule";
 			definition = "A digest is calculated over the uncompressed version of a document.";
 			owner_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QualifiedDocumentInformation1 obj) throws Exception {
+			checkQualifiedDocumentInformation1(obj);
 		}
 	};
 

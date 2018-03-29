@@ -120,7 +120,7 @@ public class GenericIdentification49 {
 	 * GenericIdentification4.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification49, Max35Text> mmIdentification = new MMMessageAttribute<GenericIdentification49, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification49.mmObject();
@@ -133,6 +133,16 @@ public class GenericIdentification49 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification49 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification49 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdTp", required = true)
@@ -174,7 +184,7 @@ public class GenericIdentification49 {
 	 * GenericIdentification4.mmIdentificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification49, Max35Text> mmIdentificationType = new MMMessageAttribute<GenericIdentification49, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification49.mmObject();
@@ -187,6 +197,16 @@ public class GenericIdentification49 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification49 obj) {
+			return obj.getIdentificationType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification49 obj, Max35Text value) {
+			obj.setIdentificationType(value);
 		}
 	};
 

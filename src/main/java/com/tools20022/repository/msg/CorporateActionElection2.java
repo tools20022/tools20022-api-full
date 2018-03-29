@@ -130,7 +130,7 @@ public class CorporateActionElection2 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionElection2, CorporateActionOption1FormatChoice> mmOptionType = new MMMessageAttribute<CorporateActionElection2, CorporateActionOption1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection2.mmObject();
@@ -142,6 +142,16 @@ public class CorporateActionElection2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption1FormatChoice getValue(CorporateActionElection2 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionElection2 obj, CorporateActionOption1FormatChoice value) {
+			obj.setOptionType(value);
 		}
 	};
 	@XmlElement(name = "OptnNb", required = true)
@@ -180,7 +190,7 @@ public class CorporateActionElection2 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionElection2, Exact3NumericText> mmOptionNumber = new MMMessageAttribute<CorporateActionElection2, Exact3NumericText>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection2.mmObject();
@@ -192,6 +202,16 @@ public class CorporateActionElection2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CorporateActionElection2 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionElection2 obj, Exact3NumericText value) {
+			obj.setOptionNumber(value);
 		}
 	};
 	@XmlElement(name = "NewInstdQty", required = true)
@@ -229,7 +249,7 @@ public class CorporateActionElection2 {
 	 * definition} = "New instructed securities quantity after the amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewInstructedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionElection2, UnitOrFaceAmount1Choice> mmNewInstructedQuantity = new MMMessageAttribute<CorporateActionElection2, UnitOrFaceAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection2.mmObject();
@@ -241,6 +261,16 @@ public class CorporateActionElection2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
+		}
+
+		@Override
+		public UnitOrFaceAmount1Choice getValue(CorporateActionElection2 obj) {
+			return obj.getNewInstructedQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionElection2 obj, UnitOrFaceAmount1Choice value) {
+			obj.setNewInstructedQuantity(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -277,7 +307,7 @@ public class CorporateActionElection2 {
 	 * definition} = "The reason for the amendment request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionElection2, Optional<Max350Text>> mmReason = new MMMessageAttribute<CorporateActionElection2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmAmendmentReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection2.mmObject();
@@ -289,6 +319,16 @@ public class CorporateActionElection2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionElection2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionElection2 obj, Optional<Max350Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

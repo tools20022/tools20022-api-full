@@ -140,7 +140,7 @@ public class IntraPositionReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionReport3, Optional<Max35Text>> mmQueryReference = new MMMessageAttribute<IntraPositionReport3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionReport3.mmObject();
 			isDerived = false;
@@ -153,6 +153,16 @@ public class IntraPositionReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraPositionReport3 obj) {
+			return obj.getQueryReference();
+		}
+
+		@Override
+		public void setValue(IntraPositionReport3 obj, Optional<Max35Text> value) {
+			obj.setQueryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptId")
@@ -192,7 +202,7 @@ public class IntraPositionReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionReport3, Optional<Max35Text>> mmReportIdentification = new MMMessageAttribute<IntraPositionReport3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionReport3.mmObject();
 			isDerived = false;
@@ -204,6 +214,16 @@ public class IntraPositionReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraPositionReport3 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(IntraPositionReport3 obj, Optional<Max35Text> value) {
+			obj.setReportIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryTp", required = true)
@@ -247,7 +267,7 @@ public class IntraPositionReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionReport3, MovementResponseType1Code> mmQueryType = new MMMessageAttribute<IntraPositionReport3, MovementResponseType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionReport3.mmObject();
 			isDerived = false;
@@ -260,6 +280,16 @@ public class IntraPositionReport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
+		}
+
+		@Override
+		public MovementResponseType1Code getValue(IntraPositionReport3 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(IntraPositionReport3 obj, MovementResponseType1Code value) {
+			obj.setQueryType(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -305,7 +335,7 @@ public class IntraPositionReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionReport3, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<IntraPositionReport3, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionReport3.mmObject();
 			isDerived = false;
@@ -318,6 +348,16 @@ public class IntraPositionReport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(IntraPositionReport3 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(IntraPositionReport3 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 

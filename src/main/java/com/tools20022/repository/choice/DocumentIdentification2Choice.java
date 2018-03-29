@@ -126,7 +126,7 @@ public class DocumentIdentification2Choice {
 	 * "Identification of the document asigned by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification2Choice, RestrictedFINXMax16Text> mmAccountServicerDocumentIdentification = new MMMessageAttribute<DocumentIdentification2Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentIdentification2Choice.mmObject();
@@ -139,6 +139,16 @@ public class DocumentIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(DocumentIdentification2Choice obj) {
+			return obj.getAccountServicerDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification2Choice obj, RestrictedFINXMax16Text value) {
+			obj.setAccountServicerDocumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrDocId", required = true)
@@ -180,7 +190,7 @@ public class DocumentIdentification2Choice {
 	 * "Identification of the document asigned by the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification2Choice, RestrictedFINXMax16Text> mmAccountOwnerDocumentIdentification = new MMMessageAttribute<DocumentIdentification2Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentIdentification2Choice.mmObject();
@@ -193,6 +203,16 @@ public class DocumentIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(DocumentIdentification2Choice obj) {
+			return obj.getAccountOwnerDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification2Choice obj, RestrictedFINXMax16Text value) {
+			obj.setAccountOwnerDocumentIdentification(value);
 		}
 	};
 

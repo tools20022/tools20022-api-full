@@ -99,7 +99,7 @@ public class Reference18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference18, Max35Text> mmTradeLegIdentification = new MMMessageAttribute<Reference18, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference18.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class Reference18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference18 obj) {
+			return obj.getTradeLegIdentification();
+		}
+
+		@Override
+		public void setValue(Reference18 obj, Max35Text value) {
+			obj.setTradeLegIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvsMsgId")
@@ -142,7 +152,7 @@ public class Reference18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference18, Optional<Max35Text>> mmPreviousMessageIdentification = new MMMessageAttribute<Reference18, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference18.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class Reference18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference18 obj) {
+			return obj.getPreviousMessageIdentification();
+		}
+
+		@Override
+		public void setValue(Reference18 obj, Optional<Max35Text> value) {
+			obj.setPreviousMessageIdentification(value.orElse(null));
 		}
 	};
 

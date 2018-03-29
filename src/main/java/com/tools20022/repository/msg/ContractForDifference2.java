@@ -113,7 +113,7 @@ public class ContractForDifference2 {
 	 * definition} = "Underlying type of the contract for difference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnderlyingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractForDifference2, UnderlyingContractForDifferenceType3Code> mmUnderlyingType = new MMMessageAttribute<ContractForDifference2, UnderlyingContractForDifferenceType3Code>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractForDifference2.mmObject();
@@ -125,6 +125,16 @@ public class ContractForDifference2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
+		}
+
+		@Override
+		public UnderlyingContractForDifferenceType3Code getValue(ContractForDifference2 obj) {
+			return obj.getUnderlyingType();
+		}
+
+		@Override
+		public void setValue(ContractForDifference2 obj, UnderlyingContractForDifferenceType3Code value) {
+			obj.setUnderlyingType(value);
 		}
 	};
 	@XmlElement(name = "NtnlCcy1")
@@ -157,7 +167,7 @@ public class ContractForDifference2 {
 	 * definition} = "Currency 1 of the underlying currency pair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrency1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractForDifference2, Optional<ActiveOrHistoricCurrencyCode>> mmNotionalCurrency1 = new MMMessageAttribute<ContractForDifference2, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractForDifference2.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class ContractForDifference2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(ContractForDifference2 obj) {
+			return obj.getNotionalCurrency1();
+		}
+
+		@Override
+		public void setValue(ContractForDifference2 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setNotionalCurrency1(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtnlCcy2")
@@ -200,7 +220,7 @@ public class ContractForDifference2 {
 	 * definition} = "Currency 2 of the underlying currency pair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrency2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractForDifference2, Optional<ActiveOrHistoricCurrencyCode>> mmNotionalCurrency2 = new MMMessageAttribute<ContractForDifference2, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractForDifference2.mmObject();
 			isDerived = false;
@@ -211,6 +231,16 @@ public class ContractForDifference2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(ContractForDifference2 obj) {
+			return obj.getNotionalCurrency2();
+		}
+
+		@Override
+		public void setValue(ContractForDifference2 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setNotionalCurrency2(value.orElse(null));
 		}
 	};
 

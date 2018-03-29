@@ -24,7 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.Max10NumericText;
 import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection86;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -90,6 +92,11 @@ public class PaymentAccount1 {
 	 * {@linkplain com.tools20022.repository.codeset.ActiveCurrencyCode
 	 * ActiveCurrencyCode}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
+	 * Account.mmBaseCurrency}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.PaymentAccount1
@@ -107,8 +114,9 @@ public class PaymentAccount1 {
 	 * definition} = "Specifies the currency of the account\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentAccount1, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<PaymentAccount1, ActiveCurrencyCode>() {
 		{
+			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
@@ -118,6 +126,16 @@ public class PaymentAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(PaymentAccount1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(PaymentAccount1 obj, ActiveCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "NetPmt", required = true)
@@ -130,6 +148,11 @@ public class PaymentAccount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection86
 	 * AmountAndDirection86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashBalance#mmAmount
+	 * CashBalance.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -150,8 +173,9 @@ public class PaymentAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetPayment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentAccount1, AmountAndDirection86> mmNetPayment = new MMMessageAssociationEnd<PaymentAccount1, AmountAndDirection86>() {
 		{
+			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "NetPmt";
@@ -161,7 +185,17 @@ public class PaymentAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection86.mmObject();
+			type_lazy = () -> AmountAndDirection86.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection86 getValue(PaymentAccount1 obj) {
+			return obj.getNetPayment();
+		}
+
+		@Override
+		public void setValue(PaymentAccount1 obj, AmountAndDirection86 value) {
+			obj.setNetPayment(value);
 		}
 	};
 	@XmlElement(name = "LatePmtConf", required = true)
@@ -196,7 +230,7 @@ public class PaymentAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLatePaymentConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentAccount1, Max10NumericText> mmLatePaymentConfirmation = new MMMessageAttribute<PaymentAccount1, Max10NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentAccount1.mmObject();
 			isDerived = false;
@@ -207,6 +241,16 @@ public class PaymentAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
+		}
+
+		@Override
+		public Max10NumericText getValue(PaymentAccount1 obj) {
+			return obj.getLatePaymentConfirmation();
+		}
+
+		@Override
+		public void setValue(PaymentAccount1 obj, Max10NumericText value) {
+			obj.setLatePaymentConfirmation(value);
 		}
 	};
 
@@ -238,7 +282,7 @@ public class PaymentAccount1 {
 		return netPayment;
 	}
 
-	public PaymentAccount1 setNetPayment(com.tools20022.repository.msg.AmountAndDirection86 netPayment) {
+	public PaymentAccount1 setNetPayment(AmountAndDirection86 netPayment) {
 		this.netPayment = Objects.requireNonNull(netPayment);
 		return this;
 	}

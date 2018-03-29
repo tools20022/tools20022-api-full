@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CitizenshipInformation;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class ModificationScope3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope3, DataModification2Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope3, DataModification2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope3.mmObject();
 			isDerived = false;
@@ -129,6 +130,16 @@ public class ModificationScope3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
+		}
+
+		@Override
+		public DataModification2Code getValue(ModificationScope3 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope3 obj, DataModification2Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "Ctznsh", required = true)
@@ -169,7 +180,7 @@ public class ModificationScope3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCitizenship = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope3, CitizenshipInformation> mmCitizenship = new MMMessageAssociationEnd<ModificationScope3, CitizenshipInformation>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope3.mmObject();
 			isDerived = false;
@@ -181,7 +192,17 @@ public class ModificationScope3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation.mmObject();
+			type_lazy = () -> CitizenshipInformation.mmObject();
+		}
+
+		@Override
+		public CitizenshipInformation getValue(ModificationScope3 obj) {
+			return obj.getCitizenship();
+		}
+
+		@Override
+		public void setValue(ModificationScope3 obj, CitizenshipInformation value) {
+			obj.setCitizenship(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class ModificationScope3 {
 		return citizenship;
 	}
 
-	public ModificationScope3 setCitizenship(com.tools20022.repository.msg.CitizenshipInformation citizenship) {
+	public ModificationScope3 setCitizenship(CitizenshipInformation citizenship) {
 		this.citizenship = Objects.requireNonNull(citizenship);
 		return this;
 	}

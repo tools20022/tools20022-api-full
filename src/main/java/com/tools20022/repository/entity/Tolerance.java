@@ -19,9 +19,11 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.Price;
+import com.tools20022.repository.entity.ProductQuantity;
+import com.tools20022.repository.entity.UndertakingAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PercentageTolerance1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +127,7 @@ public class Tolerance {
 	 * definition} = "Undertaking amount for which a tolerance is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedUndertakingAmount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Tolerance, UndertakingAmount> mmRelatedUndertakingAmount = new MMBusinessAssociationEnd<Tolerance, UndertakingAmount>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Tolerance.mmObject();
@@ -134,9 +136,19 @@ public class Tolerance {
 			definition = "Undertaking amount for which a tolerance is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmTolerance;
+			opposite_lazy = () -> UndertakingAmount.mmTolerance;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
+			type_lazy = () -> UndertakingAmount.mmObject();
+		}
+
+		@Override
+		public UndertakingAmount getValue(Tolerance obj) {
+			return obj.getRelatedUndertakingAmount();
+		}
+
+		@Override
+		public void setValue(Tolerance obj, UndertakingAmount value) {
+			obj.setRelatedUndertakingAmount(value);
 		}
 	};
 	protected ProductQuantity quantity;
@@ -172,7 +184,7 @@ public class Tolerance {
 	 * definition} = "Quantity of product on which a tolerance is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Tolerance, Optional<ProductQuantity>> mmQuantity = new MMBusinessAssociationEnd<Tolerance, Optional<ProductQuantity>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Tolerance.mmObject();
@@ -181,9 +193,19 @@ public class Tolerance {
 			definition = "Quantity of product on which a tolerance is allowed.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmQuantityTolerance;
+			opposite_lazy = () -> ProductQuantity.mmQuantityTolerance;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
+			type_lazy = () -> ProductQuantity.mmObject();
+		}
+
+		@Override
+		public Optional<ProductQuantity> getValue(Tolerance obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Tolerance obj, Optional<ProductQuantity> value) {
+			obj.setQuantity(value.orElse(null));
 		}
 	};
 	protected PercentageRate plusPercent;
@@ -222,7 +244,7 @@ public class Tolerance {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPlusPercent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Tolerance, PercentageRate> mmPlusPercent = new MMBusinessAttribute<Tolerance, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PercentageTolerance1.mmPlusPercent);
 			isDerived = false;
@@ -235,12 +257,14 @@ public class Tolerance {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Tolerance.class.getMethod("getPlusPercent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Tolerance obj) {
+			return obj.getPlusPercent();
+		}
+
+		@Override
+		public void setValue(Tolerance obj, PercentageRate value) {
+			obj.setPlusPercent(value);
 		}
 	};
 	protected PercentageRate minusPercent;
@@ -279,7 +303,7 @@ public class Tolerance {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMinusPercent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Tolerance, PercentageRate> mmMinusPercent = new MMBusinessAttribute<Tolerance, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PercentageTolerance1.mmMinusPercent);
 			isDerived = false;
@@ -292,12 +316,14 @@ public class Tolerance {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Tolerance.class.getMethod("getMinusPercent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Tolerance obj) {
+			return obj.getMinusPercent();
+		}
+
+		@Override
+		public void setValue(Tolerance obj, PercentageRate value) {
+			obj.setMinusPercent(value);
 		}
 	};
 	protected Price price;
@@ -332,7 +358,7 @@ public class Tolerance {
 	 * definition} = "Price on which a tolerance is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Tolerance, Optional<Price>> mmPrice = new MMBusinessAssociationEnd<Tolerance, Optional<Price>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Tolerance.mmObject();
@@ -341,9 +367,19 @@ public class Tolerance {
 			definition = "Price on which a tolerance is allowed.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Price.mmPriceTolerance;
+			opposite_lazy = () -> Price.mmPriceTolerance;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
+			type_lazy = () -> Price.mmObject();
+		}
+
+		@Override
+		public Optional<Price> getValue(Tolerance obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(Tolerance obj, Optional<Price> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 
@@ -354,8 +390,7 @@ public class Tolerance {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Tolerance";
 				definition = "Variance allowed on a quantity or on a price.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Price.mmPriceTolerance, com.tools20022.repository.entity.ProductQuantity.mmQuantityTolerance,
-						com.tools20022.repository.entity.UndertakingAmount.mmTolerance);
+				associationDomain_lazy = () -> Arrays.asList(Price.mmPriceTolerance, ProductQuantity.mmQuantityTolerance, UndertakingAmount.mmTolerance);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Tolerance.mmRelatedUndertakingAmount, com.tools20022.repository.entity.Tolerance.mmQuantity, com.tools20022.repository.entity.Tolerance.mmPlusPercent,
 						com.tools20022.repository.entity.Tolerance.mmMinusPercent, com.tools20022.repository.entity.Tolerance.mmPrice);
 				derivationComponent_lazy = () -> Arrays.asList(PercentageTolerance1.mmObject());
@@ -373,7 +408,7 @@ public class Tolerance {
 		return relatedUndertakingAmount;
 	}
 
-	public Tolerance setRelatedUndertakingAmount(com.tools20022.repository.entity.UndertakingAmount relatedUndertakingAmount) {
+	public Tolerance setRelatedUndertakingAmount(UndertakingAmount relatedUndertakingAmount) {
 		this.relatedUndertakingAmount = Objects.requireNonNull(relatedUndertakingAmount);
 		return this;
 	}
@@ -382,7 +417,7 @@ public class Tolerance {
 		return quantity == null ? Optional.empty() : Optional.of(quantity);
 	}
 
-	public Tolerance setQuantity(com.tools20022.repository.entity.ProductQuantity quantity) {
+	public Tolerance setQuantity(ProductQuantity quantity) {
 		this.quantity = quantity;
 		return this;
 	}
@@ -409,7 +444,7 @@ public class Tolerance {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public Tolerance setPrice(com.tools20022.repository.entity.Price price) {
+	public Tolerance setPrice(Price price) {
 		this.price = price;
 		return this;
 	}

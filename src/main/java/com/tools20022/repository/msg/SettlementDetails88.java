@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CollateralOwnership1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +136,7 @@ public class SettlementDetails88 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDetails88, ISODateTime> mmTradeDate = new MMMessageAttribute<SettlementDetails88, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmObject();
@@ -148,6 +149,16 @@ public class SettlementDetails88 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(SettlementDetails88 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(SettlementDetails88 obj, ISODateTime value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmPties")
@@ -194,7 +205,7 @@ public class SettlementDetails88 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails88, Optional<SettlementParties3Choice>> mmSettlementParties = new MMMessageAssociationEnd<SettlementDetails88, Optional<SettlementParties3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmObject();
@@ -208,6 +219,16 @@ public class SettlementDetails88 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementParties3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties3Choice> getValue(SettlementDetails88 obj) {
+			return obj.getSettlementParties();
+		}
+
+		@Override
+		public void setValue(SettlementDetails88 obj, Optional<SettlementParties3Choice> value) {
+			obj.setSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollOwnrsh", required = true)
@@ -251,7 +272,7 @@ public class SettlementDetails88 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralOwnership = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails88, CollateralOwnership1> mmCollateralOwnership = new MMMessageAssociationEnd<SettlementDetails88, CollateralOwnership1>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralOwnership;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmObject();
@@ -264,7 +285,17 @@ public class SettlementDetails88 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralOwnership1.mmObject();
+			type_lazy = () -> CollateralOwnership1.mmObject();
+		}
+
+		@Override
+		public CollateralOwnership1 getValue(SettlementDetails88 obj) {
+			return obj.getCollateralOwnership();
+		}
+
+		@Override
+		public void setValue(SettlementDetails88 obj, CollateralOwnership1 value) {
+			obj.setCollateralOwnership(value);
 		}
 	};
 
@@ -306,7 +337,7 @@ public class SettlementDetails88 {
 		return collateralOwnership;
 	}
 
-	public SettlementDetails88 setCollateralOwnership(com.tools20022.repository.msg.CollateralOwnership1 collateralOwnership) {
+	public SettlementDetails88 setCollateralOwnership(CollateralOwnership1 collateralOwnership) {
 		this.collateralOwnership = Objects.requireNonNull(collateralOwnership);
 		return this;
 	}

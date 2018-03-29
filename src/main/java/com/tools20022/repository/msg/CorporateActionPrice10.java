@@ -112,7 +112,7 @@ public class CorporateActionPrice10 {
 	 * "Indicates whether the price is an indicative price or a market price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndicativeOrMarketPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice10, Optional<IndicativeOrMarketPrice1Choice>> mmIndicativeOrMarketPrice = new MMMessageAssociationEnd<CorporateActionPrice10, Optional<IndicativeOrMarketPrice1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice10.mmObject();
@@ -126,6 +126,16 @@ public class CorporateActionPrice10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> IndicativeOrMarketPrice1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<IndicativeOrMarketPrice1Choice> getValue(CorporateActionPrice10 obj) {
+			return obj.getIndicativeOrMarketPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice10 obj, Optional<IndicativeOrMarketPrice1Choice> value) {
+			obj.setIndicativeOrMarketPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshInLieuOfShrPric")
@@ -168,7 +178,7 @@ public class CorporateActionPrice10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashInLieuOfSharePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPrice10, Optional<PriceFormat11Choice>> mmCashInLieuOfSharePrice = new MMMessageAttribute<CorporateActionPrice10, Optional<PriceFormat11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice10.mmObject();
@@ -181,6 +191,16 @@ public class CorporateActionPrice10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat11Choice> getValue(CorporateActionPrice10 obj) {
+			return obj.getCashInLieuOfSharePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice10 obj, Optional<PriceFormat11Choice> value) {
+			obj.setCashInLieuOfSharePrice(value.orElse(null));
 		}
 	};
 

@@ -119,7 +119,7 @@ public class LinkedMessage2Choice {
 	 * LinkedMessage1Choice.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LinkedMessage2Choice, AdditionalReference3> mmPreviousReference = new MMMessageAssociationEnd<LinkedMessage2Choice, AdditionalReference3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LinkedMessage2Choice.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class LinkedMessage2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(LinkedMessage2Choice obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(LinkedMessage2Choice obj, AdditionalReference3 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "OthrRef", required = true)
@@ -178,7 +188,7 @@ public class LinkedMessage2Choice {
 	 * LinkedMessage1Choice.mmOtherReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LinkedMessage2Choice, AdditionalReference3> mmOtherReference = new MMMessageAssociationEnd<LinkedMessage2Choice, AdditionalReference3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LinkedMessage2Choice.mmObject();
 			isDerived = false;
@@ -192,6 +202,16 @@ public class LinkedMessage2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(LinkedMessage2Choice obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(LinkedMessage2Choice obj, AdditionalReference3 value) {
+			obj.setOtherReference(value);
 		}
 	};
 

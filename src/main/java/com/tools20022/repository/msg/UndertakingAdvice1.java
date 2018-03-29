@@ -24,6 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsrv.UndertakingIssuanceAdviceV01;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1;
+import com.tools20022.repository.msg.PartyAndSignature2;
+import com.tools20022.repository.msg.UndertakingConfirmation1;
+import com.tools20022.repository.msg.UndertakingIssuanceMessage;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -136,7 +140,7 @@ public class UndertakingAdvice1 {
 	 * definition} = "Contents of the related UndertakingIssuance message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingIssuanceMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingAdvice1, UndertakingIssuanceMessage> mmUndertakingIssuanceMessage = new MMMessageAssociationEnd<UndertakingAdvice1, UndertakingIssuanceMessage>() {
 		{
 			businessComponentTrace_lazy = () -> Undertaking.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAdvice1.mmObject();
@@ -148,7 +152,17 @@ public class UndertakingAdvice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UndertakingIssuanceMessage.mmObject();
+			type_lazy = () -> UndertakingIssuanceMessage.mmObject();
+		}
+
+		@Override
+		public UndertakingIssuanceMessage getValue(UndertakingAdvice1 obj) {
+			return obj.getUndertakingIssuanceMessage();
+		}
+
+		@Override
+		public void setValue(UndertakingAdvice1 obj, UndertakingIssuanceMessage value) {
+			obj.setUndertakingIssuanceMessage(value);
 		}
 	};
 	@XmlElement(name = "FrstAdvsgPtyAddtlInf")
@@ -182,7 +196,7 @@ public class UndertakingAdvice1 {
 	 * "Additional information related to the first advising party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstAdvisingPartyAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAdvice1, Optional<AdvisingPartyAdditionalInformation1>> mmFirstAdvisingPartyAdditionalInformation = new MMMessageAttribute<UndertakingAdvice1, Optional<AdvisingPartyAdditionalInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAdvice1.mmObject();
 			isDerived = false;
@@ -192,7 +206,17 @@ public class UndertakingAdvice1 {
 			definition = "Additional information related to the first advising party.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmObject();
+			complexType_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<AdvisingPartyAdditionalInformation1> getValue(UndertakingAdvice1 obj) {
+			return obj.getFirstAdvisingPartyAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UndertakingAdvice1 obj, Optional<AdvisingPartyAdditionalInformation1> value) {
+			obj.setFirstAdvisingPartyAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndAdvsgPtyAddtlInf")
@@ -226,7 +250,7 @@ public class UndertakingAdvice1 {
 	 * "Additional information related to the second advising party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondAdvisingPartyAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAdvice1, Optional<AdvisingPartyAdditionalInformation1>> mmSecondAdvisingPartyAdditionalInformation = new MMMessageAttribute<UndertakingAdvice1, Optional<AdvisingPartyAdditionalInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAdvice1.mmObject();
 			isDerived = false;
@@ -236,7 +260,17 @@ public class UndertakingAdvice1 {
 			definition = "Additional information related to the second advising party.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmObject();
+			complexType_lazy = () -> AdvisingPartyAdditionalInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<AdvisingPartyAdditionalInformation1> getValue(UndertakingAdvice1 obj) {
+			return obj.getSecondAdvisingPartyAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UndertakingAdvice1 obj, Optional<AdvisingPartyAdditionalInformation1> value) {
+			obj.setSecondAdvisingPartyAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConfDtls")
@@ -268,7 +302,7 @@ public class UndertakingAdvice1 {
 	 * definition} = "Details related to the confirmation of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConfirmationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingAdvice1, Optional<UndertakingConfirmation1>> mmConfirmationDetails = new MMMessageAssociationEnd<UndertakingAdvice1, Optional<UndertakingConfirmation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAdvice1.mmObject();
 			isDerived = false;
@@ -279,11 +313,21 @@ public class UndertakingAdvice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UndertakingConfirmation1.mmObject();
+			type_lazy = () -> UndertakingConfirmation1.mmObject();
+		}
+
+		@Override
+		public Optional<UndertakingConfirmation1> getValue(UndertakingAdvice1 obj) {
+			return obj.getConfirmationDetails();
+		}
+
+		@Override
+		public void setValue(UndertakingAdvice1 obj, Optional<UndertakingConfirmation1> value) {
+			obj.setConfirmationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
-	protected List<com.tools20022.repository.msg.PartyAndSignature2> digitalSignature;
+	protected List<PartyAndSignature2> digitalSignature;
 	/**
 	 * 
 	 <p>
@@ -317,7 +361,7 @@ public class UndertakingAdvice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingAdvice1, List<PartyAndSignature2>> mmDigitalSignature = new MMMessageAssociationEnd<UndertakingAdvice1, List<PartyAndSignature2>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAdvice1.mmObject();
@@ -329,7 +373,17 @@ public class UndertakingAdvice1 {
 			maxOccurs = 3;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyAndSignature2.mmObject();
+			type_lazy = () -> PartyAndSignature2.mmObject();
+		}
+
+		@Override
+		public List<PartyAndSignature2> getValue(UndertakingAdvice1 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(UndertakingAdvice1 obj, List<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value);
 		}
 	};
 
@@ -356,7 +410,7 @@ public class UndertakingAdvice1 {
 		return undertakingIssuanceMessage;
 	}
 
-	public UndertakingAdvice1 setUndertakingIssuanceMessage(com.tools20022.repository.msg.UndertakingIssuanceMessage undertakingIssuanceMessage) {
+	public UndertakingAdvice1 setUndertakingIssuanceMessage(UndertakingIssuanceMessage undertakingIssuanceMessage) {
 		this.undertakingIssuanceMessage = Objects.requireNonNull(undertakingIssuanceMessage);
 		return this;
 	}
@@ -365,7 +419,7 @@ public class UndertakingAdvice1 {
 		return firstAdvisingPartyAdditionalInformation == null ? Optional.empty() : Optional.of(firstAdvisingPartyAdditionalInformation);
 	}
 
-	public UndertakingAdvice1 setFirstAdvisingPartyAdditionalInformation(com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1 firstAdvisingPartyAdditionalInformation) {
+	public UndertakingAdvice1 setFirstAdvisingPartyAdditionalInformation(AdvisingPartyAdditionalInformation1 firstAdvisingPartyAdditionalInformation) {
 		this.firstAdvisingPartyAdditionalInformation = firstAdvisingPartyAdditionalInformation;
 		return this;
 	}
@@ -374,7 +428,7 @@ public class UndertakingAdvice1 {
 		return secondAdvisingPartyAdditionalInformation == null ? Optional.empty() : Optional.of(secondAdvisingPartyAdditionalInformation);
 	}
 
-	public UndertakingAdvice1 setSecondAdvisingPartyAdditionalInformation(com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1 secondAdvisingPartyAdditionalInformation) {
+	public UndertakingAdvice1 setSecondAdvisingPartyAdditionalInformation(AdvisingPartyAdditionalInformation1 secondAdvisingPartyAdditionalInformation) {
 		this.secondAdvisingPartyAdditionalInformation = secondAdvisingPartyAdditionalInformation;
 		return this;
 	}
@@ -383,7 +437,7 @@ public class UndertakingAdvice1 {
 		return confirmationDetails == null ? Optional.empty() : Optional.of(confirmationDetails);
 	}
 
-	public UndertakingAdvice1 setConfirmationDetails(com.tools20022.repository.msg.UndertakingConfirmation1 confirmationDetails) {
+	public UndertakingAdvice1 setConfirmationDetails(UndertakingConfirmation1 confirmationDetails) {
 		this.confirmationDetails = confirmationDetails;
 		return this;
 	}
@@ -392,7 +446,7 @@ public class UndertakingAdvice1 {
 		return digitalSignature == null ? digitalSignature = new ArrayList<>() : digitalSignature;
 	}
 
-	public UndertakingAdvice1 setDigitalSignature(List<com.tools20022.repository.msg.PartyAndSignature2> digitalSignature) {
+	public UndertakingAdvice1 setDigitalSignature(List<PartyAndSignature2> digitalSignature) {
 		this.digitalSignature = Objects.requireNonNull(digitalSignature);
 		return this;
 	}

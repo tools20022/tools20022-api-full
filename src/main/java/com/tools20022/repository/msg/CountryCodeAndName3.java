@@ -103,7 +103,7 @@ public class CountryCodeAndName3 {
 	 * definition} = "Country is specified by its code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CountryCodeAndName3, CountryCode> mmCode = new MMMessageAttribute<CountryCodeAndName3, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CountryCodeAndName3.mmObject();
@@ -115,6 +115,16 @@ public class CountryCodeAndName3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(CountryCodeAndName3 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CountryCodeAndName3 obj, CountryCode value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -151,7 +161,7 @@ public class CountryCodeAndName3 {
 	 * definition} = "Country is specified by its name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CountryCodeAndName3, Max70Text> mmName = new MMMessageAttribute<CountryCodeAndName3, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CountryCodeAndName3.mmObject();
@@ -163,6 +173,16 @@ public class CountryCodeAndName3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(CountryCodeAndName3 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CountryCodeAndName3 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 

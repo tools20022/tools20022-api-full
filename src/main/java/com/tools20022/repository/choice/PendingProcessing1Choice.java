@@ -116,7 +116,7 @@ public class PendingProcessing1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessing1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<PendingProcessing1Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessing1Choice.mmObject();
@@ -129,6 +129,16 @@ public class PendingProcessing1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingProcessing1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingProcessing1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -165,7 +175,7 @@ public class PendingProcessing1Choice {
 	 * definition} = "Specifies the reason of the Pending Processing Status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingProcessing1Choice, List<AwaitingAffirmationReason1>> mmReason = new MMMessageAssociationEnd<PendingProcessing1Choice, List<AwaitingAffirmationReason1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessing1Choice.mmObject();
@@ -177,6 +187,16 @@ public class PendingProcessing1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AwaitingAffirmationReason1.mmObject();
+		}
+
+		@Override
+		public List<AwaitingAffirmationReason1> getValue(PendingProcessing1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingProcessing1Choice obj, List<AwaitingAffirmationReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

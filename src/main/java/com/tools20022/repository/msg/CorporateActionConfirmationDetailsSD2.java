@@ -114,7 +114,7 @@ public class CorporateActionConfirmationDetailsSD2 {
 	 * CorporateActionConfirmationDetailsSD1.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationDetailsSD2, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionConfirmationDetailsSD2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD2.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class CorporateActionConfirmationDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionConfirmationDetailsSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationDetailsSD2 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrratnRndgInd")
@@ -165,7 +175,7 @@ public class CorporateActionConfirmationDetailsSD2 {
 	 * CorporateActionConfirmationDetailsSD1.mmProrationRoundingIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProrationRoundingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationDetailsSD2, Optional<FractionDispositionType12Code>> mmProrationRoundingIndicator = new MMMessageAttribute<CorporateActionConfirmationDetailsSD2, Optional<FractionDispositionType12Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD2.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class CorporateActionConfirmationDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FractionDispositionType12Code.mmObject();
+		}
+
+		@Override
+		public Optional<FractionDispositionType12Code> getValue(CorporateActionConfirmationDetailsSD2 obj) {
+			return obj.getProrationRoundingIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationDetailsSD2 obj, Optional<FractionDispositionType12Code> value) {
+			obj.setProrationRoundingIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrratnFrctn")
@@ -219,7 +239,7 @@ public class CorporateActionConfirmationDetailsSD2 {
 	 * CorporateActionConfirmationDetailsSD1.mmProrationFraction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProrationFraction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationDetailsSD2, Optional<DecimalNumber>> mmProrationFraction = new MMMessageAttribute<CorporateActionConfirmationDetailsSD2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD2.mmObject();
 			isDerived = false;
@@ -232,6 +252,16 @@ public class CorporateActionConfirmationDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionConfirmationDetailsSD2 obj) {
+			return obj.getProrationFraction();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationDetailsSD2 obj, Optional<DecimalNumber> value) {
+			obj.setProrationFraction(value.orElse(null));
 		}
 	};
 

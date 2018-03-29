@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification30;
+import com.tools20022.repository.msg.PartyIdentification90;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -69,7 +71,7 @@ public class PartyIdentificationAndAccount119 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "PtyId", required = true)
-	protected List<com.tools20022.repository.msg.PartyIdentification90> partyIdentification;
+	protected List<PartyIdentification90> partyIdentification;
 	/**
 	 * 
 	 <p>
@@ -97,7 +99,7 @@ public class PartyIdentificationAndAccount119 {
 	 * "Identification of the party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount119, List<PartyIdentification90>> mmPartyIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount119, List<PartyIdentification90>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount119.mmObject();
 			isDerived = false;
@@ -107,11 +109,21 @@ public class PartyIdentificationAndAccount119 {
 			definition = "Identification of the party that legally owns the account.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification90.mmObject();
+			type_lazy = () -> PartyIdentification90.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification90> getValue(PartyIdentificationAndAccount119 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount119 obj, List<PartyIdentification90> value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId", required = true)
-	protected List<com.tools20022.repository.msg.AccountIdentification30> accountIdentification;
+	protected List<AccountIdentification30> accountIdentification;
 	/**
 	 * 
 	 <p>
@@ -139,7 +151,7 @@ public class PartyIdentificationAndAccount119 {
 	 * definition} = "Identification of the account owned by the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount119, List<AccountIdentification30>> mmAccountIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount119, List<AccountIdentification30>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount119.mmObject();
 			isDerived = false;
@@ -149,7 +161,17 @@ public class PartyIdentificationAndAccount119 {
 			definition = "Identification of the account owned by the party.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountIdentification30.mmObject();
+			type_lazy = () -> AccountIdentification30.mmObject();
+		}
+
+		@Override
+		public List<AccountIdentification30> getValue(PartyIdentificationAndAccount119 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount119 obj, List<AccountIdentification30> value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 
@@ -170,7 +192,7 @@ public class PartyIdentificationAndAccount119 {
 		return partyIdentification == null ? partyIdentification = new ArrayList<>() : partyIdentification;
 	}
 
-	public PartyIdentificationAndAccount119 setPartyIdentification(List<com.tools20022.repository.msg.PartyIdentification90> partyIdentification) {
+	public PartyIdentificationAndAccount119 setPartyIdentification(List<PartyIdentification90> partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}
@@ -179,7 +201,7 @@ public class PartyIdentificationAndAccount119 {
 		return accountIdentification == null ? accountIdentification = new ArrayList<>() : accountIdentification;
 	}
 
-	public PartyIdentificationAndAccount119 setAccountIdentification(List<com.tools20022.repository.msg.AccountIdentification30> accountIdentification) {
+	public PartyIdentificationAndAccount119 setAccountIdentification(List<AccountIdentification30> accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}

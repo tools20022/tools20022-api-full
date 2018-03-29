@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.FreightCharges1Code;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ChargesDetails4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +118,7 @@ public class Charge25 {
 	 * Charge13.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge25, FreightCharges1Code> mmType = new MMMessageAttribute<Charge25, FreightCharges1Code>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmFreightChargesPrepaidOrCollect;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge25.mmObject();
@@ -131,9 +132,19 @@ public class Charge25 {
 			minOccurs = 1;
 			simpleType_lazy = () -> FreightCharges1Code.mmObject();
 		}
+
+		@Override
+		public FreightCharges1Code getValue(Charge25 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Charge25 obj, FreightCharges1Code value) {
+			obj.setType(value);
+		}
 	};
 	@XmlElement(name = "Chrgs")
-	protected List<com.tools20022.repository.msg.ChargesDetails4> charges;
+	protected List<ChargesDetails4> charges;
 	/**
 	 * 
 	 <p>
@@ -168,7 +179,7 @@ public class Charge25 {
 	 * Charge13.mmCharges}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Charge25, List<ChargesDetails4>> mmCharges = new MMMessageAssociationEnd<Charge25, List<ChargesDetails4>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge25.mmObject();
@@ -180,7 +191,17 @@ public class Charge25 {
 			previousVersion_lazy = () -> Charge13.mmCharges;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ChargesDetails4.mmObject();
+			type_lazy = () -> ChargesDetails4.mmObject();
+		}
+
+		@Override
+		public List<ChargesDetails4> getValue(Charge25 obj) {
+			return obj.getCharges();
+		}
+
+		@Override
+		public void setValue(Charge25 obj, List<ChargesDetails4> value) {
+			obj.setCharges(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class Charge25 {
 		return charges == null ? charges = new ArrayList<>() : charges;
 	}
 
-	public Charge25 setCharges(List<com.tools20022.repository.msg.ChargesDetails4> charges) {
+	public Charge25 setCharges(List<ChargesDetails4> charges) {
 		this.charges = Objects.requireNonNull(charges);
 		return this;
 	}

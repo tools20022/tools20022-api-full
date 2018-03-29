@@ -100,7 +100,7 @@ public class IsabelLRCIPaymentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmImageHash = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelLRCIPaymentInformation1, Max50Binary> mmImageHash = new MMMessageAttribute<IsabelLRCIPaymentInformation1, Max50Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class IsabelLRCIPaymentInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Binary.mmObject();
+		}
+
+		@Override
+		public Max50Binary getValue(IsabelLRCIPaymentInformation1 obj) {
+			return obj.getImageHash();
+		}
+
+		@Override
+		public void setValue(IsabelLRCIPaymentInformation1 obj, Max50Binary value) {
+			obj.setImageHash(value);
 		}
 	};
 	@XmlElement(name = "PmtHash", required = true)
@@ -144,7 +154,7 @@ public class IsabelLRCIPaymentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentHash = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelLRCIPaymentInformation1, Max50Binary> mmPaymentHash = new MMMessageAttribute<IsabelLRCIPaymentInformation1, Max50Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class IsabelLRCIPaymentInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Binary.mmObject();
+		}
+
+		@Override
+		public Max50Binary getValue(IsabelLRCIPaymentInformation1 obj) {
+			return obj.getPaymentHash();
+		}
+
+		@Override
+		public void setValue(IsabelLRCIPaymentInformation1 obj, Max50Binary value) {
+			obj.setPaymentHash(value);
 		}
 	};
 

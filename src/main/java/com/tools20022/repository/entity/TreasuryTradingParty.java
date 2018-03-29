@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.InvestmentFund;
 import com.tools20022.repository.entity.TreasuryTradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
@@ -175,7 +176,7 @@ public class TreasuryTradingParty extends TreasuryTradePartyRole {
 	 * "Specifies the fund for which a treasury trade is executed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestmentFund = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TreasuryTradingParty, List<InvestmentFund>> mmInvestmentFund = new MMBusinessAssociationEnd<TreasuryTradingParty, List<InvestmentFund>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradePartyIdentification2.mmFundInformation, TradePartyIdentification3.mmFundInformation, TradePartyIdentification5.mmFundIdentification, PartyIdentification60.mmFundIdentification,
 					TradePartyIdentification6.mmFundIdentification, TradePartyIdentification1.mmFundInformation, TradePartyIdentification4.mmFundInformation, TradePartyIdentification7.mmFundInformation);
@@ -188,6 +189,16 @@ public class TreasuryTradingParty extends TreasuryTradePartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmTreasuryTradingParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFund> getValue(TreasuryTradingParty obj) {
+			return obj.getInvestmentFund();
+		}
+
+		@Override
+		public void setValue(TreasuryTradingParty obj, List<InvestmentFund> value) {
+			obj.setInvestmentFund(value);
 		}
 	};
 

@@ -116,7 +116,7 @@ public class TransactionDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDetails2, Max70Text> mmTradeReference = new MMMessageAttribute<TransactionDetails2, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails2.mmObject();
@@ -128,6 +128,16 @@ public class TransactionDetails2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(TransactionDetails2 obj) {
+			return obj.getTradeReference();
+		}
+
+		@Override
+		public void setValue(TransactionDetails2 obj, Max70Text value) {
+			obj.setTradeReference(value);
 		}
 	};
 

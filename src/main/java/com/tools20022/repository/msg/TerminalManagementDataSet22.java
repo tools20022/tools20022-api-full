@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DataSetIdentification6;
+import com.tools20022.repository.msg.ManagementPlanContent6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +133,7 @@ public class TerminalManagementDataSet22 {
 	 * TerminalManagementDataSet18.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet22, DataSetIdentification6> mmIdentification = new MMMessageAssociationEnd<TerminalManagementDataSet22, DataSetIdentification6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet22.mmObject();
 			isDerived = false;
@@ -144,7 +146,17 @@ public class TerminalManagementDataSet22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification6.mmObject();
+			type_lazy = () -> DataSetIdentification6.mmObject();
+		}
+
+		@Override
+		public DataSetIdentification6 getValue(TerminalManagementDataSet22 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet22 obj, DataSetIdentification6 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SeqCntr")
@@ -191,7 +203,7 @@ public class TerminalManagementDataSet22 {
 	 * TerminalManagementDataSet18.mmSequenceCounter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalManagementDataSet22, Optional<Max9NumericText>> mmSequenceCounter = new MMMessageAttribute<TerminalManagementDataSet22, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet22.mmObject();
 			isDerived = false;
@@ -204,6 +216,16 @@ public class TerminalManagementDataSet22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(TerminalManagementDataSet22 obj) {
+			return obj.getSequenceCounter();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet22 obj, Optional<Max9NumericText> value) {
+			obj.setSequenceCounter(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cntt")
@@ -247,7 +269,7 @@ public class TerminalManagementDataSet22 {
 	 * TerminalManagementDataSet18.mmContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet22, Optional<ManagementPlanContent6>> mmContent = new MMMessageAssociationEnd<TerminalManagementDataSet22, Optional<ManagementPlanContent6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet22.mmObject();
 			isDerived = false;
@@ -260,7 +282,17 @@ public class TerminalManagementDataSet22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent6.mmObject();
+			type_lazy = () -> ManagementPlanContent6.mmObject();
+		}
+
+		@Override
+		public Optional<ManagementPlanContent6> getValue(TerminalManagementDataSet22 obj) {
+			return obj.getContent();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet22 obj, Optional<ManagementPlanContent6> value) {
+			obj.setContent(value.orElse(null));
 		}
 	};
 
@@ -285,7 +317,7 @@ public class TerminalManagementDataSet22 {
 		return identification;
 	}
 
-	public TerminalManagementDataSet22 setIdentification(com.tools20022.repository.msg.DataSetIdentification6 identification) {
+	public TerminalManagementDataSet22 setIdentification(DataSetIdentification6 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -303,7 +335,7 @@ public class TerminalManagementDataSet22 {
 		return content == null ? Optional.empty() : Optional.of(content);
 	}
 
-	public TerminalManagementDataSet22 setContent(com.tools20022.repository.msg.ManagementPlanContent6 content) {
+	public TerminalManagementDataSet22 setContent(ManagementPlanContent6 content) {
 		this.content = content;
 		return this;
 	}

@@ -191,7 +191,7 @@ public class DocumentIdentification3 {
 	 * definition} = "Identification of a set of data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification3, Max35Text> mmIdentification = new MMMessageAttribute<DocumentIdentification3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification3.mmObject();
@@ -203,6 +203,16 @@ public class DocumentIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification3 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -241,7 +251,7 @@ public class DocumentIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification3, Number> mmVersion = new MMMessageAttribute<DocumentIdentification3, Number>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmDocumentVersion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification3.mmObject();
@@ -253,6 +263,16 @@ public class DocumentIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(DocumentIdentification3 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification3 obj, Number value) {
+			obj.setVersion(value);
 		}
 	};
 

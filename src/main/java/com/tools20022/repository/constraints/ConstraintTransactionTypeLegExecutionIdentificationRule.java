@@ -63,12 +63,16 @@ public class ConstraintTransactionTypeLegExecutionIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentFundTransaction3> forInvestmentFundTransaction3 = new MMConstraint<InvestmentFundTransaction3>() {
 		{
-			validator = ConstraintTransactionTypeLegExecutionIdentificationRule::checkInvestmentFundTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTypeLegExecutionIdentificationRule";
 			definition = "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionTypeLegExecutionIdentificationRule.forInvestmentFundTransaction4);
 			owner_lazy = () -> InvestmentFundTransaction3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundTransaction3 obj) throws Exception {
+			checkInvestmentFundTransaction3(obj);
 		}
 	};
 	/**
@@ -100,12 +104,16 @@ public class ConstraintTransactionTypeLegExecutionIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentFundTransaction4> forInvestmentFundTransaction4 = new MMConstraint<InvestmentFundTransaction4>() {
 		{
-			validator = ConstraintTransactionTypeLegExecutionIdentificationRule::checkInvestmentFundTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTypeLegExecutionIdentificationRule";
 			definition = "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionTypeLegExecutionIdentificationRule.forInvestmentFundTransaction3;
 			owner_lazy = () -> InvestmentFundTransaction4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundTransaction4 obj) throws Exception {
+			checkInvestmentFundTransaction4(obj);
 		}
 	};
 

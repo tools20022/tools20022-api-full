@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -191,7 +190,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, MessageIdentification1> mmReportIdentification = new MMMessageBuildingBlock<BaselineReportV03, MessageIdentification1>() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,12 +202,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(BaselineReportV03 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, MessageIdentification1 value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdMsgRef")
@@ -246,7 +247,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, Optional<MessageIdentification1>> mmRelatedMessageReference = new MMMessageBuildingBlock<BaselineReportV03, Optional<MessageIdentification1>>() {
 		{
 			xmlTag = "RltdMsgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,12 +259,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getRelatedMessageReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MessageIdentification1> getValue(BaselineReportV03 obj) {
+			return obj.getRelatedMessageReference();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, Optional<MessageIdentification1> value) {
+			obj.setRelatedMessageReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptTp", required = true)
@@ -298,7 +301,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, ReportType2> mmReportType = new MMMessageBuildingBlock<BaselineReportV03, ReportType2>() {
 		{
 			xmlTag = "RptTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,12 +313,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> ReportType2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getReportType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportType2 getValue(BaselineReportV03 obj) {
+			return obj.getReportType();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, ReportType2 value) {
+			obj.setReportType(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -353,7 +358,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<BaselineReportV03, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,12 +370,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(BaselineReportV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId", required = true)
@@ -408,7 +415,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, DocumentIdentification6> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<BaselineReportV03, DocumentIdentification6>() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -420,12 +427,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> DocumentIdentification6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification6 getValue(BaselineReportV03 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, DocumentIdentification6 value) {
+			obj.setEstablishedBaselineIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -462,7 +471,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, TransactionStatus4> mmTransactionStatus = new MMMessageBuildingBlock<BaselineReportV03, TransactionStatus4>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -474,12 +483,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus4 getValue(BaselineReportV03 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, TransactionStatus4 value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
@@ -517,7 +528,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<BaselineReportV03, List<DocumentIdentification5>>() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -529,12 +540,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getUserTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification5> getValue(BaselineReportV03 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, List<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -571,7 +584,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, PartyIdentification26> mmBuyer = new MMMessageBuildingBlock<BaselineReportV03, PartyIdentification26>() {
 		{
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -583,12 +596,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getBuyer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification26 getValue(BaselineReportV03 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, PartyIdentification26 value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "Sellr", required = true)
@@ -625,7 +640,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSeller = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, PartyIdentification26> mmSeller = new MMMessageBuildingBlock<BaselineReportV03, PartyIdentification26>() {
 		{
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -637,12 +652,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getSeller", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification26 getValue(BaselineReportV03 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, PartyIdentification26 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "BuyrBk", required = true)
@@ -680,7 +697,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, BICIdentification1> mmBuyerBank = new MMMessageBuildingBlock<BaselineReportV03, BICIdentification1>() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -692,12 +709,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getBuyerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(BaselineReportV03 obj) {
+			return obj.getBuyerBank();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, BICIdentification1 value) {
+			obj.setBuyerBank(value);
 		}
 	};
 	@XmlElement(name = "SellrBk", required = true)
@@ -735,7 +754,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, BICIdentification1> mmSellerBank = new MMMessageBuildingBlock<BaselineReportV03, BICIdentification1>() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -747,12 +766,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getSellerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(BaselineReportV03 obj) {
+			return obj.getSellerBank();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, BICIdentification1 value) {
+			obj.setSellerBank(value);
 		}
 	};
 	@XmlElement(name = "RptdLineItm", required = true)
@@ -787,7 +808,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportedLineItem = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, LineItem8> mmReportedLineItem = new MMMessageBuildingBlock<BaselineReportV03, LineItem8>() {
 		{
 			xmlTag = "RptdLineItm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -799,12 +820,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> LineItem8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getReportedLineItem", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public LineItem8 getValue(BaselineReportV03 obj) {
+			return obj.getReportedLineItem();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, LineItem8 value) {
+			obj.setReportedLineItem(value);
 		}
 	};
 	@XmlElement(name = "ReqForActn")
@@ -840,7 +863,7 @@ public class BaselineReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineReportV03, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<BaselineReportV03, Optional<PendingActivity2>>() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -852,12 +875,14 @@ public class BaselineReportV03 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineReportV03.class.getMethod("getRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PendingActivity2> getValue(BaselineReportV03 obj) {
+			return obj.getRequestForAction();
+		}
+
+		@Override
+		public void setValue(BaselineReportV03 obj, Optional<PendingActivity2> value) {
+			obj.setRequestForAction(value.orElse(null));
 		}
 	};
 

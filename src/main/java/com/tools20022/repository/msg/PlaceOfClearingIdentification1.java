@@ -113,7 +113,7 @@ public class PlaceOfClearingIdentification1 {
 	 * definition} = "Unique identification of the place of clearing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfClearingIdentification1, Optional<AnyBICIdentifier>> mmIdentification = new MMMessageAttribute<PlaceOfClearingIdentification1, Optional<AnyBICIdentifier>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlaceOfClearingIdentification1.mmObject();
@@ -125,6 +125,16 @@ public class PlaceOfClearingIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<AnyBICIdentifier> getValue(PlaceOfClearingIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PlaceOfClearingIdentification1 obj, Optional<AnyBICIdentifier> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -159,7 +169,7 @@ public class PlaceOfClearingIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfClearingIdentification1, Optional<LEIIdentifier>> mmLEI = new MMMessageAttribute<PlaceOfClearingIdentification1, Optional<LEIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlaceOfClearingIdentification1.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class PlaceOfClearingIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(PlaceOfClearingIdentification1 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(PlaceOfClearingIdentification1 obj, Optional<LEIIdentifier> value) {
+			obj.setLEI(value.orElse(null));
 		}
 	};
 

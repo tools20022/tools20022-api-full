@@ -111,7 +111,7 @@ public class PaymentInstrument13Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument13Choice, CreditTransfer7> mmCreditTransferDetails = new MMMessageAssociationEnd<PaymentInstrument13Choice, CreditTransfer7>() {
 		{
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument13Choice.mmObject();
@@ -124,6 +124,16 @@ public class PaymentInstrument13Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditTransfer7.mmObject();
+		}
+
+		@Override
+		public CreditTransfer7 getValue(PaymentInstrument13Choice obj) {
+			return obj.getCreditTransferDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument13Choice obj, CreditTransfer7 value) {
+			obj.setCreditTransferDetails(value);
 		}
 	};
 	@XmlElement(name = "CshAcctDtls", required = true)
@@ -160,7 +170,7 @@ public class PaymentInstrument13Choice {
 	 * "Part of the investment account to or from which cash entries are made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument13Choice, InvestmentAccount32> mmCashAccountDetails = new MMMessageAssociationEnd<PaymentInstrument13Choice, InvestmentAccount32>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument13Choice.mmObject();
@@ -173,6 +183,16 @@ public class PaymentInstrument13Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccount32.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount32 getValue(PaymentInstrument13Choice obj) {
+			return obj.getCashAccountDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument13Choice obj, InvestmentAccount32 value) {
+			obj.setCashAccountDetails(value);
 		}
 	};
 

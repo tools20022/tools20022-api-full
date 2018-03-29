@@ -117,7 +117,7 @@ public class SettlementRateSource1 {
 	 * definition} = "Specifies the rate source for the non deliverable trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementRateSource1, RateSourceText> mmRateSource = new MMMessageAttribute<SettlementRateSource1, RateSourceText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementRateSource1.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class SettlementRateSource1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateSourceText.mmObject();
+		}
+
+		@Override
+		public RateSourceText getValue(SettlementRateSource1 obj) {
+			return obj.getRateSource();
+		}
+
+		@Override
+		public void setValue(SettlementRateSource1 obj, RateSourceText value) {
+			obj.setRateSource(value);
 		}
 	};
 	@XmlElement(name = "Tm")
@@ -161,7 +171,7 @@ public class SettlementRateSource1 {
 	 * "Specifies the time \"HHMM\" associated with the rate source."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementRateSource1, Optional<Exact4NumericText>> mmTime = new MMMessageAttribute<SettlementRateSource1, Optional<Exact4NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementRateSource1.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class SettlementRateSource1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4NumericText> getValue(SettlementRateSource1 obj) {
+			return obj.getTime();
+		}
+
+		@Override
+		public void setValue(SettlementRateSource1 obj, Optional<Exact4NumericText> value) {
+			obj.setTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryCd")
@@ -203,7 +223,7 @@ public class SettlementRateSource1 {
 	 * definition} = "Specifies the country code for the quoted rate source."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementRateSource1, Optional<CountryCode>> mmCountryCode = new MMMessageAttribute<SettlementRateSource1, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementRateSource1.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class SettlementRateSource1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(SettlementRateSource1 obj) {
+			return obj.getCountryCode();
+		}
+
+		@Override
+		public void setValue(SettlementRateSource1 obj, Optional<CountryCode> value) {
+			obj.setCountryCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LctnCd")
@@ -246,7 +276,7 @@ public class SettlementRateSource1 {
 	 * definition} = "The location expressed as a 2 character code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementRateSource1, Optional<Exact2AlphaNumericText>> mmLocationCode = new MMMessageAttribute<SettlementRateSource1, Optional<Exact2AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementRateSource1.mmObject();
 			isDerived = false;
@@ -257,6 +287,16 @@ public class SettlementRateSource1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact2AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact2AlphaNumericText> getValue(SettlementRateSource1 obj) {
+			return obj.getLocationCode();
+		}
+
+		@Override
+		public void setValue(SettlementRateSource1 obj, Optional<Exact2AlphaNumericText> value) {
+			obj.setLocationCode(value.orElse(null));
 		}
 	};
 

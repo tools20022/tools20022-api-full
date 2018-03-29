@@ -108,7 +108,7 @@ public class UndertakingAmount2 {
 	 * definition} = "Choice of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingAmount2, Amount1Choice> mmAmountChoice = new MMMessageAssociationEnd<UndertakingAmount2, Amount1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount2.mmObject();
@@ -121,6 +121,16 @@ public class UndertakingAmount2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Amount1Choice.mmObject();
+		}
+
+		@Override
+		public Amount1Choice getValue(UndertakingAmount2 obj) {
+			return obj.getAmountChoice();
+		}
+
+		@Override
+		public void setValue(UndertakingAmount2 obj, Amount1Choice value) {
+			obj.setAmountChoice(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -152,7 +162,7 @@ public class UndertakingAmount2 {
 	 * definition} = "Additional information concerning the amended amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAmount2, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<UndertakingAmount2, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount2.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class UndertakingAmount2 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(UndertakingAmount2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UndertakingAmount2 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

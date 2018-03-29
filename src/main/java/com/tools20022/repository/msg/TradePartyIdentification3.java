@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FundIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -160,7 +161,7 @@ public class TradePartyIdentification3 {
 	 * "Identifies the fund which is one of the parties in a treasury trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification3, Optional<FundIdentification2>> mmFundInformation = new MMMessageAssociationEnd<TradePartyIdentification3, Optional<FundIdentification2>>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification3.mmObject();
@@ -172,7 +173,17 @@ public class TradePartyIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundIdentification2.mmObject();
+			type_lazy = () -> FundIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<FundIdentification2> getValue(TradePartyIdentification3 obj) {
+			return obj.getFundInformation();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification3 obj, Optional<FundIdentification2> value) {
+			obj.setFundInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubmitgPty", required = true)
@@ -211,7 +222,7 @@ public class TradePartyIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmittingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification3, PartyIdentification8Choice> mmSubmittingParty = new MMMessageAssociationEnd<TradePartyIdentification3, PartyIdentification8Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification3.mmObject();
@@ -224,6 +235,16 @@ public class TradePartyIdentification3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification8Choice getValue(TradePartyIdentification3 obj) {
+			return obj.getSubmittingParty();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification3 obj, PartyIdentification8Choice value) {
+			obj.setSubmittingParty(value);
 		}
 	};
 	@XmlElement(name = "TradPty", required = true)
@@ -262,7 +283,7 @@ public class TradePartyIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification3, PartyIdentification8Choice> mmTradeParty = new MMMessageAssociationEnd<TradePartyIdentification3, PartyIdentification8Choice>() {
 		{
 			businessComponentTrace_lazy = () -> TreasuryTradingParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification3.mmObject();
@@ -275,6 +296,16 @@ public class TradePartyIdentification3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification8Choice getValue(TradePartyIdentification3 obj) {
+			return obj.getTradeParty();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification3 obj, PartyIdentification8Choice value) {
+			obj.setTradeParty(value);
 		}
 	};
 
@@ -302,7 +333,7 @@ public class TradePartyIdentification3 {
 		return fundInformation == null ? Optional.empty() : Optional.of(fundInformation);
 	}
 
-	public TradePartyIdentification3 setFundInformation(com.tools20022.repository.msg.FundIdentification2 fundInformation) {
+	public TradePartyIdentification3 setFundInformation(FundIdentification2 fundInformation) {
 		this.fundInformation = fundInformation;
 		return this;
 	}

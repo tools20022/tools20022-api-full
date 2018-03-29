@@ -99,7 +99,7 @@ public class AssetClassDetailedSubProductType16Choice {
 	 * definition} = "Specifies the type of commodity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassDetailedSubProductType16Choice, AssetClassDetailedSubProductType16Code> mmCode = new MMMessageAttribute<AssetClassDetailedSubProductType16Choice, AssetClassDetailedSubProductType16Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassDetailedSubProductType16Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class AssetClassDetailedSubProductType16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassDetailedSubProductType16Code.mmObject();
+		}
+
+		@Override
+		public AssetClassDetailedSubProductType16Code getValue(AssetClassDetailedSubProductType16Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AssetClassDetailedSubProductType16Choice obj, AssetClassDetailedSubProductType16Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -143,7 +153,7 @@ public class AssetClassDetailedSubProductType16Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassDetailedSubProductType16Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<AssetClassDetailedSubProductType16Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassDetailedSubProductType16Choice.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class AssetClassDetailedSubProductType16Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(AssetClassDetailedSubProductType16Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AssetClassDetailedSubProductType16Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

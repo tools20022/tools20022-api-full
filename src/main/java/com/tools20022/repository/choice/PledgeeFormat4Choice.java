@@ -119,7 +119,7 @@ public class PledgeeFormat4Choice {
 	 * PledgeeFormat3Choice.mmTypeAndIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTypeAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PledgeeFormat4Choice, PledgeeTypeAndAnyBICIdentifier1> mmTypeAndIdentification = new MMMessageAssociationEnd<PledgeeFormat4Choice, PledgeeTypeAndAnyBICIdentifier1>() {
 		{
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PledgeeFormat4Choice.mmObject();
@@ -133,6 +133,16 @@ public class PledgeeFormat4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PledgeeTypeAndAnyBICIdentifier1.mmObject();
+		}
+
+		@Override
+		public PledgeeTypeAndAnyBICIdentifier1 getValue(PledgeeFormat4Choice obj) {
+			return obj.getTypeAndIdentification();
+		}
+
+		@Override
+		public void setValue(PledgeeFormat4Choice obj, PledgeeTypeAndAnyBICIdentifier1 value) {
+			obj.setTypeAndIdentification(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -174,7 +184,7 @@ public class PledgeeFormat4Choice {
 	 * PledgeeFormat3Choice.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PledgeeFormat4Choice, PledgeeTypeAndText2> mmIdentification = new MMMessageAssociationEnd<PledgeeFormat4Choice, PledgeeTypeAndText2>() {
 		{
 			businessComponentTrace_lazy = () -> Pledgee.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PledgeeFormat4Choice.mmObject();
@@ -188,6 +198,16 @@ public class PledgeeFormat4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PledgeeTypeAndText2.mmObject();
+		}
+
+		@Override
+		public PledgeeTypeAndText2 getValue(PledgeeFormat4Choice obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PledgeeFormat4Choice obj, PledgeeTypeAndText2 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -231,7 +251,7 @@ public class PledgeeFormat4Choice {
 	 * PledgeeFormat3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PledgeeFormat4Choice, GenericIdentification85> mmProprietary = new MMMessageAssociationEnd<PledgeeFormat4Choice, GenericIdentification85>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PledgeeFormat4Choice.mmObject();
@@ -245,6 +265,16 @@ public class PledgeeFormat4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification85.mmObject();
+		}
+
+		@Override
+		public GenericIdentification85 getValue(PledgeeFormat4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PledgeeFormat4Choice obj, GenericIdentification85 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -98,7 +98,7 @@ public class StatementBasisCodeAndDSSCodeChoice {
 	 * definition} = "Statement basis expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementBasisAsCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementBasisCodeAndDSSCodeChoice, StatementBasis1Code> mmStatementBasisAsCode = new MMMessageAttribute<StatementBasisCodeAndDSSCodeChoice, StatementBasis1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class StatementBasisCodeAndDSSCodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementBasis1Code.mmObject();
+		}
+
+		@Override
+		public StatementBasis1Code getValue(StatementBasisCodeAndDSSCodeChoice obj) {
+			return obj.getStatementBasisAsCode();
+		}
+
+		@Override
+		public void setValue(StatementBasisCodeAndDSSCodeChoice obj, StatementBasis1Code value) {
+			obj.setStatementBasisAsCode(value);
 		}
 	};
 	@XmlElement(name = "StmtBsisAsDSS", required = true)
@@ -143,7 +153,7 @@ public class StatementBasisCodeAndDSSCodeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementBasisAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementBasisCodeAndDSSCodeChoice, GenericIdentification7> mmStatementBasisAsDSS = new MMMessageAttribute<StatementBasisCodeAndDSSCodeChoice, GenericIdentification7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementBasisCodeAndDSSCodeChoice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class StatementBasisCodeAndDSSCodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification7.mmObject();
+		}
+
+		@Override
+		public GenericIdentification7 getValue(StatementBasisCodeAndDSSCodeChoice obj) {
+			return obj.getStatementBasisAsDSS();
+		}
+
+		@Override
+		public void setValue(StatementBasisCodeAndDSSCodeChoice obj, GenericIdentification7 value) {
+			obj.setStatementBasisAsDSS(value);
 		}
 	};
 

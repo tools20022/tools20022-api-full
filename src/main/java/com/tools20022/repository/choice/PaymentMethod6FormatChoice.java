@@ -98,7 +98,7 @@ public class PaymentMethod6FormatChoice {
 	 * definition} = "Standard code to specify the method of payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentMethod6FormatChoice, PaymentMethod6Code> mmCode = new MMMessageAttribute<PaymentMethod6FormatChoice, PaymentMethod6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentMethod6FormatChoice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class PaymentMethod6FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentMethod6Code.mmObject();
+		}
+
+		@Override
+		public PaymentMethod6Code getValue(PaymentMethod6FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PaymentMethod6FormatChoice obj, PaymentMethod6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class PaymentMethod6FormatChoice {
 	 * definition} = "Proprietary code to express the method of payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentMethod6FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<PaymentMethod6FormatChoice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentMethod6FormatChoice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class PaymentMethod6FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(PaymentMethod6FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PaymentMethod6FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

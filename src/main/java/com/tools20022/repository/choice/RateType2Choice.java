@@ -108,7 +108,7 @@ public class RateType2Choice {
 	 * "Specifies the type used to complete the currency exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType2Choice, ExchangeRateType1Code> mmCode = new MMMessageAttribute<RateType2Choice, ExchangeRateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType2Choice.mmObject();
@@ -120,6 +120,16 @@ public class RateType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExchangeRateType1Code.mmObject();
+		}
+
+		@Override
+		public ExchangeRateType1Code getValue(RateType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateType2Choice obj, ExchangeRateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class RateType2Choice {
 	 * "Specifies the type used to complete the currency exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType2Choice, Max35Text> mmProprietary = new MMMessageAttribute<RateType2Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType2Choice.mmObject();
@@ -169,6 +179,16 @@ public class RateType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RateType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateType2Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

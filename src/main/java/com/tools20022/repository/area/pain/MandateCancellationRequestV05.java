@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import com.tools20022.repository.msgset.PaymentsMandatesISOLatestversion;
 import com.tools20022.repository.msgset.PaymentsMandatesMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -159,7 +158,7 @@ public class MandateCancellationRequestV05 {
 	 * MandateCancellationRequestV04.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCancellationRequestV05, GroupHeader47> mmGroupHeader = new MMMessageBuildingBlock<MandateCancellationRequestV05, GroupHeader47>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,12 +170,14 @@ public class MandateCancellationRequestV05 {
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCancellationRequestV05.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader47 getValue(MandateCancellationRequestV05 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(MandateCancellationRequestV05 obj, GroupHeader47 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "UndrlygCxlDtls", required = true)
@@ -210,7 +211,7 @@ public class MandateCancellationRequestV05 {
 	 * MandateCancellationRequestV04.mmUnderlyingCancellationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlyingCancellationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCancellationRequestV05, List<MandateCancellation5>> mmUnderlyingCancellationDetails = new MMMessageBuildingBlock<MandateCancellationRequestV05, List<MandateCancellation5>>() {
 		{
 			xmlTag = "UndrlygCxlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,12 +222,14 @@ public class MandateCancellationRequestV05 {
 			complexType_lazy = () -> MandateCancellation5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCancellationRequestV05.class.getMethod("getUnderlyingCancellationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MandateCancellation5> getValue(MandateCancellationRequestV05 obj) {
+			return obj.getUnderlyingCancellationDetails();
+		}
+
+		@Override
+		public void setValue(MandateCancellationRequestV05 obj, List<MandateCancellation5> value) {
+			obj.setUnderlyingCancellationDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -261,7 +264,7 @@ public class MandateCancellationRequestV05 {
 	 * MandateCancellationRequestV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCancellationRequestV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MandateCancellationRequestV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +275,14 @@ public class MandateCancellationRequestV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCancellationRequestV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MandateCancellationRequestV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MandateCancellationRequestV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

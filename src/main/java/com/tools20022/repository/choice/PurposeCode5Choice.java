@@ -110,7 +110,7 @@ public class PurposeCode5Choice {
 	 * definition} = "Specifies the type of securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PurposeCode5Choice, SecuritiesAccountPurposeType1Code> mmCode = new MMMessageAttribute<PurposeCode5Choice, SecuritiesAccountPurposeType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PurposeCode5Choice.mmObject();
@@ -122,6 +122,16 @@ public class PurposeCode5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccountPurposeType1Code getValue(PurposeCode5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PurposeCode5Choice obj, SecuritiesAccountPurposeType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class PurposeCode5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PurposeCode5Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<PurposeCode5Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PurposeCode5Choice.mmObject();
@@ -177,6 +187,16 @@ public class PurposeCode5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(PurposeCode5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PurposeCode5Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

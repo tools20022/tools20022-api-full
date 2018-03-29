@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.AgentCANotificationCancellationRequestV01;
 import com.tools20022.repository.codeset.CorporateActionNotificationType2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public class NotificationCancellation1 {
 	 * definition} = "The function of the notification e.g. new notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationCancellationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationCancellation1, CorporateActionNotificationType2Code> mmNotificationCancellationType = new MMMessageAttribute<NotificationCancellation1, CorporateActionNotificationType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationCancellation1.mmObject();
 			isDerived = false;
@@ -122,6 +123,16 @@ public class NotificationCancellation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNotificationType2Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionNotificationType2Code getValue(NotificationCancellation1 obj) {
+			return obj.getNotificationCancellationType();
+		}
+
+		@Override
+		public void setValue(NotificationCancellation1 obj, CorporateActionNotificationType2Code value) {
+			obj.setNotificationCancellationType(value);
 		}
 	};
 	@XmlElement(name = "LkdAgtCANtfctnAdvcId", required = true)
@@ -154,7 +165,7 @@ public class NotificationCancellation1 {
 	 * definition} = "The identification of the linked notification advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedAgentCANotificationAdviceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationCancellation1, DocumentIdentification8> mmLinkedAgentCANotificationAdviceIdentification = new MMMessageAttribute<NotificationCancellation1, DocumentIdentification8>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationCancellation1.mmObject();
 			isDerived = false;
@@ -164,7 +175,17 @@ public class NotificationCancellation1 {
 			definition = "The identification of the linked notification advice.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
+			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification8 getValue(NotificationCancellation1 obj) {
+			return obj.getLinkedAgentCANotificationAdviceIdentification();
+		}
+
+		@Override
+		public void setValue(NotificationCancellation1 obj, DocumentIdentification8 value) {
+			obj.setLinkedAgentCANotificationAdviceIdentification(value);
 		}
 	};
 
@@ -196,7 +217,7 @@ public class NotificationCancellation1 {
 		return linkedAgentCANotificationAdviceIdentification;
 	}
 
-	public NotificationCancellation1 setLinkedAgentCANotificationAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 linkedAgentCANotificationAdviceIdentification) {
+	public NotificationCancellation1 setLinkedAgentCANotificationAdviceIdentification(DocumentIdentification8 linkedAgentCANotificationAdviceIdentification) {
 		this.linkedAgentCANotificationAdviceIdentification = Objects.requireNonNull(linkedAgentCANotificationAdviceIdentification);
 		return this;
 	}

@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.TransactionReportOrError3Choice;
 import com.tools20022.repository.msg.MessageHeader8;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -158,7 +157,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReturnTransactionV07"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -196,7 +195,7 @@ public class ReturnTransactionV07 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnTransactionV07, MessageHeader8> mmMessageHeader = new MMMessageBuildingBlock<ReturnTransactionV07, MessageHeader8>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,12 +206,14 @@ public class ReturnTransactionV07 {
 			complexType_lazy = () -> MessageHeader8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnTransactionV07.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader8 getValue(ReturnTransactionV07 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ReturnTransactionV07 obj, MessageHeader8 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "RptOrErr", required = true)
@@ -240,7 +241,7 @@ public class ReturnTransactionV07 {
 	 * definition} = "Reports on transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportOrError = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnTransactionV07, TransactionReportOrError3Choice> mmReportOrError = new MMMessageBuildingBlock<ReturnTransactionV07, TransactionReportOrError3Choice>() {
 		{
 			xmlTag = "RptOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,12 +252,14 @@ public class ReturnTransactionV07 {
 			complexType_lazy = () -> TransactionReportOrError3Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnTransactionV07.class.getMethod("getReportOrError", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionReportOrError3Choice getValue(ReturnTransactionV07 obj) {
+			return obj.getReportOrError();
+		}
+
+		@Override
+		public void setValue(ReturnTransactionV07 obj, TransactionReportOrError3Choice value) {
+			obj.setReportOrError(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -286,7 +289,7 @@ public class ReturnTransactionV07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnTransactionV07, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ReturnTransactionV07, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,12 +299,14 @@ public class ReturnTransactionV07 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnTransactionV07.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ReturnTransactionV07 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ReturnTransactionV07 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -309,7 +314,7 @@ public class ReturnTransactionV07 {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrencyGuideline.forReturnTransactionV07);
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnTransactionV07";
 				definition = "Scope\r\nThe ReturnTransaction message is sent by the transaction administrator to a member of the system.\r\nIt is used to provide information on transactions and booked entries held at the transaction administrator.\r\nThe Return Transaction message can be sent as a response to a related GetTransaction message (pull mode) or initiated by the transaction administrator (push mode). The push of information can take place either at prearranged times or as a warning or alarm when a problem has occurred.\r\nUsage\r\nFollowing normal business flows, transactions registered by the transaction administrator may be queued for later settlement (because of insufficient funds available, because of risk or liquidity limits, etc.). A transaction may have a series of statuses. These can be transient (such as pending or related types) and final (such as rejected or settled).\r\nMembers of a system need to receive information about the payments queue(s) and must have the ability to take action (that is, cancel or modify the transaction(s) to be settled). Note, however, that actions by a member will always concern transactions in a transient status.\r\nAt any time during operating hours of the system, the member can query the transaction administrator to get information about transactions, whatever their status.\r\nThese requests will concern either all transactions, all transactions within a particular status or a specific transaction.\r\nThe member can request information about transactions through a series of criteria, corresponding to the known information stored within the transaction administrator. Based on the criteria received within the request, the transaction administrator will select items that match the request and report them to the requester.\r\nThe transaction administrator may also send a ReturnTransaction message with pre-defined information at times previously agreed with the member or to warn the member about a particular problem that may have arisen and which needs attention.\r\nThe message from the transaction administrator can contain information based on the following elements:\r\n- provenance or destination of the payment (payment to/payment from)\r\n- transaction reference\r\n- transfer value date\r\n- payment instruction reference\r\n- payment instruction status, as registered at the transaction administrator\r\n- instructed amount and/or currency\r\n- interbank settlement amount and/or currency\r\n- credit/debit indicator of the payment instruction/transaction\r\n- message used for the payment instruction\r\n- priority of the payment transaction\r\n- period in which the payment instruction should be processed (processing validity time)\r\n- instructions given, related to the processing of the transaction\r\n- type of payment instructed\r\n- account identification (entries booked to a specific account)\r\n- entry amount and/or currency\r\n- entry debit/credit indicator (if absent, all entries should be reported)\r\n- status of the entry (pending, booked.)\r\n- entry date and time\r\n- currency of the account\r\n- type of the account\r\n- entry reference\r\n- entry date\r\n- transfer reason\r\n- details related to the status of the payment instruction\r\nAn element that is particular to the Get/Return Transaction pair is the Statement Report. When a GetTransaction message is sent requesting a statement report, the related ReturnTransaction message will provide a pre-defined set of return criteria per transaction. The information returned contains the following details for each transaction:\r\n- value date\r\n- entry date\r\n- debit/credit code\r\n- entry amount\r\n- method of payment (payment instrument or message type)\r\n- entry reference\r\n- transaction reference\r\n- supplementary details\r\nAdditional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

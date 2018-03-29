@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Parameter1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class AlgorithmIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmIdentification2, Algorithm2Code> mmAlgorithm = new MMMessageAttribute<AlgorithmIdentification2, Algorithm2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification2.mmObject();
 			isDerived = false;
@@ -133,6 +134,16 @@ public class AlgorithmIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm2Code.mmObject();
+		}
+
+		@Override
+		public Algorithm2Code getValue(AlgorithmIdentification2 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification2 obj, Algorithm2Code value) {
+			obj.setAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "Param")
@@ -170,7 +181,7 @@ public class AlgorithmIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AlgorithmIdentification2, Optional<Parameter1>> mmParameter = new MMMessageAssociationEnd<AlgorithmIdentification2, Optional<Parameter1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification2.mmObject();
 			isDerived = false;
@@ -182,7 +193,17 @@ public class AlgorithmIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Parameter1.mmObject();
+			type_lazy = () -> Parameter1.mmObject();
+		}
+
+		@Override
+		public Optional<Parameter1> getValue(AlgorithmIdentification2 obj) {
+			return obj.getParameter();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification2 obj, Optional<Parameter1> value) {
+			obj.setParameter(value.orElse(null));
 		}
 	};
 
@@ -214,7 +235,7 @@ public class AlgorithmIdentification2 {
 		return parameter == null ? Optional.empty() : Optional.of(parameter);
 	}
 
-	public AlgorithmIdentification2 setParameter(com.tools20022.repository.msg.Parameter1 parameter) {
+	public AlgorithmIdentification2 setParameter(Parameter1 parameter) {
 		this.parameter = parameter;
 		return this;
 	}

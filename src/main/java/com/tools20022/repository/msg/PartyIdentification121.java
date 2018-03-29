@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification118Choice;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification172;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -95,6 +96,11 @@ public class PartyIdentification121 {
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification118Choice
 	 * PartyIdentification118Choice}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
+	 * PartyIdentificationInformation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification121
@@ -122,8 +128,9 @@ public class PartyIdentification121 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification121, PartyIdentification118Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification121, PartyIdentification118Choice>() {
 		{
+			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification121.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
@@ -135,6 +142,16 @@ public class PartyIdentification121 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification118Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification118Choice getValue(PartyIdentification121 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification121 obj, PartyIdentification118Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +202,7 @@ public class PartyIdentification121 {
 	 * PartyIdentification109.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification121, GenericIdentification172> mmProprietary = new MMMessageAssociationEnd<PartyIdentification121, GenericIdentification172>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification121.mmObject();
@@ -199,7 +216,17 @@ public class PartyIdentification121 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification172.mmObject();
+			type_lazy = () -> GenericIdentification172.mmObject();
+		}
+
+		@Override
+		public GenericIdentification172 getValue(PartyIdentification121 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PartyIdentification121 obj, GenericIdentification172 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -232,7 +259,7 @@ public class PartyIdentification121 {
 		return proprietary;
 	}
 
-	public PartyIdentification121 setProprietary(com.tools20022.repository.msg.GenericIdentification172 proprietary) {
+	public PartyIdentification121 setProprietary(GenericIdentification172 proprietary) {
 		this.proprietary = Objects.requireNonNull(proprietary);
 		return this;
 	}

@@ -173,7 +173,7 @@ public class Agreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreementDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement2, Max140Text> mmAgreementDetails = new MMMessageAttribute<Agreement2, Max140Text>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement2.mmObject();
@@ -186,6 +186,16 @@ public class Agreement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(Agreement2 obj) {
+			return obj.getAgreementDetails();
+		}
+
+		@Override
+		public void setValue(Agreement2 obj, Max140Text value) {
+			obj.setAgreementDetails(value);
 		}
 	};
 	@XmlElement(name = "AgrmtId")
@@ -230,7 +240,7 @@ public class Agreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement2, Optional<Max140Text>> mmAgreementIdentification = new MMMessageAttribute<Agreement2, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement2.mmObject();
@@ -243,6 +253,16 @@ public class Agreement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Agreement2 obj) {
+			return obj.getAgreementIdentification();
+		}
+
+		@Override
+		public void setValue(Agreement2 obj, Optional<Max140Text> value) {
+			obj.setAgreementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgrmtDt", required = true)
@@ -285,7 +305,7 @@ public class Agreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement2, ISODate> mmAgreementDate = new MMMessageAttribute<Agreement2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement2.mmObject();
@@ -298,6 +318,16 @@ public class Agreement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(Agreement2 obj) {
+			return obj.getAgreementDate();
+		}
+
+		@Override
+		public void setValue(Agreement2 obj, ISODate value) {
+			obj.setAgreementDate(value);
 		}
 	};
 	@XmlElement(name = "BaseCcy", required = true)
@@ -341,7 +371,7 @@ public class Agreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement2, CurrencyCode> mmBaseCurrency = new MMMessageAttribute<Agreement2, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CollateralAgreement.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement2.mmObject();
@@ -354,6 +384,16 @@ public class Agreement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(Agreement2 obj) {
+			return obj.getBaseCurrency();
+		}
+
+		@Override
+		public void setValue(Agreement2 obj, CurrencyCode value) {
+			obj.setBaseCurrency(value);
 		}
 	};
 	@XmlElement(name = "AgrmtFrmwk")
@@ -398,7 +438,7 @@ public class Agreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreementFramework = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement2, Optional<AgreementFramework1Choice>> mmAgreementFramework = new MMMessageAttribute<Agreement2, Optional<AgreementFramework1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralAgreement.mmAssociatedMasterAgreement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement2.mmObject();
@@ -411,6 +451,16 @@ public class Agreement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AgreementFramework1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AgreementFramework1Choice> getValue(Agreement2 obj) {
+			return obj.getAgreementFramework();
+		}
+
+		@Override
+		public void setValue(Agreement2 obj, Optional<AgreementFramework1Choice> value) {
+			obj.setAgreementFramework(value.orElse(null));
 		}
 	};
 

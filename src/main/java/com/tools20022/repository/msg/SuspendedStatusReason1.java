@@ -115,7 +115,7 @@ public class SuspendedStatusReason1 {
 	 * definition} = "Reason for a suspended status in structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReason1, List<SuspendedStatusReason2Code>> mmStructured = new MMMessageAttribute<SuspendedStatusReason1, List<SuspendedStatusReason2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason1.mmObject();
@@ -127,6 +127,16 @@ public class SuspendedStatusReason1 {
 			maxOccurs = 3;
 			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReason2Code.mmObject();
+		}
+
+		@Override
+		public List<SuspendedStatusReason2Code> getValue(SuspendedStatusReason1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason1 obj, List<SuspendedStatusReason2Code> value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -163,7 +173,7 @@ public class SuspendedStatusReason1 {
 	 * definition} = "Reason for a suspended status in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReason1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<SuspendedStatusReason1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason1.mmObject();
@@ -175,6 +185,16 @@ public class SuspendedStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SuspendedStatusReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

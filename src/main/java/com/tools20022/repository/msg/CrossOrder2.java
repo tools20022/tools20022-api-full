@@ -26,6 +26,8 @@ import com.tools20022.repository.codeset.CrossType1Code;
 import com.tools20022.repository.codeset.Prioritisation1Code;
 import com.tools20022.repository.entity.CrossTrade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CrossOrderCancel1;
+import com.tools20022.repository.msg.Order9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +117,7 @@ public class CrossOrder2 {
 	 * definition} = "Type of cross being submitted to a market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCrossType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CrossOrder2, CrossType1Code> mmCrossType = new MMMessageAttribute<CrossOrder2, CrossType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmCrossType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
@@ -128,6 +130,16 @@ public class CrossOrder2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CrossType1Code.mmObject();
+		}
+
+		@Override
+		public CrossType1Code getValue(CrossOrder2 obj) {
+			return obj.getCrossType();
+		}
+
+		@Override
+		public void setValue(CrossOrder2 obj, CrossType1Code value) {
+			obj.setCrossType(value);
 		}
 	};
 	@XmlElement(name = "Prtistn", required = true)
@@ -169,7 +181,7 @@ public class CrossOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrioritisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CrossOrder2, Prioritisation1Code> mmPrioritisation = new MMMessageAttribute<CrossOrder2, Prioritisation1Code>() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmPrioritisation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
@@ -182,6 +194,16 @@ public class CrossOrder2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Prioritisation1Code.mmObject();
+		}
+
+		@Override
+		public Prioritisation1Code getValue(CrossOrder2 obj) {
+			return obj.getPrioritisation();
+		}
+
+		@Override
+		public void setValue(CrossOrder2 obj, Prioritisation1Code value) {
+			obj.setPrioritisation(value);
 		}
 	};
 	@XmlElement(name = "BuySdDtls", required = true)
@@ -218,7 +240,7 @@ public class CrossOrder2 {
 	 * definition} = "Buyside order details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuySideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CrossOrder2, Order9> mmBuySideDetails = new MMMessageAssociationEnd<CrossOrder2, Order9>() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmBuySideOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
@@ -231,7 +253,17 @@ public class CrossOrder2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Order9.mmObject();
+			type_lazy = () -> Order9.mmObject();
+		}
+
+		@Override
+		public Order9 getValue(CrossOrder2 obj) {
+			return obj.getBuySideDetails();
+		}
+
+		@Override
+		public void setValue(CrossOrder2 obj, Order9 value) {
+			obj.setBuySideDetails(value);
 		}
 	};
 	@XmlElement(name = "SellSdDtls", required = true)
@@ -268,7 +300,7 @@ public class CrossOrder2 {
 	 * definition} = "Sell side order details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSellSideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CrossOrder2, Order9> mmSellSideDetails = new MMMessageAssociationEnd<CrossOrder2, Order9>() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmSellSideOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
@@ -281,7 +313,17 @@ public class CrossOrder2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Order9.mmObject();
+			type_lazy = () -> Order9.mmObject();
+		}
+
+		@Override
+		public Order9 getValue(CrossOrder2 obj) {
+			return obj.getSellSideDetails();
+		}
+
+		@Override
+		public void setValue(CrossOrder2 obj, Order9 value) {
+			obj.setSellSideDetails(value);
 		}
 	};
 	@XmlElement(name = "CxlDtls", required = true)
@@ -311,7 +353,7 @@ public class CrossOrder2 {
 	 * definition} = "Additionnal details related to the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CrossOrder2, CrossOrderCancel1> mmCancellationDetails = new MMMessageAssociationEnd<CrossOrder2, CrossOrderCancel1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder2.mmObject();
 			isDerived = false;
@@ -322,7 +364,17 @@ public class CrossOrder2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CrossOrderCancel1.mmObject();
+			type_lazy = () -> CrossOrderCancel1.mmObject();
+		}
+
+		@Override
+		public CrossOrderCancel1 getValue(CrossOrder2 obj) {
+			return obj.getCancellationDetails();
+		}
+
+		@Override
+		public void setValue(CrossOrder2 obj, CrossOrderCancel1 value) {
+			obj.setCancellationDetails(value);
 		}
 	};
 
@@ -363,7 +415,7 @@ public class CrossOrder2 {
 		return buySideDetails;
 	}
 
-	public CrossOrder2 setBuySideDetails(com.tools20022.repository.msg.Order9 buySideDetails) {
+	public CrossOrder2 setBuySideDetails(Order9 buySideDetails) {
 		this.buySideDetails = Objects.requireNonNull(buySideDetails);
 		return this;
 	}
@@ -372,7 +424,7 @@ public class CrossOrder2 {
 		return sellSideDetails;
 	}
 
-	public CrossOrder2 setSellSideDetails(com.tools20022.repository.msg.Order9 sellSideDetails) {
+	public CrossOrder2 setSellSideDetails(Order9 sellSideDetails) {
 		this.sellSideDetails = Objects.requireNonNull(sellSideDetails);
 		return this;
 	}
@@ -381,7 +433,7 @@ public class CrossOrder2 {
 		return cancellationDetails;
 	}
 
-	public CrossOrder2 setCancellationDetails(com.tools20022.repository.msg.CrossOrderCancel1 cancellationDetails) {
+	public CrossOrder2 setCancellationDetails(CrossOrderCancel1 cancellationDetails) {
 		this.cancellationDetails = Objects.requireNonNull(cancellationDetails);
 		return this;
 	}

@@ -21,6 +21,10 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommonTradeDataReport24;
+import com.tools20022.repository.msg.CounterpartySpecificData20;
+import com.tools20022.repository.msg.SupplementaryData1;
+import com.tools20022.repository.msg.TechnicalAttributes1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -73,7 +77,7 @@ public class TradeTransactionValuationUpdate3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "CtrPtySpcfcData", required = true)
-	protected List<com.tools20022.repository.msg.CounterpartySpecificData20> counterpartySpecificData;
+	protected List<CounterpartySpecificData20> counterpartySpecificData;
 	/**
 	 * 
 	 <p>
@@ -101,7 +105,7 @@ public class TradeTransactionValuationUpdate3 {
 	 * definition} = "Trade transaction data details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterpartySpecificData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeTransactionValuationUpdate3, List<CounterpartySpecificData20>> mmCounterpartySpecificData = new MMMessageAssociationEnd<TradeTransactionValuationUpdate3, List<CounterpartySpecificData20>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeTransactionValuationUpdate3.mmObject();
 			isDerived = false;
@@ -112,7 +116,17 @@ public class TradeTransactionValuationUpdate3 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CounterpartySpecificData20.mmObject();
+			type_lazy = () -> CounterpartySpecificData20.mmObject();
+		}
+
+		@Override
+		public List<CounterpartySpecificData20> getValue(TradeTransactionValuationUpdate3 obj) {
+			return obj.getCounterpartySpecificData();
+		}
+
+		@Override
+		public void setValue(TradeTransactionValuationUpdate3 obj, List<CounterpartySpecificData20> value) {
+			obj.setCounterpartySpecificData(value);
 		}
 	};
 	@XmlElement(name = "CmonTradData")
@@ -144,7 +158,7 @@ public class TradeTransactionValuationUpdate3 {
 	 * definition} = "Trade transaction data details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommonTradeData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeTransactionValuationUpdate3, Optional<CommonTradeDataReport24>> mmCommonTradeData = new MMMessageAssociationEnd<TradeTransactionValuationUpdate3, Optional<CommonTradeDataReport24>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeTransactionValuationUpdate3.mmObject();
 			isDerived = false;
@@ -155,7 +169,17 @@ public class TradeTransactionValuationUpdate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommonTradeDataReport24.mmObject();
+			type_lazy = () -> CommonTradeDataReport24.mmObject();
+		}
+
+		@Override
+		public Optional<CommonTradeDataReport24> getValue(TradeTransactionValuationUpdate3 obj) {
+			return obj.getCommonTradeData();
+		}
+
+		@Override
+		public void setValue(TradeTransactionValuationUpdate3 obj, Optional<CommonTradeDataReport24> value) {
+			obj.setCommonTradeData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TechAttrbts")
@@ -186,7 +210,7 @@ public class TradeTransactionValuationUpdate3 {
 	 * definition} = "Specifies technical attributes of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTechnicalAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeTransactionValuationUpdate3, Optional<TechnicalAttributes1>> mmTechnicalAttributes = new MMMessageAssociationEnd<TradeTransactionValuationUpdate3, Optional<TechnicalAttributes1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeTransactionValuationUpdate3.mmObject();
 			isDerived = false;
@@ -197,11 +221,21 @@ public class TradeTransactionValuationUpdate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TechnicalAttributes1.mmObject();
+			type_lazy = () -> TechnicalAttributes1.mmObject();
+		}
+
+		@Override
+		public Optional<TechnicalAttributes1> getValue(TradeTransactionValuationUpdate3 obj) {
+			return obj.getTechnicalAttributes();
+		}
+
+		@Override
+		public void setValue(TradeTransactionValuationUpdate3 obj, Optional<TechnicalAttributes1> value) {
+			obj.setTechnicalAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -230,7 +264,7 @@ public class TradeTransactionValuationUpdate3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeTransactionValuationUpdate3, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<TradeTransactionValuationUpdate3, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeTransactionValuationUpdate3.mmObject();
 			isDerived = false;
@@ -240,7 +274,17 @@ public class TradeTransactionValuationUpdate3 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(TradeTransactionValuationUpdate3 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(TradeTransactionValuationUpdate3 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -262,7 +306,7 @@ public class TradeTransactionValuationUpdate3 {
 		return counterpartySpecificData == null ? counterpartySpecificData = new ArrayList<>() : counterpartySpecificData;
 	}
 
-	public TradeTransactionValuationUpdate3 setCounterpartySpecificData(List<com.tools20022.repository.msg.CounterpartySpecificData20> counterpartySpecificData) {
+	public TradeTransactionValuationUpdate3 setCounterpartySpecificData(List<CounterpartySpecificData20> counterpartySpecificData) {
 		this.counterpartySpecificData = Objects.requireNonNull(counterpartySpecificData);
 		return this;
 	}
@@ -271,7 +315,7 @@ public class TradeTransactionValuationUpdate3 {
 		return commonTradeData == null ? Optional.empty() : Optional.of(commonTradeData);
 	}
 
-	public TradeTransactionValuationUpdate3 setCommonTradeData(com.tools20022.repository.msg.CommonTradeDataReport24 commonTradeData) {
+	public TradeTransactionValuationUpdate3 setCommonTradeData(CommonTradeDataReport24 commonTradeData) {
 		this.commonTradeData = commonTradeData;
 		return this;
 	}
@@ -280,7 +324,7 @@ public class TradeTransactionValuationUpdate3 {
 		return technicalAttributes == null ? Optional.empty() : Optional.of(technicalAttributes);
 	}
 
-	public TradeTransactionValuationUpdate3 setTechnicalAttributes(com.tools20022.repository.msg.TechnicalAttributes1 technicalAttributes) {
+	public TradeTransactionValuationUpdate3 setTechnicalAttributes(TechnicalAttributes1 technicalAttributes) {
 		this.technicalAttributes = technicalAttributes;
 		return this;
 	}
@@ -289,7 +333,7 @@ public class TradeTransactionValuationUpdate3 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public TradeTransactionValuationUpdate3 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public TradeTransactionValuationUpdate3 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

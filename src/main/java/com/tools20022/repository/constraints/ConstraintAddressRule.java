@@ -55,11 +55,15 @@ public class ConstraintAddressRule {
 	 */
 	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {
 		{
-			validator = ConstraintAddressRule::checkAccountParties3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
 			definition = "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively.";
 			owner_lazy = () -> AccountParties3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties3 obj) throws Exception {
+			checkAccountParties3(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintAddressRule {
 	 */
 	public static final MMConstraint<AccountParties4> forAccountParties4 = new MMConstraint<AccountParties4>() {
 		{
-			validator = ConstraintAddressRule::checkAccountParties4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
 			definition = "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively.";
 			owner_lazy = () -> AccountParties4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties4 obj) throws Exception {
+			checkAccountParties4(obj);
 		}
 	};
 	/**
@@ -123,12 +131,16 @@ public class ConstraintAddressRule {
 	 */
 	public static final MMConstraint<AccountParties7> forAccountParties7 = new MMConstraint<AccountParties7>() {
 		{
-			validator = ConstraintAddressRule::checkAccountParties7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
 			definition = "If ModificationScopeIndication is INSE, then at least one occurrence of Organisation/ModifiedAddress or IndividualPerson/ModifiedAddress must be present with Organisation/ModifiedAddress/ModificationScopeIndication being INSE or IndividualPerson/ModifiedAddres/ModificationScopeIndication being INSE respectively.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties8);
 			owner_lazy = () -> AccountParties7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties7 obj) throws Exception {
+			checkAccountParties7(obj);
 		}
 	};
 	/**
@@ -167,13 +179,17 @@ public class ConstraintAddressRule {
 	 */
 	public static final MMConstraint<AccountParties8> forAccountParties8 = new MMConstraint<AccountParties8>() {
 		{
-			validator = ConstraintAddressRule::checkAccountParties8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
 			definition = "If ModificationScopeIndication is INSE, then one of the following must be present:\r\nPrincipalAccountParty/PrimaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/PrimaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdminstrator/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdminstrator/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettler/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettler/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties11);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties7;
 			owner_lazy = () -> AccountParties8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties8 obj) throws Exception {
+			checkAccountParties8(obj);
 		}
 	};
 	/**
@@ -212,13 +228,17 @@ public class ConstraintAddressRule {
 	 */
 	public static final MMConstraint<AccountParties11> forAccountParties11 = new MMConstraint<AccountParties11>() {
 		{
-			validator = ConstraintAddressRule::checkAccountParties11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
 			definition = "If ModificationScopeIndication is INSE, then one of the following must be present:\r\nPrincipalAccountParty/PrimaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/PrimaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdministrator/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdministrator/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettlor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettlor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties14);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties8;
 			owner_lazy = () -> AccountParties11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties11 obj) throws Exception {
+			checkAccountParties11(obj);
 		}
 	};
 	/**
@@ -257,13 +277,17 @@ public class ConstraintAddressRule {
 	 */
 	public static final MMConstraint<AccountParties14> forAccountParties14 = new MMConstraint<AccountParties14>() {
 		{
-			validator = ConstraintAddressRule::checkAccountParties14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
 			definition = "If ModificationScopeIndication is INSE, then one of the following must be present:\r\nPrincipalAccountParty/PrimaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/PrimaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Trustee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/CustodianForMinor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/Nominee/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPrincipalAccountParty/JointOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSecondaryOwner/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nBeneficiary/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nPowerOfAttorney/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nLegalGuardian/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSuccessorOnDeath/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdministrator/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nAdministrator/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nGranter/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettlor/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nSettlor/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/Organisation/ModifiedPostalAddress/ModificationScopeIndication/INSE\r\nOtherParty/OtherPartyDetails/Party/IndividualPerson/ModifiedPostalAddress/ModificationScopeIndication/INSE.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties16);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties11;
 			owner_lazy = () -> AccountParties14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties14 obj) throws Exception {
+			checkAccountParties14(obj);
 		}
 	};
 	/**
@@ -294,12 +318,16 @@ public class ConstraintAddressRule {
 	 */
 	public static final MMConstraint<AccountParties16> forAccountParties16 = new MMConstraint<AccountParties16>() {
 		{
-			validator = ConstraintAddressRule::checkAccountParties16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
 			definition = "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/./Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties14;
 			owner_lazy = () -> AccountParties16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties16 obj) throws Exception {
+			checkAccountParties16(obj);
 		}
 	};
 

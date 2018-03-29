@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorAuthorisationRequest1;
 import com.tools20022.repository.msg.ContentInformationType3;
 import com.tools20022.repository.msg.Header1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -128,7 +127,7 @@ public class AcceptorAuthorisationRequestV01 {
 	 * definition} = "Authorisation request message management information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationRequestV01, Header1> mmHeader = new MMMessageBuildingBlock<AcceptorAuthorisationRequestV01, Header1>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +138,14 @@ public class AcceptorAuthorisationRequestV01 {
 			complexType_lazy = () -> Header1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationRequestV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header1 getValue(AcceptorAuthorisationRequestV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequestV01 obj, Header1 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "AuthstnReq", required = true)
@@ -172,7 +173,7 @@ public class AcceptorAuthorisationRequestV01 {
 	 * definition} = "Information related to the authorisation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAuthorisationRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationRequestV01, AcceptorAuthorisationRequest1> mmAuthorisationRequest = new MMMessageBuildingBlock<AcceptorAuthorisationRequestV01, AcceptorAuthorisationRequest1>() {
 		{
 			xmlTag = "AuthstnReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,12 +184,14 @@ public class AcceptorAuthorisationRequestV01 {
 			complexType_lazy = () -> AcceptorAuthorisationRequest1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationRequestV01.class.getMethod("getAuthorisationRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorAuthorisationRequest1 getValue(AcceptorAuthorisationRequestV01 obj) {
+			return obj.getAuthorisationRequest();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequestV01 obj, AcceptorAuthorisationRequest1 value) {
+			obj.setAuthorisationRequest(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -216,7 +219,7 @@ public class AcceptorAuthorisationRequestV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationRequestV01, ContentInformationType3> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorAuthorisationRequestV01, ContentInformationType3>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +230,14 @@ public class AcceptorAuthorisationRequestV01 {
 			complexType_lazy = () -> ContentInformationType3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationRequestV01.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType3 getValue(AcceptorAuthorisationRequestV01 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequestV01 obj, ContentInformationType3 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

@@ -330,7 +330,7 @@ public class MarketPracticeVersion1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketPracticeVersion1, Max35Text> mmName = new MMMessageAttribute<MarketPracticeVersion1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketPracticeVersion1.mmObject();
 			isDerived = false;
@@ -341,6 +341,16 @@ public class MarketPracticeVersion1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MarketPracticeVersion1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(MarketPracticeVersion1 obj, Max35Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -373,7 +383,7 @@ public class MarketPracticeVersion1 {
 	 * definition} = "Year and month, for example, 2013-06."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketPracticeVersion1, Optional<ISOYearMonth>> mmDate = new MMMessageAttribute<MarketPracticeVersion1, Optional<ISOYearMonth>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketPracticeVersion1.mmObject();
 			isDerived = false;
@@ -384,6 +394,16 @@ public class MarketPracticeVersion1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public Optional<ISOYearMonth> getValue(MarketPracticeVersion1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(MarketPracticeVersion1 obj, Optional<ISOYearMonth> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nb")
@@ -415,7 +435,7 @@ public class MarketPracticeVersion1 {
 	 * definition} = "Version of the market practice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketPracticeVersion1, Optional<Max35Text>> mmNumber = new MMMessageAttribute<MarketPracticeVersion1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketPracticeVersion1.mmObject();
 			isDerived = false;
@@ -426,6 +446,16 @@ public class MarketPracticeVersion1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MarketPracticeVersion1 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(MarketPracticeVersion1 obj, Optional<Max35Text> value) {
+			obj.setNumber(value.orElse(null));
 		}
 	};
 

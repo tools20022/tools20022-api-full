@@ -121,7 +121,7 @@ public class BackTestingMethodology1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRiskModelType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BackTestingMethodology1, ModelType1Choice> mmRiskModelType = new MMMessageAssociationEnd<BackTestingMethodology1, ModelType1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BackTestingMethodology1.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class BackTestingMethodology1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ModelType1Choice.mmObject();
+		}
+
+		@Override
+		public ModelType1Choice getValue(BackTestingMethodology1 obj) {
+			return obj.getRiskModelType();
+		}
+
+		@Override
+		public void setValue(BackTestingMethodology1 obj, ModelType1Choice value) {
+			obj.setRiskModelType(value);
 		}
 	};
 	@XmlElement(name = "MdlCnfdncLvl", required = true)
@@ -167,7 +177,7 @@ public class BackTestingMethodology1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModelConfidenceLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BackTestingMethodology1, BaseOneLimitedRate> mmModelConfidenceLevel = new MMMessageAttribute<BackTestingMethodology1, BaseOneLimitedRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BackTestingMethodology1.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class BackTestingMethodology1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneLimitedRate.mmObject();
+		}
+
+		@Override
+		public BaseOneLimitedRate getValue(BackTestingMethodology1 obj) {
+			return obj.getModelConfidenceLevel();
+		}
+
+		@Override
+		public void setValue(BackTestingMethodology1 obj, BaseOneLimitedRate value) {
+			obj.setModelConfidenceLevel(value);
 		}
 	};
 	@XmlElement(name = "VartnMrgnCleanInd", required = true)
@@ -212,7 +232,7 @@ public class BackTestingMethodology1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVariationMarginCleanIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BackTestingMethodology1, TrueFalseIndicator> mmVariationMarginCleanIndicator = new MMMessageAttribute<BackTestingMethodology1, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BackTestingMethodology1.mmObject();
 			isDerived = false;
@@ -223,6 +243,16 @@ public class BackTestingMethodology1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(BackTestingMethodology1 obj) {
+			return obj.getVariationMarginCleanIndicator();
+		}
+
+		@Override
+		public void setValue(BackTestingMethodology1 obj, TrueFalseIndicator value) {
+			obj.setVariationMarginCleanIndicator(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -254,7 +284,7 @@ public class BackTestingMethodology1 {
 	 * definition} = "Description of backtesting methodology."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BackTestingMethodology1, Optional<Max2000Text>> mmDescription = new MMMessageAttribute<BackTestingMethodology1, Optional<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BackTestingMethodology1.mmObject();
 			isDerived = false;
@@ -265,6 +295,16 @@ public class BackTestingMethodology1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max2000Text> getValue(BackTestingMethodology1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(BackTestingMethodology1 obj, Optional<Max2000Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

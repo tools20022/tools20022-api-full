@@ -26,9 +26,8 @@ import com.tools20022.repository.msg.GroupHeader53;
 import com.tools20022.repository.msg.OriginalGroupInformation27;
 import com.tools20022.repository.msg.PaymentTransaction73;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestversion;
+import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -82,8 +81,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOLatestversion
- * PaymentsClearingandSettlementISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion
+ * PaymentsClearingandSettlementISOPreviousversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementMaintenance20162017
  * PaymentsClearingandSettlementMaintenance20162017}</li>
@@ -179,7 +178,7 @@ public class FIToFIPaymentStatusRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusRequestV01, GroupHeader53> mmGroupHeader = new MMMessageBuildingBlock<FIToFIPaymentStatusRequestV01, GroupHeader53>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,12 +190,14 @@ public class FIToFIPaymentStatusRequestV01 {
 			complexType_lazy = () -> GroupHeader53.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusRequestV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader53 getValue(FIToFIPaymentStatusRequestV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusRequestV01 obj, GroupHeader53 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInf")
@@ -234,7 +235,7 @@ public class FIToFIPaymentStatusRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusRequestV01, List<OriginalGroupInformation27>> mmOriginalGroupInformation = new MMMessageBuildingBlock<FIToFIPaymentStatusRequestV01, List<OriginalGroupInformation27>>() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,12 +246,14 @@ public class FIToFIPaymentStatusRequestV01 {
 			complexType_lazy = () -> OriginalGroupInformation27.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusRequestV01.class.getMethod("getOriginalGroupInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<OriginalGroupInformation27> getValue(FIToFIPaymentStatusRequestV01 obj) {
+			return obj.getOriginalGroupInformation();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusRequestV01 obj, List<OriginalGroupInformation27> value) {
+			obj.setOriginalGroupInformation(value);
 		}
 	};
 	@XmlElement(name = "TxInf")
@@ -288,7 +291,7 @@ public class FIToFIPaymentStatusRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusRequestV01, List<PaymentTransaction73>> mmTransactionInformation = new MMMessageBuildingBlock<FIToFIPaymentStatusRequestV01, List<PaymentTransaction73>>() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,12 +302,14 @@ public class FIToFIPaymentStatusRequestV01 {
 			complexType_lazy = () -> PaymentTransaction73.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusRequestV01.class.getMethod("getTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentTransaction73> getValue(FIToFIPaymentStatusRequestV01 obj) {
+			return obj.getTransactionInformation();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusRequestV01 obj, List<PaymentTransaction73> value) {
+			obj.setTransactionInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -342,7 +347,7 @@ public class FIToFIPaymentStatusRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusRequestV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FIToFIPaymentStatusRequestV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -353,12 +358,14 @@ public class FIToFIPaymentStatusRequestV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FIToFIPaymentStatusRequestV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusRequestV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -373,7 +380,7 @@ public class FIToFIPaymentStatusRequestV01 {
 				name = "FIToFIPaymentStatusRequestV01";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionPaymentStatusRequest message is sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system. It is used to request a FIToFIPaymentStatusReport message containing information on the status of a previously sent instruction. \r\nUsage\r\nThe FIToFIPaymentStatusRequest message is exchanged between agents to request status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.\r\nThe FIToFIPaymentStatusRequest message can be used to request information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).\r\nThe FIToFIPaymentStatusRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentStatusRequest message can be used in domestic and cross-border scenarios.\r\n\r\n";
 				nextVersions_lazy = () -> Arrays.asList(FIToFIPaymentStatusRequestV02.mmObject());
-				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOLatestversion.mmObject(), PaymentsClearingandSettlementMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOPreviousversion.mmObject(), PaymentsClearingandSettlementMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "FIToFIPmtStsReq";
 				businessArea_lazy = () -> PaymentsClearingandSettlementPreviousVersion.mmObject();

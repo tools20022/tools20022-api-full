@@ -108,7 +108,7 @@ public class OptionStyle1Choice {
 	 * definition} = "Option style is defined using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionStyle1Choice, OptionStyle1Code> mmCode = new MMMessageAttribute<OptionStyle1Choice, OptionStyle1Code>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionStyle1Choice.mmObject();
@@ -120,6 +120,16 @@ public class OptionStyle1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyle1Code.mmObject();
+		}
+
+		@Override
+		public OptionStyle1Code getValue(OptionStyle1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionStyle1Choice obj, OptionStyle1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class OptionStyle1Choice {
 	 * definition} = "Option style is defined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionStyle1Choice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<OptionStyle1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionStyle1Choice.mmObject();
@@ -169,6 +179,16 @@ public class OptionStyle1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(OptionStyle1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionStyle1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

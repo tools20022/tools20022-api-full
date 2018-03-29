@@ -120,7 +120,7 @@ public class NetDividendRateFormat3Choice {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateFormat3Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<NetDividendRateFormat3Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat3Choice.mmObject();
@@ -132,6 +132,16 @@ public class NetDividendRateFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(NetDividendRateFormat3Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat3Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -166,7 +176,7 @@ public class NetDividendRateFormat3Choice {
 	 * definition} = "Specifies different formats for the net dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetDividendRateFormat3Choice, RateTypeAndAmountAndStatus8> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<NetDividendRateFormat3Choice, RateTypeAndAmountAndStatus8>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat3Choice.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class NetDividendRateFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus8.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus8 getValue(NetDividendRateFormat3Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat3Choice obj, RateTypeAndAmountAndStatus8 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

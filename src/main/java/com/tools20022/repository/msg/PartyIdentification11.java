@@ -107,7 +107,7 @@ public class PartyIdentification11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification11, PartyPrivate1> mmIdentification = new MMMessageAssociationEnd<PartyIdentification11, PartyPrivate1>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification11.mmObject();
@@ -120,6 +120,16 @@ public class PartyIdentification11 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyPrivate1.mmObject();
+		}
+
+		@Override
+		public PartyPrivate1 getValue(PartyIdentification11 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification11 obj, PartyPrivate1 value) {
+			obj.setIdentification(value);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxRecordDetails2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +118,7 @@ public class TaxAmount2 {
 	 * TaxAmount1.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxAmount2, Optional<PercentageRate>> mmRate = new MMMessageAttribute<TaxAmount2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxAmount2.mmObject();
@@ -130,6 +131,16 @@ public class TaxAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxAmount2 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(TaxAmount2 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblBaseAmt")
@@ -171,7 +182,7 @@ public class TaxAmount2 {
 	 * TaxAmount1.mmTaxableBaseAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableBaseAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxAmount2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTaxableBaseAmount = new MMMessageAttribute<TaxAmount2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxAmount2.mmObject();
@@ -184,6 +195,16 @@ public class TaxAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(TaxAmount2 obj) {
+			return obj.getTaxableBaseAmount();
+		}
+
+		@Override
+		public void setValue(TaxAmount2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setTaxableBaseAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlAmt")
@@ -226,7 +247,7 @@ public class TaxAmount2 {
 	 * TaxAmount1.mmTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxAmount2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTotalAmount = new MMMessageAttribute<TaxAmount2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxAmount2.mmObject();
@@ -240,9 +261,19 @@ public class TaxAmount2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(TaxAmount2 obj) {
+			return obj.getTotalAmount();
+		}
+
+		@Override
+		public void setValue(TaxAmount2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setTotalAmount(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Dtls")
-	protected List<com.tools20022.repository.msg.TaxRecordDetails2> details;
+	protected List<TaxRecordDetails2> details;
 	/**
 	 * 
 	 <p>
@@ -274,7 +305,7 @@ public class TaxAmount2 {
 	 * TaxAmount1.mmDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxAmount2, List<TaxRecordDetails2>> mmDetails = new MMMessageAssociationEnd<TaxAmount2, List<TaxRecordDetails2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxAmount2.mmObject();
 			isDerived = false;
@@ -285,7 +316,17 @@ public class TaxAmount2 {
 			previousVersion_lazy = () -> TaxAmount1.mmDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxRecordDetails2.mmObject();
+			type_lazy = () -> TaxRecordDetails2.mmObject();
+		}
+
+		@Override
+		public List<TaxRecordDetails2> getValue(TaxAmount2 obj) {
+			return obj.getDetails();
+		}
+
+		@Override
+		public void setValue(TaxAmount2 obj, List<TaxRecordDetails2> value) {
+			obj.setDetails(value);
 		}
 	};
 
@@ -336,7 +377,7 @@ public class TaxAmount2 {
 		return details == null ? details = new ArrayList<>() : details;
 	}
 
-	public TaxAmount2 setDetails(List<com.tools20022.repository.msg.TaxRecordDetails2> details) {
+	public TaxAmount2 setDetails(List<TaxRecordDetails2> details) {
 		this.details = Objects.requireNonNull(details);
 		return this;
 	}

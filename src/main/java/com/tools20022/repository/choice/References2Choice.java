@@ -170,7 +170,7 @@ public class References2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References2Choice, SettlementTypeAndIdentification3> mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd<References2Choice, SettlementTypeAndIdentification3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References2Choice.mmObject();
@@ -185,6 +185,16 @@ public class References2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification3.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification3 getValue(References2Choice obj) {
+			return obj.getSecuritiesSettlementTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References2Choice obj, SettlementTypeAndIdentification3 value) {
+			obj.setSecuritiesSettlementTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesFincgTxId", required = true)
@@ -234,7 +244,7 @@ public class References2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References2Choice, SettlementTypeAndIdentification3> mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd<References2Choice, SettlementTypeAndIdentification3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References2Choice.mmObject();
@@ -249,6 +259,16 @@ public class References2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification3.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification3 getValue(References2Choice obj) {
+			return obj.getSecuritiesFinancingTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References2Choice obj, SettlementTypeAndIdentification3 value) {
+			obj.setSecuritiesFinancingTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntraPosMvmntId", required = true)
@@ -293,7 +313,7 @@ public class References2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraPositionMovementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References2Choice, Max35Text> mmIntraPositionMovementIdentification = new MMMessageAttribute<References2Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References2Choice.mmObject();
 			isDerived = false;
@@ -306,6 +326,16 @@ public class References2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References2Choice obj) {
+			return obj.getIntraPositionMovementIdentification();
+		}
+
+		@Override
+		public void setValue(References2Choice obj, Max35Text value) {
+			obj.setIntraPositionMovementIdentification(value);
 		}
 	};
 	@XmlElement(name = "OthrTxId", required = true)
@@ -355,7 +385,7 @@ public class References2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References2Choice, GenericDocumentIdentification1> mmOtherTransactionIdentification = new MMMessageAssociationEnd<References2Choice, GenericDocumentIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References2Choice.mmObject();
@@ -370,6 +400,16 @@ public class References2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericDocumentIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericDocumentIdentification1 getValue(References2Choice obj) {
+			return obj.getOtherTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References2Choice obj, GenericDocumentIdentification1 value) {
+			obj.setOtherTransactionIdentification(value);
 		}
 	};
 

@@ -117,7 +117,7 @@ public class ATMService1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService1, Optional<Max35Text>> mmServiceReference = new MMMessageAttribute<ATMService1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService1.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class ATMService1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMService1 obj) {
+			return obj.getServiceReference();
+		}
+
+		@Override
+		public void setValue(ATMService1 obj, Optional<Max35Text> value) {
+			obj.setServiceReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMSvcCd")
@@ -170,7 +180,7 @@ public class ATMService1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService1, Optional<Max35Text>> mmATMServiceCode = new MMMessageAttribute<ATMService1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService1.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class ATMService1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMService1 obj) {
+			return obj.getATMServiceCode();
+		}
+
+		@Override
+		public void setValue(ATMService1 obj, Optional<Max35Text> value) {
+			obj.setATMServiceCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcTp", required = true)
@@ -223,7 +243,7 @@ public class ATMService1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService1, ATMServiceType1Code> mmServiceType = new MMMessageAttribute<ATMService1, ATMServiceType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService1.mmObject();
 			isDerived = false;
@@ -235,6 +255,16 @@ public class ATMService1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType1Code.mmObject();
+		}
+
+		@Override
+		public ATMServiceType1Code getValue(ATMService1 obj) {
+			return obj.getServiceType();
+		}
+
+		@Override
+		public void setValue(ATMService1 obj, ATMServiceType1Code value) {
+			obj.setServiceType(value);
 		}
 	};
 

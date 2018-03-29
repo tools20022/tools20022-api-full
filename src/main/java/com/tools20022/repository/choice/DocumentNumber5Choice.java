@@ -126,7 +126,7 @@ public class DocumentNumber5Choice {
 	 * DocumentNumber1Choice.mmShortNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentNumber5Choice, Exact3NumericText> mmShortNumber = new MMMessageAttribute<DocumentNumber5Choice, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentNumber5Choice.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class DocumentNumber5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(DocumentNumber5Choice obj) {
+			return obj.getShortNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber5Choice obj, Exact3NumericText value) {
+			obj.setShortNumber(value);
 		}
 	};
 	@XmlElement(name = "LngNb", required = true)
@@ -179,7 +189,7 @@ public class DocumentNumber5Choice {
 	 * DocumentNumber1Choice.mmLongNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentNumber5Choice, ISO20022MessageIdentificationText> mmLongNumber = new MMMessageAttribute<DocumentNumber5Choice, ISO20022MessageIdentificationText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentNumber5Choice.mmObject();
 			isDerived = false;
@@ -192,6 +202,16 @@ public class DocumentNumber5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISO20022MessageIdentificationText.mmObject();
+		}
+
+		@Override
+		public ISO20022MessageIdentificationText getValue(DocumentNumber5Choice obj) {
+			return obj.getLongNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber5Choice obj, ISO20022MessageIdentificationText value) {
+			obj.setLongNumber(value);
 		}
 	};
 	@XmlElement(name = "PrtryNb", required = true)
@@ -232,7 +252,7 @@ public class DocumentNumber5Choice {
 	 * DocumentNumber1Choice.mmProprietaryNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentNumber5Choice, GenericIdentification36> mmProprietaryNumber = new MMMessageAttribute<DocumentNumber5Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentNumber5Choice.mmObject();
 			isDerived = false;
@@ -245,6 +265,16 @@ public class DocumentNumber5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(DocumentNumber5Choice obj) {
+			return obj.getProprietaryNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber5Choice obj, GenericIdentification36 value) {
+			obj.setProprietaryNumber(value);
 		}
 	};
 

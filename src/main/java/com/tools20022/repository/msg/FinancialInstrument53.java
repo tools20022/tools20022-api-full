@@ -120,7 +120,7 @@ public class FinancialInstrument53 {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument53, List<ISINOct2015Identifier>> mmISIN = new MMMessageAttribute<FinancialInstrument53, List<ISINOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument53.mmObject();
@@ -131,6 +131,16 @@ public class FinancialInstrument53 {
 			definition = "Identifies the financial instrument using an ISIN.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public List<ISINOct2015Identifier> getValue(FinancialInstrument53 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument53 obj, List<ISINOct2015Identifier> value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -170,7 +180,7 @@ public class FinancialInstrument53 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument53, List<LEIIdentifier>> mmLEI = new MMMessageAttribute<FinancialInstrument53, List<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument53.mmObject();
@@ -181,6 +191,16 @@ public class FinancialInstrument53 {
 			definition = "The LEI code of the issuer where the instrument is referring to an issuer rather than one single instrument.";
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public List<LEIIdentifier> getValue(FinancialInstrument53 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument53 obj, List<LEIIdentifier> value) {
+			obj.setLEI(value);
 		}
 	};
 

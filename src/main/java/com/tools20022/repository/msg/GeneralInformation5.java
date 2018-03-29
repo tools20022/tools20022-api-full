@@ -30,6 +30,8 @@ import com.tools20022.repository.codeset.Trading1MethodCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AgreementConditions1;
+import com.tools20022.repository.msg.ContactInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -176,7 +178,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmBlockIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBlockIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation5, Optional<YesNoIndicator>> mmBlockIndicator = new MMMessageAttribute<GeneralInformation5, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmBlockIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -189,6 +191,16 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(GeneralInformation5 obj) {
+			return obj.getBlockIndicator();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<YesNoIndicator> value) {
+			obj.setBlockIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdTradRef")
@@ -231,7 +243,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmRelatedTradeReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedTradeReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation5, Optional<Max35Text>> mmRelatedTradeReference = new MMMessageAttribute<GeneralInformation5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -244,6 +256,16 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GeneralInformation5 obj) {
+			return obj.getRelatedTradeReference();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<Max35Text> value) {
+			obj.setRelatedTradeReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealgMtd")
@@ -287,7 +309,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmDealingMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation5, Optional<Trading1MethodCode>> mmDealingMethod = new MMMessageAttribute<GeneralInformation5, Optional<Trading1MethodCode>>() {
 		{
 			businessElementTrace_lazy = () -> Negotiation.mmTradingMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -300,6 +322,16 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Trading1MethodCode.mmObject();
+		}
+
+		@Override
+		public Optional<Trading1MethodCode> getValue(GeneralInformation5 obj) {
+			return obj.getDealingMethod();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<Trading1MethodCode> value) {
+			obj.setDealingMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrkrId")
@@ -343,7 +375,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmBrokerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBrokerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralInformation5, Optional<PartyIdentification73Choice>> mmBrokerIdentification = new MMMessageAssociationEnd<GeneralInformation5, Optional<PartyIdentification73Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -357,6 +389,16 @@ public class GeneralInformation5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(GeneralInformation5 obj) {
+			return obj.getBrokerIdentification();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setBrokerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyRef")
@@ -398,7 +440,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmCounterpartyReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation5, Optional<Max35Text>> mmCounterpartyReference = new MMMessageAttribute<GeneralInformation5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -411,6 +453,16 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GeneralInformation5 obj) {
+			return obj.getCounterpartyReference();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<Max35Text> value) {
+			obj.setCounterpartyReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrkrsComssn")
@@ -453,7 +505,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmBrokersCommission}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBrokersCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation5, Optional<ActiveCurrencyAndAmount>> mmBrokersCommission = new MMMessageAttribute<GeneralInformation5, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -466,6 +518,16 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(GeneralInformation5 obj) {
+			return obj.getBrokersCommission();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setBrokersCommission(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SndrToRcvrInf")
@@ -504,7 +566,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmSenderToReceiverInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSenderToReceiverInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation5, Optional<Max210Text>> mmSenderToReceiverInformation = new MMMessageAttribute<GeneralInformation5, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
 			isDerived = false;
@@ -516,6 +578,16 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(GeneralInformation5 obj) {
+			return obj.getSenderToReceiverInformation();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<Max210Text> value) {
+			obj.setSenderToReceiverInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealgBrnchTradgSd")
@@ -558,7 +630,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmDealingBranchTradingSide}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDealingBranchTradingSide = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralInformation5, Optional<PartyIdentification73Choice>> mmDealingBranchTradingSide = new MMMessageAssociationEnd<GeneralInformation5, Optional<PartyIdentification73Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -572,6 +644,16 @@ public class GeneralInformation5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(GeneralInformation5 obj) {
+			return obj.getDealingBranchTradingSide();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setDealingBranchTradingSide(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealgBrnchCtrPtySd")
@@ -615,7 +697,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmDealingBranchCounterpartySide}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDealingBranchCounterpartySide = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralInformation5, Optional<PartyIdentification73Choice>> mmDealingBranchCounterpartySide = new MMMessageAssociationEnd<GeneralInformation5, Optional<PartyIdentification73Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -629,6 +711,16 @@ public class GeneralInformation5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(GeneralInformation5 obj) {
+			return obj.getDealingBranchCounterpartySide();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setDealingBranchCounterpartySide(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctInf")
@@ -671,7 +763,7 @@ public class GeneralInformation5 {
 	 * GeneralInformation4.mmContactInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralInformation5, Optional<ContactInformation1>> mmContactInformation = new MMMessageAssociationEnd<GeneralInformation5, Optional<ContactInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -684,7 +776,17 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactInformation1.mmObject();
+			type_lazy = () -> ContactInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<ContactInformation1> getValue(GeneralInformation5 obj) {
+			return obj.getContactInformation();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<ContactInformation1> value) {
+			obj.setContactInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgrmtDtls")
@@ -721,7 +823,7 @@ public class GeneralInformation5 {
 	 * "Specifies the type, date and version of the agreement used in a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgreementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralInformation5, Optional<AgreementConditions1>> mmAgreementDetails = new MMMessageAssociationEnd<GeneralInformation5, Optional<AgreementConditions1>>() {
 		{
 			businessComponentTrace_lazy = () -> MasterAgreement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -733,7 +835,17 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AgreementConditions1.mmObject();
+			type_lazy = () -> AgreementConditions1.mmObject();
+		}
+
+		@Override
+		public Optional<AgreementConditions1> getValue(GeneralInformation5 obj) {
+			return obj.getAgreementDetails();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<AgreementConditions1> value) {
+			obj.setAgreementDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DefsYr")
@@ -770,7 +882,7 @@ public class GeneralInformation5 {
 	 * definition} = "Specifies the year of definitions of the agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefinitionsYear = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation5, Optional<ISOYear>> mmDefinitionsYear = new MMMessageAttribute<GeneralInformation5, Optional<ISOYear>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -782,6 +894,16 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOYear.mmObject();
+		}
+
+		@Override
+		public Optional<ISOYear> getValue(GeneralInformation5 obj) {
+			return obj.getDefinitionsYear();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<ISOYear> value) {
+			obj.setDefinitionsYear(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrkrsRef")
@@ -819,7 +941,7 @@ public class GeneralInformation5 {
 	 * "Specifies a reference applied to the trade instruction by a broker."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBrokersReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation5, Optional<Max35Text>> mmBrokersReference = new MMMessageAttribute<GeneralInformation5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmClearingBrokerIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation5.mmObject();
@@ -831,6 +953,16 @@ public class GeneralInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GeneralInformation5 obj) {
+			return obj.getBrokersReference();
+		}
+
+		@Override
+		public void setValue(GeneralInformation5 obj, Optional<Max35Text> value) {
+			obj.setBrokersReference(value.orElse(null));
 		}
 	};
 
@@ -941,7 +1073,7 @@ public class GeneralInformation5 {
 		return contactInformation == null ? Optional.empty() : Optional.of(contactInformation);
 	}
 
-	public GeneralInformation5 setContactInformation(com.tools20022.repository.msg.ContactInformation1 contactInformation) {
+	public GeneralInformation5 setContactInformation(ContactInformation1 contactInformation) {
 		this.contactInformation = contactInformation;
 		return this;
 	}
@@ -950,7 +1082,7 @@ public class GeneralInformation5 {
 		return agreementDetails == null ? Optional.empty() : Optional.of(agreementDetails);
 	}
 
-	public GeneralInformation5 setAgreementDetails(com.tools20022.repository.msg.AgreementConditions1 agreementDetails) {
+	public GeneralInformation5 setAgreementDetails(AgreementConditions1 agreementDetails) {
 		this.agreementDetails = agreementDetails;
 		return this;
 	}

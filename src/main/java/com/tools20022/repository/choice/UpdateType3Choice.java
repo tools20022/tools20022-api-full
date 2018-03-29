@@ -99,7 +99,7 @@ public class UpdateType3Choice {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdateType3Choice, StatementUpdateType1Code> mmCode = new MMMessageAttribute<UpdateType3Choice, StatementUpdateType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType3Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class UpdateType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
+		}
+
+		@Override
+		public StatementUpdateType1Code getValue(UpdateType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UpdateType3Choice obj, StatementUpdateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -142,7 +152,7 @@ public class UpdateType3Choice {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType3Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<UpdateType3Choice, GenericIdentification25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType3Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class UpdateType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(UpdateType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UpdateType3Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

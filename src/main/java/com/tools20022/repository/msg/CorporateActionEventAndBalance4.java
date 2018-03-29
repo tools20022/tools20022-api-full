@@ -24,6 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionBalanceDetails8;
+import com.tools20022.repository.msg.EventInformation2;
+import com.tools20022.repository.msg.SupplementaryData1;
+import com.tools20022.repository.msg.UnderlyingSecurity3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -112,7 +116,7 @@ public class CorporateActionEventAndBalance4 {
 	 * "Provides general information related to a corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventAndBalance4, EventInformation2> mmGeneralInformation = new MMMessageAssociationEnd<CorporateActionEventAndBalance4, EventInformation2>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance4.mmObject();
@@ -124,7 +128,17 @@ public class CorporateActionEventAndBalance4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EventInformation2.mmObject();
+			type_lazy = () -> EventInformation2.mmObject();
+		}
+
+		@Override
+		public EventInformation2 getValue(CorporateActionEventAndBalance4 obj) {
+			return obj.getGeneralInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventAndBalance4 obj, EventInformation2 value) {
+			obj.setGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "UndrlygScty", required = true)
@@ -163,7 +177,7 @@ public class CorporateActionEventAndBalance4 {
 	 * definition} = "Security concerned by the corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingSecurity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventAndBalance4, UnderlyingSecurity3> mmUnderlyingSecurity = new MMMessageAssociationEnd<CorporateActionEventAndBalance4, UnderlyingSecurity3>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance4.mmObject();
@@ -176,7 +190,17 @@ public class CorporateActionEventAndBalance4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurity3.mmObject();
+			type_lazy = () -> UnderlyingSecurity3.mmObject();
+		}
+
+		@Override
+		public UnderlyingSecurity3 getValue(CorporateActionEventAndBalance4 obj) {
+			return obj.getUnderlyingSecurity();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventAndBalance4 obj, UnderlyingSecurity3 value) {
+			obj.setUnderlyingSecurity(value);
 		}
 	};
 	@XmlElement(name = "Bal")
@@ -217,7 +241,7 @@ public class CorporateActionEventAndBalance4 {
 	 * "Provides information about the balance related to a corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventAndBalance4, Optional<CorporateActionBalanceDetails8>> mmBalance = new MMMessageAssociationEnd<CorporateActionEventAndBalance4, Optional<CorporateActionBalanceDetails8>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAggregateQuantityBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance4.mmObject();
@@ -230,11 +254,21 @@ public class CorporateActionEventAndBalance4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails8.mmObject();
+			type_lazy = () -> CorporateActionBalanceDetails8.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionBalanceDetails8> getValue(CorporateActionEventAndBalance4 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventAndBalance4 obj, Optional<CorporateActionBalanceDetails8> value) {
+			obj.setBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -263,7 +297,7 @@ public class CorporateActionEventAndBalance4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventAndBalance4, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<CorporateActionEventAndBalance4, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventAndBalance4.mmObject();
 			isDerived = false;
@@ -273,7 +307,17 @@ public class CorporateActionEventAndBalance4 {
 			definition = "Provides additional information related to the event and the balance of the corporate action.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(CorporateActionEventAndBalance4 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventAndBalance4 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -296,7 +340,7 @@ public class CorporateActionEventAndBalance4 {
 		return generalInformation;
 	}
 
-	public CorporateActionEventAndBalance4 setGeneralInformation(com.tools20022.repository.msg.EventInformation2 generalInformation) {
+	public CorporateActionEventAndBalance4 setGeneralInformation(EventInformation2 generalInformation) {
 		this.generalInformation = Objects.requireNonNull(generalInformation);
 		return this;
 	}
@@ -305,7 +349,7 @@ public class CorporateActionEventAndBalance4 {
 		return underlyingSecurity;
 	}
 
-	public CorporateActionEventAndBalance4 setUnderlyingSecurity(com.tools20022.repository.msg.UnderlyingSecurity3 underlyingSecurity) {
+	public CorporateActionEventAndBalance4 setUnderlyingSecurity(UnderlyingSecurity3 underlyingSecurity) {
 		this.underlyingSecurity = Objects.requireNonNull(underlyingSecurity);
 		return this;
 	}
@@ -314,7 +358,7 @@ public class CorporateActionEventAndBalance4 {
 		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public CorporateActionEventAndBalance4 setBalance(com.tools20022.repository.msg.CorporateActionBalanceDetails8 balance) {
+	public CorporateActionEventAndBalance4 setBalance(CorporateActionBalanceDetails8 balance) {
 		this.balance = balance;
 		return this;
 	}
@@ -323,7 +367,7 @@ public class CorporateActionEventAndBalance4 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public CorporateActionEventAndBalance4 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public CorporateActionEventAndBalance4 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

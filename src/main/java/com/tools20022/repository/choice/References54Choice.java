@@ -135,7 +135,7 @@ public class References54Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesSettlementTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References54Choice, RestrictedFINXMax16Text> mmSecuritiesSettlementTransactionIdentification = new MMMessageAttribute<References54Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References54Choice.mmObject();
@@ -147,6 +147,16 @@ public class References54Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References54Choice obj) {
+			return obj.getSecuritiesSettlementTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References54Choice obj, RestrictedFINXMax16Text value) {
+			obj.setSecuritiesSettlementTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntraPosMvmntId", required = true)
@@ -181,7 +191,7 @@ public class References54Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraPositionMovementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References54Choice, RestrictedFINXMax16Text> mmIntraPositionMovementIdentification = new MMMessageAttribute<References54Choice, RestrictedFINXMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References54Choice.mmObject();
 			isDerived = false;
@@ -192,6 +202,16 @@ public class References54Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References54Choice obj) {
+			return obj.getIntraPositionMovementIdentification();
+		}
+
+		@Override
+		public void setValue(References54Choice obj, RestrictedFINXMax16Text value) {
+			obj.setIntraPositionMovementIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntraBalMvmntId", required = true)
@@ -226,7 +246,7 @@ public class References54Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraBalanceMovementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References54Choice, RestrictedFINXMax16Text> mmIntraBalanceMovementIdentification = new MMMessageAttribute<References54Choice, RestrictedFINXMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References54Choice.mmObject();
 			isDerived = false;
@@ -237,6 +257,16 @@ public class References54Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References54Choice obj) {
+			return obj.getIntraBalanceMovementIdentification();
+		}
+
+		@Override
+		public void setValue(References54Choice obj, RestrictedFINXMax16Text value) {
+			obj.setIntraBalanceMovementIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId", required = true)
@@ -279,7 +309,7 @@ public class References54Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References54Choice, RestrictedFINXMax16Text> mmAccountServicerTransactionIdentification = new MMMessageAttribute<References54Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References54Choice.mmObject();
@@ -292,6 +322,16 @@ public class References54Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References54Choice obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References54Choice obj, RestrictedFINXMax16Text value) {
+			obj.setAccountServicerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId", required = true)
@@ -335,7 +375,7 @@ public class References54Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References54Choice, RestrictedFINXMax16Text> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<References54Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References54Choice.mmObject();
@@ -348,6 +388,16 @@ public class References54Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References54Choice obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References54Choice obj, RestrictedFINXMax16Text value) {
+			obj.setMarketInfrastructureTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolId", required = true)
@@ -388,7 +438,7 @@ public class References54Choice {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References54Choice, RestrictedFINXMax16Text> mmPoolIdentification = new MMMessageAttribute<References54Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References54Choice.mmObject();
@@ -401,6 +451,16 @@ public class References54Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References54Choice obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(References54Choice obj, RestrictedFINXMax16Text value) {
+			obj.setPoolIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonId", required = true)
@@ -443,7 +503,7 @@ public class References54Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References54Choice, RestrictedFINXMax16Text> mmCommonIdentification = new MMMessageAttribute<References54Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References54Choice.mmObject();
@@ -456,6 +516,16 @@ public class References54Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References54Choice obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(References54Choice obj, RestrictedFINXMax16Text value) {
+			obj.setCommonIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradId", required = true)
@@ -498,7 +568,7 @@ public class References54Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References54Choice, RestrictedFINXMax16Text> mmTradeIdentification = new MMMessageAttribute<References54Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References54Choice.mmObject();
@@ -511,6 +581,16 @@ public class References54Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References54Choice obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(References54Choice obj, RestrictedFINXMax16Text value) {
+			obj.setTradeIdentification(value);
 		}
 	};
 	@XmlElement(name = "OthrTxId", required = true)
@@ -550,7 +630,7 @@ public class References54Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References54Choice, RestrictedFINXMax16Text> mmOtherTransactionIdentification = new MMMessageAttribute<References54Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References54Choice.mmObject();
@@ -562,6 +642,16 @@ public class References54Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References54Choice obj) {
+			return obj.getOtherTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References54Choice obj, RestrictedFINXMax16Text value) {
+			obj.setOtherTransactionIdentification(value);
 		}
 	};
 

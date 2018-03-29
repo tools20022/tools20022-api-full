@@ -109,7 +109,7 @@ public class FinancialInstrumentAttributes3Choice {
 	 * "Identification of a financial instrument admitted to trading."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes3Choice, ISINOct2015Identifier> mmIdentification = new MMMessageAttribute<FinancialInstrumentAttributes3Choice, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmObject();
@@ -121,6 +121,16 @@ public class FinancialInstrumentAttributes3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(FinancialInstrumentAttributes3Choice obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes3Choice obj, ISINOct2015Identifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -159,7 +169,7 @@ public class FinancialInstrumentAttributes3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes3Choice, SecurityInstrumentDescription13> mmOther = new MMMessageAssociationEnd<FinancialInstrumentAttributes3Choice, SecurityInstrumentDescription13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmGenericIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice.mmObject();
@@ -172,6 +182,16 @@ public class FinancialInstrumentAttributes3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityInstrumentDescription13.mmObject();
+		}
+
+		@Override
+		public SecurityInstrumentDescription13 getValue(FinancialInstrumentAttributes3Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes3Choice obj, SecurityInstrumentDescription13 value) {
+			obj.setOther(value);
 		}
 	};
 

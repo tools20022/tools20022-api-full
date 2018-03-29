@@ -143,7 +143,7 @@ public class TaxCreditRateFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCreditRateFormat2Choice, PercentageRate> mmRate = new MMMessageAttribute<TaxCreditRateFormat2Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat2Choice.mmObject();
@@ -157,6 +157,16 @@ public class TaxCreditRateFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(TaxCreditRateFormat2Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat2Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -205,7 +215,7 @@ public class TaxCreditRateFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCreditRateFormat2Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<TaxCreditRateFormat2Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat2Choice.mmObject();
@@ -219,6 +229,16 @@ public class TaxCreditRateFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(TaxCreditRateFormat2Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat2Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -261,7 +281,7 @@ public class TaxCreditRateFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxCreditRateFormat2Choice, RateTypeAndAmountAndStatus5> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<TaxCreditRateFormat2Choice, RateTypeAndAmountAndStatus5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat2Choice.mmObject();
 			isDerived = false;
@@ -275,6 +295,16 @@ public class TaxCreditRateFormat2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus5.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus5 getValue(TaxCreditRateFormat2Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat2Choice obj, RateTypeAndAmountAndStatus5 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

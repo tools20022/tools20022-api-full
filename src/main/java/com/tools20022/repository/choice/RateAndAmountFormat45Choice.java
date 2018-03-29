@@ -119,7 +119,7 @@ public class RateAndAmountFormat45Choice {
 	 * definition} = "Value expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat45Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat45Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat45Choice.mmObject();
@@ -132,6 +132,16 @@ public class RateAndAmountFormat45Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat45Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat45Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -171,7 +181,7 @@ public class RateAndAmountFormat45Choice {
 	 * definition} = "Value is expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat45Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat45Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat45Choice.mmObject();
@@ -184,6 +194,16 @@ public class RateAndAmountFormat45Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat45Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat45Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndRate", required = true)
@@ -220,7 +240,7 @@ public class RateAndAmountFormat45Choice {
 	 * definition} = "Value is expressed as a rate type and a percentage rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateAndAmountFormat45Choice, RateTypeAndPercentageRate9> mmRateTypeAndRate = new MMMessageAssociationEnd<RateAndAmountFormat45Choice, RateTypeAndPercentageRate9>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat45Choice.mmObject();
@@ -233,6 +253,16 @@ public class RateAndAmountFormat45Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndPercentageRate9.mmObject();
+		}
+
+		@Override
+		public RateTypeAndPercentageRate9 getValue(RateAndAmountFormat45Choice obj) {
+			return obj.getRateTypeAndRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat45Choice obj, RateTypeAndPercentageRate9 value) {
+			obj.setRateTypeAndRate(value);
 		}
 	};
 

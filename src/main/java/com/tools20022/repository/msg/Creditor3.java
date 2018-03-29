@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Creditor3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -117,7 +117,7 @@ public class Creditor3 {
 	 * Creditor2.mmCreditor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Creditor3, PartyIdentification100Choice> mmCreditor = new MMMessageAttribute<Creditor3, PartyIdentification100Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Creditor3.mmObject();
@@ -130,6 +130,16 @@ public class Creditor3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification100Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100Choice getValue(Creditor3 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(Creditor3 obj, PartyIdentification100Choice value) {
+			obj.setCreditor(value);
 		}
 	};
 	@XmlElement(name = "RegnId")
@@ -167,7 +177,7 @@ public class Creditor3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Creditor3, Optional<Max35Text>> mmRegistrationIdentification = new MMMessageAttribute<Creditor3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CreditorRole.mmSchemeIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Creditor3.mmObject();
@@ -180,6 +190,16 @@ public class Creditor3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(Creditor3 obj) {
+			return obj.getRegistrationIdentification();
+		}
+
+		@Override
+		public void setValue(Creditor3 obj, Optional<Max35Text> value) {
+			obj.setRegistrationIdentification(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -188,7 +208,7 @@ public class Creditor3 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Creditor3.mmCreditor, com.tools20022.repository.msg.Creditor3.mmRegistrationIdentification);
 				trace_lazy = () -> CreditorRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Creditor3";
 				definition = "Information about the creditor.";
 				previousVersion_lazy = () -> Creditor2.mmObject();

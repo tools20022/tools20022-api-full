@@ -128,7 +128,7 @@ public class PaymentTypeInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation5, Optional<Priority2Code>> mmInstructionPriority = new MMMessageAttribute<PaymentTypeInformation5, Optional<Priority2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation5.mmObject();
@@ -140,6 +140,16 @@ public class PaymentTypeInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Priority2Code.mmObject();
+		}
+
+		@Override
+		public Optional<Priority2Code> getValue(PaymentTypeInformation5 obj) {
+			return obj.getInstructionPriority();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation5 obj, Optional<Priority2Code> value) {
+			obj.setInstructionPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcLvl")
@@ -178,7 +188,7 @@ public class PaymentTypeInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation5, Optional<RestrictedProprietaryChoice>> mmServiceLevel = new MMMessageAssociationEnd<PaymentTypeInformation5, Optional<RestrictedProprietaryChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation5.mmObject();
@@ -191,6 +201,16 @@ public class PaymentTypeInformation5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RestrictedProprietaryChoice.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedProprietaryChoice> getValue(PaymentTypeInformation5 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation5 obj, Optional<RestrictedProprietaryChoice> value) {
+			obj.setServiceLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrChanl")
@@ -229,7 +249,7 @@ public class PaymentTypeInformation5 {
 	 * "Specifies the clearing channel to be used for the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation5, Optional<ClearingChannel2Code>> mmClearingChannel = new MMMessageAttribute<PaymentTypeInformation5, Optional<ClearingChannel2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation5.mmObject();
@@ -241,6 +261,16 @@ public class PaymentTypeInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingChannel2Code> getValue(PaymentTypeInformation5 obj) {
+			return obj.getClearingChannel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation5 obj, Optional<ClearingChannel2Code> value) {
+			obj.setClearingChannel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclInstrm")
@@ -279,7 +309,7 @@ public class PaymentTypeInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation5, Optional<RestrictedProprietaryChoice>> mmLocalInstrument = new MMMessageAssociationEnd<PaymentTypeInformation5, Optional<RestrictedProprietaryChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmLocalInstrument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation5.mmObject();
@@ -292,6 +322,16 @@ public class PaymentTypeInformation5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RestrictedProprietaryChoice.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedProprietaryChoice> getValue(PaymentTypeInformation5 obj) {
+			return obj.getLocalInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation5 obj, Optional<RestrictedProprietaryChoice> value) {
+			obj.setLocalInstrument(value.orElse(null));
 		}
 	};
 	/**

@@ -64,13 +64,17 @@ public class ConstraintStatus2Rule {
 	 */
 	public static final MMConstraint<MeetingInstructionStatusV05> forMeetingInstructionStatusV05 = new MMConstraint<MeetingInstructionStatusV05>() {
 		{
-			validator = ConstraintStatus2Rule::checkMeetingInstructionStatusV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status2Rule";
 			definition = "If InstructionType/InstructionCancellationIdentification is present, then InstructionTypeStatus/CancellationStatus must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatus2Rule.forMeetingInstructionStatusV04;
 			owner_lazy = () -> MeetingInstructionStatusV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionTypeStatus/CancellationStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionType/InstructionCancellationIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MeetingInstructionStatusV05 obj) throws Exception {
+			checkMeetingInstructionStatusV05(obj);
 		}
 	};
 	/**
@@ -108,13 +112,17 @@ public class ConstraintStatus2Rule {
 	 */
 	public static final MMConstraint<MeetingInstructionStatusV04> forMeetingInstructionStatusV04 = new MMConstraint<MeetingInstructionStatusV04>() {
 		{
-			validator = ConstraintStatus2Rule::checkMeetingInstructionStatusV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status2Rule";
 			definition = "If InstructionType/InstructionCancellationIdentification is present, then InstructionTypeStatus/CancellationStatus must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatus2Rule.forMeetingInstructionStatusV05);
 			owner_lazy = () -> MeetingInstructionStatusV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionTypeStatus/CancellationStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionType/InstructionCancellationIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MeetingInstructionStatusV04 obj) throws Exception {
+			checkMeetingInstructionStatusV04(obj);
 		}
 	};
 	/**
@@ -140,11 +148,15 @@ public class ConstraintStatus2Rule {
 	 */
 	public static final MMConstraint<MeetingInstructionStatusV02> forMeetingInstructionStatusV02 = new MMConstraint<MeetingInstructionStatusV02>() {
 		{
-			validator = ConstraintStatus2Rule::checkMeetingInstructionStatusV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status2Rule";
 			definition = "If InstructionCancellationIdentification is present, then CancellationStatus must be present.";
 			owner_lazy = () -> MeetingInstructionStatusV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingInstructionStatusV02 obj) throws Exception {
+			checkMeetingInstructionStatusV02(obj);
 		}
 	};
 	/**
@@ -174,12 +186,16 @@ public class ConstraintStatus2Rule {
 	 */
 	public static final MMConstraint<MeetingInstructionStatusV03> forMeetingInstructionStatusV03 = new MMConstraint<MeetingInstructionStatusV03>() {
 		{
-			validator = ConstraintStatus2Rule::checkMeetingInstructionStatusV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status2Rule";
 			definition = "If InstructionType/InstructionCancellationIdentification is present, then InstructionTypeStatus/CancellationStatus must be present.";
 			owner_lazy = () -> MeetingInstructionStatusV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionTypeStatus/CancellationStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionType/InstructionCancellationIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MeetingInstructionStatusV03 obj) throws Exception {
+			checkMeetingInstructionStatusV03(obj);
 		}
 	};
 

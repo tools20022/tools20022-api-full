@@ -109,7 +109,7 @@ public class CommodityDerivate4 {
 	 * "Provides specific information related to commodity derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClassSpecific = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommodityDerivate4, Optional<CommodityDerivate2Choice>> mmClassSpecific = new MMMessageAssociationEnd<CommodityDerivate4, Optional<CommodityDerivate2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommodityDerivate4.mmObject();
@@ -122,6 +122,16 @@ public class CommodityDerivate4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CommodityDerivate2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CommodityDerivate2Choice> getValue(CommodityDerivate4 obj) {
+			return obj.getClassSpecific();
+		}
+
+		@Override
+		public void setValue(CommodityDerivate4 obj, Optional<CommodityDerivate2Choice> value) {
+			obj.setClassSpecific(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtnlCcy", required = true)
@@ -159,7 +169,7 @@ public class CommodityDerivate4 {
 	 * definition} = "Currency in which the notional is denominated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommodityDerivate4, ActiveOrHistoricCurrencyCode> mmNotionalCurrency = new MMMessageAttribute<CommodityDerivate4, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommodityDerivate4.mmObject();
@@ -171,6 +181,16 @@ public class CommodityDerivate4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CommodityDerivate4 obj) {
+			return obj.getNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(CommodityDerivate4 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setNotionalCurrency(value);
 		}
 	};
 

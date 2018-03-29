@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProcessRetry2;
+import com.tools20022.repository.msg.ProcessTiming3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -147,7 +149,7 @@ public class ExchangeConfiguration5 {
 	 * ExchangeConfiguration3.mmExchangePolicy}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangePolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration5, List<ExchangePolicy1Code>> mmExchangePolicy = new MMMessageAttribute<ExchangeConfiguration5, List<ExchangePolicy1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmExchangePolicy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration5.mmObject();
@@ -160,6 +162,16 @@ public class ExchangeConfiguration5 {
 			previousVersion_lazy = () -> ExchangeConfiguration3.mmExchangePolicy;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExchangePolicy1Code.mmObject();
+		}
+
+		@Override
+		public List<ExchangePolicy1Code> getValue(ExchangeConfiguration5 obj) {
+			return obj.getExchangePolicy();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration5 obj, List<ExchangePolicy1Code> value) {
+			obj.setExchangePolicy(value);
 		}
 	};
 	@XmlElement(name = "MaxNb")
@@ -209,7 +221,7 @@ public class ExchangeConfiguration5 {
 	 * ExchangeConfiguration3.mmMaximumNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration5, Optional<Number>> mmMaximumNumber = new MMMessageAttribute<ExchangeConfiguration5, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration5.mmObject();
@@ -223,6 +235,16 @@ public class ExchangeConfiguration5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ExchangeConfiguration5 obj) {
+			return obj.getMaximumNumber();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration5 obj, Optional<Number> value) {
+			obj.setMaximumNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAmt")
@@ -274,7 +296,7 @@ public class ExchangeConfiguration5 {
 	 * ExchangeConfiguration3.mmMaximumAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration5, Optional<ImpliedCurrencyAndAmount>> mmMaximumAmount = new MMMessageAttribute<ExchangeConfiguration5, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration5.mmObject();
@@ -288,6 +310,16 @@ public class ExchangeConfiguration5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ExchangeConfiguration5 obj) {
+			return obj.getMaximumAmount();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration5 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReTry")
@@ -327,7 +359,7 @@ public class ExchangeConfiguration5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReTry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExchangeConfiguration5, Optional<ProcessRetry2>> mmReTry = new MMMessageAssociationEnd<ExchangeConfiguration5, Optional<ProcessRetry2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration5.mmObject();
 			isDerived = false;
@@ -339,7 +371,17 @@ public class ExchangeConfiguration5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
+			type_lazy = () -> ProcessRetry2.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessRetry2> getValue(ExchangeConfiguration5 obj) {
+			return obj.getReTry();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration5 obj, Optional<ProcessRetry2> value) {
+			obj.setReTry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmCond")
@@ -383,7 +425,7 @@ public class ExchangeConfiguration5 {
 	 * ExchangeConfiguration3.mmTimeCondition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTimeCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExchangeConfiguration5, Optional<ProcessTiming3>> mmTimeCondition = new MMMessageAssociationEnd<ExchangeConfiguration5, Optional<ProcessTiming3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration5.mmObject();
 			isDerived = false;
@@ -396,7 +438,17 @@ public class ExchangeConfiguration5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessTiming3.mmObject();
+			type_lazy = () -> ProcessTiming3.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessTiming3> getValue(ExchangeConfiguration5 obj) {
+			return obj.getTimeCondition();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration5 obj, Optional<ProcessTiming3> value) {
+			obj.setTimeCondition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgFaild")
@@ -442,7 +494,7 @@ public class ExchangeConfiguration5 {
 	 * ExchangeConfiguration3.mmExchangeFailed}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeFailed = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration5, Optional<TrueFalseIndicator>> mmExchangeFailed = new MMMessageAttribute<ExchangeConfiguration5, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration5.mmObject();
 			isDerived = false;
@@ -455,6 +507,16 @@ public class ExchangeConfiguration5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ExchangeConfiguration5 obj) {
+			return obj.getExchangeFailed();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration5 obj, Optional<TrueFalseIndicator> value) {
+			obj.setExchangeFailed(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgDclnd")
@@ -500,7 +562,7 @@ public class ExchangeConfiguration5 {
 	 * ExchangeConfiguration3.mmExchangeDeclined}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeDeclined = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration5, Optional<TrueFalseIndicator>> mmExchangeDeclined = new MMMessageAttribute<ExchangeConfiguration5, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration5.mmObject();
 			isDerived = false;
@@ -513,6 +575,16 @@ public class ExchangeConfiguration5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ExchangeConfiguration5 obj) {
+			return obj.getExchangeDeclined();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration5 obj, Optional<TrueFalseIndicator> value) {
+			obj.setExchangeDeclined(value.orElse(null));
 		}
 	};
 
@@ -565,7 +637,7 @@ public class ExchangeConfiguration5 {
 		return reTry == null ? Optional.empty() : Optional.of(reTry);
 	}
 
-	public ExchangeConfiguration5 setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
+	public ExchangeConfiguration5 setReTry(ProcessRetry2 reTry) {
 		this.reTry = reTry;
 		return this;
 	}
@@ -574,7 +646,7 @@ public class ExchangeConfiguration5 {
 		return timeCondition == null ? Optional.empty() : Optional.of(timeCondition);
 	}
 
-	public ExchangeConfiguration5 setTimeCondition(com.tools20022.repository.msg.ProcessTiming3 timeCondition) {
+	public ExchangeConfiguration5 setTimeCondition(ProcessTiming3 timeCondition) {
 		this.timeCondition = timeCondition;
 		return this;
 	}

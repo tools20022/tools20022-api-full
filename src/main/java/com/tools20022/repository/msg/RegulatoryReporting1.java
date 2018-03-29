@@ -32,6 +32,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ClearingBrokerIdentification1;
+import com.tools20022.repository.msg.UniqueTransactionIdentifier1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -193,7 +195,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingJurisdiction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<Max35Text>> mmReportingJurisdiction = new MMMessageAttribute<RegulatoryReporting1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -205,6 +207,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RegulatoryReporting1 obj) {
+			return obj.getReportingJurisdiction();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<Max35Text> value) {
+			obj.setReportingJurisdiction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgPty")
@@ -244,7 +256,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<PartyIdentification73Choice>> mmReportingParty = new MMMessageAttribute<RegulatoryReporting1, Optional<PartyIdentification73Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -256,6 +268,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(RegulatoryReporting1 obj) {
+			return obj.getReportingParty();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setReportingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgSdUnqTxIdr")
@@ -295,7 +317,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingSideUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<UniqueTransactionIdentifier1>> mmTradingSideUniqueTransactionIdentifier = new MMMessageAttribute<RegulatoryReporting1, Optional<UniqueTransactionIdentifier1>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -306,7 +328,17 @@ public class RegulatoryReporting1 {
 			definition = "Specifies the unique transaction identifier (UTI) to be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction over its life. This identifier can also be known as the Unique Swap Identifier (USI).This is the UTI from the Trading Side party.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier1.mmObject();
+			complexType_lazy = () -> UniqueTransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public Optional<UniqueTransactionIdentifier1> getValue(RegulatoryReporting1 obj) {
+			return obj.getTradingSideUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<UniqueTransactionIdentifier1> value) {
+			obj.setTradingSideUniqueTransactionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtySdUnqTxIdr")
@@ -346,7 +378,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartySideUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<UniqueTransactionIdentifier1>> mmCounterpartySideUniqueTransactionIdentifier = new MMMessageAttribute<RegulatoryReporting1, Optional<UniqueTransactionIdentifier1>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -357,7 +389,17 @@ public class RegulatoryReporting1 {
 			definition = "Specifies the unique transaction identifier (UTI) to be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction over its life. This identifier can also be known as the Unique Swap Identifier (USI).This is the UTI from the Counterparty Side party.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier1.mmObject();
+			complexType_lazy = () -> UniqueTransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public Optional<UniqueTransactionIdentifier1> getValue(RegulatoryReporting1 obj) {
+			return obj.getCounterpartySideUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<UniqueTransactionIdentifier1> value) {
+			obj.setCounterpartySideUniqueTransactionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrXcptnPty")
@@ -404,7 +446,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingExceptionParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<PartyIdentification73Choice>> mmClearingExceptionParty = new MMMessageAttribute<RegulatoryReporting1, Optional<PartyIdentification73Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -417,6 +459,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(RegulatoryReporting1 obj) {
+			return obj.getClearingExceptionParty();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setClearingExceptionParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrBrkrId")
@@ -464,7 +516,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingBrokerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<ClearingBrokerIdentification1>> mmClearingBrokerIdentification = new MMMessageAttribute<RegulatoryReporting1, Optional<ClearingBrokerIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmClearingBrokerIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -476,7 +528,17 @@ public class RegulatoryReporting1 {
 			nextVersions_lazy = () -> Arrays.asList(RegulatoryReporting4.mmClearingBrokerIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ClearingBrokerIdentification1.mmObject();
+			complexType_lazy = () -> ClearingBrokerIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingBrokerIdentification1> getValue(RegulatoryReporting1 obj) {
+			return obj.getClearingBrokerIdentification();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<ClearingBrokerIdentification1> value) {
+			obj.setClearingBrokerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrThrshldInd")
@@ -524,7 +586,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingThresholdIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<YesNoIndicator>> mmClearingThresholdIndicator = new MMMessageAttribute<RegulatoryReporting1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Clearing.mmClearingThresholdIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -537,6 +599,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(RegulatoryReporting1 obj) {
+			return obj.getClearingThresholdIndicator();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<YesNoIndicator> value) {
+			obj.setClearingThresholdIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrdPdctId")
@@ -583,7 +655,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearedProductIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<Max35Text>> mmClearedProductIdentification = new MMMessageAttribute<RegulatoryReporting1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Clearing.mmClearedIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -596,6 +668,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RegulatoryReporting1 obj) {
+			return obj.getClearedProductIdentification();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<Max35Text> value) {
+			obj.setClearedProductIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygPdctIdr")
@@ -641,7 +723,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnderlyingProductIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<UnderlyingProductIdentifier1Code>> mmUnderlyingProductIdentifier = new MMMessageAttribute<RegulatoryReporting1, Optional<UnderlyingProductIdentifier1Code>>() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmUnderlyingProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -654,6 +736,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnderlyingProductIdentifier1Code.mmObject();
+		}
+
+		@Override
+		public Optional<UnderlyingProductIdentifier1Code> getValue(RegulatoryReporting1 obj) {
+			return obj.getUnderlyingProductIdentifier();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<UnderlyingProductIdentifier1Code> value) {
+			obj.setUnderlyingProductIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AllcnInd")
@@ -701,7 +793,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllocationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<AllocationIndicator1Code>> mmAllocationIndicator = new MMMessageAttribute<RegulatoryReporting1, Optional<AllocationIndicator1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmAllocationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -714,6 +806,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AllocationIndicator1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AllocationIndicator1Code> getValue(RegulatoryReporting1 obj) {
+			return obj.getAllocationIndicator();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<AllocationIndicator1Code> value) {
+			obj.setAllocationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollstnInd")
@@ -759,7 +861,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralisationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<CollateralisationIndicator1Code>> mmCollateralisationIndicator = new MMMessageAttribute<RegulatoryReporting1, Optional<CollateralisationIndicator1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmCollateralisationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -772,6 +874,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CollateralisationIndicator1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralisationIndicator1Code> getValue(RegulatoryReporting1 obj) {
+			return obj.getCollateralisationIndicator();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<CollateralisationIndicator1Code> value) {
+			obj.setCollateralisationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctnVn")
@@ -816,7 +928,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutionVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<Max35Text>> mmExecutionVenue = new MMMessageAttribute<RegulatoryReporting1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -829,6 +941,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RegulatoryReporting1 obj) {
+			return obj.getExecutionVenue();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<Max35Text> value) {
+			obj.setExecutionVenue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctnTmstmp")
@@ -876,7 +998,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutionTimestamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<DateAndDateTimeChoice>> mmExecutionTimestamp = new MMMessageAttribute<RegulatoryReporting1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -889,6 +1011,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(RegulatoryReporting1 obj) {
+			return obj.getExecutionTimestamp();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setExecutionTimestamp(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonStdFlg")
@@ -936,7 +1068,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonStandardFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<YesNoIndicator>> mmNonStandardFlag = new MMMessageAttribute<RegulatoryReporting1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmNonStandardFlag;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -949,6 +1081,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(RegulatoryReporting1 obj) {
+			return obj.getNonStandardFlag();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<YesNoIndicator> value) {
+			obj.setNonStandardFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkSwpId")
@@ -995,7 +1137,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkSwapIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<Exact42Text>> mmLinkSwapIdentification = new MMMessageAttribute<RegulatoryReporting1, Optional<Exact42Text>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeSwap.mmLinkSwapIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
@@ -1008,6 +1150,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact42Text.mmObject();
+		}
+
+		@Override
+		public Optional<Exact42Text> getValue(RegulatoryReporting1 obj) {
+			return obj.getLinkSwapIdentification();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<Exact42Text> value) {
+			obj.setLinkSwapIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRptgInf")
@@ -1049,7 +1201,7 @@ public class RegulatoryReporting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReportingInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting1, Optional<Max210Text>> mmAdditionalReportingInformation = new MMMessageAttribute<RegulatoryReporting1, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
 			isDerived = false;
@@ -1061,6 +1213,16 @@ public class RegulatoryReporting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(RegulatoryReporting1 obj) {
+			return obj.getAdditionalReportingInformation();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReportingInformation(value.orElse(null));
 		}
 	};
 
@@ -1110,7 +1272,7 @@ public class RegulatoryReporting1 {
 		return tradingSideUniqueTransactionIdentifier == null ? Optional.empty() : Optional.of(tradingSideUniqueTransactionIdentifier);
 	}
 
-	public RegulatoryReporting1 setTradingSideUniqueTransactionIdentifier(com.tools20022.repository.msg.UniqueTransactionIdentifier1 tradingSideUniqueTransactionIdentifier) {
+	public RegulatoryReporting1 setTradingSideUniqueTransactionIdentifier(UniqueTransactionIdentifier1 tradingSideUniqueTransactionIdentifier) {
 		this.tradingSideUniqueTransactionIdentifier = tradingSideUniqueTransactionIdentifier;
 		return this;
 	}
@@ -1119,7 +1281,7 @@ public class RegulatoryReporting1 {
 		return counterpartySideUniqueTransactionIdentifier == null ? Optional.empty() : Optional.of(counterpartySideUniqueTransactionIdentifier);
 	}
 
-	public RegulatoryReporting1 setCounterpartySideUniqueTransactionIdentifier(com.tools20022.repository.msg.UniqueTransactionIdentifier1 counterpartySideUniqueTransactionIdentifier) {
+	public RegulatoryReporting1 setCounterpartySideUniqueTransactionIdentifier(UniqueTransactionIdentifier1 counterpartySideUniqueTransactionIdentifier) {
 		this.counterpartySideUniqueTransactionIdentifier = counterpartySideUniqueTransactionIdentifier;
 		return this;
 	}
@@ -1137,7 +1299,7 @@ public class RegulatoryReporting1 {
 		return clearingBrokerIdentification == null ? Optional.empty() : Optional.of(clearingBrokerIdentification);
 	}
 
-	public RegulatoryReporting1 setClearingBrokerIdentification(com.tools20022.repository.msg.ClearingBrokerIdentification1 clearingBrokerIdentification) {
+	public RegulatoryReporting1 setClearingBrokerIdentification(ClearingBrokerIdentification1 clearingBrokerIdentification) {
 		this.clearingBrokerIdentification = clearingBrokerIdentification;
 		return this;
 	}

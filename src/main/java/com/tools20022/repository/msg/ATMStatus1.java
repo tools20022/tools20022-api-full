@@ -95,7 +95,7 @@ public class ATMStatus1 {
 	 * definition} = "Actual status of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMStatus1, ATMStatus1Code> mmCurrentStatus = new MMMessageAttribute<ATMStatus1, ATMStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMStatus1.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class ATMStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
+		}
+
+		@Override
+		public ATMStatus1Code getValue(ATMStatus1 obj) {
+			return obj.getCurrentStatus();
+		}
+
+		@Override
+		public void setValue(ATMStatus1 obj, ATMStatus1Code value) {
+			obj.setCurrentStatus(value);
 		}
 	};
 	@XmlElement(name = "DmnddSts")
@@ -139,7 +149,7 @@ public class ATMStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDemandedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMStatus1, Optional<ATMStatus1Code>> mmDemandedStatus = new MMMessageAttribute<ATMStatus1, Optional<ATMStatus1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMStatus1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class ATMStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ATMStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ATMStatus1Code> getValue(ATMStatus1 obj) {
+			return obj.getDemandedStatus();
+		}
+
+		@Override
+		public void setValue(ATMStatus1 obj, Optional<ATMStatus1Code> value) {
+			obj.setDemandedStatus(value.orElse(null));
 		}
 	};
 

@@ -134,7 +134,7 @@ public class ChargesDetails1 {
 	 * definition} = "Type of service for which a charge is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargesDetails1, ChargeType8Code> mmType = new MMMessageAttribute<ChargesDetails1, ChargeType8Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesDetails1.mmObject();
@@ -146,6 +146,16 @@ public class ChargesDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType8Code.mmObject();
+		}
+
+		@Override
+		public ChargeType8Code getValue(ChargesDetails1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ChargesDetails1 obj, ChargeType8Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "OthrChrgsTp", required = true)
@@ -182,7 +192,7 @@ public class ChargesDetails1 {
 	 * definition} = "Specifies the type of charge by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherChargesType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargesDetails1, Max35Text> mmOtherChargesType = new MMMessageAttribute<ChargesDetails1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesDetails1.mmObject();
@@ -194,6 +204,16 @@ public class ChargesDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ChargesDetails1 obj) {
+			return obj.getOtherChargesType();
+		}
+
+		@Override
+		public void setValue(ChargesDetails1 obj, Max35Text value) {
+			obj.setOtherChargesType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -231,7 +251,7 @@ public class ChargesDetails1 {
 	 * definition} = "Amount of money asked or paid for the charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargesDetails1, CurrencyAndAmount> mmAmount = new MMMessageAttribute<ChargesDetails1, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesDetails1.mmObject();
@@ -243,6 +263,16 @@ public class ChargesDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ChargesDetails1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ChargesDetails1 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -280,7 +310,7 @@ public class ChargesDetails1 {
 	 * definition} = "Rate used to calculate the amount of the charge or fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargesDetails1, PercentageRate> mmRate = new MMMessageAttribute<ChargesDetails1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesDetails1.mmObject();
@@ -292,6 +322,16 @@ public class ChargesDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(ChargesDetails1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(ChargesDetails1 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	/**

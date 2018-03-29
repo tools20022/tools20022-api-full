@@ -21,7 +21,9 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.InvestigationCase;
 import com.tools20022.repository.entity.Role;
+import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -126,7 +128,7 @@ public class InvestigationPartyRole extends Role {
 	 * definition} = "Identifies the case for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestigationCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestigationPartyRole, List<InvestigationCase>> mmInvestigationCase = new MMBusinessAssociationEnd<InvestigationPartyRole, List<InvestigationCase>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationPartyRole.mmObject();
@@ -137,6 +139,16 @@ public class InvestigationPartyRole extends Role {
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmInvestigationPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
+		}
+
+		@Override
+		public List<InvestigationCase> getValue(InvestigationPartyRole obj) {
+			return obj.getInvestigationCase();
+		}
+
+		@Override
+		public void setValue(InvestigationPartyRole obj, List<InvestigationCase> value) {
+			obj.setInvestigationCase(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Status> status;
@@ -172,7 +184,7 @@ public class InvestigationPartyRole extends Role {
 	 * definition} = "Status for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestigationPartyRole, List<Status>> mmStatus = new MMBusinessAssociationEnd<InvestigationPartyRole, List<Status>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationPartyRole.mmObject();
@@ -183,6 +195,16 @@ public class InvestigationPartyRole extends Role {
 			opposite_lazy = () -> com.tools20022.repository.entity.Status.mmPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
+		}
+
+		@Override
+		public List<Status> getValue(InvestigationPartyRole obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(InvestigationPartyRole obj, List<Status> value) {
+			obj.setStatus(value);
 		}
 	};
 

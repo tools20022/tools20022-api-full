@@ -114,7 +114,7 @@ public class DistributionPolicy1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionPolicy1Choice, DistributionPolicy1Code> mmCode = new MMMessageAttribute<DistributionPolicy1Choice, DistributionPolicy1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionPolicy1Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class DistributionPolicy1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionPolicy1Code.mmObject();
+		}
+
+		@Override
+		public DistributionPolicy1Code getValue(DistributionPolicy1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DistributionPolicy1Choice obj, DistributionPolicy1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class DistributionPolicy1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DistributionPolicy1Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<DistributionPolicy1Choice, GenericIdentification40>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionPolicy1Choice.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class DistributionPolicy1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(DistributionPolicy1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DistributionPolicy1Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

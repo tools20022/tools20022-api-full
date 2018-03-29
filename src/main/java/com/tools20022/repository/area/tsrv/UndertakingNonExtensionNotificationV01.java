@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesLatestVersion;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msg.UndertakingNonExtensionStatusAdvice1;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +113,7 @@ public class UndertakingNonExtensionNotificationV01 {
 	 * definition} = "Details of the non-extension notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUndertakingNonExtensionNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingNonExtensionNotificationV01, UndertakingNonExtensionStatusAdvice1> mmUndertakingNonExtensionNotificationDetails = new MMMessageBuildingBlock<UndertakingNonExtensionNotificationV01, UndertakingNonExtensionStatusAdvice1>() {
 		{
 			xmlTag = "UdrtkgNonXtnsnNtfctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +124,14 @@ public class UndertakingNonExtensionNotificationV01 {
 			complexType_lazy = () -> UndertakingNonExtensionStatusAdvice1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingNonExtensionNotificationV01.class.getMethod("getUndertakingNonExtensionNotificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UndertakingNonExtensionStatusAdvice1 getValue(UndertakingNonExtensionNotificationV01 obj) {
+			return obj.getUndertakingNonExtensionNotificationDetails();
+		}
+
+		@Override
+		public void setValue(UndertakingNonExtensionNotificationV01 obj, UndertakingNonExtensionStatusAdvice1 value) {
+			obj.setUndertakingNonExtensionNotificationDetails(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -158,7 +159,7 @@ public class UndertakingNonExtensionNotificationV01 {
 	 * definition} = "Digital signature of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingNonExtensionNotificationV01, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageBuildingBlock<UndertakingNonExtensionNotificationV01, Optional<PartyAndSignature2>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,12 +170,14 @@ public class UndertakingNonExtensionNotificationV01 {
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingNonExtensionNotificationV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyAndSignature2> getValue(UndertakingNonExtensionNotificationV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(UndertakingNonExtensionNotificationV01 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 

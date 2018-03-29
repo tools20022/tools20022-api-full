@@ -20,9 +20,9 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Charges;
+import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +119,7 @@ public class SecuritiesRelatedFees extends Charges {
 	 * definition} = "Security for which fees are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesRelatedFees, List<Security>> mmSecurity = new MMBusinessAssociationEnd<SecuritiesRelatedFees, List<Security>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
@@ -130,6 +130,16 @@ public class SecuritiesRelatedFees extends Charges {
 			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmFees;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
+		}
+
+		@Override
+		public List<Security> getValue(SecuritiesRelatedFees obj) {
+			return obj.getSecurity();
+		}
+
+		@Override
+		public void setValue(SecuritiesRelatedFees obj, List<Security> value) {
+			obj.setSecurity(value);
 		}
 	};
 	protected CurrencyAndAmount postageFeeAmount;
@@ -236,7 +246,7 @@ public class SecuritiesRelatedFees extends Charges {
 	 * definition} = "Amount of money paid for delivery by regular post mail."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPostageFeeAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount> mmPostageFeeAmount = new MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmPostageAmount, CorporateActionAmounts2.mmPostageFeeAmount, CorporateActionAmounts5.mmPostageFeeAmount, CorporateActionAmounts11.mmPostageFeeAmount,
 					CorporateActionAmounts12.mmPostageFeeAmount, CorporateActionAmounts3.mmPostageFeeAmount, CorporateActionAmounts6.mmPostageFeeAmount, CorporateActionAmounts9.mmPostageFeeAmount,
@@ -253,12 +263,14 @@ public class SecuritiesRelatedFees extends Charges {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesRelatedFees.class.getMethod("getPostageFeeAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SecuritiesRelatedFees obj) {
+			return obj.getPostageFeeAmount();
+		}
+
+		@Override
+		public void setValue(SecuritiesRelatedFees obj, CurrencyAndAmount value) {
+			obj.setPostageFeeAmount(value);
 		}
 	};
 	protected CurrencyAndAmount regulatoryFeesAmount;
@@ -526,7 +538,7 @@ public class SecuritiesRelatedFees extends Charges {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRegulatoryFeesAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount> mmRegulatoryFeesAmount = new MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmRegulatoryAmount, OtherAmounts14.mmRegulatoryAmount, OtherAmounts20.mmRegulatoryAmount, CorporateActionAmounts2.mmRegulatoryFeesAmount,
 					CorporateActionAmounts5.mmRegulatoryFeesAmount, CorporateActionAmounts11.mmRegulatoryFeesAmount, CorporateActionAmounts12.mmRegulatoryFeesAmount, CorporateActionAmounts17.mmRegulatoryFeesAmount,
@@ -555,12 +567,14 @@ public class SecuritiesRelatedFees extends Charges {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesRelatedFees.class.getMethod("getRegulatoryFeesAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SecuritiesRelatedFees obj) {
+			return obj.getRegulatoryFeesAmount();
+		}
+
+		@Override
+		public void setValue(SecuritiesRelatedFees obj, CurrencyAndAmount value) {
+			obj.setRegulatoryFeesAmount(value);
 		}
 	};
 	protected CurrencyAndAmount shippingFeesAmount;
@@ -824,7 +838,7 @@ public class SecuritiesRelatedFees extends Charges {
 	 * "Amount of money (including insurance) paid for delivery by carrier."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmShippingFeesAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount> mmShippingFeesAmount = new MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmShippingAmount, OtherAmounts14.mmShippingAmount, OtherAmounts20.mmShippingAmount, CorporateActionAmounts2.mmShippingFeesAmount,
 					CorporateActionAmounts5.mmShippingFeesAmount, CorporateActionAmounts11.mmShippingFeesAmount, CorporateActionAmounts12.mmShippingFeesAmount, CorporateActionAmounts17.mmShippingFeesAmount,
@@ -853,12 +867,14 @@ public class SecuritiesRelatedFees extends Charges {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesRelatedFees.class.getMethod("getShippingFeesAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SecuritiesRelatedFees obj) {
+			return obj.getShippingFeesAmount();
+		}
+
+		@Override
+		public void setValue(SecuritiesRelatedFees obj, CurrencyAndAmount value) {
+			obj.setShippingFeesAmount(value);
 		}
 	};
 	protected CurrencyAndAmount researchFee;
@@ -913,7 +929,7 @@ public class SecuritiesRelatedFees extends Charges {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmResearchFee = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount> mmResearchFee = new MMBusinessAttribute<SecuritiesRelatedFees, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherAmounts41.mmResearchFee, OtherAmounts39.mmResearchFee, OtherAmounts40.mmResearchFee, OtherAmounts42.mmResearchFee, OtherAmounts43.mmResearchFee, OtherAmounts44.mmResearchFee);
 			isDerived = false;
@@ -926,12 +942,14 @@ public class SecuritiesRelatedFees extends Charges {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesRelatedFees.class.getMethod("getResearchFee", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SecuritiesRelatedFees obj) {
+			return obj.getResearchFee();
+		}
+
+		@Override
+		public void setValue(SecuritiesRelatedFees obj, CurrencyAndAmount value) {
+			obj.setResearchFee(value);
 		}
 	};
 

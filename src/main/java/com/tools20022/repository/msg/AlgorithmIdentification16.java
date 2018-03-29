@@ -118,7 +118,7 @@ public class AlgorithmIdentification16 {
 	 * AlgorithmIdentification5.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmIdentification16, Algorithm11Code> mmAlgorithm = new MMMessageAttribute<AlgorithmIdentification16, Algorithm11Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification16.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class AlgorithmIdentification16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
+		}
+
+		@Override
+		public Algorithm11Code getValue(AlgorithmIdentification16 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification16 obj, Algorithm11Code value) {
+			obj.setAlgorithm(value);
 		}
 	};
 

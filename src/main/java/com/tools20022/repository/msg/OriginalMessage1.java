@@ -112,7 +112,7 @@ public class OriginalMessage1 {
 	 * "XML schema-instance namespace, for example \"tsin.008.001.01\"."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageDefinitionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessage1, Max35Text> mmMessageDefinitionIdentifier = new MMMessageAttribute<OriginalMessage1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class OriginalMessage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalMessage1 obj) {
+			return obj.getMessageDefinitionIdentifier();
+		}
+
+		@Override
+		public void setValue(OriginalMessage1 obj, Max35Text value) {
+			obj.setMessageDefinitionIdentifier(value);
 		}
 	};
 	@XmlElement(name = "Fr", required = true)
@@ -153,7 +163,7 @@ public class OriginalMessage1 {
 	 * definition} = "Message sender specified in the original message.\r\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalMessage1, Party9Choice> mmFrom = new MMMessageAssociationEnd<OriginalMessage1, Party9Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class OriginalMessage1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party9Choice.mmObject();
+		}
+
+		@Override
+		public Party9Choice getValue(OriginalMessage1 obj) {
+			return obj.getFrom();
+		}
+
+		@Override
+		public void setValue(OriginalMessage1 obj, Party9Choice value) {
+			obj.setFrom(value);
 		}
 	};
 	@XmlElement(name = "To", required = true)
@@ -195,7 +215,7 @@ public class OriginalMessage1 {
 	 * definition} = "Message recipient specified in the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalMessage1, Party9Choice> mmTo = new MMMessageAssociationEnd<OriginalMessage1, Party9Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 			isDerived = false;
@@ -207,6 +227,16 @@ public class OriginalMessage1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party9Choice.mmObject();
+		}
+
+		@Override
+		public Party9Choice getValue(OriginalMessage1 obj) {
+			return obj.getTo();
+		}
+
+		@Override
+		public void setValue(OriginalMessage1 obj, Party9Choice value) {
+			obj.setTo(value);
 		}
 	};
 	@XmlElement(name = "BizMsgIdr", required = true)
@@ -239,7 +269,7 @@ public class OriginalMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessMessageIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessage1, Max35Text> mmBusinessMessageIdentifier = new MMMessageAttribute<OriginalMessage1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 			isDerived = false;
@@ -250,6 +280,16 @@ public class OriginalMessage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalMessage1 obj) {
+			return obj.getBusinessMessageIdentifier();
+		}
+
+		@Override
+		public void setValue(OriginalMessage1 obj, Max35Text value) {
+			obj.setBusinessMessageIdentifier(value);
 		}
 	};
 	@XmlElement(name = "CreDt", required = true)
@@ -283,7 +323,7 @@ public class OriginalMessage1 {
 	 * "Message creation date and time specified in the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessage1, ISONormalisedDateTime> mmCreationDate = new MMMessageAttribute<OriginalMessage1, ISONormalisedDateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 			isDerived = false;
@@ -294,6 +334,16 @@ public class OriginalMessage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISONormalisedDateTime.mmObject();
+		}
+
+		@Override
+		public ISONormalisedDateTime getValue(OriginalMessage1 obj) {
+			return obj.getCreationDate();
+		}
+
+		@Override
+		public void setValue(OriginalMessage1 obj, ISONormalisedDateTime value) {
+			obj.setCreationDate(value);
 		}
 	};
 	@XmlElement(name = "CpyDplct")
@@ -328,7 +378,7 @@ public class OriginalMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessage1, Optional<CopyDuplicate1Code>> mmCopyDuplicate = new MMMessageAttribute<OriginalMessage1, Optional<CopyDuplicate1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage1.mmObject();
 			isDerived = false;
@@ -339,6 +389,16 @@ public class OriginalMessage1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(OriginalMessage1 obj) {
+			return obj.getCopyDuplicate();
+		}
+
+		@Override
+		public void setValue(OriginalMessage1 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyDuplicate(value.orElse(null));
 		}
 	};
 

@@ -108,7 +108,7 @@ public class RejectedStatusReason1Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatusReason1Choice, RejectedStatusReason10Code> mmReason = new MMMessageAttribute<RejectedStatusReason1Choice, RejectedStatusReason10Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatusReason1Choice.mmObject();
@@ -120,6 +120,16 @@ public class RejectedStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason10Code.mmObject();
+		}
+
+		@Override
+		public RejectedStatusReason10Code getValue(RejectedStatusReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason1Choice obj, RejectedStatusReason10Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class RejectedStatusReason1Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatusReason1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<RejectedStatusReason1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatusReason1Choice.mmObject();
@@ -169,6 +179,16 @@ public class RejectedStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(RejectedStatusReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

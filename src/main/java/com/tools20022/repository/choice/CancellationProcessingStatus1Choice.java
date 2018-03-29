@@ -128,7 +128,7 @@ public class CancellationProcessingStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationProcessingStatus1Choice, CancellationProcessingStatus1Code> mmCode = new MMMessageAttribute<CancellationProcessingStatus1Choice, CancellationProcessingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmCancellationProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus1Choice.mmObject();
@@ -142,6 +142,16 @@ public class CancellationProcessingStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationProcessingStatus1Code.mmObject();
+		}
+
+		@Override
+		public CancellationProcessingStatus1Code getValue(CancellationProcessingStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationProcessingStatus1Choice obj, CancellationProcessingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -190,7 +200,7 @@ public class CancellationProcessingStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationProcessingStatus1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<CancellationProcessingStatus1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmCancellationProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus1Choice.mmObject();
@@ -204,6 +214,16 @@ public class CancellationProcessingStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CancellationProcessingStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CancellationProcessingStatus1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -22,12 +22,12 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProcessingCharacteristics1;
 import com.tools20022.repository.msg.ProcessingCharacteristics2;
 import com.tools20022.repository.msg.ProcessingCharacteristics3;
 import com.tools20022.repository.msg.TimeFrame3;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -168,29 +168,31 @@ public class TimeFrame {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction."
+	 * "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction,"
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTradeMinus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TimeFrame, Number> mmTradeMinus = new MMBusinessAttribute<TimeFrame, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimeFrame3Choice.mmTradeMinus, TimeFrame3.mmTradeMinus, TimeFrame1Choice.mmTradeMinus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeMinus";
-			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction.";
+			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction,";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeFrame.class.getMethod("getTradeMinus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(TimeFrame obj) {
+			return obj.getTradeMinus();
+		}
+
+		@Override
+		public void setValue(TimeFrame obj, Number value) {
+			obj.setTradeMinus(value);
 		}
 	};
 	protected Number renunciationMinus;
@@ -231,7 +233,7 @@ public class TimeFrame {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRenunciationMinus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TimeFrame, Number> mmRenunciationMinus = new MMBusinessAttribute<TimeFrame, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimeFrame3Choice.mmRenunciationMinus, TimeFrame1Choice.mmRenunciationMinus);
 			isDerived = false;
@@ -244,12 +246,14 @@ public class TimeFrame {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeFrame.class.getMethod("getRenunciationMinus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(TimeFrame obj) {
+			return obj.getRenunciationMinus();
+		}
+
+		@Override
+		public void setValue(TimeFrame obj, Number value) {
+			obj.setRenunciationMinus(value);
 		}
 	};
 	protected InvestmentFundClassProcessingCharacteristics subscriptionSettlementRelatedFundProcessing;
@@ -287,7 +291,7 @@ public class TimeFrame {
 	 * "Fund processing characteristics related to a subscription cycle."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSubscriptionSettlementRelatedFundProcessing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TimeFrame, InvestmentFundClassProcessingCharacteristics> mmSubscriptionSettlementRelatedFundProcessing = new MMBusinessAssociationEnd<TimeFrame, InvestmentFundClassProcessingCharacteristics>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
@@ -296,9 +300,19 @@ public class TimeFrame {
 			definition = "Fund processing characteristics related to a subscription cycle.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSettlementCycle;
+			opposite_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmSettlementCycle;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmObject();
+			type_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
+		}
+
+		@Override
+		public InvestmentFundClassProcessingCharacteristics getValue(TimeFrame obj) {
+			return obj.getSubscriptionSettlementRelatedFundProcessing();
+		}
+
+		@Override
+		public void setValue(TimeFrame obj, InvestmentFundClassProcessingCharacteristics value) {
+			obj.setSubscriptionSettlementRelatedFundProcessing(value);
 		}
 	};
 	protected Number tradePlus;
@@ -345,7 +359,7 @@ public class TimeFrame {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTradePlus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TimeFrame, Number> mmTradePlus = new MMBusinessAttribute<TimeFrame, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmTradePlus, TimeFrame5Choice.mmTradePlus, TimeFrame4Choice.mmTradePlus, TimeFrame1Choice.mmTradePlus);
 			isDerived = false;
@@ -358,12 +372,14 @@ public class TimeFrame {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeFrame.class.getMethod("getTradePlus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(TimeFrame obj) {
+			return obj.getTradePlus();
+		}
+
+		@Override
+		public void setValue(TimeFrame obj, Number value) {
+			obj.setTradePlus(value);
 		}
 	};
 	protected Number renunciationPlus;
@@ -407,7 +423,7 @@ public class TimeFrame {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRenunciationPlus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TimeFrame, Number> mmRenunciationPlus = new MMBusinessAttribute<TimeFrame, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmRenunciationPlus, TimeFrame4Choice.mmRenunciationPlus, TimeFrame1Choice.mmRenunciationPlus);
 			isDerived = false;
@@ -420,12 +436,14 @@ public class TimeFrame {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeFrame.class.getMethod("getRenunciationPlus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(TimeFrame obj) {
+			return obj.getRenunciationPlus();
+		}
+
+		@Override
+		public void setValue(TimeFrame obj, Number value) {
+			obj.setRenunciationPlus(value);
 		}
 	};
 	protected YesNoIndicator prepayment;
@@ -465,7 +483,7 @@ public class TimeFrame {
 	 * definition} = "Indicates whether pre-payment is necessary."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPrepayment = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TimeFrame, YesNoIndicator> mmPrepayment = new MMBusinessAttribute<TimeFrame, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Timeframe2Choice.mmPrepayment, TimeFrame5Choice.mmPrepayment);
 			isDerived = false;
@@ -478,12 +496,14 @@ public class TimeFrame {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeFrame.class.getMethod("getPrepayment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(TimeFrame obj) {
+			return obj.getPrepayment();
+		}
+
+		@Override
+		public void setValue(TimeFrame obj, YesNoIndicator value) {
+			obj.setPrepayment(value);
 		}
 	};
 	protected Max350Text otherTimeFrameDescription;
@@ -517,29 +537,31 @@ public class TimeFrame {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame."
+	 * "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame"
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOtherTimeFrameDescription = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TimeFrame, Max350Text> mmOtherTimeFrameDescription = new MMBusinessAttribute<TimeFrame, Max350Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimeFrame3.mmOtherTimeFrameDescription);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OtherTimeFrameDescription";
-			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame.";
+			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimeFrame.class.getMethod("getOtherTimeFrameDescription", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(TimeFrame obj) {
+			return obj.getOtherTimeFrameDescription();
+		}
+
+		@Override
+		public void setValue(TimeFrame obj, Max350Text value) {
+			obj.setOtherTimeFrameDescription(value);
 		}
 	};
 	protected InvestmentFundClassProcessingCharacteristics relatedProcessingCharacteristics;
@@ -578,7 +600,7 @@ public class TimeFrame {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedProcessingCharacteristics = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TimeFrame, InvestmentFundClassProcessingCharacteristics> mmRelatedProcessingCharacteristics = new MMBusinessAssociationEnd<TimeFrame, InvestmentFundClassProcessingCharacteristics>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
@@ -587,9 +609,19 @@ public class TimeFrame {
 			definition = "Processing characteristics for which a cut off time frame is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDealingCutOffTimeFrame;
+			opposite_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDealingCutOffTimeFrame;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmObject();
+			type_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
+		}
+
+		@Override
+		public InvestmentFundClassProcessingCharacteristics getValue(TimeFrame obj) {
+			return obj.getRelatedProcessingCharacteristics();
+		}
+
+		@Override
+		public void setValue(TimeFrame obj, InvestmentFundClassProcessingCharacteristics value) {
+			obj.setRelatedProcessingCharacteristics(value);
 		}
 	};
 
@@ -600,8 +632,7 @@ public class TimeFrame {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeFrame";
 				definition = "TimeFrame or period concept that allows definition of a period as number of days before or after a defined activity.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmSettlementCycle,
-						com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmDealingCutOffTimeFrame);
+				associationDomain_lazy = () -> Arrays.asList(InvestmentFundClassProcessingCharacteristics.mmSettlementCycle, InvestmentFundClassProcessingCharacteristics.mmDealingCutOffTimeFrame);
 				derivationElement_lazy = () -> Arrays.asList(ProcessingCharacteristics1.mmDealingCutOffTimeFrame, ProcessingCharacteristics2.mmDealingCutOffTimeFrame, ProcessingCharacteristics3.mmDealingCutOffTimeFrame);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TimeFrame.mmTradeMinus, com.tools20022.repository.entity.TimeFrame.mmRenunciationMinus,
 						com.tools20022.repository.entity.TimeFrame.mmSubscriptionSettlementRelatedFundProcessing, com.tools20022.repository.entity.TimeFrame.mmTradePlus, com.tools20022.repository.entity.TimeFrame.mmRenunciationPlus,
@@ -639,7 +670,7 @@ public class TimeFrame {
 		return subscriptionSettlementRelatedFundProcessing;
 	}
 
-	public TimeFrame setSubscriptionSettlementRelatedFundProcessing(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics subscriptionSettlementRelatedFundProcessing) {
+	public TimeFrame setSubscriptionSettlementRelatedFundProcessing(InvestmentFundClassProcessingCharacteristics subscriptionSettlementRelatedFundProcessing) {
 		this.subscriptionSettlementRelatedFundProcessing = Objects.requireNonNull(subscriptionSettlementRelatedFundProcessing);
 		return this;
 	}
@@ -684,7 +715,7 @@ public class TimeFrame {
 		return relatedProcessingCharacteristics;
 	}
 
-	public TimeFrame setRelatedProcessingCharacteristics(com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics relatedProcessingCharacteristics) {
+	public TimeFrame setRelatedProcessingCharacteristics(InvestmentFundClassProcessingCharacteristics relatedProcessingCharacteristics) {
 		this.relatedProcessingCharacteristics = Objects.requireNonNull(relatedProcessingCharacteristics);
 		return this;
 	}

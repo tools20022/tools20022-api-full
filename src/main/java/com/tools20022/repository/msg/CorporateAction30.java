@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.LotteryTypeFormat3Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionDate34;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +116,7 @@ public class CorporateAction30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction30, Optional<CorporateActionDate34>> mmDateDetails = new MMMessageAssociationEnd<CorporateAction30, Optional<CorporateActionDate34>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction30.mmObject();
@@ -127,7 +128,17 @@ public class CorporateAction30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate34.mmObject();
+			type_lazy = () -> CorporateActionDate34.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionDate34> getValue(CorporateAction30 obj) {
+			return obj.getDateDetails();
+		}
+
+		@Override
+		public void setValue(CorporateAction30 obj, Optional<CorporateActionDate34> value) {
+			obj.setDateDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtStag")
@@ -164,7 +175,7 @@ public class CorporateAction30 {
 	 * definition} = "Stage in the corporate action event life cycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction30, Optional<CorporateActionEventStageFormat12Choice>> mmEventStage = new MMMessageAssociationEnd<CorporateAction30, Optional<CorporateActionEventStageFormat12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction30.mmObject();
@@ -177,6 +188,16 @@ public class CorporateAction30 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventStageFormat12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionEventStageFormat12Choice> getValue(CorporateAction30 obj) {
+			return obj.getEventStage();
+		}
+
+		@Override
+		public void setValue(CorporateAction30 obj, Optional<CorporateActionEventStageFormat12Choice> value) {
+			obj.setEventStage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtryTp")
@@ -216,7 +237,7 @@ public class CorporateAction30 {
 	 * definition} = "Specifies the type of lottery announced."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction30, Optional<LotteryTypeFormat3Choice>> mmLotteryType = new MMMessageAssociationEnd<CorporateAction30, Optional<LotteryTypeFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction30.mmObject();
@@ -230,6 +251,16 @@ public class CorporateAction30 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LotteryTypeFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LotteryTypeFormat3Choice> getValue(CorporateAction30 obj) {
+			return obj.getLotteryType();
+		}
+
+		@Override
+		public void setValue(CorporateAction30 obj, Optional<LotteryTypeFormat3Choice> value) {
+			obj.setLotteryType(value.orElse(null));
 		}
 	};
 
@@ -259,7 +290,7 @@ public class CorporateAction30 {
 		return dateDetails == null ? Optional.empty() : Optional.of(dateDetails);
 	}
 
-	public CorporateAction30 setDateDetails(com.tools20022.repository.msg.CorporateActionDate34 dateDetails) {
+	public CorporateAction30 setDateDetails(CorporateActionDate34 dateDetails) {
 		this.dateDetails = dateDetails;
 		return this;
 	}

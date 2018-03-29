@@ -149,7 +149,7 @@ public class CashAccount11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount11, CashAccountIdentification1Choice> mmIdentification = new MMMessageAttribute<CashAccount11, CashAccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount11.mmObject();
@@ -162,6 +162,16 @@ public class CashAccount11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification1Choice getValue(CashAccount11 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount11 obj, CashAccountIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -208,7 +218,7 @@ public class CashAccount11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount11, Optional<FinancialInstitutionIdentification3Choice>> mmAccountServicer = new MMMessageAttribute<CashAccount11, Optional<FinancialInstitutionIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount11.mmObject();
@@ -221,6 +231,16 @@ public class CashAccount11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification3Choice> getValue(CashAccount11 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount11 obj, Optional<FinancialInstitutionIdentification3Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 

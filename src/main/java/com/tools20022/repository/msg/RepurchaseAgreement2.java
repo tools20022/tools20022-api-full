@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.RepurchaseAgreementType3Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.LEIIdentifier;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -65,6 +66,9 @@ import javax.xml.bind.annotation.XmlType;
  * RepurchaseAgreement2.mmTripartyAgentIdentification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.RepurchaseAgreement
+ * RepurchaseAgreement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -109,6 +113,11 @@ public class RepurchaseAgreement2 {
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
 	 * ISODate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmMaturityDate
+	 * Asset.mmMaturityDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.RepurchaseAgreement2
@@ -131,8 +140,9 @@ public class RepurchaseAgreement2 {
 	 * Deposit1.mmMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepurchaseAgreement2, ISODate> mmMaturityDate = new MMMessageAttribute<RepurchaseAgreement2, ISODate>() {
 		{
+			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
@@ -143,6 +153,16 @@ public class RepurchaseAgreement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(RepurchaseAgreement2 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreement2 obj, ISODate value) {
+			obj.setMaturityDate(value);
 		}
 	};
 	@XmlElement(name = "ScndLegPric", required = true)
@@ -157,6 +177,11 @@ public class RepurchaseAgreement2 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmDealAmount
+	 * SecuritiesFinancing.mmDealAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -180,8 +205,9 @@ public class RepurchaseAgreement2 {
 	 * Deposit1.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondLegPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepurchaseAgreement2, ActiveCurrencyAndAmount> mmSecondLegPrice = new MMMessageAttribute<RepurchaseAgreement2, ActiveCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmDealAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "ScndLegPric";
@@ -192,6 +218,16 @@ public class RepurchaseAgreement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(RepurchaseAgreement2 obj) {
+			return obj.getSecondLegPrice();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreement2 obj, ActiveCurrencyAndAmount value) {
+			obj.setSecondLegPrice(value);
 		}
 	};
 	@XmlElement(name = "CollMktVal", required = true)
@@ -206,6 +242,11 @@ public class RepurchaseAgreement2 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralAmount
+	 * Collateral.mmCollateralAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -226,8 +267,9 @@ public class RepurchaseAgreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralMarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepurchaseAgreement2, ActiveCurrencyAndAmount> mmCollateralMarketValue = new MMMessageAttribute<RepurchaseAgreement2, ActiveCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "CollMktVal";
@@ -237,6 +279,16 @@ public class RepurchaseAgreement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(RepurchaseAgreement2 obj) {
+			return obj.getCollateralMarketValue();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreement2 obj, ActiveCurrencyAndAmount value) {
+			obj.setCollateralMarketValue(value);
 		}
 	};
 	@XmlElement(name = "CtrPty", required = true)
@@ -251,6 +303,11 @@ public class RepurchaseAgreement2 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.LEIIdentifier
 	 * LEIIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -274,8 +331,9 @@ public class RepurchaseAgreement2 {
 	 * Deposit1.mmCounterpartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterparty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepurchaseAgreement2, LEIIdentifier> mmCounterparty = new MMMessageAttribute<RepurchaseAgreement2, LEIIdentifier>() {
 		{
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPty";
@@ -286,6 +344,16 @@ public class RepurchaseAgreement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(RepurchaseAgreement2 obj) {
+			return obj.getCounterparty();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreement2 obj, LEIIdentifier value) {
+			obj.setCounterparty(value);
 		}
 	};
 	@XmlElement(name = "RpAgrmtTp", required = true)
@@ -299,6 +367,11 @@ public class RepurchaseAgreement2 {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.choice.RepurchaseAgreementType3Choice
 	 * RepurchaseAgreementType3Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing#mmType
+	 * SecuritiesFinancing.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -325,8 +398,9 @@ public class RepurchaseAgreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepurchaseAgreementType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseAgreement2, RepurchaseAgreementType3Choice> mmRepurchaseAgreementType = new MMMessageAssociationEnd<RepurchaseAgreement2, RepurchaseAgreementType3Choice>() {
 		{
+			businessElementTrace_lazy = () -> SecuritiesFinancing.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "RpAgrmtTp";
@@ -338,6 +412,16 @@ public class RepurchaseAgreement2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RepurchaseAgreementType3Choice.mmObject();
+		}
+
+		@Override
+		public RepurchaseAgreementType3Choice getValue(RepurchaseAgreement2 obj) {
+			return obj.getRepurchaseAgreementType();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreement2 obj, RepurchaseAgreementType3Choice value) {
+			obj.setRepurchaseAgreementType(value);
 		}
 	};
 	@XmlElement(name = "TrptyAgtId")
@@ -352,6 +436,11 @@ public class RepurchaseAgreement2 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.LEIIdentifier
 	 * LEIIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -378,8 +467,9 @@ public class RepurchaseAgreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTripartyAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepurchaseAgreement2, Optional<LEIIdentifier>> mmTripartyAgentIdentification = new MMMessageAttribute<RepurchaseAgreement2, Optional<LEIIdentifier>>() {
 		{
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RepurchaseAgreement2.mmObject();
 			isDerived = false;
 			xmlTag = "TrptyAgtId";
@@ -391,6 +481,16 @@ public class RepurchaseAgreement2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(RepurchaseAgreement2 obj) {
+			return obj.getTripartyAgentIdentification();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreement2 obj, Optional<LEIIdentifier> value) {
+			obj.setTripartyAgentIdentification(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -399,6 +499,7 @@ public class RepurchaseAgreement2 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RepurchaseAgreement2.mmMaturityDate, com.tools20022.repository.msg.RepurchaseAgreement2.mmSecondLegPrice,
 						com.tools20022.repository.msg.RepurchaseAgreement2.mmCollateralMarketValue, com.tools20022.repository.msg.RepurchaseAgreement2.mmCounterparty,
 						com.tools20022.repository.msg.RepurchaseAgreement2.mmRepurchaseAgreementType, com.tools20022.repository.msg.RepurchaseAgreement2.mmTripartyAgentIdentification);
+				trace_lazy = () -> RepurchaseAgreement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RepurchaseAgreement2";

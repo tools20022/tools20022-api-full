@@ -49,11 +49,15 @@ public class ConstraintIssueDateOrEffectiveDateRule {
 	 */
 	public static final MMConstraint<InsuranceDataSet1> forInsuranceDataSet1 = new MMConstraint<InsuranceDataSet1>() {
 		{
-			validator = ConstraintIssueDateOrEffectiveDateRule::checkInsuranceDataSet1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDateOrEffectiveDateRule";
 			definition = "At least one of IssueDate or EffectiveDate must be present.";
 			owner_lazy = () -> InsuranceDataSet1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InsuranceDataSet1 obj) throws Exception {
+			checkInsuranceDataSet1(obj);
 		}
 	};
 

@@ -101,7 +101,7 @@ public class RegulatoryInformation1 {
 	 * "Sector of economic activity, for example, SAE in the Italian market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryInformation1, Optional<Max35Text>> mmSector = new MMMessageAttribute<RegulatoryInformation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class RegulatoryInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RegulatoryInformation1 obj) {
+			return obj.getSector();
+		}
+
+		@Override
+		public void setValue(RegulatoryInformation1 obj, Optional<Max35Text> value) {
+			obj.setSector(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Brnch")
@@ -144,7 +154,7 @@ public class RegulatoryInformation1 {
 	 * "Branch of economic activity, for example, RAE in the Italian market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryInformation1, Optional<Max35Text>> mmBranch = new MMMessageAttribute<RegulatoryInformation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class RegulatoryInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RegulatoryInformation1 obj) {
+			return obj.getBranch();
+		}
+
+		@Override
+		public void setValue(RegulatoryInformation1 obj, Optional<Max35Text> value) {
+			obj.setBranch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Grp")
@@ -187,7 +207,7 @@ public class RegulatoryInformation1 {
 	 * "Group of economic activity, for example, a code issued by a regulator."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroup = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryInformation1, Optional<Max35Text>> mmGroup = new MMMessageAttribute<RegulatoryInformation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
 			isDerived = false;
@@ -198,6 +218,16 @@ public class RegulatoryInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RegulatoryInformation1 obj) {
+			return obj.getGroup();
+		}
+
+		@Override
+		public void setValue(RegulatoryInformation1 obj, Optional<Max35Text> value) {
+			obj.setGroup(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Othr")
@@ -229,7 +259,7 @@ public class RegulatoryInformation1 {
 	 * definition} = "Other regulatory information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryInformation1, Optional<Max35Text>> mmOther = new MMMessageAttribute<RegulatoryInformation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryInformation1.mmObject();
 			isDerived = false;
@@ -240,6 +270,16 @@ public class RegulatoryInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RegulatoryInformation1 obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(RegulatoryInformation1 obj, Optional<Max35Text> value) {
+			obj.setOther(value.orElse(null));
 		}
 	};
 

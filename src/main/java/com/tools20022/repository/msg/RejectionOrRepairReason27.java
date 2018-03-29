@@ -114,7 +114,7 @@ public class RejectionOrRepairReason27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairReason27, List<RejectionAndRepairReason27Choice>> mmCode = new MMMessageAssociationEnd<RejectionOrRepairReason27, List<RejectionAndRepairReason27Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionOrRepairReason27.mmObject();
@@ -127,6 +127,16 @@ public class RejectionOrRepairReason27 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RejectionAndRepairReason27Choice.mmObject();
+		}
+
+		@Override
+		public List<RejectionAndRepairReason27Choice> getValue(RejectionOrRepairReason27 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairReason27 obj, List<RejectionAndRepairReason27Choice> value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -169,7 +179,7 @@ public class RejectionOrRepairReason27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairReason27, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RejectionOrRepairReason27, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionOrRepairReason27.mmObject();
@@ -182,6 +192,16 @@ public class RejectionOrRepairReason27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(RejectionOrRepairReason27 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairReason27 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

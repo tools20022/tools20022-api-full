@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExpiryDetails1;
+import com.tools20022.repository.msg.UndertakingAmount2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -106,7 +108,7 @@ public class Undertaking10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewUndertakingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking10, Optional<UndertakingAmount2>> mmNewUndertakingAmount = new MMMessageAttribute<Undertaking10, Optional<UndertakingAmount2>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmUndertakingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking10.mmObject();
@@ -117,7 +119,17 @@ public class Undertaking10 {
 			definition = "Details related to the requested new amount for the counter-undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.UndertakingAmount2.mmObject();
+			complexType_lazy = () -> UndertakingAmount2.mmObject();
+		}
+
+		@Override
+		public Optional<UndertakingAmount2> getValue(Undertaking10 obj) {
+			return obj.getNewUndertakingAmount();
+		}
+
+		@Override
+		public void setValue(Undertaking10 obj, Optional<UndertakingAmount2> value) {
+			obj.setNewUndertakingAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewXpryDtls")
@@ -155,7 +167,7 @@ public class Undertaking10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewExpiryDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking10, Optional<ExpiryDetails1>> mmNewExpiryDetails = new MMMessageAttribute<Undertaking10, Optional<ExpiryDetails1>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmExpiry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking10.mmObject();
@@ -166,7 +178,17 @@ public class Undertaking10 {
 			definition = "Details related to the requested new expiry terms for the counter-undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ExpiryDetails1.mmObject();
+			complexType_lazy = () -> ExpiryDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<ExpiryDetails1> getValue(Undertaking10 obj) {
+			return obj.getNewExpiryDetails();
+		}
+
+		@Override
+		public void setValue(Undertaking10 obj, Optional<ExpiryDetails1> value) {
+			obj.setNewExpiryDetails(value.orElse(null));
 		}
 	};
 
@@ -188,7 +210,7 @@ public class Undertaking10 {
 		return newUndertakingAmount == null ? Optional.empty() : Optional.of(newUndertakingAmount);
 	}
 
-	public Undertaking10 setNewUndertakingAmount(com.tools20022.repository.msg.UndertakingAmount2 newUndertakingAmount) {
+	public Undertaking10 setNewUndertakingAmount(UndertakingAmount2 newUndertakingAmount) {
 		this.newUndertakingAmount = newUndertakingAmount;
 		return this;
 	}
@@ -197,7 +219,7 @@ public class Undertaking10 {
 		return newExpiryDetails == null ? Optional.empty() : Optional.of(newExpiryDetails);
 	}
 
-	public Undertaking10 setNewExpiryDetails(com.tools20022.repository.msg.ExpiryDetails1 newExpiryDetails) {
+	public Undertaking10 setNewExpiryDetails(ExpiryDetails1 newExpiryDetails) {
 		this.newExpiryDetails = newExpiryDetails;
 		return this;
 	}

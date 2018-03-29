@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.entity.ProxyAppointmentCondition;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Proxy5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +127,7 @@ public class ProxyAppointmentInformation3 {
 	 * ProxyAppointmentInformation2.mmRegistrationMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProxyAppointmentInformation3, Optional<Max350Text>> mmRegistrationMethod = new MMMessageAttribute<ProxyAppointmentInformation3, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> ProxyAppointmentCondition.mmRegistrationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation3.mmObject();
@@ -139,6 +140,16 @@ public class ProxyAppointmentInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ProxyAppointmentInformation3 obj) {
+			return obj.getRegistrationMethod();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation3 obj, Optional<Max350Text> value) {
+			obj.setRegistrationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ddln")
@@ -178,7 +189,7 @@ public class ProxyAppointmentInformation3 {
 	 * ProxyAppointmentInformation2.mmDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProxyAppointmentInformation3, Optional<DateFormat29Choice>> mmDeadline = new MMMessageAttribute<ProxyAppointmentInformation3, Optional<DateFormat29Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation3.mmObject();
 			isDerived = false;
@@ -190,6 +201,16 @@ public class ProxyAppointmentInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat29Choice> getValue(ProxyAppointmentInformation3 obj) {
+			return obj.getDeadline();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation3 obj, Optional<DateFormat29Choice> value) {
+			obj.setDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "STPDdln")
@@ -229,7 +250,7 @@ public class ProxyAppointmentInformation3 {
 	 * ProxyAppointmentInformation2.mmSTPDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSTPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProxyAppointmentInformation3, Optional<DateFormat29Choice>> mmSTPDeadline = new MMMessageAttribute<ProxyAppointmentInformation3, Optional<DateFormat29Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation3.mmObject();
 			isDerived = false;
@@ -241,6 +262,16 @@ public class ProxyAppointmentInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat29Choice> getValue(ProxyAppointmentInformation3 obj) {
+			return obj.getSTPDeadline();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation3 obj, Optional<DateFormat29Choice> value) {
+			obj.setSTPDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktDdln")
@@ -285,7 +316,7 @@ public class ProxyAppointmentInformation3 {
 	 * ProxyAppointmentInformation2.mmMarketDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProxyAppointmentInformation3, Optional<DateFormat29Choice>> mmMarketDeadline = new MMMessageAttribute<ProxyAppointmentInformation3, Optional<DateFormat29Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation3.mmObject();
@@ -299,9 +330,19 @@ public class ProxyAppointmentInformation3 {
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
 		}
+
+		@Override
+		public Optional<DateFormat29Choice> getValue(ProxyAppointmentInformation3 obj) {
+			return obj.getMarketDeadline();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation3 obj, Optional<DateFormat29Choice> value) {
+			obj.setMarketDeadline(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AuthrsdPrxy")
-	protected List<com.tools20022.repository.msg.Proxy5> authorisedProxy;
+	protected List<Proxy5> authorisedProxy;
 	/**
 	 * 
 	 <p>
@@ -333,7 +374,7 @@ public class ProxyAppointmentInformation3 {
 	 * ProxyAppointmentInformation2.mmAuthorisedProxy}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisedProxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProxyAppointmentInformation3, List<Proxy5>> mmAuthorisedProxy = new MMMessageAssociationEnd<ProxyAppointmentInformation3, List<Proxy5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation3.mmObject();
 			isDerived = false;
@@ -345,7 +386,17 @@ public class ProxyAppointmentInformation3 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Proxy5.mmObject();
+			type_lazy = () -> Proxy5.mmObject();
+		}
+
+		@Override
+		public List<Proxy5> getValue(ProxyAppointmentInformation3 obj) {
+			return obj.getAuthorisedProxy();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation3 obj, List<Proxy5> value) {
+			obj.setAuthorisedProxy(value);
 		}
 	};
 
@@ -406,7 +457,7 @@ public class ProxyAppointmentInformation3 {
 		return authorisedProxy == null ? authorisedProxy = new ArrayList<>() : authorisedProxy;
 	}
 
-	public ProxyAppointmentInformation3 setAuthorisedProxy(List<com.tools20022.repository.msg.Proxy5> authorisedProxy) {
+	public ProxyAppointmentInformation3 setAuthorisedProxy(List<Proxy5> authorisedProxy) {
 		this.authorisedProxy = Objects.requireNonNull(authorisedProxy);
 		return this;
 	}

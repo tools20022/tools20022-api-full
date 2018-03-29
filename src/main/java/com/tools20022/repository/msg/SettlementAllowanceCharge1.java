@@ -114,7 +114,7 @@ public class SettlementAllowanceCharge1 {
 	 * "Indication of whether or not this allowance charge is a charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllowanceChargeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementAllowanceCharge1, Optional<YesNoIndicator>> mmAllowanceChargeIndicator = new MMMessageAttribute<SettlementAllowanceCharge1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAllowanceChargeIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAllowanceCharge1.mmObject();
@@ -126,6 +126,16 @@ public class SettlementAllowanceCharge1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SettlementAllowanceCharge1 obj) {
+			return obj.getAllowanceChargeIndicator();
+		}
+
+		@Override
+		public void setValue(SettlementAllowanceCharge1 obj, Optional<YesNoIndicator> value) {
+			obj.setAllowanceChargeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlAmt")
@@ -164,7 +174,7 @@ public class SettlementAllowanceCharge1 {
 	 * "Actual monetary amount specified for the allowance or charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementAllowanceCharge1, List<CurrencyAndAmount>> mmActualAmount = new MMMessageAttribute<SettlementAllowanceCharge1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAllowanceCharge1.mmObject();
@@ -175,6 +185,16 @@ public class SettlementAllowanceCharge1 {
 			definition = "Actual monetary amount specified for the allowance or charge.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementAllowanceCharge1 obj) {
+			return obj.getActualAmount();
+		}
+
+		@Override
+		public void setValue(SettlementAllowanceCharge1 obj, List<CurrencyAndAmount> value) {
+			obj.setActualAmount(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -212,7 +232,7 @@ public class SettlementAllowanceCharge1 {
 	 * definition} = "Reason, expressed as text, for this allowance or charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementAllowanceCharge1, Optional<DiscountOrChargeType1Choice>> mmReason = new MMMessageAttribute<SettlementAllowanceCharge1, Optional<DiscountOrChargeType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAllowanceCharge1.mmObject();
@@ -224,6 +244,16 @@ public class SettlementAllowanceCharge1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DiscountOrChargeType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DiscountOrChargeType1Choice> getValue(SettlementAllowanceCharge1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SettlementAllowanceCharge1 obj, Optional<DiscountOrChargeType1Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

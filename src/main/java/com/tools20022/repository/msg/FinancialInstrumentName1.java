@@ -110,7 +110,7 @@ public class FinancialInstrumentName1 {
 	 * definition} = "Short name of the security expressed as ISO 18773/18774."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISOShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentName1, Optional<Max35Text>> mmISOShortName = new MMMessageAttribute<FinancialInstrumentName1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmShortName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentName1.mmObject();
@@ -122,6 +122,16 @@ public class FinancialInstrumentName1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FinancialInstrumentName1 obj) {
+			return obj.getISOShortName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentName1 obj, Optional<Max35Text> value) {
+			obj.setISOShortName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ISOLngNm")
@@ -158,7 +168,7 @@ public class FinancialInstrumentName1 {
 	 * definition} = "Name of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISOLongName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentName1, Optional<Max350Text>> mmISOLongName = new MMMessageAttribute<FinancialInstrumentName1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentName1.mmObject();
@@ -170,6 +180,16 @@ public class FinancialInstrumentName1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(FinancialInstrumentName1 obj) {
+			return obj.getISOLongName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentName1 obj, Optional<Max350Text> value) {
+			obj.setISOLongName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldFr")
@@ -208,7 +228,7 @@ public class FinancialInstrumentName1 {
 	 * "Defines the date since when the name of the security is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentName1, Optional<DateAndDateTimeChoice>> mmValidFrom = new MMMessageAttribute<FinancialInstrumentName1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentName1.mmObject();
@@ -220,6 +240,16 @@ public class FinancialInstrumentName1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(FinancialInstrumentName1 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentName1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setValidFrom(value.orElse(null));
 		}
 	};
 

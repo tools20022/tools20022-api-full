@@ -105,7 +105,7 @@ public class CommodityDerivate2Choice {
 	 * definition} = "Details specific to freight derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFreight = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommodityDerivate2Choice, CommodityDerivate5> mmFreight = new MMMessageAssociationEnd<CommodityDerivate2Choice, CommodityDerivate5>() {
 		{
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommodityDerivate2Choice.mmObject();
@@ -118,6 +118,16 @@ public class CommodityDerivate2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CommodityDerivate5.mmObject();
+		}
+
+		@Override
+		public CommodityDerivate5 getValue(CommodityDerivate2Choice obj) {
+			return obj.getFreight();
+		}
+
+		@Override
+		public void setValue(CommodityDerivate2Choice obj, CommodityDerivate5 value) {
+			obj.setFreight(value);
 		}
 	};
 	@XmlElement(name = "Nrgy", required = true)
@@ -152,7 +162,7 @@ public class CommodityDerivate2Choice {
 	 * definition} = "Details specific to energy derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnergy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommodityDerivate2Choice, CommodityDerivate6> mmEnergy = new MMMessageAssociationEnd<CommodityDerivate2Choice, CommodityDerivate6>() {
 		{
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommodityDerivate2Choice.mmObject();
@@ -165,6 +175,16 @@ public class CommodityDerivate2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CommodityDerivate6.mmObject();
+		}
+
+		@Override
+		public CommodityDerivate6 getValue(CommodityDerivate2Choice obj) {
+			return obj.getEnergy();
+		}
+
+		@Override
+		public void setValue(CommodityDerivate2Choice obj, CommodityDerivate6 value) {
+			obj.setEnergy(value);
 		}
 	};
 

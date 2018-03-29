@@ -21,9 +21,12 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification128;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount160;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -63,6 +66,64 @@ import javax.xml.bind.annotation.XmlType;
  * trace} =
  * {@linkplain com.tools20022.repository.entity.SecuritiesSettlementPartyRole
  * SecuritiesSettlementPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08#mmDeliveringSettlementParties
+ * SecuritiesFinancingConfirmation002V08.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08#mmReceivingSettlementParties
+ * SecuritiesFinancingConfirmation002V08.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08#mmDeliveringSettlementParties
+ * SecuritiesFinancingInstruction002V08.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08#mmReceivingSettlementParties
+ * SecuritiesFinancingInstruction002V08.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V07#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionAllegementNotification002V07.
+ * mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V07#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionAllegementNotification002V07.
+ * mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionConfirmation002V08.
+ * mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionConfirmation002V08.
+ * mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionGenerationNotification002V08.
+ * mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionGenerationNotification002V08.
+ * mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionInstruction002V08.
+ * mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionInstruction002V08.mmReceivingSettlementParties
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V07#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionReversalAdvice002V07.
+ * mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V07#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionReversalAdvice002V07.
+ * mmReceivingSettlementParties}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -149,7 +210,7 @@ public class SettlementParties64 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentification128>> mmDepository = new MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentification128>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties64.mmObject();
@@ -162,7 +223,17 @@ public class SettlementParties64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification128.mmObject();
+			type_lazy = () -> PartyIdentification128.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification128> getValue(SettlementParties64 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(SettlementParties64 obj, Optional<PartyIdentification128> value) {
+			obj.setDepository(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty1")
@@ -203,7 +274,7 @@ public class SettlementParties64 {
 	 * "Party that, in a settlement chain interacts with the depository."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>> mmParty1 = new MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties64.mmObject();
@@ -216,7 +287,17 @@ public class SettlementParties64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount160.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount160.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount160> getValue(SettlementParties64 obj) {
+			return obj.getParty1();
+		}
+
+		@Override
+		public void setValue(SettlementParties64 obj, Optional<PartyIdentificationAndAccount160> value) {
+			obj.setParty1(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty2")
@@ -259,7 +340,7 @@ public class SettlementParties64 {
 	 * "Party that, in a settlement chain interacts with the party 1."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty2 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>> mmParty2 = new MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties64.mmObject();
@@ -273,7 +354,17 @@ public class SettlementParties64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount160.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount160.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount160> getValue(SettlementParties64 obj) {
+			return obj.getParty2();
+		}
+
+		@Override
+		public void setValue(SettlementParties64 obj, Optional<PartyIdentificationAndAccount160> value) {
+			obj.setParty2(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty3")
@@ -315,7 +406,7 @@ public class SettlementParties64 {
 	 * "Party that, in a settlement chain interacts with the party 2."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty3 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>> mmParty3 = new MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties64.mmObject();
@@ -328,7 +419,17 @@ public class SettlementParties64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount160.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount160.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount160> getValue(SettlementParties64 obj) {
+			return obj.getParty3();
+		}
+
+		@Override
+		public void setValue(SettlementParties64 obj, Optional<PartyIdentificationAndAccount160> value) {
+			obj.setParty3(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty4")
@@ -370,7 +471,7 @@ public class SettlementParties64 {
 	 * "Party that, in a settlement chain interacts with the party 3."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty4 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>> mmParty4 = new MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties64.mmObject();
@@ -383,7 +484,17 @@ public class SettlementParties64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount160.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount160.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount160> getValue(SettlementParties64 obj) {
+			return obj.getParty4();
+		}
+
+		@Override
+		public void setValue(SettlementParties64 obj, Optional<PartyIdentificationAndAccount160> value) {
+			obj.setParty4(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty5")
@@ -424,7 +535,7 @@ public class SettlementParties64 {
 	 * "Party that, in a settlement chain interacts with the party 4."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty5 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>> mmParty5 = new MMMessageAssociationEnd<SettlementParties64, Optional<PartyIdentificationAndAccount160>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties64.mmObject();
@@ -437,7 +548,17 @@ public class SettlementParties64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount160.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount160.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount160> getValue(SettlementParties64 obj) {
+			return obj.getParty5();
+		}
+
+		@Override
+		public void setValue(SettlementParties64 obj, Optional<PartyIdentificationAndAccount160> value) {
+			obj.setParty5(value.orElse(null));
 		}
 	};
 
@@ -447,6 +568,13 @@ public class SettlementParties64 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementParties64.mmDepository, com.tools20022.repository.msg.SettlementParties64.mmParty1,
 						com.tools20022.repository.msg.SettlementParties64.mmParty2, com.tools20022.repository.msg.SettlementParties64.mmParty3, com.tools20022.repository.msg.SettlementParties64.mmParty4,
 						com.tools20022.repository.msg.SettlementParties64.mmParty5);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmation002V08.mmDeliveringSettlementParties, SecuritiesFinancingConfirmation002V08.mmReceivingSettlementParties,
+						SecuritiesFinancingInstruction002V08.mmDeliveringSettlementParties, SecuritiesFinancingInstruction002V08.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionAllegementNotification002V07.mmDeliveringSettlementParties, SecuritiesSettlementTransactionAllegementNotification002V07.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionConfirmation002V08.mmDeliveringSettlementParties, SecuritiesSettlementTransactionConfirmation002V08.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionGenerationNotification002V08.mmDeliveringSettlementParties, SecuritiesSettlementTransactionGenerationNotification002V08.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionInstruction002V08.mmDeliveringSettlementParties, SecuritiesSettlementTransactionInstruction002V08.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionReversalAdvice002V07.mmDeliveringSettlementParties, SecuritiesSettlementTransactionReversalAdvice002V07.mmReceivingSettlementParties);
 				trace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintParty2PresenceRule.forSettlementParties64, com.tools20022.repository.constraints.ConstraintParty3PresenceRule.forSettlementParties64,
@@ -465,7 +593,7 @@ public class SettlementParties64 {
 		return depository == null ? Optional.empty() : Optional.of(depository);
 	}
 
-	public SettlementParties64 setDepository(com.tools20022.repository.msg.PartyIdentification128 depository) {
+	public SettlementParties64 setDepository(PartyIdentification128 depository) {
 		this.depository = depository;
 		return this;
 	}
@@ -474,7 +602,7 @@ public class SettlementParties64 {
 		return party1 == null ? Optional.empty() : Optional.of(party1);
 	}
 
-	public SettlementParties64 setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount160 party1) {
+	public SettlementParties64 setParty1(PartyIdentificationAndAccount160 party1) {
 		this.party1 = party1;
 		return this;
 	}
@@ -483,7 +611,7 @@ public class SettlementParties64 {
 		return party2 == null ? Optional.empty() : Optional.of(party2);
 	}
 
-	public SettlementParties64 setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount160 party2) {
+	public SettlementParties64 setParty2(PartyIdentificationAndAccount160 party2) {
 		this.party2 = party2;
 		return this;
 	}
@@ -492,7 +620,7 @@ public class SettlementParties64 {
 		return party3 == null ? Optional.empty() : Optional.of(party3);
 	}
 
-	public SettlementParties64 setParty3(com.tools20022.repository.msg.PartyIdentificationAndAccount160 party3) {
+	public SettlementParties64 setParty3(PartyIdentificationAndAccount160 party3) {
 		this.party3 = party3;
 		return this;
 	}
@@ -501,7 +629,7 @@ public class SettlementParties64 {
 		return party4 == null ? Optional.empty() : Optional.of(party4);
 	}
 
-	public SettlementParties64 setParty4(com.tools20022.repository.msg.PartyIdentificationAndAccount160 party4) {
+	public SettlementParties64 setParty4(PartyIdentificationAndAccount160 party4) {
 		this.party4 = party4;
 		return this;
 	}
@@ -510,7 +638,7 @@ public class SettlementParties64 {
 		return party5 == null ? Optional.empty() : Optional.of(party5);
 	}
 
-	public SettlementParties64 setParty5(com.tools20022.repository.msg.PartyIdentificationAndAccount160 party5) {
+	public SettlementParties64 setParty5(PartyIdentificationAndAccount160 party5) {
 		this.party5 = party5;
 		return this;
 	}

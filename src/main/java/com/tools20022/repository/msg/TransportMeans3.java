@@ -108,7 +108,7 @@ public class TransportMeans3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModeCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportMeans3, Optional<Max4Text>> mmModeCode = new MMMessageAttribute<TransportMeans3, Optional<Max4Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans3.mmObject();
@@ -120,6 +120,16 @@ public class TransportMeans3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(TransportMeans3 obj) {
+			return obj.getModeCode();
+		}
+
+		@Override
+		public void setValue(TransportMeans3 obj, Optional<Max4Text> value) {
+			obj.setModeCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -158,7 +168,7 @@ public class TransportMeans3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportMeans3, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<TransportMeans3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans3.mmObject();
@@ -170,6 +180,16 @@ public class TransportMeans3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransportMeans3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TransportMeans3 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -201,7 +221,7 @@ public class TransportMeans3 {
 	 * definition} = "Name, expressed as text, of the means of transport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportMeans3, Optional<Max35Text>> mmName = new MMMessageAttribute<TransportMeans3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans3.mmObject();
 			isDerived = false;
@@ -212,6 +232,16 @@ public class TransportMeans3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransportMeans3 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(TransportMeans3 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 

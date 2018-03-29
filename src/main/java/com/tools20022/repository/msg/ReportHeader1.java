@@ -95,7 +95,7 @@ public class ReportHeader1 {
 	 * definition} = "Date and time at which the report was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportHeader1, ISODateTime> mmCreationDateTime = new MMMessageAttribute<ReportHeader1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader1.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class ReportHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ReportHeader1 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(ReportHeader1 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "CntsTp", required = true)
@@ -136,7 +146,7 @@ public class ReportHeader1 {
 	 * definition} = "Identification of the type of report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentsType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportHeader1, Max35Text> mmContentsType = new MMMessageAttribute<ReportHeader1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportHeader1.mmObject();
 			isDerived = false;
@@ -147,6 +157,16 @@ public class ReportHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportHeader1 obj) {
+			return obj.getContentsType();
+		}
+
+		@Override
+		public void setValue(ReportHeader1 obj, Max35Text value) {
+			obj.setContentsType(value);
 		}
 	};
 

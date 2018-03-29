@@ -121,7 +121,7 @@ public class UnmatchedReason2 {
 	 * "Specifies the reason why the instruction has an unmatched status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnmatchedReason2, UnmatchedReason3Choice> mmCode = new MMMessageAssociationEnd<UnmatchedReason2, UnmatchedReason3Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnmatchedReason2.mmObject();
@@ -135,6 +135,16 @@ public class UnmatchedReason2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnmatchedReason3Choice.mmObject();
+		}
+
+		@Override
+		public UnmatchedReason3Choice getValue(UnmatchedReason2 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason2 obj, UnmatchedReason3Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -176,7 +186,7 @@ public class UnmatchedReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnmatchedReason2, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<UnmatchedReason2, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnmatchedReason2.mmObject();
@@ -189,6 +199,16 @@ public class UnmatchedReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(UnmatchedReason2 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason2 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

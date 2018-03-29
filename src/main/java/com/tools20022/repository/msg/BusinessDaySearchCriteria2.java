@@ -119,7 +119,7 @@ public class BusinessDaySearchCriteria2 {
 	 * BusinessDaySearchCriteria1.mmSystemDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDaySearchCriteria2, Optional<ISODate>> mmSystemDate = new MMMessageAttribute<BusinessDaySearchCriteria2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDaySearchCriteria2.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class BusinessDaySearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(BusinessDaySearchCriteria2 obj) {
+			return obj.getSystemDate();
+		}
+
+		@Override
+		public void setValue(BusinessDaySearchCriteria2 obj, Optional<ISODate> value) {
+			obj.setSystemDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysId")
@@ -169,7 +179,7 @@ public class BusinessDaySearchCriteria2 {
 	 * BusinessDaySearchCriteria1.mmSystemIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDaySearchCriteria2, List<SystemIdentification2Choice>> mmSystemIdentification = new MMMessageAssociationEnd<BusinessDaySearchCriteria2, List<SystemIdentification2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDaySearchCriteria2.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class BusinessDaySearchCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public List<SystemIdentification2Choice> getValue(BusinessDaySearchCriteria2 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(BusinessDaySearchCriteria2 obj, List<SystemIdentification2Choice> value) {
+			obj.setSystemIdentification(value);
 		}
 	};
 	@XmlElement(name = "SysCcy")
@@ -220,7 +240,7 @@ public class BusinessDaySearchCriteria2 {
 	 * BusinessDaySearchCriteria1.mmSystemCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDaySearchCriteria2, List<ActiveCurrencyCode>> mmSystemCurrency = new MMMessageAttribute<BusinessDaySearchCriteria2, List<ActiveCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDaySearchCriteria2.mmObject();
 			isDerived = false;
@@ -231,6 +251,16 @@ public class BusinessDaySearchCriteria2 {
 			previousVersion_lazy = () -> BusinessDaySearchCriteria1.mmSystemCurrency;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<ActiveCurrencyCode> getValue(BusinessDaySearchCriteria2 obj) {
+			return obj.getSystemCurrency();
+		}
+
+		@Override
+		public void setValue(BusinessDaySearchCriteria2 obj, List<ActiveCurrencyCode> value) {
+			obj.setSystemCurrency(value);
 		}
 	};
 	@XmlElement(name = "EvtTp")
@@ -267,7 +297,7 @@ public class BusinessDaySearchCriteria2 {
 	 * BusinessDaySearchCriteria1.mmEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDaySearchCriteria2, Optional<SystemEventType2Choice>> mmEventType = new MMMessageAssociationEnd<BusinessDaySearchCriteria2, Optional<SystemEventType2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDaySearchCriteria2.mmObject();
 			isDerived = false;
@@ -280,6 +310,16 @@ public class BusinessDaySearchCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemEventType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemEventType2Choice> getValue(BusinessDaySearchCriteria2 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(BusinessDaySearchCriteria2 obj, Optional<SystemEventType2Choice> value) {
+			obj.setEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsrPrd")
@@ -317,7 +357,7 @@ public class BusinessDaySearchCriteria2 {
 	 * BusinessDaySearchCriteria1.mmClosurePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosurePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDaySearchCriteria2, Optional<DateTimePeriod1Choice>> mmClosurePeriod = new MMMessageAttribute<BusinessDaySearchCriteria2, Optional<DateTimePeriod1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDaySearchCriteria2.mmObject();
 			isDerived = false;
@@ -329,6 +369,16 @@ public class BusinessDaySearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriod1Choice> getValue(BusinessDaySearchCriteria2 obj) {
+			return obj.getClosurePeriod();
+		}
+
+		@Override
+		public void setValue(BusinessDaySearchCriteria2 obj, Optional<DateTimePeriod1Choice> value) {
+			obj.setClosurePeriod(value.orElse(null));
 		}
 	};
 

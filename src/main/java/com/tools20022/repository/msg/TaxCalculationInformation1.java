@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxationBasis1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -103,7 +104,7 @@ public class TaxCalculationInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation1, Optional<TaxationBasis1>> mmBasis = new MMMessageAttribute<TaxCalculationInformation1, Optional<TaxationBasis1>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation1.mmObject();
@@ -114,7 +115,17 @@ public class TaxCalculationInformation1 {
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxationBasis1.mmObject();
+			complexType_lazy = () -> TaxationBasis1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxationBasis1> getValue(TaxCalculationInformation1 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation1 obj, Optional<TaxationBasis1> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 
@@ -136,7 +147,7 @@ public class TaxCalculationInformation1 {
 		return basis == null ? Optional.empty() : Optional.of(basis);
 	}
 
-	public TaxCalculationInformation1 setBasis(com.tools20022.repository.msg.TaxationBasis1 basis) {
+	public TaxCalculationInformation1 setBasis(TaxationBasis1 basis) {
 		this.basis = basis;
 		return this;
 	}

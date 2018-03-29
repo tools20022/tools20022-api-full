@@ -245,7 +245,7 @@ public class BICIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BICIdentification1, BICIdentifier> mmBIC = new MMMessageAttribute<BICIdentification1, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
@@ -257,6 +257,16 @@ public class BICIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(BICIdentification1 obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(BICIdentification1 obj, BICIdentifier value) {
+			obj.setBIC(value);
 		}
 	};
 

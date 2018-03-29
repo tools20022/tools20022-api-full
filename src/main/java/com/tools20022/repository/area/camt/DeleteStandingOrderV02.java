@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.StandingOrderOrAll1Choice;
 import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -78,7 +77,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DeleteStandingOrderV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -116,7 +115,7 @@ public class DeleteStandingOrderV02 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeleteStandingOrderV02, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<DeleteStandingOrderV02, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,12 +126,14 @@ public class DeleteStandingOrderV02 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeleteStandingOrderV02.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(DeleteStandingOrderV02 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(DeleteStandingOrderV02 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "StgOrdrDtls", required = true)
@@ -162,7 +163,7 @@ public class DeleteStandingOrderV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStandingOrderDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeleteStandingOrderV02, StandingOrderOrAll1Choice> mmStandingOrderDetails = new MMMessageBuildingBlock<DeleteStandingOrderV02, StandingOrderOrAll1Choice>() {
 		{
 			xmlTag = "StgOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,12 +174,14 @@ public class DeleteStandingOrderV02 {
 			complexType_lazy = () -> StandingOrderOrAll1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeleteStandingOrderV02.class.getMethod("getStandingOrderDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public StandingOrderOrAll1Choice getValue(DeleteStandingOrderV02 obj) {
+			return obj.getStandingOrderDetails();
+		}
+
+		@Override
+		public void setValue(DeleteStandingOrderV02 obj, StandingOrderOrAll1Choice value) {
+			obj.setStandingOrderDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -208,7 +211,7 @@ public class DeleteStandingOrderV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeleteStandingOrderV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<DeleteStandingOrderV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,19 +221,21 @@ public class DeleteStandingOrderV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeleteStandingOrderV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(DeleteStandingOrderV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(DeleteStandingOrderV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeleteStandingOrderV02";
 				definition = "The DeleteStandingOrder message is sent by the system member to delete one or more standing orders within the static data held by the system transaction administrator.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

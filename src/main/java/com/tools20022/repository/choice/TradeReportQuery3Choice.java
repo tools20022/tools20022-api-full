@@ -107,7 +107,7 @@ public class TradeReportQuery3Choice {
 	 * definition} = "Query criteria specifically applied to ad-hoc queries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdHocQuery = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeReportQuery3Choice, TradeQueryCriteria3> mmAdHocQuery = new MMMessageAssociationEnd<TradeReportQuery3Choice, TradeQueryCriteria3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeReportQuery3Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class TradeReportQuery3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradeQueryCriteria3.mmObject();
+		}
+
+		@Override
+		public TradeQueryCriteria3 getValue(TradeReportQuery3Choice obj) {
+			return obj.getAdHocQuery();
+		}
+
+		@Override
+		public void setValue(TradeReportQuery3Choice obj, TradeQueryCriteria3 value) {
+			obj.setAdHocQuery(value);
 		}
 	};
 	@XmlElement(name = "RcrntQry", required = true)
@@ -150,7 +160,7 @@ public class TradeReportQuery3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecurrentQuery = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeReportQuery3Choice, TradeRecurrentQuery2> mmRecurrentQuery = new MMMessageAssociationEnd<TradeReportQuery3Choice, TradeRecurrentQuery2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeReportQuery3Choice.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class TradeReportQuery3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradeRecurrentQuery2.mmObject();
+		}
+
+		@Override
+		public TradeRecurrentQuery2 getValue(TradeReportQuery3Choice obj) {
+			return obj.getRecurrentQuery();
+		}
+
+		@Override
+		public void setValue(TradeReportQuery3Choice obj, TradeRecurrentQuery2 value) {
+			obj.setRecurrentQuery(value);
 		}
 	};
 

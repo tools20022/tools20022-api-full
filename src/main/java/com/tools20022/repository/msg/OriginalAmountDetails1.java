@@ -113,7 +113,7 @@ public class OriginalAmountDetails1 {
 	 * definition} = "Actual amount to be converted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAmountDetails1, Optional<ImpliedCurrencyAndAmount>> mmActualAmount = new MMMessageAttribute<OriginalAmountDetails1, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAmountDetails1.mmObject();
@@ -125,6 +125,16 @@ public class OriginalAmountDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(OriginalAmountDetails1 obj) {
+			return obj.getActualAmount();
+		}
+
+		@Override
+		public void setValue(OriginalAmountDetails1 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setActualAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinAmt")
@@ -163,7 +173,7 @@ public class OriginalAmountDetails1 {
 	 * "Minimum amount for conversion (in case of range of amounts)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAmountDetails1, Optional<ImpliedCurrencyAndAmount>> mmMinimumAmount = new MMMessageAttribute<OriginalAmountDetails1, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAmountDetails1.mmObject();
@@ -175,6 +185,16 @@ public class OriginalAmountDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(OriginalAmountDetails1 obj) {
+			return obj.getMinimumAmount();
+		}
+
+		@Override
+		public void setValue(OriginalAmountDetails1 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMinimumAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAmt")
@@ -213,7 +233,7 @@ public class OriginalAmountDetails1 {
 	 * "Maximum amount for conversion (in case of range of amounts)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalAmountDetails1, Optional<ImpliedCurrencyAndAmount>> mmMaximumAmount = new MMMessageAttribute<OriginalAmountDetails1, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAmountDetails1.mmObject();
@@ -225,6 +245,16 @@ public class OriginalAmountDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(OriginalAmountDetails1 obj) {
+			return obj.getMaximumAmount();
+		}
+
+		@Override
+		public void setValue(OriginalAmountDetails1 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumAmount(value.orElse(null));
 		}
 	};
 

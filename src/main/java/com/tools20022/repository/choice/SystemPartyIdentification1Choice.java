@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
@@ -111,7 +112,7 @@ public class SystemPartyIdentification1Choice {
 	 * definition} = "Provides the identification of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrganisationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification1Choice, PartyIdentification71Choice> mmOrganisationIdentification = new MMMessageAttribute<SystemPartyIdentification1Choice, PartyIdentification71Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
@@ -122,7 +123,17 @@ public class SystemPartyIdentification1Choice {
 			definition = "Provides the identification of a party.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.PartyIdentification71Choice.mmObject();
+			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification71Choice getValue(SystemPartyIdentification1Choice obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification1Choice obj, PartyIdentification71Choice value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmbndId", required = true)
@@ -161,7 +172,7 @@ public class SystemPartyIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCombinedIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemPartyIdentification1Choice, SystemPartyIdentification3> mmCombinedIdentification = new MMMessageAssociationEnd<SystemPartyIdentification1Choice, SystemPartyIdentification3>() {
 		{
 			businessComponentTrace_lazy = () -> SystemPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
@@ -174,6 +185,16 @@ public class SystemPartyIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification3 getValue(SystemPartyIdentification1Choice obj) {
+			return obj.getCombinedIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification1Choice obj, SystemPartyIdentification3 value) {
+			obj.setCombinedIdentification(value);
 		}
 	};
 
@@ -196,7 +217,7 @@ public class SystemPartyIdentification1Choice {
 		return organisationIdentification;
 	}
 
-	public SystemPartyIdentification1Choice setOrganisationIdentification(com.tools20022.repository.choice.PartyIdentification71Choice organisationIdentification) {
+	public SystemPartyIdentification1Choice setOrganisationIdentification(PartyIdentification71Choice organisationIdentification) {
 		this.organisationIdentification = Objects.requireNonNull(organisationIdentification);
 		return this;
 	}

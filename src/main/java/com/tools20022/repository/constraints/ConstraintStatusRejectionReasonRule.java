@@ -55,12 +55,16 @@ public class ConstraintStatusRejectionReasonRule {
 	 */
 	public static final MMConstraint<CollateralCancellationStatus1> forCollateralCancellationStatus1 = new MMConstraint<CollateralCancellationStatus1>() {
 		{
-			validator = ConstraintStatusRejectionReasonRule::checkCollateralCancellationStatus1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRejectionReasonRule";
 			definition = "If Collateral StatusCode equals Rejected then RejectionDetails must be present.";
 			owner_lazy = () -> CollateralCancellationStatus1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RejectionDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CollateralStatusCode</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CollateralCancellationStatus1 obj) throws Exception {
+			checkCollateralCancellationStatus1(obj);
 		}
 	};
 

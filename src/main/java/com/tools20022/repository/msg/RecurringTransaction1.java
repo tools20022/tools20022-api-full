@@ -131,7 +131,7 @@ public class RecurringTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction1, Max2NumericText> mmSequenceNumber = new MMMessageAttribute<RecurringTransaction1, Max2NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class RecurringTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max2NumericText.mmObject();
+		}
+
+		@Override
+		public Max2NumericText getValue(RecurringTransaction1 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction1 obj, Max2NumericText value) {
+			obj.setSequenceNumber(value);
 		}
 	};
 	@XmlElement(name = "PrdUnit", required = true)
@@ -190,7 +200,7 @@ public class RecurringTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriodUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction1, Frequency4Code> mmPeriodUnit = new MMMessageAttribute<RecurringTransaction1, Frequency4Code>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmPeriodUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
@@ -203,6 +213,16 @@ public class RecurringTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Frequency4Code.mmObject();
+		}
+
+		@Override
+		public Frequency4Code getValue(RecurringTransaction1 obj) {
+			return obj.getPeriodUnit();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction1 obj, Frequency4Code value) {
+			obj.setPeriodUnit(value);
 		}
 	};
 	@XmlElement(name = "InstlmtPrd", required = true)
@@ -247,7 +267,7 @@ public class RecurringTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstalmentPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction1, Number> mmInstalmentPeriod = new MMMessageAttribute<RecurringTransaction1, Number>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmNumberOfUnits;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
@@ -260,6 +280,16 @@ public class RecurringTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(RecurringTransaction1 obj) {
+			return obj.getInstalmentPeriod();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction1 obj, Number value) {
+			obj.setInstalmentPeriod(value);
 		}
 	};
 	@XmlElement(name = "TtlNbOfPmts", required = true)
@@ -304,7 +334,7 @@ public class RecurringTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfPayments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction1, Number> mmTotalNumberOfPayments = new MMMessageAttribute<RecurringTransaction1, Number>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmTotalNumberOfInstalment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
@@ -317,6 +347,16 @@ public class RecurringTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(RecurringTransaction1 obj) {
+			return obj.getTotalNumberOfPayments();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction1 obj, Number value) {
+			obj.setTotalNumberOfPayments(value);
 		}
 	};
 	@XmlElement(name = "IntrstChrgs")
@@ -355,7 +395,7 @@ public class RecurringTransaction1 {
 	 * "Interest charged in percentage for the total amount of payments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestCharges = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction1, Optional<ImpliedCurrencyAndAmount>> mmInterestCharges = new MMMessageAttribute<RecurringTransaction1, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
@@ -367,6 +407,16 @@ public class RecurringTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(RecurringTransaction1 obj) {
+			return obj.getInterestCharges();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction1 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setInterestCharges(value.orElse(null));
 		}
 	};
 

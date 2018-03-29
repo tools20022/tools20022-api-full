@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.DebitAuthorisationConfirmation;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -137,7 +136,7 @@ public class DebitAuthorisationResponse {
 	 * definition} = "Identifies an assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationResponse, CaseAssignment> mmAssignment = new MMMessageBuildingBlock<DebitAuthorisationResponse, CaseAssignment>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,12 +147,14 @@ public class DebitAuthorisationResponse {
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationResponse.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment getValue(DebitAuthorisationResponse obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationResponse obj, CaseAssignment value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -179,7 +180,7 @@ public class DebitAuthorisationResponse {
 	 * definition} = "Identifies a case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationResponse, Case> mmCase = new MMMessageBuildingBlock<DebitAuthorisationResponse, Case>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class DebitAuthorisationResponse {
 			complexType_lazy = () -> Case.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationResponse.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case getValue(DebitAuthorisationResponse obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationResponse obj, Case value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Conf", required = true)
@@ -223,7 +226,7 @@ public class DebitAuthorisationResponse {
 	 * definition} = "Indicates if the debit authorisation is granted or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmConfirmation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationResponse, DebitAuthorisationConfirmation> mmConfirmation = new MMMessageBuildingBlock<DebitAuthorisationResponse, DebitAuthorisationConfirmation>() {
 		{
 			xmlTag = "Conf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +237,14 @@ public class DebitAuthorisationResponse {
 			complexType_lazy = () -> DebitAuthorisationConfirmation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationResponse.class.getMethod("getConfirmation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DebitAuthorisationConfirmation getValue(DebitAuthorisationResponse obj) {
+			return obj.getConfirmation();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationResponse obj, DebitAuthorisationConfirmation value) {
+			obj.setConfirmation(value);
 		}
 	};
 

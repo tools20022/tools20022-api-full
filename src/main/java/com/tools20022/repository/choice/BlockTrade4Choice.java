@@ -120,7 +120,7 @@ public class BlockTrade4Choice {
 	 * BlockTrade1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockTrade4Choice, BlockTrade1Code> mmCode = new MMMessageAttribute<BlockTrade4Choice, BlockTrade1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBlockTrade;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BlockTrade4Choice.mmObject();
@@ -134,6 +134,16 @@ public class BlockTrade4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BlockTrade1Code.mmObject();
+		}
+
+		@Override
+		public BlockTrade1Code getValue(BlockTrade4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BlockTrade4Choice obj, BlockTrade1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -180,7 +190,7 @@ public class BlockTrade4Choice {
 	 * BlockTrade1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockTrade4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<BlockTrade4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBlockTrade;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BlockTrade4Choice.mmObject();
@@ -194,6 +204,16 @@ public class BlockTrade4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(BlockTrade4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BlockTrade4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

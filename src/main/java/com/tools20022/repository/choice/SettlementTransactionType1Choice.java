@@ -104,7 +104,7 @@ public class SettlementTransactionType1Choice {
 	 * "Securities transaction type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTransactionType1Choice, SettlementTransactionType7Code> mmCode = new MMMessageAttribute<SettlementTransactionType1Choice, SettlementTransactionType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementTransactionType1Choice.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class SettlementTransactionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementTransactionType7Code.mmObject();
+		}
+
+		@Override
+		public SettlementTransactionType7Code getValue(SettlementTransactionType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionType1Choice obj, SettlementTransactionType7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -152,7 +162,7 @@ public class SettlementTransactionType1Choice {
 	 * "Securities transaction type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTransactionType1Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<SettlementTransactionType1Choice, GenericIdentification38>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementTransactionType1Choice.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class SettlementTransactionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(SettlementTransactionType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionType1Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

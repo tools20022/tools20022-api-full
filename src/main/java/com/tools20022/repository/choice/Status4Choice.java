@@ -21,6 +21,9 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.InstructionProcessingStatus6Choice;
+import com.tools20022.repository.choice.MatchingStatus6Choice;
+import com.tools20022.repository.choice.SettlementStatus4Choice;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Status;
@@ -129,7 +132,7 @@ public class Status4Choice {
 	 * definition} = "Proprietary status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status4Choice, ProprietaryStatusAndReason2> mmProprietary = new MMMessageAssociationEnd<Status4Choice, ProprietaryStatusAndReason2>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmAgentStandingInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status4Choice.mmObject();
@@ -143,6 +146,16 @@ public class Status4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason2.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason2 getValue(Status4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Status4Choice obj, ProprietaryStatusAndReason2 value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "MtchgSts", required = true)
@@ -182,7 +195,7 @@ public class Status4Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status4Choice, MatchingStatus6Choice> mmMatchingStatus = new MMMessageAssociationEnd<Status4Choice, MatchingStatus6Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status4Choice.mmObject();
@@ -195,7 +208,17 @@ public class Status4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus6Choice.mmObject();
+			type_lazy = () -> MatchingStatus6Choice.mmObject();
+		}
+
+		@Override
+		public MatchingStatus6Choice getValue(Status4Choice obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(Status4Choice obj, MatchingStatus6Choice value) {
+			obj.setMatchingStatus(value);
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts", required = true)
@@ -237,7 +260,7 @@ public class Status4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status4Choice, MatchingStatus6Choice> mmInferredMatchingStatus = new MMMessageAssociationEnd<Status4Choice, MatchingStatus6Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status4Choice.mmObject();
@@ -250,7 +273,17 @@ public class Status4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.MatchingStatus6Choice.mmObject();
+			type_lazy = () -> MatchingStatus6Choice.mmObject();
+		}
+
+		@Override
+		public MatchingStatus6Choice getValue(Status4Choice obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(Status4Choice obj, MatchingStatus6Choice value) {
+			obj.setInferredMatchingStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts", required = true)
@@ -290,7 +323,7 @@ public class Status4Choice {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status4Choice, SettlementStatus4Choice> mmSettlementStatus = new MMMessageAssociationEnd<Status4Choice, SettlementStatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status4Choice.mmObject();
@@ -303,7 +336,17 @@ public class Status4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SettlementStatus4Choice.mmObject();
+			type_lazy = () -> SettlementStatus4Choice.mmObject();
+		}
+
+		@Override
+		public SettlementStatus4Choice getValue(Status4Choice obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(Status4Choice obj, SettlementStatus4Choice value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 	@XmlElement(name = "InstrPrcgSts", required = true)
@@ -343,7 +386,7 @@ public class Status4Choice {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status4Choice, InstructionProcessingStatus6Choice> mmInstructionProcessingStatus = new MMMessageAssociationEnd<Status4Choice, InstructionProcessingStatus6Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status4Choice.mmObject();
@@ -356,7 +399,17 @@ public class Status4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus6Choice.mmObject();
+			type_lazy = () -> InstructionProcessingStatus6Choice.mmObject();
+		}
+
+		@Override
+		public InstructionProcessingStatus6Choice getValue(Status4Choice obj) {
+			return obj.getInstructionProcessingStatus();
+		}
+
+		@Override
+		public void setValue(Status4Choice obj, InstructionProcessingStatus6Choice value) {
+			obj.setInstructionProcessingStatus(value);
 		}
 	};
 
@@ -390,7 +443,7 @@ public class Status4Choice {
 		return matchingStatus;
 	}
 
-	public Status4Choice setMatchingStatus(com.tools20022.repository.choice.MatchingStatus6Choice matchingStatus) {
+	public Status4Choice setMatchingStatus(MatchingStatus6Choice matchingStatus) {
 		this.matchingStatus = Objects.requireNonNull(matchingStatus);
 		return this;
 	}
@@ -399,7 +452,7 @@ public class Status4Choice {
 		return inferredMatchingStatus;
 	}
 
-	public Status4Choice setInferredMatchingStatus(com.tools20022.repository.choice.MatchingStatus6Choice inferredMatchingStatus) {
+	public Status4Choice setInferredMatchingStatus(MatchingStatus6Choice inferredMatchingStatus) {
 		this.inferredMatchingStatus = Objects.requireNonNull(inferredMatchingStatus);
 		return this;
 	}
@@ -408,7 +461,7 @@ public class Status4Choice {
 		return settlementStatus;
 	}
 
-	public Status4Choice setSettlementStatus(com.tools20022.repository.choice.SettlementStatus4Choice settlementStatus) {
+	public Status4Choice setSettlementStatus(SettlementStatus4Choice settlementStatus) {
 		this.settlementStatus = Objects.requireNonNull(settlementStatus);
 		return this;
 	}
@@ -417,7 +470,7 @@ public class Status4Choice {
 		return instructionProcessingStatus;
 	}
 
-	public Status4Choice setInstructionProcessingStatus(com.tools20022.repository.choice.InstructionProcessingStatus6Choice instructionProcessingStatus) {
+	public Status4Choice setInstructionProcessingStatus(InstructionProcessingStatus6Choice instructionProcessingStatus) {
 		this.instructionProcessingStatus = Objects.requireNonNull(instructionProcessingStatus);
 		return this;
 	}

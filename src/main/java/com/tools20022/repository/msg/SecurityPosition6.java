@@ -25,6 +25,8 @@ import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EligiblePosition3;
+import com.tools20022.repository.msg.SecurityIdentification11;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -154,7 +156,7 @@ public class SecurityPosition6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityPosition6, SecurityIdentification11> mmIdentification = new MMMessageAttribute<SecurityPosition6, SecurityIdentification11>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition6.mmObject();
@@ -166,11 +168,21 @@ public class SecurityPosition6 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityPosition8.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
+			complexType_lazy = () -> SecurityIdentification11.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification11 getValue(SecurityPosition6 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityPosition6 obj, SecurityIdentification11 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Pos")
-	protected List<com.tools20022.repository.msg.EligiblePosition3> position;
+	protected List<EligiblePosition3> position;
 	/**
 	 * 
 	 <p>
@@ -210,7 +222,7 @@ public class SecurityPosition6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition6, List<EligiblePosition3>> mmPosition = new MMMessageAssociationEnd<SecurityPosition6, List<EligiblePosition3>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition6.mmObject();
@@ -223,7 +235,17 @@ public class SecurityPosition6 {
 			maxOccurs = 1000;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition3.mmObject();
+			type_lazy = () -> EligiblePosition3.mmObject();
+		}
+
+		@Override
+		public List<EligiblePosition3> getValue(SecurityPosition6 obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(SecurityPosition6 obj, List<EligiblePosition3> value) {
+			obj.setPosition(value);
 		}
 	};
 
@@ -248,7 +270,7 @@ public class SecurityPosition6 {
 		return identification;
 	}
 
-	public SecurityPosition6 setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
+	public SecurityPosition6 setIdentification(SecurityIdentification11 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -257,7 +279,7 @@ public class SecurityPosition6 {
 		return position == null ? position = new ArrayList<>() : position;
 	}
 
-	public SecurityPosition6 setPosition(List<com.tools20022.repository.msg.EligiblePosition3> position) {
+	public SecurityPosition6 setPosition(List<EligiblePosition3> position) {
 		this.position = Objects.requireNonNull(position);
 		return this;
 	}

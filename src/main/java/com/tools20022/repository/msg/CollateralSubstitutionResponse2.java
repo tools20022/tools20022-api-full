@@ -113,7 +113,7 @@ public class CollateralSubstitutionResponse2 {
 	 * "Reference to the collateral substitution request identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralSubstitutionResponse2, Max35Text> mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute<CollateralSubstitutionResponse2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse2.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class CollateralSubstitutionResponse2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CollateralSubstitutionResponse2 obj) {
+			return obj.getCollateralSubstitutionRequestIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionResponse2 obj, Max35Text value) {
+			obj.setCollateralSubstitutionRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "RjctdAmt", required = true)
@@ -162,7 +172,7 @@ public class CollateralSubstitutionResponse2 {
 	 * "Specifies the collateral substitution amount that is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralSubstitutionResponse2, ActiveCurrencyAndAmount> mmRejectedAmount = new MMMessageAttribute<CollateralSubstitutionResponse2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CollateralSubstitution.mmRejectedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse2.mmObject();
@@ -174,6 +184,16 @@ public class CollateralSubstitutionResponse2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralSubstitutionResponse2 obj) {
+			return obj.getRejectedAmount();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionResponse2 obj, ActiveCurrencyAndAmount value) {
+			obj.setRejectedAmount(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn", required = true)
@@ -212,7 +232,7 @@ public class CollateralSubstitutionResponse2 {
 	 * "Specifies the reasons why the collateral substitution is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralSubstitutionResponse2, RejectionReasonV021Code> mmRejectionReason = new MMMessageAttribute<CollateralSubstitutionResponse2, RejectionReasonV021Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse2.mmObject();
@@ -224,6 +244,16 @@ public class CollateralSubstitutionResponse2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReasonV021Code.mmObject();
+		}
+
+		@Override
+		public RejectionReasonV021Code getValue(CollateralSubstitutionResponse2 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionResponse2 obj, RejectionReasonV021Code value) {
+			obj.setRejectionReason(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsnInf")
@@ -262,7 +292,7 @@ public class CollateralSubstitutionResponse2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralSubstitutionResponse2, Optional<Max140Text>> mmRejectionReasonInformation = new MMMessageAttribute<CollateralSubstitutionResponse2, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse2.mmObject();
@@ -274,6 +304,16 @@ public class CollateralSubstitutionResponse2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(CollateralSubstitutionResponse2 obj) {
+			return obj.getRejectionReasonInformation();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionResponse2 obj, Optional<Max140Text> value) {
+			obj.setRejectionReasonInformation(value.orElse(null));
 		}
 	};
 

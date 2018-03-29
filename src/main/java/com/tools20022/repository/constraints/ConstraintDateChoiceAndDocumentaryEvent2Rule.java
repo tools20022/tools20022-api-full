@@ -54,12 +54,16 @@ public class ConstraintDateChoiceAndDocumentaryEvent2Rule {
 	 */
 	public static final MMConstraint<Trigger1> forTrigger1 = new MMConstraint<Trigger1>() {
 		{
-			validator = ConstraintDateChoiceAndDocumentaryEvent2Rule::checkTrigger1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateChoiceAndDocumentaryEvent2Rule";
 			definition = "Either DateChoice or at least one occurrence of DocumentaryEvent must be present. Both may be present.";
 			owner_lazy = () -> Trigger1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DateChoice</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DocumentaryEvent[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Trigger1 obj) throws Exception {
+			checkTrigger1(obj);
 		}
 	};
 

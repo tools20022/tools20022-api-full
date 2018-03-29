@@ -97,21 +97,33 @@ public class SettlementMethod1Choice {
 	 * name} = "Credit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies whether the value is a credit."</li>
+	 * definition} =
+	 * "Specifies details of the payment to be made by the old account servicer to the new account servicer in case of a positive closing balance."
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCredit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementMethod1Choice, CreditTransferTransaction27> mmCredit = new MMMessageAssociationEnd<SettlementMethod1Choice, CreditTransferTransaction27>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cdt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Credit";
-			definition = "Specifies whether the value is a credit.";
+			definition = "Specifies details of the payment to be made by the old account servicer to the new account servicer in case of a positive closing balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditTransferTransaction27.mmObject();
+		}
+
+		@Override
+		public CreditTransferTransaction27 getValue(SettlementMethod1Choice obj) {
+			return obj.getCredit();
+		}
+
+		@Override
+		public void setValue(SettlementMethod1Choice obj, CreditTransferTransaction27 value) {
+			obj.setCredit(value);
 		}
 	};
 	@XmlElement(name = "Dbt", required = true)
@@ -140,21 +152,33 @@ public class SettlementMethod1Choice {
 	 * name} = "Debit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies whether the value is a debit."</li>
+	 * definition} =
+	 * "Specifies details of the payment to be made by the new account servicer to the old account servicer in case of a negative closing balance."
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementMethod1Choice, CreditTransferTransaction27> mmDebit = new MMMessageAssociationEnd<SettlementMethod1Choice, CreditTransferTransaction27>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementMethod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dbt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debit";
-			definition = "Specifies whether the value is a debit.";
+			definition = "Specifies details of the payment to be made by the new account servicer to the old account servicer in case of a negative closing balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditTransferTransaction27.mmObject();
+		}
+
+		@Override
+		public CreditTransferTransaction27 getValue(SettlementMethod1Choice obj) {
+			return obj.getDebit();
+		}
+
+		@Override
+		public void setValue(SettlementMethod1Choice obj, CreditTransferTransaction27 value) {
+			obj.setDebit(value);
 		}
 	};
 

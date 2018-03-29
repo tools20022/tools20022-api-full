@@ -25,7 +25,6 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -145,7 +144,7 @@ public class CancelCaseAssignment {
 	 * definition} = "Identifies the assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CancelCaseAssignment, CaseAssignment> mmAssignment = new MMMessageBuildingBlock<CancelCaseAssignment, CaseAssignment>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,12 +155,14 @@ public class CancelCaseAssignment {
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CancelCaseAssignment.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment getValue(CancelCaseAssignment obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(CancelCaseAssignment obj, CaseAssignment value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -187,7 +188,7 @@ public class CancelCaseAssignment {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CancelCaseAssignment, Case> mmCase = new MMMessageBuildingBlock<CancelCaseAssignment, Case>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,12 +199,14 @@ public class CancelCaseAssignment {
 			complexType_lazy = () -> Case.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CancelCaseAssignment.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case getValue(CancelCaseAssignment obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(CancelCaseAssignment obj, Case value) {
+			obj.setCase(value);
 		}
 	};
 

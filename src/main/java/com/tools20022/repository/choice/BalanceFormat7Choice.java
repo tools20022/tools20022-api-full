@@ -114,7 +114,7 @@ public class BalanceFormat7Choice {
 	 * "Provides information about balance related to a corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceFormat7Choice, SignedQuantityFormat8> mmBalance = new MMMessageAssociationEnd<BalanceFormat7Choice, SignedQuantityFormat8>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat7Choice.mmObject();
@@ -128,6 +128,16 @@ public class BalanceFormat7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat8.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat8 getValue(BalanceFormat7Choice obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(BalanceFormat7Choice obj, SignedQuantityFormat8 value) {
+			obj.setBalance(value);
 		}
 	};
 	@XmlElement(name = "ElgblBal", required = true)
@@ -167,7 +177,7 @@ public class BalanceFormat7Choice {
 	 * "Provide eligible balance information in different formats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEligibleBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceFormat7Choice, SignedQuantityFormat9> mmEligibleBalance = new MMMessageAssociationEnd<BalanceFormat7Choice, SignedQuantityFormat9>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat7Choice.mmObject();
@@ -181,6 +191,16 @@ public class BalanceFormat7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(BalanceFormat7Choice obj) {
+			return obj.getEligibleBalance();
+		}
+
+		@Override
+		public void setValue(BalanceFormat7Choice obj, SignedQuantityFormat9 value) {
+			obj.setEligibleBalance(value);
 		}
 	};
 	@XmlElement(name = "NotElgblBal", required = true)
@@ -220,7 +240,7 @@ public class BalanceFormat7Choice {
 	 * "Provide not eligible balance information in different formats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNotEligibleBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceFormat7Choice, SignedQuantityFormat9> mmNotEligibleBalance = new MMMessageAssociationEnd<BalanceFormat7Choice, SignedQuantityFormat9>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat7Choice.mmObject();
@@ -234,6 +254,16 @@ public class BalanceFormat7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(BalanceFormat7Choice obj) {
+			return obj.getNotEligibleBalance();
+		}
+
+		@Override
+		public void setValue(BalanceFormat7Choice obj, SignedQuantityFormat9 value) {
+			obj.setNotEligibleBalance(value);
 		}
 	};
 

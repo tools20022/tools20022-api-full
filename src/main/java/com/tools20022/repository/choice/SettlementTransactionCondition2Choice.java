@@ -127,7 +127,7 @@ public class SettlementTransactionCondition2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTransactionCondition2Choice, SettlementTransactionCondition3Code> mmCode = new MMMessageAttribute<SettlementTransactionCondition2Choice, SettlementTransactionCondition3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition2Choice.mmObject();
@@ -141,6 +141,16 @@ public class SettlementTransactionCondition2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementTransactionCondition3Code.mmObject();
+		}
+
+		@Override
+		public SettlementTransactionCondition3Code getValue(SettlementTransactionCondition2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionCondition2Choice obj, SettlementTransactionCondition3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -189,7 +199,7 @@ public class SettlementTransactionCondition2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTransactionCondition2Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<SettlementTransactionCondition2Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementTransactionCondition2Choice.mmObject();
@@ -203,6 +213,16 @@ public class SettlementTransactionCondition2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(SettlementTransactionCondition2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionCondition2Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -102,7 +102,7 @@ public class NotificationCancellationProcessingStatus1 {
 	 * definition} = "The processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationCancellationProcessingStatus1, ProcessedStatus2FormatChoice> mmStatus = new MMMessageAttribute<NotificationCancellationProcessingStatus1, ProcessedStatus2FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationCancellationProcessingStatus1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class NotificationCancellationProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProcessedStatus2FormatChoice.mmObject();
+		}
+
+		@Override
+		public ProcessedStatus2FormatChoice getValue(NotificationCancellationProcessingStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(NotificationCancellationProcessingStatus1 obj, ProcessedStatus2FormatChoice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -144,7 +154,7 @@ public class NotificationCancellationProcessingStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationCancellationProcessingStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<NotificationCancellationProcessingStatus1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationCancellationProcessingStatus1.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class NotificationCancellationProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(NotificationCancellationProcessingStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(NotificationCancellationProcessingStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

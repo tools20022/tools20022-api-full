@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class PartyIdentification27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification27, Max70Text> mmName = new MMMessageAttribute<PartyIdentification27, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification27.mmObject();
@@ -126,6 +127,16 @@ public class PartyIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PartyIdentification27 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification27 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PrtryId")
@@ -165,7 +176,7 @@ public class PartyIdentification27 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification27, Optional<GenericIdentification4>> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification27, Optional<GenericIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification27.mmObject();
@@ -176,7 +187,17 @@ public class PartyIdentification27 {
 			definition = "Unique and unambiguous identifier assigned to a party using a proprietary identification scheme.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
+			complexType_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification4> getValue(PartyIdentification27 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification27 obj, Optional<GenericIdentification4> value) {
+			obj.setProprietaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -213,7 +234,7 @@ public class PartyIdentification27 {
 	 * definition} = "Specifies the country of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification27, CountryCode> mmCountry = new MMMessageAttribute<PartyIdentification27, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification27.mmObject();
@@ -225,6 +246,16 @@ public class PartyIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PartyIdentification27 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PartyIdentification27 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 
@@ -256,7 +287,7 @@ public class PartyIdentification27 {
 		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public PartyIdentification27 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification4 proprietaryIdentification) {
+	public PartyIdentification27 setProprietaryIdentification(GenericIdentification4 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
 		return this;
 	}

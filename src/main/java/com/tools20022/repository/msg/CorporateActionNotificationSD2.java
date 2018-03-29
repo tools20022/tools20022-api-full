@@ -141,7 +141,7 @@ public class CorporateActionNotificationSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionNotificationSD2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -152,6 +152,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DerivWorkflwSts", required = true)
@@ -187,7 +197,7 @@ public class CorporateActionNotificationSD2 {
 	 * definition} = "Status of a notice of change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDerivativeWorkflowStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, DerivativeWorkflowStatus1Code> mmDerivativeWorkflowStatus = new MMMessageAttribute<CorporateActionNotificationSD2, DerivativeWorkflowStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -199,6 +209,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DerivativeWorkflowStatus1Code.mmObject();
+		}
+
+		@Override
+		public DerivativeWorkflowStatus1Code getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getDerivativeWorkflowStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, DerivativeWorkflowStatus1Code value) {
+			obj.setDerivativeWorkflowStatus(value);
 		}
 	};
 	@XmlElement(name = "DerivXchg", required = true)
@@ -234,7 +254,7 @@ public class CorporateActionNotificationSD2 {
 	 * definition} = "Exchange where the derivative is traded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDerivativeExchange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Max4AlphaNumericText> mmDerivativeExchange = new MMMessageAttribute<CorporateActionNotificationSD2, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -246,6 +266,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getDerivativeExchange();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Max4AlphaNumericText value) {
+			obj.setDerivativeExchange(value);
 		}
 	};
 	@XmlElement(name = "DerivPblctnDt")
@@ -282,7 +312,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDerivativePublicationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<ISODate>> mmDerivativePublicationDate = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -294,6 +324,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getDerivativePublicationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<ISODate> value) {
+			obj.setDerivativePublicationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DerivAdjstmntDt", required = true)
@@ -329,7 +369,7 @@ public class CorporateActionNotificationSD2 {
 	 * "Effective date of the adjustment to the derivative contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDerivativeAdjustmentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, ISODate> mmDerivativeAdjustmentDate = new MMMessageAttribute<CorporateActionNotificationSD2, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -341,6 +381,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getDerivativeAdjustmentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, ISODate value) {
+			obj.setDerivativeAdjustmentDate(value);
 		}
 	};
 	@XmlElement(name = "DerivClctnMtd")
@@ -377,7 +427,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDerivativeCalculationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<Max1025Text>> mmDerivativeCalculationMethod = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<Max1025Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -389,6 +439,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max1025Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max1025Text> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getDerivativeCalculationMethod();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<Max1025Text> value) {
+			obj.setDerivativeCalculationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DerivFctr")
@@ -426,7 +486,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDerivativeFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<DecimalNumber>> mmDerivativeFactor = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -438,6 +498,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getDerivativeFactor();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<DecimalNumber> value) {
+			obj.setDerivativeFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotSzChngFlg")
@@ -475,7 +545,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotSizeChangeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<YesNoIndicator>> mmLotSizeChangeFlag = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -487,6 +557,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getLotSizeChangeFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<YesNoIndicator> value) {
+			obj.setLotSizeChangeFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotAdjstmntMtd")
@@ -523,7 +603,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotAdjustmentMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<Max1025Text>> mmLotAdjustmentMethod = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<Max1025Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -535,6 +615,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max1025Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max1025Text> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getLotAdjustmentMethod();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<Max1025Text> value) {
+			obj.setLotAdjustmentMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrkPricChngFlg")
@@ -572,7 +662,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikePriceChangeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<YesNoIndicator>> mmStrikePriceChangeFlag = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -584,6 +674,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getStrikePriceChangeFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<YesNoIndicator> value) {
+			obj.setStrikePriceChangeFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrkPricRndgMtd")
@@ -620,7 +720,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikePriceRoundingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<Max500Text>> mmStrikePriceRoundingMethod = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -632,6 +732,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getStrikePriceRoundingMethod();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<Max500Text> value) {
+			obj.setStrikePriceRoundingMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsdlCshFlg")
@@ -669,7 +779,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResidualCashFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<YesNoIndicator>> mmResidualCashFlag = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -681,6 +791,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getResidualCashFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<YesNoIndicator> value) {
+			obj.setResidualCashFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefPric")
@@ -718,7 +838,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferencePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<DecimalNumber>> mmReferencePrice = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -730,6 +850,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getReferencePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<DecimalNumber> value) {
+			obj.setReferencePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefPricCcy")
@@ -765,7 +895,7 @@ public class CorporateActionNotificationSD2 {
 	 * definition} = "Currency associated with the reference price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferencePriceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<ActiveCurrencyCode>> mmReferencePriceCurrency = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<ActiveCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -777,6 +907,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getReferencePriceCurrency();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setReferencePriceCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ApprvdFlg")
@@ -814,7 +954,7 @@ public class CorporateActionNotificationSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApprovedFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD2, Optional<YesNoIndicator>> mmApprovedFlag = new MMMessageAttribute<CorporateActionNotificationSD2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD2.mmObject();
 			isDerived = false;
@@ -826,6 +966,16 @@ public class CorporateActionNotificationSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionNotificationSD2 obj) {
+			return obj.getApprovedFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD2 obj, Optional<YesNoIndicator> value) {
+			obj.setApprovedFlag(value.orElse(null));
 		}
 	};
 

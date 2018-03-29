@@ -134,7 +134,7 @@ public class AccountContract4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountContract4, Optional<ISODate>> mmTargetClosingDate = new MMMessageAttribute<AccountContract4, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> AccountContract.mmTargetClosingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountContract4.mmObject();
@@ -146,6 +146,16 @@ public class AccountContract4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AccountContract4 obj) {
+			return obj.getTargetClosingDate();
+		}
+
+		@Override
+		public void setValue(AccountContract4 obj, Optional<ISODate> value) {
+			obj.setTargetClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UrgcyFlg")
@@ -185,7 +195,7 @@ public class AccountContract4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUrgencyFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountContract4, Optional<YesNoIndicator>> mmUrgencyFlag = new MMMessageAttribute<AccountContract4, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> AccountContract.mmUrgencyFlag;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountContract4.mmObject();
@@ -197,6 +207,16 @@ public class AccountContract4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(AccountContract4 obj) {
+			return obj.getUrgencyFlag();
+		}
+
+		@Override
+		public void setValue(AccountContract4 obj, Optional<YesNoIndicator> value) {
+			obj.setUrgencyFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmvlInd")
@@ -236,7 +256,7 @@ public class AccountContract4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemovalIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountContract4, Optional<YesNoIndicator>> mmRemovalIndicator = new MMMessageAttribute<AccountContract4, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> AccountContract.mmRemovalIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountContract4.mmObject();
@@ -248,6 +268,16 @@ public class AccountContract4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(AccountContract4 obj) {
+			return obj.getRemovalIndicator();
+		}
+
+		@Override
+		public void setValue(AccountContract4 obj, Optional<YesNoIndicator> value) {
+			obj.setRemovalIndicator(value.orElse(null));
 		}
 	};
 

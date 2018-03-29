@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class Unit2 {
 	 * "Specifies the type of underlying assets for the PEP or ISA."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Unit2, FinancialInstrument7> mmInstrument = new MMMessageAssociationEnd<Unit2, FinancialInstrument7>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit2.mmObject();
@@ -133,7 +134,17 @@ public class Unit2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument7.mmObject();
+			type_lazy = () -> FinancialInstrument7.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument7 getValue(Unit2 obj) {
+			return obj.getInstrument();
+		}
+
+		@Override
+		public void setValue(Unit2 obj, FinancialInstrument7 value) {
+			obj.setInstrument(value);
 		}
 	};
 	@XmlElement(name = "TtlNb", required = true)
@@ -170,7 +181,7 @@ public class Unit2 {
 	 * definition} = "Total number of the type of asset that are transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit2, DecimalNumber> mmTotalNumber = new MMMessageAttribute<Unit2, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit2.mmObject();
@@ -182,6 +193,16 @@ public class Unit2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(Unit2 obj) {
+			return obj.getTotalNumber();
+		}
+
+		@Override
+		public void setValue(Unit2 obj, DecimalNumber value) {
+			obj.setTotalNumber(value);
 		}
 	};
 	@XmlElement(name = "Grp1Nb")
@@ -218,7 +239,7 @@ public class Unit2 {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroup1Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit2, Optional<DecimalNumber>> mmGroup1Number = new MMMessageAttribute<Unit2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit2.mmObject();
@@ -230,6 +251,16 @@ public class Unit2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Unit2 obj) {
+			return obj.getGroup1Number();
+		}
+
+		@Override
+		public void setValue(Unit2 obj, Optional<DecimalNumber> value) {
+			obj.setGroup1Number(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Grp2Nb")
@@ -266,7 +297,7 @@ public class Unit2 {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroup2Number = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit2, Optional<DecimalNumber>> mmGroup2Number = new MMMessageAttribute<Unit2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit2.mmObject();
@@ -278,6 +309,16 @@ public class Unit2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Unit2 obj) {
+			return obj.getGroup2Number();
+		}
+
+		@Override
+		public void setValue(Unit2 obj, Optional<DecimalNumber> value) {
+			obj.setGroup2Number(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cmplt", required = true)
@@ -311,7 +352,7 @@ public class Unit2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmComplete = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit2, YesNoIndicator> mmComplete = new MMMessageAttribute<Unit2, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit2.mmObject();
 			isDerived = false;
@@ -322,6 +363,16 @@ public class Unit2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Unit2 obj) {
+			return obj.getComplete();
+		}
+
+		@Override
+		public void setValue(Unit2 obj, YesNoIndicator value) {
+			obj.setComplete(value);
 		}
 	};
 
@@ -345,7 +396,7 @@ public class Unit2 {
 		return instrument;
 	}
 
-	public Unit2 setInstrument(com.tools20022.repository.msg.FinancialInstrument7 instrument) {
+	public Unit2 setInstrument(FinancialInstrument7 instrument) {
 		this.instrument = Objects.requireNonNull(instrument);
 		return this;
 	}

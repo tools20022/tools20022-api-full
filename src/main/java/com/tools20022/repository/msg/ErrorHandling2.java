@@ -97,7 +97,7 @@ public class ErrorHandling2 {
 	 * definition} = "Specification of the error, in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmErrorCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorHandling2, Max4AlphaNumericText> mmErrorCode = new MMMessageAttribute<ErrorHandling2, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class ErrorHandling2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(ErrorHandling2 obj) {
+			return obj.getErrorCode();
+		}
+
+		@Override
+		public void setValue(ErrorHandling2 obj, Max4AlphaNumericText value) {
+			obj.setErrorCode(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -138,7 +148,7 @@ public class ErrorHandling2 {
 	 * definition} = "Specification of the error, in free format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorHandling2, Optional<Max140Text>> mmDescription = new MMMessageAttribute<ErrorHandling2, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
 			isDerived = false;
@@ -149,6 +159,16 @@ public class ErrorHandling2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(ErrorHandling2 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(ErrorHandling2 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

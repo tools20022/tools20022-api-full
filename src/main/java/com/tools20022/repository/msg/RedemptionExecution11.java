@@ -24,6 +24,9 @@ import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.RedemptionExecution;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument18;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity3;
+import com.tools20022.repository.msg.InvestmentAccount30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -110,7 +113,7 @@ public class RedemptionExecution11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionExecution11, Optional<InvestmentAccount30>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<RedemptionExecution11, Optional<InvestmentAccount30>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionExecution11.mmObject();
@@ -122,7 +125,17 @@ public class RedemptionExecution11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
+			type_lazy = () -> InvestmentAccount30.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount30> getValue(RedemptionExecution11 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionExecution11 obj, Optional<InvestmentAccount30> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
@@ -160,7 +173,7 @@ public class RedemptionExecution11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionExecution11, Optional<FinancialInstrument18>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<RedemptionExecution11, Optional<FinancialInstrument18>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionExecution11.mmObject();
@@ -172,7 +185,17 @@ public class RedemptionExecution11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument18.mmObject();
+			type_lazy = () -> FinancialInstrument18.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrument18> getValue(RedemptionExecution11 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionExecution11 obj, Optional<FinancialInstrument18> value) {
+			obj.setFinancialInstrumentDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmQty")
@@ -209,7 +232,7 @@ public class RedemptionExecution11 {
 	 * definition} = "Quantity of an order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionExecution11, Optional<FinancialInstrumentQuantity3>> mmFinancialInstrumentQuantity = new MMMessageAssociationEnd<RedemptionExecution11, Optional<FinancialInstrumentQuantity3>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionExecution11.mmObject();
@@ -221,7 +244,17 @@ public class RedemptionExecution11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity3.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity3> getValue(RedemptionExecution11 obj) {
+			return obj.getFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(RedemptionExecution11 obj, Optional<FinancialInstrumentQuantity3> value) {
+			obj.setFinancialInstrumentQuantity(value.orElse(null));
 		}
 	};
 
@@ -244,7 +277,7 @@ public class RedemptionExecution11 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public RedemptionExecution11 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public RedemptionExecution11 setInvestmentAccountDetails(InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -253,7 +286,7 @@ public class RedemptionExecution11 {
 		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public RedemptionExecution11 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument18 financialInstrumentDetails) {
+	public RedemptionExecution11 setFinancialInstrumentDetails(FinancialInstrument18 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 		return this;
 	}
@@ -262,7 +295,7 @@ public class RedemptionExecution11 {
 		return financialInstrumentQuantity == null ? Optional.empty() : Optional.of(financialInstrumentQuantity);
 	}
 
-	public RedemptionExecution11 setFinancialInstrumentQuantity(com.tools20022.repository.msg.FinancialInstrumentQuantity3 financialInstrumentQuantity) {
+	public RedemptionExecution11 setFinancialInstrumentQuantity(FinancialInstrumentQuantity3 financialInstrumentQuantity) {
 		this.financialInstrumentQuantity = financialInstrumentQuantity;
 		return this;
 	}

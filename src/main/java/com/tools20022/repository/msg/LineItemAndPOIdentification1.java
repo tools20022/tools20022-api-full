@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.CommercialTrade;
 import com.tools20022.repository.entity.LineItem;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,7 +108,7 @@ public class LineItemAndPOIdentification1 {
 	 * definition} = "Identification assigned to a line item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLineItemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemAndPOIdentification1, List<Max70Text>> mmLineItemIdentification = new MMMessageAttribute<LineItemAndPOIdentification1, List<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAndPOIdentification1.mmObject();
@@ -118,6 +119,16 @@ public class LineItemAndPOIdentification1 {
 			definition = "Identification assigned to a line item.";
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public List<Max70Text> getValue(LineItemAndPOIdentification1 obj) {
+			return obj.getLineItemIdentification();
+		}
+
+		@Override
+		public void setValue(LineItemAndPOIdentification1 obj, List<Max70Text> value) {
+			obj.setLineItemIdentification(value);
 		}
 	};
 	@XmlElement(name = "PurchsOrdrRef", required = true)
@@ -156,7 +167,7 @@ public class LineItemAndPOIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemAndPOIdentification1, DocumentIdentification7> mmPurchaseOrderReference = new MMMessageAttribute<LineItemAndPOIdentification1, DocumentIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> CommercialTrade.mmPurchaseOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAndPOIdentification1.mmObject();
@@ -167,7 +178,17 @@ public class LineItemAndPOIdentification1 {
 			definition = "Reference to the purchase order containing the line item.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
+			complexType_lazy = () -> DocumentIdentification7.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification7 getValue(LineItemAndPOIdentification1 obj) {
+			return obj.getPurchaseOrderReference();
+		}
+
+		@Override
+		public void setValue(LineItemAndPOIdentification1 obj, DocumentIdentification7 value) {
+			obj.setPurchaseOrderReference(value);
 		}
 	};
 
@@ -198,7 +219,7 @@ public class LineItemAndPOIdentification1 {
 		return purchaseOrderReference;
 	}
 
-	public LineItemAndPOIdentification1 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+	public LineItemAndPOIdentification1 setPurchaseOrderReference(DocumentIdentification7 purchaseOrderReference) {
 		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
 		return this;
 	}

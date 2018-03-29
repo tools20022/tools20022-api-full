@@ -51,11 +51,15 @@ public class ConstraintBasketInstrumentUniquenessRule {
 	 */
 	public static final MMConstraint<FinancialInstrument53> forFinancialInstrument53 = new MMConstraint<FinancialInstrument53>() {
 		{
-			validator = ConstraintBasketInstrumentUniquenessRule::checkFinancialInstrument53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasketInstrumentUniquenessRule";
 			definition = "Where an underlying instrument basket is populated, all ISINs or LEIs must be unique.";
 			owner_lazy = () -> FinancialInstrument53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument53 obj) throws Exception {
+			checkFinancialInstrument53(obj);
 		}
 	};
 

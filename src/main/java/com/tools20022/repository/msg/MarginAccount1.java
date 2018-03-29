@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification122;
+import com.tools20022.repository.msg.PositionAccount1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -49,6 +52,10 @@ import javax.xml.bind.annotation.XmlType;
  * MarginAccount1.mmPositionAccount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} =
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
+ * PartyIdentificationInformation}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -82,6 +89,11 @@ public class MarginAccount1 {
 	 * type} = {@linkplain com.tools20022.repository.msg.PartyIdentification122
 	 * PartyIdentification122}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
+	 * PartyIdentificationInformation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.MarginAccount1 MarginAccount1}</li>
@@ -98,8 +110,9 @@ public class MarginAccount1 {
 	 * definition} = "Unique identifier of the margin account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginAccount1, PartyIdentification122> mmIdentification = new MMMessageAssociationEnd<MarginAccount1, PartyIdentification122>() {
 		{
+			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
@@ -109,11 +122,21 @@ public class MarginAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification122.mmObject();
+			type_lazy = () -> PartyIdentification122.mmObject();
+		}
+
+		@Override
+		public PartyIdentification122 getValue(MarginAccount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MarginAccount1 obj, PartyIdentification122 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "PosAcct", required = true)
-	protected List<com.tools20022.repository.msg.PositionAccount1> positionAccount;
+	protected List<PositionAccount1> positionAccount;
 	/**
 	 * 
 	 <p>
@@ -122,6 +145,11 @@ public class MarginAccount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.PositionAccount1
 	 * PositionAccount1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
+	 * PartyIdentificationInformation}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,8 +169,9 @@ public class MarginAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPositionAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginAccount1, List<PositionAccount1>> mmPositionAccount = new MMMessageAssociationEnd<MarginAccount1, List<PositionAccount1>>() {
 		{
+			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "PosAcct";
@@ -151,7 +180,17 @@ public class MarginAccount1 {
 			definition = "Operational construct used to record a position in a set of financial instruments, often linked by a common set of characteristics, ownership or trading strategy.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PositionAccount1.mmObject();
+			type_lazy = () -> PositionAccount1.mmObject();
+		}
+
+		@Override
+		public List<PositionAccount1> getValue(MarginAccount1 obj) {
+			return obj.getPositionAccount();
+		}
+
+		@Override
+		public void setValue(MarginAccount1 obj, List<PositionAccount1> value) {
+			obj.setPositionAccount(value);
 		}
 	};
 
@@ -159,6 +198,7 @@ public class MarginAccount1 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginAccount1.mmIdentification, com.tools20022.repository.msg.MarginAccount1.mmPositionAccount);
+				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarginAccount1";
@@ -172,7 +212,7 @@ public class MarginAccount1 {
 		return identification;
 	}
 
-	public MarginAccount1 setIdentification(com.tools20022.repository.msg.PartyIdentification122 identification) {
+	public MarginAccount1 setIdentification(PartyIdentification122 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -181,7 +221,7 @@ public class MarginAccount1 {
 		return positionAccount == null ? positionAccount = new ArrayList<>() : positionAccount;
 	}
 
-	public MarginAccount1 setPositionAccount(List<com.tools20022.repository.msg.PositionAccount1> positionAccount) {
+	public MarginAccount1 setPositionAccount(List<PositionAccount1> positionAccount) {
 		this.positionAccount = Objects.requireNonNull(positionAccount);
 		return this;
 	}

@@ -121,7 +121,7 @@ public class CorporateActionSD19 {
 	 * CorporateActionSD9.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD19, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionSD19, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD19.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class CorporateActionSD19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionSD19 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD19 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcrdDt")
@@ -174,7 +184,7 @@ public class CorporateActionSD19 {
 	 * CorporateActionSD9.mmRecordDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD19, Optional<ISODate>> mmRecordDate = new MMMessageAttribute<CorporateActionSD19, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD19.mmObject();
 			isDerived = false;
@@ -187,6 +197,16 @@ public class CorporateActionSD19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionSD19 obj) {
+			return obj.getRecordDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD19 obj, Optional<ISODate> value) {
+			obj.setRecordDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtDt")
@@ -229,7 +249,7 @@ public class CorporateActionSD19 {
 	 * CorporateActionSD9.mmPaymentDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD19, Optional<DateFormat48Choice>> mmPaymentDate = new MMMessageAttribute<CorporateActionSD19, Optional<DateFormat48Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD19.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class CorporateActionSD19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat48Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat48Choice> getValue(CorporateActionSD19 obj) {
+			return obj.getPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD19 obj, Optional<DateFormat48Choice> value) {
+			obj.setPaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtryDt")
@@ -288,7 +318,7 @@ public class CorporateActionSD19 {
 	 * CorporateActionSD9.mmLotteryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotteryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD19, Optional<ISODate>> mmLotteryDate = new MMMessageAttribute<CorporateActionSD19, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD19.mmObject();
@@ -302,6 +332,16 @@ public class CorporateActionSD19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionSD19 obj) {
+			return obj.getLotteryDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD19 obj, Optional<ISODate> value) {
+			obj.setLotteryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtryTp")
@@ -342,7 +382,7 @@ public class CorporateActionSD19 {
 	 * CorporateActionSD9.mmLotteryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotteryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD19, Optional<LotteryType1Code>> mmLotteryType = new MMMessageAttribute<CorporateActionSD19, Optional<LotteryType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD19.mmObject();
 			isDerived = false;
@@ -355,6 +395,16 @@ public class CorporateActionSD19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LotteryType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<LotteryType1Code> getValue(CorporateActionSD19 obj) {
+			return obj.getLotteryType();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD19 obj, Optional<LotteryType1Code> value) {
+			obj.setLotteryType(value.orElse(null));
 		}
 	};
 

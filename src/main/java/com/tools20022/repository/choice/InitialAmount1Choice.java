@@ -109,7 +109,7 @@ public class InitialAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialNumberOfInstalments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InitialAmount1Choice, Number> mmInitialNumberOfInstalments = new MMMessageAttribute<InitialAmount1Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmInitialNumberOfInstalment;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InitialAmount1Choice.mmObject();
@@ -121,6 +121,16 @@ public class InitialAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(InitialAmount1Choice obj) {
+			return obj.getInitialNumberOfInstalments();
+		}
+
+		@Override
+		public void setValue(InitialAmount1Choice obj, Number value) {
+			obj.setInitialNumberOfInstalments(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -160,7 +170,7 @@ public class InitialAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InitialAmount1Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<InitialAmount1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InitialAmount1Choice.mmObject();
@@ -172,6 +182,16 @@ public class InitialAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InitialAmount1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(InitialAmount1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

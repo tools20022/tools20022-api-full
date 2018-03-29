@@ -111,7 +111,7 @@ public class DocumentIdentification23 {
 	 * definition} = "Identifies the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification23, Max35Text> mmIdentification = new MMMessageAttribute<DocumentIdentification23, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification23.mmObject();
@@ -123,6 +123,16 @@ public class DocumentIdentification23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification23 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification23 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "DtOfIsse")
@@ -159,7 +169,7 @@ public class DocumentIdentification23 {
 	 * definition} = "Date of issuance of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification23, Optional<ISODate>> mmDateOfIssue = new MMMessageAttribute<DocumentIdentification23, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification23.mmObject();
@@ -171,6 +181,16 @@ public class DocumentIdentification23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DocumentIdentification23 obj) {
+			return obj.getDateOfIssue();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification23 obj, Optional<ISODate> value) {
+			obj.setDateOfIssue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrLineId")
@@ -202,7 +222,7 @@ public class DocumentIdentification23 {
 	 * definition} = "Identification of buyer order line item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderLineIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification23, Optional<Max35Text>> mmOrderLineIdentification = new MMMessageAttribute<DocumentIdentification23, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification23.mmObject();
 			isDerived = false;
@@ -213,6 +233,16 @@ public class DocumentIdentification23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DocumentIdentification23 obj) {
+			return obj.getOrderLineIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification23 obj, Optional<Max35Text> value) {
+			obj.setOrderLineIdentification(value.orElse(null));
 		}
 	};
 

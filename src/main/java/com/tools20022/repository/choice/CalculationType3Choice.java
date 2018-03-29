@@ -117,7 +117,7 @@ public class CalculationType3Choice {
 	 * CalculationType2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CalculationType3Choice, CalculationType1Code> mmCode = new MMMessageAttribute<CalculationType3Choice, CalculationType1Code>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmCalculationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CalculationType3Choice.mmObject();
@@ -130,6 +130,16 @@ public class CalculationType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CalculationType1Code.mmObject();
+		}
+
+		@Override
+		public CalculationType1Code getValue(CalculationType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CalculationType3Choice obj, CalculationType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -171,7 +181,7 @@ public class CalculationType3Choice {
 	 * CalculationType2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CalculationType3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<CalculationType3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmCalculationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CalculationType3Choice.mmObject();
@@ -185,6 +195,16 @@ public class CalculationType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CalculationType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CalculationType3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

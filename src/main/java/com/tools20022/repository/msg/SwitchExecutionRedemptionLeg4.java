@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SwitchExecutionRedemptionLeg;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument18;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity3;
+import com.tools20022.repository.msg.InvestmentAccount30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -118,7 +121,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegExecutionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchExecutionRedemptionLeg4, Optional<Max35Text>> mmLegExecutionIdentification = new MMMessageAttribute<SwitchExecutionRedemptionLeg4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
 			isDerived = false;
@@ -129,6 +132,16 @@ public class SwitchExecutionRedemptionLeg4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchExecutionRedemptionLeg4 obj) {
+			return obj.getLegExecutionIdentification();
+		}
+
+		@Override
+		public void setValue(SwitchExecutionRedemptionLeg4 obj, Optional<Max35Text> value) {
+			obj.setLegExecutionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LegId")
@@ -161,7 +174,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	 * "Unique technical identifier for an instance of a leg within a switch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchExecutionRedemptionLeg4, Optional<Max35Text>> mmLegIdentification = new MMMessageAttribute<SwitchExecutionRedemptionLeg4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
 			isDerived = false;
@@ -172,6 +185,16 @@ public class SwitchExecutionRedemptionLeg4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchExecutionRedemptionLeg4 obj) {
+			return obj.getLegIdentification();
+		}
+
+		@Override
+		public void setValue(SwitchExecutionRedemptionLeg4 obj, Optional<Max35Text> value) {
+			obj.setLegIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls")
@@ -209,7 +232,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchExecutionRedemptionLeg4, Optional<InvestmentAccount30>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SwitchExecutionRedemptionLeg4, Optional<InvestmentAccount30>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
@@ -221,7 +244,17 @@ public class SwitchExecutionRedemptionLeg4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
+			type_lazy = () -> InvestmentAccount30.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount30> getValue(SwitchExecutionRedemptionLeg4 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(SwitchExecutionRedemptionLeg4 obj, Optional<InvestmentAccount30> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
@@ -259,7 +292,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchExecutionRedemptionLeg4, Optional<FinancialInstrument18>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<SwitchExecutionRedemptionLeg4, Optional<FinancialInstrument18>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
@@ -271,7 +304,17 @@ public class SwitchExecutionRedemptionLeg4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument18.mmObject();
+			type_lazy = () -> FinancialInstrument18.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrument18> getValue(SwitchExecutionRedemptionLeg4 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(SwitchExecutionRedemptionLeg4 obj, Optional<FinancialInstrument18> value) {
+			obj.setFinancialInstrumentDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmQty")
@@ -308,7 +351,7 @@ public class SwitchExecutionRedemptionLeg4 {
 	 * definition} = "Quantity of an order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchExecutionRedemptionLeg4, Optional<FinancialInstrumentQuantity3>> mmFinancialInstrumentQuantity = new MMMessageAssociationEnd<SwitchExecutionRedemptionLeg4, Optional<FinancialInstrumentQuantity3>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
@@ -320,7 +363,17 @@ public class SwitchExecutionRedemptionLeg4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity3.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity3> getValue(SwitchExecutionRedemptionLeg4 obj) {
+			return obj.getFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(SwitchExecutionRedemptionLeg4 obj, Optional<FinancialInstrumentQuantity3> value) {
+			obj.setFinancialInstrumentQuantity(value.orElse(null));
 		}
 	};
 
@@ -362,7 +415,7 @@ public class SwitchExecutionRedemptionLeg4 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public SwitchExecutionRedemptionLeg4 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public SwitchExecutionRedemptionLeg4 setInvestmentAccountDetails(InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -371,7 +424,7 @@ public class SwitchExecutionRedemptionLeg4 {
 		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public SwitchExecutionRedemptionLeg4 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument18 financialInstrumentDetails) {
+	public SwitchExecutionRedemptionLeg4 setFinancialInstrumentDetails(FinancialInstrument18 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 		return this;
 	}
@@ -380,7 +433,7 @@ public class SwitchExecutionRedemptionLeg4 {
 		return financialInstrumentQuantity == null ? Optional.empty() : Optional.of(financialInstrumentQuantity);
 	}
 
-	public SwitchExecutionRedemptionLeg4 setFinancialInstrumentQuantity(com.tools20022.repository.msg.FinancialInstrumentQuantity3 financialInstrumentQuantity) {
+	public SwitchExecutionRedemptionLeg4 setFinancialInstrumentQuantity(FinancialInstrumentQuantity3 financialInstrumentQuantity) {
 		this.financialInstrumentQuantity = financialInstrumentQuantity;
 		return this;
 	}

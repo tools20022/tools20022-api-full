@@ -112,7 +112,7 @@ public class RateFormat11Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateFormat11Choice, PercentageRate> mmRate = new MMMessageAttribute<RateFormat11Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat11Choice.mmObject();
@@ -125,6 +125,16 @@ public class RateFormat11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateFormat11Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateFormat11Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndRate", required = true)
@@ -156,7 +166,7 @@ public class RateFormat11Choice {
 	 * definition} = "Value is expressed as a rate type and a percentage rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateFormat11Choice, RateTypeAndPercentageRate1> mmRateTypeAndRate = new MMMessageAssociationEnd<RateFormat11Choice, RateTypeAndPercentageRate1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat11Choice.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class RateFormat11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndPercentageRate1.mmObject();
+		}
+
+		@Override
+		public RateTypeAndPercentageRate1 getValue(RateFormat11Choice obj) {
+			return obj.getRateTypeAndRate();
+		}
+
+		@Override
+		public void setValue(RateFormat11Choice obj, RateTypeAndPercentageRate1 value) {
+			obj.setRateTypeAndRate(value);
 		}
 	};
 

@@ -128,7 +128,7 @@ public class NetDividendRateFormat9Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateFormat9Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<NetDividendRateFormat9Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat9Choice.mmObject();
@@ -140,6 +140,16 @@ public class NetDividendRateFormat9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(NetDividendRateFormat9Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat9Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -174,7 +184,7 @@ public class NetDividendRateFormat9Choice {
 	 * definition} = "Specifies different formats for the net dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetDividendRateFormat9Choice, RateTypeAndAmountAndStatus14> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<NetDividendRateFormat9Choice, RateTypeAndAmountAndStatus14>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat9Choice.mmObject();
 			isDerived = false;
@@ -187,6 +197,16 @@ public class NetDividendRateFormat9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus14.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus14 getValue(NetDividendRateFormat9Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat9Choice obj, RateTypeAndAmountAndStatus14 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -222,7 +242,7 @@ public class NetDividendRateFormat9Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateFormat9Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<NetDividendRateFormat9Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat9Choice.mmObject();
 			isDerived = false;
@@ -234,6 +254,16 @@ public class NetDividendRateFormat9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(NetDividendRateFormat9Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat9Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

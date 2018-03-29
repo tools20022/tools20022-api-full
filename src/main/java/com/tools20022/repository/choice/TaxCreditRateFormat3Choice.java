@@ -128,7 +128,7 @@ public class TaxCreditRateFormat3Choice {
 	 * definition} = "Value expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCreditRateFormat3Choice, PercentageRate> mmRate = new MMMessageAttribute<TaxCreditRateFormat3Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat3Choice.mmObject();
@@ -141,6 +141,16 @@ public class TaxCreditRateFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(TaxCreditRateFormat3Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat3Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -181,7 +191,7 @@ public class TaxCreditRateFormat3Choice {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCreditRateFormat3Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<TaxCreditRateFormat3Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat3Choice.mmObject();
@@ -194,6 +204,16 @@ public class TaxCreditRateFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(TaxCreditRateFormat3Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat3Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -228,7 +248,7 @@ public class TaxCreditRateFormat3Choice {
 	 * definition} = "Specifies different formats for the tax credit rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxCreditRateFormat3Choice, RateTypeAndAmountAndStatus9> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<TaxCreditRateFormat3Choice, RateTypeAndAmountAndStatus9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat3Choice.mmObject();
 			isDerived = false;
@@ -241,6 +261,16 @@ public class TaxCreditRateFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus9.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus9 getValue(TaxCreditRateFormat3Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat3Choice obj, RateTypeAndAmountAndStatus9 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

@@ -53,11 +53,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification13Choice> forPartyIdentification13Choice = new MMConstraint<PartyIdentification13Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification13Choice obj) throws Exception {
+			checkPartyIdentification13Choice(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification36Choice> forPartyIdentification36Choice = new MMConstraint<PartyIdentification36Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification36Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification36Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification36Choice obj) throws Exception {
+			checkPartyIdentification36Choice(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification51Choice> forPartyIdentification51Choice = new MMConstraint<PartyIdentification51Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification51Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification51Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification51Choice obj) throws Exception {
+			checkPartyIdentification51Choice(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification10Choice> forPartyIdentification10Choice = new MMConstraint<PartyIdentification10Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification10Choice obj) throws Exception {
+			checkPartyIdentification10Choice(obj);
 		}
 	};
 	/**
@@ -173,11 +189,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification14Choice> forPartyIdentification14Choice = new MMConstraint<PartyIdentification14Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification14Choice obj) throws Exception {
+			checkPartyIdentification14Choice(obj);
 		}
 	};
 	/**
@@ -203,11 +223,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification45Choice> forPartyIdentification45Choice = new MMConstraint<PartyIdentification45Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification45Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification45Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification45Choice obj) throws Exception {
+			checkPartyIdentification45Choice(obj);
 		}
 	};
 	/**
@@ -233,11 +257,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification37Choice> forPartyIdentification37Choice = new MMConstraint<PartyIdentification37Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification37Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification37Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification37Choice obj) throws Exception {
+			checkPartyIdentification37Choice(obj);
 		}
 	};
 	/**
@@ -263,11 +291,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification43Choice> forPartyIdentification43Choice = new MMConstraint<PartyIdentification43Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification43Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification43Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification43Choice obj) throws Exception {
+			checkPartyIdentification43Choice(obj);
 		}
 	};
 	/**
@@ -293,11 +325,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification30Choice> forPartyIdentification30Choice = new MMConstraint<PartyIdentification30Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification30Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification30Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification30Choice obj) throws Exception {
+			checkPartyIdentification30Choice(obj);
 		}
 	};
 	/**
@@ -323,11 +359,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification38Choice> forPartyIdentification38Choice = new MMConstraint<PartyIdentification38Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification38Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification38Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification38Choice obj) throws Exception {
+			checkPartyIdentification38Choice(obj);
 		}
 	};
 	/**
@@ -352,11 +392,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties2> forOtherParties2 = new MMConstraint<OtherParties2>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> OtherParties2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties2 obj) throws Exception {
+			checkOtherParties2(obj);
 		}
 	};
 	/**
@@ -381,11 +425,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties8> forOtherParties8 = new MMConstraint<OtherParties8>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> OtherParties8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties8 obj) throws Exception {
+			checkOtherParties8(obj);
 		}
 	};
 	/**
@@ -410,11 +458,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties19> forOtherParties19 = new MMConstraint<OtherParties19>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> OtherParties19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties19 obj) throws Exception {
+			checkOtherParties19(obj);
 		}
 	};
 	/**
@@ -440,11 +492,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification62Choice> forPartyIdentification62Choice = new MMConstraint<PartyIdentification62Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification62Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification62Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification62Choice obj) throws Exception {
+			checkPartyIdentification62Choice(obj);
 		}
 	};
 	/**
@@ -470,11 +526,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification60Choice> forPartyIdentification60Choice = new MMConstraint<PartyIdentification60Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification60Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification60Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification60Choice obj) throws Exception {
+			checkPartyIdentification60Choice(obj);
 		}
 	};
 	/**
@@ -500,11 +560,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification65Choice> forPartyIdentification65Choice = new MMConstraint<PartyIdentification65Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification65Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification65Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification65Choice obj) throws Exception {
+			checkPartyIdentification65Choice(obj);
 		}
 	};
 	/**
@@ -530,11 +594,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification61Choice> forPartyIdentification61Choice = new MMConstraint<PartyIdentification61Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification61Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification61Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification61Choice obj) throws Exception {
+			checkPartyIdentification61Choice(obj);
 		}
 	};
 	/**
@@ -559,11 +627,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties24> forOtherParties24 = new MMConstraint<OtherParties24>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> OtherParties24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties24 obj) throws Exception {
+			checkOtherParties24(obj);
 		}
 	};
 	/**
@@ -589,11 +661,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification18Choice> forPartyIdentification18Choice = new MMConstraint<PartyIdentification18Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification18Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification18Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification18Choice obj) throws Exception {
+			checkPartyIdentification18Choice(obj);
 		}
 	};
 	/**
@@ -619,11 +695,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification16Choice> forPartyIdentification16Choice = new MMConstraint<PartyIdentification16Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification16Choice obj) throws Exception {
+			checkPartyIdentification16Choice(obj);
 		}
 	};
 	/**
@@ -649,11 +729,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification46Choice> forPartyIdentification46Choice = new MMConstraint<PartyIdentification46Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification46Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification46Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification46Choice obj) throws Exception {
+			checkPartyIdentification46Choice(obj);
 		}
 	};
 	/**
@@ -679,11 +763,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification56Choice> forPartyIdentification56Choice = new MMConstraint<PartyIdentification56Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification56Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification56Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification56Choice obj) throws Exception {
+			checkPartyIdentification56Choice(obj);
 		}
 	};
 	/**
@@ -709,11 +797,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification48Choice> forPartyIdentification48Choice = new MMConstraint<PartyIdentification48Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification48Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification48Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification48Choice obj) throws Exception {
+			checkPartyIdentification48Choice(obj);
 		}
 	};
 	/**
@@ -739,11 +831,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification52Choice> forPartyIdentification52Choice = new MMConstraint<PartyIdentification52Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification52Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification52Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification52Choice obj) throws Exception {
+			checkPartyIdentification52Choice(obj);
 		}
 	};
 	/**
@@ -769,11 +865,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification41Choice> forPartyIdentification41Choice = new MMConstraint<PartyIdentification41Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification41Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification41Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification41Choice obj) throws Exception {
+			checkPartyIdentification41Choice(obj);
 		}
 	};
 	/**
@@ -799,11 +899,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification50Choice> forPartyIdentification50Choice = new MMConstraint<PartyIdentification50Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification50Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification50Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification50Choice obj) throws Exception {
+			checkPartyIdentification50Choice(obj);
 		}
 	};
 	/**
@@ -829,11 +933,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification31Choice> forPartyIdentification31Choice = new MMConstraint<PartyIdentification31Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification31Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification31Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification31Choice obj) throws Exception {
+			checkPartyIdentification31Choice(obj);
 		}
 	};
 	/**
@@ -859,11 +967,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification40Choice> forPartyIdentification40Choice = new MMConstraint<PartyIdentification40Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification40Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification40Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification40Choice obj) throws Exception {
+			checkPartyIdentification40Choice(obj);
 		}
 	};
 	/**
@@ -889,11 +1001,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification42Choice> forPartyIdentification42Choice = new MMConstraint<PartyIdentification42Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification42Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification42Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification42Choice obj) throws Exception {
+			checkPartyIdentification42Choice(obj);
 		}
 	};
 	/**
@@ -919,11 +1035,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification54Choice> forPartyIdentification54Choice = new MMConstraint<PartyIdentification54Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification54Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification54Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification54Choice obj) throws Exception {
+			checkPartyIdentification54Choice(obj);
 		}
 	};
 	/**
@@ -949,11 +1069,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification55Choice> forPartyIdentification55Choice = new MMConstraint<PartyIdentification55Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification55Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification55Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification55Choice obj) throws Exception {
+			checkPartyIdentification55Choice(obj);
 		}
 	};
 	/**
@@ -979,11 +1103,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification47Choice> forPartyIdentification47Choice = new MMConstraint<PartyIdentification47Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification47Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification47Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification47Choice obj) throws Exception {
+			checkPartyIdentification47Choice(obj);
 		}
 	};
 	/**
@@ -1009,11 +1137,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification57Choice> forPartyIdentification57Choice = new MMConstraint<PartyIdentification57Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification57Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification57Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification57Choice obj) throws Exception {
+			checkPartyIdentification57Choice(obj);
 		}
 	};
 	/**
@@ -1039,11 +1171,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification49Choice> forPartyIdentification49Choice = new MMConstraint<PartyIdentification49Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification49Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification49Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification49Choice obj) throws Exception {
+			checkPartyIdentification49Choice(obj);
 		}
 	};
 	/**
@@ -1069,11 +1205,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification59Choice> forPartyIdentification59Choice = new MMConstraint<PartyIdentification59Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification59Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification59Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification59Choice obj) throws Exception {
+			checkPartyIdentification59Choice(obj);
 		}
 	};
 	/**
@@ -1098,11 +1238,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties7> forOtherParties7 = new MMConstraint<OtherParties7>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> OtherParties7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties7 obj) throws Exception {
+			checkOtherParties7(obj);
 		}
 	};
 	/**
@@ -1127,11 +1271,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties9> forOtherParties9 = new MMConstraint<OtherParties9>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> OtherParties9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties9 obj) throws Exception {
+			checkOtherParties9(obj);
 		}
 	};
 	/**
@@ -1156,11 +1304,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties14> forOtherParties14 = new MMConstraint<OtherParties14>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> OtherParties14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties14 obj) throws Exception {
+			checkOtherParties14(obj);
 		}
 	};
 	/**
@@ -1186,11 +1338,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification64Choice> forPartyIdentification64Choice = new MMConstraint<PartyIdentification64Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification64Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification64Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification64Choice obj) throws Exception {
+			checkPartyIdentification64Choice(obj);
 		}
 	};
 	/**
@@ -1216,11 +1372,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification63Choice> forPartyIdentification63Choice = new MMConstraint<PartyIdentification63Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification63Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification63Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification63Choice obj) throws Exception {
+			checkPartyIdentification63Choice(obj);
 		}
 	};
 	/**
@@ -1245,11 +1405,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties15> forOtherParties15 = new MMConstraint<OtherParties15>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> OtherParties15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties15 obj) throws Exception {
+			checkOtherParties15(obj);
 		}
 	};
 	/**
@@ -1275,11 +1439,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification15Choice> forPartyIdentification15Choice = new MMConstraint<PartyIdentification15Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification15Choice obj) throws Exception {
+			checkPartyIdentification15Choice(obj);
 		}
 	};
 	/**
@@ -1304,11 +1472,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties12> forOtherParties12 = new MMConstraint<OtherParties12>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> OtherParties12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties12 obj) throws Exception {
+			checkOtherParties12(obj);
 		}
 	};
 	/**
@@ -1333,11 +1505,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<OtherParties17> forOtherParties17 = new MMConstraint<OtherParties17>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkOtherParties17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> OtherParties17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties17 obj) throws Exception {
+			checkOtherParties17(obj);
 		}
 	};
 	/**
@@ -1363,11 +1539,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification66Choice> forPartyIdentification66Choice = new MMConstraint<PartyIdentification66Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification66Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification66Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification66Choice obj) throws Exception {
+			checkPartyIdentification66Choice(obj);
 		}
 	};
 	/**
@@ -1393,11 +1573,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification67Choice> forPartyIdentification67Choice = new MMConstraint<PartyIdentification67Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification67Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification67Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification67Choice obj) throws Exception {
+			checkPartyIdentification67Choice(obj);
 		}
 	};
 	/**
@@ -1423,11 +1607,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification89Choice> forPartyIdentification89Choice = new MMConstraint<PartyIdentification89Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification89Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification89Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification89Choice obj) throws Exception {
+			checkPartyIdentification89Choice(obj);
 		}
 	};
 	/**
@@ -1453,11 +1641,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification87Choice> forPartyIdentification87Choice = new MMConstraint<PartyIdentification87Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification87Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification87Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification87Choice obj) throws Exception {
+			checkPartyIdentification87Choice(obj);
 		}
 	};
 	/**
@@ -1483,11 +1675,15 @@ public class ConstraintCoexistencePartyProprietaryIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification88Choice> forPartyIdentification88Choice = new MMConstraint<PartyIdentification88Choice>() {
 		{
-			validator = ConstraintCoexistencePartyProprietaryIdentificationRule::checkPartyIdentification88Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistencePartyProprietaryIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, Party ProprietaryIdentification must be 34 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification88Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification88Choice obj) throws Exception {
+			checkPartyIdentification88Choice(obj);
 		}
 	};
 

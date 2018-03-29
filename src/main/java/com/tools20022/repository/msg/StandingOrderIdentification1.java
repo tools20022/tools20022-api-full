@@ -117,7 +117,7 @@ public class StandingOrderIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandingOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderIdentification1, Optional<Max35Text>> mmStandingOrderReference = new MMMessageAttribute<StandingOrderIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification1.mmObject();
@@ -129,6 +129,16 @@ public class StandingOrderIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StandingOrderIdentification1 obj) {
+			return obj.getStandingOrderReference();
+		}
+
+		@Override
+		public void setValue(StandingOrderIdentification1 obj, Optional<Max35Text> value) {
+			obj.setStandingOrderReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId", required = true)
@@ -168,7 +178,7 @@ public class StandingOrderIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderIdentification1, AccountIdentification1Choice> mmAccountIdentification = new MMMessageAttribute<StandingOrderIdentification1, AccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification1.mmObject();
@@ -180,6 +190,16 @@ public class StandingOrderIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1Choice getValue(StandingOrderIdentification1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(StandingOrderIdentification1 obj, AccountIdentification1Choice value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctTp")
@@ -217,7 +237,7 @@ public class StandingOrderIdentification1 {
 	 * definition} = "Specifies the nature, or use, of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderIdentification1, Optional<CashAccountType2Code>> mmAccountType = new MMMessageAttribute<StandingOrderIdentification1, Optional<CashAccountType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification1.mmObject();
@@ -229,6 +249,16 @@ public class StandingOrderIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CashAccountType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountType2Code> getValue(StandingOrderIdentification1 obj) {
+			return obj.getAccountType();
+		}
+
+		@Override
+		public void setValue(StandingOrderIdentification1 obj, Optional<CashAccountType2Code> value) {
+			obj.setAccountType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -266,7 +296,7 @@ public class StandingOrderIdentification1 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderIdentification1, Optional<BICIdentifier>> mmAccountOwner = new MMMessageAttribute<StandingOrderIdentification1, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification1.mmObject();
@@ -278,6 +308,16 @@ public class StandingOrderIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(StandingOrderIdentification1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(StandingOrderIdentification1 obj, Optional<BICIdentifier> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 

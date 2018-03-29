@@ -141,7 +141,7 @@ public class CorporateActionNarrative8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>> mmInformationToComplyWith = new MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative8.mmObject();
@@ -154,6 +154,16 @@ public class CorporateActionNarrative8 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative32.mmInformationToComplyWith);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative8 obj) {
+			return obj.getInformationToComplyWith();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative8 obj, List<Max350Text> value) {
+			obj.setInformationToComplyWith(value);
 		}
 	};
 	@XmlElement(name = "DlvryDtls")
@@ -204,7 +214,7 @@ public class CorporateActionNarrative8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>> mmDeliveryDetails = new MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative8.mmObject();
@@ -217,6 +227,16 @@ public class CorporateActionNarrative8 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative32.mmDeliveryDetails);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative8 obj) {
+			return obj.getDeliveryDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative8 obj, List<Max350Text> value) {
+			obj.setDeliveryDetails(value);
 		}
 	};
 	@XmlElement(name = "FXInstrsAddtlInf")
@@ -267,7 +287,7 @@ public class CorporateActionNarrative8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignExchangeInstructionsAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>> mmForeignExchangeInstructionsAdditionalInformation = new MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative8.mmObject();
@@ -280,6 +300,16 @@ public class CorporateActionNarrative8 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative32.mmForeignExchangeInstructionsAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative8 obj) {
+			return obj.getForeignExchangeInstructionsAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative8 obj, List<Max350Text> value) {
+			obj.setForeignExchangeInstructionsAdditionalInformation(value);
 		}
 	};
 	@XmlElement(name = "Dsclmr")
@@ -316,7 +346,7 @@ public class CorporateActionNarrative8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisclaimer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>> mmDisclaimer = new MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative8.mmObject();
 			isDerived = false;
@@ -327,6 +357,16 @@ public class CorporateActionNarrative8 {
 			definition = "Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative8 obj) {
+			return obj.getDisclaimer();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative8 obj, List<Max350Text> value) {
+			obj.setDisclaimer(value);
 		}
 	};
 	@XmlElement(name = "InstrAddtlInf")
@@ -368,7 +408,7 @@ public class CorporateActionNarrative8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>> mmInstructionAdditionalInformation = new MMMessageAttribute<CorporateActionNarrative8, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative8.mmObject();
 			isDerived = false;
@@ -379,6 +419,16 @@ public class CorporateActionNarrative8 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative32.mmInstructionAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative8 obj) {
+			return obj.getInstructionAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative8 obj, List<Max350Text> value) {
+			obj.setInstructionAdditionalInformation(value);
 		}
 	};
 

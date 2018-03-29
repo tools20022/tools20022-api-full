@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorRejection3;
 import com.tools20022.repository.msg.Header28;
 import com.tools20022.repository.msgset.CAPEMaintenance20172018;
 import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +121,7 @@ public class TerminalManagementRejectionV04 {
 	 * TerminalManagementRejectionV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TerminalManagementRejectionV04, Header28> mmHeader = new MMMessageBuildingBlock<TerminalManagementRejectionV04, Header28>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class TerminalManagementRejectionV04 {
 			complexType_lazy = () -> Header28.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TerminalManagementRejectionV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header28 getValue(TerminalManagementRejectionV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(TerminalManagementRejectionV04 obj, Header28 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "Rjct", required = true)
@@ -172,7 +173,7 @@ public class TerminalManagementRejectionV04 {
 	 * TerminalManagementRejectionV03.mmReject}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReject = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TerminalManagementRejectionV04, AcceptorRejection3> mmReject = new MMMessageBuildingBlock<TerminalManagementRejectionV04, AcceptorRejection3>() {
 		{
 			xmlTag = "Rjct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class TerminalManagementRejectionV04 {
 			complexType_lazy = () -> AcceptorRejection3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TerminalManagementRejectionV04.class.getMethod("getReject", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorRejection3 getValue(TerminalManagementRejectionV04 obj) {
+			return obj.getReject();
+		}
+
+		@Override
+		public void setValue(TerminalManagementRejectionV04 obj, AcceptorRejection3 value) {
+			obj.setReject(value);
 		}
 	};
 

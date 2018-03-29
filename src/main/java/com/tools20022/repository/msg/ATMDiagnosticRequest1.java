@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMDiagnosticRequestV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMEnvironment9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -102,7 +103,7 @@ public class ATMDiagnosticRequest1 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDiagnosticRequest1, ATMEnvironment9> mmEnvironment = new MMMessageAssociationEnd<ATMDiagnosticRequest1, ATMEnvironment9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDiagnosticRequest1.mmObject();
 			isDerived = false;
@@ -113,7 +114,17 @@ public class ATMDiagnosticRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment9.mmObject();
+			type_lazy = () -> ATMEnvironment9.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment9 getValue(ATMDiagnosticRequest1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMDiagnosticRequest1 obj, ATMEnvironment9 value) {
+			obj.setEnvironment(value);
 		}
 	};
 
@@ -135,7 +146,7 @@ public class ATMDiagnosticRequest1 {
 		return environment;
 	}
 
-	public ATMDiagnosticRequest1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment9 environment) {
+	public ATMDiagnosticRequest1 setEnvironment(ATMEnvironment9 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}

@@ -60,12 +60,16 @@ public class ConstraintFinancialInstrumentDetailsGuideline {
 	 */
 	public static final MMConstraint<InvestmentAccount61> forInvestmentAccount61 = new MMConstraint<InvestmentAccount61>() {
 		{
-			validator = ConstraintFinancialInstrumentDetailsGuideline::checkInvestmentAccount61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetailsGuideline";
 			definition = "FinancialInstrumentDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount49;
 			owner_lazy = () -> InvestmentAccount61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount61 obj) throws Exception {
+			checkInvestmentAccount61(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintFinancialInstrumentDetailsGuideline {
 	 */
 	public static final MMConstraint<InvestmentAccount63> forInvestmentAccount63 = new MMConstraint<InvestmentAccount63>() {
 		{
-			validator = ConstraintFinancialInstrumentDetailsGuideline::checkInvestmentAccount63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetailsGuideline";
 			definition = "ModifiedFinancialInstrumentDetails/FinancialInstrumentDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount51;
 			owner_lazy = () -> InvestmentAccount63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount63 obj) throws Exception {
+			checkInvestmentAccount63(obj);
 		}
 	};
 	/**
@@ -132,12 +140,16 @@ public class ConstraintFinancialInstrumentDetailsGuideline {
 	 */
 	public static final MMConstraint<InvestmentAccount62> forInvestmentAccount62 = new MMConstraint<InvestmentAccount62>() {
 		{
-			validator = ConstraintFinancialInstrumentDetailsGuideline::checkInvestmentAccount62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetailsGuideline";
 			definition = "FinancialInstrumentDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount50;
 			owner_lazy = () -> InvestmentAccount62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount62 obj) throws Exception {
+			checkInvestmentAccount62(obj);
 		}
 	};
 

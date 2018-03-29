@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.Authorisation1Choice;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4;
+import com.tools20022.repository.msg.PartyIdentification32;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -152,7 +154,7 @@ public class GroupHeader40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader40, Max35Text> mmMessageIdentification = new MMMessageAttribute<GroupHeader40, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
@@ -164,6 +166,16 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GroupHeader40 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -199,7 +211,7 @@ public class GroupHeader40 {
 	 * definition} = "Date and time at which the message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader40, ISODateTime> mmCreationDateTime = new MMMessageAttribute<GroupHeader40, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
@@ -211,6 +223,16 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(GroupHeader40 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "Authstn")
@@ -244,7 +266,7 @@ public class GroupHeader40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader40, List<Authorisation1Choice>> mmAuthorisation = new MMMessageAttribute<GroupHeader40, List<Authorisation1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
 			isDerived = false;
@@ -255,6 +277,16 @@ public class GroupHeader40 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> Authorisation1Choice.mmObject();
+		}
+
+		@Override
+		public List<Authorisation1Choice> getValue(GroupHeader40 obj) {
+			return obj.getAuthorisation();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, List<Authorisation1Choice> value) {
+			obj.setAuthorisation(value);
 		}
 	};
 	@XmlElement(name = "BtchBookg")
@@ -288,7 +320,7 @@ public class GroupHeader40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBatchBooking = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader40, Optional<BatchBookingIndicator>> mmBatchBooking = new MMMessageAttribute<GroupHeader40, Optional<BatchBookingIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
 			isDerived = false;
@@ -299,6 +331,16 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BatchBookingIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<BatchBookingIndicator> getValue(GroupHeader40 obj) {
+			return obj.getBatchBooking();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, Optional<BatchBookingIndicator> value) {
+			obj.setBatchBooking(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfTxs", required = true)
@@ -331,7 +373,7 @@ public class GroupHeader40 {
 	 * "Number of individual transactions contained in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader40, Max15NumericText> mmNumberOfTransactions = new MMMessageAttribute<GroupHeader40, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
 			isDerived = false;
@@ -342,6 +384,16 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Max15NumericText getValue(GroupHeader40 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, Max15NumericText value) {
+			obj.setNumberOfTransactions(value);
 		}
 	};
 	@XmlElement(name = "CtrlSum")
@@ -375,7 +427,7 @@ public class GroupHeader40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader40, Optional<DecimalNumber>> mmControlSum = new MMMessageAttribute<GroupHeader40, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
 			isDerived = false;
@@ -386,6 +438,16 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(GroupHeader40 obj) {
+			return obj.getControlSum();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, Optional<DecimalNumber> value) {
+			obj.setControlSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrpRvsl")
@@ -419,7 +481,7 @@ public class GroupHeader40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader40, Optional<TrueFalseIndicator>> mmGroupReversal = new MMMessageAttribute<GroupHeader40, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
 			isDerived = false;
@@ -430,6 +492,16 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(GroupHeader40 obj) {
+			return obj.getGroupReversal();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, Optional<TrueFalseIndicator> value) {
+			obj.setGroupReversal(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitgPty")
@@ -466,7 +538,7 @@ public class GroupHeader40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader40, Optional<PartyIdentification32>> mmInitiatingParty = new MMMessageAssociationEnd<GroupHeader40, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
@@ -478,7 +550,17 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(GroupHeader40 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, Optional<PartyIdentification32> value) {
+			obj.setInitiatingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FwdgAgt")
@@ -516,7 +598,7 @@ public class GroupHeader40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForwardingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader40, Optional<BranchAndFinancialInstitutionIdentification4>> mmForwardingAgent = new MMMessageAssociationEnd<GroupHeader40, Optional<BranchAndFinancialInstitutionIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
@@ -528,7 +610,17 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification4> getValue(GroupHeader40 obj) {
+			return obj.getForwardingAgent();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, Optional<BranchAndFinancialInstitutionIdentification4> value) {
+			obj.setForwardingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt")
@@ -565,7 +657,7 @@ public class GroupHeader40 {
 	 * "Financial institution servicing an account for the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader40, Optional<BranchAndFinancialInstitutionIdentification4>> mmDebtorAgent = new MMMessageAssociationEnd<GroupHeader40, Optional<BranchAndFinancialInstitutionIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
@@ -577,7 +669,17 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification4> getValue(GroupHeader40 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, Optional<BranchAndFinancialInstitutionIdentification4> value) {
+			obj.setDebtorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -614,7 +716,7 @@ public class GroupHeader40 {
 	 * "Financial institution servicing an account for the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader40, Optional<BranchAndFinancialInstitutionIdentification4>> mmCreditorAgent = new MMMessageAssociationEnd<GroupHeader40, Optional<BranchAndFinancialInstitutionIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader40.mmObject();
@@ -626,7 +728,17 @@ public class GroupHeader40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification4> getValue(GroupHeader40 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(GroupHeader40 obj, Optional<BranchAndFinancialInstitutionIdentification4> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 
@@ -717,7 +829,7 @@ public class GroupHeader40 {
 		return initiatingParty == null ? Optional.empty() : Optional.of(initiatingParty);
 	}
 
-	public GroupHeader40 setInitiatingParty(com.tools20022.repository.msg.PartyIdentification32 initiatingParty) {
+	public GroupHeader40 setInitiatingParty(PartyIdentification32 initiatingParty) {
 		this.initiatingParty = initiatingParty;
 		return this;
 	}
@@ -726,7 +838,7 @@ public class GroupHeader40 {
 		return forwardingAgent == null ? Optional.empty() : Optional.of(forwardingAgent);
 	}
 
-	public GroupHeader40 setForwardingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 forwardingAgent) {
+	public GroupHeader40 setForwardingAgent(BranchAndFinancialInstitutionIdentification4 forwardingAgent) {
 		this.forwardingAgent = forwardingAgent;
 		return this;
 	}
@@ -735,7 +847,7 @@ public class GroupHeader40 {
 		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public GroupHeader40 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 debtorAgent) {
+	public GroupHeader40 setDebtorAgent(BranchAndFinancialInstitutionIdentification4 debtorAgent) {
 		this.debtorAgent = debtorAgent;
 		return this;
 	}
@@ -744,7 +856,7 @@ public class GroupHeader40 {
 		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public GroupHeader40 setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 creditorAgent) {
+	public GroupHeader40 setCreditorAgent(BranchAndFinancialInstitutionIdentification4 creditorAgent) {
 		this.creditorAgent = creditorAgent;
 		return this;
 	}

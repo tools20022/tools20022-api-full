@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.ProcessingPosition2FormatChoice;
 import com.tools20022.repository.codeset.CorporateActionNotificationType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class LinkedCorporateAction1 {
 	 * definition} = "The function of the notification e.g. new notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LinkedCorporateAction1, CorporateActionNotificationType1Code> mmNotificationType = new MMMessageAttribute<LinkedCorporateAction1, CorporateActionNotificationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -130,6 +131,16 @@ public class LinkedCorporateAction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNotificationType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionNotificationType1Code getValue(LinkedCorporateAction1 obj) {
+			return obj.getNotificationType();
+		}
+
+		@Override
+		public void setValue(LinkedCorporateAction1 obj, CorporateActionNotificationType1Code value) {
+			obj.setNotificationType(value);
 		}
 	};
 	@XmlElement(name = "LkdAgtCANtfctnAdvcId")
@@ -162,7 +173,7 @@ public class LinkedCorporateAction1 {
 	 * definition} = "The identification of the linked notification advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedAgentCANotificationAdviceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LinkedCorporateAction1, Optional<DocumentIdentification8>> mmLinkedAgentCANotificationAdviceIdentification = new MMMessageAttribute<LinkedCorporateAction1, Optional<DocumentIdentification8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -172,7 +183,17 @@ public class LinkedCorporateAction1 {
 			definition = "The identification of the linked notification advice.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
+			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentIdentification8> getValue(LinkedCorporateAction1 obj) {
+			return obj.getLinkedAgentCANotificationAdviceIdentification();
+		}
+
+		@Override
+		public void setValue(LinkedCorporateAction1 obj, Optional<DocumentIdentification8> value) {
+			obj.setLinkedAgentCANotificationAdviceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkgTp")
@@ -207,7 +228,7 @@ public class LinkedCorporateAction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LinkedCorporateAction1, Optional<ProcessingPosition2FormatChoice>> mmLinkageType = new MMMessageAttribute<LinkedCorporateAction1, Optional<ProcessingPosition2FormatChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -218,6 +239,16 @@ public class LinkedCorporateAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingPosition2FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition2FormatChoice> getValue(LinkedCorporateAction1 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(LinkedCorporateAction1 obj, Optional<ProcessingPosition2FormatChoice> value) {
+			obj.setLinkageType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkdIssrCorpActnId")
@@ -250,7 +281,7 @@ public class LinkedCorporateAction1 {
 	 * "Reference given to the linked event by the CA event issuer (agent)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedIssuerCorporateActionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LinkedCorporateAction1, Optional<Max35Text>> mmLinkedIssuerCorporateActionIdentification = new MMMessageAttribute<LinkedCorporateAction1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -261,6 +292,16 @@ public class LinkedCorporateAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LinkedCorporateAction1 obj) {
+			return obj.getLinkedIssuerCorporateActionIdentification();
+		}
+
+		@Override
+		public void setValue(LinkedCorporateAction1 obj, Optional<Max35Text> value) {
+			obj.setLinkedIssuerCorporateActionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkdCorpActnPrcgId")
@@ -293,7 +334,7 @@ public class LinkedCorporateAction1 {
 	 * "Reference assigned by the CSD to the linked coporate avent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedCorporateActionProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LinkedCorporateAction1, Optional<Max35Text>> mmLinkedCorporateActionProcessingIdentification = new MMMessageAttribute<LinkedCorporateAction1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LinkedCorporateAction1.mmObject();
 			isDerived = false;
@@ -304,6 +345,16 @@ public class LinkedCorporateAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LinkedCorporateAction1 obj) {
+			return obj.getLinkedCorporateActionProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(LinkedCorporateAction1 obj, Optional<Max35Text> value) {
+			obj.setLinkedCorporateActionProcessingIdentification(value.orElse(null));
 		}
 	};
 
@@ -336,7 +387,7 @@ public class LinkedCorporateAction1 {
 		return linkedAgentCANotificationAdviceIdentification == null ? Optional.empty() : Optional.of(linkedAgentCANotificationAdviceIdentification);
 	}
 
-	public LinkedCorporateAction1 setLinkedAgentCANotificationAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 linkedAgentCANotificationAdviceIdentification) {
+	public LinkedCorporateAction1 setLinkedAgentCANotificationAdviceIdentification(DocumentIdentification8 linkedAgentCANotificationAdviceIdentification) {
 		this.linkedAgentCANotificationAdviceIdentification = linkedAgentCANotificationAdviceIdentification;
 		return this;
 	}

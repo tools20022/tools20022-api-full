@@ -62,13 +62,17 @@ public class ConstraintMessageOrNotificationPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerDebitCreditNotificationV07> forBankToCustomerDebitCreditNotificationV07 = new MMConstraint<BankToCustomerDebitCreditNotificationV07>() {
 		{
-			validator = ConstraintMessageOrNotificationPaginationRule::checkBankToCustomerDebitCreditNotificationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrNotificationPaginationRule";
 			definition = "MessagePagination may be present or NotificationPagination may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule.forBankToCustomerDebitCreditNotificationV06;
 			owner_lazy = () -> BankToCustomerDebitCreditNotificationV07.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Notification[*]/NotificationPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerDebitCreditNotificationV07 obj) throws Exception {
+			checkBankToCustomerDebitCreditNotificationV07(obj);
 		}
 	};
 	/**
@@ -113,7 +117,6 @@ public class ConstraintMessageOrNotificationPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerDebitCreditNotificationV06> forBankToCustomerDebitCreditNotificationV06 = new MMConstraint<BankToCustomerDebitCreditNotificationV06>() {
 		{
-			validator = ConstraintMessageOrNotificationPaginationRule::checkBankToCustomerDebitCreditNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrNotificationPaginationRule";
 			definition = "MessagePagination may be present or NotificationPagination may be present, but not both.";
@@ -121,6 +124,11 @@ public class ConstraintMessageOrNotificationPaginationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule.forBankToCustomerDebitCreditNotificationV05;
 			owner_lazy = () -> BankToCustomerDebitCreditNotificationV06.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Notification[*]/NotificationPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerDebitCreditNotificationV06 obj) throws Exception {
+			checkBankToCustomerDebitCreditNotificationV06(obj);
 		}
 	};
 	/**
@@ -150,12 +158,16 @@ public class ConstraintMessageOrNotificationPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerDebitCreditNotificationV03> forBankToCustomerDebitCreditNotificationV03 = new MMConstraint<BankToCustomerDebitCreditNotificationV03>() {
 		{
-			validator = ConstraintMessageOrNotificationPaginationRule::checkBankToCustomerDebitCreditNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrNotificationPaginationRule";
 			definition = "MessagePagination may be present or NotificationPagination may be present, but not both.";
 			owner_lazy = () -> BankToCustomerDebitCreditNotificationV03.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Notification[*]/NotificationPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerDebitCreditNotificationV03 obj) throws Exception {
+			checkBankToCustomerDebitCreditNotificationV03(obj);
 		}
 	};
 	/**
@@ -194,13 +206,17 @@ public class ConstraintMessageOrNotificationPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerDebitCreditNotificationV04> forBankToCustomerDebitCreditNotificationV04 = new MMConstraint<BankToCustomerDebitCreditNotificationV04>() {
 		{
-			validator = ConstraintMessageOrNotificationPaginationRule::checkBankToCustomerDebitCreditNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrNotificationPaginationRule";
 			definition = "MessagePagination may be present or NotificationPagination may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule.forBankToCustomerDebitCreditNotificationV05);
 			owner_lazy = () -> BankToCustomerDebitCreditNotificationV04.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Notification[*]/NotificationPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerDebitCreditNotificationV04 obj) throws Exception {
+			checkBankToCustomerDebitCreditNotificationV04(obj);
 		}
 	};
 	/**
@@ -245,7 +261,6 @@ public class ConstraintMessageOrNotificationPaginationRule {
 	 */
 	public static final MMConstraint<BankToCustomerDebitCreditNotificationV05> forBankToCustomerDebitCreditNotificationV05 = new MMConstraint<BankToCustomerDebitCreditNotificationV05>() {
 		{
-			validator = ConstraintMessageOrNotificationPaginationRule::checkBankToCustomerDebitCreditNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOrNotificationPaginationRule";
 			definition = "MessagePagination may be present or NotificationPagination may be present, but not both.";
@@ -253,6 +268,11 @@ public class ConstraintMessageOrNotificationPaginationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMessageOrNotificationPaginationRule.forBankToCustomerDebitCreditNotificationV04;
 			owner_lazy = () -> BankToCustomerDebitCreditNotificationV05.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GroupHeader/MessagePagination</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Notification[*]/NotificationPagination</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerDebitCreditNotificationV05 obj) throws Exception {
+			checkBankToCustomerDebitCreditNotificationV05(obj);
 		}
 	};
 

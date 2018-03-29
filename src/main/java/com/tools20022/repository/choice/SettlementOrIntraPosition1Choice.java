@@ -113,7 +113,7 @@ public class SettlementOrIntraPosition1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntraPositionMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementOrIntraPosition1Choice, IntraPosition4> mmIntraPositionMovement = new MMMessageAssociationEnd<SettlementOrIntraPosition1Choice, IntraPosition4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class SettlementOrIntraPosition1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IntraPosition4.mmObject();
+		}
+
+		@Override
+		public IntraPosition4 getValue(SettlementOrIntraPosition1Choice obj) {
+			return obj.getIntraPositionMovement();
+		}
+
+		@Override
+		public void setValue(SettlementOrIntraPosition1Choice obj, IntraPosition4 value) {
+			obj.setIntraPositionMovement(value);
 		}
 	};
 	@XmlElement(name = "SttlmTx", required = true)
@@ -164,7 +174,7 @@ public class SettlementOrIntraPosition1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementOrIntraPosition1Choice, TransactionDetails52> mmSettlementTransaction = new MMMessageAssociationEnd<SettlementOrIntraPosition1Choice, TransactionDetails52>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrIntraPosition1Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class SettlementOrIntraPosition1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransactionDetails52.mmObject();
+		}
+
+		@Override
+		public TransactionDetails52 getValue(SettlementOrIntraPosition1Choice obj) {
+			return obj.getSettlementTransaction();
+		}
+
+		@Override
+		public void setValue(SettlementOrIntraPosition1Choice obj, TransactionDetails52 value) {
+			obj.setSettlementTransaction(value);
 		}
 	};
 

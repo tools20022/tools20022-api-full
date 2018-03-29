@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Intermediary1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -144,7 +145,7 @@ public class SafekeepingAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount1, AccountIdentificationFormatChoice> mmIdentification = new MMMessageAttribute<SafekeepingAccount1, AccountIdentificationFormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount1.mmObject();
@@ -156,6 +157,16 @@ public class SafekeepingAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationFormatChoice getValue(SafekeepingAccount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount1 obj, AccountIdentificationFormatChoice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "FngbInd", required = true)
@@ -195,7 +206,7 @@ public class SafekeepingAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFungibleIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount1, YesNoIndicator> mmFungibleIndicator = new MMMessageAttribute<SafekeepingAccount1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFungibleIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount1.mmObject();
@@ -207,6 +218,16 @@ public class SafekeepingAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(SafekeepingAccount1 obj) {
+			return obj.getFungibleIndicator();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount1 obj, YesNoIndicator value) {
+			obj.setFungibleIndicator(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -245,7 +266,7 @@ public class SafekeepingAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount1, Optional<Max35Text>> mmName = new MMMessageAttribute<SafekeepingAccount1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount1.mmObject();
@@ -257,6 +278,16 @@ public class SafekeepingAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SafekeepingAccount1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount1 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dsgnt")
@@ -295,7 +326,7 @@ public class SafekeepingAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount1, Optional<Max35Text>> mmDesignation = new MMMessageAttribute<SafekeepingAccount1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount1.mmObject();
@@ -308,9 +339,19 @@ public class SafekeepingAccount1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(SafekeepingAccount1 obj) {
+			return obj.getDesignation();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount1 obj, Optional<Max35Text> value) {
+			obj.setDesignation(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "IntrmyInf")
-	protected List<com.tools20022.repository.msg.Intermediary1> intermediaryInformation;
+	protected List<Intermediary1> intermediaryInformation;
 	/**
 	 * 
 	 <p>
@@ -345,7 +386,7 @@ public class SafekeepingAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediaryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount1, List<Intermediary1>> mmIntermediaryInformation = new MMMessageAttribute<SafekeepingAccount1, List<Intermediary1>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount1.mmObject();
@@ -356,7 +397,17 @@ public class SafekeepingAccount1 {
 			definition = "Party that provides services relating to financial products to investors, eg, advice on products and placement of orders for the investment fund.";
 			maxOccurs = 10;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Intermediary1.mmObject();
+			complexType_lazy = () -> Intermediary1.mmObject();
+		}
+
+		@Override
+		public List<Intermediary1> getValue(SafekeepingAccount1 obj) {
+			return obj.getIntermediaryInformation();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount1 obj, List<Intermediary1> value) {
+			obj.setIntermediaryInformation(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -394,7 +445,7 @@ public class SafekeepingAccount1 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount1, Optional<PartyIdentification1Choice>> mmAccountOwner = new MMMessageAttribute<SafekeepingAccount1, Optional<PartyIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount1.mmObject();
@@ -406,6 +457,16 @@ public class SafekeepingAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification1Choice> getValue(SafekeepingAccount1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount1 obj, Optional<PartyIdentification1Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -445,7 +506,7 @@ public class SafekeepingAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount1, Optional<PartyIdentification1Choice>> mmAccountServicer = new MMMessageAttribute<SafekeepingAccount1, Optional<PartyIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount1.mmObject();
@@ -457,6 +518,16 @@ public class SafekeepingAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification1Choice> getValue(SafekeepingAccount1 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount1 obj, Optional<PartyIdentification1Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -517,7 +588,7 @@ public class SafekeepingAccount1 {
 		return intermediaryInformation == null ? intermediaryInformation = new ArrayList<>() : intermediaryInformation;
 	}
 
-	public SafekeepingAccount1 setIntermediaryInformation(List<com.tools20022.repository.msg.Intermediary1> intermediaryInformation) {
+	public SafekeepingAccount1 setIntermediaryInformation(List<Intermediary1> intermediaryInformation) {
 		this.intermediaryInformation = Objects.requireNonNull(intermediaryInformation);
 		return this;
 	}

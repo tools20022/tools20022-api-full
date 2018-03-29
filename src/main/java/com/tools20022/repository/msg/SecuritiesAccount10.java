@@ -124,7 +124,7 @@ public class SecuritiesAccount10 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount10, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<SecuritiesAccount10, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount10.mmObject();
@@ -136,6 +136,16 @@ public class SecuritiesAccount10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(SecuritiesAccount10 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount10 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -173,7 +183,7 @@ public class SecuritiesAccount10 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount10, Optional<PartyIdentification2Choice>> mmAccountOwnerIdentification = new MMMessageAttribute<SecuritiesAccount10, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount10.mmObject();
@@ -185,6 +195,16 @@ public class SecuritiesAccount10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(SecuritiesAccount10 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount10 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrNtlty")
@@ -222,7 +242,7 @@ public class SecuritiesAccount10 {
 	 * definition} = "Nationality of the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerNationality = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount10, Optional<NationalityCode>> mmAccountOwnerNationality = new MMMessageAttribute<SecuritiesAccount10, Optional<NationalityCode>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmNationality;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount10.mmObject();
@@ -234,6 +254,16 @@ public class SecuritiesAccount10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NationalityCode.mmObject();
+		}
+
+		@Override
+		public Optional<NationalityCode> getValue(SecuritiesAccount10 obj) {
+			return obj.getAccountOwnerNationality();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount10 obj, Optional<NationalityCode> value) {
+			obj.setAccountOwnerNationality(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId", required = true)
@@ -270,7 +300,7 @@ public class SecuritiesAccount10 {
 	 * definition} = "Idenfitication of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount10, Max35Text> mmAccountIdentification = new MMMessageAttribute<SecuritiesAccount10, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount10.mmObject();
@@ -282,6 +312,16 @@ public class SecuritiesAccount10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SecuritiesAccount10 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount10 obj, Max35Text value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "BalTp")
@@ -319,7 +359,7 @@ public class SecuritiesAccount10 {
 	 * definition} = "Type of balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount10, Optional<SecuritiesBalanceType9FormatChoice>> mmBalanceType = new MMMessageAttribute<SecuritiesAccount10, Optional<SecuritiesBalanceType9FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount10.mmObject();
@@ -331,6 +371,16 @@ public class SecuritiesAccount10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesBalanceType9FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesBalanceType9FormatChoice> getValue(SecuritiesAccount10 obj) {
+			return obj.getBalanceType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount10 obj, Optional<SecuritiesBalanceType9FormatChoice> value) {
+			obj.setBalanceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyHldgForm")
@@ -368,7 +418,7 @@ public class SecuritiesAccount10 {
 	 * definition} = "Specifies the form of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityHoldingForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount10, Optional<FormOfSecurity1Code>> mmSecurityHoldingForm = new MMMessageAttribute<SecuritiesAccount10, Optional<FormOfSecurity1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount10.mmObject();
@@ -380,6 +430,16 @@ public class SecuritiesAccount10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<FormOfSecurity1Code> getValue(SecuritiesAccount10 obj) {
+			return obj.getSecurityHoldingForm();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount10 obj, Optional<FormOfSecurity1Code> value) {
+			obj.setSecurityHoldingForm(value.orElse(null));
 		}
 	};
 

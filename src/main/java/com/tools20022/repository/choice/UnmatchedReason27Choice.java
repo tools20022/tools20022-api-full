@@ -110,7 +110,7 @@ public class UnmatchedReason27Choice {
 	 * "Specifies the reason why the instruction has an unmatched status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnmatchedReason27Choice, UnmatchedReason11Code> mmCode = new MMMessageAttribute<UnmatchedReason27Choice, UnmatchedReason11Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedReason27Choice.mmObject();
@@ -122,6 +122,16 @@ public class UnmatchedReason27Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnmatchedReason11Code.mmObject();
+		}
+
+		@Override
+		public UnmatchedReason11Code getValue(UnmatchedReason27Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason27Choice obj, UnmatchedReason11Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -160,7 +170,7 @@ public class UnmatchedReason27Choice {
 	 * "Specifies the reason why the instruction has an unmatched status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnmatchedReason27Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<UnmatchedReason27Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedReason27Choice.mmObject();
@@ -172,6 +182,16 @@ public class UnmatchedReason27Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(UnmatchedReason27Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason27Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

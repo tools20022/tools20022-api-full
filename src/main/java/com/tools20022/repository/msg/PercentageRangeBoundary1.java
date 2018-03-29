@@ -107,7 +107,7 @@ public class PercentageRangeBoundary1 {
 	 * definition} = "Percentage rate of the range limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBoundaryRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentageRangeBoundary1, PercentageRate> mmBoundaryRate = new MMMessageAttribute<PercentageRangeBoundary1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PercentageRangeBoundary1.mmObject();
@@ -119,6 +119,16 @@ public class PercentageRangeBoundary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PercentageRangeBoundary1 obj) {
+			return obj.getBoundaryRate();
+		}
+
+		@Override
+		public void setValue(PercentageRangeBoundary1 obj, PercentageRate value) {
+			obj.setBoundaryRate(value);
 		}
 	};
 	@XmlElement(name = "Incl", required = true)
@@ -153,7 +163,7 @@ public class PercentageRangeBoundary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentageRangeBoundary1, YesNoIndicator> mmIncluded = new MMMessageAttribute<PercentageRangeBoundary1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PercentageRangeBoundary1.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class PercentageRangeBoundary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PercentageRangeBoundary1 obj) {
+			return obj.getIncluded();
+		}
+
+		@Override
+		public void setValue(PercentageRangeBoundary1 obj, YesNoIndicator value) {
+			obj.setIncluded(value);
 		}
 	};
 

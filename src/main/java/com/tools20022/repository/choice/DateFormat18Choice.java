@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.DateType8Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -115,7 +116,7 @@ public class DateFormat18Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat18Choice, DateAndDateTimeChoice> mmDate = new MMMessageAssociationEnd<DateFormat18Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat18Choice.mmObject();
 			isDerived = false;
@@ -128,7 +129,17 @@ public class DateFormat18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat18Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat18Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdDt", required = true)
@@ -172,7 +183,7 @@ public class DateFormat18Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat18Choice, DateType8Code> mmNotSpecifiedDate = new MMMessageAttribute<DateFormat18Choice, DateType8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat18Choice.mmObject();
 			isDerived = false;
@@ -185,6 +196,16 @@ public class DateFormat18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType8Code.mmObject();
+		}
+
+		@Override
+		public DateType8Code getValue(DateFormat18Choice obj) {
+			return obj.getNotSpecifiedDate();
+		}
+
+		@Override
+		public void setValue(DateFormat18Choice obj, DateType8Code value) {
+			obj.setNotSpecifiedDate(value);
 		}
 	};
 
@@ -206,7 +227,7 @@ public class DateFormat18Choice {
 		return date;
 	}
 
-	public DateFormat18Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat18Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}

@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max35NumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PlainCardData17;
+import com.tools20022.repository.msg.Vehicle2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +131,7 @@ public class Vehicle1 {
 	 * definition} = "Number assigned to the vehicle for identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVehicleNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<Max35NumericText>> mmVehicleNumber = new MMMessageAttribute<Vehicle1, Optional<Max35NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -140,6 +142,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max35NumericText> getValue(Vehicle1 obj) {
+			return obj.getVehicleNumber();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<Max35NumericText> value) {
+			obj.setVehicleNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrlrNb")
@@ -172,7 +184,7 @@ public class Vehicle1 {
 	 * "Number assigned to the vehicle trailer for identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrailerNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<Max35NumericText>> mmTrailerNumber = new MMMessageAttribute<Vehicle1, Optional<Max35NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -183,6 +195,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max35NumericText> getValue(Vehicle1 obj) {
+			return obj.getTrailerNumber();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<Max35NumericText> value) {
+			obj.setTrailerNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VhclTag")
@@ -213,7 +235,7 @@ public class Vehicle1 {
 	 * definition} = "Registration tag of the vehicle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVehicleTag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<Max35Text>> mmVehicleTag = new MMMessageAttribute<Vehicle1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -224,6 +246,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Vehicle1 obj) {
+			return obj.getVehicleTag();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<Max35Text> value) {
+			obj.setVehicleTag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VhclTagNtryMd")
@@ -262,7 +294,7 @@ public class Vehicle1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVehicleTagEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<CardDataReading5Code>> mmVehicleTagEntryMode = new MMMessageAttribute<Vehicle1, Optional<CardDataReading5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -270,10 +302,20 @@ public class Vehicle1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VehicleTagEntryMode";
 			definition = "Entry mode of the registration tag.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmEntryMode);
+			nextVersions_lazy = () -> Arrays.asList(Vehicle2.mmEntryMode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardDataReading5Code> getValue(Vehicle1 obj) {
+			return obj.getVehicleTagEntryMode();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<CardDataReading5Code> value) {
+			obj.setVehicleTagEntryMode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnitNb")
@@ -305,7 +347,7 @@ public class Vehicle1 {
 	 * definition} = "Identification of the vehicle in the fleet."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<Max35NumericText>> mmUnitNumber = new MMMessageAttribute<Vehicle1, Optional<Max35NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -316,6 +358,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max35NumericText> getValue(Vehicle1 obj) {
+			return obj.getUnitNumber();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<Max35NumericText> value) {
+			obj.setUnitNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RplcmntCar")
@@ -347,7 +399,7 @@ public class Vehicle1 {
 	 * definition} = "True if the car is a replacement car."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReplacementCar = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<TrueFalseIndicator>> mmReplacementCar = new MMMessageAttribute<Vehicle1, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -358,6 +410,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(Vehicle1 obj) {
+			return obj.getReplacementCar();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<TrueFalseIndicator> value) {
+			obj.setReplacementCar(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Odmtr")
@@ -391,7 +453,7 @@ public class Vehicle1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOdometer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<DecimalNumber>> mmOdometer = new MMMessageAttribute<Vehicle1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -402,6 +464,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Vehicle1 obj) {
+			return obj.getOdometer();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<DecimalNumber> value) {
+			obj.setOdometer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Hbmtr")
@@ -435,7 +507,7 @@ public class Vehicle1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHubometer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<DecimalNumber>> mmHubometer = new MMMessageAttribute<Vehicle1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -446,6 +518,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Vehicle1 obj) {
+			return obj.getHubometer();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<DecimalNumber> value) {
+			obj.setHubometer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrlrHrs")
@@ -476,7 +558,7 @@ public class Vehicle1 {
 	 * definition} = "Number of hours the trailer has been in operation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrailerHours = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<Max35Text>> mmTrailerHours = new MMMessageAttribute<Vehicle1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -487,6 +569,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Vehicle1 obj) {
+			return obj.getTrailerHours();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<Max35Text> value) {
+			obj.setTrailerHours(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefrHrs")
@@ -517,7 +609,7 @@ public class Vehicle1 {
 	 * definition} = "Number of hours the refer unit has been in operation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferHours = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<Max35Text>> mmReferHours = new MMMessageAttribute<Vehicle1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -528,6 +620,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Vehicle1 obj) {
+			return obj.getReferHours();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<Max35Text> value) {
+			obj.setReferHours(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MntncId")
@@ -559,7 +661,7 @@ public class Vehicle1 {
 	 * "Identification assigned to the vehicle related to maintenance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaintenanceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vehicle1, Optional<Max35Text>> mmMaintenanceIdentification = new MMMessageAttribute<Vehicle1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -570,6 +672,16 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Vehicle1 obj) {
+			return obj.getMaintenanceIdentification();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<Max35Text> value) {
+			obj.setMaintenanceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrvrOrVhclCard")
@@ -599,7 +711,7 @@ public class Vehicle1 {
 	 * definition} = "Second card presented for the payment transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDriverOrVehicleCard = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Vehicle1, Optional<PlainCardData17>> mmDriverOrVehicleCard = new MMMessageAssociationEnd<Vehicle1, Optional<PlainCardData17>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -610,11 +722,21 @@ public class Vehicle1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PlainCardData17.mmObject();
+			type_lazy = () -> PlainCardData17.mmObject();
+		}
+
+		@Override
+		public Optional<PlainCardData17> getValue(Vehicle1 obj) {
+			return obj.getDriverOrVehicleCard();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, Optional<PlainCardData17> value) {
+			obj.setDriverOrVehicleCard(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlVhclData")
-	protected List<com.tools20022.repository.msg.Vehicle2> additionalVehicleData;
+	protected List<Vehicle2> additionalVehicleData;
 	/**
 	 * 
 	 <p>
@@ -646,7 +768,7 @@ public class Vehicle1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalVehicleData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Vehicle1, List<Vehicle2>> mmAdditionalVehicleData = new MMMessageAssociationEnd<Vehicle1, List<Vehicle2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vehicle1.mmObject();
 			isDerived = false;
@@ -654,10 +776,20 @@ public class Vehicle1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalVehicleData";
 			definition = "Additional information related to the vehicle.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmData);
+			nextVersions_lazy = () -> Arrays.asList(Vehicle2.mmData);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Vehicle2.mmObject();
+			type_lazy = () -> Vehicle2.mmObject();
+		}
+
+		@Override
+		public List<Vehicle2> getValue(Vehicle1 obj) {
+			return obj.getAdditionalVehicleData();
+		}
+
+		@Override
+		public void setValue(Vehicle1 obj, List<Vehicle2> value) {
+			obj.setAdditionalVehicleData(value);
 		}
 	};
 
@@ -672,7 +804,7 @@ public class Vehicle1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Vehicle1";
 				definition = "Information related to a vehicle used during a transaction.";
-				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Vehicle2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(Vehicle2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
@@ -781,7 +913,7 @@ public class Vehicle1 {
 		return driverOrVehicleCard == null ? Optional.empty() : Optional.of(driverOrVehicleCard);
 	}
 
-	public Vehicle1 setDriverOrVehicleCard(com.tools20022.repository.msg.PlainCardData17 driverOrVehicleCard) {
+	public Vehicle1 setDriverOrVehicleCard(PlainCardData17 driverOrVehicleCard) {
 		this.driverOrVehicleCard = driverOrVehicleCard;
 		return this;
 	}
@@ -790,7 +922,7 @@ public class Vehicle1 {
 		return additionalVehicleData == null ? additionalVehicleData = new ArrayList<>() : additionalVehicleData;
 	}
 
-	public Vehicle1 setAdditionalVehicleData(List<com.tools20022.repository.msg.Vehicle2> additionalVehicleData) {
+	public Vehicle1 setAdditionalVehicleData(List<Vehicle2> additionalVehicleData) {
 		this.additionalVehicleData = Objects.requireNonNull(additionalVehicleData);
 		return this;
 	}

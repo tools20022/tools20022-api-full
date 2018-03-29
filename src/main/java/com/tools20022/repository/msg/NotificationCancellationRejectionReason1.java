@@ -98,7 +98,7 @@ public class NotificationCancellationRejectionReason1 {
 	 * definition} = "The rejection reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationCancellationRejectionReason1, List<RejectionReason11FormatChoice>> mmReason = new MMMessageAttribute<NotificationCancellationRejectionReason1, List<RejectionReason11FormatChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationCancellationRejectionReason1.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class NotificationCancellationRejectionReason1 {
 			definition = "The rejection reason.";
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason11FormatChoice.mmObject();
+		}
+
+		@Override
+		public List<RejectionReason11FormatChoice> getValue(NotificationCancellationRejectionReason1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(NotificationCancellationRejectionReason1 obj, List<RejectionReason11FormatChoice> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -139,7 +149,7 @@ public class NotificationCancellationRejectionReason1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationCancellationRejectionReason1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<NotificationCancellationRejectionReason1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationCancellationRejectionReason1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class NotificationCancellationRejectionReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(NotificationCancellationRejectionReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(NotificationCancellationRejectionReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

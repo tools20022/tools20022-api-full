@@ -130,7 +130,7 @@ public class AmountAndDirection41 {
 	 * AmountAndDirection30.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection41, CurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection41, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class AmountAndDirection41 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(AmountAndDirection41 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection41 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Sgn")
@@ -191,7 +201,7 @@ public class AmountAndDirection41 {
 	 * AmountAndDirection30.mmSign}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection41, Optional<PlusOrMinusIndicator>> mmSign = new MMMessageAttribute<AmountAndDirection41, Optional<PlusOrMinusIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
 			isDerived = false;
@@ -204,6 +214,16 @@ public class AmountAndDirection41 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<PlusOrMinusIndicator> getValue(AmountAndDirection41 obj) {
+			return obj.getSign();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection41 obj, Optional<PlusOrMinusIndicator> value) {
+			obj.setSign(value.orElse(null));
 		}
 	};
 

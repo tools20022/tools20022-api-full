@@ -117,7 +117,7 @@ public class RejectionOrRepairStatus35Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairStatus35Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RejectionOrRepairStatus35Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus35Choice.mmObject();
@@ -130,6 +130,16 @@ public class RejectionOrRepairStatus35Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(RejectionOrRepairStatus35Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus35Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -169,7 +179,7 @@ public class RejectionOrRepairStatus35Choice {
 	 * definition} = "Specifies the reason for the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairStatus35Choice, List<RejectionOrRepairReason29>> mmReason = new MMMessageAssociationEnd<RejectionOrRepairStatus35Choice, List<RejectionOrRepairReason29>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus35Choice.mmObject();
@@ -182,6 +192,16 @@ public class RejectionOrRepairStatus35Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionOrRepairReason29.mmObject();
+		}
+
+		@Override
+		public List<RejectionOrRepairReason29> getValue(RejectionOrRepairStatus35Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus35Choice obj, List<RejectionOrRepairReason29> value) {
+			obj.setReason(value);
 		}
 	};
 

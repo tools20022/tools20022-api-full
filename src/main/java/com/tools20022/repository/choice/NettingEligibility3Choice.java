@@ -113,7 +113,7 @@ public class NettingEligibility3Choice {
 	 * "Specifies whether the settlement transaction is eligible for netting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingEligibility3Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<NettingEligibility3Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmNettingEligibility;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NettingEligibility3Choice.mmObject();
@@ -126,6 +126,16 @@ public class NettingEligibility3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(NettingEligibility3Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(NettingEligibility3Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class NettingEligibility3Choice {
 	 * definition} = "Netting eligibility expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingEligibility3Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<NettingEligibility3Choice, GenericIdentification38>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NettingEligibility3Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class NettingEligibility3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(NettingEligibility3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(NettingEligibility3Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

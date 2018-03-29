@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyConversion12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -131,7 +132,7 @@ public class CurrencyConversion13 {
 	 * CurrencyConversion8.mmAcceptedByCardholder}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptedByCardholder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion13, Optional<TrueFalseIndicator>> mmAcceptedByCardholder = new MMMessageAttribute<CurrencyConversion13, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion13.mmObject();
 			isDerived = false;
@@ -144,6 +145,16 @@ public class CurrencyConversion13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(CurrencyConversion13 obj) {
+			return obj.getAcceptedByCardholder();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion13 obj, Optional<TrueFalseIndicator> value) {
+			obj.setAcceptedByCardholder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Convs")
@@ -189,7 +200,7 @@ public class CurrencyConversion13 {
 	 * CurrencyConversion8.mmConversion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConversion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyConversion13, Optional<CurrencyConversion12>> mmConversion = new MMMessageAssociationEnd<CurrencyConversion13, Optional<CurrencyConversion12>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion13.mmObject();
 			isDerived = false;
@@ -202,7 +213,17 @@ public class CurrencyConversion13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion12.mmObject();
+			type_lazy = () -> CurrencyConversion12.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyConversion12> getValue(CurrencyConversion13 obj) {
+			return obj.getConversion();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion13 obj, Optional<CurrencyConversion12> value) {
+			obj.setConversion(value.orElse(null));
 		}
 	};
 
@@ -235,7 +256,7 @@ public class CurrencyConversion13 {
 		return conversion == null ? Optional.empty() : Optional.of(conversion);
 	}
 
-	public CurrencyConversion13 setConversion(com.tools20022.repository.msg.CurrencyConversion12 conversion) {
+	public CurrencyConversion13 setConversion(CurrencyConversion12 conversion) {
 		this.conversion = conversion;
 		return this;
 	}

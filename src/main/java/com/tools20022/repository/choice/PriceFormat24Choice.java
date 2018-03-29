@@ -142,7 +142,7 @@ public class PriceFormat24Choice {
 	 * definition} = "Price expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat24Choice, PercentagePrice1> mmPercentagePrice = new MMMessageAssociationEnd<PriceFormat24Choice, PercentagePrice1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat24Choice.mmObject();
@@ -156,6 +156,16 @@ public class PriceFormat24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PercentagePrice1.mmObject();
+		}
+
+		@Override
+		public PercentagePrice1 getValue(PriceFormat24Choice obj) {
+			return obj.getPercentagePrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat24Choice obj, PercentagePrice1 value) {
+			obj.setPercentagePrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPric", required = true)
@@ -194,7 +204,7 @@ public class PriceFormat24Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat24Choice, AmountPrice5> mmAmountPrice = new MMMessageAssociationEnd<PriceFormat24Choice, AmountPrice5>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat24Choice.mmObject();
@@ -208,6 +218,16 @@ public class PriceFormat24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPrice5.mmObject();
+		}
+
+		@Override
+		public AmountPrice5 getValue(PriceFormat24Choice obj) {
+			return obj.getAmountPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat24Choice obj, AmountPrice5 value) {
+			obj.setAmountPrice(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdPric", required = true)
@@ -243,7 +263,7 @@ public class PriceFormat24Choice {
 	 * definition} = "Value of the price not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat24Choice, PriceValueType9Code> mmNotSpecifiedPrice = new MMMessageAttribute<PriceFormat24Choice, PriceValueType9Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat24Choice.mmObject();
 			isDerived = false;
@@ -255,6 +275,16 @@ public class PriceFormat24Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType9Code.mmObject();
+		}
+
+		@Override
+		public PriceValueType9Code getValue(PriceFormat24Choice obj) {
+			return obj.getNotSpecifiedPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat24Choice obj, PriceValueType9Code value) {
+			obj.setNotSpecifiedPrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
@@ -296,7 +326,7 @@ public class PriceFormat24Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat24Choice, AmountPricePerFinancialInstrumentQuantity4> mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd<PriceFormat24Choice, AmountPricePerFinancialInstrumentQuantity4>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat24Choice.mmObject();
@@ -310,6 +340,16 @@ public class PriceFormat24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
+		}
+
+		@Override
+		public AmountPricePerFinancialInstrumentQuantity4 getValue(PriceFormat24Choice obj) {
+			return obj.getAmountPricePerFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(PriceFormat24Choice obj, AmountPricePerFinancialInstrumentQuantity4 value) {
+			obj.setAmountPricePerFinancialInstrumentQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerAmt", required = true)
@@ -348,7 +388,7 @@ public class PriceFormat24Choice {
 	 * definition} = "Price expressed as a ratio: amount price per amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat24Choice, AmountPricePerAmount3> mmAmountPricePerAmount = new MMMessageAssociationEnd<PriceFormat24Choice, AmountPricePerAmount3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat24Choice.mmObject();
@@ -362,6 +402,16 @@ public class PriceFormat24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerAmount3.mmObject();
+		}
+
+		@Override
+		public AmountPricePerAmount3 getValue(PriceFormat24Choice obj) {
+			return obj.getAmountPricePerAmount();
+		}
+
+		@Override
+		public void setValue(PriceFormat24Choice obj, AmountPricePerAmount3 value) {
+			obj.setAmountPricePerAmount(value);
 		}
 	};
 

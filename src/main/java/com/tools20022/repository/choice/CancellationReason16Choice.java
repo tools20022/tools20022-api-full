@@ -98,7 +98,7 @@ public class CancellationReason16Choice {
 	 * definition} = "Reason for the cancellation request, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason16Choice, Max4AlphaNumericText> mmCode = new MMMessageAttribute<CancellationReason16Choice, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason16Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class CancellationReason16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(CancellationReason16Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationReason16Choice obj, Max4AlphaNumericText value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class CancellationReason16Choice {
 	 * "Reason for the cancellation request, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason16Choice, Max35Text> mmProprietary = new MMMessageAttribute<CancellationReason16Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason16Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class CancellationReason16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CancellationReason16Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CancellationReason16Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

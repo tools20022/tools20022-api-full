@@ -62,13 +62,17 @@ public class ConstraintDealRatePresenceRule {
 	 */
 	public static final MMConstraint<UnsecuredMarketTransaction1> forUnsecuredMarketTransaction1 = new MMConstraint<UnsecuredMarketTransaction1>() {
 		{
-			validator = ConstraintDealRatePresenceRule::checkUnsecuredMarketTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
 			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction2);
 			owner_lazy = () -> UnsecuredMarketTransaction1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnsecuredMarketTransaction1 obj) throws Exception {
+			checkUnsecuredMarketTransaction1(obj);
 		}
 	};
 	/**
@@ -105,13 +109,17 @@ public class ConstraintDealRatePresenceRule {
 	 */
 	public static final MMConstraint<SecuredMarketTransaction1> forSecuredMarketTransaction1 = new MMConstraint<SecuredMarketTransaction1>() {
 		{
-			validator = ConstraintDealRatePresenceRule::checkSecuredMarketTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
 			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction2);
 			owner_lazy = () -> SecuredMarketTransaction1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuredMarketTransaction1 obj) throws Exception {
+			checkSecuredMarketTransaction1(obj);
 		}
 	};
 	/**
@@ -153,7 +161,6 @@ public class ConstraintDealRatePresenceRule {
 	 */
 	public static final MMConstraint<UnsecuredMarketTransaction2> forUnsecuredMarketTransaction2 = new MMConstraint<UnsecuredMarketTransaction2>() {
 		{
-			validator = ConstraintDealRatePresenceRule::checkUnsecuredMarketTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
 			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
@@ -161,6 +168,11 @@ public class ConstraintDealRatePresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction1;
 			owner_lazy = () -> UnsecuredMarketTransaction2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnsecuredMarketTransaction2 obj) throws Exception {
+			checkUnsecuredMarketTransaction2(obj);
 		}
 	};
 	/**
@@ -202,7 +214,6 @@ public class ConstraintDealRatePresenceRule {
 	 */
 	public static final MMConstraint<SecuredMarketTransaction2> forSecuredMarketTransaction2 = new MMConstraint<SecuredMarketTransaction2>() {
 		{
-			validator = ConstraintDealRatePresenceRule::checkSecuredMarketTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
 			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
@@ -210,6 +221,11 @@ public class ConstraintDealRatePresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction1;
 			owner_lazy = () -> SecuredMarketTransaction2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuredMarketTransaction2 obj) throws Exception {
+			checkSecuredMarketTransaction2(obj);
 		}
 	};
 	/**
@@ -251,7 +267,6 @@ public class ConstraintDealRatePresenceRule {
 	 */
 	public static final MMConstraint<UnsecuredMarketTransaction3> forUnsecuredMarketTransaction3 = new MMConstraint<UnsecuredMarketTransaction3>() {
 		{
-			validator = ConstraintDealRatePresenceRule::checkUnsecuredMarketTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
 			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
@@ -259,6 +274,11 @@ public class ConstraintDealRatePresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction2;
 			owner_lazy = () -> UnsecuredMarketTransaction3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnsecuredMarketTransaction3 obj) throws Exception {
+			checkUnsecuredMarketTransaction3(obj);
 		}
 	};
 	/**
@@ -300,7 +320,6 @@ public class ConstraintDealRatePresenceRule {
 	 */
 	public static final MMConstraint<SecuredMarketTransaction3> forSecuredMarketTransaction3 = new MMConstraint<SecuredMarketTransaction3>() {
 		{
-			validator = ConstraintDealRatePresenceRule::checkSecuredMarketTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
 			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
@@ -308,6 +327,11 @@ public class ConstraintDealRatePresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction2;
 			owner_lazy = () -> SecuredMarketTransaction3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuredMarketTransaction3 obj) throws Exception {
+			checkSecuredMarketTransaction3(obj);
 		}
 	};
 	/**
@@ -341,13 +365,17 @@ public class ConstraintDealRatePresenceRule {
 	 */
 	public static final MMConstraint<SecuredMarketTransaction4> forSecuredMarketTransaction4 = new MMConstraint<SecuredMarketTransaction4>() {
 		{
-			validator = ConstraintDealRatePresenceRule::checkSecuredMarketTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
 			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction3;
 			owner_lazy = () -> SecuredMarketTransaction4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuredMarketTransaction4 obj) throws Exception {
+			checkSecuredMarketTransaction4(obj);
 		}
 	};
 	/**
@@ -381,13 +409,17 @@ public class ConstraintDealRatePresenceRule {
 	 */
 	public static final MMConstraint<UnsecuredMarketTransaction4> forUnsecuredMarketTransaction4 = new MMConstraint<UnsecuredMarketTransaction4>() {
 		{
-			validator = ConstraintDealRatePresenceRule::checkUnsecuredMarketTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
 			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction3;
 			owner_lazy = () -> UnsecuredMarketTransaction4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnsecuredMarketTransaction4 obj) throws Exception {
+			checkUnsecuredMarketTransaction4(obj);
 		}
 	};
 

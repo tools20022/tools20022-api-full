@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReferredDocumentType2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -135,7 +136,7 @@ public class ReferredDocumentInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReferredDocumentInformation3, Optional<ReferredDocumentType2>> mmType = new MMMessageAssociationEnd<ReferredDocumentInformation3, Optional<ReferredDocumentType2>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmObject();
@@ -148,7 +149,17 @@ public class ReferredDocumentInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType2.mmObject();
+			type_lazy = () -> ReferredDocumentType2.mmObject();
+		}
+
+		@Override
+		public Optional<ReferredDocumentType2> getValue(ReferredDocumentInformation3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation3 obj, Optional<ReferredDocumentType2> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nb")
@@ -200,7 +211,7 @@ public class ReferredDocumentInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentInformation3, Optional<Max35Text>> mmNumber = new MMMessageAttribute<ReferredDocumentInformation3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmObject();
@@ -213,6 +224,16 @@ public class ReferredDocumentInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReferredDocumentInformation3 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation3 obj, Optional<Max35Text> value) {
+			obj.setNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdDt")
@@ -263,7 +284,7 @@ public class ReferredDocumentInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentInformation3, Optional<ISODate>> mmRelatedDate = new MMMessageAttribute<ReferredDocumentInformation3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmObject();
@@ -276,6 +297,16 @@ public class ReferredDocumentInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ReferredDocumentInformation3 obj) {
+			return obj.getRelatedDate();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation3 obj, Optional<ISODate> value) {
+			obj.setRelatedDate(value.orElse(null));
 		}
 	};
 
@@ -299,7 +330,7 @@ public class ReferredDocumentInformation3 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public ReferredDocumentInformation3 setType(com.tools20022.repository.msg.ReferredDocumentType2 type) {
+	public ReferredDocumentInformation3 setType(ReferredDocumentType2 type) {
 		this.type = type;
 		return this;
 	}

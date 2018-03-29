@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradeCertificate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification1;
+import com.tools20022.repository.msg.PartyIdentification26;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -147,7 +149,7 @@ public class OtherCertificateDataSet2 {
 	 * OtherCertificateDataSet1.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherCertificateDataSet2, DocumentIdentification1> mmDataSetIdentification = new MMMessageAssociationEnd<OtherCertificateDataSet2, DocumentIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet2.mmObject();
 			isDerived = false;
@@ -159,7 +161,17 @@ public class OtherCertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
+			type_lazy = () -> DocumentIdentification1.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification1 getValue(OtherCertificateDataSet2 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(OtherCertificateDataSet2 obj, DocumentIdentification1 value) {
+			obj.setDataSetIdentification(value);
 		}
 	};
 	@XmlElement(name = "CertId", required = true)
@@ -201,7 +213,7 @@ public class OtherCertificateDataSet2 {
 	 * OtherCertificateDataSet1.mmCertificateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCertificateDataSet2, Max35Text> mmCertificateIdentification = new MMMessageAttribute<OtherCertificateDataSet2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet2.mmObject();
@@ -214,6 +226,16 @@ public class OtherCertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OtherCertificateDataSet2 obj) {
+			return obj.getCertificateIdentification();
+		}
+
+		@Override
+		public void setValue(OtherCertificateDataSet2 obj, Max35Text value) {
+			obj.setCertificateIdentification(value);
 		}
 	};
 	@XmlElement(name = "CertTp", required = true)
@@ -256,7 +278,7 @@ public class OtherCertificateDataSet2 {
 	 * OtherCertificateDataSet1.mmCertificateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCertificateDataSet2, Exact4AlphaNumericText> mmCertificateType = new MMMessageAttribute<OtherCertificateDataSet2, Exact4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> TradeCertificate.mmCertificateType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet2.mmObject();
@@ -269,6 +291,16 @@ public class OtherCertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(OtherCertificateDataSet2 obj) {
+			return obj.getCertificateType();
+		}
+
+		@Override
+		public void setValue(OtherCertificateDataSet2 obj, Exact4AlphaNumericText value) {
+			obj.setCertificateType(value);
 		}
 	};
 	@XmlElement(name = "IsseDt", required = true)
@@ -310,7 +342,7 @@ public class OtherCertificateDataSet2 {
 	 * OtherCertificateDataSet1.mmIssueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCertificateDataSet2, ISODate> mmIssueDate = new MMMessageAttribute<OtherCertificateDataSet2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet2.mmObject();
@@ -323,6 +355,16 @@ public class OtherCertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(OtherCertificateDataSet2 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(OtherCertificateDataSet2 obj, ISODate value) {
+			obj.setIssueDate(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -365,7 +407,7 @@ public class OtherCertificateDataSet2 {
 	 * OtherCertificateDataSet1.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherCertificateDataSet2, PartyIdentification26> mmIssuer = new MMMessageAssociationEnd<OtherCertificateDataSet2, PartyIdentification26>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet2.mmObject();
@@ -378,7 +420,17 @@ public class OtherCertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public PartyIdentification26 getValue(OtherCertificateDataSet2 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(OtherCertificateDataSet2 obj, PartyIdentification26 value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "CertInf")
@@ -417,7 +469,7 @@ public class OtherCertificateDataSet2 {
 	 * OtherCertificateDataSet1.mmCertificateInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCertificateDataSet2, List<Max350Text>> mmCertificateInformation = new MMMessageAttribute<OtherCertificateDataSet2, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCertificateDataSet2.mmObject();
 			isDerived = false;
@@ -428,6 +480,16 @@ public class OtherCertificateDataSet2 {
 			previousVersion_lazy = () -> OtherCertificateDataSet1.mmCertificateInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(OtherCertificateDataSet2 obj) {
+			return obj.getCertificateInformation();
+		}
+
+		@Override
+		public void setValue(OtherCertificateDataSet2 obj, List<Max350Text> value) {
+			obj.setCertificateInformation(value);
 		}
 	};
 
@@ -453,7 +515,7 @@ public class OtherCertificateDataSet2 {
 		return dataSetIdentification;
 	}
 
-	public OtherCertificateDataSet2 setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
+	public OtherCertificateDataSet2 setDataSetIdentification(DocumentIdentification1 dataSetIdentification) {
 		this.dataSetIdentification = Objects.requireNonNull(dataSetIdentification);
 		return this;
 	}
@@ -489,7 +551,7 @@ public class OtherCertificateDataSet2 {
 		return issuer;
 	}
 
-	public OtherCertificateDataSet2 setIssuer(com.tools20022.repository.msg.PartyIdentification26 issuer) {
+	public OtherCertificateDataSet2 setIssuer(PartyIdentification26 issuer) {
 		this.issuer = Objects.requireNonNull(issuer);
 		return this;
 	}

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.MessageHeader4;
 import com.tools20022.repository.msg.StandingOrderQuery2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -83,7 +82,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GetStandingOrderV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -121,7 +120,7 @@ public class GetStandingOrderV02 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetStandingOrderV02, MessageHeader4> mmMessageHeader = new MMMessageBuildingBlock<GetStandingOrderV02, MessageHeader4>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +131,14 @@ public class GetStandingOrderV02 {
 			complexType_lazy = () -> MessageHeader4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetStandingOrderV02.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader4 getValue(GetStandingOrderV02 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(GetStandingOrderV02 obj, MessageHeader4 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "StgOrdrQryDef")
@@ -165,7 +166,7 @@ public class GetStandingOrderV02 {
 	 * definition} = "Defines the account query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStandingOrderQueryDefinition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetStandingOrderV02, Optional<StandingOrderQuery2>> mmStandingOrderQueryDefinition = new MMMessageBuildingBlock<GetStandingOrderV02, Optional<StandingOrderQuery2>>() {
 		{
 			xmlTag = "StgOrdrQryDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +177,14 @@ public class GetStandingOrderV02 {
 			complexType_lazy = () -> StandingOrderQuery2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetStandingOrderV02.class.getMethod("getStandingOrderQueryDefinition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<StandingOrderQuery2> getValue(GetStandingOrderV02 obj) {
+			return obj.getStandingOrderQueryDefinition();
+		}
+
+		@Override
+		public void setValue(GetStandingOrderV02 obj, Optional<StandingOrderQuery2> value) {
+			obj.setStandingOrderQueryDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -211,7 +214,7 @@ public class GetStandingOrderV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetStandingOrderV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<GetStandingOrderV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,19 +224,21 @@ public class GetStandingOrderV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetStandingOrderV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(GetStandingOrderV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(GetStandingOrderV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GetStandingOrderV02";
 				definition = "Scope\nThe GetStandingOrder message is sent by a member to the transaction administrator.\nIt is used to request information on the details of one or more standing orders, based on specific request criteria, especially to query the amount of the overall liquidity available. It will allow to query both reserved liquidity and liquidity available for normal operations.\nUsage\nThe member can request information based on the following elements: \n- individual standing orders (predefined or standing liquidity transfer orders)\n- amount\n- account to be credited\n- account to be debited\n- account owner (for on behalf scenario)\n- frequency of payment\n- daytime or overnight processing\n- dates when the standing order begins and ceases to be effective\nThis message will be answered by a ReturnStandingOrder message.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

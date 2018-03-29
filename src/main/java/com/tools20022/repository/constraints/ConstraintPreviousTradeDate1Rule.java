@@ -55,12 +55,16 @@ public class ConstraintPreviousTradeDate1Rule {
 	 */
 	public static final MMConstraint<FundConfirmedCashForecastReport3> forFundConfirmedCashForecastReport3 = new MMConstraint<FundConfirmedCashForecastReport3>() {
 		{
-			validator = ConstraintPreviousTradeDate1Rule::checkFundConfirmedCashForecastReport3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTradeDate1Rule";
 			definition = "If any occurrence of FundCashForecastDetails is present, then any occurrence of FundOrSubFundDetails/PreviousTradeDateTime is not allowed.";
 			owner_lazy = () -> FundConfirmedCashForecastReport3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FundOrSubFundDetails[*]/PreviousTradeDateTime</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundCashForecastDetails[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundConfirmedCashForecastReport3 obj) throws Exception {
+			checkFundConfirmedCashForecastReport3(obj);
 		}
 	};
 

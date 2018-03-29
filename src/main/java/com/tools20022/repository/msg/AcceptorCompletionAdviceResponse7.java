@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment69;
+import com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse6;
+import com.tools20022.repository.msg.SupplementaryData1;
+import com.tools20022.repository.msg.TMSTrigger1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -76,7 +80,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorCompletionAdviceResponse7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -132,7 +136,7 @@ public class AcceptorCompletionAdviceResponse7 {
 	 * AcceptorCompletionAdviceResponse6.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCompletionAdviceResponse7, CardPaymentEnvironment69> mmEnvironment = new MMMessageAssociationEnd<AcceptorCompletionAdviceResponse7, CardPaymentEnvironment69>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdviceResponse7.mmObject();
@@ -145,7 +149,17 @@ public class AcceptorCompletionAdviceResponse7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment69.mmObject();
+			type_lazy = () -> CardPaymentEnvironment69.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment69 getValue(AcceptorCompletionAdviceResponse7 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceResponse7 obj, CardPaymentEnvironment69 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -188,7 +202,7 @@ public class AcceptorCompletionAdviceResponse7 {
 	 * AcceptorCompletionAdviceResponse6.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCompletionAdviceResponse7, CardPaymentTransactionAdviceResponse6> mmTransaction = new MMMessageAssociationEnd<AcceptorCompletionAdviceResponse7, CardPaymentTransactionAdviceResponse6>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdviceResponse7.mmObject();
@@ -201,7 +215,17 @@ public class AcceptorCompletionAdviceResponse7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse6.mmObject();
+			type_lazy = () -> CardPaymentTransactionAdviceResponse6.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransactionAdviceResponse6 getValue(AcceptorCompletionAdviceResponse7 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceResponse7 obj, CardPaymentTransactionAdviceResponse6 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "TMSTrggr")
@@ -243,7 +267,7 @@ public class AcceptorCompletionAdviceResponse7 {
 	 * AcceptorCompletionAdviceResponse6.mmTMSTrigger}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCompletionAdviceResponse7, Optional<TMSTrigger1>> mmTMSTrigger = new MMMessageAssociationEnd<AcceptorCompletionAdviceResponse7, Optional<TMSTrigger1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdviceResponse7.mmObject();
@@ -256,11 +280,21 @@ public class AcceptorCompletionAdviceResponse7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
+			type_lazy = () -> TMSTrigger1.mmObject();
+		}
+
+		@Override
+		public Optional<TMSTrigger1> getValue(AcceptorCompletionAdviceResponse7 obj) {
+			return obj.getTMSTrigger();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceResponse7 obj, Optional<TMSTrigger1> value) {
+			obj.setTMSTrigger(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -293,7 +327,7 @@ public class AcceptorCompletionAdviceResponse7 {
 	 * AcceptorCompletionAdviceResponse6.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCompletionAdviceResponse7, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<AcceptorCompletionAdviceResponse7, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdviceResponse7.mmObject();
 			isDerived = false;
@@ -304,7 +338,17 @@ public class AcceptorCompletionAdviceResponse7 {
 			previousVersion_lazy = () -> AcceptorCompletionAdviceResponse6.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(AcceptorCompletionAdviceResponse7 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceResponse7 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -316,7 +360,7 @@ public class AcceptorCompletionAdviceResponse7 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCompletionAdviceResponseV07.mmCompletionAdviceResponse);
 				trace_lazy = () -> CardPayment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCompletionAdviceResponse7";
 				definition = "Acknowledgement by the acquirer, of the completion advice of the card payment at the acceptor.";
 				previousVersion_lazy = () -> AcceptorCompletionAdviceResponse6.mmObject();
@@ -329,7 +373,7 @@ public class AcceptorCompletionAdviceResponse7 {
 		return environment;
 	}
 
-	public AcceptorCompletionAdviceResponse7 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment69 environment) {
+	public AcceptorCompletionAdviceResponse7 setEnvironment(CardPaymentEnvironment69 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -338,7 +382,7 @@ public class AcceptorCompletionAdviceResponse7 {
 		return transaction;
 	}
 
-	public AcceptorCompletionAdviceResponse7 setTransaction(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse6 transaction) {
+	public AcceptorCompletionAdviceResponse7 setTransaction(CardPaymentTransactionAdviceResponse6 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
@@ -347,7 +391,7 @@ public class AcceptorCompletionAdviceResponse7 {
 		return tMSTrigger == null ? Optional.empty() : Optional.of(tMSTrigger);
 	}
 
-	public AcceptorCompletionAdviceResponse7 setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
+	public AcceptorCompletionAdviceResponse7 setTMSTrigger(TMSTrigger1 tMSTrigger) {
 		this.tMSTrigger = tMSTrigger;
 		return this;
 	}
@@ -356,7 +400,7 @@ public class AcceptorCompletionAdviceResponse7 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public AcceptorCompletionAdviceResponse7 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public AcceptorCompletionAdviceResponse7 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

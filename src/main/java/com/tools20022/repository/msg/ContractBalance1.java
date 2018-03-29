@@ -118,7 +118,7 @@ public class ContractBalance1 {
 	 * CashBalance6.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContractBalance1, ContractBalanceType1Choice> mmType = new MMMessageAssociationEnd<ContractBalance1, ContractBalanceType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractBalance1.mmObject();
@@ -132,6 +132,16 @@ public class ContractBalance1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ContractBalanceType1Choice.mmObject();
+		}
+
+		@Override
+		public ContractBalanceType1Choice getValue(ContractBalance1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ContractBalance1 obj, ContractBalanceType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -174,7 +184,7 @@ public class ContractBalance1 {
 	 * CashBalance6.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractBalance1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<ContractBalance1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractBalance1.mmObject();
@@ -187,6 +197,16 @@ public class ContractBalance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ContractBalance1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ContractBalance1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -231,7 +251,7 @@ public class ContractBalance1 {
 	 * CashBalance6.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractBalance1, CreditDebit3Code> mmCreditDebitIndicator = new MMMessageAttribute<ContractBalance1, CreditDebit3Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractBalance1.mmObject();
@@ -244,6 +264,16 @@ public class ContractBalance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebit3Code.mmObject();
+		}
+
+		@Override
+		public CreditDebit3Code getValue(ContractBalance1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(ContractBalance1 obj, CreditDebit3Code value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 

@@ -113,7 +113,7 @@ public class AcknowledgementReason6 {
 	 * definition} = "Reason provided for the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcknowledgementReason6, AcknowledgementReason8Choice> mmCode = new MMMessageAssociationEnd<AcknowledgementReason6, AcknowledgementReason8Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason6.mmObject();
@@ -127,6 +127,16 @@ public class AcknowledgementReason6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcknowledgementReason8Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason8Choice getValue(AcknowledgementReason6 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason6 obj, AcknowledgementReason8Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -169,7 +179,7 @@ public class AcknowledgementReason6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason6, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AcknowledgementReason6, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason6.mmObject();
@@ -182,6 +192,16 @@ public class AcknowledgementReason6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(AcknowledgementReason6 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason6 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

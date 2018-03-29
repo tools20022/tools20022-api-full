@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.datatype.RestrictedFINXMax140Text;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherIdentification3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -133,7 +134,7 @@ public class SecurityIdentification32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification32, Optional<ISINOct2015Identifier>> mmISIN = new MMMessageAttribute<SecurityIdentification32, Optional<ISINOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification32.mmObject();
@@ -146,9 +147,19 @@ public class SecurityIdentification32 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
+
+		@Override
+		public Optional<ISINOct2015Identifier> getValue(SecurityIdentification32 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification32 obj, Optional<ISINOct2015Identifier> value) {
+			obj.setISIN(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "OthrId")
-	protected List<com.tools20022.repository.msg.OtherIdentification3> otherIdentification;
+	protected List<OtherIdentification3> otherIdentification;
 	/**
 	 * 
 	 <p>
@@ -182,7 +193,7 @@ public class SecurityIdentification32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification32, List<OtherIdentification3>> mmOtherIdentification = new MMMessageAssociationEnd<SecurityIdentification32, List<OtherIdentification3>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification32.mmObject();
@@ -193,7 +204,17 @@ public class SecurityIdentification32 {
 			definition = "Identification of a security by proprietary or domestic identification scheme.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification3.mmObject();
+			type_lazy = () -> OtherIdentification3.mmObject();
+		}
+
+		@Override
+		public List<OtherIdentification3> getValue(SecurityIdentification32 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification32 obj, List<OtherIdentification3> value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -231,7 +252,7 @@ public class SecurityIdentification32 {
 	 * definition} = "Textual description of a security instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification32, Optional<RestrictedFINXMax140Text>> mmDescription = new MMMessageAttribute<SecurityIdentification32, Optional<RestrictedFINXMax140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification32.mmObject();
@@ -243,6 +264,16 @@ public class SecurityIdentification32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax140Text> getValue(SecurityIdentification32 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification32 obj, Optional<RestrictedFINXMax140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 
@@ -277,7 +308,7 @@ public class SecurityIdentification32 {
 		return otherIdentification == null ? otherIdentification = new ArrayList<>() : otherIdentification;
 	}
 
-	public SecurityIdentification32 setOtherIdentification(List<com.tools20022.repository.msg.OtherIdentification3> otherIdentification) {
+	public SecurityIdentification32 setOtherIdentification(List<OtherIdentification3> otherIdentification) {
 		this.otherIdentification = Objects.requireNonNull(otherIdentification);
 		return this;
 	}

@@ -140,7 +140,7 @@ public class SolicitationFeeRateFormat3Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SolicitationFeeRateFormat3Choice, PercentageRate> mmRate = new MMMessageAttribute<SolicitationFeeRateFormat3Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat3Choice.mmObject();
@@ -153,6 +153,16 @@ public class SolicitationFeeRateFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SolicitationFeeRateFormat3Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat3Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -188,7 +198,7 @@ public class SolicitationFeeRateFormat3Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SolicitationFeeRateFormat3Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<SolicitationFeeRateFormat3Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat3Choice.mmObject();
 			isDerived = false;
@@ -200,6 +210,16 @@ public class SolicitationFeeRateFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(SolicitationFeeRateFormat3Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat3Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "AmtToQty", required = true)
@@ -239,7 +259,7 @@ public class SolicitationFeeRateFormat3Choice {
 	 * definition} = "Ratio expressed as an amount to quantity ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SolicitationFeeRateFormat3Choice, AmountAndQuantityRatio2> mmAmountToQuantity = new MMMessageAssociationEnd<SolicitationFeeRateFormat3Choice, AmountAndQuantityRatio2>() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SolicitationFeeRateFormat3Choice.mmObject();
@@ -253,6 +273,16 @@ public class SolicitationFeeRateFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndQuantityRatio2.mmObject();
+		}
+
+		@Override
+		public AmountAndQuantityRatio2 getValue(SolicitationFeeRateFormat3Choice obj) {
+			return obj.getAmountToQuantity();
+		}
+
+		@Override
+		public void setValue(SolicitationFeeRateFormat3Choice obj, AmountAndQuantityRatio2 value) {
+			obj.setAmountToQuantity(value);
 		}
 	};
 

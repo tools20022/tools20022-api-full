@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification113;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class PartyIdentificationAndAccount147 {
 	 * PartyIdentificationAndAccount3.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount147, PartyIdentification113> mmPartyIdentification = new MMMessageAttribute<PartyIdentificationAndAccount147, PartyIdentification113>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount147.mmObject();
@@ -130,7 +131,17 @@ public class PartyIdentificationAndAccount147 {
 			previousVersion_lazy = () -> PartyIdentificationAndAccount3.mmPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			complexType_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public PartyIdentification113 getValue(PartyIdentificationAndAccount147 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount147 obj, PartyIdentification113 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -172,7 +183,7 @@ public class PartyIdentificationAndAccount147 {
 	 * PartyIdentificationAndAccount3.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount147, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<PartyIdentificationAndAccount147, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount147.mmObject();
@@ -185,6 +196,16 @@ public class PartyIdentificationAndAccount147 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentificationAndAccount147 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount147 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -207,7 +228,7 @@ public class PartyIdentificationAndAccount147 {
 		return partyIdentification;
 	}
 
-	public PartyIdentificationAndAccount147 setPartyIdentification(com.tools20022.repository.msg.PartyIdentification113 partyIdentification) {
+	public PartyIdentificationAndAccount147 setPartyIdentification(PartyIdentification113 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}

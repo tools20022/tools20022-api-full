@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.BICIdentification1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,7 +124,7 @@ public class StatusReportRequestV03 {
 	 * definition} = "Identifies the request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusReportRequestV03, MessageIdentification1> mmRequestIdentification = new MMMessageBuildingBlock<StatusReportRequestV03, MessageIdentification1>() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,12 +135,14 @@ public class StatusReportRequestV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusReportRequestV03.class.getMethod("getRequestIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(StatusReportRequestV03 obj) {
+			return obj.getRequestIdentification();
+		}
+
+		@Override
+		public void setValue(StatusReportRequestV03 obj, MessageIdentification1 value) {
+			obj.setRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "NttiesToBeRptd")
@@ -171,7 +172,7 @@ public class StatusReportRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEntitiesToBeReported = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusReportRequestV03, List<BICIdentification1>> mmEntitiesToBeReported = new MMMessageBuildingBlock<StatusReportRequestV03, List<BICIdentification1>>() {
 		{
 			xmlTag = "NttiesToBeRptd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +182,14 @@ public class StatusReportRequestV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusReportRequestV03.class.getMethod("getEntitiesToBeReported", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<BICIdentification1> getValue(StatusReportRequestV03 obj) {
+			return obj.getEntitiesToBeReported();
+		}
+
+		@Override
+		public void setValue(StatusReportRequestV03 obj, List<BICIdentification1> value) {
+			obj.setEntitiesToBeReported(value);
 		}
 	};
 

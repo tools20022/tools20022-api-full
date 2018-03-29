@@ -98,7 +98,7 @@ public class FixedOrRecurrentDate1Choice {
 	 * definition} = "Date on which the variation is triggered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFixedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FixedOrRecurrentDate1Choice, ISODate> mmFixedDate = new MMMessageAttribute<FixedOrRecurrentDate1Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FixedOrRecurrentDate1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class FixedOrRecurrentDate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(FixedOrRecurrentDate1Choice obj) {
+			return obj.getFixedDate();
+		}
+
+		@Override
+		public void setValue(FixedOrRecurrentDate1Choice obj, ISODate value) {
+			obj.setFixedDate(value);
 		}
 	};
 	@XmlElement(name = "RcrntDt", required = true)
@@ -141,7 +151,7 @@ public class FixedOrRecurrentDate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecurrentDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FixedOrRecurrentDate1Choice, DateInformation1> mmRecurrentDate = new MMMessageAssociationEnd<FixedOrRecurrentDate1Choice, DateInformation1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FixedOrRecurrentDate1Choice.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class FixedOrRecurrentDate1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateInformation1.mmObject();
+		}
+
+		@Override
+		public DateInformation1 getValue(FixedOrRecurrentDate1Choice obj) {
+			return obj.getRecurrentDate();
+		}
+
+		@Override
+		public void setValue(FixedOrRecurrentDate1Choice obj, DateInformation1 value) {
+			obj.setRecurrentDate(value);
 		}
 	};
 

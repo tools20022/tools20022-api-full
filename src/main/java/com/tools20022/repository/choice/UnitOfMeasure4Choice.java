@@ -116,7 +116,7 @@ public class UnitOfMeasure4Choice {
 	 * UnitOfMeasure2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOfMeasure4Choice, UnitOfMeasure4Code> mmCode = new MMMessageAttribute<UnitOfMeasure4Choice, UnitOfMeasure4Code>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure4Choice.mmObject();
@@ -129,6 +129,16 @@ public class UnitOfMeasure4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasure4Code.mmObject();
+		}
+
+		@Override
+		public UnitOfMeasure4Code getValue(UnitOfMeasure4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnitOfMeasure4Choice obj, UnitOfMeasure4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -170,7 +180,7 @@ public class UnitOfMeasure4Choice {
 	 * UnitOfMeasure2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnitOfMeasure4Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<UnitOfMeasure4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure4Choice.mmObject();
@@ -184,6 +194,16 @@ public class UnitOfMeasure4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(UnitOfMeasure4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnitOfMeasure4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

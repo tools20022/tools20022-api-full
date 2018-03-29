@@ -56,11 +56,15 @@ public class ConstraintTransactionOnSubAccountRule {
 	 */
 	public static final MMConstraint<SubAccountIdentification4> forSubAccountIdentification4 = new MMConstraint<SubAccountIdentification4>() {
 		{
-			validator = ConstraintTransactionOnSubAccountRule::checkSubAccountIdentification4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnSubAccountRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either TransactionOnAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed.";
 			owner_lazy = () -> SubAccountIdentification4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubAccountIdentification4 obj) throws Exception {
+			checkSubAccountIdentification4(obj);
 		}
 	};
 	/**
@@ -94,12 +98,16 @@ public class ConstraintTransactionOnSubAccountRule {
 	 */
 	public static final MMConstraint<SubAccountIdentification6> forSubAccountIdentification6 = new MMConstraint<SubAccountIdentification6>() {
 		{
-			validator = ConstraintTransactionOnSubAccountRule::checkSubAccountIdentification6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnSubAccountRule";
 			definition = "If ActivityIndicator is \"true\" or \"1\" (Yes), then TransactionOnSubAccount must be present. If ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnSubAccount is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionOnSubAccountRule.forSubAccountIdentification36);
 			owner_lazy = () -> SubAccountIdentification6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubAccountIdentification6 obj) throws Exception {
+			checkSubAccountIdentification6(obj);
 		}
 	};
 	/**
@@ -130,12 +138,16 @@ public class ConstraintTransactionOnSubAccountRule {
 	 */
 	public static final MMConstraint<SubAccountIdentification36> forSubAccountIdentification36 = new MMConstraint<SubAccountIdentification36>() {
 		{
-			validator = ConstraintTransactionOnSubAccountRule::checkSubAccountIdentification36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnSubAccountRule";
 			definition = "If ActivityIndicator is \"true\" or \"1\" (Yes), then TransactionOnSubAccount must be present. If ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnSubAccount is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionOnSubAccountRule.forSubAccountIdentification6;
 			owner_lazy = () -> SubAccountIdentification36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubAccountIdentification36 obj) throws Exception {
+			checkSubAccountIdentification36(obj);
 		}
 	};
 

@@ -54,11 +54,15 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleExecution5> forRedemptionMultipleExecution5 = new MMConstraint<RedemptionMultipleExecution5>() {
 		{
-			validator = ConstraintTotalSettlementCurrencyRule::checkRedemptionMultipleExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalSettlementCurrency Rule";
 			definition = "If TotalSettlementAmount is present, then Currency in IndividualExecutionDetails/SettlementAmount, must be the same in all occurrences of IndividualExecutionDetails.";
 			owner_lazy = () -> RedemptionMultipleExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleExecution5 obj) throws Exception {
+			checkRedemptionMultipleExecution5(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder6> forSubscriptionMultipleOrder6 = new MMConstraint<SubscriptionMultipleOrder6>() {
 		{
-			validator = ConstraintTotalSettlementCurrencyRule::checkSubscriptionMultipleOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalSettlementCurrency Rule";
 			definition = "If TotalSettlementAmount is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails.";
 			owner_lazy = () -> SubscriptionMultipleOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrder6 obj) throws Exception {
+			checkSubscriptionMultipleOrder6(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintTotalSettlementCurrencyRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleExecution5> forSubscriptionMultipleExecution5 = new MMConstraint<SubscriptionMultipleExecution5>() {
 		{
-			validator = ConstraintTotalSettlementCurrencyRule::checkSubscriptionMultipleExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalSettlementCurrency Rule";
 			definition = "If TotalSettlementAmount is present, then Currency in IndividualOrderDetails/SettlementAmount, if present, must be the same in all occurrences of IndividualOrderDetails.";
 			owner_lazy = () -> SubscriptionMultipleExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleExecution5 obj) throws Exception {
+			checkSubscriptionMultipleExecution5(obj);
 		}
 	};
 

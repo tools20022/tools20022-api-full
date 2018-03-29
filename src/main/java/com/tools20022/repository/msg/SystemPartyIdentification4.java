@@ -114,7 +114,7 @@ public class SystemPartyIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification4, BICFIIdentifier> mmIdentification = new MMMessageAttribute<SystemPartyIdentification4, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification4.mmObject();
@@ -126,6 +126,16 @@ public class SystemPartyIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(SystemPartyIdentification4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification4 obj, BICFIIdentifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "RspnsblPtyId")
@@ -165,7 +175,7 @@ public class SystemPartyIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification4, Optional<CSDOrNCB1Choice>> mmResponsiblePartyIdentification = new MMMessageAttribute<SystemPartyIdentification4, Optional<CSDOrNCB1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification4.mmObject();
@@ -177,6 +187,16 @@ public class SystemPartyIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CSDOrNCB1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CSDOrNCB1Choice> getValue(SystemPartyIdentification4 obj) {
+			return obj.getResponsiblePartyIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification4 obj, Optional<CSDOrNCB1Choice> value) {
+			obj.setResponsiblePartyIdentification(value.orElse(null));
 		}
 	};
 

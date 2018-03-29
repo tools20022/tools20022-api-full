@@ -25,6 +25,9 @@ import com.tools20022.repository.entity.DebtorRole;
 import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Creditor3;
+import com.tools20022.repository.msg.Debtor3;
+import com.tools20022.repository.msg.MandateRelatedInformation13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -65,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CardDirectDebit1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -110,7 +113,7 @@ public class CardDirectDebit1 {
 	 * definition} = "Information related to the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardDirectDebit1, Optional<Debtor3>> mmDebtorIdentification = new MMMessageAssociationEnd<CardDirectDebit1, Optional<Debtor3>>() {
 		{
 			businessComponentTrace_lazy = () -> DebtorRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardDirectDebit1.mmObject();
@@ -122,7 +125,17 @@ public class CardDirectDebit1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Debtor3.mmObject();
+			type_lazy = () -> Debtor3.mmObject();
+		}
+
+		@Override
+		public Optional<Debtor3> getValue(CardDirectDebit1 obj) {
+			return obj.getDebtorIdentification();
+		}
+
+		@Override
+		public void setValue(CardDirectDebit1 obj, Optional<Debtor3> value) {
+			obj.setDebtorIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrId", required = true)
@@ -156,7 +169,7 @@ public class CardDirectDebit1 {
 	 * definition} = "Information related to the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardDirectDebit1, Creditor3> mmCreditorIdentification = new MMMessageAssociationEnd<CardDirectDebit1, Creditor3>() {
 		{
 			businessComponentTrace_lazy = () -> CreditorRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardDirectDebit1.mmObject();
@@ -168,7 +181,17 @@ public class CardDirectDebit1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Creditor3.mmObject();
+			type_lazy = () -> Creditor3.mmObject();
+		}
+
+		@Override
+		public Creditor3 getValue(CardDirectDebit1 obj) {
+			return obj.getCreditorIdentification();
+		}
+
+		@Override
+		public void setValue(CardDirectDebit1 obj, Creditor3 value) {
+			obj.setCreditorIdentification(value);
 		}
 	};
 	@XmlElement(name = "MndtRltdInf", required = true)
@@ -207,7 +230,7 @@ public class CardDirectDebit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMandateRelatedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardDirectDebit1, MandateRelatedInformation13> mmMandateRelatedInformation = new MMMessageAssociationEnd<CardDirectDebit1, MandateRelatedInformation13>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardDirectDebit1.mmObject();
@@ -219,7 +242,17 @@ public class CardDirectDebit1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation13.mmObject();
+			type_lazy = () -> MandateRelatedInformation13.mmObject();
+		}
+
+		@Override
+		public MandateRelatedInformation13 getValue(CardDirectDebit1 obj) {
+			return obj.getMandateRelatedInformation();
+		}
+
+		@Override
+		public void setValue(CardDirectDebit1 obj, MandateRelatedInformation13 value) {
+			obj.setMandateRelatedInformation(value);
 		}
 	};
 
@@ -230,7 +263,7 @@ public class CardDirectDebit1 {
 						com.tools20022.repository.msg.CardDirectDebit1.mmMandateRelatedInformation);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardDirectDebit1";
 				definition = "Element containing all information needed for a card initiating direct debit.";
 			}
@@ -242,7 +275,7 @@ public class CardDirectDebit1 {
 		return debtorIdentification == null ? Optional.empty() : Optional.of(debtorIdentification);
 	}
 
-	public CardDirectDebit1 setDebtorIdentification(com.tools20022.repository.msg.Debtor3 debtorIdentification) {
+	public CardDirectDebit1 setDebtorIdentification(Debtor3 debtorIdentification) {
 		this.debtorIdentification = debtorIdentification;
 		return this;
 	}
@@ -251,7 +284,7 @@ public class CardDirectDebit1 {
 		return creditorIdentification;
 	}
 
-	public CardDirectDebit1 setCreditorIdentification(com.tools20022.repository.msg.Creditor3 creditorIdentification) {
+	public CardDirectDebit1 setCreditorIdentification(Creditor3 creditorIdentification) {
 		this.creditorIdentification = Objects.requireNonNull(creditorIdentification);
 		return this;
 	}
@@ -260,7 +293,7 @@ public class CardDirectDebit1 {
 		return mandateRelatedInformation;
 	}
 
-	public CardDirectDebit1 setMandateRelatedInformation(com.tools20022.repository.msg.MandateRelatedInformation13 mandateRelatedInformation) {
+	public CardDirectDebit1 setMandateRelatedInformation(MandateRelatedInformation13 mandateRelatedInformation) {
 		this.mandateRelatedInformation = Objects.requireNonNull(mandateRelatedInformation);
 		return this;
 	}

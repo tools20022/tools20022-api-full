@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PartyIdentification24Choice;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NameAndAddress5;
@@ -116,7 +117,7 @@ public class PartyIdentification25Choice {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification25Choice, PartyIdentification24Choice> mmIdentification = new MMMessageAttribute<PartyIdentification25Choice, PartyIdentification24Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification25Choice.mmObject();
@@ -127,7 +128,17 @@ public class PartyIdentification25Choice {
 			definition = "Unique and unambiguous way to identify an organisation.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.PartyIdentification24Choice.mmObject();
+			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification24Choice getValue(PartyIdentification25Choice obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification25Choice obj, PartyIdentification24Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -163,7 +174,7 @@ public class PartyIdentification25Choice {
 	 * definition} = "Postal address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification25Choice, NameAndAddress5> mmNameAndAddress = new MMMessageAssociationEnd<PartyIdentification25Choice, NameAndAddress5>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification25Choice.mmObject();
@@ -176,6 +187,16 @@ public class PartyIdentification25Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public NameAndAddress5 getValue(PartyIdentification25Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification25Choice obj, NameAndAddress5 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 
@@ -198,7 +219,7 @@ public class PartyIdentification25Choice {
 		return identification;
 	}
 
-	public PartyIdentification25Choice setIdentification(com.tools20022.repository.choice.PartyIdentification24Choice identification) {
+	public PartyIdentification25Choice setIdentification(PartyIdentification24Choice identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

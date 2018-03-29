@@ -148,7 +148,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is accepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmAccepted = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -161,6 +161,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getAccepted();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setAccepted(value);
 		}
 	};
 	@XmlElement(name = "Cmpltd", required = true)
@@ -196,7 +206,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is completed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCompleted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmCompleted = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -209,6 +219,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getCompleted();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setCompleted(value);
 		}
 	};
 	@XmlElement(name = "Dnd", required = true)
@@ -244,7 +264,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is denied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDenied = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmDenied = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -257,6 +277,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getDenied();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setDenied(value);
 		}
 	};
 	@XmlElement(name = "InRpr", required = true)
@@ -292,7 +322,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is In repair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmInRepair = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -305,6 +335,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getInRepair();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setInRepair(value);
 		}
 	};
 	@XmlElement(name = "PrtlRplcmntAccptd", required = true)
@@ -340,7 +380,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is PartialReplacementAccepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartialReplacementAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmPartialReplacementAccepted = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -353,6 +393,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getPartialReplacementAccepted();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setPartialReplacementAccepted(value);
 		}
 	};
 	@XmlElement(name = "Pdg", required = true)
@@ -388,7 +438,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmPending = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -401,6 +451,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getPending();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setPending(value);
 		}
 	};
 	@XmlElement(name = "RcvdAtIntrmy", required = true)
@@ -436,7 +496,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is ReceivedAtIntermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivedAtIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmReceivedAtIntermediary = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -449,6 +509,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getReceivedAtIntermediary();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setReceivedAtIntermediary(value);
 		}
 	};
 	@XmlElement(name = "RcvdAtStockXchg", required = true)
@@ -484,7 +554,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is ReceivedAtStockExchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivedAtStockExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmReceivedAtStockExchange = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -497,6 +567,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getReceivedAtStockExchange();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setReceivedAtStockExchange(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -532,7 +612,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmRejected = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -545,6 +625,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "ModReqd", required = true)
@@ -582,7 +672,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * definition} = "Replacement of the trade is Modification Requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationRequested = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReplacementProcessingStatus7Choice, ProprietaryReason1> mmModificationRequested = new MMMessageAttribute<ReplacementProcessingStatus7Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -594,6 +684,16 @@ public class ReplacementProcessingStatus7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getModificationRequested();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, ProprietaryReason1 value) {
+			obj.setModificationRequested(value);
 		}
 	};
 	@XmlElement(name = "PrtrySts")
@@ -632,7 +732,7 @@ public class ReplacementProcessingStatus7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, Optional<ProprietaryStatusAndReason1>> mmProprietaryStatus = new MMMessageAssociationEnd<ReplacementProcessingStatus7Choice, Optional<ProprietaryStatusAndReason1>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
@@ -645,6 +745,16 @@ public class ReplacementProcessingStatus7Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryStatusAndReason1> getValue(ReplacementProcessingStatus7Choice obj) {
+			return obj.getProprietaryStatus();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus7Choice obj, Optional<ProprietaryStatusAndReason1> value) {
+			obj.setProprietaryStatus(value.orElse(null));
 		}
 	};
 

@@ -27,6 +27,10 @@ import com.tools20022.repository.choice.SafekeepingPlaceFormat7Choice;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price2;
+import com.tools20022.repository.msg.SecuritiesAccount19;
+import com.tools20022.repository.msg.SecurityIdentification14;
+import com.tools20022.repository.msg.SettlementDetails88;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -164,7 +168,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmCollateralIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCollateral4, Optional<Max35Text>> mmCollateralIdentification = new MMMessageAttribute<SecuritiesCollateral4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
 			isDerived = false;
@@ -177,6 +181,16 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesCollateral4 obj) {
+			return obj.getCollateralIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<Max35Text> value) {
+			obj.setCollateralIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsstNb")
@@ -218,7 +232,7 @@ public class SecuritiesCollateral4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssetNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCollateral4, Optional<Max35Text>> mmAssetNumber = new MMMessageAttribute<SecuritiesCollateral4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
 			isDerived = false;
@@ -230,6 +244,16 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesCollateral4 obj) {
+			return obj.getAssetNumber();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<Max35Text> value) {
+			obj.setAssetNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyId", required = true)
@@ -280,7 +304,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCollateral4, SecurityIdentification14> mmSecurityIdentification = new MMMessageAttribute<SecuritiesCollateral4, SecurityIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -293,7 +317,17 @@ public class SecuritiesCollateral4 {
 			previousVersion_lazy = () -> SecuritiesCollateral3.mmSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			complexType_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification14 getValue(SecuritiesCollateral4 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, SecurityIdentification14 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -344,7 +378,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCollateral4, Optional<DateAndDateTimeChoice>> mmMaturityDate = new MMMessageAttribute<SecuritiesCollateral4, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -358,6 +392,16 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(SecuritiesCollateral4 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtdCvrgInd")
@@ -405,7 +449,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmLimitedCoverageIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitedCoverageIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCollateral4, Optional<YesNoIndicator>> mmLimitedCoverageIndicator = new MMMessageAttribute<SecuritiesCollateral4, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
 			isDerived = false;
@@ -418,6 +462,16 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesCollateral4 obj) {
+			return obj.getLimitedCoverageIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<YesNoIndicator> value) {
+			obj.setLimitedCoverageIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -467,7 +521,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCollateral4, FinancialInstrumentQuantity1Choice> mmQuantity = new MMMessageAssociationEnd<SecuritiesCollateral4, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -482,6 +536,16 @@ public class SecuritiesCollateral4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(SecuritiesCollateral4 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -529,7 +593,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCollateral4, Optional<Price2>> mmPrice = new MMMessageAssociationEnd<SecuritiesCollateral4, Optional<Price2>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -543,7 +607,17 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price2.mmObject();
+			type_lazy = () -> Price2.mmObject();
+		}
+
+		@Override
+		public Optional<Price2> getValue(SecuritiesCollateral4 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<Price2> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktVal")
@@ -594,7 +668,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmMarketValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCollateral4, Optional<ActiveCurrencyAndAmount>> mmMarketValue = new MMMessageAttribute<SecuritiesCollateral4, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -608,6 +682,16 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SecuritiesCollateral4 obj) {
+			return obj.getMarketValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMarketValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Hrcut")
@@ -659,7 +743,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmHaircut}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCollateral4, Optional<PercentageRate>> mmHaircut = new MMMessageAttribute<SecuritiesCollateral4, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -673,6 +757,16 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(SecuritiesCollateral4 obj) {
+			return obj.getHaircut();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<PercentageRate> value) {
+			obj.setHaircut(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollVal")
@@ -724,7 +818,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmCollateralValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCollateral4, Optional<ActiveCurrencyAndAmount>> mmCollateralValue = new MMMessageAttribute<SecuritiesCollateral4, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmRiskAdjustedValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -738,6 +832,16 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SecuritiesCollateral4 obj) {
+			return obj.getCollateralValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCollateralValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -787,7 +891,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCollateral4, Optional<ISODate>> mmValueDate = new MMMessageAttribute<SecuritiesCollateral4, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -801,6 +905,16 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SecuritiesCollateral4 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<ISODate> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -849,7 +963,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCollateral4, Optional<SecuritiesAccount19>> mmSafekeepingAccount = new MMMessageAssociationEnd<SecuritiesCollateral4, Optional<SecuritiesAccount19>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -863,7 +977,17 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount19> getValue(SecuritiesCollateral4 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<SecuritiesAccount19> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc", required = true)
@@ -915,7 +1039,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmSafekeepingPlace}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCollateral4, SafekeepingPlaceFormat7Choice> mmSafekeepingPlace = new MMMessageAssociationEnd<SecuritiesCollateral4, SafekeepingPlaceFormat7Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -930,6 +1054,16 @@ public class SecuritiesCollateral4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat7Choice.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlaceFormat7Choice getValue(SecuritiesCollateral4 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, SafekeepingPlaceFormat7Choice value) {
+			obj.setSafekeepingPlace(value);
 		}
 	};
 	@XmlElement(name = "SttlmParams")
@@ -980,7 +1114,7 @@ public class SecuritiesCollateral4 {
 	 * SecuritiesCollateral3.mmSettlementParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCollateral4, Optional<SettlementDetails88>> mmSettlementParameters = new MMMessageAssociationEnd<SecuritiesCollateral4, Optional<SettlementDetails88>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral4.mmObject();
@@ -994,7 +1128,17 @@ public class SecuritiesCollateral4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementDetails88.mmObject();
+			type_lazy = () -> SettlementDetails88.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementDetails88> getValue(SecuritiesCollateral4 obj) {
+			return obj.getSettlementParameters();
+		}
+
+		@Override
+		public void setValue(SecuritiesCollateral4 obj, Optional<SettlementDetails88> value) {
+			obj.setSettlementParameters(value.orElse(null));
 		}
 	};
 
@@ -1041,7 +1185,7 @@ public class SecuritiesCollateral4 {
 		return securityIdentification;
 	}
 
-	public SecuritiesCollateral4 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification14 securityIdentification) {
+	public SecuritiesCollateral4 setSecurityIdentification(SecurityIdentification14 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}
@@ -1077,7 +1221,7 @@ public class SecuritiesCollateral4 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public SecuritiesCollateral4 setPrice(com.tools20022.repository.msg.Price2 price) {
+	public SecuritiesCollateral4 setPrice(Price2 price) {
 		this.price = price;
 		return this;
 	}
@@ -1122,7 +1266,7 @@ public class SecuritiesCollateral4 {
 		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public SecuritiesCollateral4 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount19 safekeepingAccount) {
+	public SecuritiesCollateral4 setSafekeepingAccount(SecuritiesAccount19 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
 		return this;
 	}
@@ -1140,7 +1284,7 @@ public class SecuritiesCollateral4 {
 		return settlementParameters == null ? Optional.empty() : Optional.of(settlementParameters);
 	}
 
-	public SecuritiesCollateral4 setSettlementParameters(com.tools20022.repository.msg.SettlementDetails88 settlementParameters) {
+	public SecuritiesCollateral4 setSettlementParameters(SettlementDetails88 settlementParameters) {
 		this.settlementParameters = settlementParameters;
 		return this;
 	}

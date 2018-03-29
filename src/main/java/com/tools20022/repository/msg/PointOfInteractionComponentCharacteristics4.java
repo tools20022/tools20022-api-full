@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommunicationCharacteristics3;
+import com.tools20022.repository.msg.CryptographicKey13;
+import com.tools20022.repository.msg.MemoryCharacteristics1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -65,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PointOfInteractionComponentCharacteristics4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -84,7 +87,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Mmry")
-	protected List<com.tools20022.repository.msg.MemoryCharacteristics1> memory;
+	protected List<MemoryCharacteristics1> memory;
 	/**
 	 * 
 	 <p>
@@ -118,7 +121,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 	 * PointOfInteractionComponentCharacteristics3.mmMemory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentCharacteristics4, List<MemoryCharacteristics1>> mmMemory = new MMMessageAttribute<PointOfInteractionComponentCharacteristics4, List<MemoryCharacteristics1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4.mmObject();
 			isDerived = false;
@@ -128,11 +131,21 @@ public class PointOfInteractionComponentCharacteristics4 {
 			definition = "Memory characteristics of the component.";
 			previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics3.mmMemory;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.MemoryCharacteristics1.mmObject();
+			complexType_lazy = () -> MemoryCharacteristics1.mmObject();
+		}
+
+		@Override
+		public List<MemoryCharacteristics1> getValue(PointOfInteractionComponentCharacteristics4 obj) {
+			return obj.getMemory();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics4 obj, List<MemoryCharacteristics1> value) {
+			obj.setMemory(value);
 		}
 	};
 	@XmlElement(name = "Com")
-	protected List<com.tools20022.repository.msg.CommunicationCharacteristics3> communication;
+	protected List<CommunicationCharacteristics3> communication;
 	/**
 	 * 
 	 <p>
@@ -168,7 +181,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 	 * PointOfInteractionComponentCharacteristics3.mmCommunication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommunication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentCharacteristics4, List<CommunicationCharacteristics3>> mmCommunication = new MMMessageAttribute<PointOfInteractionComponentCharacteristics4, List<CommunicationCharacteristics3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4.mmObject();
 			isDerived = false;
@@ -178,7 +191,17 @@ public class PointOfInteractionComponentCharacteristics4 {
 			definition = "Low level communication of the hardware or software component toward another component or an external entity.";
 			previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics3.mmCommunication;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics3.mmObject();
+			complexType_lazy = () -> CommunicationCharacteristics3.mmObject();
+		}
+
+		@Override
+		public List<CommunicationCharacteristics3> getValue(PointOfInteractionComponentCharacteristics4 obj) {
+			return obj.getCommunication();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics4 obj, List<CommunicationCharacteristics3> value) {
+			obj.setCommunication(value);
 		}
 	};
 	@XmlElement(name = "SctyAccsMdls")
@@ -215,7 +238,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 	 * PointOfInteractionComponentCharacteristics3.mmSecurityAccessModules}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityAccessModules = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentCharacteristics4, Optional<Number>> mmSecurityAccessModules = new MMMessageAttribute<PointOfInteractionComponentCharacteristics4, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4.mmObject();
 			isDerived = false;
@@ -227,6 +250,16 @@ public class PointOfInteractionComponentCharacteristics4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(PointOfInteractionComponentCharacteristics4 obj) {
+			return obj.getSecurityAccessModules();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics4 obj, Optional<Number> value) {
+			obj.setSecurityAccessModules(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcbrIdntyMdls")
@@ -263,7 +296,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 	 * PointOfInteractionComponentCharacteristics3.mmSubscriberIdentityModules}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriberIdentityModules = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentCharacteristics4, Optional<Number>> mmSubscriberIdentityModules = new MMMessageAttribute<PointOfInteractionComponentCharacteristics4, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4.mmObject();
 			isDerived = false;
@@ -276,9 +309,19 @@ public class PointOfInteractionComponentCharacteristics4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Optional<Number> getValue(PointOfInteractionComponentCharacteristics4 obj) {
+			return obj.getSubscriberIdentityModules();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics4 obj, Optional<Number> value) {
+			obj.setSubscriberIdentityModules(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SctyElmt")
-	protected List<com.tools20022.repository.msg.CryptographicKey13> securityElement;
+	protected List<CryptographicKey13> securityElement;
 	/**
 	 * 
 	 <p>
@@ -305,7 +348,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 	 * definition} = "Security characteristics of the component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityElement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PointOfInteractionComponentCharacteristics4, List<CryptographicKey13>> mmSecurityElement = new MMMessageAssociationEnd<PointOfInteractionComponentCharacteristics4, List<CryptographicKey13>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4.mmObject();
 			isDerived = false;
@@ -315,7 +358,17 @@ public class PointOfInteractionComponentCharacteristics4 {
 			definition = "Security characteristics of the component.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey13.mmObject();
+			type_lazy = () -> CryptographicKey13.mmObject();
+		}
+
+		@Override
+		public List<CryptographicKey13> getValue(PointOfInteractionComponentCharacteristics4 obj) {
+			return obj.getSecurityElement();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentCharacteristics4 obj, List<CryptographicKey13> value) {
+			obj.setSecurityElement(value);
 		}
 	};
 
@@ -326,7 +379,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 						com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4.mmSecurityAccessModules, com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4.mmSubscriberIdentityModules,
 						com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4.mmSecurityElement);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentCharacteristics4";
 				definition = "Physical and logical characteristics of a POI component (Point of Interaction).";
 				previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics3.mmObject();
@@ -339,7 +392,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 		return memory == null ? memory = new ArrayList<>() : memory;
 	}
 
-	public PointOfInteractionComponentCharacteristics4 setMemory(List<com.tools20022.repository.msg.MemoryCharacteristics1> memory) {
+	public PointOfInteractionComponentCharacteristics4 setMemory(List<MemoryCharacteristics1> memory) {
 		this.memory = Objects.requireNonNull(memory);
 		return this;
 	}
@@ -348,7 +401,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 		return communication == null ? communication = new ArrayList<>() : communication;
 	}
 
-	public PointOfInteractionComponentCharacteristics4 setCommunication(List<com.tools20022.repository.msg.CommunicationCharacteristics3> communication) {
+	public PointOfInteractionComponentCharacteristics4 setCommunication(List<CommunicationCharacteristics3> communication) {
 		this.communication = Objects.requireNonNull(communication);
 		return this;
 	}
@@ -375,7 +428,7 @@ public class PointOfInteractionComponentCharacteristics4 {
 		return securityElement == null ? securityElement = new ArrayList<>() : securityElement;
 	}
 
-	public PointOfInteractionComponentCharacteristics4 setSecurityElement(List<com.tools20022.repository.msg.CryptographicKey13> securityElement) {
+	public PointOfInteractionComponentCharacteristics4 setSecurityElement(List<CryptographicKey13> securityElement) {
 		this.securityElement = Objects.requireNonNull(securityElement);
 		return this;
 	}

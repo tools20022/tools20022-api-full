@@ -128,7 +128,7 @@ public class CentralCounterPartyEligibility1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CentralCounterPartyEligibility1Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<CentralCounterPartyEligibility1Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Settlement.mmCentralCounterpartyEligibilityIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice.mmObject();
@@ -142,6 +142,16 @@ public class CentralCounterPartyEligibility1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CentralCounterPartyEligibility1Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(CentralCounterPartyEligibility1Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -192,7 +202,7 @@ public class CentralCounterPartyEligibility1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CentralCounterPartyEligibility1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<CentralCounterPartyEligibility1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Settlement.mmCentralCounterpartyEligibilityIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CentralCounterPartyEligibility1Choice.mmObject();
@@ -206,6 +216,16 @@ public class CentralCounterPartyEligibility1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CentralCounterPartyEligibility1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CentralCounterPartyEligibility1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

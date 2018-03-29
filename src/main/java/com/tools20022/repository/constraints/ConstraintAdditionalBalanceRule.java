@@ -58,12 +58,16 @@ public class ConstraintAdditionalBalanceRule {
 	 */
 	public static final MMConstraint<CashOutForecast5> forCashOutForecast5 = new MMConstraint<CashOutForecast5>() {
 		{
-			validator = ConstraintAdditionalBalanceRule::checkCashOutForecast5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBalanceRule";
 			definition = "If AdditionalBalance is present, then at least one or more elements in the list (AdditionalBalance/TotalUnitsFromUnitOrders, AdditionalBalance/TotalUnitsFromCashOrders, AdditionalBalance/TotalCashFromUnitOrders, AdditionalBalance/TotalCashFromCashOrders) must be present.";
 			owner_lazy = () -> CashOutForecast5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromCashOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromCashOrders</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashOutForecast5 obj) throws Exception {
+			checkCashOutForecast5(obj);
 		}
 	};
 	/**
@@ -93,12 +97,16 @@ public class ConstraintAdditionalBalanceRule {
 	 */
 	public static final MMConstraint<NetCashForecast4> forNetCashForecast4 = new MMConstraint<NetCashForecast4>() {
 		{
-			validator = ConstraintAdditionalBalanceRule::checkNetCashForecast4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBalanceRule";
 			definition = "If AdditionalBalance is present, then at least one or more elements in the list (AdditionalBalance/TotalUnitsFromUnitOrders, AdditionalBalance/TotalUnitsFromCashOrders, AdditionalBalance/TotalCashFromUnitOrders, AdditionalBalance/TotalCashFromCashOrders) must be present.";
 			owner_lazy = () -> NetCashForecast4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromCashOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromCashOrders</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(NetCashForecast4 obj) throws Exception {
+			checkNetCashForecast4(obj);
 		}
 	};
 	/**
@@ -128,12 +136,16 @@ public class ConstraintAdditionalBalanceRule {
 	 */
 	public static final MMConstraint<CashInForecast5> forCashInForecast5 = new MMConstraint<CashInForecast5>() {
 		{
-			validator = ConstraintAdditionalBalanceRule::checkCashInForecast5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBalanceRule";
 			definition = "If AdditionalBalance is present, then at least one or more elements in the list (AdditionalBalance/TotalUnitsFromUnitOrders, AdditionalBalance/TotalUnitsFromCashOrders, AdditionalBalance/TotalCashFromUnitOrders, AdditionalBalance/TotalCashFromCashOrders) must be present.";
 			owner_lazy = () -> CashInForecast5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromCashOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromCashOrders</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashInForecast5 obj) throws Exception {
+			checkCashInForecast5(obj);
 		}
 	};
 	/**
@@ -163,12 +175,16 @@ public class ConstraintAdditionalBalanceRule {
 	 */
 	public static final MMConstraint<CashOutForecast6> forCashOutForecast6 = new MMConstraint<CashOutForecast6>() {
 		{
-			validator = ConstraintAdditionalBalanceRule::checkCashOutForecast6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBalanceRule";
 			definition = "If AdditionalBalance is present, then at least one or more elements in the list (AdditionalBalance/TotalUnitsFromUnitOrders, AdditionalBalance/TotalUnitsFromCashOrders, AdditionalBalance/TotalCashFromUnitOrders, AdditionalBalance/TotalCashFromCashOrders) must be present.";
 			owner_lazy = () -> CashOutForecast6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromCashOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromCashOrders</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashOutForecast6 obj) throws Exception {
+			checkCashOutForecast6(obj);
 		}
 	};
 	/**
@@ -198,12 +214,16 @@ public class ConstraintAdditionalBalanceRule {
 	 */
 	public static final MMConstraint<CashInForecast6> forCashInForecast6 = new MMConstraint<CashInForecast6>() {
 		{
-			validator = ConstraintAdditionalBalanceRule::checkCashInForecast6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBalanceRule";
 			definition = "If AdditionalBalance is present, then at least one or more elements in the list (AdditionalBalance/TotalUnitsFromUnitOrders, AdditionalBalance/TotalUnitsFromCashOrders, AdditionalBalance/TotalCashFromUnitOrders, AdditionalBalance/TotalCashFromCashOrders) must be present.";
 			owner_lazy = () -> CashInForecast6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalUnitsFromCashOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromUnitOrders</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance/TotalCashFromCashOrders</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalBalance</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashInForecast6 obj) throws Exception {
+			checkCashInForecast6(obj);
 		}
 	};
 

@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InstructionForMeeting;
 import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.VoteInstructionForMeetingResolution;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +116,7 @@ public class VoteInstruction {
 	 * definition} = "Identifies the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VoteInstruction, Max35Text> mmIdentification = new MMMessageAttribute<VoteInstruction, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
 			isDerived = false;
@@ -126,6 +127,16 @@ public class VoteInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(VoteInstruction obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(VoteInstruction obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt")
@@ -162,7 +173,7 @@ public class VoteInstruction {
 	 * definition} = "Date at which the instruction must b e executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VoteInstruction, Optional<ISODateTime>> mmRequestedExecutionDate = new MMMessageAttribute<VoteInstruction, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
@@ -174,6 +185,16 @@ public class VoteInstruction {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(VoteInstruction obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(VoteInstruction obj, Optional<ISODateTime> value) {
+			obj.setRequestedExecutionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VoteExctnConf", required = true)
@@ -212,7 +233,7 @@ public class VoteInstruction {
 	 * "Indicates that a Vote execution confirmation is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVoteExecutionConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VoteInstruction, YesNoIndicator> mmVoteExecutionConfirmation = new MMMessageAttribute<VoteInstruction, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteExecutionConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
@@ -224,6 +245,16 @@ public class VoteInstruction {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(VoteInstruction obj) {
+			return obj.getVoteExecutionConfirmation();
+		}
+
+		@Override
+		public void setValue(VoteInstruction obj, YesNoIndicator value) {
+			obj.setVoteExecutionConfirmation(value);
 		}
 	};
 	@XmlElement(name = "VotePerRsltn", required = true)
@@ -259,7 +290,7 @@ public class VoteInstruction {
 	 * definition} = "Details of the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVotePerResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteInstruction, VoteChoice> mmVotePerResolution = new MMMessageAssociationEnd<VoteInstruction, VoteChoice>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
@@ -272,6 +303,16 @@ public class VoteInstruction {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> VoteChoice.mmObject();
+		}
+
+		@Override
+		public VoteChoice getValue(VoteInstruction obj) {
+			return obj.getVotePerResolution();
+		}
+
+		@Override
+		public void setValue(VoteInstruction obj, VoteChoice value) {
+			obj.setVotePerResolution(value);
 		}
 	};
 	@XmlElement(name = "VoteInstrForMtgRsltn")
@@ -310,7 +351,7 @@ public class VoteInstruction {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteInstruction, Optional<VoteInstructionForMeetingResolution>> mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd<VoteInstruction, Optional<VoteInstructionForMeetingResolution>>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
@@ -322,7 +363,17 @@ public class VoteInstruction {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.VoteInstructionForMeetingResolution.mmObject();
+			type_lazy = () -> VoteInstructionForMeetingResolution.mmObject();
+		}
+
+		@Override
+		public Optional<VoteInstructionForMeetingResolution> getValue(VoteInstruction obj) {
+			return obj.getVoteInstructionForMeetingResolution();
+		}
+
+		@Override
+		public void setValue(VoteInstruction obj, Optional<VoteInstructionForMeetingResolution> value) {
+			obj.setVoteInstructionForMeetingResolution(value.orElse(null));
 		}
 	};
 
@@ -382,7 +433,7 @@ public class VoteInstruction {
 		return voteInstructionForMeetingResolution == null ? Optional.empty() : Optional.of(voteInstructionForMeetingResolution);
 	}
 
-	public VoteInstruction setVoteInstructionForMeetingResolution(com.tools20022.repository.msg.VoteInstructionForMeetingResolution voteInstructionForMeetingResolution) {
+	public VoteInstruction setVoteInstructionForMeetingResolution(VoteInstructionForMeetingResolution voteInstructionForMeetingResolution) {
 		this.voteInstructionForMeetingResolution = voteInstructionForMeetingResolution;
 		return this;
 	}

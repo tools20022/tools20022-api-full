@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +109,7 @@ public class BalanceAmounts6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHoldingValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceAmounts6, AmountAndDirection14> mmHoldingValue = new MMMessageAssociationEnd<BalanceAmounts6, AmountAndDirection14>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts6.mmObject();
@@ -120,7 +121,17 @@ public class BalanceAmounts6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
+			type_lazy = () -> AmountAndDirection14.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection14 getValue(BalanceAmounts6 obj) {
+			return obj.getHoldingValue();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts6 obj, AmountAndDirection14 value) {
+			obj.setHoldingValue(value);
 		}
 	};
 	@XmlElement(name = "BookVal")
@@ -158,7 +169,7 @@ public class BalanceAmounts6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBookValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceAmounts6, Optional<AmountAndDirection14>> mmBookValue = new MMMessageAssociationEnd<BalanceAmounts6, Optional<AmountAndDirection14>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts6.mmObject();
@@ -170,7 +181,17 @@ public class BalanceAmounts6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
+			type_lazy = () -> AmountAndDirection14.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection14> getValue(BalanceAmounts6 obj) {
+			return obj.getBookValue();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts6 obj, Optional<AmountAndDirection14> value) {
+			obj.setBookValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UrlsdGnLoss")
@@ -206,7 +227,7 @@ public class BalanceAmounts6 {
 	 * definition} = "Difference between holding value and the book value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnrealisedGainLoss = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceAmounts6, Optional<AmountAndDirection14>> mmUnrealisedGainLoss = new MMMessageAssociationEnd<BalanceAmounts6, Optional<AmountAndDirection14>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmUnrealisedGainOrLoss;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts6.mmObject();
@@ -218,7 +239,17 @@ public class BalanceAmounts6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
+			type_lazy = () -> AmountAndDirection14.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection14> getValue(BalanceAmounts6 obj) {
+			return obj.getUnrealisedGainLoss();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts6 obj, Optional<AmountAndDirection14> value) {
+			obj.setUnrealisedGainLoss(value.orElse(null));
 		}
 	};
 
@@ -241,7 +272,7 @@ public class BalanceAmounts6 {
 		return holdingValue;
 	}
 
-	public BalanceAmounts6 setHoldingValue(com.tools20022.repository.msg.AmountAndDirection14 holdingValue) {
+	public BalanceAmounts6 setHoldingValue(AmountAndDirection14 holdingValue) {
 		this.holdingValue = Objects.requireNonNull(holdingValue);
 		return this;
 	}
@@ -250,7 +281,7 @@ public class BalanceAmounts6 {
 		return bookValue == null ? Optional.empty() : Optional.of(bookValue);
 	}
 
-	public BalanceAmounts6 setBookValue(com.tools20022.repository.msg.AmountAndDirection14 bookValue) {
+	public BalanceAmounts6 setBookValue(AmountAndDirection14 bookValue) {
 		this.bookValue = bookValue;
 		return this;
 	}
@@ -259,7 +290,7 @@ public class BalanceAmounts6 {
 		return unrealisedGainLoss == null ? Optional.empty() : Optional.of(unrealisedGainLoss);
 	}
 
-	public BalanceAmounts6 setUnrealisedGainLoss(com.tools20022.repository.msg.AmountAndDirection14 unrealisedGainLoss) {
+	public BalanceAmounts6 setUnrealisedGainLoss(AmountAndDirection14 unrealisedGainLoss) {
 		this.unrealisedGainLoss = unrealisedGainLoss;
 		return this;
 	}

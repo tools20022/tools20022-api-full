@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RelativeDistinguishedName1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -66,7 +67,7 @@ public class CertificateIssuer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "RltvDstngshdNm", required = true)
-	protected List<com.tools20022.repository.msg.RelativeDistinguishedName1> relativeDistinguishedName;
+	protected List<RelativeDistinguishedName1> relativeDistinguishedName;
 	/**
 	 * 
 	 <p>
@@ -94,7 +95,7 @@ public class CertificateIssuer1 {
 	 * definition} = "Relative distinguished name inside a X.509 certificate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelativeDistinguishedName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateIssuer1, List<RelativeDistinguishedName1>> mmRelativeDistinguishedName = new MMMessageAssociationEnd<CertificateIssuer1, List<RelativeDistinguishedName1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateIssuer1.mmObject();
 			isDerived = false;
@@ -104,7 +105,17 @@ public class CertificateIssuer1 {
 			definition = "Relative distinguished name inside a X.509 certificate.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RelativeDistinguishedName1.mmObject();
+			type_lazy = () -> RelativeDistinguishedName1.mmObject();
+		}
+
+		@Override
+		public List<RelativeDistinguishedName1> getValue(CertificateIssuer1 obj) {
+			return obj.getRelativeDistinguishedName();
+		}
+
+		@Override
+		public void setValue(CertificateIssuer1 obj, List<RelativeDistinguishedName1> value) {
+			obj.setRelativeDistinguishedName(value);
 		}
 	};
 
@@ -125,7 +136,7 @@ public class CertificateIssuer1 {
 		return relativeDistinguishedName == null ? relativeDistinguishedName = new ArrayList<>() : relativeDistinguishedName;
 	}
 
-	public CertificateIssuer1 setRelativeDistinguishedName(List<com.tools20022.repository.msg.RelativeDistinguishedName1> relativeDistinguishedName) {
+	public CertificateIssuer1 setRelativeDistinguishedName(List<RelativeDistinguishedName1> relativeDistinguishedName) {
 		this.relativeDistinguishedName = Objects.requireNonNull(relativeDistinguishedName);
 		return this;
 	}

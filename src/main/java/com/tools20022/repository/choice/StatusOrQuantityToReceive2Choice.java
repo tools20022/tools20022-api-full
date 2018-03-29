@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.Quantity10Choice;
 import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
@@ -117,7 +118,7 @@ public class StatusOrQuantityToReceive2Choice {
 	 * "Quantity of securities that has been assigned the status indicated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusOrQuantityToReceive2Choice, Quantity10Choice> mmStatusQuantity = new MMMessageAssociationEnd<StatusOrQuantityToReceive2Choice, Quantity10Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmStatusQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice.mmObject();
@@ -129,7 +130,17 @@ public class StatusOrQuantityToReceive2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.Quantity10Choice.mmObject();
+			type_lazy = () -> Quantity10Choice.mmObject();
+		}
+
+		@Override
+		public Quantity10Choice getValue(StatusOrQuantityToReceive2Choice obj) {
+			return obj.getStatusQuantity();
+		}
+
+		@Override
+		public void setValue(StatusOrQuantityToReceive2Choice obj, Quantity10Choice value) {
+			obj.setStatusQuantity(value);
 		}
 	};
 	@XmlElement(name = "QtyToRcv", required = true)
@@ -170,7 +181,7 @@ public class StatusOrQuantityToReceive2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToReceive = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusOrQuantityToReceive2Choice, Quantity10Choice> mmQuantityToReceive = new MMMessageAssociationEnd<StatusOrQuantityToReceive2Choice, Quantity10Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmQuantityToReceive;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusOrQuantityToReceive2Choice.mmObject();
@@ -183,7 +194,17 @@ public class StatusOrQuantityToReceive2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.Quantity10Choice.mmObject();
+			type_lazy = () -> Quantity10Choice.mmObject();
+		}
+
+		@Override
+		public Quantity10Choice getValue(StatusOrQuantityToReceive2Choice obj) {
+			return obj.getQuantityToReceive();
+		}
+
+		@Override
+		public void setValue(StatusOrQuantityToReceive2Choice obj, Quantity10Choice value) {
+			obj.setQuantityToReceive(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class StatusOrQuantityToReceive2Choice {
 		return statusQuantity;
 	}
 
-	public StatusOrQuantityToReceive2Choice setStatusQuantity(com.tools20022.repository.choice.Quantity10Choice statusQuantity) {
+	public StatusOrQuantityToReceive2Choice setStatusQuantity(Quantity10Choice statusQuantity) {
 		this.statusQuantity = Objects.requireNonNull(statusQuantity);
 		return this;
 	}
@@ -221,7 +242,7 @@ public class StatusOrQuantityToReceive2Choice {
 		return quantityToReceive;
 	}
 
-	public StatusOrQuantityToReceive2Choice setQuantityToReceive(com.tools20022.repository.choice.Quantity10Choice quantityToReceive) {
+	public StatusOrQuantityToReceive2Choice setQuantityToReceive(Quantity10Choice quantityToReceive) {
 		this.quantityToReceive = Objects.requireNonNull(quantityToReceive);
 		return this;
 	}

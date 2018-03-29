@@ -95,7 +95,7 @@ public class BankInstructions1 {
 	 * definition} = "Instructions from the bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BankInstructions1, List<Max2000Text>> mmText = new MMMessageAttribute<BankInstructions1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BankInstructions1.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class BankInstructions1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(BankInstructions1 obj) {
+			return obj.getText();
+		}
+
+		@Override
+		public void setValue(BankInstructions1 obj, List<Max2000Text> value) {
+			obj.setText(value);
 		}
 	};
 	@XmlElement(name = "LastDtForRspn")
@@ -137,7 +147,7 @@ public class BankInstructions1 {
 	 * definition} = "Last date for a response to the bank instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastDateForResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BankInstructions1, Optional<ISODate>> mmLastDateForResponse = new MMMessageAttribute<BankInstructions1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BankInstructions1.mmObject();
 			isDerived = false;
@@ -148,6 +158,16 @@ public class BankInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(BankInstructions1 obj) {
+			return obj.getLastDateForResponse();
+		}
+
+		@Override
+		public void setValue(BankInstructions1 obj, Optional<ISODate> value) {
+			obj.setLastDateForResponse(value.orElse(null));
 		}
 	};
 

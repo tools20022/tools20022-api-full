@@ -132,7 +132,7 @@ public class PremiumAmount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPremiumQuote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PremiumAmount2, Optional<PremiumQuote1Choice>> mmPremiumQuote = new MMMessageAssociationEnd<PremiumAmount2, Optional<PremiumQuote1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PremiumCalculation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmObject();
@@ -146,6 +146,16 @@ public class PremiumAmount2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PremiumQuote1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PremiumQuote1Choice> getValue(PremiumAmount2 obj) {
+			return obj.getPremiumQuote();
+		}
+
+		@Override
+		public void setValue(PremiumAmount2 obj, Optional<PremiumQuote1Choice> value) {
+			obj.setPremiumQuote(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -191,7 +201,7 @@ public class PremiumAmount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumAmount2, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<PremiumAmount2, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmObject();
@@ -204,6 +214,16 @@ public class PremiumAmount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(PremiumAmount2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PremiumAmount2 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -239,7 +259,7 @@ public class PremiumAmount2 {
 	 * definition} = "Date on which the premium must be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumAmount2, ISODate> mmSettlementDate = new MMMessageAttribute<PremiumAmount2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmObject();
@@ -251,6 +271,16 @@ public class PremiumAmount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PremiumAmount2 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(PremiumAmount2 obj, ISODate value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmPty")
@@ -288,7 +318,7 @@ public class PremiumAmount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PremiumAmount2, Optional<PartyIdentification8Choice>> mmSettlementParty = new MMMessageAssociationEnd<PremiumAmount2, Optional<PartyIdentification8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount2.mmObject();
@@ -301,6 +331,16 @@ public class PremiumAmount2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8Choice> getValue(PremiumAmount2 obj) {
+			return obj.getSettlementParty();
+		}
+
+		@Override
+		public void setValue(PremiumAmount2 obj, Optional<PartyIdentification8Choice> value) {
+			obj.setSettlementParty(value.orElse(null));
 		}
 	};
 

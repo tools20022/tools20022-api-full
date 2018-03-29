@@ -100,7 +100,7 @@ public class PublicRSAKey1 {
 	 * definition} = "Modulus of the RSA key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModulus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PublicRSAKey1, Max5000Binary> mmModulus = new MMMessageAttribute<PublicRSAKey1, Max5000Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PublicRSAKey1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class PublicRSAKey1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
+		}
+
+		@Override
+		public Max5000Binary getValue(PublicRSAKey1 obj) {
+			return obj.getModulus();
+		}
+
+		@Override
+		public void setValue(PublicRSAKey1 obj, Max5000Binary value) {
+			obj.setModulus(value);
 		}
 	};
 	@XmlElement(name = "Expnt", required = true)
@@ -142,7 +152,7 @@ public class PublicRSAKey1 {
 	 * definition} = "Public exponent of the RSA key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExponent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PublicRSAKey1, Max5000Binary> mmExponent = new MMMessageAttribute<PublicRSAKey1, Max5000Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PublicRSAKey1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class PublicRSAKey1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
+		}
+
+		@Override
+		public Max5000Binary getValue(PublicRSAKey1 obj) {
+			return obj.getExponent();
+		}
+
+		@Override
+		public void setValue(PublicRSAKey1 obj, Max5000Binary value) {
+			obj.setExponent(value);
 		}
 	};
 

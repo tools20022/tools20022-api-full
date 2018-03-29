@@ -105,7 +105,7 @@ public class OrganisationLegalStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
-	 * Unlimited trust.
+	 * Unlimited trust
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -122,20 +122,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "UnlimitedTrust"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unlimited trust."</li>
+	 * definition} = "Unlimited trust"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode UnlimitedTrust = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnlimitedTrust";
-			definition = "Unlimited trust.";
+			definition = "Unlimited trust";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "UNLT";
 		}
 	};
 	/**
-	 * Unlimited company.
+	 * Unlimited company
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -152,20 +152,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "UnlimitedCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unlimited company."</li>
+	 * definition} = "Unlimited company"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode UnlimitedCompany = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnlimitedCompany";
-			definition = "Unlimited company.";
+			definition = "Unlimited company";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "UNLC";
 		}
 	};
 	/**
-	 * Sole proprietorship/Sole trader.
+	 * Sole proprietorship/Sole trader
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -182,20 +182,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "SoleProprietorship"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Sole proprietorship/Sole trader."</li>
+	 * definition} = "Sole proprietorship/Sole trader"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode SoleProprietorship = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoleProprietorship";
-			definition = "Sole proprietorship/Sole trader.";
+			definition = "Sole proprietorship/Sole trader";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "SOLE";
 		}
 	};
 	/**
-	 * Public limited company (Plc.).
+	 * Public limited company (Plc.)
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -212,20 +212,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "PublicLimitedCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Public limited company (Plc.)."</li>
+	 * definition} = "Public limited company (Plc.)"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode PublicLimitedCompany = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicLimitedCompany";
-			definition = "Public limited company (Plc.).";
+			definition = "Public limited company (Plc.)";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "PCLC";
 		}
 	};
 	/**
-	 * Private company limited by shares (Ltd.).
+	 * Private company limited by shares (Ltd.)
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -242,20 +242,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "PrivateCompanyLimitedByShares"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Private company limited by shares (Ltd.)."</li>
+	 * definition} = "Private company limited by shares (Ltd.)"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode PrivateCompanyLimitedByShares = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateCompanyLimitedByShares";
-			definition = "Private company limited by shares (Ltd.).";
+			definition = "Private company limited by shares (Ltd.)";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "PCLS";
 		}
 	};
 	/**
-	 * Private company limited by guarantee (Ltd.).
+	 * Private company limited by guarantee (Ltd.)
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -272,20 +272,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "PrivateCompanyLimitedByGuarantee"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Private company limited by guarantee (Ltd.)."</li>
+	 * definition} = "Private company limited by guarantee (Ltd.)"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode PrivateCompanyLimitedByGuarantee = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateCompanyLimitedByGuarantee";
-			definition = "Private company limited by guarantee (Ltd.).";
+			definition = "Private company limited by guarantee (Ltd.)";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "PCLG";
 		}
 	};
 	/**
-	 * Limited partnership (LP).
+	 * Limited partnership (LP)
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -302,20 +302,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "LimitedPartnership"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Limited partnership (LP)."</li>
+	 * definition} = "Limited partnership (LP)"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode LimitedPartnership = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedPartnership";
-			definition = "Limited partnership (LP).";
+			definition = "Limited partnership (LP)";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "LIMP";
 		}
 	};
 	/**
-	 * Limited liability partnership (LLP).
+	 * Limited liability partnership (LLP)
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -332,14 +332,14 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "LimitedLiabilityPartnership"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Limited liability partnership (LLP)."</li>
+	 * definition} = "Limited liability partnership (LLP)"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode LimitedLiabilityPartnership = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedLiabilityPartnership";
-			definition = "Limited liability partnership (LLP).";
+			definition = "Limited liability partnership (LLP)";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "LLPP";
 		}
@@ -376,7 +376,7 @@ public class OrganisationLegalStatusCode extends MMCode {
 		}
 	};
 	/**
-	 * General partnership.
+	 * General partnership
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -393,20 +393,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "GeneralPartnership"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "General partnership."</li>
+	 * definition} = "General partnership"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode GeneralPartnership = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralPartnership";
-			definition = "General partnership.";
+			definition = "General partnership";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "GENP";
 		}
 	};
 	/**
-	 * Community Interest Company (CIC).
+	 * Community Interest Company (CIC)
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -423,20 +423,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "CommunityInterestCompany"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Community Interest Company (CIC)."</li>
+	 * definition} = "Community Interest Company (CIC)"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode CommunityInterestCompany = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunityInterestCompany";
-			definition = "Community Interest Company (CIC).";
+			definition = "Community Interest Company (CIC)";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "CICC";
 		}
 	};
 	/**
-	 * Charity.
+	 * Charity
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -453,20 +453,20 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "Charity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Charity."</li>
+	 * definition} = "Charity"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode Charity = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charity";
-			definition = "Charity.";
+			definition = "Charity";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "CHAR";
 		}
 	};
 	/**
-	 * Charitable incorporated organisation (CIO).
+	 * Charitable incorporated organisation (CIO)
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -483,14 +483,14 @@ public class OrganisationLegalStatusCode extends MMCode {
 	 * name} = "CharitableIncorporatedOrganisation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Charitable incorporated organisation (CIO)."</li>
+	 * definition} = "Charitable incorporated organisation (CIO)"</li>
 	 * </ul>
 	 */
 	public static final OrganisationLegalStatusCode CharitableIncorporatedOrganisation = new OrganisationLegalStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CharitableIncorporatedOrganisation";
-			definition = "Charitable incorporated organisation (CIO).";
+			definition = "Charitable incorporated organisation (CIO)";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrganisationLegalStatusCode.mmObject();
 			codeName = "CIOC";
 		}

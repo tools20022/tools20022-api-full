@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorReconciliationResponse2;
 import com.tools20022.repository.msg.ContentInformationType8;
 import com.tools20022.repository.msg.Header7;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -141,7 +140,7 @@ public class AcceptorReconciliationResponseV03 {
 	 * AcceptorReconciliationResponseV02.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationResponseV03, Header7> mmHeader = new MMMessageBuildingBlock<AcceptorReconciliationResponseV03, Header7>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class AcceptorReconciliationResponseV03 {
 			complexType_lazy = () -> Header7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationResponseV03.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header7 getValue(AcceptorReconciliationResponseV03 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationResponseV03 obj, Header7 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "RcncltnRspn", required = true)
@@ -200,7 +201,7 @@ public class AcceptorReconciliationResponseV03 {
 	 * AcceptorReconciliationResponseV02.mmReconciliationResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReconciliationResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationResponseV03, AcceptorReconciliationResponse2> mmReconciliationResponse = new MMMessageBuildingBlock<AcceptorReconciliationResponseV03, AcceptorReconciliationResponse2>() {
 		{
 			xmlTag = "RcncltnRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,12 +214,14 @@ public class AcceptorReconciliationResponseV03 {
 			complexType_lazy = () -> AcceptorReconciliationResponse2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationResponseV03.class.getMethod("getReconciliationResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorReconciliationResponse2 getValue(AcceptorReconciliationResponseV03 obj) {
+			return obj.getReconciliationResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationResponseV03 obj, AcceptorReconciliationResponse2 value) {
+			obj.setReconciliationResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -259,7 +262,7 @@ public class AcceptorReconciliationResponseV03 {
 	 * AcceptorReconciliationResponseV02.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationResponseV03, ContentInformationType8> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorReconciliationResponseV03, ContentInformationType8>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +275,14 @@ public class AcceptorReconciliationResponseV03 {
 			complexType_lazy = () -> ContentInformationType8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationResponseV03.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType8 getValue(AcceptorReconciliationResponseV03 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationResponseV03 obj, ContentInformationType8 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

@@ -27,13 +27,12 @@ import com.tools20022.repository.msg.Quote1;
 import com.tools20022.repository.msg.Quote2;
 import com.tools20022.repository.msg.Quote3;
 import com.tools20022.repository.msg.Quote4;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
 
 /**
- * Requestor of the quote.
+ * Requestor of the quote
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -65,7 +64,7 @@ import java.util.Objects;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "QuoteRequestor"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Requestor of the quote."</li>
+ * definition} = "Requestor of the quote"</li>
  * </ul>
  */
 public class QuoteRequestor extends InformationPartyRole {
@@ -116,7 +115,7 @@ public class QuoteRequestor extends InformationPartyRole {
 	 * "Identifies if the requestor of the quote is an elligible counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRequestorEligibility = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<QuoteRequestor, EligibilityCode> mmRequestorEligibility = new MMBusinessAttribute<QuoteRequestor, EligibilityCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Quote3.mmRequestorEligibility, Quote1.mmRequestorEligibility, Quote2.mmRequestorEligibility, Quote4.mmRequestorEligibility);
 			isDerived = false;
@@ -129,12 +128,14 @@ public class QuoteRequestor extends InformationPartyRole {
 			simpleType_lazy = () -> EligibilityCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return QuoteRequestor.class.getMethod("getRequestorEligibility", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public EligibilityCode getValue(QuoteRequestor obj) {
+			return obj.getRequestorEligibility();
+		}
+
+		@Override
+		public void setValue(QuoteRequestor obj, EligibilityCode value) {
+			obj.setRequestorEligibility(value);
 		}
 	};
 
@@ -144,7 +145,7 @@ public class QuoteRequestor extends InformationPartyRole {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteRequestor";
-				definition = "Requestor of the quote.";
+				definition = "Requestor of the quote";
 				superType_lazy = () -> InformationPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteRequestor.mmRequestorEligibility);
 			}

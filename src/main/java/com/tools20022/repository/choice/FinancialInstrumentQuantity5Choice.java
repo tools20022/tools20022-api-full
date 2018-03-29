@@ -138,7 +138,7 @@ public class FinancialInstrumentQuantity5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity5Choice, FinancialInstrumentQuantity1> mmUnitsNumber = new MMMessageAttribute<FinancialInstrumentQuantity5Choice, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmObject();
@@ -151,6 +151,16 @@ public class FinancialInstrumentQuantity5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(FinancialInstrumentQuantity5Choice obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity5Choice obj, FinancialInstrumentQuantity1 value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "PctgOfTtlSbcptAmt", required = true)
@@ -199,7 +209,7 @@ public class FinancialInstrumentQuantity5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageOfTotalSubscriptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity5Choice, PercentageRate> mmPercentageOfTotalSubscriptionAmount = new MMMessageAttribute<FinancialInstrumentQuantity5Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SwitchRedemptionLeg.mmPercentageOfTotalSubscriptionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmObject();
@@ -212,6 +222,16 @@ public class FinancialInstrumentQuantity5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(FinancialInstrumentQuantity5Choice obj) {
+			return obj.getPercentageOfTotalSubscriptionAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity5Choice obj, PercentageRate value) {
+			obj.setPercentageOfTotalSubscriptionAmount(value);
 		}
 	};
 	@XmlElement(name = "NetAmt", required = true)
@@ -259,7 +279,7 @@ public class FinancialInstrumentQuantity5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity5Choice, ActiveOrHistoricCurrencyAndAmount> mmNetAmount = new MMMessageAttribute<FinancialInstrumentQuantity5Choice, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNetAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmObject();
@@ -272,6 +292,16 @@ public class FinancialInstrumentQuantity5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(FinancialInstrumentQuantity5Choice obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity5Choice obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setNetAmount(value);
 		}
 	};
 	@XmlElement(name = "GrssAmt", required = true)
@@ -319,7 +349,7 @@ public class FinancialInstrumentQuantity5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity5Choice, ActiveOrHistoricCurrencyAndAmount> mmGrossAmount = new MMMessageAttribute<FinancialInstrumentQuantity5Choice, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmObject();
@@ -332,6 +362,16 @@ public class FinancialInstrumentQuantity5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(FinancialInstrumentQuantity5Choice obj) {
+			return obj.getGrossAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity5Choice obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setGrossAmount(value);
 		}
 	};
 	@XmlElement(name = "HldgsRedRate", required = true)
@@ -379,7 +419,7 @@ public class FinancialInstrumentQuantity5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingsRedemptionRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity5Choice, PercentageRate> mmHoldingsRedemptionRate = new MMMessageAttribute<FinancialInstrumentQuantity5Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RedemptionOrder.mmHoldingsRedemptionRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity5Choice.mmObject();
@@ -392,6 +432,16 @@ public class FinancialInstrumentQuantity5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(FinancialInstrumentQuantity5Choice obj) {
+			return obj.getHoldingsRedemptionRate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity5Choice obj, PercentageRate value) {
+			obj.setHoldingsRedemptionRate(value);
 		}
 	};
 

@@ -52,11 +52,15 @@ public class ConstraintInterestPeriodRule {
 	 */
 	public static final MMConstraint<CorporateActionPeriod3> forCorporateActionPeriod3 = new MMConstraint<CorporateActionPeriod3>() {
 		{
-			validator = ConstraintInterestPeriodRule::checkCorporateActionPeriod3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriodRule";
 			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
 			owner_lazy = () -> CorporateActionPeriod3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPeriod3 obj) throws Exception {
+			checkCorporateActionPeriod3(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintInterestPeriodRule {
 	 */
 	public static final MMConstraint<CorporateActionPeriod6> forCorporateActionPeriod6 = new MMConstraint<CorporateActionPeriod6>() {
 		{
-			validator = ConstraintInterestPeriodRule::checkCorporateActionPeriod6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriodRule";
 			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
 			owner_lazy = () -> CorporateActionPeriod6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPeriod6 obj) throws Exception {
+			checkCorporateActionPeriod6(obj);
 		}
 	};
 	/**
@@ -120,12 +128,16 @@ public class ConstraintInterestPeriodRule {
 	 */
 	public static final MMConstraint<CorporateActionPeriod8> forCorporateActionPeriod8 = new MMConstraint<CorporateActionPeriod8>() {
 		{
-			validator = ConstraintInterestPeriodRule::checkCorporateActionPeriod8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriodRule";
 			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod10);
 			owner_lazy = () -> CorporateActionPeriod8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPeriod8 obj) throws Exception {
+			checkCorporateActionPeriod8(obj);
 		}
 	};
 	/**
@@ -164,13 +176,17 @@ public class ConstraintInterestPeriodRule {
 	 */
 	public static final MMConstraint<CorporateActionPeriod10> forCorporateActionPeriod10 = new MMConstraint<CorporateActionPeriod10>() {
 		{
-			validator = ConstraintInterestPeriodRule::checkCorporateActionPeriod10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriodRule";
 			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod14);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod8;
 			owner_lazy = () -> CorporateActionPeriod10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPeriod10 obj) throws Exception {
+			checkCorporateActionPeriod10(obj);
 		}
 	};
 	/**
@@ -201,12 +217,16 @@ public class ConstraintInterestPeriodRule {
 	 */
 	public static final MMConstraint<CorporateActionPeriod14> forCorporateActionPeriod14 = new MMConstraint<CorporateActionPeriod14>() {
 		{
-			validator = ConstraintInterestPeriodRule::checkCorporateActionPeriod14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriodRule";
 			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod10;
 			owner_lazy = () -> CorporateActionPeriod14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionPeriod14 obj) throws Exception {
+			checkCorporateActionPeriod14(obj);
 		}
 	};
 

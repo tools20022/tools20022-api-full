@@ -132,7 +132,7 @@ public class CashOption59 {
 	 * CashOption45.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOption59, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CashOption59, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption59.mmObject();
@@ -146,6 +146,16 @@ public class CashOption59 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CashOption59 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CashOption59 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -191,7 +201,7 @@ public class CashOption59 {
 	 * CashOption45.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOption59, Optional<Account8Choice>> mmAccount = new MMMessageAttribute<CashOption59, Optional<Account8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption59.mmObject();
@@ -205,6 +215,16 @@ public class CashOption59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Account8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Account8Choice> getValue(CashOption59 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(CashOption59 obj, Optional<Account8Choice> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstngDt", required = true)
@@ -250,7 +270,7 @@ public class CashOption59 {
 	 * CashOption45.mmPostingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOption59, DateAndDateTime2Choice> mmPostingDate = new MMMessageAttribute<CashOption59, DateAndDateTime2Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption59.mmObject();
@@ -264,6 +284,16 @@ public class CashOption59 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTime2Choice getValue(CashOption59 obj) {
+			return obj.getPostingDate();
+		}
+
+		@Override
+		public void setValue(CashOption59 obj, DateAndDateTime2Choice value) {
+			obj.setPostingDate(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPstngDt")
@@ -307,7 +337,7 @@ public class CashOption59 {
 	 * CashOption45.mmOriginalPostingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalPostingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOption59, Optional<DateAndDateTime2Choice>> mmOriginalPostingDate = new MMMessageAttribute<CashOption59, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption59.mmObject();
@@ -320,6 +350,16 @@ public class CashOption59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(CashOption59 obj) {
+			return obj.getOriginalPostingDate();
+		}
+
+		@Override
+		public void setValue(CashOption59 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setOriginalPostingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -365,7 +405,7 @@ public class CashOption59 {
 	 * CashOption45.mmValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOption59, Optional<DateAndDateTime2Choice>> mmValueDate = new MMMessageAttribute<CashOption59, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption59.mmObject();
@@ -379,6 +419,16 @@ public class CashOption59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(CashOption59 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(CashOption59 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstngAmt", required = true)
@@ -423,7 +473,7 @@ public class CashOption59 {
 	 * CashOption45.mmPostingAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOption59, ActiveCurrencyAndAmount> mmPostingAmount = new MMMessageAttribute<CashOption59, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption59.mmObject();
@@ -437,6 +487,16 @@ public class CashOption59 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CashOption59 obj) {
+			return obj.getPostingAmount();
+		}
+
+		@Override
+		public void setValue(CashOption59 obj, ActiveCurrencyAndAmount value) {
+			obj.setPostingAmount(value);
 		}
 	};
 

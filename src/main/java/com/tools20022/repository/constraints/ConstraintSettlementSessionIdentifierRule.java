@@ -52,11 +52,15 @@ public class ConstraintSettlementSessionIdentifierRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTradeBulkStatusNotificationV04> forForeignExchangeTradeBulkStatusNotificationV04 = new MMConstraint<ForeignExchangeTradeBulkStatusNotificationV04>() {
 		{
-			validator = ConstraintSettlementSessionIdentifierRule::checkForeignExchangeTradeBulkStatusNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifierRule";
 			definition = "SettlementSessionIdentifer must only be present in StatusDetails if all of the trades within the bulk sttaus report have been generated from a single settlement session.";
 			owner_lazy = () -> ForeignExchangeTradeBulkStatusNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTradeBulkStatusNotificationV04 obj) throws Exception {
+			checkForeignExchangeTradeBulkStatusNotificationV04(obj);
 		}
 	};
 

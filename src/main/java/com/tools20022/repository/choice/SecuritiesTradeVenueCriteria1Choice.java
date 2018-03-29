@@ -110,7 +110,7 @@ public class SecuritiesTradeVenueCriteria1Choice {
 	 * definition} = "Market identifier code of the trading venue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeVenueCriteria1Choice, List<MICIdentifier>> mmMIC = new MMMessageAttribute<SecuritiesTradeVenueCriteria1Choice, List<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTradeVenueCriteria1Choice.mmObject();
@@ -121,6 +121,16 @@ public class SecuritiesTradeVenueCriteria1Choice {
 			definition = "Market identifier code of the trading venue.";
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public List<MICIdentifier> getValue(SecuritiesTradeVenueCriteria1Choice obj) {
+			return obj.getMIC();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeVenueCriteria1Choice obj, List<MICIdentifier> value) {
+			obj.setMIC(value);
 		}
 	};
 	@XmlElement(name = "AnyMIC", required = true)
@@ -159,7 +169,7 @@ public class SecuritiesTradeVenueCriteria1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyMIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeVenueCriteria1Choice, AnyMIC1Code> mmAnyMIC = new MMMessageAttribute<SecuritiesTradeVenueCriteria1Choice, AnyMIC1Code>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTradeVenueCriteria1Choice.mmObject();
@@ -171,6 +181,16 @@ public class SecuritiesTradeVenueCriteria1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyMIC1Code.mmObject();
+		}
+
+		@Override
+		public AnyMIC1Code getValue(SecuritiesTradeVenueCriteria1Choice obj) {
+			return obj.getAnyMIC();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeVenueCriteria1Choice obj, AnyMIC1Code value) {
+			obj.setAnyMIC(value);
 		}
 	};
 

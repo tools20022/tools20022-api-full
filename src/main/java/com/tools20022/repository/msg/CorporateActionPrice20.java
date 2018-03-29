@@ -130,7 +130,7 @@ public class CorporateActionPrice20 {
 	 * "Indicates whether the price is an indicative price or a market price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndicativeOrMarketPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice20, Optional<IndicativeOrMarketPrice4Choice>> mmIndicativeOrMarketPrice = new MMMessageAssociationEnd<CorporateActionPrice20, Optional<IndicativeOrMarketPrice4Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice20.mmObject();
@@ -144,6 +144,16 @@ public class CorporateActionPrice20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> IndicativeOrMarketPrice4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<IndicativeOrMarketPrice4Choice> getValue(CorporateActionPrice20 obj) {
+			return obj.getIndicativeOrMarketPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice20 obj, Optional<IndicativeOrMarketPrice4Choice> value) {
+			obj.setIndicativeOrMarketPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExrcPric")
@@ -184,7 +194,7 @@ public class CorporateActionPrice20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExercisePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice20, Optional<PriceFormat17Choice>> mmExercisePrice = new MMMessageAssociationEnd<CorporateActionPrice20, Optional<PriceFormat17Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCorporateActionExercisePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice20.mmObject();
@@ -198,6 +208,16 @@ public class CorporateActionPrice20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat17Choice> getValue(CorporateActionPrice20 obj) {
+			return obj.getExercisePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice20 obj, Optional<PriceFormat17Choice> value) {
+			obj.setExercisePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssePric")
@@ -236,7 +256,7 @@ public class CorporateActionPrice20 {
 	 * definition} = "Initial issue price of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice20, Optional<PriceFormat17Choice>> mmIssuePrice = new MMMessageAssociationEnd<CorporateActionPrice20, Optional<PriceFormat17Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice20.mmObject();
@@ -250,6 +270,16 @@ public class CorporateActionPrice20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat17Choice> getValue(CorporateActionPrice20 obj) {
+			return obj.getIssuePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice20 obj, Optional<PriceFormat17Choice> value) {
+			obj.setIssuePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricRcvdPerPdct")
@@ -290,7 +320,7 @@ public class CorporateActionPrice20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice20, Optional<PriceFormat24Choice>> mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd<CorporateActionPrice20, Optional<PriceFormat24Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice20.mmObject();
@@ -304,6 +334,16 @@ public class CorporateActionPrice20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat24Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat24Choice> getValue(CorporateActionPrice20 obj) {
+			return obj.getGenericCashPriceReceivedPerProduct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice20 obj, Optional<PriceFormat24Choice> value) {
+			obj.setGenericCashPriceReceivedPerProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricPdPerPdct")
@@ -344,7 +384,7 @@ public class CorporateActionPrice20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice20, Optional<PriceFormat17Choice>> mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd<CorporateActionPrice20, Optional<PriceFormat17Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice20.mmObject();
@@ -358,6 +398,16 @@ public class CorporateActionPrice20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat17Choice> getValue(CorporateActionPrice20 obj) {
+			return obj.getGenericCashPricePaidPerProduct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice20 obj, Optional<PriceFormat17Choice> value) {
+			obj.setGenericCashPricePaidPerProduct(value.orElse(null));
 		}
 	};
 

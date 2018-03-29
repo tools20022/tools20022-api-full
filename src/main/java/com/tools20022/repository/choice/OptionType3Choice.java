@@ -110,7 +110,7 @@ public class OptionType3Choice {
 	 * definition} = "Option type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionType3Choice, OptionType1Code> mmCode = new MMMessageAttribute<OptionType3Choice, OptionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionType3Choice.mmObject();
@@ -123,6 +123,16 @@ public class OptionType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionType1Code.mmObject();
+		}
+
+		@Override
+		public OptionType1Code getValue(OptionType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionType3Choice obj, OptionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -162,7 +172,7 @@ public class OptionType3Choice {
 	 * definition} = "Option type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionType3Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<OptionType3Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionType3Choice.mmObject();
@@ -176,6 +186,16 @@ public class OptionType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(OptionType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionType3Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

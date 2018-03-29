@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.TerminalManagementAction3Code;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Organisation26;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -71,7 +72,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SaleToPOIProtocolParameter1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -113,7 +114,7 @@ public class SaleToPOIProtocolParameter1 {
 	 * definition} = "Type of action for the configuration parameters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleToPOIProtocolParameter1, TerminalManagementAction3Code> mmActionType = new MMMessageAttribute<SaleToPOIProtocolParameter1, TerminalManagementAction3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmObject();
 			isDerived = false;
@@ -124,6 +125,16 @@ public class SaleToPOIProtocolParameter1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction3Code getValue(SaleToPOIProtocolParameter1 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(SaleToPOIProtocolParameter1 obj, TerminalManagementAction3Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "MrchntId")
@@ -154,7 +165,7 @@ public class SaleToPOIProtocolParameter1 {
 	 * definition} = "Identification of the merchant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMerchantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SaleToPOIProtocolParameter1, Optional<Organisation26>> mmMerchantIdentification = new MMMessageAssociationEnd<SaleToPOIProtocolParameter1, Optional<Organisation26>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmObject();
 			isDerived = false;
@@ -165,7 +176,17 @@ public class SaleToPOIProtocolParameter1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
+			type_lazy = () -> Organisation26.mmObject();
+		}
+
+		@Override
+		public Optional<Organisation26> getValue(SaleToPOIProtocolParameter1 obj) {
+			return obj.getMerchantIdentification();
+		}
+
+		@Override
+		public void setValue(SaleToPOIProtocolParameter1 obj, Optional<Organisation26> value) {
+			obj.setMerchantIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -197,7 +218,7 @@ public class SaleToPOIProtocolParameter1 {
 	 * definition} = "Version of the parameters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleToPOIProtocolParameter1, Max256Text> mmVersion = new MMMessageAttribute<SaleToPOIProtocolParameter1, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmObject();
 			isDerived = false;
@@ -208,6 +229,16 @@ public class SaleToPOIProtocolParameter1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(SaleToPOIProtocolParameter1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(SaleToPOIProtocolParameter1 obj, Max256Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "HstId", required = true)
@@ -240,7 +271,7 @@ public class SaleToPOIProtocolParameter1 {
 	 * "Identification used to retrieve HostCommunicationParameters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleToPOIProtocolParameter1, Max35Text> mmHostIdentification = new MMMessageAttribute<SaleToPOIProtocolParameter1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmObject();
 			isDerived = false;
@@ -251,6 +282,16 @@ public class SaleToPOIProtocolParameter1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SaleToPOIProtocolParameter1 obj) {
+			return obj.getHostIdentification();
+		}
+
+		@Override
+		public void setValue(SaleToPOIProtocolParameter1 obj, Max35Text value) {
+			obj.setHostIdentification(value);
 		}
 	};
 	@XmlElement(name = "MrchntPOIId")
@@ -283,7 +324,7 @@ public class SaleToPOIProtocolParameter1 {
 	 * "Identification of the POI during communication with sale system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMerchantPOIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleToPOIProtocolParameter1, Optional<Max35Text>> mmMerchantPOIIdentification = new MMMessageAttribute<SaleToPOIProtocolParameter1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmObject();
 			isDerived = false;
@@ -294,6 +335,16 @@ public class SaleToPOIProtocolParameter1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SaleToPOIProtocolParameter1 obj) {
+			return obj.getMerchantPOIIdentification();
+		}
+
+		@Override
+		public void setValue(SaleToPOIProtocolParameter1 obj, Optional<Max35Text> value) {
+			obj.setMerchantPOIIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SaleId")
@@ -325,7 +376,7 @@ public class SaleToPOIProtocolParameter1 {
 	 * definition} = "Identification of the SaleSystem connected to the POI."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSaleIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleToPOIProtocolParameter1, Optional<Max35Text>> mmSaleIdentification = new MMMessageAttribute<SaleToPOIProtocolParameter1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmObject();
 			isDerived = false;
@@ -337,6 +388,16 @@ public class SaleToPOIProtocolParameter1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(SaleToPOIProtocolParameter1 obj) {
+			return obj.getSaleIdentification();
+		}
+
+		@Override
+		public void setValue(SaleToPOIProtocolParameter1 obj, Optional<Max35Text> value) {
+			obj.setSaleIdentification(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -346,7 +407,7 @@ public class SaleToPOIProtocolParameter1 {
 						com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmVersion, com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmHostIdentification,
 						com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmMerchantPOIIdentification, com.tools20022.repository.msg.SaleToPOIProtocolParameter1.mmSaleIdentification);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SaleToPOIProtocolParameter1";
 				definition = "Configuration parameters to communicate with a sale system.";
 			}
@@ -367,7 +428,7 @@ public class SaleToPOIProtocolParameter1 {
 		return merchantIdentification == null ? Optional.empty() : Optional.of(merchantIdentification);
 	}
 
-	public SaleToPOIProtocolParameter1 setMerchantIdentification(com.tools20022.repository.msg.Organisation26 merchantIdentification) {
+	public SaleToPOIProtocolParameter1 setMerchantIdentification(Organisation26 merchantIdentification) {
 		this.merchantIdentification = merchantIdentification;
 		return this;
 	}

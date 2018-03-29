@@ -29,6 +29,7 @@ import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.codeset.NewSecuritiesIssuanceType5Code;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -176,7 +177,7 @@ public class SecuritiesOption68 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, FinancialInstrumentAttributes83> mmSecurityDetails = new MMMessageAssociationEnd<SecuritiesOption68, FinancialInstrumentAttributes83>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -189,7 +190,17 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes83.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes83.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentAttributes83 getValue(SecuritiesOption68 obj) {
+			return obj.getSecurityDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, FinancialInstrumentAttributes83 value) {
+			obj.setSecurityDetails(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -230,7 +241,7 @@ public class SecuritiesOption68 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption68, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<SecuritiesOption68, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -243,6 +254,16 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(SecuritiesOption68 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "TempFinInstrmInd")
@@ -284,7 +305,7 @@ public class SecuritiesOption68 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTemporaryFinancialInstrumentIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, Optional<TemporaryFinancialInstrumentIndicator4Choice>> mmTemporaryFinancialInstrumentIndicator = new MMMessageAssociationEnd<SecuritiesOption68, Optional<TemporaryFinancialInstrumentIndicator4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -298,6 +319,16 @@ public class SecuritiesOption68 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TemporaryFinancialInstrumentIndicator4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TemporaryFinancialInstrumentIndicator4Choice> getValue(SecuritiesOption68 obj) {
+			return obj.getTemporaryFinancialInstrumentIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<TemporaryFinancialInstrumentIndicator4Choice> value) {
+			obj.setTemporaryFinancialInstrumentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonElgblPrcdsInd")
@@ -339,7 +370,7 @@ public class SecuritiesOption68 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonEligibleProceedsIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, Optional<NonEligibleProceedsIndicator4Choice>> mmNonEligibleProceedsIndicator = new MMMessageAssociationEnd<SecuritiesOption68, Optional<NonEligibleProceedsIndicator4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmNonEligibleProceedsIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -353,6 +384,16 @@ public class SecuritiesOption68 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> NonEligibleProceedsIndicator4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<NonEligibleProceedsIndicator4Choice> getValue(SecuritiesOption68 obj) {
+			return obj.getNonEligibleProceedsIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<NonEligibleProceedsIndicator4Choice> value) {
+			obj.setNonEligibleProceedsIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrOfferrTaxbltyInd")
@@ -392,7 +433,7 @@ public class SecuritiesOption68 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerOfferorTaxabilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption68, Optional<IssuerOfferorTaxabilityIndicator1Choice>> mmIssuerOfferorTaxabilityIndicator = new MMMessageAttribute<SecuritiesOption68, Optional<IssuerOfferorTaxabilityIndicator1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -404,6 +445,16 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> IssuerOfferorTaxabilityIndicator1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<IssuerOfferorTaxabilityIndicator1Choice> getValue(SecuritiesOption68 obj) {
+			return obj.getIssuerOfferorTaxabilityIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<IssuerOfferorTaxabilityIndicator1Choice> value) {
+			obj.setIssuerOfferorTaxabilityIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewSctiesIssncInd")
@@ -436,7 +487,7 @@ public class SecuritiesOption68 {
 	 * definition} = "Specifies the nature of the securities issue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewSecuritiesIssuanceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption68, Optional<NewSecuritiesIssuanceType5Code>> mmNewSecuritiesIssuanceIndicator = new MMMessageAttribute<SecuritiesOption68, Optional<NewSecuritiesIssuanceType5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
 			isDerived = false;
@@ -447,6 +498,16 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NewSecuritiesIssuanceType5Code.mmObject();
+		}
+
+		@Override
+		public Optional<NewSecuritiesIssuanceType5Code> getValue(SecuritiesOption68 obj) {
+			return obj.getNewSecuritiesIssuanceIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<NewSecuritiesIssuanceType5Code> value) {
+			obj.setNewSecuritiesIssuanceIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmTp")
@@ -488,7 +549,7 @@ public class SecuritiesOption68 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIncomeType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, Optional<GenericIdentification47>> mmIncomeType = new MMMessageAssociationEnd<SecuritiesOption68, Optional<GenericIdentification47>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmIncomeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -501,11 +562,21 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
+			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification47> getValue(SecuritiesOption68 obj) {
+			return obj.getIncomeType();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<GenericIdentification47> value) {
+			obj.setIncomeType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XmptnTp")
-	protected List<com.tools20022.repository.msg.GenericIdentification47> exemptionType;
+	protected List<GenericIdentification47> exemptionType;
 	/**
 	 * 
 	 <p>
@@ -533,7 +604,7 @@ public class SecuritiesOption68 {
 	 * definition} = "Specifies the basis for the reduced rate of withholding."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExemptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, List<GenericIdentification47>> mmExemptionType = new MMMessageAssociationEnd<SecuritiesOption68, List<GenericIdentification47>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
 			isDerived = false;
@@ -543,7 +614,17 @@ public class SecuritiesOption68 {
 			definition = "Specifies the basis for the reduced rate of withholding.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
+			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification47> getValue(SecuritiesOption68 obj) {
+			return obj.getExemptionType();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, List<GenericIdentification47> value) {
+			obj.setExemptionType(value);
 		}
 	};
 	@XmlElement(name = "EntitldQty")
@@ -584,7 +665,7 @@ public class SecuritiesOption68 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEntitledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, Optional<Quantity10Choice>> mmEntitledQuantity = new MMMessageAssociationEnd<SecuritiesOption68, Optional<Quantity10Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -598,6 +679,16 @@ public class SecuritiesOption68 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Quantity10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity10Choice> getValue(SecuritiesOption68 obj) {
+			return obj.getEntitledQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<Quantity10Choice> value) {
+			obj.setEntitledQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -638,7 +729,7 @@ public class SecuritiesOption68 {
 	 * "Location where the financial instruments are/will be safekept."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, Optional<SafekeepingPlaceFormat17Choice>> mmSafekeepingPlace = new MMMessageAssociationEnd<SecuritiesOption68, Optional<SafekeepingPlaceFormat17Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -652,6 +743,16 @@ public class SecuritiesOption68 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SafekeepingPlaceFormat17Choice> getValue(SecuritiesOption68 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<SafekeepingPlaceFormat17Choice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfIncmSrc")
@@ -688,7 +789,7 @@ public class SecuritiesOption68 {
 	 * definition} = "Indicates the country from which the income originates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfIncomeSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption68, Optional<CountryCode>> mmCountryOfIncomeSource = new MMMessageAttribute<SecuritiesOption68, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmCountryOfIncomeSource;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -700,6 +801,16 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(SecuritiesOption68 obj) {
+			return obj.getCountryOfIncomeSource();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<CountryCode> value) {
+			obj.setCountryOfIncomeSource(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrctnDspstn")
@@ -741,7 +852,7 @@ public class SecuritiesOption68 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFractionDisposition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, Optional<FractionDispositionType31Choice>> mmFractionDisposition = new MMMessageAssociationEnd<SecuritiesOption68, Optional<FractionDispositionType31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -755,6 +866,16 @@ public class SecuritiesOption68 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FractionDispositionType31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FractionDispositionType31Choice> getValue(SecuritiesOption68 obj) {
+			return obj.getFractionDisposition();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<FractionDispositionType31Choice> value) {
+			obj.setFractionDisposition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyOptn")
@@ -797,7 +918,7 @@ public class SecuritiesOption68 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyOption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption68, Optional<ActiveCurrencyCode>> mmCurrencyOption = new MMMessageAttribute<SecuritiesOption68, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmCurrencyOption;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -810,6 +931,16 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(SecuritiesOption68 obj) {
+			return obj.getCurrencyOption();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrencyOption(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgPrd")
@@ -850,7 +981,7 @@ public class SecuritiesOption68 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, Optional<Period6Choice>> mmTradingPeriod = new MMMessageAssociationEnd<SecuritiesOption68, Optional<Period6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmTradingPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -864,6 +995,16 @@ public class SecuritiesOption68 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period6Choice> getValue(SecuritiesOption68 obj) {
+			return obj.getTradingPeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<Period6Choice> value) {
+			obj.setTradingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtDtls", required = true)
@@ -903,7 +1044,7 @@ public class SecuritiesOption68 {
 	 * "Provides information about the dates related to securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, SecurityDate18> mmDateDetails = new MMMessageAssociationEnd<SecuritiesOption68, SecurityDate18>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -916,7 +1057,17 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityDate18.mmObject();
+			type_lazy = () -> SecurityDate18.mmObject();
+		}
+
+		@Override
+		public SecurityDate18 getValue(SecuritiesOption68 obj) {
+			return obj.getDateDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, SecurityDate18 value) {
+			obj.setDateDetails(value);
 		}
 	};
 	@XmlElement(name = "RateDtls")
@@ -956,7 +1107,7 @@ public class SecuritiesOption68 {
 	 * "Provides information about the rates related to securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, Optional<CorporateActionRate95>> mmRateDetails = new MMMessageAssociationEnd<SecuritiesOption68, Optional<CorporateActionRate95>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -969,7 +1120,17 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionRate95.mmObject();
+			type_lazy = () -> CorporateActionRate95.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionRate95> getValue(SecuritiesOption68 obj) {
+			return obj.getRateDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<CorporateActionRate95> value) {
+			obj.setRateDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricDtls")
@@ -1009,7 +1170,7 @@ public class SecuritiesOption68 {
 	 * "Provides information about the prices related to securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption68, Optional<CorporateActionPrice66>> mmPriceDetails = new MMMessageAssociationEnd<SecuritiesOption68, Optional<CorporateActionPrice66>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption68.mmObject();
@@ -1022,7 +1183,17 @@ public class SecuritiesOption68 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice66.mmObject();
+			type_lazy = () -> CorporateActionPrice66.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionPrice66> getValue(SecuritiesOption68 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption68 obj, Optional<CorporateActionPrice66> value) {
+			obj.setPriceDetails(value.orElse(null));
 		}
 	};
 
@@ -1052,7 +1223,7 @@ public class SecuritiesOption68 {
 		return securityDetails;
 	}
 
-	public SecuritiesOption68 setSecurityDetails(com.tools20022.repository.msg.FinancialInstrumentAttributes83 securityDetails) {
+	public SecuritiesOption68 setSecurityDetails(FinancialInstrumentAttributes83 securityDetails) {
 		this.securityDetails = Objects.requireNonNull(securityDetails);
 		return this;
 	}
@@ -1106,7 +1277,7 @@ public class SecuritiesOption68 {
 		return incomeType == null ? Optional.empty() : Optional.of(incomeType);
 	}
 
-	public SecuritiesOption68 setIncomeType(com.tools20022.repository.msg.GenericIdentification47 incomeType) {
+	public SecuritiesOption68 setIncomeType(GenericIdentification47 incomeType) {
 		this.incomeType = incomeType;
 		return this;
 	}
@@ -1115,7 +1286,7 @@ public class SecuritiesOption68 {
 		return exemptionType == null ? exemptionType = new ArrayList<>() : exemptionType;
 	}
 
-	public SecuritiesOption68 setExemptionType(List<com.tools20022.repository.msg.GenericIdentification47> exemptionType) {
+	public SecuritiesOption68 setExemptionType(List<GenericIdentification47> exemptionType) {
 		this.exemptionType = Objects.requireNonNull(exemptionType);
 		return this;
 	}
@@ -1178,7 +1349,7 @@ public class SecuritiesOption68 {
 		return dateDetails;
 	}
 
-	public SecuritiesOption68 setDateDetails(com.tools20022.repository.msg.SecurityDate18 dateDetails) {
+	public SecuritiesOption68 setDateDetails(SecurityDate18 dateDetails) {
 		this.dateDetails = Objects.requireNonNull(dateDetails);
 		return this;
 	}
@@ -1187,7 +1358,7 @@ public class SecuritiesOption68 {
 		return rateDetails == null ? Optional.empty() : Optional.of(rateDetails);
 	}
 
-	public SecuritiesOption68 setRateDetails(com.tools20022.repository.msg.CorporateActionRate95 rateDetails) {
+	public SecuritiesOption68 setRateDetails(CorporateActionRate95 rateDetails) {
 		this.rateDetails = rateDetails;
 		return this;
 	}
@@ -1196,7 +1367,7 @@ public class SecuritiesOption68 {
 		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public SecuritiesOption68 setPriceDetails(com.tools20022.repository.msg.CorporateActionPrice66 priceDetails) {
+	public SecuritiesOption68 setPriceDetails(CorporateActionPrice66 priceDetails) {
 		this.priceDetails = priceDetails;
 		return this;
 	}

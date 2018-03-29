@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +137,7 @@ public class MisMatchRejectionV02 {
 	 * definition} = "Identifies the rejection message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRejectionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MisMatchRejectionV02, MessageIdentification1> mmRejectionIdentification = new MMMessageBuildingBlock<MisMatchRejectionV02, MessageIdentification1>() {
 		{
 			xmlTag = "RjctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +148,14 @@ public class MisMatchRejectionV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MisMatchRejectionV02.class.getMethod("getRejectionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(MisMatchRejectionV02 obj) {
+			return obj.getRejectionIdentification();
+		}
+
+		@Override
+		public void setValue(MisMatchRejectionV02 obj, MessageIdentification1 value) {
+			obj.setRejectionIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -184,7 +185,7 @@ public class MisMatchRejectionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MisMatchRejectionV02, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<MisMatchRejectionV02, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,12 +196,14 @@ public class MisMatchRejectionV02 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MisMatchRejectionV02.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(MisMatchRejectionV02 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(MisMatchRejectionV02 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubmitrTxRef")
@@ -229,7 +232,7 @@ public class MisMatchRejectionV02 {
 	 * "Reference to the transaction for the requesting financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MisMatchRejectionV02, Optional<SimpleIdentificationInformation>> mmSubmitterTransactionReference = new MMMessageBuildingBlock<MisMatchRejectionV02, Optional<SimpleIdentificationInformation>>() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +243,14 @@ public class MisMatchRejectionV02 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MisMatchRejectionV02.class.getMethod("getSubmitterTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SimpleIdentificationInformation> getValue(MisMatchRejectionV02 obj) {
+			return obj.getSubmitterTransactionReference();
+		}
+
+		@Override
+		public void setValue(MisMatchRejectionV02 obj, Optional<SimpleIdentificationInformation> value) {
+			obj.setSubmitterTransactionReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DataSetMtchRptRef", required = true)
@@ -275,7 +280,7 @@ public class MisMatchRejectionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDataSetMatchReportReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MisMatchRejectionV02, MessageIdentification1> mmDataSetMatchReportReference = new MMMessageBuildingBlock<MisMatchRejectionV02, MessageIdentification1>() {
 		{
 			xmlTag = "DataSetMtchRptRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,12 +291,14 @@ public class MisMatchRejectionV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MisMatchRejectionV02.class.getMethod("getDataSetMatchReportReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(MisMatchRejectionV02 obj) {
+			return obj.getDataSetMatchReportReference();
+		}
+
+		@Override
+		public void setValue(MisMatchRejectionV02 obj, MessageIdentification1 value) {
+			obj.setDataSetMatchReportReference(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn", required = true)
@@ -319,7 +326,7 @@ public class MisMatchRejectionV02 {
 	 * definition} = "Reason why the user cannot accept the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MisMatchRejectionV02, RejectionReason1Choice> mmRejectionReason = new MMMessageBuildingBlock<MisMatchRejectionV02, RejectionReason1Choice>() {
 		{
 			xmlTag = "RjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,12 +337,14 @@ public class MisMatchRejectionV02 {
 			complexType_lazy = () -> RejectionReason1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MisMatchRejectionV02.class.getMethod("getRejectionReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RejectionReason1Choice getValue(MisMatchRejectionV02 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(MisMatchRejectionV02 obj, RejectionReason1Choice value) {
+			obj.setRejectionReason(value);
 		}
 	};
 

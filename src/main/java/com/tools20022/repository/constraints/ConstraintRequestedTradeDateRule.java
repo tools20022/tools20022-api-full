@@ -52,11 +52,15 @@ public class ConstraintRequestedTradeDateRule {
 	 */
 	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {
 		{
-			validator = ConstraintRequestedTradeDateRule::checkRedemptionExecution10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTradeDateRule";
 			definition = "If RequestedTradeDate is not present, then the next available date is used.";
 			owner_lazy = () -> RedemptionExecution10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution10 obj) throws Exception {
+			checkRedemptionExecution10(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintRequestedTradeDateRule {
 	 */
 	public static final MMConstraint<RedemptionOrder9> forRedemptionOrder9 = new MMConstraint<RedemptionOrder9>() {
 		{
-			validator = ConstraintRequestedTradeDateRule::checkRedemptionOrder9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTradeDateRule";
 			definition = "If RequestedTradeDate is not present, then the next available date is used.";
 			owner_lazy = () -> RedemptionOrder9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder9 obj) throws Exception {
+			checkRedemptionOrder9(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintRequestedTradeDateRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder9> forSubscriptionOrder9 = new MMConstraint<SubscriptionOrder9>() {
 		{
-			validator = ConstraintRequestedTradeDateRule::checkSubscriptionOrder9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTradeDateRule";
 			definition = "If RequestedTradeDate is not present, then the next available date is used.";
 			owner_lazy = () -> SubscriptionOrder9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder9 obj) throws Exception {
+			checkSubscriptionOrder9(obj);
 		}
 	};
 

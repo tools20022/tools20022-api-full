@@ -109,7 +109,7 @@ public class PurposeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PurposeChoice, Max35Text> mmProprietary = new MMMessageAttribute<PurposeChoice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PurposeChoice.mmObject();
@@ -121,6 +121,16 @@ public class PurposeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PurposeChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PurposeChoice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -160,7 +170,7 @@ public class PurposeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PurposeChoice, PaymentPurpose1Code> mmCode = new MMMessageAttribute<PurposeChoice, PaymentPurpose1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PurposeChoice.mmObject();
@@ -172,6 +182,16 @@ public class PurposeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentPurpose1Code.mmObject();
+		}
+
+		@Override
+		public PaymentPurpose1Code getValue(PurposeChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PurposeChoice obj, PaymentPurpose1Code value) {
+			obj.setCode(value);
 		}
 	};
 

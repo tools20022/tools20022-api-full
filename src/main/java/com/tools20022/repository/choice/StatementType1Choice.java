@@ -98,7 +98,7 @@ public class StatementType1Choice {
 	 * definition} = "Specifes the statement message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementType1Choice, StatementType1Code> mmStatementType = new MMMessageAttribute<StatementType1Choice, StatementType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementType1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class StatementType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementType1Code.mmObject();
+		}
+
+		@Override
+		public StatementType1Code getValue(StatementType1Choice obj) {
+			return obj.getStatementType();
+		}
+
+		@Override
+		public void setValue(StatementType1Choice obj, StatementType1Code value) {
+			obj.setStatementType(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class StatementType1Choice {
 	 * definition} = "Specifes the statement message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementType1Choice, Extended350Code> mmProprietary = new MMMessageAttribute<StatementType1Choice, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementType1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class StatementType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(StatementType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StatementType1Choice obj, Extended350Code value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -20,7 +20,10 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.AssetHolding;
+import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -47,6 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * OtherLiquidityFacilityAmount1.mmUnsecuredAmount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -80,6 +85,11 @@ public class OtherLiquidityFacilityAmount1 {
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection6
 	 * AmountAndDirection6}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+	 * AssetHolding.mmBookValue}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.OtherLiquidityFacilityAmount1
@@ -99,8 +109,9 @@ public class OtherLiquidityFacilityAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuredAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherLiquidityFacilityAmount1, AmountAndDirection6> mmSecuredAmount = new MMMessageAssociationEnd<OtherLiquidityFacilityAmount1, AmountAndDirection6>() {
 		{
+			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherLiquidityFacilityAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "ScrdAmt";
@@ -110,7 +121,17 @@ public class OtherLiquidityFacilityAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(OtherLiquidityFacilityAmount1 obj) {
+			return obj.getSecuredAmount();
+		}
+
+		@Override
+		public void setValue(OtherLiquidityFacilityAmount1 obj, AmountAndDirection6 value) {
+			obj.setSecuredAmount(value);
 		}
 	};
 	@XmlElement(name = "UscrdAmt", required = true)
@@ -123,6 +144,11 @@ public class OtherLiquidityFacilityAmount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection6
 	 * AmountAndDirection6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmBookValue
+	 * AssetHolding.mmBookValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,8 +169,9 @@ public class OtherLiquidityFacilityAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnsecuredAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherLiquidityFacilityAmount1, AmountAndDirection6> mmUnsecuredAmount = new MMMessageAssociationEnd<OtherLiquidityFacilityAmount1, AmountAndDirection6>() {
 		{
+			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherLiquidityFacilityAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "UscrdAmt";
@@ -154,7 +181,17 @@ public class OtherLiquidityFacilityAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(OtherLiquidityFacilityAmount1 obj) {
+			return obj.getUnsecuredAmount();
+		}
+
+		@Override
+		public void setValue(OtherLiquidityFacilityAmount1 obj, AmountAndDirection6 value) {
+			obj.setUnsecuredAmount(value);
 		}
 	};
 
@@ -162,6 +199,7 @@ public class OtherLiquidityFacilityAmount1 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherLiquidityFacilityAmount1.mmSecuredAmount, com.tools20022.repository.msg.OtherLiquidityFacilityAmount1.mmUnsecuredAmount);
+				trace_lazy = () -> Derivative.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherLiquidityFacilityAmount1";
@@ -175,7 +213,7 @@ public class OtherLiquidityFacilityAmount1 {
 		return securedAmount;
 	}
 
-	public OtherLiquidityFacilityAmount1 setSecuredAmount(com.tools20022.repository.msg.AmountAndDirection6 securedAmount) {
+	public OtherLiquidityFacilityAmount1 setSecuredAmount(AmountAndDirection6 securedAmount) {
 		this.securedAmount = Objects.requireNonNull(securedAmount);
 		return this;
 	}
@@ -184,7 +222,7 @@ public class OtherLiquidityFacilityAmount1 {
 		return unsecuredAmount;
 	}
 
-	public OtherLiquidityFacilityAmount1 setUnsecuredAmount(com.tools20022.repository.msg.AmountAndDirection6 unsecuredAmount) {
+	public OtherLiquidityFacilityAmount1 setUnsecuredAmount(AmountAndDirection6 unsecuredAmount) {
 		this.unsecuredAmount = Objects.requireNonNull(unsecuredAmount);
 		return this;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002
 import com.tools20022.repository.choice.Status23Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Transaction56;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,7 +115,7 @@ public class StatusAndReason33 {
 	 * definition} = "Status and reason for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason33, Status23Choice> mmStatusAndReason = new MMMessageAssociationEnd<StatusAndReason33, Status23Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason33.mmObject();
@@ -128,9 +129,19 @@ public class StatusAndReason33 {
 			isComposite = true;
 			type_lazy = () -> Status23Choice.mmObject();
 		}
+
+		@Override
+		public Status23Choice getValue(StatusAndReason33 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(StatusAndReason33 obj, Status23Choice value) {
+			obj.setStatusAndReason(value);
+		}
 	};
 	@XmlElement(name = "Tx")
-	protected List<com.tools20022.repository.msg.Transaction56> transaction;
+	protected List<Transaction56> transaction;
 	/**
 	 * 
 	 <p>
@@ -157,7 +168,7 @@ public class StatusAndReason33 {
 	 * definition} = "Details of the transactions reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason33, List<Transaction56>> mmTransaction = new MMMessageAssociationEnd<StatusAndReason33, List<Transaction56>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason33.mmObject();
 			isDerived = false;
@@ -167,7 +178,17 @@ public class StatusAndReason33 {
 			definition = "Details of the transactions reported.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Transaction56.mmObject();
+			type_lazy = () -> Transaction56.mmObject();
+		}
+
+		@Override
+		public List<Transaction56> getValue(StatusAndReason33 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(StatusAndReason33 obj, List<Transaction56> value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -199,7 +220,7 @@ public class StatusAndReason33 {
 		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public StatusAndReason33 setTransaction(List<com.tools20022.repository.msg.Transaction56> transaction) {
+	public StatusAndReason33 setTransaction(List<Transaction56> transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

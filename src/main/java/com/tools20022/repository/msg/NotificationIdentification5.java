@@ -126,7 +126,7 @@ public class NotificationIdentification5 {
 	 * NotificationIdentification3.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationIdentification5, Max35Text> mmIdentification = new MMMessageAttribute<NotificationIdentification5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCorporateActionNotificationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification5.mmObject();
@@ -140,6 +140,16 @@ public class NotificationIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(NotificationIdentification5 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification5 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -187,7 +197,7 @@ public class NotificationIdentification5 {
 	 * NotificationIdentification3.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationIdentification5, Optional<DateAndDateTime2Choice>> mmCreationDateTime = new MMMessageAttribute<NotificationIdentification5, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCreationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification5.mmObject();
@@ -201,6 +211,16 @@ public class NotificationIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(NotificationIdentification5 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification5 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 

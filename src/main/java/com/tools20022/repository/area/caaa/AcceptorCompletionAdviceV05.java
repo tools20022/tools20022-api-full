@@ -21,12 +21,11 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion;
+import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.AcceptorCompletionAdvice5;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header24;
-import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -62,9 +61,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion
- * CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -73,8 +70,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AccptrCmpltnAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion
- * AcceptortoAcquirerCardTransactionPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
+ * AcceptortoAcquirerCardTransactionArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.003.001.05}</li>
@@ -144,7 +141,7 @@ public class AcceptorCompletionAdviceV05 {
 	 * AcceptorCompletionAdviceV04.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCompletionAdviceV05, Header24> mmHeader = new MMMessageBuildingBlock<AcceptorCompletionAdviceV05, Header24>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +154,14 @@ public class AcceptorCompletionAdviceV05 {
 			complexType_lazy = () -> Header24.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCompletionAdviceV05.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header24 getValue(AcceptorCompletionAdviceV05 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceV05 obj, Header24 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "CmpltnAdvc", required = true)
@@ -203,7 +202,7 @@ public class AcceptorCompletionAdviceV05 {
 	 * AcceptorCompletionAdviceV04.mmCompletionAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCompletionAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCompletionAdviceV05, AcceptorCompletionAdvice5> mmCompletionAdvice = new MMMessageBuildingBlock<AcceptorCompletionAdviceV05, AcceptorCompletionAdvice5>() {
 		{
 			xmlTag = "CmpltnAdvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,12 +215,14 @@ public class AcceptorCompletionAdviceV05 {
 			complexType_lazy = () -> AcceptorCompletionAdvice5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCompletionAdviceV05.class.getMethod("getCompletionAdvice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorCompletionAdvice5 getValue(AcceptorCompletionAdviceV05 obj) {
+			return obj.getCompletionAdvice();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceV05 obj, AcceptorCompletionAdvice5 value) {
+			obj.setCompletionAdvice(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -262,7 +263,7 @@ public class AcceptorCompletionAdviceV05 {
 	 * AcceptorCompletionAdviceV04.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCompletionAdviceV05, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorCompletionAdviceV05, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,12 +276,14 @@ public class AcceptorCompletionAdviceV05 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCompletionAdviceV05.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(AcceptorCompletionAdviceV05 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceV05 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
@@ -292,10 +295,10 @@ public class AcceptorCompletionAdviceV05 {
 				definition = "The AcceptorCompletionAdvice message is sent by an acceptor (or its agent) to notify the acquirer (or its agent) of the outcome of the payment at the acceptor, and to transfer the financial data of the transaction to the acquirer (capture).\r\nA AcceptorCompletionAdvice message is also sent to reverse an approved authorisation and any associated financial transfer (capture), if the card payment transaction could not be completed successfully.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorCompletionAdviceV06.mmObject());
 				previousVersion_lazy = () -> AcceptorCompletionAdviceV04.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCmpltnAdvc";
-				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
+				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05.mmCompletionAdvice,
 						com.tools20022.repository.area.caaa.AcceptorCompletionAdviceV05.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

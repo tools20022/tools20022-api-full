@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Charge21;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -104,7 +105,7 @@ public class TotalCharges4 {
 	 * definition} = "Total value of the charges for a specific order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmountOfCharges = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalCharges4, Optional<ActiveCurrencyAnd13DecimalAmount>> mmTotalAmountOfCharges = new MMMessageAttribute<TotalCharges4, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalCharges4.mmObject();
@@ -117,9 +118,19 @@ public class TotalCharges4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(TotalCharges4 obj) {
+			return obj.getTotalAmountOfCharges();
+		}
+
+		@Override
+		public void setValue(TotalCharges4 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setTotalAmountOfCharges(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ChrgDtls")
-	protected List<com.tools20022.repository.msg.Charge21> chargeDetails;
+	protected List<Charge21> chargeDetails;
 	/**
 	 * 
 	 <p>
@@ -148,7 +159,7 @@ public class TotalCharges4 {
 	 * definition} = "Information related to a specific charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalCharges4, List<Charge21>> mmChargeDetails = new MMMessageAssociationEnd<TotalCharges4, List<Charge21>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalCharges4.mmObject();
@@ -159,7 +170,17 @@ public class TotalCharges4 {
 			definition = "Information related to a specific charge.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Charge21.mmObject();
+			type_lazy = () -> Charge21.mmObject();
+		}
+
+		@Override
+		public List<Charge21> getValue(TotalCharges4 obj) {
+			return obj.getChargeDetails();
+		}
+
+		@Override
+		public void setValue(TotalCharges4 obj, List<Charge21> value) {
+			obj.setChargeDetails(value);
 		}
 	};
 
@@ -190,7 +211,7 @@ public class TotalCharges4 {
 		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public TotalCharges4 setChargeDetails(List<com.tools20022.repository.msg.Charge21> chargeDetails) {
+	public TotalCharges4 setChargeDetails(List<Charge21> chargeDetails) {
 		this.chargeDetails = Objects.requireNonNull(chargeDetails);
 		return this;
 	}

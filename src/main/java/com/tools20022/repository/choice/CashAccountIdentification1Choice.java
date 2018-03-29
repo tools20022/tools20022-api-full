@@ -138,7 +138,7 @@ public class CashAccountIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification1Choice, IBANIdentifier> mmIBAN = new MMMessageAttribute<CashAccountIdentification1Choice, IBANIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification1Choice.mmObject();
@@ -151,6 +151,16 @@ public class CashAccountIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
+		}
+
+		@Override
+		public IBANIdentifier getValue(CashAccountIdentification1Choice obj) {
+			return obj.getIBAN();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification1Choice obj, IBANIdentifier value) {
+			obj.setIBAN(value);
 		}
 	};
 	@XmlElement(name = "BBAN", required = true)
@@ -198,7 +208,7 @@ public class CashAccountIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification1Choice, BBANIdentifier> mmBBAN = new MMMessageAttribute<CashAccountIdentification1Choice, BBANIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmBBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification1Choice.mmObject();
@@ -211,6 +221,16 @@ public class CashAccountIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
+		}
+
+		@Override
+		public BBANIdentifier getValue(CashAccountIdentification1Choice obj) {
+			return obj.getBBAN();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification1Choice obj, BBANIdentifier value) {
+			obj.setBBAN(value);
 		}
 	};
 	@XmlElement(name = "UPIC", required = true)
@@ -258,7 +278,7 @@ public class CashAccountIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification1Choice, UPICIdentifier> mmUPIC = new MMMessageAttribute<CashAccountIdentification1Choice, UPICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmUPIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification1Choice.mmObject();
@@ -271,6 +291,16 @@ public class CashAccountIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
+		}
+
+		@Override
+		public UPICIdentifier getValue(CashAccountIdentification1Choice obj) {
+			return obj.getUPIC();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification1Choice obj, UPICIdentifier value) {
+			obj.setUPIC(value);
 		}
 	};
 	@XmlElement(name = "DmstAcct", required = true)
@@ -318,7 +348,7 @@ public class CashAccountIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomesticAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification1Choice, SimpleIdentificationInformation> mmDomesticAccount = new MMMessageAttribute<CashAccountIdentification1Choice, SimpleIdentificationInformation>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification1Choice.mmObject();
@@ -331,6 +361,16 @@ public class CashAccountIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+		}
+
+		@Override
+		public SimpleIdentificationInformation getValue(CashAccountIdentification1Choice obj) {
+			return obj.getDomesticAccount();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification1Choice obj, SimpleIdentificationInformation value) {
+			obj.setDomesticAccount(value);
 		}
 	};
 

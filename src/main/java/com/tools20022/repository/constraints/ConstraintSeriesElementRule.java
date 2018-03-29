@@ -48,11 +48,15 @@ public class ConstraintSeriesElementRule {
 	 */
 	public static final MMConstraint<Series1> forSeries1 = new MMConstraint<Series1>() {
 		{
-			validator = ConstraintSeriesElementRule::checkSeries1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SeriesElementRule";
 			definition = "Either SeriesDate or SeriesName must be present. Both may be present.";
 			owner_lazy = () -> Series1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Series1 obj) throws Exception {
+			checkSeries1(obj);
 		}
 	};
 

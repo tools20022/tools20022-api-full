@@ -118,7 +118,7 @@ public class SecurityIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification5Choice, ISINIdentifier> mmISIN = new MMMessageAttribute<SecurityIdentification5Choice, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification5Choice.mmObject();
@@ -130,6 +130,16 @@ public class SecurityIdentification5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(SecurityIdentification5Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification5Choice obj, ISINIdentifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "OthrId", required = true)
@@ -169,7 +179,7 @@ public class SecurityIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification5Choice, AlternateSecurityIdentification1> mmOtherIdentification = new MMMessageAttribute<SecurityIdentification5Choice, AlternateSecurityIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification5Choice.mmObject();
@@ -181,6 +191,16 @@ public class SecurityIdentification5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AlternateSecurityIdentification1.mmObject();
+		}
+
+		@Override
+		public AlternateSecurityIdentification1 getValue(SecurityIdentification5Choice obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification5Choice obj, AlternateSecurityIdentification1 value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 	@XmlElement(name = "InstrmDesc", required = true)
@@ -219,7 +239,7 @@ public class SecurityIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstrumentDescription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification5Choice, SecurityInstrumentDescription1> mmInstrumentDescription = new MMMessageAssociationEnd<SecurityIdentification5Choice, SecurityInstrumentDescription1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentifiedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification5Choice.mmObject();
@@ -232,6 +252,16 @@ public class SecurityIdentification5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityInstrumentDescription1.mmObject();
+		}
+
+		@Override
+		public SecurityInstrumentDescription1 getValue(SecurityIdentification5Choice obj) {
+			return obj.getInstrumentDescription();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification5Choice obj, SecurityInstrumentDescription1 value) {
+			obj.setInstrumentDescription(value);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.BuyIn;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class SecuritiesCompensation1 {
 	 * definition} = "Place where settlement of the securities takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCompensation1, PartyIdentification34Choice> mmDepository = new MMMessageAssociationEnd<SecuritiesCompensation1, PartyIdentification34Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCompensation1.mmObject();
@@ -126,6 +127,16 @@ public class SecuritiesCompensation1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification34Choice getValue(SecuritiesCompensation1 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(SecuritiesCompensation1 obj, PartyIdentification34Choice value) {
+			obj.setDepository(value);
 		}
 	};
 	@XmlElement(name = "SttlmAmt", required = true)
@@ -161,7 +172,7 @@ public class SecuritiesCompensation1 {
 	 * definition} = "Provides the total amount of money to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCompensation1, AmountAndDirection20> mmSettlementAmount = new MMMessageAssociationEnd<SecuritiesCompensation1, AmountAndDirection20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCompensation1.mmObject();
@@ -173,7 +184,17 @@ public class SecuritiesCompensation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
+			type_lazy = () -> AmountAndDirection20.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection20 getValue(SecuritiesCompensation1 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(SecuritiesCompensation1 obj, AmountAndDirection20 value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "Fees")
@@ -209,7 +230,7 @@ public class SecuritiesCompensation1 {
 	 * "Amount of money related to the fees for the securities compensation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCompensation1, Optional<AmountAndDirection20>> mmFees = new MMMessageAssociationEnd<SecuritiesCompensation1, Optional<AmountAndDirection20>>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmFees;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCompensation1.mmObject();
@@ -221,7 +242,17 @@ public class SecuritiesCompensation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
+			type_lazy = () -> AmountAndDirection20.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection20> getValue(SecuritiesCompensation1 obj) {
+			return obj.getFees();
+		}
+
+		@Override
+		public void setValue(SecuritiesCompensation1 obj, Optional<AmountAndDirection20> value) {
+			obj.setFees(value.orElse(null));
 		}
 	};
 
@@ -253,7 +284,7 @@ public class SecuritiesCompensation1 {
 		return settlementAmount;
 	}
 
-	public SecuritiesCompensation1 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+	public SecuritiesCompensation1 setSettlementAmount(AmountAndDirection20 settlementAmount) {
 		this.settlementAmount = Objects.requireNonNull(settlementAmount);
 		return this;
 	}
@@ -262,7 +293,7 @@ public class SecuritiesCompensation1 {
 		return fees == null ? Optional.empty() : Optional.of(fees);
 	}
 
-	public SecuritiesCompensation1 setFees(com.tools20022.repository.msg.AmountAndDirection20 fees) {
+	public SecuritiesCompensation1 setFees(AmountAndDirection20 fees) {
 		this.fees = fees;
 		return this;
 	}

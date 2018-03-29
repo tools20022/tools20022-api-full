@@ -26,7 +26,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.msg.LiquidityStressTestResult1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +117,7 @@ public class CCPLiquidityStressTestingResultReportV01 {
 	 * "Results from a scenario used to stress the liquidity needs of the CCP."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmLiquidityStressTestResult = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPLiquidityStressTestingResultReportV01, List<LiquidityStressTestResult1>> mmLiquidityStressTestResult = new MMMessageBuildingBlock<CCPLiquidityStressTestingResultReportV01, List<LiquidityStressTestResult1>>() {
 		{
 			xmlTag = "LqdtyStrssTstRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,12 +127,14 @@ public class CCPLiquidityStressTestingResultReportV01 {
 			complexType_lazy = () -> LiquidityStressTestResult1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPLiquidityStressTestingResultReportV01.class.getMethod("getLiquidityStressTestResult", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<LiquidityStressTestResult1> getValue(CCPLiquidityStressTestingResultReportV01 obj) {
+			return obj.getLiquidityStressTestResult();
+		}
+
+		@Override
+		public void setValue(CCPLiquidityStressTestingResultReportV01 obj, List<LiquidityStressTestResult1> value) {
+			obj.setLiquidityStressTestResult(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -163,7 +164,7 @@ public class CCPLiquidityStressTestingResultReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPLiquidityStressTestingResultReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPLiquidityStressTestingResultReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,12 +174,14 @@ public class CCPLiquidityStressTestingResultReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPLiquidityStressTestingResultReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CCPLiquidityStressTestingResultReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CCPLiquidityStressTestingResultReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

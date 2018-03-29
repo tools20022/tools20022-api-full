@@ -142,7 +142,7 @@ public class OriginalMessage2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalSender = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalMessage2, Optional<Party28Choice>> mmOriginalSender = new MMMessageAssociationEnd<OriginalMessage2, Optional<Party28Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> InitiatingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmObject();
@@ -156,6 +156,16 @@ public class OriginalMessage2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Party28Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Party28Choice> getValue(OriginalMessage2 obj) {
+			return obj.getOriginalSender();
+		}
+
+		@Override
+		public void setValue(OriginalMessage2 obj, Optional<Party28Choice> value) {
+			obj.setOriginalSender(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlMsgId", required = true)
@@ -207,7 +217,7 @@ public class OriginalMessage2 {
 	 * OriginalGroupInformation3.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessage2, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalMessage2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmObject();
@@ -221,6 +231,16 @@ public class OriginalMessage2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalMessage2 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalMessage2 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -267,7 +287,7 @@ public class OriginalMessage2 {
 	 * OriginalGroupInformation3.mmOriginalMessageNameIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessage2, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalMessage2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmObject();
 			isDerived = false;
@@ -280,6 +300,16 @@ public class OriginalMessage2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalMessage2 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalMessage2 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCreDtTm")
@@ -329,7 +359,7 @@ public class OriginalMessage2 {
 	 * OriginalGroupInformation3.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessage2, Optional<ISODateTime>> mmOriginalCreationDateTime = new MMMessageAttribute<OriginalMessage2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmObject();
@@ -343,6 +373,16 @@ public class OriginalMessage2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(OriginalMessage2 obj) {
+			return obj.getOriginalCreationDateTime();
+		}
+
+		@Override
+		public void setValue(OriginalMessage2 obj, Optional<ISODateTime> value) {
+			obj.setOriginalCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlPackgId")
@@ -376,7 +416,7 @@ public class OriginalMessage2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalPackageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessage2, Optional<Max35Text>> mmOriginalPackageIdentification = new MMMessageAttribute<OriginalMessage2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmObject();
 			isDerived = false;
@@ -387,6 +427,16 @@ public class OriginalMessage2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OriginalMessage2 obj) {
+			return obj.getOriginalPackageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalMessage2 obj, Optional<Max35Text> value) {
+			obj.setOriginalPackageIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlRcrdId", required = true)
@@ -420,7 +470,7 @@ public class OriginalMessage2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessage2, Max35Text> mmOriginalRecordIdentification = new MMMessageAttribute<OriginalMessage2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessage2.mmObject();
 			isDerived = false;
@@ -431,6 +481,16 @@ public class OriginalMessage2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalMessage2 obj) {
+			return obj.getOriginalRecordIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalMessage2 obj, Max35Text value) {
+			obj.setOriginalRecordIdentification(value);
 		}
 	};
 

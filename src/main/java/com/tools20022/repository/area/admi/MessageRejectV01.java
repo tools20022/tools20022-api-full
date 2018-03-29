@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.MessageReference;
 import com.tools20022.repository.msg.RejectionReason2;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +118,7 @@ public class MessageRejectV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MessageRejectV01, MessageReference> mmRelatedReference = new MMMessageBuildingBlock<MessageRejectV01, MessageReference>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,12 +129,14 @@ public class MessageRejectV01 {
 			complexType_lazy = () -> MessageReference.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MessageRejectV01.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageReference getValue(MessageRejectV01 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(MessageRejectV01 obj, MessageReference value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -164,7 +165,7 @@ public class MessageRejectV01 {
 	 * "General information about the reason of the message rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MessageRejectV01, RejectionReason2> mmReason = new MMMessageBuildingBlock<MessageRejectV01, RejectionReason2>() {
 		{
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +176,14 @@ public class MessageRejectV01 {
 			complexType_lazy = () -> RejectionReason2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MessageRejectV01.class.getMethod("getReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RejectionReason2 getValue(MessageRejectV01 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(MessageRejectV01 obj, RejectionReason2 value) {
+			obj.setReason(value);
 		}
 	};
 

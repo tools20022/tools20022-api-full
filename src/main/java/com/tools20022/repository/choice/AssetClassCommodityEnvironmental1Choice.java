@@ -111,7 +111,7 @@ public class AssetClassCommodityEnvironmental1Choice {
 	 * definition} = "Emissions environmental commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEmissions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnvironmental1Choice, EnvironmentalCommodityEmission1> mmEmissions = new MMMessageAssociationEnd<AssetClassCommodityEnvironmental1Choice, EnvironmentalCommodityEmission1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmObject();
@@ -124,6 +124,16 @@ public class AssetClassCommodityEnvironmental1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnvironmentalCommodityEmission1.mmObject();
+		}
+
+		@Override
+		public EnvironmentalCommodityEmission1 getValue(AssetClassCommodityEnvironmental1Choice obj) {
+			return obj.getEmissions();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnvironmental1Choice obj, EnvironmentalCommodityEmission1 value) {
+			obj.setEmissions(value);
 		}
 	};
 	@XmlElement(name = "Wthr", required = true)
@@ -160,7 +170,7 @@ public class AssetClassCommodityEnvironmental1Choice {
 	 * definition} = "Weather environmental commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWeather = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnvironmental1Choice, EnvironmentalCommodityWeather1> mmWeather = new MMMessageAssociationEnd<AssetClassCommodityEnvironmental1Choice, EnvironmentalCommodityWeather1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmObject();
@@ -173,6 +183,16 @@ public class AssetClassCommodityEnvironmental1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnvironmentalCommodityWeather1.mmObject();
+		}
+
+		@Override
+		public EnvironmentalCommodityWeather1 getValue(AssetClassCommodityEnvironmental1Choice obj) {
+			return obj.getWeather();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnvironmental1Choice obj, EnvironmentalCommodityWeather1 value) {
+			obj.setWeather(value);
 		}
 	};
 	@XmlElement(name = "CrbnRltd", required = true)
@@ -209,7 +229,7 @@ public class AssetClassCommodityEnvironmental1Choice {
 	 * definition} = "Carbon related environmental commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCarbonRelated = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnvironmental1Choice, EnvironmentalCommodityCarbonRelated1> mmCarbonRelated = new MMMessageAssociationEnd<AssetClassCommodityEnvironmental1Choice, EnvironmentalCommodityCarbonRelated1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmObject();
@@ -222,6 +242,16 @@ public class AssetClassCommodityEnvironmental1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnvironmentalCommodityCarbonRelated1.mmObject();
+		}
+
+		@Override
+		public EnvironmentalCommodityCarbonRelated1 getValue(AssetClassCommodityEnvironmental1Choice obj) {
+			return obj.getCarbonRelated();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnvironmental1Choice obj, EnvironmentalCommodityCarbonRelated1 value) {
+			obj.setCarbonRelated(value);
 		}
 	};
 

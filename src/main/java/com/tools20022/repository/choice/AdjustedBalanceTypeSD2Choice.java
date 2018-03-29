@@ -107,7 +107,7 @@ public class AdjustedBalanceTypeSD2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStockLoan = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdjustedBalanceTypeSD2Choice, SignedQuantityFormat4> mmStockLoan = new MMMessageAttribute<AdjustedBalanceTypeSD2Choice, SignedQuantityFormat4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class AdjustedBalanceTypeSD2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat4 getValue(AdjustedBalanceTypeSD2Choice obj) {
+			return obj.getStockLoan();
+		}
+
+		@Override
+		public void setValue(AdjustedBalanceTypeSD2Choice obj, SignedQuantityFormat4 value) {
+			obj.setStockLoan(value);
 		}
 	};
 	@XmlElement(name = "Repo", required = true)
@@ -156,7 +166,7 @@ public class AdjustedBalanceTypeSD2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRepo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdjustedBalanceTypeSD2Choice, SignedQuantityFormat4> mmRepo = new MMMessageAttribute<AdjustedBalanceTypeSD2Choice, SignedQuantityFormat4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class AdjustedBalanceTypeSD2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat4 getValue(AdjustedBalanceTypeSD2Choice obj) {
+			return obj.getRepo();
+		}
+
+		@Override
+		public void setValue(AdjustedBalanceTypeSD2Choice obj, SignedQuantityFormat4 value) {
+			obj.setRepo(value);
 		}
 	};
 

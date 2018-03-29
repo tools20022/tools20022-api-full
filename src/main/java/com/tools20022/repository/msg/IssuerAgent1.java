@@ -146,7 +146,7 @@ public class IssuerAgent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IssuerAgent1, PartyIdentification9Choice> mmIdentification = new MMMessageAssociationEnd<IssuerAgent1, PartyIdentification9Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAgent1.mmObject();
@@ -160,6 +160,16 @@ public class IssuerAgent1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification9Choice getValue(IssuerAgent1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(IssuerAgent1 obj, PartyIdentification9Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Role")
@@ -203,7 +213,7 @@ public class IssuerAgent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuerAgent1, Optional<AgentRole1Code>> mmRole = new MMMessageAttribute<IssuerAgent1, Optional<AgentRole1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionAgent.mmAgentRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAgent1.mmObject();
@@ -216,6 +226,16 @@ public class IssuerAgent1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AgentRole1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AgentRole1Code> getValue(IssuerAgent1 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(IssuerAgent1 obj, Optional<AgentRole1Code> value) {
+			obj.setRole(value.orElse(null));
 		}
 	};
 

@@ -51,11 +51,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification10Choice> forPartyIdentification10Choice = new MMConstraint<PartyIdentification10Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification10Choice obj) throws Exception {
+			checkPartyIdentification10Choice(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification14Choice> forPartyIdentification14Choice = new MMConstraint<PartyIdentification14Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification14Choice obj) throws Exception {
+			checkPartyIdentification14Choice(obj);
 		}
 	};
 	/**
@@ -111,11 +119,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification45Choice> forPartyIdentification45Choice = new MMConstraint<PartyIdentification45Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification45Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification45Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification45Choice obj) throws Exception {
+			checkPartyIdentification45Choice(obj);
 		}
 	};
 	/**
@@ -141,11 +153,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification37Choice> forPartyIdentification37Choice = new MMConstraint<PartyIdentification37Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification37Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification37Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification37Choice obj) throws Exception {
+			checkPartyIdentification37Choice(obj);
 		}
 	};
 	/**
@@ -171,11 +187,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification43Choice> forPartyIdentification43Choice = new MMConstraint<PartyIdentification43Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification43Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification43Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification43Choice obj) throws Exception {
+			checkPartyIdentification43Choice(obj);
 		}
 	};
 	/**
@@ -201,11 +221,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification30Choice> forPartyIdentification30Choice = new MMConstraint<PartyIdentification30Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification30Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification30Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification30Choice obj) throws Exception {
+			checkPartyIdentification30Choice(obj);
 		}
 	};
 	/**
@@ -231,11 +255,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification38Choice> forPartyIdentification38Choice = new MMConstraint<PartyIdentification38Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification38Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification38Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification38Choice obj) throws Exception {
+			checkPartyIdentification38Choice(obj);
 		}
 	};
 	/**
@@ -261,11 +289,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification62Choice> forPartyIdentification62Choice = new MMConstraint<PartyIdentification62Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification62Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification62Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification62Choice obj) throws Exception {
+			checkPartyIdentification62Choice(obj);
 		}
 	};
 	/**
@@ -291,11 +323,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification60Choice> forPartyIdentification60Choice = new MMConstraint<PartyIdentification60Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification60Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification60Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification60Choice obj) throws Exception {
+			checkPartyIdentification60Choice(obj);
 		}
 	};
 	/**
@@ -321,11 +357,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification65Choice> forPartyIdentification65Choice = new MMConstraint<PartyIdentification65Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification65Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification65Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification65Choice obj) throws Exception {
+			checkPartyIdentification65Choice(obj);
 		}
 	};
 	/**
@@ -351,11 +391,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification61Choice> forPartyIdentification61Choice = new MMConstraint<PartyIdentification61Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification61Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification61Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification61Choice obj) throws Exception {
+			checkPartyIdentification61Choice(obj);
 		}
 	};
 	/**
@@ -381,11 +425,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification16Choice> forPartyIdentification16Choice = new MMConstraint<PartyIdentification16Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification16Choice obj) throws Exception {
+			checkPartyIdentification16Choice(obj);
 		}
 	};
 	/**
@@ -411,11 +459,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification46Choice> forPartyIdentification46Choice = new MMConstraint<PartyIdentification46Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification46Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification46Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification46Choice obj) throws Exception {
+			checkPartyIdentification46Choice(obj);
 		}
 	};
 	/**
@@ -441,11 +493,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification56Choice> forPartyIdentification56Choice = new MMConstraint<PartyIdentification56Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification56Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification56Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification56Choice obj) throws Exception {
+			checkPartyIdentification56Choice(obj);
 		}
 	};
 	/**
@@ -471,11 +527,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification48Choice> forPartyIdentification48Choice = new MMConstraint<PartyIdentification48Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification48Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification48Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification48Choice obj) throws Exception {
+			checkPartyIdentification48Choice(obj);
 		}
 	};
 	/**
@@ -501,11 +561,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification52Choice> forPartyIdentification52Choice = new MMConstraint<PartyIdentification52Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification52Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification52Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification52Choice obj) throws Exception {
+			checkPartyIdentification52Choice(obj);
 		}
 	};
 	/**
@@ -531,11 +595,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification31Choice> forPartyIdentification31Choice = new MMConstraint<PartyIdentification31Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification31Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification31Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification31Choice obj) throws Exception {
+			checkPartyIdentification31Choice(obj);
 		}
 	};
 	/**
@@ -561,11 +629,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification40Choice> forPartyIdentification40Choice = new MMConstraint<PartyIdentification40Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification40Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification40Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification40Choice obj) throws Exception {
+			checkPartyIdentification40Choice(obj);
 		}
 	};
 	/**
@@ -591,11 +663,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification42Choice> forPartyIdentification42Choice = new MMConstraint<PartyIdentification42Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification42Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification42Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification42Choice obj) throws Exception {
+			checkPartyIdentification42Choice(obj);
 		}
 	};
 	/**
@@ -621,11 +697,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification54Choice> forPartyIdentification54Choice = new MMConstraint<PartyIdentification54Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification54Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification54Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification54Choice obj) throws Exception {
+			checkPartyIdentification54Choice(obj);
 		}
 	};
 	/**
@@ -651,11 +731,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification55Choice> forPartyIdentification55Choice = new MMConstraint<PartyIdentification55Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification55Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification55Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification55Choice obj) throws Exception {
+			checkPartyIdentification55Choice(obj);
 		}
 	};
 	/**
@@ -681,11 +765,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification47Choice> forPartyIdentification47Choice = new MMConstraint<PartyIdentification47Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification47Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification47Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification47Choice obj) throws Exception {
+			checkPartyIdentification47Choice(obj);
 		}
 	};
 	/**
@@ -711,11 +799,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification57Choice> forPartyIdentification57Choice = new MMConstraint<PartyIdentification57Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification57Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification57Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification57Choice obj) throws Exception {
+			checkPartyIdentification57Choice(obj);
 		}
 	};
 	/**
@@ -741,11 +833,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification49Choice> forPartyIdentification49Choice = new MMConstraint<PartyIdentification49Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification49Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification49Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification49Choice obj) throws Exception {
+			checkPartyIdentification49Choice(obj);
 		}
 	};
 	/**
@@ -771,11 +867,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification59Choice> forPartyIdentification59Choice = new MMConstraint<PartyIdentification59Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification59Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification59Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification59Choice obj) throws Exception {
+			checkPartyIdentification59Choice(obj);
 		}
 	};
 	/**
@@ -801,11 +901,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification63Choice> forPartyIdentification63Choice = new MMConstraint<PartyIdentification63Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification63Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification63Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification63Choice obj) throws Exception {
+			checkPartyIdentification63Choice(obj);
 		}
 	};
 	/**
@@ -831,11 +935,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification15Choice> forPartyIdentification15Choice = new MMConstraint<PartyIdentification15Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification15Choice obj) throws Exception {
+			checkPartyIdentification15Choice(obj);
 		}
 	};
 	/**
@@ -861,11 +969,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification66Choice> forPartyIdentification66Choice = new MMConstraint<PartyIdentification66Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification66Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification66Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification66Choice obj) throws Exception {
+			checkPartyIdentification66Choice(obj);
 		}
 	};
 	/**
@@ -891,11 +1003,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification67Choice> forPartyIdentification67Choice = new MMConstraint<PartyIdentification67Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification67Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification67Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification67Choice obj) throws Exception {
+			checkPartyIdentification67Choice(obj);
 		}
 	};
 	/**
@@ -921,11 +1037,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification89Choice> forPartyIdentification89Choice = new MMConstraint<PartyIdentification89Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification89Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification89Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification89Choice obj) throws Exception {
+			checkPartyIdentification89Choice(obj);
 		}
 	};
 	/**
@@ -951,11 +1071,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification87Choice> forPartyIdentification87Choice = new MMConstraint<PartyIdentification87Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification87Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification87Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification87Choice obj) throws Exception {
+			checkPartyIdentification87Choice(obj);
 		}
 	};
 	/**
@@ -981,11 +1105,15 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 */
 	public static final MMConstraint<PartyIdentification88Choice> forPartyIdentification88Choice = new MMConstraint<PartyIdentification88Choice>() {
 		{
-			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification88Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
 			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification88Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification88Choice obj) throws Exception {
+			checkPartyIdentification88Choice(obj);
 		}
 	};
 

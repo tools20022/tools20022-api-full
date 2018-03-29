@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.BusinessLetter1;
 import com.tools20022.repository.msg.EncapsulatedBusinessMessage1;
 import com.tools20022.repository.msg.EventDescription1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -127,7 +126,7 @@ public class PartyEventAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyEventAdviceV01, BusinessLetter1> mmHeader = new MMMessageBuildingBlock<PartyEventAdviceV01, BusinessLetter1>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class PartyEventAdviceV01 {
 			complexType_lazy = () -> BusinessLetter1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyEventAdviceV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BusinessLetter1 getValue(PartyEventAdviceV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(PartyEventAdviceV01 obj, BusinessLetter1 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "EvtNtce", required = true)
@@ -171,7 +172,7 @@ public class PartyEventAdviceV01 {
 	 * definition} = "Description of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEventNotice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyEventAdviceV01, List<EventDescription1>> mmEventNotice = new MMMessageBuildingBlock<PartyEventAdviceV01, List<EventDescription1>>() {
 		{
 			xmlTag = "EvtNtce";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +182,14 @@ public class PartyEventAdviceV01 {
 			complexType_lazy = () -> EventDescription1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyEventAdviceV01.class.getMethod("getEventNotice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<EventDescription1> getValue(PartyEventAdviceV01 obj) {
+			return obj.getEventNotice();
+		}
+
+		@Override
+		public void setValue(PartyEventAdviceV01 obj, List<EventDescription1> value) {
+			obj.setEventNotice(value);
 		}
 	};
 	@XmlElement(name = "EvtCnt")
@@ -214,7 +217,7 @@ public class PartyEventAdviceV01 {
 	 * definition} = "Number of events as control value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEventCount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyEventAdviceV01, Optional<Max15NumericText>> mmEventCount = new MMMessageBuildingBlock<PartyEventAdviceV01, Optional<Max15NumericText>>() {
 		{
 			xmlTag = "EvtCnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +228,14 @@ public class PartyEventAdviceV01 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyEventAdviceV01.class.getMethod("getEventCount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max15NumericText> getValue(PartyEventAdviceV01 obj) {
+			return obj.getEventCount();
+		}
+
+		@Override
+		public void setValue(PartyEventAdviceV01 obj, Optional<Max15NumericText> value) {
+			obj.setEventCount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttchdMsg")
@@ -258,7 +263,7 @@ public class PartyEventAdviceV01 {
 	 * definition} = "Referenced or related business message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAttachedMessage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyEventAdviceV01, List<EncapsulatedBusinessMessage1>> mmAttachedMessage = new MMMessageBuildingBlock<PartyEventAdviceV01, List<EncapsulatedBusinessMessage1>>() {
 		{
 			xmlTag = "AttchdMsg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,12 +273,14 @@ public class PartyEventAdviceV01 {
 			complexType_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyEventAdviceV01.class.getMethod("getAttachedMessage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<EncapsulatedBusinessMessage1> getValue(PartyEventAdviceV01 obj) {
+			return obj.getAttachedMessage();
+		}
+
+		@Override
+		public void setValue(PartyEventAdviceV01 obj, List<EncapsulatedBusinessMessage1> value) {
+			obj.setAttachedMessage(value);
 		}
 	};
 

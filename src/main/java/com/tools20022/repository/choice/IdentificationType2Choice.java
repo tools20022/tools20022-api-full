@@ -112,7 +112,7 @@ public class IdentificationType2Choice {
 	 * definition} = "Type of identification is defined using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationType2Choice, TypeOfIdentification1Code> mmCode = new MMMessageAttribute<IdentificationType2Choice, TypeOfIdentification1Code>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationType2Choice.mmObject();
@@ -124,6 +124,16 @@ public class IdentificationType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfIdentification1Code.mmObject();
+		}
+
+		@Override
+		public TypeOfIdentification1Code getValue(IdentificationType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(IdentificationType2Choice obj, TypeOfIdentification1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class IdentificationType2Choice {
 	 * "Type of identification is defined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationType2Choice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<IdentificationType2Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationType2Choice.mmObject();
@@ -174,6 +184,16 @@ public class IdentificationType2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(IdentificationType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IdentificationType2Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

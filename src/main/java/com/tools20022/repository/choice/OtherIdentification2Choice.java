@@ -138,7 +138,7 @@ public class OtherIdentification2Choice {
 	 * OtherIdentification1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification2Choice, PersonIdentificationType6Code> mmCode = new MMMessageAttribute<OtherIdentification2Choice, PersonIdentificationType6Code>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.OtherIdentification2Choice.mmObject();
@@ -152,6 +152,16 @@ public class OtherIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType6Code.mmObject();
+		}
+
+		@Override
+		public PersonIdentificationType6Code getValue(OtherIdentification2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OtherIdentification2Choice obj, PersonIdentificationType6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -205,7 +215,7 @@ public class OtherIdentification2Choice {
 	 * OtherIdentification1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification2Choice, GenericIdentification29> mmProprietary = new MMMessageAttribute<OtherIdentification2Choice, GenericIdentification29>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.OtherIdentification2Choice.mmObject();
@@ -219,6 +229,16 @@ public class OtherIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification29.mmObject();
+		}
+
+		@Override
+		public GenericIdentification29 getValue(OtherIdentification2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OtherIdentification2Choice obj, GenericIdentification29 value) {
+			obj.setProprietary(value);
 		}
 	};
 

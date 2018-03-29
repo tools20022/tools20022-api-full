@@ -106,7 +106,7 @@ public class PartyAdditionalIdentification2Choice {
 	 * definition} = "Date of birth of an individual person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyAdditionalIdentification2Choice, ISODate> mmBirthDate = new MMMessageAttribute<PartyAdditionalIdentification2Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyAdditionalIdentification2Choice.mmObject();
@@ -118,6 +118,16 @@ public class PartyAdditionalIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PartyAdditionalIdentification2Choice obj) {
+			return obj.getBirthDate();
+		}
+
+		@Override
+		public void setValue(PartyAdditionalIdentification2Choice obj, ISODate value) {
+			obj.setBirthDate(value);
 		}
 	};
 	@XmlElement(name = "RegnId", required = true)
@@ -150,7 +160,7 @@ public class PartyAdditionalIdentification2Choice {
 	 * "Official identification of an organisation in a specific register."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegistrationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAdditionalIdentification2Choice, OrganisationIdentification5> mmRegistrationIdentification = new MMMessageAssociationEnd<PartyAdditionalIdentification2Choice, OrganisationIdentification5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyAdditionalIdentification2Choice.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class PartyAdditionalIdentification2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification5.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification5 getValue(PartyAdditionalIdentification2Choice obj) {
+			return obj.getRegistrationIdentification();
+		}
+
+		@Override
+		public void setValue(PartyAdditionalIdentification2Choice obj, OrganisationIdentification5 value) {
+			obj.setRegistrationIdentification(value);
 		}
 	};
 

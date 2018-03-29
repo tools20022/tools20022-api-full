@@ -52,11 +52,15 @@ public class ConstraintCarrierNameBPORule {
 	 */
 	public static final MMConstraint<SingleTransport8> forSingleTransport8 = new MMConstraint<SingleTransport8>() {
 		{
-			validator = ConstraintCarrierNameBPORule::checkSingleTransport8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierNameBPORule";
 			definition = "At least one of AirCarrierName / SeaCarrierName / RoadCarrierName / RailCarrierName must be present if PaymentObligation (BPO) is used in this transaction.";
 			owner_lazy = () -> SingleTransport8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SingleTransport8 obj) throws Exception {
+			checkSingleTransport8(obj);
 		}
 	};
 

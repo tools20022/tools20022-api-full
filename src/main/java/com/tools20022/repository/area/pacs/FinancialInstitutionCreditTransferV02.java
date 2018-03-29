@@ -25,7 +25,6 @@ import com.tools20022.repository.area.PaymentsClearingandSettlementArchive;
 import com.tools20022.repository.msg.CreditTransferTransactionInformation13;
 import com.tools20022.repository.msg.GroupHeader35;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -168,7 +167,7 @@ public class FinancialInstitutionCreditTransferV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstitutionCreditTransferV02, GroupHeader35> mmGroupHeader = new MMMessageBuildingBlock<FinancialInstitutionCreditTransferV02, GroupHeader35>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,12 +178,14 @@ public class FinancialInstitutionCreditTransferV02 {
 			complexType_lazy = () -> GroupHeader35.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstitutionCreditTransferV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader35 getValue(FinancialInstitutionCreditTransferV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionCreditTransferV02 obj, GroupHeader35 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "CdtTrfTxInf", required = true)
@@ -214,7 +215,7 @@ public class FinancialInstitutionCreditTransferV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCreditTransferTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstitutionCreditTransferV02, List<CreditTransferTransactionInformation13>> mmCreditTransferTransactionInformation = new MMMessageBuildingBlock<FinancialInstitutionCreditTransferV02, List<CreditTransferTransactionInformation13>>() {
 		{
 			xmlTag = "CdtTrfTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +225,14 @@ public class FinancialInstitutionCreditTransferV02 {
 			complexType_lazy = () -> CreditTransferTransactionInformation13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstitutionCreditTransferV02.class.getMethod("getCreditTransferTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CreditTransferTransactionInformation13> getValue(FinancialInstitutionCreditTransferV02 obj) {
+			return obj.getCreditTransferTransactionInformation();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionCreditTransferV02 obj, List<CreditTransferTransactionInformation13> value) {
+			obj.setCreditTransferTransactionInformation(value);
 		}
 	};
 

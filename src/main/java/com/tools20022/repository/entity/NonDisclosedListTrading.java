@@ -28,7 +28,6 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -150,7 +149,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBidByCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<NonDisclosedListTrading, CountryCode> mmBidByCurrency = new MMBusinessAttribute<NonDisclosedListTrading, CountryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidByCurrency, NonDisclosedBid1.mmBidByCurrency);
 			isDerived = false;
@@ -164,12 +163,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NonDisclosedListTrading.class.getMethod("getBidByCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CountryCode getValue(NonDisclosedListTrading obj) {
+			return obj.getBidByCurrency();
+		}
+
+		@Override
+		public void setValue(NonDisclosedListTrading obj, CountryCode value) {
+			obj.setBidByCurrency(value);
 		}
 	};
 	protected Max140Text bidBySector;
@@ -214,7 +215,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBidBySector = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<NonDisclosedListTrading, Max140Text> mmBidBySector = new MMBusinessAttribute<NonDisclosedListTrading, Max140Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidBySector, NonDisclosedBid1.mmBidBySector);
 			isDerived = false;
@@ -228,12 +229,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NonDisclosedListTrading.class.getMethod("getBidBySector", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max140Text getValue(NonDisclosedListTrading obj) {
+			return obj.getBidBySector();
+		}
+
+		@Override
+		public void setValue(NonDisclosedListTrading obj, Max140Text value) {
+			obj.setBidBySector(value);
 		}
 	};
 	protected Max140Text bidByIndex;
@@ -278,7 +281,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBidByIndex = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<NonDisclosedListTrading, Max140Text> mmBidByIndex = new MMBusinessAttribute<NonDisclosedListTrading, Max140Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonDisclosedBid2.mmBidByIndex, NonDisclosedBid1.mmBidByIndex);
 			isDerived = false;
@@ -292,12 +295,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NonDisclosedListTrading.class.getMethod("getBidByIndex", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max140Text getValue(NonDisclosedListTrading obj) {
+			return obj.getBidByIndex();
+		}
+
+		@Override
+		public void setValue(NonDisclosedListTrading obj, Max140Text value) {
+			obj.setBidByIndex(value);
 		}
 	};
 	protected Number numberOfBidders;
@@ -335,7 +340,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * "Indicates the total number of bidders participating to a list trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNumberOfBidders = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<NonDisclosedListTrading, Number> mmNumberOfBidders = new MMBusinessAttribute<NonDisclosedListTrading, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Bid1.mmTotalNumberOfBidders);
 			isDerived = false;
@@ -348,12 +353,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NonDisclosedListTrading.class.getMethod("getNumberOfBidders", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(NonDisclosedListTrading obj) {
+			return obj.getNumberOfBidders();
+		}
+
+		@Override
+		public void setValue(NonDisclosedListTrading obj, Number value) {
+			obj.setNumberOfBidders(value);
 		}
 	};
 	protected CurrencyAndAmount sideValue;
@@ -399,7 +406,7 @@ public class NonDisclosedListTrading extends ListTrading {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSideValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<NonDisclosedListTrading, CurrencyAndAmount> mmSideValue = new MMBusinessAttribute<NonDisclosedListTrading, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LiquidityAndStatistics1.mmSideValue1, LiquidityAndStatistics1.mmSideValue2);
 			isDerived = false;
@@ -413,12 +420,14 @@ public class NonDisclosedListTrading extends ListTrading {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NonDisclosedListTrading.class.getMethod("getSideValue", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(NonDisclosedListTrading obj) {
+			return obj.getSideValue();
+		}
+
+		@Override
+		public void setValue(NonDisclosedListTrading obj, CurrencyAndAmount value) {
+			obj.setSideValue(value);
 		}
 	};
 

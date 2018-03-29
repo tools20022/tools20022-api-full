@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -131,7 +132,7 @@ public class RejectedStatus6 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus6, RejectedStatusReason7Code> mmReason = new MMMessageAttribute<RejectedStatus6, RejectedStatusReason7Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus6.mmObject();
@@ -143,6 +144,16 @@ public class RejectedStatus6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason7Code.mmObject();
+		}
+
+		@Override
+		public RejectedStatusReason7Code getValue(RejectedStatus6 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus6 obj, RejectedStatusReason7Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -175,7 +186,7 @@ public class RejectedStatus6 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus6, Extended350Code> mmExtendedReason = new MMMessageAttribute<RejectedStatus6, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus6.mmObject();
 			isDerived = false;
@@ -186,6 +197,16 @@ public class RejectedStatus6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(RejectedStatus6 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus6 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -222,7 +243,7 @@ public class RejectedStatus6 {
 	 * "Proprietary identification of the reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus6, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<RejectedStatus6, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus6.mmObject();
@@ -234,7 +255,17 @@ public class RejectedStatus6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(RejectedStatus6 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(RejectedStatus6 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -279,7 +310,7 @@ public class RejectedStatus6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus6, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<RejectedStatus6, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus6.mmObject();
@@ -292,6 +323,16 @@ public class RejectedStatus6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(RejectedStatus6 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(RejectedStatus6 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	/**
@@ -387,7 +428,7 @@ public class RejectedStatus6 {
 		return dataSourceScheme;
 	}
 
-	public RejectedStatus6 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public RejectedStatus6 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

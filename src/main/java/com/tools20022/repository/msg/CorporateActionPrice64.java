@@ -28,6 +28,7 @@ import com.tools20022.repository.choice.PriceFormat55Choice;
 import com.tools20022.repository.choice.PriceFormat56Choice;
 import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountPrice4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -133,7 +134,7 @@ public class CorporateActionPrice64 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashInLieuOfSharePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPrice64, Optional<PriceFormat52Choice>> mmCashInLieuOfSharePrice = new MMMessageAttribute<CorporateActionPrice64, Optional<PriceFormat52Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice64.mmObject();
@@ -146,6 +147,16 @@ public class CorporateActionPrice64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat52Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat52Choice> getValue(CorporateActionPrice64 obj) {
+			return obj.getCashInLieuOfSharePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice64 obj, Optional<PriceFormat52Choice> value) {
+			obj.setCashInLieuOfSharePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndctvOrMktPric")
@@ -186,7 +197,7 @@ public class CorporateActionPrice64 {
 	 * "Indicates whether the price is an indicative price or a market price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndicativeOrMarketPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice64, Optional<IndicativeOrMarketPrice9Choice>> mmIndicativeOrMarketPrice = new MMMessageAssociationEnd<CorporateActionPrice64, Optional<IndicativeOrMarketPrice9Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice64.mmObject();
@@ -200,6 +211,16 @@ public class CorporateActionPrice64 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> IndicativeOrMarketPrice9Choice.mmObject();
+		}
+
+		@Override
+		public Optional<IndicativeOrMarketPrice9Choice> getValue(CorporateActionPrice64 obj) {
+			return obj.getIndicativeOrMarketPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice64 obj, Optional<IndicativeOrMarketPrice9Choice> value) {
+			obj.setIndicativeOrMarketPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshValForTax")
@@ -238,7 +259,7 @@ public class CorporateActionPrice64 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashValueForTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPrice64, Optional<AmountPrice4>> mmCashValueForTax = new MMMessageAttribute<CorporateActionPrice64, Optional<AmountPrice4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashValueForTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice64.mmObject();
@@ -249,7 +270,17 @@ public class CorporateActionPrice64 {
 			definition = "Cash value of resulting securities proceeds for tax calculation and/or reporting.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountPrice4.mmObject();
+			complexType_lazy = () -> AmountPrice4.mmObject();
+		}
+
+		@Override
+		public Optional<AmountPrice4> getValue(CorporateActionPrice64 obj) {
+			return obj.getCashValueForTax();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice64 obj, Optional<AmountPrice4> value) {
+			obj.setCashValueForTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricPdPerPdct")
@@ -287,7 +318,7 @@ public class CorporateActionPrice64 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice64, Optional<PriceFormat55Choice>> mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd<CorporateActionPrice64, Optional<PriceFormat55Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice64.mmObject();
@@ -300,6 +331,16 @@ public class CorporateActionPrice64 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat55Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat55Choice> getValue(CorporateActionPrice64 obj) {
+			return obj.getGenericCashPricePaidPerProduct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice64 obj, Optional<PriceFormat55Choice> value) {
+			obj.setGenericCashPricePaidPerProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricRcvdPerPdct")
@@ -337,7 +378,7 @@ public class CorporateActionPrice64 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice64, Optional<PriceFormat56Choice>> mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd<CorporateActionPrice64, Optional<PriceFormat56Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice64.mmObject();
@@ -350,6 +391,16 @@ public class CorporateActionPrice64 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat56Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat56Choice> getValue(CorporateActionPrice64 obj) {
+			return obj.getGenericCashPriceReceivedPerProduct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice64 obj, Optional<PriceFormat56Choice> value) {
+			obj.setGenericCashPriceReceivedPerProduct(value.orElse(null));
 		}
 	};
 
@@ -392,7 +443,7 @@ public class CorporateActionPrice64 {
 		return cashValueForTax == null ? Optional.empty() : Optional.of(cashValueForTax);
 	}
 
-	public CorporateActionPrice64 setCashValueForTax(com.tools20022.repository.msg.AmountPrice4 cashValueForTax) {
+	public CorporateActionPrice64 setCashValueForTax(AmountPrice4 cashValueForTax) {
 		this.cashValueForTax = cashValueForTax;
 		return this;
 	}

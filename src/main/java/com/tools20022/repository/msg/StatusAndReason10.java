@@ -138,7 +138,7 @@ public class StatusAndReason10 {
 	 * definition} = "Status of affirmation of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAffirmationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusAndReason10, AffirmationStatus7Choice> mmAffirmationStatus = new MMMessageAttribute<StatusAndReason10, AffirmationStatus7Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason10.mmObject();
@@ -151,6 +151,16 @@ public class StatusAndReason10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AffirmationStatus7Choice.mmObject();
+		}
+
+		@Override
+		public AffirmationStatus7Choice getValue(StatusAndReason10 obj) {
+			return obj.getAffirmationStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason10 obj, AffirmationStatus7Choice value) {
+			obj.setAffirmationStatus(value);
 		}
 	};
 	@XmlElement(name = "UaffrmdRsn")
@@ -184,7 +194,7 @@ public class StatusAndReason10 {
 	 * "Specifies the reason why the instruction has an unaffirmed status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnaffirmedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusAndReason10, Optional<UnaffirmedReason2Choice>> mmUnaffirmedReason = new MMMessageAttribute<StatusAndReason10, Optional<UnaffirmedReason2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason10.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class StatusAndReason10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> UnaffirmedReason2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UnaffirmedReason2Choice> getValue(StatusAndReason10 obj) {
+			return obj.getUnaffirmedReason();
+		}
+
+		@Override
+		public void setValue(StatusAndReason10 obj, Optional<UnaffirmedReason2Choice> value) {
+			obj.setUnaffirmedReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -232,7 +252,7 @@ public class StatusAndReason10 {
 	 * "Provides additional information about the reason in narrative form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusAndReason10, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<StatusAndReason10, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason10.mmObject();
@@ -244,6 +264,16 @@ public class StatusAndReason10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(StatusAndReason10 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(StatusAndReason10 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

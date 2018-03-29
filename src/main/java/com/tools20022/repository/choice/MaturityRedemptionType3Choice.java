@@ -108,7 +108,7 @@ public class MaturityRedemptionType3Choice {
 	 * MaturityRedemptionType2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaturityRedemptionType3Choice, MaturityRedemptionType1Code> mmCode = new MMMessageAttribute<MaturityRedemptionType3Choice, MaturityRedemptionType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MaturityRedemptionType3Choice.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class MaturityRedemptionType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MaturityRedemptionType1Code.mmObject();
+		}
+
+		@Override
+		public MaturityRedemptionType1Code getValue(MaturityRedemptionType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MaturityRedemptionType3Choice obj, MaturityRedemptionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class MaturityRedemptionType3Choice {
 	 * MaturityRedemptionType2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MaturityRedemptionType3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<MaturityRedemptionType3Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MaturityRedemptionType3Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class MaturityRedemptionType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(MaturityRedemptionType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MaturityRedemptionType3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

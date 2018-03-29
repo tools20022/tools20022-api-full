@@ -120,7 +120,7 @@ public class GeneralBusinessInformationReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQualifierIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformationReturnCriteria, Optional<RequestedIndicator>> mmQualifierIndicator = new MMMessageAttribute<GeneralBusinessInformationReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class GeneralBusinessInformationReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(GeneralBusinessInformationReturnCriteria obj) {
+			return obj.getQualifierIndicator();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setQualifierIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbjtInd")
@@ -172,7 +182,7 @@ public class GeneralBusinessInformationReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubjectIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformationReturnCriteria, Optional<RequestedIndicator>> mmSubjectIndicator = new MMMessageAttribute<GeneralBusinessInformationReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -184,6 +194,16 @@ public class GeneralBusinessInformationReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(GeneralBusinessInformationReturnCriteria obj) {
+			return obj.getSubjectIndicator();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setSubjectIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbjtDtlsInd")
@@ -224,7 +244,7 @@ public class GeneralBusinessInformationReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubjectDetailsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformationReturnCriteria, Optional<RequestedIndicator>> mmSubjectDetailsIndicator = new MMMessageAttribute<GeneralBusinessInformationReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -236,6 +256,16 @@ public class GeneralBusinessInformationReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(GeneralBusinessInformationReturnCriteria obj) {
+			return obj.getSubjectDetailsIndicator();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setSubjectDetailsIndicator(value.orElse(null));
 		}
 	};
 

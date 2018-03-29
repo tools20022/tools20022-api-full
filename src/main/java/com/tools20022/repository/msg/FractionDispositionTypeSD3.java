@@ -110,7 +110,7 @@ public class FractionDispositionTypeSD3 {
 	 * FractionDispositionTypeSD2.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionTypeSD3, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<FractionDispositionTypeSD3, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FractionDispositionTypeSD3.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class FractionDispositionTypeSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(FractionDispositionTypeSD3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(FractionDispositionTypeSD3 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RndgFctr")
@@ -164,7 +174,7 @@ public class FractionDispositionTypeSD3 {
 	 * FractionDispositionTypeSD2.mmRoundingFactor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionTypeSD3, Optional<DecimalNumber>> mmRoundingFactor = new MMMessageAttribute<FractionDispositionTypeSD3, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FractionDispositionTypeSD3.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class FractionDispositionTypeSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(FractionDispositionTypeSD3 obj) {
+			return obj.getRoundingFactor();
+		}
+
+		@Override
+		public void setValue(FractionDispositionTypeSD3 obj, Optional<DecimalNumber> value) {
+			obj.setRoundingFactor(value.orElse(null));
 		}
 	};
 

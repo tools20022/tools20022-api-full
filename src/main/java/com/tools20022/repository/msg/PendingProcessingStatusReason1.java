@@ -118,7 +118,7 @@ public class PendingProcessingStatusReason1 {
 	 * definition} = "Reason for the pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingProcessingStatusReason1, PendingProcessingReason9Choice> mmReason = new MMMessageAssociationEnd<PendingProcessingStatusReason1, PendingProcessingReason9Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingProcessingStatusReason1.mmObject();
@@ -131,6 +131,16 @@ public class PendingProcessingStatusReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingProcessingReason9Choice.mmObject();
+		}
+
+		@Override
+		public PendingProcessingReason9Choice getValue(PendingProcessingStatusReason1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingProcessingStatusReason1 obj, PendingProcessingReason9Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -162,7 +172,7 @@ public class PendingProcessingStatusReason1 {
 	 * definition} = "Additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingStatusReason1, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<PendingProcessingStatusReason1, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingProcessingStatusReason1.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class PendingProcessingStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(PendingProcessingStatusReason1 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(PendingProcessingStatusReason1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

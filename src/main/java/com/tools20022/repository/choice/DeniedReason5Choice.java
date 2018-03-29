@@ -113,7 +113,7 @@ public class DeniedReason5Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeniedReason5Choice, DeniedReason3Code> mmCode = new MMMessageAttribute<DeniedReason5Choice, DeniedReason3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeniedReason5Choice.mmObject();
@@ -126,6 +126,16 @@ public class DeniedReason5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeniedReason3Code.mmObject();
+		}
+
+		@Override
+		public DeniedReason3Code getValue(DeniedReason5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DeniedReason5Choice obj, DeniedReason3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class DeniedReason5Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeniedReason5Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<DeniedReason5Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeniedReason5Choice.mmObject();
@@ -180,6 +190,16 @@ public class DeniedReason5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(DeniedReason5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DeniedReason5Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.SecuritiesMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransparencyDataReport10;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,7 +121,7 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 	 * definition} = "Header information related to the global report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingNonEquityTransparencyDataReportV01, SecuritiesMarketReportHeader1> mmReportHeader = new MMMessageBuildingBlock<FinancialInstrumentReportingNonEquityTransparencyDataReportV01, SecuritiesMarketReportHeader1>() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,12 +132,14 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 			complexType_lazy = () -> SecuritiesMarketReportHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingNonEquityTransparencyDataReportV01.class.getMethod("getReportHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesMarketReportHeader1 getValue(FinancialInstrumentReportingNonEquityTransparencyDataReportV01 obj) {
+			return obj.getReportHeader();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingNonEquityTransparencyDataReportV01 obj, SecuritiesMarketReportHeader1 value) {
+			obj.setReportHeader(value);
 		}
 	};
 	@XmlElement(name = "NonEqtyTrnsprncyData", required = true)
@@ -168,7 +169,7 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNonEquityTransparencyData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingNonEquityTransparencyDataReportV01, List<TransparencyDataReport10>> mmNonEquityTransparencyData = new MMMessageBuildingBlock<FinancialInstrumentReportingNonEquityTransparencyDataReportV01, List<TransparencyDataReport10>>() {
 		{
 			xmlTag = "NonEqtyTrnsprncyData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +179,14 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 			complexType_lazy = () -> TransparencyDataReport10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingNonEquityTransparencyDataReportV01.class.getMethod("getNonEquityTransparencyData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<TransparencyDataReport10> getValue(FinancialInstrumentReportingNonEquityTransparencyDataReportV01 obj) {
+			return obj.getNonEquityTransparencyData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingNonEquityTransparencyDataReportV01 obj, List<TransparencyDataReport10> value) {
+			obj.setNonEquityTransparencyData(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -213,7 +216,7 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingNonEquityTransparencyDataReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FinancialInstrumentReportingNonEquityTransparencyDataReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,12 +226,14 @@ public class FinancialInstrumentReportingNonEquityTransparencyDataReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingNonEquityTransparencyDataReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FinancialInstrumentReportingNonEquityTransparencyDataReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingNonEquityTransparencyDataReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

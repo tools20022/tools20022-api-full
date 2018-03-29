@@ -128,7 +128,7 @@ public class InstructionProcessingStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus2Choice, InstructionProcessingStatus1Code> mmCode = new MMMessageAttribute<InstructionProcessingStatus2Choice, InstructionProcessingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus2Choice.mmObject();
@@ -142,6 +142,16 @@ public class InstructionProcessingStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionProcessingStatus1Code.mmObject();
+		}
+
+		@Override
+		public InstructionProcessingStatus1Code getValue(InstructionProcessingStatus2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus2Choice obj, InstructionProcessingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -190,7 +200,7 @@ public class InstructionProcessingStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus2Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<InstructionProcessingStatus2Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus2Choice.mmObject();
@@ -204,6 +214,16 @@ public class InstructionProcessingStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(InstructionProcessingStatus2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus2Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -19,10 +19,9 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.ClearingSideCode;
-import com.tools20022.repository.entity.SystemPartyRole;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -158,6 +157,14 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CashClearingSystemMember
 	 * CashClearingSystemMember}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DefaultFundRequirement1#mmClearingMemberIdentification
+	 * DefaultFundRequirement1.mmClearingMemberIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -176,18 +183,29 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmClearingSystemMemberIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ClearingMemberRole, CashClearingSystemMember> mmClearingSystemMemberIdentification = new MMBusinessAssociationEnd<ClearingMemberRole, CashClearingSystemMember>() {
 		{
+			derivation_lazy = () -> Arrays.asList(DefaultFundRequirement1.mmClearingMemberIdentification);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			elementContext_lazy = () -> ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystemMemberIdentification";
 			definition = "Unique and unambiguous identifier of a clearing system member, assigned by the system or system administrator.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmClearingMember;
+			opposite_lazy = () -> CashClearingSystemMember.mmClearingMember;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
+			type_lazy = () -> CashClearingSystemMember.mmObject();
+		}
+
+		@Override
+		public CashClearingSystemMember getValue(ClearingMemberRole obj) {
+			return obj.getClearingSystemMemberIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingMemberRole obj, CashClearingSystemMember value) {
+			obj.setClearingSystemMemberIdentification(value);
 		}
 	};
 	protected ClearingSideCode side;
@@ -234,11 +252,11 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * definition} = "Specifies the side of the clearing member."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSide = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ClearingMemberRole, ClearingSideCode> mmSide = new MMBusinessAttribute<ClearingMemberRole, ClearingSideCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyIdentificationAndAccount78.mmSide, Counterparty15.mmCounterpartySide, Counterparty17.mmCounterpartySide, Counterparty16.mmCounterpartySide);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			elementContext_lazy = () -> ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Side";
 			definition = "Specifies the side of the clearing member.";
@@ -247,15 +265,17 @@ public class ClearingMemberRole extends SystemPartyRole {
 			simpleType_lazy = () -> ClearingSideCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ClearingMemberRole.class.getMethod("getSide", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ClearingSideCode getValue(ClearingMemberRole obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(ClearingMemberRole obj, ClearingSideCode value) {
+			obj.setSide(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesAccount> clearingAccount;
+	protected List<SecuritiesAccount> clearingAccount;
 	/**
 	 * 
 	 <p>
@@ -344,24 +364,34 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmClearingAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ClearingMemberRole, List<SecuritiesAccount>> mmClearingAccount = new MMBusinessAssociationEnd<ClearingMemberRole, List<SecuritiesAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyIdentificationAndAccount78.mmClearingAccount, PartyIdentificationAndAccount31.mmClearingAccount, SettlementObligation1.mmSafekeepingAccount, SettlementObligation6.mmSafekeepingAccount,
 					TradeLegStatement1.mmClearingAccount, TradeLegStatement2.mmClearingAccount, NetPosition1.mmClearingAccount, NetPosition2.mmClearingAccount, TradeLeg8.mmSafekeepingAccount, TradeLegStatement3.mmClearingAccount,
 					SettlementObligation7.mmSafekeepingAccount, NetPosition3.mmClearingAccount, TradeLeg10.mmSafekeepingAccount, TradeLeg9.mmSafekeepingAccount, SettlementObligation8.mmSafekeepingAccount,
 					ClearingMember1.mmClearingAccountOwner);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			elementContext_lazy = () -> ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingAccount";
 			definition = "Identifies the clearing member account at the CCP through which the trade must be cleared (sometimes called position account).";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmClearingAccountOwner;
+			opposite_lazy = () -> SecuritiesAccount.mmClearingAccountOwner;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
+			type_lazy = () -> SecuritiesAccount.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount> getValue(ClearingMemberRole obj) {
+			return obj.getClearingAccount();
+		}
+
+		@Override
+		public void setValue(ClearingMemberRole obj, List<SecuritiesAccount> value) {
+			obj.setClearingAccount(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesAccount> marginAccount;
+	protected List<SecuritiesAccount> marginAccount;
 	/**
 	 * 
 	 <p>
@@ -408,21 +438,31 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMarginAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ClearingMemberRole, List<SecuritiesAccount>> mmMarginAccount = new MMBusinessAssociationEnd<ClearingMemberRole, List<SecuritiesAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeLeg3.mmMarginAccount, TradeLeg6.mmMarginAccount, TradeLeg9.mmMarginAccount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			elementContext_lazy = () -> ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginAccount";
 			definition = "Margin account where the negociation and liquidation risks will be calculated.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmMarginAccountOwner;
+			opposite_lazy = () -> SecuritiesAccount.mmMarginAccountOwner;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
+			type_lazy = () -> SecuritiesAccount.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount> getValue(ClearingMemberRole obj) {
+			return obj.getMarginAccount();
+		}
+
+		@Override
+		public void setValue(ClearingMemberRole obj, List<SecuritiesAccount> value) {
+			obj.setMarginAccount(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesAccount> deliveryAccount;
+	protected List<SecuritiesAccount> deliveryAccount;
 	/**
 	 * 
 	 <p>
@@ -490,22 +530,32 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDeliveryAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ClearingMemberRole, List<SecuritiesAccount>> mmDeliveryAccount = new MMBusinessAssociationEnd<ClearingMemberRole, List<SecuritiesAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementObligation1.mmDeliveryAccount, SettlementObligation6.mmDeliveryAccount, TradeLeg3.mmDeliveryAccount, TradeLeg6.mmDeliveryAccount, NetPosition1.mmDeliveryAccount,
 					NetPosition2.mmDeliveryAccount, SettlementObligation7.mmDeliveryAccount, NetPosition3.mmDeliveryAccount, TradeLeg9.mmDeliveryAccount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			elementContext_lazy = () -> ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryAccount";
 			definition = "Account opened by the central counterparty in the name of the clearing member within the account structure, for settlement purposes (gives information about the clearing member account at central counterparty).";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmDeliveryAccountOwner;
+			opposite_lazy = () -> SecuritiesAccount.mmDeliveryAccountOwner;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
+			type_lazy = () -> SecuritiesAccount.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount> getValue(ClearingMemberRole obj) {
+			return obj.getDeliveryAccount();
+		}
+
+		@Override
+		public void setValue(ClearingMemberRole obj, List<SecuritiesAccount> value) {
+			obj.setDeliveryAccount(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Account> defaultFundAccount;
+	protected List<Account> defaultFundAccount;
 	/**
 	 * 
 	 <p>
@@ -540,17 +590,27 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDefaultFundAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ClearingMemberRole, List<Account>> mmDefaultFundAccount = new MMBusinessAssociationEnd<ClearingMemberRole, List<Account>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			elementContext_lazy = () -> ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DefaultFundAccount";
 			definition = "Specifies the account identification of the clearing member at the ICSD (International Central Securities Depository) or at the Central Bank.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmDefaultFundAccountOwner;
+			opposite_lazy = () -> Account.mmDefaultFundAccountOwner;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
+			type_lazy = () -> Account.mmObject();
+		}
+
+		@Override
+		public List<Account> getValue(ClearingMemberRole obj) {
+			return obj.getDefaultFundAccount();
+		}
+
+		@Override
+		public void setValue(ClearingMemberRole obj, List<Account> value) {
+			obj.setDefaultFundAccount(value);
 		}
 	};
 	protected ClearingMemberRole clearingSegment;
@@ -585,22 +645,32 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Clearing segment within a clearing organisation that allows the segregation of flows coming from clearing counterparty's clearing system."
+	 * "Clearing segment within a clearing organisation that allows the segregation of flows coming from clearing counterparty's clearing system. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmClearingSegment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ClearingMemberRole, ClearingMemberRole> mmClearingSegment = new MMBusinessAssociationEnd<ClearingMemberRole, ClearingMemberRole>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			elementContext_lazy = () -> ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSegment";
-			definition = "Clearing segment within a clearing organisation that allows the segregation of flows coming from clearing counterparty's clearing system.";
+			definition = "Clearing segment within a clearing organisation that allows the segregation of flows coming from clearing counterparty's clearing system. ";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmRelatedClearingMemberRole;
+			opposite_lazy = () -> ClearingMemberRole.mmRelatedClearingMemberRole;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			type_lazy = () -> ClearingMemberRole.mmObject();
+		}
+
+		@Override
+		public ClearingMemberRole getValue(ClearingMemberRole obj) {
+			return obj.getClearingSegment();
+		}
+
+		@Override
+		public void setValue(ClearingMemberRole obj, ClearingMemberRole value) {
+			obj.setClearingSegment(value);
 		}
 	};
 	protected ClearingMemberRole relatedClearingMemberRole;
@@ -638,18 +708,28 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * "Clearing member for which a clearing segment is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedClearingMemberRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ClearingMemberRole, ClearingMemberRole> mmRelatedClearingMemberRole = new MMBusinessAssociationEnd<ClearingMemberRole, ClearingMemberRole>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			elementContext_lazy = () -> ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedClearingMemberRole";
 			definition = "Clearing member for which a clearing segment is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmClearingSegment;
+			opposite_lazy = () -> ClearingMemberRole.mmClearingSegment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
+			type_lazy = () -> ClearingMemberRole.mmObject();
+		}
+
+		@Override
+		public ClearingMemberRole getValue(ClearingMemberRole obj) {
+			return obj.getRelatedClearingMemberRole();
+		}
+
+		@Override
+		public void setValue(ClearingMemberRole obj, ClearingMemberRole value) {
+			obj.setRelatedClearingMemberRole(value);
 		}
 	};
 
@@ -660,16 +740,12 @@ public class ClearingMemberRole extends SystemPartyRole {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingMemberRole";
 				definition = "Member of an exchange's clearing corporation, responsible for executing client trades and involved in the clearing of trades.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmDefaultFundAccountOwner, com.tools20022.repository.entity.SecuritiesAccount.mmClearingAccountOwner,
-						com.tools20022.repository.entity.SecuritiesAccount.mmMarginAccountOwner, com.tools20022.repository.entity.SecuritiesAccount.mmDeliveryAccountOwner,
-						com.tools20022.repository.entity.CashClearingSystemMember.mmClearingMember, com.tools20022.repository.entity.ClearingMemberRole.mmClearingSegment,
-						com.tools20022.repository.entity.ClearingMemberRole.mmRelatedClearingMemberRole);
+				associationDomain_lazy = () -> Arrays.asList(Account.mmDefaultFundAccountOwner, SecuritiesAccount.mmClearingAccountOwner, SecuritiesAccount.mmMarginAccountOwner, SecuritiesAccount.mmDeliveryAccountOwner,
+						CashClearingSystemMember.mmClearingMember, ClearingMemberRole.mmClearingSegment, ClearingMemberRole.mmRelatedClearingMemberRole);
 				derivationElement_lazy = () -> Arrays.asList(NetObligation1.mmNetServiceCounterpartyIdentification, CutOffData1.mmParticipantIdentification);
 				superType_lazy = () -> SystemPartyRole.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingMemberRole.mmClearingSystemMemberIdentification, com.tools20022.repository.entity.ClearingMemberRole.mmSide,
-						com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount, com.tools20022.repository.entity.ClearingMemberRole.mmMarginAccount, com.tools20022.repository.entity.ClearingMemberRole.mmDeliveryAccount,
-						com.tools20022.repository.entity.ClearingMemberRole.mmDefaultFundAccount, com.tools20022.repository.entity.ClearingMemberRole.mmClearingSegment,
-						com.tools20022.repository.entity.ClearingMemberRole.mmRelatedClearingMemberRole);
+				element_lazy = () -> Arrays.asList(ClearingMemberRole.mmClearingSystemMemberIdentification, ClearingMemberRole.mmSide, ClearingMemberRole.mmClearingAccount, ClearingMemberRole.mmMarginAccount,
+						ClearingMemberRole.mmDeliveryAccount, ClearingMemberRole.mmDefaultFundAccount, ClearingMemberRole.mmClearingSegment, ClearingMemberRole.mmRelatedClearingMemberRole);
 				derivationComponent_lazy = () -> Arrays.asList(ClearingMember1.mmObject(), DefaultFundRequirement1.mmObject());
 			}
 
@@ -685,7 +761,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 		return clearingSystemMemberIdentification;
 	}
 
-	public ClearingMemberRole setClearingSystemMemberIdentification(com.tools20022.repository.entity.CashClearingSystemMember clearingSystemMemberIdentification) {
+	public ClearingMemberRole setClearingSystemMemberIdentification(CashClearingSystemMember clearingSystemMemberIdentification) {
 		this.clearingSystemMemberIdentification = Objects.requireNonNull(clearingSystemMemberIdentification);
 		return this;
 	}
@@ -703,7 +779,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 		return clearingAccount == null ? clearingAccount = new ArrayList<>() : clearingAccount;
 	}
 
-	public ClearingMemberRole setClearingAccount(List<com.tools20022.repository.entity.SecuritiesAccount> clearingAccount) {
+	public ClearingMemberRole setClearingAccount(List<SecuritiesAccount> clearingAccount) {
 		this.clearingAccount = Objects.requireNonNull(clearingAccount);
 		return this;
 	}
@@ -712,7 +788,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 		return marginAccount == null ? marginAccount = new ArrayList<>() : marginAccount;
 	}
 
-	public ClearingMemberRole setMarginAccount(List<com.tools20022.repository.entity.SecuritiesAccount> marginAccount) {
+	public ClearingMemberRole setMarginAccount(List<SecuritiesAccount> marginAccount) {
 		this.marginAccount = Objects.requireNonNull(marginAccount);
 		return this;
 	}
@@ -721,7 +797,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 		return deliveryAccount == null ? deliveryAccount = new ArrayList<>() : deliveryAccount;
 	}
 
-	public ClearingMemberRole setDeliveryAccount(List<com.tools20022.repository.entity.SecuritiesAccount> deliveryAccount) {
+	public ClearingMemberRole setDeliveryAccount(List<SecuritiesAccount> deliveryAccount) {
 		this.deliveryAccount = Objects.requireNonNull(deliveryAccount);
 		return this;
 	}
@@ -730,7 +806,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 		return defaultFundAccount == null ? defaultFundAccount = new ArrayList<>() : defaultFundAccount;
 	}
 
-	public ClearingMemberRole setDefaultFundAccount(List<com.tools20022.repository.entity.Account> defaultFundAccount) {
+	public ClearingMemberRole setDefaultFundAccount(List<Account> defaultFundAccount) {
 		this.defaultFundAccount = Objects.requireNonNull(defaultFundAccount);
 		return this;
 	}
@@ -739,7 +815,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 		return clearingSegment;
 	}
 
-	public ClearingMemberRole setClearingSegment(com.tools20022.repository.entity.ClearingMemberRole clearingSegment) {
+	public ClearingMemberRole setClearingSegment(ClearingMemberRole clearingSegment) {
 		this.clearingSegment = Objects.requireNonNull(clearingSegment);
 		return this;
 	}
@@ -748,7 +824,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 		return relatedClearingMemberRole;
 	}
 
-	public ClearingMemberRole setRelatedClearingMemberRole(com.tools20022.repository.entity.ClearingMemberRole relatedClearingMemberRole) {
+	public ClearingMemberRole setRelatedClearingMemberRole(ClearingMemberRole relatedClearingMemberRole) {
 		this.relatedClearingMemberRole = Objects.requireNonNull(relatedClearingMemberRole);
 		return this;
 	}

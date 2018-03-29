@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MeetingInstructionStatusDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +109,7 @@ public class DetailedInstructionConfirmation {
 	 * "Identifies the instruction for which a status is confirmed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionConfirmation, Max35Text> mmIdentification = new MMMessageAttribute<DetailedInstructionConfirmation, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionConfirmation.mmObject();
 			isDerived = false;
@@ -119,6 +120,16 @@ public class DetailedInstructionConfirmation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DetailedInstructionConfirmation obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionConfirmation obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "StgInstr")
@@ -152,7 +163,7 @@ public class DetailedInstructionConfirmation {
 	 * "Indicates whether standing instruction have been applied or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandingInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionConfirmation, Optional<YesNoIndicator>> mmStandingInstruction = new MMMessageAttribute<DetailedInstructionConfirmation, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionConfirmation.mmObject();
 			isDerived = false;
@@ -163,6 +174,16 @@ public class DetailedInstructionConfirmation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(DetailedInstructionConfirmation obj) {
+			return obj.getStandingInstruction();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionConfirmation obj, Optional<YesNoIndicator> value) {
+			obj.setStandingInstruction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -199,7 +220,7 @@ public class DetailedInstructionConfirmation {
 	 * definition} = "Defines the status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedInstructionConfirmation, MeetingInstructionStatusDetails> mmStatus = new MMMessageAssociationEnd<DetailedInstructionConfirmation, MeetingInstructionStatusDetails>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionConfirmation.mmObject();
@@ -211,7 +232,17 @@ public class DetailedInstructionConfirmation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MeetingInstructionStatusDetails.mmObject();
+			type_lazy = () -> MeetingInstructionStatusDetails.mmObject();
+		}
+
+		@Override
+		public MeetingInstructionStatusDetails getValue(DetailedInstructionConfirmation obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionConfirmation obj, MeetingInstructionStatusDetails value) {
+			obj.setStatus(value);
 		}
 	};
 
@@ -252,7 +283,7 @@ public class DetailedInstructionConfirmation {
 		return status;
 	}
 
-	public DetailedInstructionConfirmation setStatus(com.tools20022.repository.msg.MeetingInstructionStatusDetails status) {
+	public DetailedInstructionConfirmation setStatus(MeetingInstructionStatusDetails status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}

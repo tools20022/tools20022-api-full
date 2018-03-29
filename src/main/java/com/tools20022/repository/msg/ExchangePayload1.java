@@ -92,7 +92,7 @@ public class ExchangePayload1 {
 	 * definition} = "The respective ISO 20022 standard document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAny = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangePayload1, LaxProcessing> mmAny = new MMMessageAttribute<ExchangePayload1, LaxProcessing>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangePayload1.mmObject();
 			isDerived = false;
@@ -103,6 +103,16 @@ public class ExchangePayload1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> LaxProcessing.mmObject();
+		}
+
+		@Override
+		public LaxProcessing getValue(ExchangePayload1 obj) {
+			return obj.getAny();
+		}
+
+		@Override
+		public void setValue(ExchangePayload1 obj, LaxProcessing value) {
+			obj.setAny(value);
 		}
 	};
 

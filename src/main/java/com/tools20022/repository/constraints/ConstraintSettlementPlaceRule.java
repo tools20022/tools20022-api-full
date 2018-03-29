@@ -52,11 +52,15 @@ public class ConstraintSettlementPlaceRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount1> forDeliveringPartiesAndAccount1 = new MMConstraint<DeliveringPartiesAndAccount1>() {
 		{
-			validator = ConstraintSettlementPlaceRule::checkDeliveringPartiesAndAccount1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlaceRule";
 			definition = "PlaceOfSettlementDetails/AccountIdentification is not allowed.";
 			owner_lazy = () -> DeliveringPartiesAndAccount1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount1 obj) throws Exception {
+			checkDeliveringPartiesAndAccount1(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintSettlementPlaceRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount4> forDeliveringPartiesAndAccount4 = new MMConstraint<DeliveringPartiesAndAccount4>() {
 		{
-			validator = ConstraintSettlementPlaceRule::checkDeliveringPartiesAndAccount4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlaceRule";
 			definition = "PlaceOfSettlementDetails/AccountIdentification is not allowed.";
 			owner_lazy = () -> DeliveringPartiesAndAccount4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount4 obj) throws Exception {
+			checkDeliveringPartiesAndAccount4(obj);
 		}
 	};
 	/**
@@ -110,11 +118,15 @@ public class ConstraintSettlementPlaceRule {
 	 */
 	public static final MMConstraint<ReceivingPartiesAndAccount1> forReceivingPartiesAndAccount1 = new MMConstraint<ReceivingPartiesAndAccount1>() {
 		{
-			validator = ConstraintSettlementPlaceRule::checkReceivingPartiesAndAccount1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlaceRule";
 			definition = "PlaceOfSettlementDetails/AccountIdentification is not allowed.";
 			owner_lazy = () -> ReceivingPartiesAndAccount1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount1 obj) throws Exception {
+			checkReceivingPartiesAndAccount1(obj);
 		}
 	};
 	/**
@@ -139,11 +151,15 @@ public class ConstraintSettlementPlaceRule {
 	 */
 	public static final MMConstraint<ReceivingPartiesAndAccount4> forReceivingPartiesAndAccount4 = new MMConstraint<ReceivingPartiesAndAccount4>() {
 		{
-			validator = ConstraintSettlementPlaceRule::checkReceivingPartiesAndAccount4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlaceRule";
 			definition = "PlaceOfSettlementDetails/AccountIdentification is not allowed.";
 			owner_lazy = () -> ReceivingPartiesAndAccount4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount4 obj) throws Exception {
+			checkReceivingPartiesAndAccount4(obj);
 		}
 	};
 

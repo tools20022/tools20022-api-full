@@ -106,7 +106,7 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation32SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionGeneralInformation32SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class CorporateActionGeneralInformation32SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionGeneralInformation32SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation32SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WebSvcNtfctnDt")
@@ -156,7 +166,7 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWebServiceNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation32SD1, Optional<DateFormat22Choice>> mmWebServiceNotificationDate = new MMMessageAttribute<CorporateActionGeneralInformation32SD1, Optional<DateFormat22Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmObject();
@@ -168,6 +178,16 @@ public class CorporateActionGeneralInformation32SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionGeneralInformation32SD1 obj) {
+			return obj.getWebServiceNotificationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation32SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setWebServiceNotificationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsWebSvcNtfctnDt")
@@ -207,7 +227,7 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousWebServiceNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation32SD1, Optional<DateFormat22Choice>> mmPreviousWebServiceNotificationDate = new MMMessageAttribute<CorporateActionGeneralInformation32SD1, Optional<DateFormat22Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation32SD1.mmObject();
@@ -219,6 +239,16 @@ public class CorporateActionGeneralInformation32SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionGeneralInformation32SD1 obj) {
+			return obj.getPreviousWebServiceNotificationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation32SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setPreviousWebServiceNotificationDate(value.orElse(null));
 		}
 	};
 

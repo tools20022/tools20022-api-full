@@ -125,7 +125,7 @@ public class DocumentIdentification19 {
 	 * definition} = "Identifies the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification19, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<DocumentIdentification19, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification19.mmObject();
@@ -138,6 +138,16 @@ public class DocumentIdentification19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(DocumentIdentification19 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification19 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "LkgTp")
@@ -174,7 +184,7 @@ public class DocumentIdentification19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification19, Optional<ProcessingPosition3Choice>> mmLinkageType = new MMMessageAssociationEnd<DocumentIdentification19, Optional<ProcessingPosition3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification19.mmObject();
 			isDerived = false;
@@ -187,6 +197,16 @@ public class DocumentIdentification19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition3Choice> getValue(DocumentIdentification19 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification19 obj, Optional<ProcessingPosition3Choice> value) {
+			obj.setLinkageType(value.orElse(null));
 		}
 	};
 

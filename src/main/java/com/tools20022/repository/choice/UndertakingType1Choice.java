@@ -108,7 +108,7 @@ public class UndertakingType1Choice {
 	 * definition} = "Type of undertaking.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingType1Choice, ExternalUndertakingType1Code> mmCode = new MMMessageAttribute<UndertakingType1Choice, ExternalUndertakingType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UndertakingType1Choice.mmObject();
@@ -120,6 +120,16 @@ public class UndertakingType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalUndertakingType1Code getValue(UndertakingType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UndertakingType1Choice obj, ExternalUndertakingType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class UndertakingType1Choice {
 	 * definition} = "Type of undertaking expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingType1Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<UndertakingType1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UndertakingType1Choice.mmObject();
@@ -168,6 +178,16 @@ public class UndertakingType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(UndertakingType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UndertakingType1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

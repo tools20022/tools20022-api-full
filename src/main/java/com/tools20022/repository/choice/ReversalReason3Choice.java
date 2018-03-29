@@ -107,7 +107,7 @@ public class ReversalReason3Choice {
 	 * definition} = "Reason for the reversal in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReversalReason3Choice, TransactionReversalReason2Code> mmCode = new MMMessageAttribute<ReversalReason3Choice, TransactionReversalReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReversalReason3Choice.mmObject();
@@ -119,6 +119,16 @@ public class ReversalReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionReversalReason2Code.mmObject();
+		}
+
+		@Override
+		public TransactionReversalReason2Code getValue(ReversalReason3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ReversalReason3Choice obj, TransactionReversalReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class ReversalReason3Choice {
 	 * "Reason for the reversal not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReversalReason3Choice, RestrictedMS02MS03CodeText> mmProprietary = new MMMessageAttribute<ReversalReason3Choice, RestrictedMS02MS03CodeText>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReversalReason3Choice.mmObject();
@@ -169,6 +179,16 @@ public class ReversalReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedMS02MS03CodeText.mmObject();
+		}
+
+		@Override
+		public RestrictedMS02MS03CodeText getValue(ReversalReason3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ReversalReason3Choice obj, RestrictedMS02MS03CodeText value) {
+			obj.setProprietary(value);
 		}
 	};
 

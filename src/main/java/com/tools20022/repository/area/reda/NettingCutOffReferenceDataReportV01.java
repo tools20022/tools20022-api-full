@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.NettingCutOffReportData1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,7 +122,7 @@ public class NettingCutOffReferenceDataReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NettingCutOffReferenceDataReportV01, NettingCutOffReportData1> mmReportData = new MMMessageBuildingBlock<NettingCutOffReferenceDataReportV01, NettingCutOffReportData1>() {
 		{
 			xmlTag = "RptData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class NettingCutOffReferenceDataReportV01 {
 			complexType_lazy = () -> NettingCutOffReportData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NettingCutOffReferenceDataReportV01.class.getMethod("getReportData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public NettingCutOffReportData1 getValue(NettingCutOffReferenceDataReportV01 obj) {
+			return obj.getReportData();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReferenceDataReportV01 obj, NettingCutOffReportData1 value) {
+			obj.setReportData(value);
 		}
 	};
 	@XmlElement(name = "PtcptNetgCutOffData", required = true)
@@ -168,7 +169,7 @@ public class NettingCutOffReferenceDataReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmParticipantNettingCutOffData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NettingCutOffReferenceDataReportV01, List<CutOffData1>> mmParticipantNettingCutOffData = new MMMessageBuildingBlock<NettingCutOffReferenceDataReportV01, List<CutOffData1>>() {
 		{
 			xmlTag = "PtcptNetgCutOffData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +179,14 @@ public class NettingCutOffReferenceDataReportV01 {
 			complexType_lazy = () -> CutOffData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NettingCutOffReferenceDataReportV01.class.getMethod("getParticipantNettingCutOffData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CutOffData1> getValue(NettingCutOffReferenceDataReportV01 obj) {
+			return obj.getParticipantNettingCutOffData();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReferenceDataReportV01 obj, List<CutOffData1> value) {
+			obj.setParticipantNettingCutOffData(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -213,7 +216,7 @@ public class NettingCutOffReferenceDataReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NettingCutOffReferenceDataReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<NettingCutOffReferenceDataReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,12 +226,14 @@ public class NettingCutOffReferenceDataReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NettingCutOffReferenceDataReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(NettingCutOffReferenceDataReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReferenceDataReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

@@ -132,7 +132,7 @@ public class Counterparty9Choice {
 	 * Counterparty3Choice.mmSeller}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty9Choice, PartyIdentificationAndAccount106> mmSeller = new MMMessageAssociationEnd<Counterparty9Choice, PartyIdentificationAndAccount106>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty9Choice.mmObject();
@@ -148,6 +148,16 @@ public class Counterparty9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount106.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount106 getValue(Counterparty9Choice obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(Counterparty9Choice obj, PartyIdentificationAndAccount106 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -201,7 +211,7 @@ public class Counterparty9Choice {
 	 * Counterparty3Choice.mmBuyer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty9Choice, PartyIdentificationAndAccount106> mmBuyer = new MMMessageAssociationEnd<Counterparty9Choice, PartyIdentificationAndAccount106>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty9Choice.mmObject();
@@ -217,6 +227,16 @@ public class Counterparty9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount106.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount106 getValue(Counterparty9Choice obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(Counterparty9Choice obj, PartyIdentificationAndAccount106 value) {
+			obj.setBuyer(value);
 		}
 	};
 

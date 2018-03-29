@@ -121,7 +121,7 @@ public class SecuritiesAccount16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount16, RestrictedFINXMax35Text> mmIdentification = new MMMessageAttribute<SecuritiesAccount16, RestrictedFINXMax35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount16.mmObject();
@@ -134,6 +134,16 @@ public class SecuritiesAccount16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(SecuritiesAccount16 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount16 obj, RestrictedFINXMax35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -173,7 +183,7 @@ public class SecuritiesAccount16 {
 	 * definition} = "Specifies the type of securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccount16, Optional<PurposeCode4Choice>> mmType = new MMMessageAssociationEnd<SecuritiesAccount16, Optional<PurposeCode4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount16.mmObject();
@@ -187,6 +197,16 @@ public class SecuritiesAccount16 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PurposeCode4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PurposeCode4Choice> getValue(SecuritiesAccount16 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount16 obj, Optional<PurposeCode4Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -226,7 +246,7 @@ public class SecuritiesAccount16 {
 	 * definition} = "Description of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount16, Optional<Max70Text>> mmName = new MMMessageAttribute<SecuritiesAccount16, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount16.mmObject();
@@ -239,6 +259,16 @@ public class SecuritiesAccount16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(SecuritiesAccount16 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount16 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 

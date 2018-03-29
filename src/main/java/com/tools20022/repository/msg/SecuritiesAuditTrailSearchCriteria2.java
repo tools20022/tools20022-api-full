@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -106,7 +107,7 @@ public class SecuritiesAuditTrailSearchCriteria2 {
 	 * SecuritiesAuditTrailSearchCriteria1.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAuditTrailSearchCriteria2, Optional<SecurityIdentification19>> mmFinancialInstrumentIdentification = new MMMessageAttribute<SecuritiesAuditTrailSearchCriteria2, Optional<SecurityIdentification19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria2.mmObject();
 			isDerived = false;
@@ -117,7 +118,17 @@ public class SecuritiesAuditTrailSearchCriteria2 {
 			previousVersion_lazy = () -> SecuritiesAuditTrailSearchCriteria1.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			complexType_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification19> getValue(SecuritiesAuditTrailSearchCriteria2 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAuditTrailSearchCriteria2 obj, Optional<SecurityIdentification19> value) {
+			obj.setFinancialInstrumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -155,7 +166,7 @@ public class SecuritiesAuditTrailSearchCriteria2 {
 	 * SecuritiesAuditTrailSearchCriteria1.mmDatePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAuditTrailSearchCriteria2, Optional<DateSearchChoice>> mmDatePeriod = new MMMessageAttribute<SecuritiesAuditTrailSearchCriteria2, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAuditTrailSearchCriteria2.mmObject();
 			isDerived = false;
@@ -167,6 +178,16 @@ public class SecuritiesAuditTrailSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(SecuritiesAuditTrailSearchCriteria2 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesAuditTrailSearchCriteria2 obj, Optional<DateSearchChoice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 
@@ -189,7 +210,7 @@ public class SecuritiesAuditTrailSearchCriteria2 {
 		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public SecuritiesAuditTrailSearchCriteria2 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+	public SecuritiesAuditTrailSearchCriteria2 setFinancialInstrumentIdentification(SecurityIdentification19 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 		return this;
 	}

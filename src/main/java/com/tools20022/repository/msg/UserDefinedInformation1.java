@@ -101,7 +101,7 @@ public class UserDefinedInformation1 {
 	 * definition} = "Identifies the nature of the user information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UserDefinedInformation1, Max35Text> mmLabel = new MMMessageAttribute<UserDefinedInformation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class UserDefinedInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(UserDefinedInformation1 obj) {
+			return obj.getLabel();
+		}
+
+		@Override
+		public void setValue(UserDefinedInformation1 obj, Max35Text value) {
+			obj.setLabel(value);
 		}
 	};
 	@XmlElement(name = "Inf", required = true)
@@ -143,7 +153,7 @@ public class UserDefinedInformation1 {
 	 * definition} = "Specifies the content of the user information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UserDefinedInformation1, Max140Text> mmInformation = new MMMessageAttribute<UserDefinedInformation1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class UserDefinedInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(UserDefinedInformation1 obj) {
+			return obj.getInformation();
+		}
+
+		@Override
+		public void setValue(UserDefinedInformation1 obj, Max140Text value) {
+			obj.setInformation(value);
 		}
 	};
 

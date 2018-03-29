@@ -24,6 +24,7 @@ import com.tools20022.repository.area.sese.SecuritiesStatusOrStatementQueryStatu
 import com.tools20022.repository.choice.DocumentNumber5Choice;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Identification14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +124,7 @@ public class DocumentIdentification30 {
 	 * DocumentIdentification24.mmMessageNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification30, Optional<DocumentNumber5Choice>> mmMessageNumber = new MMMessageAttribute<DocumentIdentification30, Optional<DocumentNumber5Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification30.mmObject();
 			isDerived = false;
@@ -135,6 +136,16 @@ public class DocumentIdentification30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentNumber5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber5Choice> getValue(DocumentIdentification30 obj) {
+			return obj.getMessageNumber();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification30 obj, Optional<DocumentNumber5Choice> value) {
+			obj.setMessageNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ref", required = true)
@@ -172,7 +183,7 @@ public class DocumentIdentification30 {
 	 * DocumentIdentification24.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification30, Identification14> mmReference = new MMMessageAttribute<DocumentIdentification30, Identification14>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification30.mmObject();
 			isDerived = false;
@@ -183,7 +194,17 @@ public class DocumentIdentification30 {
 			previousVersion_lazy = () -> DocumentIdentification24.mmReference;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Identification14.mmObject();
+			complexType_lazy = () -> Identification14.mmObject();
+		}
+
+		@Override
+		public Identification14 getValue(DocumentIdentification30 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification30 obj, Identification14 value) {
+			obj.setReference(value);
 		}
 	};
 
@@ -216,7 +237,7 @@ public class DocumentIdentification30 {
 		return reference;
 	}
 
-	public DocumentIdentification30 setReference(com.tools20022.repository.msg.Identification14 reference) {
+	public DocumentIdentification30 setReference(Identification14 reference) {
 		this.reference = Objects.requireNonNull(reference);
 		return this;
 	}

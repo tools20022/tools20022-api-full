@@ -117,7 +117,7 @@ public class AmountAndDirection3 {
 	 * definition} = "Amount of money in the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection3, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection3, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection3.mmObject();
@@ -129,6 +129,16 @@ public class AmountAndDirection3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(AmountAndDirection3 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection3 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbt", required = true)
@@ -166,7 +176,7 @@ public class AmountAndDirection3 {
 	 * definition} = "Indicates whether an entry is a credit or a debit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection3, CreditDebitCode> mmCreditDebit = new MMMessageAttribute<AmountAndDirection3, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection3.mmObject();
@@ -178,6 +188,16 @@ public class AmountAndDirection3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(AmountAndDirection3 obj) {
+			return obj.getCreditDebit();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection3 obj, CreditDebitCode value) {
+			obj.setCreditDebit(value);
 		}
 	};
 

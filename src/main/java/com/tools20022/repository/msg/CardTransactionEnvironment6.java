@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification73;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class CardTransactionEnvironment6 {
 	 * CardTransactionEnvironment5.mmSendingInstitution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSendingInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionEnvironment6, GenericIdentification73> mmSendingInstitution = new MMMessageAssociationEnd<CardTransactionEnvironment6, GenericIdentification73>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment6.mmObject();
 			isDerived = false;
@@ -118,7 +119,17 @@ public class CardTransactionEnvironment6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification73.mmObject();
+			type_lazy = () -> GenericIdentification73.mmObject();
+		}
+
+		@Override
+		public GenericIdentification73 getValue(CardTransactionEnvironment6 obj) {
+			return obj.getSendingInstitution();
+		}
+
+		@Override
+		public void setValue(CardTransactionEnvironment6 obj, GenericIdentification73 value) {
+			obj.setSendingInstitution(value);
 		}
 	};
 	@XmlElement(name = "RcvgInstn", required = true)
@@ -157,7 +168,7 @@ public class CardTransactionEnvironment6 {
 	 * CardTransactionEnvironment5.mmReceivingInstitution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionEnvironment6, GenericIdentification73> mmReceivingInstitution = new MMMessageAssociationEnd<CardTransactionEnvironment6, GenericIdentification73>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment6.mmObject();
 			isDerived = false;
@@ -169,7 +180,17 @@ public class CardTransactionEnvironment6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification73.mmObject();
+			type_lazy = () -> GenericIdentification73.mmObject();
+		}
+
+		@Override
+		public GenericIdentification73 getValue(CardTransactionEnvironment6 obj) {
+			return obj.getReceivingInstitution();
+		}
+
+		@Override
+		public void setValue(CardTransactionEnvironment6 obj, GenericIdentification73 value) {
+			obj.setReceivingInstitution(value);
 		}
 	};
 
@@ -191,7 +212,7 @@ public class CardTransactionEnvironment6 {
 		return sendingInstitution;
 	}
 
-	public CardTransactionEnvironment6 setSendingInstitution(com.tools20022.repository.msg.GenericIdentification73 sendingInstitution) {
+	public CardTransactionEnvironment6 setSendingInstitution(GenericIdentification73 sendingInstitution) {
 		this.sendingInstitution = Objects.requireNonNull(sendingInstitution);
 		return this;
 	}
@@ -200,7 +221,7 @@ public class CardTransactionEnvironment6 {
 		return receivingInstitution;
 	}
 
-	public CardTransactionEnvironment6 setReceivingInstitution(com.tools20022.repository.msg.GenericIdentification73 receivingInstitution) {
+	public CardTransactionEnvironment6 setReceivingInstitution(GenericIdentification73 receivingInstitution) {
 		this.receivingInstitution = Objects.requireNonNull(receivingInstitution);
 		return this;
 	}

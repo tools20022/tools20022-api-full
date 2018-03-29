@@ -96,8 +96,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * ATMCommand4Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand5Code
  * ATMCommand5Code}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.rATMCommand6Code
- * rATMCommand6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand6Code
+ * ATMCommand6Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -657,7 +657,7 @@ public class ATMCommandCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandCode";
 				definition = "Type of command performed by an ATM.";
-				derivation_lazy = () -> Arrays.asList(ATMCommand2Code.mmObject(), ATMCommand1Code.mmObject(), ATMCommand3Code.mmObject(), ATMCommand4Code.mmObject(), ATMCommand5Code.mmObject(), rATMCommand6Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(ATMCommand2Code.mmObject(), ATMCommand1Code.mmObject(), ATMCommand3Code.mmObject(), ATMCommand4Code.mmObject(), ATMCommand5Code.mmObject(), ATMCommand6Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommandCode.ATMBalance, com.tools20022.repository.codeset.ATMCommandCode.ATMStatusUpdate,
 						com.tools20022.repository.codeset.ATMCommandCode.ConfigurationUpdate, com.tools20022.repository.codeset.ATMCommandCode.CountersInquiry, com.tools20022.repository.codeset.ATMCommandCode.Disconnect,
 						com.tools20022.repository.codeset.ATMCommandCode.SendMessage, com.tools20022.repository.codeset.ATMCommandCode.KeyActivation, com.tools20022.repository.codeset.ATMCommandCode.KeyDeactivation,

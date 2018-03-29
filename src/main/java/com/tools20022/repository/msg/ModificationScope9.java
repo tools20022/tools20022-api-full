@@ -26,6 +26,7 @@ import com.tools20022.repository.area.acmt.AccountModificationInstructionV03;
 import com.tools20022.repository.area.acmt.AccountModificationInstructionV04;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NewIssueAllocation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +136,7 @@ public class ModificationScope9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope9, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope9, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope9.mmObject();
 			isDerived = false;
@@ -147,6 +148,16 @@ public class ModificationScope9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope9 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope9 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "IsseAllcn", required = true)
@@ -187,7 +198,7 @@ public class ModificationScope9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssueAllocation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope9, NewIssueAllocation1> mmIssueAllocation = new MMMessageAssociationEnd<ModificationScope9, NewIssueAllocation1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope9.mmObject();
 			isDerived = false;
@@ -199,7 +210,17 @@ public class ModificationScope9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation1.mmObject();
+			type_lazy = () -> NewIssueAllocation1.mmObject();
+		}
+
+		@Override
+		public NewIssueAllocation1 getValue(ModificationScope9 obj) {
+			return obj.getIssueAllocation();
+		}
+
+		@Override
+		public void setValue(ModificationScope9 obj, NewIssueAllocation1 value) {
+			obj.setIssueAllocation(value);
 		}
 	};
 
@@ -232,7 +253,7 @@ public class ModificationScope9 {
 		return issueAllocation;
 	}
 
-	public ModificationScope9 setIssueAllocation(com.tools20022.repository.msg.NewIssueAllocation1 issueAllocation) {
+	public ModificationScope9 setIssueAllocation(NewIssueAllocation1 issueAllocation) {
 		this.issueAllocation = Objects.requireNonNull(issueAllocation);
 		return this;
 	}

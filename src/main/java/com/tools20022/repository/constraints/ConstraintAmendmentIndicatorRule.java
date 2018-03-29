@@ -54,11 +54,15 @@ public class ConstraintAmendmentIndicatorRule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation1> forMandateRelatedInformation1 = new MMConstraint<MandateRelatedInformation1>() {
 		{
-			validator = ConstraintAmendmentIndicatorRule::checkMandateRelatedInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorRule";
 			definition = "If AmendmentIndicator is true, then AmendementInformationDetails must be present, with amended mandate information.\n\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
 			owner_lazy = () -> MandateRelatedInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation1 obj) throws Exception {
+			checkMandateRelatedInformation1(obj);
 		}
 	};
 

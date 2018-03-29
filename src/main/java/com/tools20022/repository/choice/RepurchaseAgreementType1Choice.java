@@ -116,7 +116,7 @@ public class RepurchaseAgreementType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSpecificCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseAgreementType1Choice, SpecificCollateral2> mmSpecificCollateral = new MMMessageAssociationEnd<RepurchaseAgreementType1Choice, SpecificCollateral2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepurchaseAgreementType1Choice.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class RepurchaseAgreementType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SpecificCollateral2.mmObject();
+		}
+
+		@Override
+		public SpecificCollateral2 getValue(RepurchaseAgreementType1Choice obj) {
+			return obj.getSpecificCollateral();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreementType1Choice obj, SpecificCollateral2 value) {
+			obj.setSpecificCollateral(value);
 		}
 	};
 	@XmlElement(name = "GnlColl", required = true)
@@ -169,7 +179,7 @@ public class RepurchaseAgreementType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseAgreementType1Choice, GeneralCollateral2> mmGeneralCollateral = new MMMessageAssociationEnd<RepurchaseAgreementType1Choice, GeneralCollateral2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepurchaseAgreementType1Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class RepurchaseAgreementType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneralCollateral2.mmObject();
+		}
+
+		@Override
+		public GeneralCollateral2 getValue(RepurchaseAgreementType1Choice obj) {
+			return obj.getGeneralCollateral();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreementType1Choice obj, GeneralCollateral2 value) {
+			obj.setGeneralCollateral(value);
 		}
 	};
 

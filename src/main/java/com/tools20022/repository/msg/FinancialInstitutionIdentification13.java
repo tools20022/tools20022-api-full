@@ -106,7 +106,7 @@ public class FinancialInstitutionIdentification13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification13, BICFIIdentifier> mmBICFI = new MMMessageAttribute<FinancialInstitutionIdentification13, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification13.mmObject();
@@ -118,6 +118,16 @@ public class FinancialInstitutionIdentification13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(FinancialInstitutionIdentification13 obj) {
+			return obj.getBICFI();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification13 obj, BICFIIdentifier value) {
+			obj.setBICFI(value);
 		}
 	};
 

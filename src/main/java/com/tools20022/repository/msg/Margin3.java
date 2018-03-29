@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Amount2;
+import com.tools20022.repository.msg.Margin4;
+import com.tools20022.repository.msg.VariationMargin3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -102,7 +105,7 @@ public class Margin3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitialMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Margin3, Optional<Amount2>> mmInitialMargin = new MMMessageAssociationEnd<Margin3, Optional<Amount2>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmInitialMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Margin3.mmObject();
@@ -114,11 +117,21 @@ public class Margin3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
+			type_lazy = () -> Amount2.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2> getValue(Margin3 obj) {
+			return obj.getInitialMargin();
+		}
+
+		@Override
+		public void setValue(Margin3 obj, Optional<Amount2> value) {
+			obj.setInitialMargin(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VartnMrgn")
-	protected List<com.tools20022.repository.msg.VariationMargin3> variationMargin;
+	protected List<VariationMargin3> variationMargin;
 	/**
 	 * 
 	 <p>
@@ -150,7 +163,7 @@ public class Margin3 {
 	 * "Provides details on the calculation of the variation margin."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVariationMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Margin3, List<VariationMargin3>> mmVariationMargin = new MMMessageAssociationEnd<Margin3, List<VariationMargin3>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Margin3.mmObject();
@@ -161,11 +174,21 @@ public class Margin3 {
 			definition = "Provides details on the calculation of the variation margin.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.VariationMargin3.mmObject();
+			type_lazy = () -> VariationMargin3.mmObject();
+		}
+
+		@Override
+		public List<VariationMargin3> getValue(Margin3 obj) {
+			return obj.getVariationMargin();
+		}
+
+		@Override
+		public void setValue(Margin3 obj, List<VariationMargin3> value) {
+			obj.setVariationMargin(value);
 		}
 	};
 	@XmlElement(name = "OthrMrgn")
-	protected List<com.tools20022.repository.msg.Margin4> otherMargin;
+	protected List<Margin4> otherMargin;
 	/**
 	 * 
 	 <p>
@@ -196,7 +219,7 @@ public class Margin3 {
 	 * definition} = "Provides details on the margin type and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherMargin = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Margin3, List<Margin4>> mmOtherMargin = new MMMessageAttribute<Margin3, List<Margin4>>() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Margin3.mmObject();
@@ -206,7 +229,17 @@ public class Margin3 {
 			name = "OtherMargin";
 			definition = "Provides details on the margin type and amount.";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Margin4.mmObject();
+			complexType_lazy = () -> Margin4.mmObject();
+		}
+
+		@Override
+		public List<Margin4> getValue(Margin3 obj) {
+			return obj.getOtherMargin();
+		}
+
+		@Override
+		public void setValue(Margin3 obj, List<Margin4> value) {
+			obj.setOtherMargin(value);
 		}
 	};
 
@@ -228,7 +261,7 @@ public class Margin3 {
 		return initialMargin == null ? Optional.empty() : Optional.of(initialMargin);
 	}
 
-	public Margin3 setInitialMargin(com.tools20022.repository.msg.Amount2 initialMargin) {
+	public Margin3 setInitialMargin(Amount2 initialMargin) {
 		this.initialMargin = initialMargin;
 		return this;
 	}
@@ -237,7 +270,7 @@ public class Margin3 {
 		return variationMargin == null ? variationMargin = new ArrayList<>() : variationMargin;
 	}
 
-	public Margin3 setVariationMargin(List<com.tools20022.repository.msg.VariationMargin3> variationMargin) {
+	public Margin3 setVariationMargin(List<VariationMargin3> variationMargin) {
 		this.variationMargin = Objects.requireNonNull(variationMargin);
 		return this;
 	}
@@ -246,7 +279,7 @@ public class Margin3 {
 		return otherMargin == null ? otherMargin = new ArrayList<>() : otherMargin;
 	}
 
-	public Margin3 setOtherMargin(List<com.tools20022.repository.msg.Margin4> otherMargin) {
+	public Margin3 setOtherMargin(List<Margin4> otherMargin) {
 		this.otherMargin = Objects.requireNonNull(otherMargin);
 		return this;
 	}

@@ -91,7 +91,7 @@ public class Deletion1 {
 	 * definition} = "Content of the deleted element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeletedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Deletion1, Max140Text> mmDeletedValue = new MMMessageAttribute<Deletion1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Deletion1.mmObject();
 			isDerived = false;
@@ -102,6 +102,16 @@ public class Deletion1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(Deletion1 obj) {
+			return obj.getDeletedValue();
+		}
+
+		@Override
+		public void setValue(Deletion1 obj, Max140Text value) {
+			obj.setDeletedValue(value);
 		}
 	};
 

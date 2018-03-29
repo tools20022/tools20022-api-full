@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm7Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PublicRSAKey1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -99,7 +100,7 @@ public class PublicRSAKey2 {
 	 * definition} = "Asymmetric cryptographic algorithm."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PublicRSAKey2, Optional<Algorithm7Code>> mmAlgorithm = new MMMessageAttribute<PublicRSAKey2, Optional<Algorithm7Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PublicRSAKey2.mmObject();
 			isDerived = false;
@@ -110,6 +111,16 @@ public class PublicRSAKey2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm7Code.mmObject();
+		}
+
+		@Override
+		public Optional<Algorithm7Code> getValue(PublicRSAKey2 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(PublicRSAKey2 obj, Optional<Algorithm7Code> value) {
+			obj.setAlgorithm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PblcKeyVal", required = true)
@@ -139,7 +150,7 @@ public class PublicRSAKey2 {
 	 * definition} = "Public key value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPublicKeyValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PublicRSAKey2, PublicRSAKey1> mmPublicKeyValue = new MMMessageAssociationEnd<PublicRSAKey2, PublicRSAKey1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PublicRSAKey2.mmObject();
 			isDerived = false;
@@ -150,7 +161,17 @@ public class PublicRSAKey2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PublicRSAKey1.mmObject();
+			type_lazy = () -> PublicRSAKey1.mmObject();
+		}
+
+		@Override
+		public PublicRSAKey1 getValue(PublicRSAKey2 obj) {
+			return obj.getPublicKeyValue();
+		}
+
+		@Override
+		public void setValue(PublicRSAKey2 obj, PublicRSAKey1 value) {
+			obj.setPublicKeyValue(value);
 		}
 	};
 
@@ -162,7 +183,7 @@ public class PublicRSAKey2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PublicRSAKey2";
 				definition = "Value of the public component of a RSA key.";
-				previousVersion_lazy = () -> com.tools20022.repository.msg.PublicRSAKey1.mmObject();
+				previousVersion_lazy = () -> PublicRSAKey1.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
@@ -181,7 +202,7 @@ public class PublicRSAKey2 {
 		return publicKeyValue;
 	}
 
-	public PublicRSAKey2 setPublicKeyValue(com.tools20022.repository.msg.PublicRSAKey1 publicKeyValue) {
+	public PublicRSAKey2 setPublicKeyValue(PublicRSAKey1 publicKeyValue) {
 		this.publicKeyValue = Objects.requireNonNull(publicKeyValue);
 		return this;
 	}

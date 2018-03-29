@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -142,7 +143,7 @@ public class SafekeepingAccount7 {
 	 * SafekeepingAccount5.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingAccount7, SecuritiesAccount19> mmAccountIdentification = new MMMessageAssociationEnd<SafekeepingAccount7, SecuritiesAccount19>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount7.mmObject();
@@ -155,7 +156,17 @@ public class SafekeepingAccount7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount19 getValue(SafekeepingAccount7 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount7 obj, SecuritiesAccount19 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr", required = true)
@@ -198,7 +209,7 @@ public class SafekeepingAccount7 {
 	 * SafekeepingAccount5.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount7, PartyIdentification100> mmAccountOwner = new MMMessageAttribute<SafekeepingAccount7, PartyIdentification100>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount7.mmObject();
@@ -210,7 +221,17 @@ public class SafekeepingAccount7 {
 			previousVersion_lazy = () -> SafekeepingAccount5.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100 getValue(SafekeepingAccount7 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount7 obj, PartyIdentification100 value) {
+			obj.setAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr", required = true)
@@ -255,7 +276,7 @@ public class SafekeepingAccount7 {
 	 * SafekeepingAccount5.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount7, PartyIdentification100> mmAccountServicer = new MMMessageAttribute<SafekeepingAccount7, PartyIdentification100>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount7.mmObject();
@@ -267,11 +288,21 @@ public class SafekeepingAccount7 {
 			previousVersion_lazy = () -> SafekeepingAccount5.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100 getValue(SafekeepingAccount7 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount7 obj, PartyIdentification100 value) {
+			obj.setAccountServicer(value);
 		}
 	};
 	@XmlElement(name = "BnfclOwnr")
-	protected List<com.tools20022.repository.msg.BeneficialOwner2> beneficialOwner;
+	protected List<BeneficialOwner2> beneficialOwner;
 	/**
 	 * 
 	 <p>
@@ -310,7 +341,7 @@ public class SafekeepingAccount7 {
 	 * SafekeepingAccount5.mmBeneficialOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficialOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingAccount7, List<BeneficialOwner2>> mmBeneficialOwner = new MMMessageAssociationEnd<SafekeepingAccount7, List<BeneficialOwner2>>() {
 		{
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount7.mmObject();
@@ -322,11 +353,21 @@ public class SafekeepingAccount7 {
 			previousVersion_lazy = () -> SafekeepingAccount5.mmBeneficialOwner;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BeneficialOwner2.mmObject();
+			type_lazy = () -> BeneficialOwner2.mmObject();
+		}
+
+		@Override
+		public List<BeneficialOwner2> getValue(SafekeepingAccount7 obj) {
+			return obj.getBeneficialOwner();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount7 obj, List<BeneficialOwner2> value) {
+			obj.setBeneficialOwner(value);
 		}
 	};
 	@XmlElement(name = "BalDtls")
-	protected List<com.tools20022.repository.msg.AggregateHoldingBalance3> balanceDetails;
+	protected List<AggregateHoldingBalance3> balanceDetails;
 	/**
 	 * 
 	 <p>
@@ -361,7 +402,7 @@ public class SafekeepingAccount7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingAccount7, List<AggregateHoldingBalance3>> mmBalanceDetails = new MMMessageAssociationEnd<SafekeepingAccount7, List<AggregateHoldingBalance3>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount7.mmObject();
@@ -372,11 +413,21 @@ public class SafekeepingAccount7 {
 			definition = "Report on the net position of a financial instrument on the account, for a certain date. The agent, for example, a trade intermediary, may also be specified.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance3.mmObject();
+			type_lazy = () -> AggregateHoldingBalance3.mmObject();
+		}
+
+		@Override
+		public List<AggregateHoldingBalance3> getValue(SafekeepingAccount7 obj) {
+			return obj.getBalanceDetails();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount7 obj, List<AggregateHoldingBalance3> value) {
+			obj.setBalanceDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctSubLvl1")
-	protected List<com.tools20022.repository.msg.AccountSubLevel11> accountSubLevel1;
+	protected List<AccountSubLevel11> accountSubLevel1;
 	/**
 	 * 
 	 <p>
@@ -413,7 +464,7 @@ public class SafekeepingAccount7 {
 	 * SafekeepingAccount5.mmAccountSubLevel1}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountSubLevel1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingAccount7, List<AccountSubLevel11>> mmAccountSubLevel1 = new MMMessageAssociationEnd<SafekeepingAccount7, List<AccountSubLevel11>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount7.mmObject();
@@ -425,11 +476,21 @@ public class SafekeepingAccount7 {
 			previousVersion_lazy = () -> SafekeepingAccount5.mmAccountSubLevel1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountSubLevel11.mmObject();
+			type_lazy = () -> AccountSubLevel11.mmObject();
+		}
+
+		@Override
+		public List<AccountSubLevel11> getValue(SafekeepingAccount7 obj) {
+			return obj.getAccountSubLevel1();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount7 obj, List<AccountSubLevel11> value) {
+			obj.setAccountSubLevel1(value);
 		}
 	};
 	@XmlElement(name = "AcctSubLvl1Diff")
-	protected List<com.tools20022.repository.msg.AggregateHoldingBalance2> accountSubLevel1Difference;
+	protected List<AggregateHoldingBalance2> accountSubLevel1Difference;
 	/**
 	 * 
 	 <p>
@@ -469,7 +530,7 @@ public class SafekeepingAccount7 {
 	 * SafekeepingAccount5.mmAccountSubLevel1Difference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountSubLevel1Difference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingAccount7, List<AggregateHoldingBalance2>> mmAccountSubLevel1Difference = new MMMessageAssociationEnd<SafekeepingAccount7, List<AggregateHoldingBalance2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount7.mmObject();
@@ -481,7 +542,17 @@ public class SafekeepingAccount7 {
 			previousVersion_lazy = () -> SafekeepingAccount5.mmAccountSubLevel1Difference;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance2.mmObject();
+			type_lazy = () -> AggregateHoldingBalance2.mmObject();
+		}
+
+		@Override
+		public List<AggregateHoldingBalance2> getValue(SafekeepingAccount7 obj) {
+			return obj.getAccountSubLevel1Difference();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount7 obj, List<AggregateHoldingBalance2> value) {
+			obj.setAccountSubLevel1Difference(value);
 		}
 	};
 
@@ -507,7 +578,7 @@ public class SafekeepingAccount7 {
 		return accountIdentification;
 	}
 
-	public SafekeepingAccount7 setAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 accountIdentification) {
+	public SafekeepingAccount7 setAccountIdentification(SecuritiesAccount19 accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}
@@ -516,7 +587,7 @@ public class SafekeepingAccount7 {
 		return accountOwner;
 	}
 
-	public SafekeepingAccount7 setAccountOwner(com.tools20022.repository.msg.PartyIdentification100 accountOwner) {
+	public SafekeepingAccount7 setAccountOwner(PartyIdentification100 accountOwner) {
 		this.accountOwner = Objects.requireNonNull(accountOwner);
 		return this;
 	}
@@ -525,7 +596,7 @@ public class SafekeepingAccount7 {
 		return accountServicer;
 	}
 
-	public SafekeepingAccount7 setAccountServicer(com.tools20022.repository.msg.PartyIdentification100 accountServicer) {
+	public SafekeepingAccount7 setAccountServicer(PartyIdentification100 accountServicer) {
 		this.accountServicer = Objects.requireNonNull(accountServicer);
 		return this;
 	}
@@ -534,7 +605,7 @@ public class SafekeepingAccount7 {
 		return beneficialOwner == null ? beneficialOwner = new ArrayList<>() : beneficialOwner;
 	}
 
-	public SafekeepingAccount7 setBeneficialOwner(List<com.tools20022.repository.msg.BeneficialOwner2> beneficialOwner) {
+	public SafekeepingAccount7 setBeneficialOwner(List<BeneficialOwner2> beneficialOwner) {
 		this.beneficialOwner = Objects.requireNonNull(beneficialOwner);
 		return this;
 	}
@@ -543,7 +614,7 @@ public class SafekeepingAccount7 {
 		return balanceDetails == null ? balanceDetails = new ArrayList<>() : balanceDetails;
 	}
 
-	public SafekeepingAccount7 setBalanceDetails(List<com.tools20022.repository.msg.AggregateHoldingBalance3> balanceDetails) {
+	public SafekeepingAccount7 setBalanceDetails(List<AggregateHoldingBalance3> balanceDetails) {
 		this.balanceDetails = Objects.requireNonNull(balanceDetails);
 		return this;
 	}
@@ -552,7 +623,7 @@ public class SafekeepingAccount7 {
 		return accountSubLevel1 == null ? accountSubLevel1 = new ArrayList<>() : accountSubLevel1;
 	}
 
-	public SafekeepingAccount7 setAccountSubLevel1(List<com.tools20022.repository.msg.AccountSubLevel11> accountSubLevel1) {
+	public SafekeepingAccount7 setAccountSubLevel1(List<AccountSubLevel11> accountSubLevel1) {
 		this.accountSubLevel1 = Objects.requireNonNull(accountSubLevel1);
 		return this;
 	}
@@ -561,7 +632,7 @@ public class SafekeepingAccount7 {
 		return accountSubLevel1Difference == null ? accountSubLevel1Difference = new ArrayList<>() : accountSubLevel1Difference;
 	}
 
-	public SafekeepingAccount7 setAccountSubLevel1Difference(List<com.tools20022.repository.msg.AggregateHoldingBalance2> accountSubLevel1Difference) {
+	public SafekeepingAccount7 setAccountSubLevel1Difference(List<AggregateHoldingBalance2> accountSubLevel1Difference) {
 		this.accountSubLevel1Difference = Objects.requireNonNull(accountSubLevel1Difference);
 		return this;
 	}

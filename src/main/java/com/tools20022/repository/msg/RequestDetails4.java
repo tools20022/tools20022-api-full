@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReportParameter1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -98,7 +99,7 @@ public class RequestDetails4 {
 	 * "Key for which the specific data is returned, for example, a BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails4, Max35Text> mmKey = new MMMessageAttribute<RequestDetails4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails4.mmObject();
 			isDerived = false;
@@ -110,9 +111,19 @@ public class RequestDetails4 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Max35Text getValue(RequestDetails4 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(RequestDetails4 obj, Max35Text value) {
+			obj.setKey(value);
+		}
 	};
 	@XmlElement(name = "RptData")
-	protected List<com.tools20022.repository.msg.ReportParameter1> reportData;
+	protected List<ReportParameter1> reportData;
 	/**
 	 * 
 	 <p>
@@ -139,7 +150,7 @@ public class RequestDetails4 {
 	 * definition} = "Data being returned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestDetails4, List<ReportParameter1>> mmReportData = new MMMessageAssociationEnd<RequestDetails4, List<ReportParameter1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails4.mmObject();
 			isDerived = false;
@@ -149,7 +160,17 @@ public class RequestDetails4 {
 			definition = "Data being returned.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReportParameter1.mmObject();
+			type_lazy = () -> ReportParameter1.mmObject();
+		}
+
+		@Override
+		public List<ReportParameter1> getValue(RequestDetails4 obj) {
+			return obj.getReportData();
+		}
+
+		@Override
+		public void setValue(RequestDetails4 obj, List<ReportParameter1> value) {
+			obj.setReportData(value);
 		}
 	};
 
@@ -179,7 +200,7 @@ public class RequestDetails4 {
 		return reportData == null ? reportData = new ArrayList<>() : reportData;
 	}
 
-	public RequestDetails4 setReportData(List<com.tools20022.repository.msg.ReportParameter1> reportData) {
+	public RequestDetails4 setReportData(List<ReportParameter1> reportData) {
 		this.reportData = Objects.requireNonNull(reportData);
 		return this;
 	}

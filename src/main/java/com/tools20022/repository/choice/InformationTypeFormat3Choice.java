@@ -102,7 +102,7 @@ public class InformationTypeFormat3Choice {
 	 * definition} = "Standard code to specify the information type required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InformationTypeFormat3Choice, CorporateActionInformationType1Code> mmCode = new MMMessageAttribute<InformationTypeFormat3Choice, CorporateActionInformationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InformationTypeFormat3Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class InformationTypeFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionInformationType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionInformationType1Code getValue(InformationTypeFormat3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InformationTypeFormat3Choice obj, CorporateActionInformationType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -144,7 +154,7 @@ public class InformationTypeFormat3Choice {
 	 * definition} = "Proprietary identification of the information type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InformationTypeFormat3Choice, GenericIdentification51> mmProprietary = new MMMessageAssociationEnd<InformationTypeFormat3Choice, GenericIdentification51>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InformationTypeFormat3Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class InformationTypeFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification51.mmObject();
+		}
+
+		@Override
+		public GenericIdentification51 getValue(InformationTypeFormat3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InformationTypeFormat3Choice obj, GenericIdentification51 value) {
+			obj.setProprietary(value);
 		}
 	};
 

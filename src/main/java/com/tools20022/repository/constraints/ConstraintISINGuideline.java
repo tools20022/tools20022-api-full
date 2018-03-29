@@ -59,12 +59,16 @@ public class ConstraintISINGuideline {
 	 */
 	public static final MMConstraint<SecurityIdentification14> forSecurityIdentification14 = new MMConstraint<SecurityIdentification14>() {
 		{
-			validator = ConstraintISINGuideline::checkSecurityIdentification14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINGuideline";
 			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISINGuideline.forSecurityIdentification19);
 			owner_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification14 obj) throws Exception {
+			checkSecurityIdentification14(obj);
 		}
 	};
 	/**
@@ -90,11 +94,15 @@ public class ConstraintISINGuideline {
 	 */
 	public static final MMConstraint<SecurityIdentification15> forSecurityIdentification15 = new MMConstraint<SecurityIdentification15>() {
 		{
-			validator = ConstraintISINGuideline::checkSecurityIdentification15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINGuideline";
 			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
 			owner_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification15 obj) throws Exception {
+			checkSecurityIdentification15(obj);
 		}
 	};
 	/**
@@ -120,11 +128,15 @@ public class ConstraintISINGuideline {
 	 */
 	public static final MMConstraint<SecurityIdentification16> forSecurityIdentification16 = new MMConstraint<SecurityIdentification16>() {
 		{
-			validator = ConstraintISINGuideline::checkSecurityIdentification16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINGuideline";
 			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
 			owner_lazy = () -> SecurityIdentification16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification16 obj) throws Exception {
+			checkSecurityIdentification16(obj);
 		}
 	};
 	/**
@@ -155,12 +167,16 @@ public class ConstraintISINGuideline {
 	 */
 	public static final MMConstraint<SecurityIdentification19> forSecurityIdentification19 = new MMConstraint<SecurityIdentification19>() {
 		{
-			validator = ConstraintISINGuideline::checkSecurityIdentification19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINGuideline";
 			definition = "When an ISIN code exists, it is strongly recommended that the ISIN be used.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISINGuideline.forSecurityIdentification14;
 			owner_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification19 obj) throws Exception {
+			checkSecurityIdentification19(obj);
 		}
 	};
 	/**
@@ -186,11 +202,15 @@ public class ConstraintISINGuideline {
 	 */
 	public static final MMConstraint<SecurityIdentification20> forSecurityIdentification20 = new MMConstraint<SecurityIdentification20>() {
 		{
-			validator = ConstraintISINGuideline::checkSecurityIdentification20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINGuideline";
 			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
 			owner_lazy = () -> SecurityIdentification20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification20 obj) throws Exception {
+			checkSecurityIdentification20(obj);
 		}
 	};
 	/**
@@ -216,11 +236,15 @@ public class ConstraintISINGuideline {
 	 */
 	public static final MMConstraint<SecurityIdentification32> forSecurityIdentification32 = new MMConstraint<SecurityIdentification32>() {
 		{
-			validator = ConstraintISINGuideline::checkSecurityIdentification32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINGuideline";
 			definition = "When a ISIN code exist. It is strongly recommended that the ISIN be used.";
 			owner_lazy = () -> SecurityIdentification32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification32 obj) throws Exception {
+			checkSecurityIdentification32(obj);
 		}
 	};
 	/**
@@ -246,11 +270,15 @@ public class ConstraintISINGuideline {
 	 */
 	public static final MMConstraint<SecurityIdentification21> forSecurityIdentification21 = new MMConstraint<SecurityIdentification21>() {
 		{
-			validator = ConstraintISINGuideline::checkSecurityIdentification21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINGuideline";
 			definition = "When a ISIN code exist, it is strongly recommended that the ISIN be used.";
 			owner_lazy = () -> SecurityIdentification21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification21 obj) throws Exception {
+			checkSecurityIdentification21(obj);
 		}
 	};
 

@@ -93,7 +93,7 @@ public class TradeNonConfirmation1 {
 	 * definition} = "Specifies that the contract remains unconfirmed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeNonConfirmation1, TradeConfirmationType2Code> mmType = new MMMessageAttribute<TradeNonConfirmation1, TradeConfirmationType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeNonConfirmation1.mmObject();
 			isDerived = false;
@@ -104,6 +104,16 @@ public class TradeNonConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeConfirmationType2Code.mmObject();
+		}
+
+		@Override
+		public TradeConfirmationType2Code getValue(TradeNonConfirmation1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TradeNonConfirmation1 obj, TradeConfirmationType2Code value) {
+			obj.setType(value);
 		}
 	};
 

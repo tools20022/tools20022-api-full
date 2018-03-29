@@ -101,7 +101,7 @@ public class InRepairStatus2Choice {
 	 * definition} = "Reason for an in repair status in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InRepairStatus2Choice, InRepairStatusReason2> mmReason = new MMMessageAssociationEnd<InRepairStatus2Choice, InRepairStatusReason2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatus2Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class InRepairStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InRepairStatusReason2.mmObject();
+		}
+
+		@Override
+		public InRepairStatusReason2 getValue(InRepairStatus2Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatus2Choice obj, InRepairStatusReason2 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -145,7 +155,7 @@ public class InRepairStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InRepairStatus2Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<InRepairStatus2Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatus2Choice.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class InRepairStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(InRepairStatus2Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(InRepairStatus2Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoRsn", required = true)
@@ -189,7 +209,7 @@ public class InRepairStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatus2Choice, NoReasonCode> mmNoReason = new MMMessageAttribute<InRepairStatus2Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatus2Choice.mmObject();
 			isDerived = false;
@@ -200,6 +220,16 @@ public class InRepairStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(InRepairStatus2Choice obj) {
+			return obj.getNoReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatus2Choice obj, NoReasonCode value) {
+			obj.setNoReason(value);
 		}
 	};
 

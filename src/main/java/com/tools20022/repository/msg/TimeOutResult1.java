@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TimeOutEvent1;
+import com.tools20022.repository.msg.TransactionStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -95,7 +97,7 @@ public class TimeOutResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionFutureStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TimeOutResult1, TransactionStatus2> mmTransactionFutureStatus = new MMMessageAssociationEnd<TimeOutResult1, TransactionStatus2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TimeOutResult1.mmObject();
 			isDerived = false;
@@ -106,7 +108,17 @@ public class TimeOutResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionStatus2.mmObject();
+			type_lazy = () -> TransactionStatus2.mmObject();
+		}
+
+		@Override
+		public TransactionStatus2 getValue(TimeOutResult1 obj) {
+			return obj.getTransactionFutureStatus();
+		}
+
+		@Override
+		public void setValue(TimeOutResult1 obj, TransactionStatus2 value) {
+			obj.setTransactionFutureStatus(value);
 		}
 	};
 	@XmlElement(name = "TmOutEvt")
@@ -136,7 +148,7 @@ public class TimeOutResult1 {
 	 * definition} = "Describes the time-out reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTimeOutEvent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TimeOutResult1, Optional<TimeOutEvent1>> mmTimeOutEvent = new MMMessageAssociationEnd<TimeOutResult1, Optional<TimeOutEvent1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TimeOutResult1.mmObject();
 			isDerived = false;
@@ -147,7 +159,17 @@ public class TimeOutResult1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TimeOutEvent1.mmObject();
+			type_lazy = () -> TimeOutEvent1.mmObject();
+		}
+
+		@Override
+		public Optional<TimeOutEvent1> getValue(TimeOutResult1 obj) {
+			return obj.getTimeOutEvent();
+		}
+
+		@Override
+		public void setValue(TimeOutResult1 obj, Optional<TimeOutEvent1> value) {
+			obj.setTimeOutEvent(value.orElse(null));
 		}
 	};
 
@@ -168,7 +190,7 @@ public class TimeOutResult1 {
 		return transactionFutureStatus;
 	}
 
-	public TimeOutResult1 setTransactionFutureStatus(com.tools20022.repository.msg.TransactionStatus2 transactionFutureStatus) {
+	public TimeOutResult1 setTransactionFutureStatus(TransactionStatus2 transactionFutureStatus) {
 		this.transactionFutureStatus = Objects.requireNonNull(transactionFutureStatus);
 		return this;
 	}
@@ -177,7 +199,7 @@ public class TimeOutResult1 {
 		return timeOutEvent == null ? Optional.empty() : Optional.of(timeOutEvent);
 	}
 
-	public TimeOutResult1 setTimeOutEvent(com.tools20022.repository.msg.TimeOutEvent1 timeOutEvent) {
+	public TimeOutResult1 setTimeOutEvent(TimeOutEvent1 timeOutEvent) {
 		this.timeOutEvent = timeOutEvent;
 		return this;
 	}

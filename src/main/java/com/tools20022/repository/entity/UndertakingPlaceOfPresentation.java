@@ -24,7 +24,6 @@ import com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1;
 import com.tools20022.repository.codeset.PresentationPartyCode;
 import com.tools20022.repository.entity.UndertakingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +115,7 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPresentationUnderConfirmation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<UndertakingPlaceOfPresentation, PresentationPartyCode> mmPresentationUnderConfirmation = new MMBusinessAttribute<UndertakingPlaceOfPresentation, PresentationPartyCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingPlaceOfPresentation.mmObject();
@@ -128,12 +127,14 @@ public class UndertakingPlaceOfPresentation extends UndertakingPartyRole {
 			simpleType_lazy = () -> PresentationPartyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingPlaceOfPresentation.class.getMethod("getPresentationUnderConfirmation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PresentationPartyCode getValue(UndertakingPlaceOfPresentation obj) {
+			return obj.getPresentationUnderConfirmation();
+		}
+
+		@Override
+		public void setValue(UndertakingPlaceOfPresentation obj, PresentationPartyCode value) {
+			obj.setPresentationUnderConfirmation(value);
 		}
 	};
 

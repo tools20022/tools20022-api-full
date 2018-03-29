@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TerminalManagementArchive;
 import com.tools20022.repository.msg.AcceptorRejection1;
 import com.tools20022.repository.msg.Header6;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +123,7 @@ public class TerminalManagementRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TerminalManagementRejectionV01, Header6> mmHeader = new MMMessageBuildingBlock<TerminalManagementRejectionV01, Header6>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,12 +135,14 @@ public class TerminalManagementRejectionV01 {
 			complexType_lazy = () -> Header6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TerminalManagementRejectionV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header6 getValue(TerminalManagementRejectionV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(TerminalManagementRejectionV01 obj, Header6 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "Rjct", required = true)
@@ -177,7 +178,7 @@ public class TerminalManagementRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReject = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TerminalManagementRejectionV01, AcceptorRejection1> mmReject = new MMMessageBuildingBlock<TerminalManagementRejectionV01, AcceptorRejection1>() {
 		{
 			xmlTag = "Rjct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +190,14 @@ public class TerminalManagementRejectionV01 {
 			complexType_lazy = () -> AcceptorRejection1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TerminalManagementRejectionV01.class.getMethod("getReject", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorRejection1 getValue(TerminalManagementRejectionV01 obj) {
+			return obj.getReject();
+		}
+
+		@Override
+		public void setValue(TerminalManagementRejectionV01 obj, AcceptorRejection1 value) {
+			obj.setReject(value);
 		}
 	};
 

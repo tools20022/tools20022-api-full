@@ -139,7 +139,7 @@ public class PriceDetails14 {
 	 * PriceDetails11.mmGenericCashPricePaidPerProduct}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails14, Optional<PriceFormat6Choice>> mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd<PriceDetails14, Optional<PriceFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails14.mmObject();
@@ -154,6 +154,16 @@ public class PriceDetails14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat6Choice> getValue(PriceDetails14 obj) {
+			return obj.getGenericCashPricePaidPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails14 obj, Optional<PriceFormat6Choice> value) {
+			obj.setGenericCashPricePaidPerProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricRcvdPerPdct")
@@ -203,7 +213,7 @@ public class PriceDetails14 {
 	 * PriceDetails11.mmGenericCashPriceReceivedPerProduct}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails14, Optional<PriceFormat34Choice>> mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd<PriceDetails14, Optional<PriceFormat34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails14.mmObject();
@@ -218,6 +228,16 @@ public class PriceDetails14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat34Choice> getValue(PriceDetails14 obj) {
+			return obj.getGenericCashPriceReceivedPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails14 obj, Optional<PriceFormat34Choice> value) {
+			obj.setGenericCashPriceReceivedPerProduct(value.orElse(null));
 		}
 	};
 

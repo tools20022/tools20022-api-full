@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DisputeResolutionType2Choice;
 import com.tools20022.repository.entity.DisputeManagement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Dispute1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,7 +109,7 @@ public class VariationMarginDispute1 {
 	 * definition} = "Details of the disputed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDisputeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VariationMarginDispute1, Dispute1> mmDisputeDetails = new MMMessageAssociationEnd<VariationMarginDispute1, Dispute1>() {
 		{
 			businessComponentTrace_lazy = () -> DisputeManagement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMarginDispute1.mmObject();
@@ -120,7 +121,17 @@ public class VariationMarginDispute1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
+			type_lazy = () -> Dispute1.mmObject();
+		}
+
+		@Override
+		public Dispute1 getValue(VariationMarginDispute1 obj) {
+			return obj.getDisputeDetails();
+		}
+
+		@Override
+		public void setValue(VariationMarginDispute1 obj, Dispute1 value) {
+			obj.setDisputeDetails(value);
 		}
 	};
 	@XmlElement(name = "RsltnTpDtls")
@@ -159,7 +170,7 @@ public class VariationMarginDispute1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResolutionTypeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VariationMarginDispute1, List<DisputeResolutionType2Choice>> mmResolutionTypeDetails = new MMMessageAssociationEnd<VariationMarginDispute1, List<DisputeResolutionType2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DisputeManagement.mmDisputeResolutionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMarginDispute1.mmObject();
@@ -171,6 +182,16 @@ public class VariationMarginDispute1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DisputeResolutionType2Choice.mmObject();
+		}
+
+		@Override
+		public List<DisputeResolutionType2Choice> getValue(VariationMarginDispute1 obj) {
+			return obj.getResolutionTypeDetails();
+		}
+
+		@Override
+		public void setValue(VariationMarginDispute1 obj, List<DisputeResolutionType2Choice> value) {
+			obj.setResolutionTypeDetails(value);
 		}
 	};
 
@@ -192,7 +213,7 @@ public class VariationMarginDispute1 {
 		return disputeDetails;
 	}
 
-	public VariationMarginDispute1 setDisputeDetails(com.tools20022.repository.msg.Dispute1 disputeDetails) {
+	public VariationMarginDispute1 setDisputeDetails(Dispute1 disputeDetails) {
 		this.disputeDetails = Objects.requireNonNull(disputeDetails);
 		return this;
 	}

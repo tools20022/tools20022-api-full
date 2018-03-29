@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
+import com.tools20022.repository.entity.DeliveringSettlementParty;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
@@ -426,7 +427,7 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 	 * "Specifies the settlement party which is followed by another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDeliveringSettlementParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<DeliveringSettlementParty, com.tools20022.repository.entity.DeliveringSettlementParty> mmDeliveringSettlementParty = new MMBusinessAssociationEnd<DeliveringSettlementParty, com.tools20022.repository.entity.DeliveringSettlementParty>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
@@ -438,6 +439,16 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmNextParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.DeliveringSettlementParty getValue(DeliveringSettlementParty obj) {
+			return obj.getDeliveringSettlementParty();
+		}
+
+		@Override
+		public void setValue(DeliveringSettlementParty obj, com.tools20022.repository.entity.DeliveringSettlementParty value) {
+			obj.setDeliveringSettlementParty(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.DeliveringSettlementParty> nextParty;
@@ -477,7 +488,7 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNextParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<DeliveringSettlementParty, List<DeliveringSettlementParty>> mmNextParty = new MMBusinessAssociationEnd<DeliveringSettlementParty, List<DeliveringSettlementParty>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
@@ -488,6 +499,16 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmDeliveringSettlementParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.DeliveringSettlementParty.mmObject();
+		}
+
+		@Override
+		public List<DeliveringSettlementParty> getValue(DeliveringSettlementParty obj) {
+			return obj.getNextParty();
+		}
+
+		@Override
+		public void setValue(DeliveringSettlementParty obj, List<DeliveringSettlementParty> value) {
+			obj.setNextParty(value);
 		}
 	};
 

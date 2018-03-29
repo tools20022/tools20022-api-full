@@ -24,9 +24,10 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.CommercialTrade;
+import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.UnderlyingTradeTransaction1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -148,7 +149,7 @@ public class UnderlyingTransaction {
 	 * definition} = "Undertaking issued to support a contract."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<UnderlyingTransaction, Undertaking> mmUndertaking = new MMBusinessAssociationEnd<UnderlyingTransaction, Undertaking>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
@@ -157,9 +158,19 @@ public class UnderlyingTransaction {
 			definition = "Undertaking issued to support a contract.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Undertaking.mmUnderlyingTransaction;
+			opposite_lazy = () -> Undertaking.mmUnderlyingTransaction;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
+			type_lazy = () -> Undertaking.mmObject();
+		}
+
+		@Override
+		public Undertaking getValue(UnderlyingTransaction obj) {
+			return obj.getUndertaking();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction obj, Undertaking value) {
+			obj.setUndertaking(value);
 		}
 	};
 	protected ExternalUnderlyingTradeTransactionTypeCode type;
@@ -204,7 +215,7 @@ public class UnderlyingTransaction {
 	 * "Type of commercial obligation such as a tender, order, contract, etc."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<UnderlyingTransaction, ExternalUnderlyingTradeTransactionTypeCode> mmType = new MMBusinessAttribute<UnderlyingTransaction, ExternalUnderlyingTradeTransactionTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransactionType1Choice.mmCode, UnderlyingTradeTransactionType1Choice.mmProprietary, UnderlyingTradeTransaction1.mmType);
 			isDerived = false;
@@ -217,12 +228,14 @@ public class UnderlyingTransaction {
 			simpleType_lazy = () -> ExternalUnderlyingTradeTransactionTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnderlyingTransaction.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ExternalUnderlyingTradeTransactionTypeCode getValue(UnderlyingTransaction obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction obj, ExternalUnderlyingTradeTransactionTypeCode value) {
+			obj.setType(value);
 		}
 	};
 	protected Max35Text identification;
@@ -259,7 +272,7 @@ public class UnderlyingTransaction {
 	 * definition} = "Identification of the commercial obligation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<UnderlyingTransaction, Max35Text> mmIdentification = new MMBusinessAttribute<UnderlyingTransaction, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmIdentification);
 			isDerived = false;
@@ -272,12 +285,14 @@ public class UnderlyingTransaction {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnderlyingTransaction.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(UnderlyingTransaction obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	protected ISODate issueDate;
@@ -314,7 +329,7 @@ public class UnderlyingTransaction {
 	 * definition} = "Date the commercial obligation was issued or awarded."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIssueDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<UnderlyingTransaction, ISODate> mmIssueDate = new MMBusinessAttribute<UnderlyingTransaction, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmTransactionDate);
 			isDerived = false;
@@ -327,12 +342,14 @@ public class UnderlyingTransaction {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnderlyingTransaction.class.getMethod("getIssueDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(UnderlyingTransaction obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction obj, ISODate value) {
+			obj.setIssueDate(value);
 		}
 	};
 	protected ISODate tenderClosingDate;
@@ -369,7 +386,7 @@ public class UnderlyingTransaction {
 	 * definition} = "Date the tender closes."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTenderClosingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<UnderlyingTransaction, ISODate> mmTenderClosingDate = new MMBusinessAttribute<UnderlyingTransaction, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmTenderClosingDate);
 			isDerived = false;
@@ -382,12 +399,14 @@ public class UnderlyingTransaction {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnderlyingTransaction.class.getMethod("getTenderClosingDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(UnderlyingTransaction obj) {
+			return obj.getTenderClosingDate();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction obj, ISODate value) {
+			obj.setTenderClosingDate(value);
 		}
 	};
 	protected CurrencyAndAmount totalAmount;
@@ -425,7 +444,7 @@ public class UnderlyingTransaction {
 	 * definition} = "Amount of the commercial obligation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<UnderlyingTransaction, CurrencyAndAmount> mmTotalAmount = new MMBusinessAttribute<UnderlyingTransaction, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmTransactionAmount);
 			isDerived = false;
@@ -438,12 +457,14 @@ public class UnderlyingTransaction {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnderlyingTransaction.class.getMethod("getTotalAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(UnderlyingTransaction obj) {
+			return obj.getTotalAmount();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction obj, CurrencyAndAmount value) {
+			obj.setTotalAmount(value);
 		}
 	};
 	protected PercentageRate contractAmountPercentage;
@@ -482,7 +503,7 @@ public class UnderlyingTransaction {
 	 * "Percentage of the underlying contract covered by the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmContractAmountPercentage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<UnderlyingTransaction, PercentageRate> mmContractAmountPercentage = new MMBusinessAttribute<UnderlyingTransaction, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingTradeTransaction1.mmContractAmountPercentage);
 			isDerived = false;
@@ -495,12 +516,14 @@ public class UnderlyingTransaction {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnderlyingTransaction.class.getMethod("getContractAmountPercentage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(UnderlyingTransaction obj) {
+			return obj.getContractAmountPercentage();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction obj, PercentageRate value) {
+			obj.setContractAmountPercentage(value);
 		}
 	};
 	protected CommercialTrade commercialTrade;
@@ -537,7 +560,7 @@ public class UnderlyingTransaction {
 	 * definition} = "Commercial trade for which an undertaking is issued."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<UnderlyingTransaction, CommercialTrade> mmCommercialTrade = new MMBusinessAssociationEnd<UnderlyingTransaction, CommercialTrade>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
@@ -546,9 +569,19 @@ public class UnderlyingTransaction {
 			definition = "Commercial trade for which an undertaking is issued.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmRelatedUndertaking;
+			opposite_lazy = () -> CommercialTrade.mmRelatedUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
+			type_lazy = () -> CommercialTrade.mmObject();
+		}
+
+		@Override
+		public CommercialTrade getValue(UnderlyingTransaction obj) {
+			return obj.getCommercialTrade();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction obj, CommercialTrade value) {
+			obj.setCommercialTrade(value);
 		}
 	};
 
@@ -559,7 +592,7 @@ public class UnderlyingTransaction {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction";
 				definition = "Reference information on a commercial obligation between the beneficiary and applicant for which an undertaking is issued.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.mmUnderlyingTransaction, com.tools20022.repository.entity.CommercialTrade.mmRelatedUndertaking);
+				associationDomain_lazy = () -> Arrays.asList(Undertaking.mmUnderlyingTransaction, CommercialTrade.mmRelatedUndertaking);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.UnderlyingTransaction.mmUndertaking, com.tools20022.repository.entity.UnderlyingTransaction.mmType,
 						com.tools20022.repository.entity.UnderlyingTransaction.mmIdentification, com.tools20022.repository.entity.UnderlyingTransaction.mmIssueDate,
 						com.tools20022.repository.entity.UnderlyingTransaction.mmTenderClosingDate, com.tools20022.repository.entity.UnderlyingTransaction.mmTotalAmount,
@@ -579,7 +612,7 @@ public class UnderlyingTransaction {
 		return undertaking;
 	}
 
-	public UnderlyingTransaction setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+	public UnderlyingTransaction setUndertaking(Undertaking undertaking) {
 		this.undertaking = Objects.requireNonNull(undertaking);
 		return this;
 	}
@@ -642,7 +675,7 @@ public class UnderlyingTransaction {
 		return commercialTrade;
 	}
 
-	public UnderlyingTransaction setCommercialTrade(com.tools20022.repository.entity.CommercialTrade commercialTrade) {
+	public UnderlyingTransaction setCommercialTrade(CommercialTrade commercialTrade) {
 		this.commercialTrade = Objects.requireNonNull(commercialTrade);
 		return this;
 	}

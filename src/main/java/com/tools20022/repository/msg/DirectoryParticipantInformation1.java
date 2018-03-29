@@ -24,6 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification9;
+import com.tools20022.repository.msg.SystemMigration1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +134,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Name and address as in participant profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryParticipantInformation1, Optional<EnglishNameLocalNameAndAddress1>> mmParticipantNameAndAddress = new MMMessageAssociationEnd<DirectoryParticipantInformation1, Optional<EnglishNameLocalNameAndAddress1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -141,7 +145,17 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmObject();
+			type_lazy = () -> EnglishNameLocalNameAndAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<EnglishNameLocalNameAndAddress1> getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getParticipantNameAndAddress();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, Optional<EnglishNameLocalNameAndAddress1> value) {
+			obj.setParticipantNameAndAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -173,7 +187,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Branch and Head branch of the CBR servicing the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryParticipantInformation1, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountServicer = new MMMessageAssociationEnd<DirectoryParticipantInformation1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -184,7 +198,17 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrctPtcpt")
@@ -216,7 +240,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Direct participant of the CBR payment system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDirectParticipant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryParticipantInformation1, Optional<FinancialInstitutionIdentification9>> mmDirectParticipant = new MMMessageAssociationEnd<DirectoryParticipantInformation1, Optional<FinancialInstitutionIdentification9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -227,7 +251,17 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification9> getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getDirectParticipant();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, Optional<FinancialInstitutionIdentification9> value) {
+			obj.setDirectParticipant(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtryCreDt", required = true)
@@ -259,7 +293,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Date when the entry was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryCreationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryParticipantInformation1, ISODateTime> mmEntryCreationDate = new MMMessageAttribute<DirectoryParticipantInformation1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -270,6 +304,16 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getEntryCreationDate();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, ISODateTime value) {
+			obj.setEntryCreationDate(value);
 		}
 	};
 	@XmlElement(name = "NtryDeltnDt")
@@ -301,7 +345,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Date entry was deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryDeletionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryParticipantInformation1, Optional<ISODateTime>> mmEntryDeletionDate = new MMMessageAttribute<DirectoryParticipantInformation1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -312,6 +356,16 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getEntryDeletionDate();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, Optional<ISODateTime> value) {
+			obj.setEntryDeletionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcrTp", required = true)
@@ -343,7 +397,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Specifies the type of the funds transfer participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServicerType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryParticipantInformation1, Max35Text> mmServicerType = new MMMessageAttribute<DirectoryParticipantInformation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -354,6 +408,16 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getServicerType();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, Max35Text value) {
+			obj.setServicerType(value);
 		}
 	};
 	@XmlElement(name = "SvcTp", required = true)
@@ -386,7 +450,7 @@ public class DirectoryParticipantInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryParticipantInformation1, Max35Text> mmServiceType = new MMMessageAttribute<DirectoryParticipantInformation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -397,6 +461,16 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getServiceType();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, Max35Text value) {
+			obj.setServiceType(value);
 		}
 	};
 	@XmlElement(name = "XchgTp", required = true)
@@ -429,7 +503,7 @@ public class DirectoryParticipantInformation1 {
 	 * "Specifies whether the participant is a member of the exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryParticipantInformation1, Max35Text> mmExchangeType = new MMMessageAttribute<DirectoryParticipantInformation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -440,6 +514,16 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getExchangeType();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, Max35Text value) {
+			obj.setExchangeType(value);
 		}
 	};
 	@XmlElement(name = "RstrctnTp", required = true)
@@ -471,7 +555,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Type of the restriction applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryParticipantInformation1, Max35Text> mmRestrictionType = new MMMessageAttribute<DirectoryParticipantInformation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -482,6 +566,16 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getRestrictionType();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, Max35Text value) {
+			obj.setRestrictionType(value);
 		}
 	};
 	@XmlElement(name = "RstrctnFctvDt")
@@ -513,7 +607,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Effective date of the restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictionEffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectoryParticipantInformation1, Optional<ISODateTime>> mmRestrictionEffectiveDate = new MMMessageAttribute<DirectoryParticipantInformation1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -524,6 +618,16 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getRestrictionEffectiveDate();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, Optional<ISODateTime> value) {
+			obj.setRestrictionEffectiveDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtcptId", required = true)
@@ -555,7 +659,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Identifier of participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryParticipantInformation1, FinancialInstitutionIdentification9> mmParticipantIdentification = new MMMessageAssociationEnd<DirectoryParticipantInformation1, FinancialInstitutionIdentification9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -566,7 +670,17 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification9 getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getParticipantIdentification();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, FinancialInstitutionIdentification9 value) {
+			obj.setParticipantIdentification(value);
 		}
 	};
 	@XmlElement(name = "MgrtnDtls", required = true)
@@ -597,7 +711,7 @@ public class DirectoryParticipantInformation1 {
 	 * definition} = "Details related to migration to new payment system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMigrationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryParticipantInformation1, SystemMigration1> mmMigrationDetails = new MMMessageAssociationEnd<DirectoryParticipantInformation1, SystemMigration1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 			isDerived = false;
@@ -608,7 +722,17 @@ public class DirectoryParticipantInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
+			type_lazy = () -> SystemMigration1.mmObject();
+		}
+
+		@Override
+		public SystemMigration1 getValue(DirectoryParticipantInformation1 obj) {
+			return obj.getMigrationDetails();
+		}
+
+		@Override
+		public void setValue(DirectoryParticipantInformation1 obj, SystemMigration1 value) {
+			obj.setMigrationDetails(value);
 		}
 	};
 
@@ -634,7 +758,7 @@ public class DirectoryParticipantInformation1 {
 		return participantNameAndAddress == null ? Optional.empty() : Optional.of(participantNameAndAddress);
 	}
 
-	public DirectoryParticipantInformation1 setParticipantNameAndAddress(com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1 participantNameAndAddress) {
+	public DirectoryParticipantInformation1 setParticipantNameAndAddress(EnglishNameLocalNameAndAddress1 participantNameAndAddress) {
 		this.participantNameAndAddress = participantNameAndAddress;
 		return this;
 	}
@@ -643,7 +767,7 @@ public class DirectoryParticipantInformation1 {
 		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public DirectoryParticipantInformation1 setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+	public DirectoryParticipantInformation1 setAccountServicer(BranchAndFinancialInstitutionIdentification5 accountServicer) {
 		this.accountServicer = accountServicer;
 		return this;
 	}
@@ -652,7 +776,7 @@ public class DirectoryParticipantInformation1 {
 		return directParticipant == null ? Optional.empty() : Optional.of(directParticipant);
 	}
 
-	public DirectoryParticipantInformation1 setDirectParticipant(com.tools20022.repository.msg.FinancialInstitutionIdentification9 directParticipant) {
+	public DirectoryParticipantInformation1 setDirectParticipant(FinancialInstitutionIdentification9 directParticipant) {
 		this.directParticipant = directParticipant;
 		return this;
 	}
@@ -724,7 +848,7 @@ public class DirectoryParticipantInformation1 {
 		return participantIdentification;
 	}
 
-	public DirectoryParticipantInformation1 setParticipantIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification9 participantIdentification) {
+	public DirectoryParticipantInformation1 setParticipantIdentification(FinancialInstitutionIdentification9 participantIdentification) {
 		this.participantIdentification = Objects.requireNonNull(participantIdentification);
 		return this;
 	}
@@ -733,7 +857,7 @@ public class DirectoryParticipantInformation1 {
 		return migrationDetails;
 	}
 
-	public DirectoryParticipantInformation1 setMigrationDetails(com.tools20022.repository.msg.SystemMigration1 migrationDetails) {
+	public DirectoryParticipantInformation1 setMigrationDetails(SystemMigration1 migrationDetails) {
 		this.migrationDetails = Objects.requireNonNull(migrationDetails);
 		return this;
 	}

@@ -104,7 +104,7 @@ public class DeMinimusNotApplicable1 {
 	 * definition} = "Reason for the restricted person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictedPersonReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeMinimusNotApplicable1, Max350Text> mmRestrictedPersonReason = new MMMessageAttribute<DeMinimusNotApplicable1, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmRestrictedPersonReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeMinimusNotApplicable1.mmObject();
@@ -116,6 +116,16 @@ public class DeMinimusNotApplicable1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(DeMinimusNotApplicable1 obj) {
+			return obj.getRestrictedPersonReason();
+		}
+
+		@Override
+		public void setValue(DeMinimusNotApplicable1 obj, Max350Text value) {
+			obj.setRestrictedPersonReason(value);
 		}
 	};
 

@@ -113,7 +113,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the system date is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>> mmSystemDateIndicator = new MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class BusinessDayReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayReturnCriteria2 obj) {
+			return obj.getSystemDateIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setSystemDateIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysStsInd")
@@ -156,7 +166,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the system status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>> mmSystemStatusIndicator = new MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class BusinessDayReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayReturnCriteria2 obj) {
+			return obj.getSystemStatusIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setSystemStatusIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysCcyInd")
@@ -199,7 +219,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the system currency is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemCurrencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>> mmSystemCurrencyIndicator = new MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -210,6 +230,16 @@ public class BusinessDayReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayReturnCriteria2 obj) {
+			return obj.getSystemCurrencyIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setSystemCurrencyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsrPrdInd")
@@ -242,7 +272,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the closure information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosurePeriodIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>> mmClosurePeriodIndicator = new MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -253,6 +283,16 @@ public class BusinessDayReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayReturnCriteria2 obj) {
+			return obj.getClosurePeriodIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setClosurePeriodIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtInd")
@@ -285,7 +325,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the events are requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>> mmEventIndicator = new MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -296,6 +336,16 @@ public class BusinessDayReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayReturnCriteria2 obj) {
+			return obj.getEventIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setEventIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SsnPrdInd")
@@ -328,7 +378,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the session period is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSessionPeriodIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>> mmSessionPeriodIndicator = new MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -339,6 +389,16 @@ public class BusinessDayReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayReturnCriteria2 obj) {
+			return obj.getSessionPeriodIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setSessionPeriodIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTpInd")
@@ -371,7 +431,7 @@ public class BusinessDayReturnCriteria2 {
 	 * definition} = "Indicates whether the system event type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>> mmEventTypeIndicator = new MMMessageAttribute<BusinessDayReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmObject();
 			isDerived = false;
@@ -382,6 +442,16 @@ public class BusinessDayReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayReturnCriteria2 obj) {
+			return obj.getEventTypeIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setEventTypeIndicator(value.orElse(null));
 		}
 	};
 

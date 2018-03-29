@@ -132,7 +132,7 @@ public class GenericDocumentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericDocumentIdentification1, Optional<DocumentNumber1Choice>> mmMessageNumber = new MMMessageAttribute<GenericDocumentIdentification1, Optional<DocumentNumber1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification1.mmObject();
 			isDerived = false;
@@ -145,6 +145,16 @@ public class GenericDocumentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentNumber1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber1Choice> getValue(GenericDocumentIdentification1 obj) {
+			return obj.getMessageNumber();
+		}
+
+		@Override
+		public void setValue(GenericDocumentIdentification1 obj, Optional<DocumentNumber1Choice> value) {
+			obj.setMessageNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -187,7 +197,7 @@ public class GenericDocumentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericDocumentIdentification1, Max35Text> mmIdentification = new MMMessageAttribute<GenericDocumentIdentification1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification1.mmObject();
 			isDerived = false;
@@ -200,6 +210,16 @@ public class GenericDocumentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericDocumentIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericDocumentIdentification1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification55;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class ModificationScope23 {
 	 * ModificationScope17.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope23, DataModification2Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope23, DataModification2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope23.mmObject();
 			isDerived = false;
@@ -122,6 +123,16 @@ public class ModificationScope23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
+		}
+
+		@Override
+		public DataModification2Code getValue(ModificationScope23 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope23 obj, DataModification2Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "OthrId", required = true)
@@ -160,7 +171,7 @@ public class ModificationScope23 {
 	 * ModificationScope17.mmOtherIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope23, GenericIdentification55> mmOtherIdentification = new MMMessageAssociationEnd<ModificationScope23, GenericIdentification55>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope23.mmObject();
 			isDerived = false;
@@ -172,7 +183,17 @@ public class ModificationScope23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification55.mmObject();
+			type_lazy = () -> GenericIdentification55.mmObject();
+		}
+
+		@Override
+		public GenericIdentification55 getValue(ModificationScope23 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(ModificationScope23 obj, GenericIdentification55 value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 
@@ -203,7 +224,7 @@ public class ModificationScope23 {
 		return otherIdentification;
 	}
 
-	public ModificationScope23 setOtherIdentification(com.tools20022.repository.msg.GenericIdentification55 otherIdentification) {
+	public ModificationScope23 setOtherIdentification(GenericIdentification55 otherIdentification) {
 		this.otherIdentification = Objects.requireNonNull(otherIdentification);
 		return this;
 	}

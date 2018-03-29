@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InstructionStatusReturnCriteria1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -177,7 +178,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmMessageIdentificationIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmMessageIdentificationIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -189,6 +190,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getMessageIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setMessageIdentificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdExctnDtInd")
@@ -228,7 +239,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmRequestedExecutionDateIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmRequestedExecutionDateIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -240,6 +251,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getRequestedExecutionDateIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setRequestedExecutionDateIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrInd")
@@ -277,7 +298,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmInstructionIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmInstructionIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -289,6 +310,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getInstructionIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setInstructionIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrStsRtrCrit")
@@ -326,7 +357,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmInstructionStatusReturnCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionStatusReturnCriteria = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<InstructionStatusReturnCriteria1>> mmInstructionStatusReturnCriteria = new MMMessageAttribute<PaymentReturnCriteria4, Optional<InstructionStatusReturnCriteria1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -337,7 +368,17 @@ public class PaymentReturnCriteria4 {
 			previousVersion_lazy = () -> PaymentReturnCriteria3.mmInstructionStatusReturnCriteria;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.InstructionStatusReturnCriteria1.mmObject();
+			complexType_lazy = () -> InstructionStatusReturnCriteria1.mmObject();
+		}
+
+		@Override
+		public Optional<InstructionStatusReturnCriteria1> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getInstructionStatusReturnCriteria();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<InstructionStatusReturnCriteria1> value) {
+			obj.setInstructionStatusReturnCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdAmtInd")
@@ -375,7 +416,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmInstructedAmountIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmInstructedAmountIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -387,6 +428,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getInstructedAmountIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setInstructedAmountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -425,7 +476,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmCreditDebitIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -437,6 +488,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmAmtInd")
@@ -475,7 +536,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmInterbankSettlementAmountIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmInterbankSettlementAmountIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -487,6 +548,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getInterbankSettlementAmountIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setInterbankSettlementAmountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtyInd")
@@ -524,7 +595,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmPriorityIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriorityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmPriorityIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -536,6 +607,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getPriorityIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setPriorityIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgVldtyTmInd")
@@ -574,7 +655,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmProcessingValidityTimeIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingValidityTimeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmProcessingValidityTimeIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -586,6 +667,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getProcessingValidityTimeIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setProcessingValidityTimeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PurpInd")
@@ -623,7 +714,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmPurposeIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurposeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmPurposeIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -635,6 +726,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getPurposeIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setPurposeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrCpyInd")
@@ -672,7 +773,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmInstructionCopyIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionCopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmInstructionCopyIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -684,6 +785,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getInstructionCopyIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setInstructionCopyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtMTInd")
@@ -721,7 +832,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmPaymentMessageTypeIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentMessageTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmPaymentMessageTypeIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -733,6 +844,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getPaymentMessageTypeIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setPaymentMessageTypeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtTpInd")
@@ -770,7 +891,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmPaymentTypeIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmPaymentTypeIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -782,6 +903,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getPaymentTypeIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setPaymentTypeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxIdInd")
@@ -821,7 +952,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmTransactionIdentificationIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmTransactionIdentificationIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -833,6 +964,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getTransactionIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setTransactionIdentificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDtInd")
@@ -872,7 +1013,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmInterbankSettlementDateIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmInterbankSettlementDateIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -884,6 +1025,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getInterbankSettlementDateIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setInterbankSettlementDateIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndToEndIdInd")
@@ -923,7 +1074,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmEndToEndIdentificationIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndToEndIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmEndToEndIdentificationIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -935,6 +1086,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getEndToEndIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setEndToEndIdentificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtMtdInd")
@@ -972,7 +1133,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmPaymentMethodIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentMethodIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmPaymentMethodIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -984,6 +1145,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getPaymentMethodIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setPaymentMethodIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrInd")
@@ -1021,7 +1192,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmDebtorIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmDebtorIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -1033,6 +1204,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getDebtorIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setDebtorIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgtInd")
@@ -1072,7 +1253,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmDebtorAgentIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorAgentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmDebtorAgentIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -1084,6 +1265,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getDebtorAgentIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setDebtorAgentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstgRmbrsmntAgtInd")
@@ -1123,7 +1314,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmInstructingReimbursementAgentIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructingReimbursementAgentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmInstructingReimbursementAgentIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -1135,6 +1326,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getInstructingReimbursementAgentIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setInstructingReimbursementAgentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdRmbrsmntAgtInd")
@@ -1174,7 +1375,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmInstructedReimbursementAgentIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedReimbursementAgentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmInstructedReimbursementAgentIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -1186,6 +1387,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getInstructedReimbursementAgentIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setInstructedReimbursementAgentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyInd")
@@ -1223,7 +1434,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmIntermediaryIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediaryIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmIntermediaryIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -1235,6 +1446,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getIntermediaryIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setIntermediaryIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgtInd")
@@ -1274,7 +1495,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmCreditorAgentIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorAgentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmCreditorAgentIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -1286,6 +1507,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getCreditorAgentIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setCreditorAgentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrInd")
@@ -1323,7 +1554,7 @@ public class PaymentReturnCriteria4 {
 	 * PaymentReturnCriteria3.mmCreditorIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>> mmCreditorIndicator = new MMMessageAttribute<PaymentReturnCriteria4, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria4.mmObject();
 			isDerived = false;
@@ -1335,6 +1566,16 @@ public class PaymentReturnCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(PaymentReturnCriteria4 obj) {
+			return obj.getCreditorIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentReturnCriteria4 obj, Optional<RequestedIndicator> value) {
+			obj.setCreditorIndicator(value.orElse(null));
 		}
 	};
 
@@ -1394,7 +1635,7 @@ public class PaymentReturnCriteria4 {
 		return instructionStatusReturnCriteria == null ? Optional.empty() : Optional.of(instructionStatusReturnCriteria);
 	}
 
-	public PaymentReturnCriteria4 setInstructionStatusReturnCriteria(com.tools20022.repository.msg.InstructionStatusReturnCriteria1 instructionStatusReturnCriteria) {
+	public PaymentReturnCriteria4 setInstructionStatusReturnCriteria(InstructionStatusReturnCriteria1 instructionStatusReturnCriteria) {
 		this.instructionStatusReturnCriteria = instructionStatusReturnCriteria;
 		return this;
 	}

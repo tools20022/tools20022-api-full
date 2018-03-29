@@ -122,7 +122,7 @@ public class FrankingSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrankingSD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<FrankingSD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class FrankingSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(FrankingSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(FrankingSD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrnkgClss", required = true)
@@ -165,7 +175,7 @@ public class FrankingSD1 {
 	 * "Dividend / Distribution kind where the franking information apples to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrankingClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrankingSD1, FrankingClass1Code> mmFrankingClass = new MMMessageAttribute<FrankingSD1, FrankingClass1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class FrankingSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FrankingClass1Code.mmObject();
+		}
+
+		@Override
+		public FrankingClass1Code getValue(FrankingSD1 obj) {
+			return obj.getFrankingClass();
+		}
+
+		@Override
+		public void setValue(FrankingSD1 obj, FrankingClass1Code value) {
+			obj.setFrankingClass(value);
 		}
 	};
 	@XmlElement(name = "FullyFrnkdInd")
@@ -207,7 +227,7 @@ public class FrankingSD1 {
 	 * definition} = "Indicator if the dividend is fully franked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullyFrankedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrankingSD1, Optional<YesNoIndicator>> mmFullyFrankedIndicator = new MMMessageAttribute<FrankingSD1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
@@ -218,6 +238,16 @@ public class FrankingSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(FrankingSD1 obj) {
+			return obj.getFullyFrankedIndicator();
+		}
+
+		@Override
+		public void setValue(FrankingSD1 obj, Optional<YesNoIndicator> value) {
+			obj.setFullyFrankedIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrnkdPctg")
@@ -249,7 +279,7 @@ public class FrankingSD1 {
 	 * definition} = "Percentage of dividend that is franked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrankedPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrankingSD1, Optional<PercentageRate>> mmFrankedPercentage = new MMMessageAttribute<FrankingSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
@@ -260,6 +290,16 @@ public class FrankingSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(FrankingSD1 obj) {
+			return obj.getFrankedPercentage();
+		}
+
+		@Override
+		public void setValue(FrankingSD1 obj, Optional<PercentageRate> value) {
+			obj.setFrankedPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UfrnkdPctg")
@@ -291,7 +331,7 @@ public class FrankingSD1 {
 	 * definition} = "Percentage of dividend that is unfranked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnfrankedPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrankingSD1, Optional<PercentageRate>> mmUnfrankedPercentage = new MMMessageAttribute<FrankingSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
@@ -302,6 +342,16 @@ public class FrankingSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(FrankingSD1 obj) {
+			return obj.getUnfrankedPercentage();
+		}
+
+		@Override
+		public void setValue(FrankingSD1 obj, Optional<PercentageRate> value) {
+			obj.setUnfrankedPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpTaxRateForFrnkgCdt")
@@ -335,7 +385,7 @@ public class FrankingSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateTaxRateForFrankingCredit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrankingSD1, Optional<PercentageRate>> mmCorporateTaxRateForFrankingCredit = new MMMessageAttribute<FrankingSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
@@ -346,6 +396,16 @@ public class FrankingSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(FrankingSD1 obj) {
+			return obj.getCorporateTaxRateForFrankingCredit();
+		}
+
+		@Override
+		public void setValue(FrankingSD1 obj, Optional<PercentageRate> value) {
+			obj.setCorporateTaxRateForFrankingCredit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrnkdAmtPerScty")
@@ -378,7 +438,7 @@ public class FrankingSD1 {
 	 * "Cents amount of the dividend which has been franked at 30%."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrankedAmountPerSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrankingSD1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmFrankedAmountPerSecurity = new MMMessageAttribute<FrankingSD1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
@@ -389,6 +449,16 @@ public class FrankingSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(FrankingSD1 obj) {
+			return obj.getFrankedAmountPerSecurity();
+		}
+
+		@Override
+		public void setValue(FrankingSD1 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setFrankedAmountPerSecurity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UfrnkdAmtPerScty")
@@ -420,7 +490,7 @@ public class FrankingSD1 {
 	 * definition} = "Amount of the dividend which has been unfranked.\r\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnfrankedAmountPerSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrankingSD1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmUnfrankedAmountPerSecurity = new MMMessageAttribute<FrankingSD1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
@@ -431,6 +501,16 @@ public class FrankingSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(FrankingSD1 obj) {
+			return obj.getUnfrankedAmountPerSecurity();
+		}
+
+		@Override
+		public void setValue(FrankingSD1 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setUnfrankedAmountPerSecurity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CndtFrgnIncmAmt")
@@ -463,7 +543,7 @@ public class FrankingSD1 {
 	 * "Conduit foreign income (CFI) amount related to the corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConduitForeignIncomeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrankingSD1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmConduitForeignIncomeAmount = new MMMessageAttribute<FrankingSD1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FrankingSD1.mmObject();
 			isDerived = false;
@@ -474,6 +554,16 @@ public class FrankingSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(FrankingSD1 obj) {
+			return obj.getConduitForeignIncomeAmount();
+		}
+
+		@Override
+		public void setValue(FrankingSD1 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setConduitForeignIncomeAmount(value.orElse(null));
 		}
 	};
 

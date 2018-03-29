@@ -110,7 +110,7 @@ public class PostalAddress7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddressLine = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress7, List<RestrictedFINMax35Text>> mmAddressLine = new MMMessageAttribute<PostalAddress7, List<RestrictedFINMax35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress7.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class PostalAddress7 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax35Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINMax35Text> getValue(PostalAddress7 obj) {
+			return obj.getAddressLine();
+		}
+
+		@Override
+		public void setValue(PostalAddress7 obj, List<RestrictedFINMax35Text> value) {
+			obj.setAddressLine(value);
 		}
 	};
 	@XmlElement(name = "PstCd")
@@ -159,7 +169,7 @@ public class PostalAddress7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress7, Optional<RestrictedFINMax8Text>> mmPostCode = new MMMessageAttribute<PostalAddress7, Optional<RestrictedFINMax8Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostCodeIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress7.mmObject();
@@ -171,6 +181,16 @@ public class PostalAddress7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax8Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax8Text> getValue(PostalAddress7 obj) {
+			return obj.getPostCode();
+		}
+
+		@Override
+		public void setValue(PostalAddress7 obj, Optional<RestrictedFINMax8Text> value) {
+			obj.setPostCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TwnNm")
@@ -209,7 +229,7 @@ public class PostalAddress7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTownName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress7, Optional<RestrictedFINMax23Text>> mmTownName = new MMMessageAttribute<PostalAddress7, Optional<RestrictedFINMax23Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress7.mmObject();
@@ -221,6 +241,16 @@ public class PostalAddress7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax23Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax23Text> getValue(PostalAddress7 obj) {
+			return obj.getTownName();
+		}
+
+		@Override
+		public void setValue(PostalAddress7 obj, Optional<RestrictedFINMax23Text> value) {
+			obj.setTownName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -256,7 +286,7 @@ public class PostalAddress7 {
 	 * definition} = "Nation with its own government."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress7, CountryCode> mmCountry = new MMMessageAttribute<PostalAddress7, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress7.mmObject();
@@ -268,6 +298,16 @@ public class PostalAddress7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PostalAddress7 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PostalAddress7 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

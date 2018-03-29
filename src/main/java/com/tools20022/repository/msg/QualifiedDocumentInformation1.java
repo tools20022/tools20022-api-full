@@ -28,6 +28,9 @@ import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmAndDigest1;
+import com.tools20022.repository.msg.BinaryFile1;
+import com.tools20022.repository.msg.QualifiedPartyIdentification1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -169,7 +172,7 @@ public class QualifiedDocumentInformation1 {
 	 * "Local identification to be used in IDREFs in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QualifiedDocumentInformation1, ID> mmIdentification = new MMMessageAttribute<QualifiedDocumentInformation1, ID>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
@@ -180,6 +183,16 @@ public class QualifiedDocumentInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ID.mmObject();
+		}
+
+		@Override
+		public ID getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, ID value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -216,7 +229,7 @@ public class QualifiedDocumentInformation1 {
 	 * definition} = "Party issuing the reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QualifiedDocumentInformation1, Optional<QualifiedPartyIdentification1>> mmIssuer = new MMMessageAssociationEnd<QualifiedDocumentInformation1, Optional<QualifiedPartyIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
@@ -228,7 +241,17 @@ public class QualifiedDocumentInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<QualifiedPartyIdentification1> getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, Optional<QualifiedPartyIdentification1> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ItmListIdr")
@@ -267,7 +290,7 @@ public class QualifiedDocumentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItemListIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QualifiedDocumentInformation1, Optional<Max35Text>> mmItemListIdentifier = new MMMessageAttribute<QualifiedDocumentInformation1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
@@ -279,6 +302,16 @@ public class QualifiedDocumentInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getItemListIdentifier();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, Optional<Max35Text> value) {
+			obj.setItemListIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ItmIdr")
@@ -317,7 +350,7 @@ public class QualifiedDocumentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItemIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QualifiedDocumentInformation1, Optional<Max35Text>> mmItemIdentifier = new MMMessageAttribute<QualifiedDocumentInformation1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
@@ -329,6 +362,16 @@ public class QualifiedDocumentInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getItemIdentifier();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, Optional<Max35Text> value) {
+			obj.setItemIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -367,7 +410,7 @@ public class QualifiedDocumentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QualifiedDocumentInformation1, Optional<ISODate>> mmDate = new MMMessageAttribute<QualifiedDocumentInformation1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
@@ -379,6 +422,16 @@ public class QualifiedDocumentInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, Optional<ISODate> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -412,7 +465,7 @@ public class QualifiedDocumentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QualifiedDocumentInformation1, Optional<Max6Text>> mmVersion = new MMMessageAttribute<QualifiedDocumentInformation1, Optional<Max6Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
@@ -423,6 +476,16 @@ public class QualifiedDocumentInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max6Text> getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, Optional<Max6Text> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ElctrncOrgnl", required = true)
@@ -457,7 +520,7 @@ public class QualifiedDocumentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectronicOriginal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QualifiedDocumentInformation1, YesNoIndicator> mmElectronicOriginal = new MMMessageAttribute<QualifiedDocumentInformation1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
@@ -469,9 +532,19 @@ public class QualifiedDocumentInformation1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getElectronicOriginal();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, YesNoIndicator value) {
+			obj.setElectronicOriginal(value);
+		}
 	};
 	@XmlElement(name = "Dgst")
-	protected List<com.tools20022.repository.msg.AlgorithmAndDigest1> digest;
+	protected List<AlgorithmAndDigest1> digest;
 	/**
 	 * 
 	 <p>
@@ -498,7 +571,7 @@ public class QualifiedDocumentInformation1 {
 	 * definition} = "Cryptographic hash of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QualifiedDocumentInformation1, List<AlgorithmAndDigest1>> mmDigest = new MMMessageAssociationEnd<QualifiedDocumentInformation1, List<AlgorithmAndDigest1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
@@ -509,7 +582,17 @@ public class QualifiedDocumentInformation1 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmAndDigest1.mmObject();
+			type_lazy = () -> AlgorithmAndDigest1.mmObject();
+		}
+
+		@Override
+		public List<AlgorithmAndDigest1> getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getDigest();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, List<AlgorithmAndDigest1> value) {
+			obj.setDigest(value);
 		}
 	};
 	@XmlElement(name = "DocTp")
@@ -548,7 +631,7 @@ public class QualifiedDocumentInformation1 {
 	 * "Specifies the type of the document, for example commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QualifiedDocumentInformation1, Optional<ExternalDocumentType1Code>> mmDocumentType = new MMMessageAttribute<QualifiedDocumentInformation1, Optional<ExternalDocumentType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
@@ -560,6 +643,16 @@ public class QualifiedDocumentInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExternalDocumentType1Code> getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getDocumentType();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, Optional<ExternalDocumentType1Code> value) {
+			obj.setDocumentType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "URL")
@@ -597,7 +690,7 @@ public class QualifiedDocumentInformation1 {
 	 * "URL (Uniform Resource Locator) where the document can be found."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURL = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QualifiedDocumentInformation1, Optional<Max2048Text>> mmURL = new MMMessageAttribute<QualifiedDocumentInformation1, Optional<Max2048Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
@@ -610,9 +703,19 @@ public class QualifiedDocumentInformation1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2048Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max2048Text> getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getURL();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, Optional<Max2048Text> value) {
+			obj.setURL(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AttchdFile")
-	protected List<com.tools20022.repository.msg.BinaryFile1> attachedFile;
+	protected List<BinaryFile1> attachedFile;
 	/**
 	 * 
 	 <p>
@@ -641,7 +744,7 @@ public class QualifiedDocumentInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAttachedFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QualifiedDocumentInformation1, List<BinaryFile1>> mmAttachedFile = new MMMessageAssociationEnd<QualifiedDocumentInformation1, List<BinaryFile1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
 			isDerived = false;
@@ -651,7 +754,17 @@ public class QualifiedDocumentInformation1 {
 			definition = "Attached file for this document. The file must be in a self-describing format.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BinaryFile1.mmObject();
+			type_lazy = () -> BinaryFile1.mmObject();
+		}
+
+		@Override
+		public List<BinaryFile1> getValue(QualifiedDocumentInformation1 obj) {
+			return obj.getAttachedFile();
+		}
+
+		@Override
+		public void setValue(QualifiedDocumentInformation1 obj, List<BinaryFile1> value) {
+			obj.setAttachedFile(value);
 		}
 	};
 
@@ -691,7 +804,7 @@ public class QualifiedDocumentInformation1 {
 		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public QualifiedDocumentInformation1 setIssuer(com.tools20022.repository.msg.QualifiedPartyIdentification1 issuer) {
+	public QualifiedDocumentInformation1 setIssuer(QualifiedPartyIdentification1 issuer) {
 		this.issuer = issuer;
 		return this;
 	}
@@ -745,7 +858,7 @@ public class QualifiedDocumentInformation1 {
 		return digest == null ? digest = new ArrayList<>() : digest;
 	}
 
-	public QualifiedDocumentInformation1 setDigest(List<com.tools20022.repository.msg.AlgorithmAndDigest1> digest) {
+	public QualifiedDocumentInformation1 setDigest(List<AlgorithmAndDigest1> digest) {
 		this.digest = Objects.requireNonNull(digest);
 		return this;
 	}
@@ -772,7 +885,7 @@ public class QualifiedDocumentInformation1 {
 		return attachedFile == null ? attachedFile = new ArrayList<>() : attachedFile;
 	}
 
-	public QualifiedDocumentInformation1 setAttachedFile(List<com.tools20022.repository.msg.BinaryFile1> attachedFile) {
+	public QualifiedDocumentInformation1 setAttachedFile(List<BinaryFile1> attachedFile) {
 		this.attachedFile = Objects.requireNonNull(attachedFile);
 		return this;
 	}

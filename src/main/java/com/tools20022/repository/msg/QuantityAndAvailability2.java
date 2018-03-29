@@ -101,7 +101,7 @@ public class QuantityAndAvailability2 {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityAndAvailability2, FinancialInstrumentQuantity15Choice> mmQuantity = new MMMessageAssociationEnd<QuantityAndAvailability2, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAvailability2.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class QuantityAndAvailability2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(QuantityAndAvailability2 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityAndAvailability2 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "AvlbtyInd", required = true)
@@ -147,7 +157,7 @@ public class QuantityAndAvailability2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAvailabilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityAndAvailability2, YesNoIndicator> mmAvailabilityIndicator = new MMMessageAttribute<QuantityAndAvailability2, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAvailability2.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class QuantityAndAvailability2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(QuantityAndAvailability2 obj) {
+			return obj.getAvailabilityIndicator();
+		}
+
+		@Override
+		public void setValue(QuantityAndAvailability2 obj, YesNoIndicator value) {
+			obj.setAvailabilityIndicator(value);
 		}
 	};
 

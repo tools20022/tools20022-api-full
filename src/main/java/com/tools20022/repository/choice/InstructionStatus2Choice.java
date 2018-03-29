@@ -108,7 +108,7 @@ public class InstructionStatus2Choice {
 	 * definition} = "Status advising on the processing of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionStatus2Choice, InstructionProcessingStatus1> mmProcessingStatus = new MMMessageAssociationEnd<InstructionStatus2Choice, InstructionProcessingStatus1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus2Choice.mmObject();
@@ -121,6 +121,16 @@ public class InstructionStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InstructionProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public InstructionProcessingStatus1 getValue(InstructionStatus2Choice obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(InstructionStatus2Choice obj, InstructionProcessingStatus1 value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctnSts", required = true)
@@ -157,7 +167,7 @@ public class InstructionStatus2Choice {
 	 * definition} = "Status advising on the rejection of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionStatus2Choice, InstructionRejectionStatus1> mmRejectionStatus = new MMMessageAssociationEnd<InstructionStatus2Choice, InstructionRejectionStatus1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus2Choice.mmObject();
@@ -170,6 +180,16 @@ public class InstructionStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InstructionRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public InstructionRejectionStatus1 getValue(InstructionStatus2Choice obj) {
+			return obj.getRejectionStatus();
+		}
+
+		@Override
+		public void setValue(InstructionStatus2Choice obj, InstructionRejectionStatus1 value) {
+			obj.setRejectionStatus(value);
 		}
 	};
 

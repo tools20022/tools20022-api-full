@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransferReference4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -137,7 +138,7 @@ public class TransferReference3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference3, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<TransferReference3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference3.mmObject();
@@ -151,9 +152,19 @@ public class TransferReference3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferReference3 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(TransferReference3 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TrfRefs", required = true)
-	protected List<com.tools20022.repository.msg.TransferReference4> transferReferences;
+	protected List<TransferReference4> transferReferences;
 	/**
 	 * 
 	 <p>
@@ -188,7 +199,7 @@ public class TransferReference3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferReferences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferReference3, List<TransferReference4>> mmTransferReferences = new MMMessageAssociationEnd<TransferReference3, List<TransferReference4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference3.mmObject();
 			isDerived = false;
@@ -199,7 +210,17 @@ public class TransferReference3 {
 			nextVersions_lazy = () -> Arrays.asList(TransferReference7.mmTransferReferences);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransferReference4.mmObject();
+			type_lazy = () -> TransferReference4.mmObject();
+		}
+
+		@Override
+		public List<TransferReference4> getValue(TransferReference3 obj) {
+			return obj.getTransferReferences();
+		}
+
+		@Override
+		public void setValue(TransferReference3 obj, List<TransferReference4> value) {
+			obj.setTransferReferences(value);
 		}
 	};
 
@@ -232,7 +253,7 @@ public class TransferReference3 {
 		return transferReferences == null ? transferReferences = new ArrayList<>() : transferReferences;
 	}
 
-	public TransferReference3 setTransferReferences(List<com.tools20022.repository.msg.TransferReference4> transferReferences) {
+	public TransferReference3 setTransferReferences(List<TransferReference4> transferReferences) {
 		this.transferReferences = Objects.requireNonNull(transferReferences);
 		return this;
 	}

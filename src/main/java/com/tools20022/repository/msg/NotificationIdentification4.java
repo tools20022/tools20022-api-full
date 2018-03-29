@@ -118,7 +118,7 @@ public class NotificationIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationIdentification4, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<NotificationIdentification4, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCorporateActionNotificationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification4.mmObject();
@@ -131,6 +131,16 @@ public class NotificationIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(NotificationIdentification4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification4 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -173,7 +183,7 @@ public class NotificationIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationIdentification4, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAttribute<NotificationIdentification4, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCreationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification4.mmObject();
@@ -186,6 +196,16 @@ public class NotificationIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(NotificationIdentification4 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification4 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 

@@ -97,7 +97,7 @@ public class RequestType3Choice {
 	 * definition} = "Liquidity transfer request type, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType3Choice, StandingOrderQueryType1Code> mmCode = new MMMessageAttribute<RequestType3Choice, StandingOrderQueryType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType3Choice.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class RequestType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StandingOrderQueryType1Code.mmObject();
+		}
+
+		@Override
+		public StandingOrderQueryType1Code getValue(RequestType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RequestType3Choice obj, StandingOrderQueryType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -140,7 +150,7 @@ public class RequestType3Choice {
 	 * definition} = "Liquidity transfer request type, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType3Choice, GenericIdentification1> mmProprietary = new MMMessageAttribute<RequestType3Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType3Choice.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class RequestType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(RequestType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RequestType3Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

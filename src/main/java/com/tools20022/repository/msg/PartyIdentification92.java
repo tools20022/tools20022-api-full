@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.PartyIdentification44Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternatePartyIdentification7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -131,7 +132,7 @@ public class PartyIdentification92 {
 	 * PartyIdentification47.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification92, PartyIdentification44Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification92, PartyIdentification44Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification92.mmObject();
@@ -146,6 +147,16 @@ public class PartyIdentification92 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification44Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification44Choice getValue(PartyIdentification92 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification92 obj, PartyIdentification44Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -185,7 +196,7 @@ public class PartyIdentification92 {
 	 * PartyIdentification47.mmProcessingIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification92, Optional<Max35Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentification92, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification92.mmObject();
 			isDerived = false;
@@ -199,9 +210,19 @@ public class PartyIdentification92 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentification92 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification92 obj, Optional<Max35Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AltrnId")
-	protected List<com.tools20022.repository.msg.AlternatePartyIdentification7> alternateIdentification;
+	protected List<AlternatePartyIdentification7> alternateIdentification;
 	/**
 	 * 
 	 <p>
@@ -244,7 +265,7 @@ public class PartyIdentification92 {
 	 * PartyIdentification47.mmAlternateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification92, List<AlternatePartyIdentification7>> mmAlternateIdentification = new MMMessageAssociationEnd<PartyIdentification92, List<AlternatePartyIdentification7>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification92.mmObject();
@@ -257,7 +278,17 @@ public class PartyIdentification92 {
 			previousVersion_lazy = () -> PartyIdentification47.mmAlternateIdentification;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification7.mmObject();
+			type_lazy = () -> AlternatePartyIdentification7.mmObject();
+		}
+
+		@Override
+		public List<AlternatePartyIdentification7> getValue(PartyIdentification92 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification92 obj, List<AlternatePartyIdentification7> value) {
+			obj.setAlternateIdentification(value);
 		}
 	};
 
@@ -300,7 +331,7 @@ public class PartyIdentification92 {
 		return alternateIdentification == null ? alternateIdentification = new ArrayList<>() : alternateIdentification;
 	}
 
-	public PartyIdentification92 setAlternateIdentification(List<com.tools20022.repository.msg.AlternatePartyIdentification7> alternateIdentification) {
+	public PartyIdentification92 setAlternateIdentification(List<AlternatePartyIdentification7> alternateIdentification) {
 		this.alternateIdentification = Objects.requireNonNull(alternateIdentification);
 		return this;
 	}

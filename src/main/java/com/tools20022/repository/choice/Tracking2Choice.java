@@ -102,7 +102,7 @@ public class Tracking2Choice {
 	 * definition} = "Specifies whether the loan and/or collateral is tracked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tracking2Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<Tracking2Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Tracking2Choice.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class Tracking2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Tracking2Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(Tracking2Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -148,7 +158,7 @@ public class Tracking2Choice {
 	 * definition} = "Tracking information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tracking2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<Tracking2Choice, GenericIdentification25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Tracking2Choice.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class Tracking2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(Tracking2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Tracking2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

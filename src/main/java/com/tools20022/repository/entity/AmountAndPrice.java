@@ -22,8 +22,8 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AmountPrice1Choice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +107,7 @@ public class AmountAndPrice {
 	 * definition} = "Amount expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AmountAndPrice, CurrencyAndAmount> mmAmount = new MMBusinessAttribute<AmountAndPrice, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountPrice1Choice.mmAmount);
 			isDerived = false;
@@ -120,12 +120,14 @@ public class AmountAndPrice {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AmountAndPrice.class.getMethod("getAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(AmountAndPrice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndPrice obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	protected SecuritiesPricing price;
@@ -163,7 +165,7 @@ public class AmountAndPrice {
 	 * definition} = "Amount expressed as a price."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPrice = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AmountAndPrice, SecuritiesPricing> mmPrice = new MMBusinessAttribute<AmountAndPrice, SecuritiesPricing>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountPrice1Choice.mmUnitPrice);
 			isDerived = false;
@@ -173,15 +175,17 @@ public class AmountAndPrice {
 			definition = "Amount expressed as a price.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			complexType_lazy = () -> SecuritiesPricing.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AmountAndPrice.class.getMethod("getPrice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesPricing getValue(AmountAndPrice obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(AmountAndPrice obj, SecuritiesPricing value) {
+			obj.setPrice(value);
 		}
 	};
 
@@ -217,7 +221,7 @@ public class AmountAndPrice {
 		return price;
 	}
 
-	public AmountAndPrice setPrice(com.tools20022.repository.entity.SecuritiesPricing price) {
+	public AmountAndPrice setPrice(SecuritiesPricing price) {
 		this.price = Objects.requireNonNull(price);
 		return this;
 	}

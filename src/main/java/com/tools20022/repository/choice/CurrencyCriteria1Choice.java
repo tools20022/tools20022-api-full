@@ -103,7 +103,7 @@ public class CurrencyCriteria1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyCriteria1Choice, Max35Text> mmQueryName = new MMMessageAttribute<CurrencyCriteria1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrencyCriteria1Choice.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class CurrencyCriteria1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CurrencyCriteria1Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(CurrencyCriteria1Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -146,7 +156,7 @@ public class CurrencyCriteria1Choice {
 	 * "Defines the criteria based on which the information is extracted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyCriteria1Choice, CurrencyExchangeCriteria1> mmNewCriteria = new MMMessageAssociationEnd<CurrencyCriteria1Choice, CurrencyExchangeCriteria1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrencyCriteria1Choice.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class CurrencyCriteria1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CurrencyExchangeCriteria1.mmObject();
+		}
+
+		@Override
+		public CurrencyExchangeCriteria1 getValue(CurrencyCriteria1Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(CurrencyCriteria1Choice obj, CurrencyExchangeCriteria1 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

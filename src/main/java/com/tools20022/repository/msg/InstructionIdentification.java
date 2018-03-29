@@ -93,7 +93,7 @@ public class InstructionIdentification {
 	 * definition} = "Identification of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionIdentification, Max35Text> mmIdentification = new MMMessageAttribute<InstructionIdentification, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionIdentification.mmObject();
 			isDerived = false;
@@ -104,6 +104,16 @@ public class InstructionIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InstructionIdentification obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(InstructionIdentification obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

@@ -59,11 +59,15 @@ public class ConstraintCreditorAndOrCreditorAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
 		{
-			validator = ConstraintCreditorAndOrCreditorAccountRule::checkPaymentInstructionInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAndOrCreditorAccountRule";
 			definition = "If PaymentMethod is CHK, then CreditTransferTransactionInformation/CreditorAccount is not allowed. \n\nIf PaymentMethod is different from CHK and if CreditTransferTransactionInformation/Creditor is not present, then CreditTransferTransactionInformation/CreditorAccount is mandatory. \n\nIf PaymentMethod is different from CHK and if CreditTransferTransactionInformation/Creditor is present, then CreditTransferTransactionInformation/CreditorAccount is optional.";
 			owner_lazy = () -> PaymentInstructionInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation1 obj) throws Exception {
+			checkPaymentInstructionInformation1(obj);
 		}
 	};
 

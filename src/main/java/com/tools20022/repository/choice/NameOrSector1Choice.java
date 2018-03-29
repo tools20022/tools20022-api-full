@@ -116,7 +116,7 @@ public class NameOrSector1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NameOrSector1Choice, Max70Text> mmName = new MMMessageAttribute<NameOrSector1Choice, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NameOrSector1Choice.mmObject();
@@ -128,6 +128,16 @@ public class NameOrSector1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(NameOrSector1Choice obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(NameOrSector1Choice obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Sctr", required = true)
@@ -172,7 +182,7 @@ public class NameOrSector1Choice {
 	 * SectorAndLocation1.mmSector}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NameOrSector1Choice, SNA2008SectorIdentifier> mmSector = new MMMessageAttribute<NameOrSector1Choice, SNA2008SectorIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NameOrSector1Choice.mmObject();
@@ -185,6 +195,16 @@ public class NameOrSector1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
+		}
+
+		@Override
+		public SNA2008SectorIdentifier getValue(NameOrSector1Choice obj) {
+			return obj.getSector();
+		}
+
+		@Override
+		public void setValue(NameOrSector1Choice obj, SNA2008SectorIdentifier value) {
+			obj.setSector(value);
 		}
 	};
 

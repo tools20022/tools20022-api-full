@@ -55,11 +55,15 @@ public class ConstraintRelatedReferenceGuideline {
 	 */
 	public static final MMConstraint<OrderConfirmationStatusReportV01> forOrderConfirmationStatusReportV01 = new MMConstraint<OrderConfirmationStatusReportV01>() {
 		{
-			validator = ConstraintRelatedReferenceGuideline::checkOrderConfirmationStatusReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceGuideline";
 			definition = "If RelatedReference/MessageName is present, it must contain 515 or must start with setr.003, setr.006, setr.009, setr.012, setr.015, setr.047, setr.048, setr.049, setr.050, setr.051, setr.052, setr.053, setr.054, setr.055,setr.056 or setr.058 and RelatedReference/Reference must contain the reference of a message in this list.";
 			owner_lazy = () -> OrderConfirmationStatusReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderConfirmationStatusReportV01 obj) throws Exception {
+			checkOrderConfirmationStatusReportV01(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintRelatedReferenceGuideline {
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV02> forOrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
 		{
-			validator = ConstraintRelatedReferenceGuideline::checkOrderInstructionStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceGuideline";
 			definition = "If RelatedReference/MessageName is present, it must contain 502 or must start with setr.001 or setr.004 or setr.007 or setr.010 or setr.013 or setr.025 and Reference must contain the business reference of a message in this list.";
 			owner_lazy = () -> OrderInstructionStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderInstructionStatusReportV02 obj) throws Exception {
+			checkOrderInstructionStatusReportV02(obj);
 		}
 	};
 

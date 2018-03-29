@@ -98,7 +98,7 @@ public class AddressType1Choice {
 	 * definition} = "Type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AddressType1Choice, AddressType1Code> mmCode = new MMMessageAttribute<AddressType1Choice, AddressType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AddressType1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class AddressType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AddressType1Code.mmObject();
+		}
+
+		@Override
+		public AddressType1Code getValue(AddressType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AddressType1Choice obj, AddressType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -140,7 +150,7 @@ public class AddressType1Choice {
 	 * definition} = "Type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AddressType1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<AddressType1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AddressType1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class AddressType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(AddressType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AddressType1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

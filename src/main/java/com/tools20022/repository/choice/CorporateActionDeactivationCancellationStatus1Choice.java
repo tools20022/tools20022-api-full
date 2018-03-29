@@ -120,7 +120,7 @@ public class CorporateActionDeactivationCancellationStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDeactivationCancellationStatus1Choice, CorporateActionDeactivationCancellationProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<CorporateActionDeactivationCancellationStatus1Choice, CorporateActionDeactivationCancellationProcessingStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice.mmObject();
@@ -133,6 +133,16 @@ public class CorporateActionDeactivationCancellationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionDeactivationCancellationProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionDeactivationCancellationProcessingStatus1 getValue(CorporateActionDeactivationCancellationStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationCancellationStatus1Choice obj, CorporateActionDeactivationCancellationProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -169,7 +179,7 @@ public class CorporateActionDeactivationCancellationStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDeactivationCancellationStatus1Choice, CorporateActionDeactivationCancellationRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<CorporateActionDeactivationCancellationStatus1Choice, CorporateActionDeactivationCancellationRejectionStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionDeactivationCancellationStatus1Choice.mmObject();
@@ -182,6 +192,16 @@ public class CorporateActionDeactivationCancellationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionDeactivationCancellationRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionDeactivationCancellationRejectionStatus1 getValue(CorporateActionDeactivationCancellationStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionDeactivationCancellationStatus1Choice obj, CorporateActionDeactivationCancellationRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

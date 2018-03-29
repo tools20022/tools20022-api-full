@@ -123,7 +123,7 @@ public class ATMCassetteCounters2 {
 	 * definition} = "Type of counters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCassetteCounters2, ATMCounterType1Code> mmType = new MMMessageAttribute<ATMCassetteCounters2, ATMCounterType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
@@ -134,6 +134,16 @@ public class ATMCassetteCounters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMCounterType1Code.mmObject();
+		}
+
+		@Override
+		public ATMCounterType1Code getValue(ATMCassetteCounters2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ATMCassetteCounters2 obj, ATMCounterType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AddedNb")
@@ -165,7 +175,7 @@ public class ATMCassetteCounters2 {
 	 * definition} = "Number of added media during servicing operations."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCassetteCounters2, Optional<Number>> mmAddedNumber = new MMMessageAttribute<ATMCassetteCounters2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class ATMCassetteCounters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMCassetteCounters2 obj) {
+			return obj.getAddedNumber();
+		}
+
+		@Override
+		public void setValue(ATMCassetteCounters2 obj, Optional<Number> value) {
+			obj.setAddedNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmvdNb")
@@ -207,7 +227,7 @@ public class ATMCassetteCounters2 {
 	 * definition} = "Number of removed media during servicing operations."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemovedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCassetteCounters2, Optional<Number>> mmRemovedNumber = new MMMessageAttribute<ATMCassetteCounters2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
@@ -218,6 +238,16 @@ public class ATMCassetteCounters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMCassetteCounters2 obj) {
+			return obj.getRemovedNumber();
+		}
+
+		@Override
+		public void setValue(ATMCassetteCounters2 obj, Optional<Number> value) {
+			obj.setRemovedNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DspnsdNb")
@@ -249,7 +279,7 @@ public class ATMCassetteCounters2 {
 	 * definition} = "Total number of media out of the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDispensedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCassetteCounters2, Optional<Number>> mmDispensedNumber = new MMMessageAttribute<ATMCassetteCounters2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
@@ -260,6 +290,16 @@ public class ATMCassetteCounters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMCassetteCounters2 obj) {
+			return obj.getDispensedNumber();
+		}
+
+		@Override
+		public void setValue(ATMCassetteCounters2 obj, Optional<Number> value) {
+			obj.setDispensedNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DpstNb")
@@ -291,7 +331,7 @@ public class ATMCassetteCounters2 {
 	 * definition} = "Total number of media deposited in the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDepositNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCassetteCounters2, Optional<Number>> mmDepositNumber = new MMMessageAttribute<ATMCassetteCounters2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
@@ -302,6 +342,16 @@ public class ATMCassetteCounters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMCassetteCounters2 obj) {
+			return obj.getDepositNumber();
+		}
+
+		@Override
+		public void setValue(ATMCassetteCounters2 obj, Optional<Number> value) {
+			obj.setDepositNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcycldNb")
@@ -333,7 +383,7 @@ public class ATMCassetteCounters2 {
 	 * definition} = "Total number of recycled media from the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecycledNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCassetteCounters2, Optional<Number>> mmRecycledNumber = new MMMessageAttribute<ATMCassetteCounters2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
@@ -344,6 +394,16 @@ public class ATMCassetteCounters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMCassetteCounters2 obj) {
+			return obj.getRecycledNumber();
+		}
+
+		@Override
+		public void setValue(ATMCassetteCounters2 obj, Optional<Number> value) {
+			obj.setRecycledNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RtrctdNb")
@@ -376,7 +436,7 @@ public class ATMCassetteCounters2 {
 	 * "Total number of retracted media originating from the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRetractedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCassetteCounters2, Optional<Number>> mmRetractedNumber = new MMMessageAttribute<ATMCassetteCounters2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
@@ -387,6 +447,16 @@ public class ATMCassetteCounters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMCassetteCounters2 obj) {
+			return obj.getRetractedNumber();
+		}
+
+		@Override
+		public void setValue(ATMCassetteCounters2 obj, Optional<Number> value) {
+			obj.setRetractedNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctdNb")
@@ -419,7 +489,7 @@ public class ATMCassetteCounters2 {
 	 * "Total number of media from this cassette which are on the reject bin."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCassetteCounters2, Optional<Number>> mmRejectedNumber = new MMMessageAttribute<ATMCassetteCounters2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
@@ -430,6 +500,16 @@ public class ATMCassetteCounters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMCassetteCounters2 obj) {
+			return obj.getRejectedNumber();
+		}
+
+		@Override
+		public void setValue(ATMCassetteCounters2 obj, Optional<Number> value) {
+			obj.setRejectedNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PresntdNb")
@@ -461,7 +541,7 @@ public class ATMCassetteCounters2 {
 	 * definition} = "Total number of media presented to the customer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPresentedNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCassetteCounters2, Optional<Number>> mmPresentedNumber = new MMMessageAttribute<ATMCassetteCounters2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCassetteCounters2.mmObject();
 			isDerived = false;
@@ -472,6 +552,16 @@ public class ATMCassetteCounters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMCassetteCounters2 obj) {
+			return obj.getPresentedNumber();
+		}
+
+		@Override
+		public void setValue(ATMCassetteCounters2 obj, Optional<Number> value) {
+			obj.setPresentedNumber(value.orElse(null));
 		}
 	};
 

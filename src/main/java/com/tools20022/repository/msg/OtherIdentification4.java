@@ -121,7 +121,7 @@ public class OtherIdentification4 {
 	 * OtherIdentification1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification4, Max35Text> mmIdentification = new MMMessageAttribute<OtherIdentification4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherIdentification4.mmObject();
@@ -134,6 +134,16 @@ public class OtherIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OtherIdentification4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(OtherIdentification4 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -175,7 +185,7 @@ public class OtherIdentification4 {
 	 * OtherIdentification1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherIdentification4, IdentificationSource5Choice> mmType = new MMMessageAssociationEnd<OtherIdentification4, IdentificationSource5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherIdentification4.mmObject();
@@ -189,6 +199,16 @@ public class OtherIdentification4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IdentificationSource5Choice.mmObject();
+		}
+
+		@Override
+		public IdentificationSource5Choice getValue(OtherIdentification4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(OtherIdentification4 obj, IdentificationSource5Choice value) {
+			obj.setType(value);
 		}
 	};
 

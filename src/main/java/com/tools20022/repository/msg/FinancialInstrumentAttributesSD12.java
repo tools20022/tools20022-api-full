@@ -30,6 +30,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max50Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherIdentification2;
+import com.tools20022.repository.msg.SecurityIdentification15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -153,7 +155,7 @@ public class FinancialInstrumentAttributesSD12 {
 	 * FinancialInstrumentAttributesSD11.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD12, Max350Text> mmPlaceAndName = new MMMessageAttribute<FinancialInstrumentAttributesSD12, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD12.mmObject();
 			isDerived = false;
@@ -166,6 +168,16 @@ public class FinancialInstrumentAttributesSD12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(FinancialInstrumentAttributesSD12 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD12 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "IncmSrcCtry")
@@ -213,7 +225,7 @@ public class FinancialInstrumentAttributesSD12 {
 	 * FinancialInstrumentAttributesSD11.mmIncomeSourceCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncomeSourceCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<CountryCode>> mmIncomeSourceCountry = new MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD12.mmObject();
 			isDerived = false;
@@ -227,6 +239,16 @@ public class FinancialInstrumentAttributesSD12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(FinancialInstrumentAttributesSD12 obj) {
+			return obj.getIncomeSourceCountry();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD12 obj, Optional<CountryCode> value) {
+			obj.setIncomeSourceCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCAsstClss")
@@ -277,7 +299,7 @@ public class FinancialInstrumentAttributesSD12 {
 	 * FinancialInstrumentAttributesSD11.mmDTCAssetClass}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<AssetClass1Code>> mmDTCAssetClass = new MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<AssetClass1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD12.mmObject();
 			isDerived = false;
@@ -291,6 +313,16 @@ public class FinancialInstrumentAttributesSD12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClass1Code> getValue(FinancialInstrumentAttributesSD12 obj) {
+			return obj.getDTCAssetClass();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD12 obj, Optional<AssetClass1Code> value) {
+			obj.setDTCAssetClass(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCAsstTp")
@@ -341,7 +373,7 @@ public class FinancialInstrumentAttributesSD12 {
 	 * FinancialInstrumentAttributesSD11.mmDTCAssetType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<DTCAssetType2Code>> mmDTCAssetType = new MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<DTCAssetType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD12.mmObject();
 			isDerived = false;
@@ -355,6 +387,16 @@ public class FinancialInstrumentAttributesSD12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAssetType2Code> getValue(FinancialInstrumentAttributesSD12 obj) {
+			return obj.getDTCAssetType();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD12 obj, Optional<DTCAssetType2Code> value) {
+			obj.setDTCAssetType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyElgbltyInd")
@@ -404,7 +446,7 @@ public class FinancialInstrumentAttributesSD12 {
 	 * FinancialInstrumentAttributesSD11.mmSecurityEligibilityIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityEligibilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<YesNoIndicator>> mmSecurityEligibilityIndicator = new MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD12.mmObject();
 			isDerived = false;
@@ -418,6 +460,16 @@ public class FinancialInstrumentAttributesSD12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(FinancialInstrumentAttributesSD12 obj) {
+			return obj.getSecurityEligibilityIndicator();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD12 obj, Optional<YesNoIndicator> value) {
+			obj.setSecurityEligibilityIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TckrSymb")
@@ -466,7 +518,7 @@ public class FinancialInstrumentAttributesSD12 {
 	 * FinancialInstrumentAttributesSD11.mmTickerSymbol}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<Max35Text>> mmTickerSymbol = new MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD12.mmObject();
 			isDerived = false;
@@ -480,6 +532,16 @@ public class FinancialInstrumentAttributesSD12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FinancialInstrumentAttributesSD12 obj) {
+			return obj.getTickerSymbol();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD12 obj, Optional<Max35Text> value) {
+			obj.setTickerSymbol(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkdScty")
@@ -531,7 +593,7 @@ public class FinancialInstrumentAttributesSD12 {
 	 * FinancialInstrumentAttributesSD11.mmLinkedSecurity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkedSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<SecurityIdentification15>> mmLinkedSecurity = new MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<SecurityIdentification15>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD12.mmObject();
 			isDerived = false;
@@ -544,7 +606,17 @@ public class FinancialInstrumentAttributesSD12 {
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD11.mmLinkedSecurity;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
+			complexType_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification15> getValue(FinancialInstrumentAttributesSD12 obj) {
+			return obj.getLinkedSecurity();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD12 obj, Optional<SecurityIdentification15> value) {
+			obj.setLinkedSecurity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgtgSctyId")
@@ -590,7 +662,7 @@ public class FinancialInstrumentAttributesSD12 {
 	 * FinancialInstrumentAttributesSD11.mmOriginatingSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginatingSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributesSD12, Optional<OtherIdentification2>> mmOriginatingSecurityIdentification = new MMMessageAssociationEnd<FinancialInstrumentAttributesSD12, Optional<OtherIdentification2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD12.mmObject();
 			isDerived = false;
@@ -603,7 +675,17 @@ public class FinancialInstrumentAttributesSD12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
+			type_lazy = () -> OtherIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<OtherIdentification2> getValue(FinancialInstrumentAttributesSD12 obj) {
+			return obj.getOriginatingSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD12 obj, Optional<OtherIdentification2> value) {
+			obj.setOriginatingSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DIVANNSctyDesc")
@@ -650,7 +732,7 @@ public class FinancialInstrumentAttributesSD12 {
 	 * FinancialInstrumentAttributesSD11.mmDIVANNSecurityDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDIVANNSecurityDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<Max50Text>> mmDIVANNSecurityDescription = new MMMessageAttribute<FinancialInstrumentAttributesSD12, Optional<Max50Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD12.mmObject();
 			isDerived = false;
@@ -663,6 +745,16 @@ public class FinancialInstrumentAttributesSD12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max50Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max50Text> getValue(FinancialInstrumentAttributesSD12 obj) {
+			return obj.getDIVANNSecurityDescription();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD12 obj, Optional<Max50Text> value) {
+			obj.setDIVANNSecurityDescription(value.orElse(null));
 		}
 	};
 
@@ -743,7 +835,7 @@ public class FinancialInstrumentAttributesSD12 {
 		return linkedSecurity == null ? Optional.empty() : Optional.of(linkedSecurity);
 	}
 
-	public FinancialInstrumentAttributesSD12 setLinkedSecurity(com.tools20022.repository.msg.SecurityIdentification15 linkedSecurity) {
+	public FinancialInstrumentAttributesSD12 setLinkedSecurity(SecurityIdentification15 linkedSecurity) {
 		this.linkedSecurity = linkedSecurity;
 		return this;
 	}
@@ -752,7 +844,7 @@ public class FinancialInstrumentAttributesSD12 {
 		return originatingSecurityIdentification == null ? Optional.empty() : Optional.of(originatingSecurityIdentification);
 	}
 
-	public FinancialInstrumentAttributesSD12 setOriginatingSecurityIdentification(com.tools20022.repository.msg.OtherIdentification2 originatingSecurityIdentification) {
+	public FinancialInstrumentAttributesSD12 setOriginatingSecurityIdentification(OtherIdentification2 originatingSecurityIdentification) {
 		this.originatingSecurityIdentification = originatingSecurityIdentification;
 		return this;
 	}

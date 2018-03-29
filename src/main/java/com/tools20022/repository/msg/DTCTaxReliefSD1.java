@@ -103,7 +103,7 @@ public class DTCTaxReliefSD1 {
 	 * "DTC System assigned identification for tax relief category."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DTCTaxReliefSD1, Exact3NumericText> mmCategoryIdentification = new MMMessageAttribute<DTCTaxReliefSD1, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD1.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class DTCTaxReliefSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(DTCTaxReliefSD1 obj) {
+			return obj.getCategoryIdentification();
+		}
+
+		@Override
+		public void setValue(DTCTaxReliefSD1 obj, Exact3NumericText value) {
+			obj.setCategoryIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtgyDesc", required = true)
@@ -149,7 +159,7 @@ public class DTCTaxReliefSD1 {
 	 * definition} = "Describes tax relief category."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DTCTaxReliefSD1, Max35Text> mmCategoryDescription = new MMMessageAttribute<DTCTaxReliefSD1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD1.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class DTCTaxReliefSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DTCTaxReliefSD1 obj) {
+			return obj.getCategoryDescription();
+		}
+
+		@Override
+		public void setValue(DTCTaxReliefSD1 obj, Max35Text value) {
+			obj.setCategoryDescription(value);
 		}
 	};
 

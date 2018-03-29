@@ -103,7 +103,7 @@ public class ChargeType5Choice {
 	 * definition} = "Fee (charge/commission) expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType5Choice, InvestmentFundFee1Code> mmCode = new MMMessageAttribute<ChargeType5Choice, InvestmentFundFee1Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeType5Choice.mmObject();
@@ -115,6 +115,16 @@ public class ChargeType5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundFee1Code.mmObject();
+		}
+
+		@Override
+		public InvestmentFundFee1Code getValue(ChargeType5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ChargeType5Choice obj, InvestmentFundFee1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -152,7 +162,7 @@ public class ChargeType5Choice {
 	 * definition} = "Fee (charge/commission) expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType5Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<ChargeType5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeType5Choice.mmObject();
@@ -164,6 +174,16 @@ public class ChargeType5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(ChargeType5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ChargeType5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

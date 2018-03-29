@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
@@ -145,7 +146,7 @@ public class FinancialInstitutionIdentification7Choice {
 	 * FinancialInstitutionIdentification3Choice.mmNameAndAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification7Choice, NameAndAddress5> mmNameAndAddress = new MMMessageAttribute<FinancialInstitutionIdentification7Choice, NameAndAddress5>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.mmObject();
@@ -159,6 +160,16 @@ public class FinancialInstitutionIdentification7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public NameAndAddress5 getValue(FinancialInstitutionIdentification7Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification7Choice obj, NameAndAddress5 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "BICFI", required = true)
@@ -205,7 +216,7 @@ public class FinancialInstitutionIdentification7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification7Choice, BICFIIdentifier> mmBICFI = new MMMessageAttribute<FinancialInstitutionIdentification7Choice, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.mmObject();
@@ -218,6 +229,16 @@ public class FinancialInstitutionIdentification7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(FinancialInstitutionIdentification7Choice obj) {
+			return obj.getBICFI();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification7Choice obj, BICFIIdentifier value) {
+			obj.setBICFI(value);
 		}
 	};
 	@XmlElement(name = "ClrSysMmbId", required = true)
@@ -272,7 +293,7 @@ public class FinancialInstitutionIdentification7Choice {
 	 * mmClearingSystemMemberIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingSystemMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification7Choice, ClearingSystemMemberIdentificationChoice> mmClearingSystemMemberIdentification = new MMMessageAttribute<FinancialInstitutionIdentification7Choice, ClearingSystemMemberIdentificationChoice>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.mmObject();
@@ -285,7 +306,17 @@ public class FinancialInstitutionIdentification7Choice {
 			previousVersion_lazy = () -> FinancialInstitutionIdentification3Choice.mmClearingSystemMemberIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice.mmObject();
+			complexType_lazy = () -> ClearingSystemMemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public ClearingSystemMemberIdentificationChoice getValue(FinancialInstitutionIdentification7Choice obj) {
+			return obj.getClearingSystemMemberIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification7Choice obj, ClearingSystemMemberIdentificationChoice value) {
+			obj.setClearingSystemMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -338,7 +369,7 @@ public class FinancialInstitutionIdentification7Choice {
 	 * FinancialInstitutionIdentification3Choice.mmProprietaryIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification7Choice, SimpleIdentificationInformation4> mmProprietaryIdentification = new MMMessageAttribute<FinancialInstitutionIdentification7Choice, SimpleIdentificationInformation4>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification7Choice.mmObject();
@@ -352,6 +383,16 @@ public class FinancialInstitutionIdentification7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation4.mmObject();
+		}
+
+		@Override
+		public SimpleIdentificationInformation4 getValue(FinancialInstitutionIdentification7Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification7Choice obj, SimpleIdentificationInformation4 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 
@@ -396,7 +437,7 @@ public class FinancialInstitutionIdentification7Choice {
 		return clearingSystemMemberIdentification;
 	}
 
-	public FinancialInstitutionIdentification7Choice setClearingSystemMemberIdentification(com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification) {
+	public FinancialInstitutionIdentification7Choice setClearingSystemMemberIdentification(ClearingSystemMemberIdentificationChoice clearingSystemMemberIdentification) {
 		this.clearingSystemMemberIdentification = Objects.requireNonNull(clearingSystemMemberIdentification);
 		return this;
 	}

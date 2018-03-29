@@ -114,7 +114,7 @@ public class SystemSearch2 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSearch2, List<CashClearingSystem1Code>> mmSystemIdentification = new MMMessageAttribute<SystemSearch2, List<CashClearingSystem1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystem.mmCashSettlementSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
@@ -125,6 +125,16 @@ public class SystemSearch2 {
 			definition = "Identification of a particular cash clearing system.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CashClearingSystem1Code.mmObject();
+		}
+
+		@Override
+		public List<CashClearingSystem1Code> getValue(SystemSearch2 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(SystemSearch2 obj, List<CashClearingSystem1Code> value) {
+			obj.setSystemIdentification(value);
 		}
 	};
 	@XmlElement(name = "MmbId")
@@ -158,7 +168,7 @@ public class SystemSearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSearch2, List<MemberIdentificationChoice>> mmMemberIdentification = new MMMessageAttribute<SystemSearch2, List<MemberIdentificationChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class SystemSearch2 {
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
 			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public List<MemberIdentificationChoice> getValue(SystemSearch2 obj) {
+			return obj.getMemberIdentification();
+		}
+
+		@Override
+		public void setValue(SystemSearch2 obj, List<MemberIdentificationChoice> value) {
+			obj.setMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -203,7 +223,7 @@ public class SystemSearch2 {
 	 * definition} = "Country in which the system is located."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSearch2, Optional<CountryCode>> mmCountry = new MMMessageAttribute<SystemSearch2, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
@@ -215,6 +235,16 @@ public class SystemSearch2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(SystemSearch2 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(SystemSearch2 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -252,7 +282,7 @@ public class SystemSearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemSearch2, Optional<AccountIdentification1Choice>> mmAccountIdentification = new MMMessageAssociationEnd<SystemSearch2, Optional<AccountIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
@@ -265,6 +295,16 @@ public class SystemSearch2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1Choice> getValue(SystemSearch2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SystemSearch2 obj, Optional<AccountIdentification1Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 

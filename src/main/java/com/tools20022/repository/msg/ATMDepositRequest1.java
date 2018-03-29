@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catp.ATMDepositRequestV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMContext10;
+import com.tools20022.repository.msg.ATMEnvironment11;
+import com.tools20022.repository.msg.ATMTransaction15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +110,7 @@ public class ATMDepositRequest1 {
 	 * definition} = "Environment in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDepositRequest1, ATMEnvironment11> mmEnvironment = new MMMessageAssociationEnd<ATMDepositRequest1, ATMEnvironment11>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositRequest1.mmObject();
 			isDerived = false;
@@ -118,7 +121,17 @@ public class ATMDepositRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment11.mmObject();
+			type_lazy = () -> ATMEnvironment11.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment11 getValue(ATMDepositRequest1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMDepositRequest1 obj, ATMEnvironment11 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cntxt", required = true)
@@ -149,7 +162,7 @@ public class ATMDepositRequest1 {
 	 * definition} = "Context in which the deposit transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDepositRequest1, ATMContext10> mmContext = new MMMessageAssociationEnd<ATMDepositRequest1, ATMContext10>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositRequest1.mmObject();
 			isDerived = false;
@@ -160,7 +173,17 @@ public class ATMDepositRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMContext10.mmObject();
+			type_lazy = () -> ATMContext10.mmObject();
+		}
+
+		@Override
+		public ATMContext10 getValue(ATMDepositRequest1 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(ATMDepositRequest1 obj, ATMContext10 value) {
+			obj.setContext(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -191,7 +214,7 @@ public class ATMDepositRequest1 {
 	 * definition} = "Deposit transaction for which the service is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDepositRequest1, ATMTransaction15> mmTransaction = new MMMessageAssociationEnd<ATMDepositRequest1, ATMTransaction15>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositRequest1.mmObject();
 			isDerived = false;
@@ -202,7 +225,17 @@ public class ATMDepositRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
+			type_lazy = () -> ATMTransaction15.mmObject();
+		}
+
+		@Override
+		public ATMTransaction15 getValue(ATMDepositRequest1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ATMDepositRequest1 obj, ATMTransaction15 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -225,7 +258,7 @@ public class ATMDepositRequest1 {
 		return environment;
 	}
 
-	public ATMDepositRequest1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment11 environment) {
+	public ATMDepositRequest1 setEnvironment(ATMEnvironment11 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -234,7 +267,7 @@ public class ATMDepositRequest1 {
 		return context;
 	}
 
-	public ATMDepositRequest1 setContext(com.tools20022.repository.msg.ATMContext10 context) {
+	public ATMDepositRequest1 setContext(ATMContext10 context) {
 		this.context = Objects.requireNonNull(context);
 		return this;
 	}
@@ -243,7 +276,7 @@ public class ATMDepositRequest1 {
 		return transaction;
 	}
 
-	public ATMDepositRequest1 setTransaction(com.tools20022.repository.msg.ATMTransaction15 transaction) {
+	public ATMDepositRequest1 setTransaction(ATMTransaction15 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

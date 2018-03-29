@@ -117,7 +117,7 @@ public class PremiumQuote1Choice {
 	 * "Premium calculation is based on a percentage of the call amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageOfCallAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumQuote1Choice, PercentageRate> mmPercentageOfCallAmount = new MMMessageAttribute<PremiumQuote1Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> PremiumCalculation.mmPercentageOfCallAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PremiumQuote1Choice.mmObject();
@@ -129,6 +129,16 @@ public class PremiumQuote1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PremiumQuote1Choice obj) {
+			return obj.getPercentageOfCallAmount();
+		}
+
+		@Override
+		public void setValue(PremiumQuote1Choice obj, PercentageRate value) {
+			obj.setPercentageOfCallAmount(value);
 		}
 	};
 	@XmlElement(name = "PctgOfPutAmt", required = true)
@@ -167,7 +177,7 @@ public class PremiumQuote1Choice {
 	 * "Premium calculation is based on a percentage of the put amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageOfPutAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumQuote1Choice, PercentageRate> mmPercentageOfPutAmount = new MMMessageAttribute<PremiumQuote1Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> PremiumCalculation.mmPercentageOfPutAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PremiumQuote1Choice.mmObject();
@@ -179,6 +189,16 @@ public class PremiumQuote1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PremiumQuote1Choice obj) {
+			return obj.getPercentageOfPutAmount();
+		}
+
+		@Override
+		public void setValue(PremiumQuote1Choice obj, PercentageRate value) {
+			obj.setPercentageOfPutAmount(value);
 		}
 	};
 	@XmlElement(name = "PtsOfCallAmt", required = true)
@@ -216,7 +236,7 @@ public class PremiumQuote1Choice {
 	 * "Premium calculation is based on points of the call amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPointsOfCallAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumQuote1Choice, BaseOneRate> mmPointsOfCallAmount = new MMMessageAttribute<PremiumQuote1Choice, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> PremiumCalculation.mmPointsOfCallAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PremiumQuote1Choice.mmObject();
@@ -228,6 +248,16 @@ public class PremiumQuote1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(PremiumQuote1Choice obj) {
+			return obj.getPointsOfCallAmount();
+		}
+
+		@Override
+		public void setValue(PremiumQuote1Choice obj, BaseOneRate value) {
+			obj.setPointsOfCallAmount(value);
 		}
 	};
 	@XmlElement(name = "PtsOfPutAmt", required = true)
@@ -265,7 +295,7 @@ public class PremiumQuote1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPointsOfPutAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumQuote1Choice, BaseOneRate> mmPointsOfPutAmount = new MMMessageAttribute<PremiumQuote1Choice, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> PremiumCalculation.mmPointsOfPutAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PremiumQuote1Choice.mmObject();
@@ -277,6 +307,16 @@ public class PremiumQuote1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(PremiumQuote1Choice obj) {
+			return obj.getPointsOfPutAmount();
+		}
+
+		@Override
+		public void setValue(PremiumQuote1Choice obj, BaseOneRate value) {
+			obj.setPointsOfPutAmount(value);
 		}
 	};
 

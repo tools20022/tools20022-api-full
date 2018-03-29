@@ -50,11 +50,15 @@ public class ConstraintMaximumQuantityOrQuantityGuideline {
 	 */
 	public static final MMConstraint<QuoteSide1> forQuoteSide1 = new MMConstraint<QuoteSide1>() {
 		{
-			validator = ConstraintMaximumQuantityOrQuantityGuideline::checkQuoteSide1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumQuantityOrQuantityGuideline";
 			definition = "It is recommended that Quantity is not used with MinimumQuantity and/or with MaximumQuantity.";
 			owner_lazy = () -> QuoteSide1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuoteSide1 obj) throws Exception {
+			checkQuoteSide1(obj);
 		}
 	};
 

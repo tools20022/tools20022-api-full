@@ -123,7 +123,7 @@ public class AlternatePartyIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternatePartyIdentification4, IdentificationType6Choice> mmIdentificationType = new MMMessageAttribute<AlternatePartyIdentification4, IdentificationType6Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification4.mmObject();
@@ -136,6 +136,16 @@ public class AlternatePartyIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationType6Choice.mmObject();
+		}
+
+		@Override
+		public IdentificationType6Choice getValue(AlternatePartyIdentification4 obj) {
+			return obj.getIdentificationType();
+		}
+
+		@Override
+		public void setValue(AlternatePartyIdentification4 obj, IdentificationType6Choice value) {
+			obj.setIdentificationType(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -177,7 +187,7 @@ public class AlternatePartyIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternatePartyIdentification4, CountryCode> mmCountry = new MMMessageAttribute<AlternatePartyIdentification4, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification4.mmObject();
@@ -190,6 +200,16 @@ public class AlternatePartyIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(AlternatePartyIdentification4 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(AlternatePartyIdentification4 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "AltrnId", required = true)
@@ -229,7 +249,7 @@ public class AlternatePartyIdentification4 {
 	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternatePartyIdentification4, Max35Text> mmAlternateIdentification = new MMMessageAttribute<AlternatePartyIdentification4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification4.mmObject();
@@ -242,6 +262,16 @@ public class AlternatePartyIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AlternatePartyIdentification4 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(AlternatePartyIdentification4 obj, Max35Text value) {
+			obj.setAlternateIdentification(value);
 		}
 	};
 

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SwitchSubscriptionLeg;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument18;
+import com.tools20022.repository.msg.InvestmentAccount30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -111,7 +113,7 @@ public class SwitchSubscriptionLegOrder4 {
 	 * "Unique technical identifier for an instance of a leg within a switch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchSubscriptionLegOrder4, Optional<Max35Text>> mmLegIdentification = new MMMessageAttribute<SwitchSubscriptionLegOrder4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder4.mmObject();
 			isDerived = false;
@@ -122,6 +124,16 @@ public class SwitchSubscriptionLegOrder4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchSubscriptionLegOrder4 obj) {
+			return obj.getLegIdentification();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder4 obj, Optional<Max35Text> value) {
+			obj.setLegIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls")
@@ -159,7 +171,7 @@ public class SwitchSubscriptionLegOrder4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder4, Optional<InvestmentAccount30>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder4, Optional<InvestmentAccount30>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder4.mmObject();
@@ -171,7 +183,17 @@ public class SwitchSubscriptionLegOrder4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
+			type_lazy = () -> InvestmentAccount30.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount30> getValue(SwitchSubscriptionLegOrder4 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder4 obj, Optional<InvestmentAccount30> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
@@ -209,7 +231,7 @@ public class SwitchSubscriptionLegOrder4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder4, Optional<FinancialInstrument18>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder4, Optional<FinancialInstrument18>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder4.mmObject();
@@ -221,7 +243,17 @@ public class SwitchSubscriptionLegOrder4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument18.mmObject();
+			type_lazy = () -> FinancialInstrument18.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrument18> getValue(SwitchSubscriptionLegOrder4 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder4 obj, Optional<FinancialInstrument18> value) {
+			obj.setFinancialInstrumentDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmQty")
@@ -258,7 +290,7 @@ public class SwitchSubscriptionLegOrder4 {
 	 * definition} = "Subscription leg amount or quantity or rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder4, Optional<FinancialInstrumentQuantity13Choice>> mmFinancialInstrumentQuantity = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder4, Optional<FinancialInstrumentQuantity13Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder4.mmObject();
@@ -271,6 +303,16 @@ public class SwitchSubscriptionLegOrder4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity13Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity13Choice> getValue(SwitchSubscriptionLegOrder4 obj) {
+			return obj.getFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder4 obj, Optional<FinancialInstrumentQuantity13Choice> value) {
+			obj.setFinancialInstrumentQuantity(value.orElse(null));
 		}
 	};
 
@@ -302,7 +344,7 @@ public class SwitchSubscriptionLegOrder4 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public SwitchSubscriptionLegOrder4 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public SwitchSubscriptionLegOrder4 setInvestmentAccountDetails(InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -311,7 +353,7 @@ public class SwitchSubscriptionLegOrder4 {
 		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public SwitchSubscriptionLegOrder4 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument18 financialInstrumentDetails) {
+	public SwitchSubscriptionLegOrder4 setFinancialInstrumentDetails(FinancialInstrument18 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 		return this;
 	}

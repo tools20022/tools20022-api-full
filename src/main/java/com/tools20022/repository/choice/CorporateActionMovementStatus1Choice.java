@@ -121,7 +121,7 @@ public class CorporateActionMovementStatus1Choice {
 	 * "Provides information about the processing status of the movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionMovementStatus1Choice, CorporateActionMovementProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<CorporateActionMovementStatus1Choice, CorporateActionMovementProcessingStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmObject();
@@ -134,6 +134,16 @@ public class CorporateActionMovementStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionMovementProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionMovementProcessingStatus1 getValue(CorporateActionMovementStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementStatus1Choice obj, CorporateActionMovementProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "FaildSts", required = true)
@@ -170,7 +180,7 @@ public class CorporateActionMovementStatus1Choice {
 	 * definition} = "Provides information about the settlement failure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFailedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionMovementStatus1Choice, CorporateActionMovementFailedStatus1> mmFailedStatus = new MMMessageAssociationEnd<CorporateActionMovementStatus1Choice, CorporateActionMovementFailedStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmObject();
@@ -183,6 +193,16 @@ public class CorporateActionMovementStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionMovementFailedStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionMovementFailedStatus1 getValue(CorporateActionMovementStatus1Choice obj) {
+			return obj.getFailedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementStatus1Choice obj, CorporateActionMovementFailedStatus1 value) {
+			obj.setFailedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -219,7 +239,7 @@ public class CorporateActionMovementStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionMovementStatus1Choice, CorporateActionMovementRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<CorporateActionMovementStatus1Choice, CorporateActionMovementRejectionStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmObject();
@@ -232,6 +252,16 @@ public class CorporateActionMovementStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionMovementRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionMovementRejectionStatus1 getValue(CorporateActionMovementStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementStatus1Choice obj, CorporateActionMovementRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

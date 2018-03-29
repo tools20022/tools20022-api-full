@@ -123,7 +123,7 @@ public class AcknowledgementReason14Choice {
 	 * AcknowledgementReason9Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason14Choice, AcknowledgementReason6Code> mmCode = new MMMessageAttribute<AcknowledgementReason14Choice, AcknowledgementReason6Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason14Choice.mmObject();
@@ -137,6 +137,16 @@ public class AcknowledgementReason14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AcknowledgementReason6Code.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason6Code getValue(AcknowledgementReason14Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason14Choice obj, AcknowledgementReason6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -183,7 +193,7 @@ public class AcknowledgementReason14Choice {
 	 * AcknowledgementReason9Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason14Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<AcknowledgementReason14Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason14Choice.mmObject();
@@ -197,6 +207,16 @@ public class AcknowledgementReason14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(AcknowledgementReason14Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason14Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

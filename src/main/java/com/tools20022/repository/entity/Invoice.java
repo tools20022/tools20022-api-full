@@ -23,10 +23,9 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.codeset.ExternalBillingCompensationTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
-import com.tools20022.repository.entity.FinancialDocument;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -271,11 +270,11 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Amount of credit/debit note related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCreditDebitNoteAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, CurrencyAndAmount> mmCreditDebitNoteAmount = new MMBusinessAttribute<Invoice, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RemittanceAmount1.mmCreditNoteAmount, RemittanceAmount2.mmCreditNoteAmount, InvoiceRequestInformation1.mmCreditDebitNoteAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitNoteAmount";
 			definition = "Amount of credit/debit note related to the invoice.";
@@ -284,12 +283,14 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getCreditDebitNoteAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Invoice obj) {
+			return obj.getCreditDebitNoteAmount();
+		}
+
+		@Override
+		public void setValue(Invoice obj, CurrencyAndAmount value) {
+			obj.setCreditDebitNoteAmount(value);
 		}
 	};
 	protected CurrencyAndAmount totalTaxAmount;
@@ -334,11 +335,11 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalTaxAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, CurrencyAndAmount> mmTotalTaxAmount = new MMBusinessAttribute<Invoice, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RemittanceAmount1.mmTaxAmount, RemittanceAmount2.mmTaxAmount, SettlementMonetarySummation1.mmTaxTotalAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalTaxAmount";
 			definition = "Sum of all tax amounts related to the invoice. It is derived from the association between line item and tax.";
@@ -347,12 +348,14 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getTotalTaxAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Invoice obj) {
+			return obj.getTotalTaxAmount();
+		}
+
+		@Override
+		public void setValue(Invoice obj, CurrencyAndAmount value) {
+			obj.setTotalTaxAmount(value);
 		}
 	};
 	protected CurrencyAndAmount totalInvoiceAmount;
@@ -450,14 +453,14 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalInvoiceAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, CurrencyAndAmount> mmTotalInvoiceAmount = new MMBusinessAttribute<Invoice, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OriginalInvoiceInformation1.mmTotalInvoiceAmount, SettlementMonetarySummation1.mmGrandTotalAmount, LineItem5.mmLineItemsTotalAmount, LineItem5.mmTotalNetAmount,
 					LineItem7.mmLineItemsTotalAmount, LineItem7.mmTotalNetAmount, LineItem6.mmAcceptedTotalNetAmount, LineItem8.mmAcceptedTotalNetAmount, LineItem4.mmLineItemsTotalAmount, LineItem4.mmTotalNetAmount,
 					LineItem9.mmLineItemsTotalAmount, LineItem9.mmTotalNetAmount, LineItem11.mmLineItemsTotalAmount, LineItem11.mmTotalNetAmount, LineItem12.mmLineItemsTotalAmount, LineItem12.mmTotalNetAmount,
 					LineItem14.mmAcceptedTotalNetAmount, LineItem13.mmLineItemsTotalAmount, LineItem13.mmTotalNetAmount, LineItem15.mmLineItemsTotalAmount, LineItem15.mmTotalNetAmount, FinancialItem1.mmTotalAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalInvoiceAmount";
 			definition = "Total amount of the invoice, being the sum of total invoice lines amounts, total invoice additional amounts (allowances and charges) and total tax amounts.";
@@ -466,12 +469,14 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getTotalInvoiceAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Invoice obj) {
+			return obj.getTotalInvoiceAmount();
+		}
+
+		@Override
+		public void setValue(Invoice obj, CurrencyAndAmount value) {
+			obj.setTotalInvoiceAmount(value);
 		}
 	};
 	protected CurrencyCode invoiceCurrency;
@@ -510,11 +515,11 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Code specifying the currency of the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInvoiceCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, CurrencyCode> mmInvoiceCurrency = new MMBusinessAttribute<Invoice, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmInvoiceCurrencyCode, FinancialItemParameters1.mmCurrency);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceCurrency";
 			definition = "Code specifying the currency of the invoice.";
@@ -523,15 +528,17 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getInvoiceCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(Invoice obj) {
+			return obj.getInvoiceCurrency();
+		}
+
+		@Override
+		public void setValue(Invoice obj, CurrencyCode value) {
+			obj.setInvoiceCurrency(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.DateTimePeriod> periodCovered;
+	protected List<DateTimePeriod> periodCovered;
 	/**
 	 * 
 	 <p>
@@ -595,22 +602,32 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPeriodCovered = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, List<DateTimePeriod>> mmPeriodCovered = new MMBusinessAssociationEnd<Invoice, List<DateTimePeriod>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmBillingPeriod, BillingStatement1.mmFromToDate, BillingReport1.mmBillingPeriod, BillingCancellationReport1.mmBillingPeriod, BillingSearchCriteria1.mmBillingPeriod,
 					BillingStatement2.mmFromToDate, BillingSearchCriteria2.mmBillingPeriod, BillingReport2.mmBillingPeriod);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PeriodCovered";
 			definition = "Specifies the period covered by an invoice for instance for recurring services.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedInvoice;
+			opposite_lazy = () -> DateTimePeriod.mmRelatedInvoice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public List<DateTimePeriod> getValue(Invoice obj) {
+			return obj.getPeriodCovered();
+		}
+
+		@Override
+		public void setValue(Invoice obj, List<DateTimePeriod> value) {
+			obj.setPeriodCovered(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement;
+	protected List<CommercialTradeSettlement> tradeSettlement;
 	/**
 	 * 
 	 <p>
@@ -645,17 +662,27 @@ public class Invoice extends FinancialDocument {
 	 * "Specifies the process which takes place to settle an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTradeSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, List<CommercialTradeSettlement>> mmTradeSettlement = new MMBusinessAssociationEnd<Invoice, List<CommercialTradeSettlement>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeSettlement";
 			definition = "Specifies the process which takes place to settle an invoice.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmInvoice;
+			opposite_lazy = () -> CommercialTradeSettlement.mmInvoice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
+			type_lazy = () -> CommercialTradeSettlement.mmObject();
+		}
+
+		@Override
+		public List<CommercialTradeSettlement> getValue(Invoice obj) {
+			return obj.getTradeSettlement();
+		}
+
+		@Override
+		public void setValue(Invoice obj, List<CommercialTradeSettlement> value) {
+			obj.setTradeSettlement(value);
 		}
 	};
 	protected CurrencyAndAmount totalCharge;
@@ -692,11 +719,11 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Algebraical sum of charges related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalCharge = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, CurrencyAndAmount> mmTotalCharge = new MMBusinessAttribute<Invoice, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmChargeTotalAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalCharge";
 			definition = "Algebraical sum of charges related to the invoice.";
@@ -705,12 +732,14 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getTotalCharge", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Invoice obj) {
+			return obj.getTotalCharge();
+		}
+
+		@Override
+		public void setValue(Invoice obj, CurrencyAndAmount value) {
+			obj.setTotalCharge(value);
 		}
 	};
 	protected CurrencyAndAmount totalPrepaidAmount;
@@ -749,11 +778,11 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalPrepaidAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, CurrencyAndAmount> mmTotalPrepaidAmount = new MMBusinessAttribute<Invoice, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmTotalPrepaidAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalPrepaidAmount";
 			definition = "Monetary value of the total prepaid amount being reported for this settlement.";
@@ -762,12 +791,14 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getTotalPrepaidAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Invoice obj) {
+			return obj.getTotalPrepaidAmount();
+		}
+
+		@Override
+		public void setValue(Invoice obj, CurrencyAndAmount value) {
+			obj.setTotalPrepaidAmount(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.LineItem> lineItem;
@@ -853,24 +884,34 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line item."
+	 * "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line item."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, List<LineItem>> mmLineItem = new MMBusinessAssociationEnd<Invoice, List<LineItem>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem5.mmLineItemDetails, LineItem7.mmLineItemDetails, LineItem6.mmLineItemDetails, LineItem8.mmLineItemDetails, LineItem4.mmCommercialLineItems, LineItem9.mmCommercialLineItems,
 					CertificateDataSet1.mmLineItem, LineItem11.mmLineItemDetails, CertificateDataSet2.mmLineItem, LineItem12.mmCommercialLineItems, CardPaymentInvoice1.mmLineItem, LineItem14.mmLineItemDetails, LineItem13.mmLineItemDetails,
 					LineItem15.mmCommercialLineItems, CardPaymentInvoice2.mmLineItem, CardPaymentInvoice3.mmLineItem);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LineItem";
-			definition = "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line item.";
+			definition = "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line item.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmInvoice;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+		}
+
+		@Override
+		public List<LineItem> getValue(Invoice obj) {
+			return obj.getLineItem();
+		}
+
+		@Override
+		public void setValue(Invoice obj, List<LineItem> value) {
+			obj.setLineItem(value);
 		}
 	};
 	protected CurrencyAndAmount totalNetAmount;
@@ -913,11 +954,11 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Total amount after taxes, adjustments and charges."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalNetAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, CurrencyAndAmount> mmTotalNetAmount = new MMBusinessAttribute<Invoice, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem6.mmOrderedTotalNetAmount, LineItem8.mmOrderedTotalNetAmount, LineItem14.mmOrderedTotalNetAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalNetAmount";
 			definition = "Total amount after taxes, adjustments and charges.";
@@ -926,12 +967,14 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getTotalNetAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Invoice obj) {
+			return obj.getTotalNetAmount();
+		}
+
+		@Override
+		public void setValue(Invoice obj, CurrencyAndAmount value) {
+			obj.setTotalNetAmount(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
@@ -986,11 +1029,11 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, List<CurrencyExchange>> mmCurrencyExchange = new MMBusinessAssociationEnd<Invoice, List<CurrencyExchange>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmInvoiceCurrencyExchange, BillingStatement1.mmCurrencyExchange, FinancingItemList1.mmAgreedRate, BillingStatement2.mmCurrencyExchange);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Specifies currency exchange information which is used when currency conversion is necessary.";
@@ -998,6 +1041,16 @@ public class Invoice extends FinancialDocument {
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmRelatedInvoice;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
+		}
+
+		@Override
+		public List<CurrencyExchange> getValue(Invoice obj) {
+			return obj.getCurrencyExchange();
+		}
+
+		@Override
+		public void setValue(Invoice obj, List<CurrencyExchange> value) {
+			obj.setCurrencyExchange(value);
 		}
 	};
 	protected ExternalBillingCompensationTypeCode billingCompensationType;
@@ -1040,11 +1093,11 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Defines the type of billing compensation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBillingCompensationType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, ExternalBillingCompensationTypeCode> mmBillingCompensationType = new MMBusinessAttribute<Invoice, ExternalBillingCompensationTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingCompensationType1Choice.mmCode, BillingCompensationType1Choice.mmProprietary, BillingCompensation1.mmType);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BillingCompensationType";
 			definition = "Defines the type of billing compensation.";
@@ -1053,12 +1106,14 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> ExternalBillingCompensationTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getBillingCompensationType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ExternalBillingCompensationTypeCode getValue(Invoice obj) {
+			return obj.getBillingCompensationType();
+		}
+
+		@Override
+		public void setValue(Invoice obj, ExternalBillingCompensationTypeCode value) {
+			obj.setBillingCompensationType(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvoicePartyRole> invoicePartyRole;
@@ -1094,10 +1149,10 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Role played by a party in the context of invoices."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvoicePartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, List<InvoicePartyRole>> mmInvoicePartyRole = new MMBusinessAssociationEnd<Invoice, List<InvoicePartyRole>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoicePartyRole";
 			definition = "Role played by a party in the context of invoices.";
@@ -1105,6 +1160,16 @@ public class Invoice extends FinancialDocument {
 			opposite_lazy = () -> com.tools20022.repository.entity.InvoicePartyRole.mmInvoice;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvoicePartyRole.mmObject();
+		}
+
+		@Override
+		public List<InvoicePartyRole> getValue(Invoice obj) {
+			return obj.getInvoicePartyRole();
+		}
+
+		@Override
+		public void setValue(Invoice obj, List<InvoicePartyRole> value) {
+			obj.setInvoicePartyRole(value);
 		}
 	};
 	protected Invoice originalInvoice;
@@ -1147,22 +1212,32 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Invoice to which another invoice is associated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOriginalInvoice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, Invoice> mmOriginalInvoice = new MMBusinessAssociationEnd<Invoice, Invoice>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvoiceFinancingDetails1.mmOriginalInvoiceInformation);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginalInvoice";
 			definition = "Invoice to which another invoice is associated.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmRelatedInvoice;
+			opposite_lazy = () -> Invoice.mmRelatedInvoice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			type_lazy = () -> Invoice.mmObject();
+		}
+
+		@Override
+		public Invoice getValue(Invoice obj) {
+			return obj.getOriginalInvoice();
+		}
+
+		@Override
+		public void setValue(Invoice obj, Invoice value) {
+			obj.setOriginalInvoice(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Invoice> relatedInvoice;
+	protected List<Invoice> relatedInvoice;
 	/**
 	 * 
 	 <p>
@@ -1196,17 +1271,27 @@ public class Invoice extends FinancialDocument {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedInvoice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, List<Invoice>> mmRelatedInvoice = new MMBusinessAssociationEnd<Invoice, List<Invoice>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvoice";
 			definition = "Specifies another invoice linked to the current one, for instance a previous invoice for which a credit note is available.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmOriginalInvoice;
+			opposite_lazy = () -> Invoice.mmOriginalInvoice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			type_lazy = () -> Invoice.mmObject();
+		}
+
+		@Override
+		public List<Invoice> getValue(Invoice obj) {
+			return obj.getRelatedInvoice();
+		}
+
+		@Override
+		public void setValue(Invoice obj, List<Invoice> value) {
+			obj.setRelatedInvoice(value);
 		}
 	};
 	protected InvoiceFinancingAgreement invoiceFinancingTransaction;
@@ -1254,19 +1339,29 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Financing transaction related to an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvoiceFinancingTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, InvoiceFinancingAgreement> mmInvoiceFinancingTransaction = new MMBusinessAssociationEnd<Invoice, InvoiceFinancingAgreement>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancingItemList1.mmTotalRequestFinancing, FinancialItem1.mmFinancingStatus);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceFinancingTransaction";
 			definition = "Financing transaction related to an invoice.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoice;
+			opposite_lazy = () -> InvoiceFinancingAgreement.mmInvoice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmObject();
+			type_lazy = () -> InvoiceFinancingAgreement.mmObject();
+		}
+
+		@Override
+		public InvoiceFinancingAgreement getValue(Invoice obj) {
+			return obj.getInvoiceFinancingTransaction();
+		}
+
+		@Override
+		public void setValue(Invoice obj, InvoiceFinancingAgreement value) {
+			obj.setInvoiceFinancingTransaction(value);
 		}
 	};
 	protected CurrencyAndAmount billingCompensationAmount;
@@ -1296,10 +1391,10 @@ public class Invoice extends FinancialDocument {
 	 * "Specifies the compensation amount of an incorrect billing."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBillingCompensationAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, CurrencyAndAmount> mmBillingCompensationAmount = new MMBusinessAttribute<Invoice, CurrencyAndAmount>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BillingCompensationAmount";
 			definition = "Specifies the compensation amount of an incorrect billing.";
@@ -1308,12 +1403,14 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getBillingCompensationAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Invoice obj) {
+			return obj.getBillingCompensationAmount();
+		}
+
+		@Override
+		public void setValue(Invoice obj, CurrencyAndAmount value) {
+			obj.setBillingCompensationAmount(value);
 		}
 	};
 	protected InvoiceStatus invoiceStatus;
@@ -1349,10 +1446,10 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Status of the invoice or of the billing process."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvoiceStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, com.tools20022.repository.entity.InvoiceStatus> mmInvoiceStatus = new MMBusinessAssociationEnd<Invoice, com.tools20022.repository.entity.InvoiceStatus>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceStatus";
 			definition = "Status of the invoice or of the billing process.";
@@ -1361,6 +1458,16 @@ public class Invoice extends FinancialDocument {
 			opposite_lazy = () -> com.tools20022.repository.entity.InvoiceStatus.mmInvoice;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvoiceStatus.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.InvoiceStatus getValue(Invoice obj) {
+			return obj.getInvoiceStatus();
+		}
+
+		@Override
+		public void setValue(Invoice obj, com.tools20022.repository.entity.InvoiceStatus value) {
+			obj.setInvoiceStatus(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Payment> payment;
@@ -1403,11 +1510,11 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Payment related to an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Invoice, List<Payment>> mmPayment = new MMBusinessAssociationEnd<Invoice, List<Payment>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReconciliationList1.mmPaymentMeans);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Payment related to an invoice.";
@@ -1415,6 +1522,16 @@ public class Invoice extends FinancialDocument {
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmInvoiceReconciliation;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+		}
+
+		@Override
+		public List<Payment> getValue(Invoice obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(Invoice obj, List<Payment> value) {
+			obj.setPayment(value);
 		}
 	};
 	protected DebitCreditCode creditDebitIndicator;
@@ -1451,11 +1568,11 @@ public class Invoice extends FinancialDocument {
 	 * definition} = "Indicates the direction of the invoice amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Invoice, DebitCreditCode> mmCreditDebitIndicator = new MMBusinessAttribute<Invoice, DebitCreditCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialItem1.mmCreditDebitIndicator);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			elementContext_lazy = () -> Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates the direction of the invoice amount.";
@@ -1464,12 +1581,14 @@ public class Invoice extends FinancialDocument {
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Invoice.class.getMethod("getCreditDebitIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DebitCreditCode getValue(Invoice obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(Invoice obj, DebitCreditCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 
@@ -1480,21 +1599,16 @@ public class Invoice extends FinancialDocument {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Invoice";
 				definition = "General information about an invoice, such as number, issue date date and monetary amounts.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmRelatedInvoice, com.tools20022.repository.entity.Payment.mmInvoiceReconciliation,
-						com.tools20022.repository.entity.CurrencyExchange.mmRelatedInvoice, com.tools20022.repository.entity.Invoice.mmOriginalInvoice, com.tools20022.repository.entity.Invoice.mmRelatedInvoice,
-						com.tools20022.repository.entity.InvoicePartyRole.mmInvoice, com.tools20022.repository.entity.InvoiceFinancingAgreement.mmInvoice, com.tools20022.repository.entity.LineItem.mmInvoice,
-						com.tools20022.repository.entity.CommercialTradeSettlement.mmInvoice, com.tools20022.repository.entity.InvoiceStatus.mmInvoice);
+				associationDomain_lazy = () -> Arrays.asList(DateTimePeriod.mmRelatedInvoice, com.tools20022.repository.entity.Payment.mmInvoiceReconciliation, com.tools20022.repository.entity.CurrencyExchange.mmRelatedInvoice,
+						Invoice.mmOriginalInvoice, Invoice.mmRelatedInvoice, com.tools20022.repository.entity.InvoicePartyRole.mmInvoice, InvoiceFinancingAgreement.mmInvoice, com.tools20022.repository.entity.LineItem.mmInvoice,
+						CommercialTradeSettlement.mmInvoice, com.tools20022.repository.entity.InvoiceStatus.mmInvoice);
 				derivationElement_lazy = () -> Arrays.asList(InvoiceLegalIssue1.mmInvoiceLegalStatement, BillingReport1.mmRegulatoryData, BillingReport1.mmInvoiceTotals, BillingReport1.mmServiceCategoryTotals,
 						BillingCancellationReport1.mmRegulatoryData, ReconciliationList1.mmParameters, ReconciliationList1.mmItem, FinancialItem1.mmItemContext, FinancialItem1.mmFinancialDocumentReference,
 						FinancialItemParameters1.mmRelatedItem, BillingReport2.mmRegulatoryData, BillingReport2.mmInvoiceTotals, BillingReport2.mmServiceCategoryTotals);
 				superType_lazy = () -> FinancialDocument.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Invoice.mmCreditDebitNoteAmount, com.tools20022.repository.entity.Invoice.mmTotalTaxAmount, com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount,
-						com.tools20022.repository.entity.Invoice.mmInvoiceCurrency, com.tools20022.repository.entity.Invoice.mmPeriodCovered, com.tools20022.repository.entity.Invoice.mmTradeSettlement,
-						com.tools20022.repository.entity.Invoice.mmTotalCharge, com.tools20022.repository.entity.Invoice.mmTotalPrepaidAmount, com.tools20022.repository.entity.Invoice.mmLineItem,
-						com.tools20022.repository.entity.Invoice.mmTotalNetAmount, com.tools20022.repository.entity.Invoice.mmCurrencyExchange, com.tools20022.repository.entity.Invoice.mmBillingCompensationType,
-						com.tools20022.repository.entity.Invoice.mmInvoicePartyRole, com.tools20022.repository.entity.Invoice.mmOriginalInvoice, com.tools20022.repository.entity.Invoice.mmRelatedInvoice,
-						com.tools20022.repository.entity.Invoice.mmInvoiceFinancingTransaction, com.tools20022.repository.entity.Invoice.mmBillingCompensationAmount, com.tools20022.repository.entity.Invoice.mmInvoiceStatus,
-						com.tools20022.repository.entity.Invoice.mmPayment, com.tools20022.repository.entity.Invoice.mmCreditDebitIndicator);
+				element_lazy = () -> Arrays.asList(Invoice.mmCreditDebitNoteAmount, Invoice.mmTotalTaxAmount, Invoice.mmTotalInvoiceAmount, Invoice.mmInvoiceCurrency, Invoice.mmPeriodCovered, Invoice.mmTradeSettlement,
+						Invoice.mmTotalCharge, Invoice.mmTotalPrepaidAmount, Invoice.mmLineItem, Invoice.mmTotalNetAmount, Invoice.mmCurrencyExchange, Invoice.mmBillingCompensationType, Invoice.mmInvoicePartyRole,
+						Invoice.mmOriginalInvoice, Invoice.mmRelatedInvoice, Invoice.mmInvoiceFinancingTransaction, Invoice.mmBillingCompensationAmount, Invoice.mmInvoiceStatus, Invoice.mmPayment, Invoice.mmCreditDebitIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(InvoiceTotals1.mmObject(), OriginalInvoiceInformation1.mmObject(), InvoiceFinancingDetails1.mmObject(), SettlementMonetarySummation1.mmObject(),
 						InvoiceIdentification1.mmObject(), BillingCompensationType1Choice.mmObject(), BillingStatement1.mmObject(), InvoiceLegalIssue1.mmObject(), InvoiceTotals2.mmObject(), ServiceCategoryTotals1.mmObject(),
 						BillingReport1.mmObject(), BillingCancellationReport1.mmObject(), BillingSearchCriteria1.mmObject(), FinancingItemList1.mmObject(), FinancialItemParameters1.mmObject(), BillingStatement2.mmObject(),
@@ -1549,7 +1663,7 @@ public class Invoice extends FinancialDocument {
 		return periodCovered == null ? periodCovered = new ArrayList<>() : periodCovered;
 	}
 
-	public Invoice setPeriodCovered(List<com.tools20022.repository.entity.DateTimePeriod> periodCovered) {
+	public Invoice setPeriodCovered(List<DateTimePeriod> periodCovered) {
 		this.periodCovered = Objects.requireNonNull(periodCovered);
 		return this;
 	}
@@ -1558,7 +1672,7 @@ public class Invoice extends FinancialDocument {
 		return tradeSettlement == null ? tradeSettlement = new ArrayList<>() : tradeSettlement;
 	}
 
-	public Invoice setTradeSettlement(List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement) {
+	public Invoice setTradeSettlement(List<CommercialTradeSettlement> tradeSettlement) {
 		this.tradeSettlement = Objects.requireNonNull(tradeSettlement);
 		return this;
 	}
@@ -1630,7 +1744,7 @@ public class Invoice extends FinancialDocument {
 		return originalInvoice;
 	}
 
-	public Invoice setOriginalInvoice(com.tools20022.repository.entity.Invoice originalInvoice) {
+	public Invoice setOriginalInvoice(Invoice originalInvoice) {
 		this.originalInvoice = Objects.requireNonNull(originalInvoice);
 		return this;
 	}
@@ -1639,7 +1753,7 @@ public class Invoice extends FinancialDocument {
 		return relatedInvoice == null ? relatedInvoice = new ArrayList<>() : relatedInvoice;
 	}
 
-	public Invoice setRelatedInvoice(List<com.tools20022.repository.entity.Invoice> relatedInvoice) {
+	public Invoice setRelatedInvoice(List<Invoice> relatedInvoice) {
 		this.relatedInvoice = Objects.requireNonNull(relatedInvoice);
 		return this;
 	}
@@ -1648,7 +1762,7 @@ public class Invoice extends FinancialDocument {
 		return invoiceFinancingTransaction;
 	}
 
-	public Invoice setInvoiceFinancingTransaction(com.tools20022.repository.entity.InvoiceFinancingAgreement invoiceFinancingTransaction) {
+	public Invoice setInvoiceFinancingTransaction(InvoiceFinancingAgreement invoiceFinancingTransaction) {
 		this.invoiceFinancingTransaction = Objects.requireNonNull(invoiceFinancingTransaction);
 		return this;
 	}

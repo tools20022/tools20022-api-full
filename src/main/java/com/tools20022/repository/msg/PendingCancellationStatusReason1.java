@@ -132,7 +132,7 @@ public class PendingCancellationStatusReason1 {
 	 * "Specifies the reason why the cancellation request is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingCancellationStatusReason1, PendingCancellationReason1Choice> mmReasonCode = new MMMessageAssociationEnd<PendingCancellationStatusReason1, PendingCancellationReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingCancellationStatusReason1.mmObject();
@@ -146,6 +146,16 @@ public class PendingCancellationStatusReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingCancellationReason1Choice.mmObject();
+		}
+
+		@Override
+		public PendingCancellationReason1Choice getValue(PendingCancellationStatusReason1 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(PendingCancellationStatusReason1 obj, PendingCancellationReason1Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -186,7 +196,7 @@ public class PendingCancellationStatusReason1 {
 	 * "Provides additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationStatusReason1, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<PendingCancellationStatusReason1, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingCancellationStatusReason1.mmObject();
@@ -199,6 +209,16 @@ public class PendingCancellationStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(PendingCancellationStatusReason1 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(PendingCancellationStatusReason1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

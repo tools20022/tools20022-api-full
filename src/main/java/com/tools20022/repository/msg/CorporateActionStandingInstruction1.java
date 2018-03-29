@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.AgentCorporateActionStandingInstruction;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount17;
+import com.tools20022.repository.msg.SecuritiesAccount6;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -144,7 +146,7 @@ public class CorporateActionStandingInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetOrGross = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionStandingInstruction1, StandingInstructionGrossNet1Code> mmNetOrGross = new MMMessageAttribute<CorporateActionStandingInstruction1, StandingInstructionGrossNet1Code>() {
 		{
 			businessElementTrace_lazy = () -> AgentCorporateActionStandingInstruction.mmGrossOrNetIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmObject();
@@ -156,6 +158,16 @@ public class CorporateActionStandingInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StandingInstructionGrossNet1Code.mmObject();
+		}
+
+		@Override
+		public StandingInstructionGrossNet1Code getValue(CorporateActionStandingInstruction1 obj) {
+			return obj.getNetOrGross();
+		}
+
+		@Override
+		public void setValue(CorporateActionStandingInstruction1 obj, StandingInstructionGrossNet1Code value) {
+			obj.setNetOrGross(value);
 		}
 	};
 	@XmlElement(name = "CshDstrbtnDtls", required = true)
@@ -191,7 +203,7 @@ public class CorporateActionStandingInstruction1 {
 	 * "Provides information about the cash distribution standing instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashDistributionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionStandingInstruction1, CashAccount17> mmCashDistributionDetails = new MMMessageAssociationEnd<CorporateActionStandingInstruction1, CashAccount17>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmObject();
@@ -203,7 +215,17 @@ public class CorporateActionStandingInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount17.mmObject();
+			type_lazy = () -> CashAccount17.mmObject();
+		}
+
+		@Override
+		public CashAccount17 getValue(CorporateActionStandingInstruction1 obj) {
+			return obj.getCashDistributionDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionStandingInstruction1 obj, CashAccount17 value) {
+			obj.setCashDistributionDetails(value);
 		}
 	};
 	@XmlElement(name = "SctiesDstrbtnDtls", required = true)
@@ -241,7 +263,7 @@ public class CorporateActionStandingInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesDistributionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionStandingInstruction1, SecuritiesAccount6> mmSecuritiesDistributionDetails = new MMMessageAssociationEnd<CorporateActionStandingInstruction1, SecuritiesAccount6>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmObject();
@@ -253,7 +275,17 @@ public class CorporateActionStandingInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
+			type_lazy = () -> SecuritiesAccount6.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount6 getValue(CorporateActionStandingInstruction1 obj) {
+			return obj.getSecuritiesDistributionDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionStandingInstruction1 obj, SecuritiesAccount6 value) {
+			obj.setSecuritiesDistributionDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -285,7 +317,7 @@ public class CorporateActionStandingInstruction1 {
 	 * definition} = "Additional information about the standing instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionStandingInstruction1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CorporateActionStandingInstruction1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionStandingInstruction1.mmObject();
 			isDerived = false;
@@ -296,6 +328,16 @@ public class CorporateActionStandingInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionStandingInstruction1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionStandingInstruction1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	/**
@@ -384,7 +426,7 @@ public class CorporateActionStandingInstruction1 {
 		return cashDistributionDetails;
 	}
 
-	public CorporateActionStandingInstruction1 setCashDistributionDetails(com.tools20022.repository.msg.CashAccount17 cashDistributionDetails) {
+	public CorporateActionStandingInstruction1 setCashDistributionDetails(CashAccount17 cashDistributionDetails) {
 		this.cashDistributionDetails = Objects.requireNonNull(cashDistributionDetails);
 		return this;
 	}
@@ -393,7 +435,7 @@ public class CorporateActionStandingInstruction1 {
 		return securitiesDistributionDetails;
 	}
 
-	public CorporateActionStandingInstruction1 setSecuritiesDistributionDetails(com.tools20022.repository.msg.SecuritiesAccount6 securitiesDistributionDetails) {
+	public CorporateActionStandingInstruction1 setSecuritiesDistributionDetails(SecuritiesAccount6 securitiesDistributionDetails) {
 		this.securitiesDistributionDetails = Objects.requireNonNull(securitiesDistributionDetails);
 		return this;
 	}

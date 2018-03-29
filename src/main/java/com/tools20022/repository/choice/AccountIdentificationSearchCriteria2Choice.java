@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -103,7 +104,7 @@ public class AccountIdentificationSearchCriteria2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationSearchCriteria2Choice, AccountIdentification4Choice> mmEqual = new MMMessageAttribute<AccountIdentificationSearchCriteria2Choice, AccountIdentification4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice.mmObject();
 			isDerived = false;
@@ -113,7 +114,17 @@ public class AccountIdentificationSearchCriteria2Choice {
 			definition = "Search for one or more accounts based on exact identification of the account(s).";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.AccountIdentification4Choice.mmObject();
+			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification4Choice getValue(AccountIdentificationSearchCriteria2Choice obj) {
+			return obj.getEqual();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationSearchCriteria2Choice obj, AccountIdentification4Choice value) {
+			obj.setEqual(value);
 		}
 	};
 	@XmlElement(name = "CTTxt", required = true)
@@ -147,7 +158,7 @@ public class AccountIdentificationSearchCriteria2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContainText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationSearchCriteria2Choice, Max35Text> mmContainText = new MMMessageAttribute<AccountIdentificationSearchCriteria2Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice.mmObject();
 			isDerived = false;
@@ -158,6 +169,16 @@ public class AccountIdentificationSearchCriteria2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentificationSearchCriteria2Choice obj) {
+			return obj.getContainText();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationSearchCriteria2Choice obj, Max35Text value) {
+			obj.setContainText(value);
 		}
 	};
 	@XmlElement(name = "NCTTxt", required = true)
@@ -191,7 +212,7 @@ public class AccountIdentificationSearchCriteria2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotContainText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationSearchCriteria2Choice, Max35Text> mmNotContainText = new MMMessageAttribute<AccountIdentificationSearchCriteria2Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationSearchCriteria2Choice.mmObject();
 			isDerived = false;
@@ -202,6 +223,16 @@ public class AccountIdentificationSearchCriteria2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentificationSearchCriteria2Choice obj) {
+			return obj.getNotContainText();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationSearchCriteria2Choice obj, Max35Text value) {
+			obj.setNotContainText(value);
 		}
 	};
 
@@ -223,7 +254,7 @@ public class AccountIdentificationSearchCriteria2Choice {
 		return equal;
 	}
 
-	public AccountIdentificationSearchCriteria2Choice setEqual(com.tools20022.repository.choice.AccountIdentification4Choice equal) {
+	public AccountIdentificationSearchCriteria2Choice setEqual(AccountIdentification4Choice equal) {
 		this.equal = Objects.requireNonNull(equal);
 		return this;
 	}

@@ -120,7 +120,7 @@ public class SignedQuantityFormat3 {
 	 * definition} = "Sign of the quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SignedQuantityFormat3, ShortLong1Code> mmShortLongPosition = new MMMessageAttribute<SignedQuantityFormat3, ShortLong1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat3.mmObject();
@@ -132,6 +132,16 @@ public class SignedQuantityFormat3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public ShortLong1Code getValue(SignedQuantityFormat3 obj) {
+			return obj.getShortLongPosition();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat3 obj, ShortLong1Code value) {
+			obj.setShortLongPosition(value);
 		}
 	};
 	@XmlElement(name = "QtyChc", required = true)
@@ -167,7 +177,7 @@ public class SignedQuantityFormat3 {
 	 * definition} = "Choice between different quantity of security formats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SignedQuantityFormat3, Quantity7Choice> mmQuantityChoice = new MMMessageAssociationEnd<SignedQuantityFormat3, Quantity7Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat3.mmObject();
@@ -180,6 +190,16 @@ public class SignedQuantityFormat3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Quantity7Choice.mmObject();
+		}
+
+		@Override
+		public Quantity7Choice getValue(SignedQuantityFormat3 obj) {
+			return obj.getQuantityChoice();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat3 obj, Quantity7Choice value) {
+			obj.setQuantityChoice(value);
 		}
 	};
 

@@ -28,6 +28,9 @@ import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount13;
+import com.tools20022.repository.msg.SettlementTypeAndIdentification3;
+import com.tools20022.repository.msg.TransactionDetails29;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -169,7 +172,7 @@ public class TransactionDetails41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwnerTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionDetails41, SettlementTypeAndIdentification3> mmAccountOwnerTransactionIdentification = new MMMessageAssociationEnd<TransactionDetails41, SettlementTypeAndIdentification3>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
@@ -182,7 +185,17 @@ public class TransactionDetails41 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification3.mmObject();
+			type_lazy = () -> SettlementTypeAndIdentification3.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification3 getValue(TransactionDetails41 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionDetails41 obj, SettlementTypeAndIdentification3 value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -232,7 +245,7 @@ public class TransactionDetails41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDetails41, Optional<Max35Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<TransactionDetails41, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
@@ -246,6 +259,16 @@ public class TransactionDetails41 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionDetails41 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionDetails41 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId")
@@ -296,7 +319,7 @@ public class TransactionDetails41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDetails41, Optional<Max35Text>> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<TransactionDetails41, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
@@ -310,6 +333,16 @@ public class TransactionDetails41 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionDetails41 obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionDetails41 obj, Optional<Max35Text> value) {
+			obj.setMarketInfrastructureTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcrTxId")
@@ -356,7 +389,7 @@ public class TransactionDetails41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDetails41, Optional<Max35Text>> mmProcessorTransactionIdentification = new MMMessageAttribute<TransactionDetails41, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
@@ -369,6 +402,16 @@ public class TransactionDetails41 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionDetails41 obj) {
+			return obj.getProcessorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionDetails41 obj, Optional<Max35Text> value) {
+			obj.setProcessorTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrTxId")
@@ -415,7 +458,7 @@ public class TransactionDetails41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDetails41, Optional<Max35Text>> mmOtherTransactionIdentification = new MMMessageAttribute<TransactionDetails41, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
@@ -428,6 +471,16 @@ public class TransactionDetails41 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionDetails41 obj) {
+			return obj.getOtherTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionDetails41 obj, Optional<Max35Text> value) {
+			obj.setOtherTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -472,7 +525,7 @@ public class TransactionDetails41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionDetails41, Optional<PartyIdentification36Choice>> mmAccountOwner = new MMMessageAssociationEnd<TransactionDetails41, Optional<PartyIdentification36Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
@@ -486,6 +539,16 @@ public class TransactionDetails41 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification36Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification36Choice> getValue(TransactionDetails41 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(TransactionDetails41 obj, Optional<PartyIdentification36Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -529,7 +592,7 @@ public class TransactionDetails41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionDetails41, SecuritiesAccount13> mmSafekeepingAccount = new MMMessageAssociationEnd<TransactionDetails41, SecuritiesAccount13>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
@@ -542,7 +605,17 @@ public class TransactionDetails41 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			type_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount13 getValue(TransactionDetails41 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(TransactionDetails41 obj, SecuritiesAccount13 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "TxDtls")
@@ -588,7 +661,7 @@ public class TransactionDetails41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionDetails41, Optional<TransactionDetails29>> mmTransactionDetails = new MMMessageAssociationEnd<TransactionDetails41, Optional<TransactionDetails29>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTrade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails41.mmObject();
@@ -601,7 +674,17 @@ public class TransactionDetails41 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionDetails29.mmObject();
+			type_lazy = () -> TransactionDetails29.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionDetails29> getValue(TransactionDetails41 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(TransactionDetails41 obj, Optional<TransactionDetails29> value) {
+			obj.setTransactionDetails(value.orElse(null));
 		}
 	};
 
@@ -629,7 +712,7 @@ public class TransactionDetails41 {
 		return accountOwnerTransactionIdentification;
 	}
 
-	public TransactionDetails41 setAccountOwnerTransactionIdentification(com.tools20022.repository.msg.SettlementTypeAndIdentification3 accountOwnerTransactionIdentification) {
+	public TransactionDetails41 setAccountOwnerTransactionIdentification(SettlementTypeAndIdentification3 accountOwnerTransactionIdentification) {
 		this.accountOwnerTransactionIdentification = Objects.requireNonNull(accountOwnerTransactionIdentification);
 		return this;
 	}
@@ -683,7 +766,7 @@ public class TransactionDetails41 {
 		return safekeepingAccount;
 	}
 
-	public TransactionDetails41 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+	public TransactionDetails41 setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
 		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
 		return this;
 	}
@@ -692,7 +775,7 @@ public class TransactionDetails41 {
 		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public TransactionDetails41 setTransactionDetails(com.tools20022.repository.msg.TransactionDetails29 transactionDetails) {
+	public TransactionDetails41 setTransactionDetails(TransactionDetails29 transactionDetails) {
 		this.transactionDetails = transactionDetails;
 		return this;
 	}

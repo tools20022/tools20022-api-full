@@ -49,11 +49,15 @@ public class ConstraintMarginTypePresenceRule {
 	 */
 	public static final MMConstraint<MarginCalculation2> forMarginCalculation2 = new MMConstraint<MarginCalculation2>() {
 		{
-			validator = ConstraintMarginTypePresenceRule::checkMarginCalculation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginTypePresenceRule";
 			owner_lazy = () -> MarginCalculation2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarginTypeAmount/InitialMargin</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarginTypeAmount/VariationMargin[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarginTypeAmount/OtherMargin[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarginTypeAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(MarginCalculation2 obj) throws Exception {
+			checkMarginCalculation2(obj);
 		}
 	};
 

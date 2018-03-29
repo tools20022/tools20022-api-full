@@ -123,7 +123,7 @@ public class CorporateActionNarrative12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>> mmAdditionalText = new MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
 			isDerived = false;
@@ -134,6 +134,16 @@ public class CorporateActionNarrative12 {
 			definition = "Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative12 obj) {
+			return obj.getAdditionalText();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative12 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setAdditionalText(value);
 		}
 	};
 	@XmlElement(name = "NrrtvVrsn")
@@ -171,7 +181,7 @@ public class CorporateActionNarrative12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNarrativeVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>> mmNarrativeVersion = new MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class CorporateActionNarrative12 {
 			definition = "Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields of this message, - or narrative information not needed for automatic processing.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative12 obj) {
+			return obj.getNarrativeVersion();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative12 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setNarrativeVersion(value);
 		}
 	};
 	@XmlElement(name = "RegnDtls")
@@ -222,7 +242,7 @@ public class CorporateActionNarrative12 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>> mmRegistrationDetails = new MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
@@ -234,6 +254,16 @@ public class CorporateActionNarrative12 {
 			definition = "Provides information required for the registration.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative12 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative12 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setRegistrationDetails(value);
 		}
 	};
 	@XmlElement(name = "PtyCtctNrrtv")
@@ -276,7 +306,7 @@ public class CorporateActionNarrative12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>> mmPartyContactNarrative = new MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
@@ -288,6 +318,16 @@ public class CorporateActionNarrative12 {
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative12 obj) {
+			return obj.getPartyContactNarrative();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative12 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setPartyContactNarrative(value);
 		}
 	};
 	@XmlElement(name = "Dsclmr")
@@ -325,7 +365,7 @@ public class CorporateActionNarrative12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisclaimer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>> mmDisclaimer = new MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
 			isDerived = false;
@@ -336,6 +376,16 @@ public class CorporateActionNarrative12 {
 			definition = "Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative12 obj) {
+			return obj.getDisclaimer();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative12 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setDisclaimer(value);
 		}
 	};
 	@XmlElement(name = "BsktOrIndxInf")
@@ -378,7 +428,7 @@ public class CorporateActionNarrative12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasketOrIndexInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>> mmBasketOrIndexInformation = new MMMessageAttribute<CorporateActionNarrative12, List<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmBasketOrIndexInformation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative12.mmObject();
@@ -390,6 +440,16 @@ public class CorporateActionNarrative12 {
 			definition = "Provides additional information on the basket or index underlying a security, for example a warrant.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative12 obj) {
+			return obj.getBasketOrIndexInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative12 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setBasketOrIndexInformation(value);
 		}
 	};
 

@@ -120,7 +120,7 @@ public class TaxCreditRateFormat10Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCreditRateFormat10Choice, PercentageRate> mmRate = new MMMessageAttribute<TaxCreditRateFormat10Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat10Choice.mmObject();
@@ -133,6 +133,16 @@ public class TaxCreditRateFormat10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(TaxCreditRateFormat10Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat10Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -173,7 +183,7 @@ public class TaxCreditRateFormat10Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCreditRateFormat10Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<TaxCreditRateFormat10Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat10Choice.mmObject();
@@ -186,6 +196,16 @@ public class TaxCreditRateFormat10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(TaxCreditRateFormat10Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat10Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -220,7 +240,7 @@ public class TaxCreditRateFormat10Choice {
 	 * definition} = "Specifies different formats for the tax credit rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxCreditRateFormat10Choice, RateTypeAndAmountAndStatus34> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<TaxCreditRateFormat10Choice, RateTypeAndAmountAndStatus34>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat10Choice.mmObject();
 			isDerived = false;
@@ -233,6 +253,16 @@ public class TaxCreditRateFormat10Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus34.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus34 getValue(TaxCreditRateFormat10Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat10Choice obj, RateTypeAndAmountAndStatus34 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -268,7 +298,7 @@ public class TaxCreditRateFormat10Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCreditRateFormat10Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<TaxCreditRateFormat10Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCreditRateFormat10Choice.mmObject();
 			isDerived = false;
@@ -280,6 +310,16 @@ public class TaxCreditRateFormat10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(TaxCreditRateFormat10Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(TaxCreditRateFormat10Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

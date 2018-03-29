@@ -110,7 +110,7 @@ public class GrossDividendRate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRate2, GrossDividendRateType1FormatChoice> mmRateType = new MMMessageAttribute<GrossDividendRate2, GrossDividendRateType1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GrossDividendRate2.mmObject();
@@ -122,6 +122,16 @@ public class GrossDividendRate2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GrossDividendRateType1FormatChoice.mmObject();
+		}
+
+		@Override
+		public GrossDividendRateType1FormatChoice getValue(GrossDividendRate2 obj) {
+			return obj.getRateType();
+		}
+
+		@Override
+		public void setValue(GrossDividendRate2 obj, GrossDividendRateType1FormatChoice value) {
+			obj.setRateType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -159,7 +169,7 @@ public class GrossDividendRate2 {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRate2, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<GrossDividendRate2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GrossDividendRate2.mmObject();
@@ -171,6 +181,16 @@ public class GrossDividendRate2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(GrossDividendRate2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(GrossDividendRate2 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

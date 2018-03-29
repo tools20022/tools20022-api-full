@@ -98,7 +98,7 @@ public class ContractModification1 {
 	 * definition} = "Indication of the action type of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractModification1, TransactionOperationType3Code> mmActionType = new MMMessageAttribute<ContractModification1, TransactionOperationType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractModification1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class ContractModification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionOperationType3Code.mmObject();
+		}
+
+		@Override
+		public TransactionOperationType3Code getValue(ContractModification1 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(ContractModification1 obj, TransactionOperationType3Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "Lvl")
@@ -142,7 +152,7 @@ public class ContractModification1 {
 	 * "Indication whether the report is done at trade or position level."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractModification1, Optional<ModificationLevel1Code>> mmLevel = new MMMessageAttribute<ContractModification1, Optional<ModificationLevel1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractModification1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class ContractModification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ModificationLevel1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ModificationLevel1Code> getValue(ContractModification1 obj) {
+			return obj.getLevel();
+		}
+
+		@Override
+		public void setValue(ContractModification1 obj, Optional<ModificationLevel1Code> value) {
+			obj.setLevel(value.orElse(null));
 		}
 	};
 

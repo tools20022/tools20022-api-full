@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader46;
 import com.tools20022.repository.msg.OriginalGroupInformation25;
 import com.tools20022.repository.msg.OriginalPaymentInformation5;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -149,7 +148,7 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestStatusReportV01, GroupHeader46> mmGroupHeader = new MMMessageBuildingBlock<CreditorPaymentActivationRequestStatusReportV01, GroupHeader46>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,12 +159,14 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 			complexType_lazy = () -> GroupHeader46.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestStatusReportV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader46 getValue(CreditorPaymentActivationRequestStatusReportV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestStatusReportV01 obj, GroupHeader46 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
@@ -195,7 +196,7 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestStatusReportV01, OriginalGroupInformation25> mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock<CreditorPaymentActivationRequestStatusReportV01, OriginalGroupInformation25>() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,12 +207,14 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 			complexType_lazy = () -> OriginalGroupInformation25.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestStatusReportV01.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalGroupInformation25 getValue(CreditorPaymentActivationRequestStatusReportV01 obj) {
+			return obj.getOriginalGroupInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestStatusReportV01 obj, OriginalGroupInformation25 value) {
+			obj.setOriginalGroupInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInfAndSts")
@@ -241,7 +244,7 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalPaymentInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestStatusReportV01, List<OriginalPaymentInformation5>> mmOriginalPaymentInformationAndStatus = new MMMessageBuildingBlock<CreditorPaymentActivationRequestStatusReportV01, List<OriginalPaymentInformation5>>() {
 		{
 			xmlTag = "OrgnlPmtInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,12 +254,14 @@ public class CreditorPaymentActivationRequestStatusReportV01 {
 			complexType_lazy = () -> OriginalPaymentInformation5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestStatusReportV01.class.getMethod("getOriginalPaymentInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<OriginalPaymentInformation5> getValue(CreditorPaymentActivationRequestStatusReportV01 obj) {
+			return obj.getOriginalPaymentInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestStatusReportV01 obj, List<OriginalPaymentInformation5> value) {
+			obj.setOriginalPaymentInformationAndStatus(value);
 		}
 	};
 

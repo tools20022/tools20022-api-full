@@ -137,7 +137,7 @@ public class AccountManagementConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementConfirmation1, AccountManagementType2Code> mmConfirmationType = new MMMessageAttribute<AccountManagementConfirmation1, AccountManagementType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation1.mmObject();
 			isDerived = false;
@@ -149,6 +149,16 @@ public class AccountManagementConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType2Code.mmObject();
+		}
+
+		@Override
+		public AccountManagementType2Code getValue(AccountManagementConfirmation1 obj) {
+			return obj.getConfirmationType();
+		}
+
+		@Override
+		public void setValue(AccountManagementConfirmation1 obj, AccountManagementType2Code value) {
+			obj.setConfirmationType(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -190,7 +200,7 @@ public class AccountManagementConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementConfirmation1, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<AccountManagementConfirmation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation1.mmObject();
 			isDerived = false;
@@ -202,6 +212,16 @@ public class AccountManagementConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementConfirmation1 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementConfirmation1 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 

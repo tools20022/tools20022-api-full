@@ -110,7 +110,7 @@ public class AdditionalBalanceInformation {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalBalanceInformation, SubBalanceQuantity1Choice> mmQuantity = new MMMessageAttribute<AdditionalBalanceInformation, SubBalanceQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation.mmObject();
@@ -122,6 +122,16 @@ public class AdditionalBalanceInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceQuantity1Choice getValue(AdditionalBalanceInformation obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(AdditionalBalanceInformation obj, SubBalanceQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "SubBalTp", required = true)
@@ -161,7 +171,7 @@ public class AdditionalBalanceInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalBalanceInformation, SecuritiesBalanceType2Code> mmSubBalanceType = new MMMessageAttribute<AdditionalBalanceInformation, SecuritiesBalanceType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation.mmObject();
@@ -173,6 +183,16 @@ public class AdditionalBalanceInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType2Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType2Code getValue(AdditionalBalanceInformation obj) {
+			return obj.getSubBalanceType();
+		}
+
+		@Override
+		public void setValue(AdditionalBalanceInformation obj, SecuritiesBalanceType2Code value) {
+			obj.setSubBalanceType(value);
 		}
 	};
 

@@ -177,7 +177,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmCertificationIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<YesNoIndicator>> mmCertificationIndicator = new MMMessageAttribute<PartyProfileInformation3, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCertificationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -191,6 +191,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(PartyProfileInformation3 obj) {
+			return obj.getCertificationIndicator();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<YesNoIndicator> value) {
+			obj.setCertificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtngPty")
@@ -240,7 +250,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmValidatingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidatingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<Max140Text>> mmValidatingParty = new MMMessageAttribute<PartyProfileInformation3, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -254,6 +264,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(PartyProfileInformation3 obj) {
+			return obj.getValidatingParty();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<Max140Text> value) {
+			obj.setValidatingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChckngPty")
@@ -303,7 +323,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmCheckingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCheckingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<Max140Text>> mmCheckingParty = new MMMessageAttribute<PartyProfileInformation3, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -317,6 +337,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(PartyProfileInformation3 obj) {
+			return obj.getCheckingParty();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<Max140Text> value) {
+			obj.setCheckingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnsblPty")
@@ -367,7 +397,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmResponsibleParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponsibleParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<Max140Text>> mmResponsibleParty = new MMMessageAttribute<PartyProfileInformation3, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -381,6 +411,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(PartyProfileInformation3 obj) {
+			return obj.getResponsibleParty();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<Max140Text> value) {
+			obj.setResponsibleParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertTp")
@@ -431,7 +471,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmCertificateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<CertificationType1Choice>> mmCertificateType = new MMMessageAttribute<PartyProfileInformation3, Optional<CertificationType1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PrivateCertificate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -445,6 +485,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CertificationType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CertificationType1Choice> getValue(PartyProfileInformation3 obj) {
+			return obj.getCertificateType();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<CertificationType1Choice> value) {
+			obj.setCertificateType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChckngDt")
@@ -495,7 +545,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmCheckingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCheckingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<ISODate>> mmCheckingDate = new MMMessageAttribute<PartyProfileInformation3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCheckingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -509,6 +559,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PartyProfileInformation3 obj) {
+			return obj.getCheckingDate();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<ISODate> value) {
+			obj.setCheckingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChckngFrqcy")
@@ -559,7 +619,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmCheckingFrequency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCheckingFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<EventFrequency1Code>> mmCheckingFrequency = new MMMessageAttribute<PartyProfileInformation3, Optional<EventFrequency1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCheckingFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -573,6 +633,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EventFrequency1Code> getValue(PartyProfileInformation3 obj) {
+			return obj.getCheckingFrequency();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<EventFrequency1Code> value) {
+			obj.setCheckingFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtRvsnDt")
@@ -624,7 +694,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmNextRevisionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextRevisionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<ISODate>> mmNextRevisionDate = new MMMessageAttribute<PartyProfileInformation3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmNextRevisionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -638,6 +708,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PartyProfileInformation3 obj) {
+			return obj.getNextRevisionDate();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<ISODate> value) {
+			obj.setNextRevisionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SlryRg")
@@ -687,7 +767,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmSalaryRange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSalaryRange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<Max35Text>> mmSalaryRange = new MMMessageAttribute<PartyProfileInformation3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmSalaryRange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -701,6 +781,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyProfileInformation3 obj) {
+			return obj.getSalaryRange();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<Max35Text> value) {
+			obj.setSalaryRange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SrcOfWlth")
@@ -750,7 +840,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmSourceOfWealth}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceOfWealth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<Max140Text>> mmSourceOfWealth = new MMMessageAttribute<PartyProfileInformation3, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmSourceOfWealth;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -764,6 +854,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(PartyProfileInformation3 obj) {
+			return obj.getSourceOfWealth();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<Max140Text> value) {
+			obj.setSourceOfWealth(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrCndctClssfctn")
@@ -811,7 +911,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmCustomerConductClassification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerConductClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<CustomerConductClassification1Choice>> mmCustomerConductClassification = new MMMessageAttribute<PartyProfileInformation3, Optional<CustomerConductClassification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
 			isDerived = false;
@@ -824,6 +924,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CustomerConductClassification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CustomerConductClassification1Choice> getValue(PartyProfileInformation3 obj) {
+			return obj.getCustomerConductClassification();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<CustomerConductClassification1Choice> value) {
+			obj.setCustomerConductClassification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RskLvl")
@@ -869,7 +979,7 @@ public class PartyProfileInformation3 {
 	 * PartyProfileInformation2.mmRiskLevel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRiskLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyProfileInformation3, Optional<RiskLevel1Choice>> mmRiskLevel = new MMMessageAttribute<PartyProfileInformation3, Optional<RiskLevel1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
 			isDerived = false;
@@ -882,6 +992,16 @@ public class PartyProfileInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RiskLevel1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RiskLevel1Choice> getValue(PartyProfileInformation3 obj) {
+			return obj.getRiskLevel();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<RiskLevel1Choice> value) {
+			obj.setRiskLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KnowYourCstmrChckTp")
@@ -927,7 +1047,7 @@ public class PartyProfileInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKnowYourCustomerCheckType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyProfileInformation3, Optional<KYCCheckType1Choice>> mmKnowYourCustomerCheckType = new MMMessageAssociationEnd<PartyProfileInformation3, Optional<KYCCheckType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PersonProfile.mmKnowYourCustomerCheckType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyProfileInformation3.mmObject();
@@ -941,6 +1061,16 @@ public class PartyProfileInformation3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> KYCCheckType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<KYCCheckType1Choice> getValue(PartyProfileInformation3 obj) {
+			return obj.getKnowYourCustomerCheckType();
+		}
+
+		@Override
+		public void setValue(PartyProfileInformation3 obj, Optional<KYCCheckType1Choice> value) {
+			obj.setKnowYourCustomerCheckType(value.orElse(null));
 		}
 	};
 

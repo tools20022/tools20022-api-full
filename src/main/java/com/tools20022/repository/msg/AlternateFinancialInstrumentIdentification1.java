@@ -130,7 +130,7 @@ public class AlternateFinancialInstrumentIdentification1 {
 	 * definition} = "Country of the proprietary identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomesticIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateFinancialInstrumentIdentification1, CountryCode> mmDomesticIdentificationSource = new MMMessageAttribute<AlternateFinancialInstrumentIdentification1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.mmObject();
@@ -142,6 +142,16 @@ public class AlternateFinancialInstrumentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(AlternateFinancialInstrumentIdentification1 obj) {
+			return obj.getDomesticIdentificationSource();
+		}
+
+		@Override
+		public void setValue(AlternateFinancialInstrumentIdentification1 obj, CountryCode value) {
+			obj.setDomesticIdentificationSource(value);
 		}
 	};
 	@XmlElement(name = "PrtryIdSrc", required = true)
@@ -178,7 +188,7 @@ public class AlternateFinancialInstrumentIdentification1 {
 	 * definition} = "Entity that issues the proprietary identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateFinancialInstrumentIdentification1, Max16Text> mmProprietaryIdentificationSource = new MMMessageAttribute<AlternateFinancialInstrumentIdentification1, Max16Text>() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmEntityName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.mmObject();
@@ -190,6 +200,16 @@ public class AlternateFinancialInstrumentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(AlternateFinancialInstrumentIdentification1 obj) {
+			return obj.getProprietaryIdentificationSource();
+		}
+
+		@Override
+		public void setValue(AlternateFinancialInstrumentIdentification1 obj, Max16Text value) {
+			obj.setProprietaryIdentificationSource(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -226,7 +246,7 @@ public class AlternateFinancialInstrumentIdentification1 {
 	 * definition} = "Unique and unambiguous identifier of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateFinancialInstrumentIdentification1, Max35Text> mmIdentification = new MMMessageAttribute<AlternateFinancialInstrumentIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.mmObject();
@@ -238,6 +258,16 @@ public class AlternateFinancialInstrumentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AlternateFinancialInstrumentIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AlternateFinancialInstrumentIdentification1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	/**

@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.AcceptorRejection1;
 import com.tools20022.repository.msg.Header1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +120,7 @@ public class AcceptorRejectionV01 {
 	 * definition} = "Rejection message management information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorRejectionV01, Header1> mmHeader = new MMMessageBuildingBlock<AcceptorRejectionV01, Header1>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +131,14 @@ public class AcceptorRejectionV01 {
 			complexType_lazy = () -> Header1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorRejectionV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header1 getValue(AcceptorRejectionV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorRejectionV01 obj, Header1 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "Rjct", required = true)
@@ -165,7 +166,7 @@ public class AcceptorRejectionV01 {
 	 * definition} = "Information related to the reject."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReject = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorRejectionV01, AcceptorRejection1> mmReject = new MMMessageBuildingBlock<AcceptorRejectionV01, AcceptorRejection1>() {
 		{
 			xmlTag = "Rjct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +177,14 @@ public class AcceptorRejectionV01 {
 			complexType_lazy = () -> AcceptorRejection1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorRejectionV01.class.getMethod("getReject", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorRejection1 getValue(AcceptorRejectionV01 obj) {
+			return obj.getReject();
+		}
+
+		@Override
+		public void setValue(AcceptorRejectionV01 obj, AcceptorRejection1 value) {
+			obj.setReject(value);
 		}
 	};
 

@@ -112,7 +112,7 @@ public class LimitCriteria5Choice {
 	 * LimitCriteria4Choice.mmQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitCriteria5Choice, Max35Text> mmQueryName = new MMMessageAttribute<LimitCriteria5Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitCriteria5Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class LimitCriteria5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(LimitCriteria5Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(LimitCriteria5Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -160,7 +170,7 @@ public class LimitCriteria5Choice {
 	 * LimitCriteria4Choice.mmNewCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitCriteria5Choice, LimitCriteria5> mmNewCriteria = new MMMessageAssociationEnd<LimitCriteria5Choice, LimitCriteria5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitCriteria5Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class LimitCriteria5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitCriteria5.mmObject();
+		}
+
+		@Override
+		public LimitCriteria5 getValue(LimitCriteria5Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(LimitCriteria5Choice obj, LimitCriteria5 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

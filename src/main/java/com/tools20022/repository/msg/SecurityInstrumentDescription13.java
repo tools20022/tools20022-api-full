@@ -24,6 +24,9 @@ import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.Debt;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DebtInstrument4;
+import com.tools20022.repository.msg.DerivativeInstrument6;
+import com.tools20022.repository.msg.SecurityInstrumentDescription11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +114,7 @@ public class SecurityInstrumentDescription13 {
 	 * "Attributes and characteristics of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentGeneralAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityInstrumentDescription13, SecurityInstrumentDescription11> mmFinancialInstrumentGeneralAttributes = new MMMessageAssociationEnd<SecurityInstrumentDescription13, SecurityInstrumentDescription11>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription13.mmObject();
@@ -123,7 +126,17 @@ public class SecurityInstrumentDescription13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription11.mmObject();
+			type_lazy = () -> SecurityInstrumentDescription11.mmObject();
+		}
+
+		@Override
+		public SecurityInstrumentDescription11 getValue(SecurityInstrumentDescription13 obj) {
+			return obj.getFinancialInstrumentGeneralAttributes();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription13 obj, SecurityInstrumentDescription11 value) {
+			obj.setFinancialInstrumentGeneralAttributes(value);
 		}
 	};
 	@XmlElement(name = "DebtInstrmAttrbts")
@@ -158,7 +171,7 @@ public class SecurityInstrumentDescription13 {
 	 * definition} = "Attributes specific to debt instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityInstrumentDescription13, Optional<DebtInstrument4>> mmDebtInstrumentAttributes = new MMMessageAssociationEnd<SecurityInstrumentDescription13, Optional<DebtInstrument4>>() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription13.mmObject();
@@ -170,7 +183,17 @@ public class SecurityInstrumentDescription13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DebtInstrument4.mmObject();
+			type_lazy = () -> DebtInstrument4.mmObject();
+		}
+
+		@Override
+		public Optional<DebtInstrument4> getValue(SecurityInstrumentDescription13 obj) {
+			return obj.getDebtInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription13 obj, Optional<DebtInstrument4> value) {
+			obj.setDebtInstrumentAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DerivInstrmAttrbts", required = true)
@@ -206,7 +229,7 @@ public class SecurityInstrumentDescription13 {
 	 * definition} = "Attributes specific to derivative instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDerivativeInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityInstrumentDescription13, DerivativeInstrument6> mmDerivativeInstrumentAttributes = new MMMessageAssociationEnd<SecurityInstrumentDescription13, DerivativeInstrument6>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription13.mmObject();
@@ -218,7 +241,17 @@ public class SecurityInstrumentDescription13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument6.mmObject();
+			type_lazy = () -> DerivativeInstrument6.mmObject();
+		}
+
+		@Override
+		public DerivativeInstrument6 getValue(SecurityInstrumentDescription13 obj) {
+			return obj.getDerivativeInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription13 obj, DerivativeInstrument6 value) {
+			obj.setDerivativeInstrumentAttributes(value);
 		}
 	};
 
@@ -241,7 +274,7 @@ public class SecurityInstrumentDescription13 {
 		return financialInstrumentGeneralAttributes;
 	}
 
-	public SecurityInstrumentDescription13 setFinancialInstrumentGeneralAttributes(com.tools20022.repository.msg.SecurityInstrumentDescription11 financialInstrumentGeneralAttributes) {
+	public SecurityInstrumentDescription13 setFinancialInstrumentGeneralAttributes(SecurityInstrumentDescription11 financialInstrumentGeneralAttributes) {
 		this.financialInstrumentGeneralAttributes = Objects.requireNonNull(financialInstrumentGeneralAttributes);
 		return this;
 	}
@@ -250,7 +283,7 @@ public class SecurityInstrumentDescription13 {
 		return debtInstrumentAttributes == null ? Optional.empty() : Optional.of(debtInstrumentAttributes);
 	}
 
-	public SecurityInstrumentDescription13 setDebtInstrumentAttributes(com.tools20022.repository.msg.DebtInstrument4 debtInstrumentAttributes) {
+	public SecurityInstrumentDescription13 setDebtInstrumentAttributes(DebtInstrument4 debtInstrumentAttributes) {
 		this.debtInstrumentAttributes = debtInstrumentAttributes;
 		return this;
 	}
@@ -259,7 +292,7 @@ public class SecurityInstrumentDescription13 {
 		return derivativeInstrumentAttributes;
 	}
 
-	public SecurityInstrumentDescription13 setDerivativeInstrumentAttributes(com.tools20022.repository.msg.DerivativeInstrument6 derivativeInstrumentAttributes) {
+	public SecurityInstrumentDescription13 setDerivativeInstrumentAttributes(DerivativeInstrument6 derivativeInstrumentAttributes) {
 		this.derivativeInstrumentAttributes = Objects.requireNonNull(derivativeInstrumentAttributes);
 		return this;
 	}

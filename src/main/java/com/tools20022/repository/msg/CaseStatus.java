@@ -125,7 +125,7 @@ public class CaseStatus {
 	 * definition} = "Date and time of the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseStatus, ISODateTime> mmDateTime = new MMMessageAttribute<CaseStatus, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseStatus.mmObject();
@@ -137,6 +137,16 @@ public class CaseStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CaseStatus obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(CaseStatus obj, ISODateTime value) {
+			obj.setDateTime(value);
 		}
 	};
 	@XmlElement(name = "CaseSts", required = true)
@@ -173,7 +183,7 @@ public class CaseStatus {
 	 * definition} = "Status of the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCaseStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseStatus, CaseStatus1Code> mmCaseStatus = new MMMessageAttribute<CaseStatus, CaseStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCaseStatus.mmCaseStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseStatus.mmObject();
@@ -185,6 +195,16 @@ public class CaseStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CaseStatus1Code.mmObject();
+		}
+
+		@Override
+		public CaseStatus1Code getValue(CaseStatus obj) {
+			return obj.getCaseStatus();
+		}
+
+		@Override
+		public void setValue(CaseStatus obj, CaseStatus1Code value) {
+			obj.setCaseStatus(value);
 		}
 	};
 	@XmlElement(name = "InvstgtnSts")
@@ -221,7 +241,7 @@ public class CaseStatus {
 	 * definition} = "Status of the investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestigationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseStatus, Optional<InvestigationExecutionConfirmation1Code>> mmInvestigationStatus = new MMMessageAttribute<CaseStatus, Optional<InvestigationExecutionConfirmation1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseStatus.mmObject();
@@ -233,6 +253,16 @@ public class CaseStatus {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> InvestigationExecutionConfirmation1Code.mmObject();
+		}
+
+		@Override
+		public Optional<InvestigationExecutionConfirmation1Code> getValue(CaseStatus obj) {
+			return obj.getInvestigationStatus();
+		}
+
+		@Override
+		public void setValue(CaseStatus obj, Optional<InvestigationExecutionConfirmation1Code> value) {
+			obj.setInvestigationStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -268,7 +298,7 @@ public class CaseStatus {
 	 * definition} = "Free text justification of the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseStatus, Optional<Max140Text>> mmReason = new MMMessageAttribute<CaseStatus, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseStatus.mmObject();
@@ -280,6 +310,16 @@ public class CaseStatus {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(CaseStatus obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CaseStatus obj, Optional<Max140Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

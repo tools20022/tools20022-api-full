@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max20000Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Presentation3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -107,7 +108,7 @@ public class Document11 {
 	 * definition} = "Type of document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document11, Optional<PresentationDocumentFormat1Choice>> mmType = new MMMessageAttribute<Document11, Optional<PresentationDocumentFormat1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document11.mmObject();
@@ -119,6 +120,16 @@ public class Document11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PresentationDocumentFormat1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PresentationDocumentFormat1Choice> getValue(Document11 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Document11 obj, Optional<PresentationDocumentFormat1Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Wrdg")
@@ -150,7 +161,7 @@ public class Document11 {
 	 * definition} = "Wording for document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWording = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document11, Optional<Max20000Text>> mmWording = new MMMessageAttribute<Document11, Optional<Max20000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document11.mmObject();
 			isDerived = false;
@@ -162,9 +173,19 @@ public class Document11 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max20000Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max20000Text> getValue(Document11 obj) {
+			return obj.getWording();
+		}
+
+		@Override
+		public void setValue(Document11 obj, Optional<Max20000Text> value) {
+			obj.setWording(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ElctrncDtls")
-	protected List<com.tools20022.repository.msg.Presentation3> electronicDetails;
+	protected List<Presentation3> electronicDetails;
 	/**
 	 * 
 	 <p>
@@ -195,7 +216,7 @@ public class Document11 {
 	 * definition} = "Details related to an electronic presentation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmElectronicDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Document11, List<Presentation3>> mmElectronicDetails = new MMMessageAssociationEnd<Document11, List<Presentation3>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmPresentation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document11.mmObject();
@@ -206,7 +227,17 @@ public class Document11 {
 			definition = "Details related to an electronic presentation.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Presentation3.mmObject();
+			type_lazy = () -> Presentation3.mmObject();
+		}
+
+		@Override
+		public List<Presentation3> getValue(Document11 obj) {
+			return obj.getElectronicDetails();
+		}
+
+		@Override
+		public void setValue(Document11 obj, List<Presentation3> value) {
+			obj.setElectronicDetails(value);
 		}
 	};
 
@@ -246,7 +277,7 @@ public class Document11 {
 		return electronicDetails == null ? electronicDetails = new ArrayList<>() : electronicDetails;
 	}
 
-	public Document11 setElectronicDetails(List<com.tools20022.repository.msg.Presentation3> electronicDetails) {
+	public Document11 setElectronicDetails(List<Presentation3> electronicDetails) {
 		this.electronicDetails = Objects.requireNonNull(electronicDetails);
 		return this;
 	}

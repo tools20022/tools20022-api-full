@@ -27,6 +27,8 @@ import com.tools20022.repository.codeset.Side1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AgreedRate3;
+import com.tools20022.repository.msg.SecurityIdentification18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -141,7 +143,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Coded list to specify the side of the trade leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, Side1Code> mmLegSide = new MMMessageAttribute<InstrumentLeg6, Side1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
@@ -153,6 +155,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Side1Code.mmObject();
+		}
+
+		@Override
+		public Side1Code getValue(InstrumentLeg6 obj) {
+			return obj.getLegSide();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, Side1Code value) {
+			obj.setLegSide(value);
 		}
 	};
 	@XmlElement(name = "LegSttlmTp", required = true)
@@ -184,7 +196,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Specifies the date of settlement, in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegSettlementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, SettlementDateCode> mmLegSettlementType = new MMMessageAttribute<InstrumentLeg6, SettlementDateCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -195,6 +207,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementDateCode.mmObject();
+		}
+
+		@Override
+		public SettlementDateCode getValue(InstrumentLeg6 obj) {
+			return obj.getLegSettlementType();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, SettlementDateCode value) {
+			obj.setLegSettlementType(value);
 		}
 	};
 	@XmlElement(name = "LegSttlmDt", required = true)
@@ -231,7 +253,7 @@ public class InstrumentLeg6 {
 	 * "Specifies the date and time on which the trade will be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, ISODateTime> mmLegSettlementDate = new MMMessageAttribute<InstrumentLeg6, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
@@ -243,6 +265,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(InstrumentLeg6 obj) {
+			return obj.getLegSettlementDate();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, ISODateTime value) {
+			obj.setLegSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "LegLastPric", required = true)
@@ -274,7 +306,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Execution price of trade leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegLastPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, ActiveCurrencyAnd13DecimalAmount> mmLegLastPrice = new MMMessageAttribute<InstrumentLeg6, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -285,6 +317,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(InstrumentLeg6 obj) {
+			return obj.getLegLastPrice();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setLegLastPrice(value);
 		}
 	};
 	@XmlElement(name = "LegSttlmCcy", required = true)
@@ -321,7 +363,7 @@ public class InstrumentLeg6 {
 	 * "Settlement currency of trade leg, agreed by both sides of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, CurrencyCode> mmLegSettlementCurrency = new MMMessageAttribute<InstrumentLeg6, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSettlementCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
@@ -333,6 +375,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(InstrumentLeg6 obj) {
+			return obj.getLegSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, CurrencyCode value) {
+			obj.setLegSettlementCurrency(value);
 		}
 	};
 	@XmlElement(name = "LegOrdrQty", required = true)
@@ -369,7 +421,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Amount of trade leg in trading currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegOrderQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, CurrencyAndAmount> mmLegOrderQuantity = new MMMessageAttribute<InstrumentLeg6, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
@@ -381,6 +433,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(InstrumentLeg6 obj) {
+			return obj.getLegOrderQuantity();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, CurrencyAndAmount value) {
+			obj.setLegOrderQuantity(value);
 		}
 	};
 	@XmlElement(name = "LegFwdPts", required = true)
@@ -414,7 +476,7 @@ public class InstrumentLeg6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegForwardPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, DecimalNumber> mmLegForwardPoints = new MMMessageAttribute<InstrumentLeg6, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -425,6 +487,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(InstrumentLeg6 obj) {
+			return obj.getLegForwardPoints();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, DecimalNumber value) {
+			obj.setLegForwardPoints(value);
 		}
 	};
 	@XmlElement(name = "LegClctdCtrPtyCcyLastQty", required = true)
@@ -458,7 +530,7 @@ public class InstrumentLeg6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegCalculatedCounterpartyCurrencyLastQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, CurrencyAndAmount> mmLegCalculatedCounterpartyCurrencyLastQuantity = new MMMessageAttribute<InstrumentLeg6, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -469,6 +541,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(InstrumentLeg6 obj) {
+			return obj.getLegCalculatedCounterpartyCurrencyLastQuantity();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, CurrencyAndAmount value) {
+			obj.setLegCalculatedCounterpartyCurrencyLastQuantity(value);
 		}
 	};
 	@XmlElement(name = "LegRskAmt", required = true)
@@ -502,7 +584,7 @@ public class InstrumentLeg6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegRiskAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, ActiveCurrencyAndAmount> mmLegRiskAmount = new MMMessageAttribute<InstrumentLeg6, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -513,6 +595,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InstrumentLeg6 obj) {
+			return obj.getLegRiskAmount();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, ActiveCurrencyAndAmount value) {
+			obj.setLegRiskAmount(value);
 		}
 	};
 	@XmlElement(name = "LegValtnRate", required = true)
@@ -547,7 +639,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Specifies the valuation rate used for the trade leg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegValuationRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstrumentLeg6, AgreedRate3> mmLegValuationRate = new MMMessageAssociationEnd<InstrumentLeg6, AgreedRate3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
@@ -559,7 +651,17 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
+			type_lazy = () -> AgreedRate3.mmObject();
+		}
+
+		@Override
+		public AgreedRate3 getValue(InstrumentLeg6 obj) {
+			return obj.getLegValuationRate();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, AgreedRate3 value) {
+			obj.setLegValuationRate(value);
 		}
 	};
 	@XmlElement(name = "LegValDt", required = true)
@@ -590,7 +692,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Specifies the value date of leg spot transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, ISODate> mmLegValueDate = new MMMessageAttribute<InstrumentLeg6, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -601,6 +703,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(InstrumentLeg6 obj) {
+			return obj.getLegValueDate();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, ISODate value) {
+			obj.setLegValueDate(value);
 		}
 	};
 	@XmlElement(name = "LegCcy", required = true)
@@ -636,7 +748,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Currency trade is conducted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, CurrencyCode> mmLegCurrency = new MMMessageAttribute<InstrumentLeg6, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Leg.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
@@ -648,6 +760,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(InstrumentLeg6 obj) {
+			return obj.getLegCurrency();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, CurrencyCode value) {
+			obj.setLegCurrency(value);
 		}
 	};
 	@XmlElement(name = "LegSymb", required = true)
@@ -678,7 +800,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Symbol of the leg trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegSymbol = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentLeg6, Max35Text> mmLegSymbol = new MMMessageAttribute<InstrumentLeg6, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -689,6 +811,16 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InstrumentLeg6 obj) {
+			return obj.getLegSymbol();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, Max35Text value) {
+			obj.setLegSymbol(value);
 		}
 	};
 	@XmlElement(name = "LegSctyId", required = true)
@@ -719,7 +851,7 @@ public class InstrumentLeg6 {
 	 * definition} = "Security identification of the leg trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstrumentLeg6, SecurityIdentification18> mmLegSecurityIdentification = new MMMessageAssociationEnd<InstrumentLeg6, SecurityIdentification18>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg6.mmObject();
 			isDerived = false;
@@ -730,7 +862,17 @@ public class InstrumentLeg6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification18.mmObject();
+			type_lazy = () -> SecurityIdentification18.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification18 getValue(InstrumentLeg6 obj) {
+			return obj.getLegSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(InstrumentLeg6 obj, SecurityIdentification18 value) {
+			obj.setLegSecurityIdentification(value);
 		}
 	};
 
@@ -839,7 +981,7 @@ public class InstrumentLeg6 {
 		return legValuationRate;
 	}
 
-	public InstrumentLeg6 setLegValuationRate(com.tools20022.repository.msg.AgreedRate3 legValuationRate) {
+	public InstrumentLeg6 setLegValuationRate(AgreedRate3 legValuationRate) {
 		this.legValuationRate = Objects.requireNonNull(legValuationRate);
 		return this;
 	}
@@ -875,7 +1017,7 @@ public class InstrumentLeg6 {
 		return legSecurityIdentification;
 	}
 
-	public InstrumentLeg6 setLegSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification18 legSecurityIdentification) {
+	public InstrumentLeg6 setLegSecurityIdentification(SecurityIdentification18 legSecurityIdentification) {
 		this.legSecurityIdentification = Objects.requireNonNull(legSecurityIdentification);
 		return this;
 	}

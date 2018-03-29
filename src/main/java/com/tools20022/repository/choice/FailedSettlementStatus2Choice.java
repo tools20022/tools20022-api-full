@@ -121,7 +121,7 @@ public class FailedSettlementStatus2Choice {
 	 * FailedSettlementStatus1.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailedSettlementStatus2Choice, Max350Text> mmReason = new MMMessageAttribute<FailedSettlementStatus2Choice, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FailedSettlementStatus2Choice.mmObject();
@@ -134,6 +134,16 @@ public class FailedSettlementStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(FailedSettlementStatus2Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(FailedSettlementStatus2Choice obj, Max350Text value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -175,7 +185,7 @@ public class FailedSettlementStatus2Choice {
 	 * FailedSettlementStatus1.mmDataSourceScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FailedSettlementStatus2Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<FailedSettlementStatus2Choice, GenericIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.FailedSettlementStatus2Choice.mmObject();
@@ -189,6 +199,16 @@ public class FailedSettlementStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(FailedSettlementStatus2Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(FailedSettlementStatus2Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -231,7 +251,7 @@ public class FailedSettlementStatus2Choice {
 	 * FailedSettlementStatus1.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailedSettlementStatus2Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<FailedSettlementStatus2Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FailedSettlementStatus2Choice.mmObject();
@@ -244,6 +264,16 @@ public class FailedSettlementStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(FailedSettlementStatus2Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(FailedSettlementStatus2Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

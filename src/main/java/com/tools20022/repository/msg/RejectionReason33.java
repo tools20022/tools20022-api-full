@@ -128,7 +128,7 @@ public class RejectionReason33 {
 	 * RejectionReason16.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionReason33, RejectedReason17Choice> mmReason = new MMMessageAssociationEnd<RejectionReason33, RejectedReason17Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason33.mmObject();
@@ -144,6 +144,16 @@ public class RejectionReason33 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedReason17Choice.mmObject();
+		}
+
+		@Override
+		public RejectedReason17Choice getValue(RejectionReason33 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectionReason33 obj, RejectedReason17Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -196,7 +206,7 @@ public class RejectionReason33 {
 	 * RejectionReason16.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason33, Optional<Max350Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RejectionReason33, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason33.mmObject();
@@ -211,6 +221,16 @@ public class RejectionReason33 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(RejectionReason33 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RejectionReason33 obj, Optional<Max350Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification53;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -146,7 +147,7 @@ public class Header12 {
 	 * Header3.mmDownloadTransfer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDownloadTransfer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header12, TrueFalseIndicator> mmDownloadTransfer = new MMMessageAttribute<Header12, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header12.mmObject();
 			isDerived = false;
@@ -159,6 +160,16 @@ public class Header12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(Header12 obj) {
+			return obj.getDownloadTransfer();
+		}
+
+		@Override
+		public void setValue(Header12 obj, TrueFalseIndicator value) {
+			obj.setDownloadTransfer(value);
 		}
 	};
 	@XmlElement(name = "FrmtVrsn", required = true)
@@ -201,7 +212,7 @@ public class Header12 {
 	 * Header3.mmFormatVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFormatVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header12, Max6Text> mmFormatVersion = new MMMessageAttribute<Header12, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header12.mmObject();
 			isDerived = false;
@@ -214,6 +225,16 @@ public class Header12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(Header12 obj) {
+			return obj.getFormatVersion();
+		}
+
+		@Override
+		public void setValue(Header12 obj, Max6Text value) {
+			obj.setFormatVersion(value);
 		}
 	};
 	@XmlElement(name = "XchgId", required = true)
@@ -258,7 +279,7 @@ public class Header12 {
 	 * Header3.mmExchangeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header12, Max3NumericText> mmExchangeIdentification = new MMMessageAttribute<Header12, Max3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header12.mmObject();
 			isDerived = false;
@@ -271,6 +292,16 @@ public class Header12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Max3NumericText getValue(Header12 obj) {
+			return obj.getExchangeIdentification();
+		}
+
+		@Override
+		public void setValue(Header12 obj, Max3NumericText value) {
+			obj.setExchangeIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -314,7 +345,7 @@ public class Header12 {
 	 * Header3.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header12, ISODateTime> mmCreationDateTime = new MMMessageAttribute<Header12, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header12.mmObject();
 			isDerived = false;
@@ -327,6 +358,16 @@ public class Header12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Header12 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Header12 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "InitgPty", required = true)
@@ -370,7 +411,7 @@ public class Header12 {
 	 * Header3.mmInitiatingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header12, GenericIdentification53> mmInitiatingParty = new MMMessageAssociationEnd<Header12, GenericIdentification53>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header12.mmObject();
 			isDerived = false;
@@ -383,7 +424,17 @@ public class Header12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
+			type_lazy = () -> GenericIdentification53.mmObject();
+		}
+
+		@Override
+		public GenericIdentification53 getValue(Header12 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(Header12 obj, GenericIdentification53 value) {
+			obj.setInitiatingParty(value);
 		}
 	};
 	@XmlElement(name = "RcptPty")
@@ -428,7 +479,7 @@ public class Header12 {
 	 * Header3.mmRecipientParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header12, Optional<GenericIdentification53>> mmRecipientParty = new MMMessageAssociationEnd<Header12, Optional<GenericIdentification53>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header12.mmObject();
 			isDerived = false;
@@ -441,7 +492,17 @@ public class Header12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
+			type_lazy = () -> GenericIdentification53.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification53> getValue(Header12 obj) {
+			return obj.getRecipientParty();
+		}
+
+		@Override
+		public void setValue(Header12 obj, Optional<GenericIdentification53> value) {
+			obj.setRecipientParty(value.orElse(null));
 		}
 	};
 
@@ -502,7 +563,7 @@ public class Header12 {
 		return initiatingParty;
 	}
 
-	public Header12 setInitiatingParty(com.tools20022.repository.msg.GenericIdentification53 initiatingParty) {
+	public Header12 setInitiatingParty(GenericIdentification53 initiatingParty) {
 		this.initiatingParty = Objects.requireNonNull(initiatingParty);
 		return this;
 	}
@@ -511,7 +572,7 @@ public class Header12 {
 		return recipientParty == null ? Optional.empty() : Optional.of(recipientParty);
 	}
 
-	public Header12 setRecipientParty(com.tools20022.repository.msg.GenericIdentification53 recipientParty) {
+	public Header12 setRecipientParty(GenericIdentification53 recipientParty) {
 		this.recipientParty = recipientParty;
 		return this;
 	}

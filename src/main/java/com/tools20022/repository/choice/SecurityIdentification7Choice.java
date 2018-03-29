@@ -111,7 +111,7 @@ public class SecurityIdentification7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification7Choice, ISINIdentifier> mmISIN = new MMMessageAttribute<SecurityIdentification7Choice, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification7Choice.mmObject();
@@ -123,6 +123,16 @@ public class SecurityIdentification7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(SecurityIdentification7Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification7Choice obj, ISINIdentifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "OthrPrtryId", required = true)
@@ -162,7 +172,7 @@ public class SecurityIdentification7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification7Choice, AlternateSecurityIdentification4> mmOtherProprietaryIdentification = new MMMessageAttribute<SecurityIdentification7Choice, AlternateSecurityIdentification4>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification7Choice.mmObject();
@@ -174,6 +184,16 @@ public class SecurityIdentification7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AlternateSecurityIdentification4.mmObject();
+		}
+
+		@Override
+		public AlternateSecurityIdentification4 getValue(SecurityIdentification7Choice obj) {
+			return obj.getOtherProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification7Choice obj, AlternateSecurityIdentification4 value) {
+			obj.setOtherProprietaryIdentification(value);
 		}
 	};
 

@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.CorporateActionInformationStatus1Choice;
 import com.tools20022.repository.msg.CorporateActionAdditionalInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +126,7 @@ public class AgentCAInformationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAInformationStatusAdviceV01, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<AgentCAInformationStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class AgentCAInformationStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAInformationStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCAInformationStatusAdviceV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCAInformationStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AgtCAInfAdvcId", required = true)
@@ -173,7 +174,7 @@ public class AgentCAInformationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgentCAInformationAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAInformationStatusAdviceV01, DocumentIdentification8> mmAgentCAInformationAdviceIdentification = new MMMessageBuildingBlock<AgentCAInformationStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "AgtCAInfAdvcId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class AgentCAInformationStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAInformationStatusAdviceV01.class.getMethod("getAgentCAInformationAdviceIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCAInformationStatusAdviceV01 obj) {
+			return obj.getAgentCAInformationAdviceIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCAInformationStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setAgentCAInformationAdviceIdentification(value);
 		}
 	};
 	@XmlElement(name = "CorpActnAddtlInf")
@@ -219,7 +222,7 @@ public class AgentCAInformationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionAdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAInformationStatusAdviceV01, Optional<CorporateActionAdditionalInformation1>> mmCorporateActionAdditionalInformation = new MMMessageBuildingBlock<AgentCAInformationStatusAdviceV01, Optional<CorporateActionAdditionalInformation1>>() {
 		{
 			xmlTag = "CorpActnAddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +233,14 @@ public class AgentCAInformationStatusAdviceV01 {
 			complexType_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAInformationStatusAdviceV01.class.getMethod("getCorporateActionAdditionalInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CorporateActionAdditionalInformation1> getValue(AgentCAInformationStatusAdviceV01 obj) {
+			return obj.getCorporateActionAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AgentCAInformationStatusAdviceV01 obj, Optional<CorporateActionAdditionalInformation1> value) {
+			obj.setCorporateActionAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InfStsDtls", required = true)
@@ -263,7 +268,7 @@ public class AgentCAInformationStatusAdviceV01 {
 	 * definition} = "Status of the information advice sent by the CSD."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInformationStatusDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAInformationStatusAdviceV01, CorporateActionInformationStatus1Choice> mmInformationStatusDetails = new MMMessageBuildingBlock<AgentCAInformationStatusAdviceV01, CorporateActionInformationStatus1Choice>() {
 		{
 			xmlTag = "InfStsDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,12 +279,14 @@ public class AgentCAInformationStatusAdviceV01 {
 			complexType_lazy = () -> CorporateActionInformationStatus1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAInformationStatusAdviceV01.class.getMethod("getInformationStatusDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInformationStatus1Choice getValue(AgentCAInformationStatusAdviceV01 obj) {
+			return obj.getInformationStatusDetails();
+		}
+
+		@Override
+		public void setValue(AgentCAInformationStatusAdviceV01 obj, CorporateActionInformationStatus1Choice value) {
+			obj.setInformationStatusDetails(value);
 		}
 	};
 

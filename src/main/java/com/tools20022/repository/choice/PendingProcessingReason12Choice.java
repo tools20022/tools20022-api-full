@@ -124,7 +124,7 @@ public class PendingProcessingReason12Choice {
 	 * PendingProcessingReason5Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingReason12Choice, PendingProcessingReason3Code> mmCode = new MMMessageAttribute<PendingProcessingReason12Choice, PendingProcessingReason3Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason12Choice.mmObject();
@@ -138,6 +138,16 @@ public class PendingProcessingReason12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingProcessingReason3Code.mmObject();
+		}
+
+		@Override
+		public PendingProcessingReason3Code getValue(PendingProcessingReason12Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason12Choice obj, PendingProcessingReason3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +195,7 @@ public class PendingProcessingReason12Choice {
 	 * PendingProcessingReason5Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingReason12Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<PendingProcessingReason12Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason12Choice.mmObject();
@@ -199,6 +209,16 @@ public class PendingProcessingReason12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(PendingProcessingReason12Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason12Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

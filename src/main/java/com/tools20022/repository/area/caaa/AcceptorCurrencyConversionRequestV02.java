@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorCurrencyConversionRequest2;
 import com.tools20022.repository.msg.ContentInformationType11;
 import com.tools20022.repository.msg.Header10;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +137,7 @@ public class AcceptorCurrencyConversionRequestV02 {
 	 * AcceptorCurrencyConversionRequestV01.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCurrencyConversionRequestV02, Header10> mmHeader = new MMMessageBuildingBlock<AcceptorCurrencyConversionRequestV02, Header10>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,12 +150,14 @@ public class AcceptorCurrencyConversionRequestV02 {
 			complexType_lazy = () -> Header10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCurrencyConversionRequestV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header10 getValue(AcceptorCurrencyConversionRequestV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorCurrencyConversionRequestV02 obj, Header10 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "CcyConvsReq", required = true)
@@ -197,7 +198,7 @@ public class AcceptorCurrencyConversionRequestV02 {
 	 * AcceptorCurrencyConversionRequestV01.mmCurrencyConversionRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCurrencyConversionRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCurrencyConversionRequestV02, AcceptorCurrencyConversionRequest2> mmCurrencyConversionRequest = new MMMessageBuildingBlock<AcceptorCurrencyConversionRequestV02, AcceptorCurrencyConversionRequest2>() {
 		{
 			xmlTag = "CcyConvsReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +211,14 @@ public class AcceptorCurrencyConversionRequestV02 {
 			complexType_lazy = () -> AcceptorCurrencyConversionRequest2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCurrencyConversionRequestV02.class.getMethod("getCurrencyConversionRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorCurrencyConversionRequest2 getValue(AcceptorCurrencyConversionRequestV02 obj) {
+			return obj.getCurrencyConversionRequest();
+		}
+
+		@Override
+		public void setValue(AcceptorCurrencyConversionRequestV02 obj, AcceptorCurrencyConversionRequest2 value) {
+			obj.setCurrencyConversionRequest(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -256,7 +259,7 @@ public class AcceptorCurrencyConversionRequestV02 {
 	 * AcceptorCurrencyConversionRequestV01.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCurrencyConversionRequestV02, ContentInformationType11> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorCurrencyConversionRequestV02, ContentInformationType11>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +272,14 @@ public class AcceptorCurrencyConversionRequestV02 {
 			complexType_lazy = () -> ContentInformationType11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCurrencyConversionRequestV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType11 getValue(AcceptorCurrencyConversionRequestV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorCurrencyConversionRequestV02 obj, ContentInformationType11 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

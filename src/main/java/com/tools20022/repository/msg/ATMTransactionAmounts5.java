@@ -108,7 +108,7 @@ public class ATMTransactionAmounts5 {
 	 * ATMTransactionAmounts4.mmDisplayFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisplayFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts5, Optional<TrueFalseIndicator>> mmDisplayFlag = new MMMessageAttribute<ATMTransactionAmounts5, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts5.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class ATMTransactionAmounts5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMTransactionAmounts5 obj) {
+			return obj.getDisplayFlag();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts5 obj, Optional<TrueFalseIndicator> value) {
+			obj.setDisplayFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAmt")
@@ -157,7 +167,7 @@ public class ATMTransactionAmounts5 {
 	 * ATMTransactionAmounts4.mmAvailableAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts5, Optional<ImpliedCurrencyAndAmount>> mmMaximumAmount = new MMMessageAttribute<ATMTransactionAmounts5, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts5.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class ATMTransactionAmounts5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTransactionAmounts5 obj) {
+			return obj.getMaximumAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts5 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumAmount(value.orElse(null));
 		}
 	};
 

@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DerivativeBasicAttributes1;
+import com.tools20022.repository.msg.FinancialInstrumentAttributes2;
+import com.tools20022.repository.msg.SecurityIdentification11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +114,7 @@ public class FinancialInstrument2 {
 	 * definition} = "Identification of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument2, SecurityIdentification11> mmIdentification = new MMMessageAssociationEnd<FinancialInstrument2, SecurityIdentification11>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument2.mmObject();
@@ -123,7 +126,17 @@ public class FinancialInstrument2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
+			type_lazy = () -> SecurityIdentification11.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification11 getValue(FinancialInstrument2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument2 obj, SecurityIdentification11 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Attrbts")
@@ -159,7 +172,7 @@ public class FinancialInstrument2 {
 	 * definition} = "Elements characterising a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument2, Optional<FinancialInstrumentAttributes2>> mmAttributes = new MMMessageAssociationEnd<FinancialInstrument2, Optional<FinancialInstrumentAttributes2>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument2.mmObject();
@@ -171,7 +184,17 @@ public class FinancialInstrument2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentAttributes2> getValue(FinancialInstrument2 obj) {
+			return obj.getAttributes();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument2 obj, Optional<FinancialInstrumentAttributes2> value) {
+			obj.setAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlDerivAttrbts")
@@ -208,7 +231,7 @@ public class FinancialInstrument2 {
 	 * definition} = "Details of the swap contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalDerivativeAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument2, Optional<DerivativeBasicAttributes1>> mmAdditionalDerivativeAttributes = new MMMessageAssociationEnd<FinancialInstrument2, Optional<DerivativeBasicAttributes1>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument2.mmObject();
@@ -220,7 +243,17 @@ public class FinancialInstrument2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeBasicAttributes1.mmObject();
+			type_lazy = () -> DerivativeBasicAttributes1.mmObject();
+		}
+
+		@Override
+		public Optional<DerivativeBasicAttributes1> getValue(FinancialInstrument2 obj) {
+			return obj.getAdditionalDerivativeAttributes();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument2 obj, Optional<DerivativeBasicAttributes1> value) {
+			obj.setAdditionalDerivativeAttributes(value.orElse(null));
 		}
 	};
 
@@ -243,7 +276,7 @@ public class FinancialInstrument2 {
 		return identification;
 	}
 
-	public FinancialInstrument2 setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
+	public FinancialInstrument2 setIdentification(SecurityIdentification11 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -252,7 +285,7 @@ public class FinancialInstrument2 {
 		return attributes == null ? Optional.empty() : Optional.of(attributes);
 	}
 
-	public FinancialInstrument2 setAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes2 attributes) {
+	public FinancialInstrument2 setAttributes(FinancialInstrumentAttributes2 attributes) {
 		this.attributes = attributes;
 		return this;
 	}
@@ -261,7 +294,7 @@ public class FinancialInstrument2 {
 		return additionalDerivativeAttributes == null ? Optional.empty() : Optional.of(additionalDerivativeAttributes);
 	}
 
-	public FinancialInstrument2 setAdditionalDerivativeAttributes(com.tools20022.repository.msg.DerivativeBasicAttributes1 additionalDerivativeAttributes) {
+	public FinancialInstrument2 setAdditionalDerivativeAttributes(DerivativeBasicAttributes1 additionalDerivativeAttributes) {
 		this.additionalDerivativeAttributes = additionalDerivativeAttributes;
 		return this;
 	}

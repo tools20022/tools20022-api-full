@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.RegulatoryReportingType1Code;
 import com.tools20022.repository.entity.RegulatoryReport;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RegulatoryAuthority;
+import com.tools20022.repository.msg.StructuredRegulatoryReporting2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -113,7 +115,7 @@ public class RegulatoryReporting2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebitCreditReportingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryReporting2, Optional<RegulatoryReportingType1Code>> mmDebitCreditReportingIndicator = new MMMessageAttribute<RegulatoryReporting2, Optional<RegulatoryReportingType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmDebitCreditReportingIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting2.mmObject();
@@ -125,6 +127,16 @@ public class RegulatoryReporting2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RegulatoryReportingType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<RegulatoryReportingType1Code> getValue(RegulatoryReporting2 obj) {
+			return obj.getDebitCreditReportingIndicator();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting2 obj, Optional<RegulatoryReportingType1Code> value) {
+			obj.setDebitCreditReportingIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Authrty")
@@ -160,7 +172,7 @@ public class RegulatoryReporting2 {
 	 * definition} = "Entity requiring the regulatory reporting information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthority = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RegulatoryReporting2, Optional<RegulatoryAuthority>> mmAuthority = new MMMessageAssociationEnd<RegulatoryReporting2, Optional<RegulatoryAuthority>>() {
 		{
 			businessElementTrace_lazy = () -> RegulatoryReport.mmAuthority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting2.mmObject();
@@ -172,7 +184,17 @@ public class RegulatoryReporting2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RegulatoryAuthority.mmObject();
+			type_lazy = () -> RegulatoryAuthority.mmObject();
+		}
+
+		@Override
+		public Optional<RegulatoryAuthority> getValue(RegulatoryReporting2 obj) {
+			return obj.getAuthority();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting2 obj, Optional<RegulatoryAuthority> value) {
+			obj.setAuthority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RgltryDtls")
@@ -209,7 +231,7 @@ public class RegulatoryReporting2 {
 	 * definition} = "Details related to the regulatory reporting information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegulatoryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RegulatoryReporting2, Optional<StructuredRegulatoryReporting2>> mmRegulatoryDetails = new MMMessageAssociationEnd<RegulatoryReporting2, Optional<StructuredRegulatoryReporting2>>() {
 		{
 			businessComponentTrace_lazy = () -> RegulatoryReport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting2.mmObject();
@@ -221,7 +243,17 @@ public class RegulatoryReporting2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StructuredRegulatoryReporting2.mmObject();
+			type_lazy = () -> StructuredRegulatoryReporting2.mmObject();
+		}
+
+		@Override
+		public Optional<StructuredRegulatoryReporting2> getValue(RegulatoryReporting2 obj) {
+			return obj.getRegulatoryDetails();
+		}
+
+		@Override
+		public void setValue(RegulatoryReporting2 obj, Optional<StructuredRegulatoryReporting2> value) {
+			obj.setRegulatoryDetails(value.orElse(null));
 		}
 	};
 
@@ -253,7 +285,7 @@ public class RegulatoryReporting2 {
 		return authority == null ? Optional.empty() : Optional.of(authority);
 	}
 
-	public RegulatoryReporting2 setAuthority(com.tools20022.repository.msg.RegulatoryAuthority authority) {
+	public RegulatoryReporting2 setAuthority(RegulatoryAuthority authority) {
 		this.authority = authority;
 		return this;
 	}
@@ -262,7 +294,7 @@ public class RegulatoryReporting2 {
 		return regulatoryDetails == null ? Optional.empty() : Optional.of(regulatoryDetails);
 	}
 
-	public RegulatoryReporting2 setRegulatoryDetails(com.tools20022.repository.msg.StructuredRegulatoryReporting2 regulatoryDetails) {
+	public RegulatoryReporting2 setRegulatoryDetails(StructuredRegulatoryReporting2 regulatoryDetails) {
 		this.regulatoryDetails = regulatoryDetails;
 		return this;
 	}

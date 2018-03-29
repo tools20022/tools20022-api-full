@@ -30,6 +30,7 @@ import com.tools20022.repository.codeset.TradeCertificateType1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -182,7 +183,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateDataSet2, DocumentIdentification1> mmDataSetIdentification = new MMMessageAssociationEnd<CertificateDataSet2, DocumentIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -195,7 +196,17 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
+			type_lazy = () -> DocumentIdentification1.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification1 getValue(CertificateDataSet2 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, DocumentIdentification1 value) {
+			obj.setDataSetIdentification(value);
 		}
 	};
 	@XmlElement(name = "CertTp", required = true)
@@ -238,7 +249,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmCertificateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateDataSet2, TradeCertificateType1Code> mmCertificateType = new MMMessageAttribute<CertificateDataSet2, TradeCertificateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> TradeCertificate.mmCertificateType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -252,9 +263,19 @@ public class CertificateDataSet2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeCertificateType1Code.mmObject();
 		}
+
+		@Override
+		public TradeCertificateType1Code getValue(CertificateDataSet2 obj) {
+			return obj.getCertificateType();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, TradeCertificateType1Code value) {
+			obj.setCertificateType(value);
+		}
 	};
 	@XmlElement(name = "LineItm")
-	protected List<com.tools20022.repository.msg.LineItemAndPOIdentification1> lineItem;
+	protected List<LineItemAndPOIdentification1> lineItem;
 	/**
 	 * 
 	 <p>
@@ -295,7 +316,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmLineItem}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLineItem = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateDataSet2, List<LineItemAndPOIdentification1>> mmLineItem = new MMMessageAttribute<CertificateDataSet2, List<LineItemAndPOIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmLineItem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -306,7 +327,17 @@ public class CertificateDataSet2 {
 			definition = "Specifies if the certificate data set is required in relation to specific line items, and which line items.";
 			previousVersion_lazy = () -> CertificateDataSet1.mmLineItem;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.LineItemAndPOIdentification1.mmObject();
+			complexType_lazy = () -> LineItemAndPOIdentification1.mmObject();
+		}
+
+		@Override
+		public List<LineItemAndPOIdentification1> getValue(CertificateDataSet2 obj) {
+			return obj.getLineItem();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, List<LineItemAndPOIdentification1> value) {
+			obj.setLineItem(value);
 		}
 	};
 	@XmlElement(name = "CertfdChrtcs", required = true)
@@ -350,7 +381,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmCertifiedCharacteristics}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertifiedCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateDataSet2, CertifiedCharacteristics2Choice> mmCertifiedCharacteristics = new MMMessageAssociationEnd<CertificateDataSet2, CertifiedCharacteristics2Choice>() {
 		{
 			businessElementTrace_lazy = () -> ProductDelivery.mmProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -364,6 +395,16 @@ public class CertificateDataSet2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CertifiedCharacteristics2Choice.mmObject();
+		}
+
+		@Override
+		public CertifiedCharacteristics2Choice getValue(CertificateDataSet2 obj) {
+			return obj.getCertifiedCharacteristics();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, CertifiedCharacteristics2Choice value) {
+			obj.setCertifiedCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "IsseDt", required = true)
@@ -405,7 +446,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmIssueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateDataSet2, ISODate> mmIssueDate = new MMMessageAttribute<CertificateDataSet2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -418,6 +459,16 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CertificateDataSet2 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, ISODate value) {
+			obj.setIssueDate(value);
 		}
 	};
 	@XmlElement(name = "PlcOfIsse")
@@ -459,7 +510,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmPlaceOfIssue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateDataSet2, Optional<PostalAddress5>> mmPlaceOfIssue = new MMMessageAttribute<CertificateDataSet2, Optional<PostalAddress5>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmPlaceOfIssue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -471,7 +522,17 @@ public class CertificateDataSet2 {
 			previousVersion_lazy = () -> CertificateDataSet1.mmPlaceOfIssue;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PostalAddress5.mmObject();
+			complexType_lazy = () -> PostalAddress5.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress5> getValue(CertificateDataSet2 obj) {
+			return obj.getPlaceOfIssue();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, Optional<PostalAddress5> value) {
+			obj.setPlaceOfIssue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -514,7 +575,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateDataSet2, PartyIdentification26> mmIssuer = new MMMessageAssociationEnd<CertificateDataSet2, PartyIdentification26>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -527,7 +588,17 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public PartyIdentification26 getValue(CertificateDataSet2 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, PartyIdentification26 value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "InspctnDt")
@@ -570,7 +641,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmInspectionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInspectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateDataSet2, Optional<DatePeriodDetails>> mmInspectionDate = new MMMessageAttribute<CertificateDataSet2, Optional<DatePeriodDetails>>() {
 		{
 			businessElementTrace_lazy = () -> TradeCertificate.mmInspectionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -582,7 +653,17 @@ public class CertificateDataSet2 {
 			previousVersion_lazy = () -> CertificateDataSet1.mmInspectionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
+			complexType_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodDetails> getValue(CertificateDataSet2 obj) {
+			return obj.getInspectionDate();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, Optional<DatePeriodDetails> value) {
+			obj.setInspectionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthrsdInspctrInd")
@@ -622,7 +703,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmAuthorisedInspectorIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisedInspectorIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateDataSet2, Optional<YesNoIndicator>> mmAuthorisedInspectorIndicator = new MMMessageAttribute<CertificateDataSet2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
 			isDerived = false;
@@ -634,6 +715,16 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CertificateDataSet2 obj) {
+			return obj.getAuthorisedInspectorIndicator();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, Optional<YesNoIndicator> value) {
+			obj.setAuthorisedInspectorIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertId", required = true)
@@ -675,7 +766,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmCertificateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateDataSet2, Max35Text> mmCertificateIdentification = new MMMessageAttribute<CertificateDataSet2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -688,6 +779,16 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CertificateDataSet2 obj) {
+			return obj.getCertificateIdentification();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, Max35Text value) {
+			obj.setCertificateIdentification(value);
 		}
 	};
 	@XmlElement(name = "Trnsprt")
@@ -730,7 +831,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateDataSet2, Optional<SingleTransport3>> mmTransport = new MMMessageAssociationEnd<CertificateDataSet2, Optional<SingleTransport3>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmTransport;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -743,7 +844,17 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SingleTransport3.mmObject();
+			type_lazy = () -> SingleTransport3.mmObject();
+		}
+
+		@Override
+		public Optional<SingleTransport3> getValue(CertificateDataSet2 obj) {
+			return obj.getTransport();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, Optional<SingleTransport3> value) {
+			obj.setTransport(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GoodsDesc")
@@ -786,7 +897,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmGoodsDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGoodsDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateDataSet2, Optional<Max70Text>> mmGoodsDescription = new MMMessageAttribute<CertificateDataSet2, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -799,6 +910,16 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CertificateDataSet2 obj) {
+			return obj.getGoodsDescription();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, Optional<Max70Text> value) {
+			obj.setGoodsDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Consgnr")
@@ -839,7 +960,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmConsignor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsignor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateDataSet2, Optional<PartyIdentification26>> mmConsignor = new MMMessageAssociationEnd<CertificateDataSet2, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -852,7 +973,17 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(CertificateDataSet2 obj) {
+			return obj.getConsignor();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, Optional<PartyIdentification26> value) {
+			obj.setConsignor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Consgn")
@@ -895,7 +1026,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmConsignee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateDataSet2, Optional<PartyIdentification26>> mmConsignee = new MMMessageAssociationEnd<CertificateDataSet2, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -908,7 +1039,17 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(CertificateDataSet2 obj) {
+			return obj.getConsignee();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, Optional<PartyIdentification26> value) {
+			obj.setConsignee(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Manfctr")
@@ -950,7 +1091,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmManufacturer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmManufacturer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificateDataSet2, Optional<PartyIdentification26>> mmManufacturer = new MMMessageAssociationEnd<CertificateDataSet2, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
@@ -963,7 +1104,17 @@ public class CertificateDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(CertificateDataSet2 obj) {
+			return obj.getManufacturer();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, Optional<PartyIdentification26> value) {
+			obj.setManufacturer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -1002,7 +1153,7 @@ public class CertificateDataSet2 {
 	 * CertificateDataSet1.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificateDataSet2, List<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CertificateDataSet2, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificateDataSet2.mmObject();
 			isDerived = false;
@@ -1013,6 +1164,16 @@ public class CertificateDataSet2 {
 			previousVersion_lazy = () -> CertificateDataSet1.mmAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CertificateDataSet2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CertificateDataSet2 obj, List<Max350Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -1042,7 +1203,7 @@ public class CertificateDataSet2 {
 		return dataSetIdentification;
 	}
 
-	public CertificateDataSet2 setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
+	public CertificateDataSet2 setDataSetIdentification(DocumentIdentification1 dataSetIdentification) {
 		this.dataSetIdentification = Objects.requireNonNull(dataSetIdentification);
 		return this;
 	}
@@ -1060,7 +1221,7 @@ public class CertificateDataSet2 {
 		return lineItem == null ? lineItem = new ArrayList<>() : lineItem;
 	}
 
-	public CertificateDataSet2 setLineItem(List<com.tools20022.repository.msg.LineItemAndPOIdentification1> lineItem) {
+	public CertificateDataSet2 setLineItem(List<LineItemAndPOIdentification1> lineItem) {
 		this.lineItem = Objects.requireNonNull(lineItem);
 		return this;
 	}
@@ -1087,7 +1248,7 @@ public class CertificateDataSet2 {
 		return placeOfIssue == null ? Optional.empty() : Optional.of(placeOfIssue);
 	}
 
-	public CertificateDataSet2 setPlaceOfIssue(com.tools20022.repository.msg.PostalAddress5 placeOfIssue) {
+	public CertificateDataSet2 setPlaceOfIssue(PostalAddress5 placeOfIssue) {
 		this.placeOfIssue = placeOfIssue;
 		return this;
 	}
@@ -1096,7 +1257,7 @@ public class CertificateDataSet2 {
 		return issuer;
 	}
 
-	public CertificateDataSet2 setIssuer(com.tools20022.repository.msg.PartyIdentification26 issuer) {
+	public CertificateDataSet2 setIssuer(PartyIdentification26 issuer) {
 		this.issuer = Objects.requireNonNull(issuer);
 		return this;
 	}
@@ -1105,7 +1266,7 @@ public class CertificateDataSet2 {
 		return inspectionDate == null ? Optional.empty() : Optional.of(inspectionDate);
 	}
 
-	public CertificateDataSet2 setInspectionDate(com.tools20022.repository.msg.DatePeriodDetails inspectionDate) {
+	public CertificateDataSet2 setInspectionDate(DatePeriodDetails inspectionDate) {
 		this.inspectionDate = inspectionDate;
 		return this;
 	}
@@ -1132,7 +1293,7 @@ public class CertificateDataSet2 {
 		return transport == null ? Optional.empty() : Optional.of(transport);
 	}
 
-	public CertificateDataSet2 setTransport(com.tools20022.repository.msg.SingleTransport3 transport) {
+	public CertificateDataSet2 setTransport(SingleTransport3 transport) {
 		this.transport = transport;
 		return this;
 	}
@@ -1150,7 +1311,7 @@ public class CertificateDataSet2 {
 		return consignor == null ? Optional.empty() : Optional.of(consignor);
 	}
 
-	public CertificateDataSet2 setConsignor(com.tools20022.repository.msg.PartyIdentification26 consignor) {
+	public CertificateDataSet2 setConsignor(PartyIdentification26 consignor) {
 		this.consignor = consignor;
 		return this;
 	}
@@ -1159,7 +1320,7 @@ public class CertificateDataSet2 {
 		return consignee == null ? Optional.empty() : Optional.of(consignee);
 	}
 
-	public CertificateDataSet2 setConsignee(com.tools20022.repository.msg.PartyIdentification26 consignee) {
+	public CertificateDataSet2 setConsignee(PartyIdentification26 consignee) {
 		this.consignee = consignee;
 		return this;
 	}
@@ -1168,7 +1329,7 @@ public class CertificateDataSet2 {
 		return manufacturer == null ? Optional.empty() : Optional.of(manufacturer);
 	}
 
-	public CertificateDataSet2 setManufacturer(com.tools20022.repository.msg.PartyIdentification26 manufacturer) {
+	public CertificateDataSet2 setManufacturer(PartyIdentification26 manufacturer) {
 		this.manufacturer = manufacturer;
 		return this;
 	}

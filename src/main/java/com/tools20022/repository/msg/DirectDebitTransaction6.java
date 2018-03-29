@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.DirectDebit;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MandateRelatedInformation6;
+import com.tools20022.repository.msg.PartyIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -119,7 +121,7 @@ public class DirectDebitTransaction6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMandateRelatedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectDebitTransaction6, Optional<MandateRelatedInformation6>> mmMandateRelatedInformation = new MMMessageAssociationEnd<DirectDebitTransaction6, Optional<MandateRelatedInformation6>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmDirectDebitMandate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction6.mmObject();
@@ -131,7 +133,17 @@ public class DirectDebitTransaction6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation6.mmObject();
+			type_lazy = () -> MandateRelatedInformation6.mmObject();
+		}
+
+		@Override
+		public Optional<MandateRelatedInformation6> getValue(DirectDebitTransaction6 obj) {
+			return obj.getMandateRelatedInformation();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction6 obj, Optional<MandateRelatedInformation6> value) {
+			obj.setMandateRelatedInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrSchmeId")
@@ -167,7 +179,7 @@ public class DirectDebitTransaction6 {
 	 * definition} = "Credit party that signs the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorSchemeIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectDebitTransaction6, Optional<PartyIdentification32>> mmCreditorSchemeIdentification = new MMMessageAssociationEnd<DirectDebitTransaction6, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction6.mmObject();
@@ -179,7 +191,17 @@ public class DirectDebitTransaction6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(DirectDebitTransaction6 obj) {
+			return obj.getCreditorSchemeIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction6 obj, Optional<PartyIdentification32> value) {
+			obj.setCreditorSchemeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PreNtfctnId")
@@ -218,7 +240,7 @@ public class DirectDebitTransaction6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitTransaction6, Optional<Max35Text>> mmPreNotificationIdentification = new MMMessageAttribute<DirectDebitTransaction6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmPreNotificationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction6.mmObject();
@@ -230,6 +252,16 @@ public class DirectDebitTransaction6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DirectDebitTransaction6 obj) {
+			return obj.getPreNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction6 obj, Optional<Max35Text> value) {
+			obj.setPreNotificationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PreNtfctnDt")
@@ -268,7 +300,7 @@ public class DirectDebitTransaction6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreNotificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DirectDebitTransaction6, Optional<ISODate>> mmPreNotificationDate = new MMMessageAttribute<DirectDebitTransaction6, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebit.mmPreNotificationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectDebitTransaction6.mmObject();
@@ -280,6 +312,16 @@ public class DirectDebitTransaction6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DirectDebitTransaction6 obj) {
+			return obj.getPreNotificationDate();
+		}
+
+		@Override
+		public void setValue(DirectDebitTransaction6 obj, Optional<ISODate> value) {
+			obj.setPreNotificationDate(value.orElse(null));
 		}
 	};
 
@@ -302,7 +344,7 @@ public class DirectDebitTransaction6 {
 		return mandateRelatedInformation == null ? Optional.empty() : Optional.of(mandateRelatedInformation);
 	}
 
-	public DirectDebitTransaction6 setMandateRelatedInformation(com.tools20022.repository.msg.MandateRelatedInformation6 mandateRelatedInformation) {
+	public DirectDebitTransaction6 setMandateRelatedInformation(MandateRelatedInformation6 mandateRelatedInformation) {
 		this.mandateRelatedInformation = mandateRelatedInformation;
 		return this;
 	}
@@ -311,7 +353,7 @@ public class DirectDebitTransaction6 {
 		return creditorSchemeIdentification == null ? Optional.empty() : Optional.of(creditorSchemeIdentification);
 	}
 
-	public DirectDebitTransaction6 setCreditorSchemeIdentification(com.tools20022.repository.msg.PartyIdentification32 creditorSchemeIdentification) {
+	public DirectDebitTransaction6 setCreditorSchemeIdentification(PartyIdentification32 creditorSchemeIdentification) {
 		this.creditorSchemeIdentification = creditorSchemeIdentification;
 		return this;
 	}

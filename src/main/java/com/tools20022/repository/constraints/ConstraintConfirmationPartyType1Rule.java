@@ -54,12 +54,16 @@ public class ConstraintConfirmationPartyType1Rule {
 	 */
 	public static final MMConstraint<Undertaking3> forUndertaking3 = new MMConstraint<Undertaking3>() {
 		{
-			validator = ConstraintConfirmationPartyType1Rule::checkUndertaking3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationPartyType1Rule";
 			definition = "If ConfirmationIndicator is \"true', then ConfirmationPartyType must be \"CONF\".";
 			owner_lazy = () -> Undertaking3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ConfirmationPartyType</leftOperand><rightOperand>CONF</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ConfirmationIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Undertaking3 obj) throws Exception {
+			checkUndertaking3(obj);
 		}
 	};
 

@@ -118,7 +118,7 @@ public class Charge22 {
 	 * definition} = "Type of service for which a charge is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge22, ChargeType15Code> mmType = new MMMessageAttribute<Charge22, ChargeType15Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge22.mmObject();
@@ -130,6 +130,16 @@ public class Charge22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType15Code.mmObject();
+		}
+
+		@Override
+		public ChargeType15Code getValue(Charge22 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Charge22 obj, ChargeType15Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -166,7 +176,7 @@ public class Charge22 {
 	 * definition} = "Amount of money asked or paid for the charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge22, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Charge22, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge22.mmObject();
@@ -178,6 +188,16 @@ public class Charge22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(Charge22 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Charge22 obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -214,7 +234,7 @@ public class Charge22 {
 	 * definition} = "Rate used to calculate the amount of the charge or fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge22, PercentageRate> mmRate = new MMMessageAttribute<Charge22, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge22.mmObject();
@@ -226,6 +246,16 @@ public class Charge22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Charge22 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Charge22 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	/**

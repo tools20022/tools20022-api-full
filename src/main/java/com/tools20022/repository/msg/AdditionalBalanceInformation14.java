@@ -141,7 +141,7 @@ public class AdditionalBalanceInformation14 {
 	 * AdditionalBalanceInformation6.mmSubBalanceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalBalanceInformation14, SubBalanceType12Choice> mmSubBalanceType = new MMMessageAttribute<AdditionalBalanceInformation14, SubBalanceType12Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation14.mmObject();
@@ -155,6 +155,16 @@ public class AdditionalBalanceInformation14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceType12Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceType12Choice getValue(AdditionalBalanceInformation14 obj) {
+			return obj.getSubBalanceType();
+		}
+
+		@Override
+		public void setValue(AdditionalBalanceInformation14 obj, SubBalanceType12Choice value) {
+			obj.setSubBalanceType(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -200,7 +210,7 @@ public class AdditionalBalanceInformation14 {
 	 * AdditionalBalanceInformation6.mmQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalBalanceInformation14, SubBalanceQuantity6Choice> mmQuantity = new MMMessageAttribute<AdditionalBalanceInformation14, SubBalanceQuantity6Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation14.mmObject();
@@ -214,6 +224,16 @@ public class AdditionalBalanceInformation14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity6Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceQuantity6Choice getValue(AdditionalBalanceInformation14 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(AdditionalBalanceInformation14 obj, SubBalanceQuantity6Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "SubBalAddtlDtls")
@@ -253,7 +273,7 @@ public class AdditionalBalanceInformation14 {
 	 * AdditionalBalanceInformation6.mmSubBalanceAdditionalDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubBalanceAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalBalanceInformation14, Optional<Max140Text>> mmSubBalanceAdditionalDetails = new MMMessageAttribute<AdditionalBalanceInformation14, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation14.mmObject();
 			isDerived = false;
@@ -266,6 +286,16 @@ public class AdditionalBalanceInformation14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(AdditionalBalanceInformation14 obj) {
+			return obj.getSubBalanceAdditionalDetails();
+		}
+
+		@Override
+		public void setValue(AdditionalBalanceInformation14 obj, Optional<Max140Text> value) {
+			obj.setSubBalanceAdditionalDetails(value.orElse(null));
 		}
 	};
 

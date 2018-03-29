@@ -106,7 +106,7 @@ public class PercentageAndPeriod1 {
 	 * definition} = "Covered percentage (max 100%)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentageAndPeriod1, PercentageBoundedRate> mmPercentage = new MMMessageAttribute<PercentageAndPeriod1, PercentageBoundedRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PercentageAndPeriod1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class PercentageAndPeriod1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageBoundedRate.mmObject();
+		}
+
+		@Override
+		public PercentageBoundedRate getValue(PercentageAndPeriod1 obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(PercentageAndPeriod1 obj, PercentageBoundedRate value) {
+			obj.setPercentage(value);
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -153,7 +163,7 @@ public class PercentageAndPeriod1 {
 	 * definition} = "Start of period or immediate if not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentageAndPeriod1, Optional<ISODate>> mmStartDate = new MMMessageAttribute<PercentageAndPeriod1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PercentageAndPeriod1.mmObject();
@@ -165,6 +175,16 @@ public class PercentageAndPeriod1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PercentageAndPeriod1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(PercentageAndPeriod1 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt")
@@ -201,7 +221,7 @@ public class PercentageAndPeriod1 {
 	 * definition} = "End of period or indefinite if not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentageAndPeriod1, Optional<ISODate>> mmEndDate = new MMMessageAttribute<PercentageAndPeriod1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PercentageAndPeriod1.mmObject();
@@ -213,6 +233,16 @@ public class PercentageAndPeriod1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PercentageAndPeriod1 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(PercentageAndPeriod1 obj, Optional<ISODate> value) {
+			obj.setEndDate(value.orElse(null));
 		}
 	};
 

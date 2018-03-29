@@ -50,11 +50,15 @@ public class ConstraintGroupCancellationAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader7> forGroupHeader7 = new MMConstraint<GroupHeader7>() {
 		{
-			validator = ConstraintGroupCancellationAndNumberOfTransactionsGuideline::checkGroupHeader7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationAndNumberOfTransactionsGuideline";
 			definition = "If GroupCancellation is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader7 obj) throws Exception {
+			checkGroupHeader7(obj);
 		}
 	};
 

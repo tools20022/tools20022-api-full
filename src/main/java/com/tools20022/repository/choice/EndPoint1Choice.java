@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * "EndPoint1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of either the last payment date or the number of payments to make."</li>
+ * "Choice of either the last payment date or the number of payments to make. "</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -100,7 +100,7 @@ public class EndPoint1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfPayments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EndPoint1Choice, Optional<Max35Text>> mmNumberOfPayments = new MMMessageAttribute<EndPoint1Choice, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EndPoint1Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class EndPoint1Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(EndPoint1Choice obj) {
+			return obj.getNumberOfPayments();
+		}
+
+		@Override
+		public void setValue(EndPoint1Choice obj, Optional<Max35Text> value) {
+			obj.setNumberOfPayments(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LastPmtDt")
@@ -142,7 +152,7 @@ public class EndPoint1Choice {
 	 * definition} = "Final payment of the standing order due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EndPoint1Choice, Optional<ISODate>> mmLastPaymentDate = new MMMessageAttribute<EndPoint1Choice, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EndPoint1Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class EndPoint1Choice {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public Optional<ISODate> getValue(EndPoint1Choice obj) {
+			return obj.getLastPaymentDate();
+		}
+
+		@Override
+		public void setValue(EndPoint1Choice obj, Optional<ISODate> value) {
+			obj.setLastPaymentDate(value.orElse(null));
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -163,7 +183,7 @@ public class EndPoint1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EndPoint1Choice";
-				definition = "Choice of either the last payment date or the number of payments to make.";
+				definition = "Choice of either the last payment date or the number of payments to make. ";
 			}
 		});
 		return mmObject_lazy.get();

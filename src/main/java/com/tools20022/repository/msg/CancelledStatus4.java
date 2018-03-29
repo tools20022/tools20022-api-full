@@ -119,7 +119,7 @@ public class CancelledStatus4 {
 	 * definition} = "Reason for the cancelled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatus4, CancelledStatusReason8Code> mmReason = new MMMessageAttribute<CancelledStatus4, CancelledStatusReason8Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatus4.mmObject();
@@ -131,6 +131,16 @@ public class CancelledStatus4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason8Code.mmObject();
+		}
+
+		@Override
+		public CancelledStatusReason8Code getValue(CancelledStatus4 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatus4 obj, CancelledStatusReason8Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -162,7 +172,7 @@ public class CancelledStatus4 {
 	 * definition} = "Reason for the cancelled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatus4, Max350Text> mmExtendedReason = new MMMessageAttribute<CancelledStatus4, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatus4.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class CancelledStatus4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CancelledStatus4 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatus4 obj, Max350Text value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	/**

@@ -116,7 +116,7 @@ public class RejectionReason40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionReason40, ConsentOrRejectionReason5Choice> mmCode = new MMMessageAssociationEnd<RejectionReason40, ConsentOrRejectionReason5Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmCounterpartyStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason40.mmObject();
@@ -130,6 +130,16 @@ public class RejectionReason40 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ConsentOrRejectionReason5Choice.mmObject();
+		}
+
+		@Override
+		public ConsentOrRejectionReason5Choice getValue(RejectionReason40 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionReason40 obj, ConsentOrRejectionReason5Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -172,7 +182,7 @@ public class RejectionReason40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason40, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RejectionReason40, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason40.mmObject();
@@ -185,6 +195,16 @@ public class RejectionReason40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(RejectionReason40 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RejectionReason40 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

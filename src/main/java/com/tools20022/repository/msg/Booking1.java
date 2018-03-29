@@ -115,7 +115,7 @@ public class Booking1 {
 	 * definition} = "Indicates whether or not automatic booking can occur."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDayBooking = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Booking1, Optional<DayBookingInstruction1Code>> mmDayBooking = new MMMessageAttribute<Booking1, Optional<DayBookingInstruction1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmDayBooking;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Booking1.mmObject();
@@ -128,6 +128,16 @@ public class Booking1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DayBookingInstruction1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DayBookingInstruction1Code> getValue(Booking1 obj) {
+			return obj.getDayBooking();
+		}
+
+		@Override
+		public void setValue(Booking1 obj, Optional<DayBookingInstruction1Code> value) {
+			obj.setDayBooking(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BookgUnit")
@@ -169,7 +179,7 @@ public class Booking1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBookingUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Booking1, Optional<BookingUnit1Choice>> mmBookingUnit = new MMMessageAttribute<Booking1, Optional<BookingUnit1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmBookingUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Booking1.mmObject();
@@ -182,6 +192,16 @@ public class Booking1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BookingUnit1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BookingUnit1Choice> getValue(Booking1 obj) {
+			return obj.getBookingUnit();
+		}
+
+		@Override
+		public void setValue(Booking1 obj, Optional<BookingUnit1Choice> value) {
+			obj.setBookingUnit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PreAllcnMtd")
@@ -221,7 +241,7 @@ public class Booking1 {
 	 * definition} = "Indicates the method of preallocation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreAllocationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Booking1, Optional<PreAllocationMethod1Code>> mmPreAllocationMethod = new MMMessageAttribute<Booking1, Optional<PreAllocationMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmPreAllocationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Booking1.mmObject();
@@ -234,6 +254,16 @@ public class Booking1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PreAllocationMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PreAllocationMethod1Code> getValue(Booking1 obj) {
+			return obj.getPreAllocationMethod();
+		}
+
+		@Override
+		public void setValue(Booking1 obj, Optional<PreAllocationMethod1Code> value) {
+			obj.setPreAllocationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BookgTp")
@@ -273,7 +303,7 @@ public class Booking1 {
 	 * definition} = "Method for booking out an order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBookingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Booking1, Optional<BookingType1Code>> mmBookingType = new MMMessageAttribute<Booking1, Optional<BookingType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPostTradeBooking.mmBookingType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Booking1.mmObject();
@@ -286,6 +316,16 @@ public class Booking1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BookingType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BookingType1Code> getValue(Booking1 obj) {
+			return obj.getBookingType();
+		}
+
+		@Override
+		public void setValue(Booking1 obj, Optional<BookingType1Code> value) {
+			obj.setBookingType(value.orElse(null));
 		}
 	};
 

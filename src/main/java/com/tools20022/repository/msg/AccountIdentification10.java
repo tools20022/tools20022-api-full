@@ -109,7 +109,7 @@ public class AccountIdentification10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification10, SafekeepingAccountIdentification1Code> mmIdentificationCode = new MMMessageAttribute<AccountIdentification10, SafekeepingAccountIdentification1Code>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification10.mmObject();
@@ -122,6 +122,16 @@ public class AccountIdentification10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingAccountIdentification1Code.mmObject();
+		}
+
+		@Override
+		public SafekeepingAccountIdentification1Code getValue(AccountIdentification10 obj) {
+			return obj.getIdentificationCode();
+		}
+
+		@Override
+		public void setValue(AccountIdentification10 obj, SafekeepingAccountIdentification1Code value) {
+			obj.setIdentificationCode(value);
 		}
 	};
 

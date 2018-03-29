@@ -66,13 +66,17 @@ public class ConstraintDeliverersIntermediary1Details {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount13> forDeliveringPartiesAndAccount13 = new MMConstraint<DeliveringPartiesAndAccount13>() {
 		{
-			validator = ConstraintDeliverersIntermediary1Details::checkDeliveringPartiesAndAccount13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersIntermediary1Details";
 			definition = "If DeliverersIntermediary2Details is present, then DeliverersIntermediary1Details must also be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersIntermediary1Details.forDeliveringPartiesAndAccount17);
 			owner_lazy = () -> DeliveringPartiesAndAccount13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount13 obj) throws Exception {
+			checkDeliveringPartiesAndAccount13(obj);
 		}
 	};
 	/**
@@ -108,13 +112,17 @@ public class ConstraintDeliverersIntermediary1Details {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount17> forDeliveringPartiesAndAccount17 = new MMConstraint<DeliveringPartiesAndAccount17>() {
 		{
-			validator = ConstraintDeliverersIntermediary1Details::checkDeliveringPartiesAndAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersIntermediary1Details";
 			definition = "If DeliverersIntermediary2Details is present, then DeliverersIntermediary1Details must also be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersIntermediary1Details.forDeliveringPartiesAndAccount13;
 			owner_lazy = () -> DeliveringPartiesAndAccount17.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount17 obj) throws Exception {
+			checkDeliveringPartiesAndAccount17(obj);
 		}
 	};
 

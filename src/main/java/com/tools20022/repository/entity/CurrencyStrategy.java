@@ -23,7 +23,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.PortfolioStrategy;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +92,7 @@ public class CurrencyStrategy extends PortfolioStrategy {
 	 * definition} = "Currency of the investment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CurrencyStrategy, List<CurrencyCode>> mmCurrency = new MMBusinessAttribute<CurrencyStrategy, List<CurrencyCode>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyStrategy.mmObject();
@@ -104,12 +103,14 @@ public class CurrencyStrategy extends PortfolioStrategy {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CurrencyStrategy.class.getMethod("getCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CurrencyCode> getValue(CurrencyStrategy obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyStrategy obj, List<CurrencyCode> value) {
+			obj.setCurrency(value);
 		}
 	};
 

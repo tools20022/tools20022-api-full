@@ -55,11 +55,15 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentFundTransaction2> forInvestmentFundTransaction2 = new MMConstraint<InvestmentFundTransaction2>() {
 		{
-			validator = ConstraintTransactionTypeLegIdentificationRule::checkInvestmentFundTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTypeLegIdentificationRule";
 			definition = "If TransactionType is SWII or SWIO, then LegIdentification is mandatory. If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed.";
 			owner_lazy = () -> InvestmentFundTransaction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundTransaction2 obj) throws Exception {
+			checkInvestmentFundTransaction2(obj);
 		}
 	};
 	/**
@@ -94,12 +98,16 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentFundTransaction3> forInvestmentFundTransaction3 = new MMConstraint<InvestmentFundTransaction3>() {
 		{
-			validator = ConstraintTransactionTypeLegIdentificationRule::checkInvestmentFundTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTypeLegIdentificationRule";
 			definition = "If TransactionType is SWII or SWIO, then LegIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegIdentification is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionTypeLegIdentificationRule.forInvestmentFundTransaction4);
 			owner_lazy = () -> InvestmentFundTransaction3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundTransaction3 obj) throws Exception {
+			checkInvestmentFundTransaction3(obj);
 		}
 	};
 	/**
@@ -131,12 +139,16 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentFundTransaction4> forInvestmentFundTransaction4 = new MMConstraint<InvestmentFundTransaction4>() {
 		{
-			validator = ConstraintTransactionTypeLegIdentificationRule::checkInvestmentFundTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTypeLegIdentificationRule";
 			definition = "If TransactionType is SWII or SWIO, then LegIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegIdentification is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionTypeLegIdentificationRule.forInvestmentFundTransaction3;
 			owner_lazy = () -> InvestmentFundTransaction4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundTransaction4 obj) throws Exception {
+			checkInvestmentFundTransaction4(obj);
 		}
 	};
 

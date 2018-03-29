@@ -52,11 +52,15 @@ public class ConstraintParameterRule {
 	 */
 	public static final MMConstraint<BreakdownByUserDefinedParameter2> forBreakdownByUserDefinedParameter2 = new MMConstraint<BreakdownByUserDefinedParameter2>() {
 		{
-			validator = ConstraintParameterRule::checkBreakdownByUserDefinedParameter2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParameterRule";
 			definition = "At least one element in the list (Party, Country, Currency, UserDefined) must be present. More than one element in the list (Party, Country, Currency, UserDefined) may be present.";
 			owner_lazy = () -> BreakdownByUserDefinedParameter2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BreakdownByUserDefinedParameter2 obj) throws Exception {
+			checkBreakdownByUserDefinedParameter2(obj);
 		}
 	};
 

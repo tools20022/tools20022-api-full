@@ -111,7 +111,7 @@ public class AllegementStatus4Choice {
 	 * definition} = "Status of the allegement reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AllegementStatus4Choice, AllegementStatus1Code> mmCode = new MMMessageAttribute<AllegementStatus4Choice, AllegementStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAllegedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AllegementStatus4Choice.mmObject();
@@ -124,6 +124,16 @@ public class AllegementStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AllegementStatus1Code.mmObject();
+		}
+
+		@Override
+		public AllegementStatus1Code getValue(AllegementStatus4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AllegementStatus4Choice obj, AllegementStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class AllegementStatus4Choice {
 	 * definition} = "Status of the allegement reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AllegementStatus4Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<AllegementStatus4Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAllegedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AllegementStatus4Choice.mmObject();
@@ -177,6 +187,16 @@ public class AllegementStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(AllegementStatus4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AllegementStatus4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -151,7 +151,7 @@ public class CorporateActionNarrative31 {
 	 * CorporateActionNarrative4.mmAdditionalText}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative31, List<Max350Text>> mmAdditionalText = new MMMessageAttribute<CorporateActionNarrative31, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative31.mmObject();
 			isDerived = false;
@@ -163,6 +163,16 @@ public class CorporateActionNarrative31 {
 			previousVersion_lazy = () -> CorporateActionNarrative4.mmAdditionalText;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative31 obj) {
+			return obj.getAdditionalText();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative31 obj, List<Max350Text> value) {
+			obj.setAdditionalText(value);
 		}
 	};
 	@XmlElement(name = "NrrtvVrsn")
@@ -204,7 +214,7 @@ public class CorporateActionNarrative31 {
 	 * CorporateActionNarrative4.mmNarrativeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNarrativeVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative31, List<Max350Text>> mmNarrativeVersion = new MMMessageAttribute<CorporateActionNarrative31, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative31.mmObject();
 			isDerived = false;
@@ -216,6 +226,16 @@ public class CorporateActionNarrative31 {
 			previousVersion_lazy = () -> CorporateActionNarrative4.mmNarrativeVersion;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative31 obj) {
+			return obj.getNarrativeVersion();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative31 obj, List<Max350Text> value) {
+			obj.setNarrativeVersion(value);
 		}
 	};
 	@XmlElement(name = "PtyCtctNrrtv")
@@ -262,7 +282,7 @@ public class CorporateActionNarrative31 {
 	 * CorporateActionNarrative4.mmPartyContactNarrative}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative31, List<Max350Text>> mmPartyContactNarrative = new MMMessageAttribute<CorporateActionNarrative31, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative31.mmObject();
@@ -275,6 +295,16 @@ public class CorporateActionNarrative31 {
 			previousVersion_lazy = () -> CorporateActionNarrative4.mmPartyContactNarrative;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative31 obj) {
+			return obj.getPartyContactNarrative();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative31 obj, List<Max350Text> value) {
+			obj.setPartyContactNarrative(value);
 		}
 	};
 	@XmlElement(name = "TaxtnConds")
@@ -321,7 +351,7 @@ public class CorporateActionNarrative31 {
 	 * CorporateActionNarrative4.mmTaxationConditions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative31, List<Max350Text>> mmTaxationConditions = new MMMessageAttribute<CorporateActionNarrative31, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative31.mmObject();
@@ -334,6 +364,16 @@ public class CorporateActionNarrative31 {
 			previousVersion_lazy = () -> CorporateActionNarrative4.mmTaxationConditions;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative31 obj) {
+			return obj.getTaxationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative31 obj, List<Max350Text> value) {
+			obj.setTaxationConditions(value);
 		}
 	};
 

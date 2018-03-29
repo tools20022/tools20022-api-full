@@ -125,7 +125,7 @@ public class Adjustment6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Adjustment6, AdjustmentType1Choice> mmType = new MMMessageAssociationEnd<Adjustment6, AdjustmentType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmObject();
@@ -139,6 +139,16 @@ public class Adjustment6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdjustmentType1Choice.mmObject();
+		}
+
+		@Override
+		public AdjustmentType1Choice getValue(Adjustment6 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Adjustment6 obj, AdjustmentType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Drctn", required = true)
@@ -189,7 +199,7 @@ public class Adjustment6 {
 	 * Adjustment4.mmDirection}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment6, AdjustmentDirection1Code> mmDirection = new MMMessageAttribute<Adjustment6, AdjustmentDirection1Code>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmObject();
@@ -203,6 +213,16 @@ public class Adjustment6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
+		}
+
+		@Override
+		public AdjustmentDirection1Code getValue(Adjustment6 obj) {
+			return obj.getDirection();
+		}
+
+		@Override
+		public void setValue(Adjustment6 obj, AdjustmentDirection1Code value) {
+			obj.setDirection(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -252,7 +272,7 @@ public class Adjustment6 {
 	 * Adjustment4.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment6, CurrencyAndAmount> mmAmount = new MMMessageAttribute<Adjustment6, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmObject();
@@ -266,6 +286,16 @@ public class Adjustment6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(Adjustment6 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Adjustment6 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

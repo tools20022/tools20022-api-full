@@ -115,7 +115,7 @@ public class Parameter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialisationVector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter1, Optional<Max500Binary>> mmInitialisationVector = new MMMessageAttribute<Parameter1, Optional<Max500Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter1.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class Parameter1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Binary> getValue(Parameter1 obj) {
+			return obj.getInitialisationVector();
+		}
+
+		@Override
+		public void setValue(Parameter1 obj, Optional<Max500Binary> value) {
+			obj.setInitialisationVector(value.orElse(null));
 		}
 	};
 

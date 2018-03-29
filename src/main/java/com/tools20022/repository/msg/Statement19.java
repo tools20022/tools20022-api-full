@@ -158,7 +158,7 @@ public class Statement19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyPortfolioTransferNotificationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement19, Optional<Max35Text>> mmCounterpartyPortfolioTransferNotificationReference = new MMMessageAttribute<Statement19, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement19.mmObject();
 			isDerived = false;
@@ -170,6 +170,16 @@ public class Statement19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Statement19 obj) {
+			return obj.getCounterpartyPortfolioTransferNotificationReference();
+		}
+
+		@Override
+		public void setValue(Statement19 obj, Optional<Max35Text> value) {
+			obj.setCounterpartyPortfolioTransferNotificationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptNb")
@@ -211,7 +221,7 @@ public class Statement19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement19, Optional<Number3Choice>> mmReportNumber = new MMMessageAttribute<Statement19, Optional<Number3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement19.mmObject();
 			isDerived = false;
@@ -224,6 +234,16 @@ public class Statement19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Number3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Number3Choice> getValue(Statement19 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(Statement19 obj, Optional<Number3Choice> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtId")
@@ -262,7 +282,7 @@ public class Statement19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement19, Optional<Max35Text>> mmStatementIdentification = new MMMessageAttribute<Statement19, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement19.mmObject();
 			isDerived = false;
@@ -274,6 +294,16 @@ public class Statement19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Statement19 obj) {
+			return obj.getStatementIdentification();
+		}
+
+		@Override
+		public void setValue(Statement19 obj, Optional<Max35Text> value) {
+			obj.setStatementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtDtTm", required = true)
@@ -316,7 +346,7 @@ public class Statement19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement19, DateAndDateTimeChoice> mmStatementDateTime = new MMMessageAttribute<Statement19, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement19.mmObject();
 			isDerived = false;
@@ -329,6 +359,16 @@ public class Statement19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(Statement19 obj) {
+			return obj.getStatementDateTime();
+		}
+
+		@Override
+		public void setValue(Statement19 obj, DateAndDateTimeChoice value) {
+			obj.setStatementDateTime(value);
 		}
 	};
 	@XmlElement(name = "UpdTp")
@@ -369,7 +409,7 @@ public class Statement19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement19, Optional<UpdateType2Choice>> mmUpdateType = new MMMessageAssociationEnd<Statement19, Optional<UpdateType2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement19.mmObject();
 			isDerived = false;
@@ -383,6 +423,16 @@ public class Statement19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> UpdateType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UpdateType2Choice> getValue(Statement19 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Statement19 obj, Optional<UpdateType2Choice> value) {
+			obj.setUpdateType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -427,7 +477,7 @@ public class Statement19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement19, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<Statement19, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement19.mmObject();
 			isDerived = false;
@@ -440,6 +490,16 @@ public class Statement19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement19 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(Statement19 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 

@@ -111,7 +111,7 @@ public class DebtInstrument4 {
 	 * DebtInstrument2.mmMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebtInstrument4, ISODate> mmMaturityDate = new MMMessageAttribute<DebtInstrument4, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebtInstrument4.mmObject();
@@ -124,6 +124,16 @@ public class DebtInstrument4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DebtInstrument4 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(DebtInstrument4 obj, ISODate value) {
+			obj.setMaturityDate(value);
 		}
 	};
 

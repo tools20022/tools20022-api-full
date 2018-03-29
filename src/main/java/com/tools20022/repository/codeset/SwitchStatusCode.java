@@ -99,7 +99,7 @@ public class SwitchStatusCode extends MMCode {
 	 * {@linkplain com.tools20022.repository.codeset.SwitchStatusCode
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
-	 * "TERM"</li>
+	 * "TMTN"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -119,7 +119,7 @@ public class SwitchStatusCode extends MMCode {
 			name = "Termination";
 			definition = "Account switch is terminated. \r\n\r\nUsage: Terminated status should be used when the account switch service receives and validates a terminate switch request.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SwitchStatusCode.mmObject();
-			codeName = "TERM";
+			codeName = "TMTN";
 		}
 	};
 	/**
@@ -134,7 +134,7 @@ public class SwitchStatusCode extends MMCode {
 	 * {@linkplain com.tools20022.repository.codeset.SwitchStatusCode
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
-	 * "REQS"</li>
+	 * "REQU"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -154,7 +154,7 @@ public class SwitchStatusCode extends MMCode {
 			name = "Requested";
 			definition = "Information is requested for the account switch. \r\n\r\nUsage: Requested status should be used when the account switch service receives and validates an information request.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SwitchStatusCode.mmObject();
-			codeName = "REQS";
+			codeName = "REQU";
 		}
 	};
 	/**
@@ -196,6 +196,8 @@ public class SwitchStatusCode extends MMCode {
 	/**
 	 * Redirection ended at the end of the redirection period. <br>
 	 * <br>
+	 * Usage: Indicates the cessation of account redirection by a particular
+	 * service.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -213,14 +215,15 @@ public class SwitchStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Redirection ended at the end of the redirection period. \r\n\r\n"</li>
+	 * "Redirection ended at the end of the redirection period. \r\n\r\nUsage: Indicates the cessation of account redirection by a particular service."
+	 * </li>
 	 * </ul>
 	 */
 	public static final SwitchStatusCode RedirectionEnded = new SwitchStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedirectionEnded";
-			definition = "Redirection ended at the end of the redirection period. \r\n\r\n";
+			definition = "Redirection ended at the end of the redirection period. \r\n\r\nUsage: Indicates the cessation of account redirection by a particular service.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SwitchStatusCode.mmObject();
 			codeName = "REDE";
 		}
@@ -379,7 +382,7 @@ public class SwitchStatusCode extends MMCode {
 	 * {@linkplain com.tools20022.repository.codeset.SwitchStatusCode
 	 * SwitchStatusCode}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
-	 * "ACCT"</li>
+	 * "ACPT"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -399,7 +402,7 @@ public class SwitchStatusCode extends MMCode {
 			name = "Accepted";
 			definition = "Account switch is accepted.\r\n\r\nUsage: Accepted status should be used when account switch service receives and validates an information response request accepting the switch.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SwitchStatusCode.mmObject();
-			codeName = "ACCT";
+			codeName = "ACPT";
 		}
 	};
 	final static private LinkedHashMap<String, SwitchStatusCode> codesByName = new LinkedHashMap<>();

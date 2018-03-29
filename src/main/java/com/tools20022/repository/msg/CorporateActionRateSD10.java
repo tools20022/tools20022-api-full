@@ -118,7 +118,7 @@ public class CorporateActionRateSD10 {
 	 * CorporateActionRateSD8.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD10, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionRateSD10, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD10.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class CorporateActionRateSD10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionRateSD10 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD10 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdSctyRate")
@@ -172,7 +182,7 @@ public class CorporateActionRateSD10 {
 	 * CorporateActionRateSD8.mmDeclaredSecurityRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredSecurityRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD10, Optional<CorporateActionRateSD7Choice>> mmDeclaredSecurityRate = new MMMessageAttribute<CorporateActionRateSD10, Optional<CorporateActionRateSD7Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD10.mmObject();
 			isDerived = false;
@@ -185,6 +195,16 @@ public class CorporateActionRateSD10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionRateSD7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionRateSD7Choice> getValue(CorporateActionRateSD10 obj) {
+			return obj.getDeclaredSecurityRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD10 obj, Optional<CorporateActionRateSD7Choice> value) {
+			obj.setDeclaredSecurityRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EstmtdRateFlg")
@@ -225,7 +245,7 @@ public class CorporateActionRateSD10 {
 	 * CorporateActionRateSD8.mmEstimatedRateFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEstimatedRateFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD10, Optional<YesNoIndicator>> mmEstimatedRateFlag = new MMMessageAttribute<CorporateActionRateSD10, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD10.mmObject();
 			isDerived = false;
@@ -238,6 +258,16 @@ public class CorporateActionRateSD10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionRateSD10 obj) {
+			return obj.getEstimatedRateFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD10 obj, Optional<YesNoIndicator> value) {
+			obj.setEstimatedRateFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdFeeRate")
@@ -280,7 +310,7 @@ public class CorporateActionRateSD10 {
 	 * CorporateActionRateSD8.mmDeclaredFeeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredFeeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD10, Optional<PriceFormatSD3Choice>> mmDeclaredFeeRate = new MMMessageAttribute<CorporateActionRateSD10, Optional<PriceFormatSD3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD10.mmObject();
 			isDerived = false;
@@ -293,6 +323,16 @@ public class CorporateActionRateSD10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormatSD3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormatSD3Choice> getValue(CorporateActionRateSD10 obj) {
+			return obj.getDeclaredFeeRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD10 obj, Optional<PriceFormatSD3Choice> value) {
+			obj.setDeclaredFeeRate(value.orElse(null));
 		}
 	};
 

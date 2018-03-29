@@ -119,7 +119,7 @@ public class Pledgee2 {
 	 * Pledgee1.mmPledgeeTypeAndIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPledgeeTypeAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Pledgee2, Optional<PledgeeFormat4Choice>> mmPledgeeTypeAndIdentification = new MMMessageAssociationEnd<Pledgee2, Optional<PledgeeFormat4Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Pledgee2.mmObject();
@@ -133,6 +133,16 @@ public class Pledgee2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PledgeeFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PledgeeFormat4Choice> getValue(Pledgee2 obj) {
+			return obj.getPledgeeTypeAndIdentification();
+		}
+
+		@Override
+		public void setValue(Pledgee2 obj, Optional<PledgeeFormat4Choice> value) {
+			obj.setPledgeeTypeAndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -170,7 +180,7 @@ public class Pledgee2 {
 	 * {@linkplain com.tools20022.repository.msg.Pledgee1#mmLEI Pledgee1.mmLEI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Pledgee2, Optional<LEIIdentifier>> mmLEI = new MMMessageAttribute<Pledgee2, Optional<LEIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Pledgee2.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class Pledgee2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(Pledgee2 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(Pledgee2 obj, Optional<LEIIdentifier> value) {
+			obj.setLEI(value.orElse(null));
 		}
 	};
 

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentStatus1;
+import com.tools20022.repository.msg.System1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -127,7 +129,7 @@ public class PaymentCommon1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCommon1, Optional<System1>> mmPaymentFrom = new MMMessageAssociationEnd<PaymentCommon1, Optional<System1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon1.mmObject();
 			isDerived = false;
@@ -139,7 +141,17 @@ public class PaymentCommon1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
+			type_lazy = () -> System1.mmObject();
+		}
+
+		@Override
+		public Optional<System1> getValue(PaymentCommon1 obj) {
+			return obj.getPaymentFrom();
+		}
+
+		@Override
+		public void setValue(PaymentCommon1 obj, Optional<System1> value) {
+			obj.setPaymentFrom(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtTo")
@@ -176,7 +188,7 @@ public class PaymentCommon1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCommon1, Optional<System1>> mmPaymentTo = new MMMessageAssociationEnd<PaymentCommon1, Optional<System1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon1.mmObject();
 			isDerived = false;
@@ -188,11 +200,21 @@ public class PaymentCommon1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
+			type_lazy = () -> System1.mmObject();
+		}
+
+		@Override
+		public Optional<System1> getValue(PaymentCommon1 obj) {
+			return obj.getPaymentTo();
+		}
+
+		@Override
+		public void setValue(PaymentCommon1 obj, Optional<System1> value) {
+			obj.setPaymentTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmonSts")
-	protected List<com.tools20022.repository.msg.PaymentStatus1> commonStatus;
+	protected List<PaymentStatus1> commonStatus;
 	/**
 	 * 
 	 <p>
@@ -231,7 +253,7 @@ public class PaymentCommon1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommonStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCommon1, List<PaymentStatus1>> mmCommonStatus = new MMMessageAssociationEnd<PaymentCommon1, List<PaymentStatus1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon1.mmObject();
@@ -243,7 +265,17 @@ public class PaymentCommon1 {
 			nextVersions_lazy = () -> Arrays.asList(PaymentCommon2.mmCommonStatus);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentStatus1.mmObject();
+			type_lazy = () -> PaymentStatus1.mmObject();
+		}
+
+		@Override
+		public List<PaymentStatus1> getValue(PaymentCommon1 obj) {
+			return obj.getCommonStatus();
+		}
+
+		@Override
+		public void setValue(PaymentCommon1 obj, List<PaymentStatus1> value) {
+			obj.setCommonStatus(value);
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt")
@@ -290,7 +322,7 @@ public class PaymentCommon1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCommon1, Optional<DateAndDateTimeChoice>> mmRequestedExecutionDate = new MMMessageAttribute<PaymentCommon1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon1.mmObject();
@@ -303,6 +335,16 @@ public class PaymentCommon1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PaymentCommon1 obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(PaymentCommon1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setRequestedExecutionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtryDt")
@@ -348,7 +390,7 @@ public class PaymentCommon1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCommon1, Optional<DateAndDateTimeChoice>> mmEntryDate = new MMMessageAttribute<PaymentCommon1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon1.mmObject();
@@ -361,6 +403,16 @@ public class PaymentCommon1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PaymentCommon1 obj) {
+			return obj.getEntryDate();
+		}
+
+		@Override
+		public void setValue(PaymentCommon1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setEntryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -406,7 +458,7 @@ public class PaymentCommon1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCommon1, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<PaymentCommon1, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon1.mmObject();
@@ -419,6 +471,16 @@ public class PaymentCommon1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(PaymentCommon1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentCommon1 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtMtd")
@@ -464,7 +526,7 @@ public class PaymentCommon1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCommon1, Optional<PaymentOrigin1Choice>> mmPaymentMethod = new MMMessageAssociationEnd<PaymentCommon1, Optional<PaymentOrigin1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCommon1.mmObject();
@@ -478,6 +540,16 @@ public class PaymentCommon1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentOrigin1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentOrigin1Choice> getValue(PaymentCommon1 obj) {
+			return obj.getPaymentMethod();
+		}
+
+		@Override
+		public void setValue(PaymentCommon1 obj, Optional<PaymentOrigin1Choice> value) {
+			obj.setPaymentMethod(value.orElse(null));
 		}
 	};
 
@@ -502,7 +574,7 @@ public class PaymentCommon1 {
 		return paymentFrom == null ? Optional.empty() : Optional.of(paymentFrom);
 	}
 
-	public PaymentCommon1 setPaymentFrom(com.tools20022.repository.msg.System1 paymentFrom) {
+	public PaymentCommon1 setPaymentFrom(System1 paymentFrom) {
 		this.paymentFrom = paymentFrom;
 		return this;
 	}
@@ -511,7 +583,7 @@ public class PaymentCommon1 {
 		return paymentTo == null ? Optional.empty() : Optional.of(paymentTo);
 	}
 
-	public PaymentCommon1 setPaymentTo(com.tools20022.repository.msg.System1 paymentTo) {
+	public PaymentCommon1 setPaymentTo(System1 paymentTo) {
 		this.paymentTo = paymentTo;
 		return this;
 	}
@@ -520,7 +592,7 @@ public class PaymentCommon1 {
 		return commonStatus == null ? commonStatus = new ArrayList<>() : commonStatus;
 	}
 
-	public PaymentCommon1 setCommonStatus(List<com.tools20022.repository.msg.PaymentStatus1> commonStatus) {
+	public PaymentCommon1 setCommonStatus(List<PaymentStatus1> commonStatus) {
 		this.commonStatus = Objects.requireNonNull(commonStatus);
 		return this;
 	}

@@ -119,7 +119,7 @@ public class GenericIdentification144 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification144, Exact4AlphaNumericText> mmIdentification = new MMMessageAttribute<GenericIdentification144, Exact4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification144.mmObject();
@@ -131,6 +131,16 @@ public class GenericIdentification144 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(GenericIdentification144 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification144 obj, Exact4AlphaNumericText value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -168,7 +178,7 @@ public class GenericIdentification144 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification144, Max4AlphaNumericText> mmIssuer = new MMMessageAttribute<GenericIdentification144, Max4AlphaNumericText>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification144.mmObject();
@@ -180,6 +190,16 @@ public class GenericIdentification144 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(GenericIdentification144 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification144 obj, Max4AlphaNumericText value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "SchmeNm")
@@ -217,7 +237,7 @@ public class GenericIdentification144 {
 	 * definition} = "Short textual description of the scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification144, Optional<Max4AlphaNumericText>> mmSchemeName = new MMMessageAttribute<GenericIdentification144, Optional<Max4AlphaNumericText>>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification144.mmObject();
@@ -229,6 +249,16 @@ public class GenericIdentification144 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(GenericIdentification144 obj) {
+			return obj.getSchemeName();
+		}
+
+		@Override
+		public void setValue(GenericIdentification144 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setSchemeName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bal", required = true)
@@ -261,7 +291,7 @@ public class GenericIdentification144 {
 	 * definition} = "Value of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification144, RestrictedFINDecimalNumber> mmBalance = new MMMessageAttribute<GenericIdentification144, RestrictedFINDecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification144.mmObject();
 			isDerived = false;
@@ -272,6 +302,16 @@ public class GenericIdentification144 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
+		}
+
+		@Override
+		public RestrictedFINDecimalNumber getValue(GenericIdentification144 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(GenericIdentification144 obj, RestrictedFINDecimalNumber value) {
+			obj.setBalance(value);
 		}
 	};
 

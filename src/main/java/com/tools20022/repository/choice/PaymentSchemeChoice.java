@@ -108,7 +108,7 @@ public class PaymentSchemeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSchemeChoice, CashClearingSystem2Code> mmCode = new MMMessageAttribute<PaymentSchemeChoice, CashClearingSystem2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentSchemeChoice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class PaymentSchemeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashClearingSystem2Code.mmObject();
+		}
+
+		@Override
+		public CashClearingSystem2Code getValue(PaymentSchemeChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PaymentSchemeChoice obj, CashClearingSystem2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "PrtryInf", required = true)
@@ -152,7 +162,7 @@ public class PaymentSchemeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSchemeChoice, Max35Text> mmProprietaryInformation = new MMMessageAttribute<PaymentSchemeChoice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentSchemeChoice.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class PaymentSchemeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentSchemeChoice obj) {
+			return obj.getProprietaryInformation();
+		}
+
+		@Override
+		public void setValue(PaymentSchemeChoice obj, Max35Text value) {
+			obj.setProprietaryInformation(value);
 		}
 	};
 

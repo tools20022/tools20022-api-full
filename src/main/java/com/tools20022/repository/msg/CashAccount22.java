@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount21;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +122,7 @@ public class CashAccount22 {
 	 * definition} = "Medium of exchange of value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount22, Optional<CurrencyCode>> mmCurrency = new MMMessageAttribute<CashAccount22, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
@@ -133,6 +134,16 @@ public class CashAccount22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(CashAccount22 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccount22 obj, Optional<CurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Svcr", required = true)
@@ -171,7 +182,7 @@ public class CashAccount22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount22, BICIdentifier> mmServicer = new MMMessageAttribute<CashAccount22, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
@@ -183,6 +194,16 @@ public class CashAccount22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(CashAccount22 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount22 obj, BICIdentifier value) {
+			obj.setServicer(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -221,7 +242,7 @@ public class CashAccount22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount22, AccountIdentification5Choice> mmIdentification = new MMMessageAttribute<CashAccount22, AccountIdentification5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
@@ -233,6 +254,16 @@ public class CashAccount22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification5Choice getValue(CashAccount22 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount22 obj, AccountIdentification5Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ScndryAcct")
@@ -267,7 +298,7 @@ public class CashAccount22 {
 	 * definition} = "Sub-division of a master or omnibus cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecondaryAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount22, Optional<CashAccount21>> mmSecondaryAccount = new MMMessageAssociationEnd<CashAccount22, Optional<CashAccount21>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
@@ -279,7 +310,17 @@ public class CashAccount22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount21.mmObject();
+			type_lazy = () -> CashAccount21.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount21> getValue(CashAccount22 obj) {
+			return obj.getSecondaryAccount();
+		}
+
+		@Override
+		public void setValue(CashAccount22 obj, Optional<CashAccount21> value) {
+			obj.setSecondaryAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctTpDesc", required = true)
@@ -317,7 +358,7 @@ public class CashAccount22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountTypeDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount22, Max35Text> mmAccountTypeDescription = new MMMessageAttribute<CashAccount22, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
@@ -329,6 +370,16 @@ public class CashAccount22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CashAccount22 obj) {
+			return obj.getAccountTypeDescription();
+		}
+
+		@Override
+		public void setValue(CashAccount22 obj, Max35Text value) {
+			obj.setAccountTypeDescription(value);
 		}
 	};
 
@@ -385,7 +436,7 @@ public class CashAccount22 {
 		return secondaryAccount == null ? Optional.empty() : Optional.of(secondaryAccount);
 	}
 
-	public CashAccount22 setSecondaryAccount(com.tools20022.repository.msg.CashAccount21 secondaryAccount) {
+	public CashAccount22 setSecondaryAccount(CashAccount21 secondaryAccount) {
 		this.secondaryAccount = secondaryAccount;
 		return this;
 	}

@@ -99,7 +99,7 @@ public class TrancheIndicator2Choice {
 	 * definition} = "Indication that derivative contract is tranched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTranched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TrancheIndicator2Choice, Tranche2> mmTranched = new MMMessageAssociationEnd<TrancheIndicator2Choice, Tranche2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TrancheIndicator2Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class TrancheIndicator2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Tranche2.mmObject();
+		}
+
+		@Override
+		public Tranche2 getValue(TrancheIndicator2Choice obj) {
+			return obj.getTranched();
+		}
+
+		@Override
+		public void setValue(TrancheIndicator2Choice obj, Tranche2 value) {
+			obj.setTranched(value);
 		}
 	};
 	@XmlElement(name = "Utrnchd", required = true)
@@ -142,7 +152,7 @@ public class TrancheIndicator2Choice {
 	 * definition} = "Indicates that derivative contract is untranched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUntranched = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TrancheIndicator2Choice, NoReasonCode> mmUntranched = new MMMessageAttribute<TrancheIndicator2Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TrancheIndicator2Choice.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class TrancheIndicator2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(TrancheIndicator2Choice obj) {
+			return obj.getUntranched();
+		}
+
+		@Override
+		public void setValue(TrancheIndicator2Choice obj, NoReasonCode value) {
+			obj.setUntranched(value);
 		}
 	};
 

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Result1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +108,7 @@ public class MarginCallResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVariationMarginResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCallResult2, Result1> mmVariationMarginResult = new MMMessageAssociationEnd<MarginCallResult2, Result1>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCallResult2.mmObject();
@@ -119,7 +120,17 @@ public class MarginCallResult2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Result1.mmObject();
+			type_lazy = () -> Result1.mmObject();
+		}
+
+		@Override
+		public Result1 getValue(MarginCallResult2 obj) {
+			return obj.getVariationMarginResult();
+		}
+
+		@Override
+		public void setValue(MarginCallResult2 obj, Result1 value) {
+			obj.setVariationMarginResult(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt")
@@ -156,7 +167,7 @@ public class MarginCallResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCallResult2, Optional<Result1>> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<MarginCallResult2, Optional<Result1>>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCallResult2.mmObject();
@@ -168,7 +179,17 @@ public class MarginCallResult2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Result1.mmObject();
+			type_lazy = () -> Result1.mmObject();
+		}
+
+		@Override
+		public Optional<Result1> getValue(MarginCallResult2 obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(MarginCallResult2 obj, Optional<Result1> value) {
+			obj.setSegregatedIndependentAmount(value.orElse(null));
 		}
 	};
 
@@ -190,7 +211,7 @@ public class MarginCallResult2 {
 		return variationMarginResult;
 	}
 
-	public MarginCallResult2 setVariationMarginResult(com.tools20022.repository.msg.Result1 variationMarginResult) {
+	public MarginCallResult2 setVariationMarginResult(Result1 variationMarginResult) {
 		this.variationMarginResult = Objects.requireNonNull(variationMarginResult);
 		return this;
 	}
@@ -199,7 +220,7 @@ public class MarginCallResult2 {
 		return segregatedIndependentAmount == null ? Optional.empty() : Optional.of(segregatedIndependentAmount);
 	}
 
-	public MarginCallResult2 setSegregatedIndependentAmount(com.tools20022.repository.msg.Result1 segregatedIndependentAmount) {
+	public MarginCallResult2 setSegregatedIndependentAmount(Result1 segregatedIndependentAmount) {
 		this.segregatedIndependentAmount = segregatedIndependentAmount;
 		return this;
 	}

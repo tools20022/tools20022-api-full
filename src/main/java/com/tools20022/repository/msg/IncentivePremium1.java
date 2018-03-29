@@ -129,7 +129,7 @@ public class IncentivePremium1 {
 	 * definition} = "Description of the premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPremiumDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncentivePremium1, Optional<Max350Text>> mmPremiumDescription = new MMMessageAttribute<IncentivePremium1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
@@ -141,6 +141,16 @@ public class IncentivePremium1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(IncentivePremium1 obj) {
+			return obj.getPremiumDescription();
+		}
+
+		@Override
+		public void setValue(IncentivePremium1 obj, Optional<Max350Text> value) {
+			obj.setPremiumDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrmAmt", required = true)
@@ -179,7 +189,7 @@ public class IncentivePremium1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPremiumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncentivePremium1, CurrencyAndAmount> mmPremiumAmount = new MMMessageAttribute<IncentivePremium1, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPremiumAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
@@ -191,6 +201,16 @@ public class IncentivePremium1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(IncentivePremium1 obj) {
+			return obj.getPremiumAmount();
+		}
+
+		@Override
+		public void setValue(IncentivePremium1 obj, CurrencyAndAmount value) {
+			obj.setPremiumAmount(value);
 		}
 	};
 	@XmlElement(name = "PerScty", required = true)
@@ -227,7 +247,7 @@ public class IncentivePremium1 {
 	 * definition} = "Number of securities giving right to a premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPerSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncentivePremium1, Number> mmPerSecurity = new MMMessageAttribute<IncentivePremium1, Number>() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPerSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
@@ -239,6 +259,16 @@ public class IncentivePremium1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(IncentivePremium1 obj) {
+			return obj.getPerSecurity();
+		}
+
+		@Override
+		public void setValue(IncentivePremium1 obj, Number value) {
+			obj.setPerSecurity(value);
 		}
 	};
 	@XmlElement(name = "PerVote", required = true)
@@ -275,7 +305,7 @@ public class IncentivePremium1 {
 	 * definition} = "Number of votes giving right to a premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPerVote = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncentivePremium1, Number> mmPerVote = new MMMessageAttribute<IncentivePremium1, Number>() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPerVote;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
@@ -287,6 +317,16 @@ public class IncentivePremium1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(IncentivePremium1 obj) {
+			return obj.getPerVote();
+		}
+
+		@Override
+		public void setValue(IncentivePremium1 obj, Number value) {
+			obj.setPerVote(value);
 		}
 	};
 	@XmlElement(name = "PerAttndee", required = true)
@@ -324,7 +364,7 @@ public class IncentivePremium1 {
 	 * definition} = "Indicates that the premium is given per attendee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPerAttendee = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncentivePremium1, YesNoIndicator> mmPerAttendee = new MMMessageAttribute<IncentivePremium1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPerAttendee;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
@@ -336,6 +376,16 @@ public class IncentivePremium1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(IncentivePremium1 obj) {
+			return obj.getPerAttendee();
+		}
+
+		@Override
+		public void setValue(IncentivePremium1 obj, YesNoIndicator value) {
+			obj.setPerAttendee(value);
 		}
 	};
 	@XmlElement(name = "PmtDt")
@@ -372,7 +422,7 @@ public class IncentivePremium1 {
 	 * definition} = "Date/time for the payment of the premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncentivePremium1, Optional<ISODate>> mmPaymentDate = new MMMessageAttribute<IncentivePremium1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPaymentDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
@@ -384,6 +434,16 @@ public class IncentivePremium1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(IncentivePremium1 obj) {
+			return obj.getPaymentDate();
+		}
+
+		@Override
+		public void setValue(IncentivePremium1 obj, Optional<ISODate> value) {
+			obj.setPaymentDate(value.orElse(null));
 		}
 	};
 	/**

@@ -115,7 +115,7 @@ public class GlobalNote2Choice {
 	 * GlobalNote1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GlobalNote2Choice, GlobalNote1Code> mmCode = new MMMessageAttribute<GlobalNote2Choice, GlobalNote1Code>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmGlobalNoteType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GlobalNote2Choice.mmObject();
@@ -128,6 +128,16 @@ public class GlobalNote2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GlobalNote1Code.mmObject();
+		}
+
+		@Override
+		public GlobalNote1Code getValue(GlobalNote2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(GlobalNote2Choice obj, GlobalNote1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class GlobalNote2Choice {
 	 * GlobalNote1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GlobalNote2Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<GlobalNote2Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmGlobalNoteType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GlobalNote2Choice.mmObject();
@@ -183,6 +193,16 @@ public class GlobalNote2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(GlobalNote2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(GlobalNote2Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -115,7 +115,7 @@ public class GenericIdentification86 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification86, RestrictedFINXMax30Text> mmIdentification = new MMMessageAttribute<GenericIdentification86, RestrictedFINXMax30Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification86.mmObject();
@@ -127,6 +127,16 @@ public class GenericIdentification86 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax30Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax30Text getValue(GenericIdentification86 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification86 obj, RestrictedFINXMax30Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -164,7 +174,7 @@ public class GenericIdentification86 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification86, Max4AlphaNumericText> mmIssuer = new MMMessageAttribute<GenericIdentification86, Max4AlphaNumericText>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification86.mmObject();
@@ -176,6 +186,16 @@ public class GenericIdentification86 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(GenericIdentification86 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification86 obj, Max4AlphaNumericText value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "SchmeNm")
@@ -213,7 +233,7 @@ public class GenericIdentification86 {
 	 * definition} = "Short textual description of the scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification86, Optional<Max4AlphaNumericText>> mmSchemeName = new MMMessageAttribute<GenericIdentification86, Optional<Max4AlphaNumericText>>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification86.mmObject();
@@ -225,6 +245,16 @@ public class GenericIdentification86 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(GenericIdentification86 obj) {
+			return obj.getSchemeName();
+		}
+
+		@Override
+		public void setValue(GenericIdentification86 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setSchemeName(value.orElse(null));
 		}
 	};
 

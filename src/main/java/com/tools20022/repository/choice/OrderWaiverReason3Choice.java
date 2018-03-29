@@ -116,7 +116,7 @@ public class OrderWaiverReason3Choice {
 	 * OrderWaiverReason1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderWaiverReason3Choice, OrderWaiverReason1Code> mmCode = new MMMessageAttribute<OrderWaiverReason3Choice, OrderWaiverReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrderWaiverReason3Choice.mmObject();
@@ -129,6 +129,16 @@ public class OrderWaiverReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderWaiverReason1Code.mmObject();
+		}
+
+		@Override
+		public OrderWaiverReason1Code getValue(OrderWaiverReason3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OrderWaiverReason3Choice obj, OrderWaiverReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -171,7 +181,7 @@ public class OrderWaiverReason3Choice {
 	 * OrderWaiverReason1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderWaiverReason3Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<OrderWaiverReason3Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderWaiverReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrderWaiverReason3Choice.mmObject();
@@ -184,6 +194,16 @@ public class OrderWaiverReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(OrderWaiverReason3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OrderWaiverReason3Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -32,6 +32,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -177,7 +178,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -189,6 +190,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "OptnNb", required = true)
@@ -237,7 +248,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, OptionNumber1Choice> mmOptionNumber = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, OptionNumber1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
@@ -252,6 +263,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OptionNumber1Choice.mmObject();
+		}
+
+		@Override
+		public OptionNumber1Choice getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, OptionNumber1Choice value) {
+			obj.setOptionNumber(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -294,7 +315,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Max15Text> mmTransactionIdentification = new MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Max15Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -306,6 +327,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15Text.mmObject();
+		}
+
+		@Override
+		public Max15Text getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Max15Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSeqNb")
@@ -349,7 +380,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<Max3NumericText>> mmTransactionSequenceNumber = new MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -361,6 +392,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionSequenceNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Optional<Max3NumericText> value) {
+			obj.setTransactionSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxIdDt", required = true)
@@ -403,7 +444,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, ISODateTime> mmTransactionIdentificationDate = new MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -415,6 +456,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionIdentificationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, ISODateTime value) {
+			obj.setTransactionIdentificationDate(value);
 		}
 	};
 	@XmlElement(name = "TxContraCUSIP")
@@ -454,7 +505,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionContraCUSIP = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<OtherIdentification2>> mmTransactionContraCUSIP = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<OtherIdentification2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -466,7 +517,17 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
+			type_lazy = () -> OtherIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<OtherIdentification2> getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionContraCUSIP();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Optional<OtherIdentification2> value) {
+			obj.setTransactionContraCUSIP(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxIdQty", required = true)
@@ -509,7 +570,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentificationQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, FinancialInstrumentQuantity15Choice> mmTransactionIdentificationQuantity = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -522,6 +583,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionIdentificationQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setTransactionIdentificationQuantity(value);
 		}
 	};
 	@XmlElement(name = "TxIdOvrsbcptQty")
@@ -562,7 +633,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentificationOversubscriptionQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<FinancialInstrumentQuantity15Choice>> mmTransactionIdentificationOversubscriptionQuantity = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -575,6 +646,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionIdentificationOversubscriptionQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setTransactionIdentificationOversubscriptionQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxIdSts", required = true)
@@ -616,7 +697,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentificationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, DTCInstructionStatus2Code> mmTransactionIdentificationStatus = new MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, DTCInstructionStatus2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -628,6 +709,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DTCInstructionStatus2Code.mmObject();
+		}
+
+		@Override
+		public DTCInstructionStatus2Code getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionIdentificationStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, DTCInstructionStatus2Code value) {
+			obj.setTransactionIdentificationStatus(value);
 		}
 	};
 	@XmlElement(name = "TxIdPrtctDt")
@@ -668,7 +759,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentificationProtectDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<ISODateTime>> mmTransactionIdentificationProtectDate = new MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -680,6 +771,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionIdentificationProtectDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Optional<ISODateTime> value) {
+			obj.setTransactionIdentificationProtectDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxIdCoverPrtctDt")
@@ -720,7 +821,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentificationCoverProtectDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<ISODateTime>> mmTransactionIdentificationCoverProtectDate = new MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -732,6 +833,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionIdentificationCoverProtectDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Optional<ISODateTime> value) {
+			obj.setTransactionIdentificationCoverProtectDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxCondlQty")
@@ -772,7 +883,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionConditionalQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<FinancialInstrumentQuantity15Choice>> mmTransactionConditionalQuantity = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -785,6 +896,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionConditionalQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setTransactionConditionalQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxTndrBidPric")
@@ -824,7 +945,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionTenderBidPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<PriceFormat57Choice>> mmTransactionTenderBidPrice = new MMMessageAssociationEnd<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<PriceFormat57Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -837,6 +958,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat57Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat57Choice> getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getTransactionTenderBidPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Optional<PriceFormat57Choice> value) {
+			obj.setTransactionTenderBidPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrRefId")
@@ -878,7 +1009,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<Max15Text>> mmCustomerReferenceIdentification = new MMMessageAttribute<CorporateActionInstructedBalanceOptionInstructionDetailsSD1, Optional<Max15Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmObject();
 			isDerived = false;
@@ -890,6 +1021,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max15Text> getValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj) {
+			return obj.getCustomerReferenceIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructedBalanceOptionInstructionDetailsSD1 obj, Optional<Max15Text> value) {
+			obj.setCustomerReferenceIdentification(value.orElse(null));
 		}
 	};
 
@@ -969,7 +1110,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 		return transactionContraCUSIP == null ? Optional.empty() : Optional.of(transactionContraCUSIP);
 	}
 
-	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionContraCUSIP(com.tools20022.repository.msg.OtherIdentification2 transactionContraCUSIP) {
+	public CorporateActionInstructedBalanceOptionInstructionDetailsSD1 setTransactionContraCUSIP(OtherIdentification2 transactionContraCUSIP) {
 		this.transactionContraCUSIP = transactionContraCUSIP;
 		return this;
 	}

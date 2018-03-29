@@ -124,7 +124,7 @@ public class ProformaStatusReason2Choice {
 	 * EnabledStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProformaStatusReason2Choice, ProformaStatusReason1Code> mmCode = new MMMessageAttribute<ProformaStatusReason2Choice, ProformaStatusReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProformaStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -137,6 +137,16 @@ public class ProformaStatusReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProformaStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public ProformaStatusReason1Code getValue(ProformaStatusReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ProformaStatusReason2Choice obj, ProformaStatusReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class ProformaStatusReason2Choice {
 	 * EnabledStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProformaStatusReason2Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<ProformaStatusReason2Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProformaStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -196,6 +206,16 @@ public class ProformaStatusReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(ProformaStatusReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ProformaStatusReason2Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

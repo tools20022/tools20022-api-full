@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -185,7 +184,7 @@ public class SecuritiesTransactionPendingReportV05 {
 	 * SecuritiesTransactionPendingReportV04.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, Pagination> mmPagination = new MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,12 +197,14 @@ public class SecuritiesTransactionPendingReportV05 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPendingReportV05.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(SecuritiesTransactionPendingReportV05 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPendingReportV05 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -243,7 +244,7 @@ public class SecuritiesTransactionPendingReportV05 {
 	 * SecuritiesTransactionPendingReportV04.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, Statement14> mmStatementGeneralDetails = new MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, Statement14>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,12 +257,14 @@ public class SecuritiesTransactionPendingReportV05 {
 			complexType_lazy = () -> Statement14.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPendingReportV05.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement14 getValue(SecuritiesTransactionPendingReportV05 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPendingReportV05 obj, Statement14 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -302,7 +305,7 @@ public class SecuritiesTransactionPendingReportV05 {
 	 * SecuritiesTransactionPendingReportV04.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, Optional<PartyIdentification36Choice>> mmAccountOwner = new MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, Optional<PartyIdentification36Choice>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,12 +318,14 @@ public class SecuritiesTransactionPendingReportV05 {
 			complexType_lazy = () -> PartyIdentification36Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPendingReportV05.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification36Choice> getValue(SecuritiesTransactionPendingReportV05 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPendingReportV05 obj, Optional<PartyIdentification36Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -361,7 +366,7 @@ public class SecuritiesTransactionPendingReportV05 {
 	 * SecuritiesTransactionPendingReportV04.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, SecuritiesAccount13> mmSafekeepingAccount = new MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, SecuritiesAccount13>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -374,12 +379,14 @@ public class SecuritiesTransactionPendingReportV05 {
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPendingReportV05.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount13 getValue(SecuritiesTransactionPendingReportV05 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPendingReportV05 obj, SecuritiesAccount13 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -420,7 +427,7 @@ public class SecuritiesTransactionPendingReportV05 {
 	 * SecuritiesTransactionPendingReportV04.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, List<StatusAndReason18>> mmStatus = new MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, List<StatusAndReason18>>() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,12 +439,14 @@ public class SecuritiesTransactionPendingReportV05 {
 			complexType_lazy = () -> StatusAndReason18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPendingReportV05.class.getMethod("getStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<StatusAndReason18> getValue(SecuritiesTransactionPendingReportV05 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPendingReportV05 obj, List<StatusAndReason18> value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Txs")
@@ -477,7 +486,7 @@ public class SecuritiesTransactionPendingReportV05 {
 	 * SecuritiesTransactionPendingReportV04.mmTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactions = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, List<Transaction34>> mmTransactions = new MMMessageBuildingBlock<SecuritiesTransactionPendingReportV05, List<Transaction34>>() {
 		{
 			xmlTag = "Txs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -489,12 +498,14 @@ public class SecuritiesTransactionPendingReportV05 {
 			complexType_lazy = () -> Transaction34.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPendingReportV05.class.getMethod("getTransactions", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Transaction34> getValue(SecuritiesTransactionPendingReportV05 obj) {
+			return obj.getTransactions();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPendingReportV05 obj, List<Transaction34> value) {
+			obj.setTransactions(value);
 		}
 	};
 

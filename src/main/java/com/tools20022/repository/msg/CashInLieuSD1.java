@@ -95,7 +95,7 @@ public class CashInLieuSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashInLieuSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CashInLieuSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashInLieuSD1.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class CashInLieuSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CashInLieuSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CashInLieuSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -140,7 +150,7 @@ public class CashInLieuSD1 {
 	 * definition} = "Quantity elected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashInLieuSD1, FinancialInstrumentQuantity15Choice> mmQuantity = new MMMessageAttribute<CashInLieuSD1, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashInLieuSD1.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class CashInLieuSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(CashInLieuSD1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(CashInLieuSD1 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 

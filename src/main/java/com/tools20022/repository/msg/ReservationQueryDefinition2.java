@@ -101,7 +101,7 @@ public class ReservationQueryDefinition2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationQueryDefinition2, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<ReservationQueryDefinition2, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationQueryDefinition2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class ReservationQueryDefinition2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(ReservationQueryDefinition2 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(ReservationQueryDefinition2 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsvatnCrit")
@@ -143,7 +153,7 @@ public class ReservationQueryDefinition2 {
 	 * definition} = "Defines the reservation query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReservationCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationQueryDefinition2, Optional<ReservationCriteriaDefinition1Choice>> mmReservationCriteria = new MMMessageAssociationEnd<ReservationQueryDefinition2, Optional<ReservationCriteriaDefinition1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationQueryDefinition2.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class ReservationQueryDefinition2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReservationCriteriaDefinition1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReservationCriteriaDefinition1Choice> getValue(ReservationQueryDefinition2 obj) {
+			return obj.getReservationCriteria();
+		}
+
+		@Override
+		public void setValue(ReservationQueryDefinition2 obj, Optional<ReservationCriteriaDefinition1Choice> value) {
+			obj.setReservationCriteria(value.orElse(null));
 		}
 	};
 

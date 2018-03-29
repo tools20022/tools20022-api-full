@@ -20,6 +20,8 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.SystemIdentificationChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BusinessDayInformationDetails1;
+import com.tools20022.repository.msg.ErrorHandling3;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,7 +110,7 @@ public class BusinessDayInformationReport2 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationReport2, List<SystemIdentificationChoice>> mmSystemIdentification = new MMMessageAttribute<BusinessDayInformationReport2, List<SystemIdentificationChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReport2.mmObject();
 			isDerived = false;
@@ -118,6 +120,16 @@ public class BusinessDayInformationReport2 {
 			definition = "Identification of a particular cash clearing system.";
 			minOccurs = 1;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public List<SystemIdentificationChoice> getValue(BusinessDayInformationReport2 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationReport2 obj, List<SystemIdentificationChoice> value) {
+			obj.setSystemIdentification(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -148,7 +160,7 @@ public class BusinessDayInformationReport2 {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayInformationReport2, ErrorHandling3> mmBusinessError = new MMMessageAssociationEnd<BusinessDayInformationReport2, ErrorHandling3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReport2.mmObject();
 			isDerived = false;
@@ -159,7 +171,17 @@ public class BusinessDayInformationReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.mmObject();
+			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public ErrorHandling3 getValue(BusinessDayInformationReport2 obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationReport2 obj, ErrorHandling3 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	@XmlElement(name = "BizDayInf", required = true)
@@ -191,7 +213,7 @@ public class BusinessDayInformationReport2 {
 	 * definition} = "The requested business information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessDayInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayInformationReport2, BusinessDayInformationDetails1> mmBusinessDayInformation = new MMMessageAssociationEnd<BusinessDayInformationReport2, BusinessDayInformationDetails1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReport2.mmObject();
 			isDerived = false;
@@ -202,7 +224,17 @@ public class BusinessDayInformationReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationDetails1.mmObject();
+			type_lazy = () -> BusinessDayInformationDetails1.mmObject();
+		}
+
+		@Override
+		public BusinessDayInformationDetails1 getValue(BusinessDayInformationReport2 obj) {
+			return obj.getBusinessDayInformation();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationReport2 obj, BusinessDayInformationDetails1 value) {
+			obj.setBusinessDayInformation(value);
 		}
 	};
 	/**
@@ -284,7 +316,7 @@ public class BusinessDayInformationReport2 {
 		return businessError;
 	}
 
-	public BusinessDayInformationReport2 setBusinessError(com.tools20022.repository.msg.ErrorHandling3 businessError) {
+	public BusinessDayInformationReport2 setBusinessError(ErrorHandling3 businessError) {
 		this.businessError = Objects.requireNonNull(businessError);
 		return this;
 	}
@@ -293,7 +325,7 @@ public class BusinessDayInformationReport2 {
 		return businessDayInformation;
 	}
 
-	public BusinessDayInformationReport2 setBusinessDayInformation(com.tools20022.repository.msg.BusinessDayInformationDetails1 businessDayInformation) {
+	public BusinessDayInformationReport2 setBusinessDayInformation(BusinessDayInformationDetails1 businessDayInformation) {
 		this.businessDayInformation = Objects.requireNonNull(businessDayInformation);
 		return this;
 	}

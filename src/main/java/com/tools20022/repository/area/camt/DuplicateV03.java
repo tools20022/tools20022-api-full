@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.Case2;
 import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msg.ProprietaryData4;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +125,7 @@ public class DuplicateV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DuplicateV03, CaseAssignment2> mmAssignment = new MMMessageBuildingBlock<DuplicateV03, CaseAssignment2>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class DuplicateV03 {
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DuplicateV03.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment2 getValue(DuplicateV03 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(DuplicateV03 obj, CaseAssignment2 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -168,7 +169,7 @@ public class DuplicateV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DuplicateV03, Case2> mmCase = new MMMessageBuildingBlock<DuplicateV03, Case2>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,12 +180,14 @@ public class DuplicateV03 {
 			complexType_lazy = () -> Case2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DuplicateV03.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case2 getValue(DuplicateV03 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(DuplicateV03 obj, Case2 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Dplct", required = true)
@@ -212,7 +215,7 @@ public class DuplicateV03 {
 	 * definition} = "Duplicate of a previously sent message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDuplicate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DuplicateV03, ProprietaryData4> mmDuplicate = new MMMessageBuildingBlock<DuplicateV03, ProprietaryData4>() {
 		{
 			xmlTag = "Dplct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,12 +226,14 @@ public class DuplicateV03 {
 			complexType_lazy = () -> ProprietaryData4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DuplicateV03.class.getMethod("getDuplicate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ProprietaryData4 getValue(DuplicateV03 obj) {
+			return obj.getDuplicate();
+		}
+
+		@Override
+		public void setValue(DuplicateV03 obj, ProprietaryData4 value) {
+			obj.setDuplicate(value);
 		}
 	};
 

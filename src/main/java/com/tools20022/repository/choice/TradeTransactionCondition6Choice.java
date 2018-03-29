@@ -111,7 +111,7 @@ public class TradeTransactionCondition6Choice {
 	 * definition} = "Trade conditions expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionCondition6Choice, TradeTransactionCondition4Code> mmCode = new MMMessageAttribute<TradeTransactionCondition6Choice, TradeTransactionCondition4Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition6Choice.mmObject();
@@ -124,6 +124,16 @@ public class TradeTransactionCondition6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeTransactionCondition4Code.mmObject();
+		}
+
+		@Override
+		public TradeTransactionCondition4Code getValue(TradeTransactionCondition6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TradeTransactionCondition6Choice obj, TradeTransactionCondition4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class TradeTransactionCondition6Choice {
 	 * definition} = "Trade conditions expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionCondition6Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<TradeTransactionCondition6Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition6Choice.mmObject();
@@ -177,6 +187,16 @@ public class TradeTransactionCondition6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(TradeTransactionCondition6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TradeTransactionCondition6Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

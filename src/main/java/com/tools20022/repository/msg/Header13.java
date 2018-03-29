@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification53;
+import com.tools20022.repository.msg.Traceability2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -143,7 +145,7 @@ public class Header13 {
 	 * Header9.mmMessageFunction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header13, MessageFunction4Code> mmMessageFunction = new MMMessageAttribute<Header13, MessageFunction4Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header13.mmObject();
 			isDerived = false;
@@ -156,6 +158,16 @@ public class Header13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction4Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction4Code getValue(Header13 obj) {
+			return obj.getMessageFunction();
+		}
+
+		@Override
+		public void setValue(Header13 obj, MessageFunction4Code value) {
+			obj.setMessageFunction(value);
 		}
 	};
 	@XmlElement(name = "PrtcolVrsn", required = true)
@@ -200,7 +212,7 @@ public class Header13 {
 	 * Header9.mmProtocolVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtocolVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header13, Max6Text> mmProtocolVersion = new MMMessageAttribute<Header13, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header13.mmObject();
 			isDerived = false;
@@ -213,6 +225,16 @@ public class Header13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(Header13 obj) {
+			return obj.getProtocolVersion();
+		}
+
+		@Override
+		public void setValue(Header13 obj, Max6Text value) {
+			obj.setProtocolVersion(value);
 		}
 	};
 	@XmlElement(name = "XchgId")
@@ -260,7 +282,7 @@ public class Header13 {
 	 * Header9.mmExchangeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header13, Optional<Max3NumericText>> mmExchangeIdentification = new MMMessageAttribute<Header13, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header13.mmObject();
 			isDerived = false;
@@ -273,6 +295,16 @@ public class Header13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(Header13 obj) {
+			return obj.getExchangeIdentification();
+		}
+
+		@Override
+		public void setValue(Header13 obj, Optional<Max3NumericText> value) {
+			obj.setExchangeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -319,7 +351,7 @@ public class Header13 {
 	 * Header9.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header13, ISODateTime> mmCreationDateTime = new MMMessageAttribute<Header13, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header13.mmObject();
 			isDerived = false;
@@ -332,6 +364,16 @@ public class Header13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Header13 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Header13 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "InitgPty")
@@ -377,7 +419,7 @@ public class Header13 {
 	 * Header9.mmInitiatingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header13, Optional<GenericIdentification53>> mmInitiatingParty = new MMMessageAssociationEnd<Header13, Optional<GenericIdentification53>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header13.mmObject();
 			isDerived = false;
@@ -390,7 +432,17 @@ public class Header13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
+			type_lazy = () -> GenericIdentification53.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification53> getValue(Header13 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(Header13 obj, Optional<GenericIdentification53> value) {
+			obj.setInitiatingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptPty")
@@ -437,7 +489,7 @@ public class Header13 {
 	 * Header9.mmRecipientParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header13, Optional<GenericIdentification53>> mmRecipientParty = new MMMessageAssociationEnd<Header13, Optional<GenericIdentification53>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header13.mmObject();
 			isDerived = false;
@@ -450,11 +502,21 @@ public class Header13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
+			type_lazy = () -> GenericIdentification53.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification53> getValue(Header13 obj) {
+			return obj.getRecipientParty();
+		}
+
+		@Override
+		public void setValue(Header13 obj, Optional<GenericIdentification53> value) {
+			obj.setRecipientParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tracblt")
-	protected List<com.tools20022.repository.msg.Traceability2> traceability;
+	protected List<Traceability2> traceability;
 	/**
 	 * 
 	 <p>
@@ -497,7 +559,7 @@ public class Header13 {
 	 * Header9.mmTraceability}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTraceability = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header13, List<Traceability2>> mmTraceability = new MMMessageAttribute<Header13, List<Traceability2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header13.mmObject();
 			isDerived = false;
@@ -508,7 +570,17 @@ public class Header13 {
 			nextVersions_lazy = () -> Arrays.asList(Header20.mmTraceability, Header26.mmTraceability);
 			previousVersion_lazy = () -> Header9.mmTraceability;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Traceability2.mmObject();
+			complexType_lazy = () -> Traceability2.mmObject();
+		}
+
+		@Override
+		public List<Traceability2> getValue(Header13 obj) {
+			return obj.getTraceability();
+		}
+
+		@Override
+		public void setValue(Header13 obj, List<Traceability2> value) {
+			obj.setTraceability(value);
 		}
 	};
 
@@ -570,7 +642,7 @@ public class Header13 {
 		return initiatingParty == null ? Optional.empty() : Optional.of(initiatingParty);
 	}
 
-	public Header13 setInitiatingParty(com.tools20022.repository.msg.GenericIdentification53 initiatingParty) {
+	public Header13 setInitiatingParty(GenericIdentification53 initiatingParty) {
 		this.initiatingParty = initiatingParty;
 		return this;
 	}
@@ -579,7 +651,7 @@ public class Header13 {
 		return recipientParty == null ? Optional.empty() : Optional.of(recipientParty);
 	}
 
-	public Header13 setRecipientParty(com.tools20022.repository.msg.GenericIdentification53 recipientParty) {
+	public Header13 setRecipientParty(GenericIdentification53 recipientParty) {
 		this.recipientParty = recipientParty;
 		return this;
 	}
@@ -588,7 +660,7 @@ public class Header13 {
 		return traceability == null ? traceability = new ArrayList<>() : traceability;
 	}
 
-	public Header13 setTraceability(List<com.tools20022.repository.msg.Traceability2> traceability) {
+	public Header13 setTraceability(List<Traceability2> traceability) {
 		this.traceability = Objects.requireNonNull(traceability);
 		return this;
 	}

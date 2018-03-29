@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.ActivityReportItems2;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -141,7 +140,7 @@ public class ActivityReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActivityReportV03, MessageIdentification1> mmReportIdentification = new MMMessageBuildingBlock<ActivityReportV03, MessageIdentification1>() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,12 +152,14 @@ public class ActivityReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActivityReportV03.class.getMethod("getReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ActivityReportV03 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(ActivityReportV03 obj, MessageIdentification1 value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdMsgRef")
@@ -194,7 +195,7 @@ public class ActivityReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActivityReportV03, Optional<MessageIdentification1>> mmRelatedMessageReference = new MMMessageBuildingBlock<ActivityReportV03, Optional<MessageIdentification1>>() {
 		{
 			xmlTag = "RltdMsgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,12 +207,14 @@ public class ActivityReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActivityReportV03.class.getMethod("getRelatedMessageReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MessageIdentification1> getValue(ActivityReportV03 obj) {
+			return obj.getRelatedMessageReference();
+		}
+
+		@Override
+		public void setValue(ActivityReportV03 obj, Optional<MessageIdentification1> value) {
+			obj.setRelatedMessageReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rpt")
@@ -247,7 +250,7 @@ public class ActivityReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActivityReportV03, List<ActivityReportItems2>> mmReport = new MMMessageBuildingBlock<ActivityReportV03, List<ActivityReportItems2>>() {
 		{
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,12 +261,14 @@ public class ActivityReportV03 {
 			complexType_lazy = () -> ActivityReportItems2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActivityReportV03.class.getMethod("getReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ActivityReportItems2> getValue(ActivityReportV03 obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(ActivityReportV03 obj, List<ActivityReportItems2> value) {
+			obj.setReport(value);
 		}
 	};
 

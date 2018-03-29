@@ -116,7 +116,7 @@ public class TaxableIncomePerShareCalculated1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxableIncomePerShareCalculated1, TaxableIncomePerShareCalculated1Code> mmStructured = new MMMessageAttribute<TaxableIncomePerShareCalculated1, TaxableIncomePerShareCalculated1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxableIncomePerShareCalculated1.mmObject();
@@ -128,6 +128,16 @@ public class TaxableIncomePerShareCalculated1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxableIncomePerShareCalculated1Code.mmObject();
+		}
+
+		@Override
+		public TaxableIncomePerShareCalculated1Code getValue(TaxableIncomePerShareCalculated1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(TaxableIncomePerShareCalculated1 obj, TaxableIncomePerShareCalculated1Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -159,7 +169,7 @@ public class TaxableIncomePerShareCalculated1 {
 	 * definition} = "Additional information about the type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxableIncomePerShareCalculated1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<TaxableIncomePerShareCalculated1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxableIncomePerShareCalculated1.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class TaxableIncomePerShareCalculated1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TaxableIncomePerShareCalculated1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TaxableIncomePerShareCalculated1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

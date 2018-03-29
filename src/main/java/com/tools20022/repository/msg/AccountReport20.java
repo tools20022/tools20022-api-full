@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -30,8 +31,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Reports on the actual set up up of the account, related services and
- * mandates.
+ * Reports on the actual set up of the account, related services and mandates.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -93,7 +93,7 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountReport20"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Reports on the actual set up up of the account, related services and mandates."
+ * "Reports on the actual set up of the account, related services and mandates."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.AccountReport14
@@ -144,7 +144,7 @@ public class AccountReport20 {
 	 * AccountReport14.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, CustomerAccount6> mmAccount = new MMMessageAssociationEnd<AccountReport20, CustomerAccount6>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
@@ -157,7 +157,17 @@ public class AccountReport20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CustomerAccount6.mmObject();
+			type_lazy = () -> CustomerAccount6.mmObject();
+		}
+
+		@Override
+		public CustomerAccount6 getValue(AccountReport20 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, CustomerAccount6 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "UndrlygMstrAgrmt")
@@ -200,7 +210,7 @@ public class AccountReport20 {
 	 * AccountReport14.mmUnderlyingMasterAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingMasterAgreement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, Optional<ContractDocument1>> mmUnderlyingMasterAgreement = new MMMessageAssociationEnd<AccountReport20, Optional<ContractDocument1>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccountContract.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
@@ -213,7 +223,17 @@ public class AccountReport20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContractDocument1.mmObject();
+			type_lazy = () -> ContractDocument1.mmObject();
+		}
+
+		@Override
+		public Optional<ContractDocument1> getValue(AccountReport20 obj) {
+			return obj.getUnderlyingMasterAgreement();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, Optional<ContractDocument1> value) {
+			obj.setUnderlyingMasterAgreement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrctDts")
@@ -254,7 +274,7 @@ public class AccountReport20 {
 	 * AccountReport14.mmContractDates}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContractDates = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, Optional<AccountContract3>> mmContractDates = new MMMessageAssociationEnd<AccountReport20, Optional<AccountContract3>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccountContract.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
@@ -267,11 +287,21 @@ public class AccountReport20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountContract3.mmObject();
+			type_lazy = () -> AccountContract3.mmObject();
+		}
+
+		@Override
+		public Optional<AccountContract3> getValue(AccountReport20 obj) {
+			return obj.getContractDates();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, Optional<AccountContract3> value) {
+			obj.setContractDates(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mndt")
-	protected List<com.tools20022.repository.msg.OperationMandate2> mandate;
+	protected List<OperationMandate2> mandate;
 	/**
 	 * 
 	 <p>
@@ -308,7 +338,7 @@ public class AccountReport20 {
 	 * AccountReport14.mmMandate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, List<OperationMandate2>> mmMandate = new MMMessageAssociationEnd<AccountReport20, List<OperationMandate2>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountService.mmCashAccountMandate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
@@ -320,7 +350,17 @@ public class AccountReport20 {
 			previousVersion_lazy = () -> AccountReport14.mmMandate;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OperationMandate2.mmObject();
+			type_lazy = () -> OperationMandate2.mmObject();
+		}
+
+		@Override
+		public List<OperationMandate2> getValue(AccountReport20 obj) {
+			return obj.getMandate();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, List<OperationMandate2> value) {
+			obj.setMandate(value);
 		}
 	};
 	@XmlElement(name = "RefAcct")
@@ -363,7 +403,7 @@ public class AccountReport20 {
 	 * AccountReport14.mmReferenceAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferenceAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, Optional<CashAccount24>> mmReferenceAccount = new MMMessageAssociationEnd<AccountReport20, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
@@ -376,7 +416,17 @@ public class AccountReport20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(AccountReport20 obj) {
+			return obj.getReferenceAccount();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, Optional<CashAccount24> value) {
+			obj.setReferenceAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalTrfAcct")
@@ -419,7 +469,7 @@ public class AccountReport20 {
 	 * AccountReport14.mmBalanceTransferAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTransferAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, Optional<AccountForAction1>> mmBalanceTransferAccount = new MMMessageAssociationEnd<AccountReport20, Optional<AccountForAction1>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
@@ -432,7 +482,17 @@ public class AccountReport20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountForAction1.mmObject();
+			type_lazy = () -> AccountForAction1.mmObject();
+		}
+
+		@Override
+		public Optional<AccountForAction1> getValue(AccountReport20 obj) {
+			return obj.getBalanceTransferAccount();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, Optional<AccountForAction1> value) {
+			obj.setBalanceTransferAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfAcctSvcrId")
@@ -474,7 +534,7 @@ public class AccountReport20 {
 	 * AccountReport14.mmTransferAccountServicerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferAccountServicerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, Optional<BranchAndFinancialInstitutionIdentification5>> mmTransferAccountServicerIdentification = new MMMessageAssociationEnd<AccountReport20, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
@@ -487,7 +547,17 @@ public class AccountReport20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(AccountReport20 obj) {
+			return obj.getTransferAccountServicerIdentification();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setTransferAccountServicerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -529,7 +599,7 @@ public class AccountReport20 {
 	 * AccountReport14.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, Optional<OrganisationIdentification8>> mmAccountOwner = new MMMessageAssociationEnd<AccountReport20, Optional<OrganisationIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
@@ -542,11 +612,21 @@ public class AccountReport20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification8.mmObject();
+			type_lazy = () -> OrganisationIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationIdentification8> getValue(AccountReport20 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, Optional<OrganisationIdentification8> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtry")
-	protected List<com.tools20022.repository.msg.GenericIdentification1> proprietary;
+	protected List<GenericIdentification1> proprietary;
 	/**
 	 * 
 	 <p>
@@ -578,7 +658,7 @@ public class AccountReport20 {
 	 * AccountReport14.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, List<GenericIdentification1>> mmProprietary = new MMMessageAssociationEnd<AccountReport20, List<GenericIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
 			isDerived = false;
@@ -589,11 +669,21 @@ public class AccountReport20 {
 			previousVersion_lazy = () -> AccountReport14.mmProprietary;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification1> getValue(AccountReport20 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, List<GenericIdentification1> value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "Grp")
-	protected List<com.tools20022.repository.msg.Group1> group;
+	protected List<Group1> group;
 	/**
 	 * 
 	 <p>
@@ -619,7 +709,7 @@ public class AccountReport20 {
 	 * definition} = "Definition of a group of parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGroup = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport20, List<Group1>> mmGroup = new MMMessageAssociationEnd<AccountReport20, List<Group1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport20.mmObject();
 			isDerived = false;
@@ -629,7 +719,17 @@ public class AccountReport20 {
 			definition = "Definition of a group of parties.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Group1.mmObject();
+			type_lazy = () -> Group1.mmObject();
+		}
+
+		@Override
+		public List<Group1> getValue(AccountReport20 obj) {
+			return obj.getGroup();
+		}
+
+		@Override
+		public void setValue(AccountReport20 obj, List<Group1> value) {
+			obj.setGroup(value);
 		}
 	};
 
@@ -645,7 +745,7 @@ public class AccountReport20 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintContractDates1Rule.forAccountReport20, com.tools20022.repository.constraints.ConstraintContractDates2Rule.forAccountReport20);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReport20";
-				definition = "Reports on the actual set up up of the account, related services and mandates.";
+				definition = "Reports on the actual set up of the account, related services and mandates.";
 				previousVersion_lazy = () -> AccountReport14.mmObject();
 			}
 		});
@@ -656,7 +756,7 @@ public class AccountReport20 {
 		return account;
 	}
 
-	public AccountReport20 setAccount(com.tools20022.repository.msg.CustomerAccount6 account) {
+	public AccountReport20 setAccount(CustomerAccount6 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -665,7 +765,7 @@ public class AccountReport20 {
 		return underlyingMasterAgreement == null ? Optional.empty() : Optional.of(underlyingMasterAgreement);
 	}
 
-	public AccountReport20 setUnderlyingMasterAgreement(com.tools20022.repository.msg.ContractDocument1 underlyingMasterAgreement) {
+	public AccountReport20 setUnderlyingMasterAgreement(ContractDocument1 underlyingMasterAgreement) {
 		this.underlyingMasterAgreement = underlyingMasterAgreement;
 		return this;
 	}
@@ -674,7 +774,7 @@ public class AccountReport20 {
 		return contractDates == null ? Optional.empty() : Optional.of(contractDates);
 	}
 
-	public AccountReport20 setContractDates(com.tools20022.repository.msg.AccountContract3 contractDates) {
+	public AccountReport20 setContractDates(AccountContract3 contractDates) {
 		this.contractDates = contractDates;
 		return this;
 	}
@@ -683,7 +783,7 @@ public class AccountReport20 {
 		return mandate == null ? mandate = new ArrayList<>() : mandate;
 	}
 
-	public AccountReport20 setMandate(List<com.tools20022.repository.msg.OperationMandate2> mandate) {
+	public AccountReport20 setMandate(List<OperationMandate2> mandate) {
 		this.mandate = Objects.requireNonNull(mandate);
 		return this;
 	}
@@ -692,7 +792,7 @@ public class AccountReport20 {
 		return referenceAccount == null ? Optional.empty() : Optional.of(referenceAccount);
 	}
 
-	public AccountReport20 setReferenceAccount(com.tools20022.repository.msg.CashAccount24 referenceAccount) {
+	public AccountReport20 setReferenceAccount(CashAccount24 referenceAccount) {
 		this.referenceAccount = referenceAccount;
 		return this;
 	}
@@ -701,7 +801,7 @@ public class AccountReport20 {
 		return balanceTransferAccount == null ? Optional.empty() : Optional.of(balanceTransferAccount);
 	}
 
-	public AccountReport20 setBalanceTransferAccount(com.tools20022.repository.msg.AccountForAction1 balanceTransferAccount) {
+	public AccountReport20 setBalanceTransferAccount(AccountForAction1 balanceTransferAccount) {
 		this.balanceTransferAccount = balanceTransferAccount;
 		return this;
 	}
@@ -710,7 +810,7 @@ public class AccountReport20 {
 		return transferAccountServicerIdentification == null ? Optional.empty() : Optional.of(transferAccountServicerIdentification);
 	}
 
-	public AccountReport20 setTransferAccountServicerIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 transferAccountServicerIdentification) {
+	public AccountReport20 setTransferAccountServicerIdentification(BranchAndFinancialInstitutionIdentification5 transferAccountServicerIdentification) {
 		this.transferAccountServicerIdentification = transferAccountServicerIdentification;
 		return this;
 	}
@@ -719,7 +819,7 @@ public class AccountReport20 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public AccountReport20 setAccountOwner(com.tools20022.repository.msg.OrganisationIdentification8 accountOwner) {
+	public AccountReport20 setAccountOwner(OrganisationIdentification8 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -728,7 +828,7 @@ public class AccountReport20 {
 		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public AccountReport20 setProprietary(List<com.tools20022.repository.msg.GenericIdentification1> proprietary) {
+	public AccountReport20 setProprietary(List<GenericIdentification1> proprietary) {
 		this.proprietary = Objects.requireNonNull(proprietary);
 		return this;
 	}
@@ -737,7 +837,7 @@ public class AccountReport20 {
 		return group == null ? group = new ArrayList<>() : group;
 	}
 
-	public AccountReport20 setGroup(List<com.tools20022.repository.msg.Group1> group) {
+	public AccountReport20 setGroup(List<Group1> group) {
 		this.group = Objects.requireNonNull(group);
 		return this;
 	}

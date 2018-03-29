@@ -116,7 +116,7 @@ public class OriginalItem1 {
 	 * definition} = "Identification of the original notification item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalItemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItem1, Max35Text> mmOriginalItemIdentification = new MMMessageAttribute<OriginalItem1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItem1.mmObject();
@@ -128,6 +128,16 @@ public class OriginalItem1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalItem1 obj) {
+			return obj.getOriginalItemIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalItem1 obj, Max35Text value) {
+			obj.setOriginalItemIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlEndToEndId")
@@ -165,7 +175,7 @@ public class OriginalItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItem1, Optional<Max35Text>> mmOriginalEndToEndIdentification = new MMMessageAttribute<OriginalItem1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItem1.mmObject();
@@ -177,6 +187,16 @@ public class OriginalItem1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OriginalItem1 obj) {
+			return obj.getOriginalEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalItem1 obj, Optional<Max35Text> value) {
+			obj.setOriginalEndToEndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -215,7 +235,7 @@ public class OriginalItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItem1, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<OriginalItem1, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItem1.mmObject();
@@ -227,6 +247,16 @@ public class OriginalItem1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(OriginalItem1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(OriginalItem1 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "XpctdValDt")
@@ -264,7 +294,7 @@ public class OriginalItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalItem1, Optional<ISODate>> mmExpectedValueDate = new MMMessageAttribute<OriginalItem1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalItem1.mmObject();
@@ -276,6 +306,16 @@ public class OriginalItem1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(OriginalItem1 obj) {
+			return obj.getExpectedValueDate();
+		}
+
+		@Override
+		public void setValue(OriginalItem1 obj, Optional<ISODate> value) {
+			obj.setExpectedValueDate(value.orElse(null));
 		}
 	};
 

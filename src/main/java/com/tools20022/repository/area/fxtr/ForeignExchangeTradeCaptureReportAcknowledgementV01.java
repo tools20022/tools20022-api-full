@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.AdditionalReferences;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FXPostTradeTradeCapture;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -128,7 +127,7 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 	 * definition} = "Identifies the acknowledgement message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAcknowledgementIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, Optional<MessageIdentification1>> mmAcknowledgementIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, Optional<MessageIdentification1>>() {
 		{
 			xmlTag = "AckId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +138,14 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportAcknowledgementV01.class.getMethod("getAcknowledgementIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MessageIdentification1> getValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj) {
+			return obj.getAcknowledgementIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj, Optional<MessageIdentification1> value) {
+			obj.setAcknowledgementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradId", required = true)
@@ -173,7 +174,7 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, Max35Text> mmTradeIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, Max35Text>() {
 		{
 			xmlTag = "TradId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportAcknowledgementV01.class.getMethod("getTradeIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj, Max35Text value) {
+			obj.setTradeIdentification(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -216,7 +219,7 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 	 * definition} = "Acknowlegement status of recevied trade capture report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, Status5Code> mmStatus = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, Status5Code>() {
 		{
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +230,14 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 			simpleType_lazy = () -> Status5Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportAcknowledgementV01.class.getMethod("getStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Status5Code getValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj, Status5Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Ref")
@@ -262,7 +267,7 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, Optional<AdditionalReferences>> mmReference = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, Optional<AdditionalReferences>>() {
 		{
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,12 +278,14 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 			complexType_lazy = () -> AdditionalReferences.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportAcknowledgementV01.class.getMethod("getReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReferences> getValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj, Optional<AdditionalReferences> value) {
+			obj.setReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -308,7 +315,7 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportAcknowledgementV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,12 +325,14 @@ public class ForeignExchangeTradeCaptureReportAcknowledgementV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportAcknowledgementV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportAcknowledgementV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

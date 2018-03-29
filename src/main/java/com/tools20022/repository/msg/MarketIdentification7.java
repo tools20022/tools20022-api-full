@@ -123,7 +123,7 @@ public class MarketIdentification7 {
 	 * definition} = "Specifies the type of market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification7, MarketTypeFormat2Choice> mmType = new MMMessageAssociationEnd<MarketIdentification7, MarketTypeFormat2Choice>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification7.mmObject();
@@ -137,6 +137,16 @@ public class MarketIdentification7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarketTypeFormat2Choice.mmObject();
+		}
+
+		@Override
+		public MarketTypeFormat2Choice getValue(MarketIdentification7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MarketIdentification7 obj, MarketTypeFormat2Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Id")
@@ -176,7 +186,7 @@ public class MarketIdentification7 {
 	 * definition} = "Identifies the market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification7, Optional<MarketIdentification2Choice>> mmIdentification = new MMMessageAssociationEnd<MarketIdentification7, Optional<MarketIdentification2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification7.mmObject();
@@ -190,6 +200,16 @@ public class MarketIdentification7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification2Choice> getValue(MarketIdentification7 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MarketIdentification7 obj, Optional<MarketIdentification2Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 

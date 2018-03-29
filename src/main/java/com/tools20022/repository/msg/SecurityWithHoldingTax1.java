@@ -102,7 +102,7 @@ public class SecurityWithHoldingTax1 {
 	 * "Value of the withholding tax as rate, amount or not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWithholdingTaxValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityWithHoldingTax1, RateAndAmountFormat1Choice> mmWithholdingTaxValue = new MMMessageAttribute<SecurityWithHoldingTax1, RateAndAmountFormat1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityWithHoldingTax1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class SecurityWithHoldingTax1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> RateAndAmountFormat1Choice.mmObject();
+		}
+
+		@Override
+		public RateAndAmountFormat1Choice getValue(SecurityWithHoldingTax1 obj) {
+			return obj.getWithholdingTaxValue();
+		}
+
+		@Override
+		public void setValue(SecurityWithHoldingTax1 obj, RateAndAmountFormat1Choice value) {
+			obj.setWithholdingTaxValue(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -144,7 +154,7 @@ public class SecurityWithHoldingTax1 {
 	 * definition} = "Represents the tax authority."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityWithHoldingTax1, CountryCode> mmCountry = new MMMessageAttribute<SecurityWithHoldingTax1, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityWithHoldingTax1.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class SecurityWithHoldingTax1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(SecurityWithHoldingTax1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(SecurityWithHoldingTax1 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

@@ -99,7 +99,7 @@ public class ProprietaryData {
 	 * definition} = "Type of the proprietary document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryData, Max35Text> mmType = new MMMessageAttribute<ProprietaryData, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class ProprietaryData {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryData obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProprietaryData obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Any")
@@ -142,7 +152,7 @@ public class ProprietaryData {
 	 * definition} = "Proprietary content."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAny = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryData, Optional<SkipProcessing>> mmAny = new MMMessageAttribute<ProprietaryData, Optional<SkipProcessing>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class ProprietaryData {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SkipProcessing.mmObject();
+		}
+
+		@Override
+		public Optional<SkipProcessing> getValue(ProprietaryData obj) {
+			return obj.getAny();
+		}
+
+		@Override
+		public void setValue(ProprietaryData obj, Optional<SkipProcessing> value) {
+			obj.setAny(value.orElse(null));
 		}
 	};
 

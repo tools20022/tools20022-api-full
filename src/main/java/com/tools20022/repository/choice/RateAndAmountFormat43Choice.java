@@ -111,7 +111,7 @@ public class RateAndAmountFormat43Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat43Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat43Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat43Choice.mmObject();
@@ -124,6 +124,16 @@ public class RateAndAmountFormat43Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat43Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat43Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -164,7 +174,7 @@ public class RateAndAmountFormat43Choice {
 	 * definition} = "Value is expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat43Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat43Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat43Choice.mmObject();
@@ -177,6 +187,16 @@ public class RateAndAmountFormat43Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat43Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat43Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

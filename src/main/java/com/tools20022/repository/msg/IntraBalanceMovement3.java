@@ -26,6 +26,10 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.IntraBalanceMovement4;
+import com.tools20022.repository.msg.IntraBalanceStatusAndReason2;
+import com.tools20022.repository.msg.SystemPartyIdentification6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -151,7 +155,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceMovement3, Optional<SystemPartyIdentification6>> mmAccountOwner = new MMMessageAssociationEnd<IntraBalanceMovement3, Optional<SystemPartyIdentification6>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
@@ -164,7 +168,17 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
+			type_lazy = () -> SystemPartyIdentification6.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification6> getValue(IntraBalanceMovement3 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Optional<SystemPartyIdentification6> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -205,7 +219,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmCashAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceMovement3, Optional<CashAccount24>> mmCashAccount = new MMMessageAssociationEnd<IntraBalanceMovement3, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
@@ -218,7 +232,17 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(IntraBalanceMovement3 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Optional<CashAccount24> value) {
+			obj.setCashAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsAndRsn")
@@ -263,7 +287,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmStatusAndReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceMovement3, Optional<IntraBalanceStatusAndReason2>> mmStatusAndReason = new MMMessageAssociationEnd<IntraBalanceMovement3, Optional<IntraBalanceStatusAndReason2>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
@@ -277,7 +301,17 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusAndReason2.mmObject();
+			type_lazy = () -> IntraBalanceStatusAndReason2.mmObject();
+		}
+
+		@Override
+		public Optional<IntraBalanceStatusAndReason2> getValue(IntraBalanceMovement3 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Optional<IntraBalanceStatusAndReason2> value) {
+			obj.setStatusAndReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrTxId", required = true)
@@ -324,7 +358,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmAccountOwnerTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement3, Max35Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<IntraBalanceMovement3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
@@ -338,6 +372,16 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IntraBalanceMovement3 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Max35Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -384,7 +428,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmAccountServicerTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
@@ -398,6 +442,16 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalanceMovement3 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId")
@@ -445,7 +499,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmMarketInfrastructureTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
@@ -459,6 +513,16 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalanceMovement3 obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Optional<Max35Text> value) {
+			obj.setMarketInfrastructureTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcrTxId")
@@ -496,7 +560,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmProcessorTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>> mmProcessorTransactionIdentification = new MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
 			isDerived = false;
@@ -508,6 +572,16 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalanceMovement3 obj) {
+			return obj.getProcessorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Optional<Max35Text> value) {
+			obj.setProcessorTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolId")
@@ -547,7 +621,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmPoolIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>> mmPoolIdentification = new MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
 			isDerived = false;
@@ -560,6 +634,16 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalanceMovement3 obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Optional<Max35Text> value) {
+			obj.setPoolIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -606,7 +690,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<IntraBalanceMovement3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
@@ -620,6 +704,16 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalanceMovement3 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Optional<Max35Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MvmntDtls")
@@ -662,7 +756,7 @@ public class IntraBalanceMovement3 {
 	 * IntraBalanceMovement1.mmMovementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceMovement3, Optional<IntraBalanceMovement4>> mmMovementDetails = new MMMessageAssociationEnd<IntraBalanceMovement3, Optional<IntraBalanceMovement4>>() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement3.mmObject();
@@ -676,7 +770,17 @@ public class IntraBalanceMovement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement4.mmObject();
+			type_lazy = () -> IntraBalanceMovement4.mmObject();
+		}
+
+		@Override
+		public Optional<IntraBalanceMovement4> getValue(IntraBalanceMovement3 obj) {
+			return obj.getMovementDetails();
+		}
+
+		@Override
+		public void setValue(IntraBalanceMovement3 obj, Optional<IntraBalanceMovement4> value) {
+			obj.setMovementDetails(value.orElse(null));
 		}
 	};
 
@@ -704,7 +808,7 @@ public class IntraBalanceMovement3 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public IntraBalanceMovement3 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification6 accountOwner) {
+	public IntraBalanceMovement3 setAccountOwner(SystemPartyIdentification6 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -713,7 +817,7 @@ public class IntraBalanceMovement3 {
 		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public IntraBalanceMovement3 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+	public IntraBalanceMovement3 setCashAccount(CashAccount24 cashAccount) {
 		this.cashAccount = cashAccount;
 		return this;
 	}
@@ -722,7 +826,7 @@ public class IntraBalanceMovement3 {
 		return statusAndReason == null ? Optional.empty() : Optional.of(statusAndReason);
 	}
 
-	public IntraBalanceMovement3 setStatusAndReason(com.tools20022.repository.msg.IntraBalanceStatusAndReason2 statusAndReason) {
+	public IntraBalanceMovement3 setStatusAndReason(IntraBalanceStatusAndReason2 statusAndReason) {
 		this.statusAndReason = statusAndReason;
 		return this;
 	}
@@ -785,7 +889,7 @@ public class IntraBalanceMovement3 {
 		return movementDetails == null ? Optional.empty() : Optional.of(movementDetails);
 	}
 
-	public IntraBalanceMovement3 setMovementDetails(com.tools20022.repository.msg.IntraBalanceMovement4 movementDetails) {
+	public IntraBalanceMovement3 setMovementDetails(IntraBalanceMovement4 movementDetails) {
 		this.movementDetails = movementDetails;
 		return this;
 	}

@@ -52,11 +52,15 @@ public class ConstraintCounterpartyIdentificationRule {
 	 */
 	public static final MMConstraint<NetReportV01> forNetReportV01 = new MMConstraint<NetReportV01>() {
 		{
-			validator = ConstraintCounterpartyIdentificationRule::checkNetReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentificationRule";
 			definition = "NetServiceCounterpartyIdentification must only be used at this level if all of the underlying obligations are with a single counterparty.";
 			owner_lazy = () -> NetReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetReportV01 obj) throws Exception {
+			checkNetReportV01(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintCounterpartyIdentificationRule {
 	 */
 	public static final MMConstraint<NetObligation1> forNetObligation1 = new MMConstraint<NetObligation1>() {
 		{
-			validator = ConstraintCounterpartyIdentificationRule::checkNetObligation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentificationRule";
 			definition = "NetServiceCounterpartyIdentification must be present at this level in all obligations if one or more counterparties are involved in the calculation of the net report, i.e.NetServiceCounterpartyIdentification is not used in NetReport level.";
 			owner_lazy = () -> NetObligation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NetObligation1 obj) throws Exception {
+			checkNetObligation1(obj);
 		}
 	};
 

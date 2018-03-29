@@ -139,7 +139,7 @@ public class References6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References6Choice, Max35Text> mmAccountServicerTransactionIdentification = new MMMessageAttribute<References6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References6Choice.mmObject();
@@ -152,6 +152,16 @@ public class References6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References6Choice obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References6Choice obj, Max35Text value) {
+			obj.setAccountServicerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrTxId", required = true)
@@ -193,7 +203,7 @@ public class References6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References6Choice, Max35Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<References6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References6Choice.mmObject();
@@ -206,6 +216,16 @@ public class References6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References6Choice obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References6Choice obj, Max35Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId", required = true)
@@ -248,7 +268,7 @@ public class References6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References6Choice, Max35Text> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<References6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References6Choice.mmObject();
@@ -261,6 +281,16 @@ public class References6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References6Choice obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References6Choice obj, Max35Text value) {
+			obj.setMarketInfrastructureTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolId", required = true)
@@ -300,7 +330,7 @@ public class References6Choice {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References6Choice, Max35Text> mmPoolIdentification = new MMMessageAttribute<References6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References6Choice.mmObject();
@@ -313,6 +343,16 @@ public class References6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References6Choice obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(References6Choice obj, Max35Text value) {
+			obj.setPoolIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonId", required = true)
@@ -354,7 +394,7 @@ public class References6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References6Choice, Max35Text> mmCommonIdentification = new MMMessageAttribute<References6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References6Choice.mmObject();
@@ -367,6 +407,16 @@ public class References6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References6Choice obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(References6Choice obj, Max35Text value) {
+			obj.setCommonIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradId", required = true)
@@ -408,7 +458,7 @@ public class References6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References6Choice, Max35Text> mmTradeIdentification = new MMMessageAttribute<References6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References6Choice.mmObject();
@@ -421,6 +471,16 @@ public class References6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References6Choice obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(References6Choice obj, Max35Text value) {
+			obj.setTradeIdentification(value);
 		}
 	};
 

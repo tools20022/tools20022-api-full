@@ -161,7 +161,7 @@ public class SettlementData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashFlowUniqueReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, Optional<Max35Text>> mmCashFlowUniqueReference = new MMMessageAttribute<SettlementData2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
@@ -172,6 +172,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SettlementData2 obj) {
+			return obj.getCashFlowUniqueReference();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, Optional<Max35Text> value) {
+			obj.setCashFlowUniqueReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSysUnqRef")
@@ -203,7 +213,7 @@ public class SettlementData2 {
 	 * definition} = "Unique reference assigned by a settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementSystemUniqueReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, Optional<Max35Text>> mmSettlementSystemUniqueReference = new MMMessageAttribute<SettlementData2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
@@ -214,6 +224,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SettlementData2 obj) {
+			return obj.getSettlementSystemUniqueReference();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, Optional<Max35Text> value) {
+			obj.setSettlementSystemUniqueReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmAmt", required = true)
@@ -253,7 +273,7 @@ public class SettlementData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, ActiveOrHistoricCurrencyAndAmount> mmSettlementAmount = new MMMessageAttribute<SettlementData2, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
@@ -265,6 +285,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(SettlementData2 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "SttldAmt")
@@ -302,7 +332,7 @@ public class SettlementData2 {
 	 * definition} = "Funds which the trading side is expected to receive."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmSettledAmount = new MMMessageAttribute<SettlementData2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
@@ -314,6 +344,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(SettlementData2 obj) {
+			return obj.getSettledAmount();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setSettledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctdAmt")
@@ -351,7 +391,7 @@ public class SettlementData2 {
 	 * definition} = "Amount that cannot be settled by a settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmRejectedAmount = new MMMessageAttribute<SettlementData2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmRejectedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
@@ -363,6 +403,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(SettlementData2 obj) {
+			return obj.getRejectedAmount();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setRejectedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PngPty", required = true)
@@ -399,7 +449,7 @@ public class SettlementData2 {
 	 * definition} = "Specifies the party that pays the settlement amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementData2, PartyIdentification8Choice> mmPayingParty = new MMMessageAssociationEnd<SettlementData2, PartyIdentification8Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
@@ -412,6 +462,16 @@ public class SettlementData2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification8Choice getValue(SettlementData2 obj) {
+			return obj.getPayingParty();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, PartyIdentification8Choice value) {
+			obj.setPayingParty(value);
 		}
 	};
 	@XmlElement(name = "RcvgPty", required = true)
@@ -448,7 +508,7 @@ public class SettlementData2 {
 	 * definition} = "Specifies the party that receives the settlement amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementData2, PartyIdentification8Choice> mmReceivingParty = new MMMessageAssociationEnd<SettlementData2, PartyIdentification8Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
@@ -461,6 +521,16 @@ public class SettlementData2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification8Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification8Choice getValue(SettlementData2 obj) {
+			return obj.getReceivingParty();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, PartyIdentification8Choice value) {
+			obj.setReceivingParty(value);
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -497,7 +567,7 @@ public class SettlementData2 {
 	 * definition} = "Date on which the settlement is due to settle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, ISODate> mmSettlementDate = new MMMessageAttribute<SettlementData2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
@@ -509,6 +579,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SettlementData2 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, ISODate value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts", required = true)
@@ -548,7 +628,7 @@ public class SettlementData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, SettlementStatus1Code> mmSettlementStatus = new MMMessageAttribute<SettlementData2, SettlementStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
@@ -560,6 +640,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementStatus1Code.mmObject();
+		}
+
+		@Override
+		public SettlementStatus1Code getValue(SettlementData2 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, SettlementStatus1Code value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 	@XmlElement(name = "XtndedSttlmSts", required = true)
@@ -594,7 +684,7 @@ public class SettlementData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedSettlementStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, Extended350Code> mmExtendedSettlementStatus = new MMMessageAttribute<SettlementData2, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
@@ -605,6 +695,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(SettlementData2 obj) {
+			return obj.getExtendedSettlementStatus();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, Extended350Code value) {
+			obj.setExtendedSettlementStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmStsSubTp")
@@ -638,7 +738,7 @@ public class SettlementData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementStatusSubType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, Optional<Max70Text>> mmSettlementStatusSubType = new MMMessageAttribute<SettlementData2, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
 			isDerived = false;
@@ -649,6 +749,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(SettlementData2 obj) {
+			return obj.getSettlementStatusSubType();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, Optional<Max70Text> value) {
+			obj.setSettlementStatusSubType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sspd", required = true)
@@ -686,7 +796,7 @@ public class SettlementData2 {
 	 * definition} = "Cash settlement is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSuspended = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, YesNoIndicator> mmSuspended = new MMMessageAttribute<SettlementData2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmSettlementSuspended;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
@@ -698,6 +808,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(SettlementData2 obj) {
+			return obj.getSuspended();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, YesNoIndicator value) {
+			obj.setSuspended(value);
 		}
 	};
 	@XmlElement(name = "Pdg", required = true)
@@ -735,7 +855,7 @@ public class SettlementData2 {
 	 * definition} = "Cash settlement is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementData2, YesNoIndicator> mmPending = new MMMessageAttribute<SettlementData2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmPendingSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementData2.mmObject();
@@ -747,6 +867,16 @@ public class SettlementData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(SettlementData2 obj) {
+			return obj.getPending();
+		}
+
+		@Override
+		public void setValue(SettlementData2 obj, YesNoIndicator value) {
+			obj.setPending(value);
 		}
 	};
 	/**

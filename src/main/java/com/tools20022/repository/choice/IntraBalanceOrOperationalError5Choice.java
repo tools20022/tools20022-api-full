@@ -115,7 +115,7 @@ public class IntraBalanceOrOperationalError5Choice {
 	 * IntraBalanceOrOperationalError2Choice.mmCancellations}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceOrOperationalError5Choice, List<IntraBalanceCancellation3>> mmCancellations = new MMMessageAssociationEnd<IntraBalanceOrOperationalError5Choice, List<IntraBalanceCancellation3>>() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntraBalanceOrOperationalError5Choice.mmObject();
@@ -128,6 +128,16 @@ public class IntraBalanceOrOperationalError5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IntraBalanceCancellation3.mmObject();
+		}
+
+		@Override
+		public List<IntraBalanceCancellation3> getValue(IntraBalanceOrOperationalError5Choice obj) {
+			return obj.getCancellations();
+		}
+
+		@Override
+		public void setValue(IntraBalanceOrOperationalError5Choice obj, List<IntraBalanceCancellation3> value) {
+			obj.setCancellations(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -163,7 +173,7 @@ public class IntraBalanceOrOperationalError5Choice {
 	 * IntraBalanceOrOperationalError2Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceOrOperationalError5Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<IntraBalanceOrOperationalError5Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntraBalanceOrOperationalError5Choice.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class IntraBalanceOrOperationalError5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(IntraBalanceOrOperationalError5Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(IntraBalanceOrOperationalError5Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

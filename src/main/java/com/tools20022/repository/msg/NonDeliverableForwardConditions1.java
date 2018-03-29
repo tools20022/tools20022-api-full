@@ -131,7 +131,7 @@ public class NonDeliverableForwardConditions1 {
 	 * "Specifies whether the instruction is an NDF opening or fixing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDeliverableForwardConditions1, YesNoIndicator> mmOpeningIndicator = new MMMessageAttribute<NonDeliverableForwardConditions1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardConditions1.mmObject();
 			isDerived = false;
@@ -142,6 +142,16 @@ public class NonDeliverableForwardConditions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(NonDeliverableForwardConditions1 obj) {
+			return obj.getOpeningIndicator();
+		}
+
+		@Override
+		public void setValue(NonDeliverableForwardConditions1 obj, YesNoIndicator value) {
+			obj.setOpeningIndicator(value);
 		}
 	};
 	@XmlElement(name = "OpngFxgConds", required = true)
@@ -175,7 +185,7 @@ public class NonDeliverableForwardConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOpeningFixingConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonDeliverableForwardConditions1, NDFOpeningFixing1Choice> mmOpeningFixingConditions = new MMMessageAssociationEnd<NonDeliverableForwardConditions1, NDFOpeningFixing1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardConditions1.mmObject();
 			isDerived = false;
@@ -187,6 +197,16 @@ public class NonDeliverableForwardConditions1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NDFOpeningFixing1Choice.mmObject();
+		}
+
+		@Override
+		public NDFOpeningFixing1Choice getValue(NonDeliverableForwardConditions1 obj) {
+			return obj.getOpeningFixingConditions();
+		}
+
+		@Override
+		public void setValue(NonDeliverableForwardConditions1 obj, NDFOpeningFixing1Choice value) {
+			obj.setOpeningFixingConditions(value);
 		}
 	};
 

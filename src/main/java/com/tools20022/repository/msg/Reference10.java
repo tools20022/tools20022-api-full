@@ -104,7 +104,7 @@ public class Reference10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference10, Max35Text> mmOriginalClientOrderIdentification = new MMMessageAttribute<Reference10, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference10.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class Reference10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference10 obj) {
+			return obj.getOriginalClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference10 obj, Max35Text value) {
+			obj.setOriginalClientOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlOrdrModTm")
@@ -148,7 +158,7 @@ public class Reference10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalOrderModificationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference10, Optional<ISODateTime>> mmOriginalOrderModificationTime = new MMMessageAttribute<Reference10, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference10.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class Reference10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Reference10 obj) {
+			return obj.getOriginalOrderModificationTime();
+		}
+
+		@Override
+		public void setValue(Reference10 obj, Optional<ISODateTime> value) {
+			obj.setOriginalOrderModificationTime(value.orElse(null));
 		}
 	};
 

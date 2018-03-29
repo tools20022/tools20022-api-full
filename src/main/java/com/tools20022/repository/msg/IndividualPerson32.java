@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CountryAndResidentialStatusType2;
+import com.tools20022.repository.msg.GenericIdentification164;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -133,7 +135,7 @@ public class IndividualPerson32 {
 	 * IndividualPerson12.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson32, Optional<Max350Text>> mmName = new MMMessageAttribute<IndividualPerson32, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson32.mmObject();
@@ -146,6 +148,16 @@ public class IndividualPerson32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(IndividualPerson32 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson32 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BirthDt")
@@ -187,7 +199,7 @@ public class IndividualPerson32 {
 	 * IndividualPerson12.mmBirthDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson32, Optional<ISODate>> mmBirthDate = new MMMessageAttribute<IndividualPerson32, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson32.mmObject();
@@ -200,6 +212,16 @@ public class IndividualPerson32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(IndividualPerson32 obj) {
+			return obj.getBirthDate();
+		}
+
+		@Override
+		public void setValue(IndividualPerson32 obj, Optional<ISODate> value) {
+			obj.setBirthDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryAndResdtlSts")
@@ -244,7 +266,7 @@ public class IndividualPerson32 {
 	 * IndividualPerson12.mmCountryAndResidentialStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryAndResidentialStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson32, Optional<CountryAndResidentialStatusType2>> mmCountryAndResidentialStatus = new MMMessageAttribute<IndividualPerson32, Optional<CountryAndResidentialStatusType2>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmResidentialStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson32.mmObject();
@@ -256,11 +278,21 @@ public class IndividualPerson32 {
 			previousVersion_lazy = () -> IndividualPerson12.mmCountryAndResidentialStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType2.mmObject();
+			complexType_lazy = () -> CountryAndResidentialStatusType2.mmObject();
+		}
+
+		@Override
+		public Optional<CountryAndResidentialStatusType2> getValue(IndividualPerson32 obj) {
+			return obj.getCountryAndResidentialStatus();
+		}
+
+		@Override
+		public void setValue(IndividualPerson32 obj, Optional<CountryAndResidentialStatusType2> value) {
+			obj.setCountryAndResidentialStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrId")
-	protected List<com.tools20022.repository.msg.GenericIdentification164> otherIdentification;
+	protected List<GenericIdentification164> otherIdentification;
 	/**
 	 * 
 	 <p>
@@ -300,7 +332,7 @@ public class IndividualPerson32 {
 	 * IndividualPerson12.mmOtherIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson32, List<GenericIdentification164>> mmOtherIdentification = new MMMessageAssociationEnd<IndividualPerson32, List<GenericIdentification164>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson32.mmObject();
@@ -312,7 +344,17 @@ public class IndividualPerson32 {
 			previousVersion_lazy = () -> IndividualPerson12.mmOtherIdentification;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification164.mmObject();
+			type_lazy = () -> GenericIdentification164.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification164> getValue(IndividualPerson32 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(IndividualPerson32 obj, List<GenericIdentification164> value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 
@@ -355,7 +397,7 @@ public class IndividualPerson32 {
 		return countryAndResidentialStatus == null ? Optional.empty() : Optional.of(countryAndResidentialStatus);
 	}
 
-	public IndividualPerson32 setCountryAndResidentialStatus(com.tools20022.repository.msg.CountryAndResidentialStatusType2 countryAndResidentialStatus) {
+	public IndividualPerson32 setCountryAndResidentialStatus(CountryAndResidentialStatusType2 countryAndResidentialStatus) {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 		return this;
 	}
@@ -364,7 +406,7 @@ public class IndividualPerson32 {
 		return otherIdentification == null ? otherIdentification = new ArrayList<>() : otherIdentification;
 	}
 
-	public IndividualPerson32 setOtherIdentification(List<com.tools20022.repository.msg.GenericIdentification164> otherIdentification) {
+	public IndividualPerson32 setOtherIdentification(List<GenericIdentification164> otherIdentification) {
 		this.otherIdentification = Objects.requireNonNull(otherIdentification);
 		return this;
 	}

@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemAvailabilityAndEvents1;
+import com.tools20022.repository.msg.SystemStatus2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -120,7 +122,7 @@ public class BusinessDay4 {
 	 * BusinessDay2.mmSystemDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDay4, Optional<ISODate>> mmSystemDate = new MMMessageAttribute<BusinessDay4, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDay4.mmObject();
 			isDerived = false;
@@ -133,6 +135,16 @@ public class BusinessDay4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(BusinessDay4 obj) {
+			return obj.getSystemDate();
+		}
+
+		@Override
+		public void setValue(BusinessDay4 obj, Optional<ISODate> value) {
+			obj.setSystemDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysSts")
@@ -177,7 +189,7 @@ public class BusinessDay4 {
 	 * BusinessDay2.mmSystemStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDay4, Optional<SystemStatus2>> mmSystemStatus = new MMMessageAssociationEnd<BusinessDay4, Optional<SystemStatus2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDay4.mmObject();
 			isDerived = false;
@@ -190,11 +202,21 @@ public class BusinessDay4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemStatus2.mmObject();
+			type_lazy = () -> SystemStatus2.mmObject();
+		}
+
+		@Override
+		public Optional<SystemStatus2> getValue(BusinessDay4 obj) {
+			return obj.getSystemStatus();
+		}
+
+		@Override
+		public void setValue(BusinessDay4 obj, Optional<SystemStatus2> value) {
+			obj.setSystemStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysInfPerCcy")
-	protected List<com.tools20022.repository.msg.SystemAvailabilityAndEvents1> systemInformationPerCurrency;
+	protected List<SystemAvailabilityAndEvents1> systemInformationPerCurrency;
 	/**
 	 * 
 	 <p>
@@ -236,7 +258,7 @@ public class BusinessDay4 {
 	 * BusinessDay2.mmSystemInformationPerCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemInformationPerCurrency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDay4, List<SystemAvailabilityAndEvents1>> mmSystemInformationPerCurrency = new MMMessageAssociationEnd<BusinessDay4, List<SystemAvailabilityAndEvents1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDay4.mmObject();
 			isDerived = false;
@@ -248,7 +270,17 @@ public class BusinessDay4 {
 			previousVersion_lazy = () -> BusinessDay2.mmSystemInformationPerCurrency;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemAvailabilityAndEvents1.mmObject();
+			type_lazy = () -> SystemAvailabilityAndEvents1.mmObject();
+		}
+
+		@Override
+		public List<SystemAvailabilityAndEvents1> getValue(BusinessDay4 obj) {
+			return obj.getSystemInformationPerCurrency();
+		}
+
+		@Override
+		public void setValue(BusinessDay4 obj, List<SystemAvailabilityAndEvents1> value) {
+			obj.setSystemInformationPerCurrency(value);
 		}
 	};
 
@@ -281,7 +313,7 @@ public class BusinessDay4 {
 		return systemStatus == null ? Optional.empty() : Optional.of(systemStatus);
 	}
 
-	public BusinessDay4 setSystemStatus(com.tools20022.repository.msg.SystemStatus2 systemStatus) {
+	public BusinessDay4 setSystemStatus(SystemStatus2 systemStatus) {
 		this.systemStatus = systemStatus;
 		return this;
 	}
@@ -290,7 +322,7 @@ public class BusinessDay4 {
 		return systemInformationPerCurrency == null ? systemInformationPerCurrency = new ArrayList<>() : systemInformationPerCurrency;
 	}
 
-	public BusinessDay4 setSystemInformationPerCurrency(List<com.tools20022.repository.msg.SystemAvailabilityAndEvents1> systemInformationPerCurrency) {
+	public BusinessDay4 setSystemInformationPerCurrency(List<SystemAvailabilityAndEvents1> systemInformationPerCurrency) {
 		this.systemInformationPerCurrency = Objects.requireNonNull(systemInformationPerCurrency);
 		return this;
 	}

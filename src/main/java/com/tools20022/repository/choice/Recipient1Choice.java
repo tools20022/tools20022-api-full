@@ -103,7 +103,7 @@ public class Recipient1Choice {
 	 * "Encryption key using previously distributed asymmetric key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient1Choice, Optional<KeyTransport1>> mmKeyTransport = new MMMessageAssociationEnd<Recipient1Choice, Optional<KeyTransport1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient1Choice.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class Recipient1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> KeyTransport1.mmObject();
+		}
+
+		@Override
+		public Optional<KeyTransport1> getValue(Recipient1Choice obj) {
+			return obj.getKeyTransport();
+		}
+
+		@Override
+		public void setValue(Recipient1Choice obj, Optional<KeyTransport1> value) {
+			obj.setKeyTransport(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KEK")
@@ -145,7 +155,7 @@ public class Recipient1Choice {
 	 * "Encryption key using previously distributed symmetric key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKEK = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient1Choice, Optional<KEK1>> mmKEK = new MMMessageAssociationEnd<Recipient1Choice, Optional<KEK1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient1Choice.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class Recipient1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> KEK1.mmObject();
+		}
+
+		@Override
+		public Optional<KEK1> getValue(Recipient1Choice obj) {
+			return obj.getKEK();
+		}
+
+		@Override
+		public void setValue(Recipient1Choice obj, Optional<KEK1> value) {
+			obj.setKEK(value.orElse(null));
 		}
 	};
 

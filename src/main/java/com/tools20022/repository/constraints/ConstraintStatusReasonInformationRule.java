@@ -52,11 +52,15 @@ public class ConstraintStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupInformation1> forOriginalGroupInformation1 = new MMConstraint<OriginalGroupInformation1>() {
 		{
-			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "StatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCTor PDNG.";
 			owner_lazy = () -> OriginalGroupInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation1 obj) throws Exception {
+			checkOriginalGroupInformation1(obj);
 		}
 	};
 	/**
@@ -86,12 +90,16 @@ public class ConstraintStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupInformation20> forOriginalGroupInformation20 = new MMConstraint<OriginalGroupInformation20>() {
 		{
-			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupInformation20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent.";
 			owner_lazy = () -> OriginalGroupInformation20.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation20 obj) throws Exception {
+			checkOriginalGroupInformation20(obj);
 		}
 	};
 	/**
@@ -129,13 +137,17 @@ public class ConstraintStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupHeader1> forOriginalGroupHeader1 = new MMConstraint<OriginalGroupHeader1>() {
 		{
-			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupHeader1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule.forOriginalGroupHeader7);
 			owner_lazy = () -> OriginalGroupHeader1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupHeader1 obj) throws Exception {
+			checkOriginalGroupHeader1(obj);
 		}
 	};
 	/**
@@ -173,13 +185,17 @@ public class ConstraintStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupInformation25> forOriginalGroupInformation25 = new MMConstraint<OriginalGroupInformation25>() {
 		{
-			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupInformation25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule.forOriginalGroupInformation28);
 			owner_lazy = () -> OriginalGroupInformation25.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation25 obj) throws Exception {
+			checkOriginalGroupInformation25(obj);
 		}
 	};
 	/**
@@ -209,12 +225,16 @@ public class ConstraintStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupInformation15> forOriginalGroupInformation15 = new MMConstraint<OriginalGroupInformation15>() {
 		{
-			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "ISO20022 Rule: \nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as: \nIf GroupStatus is present and different from RJCT and PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed.";
 			owner_lazy = () -> OriginalGroupInformation15.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/StatusReasonInformation[*]/AdditionalStatusReasonInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation15 obj) throws Exception {
+			checkOriginalGroupInformation15(obj);
 		}
 	};
 	/**
@@ -244,12 +264,16 @@ public class ConstraintStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupInformation19> forOriginalGroupInformation19 = new MMConstraint<OriginalGroupInformation19>() {
 		{
-			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "ISO20022 Rule: \nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as: \nIf GroupStatus is present and different from RJCT or PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed.";
 			owner_lazy = () -> OriginalGroupInformation19.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/StatusReasonInformation[*]/AdditionalStatusReasonInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation19 obj) throws Exception {
+			checkOriginalGroupInformation19(obj);
 		}
 	};
 	/**
@@ -292,7 +316,6 @@ public class ConstraintStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupHeader7> forOriginalGroupHeader7 = new MMConstraint<OriginalGroupHeader7>() {
 		{
-			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupHeader7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent.";
@@ -300,6 +323,11 @@ public class ConstraintStatusReasonInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule.forOriginalGroupHeader1;
 			owner_lazy = () -> OriginalGroupHeader7.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupHeader7 obj) throws Exception {
+			checkOriginalGroupHeader7(obj);
 		}
 	};
 	/**
@@ -334,13 +362,17 @@ public class ConstraintStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupInformation28> forOriginalGroupInformation28 = new MMConstraint<OriginalGroupInformation28>() {
 		{
-			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupInformation28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule.forOriginalGroupInformation25;
 			owner_lazy = () -> OriginalGroupInformation28.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation28 obj) throws Exception {
+			checkOriginalGroupInformation28(obj);
 		}
 	};
 	/**
@@ -375,13 +407,17 @@ public class ConstraintStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupHeader13> forOriginalGroupHeader13 = new MMConstraint<OriginalGroupHeader13>() {
 		{
-			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupHeader13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule.forOriginalGroupHeader7;
 			owner_lazy = () -> OriginalGroupHeader13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupHeader13 obj) throws Exception {
+			checkOriginalGroupHeader13(obj);
 		}
 	};
 

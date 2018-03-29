@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FloatingInterestRate8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class DerivativeInterest3 {
 	 * "Provides the interest rate in number of days, weeks, months or years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DerivativeInterest3, FloatingInterestRate8> mmInterestRate = new MMMessageAssociationEnd<DerivativeInterest3, FloatingInterestRate8>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInterest3.mmObject();
@@ -126,7 +127,17 @@ public class DerivativeInterest3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate8.mmObject();
+			type_lazy = () -> FloatingInterestRate8.mmObject();
+		}
+
+		@Override
+		public FloatingInterestRate8 getValue(DerivativeInterest3 obj) {
+			return obj.getInterestRate();
+		}
+
+		@Override
+		public void setValue(DerivativeInterest3 obj, FloatingInterestRate8 value) {
+			obj.setInterestRate(value);
 		}
 	};
 	@XmlElement(name = "FrstLegIntrstRate")
@@ -162,7 +173,7 @@ public class DerivativeInterest3 {
 	 * definition} = "Interest rate of the notional currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFirstLegInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DerivativeInterest3, Optional<InterestRate8Choice>> mmFirstLegInterestRate = new MMMessageAssociationEnd<DerivativeInterest3, Optional<InterestRate8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInterest3.mmObject();
@@ -175,6 +186,16 @@ public class DerivativeInterest3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestRate8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRate8Choice> getValue(DerivativeInterest3 obj) {
+			return obj.getFirstLegInterestRate();
+		}
+
+		@Override
+		public void setValue(DerivativeInterest3 obj, Optional<InterestRate8Choice> value) {
+			obj.setFirstLegInterestRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrNtnlCcy")
@@ -214,7 +235,7 @@ public class DerivativeInterest3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeInterest3, Optional<ActiveOrHistoricCurrencyCode>> mmOtherNotionalCurrency = new MMMessageAttribute<DerivativeInterest3, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInterest3.mmObject();
@@ -226,6 +247,16 @@ public class DerivativeInterest3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(DerivativeInterest3 obj) {
+			return obj.getOtherNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(DerivativeInterest3 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setOtherNotionalCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrLegIntrstRate")
@@ -262,7 +293,7 @@ public class DerivativeInterest3 {
 	 * "Indication of the interest rate used for leg 2, if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherLegInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DerivativeInterest3, Optional<InterestRate8Choice>> mmOtherLegInterestRate = new MMMessageAssociationEnd<DerivativeInterest3, Optional<InterestRate8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInterest3.mmObject();
@@ -275,6 +306,16 @@ public class DerivativeInterest3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestRate8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRate8Choice> getValue(DerivativeInterest3 obj) {
+			return obj.getOtherLegInterestRate();
+		}
+
+		@Override
+		public void setValue(DerivativeInterest3 obj, Optional<InterestRate8Choice> value) {
+			obj.setOtherLegInterestRate(value.orElse(null));
 		}
 	};
 
@@ -297,7 +338,7 @@ public class DerivativeInterest3 {
 		return interestRate;
 	}
 
-	public DerivativeInterest3 setInterestRate(com.tools20022.repository.msg.FloatingInterestRate8 interestRate) {
+	public DerivativeInterest3 setInterestRate(FloatingInterestRate8 interestRate) {
 		this.interestRate = Objects.requireNonNull(interestRate);
 		return this;
 	}

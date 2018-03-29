@@ -120,7 +120,7 @@ public class ReportItemRejectionReason1Choice {
 	 * RejectionAndRepairReason13Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportItemRejectionReason1Choice, HoldingRejectionReason41Code> mmCode = new MMMessageAttribute<ReportItemRejectionReason1Choice, HoldingRejectionReason41Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportItemRejectionReason1Choice.mmObject();
@@ -133,6 +133,16 @@ public class ReportItemRejectionReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> HoldingRejectionReason41Code.mmObject();
+		}
+
+		@Override
+		public HoldingRejectionReason41Code getValue(ReportItemRejectionReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ReportItemRejectionReason1Choice obj, HoldingRejectionReason41Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -174,7 +184,7 @@ public class ReportItemRejectionReason1Choice {
 	 * RejectionAndRepairReason13Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportItemRejectionReason1Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<ReportItemRejectionReason1Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportItemRejectionReason1Choice.mmObject();
@@ -188,6 +198,16 @@ public class ReportItemRejectionReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ReportItemRejectionReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ReportItemRejectionReason1Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -105,7 +105,7 @@ public class AssetClassCommodityInflation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassCommodityInflation1, AssetClassProductType12Code> mmBaseProduct = new MMMessageAttribute<AssetClassCommodityInflation1, AssetClassProductType12Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetClassCommodityInflation1.mmObject();
@@ -117,6 +117,16 @@ public class AssetClassCommodityInflation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType12Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType12Code getValue(AssetClassCommodityInflation1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityInflation1 obj, AssetClassProductType12Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 

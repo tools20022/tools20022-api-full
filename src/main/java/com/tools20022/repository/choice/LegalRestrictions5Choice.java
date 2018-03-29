@@ -108,7 +108,7 @@ public class LegalRestrictions5Choice {
 	 * LegalRestrictions2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegalRestrictions5Choice, LegalRestrictions2Code> mmCode = new MMMessageAttribute<LegalRestrictions5Choice, LegalRestrictions2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalRestrictions5Choice.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class LegalRestrictions5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LegalRestrictions2Code.mmObject();
+		}
+
+		@Override
+		public LegalRestrictions2Code getValue(LegalRestrictions5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LegalRestrictions5Choice obj, LegalRestrictions2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class LegalRestrictions5Choice {
 	 * LegalRestrictions2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LegalRestrictions5Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<LegalRestrictions5Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalRestrictions5Choice.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class LegalRestrictions5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(LegalRestrictions5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LegalRestrictions5Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -112,7 +112,7 @@ public class SecurityStatus3Choice {
 	 * SecurityStatus2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityStatus3Choice, SecurityStatus2Code> mmCode = new MMMessageAttribute<SecurityStatus3Choice, SecurityStatus2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityStatus3Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class SecurityStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecurityStatus2Code.mmObject();
+		}
+
+		@Override
+		public SecurityStatus2Code getValue(SecurityStatus3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecurityStatus3Choice obj, SecurityStatus2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -160,7 +170,7 @@ public class SecurityStatus3Choice {
 	 * SecurityStatus2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityStatus3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<SecurityStatus3Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityStatus3Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class SecurityStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(SecurityStatus3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecurityStatus3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

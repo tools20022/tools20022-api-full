@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.InvoiceTaxReportTransactionStatus1;
 import com.tools20022.repository.msg.InvoiceTaxStatusReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.InvoiceTaxReportISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +116,7 @@ public class InvoiceTaxReportStatusAdviceV01 {
 	 * definition} = "Provides the status on the InvoiceTaxReport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceTaxReportStatusAdviceV01, InvoiceTaxStatusReportHeader1> mmStatusReportHeader = new MMMessageBuildingBlock<InvoiceTaxReportStatusAdviceV01, InvoiceTaxStatusReportHeader1>() {
 		{
 			xmlTag = "StsRptHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,12 +127,14 @@ public class InvoiceTaxReportStatusAdviceV01 {
 			complexType_lazy = () -> InvoiceTaxStatusReportHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceTaxReportStatusAdviceV01.class.getMethod("getStatusReportHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvoiceTaxStatusReportHeader1 getValue(InvoiceTaxReportStatusAdviceV01 obj) {
+			return obj.getStatusReportHeader();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportStatusAdviceV01 obj, InvoiceTaxStatusReportHeader1 value) {
+			obj.setStatusReportHeader(value);
 		}
 	};
 	@XmlElement(name = "TxSts")
@@ -163,7 +164,7 @@ public class InvoiceTaxReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceTaxReportStatusAdviceV01, List<InvoiceTaxReportTransactionStatus1>> mmTransactionStatus = new MMMessageBuildingBlock<InvoiceTaxReportStatusAdviceV01, List<InvoiceTaxReportTransactionStatus1>>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,12 +174,14 @@ public class InvoiceTaxReportStatusAdviceV01 {
 			complexType_lazy = () -> InvoiceTaxReportTransactionStatus1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceTaxReportStatusAdviceV01.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<InvoiceTaxReportTransactionStatus1> getValue(InvoiceTaxReportStatusAdviceV01 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportStatusAdviceV01 obj, List<InvoiceTaxReportTransactionStatus1> value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -208,7 +211,7 @@ public class InvoiceTaxReportStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceTaxReportStatusAdviceV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<InvoiceTaxReportStatusAdviceV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,12 +221,14 @@ public class InvoiceTaxReportStatusAdviceV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceTaxReportStatusAdviceV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(InvoiceTaxReportStatusAdviceV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportStatusAdviceV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

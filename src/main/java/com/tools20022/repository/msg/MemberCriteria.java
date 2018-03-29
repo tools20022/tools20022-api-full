@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MemberReturnCriteria;
+import com.tools20022.repository.msg.MemberSearchCriteria;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,7 +129,7 @@ public class MemberCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberCriteria, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<MemberCriteria, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberCriteria.mmObject();
 			isDerived = false;
@@ -140,9 +142,19 @@ public class MemberCriteria {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(MemberCriteria obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(MemberCriteria obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.MemberSearchCriteria> searchCriteria;
+	protected List<MemberSearchCriteria> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -177,7 +189,7 @@ public class MemberCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberCriteria, List<MemberSearchCriteria>> mmSearchCriteria = new MMMessageAssociationEnd<MemberCriteria, List<MemberSearchCriteria>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberCriteria.mmObject();
 			isDerived = false;
@@ -188,7 +200,17 @@ public class MemberCriteria {
 			nextVersions_lazy = () -> Arrays.asList(MemberCriteria3.mmSearchCriteria);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MemberSearchCriteria.mmObject();
+			type_lazy = () -> MemberSearchCriteria.mmObject();
+		}
+
+		@Override
+		public List<MemberSearchCriteria> getValue(MemberCriteria obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(MemberCriteria obj, List<MemberSearchCriteria> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -226,7 +248,7 @@ public class MemberCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberCriteria, Optional<MemberReturnCriteria>> mmReturnCriteria = new MMMessageAssociationEnd<MemberCriteria, Optional<MemberReturnCriteria>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberCriteria.mmObject();
 			isDerived = false;
@@ -238,7 +260,17 @@ public class MemberCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MemberReturnCriteria.mmObject();
+			type_lazy = () -> MemberReturnCriteria.mmObject();
+		}
+
+		@Override
+		public Optional<MemberReturnCriteria> getValue(MemberCriteria obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(MemberCriteria obj, Optional<MemberReturnCriteria> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -278,7 +310,7 @@ public class MemberCriteria {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public MemberCriteria setSearchCriteria(List<com.tools20022.repository.msg.MemberSearchCriteria> searchCriteria) {
+	public MemberCriteria setSearchCriteria(List<MemberSearchCriteria> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -287,7 +319,7 @@ public class MemberCriteria {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public MemberCriteria setReturnCriteria(com.tools20022.repository.msg.MemberReturnCriteria returnCriteria) {
+	public MemberCriteria setReturnCriteria(MemberReturnCriteria returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

@@ -26,7 +26,6 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.msg.Amendment3;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -120,7 +119,7 @@ public class UndertakingAmendmentRequestV01 {
 	 * "Details related to the request for an amendment of an undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUndertakingAmendmentRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingAmendmentRequestV01, Amendment3> mmUndertakingAmendmentRequestDetails = new MMMessageBuildingBlock<UndertakingAmendmentRequestV01, Amendment3>() {
 		{
 			xmlTag = "UdrtkgAmdmntReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,12 +130,14 @@ public class UndertakingAmendmentRequestV01 {
 			complexType_lazy = () -> Amendment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingAmendmentRequestV01.class.getMethod("getUndertakingAmendmentRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Amendment3 getValue(UndertakingAmendmentRequestV01 obj) {
+			return obj.getUndertakingAmendmentRequestDetails();
+		}
+
+		@Override
+		public void setValue(UndertakingAmendmentRequestV01 obj, Amendment3 value) {
+			obj.setUndertakingAmendmentRequestDetails(value);
 		}
 	};
 	@XmlElement(name = "InstrsToBk")
@@ -163,7 +164,7 @@ public class UndertakingAmendmentRequestV01 {
 	 * definition} = "Instructions specific to the bank receiving the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstructionsToBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingAmendmentRequestV01, List<Max2000Text>> mmInstructionsToBank = new MMMessageBuildingBlock<UndertakingAmendmentRequestV01, List<Max2000Text>>() {
 		{
 			xmlTag = "InstrsToBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,12 +175,14 @@ public class UndertakingAmendmentRequestV01 {
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingAmendmentRequestV01.class.getMethod("getInstructionsToBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Max2000Text> getValue(UndertakingAmendmentRequestV01 obj) {
+			return obj.getInstructionsToBank();
+		}
+
+		@Override
+		public void setValue(UndertakingAmendmentRequestV01 obj, List<Max2000Text> value) {
+			obj.setInstructionsToBank(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -207,7 +210,7 @@ public class UndertakingAmendmentRequestV01 {
 	 * definition} = "Digital signature of the undertaking amendment request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingAmendmentRequestV01, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageBuildingBlock<UndertakingAmendmentRequestV01, Optional<PartyAndSignature2>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,12 +221,14 @@ public class UndertakingAmendmentRequestV01 {
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingAmendmentRequestV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyAndSignature2> getValue(UndertakingAmendmentRequestV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(UndertakingAmendmentRequestV01 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 

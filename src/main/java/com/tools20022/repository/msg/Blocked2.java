@@ -118,7 +118,7 @@ public class Blocked2 {
 	 * Blocked1.mmOrderType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Blocked2, List<OrderType2Choice>> mmOrderType = new MMMessageAttribute<Blocked2, List<OrderType2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Blocked2.mmObject();
@@ -130,6 +130,16 @@ public class Blocked2 {
 			previousVersion_lazy = () -> Blocked1.mmOrderType;
 			minOccurs = 1;
 			complexType_lazy = () -> OrderType2Choice.mmObject();
+		}
+
+		@Override
+		public List<OrderType2Choice> getValue(Blocked2 obj) {
+			return obj.getOrderType();
+		}
+
+		@Override
+		public void setValue(Blocked2 obj, List<OrderType2Choice> value) {
+			obj.setOrderType(value);
 		}
 	};
 	@XmlElement(name = "Blckd", required = true)
@@ -171,7 +181,7 @@ public class Blocked2 {
 	 * Blocked1.mmBlocked}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBlocked = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Blocked2, YesNoIndicator> mmBlocked = new MMMessageAttribute<Blocked2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmBlocked;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Blocked2.mmObject();
@@ -184,6 +194,16 @@ public class Blocked2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Blocked2 obj) {
+			return obj.getBlocked();
+		}
+
+		@Override
+		public void setValue(Blocked2 obj, YesNoIndicator value) {
+			obj.setBlocked(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -225,7 +245,7 @@ public class Blocked2 {
 	 * Blocked1.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Blocked2, Optional<BlockedReason1Choice>> mmReason = new MMMessageAttribute<Blocked2, Optional<BlockedReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Blocked2.mmObject();
@@ -238,6 +258,16 @@ public class Blocked2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BlockedReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BlockedReason1Choice> getValue(Blocked2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(Blocked2 obj, Optional<BlockedReason1Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

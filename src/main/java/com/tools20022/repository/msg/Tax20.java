@@ -105,7 +105,7 @@ public class Tax20 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax20, TaxType14Code> mmType = new MMMessageAttribute<Tax20, TaxType14Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax20.mmObject();
@@ -117,6 +117,16 @@ public class Tax20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxType14Code.mmObject();
+		}
+
+		@Override
+		public TaxType14Code getValue(Tax20 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Tax20 obj, TaxType14Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -153,7 +163,7 @@ public class Tax20 {
 	 * "Amount of money resulting from the calculation of the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax20, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Tax20, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax20.mmObject();
@@ -165,6 +175,16 @@ public class Tax20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(Tax20 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Tax20 obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "XmptnInd", required = true)
@@ -201,7 +221,7 @@ public class Tax20 {
 	 * definition} = "Indicates whether a tax exemption applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax20, YesNoIndicator> mmExemptionIndicator = new MMMessageAttribute<Tax20, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmExemptionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax20.mmObject();
@@ -213,6 +233,16 @@ public class Tax20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Tax20 obj) {
+			return obj.getExemptionIndicator();
+		}
+
+		@Override
+		public void setValue(Tax20 obj, YesNoIndicator value) {
+			obj.setExemptionIndicator(value);
 		}
 	};
 

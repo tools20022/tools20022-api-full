@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxPeriod2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public class TaxRecordDetails2 {
 	 * TaxRecordDetails1.mmPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxRecordDetails2, Optional<TaxPeriod2>> mmPeriod = new MMMessageAssociationEnd<TaxRecordDetails2, Optional<TaxPeriod2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecordDetails2.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class TaxRecordDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxPeriod2.mmObject();
+			type_lazy = () -> TaxPeriod2.mmObject();
+		}
+
+		@Override
+		public Optional<TaxPeriod2> getValue(TaxRecordDetails2 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(TaxRecordDetails2 obj, Optional<TaxPeriod2> value) {
+			obj.setPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -165,7 +176,7 @@ public class TaxRecordDetails2 {
 	 * TaxRecordDetails1.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxRecordDetails2, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<TaxRecordDetails2, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxRecordDetails2.mmObject();
@@ -178,6 +189,16 @@ public class TaxRecordDetails2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(TaxRecordDetails2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TaxRecordDetails2 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class TaxRecordDetails2 {
 		return period == null ? Optional.empty() : Optional.of(period);
 	}
 
-	public TaxRecordDetails2 setPeriod(com.tools20022.repository.msg.TaxPeriod2 period) {
+	public TaxRecordDetails2 setPeriod(TaxPeriod2 period) {
 		this.period = period;
 		return this;
 	}

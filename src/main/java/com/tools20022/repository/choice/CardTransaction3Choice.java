@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Choice between a acquirer globalised card transaction or an individual card
+ * Choice between an acquirer globalised card transaction or an individual card
  * transaction.
  * <p>
  * <strong>Constant fields:</strong>
@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * "CardTransaction3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between a acquirer globalised card transaction or an individual card transaction."
+ * "Choice between an acquirer globalised card transaction or an individual card transaction."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -118,7 +118,7 @@ public class CardTransaction3Choice {
 	 * CardTransaction2Choice.mmAggregated}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAggregated = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction3Choice, CardAggregated2> mmAggregated = new MMMessageAssociationEnd<CardTransaction3Choice, CardAggregated2>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardTransaction3Choice.mmObject();
@@ -132,6 +132,16 @@ public class CardTransaction3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CardAggregated2.mmObject();
+		}
+
+		@Override
+		public CardAggregated2 getValue(CardTransaction3Choice obj) {
+			return obj.getAggregated();
+		}
+
+		@Override
+		public void setValue(CardTransaction3Choice obj, CardAggregated2 value) {
+			obj.setAggregated(value);
 		}
 	};
 	@XmlElement(name = "Indv", required = true)
@@ -174,7 +184,7 @@ public class CardTransaction3Choice {
 	 * CardTransaction2Choice.mmIndividual}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividual = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction3Choice, CardIndividualTransaction2> mmIndividual = new MMMessageAssociationEnd<CardTransaction3Choice, CardIndividualTransaction2>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CardTransaction3Choice.mmObject();
@@ -189,6 +199,16 @@ public class CardTransaction3Choice {
 			isComposite = true;
 			type_lazy = () -> CardIndividualTransaction2.mmObject();
 		}
+
+		@Override
+		public CardIndividualTransaction2 getValue(CardTransaction3Choice obj) {
+			return obj.getIndividual();
+		}
+
+		@Override
+		public void setValue(CardTransaction3Choice obj, CardIndividualTransaction2 value) {
+			obj.setIndividual(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -199,7 +219,7 @@ public class CardTransaction3Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction3Choice";
-				definition = "Choice between a acquirer globalised card transaction or an individual card transaction.";
+				definition = "Choice between an acquirer globalised card transaction or an individual card transaction.";
 				previousVersion_lazy = () -> CardTransaction2Choice.mmObject();
 			}
 		});

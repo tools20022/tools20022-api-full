@@ -123,7 +123,7 @@ public class OptionType5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionType5Choice, List<OptionType1Code>> mmCode = new MMMessageAttribute<OptionType5Choice, List<OptionType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionType5Choice.mmObject();
@@ -135,6 +135,16 @@ public class OptionType5Choice {
 			nextVersions_lazy = () -> Arrays.asList(OptionType8Choice.mmCode);
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionType1Code.mmObject();
+		}
+
+		@Override
+		public List<OptionType1Code> getValue(OptionType5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionType5Choice obj, List<OptionType1Code> value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class OptionType5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionType5Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<OptionType5Choice, GenericIdentification40>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionType5Choice.mmObject();
@@ -193,6 +203,16 @@ public class OptionType5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(OptionType5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionType5Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

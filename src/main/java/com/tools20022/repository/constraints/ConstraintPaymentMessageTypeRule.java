@@ -54,11 +54,15 @@ public class ConstraintPaymentMessageTypeRule {
 	 */
 	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {
 		{
-			validator = ConstraintPaymentMessageTypeRule::checkTransactions2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMessageTypeRule";
 			definition = "If PaymentCommonInformation/PaymentMessageType is present, then TransactionReport/Transaction/Payment/PaymentMessageType is not allowed.\nIf PaymentCommonInformation/PaymentMessageType is not present, then TransactionReport/Transaction/Payment/PaymentMessageType is optional.";
 			owner_lazy = () -> Transactions2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions2 obj) throws Exception {
+			checkTransactions2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintPaymentMessageTypeRule {
 	 */
 	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
 		{
-			validator = ConstraintPaymentMessageTypeRule::checkTransactions3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMessageTypeRule";
 			definition = "If PaymentCommonInformation/PaymentMessageType is present, then TransactionReport/Transaction/Payment/PaymentMessageType is not allowed.\nIf PaymentCommonInformation/PaymentMessageType is not present, then TransactionReport/Transaction/Payment/PaymentMessageType is optional.";
 			owner_lazy = () -> Transactions3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions3 obj) throws Exception {
+			checkTransactions3(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintPaymentMessageTypeRule {
 	 */
 	public static final MMConstraint<Transactions4> forTransactions4 = new MMConstraint<Transactions4>() {
 		{
-			validator = ConstraintPaymentMessageTypeRule::checkTransactions4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMessageTypeRule";
 			definition = "If PaymentCommonInformation/PaymentMessageType is present, then TransactionReport/Transaction/Payment/PaymentMessageType is not allowed.\nIf PaymentCommonInformation/PaymentMessageType is not present, then TransactionReport/Transaction/Payment/PaymentMessageType is optional.";
 			owner_lazy = () -> Transactions4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions4 obj) throws Exception {
+			checkTransactions4(obj);
 		}
 	};
 

@@ -141,7 +141,7 @@ public class AmountAndDirection7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection7, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection7, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection7.mmObject();
@@ -155,6 +155,16 @@ public class AmountAndDirection7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AmountAndDirection7 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection7 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -203,7 +213,7 @@ public class AmountAndDirection7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection7, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<AmountAndDirection7, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection7.mmObject();
@@ -217,6 +227,16 @@ public class AmountAndDirection7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(AmountAndDirection7 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection7 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 

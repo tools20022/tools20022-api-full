@@ -126,7 +126,7 @@ public class CapitalGainFormat3Choice {
 	 * CapitalGainFormat1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CapitalGainFormat3Choice, EUCapitalGain2Code> mmCode = new MMMessageAttribute<CapitalGainFormat3Choice, EUCapitalGain2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CapitalGainFormat3Choice.mmObject();
@@ -140,6 +140,16 @@ public class CapitalGainFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EUCapitalGain2Code.mmObject();
+		}
+
+		@Override
+		public EUCapitalGain2Code getValue(CapitalGainFormat3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CapitalGainFormat3Choice obj, EUCapitalGain2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class CapitalGainFormat3Choice {
 	 * CapitalGainFormat1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CapitalGainFormat3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<CapitalGainFormat3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CapitalGainFormat3Choice.mmObject();
@@ -199,6 +209,16 @@ public class CapitalGainFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CapitalGainFormat3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CapitalGainFormat3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

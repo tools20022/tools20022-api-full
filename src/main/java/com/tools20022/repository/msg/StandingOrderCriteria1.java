@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StandingOrderReturnCriteria1;
+import com.tools20022.repository.msg.StandingOrderSearchCriteria1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +128,7 @@ public class StandingOrderCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderCriteria1, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<StandingOrderCriteria1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderCriteria1.mmObject();
 			isDerived = false;
@@ -139,9 +141,19 @@ public class StandingOrderCriteria1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(StandingOrderCriteria1 obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(StandingOrderCriteria1 obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.StandingOrderSearchCriteria1> searchCriteria;
+	protected List<StandingOrderSearchCriteria1> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -179,7 +191,7 @@ public class StandingOrderCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderCriteria1, List<StandingOrderSearchCriteria1>> mmSearchCriteria = new MMMessageAssociationEnd<StandingOrderCriteria1, List<StandingOrderSearchCriteria1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderCriteria1.mmObject();
 			isDerived = false;
@@ -190,7 +202,17 @@ public class StandingOrderCriteria1 {
 			nextVersions_lazy = () -> Arrays.asList(StandingOrderCriteria2.mmSearchCriteria);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
+			type_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+		}
+
+		@Override
+		public List<StandingOrderSearchCriteria1> getValue(StandingOrderCriteria1 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(StandingOrderCriteria1 obj, List<StandingOrderSearchCriteria1> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -230,7 +252,7 @@ public class StandingOrderCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderCriteria1, Optional<StandingOrderReturnCriteria1>> mmReturnCriteria = new MMMessageAssociationEnd<StandingOrderCriteria1, Optional<StandingOrderReturnCriteria1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderCriteria1.mmObject();
 			isDerived = false;
@@ -242,7 +264,17 @@ public class StandingOrderCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
+			type_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+		}
+
+		@Override
+		public Optional<StandingOrderReturnCriteria1> getValue(StandingOrderCriteria1 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(StandingOrderCriteria1 obj, Optional<StandingOrderReturnCriteria1> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -275,7 +307,7 @@ public class StandingOrderCriteria1 {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public StandingOrderCriteria1 setSearchCriteria(List<com.tools20022.repository.msg.StandingOrderSearchCriteria1> searchCriteria) {
+	public StandingOrderCriteria1 setSearchCriteria(List<StandingOrderSearchCriteria1> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -284,7 +316,7 @@ public class StandingOrderCriteria1 {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public StandingOrderCriteria1 setReturnCriteria(com.tools20022.repository.msg.StandingOrderReturnCriteria1 returnCriteria) {
+	public StandingOrderCriteria1 setReturnCriteria(StandingOrderReturnCriteria1 returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

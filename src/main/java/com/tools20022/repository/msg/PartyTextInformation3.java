@@ -125,7 +125,7 @@ public class PartyTextInformation3 {
 	 * "Provides declaration details narrative relative to the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyTextInformation3, Optional<RestrictedFINXMax350Text>> mmDeclarationDetails = new MMMessageAttribute<PartyTextInformation3, Optional<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmDeclaration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyTextInformation3.mmObject();
@@ -137,6 +137,16 @@ public class PartyTextInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax350Text> getValue(PartyTextInformation3 obj) {
+			return obj.getDeclarationDetails();
+		}
+
+		@Override
+		public void setValue(PartyTextInformation3 obj, Optional<RestrictedFINXMax350Text> value) {
+			obj.setDeclarationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyCtctDtls")
@@ -176,7 +186,7 @@ public class PartyTextInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyTextInformation3, Optional<RestrictedFINXMax140Text>> mmPartyContactDetails = new MMMessageAttribute<PartyTextInformation3, Optional<RestrictedFINXMax140Text>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyTextInformation3.mmObject();
@@ -188,6 +198,16 @@ public class PartyTextInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax140Text> getValue(PartyTextInformation3 obj) {
+			return obj.getPartyContactDetails();
+		}
+
+		@Override
+		public void setValue(PartyTextInformation3 obj, Optional<RestrictedFINXMax140Text> value) {
+			obj.setPartyContactDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnDtls")
@@ -225,7 +245,7 @@ public class PartyTextInformation3 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyTextInformation3, Optional<RestrictedFINXMax350Text>> mmRegistrationDetails = new MMMessageAttribute<PartyTextInformation3, Optional<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyTextInformation3.mmObject();
@@ -237,6 +257,16 @@ public class PartyTextInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax350Text> getValue(PartyTextInformation3 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(PartyTextInformation3 obj, Optional<RestrictedFINXMax350Text> value) {
+			obj.setRegistrationDetails(value.orElse(null));
 		}
 	};
 

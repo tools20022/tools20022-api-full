@@ -112,7 +112,7 @@ public class SecuritiesBalanceType5Choice {
 	 * definition} = "Sub-balance expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType5Choice, SecuritiesBalanceType11Code> mmCode = new MMMessageAttribute<SecuritiesBalanceType5Choice, SecuritiesBalanceType11Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType5Choice.mmObject();
@@ -125,6 +125,16 @@ public class SecuritiesBalanceType5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType11Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType11Code getValue(SecuritiesBalanceType5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType5Choice obj, SecuritiesBalanceType11Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class SecuritiesBalanceType5Choice {
 	 * definition} = "Sub-balance expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesBalanceType5Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<SecuritiesBalanceType5Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType5Choice.mmObject();
@@ -178,6 +188,16 @@ public class SecuritiesBalanceType5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(SecuritiesBalanceType5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType5Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -24,6 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsin.FinancialInvoiceV01;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentGeneralInformation2;
+import com.tools20022.repository.msg.DocumentIdentification22;
+import com.tools20022.repository.msg.Incoterms3;
+import com.tools20022.repository.msg.TradeParty1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +143,7 @@ public class TradeAgreement6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeAgreement6, TradeParty1> mmBuyer = new MMMessageAssociationEnd<TradeAgreement6, TradeParty1>() {
 		{
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement6.mmObject();
@@ -152,7 +156,17 @@ public class TradeAgreement6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
+			type_lazy = () -> TradeParty1.mmObject();
+		}
+
+		@Override
+		public TradeParty1 getValue(TradeAgreement6 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(TradeAgreement6 obj, TradeParty1 value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "Sellr", required = true)
@@ -195,7 +209,7 @@ public class TradeAgreement6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeAgreement6, TradeParty1> mmSeller = new MMMessageAssociationEnd<TradeAgreement6, TradeParty1>() {
 		{
 			businessComponentTrace_lazy = () -> SellerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement6.mmObject();
@@ -208,7 +222,17 @@ public class TradeAgreement6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
+			type_lazy = () -> TradeParty1.mmObject();
+		}
+
+		@Override
+		public TradeParty1 getValue(TradeAgreement6 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(TradeAgreement6 obj, TradeParty1 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "QtnDocId")
@@ -254,7 +278,7 @@ public class TradeAgreement6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotationDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement6, Optional<DocumentIdentification22>> mmQuotationDocumentIdentification = new MMMessageAttribute<TradeAgreement6, Optional<DocumentIdentification22>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement6.mmObject();
@@ -266,7 +290,17 @@ public class TradeAgreement6 {
 			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmQuotationDocumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
+			complexType_lazy = () -> DocumentIdentification22.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentIdentification22> getValue(TradeAgreement6 obj) {
+			return obj.getQuotationDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(TradeAgreement6 obj, Optional<DocumentIdentification22> value) {
+			obj.setQuotationDocumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrctDocId")
@@ -312,7 +346,7 @@ public class TradeAgreement6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractDocumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement6, Optional<DocumentIdentification22>> mmContractDocumentIdentification = new MMMessageAttribute<TradeAgreement6, Optional<DocumentIdentification22>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement6.mmObject();
@@ -324,7 +358,17 @@ public class TradeAgreement6 {
 			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmContractDocumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
+			complexType_lazy = () -> DocumentIdentification22.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentIdentification22> getValue(TradeAgreement6 obj) {
+			return obj.getContractDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(TradeAgreement6 obj, Optional<DocumentIdentification22> value) {
+			obj.setContractDocumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BuyrOrdrIdDoc")
@@ -371,7 +415,7 @@ public class TradeAgreement6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuyerOrderIdentificationDocument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement6, Optional<DocumentIdentification22>> mmBuyerOrderIdentificationDocument = new MMMessageAttribute<TradeAgreement6, Optional<DocumentIdentification22>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement6.mmObject();
@@ -383,11 +427,21 @@ public class TradeAgreement6 {
 			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmBuyerOrderIdentificationDocument);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification22.mmObject();
+			complexType_lazy = () -> DocumentIdentification22.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentIdentification22> getValue(TradeAgreement6 obj) {
+			return obj.getBuyerOrderIdentificationDocument();
+		}
+
+		@Override
+		public void setValue(TradeAgreement6 obj, Optional<DocumentIdentification22> value) {
+			obj.setBuyerOrderIdentificationDocument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRefDoc")
-	protected List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReferenceDocument;
+	protected List<DocumentGeneralInformation2> additionalReferenceDocument;
 	/**
 	 * 
 	 <p>
@@ -428,7 +482,7 @@ public class TradeAgreement6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalReferenceDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeAgreement6, List<DocumentGeneralInformation2>> mmAdditionalReferenceDocument = new MMMessageAssociationEnd<TradeAgreement6, List<DocumentGeneralInformation2>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement6.mmObject();
@@ -440,7 +494,17 @@ public class TradeAgreement6 {
 			nextVersions_lazy = () -> Arrays.asList(TradeAgreement13.mmAdditionalReferenceDocument);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
+			type_lazy = () -> DocumentGeneralInformation2.mmObject();
+		}
+
+		@Override
+		public List<DocumentGeneralInformation2> getValue(TradeAgreement6 obj) {
+			return obj.getAdditionalReferenceDocument();
+		}
+
+		@Override
+		public void setValue(TradeAgreement6 obj, List<DocumentGeneralInformation2> value) {
+			obj.setAdditionalReferenceDocument(value);
 		}
 	};
 	@XmlElement(name = "Incotrms")
@@ -484,7 +548,7 @@ public class TradeAgreement6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIncoterms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeAgreement6, Optional<Incoterms3>> mmIncoterms = new MMMessageAssociationEnd<TradeAgreement6, Optional<Incoterms3>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmIncoterms;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement6.mmObject();
@@ -497,7 +561,17 @@ public class TradeAgreement6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Incoterms3.mmObject();
+			type_lazy = () -> Incoterms3.mmObject();
+		}
+
+		@Override
+		public Optional<Incoterms3> getValue(TradeAgreement6 obj) {
+			return obj.getIncoterms();
+		}
+
+		@Override
+		public void setValue(TradeAgreement6 obj, Optional<Incoterms3> value) {
+			obj.setIncoterms(value.orElse(null));
 		}
 	};
 
@@ -524,7 +598,7 @@ public class TradeAgreement6 {
 		return buyer;
 	}
 
-	public TradeAgreement6 setBuyer(com.tools20022.repository.msg.TradeParty1 buyer) {
+	public TradeAgreement6 setBuyer(TradeParty1 buyer) {
 		this.buyer = Objects.requireNonNull(buyer);
 		return this;
 	}
@@ -533,7 +607,7 @@ public class TradeAgreement6 {
 		return seller;
 	}
 
-	public TradeAgreement6 setSeller(com.tools20022.repository.msg.TradeParty1 seller) {
+	public TradeAgreement6 setSeller(TradeParty1 seller) {
 		this.seller = Objects.requireNonNull(seller);
 		return this;
 	}
@@ -542,7 +616,7 @@ public class TradeAgreement6 {
 		return quotationDocumentIdentification == null ? Optional.empty() : Optional.of(quotationDocumentIdentification);
 	}
 
-	public TradeAgreement6 setQuotationDocumentIdentification(com.tools20022.repository.msg.DocumentIdentification22 quotationDocumentIdentification) {
+	public TradeAgreement6 setQuotationDocumentIdentification(DocumentIdentification22 quotationDocumentIdentification) {
 		this.quotationDocumentIdentification = quotationDocumentIdentification;
 		return this;
 	}
@@ -551,7 +625,7 @@ public class TradeAgreement6 {
 		return contractDocumentIdentification == null ? Optional.empty() : Optional.of(contractDocumentIdentification);
 	}
 
-	public TradeAgreement6 setContractDocumentIdentification(com.tools20022.repository.msg.DocumentIdentification22 contractDocumentIdentification) {
+	public TradeAgreement6 setContractDocumentIdentification(DocumentIdentification22 contractDocumentIdentification) {
 		this.contractDocumentIdentification = contractDocumentIdentification;
 		return this;
 	}
@@ -560,7 +634,7 @@ public class TradeAgreement6 {
 		return buyerOrderIdentificationDocument == null ? Optional.empty() : Optional.of(buyerOrderIdentificationDocument);
 	}
 
-	public TradeAgreement6 setBuyerOrderIdentificationDocument(com.tools20022.repository.msg.DocumentIdentification22 buyerOrderIdentificationDocument) {
+	public TradeAgreement6 setBuyerOrderIdentificationDocument(DocumentIdentification22 buyerOrderIdentificationDocument) {
 		this.buyerOrderIdentificationDocument = buyerOrderIdentificationDocument;
 		return this;
 	}
@@ -569,7 +643,7 @@ public class TradeAgreement6 {
 		return additionalReferenceDocument == null ? additionalReferenceDocument = new ArrayList<>() : additionalReferenceDocument;
 	}
 
-	public TradeAgreement6 setAdditionalReferenceDocument(List<com.tools20022.repository.msg.DocumentGeneralInformation2> additionalReferenceDocument) {
+	public TradeAgreement6 setAdditionalReferenceDocument(List<DocumentGeneralInformation2> additionalReferenceDocument) {
 		this.additionalReferenceDocument = Objects.requireNonNull(additionalReferenceDocument);
 		return this;
 	}
@@ -578,7 +652,7 @@ public class TradeAgreement6 {
 		return incoterms == null ? Optional.empty() : Optional.of(incoterms);
 	}
 
-	public TradeAgreement6 setIncoterms(com.tools20022.repository.msg.Incoterms3 incoterms) {
+	public TradeAgreement6 setIncoterms(Incoterms3 incoterms) {
 		this.incoterms = incoterms;
 		return this;
 	}

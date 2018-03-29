@@ -102,7 +102,7 @@ public class ServiceAvailability1 {
 	 * definition} = "Specifies the applicable business service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceAvailability1, Optional<Max35Text>> mmBusinessService = new MMMessageAttribute<ServiceAvailability1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceAvailability1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class ServiceAvailability1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ServiceAvailability1 obj) {
+			return obj.getBusinessService();
+		}
+
+		@Override
+		public void setValue(ServiceAvailability1 obj, Optional<Max35Text> value) {
+			obj.setBusinessService(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AvlbtySts", required = true)
@@ -150,7 +160,7 @@ public class ServiceAvailability1 {
 	 * definition} = "Status of service availability."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAvailabilityStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceAvailability1, SystemEventType3Choice> mmAvailabilityStatus = new MMMessageAttribute<ServiceAvailability1, SystemEventType3Choice>() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceAvailability1.mmObject();
@@ -162,6 +172,16 @@ public class ServiceAvailability1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemEventType3Choice.mmObject();
+		}
+
+		@Override
+		public SystemEventType3Choice getValue(ServiceAvailability1 obj) {
+			return obj.getAvailabilityStatus();
+		}
+
+		@Override
+		public void setValue(ServiceAvailability1 obj, SystemEventType3Choice value) {
+			obj.setAvailabilityStatus(value);
 		}
 	};
 

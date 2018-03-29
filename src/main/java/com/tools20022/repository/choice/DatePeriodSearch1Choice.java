@@ -122,7 +122,7 @@ public class DatePeriodSearch1Choice {
 	 * DateSearchChoice.mmFromDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DatePeriodSearch1Choice, ISODate> mmFromDate = new MMMessageAttribute<DatePeriodSearch1Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriodSearch1Choice.mmObject();
@@ -135,6 +135,16 @@ public class DatePeriodSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DatePeriodSearch1Choice obj) {
+			return obj.getFromDate();
+		}
+
+		@Override
+		public void setValue(DatePeriodSearch1Choice obj, ISODate value) {
+			obj.setFromDate(value);
 		}
 	};
 	@XmlElement(name = "ToDt", required = true)
@@ -176,7 +186,7 @@ public class DatePeriodSearch1Choice {
 	 * DateSearchChoice.mmToDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DatePeriodSearch1Choice, ISODate> mmToDate = new MMMessageAttribute<DatePeriodSearch1Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriodSearch1Choice.mmObject();
@@ -189,6 +199,16 @@ public class DatePeriodSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DatePeriodSearch1Choice obj) {
+			return obj.getToDate();
+		}
+
+		@Override
+		public void setValue(DatePeriodSearch1Choice obj, ISODate value) {
+			obj.setToDate(value);
 		}
 	};
 	@XmlElement(name = "FrToDt", required = true)
@@ -226,7 +246,7 @@ public class DatePeriodSearch1Choice {
 	 * DateSearchChoice.mmFromToDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DatePeriodSearch1Choice, DatePeriod2> mmFromToDate = new MMMessageAttribute<DatePeriodSearch1Choice, DatePeriod2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriodSearch1Choice.mmObject();
 			isDerived = false;
@@ -238,6 +258,16 @@ public class DatePeriodSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DatePeriod2.mmObject();
+		}
+
+		@Override
+		public DatePeriod2 getValue(DatePeriodSearch1Choice obj) {
+			return obj.getFromToDate();
+		}
+
+		@Override
+		public void setValue(DatePeriodSearch1Choice obj, DatePeriod2 value) {
+			obj.setFromToDate(value);
 		}
 	};
 	@XmlElement(name = "EQDt", required = true)
@@ -274,7 +304,7 @@ public class DatePeriodSearch1Choice {
 	 * DateSearchChoice.mmEqualDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqualDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DatePeriodSearch1Choice, ISODate> mmEqualDate = new MMMessageAttribute<DatePeriodSearch1Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriodSearch1Choice.mmObject();
 			isDerived = false;
@@ -286,6 +316,16 @@ public class DatePeriodSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DatePeriodSearch1Choice obj) {
+			return obj.getEqualDate();
+		}
+
+		@Override
+		public void setValue(DatePeriodSearch1Choice obj, ISODate value) {
+			obj.setEqualDate(value);
 		}
 	};
 	@XmlElement(name = "NEQDt", required = true)
@@ -322,7 +362,7 @@ public class DatePeriodSearch1Choice {
 	 * DateSearchChoice.mmNotEqualDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotEqualDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DatePeriodSearch1Choice, ISODate> mmNotEqualDate = new MMMessageAttribute<DatePeriodSearch1Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DatePeriodSearch1Choice.mmObject();
 			isDerived = false;
@@ -334,6 +374,16 @@ public class DatePeriodSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DatePeriodSearch1Choice obj) {
+			return obj.getNotEqualDate();
+		}
+
+		@Override
+		public void setValue(DatePeriodSearch1Choice obj, ISODate value) {
+			obj.setNotEqualDate(value);
 		}
 	};
 

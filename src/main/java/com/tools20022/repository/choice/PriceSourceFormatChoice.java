@@ -116,7 +116,7 @@ public class PriceSourceFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalMarketPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceSourceFormatChoice, MICIdentifier> mmLocalMarketPlace = new MMMessageAttribute<PriceSourceFormatChoice, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceSourceFormatChoice.mmObject();
@@ -128,6 +128,16 @@ public class PriceSourceFormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(PriceSourceFormatChoice obj) {
+			return obj.getLocalMarketPlace();
+		}
+
+		@Override
+		public void setValue(PriceSourceFormatChoice obj, MICIdentifier value) {
+			obj.setLocalMarketPlace(value);
 		}
 	};
 	@XmlElement(name = "NonLclMktPlc", required = true)
@@ -165,7 +175,7 @@ public class PriceSourceFormatChoice {
 	 * "Source of a price quotation when it is not the local market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonLocalMarketPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceSourceFormatChoice, PriceSource> mmNonLocalMarketPlace = new MMMessageAttribute<PriceSourceFormatChoice, PriceSource>() {
 		{
 			businessComponentTrace_lazy = () -> SourceOfPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceSourceFormatChoice.mmObject();
@@ -177,6 +187,16 @@ public class PriceSourceFormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PriceSource.mmObject();
+		}
+
+		@Override
+		public PriceSource getValue(PriceSourceFormatChoice obj) {
+			return obj.getNonLocalMarketPlace();
+		}
+
+		@Override
+		public void setValue(PriceSourceFormatChoice obj, PriceSource value) {
+			obj.setNonLocalMarketPlace(value);
 		}
 	};
 	@XmlElement(name = "PlcAsDSS", required = true)
@@ -219,7 +239,7 @@ public class PriceSourceFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceSourceFormatChoice, GenericIdentification5> mmPlaceAsDSS = new MMMessageAttribute<PriceSourceFormatChoice, GenericIdentification5>() {
 		{
 			businessElementTrace_lazy = () -> InformationPartyRole.mmGenericIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceSourceFormatChoice.mmObject();
@@ -232,6 +252,16 @@ public class PriceSourceFormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification5.mmObject();
+		}
+
+		@Override
+		public GenericIdentification5 getValue(PriceSourceFormatChoice obj) {
+			return obj.getPlaceAsDSS();
+		}
+
+		@Override
+		public void setValue(PriceSourceFormatChoice obj, GenericIdentification5 value) {
+			obj.setPlaceAsDSS(value);
 		}
 	};
 

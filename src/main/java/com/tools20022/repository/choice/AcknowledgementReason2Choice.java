@@ -118,7 +118,7 @@ public class AcknowledgementReason2Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason2Choice, AcknowledgementReason5Code> mmCode = new MMMessageAttribute<AcknowledgementReason2Choice, AcknowledgementReason5Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason2Choice.mmObject();
@@ -131,6 +131,16 @@ public class AcknowledgementReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AcknowledgementReason5Code.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason5Code getValue(AcknowledgementReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason2Choice obj, AcknowledgementReason5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class AcknowledgementReason2Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason2Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<AcknowledgementReason2Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason2Choice.mmObject();
@@ -185,6 +195,16 @@ public class AcknowledgementReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(AcknowledgementReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason2Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

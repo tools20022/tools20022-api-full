@@ -127,7 +127,7 @@ public class CertificationTypeFormat3Choice {
 	 * CertificationTypeFormat1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificationTypeFormat3Choice, CertificationFormatType1Code> mmCode = new MMMessageAttribute<CertificationTypeFormat3Choice, CertificationFormatType1Code>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationFormat;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertificationTypeFormat3Choice.mmObject();
@@ -141,6 +141,16 @@ public class CertificationTypeFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CertificationFormatType1Code.mmObject();
+		}
+
+		@Override
+		public CertificationFormatType1Code getValue(CertificationTypeFormat3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CertificationTypeFormat3Choice obj, CertificationFormatType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +195,7 @@ public class CertificationTypeFormat3Choice {
 	 * CertificationTypeFormat1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificationTypeFormat3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<CertificationTypeFormat3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationFormat;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertificationTypeFormat3Choice.mmObject();
@@ -200,6 +210,16 @@ public class CertificationTypeFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CertificationTypeFormat3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CertificationTypeFormat3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

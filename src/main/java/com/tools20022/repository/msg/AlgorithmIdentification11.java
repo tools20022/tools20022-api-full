@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm7Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Parameter4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class AlgorithmIdentification11 {
 	 * AlgorithmIdentification7.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmIdentification11, Algorithm7Code> mmAlgorithm = new MMMessageAttribute<AlgorithmIdentification11, Algorithm7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification11.mmObject();
 			isDerived = false;
@@ -139,6 +140,16 @@ public class AlgorithmIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm7Code.mmObject();
+		}
+
+		@Override
+		public Algorithm7Code getValue(AlgorithmIdentification11 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification11 obj, Algorithm7Code value) {
+			obj.setAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "Param")
@@ -181,7 +192,7 @@ public class AlgorithmIdentification11 {
 	 * AlgorithmIdentification7.mmParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AlgorithmIdentification11, Optional<Parameter4>> mmParameter = new MMMessageAssociationEnd<AlgorithmIdentification11, Optional<Parameter4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification11.mmObject();
 			isDerived = false;
@@ -194,7 +205,17 @@ public class AlgorithmIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Parameter4.mmObject();
+			type_lazy = () -> Parameter4.mmObject();
+		}
+
+		@Override
+		public Optional<Parameter4> getValue(AlgorithmIdentification11 obj) {
+			return obj.getParameter();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification11 obj, Optional<Parameter4> value) {
+			obj.setParameter(value.orElse(null));
 		}
 	};
 
@@ -226,7 +247,7 @@ public class AlgorithmIdentification11 {
 		return parameter == null ? Optional.empty() : Optional.of(parameter);
 	}
 
-	public AlgorithmIdentification11 setParameter(com.tools20022.repository.msg.Parameter4 parameter) {
+	public AlgorithmIdentification11 setParameter(Parameter4 parameter) {
 		this.parameter = parameter;
 		return this;
 	}

@@ -123,7 +123,7 @@ public class ConsentOrRejectionReason4Choice {
 	 * ConsentOrRejectionReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConsentOrRejectionReason4Choice, CounterpartyResponseStatusReason1Code> mmCode = new MMMessageAttribute<ConsentOrRejectionReason4Choice, CounterpartyResponseStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmCounterpartyStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentOrRejectionReason4Choice.mmObject();
@@ -137,6 +137,16 @@ public class ConsentOrRejectionReason4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CounterpartyResponseStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public CounterpartyResponseStatusReason1Code getValue(ConsentOrRejectionReason4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ConsentOrRejectionReason4Choice obj, CounterpartyResponseStatusReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class ConsentOrRejectionReason4Choice {
 	 * ConsentOrRejectionReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConsentOrRejectionReason4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<ConsentOrRejectionReason4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmCounterpartyStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentOrRejectionReason4Choice.mmObject();
@@ -198,6 +208,16 @@ public class ConsentOrRejectionReason4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ConsentOrRejectionReason4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ConsentOrRejectionReason4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

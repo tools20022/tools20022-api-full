@@ -29,6 +29,9 @@ import com.tools20022.repository.choice.PartyIdentification33Choice;
 import com.tools20022.repository.entity.ClearingMemberRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternatePartyIdentification4;
+import com.tools20022.repository.msg.PartyTextInformation1;
+import com.tools20022.repository.msg.SecuritiesAccount18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +141,7 @@ public class PartyIdentificationAndAccount31 {
 	 * definition} = "Identification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount31, PartyIdentification33Choice> mmIdentification = new MMMessageAttribute<PartyIdentificationAndAccount31, PartyIdentification33Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
@@ -151,6 +154,16 @@ public class PartyIdentificationAndAccount31 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification33Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification33Choice getValue(PartyIdentificationAndAccount31 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount31 obj, PartyIdentification33Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AltrnId")
@@ -190,7 +203,7 @@ public class PartyIdentificationAndAccount31 {
 	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount31, Optional<AlternatePartyIdentification4>> mmAlternateIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount31, Optional<AlternatePartyIdentification4>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
@@ -203,7 +216,17 @@ public class PartyIdentificationAndAccount31 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification4.mmObject();
+			type_lazy = () -> AlternatePartyIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<AlternatePartyIdentification4> getValue(PartyIdentificationAndAccount31 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount31 obj, Optional<AlternatePartyIdentification4> value) {
+			obj.setAlternateIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -238,7 +261,7 @@ public class PartyIdentificationAndAccount31 {
 	 * "Provides additional information to a party identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount31, Optional<PartyTextInformation1>> mmAdditionalInformation = new MMMessageAssociationEnd<PartyIdentificationAndAccount31, Optional<PartyTextInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
 			isDerived = false;
@@ -250,7 +273,17 @@ public class PartyIdentificationAndAccount31 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyTextInformation1.mmObject();
+			type_lazy = () -> PartyTextInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<PartyTextInformation1> getValue(PartyIdentificationAndAccount31 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount31 obj, Optional<PartyTextInformation1> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrAcct")
@@ -288,7 +321,7 @@ public class PartyIdentificationAndAccount31 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount31, Optional<SecuritiesAccount18>> mmClearingAccount = new MMMessageAssociationEnd<PartyIdentificationAndAccount31, Optional<SecuritiesAccount18>>() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
@@ -300,7 +333,17 @@ public class PartyIdentificationAndAccount31 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount18.mmObject();
+			type_lazy = () -> SecuritiesAccount18.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount18> getValue(PartyIdentificationAndAccount31 obj) {
+			return obj.getClearingAccount();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount31 obj, Optional<SecuritiesAccount18> value) {
+			obj.setClearingAccount(value.orElse(null));
 		}
 	};
 
@@ -334,7 +377,7 @@ public class PartyIdentificationAndAccount31 {
 		return alternateIdentification == null ? Optional.empty() : Optional.of(alternateIdentification);
 	}
 
-	public PartyIdentificationAndAccount31 setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification4 alternateIdentification) {
+	public PartyIdentificationAndAccount31 setAlternateIdentification(AlternatePartyIdentification4 alternateIdentification) {
 		this.alternateIdentification = alternateIdentification;
 		return this;
 	}
@@ -343,7 +386,7 @@ public class PartyIdentificationAndAccount31 {
 		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public PartyIdentificationAndAccount31 setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation1 additionalInformation) {
+	public PartyIdentificationAndAccount31 setAdditionalInformation(PartyTextInformation1 additionalInformation) {
 		this.additionalInformation = additionalInformation;
 		return this;
 	}
@@ -352,7 +395,7 @@ public class PartyIdentificationAndAccount31 {
 		return clearingAccount == null ? Optional.empty() : Optional.of(clearingAccount);
 	}
 
-	public PartyIdentificationAndAccount31 setClearingAccount(com.tools20022.repository.msg.SecuritiesAccount18 clearingAccount) {
+	public PartyIdentificationAndAccount31 setClearingAccount(SecuritiesAccount18 clearingAccount) {
 		this.clearingAccount = clearingAccount;
 		return this;
 	}

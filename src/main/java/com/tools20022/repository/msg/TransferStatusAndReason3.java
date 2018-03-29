@@ -165,7 +165,7 @@ public class TransferStatusAndReason3 {
 	 * TransferStatusAndReason2.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason3, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<TransferStatusAndReason3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmObject();
@@ -179,6 +179,16 @@ public class TransferStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferStatusAndReason3 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfRef", required = true)
@@ -230,7 +240,7 @@ public class TransferStatusAndReason3 {
 	 * TransferStatusAndReason2.mmTransferReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason3, Max35Text> mmTransferReference = new MMMessageAttribute<TransferStatusAndReason3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmObject();
@@ -244,6 +254,16 @@ public class TransferStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransferStatusAndReason3 obj) {
+			return obj.getTransferReference();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason3 obj, Max35Text value) {
+			obj.setTransferReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -295,7 +315,7 @@ public class TransferStatusAndReason3 {
 	 * TransferStatusAndReason2.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason3, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<TransferStatusAndReason3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmObject();
@@ -309,6 +329,16 @@ public class TransferStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferStatusAndReason3 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -355,7 +385,7 @@ public class TransferStatusAndReason3 {
 	 * TransferStatusAndReason2.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason3, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<TransferStatusAndReason3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmObject();
 			isDerived = false;
@@ -368,6 +398,16 @@ public class TransferStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferStatusAndReason3 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfSts", required = true)
@@ -412,7 +452,7 @@ public class TransferStatusAndReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason3, TransferStatus1Choice> mmTransferStatus = new MMMessageAssociationEnd<TransferStatusAndReason3, TransferStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmTransferStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmObject();
@@ -426,6 +466,16 @@ public class TransferStatusAndReason3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferStatus1Choice.mmObject();
+		}
+
+		@Override
+		public TransferStatus1Choice getValue(TransferStatusAndReason3 obj) {
+			return obj.getTransferStatus();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason3 obj, TransferStatus1Choice value) {
+			obj.setTransferStatus(value);
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -475,7 +525,7 @@ public class TransferStatusAndReason3 {
 	 * TransferStatusAndReason2.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason3, Optional<ISODate>> mmTradeDate = new MMMessageAttribute<TransferStatusAndReason3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmObject();
@@ -489,6 +539,16 @@ public class TransferStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransferStatusAndReason3 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason3 obj, Optional<ISODate> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SndOutDt")
@@ -535,7 +595,7 @@ public class TransferStatusAndReason3 {
 	 * TransferStatusAndReason2.mmSendOutDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSendOutDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason3, Optional<ISODate>> mmSendOutDate = new MMMessageAttribute<TransferStatusAndReason3, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmObject();
 			isDerived = false;
@@ -548,6 +608,16 @@ public class TransferStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransferStatusAndReason3 obj) {
+			return obj.getSendOutDate();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason3 obj, Optional<ISODate> value) {
+			obj.setSendOutDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -597,7 +667,7 @@ public class TransferStatusAndReason3 {
 	 * TransferStatusAndReason2.mmStatusInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason3, Optional<PartyIdentification2Choice>> mmStatusInitiator = new MMMessageAssociationEnd<TransferStatusAndReason3, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason3.mmObject();
@@ -612,6 +682,16 @@ public class TransferStatusAndReason3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(TransferStatusAndReason3 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason3 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 

@@ -57,11 +57,15 @@ public class ConstraintOrderOriginatorEligibilityRule {
 	 */
 	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {
 		{
-			validator = ConstraintOrderOriginatorEligibilityRule::checkSwitchOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibilityRule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of RedemptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of SubscriptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility should be only present.";
 			owner_lazy = () -> SwitchOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder3 obj) throws Exception {
+			checkSwitchOrder3(obj);
 		}
 	};
 	/**
@@ -95,12 +99,16 @@ public class ConstraintOrderOriginatorEligibilityRule {
 	 */
 	public static final MMConstraint<SwitchExecution4> forSwitchExecution4 = new MMConstraint<SwitchExecution4>() {
 		{
-			validator = ConstraintOrderOriginatorEligibilityRule::checkSwitchExecution4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibilityRule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of RedemptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of SubscriptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility should be only present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSwitchExecution7);
 			owner_lazy = () -> SwitchExecution4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchExecution4 obj) throws Exception {
+			checkSwitchExecution4(obj);
 		}
 	};
 	/**
@@ -133,12 +141,16 @@ public class ConstraintOrderOriginatorEligibilityRule {
 	 */
 	public static final MMConstraint<SwitchOrder4> forSwitchOrder4 = new MMConstraint<SwitchOrder4>() {
 		{
-			validator = ConstraintOrderOriginatorEligibilityRule::checkSwitchOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibilityRule";
 			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of RedemptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility or a single occurrence of SubscriptionLegDetails/InvestmentAccountDetails/OrderOriginatorEligibility should be only present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forSwitchOrder7);
 			owner_lazy = () -> SwitchOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder4 obj) throws Exception {
+			checkSwitchOrder4(obj);
 		}
 	};
 

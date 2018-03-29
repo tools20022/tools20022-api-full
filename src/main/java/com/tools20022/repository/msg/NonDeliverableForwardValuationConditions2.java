@@ -141,7 +141,7 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDeliverableForwardValuationConditions2, ActiveOrHistoricCurrencyCode> mmSettlementCurrency = new MMMessageAttribute<NonDeliverableForwardValuationConditions2, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> NonDeliverableTrade.mmSettlementCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions2.mmObject();
@@ -153,6 +153,16 @@ public class NonDeliverableForwardValuationConditions2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(NonDeliverableForwardValuationConditions2 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(NonDeliverableForwardValuationConditions2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setSettlementCurrency(value);
 		}
 	};
 	@XmlElement(name = "ValtnDt", required = true)
@@ -191,7 +201,7 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDeliverableForwardValuationConditions2, ISODate> mmValuationDate = new MMMessageAttribute<NonDeliverableForwardValuationConditions2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions2.mmObject();
@@ -203,6 +213,16 @@ public class NonDeliverableForwardValuationConditions2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(NonDeliverableForwardValuationConditions2 obj) {
+			return obj.getValuationDate();
+		}
+
+		@Override
+		public void setValue(NonDeliverableForwardValuationConditions2 obj, ISODate value) {
+			obj.setValuationDate(value);
 		}
 	};
 	@XmlElement(name = "AddtlValtnInf")
@@ -236,7 +256,7 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalValuationInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDeliverableForwardValuationConditions2, Optional<Max140Text>> mmAdditionalValuationInformation = new MMMessageAttribute<NonDeliverableForwardValuationConditions2, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions2.mmObject();
 			isDerived = false;
@@ -247,6 +267,16 @@ public class NonDeliverableForwardValuationConditions2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(NonDeliverableForwardValuationConditions2 obj) {
+			return obj.getAdditionalValuationInformation();
+		}
+
+		@Override
+		public void setValue(NonDeliverableForwardValuationConditions2 obj, Optional<Max140Text> value) {
+			obj.setAdditionalValuationInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmPty")
@@ -286,7 +316,7 @@ public class NonDeliverableForwardValuationConditions2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonDeliverableForwardValuationConditions2, Optional<PartyIdentification8Choice>> mmSettlementParty = new MMMessageAttribute<NonDeliverableForwardValuationConditions2, Optional<PartyIdentification8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions2.mmObject();
@@ -298,6 +328,16 @@ public class NonDeliverableForwardValuationConditions2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8Choice> getValue(NonDeliverableForwardValuationConditions2 obj) {
+			return obj.getSettlementParty();
+		}
+
+		@Override
+		public void setValue(NonDeliverableForwardValuationConditions2 obj, Optional<PartyIdentification8Choice> value) {
+			obj.setSettlementParty(value.orElse(null));
 		}
 	};
 

@@ -132,7 +132,7 @@ public class CorporateActionNarrative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>> mmInformationConditions = new MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmInformationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative2.mmObject();
@@ -144,6 +144,16 @@ public class CorporateActionNarrative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative2 obj) {
+			return obj.getInformationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative2 obj, Optional<Max350Text> value) {
+			obj.setInformationConditions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InfToCmplyWth")
@@ -182,7 +192,7 @@ public class CorporateActionNarrative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>> mmInformationToComplyWith = new MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative2.mmObject();
@@ -194,6 +204,16 @@ public class CorporateActionNarrative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative2 obj) {
+			return obj.getInformationToComplyWith();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative2 obj, Optional<Max350Text> value) {
+			obj.setInformationToComplyWith(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxtnConds")
@@ -232,7 +252,7 @@ public class CorporateActionNarrative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>> mmTaxationConditions = new MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative2.mmObject();
@@ -244,6 +264,16 @@ public class CorporateActionNarrative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative2 obj) {
+			return obj.getTaxationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative2 obj, Optional<Max350Text> value) {
+			obj.setTaxationConditions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrtnDtls")
@@ -282,7 +312,7 @@ public class CorporateActionNarrative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>> mmDeclarationDetails = new MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmDeclarationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative2.mmObject();
@@ -294,6 +324,16 @@ public class CorporateActionNarrative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative2 obj) {
+			return obj.getDeclarationDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative2 obj, Optional<Max350Text> value) {
+			obj.setDeclarationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnDtls")
@@ -330,7 +370,7 @@ public class CorporateActionNarrative2 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>> mmRegistrationDetails = new MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative2.mmObject();
@@ -342,6 +382,16 @@ public class CorporateActionNarrative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative2 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative2 obj, Optional<Max350Text> value) {
+			obj.setRegistrationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlTxt")
@@ -375,7 +425,7 @@ public class CorporateActionNarrative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>> mmAdditionalText = new MMMessageAttribute<CorporateActionNarrative2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative2.mmObject();
 			isDerived = false;
@@ -386,6 +436,16 @@ public class CorporateActionNarrative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative2 obj) {
+			return obj.getAdditionalText();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative2 obj, Optional<Max350Text> value) {
+			obj.setAdditionalText(value.orElse(null));
 		}
 	};
 

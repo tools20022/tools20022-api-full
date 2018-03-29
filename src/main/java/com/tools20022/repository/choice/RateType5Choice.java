@@ -121,7 +121,7 @@ public class RateType5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType5Choice, RateType1Code> mmCode = new MMMessageAttribute<RateType5Choice, RateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType5Choice.mmObject();
@@ -134,6 +134,16 @@ public class RateType5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType1Code.mmObject();
+		}
+
+		@Override
+		public RateType1Code getValue(RateType5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateType5Choice obj, RateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class RateType5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType5Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<RateType5Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType5Choice.mmObject();
@@ -192,6 +202,16 @@ public class RateType5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(RateType5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateType5Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

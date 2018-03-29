@@ -149,7 +149,7 @@ public class SecuritiesOption2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConditionalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption2, Optional<FinancialInstrumentQuantity1Choice>> mmConditionalQuantity = new MMMessageAttribute<SecuritiesOption2, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmConditionalQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption2.mmObject();
@@ -163,6 +163,16 @@ public class SecuritiesOption2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(SecuritiesOption2 obj) {
+			return obj.getConditionalQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption2 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setConditionalQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OverAndAbovNrmlNsrdEntitlmntQty")
@@ -206,7 +216,7 @@ public class SecuritiesOption2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOverAndAboveNormalEnsuredEntitlementQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption2, Optional<FinancialInstrumentQuantity1Choice>> mmOverAndAboveNormalEnsuredEntitlementQuantity = new MMMessageAttribute<SecuritiesOption2, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmOverAndAboveNormalEnsuredEntitlementQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption2.mmObject();
@@ -219,6 +229,16 @@ public class SecuritiesOption2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(SecuritiesOption2 obj) {
+			return obj.getOverAndAboveNormalEnsuredEntitlementQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption2 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setOverAndAboveNormalEnsuredEntitlementQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdOrQtyToRcv", required = true)
@@ -255,7 +275,7 @@ public class SecuritiesOption2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedOrQuantityToReceive = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption2, InstructedOrQuantityToReceive1Choice> mmInstructedOrQuantityToReceive = new MMMessageAssociationEnd<SecuritiesOption2, InstructedOrQuantityToReceive1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption2.mmObject();
 			isDerived = false;
@@ -268,6 +288,16 @@ public class SecuritiesOption2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InstructedOrQuantityToReceive1Choice.mmObject();
+		}
+
+		@Override
+		public InstructedOrQuantityToReceive1Choice getValue(SecuritiesOption2 obj) {
+			return obj.getInstructedOrQuantityToReceive();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption2 obj, InstructedOrQuantityToReceive1Choice value) {
+			obj.setInstructedOrQuantityToReceive(value);
 		}
 	};
 

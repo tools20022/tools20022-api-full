@@ -147,7 +147,7 @@ public class CorporateActionMovement1 {
 	 * definition} = "Type of movement instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovement1, DistributionInstructionType1Code> mmOrderType = new MMMessageAttribute<CorporateActionMovement1, DistributionInstructionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmMovementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
@@ -159,6 +159,16 @@ public class CorporateActionMovement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionInstructionType1Code.mmObject();
+		}
+
+		@Override
+		public DistributionInstructionType1Code getValue(CorporateActionMovement1 obj) {
+			return obj.getOrderType();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovement1 obj, DistributionInstructionType1Code value) {
+			obj.setOrderType(value);
 		}
 	};
 	@XmlElement(name = "HghPrtyInd", required = true)
@@ -198,7 +208,7 @@ public class CorporateActionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHighPriorityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovement1, YesNoIndicator> mmHighPriorityIndicator = new MMMessageAttribute<CorporateActionMovement1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmHighPriorityIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
@@ -210,6 +220,16 @@ public class CorporateActionMovement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CorporateActionMovement1 obj) {
+			return obj.getHighPriorityIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovement1 obj, YesNoIndicator value) {
+			obj.setHighPriorityIndicator(value);
 		}
 	};
 	@XmlElement(name = "OptnNb")
@@ -248,7 +268,7 @@ public class CorporateActionMovement1 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovement1, Optional<Exact3NumericText>> mmOptionNumber = new MMMessageAttribute<CorporateActionMovement1, Optional<Exact3NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
@@ -260,6 +280,16 @@ public class CorporateActionMovement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact3NumericText> getValue(CorporateActionMovement1 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovement1 obj, Optional<Exact3NumericText> value) {
+			obj.setOptionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnTp")
@@ -298,7 +328,7 @@ public class CorporateActionMovement1 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovement1, Optional<CorporateActionOption1FormatChoice>> mmOptionType = new MMMessageAttribute<CorporateActionMovement1, Optional<CorporateActionOption1FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
@@ -310,6 +340,16 @@ public class CorporateActionMovement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionOption1FormatChoice> getValue(CorporateActionMovement1 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovement1 obj, Optional<CorporateActionOption1FormatChoice> value) {
+			obj.setOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt", required = true)
@@ -347,7 +387,7 @@ public class CorporateActionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovement1, ISODate> mmRequestedExecutionDate = new MMMessageAttribute<CorporateActionMovement1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
@@ -359,6 +399,16 @@ public class CorporateActionMovement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CorporateActionMovement1 obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovement1 obj, ISODate value) {
+			obj.setRequestedExecutionDate(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -396,7 +446,7 @@ public class CorporateActionMovement1 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovement1, Optional<PartyIdentification2Choice>> mmAccountOwnerIdentification = new MMMessageAttribute<CorporateActionMovement1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
@@ -408,6 +458,16 @@ public class CorporateActionMovement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CorporateActionMovement1 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovement1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -444,7 +504,7 @@ public class CorporateActionMovement1 {
 	 * definition} = "Identification of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovement1, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<CorporateActionMovement1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
@@ -456,6 +516,16 @@ public class CorporateActionMovement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateActionMovement1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovement1 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConfdBalSctiesQty")
@@ -495,7 +565,7 @@ public class CorporateActionMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmedBalanceSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovement1, Optional<UnitOrFaceAmount1Choice>> mmConfirmedBalanceSecuritiesQuantity = new MMMessageAttribute<CorporateActionMovement1, Optional<UnitOrFaceAmount1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
@@ -507,6 +577,16 @@ public class CorporateActionMovement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOrFaceAmount1Choice> getValue(CorporateActionMovement1 obj) {
+			return obj.getConfirmedBalanceSecuritiesQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovement1 obj, Optional<UnitOrFaceAmount1Choice> value) {
+			obj.setConfirmedBalanceSecuritiesQuantity(value.orElse(null));
 		}
 	};
 

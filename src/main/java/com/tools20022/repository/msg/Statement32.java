@@ -117,7 +117,7 @@ public class Statement32 {
 	 * definition} = "Reference common to all pages of a statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement32, Max35Text> mmStatementIdentification = new MMMessageAttribute<Statement32, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement32.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class Statement32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Statement32 obj) {
+			return obj.getStatementIdentification();
+		}
+
+		@Override
+		public void setValue(Statement32 obj, Max35Text value) {
+			obj.setStatementIdentification(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -161,7 +171,7 @@ public class Statement32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement32, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<Statement32, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement32.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class Statement32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement32 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(Statement32 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 	@XmlElement(name = "Frqcy", required = true)
@@ -203,7 +223,7 @@ public class Statement32 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement32, Frequency1Code> mmFrequency = new MMMessageAttribute<Statement32, Frequency1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement32.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class Statement32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Frequency1Code.mmObject();
+		}
+
+		@Override
+		public Frequency1Code getValue(Statement32 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Statement32 obj, Frequency1Code value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "StmtDtTm", required = true)
@@ -245,7 +275,7 @@ public class Statement32 {
 	 * definition} = "Date and time of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement32, DateAndDateTimeChoice> mmStatementDateTime = new MMMessageAttribute<Statement32, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement32.mmObject();
 			isDerived = false;
@@ -256,6 +286,16 @@ public class Statement32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(Statement32 obj) {
+			return obj.getStatementDateTime();
+		}
+
+		@Override
+		public void setValue(Statement32 obj, DateAndDateTimeChoice value) {
+			obj.setStatementDateTime(value);
 		}
 	};
 

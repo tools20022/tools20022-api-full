@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.AutomaticVariation;
 import com.tools20022.repository.entity.Trigger;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Document10;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -115,7 +116,7 @@ public class Trigger1 {
 	 * "Details related to the date on which a variation is effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Trigger1, Optional<FixedOrRecurrentDate1Choice>> mmDateChoice = new MMMessageAssociationEnd<Trigger1, Optional<FixedOrRecurrentDate1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Trigger.mmTriggerDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Trigger1.mmObject();
@@ -129,9 +130,19 @@ public class Trigger1 {
 			isComposite = true;
 			type_lazy = () -> FixedOrRecurrentDate1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<FixedOrRecurrentDate1Choice> getValue(Trigger1 obj) {
+			return obj.getDateChoice();
+		}
+
+		@Override
+		public void setValue(Trigger1 obj, Optional<FixedOrRecurrentDate1Choice> value) {
+			obj.setDateChoice(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "DcmntryEvt")
-	protected List<com.tools20022.repository.msg.Document10> documentaryEvent;
+	protected List<Document10> documentaryEvent;
 	/**
 	 * 
 	 <p>
@@ -163,7 +174,7 @@ public class Trigger1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocumentaryEvent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Trigger1, List<Document10>> mmDocumentaryEvent = new MMMessageAssociationEnd<Trigger1, List<Document10>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmSpecifiedDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Trigger1.mmObject();
@@ -174,7 +185,17 @@ public class Trigger1 {
 			definition = "Details related to the documentary event on which a variation is triggered.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
+			type_lazy = () -> Document10.mmObject();
+		}
+
+		@Override
+		public List<Document10> getValue(Trigger1 obj) {
+			return obj.getDocumentaryEvent();
+		}
+
+		@Override
+		public void setValue(Trigger1 obj, List<Document10> value) {
+			obj.setDocumentaryEvent(value);
 		}
 	};
 
@@ -207,7 +228,7 @@ public class Trigger1 {
 		return documentaryEvent == null ? documentaryEvent = new ArrayList<>() : documentaryEvent;
 	}
 
-	public Trigger1 setDocumentaryEvent(List<com.tools20022.repository.msg.Document10> documentaryEvent) {
+	public Trigger1 setDocumentaryEvent(List<Document10> documentaryEvent) {
 		this.documentaryEvent = Objects.requireNonNull(documentaryEvent);
 		return this;
 	}

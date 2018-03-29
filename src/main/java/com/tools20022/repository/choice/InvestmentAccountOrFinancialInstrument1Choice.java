@@ -109,7 +109,7 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOrFinancialInstrument1Choice, InvestmentAccount13> mmInvestmentAccount = new MMMessageAssociationEnd<InvestmentAccountOrFinancialInstrument1Choice, InvestmentAccount13>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentAccountOrFinancialInstrument1Choice.mmObject();
@@ -122,6 +122,16 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccount13.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount13 getValue(InvestmentAccountOrFinancialInstrument1Choice obj) {
+			return obj.getInvestmentAccount();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOrFinancialInstrument1Choice obj, InvestmentAccount13 value) {
+			obj.setInvestmentAccount(value);
 		}
 	};
 	@XmlElement(name = "FinInstrm", required = true)
@@ -159,7 +169,7 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountOrFinancialInstrument1Choice, FinancialInstrument6> mmFinancialInstrument = new MMMessageAssociationEnd<InvestmentAccountOrFinancialInstrument1Choice, FinancialInstrument6>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentAccountOrFinancialInstrument1Choice.mmObject();
@@ -172,6 +182,16 @@ public class InvestmentAccountOrFinancialInstrument1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrument6.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument6 getValue(InvestmentAccountOrFinancialInstrument1Choice obj) {
+			return obj.getFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOrFinancialInstrument1Choice obj, FinancialInstrument6 value) {
+			obj.setFinancialInstrument(value);
 		}
 	};
 

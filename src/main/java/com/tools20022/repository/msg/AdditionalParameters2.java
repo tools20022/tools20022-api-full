@@ -160,7 +160,7 @@ public class AdditionalParameters2 {
 	 * definition} = "Specifies whether there exists a pre-confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters2, Optional<PreConfirmation1Code>> mmPreConfirmation = new MMMessageAttribute<AdditionalParameters2, Optional<PreConfirmation1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPreConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters2.mmObject();
@@ -173,6 +173,16 @@ public class AdditionalParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PreConfirmation1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PreConfirmation1Code> getValue(AdditionalParameters2 obj) {
+			return obj.getPreConfirmation();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters2 obj, Optional<PreConfirmation1Code> value) {
+			obj.setPreConfirmation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtlSttlm")
@@ -213,7 +223,7 @@ public class AdditionalParameters2 {
 	 * definition} = "Specifies partial settlement information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters2, Optional<PartialSettlement1Code>> mmPartialSettlement = new MMMessageAttribute<AdditionalParameters2, Optional<PartialSettlement1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPartialSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters2.mmObject();
@@ -226,6 +236,16 @@ public class AdditionalParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartialSettlement1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PartialSettlement1Code> getValue(AdditionalParameters2 obj) {
+			return obj.getPartialSettlement();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters2 obj, Optional<PartialSettlement1Code> value) {
+			obj.setPartialSettlement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsPrtlConfId")
@@ -267,7 +287,7 @@ public class AdditionalParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousPartialConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters2, Optional<Max35Text>> mmPreviousPartialConfirmationIdentification = new MMMessageAttribute<AdditionalParameters2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters2.mmObject();
@@ -280,6 +300,16 @@ public class AdditionalParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters2 obj) {
+			return obj.getPreviousPartialConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters2 obj, Optional<Max35Text> value) {
+			obj.setPreviousPartialConfirmationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrptyAgtCollTxId")
@@ -322,7 +352,7 @@ public class AdditionalParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTripartyAgentCollateralTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters2, Optional<Max35Text>> mmTripartyAgentCollateralTransactionIdentification = new MMMessageAttribute<AdditionalParameters2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters2.mmObject();
@@ -335,6 +365,16 @@ public class AdditionalParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters2 obj) {
+			return obj.getTripartyAgentCollateralTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters2 obj, Optional<Max35Text> value) {
+			obj.setTripartyAgentCollateralTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntTrptyCollTxId")
@@ -377,7 +417,7 @@ public class AdditionalParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters2, Optional<Max35Text>> mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute<AdditionalParameters2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters2.mmObject();
@@ -390,6 +430,16 @@ public class AdditionalParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters2 obj) {
+			return obj.getClientTripartyCollateralTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters2 obj, Optional<Max35Text> value) {
+			obj.setClientTripartyCollateralTransactionIdentification(value.orElse(null));
 		}
 	};
 

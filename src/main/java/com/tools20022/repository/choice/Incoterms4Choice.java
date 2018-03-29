@@ -105,7 +105,7 @@ public class Incoterms4Choice {
 	 * definition} = "Specifies the applicable Incoterm by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Incoterms4Choice, ExternalIncoterms1Code> mmCode = new MMMessageAttribute<Incoterms4Choice, ExternalIncoterms1Code>() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Incoterms4Choice.mmObject();
@@ -117,6 +117,16 @@ public class Incoterms4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalIncoterms1Code.mmObject();
+		}
+
+		@Override
+		public ExternalIncoterms1Code getValue(Incoterms4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Incoterms4Choice obj, ExternalIncoterms1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class Incoterms4Choice {
 	 * "Specifies the applicable Incoterm by means of a proprietary scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Incoterms4Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<Incoterms4Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Incoterms4Choice.mmObject();
@@ -167,6 +177,16 @@ public class Incoterms4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(Incoterms4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Incoterms4Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

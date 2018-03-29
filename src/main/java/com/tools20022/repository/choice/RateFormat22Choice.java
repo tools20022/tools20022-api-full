@@ -109,7 +109,7 @@ public class RateFormat22Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateFormat22Choice, PercentageRate> mmRate = new MMMessageAttribute<RateFormat22Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat22Choice.mmObject();
@@ -122,6 +122,16 @@ public class RateFormat22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateFormat22Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateFormat22Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -159,7 +169,7 @@ public class RateFormat22Choice {
 	 * definition} = "Cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateFormat22Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateFormat22Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat22Choice.mmObject();
@@ -171,6 +181,16 @@ public class RateFormat22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateFormat22Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateFormat22Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

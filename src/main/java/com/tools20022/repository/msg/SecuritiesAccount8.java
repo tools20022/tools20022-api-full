@@ -131,7 +131,7 @@ public class SecuritiesAccount8 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount8, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<SecuritiesAccount8, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
@@ -143,6 +143,16 @@ public class SecuritiesAccount8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(SecuritiesAccount8 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount8 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -180,7 +190,7 @@ public class SecuritiesAccount8 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount8, Optional<PartyIdentification2Choice>> mmAccountOwnerIdentification = new MMMessageAttribute<SecuritiesAccount8, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
@@ -192,6 +202,16 @@ public class SecuritiesAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(SecuritiesAccount8 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount8 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId", required = true)
@@ -230,7 +250,7 @@ public class SecuritiesAccount8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount8, Max35Text> mmAccountIdentification = new MMMessageAttribute<SecuritiesAccount8, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
@@ -242,6 +262,16 @@ public class SecuritiesAccount8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SecuritiesAccount8 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount8 obj, Max35Text value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "BalTp")
@@ -279,7 +309,7 @@ public class SecuritiesAccount8 {
 	 * definition} = "Type of balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount8, Optional<SecuritiesBalanceType10FormatChoice>> mmBalanceType = new MMMessageAttribute<SecuritiesAccount8, Optional<SecuritiesBalanceType10FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
@@ -291,6 +321,16 @@ public class SecuritiesAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesBalanceType10FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesBalanceType10FormatChoice> getValue(SecuritiesAccount8 obj) {
+			return obj.getBalanceType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount8 obj, Optional<SecuritiesBalanceType10FormatChoice> value) {
+			obj.setBalanceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnTp")
@@ -329,7 +369,7 @@ public class SecuritiesAccount8 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount8, Optional<CorporateActionOption1FormatChoice>> mmOptionType = new MMMessageAttribute<SecuritiesAccount8, Optional<CorporateActionOption1FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
@@ -341,6 +381,16 @@ public class SecuritiesAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionOption1FormatChoice> getValue(SecuritiesAccount8 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount8 obj, Optional<CorporateActionOption1FormatChoice> value) {
+			obj.setOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnNb")
@@ -379,7 +429,7 @@ public class SecuritiesAccount8 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount8, Optional<Exact3NumericText>> mmOptionNumber = new MMMessageAttribute<SecuritiesAccount8, Optional<Exact3NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
@@ -391,6 +441,16 @@ public class SecuritiesAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact3NumericText> getValue(SecuritiesAccount8 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount8 obj, Optional<Exact3NumericText> value) {
+			obj.setOptionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyHldgForm")
@@ -428,7 +488,7 @@ public class SecuritiesAccount8 {
 	 * definition} = "Specifies the form of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityHoldingForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount8, Optional<FormOfSecurity1Code>> mmSecurityHoldingForm = new MMMessageAttribute<SecuritiesAccount8, Optional<FormOfSecurity1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
@@ -440,6 +500,16 @@ public class SecuritiesAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<FormOfSecurity1Code> getValue(SecuritiesAccount8 obj) {
+			return obj.getSecurityHoldingForm();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount8 obj, Optional<FormOfSecurity1Code> value) {
+			obj.setSecurityHoldingForm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmpDty")
@@ -477,7 +547,7 @@ public class SecuritiesAccount8 {
 	 * definition} = "Specifies if the stamp duty is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount8, Optional<StampDutyType1FormatChoice>> mmStampDuty = new MMMessageAttribute<SecuritiesAccount8, Optional<StampDutyType1FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTaxDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount8.mmObject();
@@ -489,6 +559,16 @@ public class SecuritiesAccount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StampDutyType1FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<StampDutyType1FormatChoice> getValue(SecuritiesAccount8 obj) {
+			return obj.getStampDuty();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount8 obj, Optional<StampDutyType1FormatChoice> value) {
+			obj.setStampDuty(value.orElse(null));
 		}
 	};
 

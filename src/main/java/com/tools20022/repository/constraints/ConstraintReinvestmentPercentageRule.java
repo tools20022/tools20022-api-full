@@ -67,13 +67,17 @@ public class ConstraintReinvestmentPercentageRule {
 	 */
 	public static final MMConstraint<InvestmentAccount47> forInvestmentAccount47 = new MMConstraint<InvestmentAccount47>() {
 		{
-			validator = ConstraintReinvestmentPercentageRule::checkInvestmentAccount47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentPercentageRule";
 			definition = "Sum of all occurrences of ReinvestmentDetails/ReinvestmentPercentage must not be greater than 100.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReinvestmentPercentageRule.forInvestmentAccount51);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReinvestmentPercentage1Rule.forInvestmentAccount39;
 			owner_lazy = () -> InvestmentAccount47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount47 obj) throws Exception {
+			checkInvestmentAccount47(obj);
 		}
 	};
 	/**
@@ -112,13 +116,17 @@ public class ConstraintReinvestmentPercentageRule {
 	 */
 	public static final MMConstraint<InvestmentAccount51> forInvestmentAccount51 = new MMConstraint<InvestmentAccount51>() {
 		{
-			validator = ConstraintReinvestmentPercentageRule::checkInvestmentAccount51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentPercentageRule";
 			definition = "Sum of all occurrences of ReinvestmentDetails/ReinvestmentPercentage must not be greater than 100.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReinvestmentPercentageRule.forInvestmentAccount63);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReinvestmentPercentageRule.forInvestmentAccount47;
 			owner_lazy = () -> InvestmentAccount51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount51 obj) throws Exception {
+			checkInvestmentAccount51(obj);
 		}
 	};
 	/**
@@ -149,12 +157,16 @@ public class ConstraintReinvestmentPercentageRule {
 	 */
 	public static final MMConstraint<InvestmentAccount63> forInvestmentAccount63 = new MMConstraint<InvestmentAccount63>() {
 		{
-			validator = ConstraintReinvestmentPercentageRule::checkInvestmentAccount63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentPercentageRule";
 			definition = "Sum of all occurrences of ReinvestmentDetails/ReinvestmentPercentage must not be greater than 100.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReinvestmentPercentageRule.forInvestmentAccount51;
 			owner_lazy = () -> InvestmentAccount63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount63 obj) throws Exception {
+			checkInvestmentAccount63(obj);
 		}
 	};
 

@@ -51,11 +51,15 @@ public class ConstraintTotalNumberTradesRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> forForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {
 		{
-			validator = ConstraintTotalNumberTradesRule::checkForeignExchangeTradeCaptureReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberTradesRule";
 			definition = "If TotalNumberTrades is not equal to 0, then Trade Information and TradingSideIdentification and CounterpartySideIdentification must be present.";
 			owner_lazy = () -> ForeignExchangeTradeCaptureReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTradeCaptureReportV01 obj) throws Exception {
+			checkForeignExchangeTradeCaptureReportV01(obj);
 		}
 	};
 

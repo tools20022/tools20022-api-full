@@ -121,7 +121,7 @@ public class SecuredMarketReport1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketReport1Choice, ReportPeriodActivity1Code> mmDataSetAction = new MMMessageAttribute<SecuredMarketReport1Choice, ReportPeriodActivity1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredMarketReport1Choice.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class SecuredMarketReport1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity1Code.mmObject();
+		}
+
+		@Override
+		public ReportPeriodActivity1Code getValue(SecuredMarketReport1Choice obj) {
+			return obj.getDataSetAction();
+		}
+
+		@Override
+		public void setValue(SecuredMarketReport1Choice obj, ReportPeriodActivity1Code value) {
+			obj.setDataSetAction(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -174,7 +184,7 @@ public class SecuredMarketReport1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredMarketReport1Choice, List<SecuredMarketTransaction1>> mmTransaction = new MMMessageAssociationEnd<SecuredMarketReport1Choice, List<SecuredMarketTransaction1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredMarketReport1Choice.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class SecuredMarketReport1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuredMarketTransaction1.mmObject();
+		}
+
+		@Override
+		public List<SecuredMarketTransaction1> getValue(SecuredMarketReport1Choice obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(SecuredMarketReport1Choice obj, List<SecuredMarketTransaction1> value) {
+			obj.setTransaction(value);
 		}
 	};
 

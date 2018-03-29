@@ -129,7 +129,7 @@ public class CorporateActionRate14 {
 	 * definition} = "Annual rate of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate14, Optional<RateAndAmountFormat7Choice>> mmInterest = new MMMessageAssociationEnd<CorporateActionRate14, Optional<RateAndAmountFormat7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate14.mmObject();
@@ -143,6 +143,16 @@ public class CorporateActionRate14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateAndAmountFormat7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat7Choice> getValue(CorporateActionRate14 obj) {
+			return obj.getInterest();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate14 obj, Optional<RateAndAmountFormat7Choice> value) {
+			obj.setInterest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgSght")
@@ -183,7 +193,7 @@ public class CorporateActionRate14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPercentageSought = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat5Choice>> mmPercentageSought = new MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmPercentageSought;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate14.mmObject();
@@ -197,6 +207,16 @@ public class CorporateActionRate14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat5Choice> getValue(CorporateActionRate14 obj) {
+			return obj.getPercentageSought();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate14 obj, Optional<RateFormat5Choice> value) {
+			obj.setPercentageSought(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdIndx")
@@ -237,7 +257,7 @@ public class CorporateActionRate14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat2Choice>> mmRelatedIndex = new MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRelatedIndex;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate14.mmObject();
@@ -251,6 +271,16 @@ public class CorporateActionRate14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat2Choice> getValue(CorporateActionRate14 obj) {
+			return obj.getRelatedIndex();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate14 obj, Optional<RateFormat2Choice> value) {
+			obj.setRelatedIndex(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sprd")
@@ -289,7 +319,7 @@ public class CorporateActionRate14 {
 	 * definition} = "Margin allowed over or under a given rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSpread = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat2Choice>> mmSpread = new MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSpread;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate14.mmObject();
@@ -303,6 +333,16 @@ public class CorporateActionRate14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat2Choice> getValue(CorporateActionRate14 obj) {
+			return obj.getSpread();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate14 obj, Optional<RateFormat2Choice> value) {
+			obj.setSpread(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BidIntrvl")
@@ -342,7 +382,7 @@ public class CorporateActionRate14 {
 	 * definition} = "Acceptable price increment used for submitting a bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBidInterval = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate14, Optional<RateAndAmountFormat7Choice>> mmBidInterval = new MMMessageAssociationEnd<CorporateActionRate14, Optional<RateAndAmountFormat7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmBidInterval;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate14.mmObject();
@@ -356,6 +396,16 @@ public class CorporateActionRate14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateAndAmountFormat7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat7Choice> getValue(CorporateActionRate14 obj) {
+			return obj.getBidInterval();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate14 obj, Optional<RateAndAmountFormat7Choice> value) {
+			obj.setBidInterval(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsFctr")
@@ -396,7 +446,7 @@ public class CorporateActionRate14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousFactor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat3Choice>> mmPreviousFactor = new MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate14.mmObject();
@@ -410,6 +460,16 @@ public class CorporateActionRate14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat3Choice> getValue(CorporateActionRate14 obj) {
+			return obj.getPreviousFactor();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate14 obj, Optional<RateFormat3Choice> value) {
+			obj.setPreviousFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtFctr")
@@ -450,7 +510,7 @@ public class CorporateActionRate14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNextFactor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat3Choice>> mmNextFactor = new MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate14.mmObject();
@@ -464,6 +524,16 @@ public class CorporateActionRate14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat3Choice> getValue(CorporateActionRate14 obj) {
+			return obj.getNextFactor();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate14 obj, Optional<RateFormat3Choice> value) {
+			obj.setNextFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinvstmtDscntRateToMkt")
@@ -504,7 +574,7 @@ public class CorporateActionRate14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReinvestmentDiscountRateToMarket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat2Choice>> mmReinvestmentDiscountRateToMarket = new MMMessageAssociationEnd<CorporateActionRate14, Optional<RateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmReinvestmentDiscountToMarket;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate14.mmObject();
@@ -518,6 +588,16 @@ public class CorporateActionRate14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat2Choice> getValue(CorporateActionRate14 obj) {
+			return obj.getReinvestmentDiscountRateToMarket();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate14 obj, Optional<RateFormat2Choice> value) {
+			obj.setReinvestmentDiscountRateToMarket(value.orElse(null));
 		}
 	};
 

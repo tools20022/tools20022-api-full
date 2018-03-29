@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTime2Choice;
+import com.tools20022.repository.choice.DateCode18Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +112,7 @@ public class TerminationDate6Choice {
 	 * TerminationDate4Choice.mmDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminationDate6Choice, DateAndDateTime2Choice> mmDate = new MMMessageAttribute<TerminationDate6Choice, DateAndDateTime2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationDate6Choice.mmObject();
 			isDerived = false;
@@ -122,7 +124,17 @@ public class TerminationDate6Choice {
 			previousVersion_lazy = () -> TerminationDate4Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTime2Choice.mmObject();
+			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTime2Choice getValue(TerminationDate6Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(TerminationDate6Choice obj, DateAndDateTime2Choice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -165,7 +177,7 @@ public class TerminationDate6Choice {
 	 * TerminationDate4Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminationDate6Choice, DateCode18Choice> mmCode = new MMMessageAttribute<TerminationDate6Choice, DateCode18Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationDate6Choice.mmObject();
 			isDerived = false;
@@ -177,7 +189,17 @@ public class TerminationDate6Choice {
 			previousVersion_lazy = () -> TerminationDate4Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateCode18Choice.mmObject();
+			complexType_lazy = () -> DateCode18Choice.mmObject();
+		}
+
+		@Override
+		public DateCode18Choice getValue(TerminationDate6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TerminationDate6Choice obj, DateCode18Choice value) {
+			obj.setCode(value);
 		}
 	};
 
@@ -199,7 +221,7 @@ public class TerminationDate6Choice {
 		return date;
 	}
 
-	public TerminationDate6Choice setDate(com.tools20022.repository.choice.DateAndDateTime2Choice date) {
+	public TerminationDate6Choice setDate(DateAndDateTime2Choice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -208,7 +230,7 @@ public class TerminationDate6Choice {
 		return code;
 	}
 
-	public TerminationDate6Choice setCode(com.tools20022.repository.choice.DateCode18Choice code) {
+	public TerminationDate6Choice setCode(DateCode18Choice code) {
 		this.code = Objects.requireNonNull(code);
 		return this;
 	}

@@ -61,12 +61,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount29> forQuantityAndAccount29 = new MMConstraint<QuantityAndAccount29>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount44);
 			owner_lazy = () -> QuantityAndAccount29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount29 obj) throws Exception {
+			checkQuantityAndAccount29(obj);
 		}
 	};
 	/**
@@ -100,12 +104,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount30> forQuantityAndAccount30 = new MMConstraint<QuantityAndAccount30>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount43);
 			owner_lazy = () -> QuantityAndAccount30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount30 obj) throws Exception {
+			checkQuantityAndAccount30(obj);
 		}
 	};
 	/**
@@ -131,11 +139,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount32> forQuantityAndAccount32 = new MMConstraint<QuantityAndAccount32>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount32 obj) throws Exception {
+			checkQuantityAndAccount32(obj);
 		}
 	};
 	/**
@@ -161,11 +173,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount33> forQuantityAndAccount33 = new MMConstraint<QuantityAndAccount33>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount33 obj) throws Exception {
+			checkQuantityAndAccount33(obj);
 		}
 	};
 	/**
@@ -191,11 +207,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount1> forQuantityAndAccount1 = new MMConstraint<QuantityAndAccount1>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount1 obj) throws Exception {
+			checkQuantityAndAccount1(obj);
 		}
 	};
 	/**
@@ -221,11 +241,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount5> forQuantityAndAccount5 = new MMConstraint<QuantityAndAccount5>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount5 obj) throws Exception {
+			checkQuantityAndAccount5(obj);
 		}
 	};
 	/**
@@ -251,11 +275,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount17> forQuantityAndAccount17 = new MMConstraint<QuantityAndAccount17>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount17 obj) throws Exception {
+			checkQuantityAndAccount17(obj);
 		}
 	};
 	/**
@@ -281,11 +309,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount24> forQuantityAndAccount24 = new MMConstraint<QuantityAndAccount24>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount24 obj) throws Exception {
+			checkQuantityAndAccount24(obj);
 		}
 	};
 	/**
@@ -319,12 +351,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount25> forQuantityAndAccount25 = new MMConstraint<QuantityAndAccount25>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount39);
 			owner_lazy = () -> QuantityAndAccount25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount25 obj) throws Exception {
+			checkQuantityAndAccount25(obj);
 		}
 	};
 	/**
@@ -350,11 +386,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount34> forQuantityAndAccount34 = new MMConstraint<QuantityAndAccount34>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount34 obj) throws Exception {
+			checkQuantityAndAccount34(obj);
 		}
 	};
 	/**
@@ -380,11 +420,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount2> forQuantityAndAccount2 = new MMConstraint<QuantityAndAccount2>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount2 obj) throws Exception {
+			checkQuantityAndAccount2(obj);
 		}
 	};
 	/**
@@ -410,11 +454,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount12> forQuantityAndAccount12 = new MMConstraint<QuantityAndAccount12>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount12 obj) throws Exception {
+			checkQuantityAndAccount12(obj);
 		}
 	};
 	/**
@@ -440,11 +488,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount15> forQuantityAndAccount15 = new MMConstraint<QuantityAndAccount15>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount15 obj) throws Exception {
+			checkQuantityAndAccount15(obj);
 		}
 	};
 	/**
@@ -470,11 +522,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount20> forQuantityAndAccount20 = new MMConstraint<QuantityAndAccount20>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount20 obj) throws Exception {
+			checkQuantityAndAccount20(obj);
 		}
 	};
 	/**
@@ -508,12 +564,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount28> forQuantityAndAccount28 = new MMConstraint<QuantityAndAccount28>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount41);
 			owner_lazy = () -> QuantityAndAccount28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount28 obj) throws Exception {
+			checkQuantityAndAccount28(obj);
 		}
 	};
 	/**
@@ -539,11 +599,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount37> forQuantityAndAccount37 = new MMConstraint<QuantityAndAccount37>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount37 obj) throws Exception {
+			checkQuantityAndAccount37(obj);
 		}
 	};
 	/**
@@ -569,11 +633,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount3> forQuantityAndAccount3 = new MMConstraint<QuantityAndAccount3>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount3 obj) throws Exception {
+			checkQuantityAndAccount3(obj);
 		}
 	};
 	/**
@@ -599,11 +667,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount13> forQuantityAndAccount13 = new MMConstraint<QuantityAndAccount13>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount13 obj) throws Exception {
+			checkQuantityAndAccount13(obj);
 		}
 	};
 	/**
@@ -629,11 +701,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount8> forQuantityAndAccount8 = new MMConstraint<QuantityAndAccount8>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount8 obj) throws Exception {
+			checkQuantityAndAccount8(obj);
 		}
 	};
 	/**
@@ -659,11 +735,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount14> forQuantityAndAccount14 = new MMConstraint<QuantityAndAccount14>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount14 obj) throws Exception {
+			checkQuantityAndAccount14(obj);
 		}
 	};
 	/**
@@ -689,11 +769,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount4> forQuantityAndAccount4 = new MMConstraint<QuantityAndAccount4>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount4 obj) throws Exception {
+			checkQuantityAndAccount4(obj);
 		}
 	};
 	/**
@@ -719,11 +803,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount22> forQuantityAndAccount22 = new MMConstraint<QuantityAndAccount22>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount22 obj) throws Exception {
+			checkQuantityAndAccount22(obj);
 		}
 	};
 	/**
@@ -757,12 +845,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount27> forQuantityAndAccount27 = new MMConstraint<QuantityAndAccount27>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount42);
 			owner_lazy = () -> QuantityAndAccount27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount27 obj) throws Exception {
+			checkQuantityAndAccount27(obj);
 		}
 	};
 	/**
@@ -788,11 +880,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount36> forQuantityAndAccount36 = new MMConstraint<QuantityAndAccount36>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount36 obj) throws Exception {
+			checkQuantityAndAccount36(obj);
 		}
 	};
 	/**
@@ -818,11 +914,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount9> forQuantityAndAccount9 = new MMConstraint<QuantityAndAccount9>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount9 obj) throws Exception {
+			checkQuantityAndAccount9(obj);
 		}
 	};
 	/**
@@ -848,11 +948,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount23> forQuantityAndAccount23 = new MMConstraint<QuantityAndAccount23>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount23 obj) throws Exception {
+			checkQuantityAndAccount23(obj);
 		}
 	};
 	/**
@@ -886,12 +990,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount26> forQuantityAndAccount26 = new MMConstraint<QuantityAndAccount26>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount45);
 			owner_lazy = () -> QuantityAndAccount26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount26 obj) throws Exception {
+			checkQuantityAndAccount26(obj);
 		}
 	};
 	/**
@@ -917,11 +1025,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount35> forQuantityAndAccount35 = new MMConstraint<QuantityAndAccount35>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount35 obj) throws Exception {
+			checkQuantityAndAccount35(obj);
 		}
 	};
 	/**
@@ -960,13 +1072,17 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount39> forQuantityAndAccount39 = new MMConstraint<QuantityAndAccount39>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount25;
 			owner_lazy = () -> QuantityAndAccount39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount39 obj) throws Exception {
+			checkQuantityAndAccount39(obj);
 		}
 	};
 	/**
@@ -1005,13 +1121,17 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount41> forQuantityAndAccount41 = new MMConstraint<QuantityAndAccount41>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount64);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount28;
 			owner_lazy = () -> QuantityAndAccount41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount41 obj) throws Exception {
+			checkQuantityAndAccount41(obj);
 		}
 	};
 	/**
@@ -1050,13 +1170,17 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount42> forQuantityAndAccount42 = new MMConstraint<QuantityAndAccount42>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount63);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount27;
 			owner_lazy = () -> QuantityAndAccount42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount42 obj) throws Exception {
+			checkQuantityAndAccount42(obj);
 		}
 	};
 	/**
@@ -1095,13 +1219,17 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount43> forQuantityAndAccount43 = new MMConstraint<QuantityAndAccount43>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount30;
 			owner_lazy = () -> QuantityAndAccount43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount43 obj) throws Exception {
+			checkQuantityAndAccount43(obj);
 		}
 	};
 	/**
@@ -1140,13 +1268,17 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount45> forQuantityAndAccount45 = new MMConstraint<QuantityAndAccount45>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount67);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount26;
 			owner_lazy = () -> QuantityAndAccount45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount45 obj) throws Exception {
+			checkQuantityAndAccount45(obj);
 		}
 	};
 	/**
@@ -1185,13 +1317,17 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount44> forQuantityAndAccount44 = new MMConstraint<QuantityAndAccount44>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount66);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount29;
 			owner_lazy = () -> QuantityAndAccount44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount44 obj) throws Exception {
+			checkQuantityAndAccount44(obj);
 		}
 	};
 	/**
@@ -1225,12 +1361,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount47> forQuantityAndAccount47 = new MMConstraint<QuantityAndAccount47>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount56);
 			owner_lazy = () -> QuantityAndAccount47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount47 obj) throws Exception {
+			checkQuantityAndAccount47(obj);
 		}
 	};
 	/**
@@ -1264,12 +1404,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount51> forQuantityAndAccount51 = new MMConstraint<QuantityAndAccount51>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount57);
 			owner_lazy = () -> QuantityAndAccount51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount51 obj) throws Exception {
+			checkQuantityAndAccount51(obj);
 		}
 	};
 	/**
@@ -1303,12 +1447,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount49> forQuantityAndAccount49 = new MMConstraint<QuantityAndAccount49>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount58);
 			owner_lazy = () -> QuantityAndAccount49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount49 obj) throws Exception {
+			checkQuantityAndAccount49(obj);
 		}
 	};
 	/**
@@ -1334,11 +1482,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount50> forQuantityAndAccount50 = new MMConstraint<QuantityAndAccount50>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount50 obj) throws Exception {
+			checkQuantityAndAccount50(obj);
 		}
 	};
 	/**
@@ -1372,12 +1524,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount55> forQuantityAndAccount55 = new MMConstraint<QuantityAndAccount55>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount60);
 			owner_lazy = () -> QuantityAndAccount55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount55 obj) throws Exception {
+			checkQuantityAndAccount55(obj);
 		}
 	};
 	/**
@@ -1411,12 +1567,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount54> forQuantityAndAccount54 = new MMConstraint<QuantityAndAccount54>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount59);
 			owner_lazy = () -> QuantityAndAccount54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount54 obj) throws Exception {
+			checkQuantityAndAccount54(obj);
 		}
 	};
 	/**
@@ -1447,12 +1607,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount57> forQuantityAndAccount57 = new MMConstraint<QuantityAndAccount57>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount51;
 			owner_lazy = () -> QuantityAndAccount57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount57 obj) throws Exception {
+			checkQuantityAndAccount57(obj);
 		}
 	};
 	/**
@@ -1483,12 +1647,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount58> forQuantityAndAccount58 = new MMConstraint<QuantityAndAccount58>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount49;
 			owner_lazy = () -> QuantityAndAccount58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount58 obj) throws Exception {
+			checkQuantityAndAccount58(obj);
 		}
 	};
 	/**
@@ -1519,12 +1687,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount56> forQuantityAndAccount56 = new MMConstraint<QuantityAndAccount56>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount47;
 			owner_lazy = () -> QuantityAndAccount56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount56 obj) throws Exception {
+			checkQuantityAndAccount56(obj);
 		}
 	};
 	/**
@@ -1555,12 +1727,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount59> forQuantityAndAccount59 = new MMConstraint<QuantityAndAccount59>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount54;
 			owner_lazy = () -> QuantityAndAccount59.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount59 obj) throws Exception {
+			checkQuantityAndAccount59(obj);
 		}
 	};
 	/**
@@ -1591,12 +1767,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount60> forQuantityAndAccount60 = new MMConstraint<QuantityAndAccount60>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount55;
 			owner_lazy = () -> QuantityAndAccount60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount60 obj) throws Exception {
+			checkQuantityAndAccount60(obj);
 		}
 	};
 	/**
@@ -1627,12 +1807,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount64> forQuantityAndAccount64 = new MMConstraint<QuantityAndAccount64>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount41;
 			owner_lazy = () -> QuantityAndAccount64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount64 obj) throws Exception {
+			checkQuantityAndAccount64(obj);
 		}
 	};
 	/**
@@ -1663,12 +1847,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount63> forQuantityAndAccount63 = new MMConstraint<QuantityAndAccount63>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount42;
 			owner_lazy = () -> QuantityAndAccount63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount63 obj) throws Exception {
+			checkQuantityAndAccount63(obj);
 		}
 	};
 	/**
@@ -1699,12 +1887,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount65> forQuantityAndAccount65 = new MMConstraint<QuantityAndAccount65>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount39;
 			owner_lazy = () -> QuantityAndAccount65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount65 obj) throws Exception {
+			checkQuantityAndAccount65(obj);
 		}
 	};
 	/**
@@ -1735,12 +1927,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount66> forQuantityAndAccount66 = new MMConstraint<QuantityAndAccount66>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount44;
 			owner_lazy = () -> QuantityAndAccount66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount66 obj) throws Exception {
+			checkQuantityAndAccount66(obj);
 		}
 	};
 	/**
@@ -1771,12 +1967,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount67> forQuantityAndAccount67 = new MMConstraint<QuantityAndAccount67>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount45;
 			owner_lazy = () -> QuantityAndAccount67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount67 obj) throws Exception {
+			checkQuantityAndAccount67(obj);
 		}
 	};
 	/**
@@ -1807,12 +2007,16 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount68> forQuantityAndAccount68 = new MMConstraint<QuantityAndAccount68>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount43;
 			owner_lazy = () -> QuantityAndAccount68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount68 obj) throws Exception {
+			checkQuantityAndAccount68(obj);
 		}
 	};
 	/**
@@ -1838,11 +2042,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount69> forQuantityAndAccount69 = new MMConstraint<QuantityAndAccount69>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount69 obj) throws Exception {
+			checkQuantityAndAccount69(obj);
 		}
 	};
 	/**
@@ -1868,11 +2076,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount70> forQuantityAndAccount70 = new MMConstraint<QuantityAndAccount70>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount70 obj) throws Exception {
+			checkQuantityAndAccount70(obj);
 		}
 	};
 	/**
@@ -1898,11 +2110,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount71> forQuantityAndAccount71 = new MMConstraint<QuantityAndAccount71>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount71 obj) throws Exception {
+			checkQuantityAndAccount71(obj);
 		}
 	};
 	/**
@@ -1928,11 +2144,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount72> forQuantityAndAccount72 = new MMConstraint<QuantityAndAccount72>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount72.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount72 obj) throws Exception {
+			checkQuantityAndAccount72(obj);
 		}
 	};
 	/**
@@ -1958,11 +2178,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount75> forQuantityAndAccount75 = new MMConstraint<QuantityAndAccount75>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount75 obj) throws Exception {
+			checkQuantityAndAccount75(obj);
 		}
 	};
 	/**
@@ -1988,11 +2212,15 @@ public class ConstraintDenominationRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount76> forQuantityAndAccount76 = new MMConstraint<QuantityAndAccount76>() {
 		{
-			validator = ConstraintDenominationRule::checkQuantityAndAccount76;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> QuantityAndAccount76.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount76 obj) throws Exception {
+			checkQuantityAndAccount76(obj);
 		}
 	};
 

@@ -122,7 +122,7 @@ public class CountryAndResidentialStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CountryAndResidentialStatusType1, CountryCode> mmCountry = new MMMessageAttribute<CountryAndResidentialStatusType1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmObject();
@@ -135,6 +135,16 @@ public class CountryAndResidentialStatusType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(CountryAndResidentialStatusType1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(CountryAndResidentialStatusType1 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "ResdtlSts", required = true)
@@ -182,7 +192,7 @@ public class CountryAndResidentialStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResidentialStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CountryAndResidentialStatusType1, ResidentialStatus1Code> mmResidentialStatus = new MMMessageAttribute<CountryAndResidentialStatusType1, ResidentialStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmResidentialStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmObject();
@@ -195,6 +205,16 @@ public class CountryAndResidentialStatusType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResidentialStatus1Code.mmObject();
+		}
+
+		@Override
+		public ResidentialStatus1Code getValue(CountryAndResidentialStatusType1 obj) {
+			return obj.getResidentialStatus();
+		}
+
+		@Override
+		public void setValue(CountryAndResidentialStatusType1 obj, ResidentialStatus1Code value) {
+			obj.setResidentialStatus(value);
 		}
 	};
 

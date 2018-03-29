@@ -118,7 +118,7 @@ public class LimitStructure1Choice {
 	 * definition} = "Identification of the current limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitStructure1Choice, LimitIdentification1> mmCurrentLimitIdentification = new MMMessageAssociationEnd<LimitStructure1Choice, LimitIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitStructure1Choice.mmObject();
@@ -131,6 +131,16 @@ public class LimitStructure1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitIdentification1.mmObject();
+		}
+
+		@Override
+		public LimitIdentification1 getValue(LimitStructure1Choice obj) {
+			return obj.getCurrentLimitIdentification();
+		}
+
+		@Override
+		public void setValue(LimitStructure1Choice obj, LimitIdentification1 value) {
+			obj.setCurrentLimitIdentification(value);
 		}
 	};
 	@XmlElement(name = "AllCurLmts", required = true)
@@ -166,7 +176,7 @@ public class LimitStructure1Choice {
 	 * definition} = "Identification of the current limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAllCurrentLimits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitStructure1Choice, LimitIdentification2> mmAllCurrentLimits = new MMMessageAssociationEnd<LimitStructure1Choice, LimitIdentification2>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitStructure1Choice.mmObject();
@@ -179,6 +189,16 @@ public class LimitStructure1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitIdentification2.mmObject();
+		}
+
+		@Override
+		public LimitIdentification2 getValue(LimitStructure1Choice obj) {
+			return obj.getAllCurrentLimits();
+		}
+
+		@Override
+		public void setValue(LimitStructure1Choice obj, LimitIdentification2 value) {
+			obj.setAllCurrentLimits(value);
 		}
 	};
 

@@ -129,7 +129,7 @@ public class PremiumAmount3 {
 	 * PremiumAmount2.mmPremiumQuote}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPremiumQuote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PremiumAmount3, PremiumQuote1Choice> mmPremiumQuote = new MMMessageAssociationEnd<PremiumAmount3, PremiumQuote1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
@@ -142,6 +142,16 @@ public class PremiumAmount3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PremiumQuote1Choice.mmObject();
+		}
+
+		@Override
+		public PremiumQuote1Choice getValue(PremiumAmount3 obj) {
+			return obj.getPremiumQuote();
+		}
+
+		@Override
+		public void setValue(PremiumAmount3 obj, PremiumQuote1Choice value) {
+			obj.setPremiumQuote(value);
 		}
 	};
 	@XmlElement(name = "PrmCcy", required = true)
@@ -180,7 +190,7 @@ public class PremiumAmount3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPremiumCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumAmount3, ActiveOrHistoricCurrencyCode> mmPremiumCurrency = new MMMessageAttribute<PremiumAmount3, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
@@ -192,6 +202,16 @@ public class PremiumAmount3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(PremiumAmount3 obj) {
+			return obj.getPremiumCurrency();
+		}
+
+		@Override
+		public void setValue(PremiumAmount3 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setPremiumCurrency(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -230,7 +250,7 @@ public class PremiumAmount3 {
 	 * PremiumAmount2.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumAmount3, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<PremiumAmount3, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class PremiumAmount3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(PremiumAmount3 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PremiumAmount3 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "DcmlPlcs", required = true)
@@ -274,7 +304,7 @@ public class PremiumAmount3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDecimalPlaces = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumAmount3, Number> mmDecimalPlaces = new MMMessageAttribute<PremiumAmount3, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
@@ -285,6 +315,16 @@ public class PremiumAmount3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(PremiumAmount3 obj) {
+			return obj.getDecimalPlaces();
+		}
+
+		@Override
+		public void setValue(PremiumAmount3 obj, Number value) {
+			obj.setDecimalPlaces(value);
 		}
 	};
 	@XmlElement(name = "PrmSttlmDt", required = true)
@@ -315,7 +355,7 @@ public class PremiumAmount3 {
 	 * definition} = "Date on which the premium must be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPremiumSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumAmount3, ISODate> mmPremiumSettlementDate = new MMMessageAttribute<PremiumAmount3, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
@@ -326,6 +366,16 @@ public class PremiumAmount3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PremiumAmount3 obj) {
+			return obj.getPremiumSettlementDate();
+		}
+
+		@Override
+		public void setValue(PremiumAmount3 obj, ISODate value) {
+			obj.setPremiumSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "PyerPtyRef", required = true)
@@ -356,7 +406,7 @@ public class PremiumAmount3 {
 	 * definition} = "Premium fee payer related information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayerPartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumAmount3, Max35Text> mmPayerPartyReference = new MMMessageAttribute<PremiumAmount3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
@@ -367,6 +417,16 @@ public class PremiumAmount3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PremiumAmount3 obj) {
+			return obj.getPayerPartyReference();
+		}
+
+		@Override
+		public void setValue(PremiumAmount3 obj, Max35Text value) {
+			obj.setPayerPartyReference(value);
 		}
 	};
 	@XmlElement(name = "RcvrPtyRef", required = true)
@@ -397,7 +457,7 @@ public class PremiumAmount3 {
 	 * definition} = "Premium fee receiver related information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceiverPartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PremiumAmount3, Max35Text> mmReceiverPartyReference = new MMMessageAttribute<PremiumAmount3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PremiumAmount3.mmObject();
 			isDerived = false;
@@ -408,6 +468,16 @@ public class PremiumAmount3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PremiumAmount3 obj) {
+			return obj.getReceiverPartyReference();
+		}
+
+		@Override
+		public void setValue(PremiumAmount3 obj, Max35Text value) {
+			obj.setReceiverPartyReference(value);
 		}
 	};
 

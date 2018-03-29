@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.LocalName;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account24;
+import com.tools20022.repository.msg.SubAccount5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +135,7 @@ public class FinancialInstrument64 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument64, SecurityIdentification25Choice> mmIdentification = new MMMessageAttribute<FinancialInstrument64, SecurityIdentification25Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument64.mmObject();
@@ -145,6 +147,16 @@ public class FinancialInstrument64 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification25Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification25Choice getValue(FinancialInstrument64 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument64 obj, SecurityIdentification25Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -181,7 +193,7 @@ public class FinancialInstrument64 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument64, Optional<Max350Text>> mmName = new MMMessageAttribute<FinancialInstrument64, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument64.mmObject();
@@ -193,6 +205,16 @@ public class FinancialInstrument64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(FinancialInstrument64 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument64 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShrtNm")
@@ -231,7 +253,7 @@ public class FinancialInstrument64 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument64, Optional<Max35Text>> mmShortName = new MMMessageAttribute<FinancialInstrument64, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmShortName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument64.mmObject();
@@ -243,6 +265,16 @@ public class FinancialInstrument64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FinancialInstrument64 obj) {
+			return obj.getShortName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument64 obj, Optional<Max35Text> value) {
+			obj.setShortName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfeeAcct")
@@ -281,7 +313,7 @@ public class FinancialInstrument64 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransfereeAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument64, Optional<Account24>> mmTransfereeAccount = new MMMessageAttribute<FinancialInstrument64, Optional<Account24>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument64.mmObject();
@@ -292,7 +324,17 @@ public class FinancialInstrument64 {
 			definition = "Account held in the name of the party that is not the name of the beneficial owner of the shares.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Account24.mmObject();
+			complexType_lazy = () -> Account24.mmObject();
+		}
+
+		@Override
+		public Optional<Account24> getValue(FinancialInstrument64 obj) {
+			return obj.getTransfereeAccount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument64 obj, Optional<Account24> value) {
+			obj.setTransfereeAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubAcctDtls")
@@ -328,7 +370,7 @@ public class FinancialInstrument64 {
 	 * definition} = "Sub-account of the master or omnibus account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument64, Optional<SubAccount5>> mmSubAccountDetails = new MMMessageAssociationEnd<FinancialInstrument64, Optional<SubAccount5>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument64.mmObject();
@@ -340,7 +382,17 @@ public class FinancialInstrument64 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmObject();
+			type_lazy = () -> SubAccount5.mmObject();
+		}
+
+		@Override
+		public Optional<SubAccount5> getValue(FinancialInstrument64 obj) {
+			return obj.getSubAccountDetails();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument64 obj, Optional<SubAccount5> value) {
+			obj.setSubAccountDetails(value.orElse(null));
 		}
 	};
 
@@ -391,7 +443,7 @@ public class FinancialInstrument64 {
 		return transfereeAccount == null ? Optional.empty() : Optional.of(transfereeAccount);
 	}
 
-	public FinancialInstrument64 setTransfereeAccount(com.tools20022.repository.msg.Account24 transfereeAccount) {
+	public FinancialInstrument64 setTransfereeAccount(Account24 transfereeAccount) {
 		this.transfereeAccount = transfereeAccount;
 		return this;
 	}
@@ -400,7 +452,7 @@ public class FinancialInstrument64 {
 		return subAccountDetails == null ? Optional.empty() : Optional.of(subAccountDetails);
 	}
 
-	public FinancialInstrument64 setSubAccountDetails(com.tools20022.repository.msg.SubAccount5 subAccountDetails) {
+	public FinancialInstrument64 setSubAccountDetails(SubAccount5 subAccountDetails) {
 		this.subAccountDetails = subAccountDetails;
 		return this;
 	}

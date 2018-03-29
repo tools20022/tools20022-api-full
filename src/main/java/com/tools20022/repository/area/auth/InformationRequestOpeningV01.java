@@ -30,7 +30,6 @@ import com.tools20022.repository.msg.DueDate1;
 import com.tools20022.repository.msg.LegalMandate1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.AuthoritiesFinancialInvestigationsISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -135,7 +134,7 @@ public class InformationRequestOpeningV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvestigationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationRequestOpeningV01, Max35Text> mmInvestigationIdentification = new MMMessageBuildingBlock<InformationRequestOpeningV01, Max35Text>() {
 		{
 			xmlTag = "InvstgtnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,12 +145,14 @@ public class InformationRequestOpeningV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationRequestOpeningV01.class.getMethod("getInvestigationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(InformationRequestOpeningV01 obj) {
+			return obj.getInvestigationIdentification();
+		}
+
+		@Override
+		public void setValue(InformationRequestOpeningV01 obj, Max35Text value) {
+			obj.setInvestigationIdentification(value);
 		}
 	};
 	@XmlElement(name = "LglMndtBsis", required = true)
@@ -178,7 +179,7 @@ public class InformationRequestOpeningV01 {
 	 * definition} = "Provides details on the legal basis of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmLegalMandateBasis = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationRequestOpeningV01, LegalMandate1> mmLegalMandateBasis = new MMMessageBuildingBlock<InformationRequestOpeningV01, LegalMandate1>() {
 		{
 			xmlTag = "LglMndtBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +190,14 @@ public class InformationRequestOpeningV01 {
 			complexType_lazy = () -> LegalMandate1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationRequestOpeningV01.class.getMethod("getLegalMandateBasis", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public LegalMandate1 getValue(InformationRequestOpeningV01 obj) {
+			return obj.getLegalMandateBasis();
+		}
+
+		@Override
+		public void setValue(InformationRequestOpeningV01 obj, LegalMandate1 value) {
+			obj.setLegalMandateBasis(value);
 		}
 	};
 	@XmlElement(name = "CnfdtltySts", required = true)
@@ -223,7 +226,7 @@ public class InformationRequestOpeningV01 {
 	 * "Specifies the confidentiality status of the investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmConfidentialityStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationRequestOpeningV01, YesNoIndicator> mmConfidentialityStatus = new MMMessageBuildingBlock<InformationRequestOpeningV01, YesNoIndicator>() {
 		{
 			xmlTag = "CnfdtltySts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +237,14 @@ public class InformationRequestOpeningV01 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationRequestOpeningV01.class.getMethod("getConfidentialityStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(InformationRequestOpeningV01 obj) {
+			return obj.getConfidentialityStatus();
+		}
+
+		@Override
+		public void setValue(InformationRequestOpeningV01 obj, YesNoIndicator value) {
+			obj.setConfidentialityStatus(value);
 		}
 	};
 	@XmlElement(name = "DueDt")
@@ -268,7 +273,7 @@ public class InformationRequestOpeningV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDueDate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationRequestOpeningV01, Optional<DueDate1>> mmDueDate = new MMMessageBuildingBlock<InformationRequestOpeningV01, Optional<DueDate1>>() {
 		{
 			xmlTag = "DueDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,12 +284,14 @@ public class InformationRequestOpeningV01 {
 			complexType_lazy = () -> DueDate1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationRequestOpeningV01.class.getMethod("getDueDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DueDate1> getValue(InformationRequestOpeningV01 obj) {
+			return obj.getDueDate();
+		}
+
+		@Override
+		public void setValue(InformationRequestOpeningV01 obj, Optional<DueDate1> value) {
+			obj.setDueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstgtnPrd", required = true)
@@ -314,7 +321,7 @@ public class InformationRequestOpeningV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvestigationPeriod = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationRequestOpeningV01, DateOrDateTimePeriodChoice> mmInvestigationPeriod = new MMMessageBuildingBlock<InformationRequestOpeningV01, DateOrDateTimePeriodChoice>() {
 		{
 			xmlTag = "InvstgtnPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,12 +332,14 @@ public class InformationRequestOpeningV01 {
 			complexType_lazy = () -> DateOrDateTimePeriodChoice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationRequestOpeningV01.class.getMethod("getInvestigationPeriod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DateOrDateTimePeriodChoice getValue(InformationRequestOpeningV01 obj) {
+			return obj.getInvestigationPeriod();
+		}
+
+		@Override
+		public void setValue(InformationRequestOpeningV01 obj, DateOrDateTimePeriodChoice value) {
+			obj.setInvestigationPeriod(value);
 		}
 	};
 	@XmlElement(name = "SchCrit", required = true)
@@ -360,7 +369,7 @@ public class InformationRequestOpeningV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSearchCriteria = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationRequestOpeningV01, SearchCriteria1Choice> mmSearchCriteria = new MMMessageBuildingBlock<InformationRequestOpeningV01, SearchCriteria1Choice>() {
 		{
 			xmlTag = "SchCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,12 +380,14 @@ public class InformationRequestOpeningV01 {
 			complexType_lazy = () -> SearchCriteria1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationRequestOpeningV01.class.getMethod("getSearchCriteria", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SearchCriteria1Choice getValue(InformationRequestOpeningV01 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(InformationRequestOpeningV01 obj, SearchCriteria1Choice value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -406,7 +417,7 @@ public class InformationRequestOpeningV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationRequestOpeningV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<InformationRequestOpeningV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -416,12 +427,14 @@ public class InformationRequestOpeningV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationRequestOpeningV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(InformationRequestOpeningV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(InformationRequestOpeningV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

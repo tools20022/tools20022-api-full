@@ -127,7 +127,7 @@ public class AccountIdentification34 {
 	 * definition} = "Account where financial instruments are maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification34, RestrictedFINXMax35Text> mmSafekeepingAccount = new MMMessageAttribute<AccountIdentification34, RestrictedFINXMax35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification34.mmObject();
@@ -140,6 +140,16 @@ public class AccountIdentification34 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(AccountIdentification34 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(AccountIdentification34 obj, RestrictedFINXMax35Text value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -179,7 +189,7 @@ public class AccountIdentification34 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification34, Optional<PartyIdentification103Choice>> mmAccountOwner = new MMMessageAssociationEnd<AccountIdentification34, Optional<PartyIdentification103Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification34.mmObject();
@@ -193,6 +203,16 @@ public class AccountIdentification34 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification103Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification103Choice> getValue(AccountIdentification34 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(AccountIdentification34 obj, Optional<PartyIdentification103Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -233,7 +253,7 @@ public class AccountIdentification34 {
 	 * "Location where the financial instruments are/will be safekept."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification34, Optional<SafekeepingPlaceFormat11Choice>> mmSafekeepingPlace = new MMMessageAssociationEnd<AccountIdentification34, Optional<SafekeepingPlaceFormat11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSafekeepingPlace;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification34.mmObject();
@@ -247,6 +267,16 @@ public class AccountIdentification34 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SafekeepingPlaceFormat11Choice> getValue(AccountIdentification34 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(AccountIdentification34 obj, Optional<SafekeepingPlaceFormat11Choice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 

@@ -97,7 +97,7 @@ public class MessageIdentification6 {
 	 * "Specifies the message name identifier of the referenced message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageIdentification6, Optional<Max35Text>> mmMessageNameIdentification = new MMMessageAttribute<MessageIdentification6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageIdentification6.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class MessageIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MessageIdentification6 obj) {
+			return obj.getMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(MessageIdentification6 obj, Optional<Max35Text> value) {
+			obj.setMessageNameIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgId")
@@ -139,7 +149,7 @@ public class MessageIdentification6 {
 	 * definition} = "Specifies the identification of the referenced message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageIdentification6, Optional<Max35Text>> mmMessageIdentification = new MMMessageAttribute<MessageIdentification6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageIdentification6.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class MessageIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MessageIdentification6 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(MessageIdentification6 obj, Optional<Max35Text> value) {
+			obj.setMessageIdentification(value.orElse(null));
 		}
 	};
 

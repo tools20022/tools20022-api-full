@@ -25,11 +25,10 @@ import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BalanceDetails5;
 import com.tools20022.repository.msg.BalanceDetails6;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.text.DateFormat;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
-import java.util.Objects;
+import java.util.function.Supplier;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,9 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = March 3, 2019</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PortfolioBalance1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -115,7 +115,7 @@ public class PortfolioBalance1 {
 	 * definition} = "Summary balance information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSummaryBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PortfolioBalance1, List<BalanceDetails5>> mmSummaryBalance = new MMMessageAssociationEnd<PortfolioBalance1, List<BalanceDetails5>>() {
 		{
 			businessComponentTrace_lazy = () -> Balance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PortfolioBalance1.mmObject();
@@ -127,6 +127,16 @@ public class PortfolioBalance1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BalanceDetails5.mmObject();
+		}
+
+		@Override
+		public List<BalanceDetails5> getValue(PortfolioBalance1 obj) {
+			return obj.getSummaryBalance();
+		}
+
+		@Override
+		public void setValue(PortfolioBalance1 obj, List<BalanceDetails5> value) {
+			obj.setSummaryBalance(value);
 		}
 	};
 	@XmlElement(name = "DtldBal", required = true)
@@ -161,7 +171,7 @@ public class PortfolioBalance1 {
 	 * definition} = "Detailed balance information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDetailedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PortfolioBalance1, List<BalanceDetails6>> mmDetailedBalance = new MMMessageAssociationEnd<PortfolioBalance1, List<BalanceDetails6>>() {
 		{
 			businessComponentTrace_lazy = () -> Balance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PortfolioBalance1.mmObject();
@@ -174,6 +184,16 @@ public class PortfolioBalance1 {
 			isComposite = true;
 			type_lazy = () -> BalanceDetails6.mmObject();
 		}
+
+		@Override
+		public List<BalanceDetails6> getValue(PortfolioBalance1 obj) {
+			return obj.getDetailedBalance();
+		}
+
+		@Override
+		public void setValue(PortfolioBalance1 obj, List<BalanceDetails6> value) {
+			obj.setDetailedBalance(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -183,7 +203,14 @@ public class PortfolioBalance1 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(TotalPortfolioValuationReportV01.mmBalance);
 				trace_lazy = () -> Balance.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("March 3, 2019");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "PortfolioBalance1";
 				definition = "Balance breakdown information.";
 			}

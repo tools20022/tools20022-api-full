@@ -27,6 +27,8 @@ import com.tools20022.repository.codeset.TransactionStatus1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
+import com.tools20022.repository.msg.UnitPrice1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -195,7 +197,7 @@ public class InvestmentFundTransaction2 {
 	 * definition} = "Type of investment fund transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, TransactionType1CodeChoice> mmTransactionType = new MMMessageAttribute<InvestmentFundTransaction2, TransactionType1CodeChoice>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -207,6 +209,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionType1CodeChoice.mmObject();
+		}
+
+		@Override
+		public TransactionType1CodeChoice getValue(InvestmentFundTransaction2 obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, TransactionType1CodeChoice value) {
+			obj.setTransactionType(value);
 		}
 	};
 	@XmlElement(name = "CorpActnEvtTp", required = true)
@@ -244,7 +256,7 @@ public class InvestmentFundTransaction2 {
 	 * definition} = "Type of corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, CorporateActionEventType1CodeChoice> mmCorporateActionEventType = new MMMessageAttribute<InvestmentFundTransaction2, CorporateActionEventType1CodeChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -256,6 +268,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionEventType1CodeChoice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType1CodeChoice getValue(InvestmentFundTransaction2 obj) {
+			return obj.getCorporateActionEventType();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, CorporateActionEventType1CodeChoice value) {
+			obj.setCorporateActionEventType(value);
 		}
 	};
 	@XmlElement(name = "BookgSts")
@@ -293,7 +315,7 @@ public class InvestmentFundTransaction2 {
 	 * definition} = "Status of an investment fund transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBookingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<TransactionStatus1Code>> mmBookingStatus = new MMMessageAttribute<InvestmentFundTransaction2, Optional<TransactionStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmTransactionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -305,6 +327,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionStatus1Code> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getBookingStatus();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<TransactionStatus1Code> value) {
+			obj.setBookingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MstrRef")
@@ -343,7 +375,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -355,6 +387,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRef")
@@ -393,7 +435,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>> mmOrderReference = new MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -405,6 +447,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<Max35Text> value) {
+			obj.setOrderReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealRef")
@@ -443,7 +495,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>> mmDealReference = new MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -455,6 +507,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getDealReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<Max35Text> value) {
+			obj.setDealReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LegId")
@@ -487,7 +549,7 @@ public class InvestmentFundTransaction2 {
 	 * "Unique technical identifier for an instance of a leg within a switch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>> mmLegIdentification = new MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
 			isDerived = false;
@@ -498,6 +560,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getLegIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<Max35Text> value) {
+			obj.setLegIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LegExctnId")
@@ -531,7 +603,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegExecutionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>> mmLegExecutionIdentification = new MMMessageAttribute<InvestmentFundTransaction2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
 			isDerived = false;
@@ -542,6 +614,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getLegExecutionIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<Max35Text> value) {
+			obj.setLegExecutionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrDtTm")
@@ -579,7 +661,7 @@ public class InvestmentFundTransaction2 {
 	 * "Date and time at which the order was placed by the investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<ISODateTime>> mmOrderDateTime = new MMMessageAttribute<InvestmentFundTransaction2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -591,6 +673,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getOrderDateTime();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<ISODateTime> value) {
+			obj.setOrderDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttldTxInd", required = true)
@@ -630,7 +722,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettledTransactionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, YesNoIndicator> mmSettledTransactionIndicator = new MMMessageAttribute<InvestmentFundTransaction2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmSettledIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -642,6 +734,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentFundTransaction2 obj) {
+			return obj.getSettledTransactionIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, YesNoIndicator value) {
+			obj.setSettledTransactionIndicator(value);
 		}
 	};
 	@XmlElement(name = "RegdTxInd", required = true)
@@ -681,7 +783,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegisteredTransactionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, YesNoIndicator> mmRegisteredTransactionIndicator = new MMMessageAttribute<InvestmentFundTransaction2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmRegisteredIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -693,6 +795,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentFundTransaction2 obj) {
+			return obj.getRegisteredTransactionIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, YesNoIndicator value) {
+			obj.setRegisteredTransactionIndicator(value);
 		}
 	};
 	@XmlElement(name = "UnitsQty", required = true)
@@ -730,7 +842,7 @@ public class InvestmentFundTransaction2 {
 	 * definition} = "Number of investment funds units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, FinancialInstrumentQuantity1> mmUnitsQuantity = new MMMessageAttribute<InvestmentFundTransaction2, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -741,7 +853,17 @@ public class InvestmentFundTransaction2 {
 			definition = "Number of investment funds units.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(InvestmentFundTransaction2 obj) {
+			return obj.getUnitsQuantity();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, FinancialInstrumentQuantity1 value) {
+			obj.setUnitsQuantity(value);
 		}
 	};
 	@XmlElement(name = "CdtDbt", required = true)
@@ -781,7 +903,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, CreditDebitCode> mmCreditDebit = new MMMessageAttribute<InvestmentFundTransaction2, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -793,6 +915,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(InvestmentFundTransaction2 obj) {
+			return obj.getCreditDebit();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, CreditDebitCode value) {
+			obj.setCreditDebit(value);
 		}
 	};
 	@XmlElement(name = "Rvsl")
@@ -826,7 +958,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<ReversalCode>> mmReversal = new MMMessageAttribute<InvestmentFundTransaction2, Optional<ReversalCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
 			isDerived = false;
@@ -837,6 +969,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReversalCode.mmObject();
+		}
+
+		@Override
+		public Optional<ReversalCode> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getReversal();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<ReversalCode> value) {
+			obj.setReversal(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrssSttlmAmt")
@@ -876,7 +1018,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<ActiveCurrencyAndAmount>> mmGrossSettlementAmount = new MMMessageAttribute<InvestmentFundTransaction2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -888,6 +1030,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getGrossSettlementAmount();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setGrossSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDt")
@@ -926,7 +1078,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, Optional<ISODate>> mmSettlementDate = new MMMessageAttribute<InvestmentFundTransaction2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -938,6 +1090,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<ISODate> value) {
+			obj.setSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDtTm", required = true)
@@ -977,7 +1139,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, DateAndDateTimeChoice> mmTradeDateTime = new MMMessageAttribute<InvestmentFundTransaction2, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -989,6 +1151,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(InvestmentFundTransaction2 obj) {
+			return obj.getTradeDateTime();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, DateAndDateTimeChoice value) {
+			obj.setTradeDateTime(value);
 		}
 	};
 	@XmlElement(name = "CumDvddInd", required = true)
@@ -1028,7 +1200,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCumDividendIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, YesNoIndicator> mmCumDividendIndicator = new MMMessageAttribute<InvestmentFundTransaction2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmCumDividendIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -1040,6 +1212,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentFundTransaction2 obj) {
+			return obj.getCumDividendIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, YesNoIndicator value) {
+			obj.setCumDividendIndicator(value);
 		}
 	};
 	@XmlElement(name = "PrtlyExctdInd", required = true)
@@ -1079,7 +1261,7 @@ public class InvestmentFundTransaction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartiallyExecutedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransaction2, YesNoIndicator> mmPartiallyExecutedIndicator = new MMMessageAttribute<InvestmentFundTransaction2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmPartiallyExecutedIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -1091,6 +1273,16 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentFundTransaction2 obj) {
+			return obj.getPartiallyExecutedIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, YesNoIndicator value) {
+			obj.setPartiallyExecutedIndicator(value);
 		}
 	};
 	@XmlElement(name = "PricDtls")
@@ -1125,7 +1317,7 @@ public class InvestmentFundTransaction2 {
 	 * definition} = "Price at which the order was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundTransaction2, Optional<UnitPrice1>> mmPriceDetails = new MMMessageAssociationEnd<InvestmentFundTransaction2, Optional<UnitPrice1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedTradePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundTransaction2.mmObject();
@@ -1137,7 +1329,17 @@ public class InvestmentFundTransaction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnitPrice1.mmObject();
+			type_lazy = () -> UnitPrice1.mmObject();
+		}
+
+		@Override
+		public Optional<UnitPrice1> getValue(InvestmentFundTransaction2 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransaction2 obj, Optional<UnitPrice1> value) {
+			obj.setPriceDetails(value.orElse(null));
 		}
 	};
 	/**
@@ -1320,7 +1522,7 @@ public class InvestmentFundTransaction2 {
 		return unitsQuantity;
 	}
 
-	public InvestmentFundTransaction2 setUnitsQuantity(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsQuantity) {
+	public InvestmentFundTransaction2 setUnitsQuantity(FinancialInstrumentQuantity1 unitsQuantity) {
 		this.unitsQuantity = Objects.requireNonNull(unitsQuantity);
 		return this;
 	}
@@ -1392,7 +1594,7 @@ public class InvestmentFundTransaction2 {
 		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public InvestmentFundTransaction2 setPriceDetails(com.tools20022.repository.msg.UnitPrice1 priceDetails) {
+	public InvestmentFundTransaction2 setPriceDetails(UnitPrice1 priceDetails) {
 		this.priceDetails = priceDetails;
 		return this;
 	}

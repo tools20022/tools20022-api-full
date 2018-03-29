@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.DefinedAttributes1Choice;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentAttributes88;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class DerivativeUnderlyingLeg1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContractAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DerivativeUnderlyingLeg1, FinancialInstrumentAttributes88> mmContractAttributes = new MMMessageAssociationEnd<DerivativeUnderlyingLeg1, FinancialInstrumentAttributes88>() {
 		{
 			businessComponentTrace_lazy = () -> Interest.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeUnderlyingLeg1.mmObject();
@@ -126,7 +127,17 @@ public class DerivativeUnderlyingLeg1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes88.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes88.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentAttributes88 getValue(DerivativeUnderlyingLeg1 obj) {
+			return obj.getContractAttributes();
+		}
+
+		@Override
+		public void setValue(DerivativeUnderlyingLeg1 obj, FinancialInstrumentAttributes88 value) {
+			obj.setContractAttributes(value);
 		}
 	};
 	@XmlElement(name = "DfndAttrbts")
@@ -160,7 +171,7 @@ public class DerivativeUnderlyingLeg1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefinedAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DerivativeUnderlyingLeg1, Optional<DefinedAttributes1Choice>> mmDefinedAttributes = new MMMessageAssociationEnd<DerivativeUnderlyingLeg1, Optional<DefinedAttributes1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeUnderlyingLeg1.mmObject();
 			isDerived = false;
@@ -172,6 +183,16 @@ public class DerivativeUnderlyingLeg1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DefinedAttributes1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DefinedAttributes1Choice> getValue(DerivativeUnderlyingLeg1 obj) {
+			return obj.getDefinedAttributes();
+		}
+
+		@Override
+		public void setValue(DerivativeUnderlyingLeg1 obj, Optional<DefinedAttributes1Choice> value) {
+			obj.setDefinedAttributes(value.orElse(null));
 		}
 	};
 
@@ -193,7 +214,7 @@ public class DerivativeUnderlyingLeg1 {
 		return contractAttributes;
 	}
 
-	public DerivativeUnderlyingLeg1 setContractAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes88 contractAttributes) {
+	public DerivativeUnderlyingLeg1 setContractAttributes(FinancialInstrumentAttributes88 contractAttributes) {
 		this.contractAttributes = Objects.requireNonNull(contractAttributes);
 		return this;
 	}

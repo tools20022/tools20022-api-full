@@ -114,7 +114,7 @@ public class HypotheticalCapitalMeasure1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HypotheticalCapitalMeasure1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<HypotheticalCapitalMeasure1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HypotheticalCapitalMeasure1.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class HypotheticalCapitalMeasure1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(HypotheticalCapitalMeasure1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(HypotheticalCapitalMeasure1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "DfltWtrfllId", required = true)
@@ -158,7 +168,7 @@ public class HypotheticalCapitalMeasure1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultWaterfallIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HypotheticalCapitalMeasure1, Max35Text> mmDefaultWaterfallIdentification = new MMMessageAttribute<HypotheticalCapitalMeasure1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HypotheticalCapitalMeasure1.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class HypotheticalCapitalMeasure1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(HypotheticalCapitalMeasure1 obj) {
+			return obj.getDefaultWaterfallIdentification();
+		}
+
+		@Override
+		public void setValue(HypotheticalCapitalMeasure1 obj, Max35Text value) {
+			obj.setDefaultWaterfallIdentification(value);
 		}
 	};
 

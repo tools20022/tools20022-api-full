@@ -22,9 +22,10 @@ import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.ClearingBrokerIdentification;
+import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -309,7 +310,7 @@ public class TradeIdentification {
 	 * "Unambiguous identification of the trade allocated by the counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCounterpartyReference = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TradeIdentification, Max35Text> mmCounterpartyReference = new MMBusinessAttribute<TradeIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(References11.mmCounterpartyReference, Transfer18.mmCounterpartyReference, Transfer26.mmCounterpartyReference, Transfer15.mmCounterpartyReference, Transfer21.mmCounterpartyReference,
 					Transfer13.mmCounterpartyReference, Transfer23.mmCounterpartyReference, Transfer11.mmCounterpartyReference, Transfer19.mmCounterpartyReference, Transfer27.mmCounterpartyReference, Transfer28.mmCounterpartyReference,
@@ -335,12 +336,14 @@ public class TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeIdentification.class.getMethod("getCounterpartyReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TradeIdentification obj) {
+			return obj.getCounterpartyReference();
+		}
+
+		@Override
+		public void setValue(TradeIdentification obj, Max35Text value) {
+			obj.setCounterpartyReference(value);
 		}
 	};
 	protected Max35Text identification;
@@ -1577,7 +1580,7 @@ public class TradeIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TradeIdentification, Max35Text> mmIdentification = new MMBusinessAttribute<TradeIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTypeAndIdentification3.mmTransactionIdentification, TransactionDetails41.mmOtherTransactionIdentification, References1Choice.mmOtherTransactionIdentification,
 					SecuritiesTradeDetails25.mmTradeIdentification, SecuritiesTradeDetails26.mmTradeIdentification, SettlementTypeAndIdentification13.mmTransactionIdentification,
@@ -1697,12 +1700,14 @@ public class TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeIdentification.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TradeIdentification obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TradeIdentification obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	protected Max35Text commonIdentification;
@@ -2348,7 +2353,7 @@ public class TradeIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCommonIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TradeIdentification, Max35Text> mmCommonIdentification = new MMBusinessAttribute<TradeIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementTypeAndAdditionalParameters6.mmCommonIdentification, SettlementTypeAndAdditionalParameters5.mmCommonIdentification, SettlementTypeAndAdditionalParameters7.mmCommonIdentification,
 					SettlementTypeAndAdditionalParameters8.mmCommonIdentification, TransactionTypeAndAdditionalParameters3.mmCommonIdentification, TransactionTypeAndAdditionalParameters6.mmCommonIdentification,
@@ -2410,12 +2415,14 @@ public class TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeIdentification.class.getMethod("getCommonIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TradeIdentification obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(TradeIdentification obj, Max35Text value) {
+			obj.setCommonIdentification(value);
 		}
 	};
 	protected Max35Text matchingReference;
@@ -2528,7 +2535,7 @@ public class TradeIdentification {
 	 * "Reference assigned by a matching system when the trade is matched."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMatchingReference = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TradeIdentification, Max35Text> mmMatchingReference = new MMBusinessAttribute<TradeIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeData8.mmMatchingSystemUniqueReference, TradeData8.mmMatchingSystemMatchingReference, TradeData8.mmMatchingSystemMatchedSideReference,
 					MatchingSystemReference1Choice.mmMatchingSystemUniqueReference, TradeAgreement8.mmMatchingSystemReference, TradeData9.mmMatchingSystemUniqueReference, TradeData9.mmMatchingSystemMatchingReference,
@@ -2547,12 +2554,14 @@ public class TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeIdentification.class.getMethod("getMatchingReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TradeIdentification obj) {
+			return obj.getMatchingReference();
+		}
+
+		@Override
+		public void setValue(TradeIdentification obj, Max35Text value) {
+			obj.setMatchingReference(value);
 		}
 	};
 	protected Trade trade;
@@ -2589,7 +2598,7 @@ public class TradeIdentification {
 	 * "Specifies the trade for which identifications are provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TradeIdentification, Optional<Trade>> mmTrade = new MMBusinessAssociationEnd<TradeIdentification, Optional<Trade>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
@@ -2598,9 +2607,19 @@ public class TradeIdentification {
 			definition = "Specifies the trade for which identifications are provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications;
+			opposite_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
+			type_lazy = () -> Trade.mmObject();
+		}
+
+		@Override
+		public Optional<Trade> getValue(TradeIdentification obj) {
+			return obj.getTrade();
+		}
+
+		@Override
+		public void setValue(TradeIdentification obj, Optional<Trade> value) {
+			obj.setTrade(value.orElse(null));
 		}
 	};
 	protected Max35Text uniqueTradeIdentifier;
@@ -2714,7 +2733,7 @@ public class TradeIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUniqueTradeIdentifier = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TradeIdentification, Max35Text> mmUniqueTradeIdentifier = new MMBusinessAttribute<TradeIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UniqueTransactionIdentifier1.mmUniqueTransactionIdentifier, UniqueTransactionIdentifier1.mmPriorUniqueTransactionIdentifier, RegulatoryReporting1.mmTradingSideUniqueTransactionIdentifier,
 					UniqueTransactionIdentifier2.mmUniqueTransactionIdentifier, UniqueTransactionIdentifier2.mmPriorUniqueTransactionIdentifier, ForeignExchangeSwapTransaction1.mmUniqueTransactionIdentifier,
@@ -2734,15 +2753,17 @@ public class TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeIdentification.class.getMethod("getUniqueTradeIdentifier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TradeIdentification obj) {
+			return obj.getUniqueTradeIdentifier();
+		}
+
+		@Override
+		public void setValue(TradeIdentification obj, Max35Text value) {
+			obj.setUniqueTradeIdentifier(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.ClearingBrokerIdentification> clearingBrokerIdentification;
+	protected List<ClearingBrokerIdentification> clearingBrokerIdentification;
 	/**
 	 * 
 	 <p>
@@ -2794,7 +2815,7 @@ public class TradeIdentification {
 	 * definition} = "Reference number assigned by the clearing broker."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmClearingBrokerIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TradeIdentification, List<ClearingBrokerIdentification>> mmClearingBrokerIdentification = new MMBusinessAssociationEnd<TradeIdentification, List<ClearingBrokerIdentification>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegulatoryReporting1.mmClearingBrokerIdentification, RegulatoryReporting4.mmClearingBrokerIdentification, GeneralInformation5.mmBrokersReference,
 					RegulatoryReporting6.mmClearingBrokerIdentification);
@@ -2804,9 +2825,19 @@ public class TradeIdentification {
 			name = "ClearingBrokerIdentification";
 			definition = "Reference number assigned by the clearing broker.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmRelatedTradeIdentification;
+			opposite_lazy = () -> ClearingBrokerIdentification.mmRelatedTradeIdentification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmObject();
+			type_lazy = () -> ClearingBrokerIdentification.mmObject();
+		}
+
+		@Override
+		public List<ClearingBrokerIdentification> getValue(TradeIdentification obj) {
+			return obj.getClearingBrokerIdentification();
+		}
+
+		@Override
+		public void setValue(TradeIdentification obj, List<ClearingBrokerIdentification> value) {
+			obj.setClearingBrokerIdentification(value);
 		}
 	};
 
@@ -2817,7 +2848,7 @@ public class TradeIdentification {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeIdentification";
 				definition = "Specifies the different identifications associated with a trade.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmTradeRelatedIdentifications, com.tools20022.repository.entity.ClearingBrokerIdentification.mmRelatedTradeIdentification);
+				associationDomain_lazy = () -> Arrays.asList(Trade.mmTradeRelatedIdentifications, ClearingBrokerIdentification.mmRelatedTradeIdentification);
 				subType_lazy = () -> Arrays.asList(SecuritiesTradeIdentification.mmObject(), PaymentIdentification.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeIdentification.mmCounterpartyReference, com.tools20022.repository.entity.TradeIdentification.mmIdentification,
 						com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification, com.tools20022.repository.entity.TradeIdentification.mmMatchingReference, com.tools20022.repository.entity.TradeIdentification.mmTrade,
@@ -2874,7 +2905,7 @@ public class TradeIdentification {
 		return trade == null ? Optional.empty() : Optional.of(trade);
 	}
 
-	public TradeIdentification setTrade(com.tools20022.repository.entity.Trade trade) {
+	public TradeIdentification setTrade(Trade trade) {
 		this.trade = trade;
 		return this;
 	}
@@ -2892,7 +2923,7 @@ public class TradeIdentification {
 		return clearingBrokerIdentification == null ? clearingBrokerIdentification = new ArrayList<>() : clearingBrokerIdentification;
 	}
 
-	public TradeIdentification setClearingBrokerIdentification(List<com.tools20022.repository.entity.ClearingBrokerIdentification> clearingBrokerIdentification) {
+	public TradeIdentification setClearingBrokerIdentification(List<ClearingBrokerIdentification> clearingBrokerIdentification) {
 		this.clearingBrokerIdentification = Objects.requireNonNull(clearingBrokerIdentification);
 		return this;
 	}

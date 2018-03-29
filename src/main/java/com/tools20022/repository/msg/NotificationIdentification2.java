@@ -131,7 +131,7 @@ public class NotificationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationIdentification2, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<NotificationIdentification2, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCorporateActionNotificationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification2.mmObject();
@@ -144,6 +144,16 @@ public class NotificationIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(NotificationIdentification2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification2 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -185,7 +195,7 @@ public class NotificationIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreationDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NotificationIdentification2, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAssociationEnd<NotificationIdentification2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCreationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification2.mmObject();
@@ -199,6 +209,16 @@ public class NotificationIdentification2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(NotificationIdentification2 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 

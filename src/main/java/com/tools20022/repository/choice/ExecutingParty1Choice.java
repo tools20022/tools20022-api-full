@@ -110,7 +110,7 @@ public class ExecutingParty1Choice {
 	 * InvestmentParty1Choice.mmPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExecutingParty1Choice, PersonIdentification12> mmPerson = new MMMessageAssociationEnd<ExecutingParty1Choice, PersonIdentification12>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExecutingParty1Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class ExecutingParty1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentification12.mmObject();
+		}
+
+		@Override
+		public PersonIdentification12 getValue(ExecutingParty1Choice obj) {
+			return obj.getPerson();
+		}
+
+		@Override
+		public void setValue(ExecutingParty1Choice obj, PersonIdentification12 value) {
+			obj.setPerson(value);
 		}
 	};
 	@XmlElement(name = "Algo", required = true)
@@ -159,7 +169,7 @@ public class ExecutingParty1Choice {
 	 * InvestmentParty1Choice.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExecutingParty1Choice, Max50Text> mmAlgorithm = new MMMessageAttribute<ExecutingParty1Choice, Max50Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExecutingParty1Choice.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class ExecutingParty1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
+		}
+
+		@Override
+		public Max50Text getValue(ExecutingParty1Choice obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(ExecutingParty1Choice obj, Max50Text value) {
+			obj.setAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "Clnt", required = true)
@@ -203,7 +223,7 @@ public class ExecutingParty1Choice {
 	 * "Indication that the transaction was executed directly by the client."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClient = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExecutingParty1Choice, NoReasonCode> mmClient = new MMMessageAttribute<ExecutingParty1Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExecutingParty1Choice.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class ExecutingParty1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ExecutingParty1Choice obj) {
+			return obj.getClient();
+		}
+
+		@Override
+		public void setValue(ExecutingParty1Choice obj, NoReasonCode value) {
+			obj.setClient(value);
 		}
 	};
 

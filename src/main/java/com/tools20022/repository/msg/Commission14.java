@@ -131,7 +131,7 @@ public class Commission14 {
 	 * definition} = "Service for which the commission is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission14, Optional<CommissionType6Code>> mmType = new MMMessageAttribute<Commission14, Optional<CommissionType6Code>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
@@ -143,6 +143,16 @@ public class Commission14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CommissionType6Code.mmObject();
+		}
+
+		@Override
+		public Optional<CommissionType6Code> getValue(Commission14 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Commission14 obj, Optional<CommissionType6Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -179,7 +189,7 @@ public class Commission14 {
 	 * definition} = "Commission expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission14, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmAmount = new MMMessageAttribute<Commission14, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
@@ -191,6 +201,16 @@ public class Commission14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(Commission14 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Commission14 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -227,7 +247,7 @@ public class Commission14 {
 	 * definition} = "Commission expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission14, Optional<PercentageRate>> mmRate = new MMMessageAttribute<Commission14, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
@@ -239,6 +259,16 @@ public class Commission14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Commission14 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Commission14 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ComrclAgrmtRef")
@@ -277,7 +307,7 @@ public class Commission14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission14, Optional<RestrictedFINMax30Text>> mmCommercialAgreementReference = new MMMessageAttribute<Commission14, Optional<RestrictedFINMax30Text>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
@@ -289,6 +319,16 @@ public class Commission14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax30Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax30Text> getValue(Commission14 obj) {
+			return obj.getCommercialAgreementReference();
+		}
+
+		@Override
+		public void setValue(Commission14 obj, Optional<RestrictedFINMax30Text> value) {
+			obj.setCommercialAgreementReference(value.orElse(null));
 		}
 	};
 	/**

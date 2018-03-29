@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification113;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +128,7 @@ public class OrderStatusAndReason10 {
 	 * OrderStatusAndReason7.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatusAndReason10, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<OrderStatusAndReason10, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason10.mmObject();
@@ -140,6 +141,16 @@ public class OrderStatusAndReason10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OrderStatusAndReason10 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason10 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrSts", required = true)
@@ -177,7 +188,7 @@ public class OrderStatusAndReason10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason10, OrderStatus3Choice> mmOrderStatus = new MMMessageAssociationEnd<OrderStatusAndReason10, OrderStatus3Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason10.mmObject();
@@ -190,6 +201,16 @@ public class OrderStatusAndReason10 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrderStatus3Choice.mmObject();
+		}
+
+		@Override
+		public OrderStatus3Choice getValue(OrderStatusAndReason10 obj) {
+			return obj.getOrderStatus();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason10 obj, OrderStatus3Choice value) {
+			obj.setOrderStatus(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -230,7 +251,7 @@ public class OrderStatusAndReason10 {
 	 * OrderStatusAndReason7.mmStatusInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason10, Optional<PartyIdentification113>> mmStatusInitiator = new MMMessageAssociationEnd<OrderStatusAndReason10, Optional<PartyIdentification113>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason10.mmObject();
@@ -243,7 +264,17 @@ public class OrderStatusAndReason10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			type_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(OrderStatusAndReason10 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason10 obj, Optional<PartyIdentification113> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 
@@ -285,7 +316,7 @@ public class OrderStatusAndReason10 {
 		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public OrderStatusAndReason10 setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+	public OrderStatusAndReason10 setStatusInitiator(PartyIdentification113 statusInitiator) {
 		this.statusInitiator = statusInitiator;
 		return this;
 	}

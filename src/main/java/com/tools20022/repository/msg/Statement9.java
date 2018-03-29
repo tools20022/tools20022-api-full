@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentAccount30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class Statement9 {
 	 * definition} = "Reference of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement9, Max35Text> mmReference = new MMMessageAttribute<Statement9, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
@@ -125,6 +126,16 @@ public class Statement9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Statement9 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Statement9 obj, Max35Text value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "StmtDtTm", required = true)
@@ -156,7 +167,7 @@ public class Statement9 {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement9, DateAndDateTimeChoice> mmStatementDateTime = new MMMessageAttribute<Statement9, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
@@ -167,6 +178,16 @@ public class Statement9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(Statement9 obj) {
+			return obj.getStatementDateTime();
+		}
+
+		@Override
+		public void setValue(Statement9 obj, DateAndDateTimeChoice value) {
+			obj.setStatementDateTime(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -198,7 +219,7 @@ public class Statement9 {
 	 * definition} = "Preparation date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement9, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAttribute<Statement9, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
@@ -209,6 +230,16 @@ public class Statement9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(Statement9 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Statement9 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptNb")
@@ -240,7 +271,7 @@ public class Statement9 {
 	 * definition} = "Sequential number of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement9, Optional<Max5NumericText>> mmReportNumber = new MMMessageAttribute<Statement9, Optional<Max5NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
@@ -251,6 +282,16 @@ public class Statement9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5NumericText> getValue(Statement9 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(Statement9 obj, Optional<Max5NumericText> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtTp", required = true)
@@ -282,7 +323,7 @@ public class Statement9 {
 	 * definition} = "Specifies the statement message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement9, StatementType1Code> mmStatementType = new MMMessageAttribute<Statement9, StatementType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
@@ -293,6 +334,16 @@ public class Statement9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementType1Code.mmObject();
+		}
+
+		@Override
+		public StatementType1Code getValue(Statement9 obj) {
+			return obj.getStatementType();
+		}
+
+		@Override
+		public void setValue(Statement9 obj, StatementType1Code value) {
+			obj.setStatementType(value);
 		}
 	};
 	@XmlElement(name = "AmdmntInd")
@@ -326,7 +377,7 @@ public class Statement9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement9, Optional<YesNoIndicator>> mmAmendmentIndicator = new MMMessageAttribute<Statement9, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
@@ -337,6 +388,16 @@ public class Statement9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Statement9 obj) {
+			return obj.getAmendmentIndicator();
+		}
+
+		@Override
+		public void setValue(Statement9 obj, Optional<YesNoIndicator> value) {
+			obj.setAmendmentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls")
@@ -368,7 +429,7 @@ public class Statement9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement9, Optional<InvestmentAccount30>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<Statement9, Optional<InvestmentAccount30>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement9.mmObject();
 			isDerived = false;
@@ -379,7 +440,17 @@ public class Statement9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
+			type_lazy = () -> InvestmentAccount30.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount30> getValue(Statement9 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(Statement9 obj, Optional<InvestmentAccount30> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 
@@ -456,7 +527,7 @@ public class Statement9 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public Statement9 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public Statement9 setInvestmentAccountDetails(InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}

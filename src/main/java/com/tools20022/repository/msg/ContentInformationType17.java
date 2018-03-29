@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EnvelopedData5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -56,7 +57,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ContentInformationType17"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -108,7 +109,7 @@ public class ContentInformationType17 {
 	 * ContentInformationType10.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContentInformationType17, ContentType2Code> mmContentType = new MMMessageAttribute<ContentInformationType17, ContentType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType17.mmObject();
 			isDerived = false;
@@ -120,6 +121,16 @@ public class ContentInformationType17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
+		}
+
+		@Override
+		public ContentType2Code getValue(ContentInformationType17 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(ContentInformationType17 obj, ContentType2Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "EnvlpdData", required = true)
@@ -157,7 +168,7 @@ public class ContentInformationType17 {
 	 * ContentInformationType10.mmEnvelopedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType17, EnvelopedData5> mmEnvelopedData = new MMMessageAssociationEnd<ContentInformationType17, EnvelopedData5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType17.mmObject();
 			isDerived = false;
@@ -169,7 +180,17 @@ public class ContentInformationType17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EnvelopedData5.mmObject();
+			type_lazy = () -> EnvelopedData5.mmObject();
+		}
+
+		@Override
+		public EnvelopedData5 getValue(ContentInformationType17 obj) {
+			return obj.getEnvelopedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType17 obj, EnvelopedData5 value) {
+			obj.setEnvelopedData(value);
 		}
 	};
 
@@ -178,7 +199,7 @@ public class ContentInformationType17 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType17.mmContentType, com.tools20022.repository.msg.ContentInformationType17.mmEnvelopedData);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType17";
 				definition = "General cryptographic message syntax (CMS) containing encrypted data.";
 				previousVersion_lazy = () -> ContentInformationType10.mmObject();
@@ -200,7 +221,7 @@ public class ContentInformationType17 {
 		return envelopedData;
 	}
 
-	public ContentInformationType17 setEnvelopedData(com.tools20022.repository.msg.EnvelopedData5 envelopedData) {
+	public ContentInformationType17 setEnvelopedData(EnvelopedData5 envelopedData) {
 		this.envelopedData = Objects.requireNonNull(envelopedData);
 		return this;
 	}

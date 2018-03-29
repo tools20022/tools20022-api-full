@@ -112,7 +112,7 @@ public class IntermediateSecurityDistributionType1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntermediateSecurityDistributionType1FormatChoice, IntermediateSecurityDistributionType1Code> mmCode = new MMMessageAttribute<IntermediateSecurityDistributionType1FormatChoice, IntermediateSecurityDistributionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntermediateSecurityDistributionType1FormatChoice.mmObject();
@@ -124,6 +124,16 @@ public class IntermediateSecurityDistributionType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IntermediateSecurityDistributionType1Code.mmObject();
+		}
+
+		@Override
+		public IntermediateSecurityDistributionType1Code getValue(IntermediateSecurityDistributionType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(IntermediateSecurityDistributionType1FormatChoice obj, IntermediateSecurityDistributionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class IntermediateSecurityDistributionType1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntermediateSecurityDistributionType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<IntermediateSecurityDistributionType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmIntermediateSecuritiesDistributionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntermediateSecurityDistributionType1FormatChoice.mmObject();
@@ -175,6 +185,16 @@ public class IntermediateSecurityDistributionType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(IntermediateSecurityDistributionType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IntermediateSecurityDistributionType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

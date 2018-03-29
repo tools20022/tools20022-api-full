@@ -63,13 +63,56 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV08> forCorporateActionNotificationV08 = new MMConstraint<CorporateActionNotificationV08>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionNotificationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionNotificationV07;
 			owner_lazy = () -> CorporateActionNotificationV08.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionDetails/RateAndAmountDetails/DeclaredRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV08 obj) throws Exception {
+			checkCorporateActionNotificationV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V08
+	 * CorporateActionNotification002V08}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionDetails/RateAndAmountDetails/DeclaredRate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionOptionDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionOptionDetails[*]/RateAndAmountDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeclaredRateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotification002V08> forCorporateActionNotification002V08 = new MMConstraint<CorporateActionNotification002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeclaredRateRule";
+			definition = "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.";
+			owner_lazy = () -> CorporateActionNotification002V08.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionDetails/RateAndAmountDetails/DeclaredRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotification002V08 obj) throws Exception {
+			checkCorporateActionNotification002V08(obj);
 		}
 	};
 	/**
@@ -112,7 +155,6 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV07> forCorporateActionNotificationV07 = new MMConstraint<CorporateActionNotificationV07>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionNotificationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.";
@@ -121,40 +163,10 @@ public class ConstraintDeclaredRateRule {
 			owner_lazy = () -> CorporateActionNotificationV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionDetails/RateAndAmountDetails/DeclaredRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07
-	 * CorporateActionNotification002V07}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionDetails/RateAndAmountDetails/DeclaredRate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionOptionDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionOptionDetails[*]/RateAndAmountDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DeclaredRateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotification002V07> forCorporateActionNotification002V07 = new MMConstraint<CorporateActionNotification002V07>() {
-		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionNotification002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DeclaredRateRule";
-			definition = "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.";
-			owner_lazy = () -> CorporateActionNotification002V07.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionDetails/RateAndAmountDetails/DeclaredRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV07 obj) throws Exception {
+			checkCorporateActionNotificationV07(obj);
 		}
 	};
 	/**
@@ -192,13 +204,17 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionNotificationV05);
 			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionDetails/RateAndAmountDetails/DeclaredRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
+			checkCorporateActionNotificationV04(obj);
 		}
 	};
 	/**
@@ -241,7 +257,6 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV05> forCorporateActionNotificationV05 = new MMConstraint<CorporateActionNotificationV05>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.";
@@ -249,6 +264,11 @@ public class ConstraintDeclaredRateRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionNotificationV04;
 			owner_lazy = () -> CorporateActionNotificationV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionDetails/RateAndAmountDetails/DeclaredRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV05 obj) throws Exception {
+			checkCorporateActionNotificationV05(obj);
 		}
 	};
 	/**
@@ -291,7 +311,6 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV06> forCorporateActionNotificationV06 = new MMConstraint<CorporateActionNotificationV06>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.";
@@ -299,6 +318,50 @@ public class ConstraintDeclaredRateRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionNotificationV05;
 			owner_lazy = () -> CorporateActionNotificationV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionDetails/RateAndAmountDetails/DeclaredRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV06 obj) throws Exception {
+			checkCorporateActionNotificationV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V06
+	 * CorporateActionNotification002V06}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionDetails/RateAndAmountDetails/DeclaredRate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionOptionDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionOptionDetails[*]/RateAndAmountDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeclaredRateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotification002V06> forCorporateActionNotification002V06 = new MMConstraint<CorporateActionNotification002V06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeclaredRateRule";
+			definition = "If CorporateActionOptionDetails/RateAndAmountDetails/IssuerDeclaredExchangeRate is present, then CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.";
+			owner_lazy = () -> CorporateActionNotification002V06.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionDetails/RateAndAmountDetails/DeclaredRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[*]/RateAndAmountDetails/IssuerDeclaredExchangeRate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotification002V06 obj) throws Exception {
+			checkCorporateActionNotification002V06(obj);
 		}
 	};
 	/**
@@ -332,12 +395,16 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate35> forCorporateActionRate35 = new MMConstraint<CorporateActionRate35>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionRate35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "The DeclaredRate may only be used if the dividend or interest declared by the issuer is actually paid in a different currency than the declared one.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionRate43);
 			owner_lazy = () -> CorporateActionRate35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate35 obj) throws Exception {
+			checkCorporateActionRate35(obj);
 		}
 	};
 	/**
@@ -363,11 +430,15 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate41> forCorporateActionRate41 = new MMConstraint<CorporateActionRate41>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionRate41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "The DeclaredRate may only be used if the dividend or interest declared by the issuer is actually paid in a different currency than the declared one.";
 			owner_lazy = () -> CorporateActionRate41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate41 obj) throws Exception {
+			checkCorporateActionRate41(obj);
 		}
 	};
 	/**
@@ -406,13 +477,17 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate43> forCorporateActionRate43 = new MMConstraint<CorporateActionRate43>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionRate43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "The DeclaredRate may only be used if the dividend or interest declared by the issuer is actually paid in a different currency than the declared one.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionRate66);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionRate35;
 			owner_lazy = () -> CorporateActionRate43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate43 obj) throws Exception {
+			checkCorporateActionRate43(obj);
 		}
 	};
 	/**
@@ -438,11 +513,15 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate56> forCorporateActionRate56 = new MMConstraint<CorporateActionRate56>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionRate56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "The DeclaredRate may only be used if the dividend or interest declared by the issuer is actually paid in a different currency than the declared one.";
 			owner_lazy = () -> CorporateActionRate56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate56 obj) throws Exception {
+			checkCorporateActionRate56(obj);
 		}
 	};
 	/**
@@ -481,13 +560,17 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate66> forCorporateActionRate66 = new MMConstraint<CorporateActionRate66>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionRate66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "The DeclaredRate may only be used if the dividend or interest declared by the issuer is actually paid in a different currency than the declared one.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionRate91);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionRate43;
 			owner_lazy = () -> CorporateActionRate66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate66 obj) throws Exception {
+			checkCorporateActionRate66(obj);
 		}
 	};
 	/**
@@ -513,11 +596,15 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate78> forCorporateActionRate78 = new MMConstraint<CorporateActionRate78>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionRate78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "The DeclaredRate may only be used if the dividend or interest declared by the issuer is actually paid in a different currency than the declared one.";
 			owner_lazy = () -> CorporateActionRate78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate78 obj) throws Exception {
+			checkCorporateActionRate78(obj);
 		}
 	};
 	/**
@@ -548,12 +635,16 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate91> forCorporateActionRate91 = new MMConstraint<CorporateActionRate91>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionRate91;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "DeclaredRate may only be used if the dividend or interest declared by the issuer is actually paid in a different currency than the declared one or if the dividend or the interest event makes it possible to elect amongst multiple currency options.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeclaredRateRule.forCorporateActionRate66;
 			owner_lazy = () -> CorporateActionRate91.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate91 obj) throws Exception {
+			checkCorporateActionRate91(obj);
 		}
 	};
 	/**
@@ -579,11 +670,15 @@ public class ConstraintDeclaredRateRule {
 	 */
 	public static final MMConstraint<CorporateActionRate96> forCorporateActionRate96 = new MMConstraint<CorporateActionRate96>() {
 		{
-			validator = ConstraintDeclaredRateRule::checkCorporateActionRate96;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRateRule";
 			definition = "DeclaredRate may only be used if the dividend or interest declared by the issuer is actually paid in a different currency than the declared one or if the dividend or the interest event makes it possible to elect amongst multiple currency options.";
 			owner_lazy = () -> CorporateActionRate96.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionRate96 obj) throws Exception {
+			checkCorporateActionRate96(obj);
 		}
 	};
 
@@ -601,7 +696,7 @@ public class ConstraintDeclaredRateRule {
 	 * IssuerDeclaredExchangeRate is present, then
 	 * CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.
 	 */
-	public static void checkCorporateActionNotificationV07(CorporateActionNotificationV07 obj) throws Exception {
+	public static void checkCorporateActionNotification002V08(CorporateActionNotification002V08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -610,7 +705,7 @@ public class ConstraintDeclaredRateRule {
 	 * IssuerDeclaredExchangeRate is present, then
 	 * CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.
 	 */
-	public static void checkCorporateActionNotification002V07(CorporateActionNotification002V07 obj) throws Exception {
+	public static void checkCorporateActionNotificationV07(CorporateActionNotificationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -638,6 +733,15 @@ public class ConstraintDeclaredRateRule {
 	 * CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.
 	 */
 	public static void checkCorporateActionNotificationV06(CorporateActionNotificationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionOptionDetails/RateAndAmountDetails/
+	 * IssuerDeclaredExchangeRate is present, then
+	 * CorporateActionDetails/RateAndAmountDetails/DeclaredRate must be present.
+	 */
+	public static void checkCorporateActionNotification002V06(CorporateActionNotification002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

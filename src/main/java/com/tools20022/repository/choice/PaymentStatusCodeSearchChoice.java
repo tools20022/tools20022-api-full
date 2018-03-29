@@ -112,7 +112,7 @@ public class PaymentStatusCodeSearchChoice {
 	 * definition} = "Qualifies further the pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCodeSearchChoice, PendingStatus1Code> mmPendingStatus = new MMMessageAttribute<PaymentStatusCodeSearchChoice, PendingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCodeSearchChoice.mmObject();
@@ -124,6 +124,16 @@ public class PaymentStatusCodeSearchChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingStatus1Code.mmObject();
+		}
+
+		@Override
+		public PendingStatus1Code getValue(PaymentStatusCodeSearchChoice obj) {
+			return obj.getPendingStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCodeSearchChoice obj, PendingStatus1Code value) {
+			obj.setPendingStatus(value);
 		}
 	};
 	@XmlElement(name = "FnlSts", required = true)
@@ -161,7 +171,7 @@ public class PaymentStatusCodeSearchChoice {
 	 * definition} = "Qualifies further the final status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCodeSearchChoice, FinalStatusCode> mmFinalStatus = new MMMessageAttribute<PaymentStatusCodeSearchChoice, FinalStatusCode>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCodeSearchChoice.mmObject();
@@ -173,6 +183,16 @@ public class PaymentStatusCodeSearchChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinalStatusCode.mmObject();
+		}
+
+		@Override
+		public FinalStatusCode getValue(PaymentStatusCodeSearchChoice obj) {
+			return obj.getFinalStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCodeSearchChoice obj, FinalStatusCode value) {
+			obj.setFinalStatus(value);
 		}
 	};
 	@XmlElement(name = "PdgAndFnlSts", required = true)
@@ -210,7 +230,7 @@ public class PaymentStatusCodeSearchChoice {
 	 * definition} = "State of a payment instruction at a specified time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingAndFinalStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCodeSearchChoice, CashPaymentStatus2Code> mmPendingAndFinalStatus = new MMMessageAttribute<PaymentStatusCodeSearchChoice, CashPaymentStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmCashPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCodeSearchChoice.mmObject();
@@ -222,6 +242,16 @@ public class PaymentStatusCodeSearchChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashPaymentStatus2Code.mmObject();
+		}
+
+		@Override
+		public CashPaymentStatus2Code getValue(PaymentStatusCodeSearchChoice obj) {
+			return obj.getPendingAndFinalStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCodeSearchChoice obj, CashPaymentStatus2Code value) {
+			obj.setPendingAndFinalStatus(value);
 		}
 	};
 

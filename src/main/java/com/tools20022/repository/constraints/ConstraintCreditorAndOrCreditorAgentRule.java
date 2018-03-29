@@ -60,11 +60,15 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction5> forPaymentInstruction5 = new MMConstraint<PaymentInstruction5>() {
 		{
-			validator = ConstraintCreditorAndOrCreditorAgentRule::checkPaymentInstruction5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAndOrCreditorAgentRule";
 			definition = "If PaymentMethod is CHK, then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional.";
 			owner_lazy = () -> PaymentInstruction5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction5 obj) throws Exception {
+			checkPaymentInstruction5(obj);
 		}
 	};
 	/**
@@ -90,11 +94,15 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction8> forPaymentInstruction8 = new MMConstraint<PaymentInstruction8>() {
 		{
-			validator = ConstraintCreditorAndOrCreditorAgentRule::checkPaymentInstruction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAndOrCreditorAgentRule";
 			definition = "If PaymentMethod is CHK, then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional.";
 			owner_lazy = () -> PaymentInstruction8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction8 obj) throws Exception {
+			checkPaymentInstruction8(obj);
 		}
 	};
 	/**
@@ -128,12 +136,16 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction11> forPaymentInstruction11 = new MMConstraint<PaymentInstruction11>() {
 		{
-			validator = ConstraintCreditorAndOrCreditorAgentRule::checkPaymentInstruction11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAndOrCreditorAgentRule";
 			definition = "If PaymentMethod is CHK, then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditorAndOrCreditorAgentRule.forPaymentInstruction17);
 			owner_lazy = () -> PaymentInstruction11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction11 obj) throws Exception {
+			checkPaymentInstruction11(obj);
 		}
 	};
 	/**
@@ -172,13 +184,17 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction17> forPaymentInstruction17 = new MMConstraint<PaymentInstruction17>() {
 		{
-			validator = ConstraintCreditorAndOrCreditorAgentRule::checkPaymentInstruction17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAndOrCreditorAgentRule";
 			definition = "If PaymentMethod is CHK, then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditorAndOrCreditorAgentRule.forPaymentInstruction19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorAndOrCreditorAgentRule.forPaymentInstruction11;
 			owner_lazy = () -> PaymentInstruction17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction17 obj) throws Exception {
+			checkPaymentInstruction17(obj);
 		}
 	};
 	/**
@@ -217,13 +233,17 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction19> forPaymentInstruction19 = new MMConstraint<PaymentInstruction19>() {
 		{
-			validator = ConstraintCreditorAndOrCreditorAgentRule::checkPaymentInstruction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAndOrCreditorAgentRule";
 			definition = "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK (Cheque) and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK (Cheque) and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditorAndOrCreditorAgentRule.forPaymentInstruction23);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorAndOrCreditorAgentRule.forPaymentInstruction17;
 			owner_lazy = () -> PaymentInstruction19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction19 obj) throws Exception {
+			checkPaymentInstruction19(obj);
 		}
 	};
 	/**
@@ -254,12 +274,16 @@ public class ConstraintCreditorAndOrCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction23> forPaymentInstruction23 = new MMConstraint<PaymentInstruction23>() {
 		{
-			validator = ConstraintCreditorAndOrCreditorAgentRule::checkPaymentInstruction23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAndOrCreditorAgentRule";
 			definition = "If PaymentMethod is CHK (Cheque), then CreditTransferTransaction/CreditorAccount is not allowed. \r\n\r\nIf PaymentMethod is different from CHK (Cheque) and if CreditTransferTransaction/Creditor is not present, then CreditTransferTransaction/CreditorAccount is mandatory. \r\n\r\nIf PaymentMethod is different from CHK (Cheque) and if CreditTransferTransaction/Creditor is present, then CreditTransferTransaction/CreditorAccount is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorAndOrCreditorAgentRule.forPaymentInstruction19;
 			owner_lazy = () -> PaymentInstruction23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction23 obj) throws Exception {
+			checkPaymentInstruction23(obj);
 		}
 	};
 

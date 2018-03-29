@@ -25,6 +25,8 @@ import com.tools20022.repository.area.acmt.AccountModificationInstructionV05;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
+import com.tools20022.repository.msg.InvestmentAccount29;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -143,7 +145,7 @@ public class InvestmentAccountSelection2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountSelection2, AccountIdentification1> mmAccountIdentification = new MMMessageAttribute<InvestmentAccountSelection2, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountSelection2.mmObject();
@@ -154,7 +156,17 @@ public class InvestmentAccountSelection2 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(InvestmentAccountSelection2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountSelection2 obj, AccountIdentification1 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "OthrAcctSelctnData", required = true)
@@ -192,7 +204,7 @@ public class InvestmentAccountSelection2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherAccountSelectionData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountSelection2, InvestmentAccount29> mmOtherAccountSelectionData = new MMMessageAssociationEnd<InvestmentAccountSelection2, InvestmentAccount29>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountSelection2.mmObject();
@@ -204,7 +216,17 @@ public class InvestmentAccountSelection2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount29.mmObject();
+			type_lazy = () -> InvestmentAccount29.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount29 getValue(InvestmentAccountSelection2 obj) {
+			return obj.getOtherAccountSelectionData();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountSelection2 obj, InvestmentAccount29 value) {
+			obj.setOtherAccountSelectionData(value);
 		}
 	};
 	/**
@@ -279,7 +301,7 @@ public class InvestmentAccountSelection2 {
 		return accountIdentification;
 	}
 
-	public InvestmentAccountSelection2 setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
+	public InvestmentAccountSelection2 setAccountIdentification(AccountIdentification1 accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}
@@ -288,7 +310,7 @@ public class InvestmentAccountSelection2 {
 		return otherAccountSelectionData;
 	}
 
-	public InvestmentAccountSelection2 setOtherAccountSelectionData(com.tools20022.repository.msg.InvestmentAccount29 otherAccountSelectionData) {
+	public InvestmentAccountSelection2 setOtherAccountSelectionData(InvestmentAccount29 otherAccountSelectionData) {
 		this.otherAccountSelectionData = Objects.requireNonNull(otherAccountSelectionData);
 		return this;
 	}

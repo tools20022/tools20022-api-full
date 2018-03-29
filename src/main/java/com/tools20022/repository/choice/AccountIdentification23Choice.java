@@ -160,7 +160,7 @@ public class AccountIdentification23Choice {
 	 * AccountIdentification21Choice.mmForAllAccounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForAllAccounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification23Choice, AccountIdentification10> mmForAllAccounts = new MMMessageAssociationEnd<AccountIdentification23Choice, AccountIdentification10>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification23Choice.mmObject();
@@ -176,6 +176,16 @@ public class AccountIdentification23Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification10.mmObject();
+		}
+
+		@Override
+		public AccountIdentification10 getValue(AccountIdentification23Choice obj) {
+			return obj.getForAllAccounts();
+		}
+
+		@Override
+		public void setValue(AccountIdentification23Choice obj, AccountIdentification10 value) {
+			obj.setForAllAccounts(value);
 		}
 	};
 	@XmlElement(name = "AcctsListAndBalDtls", required = true)
@@ -226,7 +236,7 @@ public class AccountIdentification23Choice {
 	 * AccountIdentification21Choice.mmAccountsListAndBalanceDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountsListAndBalanceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification23Choice, List<AccountAndBalance25>> mmAccountsListAndBalanceDetails = new MMMessageAssociationEnd<AccountIdentification23Choice, List<AccountAndBalance25>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification23Choice.mmObject();
@@ -240,6 +250,16 @@ public class AccountIdentification23Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountAndBalance25.mmObject();
+		}
+
+		@Override
+		public List<AccountAndBalance25> getValue(AccountIdentification23Choice obj) {
+			return obj.getAccountsListAndBalanceDetails();
+		}
+
+		@Override
+		public void setValue(AccountIdentification23Choice obj, List<AccountAndBalance25> value) {
+			obj.setAccountsListAndBalanceDetails(value);
 		}
 	};
 

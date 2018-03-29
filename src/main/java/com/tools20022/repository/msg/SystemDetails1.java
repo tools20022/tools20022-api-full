@@ -108,7 +108,7 @@ public class SystemDetails1 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemDetails1, Optional<SystemIdentificationChoice>> mmSystemIdentification = new MMMessageAttribute<SystemDetails1, Optional<SystemIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemDetails1.mmObject();
@@ -120,6 +120,16 @@ public class SystemDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentificationChoice> getValue(SystemDetails1 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(SystemDetails1 obj, Optional<SystemIdentificationChoice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MmbId", required = true)
@@ -158,7 +168,7 @@ public class SystemDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemDetails1, MemberIdentificationChoice> mmMemberIdentification = new MMMessageAttribute<SystemDetails1, MemberIdentificationChoice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemDetails1.mmObject();
@@ -170,6 +180,16 @@ public class SystemDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public MemberIdentificationChoice getValue(SystemDetails1 obj) {
+			return obj.getMemberIdentification();
+		}
+
+		@Override
+		public void setValue(SystemDetails1 obj, MemberIdentificationChoice value) {
+			obj.setMemberIdentification(value);
 		}
 	};
 

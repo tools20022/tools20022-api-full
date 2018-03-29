@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class DeliveringPartiesAndAccount5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveringAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliveringPartiesAndAccount5, PartyIdentificationAndAccount32> mmDeliveringAgent = new MMMessageAssociationEnd<DeliveringPartiesAndAccount5, PartyIdentificationAndAccount32>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmObject();
@@ -133,7 +134,17 @@ public class DeliveringPartiesAndAccount5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount32.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount32.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount32 getValue(DeliveringPartiesAndAccount5 obj) {
+			return obj.getDeliveringAgent();
+		}
+
+		@Override
+		public void setValue(DeliveringPartiesAndAccount5 obj, PartyIdentificationAndAccount32 value) {
+			obj.setDeliveringAgent(value);
 		}
 	};
 	@XmlElement(name = "Dpstry", required = true)
@@ -170,7 +181,7 @@ public class DeliveringPartiesAndAccount5 {
 	 * definition} = "Place where settlement of the securities takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliveringPartiesAndAccount5, PartyIdentification34Choice> mmDepository = new MMMessageAssociationEnd<DeliveringPartiesAndAccount5, PartyIdentification34Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmObject();
@@ -183,6 +194,16 @@ public class DeliveringPartiesAndAccount5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification34Choice getValue(DeliveringPartiesAndAccount5 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(DeliveringPartiesAndAccount5 obj, PartyIdentification34Choice value) {
+			obj.setDepository(value);
 		}
 	};
 	@XmlElement(name = "SctiesSttlmSys")
@@ -219,7 +240,7 @@ public class DeliveringPartiesAndAccount5 {
 	 * definition} = "Identifies the securities settlement system to be used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesSettlementSystem = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveringPartiesAndAccount5, Optional<Max35Text>> mmSecuritiesSettlementSystem = new MMMessageAttribute<DeliveringPartiesAndAccount5, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementSystem.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount5.mmObject();
@@ -231,6 +252,16 @@ public class DeliveringPartiesAndAccount5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DeliveringPartiesAndAccount5 obj) {
+			return obj.getSecuritiesSettlementSystem();
+		}
+
+		@Override
+		public void setValue(DeliveringPartiesAndAccount5 obj, Optional<Max35Text> value) {
+			obj.setSecuritiesSettlementSystem(value.orElse(null));
 		}
 	};
 
@@ -253,7 +284,7 @@ public class DeliveringPartiesAndAccount5 {
 		return deliveringAgent;
 	}
 
-	public DeliveringPartiesAndAccount5 setDeliveringAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount32 deliveringAgent) {
+	public DeliveringPartiesAndAccount5 setDeliveringAgent(PartyIdentificationAndAccount32 deliveringAgent) {
 		this.deliveringAgent = Objects.requireNonNull(deliveringAgent);
 		return this;
 	}

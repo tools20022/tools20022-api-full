@@ -23,10 +23,9 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.entity.Asset;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -690,9 +689,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrumentDetails27}</li>
  * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails26
  * FinancialInstrumentDetails26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Position1 Position1}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecurityIdentificationAndAmount1
  * SecurityIdentificationAndAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherInvestment1
+ * OtherInvestment1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28
  * FinancialInstrumentDetails28}</li>
  * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails29
@@ -725,7 +727,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Security extends Asset {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
-	protected List<com.tools20022.repository.entity.SecuritiesIdentification> identification;
+	protected List<SecuritiesIdentification> identification;
 	/**
 	 * 
 	 <p>
@@ -745,7 +747,7 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} = List of 574 elements</li>
+	 * derivation} = List of 578 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
@@ -761,7 +763,7 @@ public class Security extends Asset {
 	 * definition} = "Way(s) of identifying the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesIdentification>> mmIdentification = new MMBusinessAssociationEnd<Security, List<SecuritiesIdentification>>() {
 		{
 			derivation_lazy = () -> ListBuilderForSecurity_00.addElems(new ArrayList<>());
 			isDerived = false;
@@ -770,9 +772,19 @@ public class Security extends Asset {
 			name = "Identification";
 			definition = "Way(s) of identifying the security.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmIdentifiedSecurity;
+			opposite_lazy = () -> SecuritiesIdentification.mmIdentifiedSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
+			type_lazy = () -> SecuritiesIdentification.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesIdentification> getValue(Security obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesIdentification> value) {
+			obj.setIdentification(value);
 		}
 	};
 	protected CountryCode registeredDistributionCountry;
@@ -817,7 +829,7 @@ public class Security extends Asset {
 	 * definition} = "Country in which the processing characteristic applies."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRegisteredDistributionCountry = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, CountryCode> mmRegisteredDistributionCountry = new MMBusinessAttribute<Security, CountryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmRegisteredDistributionCountry, SecurityIdentification1.mmRegisteredDistributionCountry, FinancialInstrument21.mmRegisteredDistributionCountry,
 					FinancialInstrument22.mmRegisteredDistributionCountry);
@@ -831,12 +843,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getRegisteredDistributionCountry", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CountryCode getValue(Security obj) {
+			return obj.getRegisteredDistributionCountry();
+		}
+
+		@Override
+		public void setValue(Security obj, CountryCode value) {
+			obj.setRegisteredDistributionCountry(value);
 		}
 	};
 	protected CurrencyCode denominationCurrency;
@@ -1094,7 +1108,7 @@ public class Security extends Asset {
 	 * definition} = "Currency in which a security is issued or redenominated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDenominationCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, CurrencyCode> mmDenominationCurrency = new MMBusinessAttribute<Security, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmDenominationCurrency, FinancialInstrument8.mmDenominationCurrency, FinancialInstrumentAttributes8.mmDenominationCurrency,
 					FinancialInstrumentAttributes20.mmDenominationCurrency, FinancialInstrumentAttributes35.mmDenominationCurrency, FinancialInstrumentAttributes41.mmDenominationCurrency,
@@ -1130,12 +1144,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getDenominationCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(Security obj) {
+			return obj.getDenominationCurrency();
+		}
+
+		@Override
+		public void setValue(Security obj, CurrencyCode value) {
+			obj.setDenominationCurrency(value);
 		}
 	};
 	protected FormOfSecurityCode registrationForm;
@@ -1430,7 +1446,7 @@ public class Security extends Asset {
 	 * definition} = "Specifies the form, ie, ownership, of the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRegistrationForm = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, FormOfSecurityCode> mmRegistrationForm = new MMBusinessAttribute<Security, FormOfSecurityCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmSecuritiesForm, FinancialInstrument17.mmSecuritiesForm, FinancialInstrument6.mmSecuritiesForm, FinancialInstrument10.mmSecuritiesForm,
 					FinancialInstrument29.mmSecuritiesForm, FinancialInstrument3.mmSecuritiesForm, FinancialInstrument5.mmSecuritiesForm, FinancialInstrument8.mmSecuritiesForm, InvestmentAccount10.mmSecuritiesForm,
@@ -1462,12 +1478,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> FormOfSecurityCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getRegistrationForm", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FormOfSecurityCode getValue(Security obj) {
+			return obj.getRegistrationForm();
+		}
+
+		@Override
+		public void setValue(Security obj, FormOfSecurityCode value) {
+			obj.setRegistrationForm(value);
 		}
 	};
 	protected YesNoIndicator dematerialisedIndicator;
@@ -1548,7 +1566,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDematerialisedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, YesNoIndicator> mmDematerialisedIndicator = new MMBusinessAttribute<Security, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmDematerialisedIndicator, InvestmentAccount10.mmDematerialisedIndicator, InvestmentAccount11.mmDematerialisedIndicator, InvestmentAccount22.mmDematerialisedIndicator,
 					InvestmentAccount24.mmDematerialisedIndicator, InvestmentAccount40.mmDematerialisedIndicator, InvestmentAccount41.mmDematerialisedIndicator, InvestmentAccount54.mmDematerialisedIndicator,
@@ -1564,12 +1582,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getDematerialisedIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Security obj) {
+			return obj.getDematerialisedIndicator();
+		}
+
+		@Override
+		public void setValue(Security obj, YesNoIndicator value) {
+			obj.setDematerialisedIndicator(value);
 		}
 	};
 	protected EUSavingsDirectiveCode eUSavingsDirective;
@@ -1611,7 +1631,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEUSavingsDirective = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, EUSavingsDirectiveCode> mmEUSavingsDirective = new MMBusinessAttribute<Security, EUSavingsDirectiveCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmEUSavingsDirective, FinancialInstrument20.mmEUSavingsDirective);
 			isDerived = false;
@@ -1624,12 +1644,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> EUSavingsDirectiveCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getEUSavingsDirective", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public EUSavingsDirectiveCode getValue(Security obj) {
+			return obj.getEUSavingsDirective();
+		}
+
+		@Override
+		public void setValue(Security obj, EUSavingsDirectiveCode value) {
+			obj.setEUSavingsDirective(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesQuantity> securitiesQuantity;
@@ -1877,6 +1899,9 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.repository.msg.AdditionalInformation14#mmQuantity
 	 * AdditionalInformation14.mmQuantity}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes89#mmContractSize
+	 * FinancialInstrumentAttributes89.mmContractSize}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60#mmQuantity
 	 * FinancialInstrument60.mmQuantity}</li>
 	 * <li>
@@ -1908,7 +1933,7 @@ public class Security extends Asset {
 	 * definition} = "Specifies the quantity associated with a security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesQuantity>> mmSecuritiesQuantity = new MMBusinessAssociationEnd<Security, List<SecuritiesQuantity>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument26.mmQuantity, FinancialInstrument30.mmQuantity, FinancialInstrument24.mmQuantity, FinancialInstrument33.mmQuantity, FinancialInstrument23.mmQuantity,
 					FinancialInstrument31.mmQuantity, PartyIdentification33.mmOwnedSecuritiesQuantity, AmountPricePerFinancialInstrumentQuantity3.mmFinancialInstrumentQuantity, PartyIdentification34.mmOwnedSecuritiesQuantity,
@@ -1925,8 +1950,8 @@ public class Security extends Asset {
 					OtherCollateral6.mmBlockedQuantity, SecuritiesCollateral6.mmQuantity, SecuritiesCollateral6.mmBlockedQuantity, SecuritiesCollateral5.mmQuantity, SecuritiesCollateral7.mmQuantity,
 					PartyIdentification101.mmOwnedSecuritiesQuantity, FinancialInstrumentAttributes73.mmQuantity, AmountPricePerFinancialInstrumentQuantity7.mmFinancialInstrumentQuantity, AdditionalInformation12.mmQuantity,
 					UnderlyingAttributes3.mmQuantity, UnderlyingAttributes3.mmAdjustedQuantity, CommonFinancialInstrumentAttributes4.mmPositionLimit, AmountPricePerFinancialInstrumentQuantity8.mmFinancialInstrumentQuantity,
-					AdditionalInformation13.mmQuantity, SecuritiesCollateral8.mmQuantity, AdditionalInformation14.mmQuantity, FinancialInstrument60.mmQuantity, FinancialInstrument61.mmQuantity, FinancialInstrument65.mmQuantity,
-					FinancialInstrumentAttributes93.mmQuantity, FinancialInstrumentAttributes94.mmQuantity);
+					AdditionalInformation13.mmQuantity, SecuritiesCollateral8.mmQuantity, AdditionalInformation14.mmQuantity, FinancialInstrumentAttributes89.mmContractSize, FinancialInstrument60.mmQuantity,
+					FinancialInstrument61.mmQuantity, FinancialInstrument65.mmQuantity, FinancialInstrumentAttributes93.mmQuantity, FinancialInstrumentAttributes94.mmQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1937,8 +1962,18 @@ public class Security extends Asset {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 		}
+
+		@Override
+		public List<SecuritiesQuantity> getValue(Security obj) {
+			return obj.getSecuritiesQuantity();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesQuantity> value) {
+			obj.setSecuritiesQuantity(value);
+		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesRelatedFees> fees;
+	protected List<SecuritiesRelatedFees> fees;
 	/**
 	 * 
 	 <p>
@@ -2092,7 +2127,7 @@ public class Security extends Asset {
 	 * definition} = "Fees related to securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmFees = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesRelatedFees>> mmFees = new MMBusinessAssociationEnd<Security, List<SecuritiesRelatedFees>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnitPrice6.mmChargeDetails, UnitPrice15.mmChargeDetails, DeliverInformation2.mmChargeDetails, DeliverInformation4.mmChargeDetails, DeliverInformation7.mmChargeDetails,
 					ReceiveInformation2.mmChargeDetails, ReceiveInformation4.mmChargeDetails, ReceiveInformation8.mmChargeDetails, ReceiveInformation6.mmChargeDetails, ReceiveInformation11.mmChargeDetails,
@@ -2108,12 +2143,22 @@ public class Security extends Asset {
 			name = "Fees";
 			definition = "Fees related to securities.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmSecurity;
+			opposite_lazy = () -> SecuritiesRelatedFees.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
+			type_lazy = () -> SecuritiesRelatedFees.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesRelatedFees> getValue(Security obj) {
+			return obj.getFees();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesRelatedFees> value) {
+			obj.setFees(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesPricing> pricing;
+	protected List<SecuritiesPricing> pricing;
 	/**
 	 * 
 	 <p>
@@ -2500,7 +2545,7 @@ public class Security extends Asset {
 	 * definition} = "Information on the price of the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPricing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesPricing>> mmPricing = new MMBusinessAssociationEnd<Security, List<SecuritiesPricing>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Unit1.mmPriceDetails, Unit3.mmPriceDetails, FinancialInstrumentAttributes5.mmIssuePrice, FinancialInstrumentAttributes10.mmIssuePrice, FinancialInstrumentAttributes16.mmIssuePrice,
 					FinancialInstrumentAttributes24.mmIssuePrice, FinancialInstrumentAttributes34.mmIssuePrice, FinancialInstrumentAttributes40.mmIssuePrice, AggregateBalancePerSafekeepingPlace7.mmPriceDetails,
@@ -2536,9 +2581,19 @@ public class Security extends Asset {
 			name = "Pricing";
 			definition = "Information on the price of the security.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmSecurity;
+			opposite_lazy = () -> SecuritiesPricing.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			type_lazy = () -> SecuritiesPricing.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesPricing> getValue(Security obj) {
+			return obj.getPricing();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesPricing> value) {
+			obj.setPricing(value);
 		}
 	};
 	protected SecuritiesAccount securitiesAccount;
@@ -2786,7 +2841,7 @@ public class Security extends Asset {
 	 * definition} = "Account on which the security is held."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesAccount> mmSecuritiesAccount = new MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesAccount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionDetails41.mmSafekeepingAccount, TransactionDetails43.mmSafekeepingAccount, TransactionDetails12.mmSafekeepingAccount, TransactionDetails19.mmSafekeepingAccount,
 					AdditionalInformation3.mmSafekeepingAccount, AdditionalInformation4.mmSafekeepingAccount, AdditionalInformation7.mmSafekeepingAccount, AdditionalInformation8.mmSafekeepingAccount,
@@ -2813,6 +2868,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesAccount getValue(Security obj) {
+			return obj.getSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(Security obj, com.tools20022.repository.entity.SecuritiesAccount value) {
+			obj.setSecuritiesAccount(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.TradingMarket> tradingMarket;
@@ -3369,7 +3434,7 @@ public class Security extends Asset {
 	 * definition} = "Market(s) on which the security is traded."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTradingMarket = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<TradingMarket>> mmTradingMarket = new MMBusinessAssociationEnd<Security, List<TradingMarket>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FundProcessingPassport1.mmLocalMarketAnnex, SecuritiesTradeDetails25.mmPlaceOfTrade, SecuritiesTradeDetails26.mmPlaceOfTrade, SecuritiesTradeDetails27.mmPlaceOfTrade,
 					SecuritiesTradeDetails28.mmPlaceOfTrade, CorporateActionOption4.mmPlaceOfTrade, CorporateActionOption14.mmPlaceOfTrade, CorporateActionOption23.mmPlaceOfTrade, CorporateActionOption31.mmPlaceOfTrade,
@@ -3415,6 +3480,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmTradedSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
+		}
+
+		@Override
+		public List<TradingMarket> getValue(Security obj) {
+			return obj.getTradingMarket();
+		}
+
+		@Override
+		public void setValue(Security obj, List<TradingMarket> value) {
+			obj.setTradingMarket(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.TradingMarket> placeOfListing;
@@ -3794,7 +3869,7 @@ public class Security extends Asset {
 	 * definition} = "Market(s) on which the security is listed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPlaceOfListing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<TradingMarket>> mmPlaceOfListing = new MMBusinessAssociationEnd<Security, List<TradingMarket>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmPlaceOfListing, FinancialInstrumentAttributes20.mmPlaceOfListing, FinancialInstrumentAttributes35.mmPlaceOfListing,
 					FinancialInstrumentAttributes41.mmPlaceOfListing, FinancialInstrumentAttributes6.mmPlaceOfListing, FinancialInstrumentAttributes9.mmPlaceOfListing, FinancialInstrumentAttributes18.mmPlaceOfListing,
@@ -3836,8 +3911,18 @@ public class Security extends Asset {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 		}
+
+		@Override
+		public List<TradingMarket> getValue(Security obj) {
+			return obj.getPlaceOfListing();
+		}
+
+		@Override
+		public void setValue(Security obj, List<TradingMarket> value) {
+			obj.setPlaceOfListing(value);
+		}
 	};
-	protected List<com.tools20022.repository.entity.BasicSecuritiesRegistration> registration;
+	protected List<BasicSecuritiesRegistration> registration;
 	/**
 	 * 
 	 <p>
@@ -4374,7 +4459,7 @@ public class Security extends Asset {
 	 * definition} = "Information related to registration of securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRegistration = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<BasicSecuritiesRegistration>> mmRegistration = new MMBusinessAssociationEnd<Security, List<BasicSecuritiesRegistration>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmRegistration, PartyTextInformation1.mmRegistrationDetails, SecuritiesSettlementTransactionDetails3.mmAdditionalPhysicalOrRegistrationDetails,
 					SecuritiesSettlementTransactionDetails4.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionDetails2.mmAdditionalPhysicalOrRegistrationDetails, SettlementDetails51.mmRegistration,
@@ -4420,12 +4505,22 @@ public class Security extends Asset {
 			name = "Registration";
 			definition = "Information related to registration of securities.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmSecurity;
+			opposite_lazy = () -> BasicSecuritiesRegistration.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.BasicSecuritiesRegistration.mmObject();
+			type_lazy = () -> BasicSecuritiesRegistration.mmObject();
+		}
+
+		@Override
+		public List<BasicSecuritiesRegistration> getValue(Security obj) {
+			return obj.getRegistration();
+		}
+
+		@Override
+		public void setValue(Security obj, List<BasicSecuritiesRegistration> value) {
+			obj.setRegistration(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesRestriction> restriction;
+	protected List<SecuritiesRestriction> restriction;
 	/**
 	 * 
 	 <p>
@@ -4890,7 +4985,7 @@ public class Security extends Asset {
 	 * definition} = "Regulatory restriction(s) linked to the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRestriction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesRestriction>> mmRestriction = new MMBusinessAssociationEnd<Security, List<SecuritiesRestriction>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmLegalRestrictions, SettlementDetails51.mmLegalRestrictions, CorporateActionNarrative5.mmSecurityRestriction, CorporateActionNarrative15.mmSecurityRestriction,
 					CorporateActionNarrative20.mmSecurityRestriction, CorporateActionNarrative22.mmSecurityRestriction, SettlementDetails9.mmLegalRestrictions, SettlementDetails17.mmLegalRestrictions,
@@ -4928,12 +5023,22 @@ public class Security extends Asset {
 			name = "Restriction";
 			definition = "Regulatory restriction(s) linked to the security.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesRestriction.mmSecurity;
+			opposite_lazy = () -> SecuritiesRestriction.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesRestriction.mmObject();
+			type_lazy = () -> SecuritiesRestriction.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesRestriction> getValue(Security obj) {
+			return obj.getRestriction();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesRestriction> value) {
+			obj.setRestriction(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.CorporateActionEvent> corporateEvent;
+	protected List<CorporateActionEvent> corporateEvent;
 	/**
 	 * 
 	 <p>
@@ -5074,10 +5179,10 @@ public class Security extends Asset {
 	 * name} = "CorporateEvent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Corporate event linked to the security."</li>
+	 * definition} = "Corporate event linked to the security"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateEvent = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<CorporateActionEvent>> mmCorporateEvent = new MMBusinessAssociationEnd<Security, List<CorporateActionEvent>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountIdentification6.mmCorporateActionEventAndBalance, AccountIdentification12.mmCorporateActionEventAndBalance, AccountIdentification16.mmCorporateActionEventAndBalance,
 					AccountIdentification22.mmCorporateActionEventAndBalance, AccountIdentification23.mmCorporateActionEventAndBalance, AccountIdentification24.mmCorporateActionEventAndBalance,
@@ -5092,11 +5197,21 @@ public class Security extends Asset {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateEvent";
-			definition = "Corporate event linked to the security.";
+			definition = "Corporate event linked to the security";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity;
+			opposite_lazy = () -> CorporateActionEvent.mmUnderlyingSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
+			type_lazy = () -> CorporateActionEvent.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionEvent> getValue(Security obj) {
+			return obj.getCorporateEvent();
+		}
+
+		@Override
+		public void setValue(Security obj, List<CorporateActionEvent> value) {
+			obj.setCorporateEvent(value);
 		}
 	};
 	protected YesNoIndicator temporaryFinancialInstrumentIndicator;
@@ -5277,7 +5392,7 @@ public class Security extends Asset {
 	 * definition} = "Specifies that the security is a temporary security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTemporaryFinancialInstrumentIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, YesNoIndicator> mmTemporaryFinancialInstrumentIndicator = new MMBusinessAttribute<Security, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TemporaryFinancialInstrumentIndicator1Choice.mmTemporaryIndicator, TemporaryFinancialInstrumentIndicator1Choice.mmProprietary, SecuritiesOption3.mmTemporaryFinancialInstrumentIndicator,
 					TemporaryFinancialInstrumentIndicator2Choice.mmTemporaryIndicator, TemporaryFinancialInstrumentIndicator2Choice.mmProprietary, SecuritiesOption8.mmTemporaryFinancialInstrumentIndicator,
@@ -5306,12 +5421,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getTemporaryFinancialInstrumentIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Security obj) {
+			return obj.getTemporaryFinancialInstrumentIndicator();
+		}
+
+		@Override
+		public void setValue(Security obj, YesNoIndicator value) {
+			obj.setTemporaryFinancialInstrumentIndicator(value);
 		}
 	};
 	protected ISODateTime availableDate;
@@ -5491,7 +5608,7 @@ public class Security extends Asset {
 	 * definition} = "Date on which securities become available for sale."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAvailableDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, ISODateTime> mmAvailableDate = new MMBusinessAttribute<Security, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecurityDate1.mmAvailableDate, SecurityDate3.mmAvailableDate, SecurityDate6.mmAvailableDate, SecurityDate7.mmAvailableDate, SecurityDate2.mmAvailableDate, SecurityDate4.mmAvailableDate,
 					SecurityDate5.mmAvailableDate, SecurityDate8.mmAvailableDate, SecurityDate9.mmAvailableDate, SecurityDate10.mmAvailableDate, IntraPositionDetails2.mmAvailableDate, IntraPositionDetails8.mmAvailableDate,
@@ -5513,12 +5630,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getAvailableDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Security obj) {
+			return obj.getAvailableDate();
+		}
+
+		@Override
+		public void setValue(Security obj, ISODateTime value) {
+			obj.setAvailableDate(value);
 		}
 	};
 	protected Max350Text declarationDetails;
@@ -5580,7 +5699,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDeclarationDetails = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, Max350Text> mmDeclarationDetails = new MMBusinessAttribute<Security, Max350Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionNarrative4.mmDeclarationDetails, CorporateActionNarrative14.mmDeclarationDetails, CorporateActionNarrative6.mmDeclarationDetails,
 					CorporateActionNarrative16.mmDeclarationDetails, CorporateActionNarrative11.mmDeclarationDetails, CorporateActionNarrative17.mmDeclarationDetails, CorporateActionNarrative2.mmDeclarationDetails,
@@ -5595,12 +5714,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getDeclarationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(Security obj) {
+			return obj.getDeclarationDetails();
+		}
+
+		@Override
+		public void setValue(Security obj, Max350Text value) {
+			obj.setDeclarationDetails(value);
 		}
 	};
 	protected Spread spread;
@@ -5685,7 +5806,7 @@ public class Security extends Asset {
 	 * definition} = "Spread that uses the security as benchmark reference."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSpread = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, Optional<Spread>> mmSpread = new MMBusinessAssociationEnd<Security, Optional<Spread>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmSpread, CorporateActionRate14.mmSpread, CorporateActionRate16.mmSpread, CorporateActionRate24.mmSpread, CorporateActionRate27.mmSpread,
 					CorporateActionRate32.mmSpread, CorporateActionRate35.mmSpread, CorporateActionRate41.mmSpread, CorporateActionRate1.mmSpread, CorporateActionRate43.mmSpread, CorporateActionRate56.mmSpread,
@@ -5700,6 +5821,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.Spread.mmBenchmarkSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
+		}
+
+		@Override
+		public Optional<Spread> getValue(Security obj) {
+			return obj.getSpread();
+		}
+
+		@Override
+		public void setValue(Security obj, Optional<Spread> value) {
+			obj.setSpread(value.orElse(null));
 		}
 	};
 	protected List<com.tools20022.repository.entity.Dividend> dividend;
@@ -5781,7 +5912,7 @@ public class Security extends Asset {
 	 * definition} = "Dividend per financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDividend = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<Dividend>> mmDividend = new MMBusinessAssociationEnd<Security, List<Dividend>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmDividendType, CorporateAction4.mmDividendType, CorporateAction7.mmDividendType, CorporateAction8.mmDividendType, CorporateAction10.mmDividendType,
 					CorporateAction11.mmDividendType, CorporateAction2.mmDividendType, CorporateAction12.mmDividendType, CorporateAction17.mmDividendType, CorporateActionSD13.mmDividendType, CorporateAction31.mmDividendType,
@@ -5795,6 +5926,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.Dividend.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
+		}
+
+		@Override
+		public List<Dividend> getValue(Security obj) {
+			return obj.getDividend();
+		}
+
+		@Override
+		public void setValue(Security obj, List<Dividend> value) {
+			obj.setDividend(value);
 		}
 	};
 	protected SecuritiesBalance balance;
@@ -5830,7 +5971,7 @@ public class Security extends Asset {
 	 * definition} = "Balance of the account which holds a specific security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, SecuritiesBalance> mmBalance = new MMBusinessAssociationEnd<Security, SecuritiesBalance>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -5839,9 +5980,19 @@ public class Security extends Asset {
 			definition = "Balance of the account which holds a specific security.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmSecurity;
+			opposite_lazy = () -> SecuritiesBalance.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
+			type_lazy = () -> SecuritiesBalance.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalance getValue(Security obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(Security obj, SecuritiesBalance value) {
+			obj.setBalance(value);
 		}
 	};
 	protected YesNoIndicator fungibleIndicator;
@@ -5895,7 +6046,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFungibleIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, YesNoIndicator> mmFungibleIndicator = new MMBusinessAttribute<Security, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SafekeepingAccount1.mmFungibleIndicator, SubAccountIdentification2.mmFungibleIndicator, SafekeepingAccount2.mmFungibleIndicator, SubAccountIdentification3.mmFungibleIndicator,
 					SubAccountIdentification1.mmFungibleIndicator, SubAccountIdentification5.mmFungibleIndicator);
@@ -5909,12 +6060,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getFungibleIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Security obj) {
+			return obj.getFungibleIndicator();
+		}
+
+		@Override
+		public void setValue(Security obj, YesNoIndicator value) {
+			obj.setFungibleIndicator(value);
 		}
 	};
 	protected AppearanceCode appearance;
@@ -5966,7 +6119,7 @@ public class Security extends Asset {
 	 * definition} = "Specifies the deliverability of a security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAppearance = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, AppearanceCode> mmAppearance = new MMBusinessAttribute<Security, AppearanceCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmAppearance, FutureOrOptionDetails1.mmAppearance, Appearance2Choice.mmCode, Appearance2Choice.mmProprietary, Appearance3Choice.mmCode,
 					Appearance3Choice.mmProprietary);
@@ -5980,12 +6133,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> AppearanceCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getAppearance", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AppearanceCode getValue(Security obj) {
+			return obj.getAppearance();
+		}
+
+		@Override
+		public void setValue(Security obj, AppearanceCode value) {
+			obj.setAppearance(value);
 		}
 	};
 	protected Number nearTermPositionLimit;
@@ -6032,7 +6187,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNearTermPositionLimit = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, Number> mmNearTermPositionLimit = new MMBusinessAttribute<Security, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmNTPositionLimit, FutureOrOptionDetails1.mmNearTermPositionLimit, CommonFinancialInstrumentAttributes1.mmNearTermPositionLimit,
 					CommonFinancialInstrumentAttributes4.mmNearTermPositionLimit);
@@ -6046,12 +6201,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getNearTermPositionLimit", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(Security obj) {
+			return obj.getNearTermPositionLimit();
+		}
+
+		@Override
+		public void setValue(Security obj, Number value) {
+			obj.setNearTermPositionLimit(value);
 		}
 	};
 	protected ISOYearMonth contractSettlementMonth;
@@ -6094,7 +6251,7 @@ public class Security extends Asset {
 	 * definition} = "Specifies when the contract (i.e. MBS/TBA) will settle."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmContractSettlementMonth = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, ISOYearMonth> mmContractSettlementMonth = new MMBusinessAttribute<Security, ISOYearMonth>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmContractSettlementMonth, FutureOrOptionDetails1.mmContractSettlementMonth);
 			isDerived = false;
@@ -6108,12 +6265,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getContractSettlementMonth", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISOYearMonth getValue(Security obj) {
+			return obj.getContractSettlementMonth();
+		}
+
+		@Override
+		public void setValue(Security obj, ISOYearMonth value) {
+			obj.setContractSettlementMonth(value);
 		}
 	};
 	protected Number minimumTradingPricingIncrement;
@@ -6153,28 +6312,30 @@ public class Security extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum price increase for a given exchange-traded Instrument."</li>
+	 * "Minimum price increase for a given exchange-traded Instrument"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMinimumTradingPricingIncrement = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, Number> mmMinimumTradingPricingIncrement = new MMBusinessAttribute<Security, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmMinimumTradingPricingIncrement, FutureOrOptionDetails1.mmMinimumTradingPricingIncrement, TradingParameters1.mmMinimumTradingPricingIncrement);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumTradingPricingIncrement";
-			definition = "Minimum price increase for a given exchange-traded Instrument.";
+			definition = "Minimum price increase for a given exchange-traded Instrument";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getMinimumTradingPricingIncrement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(Security obj) {
+			return obj.getMinimumTradingPricingIncrement();
+		}
+
+		@Override
+		public void setValue(Security obj, Number value) {
+			obj.setMinimumTradingPricingIncrement(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Rating> rating;
@@ -6232,7 +6393,7 @@ public class Security extends Asset {
 	 * definition} = "Rating(s) of the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRating = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<Rating>> mmRating = new MMBusinessAssociationEnd<Security, List<Rating>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmRating, FinancialInstrumentStipulations.mmRating, FinancialInstrumentAttributes31.mmRating, FinancialInstrumentStipulations2.mmRating,
 					FutureOrOptionDetails1.mmRating, FinancialInstrumentAttributes44.mmRating);
@@ -6245,6 +6406,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.Rating.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Rating.mmObject();
+		}
+
+		@Override
+		public List<Rating> getValue(Security obj) {
+			return obj.getRating();
+		}
+
+		@Override
+		public void setValue(Security obj, List<Rating> value) {
+			obj.setRating(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CouponAttached> couponAttached;
@@ -6291,7 +6462,7 @@ public class Security extends Asset {
 	 * definition} = "Coupon information of the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCouponAttached = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<CouponAttached>> mmCouponAttached = new MMBusinessAssociationEnd<Security, List<CouponAttached>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmCouponRange, FinancialInstrumentStipulations2.mmCouponRange);
 			isDerived = false;
@@ -6303,6 +6474,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
+		}
+
+		@Override
+		public List<CouponAttached> getValue(Security obj) {
+			return obj.getCouponAttached();
+		}
+
+		@Override
+		public void setValue(Security obj, List<CouponAttached> value) {
+			obj.setCouponAttached(value);
 		}
 	};
 	protected Sector sector;
@@ -6354,7 +6535,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSector = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.Sector> mmSector = new MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.Sector>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSector, FinancialInstrumentStipulations2.mmSector, Debt2.mmSector, Debt3.mmSector);
 			isDerived = false;
@@ -6367,6 +6548,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.Sector.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Sector getValue(Security obj) {
+			return obj.getSector();
+		}
+
+		@Override
+		public void setValue(Security obj, com.tools20022.repository.entity.Sector value) {
+			obj.setSector(value);
 		}
 	};
 	protected YesNoIndicator warrantAttachedOnDelivery;
@@ -6411,7 +6602,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmWarrantAttachedOnDelivery = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, YesNoIndicator> mmWarrantAttachedOnDelivery = new MMBusinessAttribute<Security, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes31.mmWarrantAttachedOnDelivery, FinancialInstrumentAttributes44.mmWarrantAttachedOnDelivery, FinancialInstrumentAttributes2.mmWarrantAttachedOnDelivery);
 			isDerived = false;
@@ -6424,12 +6615,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getWarrantAttachedOnDelivery", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Security obj) {
+			return obj.getWarrantAttachedOnDelivery();
+		}
+
+		@Override
+		public void setValue(Security obj, YesNoIndicator value) {
+			obj.setWarrantAttachedOnDelivery(value);
 		}
 	};
 	protected YesNoIndicator strippableIndicator;
@@ -6467,7 +6660,7 @@ public class Security extends Asset {
 	 * "Indicates whether the interest is separable from the principal."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStrippableIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, YesNoIndicator> mmStrippableIndicator = new MMBusinessAttribute<Security, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmStrippableIndicator);
 			isDerived = false;
@@ -6480,12 +6673,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getStrippableIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Security obj) {
+			return obj.getStrippableIndicator();
+		}
+
+		@Override
+		public void setValue(Security obj, YesNoIndicator value) {
+			obj.setStrippableIndicator(value);
 		}
 	};
 	protected ISODateTime firstDealingDate;
@@ -6524,7 +6719,7 @@ public class Security extends Asset {
 	 * definition} = "Date on which new securities begin trading."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFirstDealingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, ISODateTime> mmFirstDealingDate = new MMBusinessAttribute<Security, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmFirstDealingDate, CorporateActionDate3.mmFirstDealingDate);
 			isDerived = false;
@@ -6537,15 +6732,17 @@ public class Security extends Asset {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getFirstDealingDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Security obj) {
+			return obj.getFirstDealingDate();
+		}
+
+		@Override
+		public void setValue(Security obj, ISODateTime value) {
+			obj.setFirstDealingDate(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesTax> taxDetails;
+	protected List<SecuritiesTax> taxDetails;
 	/**
 	 * 
 	 <p>
@@ -6586,7 +6783,7 @@ public class Security extends Asset {
 	 * definition} = "Tax details of the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTaxDetails = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesTax>> mmTaxDetails = new MMBusinessAssociationEnd<Security, List<SecuritiesTax>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesAccount8.mmStampDuty);
 			isDerived = false;
@@ -6595,9 +6792,19 @@ public class Security extends Asset {
 			name = "TaxDetails";
 			definition = "Tax details of the security.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmSecurity;
+			opposite_lazy = () -> SecuritiesTax.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTax.mmObject();
+			type_lazy = () -> SecuritiesTax.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesTax> getValue(Security obj) {
+			return obj.getTaxDetails();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesTax> value) {
+			obj.setTaxDetails(value);
 		}
 	};
 	protected SecuritiesTrade securitiesTrade;
@@ -6633,7 +6840,7 @@ public class Security extends Asset {
 	 * definition} = "Trade in which the security is involved."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesTrade> mmSecuritiesTrade = new MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesTrade>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -6645,6 +6852,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesTrade getValue(Security obj) {
+			return obj.getSecuritiesTrade();
+		}
+
+		@Override
+		public void setValue(Security obj, com.tools20022.repository.entity.SecuritiesTrade value) {
+			obj.setSecuritiesTrade(value);
 		}
 	};
 	protected Jurisdiction registrationJurisdiction;
@@ -6682,7 +6899,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRegistrationJurisdiction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, Jurisdiction> mmRegistrationJurisdiction = new MMBusinessAssociationEnd<Security, Jurisdiction>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -6691,12 +6908,22 @@ public class Security extends Asset {
 			definition = "Jurisdiction (country, county, state, province, city) in which the security is legally recorded for regulatory and/or tax purposes.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmRegisteredSecurities;
+			opposite_lazy = () -> Jurisdiction.mmRegisteredSecurities;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Jurisdiction.mmObject();
+			type_lazy = () -> Jurisdiction.mmObject();
+		}
+
+		@Override
+		public Jurisdiction getValue(Security obj) {
+			return obj.getRegistrationJurisdiction();
+		}
+
+		@Override
+		public void setValue(Security obj, Jurisdiction value) {
+			obj.setRegistrationJurisdiction(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesPartyRole> partyRole;
+	protected List<SecuritiesPartyRole> partyRole;
 	/**
 	 * 
 	 <p>
@@ -6731,7 +6958,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesPartyRole>> mmPartyRole = new MMBusinessAssociationEnd<Security, List<SecuritiesPartyRole>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -6739,12 +6966,22 @@ public class Security extends Asset {
 			name = "PartyRole";
 			definition = "Specifies roles played by a party that are linked to the handling of securities but not related to a specific process.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmSecurity;
+			opposite_lazy = () -> SecuritiesPartyRole.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPartyRole.mmObject();
+			type_lazy = () -> SecuritiesPartyRole.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesPartyRole> getValue(Security obj) {
+			return obj.getPartyRole();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesPartyRole> value) {
+			obj.setPartyRole(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesStatus> securityStatus;
+	protected List<SecuritiesStatus> securityStatus;
 	/**
 	 * 
 	 <p>
@@ -6789,7 +7026,7 @@ public class Security extends Asset {
 	 * "Specifies the status of the security within its lifecycle."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecurityStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesStatus>> mmSecurityStatus = new MMBusinessAssociationEnd<Security, List<SecuritiesStatus>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes1.mmSecurityStatus, CommonFinancialInstrumentAttributes4.mmSecurityStatus);
 			isDerived = false;
@@ -6798,9 +7035,19 @@ public class Security extends Asset {
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmSecurity;
+			opposite_lazy = () -> SecuritiesStatus.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
+			type_lazy = () -> SecuritiesStatus.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesStatus> getValue(Security obj) {
+			return obj.getSecurityStatus();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesStatus> value) {
+			obj.setSecurityStatus(value);
 		}
 	};
 	protected SecuritiesModification modification;
@@ -6838,7 +7085,7 @@ public class Security extends Asset {
 	 * "Modification process which applies to a specific security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmModification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, Optional<SecuritiesModification>> mmModification = new MMBusinessAssociationEnd<Security, Optional<SecuritiesModification>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -6847,9 +7094,19 @@ public class Security extends Asset {
 			definition = "Modification process which applies to a specific security.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmNewSecurityReferenceData;
+			opposite_lazy = () -> SecuritiesModification.mmNewSecurityReferenceData;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
+			type_lazy = () -> SecuritiesModification.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesModification> getValue(Security obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(Security obj, Optional<SecuritiesModification> value) {
+			obj.setModification(value.orElse(null));
 		}
 	};
 	protected List<com.tools20022.repository.entity.RedemptionSchedule> redemptionSchedule;
@@ -6885,7 +7142,7 @@ public class Security extends Asset {
 	 * definition} = "RedemptionSchedule(s) linked to the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRedemptionSchedule = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<RedemptionSchedule>> mmRedemptionSchedule = new MMBusinessAssociationEnd<Security, List<RedemptionSchedule>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -6896,6 +7153,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.RedemptionSchedule.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.RedemptionSchedule.mmObject();
+		}
+
+		@Override
+		public List<RedemptionSchedule> getValue(Security obj) {
+			return obj.getRedemptionSchedule();
+		}
+
+		@Override
+		public void setValue(Security obj, List<RedemptionSchedule> value) {
+			obj.setRedemptionSchedule(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement;
@@ -6952,7 +7219,7 @@ public class Security extends Asset {
 	 * definition} = "Settlement of a specific security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesSettlement>> mmSecuritiesSettlement = new MMBusinessAssociationEnd<Security, List<SecuritiesSettlement>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesCollateral3.mmSettlementParameters, SecuritiesCollateral4.mmSettlementParameters, SecuritiesCollateral5.mmSettlementParameters, SecuritiesCollateral7.mmSettlementParameters,
 					SecuritiesCollateral8.mmSettlementParameters);
@@ -6965,6 +7232,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesSettlement> getValue(Security obj) {
+			return obj.getSecuritiesSettlement();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesSettlement> value) {
+			obj.setSecuritiesSettlement(value);
 		}
 	};
 	protected SecuritiesTransfer securitiesTransfer;
@@ -6997,24 +7274,34 @@ public class Security extends Asset {
 	 * name} = "SecuritiesTransfer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Transfer process in which that security is transferred."</li>
+	 * definition} = "Transfer process in which that security is transferred.."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesTransfer = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesTransfer> mmSecuritiesTransfer = new MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesTransfer>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransfer";
-			definition = "Transfer process in which that security is transferred.";
+			definition = "Transfer process in which that security is transferred..";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTransfer.mmObject();
 		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesTransfer getValue(Security obj) {
+			return obj.getSecuritiesTransfer();
+		}
+
+		@Override
+		public void setValue(Security obj, com.tools20022.repository.entity.SecuritiesTransfer value) {
+			obj.setSecuritiesTransfer(value);
+		}
 	};
-	protected List<com.tools20022.repository.entity.AgentCorporateActionStandingInstruction> corporateActionStandingInstructions;
+	protected List<AgentCorporateActionStandingInstruction> corporateActionStandingInstructions;
 	/**
 	 * 
 	 <p>
@@ -7050,7 +7337,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionStandingInstructions = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<AgentCorporateActionStandingInstruction>> mmCorporateActionStandingInstructions = new MMBusinessAssociationEnd<Security, List<AgentCorporateActionStandingInstruction>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7058,9 +7345,19 @@ public class Security extends Asset {
 			name = "CorporateActionStandingInstructions";
 			definition = "Standing instructions related to the security in the context of corporate action.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmSecurity;
+			opposite_lazy = () -> AgentCorporateActionStandingInstruction.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmObject();
+			type_lazy = () -> AgentCorporateActionStandingInstruction.mmObject();
+		}
+
+		@Override
+		public List<AgentCorporateActionStandingInstruction> getValue(Security obj) {
+			return obj.getCorporateActionStandingInstructions();
+		}
+
+		@Override
+		public void setValue(Security obj, List<AgentCorporateActionStandingInstruction> value) {
+			obj.setCorporateActionStandingInstructions(value);
 		}
 	};
 	protected Quote quote;
@@ -7095,7 +7392,7 @@ public class Security extends Asset {
 	 * definition} = "Quote of a security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmQuote = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, Optional<Quote>> mmQuote = new MMBusinessAssociationEnd<Security, Optional<Quote>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7107,6 +7404,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.Quote.mmQuotedSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Quote.mmObject();
+		}
+
+		@Override
+		public Optional<Quote> getValue(Security obj) {
+			return obj.getQuote();
+		}
+
+		@Override
+		public void setValue(Security obj, Optional<Quote> value) {
+			obj.setQuote(value.orElse(null));
 		}
 	};
 	protected SecuritiesOrder securitiesOrder;
@@ -7142,7 +7449,7 @@ public class Security extends Asset {
 	 * definition} = "Order for which a specific security is indicated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesOrder> mmSecuritiesOrder = new MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesOrder>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7154,6 +7461,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesOrder getValue(Security obj) {
+			return obj.getSecuritiesOrder();
+		}
+
+		@Override
+		public void setValue(Security obj, com.tools20022.repository.entity.SecuritiesOrder value) {
+			obj.setSecuritiesOrder(value);
 		}
 	};
 	protected VariableInterest relatedVariableInterest;
@@ -7191,7 +7508,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedVariableInterest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, Optional<VariableInterest>> mmRelatedVariableInterest = new MMBusinessAssociationEnd<Security, Optional<VariableInterest>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7200,12 +7517,22 @@ public class Security extends Asset {
 			definition = "Variable interest parameters specified for interest related to a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmBenchmarkReference;
+			opposite_lazy = () -> VariableInterest.mmBenchmarkReference;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmObject();
+			type_lazy = () -> VariableInterest.mmObject();
+		}
+
+		@Override
+		public Optional<VariableInterest> getValue(Security obj) {
+			return obj.getRelatedVariableInterest();
+		}
+
+		@Override
+		public void setValue(Security obj, Optional<VariableInterest> value) {
+			obj.setRelatedVariableInterest(value.orElse(null));
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesConversion> conversion;
+	protected List<SecuritiesConversion> conversion;
 	/**
 	 * 
 	 <p>
@@ -7241,7 +7568,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmConversion = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<SecuritiesConversion>> mmConversion = new MMBusinessAssociationEnd<Security, List<SecuritiesConversion>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7249,9 +7576,19 @@ public class Security extends Asset {
 			name = "Conversion";
 			definition = "Information on the conversion exchange of an entitlement or of preferred equities or of convertible bonds, into another form of securities, usually common equities.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmSecurityIdentification;
+			opposite_lazy = () -> SecuritiesConversion.mmSecurityIdentification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
+			type_lazy = () -> SecuritiesConversion.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesConversion> getValue(Security obj) {
+			return obj.getConversion();
+		}
+
+		@Override
+		public void setValue(Security obj, List<SecuritiesConversion> value) {
+			obj.setConversion(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.ComponentSecurity> componentSecurity;
@@ -7287,7 +7624,7 @@ public class Security extends Asset {
 	 * definition} = "The security is part of the component security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmComponentSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, List<ComponentSecurity>> mmComponentSecurity = new MMBusinessAssociationEnd<Security, List<ComponentSecurity>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7298,6 +7635,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.ComponentSecurity.mmSecurity;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ComponentSecurity.mmObject();
+		}
+
+		@Override
+		public List<ComponentSecurity> getValue(Security obj) {
+			return obj.getComponentSecurity();
+		}
+
+		@Override
+		public void setValue(Security obj, List<ComponentSecurity> value) {
+			obj.setComponentSecurity(value);
 		}
 	};
 	protected YesNoIndicator recompositionIndicator;
@@ -7328,7 +7675,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRecompositionIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, YesNoIndicator> mmRecompositionIndicator = new MMBusinessAttribute<Security, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7340,12 +7687,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getRecompositionIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Security obj) {
+			return obj.getRecompositionIndicator();
+		}
+
+		@Override
+		public void setValue(Security obj, YesNoIndicator value) {
+			obj.setRecompositionIndicator(value);
 		}
 	};
 	protected Max35Text series;
@@ -7373,7 +7722,7 @@ public class Security extends Asset {
 	 * definition} = "Identifier that links multiple security classes."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSeries = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, Max35Text> mmSeries = new MMBusinessAttribute<Security, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7385,12 +7734,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getSeries", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Security obj) {
+			return obj.getSeries();
+		}
+
+		@Override
+		public void setValue(Security obj, Max35Text value) {
+			obj.setSeries(value);
 		}
 	};
 	protected PercentageRate percentageOfDebtClaim;
@@ -7474,7 +7825,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPercentageOfDebtClaim = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, PercentageRate> mmPercentageOfDebtClaim = new MMBusinessAttribute<Security, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes7.mmPercentageOfDebtClaim, FinancialInstrumentAttributes11.mmPercentageOfDebtClaim, FinancialInstrumentAttributes19.mmPercentageOfDebtClaim,
 					FinancialInstrumentAttributes23.mmPercentageOfDebtClaim, FinancialInstrumentAttributes33.mmPercentageOfDebtClaim, FinancialInstrumentAttributes39.mmPercentageOfDebtClaim,
@@ -7492,12 +7843,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getPercentageOfDebtClaim", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Security obj) {
+			return obj.getPercentageOfDebtClaim();
+		}
+
+		@Override
+		public void setValue(Security obj, PercentageRate value) {
+			obj.setPercentageOfDebtClaim(value);
 		}
 	};
 	protected PercentageRate coverRate;
@@ -7528,7 +7881,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCoverRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, PercentageRate> mmCoverRate = new MMBusinessAttribute<Security, PercentageRate>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7540,12 +7893,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getCoverRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Security obj) {
+			return obj.getCoverRate();
+		}
+
+		@Override
+		public void setValue(Security obj, PercentageRate value) {
+			obj.setCoverRate(value);
 		}
 	};
 	protected MaturityRedemptionTypeCode maturityRedemption;
@@ -7575,7 +7930,7 @@ public class Security extends Asset {
 	 * "Return of an investor's principal in a security at maturity."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMaturityRedemption = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, MaturityRedemptionTypeCode> mmMaturityRedemption = new MMBusinessAttribute<Security, MaturityRedemptionTypeCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7587,12 +7942,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> MaturityRedemptionTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getMaturityRedemption", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MaturityRedemptionTypeCode getValue(Security obj) {
+			return obj.getMaturityRedemption();
+		}
+
+		@Override
+		public void setValue(Security obj, MaturityRedemptionTypeCode value) {
+			obj.setMaturityRedemption(value);
 		}
 	};
 	protected MarginCall relatedMarginCall;
@@ -7613,6 +7970,14 @@ public class Security extends Asset {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.MarginCall
 	 * MarginCall}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Position1#mmRiskRequirement
+	 * Position1.mmRiskRequirement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
@@ -7629,8 +7994,9 @@ public class Security extends Asset {
 	 * "Margin call for which the associated securities are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedMarginCall = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, MarginCall> mmRelatedMarginCall = new MMBusinessAssociationEnd<Security, MarginCall>() {
 		{
+			derivation_lazy = () -> Arrays.asList(Position1.mmRiskRequirement);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -7638,9 +8004,19 @@ public class Security extends Asset {
 			definition = "Margin call for which the associated securities are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.MarginCall.mmSecurity;
+			opposite_lazy = () -> MarginCall.mmSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.MarginCall.mmObject();
+			type_lazy = () -> MarginCall.mmObject();
+		}
+
+		@Override
+		public MarginCall getValue(Security obj) {
+			return obj.getRelatedMarginCall();
+		}
+
+		@Override
+		public void setValue(Security obj, MarginCall value) {
+			obj.setRelatedMarginCall(value);
 		}
 	};
 	protected Party closeLink;
@@ -7688,7 +8064,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCloseLink = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, Party> mmCloseLink = new MMBusinessAssociationEnd<Security, Party>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CloseLink1.mmSecurityIdentification, CloseLink2.mmSecurityIdentification);
 			isDerived = false;
@@ -7698,9 +8074,19 @@ public class Security extends Asset {
 			definition = "Situation in which two entities are linked because one of these entities owns some of the capital of the other one, or has a control relationship with it.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Party.mmCloseLinkSecurity;
+			opposite_lazy = () -> Party.mmCloseLinkSecurity;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
+			type_lazy = () -> Party.mmObject();
+		}
+
+		@Override
+		public Party getValue(Security obj) {
+			return obj.getCloseLink();
+		}
+
+		@Override
+		public void setValue(Security obj, Party value) {
+			obj.setCloseLink(value);
 		}
 	};
 	protected YesNoIndicator potentialEuroSystemEligibility;
@@ -7731,7 +8117,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPotentialEuroSystemEligibility = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, YesNoIndicator> mmPotentialEuroSystemEligibility = new MMBusinessAttribute<Security, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
@@ -7743,12 +8129,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getPotentialEuroSystemEligibility", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Security obj) {
+			return obj.getPotentialEuroSystemEligibility();
+		}
+
+		@Override
+		public void setValue(Security obj, YesNoIndicator value) {
+			obj.setPotentialEuroSystemEligibility(value);
 		}
 	};
 	protected SecuritiesQuantity minimumQuantity;
@@ -7990,7 +8378,7 @@ public class Security extends Asset {
 	 * definition} = "Indicates the minimum tradable quantity of a security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMinimumQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesQuantity> mmMinimumQuantity = new MMBusinessAssociationEnd<Security, com.tools20022.repository.entity.SecuritiesQuantity>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmMinimumNominalQuantity, FinancialInstrumentAttributes20.mmMinimumNominalQuantity, FinancialInstrumentAttributes35.mmMinimumNominalQuantity,
 					FinancialInstrumentAttributes41.mmMinimumNominalQuantity, FinancialInstrumentAttributes6.mmMinimumNominalQuantity, FinancialInstrumentAttributes9.mmMinimumNominalQuantity,
@@ -8024,6 +8412,16 @@ public class Security extends Asset {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityDebt;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesQuantity getValue(Security obj) {
+			return obj.getMinimumQuantity();
+		}
+
+		@Override
+		public void setValue(Security obj, com.tools20022.repository.entity.SecuritiesQuantity value) {
+			obj.setMinimumQuantity(value);
 		}
 	};
 	protected YesNoIndicator restrictedIndicator;
@@ -8065,7 +8463,7 @@ public class Security extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRestrictedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Security, YesNoIndicator> mmRestrictedIndicator = new MMBusinessAttribute<Security, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt2.mmRestrictedIndicator, Debt3.mmRestrictedIndicator);
 			isDerived = false;
@@ -8078,12 +8476,14 @@ public class Security extends Asset {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Security.class.getMethod("getRestrictedIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Security obj) {
+			return obj.getRestrictedIndicator();
+		}
+
+		@Override
+		public void setValue(Security obj, YesNoIndicator value) {
+			obj.setRestrictedIndicator(value);
 		}
 	};
 
@@ -8094,18 +8494,15 @@ public class Security extends Asset {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Security";
 				definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesIdentification.mmIdentifiedSecurity, com.tools20022.repository.entity.Dividend.mmSecurity,
-						com.tools20022.repository.entity.SecuritiesPricing.mmSecurity, com.tools20022.repository.entity.Party.mmCloseLinkSecurity, com.tools20022.repository.entity.RedemptionSchedule.mmSecurity,
-						com.tools20022.repository.entity.TradingMarket.mmTradedSecurity, com.tools20022.repository.entity.TradingMarket.mmListedSecurity, com.tools20022.repository.entity.SecuritiesAccount.mmSecurity,
-						com.tools20022.repository.entity.SecuritiesTax.mmSecurity, com.tools20022.repository.entity.SecuritiesQuantity.mmSecurityIdentification, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityDebt,
-						com.tools20022.repository.entity.SecuritiesTrade.mmSecurity, com.tools20022.repository.entity.SecuritiesTransfer.mmSecurity, com.tools20022.repository.entity.SecuritiesPartyRole.mmSecurity,
-						com.tools20022.repository.entity.SecuritiesSettlement.mmSecurity, com.tools20022.repository.entity.SecuritiesRelatedFees.mmSecurity, com.tools20022.repository.entity.SecuritiesStatus.mmSecurity,
-						com.tools20022.repository.entity.VariableInterest.mmBenchmarkReference, com.tools20022.repository.entity.CouponAttached.mmSecurity, com.tools20022.repository.entity.SecuritiesConversion.mmSecurityIdentification,
-						com.tools20022.repository.entity.BasicSecuritiesRegistration.mmSecurity, com.tools20022.repository.entity.SecuritiesRestriction.mmSecurity, com.tools20022.repository.entity.SecuritiesBalance.mmSecurity,
-						com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity, com.tools20022.repository.entity.SecuritiesModification.mmNewSecurityReferenceData,
-						com.tools20022.repository.entity.Spread.mmBenchmarkSecurity, com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity, com.tools20022.repository.entity.Rating.mmSecurity,
-						com.tools20022.repository.entity.Sector.mmSecurity, com.tools20022.repository.entity.Jurisdiction.mmRegisteredSecurities, com.tools20022.repository.entity.AgentCorporateActionStandingInstruction.mmSecurity,
-						com.tools20022.repository.entity.MarginCall.mmSecurity, com.tools20022.repository.entity.Quote.mmQuotedSecurity, com.tools20022.repository.entity.ComponentSecurity.mmSecurity);
+				associationDomain_lazy = () -> Arrays.asList(SecuritiesIdentification.mmIdentifiedSecurity, com.tools20022.repository.entity.Dividend.mmSecurity, SecuritiesPricing.mmSecurity, Party.mmCloseLinkSecurity,
+						com.tools20022.repository.entity.RedemptionSchedule.mmSecurity, com.tools20022.repository.entity.TradingMarket.mmTradedSecurity, com.tools20022.repository.entity.TradingMarket.mmListedSecurity,
+						com.tools20022.repository.entity.SecuritiesAccount.mmSecurity, SecuritiesTax.mmSecurity, com.tools20022.repository.entity.SecuritiesQuantity.mmSecurityIdentification,
+						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumQuantityDebt, com.tools20022.repository.entity.SecuritiesTrade.mmSecurity, com.tools20022.repository.entity.SecuritiesTransfer.mmSecurity,
+						SecuritiesPartyRole.mmSecurity, com.tools20022.repository.entity.SecuritiesSettlement.mmSecurity, SecuritiesRelatedFees.mmSecurity, SecuritiesStatus.mmSecurity, VariableInterest.mmBenchmarkReference,
+						com.tools20022.repository.entity.CouponAttached.mmSecurity, SecuritiesConversion.mmSecurityIdentification, BasicSecuritiesRegistration.mmSecurity, SecuritiesRestriction.mmSecurity, SecuritiesBalance.mmSecurity,
+						CorporateActionEvent.mmUnderlyingSecurity, SecuritiesModification.mmNewSecurityReferenceData, com.tools20022.repository.entity.Spread.mmBenchmarkSecurity,
+						com.tools20022.repository.entity.SecuritiesOrder.mmOrderedSecurity, com.tools20022.repository.entity.Rating.mmSecurity, com.tools20022.repository.entity.Sector.mmSecurity, Jurisdiction.mmRegisteredSecurities,
+						AgentCorporateActionStandingInstruction.mmSecurity, MarginCall.mmSecurity, com.tools20022.repository.entity.Quote.mmQuotedSecurity, com.tools20022.repository.entity.ComponentSecurity.mmSecurity);
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentDetails1.mmFinancialInstrumentAttributes, FinancialInstrumentDetails4.mmFinancialInstrumentAttributes,
 						FinancialInstrumentDetails6.mmFinancialInstrumentAttributes, FinancialInstrumentDetails7.mmFinancialInstrumentAttributes, FinancialInstrumentDetails10.mmFinancialInstrumentAttributes,
 						FinancialInstrumentDetails12.mmFinancialInstrumentAttributes, FinancialInstrumentDetails14.mmFinancialInstrumentAttributes, FinancialInstrumentDetails15.mmFinancialInstrumentAttributes,
@@ -8164,8 +8561,8 @@ public class Security extends Asset {
 						TransparencyDataReport13.mmObject(), SecuritiesReferenceDataReport5.mmObject(), TransparencyDataReport12.mmObject(), TransparencyDataReport15.mmObject(), TransparencyDataReport10.mmObject(),
 						TransparencyDataReport14.mmObject(), FinancialInstrument58.mmObject(), FinancialInstrument48Choice.mmObject(), FinancialInstrumentAttributes3Choice.mmObject(), SecurityInstrumentDescription13.mmObject(),
 						FinancialInstrumentDetails25.mmObject(), FinancialInstrumentDetails24.mmObject(), SecuritiesCollateral8.mmObject(), FinancialInstrumentDetails27.mmObject(), FinancialInstrumentDetails26.mmObject(),
-						SecurityIdentificationAndAmount1.mmObject(), FinancialInstrumentDetails28.mmObject(), FinancialInstrumentDetails29.mmObject(), SecurityDate16.mmObject(), SecurityDate18.mmObject(),
-						FinancialInstrumentDetails30.mmObject(), FinancialInstrumentDetails31.mmObject());
+						Position1.mmObject(), SecurityIdentificationAndAmount1.mmObject(), OtherInvestment1.mmObject(), FinancialInstrumentDetails28.mmObject(), FinancialInstrumentDetails29.mmObject(), SecurityDate16.mmObject(),
+						SecurityDate18.mmObject(), FinancialInstrumentDetails30.mmObject(), FinancialInstrumentDetails31.mmObject());
 			}
 
 			@Override
@@ -8180,7 +8577,7 @@ public class Security extends Asset {
 		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public Security setIdentification(List<com.tools20022.repository.entity.SecuritiesIdentification> identification) {
+	public Security setIdentification(List<SecuritiesIdentification> identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -8243,7 +8640,7 @@ public class Security extends Asset {
 		return fees == null ? fees = new ArrayList<>() : fees;
 	}
 
-	public Security setFees(List<com.tools20022.repository.entity.SecuritiesRelatedFees> fees) {
+	public Security setFees(List<SecuritiesRelatedFees> fees) {
 		this.fees = Objects.requireNonNull(fees);
 		return this;
 	}
@@ -8252,7 +8649,7 @@ public class Security extends Asset {
 		return pricing == null ? pricing = new ArrayList<>() : pricing;
 	}
 
-	public Security setPricing(List<com.tools20022.repository.entity.SecuritiesPricing> pricing) {
+	public Security setPricing(List<SecuritiesPricing> pricing) {
 		this.pricing = Objects.requireNonNull(pricing);
 		return this;
 	}
@@ -8288,7 +8685,7 @@ public class Security extends Asset {
 		return registration == null ? registration = new ArrayList<>() : registration;
 	}
 
-	public Security setRegistration(List<com.tools20022.repository.entity.BasicSecuritiesRegistration> registration) {
+	public Security setRegistration(List<BasicSecuritiesRegistration> registration) {
 		this.registration = Objects.requireNonNull(registration);
 		return this;
 	}
@@ -8297,7 +8694,7 @@ public class Security extends Asset {
 		return restriction == null ? restriction = new ArrayList<>() : restriction;
 	}
 
-	public Security setRestriction(List<com.tools20022.repository.entity.SecuritiesRestriction> restriction) {
+	public Security setRestriction(List<SecuritiesRestriction> restriction) {
 		this.restriction = Objects.requireNonNull(restriction);
 		return this;
 	}
@@ -8306,7 +8703,7 @@ public class Security extends Asset {
 		return corporateEvent == null ? corporateEvent = new ArrayList<>() : corporateEvent;
 	}
 
-	public Security setCorporateEvent(List<com.tools20022.repository.entity.CorporateActionEvent> corporateEvent) {
+	public Security setCorporateEvent(List<CorporateActionEvent> corporateEvent) {
 		this.corporateEvent = Objects.requireNonNull(corporateEvent);
 		return this;
 	}
@@ -8360,7 +8757,7 @@ public class Security extends Asset {
 		return balance;
 	}
 
-	public Security setBalance(com.tools20022.repository.entity.SecuritiesBalance balance) {
+	public Security setBalance(SecuritiesBalance balance) {
 		this.balance = Objects.requireNonNull(balance);
 		return this;
 	}
@@ -8468,7 +8865,7 @@ public class Security extends Asset {
 		return taxDetails == null ? taxDetails = new ArrayList<>() : taxDetails;
 	}
 
-	public Security setTaxDetails(List<com.tools20022.repository.entity.SecuritiesTax> taxDetails) {
+	public Security setTaxDetails(List<SecuritiesTax> taxDetails) {
 		this.taxDetails = Objects.requireNonNull(taxDetails);
 		return this;
 	}
@@ -8486,7 +8883,7 @@ public class Security extends Asset {
 		return registrationJurisdiction;
 	}
 
-	public Security setRegistrationJurisdiction(com.tools20022.repository.entity.Jurisdiction registrationJurisdiction) {
+	public Security setRegistrationJurisdiction(Jurisdiction registrationJurisdiction) {
 		this.registrationJurisdiction = Objects.requireNonNull(registrationJurisdiction);
 		return this;
 	}
@@ -8495,7 +8892,7 @@ public class Security extends Asset {
 		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public Security setPartyRole(List<com.tools20022.repository.entity.SecuritiesPartyRole> partyRole) {
+	public Security setPartyRole(List<SecuritiesPartyRole> partyRole) {
 		this.partyRole = Objects.requireNonNull(partyRole);
 		return this;
 	}
@@ -8504,7 +8901,7 @@ public class Security extends Asset {
 		return securityStatus == null ? securityStatus = new ArrayList<>() : securityStatus;
 	}
 
-	public Security setSecurityStatus(List<com.tools20022.repository.entity.SecuritiesStatus> securityStatus) {
+	public Security setSecurityStatus(List<SecuritiesStatus> securityStatus) {
 		this.securityStatus = Objects.requireNonNull(securityStatus);
 		return this;
 	}
@@ -8513,7 +8910,7 @@ public class Security extends Asset {
 		return modification == null ? Optional.empty() : Optional.of(modification);
 	}
 
-	public Security setModification(com.tools20022.repository.entity.SecuritiesModification modification) {
+	public Security setModification(SecuritiesModification modification) {
 		this.modification = modification;
 		return this;
 	}
@@ -8549,7 +8946,7 @@ public class Security extends Asset {
 		return corporateActionStandingInstructions == null ? corporateActionStandingInstructions = new ArrayList<>() : corporateActionStandingInstructions;
 	}
 
-	public Security setCorporateActionStandingInstructions(List<com.tools20022.repository.entity.AgentCorporateActionStandingInstruction> corporateActionStandingInstructions) {
+	public Security setCorporateActionStandingInstructions(List<AgentCorporateActionStandingInstruction> corporateActionStandingInstructions) {
 		this.corporateActionStandingInstructions = Objects.requireNonNull(corporateActionStandingInstructions);
 		return this;
 	}
@@ -8576,7 +8973,7 @@ public class Security extends Asset {
 		return relatedVariableInterest == null ? Optional.empty() : Optional.of(relatedVariableInterest);
 	}
 
-	public Security setRelatedVariableInterest(com.tools20022.repository.entity.VariableInterest relatedVariableInterest) {
+	public Security setRelatedVariableInterest(VariableInterest relatedVariableInterest) {
 		this.relatedVariableInterest = relatedVariableInterest;
 		return this;
 	}
@@ -8585,7 +8982,7 @@ public class Security extends Asset {
 		return conversion == null ? conversion = new ArrayList<>() : conversion;
 	}
 
-	public Security setConversion(List<com.tools20022.repository.entity.SecuritiesConversion> conversion) {
+	public Security setConversion(List<SecuritiesConversion> conversion) {
 		this.conversion = Objects.requireNonNull(conversion);
 		return this;
 	}
@@ -8648,7 +9045,7 @@ public class Security extends Asset {
 		return relatedMarginCall;
 	}
 
-	public Security setRelatedMarginCall(com.tools20022.repository.entity.MarginCall relatedMarginCall) {
+	public Security setRelatedMarginCall(MarginCall relatedMarginCall) {
 		this.relatedMarginCall = Objects.requireNonNull(relatedMarginCall);
 		return this;
 	}
@@ -8657,7 +9054,7 @@ public class Security extends Asset {
 		return closeLink;
 	}
 
-	public Security setCloseLink(com.tools20022.repository.entity.Party closeLink) {
+	public Security setCloseLink(Party closeLink) {
 		this.closeLink = Objects.requireNonNull(closeLink);
 		return this;
 	}

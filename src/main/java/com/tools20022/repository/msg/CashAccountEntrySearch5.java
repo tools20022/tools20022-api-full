@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.PartyIdentification125;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -152,7 +154,7 @@ public class CashAccountEntrySearch5 {
 	 * CashAccountEntrySearch4.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountEntrySearch5, List<AccountIdentificationSearchCriteria2Choice>> mmAccountIdentification = new MMMessageAssociationEnd<CashAccountEntrySearch5, List<AccountIdentificationSearchCriteria2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch5.mmObject();
@@ -165,6 +167,16 @@ public class CashAccountEntrySearch5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
+		}
+
+		@Override
+		public List<AccountIdentificationSearchCriteria2Choice> getValue(CashAccountEntrySearch5 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccountEntrySearch5 obj, List<AccountIdentificationSearchCriteria2Choice> value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "NtryAmt")
@@ -208,7 +220,7 @@ public class CashAccountEntrySearch5 {
 	 * CashAccountEntrySearch4.mmEntryAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountEntrySearch5, List<ActiveOrHistoricAmountRange2Choice>> mmEntryAmount = new MMMessageAttribute<CashAccountEntrySearch5, List<ActiveOrHistoricAmountRange2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch5.mmObject();
@@ -220,6 +232,16 @@ public class CashAccountEntrySearch5 {
 			previousVersion_lazy = () -> CashAccountEntrySearch4.mmEntryAmount;
 			minOccurs = 0;
 			complexType_lazy = () -> ActiveOrHistoricAmountRange2Choice.mmObject();
+		}
+
+		@Override
+		public List<ActiveOrHistoricAmountRange2Choice> getValue(CashAccountEntrySearch5 obj) {
+			return obj.getEntryAmount();
+		}
+
+		@Override
+		public void setValue(CashAccountEntrySearch5 obj, List<ActiveOrHistoricAmountRange2Choice> value) {
+			obj.setEntryAmount(value);
 		}
 	};
 	@XmlElement(name = "NtryAmtCcy")
@@ -257,7 +279,7 @@ public class CashAccountEntrySearch5 {
 	 * CashAccountEntrySearch4.mmEntryAmountCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryAmountCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountEntrySearch5, List<ActiveOrHistoricCurrencyCode>> mmEntryAmountCurrency = new MMMessageAttribute<CashAccountEntrySearch5, List<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch5.mmObject();
 			isDerived = false;
@@ -268,6 +290,16 @@ public class CashAccountEntrySearch5 {
 			previousVersion_lazy = () -> CashAccountEntrySearch4.mmEntryAmountCurrency;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyCode> getValue(CashAccountEntrySearch5 obj) {
+			return obj.getEntryAmountCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccountEntrySearch5 obj, List<ActiveOrHistoricCurrencyCode> value) {
+			obj.setEntryAmountCurrency(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -310,7 +342,7 @@ public class CashAccountEntrySearch5 {
 	 * CashAccountEntrySearch4.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountEntrySearch5, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<CashAccountEntrySearch5, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch5.mmObject();
@@ -323,6 +355,16 @@ public class CashAccountEntrySearch5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(CashAccountEntrySearch5 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccountEntrySearch5 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtrySts")
@@ -365,7 +407,7 @@ public class CashAccountEntrySearch5 {
 	 * CashAccountEntrySearch4.mmEntryStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountEntrySearch5, List<EntryStatus1Code>> mmEntryStatus = new MMMessageAttribute<CashAccountEntrySearch5, List<EntryStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch5.mmObject();
@@ -377,6 +419,16 @@ public class CashAccountEntrySearch5 {
 			previousVersion_lazy = () -> CashAccountEntrySearch4.mmEntryStatus;
 			minOccurs = 0;
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
+		}
+
+		@Override
+		public List<EntryStatus1Code> getValue(CashAccountEntrySearch5 obj) {
+			return obj.getEntryStatus();
+		}
+
+		@Override
+		public void setValue(CashAccountEntrySearch5 obj, List<EntryStatus1Code> value) {
+			obj.setEntryStatus(value);
 		}
 	};
 	@XmlElement(name = "NtryDt")
@@ -421,7 +473,7 @@ public class CashAccountEntrySearch5 {
 	 * CashAccountEntrySearch4.mmEntryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountEntrySearch5, List<DateAndDateTimeSearch3Choice>> mmEntryDate = new MMMessageAttribute<CashAccountEntrySearch5, List<DateAndDateTimeSearch3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch5.mmObject();
@@ -433,6 +485,16 @@ public class CashAccountEntrySearch5 {
 			previousVersion_lazy = () -> CashAccountEntrySearch4.mmEntryDate;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch3Choice.mmObject();
+		}
+
+		@Override
+		public List<DateAndDateTimeSearch3Choice> getValue(CashAccountEntrySearch5 obj) {
+			return obj.getEntryDate();
+		}
+
+		@Override
+		public void setValue(CashAccountEntrySearch5 obj, List<DateAndDateTimeSearch3Choice> value) {
+			obj.setEntryDate(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -473,7 +535,7 @@ public class CashAccountEntrySearch5 {
 	 * CashAccountEntrySearch4.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountEntrySearch5, Optional<PartyIdentification125>> mmAccountOwner = new MMMessageAssociationEnd<CashAccountEntrySearch5, Optional<PartyIdentification125>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch5.mmObject();
@@ -486,7 +548,17 @@ public class CashAccountEntrySearch5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification125.mmObject();
+			type_lazy = () -> PartyIdentification125.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification125> getValue(CashAccountEntrySearch5 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(CashAccountEntrySearch5 obj, Optional<PartyIdentification125> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -530,7 +602,7 @@ public class CashAccountEntrySearch5 {
 	 * CashAccountEntrySearch4.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountEntrySearch5, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountServicer = new MMMessageAssociationEnd<CashAccountEntrySearch5, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountEntrySearch5.mmObject();
@@ -543,7 +615,17 @@ public class CashAccountEntrySearch5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(CashAccountEntrySearch5 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(CashAccountEntrySearch5 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -625,7 +707,7 @@ public class CashAccountEntrySearch5 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public CashAccountEntrySearch5 setAccountOwner(com.tools20022.repository.msg.PartyIdentification125 accountOwner) {
+	public CashAccountEntrySearch5 setAccountOwner(PartyIdentification125 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -634,7 +716,7 @@ public class CashAccountEntrySearch5 {
 		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public CashAccountEntrySearch5 setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+	public CashAccountEntrySearch5 setAccountServicer(BranchAndFinancialInstitutionIdentification5 accountServicer) {
 		this.accountServicer = accountServicer;
 		return this;
 	}

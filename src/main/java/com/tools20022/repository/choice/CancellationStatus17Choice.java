@@ -117,7 +117,7 @@ public class CancellationStatus17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatus17Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<CancellationStatus17Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus17Choice.mmObject();
@@ -130,6 +130,16 @@ public class CancellationStatus17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CancellationStatus17Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(CancellationStatus17Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -168,7 +178,7 @@ public class CancellationStatus17Choice {
 	 * definition} = "Specifies the reason of the cancellation status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatus17Choice, List<CancellationReason14>> mmReason = new MMMessageAssociationEnd<CancellationStatus17Choice, List<CancellationReason14>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus17Choice.mmObject();
@@ -181,6 +191,16 @@ public class CancellationStatus17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationReason14.mmObject();
+		}
+
+		@Override
+		public List<CancellationReason14> getValue(CancellationStatus17Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancellationStatus17Choice obj, List<CancellationReason14> value) {
+			obj.setReason(value);
 		}
 	};
 

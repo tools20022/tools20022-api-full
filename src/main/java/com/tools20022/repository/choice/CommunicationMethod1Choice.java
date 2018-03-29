@@ -108,7 +108,7 @@ public class CommunicationMethod1Choice {
 	 * definition} = "Communication channel method.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationMethod1Choice, ExternalChannel1Code> mmCode = new MMMessageAttribute<CommunicationMethod1Choice, ExternalChannel1Code>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommunicationMethod1Choice.mmObject();
@@ -120,6 +120,16 @@ public class CommunicationMethod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalChannel1Code.mmObject();
+		}
+
+		@Override
+		public ExternalChannel1Code getValue(CommunicationMethod1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CommunicationMethod1Choice obj, ExternalChannel1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class CommunicationMethod1Choice {
 	 * "Communication channel method expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommunicationMethod1Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<CommunicationMethod1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommunicationMethod1Choice.mmObject();
@@ -169,6 +179,16 @@ public class CommunicationMethod1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(CommunicationMethod1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CommunicationMethod1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

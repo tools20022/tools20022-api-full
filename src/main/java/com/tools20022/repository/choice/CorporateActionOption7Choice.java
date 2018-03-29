@@ -116,7 +116,7 @@ public class CorporateActionOption7Choice {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption7Choice, CorporateActionOption6Code> mmCode = new MMMessageAttribute<CorporateActionOption7Choice, CorporateActionOption6Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionOption7Choice.mmObject();
@@ -129,6 +129,16 @@ public class CorporateActionOption7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionOption6Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption6Code getValue(CorporateActionOption7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption7Choice obj, CorporateActionOption6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class CorporateActionOption7Choice {
 	 * "Proprietary identification of the type of corporate action option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption7Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<CorporateActionOption7Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionOption7Choice.mmObject();
@@ -183,6 +193,16 @@ public class CorporateActionOption7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(CorporateActionOption7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption7Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

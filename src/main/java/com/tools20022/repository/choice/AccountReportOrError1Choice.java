@@ -113,7 +113,7 @@ public class AccountReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReportOrError1Choice, List<ErrorHandling3>> mmError = new MMMessageAssociationEnd<AccountReportOrError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class AccountReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(AccountReportOrError1Choice obj) {
+			return obj.getError();
+		}
+
+		@Override
+		public void setValue(AccountReportOrError1Choice obj, List<ErrorHandling3> value) {
+			obj.setError(value);
 		}
 	};
 	@XmlElement(name = "AcctRpt")
@@ -163,7 +173,7 @@ public class AccountReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReportOrError1Choice, List<AccountReport14>> mmAccountReport = new MMMessageAssociationEnd<AccountReportOrError1Choice, List<AccountReport14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class AccountReportOrError1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountReport14.mmObject();
+		}
+
+		@Override
+		public List<AccountReport14> getValue(AccountReportOrError1Choice obj) {
+			return obj.getAccountReport();
+		}
+
+		@Override
+		public void setValue(AccountReportOrError1Choice obj, List<AccountReport14> value) {
+			obj.setAccountReport(value);
 		}
 	};
 

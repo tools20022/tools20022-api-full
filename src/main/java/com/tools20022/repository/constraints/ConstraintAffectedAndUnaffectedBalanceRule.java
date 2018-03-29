@@ -53,11 +53,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails2> forCorporateActionBalanceDetails2 = new MMConstraint<CorporateActionBalanceDetails2>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails2 obj) throws Exception {
+			checkCorporateActionBalanceDetails2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails6> forCorporateActionBalanceDetails6 = new MMConstraint<CorporateActionBalanceDetails6>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails6 obj) throws Exception {
+			checkCorporateActionBalanceDetails6(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails11> forCorporateActionBalanceDetails11 = new MMConstraint<CorporateActionBalanceDetails11>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails11 obj) throws Exception {
+			checkCorporateActionBalanceDetails11(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails14> forCorporateActionBalanceDetails14 = new MMConstraint<CorporateActionBalanceDetails14>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails14 obj) throws Exception {
+			checkCorporateActionBalanceDetails14(obj);
 		}
 	};
 	/**
@@ -182,12 +198,16 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails18> forCorporateActionBalanceDetails18 = new MMConstraint<CorporateActionBalanceDetails18>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails22);
 			owner_lazy = () -> CorporateActionBalanceDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails18 obj) throws Exception {
+			checkCorporateActionBalanceDetails18(obj);
 		}
 	};
 	/**
@@ -213,11 +233,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails19> forCorporateActionBalanceDetails19 = new MMConstraint<CorporateActionBalanceDetails19>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails19 obj) throws Exception {
+			checkCorporateActionBalanceDetails19(obj);
 		}
 	};
 	/**
@@ -243,11 +267,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails1> forCorporateActionBalanceDetails1 = new MMConstraint<CorporateActionBalanceDetails1>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails1 obj) throws Exception {
+			checkCorporateActionBalanceDetails1(obj);
 		}
 	};
 	/**
@@ -273,11 +301,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails7> forCorporateActionBalanceDetails7 = new MMConstraint<CorporateActionBalanceDetails7>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails7 obj) throws Exception {
+			checkCorporateActionBalanceDetails7(obj);
 		}
 	};
 	/**
@@ -303,11 +335,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails10> forCorporateActionBalanceDetails10 = new MMConstraint<CorporateActionBalanceDetails10>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails10 obj) throws Exception {
+			checkCorporateActionBalanceDetails10(obj);
 		}
 	};
 	/**
@@ -333,11 +369,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails13> forCorporateActionBalanceDetails13 = new MMConstraint<CorporateActionBalanceDetails13>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails13 obj) throws Exception {
+			checkCorporateActionBalanceDetails13(obj);
 		}
 	};
 	/**
@@ -372,12 +412,16 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails17> forCorporateActionBalanceDetails17 = new MMConstraint<CorporateActionBalanceDetails17>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails21);
 			owner_lazy = () -> CorporateActionBalanceDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails17 obj) throws Exception {
+			checkCorporateActionBalanceDetails17(obj);
 		}
 	};
 	/**
@@ -403,11 +447,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails20> forCorporateActionBalanceDetails20 = new MMConstraint<CorporateActionBalanceDetails20>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails20 obj) throws Exception {
+			checkCorporateActionBalanceDetails20(obj);
 		}
 	};
 	/**
@@ -448,13 +496,17 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails21> forCorporateActionBalanceDetails21 = new MMConstraint<CorporateActionBalanceDetails21>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails29);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails17;
 			owner_lazy = () -> CorporateActionBalanceDetails21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails21 obj) throws Exception {
+			checkCorporateActionBalanceDetails21(obj);
 		}
 	};
 	/**
@@ -495,13 +547,17 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails22> forCorporateActionBalanceDetails22 = new MMConstraint<CorporateActionBalanceDetails22>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails18;
 			owner_lazy = () -> CorporateActionBalanceDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails22 obj) throws Exception {
+			checkCorporateActionBalanceDetails22(obj);
 		}
 	};
 	/**
@@ -527,11 +583,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails25> forCorporateActionBalanceDetails25 = new MMConstraint<CorporateActionBalanceDetails25>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails25 obj) throws Exception {
+			checkCorporateActionBalanceDetails25(obj);
 		}
 	};
 	/**
@@ -557,11 +617,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails28> forCorporateActionBalanceDetails28 = new MMConstraint<CorporateActionBalanceDetails28>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails28 obj) throws Exception {
+			checkCorporateActionBalanceDetails28(obj);
 		}
 	};
 	/**
@@ -593,12 +657,16 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails31> forCorporateActionBalanceDetails31 = new MMConstraint<CorporateActionBalanceDetails31>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails22;
 			owner_lazy = () -> CorporateActionBalanceDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails31 obj) throws Exception {
+			checkCorporateActionBalanceDetails31(obj);
 		}
 	};
 	/**
@@ -630,12 +698,16 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails29> forCorporateActionBalanceDetails29 = new MMConstraint<CorporateActionBalanceDetails29>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails21;
 			owner_lazy = () -> CorporateActionBalanceDetails29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails29 obj) throws Exception {
+			checkCorporateActionBalanceDetails29(obj);
 		}
 	};
 	/**
@@ -661,11 +733,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails35> forCorporateActionBalanceDetails35 = new MMConstraint<CorporateActionBalanceDetails35>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails35 obj) throws Exception {
+			checkCorporateActionBalanceDetails35(obj);
 		}
 	};
 	/**
@@ -691,11 +767,15 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 */
 	public static final MMConstraint<CorporateActionBalanceDetails36> forCorporateActionBalanceDetails36 = new MMConstraint<CorporateActionBalanceDetails36>() {
 		{
-			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
 			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionBalanceDetails36 obj) throws Exception {
+			checkCorporateActionBalanceDetails36(obj);
 		}
 	};
 

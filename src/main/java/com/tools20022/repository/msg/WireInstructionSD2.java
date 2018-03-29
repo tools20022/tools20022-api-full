@@ -146,7 +146,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, Max350Text> mmPlaceAndName = new MMMessageAttribute<WireInstructionSD2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -158,6 +158,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(WireInstructionSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "WireQty", required = true)
@@ -201,7 +211,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWireQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, FinancialInstrumentQuantity15Choice> mmWireQuantity = new MMMessageAttribute<WireInstructionSD2, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -214,6 +224,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(WireInstructionSD2 obj) {
+			return obj.getWireQuantity();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setWireQuantity(value);
 		}
 	};
 	@XmlElement(name = "BkNm", required = true)
@@ -256,7 +276,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, Max30Text> mmBankName = new MMMessageAttribute<WireInstructionSD2, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -269,6 +289,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(WireInstructionSD2 obj) {
+			return obj.getBankName();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, Max30Text value) {
+			obj.setBankName(value);
 		}
 	};
 	@XmlElement(name = "BkAdr", required = true)
@@ -311,7 +341,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, Max30Text> mmBankAddress = new MMMessageAttribute<WireInstructionSD2, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -324,6 +354,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(WireInstructionSD2 obj) {
+			return obj.getBankAddress();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, Max30Text value) {
+			obj.setBankAddress(value);
 		}
 	};
 	@XmlElement(name = "BkCity", required = true)
@@ -366,7 +406,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankCity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, Max30Text> mmBankCity = new MMMessageAttribute<WireInstructionSD2, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -379,6 +419,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(WireInstructionSD2 obj) {
+			return obj.getBankCity();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, Max30Text value) {
+			obj.setBankCity(value);
 		}
 	};
 	@XmlElement(name = "BkCtry", required = true)
@@ -421,7 +471,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, CountryCode> mmBankCountry = new MMMessageAttribute<WireInstructionSD2, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -434,6 +484,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(WireInstructionSD2 obj) {
+			return obj.getBankCountry();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, CountryCode value) {
+			obj.setBankCountry(value);
 		}
 	};
 	@XmlElement(name = "BkAttnTo", required = true)
@@ -476,7 +536,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankAttentionTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, Max30Text> mmBankAttentionTo = new MMMessageAttribute<WireInstructionSD2, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -489,6 +549,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(WireInstructionSD2 obj) {
+			return obj.getBankAttentionTo();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, Max30Text value) {
+			obj.setBankAttentionTo(value);
 		}
 	};
 	@XmlElement(name = "BkCmnts", required = true)
@@ -531,7 +601,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankComments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, Max60Text> mmBankComments = new MMMessageAttribute<WireInstructionSD2, Max60Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -544,6 +614,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max60Text.mmObject();
+		}
+
+		@Override
+		public Max60Text getValue(WireInstructionSD2 obj) {
+			return obj.getBankComments();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, Max60Text value) {
+			obj.setBankComments(value);
 		}
 	};
 	@XmlElement(name = "BnfcryAcct", required = true)
@@ -586,7 +666,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficiaryAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, Max30Text> mmBeneficiaryAccount = new MMMessageAttribute<WireInstructionSD2, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -599,6 +679,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(WireInstructionSD2 obj) {
+			return obj.getBeneficiaryAccount();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, Max30Text value) {
+			obj.setBeneficiaryAccount(value);
 		}
 	};
 	@XmlElement(name = "BnfcryAcctId", required = true)
@@ -642,7 +732,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficiaryAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, Max30Text> mmBeneficiaryAccountIdentification = new MMMessageAttribute<WireInstructionSD2, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -655,6 +745,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(WireInstructionSD2 obj) {
+			return obj.getBeneficiaryAccountIdentification();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, Max30Text value) {
+			obj.setBeneficiaryAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "BnfcryAcctCmnts", required = true)
@@ -699,7 +799,7 @@ public class WireInstructionSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficiaryAccountComments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WireInstructionSD2, Max30Text> mmBeneficiaryAccountComments = new MMMessageAttribute<WireInstructionSD2, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.WireInstructionSD2.mmObject();
 			isDerived = false;
@@ -712,6 +812,16 @@ public class WireInstructionSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(WireInstructionSD2 obj) {
+			return obj.getBeneficiaryAccountComments();
+		}
+
+		@Override
+		public void setValue(WireInstructionSD2 obj, Max30Text value) {
+			obj.setBeneficiaryAccountComments(value);
 		}
 	};
 

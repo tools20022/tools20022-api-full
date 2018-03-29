@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LimitReturnCriteria2;
+import com.tools20022.repository.msg.LimitSearchCriteria3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +128,7 @@ public class LimitCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitCriteria3, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<LimitCriteria3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitCriteria3.mmObject();
 			isDerived = false;
@@ -139,9 +141,19 @@ public class LimitCriteria3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(LimitCriteria3 obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(LimitCriteria3 obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.LimitSearchCriteria3> searchCriteria;
+	protected List<LimitSearchCriteria3> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -175,7 +187,7 @@ public class LimitCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitCriteria3, List<LimitSearchCriteria3>> mmSearchCriteria = new MMMessageAssociationEnd<LimitCriteria3, List<LimitSearchCriteria3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitCriteria3.mmObject();
 			isDerived = false;
@@ -186,7 +198,17 @@ public class LimitCriteria3 {
 			nextVersions_lazy = () -> Arrays.asList(LimitCriteria4.mmSearchCriteria);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria3.mmObject();
+			type_lazy = () -> LimitSearchCriteria3.mmObject();
+		}
+
+		@Override
+		public List<LimitSearchCriteria3> getValue(LimitCriteria3 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(LimitCriteria3 obj, List<LimitSearchCriteria3> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -224,7 +246,7 @@ public class LimitCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitCriteria3, Optional<LimitReturnCriteria2>> mmReturnCriteria = new MMMessageAssociationEnd<LimitCriteria3, Optional<LimitReturnCriteria2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitCriteria3.mmObject();
 			isDerived = false;
@@ -236,7 +258,17 @@ public class LimitCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitReturnCriteria2.mmObject();
+			type_lazy = () -> LimitReturnCriteria2.mmObject();
+		}
+
+		@Override
+		public Optional<LimitReturnCriteria2> getValue(LimitCriteria3 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(LimitCriteria3 obj, Optional<LimitReturnCriteria2> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -270,7 +302,7 @@ public class LimitCriteria3 {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public LimitCriteria3 setSearchCriteria(List<com.tools20022.repository.msg.LimitSearchCriteria3> searchCriteria) {
+	public LimitCriteria3 setSearchCriteria(List<LimitSearchCriteria3> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -279,7 +311,7 @@ public class LimitCriteria3 {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public LimitCriteria3 setReturnCriteria(com.tools20022.repository.msg.LimitReturnCriteria2 returnCriteria) {
+	public LimitCriteria3 setReturnCriteria(LimitReturnCriteria2 returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

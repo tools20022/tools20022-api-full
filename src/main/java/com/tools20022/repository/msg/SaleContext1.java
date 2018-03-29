@@ -129,7 +129,7 @@ public class SaleContext1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSaleIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleContext1, Optional<Max35Text>> mmSaleIdentification = new MMMessageAttribute<SaleContext1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmObject();
 			isDerived = false;
@@ -141,6 +141,16 @@ public class SaleContext1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SaleContext1 obj) {
+			return obj.getSaleIdentification();
+		}
+
+		@Override
+		public void setValue(SaleContext1 obj, Optional<Max35Text> value) {
+			obj.setSaleIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SaleRefNb")
@@ -179,7 +189,7 @@ public class SaleContext1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSaleReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleContext1, Optional<Max35Text>> mmSaleReferenceNumber = new MMMessageAttribute<SaleContext1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmObject();
 			isDerived = false;
@@ -191,6 +201,16 @@ public class SaleContext1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SaleContext1 obj) {
+			return obj.getSaleReferenceNumber();
+		}
+
+		@Override
+		public void setValue(SaleContext1 obj, Optional<Max35Text> value) {
+			obj.setSaleReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SaleRcncltnId")
@@ -231,7 +251,7 @@ public class SaleContext1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSaleReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleContext1, Optional<Max35Text>> mmSaleReconciliationIdentification = new MMMessageAttribute<SaleContext1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmObject();
 			isDerived = false;
@@ -243,6 +263,16 @@ public class SaleContext1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SaleContext1 obj) {
+			return obj.getSaleReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(SaleContext1 obj, Optional<Max35Text> value) {
+			obj.setSaleReconciliationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshrId")
@@ -287,7 +317,7 @@ public class SaleContext1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashierIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleContext1, Optional<Max35Text>> mmCashierIdentification = new MMMessageAttribute<SaleContext1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmObject();
@@ -300,6 +330,16 @@ public class SaleContext1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SaleContext1 obj) {
+			return obj.getCashierIdentification();
+		}
+
+		@Override
+		public void setValue(SaleContext1 obj, Optional<Max35Text> value) {
+			obj.setCashierIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShftNb")
@@ -338,7 +378,7 @@ public class SaleContext1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShiftNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleContext1, Optional<Max2NumericText>> mmShiftNumber = new MMMessageAttribute<SaleContext1, Optional<Max2NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmObject();
 			isDerived = false;
@@ -350,6 +390,16 @@ public class SaleContext1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max2NumericText> getValue(SaleContext1 obj) {
+			return obj.getShiftNumber();
+		}
+
+		@Override
+		public void setValue(SaleContext1 obj, Optional<Max2NumericText> value) {
+			obj.setShiftNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlSaleData")
@@ -389,7 +439,7 @@ public class SaleContext1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalSaleData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SaleContext1, Optional<Max70Text>> mmAdditionalSaleData = new MMMessageAttribute<SaleContext1, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SaleContext1.mmObject();
 			isDerived = false;
@@ -401,6 +451,16 @@ public class SaleContext1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(SaleContext1 obj) {
+			return obj.getAdditionalSaleData();
+		}
+
+		@Override
+		public void setValue(SaleContext1 obj, Optional<Max70Text> value) {
+			obj.setAdditionalSaleData(value.orElse(null));
 		}
 	};
 

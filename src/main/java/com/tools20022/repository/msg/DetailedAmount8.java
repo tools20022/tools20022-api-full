@@ -126,7 +126,7 @@ public class DetailedAmount8 {
 	 * DetailedAmount4.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount8, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<DetailedAmount8, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
@@ -139,6 +139,16 @@ public class DetailedAmount8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(DetailedAmount8 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(DetailedAmount8 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "XchgRate", required = true)
@@ -177,7 +187,7 @@ public class DetailedAmount8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount8, BaseOneRate> mmExchangeRate = new MMMessageAttribute<DetailedAmount8, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
@@ -189,6 +199,16 @@ public class DetailedAmount8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(DetailedAmount8 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(DetailedAmount8 obj, BaseOneRate value) {
+			obj.setExchangeRate(value);
 		}
 	};
 	@XmlElement(name = "QtnDt")
@@ -226,7 +246,7 @@ public class DetailedAmount8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount8, Optional<ISODateTime>> mmQuotationDate = new MMMessageAttribute<DetailedAmount8, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
@@ -238,6 +258,16 @@ public class DetailedAmount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(DetailedAmount8 obj) {
+			return obj.getQuotationDate();
+		}
+
+		@Override
+		public void setValue(DetailedAmount8 obj, Optional<ISODateTime> value) {
+			obj.setQuotationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Labl")
@@ -276,7 +306,7 @@ public class DetailedAmount8 {
 	 * DetailedAmount4.mmLabel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount8, Optional<Max140Text>> mmLabel = new MMMessageAttribute<DetailedAmount8, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
 			isDerived = false;
@@ -288,6 +318,16 @@ public class DetailedAmount8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(DetailedAmount8 obj) {
+			return obj.getLabel();
+		}
+
+		@Override
+		public void setValue(DetailedAmount8 obj, Optional<Max140Text> value) {
+			obj.setLabel(value.orElse(null));
 		}
 	};
 

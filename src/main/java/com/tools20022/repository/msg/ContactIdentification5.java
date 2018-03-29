@@ -109,7 +109,7 @@ public class ContactIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentification5, Max35Text> mmName = new MMMessageAttribute<ContactIdentification5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentification5.mmObject();
@@ -121,6 +121,16 @@ public class ContactIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ContactIdentification5 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(ContactIdentification5 obj, Max35Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PhneNb", required = true)
@@ -159,7 +169,7 @@ public class ContactIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentification5, PhoneNumber> mmPhoneNumber = new MMMessageAttribute<ContactIdentification5, PhoneNumber>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentification5.mmObject();
@@ -171,6 +181,16 @@ public class ContactIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public PhoneNumber getValue(ContactIdentification5 obj) {
+			return obj.getPhoneNumber();
+		}
+
+		@Override
+		public void setValue(ContactIdentification5 obj, PhoneNumber value) {
+			obj.setPhoneNumber(value);
 		}
 	};
 

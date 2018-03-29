@@ -147,7 +147,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Identification of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmFinancialInstrumentIdentification = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -158,6 +158,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "ISOSctyLngNm", required = true)
@@ -190,7 +200,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Name of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISOSecurityLongName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmISOSecurityLongName = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -201,6 +211,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getISOSecurityLongName();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setISOSecurityLongName(value);
 		}
 	};
 	@XmlElement(name = "ISOSctyShrtNm", required = true)
@@ -233,7 +253,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Short name of the security expressed as ISO 18773/18774."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISOSecurityShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmISOSecurityShortName = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -244,6 +264,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getISOSecurityShortName();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setISOSecurityShortName(value);
 		}
 	};
 	@XmlElement(name = "ClssfctnFinInstrm", required = true)
@@ -278,7 +308,7 @@ public class SecuritiesReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmClassificationFinancialInstrument = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -289,6 +319,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setClassificationFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "MtrtyDt", required = true)
@@ -324,7 +364,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Planned final repayment date at the time of issuance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmMaturityDate = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -336,6 +376,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setMaturityDate(value);
 		}
 	};
 	@XmlElement(name = "IsseDt", required = true)
@@ -368,7 +418,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Date/time at which the security was made available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmIssueDate = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -379,6 +429,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setIssueDate(value);
 		}
 	};
 	@XmlElement(name = "IsseCcy", required = true)
@@ -414,7 +474,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Currency in which a security is issued or redenominated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmIssueCurrency = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -426,6 +486,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getIssueCurrency();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setIssueCurrency(value);
 		}
 	};
 	@XmlElement(name = "CtryOfIsse", required = true)
@@ -463,7 +533,7 @@ public class SecuritiesReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmCountryOfIssue = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -475,6 +545,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getCountryOfIssue();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setCountryOfIssue(value);
 		}
 	};
 	@XmlElement(name = "SctySts", required = true)
@@ -511,7 +591,7 @@ public class SecuritiesReturnCriteria1 {
 	 * "Specifies the status of the security within its lifecycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmSecurityStatus = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -523,6 +603,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getSecurityStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setSecurityStatus(value);
 		}
 	};
 	@XmlElement(name = "InvstrCSD", required = true)
@@ -555,7 +645,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "CSD Investor of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestorCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmInvestorCSD = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -566,6 +656,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getInvestorCSD();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setInvestorCSD(value);
 		}
 	};
 	@XmlElement(name = "IssrCSD", required = true)
@@ -598,7 +698,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "CSD Issuer of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmIssuerCSD = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -609,6 +709,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getIssuerCSD();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setIssuerCSD(value);
 		}
 	};
 	@XmlElement(name = "TechIssrCSD", required = true)
@@ -641,7 +751,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Technical issuer of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalIssuerCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmTechnicalIssuerCSD = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -652,6 +762,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getTechnicalIssuerCSD();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setTechnicalIssuerCSD(value);
 		}
 	};
 	@XmlElement(name = "CSD", required = true)
@@ -684,7 +804,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "CSD of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmCSD = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -695,6 +815,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getCSD();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setCSD(value);
 		}
 	};
 	@XmlElement(name = "SctiesQtyTp", required = true)
@@ -727,7 +857,7 @@ public class SecuritiesReturnCriteria1 {
 	 * definition} = "Quantity of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesQuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmSecuritiesQuantityType = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -738,6 +868,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getSecuritiesQuantityType();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setSecuritiesQuantityType(value);
 		}
 	};
 	@XmlElement(name = "MinDnmtn", required = true)
@@ -771,7 +911,7 @@ public class SecuritiesReturnCriteria1 {
 	 * "Indicates the minimum quantity (unit or nominal) of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumDenomination = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmMinimumDenomination = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -782,6 +922,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getMinimumDenomination();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setMinimumDenomination(value);
 		}
 	};
 	@XmlElement(name = "MinMltplQty", required = true)
@@ -815,7 +965,7 @@ public class SecuritiesReturnCriteria1 {
 	 * "Minimum multiple quantity (unit or nominal) of securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumMultipleQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmMinimumMultipleQuantity = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -826,6 +976,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getMinimumMultipleQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setMinimumMultipleQuantity(value);
 		}
 	};
 	@XmlElement(name = "DevtgSttlmUnit", required = true)
@@ -860,7 +1020,7 @@ public class SecuritiesReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeviatingSettlementUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator> mmDeviatingSettlementUnit = new MMMessageAttribute<SecuritiesReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReturnCriteria1.mmObject();
 			isDerived = false;
@@ -871,6 +1031,16 @@ public class SecuritiesReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(SecuritiesReturnCriteria1 obj) {
+			return obj.getDeviatingSettlementUnit();
+		}
+
+		@Override
+		public void setValue(SecuritiesReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setDeviatingSettlementUnit(value);
 		}
 	};
 

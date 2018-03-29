@@ -165,7 +165,7 @@ public class Case2 {
 	 * definition} = "Uniquely identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Case2, Max35Text> mmIdentification = new MMMessageAttribute<Case2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCase.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Case2.mmObject();
@@ -177,6 +177,16 @@ public class Case2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Case2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Case2 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Cretr", required = true)
@@ -211,7 +221,7 @@ public class Case2 {
 	 * definition} = "Party that created the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Case2, Party7Choice> mmCreator = new MMMessageAssociationEnd<Case2, Party7Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Case2.mmObject();
@@ -224,6 +234,16 @@ public class Case2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party7Choice.mmObject();
+		}
+
+		@Override
+		public Party7Choice getValue(Case2 obj) {
+			return obj.getCreator();
+		}
+
+		@Override
+		public void setValue(Case2 obj, Party7Choice value) {
+			obj.setCreator(value);
 		}
 	};
 	@XmlElement(name = "ReopCaseIndctn")
@@ -257,7 +277,7 @@ public class Case2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReopenCaseIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Case2, Optional<YesNoIndicator>> mmReopenCaseIndication = new MMMessageAttribute<Case2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Case2.mmObject();
 			isDerived = false;
@@ -268,6 +288,16 @@ public class Case2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Case2 obj) {
+			return obj.getReopenCaseIndication();
+		}
+
+		@Override
+		public void setValue(Case2 obj, Optional<YesNoIndicator> value) {
+			obj.setReopenCaseIndication(value.orElse(null));
 		}
 	};
 

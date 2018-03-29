@@ -125,7 +125,7 @@ public class BeneficiaryCertificationType10Choice {
 	 * BeneficiaryCertificationType6Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficiaryCertificationType10Choice, BeneficiaryCertificationType5Code> mmCode = new MMMessageAttribute<BeneficiaryCertificationType10Choice, BeneficiaryCertificationType5Code>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType10Choice.mmObject();
@@ -139,6 +139,16 @@ public class BeneficiaryCertificationType10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BeneficiaryCertificationType5Code.mmObject();
+		}
+
+		@Override
+		public BeneficiaryCertificationType5Code getValue(BeneficiaryCertificationType10Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BeneficiaryCertificationType10Choice obj, BeneficiaryCertificationType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class BeneficiaryCertificationType10Choice {
 	 * BeneficiaryCertificationType6Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BeneficiaryCertificationType10Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<BeneficiaryCertificationType10Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType10Choice.mmObject();
@@ -199,6 +209,16 @@ public class BeneficiaryCertificationType10Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(BeneficiaryCertificationType10Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BeneficiaryCertificationType10Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Commission14;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -69,7 +70,7 @@ public class TotalCommissions4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "ComssnDtls", required = true)
-	protected List<com.tools20022.repository.msg.Commission14> commissionDetails;
+	protected List<Commission14> commissionDetails;
 	/**
 	 * 
 	 <p>
@@ -100,7 +101,7 @@ public class TotalCommissions4 {
 	 * definition} = "Information related to a specific commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalCommissions4, List<Commission14>> mmCommissionDetails = new MMMessageAssociationEnd<TotalCommissions4, List<Commission14>>() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalCommissions4.mmObject();
@@ -112,7 +113,17 @@ public class TotalCommissions4 {
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
+			type_lazy = () -> Commission14.mmObject();
+		}
+
+		@Override
+		public List<Commission14> getValue(TotalCommissions4 obj) {
+			return obj.getCommissionDetails();
+		}
+
+		@Override
+		public void setValue(TotalCommissions4 obj, List<Commission14> value) {
+			obj.setCommissionDetails(value);
 		}
 	};
 
@@ -134,7 +145,7 @@ public class TotalCommissions4 {
 		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public TotalCommissions4 setCommissionDetails(List<com.tools20022.repository.msg.Commission14> commissionDetails) {
+	public TotalCommissions4 setCommissionDetails(List<Commission14> commissionDetails) {
 		this.commissionDetails = Objects.requireNonNull(commissionDetails);
 		return this;
 	}

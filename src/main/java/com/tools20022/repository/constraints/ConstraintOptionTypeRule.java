@@ -61,11 +61,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<AgentCAElectionAdviceV01> forAgentCAElectionAdviceV01 = new MMConstraint<AgentCAElectionAdviceV01>() {
 		{
-			validator = ConstraintOptionTypeRule::checkAgentCAElectionAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If ElectionDetails/OptionType is present, then OptionType is not allowed in any occurrences of ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails.\n\nIf ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionType is present at least once and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionType is present at least once then ElectionDetails/CorporateActionOptionType is not allowed.";
 			owner_lazy = () -> AgentCAElectionAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCAElectionAdviceV01 obj) throws Exception {
+			checkAgentCAElectionAdviceV01(obj);
 		}
 	};
 	/**
@@ -96,12 +100,50 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV08> forCorporateActionInstructionV08 = new MMConstraint<CorporateActionInstructionV08>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV07;
 			owner_lazy = () -> CorporateActionInstructionV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV08 obj) throws Exception {
+			checkCorporateActionInstructionV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V08
+	 * CorporateActionInstruction002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstruction002V08> forCorporateActionInstruction002V08 = new MMConstraint<CorporateActionInstruction002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionTypeRule";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
+			owner_lazy = () -> CorporateActionInstruction002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstruction002V08 obj) throws Exception {
+			checkCorporateActionInstruction002V08(obj);
 		}
 	};
 	/**
@@ -140,7 +182,6 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV07> forCorporateActionInstructionV07 = new MMConstraint<CorporateActionInstructionV07>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
@@ -148,35 +189,10 @@ public class ConstraintOptionTypeRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV06;
 			owner_lazy = () -> CorporateActionInstructionV07.mmObject();
 		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07
-	 * CorporateActionInstruction002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OptionTypeRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstruction002V07> forCorporateActionInstruction002V07 = new MMConstraint<CorporateActionInstruction002V07>() {
-		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstruction002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OptionTypeRule";
-			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
-			owner_lazy = () -> CorporateActionInstruction002V07.mmObject();
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV07 obj) throws Exception {
+			checkCorporateActionInstructionV07(obj);
 		}
 	};
 	/**
@@ -202,11 +218,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV01> forCorporateActionInstructionV01 = new MMConstraint<CorporateActionInstructionV01>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			owner_lazy = () -> CorporateActionInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV01 obj) throws Exception {
+			checkCorporateActionInstructionV01(obj);
 		}
 	};
 	/**
@@ -232,11 +252,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV02> forCorporateActionInstructionV02 = new MMConstraint<CorporateActionInstructionV02>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			owner_lazy = () -> CorporateActionInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV02 obj) throws Exception {
+			checkCorporateActionInstructionV02(obj);
 		}
 	};
 	/**
@@ -262,11 +286,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV03> forCorporateActionInstructionV03 = new MMConstraint<CorporateActionInstructionV03>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			owner_lazy = () -> CorporateActionInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV03 obj) throws Exception {
+			checkCorporateActionInstructionV03(obj);
 		}
 	};
 	/**
@@ -300,12 +328,16 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV04> forCorporateActionInstructionV04 = new MMConstraint<CorporateActionInstructionV04>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV05);
 			owner_lazy = () -> CorporateActionInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV04 obj) throws Exception {
+			checkCorporateActionInstructionV04(obj);
 		}
 	};
 	/**
@@ -344,13 +376,17 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV05> forCorporateActionInstructionV05 = new MMConstraint<CorporateActionInstructionV05>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV04;
 			owner_lazy = () -> CorporateActionInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV05 obj) throws Exception {
+			checkCorporateActionInstructionV05(obj);
 		}
 	};
 	/**
@@ -389,13 +425,51 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV06> forCorporateActionInstructionV06 = new MMConstraint<CorporateActionInstructionV06>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV05;
 			owner_lazy = () -> CorporateActionInstructionV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV06 obj) throws Exception {
+			checkCorporateActionInstructionV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V06
+	 * CorporateActionInstruction002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstruction002V06> forCorporateActionInstruction002V06 = new MMConstraint<CorporateActionInstruction002V06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionTypeRule";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
+			owner_lazy = () -> CorporateActionInstruction002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstruction002V06 obj) throws Exception {
+			checkCorporateActionInstruction002V06(obj);
 		}
 	};
 	/**
@@ -421,11 +495,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption6> forCorporateActionOption6 = new MMConstraint<CorporateActionOption6>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption6 obj) throws Exception {
+			checkCorporateActionOption6(obj);
 		}
 	};
 	/**
@@ -451,11 +529,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption9> forCorporateActionOption9 = new MMConstraint<CorporateActionOption9>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption9 obj) throws Exception {
+			checkCorporateActionOption9(obj);
 		}
 	};
 	/**
@@ -481,11 +563,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption18> forCorporateActionOption18 = new MMConstraint<CorporateActionOption18>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption18 obj) throws Exception {
+			checkCorporateActionOption18(obj);
 		}
 	};
 	/**
@@ -511,11 +597,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption4> forCorporateActionOption4 = new MMConstraint<CorporateActionOption4>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption4 obj) throws Exception {
+			checkCorporateActionOption4(obj);
 		}
 	};
 	/**
@@ -541,11 +631,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption14> forCorporateActionOption14 = new MMConstraint<CorporateActionOption14>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption14 obj) throws Exception {
+			checkCorporateActionOption14(obj);
 		}
 	};
 	/**
@@ -571,11 +665,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption10> forCorporateActionOption10 = new MMConstraint<CorporateActionOption10>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption10 obj) throws Exception {
+			checkCorporateActionOption10(obj);
 		}
 	};
 	/**
@@ -601,11 +699,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption15> forCorporateActionOption15 = new MMConstraint<CorporateActionOption15>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption15 obj) throws Exception {
+			checkCorporateActionOption15(obj);
 		}
 	};
 	/**
@@ -631,11 +733,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption12> forCorporateActionOption12 = new MMConstraint<CorporateActionOption12>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption12 obj) throws Exception {
+			checkCorporateActionOption12(obj);
 		}
 	};
 	/**
@@ -661,11 +767,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption16> forCorporateActionOption16 = new MMConstraint<CorporateActionOption16>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption16 obj) throws Exception {
+			checkCorporateActionOption16(obj);
 		}
 	};
 	/**
@@ -691,11 +801,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption3> forCorporateActionOption3 = new MMConstraint<CorporateActionOption3>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption3 obj) throws Exception {
+			checkCorporateActionOption3(obj);
 		}
 	};
 	/**
@@ -721,11 +835,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption17> forCorporateActionOption17 = new MMConstraint<CorporateActionOption17>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption17 obj) throws Exception {
+			checkCorporateActionOption17(obj);
 		}
 	};
 	/**
@@ -751,11 +869,15 @@ public class ConstraintOptionTypeRule {
 	 */
 	public static final MMConstraint<CorporateActionOption7> forCorporateActionOption7 = new MMConstraint<CorporateActionOption7>() {
 		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionOption7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption7 obj) throws Exception {
+			checkCorporateActionOption7(obj);
 		}
 	};
 
@@ -789,7 +911,7 @@ public class ConstraintOptionTypeRule {
 	 * Instruction), then at least one occurrence of BeneficialOwnerDetails must
 	 * be present.
 	 */
-	public static void checkCorporateActionInstructionV07(CorporateActionInstructionV07 obj) throws Exception {
+	public static void checkCorporateActionInstruction002V08(CorporateActionInstruction002V08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -798,7 +920,7 @@ public class ConstraintOptionTypeRule {
 	 * Instruction), then at least one occurrence of BeneficialOwnerDetails must
 	 * be present.
 	 */
-	public static void checkCorporateActionInstruction002V07(CorporateActionInstruction002V07 obj) throws Exception {
+	public static void checkCorporateActionInstructionV07(CorporateActionInstructionV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -848,6 +970,15 @@ public class ConstraintOptionTypeRule {
 	 * be present.
 	 */
 	public static void checkCorporateActionInstructionV06(CorporateActionInstructionV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionInstruction/OptionType/Code value is TAXI (Tax
+	 * Instruction), then at least one occurrence of BeneficialOwnerDetails must
+	 * be present.
+	 */
+	public static void checkCorporateActionInstruction002V06(CorporateActionInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

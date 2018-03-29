@@ -133,7 +133,7 @@ public class TradeTransactionStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionStatusAndReason1, Max35Text> mmRelatedReference = new MMMessageAttribute<TradeTransactionStatusAndReason1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeTransactionStatusAndReason1.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class TradeTransactionStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TradeTransactionStatusAndReason1 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(TradeTransactionStatusAndReason1 obj, Max35Text value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "TradRef", required = true)
@@ -182,7 +192,7 @@ public class TradeTransactionStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionStatusAndReason1, Max70Text> mmTradeReference = new MMMessageAttribute<TradeTransactionStatusAndReason1, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeTransactionStatusAndReason1.mmObject();
@@ -194,6 +204,16 @@ public class TradeTransactionStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(TradeTransactionStatusAndReason1 obj) {
+			return obj.getTradeReference();
+		}
+
+		@Override
+		public void setValue(TradeTransactionStatusAndReason1 obj, Max70Text value) {
+			obj.setTradeReference(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -230,7 +250,7 @@ public class TradeTransactionStatusAndReason1 {
 	 * definition} = "Indicates the status of a trade transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionStatusAndReason1, Status2Code> mmStatus = new MMMessageAttribute<TradeTransactionStatusAndReason1, Status2Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeTransactionStatusAndReason1.mmObject();
@@ -242,6 +262,16 @@ public class TradeTransactionStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status2Code.mmObject();
+		}
+
+		@Override
+		public Status2Code getValue(TradeTransactionStatusAndReason1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TradeTransactionStatusAndReason1 obj, Status2Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -279,7 +309,7 @@ public class TradeTransactionStatusAndReason1 {
 	 * "Indicates that the report is rejected and provides a reason why."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeTransactionStatusAndReason1, List<RejectedStatusReason9Choice>> mmRejected = new MMMessageAssociationEnd<TradeTransactionStatusAndReason1, List<RejectedStatusReason9Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeTransactionStatusAndReason1.mmObject();
@@ -292,6 +322,16 @@ public class TradeTransactionStatusAndReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedStatusReason9Choice.mmObject();
+		}
+
+		@Override
+		public List<RejectedStatusReason9Choice> getValue(TradeTransactionStatusAndReason1 obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(TradeTransactionStatusAndReason1 obj, List<RejectedStatusReason9Choice> value) {
+			obj.setRejected(value);
 		}
 	};
 	/**

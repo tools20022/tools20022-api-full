@@ -108,7 +108,7 @@ public class ProductCategory1Choice {
 	 * definition} = "Specifies the type of product category."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStructuredProductCategory = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProductCategory1Choice, ProductCategory1> mmStructuredProductCategory = new MMMessageAssociationEnd<ProductCategory1Choice, ProductCategory1>() {
 		{
 			businessComponentTrace_lazy = () -> ProductCategory.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProductCategory1Choice.mmObject();
@@ -121,6 +121,16 @@ public class ProductCategory1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProductCategory1.mmObject();
+		}
+
+		@Override
+		public ProductCategory1 getValue(ProductCategory1Choice obj) {
+			return obj.getStructuredProductCategory();
+		}
+
+		@Override
+		public void setValue(ProductCategory1Choice obj, ProductCategory1 value) {
+			obj.setStructuredProductCategory(value);
 		}
 	};
 	@XmlElement(name = "OthrPdctCtgy", required = true)
@@ -157,7 +167,7 @@ public class ProductCategory1Choice {
 	 * "Specifies the type of product category not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherProductCategory = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProductCategory1Choice, GenericIdentification4> mmOtherProductCategory = new MMMessageAssociationEnd<ProductCategory1Choice, GenericIdentification4>() {
 		{
 			businessComponentTrace_lazy = () -> ProductCategory.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProductCategory1Choice.mmObject();
@@ -170,6 +180,16 @@ public class ProductCategory1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public GenericIdentification4 getValue(ProductCategory1Choice obj) {
+			return obj.getOtherProductCategory();
+		}
+
+		@Override
+		public void setValue(ProductCategory1Choice obj, GenericIdentification4 value) {
+			obj.setOtherProductCategory(value);
 		}
 	};
 

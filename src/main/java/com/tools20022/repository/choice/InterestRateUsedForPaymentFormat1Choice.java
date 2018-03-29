@@ -131,7 +131,7 @@ public class InterestRateUsedForPaymentFormat1Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateUsedForPaymentFormat1Choice, PercentageRate> mmRate = new MMMessageAttribute<InterestRateUsedForPaymentFormat1Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat1Choice.mmObject();
@@ -144,6 +144,16 @@ public class InterestRateUsedForPaymentFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(InterestRateUsedForPaymentFormat1Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat1Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -184,7 +194,7 @@ public class InterestRateUsedForPaymentFormat1Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateUsedForPaymentFormat1Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<InterestRateUsedForPaymentFormat1Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat1Choice.mmObject();
@@ -197,6 +207,16 @@ public class InterestRateUsedForPaymentFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(InterestRateUsedForPaymentFormat1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat1Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -236,7 +256,7 @@ public class InterestRateUsedForPaymentFormat1Choice {
 	 * "Specifies different formats for interest rate used for payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateUsedForPaymentFormat1Choice, RateTypeAndAmountAndStatus3> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<InterestRateUsedForPaymentFormat1Choice, RateTypeAndAmountAndStatus3>() {
 		{
 			businessComponentTrace_lazy = () -> Interest.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat1Choice.mmObject();
@@ -250,6 +270,16 @@ public class InterestRateUsedForPaymentFormat1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus3.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus3 getValue(InterestRateUsedForPaymentFormat1Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat1Choice obj, RateTypeAndAmountAndStatus3 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -285,7 +315,7 @@ public class InterestRateUsedForPaymentFormat1Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateUsedForPaymentFormat1Choice, RateType12Code> mmNotSpecifiedRate = new MMMessageAttribute<InterestRateUsedForPaymentFormat1Choice, RateType12Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat1Choice.mmObject();
 			isDerived = false;
@@ -297,6 +327,16 @@ public class InterestRateUsedForPaymentFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType12Code.mmObject();
+		}
+
+		@Override
+		public RateType12Code getValue(InterestRateUsedForPaymentFormat1Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat1Choice obj, RateType12Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

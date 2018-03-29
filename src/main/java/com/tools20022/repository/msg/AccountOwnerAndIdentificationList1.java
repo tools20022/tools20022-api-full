@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountOwnerAndIdentification1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -66,7 +67,7 @@ public class AccountOwnerAndIdentificationList1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "List", required = true)
-	protected List<com.tools20022.repository.msg.AccountOwnerAndIdentification1> list;
+	protected List<AccountOwnerAndIdentification1> list;
 	/**
 	 * 
 	 <p>
@@ -94,7 +95,7 @@ public class AccountOwnerAndIdentificationList1 {
 	 * definition} = "List of the identifier pairs."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmList = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOwnerAndIdentificationList1, List<AccountOwnerAndIdentification1>> mmList = new MMMessageAssociationEnd<AccountOwnerAndIdentificationList1, List<AccountOwnerAndIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountOwnerAndIdentificationList1.mmObject();
 			isDerived = false;
@@ -104,7 +105,17 @@ public class AccountOwnerAndIdentificationList1 {
 			definition = "List of the identifier pairs.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountOwnerAndIdentification1.mmObject();
+			type_lazy = () -> AccountOwnerAndIdentification1.mmObject();
+		}
+
+		@Override
+		public List<AccountOwnerAndIdentification1> getValue(AccountOwnerAndIdentificationList1 obj) {
+			return obj.getList();
+		}
+
+		@Override
+		public void setValue(AccountOwnerAndIdentificationList1 obj, List<AccountOwnerAndIdentification1> value) {
+			obj.setList(value);
 		}
 	};
 
@@ -125,7 +136,7 @@ public class AccountOwnerAndIdentificationList1 {
 		return list == null ? list = new ArrayList<>() : list;
 	}
 
-	public AccountOwnerAndIdentificationList1 setList(List<com.tools20022.repository.msg.AccountOwnerAndIdentification1> list) {
+	public AccountOwnerAndIdentificationList1 setList(List<AccountOwnerAndIdentification1> list) {
 		this.list = Objects.requireNonNull(list);
 		return this;
 	}

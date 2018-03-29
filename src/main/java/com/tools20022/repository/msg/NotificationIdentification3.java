@@ -141,7 +141,7 @@ public class NotificationIdentification3 {
 	 * NotificationIdentification1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationIdentification3, Max35Text> mmIdentification = new MMMessageAttribute<NotificationIdentification3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCorporateActionNotificationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification3.mmObject();
@@ -156,6 +156,16 @@ public class NotificationIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(NotificationIdentification3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification3 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -211,7 +221,7 @@ public class NotificationIdentification3 {
 	 * NotificationIdentification1.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationIdentification3, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAttribute<NotificationIdentification3, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCreationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification3.mmObject();
@@ -226,6 +236,16 @@ public class NotificationIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(NotificationIdentification3 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification3 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 

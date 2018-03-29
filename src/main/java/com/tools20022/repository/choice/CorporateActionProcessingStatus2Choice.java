@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
@@ -119,7 +120,7 @@ public class CorporateActionProcessingStatus2Choice {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionProcessingStatus2Choice, CorporateActionProcessingStatus1Choice> mmCode = new MMMessageAttribute<CorporateActionProcessingStatus2Choice, CorporateActionProcessingStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice.mmObject();
@@ -130,7 +131,17 @@ public class CorporateActionProcessingStatus2Choice {
 			definition = "Specifies the status of the details of the event.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmObject();
+			complexType_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionProcessingStatus1Choice getValue(CorporateActionProcessingStatus2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionProcessingStatus2Choice obj, CorporateActionProcessingStatus1Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -168,7 +179,7 @@ public class CorporateActionProcessingStatus2Choice {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionProcessingStatus2Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<CorporateActionProcessingStatus2Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus2Choice.mmObject();
@@ -180,6 +191,16 @@ public class CorporateActionProcessingStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CorporateActionProcessingStatus2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionProcessingStatus2Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -193,7 +214,7 @@ public class CorporateActionProcessingStatus2Choice {
 				name = "CorporateActionProcessingStatus2Choice";
 				definition = "Specifies the status of the details of the corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionProcessingStatus3Choice.mmObject());
-				previousVersion_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmObject();
+				previousVersion_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
 			}
 		});
 		return mmObject_lazy.get();
@@ -203,7 +224,7 @@ public class CorporateActionProcessingStatus2Choice {
 		return code;
 	}
 
-	public CorporateActionProcessingStatus2Choice setCode(com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice code) {
+	public CorporateActionProcessingStatus2Choice setCode(CorporateActionProcessingStatus1Choice code) {
 		this.code = Objects.requireNonNull(code);
 		return this;
 	}

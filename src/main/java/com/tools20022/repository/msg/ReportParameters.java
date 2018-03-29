@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BreakdownByParty2;
+import com.tools20022.repository.msg.BreakdownByUserDefinedParameter2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -101,7 +103,7 @@ public class ReportParameters {
 	 * definition} = "Country for which the cash flow is to be reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters, Optional<CountryCode>> mmCountry = new MMMessageAttribute<ReportParameters, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
 			isDerived = false;
@@ -112,6 +114,16 @@ public class ReportParameters {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(ReportParameters obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(ReportParameters obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -144,7 +156,7 @@ public class ReportParameters {
 	 * definition} = "Currency for which the cash flow is to be reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters, Optional<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<ReportParameters, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
 			isDerived = false;
@@ -155,6 +167,16 @@ public class ReportParameters {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(ReportParameters obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ReportParameters obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty")
@@ -187,7 +209,7 @@ public class ReportParameters {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportParameters, Optional<BreakdownByParty2>> mmParty = new MMMessageAssociationEnd<ReportParameters, Optional<BreakdownByParty2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
 			isDerived = false;
@@ -198,7 +220,17 @@ public class ReportParameters {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BreakdownByParty2.mmObject();
+			type_lazy = () -> BreakdownByParty2.mmObject();
+		}
+
+		@Override
+		public Optional<BreakdownByParty2> getValue(ReportParameters obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(ReportParameters obj, Optional<BreakdownByParty2> value) {
+			obj.setParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsrDfndParam")
@@ -231,7 +263,7 @@ public class ReportParameters {
 	 * "User defined parameter/s to be used for the cash forecast report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUserDefinedParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportParameters, Optional<BreakdownByUserDefinedParameter2>> mmUserDefinedParameter = new MMMessageAssociationEnd<ReportParameters, Optional<BreakdownByUserDefinedParameter2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters.mmObject();
 			isDerived = false;
@@ -242,7 +274,17 @@ public class ReportParameters {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmObject();
+			type_lazy = () -> BreakdownByUserDefinedParameter2.mmObject();
+		}
+
+		@Override
+		public Optional<BreakdownByUserDefinedParameter2> getValue(ReportParameters obj) {
+			return obj.getUserDefinedParameter();
+		}
+
+		@Override
+		public void setValue(ReportParameters obj, Optional<BreakdownByUserDefinedParameter2> value) {
+			obj.setUserDefinedParameter(value.orElse(null));
 		}
 	};
 
@@ -282,7 +324,7 @@ public class ReportParameters {
 		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public ReportParameters setParty(com.tools20022.repository.msg.BreakdownByParty2 party) {
+	public ReportParameters setParty(BreakdownByParty2 party) {
 		this.party = party;
 		return this;
 	}
@@ -291,7 +333,7 @@ public class ReportParameters {
 		return userDefinedParameter == null ? Optional.empty() : Optional.of(userDefinedParameter);
 	}
 
-	public ReportParameters setUserDefinedParameter(com.tools20022.repository.msg.BreakdownByUserDefinedParameter2 userDefinedParameter) {
+	public ReportParameters setUserDefinedParameter(BreakdownByUserDefinedParameter2 userDefinedParameter) {
 		this.userDefinedParameter = userDefinedParameter;
 		return this;
 	}

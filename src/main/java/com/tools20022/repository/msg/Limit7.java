@@ -129,7 +129,7 @@ public class Limit7 {
 	 * Limit4.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit7, Amount2Choice> mmAmount = new MMMessageAttribute<Limit7, Amount2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit7.mmObject();
@@ -142,6 +142,16 @@ public class Limit7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Amount2Choice getValue(Limit7 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Limit7 obj, Amount2Choice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -183,7 +193,7 @@ public class Limit7 {
 	 * Limit4.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit7, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<Limit7, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit7.mmObject();
@@ -196,6 +206,16 @@ public class Limit7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(Limit7 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(Limit7 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -237,7 +257,7 @@ public class Limit7 {
 	 * Limit4.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit7, Optional<LimitStatus1Code>> mmStatus = new MMMessageAttribute<Limit7, Optional<LimitStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmLimitStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit7.mmObject();
@@ -250,6 +270,16 @@ public class Limit7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LimitStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<LimitStatus1Code> getValue(Limit7 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(Limit7 obj, Optional<LimitStatus1Code> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDtTm")
@@ -291,7 +321,7 @@ public class Limit7 {
 	 * Limit4.mmStartDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit7, Optional<DateAndDateTime2Choice>> mmStartDateTime = new MMMessageAttribute<Limit7, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit7.mmObject();
@@ -304,6 +334,16 @@ public class Limit7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(Limit7 obj) {
+			return obj.getStartDateTime();
+		}
+
+		@Override
+		public void setValue(Limit7 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setStartDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsdAmt")
@@ -345,7 +385,7 @@ public class Limit7 {
 	 * Limit4.mmUsedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUsedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit7, Optional<Amount2Choice>> mmUsedAmount = new MMMessageAttribute<Limit7, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmUsedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit7.mmObject();
@@ -358,6 +398,16 @@ public class Limit7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(Limit7 obj) {
+			return obj.getUsedAmount();
+		}
+
+		@Override
+		public void setValue(Limit7 obj, Optional<Amount2Choice> value) {
+			obj.setUsedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsdAmtCdtDbtInd")
@@ -401,7 +451,7 @@ public class Limit7 {
 	 * Limit4.mmUsedAmountCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUsedAmountCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit7, Optional<CreditDebitCode>> mmUsedAmountCreditDebitIndicator = new MMMessageAttribute<Limit7, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit7.mmObject();
@@ -414,6 +464,16 @@ public class Limit7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(Limit7 obj) {
+			return obj.getUsedAmountCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(Limit7 obj, Optional<CreditDebitCode> value) {
+			obj.setUsedAmountCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsdPctg")
@@ -455,7 +515,7 @@ public class Limit7 {
 	 * Limit4.mmUsedPercentage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUsedPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit7, Optional<PercentageRate>> mmUsedPercentage = new MMMessageAttribute<Limit7, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit7.mmObject();
@@ -468,6 +528,16 @@ public class Limit7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Limit7 obj) {
+			return obj.getUsedPercentage();
+		}
+
+		@Override
+		public void setValue(Limit7 obj, Optional<PercentageRate> value) {
+			obj.setUsedPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmngAmt")
@@ -509,7 +579,7 @@ public class Limit7 {
 	 * Limit4.mmRemainingAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemainingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Limit7, Optional<Amount2Choice>> mmRemainingAmount = new MMMessageAttribute<Limit7, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limit7.mmObject();
@@ -522,6 +592,16 @@ public class Limit7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(Limit7 obj) {
+			return obj.getRemainingAmount();
+		}
+
+		@Override
+		public void setValue(Limit7 obj, Optional<Amount2Choice> value) {
+			obj.setRemainingAmount(value.orElse(null));
 		}
 	};
 

@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification37;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount22;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +128,7 @@ public class SettlementParties8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties8, PartyIdentification37> mmDepository = new MMMessageAssociationEnd<SettlementParties8, PartyIdentification37>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties8.mmObject();
@@ -139,7 +141,17 @@ public class SettlementParties8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification37.mmObject();
+			type_lazy = () -> PartyIdentification37.mmObject();
+		}
+
+		@Override
+		public PartyIdentification37 getValue(SettlementParties8 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(SettlementParties8 obj, PartyIdentification37 value) {
+			obj.setDepository(value);
 		}
 	};
 	@XmlElement(name = "Pty1", required = true)
@@ -179,7 +191,7 @@ public class SettlementParties8 {
 	 * definition} = "Party that interacts with the Depository."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties8, PartyIdentificationAndAccount22> mmParty1 = new MMMessageAssociationEnd<SettlementParties8, PartyIdentificationAndAccount22>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties8.mmObject();
@@ -192,7 +204,17 @@ public class SettlementParties8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount22.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount22.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount22 getValue(SettlementParties8 obj) {
+			return obj.getParty1();
+		}
+
+		@Override
+		public void setValue(SettlementParties8 obj, PartyIdentificationAndAccount22 value) {
+			obj.setParty1(value);
 		}
 	};
 	@XmlElement(name = "Pty2")
@@ -234,7 +256,7 @@ public class SettlementParties8 {
 	 * definition} = "Party that interacts with the Party1."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty2 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties8, Optional<PartyIdentificationAndAccount22>> mmParty2 = new MMMessageAssociationEnd<SettlementParties8, Optional<PartyIdentificationAndAccount22>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties8.mmObject();
@@ -248,7 +270,17 @@ public class SettlementParties8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount22.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount22.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount22> getValue(SettlementParties8 obj) {
+			return obj.getParty2();
+		}
+
+		@Override
+		public void setValue(SettlementParties8 obj, Optional<PartyIdentificationAndAccount22> value) {
+			obj.setParty2(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty3")
@@ -289,7 +321,7 @@ public class SettlementParties8 {
 	 * definition} = "Party that interacts with the Party2."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty3 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties8, Optional<PartyIdentificationAndAccount22>> mmParty3 = new MMMessageAssociationEnd<SettlementParties8, Optional<PartyIdentificationAndAccount22>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties8.mmObject();
@@ -302,7 +334,17 @@ public class SettlementParties8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount22.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount22.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount22> getValue(SettlementParties8 obj) {
+			return obj.getParty3();
+		}
+
+		@Override
+		public void setValue(SettlementParties8 obj, Optional<PartyIdentificationAndAccount22> value) {
+			obj.setParty3(value.orElse(null));
 		}
 	};
 
@@ -326,7 +368,7 @@ public class SettlementParties8 {
 		return depository;
 	}
 
-	public SettlementParties8 setDepository(com.tools20022.repository.msg.PartyIdentification37 depository) {
+	public SettlementParties8 setDepository(PartyIdentification37 depository) {
 		this.depository = Objects.requireNonNull(depository);
 		return this;
 	}
@@ -335,7 +377,7 @@ public class SettlementParties8 {
 		return party1;
 	}
 
-	public SettlementParties8 setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount22 party1) {
+	public SettlementParties8 setParty1(PartyIdentificationAndAccount22 party1) {
 		this.party1 = Objects.requireNonNull(party1);
 		return this;
 	}
@@ -344,7 +386,7 @@ public class SettlementParties8 {
 		return party2 == null ? Optional.empty() : Optional.of(party2);
 	}
 
-	public SettlementParties8 setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount22 party2) {
+	public SettlementParties8 setParty2(PartyIdentificationAndAccount22 party2) {
 		this.party2 = party2;
 		return this;
 	}
@@ -353,7 +395,7 @@ public class SettlementParties8 {
 		return party3 == null ? Optional.empty() : Optional.of(party3);
 	}
 
-	public SettlementParties8 setParty3(com.tools20022.repository.msg.PartyIdentificationAndAccount22 party3) {
+	public SettlementParties8 setParty3(PartyIdentificationAndAccount22 party3) {
 		this.party3 = party3;
 		return this;
 	}

@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.ClearingScheme1Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class AccountLimits1 {
 	 * definition} = "Defines type of funds limits."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLimits1, Max35Text> mmLimitType = new MMMessageAttribute<AccountLimits1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
@@ -117,6 +118,16 @@ public class AccountLimits1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountLimits1 obj) {
+			return obj.getLimitType();
+		}
+
+		@Override
+		public void setValue(AccountLimits1 obj, Max35Text value) {
+			obj.setLimitType(value);
 		}
 	};
 	@XmlElement(name = "LmtAmt", required = true)
@@ -148,7 +159,7 @@ public class AccountLimits1 {
 	 * definition} = "Amount of money of the limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLimits1, ActiveCurrencyAndAmount> mmLimitAmount = new MMMessageAttribute<AccountLimits1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
@@ -159,6 +170,16 @@ public class AccountLimits1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AccountLimits1 obj) {
+			return obj.getLimitAmount();
+		}
+
+		@Override
+		public void setValue(AccountLimits1 obj, ActiveCurrencyAndAmount value) {
+			obj.setLimitAmount(value);
 		}
 	};
 	@XmlElement(name = "LmtUtlstnAmt")
@@ -190,7 +211,7 @@ public class AccountLimits1 {
 	 * definition} = "Amount of used funds out of defined limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitUtilisationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountLimits1, Optional<ActiveCurrencyAndAmount>> mmLimitUtilisationAmount = new MMMessageAttribute<AccountLimits1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
@@ -201,6 +222,16 @@ public class AccountLimits1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(AccountLimits1 obj) {
+			return obj.getLimitUtilisationAmount();
+		}
+
+		@Override
+		public void setValue(AccountLimits1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setLimitUtilisationAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BilLmtCtrPtyId")
@@ -233,7 +264,7 @@ public class AccountLimits1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLimits1, Optional<BranchAndFinancialInstitutionIdentification5>> mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd<AccountLimits1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
@@ -244,7 +275,17 @@ public class AccountLimits1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(AccountLimits1 obj) {
+			return obj.getBilateralLimitCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(AccountLimits1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setBilateralLimitCounterpartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrCrctSchme")
@@ -276,7 +317,7 @@ public class AccountLimits1 {
 	 * "Clearing scheme related to Registry of the Clearing Positions (RCP)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingCircuitScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountLimits1, Optional<ClearingScheme1Choice>> mmClearingCircuitScheme = new MMMessageAssociationEnd<AccountLimits1, Optional<ClearingScheme1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
@@ -288,6 +329,16 @@ public class AccountLimits1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ClearingScheme1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingScheme1Choice> getValue(AccountLimits1 obj) {
+			return obj.getClearingCircuitScheme();
+		}
+
+		@Override
+		public void setValue(AccountLimits1 obj, Optional<ClearingScheme1Choice> value) {
+			obj.setClearingCircuitScheme(value.orElse(null));
 		}
 	};
 
@@ -337,7 +388,7 @@ public class AccountLimits1 {
 		return bilateralLimitCounterpartyIdentification == null ? Optional.empty() : Optional.of(bilateralLimitCounterpartyIdentification);
 	}
 
-	public AccountLimits1 setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification) {
+	public AccountLimits1 setBilateralLimitCounterpartyIdentification(BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification) {
 		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
 		return this;
 	}

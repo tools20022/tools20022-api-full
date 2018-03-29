@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice;
 import com.tools20022.repository.entity.BeneficialOwner;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.GeneratedRepository;
@@ -107,7 +108,7 @@ public class CertificationType1FormatChoice {
 	 * definition} = "Certification type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificationType1FormatChoice, BeneficiaryCertificationType1FormatChoice> mmCode = new MMMessageAttribute<CertificationType1FormatChoice, BeneficiaryCertificationType1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationFormat;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertificationType1FormatChoice.mmObject();
@@ -118,7 +119,17 @@ public class CertificationType1FormatChoice {
 			definition = "Certification type expressed as a code.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice.mmObject();
+			complexType_lazy = () -> BeneficiaryCertificationType1FormatChoice.mmObject();
+		}
+
+		@Override
+		public BeneficiaryCertificationType1FormatChoice getValue(CertificationType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CertificationType1FormatChoice obj, BeneficiaryCertificationType1FormatChoice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +167,7 @@ public class CertificationType1FormatChoice {
 	 * definition} = "Certification type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificationType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<CertificationType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationFormat;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertificationType1FormatChoice.mmObject();
@@ -168,6 +179,16 @@ public class CertificationType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CertificationType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CertificationType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -189,7 +210,7 @@ public class CertificationType1FormatChoice {
 		return code;
 	}
 
-	public CertificationType1FormatChoice setCode(com.tools20022.repository.choice.BeneficiaryCertificationType1FormatChoice code) {
+	public CertificationType1FormatChoice setCode(BeneficiaryCertificationType1FormatChoice code) {
 		this.code = Objects.requireNonNull(code);
 		return this;
 	}

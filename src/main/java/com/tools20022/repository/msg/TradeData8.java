@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RegulatoryReporting1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -165,7 +166,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginatorReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData8, Optional<Max35Text>> mmOriginatorReference = new MMMessageAttribute<TradeData8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
 			isDerived = false;
@@ -177,6 +178,16 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeData8 obj) {
+			return obj.getOriginatorReference();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Optional<Max35Text> value) {
+			obj.setOriginatorReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSysUnqRef", required = true)
@@ -222,7 +233,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchingSystemUniqueReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData8, Max35Text> mmMatchingSystemUniqueReference = new MMMessageAttribute<TradeData8, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
@@ -235,6 +246,16 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TradeData8 obj) {
+			return obj.getMatchingSystemUniqueReference();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Max35Text value) {
+			obj.setMatchingSystemUniqueReference(value);
 		}
 	};
 	@XmlElement(name = "MtchgSysMtchgRef")
@@ -280,7 +301,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchingSystemMatchingReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData8, Optional<Max35Text>> mmMatchingSystemMatchingReference = new MMMessageAttribute<TradeData8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
@@ -293,6 +314,16 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeData8 obj) {
+			return obj.getMatchingSystemMatchingReference();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Optional<Max35Text> value) {
+			obj.setMatchingSystemMatchingReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSysMtchdSdRef")
@@ -338,7 +369,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchingSystemMatchedSideReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData8, Optional<Max35Text>> mmMatchingSystemMatchedSideReference = new MMMessageAttribute<TradeData8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
@@ -351,6 +382,16 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeData8 obj) {
+			return obj.getMatchingSystemMatchedSideReference();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Optional<Max35Text> value) {
+			obj.setMatchingSystemMatchedSideReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CurSttlmDt")
@@ -394,7 +435,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData8, Optional<ISODate>> mmCurrentSettlementDate = new MMMessageAttribute<TradeData8, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
@@ -407,6 +448,16 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TradeData8 obj) {
+			return obj.getCurrentSettlementDate();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Optional<ISODate> value) {
+			obj.setCurrentSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewSttlmDt")
@@ -450,7 +501,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData8, Optional<ISODate>> mmNewSettlementDate = new MMMessageAttribute<TradeData8, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
@@ -463,6 +514,16 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TradeData8 obj) {
+			return obj.getNewSettlementDate();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Optional<ISODate> value) {
+			obj.setNewSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CurStsDtTm")
@@ -508,7 +569,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentStatusDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData8, Optional<ISODateTime>> mmCurrentStatusDateTime = new MMMessageAttribute<TradeData8, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
@@ -521,6 +582,16 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TradeData8 obj) {
+			return obj.getCurrentStatusDateTime();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Optional<ISODateTime> value) {
+			obj.setCurrentStatusDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdctTp")
@@ -563,7 +634,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProductType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData8, Optional<Max35Text>> mmProductType = new MMMessageAttribute<TradeData8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmTypeOfProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
@@ -576,6 +647,16 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeData8 obj) {
+			return obj.getProductType();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Optional<Max35Text> value) {
+			obj.setProductType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSsnIdr")
@@ -617,7 +698,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementSessionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData8, Optional<Exact4AlphaNumericText>> mmSettlementSessionIdentifier = new MMMessageAttribute<TradeData8, Optional<Exact4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
 			isDerived = false;
@@ -629,6 +710,16 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(TradeData8 obj) {
+			return obj.getSettlementSessionIdentifier();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setSettlementSessionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RgltryRptg")
@@ -673,7 +764,7 @@ public class TradeData8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegulatoryReporting = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeData8, Optional<RegulatoryReporting1>> mmRegulatoryReporting = new MMMessageAssociationEnd<TradeData8, Optional<RegulatoryReporting1>>() {
 		{
 			businessElementTrace_lazy = () -> FinancialTransaction.mmRegulatoryReport;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData8.mmObject();
@@ -686,7 +777,17 @@ public class TradeData8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting1.mmObject();
+			type_lazy = () -> RegulatoryReporting1.mmObject();
+		}
+
+		@Override
+		public Optional<RegulatoryReporting1> getValue(TradeData8 obj) {
+			return obj.getRegulatoryReporting();
+		}
+
+		@Override
+		public void setValue(TradeData8 obj, Optional<RegulatoryReporting1> value) {
+			obj.setRegulatoryReporting(value.orElse(null));
 		}
 	};
 
@@ -796,7 +897,7 @@ public class TradeData8 {
 		return regulatoryReporting == null ? Optional.empty() : Optional.of(regulatoryReporting);
 	}
 
-	public TradeData8 setRegulatoryReporting(com.tools20022.repository.msg.RegulatoryReporting1 regulatoryReporting) {
+	public TradeData8 setRegulatoryReporting(RegulatoryReporting1 regulatoryReporting) {
 		this.regulatoryReporting = regulatoryReporting;
 		return this;
 	}

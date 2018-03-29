@@ -108,7 +108,7 @@ public class ServiceLevel2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceLevel2Choice, ServiceLevel1Code> mmCode = new MMMessageAttribute<ServiceLevel2Choice, ServiceLevel1Code>() {
 		{
 			businessElementTrace_lazy = () -> ServiceLevel.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ServiceLevel2Choice.mmObject();
@@ -120,6 +120,16 @@ public class ServiceLevel2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ServiceLevel1Code.mmObject();
+		}
+
+		@Override
+		public ServiceLevel1Code getValue(ServiceLevel2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ServiceLevel2Choice obj, ServiceLevel1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class ServiceLevel2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceLevel2Choice, Max35Text> mmProprietary = new MMMessageAttribute<ServiceLevel2Choice, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> ServiceLevel.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ServiceLevel2Choice.mmObject();
@@ -169,6 +179,16 @@ public class ServiceLevel2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ServiceLevel2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ServiceLevel2Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

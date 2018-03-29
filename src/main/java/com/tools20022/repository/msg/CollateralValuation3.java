@@ -127,7 +127,7 @@ public class CollateralValuation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNominalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValuation3, Optional<ActiveCurrencyAndAmount>> mmNominalAmount = new MMMessageAttribute<CollateralValuation3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation3.mmObject();
@@ -140,6 +140,16 @@ public class CollateralValuation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CollateralValuation3 obj) {
+			return obj.getNominalAmount();
+		}
+
+		@Override
+		public void setValue(CollateralValuation3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNominalAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ISIN", required = true)
@@ -187,7 +197,7 @@ public class CollateralValuation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValuation3, ISINIdentifier> mmISIN = new MMMessageAttribute<CollateralValuation3, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValuation3.mmObject();
@@ -200,6 +210,16 @@ public class CollateralValuation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(CollateralValuation3 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(CollateralValuation3 obj, ISINIdentifier value) {
+			obj.setISIN(value);
 		}
 	};
 

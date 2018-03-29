@@ -126,7 +126,7 @@ public class PaymentInstruction27 {
 	 * PaymentInstruction12.mmInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction27, Optional<Instruction1Code>> mmInstruction = new MMMessageAttribute<PaymentInstruction27, Optional<Instruction1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction27.mmObject();
@@ -139,6 +139,16 @@ public class PaymentInstruction27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Instruction1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Instruction1Code> getValue(PaymentInstruction27 obj) {
+			return obj.getInstruction();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction27 obj, Optional<Instruction1Code> value) {
+			obj.setInstruction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -182,7 +192,7 @@ public class PaymentInstruction27 {
 	 * PaymentInstruction12.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction27, Optional<PaymentType4Choice>> mmType = new MMMessageAttribute<PaymentInstruction27, Optional<PaymentType4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction27.mmObject();
@@ -195,6 +205,16 @@ public class PaymentInstruction27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentType4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentType4Choice> getValue(PaymentInstruction27 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction27 obj, Optional<PaymentType4Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -239,7 +259,7 @@ public class PaymentInstruction27 {
 	 * PaymentInstruction12.mmPriority}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction27, Optional<PriorityCode3Choice>> mmPriority = new MMMessageAttribute<PaymentInstruction27, Optional<PriorityCode3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction27.mmObject();
@@ -252,6 +272,16 @@ public class PaymentInstruction27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityCode3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriorityCode3Choice> getValue(PaymentInstruction27 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction27 obj, Optional<PriorityCode3Choice> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgVldtyTm")
@@ -296,7 +326,7 @@ public class PaymentInstruction27 {
 	 * PaymentInstruction12.mmProcessingValidityTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction27, Optional<DateTimePeriod1Choice>> mmProcessingValidityTime = new MMMessageAttribute<PaymentInstruction27, Optional<DateTimePeriod1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmProcessingValidityTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction27.mmObject();
@@ -309,6 +339,16 @@ public class PaymentInstruction27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriod1Choice> getValue(PaymentInstruction27 obj) {
+			return obj.getProcessingValidityTime();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction27 obj, Optional<DateTimePeriod1Choice> value) {
+			obj.setProcessingValidityTime(value.orElse(null));
 		}
 	};
 

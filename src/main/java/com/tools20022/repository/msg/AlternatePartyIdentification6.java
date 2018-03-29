@@ -119,7 +119,7 @@ public class AlternatePartyIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternatePartyIdentification6, IdentificationType41Choice> mmTypeOfIdentification = new MMMessageAttribute<AlternatePartyIdentification6, IdentificationType41Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification6.mmObject();
@@ -131,6 +131,16 @@ public class AlternatePartyIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IdentificationType41Choice.mmObject();
+		}
+
+		@Override
+		public IdentificationType41Choice getValue(AlternatePartyIdentification6 obj) {
+			return obj.getTypeOfIdentification();
+		}
+
+		@Override
+		public void setValue(AlternatePartyIdentification6 obj, IdentificationType41Choice value) {
+			obj.setTypeOfIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -169,7 +179,7 @@ public class AlternatePartyIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternatePartyIdentification6, CountryCode> mmCountry = new MMMessageAttribute<AlternatePartyIdentification6, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification6.mmObject();
@@ -181,6 +191,16 @@ public class AlternatePartyIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(AlternatePartyIdentification6 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(AlternatePartyIdentification6 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "AltrnId", required = true)
@@ -217,7 +237,7 @@ public class AlternatePartyIdentification6 {
 	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternatePartyIdentification6, Max35Text> mmAlternateIdentification = new MMMessageAttribute<AlternatePartyIdentification6, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification6.mmObject();
@@ -229,6 +249,16 @@ public class AlternatePartyIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AlternatePartyIdentification6 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(AlternatePartyIdentification6 obj, Max35Text value) {
+			obj.setAlternateIdentification(value);
 		}
 	};
 

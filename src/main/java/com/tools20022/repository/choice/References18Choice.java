@@ -191,7 +191,7 @@ public class References18Choice {
 	 * "Unambiguous identification of the confirmation to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionConfirmationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References18Choice, SettlementTypeAndIdentification13> mmSecuritiesSettlementTransactionConfirmationIdentification = new MMMessageAssociationEnd<References18Choice, SettlementTypeAndIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
@@ -204,6 +204,16 @@ public class References18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification13.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification13 getValue(References18Choice obj) {
+			return obj.getSecuritiesSettlementTransactionConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, SettlementTypeAndIdentification13 value) {
+			obj.setSecuritiesSettlementTransactionConfirmationIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntraPosMvmntConfId", required = true)
@@ -237,7 +247,7 @@ public class References18Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraPositionMovementConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References18Choice, Max35Text> mmIntraPositionMovementConfirmationIdentification = new MMMessageAttribute<References18Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
 			isDerived = false;
@@ -248,6 +258,16 @@ public class References18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References18Choice obj) {
+			return obj.getIntraPositionMovementConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, Max35Text value) {
+			obj.setIntraPositionMovementConfirmationIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesBalAcctgRptId", required = true)
@@ -280,7 +300,7 @@ public class References18Choice {
 	 * "Unambiguous identification of the report message to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesBalanceAccountingReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References18Choice, Max35Text> mmSecuritiesBalanceAccountingReportIdentification = new MMMessageAttribute<References18Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
 			isDerived = false;
@@ -291,6 +311,16 @@ public class References18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References18Choice obj) {
+			return obj.getSecuritiesBalanceAccountingReportIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, Max35Text value) {
+			obj.setSecuritiesBalanceAccountingReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesBalCtdyRptId", required = true)
@@ -323,7 +353,7 @@ public class References18Choice {
 	 * "Unambiguous identification of the report message to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesBalanceCustodyReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References18Choice, Max35Text> mmSecuritiesBalanceCustodyReportIdentification = new MMMessageAttribute<References18Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
 			isDerived = false;
@@ -334,6 +364,16 @@ public class References18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References18Choice obj) {
+			return obj.getSecuritiesBalanceCustodyReportIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, Max35Text value) {
+			obj.setSecuritiesBalanceCustodyReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntraPosMvmntPstngRptId", required = true)
@@ -367,7 +407,7 @@ public class References18Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraPositionMovementPostingReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References18Choice, Max35Text> mmIntraPositionMovementPostingReportIdentification = new MMMessageAttribute<References18Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
 			isDerived = false;
@@ -378,6 +418,16 @@ public class References18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References18Choice obj) {
+			return obj.getIntraPositionMovementPostingReportIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, Max35Text value) {
+			obj.setIntraPositionMovementPostingReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesFincgConfId", required = true)
@@ -410,7 +460,7 @@ public class References18Choice {
 	 * "Unambiguous identification of the confirmation to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesFinancingConfirmationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References18Choice, SettlementTypeAndIdentification13> mmSecuritiesFinancingConfirmationIdentification = new MMMessageAssociationEnd<References18Choice, SettlementTypeAndIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
 			isDerived = false;
@@ -422,6 +472,16 @@ public class References18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification13.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification13 getValue(References18Choice obj) {
+			return obj.getSecuritiesFinancingConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, SettlementTypeAndIdentification13 value) {
+			obj.setSecuritiesFinancingConfirmationIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesTxPdgRptId", required = true)
@@ -454,7 +514,7 @@ public class References18Choice {
 	 * "Unambiguous identification of the report message to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesTransactionPendingReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References18Choice, Max35Text> mmSecuritiesTransactionPendingReportIdentification = new MMMessageAttribute<References18Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
 			isDerived = false;
@@ -465,6 +525,16 @@ public class References18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References18Choice obj) {
+			return obj.getSecuritiesTransactionPendingReportIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, Max35Text value) {
+			obj.setSecuritiesTransactionPendingReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesTxPstngRptId", required = true)
@@ -497,7 +567,7 @@ public class References18Choice {
 	 * "Unambiguous identification of the report message to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesTransactionPostingReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References18Choice, Max35Text> mmSecuritiesTransactionPostingReportIdentification = new MMMessageAttribute<References18Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
 			isDerived = false;
@@ -508,6 +578,16 @@ public class References18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References18Choice obj) {
+			return obj.getSecuritiesTransactionPostingReportIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, Max35Text value) {
+			obj.setSecuritiesTransactionPostingReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesSttlmTxAllgmtRptId", required = true)
@@ -545,7 +625,7 @@ public class References18Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesSettlementTransactionAllegementReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References18Choice, Max35Text> mmSecuritiesSettlementTransactionAllegementReportIdentification = new MMMessageAttribute<References18Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
@@ -557,6 +637,16 @@ public class References18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References18Choice obj) {
+			return obj.getSecuritiesSettlementTransactionAllegementReportIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, Max35Text value) {
+			obj.setSecuritiesSettlementTransactionAllegementReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesSttlmTxAllgmtNtfctnTxId", required = true)
@@ -597,7 +687,7 @@ public class References18Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References18Choice, SettlementTypeAndIdentification13> mmSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification = new MMMessageAssociationEnd<References18Choice, SettlementTypeAndIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
@@ -610,6 +700,16 @@ public class References18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification13.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification13 getValue(References18Choice obj) {
+			return obj.getSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, SettlementTypeAndIdentification13 value) {
+			obj.setSecuritiesSettlementTransactionAllegementNotificationTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrtflTrfNtfctnId", required = true)
@@ -641,7 +741,7 @@ public class References18Choice {
 	 * definition} = "Identification of the portfolio transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortfolioTransferNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References18Choice, Max35Text> mmPortfolioTransferNotificationIdentification = new MMMessageAttribute<References18Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
 			isDerived = false;
@@ -652,6 +752,16 @@ public class References18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References18Choice obj) {
+			return obj.getPortfolioTransferNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, Max35Text value) {
+			obj.setPortfolioTransferNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesSttlmTxGnrtnNtfctnId", required = true)
@@ -691,7 +801,7 @@ public class References18Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionGenerationNotificationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References18Choice, SettlementTypeAndIdentification13> mmSecuritiesSettlementTransactionGenerationNotificationIdentification = new MMMessageAssociationEnd<References18Choice, SettlementTypeAndIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
@@ -704,6 +814,16 @@ public class References18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification13.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification13 getValue(References18Choice obj) {
+			return obj.getSecuritiesSettlementTransactionGenerationNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, SettlementTypeAndIdentification13 value) {
+			obj.setSecuritiesSettlementTransactionGenerationNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "OthrMsgId", required = true)
@@ -736,7 +856,7 @@ public class References18Choice {
 	 * "Unambiguous identification of the message to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References18Choice, Max35Text> mmOtherMessageIdentification = new MMMessageAttribute<References18Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References18Choice.mmObject();
 			isDerived = false;
@@ -747,6 +867,16 @@ public class References18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References18Choice obj) {
+			return obj.getOtherMessageIdentification();
+		}
+
+		@Override
+		public void setValue(References18Choice obj, Max35Text value) {
+			obj.setOtherMessageIdentification(value);
 		}
 	};
 

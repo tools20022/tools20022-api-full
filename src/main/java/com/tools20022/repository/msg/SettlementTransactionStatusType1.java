@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.MatchingStatus8Choice;
 import com.tools20022.repository.choice.ProcessingStatus30Choice;
 import com.tools20022.repository.choice.SettlementStatus1Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryReason1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -123,7 +124,7 @@ public class SettlementTransactionStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTransactionStatusType1, List<ProcessingStatus30Choice>> mmProcessingStatus = new MMMessageAssociationEnd<SettlementTransactionStatusType1, List<ProcessingStatus30Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
@@ -135,6 +136,16 @@ public class SettlementTransactionStatusType1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus30Choice.mmObject();
+		}
+
+		@Override
+		public List<ProcessingStatus30Choice> getValue(SettlementTransactionStatusType1 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionStatusType1 obj, List<ProcessingStatus30Choice> value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts")
@@ -176,7 +187,7 @@ public class SettlementTransactionStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTransactionStatusType1, List<MatchingStatus8Choice>> mmInferredMatchingStatus = new MMMessageAssociationEnd<SettlementTransactionStatusType1, List<MatchingStatus8Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
@@ -188,6 +199,16 @@ public class SettlementTransactionStatusType1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus8Choice.mmObject();
+		}
+
+		@Override
+		public List<MatchingStatus8Choice> getValue(SettlementTransactionStatusType1 obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionStatusType1 obj, List<MatchingStatus8Choice> value) {
+			obj.setInferredMatchingStatus(value);
 		}
 	};
 	@XmlElement(name = "MtchgSts")
@@ -227,7 +248,7 @@ public class SettlementTransactionStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTransactionStatusType1, List<MatchingStatus8Choice>> mmMatchingStatus = new MMMessageAssociationEnd<SettlementTransactionStatusType1, List<MatchingStatus8Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
@@ -239,6 +260,16 @@ public class SettlementTransactionStatusType1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus8Choice.mmObject();
+		}
+
+		@Override
+		public List<MatchingStatus8Choice> getValue(SettlementTransactionStatusType1 obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionStatusType1 obj, List<MatchingStatus8Choice> value) {
+			obj.setMatchingStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -278,7 +309,7 @@ public class SettlementTransactionStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTransactionStatusType1, List<SettlementStatus1Choice>> mmSettlementStatus = new MMMessageAssociationEnd<SettlementTransactionStatusType1, List<SettlementStatus1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
@@ -290,6 +321,16 @@ public class SettlementTransactionStatusType1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus1Choice.mmObject();
+		}
+
+		@Override
+		public List<SettlementStatus1Choice> getValue(SettlementTransactionStatusType1 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionStatusType1 obj, List<SettlementStatus1Choice> value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 	@XmlElement(name = "Sttld")
@@ -328,7 +369,7 @@ public class SettlementTransactionStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTransactionStatusType1, Optional<ProprietaryReason1>> mmSettled = new MMMessageAssociationEnd<SettlementTransactionStatusType1, Optional<ProprietaryReason1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTransactionStatusType1.mmObject();
 			isDerived = false;
@@ -340,7 +381,17 @@ public class SettlementTransactionStatusType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason1.mmObject();
+			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryReason1> getValue(SettlementTransactionStatusType1 obj) {
+			return obj.getSettled();
+		}
+
+		@Override
+		public void setValue(SettlementTransactionStatusType1 obj, Optional<ProprietaryReason1> value) {
+			obj.setSettled(value.orElse(null));
 		}
 	};
 
@@ -400,7 +451,7 @@ public class SettlementTransactionStatusType1 {
 		return settled == null ? Optional.empty() : Optional.of(settled);
 	}
 
-	public SettlementTransactionStatusType1 setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
+	public SettlementTransactionStatusType1 setSettled(ProprietaryReason1 settled) {
 		this.settled = settled;
 		return this;
 	}

@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.UnmatchedStatus14Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason2;
@@ -108,7 +109,7 @@ public class MatchingStatus21Choice {
 	 * definition} = "Status is matched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus21Choice, ProprietaryReason2> mmMatched = new MMMessageAssociationEnd<MatchingStatus21Choice, ProprietaryReason2>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus21Choice.mmObject();
@@ -121,6 +122,16 @@ public class MatchingStatus21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason2.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason2 getValue(MatchingStatus21Choice obj) {
+			return obj.getMatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus21Choice obj, ProprietaryReason2 value) {
+			obj.setMatched(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -157,7 +168,7 @@ public class MatchingStatus21Choice {
 	 * definition} = "Status is unmatched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus21Choice, UnmatchedStatus14Choice> mmUnmatched = new MMMessageAssociationEnd<MatchingStatus21Choice, UnmatchedStatus14Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus21Choice.mmObject();
@@ -169,7 +180,17 @@ public class MatchingStatus21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus14Choice.mmObject();
+			type_lazy = () -> UnmatchedStatus14Choice.mmObject();
+		}
+
+		@Override
+		public UnmatchedStatus14Choice getValue(MatchingStatus21Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus21Choice obj, UnmatchedStatus14Choice value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -206,7 +227,7 @@ public class MatchingStatus21Choice {
 	 * definition} = "Proprietary status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus21Choice, ProprietaryStatusAndReason2> mmProprietary = new MMMessageAssociationEnd<MatchingStatus21Choice, ProprietaryStatusAndReason2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus21Choice.mmObject();
@@ -219,6 +240,16 @@ public class MatchingStatus21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason2.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason2 getValue(MatchingStatus21Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus21Choice obj, ProprietaryStatusAndReason2 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -250,7 +281,7 @@ public class MatchingStatus21Choice {
 		return unmatched;
 	}
 
-	public MatchingStatus21Choice setUnmatched(com.tools20022.repository.choice.UnmatchedStatus14Choice unmatched) {
+	public MatchingStatus21Choice setUnmatched(UnmatchedStatus14Choice unmatched) {
 		this.unmatched = Objects.requireNonNull(unmatched);
 		return this;
 	}

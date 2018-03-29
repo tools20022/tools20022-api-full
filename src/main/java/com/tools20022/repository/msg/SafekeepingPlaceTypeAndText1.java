@@ -112,7 +112,7 @@ public class SafekeepingPlaceTypeAndText1 {
 	 * definition} = "Place of safekeeping as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingPlaceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceTypeAndText1, SafekeepingPlace3Code> mmSafekeepingPlaceType = new MMMessageAttribute<SafekeepingPlaceTypeAndText1, SafekeepingPlace3Code>() {
 		{
 			businessElementTrace_lazy = () -> SafekeepingPlace.mmSafekeepingPlaceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1.mmObject();
@@ -124,6 +124,16 @@ public class SafekeepingPlaceTypeAndText1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingPlace3Code.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlace3Code getValue(SafekeepingPlaceTypeAndText1 obj) {
+			return obj.getSafekeepingPlaceType();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceTypeAndText1 obj, SafekeepingPlace3Code value) {
+			obj.setSafekeepingPlaceType(value);
 		}
 	};
 	@XmlElement(name = "Id")
@@ -160,7 +170,7 @@ public class SafekeepingPlaceTypeAndText1 {
 	 * definition} = "Place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceTypeAndText1, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<SafekeepingPlaceTypeAndText1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingPlaceTypeAndText1.mmObject();
@@ -172,6 +182,16 @@ public class SafekeepingPlaceTypeAndText1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SafekeepingPlaceTypeAndText1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceTypeAndText1 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 

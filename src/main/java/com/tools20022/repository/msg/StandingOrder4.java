@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.StandingOrderOrError4Choice;
 import com.tools20022.repository.entity.CashStandingOrder;
 import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StandingOrderIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class StandingOrder4 {
 	 * StandingOrder3.mmStandingOrderIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandingOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrder4, StandingOrderIdentification2> mmStandingOrderIdentification = new MMMessageAttribute<StandingOrder4, StandingOrderIdentification2>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder4.mmObject();
@@ -129,7 +130,17 @@ public class StandingOrder4 {
 			previousVersion_lazy = () -> StandingOrder3.mmStandingOrderIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification2.mmObject();
+			complexType_lazy = () -> StandingOrderIdentification2.mmObject();
+		}
+
+		@Override
+		public StandingOrderIdentification2 getValue(StandingOrder4 obj) {
+			return obj.getStandingOrderIdentification();
+		}
+
+		@Override
+		public void setValue(StandingOrder4 obj, StandingOrderIdentification2 value) {
+			obj.setStandingOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "StgOrdrOrErr", required = true)
@@ -167,7 +178,7 @@ public class StandingOrder4 {
 	 * StandingOrder3.mmStandingOrderOrError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStandingOrderOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrder4, StandingOrderOrError4Choice> mmStandingOrderOrError = new MMMessageAssociationEnd<StandingOrder4, StandingOrderOrError4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrder4.mmObject();
 			isDerived = false;
@@ -180,6 +191,16 @@ public class StandingOrder4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StandingOrderOrError4Choice.mmObject();
+		}
+
+		@Override
+		public StandingOrderOrError4Choice getValue(StandingOrder4 obj) {
+			return obj.getStandingOrderOrError();
+		}
+
+		@Override
+		public void setValue(StandingOrder4 obj, StandingOrderOrError4Choice value) {
+			obj.setStandingOrderOrError(value);
 		}
 	};
 
@@ -202,7 +223,7 @@ public class StandingOrder4 {
 		return standingOrderIdentification;
 	}
 
-	public StandingOrder4 setStandingOrderIdentification(com.tools20022.repository.msg.StandingOrderIdentification2 standingOrderIdentification) {
+	public StandingOrder4 setStandingOrderIdentification(StandingOrderIdentification2 standingOrderIdentification) {
 		this.standingOrderIdentification = Objects.requireNonNull(standingOrderIdentification);
 		return this;
 	}

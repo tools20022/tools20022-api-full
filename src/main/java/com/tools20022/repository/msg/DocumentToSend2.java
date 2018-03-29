@@ -139,7 +139,7 @@ public class DocumentToSend2 {
 	 * DocumentToSend1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentToSend2, Max140Text> mmType = new MMMessageAttribute<DocumentToSend2, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend2.mmObject();
 			isDerived = false;
@@ -152,6 +152,16 @@ public class DocumentToSend2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(DocumentToSend2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(DocumentToSend2 obj, Max140Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -197,7 +207,7 @@ public class DocumentToSend2 {
 	 * DocumentToSend1.mmRecipient}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipient = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentToSend2, PartyIdentification2Choice> mmRecipient = new MMMessageAttribute<DocumentToSend2, PartyIdentification2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend2.mmObject();
 			isDerived = false;
@@ -210,6 +220,16 @@ public class DocumentToSend2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(DocumentToSend2 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(DocumentToSend2 obj, PartyIdentification2Choice value) {
+			obj.setRecipient(value);
 		}
 	};
 	@XmlElement(name = "MtdOfTrnsmssn", required = true)
@@ -249,7 +269,7 @@ public class DocumentToSend2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMethodOfTransmission = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentToSend2, CommunicationMethod3Choice> mmMethodOfTransmission = new MMMessageAssociationEnd<DocumentToSend2, CommunicationMethod3Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend2.mmObject();
 			isDerived = false;
@@ -262,6 +282,16 @@ public class DocumentToSend2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CommunicationMethod3Choice.mmObject();
+		}
+
+		@Override
+		public CommunicationMethod3Choice getValue(DocumentToSend2 obj) {
+			return obj.getMethodOfTransmission();
+		}
+
+		@Override
+		public void setValue(DocumentToSend2 obj, CommunicationMethod3Choice value) {
+			obj.setMethodOfTransmission(value);
 		}
 	};
 

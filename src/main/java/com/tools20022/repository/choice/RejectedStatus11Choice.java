@@ -118,7 +118,7 @@ public class RejectedStatus11Choice {
 	 * definition} = "Reason not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus11Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RejectedStatus11Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatus11Choice.mmObject();
@@ -131,6 +131,16 @@ public class RejectedStatus11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(RejectedStatus11Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus11Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -169,7 +179,7 @@ public class RejectedStatus11Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus11Choice, List<RejectedStatusReason11>> mmReason = new MMMessageAssociationEnd<RejectedStatus11Choice, List<RejectedStatusReason11>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatus11Choice.mmObject();
@@ -182,6 +192,16 @@ public class RejectedStatus11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedStatusReason11.mmObject();
+		}
+
+		@Override
+		public List<RejectedStatusReason11> getValue(RejectedStatus11Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus11Choice obj, List<RejectedStatusReason11> value) {
+			obj.setReason(value);
 		}
 	};
 

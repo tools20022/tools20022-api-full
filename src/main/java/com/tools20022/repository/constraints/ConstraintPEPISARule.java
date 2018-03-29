@@ -59,11 +59,15 @@ public class ConstraintPEPISARule {
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioInformationV01> forPEPOrISAOrPortfolioInformationV01 = new MMConstraint<PEPOrISAOrPortfolioInformationV01>() {
 		{
-			validator = ConstraintPEPISARule::checkPEPOrISAOrPortfolioInformationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEPISARule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> PEPOrISAOrPortfolioInformationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPOrISAOrPortfolioInformationV01 obj) throws Exception {
+			checkPEPOrISAOrPortfolioInformationV01(obj);
 		}
 	};
 	/**
@@ -89,11 +93,15 @@ public class ConstraintPEPISARule {
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02> forPEPOrISAOrPortfolioTransferConfirmationV02 = new MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02>() {
 		{
-			validator = ConstraintPEPISARule::checkPEPOrISAOrPortfolioTransferConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEPISARule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> PEPOrISAOrPortfolioTransferConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPOrISAOrPortfolioTransferConfirmationV02 obj) throws Exception {
+			checkPEPOrISAOrPortfolioTransferConfirmationV02(obj);
 		}
 	};
 	/**
@@ -119,11 +127,15 @@ public class ConstraintPEPISARule {
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02> forPEPOrISAOrPortfolioTransferInstructionV02 = new MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02>() {
 		{
-			validator = ConstraintPEPISARule::checkPEPOrISAOrPortfolioTransferInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEPISARule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> PEPOrISAOrPortfolioTransferInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPOrISAOrPortfolioTransferInstructionV02 obj) throws Exception {
+			checkPEPOrISAOrPortfolioTransferInstructionV02(obj);
 		}
 	};
 	/**
@@ -149,11 +161,15 @@ public class ConstraintPEPISARule {
 	 */
 	public static final MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01> forRequestForPEPOrISAOrPortfolioInformationV01 = new MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01>() {
 		{
-			validator = ConstraintPEPISARule::checkRequestForPEPOrISAOrPortfolioInformationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEPISARule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> RequestForPEPOrISAOrPortfolioInformationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestForPEPOrISAOrPortfolioInformationV01 obj) throws Exception {
+			checkRequestForPEPOrISAOrPortfolioInformationV01(obj);
 		}
 	};
 	/**
@@ -179,11 +195,15 @@ public class ConstraintPEPISARule {
 	 */
 	public static final MMConstraint<PEPISATransfer7> forPEPISATransfer7 = new MMConstraint<PEPISATransfer7>() {
 		{
-			validator = ConstraintPEPISARule::checkPEPISATransfer7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEPISARule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then SecondaryIndividualInvestor and/or OtherIndividualInvestor is not allowed.\n\nIf ProductTransfer\\ISA or ProductTransfer\\PEP is present then the message elements in the list (PrimaryCorporateInvestor, SecondaryCorporateInvestor, OtherCorporateInvestor) are not allowed.";
 			owner_lazy = () -> PEPISATransfer7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPISATransfer7 obj) throws Exception {
+			checkPEPISATransfer7(obj);
 		}
 	};
 

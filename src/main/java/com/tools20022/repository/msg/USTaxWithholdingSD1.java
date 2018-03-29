@@ -107,7 +107,7 @@ public class USTaxWithholdingSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<USTaxWithholdingSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<USTaxWithholdingSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.USTaxWithholdingSD1.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class USTaxWithholdingSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(USTaxWithholdingSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(USTaxWithholdingSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "NRATaxCd", required = true)
@@ -154,7 +164,7 @@ public class USTaxWithholdingSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNRATaxCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<USTaxWithholdingSD1, NRATax1Code> mmNRATaxCode = new MMMessageAttribute<USTaxWithholdingSD1, NRATax1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.USTaxWithholdingSD1.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class USTaxWithholdingSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NRATax1Code.mmObject();
+		}
+
+		@Override
+		public NRATax1Code getValue(USTaxWithholdingSD1 obj) {
+			return obj.getNRATaxCode();
+		}
+
+		@Override
+		public void setValue(USTaxWithholdingSD1 obj, NRATax1Code value) {
+			obj.setNRATaxCode(value);
 		}
 	};
 	@XmlElement(name = "WhldgTaxRate")
@@ -203,7 +223,7 @@ public class USTaxWithholdingSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWithholdingTaxRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<USTaxWithholdingSD1, Optional<RateFormat6Choice>> mmWithholdingTaxRate = new MMMessageAttribute<USTaxWithholdingSD1, Optional<RateFormat6Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.USTaxWithholdingSD1.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class USTaxWithholdingSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateFormat6Choice> getValue(USTaxWithholdingSD1 obj) {
+			return obj.getWithholdingTaxRate();
+		}
+
+		@Override
+		public void setValue(USTaxWithholdingSD1 obj, Optional<RateFormat6Choice> value) {
+			obj.setWithholdingTaxRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -250,7 +280,7 @@ public class USTaxWithholdingSD1 {
 	 * definition} = "Elected quantity per NRA tax code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<USTaxWithholdingSD1, FinancialInstrumentQuantity15Choice> mmQuantity = new MMMessageAttribute<USTaxWithholdingSD1, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.USTaxWithholdingSD1.mmObject();
 			isDerived = false;
@@ -262,6 +292,16 @@ public class USTaxWithholdingSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(USTaxWithholdingSD1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(USTaxWithholdingSD1 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 

@@ -21,10 +21,11 @@ import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.entity.IssuerRole;
+import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CreditDefaultSwapSingleName2;
 import com.tools20022.repository.msg.SwapLegIdentification2;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class Swaps extends Derivative {
 	 * definition} = "Issuer is a national government within a given country."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSovereignIssuer = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Swaps, IssuerRole> mmSovereignIssuer = new MMBusinessAttribute<Swaps, IssuerRole>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditDefaultSwapSingleName2.mmSovereignIssuer);
 			isDerived = false;
@@ -128,15 +129,17 @@ public class Swaps extends Derivative {
 			definition = "Issuer is a national government within a given country.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.entity.IssuerRole.mmObject();
+			complexType_lazy = () -> IssuerRole.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Swaps.class.getMethod("getSovereignIssuer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IssuerRole getValue(Swaps obj) {
+			return obj.getSovereignIssuer();
+		}
+
+		@Override
+		public void setValue(Swaps obj, IssuerRole value) {
+			obj.setSovereignIssuer(value);
 		}
 	};
 	protected Obligation obligation;
@@ -164,7 +167,7 @@ public class Swaps extends Derivative {
 	 * definition} = "Specific underlying debt upon which a swap is based."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmObligation = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Swaps, com.tools20022.repository.entity.Obligation> mmObligation = new MMBusinessAttribute<Swaps, com.tools20022.repository.entity.Obligation>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Swaps.mmObject();
@@ -176,12 +179,14 @@ public class Swaps extends Derivative {
 			complexType_lazy = () -> com.tools20022.repository.entity.Obligation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Swaps.class.getMethod("getObligation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public com.tools20022.repository.entity.Obligation getValue(Swaps obj) {
+			return obj.getObligation();
+		}
+
+		@Override
+		public void setValue(Swaps obj, com.tools20022.repository.entity.Obligation value) {
+			obj.setObligation(value);
 		}
 	};
 
@@ -210,7 +215,7 @@ public class Swaps extends Derivative {
 		return sovereignIssuer;
 	}
 
-	public Swaps setSovereignIssuer(com.tools20022.repository.entity.IssuerRole sovereignIssuer) {
+	public Swaps setSovereignIssuer(IssuerRole sovereignIssuer) {
 		this.sovereignIssuer = Objects.requireNonNull(sovereignIssuer);
 		return this;
 	}

@@ -48,11 +48,15 @@ public class ConstraintCounterpartyReferenceRule {
 	 */
 	public static final MMConstraint<References11> forReferences11 = new MMConstraint<References11>() {
 		{
-			validator = ConstraintCounterpartyReferenceRule::checkReferences11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReferenceRule";
 			definition = "Only one instance of References/CounterpartyReference is allowed.";
 			owner_lazy = () -> References11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References11 obj) throws Exception {
+			checkReferences11(obj);
 		}
 	};
 

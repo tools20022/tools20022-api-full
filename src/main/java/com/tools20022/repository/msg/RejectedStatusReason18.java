@@ -133,7 +133,7 @@ public class RejectedStatusReason18 {
 	 * RejectedStatusReason14.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatusReason18, RejectedReason14Choice> mmReasonCode = new MMMessageAssociationEnd<RejectedStatusReason18, RejectedReason14Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason18.mmObject();
@@ -148,6 +148,16 @@ public class RejectedStatusReason18 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedReason14Choice.mmObject();
+		}
+
+		@Override
+		public RejectedReason14Choice getValue(RejectedStatusReason18 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason18 obj, RejectedReason14Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -193,7 +203,7 @@ public class RejectedStatusReason18 {
 	 * RejectedStatusReason14.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatusReason18, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RejectedStatusReason18, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason18.mmObject();
@@ -207,6 +217,16 @@ public class RejectedStatusReason18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(RejectedStatusReason18 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason18 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

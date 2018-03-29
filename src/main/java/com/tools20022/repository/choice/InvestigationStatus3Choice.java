@@ -158,7 +158,7 @@ public class InvestigationStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus3Choice, InvestigationExecutionConfirmation3Code> mmConfirmation = new MMMessageAttribute<InvestigationStatus3Choice, InvestigationExecutionConfirmation3Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus3Choice.mmObject();
@@ -171,6 +171,16 @@ public class InvestigationStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestigationExecutionConfirmation3Code.mmObject();
+		}
+
+		@Override
+		public InvestigationExecutionConfirmation3Code getValue(InvestigationStatus3Choice obj) {
+			return obj.getConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus3Choice obj, InvestigationExecutionConfirmation3Code value) {
+			obj.setConfirmation(value);
 		}
 	};
 	@XmlElement(name = "RjctdMod", required = true)
@@ -217,7 +227,7 @@ public class InvestigationStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedModification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus3Choice, List<ModificationRejection2Code>> mmRejectedModification = new MMMessageAttribute<InvestigationStatus3Choice, List<ModificationRejection2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedModification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus3Choice.mmObject();
@@ -229,6 +239,16 @@ public class InvestigationStatus3Choice {
 			nextVersions_lazy = () -> Arrays.asList(InvestigationStatus4Choice.mmRejectedModification);
 			minOccurs = 1;
 			simpleType_lazy = () -> ModificationRejection2Code.mmObject();
+		}
+
+		@Override
+		public List<ModificationRejection2Code> getValue(InvestigationStatus3Choice obj) {
+			return obj.getRejectedModification();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus3Choice obj, List<ModificationRejection2Code> value) {
+			obj.setRejectedModification(value);
 		}
 	};
 	@XmlElement(name = "DplctOf", required = true)
@@ -273,7 +293,7 @@ public class InvestigationStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDuplicateOf = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestigationStatus3Choice, Case3> mmDuplicateOf = new MMMessageAssociationEnd<InvestigationStatus3Choice, Case3>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmDuplicateCase;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus3Choice.mmObject();
@@ -287,6 +307,16 @@ public class InvestigationStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Case3.mmObject();
+		}
+
+		@Override
+		public Case3 getValue(InvestigationStatus3Choice obj) {
+			return obj.getDuplicateOf();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus3Choice obj, Case3 value) {
+			obj.setDuplicateOf(value);
 		}
 	};
 	@XmlElement(name = "AssgnmtCxlConf", required = true)
@@ -334,7 +364,7 @@ public class InvestigationStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssignmentCancellationConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus3Choice, YesNoIndicator> mmAssignmentCancellationConfirmation = new MMMessageAttribute<InvestigationStatus3Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus3Choice.mmObject();
@@ -347,6 +377,16 @@ public class InvestigationStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestigationStatus3Choice obj) {
+			return obj.getAssignmentCancellationConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus3Choice obj, YesNoIndicator value) {
+			obj.setAssignmentCancellationConfirmation(value);
 		}
 	};
 

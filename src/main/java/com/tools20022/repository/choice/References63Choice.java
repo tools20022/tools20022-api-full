@@ -116,7 +116,7 @@ public class References63Choice {
 	 * References48Choice.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References63Choice, AdditionalReference8> mmPreviousReference = new MMMessageAssociationEnd<References63Choice, AdditionalReference8>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References63Choice.mmObject();
@@ -130,6 +130,16 @@ public class References63Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference8.mmObject();
+		}
+
+		@Override
+		public AdditionalReference8 getValue(References63Choice obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(References63Choice obj, AdditionalReference8 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "OthrRef", required = true)
@@ -172,7 +182,7 @@ public class References63Choice {
 	 * References48Choice.mmOtherReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References63Choice, AdditionalReference8> mmOtherReference = new MMMessageAssociationEnd<References63Choice, AdditionalReference8>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References63Choice.mmObject();
@@ -186,6 +196,16 @@ public class References63Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference8.mmObject();
+		}
+
+		@Override
+		public AdditionalReference8 getValue(References63Choice obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(References63Choice obj, AdditionalReference8 value) {
+			obj.setOtherReference(value);
 		}
 	};
 

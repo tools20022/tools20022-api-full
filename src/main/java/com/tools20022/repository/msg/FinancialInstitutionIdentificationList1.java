@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification9;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -66,7 +67,7 @@ public class FinancialInstitutionIdentificationList1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "List", required = true)
-	protected List<com.tools20022.repository.msg.FinancialInstitutionIdentification9> list;
+	protected List<FinancialInstitutionIdentification9> list;
 	/**
 	 * 
 	 <p>
@@ -94,7 +95,7 @@ public class FinancialInstitutionIdentificationList1 {
 	 * definition} = "Repeated identifiers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmList = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstitutionIdentificationList1, List<FinancialInstitutionIdentification9>> mmList = new MMMessageAssociationEnd<FinancialInstitutionIdentificationList1, List<FinancialInstitutionIdentification9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentificationList1.mmObject();
 			isDerived = false;
@@ -104,7 +105,17 @@ public class FinancialInstitutionIdentificationList1 {
 			definition = "Repeated identifiers.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstitutionIdentification9> getValue(FinancialInstitutionIdentificationList1 obj) {
+			return obj.getList();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentificationList1 obj, List<FinancialInstitutionIdentification9> value) {
+			obj.setList(value);
 		}
 	};
 
@@ -125,7 +136,7 @@ public class FinancialInstitutionIdentificationList1 {
 		return list == null ? list = new ArrayList<>() : list;
 	}
 
-	public FinancialInstitutionIdentificationList1 setList(List<com.tools20022.repository.msg.FinancialInstitutionIdentification9> list) {
+	public FinancialInstitutionIdentificationList1 setList(List<FinancialInstitutionIdentification9> list) {
 		this.list = Objects.requireNonNull(list);
 		return this;
 	}

@@ -127,7 +127,7 @@ public class TimeFrame3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherTimeFrameDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeFrame3, Optional<Max350Text>> mmOtherTimeFrameDescription = new MMMessageAttribute<TimeFrame3, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmOtherTimeFrameDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TimeFrame3.mmObject();
@@ -139,6 +139,16 @@ public class TimeFrame3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TimeFrame3 obj) {
+			return obj.getOtherTimeFrameDescription();
+		}
+
+		@Override
+		public void setValue(TimeFrame3 obj, Optional<Max350Text> value) {
+			obj.setOtherTimeFrameDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TMns")
@@ -176,7 +186,7 @@ public class TimeFrame3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeMinus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeFrame3, Optional<Number>> mmTradeMinus = new MMMessageAttribute<TimeFrame3, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmTradeMinus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TimeFrame3.mmObject();
@@ -188,6 +198,16 @@ public class TimeFrame3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TimeFrame3 obj) {
+			return obj.getTradeMinus();
+		}
+
+		@Override
+		public void setValue(TimeFrame3 obj, Optional<Number> value) {
+			obj.setTradeMinus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonWorkgDayAdjstmnt")
@@ -225,7 +245,7 @@ public class TimeFrame3 {
 	 * "Convention used for adjusting a date when it is not a business day."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonWorkingDayAdjustment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeFrame3, Optional<BusinessDayConvention1Code>> mmNonWorkingDayAdjustment = new MMMessageAttribute<TimeFrame3, Optional<BusinessDayConvention1Code>>() {
 		{
 			businessElementTrace_lazy = () -> RedemptionSchedule.mmBusinessDayConvention;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TimeFrame3.mmObject();
@@ -237,6 +257,16 @@ public class TimeFrame3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BusinessDayConvention1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BusinessDayConvention1Code> getValue(TimeFrame3 obj) {
+			return obj.getNonWorkingDayAdjustment();
+		}
+
+		@Override
+		public void setValue(TimeFrame3 obj, Optional<BusinessDayConvention1Code> value) {
+			obj.setNonWorkingDayAdjustment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefrToOrdrDsk")
@@ -268,7 +298,7 @@ public class TimeFrame3 {
 	 * definition} = "Refer to Order Desk."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferToOrderDesk = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeFrame3, Optional<ReferToFundOrderDesk1Code>> mmReferToOrderDesk = new MMMessageAttribute<TimeFrame3, Optional<ReferToFundOrderDesk1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TimeFrame3.mmObject();
 			isDerived = false;
@@ -279,6 +309,16 @@ public class TimeFrame3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReferToFundOrderDesk1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ReferToFundOrderDesk1Code> getValue(TimeFrame3 obj) {
+			return obj.getReferToOrderDesk();
+		}
+
+		@Override
+		public void setValue(TimeFrame3 obj, Optional<ReferToFundOrderDesk1Code> value) {
+			obj.setReferToOrderDesk(value.orElse(null));
 		}
 	};
 

@@ -57,12 +57,16 @@ public class ConstraintBulkCashSettlementDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionBulkExecution5> forRedemptionBulkExecution5 = new MMConstraint<RedemptionBulkExecution5>() {
 		{
-			validator = ConstraintBulkCashSettlementDetailsRule::checkRedemptionBulkExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetailsRule";
 			definition = "Either one or more occurrences of IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails6Rule.forRedemptionBulkExecution3;
 			owner_lazy = () -> RedemptionBulkExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkExecution5 obj) throws Exception {
+			checkRedemptionBulkExecution5(obj);
 		}
 	};
 	/**
@@ -94,12 +98,16 @@ public class ConstraintBulkCashSettlementDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleExecution5> forRedemptionMultipleExecution5 = new MMConstraint<RedemptionMultipleExecution5>() {
 		{
-			validator = ConstraintBulkCashSettlementDetailsRule::checkRedemptionMultipleExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetailsRule";
 			definition = "Either one or more occurrences of IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails2Rule.forRedemptionMultipleExecution3;
 			owner_lazy = () -> RedemptionMultipleExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleExecution5 obj) throws Exception {
+			checkRedemptionMultipleExecution5(obj);
 		}
 	};
 	/**
@@ -130,12 +138,16 @@ public class ConstraintBulkCashSettlementDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrder6> forRedemptionMultipleOrder6 = new MMConstraint<RedemptionMultipleOrder6>() {
 		{
-			validator = ConstraintBulkCashSettlementDetailsRule::checkRedemptionMultipleOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetailsRule";
 			definition = "Either one or more occurrences of IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails1Rule.forRedemptionMultipleOrder4;
 			owner_lazy = () -> RedemptionMultipleOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder6 obj) throws Exception {
+			checkRedemptionMultipleOrder6(obj);
 		}
 	};
 	/**
@@ -166,12 +178,16 @@ public class ConstraintBulkCashSettlementDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder6> forSubscriptionMultipleOrder6 = new MMConstraint<SubscriptionMultipleOrder6>() {
 		{
-			validator = ConstraintBulkCashSettlementDetailsRule::checkSubscriptionMultipleOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetailsRule";
 			definition = "Either one or more occurrences of IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails1Rule.forSubscriptionMultipleOrder4;
 			owner_lazy = () -> SubscriptionMultipleOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrder6 obj) throws Exception {
+			checkSubscriptionMultipleOrder6(obj);
 		}
 	};
 	/**
@@ -202,12 +218,16 @@ public class ConstraintBulkCashSettlementDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkExecution4> forSubscriptionBulkExecution4 = new MMConstraint<SubscriptionBulkExecution4>() {
 		{
-			validator = ConstraintBulkCashSettlementDetailsRule::checkSubscriptionBulkExecution4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetailsRule";
 			definition = "Either IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails4Rule.forSubscriptionBulkExecution3;
 			owner_lazy = () -> SubscriptionBulkExecution4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkExecution4 obj) throws Exception {
+			checkSubscriptionBulkExecution4(obj);
 		}
 	};
 	/**
@@ -238,12 +258,16 @@ public class ConstraintBulkCashSettlementDetailsRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrder6> forRedemptionBulkOrder6 = new MMConstraint<RedemptionBulkOrder6>() {
 		{
-			validator = ConstraintBulkCashSettlementDetailsRule::checkRedemptionBulkOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetailsRule";
 			definition = "Either IndividualOrderDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails5Rule.forRedemptionBulkOrder4;
 			owner_lazy = () -> RedemptionBulkOrder6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrder6 obj) throws Exception {
+			checkRedemptionBulkOrder6(obj);
 		}
 	};
 	/**
@@ -275,12 +299,16 @@ public class ConstraintBulkCashSettlementDetailsRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleExecution5> forSubscriptionMultipleExecution5 = new MMConstraint<SubscriptionMultipleExecution5>() {
 		{
-			validator = ConstraintBulkCashSettlementDetailsRule::checkSubscriptionMultipleExecution5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BulkCashSettlementDetailsRule";
 			definition = "Either one or more occurrences of IndividualExecutionDetails/CashSettlementDetails or BulkCashSettlementDetails may be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBulkCashSettlementDetails2Rule.forSubscriptionMultipleExecution3;
 			owner_lazy = () -> SubscriptionMultipleExecution5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleExecution5 obj) throws Exception {
+			checkSubscriptionMultipleExecution5(obj);
 		}
 	};
 

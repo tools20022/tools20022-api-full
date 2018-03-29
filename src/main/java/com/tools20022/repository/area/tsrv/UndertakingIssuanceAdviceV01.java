@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msg.PartyIdentification43;
 import com.tools20022.repository.msg.UndertakingAdvice1;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -132,7 +131,7 @@ public class UndertakingIssuanceAdviceV01 {
 	 * "Party advising the undertaking to the beneficiary or to another party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdvisingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, PartyIdentification43> mmAdvisingParty = new MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, PartyIdentification43>() {
 		{
 			xmlTag = "AdvsgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +142,14 @@ public class UndertakingIssuanceAdviceV01 {
 			complexType_lazy = () -> PartyIdentification43.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingIssuanceAdviceV01.class.getMethod("getAdvisingParty", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification43 getValue(UndertakingIssuanceAdviceV01 obj) {
+			return obj.getAdvisingParty();
+		}
+
+		@Override
+		public void setValue(UndertakingIssuanceAdviceV01 obj, PartyIdentification43 value) {
+			obj.setAdvisingParty(value);
 		}
 	};
 	@XmlElement(name = "ScndAdvsgPty")
@@ -176,7 +177,7 @@ public class UndertakingIssuanceAdviceV01 {
 	 * definition} = "Additional party that advises the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecondAdvisingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, Optional<PartyIdentification43>> mmSecondAdvisingParty = new MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, Optional<PartyIdentification43>>() {
 		{
 			xmlTag = "ScndAdvsgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,12 +188,14 @@ public class UndertakingIssuanceAdviceV01 {
 			complexType_lazy = () -> PartyIdentification43.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingIssuanceAdviceV01.class.getMethod("getSecondAdvisingParty", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification43> getValue(UndertakingIssuanceAdviceV01 obj) {
+			return obj.getSecondAdvisingParty();
+		}
+
+		@Override
+		public void setValue(UndertakingIssuanceAdviceV01 obj, Optional<PartyIdentification43> value) {
+			obj.setSecondAdvisingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtOfAdvc", required = true)
@@ -220,7 +223,7 @@ public class UndertakingIssuanceAdviceV01 {
 	 * definition} = "Date on which the undertaking is advised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDateOfAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, DateAndDateTimeChoice> mmDateOfAdvice = new MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, DateAndDateTimeChoice>() {
 		{
 			xmlTag = "DtOfAdvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,12 +234,14 @@ public class UndertakingIssuanceAdviceV01 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingIssuanceAdviceV01.class.getMethod("getDateOfAdvice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DateAndDateTimeChoice getValue(UndertakingIssuanceAdviceV01 obj) {
+			return obj.getDateOfAdvice();
+		}
+
+		@Override
+		public void setValue(UndertakingIssuanceAdviceV01 obj, DateAndDateTimeChoice value) {
+			obj.setDateOfAdvice(value);
 		}
 	};
 	@XmlElement(name = "UdrtkgIssncAdvcDtls", required = true)
@@ -264,7 +269,7 @@ public class UndertakingIssuanceAdviceV01 {
 	 * definition} = "Details related to the advice of the issued undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUndertakingIssuanceAdviceDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, UndertakingAdvice1> mmUndertakingIssuanceAdviceDetails = new MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, UndertakingAdvice1>() {
 		{
 			xmlTag = "UdrtkgIssncAdvcDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,12 +280,14 @@ public class UndertakingIssuanceAdviceV01 {
 			complexType_lazy = () -> UndertakingAdvice1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingIssuanceAdviceV01.class.getMethod("getUndertakingIssuanceAdviceDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UndertakingAdvice1 getValue(UndertakingIssuanceAdviceV01 obj) {
+			return obj.getUndertakingIssuanceAdviceDetails();
+		}
+
+		@Override
+		public void setValue(UndertakingIssuanceAdviceV01 obj, UndertakingAdvice1 value) {
+			obj.setUndertakingIssuanceAdviceDetails(value);
 		}
 	};
 	@XmlElement(name = "BkToBkInf")
@@ -308,7 +315,7 @@ public class UndertakingIssuanceAdviceV01 {
 	 * "Additional information specific to the bank-to-bank communication."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBankToBankInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, List<Max2000Text>> mmBankToBankInformation = new MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, List<Max2000Text>>() {
 		{
 			xmlTag = "BkToBkInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,12 +326,14 @@ public class UndertakingIssuanceAdviceV01 {
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingIssuanceAdviceV01.class.getMethod("getBankToBankInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Max2000Text> getValue(UndertakingIssuanceAdviceV01 obj) {
+			return obj.getBankToBankInformation();
+		}
+
+		@Override
+		public void setValue(UndertakingIssuanceAdviceV01 obj, List<Max2000Text> value) {
+			obj.setBankToBankInformation(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -352,7 +361,7 @@ public class UndertakingIssuanceAdviceV01 {
 	 * definition} = "Digital signature of the undertaking advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageBuildingBlock<UndertakingIssuanceAdviceV01, Optional<PartyAndSignature2>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -363,12 +372,14 @@ public class UndertakingIssuanceAdviceV01 {
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UndertakingIssuanceAdviceV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyAndSignature2> getValue(UndertakingIssuanceAdviceV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(UndertakingIssuanceAdviceV01 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 

@@ -144,7 +144,7 @@ public class PaymentIdentification5Choice {
 	 * PaymentIdentification4Choice.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentIdentification5Choice, Max35Text> mmTransactionIdentification = new MMMessageAttribute<PaymentIdentification5Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification5Choice.mmObject();
@@ -157,6 +157,16 @@ public class PaymentIdentification5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentIdentification5Choice obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification5Choice obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "QId", required = true)
@@ -195,7 +205,7 @@ public class PaymentIdentification5Choice {
 	 * PaymentIdentification4Choice.mmQueueIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQueueIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentIdentification5Choice, QueueTransactionIdentification1> mmQueueIdentification = new MMMessageAssociationEnd<PaymentIdentification5Choice, QueueTransactionIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification5Choice.mmObject();
 			isDerived = false;
@@ -208,6 +218,16 @@ public class PaymentIdentification5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QueueTransactionIdentification1.mmObject();
+		}
+
+		@Override
+		public QueueTransactionIdentification1 getValue(PaymentIdentification5Choice obj) {
+			return obj.getQueueIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification5Choice obj, QueueTransactionIdentification1 value) {
+			obj.setQueueIdentification(value);
 		}
 	};
 	@XmlElement(name = "LngBizId", required = true)
@@ -251,7 +271,7 @@ public class PaymentIdentification5Choice {
 	 * PaymentIdentification4Choice.mmLongBusinessIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLongBusinessIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentIdentification5Choice, LongPaymentIdentification1> mmLongBusinessIdentification = new MMMessageAssociationEnd<PaymentIdentification5Choice, LongPaymentIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification5Choice.mmObject();
@@ -265,6 +285,16 @@ public class PaymentIdentification5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LongPaymentIdentification1.mmObject();
+		}
+
+		@Override
+		public LongPaymentIdentification1 getValue(PaymentIdentification5Choice obj) {
+			return obj.getLongBusinessIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification5Choice obj, LongPaymentIdentification1 value) {
+			obj.setLongBusinessIdentification(value);
 		}
 	};
 	@XmlElement(name = "ShrtBizId", required = true)
@@ -308,7 +338,7 @@ public class PaymentIdentification5Choice {
 	 * PaymentIdentification4Choice.mmShortBusinessIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShortBusinessIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentIdentification5Choice, ShortPaymentIdentification1> mmShortBusinessIdentification = new MMMessageAssociationEnd<PaymentIdentification5Choice, ShortPaymentIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification5Choice.mmObject();
@@ -322,6 +352,16 @@ public class PaymentIdentification5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ShortPaymentIdentification1.mmObject();
+		}
+
+		@Override
+		public ShortPaymentIdentification1 getValue(PaymentIdentification5Choice obj) {
+			return obj.getShortBusinessIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification5Choice obj, ShortPaymentIdentification1 value) {
+			obj.setShortBusinessIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -360,7 +400,7 @@ public class PaymentIdentification5Choice {
 	 * PaymentIdentification4Choice.mmProprietaryIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentIdentification5Choice, Max70Text> mmProprietaryIdentification = new MMMessageAttribute<PaymentIdentification5Choice, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentIdentification5Choice.mmObject();
 			isDerived = false;
@@ -372,6 +412,16 @@ public class PaymentIdentification5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PaymentIdentification5Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification5Choice obj, Max70Text value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

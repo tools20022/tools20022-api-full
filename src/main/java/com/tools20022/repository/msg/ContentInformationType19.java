@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AuthenticatedData5;
+import com.tools20022.repository.msg.DigestedData5;
+import com.tools20022.repository.msg.EnvelopedData5;
+import com.tools20022.repository.msg.SignedData5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -66,7 +70,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ContentInformationType19"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -118,7 +122,7 @@ public class ContentInformationType19 {
 	 * ContentInformationType12.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContentInformationType19, ContentType2Code> mmContentType = new MMMessageAttribute<ContentInformationType19, ContentType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType19.mmObject();
 			isDerived = false;
@@ -130,6 +134,16 @@ public class ContentInformationType19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
+		}
+
+		@Override
+		public ContentType2Code getValue(ContentInformationType19 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(ContentInformationType19 obj, ContentType2Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "EnvlpdData")
@@ -165,7 +179,7 @@ public class ContentInformationType19 {
 	 * ContentInformationType12.mmEnvelopedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType19, Optional<EnvelopedData5>> mmEnvelopedData = new MMMessageAssociationEnd<ContentInformationType19, Optional<EnvelopedData5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType19.mmObject();
 			isDerived = false;
@@ -177,7 +191,17 @@ public class ContentInformationType19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EnvelopedData5.mmObject();
+			type_lazy = () -> EnvelopedData5.mmObject();
+		}
+
+		@Override
+		public Optional<EnvelopedData5> getValue(ContentInformationType19 obj) {
+			return obj.getEnvelopedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType19 obj, Optional<EnvelopedData5> value) {
+			obj.setEnvelopedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthntcdData")
@@ -213,7 +237,7 @@ public class ContentInformationType19 {
 	 * ContentInformationType12.mmAuthenticatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType19, Optional<AuthenticatedData5>> mmAuthenticatedData = new MMMessageAssociationEnd<ContentInformationType19, Optional<AuthenticatedData5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType19.mmObject();
 			isDerived = false;
@@ -225,7 +249,17 @@ public class ContentInformationType19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData5.mmObject();
+			type_lazy = () -> AuthenticatedData5.mmObject();
+		}
+
+		@Override
+		public Optional<AuthenticatedData5> getValue(ContentInformationType19 obj) {
+			return obj.getAuthenticatedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType19 obj, Optional<AuthenticatedData5> value) {
+			obj.setAuthenticatedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SgndData")
@@ -261,7 +295,7 @@ public class ContentInformationType19 {
 	 * ContentInformationType12.mmSignedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType19, Optional<SignedData5>> mmSignedData = new MMMessageAssociationEnd<ContentInformationType19, Optional<SignedData5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType19.mmObject();
 			isDerived = false;
@@ -273,7 +307,17 @@ public class ContentInformationType19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedData5.mmObject();
+			type_lazy = () -> SignedData5.mmObject();
+		}
+
+		@Override
+		public Optional<SignedData5> getValue(ContentInformationType19 obj) {
+			return obj.getSignedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType19 obj, Optional<SignedData5> value) {
+			obj.setSignedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgstdData")
@@ -309,7 +353,7 @@ public class ContentInformationType19 {
 	 * ContentInformationType12.mmDigestedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigestedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType19, Optional<DigestedData5>> mmDigestedData = new MMMessageAssociationEnd<ContentInformationType19, Optional<DigestedData5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType19.mmObject();
 			isDerived = false;
@@ -321,7 +365,17 @@ public class ContentInformationType19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DigestedData5.mmObject();
+			type_lazy = () -> DigestedData5.mmObject();
+		}
+
+		@Override
+		public Optional<DigestedData5> getValue(ContentInformationType19 obj) {
+			return obj.getDigestedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType19 obj, Optional<DigestedData5> value) {
+			obj.setDigestedData(value.orElse(null));
 		}
 	};
 
@@ -331,7 +385,7 @@ public class ContentInformationType19 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType19.mmContentType, com.tools20022.repository.msg.ContentInformationType19.mmEnvelopedData,
 						com.tools20022.repository.msg.ContentInformationType19.mmAuthenticatedData, com.tools20022.repository.msg.ContentInformationType19.mmSignedData, com.tools20022.repository.msg.ContentInformationType19.mmDigestedData);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType19";
 				definition = "General cryptographic message syntax (CMS) containing protected data.";
 				previousVersion_lazy = () -> ContentInformationType12.mmObject();
@@ -353,7 +407,7 @@ public class ContentInformationType19 {
 		return envelopedData == null ? Optional.empty() : Optional.of(envelopedData);
 	}
 
-	public ContentInformationType19 setEnvelopedData(com.tools20022.repository.msg.EnvelopedData5 envelopedData) {
+	public ContentInformationType19 setEnvelopedData(EnvelopedData5 envelopedData) {
 		this.envelopedData = envelopedData;
 		return this;
 	}
@@ -362,7 +416,7 @@ public class ContentInformationType19 {
 		return authenticatedData == null ? Optional.empty() : Optional.of(authenticatedData);
 	}
 
-	public ContentInformationType19 setAuthenticatedData(com.tools20022.repository.msg.AuthenticatedData5 authenticatedData) {
+	public ContentInformationType19 setAuthenticatedData(AuthenticatedData5 authenticatedData) {
 		this.authenticatedData = authenticatedData;
 		return this;
 	}
@@ -371,7 +425,7 @@ public class ContentInformationType19 {
 		return signedData == null ? Optional.empty() : Optional.of(signedData);
 	}
 
-	public ContentInformationType19 setSignedData(com.tools20022.repository.msg.SignedData5 signedData) {
+	public ContentInformationType19 setSignedData(SignedData5 signedData) {
 		this.signedData = signedData;
 		return this;
 	}
@@ -380,7 +434,7 @@ public class ContentInformationType19 {
 		return digestedData == null ? Optional.empty() : Optional.of(digestedData);
 	}
 
-	public ContentInformationType19 setDigestedData(com.tools20022.repository.msg.DigestedData5 digestedData) {
+	public ContentInformationType19 setDigestedData(DigestedData5 digestedData) {
 		this.digestedData = digestedData;
 		return this;
 	}

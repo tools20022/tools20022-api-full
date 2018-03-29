@@ -51,11 +51,15 @@ public class ConstraintOtherStatusRule {
 	 */
 	public static final MMConstraint<PendingSettlementStatusReason1> forPendingSettlementStatusReason1 = new MMConstraint<PendingSettlementStatusReason1>() {
 		{
-			validator = ConstraintOtherStatusRule::checkPendingSettlementStatusReason1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherStatusRule";
 			definition = "If Structured is Other, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> PendingSettlementStatusReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PendingSettlementStatusReason1 obj) throws Exception {
+			checkPendingSettlementStatusReason1(obj);
 		}
 	};
 	/**
@@ -80,11 +84,15 @@ public class ConstraintOtherStatusRule {
 	 */
 	public static final MMConstraint<TransferUnmatchedStatusReason1> forTransferUnmatchedStatusReason1 = new MMConstraint<TransferUnmatchedStatusReason1>() {
 		{
-			validator = ConstraintOtherStatusRule::checkTransferUnmatchedStatusReason1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherStatusRule";
 			definition = "If Structured is Other, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> TransferUnmatchedStatusReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferUnmatchedStatusReason1 obj) throws Exception {
+			checkTransferUnmatchedStatusReason1(obj);
 		}
 	};
 	/**
@@ -109,11 +117,15 @@ public class ConstraintOtherStatusRule {
 	 */
 	public static final MMConstraint<RejectedStatusReason5> forRejectedStatusReason5 = new MMConstraint<RejectedStatusReason5>() {
 		{
-			validator = ConstraintOtherStatusRule::checkRejectedStatusReason5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherStatusRule";
 			definition = "If Structured is Other, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> RejectedStatusReason5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectedStatusReason5 obj) throws Exception {
+			checkRejectedStatusReason5(obj);
 		}
 	};
 

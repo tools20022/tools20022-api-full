@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification100;
+import com.tools20022.repository.msg.PartyIdentification99;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -132,7 +134,7 @@ public class OtherParties26 {
 	 * OtherParties10.mmInvestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties26, Optional<PartyIdentification99>> mmInvestor = new MMMessageAssociationEnd<OtherParties26, Optional<PartyIdentification99>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties26.mmObject();
@@ -147,7 +149,17 @@ public class OtherParties26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification99.mmObject();
+			type_lazy = () -> PartyIdentification99.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification99> getValue(OtherParties26 obj) {
+			return obj.getInvestor();
+		}
+
+		@Override
+		public void setValue(OtherParties26 obj, Optional<PartyIdentification99> value) {
+			obj.setInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StockXchg")
@@ -200,7 +212,7 @@ public class OtherParties26 {
 	 * OtherParties10.mmStockExchange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStockExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties26, Optional<PartyIdentification100>> mmStockExchange = new MMMessageAssociationEnd<OtherParties26, Optional<PartyIdentification100>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties26.mmObject();
@@ -215,7 +227,17 @@ public class OtherParties26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			type_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification100> getValue(OtherParties26 obj) {
+			return obj.getStockExchange();
+		}
+
+		@Override
+		public void setValue(OtherParties26 obj, Optional<PartyIdentification100> value) {
+			obj.setStockExchange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradRgltr")
@@ -266,7 +288,7 @@ public class OtherParties26 {
 	 * OtherParties10.mmTradeRegulator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeRegulator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties26, Optional<PartyIdentification100>> mmTradeRegulator = new MMMessageAssociationEnd<OtherParties26, Optional<PartyIdentification100>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties26.mmObject();
@@ -281,7 +303,17 @@ public class OtherParties26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			type_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification100> getValue(OtherParties26 obj) {
+			return obj.getTradeRegulator();
+		}
+
+		@Override
+		public void setValue(OtherParties26 obj, Optional<PartyIdentification100> value) {
+			obj.setTradeRegulator(value.orElse(null));
 		}
 	};
 
@@ -305,7 +337,7 @@ public class OtherParties26 {
 		return investor == null ? Optional.empty() : Optional.of(investor);
 	}
 
-	public OtherParties26 setInvestor(com.tools20022.repository.msg.PartyIdentification99 investor) {
+	public OtherParties26 setInvestor(PartyIdentification99 investor) {
 		this.investor = investor;
 		return this;
 	}
@@ -314,7 +346,7 @@ public class OtherParties26 {
 		return stockExchange == null ? Optional.empty() : Optional.of(stockExchange);
 	}
 
-	public OtherParties26 setStockExchange(com.tools20022.repository.msg.PartyIdentification100 stockExchange) {
+	public OtherParties26 setStockExchange(PartyIdentification100 stockExchange) {
 		this.stockExchange = stockExchange;
 		return this;
 	}
@@ -323,7 +355,7 @@ public class OtherParties26 {
 		return tradeRegulator == null ? Optional.empty() : Optional.of(tradeRegulator);
 	}
 
-	public OtherParties26 setTradeRegulator(com.tools20022.repository.msg.PartyIdentification100 tradeRegulator) {
+	public OtherParties26 setTradeRegulator(PartyIdentification100 tradeRegulator) {
 		this.tradeRegulator = tradeRegulator;
 		return this;
 	}

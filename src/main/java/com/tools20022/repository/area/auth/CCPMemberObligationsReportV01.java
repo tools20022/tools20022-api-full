@@ -26,7 +26,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.msg.SettlementAccount1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,7 +121,7 @@ public class CCPMemberObligationsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPMemberObligationsReportV01, List<SettlementAccount1>> mmSettlementAccount = new MMMessageBuildingBlock<CCPMemberObligationsReportV01, List<SettlementAccount1>>() {
 		{
 			xmlTag = "SttlmAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +131,14 @@ public class CCPMemberObligationsReportV01 {
 			complexType_lazy = () -> SettlementAccount1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPMemberObligationsReportV01.class.getMethod("getSettlementAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SettlementAccount1> getValue(CCPMemberObligationsReportV01 obj) {
+			return obj.getSettlementAccount();
+		}
+
+		@Override
+		public void setValue(CCPMemberObligationsReportV01 obj, List<SettlementAccount1> value) {
+			obj.setSettlementAccount(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -167,7 +168,7 @@ public class CCPMemberObligationsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPMemberObligationsReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPMemberObligationsReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,12 +178,14 @@ public class CCPMemberObligationsReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPMemberObligationsReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CCPMemberObligationsReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CCPMemberObligationsReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

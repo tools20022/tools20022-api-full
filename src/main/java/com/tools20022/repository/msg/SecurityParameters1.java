@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CryptographicKey2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -118,7 +119,7 @@ public class SecurityParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOIChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters1, Optional<Max140Binary>> mmPOIChallenge = new MMMessageAttribute<SecurityParameters1, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.mmObject();
 			isDerived = false;
@@ -130,6 +131,16 @@ public class SecurityParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(SecurityParameters1 obj) {
+			return obj.getPOIChallenge();
+		}
+
+		@Override
+		public void setValue(SecurityParameters1 obj, Optional<Max140Binary> value) {
+			obj.setPOIChallenge(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TMChllng")
@@ -171,7 +182,7 @@ public class SecurityParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters1, Optional<Max140Binary>> mmTMChallenge = new MMMessageAttribute<SecurityParameters1, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.mmObject();
 			isDerived = false;
@@ -184,9 +195,19 @@ public class SecurityParameters1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
+
+		@Override
+		public Optional<Max140Binary> getValue(SecurityParameters1 obj) {
+			return obj.getTMChallenge();
+		}
+
+		@Override
+		public void setValue(SecurityParameters1 obj, Optional<Max140Binary> value) {
+			obj.setTMChallenge(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SmmtrcKey")
-	protected List<com.tools20022.repository.msg.CryptographicKey2> symmetricKey;
+	protected List<CryptographicKey2> symmetricKey;
 	/**
 	 * 
 	 <p>
@@ -225,7 +246,7 @@ public class SecurityParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSymmetricKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters1, List<CryptographicKey2>> mmSymmetricKey = new MMMessageAttribute<SecurityParameters1, List<CryptographicKey2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters1.mmObject();
 			isDerived = false;
@@ -235,7 +256,17 @@ public class SecurityParameters1 {
 			definition = "Key to inject in the point of interaction, protected by the temporary key previously sent.";
 			nextVersions_lazy = () -> Arrays.asList(SecurityParameters2.mmSymmetricKey);
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey2.mmObject();
+			complexType_lazy = () -> CryptographicKey2.mmObject();
+		}
+
+		@Override
+		public List<CryptographicKey2> getValue(SecurityParameters1 obj) {
+			return obj.getSymmetricKey();
+		}
+
+		@Override
+		public void setValue(SecurityParameters1 obj, List<CryptographicKey2> value) {
+			obj.setSymmetricKey(value);
 		}
 	};
 
@@ -276,7 +307,7 @@ public class SecurityParameters1 {
 		return symmetricKey == null ? symmetricKey = new ArrayList<>() : symmetricKey;
 	}
 
-	public SecurityParameters1 setSymmetricKey(List<com.tools20022.repository.msg.CryptographicKey2> symmetricKey) {
+	public SecurityParameters1 setSymmetricKey(List<CryptographicKey2> symmetricKey) {
 		this.symmetricKey = Objects.requireNonNull(symmetricKey);
 		return this;
 	}

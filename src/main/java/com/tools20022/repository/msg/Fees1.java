@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Fee4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -123,7 +124,7 @@ public class Fees1 {
 	 * FeeAndTax1.mmCommercialAgreementReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fees1, Optional<Max35Text>> mmCommercialAgreementReference = new MMMessageAttribute<Fees1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCommission;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fees1.mmObject();
@@ -137,9 +138,19 @@ public class Fees1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(Fees1 obj) {
+			return obj.getCommercialAgreementReference();
+		}
+
+		@Override
+		public void setValue(Fees1 obj, Optional<Max35Text> value) {
+			obj.setCommercialAgreementReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "IndvFee")
-	protected List<com.tools20022.repository.msg.Fee4> individualFee;
+	protected List<Fee4> individualFee;
 	/**
 	 * 
 	 <p>
@@ -174,7 +185,7 @@ public class Fees1 {
 	 * FeeAndTax1.mmIndividualFee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualFee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Fees1, List<Fee4>> mmIndividualFee = new MMMessageAssociationEnd<Fees1, List<Fee4>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fees1.mmObject();
@@ -186,7 +197,17 @@ public class Fees1 {
 			previousVersion_lazy = () -> FeeAndTax1.mmIndividualFee;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Fee4.mmObject();
+			type_lazy = () -> Fee4.mmObject();
+		}
+
+		@Override
+		public List<Fee4> getValue(Fees1 obj) {
+			return obj.getIndividualFee();
+		}
+
+		@Override
+		public void setValue(Fees1 obj, List<Fee4> value) {
+			obj.setIndividualFee(value);
 		}
 	};
 
@@ -219,7 +240,7 @@ public class Fees1 {
 		return individualFee == null ? individualFee = new ArrayList<>() : individualFee;
 	}
 
-	public Fees1 setIndividualFee(List<com.tools20022.repository.msg.Fee4> individualFee) {
+	public Fees1 setIndividualFee(List<Fee4> individualFee) {
 		this.individualFee = Objects.requireNonNull(individualFee);
 		return this;
 	}

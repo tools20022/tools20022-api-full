@@ -102,7 +102,7 @@ public class ProcessRetry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelay = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessRetry2, Max9NumericText> mmDelay = new MMMessageAttribute<ProcessRetry2, Max9NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class ProcessRetry2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Max9NumericText getValue(ProcessRetry2 obj) {
+			return obj.getDelay();
+		}
+
+		@Override
+		public void setValue(ProcessRetry2 obj, Max9NumericText value) {
+			obj.setDelay(value);
 		}
 	};
 	@XmlElement(name = "MaxNb")
@@ -143,7 +153,7 @@ public class ProcessRetry2 {
 	 * definition} = "Maximum number of retries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessRetry2, Optional<Number>> mmMaximumNumber = new MMMessageAttribute<ProcessRetry2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessRetry2.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class ProcessRetry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ProcessRetry2 obj) {
+			return obj.getMaximumNumber();
+		}
+
+		@Override
+		public void setValue(ProcessRetry2 obj, Optional<Number> value) {
+			obj.setMaximumNumber(value.orElse(null));
 		}
 	};
 

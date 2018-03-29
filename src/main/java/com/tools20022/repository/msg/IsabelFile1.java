@@ -106,7 +106,7 @@ public class IsabelFile1 {
 	 * definition} = "Unique identification of the file.\t."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelFile1, Max14AlphaNumericText> mmIdentification = new MMMessageAttribute<IsabelFile1, Max14AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class IsabelFile1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max14AlphaNumericText getValue(IsabelFile1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelFile1 obj, Max14AlphaNumericText value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Orgtr")
@@ -148,7 +158,7 @@ public class IsabelFile1 {
 	 * definition} = "Unique identification of the originator of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelFile1, Optional<Max14AlphaNumericText>> mmOriginator = new MMMessageAttribute<IsabelFile1, Optional<Max14AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class IsabelFile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max14AlphaNumericText> getValue(IsabelFile1 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(IsabelFile1 obj, Optional<Max14AlphaNumericText> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sz", required = true)
@@ -189,7 +209,7 @@ public class IsabelFile1 {
 	 * definition} = "Size of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelFile1, Number> mmSize = new MMMessageAttribute<IsabelFile1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
@@ -200,6 +220,16 @@ public class IsabelFile1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(IsabelFile1 obj) {
+			return obj.getSize();
+		}
+
+		@Override
+		public void setValue(IsabelFile1 obj, Number value) {
+			obj.setSize(value);
 		}
 	};
 	@XmlElement(name = "Frmt", required = true)
@@ -230,7 +260,7 @@ public class IsabelFile1 {
 	 * definition} = "Format of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelFile1, Max16Text> mmFormat = new MMMessageAttribute<IsabelFile1, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
@@ -241,6 +271,16 @@ public class IsabelFile1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(IsabelFile1 obj) {
+			return obj.getFormat();
+		}
+
+		@Override
+		public void setValue(IsabelFile1 obj, Max16Text value) {
+			obj.setFormat(value);
 		}
 	};
 	@XmlElement(name = "FrmtVrsn")
@@ -271,7 +311,7 @@ public class IsabelFile1 {
 	 * definition} = "Version of the format of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFormatVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelFile1, Optional<Max16Text>> mmFormatVersion = new MMMessageAttribute<IsabelFile1, Optional<Max16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
@@ -282,6 +322,16 @@ public class IsabelFile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(IsabelFile1 obj) {
+			return obj.getFormatVersion();
+		}
+
+		@Override
+		public void setValue(IsabelFile1 obj, Optional<Max16Text> value) {
+			obj.setFormatVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcrdLngth")
@@ -313,7 +363,7 @@ public class IsabelFile1 {
 	 * definition} = "Length of the individual records in the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecordLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelFile1, Optional<Max4NumericText>> mmRecordLength = new MMMessageAttribute<IsabelFile1, Optional<Max4NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 			isDerived = false;
@@ -324,6 +374,16 @@ public class IsabelFile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4NumericText> getValue(IsabelFile1 obj) {
+			return obj.getRecordLength();
+		}
+
+		@Override
+		public void setValue(IsabelFile1 obj, Optional<Max4NumericText> value) {
+			obj.setRecordLength(value.orElse(null));
 		}
 	};
 

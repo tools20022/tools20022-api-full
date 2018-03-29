@@ -118,7 +118,7 @@ public class GenericIdentification12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification12, Max35Text> mmIdentification = new MMMessageAttribute<GenericIdentification12, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification12.mmObject();
@@ -130,6 +130,16 @@ public class GenericIdentification12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification12 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification12 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -166,7 +176,7 @@ public class GenericIdentification12 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification12, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<GenericIdentification12, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification12.mmObject();
@@ -178,6 +188,16 @@ public class GenericIdentification12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentification12 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification12 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrIdTp")
@@ -214,7 +234,7 @@ public class GenericIdentification12 {
 	 * definition} = "Type of other identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GenericIdentification12, Optional<IdentificationType1Choice>> mmOtherIdentificationType = new MMMessageAssociationEnd<GenericIdentification12, Optional<IdentificationType1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification12.mmObject();
@@ -227,6 +247,16 @@ public class GenericIdentification12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> IdentificationType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<IdentificationType1Choice> getValue(GenericIdentification12 obj) {
+			return obj.getOtherIdentificationType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification12 obj, Optional<IdentificationType1Choice> value) {
+			obj.setOtherIdentificationType(value.orElse(null));
 		}
 	};
 

@@ -126,7 +126,7 @@ public class TransferUnmatchedStatus3Choice {
 	 * TransferUnmatchedStatus2.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferUnmatchedStatus3Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<TransferUnmatchedStatus3Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmObject();
@@ -139,6 +139,16 @@ public class TransferUnmatchedStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(TransferUnmatchedStatus3Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(TransferUnmatchedStatus3Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -180,7 +190,7 @@ public class TransferUnmatchedStatus3Choice {
 	 * TransferUnmatchedStatus2.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferUnmatchedStatus3Choice, TransferUnmatchedReason2Code> mmReason = new MMMessageAttribute<TransferUnmatchedStatus3Choice, TransferUnmatchedReason2Code>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmObject();
@@ -193,6 +203,16 @@ public class TransferUnmatchedStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferUnmatchedReason2Code.mmObject();
+		}
+
+		@Override
+		public TransferUnmatchedReason2Code getValue(TransferUnmatchedStatus3Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(TransferUnmatchedStatus3Choice obj, TransferUnmatchedReason2Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -234,7 +254,7 @@ public class TransferUnmatchedStatus3Choice {
 	 * TransferUnmatchedStatus2.mmExtendedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferUnmatchedStatus3Choice, Extended350Code> mmExtendedReason = new MMMessageAttribute<TransferUnmatchedStatus3Choice, Extended350Code>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmObject();
@@ -247,6 +267,16 @@ public class TransferUnmatchedStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(TransferUnmatchedStatus3Choice obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(TransferUnmatchedStatus3Choice obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -288,7 +318,7 @@ public class TransferUnmatchedStatus3Choice {
 	 * TransferUnmatchedStatus2.mmDataSourceScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferUnmatchedStatus3Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<TransferUnmatchedStatus3Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus3Choice.mmObject();
@@ -302,6 +332,16 @@ public class TransferUnmatchedStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(TransferUnmatchedStatus3Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(TransferUnmatchedStatus3Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 

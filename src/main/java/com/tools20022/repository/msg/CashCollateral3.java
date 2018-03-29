@@ -137,7 +137,7 @@ public class CashCollateral3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateral3, Optional<Max35Text>> mmCollateralIdentification = new MMMessageAttribute<CashCollateral3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
 			isDerived = false;
@@ -149,6 +149,16 @@ public class CashCollateral3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CashCollateral3 obj) {
+			return obj.getCollateralIdentification();
+		}
+
+		@Override
+		public void setValue(CashCollateral3 obj, Optional<Max35Text> value) {
+			obj.setCollateralIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcctId")
@@ -194,7 +204,7 @@ public class CashCollateral3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashCollateral3, Optional<AccountIdentification4Choice>> mmCashAccountIdentification = new MMMessageAssociationEnd<CashCollateral3, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
@@ -208,6 +218,16 @@ public class CashCollateral3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(CashCollateral3 obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashCollateral3 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setCashAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DpstAmt")
@@ -258,7 +278,7 @@ public class CashCollateral3 {
 	 * CashCollateral1.mmDepositAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDepositAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateral3, Optional<ActiveCurrencyAndAmount>> mmDepositAmount = new MMMessageAttribute<CashCollateral3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Money.mmCashAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
@@ -272,6 +292,16 @@ public class CashCollateral3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CashCollateral3 obj) {
+			return obj.getDepositAmount();
+		}
+
+		@Override
+		public void setValue(CashCollateral3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setDepositAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DpstTp")
@@ -323,7 +353,7 @@ public class CashCollateral3 {
 	 * CashCollateral1.mmDepositType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDepositType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateral3, Optional<DepositType1Code>> mmDepositType = new MMMessageAttribute<CashCollateral3, Optional<DepositType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Deposit.mmDepositType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
@@ -337,6 +367,16 @@ public class CashCollateral3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DepositType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DepositType1Code> getValue(CashCollateral3 obj) {
+			return obj.getDepositType();
+		}
+
+		@Override
+		public void setValue(CashCollateral3 obj, Optional<DepositType1Code> value) {
+			obj.setDepositType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -386,7 +426,7 @@ public class CashCollateral3 {
 	 * CashCollateral1.mmMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateral3, Optional<ISODate>> mmMaturityDate = new MMMessageAttribute<CashCollateral3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
@@ -400,6 +440,16 @@ public class CashCollateral3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CashCollateral3 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(CashCollateral3 obj, Optional<ISODate> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -449,7 +499,7 @@ public class CashCollateral3 {
 	 * CashCollateral1.mmValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateral3, Optional<ISODate>> mmValueDate = new MMMessageAttribute<CashCollateral3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
@@ -463,6 +513,16 @@ public class CashCollateral3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CashCollateral3 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(CashCollateral3 obj, Optional<ISODate> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgRate")
@@ -512,7 +572,7 @@ public class CashCollateral3 {
 	 * CashCollateral1.mmExchangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateral3, Optional<BaseOneRate>> mmExchangeRate = new MMMessageAttribute<CashCollateral3, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
@@ -526,6 +586,16 @@ public class CashCollateral3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(CashCollateral3 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(CashCollateral3 obj, Optional<BaseOneRate> value) {
+			obj.setExchangeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollVal", required = true)
@@ -577,7 +647,7 @@ public class CashCollateral3 {
 	 * CashCollateral1.mmCollateralValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateral3, ActiveCurrencyAndAmount> mmCollateralValue = new MMMessageAttribute<CashCollateral3, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmRiskAdjustedValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
@@ -591,6 +661,16 @@ public class CashCollateral3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CashCollateral3 obj) {
+			return obj.getCollateralValue();
+		}
+
+		@Override
+		public void setValue(CashCollateral3 obj, ActiveCurrencyAndAmount value) {
+			obj.setCollateralValue(value);
 		}
 	};
 	@XmlElement(name = "Hrcut")
@@ -642,7 +722,7 @@ public class CashCollateral3 {
 	 * CashCollateral1.mmHaircut}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateral3, Optional<PercentageRate>> mmHaircut = new MMMessageAttribute<CashCollateral3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateral3.mmObject();
@@ -656,6 +736,16 @@ public class CashCollateral3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CashCollateral3 obj) {
+			return obj.getHaircut();
+		}
+
+		@Override
+		public void setValue(CashCollateral3 obj, Optional<PercentageRate> value) {
+			obj.setHaircut(value.orElse(null));
 		}
 	};
 

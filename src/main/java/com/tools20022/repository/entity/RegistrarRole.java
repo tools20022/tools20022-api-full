@@ -19,10 +19,10 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.SecuritiesPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -146,7 +146,7 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 * "Account at the registrar where financial instruments are registered."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRegistrarAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<RegistrarRole, com.tools20022.repository.entity.SecuritiesAccount> mmRegistrarAccount = new MMBusinessAssociationEnd<RegistrarRole, com.tools20022.repository.entity.SecuritiesAccount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegistrationParameters1.mmRegistrarAccount, RegistrationParameters2.mmRegistrarAccount, RegistrationParameters4.mmRegistrarAccount, RegistrationParameters5.mmRegistrarAccount,
 					RegistrationParameters6.mmRegistrarAccount, RegistrationParameters7.mmRegistrarAccount);
@@ -160,6 +160,16 @@ public class RegistrarRole extends SecuritiesPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmRelatedRegistrar;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesAccount getValue(RegistrarRole obj) {
+			return obj.getRegistrarAccount();
+		}
+
+		@Override
+		public void setValue(RegistrarRole obj, com.tools20022.repository.entity.SecuritiesAccount value) {
+			obj.setRegistrarAccount(value);
 		}
 	};
 	protected Max35Text registerName;
@@ -197,7 +207,7 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRegisterName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<RegistrarRole, Max35Text> mmRegisterName = new MMBusinessAttribute<RegistrarRole, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification5.mmRegisterName);
 			isDerived = false;
@@ -210,12 +220,14 @@ public class RegistrarRole extends SecuritiesPartyRole {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegistrarRole.class.getMethod("getRegisterName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(RegistrarRole obj) {
+			return obj.getRegisterName();
+		}
+
+		@Override
+		public void setValue(RegistrarRole obj, Max35Text value) {
+			obj.setRegisterName(value);
 		}
 	};
 

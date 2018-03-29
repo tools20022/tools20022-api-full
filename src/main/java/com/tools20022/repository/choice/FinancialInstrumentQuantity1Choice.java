@@ -116,7 +116,7 @@ public class FinancialInstrumentQuantity1Choice {
 	 * "Quantity expressed as a number, for example, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity1Choice, DecimalNumber> mmUnit = new MMMessageAttribute<FinancialInstrumentQuantity1Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
@@ -129,6 +129,16 @@ public class FinancialInstrumentQuantity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(FinancialInstrumentQuantity1Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity1Choice obj, DecimalNumber value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "FaceAmt", required = true)
@@ -168,7 +178,7 @@ public class FinancialInstrumentQuantity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity1Choice, ImpliedCurrencyAndAmount> mmFaceAmount = new MMMessageAttribute<FinancialInstrumentQuantity1Choice, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
@@ -180,6 +190,16 @@ public class FinancialInstrumentQuantity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(FinancialInstrumentQuantity1Choice obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity1Choice obj, ImpliedCurrencyAndAmount value) {
+			obj.setFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtsdVal", required = true)
@@ -219,7 +239,7 @@ public class FinancialInstrumentQuantity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity1Choice, ImpliedCurrencyAndAmount> mmAmortisedValue = new MMMessageAttribute<FinancialInstrumentQuantity1Choice, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
@@ -231,6 +251,16 @@ public class FinancialInstrumentQuantity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(FinancialInstrumentQuantity1Choice obj) {
+			return obj.getAmortisedValue();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity1Choice obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmortisedValue(value);
 		}
 	};
 

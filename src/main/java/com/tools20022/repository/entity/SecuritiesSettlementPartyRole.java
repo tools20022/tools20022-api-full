@@ -22,10 +22,11 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.SettlingCapacityCode;
 import com.tools20022.repository.codeset.TaxLiabilityCode;
+import com.tools20022.repository.entity.SecuritiesSettlement;
+import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.entity.SettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -372,7 +373,7 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * "Specifies the settlement process in which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlementPartyRole, List<SecuritiesSettlement>> mmSecuritiesSettlement = new MMBusinessAssociationEnd<SecuritiesSettlementPartyRole, List<SecuritiesSettlement>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmObject();
@@ -383,6 +384,16 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesSettlement> getValue(SecuritiesSettlementPartyRole obj) {
+			return obj.getSecuritiesSettlement();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementPartyRole obj, List<SecuritiesSettlement> value) {
+			obj.setSecuritiesSettlement(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesSettlementSystem> securitiesSettlementSystem;
@@ -422,7 +433,7 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesSettlementSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesSettlementPartyRole, List<SecuritiesSettlementSystem>> mmSecuritiesSettlementSystem = new MMBusinessAssociationEnd<SecuritiesSettlementPartyRole, List<SecuritiesSettlementSystem>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementPartyRole.mmObject();
@@ -433,6 +444,16 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.mmSettlementParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlementSystem.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesSettlementSystem> getValue(SecuritiesSettlementPartyRole obj) {
+			return obj.getSecuritiesSettlementSystem();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementPartyRole obj, List<SecuritiesSettlementSystem> value) {
+			obj.setSecuritiesSettlementSystem(value);
 		}
 	};
 	protected SettlingCapacityCode settlingCapacity;
@@ -860,7 +881,7 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * definition} = "Role of a party in the settlement of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlingCapacity = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlementPartyRole, SettlingCapacityCode> mmSettlingCapacity = new MMBusinessAttribute<SecuritiesSettlementPartyRole, SettlingCapacityCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmSettlingCapacity, SettlementDetails51.mmSettlingCapacity, SettlementDetails9.mmSettlingCapacity, SettlementDetails17.mmSettlingCapacity,
 					SettlementDetails30.mmSettlingCapacity, SettlementDetails32.mmSettlingCapacity, SettlementDetails60.mmSettlingCapacity, SettlementDetails64.mmSettlingCapacity, SettlementDetails3.mmSettlingCapacity,
@@ -900,12 +921,14 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 			simpleType_lazy = () -> SettlingCapacityCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementPartyRole.class.getMethod("getSettlingCapacity", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SettlingCapacityCode getValue(SecuritiesSettlementPartyRole obj) {
+			return obj.getSettlingCapacity();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementPartyRole obj, SettlingCapacityCode value) {
+			obj.setSettlingCapacity(value);
 		}
 	};
 	protected TaxLiabilityCode taxCapacity;
@@ -1375,7 +1398,7 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 	 * definition} = "Tax role capacity of the instructing party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTaxCapacity = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesSettlementPartyRole, TaxLiabilityCode> mmTaxCapacity = new MMBusinessAttribute<SecuritiesSettlementPartyRole, TaxLiabilityCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxCapacityParty1Choice.mmCode, TaxCapacityParty1Choice.mmProprietary, SettlementDetails50.mmTaxCapacity, TaxCapacityParty2Choice.mmCode, TaxCapacityParty2Choice.mmProprietary,
 					SettlementDetails51.mmTaxCapacity, SettlementDetails9.mmTaxCapacity, SettlementDetails17.mmTaxCapacity, SettlementDetails30.mmTaxCapacity, SettlementDetails32.mmTaxCapacity, SettlementDetails60.mmTaxCapacity,
@@ -1413,12 +1436,14 @@ public class SecuritiesSettlementPartyRole extends SettlementPartyRole {
 			simpleType_lazy = () -> TaxLiabilityCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementPartyRole.class.getMethod("getTaxCapacity", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TaxLiabilityCode getValue(SecuritiesSettlementPartyRole obj) {
+			return obj.getTaxCapacity();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementPartyRole obj, TaxLiabilityCode value) {
+			obj.setTaxCapacity(value);
 		}
 	};
 

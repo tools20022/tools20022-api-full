@@ -68,12 +68,16 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionQuantity5> forCorporateActionQuantity5 = new MMConstraint<CorporateActionQuantity5>() {
 		{
-			validator = ConstraintMaximumAndMinimumQuantitySoughtUsageRule::checkCorporateActionQuantity5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAndMinimumQuantitySoughtUsageRule";
 			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaximumAndMinimumQuantitySoughtUsageRule.forCorporateActionQuantity7);
 			owner_lazy = () -> CorporateActionQuantity5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionQuantity5 obj) throws Exception {
+			checkCorporateActionQuantity5(obj);
 		}
 	};
 	/**
@@ -99,11 +103,15 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionQuantity6> forCorporateActionQuantity6 = new MMConstraint<CorporateActionQuantity6>() {
 		{
-			validator = ConstraintMaximumAndMinimumQuantitySoughtUsageRule::checkCorporateActionQuantity6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAndMinimumQuantitySoughtUsageRule";
 			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
 			owner_lazy = () -> CorporateActionQuantity6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionQuantity6 obj) throws Exception {
+			checkCorporateActionQuantity6(obj);
 		}
 	};
 	/**
@@ -135,12 +143,16 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionQuantity7> forCorporateActionQuantity7 = new MMConstraint<CorporateActionQuantity7>() {
 		{
-			validator = ConstraintMaximumAndMinimumQuantitySoughtUsageRule::checkCorporateActionQuantity7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAndMinimumQuantitySoughtUsageRule";
 			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaximumAndMinimumQuantitySoughtUsageRule.forCorporateActionQuantity5;
 			owner_lazy = () -> CorporateActionQuantity7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionQuantity7 obj) throws Exception {
+			checkCorporateActionQuantity7(obj);
 		}
 	};
 	/**
@@ -166,11 +178,15 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionQuantity8> forCorporateActionQuantity8 = new MMConstraint<CorporateActionQuantity8>() {
 		{
-			validator = ConstraintMaximumAndMinimumQuantitySoughtUsageRule::checkCorporateActionQuantity8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAndMinimumQuantitySoughtUsageRule";
 			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
 			owner_lazy = () -> CorporateActionQuantity8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionQuantity8 obj) throws Exception {
+			checkCorporateActionQuantity8(obj);
 		}
 	};
 

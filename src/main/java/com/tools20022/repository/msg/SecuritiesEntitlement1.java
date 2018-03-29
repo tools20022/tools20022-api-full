@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +109,7 @@ public class SecuritiesEntitlement1 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesEntitlement1, SecurityIdentification7> mmSecurityIdentification = new MMMessageAttribute<SecuritiesEntitlement1, SecurityIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesEntitlement1.mmObject();
@@ -119,7 +120,17 @@ public class SecuritiesEntitlement1 {
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(SecuritiesEntitlement1 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesEntitlement1 obj, SecurityIdentification7 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "EntitldSctiesQty", required = true)
@@ -159,7 +170,7 @@ public class SecuritiesEntitlement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitledSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesEntitlement1, UnitOrFaceAmount1Choice> mmEntitledSecuritiesQuantity = new MMMessageAttribute<SecuritiesEntitlement1, UnitOrFaceAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmEntitledSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesEntitlement1.mmObject();
@@ -171,6 +182,16 @@ public class SecuritiesEntitlement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
+		}
+
+		@Override
+		public UnitOrFaceAmount1Choice getValue(SecuritiesEntitlement1 obj) {
+			return obj.getEntitledSecuritiesQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesEntitlement1 obj, UnitOrFaceAmount1Choice value) {
+			obj.setEntitledSecuritiesQuantity(value);
 		}
 	};
 
@@ -192,7 +213,7 @@ public class SecuritiesEntitlement1 {
 		return securityIdentification;
 	}
 
-	public SecuritiesEntitlement1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+	public SecuritiesEntitlement1 setSecurityIdentification(SecurityIdentification7 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}

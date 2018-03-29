@@ -139,7 +139,7 @@ public class GrossDividendRateFormat5Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat5Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<GrossDividendRateFormat5Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat5Choice.mmObject();
@@ -152,6 +152,16 @@ public class GrossDividendRateFormat5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(GrossDividendRateFormat5Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat5Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -186,7 +196,7 @@ public class GrossDividendRateFormat5Choice {
 	 * definition} = "Specifies different formats for the gross dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GrossDividendRateFormat5Choice, RateTypeAndAmountAndStatus1> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<GrossDividendRateFormat5Choice, RateTypeAndAmountAndStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat5Choice.mmObject();
 			isDerived = false;
@@ -199,6 +209,16 @@ public class GrossDividendRateFormat5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus1.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus1 getValue(GrossDividendRateFormat5Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat5Choice obj, RateTypeAndAmountAndStatus1 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -234,7 +254,7 @@ public class GrossDividendRateFormat5Choice {
 	 * definition} = "Value of the rate not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat5Choice, RateType13Code> mmNotSpecifiedRate = new MMMessageAttribute<GrossDividendRateFormat5Choice, RateType13Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat5Choice.mmObject();
 			isDerived = false;
@@ -246,6 +266,16 @@ public class GrossDividendRateFormat5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType13Code.mmObject();
+		}
+
+		@Override
+		public RateType13Code getValue(GrossDividendRateFormat5Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat5Choice obj, RateType13Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

@@ -134,7 +134,7 @@ public class AcquirerHostConfiguration3 {
 	 * AcquirerHostConfiguration2.mmHostIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration3, Max35Text> mmHostIdentification = new MMMessageAttribute<AcquirerHostConfiguration3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration3.mmObject();
@@ -148,6 +148,16 @@ public class AcquirerHostConfiguration3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AcquirerHostConfiguration3 obj) {
+			return obj.getHostIdentification();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration3 obj, Max35Text value) {
+			obj.setHostIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgToSnd")
@@ -193,7 +203,7 @@ public class AcquirerHostConfiguration3 {
 	 * AcquirerHostConfiguration2.mmMessageToSend}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageToSend = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerHostConfiguration3, List<MessageFunction5Code>> mmMessageToSend = new MMMessageAttribute<AcquirerHostConfiguration3, List<MessageFunction5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration3.mmObject();
 			isDerived = false;
@@ -205,6 +215,16 @@ public class AcquirerHostConfiguration3 {
 			previousVersion_lazy = () -> AcquirerHostConfiguration2.mmMessageToSend;
 			minOccurs = 0;
 			simpleType_lazy = () -> MessageFunction5Code.mmObject();
+		}
+
+		@Override
+		public List<MessageFunction5Code> getValue(AcquirerHostConfiguration3 obj) {
+			return obj.getMessageToSend();
+		}
+
+		@Override
+		public void setValue(AcquirerHostConfiguration3 obj, List<MessageFunction5Code> value) {
+			obj.setMessageToSend(value);
 		}
 	};
 

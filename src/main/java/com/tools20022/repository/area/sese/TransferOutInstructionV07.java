@@ -25,8 +25,7 @@ import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.choice.DateFormat1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
-import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -93,8 +92,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -186,7 +185,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<TransferOutInstructionV07, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,12 +198,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(TransferOutInstructionV07 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -245,7 +246,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, Optional<AdditionalReference6>> mmPoolReference = new MMMessageBuildingBlock<TransferOutInstructionV07, Optional<AdditionalReference6>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,12 +259,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference6> getValue(TransferOutInstructionV07 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, Optional<AdditionalReference6> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -305,7 +308,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, Optional<AdditionalReference6>> mmPreviousReference = new MMMessageBuildingBlock<TransferOutInstructionV07, Optional<AdditionalReference6>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,12 +321,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference6> getValue(TransferOutInstructionV07 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, Optional<AdditionalReference6> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -365,7 +370,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, Optional<AdditionalReference6>> mmRelatedReference = new MMMessageBuildingBlock<TransferOutInstructionV07, Optional<AdditionalReference6>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,12 +383,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference6> getValue(TransferOutInstructionV07 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, Optional<AdditionalReference6> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MstrRef")
@@ -425,7 +432,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, Optional<Max35Text>> mmMasterReference = new MMMessageBuildingBlock<TransferOutInstructionV07, Optional<Max35Text>>() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -438,12 +445,14 @@ public class TransferOutInstructionV07 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getMasterReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(TransferOutInstructionV07 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdTrfDt")
@@ -486,7 +495,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmRequestedTransferDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestedTransferDate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, Optional<DateFormat1Choice>> mmRequestedTransferDate = new MMMessageBuildingBlock<TransferOutInstructionV07, Optional<DateFormat1Choice>>() {
 		{
 			xmlTag = "ReqdTrfDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -499,12 +508,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> DateFormat1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getRequestedTransferDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DateFormat1Choice> getValue(TransferOutInstructionV07 obj) {
+			return obj.getRequestedTransferDate();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, Optional<DateFormat1Choice> value) {
+			obj.setRequestedTransferDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfDtls", required = true)
@@ -545,7 +556,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmTransferDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, List<Transfer30>> mmTransferDetails = new MMMessageBuildingBlock<TransferOutInstructionV07, List<Transfer30>>() {
 		{
 			xmlTag = "TrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -557,12 +568,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> Transfer30.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getTransferDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Transfer30> getValue(TransferOutInstructionV07 obj) {
+			return obj.getTransferDetails();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, List<Transfer30> value) {
+			obj.setTransferDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
@@ -605,7 +618,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, InvestmentAccount54> mmAccountDetails = new MMMessageBuildingBlock<TransferOutInstructionV07, InvestmentAccount54>() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -618,12 +631,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> InvestmentAccount54.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvestmentAccount54 getValue(TransferOutInstructionV07 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, InvestmentAccount54 value) {
+			obj.setAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "SttlmDtls")
@@ -665,7 +680,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmSettlementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, Optional<ReceiveInformation16>> mmSettlementDetails = new MMMessageBuildingBlock<TransferOutInstructionV07, Optional<ReceiveInformation16>>() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -678,12 +693,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> ReceiveInformation16.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getSettlementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ReceiveInformation16> getValue(TransferOutInstructionV07 obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, Optional<ReceiveInformation16> value) {
+			obj.setSettlementDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktPrctcVrsn")
@@ -725,7 +742,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, Optional<MarketPracticeVersion1>> mmMarketPracticeVersion = new MMMessageBuildingBlock<TransferOutInstructionV07, Optional<MarketPracticeVersion1>>() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -738,12 +755,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getMarketPracticeVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarketPracticeVersion1> getValue(TransferOutInstructionV07 obj) {
+			return obj.getMarketPracticeVersion();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, Optional<MarketPracticeVersion1> value) {
+			obj.setMarketPracticeVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -785,7 +804,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmCopyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, Optional<CopyInformation4>> mmCopyDetails = new MMMessageBuildingBlock<TransferOutInstructionV07, Optional<CopyInformation4>>() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -798,12 +817,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> CopyInformation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getCopyDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyInformation4> getValue(TransferOutInstructionV07 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, Optional<CopyInformation4> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -845,7 +866,7 @@ public class TransferOutInstructionV07 {
 	 * TransferOutInstructionV06.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutInstructionV07, List<Extension1>> mmExtension = new MMMessageBuildingBlock<TransferOutInstructionV07, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -857,12 +878,14 @@ public class TransferOutInstructionV07 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutInstructionV07.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(TransferOutInstructionV07 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(TransferOutInstructionV07 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -875,7 +898,7 @@ public class TransferOutInstructionV07 {
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the TransferOutInstruction message to the executing party, for example, a transfer agent, to instruct the delivery of a financial instrument, free of payment, on a given date from a specified party.\r\nThis message may also be used to instruct the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.\r\nUsage\r\nThe TransferOutInstruction message is used to instruct the withdrawal of a financial instrument from one account and deliver it to either another account or to a third party.";
 				nextVersions_lazy = () -> Arrays.asList(TransferOutInstructionV08.mmObject());
 				previousVersion_lazy = () -> TransferOutInstructionV06.mmObject();
-				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "TrfOutInstr";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();

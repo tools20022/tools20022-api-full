@@ -17,7 +17,6 @@
 
 package com.tools20022.repository.area.catm;
 
-import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
@@ -27,7 +26,7 @@ import com.tools20022.repository.msg.CertificateManagementResponse1;
 import com.tools20022.repository.msg.ContentInformationType18;
 import com.tools20022.repository.msg.Header29;
 import com.tools20022.repository.msgset.CAPEMaintenance20172018;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -59,6 +58,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
+ * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.CAPEMaintenance20172018
  * CAPEMaintenance20172018}</li>
  * </ul>
@@ -75,12 +77,9 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.008.001.02}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
- * semanticMarkup} = type=prefix, prefix=DRAFT1</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CertificateManagementResponseV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -127,7 +126,7 @@ public class CertificateManagementResponseV02 {
 	 * CertificateManagementResponseV01.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CertificateManagementResponseV02, Header29> mmHeader = new MMMessageBuildingBlock<CertificateManagementResponseV02, Header29>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +138,14 @@ public class CertificateManagementResponseV02 {
 			complexType_lazy = () -> Header29.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CertificateManagementResponseV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header29 getValue(CertificateManagementResponseV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(CertificateManagementResponseV02 obj, Header29 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "CertMgmtRspn", required = true)
@@ -179,7 +180,7 @@ public class CertificateManagementResponseV02 {
 	 * CertificateManagementResponseV01.mmCertificateManagementResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCertificateManagementResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CertificateManagementResponseV02, CertificateManagementResponse1> mmCertificateManagementResponse = new MMMessageBuildingBlock<CertificateManagementResponseV02, CertificateManagementResponse1>() {
 		{
 			xmlTag = "CertMgmtRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,12 +192,14 @@ public class CertificateManagementResponseV02 {
 			complexType_lazy = () -> CertificateManagementResponse1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CertificateManagementResponseV02.class.getMethod("getCertificateManagementResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CertificateManagementResponse1 getValue(CertificateManagementResponseV02 obj) {
+			return obj.getCertificateManagementResponse();
+		}
+
+		@Override
+		public void setValue(CertificateManagementResponseV02 obj, CertificateManagementResponse1 value) {
+			obj.setCertificateManagementResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -230,7 +233,7 @@ public class CertificateManagementResponseV02 {
 	 * CertificateManagementResponseV01.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CertificateManagementResponseV02, Optional<ContentInformationType18>> mmSecurityTrailer = new MMMessageBuildingBlock<CertificateManagementResponseV02, Optional<ContentInformationType18>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,24 +245,25 @@ public class CertificateManagementResponseV02 {
 			complexType_lazy = () -> ContentInformationType18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CertificateManagementResponseV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType18> getValue(CertificateManagementResponseV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(CertificateManagementResponseV02 obj, Optional<ContentInformationType18> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT1"}));
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateManagementResponseV02";
 				definition = "The CertificateManagementResponse is sent by a terminal manager in response to a CertificateManagementRequest to provide the outcome of the requested service.";
 				previousVersion_lazy = () -> CertificateManagementResponseV01.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEMaintenance20172018.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPEMaintenance20172018.mmObject());
 				rootElement = "Document";
 				xmlTag = "CertMgmtRspn";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

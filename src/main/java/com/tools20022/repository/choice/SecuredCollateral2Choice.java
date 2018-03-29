@@ -122,7 +122,7 @@ public class SecuredCollateral2Choice {
 	 * SecuredCollateral1Choice.mmSingleCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSingleCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredCollateral2Choice, CollateralValuation6> mmSingleCollateral = new MMMessageAssociationEnd<SecuredCollateral2Choice, CollateralValuation6>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral2Choice.mmObject();
@@ -136,6 +136,16 @@ public class SecuredCollateral2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuation6.mmObject();
+		}
+
+		@Override
+		public CollateralValuation6 getValue(SecuredCollateral2Choice obj) {
+			return obj.getSingleCollateral();
+		}
+
+		@Override
+		public void setValue(SecuredCollateral2Choice obj, CollateralValuation6 value) {
+			obj.setSingleCollateral(value);
 		}
 	};
 	@XmlElement(name = "MltplColl", required = true)
@@ -178,7 +188,7 @@ public class SecuredCollateral2Choice {
 	 * SecuredCollateral1Choice.mmMultipleCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultipleCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredCollateral2Choice, List<CollateralValuation6>> mmMultipleCollateral = new MMMessageAssociationEnd<SecuredCollateral2Choice, List<CollateralValuation6>>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral2Choice.mmObject();
@@ -191,6 +201,16 @@ public class SecuredCollateral2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuation6.mmObject();
+		}
+
+		@Override
+		public List<CollateralValuation6> getValue(SecuredCollateral2Choice obj) {
+			return obj.getMultipleCollateral();
+		}
+
+		@Override
+		public void setValue(SecuredCollateral2Choice obj, List<CollateralValuation6> value) {
+			obj.setMultipleCollateral(value);
 		}
 	};
 	@XmlElement(name = "PoolColl", required = true)
@@ -233,7 +253,7 @@ public class SecuredCollateral2Choice {
 	 * SecuredCollateral1Choice.mmPoolCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPoolCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredCollateral2Choice, CollateralValuation6> mmPoolCollateral = new MMMessageAssociationEnd<SecuredCollateral2Choice, CollateralValuation6>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral2Choice.mmObject();
@@ -247,6 +267,16 @@ public class SecuredCollateral2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuation6.mmObject();
+		}
+
+		@Override
+		public CollateralValuation6 getValue(SecuredCollateral2Choice obj) {
+			return obj.getPoolCollateral();
+		}
+
+		@Override
+		public void setValue(SecuredCollateral2Choice obj, CollateralValuation6 value) {
+			obj.setPoolCollateral(value);
 		}
 	};
 	@XmlElement(name = "OthrColl", required = true)
@@ -289,7 +319,7 @@ public class SecuredCollateral2Choice {
 	 * SecuredCollateral1Choice.mmOtherCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredCollateral2Choice, List<CollateralValuation7>> mmOtherCollateral = new MMMessageAssociationEnd<SecuredCollateral2Choice, List<CollateralValuation7>>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral2Choice.mmObject();
@@ -302,6 +332,16 @@ public class SecuredCollateral2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuation7.mmObject();
+		}
+
+		@Override
+		public List<CollateralValuation7> getValue(SecuredCollateral2Choice obj) {
+			return obj.getOtherCollateral();
+		}
+
+		@Override
+		public void setValue(SecuredCollateral2Choice obj, List<CollateralValuation7> value) {
+			obj.setOtherCollateral(value);
 		}
 	};
 

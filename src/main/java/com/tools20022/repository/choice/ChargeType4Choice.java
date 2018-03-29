@@ -118,7 +118,7 @@ public class ChargeType4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType4Choice, ChargeType12Code> mmCode = new MMMessageAttribute<ChargeType4Choice, ChargeType12Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeType4Choice.mmObject();
@@ -131,6 +131,16 @@ public class ChargeType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType12Code.mmObject();
+		}
+
+		@Override
+		public ChargeType12Code getValue(ChargeType4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ChargeType4Choice obj, ChargeType12Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -176,7 +186,7 @@ public class ChargeType4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType4Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<ChargeType4Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeType4Choice.mmObject();
@@ -189,6 +199,16 @@ public class ChargeType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(ChargeType4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ChargeType4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

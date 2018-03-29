@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Action1;
+import com.tools20022.repository.msg.AuthorisationResult1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +123,7 @@ public class CardPaymentTransaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction10, AuthorisationResult1> mmAuthorisationResult = new MMMessageAssociationEnd<CardPaymentTransaction10, AuthorisationResult1>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmValidation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction10.mmObject();
@@ -134,11 +136,21 @@ public class CardPaymentTransaction10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmObject();
+			type_lazy = () -> AuthorisationResult1.mmObject();
+		}
+
+		@Override
+		public AuthorisationResult1 getValue(CardPaymentTransaction10 obj) {
+			return obj.getAuthorisationResult();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction10 obj, AuthorisationResult1 value) {
+			obj.setAuthorisationResult(value);
 		}
 	};
 	@XmlElement(name = "Actn")
-	protected List<com.tools20022.repository.msg.Action1> action;
+	protected List<Action1> action;
 	/**
 	 * 
 	 <p>
@@ -179,7 +191,7 @@ public class CardPaymentTransaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction10, List<Action1>> mmAction = new MMMessageAssociationEnd<CardPaymentTransaction10, List<Action1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction10.mmObject();
@@ -191,7 +203,17 @@ public class CardPaymentTransaction10 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction27.mmAction);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Action1.mmObject();
+			type_lazy = () -> Action1.mmObject();
+		}
+
+		@Override
+		public List<Action1> getValue(CardPaymentTransaction10 obj) {
+			return obj.getAction();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction10 obj, List<Action1> value) {
+			obj.setAction(value);
 		}
 	};
 
@@ -214,7 +236,7 @@ public class CardPaymentTransaction10 {
 		return authorisationResult;
 	}
 
-	public CardPaymentTransaction10 setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult1 authorisationResult) {
+	public CardPaymentTransaction10 setAuthorisationResult(AuthorisationResult1 authorisationResult) {
 		this.authorisationResult = Objects.requireNonNull(authorisationResult);
 		return this;
 	}
@@ -223,7 +245,7 @@ public class CardPaymentTransaction10 {
 		return action == null ? action = new ArrayList<>() : action;
 	}
 
-	public CardPaymentTransaction10 setAction(List<com.tools20022.repository.msg.Action1> action) {
+	public CardPaymentTransaction10 setAction(List<Action1> action) {
 		this.action = Objects.requireNonNull(action);
 		return this;
 	}

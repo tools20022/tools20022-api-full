@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.DateAndDateTimeSearch2Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraPositionStatusType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +126,7 @@ public class IntraPositionQueryStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionQueryStatus1, IntraPositionStatusType1> mmType = new MMMessageAssociationEnd<IntraPositionQueryStatus1, IntraPositionStatusType1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryStatus1.mmObject();
@@ -138,7 +139,17 @@ public class IntraPositionQueryStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusType1.mmObject();
+			type_lazy = () -> IntraPositionStatusType1.mmObject();
+		}
+
+		@Override
+		public IntraPositionStatusType1 getValue(IntraPositionQueryStatus1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryStatus1 obj, IntraPositionStatusType1 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -183,7 +194,7 @@ public class IntraPositionQueryStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDatePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionQueryStatus1, Optional<DateAndDateTimeSearch2Choice>> mmDatePeriod = new MMMessageAssociationEnd<IntraPositionQueryStatus1, Optional<DateAndDateTimeSearch2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmValidityTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryStatus1.mmObject();
@@ -197,6 +208,16 @@ public class IntraPositionQueryStatus1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeSearch2Choice> getValue(IntraPositionQueryStatus1 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryStatus1 obj, Optional<DateAndDateTimeSearch2Choice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 
@@ -219,7 +240,7 @@ public class IntraPositionQueryStatus1 {
 		return type;
 	}
 
-	public IntraPositionQueryStatus1 setType(com.tools20022.repository.msg.IntraPositionStatusType1 type) {
+	public IntraPositionQueryStatus1 setType(IntraPositionStatusType1 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}

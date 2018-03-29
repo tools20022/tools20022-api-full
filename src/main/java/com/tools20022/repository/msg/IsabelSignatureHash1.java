@@ -98,7 +98,7 @@ public class IsabelSignatureHash1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHash = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSignatureHash1, Max50Binary> mmHash = new MMMessageAttribute<IsabelSignatureHash1, Max50Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureHash1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class IsabelSignatureHash1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Binary.mmObject();
+		}
+
+		@Override
+		public Max50Binary getValue(IsabelSignatureHash1 obj) {
+			return obj.getHash();
+		}
+
+		@Override
+		public void setValue(IsabelSignatureHash1 obj, Max50Binary value) {
+			obj.setHash(value);
 		}
 	};
 	@XmlElement(name = "Algo", required = true)
@@ -142,7 +152,7 @@ public class IsabelSignatureHash1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSignatureHash1, Max105Text> mmAlgorithm = new MMMessageAttribute<IsabelSignatureHash1, Max105Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureHash1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class IsabelSignatureHash1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Max105Text getValue(IsabelSignatureHash1 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(IsabelSignatureHash1 obj, Max105Text value) {
+			obj.setAlgorithm(value);
 		}
 	};
 

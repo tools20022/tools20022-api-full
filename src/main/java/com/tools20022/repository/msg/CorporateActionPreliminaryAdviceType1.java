@@ -162,7 +162,7 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPreliminaryAdviceType1, CorporateActionPreliminaryAdviceType1Code> mmType = new MMMessageAttribute<CorporateActionPreliminaryAdviceType1, CorporateActionPreliminaryAdviceType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmNotificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmObject();
@@ -176,6 +176,16 @@ public class CorporateActionPreliminaryAdviceType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionPreliminaryAdviceType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionPreliminaryAdviceType1Code getValue(CorporateActionPreliminaryAdviceType1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CorporateActionPreliminaryAdviceType1 obj, CorporateActionPreliminaryAdviceType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "PrcgSts", required = true)
@@ -215,7 +225,7 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPreliminaryAdviceType1, CorporateActionProcessingStatus1Choice> mmProcessingStatus = new MMMessageAssociationEnd<CorporateActionPreliminaryAdviceType1, CorporateActionProcessingStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmObject();
@@ -229,6 +239,16 @@ public class CorporateActionPreliminaryAdviceType1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionProcessingStatus1Choice getValue(CorporateActionPreliminaryAdviceType1 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionPreliminaryAdviceType1 obj, CorporateActionProcessingStatus1Choice value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "ElgbltyInd")
@@ -271,7 +291,7 @@ public class CorporateActionPreliminaryAdviceType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEligibilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPreliminaryAdviceType1, Optional<YesNoIndicator>> mmEligibilityIndicator = new MMMessageAttribute<CorporateActionPreliminaryAdviceType1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType1.mmObject();
 			isDerived = false;
@@ -283,6 +303,16 @@ public class CorporateActionPreliminaryAdviceType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionPreliminaryAdviceType1 obj) {
+			return obj.getEligibilityIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionPreliminaryAdviceType1 obj, Optional<YesNoIndicator> value) {
+			obj.setEligibilityIndicator(value.orElse(null));
 		}
 	};
 

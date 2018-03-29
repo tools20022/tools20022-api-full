@@ -100,7 +100,7 @@ public class Frequency34Choice {
 	 * definition} = "Frequency expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Frequency34Choice, EventFrequency7Code> mmCode = new MMMessageAttribute<Frequency34Choice, EventFrequency7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Frequency34Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class Frequency34Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency7Code.mmObject();
+		}
+
+		@Override
+		public EventFrequency7Code getValue(Frequency34Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Frequency34Choice obj, EventFrequency7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -143,7 +153,7 @@ public class Frequency34Choice {
 	 * definition} = "Frequency expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Frequency34Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<Frequency34Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Frequency34Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class Frequency34Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(Frequency34Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Frequency34Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

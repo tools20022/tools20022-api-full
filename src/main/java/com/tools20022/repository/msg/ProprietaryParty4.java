@@ -110,7 +110,7 @@ public class ProprietaryParty4 {
 	 * ProprietaryParty3.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryParty4, Max35Text> mmType = new MMMessageAttribute<ProprietaryParty4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryParty4.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class ProprietaryParty4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryParty4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProprietaryParty4 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Pty", required = true)
@@ -162,7 +172,7 @@ public class ProprietaryParty4 {
 	 * ProprietaryParty3.mmParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProprietaryParty4, Party35Choice> mmParty = new MMMessageAssociationEnd<ProprietaryParty4, Party35Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryParty4.mmObject();
@@ -176,6 +186,16 @@ public class ProprietaryParty4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party35Choice.mmObject();
+		}
+
+		@Override
+		public Party35Choice getValue(ProprietaryParty4 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(ProprietaryParty4 obj, Party35Choice value) {
+			obj.setParty(value);
 		}
 	};
 

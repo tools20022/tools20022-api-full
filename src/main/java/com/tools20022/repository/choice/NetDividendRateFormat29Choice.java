@@ -126,7 +126,7 @@ public class NetDividendRateFormat29Choice {
 	 * NetDividendRateFormat21Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateFormat29Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<NetDividendRateFormat29Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat29Choice.mmObject();
@@ -139,6 +139,16 @@ public class NetDividendRateFormat29Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(NetDividendRateFormat29Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat29Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtAndRateSts", required = true)
@@ -179,7 +189,7 @@ public class NetDividendRateFormat29Choice {
 	 * NetDividendRateFormat21Choice.mmAmountAndRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetDividendRateFormat29Choice, AmountAndRateStatus1> mmAmountAndRateStatus = new MMMessageAssociationEnd<NetDividendRateFormat29Choice, AmountAndRateStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat29Choice.mmObject();
@@ -193,6 +203,16 @@ public class NetDividendRateFormat29Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndRateStatus1.mmObject();
+		}
+
+		@Override
+		public AmountAndRateStatus1 getValue(NetDividendRateFormat29Choice obj) {
+			return obj.getAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat29Choice obj, AmountAndRateStatus1 value) {
+			obj.setAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -232,7 +252,7 @@ public class NetDividendRateFormat29Choice {
 	 * NetDividendRateFormat21Choice.mmRateTypeAndAmountAndRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetDividendRateFormat29Choice, RateTypeAndAmountAndStatus39> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<NetDividendRateFormat29Choice, RateTypeAndAmountAndStatus39>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat29Choice.mmObject();
 			isDerived = false;
@@ -246,6 +266,16 @@ public class NetDividendRateFormat29Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus39.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus39 getValue(NetDividendRateFormat29Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat29Choice obj, RateTypeAndAmountAndStatus39 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -286,7 +316,7 @@ public class NetDividendRateFormat29Choice {
 	 * NetDividendRateFormat21Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateFormat29Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<NetDividendRateFormat29Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat29Choice.mmObject();
 			isDerived = false;
@@ -299,6 +329,16 @@ public class NetDividendRateFormat29Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(NetDividendRateFormat29Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat29Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

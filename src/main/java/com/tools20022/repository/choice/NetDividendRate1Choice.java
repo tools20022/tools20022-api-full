@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.RateValueType6FormatChoice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.GeneratedRepository;
@@ -105,7 +106,7 @@ public class NetDividendRate1Choice {
 	 * "The value of the rate is not specified, eg, the rate is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRate1Choice, RateValueType6FormatChoice> mmNotSpecifiedRate = new MMMessageAttribute<NetDividendRate1Choice, RateValueType6FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRate1Choice.mmObject();
 			isDerived = false;
@@ -115,7 +116,17 @@ public class NetDividendRate1Choice {
 			definition = "The value of the rate is not specified, eg, the rate is unknown.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.RateValueType6FormatChoice.mmObject();
+			complexType_lazy = () -> RateValueType6FormatChoice.mmObject();
+		}
+
+		@Override
+		public RateValueType6FormatChoice getValue(NetDividendRate1Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(NetDividendRate1Choice obj, RateValueType6FormatChoice value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -153,7 +164,7 @@ public class NetDividendRate1Choice {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRate1Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<NetDividendRate1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRate1Choice.mmObject();
@@ -165,6 +176,16 @@ public class NetDividendRate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(NetDividendRate1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(NetDividendRate1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAmt", required = true)
@@ -203,7 +224,7 @@ public class NetDividendRate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateTypeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRate1Choice, NetDividendRate2> mmRateTypeAmount = new MMMessageAttribute<NetDividendRate1Choice, NetDividendRate2>() {
 		{
 			businessComponentTrace_lazy = () -> Dividend.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRate1Choice.mmObject();
@@ -215,6 +236,16 @@ public class NetDividendRate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NetDividendRate2.mmObject();
+		}
+
+		@Override
+		public NetDividendRate2 getValue(NetDividendRate1Choice obj) {
+			return obj.getRateTypeAmount();
+		}
+
+		@Override
+		public void setValue(NetDividendRate1Choice obj, NetDividendRate2 value) {
+			obj.setRateTypeAmount(value);
 		}
 	};
 
@@ -237,7 +268,7 @@ public class NetDividendRate1Choice {
 		return notSpecifiedRate;
 	}
 
-	public NetDividendRate1Choice setNotSpecifiedRate(com.tools20022.repository.choice.RateValueType6FormatChoice notSpecifiedRate) {
+	public NetDividendRate1Choice setNotSpecifiedRate(RateValueType6FormatChoice notSpecifiedRate) {
 		this.notSpecifiedRate = Objects.requireNonNull(notSpecifiedRate);
 		return this;
 	}

@@ -117,7 +117,7 @@ public class Linkages21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages21, References1Choice> mmReference = new MMMessageAssociationEnd<Linkages21, References1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages21.mmObject();
@@ -132,6 +132,16 @@ public class Linkages21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> References1Choice.mmObject();
+		}
+
+		@Override
+		public References1Choice getValue(Linkages21 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Linkages21 obj, References1Choice value) {
+			obj.setReference(value);
 		}
 	};
 

@@ -27,7 +27,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.AccountAndParties2;
 import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4;
 import com.tools20022.repository.msgset.SupplementaryDataISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +115,7 @@ public class InformationResponseSD1V01 {
 	 * definition} = "Information used to identify the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvestigationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationResponseSD1V01, Max35Text> mmInvestigationIdentification = new MMMessageBuildingBlock<InformationResponseSD1V01, Max35Text>() {
 		{
 			xmlTag = "InvstgtnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,12 +126,14 @@ public class InformationResponseSD1V01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationResponseSD1V01.class.getMethod("getInvestigationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(InformationResponseSD1V01 obj) {
+			return obj.getInvestigationIdentification();
+		}
+
+		@Override
+		public void setValue(InformationResponseSD1V01 obj, Max35Text value) {
+			obj.setInvestigationIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -159,7 +160,7 @@ public class InformationResponseSD1V01 {
 	 * definition} = "Date and time of creation of the extension."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCreationDateTime = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationResponseSD1V01, ISODateTime> mmCreationDateTime = new MMMessageBuildingBlock<InformationResponseSD1V01, ISODateTime>() {
 		{
 			xmlTag = "CreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,12 +171,14 @@ public class InformationResponseSD1V01 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationResponseSD1V01.class.getMethod("getCreationDateTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(InformationResponseSD1V01 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(InformationResponseSD1V01 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrId", required = true)
@@ -203,7 +206,7 @@ public class InformationResponseSD1V01 {
 	 * definition} = "Identifies the account servicing institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationResponseSD1V01, BranchAndFinancialInstitutionIdentification4> mmAccountServicerIdentification = new MMMessageBuildingBlock<InformationResponseSD1V01, BranchAndFinancialInstitutionIdentification4>() {
 		{
 			xmlTag = "AcctSvcrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,12 +217,14 @@ public class InformationResponseSD1V01 {
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationResponseSD1V01.class.getMethod("getAccountServicerIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BranchAndFinancialInstitutionIdentification4 getValue(InformationResponseSD1V01 obj) {
+			return obj.getAccountServicerIdentification();
+		}
+
+		@Override
+		public void setValue(InformationResponseSD1V01 obj, BranchAndFinancialInstitutionIdentification4 value) {
+			obj.setAccountServicerIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctAndPties", required = true)
@@ -247,7 +252,7 @@ public class InformationResponseSD1V01 {
 	 * definition} = "Requested account and its owners."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountAndParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InformationResponseSD1V01, List<AccountAndParties2>> mmAccountAndParties = new MMMessageBuildingBlock<InformationResponseSD1V01, List<AccountAndParties2>>() {
 		{
 			xmlTag = "AcctAndPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,12 +262,14 @@ public class InformationResponseSD1V01 {
 			complexType_lazy = () -> AccountAndParties2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InformationResponseSD1V01.class.getMethod("getAccountAndParties", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountAndParties2> getValue(InformationResponseSD1V01 obj) {
+			return obj.getAccountAndParties();
+		}
+
+		@Override
+		public void setValue(InformationResponseSD1V01 obj, List<AccountAndParties2> value) {
+			obj.setAccountAndParties(value);
 		}
 	};
 

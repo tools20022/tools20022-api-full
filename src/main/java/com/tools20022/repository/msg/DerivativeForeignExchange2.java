@@ -107,7 +107,7 @@ public class DerivativeForeignExchange2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeForeignExchange2, ActiveOrHistoricCurrencyCode> mmOtherNotionalCurrency = new MMMessageAttribute<DerivativeForeignExchange2, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeForeignExchange2.mmObject();
@@ -119,6 +119,16 @@ public class DerivativeForeignExchange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(DerivativeForeignExchange2 obj) {
+			return obj.getOtherNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(DerivativeForeignExchange2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setOtherNotionalCurrency(value);
 		}
 	};
 

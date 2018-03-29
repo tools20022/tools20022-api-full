@@ -27,6 +27,8 @@ import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount133;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount134;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -93,6 +95,21 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07#mmCashParties
  * SecuritiesSettlementTransactionConfirmation002V07.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08#mmCashParties
+ * SecuritiesFinancingConfirmation002V08.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08#mmCashParties
+ * SecuritiesFinancingInstruction002V08.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08#mmCashParties
+ * SecuritiesSettlementTransactionConfirmation002V08.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08#mmCashParties
+ * SecuritiesSettlementTransactionGenerationNotification002V08.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08#mmCashParties
+ * SecuritiesSettlementTransactionInstruction002V08.mmCashParties}</li>
  * </ul>
  * </li>
  * <li>
@@ -155,7 +172,7 @@ public class CashParties30 {
 	 * "Party that owes an amount of money to the (ultimate) creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties30, Optional<PartyIdentificationAndAccount133>> mmDebtor = new MMMessageAssociationEnd<CashParties30, Optional<PartyIdentificationAndAccount133>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties30.mmObject();
@@ -168,7 +185,17 @@ public class CashParties30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount133.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount133.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount133> getValue(CashParties30 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(CashParties30 obj, Optional<PartyIdentificationAndAccount133> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt")
@@ -209,7 +236,7 @@ public class CashParties30 {
 	 * "Financial institution servicing an account for the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties30, Optional<PartyIdentificationAndAccount134>> mmDebtorAgent = new MMMessageAssociationEnd<CashParties30, Optional<PartyIdentificationAndAccount134>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties30.mmObject();
@@ -222,7 +249,17 @@ public class CashParties30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount134.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount134.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount134> getValue(CashParties30 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties30 obj, Optional<PartyIdentificationAndAccount134> value) {
+			obj.setDebtorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr")
@@ -262,7 +299,7 @@ public class CashParties30 {
 	 * definition} = "Party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties30, Optional<PartyIdentificationAndAccount133>> mmCreditor = new MMMessageAssociationEnd<CashParties30, Optional<PartyIdentificationAndAccount133>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties30.mmObject();
@@ -275,7 +312,17 @@ public class CashParties30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount133.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount133.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount133> getValue(CashParties30 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(CashParties30 obj, Optional<PartyIdentificationAndAccount133> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -316,7 +363,7 @@ public class CashParties30 {
 	 * "Financial institution servicing an account for the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties30, Optional<PartyIdentificationAndAccount134>> mmCreditorAgent = new MMMessageAssociationEnd<CashParties30, Optional<PartyIdentificationAndAccount134>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties30.mmObject();
@@ -329,7 +376,17 @@ public class CashParties30 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount134.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount134.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount134> getValue(CashParties30 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties30 obj, Optional<PartyIdentificationAndAccount134> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Intrmy")
@@ -368,7 +425,7 @@ public class CashParties30 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashParties30, Optional<PartyIdentificationAndAccount134>> mmIntermediary = new MMMessageAttribute<CashParties30, Optional<PartyIdentificationAndAccount134>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties30.mmObject();
@@ -379,7 +436,17 @@ public class CashParties30 {
 			definition = "Financial institution through which the transaction must pass to reach the account with institution.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount134.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount134.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount134> getValue(CashParties30 obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(CashParties30 obj, Optional<PartyIdentificationAndAccount134> value) {
+			obj.setIntermediary(value.orElse(null));
 		}
 	};
 
@@ -391,7 +458,9 @@ public class CashParties30 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmation002V06.mmCashParties, SecuritiesSettlementTransactionGenerationNotification002V06.mmCashParties,
 						SecuritiesSettlementTransactionInstruction002V06.mmCashParties, SecuritiesFinancingInstruction002V06.mmCashParties, SecuritiesFinancingConfirmation002V06.mmCashParties,
 						SecuritiesSettlementTransactionInstruction002V07.mmCashParties, SecuritiesFinancingConfirmation002V07.mmCashParties, SecuritiesFinancingInstruction002V07.mmCashParties,
-						SecuritiesSettlementTransactionGenerationNotification002V07.mmCashParties, SecuritiesSettlementTransactionConfirmation002V07.mmCashParties);
+						SecuritiesSettlementTransactionGenerationNotification002V07.mmCashParties, SecuritiesSettlementTransactionConfirmation002V07.mmCashParties, SecuritiesFinancingConfirmation002V08.mmCashParties,
+						SecuritiesFinancingInstruction002V08.mmCashParties, SecuritiesSettlementTransactionConfirmation002V08.mmCashParties, SecuritiesSettlementTransactionGenerationNotification002V08.mmCashParties,
+						SecuritiesSettlementTransactionInstruction002V08.mmCashParties);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -406,7 +475,7 @@ public class CashParties30 {
 		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public CashParties30 setDebtor(com.tools20022.repository.msg.PartyIdentificationAndAccount133 debtor) {
+	public CashParties30 setDebtor(PartyIdentificationAndAccount133 debtor) {
 		this.debtor = debtor;
 		return this;
 	}
@@ -415,7 +484,7 @@ public class CashParties30 {
 		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public CashParties30 setDebtorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount134 debtorAgent) {
+	public CashParties30 setDebtorAgent(PartyIdentificationAndAccount134 debtorAgent) {
 		this.debtorAgent = debtorAgent;
 		return this;
 	}
@@ -424,7 +493,7 @@ public class CashParties30 {
 		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public CashParties30 setCreditor(com.tools20022.repository.msg.PartyIdentificationAndAccount133 creditor) {
+	public CashParties30 setCreditor(PartyIdentificationAndAccount133 creditor) {
 		this.creditor = creditor;
 		return this;
 	}
@@ -433,7 +502,7 @@ public class CashParties30 {
 		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public CashParties30 setCreditorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount134 creditorAgent) {
+	public CashParties30 setCreditorAgent(PartyIdentificationAndAccount134 creditorAgent) {
 		this.creditorAgent = creditorAgent;
 		return this;
 	}
@@ -442,7 +511,7 @@ public class CashParties30 {
 		return intermediary == null ? Optional.empty() : Optional.of(intermediary);
 	}
 
-	public CashParties30 setIntermediary(com.tools20022.repository.msg.PartyIdentificationAndAccount134 intermediary) {
+	public CashParties30 setIntermediary(PartyIdentificationAndAccount134 intermediary) {
 		this.intermediary = intermediary;
 		return this;
 	}

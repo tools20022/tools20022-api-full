@@ -125,7 +125,7 @@ public class SecuritiesOption52 {
 	 * SecuritiesOption2.mmConditionalQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConditionalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption52, Optional<FinancialInstrumentQuantity1Choice>> mmConditionalQuantity = new MMMessageAttribute<SecuritiesOption52, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmConditionalQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption52.mmObject();
@@ -139,6 +139,16 @@ public class SecuritiesOption52 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(SecuritiesOption52 obj) {
+			return obj.getConditionalQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption52 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setConditionalQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdQty", required = true)
@@ -177,7 +187,7 @@ public class SecuritiesOption52 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption52, Quantity20Choice> mmInstructedQuantity = new MMMessageAttribute<SecuritiesOption52, Quantity20Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption52.mmObject();
@@ -189,6 +199,16 @@ public class SecuritiesOption52 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity20Choice.mmObject();
+		}
+
+		@Override
+		public Quantity20Choice getValue(SecuritiesOption52 obj) {
+			return obj.getInstructedQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption52 obj, Quantity20Choice value) {
+			obj.setInstructedQuantity(value);
 		}
 	};
 

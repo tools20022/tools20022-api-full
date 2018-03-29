@@ -150,7 +150,7 @@ public class AccountParties5Choice {
 	 * AccountParties4Choice.mmPrimaryOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrimaryOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountParties5Choice, InvestmentAccountOwnershipInformation10> mmPrimaryOwner = new MMMessageAssociationEnd<AccountParties5Choice, InvestmentAccountOwnershipInformation10>() {
 		{
 			businessComponentTrace_lazy = () -> PrimaryOwner.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountParties5Choice.mmObject();
@@ -165,6 +165,16 @@ public class AccountParties5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
+		}
+
+		@Override
+		public InvestmentAccountOwnershipInformation10 getValue(AccountParties5Choice obj) {
+			return obj.getPrimaryOwner();
+		}
+
+		@Override
+		public void setValue(AccountParties5Choice obj, InvestmentAccountOwnershipInformation10 value) {
+			obj.setPrimaryOwner(value);
 		}
 	};
 	@XmlElement(name = "Trstee", required = true)
@@ -215,7 +225,7 @@ public class AccountParties5Choice {
 	 * AccountParties4Choice.mmTrustee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTrustee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountParties5Choice, List<InvestmentAccountOwnershipInformation10>> mmTrustee = new MMMessageAssociationEnd<AccountParties5Choice, List<InvestmentAccountOwnershipInformation10>>() {
 		{
 			businessComponentTrace_lazy = () -> TrusteeRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountParties5Choice.mmObject();
@@ -230,6 +240,16 @@ public class AccountParties5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
+		}
+
+		@Override
+		public List<InvestmentAccountOwnershipInformation10> getValue(AccountParties5Choice obj) {
+			return obj.getTrustee();
+		}
+
+		@Override
+		public void setValue(AccountParties5Choice obj, List<InvestmentAccountOwnershipInformation10> value) {
+			obj.setTrustee(value);
 		}
 	};
 	@XmlElement(name = "CtdnForMnr", required = true)
@@ -273,7 +293,7 @@ public class AccountParties5Choice {
 	 * AccountParties4Choice.mmCustodianForMinor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCustodianForMinor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountParties5Choice, InvestmentAccountOwnershipInformation10> mmCustodianForMinor = new MMMessageAssociationEnd<AccountParties5Choice, InvestmentAccountOwnershipInformation10>() {
 		{
 			businessComponentTrace_lazy = () -> CustodianForMinor.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountParties5Choice.mmObject();
@@ -287,6 +307,16 @@ public class AccountParties5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
+		}
+
+		@Override
+		public InvestmentAccountOwnershipInformation10 getValue(AccountParties5Choice obj) {
+			return obj.getCustodianForMinor();
+		}
+
+		@Override
+		public void setValue(AccountParties5Choice obj, InvestmentAccountOwnershipInformation10 value) {
+			obj.setCustodianForMinor(value);
 		}
 	};
 	@XmlElement(name = "Nmnee", required = true)
@@ -337,7 +367,7 @@ public class AccountParties5Choice {
 	 * AccountParties4Choice.mmNominee}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNominee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountParties5Choice, InvestmentAccountOwnershipInformation10> mmNominee = new MMMessageAssociationEnd<AccountParties5Choice, InvestmentAccountOwnershipInformation10>() {
 		{
 			businessComponentTrace_lazy = () -> Nominee.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountParties5Choice.mmObject();
@@ -352,6 +382,16 @@ public class AccountParties5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
+		}
+
+		@Override
+		public InvestmentAccountOwnershipInformation10 getValue(AccountParties5Choice obj) {
+			return obj.getNominee();
+		}
+
+		@Override
+		public void setValue(AccountParties5Choice obj, InvestmentAccountOwnershipInformation10 value) {
+			obj.setNominee(value);
 		}
 	};
 	@XmlElement(name = "JntOwnr", required = true)
@@ -402,7 +442,7 @@ public class AccountParties5Choice {
 	 * AccountParties4Choice.mmJointOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmJointOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountParties5Choice, List<InvestmentAccountOwnershipInformation10>> mmJointOwner = new MMMessageAssociationEnd<AccountParties5Choice, List<InvestmentAccountOwnershipInformation10>>() {
 		{
 			businessComponentTrace_lazy = () -> JointOwner.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountParties5Choice.mmObject();
@@ -417,6 +457,16 @@ public class AccountParties5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccountOwnershipInformation10.mmObject();
+		}
+
+		@Override
+		public List<InvestmentAccountOwnershipInformation10> getValue(AccountParties5Choice obj) {
+			return obj.getJointOwner();
+		}
+
+		@Override
+		public void setValue(AccountParties5Choice obj, List<InvestmentAccountOwnershipInformation10> value) {
+			obj.setJointOwner(value);
 		}
 	};
 

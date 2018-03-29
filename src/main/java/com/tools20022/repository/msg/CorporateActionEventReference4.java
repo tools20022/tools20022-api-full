@@ -61,20 +61,35 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07#mmEventsLinkage
- * CorporateActionInstruction002V07.mmEventsLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V06#mmEventsLinkage
+ * CorporateActionNotification002V06.mmEventsLinkage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08#mmEventsLinkage
- * CorporateActionMovementPreliminaryAdvice002V08.mmEventsLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V07#mmEventsLinkage
+ * CorporateActionMovementPreliminaryAdvice002V07.mmEventsLinkage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V08#mmEventsLinkage
- * CorporateActionMovementReversalAdvice002V08.mmEventsLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V07#mmEventsLinkage
+ * CorporateActionMovementReversalAdvice002V07.mmEventsLinkage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07#mmEventsLinkage
- * CorporateActionNotification002V07.mmEventsLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V07#mmEventsLinkage
+ * CorporateActionMovementConfirmation002V07.mmEventsLinkage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmEventsLinkage
- * CorporateActionMovementConfirmation002V08.mmEventsLinkage}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V06#mmEventsLinkage
+ * CorporateActionInstruction002V06.mmEventsLinkage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V08#mmEventsLinkage
+ * CorporateActionInstruction002V08.mmEventsLinkage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V09#mmEventsLinkage
+ * CorporateActionMovementConfirmation002V09.mmEventsLinkage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V09#mmEventsLinkage
+ * CorporateActionMovementPreliminaryAdvice002V09.mmEventsLinkage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V09#mmEventsLinkage
+ * CorporateActionMovementReversalAdvice002V09.mmEventsLinkage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V08#mmEventsLinkage
+ * CorporateActionNotification002V08.mmEventsLinkage}</li>
  * </ul>
  * </li>
  * <li>
@@ -134,7 +149,7 @@ public class CorporateActionEventReference4 {
 	 * definition} = "Identification of the linked corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventReference4, CorporateActionEventReference4Choice> mmEventIdentification = new MMMessageAssociationEnd<CorporateActionEventReference4, CorporateActionEventReference4Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReference4.mmObject();
@@ -148,6 +163,16 @@ public class CorporateActionEventReference4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventReference4Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventReference4Choice getValue(CorporateActionEventReference4 obj) {
+			return obj.getEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference4 obj, CorporateActionEventReference4Choice value) {
+			obj.setEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "LkgTp")
@@ -184,7 +209,7 @@ public class CorporateActionEventReference4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventReference4, Optional<ProcessingPosition10Choice>> mmLinkageType = new MMMessageAssociationEnd<CorporateActionEventReference4, Optional<ProcessingPosition10Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReference4.mmObject();
 			isDerived = false;
@@ -198,14 +223,26 @@ public class CorporateActionEventReference4 {
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition10Choice.mmObject();
 		}
+
+		@Override
+		public Optional<ProcessingPosition10Choice> getValue(CorporateActionEventReference4 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference4 obj, Optional<ProcessingPosition10Choice> value) {
+			obj.setLinkageType(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionEventReference4.mmEventIdentification, com.tools20022.repository.msg.CorporateActionEventReference4.mmLinkageType);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstruction002V07.mmEventsLinkage, CorporateActionMovementPreliminaryAdvice002V08.mmEventsLinkage, CorporateActionMovementReversalAdvice002V08.mmEventsLinkage,
-						CorporateActionNotification002V07.mmEventsLinkage, CorporateActionMovementConfirmation002V08.mmEventsLinkage);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNotification002V06.mmEventsLinkage, CorporateActionMovementPreliminaryAdvice002V07.mmEventsLinkage, CorporateActionMovementReversalAdvice002V07.mmEventsLinkage,
+						CorporateActionMovementConfirmation002V07.mmEventsLinkage, CorporateActionInstruction002V06.mmEventsLinkage, CorporateActionInstruction002V08.mmEventsLinkage,
+						CorporateActionMovementConfirmation002V09.mmEventsLinkage, CorporateActionMovementPreliminaryAdvice002V09.mmEventsLinkage, CorporateActionMovementReversalAdvice002V09.mmEventsLinkage,
+						CorporateActionNotification002V08.mmEventsLinkage);
 				trace_lazy = () -> CorporateActionEventRegistration.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

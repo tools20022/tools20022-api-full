@@ -60,12 +60,16 @@ public class ConstraintReferredPlacementAgentRule {
 	 */
 	public static final MMConstraint<ReferredAgent1> forReferredAgent1 = new MMConstraint<ReferredAgent1>() {
 		{
-			validator = ConstraintReferredPlacementAgentRule::checkReferredAgent1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredPlacementAgentRule";
 			definition = "ReferredPlacementAgent may only be present if Referred is equal to the code value Referred (REFR).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferredPlacementAgentRule.forReferredAgent2);
 			owner_lazy = () -> ReferredAgent1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReferredAgent1 obj) throws Exception {
+			checkReferredAgent1(obj);
 		}
 	};
 	/**
@@ -95,12 +99,16 @@ public class ConstraintReferredPlacementAgentRule {
 	 */
 	public static final MMConstraint<ReferredAgent2> forReferredAgent2 = new MMConstraint<ReferredAgent2>() {
 		{
-			validator = ConstraintReferredPlacementAgentRule::checkReferredAgent2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredPlacementAgentRule";
 			definition = "ReferredPlacementAgent may only be present if Referred is REFR (Referred).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReferredPlacementAgentRule.forReferredAgent1;
 			owner_lazy = () -> ReferredAgent2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReferredAgent2 obj) throws Exception {
+			checkReferredAgent2(obj);
 		}
 	};
 

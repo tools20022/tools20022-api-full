@@ -53,11 +53,15 @@ public class ConstraintRequestRejectedRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> forForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {
 		{
-			validator = ConstraintRequestRejectedRule::checkForeignExchangeTradeCaptureReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestRejectedRule";
 			definition = "If Request Rejected is \"true\" or \"1\" (Yes), then Query Reject Reason must be present.\r\nIf Request Rejected is \"false\" or \"0\" (No), then Total Number Trades and Last Report Requested must be present.";
 			owner_lazy = () -> ForeignExchangeTradeCaptureReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTradeCaptureReportV01 obj) throws Exception {
+			checkForeignExchangeTradeCaptureReportV01(obj);
 		}
 	};
 

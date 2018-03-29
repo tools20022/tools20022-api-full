@@ -55,11 +55,15 @@ public class ConstraintCancellation2Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV04> forMeetingCancellationV04 = new MMConstraint<MeetingCancellationV04>() {
 		{
-			validator = ConstraintCancellation2Guideline::checkMeetingCancellationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation2Guideline";
 			definition = "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV04 obj) throws Exception {
+			checkMeetingCancellationV04(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintCancellation2Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV02> forMeetingCancellationV02 = new MMConstraint<MeetingCancellationV02>() {
 		{
-			validator = ConstraintCancellation2Guideline::checkMeetingCancellationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation2Guideline";
 			definition = "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV02 obj) throws Exception {
+			checkMeetingCancellationV02(obj);
 		}
 	};
 	/**
@@ -115,11 +123,15 @@ public class ConstraintCancellation2Guideline {
 	 */
 	public static final MMConstraint<MeetingCancellationV03> forMeetingCancellationV03 = new MMConstraint<MeetingCancellationV03>() {
 		{
-			validator = ConstraintCancellation2Guideline::checkMeetingCancellationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation2Guideline";
 			definition = "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingCancellationV03 obj) throws Exception {
+			checkMeetingCancellationV03(obj);
 		}
 	};
 

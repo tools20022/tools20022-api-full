@@ -21,7 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V08;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V07;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V09;
 import com.tools20022.repository.choice.BalanceFormat7Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.entity.SecuritiesAccount;
@@ -59,8 +60,11 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V08#mmAccountDetails
- * CorporateActionMovementReversalAdvice002V08.mmAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V07#mmAccountDetails
+ * CorporateActionMovementReversalAdvice002V07.mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V09#mmAccountDetails
+ * CorporateActionMovementReversalAdvice002V09.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,7 +125,7 @@ public class AccountAndBalance40 {
 	 * definition} = "Account where financial instruments are maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountAndBalance40, RestrictedFINXMax35Text> mmSafekeepingAccount = new MMMessageAttribute<AccountAndBalance40, RestrictedFINXMax35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance40.mmObject();
@@ -134,6 +138,16 @@ public class AccountAndBalance40 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(AccountAndBalance40 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance40 obj, RestrictedFINXMax35Text value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "ConfdBal", required = true)
@@ -176,7 +190,7 @@ public class AccountAndBalance40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountAndBalance40, BalanceFormat7Choice> mmConfirmedBalance = new MMMessageAttribute<AccountAndBalance40, BalanceFormat7Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance40.mmObject();
@@ -190,13 +204,23 @@ public class AccountAndBalance40 {
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat7Choice.mmObject();
 		}
+
+		@Override
+		public BalanceFormat7Choice getValue(AccountAndBalance40 obj) {
+			return obj.getConfirmedBalance();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance40 obj, BalanceFormat7Choice value) {
+			obj.setConfirmedBalance(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance40.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance40.mmConfirmedBalance);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdvice002V08.mmAccountDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdvice002V07.mmAccountDetails, CorporateActionMovementReversalAdvice002V09.mmAccountDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

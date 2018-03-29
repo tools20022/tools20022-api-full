@@ -113,7 +113,7 @@ public class RejectionReason7FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason7FormatChoice, RejectionReason7Code> mmCode = new MMMessageAttribute<RejectionReason7FormatChoice, RejectionReason7Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason7FormatChoice.mmObject();
@@ -125,6 +125,16 @@ public class RejectionReason7FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason7Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason7Code getValue(RejectionReason7FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionReason7FormatChoice obj, RejectionReason7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class RejectionReason7FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason7FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<RejectionReason7FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason7FormatChoice.mmObject();
@@ -176,6 +186,16 @@ public class RejectionReason7FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(RejectionReason7FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionReason7FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

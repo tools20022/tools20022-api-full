@@ -53,11 +53,15 @@ public class ConstraintFeeElementRule {
 	 */
 	public static final MMConstraint<Fee3> forFee3 = new MMConstraint<Fee3>() {
 		{
-			validator = ConstraintFeeElementRule::checkFee3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeElementRule";
 			definition = "One of the elements (Type, RepairedStandardAmount, RepairedStandardRate, RepairedDiscountAmount, RepairedDiscountRate, RepairedRequestedAmount, RepairedRequestedRate, CommercialAgreementReference, NewCommercialAgreementReferenceIndicator) must be present.";
 			owner_lazy = () -> Fee3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Fee3 obj) throws Exception {
+			checkFee3(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintFeeElementRule {
 	 */
 	public static final MMConstraint<Fee1> forFee1 = new MMConstraint<Fee1>() {
 		{
-			validator = ConstraintFeeElementRule::checkFee1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeElementRule";
 			definition = "One of the elements (Basis, StandardAmount, StandardRate, DiscountDetails, RequestedAmount, RequestedRate, NonStandardSLAReference, RecipientIdentification) must be present.";
 			owner_lazy = () -> Fee1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Fee1 obj) throws Exception {
+			checkFee1(obj);
 		}
 	};
 

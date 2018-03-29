@@ -112,7 +112,7 @@ public class Reporting5Choice {
 	 * "Third party reporting information expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reporting5Choice, Reporting2Code> mmCode = new MMMessageAttribute<Reporting5Choice, Reporting2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmReportingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reporting5Choice.mmObject();
@@ -125,6 +125,16 @@ public class Reporting5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Reporting2Code.mmObject();
+		}
+
+		@Override
+		public Reporting2Code getValue(Reporting5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Reporting5Choice obj, Reporting2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class Reporting5Choice {
 	 * "Third party reporting information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reporting5Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<Reporting5Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmReportingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reporting5Choice.mmObject();
@@ -179,6 +189,16 @@ public class Reporting5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(Reporting5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Reporting5Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

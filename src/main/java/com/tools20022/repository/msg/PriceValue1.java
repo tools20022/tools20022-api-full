@@ -102,7 +102,7 @@ public class PriceValue1 {
 	 * definition} = "Price expressed as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValue1, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<PriceValue1, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
@@ -114,6 +114,16 @@ public class PriceValue1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(PriceValue1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PriceValue1 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

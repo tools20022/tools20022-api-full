@@ -139,7 +139,7 @@ public class ActiveCurrencyAndAmountRange2 {
 	 * ActiveCurrencyAndAmountRange1.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActiveCurrencyAndAmountRange2, ImpliedCurrencyAmountRangeChoice> mmAmount = new MMMessageAttribute<ActiveCurrencyAndAmountRange2, ImpliedCurrencyAmountRangeChoice>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActiveCurrencyAndAmountRange2.mmObject();
@@ -153,6 +153,16 @@ public class ActiveCurrencyAndAmountRange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAmountRangeChoice getValue(ActiveCurrencyAndAmountRange2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ActiveCurrencyAndAmountRange2 obj, ImpliedCurrencyAmountRangeChoice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -204,7 +214,7 @@ public class ActiveCurrencyAndAmountRange2 {
 	 * ActiveCurrencyAndAmountRange1.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActiveCurrencyAndAmountRange2, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<ActiveCurrencyAndAmountRange2, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActiveCurrencyAndAmountRange2.mmObject();
@@ -218,6 +228,16 @@ public class ActiveCurrencyAndAmountRange2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(ActiveCurrencyAndAmountRange2 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(ActiveCurrencyAndAmountRange2 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -268,7 +288,7 @@ public class ActiveCurrencyAndAmountRange2 {
 	 * ActiveCurrencyAndAmountRange1.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActiveCurrencyAndAmountRange2, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<ActiveCurrencyAndAmountRange2, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActiveCurrencyAndAmountRange2.mmObject();
@@ -282,6 +302,16 @@ public class ActiveCurrencyAndAmountRange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(ActiveCurrencyAndAmountRange2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ActiveCurrencyAndAmountRange2 obj, ActiveCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InformationQualifierType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -122,7 +123,7 @@ public class GeneralBusinessInformation1 {
 	 * GeneralBusinessInformation.mmQualifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformation1, Optional<InformationQualifierType1>> mmQualifier = new MMMessageAttribute<GeneralBusinessInformation1, Optional<InformationQualifierType1>>() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmQualifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformation1.mmObject();
@@ -134,7 +135,17 @@ public class GeneralBusinessInformation1 {
 			previousVersion_lazy = () -> GeneralBusinessInformation.mmQualifier;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.InformationQualifierType1.mmObject();
+			complexType_lazy = () -> InformationQualifierType1.mmObject();
+		}
+
+		@Override
+		public Optional<InformationQualifierType1> getValue(GeneralBusinessInformation1 obj) {
+			return obj.getQualifier();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformation1 obj, Optional<InformationQualifierType1> value) {
+			obj.setQualifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sbjt")
@@ -178,7 +189,7 @@ public class GeneralBusinessInformation1 {
 	 * GeneralBusinessInformation.mmSubject}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformation1, Optional<Max35Text>> mmSubject = new MMMessageAttribute<GeneralBusinessInformation1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmSubject;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformation1.mmObject();
@@ -191,6 +202,16 @@ public class GeneralBusinessInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GeneralBusinessInformation1 obj) {
+			return obj.getSubject();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformation1 obj, Optional<Max35Text> value) {
+			obj.setSubject(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbjtDtls")
@@ -232,7 +253,7 @@ public class GeneralBusinessInformation1 {
 	 * GeneralBusinessInformation.mmSubjectDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubjectDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformation1, Optional<Max350Text>> mmSubjectDetails = new MMMessageAttribute<GeneralBusinessInformation1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmSubjectDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformation1.mmObject();
@@ -245,6 +266,16 @@ public class GeneralBusinessInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(GeneralBusinessInformation1 obj) {
+			return obj.getSubjectDetails();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformation1 obj, Optional<Max350Text> value) {
+			obj.setSubjectDetails(value.orElse(null));
 		}
 	};
 
@@ -268,7 +299,7 @@ public class GeneralBusinessInformation1 {
 		return qualifier == null ? Optional.empty() : Optional.of(qualifier);
 	}
 
-	public GeneralBusinessInformation1 setQualifier(com.tools20022.repository.msg.InformationQualifierType1 qualifier) {
+	public GeneralBusinessInformation1 setQualifier(InformationQualifierType1 qualifier) {
 		this.qualifier = qualifier;
 		return this;
 	}

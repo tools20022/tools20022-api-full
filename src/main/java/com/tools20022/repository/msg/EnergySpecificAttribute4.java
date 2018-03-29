@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.DeliveryInterconnectionPoint1Choice;
 import com.tools20022.repository.codeset.EnergyLoadType1Code;
 import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EnergyDeliveryAttribute3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -108,7 +109,7 @@ public class EnergySpecificAttribute4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveryPoint = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnergySpecificAttribute4, List<DeliveryInterconnectionPoint1Choice>> mmDeliveryPoint = new MMMessageAssociationEnd<EnergySpecificAttribute4, List<DeliveryInterconnectionPoint1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergySpecificAttribute4.mmObject();
 			isDerived = false;
@@ -119,6 +120,16 @@ public class EnergySpecificAttribute4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DeliveryInterconnectionPoint1Choice.mmObject();
+		}
+
+		@Override
+		public List<DeliveryInterconnectionPoint1Choice> getValue(EnergySpecificAttribute4 obj) {
+			return obj.getDeliveryPoint();
+		}
+
+		@Override
+		public void setValue(EnergySpecificAttribute4 obj, List<DeliveryInterconnectionPoint1Choice> value) {
+			obj.setDeliveryPoint(value);
 		}
 	};
 	@XmlElement(name = "IntrcnnctnPt")
@@ -152,7 +163,7 @@ public class EnergySpecificAttribute4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterconnectionPoint = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnergySpecificAttribute4, Optional<DeliveryInterconnectionPoint1Choice>> mmInterconnectionPoint = new MMMessageAssociationEnd<EnergySpecificAttribute4, Optional<DeliveryInterconnectionPoint1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergySpecificAttribute4.mmObject();
 			isDerived = false;
@@ -164,6 +175,16 @@ public class EnergySpecificAttribute4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DeliveryInterconnectionPoint1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveryInterconnectionPoint1Choice> getValue(EnergySpecificAttribute4 obj) {
+			return obj.getInterconnectionPoint();
+		}
+
+		@Override
+		public void setValue(EnergySpecificAttribute4 obj, Optional<DeliveryInterconnectionPoint1Choice> value) {
+			obj.setInterconnectionPoint(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LdTp")
@@ -196,7 +217,7 @@ public class EnergySpecificAttribute4 {
 	 * definition} = "Identification of the delivery profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLoadType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergySpecificAttribute4, Optional<EnergyLoadType1Code>> mmLoadType = new MMMessageAttribute<EnergySpecificAttribute4, Optional<EnergyLoadType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergySpecificAttribute4.mmObject();
 			isDerived = false;
@@ -208,9 +229,19 @@ public class EnergySpecificAttribute4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> EnergyLoadType1Code.mmObject();
 		}
+
+		@Override
+		public Optional<EnergyLoadType1Code> getValue(EnergySpecificAttribute4 obj) {
+			return obj.getLoadType();
+		}
+
+		@Override
+		public void setValue(EnergySpecificAttribute4 obj, Optional<EnergyLoadType1Code> value) {
+			obj.setLoadType(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "DlvryAttr")
-	protected List<com.tools20022.repository.msg.EnergyDeliveryAttribute3> deliveryAttribute;
+	protected List<EnergyDeliveryAttribute3> deliveryAttribute;
 	/**
 	 * 
 	 <p>
@@ -238,7 +269,7 @@ public class EnergySpecificAttribute4 {
 	 * definition} = "Attributes related to delivery of derivative contracts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveryAttribute = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnergySpecificAttribute4, List<EnergyDeliveryAttribute3>> mmDeliveryAttribute = new MMMessageAssociationEnd<EnergySpecificAttribute4, List<EnergyDeliveryAttribute3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergySpecificAttribute4.mmObject();
 			isDerived = false;
@@ -248,7 +279,17 @@ public class EnergySpecificAttribute4 {
 			definition = "Attributes related to delivery of derivative contracts.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EnergyDeliveryAttribute3.mmObject();
+			type_lazy = () -> EnergyDeliveryAttribute3.mmObject();
+		}
+
+		@Override
+		public List<EnergyDeliveryAttribute3> getValue(EnergySpecificAttribute4 obj) {
+			return obj.getDeliveryAttribute();
+		}
+
+		@Override
+		public void setValue(EnergySpecificAttribute4 obj, List<EnergyDeliveryAttribute3> value) {
+			obj.setDeliveryAttribute(value);
 		}
 	};
 
@@ -298,7 +339,7 @@ public class EnergySpecificAttribute4 {
 		return deliveryAttribute == null ? deliveryAttribute = new ArrayList<>() : deliveryAttribute;
 	}
 
-	public EnergySpecificAttribute4 setDeliveryAttribute(List<com.tools20022.repository.msg.EnergyDeliveryAttribute3> deliveryAttribute) {
+	public EnergySpecificAttribute4 setDeliveryAttribute(List<EnergyDeliveryAttribute3> deliveryAttribute) {
 		this.deliveryAttribute = Objects.requireNonNull(deliveryAttribute);
 		return this;
 	}

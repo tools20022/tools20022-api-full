@@ -113,7 +113,7 @@ public class FixedRate5 {
 	 * definition} = "An indication of the fixed rate used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FixedRate5, Optional<PercentageRate>> mmRate = new MMMessageAttribute<FixedRate5, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FixedRate5.mmObject();
@@ -125,6 +125,16 @@ public class FixedRate5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(FixedRate5 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(FixedRate5 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DayCntBsis")
@@ -161,7 +171,7 @@ public class FixedRate5 {
 	 * "Actual number of days in the relevant fixed rate calculation period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDayCountBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FixedRate5, Optional<InterestComputationMethodFormat6Choice>> mmDayCountBasis = new MMMessageAssociationEnd<FixedRate5, Optional<InterestComputationMethodFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FixedRate5.mmObject();
@@ -174,6 +184,16 @@ public class FixedRate5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestComputationMethodFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestComputationMethodFormat6Choice> getValue(FixedRate5 obj) {
+			return obj.getDayCountBasis();
+		}
+
+		@Override
+		public void setValue(FixedRate5 obj, Optional<InterestComputationMethodFormat6Choice> value) {
+			obj.setDayCountBasis(value.orElse(null));
 		}
 	};
 

@@ -109,7 +109,7 @@ public class LimitType1Choice {
 	 * definition} = "Type of the limit, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitType1Choice, LimitType3Code> mmCode = new MMMessageAttribute<LimitType1Choice, LimitType3Code>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitType1Choice.mmObject();
@@ -121,6 +121,16 @@ public class LimitType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LimitType3Code.mmObject();
+		}
+
+		@Override
+		public LimitType3Code getValue(LimitType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LimitType1Choice obj, LimitType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class LimitType1Choice {
 	 * definition} = "Type of the limit, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitType1Choice, Max35Text> mmProprietary = new MMMessageAttribute<LimitType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitType1Choice.mmObject();
@@ -168,6 +178,16 @@ public class LimitType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(LimitType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LimitType1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

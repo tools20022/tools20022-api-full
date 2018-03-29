@@ -128,7 +128,7 @@ public class PendingSettlementStatus3Choice {
 	 * PendingSettlementStatus2.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingSettlementStatus3Choice, PendingSettlementStatusReason2Code> mmReason = new MMMessageAttribute<PendingSettlementStatus3Choice, PendingSettlementStatusReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmObject();
@@ -141,6 +141,16 @@ public class PendingSettlementStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingSettlementStatusReason2Code.mmObject();
+		}
+
+		@Override
+		public PendingSettlementStatusReason2Code getValue(PendingSettlementStatus3Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatus3Choice obj, PendingSettlementStatusReason2Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -178,7 +188,7 @@ public class PendingSettlementStatus3Choice {
 	 * PendingSettlementStatus2.mmExtendedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingSettlementStatus3Choice, Extended350Code> mmExtendedReason = new MMMessageAttribute<PendingSettlementStatus3Choice, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class PendingSettlementStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(PendingSettlementStatus3Choice obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatus3Choice obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -232,7 +252,7 @@ public class PendingSettlementStatus3Choice {
 	 * PendingSettlementStatus2.mmDataSourceScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingSettlementStatus3Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<PendingSettlementStatus3Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmObject();
@@ -246,6 +266,16 @@ public class PendingSettlementStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(PendingSettlementStatus3Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatus3Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -288,7 +318,7 @@ public class PendingSettlementStatus3Choice {
 	 * PendingSettlementStatus2.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingSettlementStatus3Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<PendingSettlementStatus3Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatus3Choice.mmObject();
@@ -301,6 +331,16 @@ public class PendingSettlementStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingSettlementStatus3Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatus3Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

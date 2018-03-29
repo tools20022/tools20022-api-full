@@ -117,7 +117,7 @@ public class TaxCalculationInformation11 {
 	 * TaxCalculationInformation10.mmBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation11, Optional<TaxBasis1Choice>> mmBasis = new MMMessageAttribute<TaxCalculationInformation11, Optional<TaxBasis1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation11.mmObject();
@@ -130,6 +130,16 @@ public class TaxCalculationInformation11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TaxBasis1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxBasis1Choice> getValue(TaxCalculationInformation11 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation11 obj, Optional<TaxBasis1Choice> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblAmt", required = true)
@@ -172,7 +182,7 @@ public class TaxCalculationInformation11 {
 	 * TaxCalculationInformation10.mmTaxableAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation11, ActiveCurrencyAndAmount> mmTaxableAmount = new MMMessageAttribute<TaxCalculationInformation11, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation11.mmObject();
@@ -185,6 +195,16 @@ public class TaxCalculationInformation11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(TaxCalculationInformation11 obj) {
+			return obj.getTaxableAmount();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation11 obj, ActiveCurrencyAndAmount value) {
+			obj.setTaxableAmount(value);
 		}
 	};
 

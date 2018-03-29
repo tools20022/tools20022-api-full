@@ -112,7 +112,7 @@ public class FATCAStatus2 {
 	 * FATCAStatus1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FATCAStatus2, FATCAStatus2Choice> mmType = new MMMessageAssociationEnd<FATCAStatus2, FATCAStatus2Choice>() {
 		{
 			businessElementTrace_lazy = () -> FATCAStatus.mmFATCAStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FATCAStatus2.mmObject();
@@ -126,6 +126,16 @@ public class FATCAStatus2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FATCAStatus2Choice.mmObject();
+		}
+
+		@Override
+		public FATCAStatus2Choice getValue(FATCAStatus2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(FATCAStatus2 obj, FATCAStatus2Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Src")
@@ -166,7 +176,7 @@ public class FATCAStatus2 {
 	 * FATCAStatus1.mmSource}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FATCAStatus2, Optional<FATCASource1Choice>> mmSource = new MMMessageAssociationEnd<FATCAStatus2, Optional<FATCASource1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> FATCAStatus.mmFATCASourceStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FATCAStatus2.mmObject();
@@ -180,6 +190,16 @@ public class FATCAStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FATCASource1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FATCASource1Choice> getValue(FATCAStatus2 obj) {
+			return obj.getSource();
+		}
+
+		@Override
+		public void setValue(FATCAStatus2 obj, Optional<FATCASource1Choice> value) {
+			obj.setSource(value.orElse(null));
 		}
 	};
 

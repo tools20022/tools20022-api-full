@@ -109,7 +109,7 @@ public class Amount1 {
 	 * definition} = "Undisputed amount of the margin call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount1, ActiveCurrencyAndAmount> mmAgreedAmount = new MMMessageAttribute<Amount1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amount1.mmObject();
@@ -121,6 +121,16 @@ public class Amount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Amount1 obj) {
+			return obj.getAgreedAmount();
+		}
+
+		@Override
+		public void setValue(Amount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAgreedAmount(value);
 		}
 	};
 	@XmlElement(name = "MrgnCallReqId", required = true)
@@ -151,7 +161,7 @@ public class Amount1 {
 	 * definition} = "Unique identifier for the margin call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount1, Max35Text> mmMarginCallRequestIdentification = new MMMessageAttribute<Amount1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amount1.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class Amount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Amount1 obj) {
+			return obj.getMarginCallRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Amount1 obj, Max35Text value) {
+			obj.setMarginCallRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -194,7 +214,7 @@ public class Amount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount1, Optional<Max210Text>> mmAdditionalInformation = new MMMessageAttribute<Amount1, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amount1.mmObject();
 			isDerived = false;
@@ -205,6 +225,16 @@ public class Amount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(Amount1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Amount1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

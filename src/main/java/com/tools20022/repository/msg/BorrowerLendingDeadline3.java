@@ -118,7 +118,7 @@ public class BorrowerLendingDeadline3 {
 	 * BorrowerLendingDeadline1.mmStockLendingDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BorrowerLendingDeadline3, DateFormat43Choice> mmStockLendingDeadline = new MMMessageAssociationEnd<BorrowerLendingDeadline3, DateFormat43Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmStockLendingDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline3.mmObject();
@@ -132,6 +132,16 @@ public class BorrowerLendingDeadline3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat43Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat43Choice getValue(BorrowerLendingDeadline3 obj) {
+			return obj.getStockLendingDeadline();
+		}
+
+		@Override
+		public void setValue(BorrowerLendingDeadline3 obj, DateFormat43Choice value) {
+			obj.setStockLendingDeadline(value);
 		}
 	};
 	@XmlElement(name = "Brrwr", required = true)
@@ -173,7 +183,7 @@ public class BorrowerLendingDeadline3 {
 	 * BorrowerLendingDeadline1.mmBorrower}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBorrower = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BorrowerLendingDeadline3, PartyIdentification92Choice> mmBorrower = new MMMessageAssociationEnd<BorrowerLendingDeadline3, PartyIdentification92Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline3.mmObject();
@@ -187,6 +197,16 @@ public class BorrowerLendingDeadline3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification92Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification92Choice getValue(BorrowerLendingDeadline3 obj) {
+			return obj.getBorrower();
+		}
+
+		@Override
+		public void setValue(BorrowerLendingDeadline3 obj, PartyIdentification92Choice value) {
+			obj.setBorrower(value);
 		}
 	};
 

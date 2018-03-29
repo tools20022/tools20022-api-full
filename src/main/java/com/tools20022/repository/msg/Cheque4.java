@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ChequeIssue;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -103,7 +104,7 @@ public class Cheque4 {
 	 * definition} = "Party to which a cheque is made payable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayeeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cheque4, NameAndAddress5> mmPayeeIdentification = new MMMessageAttribute<Cheque4, NameAndAddress5>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque4.mmObject();
@@ -114,7 +115,17 @@ public class Cheque4 {
 			definition = "Party to which a cheque is made payable.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
+			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public NameAndAddress5 getValue(Cheque4 obj) {
+			return obj.getPayeeIdentification();
+		}
+
+		@Override
+		public void setValue(Cheque4 obj, NameAndAddress5 value) {
+			obj.setPayeeIdentification(value);
 		}
 	};
 
@@ -136,7 +147,7 @@ public class Cheque4 {
 		return payeeIdentification;
 	}
 
-	public Cheque4 setPayeeIdentification(com.tools20022.repository.msg.NameAndAddress5 payeeIdentification) {
+	public Cheque4 setPayeeIdentification(NameAndAddress5 payeeIdentification) {
 		this.payeeIdentification = Objects.requireNonNull(payeeIdentification);
 		return this;
 	}

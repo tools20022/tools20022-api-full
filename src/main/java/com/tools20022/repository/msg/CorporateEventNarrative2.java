@@ -112,7 +112,7 @@ public class CorporateEventNarrative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisclaimer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateEventNarrative2, List<Max350Text>> mmDisclaimer = new MMMessageAttribute<CorporateEventNarrative2, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateEventNarrative2.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class CorporateEventNarrative2 {
 			definition = "Issuer’s disclaimer notice relative to the meeting announcement information provided. It may be ignored for automated processing.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateEventNarrative2 obj) {
+			return obj.getDisclaimer();
+		}
+
+		@Override
+		public void setValue(CorporateEventNarrative2 obj, List<Max350Text> value) {
+			obj.setDisclaimer(value);
 		}
 	};
 

@@ -55,11 +55,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrativeV03> forCorporateActionNarrativeV03 = new MMConstraint<CorporateActionNarrativeV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionNarrativeV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields (except AdditionalInformation/AdditionalInformation) must correspond to ISO 15022 character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionNarrativeV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrativeV03 obj) throws Exception {
+			checkCorporateActionNarrativeV03(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesMessageCancellationAdviceV04> forSecuritiesMessageCancellationAdviceV04 = new MMConstraint<SecuritiesMessageCancellationAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesMessageCancellationAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesMessageCancellationAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesMessageCancellationAdviceV04 obj) throws Exception {
+			checkSecuritiesMessageCancellationAdviceV04(obj);
 		}
 	};
 	/**
@@ -115,11 +123,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementInstructionV03> forIntraPositionMovementInstructionV03 = new MMConstraint<IntraPositionMovementInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementInstructionV03 obj) throws Exception {
+			checkIntraPositionMovementInstructionV03(obj);
 		}
 	};
 	/**
@@ -151,12 +163,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV08> forSecuritiesBalanceCustodyReportV08 = new MMConstraint<SecuritiesBalanceCustodyReportV08>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceCustodyReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceCustodyReportV07;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV08 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV08(obj);
 		}
 	};
 	/**
@@ -187,12 +203,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV05> forSecuritiesStatementQueryV05 = new MMConstraint<SecuritiesStatementQueryV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesStatementQueryV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesStatementQueryV04;
 			owner_lazy = () -> SecuritiesStatementQueryV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV05 obj) throws Exception {
+			checkSecuritiesStatementQueryV05(obj);
 		}
 	};
 	/**
@@ -224,12 +244,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV08> forSecuritiesBalanceAccountingReportV08 = new MMConstraint<SecuritiesBalanceAccountingReportV08>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceAccountingReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceAccountingReportV07;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV08 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV08(obj);
 		}
 	};
 	/**
@@ -261,12 +285,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAuditTrailReportV02> forSecuritiesSettlementTransactionAuditTrailReportV02 = new MMConstraint<SecuritiesSettlementTransactionAuditTrailReportV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAuditTrailReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAuditTrailReportV01;
 			owner_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAuditTrailReportV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAuditTrailReportV02(obj);
 		}
 	};
 	/**
@@ -292,11 +320,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV03> forSecuritiesSettlementAllegementRemovalAdviceV03 = new MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementAllegementRemovalAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementAllegementRemovalAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementAllegementRemovalAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementAllegementRemovalAdviceV03(obj);
 		}
 	};
 	/**
@@ -322,11 +354,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV03> forSecuritiesStatusOrStatementQueryStatusAdviceV03 = new MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesStatusOrStatementQueryStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesStatusOrStatementQueryStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatusOrStatementQueryStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesStatusOrStatementQueryStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -352,11 +388,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionStatusQueryV03> forSecuritiesTransactionStatusQueryV03 = new MMConstraint<SecuritiesTransactionStatusQueryV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionStatusQueryV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionStatusQueryV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionStatusQueryV03 obj) throws Exception {
+			checkSecuritiesTransactionStatusQueryV03(obj);
 		}
 	};
 	/**
@@ -388,12 +428,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV04> forSecuritiesTransactionCancellationRequestV04 = new MMConstraint<SecuritiesTransactionCancellationRequestV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionCancellationRequestV03;
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV04 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -425,12 +469,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04> forSecuritiesTransactionCancellationRequestStatusAdviceV04 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionCancellationRequestStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionCancellationRequestStatusAdviceV03;
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -462,12 +510,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV06> forSecuritiesSettlementConditionModificationStatusAdviceV06 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionModificationStatusAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementConditionModificationStatusAdviceV05;
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV06 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV06(obj);
 		}
 	};
 	/**
@@ -502,12 +554,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAuditTrailReportV01> forSecuritiesSettlementTransactionAuditTrailReportV01 = new MMConstraint<SecuritiesSettlementTransactionAuditTrailReportV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAuditTrailReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAuditTrailReportV02);
 			owner_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAuditTrailReportV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAuditTrailReportV01(obj);
 		}
 	};
 	/**
@@ -533,11 +589,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementConfirmationV01> forIntraPositionMovementConfirmationV01 = new MMConstraint<IntraPositionMovementConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementConfirmationV01 obj) throws Exception {
+			checkIntraPositionMovementConfirmationV01(obj);
 		}
 	};
 	/**
@@ -563,11 +623,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementConfirmationV02> forIntraPositionMovementConfirmationV02 = new MMConstraint<IntraPositionMovementConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementConfirmationV02 obj) throws Exception {
+			checkIntraPositionMovementConfirmationV02(obj);
 		}
 	};
 	/**
@@ -593,11 +657,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementConfirmationV03> forIntraPositionMovementConfirmationV03 = new MMConstraint<IntraPositionMovementConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementConfirmationV03 obj) throws Exception {
+			checkIntraPositionMovementConfirmationV03(obj);
 		}
 	};
 	/**
@@ -623,11 +691,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementConfirmationV04> forIntraPositionMovementConfirmationV04 = new MMConstraint<IntraPositionMovementConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementConfirmationV04 obj) throws Exception {
+			checkIntraPositionMovementConfirmationV04(obj);
 		}
 	};
 	/**
@@ -653,11 +725,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementPostingReportV01> forIntraPositionMovementPostingReportV01 = new MMConstraint<IntraPositionMovementPostingReportV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementPostingReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementPostingReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementPostingReportV01 obj) throws Exception {
+			checkIntraPositionMovementPostingReportV01(obj);
 		}
 	};
 	/**
@@ -683,11 +759,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementPostingReportV02> forIntraPositionMovementPostingReportV02 = new MMConstraint<IntraPositionMovementPostingReportV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementPostingReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementPostingReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementPostingReportV02 obj) throws Exception {
+			checkIntraPositionMovementPostingReportV02(obj);
 		}
 	};
 	/**
@@ -713,11 +793,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementPostingReportV03> forIntraPositionMovementPostingReportV03 = new MMConstraint<IntraPositionMovementPostingReportV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementPostingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementPostingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementPostingReportV03 obj) throws Exception {
+			checkIntraPositionMovementPostingReportV03(obj);
 		}
 	};
 	/**
@@ -743,11 +827,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementPostingReportV04> forIntraPositionMovementPostingReportV04 = new MMConstraint<IntraPositionMovementPostingReportV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementPostingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementPostingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementPostingReportV04 obj) throws Exception {
+			checkIntraPositionMovementPostingReportV04(obj);
 		}
 	};
 	/**
@@ -773,11 +861,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV03> forSecuritiesBalanceAccountingReportV03 = new MMConstraint<SecuritiesBalanceAccountingReportV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceAccountingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV03 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV03(obj);
 		}
 	};
 	/**
@@ -803,11 +895,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV04> forSecuritiesBalanceAccountingReportV04 = new MMConstraint<SecuritiesBalanceAccountingReportV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceAccountingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV04 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV04(obj);
 		}
 	};
 	/**
@@ -833,11 +929,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV05> forSecuritiesBalanceAccountingReportV05 = new MMConstraint<SecuritiesBalanceAccountingReportV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceAccountingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV05 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV05(obj);
 		}
 	};
 	/**
@@ -872,12 +972,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV06> forSecuritiesBalanceAccountingReportV06 = new MMConstraint<SecuritiesBalanceAccountingReportV06>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceAccountingReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceAccountingReportV07);
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV06 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV06(obj);
 		}
 	};
 	/**
@@ -903,11 +1007,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV03> forSecuritiesBalanceCustodyReportV03 = new MMConstraint<SecuritiesBalanceCustodyReportV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceCustodyReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV03 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV03(obj);
 		}
 	};
 	/**
@@ -933,11 +1041,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV04> forSecuritiesBalanceCustodyReportV04 = new MMConstraint<SecuritiesBalanceCustodyReportV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceCustodyReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV04 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV04(obj);
 		}
 	};
 	/**
@@ -963,11 +1075,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV05> forSecuritiesBalanceCustodyReportV05 = new MMConstraint<SecuritiesBalanceCustodyReportV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceCustodyReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV05 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV05(obj);
 		}
 	};
 	/**
@@ -1002,12 +1118,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV06> forSecuritiesBalanceCustodyReportV06 = new MMConstraint<SecuritiesBalanceCustodyReportV06>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceCustodyReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceCustodyReportV07);
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV06 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV06(obj);
 		}
 	};
 	/**
@@ -1033,11 +1153,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesMessageCancellationAdviceV01> forSecuritiesMessageCancellationAdviceV01 = new MMConstraint<SecuritiesMessageCancellationAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesMessageCancellationAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesMessageCancellationAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesMessageCancellationAdviceV01 obj) throws Exception {
+			checkSecuritiesMessageCancellationAdviceV01(obj);
 		}
 	};
 	/**
@@ -1063,11 +1187,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesMessageCancellationAdviceV02> forSecuritiesMessageCancellationAdviceV02 = new MMConstraint<SecuritiesMessageCancellationAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesMessageCancellationAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesMessageCancellationAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesMessageCancellationAdviceV02 obj) throws Exception {
+			checkSecuritiesMessageCancellationAdviceV02(obj);
 		}
 	};
 	/**
@@ -1093,11 +1221,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesMessageCancellationAdviceV03> forSecuritiesMessageCancellationAdviceV03 = new MMConstraint<SecuritiesMessageCancellationAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesMessageCancellationAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesMessageCancellationAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesMessageCancellationAdviceV03 obj) throws Exception {
+			checkSecuritiesMessageCancellationAdviceV03(obj);
 		}
 	};
 	/**
@@ -1123,11 +1255,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV01> forSecuritiesTransactionPendingReportV01 = new MMConstraint<SecuritiesTransactionPendingReportV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPendingReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionPendingReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV01 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV01(obj);
 		}
 	};
 	/**
@@ -1153,11 +1289,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV02> forSecuritiesTransactionPendingReportV02 = new MMConstraint<SecuritiesTransactionPendingReportV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPendingReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionPendingReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV02 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV02(obj);
 		}
 	};
 	/**
@@ -1183,11 +1323,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV03> forSecuritiesTransactionPendingReportV03 = new MMConstraint<SecuritiesTransactionPendingReportV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPendingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionPendingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV03 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV03(obj);
 		}
 	};
 	/**
@@ -1222,12 +1366,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV04> forSecuritiesTransactionPendingReportV04 = new MMConstraint<SecuritiesTransactionPendingReportV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPendingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionPendingReportV05);
 			owner_lazy = () -> SecuritiesTransactionPendingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV04 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV04(obj);
 		}
 	};
 	/**
@@ -1253,11 +1401,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV01> forSecuritiesTransactionPostingReportV01 = new MMConstraint<SecuritiesTransactionPostingReportV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPostingReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionPostingReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV01 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV01(obj);
 		}
 	};
 	/**
@@ -1283,11 +1435,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV02> forSecuritiesTransactionPostingReportV02 = new MMConstraint<SecuritiesTransactionPostingReportV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPostingReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionPostingReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV02 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV02(obj);
 		}
 	};
 	/**
@@ -1313,11 +1469,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV03> forSecuritiesTransactionPostingReportV03 = new MMConstraint<SecuritiesTransactionPostingReportV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPostingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionPostingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV03 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV03(obj);
 		}
 	};
 	/**
@@ -1352,12 +1512,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV04> forSecuritiesTransactionPostingReportV04 = new MMConstraint<SecuritiesTransactionPostingReportV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPostingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionPostingReportV05);
 			owner_lazy = () -> SecuritiesTransactionPostingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV04 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV04(obj);
 		}
 	};
 	/**
@@ -1383,11 +1547,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementInstructionV01> forIntraPositionMovementInstructionV01 = new MMConstraint<IntraPositionMovementInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementInstructionV01 obj) throws Exception {
+			checkIntraPositionMovementInstructionV01(obj);
 		}
 	};
 	/**
@@ -1413,11 +1581,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementInstructionV02> forIntraPositionMovementInstructionV02 = new MMConstraint<IntraPositionMovementInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementInstructionV02 obj) throws Exception {
+			checkIntraPositionMovementInstructionV02(obj);
 		}
 	};
 	/**
@@ -1443,11 +1615,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementStatusAdviceV01> forIntraPositionMovementStatusAdviceV01 = new MMConstraint<IntraPositionMovementStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementStatusAdviceV01 obj) throws Exception {
+			checkIntraPositionMovementStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -1473,11 +1649,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementStatusAdviceV02> forIntraPositionMovementStatusAdviceV02 = new MMConstraint<IntraPositionMovementStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementStatusAdviceV02 obj) throws Exception {
+			checkIntraPositionMovementStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -1503,11 +1683,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV01> forSecuritiesSettlementTransactionAllegementReportV01 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAllegementReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV01(obj);
 		}
 	};
 	/**
@@ -1533,11 +1717,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV02> forSecuritiesSettlementTransactionAllegementReportV02 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAllegementReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV02(obj);
 		}
 	};
 	/**
@@ -1563,11 +1751,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV01> forSecuritiesStatementQueryV01 = new MMConstraint<SecuritiesStatementQueryV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesStatementQueryV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesStatementQueryV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV01 obj) throws Exception {
+			checkSecuritiesStatementQueryV01(obj);
 		}
 	};
 	/**
@@ -1593,11 +1785,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV02> forSecuritiesStatementQueryV02 = new MMConstraint<SecuritiesStatementQueryV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesStatementQueryV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesStatementQueryV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV02 obj) throws Exception {
+			checkSecuritiesStatementQueryV02(obj);
 		}
 	};
 	/**
@@ -1632,12 +1828,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV03> forSecuritiesSettlementTransactionAllegementReportV03 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAllegementReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAllegementReportV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV03(obj);
 		}
 	};
 	/**
@@ -1671,12 +1871,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV03> forSecuritiesStatementQueryV03 = new MMConstraint<SecuritiesStatementQueryV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesStatementQueryV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesStatementQueryV04);
 			owner_lazy = () -> SecuritiesStatementQueryV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV03 obj) throws Exception {
+			checkSecuritiesStatementQueryV03(obj);
 		}
 	};
 	/**
@@ -1702,11 +1906,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementStatusAdviceV03> forIntraPositionMovementStatusAdviceV03 = new MMConstraint<IntraPositionMovementStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkIntraPositionMovementStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> IntraPositionMovementStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementStatusAdviceV03 obj) throws Exception {
+			checkIntraPositionMovementStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -1747,13 +1955,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV05> forSecuritiesTransactionPendingReportV05 = new MMConstraint<SecuritiesTransactionPendingReportV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPendingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionPendingReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionPendingReportV04;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV05 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV05(obj);
 		}
 	};
 	/**
@@ -1785,12 +1997,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV05> forSecuritiesTransactionPostingReportV05 = new MMConstraint<SecuritiesTransactionPostingReportV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPostingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionPostingReportV04;
 			owner_lazy = () -> SecuritiesTransactionPostingReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV05 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV05(obj);
 		}
 	};
 	/**
@@ -1831,13 +2047,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV07> forSecuritiesBalanceCustodyReportV07 = new MMConstraint<SecuritiesBalanceCustodyReportV07>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceCustodyReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceCustodyReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceCustodyReportV06;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV07 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV07(obj);
 		}
 	};
 	/**
@@ -1878,13 +2098,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV07> forSecuritiesBalanceAccountingReportV07 = new MMConstraint<SecuritiesBalanceAccountingReportV07>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesBalanceAccountingReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceAccountingReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesBalanceAccountingReportV06;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV07 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV07(obj);
 		}
 	};
 	/**
@@ -1916,12 +2140,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV04> forSecuritiesSettlementTransactionAllegementReportV04 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAllegementReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAllegementReportV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV04(obj);
 		}
 	};
 	/**
@@ -1960,13 +2188,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV04> forSecuritiesStatementQueryV04 = new MMConstraint<SecuritiesStatementQueryV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesStatementQueryV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesStatementQueryV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesStatementQueryV03;
 			owner_lazy = () -> SecuritiesStatementQueryV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV04 obj) throws Exception {
+			checkSecuritiesStatementQueryV04(obj);
 		}
 	};
 	/**
@@ -1998,12 +2230,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV06> forSecuritiesTransactionPendingReportV06 = new MMConstraint<SecuritiesTransactionPendingReportV06>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionPendingReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionPendingReportV05;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV06 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV06(obj);
 		}
 	};
 	/**
@@ -2029,11 +2265,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV01> forSecuritiesFinancingConfirmationV01 = new MMConstraint<SecuritiesFinancingConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV01 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV01(obj);
 		}
 	};
 	/**
@@ -2059,11 +2299,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV02> forSecuritiesFinancingConfirmationV02 = new MMConstraint<SecuritiesFinancingConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV02 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV02(obj);
 		}
 	};
 	/**
@@ -2089,11 +2333,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV03> forSecuritiesFinancingConfirmationV03 = new MMConstraint<SecuritiesFinancingConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV03 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV03(obj);
 		}
 	};
 	/**
@@ -2128,12 +2376,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV04> forSecuritiesFinancingConfirmationV04 = new MMConstraint<SecuritiesFinancingConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingConfirmationV05);
 			owner_lazy = () -> SecuritiesFinancingConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV04 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV04(obj);
 		}
 	};
 	/**
@@ -2159,11 +2411,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV01> forSecuritiesFinancingInstructionV01 = new MMConstraint<SecuritiesFinancingInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV01 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV01(obj);
 		}
 	};
 	/**
@@ -2189,11 +2445,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV02> forSecuritiesFinancingInstructionV02 = new MMConstraint<SecuritiesFinancingInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV02 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV02(obj);
 		}
 	};
 	/**
@@ -2219,11 +2479,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV03> forSecuritiesFinancingInstructionV03 = new MMConstraint<SecuritiesFinancingInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV03 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV03(obj);
 		}
 	};
 	/**
@@ -2249,11 +2513,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV01> forSecuritiesSettlementConditionModificationStatusAdviceV01 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionModificationStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -2279,11 +2547,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV02> forSecuritiesSettlementConditionModificationStatusAdviceV02 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionModificationStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -2309,11 +2581,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV03> forSecuritiesSettlementConditionModificationStatusAdviceV03 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionModificationStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -2348,12 +2624,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV04> forSecuritiesSettlementConditionModificationStatusAdviceV04 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionModificationStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementConditionModificationStatusAdviceV05);
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -2379,11 +2659,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV01> forSecuritiesSettlementConditionsModificationRequestV01 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionsModificationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV01 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV01(obj);
 		}
 	};
 	/**
@@ -2409,11 +2693,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV02> forSecuritiesSettlementConditionsModificationRequestV02 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionsModificationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV02 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV02(obj);
 		}
 	};
 	/**
@@ -2439,11 +2727,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV03> forSecuritiesSettlementConditionsModificationRequestV03 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionsModificationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV03 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV03(obj);
 		}
 	};
 	/**
@@ -2478,12 +2770,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV04> forSecuritiesSettlementConditionsModificationRequestV04 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionsModificationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementConditionsModificationRequestV05);
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV04 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV04(obj);
 		}
 	};
 	/**
@@ -2509,11 +2805,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV01> forSecuritiesSettlementTransactionConfirmationV01 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV01(obj);
 		}
 	};
 	/**
@@ -2539,11 +2839,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV02> forSecuritiesSettlementTransactionConfirmationV02 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV02(obj);
 		}
 	};
 	/**
@@ -2569,11 +2873,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV03> forSecuritiesSettlementTransactionConfirmationV03 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV03(obj);
 		}
 	};
 	/**
@@ -2608,12 +2916,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV04> forSecuritiesSettlementTransactionConfirmationV04 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionConfirmationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV04(obj);
 		}
 	};
 	/**
@@ -2639,11 +2951,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV01> forSecuritiesSettlementTransactionGenerationNotificationV01 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionGenerationNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV01(obj);
 		}
 	};
 	/**
@@ -2669,11 +2985,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV02> forSecuritiesSettlementTransactionGenerationNotificationV02 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionGenerationNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV02(obj);
 		}
 	};
 	/**
@@ -2699,11 +3019,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV03> forSecuritiesSettlementTransactionGenerationNotificationV03 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionGenerationNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV03(obj);
 		}
 	};
 	/**
@@ -2738,12 +3062,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV04> forSecuritiesSettlementTransactionGenerationNotificationV04 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionGenerationNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionGenerationNotificationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV04(obj);
 		}
 	};
 	/**
@@ -2769,11 +3097,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV01> forSecuritiesSettlementTransactionInstructionV01 = new MMConstraint<SecuritiesSettlementTransactionInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV01(obj);
 		}
 	};
 	/**
@@ -2799,11 +3131,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV02> forSecuritiesSettlementTransactionInstructionV02 = new MMConstraint<SecuritiesSettlementTransactionInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV02(obj);
 		}
 	};
 	/**
@@ -2829,11 +3165,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV03> forSecuritiesSettlementTransactionInstructionV03 = new MMConstraint<SecuritiesSettlementTransactionInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV03(obj);
 		}
 	};
 	/**
@@ -2868,12 +3208,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV04> forSecuritiesSettlementTransactionInstructionV04 = new MMConstraint<SecuritiesSettlementTransactionInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionInstructionV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV04(obj);
 		}
 	};
 	/**
@@ -2899,11 +3243,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01> forSecuritiesSettlementTransactionStatusAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -2929,11 +3277,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02> forSecuritiesSettlementTransactionStatusAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -2959,11 +3311,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03> forSecuritiesSettlementTransactionStatusAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -2998,12 +3354,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04> forSecuritiesSettlementTransactionStatusAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionStatusAdviceV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -3038,12 +3398,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV04> forSecuritiesFinancingInstructionV04 = new MMConstraint<SecuritiesFinancingInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingInstructionV05);
 			owner_lazy = () -> SecuritiesFinancingInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV04 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV04(obj);
 		}
 	};
 	/**
@@ -3069,11 +3433,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV01> forPortfolioTransferNotificationV01 = new MMConstraint<PortfolioTransferNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkPortfolioTransferNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> PortfolioTransferNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV01 obj) throws Exception {
+			checkPortfolioTransferNotificationV01(obj);
 		}
 	};
 	/**
@@ -3099,11 +3467,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV02> forPortfolioTransferNotificationV02 = new MMConstraint<PortfolioTransferNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkPortfolioTransferNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> PortfolioTransferNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV02 obj) throws Exception {
+			checkPortfolioTransferNotificationV02(obj);
 		}
 	};
 	/**
@@ -3129,11 +3501,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV01> forSecuritiesFinancingModificationInstructionV01 = new MMConstraint<SecuritiesFinancingModificationInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingModificationInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV01 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV01(obj);
 		}
 	};
 	/**
@@ -3159,11 +3535,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV02> forSecuritiesFinancingModificationInstructionV02 = new MMConstraint<SecuritiesFinancingModificationInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingModificationInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV02 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV02(obj);
 		}
 	};
 	/**
@@ -3189,11 +3569,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV01> forSecuritiesFinancingStatusAdviceV01 = new MMConstraint<SecuritiesFinancingStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -3219,11 +3603,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV02> forSecuritiesFinancingStatusAdviceV02 = new MMConstraint<SecuritiesFinancingStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -3249,11 +3637,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV01> forSecuritiesSettlementAllegementRemovalAdviceV01 = new MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementAllegementRemovalAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementAllegementRemovalAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementAllegementRemovalAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementAllegementRemovalAdviceV01(obj);
 		}
 	};
 	/**
@@ -3279,11 +3671,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV02> forSecuritiesSettlementAllegementRemovalAdviceV02 = new MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementAllegementRemovalAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementAllegementRemovalAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementAllegementRemovalAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementAllegementRemovalAdviceV02(obj);
 		}
 	};
 	/**
@@ -3309,11 +3705,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01> forSecuritiesSettlementTransactionAllegementNotificationV01 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAllegementNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV01(obj);
 		}
 	};
 	/**
@@ -3339,11 +3739,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02> forSecuritiesSettlementTransactionAllegementNotificationV02 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAllegementNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV02(obj);
 		}
 	};
 	/**
@@ -3369,11 +3773,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV01> forSecuritiesSettlementTransactionReversalAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionReversalAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV01(obj);
 		}
 	};
 	/**
@@ -3399,11 +3807,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV02> forSecuritiesSettlementTransactionReversalAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionReversalAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV02(obj);
 		}
 	};
 	/**
@@ -3429,11 +3841,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV01> forSecuritiesStatusOrStatementQueryStatusAdviceV01 = new MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesStatusOrStatementQueryStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesStatusOrStatementQueryStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatusOrStatementQueryStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesStatusOrStatementQueryStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -3459,11 +3875,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV02> forSecuritiesStatusOrStatementQueryStatusAdviceV02 = new MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesStatusOrStatementQueryStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesStatusOrStatementQueryStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatusOrStatementQueryStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesStatusOrStatementQueryStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -3489,11 +3909,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV01> forSecuritiesTransactionCancellationRequestStatusAdviceV01 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionCancellationRequestStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -3519,11 +3943,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV02> forSecuritiesTransactionCancellationRequestStatusAdviceV02 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionCancellationRequestStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -3549,11 +3977,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV01> forSecuritiesTransactionCancellationRequestV01 = new MMConstraint<SecuritiesTransactionCancellationRequestV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV01 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -3579,11 +4011,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV02> forSecuritiesTransactionCancellationRequestV02 = new MMConstraint<SecuritiesTransactionCancellationRequestV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionCancellationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV02 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV02(obj);
 		}
 	};
 	/**
@@ -3609,11 +4045,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionStatusQueryV01> forSecuritiesTransactionStatusQueryV01 = new MMConstraint<SecuritiesTransactionStatusQueryV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionStatusQueryV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionStatusQueryV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionStatusQueryV01 obj) throws Exception {
+			checkSecuritiesTransactionStatusQueryV01(obj);
 		}
 	};
 	/**
@@ -3639,11 +4079,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionStatusQueryV02> forSecuritiesTransactionStatusQueryV02 = new MMConstraint<SecuritiesTransactionStatusQueryV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionStatusQueryV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> SecuritiesTransactionStatusQueryV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionStatusQueryV02 obj) throws Exception {
+			checkSecuritiesTransactionStatusQueryV02(obj);
 		}
 	};
 	/**
@@ -3678,12 +4122,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV03> forSecuritiesFinancingModificationInstructionV03 = new MMConstraint<SecuritiesFinancingModificationInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingModificationInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingModificationInstructionV04);
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV03 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV03(obj);
 		}
 	};
 	/**
@@ -3718,12 +4166,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV03> forSecuritiesFinancingStatusAdviceV03 = new MMConstraint<SecuritiesFinancingStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingStatusAdviceV04);
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -3758,12 +4210,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV03> forSecuritiesSettlementTransactionAllegementNotificationV03 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAllegementNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAllegementNotificationV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV03(obj);
 		}
 	};
 	/**
@@ -3798,12 +4254,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV03> forSecuritiesSettlementTransactionReversalAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionReversalAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionReversalAdviceV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV03(obj);
 		}
 	};
 	/**
@@ -3838,12 +4298,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV03> forSecuritiesTransactionCancellationRequestV03 = new MMConstraint<SecuritiesTransactionCancellationRequestV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionCancellationRequestV04);
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV03 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -3878,12 +4342,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV03> forSecuritiesTransactionCancellationRequestStatusAdviceV03 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesTransactionCancellationRequestStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionCancellationRequestStatusAdviceV04);
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -3909,11 +4377,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV03> forPortfolioTransferNotificationV03 = new MMConstraint<PortfolioTransferNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkPortfolioTransferNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> PortfolioTransferNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV03 obj) throws Exception {
+			checkPortfolioTransferNotificationV03(obj);
 		}
 	};
 	/**
@@ -3945,12 +4417,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV04> forSecuritiesSettlementTransactionAllegementNotificationV04 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionAllegementNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionAllegementNotificationV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV04(obj);
 		}
 	};
 	/**
@@ -3991,13 +4467,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV04> forSecuritiesFinancingStatusAdviceV04 = new MMConstraint<SecuritiesFinancingStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingStatusAdviceV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingStatusAdviceV03;
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -4029,12 +4509,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV05> forSecuritiesFinancingConfirmationV05 = new MMConstraint<SecuritiesFinancingConfirmationV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingConfirmationV04;
 			owner_lazy = () -> SecuritiesFinancingConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV05 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV05(obj);
 		}
 	};
 	/**
@@ -4066,12 +4550,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV05> forSecuritiesSettlementTransactionGenerationNotificationV05 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionGenerationNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionGenerationNotificationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV05(obj);
 		}
 	};
 	/**
@@ -4103,12 +4591,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV04> forSecuritiesSettlementTransactionReversalAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionReversalAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionReversalAdviceV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV04(obj);
 		}
 	};
 	/**
@@ -4140,12 +4632,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV05> forSecuritiesFinancingInstructionV05 = new MMConstraint<SecuritiesFinancingInstructionV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingInstructionV04;
 			owner_lazy = () -> SecuritiesFinancingInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV05 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV05(obj);
 		}
 	};
 	/**
@@ -4177,12 +4673,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV05> forSecuritiesSettlementTransactionInstructionV05 = new MMConstraint<SecuritiesSettlementTransactionInstructionV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionInstructionV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV05(obj);
 		}
 	};
 	/**
@@ -4214,12 +4714,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV05> forSecuritiesSettlementTransactionConfirmationV05 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionConfirmationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV05(obj);
 		}
 	};
 	/**
@@ -4260,13 +4764,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV05> forSecuritiesSettlementConditionModificationStatusAdviceV05 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionModificationStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementConditionModificationStatusAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementConditionModificationStatusAdviceV04;
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV05 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -4298,12 +4806,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV04> forSecuritiesFinancingModificationInstructionV04 = new MMConstraint<SecuritiesFinancingModificationInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingModificationInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingModificationInstructionV03;
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV04 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV04(obj);
 		}
 	};
 	/**
@@ -4335,12 +4847,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV05> forSecuritiesSettlementConditionsModificationRequestV05 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementConditionsModificationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementConditionsModificationRequestV04;
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV05 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV05(obj);
 		}
 	};
 	/**
@@ -4381,13 +4897,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05> forSecuritiesSettlementTransactionStatusAdviceV05 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionStatusAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionStatusAdviceV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -4419,12 +4939,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV05> forSecuritiesFinancingStatusAdviceV05 = new MMConstraint<SecuritiesFinancingStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesFinancingStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesFinancingStatusAdviceV04;
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV05 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -4456,12 +4980,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06> forSecuritiesSettlementTransactionStatusAdviceV06 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkSecuritiesSettlementTransactionStatusAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesSettlementTransactionStatusAdviceV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV06(obj);
 		}
 	};
 	/**
@@ -4487,11 +5015,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV01> forCorporateActionCancellationAdviceV01 = new MMConstraint<CorporateActionCancellationAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionCancellationAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionCancellationAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV01 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV01(obj);
 		}
 	};
 	/**
@@ -4517,11 +5049,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV02> forCorporateActionCancellationAdviceV02 = new MMConstraint<CorporateActionCancellationAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionCancellationAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionCancellationAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV02 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV02(obj);
 		}
 	};
 	/**
@@ -4547,11 +5083,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV03> forCorporateActionCancellationAdviceV03 = new MMConstraint<CorporateActionCancellationAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionCancellationAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionCancellationAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV03 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV03(obj);
 		}
 	};
 	/**
@@ -4586,12 +5126,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV04> forCorporateActionCancellationAdviceV04 = new MMConstraint<CorporateActionCancellationAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionCancellationAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionCancellationAdviceV05);
 			owner_lazy = () -> CorporateActionCancellationAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV04 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV04(obj);
 		}
 	};
 	/**
@@ -4617,11 +5161,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionEventProcessingStatusAdviceV01> forCorporateActionEventProcessingStatusAdviceV01 = new MMConstraint<CorporateActionEventProcessingStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionEventProcessingStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionEventProcessingStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventProcessingStatusAdviceV01 obj) throws Exception {
+			checkCorporateActionEventProcessingStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -4647,11 +5195,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionEventProcessingStatusAdviceV02> forCorporateActionEventProcessingStatusAdviceV02 = new MMConstraint<CorporateActionEventProcessingStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionEventProcessingStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionEventProcessingStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventProcessingStatusAdviceV02 obj) throws Exception {
+			checkCorporateActionEventProcessingStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -4677,11 +5229,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionEventProcessingStatusAdviceV03> forCorporateActionEventProcessingStatusAdviceV03 = new MMConstraint<CorporateActionEventProcessingStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionEventProcessingStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionEventProcessingStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventProcessingStatusAdviceV03 obj) throws Exception {
+			checkCorporateActionEventProcessingStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -4707,11 +5263,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionEventProcessingStatusAdviceV04> forCorporateActionEventProcessingStatusAdviceV04 = new MMConstraint<CorporateActionEventProcessingStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionEventProcessingStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionEventProcessingStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventProcessingStatusAdviceV04 obj) throws Exception {
+			checkCorporateActionEventProcessingStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -4737,11 +5297,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV01> forCorporateActionInstructionV01 = new MMConstraint<CorporateActionInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV01 obj) throws Exception {
+			checkCorporateActionInstructionV01(obj);
 		}
 	};
 	/**
@@ -4767,11 +5331,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV02> forCorporateActionInstructionV02 = new MMConstraint<CorporateActionInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV02 obj) throws Exception {
+			checkCorporateActionInstructionV02(obj);
 		}
 	};
 	/**
@@ -4797,11 +5365,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV03> forCorporateActionInstructionV03 = new MMConstraint<CorporateActionInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV03 obj) throws Exception {
+			checkCorporateActionInstructionV03(obj);
 		}
 	};
 	/**
@@ -4835,12 +5407,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV04> forCorporateActionInstructionV04 = new MMConstraint<CorporateActionInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionV05);
 			owner_lazy = () -> CorporateActionInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV04 obj) throws Exception {
+			checkCorporateActionInstructionV04(obj);
 		}
 	};
 	/**
@@ -4866,11 +5442,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV01> forCorporateActionInstructionCancellationRequestV01 = new MMConstraint<CorporateActionInstructionCancellationRequestV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV01 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -4896,11 +5476,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV02> forCorporateActionInstructionCancellationRequestV02 = new MMConstraint<CorporateActionInstructionCancellationRequestV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV02 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV02(obj);
 		}
 	};
 	/**
@@ -4926,11 +5510,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV03> forCorporateActionInstructionCancellationRequestV03 = new MMConstraint<CorporateActionInstructionCancellationRequestV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV03 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -4965,12 +5553,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV04> forCorporateActionInstructionCancellationRequestV04 = new MMConstraint<CorporateActionInstructionCancellationRequestV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionCancellationRequestV05);
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV04 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -4996,11 +5588,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV01> forCorporateActionInstructionCancellationRequestStatusAdviceV01 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV01 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -5026,11 +5622,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV02> forCorporateActionInstructionCancellationRequestStatusAdviceV02 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV02 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -5056,11 +5656,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV03> forCorporateActionInstructionCancellationRequestStatusAdviceV03 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV03 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -5095,12 +5699,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV04> forCorporateActionInstructionCancellationRequestStatusAdviceV04 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionCancellationRequestStatusAdviceV05);
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV04 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -5126,11 +5734,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV01> forCorporateActionInstructionStatementReportV01 = new MMConstraint<CorporateActionInstructionStatementReportV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatementReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV01 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV01(obj);
 		}
 	};
 	/**
@@ -5156,11 +5768,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV02> forCorporateActionInstructionStatementReportV02 = new MMConstraint<CorporateActionInstructionStatementReportV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatementReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV02 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV02(obj);
 		}
 	};
 	/**
@@ -5186,11 +5802,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV03> forCorporateActionInstructionStatementReportV03 = new MMConstraint<CorporateActionInstructionStatementReportV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatementReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV03 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV03(obj);
 		}
 	};
 	/**
@@ -5216,11 +5836,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV04> forCorporateActionInstructionStatementReportV04 = new MMConstraint<CorporateActionInstructionStatementReportV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatementReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV04 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV04(obj);
 		}
 	};
 	/**
@@ -5246,11 +5870,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV01> forCorporateActionInstructionStatusAdviceV01 = new MMConstraint<CorporateActionInstructionStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV01 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -5276,11 +5904,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV02> forCorporateActionInstructionStatusAdviceV02 = new MMConstraint<CorporateActionInstructionStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV02 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -5306,11 +5938,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV03> forCorporateActionInstructionStatusAdviceV03 = new MMConstraint<CorporateActionInstructionStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV03 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -5345,12 +5981,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV04> forCorporateActionInstructionStatusAdviceV04 = new MMConstraint<CorporateActionInstructionStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionStatusAdviceV05);
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV04 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -5376,11 +6016,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV01> forCorporateActionMovementConfirmationV01 = new MMConstraint<CorporateActionMovementConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV01 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV01(obj);
 		}
 	};
 	/**
@@ -5406,11 +6050,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV02> forCorporateActionMovementConfirmationV02 = new MMConstraint<CorporateActionMovementConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV02 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV02(obj);
 		}
 	};
 	/**
@@ -5436,11 +6084,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV03> forCorporateActionMovementConfirmationV03 = new MMConstraint<CorporateActionMovementConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV03 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV03(obj);
 		}
 	};
 	/**
@@ -5475,12 +6127,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV04> forCorporateActionMovementConfirmationV04 = new MMConstraint<CorporateActionMovementConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementConfirmationV05);
 			owner_lazy = () -> CorporateActionMovementConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV04 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV04(obj);
 		}
 	};
 	/**
@@ -5506,11 +6162,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV01> forCorporateActionMovementPreliminaryAdviceV01 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV01 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV01(obj);
 		}
 	};
 	/**
@@ -5536,11 +6196,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV02> forCorporateActionMovementPreliminaryAdviceV02 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV02 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV02(obj);
 		}
 	};
 	/**
@@ -5566,11 +6230,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV03> forCorporateActionMovementPreliminaryAdviceV03 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV03 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV03(obj);
 		}
 	};
 	/**
@@ -5605,12 +6273,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV04> forCorporateActionMovementPreliminaryAdviceV04 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementPreliminaryAdviceV05);
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV04 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV04(obj);
 		}
 	};
 	/**
@@ -5636,11 +6308,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV01> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV01 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV01 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV01(obj);
 		}
 	};
 	/**
@@ -5666,11 +6342,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV02> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV02 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV02 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV02(obj);
 		}
 	};
 	/**
@@ -5696,11 +6376,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV03> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV03 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV03(obj);
 		}
 	};
 	/**
@@ -5735,12 +6419,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV04> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV04 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementPreliminaryAdviceCancellationAdviceV05);
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV04 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV04(obj);
 		}
 	};
 	/**
@@ -5766,11 +6454,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV01> forCorporateActionMovementReversalAdviceV01 = new MMConstraint<CorporateActionMovementReversalAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementReversalAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV01 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV01(obj);
 		}
 	};
 	/**
@@ -5796,11 +6488,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV02> forCorporateActionMovementReversalAdviceV02 = new MMConstraint<CorporateActionMovementReversalAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementReversalAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV02 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV02(obj);
 		}
 	};
 	/**
@@ -5826,11 +6522,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV03> forCorporateActionMovementReversalAdviceV03 = new MMConstraint<CorporateActionMovementReversalAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementReversalAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV03 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV03(obj);
 		}
 	};
 	/**
@@ -5865,12 +6565,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV04> forCorporateActionMovementReversalAdviceV04 = new MMConstraint<CorporateActionMovementReversalAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementReversalAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementReversalAdviceV05);
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV04 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV04(obj);
 		}
 	};
 	/**
@@ -5896,11 +6600,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV01> forCorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields (except for CorporateActionDetails/CorporateActionAdditionalInformation/URLAddress)  must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV01 obj) throws Exception {
+			checkCorporateActionNotificationV01(obj);
 		}
 	};
 	/**
@@ -5926,11 +6634,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV02> forCorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields (except for CorporateActionDetails/CorporateActionAdditionalInformation/URLAddress)  must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV02 obj) throws Exception {
+			checkCorporateActionNotificationV02(obj);
 		}
 	};
 	/**
@@ -5956,11 +6668,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV03> forCorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields (except for CorporateActionDetails/CorporateActionAdditionalInformation/URLAddress)  must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV03 obj) throws Exception {
+			checkCorporateActionNotificationV03(obj);
 		}
 	};
 	/**
@@ -5995,12 +6711,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields (except for CorporateActionDetails/CorporateActionAdditionalInformation/URLAddress)  must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionNotificationV05);
 			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
+			checkCorporateActionNotificationV04(obj);
 		}
 	};
 	/**
@@ -6026,11 +6746,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrativeV01> forCorporateActionNarrativeV01 = new MMConstraint<CorporateActionNarrativeV01>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionNarrativeV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields (except AdditionalInformation/AdditionalInformation) must correspond to ISO 15022 character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionNarrativeV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrativeV01 obj) throws Exception {
+			checkCorporateActionNarrativeV01(obj);
 		}
 	};
 	/**
@@ -6056,11 +6780,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrativeV02> forCorporateActionNarrativeV02 = new MMConstraint<CorporateActionNarrativeV02>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionNarrativeV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields (except AdditionalInformation/AdditionalInformation) must correspond to ISO 15022 character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			owner_lazy = () -> CorporateActionNarrativeV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrativeV02 obj) throws Exception {
+			checkCorporateActionNarrativeV02(obj);
 		}
 	};
 	/**
@@ -6092,12 +6820,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV05> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV05 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementPreliminaryAdviceCancellationAdviceV04;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV05 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV05(obj);
 		}
 	};
 	/**
@@ -6129,12 +6861,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV05> forCorporateActionCancellationAdviceV05 = new MMConstraint<CorporateActionCancellationAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionCancellationAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionCancellationAdviceV04;
 			owner_lazy = () -> CorporateActionCancellationAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV05 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV05(obj);
 		}
 	};
 	/**
@@ -6175,13 +6911,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV05> forCorporateActionMovementConfirmationV05 = new MMConstraint<CorporateActionMovementConfirmationV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementConfirmationV04;
 			owner_lazy = () -> CorporateActionMovementConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV05 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV05(obj);
 		}
 	};
 	/**
@@ -6213,12 +6953,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV05> forCorporateActionNotificationV05 = new MMConstraint<CorporateActionNotificationV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields (except for CorporateActionDetails/CorporateActionAdditionalInformation/URLAddress)  must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionNotificationV04;
 			owner_lazy = () -> CorporateActionNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV05 obj) throws Exception {
+			checkCorporateActionNotificationV05(obj);
 		}
 	};
 	/**
@@ -6259,13 +7003,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV05> forCorporateActionInstructionStatusAdviceV05 = new MMConstraint<CorporateActionInstructionStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionStatusAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionStatusAdviceV04;
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV05 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -6306,13 +7054,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV05> forCorporateActionMovementPreliminaryAdviceV05 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementPreliminaryAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementPreliminaryAdviceV04;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV05 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV05(obj);
 		}
 	};
 	/**
@@ -6343,12 +7095,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV05> forCorporateActionInstructionV05 = new MMConstraint<CorporateActionInstructionV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionV04;
 			owner_lazy = () -> CorporateActionInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV05 obj) throws Exception {
+			checkCorporateActionInstructionV05(obj);
 		}
 	};
 	/**
@@ -6389,13 +7145,17 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV05> forCorporateActionMovementReversalAdviceV05 = new MMConstraint<CorporateActionMovementReversalAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementReversalAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementReversalAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementReversalAdviceV04;
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV05 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV05(obj);
 		}
 	};
 	/**
@@ -6427,12 +7187,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV05> forCorporateActionInstructionCancellationRequestV05 = new MMConstraint<CorporateActionInstructionCancellationRequestV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionCancellationRequestV04;
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV05 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV05(obj);
 		}
 	};
 	/**
@@ -6464,12 +7228,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV06> forCorporateActionMovementConfirmationV06 = new MMConstraint<CorporateActionMovementConfirmationV06>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementConfirmationV05;
 			owner_lazy = () -> CorporateActionMovementConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV06 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV06(obj);
 		}
 	};
 	/**
@@ -6501,12 +7269,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV05> forCorporateActionInstructionCancellationRequestStatusAdviceV05 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionCancellationRequestStatusAdviceV04;
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV05 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -6538,12 +7310,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV06> forCorporateActionInstructionStatusAdviceV06 = new MMConstraint<CorporateActionInstructionStatusAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionInstructionStatusAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionInstructionStatusAdviceV05;
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV06 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV06(obj);
 		}
 	};
 	/**
@@ -6575,12 +7351,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV06> forCorporateActionMovementPreliminaryAdviceV06 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementPreliminaryAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementPreliminaryAdviceV05;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV06 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV06(obj);
 		}
 	};
 	/**
@@ -6612,12 +7392,16 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV06> forCorporateActionMovementReversalAdviceV06 = new MMConstraint<CorporateActionMovementReversalAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkCorporateActionMovementReversalAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetXRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementReversalAdviceV05;
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV06 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV06(obj);
 		}
 	};
 

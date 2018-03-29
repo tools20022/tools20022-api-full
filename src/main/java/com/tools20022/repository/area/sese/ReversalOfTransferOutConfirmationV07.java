@@ -27,8 +27,7 @@ import com.tools20022.repository.msg.CopyInformation4;
 import com.tools20022.repository.msg.MarketPracticeVersion1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.References20;
-import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -83,8 +82,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -167,7 +166,7 @@ public class ReversalOfTransferOutConfirmationV07 {
 	 * ReversalOfTransferOutConfirmationV06.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,12 +179,14 @@ public class ReversalOfTransferOutConfirmationV07 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReversalOfTransferOutConfirmationV07.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ReversalOfTransferOutConfirmationV07 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(ReversalOfTransferOutConfirmationV07 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "Refs")
@@ -219,7 +220,7 @@ public class ReversalOfTransferOutConfirmationV07 {
 	 * ReversalOfTransferOutConfirmationV06.mmReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, List<References20>> mmReferences = new MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, List<References20>>() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +231,14 @@ public class ReversalOfTransferOutConfirmationV07 {
 			complexType_lazy = () -> References20.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReversalOfTransferOutConfirmationV07.class.getMethod("getReferences", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<References20> getValue(ReversalOfTransferOutConfirmationV07 obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(ReversalOfTransferOutConfirmationV07 obj, List<References20> value) {
+			obj.setReferences(value);
 		}
 	};
 	@XmlElement(name = "Rvsl", required = true)
@@ -269,7 +272,7 @@ public class ReversalOfTransferOutConfirmationV07 {
 	 * ReversalOfTransferOutConfirmationV06.mmReversal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReversal = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, Reversal8Choice> mmReversal = new MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, Reversal8Choice>() {
 		{
 			xmlTag = "Rvsl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,12 +284,14 @@ public class ReversalOfTransferOutConfirmationV07 {
 			complexType_lazy = () -> Reversal8Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReversalOfTransferOutConfirmationV07.class.getMethod("getReversal", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Reversal8Choice getValue(ReversalOfTransferOutConfirmationV07 obj) {
+			return obj.getReversal();
+		}
+
+		@Override
+		public void setValue(ReversalOfTransferOutConfirmationV07 obj, Reversal8Choice value) {
+			obj.setReversal(value);
 		}
 	};
 	@XmlElement(name = "MktPrctcVrsn")
@@ -328,7 +333,7 @@ public class ReversalOfTransferOutConfirmationV07 {
 	 * ReversalOfTransferOutConfirmationV06.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, Optional<MarketPracticeVersion1>> mmMarketPracticeVersion = new MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, Optional<MarketPracticeVersion1>>() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,12 +346,14 @@ public class ReversalOfTransferOutConfirmationV07 {
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReversalOfTransferOutConfirmationV07.class.getMethod("getMarketPracticeVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarketPracticeVersion1> getValue(ReversalOfTransferOutConfirmationV07 obj) {
+			return obj.getMarketPracticeVersion();
+		}
+
+		@Override
+		public void setValue(ReversalOfTransferOutConfirmationV07 obj, Optional<MarketPracticeVersion1> value) {
+			obj.setMarketPracticeVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -388,7 +395,7 @@ public class ReversalOfTransferOutConfirmationV07 {
 	 * ReversalOfTransferOutConfirmationV06.mmCopyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, Optional<CopyInformation4>> mmCopyDetails = new MMMessageBuildingBlock<ReversalOfTransferOutConfirmationV07, Optional<CopyInformation4>>() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,12 +408,14 @@ public class ReversalOfTransferOutConfirmationV07 {
 			complexType_lazy = () -> CopyInformation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReversalOfTransferOutConfirmationV07.class.getMethod("getCopyDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyInformation4> getValue(ReversalOfTransferOutConfirmationV07 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(ReversalOfTransferOutConfirmationV07 obj, Optional<CopyInformation4> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 
@@ -418,7 +427,7 @@ public class ReversalOfTransferOutConfirmationV07 {
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the ReversalOfTransferOutConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent TransferOutConfirmation message.\r\nUsage\r\nThe ReversalOfTransferOutConfirmation message is used to reverse a previously sent TransferOutConfirmation.\r\nThere are two ways to specify the reversal of the transfer out confirmation. Either:\r\n- the business references, for example, TransferReference, TransferConfirmationIdentification, of the transfer confirmation are quoted, or,\r\n- all the details of the transfer confirmation (this includes TransferReference and TransferConfirmationIdentification) are quoted but this is not recommended.\r\nThe message identification of the TransferOutConfirmation message in which the transfer out confirmation was conveyed may also be quoted in PreviousReference. The message identification of the TransferOutInstruction message in which the transfer out instruction was conveyed may also be quoted in RelatedReference.";
 				nextVersions_lazy = () -> Arrays.asList(ReversalOfTransferOutConfirmationV08.mmObject());
 				previousVersion_lazy = () -> ReversalOfTransferOutConfirmationV06.mmObject();
-				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "RvslOfTrfOutConf";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();

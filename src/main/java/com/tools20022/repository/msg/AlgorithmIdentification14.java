@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm15Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Parameter6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class AlgorithmIdentification14 {
 	 * AlgorithmIdentification6.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmIdentification14, Algorithm15Code> mmAlgorithm = new MMMessageAttribute<AlgorithmIdentification14, Algorithm15Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification14.mmObject();
 			isDerived = false;
@@ -139,6 +140,16 @@ public class AlgorithmIdentification14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm15Code.mmObject();
+		}
+
+		@Override
+		public Algorithm15Code getValue(AlgorithmIdentification14 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification14 obj, Algorithm15Code value) {
+			obj.setAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "Param")
@@ -183,7 +194,7 @@ public class AlgorithmIdentification14 {
 	 * AlgorithmIdentification6.mmParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AlgorithmIdentification14, Optional<Parameter6>> mmParameter = new MMMessageAssociationEnd<AlgorithmIdentification14, Optional<Parameter6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification14.mmObject();
 			isDerived = false;
@@ -196,7 +207,17 @@ public class AlgorithmIdentification14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Parameter6.mmObject();
+			type_lazy = () -> Parameter6.mmObject();
+		}
+
+		@Override
+		public Optional<Parameter6> getValue(AlgorithmIdentification14 obj) {
+			return obj.getParameter();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification14 obj, Optional<Parameter6> value) {
+			obj.setParameter(value.orElse(null));
 		}
 	};
 
@@ -228,7 +249,7 @@ public class AlgorithmIdentification14 {
 		return parameter == null ? Optional.empty() : Optional.of(parameter);
 	}
 
-	public AlgorithmIdentification14 setParameter(com.tools20022.repository.msg.Parameter6 parameter) {
+	public AlgorithmIdentification14 setParameter(Parameter6 parameter) {
 		this.parameter = parameter;
 		return this;
 	}

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesCertificate;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.QuantityBreakdown13;
+import com.tools20022.repository.msg.SecuritiesCertificate1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -145,7 +147,7 @@ public class Quantity7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity7, FinancialInstrumentQuantity1Choice> mmSettlementQuantity = new MMMessageAssociationEnd<Quantity7, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity7.mmObject();
@@ -160,6 +162,16 @@ public class Quantity7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(Quantity7 obj) {
+			return obj.getSettlementQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity7 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setSettlementQuantity(value);
 		}
 	};
 	@XmlElement(name = "DnmtnChc")
@@ -207,7 +219,7 @@ public class Quantity7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDenominationChoice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity7, Optional<Max210Text>> mmDenominationChoice = new MMMessageAttribute<Quantity7, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmDenominationChoice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity7.mmObject();
@@ -222,9 +234,19 @@ public class Quantity7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max210Text> getValue(Quantity7 obj) {
+			return obj.getDenominationChoice();
+		}
+
+		@Override
+		public void setValue(Quantity7 obj, Optional<Max210Text> value) {
+			obj.setDenominationChoice(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CertNb")
-	protected List<com.tools20022.repository.msg.SecuritiesCertificate1> certificateNumber;
+	protected List<SecuritiesCertificate1> certificateNumber;
 	/**
 	 * 
 	 <p>
@@ -268,7 +290,7 @@ public class Quantity7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertificateNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity7, List<SecuritiesCertificate1>> mmCertificateNumber = new MMMessageAssociationEnd<Quantity7, List<SecuritiesCertificate1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity7.mmObject();
@@ -281,11 +303,21 @@ public class Quantity7 {
 			nextVersions_lazy = () -> Arrays.asList(Quantity11.mmCertificateNumber);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate1.mmObject();
+			type_lazy = () -> SecuritiesCertificate1.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesCertificate1> getValue(Quantity7 obj) {
+			return obj.getCertificateNumber();
+		}
+
+		@Override
+		public void setValue(Quantity7 obj, List<SecuritiesCertificate1> value) {
+			obj.setCertificateNumber(value);
 		}
 	};
 	@XmlElement(name = "QtyBrkdwn")
-	protected List<com.tools20022.repository.msg.QuantityBreakdown13> quantityBreakdown;
+	protected List<QuantityBreakdown13> quantityBreakdown;
 	/**
 	 * 
 	 <p>
@@ -328,7 +360,7 @@ public class Quantity7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity7, List<QuantityBreakdown13>> mmQuantityBreakdown = new MMMessageAssociationEnd<Quantity7, List<QuantityBreakdown13>>() {
 		{
 			businessComponentTrace_lazy = () -> LotBreakdown.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity7.mmObject();
@@ -341,7 +373,17 @@ public class Quantity7 {
 			nextVersions_lazy = () -> Arrays.asList(Quantity11.mmQuantityBreakdown);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown13.mmObject();
+			type_lazy = () -> QuantityBreakdown13.mmObject();
+		}
+
+		@Override
+		public List<QuantityBreakdown13> getValue(Quantity7 obj) {
+			return obj.getQuantityBreakdown();
+		}
+
+		@Override
+		public void setValue(Quantity7 obj, List<QuantityBreakdown13> value) {
+			obj.setQuantityBreakdown(value);
 		}
 	};
 
@@ -392,7 +434,7 @@ public class Quantity7 {
 		return certificateNumber == null ? certificateNumber = new ArrayList<>() : certificateNumber;
 	}
 
-	public Quantity7 setCertificateNumber(List<com.tools20022.repository.msg.SecuritiesCertificate1> certificateNumber) {
+	public Quantity7 setCertificateNumber(List<SecuritiesCertificate1> certificateNumber) {
 		this.certificateNumber = Objects.requireNonNull(certificateNumber);
 		return this;
 	}
@@ -401,7 +443,7 @@ public class Quantity7 {
 		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public Quantity7 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown13> quantityBreakdown) {
+	public Quantity7 setQuantityBreakdown(List<QuantityBreakdown13> quantityBreakdown) {
 		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
 		return this;
 	}

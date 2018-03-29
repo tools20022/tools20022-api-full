@@ -101,7 +101,7 @@ public class MessageIdentification3 {
 	 * definition} = "Identification of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageIdentification3, RestrictedFINMax16Text> mmIdentification = new MMMessageAttribute<MessageIdentification3, RestrictedFINMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageIdentification3.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class MessageIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINMax16Text getValue(MessageIdentification3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MessageIdentification3 obj, RestrictedFINMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -143,7 +153,7 @@ public class MessageIdentification3 {
 	 * definition} = "Date of creation of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageIdentification3, ISODateTime> mmCreationDateTime = new MMMessageAttribute<MessageIdentification3, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageIdentification3.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class MessageIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(MessageIdentification3 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(MessageIdentification3 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 

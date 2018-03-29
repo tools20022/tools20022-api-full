@@ -71,7 +71,6 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV07> forCustomerPaymentReversalV07 = new MMConstraint<CustomerPaymentReversalV07>() {
 		{
-			validator = ConstraintGroupReversalAndPaymentInformationPresentRule::checkCustomerPaymentReversalV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndPaymentInformationPresentRule";
 			definition = "If GroupHeader/GroupReversal is false, then at least one occurrence of OriginalPaymentInformationAndReversal must be present.";
@@ -79,6 +78,11 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndPaymentInformationPresentRule.forCustomerPaymentReversalV06;
 			owner_lazy = () -> CustomerPaymentReversalV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndReversal[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReversal</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV07 obj) throws Exception {
+			checkCustomerPaymentReversalV07(obj);
 		}
 	};
 	/**
@@ -114,13 +118,17 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV08> forCustomerPaymentReversalV08 = new MMConstraint<CustomerPaymentReversalV08>() {
 		{
-			validator = ConstraintGroupReversalAndPaymentInformationPresentRule::checkCustomerPaymentReversalV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndPaymentInformationPresentRule";
 			definition = "If GroupHeader/GroupReversal is false, then at least one occurrence of OriginalPaymentInformationAndReversal must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndPaymentInformationPresentRule.forCustomerPaymentReversalV07;
 			owner_lazy = () -> CustomerPaymentReversalV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndReversal[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReversal</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV08 obj) throws Exception {
+			checkCustomerPaymentReversalV08(obj);
 		}
 	};
 	/**
@@ -150,12 +158,16 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV02> forCustomerPaymentReversalV02 = new MMConstraint<CustomerPaymentReversalV02>() {
 		{
-			validator = ConstraintGroupReversalAndPaymentInformationPresentRule::checkCustomerPaymentReversalV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndPaymentInformationPresentRule";
 			definition = "If GroupHeader/GroupReversal is false, then at least one occurrence of OriginalPaymentInformationAndReversal must be present.";
 			owner_lazy = () -> CustomerPaymentReversalV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndReversal[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReversal</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV02 obj) throws Exception {
+			checkCustomerPaymentReversalV02(obj);
 		}
 	};
 	/**
@@ -185,12 +197,16 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV03> forCustomerPaymentReversalV03 = new MMConstraint<CustomerPaymentReversalV03>() {
 		{
-			validator = ConstraintGroupReversalAndPaymentInformationPresentRule::checkCustomerPaymentReversalV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndPaymentInformationPresentRule";
 			definition = "If GroupHeader/GroupReversal is false, then at least one occurrence of OriginalPaymentInformationAndReversal must be present.";
 			owner_lazy = () -> CustomerPaymentReversalV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndReversal[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReversal</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV03 obj) throws Exception {
+			checkCustomerPaymentReversalV03(obj);
 		}
 	};
 	/**
@@ -229,13 +245,17 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV04> forCustomerPaymentReversalV04 = new MMConstraint<CustomerPaymentReversalV04>() {
 		{
-			validator = ConstraintGroupReversalAndPaymentInformationPresentRule::checkCustomerPaymentReversalV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndPaymentInformationPresentRule";
 			definition = "If GroupHeader/GroupReversal is false, then at least one occurrence of OriginalPaymentInformationAndReversal must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndPaymentInformationPresentRule.forCustomerPaymentReversalV05);
 			owner_lazy = () -> CustomerPaymentReversalV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndReversal[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReversal</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV04 obj) throws Exception {
+			checkCustomerPaymentReversalV04(obj);
 		}
 	};
 	/**
@@ -280,7 +300,6 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV05> forCustomerPaymentReversalV05 = new MMConstraint<CustomerPaymentReversalV05>() {
 		{
-			validator = ConstraintGroupReversalAndPaymentInformationPresentRule::checkCustomerPaymentReversalV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndPaymentInformationPresentRule";
 			definition = "If GroupHeader/GroupReversal is false, then at least one occurrence of OriginalPaymentInformationAndReversal must be present.";
@@ -288,6 +307,11 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndPaymentInformationPresentRule.forCustomerPaymentReversalV04;
 			owner_lazy = () -> CustomerPaymentReversalV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndReversal[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReversal</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV05 obj) throws Exception {
+			checkCustomerPaymentReversalV05(obj);
 		}
 	};
 	/**
@@ -332,7 +356,6 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV06> forCustomerPaymentReversalV06 = new MMConstraint<CustomerPaymentReversalV06>() {
 		{
-			validator = ConstraintGroupReversalAndPaymentInformationPresentRule::checkCustomerPaymentReversalV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndPaymentInformationPresentRule";
 			definition = "If GroupHeader/GroupReversal is false, then at least one occurrence of OriginalPaymentInformationAndReversal must be present.";
@@ -340,6 +363,11 @@ public class ConstraintGroupReversalAndPaymentInformationPresentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndPaymentInformationPresentRule.forCustomerPaymentReversalV05;
 			owner_lazy = () -> CustomerPaymentReversalV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndReversal[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReversal</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReversal</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV06 obj) throws Exception {
+			checkCustomerPaymentReversalV06(obj);
 		}
 	};
 

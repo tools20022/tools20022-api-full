@@ -53,11 +53,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails7> forSecuritiesTradeDetails7 = new MMConstraint<SecuritiesTradeDetails7>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails7 obj) throws Exception {
+			checkSecuritiesTradeDetails7(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails19> forSecuritiesTradeDetails19 = new MMConstraint<SecuritiesTradeDetails19>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails19 obj) throws Exception {
+			checkSecuritiesTradeDetails19(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails4> forSecuritiesTradeDetails4 = new MMConstraint<SecuritiesTradeDetails4>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails4 obj) throws Exception {
+			checkSecuritiesTradeDetails4(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails17> forSecuritiesTradeDetails17 = new MMConstraint<SecuritiesTradeDetails17>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails17 obj) throws Exception {
+			checkSecuritiesTradeDetails17(obj);
 		}
 	};
 	/**
@@ -173,11 +189,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails10> forSecuritiesTradeDetails10 = new MMConstraint<SecuritiesTradeDetails10>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails10 obj) throws Exception {
+			checkSecuritiesTradeDetails10(obj);
 		}
 	};
 	/**
@@ -203,11 +223,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails22> forSecuritiesTradeDetails22 = new MMConstraint<SecuritiesTradeDetails22>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails22 obj) throws Exception {
+			checkSecuritiesTradeDetails22(obj);
 		}
 	};
 	/**
@@ -241,12 +265,16 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails23> forSecuritiesTradeDetails23 = new MMConstraint<SecuritiesTradeDetails23>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails35);
 			owner_lazy = () -> SecuritiesTradeDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails23 obj) throws Exception {
+			checkSecuritiesTradeDetails23(obj);
 		}
 	};
 	/**
@@ -272,11 +300,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails29> forSecuritiesTradeDetails29 = new MMConstraint<SecuritiesTradeDetails29>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails29 obj) throws Exception {
+			checkSecuritiesTradeDetails29(obj);
 		}
 	};
 	/**
@@ -302,11 +334,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails14> forSecuritiesTradeDetails14 = new MMConstraint<SecuritiesTradeDetails14>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails14 obj) throws Exception {
+			checkSecuritiesTradeDetails14(obj);
 		}
 	};
 	/**
@@ -332,11 +368,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails20> forSecuritiesTradeDetails20 = new MMConstraint<SecuritiesTradeDetails20>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails20 obj) throws Exception {
+			checkSecuritiesTradeDetails20(obj);
 		}
 	};
 	/**
@@ -370,12 +410,16 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails24> forSecuritiesTradeDetails24 = new MMConstraint<SecuritiesTradeDetails24>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails48);
 			owner_lazy = () -> SecuritiesTradeDetails24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails24 obj) throws Exception {
+			checkSecuritiesTradeDetails24(obj);
 		}
 	};
 	/**
@@ -401,11 +445,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails30> forSecuritiesTradeDetails30 = new MMConstraint<SecuritiesTradeDetails30>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails30 obj) throws Exception {
+			checkSecuritiesTradeDetails30(obj);
 		}
 	};
 	/**
@@ -444,13 +492,17 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails35> forSecuritiesTradeDetails35 = new MMConstraint<SecuritiesTradeDetails35>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails49);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails23;
 			owner_lazy = () -> SecuritiesTradeDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails35 obj) throws Exception {
+			checkSecuritiesTradeDetails35(obj);
 		}
 	};
 	/**
@@ -476,11 +528,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails42> forSecuritiesTradeDetails42 = new MMConstraint<SecuritiesTradeDetails42>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails42 obj) throws Exception {
+			checkSecuritiesTradeDetails42(obj);
 		}
 	};
 	/**
@@ -519,13 +575,17 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails49> forSecuritiesTradeDetails49 = new MMConstraint<SecuritiesTradeDetails49>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails35;
 			owner_lazy = () -> SecuritiesTradeDetails49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails49 obj) throws Exception {
+			checkSecuritiesTradeDetails49(obj);
 		}
 	};
 	/**
@@ -564,13 +624,17 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails48> forSecuritiesTradeDetails48 = new MMConstraint<SecuritiesTradeDetails48>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails72);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails24;
 			owner_lazy = () -> SecuritiesTradeDetails48.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails48 obj) throws Exception {
+			checkSecuritiesTradeDetails48(obj);
 		}
 	};
 	/**
@@ -596,11 +660,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails57> forSecuritiesTradeDetails57 = new MMConstraint<SecuritiesTradeDetails57>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails57 obj) throws Exception {
+			checkSecuritiesTradeDetails57(obj);
 		}
 	};
 	/**
@@ -626,11 +694,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails61> forSecuritiesTradeDetails61 = new MMConstraint<SecuritiesTradeDetails61>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails61 obj) throws Exception {
+			checkSecuritiesTradeDetails61(obj);
 		}
 	};
 	/**
@@ -669,13 +741,17 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails68> forSecuritiesTradeDetails68 = new MMConstraint<SecuritiesTradeDetails68>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is present with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails71);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails49;
 			owner_lazy = () -> SecuritiesTradeDetails68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails68 obj) throws Exception {
+			checkSecuritiesTradeDetails68(obj);
 		}
 	};
 	/**
@@ -701,11 +777,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails69> forSecuritiesTradeDetails69 = new MMConstraint<SecuritiesTradeDetails69>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails69 obj) throws Exception {
+			checkSecuritiesTradeDetails69(obj);
 		}
 	};
 	/**
@@ -736,12 +816,16 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails71> forSecuritiesTradeDetails71 = new MMConstraint<SecuritiesTradeDetails71>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is present with a time or a time + UTC indicator, then it must be the local time of the place of trade, for example, of the stock exchange, or of the selling broker for OTC.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails68;
 			owner_lazy = () -> SecuritiesTradeDetails71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails71 obj) throws Exception {
+			checkSecuritiesTradeDetails71(obj);
 		}
 	};
 	/**
@@ -772,12 +856,16 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails72> forSecuritiesTradeDetails72 = new MMConstraint<SecuritiesTradeDetails72>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, for example, of the stock exchange, or of the selling broker for OTC.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails48;
 			owner_lazy = () -> SecuritiesTradeDetails72.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails72 obj) throws Exception {
+			checkSecuritiesTradeDetails72(obj);
 		}
 	};
 	/**
@@ -803,11 +891,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails81> forSecuritiesTradeDetails81 = new MMConstraint<SecuritiesTradeDetails81>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails81;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, for example, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails81.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails81 obj) throws Exception {
+			checkSecuritiesTradeDetails81(obj);
 		}
 	};
 	/**
@@ -833,11 +925,15 @@ public class ConstraintTradeDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails85> forSecuritiesTradeDetails85 = new MMConstraint<SecuritiesTradeDetails85>() {
 		{
-			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails85;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails85 obj) throws Exception {
+			checkSecuritiesTradeDetails85(obj);
 		}
 	};
 

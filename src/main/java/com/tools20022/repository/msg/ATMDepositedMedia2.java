@@ -112,7 +112,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Number of deposit media."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMDepositedMedia2, Optional<Number>> mmCount = new MMMessageAttribute<ATMDepositedMedia2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class ATMDepositedMedia2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMDepositedMedia2 obj) {
+			return obj.getCount();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia2 obj, Optional<Number> value) {
+			obj.setCount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnitVal")
@@ -157,7 +167,7 @@ public class ATMDepositedMedia2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMDepositedMedia2, Optional<ImpliedCurrencyAndAmount>> mmUnitValue = new MMMessageAttribute<ATMDepositedMedia2, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class ATMDepositedMedia2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMDepositedMedia2 obj) {
+			return obj.getUnitValue();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia2 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setUnitValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -201,7 +221,7 @@ public class ATMDepositedMedia2 {
 	 * "Currency of media items, if valued and different from base currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMDepositedMedia2, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<ATMDepositedMedia2, Optional<ActiveCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -212,6 +232,16 @@ public class ATMDepositedMedia2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(ATMDepositedMedia2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia2 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdLineFrmt")
@@ -244,7 +274,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Format of the check code line."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCodeLineFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMDepositedMedia2, Optional<CheckCodeLine1Code>> mmCodeLineFormat = new MMMessageAttribute<ATMDepositedMedia2, Optional<CheckCodeLine1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -255,6 +285,16 @@ public class ATMDepositedMedia2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CheckCodeLine1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CheckCodeLine1Code> getValue(ATMDepositedMedia2 obj) {
+			return obj.getCodeLineFormat();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia2 obj, Optional<CheckCodeLine1Code> value) {
+			obj.setCodeLineFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdLine")
@@ -286,7 +326,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Check code line."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCodeLine = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMDepositedMedia2, Optional<Max70Text>> mmCodeLine = new MMMessageAttribute<ATMDepositedMedia2, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -297,6 +337,16 @@ public class ATMDepositedMedia2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(ATMDepositedMedia2 obj) {
+			return obj.getCodeLine();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia2 obj, Optional<Max70Text> value) {
+			obj.setCodeLine(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScnndVal")
@@ -329,7 +379,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Check amount scanned by the check reader."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScannedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMDepositedMedia2, Optional<ImpliedCurrencyAndAmount>> mmScannedValue = new MMMessageAttribute<ATMDepositedMedia2, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -340,6 +390,16 @@ public class ATMDepositedMedia2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMDepositedMedia2 obj) {
+			return obj.getScannedValue();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia2 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setScannedValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CnfdncLvl")
@@ -371,7 +431,7 @@ public class ATMDepositedMedia2 {
 	 * definition} = "Percentage of the confidence in the check amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfidenceLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMDepositedMedia2, Optional<Percentage>> mmConfidenceLevel = new MMMessageAttribute<ATMDepositedMedia2, Optional<Percentage>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia2.mmObject();
 			isDerived = false;
@@ -382,6 +442,16 @@ public class ATMDepositedMedia2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Percentage.mmObject();
+		}
+
+		@Override
+		public Optional<Percentage> getValue(ATMDepositedMedia2 obj) {
+			return obj.getConfidenceLevel();
+		}
+
+		@Override
+		public void setValue(ATMDepositedMedia2 obj, Optional<Percentage> value) {
+			obj.setConfidenceLevel(value.orElse(null));
 		}
 	};
 

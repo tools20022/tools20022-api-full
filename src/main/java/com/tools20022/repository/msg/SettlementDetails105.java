@@ -28,6 +28,7 @@ import com.tools20022.repository.codeset.SettlementTransactionCondition5Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -193,7 +194,7 @@ public class SettlementDetails105 {
 	 * "Specifies whether the transaction is on hold/blocked/frozen."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDetails105, Optional<YesNoIndicator>> mmHoldIndicator = new MMMessageAttribute<SettlementDetails105, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -205,6 +206,16 @@ public class SettlementDetails105 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SettlementDetails105 obj) {
+			return obj.getHoldIndicator();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<YesNoIndicator> value) {
+			obj.setHoldIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -243,7 +254,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriority = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<PriorityNumeric5Choice>> mmPriority = new MMMessageAssociationEnd<SettlementDetails105, Optional<PriorityNumeric5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -256,6 +267,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriorityNumeric5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriorityNumeric5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<PriorityNumeric5Choice> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmTxCond")
@@ -292,7 +313,7 @@ public class SettlementDetails105 {
 	 * definition} = "Conditions under which the order/trade is to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTransactionCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, List<SettlementTransactionCondition22Choice>> mmSettlementTransactionCondition = new MMMessageAssociationEnd<SettlementDetails105, List<SettlementTransactionCondition22Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -304,6 +325,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementTransactionCondition22Choice.mmObject();
+		}
+
+		@Override
+		public List<SettlementTransactionCondition22Choice> getValue(SettlementDetails105 obj) {
+			return obj.getSettlementTransactionCondition();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, List<SettlementTransactionCondition22Choice> value) {
+			obj.setSettlementTransactionCondition(value);
 		}
 	};
 	@XmlElement(name = "SttlgCpcty")
@@ -340,7 +371,7 @@ public class SettlementDetails105 {
 	 * definition} = "Role of a party in the settlement of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlingCapacity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<SettlingCapacity8Choice>> mmSettlingCapacity = new MMMessageAssociationEnd<SettlementDetails105, Optional<SettlingCapacity8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlementPartyRole.mmSettlingCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -353,6 +384,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlingCapacity8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlingCapacity8Choice> getValue(SettlementDetails105 obj) {
+			return obj.getSettlingCapacity();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<SettlingCapacity8Choice> value) {
+			obj.setSettlingCapacity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmpDtyTaxBsis")
@@ -391,7 +432,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStampDutyTaxBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<GenericIdentification47>> mmStampDutyTaxBasis = new MMMessageAssociationEnd<SettlementDetails105, Optional<GenericIdentification47>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmStampDutyTaxBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -403,7 +444,17 @@ public class SettlementDetails105 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
+			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification47> getValue(SettlementDetails105 obj) {
+			return obj.getStampDutyTaxBasis();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<GenericIdentification47> value) {
+			obj.setStampDutyTaxBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesRTGS")
@@ -442,7 +493,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesRTGS = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<SecuritiesRTGS5Choice>> mmSecuritiesRTGS = new MMMessageAssociationEnd<SettlementDetails105, Optional<SecuritiesRTGS5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -455,6 +506,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecuritiesRTGS5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesRTGS5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getSecuritiesRTGS();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<SecuritiesRTGS5Choice> value) {
+			obj.setSecuritiesRTGS(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BnfclOwnrsh")
@@ -492,7 +553,7 @@ public class SettlementDetails105 {
 	 * "Specifies whether there is change of beneficial ownership."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficialOwnership = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<BeneficialOwnership5Choice>> mmBeneficialOwnership = new MMMessageAssociationEnd<SettlementDetails105, Optional<BeneficialOwnership5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBeneficialOwnershipIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -505,6 +566,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BeneficialOwnership5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BeneficialOwnership5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getBeneficialOwnership();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<BeneficialOwnership5Choice> value) {
+			obj.setBeneficialOwnership(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshClrSys")
@@ -543,7 +614,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashClearingSystem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<CashSettlementSystem5Choice>> mmCashClearingSystem = new MMMessageAssociationEnd<SettlementDetails105, Optional<CashSettlementSystem5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SettlementInstructionSystemRole.mmSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -556,6 +627,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CashSettlementSystem5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CashSettlementSystem5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getCashClearingSystem();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<CashSettlementSystem5Choice> value) {
+			obj.setCashClearingSystem(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxCpcty")
@@ -592,7 +673,7 @@ public class SettlementDetails105 {
 	 * definition} = "Tax role capacity of the instructing party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxCapacity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<TaxCapacityParty5Choice>> mmTaxCapacity = new MMMessageAssociationEnd<SettlementDetails105, Optional<TaxCapacityParty5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlementPartyRole.mmTaxCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -605,6 +686,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TaxCapacityParty5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxCapacityParty5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getTaxCapacity();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<TaxCapacityParty5Choice> value) {
+			obj.setTaxCapacity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktClntSd")
@@ -643,7 +734,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketClientSide = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<MarketClientSide5Choice>> mmMarketClientSide = new MMMessageAssociationEnd<SettlementDetails105, Optional<MarketClientSide5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmMarketClientSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -656,6 +747,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketClientSide5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketClientSide5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getMarketClientSide();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<MarketClientSide5Choice> value) {
+			obj.setMarketClientSide(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FxStgInstr")
@@ -694,7 +795,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFXStandingInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<FXStandingInstruction5Choice>> mmFXStandingInstruction = new MMMessageAssociationEnd<SettlementDetails105, Optional<FXStandingInstruction5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Settlement.mmStandingSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -707,6 +808,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FXStandingInstruction5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FXStandingInstruction5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getFXStandingInstruction();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<FXStandingInstruction5Choice> value) {
+			obj.setFXStandingInstruction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlckTrad")
@@ -744,7 +855,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBlockTrade = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<BlockTrade5Choice>> mmBlockTrade = new MMMessageAssociationEnd<SettlementDetails105, Optional<BlockTrade5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBlockTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -757,6 +868,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BlockTrade5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BlockTrade5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getBlockTrade();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<BlockTrade5Choice> value) {
+			obj.setBlockTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglRstrctns")
@@ -792,7 +913,7 @@ public class SettlementDetails105 {
 	 * definition} = "Regulatory restrictions applicable to a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegalRestrictions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<Restriction6Choice>> mmLegalRestrictions = new MMMessageAssociationEnd<SettlementDetails105, Optional<Restriction6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRestriction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -805,6 +926,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Restriction6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Restriction6Choice> getValue(SettlementDetails105 obj) {
+			return obj.getLegalRestrictions();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<Restriction6Choice> value) {
+			obj.setLegalRestrictions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSysMtd")
@@ -843,7 +974,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementSystemMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<SettlementSystemMethod5Choice>> mmSettlementSystemMethod = new MMMessageAssociationEnd<SettlementDetails105, Optional<SettlementSystemMethod5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -856,6 +987,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementSystemMethod5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementSystemMethod5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getSettlementSystemMethod();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<SettlementSystemMethod5Choice> value) {
+			obj.setSettlementSystemMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetgElgblty")
@@ -893,7 +1034,7 @@ public class SettlementDetails105 {
 	 * "Specifies whether the settlement transaction is eligible for netting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNettingEligibility = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<NettingEligibility5Choice>> mmNettingEligibility = new MMMessageAssociationEnd<SettlementDetails105, Optional<NettingEligibility5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmNettingEligibility;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -906,6 +1047,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> NettingEligibility5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<NettingEligibility5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getNettingEligibility();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<NettingEligibility5Choice> value) {
+			obj.setNettingEligibility(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CCPElgblty")
@@ -944,7 +1095,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCCPEligibility = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<CentralCounterPartyEligibility5Choice>> mmCCPEligibility = new MMMessageAssociationEnd<SettlementDetails105, Optional<CentralCounterPartyEligibility5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmCCPEligibility;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -957,6 +1108,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CentralCounterPartyEligibility5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CentralCounterPartyEligibility5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getCCPEligibility();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<CentralCounterPartyEligibility5Choice> value) {
+			obj.setCCPEligibility(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trckg")
@@ -992,7 +1153,7 @@ public class SettlementDetails105 {
 	 * definition} = "Specifies whether the loan and/or collateral is tracked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTracking = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<Tracking5Choice>> mmTracking = new MMMessageAssociationEnd<SettlementDetails105, Optional<Tracking5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTracking;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -1005,6 +1166,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Tracking5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Tracking5Choice> getValue(SettlementDetails105 obj) {
+			return obj.getTracking();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<Tracking5Choice> value) {
+			obj.setTracking(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AutomtcBrrwg")
@@ -1041,7 +1212,7 @@ public class SettlementDetails105 {
 	 * definition} = "Condition for automatic borrowing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAutomaticBorrowing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDetails105, Optional<AutomaticBorrowing8Choice>> mmAutomaticBorrowing = new MMMessageAssociationEnd<SettlementDetails105, Optional<AutomaticBorrowing8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -1054,6 +1225,16 @@ public class SettlementDetails105 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AutomaticBorrowing8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AutomaticBorrowing8Choice> getValue(SettlementDetails105 obj) {
+			return obj.getAutomaticBorrowing();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<AutomaticBorrowing8Choice> value) {
+			obj.setAutomaticBorrowing(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtlSttlmInd")
@@ -1091,7 +1272,7 @@ public class SettlementDetails105 {
 	 * definition} = "Specifies whether partial settlement is allowed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDetails105, Optional<SettlementTransactionCondition5Code>> mmPartialSettlementIndicator = new MMMessageAttribute<SettlementDetails105, Optional<SettlementTransactionCondition5Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -1103,6 +1284,16 @@ public class SettlementDetails105 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SettlementTransactionCondition5Code.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementTransactionCondition5Code> getValue(SettlementDetails105 obj) {
+			return obj.getPartialSettlementIndicator();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<SettlementTransactionCondition5Code> value) {
+			obj.setPartialSettlementIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ElgblForColl")
@@ -1142,7 +1333,7 @@ public class SettlementDetails105 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEligibleForCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDetails105, Optional<YesNoIndicator>> mmEligibleForCollateral = new MMMessageAttribute<SettlementDetails105, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmEligibleForCollateral;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails105.mmObject();
@@ -1154,6 +1345,16 @@ public class SettlementDetails105 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SettlementDetails105 obj) {
+			return obj.getEligibleForCollateral();
+		}
+
+		@Override
+		public void setValue(SettlementDetails105 obj, Optional<YesNoIndicator> value) {
+			obj.setEligibleForCollateral(value.orElse(null));
 		}
 	};
 
@@ -1221,7 +1422,7 @@ public class SettlementDetails105 {
 		return stampDutyTaxBasis == null ? Optional.empty() : Optional.of(stampDutyTaxBasis);
 	}
 
-	public SettlementDetails105 setStampDutyTaxBasis(com.tools20022.repository.msg.GenericIdentification47 stampDutyTaxBasis) {
+	public SettlementDetails105 setStampDutyTaxBasis(GenericIdentification47 stampDutyTaxBasis) {
 		this.stampDutyTaxBasis = stampDutyTaxBasis;
 		return this;
 	}

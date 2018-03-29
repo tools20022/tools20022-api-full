@@ -48,11 +48,15 @@ public class ConstraintSideValue {
 	 */
 	public static final MMConstraint<Order6> forOrder6 = new MMConstraint<Order6>() {
 		{
-			validator = ConstraintSideValue::checkOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideValue";
 			definition = "If Side=Undisclosed, then SideValueIndicator must be present.";
 			owner_lazy = () -> Order6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Order6 obj) throws Exception {
+			checkOrder6(obj);
 		}
 	};
 

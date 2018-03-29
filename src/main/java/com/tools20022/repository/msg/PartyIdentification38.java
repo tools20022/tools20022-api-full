@@ -125,7 +125,7 @@ public class PartyIdentification38 {
 	 * definition} = "Identification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification38, PartyIdentification17Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification38, PartyIdentification17Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification38.mmObject();
@@ -139,6 +139,16 @@ public class PartyIdentification38 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification17Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification17Choice getValue(PartyIdentification38 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification38 obj, PartyIdentification17Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -176,7 +186,7 @@ public class PartyIdentification38 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification38, Optional<RestrictedFINXMax16Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentification38, Optional<RestrictedFINXMax16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification38.mmObject();
 			isDerived = false;
@@ -188,6 +198,16 @@ public class PartyIdentification38 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(PartyIdentification38 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification38 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
 		}
 	};
 

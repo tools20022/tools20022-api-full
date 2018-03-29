@@ -25,8 +25,7 @@ import com.tools20022.repository.area.CashManagementPreviousVersion;
 import com.tools20022.repository.msg.AccountStatement6;
 import com.tools20022.repository.msg.GroupHeader58;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -77,8 +76,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOLatestversion
- * BanktoCustomerCashManagementISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.BanktoCustomerCashManagementISOPreviousversion
+ * BanktoCustomerCashManagementISOPreviousversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -169,7 +168,7 @@ public class BankToCustomerStatementV06 {
 	 * BankToCustomerStatementV05.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerStatementV06, GroupHeader58> mmGroupHeader = new MMMessageBuildingBlock<BankToCustomerStatementV06, GroupHeader58>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,12 +181,14 @@ public class BankToCustomerStatementV06 {
 			complexType_lazy = () -> GroupHeader58.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerStatementV06.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader58 getValue(BankToCustomerStatementV06 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(BankToCustomerStatementV06 obj, GroupHeader58 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Stmt", required = true)
@@ -229,7 +230,7 @@ public class BankToCustomerStatementV06 {
 	 * BankToCustomerStatementV05.mmStatement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerStatementV06, List<AccountStatement6>> mmStatement = new MMMessageBuildingBlock<BankToCustomerStatementV06, List<AccountStatement6>>() {
 		{
 			xmlTag = "Stmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,12 +242,14 @@ public class BankToCustomerStatementV06 {
 			complexType_lazy = () -> AccountStatement6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerStatementV06.class.getMethod("getStatement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountStatement6> getValue(BankToCustomerStatementV06 obj) {
+			return obj.getStatement();
+		}
+
+		@Override
+		public void setValue(BankToCustomerStatementV06 obj, List<AccountStatement6> value) {
+			obj.setStatement(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -289,7 +292,7 @@ public class BankToCustomerStatementV06 {
 	 * BankToCustomerStatementV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerStatementV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<BankToCustomerStatementV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,12 +304,14 @@ public class BankToCustomerStatementV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerStatementV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(BankToCustomerStatementV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(BankToCustomerStatementV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -320,7 +325,7 @@ public class BankToCustomerStatementV06 {
 				definition = "Scope\r\nThe BankToCustomerStatement message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It is used to inform the account owner, or authorised party, of the entries booked to the account, and to provide the owner with balance information on the account at a given point in time.\r\nUsage\r\nThe BankToCustomerStatement message can contain reports for more than one account. It provides information for cash management and/or reconciliation.\r\nIt contains information on booked entries only.\r\nIt can include underlying details of transactions that have been included in the entry.\r\nThe message is exchanged as defined between the account servicer and the account owner. It provides information on items that have been booked to the account and also balance information. Depending on services and schedule agreed between banks and their customers, statements may be generated and exchanged accordingly, for example for intraday or prior day periods.\r\nIt is possible that the receiver of the message is not the account owner, but a party entitled through arrangement with the account owner to receive the account information (also known as recipient).";
 				nextVersions_lazy = () -> Arrays.asList(BankToCustomerStatementV07.mmObject());
 				previousVersion_lazy = () -> BankToCustomerStatementV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(BanktoCustomerCashManagementISOLatestversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(BanktoCustomerCashManagementISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "BkToCstmrStmt";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();

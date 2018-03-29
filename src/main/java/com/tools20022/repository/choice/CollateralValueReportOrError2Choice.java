@@ -112,7 +112,7 @@ public class CollateralValueReportOrError2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueReportOrError2Choice, ErrorHandling3> mmBusinessError = new MMMessageAssociationEnd<CollateralValueReportOrError2Choice, ErrorHandling3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class CollateralValueReportOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public ErrorHandling3 getValue(CollateralValueReportOrError2Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(CollateralValueReportOrError2Choice obj, ErrorHandling3 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	@XmlElement(name = "CollVal", required = true)
@@ -166,7 +176,7 @@ public class CollateralValueReportOrError2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueReportOrError2Choice, CollateralValuePosition1> mmCollateralValue = new MMMessageAssociationEnd<CollateralValueReportOrError2Choice, CollateralValuePosition1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class CollateralValueReportOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuePosition1.mmObject();
+		}
+
+		@Override
+		public CollateralValuePosition1 getValue(CollateralValueReportOrError2Choice obj) {
+			return obj.getCollateralValue();
+		}
+
+		@Override
+		public void setValue(CollateralValueReportOrError2Choice obj, CollateralValuePosition1 value) {
+			obj.setCollateralValue(value);
 		}
 	};
 

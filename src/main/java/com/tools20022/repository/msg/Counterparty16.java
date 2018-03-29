@@ -114,7 +114,7 @@ public class Counterparty16 {
 	 * "Unique code identifying the reporting counterparty of the contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty16, OrganisationIdentification5Choice> mmIdentification = new MMMessageAssociationEnd<Counterparty16, OrganisationIdentification5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty16.mmObject();
@@ -127,6 +127,16 @@ public class Counterparty16 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification5Choice getValue(Counterparty16 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Counterparty16 obj, OrganisationIdentification5Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ntr", required = true)
@@ -164,7 +174,7 @@ public class Counterparty16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty16, CounterpartyTradeNature4Choice> mmNature = new MMMessageAssociationEnd<Counterparty16, CounterpartyTradeNature4Choice>() {
 		{
 			businessElementTrace_lazy = () -> RolePlayer.mmRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty16.mmObject();
@@ -177,6 +187,16 @@ public class Counterparty16 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CounterpartyTradeNature4Choice.mmObject();
+		}
+
+		@Override
+		public CounterpartyTradeNature4Choice getValue(Counterparty16 obj) {
+			return obj.getNature();
+		}
+
+		@Override
+		public void setValue(Counterparty16 obj, CounterpartyTradeNature4Choice value) {
+			obj.setNature(value);
 		}
 	};
 	@XmlElement(name = "TradgCpcty", required = true)
@@ -213,7 +233,7 @@ public class Counterparty16 {
 	 * definition} = "Identifies the trading capacity of the seller."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Counterparty16, TradingCapacity7Code> mmTradingCapacity = new MMMessageAttribute<Counterparty16, TradingCapacity7Code>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty16.mmObject();
@@ -225,6 +245,16 @@ public class Counterparty16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradingCapacity7Code.mmObject();
+		}
+
+		@Override
+		public TradingCapacity7Code getValue(Counterparty16 obj) {
+			return obj.getTradingCapacity();
+		}
+
+		@Override
+		public void setValue(Counterparty16 obj, TradingCapacity7Code value) {
+			obj.setTradingCapacity(value);
 		}
 	};
 	@XmlElement(name = "CtrPtySd", required = true)
@@ -262,7 +292,7 @@ public class Counterparty16 {
 	 * "Identifies whether the reporting counterparty is a buyer or a seller."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartySide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Counterparty16, OptionParty1Code> mmCounterpartySide = new MMMessageAttribute<Counterparty16, OptionParty1Code>() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Counterparty16.mmObject();
@@ -274,6 +304,16 @@ public class Counterparty16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionParty1Code.mmObject();
+		}
+
+		@Override
+		public OptionParty1Code getValue(Counterparty16 obj) {
+			return obj.getCounterpartySide();
+		}
+
+		@Override
+		public void setValue(Counterparty16 obj, OptionParty1Code value) {
+			obj.setCounterpartySide(value);
 		}
 	};
 

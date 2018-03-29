@@ -139,7 +139,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionDateSD8, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -151,6 +151,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionDateSD8 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCLastDayForEarlyRed")
@@ -192,7 +202,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmDTCLastDayForEarlyRedemption}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCLastDayForEarlyRedemption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmDTCLastDayForEarlyRedemption = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -205,6 +215,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getDTCLastDayForEarlyRedemption();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setDTCLastDayForEarlyRedemption(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCPosCaptrDt")
@@ -246,7 +266,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmDTCPositionCaptureDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPositionCaptureDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmDTCPositionCaptureDate = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -259,6 +279,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getDTCPositionCaptureDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setDTCPositionCaptureDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewYorkCutOffDt")
@@ -300,7 +330,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmNewYorkCutOffDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewYorkCutOffDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmNewYorkCutOffDate = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -313,6 +343,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getNewYorkCutOffDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setNewYorkCutOffDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCXtndedCutOffDt")
@@ -354,7 +394,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmDTCExtendedCutOffDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCExtendedCutOffDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmDTCExtendedCutOffDate = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -367,6 +407,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getDTCExtendedCutOffDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setDTCExtendedCutOffDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FctvDtByXchg")
@@ -408,7 +458,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmEffectiveDateByExchange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveDateByExchange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmEffectiveDateByExchange = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -421,6 +471,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getEffectiveDateByExchange();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setEffectiveDateByExchange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtDclrdWrthls")
@@ -462,7 +522,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmDateDeclaredWorthless}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateDeclaredWorthless = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmDateDeclaredWorthless = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -475,6 +535,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getDateDeclaredWorthless();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setDateDeclaredWorthless(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DelWrthlsSctyDt")
@@ -516,7 +586,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmDeleteWorthlessSecurityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeleteWorthlessSecurityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmDeleteWorthlessSecurityDate = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -529,6 +599,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getDeleteWorthlessSecurityDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setDeleteWorthlessSecurityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCExitDt")
@@ -570,7 +650,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmDTCExitDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCExitDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmDTCExitDate = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -583,6 +663,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getDTCExitDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setDTCExitDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcptBegnDt")
@@ -624,7 +714,7 @@ public class CorporateActionDateSD8 {
 	 * CorporateActionDateSD5.mmSubscriptionBeginDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionBeginDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmSubscriptionBeginDate = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -637,6 +727,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getSubscriptionBeginDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setSubscriptionBeginDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RghtsDstrbtnAsOfDt")
@@ -669,7 +769,7 @@ public class CorporateActionDateSD8 {
 	 * "Date used for determining client position for allocating rights."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRightsDistributionAsOfDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmRightsDistributionAsOfDate = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -680,6 +780,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getRightsDistributionAsOfDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setRightsDistributionAsOfDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RghtsDstrbtnDt")
@@ -711,7 +821,7 @@ public class CorporateActionDateSD8 {
 	 * definition} = "Date at which the rights allocation occurred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRightsDistributionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>> mmRightsDistributionDate = new MMMessageAttribute<CorporateActionDateSD8, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD8.mmObject();
 			isDerived = false;
@@ -722,6 +832,16 @@ public class CorporateActionDateSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD8 obj) {
+			return obj.getRightsDistributionDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD8 obj, Optional<ISODate> value) {
+			obj.setRightsDistributionDate(value.orElse(null));
 		}
 	};
 

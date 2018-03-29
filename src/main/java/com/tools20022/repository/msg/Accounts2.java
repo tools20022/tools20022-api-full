@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountReport7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -69,7 +70,7 @@ public class Accounts2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "AcctRpt", required = true)
-	protected List<com.tools20022.repository.msg.AccountReport7> accountReport;
+	protected List<AccountReport7> accountReport;
 	/**
 	 * 
 	 <p>
@@ -101,7 +102,7 @@ public class Accounts2 {
 	 * "Reports either on the account information or on a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Accounts2, List<AccountReport7>> mmAccountReport = new MMMessageAssociationEnd<Accounts2, List<AccountReport7>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountContract;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Accounts2.mmObject();
@@ -112,7 +113,17 @@ public class Accounts2 {
 			definition = "Reports either on the account information or on a business error.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountReport7.mmObject();
+			type_lazy = () -> AccountReport7.mmObject();
+		}
+
+		@Override
+		public List<AccountReport7> getValue(Accounts2 obj) {
+			return obj.getAccountReport();
+		}
+
+		@Override
+		public void setValue(Accounts2 obj, List<AccountReport7> value) {
+			obj.setAccountReport(value);
 		}
 	};
 
@@ -134,7 +145,7 @@ public class Accounts2 {
 		return accountReport == null ? accountReport = new ArrayList<>() : accountReport;
 	}
 
-	public Accounts2 setAccountReport(List<com.tools20022.repository.msg.AccountReport7> accountReport) {
+	public Accounts2 setAccountReport(List<AccountReport7> accountReport) {
 		this.accountReport = Objects.requireNonNull(accountReport);
 		return this;
 	}

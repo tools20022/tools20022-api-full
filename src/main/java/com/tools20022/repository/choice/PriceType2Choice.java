@@ -104,7 +104,7 @@ public class PriceType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceType2Choice, Price3> mmMarket = new MMMessageAssociationEnd<PriceType2Choice, Price3>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceType2Choice.mmObject();
@@ -117,6 +117,16 @@ public class PriceType2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Price3.mmObject();
+		}
+
+		@Override
+		public Price3 getValue(PriceType2Choice obj) {
+			return obj.getMarket();
+		}
+
+		@Override
+		public void setValue(PriceType2Choice obj, Price3 value) {
+			obj.setMarket(value);
 		}
 	};
 	@XmlElement(name = "Indctv", required = true)
@@ -151,7 +161,7 @@ public class PriceType2Choice {
 	 * definition} = "Estimated price, for valuation purposes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndicative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceType2Choice, Price3> mmIndicative = new MMMessageAssociationEnd<PriceType2Choice, Price3>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceType2Choice.mmObject();
@@ -164,6 +174,16 @@ public class PriceType2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Price3.mmObject();
+		}
+
+		@Override
+		public Price3 getValue(PriceType2Choice obj) {
+			return obj.getIndicative();
+		}
+
+		@Override
+		public void setValue(PriceType2Choice obj, Price3 value) {
+			obj.setIndicative(value);
 		}
 	};
 

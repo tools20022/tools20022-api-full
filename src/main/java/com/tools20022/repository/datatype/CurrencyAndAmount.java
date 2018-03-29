@@ -20,13 +20,11 @@ package com.tools20022.repository.datatype;
 import com.tools20022.metamodel.MMAmount;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
-import com.tools20022.repository.datatype.CurrencyAndAmount.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.*;
 
 /**
  * Number of monetary units specified in a currency, where the unit of currency
@@ -63,11 +61,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </li>
  * </ul>
  */
-@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class CurrencyAndAmount {
 
 	final static private AtomicReference<MMAmount> mmObject_lazy = new AtomicReference<>();
-	protected BigDecimal value;
+	@XmlValue
+	protected BigDecimal amount;
+	@XmlAttribute(name = "ccy", required = true)
+	protected CurrencyCode currency;
 
 	final static public MMAmount mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMAmount() {
@@ -86,23 +88,29 @@ public class CurrencyAndAmount {
 		return mmObject_lazy.get();
 	}
 
-	public CurrencyAndAmount(BigDecimal value) {
-		this.value = value;
+	public CurrencyAndAmount() {
 	}
 
-	public BigDecimal toBigDecimal() {
-		return value;
+	public CurrencyAndAmount(BigDecimal amount, CurrencyCode currency) {
+		this.amount = amount;
+		this.currency = currency;
 	}
 
-	protected static class InternalXmlAdapter extends XmlAdapter<BigDecimal, CurrencyAndAmount> {
-		@Override
-		public CurrencyAndAmount unmarshal(BigDecimal value) {
-			return new CurrencyAndAmount(value);
-		}
+	public BigDecimal getAmount() {
+		return amount;
+	}
 
-		@Override
-		public BigDecimal marshal(CurrencyAndAmount typedData) {
-			return typedData.value;
-		}
+	public CurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setAmountAndCurrency(BigDecimal amount, CurrencyCode currency) {
+		this.amount = amount;
+		this.currency = currency;
+	}
+
+	@Override
+	public String toString() {
+		return amount + " " + currency;
 	}
 }

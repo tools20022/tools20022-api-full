@@ -108,7 +108,7 @@ public class DistributionType1FormatChoice {
 	 * definition} = "Standard code to specify the distribution type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionType1FormatChoice, DistributionType1Code> mmCode = new MMMessageAttribute<DistributionType1FormatChoice, DistributionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionType1FormatChoice.mmObject();
@@ -120,6 +120,16 @@ public class DistributionType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionType1Code.mmObject();
+		}
+
+		@Override
+		public DistributionType1Code getValue(DistributionType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DistributionType1FormatChoice obj, DistributionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class DistributionType1FormatChoice {
 	 * definition} = "Proprietary code to express the distribution type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<DistributionType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionType1FormatChoice.mmObject();
@@ -169,6 +179,16 @@ public class DistributionType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(DistributionType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DistributionType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

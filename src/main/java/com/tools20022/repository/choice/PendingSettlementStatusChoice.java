@@ -113,7 +113,7 @@ public class PendingSettlementStatusChoice {
 	 * definition} = "Reason for a pending status in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingSettlementStatusChoice, PendingSettlementStatusReason1> mmReason = new MMMessageAssociationEnd<PendingSettlementStatusChoice, PendingSettlementStatusReason1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatusChoice.mmObject();
@@ -126,6 +126,16 @@ public class PendingSettlementStatusChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingSettlementStatusReason1.mmObject();
+		}
+
+		@Override
+		public PendingSettlementStatusReason1 getValue(PendingSettlementStatusChoice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatusChoice obj, PendingSettlementStatusReason1 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -163,7 +173,7 @@ public class PendingSettlementStatusChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingSettlementStatusChoice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<PendingSettlementStatusChoice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatusChoice.mmObject();
@@ -176,6 +186,16 @@ public class PendingSettlementStatusChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(PendingSettlementStatusChoice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatusChoice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoRsn", required = true)
@@ -213,7 +233,7 @@ public class PendingSettlementStatusChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingSettlementStatusChoice, NoReasonCode> mmNoReason = new MMMessageAttribute<PendingSettlementStatusChoice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingSettlementStatusChoice.mmObject();
@@ -225,6 +245,16 @@ public class PendingSettlementStatusChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingSettlementStatusChoice obj) {
+			return obj.getNoReason();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatusChoice obj, NoReasonCode value) {
+			obj.setNoReason(value);
 		}
 	};
 

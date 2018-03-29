@@ -30,6 +30,9 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.Jurisdiction;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GovernanceRules2;
+import com.tools20022.repository.msg.QualifiedDocumentInformation1;
+import com.tools20022.repository.msg.QualifiedPartyIdentification1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -146,7 +149,7 @@ public class EventDescription1 {
 	 * definition} = "Identification of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventDescription1, Max35Text> mmIdentifier = new MMMessageAttribute<EventDescription1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
 			isDerived = false;
@@ -157,6 +160,16 @@ public class EventDescription1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(EventDescription1 obj) {
+			return obj.getIdentifier();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, Max35Text value) {
+			obj.setIdentifier(value);
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -193,7 +206,7 @@ public class EventDescription1 {
 	 * definition} = "Date when event occurred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventDescription1, Optional<ISODateTime>> mmDate = new MMMessageAttribute<EventDescription1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -205,6 +218,16 @@ public class EventDescription1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(EventDescription1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, Optional<ISODateTime> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -241,7 +264,7 @@ public class EventDescription1 {
 	 * definition} = "Party to be advised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventDescription1, QualifiedPartyIdentification1> mmRecipient = new MMMessageAssociationEnd<EventDescription1, QualifiedPartyIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -253,7 +276,17 @@ public class EventDescription1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public QualifiedPartyIdentification1 getValue(EventDescription1 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, QualifiedPartyIdentification1 value) {
+			obj.setRecipient(value);
 		}
 	};
 	@XmlElement(name = "Advsr", required = true)
@@ -290,7 +323,7 @@ public class EventDescription1 {
 	 * definition} = "Advising party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdvisor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventDescription1, QualifiedPartyIdentification1> mmAdvisor = new MMMessageAssociationEnd<EventDescription1, QualifiedPartyIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -302,11 +335,21 @@ public class EventDescription1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public QualifiedPartyIdentification1 getValue(EventDescription1 obj) {
+			return obj.getAdvisor();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, QualifiedPartyIdentification1 value) {
+			obj.setAdvisor(value);
 		}
 	};
 	@XmlElement(name = "OthrPty")
-	protected List<com.tools20022.repository.msg.QualifiedPartyIdentification1> otherParty;
+	protected List<QualifiedPartyIdentification1> otherParty;
 	/**
 	 * 
 	 <p>
@@ -339,7 +382,7 @@ public class EventDescription1 {
 	 * definition} = "Parties involved in the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventDescription1, List<QualifiedPartyIdentification1>> mmOtherParty = new MMMessageAssociationEnd<EventDescription1, List<QualifiedPartyIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -350,7 +393,17 @@ public class EventDescription1 {
 			definition = "Parties involved in the event.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedPartyIdentification1> getValue(EventDescription1 obj) {
+			return obj.getOtherParty();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, List<QualifiedPartyIdentification1> value) {
+			obj.setOtherParty(value);
 		}
 	};
 	@XmlElement(name = "LangCd", required = true)
@@ -387,7 +440,7 @@ public class EventDescription1 {
 	 * definition} = "Identifier for a language used for the description."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLanguageCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventDescription1, LanguageCode> mmLanguageCode = new MMMessageAttribute<EventDescription1, LanguageCode>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmLanguage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -399,6 +452,16 @@ public class EventDescription1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public LanguageCode getValue(EventDescription1 obj) {
+			return obj.getLanguageCode();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, LanguageCode value) {
+			obj.setLanguageCode(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -430,7 +493,7 @@ public class EventDescription1 {
 	 * definition} = "Free form description of event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventDescription1, Max2000Text> mmDescription = new MMMessageAttribute<EventDescription1, Max2000Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
 			isDerived = false;
@@ -442,9 +505,19 @@ public class EventDescription1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
+
+		@Override
+		public Max2000Text getValue(EventDescription1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, Max2000Text value) {
+			obj.setDescription(value);
+		}
 	};
 	@XmlElement(name = "RltdDoc")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedDocument;
+	protected List<QualifiedDocumentInformation1> relatedDocument;
 	/**
 	 * 
 	 <p>
@@ -476,7 +549,7 @@ public class EventDescription1 {
 	 * definition} = "Reference to related document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>> mmRelatedDocument = new MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -487,11 +560,21 @@ public class EventDescription1 {
 			definition = "Reference to related document.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(EventDescription1 obj) {
+			return obj.getRelatedDocument();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setRelatedDocument(value);
 		}
 	};
 	@XmlElement(name = "RltdLttr")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedLetter;
+	protected List<QualifiedDocumentInformation1> relatedLetter;
 	/**
 	 * 
 	 <p>
@@ -523,7 +606,7 @@ public class EventDescription1 {
 	 * definition} = "Identifier of related letter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedLetter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>> mmRelatedLetter = new MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -534,11 +617,21 @@ public class EventDescription1 {
 			definition = "Identifier of related letter.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(EventDescription1 obj) {
+			return obj.getRelatedLetter();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setRelatedLetter(value);
 		}
 	};
 	@XmlElement(name = "RltdMsg")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedMessage;
+	protected List<QualifiedDocumentInformation1> relatedMessage;
 	/**
 	 * 
 	 <p>
@@ -570,7 +663,7 @@ public class EventDescription1 {
 	 * definition} = "Identifier of related message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>> mmRelatedMessage = new MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -581,11 +674,21 @@ public class EventDescription1 {
 			definition = "Identifier of related message.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(EventDescription1 obj) {
+			return obj.getRelatedMessage();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setRelatedMessage(value);
 		}
 	};
 	@XmlElement(name = "AssoctdDoc")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument;
+	protected List<QualifiedDocumentInformation1> associatedDocument;
 	/**
 	 * 
 	 <p>
@@ -617,7 +720,7 @@ public class EventDescription1 {
 	 * definition} = "Associated free form document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssociatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>> mmAssociatedDocument = new MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -628,11 +731,21 @@ public class EventDescription1 {
 			definition = "Associated free form document.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(EventDescription1 obj) {
+			return obj.getAssociatedDocument();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setAssociatedDocument(value);
 		}
 	};
 	@XmlElement(name = "GovngCtrct")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> governingContract;
+	protected List<QualifiedDocumentInformation1> governingContract;
 	/**
 	 * 
 	 <p>
@@ -665,7 +778,7 @@ public class EventDescription1 {
 	 * definition} = "Reference to the contractual context."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGoverningContract = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>> mmGoverningContract = new MMMessageAssociationEnd<EventDescription1, List<QualifiedDocumentInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmAgreement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -676,7 +789,17 @@ public class EventDescription1 {
 			definition = "Reference to the contractual context.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(EventDescription1 obj) {
+			return obj.getGoverningContract();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setGoverningContract(value);
 		}
 	};
 	@XmlElement(name = "LglCntxt")
@@ -712,7 +835,7 @@ public class EventDescription1 {
 	 * definition} = "Rules and laws governing the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLegalContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventDescription1, Optional<GovernanceRules2>> mmLegalContext = new MMMessageAssociationEnd<EventDescription1, Optional<GovernanceRules2>>() {
 		{
 			businessElementTrace_lazy = () -> Jurisdiction.mmGovernanceRules;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventDescription1.mmObject();
@@ -724,7 +847,17 @@ public class EventDescription1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.GovernanceRules2.mmObject();
+			type_lazy = () -> GovernanceRules2.mmObject();
+		}
+
+		@Override
+		public Optional<GovernanceRules2> getValue(EventDescription1 obj) {
+			return obj.getLegalContext();
+		}
+
+		@Override
+		public void setValue(EventDescription1 obj, Optional<GovernanceRules2> value) {
+			obj.setLegalContext(value.orElse(null));
 		}
 	};
 
@@ -769,7 +902,7 @@ public class EventDescription1 {
 		return recipient;
 	}
 
-	public EventDescription1 setRecipient(com.tools20022.repository.msg.QualifiedPartyIdentification1 recipient) {
+	public EventDescription1 setRecipient(QualifiedPartyIdentification1 recipient) {
 		this.recipient = Objects.requireNonNull(recipient);
 		return this;
 	}
@@ -778,7 +911,7 @@ public class EventDescription1 {
 		return advisor;
 	}
 
-	public EventDescription1 setAdvisor(com.tools20022.repository.msg.QualifiedPartyIdentification1 advisor) {
+	public EventDescription1 setAdvisor(QualifiedPartyIdentification1 advisor) {
 		this.advisor = Objects.requireNonNull(advisor);
 		return this;
 	}
@@ -787,7 +920,7 @@ public class EventDescription1 {
 		return otherParty == null ? otherParty = new ArrayList<>() : otherParty;
 	}
 
-	public EventDescription1 setOtherParty(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> otherParty) {
+	public EventDescription1 setOtherParty(List<QualifiedPartyIdentification1> otherParty) {
 		this.otherParty = Objects.requireNonNull(otherParty);
 		return this;
 	}
@@ -814,7 +947,7 @@ public class EventDescription1 {
 		return relatedDocument == null ? relatedDocument = new ArrayList<>() : relatedDocument;
 	}
 
-	public EventDescription1 setRelatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedDocument) {
+	public EventDescription1 setRelatedDocument(List<QualifiedDocumentInformation1> relatedDocument) {
 		this.relatedDocument = Objects.requireNonNull(relatedDocument);
 		return this;
 	}
@@ -823,7 +956,7 @@ public class EventDescription1 {
 		return relatedLetter == null ? relatedLetter = new ArrayList<>() : relatedLetter;
 	}
 
-	public EventDescription1 setRelatedLetter(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedLetter) {
+	public EventDescription1 setRelatedLetter(List<QualifiedDocumentInformation1> relatedLetter) {
 		this.relatedLetter = Objects.requireNonNull(relatedLetter);
 		return this;
 	}
@@ -832,7 +965,7 @@ public class EventDescription1 {
 		return relatedMessage == null ? relatedMessage = new ArrayList<>() : relatedMessage;
 	}
 
-	public EventDescription1 setRelatedMessage(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> relatedMessage) {
+	public EventDescription1 setRelatedMessage(List<QualifiedDocumentInformation1> relatedMessage) {
 		this.relatedMessage = Objects.requireNonNull(relatedMessage);
 		return this;
 	}
@@ -841,7 +974,7 @@ public class EventDescription1 {
 		return associatedDocument == null ? associatedDocument = new ArrayList<>() : associatedDocument;
 	}
 
-	public EventDescription1 setAssociatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument) {
+	public EventDescription1 setAssociatedDocument(List<QualifiedDocumentInformation1> associatedDocument) {
 		this.associatedDocument = Objects.requireNonNull(associatedDocument);
 		return this;
 	}
@@ -850,7 +983,7 @@ public class EventDescription1 {
 		return governingContract == null ? governingContract = new ArrayList<>() : governingContract;
 	}
 
-	public EventDescription1 setGoverningContract(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> governingContract) {
+	public EventDescription1 setGoverningContract(List<QualifiedDocumentInformation1> governingContract) {
 		this.governingContract = Objects.requireNonNull(governingContract);
 		return this;
 	}
@@ -859,7 +992,7 @@ public class EventDescription1 {
 		return legalContext == null ? Optional.empty() : Optional.of(legalContext);
 	}
 
-	public EventDescription1 setLegalContext(com.tools20022.repository.msg.GovernanceRules2 legalContext) {
+	public EventDescription1 setLegalContext(GovernanceRules2 legalContext) {
 		this.legalContext = legalContext;
 		return this;
 	}

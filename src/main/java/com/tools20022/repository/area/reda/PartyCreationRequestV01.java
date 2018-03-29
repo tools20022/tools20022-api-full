@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.DocumentIdentification50;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.SystemParty1;
 import com.tools20022.repository.msgset._T2S_Party_Reference_Data_ForRegistration;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -131,7 +130,7 @@ public class PartyCreationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyCreationRequestV01, DocumentIdentification50> mmMessageIdentification = new MMMessageBuildingBlock<PartyCreationRequestV01, DocumentIdentification50>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +141,14 @@ public class PartyCreationRequestV01 {
 			complexType_lazy = () -> DocumentIdentification50.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyCreationRequestV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification50 getValue(PartyCreationRequestV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(PartyCreationRequestV01 obj, DocumentIdentification50 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -177,7 +178,7 @@ public class PartyCreationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyCreationRequestV01, Optional<PartyIdentification71Choice>> mmMessageOriginator = new MMMessageBuildingBlock<PartyCreationRequestV01, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,12 +189,14 @@ public class PartyCreationRequestV01 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyCreationRequestV01.class.getMethod("getMessageOriginator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(PartyCreationRequestV01 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(PartyCreationRequestV01 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -223,7 +226,7 @@ public class PartyCreationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyCreationRequestV01, Optional<PartyIdentification71Choice>> mmMessageRecipient = new MMMessageBuildingBlock<PartyCreationRequestV01, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +237,14 @@ public class PartyCreationRequestV01 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyCreationRequestV01.class.getMethod("getMessageRecipient", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(PartyCreationRequestV01 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(PartyCreationRequestV01 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pty", required = true)
@@ -266,7 +271,7 @@ public class PartyCreationRequestV01 {
 	 * definition} = "Party to be created in the executing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyCreationRequestV01, SystemParty1> mmParty = new MMMessageBuildingBlock<PartyCreationRequestV01, SystemParty1>() {
 		{
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,12 +282,14 @@ public class PartyCreationRequestV01 {
 			complexType_lazy = () -> SystemParty1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyCreationRequestV01.class.getMethod("getParty", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SystemParty1 getValue(PartyCreationRequestV01 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(PartyCreationRequestV01 obj, SystemParty1 value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -312,7 +319,7 @@ public class PartyCreationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyCreationRequestV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<PartyCreationRequestV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,12 +329,14 @@ public class PartyCreationRequestV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyCreationRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(PartyCreationRequestV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(PartyCreationRequestV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

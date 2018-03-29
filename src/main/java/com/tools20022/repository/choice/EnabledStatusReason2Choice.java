@@ -126,7 +126,7 @@ public class EnabledStatusReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnabledStatusReason2Choice, EnabledStatusReason1Code> mmCode = new MMMessageAttribute<EnabledStatusReason2Choice, EnabledStatusReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class EnabledStatusReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EnabledStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public EnabledStatusReason1Code getValue(EnabledStatusReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(EnabledStatusReason2Choice obj, EnabledStatusReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class EnabledStatusReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnabledStatusReason2Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<EnabledStatusReason2Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EnabledStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class EnabledStatusReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(EnabledStatusReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(EnabledStatusReason2Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

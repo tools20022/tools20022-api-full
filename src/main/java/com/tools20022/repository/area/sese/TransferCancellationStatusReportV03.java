@@ -21,7 +21,6 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -213,7 +212,7 @@ public class TransferCancellationStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferCancellationStatusReportV03, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<TransferCancellationStatusReportV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +224,14 @@ public class TransferCancellationStatusReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferCancellationStatusReportV03.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(TransferCancellationStatusReportV03 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatusReportV03 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyRef")
@@ -268,7 +269,7 @@ public class TransferCancellationStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCounterpartyReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferCancellationStatusReportV03, Optional<AdditionalReference2>> mmCounterpartyReference = new MMMessageBuildingBlock<TransferCancellationStatusReportV03, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "CtrPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,12 +281,14 @@ public class TransferCancellationStatusReportV03 {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferCancellationStatusReportV03.class.getMethod("getCounterpartyReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(TransferCancellationStatusReportV03 obj) {
+			return obj.getCounterpartyReference();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatusReportV03 obj, Optional<AdditionalReference2> value) {
+			obj.setCounterpartyReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -314,7 +317,7 @@ public class TransferCancellationStatusReportV03 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferCancellationStatusReportV03, List<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<TransferCancellationStatusReportV03, List<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,12 +328,14 @@ public class TransferCancellationStatusReportV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferCancellationStatusReportV03.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(TransferCancellationStatusReportV03 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatusReportV03 obj, List<AdditionalReference3> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "OthrRef")
@@ -360,7 +365,7 @@ public class TransferCancellationStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferCancellationStatusReportV03, List<AdditionalReference3>> mmOtherReference = new MMMessageBuildingBlock<TransferCancellationStatusReportV03, List<AdditionalReference3>>() {
 		{
 			xmlTag = "OthrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,12 +376,14 @@ public class TransferCancellationStatusReportV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferCancellationStatusReportV03.class.getMethod("getOtherReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(TransferCancellationStatusReportV03 obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatusReportV03 obj, List<AdditionalReference3> value) {
+			obj.setOtherReference(value);
 		}
 	};
 	@XmlElement(name = "StsRpt", required = true)
@@ -412,7 +419,7 @@ public class TransferCancellationStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferCancellationStatusReportV03, CancellationStatusAndReason2> mmStatusReport = new MMMessageBuildingBlock<TransferCancellationStatusReportV03, CancellationStatusAndReason2>() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,12 +431,14 @@ public class TransferCancellationStatusReportV03 {
 			complexType_lazy = () -> CancellationStatusAndReason2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferCancellationStatusReportV03.class.getMethod("getStatusReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CancellationStatusAndReason2 getValue(TransferCancellationStatusReportV03 obj) {
+			return obj.getStatusReport();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatusReportV03 obj, CancellationStatusAndReason2 value) {
+			obj.setStatusReport(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -466,7 +475,7 @@ public class TransferCancellationStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferCancellationStatusReportV03, List<Extension1>> mmExtension = new MMMessageBuildingBlock<TransferCancellationStatusReportV03, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -477,12 +486,14 @@ public class TransferCancellationStatusReportV03 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferCancellationStatusReportV03.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(TransferCancellationStatusReportV03 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatusReportV03 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

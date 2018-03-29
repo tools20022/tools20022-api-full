@@ -31,6 +31,9 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalBusinessQuery1;
+import com.tools20022.repository.msg.Pagination1;
+import com.tools20022.repository.msg.PartyIdentification125;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -149,7 +152,7 @@ public class GroupHeader73 {
 	 * GroupHeader58.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader73, Max35Text> mmMessageIdentification = new MMMessageAttribute<GroupHeader73, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader73.mmObject();
@@ -162,6 +165,16 @@ public class GroupHeader73 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GroupHeader73 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader73 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -202,7 +215,7 @@ public class GroupHeader73 {
 	 * GroupHeader58.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader73, ISODateTime> mmCreationDateTime = new MMMessageAttribute<GroupHeader73, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader73.mmObject();
@@ -215,6 +228,16 @@ public class GroupHeader73 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(GroupHeader73 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(GroupHeader73 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -251,7 +274,7 @@ public class GroupHeader73 {
 	 * GroupHeader58.mmMessageRecipient}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader73, Optional<PartyIdentification125>> mmMessageRecipient = new MMMessageAssociationEnd<GroupHeader73, Optional<PartyIdentification125>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader73.mmObject();
 			isDerived = false;
@@ -263,7 +286,17 @@ public class GroupHeader73 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification125.mmObject();
+			type_lazy = () -> PartyIdentification125.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification125> getValue(GroupHeader73 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(GroupHeader73 obj, Optional<PartyIdentification125> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgPgntn")
@@ -300,7 +333,7 @@ public class GroupHeader73 {
 	 * GroupHeader58.mmMessagePagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader73, Optional<Pagination1>> mmMessagePagination = new MMMessageAssociationEnd<GroupHeader73, Optional<Pagination1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader73.mmObject();
 			isDerived = false;
@@ -312,7 +345,17 @@ public class GroupHeader73 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Pagination1.mmObject();
+			type_lazy = () -> Pagination1.mmObject();
+		}
+
+		@Override
+		public Optional<Pagination1> getValue(GroupHeader73 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(GroupHeader73 obj, Optional<Pagination1> value) {
+			obj.setMessagePagination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlBizQry")
@@ -351,7 +394,7 @@ public class GroupHeader73 {
 	 * GroupHeader58.mmOriginalBusinessQuery}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalBusinessQuery = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader73, Optional<OriginalBusinessQuery1>> mmOriginalBusinessQuery = new MMMessageAttribute<GroupHeader73, Optional<OriginalBusinessQuery1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader73.mmObject();
 			isDerived = false;
@@ -362,7 +405,17 @@ public class GroupHeader73 {
 			previousVersion_lazy = () -> GroupHeader58.mmOriginalBusinessQuery;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.OriginalBusinessQuery1.mmObject();
+			complexType_lazy = () -> OriginalBusinessQuery1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalBusinessQuery1> getValue(GroupHeader73 obj) {
+			return obj.getOriginalBusinessQuery();
+		}
+
+		@Override
+		public void setValue(GroupHeader73 obj, Optional<OriginalBusinessQuery1> value) {
+			obj.setOriginalBusinessQuery(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -398,7 +451,7 @@ public class GroupHeader73 {
 	 * GroupHeader58.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader73, Optional<Max500Text>> mmAdditionalInformation = new MMMessageAttribute<GroupHeader73, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader73.mmObject();
 			isDerived = false;
@@ -410,6 +463,16 @@ public class GroupHeader73 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(GroupHeader73 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(GroupHeader73 obj, Optional<Max500Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 
@@ -453,7 +516,7 @@ public class GroupHeader73 {
 		return messageRecipient == null ? Optional.empty() : Optional.of(messageRecipient);
 	}
 
-	public GroupHeader73 setMessageRecipient(com.tools20022.repository.msg.PartyIdentification125 messageRecipient) {
+	public GroupHeader73 setMessageRecipient(PartyIdentification125 messageRecipient) {
 		this.messageRecipient = messageRecipient;
 		return this;
 	}
@@ -462,7 +525,7 @@ public class GroupHeader73 {
 		return messagePagination == null ? Optional.empty() : Optional.of(messagePagination);
 	}
 
-	public GroupHeader73 setMessagePagination(com.tools20022.repository.msg.Pagination1 messagePagination) {
+	public GroupHeader73 setMessagePagination(Pagination1 messagePagination) {
 		this.messagePagination = messagePagination;
 		return this;
 	}
@@ -471,7 +534,7 @@ public class GroupHeader73 {
 		return originalBusinessQuery == null ? Optional.empty() : Optional.of(originalBusinessQuery);
 	}
 
-	public GroupHeader73 setOriginalBusinessQuery(com.tools20022.repository.msg.OriginalBusinessQuery1 originalBusinessQuery) {
+	public GroupHeader73 setOriginalBusinessQuery(OriginalBusinessQuery1 originalBusinessQuery) {
 		this.originalBusinessQuery = originalBusinessQuery;
 		return this;
 	}

@@ -53,12 +53,16 @@ public class ConstraintDebtorAccountRule {
 	 */
 	public static final MMConstraint<LiquidityDebitTransfer1> forLiquidityDebitTransfer1 = new MMConstraint<LiquidityDebitTransfer1>() {
 		{
-			validator = ConstraintDebtorAccountRule::checkLiquidityDebitTransfer1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccountRule";
 			definition = "At least DebitAccount or DebitAccountOwner must be present, or both.";
 			owner_lazy = () -> LiquidityDebitTransfer1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Debtor</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/DebtorAccount</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LiquidityDebitTransfer1 obj) throws Exception {
+			checkLiquidityDebitTransfer1(obj);
 		}
 	};
 

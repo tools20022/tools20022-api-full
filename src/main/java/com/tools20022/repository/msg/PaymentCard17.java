@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.Max3Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType10;
+import com.tools20022.repository.msg.PlainCardData14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +131,7 @@ public class PaymentCard17 {
 	 * PaymentCard16.mmCardDataEntryMode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard17, CardDataReading1Code> mmCardDataEntryMode = new MMMessageAttribute<PaymentCard17, CardDataReading1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard17.mmObject();
 			isDerived = false;
@@ -141,6 +143,16 @@ public class PaymentCard17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
+		}
+
+		@Override
+		public CardDataReading1Code getValue(PaymentCard17 obj) {
+			return obj.getCardDataEntryMode();
+		}
+
+		@Override
+		public void setValue(PaymentCard17 obj, CardDataReading1Code value) {
+			obj.setCardDataEntryMode(value);
 		}
 	};
 	@XmlElement(name = "FllbckInd")
@@ -178,7 +190,7 @@ public class PaymentCard17 {
 	 * PaymentCard16.mmFallbackIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFallbackIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard17, Optional<CardFallback1Code>> mmFallbackIndicator = new MMMessageAttribute<PaymentCard17, Optional<CardFallback1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard17.mmObject();
 			isDerived = false;
@@ -190,6 +202,16 @@ public class PaymentCard17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardFallback1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardFallback1Code> getValue(PaymentCard17 obj) {
+			return obj.getFallbackIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentCard17 obj, Optional<CardFallback1Code> value) {
+			obj.setFallbackIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctdCardData")
@@ -227,7 +249,7 @@ public class PaymentCard17 {
 	 * PaymentCard16.mmProtectedCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectedCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCard17, Optional<ContentInformationType10>> mmProtectedCardData = new MMMessageAssociationEnd<PaymentCard17, Optional<ContentInformationType10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard17.mmObject();
 			isDerived = false;
@@ -239,7 +261,17 @@ public class PaymentCard17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
+			type_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType10> getValue(PaymentCard17 obj) {
+			return obj.getProtectedCardData();
+		}
+
+		@Override
+		public void setValue(PaymentCard17 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedCardData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlainCardData")
@@ -275,7 +307,7 @@ public class PaymentCard17 {
 	 * PaymentCard16.mmPlainCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlainCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCard17, Optional<PlainCardData14>> mmPlainCardData = new MMMessageAssociationEnd<PaymentCard17, Optional<PlainCardData14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard17.mmObject();
 			isDerived = false;
@@ -287,7 +319,17 @@ public class PaymentCard17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PlainCardData14.mmObject();
+			type_lazy = () -> PlainCardData14.mmObject();
+		}
+
+		@Override
+		public Optional<PlainCardData14> getValue(PaymentCard17 obj) {
+			return obj.getPlainCardData();
+		}
+
+		@Override
+		public void setValue(PaymentCard17 obj, Optional<PlainCardData14> value) {
+			obj.setPlainCardData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardCtryCd")
@@ -328,7 +370,7 @@ public class PaymentCard17 {
 	 * PaymentCard16.mmCardCountryCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardCountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard17, Optional<Max3Text>> mmCardCountryCode = new MMMessageAttribute<PaymentCard17, Optional<Max3Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCardCountryCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard17.mmObject();
@@ -341,6 +383,16 @@ public class PaymentCard17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(PaymentCard17 obj) {
+			return obj.getCardCountryCode();
+		}
+
+		@Override
+		public void setValue(PaymentCard17 obj, Optional<Max3Text> value) {
+			obj.setCardCountryCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardCcyCd")
@@ -383,7 +435,7 @@ public class PaymentCard17 {
 	 * PaymentCard16.mmCardCurrencyCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardCurrencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard17, Optional<Exact3AlphaNumericText>> mmCardCurrencyCode = new MMMessageAttribute<PaymentCard17, Optional<Exact3AlphaNumericText>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCardCurrencyCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard17.mmObject();
@@ -396,6 +448,16 @@ public class PaymentCard17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact3AlphaNumericText> getValue(PaymentCard17 obj) {
+			return obj.getCardCurrencyCode();
+		}
+
+		@Override
+		public void setValue(PaymentCard17 obj, Optional<Exact3AlphaNumericText> value) {
+			obj.setCardCurrencyCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RtndCardBal")
@@ -432,7 +494,7 @@ public class PaymentCard17 {
 	 * definition} = "Balance of the captured card or epurse if available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRetainedCardBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard17, Optional<CurrencyAndAmount>> mmRetainedCardBalance = new MMMessageAttribute<PaymentCard17, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard17.mmObject();
@@ -444,6 +506,16 @@ public class PaymentCard17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(PaymentCard17 obj) {
+			return obj.getRetainedCardBalance();
+		}
+
+		@Override
+		public void setValue(PaymentCard17 obj, Optional<CurrencyAndAmount> value) {
+			obj.setRetainedCardBalance(value.orElse(null));
 		}
 	};
 
@@ -486,7 +558,7 @@ public class PaymentCard17 {
 		return protectedCardData == null ? Optional.empty() : Optional.of(protectedCardData);
 	}
 
-	public PaymentCard17 setProtectedCardData(com.tools20022.repository.msg.ContentInformationType10 protectedCardData) {
+	public PaymentCard17 setProtectedCardData(ContentInformationType10 protectedCardData) {
 		this.protectedCardData = protectedCardData;
 		return this;
 	}
@@ -495,7 +567,7 @@ public class PaymentCard17 {
 		return plainCardData == null ? Optional.empty() : Optional.of(plainCardData);
 	}
 
-	public PaymentCard17 setPlainCardData(com.tools20022.repository.msg.PlainCardData14 plainCardData) {
+	public PaymentCard17 setPlainCardData(PlainCardData14 plainCardData) {
 		this.plainCardData = plainCardData;
 		return this;
 	}

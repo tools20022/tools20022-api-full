@@ -98,7 +98,7 @@ public class DailyFundTransfer1Choice {
 	 * definition} = "Time daily balances are transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DailyFundTransfer1Choice, ISOTime> mmTransferTime = new MMMessageAttribute<DailyFundTransfer1Choice, ISOTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DailyFundTransfer1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class DailyFundTransfer1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public ISOTime getValue(DailyFundTransfer1Choice obj) {
+			return obj.getTransferTime();
+		}
+
+		@Override
+		public void setValue(DailyFundTransfer1Choice obj, ISOTime value) {
+			obj.setTransferTime(value);
 		}
 	};
 	@XmlElement(name = "TrfEvt", required = true)
@@ -139,7 +149,7 @@ public class DailyFundTransfer1Choice {
 	 * definition} = "Information about code and number of transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferEvent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DailyFundTransfer1Choice, TransferEvent1> mmTransferEvent = new MMMessageAssociationEnd<DailyFundTransfer1Choice, TransferEvent1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DailyFundTransfer1Choice.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class DailyFundTransfer1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferEvent1.mmObject();
+		}
+
+		@Override
+		public TransferEvent1 getValue(DailyFundTransfer1Choice obj) {
+			return obj.getTransferEvent();
+		}
+
+		@Override
+		public void setValue(DailyFundTransfer1Choice obj, TransferEvent1 value) {
+			obj.setTransferEvent(value);
 		}
 	};
 

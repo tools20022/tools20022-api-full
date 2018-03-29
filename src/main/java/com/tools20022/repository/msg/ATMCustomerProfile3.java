@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMService7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -113,7 +114,7 @@ public class ATMCustomerProfile3 {
 	 * ATMCustomerProfile2.mmProfileReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProfileReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCustomerProfile3, Optional<Max35Text>> mmProfileReference = new MMMessageAttribute<ATMCustomerProfile3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile3.mmObject();
 			isDerived = false;
@@ -125,6 +126,16 @@ public class ATMCustomerProfile3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMCustomerProfile3 obj) {
+			return obj.getProfileReference();
+		}
+
+		@Override
+		public void setValue(ATMCustomerProfile3 obj, Optional<Max35Text> value) {
+			obj.setProfileReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrId")
@@ -161,7 +172,7 @@ public class ATMCustomerProfile3 {
 	 * ATMCustomerProfile2.mmCustomerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCustomerProfile3, Optional<Max35Text>> mmCustomerIdentification = new MMMessageAttribute<ATMCustomerProfile3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile3.mmObject();
 			isDerived = false;
@@ -173,6 +184,16 @@ public class ATMCustomerProfile3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMCustomerProfile3 obj) {
+			return obj.getCustomerIdentification();
+		}
+
+		@Override
+		public void setValue(ATMCustomerProfile3 obj, Optional<Max35Text> value) {
+			obj.setCustomerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrflDesc")
@@ -204,7 +225,7 @@ public class ATMCustomerProfile3 {
 	 * definition} = "Description of the customer's profile in plaintext."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProfileDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCustomerProfile3, Optional<Max70Text>> mmProfileDescription = new MMMessageAttribute<ATMCustomerProfile3, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile3.mmObject();
 			isDerived = false;
@@ -216,9 +237,19 @@ public class ATMCustomerProfile3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max70Text> getValue(ATMCustomerProfile3 obj) {
+			return obj.getProfileDescription();
+		}
+
+		@Override
+		public void setValue(ATMCustomerProfile3 obj, Optional<Max70Text> value) {
+			obj.setProfileDescription(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AllwdSvcs")
-	protected List<com.tools20022.repository.msg.ATMService7> allowedServices;
+	protected List<ATMService7> allowedServices;
 	/**
 	 * 
 	 <p>
@@ -245,7 +276,7 @@ public class ATMCustomerProfile3 {
 	 * definition} = "Services allowed for the customer's profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAllowedServices = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCustomerProfile3, List<ATMService7>> mmAllowedServices = new MMMessageAssociationEnd<ATMCustomerProfile3, List<ATMService7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile3.mmObject();
 			isDerived = false;
@@ -255,7 +286,17 @@ public class ATMCustomerProfile3 {
 			definition = "Services allowed for the customer's profile.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMService7.mmObject();
+			type_lazy = () -> ATMService7.mmObject();
+		}
+
+		@Override
+		public List<ATMService7> getValue(ATMCustomerProfile3 obj) {
+			return obj.getAllowedServices();
+		}
+
+		@Override
+		public void setValue(ATMCustomerProfile3 obj, List<ATMService7> value) {
+			obj.setAllowedServices(value);
 		}
 	};
 
@@ -305,7 +346,7 @@ public class ATMCustomerProfile3 {
 		return allowedServices == null ? allowedServices = new ArrayList<>() : allowedServices;
 	}
 
-	public ATMCustomerProfile3 setAllowedServices(List<com.tools20022.repository.msg.ATMService7> allowedServices) {
+	public ATMCustomerProfile3 setAllowedServices(List<ATMService7> allowedServices) {
 		this.allowedServices = Objects.requireNonNull(allowedServices);
 		return this;
 	}

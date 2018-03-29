@@ -135,7 +135,7 @@ public class CurrencyConversion5 {
 	 * CurrencyConversion1.mmSourceCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion5, ActiveCurrencyCode> mmSourceCurrency = new MMMessageAttribute<CurrencyConversion5, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion5.mmObject();
@@ -148,6 +148,16 @@ public class CurrencyConversion5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CurrencyConversion5 obj) {
+			return obj.getSourceCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion5 obj, ActiveCurrencyCode value) {
+			obj.setSourceCurrency(value);
 		}
 	};
 	@XmlElement(name = "SrcCcyNmrc", required = true)
@@ -187,7 +197,7 @@ public class CurrencyConversion5 {
 	 * CurrencyConversion1.mmSourceCurrencyNumeric}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceCurrencyNumeric = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion5, ActiveCurrencyCode> mmSourceCurrencyNumeric = new MMMessageAttribute<CurrencyConversion5, ActiveCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion5.mmObject();
 			isDerived = false;
@@ -199,6 +209,16 @@ public class CurrencyConversion5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CurrencyConversion5 obj) {
+			return obj.getSourceCurrencyNumeric();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion5 obj, ActiveCurrencyCode value) {
+			obj.setSourceCurrencyNumeric(value);
 		}
 	};
 	@XmlElement(name = "TrgtCcy", required = true)
@@ -243,7 +263,7 @@ public class CurrencyConversion5 {
 	 * CurrencyConversion1.mmTargetCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion5, ActiveCurrencyCode> mmTargetCurrency = new MMMessageAttribute<CurrencyConversion5, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion5.mmObject();
@@ -256,6 +276,16 @@ public class CurrencyConversion5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CurrencyConversion5 obj) {
+			return obj.getTargetCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion5 obj, ActiveCurrencyCode value) {
+			obj.setTargetCurrency(value);
 		}
 	};
 	@XmlElement(name = "TrgtCcyNmrc", required = true)
@@ -295,7 +325,7 @@ public class CurrencyConversion5 {
 	 * CurrencyConversion1.mmTargetCurrencyNumeric}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetCurrencyNumeric = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion5, Exact3NumericText> mmTargetCurrencyNumeric = new MMMessageAttribute<CurrencyConversion5, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion5.mmObject();
 			isDerived = false;
@@ -307,6 +337,16 @@ public class CurrencyConversion5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CurrencyConversion5 obj) {
+			return obj.getTargetCurrencyNumeric();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion5 obj, Exact3NumericText value) {
+			obj.setTargetCurrencyNumeric(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -348,7 +388,7 @@ public class CurrencyConversion5 {
 	 * CurrencyConversion1.mmExchangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion5, BaseOneRate> mmRate = new MMMessageAttribute<CurrencyConversion5, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion5.mmObject();
@@ -361,6 +401,16 @@ public class CurrencyConversion5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(CurrencyConversion5 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion5 obj, BaseOneRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "ClctdAmt", required = true)
@@ -403,7 +453,7 @@ public class CurrencyConversion5 {
 	 * CurrencyConversion1.mmResultingAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion5, ImpliedCurrencyAndAmount> mmCalculatedAmount = new MMMessageAttribute<CurrencyConversion5, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion5.mmObject();
@@ -416,6 +466,16 @@ public class CurrencyConversion5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(CurrencyConversion5 obj) {
+			return obj.getCalculatedAmount();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion5 obj, ImpliedCurrencyAndAmount value) {
+			obj.setCalculatedAmount(value);
 		}
 	};
 

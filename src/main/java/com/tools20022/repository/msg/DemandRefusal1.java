@@ -29,6 +29,9 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingStatus;
 import com.tools20022.repository.entity.UndertakingStatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Demand2;
+import com.tools20022.repository.msg.Discrepancy1;
+import com.tools20022.repository.msg.Undertaking9;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -138,7 +141,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DemandRefusal1, Undertaking9> mmUndertakingIdentification = new MMMessageAssociationEnd<DemandRefusal1, Undertaking9>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmUndertaking;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandRefusal1.mmObject();
@@ -150,7 +153,17 @@ public class DemandRefusal1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
+			type_lazy = () -> Undertaking9.mmObject();
+		}
+
+		@Override
+		public Undertaking9 getValue(DemandRefusal1 obj) {
+			return obj.getUndertakingIdentification();
+		}
+
+		@Override
+		public void setValue(DemandRefusal1 obj, Undertaking9 value) {
+			obj.setUndertakingIdentification(value);
 		}
 	};
 	@XmlElement(name = "AdvsgPtyRefNb")
@@ -183,7 +196,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DemandRefusal1, Optional<Max35Text>> mmAdvisingPartyReferenceNumber = new MMMessageAttribute<DemandRefusal1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandRefusal1.mmObject();
 			isDerived = false;
@@ -194,6 +207,16 @@ public class DemandRefusal1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DemandRefusal1 obj) {
+			return obj.getAdvisingPartyReferenceNumber();
+		}
+
+		@Override
+		public void setValue(DemandRefusal1 obj, Optional<Max35Text> value) {
+			obj.setAdvisingPartyReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndAdvsgPtyRefNb")
@@ -226,7 +249,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondAdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DemandRefusal1, Optional<Max35Text>> mmSecondAdvisingPartyReferenceNumber = new MMMessageAttribute<DemandRefusal1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandRefusal1.mmObject();
 			isDerived = false;
@@ -237,6 +260,16 @@ public class DemandRefusal1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DemandRefusal1 obj) {
+			return obj.getSecondAdvisingPartyReferenceNumber();
+		}
+
+		@Override
+		public void setValue(DemandRefusal1 obj, Optional<Max35Text> value) {
+			obj.setSecondAdvisingPartyReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CnfrmrRefNb")
@@ -269,7 +302,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DemandRefusal1, Optional<Max35Text>> mmConfirmerReferenceNumber = new MMMessageAttribute<DemandRefusal1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandRefusal1.mmObject();
 			isDerived = false;
@@ -280,6 +313,16 @@ public class DemandRefusal1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DemandRefusal1 obj) {
+			return obj.getConfirmerReferenceNumber();
+		}
+
+		@Override
+		public void setValue(DemandRefusal1 obj, Optional<Max35Text> value) {
+			obj.setConfirmerReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DmndDtls", required = true)
@@ -313,7 +356,7 @@ public class DemandRefusal1 {
 	 * definition} = "Details related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDemandDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DemandRefusal1, Demand2> mmDemandDetails = new MMMessageAssociationEnd<DemandRefusal1, Demand2>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmDemand;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandRefusal1.mmObject();
@@ -325,7 +368,17 @@ public class DemandRefusal1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Demand2.mmObject();
+			type_lazy = () -> Demand2.mmObject();
+		}
+
+		@Override
+		public Demand2 getValue(DemandRefusal1 obj) {
+			return obj.getDemandDetails();
+		}
+
+		@Override
+		public void setValue(DemandRefusal1 obj, Demand2 value) {
+			obj.setDemandDetails(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -364,7 +417,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DemandRefusal1, Refused7Text> mmStatus = new MMMessageAttribute<DemandRefusal1, Refused7Text>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatus.mmDemandStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandRefusal1.mmObject();
@@ -377,9 +430,19 @@ public class DemandRefusal1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Refused7Text.mmObject();
 		}
+
+		@Override
+		public Refused7Text getValue(DemandRefusal1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(DemandRefusal1 obj, Refused7Text value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "Dscrpncy")
-	protected List<com.tools20022.repository.msg.Discrepancy1> discrepancy;
+	protected List<Discrepancy1> discrepancy;
 	/**
 	 * 
 	 <p>
@@ -410,7 +473,7 @@ public class DemandRefusal1 {
 	 * definition} = "Details related to the discrepancies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDiscrepancy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DemandRefusal1, List<Discrepancy1>> mmDiscrepancy = new MMMessageAssociationEnd<DemandRefusal1, List<Discrepancy1>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatusReason.mmDiscrepancy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandRefusal1.mmObject();
@@ -421,7 +484,17 @@ public class DemandRefusal1 {
 			definition = "Details related to the discrepancies.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Discrepancy1.mmObject();
+			type_lazy = () -> Discrepancy1.mmObject();
+		}
+
+		@Override
+		public List<Discrepancy1> getValue(DemandRefusal1 obj) {
+			return obj.getDiscrepancy();
+		}
+
+		@Override
+		public void setValue(DemandRefusal1 obj, List<Discrepancy1> value) {
+			obj.setDiscrepancy(value);
 		}
 	};
 	@XmlElement(name = "DspstnOfDocs")
@@ -454,7 +527,7 @@ public class DemandRefusal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDispositionOfDocuments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DemandRefusal1, List<Max2000Text>> mmDispositionOfDocuments = new MMMessageAttribute<DemandRefusal1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandRefusal1.mmObject();
 			isDerived = false;
@@ -465,6 +538,16 @@ public class DemandRefusal1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(DemandRefusal1 obj) {
+			return obj.getDispositionOfDocuments();
+		}
+
+		@Override
+		public void setValue(DemandRefusal1 obj, List<Max2000Text> value) {
+			obj.setDispositionOfDocuments(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -495,7 +578,7 @@ public class DemandRefusal1 {
 	 * definition} = "Additional information related to the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DemandRefusal1, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<DemandRefusal1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandRefusal1.mmObject();
 			isDerived = false;
@@ -506,6 +589,16 @@ public class DemandRefusal1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(DemandRefusal1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(DemandRefusal1 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -531,7 +624,7 @@ public class DemandRefusal1 {
 		return undertakingIdentification;
 	}
 
-	public DemandRefusal1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
+	public DemandRefusal1 setUndertakingIdentification(Undertaking9 undertakingIdentification) {
 		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
 		return this;
 	}
@@ -567,7 +660,7 @@ public class DemandRefusal1 {
 		return demandDetails;
 	}
 
-	public DemandRefusal1 setDemandDetails(com.tools20022.repository.msg.Demand2 demandDetails) {
+	public DemandRefusal1 setDemandDetails(Demand2 demandDetails) {
 		this.demandDetails = Objects.requireNonNull(demandDetails);
 		return this;
 	}
@@ -585,7 +678,7 @@ public class DemandRefusal1 {
 		return discrepancy == null ? discrepancy = new ArrayList<>() : discrepancy;
 	}
 
-	public DemandRefusal1 setDiscrepancy(List<com.tools20022.repository.msg.Discrepancy1> discrepancy) {
+	public DemandRefusal1 setDiscrepancy(List<Discrepancy1> discrepancy) {
 		this.discrepancy = Objects.requireNonNull(discrepancy);
 		return this;
 	}

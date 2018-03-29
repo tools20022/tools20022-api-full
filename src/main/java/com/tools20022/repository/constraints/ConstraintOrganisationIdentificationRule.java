@@ -52,11 +52,15 @@ public class ConstraintOrganisationIdentificationRule {
 	 */
 	public static final MMConstraint<Organisation14> forOrganisation14 = new MMConstraint<Organisation14>() {
 		{
-			validator = ConstraintOrganisationIdentificationRule::checkOrganisation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentificationRule";
 			definition = "In case of conflict between the Organisation Identification and the Full Legal Name, it is recommended that the account servicer ask for clarification by means of an AdditionalInformationRequest message.";
 			owner_lazy = () -> Organisation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Organisation14 obj) throws Exception {
+			checkOrganisation14(obj);
 		}
 	};
 	/**
@@ -86,12 +90,16 @@ public class ConstraintOrganisationIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification96> forPartyIdentification96 = new MMConstraint<PartyIdentification96>() {
 		{
-			validator = ConstraintOrganisationIdentificationRule::checkPartyIdentification96;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentificationRule";
 			definition = "Either Identification or Legal Entity Identifier must be present. Both Identification and Legal Entity Identifier may be present.";
 			owner_lazy = () -> PartyIdentification96.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Identification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LegalEntityIdentifier</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification96 obj) throws Exception {
+			checkPartyIdentification96(obj);
 		}
 	};
 

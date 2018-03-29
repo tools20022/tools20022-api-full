@@ -106,7 +106,7 @@ public class AmountAndRateStatus2 {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndRateStatus2, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<AmountAndRateStatus2, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndRateStatus2.mmObject();
@@ -118,6 +118,16 @@ public class AmountAndRateStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(AmountAndRateStatus2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndRateStatus2 obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateSts", required = true)
@@ -155,7 +165,7 @@ public class AmountAndRateStatus2 {
 	 * definition} = "Value expressed as a rate status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndRateStatus2, RateStatus1Code> mmRateStatus = new MMMessageAttribute<AmountAndRateStatus2, RateStatus1Code>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndRateStatus2.mmObject();
@@ -167,6 +177,16 @@ public class AmountAndRateStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateStatus1Code.mmObject();
+		}
+
+		@Override
+		public RateStatus1Code getValue(AmountAndRateStatus2 obj) {
+			return obj.getRateStatus();
+		}
+
+		@Override
+		public void setValue(AmountAndRateStatus2 obj, RateStatus1Code value) {
+			obj.setRateStatus(value);
 		}
 	};
 

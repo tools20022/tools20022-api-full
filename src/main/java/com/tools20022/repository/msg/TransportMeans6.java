@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MultimodalTransport3;
+import com.tools20022.repository.msg.SingleTransport8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +114,7 @@ public class TransportMeans6 {
 	 * TransportMeans4.mmIndividualTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportMeans6, SingleTransport8> mmIndividualTransport = new MMMessageAssociationEnd<TransportMeans6, SingleTransport8>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans6.mmObject();
@@ -125,7 +127,17 @@ public class TransportMeans6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SingleTransport8.mmObject();
+			type_lazy = () -> SingleTransport8.mmObject();
+		}
+
+		@Override
+		public SingleTransport8 getValue(TransportMeans6 obj) {
+			return obj.getIndividualTransport();
+		}
+
+		@Override
+		public void setValue(TransportMeans6 obj, SingleTransport8 value) {
+			obj.setIndividualTransport(value);
 		}
 	};
 	@XmlElement(name = "MltmdlTrnsprt")
@@ -167,7 +179,7 @@ public class TransportMeans6 {
 	 * TransportMeans4.mmMultimodalTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultimodalTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportMeans6, Optional<MultimodalTransport3>> mmMultimodalTransport = new MMMessageAssociationEnd<TransportMeans6, Optional<MultimodalTransport3>>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportMeans6.mmObject();
@@ -180,7 +192,17 @@ public class TransportMeans6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MultimodalTransport3.mmObject();
+			type_lazy = () -> MultimodalTransport3.mmObject();
+		}
+
+		@Override
+		public Optional<MultimodalTransport3> getValue(TransportMeans6 obj) {
+			return obj.getMultimodalTransport();
+		}
+
+		@Override
+		public void setValue(TransportMeans6 obj, Optional<MultimodalTransport3> value) {
+			obj.setMultimodalTransport(value.orElse(null));
 		}
 	};
 
@@ -203,7 +225,7 @@ public class TransportMeans6 {
 		return individualTransport;
 	}
 
-	public TransportMeans6 setIndividualTransport(com.tools20022.repository.msg.SingleTransport8 individualTransport) {
+	public TransportMeans6 setIndividualTransport(SingleTransport8 individualTransport) {
 		this.individualTransport = Objects.requireNonNull(individualTransport);
 		return this;
 	}
@@ -212,7 +234,7 @@ public class TransportMeans6 {
 		return multimodalTransport == null ? Optional.empty() : Optional.of(multimodalTransport);
 	}
 
-	public TransportMeans6 setMultimodalTransport(com.tools20022.repository.msg.MultimodalTransport3 multimodalTransport) {
+	public TransportMeans6 setMultimodalTransport(MultimodalTransport3 multimodalTransport) {
 		this.multimodalTransport = multimodalTransport;
 		return this;
 	}

@@ -108,7 +108,7 @@ public class Commission21 {
 	 * definition} = "Type of commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommissionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission21, CommissionType5Choice> mmCommissionType = new MMMessageAssociationEnd<Commission21, CommissionType5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission21.mmObject();
@@ -121,6 +121,16 @@ public class Commission21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CommissionType5Choice.mmObject();
+		}
+
+		@Override
+		public CommissionType5Choice getValue(Commission21 obj) {
+			return obj.getCommissionType();
+		}
+
+		@Override
+		public void setValue(Commission21 obj, CommissionType5Choice value) {
+			obj.setCommissionType(value);
 		}
 	};
 	@XmlElement(name = "ComssnApld", required = true)
@@ -155,7 +165,7 @@ public class Commission21 {
 	 * definition} = "Commission amount or commission rate applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommissionApplied = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission21, AmountOrRate3Choice> mmCommissionApplied = new MMMessageAssociationEnd<Commission21, AmountOrRate3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission21.mmObject();
@@ -168,6 +178,16 @@ public class Commission21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountOrRate3Choice.mmObject();
+		}
+
+		@Override
+		public AmountOrRate3Choice getValue(Commission21 obj) {
+			return obj.getCommissionApplied();
+		}
+
+		@Override
+		public void setValue(Commission21 obj, AmountOrRate3Choice value) {
+			obj.setCommissionApplied(value);
 		}
 	};
 

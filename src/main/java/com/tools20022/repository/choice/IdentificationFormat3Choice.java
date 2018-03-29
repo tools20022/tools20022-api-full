@@ -118,7 +118,7 @@ public class IdentificationFormat3Choice {
 	 * IdentificationFormat1Choice.mmShortIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationFormat3Choice, Exact3UpperCaseAlphaNumericText> mmShortIdentification = new MMMessageAttribute<IdentificationFormat3Choice, Exact3UpperCaseAlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat3Choice.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class IdentificationFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3UpperCaseAlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact3UpperCaseAlphaNumericText getValue(IdentificationFormat3Choice obj) {
+			return obj.getShortIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationFormat3Choice obj, Exact3UpperCaseAlphaNumericText value) {
+			obj.setShortIdentification(value);
 		}
 	};
 	@XmlElement(name = "LngId", required = true)
@@ -170,7 +180,7 @@ public class IdentificationFormat3Choice {
 	 * IdentificationFormat1Choice.mmLongIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationFormat3Choice, Max30Text> mmLongIdentification = new MMMessageAttribute<IdentificationFormat3Choice, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat3Choice.mmObject();
 			isDerived = false;
@@ -183,6 +193,16 @@ public class IdentificationFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(IdentificationFormat3Choice obj) {
+			return obj.getLongIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationFormat3Choice obj, Max30Text value) {
+			obj.setLongIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -219,7 +239,7 @@ public class IdentificationFormat3Choice {
 	 * IdentificationFormat1Choice.mmProprietaryIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationFormat3Choice, GenericIdentification36> mmProprietaryIdentification = new MMMessageAssociationEnd<IdentificationFormat3Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat3Choice.mmObject();
 			isDerived = false;
@@ -232,6 +252,16 @@ public class IdentificationFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(IdentificationFormat3Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationFormat3Choice obj, GenericIdentification36 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

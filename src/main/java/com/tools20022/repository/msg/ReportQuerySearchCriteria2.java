@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.DatePeriodSearch1Choice;
 import com.tools20022.repository.choice.DateTimePeriod1Choice;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashBalance9;
+import com.tools20022.repository.msg.PartyIdentification100;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -125,7 +127,7 @@ public class ReportQuerySearchCriteria2 {
 	 * ReportQuerySearchCriteria1.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportQuerySearchCriteria2, List<AccountIdentificationSearchCriteria2Choice>> mmAccountIdentification = new MMMessageAssociationEnd<ReportQuerySearchCriteria2, List<AccountIdentificationSearchCriteria2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria2.mmObject();
 			isDerived = false;
@@ -138,9 +140,19 @@ public class ReportQuerySearchCriteria2 {
 			isComposite = true;
 			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
+
+		@Override
+		public List<AccountIdentificationSearchCriteria2Choice> getValue(ReportQuerySearchCriteria2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria2 obj, List<AccountIdentificationSearchCriteria2Choice> value) {
+			obj.setAccountIdentification(value);
+		}
 	};
 	@XmlElement(name = "Bal")
-	protected List<com.tools20022.repository.msg.CashBalance9> balance;
+	protected List<CashBalance9> balance;
 	/**
 	 * 
 	 <p>
@@ -174,7 +186,7 @@ public class ReportQuerySearchCriteria2 {
 	 * ReportQuerySearchCriteria1.mmBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportQuerySearchCriteria2, List<CashBalance9>> mmBalance = new MMMessageAssociationEnd<ReportQuerySearchCriteria2, List<CashBalance9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria2.mmObject();
 			isDerived = false;
@@ -185,7 +197,17 @@ public class ReportQuerySearchCriteria2 {
 			previousVersion_lazy = () -> ReportQuerySearchCriteria1.mmBalance;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalance9.mmObject();
+			type_lazy = () -> CashBalance9.mmObject();
+		}
+
+		@Override
+		public List<CashBalance9> getValue(ReportQuerySearchCriteria2 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria2 obj, List<CashBalance9> value) {
+			obj.setBalance(value);
 		}
 	};
 	@XmlElement(name = "RptNm")
@@ -223,7 +245,7 @@ public class ReportQuerySearchCriteria2 {
 	 * ReportQuerySearchCriteria1.mmReportName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria2, Optional<Max4AlphaNumericText>> mmReportName = new MMMessageAttribute<ReportQuerySearchCriteria2, Optional<Max4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria2.mmObject();
 			isDerived = false;
@@ -235,6 +257,16 @@ public class ReportQuerySearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(ReportQuerySearchCriteria2 obj) {
+			return obj.getReportName();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria2 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setReportName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyId", required = true)
@@ -272,7 +304,7 @@ public class ReportQuerySearchCriteria2 {
 	 * ReportQuerySearchCriteria1.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria2, PartyIdentification100> mmPartyIdentification = new MMMessageAttribute<ReportQuerySearchCriteria2, PartyIdentification100>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria2.mmObject();
 			isDerived = false;
@@ -283,7 +315,17 @@ public class ReportQuerySearchCriteria2 {
 			previousVersion_lazy = () -> ReportQuerySearchCriteria1.mmPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100 getValue(ReportQuerySearchCriteria2 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria2 obj, PartyIdentification100 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "RspnsblPtyId")
@@ -321,7 +363,7 @@ public class ReportQuerySearchCriteria2 {
 	 * ReportQuerySearchCriteria1.mmResponsiblePartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria2, Optional<PartyIdentification100>> mmResponsiblePartyIdentification = new MMMessageAttribute<ReportQuerySearchCriteria2, Optional<PartyIdentification100>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria2.mmObject();
 			isDerived = false;
@@ -332,7 +374,17 @@ public class ReportQuerySearchCriteria2 {
 			previousVersion_lazy = () -> ReportQuerySearchCriteria1.mmResponsiblePartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification100> getValue(ReportQuerySearchCriteria2 obj) {
+			return obj.getResponsiblePartyIdentification();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria2 obj, Optional<PartyIdentification100> value) {
+			obj.setResponsiblePartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtSch")
@@ -370,7 +422,7 @@ public class ReportQuerySearchCriteria2 {
 	 * ReportQuerySearchCriteria1.mmDateSearch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateSearch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria2, Optional<DatePeriodSearch1Choice>> mmDateSearch = new MMMessageAttribute<ReportQuerySearchCriteria2, Optional<DatePeriodSearch1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria2.mmObject();
 			isDerived = false;
@@ -382,6 +434,16 @@ public class ReportQuerySearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DatePeriodSearch1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodSearch1Choice> getValue(ReportQuerySearchCriteria2 obj) {
+			return obj.getDateSearch();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria2 obj, Optional<DatePeriodSearch1Choice> value) {
+			obj.setDateSearch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchdldTm")
@@ -421,7 +483,7 @@ public class ReportQuerySearchCriteria2 {
 	 * ReportQuerySearchCriteria1.mmScheduledTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria2, Optional<DateTimePeriod1Choice>> mmScheduledTime = new MMMessageAttribute<ReportQuerySearchCriteria2, Optional<DateTimePeriod1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria2.mmObject();
 			isDerived = false;
@@ -433,6 +495,16 @@ public class ReportQuerySearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriod1Choice> getValue(ReportQuerySearchCriteria2 obj) {
+			return obj.getScheduledTime();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria2 obj, Optional<DateTimePeriod1Choice> value) {
+			obj.setScheduledTime(value.orElse(null));
 		}
 	};
 
@@ -466,7 +538,7 @@ public class ReportQuerySearchCriteria2 {
 		return balance == null ? balance = new ArrayList<>() : balance;
 	}
 
-	public ReportQuerySearchCriteria2 setBalance(List<com.tools20022.repository.msg.CashBalance9> balance) {
+	public ReportQuerySearchCriteria2 setBalance(List<CashBalance9> balance) {
 		this.balance = Objects.requireNonNull(balance);
 		return this;
 	}
@@ -484,7 +556,7 @@ public class ReportQuerySearchCriteria2 {
 		return partyIdentification;
 	}
 
-	public ReportQuerySearchCriteria2 setPartyIdentification(com.tools20022.repository.msg.PartyIdentification100 partyIdentification) {
+	public ReportQuerySearchCriteria2 setPartyIdentification(PartyIdentification100 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}
@@ -493,7 +565,7 @@ public class ReportQuerySearchCriteria2 {
 		return responsiblePartyIdentification == null ? Optional.empty() : Optional.of(responsiblePartyIdentification);
 	}
 
-	public ReportQuerySearchCriteria2 setResponsiblePartyIdentification(com.tools20022.repository.msg.PartyIdentification100 responsiblePartyIdentification) {
+	public ReportQuerySearchCriteria2 setResponsiblePartyIdentification(PartyIdentification100 responsiblePartyIdentification) {
 		this.responsiblePartyIdentification = responsiblePartyIdentification;
 		return this;
 	}

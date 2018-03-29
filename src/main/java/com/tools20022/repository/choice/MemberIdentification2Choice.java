@@ -126,7 +126,7 @@ public class MemberIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberIdentification2Choice, BICFIIdentifier> mmBICFI = new MMMessageAttribute<MemberIdentification2Choice, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentification2Choice.mmObject();
@@ -138,6 +138,16 @@ public class MemberIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(MemberIdentification2Choice obj) {
+			return obj.getBICFI();
+		}
+
+		@Override
+		public void setValue(MemberIdentification2Choice obj, BICFIIdentifier value) {
+			obj.setBICFI(value);
 		}
 	};
 	@XmlElement(name = "ClrSysMmbId", required = true)
@@ -175,7 +185,7 @@ public class MemberIdentification2Choice {
 	 * "Information used to identify a member within a clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingSystemMemberIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberIdentification2Choice, ClearingSystemMemberIdentification2> mmClearingSystemMemberIdentification = new MMMessageAssociationEnd<MemberIdentification2Choice, ClearingSystemMemberIdentification2>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentification2Choice.mmObject();
@@ -188,6 +198,16 @@ public class MemberIdentification2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ClearingSystemMemberIdentification2.mmObject();
+		}
+
+		@Override
+		public ClearingSystemMemberIdentification2 getValue(MemberIdentification2Choice obj) {
+			return obj.getClearingSystemMemberIdentification();
+		}
+
+		@Override
+		public void setValue(MemberIdentification2Choice obj, ClearingSystemMemberIdentification2 value) {
+			obj.setClearingSystemMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -226,7 +246,7 @@ public class MemberIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberIdentification2Choice, GenericFinancialIdentification1> mmOther = new MMMessageAssociationEnd<MemberIdentification2Choice, GenericFinancialIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberIdentification2Choice.mmObject();
@@ -239,6 +259,16 @@ public class MemberIdentification2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericFinancialIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericFinancialIdentification1 getValue(MemberIdentification2Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(MemberIdentification2Choice obj, GenericFinancialIdentification1 value) {
+			obj.setOther(value);
 		}
 	};
 

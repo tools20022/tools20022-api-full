@@ -112,7 +112,7 @@ public class PartiallySettled21Choice {
 	 * RejectedReason20Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartiallySettled21Choice, SettledStatusReason2Code> mmCode = new MMMessageAttribute<PartiallySettled21Choice, SettledStatusReason2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartiallySettled21Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class PartiallySettled21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettledStatusReason2Code.mmObject();
+		}
+
+		@Override
+		public SettledStatusReason2Code getValue(PartiallySettled21Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PartiallySettled21Choice obj, SettledStatusReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class PartiallySettled21Choice {
 	 * RejectedReason20Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartiallySettled21Choice, GenericIdentification1> mmProprietary = new MMMessageAttribute<PartiallySettled21Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartiallySettled21Choice.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class PartiallySettled21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(PartiallySettled21Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PartiallySettled21Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

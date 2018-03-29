@@ -143,7 +143,7 @@ public class AccountManagementStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason2, Status12Choice> mmStatus = new MMMessageAttribute<AccountManagementStatusAndReason2, Status12Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason2.mmObject();
@@ -156,6 +156,16 @@ public class AccountManagementStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Status12Choice.mmObject();
+		}
+
+		@Override
+		public Status12Choice getValue(AccountManagementStatusAndReason2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason2 obj, Status12Choice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -197,7 +207,7 @@ public class AccountManagementStatusAndReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason2, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<AccountManagementStatusAndReason2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason2.mmObject();
 			isDerived = false;
@@ -209,6 +219,16 @@ public class AccountManagementStatusAndReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementStatusAndReason2 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason2 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 

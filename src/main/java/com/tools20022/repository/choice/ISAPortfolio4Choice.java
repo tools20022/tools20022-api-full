@@ -118,7 +118,7 @@ public class ISAPortfolio4Choice {
 	 * ISAPortfolio3Choice.mmISA}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISAPortfolio4Choice, ISAYearsOfIssue7> mmISA = new MMMessageAssociationEnd<ISAPortfolio4Choice, ISAYearsOfIssue7>() {
 		{
 			businessElementTrace_lazy = () -> Portfolio.mmTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ISAPortfolio4Choice.mmObject();
@@ -132,6 +132,16 @@ public class ISAPortfolio4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ISAYearsOfIssue7.mmObject();
+		}
+
+		@Override
+		public ISAYearsOfIssue7 getValue(ISAPortfolio4Choice obj) {
+			return obj.getISA();
+		}
+
+		@Override
+		public void setValue(ISAPortfolio4Choice obj, ISAYearsOfIssue7 value) {
+			obj.setISA(value);
 		}
 	};
 	@XmlElement(name = "Prtfl", required = true)
@@ -174,7 +184,7 @@ public class ISAPortfolio4Choice {
 	 * ISAPortfolio3Choice.mmPortfolio}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortfolio = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISAPortfolio4Choice, Portfolio1> mmPortfolio = new MMMessageAttribute<ISAPortfolio4Choice, Portfolio1>() {
 		{
 			businessComponentTrace_lazy = () -> Portfolio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ISAPortfolio4Choice.mmObject();
@@ -187,6 +197,16 @@ public class ISAPortfolio4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Portfolio1.mmObject();
+		}
+
+		@Override
+		public Portfolio1 getValue(ISAPortfolio4Choice obj) {
+			return obj.getPortfolio();
+		}
+
+		@Override
+		public void setValue(ISAPortfolio4Choice obj, Portfolio1 value) {
+			obj.setPortfolio(value);
 		}
 	};
 

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.IdentificationAssignment1;
 import com.tools20022.repository.msg.IdentificationVerification1;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,7 +128,7 @@ public class IdentificationVerificationRequestV01 {
 	 * definition} = "Identifies the identification assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IdentificationVerificationRequestV01, IdentificationAssignment1> mmAssignment = new MMMessageBuildingBlock<IdentificationVerificationRequestV01, IdentificationAssignment1>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,12 +139,14 @@ public class IdentificationVerificationRequestV01 {
 			complexType_lazy = () -> IdentificationAssignment1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationVerificationRequestV01.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IdentificationAssignment1 getValue(IdentificationVerificationRequestV01 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(IdentificationVerificationRequestV01 obj, IdentificationAssignment1 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Vrfctn", required = true)
@@ -175,7 +176,7 @@ public class IdentificationVerificationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmVerification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IdentificationVerificationRequestV01, List<IdentificationVerification1>> mmVerification = new MMMessageBuildingBlock<IdentificationVerificationRequestV01, List<IdentificationVerification1>>() {
 		{
 			xmlTag = "Vrfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,12 +186,14 @@ public class IdentificationVerificationRequestV01 {
 			complexType_lazy = () -> IdentificationVerification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationVerificationRequestV01.class.getMethod("getVerification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<IdentificationVerification1> getValue(IdentificationVerificationRequestV01 obj) {
+			return obj.getVerification();
+		}
+
+		@Override
+		public void setValue(IdentificationVerificationRequestV01 obj, List<IdentificationVerification1> value) {
+			obj.setVerification(value);
 		}
 	};
 

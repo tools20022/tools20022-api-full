@@ -53,11 +53,15 @@ public class ConstraintChargesInformationGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation2> forCreditTransferTransactionInformation2 = new MMConstraint<CreditTransferTransactionInformation2>() {
 		{
-			validator = ConstraintChargesInformationGuideline::checkCreditTransferTransactionInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationGuideline";
 			definition = "The repetitive ChargesInformation should contain all separate information on charges amount and which party has taken the charges for all agents along the payment chain.";
 			owner_lazy = () -> CreditTransferTransactionInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation2 obj) throws Exception {
+			checkCreditTransferTransactionInformation2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintChargesInformationGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation11> forCreditTransferTransactionInformation11 = new MMConstraint<CreditTransferTransactionInformation11>() {
 		{
-			validator = ConstraintChargesInformationGuideline::checkCreditTransferTransactionInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationGuideline";
 			definition = "The repetitive ChargesInformation should contain all information on charges amount and which party has taken the charges, separately for each agent along the payment chain.";
 			owner_lazy = () -> CreditTransferTransactionInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation11 obj) throws Exception {
+			checkCreditTransferTransactionInformation11(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintChargesInformationGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction2> forCreditTransferTransaction2 = new MMConstraint<CreditTransferTransaction2>() {
 		{
-			validator = ConstraintChargesInformationGuideline::checkCreditTransferTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationGuideline";
 			definition = "The repetitive ChargesInformation should contain all information on charges amount and which party has taken the charges, separately for each agent along the payment chain.";
 			owner_lazy = () -> CreditTransferTransaction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction2 obj) throws Exception {
+			checkCreditTransferTransaction2(obj);
 		}
 	};
 	/**
@@ -151,12 +163,16 @@ public class ConstraintChargesInformationGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction7> forCreditTransferTransaction7 = new MMConstraint<CreditTransferTransaction7>() {
 		{
-			validator = ConstraintChargesInformationGuideline::checkCreditTransferTransaction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationGuideline";
 			definition = "The repetitive ChargesInformation should contain all information on charges amount and which party has taken the charges, separately for each agent along the payment chain.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesInformationGuideline.forCreditTransferTransaction19);
 			owner_lazy = () -> CreditTransferTransaction7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction7 obj) throws Exception {
+			checkCreditTransferTransaction7(obj);
 		}
 	};
 	/**
@@ -182,11 +198,15 @@ public class ConstraintChargesInformationGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation7> forCreditTransferTransactionInformation7 = new MMConstraint<CreditTransferTransactionInformation7>() {
 		{
-			validator = ConstraintChargesInformationGuideline::checkCreditTransferTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationGuideline";
 			definition = "The repetitive ChargesInformation should contain all separate information on charges amount and which party has taken the charges for all agents along the payment chain.";
 			owner_lazy = () -> CreditTransferTransactionInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation7 obj) throws Exception {
+			checkCreditTransferTransactionInformation7(obj);
 		}
 	};
 	/**
@@ -212,11 +232,15 @@ public class ConstraintChargesInformationGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation9> forCreditTransferTransactionInformation9 = new MMConstraint<CreditTransferTransactionInformation9>() {
 		{
-			validator = ConstraintChargesInformationGuideline::checkCreditTransferTransactionInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationGuideline";
 			definition = "ISO20022 Guideline: \nThe repetitive ChargesInformation should contain all separate information on charges amount and which party has taken the charges for all agents along the payment chain.";
 			owner_lazy = () -> CreditTransferTransactionInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation9 obj) throws Exception {
+			checkCreditTransferTransactionInformation9(obj);
 		}
 	};
 	/**
@@ -255,13 +279,17 @@ public class ConstraintChargesInformationGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction19> forCreditTransferTransaction19 = new MMConstraint<CreditTransferTransaction19>() {
 		{
-			validator = ConstraintChargesInformationGuideline::checkCreditTransferTransaction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationGuideline";
 			definition = "The repetitive ChargesInformation should contain all information on charges amount and which party has taken the charges, separately for each agent along the payment chain.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesInformationGuideline.forCreditTransferTransaction25);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesInformationGuideline.forCreditTransferTransaction7;
 			owner_lazy = () -> CreditTransferTransaction19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction19 obj) throws Exception {
+			checkCreditTransferTransaction19(obj);
 		}
 	};
 	/**
@@ -292,12 +320,16 @@ public class ConstraintChargesInformationGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction25> forCreditTransferTransaction25 = new MMConstraint<CreditTransferTransaction25>() {
 		{
-			validator = ConstraintChargesInformationGuideline::checkCreditTransferTransaction25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationGuideline";
 			definition = "The repetitive ChargesInformation should contain all information on charges amount and which party has taken the charges, separately for each agent along the payment chain.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesInformationGuideline.forCreditTransferTransaction19;
 			owner_lazy = () -> CreditTransferTransaction25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction25 obj) throws Exception {
+			checkCreditTransferTransaction25(obj);
 		}
 	};
 	/**
@@ -323,11 +355,15 @@ public class ConstraintChargesInformationGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction30> forCreditTransferTransaction30 = new MMConstraint<CreditTransferTransaction30>() {
 		{
-			validator = ConstraintChargesInformationGuideline::checkCreditTransferTransaction30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationGuideline";
 			definition = "The repetitive ChargesInformation should contain all information on charges amount and which party has taken the charges, separately for each agent along the payment chain.";
 			owner_lazy = () -> CreditTransferTransaction30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction30 obj) throws Exception {
+			checkCreditTransferTransaction30(obj);
 		}
 	};
 

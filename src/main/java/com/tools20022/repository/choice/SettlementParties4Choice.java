@@ -121,7 +121,7 @@ public class SettlementParties4Choice {
 	 * SettlementParties2Choice.mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties4Choice, Optional<DeliveringPartiesAndAccount11>> mmDeliveringSettlementParties = new MMMessageAssociationEnd<SettlementParties4Choice, Optional<DeliveringPartiesAndAccount11>>() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementParties4Choice.mmObject();
@@ -135,6 +135,16 @@ public class SettlementParties4Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DeliveringPartiesAndAccount11.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveringPartiesAndAccount11> getValue(SettlementParties4Choice obj) {
+			return obj.getDeliveringSettlementParties();
+		}
+
+		@Override
+		public void setValue(SettlementParties4Choice obj, Optional<DeliveringPartiesAndAccount11> value) {
+			obj.setDeliveringSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvgSttlmPties")
@@ -178,7 +188,7 @@ public class SettlementParties4Choice {
 	 * SettlementParties2Choice.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties4Choice, Optional<ReceivingPartiesAndAccount11>> mmReceivingSettlementParties = new MMMessageAssociationEnd<SettlementParties4Choice, Optional<ReceivingPartiesAndAccount11>>() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementParties4Choice.mmObject();
@@ -192,6 +202,16 @@ public class SettlementParties4Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReceivingPartiesAndAccount11.mmObject();
+		}
+
+		@Override
+		public Optional<ReceivingPartiesAndAccount11> getValue(SettlementParties4Choice obj) {
+			return obj.getReceivingSettlementParties();
+		}
+
+		@Override
+		public void setValue(SettlementParties4Choice obj, Optional<ReceivingPartiesAndAccount11> value) {
+			obj.setReceivingSettlementParties(value.orElse(null));
 		}
 	};
 

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DetailedAmount4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -141,7 +142,7 @@ public class ATMTransactionAmounts2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts2, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<ATMTransactionAmounts2, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
@@ -154,6 +155,16 @@ public class ATMTransactionAmounts2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(ATMTransactionAmounts2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts2 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAuthsbAmt")
@@ -201,7 +212,7 @@ public class ATMTransactionAmounts2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAuthorisableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts2, Optional<ImpliedCurrencyAndAmount>> mmMaximumAuthorisableAmount = new MMMessageAttribute<ATMTransactionAmounts2, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAvailableAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
@@ -214,6 +225,16 @@ public class ATMTransactionAmounts2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTransactionAmounts2 obj) {
+			return obj.getMaximumAuthorisableAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts2 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumAuthorisableAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinAllwdAmt")
@@ -260,7 +281,7 @@ public class ATMTransactionAmounts2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumAllowedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts2, Optional<ImpliedCurrencyAndAmount>> mmMinimumAllowedAmount = new MMMessageAttribute<ATMTransactionAmounts2, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
@@ -273,6 +294,16 @@ public class ATMTransactionAmounts2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTransactionAmounts2 obj) {
+			return obj.getMinimumAllowedAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts2 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMinimumAllowedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAllwdAmt")
@@ -319,7 +350,7 @@ public class ATMTransactionAmounts2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAllowedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts2, Optional<ImpliedCurrencyAndAmount>> mmMaximumAllowedAmount = new MMMessageAttribute<ATMTransactionAmounts2, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
@@ -332,6 +363,16 @@ public class ATMTransactionAmounts2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTransactionAmounts2 obj) {
+			return obj.getMaximumAllowedAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts2 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumAllowedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DalyBal")
@@ -375,7 +416,7 @@ public class ATMTransactionAmounts2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDailyBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransactionAmounts2, Optional<DetailedAmount4>> mmDailyBalance = new MMMessageAssociationEnd<ATMTransactionAmounts2, Optional<DetailedAmount4>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
@@ -388,7 +429,17 @@ public class ATMTransactionAmounts2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
+			type_lazy = () -> DetailedAmount4.mmObject();
+		}
+
+		@Override
+		public Optional<DetailedAmount4> getValue(ATMTransactionAmounts2 obj) {
+			return obj.getDailyBalance();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts2 obj, Optional<DetailedAmount4> value) {
+			obj.setDailyBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WklyBal")
@@ -432,7 +483,7 @@ public class ATMTransactionAmounts2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWeeklyBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransactionAmounts2, Optional<DetailedAmount4>> mmWeeklyBalance = new MMMessageAssociationEnd<ATMTransactionAmounts2, Optional<DetailedAmount4>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
@@ -445,7 +496,17 @@ public class ATMTransactionAmounts2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
+			type_lazy = () -> DetailedAmount4.mmObject();
+		}
+
+		@Override
+		public Optional<DetailedAmount4> getValue(ATMTransactionAmounts2 obj) {
+			return obj.getWeeklyBalance();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts2 obj, Optional<DetailedAmount4> value) {
+			obj.setWeeklyBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MnthlyBal")
@@ -489,7 +550,7 @@ public class ATMTransactionAmounts2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMonthlyBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransactionAmounts2, Optional<DetailedAmount4>> mmMonthlyBalance = new MMMessageAssociationEnd<ATMTransactionAmounts2, Optional<DetailedAmount4>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts2.mmObject();
@@ -502,7 +563,17 @@ public class ATMTransactionAmounts2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
+			type_lazy = () -> DetailedAmount4.mmObject();
+		}
+
+		@Override
+		public Optional<DetailedAmount4> getValue(ATMTransactionAmounts2 obj) {
+			return obj.getMonthlyBalance();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts2 obj, Optional<DetailedAmount4> value) {
+			obj.setMonthlyBalance(value.orElse(null));
 		}
 	};
 
@@ -563,7 +634,7 @@ public class ATMTransactionAmounts2 {
 		return dailyBalance == null ? Optional.empty() : Optional.of(dailyBalance);
 	}
 
-	public ATMTransactionAmounts2 setDailyBalance(com.tools20022.repository.msg.DetailedAmount4 dailyBalance) {
+	public ATMTransactionAmounts2 setDailyBalance(DetailedAmount4 dailyBalance) {
 		this.dailyBalance = dailyBalance;
 		return this;
 	}
@@ -572,7 +643,7 @@ public class ATMTransactionAmounts2 {
 		return weeklyBalance == null ? Optional.empty() : Optional.of(weeklyBalance);
 	}
 
-	public ATMTransactionAmounts2 setWeeklyBalance(com.tools20022.repository.msg.DetailedAmount4 weeklyBalance) {
+	public ATMTransactionAmounts2 setWeeklyBalance(DetailedAmount4 weeklyBalance) {
 		this.weeklyBalance = weeklyBalance;
 		return this;
 	}
@@ -581,7 +652,7 @@ public class ATMTransactionAmounts2 {
 		return monthlyBalance == null ? Optional.empty() : Optional.of(monthlyBalance);
 	}
 
-	public ATMTransactionAmounts2 setMonthlyBalance(com.tools20022.repository.msg.DetailedAmount4 monthlyBalance) {
+	public ATMTransactionAmounts2 setMonthlyBalance(DetailedAmount4 monthlyBalance) {
 		this.monthlyBalance = monthlyBalance;
 		return this;
 	}

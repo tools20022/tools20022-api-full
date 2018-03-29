@@ -21,11 +21,12 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.rATMCommand6Code;
+import com.tools20022.repository.codeset.ATMCommand6Code;
 import com.tools20022.repository.codeset.TerminalManagementActionResult2Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCommandIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -86,7 +87,7 @@ public class ATMCommand11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Tp", required = true)
-	protected rATMCommand6Code type;
+	protected ATMCommand6Code type;
 	/**
 	 * 
 	 <p>
@@ -95,8 +96,8 @@ public class ATMCommand11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
 	 * simpleType} =
-	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code
-	 * rATMCommand6Code}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMCommand6Code
+	 * ATMCommand6Code}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -119,7 +120,7 @@ public class ATMCommand11 {
 	 * ATMCommand2.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommand11, ATMCommand6Code> mmType = new MMMessageAttribute<ATMCommand11, ATMCommand6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand11.mmObject();
 			isDerived = false;
@@ -130,7 +131,17 @@ public class ATMCommand11 {
 			previousVersion_lazy = () -> ATMCommand2.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
-			simpleType_lazy = () -> rATMCommand6Code.mmObject();
+			simpleType_lazy = () -> ATMCommand6Code.mmObject();
+		}
+
+		@Override
+		public ATMCommand6Code getValue(ATMCommand11 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ATMCommand11 obj, ATMCommand6Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "ReqrdDtTm")
@@ -167,7 +178,7 @@ public class ATMCommand11 {
 	 * ATMCommand2.mmRequiredDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequiredDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommand11, Optional<ISODateTime>> mmRequiredDateTime = new MMMessageAttribute<ATMCommand11, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand11.mmObject();
 			isDerived = false;
@@ -179,6 +190,16 @@ public class ATMCommand11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ATMCommand11 obj) {
+			return obj.getRequiredDateTime();
+		}
+
+		@Override
+		public void setValue(ATMCommand11 obj, Optional<ISODateTime> value) {
+			obj.setRequiredDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcdDtTm", required = true)
@@ -214,7 +235,7 @@ public class ATMCommand11 {
 	 * ATMCommand2.mmProcessedDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessedDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommand11, ISODateTime> mmProcessedDateTime = new MMMessageAttribute<ATMCommand11, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand11.mmObject();
 			isDerived = false;
@@ -226,6 +247,16 @@ public class ATMCommand11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ATMCommand11 obj) {
+			return obj.getProcessedDateTime();
+		}
+
+		@Override
+		public void setValue(ATMCommand11 obj, ISODateTime value) {
+			obj.setProcessedDateTime(value);
 		}
 	};
 	@XmlElement(name = "CmdId")
@@ -261,7 +292,7 @@ public class ATMCommand11 {
 	 * ATMCommand2.mmCommandIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCommand11, Optional<ATMCommandIdentification1>> mmCommandIdentification = new MMMessageAssociationEnd<ATMCommand11, Optional<ATMCommandIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand11.mmObject();
 			isDerived = false;
@@ -273,7 +304,17 @@ public class ATMCommand11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
+			type_lazy = () -> ATMCommandIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMCommandIdentification1> getValue(ATMCommand11 obj) {
+			return obj.getCommandIdentification();
+		}
+
+		@Override
+		public void setValue(ATMCommand11 obj, Optional<ATMCommandIdentification1> value) {
+			obj.setCommandIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rslt", required = true)
@@ -310,7 +351,7 @@ public class ATMCommand11 {
 	 * ATMCommand2.mmResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommand11, TerminalManagementActionResult2Code> mmResult = new MMMessageAttribute<ATMCommand11, TerminalManagementActionResult2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand11.mmObject();
 			isDerived = false;
@@ -322,6 +363,16 @@ public class ATMCommand11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult2Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementActionResult2Code getValue(ATMCommand11 obj) {
+			return obj.getResult();
+		}
+
+		@Override
+		public void setValue(ATMCommand11 obj, TerminalManagementActionResult2Code value) {
+			obj.setResult(value);
 		}
 	};
 	@XmlElement(name = "AddtlErrInf")
@@ -359,7 +410,7 @@ public class ATMCommand11 {
 	 * ATMCommand2.mmAdditionalErrorInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalErrorInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommand11, Optional<Max140Text>> mmAdditionalErrorInformation = new MMMessageAttribute<ATMCommand11, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand11.mmObject();
 			isDerived = false;
@@ -371,6 +422,16 @@ public class ATMCommand11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(ATMCommand11 obj) {
+			return obj.getAdditionalErrorInformation();
+		}
+
+		@Override
+		public void setValue(ATMCommand11 obj, Optional<Max140Text> value) {
+			obj.setAdditionalErrorInformation(value.orElse(null));
 		}
 	};
 
@@ -389,11 +450,11 @@ public class ATMCommand11 {
 		return mmObject_lazy.get();
 	}
 
-	public rATMCommand6Code getType() {
+	public ATMCommand6Code getType() {
 		return type;
 	}
 
-	public ATMCommand11 setType(rATMCommand6Code type) {
+	public ATMCommand11 setType(ATMCommand6Code type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}
@@ -420,7 +481,7 @@ public class ATMCommand11 {
 		return commandIdentification == null ? Optional.empty() : Optional.of(commandIdentification);
 	}
 
-	public ATMCommand11 setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+	public ATMCommand11 setCommandIdentification(ATMCommandIdentification1 commandIdentification) {
 		this.commandIdentification = commandIdentification;
 		return this;
 	}

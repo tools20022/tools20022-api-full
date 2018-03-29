@@ -98,7 +98,7 @@ public class ShareRanking1FormatChoice {
 	 * definition} = "Standard code to specify the share ranking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ShareRanking1FormatChoice, ShareRanking1Code> mmCode = new MMMessageAttribute<ShareRanking1FormatChoice, ShareRanking1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ShareRanking1FormatChoice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class ShareRanking1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShareRanking1Code.mmObject();
+		}
+
+		@Override
+		public ShareRanking1Code getValue(ShareRanking1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ShareRanking1FormatChoice obj, ShareRanking1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class ShareRanking1FormatChoice {
 	 * definition} = "Proprietary code to express the share ranking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ShareRanking1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<ShareRanking1FormatChoice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ShareRanking1FormatChoice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class ShareRanking1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(ShareRanking1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ShareRanking1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

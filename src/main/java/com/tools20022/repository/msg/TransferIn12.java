@@ -26,6 +26,10 @@ import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DeliverInformation14;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.InvestmentAccount40;
+import com.tools20022.repository.msg.Transfer29;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -147,7 +151,7 @@ public class TransferIn12 {
 	 * TransferIn9.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferIn12, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<TransferIn12, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferIn12.mmObject();
@@ -162,9 +166,19 @@ public class TransferIn12 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferIn12 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(TransferIn12 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TrfDtls", required = true)
-	protected List<com.tools20022.repository.msg.Transfer29> transferDetails;
+	protected List<Transfer29> transferDetails;
 	/**
 	 * 
 	 <p>
@@ -208,7 +222,7 @@ public class TransferIn12 {
 	 * TransferIn9.mmTransferDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferIn12, List<Transfer29>> mmTransferDetails = new MMMessageAssociationEnd<TransferIn12, List<Transfer29>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferIn12.mmObject();
@@ -221,7 +235,17 @@ public class TransferIn12 {
 			previousVersion_lazy = () -> TransferIn9.mmTransferDetails;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Transfer29.mmObject();
+			type_lazy = () -> Transfer29.mmObject();
+		}
+
+		@Override
+		public List<Transfer29> getValue(TransferIn12 obj) {
+			return obj.getTransferDetails();
+		}
+
+		@Override
+		public void setValue(TransferIn12 obj, List<Transfer29> value) {
+			obj.setTransferDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
@@ -271,7 +295,7 @@ public class TransferIn12 {
 	 * TransferIn9.mmAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferIn12, InvestmentAccount40> mmAccountDetails = new MMMessageAssociationEnd<TransferIn12, InvestmentAccount40>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferIn12.mmObject();
@@ -285,7 +309,17 @@ public class TransferIn12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount40.mmObject();
+			type_lazy = () -> InvestmentAccount40.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount40 getValue(TransferIn12 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(TransferIn12 obj, InvestmentAccount40 value) {
+			obj.setAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "SttlmDtls")
@@ -334,7 +368,7 @@ public class TransferIn12 {
 	 * TransferIn9.mmSettlementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferIn12, Optional<DeliverInformation14>> mmSettlementDetails = new MMMessageAssociationEnd<TransferIn12, Optional<DeliverInformation14>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferIn12.mmObject();
@@ -348,11 +382,21 @@ public class TransferIn12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliverInformation14.mmObject();
+			type_lazy = () -> DeliverInformation14.mmObject();
+		}
+
+		@Override
+		public Optional<DeliverInformation14> getValue(TransferIn12 obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(TransferIn12 obj, Optional<DeliverInformation14> value) {
+			obj.setSettlementDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -391,7 +435,7 @@ public class TransferIn12 {
 	 * TransferIn9.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferIn12, List<Extension1>> mmExtension = new MMMessageAssociationEnd<TransferIn12, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferIn12.mmObject();
 			isDerived = false;
@@ -403,7 +447,17 @@ public class TransferIn12 {
 			previousVersion_lazy = () -> TransferIn9.mmExtension;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(TransferIn12 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(TransferIn12 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -438,7 +492,7 @@ public class TransferIn12 {
 		return transferDetails == null ? transferDetails = new ArrayList<>() : transferDetails;
 	}
 
-	public TransferIn12 setTransferDetails(List<com.tools20022.repository.msg.Transfer29> transferDetails) {
+	public TransferIn12 setTransferDetails(List<Transfer29> transferDetails) {
 		this.transferDetails = Objects.requireNonNull(transferDetails);
 		return this;
 	}
@@ -447,7 +501,7 @@ public class TransferIn12 {
 		return accountDetails;
 	}
 
-	public TransferIn12 setAccountDetails(com.tools20022.repository.msg.InvestmentAccount40 accountDetails) {
+	public TransferIn12 setAccountDetails(InvestmentAccount40 accountDetails) {
 		this.accountDetails = Objects.requireNonNull(accountDetails);
 		return this;
 	}
@@ -456,7 +510,7 @@ public class TransferIn12 {
 		return settlementDetails == null ? Optional.empty() : Optional.of(settlementDetails);
 	}
 
-	public TransferIn12 setSettlementDetails(com.tools20022.repository.msg.DeliverInformation14 settlementDetails) {
+	public TransferIn12 setSettlementDetails(DeliverInformation14 settlementDetails) {
 		this.settlementDetails = settlementDetails;
 		return this;
 	}
@@ -465,7 +519,7 @@ public class TransferIn12 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public TransferIn12 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public TransferIn12 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

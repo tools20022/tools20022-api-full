@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.UnitPriceType2Choice;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValue1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class UnitPrice19 {
 	 * UnitPrice16.mmUnitPriceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnitPrice19, UnitPriceType2Choice> mmPriceType = new MMMessageAssociationEnd<UnitPrice19, UnitPriceType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice19.mmObject();
@@ -126,6 +127,16 @@ public class UnitPrice19 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnitPriceType2Choice.mmObject();
+		}
+
+		@Override
+		public UnitPriceType2Choice getValue(UnitPrice19 obj) {
+			return obj.getPriceType();
+		}
+
+		@Override
+		public void setValue(UnitPrice19 obj, UnitPriceType2Choice value) {
+			obj.setPriceType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -166,7 +177,7 @@ public class UnitPrice19 {
 	 * UnitPrice16.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice19, PriceValue1> mmValue = new MMMessageAttribute<UnitPrice19, PriceValue1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice19.mmObject();
@@ -178,7 +189,17 @@ public class UnitPrice19 {
 			previousVersion_lazy = () -> UnitPrice16.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public PriceValue1 getValue(UnitPrice19 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(UnitPrice19 obj, PriceValue1 value) {
+			obj.setValue(value);
 		}
 	};
 
@@ -210,7 +231,7 @@ public class UnitPrice19 {
 		return value;
 	}
 
-	public UnitPrice19 setValue(com.tools20022.repository.msg.PriceValue1 value) {
+	public UnitPrice19 setValue(PriceValue1 value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}

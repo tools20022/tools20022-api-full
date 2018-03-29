@@ -107,7 +107,7 @@ public class RateType44Choice {
 	 * definition} = "Standard code to specify the type of net dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType44Choice, NetDividendRateType3Code> mmCode = new MMMessageAttribute<RateType44Choice, NetDividendRateType3Code>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType44Choice.mmObject();
@@ -119,6 +119,16 @@ public class RateType44Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NetDividendRateType3Code.mmObject();
+		}
+
+		@Override
+		public NetDividendRateType3Code getValue(RateType44Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateType44Choice obj, NetDividendRateType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class RateType44Choice {
 	 * "Proprietary identification of the type of net dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateType44Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<RateType44Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType44Choice.mmObject();
@@ -169,6 +179,16 @@ public class RateType44Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(RateType44Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateType44Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

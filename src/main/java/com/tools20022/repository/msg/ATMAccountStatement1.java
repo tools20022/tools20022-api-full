@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMAccountStatement2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +118,7 @@ public class ATMAccountStatement1 {
 	 * "Unique identifier of the account, as assigned by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMAccountStatement1, AccountIdentification31Choice> mmAccountIdentifier = new MMMessageAssociationEnd<ATMAccountStatement1, AccountIdentification31Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement1.mmObject();
@@ -130,6 +131,16 @@ public class ATMAccountStatement1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification31Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification31Choice getValue(ATMAccountStatement1 obj) {
+			return obj.getAccountIdentifier();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement1 obj, AccountIdentification31Choice value) {
+			obj.setAccountIdentifier(value);
 		}
 	};
 	@XmlElement(name = "AcctNm")
@@ -168,7 +179,7 @@ public class ATMAccountStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMAccountStatement1, Optional<Max70Text>> mmAccountName = new MMMessageAttribute<ATMAccountStatement1, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement1.mmObject();
@@ -181,9 +192,19 @@ public class ATMAccountStatement1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max70Text> getValue(ATMAccountStatement1 obj) {
+			return obj.getAccountName();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement1 obj, Optional<Max70Text> value) {
+			obj.setAccountName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AcctStmt")
-	protected List<com.tools20022.repository.msg.ATMAccountStatement2> accountStatement;
+	protected List<ATMAccountStatement2> accountStatement;
 	/**
 	 * 
 	 <p>
@@ -215,7 +236,7 @@ public class ATMAccountStatement1 {
 	 * definition} = "Statement information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountStatement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMAccountStatement1, List<ATMAccountStatement2>> mmAccountStatement = new MMMessageAssociationEnd<ATMAccountStatement1, List<ATMAccountStatement2>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmEntry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement1.mmObject();
@@ -226,7 +247,17 @@ public class ATMAccountStatement1 {
 			definition = "Statement information.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement2.mmObject();
+			type_lazy = () -> ATMAccountStatement2.mmObject();
+		}
+
+		@Override
+		public List<ATMAccountStatement2> getValue(ATMAccountStatement1 obj) {
+			return obj.getAccountStatement();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement1 obj, List<ATMAccountStatement2> value) {
+			obj.setAccountStatement(value);
 		}
 	};
 
@@ -240,7 +271,7 @@ public class ATMAccountStatement1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMAccountStatement1";
 				definition = "Statement information of an account.";
-				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMAccountStatement2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(ATMAccountStatement2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
@@ -268,7 +299,7 @@ public class ATMAccountStatement1 {
 		return accountStatement == null ? accountStatement = new ArrayList<>() : accountStatement;
 	}
 
-	public ATMAccountStatement1 setAccountStatement(List<com.tools20022.repository.msg.ATMAccountStatement2> accountStatement) {
+	public ATMAccountStatement1 setAccountStatement(List<ATMAccountStatement2> accountStatement) {
 		this.accountStatement = Objects.requireNonNull(accountStatement);
 		return this;
 	}

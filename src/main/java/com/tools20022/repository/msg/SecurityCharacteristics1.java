@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecurityIdentification10Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5;
+import com.tools20022.repository.msg.SecuritiesPosition1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,7 +126,7 @@ public class SecurityCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityCharacteristics1, List<SecurityIdentification10Choice>> mmIdentification = new MMMessageAssociationEnd<SecurityCharacteristics1, List<SecurityIdentification10Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCharacteristics1.mmObject();
 			isDerived = false;
@@ -137,9 +139,19 @@ public class SecurityCharacteristics1 {
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification10Choice.mmObject();
 		}
+
+		@Override
+		public List<SecurityIdentification10Choice> getValue(SecurityCharacteristics1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityCharacteristics1 obj, List<SecurityIdentification10Choice> value) {
+			obj.setIdentification(value);
+		}
 	};
 	@XmlElement(name = "Pos")
-	protected List<com.tools20022.repository.msg.SecuritiesPosition1> position;
+	protected List<SecuritiesPosition1> position;
 	/**
 	 * 
 	 <p>
@@ -174,7 +186,7 @@ public class SecurityCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityCharacteristics1, List<SecuritiesPosition1>> mmPosition = new MMMessageAssociationEnd<SecurityCharacteristics1, List<SecuritiesPosition1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCharacteristics1.mmObject();
 			isDerived = false;
@@ -185,7 +197,17 @@ public class SecurityCharacteristics1 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityCharacteristics2.mmPosition);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesPosition1.mmObject();
+			type_lazy = () -> SecuritiesPosition1.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesPosition1> getValue(SecurityCharacteristics1 obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(SecurityCharacteristics1 obj, List<SecuritiesPosition1> value) {
+			obj.setPosition(value);
 		}
 	};
 	@XmlElement(name = "ValtnPric", required = true)
@@ -227,7 +249,7 @@ public class SecurityCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCharacteristics1, AmountPricePerFinancialInstrumentQuantity5> mmValuationPrice = new MMMessageAttribute<SecurityCharacteristics1, AmountPricePerFinancialInstrumentQuantity5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCharacteristics1.mmObject();
 			isDerived = false;
@@ -238,7 +260,17 @@ public class SecurityCharacteristics1 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityCharacteristics2.mmValuationPrice);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmObject();
+			complexType_lazy = () -> AmountPricePerFinancialInstrumentQuantity5.mmObject();
+		}
+
+		@Override
+		public AmountPricePerFinancialInstrumentQuantity5 getValue(SecurityCharacteristics1 obj) {
+			return obj.getValuationPrice();
+		}
+
+		@Override
+		public void setValue(SecurityCharacteristics1 obj, AmountPricePerFinancialInstrumentQuantity5 value) {
+			obj.setValuationPrice(value);
 		}
 	};
 	@XmlElement(name = "CollVal", required = true)
@@ -280,7 +312,7 @@ public class SecurityCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCharacteristics1, ActiveCurrencyAndAmount> mmCollateralValue = new MMMessageAttribute<SecurityCharacteristics1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCharacteristics1.mmObject();
 			isDerived = false;
@@ -292,6 +324,16 @@ public class SecurityCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(SecurityCharacteristics1 obj) {
+			return obj.getCollateralValue();
+		}
+
+		@Override
+		public void setValue(SecurityCharacteristics1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCollateralValue(value);
 		}
 	};
 
@@ -323,7 +365,7 @@ public class SecurityCharacteristics1 {
 		return position == null ? position = new ArrayList<>() : position;
 	}
 
-	public SecurityCharacteristics1 setPosition(List<com.tools20022.repository.msg.SecuritiesPosition1> position) {
+	public SecurityCharacteristics1 setPosition(List<SecuritiesPosition1> position) {
 		this.position = Objects.requireNonNull(position);
 		return this;
 	}
@@ -332,7 +374,7 @@ public class SecurityCharacteristics1 {
 		return valuationPrice;
 	}
 
-	public SecurityCharacteristics1 setValuationPrice(com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5 valuationPrice) {
+	public SecurityCharacteristics1 setValuationPrice(AmountPricePerFinancialInstrumentQuantity5 valuationPrice) {
 		this.valuationPrice = Objects.requireNonNull(valuationPrice);
 		return this;
 	}

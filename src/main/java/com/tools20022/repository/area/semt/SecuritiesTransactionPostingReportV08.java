@@ -24,7 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset._SR2018_SettlementandReconciliation;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -82,6 +82,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion
+ * SettlementAndReconciliationISOLatestversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_SettlementandReconciliation
  * _SR2018_SettlementandReconciliation}</li>
@@ -171,7 +174,7 @@ public class SecuritiesTransactionPostingReportV08 {
 	 * SecuritiesTransactionPostingReportV07.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, Pagination1> mmPagination = new MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, Pagination1>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,12 +186,14 @@ public class SecuritiesTransactionPostingReportV08 {
 			complexType_lazy = () -> Pagination1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPostingReportV08.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination1 getValue(SecuritiesTransactionPostingReportV08 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPostingReportV08 obj, Pagination1 value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -220,7 +225,7 @@ public class SecuritiesTransactionPostingReportV08 {
 	 * SecuritiesTransactionPostingReportV07.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, Statement61> mmStatementGeneralDetails = new MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, Statement61>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,12 +237,14 @@ public class SecuritiesTransactionPostingReportV08 {
 			complexType_lazy = () -> Statement61.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPostingReportV08.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement61 getValue(SecuritiesTransactionPostingReportV08 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPostingReportV08 obj, Statement61 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -270,7 +277,7 @@ public class SecuritiesTransactionPostingReportV08 {
 	 * SecuritiesTransactionPostingReportV07.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, Optional<PartyIdentification98>> mmAccountOwner = new MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, Optional<PartyIdentification98>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,12 +289,14 @@ public class SecuritiesTransactionPostingReportV08 {
 			complexType_lazy = () -> PartyIdentification98.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPostingReportV08.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification98> getValue(SecuritiesTransactionPostingReportV08 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPostingReportV08 obj, Optional<PartyIdentification98> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -320,7 +329,7 @@ public class SecuritiesTransactionPostingReportV08 {
 	 * SecuritiesTransactionPostingReportV07.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, SecuritiesAccount19> mmSafekeepingAccount = new MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, SecuritiesAccount19>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,12 +341,14 @@ public class SecuritiesTransactionPostingReportV08 {
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPostingReportV08.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount19 getValue(SecuritiesTransactionPostingReportV08 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPostingReportV08 obj, SecuritiesAccount19 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
@@ -370,7 +381,7 @@ public class SecuritiesTransactionPostingReportV08 {
 	 * SecuritiesTransactionPostingReportV07.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancialInstrumentDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, List<FinancialInstrumentDetails28>> mmFinancialInstrumentDetails = new MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, List<FinancialInstrumentDetails28>>() {
 		{
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,12 +392,14 @@ public class SecuritiesTransactionPostingReportV08 {
 			complexType_lazy = () -> FinancialInstrumentDetails28.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPostingReportV08.class.getMethod("getFinancialInstrumentDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<FinancialInstrumentDetails28> getValue(SecuritiesTransactionPostingReportV08 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPostingReportV08 obj, List<FinancialInstrumentDetails28> value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "SubAcctDtls")
@@ -419,7 +432,7 @@ public class SecuritiesTransactionPostingReportV08 {
 	 * SecuritiesTransactionPostingReportV07.mmSubAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, List<SubAccountIdentification51>> mmSubAccountDetails = new MMMessageBuildingBlock<SecuritiesTransactionPostingReportV08, List<SubAccountIdentification51>>() {
 		{
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -430,12 +443,14 @@ public class SecuritiesTransactionPostingReportV08 {
 			complexType_lazy = () -> SubAccountIdentification51.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionPostingReportV08.class.getMethod("getSubAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SubAccountIdentification51> getValue(SecuritiesTransactionPostingReportV08 obj) {
+			return obj.getSubAccountDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPostingReportV08 obj, List<SubAccountIdentification51> value) {
+			obj.setSubAccountDetails(value);
 		}
 	};
 
@@ -450,7 +465,7 @@ public class SecuritiesTransactionPostingReportV08 {
 				name = "SecuritiesTransactionPostingReportV08";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesTransactionPostingReport to an account owner to provide the details of increases and decreases of holdings which occurred during a specified period, for all or selected securities in the specified safekeeping account or sub-safekeeping account which the account servicer holds for the account owner. \r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or \r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThis message may be used as a trade date based or a settlement date based statement.\r\nThe message may also be used to: \r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
 				previousVersion_lazy = () -> SecuritiesTransactionPostingReportV07.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_SettlementandReconciliation.mmObject());
+				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOLatestversion.mmObject(), _SR2018_SettlementandReconciliation.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesTxPstngRpt";
 				businessArea_lazy = () -> SecuritiesManagementLatestVersion.mmObject();

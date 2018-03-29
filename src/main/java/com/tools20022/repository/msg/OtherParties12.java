@@ -25,6 +25,9 @@ import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionRevers
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount41;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount46;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount47;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -106,7 +109,7 @@ public class OtherParties12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Invstr")
-	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount46> investor;
+	protected List<PartyIdentificationAndAccount46> investor;
 	/**
 	 * 
 	 <p>
@@ -143,7 +146,7 @@ public class OtherParties12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties12, List<PartyIdentificationAndAccount46>> mmInvestor = new MMMessageAssociationEnd<OtherParties12, List<PartyIdentificationAndAccount46>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties12.mmObject();
@@ -155,7 +158,17 @@ public class OtherParties12 {
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount46.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount46.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentificationAndAccount46> getValue(OtherParties12 obj) {
+			return obj.getInvestor();
+		}
+
+		@Override
+		public void setValue(OtherParties12 obj, List<PartyIdentificationAndAccount46> value) {
+			obj.setInvestor(value);
 		}
 	};
 	@XmlElement(name = "QlfdFrgnIntrmy")
@@ -196,7 +209,7 @@ public class OtherParties12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQualifiedForeignIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount47>> mmQualifiedForeignIntermediary = new MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount47>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties12.mmObject();
@@ -209,7 +222,17 @@ public class OtherParties12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount47.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount47.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount47> getValue(OtherParties12 obj) {
+			return obj.getQualifiedForeignIntermediary();
+		}
+
+		@Override
+		public void setValue(OtherParties12 obj, Optional<PartyIdentificationAndAccount47> value) {
+			obj.setQualifiedForeignIntermediary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StockXchg")
@@ -250,7 +273,7 @@ public class OtherParties12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStockExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount47>> mmStockExchange = new MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount47>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties12.mmObject();
@@ -263,7 +286,17 @@ public class OtherParties12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount47.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount47.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount47> getValue(OtherParties12 obj) {
+			return obj.getStockExchange();
+		}
+
+		@Override
+		public void setValue(OtherParties12 obj, Optional<PartyIdentificationAndAccount47> value) {
+			obj.setStockExchange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradRgltr")
@@ -302,7 +335,7 @@ public class OtherParties12 {
 	 * definition} = "Institution to which a trade must be reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeRegulator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount47>> mmTradeRegulator = new MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount47>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties12.mmObject();
@@ -315,7 +348,17 @@ public class OtherParties12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount47.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount47.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount47> getValue(OtherParties12 obj) {
+			return obj.getTradeRegulator();
+		}
+
+		@Override
+		public void setValue(OtherParties12 obj, Optional<PartyIdentificationAndAccount47> value) {
+			obj.setTradeRegulator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrptyAgt")
@@ -356,7 +399,7 @@ public class OtherParties12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTripartyAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount47>> mmTripartyAgent = new MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount47>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties12.mmObject();
@@ -369,7 +412,17 @@ public class OtherParties12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount47.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount47.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount47> getValue(OtherParties12 obj) {
+			return obj.getTripartyAgent();
+		}
+
+		@Override
+		public void setValue(OtherParties12 obj, Optional<PartyIdentificationAndAccount47> value) {
+			obj.setTripartyAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Brkr")
@@ -407,7 +460,7 @@ public class OtherParties12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBroker = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount41>> mmBroker = new MMMessageAssociationEnd<OtherParties12, Optional<PartyIdentificationAndAccount41>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties12.mmObject();
@@ -419,7 +472,17 @@ public class OtherParties12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount41.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount41.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount41> getValue(OtherParties12 obj) {
+			return obj.getBroker();
+		}
+
+		@Override
+		public void setValue(OtherParties12 obj, Optional<PartyIdentificationAndAccount41> value) {
+			obj.setBroker(value.orElse(null));
 		}
 	};
 
@@ -453,7 +516,7 @@ public class OtherParties12 {
 		return investor == null ? investor = new ArrayList<>() : investor;
 	}
 
-	public OtherParties12 setInvestor(List<com.tools20022.repository.msg.PartyIdentificationAndAccount46> investor) {
+	public OtherParties12 setInvestor(List<PartyIdentificationAndAccount46> investor) {
 		this.investor = Objects.requireNonNull(investor);
 		return this;
 	}
@@ -462,7 +525,7 @@ public class OtherParties12 {
 		return qualifiedForeignIntermediary == null ? Optional.empty() : Optional.of(qualifiedForeignIntermediary);
 	}
 
-	public OtherParties12 setQualifiedForeignIntermediary(com.tools20022.repository.msg.PartyIdentificationAndAccount47 qualifiedForeignIntermediary) {
+	public OtherParties12 setQualifiedForeignIntermediary(PartyIdentificationAndAccount47 qualifiedForeignIntermediary) {
 		this.qualifiedForeignIntermediary = qualifiedForeignIntermediary;
 		return this;
 	}
@@ -471,7 +534,7 @@ public class OtherParties12 {
 		return stockExchange == null ? Optional.empty() : Optional.of(stockExchange);
 	}
 
-	public OtherParties12 setStockExchange(com.tools20022.repository.msg.PartyIdentificationAndAccount47 stockExchange) {
+	public OtherParties12 setStockExchange(PartyIdentificationAndAccount47 stockExchange) {
 		this.stockExchange = stockExchange;
 		return this;
 	}
@@ -480,7 +543,7 @@ public class OtherParties12 {
 		return tradeRegulator == null ? Optional.empty() : Optional.of(tradeRegulator);
 	}
 
-	public OtherParties12 setTradeRegulator(com.tools20022.repository.msg.PartyIdentificationAndAccount47 tradeRegulator) {
+	public OtherParties12 setTradeRegulator(PartyIdentificationAndAccount47 tradeRegulator) {
 		this.tradeRegulator = tradeRegulator;
 		return this;
 	}
@@ -489,7 +552,7 @@ public class OtherParties12 {
 		return tripartyAgent == null ? Optional.empty() : Optional.of(tripartyAgent);
 	}
 
-	public OtherParties12 setTripartyAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount47 tripartyAgent) {
+	public OtherParties12 setTripartyAgent(PartyIdentificationAndAccount47 tripartyAgent) {
 		this.tripartyAgent = tripartyAgent;
 		return this;
 	}
@@ -498,7 +561,7 @@ public class OtherParties12 {
 		return broker == null ? Optional.empty() : Optional.of(broker);
 	}
 
-	public OtherParties12 setBroker(com.tools20022.repository.msg.PartyIdentificationAndAccount41 broker) {
+	public OtherParties12 setBroker(PartyIdentificationAndAccount41 broker) {
 		this.broker = broker;
 		return this;
 	}

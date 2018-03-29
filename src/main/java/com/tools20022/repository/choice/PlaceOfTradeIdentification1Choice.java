@@ -119,7 +119,7 @@ public class PlaceOfTradeIdentification1Choice {
 	 * definition} = "Country in which the transaction is executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfTradeIdentification1Choice, CountryCode> mmCountry = new MMMessageAttribute<PlaceOfTradeIdentification1Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmObject();
@@ -131,6 +131,16 @@ public class PlaceOfTradeIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PlaceOfTradeIdentification1Choice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PlaceOfTradeIdentification1Choice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "Xchg", required = true)
@@ -168,7 +178,7 @@ public class PlaceOfTradeIdentification1Choice {
 	 * definition} = "Exchange at which the transaction is executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfTradeIdentification1Choice, MICIdentifier> mmExchange = new MMMessageAttribute<PlaceOfTradeIdentification1Choice, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmObject();
@@ -180,6 +190,16 @@ public class PlaceOfTradeIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(PlaceOfTradeIdentification1Choice obj) {
+			return obj.getExchange();
+		}
+
+		@Override
+		public void setValue(PlaceOfTradeIdentification1Choice obj, MICIdentifier value) {
+			obj.setExchange(value);
 		}
 	};
 	@XmlElement(name = "Pty", required = true)
@@ -217,7 +237,7 @@ public class PlaceOfTradeIdentification1Choice {
 	 * definition} = "Party's location at which the transaction is executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfTradeIdentification1Choice, AnyBICIdentifier> mmParty = new MMMessageAttribute<PlaceOfTradeIdentification1Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmObject();
@@ -229,6 +249,16 @@ public class PlaceOfTradeIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PlaceOfTradeIdentification1Choice obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(PlaceOfTradeIdentification1Choice obj, AnyBICIdentifier value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "OverTheCntr", required = true)
@@ -261,7 +291,7 @@ public class PlaceOfTradeIdentification1Choice {
 	 * "Place at which the Over-the-Counter (OTC) transaction is executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOverTheCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfTradeIdentification1Choice, Max35Text> mmOverTheCounter = new MMMessageAttribute<PlaceOfTradeIdentification1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOfTradeIdentification1Choice.mmObject();
 			isDerived = false;
@@ -272,6 +302,16 @@ public class PlaceOfTradeIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PlaceOfTradeIdentification1Choice obj) {
+			return obj.getOverTheCounter();
+		}
+
+		@Override
+		public void setValue(PlaceOfTradeIdentification1Choice obj, Max35Text value) {
+			obj.setOverTheCounter(value);
 		}
 	};
 

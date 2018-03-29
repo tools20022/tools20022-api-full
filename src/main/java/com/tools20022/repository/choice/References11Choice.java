@@ -132,7 +132,7 @@ public class References11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References11Choice, RestrictedFINXMax16Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<References11Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References11Choice.mmObject();
@@ -145,6 +145,16 @@ public class References11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References11Choice obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References11Choice obj, RestrictedFINXMax16Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId", required = true)
@@ -187,7 +197,7 @@ public class References11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References11Choice, RestrictedFINXMax16Text> mmAccountServicerTransactionIdentification = new MMMessageAttribute<References11Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References11Choice.mmObject();
@@ -200,6 +210,16 @@ public class References11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References11Choice obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References11Choice obj, RestrictedFINXMax16Text value) {
+			obj.setAccountServicerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolId", required = true)
@@ -240,7 +260,7 @@ public class References11Choice {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References11Choice, RestrictedFINXMax16Text> mmPoolIdentification = new MMMessageAttribute<References11Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References11Choice.mmObject();
@@ -253,6 +273,16 @@ public class References11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References11Choice obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(References11Choice obj, RestrictedFINXMax16Text value) {
+			obj.setPoolIdentification(value);
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId", required = true)
@@ -296,7 +326,7 @@ public class References11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References11Choice, RestrictedFINXMax16Text> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<References11Choice, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References11Choice.mmObject();
@@ -309,6 +339,16 @@ public class References11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References11Choice obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References11Choice obj, RestrictedFINXMax16Text value) {
+			obj.setMarketInfrastructureTransactionIdentification(value);
 		}
 	};
 

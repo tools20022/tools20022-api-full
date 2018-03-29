@@ -67,13 +67,17 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV08> forFIToFIPaymentReversalV08 = new MMConstraint<FIToFIPaymentReversalV08>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkFIToFIPaymentReversalV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule.forFIToFIPaymentReversalV07;
 			owner_lazy = () -> FIToFIPaymentReversalV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV08 obj) throws Exception {
+			checkFIToFIPaymentReversalV08(obj);
 		}
 	};
 	/**
@@ -118,7 +122,6 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV07> forFIToFIPaymentReversalV07 = new MMConstraint<FIToFIPaymentReversalV07>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkFIToFIPaymentReversalV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount.";
@@ -126,6 +129,11 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule.forFIToFIPaymentReversalV06;
 			owner_lazy = () -> FIToFIPaymentReversalV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV07 obj) throws Exception {
+			checkFIToFIPaymentReversalV07(obj);
 		}
 	};
 	/**
@@ -155,12 +163,16 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV02> forFIToFIPaymentReversalV02 = new MMConstraint<FIToFIPaymentReversalV02>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkFIToFIPaymentReversalV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFIPaymentReversalV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV02 obj) throws Exception {
+			checkFIToFIPaymentReversalV02(obj);
 		}
 	};
 	/**
@@ -190,12 +202,16 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV03> forFIToFIPaymentReversalV03 = new MMConstraint<FIToFIPaymentReversalV03>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkFIToFIPaymentReversalV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFIPaymentReversalV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV03 obj) throws Exception {
+			checkFIToFIPaymentReversalV03(obj);
 		}
 	};
 	/**
@@ -234,13 +250,17 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV04> forFIToFIPaymentReversalV04 = new MMConstraint<FIToFIPaymentReversalV04>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkFIToFIPaymentReversalV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule.forFIToFIPaymentReversalV05);
 			owner_lazy = () -> FIToFIPaymentReversalV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV04 obj) throws Exception {
+			checkFIToFIPaymentReversalV04(obj);
 		}
 	};
 	/**
@@ -285,7 +305,6 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV05> forFIToFIPaymentReversalV05 = new MMConstraint<FIToFIPaymentReversalV05>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkFIToFIPaymentReversalV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount.";
@@ -293,6 +312,11 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule.forFIToFIPaymentReversalV04;
 			owner_lazy = () -> FIToFIPaymentReversalV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV05 obj) throws Exception {
+			checkFIToFIPaymentReversalV05(obj);
 		}
 	};
 	/**
@@ -337,7 +361,6 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV06> forFIToFIPaymentReversalV06 = new MMConstraint<FIToFIPaymentReversalV06>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkFIToFIPaymentReversalV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount.";
@@ -345,6 +368,11 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule.forFIToFIPaymentReversalV05;
 			owner_lazy = () -> FIToFIPaymentReversalV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV06 obj) throws Exception {
+			checkFIToFIPaymentReversalV06(obj);
 		}
 	};
 	/**
@@ -369,11 +397,15 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<GroupHeader9> forGroupHeader9 = new MMConstraint<GroupHeader9>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkGroupHeader9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "If TotalReversedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader9 obj) throws Exception {
+			checkGroupHeader9(obj);
 		}
 	};
 	/**
@@ -402,12 +434,16 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<GroupHeader18> forGroupHeader18 = new MMConstraint<GroupHeader18>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkGroupHeader18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "ISO20022 Rule: (not injected)\nIf TotalReversedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader18.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader18 obj) throws Exception {
+			checkGroupHeader18(obj);
 		}
 	};
 	/**
@@ -436,12 +472,16 @@ public class ConstraintTotalReversedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<GroupHeader30> forGroupHeader30 = new MMConstraint<GroupHeader30>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmountRule::checkGroupHeader30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmountRule";
 			definition = "ISO20022 Rule: (not injected)\nIf TotalReversedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader30.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader30 obj) throws Exception {
+			checkGroupHeader30(obj);
 		}
 	};
 

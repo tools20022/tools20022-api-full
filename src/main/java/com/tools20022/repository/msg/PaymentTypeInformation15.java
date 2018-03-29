@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.PaymentCategoryPurpose1Code;
 import com.tools20022.repository.codeset.SequenceType1Code;
 import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LocalInstrument1;
+import com.tools20022.repository.msg.ServiceLevel4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +120,7 @@ public class PaymentTypeInformation15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation15, ServiceLevel4> mmServiceLevel = new MMMessageAssociationEnd<PaymentTypeInformation15, ServiceLevel4>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation15.mmObject();
@@ -130,7 +132,17 @@ public class PaymentTypeInformation15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ServiceLevel4.mmObject();
+			type_lazy = () -> ServiceLevel4.mmObject();
+		}
+
+		@Override
+		public ServiceLevel4 getValue(PaymentTypeInformation15 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation15 obj, ServiceLevel4 value) {
+			obj.setServiceLevel(value);
 		}
 	};
 	@XmlElement(name = "LclInstrm")
@@ -168,7 +180,7 @@ public class PaymentTypeInformation15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation15, Optional<LocalInstrument1>> mmLocalInstrument = new MMMessageAssociationEnd<PaymentTypeInformation15, Optional<LocalInstrument1>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmLocalInstrument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation15.mmObject();
@@ -180,7 +192,17 @@ public class PaymentTypeInformation15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LocalInstrument1.mmObject();
+			type_lazy = () -> LocalInstrument1.mmObject();
+		}
+
+		@Override
+		public Optional<LocalInstrument1> getValue(PaymentTypeInformation15 obj) {
+			return obj.getLocalInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation15 obj, Optional<LocalInstrument1> value) {
+			obj.setLocalInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeqTp")
@@ -220,7 +242,7 @@ public class PaymentTypeInformation15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation15, Optional<SequenceType1Code>> mmSequenceType = new MMMessageAttribute<PaymentTypeInformation15, Optional<SequenceType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmSequenceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation15.mmObject();
@@ -232,6 +254,16 @@ public class PaymentTypeInformation15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SequenceType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SequenceType1Code> getValue(PaymentTypeInformation15 obj) {
+			return obj.getSequenceType();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation15 obj, Optional<SequenceType1Code> value) {
+			obj.setSequenceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtgyPurp")
@@ -271,7 +303,7 @@ public class PaymentTypeInformation15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation15, Optional<PaymentCategoryPurpose1Code>> mmCategoryPurpose = new MMMessageAttribute<PaymentTypeInformation15, Optional<PaymentCategoryPurpose1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmCategoryPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation15.mmObject();
@@ -283,6 +315,16 @@ public class PaymentTypeInformation15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCategoryPurpose1Code> getValue(PaymentTypeInformation15 obj) {
+			return obj.getCategoryPurpose();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation15 obj, Optional<PaymentCategoryPurpose1Code> value) {
+			obj.setCategoryPurpose(value.orElse(null));
 		}
 	};
 
@@ -305,7 +347,7 @@ public class PaymentTypeInformation15 {
 		return serviceLevel;
 	}
 
-	public PaymentTypeInformation15 setServiceLevel(com.tools20022.repository.msg.ServiceLevel4 serviceLevel) {
+	public PaymentTypeInformation15 setServiceLevel(ServiceLevel4 serviceLevel) {
 		this.serviceLevel = Objects.requireNonNull(serviceLevel);
 		return this;
 	}
@@ -314,7 +356,7 @@ public class PaymentTypeInformation15 {
 		return localInstrument == null ? Optional.empty() : Optional.of(localInstrument);
 	}
 
-	public PaymentTypeInformation15 setLocalInstrument(com.tools20022.repository.msg.LocalInstrument1 localInstrument) {
+	public PaymentTypeInformation15 setLocalInstrument(LocalInstrument1 localInstrument) {
 		this.localInstrument = localInstrument;
 		return this;
 	}

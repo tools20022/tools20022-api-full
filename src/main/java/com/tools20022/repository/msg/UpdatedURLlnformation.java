@@ -131,7 +131,7 @@ public class UpdatedURLlnformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedURLlnformation, Optional<Max140Text>> mmUpdateDescription = new MMMessageAttribute<UpdatedURLlnformation, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedURLlnformation.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class UpdatedURLlnformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(UpdatedURLlnformation obj) {
+			return obj.getUpdateDescription();
+		}
+
+		@Override
+		public void setValue(UpdatedURLlnformation obj, Optional<Max140Text> value) {
+			obj.setUpdateDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdDt")
@@ -183,7 +193,7 @@ public class UpdatedURLlnformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedURLlnformation, Optional<ISODate>> mmUpdateDate = new MMMessageAttribute<UpdatedURLlnformation, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedURLlnformation.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class UpdatedURLlnformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(UpdatedURLlnformation obj) {
+			return obj.getUpdateDate();
+		}
+
+		@Override
+		public void setValue(UpdatedURLlnformation obj, Optional<ISODate> value) {
+			obj.setUpdateDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "URLAdr", required = true)
@@ -239,7 +259,7 @@ public class UpdatedURLlnformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedURLlnformation, Max256Text> mmURLAddress = new MMMessageAttribute<UpdatedURLlnformation, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedURLlnformation.mmObject();
 			isDerived = false;
@@ -252,6 +272,16 @@ public class UpdatedURLlnformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(UpdatedURLlnformation obj) {
+			return obj.getURLAddress();
+		}
+
+		@Override
+		public void setValue(UpdatedURLlnformation obj, Max256Text value) {
+			obj.setURLAddress(value);
 		}
 	};
 

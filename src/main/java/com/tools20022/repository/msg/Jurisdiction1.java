@@ -96,7 +96,7 @@ public class Jurisdiction1 {
 	 * "Specifies the jurisdiction (county, state, province, city)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Jurisdiction1, Optional<Max70Text>> mmIdentification = new MMMessageAttribute<Jurisdiction1, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Jurisdiction1.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class Jurisdiction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(Jurisdiction1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Jurisdiction1 obj, Optional<Max70Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -137,7 +147,7 @@ public class Jurisdiction1 {
 	 * definition} = "Specifies the country."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Jurisdiction1, Optional<CountryCode>> mmCountry = new MMMessageAttribute<Jurisdiction1, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Jurisdiction1.mmObject();
 			isDerived = false;
@@ -148,6 +158,16 @@ public class Jurisdiction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(Jurisdiction1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(Jurisdiction1 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 

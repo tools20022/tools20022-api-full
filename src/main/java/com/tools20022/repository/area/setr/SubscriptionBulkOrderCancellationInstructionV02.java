@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.SubscriptionBulkOrderInstruction1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -157,7 +156,7 @@ public class SubscriptionBulkOrderCancellationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionBulkOrderCancellationInstructionV02, Optional<AdditionalReference3>> mmMasterReference = new MMMessageBuildingBlock<SubscriptionBulkOrderCancellationInstructionV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,12 +167,14 @@ public class SubscriptionBulkOrderCancellationInstructionV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionBulkOrderCancellationInstructionV02.class.getMethod("getMasterReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(SubscriptionBulkOrderCancellationInstructionV02 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(SubscriptionBulkOrderCancellationInstructionV02 obj, Optional<AdditionalReference3> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -201,7 +202,7 @@ public class SubscriptionBulkOrderCancellationInstructionV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionBulkOrderCancellationInstructionV02, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<SubscriptionBulkOrderCancellationInstructionV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +213,14 @@ public class SubscriptionBulkOrderCancellationInstructionV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionBulkOrderCancellationInstructionV02.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(SubscriptionBulkOrderCancellationInstructionV02 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(SubscriptionBulkOrderCancellationInstructionV02 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef", required = true)
@@ -245,7 +248,7 @@ public class SubscriptionBulkOrderCancellationInstructionV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionBulkOrderCancellationInstructionV02, AdditionalReference3> mmPreviousReference = new MMMessageBuildingBlock<SubscriptionBulkOrderCancellationInstructionV02, AdditionalReference3>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,12 +259,14 @@ public class SubscriptionBulkOrderCancellationInstructionV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionBulkOrderCancellationInstructionV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference3 getValue(SubscriptionBulkOrderCancellationInstructionV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(SubscriptionBulkOrderCancellationInstructionV02 obj, AdditionalReference3 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "OrdrToBeCanc")
@@ -290,7 +295,7 @@ public class SubscriptionBulkOrderCancellationInstructionV02 {
 	 * "Common information related to all the orders to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOrderToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionBulkOrderCancellationInstructionV02, Optional<SubscriptionBulkOrderInstruction1>> mmOrderToBeCancelled = new MMMessageBuildingBlock<SubscriptionBulkOrderCancellationInstructionV02, Optional<SubscriptionBulkOrderInstruction1>>() {
 		{
 			xmlTag = "OrdrToBeCanc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,12 +306,14 @@ public class SubscriptionBulkOrderCancellationInstructionV02 {
 			complexType_lazy = () -> SubscriptionBulkOrderInstruction1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionBulkOrderCancellationInstructionV02.class.getMethod("getOrderToBeCancelled", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SubscriptionBulkOrderInstruction1> getValue(SubscriptionBulkOrderCancellationInstructionV02 obj) {
+			return obj.getOrderToBeCancelled();
+		}
+
+		@Override
+		public void setValue(SubscriptionBulkOrderCancellationInstructionV02 obj, Optional<SubscriptionBulkOrderInstruction1> value) {
+			obj.setOrderToBeCancelled(value.orElse(null));
 		}
 	};
 

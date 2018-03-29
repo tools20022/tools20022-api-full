@@ -112,7 +112,7 @@ public class CurrencyCriteriaDefinition1Choice {
 	 * CurrencyCriteriaDefinitionChoice.mmQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyCriteriaDefinition1Choice, Max35Text> mmQueryName = new MMMessageAttribute<CurrencyCriteriaDefinition1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrencyCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class CurrencyCriteriaDefinition1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CurrencyCriteriaDefinition1Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(CurrencyCriteriaDefinition1Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -161,7 +171,7 @@ public class CurrencyCriteriaDefinition1Choice {
 	 * CurrencyCriteriaDefinitionChoice.mmNewCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyCriteriaDefinition1Choice, CurrencyExchangeCriteria2> mmNewCriteria = new MMMessageAssociationEnd<CurrencyCriteriaDefinition1Choice, CurrencyExchangeCriteria2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrencyCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class CurrencyCriteriaDefinition1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CurrencyExchangeCriteria2.mmObject();
+		}
+
+		@Override
+		public CurrencyExchangeCriteria2 getValue(CurrencyCriteriaDefinition1Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(CurrencyCriteriaDefinition1Choice obj, CurrencyExchangeCriteria2 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

@@ -110,7 +110,7 @@ public class AwaitingAffirmationReason1Choice {
 	 * "Specifies the reason why the instruction has been alleged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AwaitingAffirmationReason1Choice, AwaitingAffirmationReason1Code> mmCode = new MMMessageAttribute<AwaitingAffirmationReason1Choice, AwaitingAffirmationReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AwaitingAffirmationReason1Choice.mmObject();
@@ -122,6 +122,16 @@ public class AwaitingAffirmationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AwaitingAffirmationReason1Code.mmObject();
+		}
+
+		@Override
+		public AwaitingAffirmationReason1Code getValue(AwaitingAffirmationReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AwaitingAffirmationReason1Choice obj, AwaitingAffirmationReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -160,7 +170,7 @@ public class AwaitingAffirmationReason1Choice {
 	 * "Specifies the reason why the instruction has been alleged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AwaitingAffirmationReason1Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<AwaitingAffirmationReason1Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AwaitingAffirmationReason1Choice.mmObject();
@@ -172,6 +182,16 @@ public class AwaitingAffirmationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(AwaitingAffirmationReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AwaitingAffirmationReason1Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

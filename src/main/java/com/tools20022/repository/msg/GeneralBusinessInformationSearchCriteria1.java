@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.CharacterSearch1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InformationQualifierType1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,7 +126,7 @@ public class GeneralBusinessInformationSearchCriteria1 {
 	 * GeneralBusinessInformationSearchCriteria.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformationSearchCriteria1, List<Max35Text>> mmReference = new MMMessageAttribute<GeneralBusinessInformationSearchCriteria1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1.mmObject();
@@ -137,6 +138,16 @@ public class GeneralBusinessInformationSearchCriteria1 {
 			previousVersion_lazy = () -> GeneralBusinessInformationSearchCriteria.mmReference;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(GeneralBusinessInformationSearchCriteria1 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationSearchCriteria1 obj, List<Max35Text> value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "Sbjt")
@@ -181,7 +192,7 @@ public class GeneralBusinessInformationSearchCriteria1 {
 	 * GeneralBusinessInformationSearchCriteria.mmSubject}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformationSearchCriteria1, List<CharacterSearch1Choice>> mmSubject = new MMMessageAttribute<GeneralBusinessInformationSearchCriteria1, List<CharacterSearch1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmSubject;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1.mmObject();
@@ -194,9 +205,19 @@ public class GeneralBusinessInformationSearchCriteria1 {
 			minOccurs = 0;
 			complexType_lazy = () -> CharacterSearch1Choice.mmObject();
 		}
+
+		@Override
+		public List<CharacterSearch1Choice> getValue(GeneralBusinessInformationSearchCriteria1 obj) {
+			return obj.getSubject();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationSearchCriteria1 obj, List<CharacterSearch1Choice> value) {
+			obj.setSubject(value);
+		}
 	};
 	@XmlElement(name = "Qlfr")
-	protected List<com.tools20022.repository.msg.InformationQualifierType1> qualifier;
+	protected List<InformationQualifierType1> qualifier;
 	/**
 	 * 
 	 <p>
@@ -236,7 +257,7 @@ public class GeneralBusinessInformationSearchCriteria1 {
 	 * GeneralBusinessInformationSearchCriteria.mmQualifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQualifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessInformationSearchCriteria1, List<InformationQualifierType1>> mmQualifier = new MMMessageAssociationEnd<GeneralBusinessInformationSearchCriteria1, List<InformationQualifierType1>>() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmQualifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1.mmObject();
@@ -248,7 +269,17 @@ public class GeneralBusinessInformationSearchCriteria1 {
 			previousVersion_lazy = () -> GeneralBusinessInformationSearchCriteria.mmQualifier;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InformationQualifierType1.mmObject();
+			type_lazy = () -> InformationQualifierType1.mmObject();
+		}
+
+		@Override
+		public List<InformationQualifierType1> getValue(GeneralBusinessInformationSearchCriteria1 obj) {
+			return obj.getQualifier();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationSearchCriteria1 obj, List<InformationQualifierType1> value) {
+			obj.setQualifier(value);
 		}
 	};
 
@@ -290,7 +321,7 @@ public class GeneralBusinessInformationSearchCriteria1 {
 		return qualifier == null ? qualifier = new ArrayList<>() : qualifier;
 	}
 
-	public GeneralBusinessInformationSearchCriteria1 setQualifier(List<com.tools20022.repository.msg.InformationQualifierType1> qualifier) {
+	public GeneralBusinessInformationSearchCriteria1 setQualifier(List<InformationQualifierType1> qualifier) {
 		this.qualifier = Objects.requireNonNull(qualifier);
 		return this;
 	}

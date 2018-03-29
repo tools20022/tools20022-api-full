@@ -109,7 +109,7 @@ public class RejectedStatus3Choice {
 	 * definition} = "Reason for a rejected status in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus3Choice, List<RejectedStatusReason5>> mmReason = new MMMessageAssociationEnd<RejectedStatus3Choice, List<RejectedStatusReason5>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatus3Choice.mmObject();
@@ -122,6 +122,16 @@ public class RejectedStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedStatusReason5.mmObject();
+		}
+
+		@Override
+		public List<RejectedStatusReason5> getValue(RejectedStatus3Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus3Choice obj, List<RejectedStatusReason5> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -159,7 +169,7 @@ public class RejectedStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus3Choice, List<GenericIdentification1>> mmDataSourceScheme = new MMMessageAssociationEnd<RejectedStatus3Choice, List<GenericIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatus3Choice.mmObject();
@@ -172,6 +182,16 @@ public class RejectedStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification1> getValue(RejectedStatus3Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(RejectedStatus3Choice obj, List<GenericIdentification1> value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 

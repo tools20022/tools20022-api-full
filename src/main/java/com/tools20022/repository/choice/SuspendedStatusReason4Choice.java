@@ -120,7 +120,7 @@ public class SuspendedStatusReason4Choice {
 	 * ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReason4Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<SuspendedStatusReason4Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReason4Choice.mmObject();
@@ -133,6 +133,16 @@ public class SuspendedStatusReason4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(SuspendedStatusReason4Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason4Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "RsnDtls", required = true)
@@ -173,7 +183,7 @@ public class SuspendedStatusReason4Choice {
 	 * ConditionallyAcceptedStatus3Choice.mmReasonDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SuspendedStatusReason4Choice, List<SuspendedStatusReason4>> mmReasonDetails = new MMMessageAssociationEnd<SuspendedStatusReason4Choice, List<SuspendedStatusReason4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReason4Choice.mmObject();
@@ -187,6 +197,16 @@ public class SuspendedStatusReason4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SuspendedStatusReason4.mmObject();
+		}
+
+		@Override
+		public List<SuspendedStatusReason4> getValue(SuspendedStatusReason4Choice obj) {
+			return obj.getReasonDetails();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason4Choice obj, List<SuspendedStatusReason4> value) {
+			obj.setReasonDetails(value);
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ReservationOrError3Choice;
 import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReservationIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -120,7 +121,7 @@ public class ReservationReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReservationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationReport3, ReservationIdentification1> mmReservationIdentification = new MMMessageAssociationEnd<ReservationReport3, ReservationIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport3.mmObject();
@@ -133,7 +134,17 @@ public class ReservationReport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReservationIdentification1.mmObject();
+			type_lazy = () -> ReservationIdentification1.mmObject();
+		}
+
+		@Override
+		public ReservationIdentification1 getValue(ReservationReport3 obj) {
+			return obj.getReservationIdentification();
+		}
+
+		@Override
+		public void setValue(ReservationReport3 obj, ReservationIdentification1 value) {
+			obj.setReservationIdentification(value);
 		}
 	};
 	@XmlElement(name = "RsvatnOrErr", required = true)
@@ -173,7 +184,7 @@ public class ReservationReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReservationOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationReport3, ReservationOrError3Choice> mmReservationOrError = new MMMessageAssociationEnd<ReservationReport3, ReservationOrError3Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReport3.mmObject();
 			isDerived = false;
@@ -186,6 +197,16 @@ public class ReservationReport3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReservationOrError3Choice.mmObject();
+		}
+
+		@Override
+		public ReservationOrError3Choice getValue(ReservationReport3 obj) {
+			return obj.getReservationOrError();
+		}
+
+		@Override
+		public void setValue(ReservationReport3 obj, ReservationOrError3Choice value) {
+			obj.setReservationOrError(value);
 		}
 	};
 
@@ -208,7 +229,7 @@ public class ReservationReport3 {
 		return reservationIdentification;
 	}
 
-	public ReservationReport3 setReservationIdentification(com.tools20022.repository.msg.ReservationIdentification1 reservationIdentification) {
+	public ReservationReport3 setReservationIdentification(ReservationIdentification1 reservationIdentification) {
 		this.reservationIdentification = Objects.requireNonNull(reservationIdentification);
 		return this;
 	}

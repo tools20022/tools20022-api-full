@@ -147,7 +147,7 @@ public class CorrectiveTransaction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorrectiveTransaction1Choice, CorrectivePaymentInitiation1> mmInitiation = new MMMessageAssociationEnd<CorrectiveTransaction1Choice, CorrectivePaymentInitiation1>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentExecution;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmObject();
@@ -161,6 +161,16 @@ public class CorrectiveTransaction1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorrectivePaymentInitiation1.mmObject();
+		}
+
+		@Override
+		public CorrectivePaymentInitiation1 getValue(CorrectiveTransaction1Choice obj) {
+			return obj.getInitiation();
+		}
+
+		@Override
+		public void setValue(CorrectiveTransaction1Choice obj, CorrectivePaymentInitiation1 value) {
+			obj.setInitiation(value);
 		}
 	};
 	@XmlElement(name = "IntrBk", required = true)
@@ -206,7 +216,7 @@ public class CorrectiveTransaction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterbank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorrectiveTransaction1Choice, CorrectiveInterbankTransaction1> mmInterbank = new MMMessageAssociationEnd<CorrectiveTransaction1Choice, CorrectiveInterbankTransaction1>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorrectiveTransaction1Choice.mmObject();
@@ -220,6 +230,16 @@ public class CorrectiveTransaction1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorrectiveInterbankTransaction1.mmObject();
+		}
+
+		@Override
+		public CorrectiveInterbankTransaction1 getValue(CorrectiveTransaction1Choice obj) {
+			return obj.getInterbank();
+		}
+
+		@Override
+		public void setValue(CorrectiveTransaction1Choice obj, CorrectiveInterbankTransaction1 value) {
+			obj.setInterbank(value);
 		}
 	};
 

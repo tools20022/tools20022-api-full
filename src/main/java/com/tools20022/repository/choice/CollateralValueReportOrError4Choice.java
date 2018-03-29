@@ -105,7 +105,7 @@ public class CollateralValueReportOrError4Choice {
 	 * CollateralValueReportOrError2Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueReportOrError4Choice, ErrorHandling4> mmBusinessError = new MMMessageAssociationEnd<CollateralValueReportOrError4Choice, ErrorHandling4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueReportOrError4Choice.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class CollateralValueReportOrError4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public ErrorHandling4 getValue(CollateralValueReportOrError4Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(CollateralValueReportOrError4Choice obj, ErrorHandling4 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	@XmlElement(name = "CollVal", required = true)
@@ -156,7 +166,7 @@ public class CollateralValueReportOrError4Choice {
 	 * CollateralValueReportOrError2Choice.mmCollateralValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueReportOrError4Choice, CollateralValuePosition2> mmCollateralValue = new MMMessageAssociationEnd<CollateralValueReportOrError4Choice, CollateralValuePosition2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueReportOrError4Choice.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class CollateralValueReportOrError4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuePosition2.mmObject();
+		}
+
+		@Override
+		public CollateralValuePosition2 getValue(CollateralValueReportOrError4Choice obj) {
+			return obj.getCollateralValue();
+		}
+
+		@Override
+		public void setValue(CollateralValueReportOrError4Choice obj, CollateralValuePosition2 value) {
+			obj.setCollateralValue(value);
 		}
 	};
 

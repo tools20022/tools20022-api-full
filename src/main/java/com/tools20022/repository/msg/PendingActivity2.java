@@ -198,7 +198,7 @@ public class PendingActivity2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingActivity2, Action2Code> mmType = new MMMessageAttribute<PendingActivity2, Action2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingActivity2.mmObject();
 			isDerived = false;
@@ -209,6 +209,16 @@ public class PendingActivity2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Action2Code.mmObject();
+		}
+
+		@Override
+		public Action2Code getValue(PendingActivity2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PendingActivity2 obj, Action2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -242,7 +252,7 @@ public class PendingActivity2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingActivity2, Optional<Max140Text>> mmDescription = new MMMessageAttribute<PendingActivity2, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingActivity2.mmObject();
 			isDerived = false;
@@ -253,6 +263,16 @@ public class PendingActivity2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(PendingActivity2 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(PendingActivity2 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

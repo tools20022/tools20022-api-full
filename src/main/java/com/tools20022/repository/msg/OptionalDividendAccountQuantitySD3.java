@@ -114,7 +114,7 @@ public class OptionalDividendAccountQuantitySD3 {
 	 * OptionalDividendAccountQuantitySD2.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionalDividendAccountQuantitySD3, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<OptionalDividendAccountQuantitySD3, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionalDividendAccountQuantitySD3.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class OptionalDividendAccountQuantitySD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(OptionalDividendAccountQuantitySD3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(OptionalDividendAccountQuantitySD3 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BnfclOwnrQty", required = true)
@@ -166,7 +176,7 @@ public class OptionalDividendAccountQuantitySD3 {
 	 * OptionalDividendAccountQuantitySD2.mmBeneficialOwnerQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficialOwnerQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionalDividendAccountQuantitySD3, FinancialInstrumentQuantity15Choice> mmBeneficialOwnerQuantity = new MMMessageAttribute<OptionalDividendAccountQuantitySD3, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionalDividendAccountQuantitySD3.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class OptionalDividendAccountQuantitySD3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(OptionalDividendAccountQuantitySD3 obj) {
+			return obj.getBeneficialOwnerQuantity();
+		}
+
+		@Override
+		public void setValue(OptionalDividendAccountQuantitySD3 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setBeneficialOwnerQuantity(value);
 		}
 	};
 	@XmlElement(name = "NbOfAccts", required = true)
@@ -217,7 +237,7 @@ public class OptionalDividendAccountQuantitySD3 {
 	 * OptionalDividendAccountQuantitySD2.mmNumberOfAccounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfAccounts = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionalDividendAccountQuantitySD3, Max15NumericText> mmNumberOfAccounts = new MMMessageAttribute<OptionalDividendAccountQuantitySD3, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionalDividendAccountQuantitySD3.mmObject();
 			isDerived = false;
@@ -229,6 +249,16 @@ public class OptionalDividendAccountQuantitySD3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Max15NumericText getValue(OptionalDividendAccountQuantitySD3 obj) {
+			return obj.getNumberOfAccounts();
+		}
+
+		@Override
+		public void setValue(OptionalDividendAccountQuantitySD3 obj, Max15NumericText value) {
+			obj.setNumberOfAccounts(value);
 		}
 	};
 

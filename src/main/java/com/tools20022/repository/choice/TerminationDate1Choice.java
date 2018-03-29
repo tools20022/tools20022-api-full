@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.Date1Choice;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -98,7 +100,7 @@ public class TerminationDate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminationDate1Choice, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<TerminationDate1Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationDate1Choice.mmObject();
 			isDerived = false;
@@ -108,7 +110,17 @@ public class TerminationDate1Choice {
 			definition = "Termination date is defined as a choice between a date or a date and time format.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(TerminationDate1Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(TerminationDate1Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -141,7 +153,7 @@ public class TerminationDate1Choice {
 	 * "Termination date is defined using a code or data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminationDate1Choice, Date1Choice> mmCode = new MMMessageAttribute<TerminationDate1Choice, Date1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationDate1Choice.mmObject();
 			isDerived = false;
@@ -151,7 +163,17 @@ public class TerminationDate1Choice {
 			definition = "Termination date is defined using a code or data source scheme.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.Date1Choice.mmObject();
+			complexType_lazy = () -> Date1Choice.mmObject();
+		}
+
+		@Override
+		public Date1Choice getValue(TerminationDate1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TerminationDate1Choice obj, Date1Choice value) {
+			obj.setCode(value);
 		}
 	};
 
@@ -172,7 +194,7 @@ public class TerminationDate1Choice {
 		return date;
 	}
 
-	public TerminationDate1Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public TerminationDate1Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -181,7 +203,7 @@ public class TerminationDate1Choice {
 		return code;
 	}
 
-	public TerminationDate1Choice setCode(com.tools20022.repository.choice.Date1Choice code) {
+	public TerminationDate1Choice setCode(Date1Choice code) {
 		this.code = Objects.requireNonNull(code);
 		return this;
 	}

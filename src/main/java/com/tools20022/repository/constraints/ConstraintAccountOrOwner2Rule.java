@@ -55,12 +55,16 @@ public class ConstraintAccountOrOwner2Rule {
 	 */
 	public static final MMConstraint<InvestmentAccount42> forInvestmentAccount42 = new MMConstraint<InvestmentAccount42>() {
 		{
-			validator = ConstraintAccountOrOwner2Rule::checkInvestmentAccount42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOrOwner2Rule";
 			definition = "If OwnerIdentification is not present, then AccountIdentification must be present. Both OwnerIdentification and AccountIdentification may be present.";
 			owner_lazy = () -> InvestmentAccount42.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OwnerIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount42 obj) throws Exception {
+			checkInvestmentAccount42(obj);
 		}
 	};
 

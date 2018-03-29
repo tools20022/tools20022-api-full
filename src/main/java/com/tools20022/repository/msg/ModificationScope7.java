@@ -25,6 +25,7 @@ import com.tools20022.repository.area.acmt.AccountModificationInstructionV02;
 import com.tools20022.repository.area.acmt.AccountModificationInstructionV03;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Intermediary13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +132,7 @@ public class ModificationScope7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope7, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope7, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope7.mmObject();
 			isDerived = false;
@@ -143,6 +144,16 @@ public class ModificationScope7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope7 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope7 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "Intrmy", required = true)
@@ -181,7 +192,7 @@ public class ModificationScope7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope7, Intermediary13> mmIntermediary = new MMMessageAssociationEnd<ModificationScope7, Intermediary13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope7.mmObject();
 			isDerived = false;
@@ -193,7 +204,17 @@ public class ModificationScope7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmObject();
+			type_lazy = () -> Intermediary13.mmObject();
+		}
+
+		@Override
+		public Intermediary13 getValue(ModificationScope7 obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(ModificationScope7 obj, Intermediary13 value) {
+			obj.setIntermediary(value);
 		}
 	};
 
@@ -225,7 +246,7 @@ public class ModificationScope7 {
 		return intermediary;
 	}
 
-	public ModificationScope7 setIntermediary(com.tools20022.repository.msg.Intermediary13 intermediary) {
+	public ModificationScope7 setIntermediary(Intermediary13 intermediary) {
 		this.intermediary = Objects.requireNonNull(intermediary);
 		return this;
 	}

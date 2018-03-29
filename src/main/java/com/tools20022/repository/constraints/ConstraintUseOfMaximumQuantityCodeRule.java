@@ -51,11 +51,15 @@ public class ConstraintUseOfMaximumQuantityCodeRule {
 	 */
 	public static final MMConstraint<CorporateActionQuantity4SD2> forCorporateActionQuantity4SD2 = new MMConstraint<CorporateActionQuantity4SD2>() {
 		{
-			validator = ConstraintUseOfMaximumQuantityCodeRule::checkCorporateActionQuantity4SD2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UseOfMaximumQuantityCodeRule";
 			definition = "MaximumQuantityCode can only be used with corporate action event type codes TEND or BIDS.";
 			owner_lazy = () -> CorporateActionQuantity4SD2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionQuantity4SD2 obj) throws Exception {
+			checkCorporateActionQuantity4SD2(obj);
 		}
 	};
 

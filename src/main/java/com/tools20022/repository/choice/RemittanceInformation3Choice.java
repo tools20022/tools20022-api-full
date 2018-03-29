@@ -111,7 +111,7 @@ public class RemittanceInformation3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceInformation3Choice, Max140Text> mmUnstructured = new MMMessageAttribute<RemittanceInformation3Choice, Max140Text>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RemittanceInformation3Choice.mmObject();
@@ -123,6 +123,16 @@ public class RemittanceInformation3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(RemittanceInformation3Choice obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation3Choice obj, Max140Text value) {
+			obj.setUnstructured(value);
 		}
 	};
 	@XmlElement(name = "Strd", required = true)
@@ -160,7 +170,7 @@ public class RemittanceInformation3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStructured = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RemittanceInformation3Choice, StructuredRemittanceInformation2> mmStructured = new MMMessageAssociationEnd<RemittanceInformation3Choice, StructuredRemittanceInformation2>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RemittanceInformation3Choice.mmObject();
@@ -173,6 +183,16 @@ public class RemittanceInformation3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StructuredRemittanceInformation2.mmObject();
+		}
+
+		@Override
+		public StructuredRemittanceInformation2 getValue(RemittanceInformation3Choice obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation3Choice obj, StructuredRemittanceInformation2 value) {
+			obj.setStructured(value);
 		}
 	};
 

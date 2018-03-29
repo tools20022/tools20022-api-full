@@ -126,7 +126,7 @@ public class MeetingCancellationReason2 {
 	 * definition} = "Reason for cancelling a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingCancellationReason2, Optional<MeetingCancellationReason1Choice>> mmCancellationReasonCode = new MMMessageAssociationEnd<MeetingCancellationReason2, Optional<MeetingCancellationReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmMeetingCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingCancellationReason2.mmObject();
@@ -139,6 +139,16 @@ public class MeetingCancellationReason2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MeetingCancellationReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MeetingCancellationReason1Choice> getValue(MeetingCancellationReason2 obj) {
+			return obj.getCancellationReasonCode();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationReason2 obj, Optional<MeetingCancellationReason1Choice> value) {
+			obj.setCancellationReasonCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRsn")
@@ -177,7 +187,7 @@ public class MeetingCancellationReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingCancellationReason2, Optional<Max140Text>> mmCancellationReason = new MMMessageAttribute<MeetingCancellationReason2, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingCancellationReason2.mmObject();
@@ -189,6 +199,16 @@ public class MeetingCancellationReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(MeetingCancellationReason2 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationReason2 obj, Optional<Max140Text> value) {
+			obj.setCancellationReason(value.orElse(null));
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.ExternalFinancialInstrumentProductType1
 import com.tools20022.repository.datatype.CFIIdentifier;
 import com.tools20022.repository.entity.AssetClassification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification41;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +127,7 @@ public class ClassificationType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType1, Optional<CFIIdentifier>> mmClassificationFinancialInstrument = new MMMessageAttribute<ClassificationType1, Optional<CFIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClassificationType1.mmObject();
@@ -139,6 +140,16 @@ public class ClassificationType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<CFIIdentifier> getValue(ClassificationType1 obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ClassificationType1 obj, Optional<CFIIdentifier> value) {
+			obj.setClassificationFinancialInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmPdctTpCd")
@@ -186,7 +197,7 @@ public class ClassificationType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentProductTypeCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType1, Optional<ExternalFinancialInstrumentProductType1Code>> mmFinancialInstrumentProductTypeCode = new MMMessageAttribute<ClassificationType1, Optional<ExternalFinancialInstrumentProductType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClassificationType1.mmObject();
@@ -200,9 +211,19 @@ public class ClassificationType1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalFinancialInstrumentProductType1Code.mmObject();
 		}
+
+		@Override
+		public Optional<ExternalFinancialInstrumentProductType1Code> getValue(ClassificationType1 obj) {
+			return obj.getFinancialInstrumentProductTypeCode();
+		}
+
+		@Override
+		public void setValue(ClassificationType1 obj, Optional<ExternalFinancialInstrumentProductType1Code> value) {
+			obj.setFinancialInstrumentProductTypeCode(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AltrnClssfctn")
-	protected List<com.tools20022.repository.msg.GenericIdentification41> alternateClassification;
+	protected List<GenericIdentification41> alternateClassification;
 	/**
 	 * 
 	 <p>
@@ -244,7 +265,7 @@ public class ClassificationType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType1, List<GenericIdentification41>> mmAlternateClassification = new MMMessageAttribute<ClassificationType1, List<GenericIdentification41>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClassificationType1.mmObject();
@@ -255,7 +276,17 @@ public class ClassificationType1 {
 			definition = "Proprietary classification of financial instrument.";
 			nextVersions_lazy = () -> Arrays.asList(ClassificationType2.mmAlternateClassification);
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification41.mmObject();
+			complexType_lazy = () -> GenericIdentification41.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification41> getValue(ClassificationType1 obj) {
+			return obj.getAlternateClassification();
+		}
+
+		@Override
+		public void setValue(ClassificationType1 obj, List<GenericIdentification41> value) {
+			obj.setAlternateClassification(value);
 		}
 	};
 
@@ -297,7 +328,7 @@ public class ClassificationType1 {
 		return alternateClassification == null ? alternateClassification = new ArrayList<>() : alternateClassification;
 	}
 
-	public ClassificationType1 setAlternateClassification(List<com.tools20022.repository.msg.GenericIdentification41> alternateClassification) {
+	public ClassificationType1 setAlternateClassification(List<GenericIdentification41> alternateClassification) {
 		this.alternateClassification = Objects.requireNonNull(alternateClassification);
 		return this;
 	}

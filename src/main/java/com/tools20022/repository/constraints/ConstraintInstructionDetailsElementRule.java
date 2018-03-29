@@ -52,11 +52,15 @@ public class ConstraintInstructionDetailsElementRule {
 	 */
 	public static final MMConstraint<InvestmentAccountModification3> forInvestmentAccountModification3 = new MMConstraint<InvestmentAccountModification3>() {
 		{
-			validator = ConstraintInstructionDetailsElementRule::checkInvestmentAccountModification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetailsElementRule";
 			definition = "One of the elements (ModificationReason, AccountApplicationIdentification, ClientReference, CounterpartyReference, ExistingAccountIdentification) must be present.";
 			owner_lazy = () -> InvestmentAccountModification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccountModification3 obj) throws Exception {
+			checkInvestmentAccountModification3(obj);
 		}
 	};
 

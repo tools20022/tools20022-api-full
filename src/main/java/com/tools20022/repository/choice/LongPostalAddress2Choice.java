@@ -119,7 +119,7 @@ public class LongPostalAddress2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongPostalAddress2Choice, Max350Text> mmUnstructured = new MMMessageAttribute<LongPostalAddress2Choice, Max350Text>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.LongPostalAddress2Choice.mmObject();
@@ -131,6 +131,16 @@ public class LongPostalAddress2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(LongPostalAddress2Choice obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(LongPostalAddress2Choice obj, Max350Text value) {
+			obj.setUnstructured(value);
 		}
 	};
 	@XmlElement(name = "Strd", required = true)
@@ -169,7 +179,7 @@ public class LongPostalAddress2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongPostalAddress2Choice, PostalAddress1> mmStructured = new MMMessageAttribute<LongPostalAddress2Choice, PostalAddress1>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.LongPostalAddress2Choice.mmObject();
@@ -181,6 +191,16 @@ public class LongPostalAddress2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public PostalAddress1 getValue(LongPostalAddress2Choice obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(LongPostalAddress2Choice obj, PostalAddress1 value) {
+			obj.setStructured(value);
 		}
 	};
 

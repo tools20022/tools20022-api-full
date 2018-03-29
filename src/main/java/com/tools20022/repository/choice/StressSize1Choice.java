@@ -99,7 +99,7 @@ public class StressSize1Choice {
 	 * "Percentage shift if the shift is defined as a relative move.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StressSize1Choice, BaseOneRate> mmRelative = new MMMessageAttribute<StressSize1Choice, BaseOneRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StressSize1Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class StressSize1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(StressSize1Choice obj) {
+			return obj.getRelative();
+		}
+
+		@Override
+		public void setValue(StressSize1Choice obj, BaseOneRate value) {
+			obj.setRelative(value);
 		}
 	};
 	@XmlElement(name = "Abs", required = true)
@@ -140,7 +150,7 @@ public class StressSize1Choice {
 	 * "Absolute shift if the shift is defined as an absolute move.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAbsolute = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StressSize1Choice, Absolute1> mmAbsolute = new MMMessageAssociationEnd<StressSize1Choice, Absolute1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StressSize1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class StressSize1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Absolute1.mmObject();
+		}
+
+		@Override
+		public Absolute1 getValue(StressSize1Choice obj) {
+			return obj.getAbsolute();
+		}
+
+		@Override
+		public void setValue(StressSize1Choice obj, Absolute1 value) {
+			obj.setAbsolute(value);
 		}
 	};
 

@@ -21,11 +21,13 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V08;
 import com.tools20022.repository.choice.CorporateActionEventStageFormat15Choice;
 import com.tools20022.repository.choice.LotteryTypeFormat5Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionDate66;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -56,6 +58,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.CorporateActionEvent
  * CorporateActionEvent}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V08#mmCorporateActionDetails
+ * CorporateActionMovementPreliminaryAdviceCancellationAdvice002V08.
+ * mmCorporateActionDetails}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -111,7 +123,7 @@ public class CorporateAction48 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction48, Optional<CorporateActionDate66>> mmDateDetails = new MMMessageAssociationEnd<CorporateAction48, Optional<CorporateActionDate66>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction48.mmObject();
@@ -123,7 +135,17 @@ public class CorporateAction48 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate66.mmObject();
+			type_lazy = () -> CorporateActionDate66.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionDate66> getValue(CorporateAction48 obj) {
+			return obj.getDateDetails();
+		}
+
+		@Override
+		public void setValue(CorporateAction48 obj, Optional<CorporateActionDate66> value) {
+			obj.setDateDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtStag")
@@ -160,7 +182,7 @@ public class CorporateAction48 {
 	 * definition} = "Stage in the corporate action event life cycle."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction48, Optional<CorporateActionEventStageFormat15Choice>> mmEventStage = new MMMessageAssociationEnd<CorporateAction48, Optional<CorporateActionEventStageFormat15Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction48.mmObject();
@@ -173,6 +195,16 @@ public class CorporateAction48 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventStageFormat15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionEventStageFormat15Choice> getValue(CorporateAction48 obj) {
+			return obj.getEventStage();
+		}
+
+		@Override
+		public void setValue(CorporateAction48 obj, Optional<CorporateActionEventStageFormat15Choice> value) {
+			obj.setEventStage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtryTp")
@@ -212,7 +244,7 @@ public class CorporateAction48 {
 	 * definition} = "Specifies the type of lottery announced."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction48, Optional<LotteryTypeFormat5Choice>> mmLotteryType = new MMMessageAssociationEnd<CorporateAction48, Optional<LotteryTypeFormat5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction48.mmObject();
@@ -227,6 +259,16 @@ public class CorporateAction48 {
 			isComposite = true;
 			type_lazy = () -> LotteryTypeFormat5Choice.mmObject();
 		}
+
+		@Override
+		public Optional<LotteryTypeFormat5Choice> getValue(CorporateAction48 obj) {
+			return obj.getLotteryType();
+		}
+
+		@Override
+		public void setValue(CorporateAction48 obj, Optional<LotteryTypeFormat5Choice> value) {
+			obj.setLotteryType(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -234,6 +276,7 @@ public class CorporateAction48 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateAction48.mmDateDetails, com.tools20022.repository.msg.CorporateAction48.mmEventStage,
 						com.tools20022.repository.msg.CorporateAction48.mmLotteryType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceCancellationAdvice002V08.mmCorporateActionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -248,7 +291,7 @@ public class CorporateAction48 {
 		return dateDetails == null ? Optional.empty() : Optional.of(dateDetails);
 	}
 
-	public CorporateAction48 setDateDetails(com.tools20022.repository.msg.CorporateActionDate66 dateDetails) {
+	public CorporateAction48 setDateDetails(CorporateActionDate66 dateDetails) {
 		this.dateDetails = dateDetails;
 		return this;
 	}

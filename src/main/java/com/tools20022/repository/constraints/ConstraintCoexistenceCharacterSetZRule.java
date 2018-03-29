@@ -52,11 +52,15 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 */
 	public static final MMConstraint<UpdatedURLlnformation> forUpdatedURLlnformation = new MMConstraint<UpdatedURLlnformation>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetZRule::checkUpdatedURLlnformation;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetZRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in URLAdress must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % & * < > ; @ #  {  CR LF.";
 			owner_lazy = () -> UpdatedURLlnformation.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedURLlnformation obj) throws Exception {
+			checkUpdatedURLlnformation(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation2> forUpdatedAdditionalInformation2 = new MMConstraint<UpdatedAdditionalInformation2>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetZRule::checkUpdatedAdditionalInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetZRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in AdditionalInformation must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % & * < > ; @ #  {  CR LF.";
 			owner_lazy = () -> UpdatedAdditionalInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedAdditionalInformation2 obj) throws Exception {
+			checkUpdatedAdditionalInformation2(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 */
 	public static final MMConstraint<UpdatedURLlnformation1> forUpdatedURLlnformation1 = new MMConstraint<UpdatedURLlnformation1>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetZRule::checkUpdatedURLlnformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetZRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in URLAdress must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % & * < > ; @ #  {  CR LF. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> UpdatedURLlnformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedURLlnformation1 obj) throws Exception {
+			checkUpdatedURLlnformation1(obj);
 		}
 	};
 	/**
@@ -142,11 +154,15 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation4> forUpdatedAdditionalInformation4 = new MMConstraint<UpdatedAdditionalInformation4>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetZRule::checkUpdatedAdditionalInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetZRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in AdditionalInformation must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % & * < > ; @ #  {  CR LF. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> UpdatedAdditionalInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedAdditionalInformation4 obj) throws Exception {
+			checkUpdatedAdditionalInformation4(obj);
 		}
 	};
 	/**
@@ -172,11 +188,15 @@ public class ConstraintCoexistenceCharacterSetZRule {
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation7> forUpdatedAdditionalInformation7 = new MMConstraint<UpdatedAdditionalInformation7>() {
 		{
-			validator = ConstraintCoexistenceCharacterSetZRule::checkUpdatedAdditionalInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceCharacterSetZRule";
 			definition = "During ISO 15022 – 20022 coexistence, characters used in AdditionalInformation must correspond to character set Z, that is, a-z A-Z / - ? : ( ) . , ‘ += ! “ % & * < > ; @ #  {  CR LF.";
 			owner_lazy = () -> UpdatedAdditionalInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedAdditionalInformation7 obj) throws Exception {
+			checkUpdatedAdditionalInformation7(obj);
 		}
 	};
 

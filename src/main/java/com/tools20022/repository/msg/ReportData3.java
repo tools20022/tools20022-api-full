@@ -121,7 +121,7 @@ public class ReportData3 {
 	 * definition} = "Identification of the report as assigned by the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData3, Max35Text> mmMessageIdentification = new MMMessageAttribute<ReportData3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData3.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class ReportData3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportData3 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(ReportData3 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "ValDt", required = true)
@@ -167,7 +177,7 @@ public class ReportData3 {
 	 * definition} = "Value date for which the pay-in schedule is generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData3, ISODate> mmValueDate = new MMMessageAttribute<ReportData3, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData3.mmObject();
@@ -179,6 +189,16 @@ public class ReportData3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ReportData3 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(ReportData3 obj, ISODate value) {
+			obj.setValueDate(value);
 		}
 	};
 	@XmlElement(name = "DtAndTmStmp", required = true)
@@ -216,7 +236,7 @@ public class ReportData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateAndTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData3, ISODateTime> mmDateAndTimeStamp = new MMMessageAttribute<ReportData3, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCalculationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData3.mmObject();
@@ -228,6 +248,16 @@ public class ReportData3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ReportData3 obj) {
+			return obj.getDateAndTimeStamp();
+		}
+
+		@Override
+		public void setValue(ReportData3 obj, ISODateTime value) {
+			obj.setDateAndTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -263,7 +293,7 @@ public class ReportData3 {
 	 * definition} = "Type of pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData3, Entry2Code> mmType = new MMMessageAttribute<ReportData3, Entry2Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData3.mmObject();
@@ -275,6 +305,16 @@ public class ReportData3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Entry2Code.mmObject();
+		}
+
+		@Override
+		public Entry2Code getValue(ReportData3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReportData3 obj, Entry2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "SttlmSsn")
@@ -307,7 +347,7 @@ public class ReportData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementSession = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData3, Optional<Number>> mmSettlementSession = new MMMessageAttribute<ReportData3, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData3.mmObject();
 			isDerived = false;
@@ -318,6 +358,16 @@ public class ReportData3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ReportData3 obj) {
+			return obj.getSettlementSession();
+		}
+
+		@Override
+		public void setValue(ReportData3 obj, Optional<Number> value) {
+			obj.setSettlementSession(value.orElse(null));
 		}
 	};
 

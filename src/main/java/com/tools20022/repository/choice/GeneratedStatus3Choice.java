@@ -135,7 +135,7 @@ public class GeneratedStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneratedStatus3Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<GeneratedStatus3Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedStatus3Choice.mmObject();
@@ -149,6 +149,16 @@ public class GeneratedStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(GeneratedStatus3Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(GeneratedStatus3Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -195,7 +205,7 @@ public class GeneratedStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneratedStatus3Choice, List<GeneratedReason1>> mmReason = new MMMessageAssociationEnd<GeneratedStatus3Choice, List<GeneratedReason1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedStatus3Choice.mmObject();
@@ -209,6 +219,16 @@ public class GeneratedStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneratedReason1.mmObject();
+		}
+
+		@Override
+		public List<GeneratedReason1> getValue(GeneratedStatus3Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(GeneratedStatus3Choice obj, List<GeneratedReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.CorporateActionEventRegistration;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification12;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -140,7 +141,7 @@ public class CorporateActionGeneralInformation14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation14, RestrictedFINXMax16Text> mmCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation14, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation14.mmObject();
@@ -153,6 +154,16 @@ public class CorporateActionGeneralInformation14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(CorporateActionGeneralInformation14 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation14 obj, RestrictedFINXMax16Text value) {
+			obj.setCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "OffclCorpActnEvtId")
@@ -196,7 +207,7 @@ public class CorporateActionGeneralInformation14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformation14, Optional<RestrictedFINXMax16Text>> mmOfficialCorporateActionEventIdentification = new MMMessageAttribute<CorporateActionGeneralInformation14, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation14.mmObject();
@@ -209,6 +220,16 @@ public class CorporateActionGeneralInformation14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(CorporateActionGeneralInformation14 obj) {
+			return obj.getOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation14 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setOfficialCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp", required = true)
@@ -248,7 +269,7 @@ public class CorporateActionGeneralInformation14 {
 	 * definition} = "Type of corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionGeneralInformation14, CorporateActionEventType4Choice> mmEventType = new MMMessageAssociationEnd<CorporateActionGeneralInformation14, CorporateActionEventType4Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation14.mmObject();
@@ -262,6 +283,16 @@ public class CorporateActionGeneralInformation14 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventType4Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType4Choice getValue(CorporateActionGeneralInformation14 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation14 obj, CorporateActionEventType4Choice value) {
+			obj.setEventType(value);
 		}
 	};
 	@XmlElement(name = "UndrlygSctyId")
@@ -302,7 +333,7 @@ public class CorporateActionGeneralInformation14 {
 	 * "Identification of the security concerned by the corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionGeneralInformation14, Optional<SecurityIdentification12>> mmUnderlyingSecurityIdentification = new MMMessageAssociationEnd<CorporateActionGeneralInformation14, Optional<SecurityIdentification12>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformation14.mmObject();
@@ -315,7 +346,17 @@ public class CorporateActionGeneralInformation14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification12.mmObject();
+			type_lazy = () -> SecurityIdentification12.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification12> getValue(CorporateActionGeneralInformation14 obj) {
+			return obj.getUnderlyingSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformation14 obj, Optional<SecurityIdentification12> value) {
+			obj.setUnderlyingSecurityIdentification(value.orElse(null));
 		}
 	};
 
@@ -375,7 +416,7 @@ public class CorporateActionGeneralInformation14 {
 		return underlyingSecurityIdentification == null ? Optional.empty() : Optional.of(underlyingSecurityIdentification);
 	}
 
-	public CorporateActionGeneralInformation14 setUnderlyingSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification12 underlyingSecurityIdentification) {
+	public CorporateActionGeneralInformation14 setUnderlyingSecurityIdentification(SecurityIdentification12 underlyingSecurityIdentification) {
 		this.underlyingSecurityIdentification = underlyingSecurityIdentification;
 		return this;
 	}

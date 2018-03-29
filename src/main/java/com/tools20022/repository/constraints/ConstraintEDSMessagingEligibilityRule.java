@@ -62,12 +62,16 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformationSD11> forCorporateActionGeneralInformationSD11 = new MMConstraint<CorporateActionGeneralInformationSD11>() {
 		{
-			validator = ConstraintEDSMessagingEligibilityRule::checkCorporateActionGeneralInformationSD11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityRule";
 			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD13);
 			owner_lazy = () -> CorporateActionGeneralInformationSD11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformationSD11 obj) throws Exception {
+			checkCorporateActionGeneralInformationSD11(obj);
 		}
 	};
 	/**
@@ -102,12 +106,16 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformationSD10> forCorporateActionGeneralInformationSD10 = new MMConstraint<CorporateActionGeneralInformationSD10>() {
 		{
-			validator = ConstraintEDSMessagingEligibilityRule::checkCorporateActionGeneralInformationSD10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityRule";
 			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD12);
 			owner_lazy = () -> CorporateActionGeneralInformationSD10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformationSD10 obj) throws Exception {
+			checkCorporateActionGeneralInformationSD10(obj);
 		}
 	};
 	/**
@@ -139,12 +147,16 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformationSD13> forCorporateActionGeneralInformationSD13 = new MMConstraint<CorporateActionGeneralInformationSD13>() {
 		{
-			validator = ConstraintEDSMessagingEligibilityRule::checkCorporateActionGeneralInformationSD13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityRule";
 			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD11;
 			owner_lazy = () -> CorporateActionGeneralInformationSD13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformationSD13 obj) throws Exception {
+			checkCorporateActionGeneralInformationSD13(obj);
 		}
 	};
 	/**
@@ -185,13 +197,17 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformationSD12> forCorporateActionGeneralInformationSD12 = new MMConstraint<CorporateActionGeneralInformationSD12>() {
 		{
-			validator = ConstraintEDSMessagingEligibilityRule::checkCorporateActionGeneralInformationSD12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityRule";
 			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD18);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD10;
 			owner_lazy = () -> CorporateActionGeneralInformationSD12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformationSD12 obj) throws Exception {
+			checkCorporateActionGeneralInformationSD12(obj);
 		}
 	};
 	/**
@@ -232,13 +248,17 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformationSD18> forCorporateActionGeneralInformationSD18 = new MMConstraint<CorporateActionGeneralInformationSD18>() {
 		{
-			validator = ConstraintEDSMessagingEligibilityRule::checkCorporateActionGeneralInformationSD18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityRule";
 			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD22);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD12;
 			owner_lazy = () -> CorporateActionGeneralInformationSD18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformationSD18 obj) throws Exception {
+			checkCorporateActionGeneralInformationSD18(obj);
 		}
 	};
 	/**
@@ -279,13 +299,17 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformationSD22> forCorporateActionGeneralInformationSD22 = new MMConstraint<CorporateActionGeneralInformationSD22>() {
 		{
-			validator = ConstraintEDSMessagingEligibilityRule::checkCorporateActionGeneralInformationSD22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityRule";
 			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD23);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD18;
 			owner_lazy = () -> CorporateActionGeneralInformationSD22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformationSD22 obj) throws Exception {
+			checkCorporateActionGeneralInformationSD22(obj);
 		}
 	};
 	/**
@@ -326,13 +350,17 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformationSD23> forCorporateActionGeneralInformationSD23 = new MMConstraint<CorporateActionGeneralInformationSD23>() {
 		{
-			validator = ConstraintEDSMessagingEligibilityRule::checkCorporateActionGeneralInformationSD23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityRule";
 			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD28);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD22;
 			owner_lazy = () -> CorporateActionGeneralInformationSD23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformationSD23 obj) throws Exception {
+			checkCorporateActionGeneralInformationSD23(obj);
 		}
 	};
 	/**
@@ -364,12 +392,16 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformationSD28> forCorporateActionGeneralInformationSD28 = new MMConstraint<CorporateActionGeneralInformationSD28>() {
 		{
-			validator = ConstraintEDSMessagingEligibilityRule::checkCorporateActionGeneralInformationSD28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityRule";
 			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD23;
 			owner_lazy = () -> CorporateActionGeneralInformationSD28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformationSD28 obj) throws Exception {
+			checkCorporateActionGeneralInformationSD28(obj);
 		}
 	};
 

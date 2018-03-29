@@ -27,6 +27,9 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
+import com.tools20022.repository.msg.NameAndAddress5;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,7 +132,7 @@ public class PartyIdentification6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification6Choice, Optional<BICIdentifier>> mmBIC = new MMMessageAttribute<PartyIdentification6Choice, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification6Choice.mmObject();
@@ -141,6 +144,16 @@ public class PartyIdentification6Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(PartyIdentification6Choice obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification6Choice obj, Optional<BICIdentifier> value) {
+			obj.setBIC(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MIC")
@@ -180,7 +193,7 @@ public class PartyIdentification6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification6Choice, Optional<MICIdentifier>> mmMIC = new MMMessageAttribute<PartyIdentification6Choice, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification6Choice.mmObject();
@@ -192,6 +205,16 @@ public class PartyIdentification6Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(PartyIdentification6Choice obj) {
+			return obj.getMIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification6Choice obj, Optional<MICIdentifier> value) {
+			obj.setMIC(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryId")
@@ -231,7 +254,7 @@ public class PartyIdentification6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification6Choice, Optional<GenericIdentification1>> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification6Choice, Optional<GenericIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification6Choice.mmObject();
@@ -242,7 +265,17 @@ public class PartyIdentification6Choice {
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification1> getValue(PartyIdentification6Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification6Choice obj, Optional<GenericIdentification1> value) {
+			obj.setProprietaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NmAndAdr")
@@ -280,7 +313,7 @@ public class PartyIdentification6Choice {
 	 * "Identification of a party with its name and address in free text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification6Choice, Optional<NameAndAddress5>> mmNameAndAddress = new MMMessageAttribute<PartyIdentification6Choice, Optional<NameAndAddress5>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification6Choice.mmObject();
@@ -291,7 +324,17 @@ public class PartyIdentification6Choice {
 			definition = "Identification of a party with its name and address in free text.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
+			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress5> getValue(PartyIdentification6Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification6Choice obj, Optional<NameAndAddress5> value) {
+			obj.setNameAndAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -327,7 +370,7 @@ public class PartyIdentification6Choice {
 	 * definition} = "Postal address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification6Choice, Optional<PostalAddress1>> mmPostalAddress = new MMMessageAssociationEnd<PartyIdentification6Choice, Optional<PostalAddress1>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification6Choice.mmObject();
@@ -339,7 +382,17 @@ public class PartyIdentification6Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress1> getValue(PartyIdentification6Choice obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification6Choice obj, Optional<PostalAddress1> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 
@@ -388,7 +441,7 @@ public class PartyIdentification6Choice {
 		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public PartyIdentification6Choice setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification1 proprietaryIdentification) {
+	public PartyIdentification6Choice setProprietaryIdentification(GenericIdentification1 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
 		return this;
 	}
@@ -397,7 +450,7 @@ public class PartyIdentification6Choice {
 		return nameAndAddress == null ? Optional.empty() : Optional.of(nameAndAddress);
 	}
 
-	public PartyIdentification6Choice setNameAndAddress(com.tools20022.repository.msg.NameAndAddress5 nameAndAddress) {
+	public PartyIdentification6Choice setNameAndAddress(NameAndAddress5 nameAndAddress) {
 		this.nameAndAddress = nameAndAddress;
 		return this;
 	}
@@ -406,7 +459,7 @@ public class PartyIdentification6Choice {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public PartyIdentification6Choice setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
+	public PartyIdentification6Choice setPostalAddress(PostalAddress1 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}

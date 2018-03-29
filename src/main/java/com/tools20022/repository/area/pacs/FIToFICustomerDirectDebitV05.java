@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.DirectDebitTransactionInformation17;
 import com.tools20022.repository.msg.GroupHeader50;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -188,7 +187,7 @@ public class FIToFICustomerDirectDebitV05 {
 	 * FIToFICustomerDirectDebitV04.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFICustomerDirectDebitV05, GroupHeader50> mmGroupHeader = new MMMessageBuildingBlock<FIToFICustomerDirectDebitV05, GroupHeader50>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,12 +200,14 @@ public class FIToFICustomerDirectDebitV05 {
 			complexType_lazy = () -> GroupHeader50.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFICustomerDirectDebitV05.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader50 getValue(FIToFICustomerDirectDebitV05 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFICustomerDirectDebitV05 obj, GroupHeader50 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "DrctDbtTxInf", required = true)
@@ -249,7 +250,7 @@ public class FIToFICustomerDirectDebitV05 {
 	 * FIToFICustomerDirectDebitV04.mmDirectDebitTransactionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDirectDebitTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFICustomerDirectDebitV05, List<DirectDebitTransactionInformation17>> mmDirectDebitTransactionInformation = new MMMessageBuildingBlock<FIToFICustomerDirectDebitV05, List<DirectDebitTransactionInformation17>>() {
 		{
 			xmlTag = "DrctDbtTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,12 +262,14 @@ public class FIToFICustomerDirectDebitV05 {
 			complexType_lazy = () -> DirectDebitTransactionInformation17.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFICustomerDirectDebitV05.class.getMethod("getDirectDebitTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DirectDebitTransactionInformation17> getValue(FIToFICustomerDirectDebitV05 obj) {
+			return obj.getDirectDebitTransactionInformation();
+		}
+
+		@Override
+		public void setValue(FIToFICustomerDirectDebitV05 obj, List<DirectDebitTransactionInformation17> value) {
+			obj.setDirectDebitTransactionInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -309,7 +312,7 @@ public class FIToFICustomerDirectDebitV05 {
 	 * FIToFICustomerDirectDebitV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFICustomerDirectDebitV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FIToFICustomerDirectDebitV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +324,14 @@ public class FIToFICustomerDirectDebitV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFICustomerDirectDebitV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FIToFICustomerDirectDebitV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FIToFICustomerDirectDebitV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

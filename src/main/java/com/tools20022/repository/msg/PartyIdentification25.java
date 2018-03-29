@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification4;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +119,7 @@ public class PartyIdentification25 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification25, Max70Text> mmName = new MMMessageAttribute<PartyIdentification25, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification25.mmObject();
@@ -130,6 +131,16 @@ public class PartyIdentification25 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PartyIdentification25 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification25 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PrtryId")
@@ -167,7 +178,7 @@ public class PartyIdentification25 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification25, Optional<GenericIdentification4>> mmProprietaryIdentification = new MMMessageAssociationEnd<PartyIdentification25, Optional<GenericIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification25.mmObject();
@@ -179,7 +190,17 @@ public class PartyIdentification25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
+			type_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification4> getValue(PartyIdentification25 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification25 obj, Optional<GenericIdentification4> value) {
+			obj.setProprietaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BEI")
@@ -217,7 +238,7 @@ public class PartyIdentification25 {
 	 * definition} = "Identification of a non-financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification25, Optional<BEIIdentifier>> mmBEI = new MMMessageAttribute<PartyIdentification25, Optional<BEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICNonFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification25.mmObject();
@@ -229,6 +250,16 @@ public class PartyIdentification25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BEIIdentifier> getValue(PartyIdentification25 obj) {
+			return obj.getBEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification25 obj, Optional<BEIIdentifier> value) {
+			obj.setBEI(value.orElse(null));
 		}
 	};
 
@@ -267,7 +298,7 @@ public class PartyIdentification25 {
 		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public PartyIdentification25 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification4 proprietaryIdentification) {
+	public PartyIdentification25 setProprietaryIdentification(GenericIdentification4 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
 		return this;
 	}

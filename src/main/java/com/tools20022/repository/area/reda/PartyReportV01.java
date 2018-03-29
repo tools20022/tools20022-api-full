@@ -28,7 +28,6 @@ import com.tools20022.repository.choice.PartyOrOperationalError2Choice;
 import com.tools20022.repository.msg.MessageHeader3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._T2S_Party_Reference_Data_ForRegistration;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -128,7 +127,7 @@ public class PartyReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyReportV01, MessageHeader3> mmMessageHeader = new MMMessageBuildingBlock<PartyReportV01, MessageHeader3>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +138,14 @@ public class PartyReportV01 {
 			complexType_lazy = () -> MessageHeader3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyReportV01.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader3 getValue(PartyReportV01 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(PartyReportV01 obj, MessageHeader3 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -173,7 +174,7 @@ public class PartyReportV01 {
 	 * "Party that originated the report message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyReportV01, Optional<PartyIdentification71Choice>> mmMessageOriginator = new MMMessageBuildingBlock<PartyReportV01, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class PartyReportV01 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyReportV01.class.getMethod("getMessageOriginator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(PartyReportV01 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(PartyReportV01 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -219,7 +222,7 @@ public class PartyReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyReportV01, Optional<PartyIdentification71Choice>> mmMessageRecipient = new MMMessageBuildingBlock<PartyReportV01, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +233,14 @@ public class PartyReportV01 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyReportV01.class.getMethod("getMessageRecipient", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(PartyReportV01 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(PartyReportV01 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptOrErr", required = true)
@@ -265,7 +270,7 @@ public class PartyReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportOrError = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyReportV01, PartyOrOperationalError2Choice> mmReportOrError = new MMMessageBuildingBlock<PartyReportV01, PartyOrOperationalError2Choice>() {
 		{
 			xmlTag = "RptOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,12 +281,14 @@ public class PartyReportV01 {
 			complexType_lazy = () -> PartyOrOperationalError2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyReportV01.class.getMethod("getReportOrError", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyOrOperationalError2Choice getValue(PartyReportV01 obj) {
+			return obj.getReportOrError();
+		}
+
+		@Override
+		public void setValue(PartyReportV01 obj, PartyOrOperationalError2Choice value) {
+			obj.setReportOrError(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -311,7 +318,7 @@ public class PartyReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<PartyReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +328,14 @@ public class PartyReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(PartyReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(PartyReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

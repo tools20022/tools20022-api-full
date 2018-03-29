@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.IssuerOrInvestor1Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +109,7 @@ public class SecurityCSDLink6 {
 	 * SecurityCSDLink3.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCSDLink6, SecurityIdentification19> mmFinancialInstrumentIdentification = new MMMessageAttribute<SecurityCSDLink6, SecurityIdentification19>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink6.mmObject();
 			isDerived = false;
@@ -119,7 +120,17 @@ public class SecurityCSDLink6 {
 			previousVersion_lazy = () -> SecurityCSDLink3.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			complexType_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification19 getValue(SecurityCSDLink6 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink6 obj, SecurityIdentification19 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "IssrInvstrCSD", required = true)
@@ -157,7 +168,7 @@ public class SecurityCSDLink6 {
 	 * SecurityCSDLink3.mmIssuerInvestorCSD}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerInvestorCSD = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCSDLink6, IssuerOrInvestor1Choice> mmIssuerInvestorCSD = new MMMessageAttribute<SecurityCSDLink6, IssuerOrInvestor1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink6.mmObject();
 			isDerived = false;
@@ -169,6 +180,16 @@ public class SecurityCSDLink6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> IssuerOrInvestor1Choice.mmObject();
+		}
+
+		@Override
+		public IssuerOrInvestor1Choice getValue(SecurityCSDLink6 obj) {
+			return obj.getIssuerInvestorCSD();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink6 obj, IssuerOrInvestor1Choice value) {
+			obj.setIssuerInvestorCSD(value);
 		}
 	};
 	@XmlElement(name = "VldFr", required = true)
@@ -207,7 +228,7 @@ public class SecurityCSDLink6 {
 	 * SecurityCSDLink3.mmValidFrom}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityCSDLink6, DateAndDateTimeChoice> mmValidFrom = new MMMessageAttribute<SecurityCSDLink6, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink6.mmObject();
 			isDerived = false;
@@ -219,6 +240,16 @@ public class SecurityCSDLink6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(SecurityCSDLink6 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(SecurityCSDLink6 obj, DateAndDateTimeChoice value) {
+			obj.setValidFrom(value);
 		}
 	};
 
@@ -241,7 +272,7 @@ public class SecurityCSDLink6 {
 		return financialInstrumentIdentification;
 	}
 
-	public SecurityCSDLink6 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+	public SecurityCSDLink6 setFinancialInstrumentIdentification(SecurityIdentification19 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}

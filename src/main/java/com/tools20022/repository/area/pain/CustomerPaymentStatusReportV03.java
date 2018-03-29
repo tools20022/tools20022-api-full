@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader36;
 import com.tools20022.repository.msg.OriginalGroupInformation20;
 import com.tools20022.repository.msg.OriginalPaymentInformation1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -162,7 +161,7 @@ public class CustomerPaymentStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentStatusReportV03, GroupHeader36> mmGroupHeader = new MMMessageBuildingBlock<CustomerPaymentStatusReportV03, GroupHeader36>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,12 +172,14 @@ public class CustomerPaymentStatusReportV03 {
 			complexType_lazy = () -> GroupHeader36.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentStatusReportV03.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader36 getValue(CustomerPaymentStatusReportV03 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentStatusReportV03 obj, GroupHeader36 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
@@ -208,7 +209,7 @@ public class CustomerPaymentStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentStatusReportV03, OriginalGroupInformation20> mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock<CustomerPaymentStatusReportV03, OriginalGroupInformation20>() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,12 +220,14 @@ public class CustomerPaymentStatusReportV03 {
 			complexType_lazy = () -> OriginalGroupInformation20.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentStatusReportV03.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalGroupInformation20 getValue(CustomerPaymentStatusReportV03 obj) {
+			return obj.getOriginalGroupInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentStatusReportV03 obj, OriginalGroupInformation20 value) {
+			obj.setOriginalGroupInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInfAndSts")
@@ -254,7 +257,7 @@ public class CustomerPaymentStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalPaymentInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentStatusReportV03, List<OriginalPaymentInformation1>> mmOriginalPaymentInformationAndStatus = new MMMessageBuildingBlock<CustomerPaymentStatusReportV03, List<OriginalPaymentInformation1>>() {
 		{
 			xmlTag = "OrgnlPmtInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,12 +267,14 @@ public class CustomerPaymentStatusReportV03 {
 			complexType_lazy = () -> OriginalPaymentInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentStatusReportV03.class.getMethod("getOriginalPaymentInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<OriginalPaymentInformation1> getValue(CustomerPaymentStatusReportV03 obj) {
+			return obj.getOriginalPaymentInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentStatusReportV03 obj, List<OriginalPaymentInformation1> value) {
+			obj.setOriginalPaymentInformationAndStatus(value);
 		}
 	};
 

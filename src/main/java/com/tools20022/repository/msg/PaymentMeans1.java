@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentMethod4Code;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4;
+import com.tools20022.repository.msg.CashAccount16;
+import com.tools20022.repository.msg.PaymentTypeInformation19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +120,7 @@ public class PaymentMeans1 {
 	 * definition} = "Type, or nature, of the payment, eg, express payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentMeans1, PaymentTypeInformation19> mmPaymentType = new MMMessageAttribute<PaymentMeans1, PaymentTypeInformation19>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmProcessingInstructions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
@@ -128,7 +131,17 @@ public class PaymentMeans1 {
 			definition = "Type, or nature, of the payment, eg, express payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation19.mmObject();
+			complexType_lazy = () -> PaymentTypeInformation19.mmObject();
+		}
+
+		@Override
+		public PaymentTypeInformation19 getValue(PaymentMeans1 obj) {
+			return obj.getPaymentType();
+		}
+
+		@Override
+		public void setValue(PaymentMeans1 obj, PaymentTypeInformation19 value) {
+			obj.setPaymentType(value);
 		}
 	};
 	@XmlElement(name = "PmtMtdCd", required = true)
@@ -165,7 +178,7 @@ public class PaymentMeans1 {
 	 * definition} = "Transfer method to be used for the transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentMethodCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentMeans1, PaymentMethod4Code> mmPaymentMethodCode = new MMMessageAttribute<PaymentMeans1, PaymentMethod4Code>() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
@@ -177,6 +190,16 @@ public class PaymentMeans1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentMethod4Code.mmObject();
+		}
+
+		@Override
+		public PaymentMethod4Code getValue(PaymentMeans1 obj) {
+			return obj.getPaymentMethodCode();
+		}
+
+		@Override
+		public void setValue(PaymentMeans1 obj, PaymentMethod4Code value) {
+			obj.setPaymentMethodCode(value);
 		}
 	};
 	@XmlElement(name = "PyeeCdtrAcct", required = true)
@@ -213,7 +236,7 @@ public class PaymentMeans1 {
 	 * "Creditor financial account of the payee party for this payment means."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayeeCreditorAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentMeans1, CashAccount16> mmPayeeCreditorAccount = new MMMessageAttribute<PaymentMeans1, CashAccount16>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
@@ -224,7 +247,17 @@ public class PaymentMeans1 {
 			definition = "Creditor financial account of the payee party for this payment means.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			complexType_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public CashAccount16 getValue(PaymentMeans1 obj) {
+			return obj.getPayeeCreditorAccount();
+		}
+
+		@Override
+		public void setValue(PaymentMeans1 obj, CashAccount16 value) {
+			obj.setPayeeCreditorAccount(value);
 		}
 	};
 	@XmlElement(name = "PyeeFI", required = true)
@@ -263,7 +296,7 @@ public class PaymentMeans1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayeeFinancialInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentMeans1, BranchAndFinancialInstitutionIdentification4> mmPayeeFinancialInstitution = new MMMessageAttribute<PaymentMeans1, BranchAndFinancialInstitutionIdentification4>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
@@ -274,7 +307,17 @@ public class PaymentMeans1 {
 			definition = "Creditor financial institution of the payee party specified for this payment means.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification4 getValue(PaymentMeans1 obj) {
+			return obj.getPayeeFinancialInstitution();
+		}
+
+		@Override
+		public void setValue(PaymentMeans1 obj, BranchAndFinancialInstitutionIdentification4 value) {
+			obj.setPayeeFinancialInstitution(value);
 		}
 	};
 	@XmlElement(name = "PyerDbtrAcct")
@@ -311,7 +354,7 @@ public class PaymentMeans1 {
 	 * "Debtor financial account of the payer party for this payment means."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayerDebtorAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentMeans1, Optional<CashAccount16>> mmPayerDebtorAccount = new MMMessageAttribute<PaymentMeans1, Optional<CashAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
@@ -322,7 +365,17 @@ public class PaymentMeans1 {
 			definition = "Debtor financial account of the payer party for this payment means.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			complexType_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount16> getValue(PaymentMeans1 obj) {
+			return obj.getPayerDebtorAccount();
+		}
+
+		@Override
+		public void setValue(PaymentMeans1 obj, Optional<CashAccount16> value) {
+			obj.setPayerDebtorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PyerFI")
@@ -361,7 +414,7 @@ public class PaymentMeans1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayerFinancialInstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentMeans1, Optional<BranchAndFinancialInstitutionIdentification4>> mmPayerFinancialInstitution = new MMMessageAttribute<PaymentMeans1, Optional<BranchAndFinancialInstitutionIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentMeans1.mmObject();
@@ -372,7 +425,17 @@ public class PaymentMeans1 {
 			definition = "Debtor financial institution of the payer party specified for this payment means.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification4> getValue(PaymentMeans1 obj) {
+			return obj.getPayerFinancialInstitution();
+		}
+
+		@Override
+		public void setValue(PaymentMeans1 obj, Optional<BranchAndFinancialInstitutionIdentification4> value) {
+			obj.setPayerFinancialInstitution(value.orElse(null));
 		}
 	};
 
@@ -396,7 +459,7 @@ public class PaymentMeans1 {
 		return paymentType;
 	}
 
-	public PaymentMeans1 setPaymentType(com.tools20022.repository.msg.PaymentTypeInformation19 paymentType) {
+	public PaymentMeans1 setPaymentType(PaymentTypeInformation19 paymentType) {
 		this.paymentType = Objects.requireNonNull(paymentType);
 		return this;
 	}
@@ -414,7 +477,7 @@ public class PaymentMeans1 {
 		return payeeCreditorAccount;
 	}
 
-	public PaymentMeans1 setPayeeCreditorAccount(com.tools20022.repository.msg.CashAccount16 payeeCreditorAccount) {
+	public PaymentMeans1 setPayeeCreditorAccount(CashAccount16 payeeCreditorAccount) {
 		this.payeeCreditorAccount = Objects.requireNonNull(payeeCreditorAccount);
 		return this;
 	}
@@ -423,7 +486,7 @@ public class PaymentMeans1 {
 		return payeeFinancialInstitution;
 	}
 
-	public PaymentMeans1 setPayeeFinancialInstitution(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 payeeFinancialInstitution) {
+	public PaymentMeans1 setPayeeFinancialInstitution(BranchAndFinancialInstitutionIdentification4 payeeFinancialInstitution) {
 		this.payeeFinancialInstitution = Objects.requireNonNull(payeeFinancialInstitution);
 		return this;
 	}
@@ -432,7 +495,7 @@ public class PaymentMeans1 {
 		return payerDebtorAccount == null ? Optional.empty() : Optional.of(payerDebtorAccount);
 	}
 
-	public PaymentMeans1 setPayerDebtorAccount(com.tools20022.repository.msg.CashAccount16 payerDebtorAccount) {
+	public PaymentMeans1 setPayerDebtorAccount(CashAccount16 payerDebtorAccount) {
 		this.payerDebtorAccount = payerDebtorAccount;
 		return this;
 	}
@@ -441,7 +504,7 @@ public class PaymentMeans1 {
 		return payerFinancialInstitution == null ? Optional.empty() : Optional.of(payerFinancialInstitution);
 	}
 
-	public PaymentMeans1 setPayerFinancialInstitution(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 payerFinancialInstitution) {
+	public PaymentMeans1 setPayerFinancialInstitution(BranchAndFinancialInstitutionIdentification4 payerFinancialInstitution) {
 		this.payerFinancialInstitution = payerFinancialInstitution;
 		return this;
 	}

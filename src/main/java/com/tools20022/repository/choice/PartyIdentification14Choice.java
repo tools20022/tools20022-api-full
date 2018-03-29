@@ -140,7 +140,7 @@ public class PartyIdentification14Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification14Choice, AnyBICIdentifier> mmBICOrBEI = new MMMessageAttribute<PartyIdentification14Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification14Choice.mmObject();
@@ -153,6 +153,16 @@ public class PartyIdentification14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification14Choice obj) {
+			return obj.getBICOrBEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification14Choice obj, AnyBICIdentifier value) {
+			obj.setBICOrBEI(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -195,7 +205,7 @@ public class PartyIdentification14Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification14Choice, GenericIdentification19> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification14Choice, GenericIdentification19>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification14Choice.mmObject();
@@ -208,6 +218,16 @@ public class PartyIdentification14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification19.mmObject();
+		}
+
+		@Override
+		public GenericIdentification19 getValue(PartyIdentification14Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification14Choice obj, GenericIdentification19 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -247,7 +267,7 @@ public class PartyIdentification14Choice {
 	 * definition} = "Name and address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification14Choice, NameAndAddress5> mmNameAndAddress = new MMMessageAttribute<PartyIdentification14Choice, NameAndAddress5>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification14Choice.mmObject();
@@ -260,6 +280,16 @@ public class PartyIdentification14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public NameAndAddress5 getValue(PartyIdentification14Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification14Choice obj, NameAndAddress5 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -301,7 +331,7 @@ public class PartyIdentification14Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification14Choice, CountryCode> mmCountry = new MMMessageAttribute<PartyIdentification14Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification14Choice.mmObject();
@@ -314,6 +344,16 @@ public class PartyIdentification14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PartyIdentification14Choice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PartyIdentification14Choice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

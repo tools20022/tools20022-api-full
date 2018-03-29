@@ -110,7 +110,7 @@ public class AgreementFramework1Choice {
 	 * definition} = "Code to specify the type of collateral agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreementFramework = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreementFramework1Choice, AgreementFramework1Code> mmAgreementFramework = new MMMessageAttribute<AgreementFramework1Choice, AgreementFramework1Code>() {
 		{
 			businessElementTrace_lazy = () -> MasterAgreement.mmMasterAgreementType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AgreementFramework1Choice.mmObject();
@@ -122,6 +122,16 @@ public class AgreementFramework1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AgreementFramework1Code.mmObject();
+		}
+
+		@Override
+		public AgreementFramework1Code getValue(AgreementFramework1Choice obj) {
+			return obj.getAgreementFramework();
+		}
+
+		@Override
+		public void setValue(AgreementFramework1Choice obj, AgreementFramework1Code value) {
+			obj.setAgreementFramework(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -161,7 +171,7 @@ public class AgreementFramework1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreementFramework1Choice, GenericIdentification30> mmProprietaryIdentification = new MMMessageAttribute<AgreementFramework1Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> MasterAgreement.mmMasterAgreementType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AgreementFramework1Choice.mmObject();
@@ -173,6 +183,16 @@ public class AgreementFramework1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(AgreementFramework1Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(AgreementFramework1Choice obj, GenericIdentification30 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

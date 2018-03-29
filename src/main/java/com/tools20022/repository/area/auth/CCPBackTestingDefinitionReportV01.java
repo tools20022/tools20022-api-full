@@ -26,7 +26,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.msg.BackTestingMethodology1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +117,7 @@ public class CCPBackTestingDefinitionReportV01 {
 	 * "Details parameters and methodology used to conduct the backtest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMethodology = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPBackTestingDefinitionReportV01, List<BackTestingMethodology1>> mmMethodology = new MMMessageBuildingBlock<CCPBackTestingDefinitionReportV01, List<BackTestingMethodology1>>() {
 		{
 			xmlTag = "Mthdlgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,12 +127,14 @@ public class CCPBackTestingDefinitionReportV01 {
 			complexType_lazy = () -> BackTestingMethodology1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPBackTestingDefinitionReportV01.class.getMethod("getMethodology", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<BackTestingMethodology1> getValue(CCPBackTestingDefinitionReportV01 obj) {
+			return obj.getMethodology();
+		}
+
+		@Override
+		public void setValue(CCPBackTestingDefinitionReportV01 obj, List<BackTestingMethodology1> value) {
+			obj.setMethodology(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -163,7 +164,7 @@ public class CCPBackTestingDefinitionReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPBackTestingDefinitionReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPBackTestingDefinitionReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,12 +174,14 @@ public class CCPBackTestingDefinitionReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPBackTestingDefinitionReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CCPBackTestingDefinitionReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CCPBackTestingDefinitionReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

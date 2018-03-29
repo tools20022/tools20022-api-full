@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.FinancialCapture1Code;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExchangeConfiguration1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class AcquirerProtocolParameters2 {
 	 * "Mode for the financial capture of the transaction by the acquirer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialCapture = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerProtocolParameters2, FinancialCapture1Code> mmFinancialCapture = new MMMessageAttribute<AcquirerProtocolParameters2, FinancialCapture1Code>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmFinancialCapture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters2.mmObject();
@@ -131,6 +132,16 @@ public class AcquirerProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialCapture1Code.mmObject();
+		}
+
+		@Override
+		public FinancialCapture1Code getValue(AcquirerProtocolParameters2 obj) {
+			return obj.getFinancialCapture();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters2 obj, FinancialCapture1Code value) {
+			obj.setFinancialCapture(value);
 		}
 	};
 	@XmlElement(name = "BtchTrf")
@@ -166,7 +177,7 @@ public class AcquirerProtocolParameters2 {
 	 * definition} = "Configuration of the batch transfers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBatchTransfer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerProtocolParameters2, Optional<ExchangeConfiguration1>> mmBatchTransfer = new MMMessageAssociationEnd<AcquirerProtocolParameters2, Optional<ExchangeConfiguration1>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmBatchTransferContent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters2.mmObject();
@@ -178,7 +189,17 @@ public class AcquirerProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration1.mmObject();
+			type_lazy = () -> ExchangeConfiguration1.mmObject();
+		}
+
+		@Override
+		public Optional<ExchangeConfiguration1> getValue(AcquirerProtocolParameters2 obj) {
+			return obj.getBatchTransfer();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters2 obj, Optional<ExchangeConfiguration1> value) {
+			obj.setBatchTransfer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmpltnXchg")
@@ -214,7 +235,7 @@ public class AcquirerProtocolParameters2 {
 	 * definition} = "Configuration parameters of completion exchanges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCompletionExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerProtocolParameters2, Optional<ExchangeConfiguration1>> mmCompletionExchange = new MMMessageAssociationEnd<AcquirerProtocolParameters2, Optional<ExchangeConfiguration1>>() {
 		{
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters2.mmObject();
@@ -226,7 +247,17 @@ public class AcquirerProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration1.mmObject();
+			type_lazy = () -> ExchangeConfiguration1.mmObject();
+		}
+
+		@Override
+		public Optional<ExchangeConfiguration1> getValue(AcquirerProtocolParameters2 obj) {
+			return obj.getCompletionExchange();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters2 obj, Optional<ExchangeConfiguration1> value) {
+			obj.setCompletionExchange(value.orElse(null));
 		}
 	};
 
@@ -259,7 +290,7 @@ public class AcquirerProtocolParameters2 {
 		return batchTransfer == null ? Optional.empty() : Optional.of(batchTransfer);
 	}
 
-	public AcquirerProtocolParameters2 setBatchTransfer(com.tools20022.repository.msg.ExchangeConfiguration1 batchTransfer) {
+	public AcquirerProtocolParameters2 setBatchTransfer(ExchangeConfiguration1 batchTransfer) {
 		this.batchTransfer = batchTransfer;
 		return this;
 	}
@@ -268,7 +299,7 @@ public class AcquirerProtocolParameters2 {
 		return completionExchange == null ? Optional.empty() : Optional.of(completionExchange);
 	}
 
-	public AcquirerProtocolParameters2 setCompletionExchange(com.tools20022.repository.msg.ExchangeConfiguration1 completionExchange) {
+	public AcquirerProtocolParameters2 setCompletionExchange(ExchangeConfiguration1 completionExchange) {
 		this.completionExchange = completionExchange;
 		return this;
 	}

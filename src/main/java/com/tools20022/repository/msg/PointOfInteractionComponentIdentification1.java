@@ -110,7 +110,7 @@ public class PointOfInteractionComponentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItemNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentIdentification1, Optional<Max35Text>> mmItemNumber = new MMMessageAttribute<PointOfInteractionComponentIdentification1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class PointOfInteractionComponentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PointOfInteractionComponentIdentification1 obj) {
+			return obj.getItemNumber();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentIdentification1 obj, Optional<Max35Text> value) {
+			obj.setItemNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvdrId")
@@ -159,7 +169,7 @@ public class PointOfInteractionComponentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProviderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentIdentification1, Optional<Max35Text>> mmProviderIdentification = new MMMessageAttribute<PointOfInteractionComponentIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmObject();
@@ -171,6 +181,16 @@ public class PointOfInteractionComponentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PointOfInteractionComponentIdentification1 obj) {
+			return obj.getProviderIdentification();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentIdentification1 obj, Optional<Max35Text> value) {
+			obj.setProviderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -208,7 +228,7 @@ public class PointOfInteractionComponentIdentification1 {
 	 * "Identification of the POI component assigned by its provider."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentIdentification1, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<PointOfInteractionComponentIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmComponentIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmObject();
@@ -220,6 +240,16 @@ public class PointOfInteractionComponentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PointOfInteractionComponentIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentIdentification1 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SrlNb")
@@ -257,7 +287,7 @@ public class PointOfInteractionComponentIdentification1 {
 	 * "Serial number identifying an occurrence of an hardware component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentIdentification1, Optional<Max35Text>> mmSerialNumber = new MMMessageAttribute<PointOfInteractionComponentIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmSerialNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentIdentification1.mmObject();
@@ -269,6 +299,16 @@ public class PointOfInteractionComponentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PointOfInteractionComponentIdentification1 obj) {
+			return obj.getSerialNumber();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentIdentification1 obj, Optional<Max35Text> value) {
+			obj.setSerialNumber(value.orElse(null));
 		}
 	};
 

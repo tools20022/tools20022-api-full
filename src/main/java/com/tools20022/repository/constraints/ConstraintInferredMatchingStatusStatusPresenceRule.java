@@ -62,13 +62,56 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09> forSecuritiesSettlementTransactionStatusAdviceV09 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdviceV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInferredMatchingStatusStatusPresenceRule.forSecuritiesSettlementTransactionStatusAdviceV08;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV09.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV09 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV09(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V09
+	 * SecuritiesSettlementTransactionStatusAdvice002V09}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/InferredMatchingStatus&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/ProcessingStatus&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/MatchingStatus&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/SettlementStatus&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InferredMatchingStatusStatusPresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V09> forSecuritiesSettlementTransactionStatusAdvice002V09 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V09>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InferredMatchingStatusStatusPresenceRule";
+			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V09.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V09 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdvice002V09(obj);
 		}
 	};
 	/**
@@ -113,7 +156,6 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV08> forSecuritiesSettlementTransactionStatusAdviceV08 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV08>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdviceV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
@@ -121,6 +163,11 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInferredMatchingStatusStatusPresenceRule.forSecuritiesSettlementTransactionStatusAdviceV07;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV08(obj);
 		}
 	};
 	/**
@@ -150,12 +197,16 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V08> forSecuritiesSettlementTransactionStatusAdvice002V08 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V08>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdvice002V08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdvice002V08(obj);
 		}
 	};
 	/**
@@ -185,12 +236,16 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01> forSecuritiesSettlementTransactionStatusAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV01.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -220,12 +275,16 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02> forSecuritiesSettlementTransactionStatusAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -255,12 +314,16 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03> forSecuritiesSettlementTransactionStatusAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -299,13 +362,17 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04> forSecuritiesSettlementTransactionStatusAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInferredMatchingStatusStatusPresenceRule.forSecuritiesSettlementTransactionStatusAdviceV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -350,7 +417,6 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05> forSecuritiesSettlementTransactionStatusAdviceV05 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
@@ -358,6 +424,11 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInferredMatchingStatusStatusPresenceRule.forSecuritiesSettlementTransactionStatusAdviceV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -402,7 +473,6 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06> forSecuritiesSettlementTransactionStatusAdviceV06 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
@@ -410,6 +480,11 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInferredMatchingStatusStatusPresenceRule.forSecuritiesSettlementTransactionStatusAdviceV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV06(obj);
 		}
 	};
 	/**
@@ -454,7 +529,6 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07> forSecuritiesSettlementTransactionStatusAdviceV07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdviceV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
@@ -462,6 +536,11 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInferredMatchingStatusStatusPresenceRule.forSecuritiesSettlementTransactionStatusAdviceV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV07(obj);
 		}
 	};
 	/**
@@ -491,12 +570,16 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07> forSecuritiesSettlementTransactionStatusAdvice002V07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07>() {
 		{
-			validator = ConstraintInferredMatchingStatusStatusPresenceRule::checkSecuritiesSettlementTransactionStatusAdvice002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatusStatusPresenceRule";
 			definition = "If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the InferredMatchingStatus must be present.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InferredMatchingStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ProcessingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/MatchingStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdvice002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdvice002V07(obj);
 		}
 	};
 
@@ -505,6 +588,14 @@ public class ConstraintInferredMatchingStatusStatusPresenceRule {
 	 * InferredMatchingStatus must be present.
 	 */
 	public static void checkSecuritiesSettlementTransactionStatusAdviceV09(SecuritiesSettlementTransactionStatusAdviceV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ProcessingStatus, MatchingStatus and SettlementStatus are absent, the
+	 * InferredMatchingStatus must be present.
+	 */
+	public static void checkSecuritiesSettlementTransactionStatusAdvice002V09(SecuritiesSettlementTransactionStatusAdvice002V09 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

@@ -107,7 +107,7 @@ public class TradePartyIdentificationQuery6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentificationQuery6, List<LEIIdentifier>> mmLEI = new MMMessageAttribute<TradePartyIdentificationQuery6, List<LEIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery6.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class TradePartyIdentificationQuery6 {
 			definition = "Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction.";
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public List<LEIIdentifier> getValue(TradePartyIdentificationQuery6 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentificationQuery6 obj, List<LEIIdentifier> value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "AnyBIC")
@@ -150,7 +160,7 @@ public class TradePartyIdentificationQuery6 {
 	 * "Business identifier code used to identify the trade party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentificationQuery6, List<AnyBICIdentifier>> mmAnyBIC = new MMMessageAttribute<TradePartyIdentificationQuery6, List<AnyBICIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery6.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class TradePartyIdentificationQuery6 {
 			definition = "Business identifier code used to identify the trade party.";
 			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public List<AnyBICIdentifier> getValue(TradePartyIdentificationQuery6 obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentificationQuery6 obj, List<AnyBICIdentifier> value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "ClntId")
@@ -192,7 +212,7 @@ public class TradePartyIdentificationQuery6 {
 	 * "Unique and unambiguous identification of the client counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentificationQuery6, List<Max50Text>> mmClientIdentification = new MMMessageAttribute<TradePartyIdentificationQuery6, List<Max50Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery6.mmObject();
 			isDerived = false;
@@ -202,6 +222,16 @@ public class TradePartyIdentificationQuery6 {
 			definition = "Unique and unambiguous identification of the client counterparty.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max50Text.mmObject();
+		}
+
+		@Override
+		public List<Max50Text> getValue(TradePartyIdentificationQuery6 obj) {
+			return obj.getClientIdentification();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentificationQuery6 obj, List<Max50Text> value) {
+			obj.setClientIdentification(value);
 		}
 	};
 	@XmlElement(name = "NotRptd")
@@ -234,7 +264,7 @@ public class TradePartyIdentificationQuery6 {
 	 * definition} = "Field can be queried for not reported value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotReported = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentificationQuery6, Optional<NotReported1Code>> mmNotReported = new MMMessageAttribute<TradePartyIdentificationQuery6, Optional<NotReported1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery6.mmObject();
 			isDerived = false;
@@ -245,6 +275,16 @@ public class TradePartyIdentificationQuery6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NotReported1Code.mmObject();
+		}
+
+		@Override
+		public Optional<NotReported1Code> getValue(TradePartyIdentificationQuery6 obj) {
+			return obj.getNotReported();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentificationQuery6 obj, Optional<NotReported1Code> value) {
+			obj.setNotReported(value.orElse(null));
 		}
 	};
 

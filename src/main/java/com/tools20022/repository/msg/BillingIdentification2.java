@@ -106,7 +106,7 @@ public class BillingIdentification2 {
 	 * BillingIdentification1.mmBillingIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingIdentification2, Max35Text> mmBillingIdentification = new MMMessageAttribute<BillingIdentification2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingIdentification2.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class BillingIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BillingIdentification2 obj) {
+			return obj.getBillingIdentification();
+		}
+
+		@Override
+		public void setValue(BillingIdentification2 obj, Max35Text value) {
+			obj.setBillingIdentification(value);
 		}
 	};
 

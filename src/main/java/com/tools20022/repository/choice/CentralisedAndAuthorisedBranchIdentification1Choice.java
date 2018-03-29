@@ -99,7 +99,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 	 * definition} = "Identifier of the authorised branch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisedBranchIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CentralisedAndAuthorisedBranchIdentification1Choice, FinancialInstitutionIdentification9> mmAuthorisedBranchIdentifier = new MMMessageAssociationEnd<CentralisedAndAuthorisedBranchIdentification1Choice, FinancialInstitutionIdentification9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification9 getValue(CentralisedAndAuthorisedBranchIdentification1Choice obj) {
+			return obj.getAuthorisedBranchIdentifier();
+		}
+
+		@Override
+		public void setValue(CentralisedAndAuthorisedBranchIdentification1Choice obj, FinancialInstitutionIdentification9 value) {
+			obj.setAuthorisedBranchIdentifier(value);
 		}
 	};
 	@XmlElement(name = "CntrldBrnchIdrs", required = true)
@@ -142,7 +152,7 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 	 * definition} = "Identifier of the centralised branch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCentralisedBranchIdentifiers = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CentralisedAndAuthorisedBranchIdentification1Choice, FinancialInstitutionIdentificationList1> mmCentralisedBranchIdentifiers = new MMMessageAssociationEnd<CentralisedAndAuthorisedBranchIdentification1Choice, FinancialInstitutionIdentificationList1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CentralisedAndAuthorisedBranchIdentification1Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class CentralisedAndAuthorisedBranchIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstitutionIdentificationList1.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentificationList1 getValue(CentralisedAndAuthorisedBranchIdentification1Choice obj) {
+			return obj.getCentralisedBranchIdentifiers();
+		}
+
+		@Override
+		public void setValue(CentralisedAndAuthorisedBranchIdentification1Choice obj, FinancialInstitutionIdentificationList1 value) {
+			obj.setCentralisedBranchIdentifiers(value);
 		}
 	};
 

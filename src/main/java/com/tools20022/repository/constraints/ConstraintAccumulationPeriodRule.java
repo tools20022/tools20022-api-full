@@ -51,11 +51,15 @@ public class ConstraintAccumulationPeriodRule {
 	 */
 	public static final MMConstraint<PerformanceFactors1> forPerformanceFactors1 = new MMConstraint<PerformanceFactors1>() {
 		{
-			validator = ConstraintAccumulationPeriodRule::checkPerformanceFactors1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulationPeriodRule";
 			definition = "AccumulationPeriod must be present if CumulativeCorporateActionFactor is present.";
 			owner_lazy = () -> PerformanceFactors1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PerformanceFactors1 obj) throws Exception {
+			checkPerformanceFactors1(obj);
 		}
 	};
 

@@ -27,9 +27,9 @@ import com.tools20022.repository.codeset.InstrumentSubStructureTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -749,7 +749,7 @@ public class Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmExpiryDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Asset, ISODateTime> mmExpiryDate = new MMBusinessAttribute<Asset, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmExpiryDate, FinancialInstrumentAttributes20.mmExpiryDate, FinancialInstrumentAttributes35.mmExpiryDate, FinancialInstrumentAttributes41.mmExpiryDate,
 					FinancialInstrumentAttributes6.mmExpiryDate, FinancialInstrumentAttributes9.mmExpiryDate, FinancialInstrumentAttributes18.mmExpiryDate, FinancialInstrumentAttributes22.mmExpiryDate,
@@ -779,12 +779,14 @@ public class Asset {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Asset.class.getMethod("getExpiryDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Asset obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(Asset obj, ISODateTime value) {
+			obj.setExpiryDate(value);
 		}
 	};
 	protected ISODateTime maturityDate;
@@ -1179,6 +1181,9 @@ public class Asset {
 	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmMaturityDate
 	 * TradeTransaction16.mmMaturityDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RepurchaseAgreement2#mmMaturityDate
+	 * RepurchaseAgreement2.mmMaturityDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmMaturityDate
 	 * FinancialInstrumentAttributes91.mmMaturityDate}</li>
 	 * <li>
@@ -1218,7 +1223,7 @@ public class Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMaturityDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Asset, ISODateTime> mmMaturityDate = new MMBusinessAttribute<Asset, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmMaturityDate, FinancialInstrumentAttributes20.mmMaturityDate, FinancialInstrumentAttributes35.mmMaturityDate,
 					FinancialInstrumentAttributes41.mmMaturityDate, FinancialInstrumentAttributes6.mmMaturityDate, FinancialInstrumentAttributes9.mmMaturityDate, FinancialInstrumentAttributes18.mmMaturityDate,
@@ -1248,9 +1253,9 @@ public class Asset {
 					FinancialInstrumentAttributes81.mmMaturityDate, FinancialInstrumentAttributes80.mmMaturityDate, CorporateActionConfirmationSecuritiesMovementDetailsSD5.mmMaturityDate, SecuritiesCollateral8.mmMaturityDate,
 					FinancialInstrumentAttributes85.mmMaturityDate, FinancialInstrumentAttributes84.mmMaturityDate, FinancialInstrumentAttributes83.mmMaturityDate, SecuredMarketTransaction4.mmMaturityDate,
 					ForeignExchangeSwapTransaction3.mmMaturityDate, OvernightIndexSwapTransaction4.mmMaturityDate, UnsecuredMarketTransaction4.mmMaturityDate, TradeTransaction15.mmMaturityDate, TradeTransaction17.mmMaturityDate,
-					TradeTransaction14.mmMaturityDate, OptionOrSwaption6.mmMaturityDateOfUnderlying, TradeTransaction18.mmMaturityDate, TradeTransaction16.mmMaturityDate, FinancialInstrumentAttributes91.mmMaturityDate,
-					FinancialInstrumentAttributes92.mmMaturityDate, CorporateActionDate61.mmNewMaturityDate, CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmMaturityDate, CorporateActionDate74.mmNewMaturityDate,
-					FinancialInstrumentAttributes95.mmMaturityDate, FinancialInstrumentAttributes97.mmMaturityDate);
+					TradeTransaction14.mmMaturityDate, OptionOrSwaption6.mmMaturityDateOfUnderlying, TradeTransaction18.mmMaturityDate, TradeTransaction16.mmMaturityDate, RepurchaseAgreement2.mmMaturityDate,
+					FinancialInstrumentAttributes91.mmMaturityDate, FinancialInstrumentAttributes92.mmMaturityDate, CorporateActionDate61.mmNewMaturityDate, CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmMaturityDate,
+					CorporateActionDate74.mmNewMaturityDate, FinancialInstrumentAttributes95.mmMaturityDate, FinancialInstrumentAttributes97.mmMaturityDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1261,15 +1266,17 @@ public class Asset {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Asset.class.getMethod("getMaturityDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Asset obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(Asset obj, ISODateTime value) {
+			obj.setMaturityDate(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Derivative> derivative;
+	protected List<Derivative> derivative;
 	/**
 	 * 
 	 <p>
@@ -1369,7 +1376,7 @@ public class Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDerivative = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, List<Derivative>> mmDerivative = new MMBusinessAssociationEnd<Asset, List<Derivative>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AggregateBalanceInformation8.mmAdditionalDerivativeAttributes, AggregateBalanceInformation11.mmAdditionalDerivativeAttributes,
 					AggregateBalanceInformation13.mmAdditionalDerivativeAttributes, AggregateBalanceInformation15.mmAdditionalDerivativeAttributes, AggregateBalanceInformation17.mmAdditionalDerivativeAttributes,
@@ -1384,12 +1391,22 @@ public class Asset {
 			name = "Derivative";
 			definition = "Specifies the parameters of a derivative instrument based on a specific asset.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Derivative.mmUnderlyingAsset;
+			opposite_lazy = () -> Derivative.mmUnderlyingAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
+			type_lazy = () -> Derivative.mmObject();
+		}
+
+		@Override
+		public List<Derivative> getValue(Asset obj) {
+			return obj.getDerivative();
+		}
+
+		@Override
+		public void setValue(Asset obj, List<Derivative> value) {
+			obj.setDerivative(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.AssetHolding> assetValue;
+	protected List<AssetHolding> assetValue;
 	/**
 	 * 
 	 <p>
@@ -1508,7 +1525,7 @@ public class Asset {
 	 * definition} = "Specifies the different values of an asset."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAssetValue = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, List<AssetHolding>> mmAssetValue = new MMBusinessAssociationEnd<Asset, List<AssetHolding>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuantityBreakdown4.mmAccountBaseCurrencyAmounts, QuantityBreakdown4.mmInstrumentCurrencyAmounts, QuantityBreakdown4.mmAlternateReportingCurrencyAmounts,
 					QuantityBreakdown8.mmAccountBaseCurrencyAmounts, QuantityBreakdown8.mmInstrumentCurrencyAmounts, QuantityBreakdown8.mmAlternateReportingCurrencyAmounts, QuantityBreakdown14.mmAccountBaseCurrencyAmounts,
@@ -1523,12 +1540,22 @@ public class Asset {
 			name = "AssetValue";
 			definition = "Specifies the different values of an asset.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmAsset;
+			opposite_lazy = () -> AssetHolding.mmAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
+			type_lazy = () -> AssetHolding.mmObject();
+		}
+
+		@Override
+		public List<AssetHolding> getValue(Asset obj) {
+			return obj.getAssetValue();
+		}
+
+		@Override
+		public void setValue(Asset obj, List<AssetHolding> value) {
+			obj.setAssetValue(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.AssetClassification> assetClassification;
+	protected List<AssetClassification> assetClassification;
 	/**
 	 * 
 	 <p>
@@ -1600,6 +1627,9 @@ public class Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ContractType6#mmProductClassification
 	 * ContractType6.mmProductClassification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DerivativeClassification1#mmAssetClass
+	 * DerivativeClassification1.mmAssetClass}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1617,21 +1647,32 @@ public class Asset {
 	 * definition} = "Classification of the asset."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAssetClassification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, List<AssetClassification>> mmAssetClassification = new MMBusinessAssociationEnd<Asset, List<AssetClassification>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AdditionalInformation3.mmClassificationType, AdditionalInformation4.mmClassificationType, AdditionalInformation7.mmClassificationType, AdditionalInformation8.mmClassificationType,
 					FinancialInstrumentAttributes1.mmProductType, CommonFinancialInstrumentAttributes1.mmClassificationType, AdditionalInformation9.mmClassificationType, AdditionalInformation10.mmClassificationType,
 					AdditionalInformation11.mmClassificationType, AdditionalInformation12.mmClassificationType, CommonFinancialInstrumentAttributes4.mmClassificationType, AdditionalInformation13.mmClassificationType,
-					AdditionalInformation14.mmClassificationType, ContractType5.mmProductClassification, TradeAdditionalQueryCriteria3.mmAssetClass, AssetClassCommodity1.mmClassification, ContractType6.mmProductClassification);
+					AdditionalInformation14.mmClassificationType, ContractType5.mmProductClassification, TradeAdditionalQueryCriteria3.mmAssetClass, AssetClassCommodity1.mmClassification, ContractType6.mmProductClassification,
+					DerivativeClassification1.mmAssetClass);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetClassification";
 			definition = "Classification of the asset.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmAsset;
+			opposite_lazy = () -> AssetClassification.mmAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmObject();
+			type_lazy = () -> AssetClassification.mmObject();
+		}
+
+		@Override
+		public List<AssetClassification> getValue(Asset obj) {
+			return obj.getAssetClassification();
+		}
+
+		@Override
+		public void setValue(Asset obj, List<AssetClassification> value) {
+			obj.setAssetClassification(value);
 		}
 	};
 	protected FinancialAssetTypeCategoryCode financialAssetCategory;
@@ -1670,7 +1711,7 @@ public class Asset {
 	 * definition} = "Categorization of financial asset type."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFinancialAssetCategory = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Asset, FinancialAssetTypeCategoryCode> mmFinancialAssetCategory = new MMBusinessAttribute<Asset, FinancialAssetTypeCategoryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BalanceDetails6.mmCategory, DerivativeForeignExchange3.mmFXType);
 			isDerived = false;
@@ -1683,12 +1724,14 @@ public class Asset {
 			simpleType_lazy = () -> FinancialAssetTypeCategoryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Asset.class.getMethod("getFinancialAssetCategory", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FinancialAssetTypeCategoryCode getValue(Asset obj) {
+			return obj.getFinancialAssetCategory();
+		}
+
+		@Override
+		public void setValue(Asset obj, FinancialAssetTypeCategoryCode value) {
+			obj.setFinancialAssetCategory(value);
 		}
 	};
 	protected AssetPartyRole assetPartyRole;
@@ -1738,7 +1781,7 @@ public class Asset {
 	 * definition} = "Party which plays a role for a specific asset."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAssetPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, Optional<AssetPartyRole>> mmAssetPartyRole = new MMBusinessAssociationEnd<Asset, Optional<AssetPartyRole>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmOtherBusinessParties, InstrumentLeg3.mmOtherBusinessParties, CreditDerivative3.mmReferenceParty);
 			isDerived = false;
@@ -1748,12 +1791,22 @@ public class Asset {
 			definition = "Party which plays a role for a specific asset.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.AssetPartyRole.mmAsset;
+			opposite_lazy = () -> AssetPartyRole.mmAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.AssetPartyRole.mmObject();
+			type_lazy = () -> AssetPartyRole.mmObject();
+		}
+
+		@Override
+		public Optional<AssetPartyRole> getValue(Asset obj) {
+			return obj.getAssetPartyRole();
+		}
+
+		@Override
+		public void setValue(Asset obj, Optional<AssetPartyRole> value) {
+			obj.setAssetPartyRole(value.orElse(null));
 		}
 	};
-	protected List<com.tools20022.repository.entity.Issuance> issuance;
+	protected List<Issuance> issuance;
 	/**
 	 * 
 	 <p>
@@ -1800,7 +1853,7 @@ public class Asset {
 	 * definition} = "Details regarding the issuance of an asset."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmIssuance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, List<Issuance>> mmIssuance = new MMBusinessAssociationEnd<Asset, List<Issuance>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt2.mmGlobalType, CommonFinancialInstrumentAttributes1.mmIssuance, CommonFinancialInstrumentAttributes4.mmIssuance, Debt3.mmGlobalType);
 			isDerived = false;
@@ -1809,9 +1862,19 @@ public class Asset {
 			name = "Issuance";
 			definition = "Details regarding the issuance of an asset.";
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Issuance.mmIssuedAsset;
+			opposite_lazy = () -> Issuance.mmIssuedAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Issuance.mmObject();
+			type_lazy = () -> Issuance.mmObject();
+		}
+
+		@Override
+		public List<Issuance> getValue(Asset obj) {
+			return obj.getIssuance();
+		}
+
+		@Override
+		public void setValue(Asset obj, List<Issuance> value) {
+			obj.setIssuance(value);
 		}
 	};
 	protected Portfolio portfolio;
@@ -1847,7 +1910,7 @@ public class Asset {
 	 * definition} = "Asset which is part of a portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPortfolio = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, Optional<Portfolio>> mmPortfolio = new MMBusinessAssociationEnd<Asset, Optional<Portfolio>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
@@ -1856,9 +1919,19 @@ public class Asset {
 			definition = "Asset which is part of a portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Portfolio.mmAssetDescription;
+			opposite_lazy = () -> Portfolio.mmAssetDescription;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
+			type_lazy = () -> Portfolio.mmObject();
+		}
+
+		@Override
+		public Optional<Portfolio> getValue(Asset obj) {
+			return obj.getPortfolio();
+		}
+
+		@Override
+		public void setValue(Asset obj, Optional<Portfolio> value) {
+			obj.setPortfolio(value.orElse(null));
 		}
 	};
 	protected CurrencyAndAmount investmentAmount;
@@ -1895,7 +1968,7 @@ public class Asset {
 	 * definition} = "Invested amount of the portfolio asset."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInvestmentAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Asset, CurrencyAndAmount> mmInvestmentAmount = new MMBusinessAttribute<Asset, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecurityIdentificationAndAmount1.mmMarketValue);
 			isDerived = false;
@@ -1908,12 +1981,14 @@ public class Asset {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Asset.class.getMethod("getInvestmentAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Asset obj) {
+			return obj.getInvestmentAmount();
+		}
+
+		@Override
+		public void setValue(Asset obj, CurrencyAndAmount value) {
+			obj.setInvestmentAmount(value);
 		}
 	};
 	protected PercentageRate investmentRate;
@@ -1942,7 +2017,7 @@ public class Asset {
 	 * definition} = "Invested percentage of the portfolio asset."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInvestmentRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Asset, PercentageRate> mmInvestmentRate = new MMBusinessAttribute<Asset, PercentageRate>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
@@ -1954,12 +2029,14 @@ public class Asset {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Asset.class.getMethod("getInvestmentRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Asset obj) {
+			return obj.getInvestmentRate();
+		}
+
+		@Override
+		public void setValue(Asset obj, PercentageRate value) {
+			obj.setInvestmentRate(value);
 		}
 	};
 	protected ISODateTime effectiveDate;
@@ -2009,7 +2086,7 @@ public class Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEffectiveDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Asset, ISODateTime> mmEffectiveDate = new MMBusinessAttribute<Asset, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeTransaction15.mmEffectiveDate, TradeTransaction17.mmEffectiveDate, TradeTransaction14.mmEffectiveDate, TradeTransaction18.mmEffectiveDate, TradeTransaction16.mmEffectiveDate);
 			isDerived = false;
@@ -2022,12 +2099,14 @@ public class Asset {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Asset.class.getMethod("getEffectiveDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Asset obj) {
+			return obj.getEffectiveDate();
+		}
+
+		@Override
+		public void setValue(Asset obj, ISODateTime value) {
+			obj.setEffectiveDate(value);
 		}
 	};
 	protected InstrumentSubStructureTypeCode financialInstrumentSubStructure;
@@ -2079,7 +2158,7 @@ public class Asset {
 	 * definition} = "Indicates the type of deal for structured finance."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFinancialInstrumentSubStructure = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Asset, InstrumentSubStructureTypeCode> mmFinancialInstrumentSubStructure = new MMBusinessAttribute<Asset, InstrumentSubStructureTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentSubStructureType1Choice.mmCode, InstrumentSubStructureType1Choice.mmProprietary, Debt2.mmInstrumentStructureType, InstrumentSubStructureType2Choice.mmCode,
 					InstrumentSubStructureType2Choice.mmProprietary, Debt3.mmInstrumentStructureType);
@@ -2093,12 +2172,14 @@ public class Asset {
 			simpleType_lazy = () -> InstrumentSubStructureTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Asset.class.getMethod("getFinancialInstrumentSubStructure", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InstrumentSubStructureTypeCode getValue(Asset obj) {
+			return obj.getFinancialInstrumentSubStructure();
+		}
+
+		@Override
+		public void setValue(Asset obj, InstrumentSubStructureTypeCode value) {
+			obj.setFinancialInstrumentSubStructure(value);
 		}
 	};
 	protected InvestmentPlan investmentPlan;
@@ -2134,7 +2215,7 @@ public class Asset {
 	 * definition} = "Investment plan that invests in a specific asset."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestmentPlan = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, Optional<InvestmentPlan>> mmInvestmentPlan = new MMBusinessAssociationEnd<Asset, Optional<InvestmentPlan>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
@@ -2143,12 +2224,22 @@ public class Asset {
 			definition = "Investment plan that invests in a specific asset.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmAsset;
+			opposite_lazy = () -> InvestmentPlan.mmAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
+			type_lazy = () -> InvestmentPlan.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentPlan> getValue(Asset obj) {
+			return obj.getInvestmentPlan();
+		}
+
+		@Override
+		public void setValue(Asset obj, Optional<InvestmentPlan> value) {
+			obj.setInvestmentPlan(value.orElse(null));
 		}
 	};
-	protected List<com.tools20022.repository.entity.Trade> trade;
+	protected List<Trade> trade;
 	/**
 	 * 
 	 <p>
@@ -2179,7 +2270,7 @@ public class Asset {
 	 * definition} = "Trade which which involves a specific asset."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, List<Trade>> mmTrade = new MMBusinessAssociationEnd<Asset, List<Trade>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
@@ -2187,9 +2278,19 @@ public class Asset {
 			name = "Trade";
 			definition = "Trade which which involves a specific asset.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Trade.mmAsset;
+			opposite_lazy = () -> Trade.mmAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
+			type_lazy = () -> Trade.mmObject();
+		}
+
+		@Override
+		public List<Trade> getValue(Asset obj) {
+			return obj.getTrade();
+		}
+
+		@Override
+		public void setValue(Asset obj, List<Trade> value) {
+			obj.setTrade(value);
 		}
 	};
 	protected Tranche tranche;
@@ -2235,7 +2336,7 @@ public class Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTranche = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, Tranche> mmTranche = new MMBusinessAssociationEnd<Asset, Tranche>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LoanContract1.mmTranche, CreditDerivative3.mmTranche);
 			isDerived = false;
@@ -2245,12 +2346,22 @@ public class Asset {
 			definition = "One of a number of related assets offered as part of the same transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Tranche.mmAsset;
+			opposite_lazy = () -> Tranche.mmAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Tranche.mmObject();
+			type_lazy = () -> Tranche.mmObject();
+		}
+
+		@Override
+		public Tranche getValue(Asset obj) {
+			return obj.getTranche();
+		}
+
+		@Override
+		public void setValue(Asset obj, Tranche value) {
+			obj.setTranche(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Leg> legAdditionalInformation;
+	protected List<Leg> legAdditionalInformation;
 	/**
 	 * 
 	 <p>
@@ -2311,7 +2422,7 @@ public class Asset {
 	 * definition} = "Provides details about the leg."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmLegAdditionalInformation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, List<Leg>> mmLegAdditionalInformation = new MMBusinessAssociationEnd<Asset, List<Leg>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmLegAttributes, QuoteEntry2.mmInstrumentLegGroupDetails, QuoteEntry2.mmLegFinancialInstrumentAttributes, QuoteEntry1.mmInstrumentLegGroupDetails,
 					MultiLegOrder1.mmLegGroupDetails, IndicationOfInterest1.mmInstrumentLegGroupDetails, ContractType6.mmNotionalCurrencyFirstLeg, ContractType6.mmNotionalCurrencySecondLeg);
@@ -2321,9 +2432,19 @@ public class Asset {
 			name = "LegAdditionalInformation";
 			definition = "Provides details about the leg.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Leg.mmRelatedAsset;
+			opposite_lazy = () -> Leg.mmRelatedAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
+			type_lazy = () -> Leg.mmObject();
+		}
+
+		@Override
+		public List<Leg> getValue(Asset obj) {
+			return obj.getLegAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Asset obj, List<Leg> value) {
+			obj.setLegAdditionalInformation(value);
 		}
 	};
 	protected StandingSettlementInstruction standingSettlementInstruction;
@@ -2361,7 +2482,7 @@ public class Asset {
 	 * "Standing settlement instruction for which an asset is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmStandingSettlementInstruction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Asset, StandingSettlementInstruction> mmStandingSettlementInstruction = new MMBusinessAssociationEnd<Asset, StandingSettlementInstruction>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Asset.mmObject();
@@ -2370,9 +2491,19 @@ public class Asset {
 			definition = "Standing settlement instruction for which an asset is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmAsset;
+			opposite_lazy = () -> StandingSettlementInstruction.mmAsset;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
+			type_lazy = () -> StandingSettlementInstruction.mmObject();
+		}
+
+		@Override
+		public StandingSettlementInstruction getValue(Asset obj) {
+			return obj.getStandingSettlementInstruction();
+		}
+
+		@Override
+		public void setValue(Asset obj, StandingSettlementInstruction value) {
+			obj.setStandingSettlementInstruction(value);
 		}
 	};
 
@@ -2383,17 +2514,15 @@ public class Asset {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Asset";
 				definition = "Tangible items of value to a business.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmAsset, com.tools20022.repository.entity.InvestmentPlan.mmAsset, com.tools20022.repository.entity.Portfolio.mmAssetDescription,
-						com.tools20022.repository.entity.AssetHolding.mmAsset, com.tools20022.repository.entity.AssetPartyRole.mmAsset, com.tools20022.repository.entity.AssetClassification.mmAsset,
-						com.tools20022.repository.entity.Derivative.mmUnderlyingAsset, com.tools20022.repository.entity.Issuance.mmIssuedAsset, com.tools20022.repository.entity.StandingSettlementInstruction.mmAsset,
-						com.tools20022.repository.entity.Leg.mmRelatedAsset, com.tools20022.repository.entity.Tranche.mmAsset);
+				associationDomain_lazy = () -> Arrays.asList(Trade.mmAsset, InvestmentPlan.mmAsset, Portfolio.mmAssetDescription, AssetHolding.mmAsset, AssetPartyRole.mmAsset, AssetClassification.mmAsset, Derivative.mmUnderlyingAsset,
+						Issuance.mmIssuedAsset, StandingSettlementInstruction.mmAsset, Leg.mmRelatedAsset, Tranche.mmAsset);
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmProperties, FinancialInstrumentAttributes1.mmAdditionalUnderlyingAttributes, OtherCollateral1.mmOtherTypeOfCollateral,
 						CollateralSubstitution1.mmOtherCollateral, CollateralValuation1.mmOtherCollateralDetails, SecurityAttributes1.mmFinancialInstrumentType, CollateralSubstitution2.mmOtherCollateral,
 						CollateralValuation2.mmOtherCollateral, OtherCollateral2.mmOtherTypeOfCollateral, OtherCollateral3.mmLetterOfCreditIdentification, OtherCollateral3.mmOtherTypeOfCollateral, OtherCollateral4.mmOtherTypeOfCollateral,
 						CollateralSubstitution3.mmOtherCollateral, CollateralSubstitution5.mmOtherCollateral, CollateralSubstitution4.mmOtherCollateral, OtherCollateral7.mmOtherTypeOfCollateral, CollateralValuation5.mmOtherCollateral,
 						OtherCollateral6.mmLetterOfCreditIdentification, OtherCollateral6.mmOtherTypeOfCollateral, OtherCollateral5.mmOtherTypeOfCollateral, SecurityAttributes6.mmFinancialInstrumentType, TradeTransaction15.mmCommodity,
 						TradeTransaction18.mmCommodity);
-				subType_lazy = () -> Arrays.asList(Security.mmObject(), com.tools20022.repository.entity.Derivative.mmObject(), Money.mmObject(), LetterOfCredit.mmObject(), Guarantee.mmObject(), Commodity.mmObject());
+				subType_lazy = () -> Arrays.asList(Security.mmObject(), Derivative.mmObject(), Money.mmObject(), LetterOfCredit.mmObject(), Guarantee.mmObject(), Commodity.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmExpiryDate, com.tools20022.repository.entity.Asset.mmMaturityDate, com.tools20022.repository.entity.Asset.mmDerivative,
 						com.tools20022.repository.entity.Asset.mmAssetValue, com.tools20022.repository.entity.Asset.mmAssetClassification, com.tools20022.repository.entity.Asset.mmFinancialAssetCategory,
 						com.tools20022.repository.entity.Asset.mmAssetPartyRole, com.tools20022.repository.entity.Asset.mmIssuance, com.tools20022.repository.entity.Asset.mmPortfolio,
@@ -2454,7 +2583,7 @@ public class Asset {
 		return derivative == null ? derivative = new ArrayList<>() : derivative;
 	}
 
-	public Asset setDerivative(List<com.tools20022.repository.entity.Derivative> derivative) {
+	public Asset setDerivative(List<Derivative> derivative) {
 		this.derivative = Objects.requireNonNull(derivative);
 		return this;
 	}
@@ -2463,7 +2592,7 @@ public class Asset {
 		return assetValue == null ? assetValue = new ArrayList<>() : assetValue;
 	}
 
-	public Asset setAssetValue(List<com.tools20022.repository.entity.AssetHolding> assetValue) {
+	public Asset setAssetValue(List<AssetHolding> assetValue) {
 		this.assetValue = Objects.requireNonNull(assetValue);
 		return this;
 	}
@@ -2472,7 +2601,7 @@ public class Asset {
 		return assetClassification == null ? assetClassification = new ArrayList<>() : assetClassification;
 	}
 
-	public Asset setAssetClassification(List<com.tools20022.repository.entity.AssetClassification> assetClassification) {
+	public Asset setAssetClassification(List<AssetClassification> assetClassification) {
 		this.assetClassification = Objects.requireNonNull(assetClassification);
 		return this;
 	}
@@ -2490,7 +2619,7 @@ public class Asset {
 		return assetPartyRole == null ? Optional.empty() : Optional.of(assetPartyRole);
 	}
 
-	public Asset setAssetPartyRole(com.tools20022.repository.entity.AssetPartyRole assetPartyRole) {
+	public Asset setAssetPartyRole(AssetPartyRole assetPartyRole) {
 		this.assetPartyRole = assetPartyRole;
 		return this;
 	}
@@ -2499,7 +2628,7 @@ public class Asset {
 		return issuance == null ? issuance = new ArrayList<>() : issuance;
 	}
 
-	public Asset setIssuance(List<com.tools20022.repository.entity.Issuance> issuance) {
+	public Asset setIssuance(List<Issuance> issuance) {
 		this.issuance = Objects.requireNonNull(issuance);
 		return this;
 	}
@@ -2508,7 +2637,7 @@ public class Asset {
 		return portfolio == null ? Optional.empty() : Optional.of(portfolio);
 	}
 
-	public Asset setPortfolio(com.tools20022.repository.entity.Portfolio portfolio) {
+	public Asset setPortfolio(Portfolio portfolio) {
 		this.portfolio = portfolio;
 		return this;
 	}
@@ -2553,7 +2682,7 @@ public class Asset {
 		return investmentPlan == null ? Optional.empty() : Optional.of(investmentPlan);
 	}
 
-	public Asset setInvestmentPlan(com.tools20022.repository.entity.InvestmentPlan investmentPlan) {
+	public Asset setInvestmentPlan(InvestmentPlan investmentPlan) {
 		this.investmentPlan = investmentPlan;
 		return this;
 	}
@@ -2562,7 +2691,7 @@ public class Asset {
 		return trade == null ? trade = new ArrayList<>() : trade;
 	}
 
-	public Asset setTrade(List<com.tools20022.repository.entity.Trade> trade) {
+	public Asset setTrade(List<Trade> trade) {
 		this.trade = Objects.requireNonNull(trade);
 		return this;
 	}
@@ -2571,7 +2700,7 @@ public class Asset {
 		return tranche;
 	}
 
-	public Asset setTranche(com.tools20022.repository.entity.Tranche tranche) {
+	public Asset setTranche(Tranche tranche) {
 		this.tranche = Objects.requireNonNull(tranche);
 		return this;
 	}
@@ -2580,7 +2709,7 @@ public class Asset {
 		return legAdditionalInformation == null ? legAdditionalInformation = new ArrayList<>() : legAdditionalInformation;
 	}
 
-	public Asset setLegAdditionalInformation(List<com.tools20022.repository.entity.Leg> legAdditionalInformation) {
+	public Asset setLegAdditionalInformation(List<Leg> legAdditionalInformation) {
 		this.legAdditionalInformation = Objects.requireNonNull(legAdditionalInformation);
 		return this;
 	}
@@ -2589,7 +2718,7 @@ public class Asset {
 		return standingSettlementInstruction;
 	}
 
-	public Asset setStandingSettlementInstruction(com.tools20022.repository.entity.StandingSettlementInstruction standingSettlementInstruction) {
+	public Asset setStandingSettlementInstruction(StandingSettlementInstruction standingSettlementInstruction) {
 		this.standingSettlementInstruction = Objects.requireNonNull(standingSettlementInstruction);
 		return this;
 	}

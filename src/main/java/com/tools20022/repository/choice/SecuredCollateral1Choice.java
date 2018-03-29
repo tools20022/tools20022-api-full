@@ -128,7 +128,7 @@ public class SecuredCollateral1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSingleCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredCollateral1Choice, CollateralValuation3> mmSingleCollateral = new MMMessageAssociationEnd<SecuredCollateral1Choice, CollateralValuation3>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral1Choice.mmObject();
@@ -142,6 +142,16 @@ public class SecuredCollateral1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuation3.mmObject();
+		}
+
+		@Override
+		public CollateralValuation3 getValue(SecuredCollateral1Choice obj) {
+			return obj.getSingleCollateral();
+		}
+
+		@Override
+		public void setValue(SecuredCollateral1Choice obj, CollateralValuation3 value) {
+			obj.setSingleCollateral(value);
 		}
 	};
 	@XmlElement(name = "MltplColl", required = true)
@@ -187,7 +197,7 @@ public class SecuredCollateral1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultipleCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredCollateral1Choice, List<CollateralValuation3>> mmMultipleCollateral = new MMMessageAssociationEnd<SecuredCollateral1Choice, List<CollateralValuation3>>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral1Choice.mmObject();
@@ -200,6 +210,16 @@ public class SecuredCollateral1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuation3.mmObject();
+		}
+
+		@Override
+		public List<CollateralValuation3> getValue(SecuredCollateral1Choice obj) {
+			return obj.getMultipleCollateral();
+		}
+
+		@Override
+		public void setValue(SecuredCollateral1Choice obj, List<CollateralValuation3> value) {
+			obj.setMultipleCollateral(value);
 		}
 	};
 	@XmlElement(name = "PoolColl", required = true)
@@ -245,7 +265,7 @@ public class SecuredCollateral1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPoolCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredCollateral1Choice, CollateralValuation3> mmPoolCollateral = new MMMessageAssociationEnd<SecuredCollateral1Choice, CollateralValuation3>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral1Choice.mmObject();
@@ -259,6 +279,16 @@ public class SecuredCollateral1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuation3.mmObject();
+		}
+
+		@Override
+		public CollateralValuation3 getValue(SecuredCollateral1Choice obj) {
+			return obj.getPoolCollateral();
+		}
+
+		@Override
+		public void setValue(SecuredCollateral1Choice obj, CollateralValuation3 value) {
+			obj.setPoolCollateral(value);
 		}
 	};
 	@XmlElement(name = "OthrColl", required = true)
@@ -304,7 +334,7 @@ public class SecuredCollateral1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredCollateral1Choice, List<CollateralValuation4>> mmOtherCollateral = new MMMessageAssociationEnd<SecuredCollateral1Choice, List<CollateralValuation4>>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral1Choice.mmObject();
@@ -317,6 +347,16 @@ public class SecuredCollateral1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValuation4.mmObject();
+		}
+
+		@Override
+		public List<CollateralValuation4> getValue(SecuredCollateral1Choice obj) {
+			return obj.getOtherCollateral();
+		}
+
+		@Override
+		public void setValue(SecuredCollateral1Choice obj, List<CollateralValuation4> value) {
+			obj.setOtherCollateral(value);
 		}
 	};
 

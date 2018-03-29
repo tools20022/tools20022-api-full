@@ -111,7 +111,7 @@ public class FertilizerCommodityDiammoniumPhosphate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FertilizerCommodityDiammoniumPhosphate1, AssetClassProductType5Code> mmBaseProduct = new MMMessageAttribute<FertilizerCommodityDiammoniumPhosphate1, AssetClassProductType5Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1.mmObject();
@@ -123,6 +123,16 @@ public class FertilizerCommodityDiammoniumPhosphate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType5Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType5Code getValue(FertilizerCommodityDiammoniumPhosphate1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(FertilizerCommodityDiammoniumPhosphate1 obj, AssetClassProductType5Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -160,7 +170,7 @@ public class FertilizerCommodityDiammoniumPhosphate1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FertilizerCommodityDiammoniumPhosphate1, AssetClassSubProductType40Code> mmSubProduct = new MMMessageAttribute<FertilizerCommodityDiammoniumPhosphate1, AssetClassSubProductType40Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FertilizerCommodityDiammoniumPhosphate1.mmObject();
@@ -172,6 +182,16 @@ public class FertilizerCommodityDiammoniumPhosphate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType40Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType40Code getValue(FertilizerCommodityDiammoniumPhosphate1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(FertilizerCommodityDiammoniumPhosphate1 obj, AssetClassSubProductType40Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 

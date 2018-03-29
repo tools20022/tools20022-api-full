@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.OrderStatus2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -162,7 +163,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderStatusAndReason1, OrderStatus2Code> mmStatus = new MMMessageAttribute<IndividualOrderStatusAndReason1, OrderStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -174,6 +175,16 @@ public class IndividualOrderStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderStatus2Code.mmObject();
+		}
+
+		@Override
+		public OrderStatus2Code getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, OrderStatus2Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Canc", required = true)
@@ -209,7 +220,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * definition} = "Status of the individual order details is cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason1, CancelledStatus1> mmCancelled = new MMMessageAssociationEnd<IndividualOrderStatusAndReason1, CancelledStatus1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -221,7 +232,17 @@ public class IndividualOrderStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CancelledStatus1.mmObject();
+			type_lazy = () -> CancelledStatus1.mmObject();
+		}
+
+		@Override
+		public CancelledStatus1 getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getCancelled();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, CancelledStatus1 value) {
+			obj.setCancelled(value);
 		}
 	};
 	@XmlElement(name = "CondlyAccptd", required = true)
@@ -259,7 +280,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * "Status of the individual order details is conditionally accepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConditionallyAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason1, ConditionallyAcceptedStatus1> mmConditionallyAccepted = new MMMessageAssociationEnd<IndividualOrderStatusAndReason1, ConditionallyAcceptedStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -271,7 +292,17 @@ public class IndividualOrderStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatus1.mmObject();
+			type_lazy = () -> ConditionallyAcceptedStatus1.mmObject();
+		}
+
+		@Override
+		public ConditionallyAcceptedStatus1 getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getConditionallyAccepted();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, ConditionallyAcceptedStatus1 value) {
+			obj.setConditionallyAccepted(value);
 		}
 	};
 	@XmlElement(name = "InRpr", required = true)
@@ -307,7 +338,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * definition} = "Status of the individual order details is in repair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason1, InRepairStatus1> mmInRepair = new MMMessageAssociationEnd<IndividualOrderStatusAndReason1, InRepairStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -319,7 +350,17 @@ public class IndividualOrderStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InRepairStatus1.mmObject();
+			type_lazy = () -> InRepairStatus1.mmObject();
+		}
+
+		@Override
+		public InRepairStatus1 getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getInRepair();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, InRepairStatus1 value) {
+			obj.setInRepair(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -355,7 +396,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * definition} = "Status of the individual order details is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason1, RejectedStatus3> mmRejected = new MMMessageAssociationEnd<IndividualOrderStatusAndReason1, RejectedStatus3>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -367,7 +408,17 @@ public class IndividualOrderStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RejectedStatus3.mmObject();
+			type_lazy = () -> RejectedStatus3.mmObject();
+		}
+
+		@Override
+		public RejectedStatus3 getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, RejectedStatus3 value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "Sspd", required = true)
@@ -403,7 +454,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * definition} = "Status of the individual order details is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSuspended = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason1, SuspendedStatus1> mmSuspended = new MMMessageAssociationEnd<IndividualOrderStatusAndReason1, SuspendedStatus1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -415,7 +466,17 @@ public class IndividualOrderStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SuspendedStatus1.mmObject();
+			type_lazy = () -> SuspendedStatus1.mmObject();
+		}
+
+		@Override
+		public SuspendedStatus1 getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getSuspended();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, SuspendedStatus1 value) {
+			obj.setSuspended(value);
 		}
 	};
 	@XmlElement(name = "RprdConds", required = true)
@@ -453,7 +514,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepairedConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason1, RepairedConditions2> mmRepairedConditions = new MMMessageAssociationEnd<IndividualOrderStatusAndReason1, RepairedConditions2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -465,7 +526,17 @@ public class IndividualOrderStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RepairedConditions2.mmObject();
+			type_lazy = () -> RepairedConditions2.mmObject();
+		}
+
+		@Override
+		public RepairedConditions2 getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getRepairedConditions();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, RepairedConditions2 value) {
+			obj.setRepairedConditions(value);
 		}
 	};
 	@XmlElement(name = "OrdrRef", required = true)
@@ -504,7 +575,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderStatusAndReason1, Max35Text> mmOrderReference = new MMMessageAttribute<IndividualOrderStatusAndReason1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -516,6 +587,16 @@ public class IndividualOrderStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, Max35Text value) {
+			obj.setOrderReference(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -552,7 +633,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * definition} = "Party that initiates the status of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason1, Optional<PartyIdentification2Choice>> mmStatusInitiator = new MMMessageAssociationEnd<IndividualOrderStatusAndReason1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -565,6 +646,16 @@ public class IndividualOrderStatusAndReason1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctOrFinInstrm")
@@ -602,7 +693,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * "Choice between the investment account and the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountOrFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason1, Optional<InvestmentAccountOrFinancialInstrument1Choice>> mmInvestmentAccountOrFinancialInstrument = new MMMessageAssociationEnd<IndividualOrderStatusAndReason1, Optional<InvestmentAccountOrFinancialInstrument1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRelatedTransaction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -615,6 +706,16 @@ public class IndividualOrderStatusAndReason1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccountOrFinancialInstrument1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccountOrFinancialInstrument1Choice> getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getInvestmentAccountOrFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, Optional<InvestmentAccountOrFinancialInstrument1Choice> value) {
+			obj.setInvestmentAccountOrFinancialInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewDtls")
@@ -651,7 +752,7 @@ public class IndividualOrderStatusAndReason1 {
 	 * definition} = "Information that has been added to the original order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderStatusAndReason1, Optional<ExpectedExecutionDetails1>> mmNewDetails = new MMMessageAssociationEnd<IndividualOrderStatusAndReason1, Optional<ExpectedExecutionDetails1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmInvestmentFundOrderExecution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderStatusAndReason1.mmObject();
@@ -663,7 +764,17 @@ public class IndividualOrderStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails1.mmObject();
+			type_lazy = () -> ExpectedExecutionDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<ExpectedExecutionDetails1> getValue(IndividualOrderStatusAndReason1 obj) {
+			return obj.getNewDetails();
+		}
+
+		@Override
+		public void setValue(IndividualOrderStatusAndReason1 obj, Optional<ExpectedExecutionDetails1> value) {
+			obj.setNewDetails(value.orElse(null));
 		}
 	};
 	/**
@@ -770,7 +881,7 @@ public class IndividualOrderStatusAndReason1 {
 		return cancelled;
 	}
 
-	public IndividualOrderStatusAndReason1 setCancelled(com.tools20022.repository.msg.CancelledStatus1 cancelled) {
+	public IndividualOrderStatusAndReason1 setCancelled(CancelledStatus1 cancelled) {
 		this.cancelled = Objects.requireNonNull(cancelled);
 		return this;
 	}
@@ -779,7 +890,7 @@ public class IndividualOrderStatusAndReason1 {
 		return conditionallyAccepted;
 	}
 
-	public IndividualOrderStatusAndReason1 setConditionallyAccepted(com.tools20022.repository.msg.ConditionallyAcceptedStatus1 conditionallyAccepted) {
+	public IndividualOrderStatusAndReason1 setConditionallyAccepted(ConditionallyAcceptedStatus1 conditionallyAccepted) {
 		this.conditionallyAccepted = Objects.requireNonNull(conditionallyAccepted);
 		return this;
 	}
@@ -788,7 +899,7 @@ public class IndividualOrderStatusAndReason1 {
 		return inRepair;
 	}
 
-	public IndividualOrderStatusAndReason1 setInRepair(com.tools20022.repository.msg.InRepairStatus1 inRepair) {
+	public IndividualOrderStatusAndReason1 setInRepair(InRepairStatus1 inRepair) {
 		this.inRepair = Objects.requireNonNull(inRepair);
 		return this;
 	}
@@ -797,7 +908,7 @@ public class IndividualOrderStatusAndReason1 {
 		return rejected;
 	}
 
-	public IndividualOrderStatusAndReason1 setRejected(com.tools20022.repository.msg.RejectedStatus3 rejected) {
+	public IndividualOrderStatusAndReason1 setRejected(RejectedStatus3 rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}
@@ -806,7 +917,7 @@ public class IndividualOrderStatusAndReason1 {
 		return suspended;
 	}
 
-	public IndividualOrderStatusAndReason1 setSuspended(com.tools20022.repository.msg.SuspendedStatus1 suspended) {
+	public IndividualOrderStatusAndReason1 setSuspended(SuspendedStatus1 suspended) {
 		this.suspended = Objects.requireNonNull(suspended);
 		return this;
 	}
@@ -815,7 +926,7 @@ public class IndividualOrderStatusAndReason1 {
 		return repairedConditions;
 	}
 
-	public IndividualOrderStatusAndReason1 setRepairedConditions(com.tools20022.repository.msg.RepairedConditions2 repairedConditions) {
+	public IndividualOrderStatusAndReason1 setRepairedConditions(RepairedConditions2 repairedConditions) {
 		this.repairedConditions = Objects.requireNonNull(repairedConditions);
 		return this;
 	}
@@ -851,7 +962,7 @@ public class IndividualOrderStatusAndReason1 {
 		return newDetails == null ? Optional.empty() : Optional.of(newDetails);
 	}
 
-	public IndividualOrderStatusAndReason1 setNewDetails(com.tools20022.repository.msg.ExpectedExecutionDetails1 newDetails) {
+	public IndividualOrderStatusAndReason1 setNewDetails(ExpectedExecutionDetails1 newDetails) {
 		this.newDetails = newDetails;
 		return this;
 	}

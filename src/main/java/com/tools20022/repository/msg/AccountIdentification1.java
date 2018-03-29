@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +117,7 @@ public class AccountIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification1, SimpleIdentificationInformation> mmProprietary = new MMMessageAttribute<AccountIdentification1, SimpleIdentificationInformation>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
@@ -127,7 +128,17 @@ public class AccountIdentification1 {
 			definition = "Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SimpleIdentificationInformation.mmObject();
+			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
+		}
+
+		@Override
+		public SimpleIdentificationInformation getValue(AccountIdentification1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AccountIdentification1 obj, SimpleIdentificationInformation value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -157,7 +168,7 @@ public class AccountIdentification1 {
 		return proprietary;
 	}
 
-	public AccountIdentification1 setProprietary(com.tools20022.repository.msg.SimpleIdentificationInformation proprietary) {
+	public AccountIdentification1 setProprietary(SimpleIdentificationInformation proprietary) {
 		this.proprietary = Objects.requireNonNull(proprietary);
 		return this;
 	}

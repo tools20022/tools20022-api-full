@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.entity.UndertakingPresenter;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -104,7 +105,7 @@ public class Presentation2 {
 	 * definition} = "Party, other than beneficiary, forwarding the documents."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPresenter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Presentation2, Optional<PartyIdentification43>> mmPresenter = new MMMessageAssociationEnd<Presentation2, Optional<PartyIdentification43>>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingPresenter.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation2.mmObject();
@@ -116,7 +117,17 @@ public class Presentation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(Presentation2 obj) {
+			return obj.getPresenter();
+		}
+
+		@Override
+		public void setValue(Presentation2 obj, Optional<PartyIdentification43> value) {
+			obj.setPresenter(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BnfcryPresntnDt")
@@ -152,7 +163,7 @@ public class Presentation2 {
 	 * definition} = "Date on which the beneficiary presented the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficiaryPresentationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Presentation2, Optional<ISODate>> mmBeneficiaryPresentationDate = new MMMessageAttribute<Presentation2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmPresentationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation2.mmObject();
@@ -164,6 +175,16 @@ public class Presentation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Presentation2 obj) {
+			return obj.getBeneficiaryPresentationDate();
+		}
+
+		@Override
+		public void setValue(Presentation2 obj, Optional<ISODate> value) {
+			obj.setBeneficiaryPresentationDate(value.orElse(null));
 		}
 	};
 
@@ -185,7 +206,7 @@ public class Presentation2 {
 		return presenter == null ? Optional.empty() : Optional.of(presenter);
 	}
 
-	public Presentation2 setPresenter(com.tools20022.repository.msg.PartyIdentification43 presenter) {
+	public Presentation2 setPresenter(PartyIdentification43 presenter) {
 		this.presenter = presenter;
 		return this;
 	}

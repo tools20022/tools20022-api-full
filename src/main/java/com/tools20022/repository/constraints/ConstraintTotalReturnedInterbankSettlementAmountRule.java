@@ -67,13 +67,17 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentReturnV08> forPaymentReturnV08 = new MMConstraint<PaymentReturnV08>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkPaymentReturnV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmountRule.forPaymentReturnV07;
 			owner_lazy = () -> PaymentReturnV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV08 obj) throws Exception {
+			checkPaymentReturnV08(obj);
 		}
 	};
 	/**
@@ -118,7 +122,6 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentReturnV07> forPaymentReturnV07 = new MMConstraint<PaymentReturnV07>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkPaymentReturnV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount.";
@@ -126,6 +129,11 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmountRule.forPaymentReturnV06;
 			owner_lazy = () -> PaymentReturnV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV07 obj) throws Exception {
+			checkPaymentReturnV07(obj);
 		}
 	};
 	/**
@@ -155,12 +163,16 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentReturnV02> forPaymentReturnV02 = new MMConstraint<PaymentReturnV02>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkPaymentReturnV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount.";
 			owner_lazy = () -> PaymentReturnV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV02 obj) throws Exception {
+			checkPaymentReturnV02(obj);
 		}
 	};
 	/**
@@ -190,12 +202,16 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentReturnV03> forPaymentReturnV03 = new MMConstraint<PaymentReturnV03>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkPaymentReturnV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount.";
 			owner_lazy = () -> PaymentReturnV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV03 obj) throws Exception {
+			checkPaymentReturnV03(obj);
 		}
 	};
 	/**
@@ -234,13 +250,17 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentReturnV04> forPaymentReturnV04 = new MMConstraint<PaymentReturnV04>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkPaymentReturnV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmountRule.forPaymentReturnV05);
 			owner_lazy = () -> PaymentReturnV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV04 obj) throws Exception {
+			checkPaymentReturnV04(obj);
 		}
 	};
 	/**
@@ -285,7 +305,6 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentReturnV05> forPaymentReturnV05 = new MMConstraint<PaymentReturnV05>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkPaymentReturnV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount.";
@@ -293,6 +312,11 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmountRule.forPaymentReturnV04;
 			owner_lazy = () -> PaymentReturnV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV05 obj) throws Exception {
+			checkPaymentReturnV05(obj);
 		}
 	};
 	/**
@@ -337,7 +361,6 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentReturnV06> forPaymentReturnV06 = new MMConstraint<PaymentReturnV06>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkPaymentReturnV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount.";
@@ -345,6 +368,11 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalReturnedInterbankSettlementAmountRule.forPaymentReturnV05;
 			owner_lazy = () -> PaymentReturnV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/ReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV06 obj) throws Exception {
+			checkPaymentReturnV06(obj);
 		}
 	};
 	/**
@@ -369,11 +397,15 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<GroupHeader6> forGroupHeader6 = new MMConstraint<GroupHeader6>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkGroupHeader6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "If TotalReturnedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader6 obj) throws Exception {
+			checkGroupHeader6(obj);
 		}
 	};
 	/**
@@ -402,12 +434,16 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<GroupHeader17> forGroupHeader17 = new MMConstraint<GroupHeader17>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkGroupHeader17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "ISO20022 Rule: (not injected)\nIf TotalReturnedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader17.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader17 obj) throws Exception {
+			checkGroupHeader17(obj);
 		}
 	};
 	/**
@@ -436,12 +472,16 @@ public class ConstraintTotalReturnedInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<GroupHeader27> forGroupHeader27 = new MMConstraint<GroupHeader27>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmountRule::checkGroupHeader27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmountRule";
 			definition = "ISO20022 Rule: (not injected)\nIf TotalReturnedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader27.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader27 obj) throws Exception {
+			checkGroupHeader27(obj);
 		}
 	};
 

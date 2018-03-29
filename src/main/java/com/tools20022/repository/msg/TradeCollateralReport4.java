@@ -121,7 +121,7 @@ public class TradeCollateralReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeCollateralReport4, CollateralisationType1Code> mmCollateralisation = new MMMessageAttribute<TradeCollateralReport4, CollateralisationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport4.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class TradeCollateralReport4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralisationType1Code.mmObject();
+		}
+
+		@Override
+		public CollateralisationType1Code getValue(TradeCollateralReport4 obj) {
+			return obj.getCollateralisation();
+		}
+
+		@Override
+		public void setValue(TradeCollateralReport4 obj, CollateralisationType1Code value) {
+			obj.setCollateralisation(value);
 		}
 	};
 	@XmlElement(name = "Prtfl")
@@ -165,7 +175,7 @@ public class TradeCollateralReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortfolio = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeCollateralReport4, Optional<Max52Text>> mmPortfolio = new MMMessageAttribute<TradeCollateralReport4, Optional<Max52Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport4.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class TradeCollateralReport4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max52Text> getValue(TradeCollateralReport4 obj) {
+			return obj.getPortfolio();
+		}
+
+		@Override
+		public void setValue(TradeCollateralReport4 obj, Optional<Max52Text> value) {
+			obj.setPortfolio(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitlMrgnPstd")
@@ -210,7 +230,7 @@ public class TradeCollateralReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialMarginPosted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmInitialMarginPosted = new MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport4.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class TradeCollateralReport4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd20Amount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd20Amount> getValue(TradeCollateralReport4 obj) {
+			return obj.getInitialMarginPosted();
+		}
+
+		@Override
+		public void setValue(TradeCollateralReport4 obj, Optional<ActiveOrHistoricCurrencyAnd20Amount> value) {
+			obj.setInitialMarginPosted(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VartnMrgnPstd")
@@ -255,7 +285,7 @@ public class TradeCollateralReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVariationMarginPosted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmVariationMarginPosted = new MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport4.mmObject();
 			isDerived = false;
@@ -266,6 +296,16 @@ public class TradeCollateralReport4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd20Amount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd20Amount> getValue(TradeCollateralReport4 obj) {
+			return obj.getVariationMarginPosted();
+		}
+
+		@Override
+		public void setValue(TradeCollateralReport4 obj, Optional<ActiveOrHistoricCurrencyAnd20Amount> value) {
+			obj.setVariationMarginPosted(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitlMrgnRcvd")
@@ -300,7 +340,7 @@ public class TradeCollateralReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialMarginReceived = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmInitialMarginReceived = new MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport4.mmObject();
 			isDerived = false;
@@ -311,6 +351,16 @@ public class TradeCollateralReport4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd20Amount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd20Amount> getValue(TradeCollateralReport4 obj) {
+			return obj.getInitialMarginReceived();
+		}
+
+		@Override
+		public void setValue(TradeCollateralReport4 obj, Optional<ActiveOrHistoricCurrencyAnd20Amount> value) {
+			obj.setInitialMarginReceived(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VartnMrgnRcvd")
@@ -345,7 +395,7 @@ public class TradeCollateralReport4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVariationMarginReceived = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmVariationMarginReceived = new MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport4.mmObject();
 			isDerived = false;
@@ -356,6 +406,16 @@ public class TradeCollateralReport4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd20Amount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd20Amount> getValue(TradeCollateralReport4 obj) {
+			return obj.getVariationMarginReceived();
+		}
+
+		@Override
+		public void setValue(TradeCollateralReport4 obj, Optional<ActiveOrHistoricCurrencyAnd20Amount> value) {
+			obj.setVariationMarginReceived(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XcssCollPstd")
@@ -389,7 +449,7 @@ public class TradeCollateralReport4 {
 	 * "Value of collateral posted in excess of the required collateral."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExcessCollateralPosted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmExcessCollateralPosted = new MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport4.mmObject();
 			isDerived = false;
@@ -400,6 +460,16 @@ public class TradeCollateralReport4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd20Amount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd20Amount> getValue(TradeCollateralReport4 obj) {
+			return obj.getExcessCollateralPosted();
+		}
+
+		@Override
+		public void setValue(TradeCollateralReport4 obj, Optional<ActiveOrHistoricCurrencyAnd20Amount> value) {
+			obj.setExcessCollateralPosted(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XcssCollRcvd")
@@ -433,7 +503,7 @@ public class TradeCollateralReport4 {
 	 * "Value of collateral received in excess of the required collateral."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExcessCollateralReceived = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>> mmExcessCollateralReceived = new MMMessageAttribute<TradeCollateralReport4, Optional<ActiveOrHistoricCurrencyAnd20Amount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport4.mmObject();
 			isDerived = false;
@@ -444,6 +514,16 @@ public class TradeCollateralReport4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd20Amount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd20Amount> getValue(TradeCollateralReport4 obj) {
+			return obj.getExcessCollateralReceived();
+		}
+
+		@Override
+		public void setValue(TradeCollateralReport4 obj, Optional<ActiveOrHistoricCurrencyAnd20Amount> value) {
+			obj.setExcessCollateralReceived(value.orElse(null));
 		}
 	};
 

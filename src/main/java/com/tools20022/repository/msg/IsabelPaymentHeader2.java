@@ -26,6 +26,8 @@ import com.tools20022.repository.codeset.Priority4Code;
 import com.tools20022.repository.datatype.Max13AlphaNumericText;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IsabelEnhancedHeader1;
+import com.tools20022.repository.msg.IsabelFile1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -120,7 +122,7 @@ public class IsabelPaymentHeader2 {
 	 * definition} = "Unique identification of the actual sender of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelPaymentHeader2, Max13AlphaNumericText> mmActualSenderIdentification = new MMMessageAttribute<IsabelPaymentHeader2, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -131,6 +133,16 @@ public class IsabelPaymentHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelPaymentHeader2 obj) {
+			return obj.getActualSenderIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelPaymentHeader2 obj, Max13AlphaNumericText value) {
+			obj.setActualSenderIdentification(value);
 		}
 	};
 	@XmlElement(name = "SndrPKIId", required = true)
@@ -165,7 +177,7 @@ public class IsabelPaymentHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSenderPKIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelPaymentHeader2, Max13AlphaNumericText> mmSenderPKIIdentification = new MMMessageAttribute<IsabelPaymentHeader2, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -176,6 +188,16 @@ public class IsabelPaymentHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelPaymentHeader2 obj) {
+			return obj.getSenderPKIIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelPaymentHeader2 obj, Max13AlphaNumericText value) {
+			obj.setSenderPKIIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtrctId", required = true)
@@ -210,7 +232,7 @@ public class IsabelPaymentHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelPaymentHeader2, Max13AlphaNumericText> mmContractIdentification = new MMMessageAttribute<IsabelPaymentHeader2, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -221,6 +243,16 @@ public class IsabelPaymentHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelPaymentHeader2 obj) {
+			return obj.getContractIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelPaymentHeader2 obj, Max13AlphaNumericText value) {
+			obj.setContractIdentification(value);
 		}
 	};
 	@XmlElement(name = "PyldCreDt", required = true)
@@ -253,7 +285,7 @@ public class IsabelPaymentHeader2 {
 	 * "Date and time at which the file in the payload was actually created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelPaymentHeader2, DateAndDateTimeChoice> mmPayloadCreationDate = new MMMessageAssociationEnd<IsabelPaymentHeader2, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -265,6 +297,16 @@ public class IsabelPaymentHeader2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IsabelPaymentHeader2 obj) {
+			return obj.getPayloadCreationDate();
+		}
+
+		@Override
+		public void setValue(IsabelPaymentHeader2 obj, DateAndDateTimeChoice value) {
+			obj.setPayloadCreationDate(value);
 		}
 	};
 	@XmlElement(name = "File", required = true)
@@ -295,7 +337,7 @@ public class IsabelPaymentHeader2 {
 	 * definition} = "Characteristics of the file contained in the payload."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelPaymentHeader2, IsabelFile1> mmFile = new MMMessageAssociationEnd<IsabelPaymentHeader2, IsabelFile1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -306,7 +348,17 @@ public class IsabelPaymentHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
+			type_lazy = () -> IsabelFile1.mmObject();
+		}
+
+		@Override
+		public IsabelFile1 getValue(IsabelPaymentHeader2 obj) {
+			return obj.getFile();
+		}
+
+		@Override
+		public void setValue(IsabelPaymentHeader2 obj, IsabelFile1 value) {
+			obj.setFile(value);
 		}
 	};
 	@XmlElement(name = "QlfdTxTp", required = true)
@@ -340,7 +392,7 @@ public class IsabelPaymentHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQualifiedTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelPaymentHeader2, Max6Text> mmQualifiedTransactionType = new MMMessageAttribute<IsabelPaymentHeader2, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -351,6 +403,16 @@ public class IsabelPaymentHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(IsabelPaymentHeader2 obj) {
+			return obj.getQualifiedTransactionType();
+		}
+
+		@Override
+		public void setValue(IsabelPaymentHeader2 obj, Max6Text value) {
+			obj.setQualifiedTransactionType(value);
 		}
 	};
 	@XmlElement(name = "UrgcyCd", required = true)
@@ -383,7 +445,7 @@ public class IsabelPaymentHeader2 {
 	 * definition} = "Urgency level of file in the payload."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUrgencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelPaymentHeader2, Priority4Code> mmUrgencyCode = new MMMessageAttribute<IsabelPaymentHeader2, Priority4Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -394,6 +456,16 @@ public class IsabelPaymentHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Priority4Code.mmObject();
+		}
+
+		@Override
+		public Priority4Code getValue(IsabelPaymentHeader2 obj) {
+			return obj.getUrgencyCode();
+		}
+
+		@Override
+		public void setValue(IsabelPaymentHeader2 obj, Priority4Code value) {
+			obj.setUrgencyCode(value);
 		}
 	};
 	@XmlElement(name = "Nhncd")
@@ -425,7 +497,7 @@ public class IsabelPaymentHeader2 {
 	 * "Enhanced parameters for an Isabel payment initiation file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnhanced = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelPaymentHeader2, Optional<IsabelEnhancedHeader1>> mmEnhanced = new MMMessageAssociationEnd<IsabelPaymentHeader2, Optional<IsabelEnhancedHeader1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
@@ -436,7 +508,17 @@ public class IsabelPaymentHeader2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelEnhancedHeader1.mmObject();
+			type_lazy = () -> IsabelEnhancedHeader1.mmObject();
+		}
+
+		@Override
+		public Optional<IsabelEnhancedHeader1> getValue(IsabelPaymentHeader2 obj) {
+			return obj.getEnhanced();
+		}
+
+		@Override
+		public void setValue(IsabelPaymentHeader2 obj, Optional<IsabelEnhancedHeader1> value) {
+			obj.setEnhanced(value.orElse(null));
 		}
 	};
 
@@ -495,7 +577,7 @@ public class IsabelPaymentHeader2 {
 		return file;
 	}
 
-	public IsabelPaymentHeader2 setFile(com.tools20022.repository.msg.IsabelFile1 file) {
+	public IsabelPaymentHeader2 setFile(IsabelFile1 file) {
 		this.file = Objects.requireNonNull(file);
 		return this;
 	}
@@ -522,7 +604,7 @@ public class IsabelPaymentHeader2 {
 		return enhanced == null ? Optional.empty() : Optional.of(enhanced);
 	}
 
-	public IsabelPaymentHeader2 setEnhanced(com.tools20022.repository.msg.IsabelEnhancedHeader1 enhanced) {
+	public IsabelPaymentHeader2 setEnhanced(IsabelEnhancedHeader1 enhanced) {
 		this.enhanced = enhanced;
 		return this;
 	}

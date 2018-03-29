@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Discount;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EarlyPaymentsVAT1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +118,7 @@ public class EarlyPayment1 {
 	 * "Date before which the early payment discount is valid for payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarlyPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EarlyPayment1, ISODate> mmEarlyPaymentDate = new MMMessageAttribute<EarlyPayment1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
 			isDerived = false;
@@ -128,6 +129,16 @@ public class EarlyPayment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(EarlyPayment1 obj) {
+			return obj.getEarlyPaymentDate();
+		}
+
+		@Override
+		public void setValue(EarlyPayment1 obj, ISODate value) {
+			obj.setEarlyPaymentDate(value);
 		}
 	};
 	@XmlElement(name = "DscntPct", required = true)
@@ -169,7 +180,7 @@ public class EarlyPayment1 {
 	 * PaymentTerms3.mmDiscountPercentRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDiscountPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EarlyPayment1, PercentageRate> mmDiscountPercent = new MMMessageAttribute<EarlyPayment1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
@@ -182,6 +193,16 @@ public class EarlyPayment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(EarlyPayment1 obj) {
+			return obj.getDiscountPercent();
+		}
+
+		@Override
+		public void setValue(EarlyPayment1 obj, PercentageRate value) {
+			obj.setDiscountPercent(value);
 		}
 	};
 	@XmlElement(name = "DscntAmt", required = true)
@@ -223,7 +244,7 @@ public class EarlyPayment1 {
 	 * PaymentTerms3.mmDiscountAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDiscountAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EarlyPayment1, CurrencyAndAmount> mmDiscountAmount = new MMMessageAttribute<EarlyPayment1, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
@@ -237,9 +258,19 @@ public class EarlyPayment1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public CurrencyAndAmount getValue(EarlyPayment1 obj) {
+			return obj.getDiscountAmount();
+		}
+
+		@Override
+		public void setValue(EarlyPayment1 obj, CurrencyAndAmount value) {
+			obj.setDiscountAmount(value);
+		}
 	};
 	@XmlElement(name = "EarlyPmtTaxSpcfctn")
-	protected List<com.tools20022.repository.msg.EarlyPaymentsVAT1> earlyPaymentTaxSpecification;
+	protected List<EarlyPaymentsVAT1> earlyPaymentTaxSpecification;
 	/**
 	 * 
 	 <p>
@@ -272,7 +303,7 @@ public class EarlyPayment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEarlyPaymentTaxSpecification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EarlyPayment1, List<EarlyPaymentsVAT1>> mmEarlyPaymentTaxSpecification = new MMMessageAssociationEnd<EarlyPayment1, List<EarlyPaymentsVAT1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmTradeSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
@@ -283,7 +314,17 @@ public class EarlyPayment1 {
 			definition = "In tax specification for early payment discount one defined the applied tax rates for specific early payment. VAT stands for value added tax.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
+			type_lazy = () -> EarlyPaymentsVAT1.mmObject();
+		}
+
+		@Override
+		public List<EarlyPaymentsVAT1> getValue(EarlyPayment1 obj) {
+			return obj.getEarlyPaymentTaxSpecification();
+		}
+
+		@Override
+		public void setValue(EarlyPayment1 obj, List<EarlyPaymentsVAT1> value) {
+			obj.setEarlyPaymentTaxSpecification(value);
 		}
 	};
 	@XmlElement(name = "EarlyPmtTaxTtl")
@@ -315,7 +356,7 @@ public class EarlyPayment1 {
 	 * definition} = "Tax total in early payment, with currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarlyPaymentTaxTotal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EarlyPayment1, Optional<CurrencyAndAmount>> mmEarlyPaymentTaxTotal = new MMMessageAttribute<EarlyPayment1, Optional<CurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
 			isDerived = false;
@@ -326,6 +367,16 @@ public class EarlyPayment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(EarlyPayment1 obj) {
+			return obj.getEarlyPaymentTaxTotal();
+		}
+
+		@Override
+		public void setValue(EarlyPayment1 obj, Optional<CurrencyAndAmount> value) {
+			obj.setEarlyPaymentTaxTotal(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DuePyblAmtWthEarlyPmt")
@@ -358,7 +409,7 @@ public class EarlyPayment1 {
 	 * "Payable amount with discount of early payment, with currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDuePayableAmountWithEarlyPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EarlyPayment1, Optional<CurrencyAndAmount>> mmDuePayableAmountWithEarlyPayment = new MMMessageAttribute<EarlyPayment1, Optional<CurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPayment1.mmObject();
 			isDerived = false;
@@ -369,6 +420,16 @@ public class EarlyPayment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(EarlyPayment1 obj) {
+			return obj.getDuePayableAmountWithEarlyPayment();
+		}
+
+		@Override
+		public void setValue(EarlyPayment1 obj, Optional<CurrencyAndAmount> value) {
+			obj.setDuePayableAmountWithEarlyPayment(value.orElse(null));
 		}
 	};
 
@@ -420,7 +481,7 @@ public class EarlyPayment1 {
 		return earlyPaymentTaxSpecification == null ? earlyPaymentTaxSpecification = new ArrayList<>() : earlyPaymentTaxSpecification;
 	}
 
-	public EarlyPayment1 setEarlyPaymentTaxSpecification(List<com.tools20022.repository.msg.EarlyPaymentsVAT1> earlyPaymentTaxSpecification) {
+	public EarlyPayment1 setEarlyPaymentTaxSpecification(List<EarlyPaymentsVAT1> earlyPaymentTaxSpecification) {
 		this.earlyPaymentTaxSpecification = Objects.requireNonNull(earlyPaymentTaxSpecification);
 		return this;
 	}

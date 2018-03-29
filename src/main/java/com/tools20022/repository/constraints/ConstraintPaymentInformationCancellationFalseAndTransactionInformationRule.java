@@ -57,12 +57,16 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 	 */
 	public static final MMConstraint<OriginalPaymentInformation4> forOriginalPaymentInformation4 = new MMConstraint<OriginalPaymentInformation4>() {
 		{
-			validator = ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule::checkOriginalPaymentInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellationFalseAndTransactionInformationRule";
 			definition = "If PaymentInformationCancellation is false, then TransactionInformation must be present.";
 			owner_lazy = () -> OriginalPaymentInformation4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInformation4 obj) throws Exception {
+			checkOriginalPaymentInformation4(obj);
 		}
 	};
 	/**
@@ -93,12 +97,16 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction4> forOriginalPaymentInstruction4 = new MMConstraint<OriginalPaymentInstruction4>() {
 		{
-			validator = ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule::checkOriginalPaymentInstruction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellationFalseAndTransactionInformationRule";
 			definition = "If PaymentInformationCancellation is false, then TransactionInformation must be present.";
 			owner_lazy = () -> OriginalPaymentInstruction4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction4 obj) throws Exception {
+			checkOriginalPaymentInstruction4(obj);
 		}
 	};
 	/**
@@ -138,13 +146,17 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction8> forOriginalPaymentInstruction8 = new MMConstraint<OriginalPaymentInstruction8>() {
 		{
-			validator = ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule::checkOriginalPaymentInstruction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellationFalseAndTransactionInformationRule";
 			definition = "If PaymentInformationCancellation is false, then TransactionInformation must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule.forOriginalPaymentInstruction13);
 			owner_lazy = () -> OriginalPaymentInstruction8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction8 obj) throws Exception {
+			checkOriginalPaymentInstruction8(obj);
 		}
 	};
 	/**
@@ -190,7 +202,6 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction13> forOriginalPaymentInstruction13 = new MMConstraint<OriginalPaymentInstruction13>() {
 		{
-			validator = ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule::checkOriginalPaymentInstruction13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellationFalseAndTransactionInformationRule";
 			definition = "If PaymentInformationCancellation is false, then TransactionInformation must be present.";
@@ -198,6 +209,11 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule.forOriginalPaymentInstruction8;
 			owner_lazy = () -> OriginalPaymentInstruction13.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction13 obj) throws Exception {
+			checkOriginalPaymentInstruction13(obj);
 		}
 	};
 	/**
@@ -243,7 +259,6 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction15> forOriginalPaymentInstruction15 = new MMConstraint<OriginalPaymentInstruction15>() {
 		{
-			validator = ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule::checkOriginalPaymentInstruction15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellationFalseAndTransactionInformationRule";
 			definition = "If PaymentInformationCancellation is false, then TransactionInformation must be present.";
@@ -251,6 +266,11 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule.forOriginalPaymentInstruction13;
 			owner_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction15 obj) throws Exception {
+			checkOriginalPaymentInstruction15(obj);
 		}
 	};
 	/**
@@ -296,7 +316,6 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction20> forOriginalPaymentInstruction20 = new MMConstraint<OriginalPaymentInstruction20>() {
 		{
-			validator = ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule::checkOriginalPaymentInstruction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellationFalseAndTransactionInformationRule";
 			definition = "If PaymentInformationCancellation is false, then TransactionInformation must be present.";
@@ -304,6 +323,11 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule.forOriginalPaymentInstruction15;
 			owner_lazy = () -> OriginalPaymentInstruction20.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction20 obj) throws Exception {
+			checkOriginalPaymentInstruction20(obj);
 		}
 	};
 	/**
@@ -340,13 +364,17 @@ public class ConstraintPaymentInformationCancellationFalseAndTransactionInformat
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction29> forOriginalPaymentInstruction29 = new MMConstraint<OriginalPaymentInstruction29>() {
 		{
-			validator = ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule::checkOriginalPaymentInstruction29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationCancellationFalseAndTransactionInformationRule";
 			definition = "If PaymentInformationCancellation is false, then TransactionInformation must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationCancellationFalseAndTransactionInformationRule.forOriginalPaymentInstruction20;
 			owner_lazy = () -> OriginalPaymentInstruction29.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellation</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellation</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction29 obj) throws Exception {
+			checkOriginalPaymentInstruction29(obj);
 		}
 	};
 

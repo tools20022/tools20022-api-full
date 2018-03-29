@@ -120,7 +120,7 @@ public class RejectedStatusReason15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatusReason15, RejectedReason11Choice> mmReasonCode = new MMMessageAssociationEnd<RejectedStatusReason15, RejectedReason11Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason15.mmObject();
@@ -133,6 +133,16 @@ public class RejectedStatusReason15 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedReason11Choice.mmObject();
+		}
+
+		@Override
+		public RejectedReason11Choice getValue(RejectedStatusReason15 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason15 obj, RejectedReason11Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -171,7 +181,7 @@ public class RejectedStatusReason15 {
 	 * "Provides additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatusReason15, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RejectedStatusReason15, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason15.mmObject();
@@ -183,6 +193,16 @@ public class RejectedStatusReason15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(RejectedStatusReason15 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason15 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

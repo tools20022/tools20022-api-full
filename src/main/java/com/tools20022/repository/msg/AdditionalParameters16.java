@@ -131,7 +131,7 @@ public class AdditionalParameters16 {
 	 * definition} = "Specifies partial settlement information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters16, Optional<PartialSettlement2Code>> mmPartialSettlement = new MMMessageAttribute<AdditionalParameters16, Optional<PartialSettlement2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPartialSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters16.mmObject();
@@ -144,6 +144,16 @@ public class AdditionalParameters16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartialSettlement2Code.mmObject();
+		}
+
+		@Override
+		public Optional<PartialSettlement2Code> getValue(AdditionalParameters16 obj) {
+			return obj.getPartialSettlement();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters16 obj, Optional<PartialSettlement2Code> value) {
+			obj.setPartialSettlement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsPrtlConfId")
@@ -185,7 +195,7 @@ public class AdditionalParameters16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousPartialConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>> mmPreviousPartialConfirmationIdentification = new MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters16.mmObject();
@@ -198,6 +208,16 @@ public class AdditionalParameters16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters16 obj) {
+			return obj.getPreviousPartialConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters16 obj, Optional<Max35Text> value) {
+			obj.setPreviousPartialConfirmationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrTxId")
@@ -239,7 +259,7 @@ public class AdditionalParameters16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters16.mmObject();
@@ -252,6 +272,16 @@ public class AdditionalParameters16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters16 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters16 obj, Optional<Max35Text> value) {
+			obj.setAccountOwnerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -293,7 +323,7 @@ public class AdditionalParameters16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters16.mmObject();
@@ -306,6 +336,16 @@ public class AdditionalParameters16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters16 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters16 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolId")
@@ -345,7 +385,7 @@ public class AdditionalParameters16 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>> mmPoolIdentification = new MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters16.mmObject();
@@ -358,6 +398,16 @@ public class AdditionalParameters16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters16 obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters16 obj, Optional<Max35Text> value) {
+			obj.setPoolIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -399,7 +449,7 @@ public class AdditionalParameters16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters16.mmObject();
@@ -412,6 +462,16 @@ public class AdditionalParameters16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters16 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters16 obj, Optional<Max35Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId")
@@ -454,7 +514,7 @@ public class AdditionalParameters16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters16.mmObject();
@@ -467,6 +527,16 @@ public class AdditionalParameters16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters16 obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters16 obj, Optional<Max35Text> value) {
+			obj.setMarketInfrastructureTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcrTxId")
@@ -504,7 +574,7 @@ public class AdditionalParameters16 {
 	 * "Identification of the transaction as assigned by the processor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>> mmProcessorTransactionIdentification = new MMMessageAttribute<AdditionalParameters16, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters16.mmObject();
@@ -516,6 +586,16 @@ public class AdditionalParameters16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters16 obj) {
+			return obj.getProcessorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters16 obj, Optional<Max35Text> value) {
+			obj.setProcessorTransactionIdentification(value.orElse(null));
 		}
 	};
 

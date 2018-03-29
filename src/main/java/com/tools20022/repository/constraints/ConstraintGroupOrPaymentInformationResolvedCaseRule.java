@@ -57,12 +57,16 @@ public class ConstraintGroupOrPaymentInformationResolvedCaseRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction3> forUnderlyingTransaction3 = new MMConstraint<UnderlyingTransaction3>() {
 		{
-			validator = ConstraintGroupOrPaymentInformationResolvedCaseRule::checkUnderlyingTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupOrPaymentInformationResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus level, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
 			owner_lazy = () -> UnderlyingTransaction3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalPaymentInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndStatus[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction3 obj) throws Exception {
+			checkUnderlyingTransaction3(obj);
 		}
 	};
 	/**
@@ -101,13 +105,17 @@ public class ConstraintGroupOrPaymentInformationResolvedCaseRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction4> forUnderlyingTransaction4 = new MMConstraint<UnderlyingTransaction4>() {
 		{
-			validator = ConstraintGroupOrPaymentInformationResolvedCaseRule::checkUnderlyingTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupOrPaymentInformationResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus level, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupOrPaymentInformationResolvedCaseRule.forUnderlyingTransaction9);
 			owner_lazy = () -> UnderlyingTransaction4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalPaymentInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndStatus[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction4 obj) throws Exception {
+			checkUnderlyingTransaction4(obj);
 		}
 	};
 	/**
@@ -152,7 +160,6 @@ public class ConstraintGroupOrPaymentInformationResolvedCaseRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction9> forUnderlyingTransaction9 = new MMConstraint<UnderlyingTransaction9>() {
 		{
-			validator = ConstraintGroupOrPaymentInformationResolvedCaseRule::checkUnderlyingTransaction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupOrPaymentInformationResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus level, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
@@ -160,6 +167,11 @@ public class ConstraintGroupOrPaymentInformationResolvedCaseRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupOrPaymentInformationResolvedCaseRule.forUnderlyingTransaction4;
 			owner_lazy = () -> UnderlyingTransaction9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalPaymentInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndStatus[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction9 obj) throws Exception {
+			checkUnderlyingTransaction9(obj);
 		}
 	};
 	/**
@@ -204,7 +216,6 @@ public class ConstraintGroupOrPaymentInformationResolvedCaseRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction14> forUnderlyingTransaction14 = new MMConstraint<UnderlyingTransaction14>() {
 		{
-			validator = ConstraintGroupOrPaymentInformationResolvedCaseRule::checkUnderlyingTransaction14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupOrPaymentInformationResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus level, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
@@ -212,6 +223,11 @@ public class ConstraintGroupOrPaymentInformationResolvedCaseRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupOrPaymentInformationResolvedCaseRule.forUnderlyingTransaction9;
 			owner_lazy = () -> UnderlyingTransaction14.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalPaymentInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndStatus[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction14 obj) throws Exception {
+			checkUnderlyingTransaction14(obj);
 		}
 	};
 	/**
@@ -256,7 +272,6 @@ public class ConstraintGroupOrPaymentInformationResolvedCaseRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction17> forUnderlyingTransaction17 = new MMConstraint<UnderlyingTransaction17>() {
 		{
-			validator = ConstraintGroupOrPaymentInformationResolvedCaseRule::checkUnderlyingTransaction17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupOrPaymentInformationResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus level, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
@@ -264,6 +279,11 @@ public class ConstraintGroupOrPaymentInformationResolvedCaseRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupOrPaymentInformationResolvedCaseRule.forUnderlyingTransaction14;
 			owner_lazy = () -> UnderlyingTransaction17.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalPaymentInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndStatus[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction17 obj) throws Exception {
+			checkUnderlyingTransaction17(obj);
 		}
 	};
 	/**
@@ -299,13 +319,17 @@ public class ConstraintGroupOrPaymentInformationResolvedCaseRule {
 	 */
 	public static final MMConstraint<UnderlyingTransaction19> forUnderlyingTransaction19 = new MMConstraint<UnderlyingTransaction19>() {
 		{
-			validator = ConstraintGroupOrPaymentInformationResolvedCaseRule::checkUnderlyingTransaction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupOrPaymentInformationResolvedCaseRule";
 			definition = "ResolvedCase may be present at either ResolvedCase, OriginalGroupInformationAndStatus level, OriginalPaymentInformationAndStatus or TransactionInformationAndStatus level.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupOrPaymentInformationResolvedCaseRule.forUnderlyingTransaction17;
 			owner_lazy = () -> UnderlyingTransaction19.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OriginalPaymentInformationAndStatus[*]/ResolvedCase</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus/ResolvedCase</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalPaymentInformationAndStatus[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingTransaction19 obj) throws Exception {
+			checkUnderlyingTransaction19(obj);
 		}
 	};
 

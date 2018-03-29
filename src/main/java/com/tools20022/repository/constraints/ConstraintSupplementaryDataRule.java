@@ -69,13 +69,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateAmendmentRequestV04> forMandateAmendmentRequestV04 = new MMConstraint<MandateAmendmentRequestV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateAmendmentRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateAmendmentRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateAmendmentRequestV03;
 			owner_lazy = () -> MandateAmendmentRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateAmendmentRequestV04 obj) throws Exception {
+			checkMandateAmendmentRequestV04(obj);
 		}
 	};
 	/**
@@ -114,13 +118,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateCancellationRequestV04> forMandateCancellationRequestV04 = new MMConstraint<MandateCancellationRequestV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateCancellationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateCancellationRequestV03;
 			owner_lazy = () -> MandateCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateCancellationRequestV04 obj) throws Exception {
+			checkMandateCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -159,13 +167,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateAcceptanceReportV04> forMandateAcceptanceReportV04 = new MMConstraint<MandateAcceptanceReportV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateAcceptanceReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateAcceptanceReportV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateAcceptanceReportV03;
 			owner_lazy = () -> MandateAcceptanceReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateAcceptanceReportV04 obj) throws Exception {
+			checkMandateAcceptanceReportV04(obj);
 		}
 	};
 	/**
@@ -204,13 +216,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateInitiationRequestV04> forMandateInitiationRequestV04 = new MMConstraint<MandateInitiationRequestV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateInitiationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateInitiationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateInitiationRequestV03;
 			owner_lazy = () -> MandateInitiationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateInitiationRequestV04 obj) throws Exception {
+			checkMandateInitiationRequestV04(obj);
 		}
 	};
 	/**
@@ -249,13 +265,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerCreditTransferInitiationV07> forCustomerCreditTransferInitiationV07 = new MMConstraint<CustomerCreditTransferInitiationV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerCreditTransferInitiationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerCreditTransferInitiationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerCreditTransferInitiationV06;
 			owner_lazy = () -> CustomerCreditTransferInitiationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerCreditTransferInitiationV07 obj) throws Exception {
+			checkCustomerCreditTransferInitiationV07(obj);
 		}
 	};
 	/**
@@ -294,13 +314,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestV05> forCreditorPaymentActivationRequestV05 = new MMConstraint<CreditorPaymentActivationRequestV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCreditorPaymentActivationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestV04;
 			owner_lazy = () -> CreditorPaymentActivationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestV05 obj) throws Exception {
+			checkCreditorPaymentActivationRequestV05(obj);
 		}
 	};
 	/**
@@ -339,13 +363,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerDirectDebitInitiationV06> forCustomerDirectDebitInitiationV06 = new MMConstraint<CustomerDirectDebitInitiationV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerDirectDebitInitiationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerDirectDebitInitiationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerDirectDebitInitiationV05;
 			owner_lazy = () -> CustomerDirectDebitInitiationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerDirectDebitInitiationV06 obj) throws Exception {
+			checkCustomerDirectDebitInitiationV06(obj);
 		}
 	};
 	/**
@@ -386,13 +414,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV05> forCreditorPaymentActivationRequestStatusReportV05 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCreditorPaymentActivationRequestStatusReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestStatusReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestStatusReportV04;
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV05 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV05(obj);
 		}
 	};
 	/**
@@ -431,13 +463,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentStatusReportV08> forCustomerPaymentStatusReportV08 = new MMConstraint<CustomerPaymentStatusReportV08>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentStatusReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV07;
 			owner_lazy = () -> CustomerPaymentStatusReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentStatusReportV08 obj) throws Exception {
+			checkCustomerPaymentStatusReportV08(obj);
 		}
 	};
 	/**
@@ -476,13 +512,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV07> forCustomerPaymentReversalV07 = new MMConstraint<CustomerPaymentReversalV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentReversalV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentReversalV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentReversalV06;
 			owner_lazy = () -> CustomerPaymentReversalV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV07 obj) throws Exception {
+			checkCustomerPaymentReversalV07(obj);
 		}
 	};
 	/**
@@ -513,12 +553,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateAcceptanceReportV05> forMandateAcceptanceReportV05 = new MMConstraint<MandateAcceptanceReportV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateAcceptanceReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateAcceptanceReportV04;
 			owner_lazy = () -> MandateAcceptanceReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateAcceptanceReportV05 obj) throws Exception {
+			checkMandateAcceptanceReportV05(obj);
 		}
 	};
 	/**
@@ -549,12 +593,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateAmendmentRequestV05> forMandateAmendmentRequestV05 = new MMConstraint<MandateAmendmentRequestV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateAmendmentRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateAmendmentRequestV04;
 			owner_lazy = () -> MandateAmendmentRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateAmendmentRequestV05 obj) throws Exception {
+			checkMandateAmendmentRequestV05(obj);
 		}
 	};
 	/**
@@ -585,12 +633,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateInitiationRequestV05> forMandateInitiationRequestV05 = new MMConstraint<MandateInitiationRequestV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateInitiationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateInitiationRequestV04;
 			owner_lazy = () -> MandateInitiationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateInitiationRequestV05 obj) throws Exception {
+			checkMandateInitiationRequestV05(obj);
 		}
 	};
 	/**
@@ -621,12 +673,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerCreditTransferInitiationV08> forCustomerCreditTransferInitiationV08 = new MMConstraint<CustomerCreditTransferInitiationV08>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerCreditTransferInitiationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerCreditTransferInitiationV07;
 			owner_lazy = () -> CustomerCreditTransferInitiationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerCreditTransferInitiationV08 obj) throws Exception {
+			checkCustomerCreditTransferInitiationV08(obj);
 		}
 	};
 	/**
@@ -657,12 +713,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateCancellationRequestV05> forMandateCancellationRequestV05 = new MMConstraint<MandateCancellationRequestV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateCancellationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateCancellationRequestV04;
 			owner_lazy = () -> MandateCancellationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateCancellationRequestV05 obj) throws Exception {
+			checkMandateCancellationRequestV05(obj);
 		}
 	};
 	/**
@@ -693,12 +753,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerDirectDebitInitiationV07> forCustomerDirectDebitInitiationV07 = new MMConstraint<CustomerDirectDebitInitiationV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerDirectDebitInitiationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerDirectDebitInitiationV06;
 			owner_lazy = () -> CustomerDirectDebitInitiationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerDirectDebitInitiationV07 obj) throws Exception {
+			checkCustomerDirectDebitInitiationV07(obj);
 		}
 	};
 	/**
@@ -730,12 +794,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV06> forCreditorPaymentActivationRequestStatusReportV06 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCreditorPaymentActivationRequestStatusReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestStatusReportV05;
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV06 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV06(obj);
 		}
 	};
 	/**
@@ -766,12 +834,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestV06> forCreditorPaymentActivationRequestV06 = new MMConstraint<CreditorPaymentActivationRequestV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCreditorPaymentActivationRequestV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestV05;
 			owner_lazy = () -> CreditorPaymentActivationRequestV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestV06 obj) throws Exception {
+			checkCreditorPaymentActivationRequestV06(obj);
 		}
 	};
 	/**
@@ -797,11 +869,15 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateSuspensionRequestV01> forMandateSuspensionRequestV01 = new MMConstraint<MandateSuspensionRequestV01>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateSuspensionRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			owner_lazy = () -> MandateSuspensionRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateSuspensionRequestV01 obj) throws Exception {
+			checkMandateSuspensionRequestV01(obj);
 		}
 	};
 	/**
@@ -827,11 +903,15 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateCopyRequestV01> forMandateCopyRequestV01 = new MMConstraint<MandateCopyRequestV01>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateCopyRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			owner_lazy = () -> MandateCopyRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateCopyRequestV01 obj) throws Exception {
+			checkMandateCopyRequestV01(obj);
 		}
 	};
 	/**
@@ -862,12 +942,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentStatusReportV09> forCustomerPaymentStatusReportV09 = new MMConstraint<CustomerPaymentStatusReportV09>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentStatusReportV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV08;
 			owner_lazy = () -> CustomerPaymentStatusReportV09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentStatusReportV09 obj) throws Exception {
+			checkCustomerPaymentStatusReportV09(obj);
 		}
 	};
 	/**
@@ -898,12 +982,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV08> forCustomerPaymentReversalV08 = new MMConstraint<CustomerPaymentReversalV08>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentReversalV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentReversalV07;
 			owner_lazy = () -> CustomerPaymentReversalV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV08 obj) throws Exception {
+			checkCustomerPaymentReversalV08(obj);
 		}
 	};
 	/**
@@ -934,12 +1022,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerAccountReportV07> forBankToCustomerAccountReportV07 = new MMConstraint<BankToCustomerAccountReportV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerAccountReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerAccountReportV06;
 			owner_lazy = () -> BankToCustomerAccountReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerAccountReportV07 obj) throws Exception {
+			checkBankToCustomerAccountReportV07(obj);
 		}
 	};
 	/**
@@ -970,12 +1062,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentCancellationRequestV07> forFIToFIPaymentCancellationRequestV07 = new MMConstraint<FIToFIPaymentCancellationRequestV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentCancellationRequestV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentCancellationRequestV06;
 			owner_lazy = () -> FIToFIPaymentCancellationRequestV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentCancellationRequestV07 obj) throws Exception {
+			checkFIToFIPaymentCancellationRequestV07(obj);
 		}
 	};
 	/**
@@ -1006,12 +1102,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerStatementV07> forBankToCustomerStatementV07 = new MMConstraint<BankToCustomerStatementV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerStatementV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerStatementV06;
 			owner_lazy = () -> BankToCustomerStatementV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerStatementV07 obj) throws Exception {
+			checkBankToCustomerStatementV07(obj);
 		}
 	};
 	/**
@@ -1043,12 +1143,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerDebitCreditNotificationV07> forBankToCustomerDebitCreditNotificationV07 = new MMConstraint<BankToCustomerDebitCreditNotificationV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerDebitCreditNotificationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV06;
 			owner_lazy = () -> BankToCustomerDebitCreditNotificationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerDebitCreditNotificationV07 obj) throws Exception {
+			checkBankToCustomerDebitCreditNotificationV07(obj);
 		}
 	};
 	/**
@@ -1080,12 +1184,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentCancellationRequestV07> forCustomerPaymentCancellationRequestV07 = new MMConstraint<CustomerPaymentCancellationRequestV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentCancellationRequestV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentCancellationRequestV06;
 			owner_lazy = () -> CustomerPaymentCancellationRequestV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentCancellationRequestV07 obj) throws Exception {
+			checkCustomerPaymentCancellationRequestV07(obj);
 		}
 	};
 	/**
@@ -1124,13 +1232,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerAccountReportV06> forBankToCustomerAccountReportV06 = new MMConstraint<BankToCustomerAccountReportV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerAccountReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerAccountReportV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerAccountReportV05;
 			owner_lazy = () -> BankToCustomerAccountReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerAccountReportV06 obj) throws Exception {
+			checkBankToCustomerAccountReportV06(obj);
 		}
 	};
 	/**
@@ -1169,13 +1281,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerStatementV06> forBankToCustomerStatementV06 = new MMConstraint<BankToCustomerStatementV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerStatementV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerStatementV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerStatementV05;
 			owner_lazy = () -> BankToCustomerStatementV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerStatementV06 obj) throws Exception {
+			checkBankToCustomerStatementV06(obj);
 		}
 	};
 	/**
@@ -1216,13 +1332,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerDebitCreditNotificationV06> forBankToCustomerDebitCreditNotificationV06 = new MMConstraint<BankToCustomerDebitCreditNotificationV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerDebitCreditNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV05;
 			owner_lazy = () -> BankToCustomerDebitCreditNotificationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerDebitCreditNotificationV06 obj) throws Exception {
+			checkBankToCustomerDebitCreditNotificationV06(obj);
 		}
 	};
 	/**
@@ -1263,13 +1383,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentCancellationRequestV06> forCustomerPaymentCancellationRequestV06 = new MMConstraint<CustomerPaymentCancellationRequestV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentCancellationRequestV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentCancellationRequestV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentCancellationRequestV05;
 			owner_lazy = () -> CustomerPaymentCancellationRequestV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentCancellationRequestV06 obj) throws Exception {
+			checkCustomerPaymentCancellationRequestV06(obj);
 		}
 	};
 	/**
@@ -1308,13 +1432,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentCancellationRequestV06> forFIToFIPaymentCancellationRequestV06 = new MMConstraint<FIToFIPaymentCancellationRequestV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentCancellationRequestV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentCancellationRequestV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentCancellationRequestV05;
 			owner_lazy = () -> FIToFIPaymentCancellationRequestV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentCancellationRequestV06 obj) throws Exception {
+			checkFIToFIPaymentCancellationRequestV06(obj);
 		}
 	};
 	/**
@@ -1340,11 +1468,15 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionDirectDebitV02> forFinancialInstitutionDirectDebitV02 = new MMConstraint<FinancialInstitutionDirectDebitV02>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFinancialInstitutionDirectDebitV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			owner_lazy = () -> FinancialInstitutionDirectDebitV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionDirectDebitV02 obj) throws Exception {
+			checkFinancialInstitutionDirectDebitV02(obj);
 		}
 	};
 	/**
@@ -1375,12 +1507,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV07> forFIToFICustomerDirectDebitV07 = new MMConstraint<FIToFICustomerDirectDebitV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFICustomerDirectDebitV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerDirectDebitV06;
 			owner_lazy = () -> FIToFICustomerDirectDebitV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV07 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV07(obj);
 		}
 	};
 	/**
@@ -1411,12 +1547,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV07> forFIToFICustomerCreditTransferV07 = new MMConstraint<FIToFICustomerCreditTransferV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFICustomerCreditTransferV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerCreditTransferV06;
 			owner_lazy = () -> FIToFICustomerCreditTransferV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV07 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV07(obj);
 		}
 	};
 	/**
@@ -1448,12 +1588,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV07> forFinancialInstitutionCreditTransferV07 = new MMConstraint<FinancialInstitutionCreditTransferV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFinancialInstitutionCreditTransferV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFinancialInstitutionCreditTransferV06;
 			owner_lazy = () -> FinancialInstitutionCreditTransferV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV07 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV07(obj);
 		}
 	};
 	/**
@@ -1484,12 +1628,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV08> forFIToFIPaymentReversalV08 = new MMConstraint<FIToFIPaymentReversalV08>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentReversalV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV07;
 			owner_lazy = () -> FIToFIPaymentReversalV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV08 obj) throws Exception {
+			checkFIToFIPaymentReversalV08(obj);
 		}
 	};
 	/**
@@ -1520,12 +1668,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<PaymentReturnV08> forPaymentReturnV08 = new MMConstraint<PaymentReturnV08>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkPaymentReturnV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forPaymentReturnV07;
 			owner_lazy = () -> PaymentReturnV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV08 obj) throws Exception {
+			checkPaymentReturnV08(obj);
 		}
 	};
 	/**
@@ -1556,12 +1708,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusReportV09> forFIToFIPaymentStatusReportV09 = new MMConstraint<FIToFIPaymentStatusReportV09>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentStatusReportV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV08;
 			owner_lazy = () -> FIToFIPaymentStatusReportV09.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusReportV09 obj) throws Exception {
+			checkFIToFIPaymentStatusReportV09(obj);
 		}
 	};
 	/**
@@ -1592,12 +1748,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusRequestV02> forFIToFIPaymentStatusRequestV02 = new MMConstraint<FIToFIPaymentStatusRequestV02>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentStatusRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusRequestV01;
 			owner_lazy = () -> FIToFIPaymentStatusRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusRequestV02 obj) throws Exception {
+			checkFIToFIPaymentStatusRequestV02(obj);
 		}
 	};
 	/**
@@ -1636,13 +1796,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV06> forFIToFICustomerDirectDebitV06 = new MMConstraint<FIToFICustomerDirectDebitV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFICustomerDirectDebitV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerDirectDebitV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerDirectDebitV05;
 			owner_lazy = () -> FIToFICustomerDirectDebitV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV06 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV06(obj);
 		}
 	};
 	/**
@@ -1683,13 +1847,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV06> forFinancialInstitutionCreditTransferV06 = new MMConstraint<FinancialInstitutionCreditTransferV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFinancialInstitutionCreditTransferV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFinancialInstitutionCreditTransferV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFinancialInstitutionCreditTransferV05;
 			owner_lazy = () -> FinancialInstitutionCreditTransferV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV06 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV06(obj);
 		}
 	};
 	/**
@@ -1728,13 +1896,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV06> forFIToFICustomerCreditTransferV06 = new MMConstraint<FIToFICustomerCreditTransferV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFICustomerCreditTransferV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerCreditTransferV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerCreditTransferV05;
 			owner_lazy = () -> FIToFICustomerCreditTransferV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV06 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV06(obj);
 		}
 	};
 	/**
@@ -1768,12 +1940,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusRequestV01> forFIToFIPaymentStatusRequestV01 = new MMConstraint<FIToFIPaymentStatusRequestV01>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentStatusRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusRequestV02);
 			owner_lazy = () -> FIToFIPaymentStatusRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusRequestV01 obj) throws Exception {
+			checkFIToFIPaymentStatusRequestV01(obj);
 		}
 	};
 	/**
@@ -1812,13 +1988,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<PaymentReturnV07> forPaymentReturnV07 = new MMConstraint<PaymentReturnV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkPaymentReturnV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forPaymentReturnV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forPaymentReturnV06;
 			owner_lazy = () -> PaymentReturnV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV07 obj) throws Exception {
+			checkPaymentReturnV07(obj);
 		}
 	};
 	/**
@@ -1857,13 +2037,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusReportV08> forFIToFIPaymentStatusReportV08 = new MMConstraint<FIToFIPaymentStatusReportV08>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentStatusReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV07;
 			owner_lazy = () -> FIToFIPaymentStatusReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusReportV08 obj) throws Exception {
+			checkFIToFIPaymentStatusReportV08(obj);
 		}
 	};
 	/**
@@ -1902,13 +2086,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV07> forFIToFIPaymentReversalV07 = new MMConstraint<FIToFIPaymentReversalV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentReversalV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV06;
 			owner_lazy = () -> FIToFIPaymentReversalV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV07 obj) throws Exception {
+			checkFIToFIPaymentReversalV07(obj);
 		}
 	};
 	/**
@@ -1942,12 +2130,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerAccountReportV04> forBankToCustomerAccountReportV04 = new MMConstraint<BankToCustomerAccountReportV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerAccountReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerAccountReportV05);
 			owner_lazy = () -> BankToCustomerAccountReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerAccountReportV04 obj) throws Exception {
+			checkBankToCustomerAccountReportV04(obj);
 		}
 	};
 	/**
@@ -1982,12 +2174,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerDebitCreditNotificationV04> forBankToCustomerDebitCreditNotificationV04 = new MMConstraint<BankToCustomerDebitCreditNotificationV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerDebitCreditNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV05);
 			owner_lazy = () -> BankToCustomerDebitCreditNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerDebitCreditNotificationV04 obj) throws Exception {
+			checkBankToCustomerDebitCreditNotificationV04(obj);
 		}
 	};
 	/**
@@ -2021,12 +2217,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerStatementV04> forBankToCustomerStatementV04 = new MMConstraint<BankToCustomerStatementV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerStatementV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerStatementV05);
 			owner_lazy = () -> BankToCustomerStatementV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerStatementV04 obj) throws Exception {
+			checkBankToCustomerStatementV04(obj);
 		}
 	};
 	/**
@@ -2061,12 +2261,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentCancellationRequestV03> forCustomerPaymentCancellationRequestV03 = new MMConstraint<CustomerPaymentCancellationRequestV03>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentCancellationRequestV04);
 			owner_lazy = () -> CustomerPaymentCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentCancellationRequestV03 obj) throws Exception {
+			checkCustomerPaymentCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -2100,12 +2304,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentCancellationRequestV03> forFIToFIPaymentCancellationRequestV03 = new MMConstraint<FIToFIPaymentCancellationRequestV03>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentCancellationRequestV04);
 			owner_lazy = () -> FIToFIPaymentCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentCancellationRequestV03 obj) throws Exception {
+			checkFIToFIPaymentCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -2144,13 +2352,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerStatementV05> forBankToCustomerStatementV05 = new MMConstraint<BankToCustomerStatementV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerStatementV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerStatementV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerStatementV04;
 			owner_lazy = () -> BankToCustomerStatementV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerStatementV05 obj) throws Exception {
+			checkBankToCustomerStatementV05(obj);
 		}
 	};
 	/**
@@ -2189,13 +2401,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerAccountReportV05> forBankToCustomerAccountReportV05 = new MMConstraint<BankToCustomerAccountReportV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerAccountReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerAccountReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerAccountReportV04;
 			owner_lazy = () -> BankToCustomerAccountReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerAccountReportV05 obj) throws Exception {
+			checkBankToCustomerAccountReportV05(obj);
 		}
 	};
 	/**
@@ -2234,13 +2450,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentCancellationRequestV04> forFIToFIPaymentCancellationRequestV04 = new MMConstraint<FIToFIPaymentCancellationRequestV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentCancellationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentCancellationRequestV03;
 			owner_lazy = () -> FIToFIPaymentCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentCancellationRequestV04 obj) throws Exception {
+			checkFIToFIPaymentCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -2281,13 +2501,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentCancellationRequestV04> forCustomerPaymentCancellationRequestV04 = new MMConstraint<CustomerPaymentCancellationRequestV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentCancellationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentCancellationRequestV03;
 			owner_lazy = () -> CustomerPaymentCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentCancellationRequestV04 obj) throws Exception {
+			checkCustomerPaymentCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -2328,13 +2552,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<BankToCustomerDebitCreditNotificationV05> forBankToCustomerDebitCreditNotificationV05 = new MMConstraint<BankToCustomerDebitCreditNotificationV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkBankToCustomerDebitCreditNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forBankToCustomerDebitCreditNotificationV04;
 			owner_lazy = () -> BankToCustomerDebitCreditNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankToCustomerDebitCreditNotificationV05 obj) throws Exception {
+			checkBankToCustomerDebitCreditNotificationV05(obj);
 		}
 	};
 	/**
@@ -2373,13 +2601,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentCancellationRequestV05> forFIToFIPaymentCancellationRequestV05 = new MMConstraint<FIToFIPaymentCancellationRequestV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentCancellationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentCancellationRequestV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentCancellationRequestV04;
 			owner_lazy = () -> FIToFIPaymentCancellationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentCancellationRequestV05 obj) throws Exception {
+			checkFIToFIPaymentCancellationRequestV05(obj);
 		}
 	};
 	/**
@@ -2420,13 +2652,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentCancellationRequestV05> forCustomerPaymentCancellationRequestV05 = new MMConstraint<CustomerPaymentCancellationRequestV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentCancellationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentCancellationRequestV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentCancellationRequestV04;
 			owner_lazy = () -> CustomerPaymentCancellationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentCancellationRequestV05 obj) throws Exception {
+			checkCustomerPaymentCancellationRequestV05(obj);
 		}
 	};
 	/**
@@ -2460,12 +2696,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerCreditTransferInitiationV05> forCustomerCreditTransferInitiationV05 = new MMConstraint<CustomerCreditTransferInitiationV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerCreditTransferInitiationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerCreditTransferInitiationV06);
 			owner_lazy = () -> CustomerCreditTransferInitiationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerCreditTransferInitiationV05 obj) throws Exception {
+			checkCustomerCreditTransferInitiationV05(obj);
 		}
 	};
 	/**
@@ -2499,12 +2739,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerDirectDebitInitiationV04> forCustomerDirectDebitInitiationV04 = new MMConstraint<CustomerDirectDebitInitiationV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerDirectDebitInitiationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerDirectDebitInitiationV05);
 			owner_lazy = () -> CustomerDirectDebitInitiationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerDirectDebitInitiationV04 obj) throws Exception {
+			checkCustomerDirectDebitInitiationV04(obj);
 		}
 	};
 	/**
@@ -2538,12 +2782,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV04> forCustomerPaymentReversalV04 = new MMConstraint<CustomerPaymentReversalV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentReversalV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentReversalV05);
 			owner_lazy = () -> CustomerPaymentReversalV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV04 obj) throws Exception {
+			checkCustomerPaymentReversalV04(obj);
 		}
 	};
 	/**
@@ -2577,12 +2825,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentStatusReportV05> forCustomerPaymentStatusReportV05 = new MMConstraint<CustomerPaymentStatusReportV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentStatusReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV06);
 			owner_lazy = () -> CustomerPaymentStatusReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentStatusReportV05 obj) throws Exception {
+			checkCustomerPaymentStatusReportV05(obj);
 		}
 	};
 	/**
@@ -2616,12 +2868,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateAcceptanceReportV03> forMandateAcceptanceReportV03 = new MMConstraint<MandateAcceptanceReportV03>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateAcceptanceReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateAcceptanceReportV04);
 			owner_lazy = () -> MandateAcceptanceReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateAcceptanceReportV03 obj) throws Exception {
+			checkMandateAcceptanceReportV03(obj);
 		}
 	};
 	/**
@@ -2655,12 +2911,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateAmendmentRequestV03> forMandateAmendmentRequestV03 = new MMConstraint<MandateAmendmentRequestV03>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateAmendmentRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateAmendmentRequestV04);
 			owner_lazy = () -> MandateAmendmentRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateAmendmentRequestV03 obj) throws Exception {
+			checkMandateAmendmentRequestV03(obj);
 		}
 	};
 	/**
@@ -2694,12 +2954,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateCancellationRequestV03> forMandateCancellationRequestV03 = new MMConstraint<MandateCancellationRequestV03>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateCancellationRequestV04);
 			owner_lazy = () -> MandateCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateCancellationRequestV03 obj) throws Exception {
+			checkMandateCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -2733,12 +2997,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<MandateInitiationRequestV03> forMandateInitiationRequestV03 = new MMConstraint<MandateInitiationRequestV03>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkMandateInitiationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forMandateInitiationRequestV04);
 			owner_lazy = () -> MandateInitiationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MandateInitiationRequestV03 obj) throws Exception {
+			checkMandateInitiationRequestV03(obj);
 		}
 	};
 	/**
@@ -2773,12 +3041,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV03> forCreditorPaymentActivationRequestStatusReportV03 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV03>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCreditorPaymentActivationRequestStatusReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestStatusReportV04);
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV03 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV03(obj);
 		}
 	};
 	/**
@@ -2812,12 +3084,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestV03> forCreditorPaymentActivationRequestV03 = new MMConstraint<CreditorPaymentActivationRequestV03>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCreditorPaymentActivationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestV04);
 			owner_lazy = () -> CreditorPaymentActivationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestV03 obj) throws Exception {
+			checkCreditorPaymentActivationRequestV03(obj);
 		}
 	};
 	/**
@@ -2856,13 +3132,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV05> forCustomerPaymentReversalV05 = new MMConstraint<CustomerPaymentReversalV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentReversalV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentReversalV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentReversalV04;
 			owner_lazy = () -> CustomerPaymentReversalV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV05 obj) throws Exception {
+			checkCustomerPaymentReversalV05(obj);
 		}
 	};
 	/**
@@ -2901,13 +3181,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerCreditTransferInitiationV06> forCustomerCreditTransferInitiationV06 = new MMConstraint<CustomerCreditTransferInitiationV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerCreditTransferInitiationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerCreditTransferInitiationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerCreditTransferInitiationV05;
 			owner_lazy = () -> CustomerCreditTransferInitiationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerCreditTransferInitiationV06 obj) throws Exception {
+			checkCustomerCreditTransferInitiationV06(obj);
 		}
 	};
 	/**
@@ -2946,13 +3230,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentStatusReportV06> forCustomerPaymentStatusReportV06 = new MMConstraint<CustomerPaymentStatusReportV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentStatusReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV05;
 			owner_lazy = () -> CustomerPaymentStatusReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentStatusReportV06 obj) throws Exception {
+			checkCustomerPaymentStatusReportV06(obj);
 		}
 	};
 	/**
@@ -2991,13 +3279,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerDirectDebitInitiationV05> forCustomerDirectDebitInitiationV05 = new MMConstraint<CustomerDirectDebitInitiationV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerDirectDebitInitiationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerDirectDebitInitiationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerDirectDebitInitiationV04;
 			owner_lazy = () -> CustomerDirectDebitInitiationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerDirectDebitInitiationV05 obj) throws Exception {
+			checkCustomerDirectDebitInitiationV05(obj);
 		}
 	};
 	/**
@@ -3038,13 +3330,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestStatusReportV04> forCreditorPaymentActivationRequestStatusReportV04 = new MMConstraint<CreditorPaymentActivationRequestStatusReportV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCreditorPaymentActivationRequestStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestStatusReportV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestStatusReportV03;
 			owner_lazy = () -> CreditorPaymentActivationRequestStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestStatusReportV04 obj) throws Exception {
+			checkCreditorPaymentActivationRequestStatusReportV04(obj);
 		}
 	};
 	/**
@@ -3083,13 +3379,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CreditorPaymentActivationRequestV04> forCreditorPaymentActivationRequestV04 = new MMConstraint<CreditorPaymentActivationRequestV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCreditorPaymentActivationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestV03;
 			owner_lazy = () -> CreditorPaymentActivationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditorPaymentActivationRequestV04 obj) throws Exception {
+			checkCreditorPaymentActivationRequestV04(obj);
 		}
 	};
 	/**
@@ -3128,13 +3428,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV06> forCustomerPaymentReversalV06 = new MMConstraint<CustomerPaymentReversalV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentReversalV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentReversalV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentReversalV05;
 			owner_lazy = () -> CustomerPaymentReversalV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV06 obj) throws Exception {
+			checkCustomerPaymentReversalV06(obj);
 		}
 	};
 	/**
@@ -3173,13 +3477,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<CustomerPaymentStatusReportV07> forCustomerPaymentStatusReportV07 = new MMConstraint<CustomerPaymentStatusReportV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkCustomerPaymentStatusReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV06;
 			owner_lazy = () -> CustomerPaymentStatusReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentStatusReportV07 obj) throws Exception {
+			checkCustomerPaymentStatusReportV07(obj);
 		}
 	};
 	/**
@@ -3213,12 +3521,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV04> forFIToFICustomerCreditTransferV04 = new MMConstraint<FIToFICustomerCreditTransferV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFICustomerCreditTransferV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerCreditTransferV05);
 			owner_lazy = () -> FIToFICustomerCreditTransferV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV04 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV04(obj);
 		}
 	};
 	/**
@@ -3252,12 +3564,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV04> forFIToFICustomerDirectDebitV04 = new MMConstraint<FIToFICustomerDirectDebitV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFICustomerDirectDebitV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerDirectDebitV05);
 			owner_lazy = () -> FIToFICustomerDirectDebitV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV04 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV04(obj);
 		}
 	};
 	/**
@@ -3291,12 +3607,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV04> forFIToFIPaymentReversalV04 = new MMConstraint<FIToFIPaymentReversalV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentReversalV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV05);
 			owner_lazy = () -> FIToFIPaymentReversalV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV04 obj) throws Exception {
+			checkFIToFIPaymentReversalV04(obj);
 		}
 	};
 	/**
@@ -3330,12 +3650,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusReportV05> forFIToFIPaymentStatusReportV05 = new MMConstraint<FIToFIPaymentStatusReportV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentStatusReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV06);
 			owner_lazy = () -> FIToFIPaymentStatusReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusReportV05 obj) throws Exception {
+			checkFIToFIPaymentStatusReportV05(obj);
 		}
 	};
 	/**
@@ -3370,12 +3694,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV04> forFinancialInstitutionCreditTransferV04 = new MMConstraint<FinancialInstitutionCreditTransferV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFinancialInstitutionCreditTransferV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFinancialInstitutionCreditTransferV05);
 			owner_lazy = () -> FinancialInstitutionCreditTransferV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV04 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV04(obj);
 		}
 	};
 	/**
@@ -3409,12 +3737,16 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<PaymentReturnV04> forPaymentReturnV04 = new MMConstraint<PaymentReturnV04>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkPaymentReturnV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forPaymentReturnV05);
 			owner_lazy = () -> PaymentReturnV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV04 obj) throws Exception {
+			checkPaymentReturnV04(obj);
 		}
 	};
 	/**
@@ -3455,13 +3787,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV05> forFinancialInstitutionCreditTransferV05 = new MMConstraint<FinancialInstitutionCreditTransferV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFinancialInstitutionCreditTransferV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFinancialInstitutionCreditTransferV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFinancialInstitutionCreditTransferV04;
 			owner_lazy = () -> FinancialInstitutionCreditTransferV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV05 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV05(obj);
 		}
 	};
 	/**
@@ -3500,13 +3836,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusReportV06> forFIToFIPaymentStatusReportV06 = new MMConstraint<FIToFIPaymentStatusReportV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentStatusReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV05;
 			owner_lazy = () -> FIToFIPaymentStatusReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusReportV06 obj) throws Exception {
+			checkFIToFIPaymentStatusReportV06(obj);
 		}
 	};
 	/**
@@ -3545,13 +3885,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV05> forFIToFICustomerDirectDebitV05 = new MMConstraint<FIToFICustomerDirectDebitV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFICustomerDirectDebitV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerDirectDebitV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerDirectDebitV04;
 			owner_lazy = () -> FIToFICustomerDirectDebitV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV05 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV05(obj);
 		}
 	};
 	/**
@@ -3590,13 +3934,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV05> forFIToFIPaymentReversalV05 = new MMConstraint<FIToFIPaymentReversalV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentReversalV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV04;
 			owner_lazy = () -> FIToFIPaymentReversalV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV05 obj) throws Exception {
+			checkFIToFIPaymentReversalV05(obj);
 		}
 	};
 	/**
@@ -3635,13 +3983,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<PaymentReturnV05> forPaymentReturnV05 = new MMConstraint<PaymentReturnV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkPaymentReturnV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forPaymentReturnV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forPaymentReturnV04;
 			owner_lazy = () -> PaymentReturnV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV05 obj) throws Exception {
+			checkPaymentReturnV05(obj);
 		}
 	};
 	/**
@@ -3680,13 +4032,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV05> forFIToFICustomerCreditTransferV05 = new MMConstraint<FIToFICustomerCreditTransferV05>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFICustomerCreditTransferV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerCreditTransferV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFICustomerCreditTransferV04;
 			owner_lazy = () -> FIToFICustomerCreditTransferV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV05 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV05(obj);
 		}
 	};
 	/**
@@ -3725,13 +4081,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusReportV07> forFIToFIPaymentStatusReportV07 = new MMConstraint<FIToFIPaymentStatusReportV07>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentStatusReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentStatusReportV06;
 			owner_lazy = () -> FIToFIPaymentStatusReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentStatusReportV07 obj) throws Exception {
+			checkFIToFIPaymentStatusReportV07(obj);
 		}
 	};
 	/**
@@ -3770,13 +4130,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV06> forFIToFIPaymentReversalV06 = new MMConstraint<FIToFIPaymentReversalV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkFIToFIPaymentReversalV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV05;
 			owner_lazy = () -> FIToFIPaymentReversalV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV06 obj) throws Exception {
+			checkFIToFIPaymentReversalV06(obj);
 		}
 	};
 	/**
@@ -3815,13 +4179,17 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<PaymentReturnV06> forPaymentReturnV06 = new MMConstraint<PaymentReturnV06>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkPaymentReturnV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "The SupplementaryData building block at message level must not be used to provide additional information about a transaction. The SupplementaryData element at transaction level should be used for that purpose.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forPaymentReturnV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forPaymentReturnV05;
 			owner_lazy = () -> PaymentReturnV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV06 obj) throws Exception {
+			checkPaymentReturnV06(obj);
 		}
 	};
 	/**
@@ -3847,11 +4215,15 @@ public class ConstraintSupplementaryDataRule {
 	 */
 	public static final MMConstraint<SupplementaryData1> forSupplementaryData1 = new MMConstraint<SupplementaryData1>() {
 		{
-			validator = ConstraintSupplementaryDataRule::checkSupplementaryData1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryDataRule";
 			definition = "This component may not be used without the explicit approval of a SEG and submission to the RA of ISO 20022 compliant structure(s) to be used in the Envelope element.";
 			owner_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SupplementaryData1 obj) throws Exception {
+			checkSupplementaryData1(obj);
 		}
 	};
 

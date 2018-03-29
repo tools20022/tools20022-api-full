@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentTokenIdentifiers1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -103,7 +104,7 @@ public class CardPaymentToken1 {
 	 * definition} = "Additional token payment information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTokenCharacteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentToken1, List<Max35Text>> mmTokenCharacteristic = new MMMessageAttribute<CardPaymentToken1, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken1.mmObject();
 			isDerived = false;
@@ -113,6 +114,16 @@ public class CardPaymentToken1 {
 			definition = "Additional token payment information.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(CardPaymentToken1 obj) {
+			return obj.getTokenCharacteristic();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken1 obj, List<Max35Text> value) {
+			obj.setTokenCharacteristic(value);
 		}
 	};
 	@XmlElement(name = "TknRqstr")
@@ -144,7 +155,7 @@ public class CardPaymentToken1 {
 	 * definition} = "Identifier of a token provider requestor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTokenRequestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentToken1, Optional<PaymentTokenIdentifiers1>> mmTokenRequestor = new MMMessageAssociationEnd<CardPaymentToken1, Optional<PaymentTokenIdentifiers1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken1.mmObject();
 			isDerived = false;
@@ -155,7 +166,17 @@ public class CardPaymentToken1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmObject();
+			type_lazy = () -> PaymentTokenIdentifiers1.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTokenIdentifiers1> getValue(CardPaymentToken1 obj) {
+			return obj.getTokenRequestor();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken1 obj, Optional<PaymentTokenIdentifiers1> value) {
+			obj.setTokenRequestor(value.orElse(null));
 		}
 	};
 
@@ -186,7 +207,7 @@ public class CardPaymentToken1 {
 		return tokenRequestor == null ? Optional.empty() : Optional.of(tokenRequestor);
 	}
 
-	public CardPaymentToken1 setTokenRequestor(com.tools20022.repository.msg.PaymentTokenIdentifiers1 tokenRequestor) {
+	public CardPaymentToken1 setTokenRequestor(PaymentTokenIdentifiers1 tokenRequestor) {
 		this.tokenRequestor = tokenRequestor;
 		return this;
 	}

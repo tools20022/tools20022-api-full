@@ -19,12 +19,13 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMQuantity;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.datatype.LongDecimalNumber.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
 import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicReference;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * Number of objects represented as a decimal number, eg, 0.75 or 45.6.
@@ -47,10 +48,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "Number of objects represented as a decimal number, eg, 0.75 or 45.6."</li>
  * </ul>
  */
-@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class LongDecimalNumber {
 
 	final static private AtomicReference<MMQuantity> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
 	protected BigDecimal value;
 
 	final static public MMQuantity mmObject() {
@@ -67,23 +70,23 @@ public class LongDecimalNumber {
 		return mmObject_lazy.get();
 	}
 
+	public LongDecimalNumber() {
+	}
+
 	public LongDecimalNumber(BigDecimal value) {
 		this.value = value;
 	}
 
-	public BigDecimal toBigDecimal() {
+	public BigDecimal getValue() {
 		return value;
 	}
 
-	protected static class InternalXmlAdapter extends XmlAdapter<BigDecimal, LongDecimalNumber> {
-		@Override
-		public LongDecimalNumber unmarshal(BigDecimal value) {
-			return new LongDecimalNumber(value);
-		}
+	public void setValue(BigDecimal value) {
+		this.value = value;
+	}
 
-		@Override
-		public BigDecimal marshal(LongDecimalNumber typedData) {
-			return typedData.value;
-		}
+	@Override
+	public String toString() {
+		return value == null ? null : value.toString();
 	}
 }

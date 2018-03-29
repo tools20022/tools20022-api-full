@@ -118,7 +118,7 @@ public class Liquidity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Liquidity1, Optional<ActiveCurrencyAndAmount>> mmValue = new MMMessageAttribute<Liquidity1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Liquidity1.mmObject();
@@ -131,6 +131,16 @@ public class Liquidity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Liquidity1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(Liquidity1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfScties")
@@ -166,7 +176,7 @@ public class Liquidity1 {
 	 * "Number of securities for which liquidity range details are provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Liquidity1, Optional<DecimalNumber>> mmNumberOfSecurities = new MMMessageAttribute<Liquidity1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Liquidity1.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class Liquidity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Liquidity1 obj) {
+			return obj.getNumberOfSecurities();
+		}
+
+		@Override
+		public void setValue(Liquidity1 obj, Optional<DecimalNumber> value) {
+			obj.setNumberOfSecurities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Upper")
@@ -219,7 +239,7 @@ public class Liquidity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpper = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Liquidity1, Optional<PercentageRate>> mmUpper = new MMMessageAttribute<Liquidity1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmUpper;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Liquidity1.mmObject();
@@ -232,6 +252,16 @@ public class Liquidity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Liquidity1 obj) {
+			return obj.getUpper();
+		}
+
+		@Override
+		public void setValue(Liquidity1 obj, Optional<PercentageRate> value) {
+			obj.setUpper(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lwr")
@@ -273,7 +303,7 @@ public class Liquidity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLower = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Liquidity1, Optional<PercentageRate>> mmLower = new MMMessageAttribute<Liquidity1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmLower;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Liquidity1.mmObject();
@@ -286,6 +316,16 @@ public class Liquidity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Liquidity1 obj) {
+			return obj.getLower();
+		}
+
+		@Override
+		public void setValue(Liquidity1 obj, Optional<PercentageRate> value) {
+			obj.setLower(value.orElse(null));
 		}
 	};
 

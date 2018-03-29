@@ -53,12 +53,16 @@ public class ConstraintExchangeRatePresenceRule {
 	 */
 	public static final MMConstraint<CurrencyExchange11> forCurrencyExchange11 = new MMConstraint<CurrencyExchange11>() {
 		{
-			validator = ConstraintExchangeRatePresenceRule::checkCurrencyExchange11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRatePresenceRule";
 			definition = "ExchangeRate must be present or ForwardExchangeRate must be present.";
 			owner_lazy = () -> CurrencyExchange11.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ForwardExchangeRate</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CurrencyExchange11 obj) throws Exception {
+			checkCurrencyExchange11(obj);
 		}
 	};
 

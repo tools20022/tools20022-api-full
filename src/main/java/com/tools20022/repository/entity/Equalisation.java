@@ -22,9 +22,9 @@ import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -232,7 +232,7 @@ public class Equalisation {
 	 * "Amount of money resulting from the calculation of the equalisation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Equalisation, CurrencyAndAmount> mmAmount = new MMBusinessAttribute<Equalisation, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts23.mmEqualisationAmount, RateDetails11.mmEqualisationRate, CorporateActionAmounts24.mmEqualisationAmount, RateDetails12.mmEqualisationRate,
 					CorporateActionAmounts22.mmEqualisationAmount, CorporateActionAmounts25.mmEqualisationAmount, CorporateActionAmounts21.mmEqualisationAmount, CorporateActionAmounts26.mmEqualisationAmount, Equalisation1.mmAmount,
@@ -252,12 +252,14 @@ public class Equalisation {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Equalisation.class.getMethod("getAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Equalisation obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Equalisation obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	protected ISODateTime date;
@@ -331,7 +333,7 @@ public class Equalisation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Equalisation, ISODateTime> mmDate = new MMBusinessAttribute<Equalisation, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmEqualisationDate, CorporateActionDate13.mmEqualisationDate, CorporateActionDate14.mmEqualisationDate, CorporateActionDate21.mmEqualisationDate,
 					CorporateActionDate22.mmEqualisationDate, CorporateActionDate25.mmEqualisationDate, CorporateActionDate27.mmEqualisationDate, CorporateActionDate28.mmEqualisationDate, CorporateActionDate2.mmEqualisationDate,
@@ -346,12 +348,14 @@ public class Equalisation {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Equalisation.class.getMethod("getDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Equalisation obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(Equalisation obj, ISODateTime value) {
+			obj.setDate(value);
 		}
 	};
 	protected PercentageRate rate;
@@ -419,7 +423,7 @@ public class Equalisation {
 	 * definition} = "Rate used for calculation of the equalisation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Equalisation, PercentageRate> mmRate = new MMBusinessAttribute<Equalisation, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RateDetails10.mmEqualisationRate, RateDetails13.mmEqualisationRate, Equalisation1.mmRate, Equalisation2.mmRate, RateDetails14.mmEqualisationRate, RateDetails18.mmEqualisationRate,
 					RateDetails22.mmEqualisationRate, RateDetails25.mmEqualisationRate, RateDetails26.mmEqualisationRate, RateDetails28.mmEqualisationRate, RateDetails31.mmEqualisationRate, RateDetails34.mmEqualisationRate);
@@ -433,12 +437,14 @@ public class Equalisation {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Equalisation.class.getMethod("getRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Equalisation obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Equalisation obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	protected InvestmentFundClass relatedInvestmentFundTransaction;
@@ -475,7 +481,7 @@ public class Equalisation {
 	 * "Investment fund transaction for which equalisation is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedInvestmentFundTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Equalisation, Optional<InvestmentFundClass>> mmRelatedInvestmentFundTransaction = new MMBusinessAssociationEnd<Equalisation, Optional<InvestmentFundClass>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Equalisation.mmObject();
@@ -484,9 +490,19 @@ public class Equalisation {
 			definition = "Investment fund transaction for which equalisation is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmEqualisation;
+			opposite_lazy = () -> InvestmentFundClass.mmEqualisation;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
+			type_lazy = () -> InvestmentFundClass.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentFundClass> getValue(Equalisation obj) {
+			return obj.getRelatedInvestmentFundTransaction();
+		}
+
+		@Override
+		public void setValue(Equalisation obj, Optional<InvestmentFundClass> value) {
+			obj.setRelatedInvestmentFundTransaction(value.orElse(null));
 		}
 	};
 	protected DebitCreditCode creditDebitIndicator;
@@ -516,7 +532,7 @@ public class Equalisation {
 	 * "Debit for a negative amount or credit for a positive amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Equalisation, DebitCreditCode> mmCreditDebitIndicator = new MMBusinessAttribute<Equalisation, DebitCreditCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Equalisation.mmObject();
@@ -528,12 +544,14 @@ public class Equalisation {
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Equalisation.class.getMethod("getCreditDebitIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DebitCreditCode getValue(Equalisation obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(Equalisation obj, DebitCreditCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 
@@ -544,7 +562,7 @@ public class Equalisation {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Equalisation";
 				definition = "Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmEqualisation);
+				associationDomain_lazy = () -> Arrays.asList(InvestmentFundClass.mmEqualisation);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Equalisation.mmAmount, com.tools20022.repository.entity.Equalisation.mmDate, com.tools20022.repository.entity.Equalisation.mmRate,
 						com.tools20022.repository.entity.Equalisation.mmRelatedInvestmentFundTransaction, com.tools20022.repository.entity.Equalisation.mmCreditDebitIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(Equalisation1.mmObject(), Equalisation2.mmObject());
@@ -589,7 +607,7 @@ public class Equalisation {
 		return relatedInvestmentFundTransaction == null ? Optional.empty() : Optional.of(relatedInvestmentFundTransaction);
 	}
 
-	public Equalisation setRelatedInvestmentFundTransaction(com.tools20022.repository.entity.InvestmentFundClass relatedInvestmentFundTransaction) {
+	public Equalisation setRelatedInvestmentFundTransaction(InvestmentFundClass relatedInvestmentFundTransaction) {
 		this.relatedInvestmentFundTransaction = relatedInvestmentFundTransaction;
 		return this;
 	}

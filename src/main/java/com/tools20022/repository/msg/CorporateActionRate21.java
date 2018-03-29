@@ -123,7 +123,7 @@ public class CorporateActionRate21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalQuantityForSubscribedResultantSecurities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate21, Optional<RatioFormat3Choice>> mmAdditionalQuantityForSubscribedResultantSecurities = new MMMessageAssociationEnd<CorporateActionRate21, Optional<RatioFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate21.mmObject();
@@ -137,6 +137,16 @@ public class CorporateActionRate21 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RatioFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat3Choice> getValue(CorporateActionRate21 obj) {
+			return obj.getAdditionalQuantityForSubscribedResultantSecurities();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate21 obj, Optional<RatioFormat3Choice> value) {
+			obj.setAdditionalQuantityForSubscribedResultantSecurities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlQtyForExstgScties")
@@ -177,7 +187,7 @@ public class CorporateActionRate21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalQuantityForExistingSecurities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate21, Optional<RatioFormat3Choice>> mmAdditionalQuantityForExistingSecurities = new MMMessageAssociationEnd<CorporateActionRate21, Optional<RatioFormat3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate21.mmObject();
@@ -191,6 +201,16 @@ public class CorporateActionRate21 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RatioFormat3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat3Choice> getValue(CorporateActionRate21 obj) {
+			return obj.getAdditionalQuantityForExistingSecurities();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate21 obj, Optional<RatioFormat3Choice> value) {
+			obj.setAdditionalQuantityForExistingSecurities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewToOd")
@@ -231,7 +251,7 @@ public class CorporateActionRate21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewToOld = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRate21, Optional<RatioFormat4Choice>> mmNewToOld = new MMMessageAssociationEnd<CorporateActionRate21, Optional<RatioFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmNewToOld;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate21.mmObject();
@@ -245,6 +265,16 @@ public class CorporateActionRate21 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RatioFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat4Choice> getValue(CorporateActionRate21 obj) {
+			return obj.getNewToOld();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate21 obj, Optional<RatioFormat4Choice> value) {
+			obj.setNewToOld(value.orElse(null));
 		}
 	};
 

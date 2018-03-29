@@ -63,12 +63,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails25> forSecuritiesTradeDetails25 = new MMConstraint<SecuritiesTradeDetails25>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails32);
 			owner_lazy = () -> SecuritiesTradeDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails25 obj) throws Exception {
+			checkSecuritiesTradeDetails25(obj);
 		}
 	};
 	/**
@@ -102,12 +106,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails26> forSecuritiesTradeDetails26 = new MMConstraint<SecuritiesTradeDetails26>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails34);
 			owner_lazy = () -> SecuritiesTradeDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails26 obj) throws Exception {
+			checkSecuritiesTradeDetails26(obj);
 		}
 	};
 	/**
@@ -133,11 +141,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails27> forSecuritiesTradeDetails27 = new MMConstraint<SecuritiesTradeDetails27>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails27 obj) throws Exception {
+			checkSecuritiesTradeDetails27(obj);
 		}
 	};
 	/**
@@ -163,11 +175,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails28> forSecuritiesTradeDetails28 = new MMConstraint<SecuritiesTradeDetails28>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails28 obj) throws Exception {
+			checkSecuritiesTradeDetails28(obj);
 		}
 	};
 	/**
@@ -201,12 +217,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails1> forSecuritiesTradeDetails1 = new MMConstraint<SecuritiesTradeDetails1>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails33);
 			owner_lazy = () -> SecuritiesTradeDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails1 obj) throws Exception {
+			checkSecuritiesTradeDetails1(obj);
 		}
 	};
 	/**
@@ -232,11 +252,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails15> forSecuritiesTradeDetails15 = new MMConstraint<SecuritiesTradeDetails15>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails15 obj) throws Exception {
+			checkSecuritiesTradeDetails15(obj);
 		}
 	};
 	/**
@@ -262,11 +286,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails7> forTransactionDetails7 = new MMConstraint<TransactionDetails7>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails7 obj) throws Exception {
+			checkTransactionDetails7(obj);
 		}
 	};
 	/**
@@ -292,11 +320,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails8> forTransactionDetails8 = new MMConstraint<TransactionDetails8>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails8 obj) throws Exception {
+			checkTransactionDetails8(obj);
 		}
 	};
 	/**
@@ -322,11 +354,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails16> forTransactionDetails16 = new MMConstraint<TransactionDetails16>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails16 obj) throws Exception {
+			checkTransactionDetails16(obj);
 		}
 	};
 	/**
@@ -352,11 +388,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails17> forTransactionDetails17 = new MMConstraint<TransactionDetails17>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails17 obj) throws Exception {
+			checkTransactionDetails17(obj);
 		}
 	};
 	/**
@@ -382,11 +422,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails26> forTransactionDetails26 = new MMConstraint<TransactionDetails26>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails26 obj) throws Exception {
+			checkTransactionDetails26(obj);
 		}
 	};
 	/**
@@ -412,11 +456,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails25> forTransactionDetails25 = new MMConstraint<TransactionDetails25>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails25 obj) throws Exception {
+			checkTransactionDetails25(obj);
 		}
 	};
 	/**
@@ -442,11 +490,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails27> forTransactionDetails27 = new MMConstraint<TransactionDetails27>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails27 obj) throws Exception {
+			checkTransactionDetails27(obj);
 		}
 	};
 	/**
@@ -472,11 +524,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails33> forTransactionDetails33 = new MMConstraint<TransactionDetails33>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails33 obj) throws Exception {
+			checkTransactionDetails33(obj);
 		}
 	};
 	/**
@@ -502,11 +558,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails39> forTransactionDetails39 = new MMConstraint<TransactionDetails39>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails39 obj) throws Exception {
+			checkTransactionDetails39(obj);
 		}
 	};
 	/**
@@ -532,11 +592,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails50> forTransactionDetails50 = new MMConstraint<TransactionDetails50>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails50 obj) throws Exception {
+			checkTransactionDetails50(obj);
 		}
 	};
 	/**
@@ -570,12 +634,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails56> forTransactionDetails56 = new MMConstraint<TransactionDetails56>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails62);
 			owner_lazy = () -> TransactionDetails56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails56 obj) throws Exception {
+			checkTransactionDetails56(obj);
 		}
 	};
 	/**
@@ -601,11 +669,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails59> forTransactionDetails59 = new MMConstraint<TransactionDetails59>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails59.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails59 obj) throws Exception {
+			checkTransactionDetails59(obj);
 		}
 	};
 	/**
@@ -631,11 +703,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails8> forSecuritiesTradeDetails8 = new MMConstraint<SecuritiesTradeDetails8>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails8 obj) throws Exception {
+			checkSecuritiesTradeDetails8(obj);
 		}
 	};
 	/**
@@ -669,12 +745,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails18> forSecuritiesTradeDetails18 = new MMConstraint<SecuritiesTradeDetails18>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails36);
 			owner_lazy = () -> SecuritiesTradeDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails18 obj) throws Exception {
+			checkSecuritiesTradeDetails18(obj);
 		}
 	};
 	/**
@@ -700,11 +780,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails4> forSecuritiesTradeDetails4 = new MMConstraint<SecuritiesTradeDetails4>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails4 obj) throws Exception {
+			checkSecuritiesTradeDetails4(obj);
 		}
 	};
 	/**
@@ -730,11 +814,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails17> forSecuritiesTradeDetails17 = new MMConstraint<SecuritiesTradeDetails17>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails17 obj) throws Exception {
+			checkSecuritiesTradeDetails17(obj);
 		}
 	};
 	/**
@@ -760,11 +848,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails9> forSecuritiesTradeDetails9 = new MMConstraint<SecuritiesTradeDetails9>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails9 obj) throws Exception {
+			checkSecuritiesTradeDetails9(obj);
 		}
 	};
 	/**
@@ -790,11 +882,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails21> forSecuritiesTradeDetails21 = new MMConstraint<SecuritiesTradeDetails21>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails21 obj) throws Exception {
+			checkSecuritiesTradeDetails21(obj);
 		}
 	};
 	/**
@@ -820,11 +916,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails10> forSecuritiesTradeDetails10 = new MMConstraint<SecuritiesTradeDetails10>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails10 obj) throws Exception {
+			checkSecuritiesTradeDetails10(obj);
 		}
 	};
 	/**
@@ -850,11 +950,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails22> forSecuritiesTradeDetails22 = new MMConstraint<SecuritiesTradeDetails22>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails22 obj) throws Exception {
+			checkSecuritiesTradeDetails22(obj);
 		}
 	};
 	/**
@@ -888,12 +992,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails23> forSecuritiesTradeDetails23 = new MMConstraint<SecuritiesTradeDetails23>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails35);
 			owner_lazy = () -> SecuritiesTradeDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails23 obj) throws Exception {
+			checkSecuritiesTradeDetails23(obj);
 		}
 	};
 	/**
@@ -919,11 +1027,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails29> forSecuritiesTradeDetails29 = new MMConstraint<SecuritiesTradeDetails29>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails29 obj) throws Exception {
+			checkSecuritiesTradeDetails29(obj);
 		}
 	};
 	/**
@@ -962,13 +1074,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails62> forTransactionDetails62 = new MMConstraint<TransactionDetails62>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails69);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails56;
 			owner_lazy = () -> TransactionDetails62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails62 obj) throws Exception {
+			checkTransactionDetails62(obj);
 		}
 	};
 	/**
@@ -1007,13 +1123,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails33> forSecuritiesTradeDetails33 = new MMConstraint<SecuritiesTradeDetails33>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails51);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails1;
 			owner_lazy = () -> SecuritiesTradeDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails33 obj) throws Exception {
+			checkSecuritiesTradeDetails33(obj);
 		}
 	};
 	/**
@@ -1052,13 +1172,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails35> forSecuritiesTradeDetails35 = new MMConstraint<SecuritiesTradeDetails35>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails49);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails23;
 			owner_lazy = () -> SecuritiesTradeDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails35 obj) throws Exception {
+			checkSecuritiesTradeDetails35(obj);
 		}
 	};
 	/**
@@ -1097,13 +1221,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails36> forSecuritiesTradeDetails36 = new MMConstraint<SecuritiesTradeDetails36>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails54);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails18;
 			owner_lazy = () -> SecuritiesTradeDetails36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails36 obj) throws Exception {
+			checkSecuritiesTradeDetails36(obj);
 		}
 	};
 	/**
@@ -1142,13 +1270,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails34> forSecuritiesTradeDetails34 = new MMConstraint<SecuritiesTradeDetails34>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails52);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails26;
 			owner_lazy = () -> SecuritiesTradeDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails34 obj) throws Exception {
+			checkSecuritiesTradeDetails34(obj);
 		}
 	};
 	/**
@@ -1187,13 +1319,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails32> forSecuritiesTradeDetails32 = new MMConstraint<SecuritiesTradeDetails32>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails50);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails25;
 			owner_lazy = () -> SecuritiesTradeDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails32 obj) throws Exception {
+			checkSecuritiesTradeDetails32(obj);
 		}
 	};
 	/**
@@ -1219,11 +1355,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails44> forSecuritiesTradeDetails44 = new MMConstraint<SecuritiesTradeDetails44>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails44 obj) throws Exception {
+			checkSecuritiesTradeDetails44(obj);
 		}
 	};
 	/**
@@ -1249,11 +1389,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails41> forSecuritiesTradeDetails41 = new MMConstraint<SecuritiesTradeDetails41>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails41 obj) throws Exception {
+			checkSecuritiesTradeDetails41(obj);
 		}
 	};
 	/**
@@ -1279,11 +1423,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails42> forSecuritiesTradeDetails42 = new MMConstraint<SecuritiesTradeDetails42>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails42 obj) throws Exception {
+			checkSecuritiesTradeDetails42(obj);
 		}
 	};
 	/**
@@ -1309,11 +1457,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails67> forTransactionDetails67 = new MMConstraint<TransactionDetails67>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails67 obj) throws Exception {
+			checkTransactionDetails67(obj);
 		}
 	};
 	/**
@@ -1339,11 +1491,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails46> forSecuritiesTradeDetails46 = new MMConstraint<SecuritiesTradeDetails46>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails46 obj) throws Exception {
+			checkSecuritiesTradeDetails46(obj);
 		}
 	};
 	/**
@@ -1369,11 +1525,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails47> forSecuritiesTradeDetails47 = new MMConstraint<SecuritiesTradeDetails47>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails47 obj) throws Exception {
+			checkSecuritiesTradeDetails47(obj);
 		}
 	};
 	/**
@@ -1412,13 +1572,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails69> forTransactionDetails69 = new MMConstraint<TransactionDetails69>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails75);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails62;
 			owner_lazy = () -> TransactionDetails69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails69 obj) throws Exception {
+			checkTransactionDetails69(obj);
 		}
 	};
 	/**
@@ -1444,11 +1608,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails72> forTransactionDetails72 = new MMConstraint<TransactionDetails72>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails72.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails72 obj) throws Exception {
+			checkTransactionDetails72(obj);
 		}
 	};
 	/**
@@ -1487,13 +1655,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails49> forSecuritiesTradeDetails49 = new MMConstraint<SecuritiesTradeDetails49>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails35;
 			owner_lazy = () -> SecuritiesTradeDetails49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails49 obj) throws Exception {
+			checkSecuritiesTradeDetails49(obj);
 		}
 	};
 	/**
@@ -1532,13 +1704,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails75> forTransactionDetails75 = new MMConstraint<TransactionDetails75>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails96);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails69;
 			owner_lazy = () -> TransactionDetails75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails75 obj) throws Exception {
+			checkTransactionDetails75(obj);
 		}
 	};
 	/**
@@ -1580,7 +1756,6 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails51> forSecuritiesTradeDetails51 = new MMConstraint<SecuritiesTradeDetails51>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
@@ -1588,6 +1763,11 @@ public class ConstraintLateDeliveryDateRule {
 					com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails73);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails33;
 			owner_lazy = () -> SecuritiesTradeDetails51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails51 obj) throws Exception {
+			checkSecuritiesTradeDetails51(obj);
 		}
 	};
 	/**
@@ -1626,13 +1806,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails54> forSecuritiesTradeDetails54 = new MMConstraint<SecuritiesTradeDetails54>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails80);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails36;
 			owner_lazy = () -> SecuritiesTradeDetails54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails54 obj) throws Exception {
+			checkSecuritiesTradeDetails54(obj);
 		}
 	};
 	/**
@@ -1671,13 +1855,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails52> forSecuritiesTradeDetails52 = new MMConstraint<SecuritiesTradeDetails52>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails79);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails34;
 			owner_lazy = () -> SecuritiesTradeDetails52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails52 obj) throws Exception {
+			checkSecuritiesTradeDetails52(obj);
 		}
 	};
 	/**
@@ -1716,13 +1904,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails50> forSecuritiesTradeDetails50 = new MMConstraint<SecuritiesTradeDetails50>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails78);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails32;
 			owner_lazy = () -> SecuritiesTradeDetails50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails50 obj) throws Exception {
+			checkSecuritiesTradeDetails50(obj);
 		}
 	};
 	/**
@@ -1748,11 +1940,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails61> forSecuritiesTradeDetails61 = new MMConstraint<SecuritiesTradeDetails61>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails61 obj) throws Exception {
+			checkSecuritiesTradeDetails61(obj);
 		}
 	};
 	/**
@@ -1778,11 +1974,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails63> forSecuritiesTradeDetails63 = new MMConstraint<SecuritiesTradeDetails63>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails63 obj) throws Exception {
+			checkSecuritiesTradeDetails63(obj);
 		}
 	};
 	/**
@@ -1808,11 +2008,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails60> forSecuritiesTradeDetails60 = new MMConstraint<SecuritiesTradeDetails60>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails60 obj) throws Exception {
+			checkSecuritiesTradeDetails60(obj);
 		}
 	};
 	/**
@@ -1838,11 +2042,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails90> forTransactionDetails90 = new MMConstraint<TransactionDetails90>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails90;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails90.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails90 obj) throws Exception {
+			checkTransactionDetails90(obj);
 		}
 	};
 	/**
@@ -1868,11 +2076,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails65> forSecuritiesTradeDetails65 = new MMConstraint<SecuritiesTradeDetails65>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails65 obj) throws Exception {
+			checkSecuritiesTradeDetails65(obj);
 		}
 	};
 	/**
@@ -1898,11 +2110,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails66> forSecuritiesTradeDetails66 = new MMConstraint<SecuritiesTradeDetails66>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails66 obj) throws Exception {
+			checkSecuritiesTradeDetails66(obj);
 		}
 	};
 	/**
@@ -1941,13 +2157,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails67> forSecuritiesTradeDetails67 = new MMConstraint<SecuritiesTradeDetails67>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is present, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails75);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails51;
 			owner_lazy = () -> SecuritiesTradeDetails67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails67 obj) throws Exception {
+			checkSecuritiesTradeDetails67(obj);
 		}
 	};
 	/**
@@ -1986,13 +2206,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails68> forSecuritiesTradeDetails68 = new MMConstraint<SecuritiesTradeDetails68>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is present then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails71);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails49;
 			owner_lazy = () -> SecuritiesTradeDetails68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails68 obj) throws Exception {
+			checkSecuritiesTradeDetails68(obj);
 		}
 	};
 	/**
@@ -2031,13 +2255,17 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails96> forTransactionDetails96 = new MMConstraint<TransactionDetails96>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails96;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is present then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails104);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails75;
 			owner_lazy = () -> TransactionDetails96.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails96 obj) throws Exception {
+			checkTransactionDetails96(obj);
 		}
 	};
 	/**
@@ -2063,11 +2291,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails69> forSecuritiesTradeDetails69 = new MMConstraint<SecuritiesTradeDetails69>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails69 obj) throws Exception {
+			checkSecuritiesTradeDetails69(obj);
 		}
 	};
 	/**
@@ -2093,11 +2325,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails70> forSecuritiesTradeDetails70 = new MMConstraint<SecuritiesTradeDetails70>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails70 obj) throws Exception {
+			checkSecuritiesTradeDetails70(obj);
 		}
 	};
 	/**
@@ -2123,11 +2359,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails99> forTransactionDetails99 = new MMConstraint<TransactionDetails99>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails99;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails99.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails99 obj) throws Exception {
+			checkTransactionDetails99(obj);
 		}
 	};
 	/**
@@ -2158,12 +2398,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails71> forSecuritiesTradeDetails71 = new MMConstraint<SecuritiesTradeDetails71>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is present then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails68;
 			owner_lazy = () -> SecuritiesTradeDetails71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails71 obj) throws Exception {
+			checkSecuritiesTradeDetails71(obj);
 		}
 	};
 	/**
@@ -2194,12 +2438,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails104> forTransactionDetails104 = new MMConstraint<TransactionDetails104>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails104;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is present then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forTransactionDetails96;
 			owner_lazy = () -> TransactionDetails104.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails104 obj) throws Exception {
+			checkTransactionDetails104(obj);
 		}
 	};
 	/**
@@ -2230,12 +2478,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails73> forSecuritiesTradeDetails73 = new MMConstraint<SecuritiesTradeDetails73>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails73;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails51;
 			owner_lazy = () -> SecuritiesTradeDetails73.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails73 obj) throws Exception {
+			checkSecuritiesTradeDetails73(obj);
 		}
 	};
 	/**
@@ -2266,12 +2518,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails75> forSecuritiesTradeDetails75 = new MMConstraint<SecuritiesTradeDetails75>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is present, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails67;
 			owner_lazy = () -> SecuritiesTradeDetails75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails75 obj) throws Exception {
+			checkSecuritiesTradeDetails75(obj);
 		}
 	};
 	/**
@@ -2302,12 +2558,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails78> forSecuritiesTradeDetails78 = new MMConstraint<SecuritiesTradeDetails78>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails50;
 			owner_lazy = () -> SecuritiesTradeDetails78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails78 obj) throws Exception {
+			checkSecuritiesTradeDetails78(obj);
 		}
 	};
 	/**
@@ -2338,12 +2598,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails79> forSecuritiesTradeDetails79 = new MMConstraint<SecuritiesTradeDetails79>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails52;
 			owner_lazy = () -> SecuritiesTradeDetails79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails79 obj) throws Exception {
+			checkSecuritiesTradeDetails79(obj);
 		}
 	};
 	/**
@@ -2374,12 +2638,16 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails80> forSecuritiesTradeDetails80 = new MMConstraint<SecuritiesTradeDetails80>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails80;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLateDeliveryDateRule.forSecuritiesTradeDetails54;
 			owner_lazy = () -> SecuritiesTradeDetails80.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails80 obj) throws Exception {
+			checkSecuritiesTradeDetails80(obj);
 		}
 	};
 	/**
@@ -2405,11 +2673,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails84> forSecuritiesTradeDetails84 = new MMConstraint<SecuritiesTradeDetails84>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails84;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails84.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails84 obj) throws Exception {
+			checkSecuritiesTradeDetails84(obj);
 		}
 	};
 	/**
@@ -2435,11 +2707,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails85> forSecuritiesTradeDetails85 = new MMConstraint<SecuritiesTradeDetails85>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails85;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails85 obj) throws Exception {
+			checkSecuritiesTradeDetails85(obj);
 		}
 	};
 	/**
@@ -2465,11 +2741,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails87> forSecuritiesTradeDetails87 = new MMConstraint<SecuritiesTradeDetails87>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails87;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails87.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails87 obj) throws Exception {
+			checkSecuritiesTradeDetails87(obj);
 		}
 	};
 	/**
@@ -2495,11 +2775,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails88> forSecuritiesTradeDetails88 = new MMConstraint<SecuritiesTradeDetails88>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails88 obj) throws Exception {
+			checkSecuritiesTradeDetails88(obj);
 		}
 	};
 	/**
@@ -2525,11 +2809,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails89> forSecuritiesTradeDetails89 = new MMConstraint<SecuritiesTradeDetails89>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails89;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails89.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails89 obj) throws Exception {
+			checkSecuritiesTradeDetails89(obj);
 		}
 	};
 	/**
@@ -2555,11 +2843,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails90> forSecuritiesTradeDetails90 = new MMConstraint<SecuritiesTradeDetails90>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkSecuritiesTradeDetails90;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> SecuritiesTradeDetails90.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails90 obj) throws Exception {
+			checkSecuritiesTradeDetails90(obj);
 		}
 	};
 	/**
@@ -2585,11 +2877,15 @@ public class ConstraintLateDeliveryDateRule {
 	 */
 	public static final MMConstraint<TransactionDetails111> forTransactionDetails111 = new MMConstraint<TransactionDetails111>() {
 		{
-			validator = ConstraintLateDeliveryDateRule::checkTransactionDetails111;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateDeliveryDateRule";
 			definition = "If LateDeliveryDate is used, then the transaction must be a pool trades that result from the original TBA (To Be Announced). The original TBA would be offset by an opposite transaction and replaced by buys or sells of individual pools. It is a date greater than the settlement date stated in the trade, for pools designed as settling late.";
 			owner_lazy = () -> TransactionDetails111.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails111 obj) throws Exception {
+			checkTransactionDetails111(obj);
 		}
 	};
 

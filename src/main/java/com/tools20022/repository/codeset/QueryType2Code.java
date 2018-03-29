@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifyies the nature of the query, i.e. whether the query requests that all
+ * Specifies the nature of the query, i.e. whether the query requests that all
  * matching items be returned or only new matching items since the last similar
  * query be returned.
  * <p>
@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "QueryType2Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifyies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned."
+ * "Specifies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned."
  * </li>
  * </ul>
  */
@@ -185,7 +185,7 @@ public class QueryType2Code extends MMCode {
 				example = Arrays.asList("ALLL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryType2Code";
-				definition = "Specifyies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned.";
+				definition = "Specifies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned.";
 				trace_lazy = () -> QueryTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType2Code.All, com.tools20022.repository.codeset.QueryType2Code.Changed, com.tools20022.repository.codeset.QueryType2Code.Modified,
 						com.tools20022.repository.codeset.QueryType2Code.Deleted);

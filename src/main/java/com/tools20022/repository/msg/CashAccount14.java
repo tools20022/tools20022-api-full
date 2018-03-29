@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount15;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +118,7 @@ public class CashAccount14 {
 	 * definition} = "Medium of exchange of value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount14, CurrencyCode> mmCurrency = new MMMessageAttribute<CashAccount14, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount14.mmObject();
@@ -129,6 +130,16 @@ public class CashAccount14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CashAccount14 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccount14 obj, CurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "Svcr", required = true)
@@ -167,7 +178,7 @@ public class CashAccount14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount14, BICIdentifier> mmServicer = new MMMessageAttribute<CashAccount14, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount14.mmObject();
@@ -179,6 +190,16 @@ public class CashAccount14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(CashAccount14 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount14 obj, BICIdentifier value) {
+			obj.setServicer(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -217,7 +238,7 @@ public class CashAccount14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount14, AccountIdentification1Choice> mmIdentification = new MMMessageAttribute<CashAccount14, AccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount14.mmObject();
@@ -229,6 +250,16 @@ public class CashAccount14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1Choice getValue(CashAccount14 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount14 obj, AccountIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ScndryAcct")
@@ -265,7 +296,7 @@ public class CashAccount14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecondaryAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount14, Optional<CashAccount15>> mmSecondaryAccount = new MMMessageAssociationEnd<CashAccount14, Optional<CashAccount15>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount14.mmObject();
@@ -277,7 +308,17 @@ public class CashAccount14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount15.mmObject();
+			type_lazy = () -> CashAccount15.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount15> getValue(CashAccount14 obj) {
+			return obj.getSecondaryAccount();
+		}
+
+		@Override
+		public void setValue(CashAccount14 obj, Optional<CashAccount15> value) {
+			obj.setSecondaryAccount(value.orElse(null));
 		}
 	};
 
@@ -334,7 +375,7 @@ public class CashAccount14 {
 		return secondaryAccount == null ? Optional.empty() : Optional.of(secondaryAccount);
 	}
 
-	public CashAccount14 setSecondaryAccount(com.tools20022.repository.msg.CashAccount15 secondaryAccount) {
+	public CashAccount14 setSecondaryAccount(CashAccount15 secondaryAccount) {
 		this.secondaryAccount = secondaryAccount;
 		return this;
 	}

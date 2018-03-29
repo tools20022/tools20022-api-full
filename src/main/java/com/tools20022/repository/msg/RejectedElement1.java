@@ -100,7 +100,7 @@ public class RejectedElement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElementSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedElement1, Number> mmElementSequenceNumber = new MMMessageAttribute<RejectedElement1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedElement1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class RejectedElement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(RejectedElement1 obj) {
+			return obj.getElementSequenceNumber();
+		}
+
+		@Override
+		public void setValue(RejectedElement1 obj, Number value) {
+			obj.setElementSequenceNumber(value);
 		}
 	};
 	@XmlElement(name = "IndvRjctnRsn", required = true)
@@ -142,7 +152,7 @@ public class RejectedElement1 {
 	 * definition} = "Reason for rejecting an individual element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndividualRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedElement1, Max140Text> mmIndividualRejectionReason = new MMMessageAttribute<RejectedElement1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedElement1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class RejectedElement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(RejectedElement1 obj) {
+			return obj.getIndividualRejectionReason();
+		}
+
+		@Override
+		public void setValue(RejectedElement1 obj, Max140Text value) {
+			obj.setIndividualRejectionReason(value);
 		}
 	};
 

@@ -28,6 +28,8 @@ import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionRevers
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount48;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount50;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -150,7 +152,7 @@ public class CashParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties9, Optional<PartyIdentificationAndAccount48>> mmDebtor = new MMMessageAssociationEnd<CashParties9, Optional<PartyIdentificationAndAccount48>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties9.mmObject();
@@ -164,7 +166,17 @@ public class CashParties9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount48.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount48.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount48> getValue(CashParties9 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(CashParties9 obj, Optional<PartyIdentificationAndAccount48> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt")
@@ -213,7 +225,7 @@ public class CashParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties9, Optional<PartyIdentificationAndAccount50>> mmDebtorAgent = new MMMessageAssociationEnd<CashParties9, Optional<PartyIdentificationAndAccount50>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties9.mmObject();
@@ -227,7 +239,17 @@ public class CashParties9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount50.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount50> getValue(CashParties9 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties9 obj, Optional<PartyIdentificationAndAccount50> value) {
+			obj.setDebtorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr")
@@ -274,7 +296,7 @@ public class CashParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties9, Optional<PartyIdentificationAndAccount48>> mmCreditor = new MMMessageAssociationEnd<CashParties9, Optional<PartyIdentificationAndAccount48>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties9.mmObject();
@@ -288,7 +310,17 @@ public class CashParties9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount48.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount48.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount48> getValue(CashParties9 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(CashParties9 obj, Optional<PartyIdentificationAndAccount48> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -337,7 +369,7 @@ public class CashParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties9, Optional<PartyIdentificationAndAccount50>> mmCreditorAgent = new MMMessageAssociationEnd<CashParties9, Optional<PartyIdentificationAndAccount50>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties9.mmObject();
@@ -351,7 +383,17 @@ public class CashParties9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount50.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount50.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount50> getValue(CashParties9 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties9 obj, Optional<PartyIdentificationAndAccount50> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 
@@ -384,7 +426,7 @@ public class CashParties9 {
 		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public CashParties9 setDebtor(com.tools20022.repository.msg.PartyIdentificationAndAccount48 debtor) {
+	public CashParties9 setDebtor(PartyIdentificationAndAccount48 debtor) {
 		this.debtor = debtor;
 		return this;
 	}
@@ -393,7 +435,7 @@ public class CashParties9 {
 		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public CashParties9 setDebtorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount50 debtorAgent) {
+	public CashParties9 setDebtorAgent(PartyIdentificationAndAccount50 debtorAgent) {
 		this.debtorAgent = debtorAgent;
 		return this;
 	}
@@ -402,7 +444,7 @@ public class CashParties9 {
 		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public CashParties9 setCreditor(com.tools20022.repository.msg.PartyIdentificationAndAccount48 creditor) {
+	public CashParties9 setCreditor(PartyIdentificationAndAccount48 creditor) {
 		this.creditor = creditor;
 		return this;
 	}
@@ -411,7 +453,7 @@ public class CashParties9 {
 		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public CashParties9 setCreditorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount50 creditorAgent) {
+	public CashParties9 setCreditorAgent(PartyIdentificationAndAccount50 creditorAgent) {
 		this.creditorAgent = creditorAgent;
 		return this;
 	}

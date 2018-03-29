@@ -120,7 +120,7 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOutsideIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeForPhysicalTradeParameters1, Optional<PercentageRate>> mmOutsideIndex = new MMMessageAttribute<ExchangeForPhysicalTradeParameters1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmOutsideIndex;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmObject();
@@ -133,6 +133,16 @@ public class ExchangeForPhysicalTradeParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(ExchangeForPhysicalTradeParameters1 obj) {
+			return obj.getOutsideIndex();
+		}
+
+		@Override
+		public void setValue(ExchangeForPhysicalTradeParameters1 obj, Optional<PercentageRate> value) {
+			obj.setOutsideIndex(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FairVal")
@@ -175,7 +185,7 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFairValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeForPhysicalTradeParameters1, Optional<ActiveCurrencyAndAmount>> mmFairValue = new MMMessageAttribute<ExchangeForPhysicalTradeParameters1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmFairValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmObject();
@@ -188,6 +198,16 @@ public class ExchangeForPhysicalTradeParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ExchangeForPhysicalTradeParameters1 obj) {
+			return obj.getFairValue();
+		}
+
+		@Override
+		public void setValue(ExchangeForPhysicalTradeParameters1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setFairValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValForFutrs")
@@ -230,7 +250,7 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueForFutures = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeForPhysicalTradeParameters1, Optional<ActiveCurrencyAndAmount>> mmValueForFutures = new MMMessageAttribute<ExchangeForPhysicalTradeParameters1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmValueForFutures;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmObject();
@@ -243,6 +263,16 @@ public class ExchangeForPhysicalTradeParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ExchangeForPhysicalTradeParameters1 obj) {
+			return obj.getValueForFutures();
+		}
+
+		@Override
+		public void setValue(ExchangeForPhysicalTradeParameters1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setValueForFutures(value.orElse(null));
 		}
 	};
 

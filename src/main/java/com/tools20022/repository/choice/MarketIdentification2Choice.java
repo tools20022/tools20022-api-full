@@ -108,7 +108,7 @@ public class MarketIdentification2Choice {
 	 * definition} = "ISO 10383 Market Identification Code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketIdentifierCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification2Choice, MICIdentifier> mmMarketIdentifierCode = new MMMessageAttribute<MarketIdentification2Choice, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketIdentification2Choice.mmObject();
@@ -120,6 +120,16 @@ public class MarketIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(MarketIdentification2Choice obj) {
+			return obj.getMarketIdentifierCode();
+		}
+
+		@Override
+		public void setValue(MarketIdentification2Choice obj, MICIdentifier value) {
+			obj.setMarketIdentifierCode(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -153,7 +163,7 @@ public class MarketIdentification2Choice {
 	 * "Description of the market when no Market Identifier Code is available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification2Choice, RestrictedFINXMax30Text> mmDescription = new MMMessageAttribute<MarketIdentification2Choice, RestrictedFINXMax30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketIdentification2Choice.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class MarketIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax30Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax30Text getValue(MarketIdentification2Choice obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(MarketIdentification2Choice obj, RestrictedFINXMax30Text value) {
+			obj.setDescription(value);
 		}
 	};
 

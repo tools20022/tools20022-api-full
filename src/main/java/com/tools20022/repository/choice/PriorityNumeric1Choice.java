@@ -119,7 +119,7 @@ public class PriorityNumeric1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumeric = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriorityNumeric1Choice, Exact4NumericText> mmNumeric = new MMMessageAttribute<PriorityNumeric1Choice, Exact4NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriorityNumeric1Choice.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class PriorityNumeric1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4NumericText.mmObject();
+		}
+
+		@Override
+		public Exact4NumericText getValue(PriorityNumeric1Choice obj) {
+			return obj.getNumeric();
+		}
+
+		@Override
+		public void setValue(PriorityNumeric1Choice obj, Exact4NumericText value) {
+			obj.setNumeric(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -177,7 +187,7 @@ public class PriorityNumeric1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriorityNumeric1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<PriorityNumeric1Choice, GenericIdentification20>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriorityNumeric1Choice.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class PriorityNumeric1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(PriorityNumeric1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PriorityNumeric1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

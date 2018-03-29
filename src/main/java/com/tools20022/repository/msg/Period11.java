@@ -111,7 +111,7 @@ public class Period11 {
 	 * Period4.mmStartDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStartDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Period11, DateFormat45Choice> mmStartDate = new MMMessageAssociationEnd<Period11, DateFormat45Choice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Period11.mmObject();
@@ -125,6 +125,16 @@ public class Period11 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat45Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat45Choice getValue(Period11 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(Period11 obj, DateFormat45Choice value) {
+			obj.setStartDate(value);
 		}
 	};
 	@XmlElement(name = "EndDt", required = true)
@@ -167,7 +177,7 @@ public class Period11 {
 	 * Period4.mmEndDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Period11, DateFormat45Choice> mmEndDate = new MMMessageAssociationEnd<Period11, DateFormat45Choice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Period11.mmObject();
@@ -182,6 +192,16 @@ public class Period11 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat45Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat45Choice getValue(Period11 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(Period11 obj, DateFormat45Choice value) {
+			obj.setEndDate(value);
 		}
 	};
 

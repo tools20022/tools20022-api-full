@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateSearchChoice;
+import com.tools20022.repository.choice.DateTimeSearch1Choice;
 import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -100,7 +102,7 @@ public class DateAndDateTimeSearch2Choice {
 	 * definition} = "Specified date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndDateTimeSearch2Choice, DateSearchChoice> mmDate = new MMMessageAttribute<DateAndDateTimeSearch2Choice, DateSearchChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeSearch2Choice.mmObject();
 			isDerived = false;
@@ -110,7 +112,17 @@ public class DateAndDateTimeSearch2Choice {
 			definition = "Specified date.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateSearchChoice.mmObject();
+			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public DateSearchChoice getValue(DateAndDateTimeSearch2Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateAndDateTimeSearch2Choice obj, DateSearchChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtTm", required = true)
@@ -143,7 +155,7 @@ public class DateAndDateTimeSearch2Choice {
 	 * definition} = "Specified date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndDateTimeSearch2Choice, DateTimeSearch1Choice> mmDateTime = new MMMessageAttribute<DateAndDateTimeSearch2Choice, DateTimeSearch1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeSearch2Choice.mmObject();
 			isDerived = false;
@@ -153,7 +165,17 @@ public class DateAndDateTimeSearch2Choice {
 			definition = "Specified date and time.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateTimeSearch1Choice.mmObject();
+			complexType_lazy = () -> DateTimeSearch1Choice.mmObject();
+		}
+
+		@Override
+		public DateTimeSearch1Choice getValue(DateAndDateTimeSearch2Choice obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(DateAndDateTimeSearch2Choice obj, DateTimeSearch1Choice value) {
+			obj.setDateTime(value);
 		}
 	};
 
@@ -175,7 +197,7 @@ public class DateAndDateTimeSearch2Choice {
 		return date;
 	}
 
-	public DateAndDateTimeSearch2Choice setDate(com.tools20022.repository.choice.DateSearchChoice date) {
+	public DateAndDateTimeSearch2Choice setDate(DateSearchChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -184,7 +206,7 @@ public class DateAndDateTimeSearch2Choice {
 		return dateTime;
 	}
 
-	public DateAndDateTimeSearch2Choice setDateTime(com.tools20022.repository.choice.DateTimeSearch1Choice dateTime) {
+	public DateAndDateTimeSearch2Choice setDateTime(DateTimeSearch1Choice dateTime) {
 		this.dateTime = Objects.requireNonNull(dateTime);
 		return this;
 	}

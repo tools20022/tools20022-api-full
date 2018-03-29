@@ -120,7 +120,7 @@ public class FinancialInstrumentQuantity21Choice {
 	 * "Quantity expressed as a number, for example, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity21Choice, RestrictedFINDecimalNumber> mmUnit = new MMMessageAttribute<FinancialInstrumentQuantity21Choice, RestrictedFINDecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmObject();
@@ -133,6 +133,16 @@ public class FinancialInstrumentQuantity21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
+		}
+
+		@Override
+		public RestrictedFINDecimalNumber getValue(FinancialInstrumentQuantity21Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity21Choice obj, RestrictedFINDecimalNumber value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "FaceAmt", required = true)
@@ -175,7 +185,7 @@ public class FinancialInstrumentQuantity21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity21Choice, RestrictedFINImpliedCurrencyAndAmount> mmFaceAmount = new MMMessageAttribute<FinancialInstrumentQuantity21Choice, RestrictedFINImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmObject();
@@ -188,6 +198,16 @@ public class FinancialInstrumentQuantity21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINImpliedCurrencyAndAmount getValue(FinancialInstrumentQuantity21Choice obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity21Choice obj, RestrictedFINImpliedCurrencyAndAmount value) {
+			obj.setFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtsdVal", required = true)
@@ -230,7 +250,7 @@ public class FinancialInstrumentQuantity21Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity21Choice, RestrictedFINImpliedCurrencyAndAmount> mmAmortisedValue = new MMMessageAttribute<FinancialInstrumentQuantity21Choice, RestrictedFINImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmObject();
@@ -243,6 +263,16 @@ public class FinancialInstrumentQuantity21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINImpliedCurrencyAndAmount getValue(FinancialInstrumentQuantity21Choice obj) {
+			return obj.getAmortisedValue();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity21Choice obj, RestrictedFINImpliedCurrencyAndAmount value) {
+			obj.setAmortisedValue(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -283,7 +313,7 @@ public class FinancialInstrumentQuantity21Choice {
 	 * definition} = "Quantity expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity21Choice, Quantity4Code> mmCode = new MMMessageAttribute<FinancialInstrumentQuantity21Choice, Quantity4Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity21Choice.mmObject();
@@ -296,6 +326,16 @@ public class FinancialInstrumentQuantity21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Quantity4Code.mmObject();
+		}
+
+		@Override
+		public Quantity4Code getValue(FinancialInstrumentQuantity21Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity21Choice obj, Quantity4Code value) {
+			obj.setCode(value);
 		}
 	};
 

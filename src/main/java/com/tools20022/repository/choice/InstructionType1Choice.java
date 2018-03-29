@@ -115,7 +115,7 @@ public class InstructionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionType1Choice, MessageIdentification> mmInstructionIdentification = new MMMessageAssociationEnd<InstructionType1Choice, MessageIdentification>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionType1Choice.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class InstructionType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MessageIdentification.mmObject();
+		}
+
+		@Override
+		public MessageIdentification getValue(InstructionType1Choice obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(InstructionType1Choice obj, MessageIdentification value) {
+			obj.setInstructionIdentification(value);
 		}
 	};
 	@XmlElement(name = "InstrCxlId", required = true)
@@ -159,7 +169,7 @@ public class InstructionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionCancellationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionType1Choice, MessageIdentification> mmInstructionCancellationIdentification = new MMMessageAssociationEnd<InstructionType1Choice, MessageIdentification>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionType1Choice.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class InstructionType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MessageIdentification.mmObject();
+		}
+
+		@Override
+		public MessageIdentification getValue(InstructionType1Choice obj) {
+			return obj.getInstructionCancellationIdentification();
+		}
+
+		@Override
+		public void setValue(InstructionType1Choice obj, MessageIdentification value) {
+			obj.setInstructionCancellationIdentification(value);
 		}
 	};
 

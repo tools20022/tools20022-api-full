@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.ExecutingBrokerRole;
 import com.tools20022.repository.entity.SecuritiesTradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesTransactionReport2;
@@ -91,7 +92,7 @@ import java.util.Objects;
 public class ExecutingTrader extends SecuritiesTradePartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
-	protected List<com.tools20022.repository.entity.ExecutingBrokerRole> executingBroker;
+	protected List<ExecutingBrokerRole> executingBroker;
 	/**
 	 * 
 	 <p>
@@ -122,20 +123,30 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 	 * name} = "ExecutingBroker"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Executing broker which employs the trade."</li>
+	 * definition} = "Executing broker which employs the trade"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmExecutingBroker = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ExecutingTrader, List<ExecutingBrokerRole>> mmExecutingBroker = new MMBusinessAssociationEnd<ExecutingTrader, List<ExecutingBrokerRole>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ExecutingTrader.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutingBroker";
-			definition = "Executing broker which employs the trade.";
+			definition = "Executing broker which employs the trade";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ExecutingBrokerRole.mmExecutingTrader;
+			opposite_lazy = () -> ExecutingBrokerRole.mmExecutingTrader;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ExecutingBrokerRole.mmObject();
+			type_lazy = () -> ExecutingBrokerRole.mmObject();
+		}
+
+		@Override
+		public List<ExecutingBrokerRole> getValue(ExecutingTrader obj) {
+			return obj.getExecutingBroker();
+		}
+
+		@Override
+		public void setValue(ExecutingTrader obj, List<ExecutingBrokerRole> value) {
+			obj.setExecutingBroker(value);
 		}
 	};
 
@@ -146,7 +157,7 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExecutingTrader";
 				definition = "Trader that executes a trade for an organisation.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingBrokerRole.mmExecutingTrader);
+				associationDomain_lazy = () -> Arrays.asList(ExecutingBrokerRole.mmExecutingTrader);
 				derivationElement_lazy = () -> Arrays.asList(SecuritiesTransactionReport2.mmExecutingParty, SecuritiesTransactionReport4.mmExecutingParty);
 				superType_lazy = () -> SecuritiesTradePartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExecutingTrader.mmExecutingBroker);
@@ -164,7 +175,7 @@ public class ExecutingTrader extends SecuritiesTradePartyRole {
 		return executingBroker == null ? executingBroker = new ArrayList<>() : executingBroker;
 	}
 
-	public ExecutingTrader setExecutingBroker(List<com.tools20022.repository.entity.ExecutingBrokerRole> executingBroker) {
+	public ExecutingTrader setExecutingBroker(List<ExecutingBrokerRole> executingBroker) {
 		this.executingBroker = Objects.requireNonNull(executingBroker);
 		return this;
 	}

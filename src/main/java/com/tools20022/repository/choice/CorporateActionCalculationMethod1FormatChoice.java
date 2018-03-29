@@ -100,7 +100,7 @@ public class CorporateActionCalculationMethod1FormatChoice {
 	 * "Standard code to specify the calculation method for drawings."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCalculationMethod1FormatChoice, CorporateActionCalculationMethod1Code> mmCode = new MMMessageAttribute<CorporateActionCalculationMethod1FormatChoice, CorporateActionCalculationMethod1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionCalculationMethod1FormatChoice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class CorporateActionCalculationMethod1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionCalculationMethod1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionCalculationMethod1Code getValue(CorporateActionCalculationMethod1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionCalculationMethod1FormatChoice obj, CorporateActionCalculationMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -144,7 +154,7 @@ public class CorporateActionCalculationMethod1FormatChoice {
 	 * "Proprietary code to express the calculation method for drawings."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCalculationMethod1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<CorporateActionCalculationMethod1FormatChoice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionCalculationMethod1FormatChoice.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class CorporateActionCalculationMethod1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CorporateActionCalculationMethod1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionCalculationMethod1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

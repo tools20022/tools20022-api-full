@@ -130,7 +130,7 @@ public class SecuredMarketReport2Choice {
 	 * SecuredMarketReport1Choice.mmDataSetAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketReport2Choice, ReportPeriodActivity1Code> mmDataSetAction = new MMMessageAttribute<SecuredMarketReport2Choice, ReportPeriodActivity1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredMarketReport2Choice.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class SecuredMarketReport2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity1Code.mmObject();
+		}
+
+		@Override
+		public ReportPeriodActivity1Code getValue(SecuredMarketReport2Choice obj) {
+			return obj.getDataSetAction();
+		}
+
+		@Override
+		public void setValue(SecuredMarketReport2Choice obj, ReportPeriodActivity1Code value) {
+			obj.setDataSetAction(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -189,7 +199,7 @@ public class SecuredMarketReport2Choice {
 	 * SecuredMarketReport1Choice.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredMarketReport2Choice, List<SecuredMarketTransaction2>> mmTransaction = new MMMessageAssociationEnd<SecuredMarketReport2Choice, List<SecuredMarketTransaction2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredMarketReport2Choice.mmObject();
 			isDerived = false;
@@ -202,6 +212,16 @@ public class SecuredMarketReport2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuredMarketTransaction2.mmObject();
+		}
+
+		@Override
+		public List<SecuredMarketTransaction2> getValue(SecuredMarketReport2Choice obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(SecuredMarketReport2Choice obj, List<SecuredMarketTransaction2> value) {
+			obj.setTransaction(value);
 		}
 	};
 

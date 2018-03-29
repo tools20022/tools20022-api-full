@@ -104,7 +104,7 @@ public class CorporateAction1Choice {
 	 * definition} = "Corporate action event type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateAction1Choice, CorporateActionEventType1Code> mmType = new MMMessageAttribute<CorporateAction1Choice, CorporateActionEventType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateAction1Choice.mmObject();
@@ -116,6 +116,16 @@ public class CorporateAction1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType1Code getValue(CorporateAction1Choice obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CorporateAction1Choice obj, CorporateActionEventType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -153,7 +163,7 @@ public class CorporateAction1Choice {
 	 * definition} = "Corporate action event expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateAction1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<CorporateAction1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateAction1Choice.mmObject();
@@ -165,6 +175,16 @@ public class CorporateAction1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CorporateAction1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateAction1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

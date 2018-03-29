@@ -109,7 +109,7 @@ public class Reference16 {
 	 * "Identification of the collateral message cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralMessageCancellationRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference16, Max35Text> mmCollateralMessageCancellationRequestIdentification = new MMMessageAttribute<Reference16, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference16.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class Reference16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference16 obj) {
+			return obj.getCollateralMessageCancellationRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Reference16 obj, Max35Text value) {
+			obj.setCollateralMessageCancellationRequestIdentification(value);
 		}
 	};
 

@@ -29,7 +29,6 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -154,7 +153,7 @@ public class Discount extends Adjustment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDiscountAppliedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Discount, CurrencyAndAmount> mmDiscountAppliedAmount = new MMBusinessAttribute<Discount, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReferredDocumentAmount1Choice.mmDiscountAppliedAmount, RemittanceAmount1.mmDiscountAppliedAmount, RemittanceAmount2.mmDiscountAppliedAmount,
 					SettlementMonetarySummation1.mmTotalDiscountAmount, RemittanceAmount3.mmDiscountAppliedAmount, PaymentTerms6.mmDiscountAmount, EarlyPayment1.mmDiscountAmount);
@@ -168,12 +167,14 @@ public class Discount extends Adjustment {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Discount.class.getMethod("getDiscountAppliedAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Discount obj) {
+			return obj.getDiscountAppliedAmount();
+		}
+
+		@Override
+		public void setValue(Discount obj, CurrencyAndAmount value) {
+			obj.setDiscountAppliedAmount(value);
 		}
 	};
 	protected DiscountTypeCode discountType;
@@ -220,7 +221,7 @@ public class Discount extends Adjustment {
 	 * "Specifies the type of discount applied to the original amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDiscountType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Discount, DiscountTypeCode> mmDiscountType = new MMBusinessAttribute<Discount, DiscountTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscountAmountType1Choice.mmCode, DiscountTypeFormat1Choice.mmCode, DiscountTypeFormat1Choice.mmProprietary, DiscountOrChargeType1Choice.mmDiscountType);
 			isDerived = false;
@@ -233,12 +234,14 @@ public class Discount extends Adjustment {
 			simpleType_lazy = () -> DiscountTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Discount.class.getMethod("getDiscountType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DiscountTypeCode getValue(Discount obj) {
+			return obj.getDiscountType();
+		}
+
+		@Override
+		public void setValue(Discount obj, DiscountTypeCode value) {
+			obj.setDiscountType(value);
 		}
 	};
 	protected CurrencyAndAmount discountBasisAmount;
@@ -278,7 +281,7 @@ public class Discount extends Adjustment {
 	 * definition} = "Amount used as a basis to calculate the discount amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDiscountBasisAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Discount, CurrencyAndAmount> mmDiscountBasisAmount = new MMBusinessAttribute<Discount, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTerms3.mmDiscountBasisAmount, PaymentTerms6.mmBasisAmount);
 			isDerived = false;
@@ -291,12 +294,14 @@ public class Discount extends Adjustment {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Discount.class.getMethod("getDiscountBasisAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Discount obj) {
+			return obj.getDiscountBasisAmount();
+		}
+
+		@Override
+		public void setValue(Discount obj, CurrencyAndAmount value) {
+			obj.setDiscountBasisAmount(value);
 		}
 	};
 

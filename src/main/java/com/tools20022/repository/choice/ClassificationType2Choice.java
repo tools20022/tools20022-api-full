@@ -123,7 +123,7 @@ public class ClassificationType2Choice {
 	 * definition} = "ISO 10962 Classification of Financial Instrument (CFI)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType2Choice, CFIIdentifier> mmClassificationFinancialInstrument = new MMMessageAttribute<ClassificationType2Choice, CFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType2Choice.mmObject();
@@ -136,6 +136,16 @@ public class ClassificationType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
+		}
+
+		@Override
+		public CFIIdentifier getValue(ClassificationType2Choice obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ClassificationType2Choice obj, CFIIdentifier value) {
+			obj.setClassificationFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "AltrnClssfctn", required = true)
@@ -176,7 +186,7 @@ public class ClassificationType2Choice {
 	 * definition} = "Proprietary classification of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType2Choice, GenericIdentification19> mmAlternateClassification = new MMMessageAttribute<ClassificationType2Choice, GenericIdentification19>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType2Choice.mmObject();
@@ -189,6 +199,16 @@ public class ClassificationType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification19.mmObject();
+		}
+
+		@Override
+		public GenericIdentification19 getValue(ClassificationType2Choice obj) {
+			return obj.getAlternateClassification();
+		}
+
+		@Override
+		public void setValue(ClassificationType2Choice obj, GenericIdentification19 value) {
+			obj.setAlternateClassification(value);
 		}
 	};
 

@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.reda.PartyStatusAdviceV01;
 import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StatusReasonInformation10;
+import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +119,7 @@ public class PartyStatus1 {
 	 * definition} = "Status of the party maintenance instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyStatus1, Status6Code> mmStatus = new MMMessageAttribute<PartyStatus1, Status6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyStatus1.mmObject();
 			isDerived = false;
@@ -129,9 +131,19 @@ public class PartyStatus1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
+
+		@Override
+		public Status6Code getValue(PartyStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(PartyStatus1 obj, Status6Code value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "StsRsn")
-	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
+	protected List<StatusReasonInformation10> statusReason;
 	/**
 	 * 
 	 <p>
@@ -159,7 +171,7 @@ public class PartyStatus1 {
 	 * "Specifies the underlying reason for the status of an object."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyStatus1, List<StatusReasonInformation10>> mmStatusReason = new MMMessageAssociationEnd<PartyStatus1, List<StatusReasonInformation10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyStatus1.mmObject();
 			isDerived = false;
@@ -169,7 +181,17 @@ public class PartyStatus1 {
 			definition = "Specifies the underlying reason for the status of an object.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
+			type_lazy = () -> StatusReasonInformation10.mmObject();
+		}
+
+		@Override
+		public List<StatusReasonInformation10> getValue(PartyStatus1 obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(PartyStatus1 obj, List<StatusReasonInformation10> value) {
+			obj.setStatusReason(value);
 		}
 	};
 	@XmlElement(name = "SysPtyId")
@@ -200,7 +222,7 @@ public class PartyStatus1 {
 	 * definition} = "Specifications of a party defined within a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyStatus1, Optional<SystemPartyIdentification3>> mmSystemPartyIdentification = new MMMessageAssociationEnd<PartyStatus1, Optional<SystemPartyIdentification3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyStatus1.mmObject();
 			isDerived = false;
@@ -211,7 +233,17 @@ public class PartyStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
+			type_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification3> getValue(PartyStatus1 obj) {
+			return obj.getSystemPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyStatus1 obj, Optional<SystemPartyIdentification3> value) {
+			obj.setSystemPartyIdentification(value.orElse(null));
 		}
 	};
 
@@ -244,7 +276,7 @@ public class PartyStatus1 {
 		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public PartyStatus1 setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+	public PartyStatus1 setStatusReason(List<StatusReasonInformation10> statusReason) {
 		this.statusReason = Objects.requireNonNull(statusReason);
 		return this;
 	}
@@ -253,7 +285,7 @@ public class PartyStatus1 {
 		return systemPartyIdentification == null ? Optional.empty() : Optional.of(systemPartyIdentification);
 	}
 
-	public PartyStatus1 setSystemPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 systemPartyIdentification) {
+	public PartyStatus1 setSystemPartyIdentification(SystemPartyIdentification3 systemPartyIdentification) {
 		this.systemPartyIdentification = systemPartyIdentification;
 		return this;
 	}

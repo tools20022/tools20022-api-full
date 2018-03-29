@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class ReturnReasonInformation6 {
 	 * definition} = "Party issuing the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnReasonInformation6, PartyIdentification14> mmReturnOriginator = new MMMessageAssociationEnd<ReturnReasonInformation6, PartyIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation6.mmObject();
@@ -118,7 +119,17 @@ public class ReturnReasonInformation6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
+			type_lazy = () -> PartyIdentification14.mmObject();
+		}
+
+		@Override
+		public PartyIdentification14 getValue(ReturnReasonInformation6 obj) {
+			return obj.getReturnOriginator();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation6 obj, PartyIdentification14 value) {
+			obj.setReturnOriginator(value);
 		}
 	};
 	@XmlElement(name = "RtrRsn", required = true)
@@ -154,7 +165,7 @@ public class ReturnReasonInformation6 {
 	 * definition} = "Specifies the reason for the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnReasonInformation6, ReturnReason4Choice> mmReturnReason = new MMMessageAssociationEnd<ReturnReasonInformation6, ReturnReason4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation6.mmObject();
@@ -167,6 +178,16 @@ public class ReturnReasonInformation6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReturnReason4Choice.mmObject();
+		}
+
+		@Override
+		public ReturnReason4Choice getValue(ReturnReasonInformation6 obj) {
+			return obj.getReturnReason();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation6 obj, ReturnReason4Choice value) {
+			obj.setReturnReason(value);
 		}
 	};
 
@@ -188,7 +209,7 @@ public class ReturnReasonInformation6 {
 		return returnOriginator;
 	}
 
-	public ReturnReasonInformation6 setReturnOriginator(com.tools20022.repository.msg.PartyIdentification14 returnOriginator) {
+	public ReturnReasonInformation6 setReturnOriginator(PartyIdentification14 returnOriginator) {
 		this.returnOriginator = Objects.requireNonNull(returnOriginator);
 		return this;
 	}

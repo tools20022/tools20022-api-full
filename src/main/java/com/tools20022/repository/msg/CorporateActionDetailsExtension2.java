@@ -100,7 +100,7 @@ public class CorporateActionDetailsExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDetailsExtension2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionDetailsExtension2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDetailsExtension2.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class CorporateActionDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionDetailsExtension2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionDetailsExtension2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "ContraPtcptNb")
@@ -147,7 +157,7 @@ public class CorporateActionDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDetailsExtension2, Optional<Max8Text>> mmContraParticipantNumber = new MMMessageAttribute<CorporateActionDetailsExtension2, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDetailsExtension2.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class CorporateActionDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(CorporateActionDetailsExtension2 obj) {
+			return obj.getContraParticipantNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionDetailsExtension2 obj, Optional<Max8Text> value) {
+			obj.setContraParticipantNumber(value.orElse(null));
 		}
 	};
 

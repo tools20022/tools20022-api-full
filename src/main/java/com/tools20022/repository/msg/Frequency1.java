@@ -22,7 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.EndPoint1Choice;
-import com.tools20022.repository.choice.Frequency34Choice;
+import com.tools20022.repository.choice.Frequency37Choice;
 import com.tools20022.repository.codeset.BusinessDayConvention1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max3NumericText;
@@ -38,7 +38,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Schedule for a credit payment arrangement.
+ * Details to specify the frequency, pattern and other items to allow for the
+ * communication of a series of payments to be made to the same recipient over a
+ * period of time.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -75,7 +77,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Frequency1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Schedule for a credit payment arrangement."</li>
+ * definition} =
+ * "Details to specify the frequency, pattern and other items to allow for the communication of a series of payments to be made to the same recipient over a period of time."
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,21 +114,31 @@ public class Frequency1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Sequence number for the schedule to identify the element is a series of variable standing orders. The value is always “1” for a future dated payment."
+	 * "Technical identifier of a Credit Transfer as part of a series of Credit Transfers within a single Payment Instruction. Assists the transfer of complex variable future payment schedules, associated with a single act of customer consent, within a single Payment Instruction."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Frequency1, Optional<Max3NumericText>> mmSequence = new MMMessageAttribute<Frequency1, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Frequency1.mmObject();
 			isDerived = false;
 			xmlTag = "Seq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sequence";
-			definition = "Sequence number for the schedule to identify the element is a series of variable standing orders. The value is always “1” for a future dated payment.";
+			definition = "Technical identifier of a Credit Transfer as part of a series of Credit Transfers within a single Payment Instruction. Assists the transfer of complex variable future payment schedules, associated with a single act of customer consent, within a single Payment Instruction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(Frequency1 obj) {
+			return obj.getSequence();
+		}
+
+		@Override
+		public void setValue(Frequency1 obj, Optional<Max3NumericText> value) {
+			obj.setSequence(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDt", required = true)
@@ -161,7 +175,7 @@ public class Frequency1 {
 	 * "The date of the first payment to be made for this payment schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Frequency1, ISODate> mmStartDate = new MMMessageAttribute<Frequency1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> AccountSwitching.mmSwitchDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Frequency1.mmObject();
@@ -173,6 +187,16 @@ public class Frequency1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(Frequency1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(Frequency1 obj, ISODate value) {
+			obj.setStartDate(value);
 		}
 	};
 	@XmlElement(name = "EndPtChc", required = true)
@@ -202,7 +226,7 @@ public class Frequency1 {
 	 * definition} = "Information about when the payment arrangement will end."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndPointChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Frequency1, EndPoint1Choice> mmEndPointChoice = new MMMessageAssociationEnd<Frequency1, EndPoint1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Frequency1.mmObject();
 			isDerived = false;
@@ -215,17 +239,27 @@ public class Frequency1 {
 			isComposite = true;
 			type_lazy = () -> EndPoint1Choice.mmObject();
 		}
+
+		@Override
+		public EndPoint1Choice getValue(Frequency1 obj) {
+			return obj.getEndPointChoice();
+		}
+
+		@Override
+		public void setValue(Frequency1 obj, EndPoint1Choice value) {
+			obj.setEndPointChoice(value);
+		}
 	};
 	@XmlElement(name = "ReqdFrqcyPttrn")
-	protected Frequency34Choice requestedFrequencyPattern;
+	protected Frequency37Choice requestedFrequencyPattern;
 	/**
 	 * 
 	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
-	 * type} = {@linkplain com.tools20022.repository.choice.Frequency34Choice
-	 * Frequency34Choice}</li>
+	 * type} = {@linkplain com.tools20022.repository.choice.Frequency37Choice
+	 * Frequency37Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Frequency1
@@ -245,7 +279,7 @@ public class Frequency1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestedFrequencyPattern = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Frequency1, Optional<Frequency37Choice>> mmRequestedFrequencyPattern = new MMMessageAssociationEnd<Frequency1, Optional<Frequency37Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Frequency1.mmObject();
 			isDerived = false;
@@ -256,7 +290,17 @@ public class Frequency1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> Frequency34Choice.mmObject();
+			type_lazy = () -> Frequency37Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency37Choice> getValue(Frequency1 obj) {
+			return obj.getRequestedFrequencyPattern();
+		}
+
+		@Override
+		public void setValue(Frequency1 obj, Optional<Frequency37Choice> value) {
+			obj.setRequestedFrequencyPattern(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonWorkgDayAdjstmnt")
@@ -290,7 +334,7 @@ public class Frequency1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonWorkingDayAdjustment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Frequency1, Optional<BusinessDayConvention1Code>> mmNonWorkingDayAdjustment = new MMMessageAttribute<Frequency1, Optional<BusinessDayConvention1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Frequency1.mmObject();
 			isDerived = false;
@@ -301,6 +345,16 @@ public class Frequency1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BusinessDayConvention1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BusinessDayConvention1Code> getValue(Frequency1 obj) {
+			return obj.getNonWorkingDayAdjustment();
+		}
+
+		@Override
+		public void setValue(Frequency1 obj, Optional<BusinessDayConvention1Code> value) {
+			obj.setNonWorkingDayAdjustment(value.orElse(null));
 		}
 	};
 
@@ -313,7 +367,7 @@ public class Frequency1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Frequency1";
-				definition = "Schedule for a credit payment arrangement.";
+				definition = "Details to specify the frequency, pattern and other items to allow for the communication of a series of payments to be made to the same recipient over a period of time.";
 			}
 		});
 		return mmObject_lazy.get();
@@ -346,11 +400,11 @@ public class Frequency1 {
 		return this;
 	}
 
-	public Optional<Frequency34Choice> getRequestedFrequencyPattern() {
+	public Optional<Frequency37Choice> getRequestedFrequencyPattern() {
 		return requestedFrequencyPattern == null ? Optional.empty() : Optional.of(requestedFrequencyPattern);
 	}
 
-	public Frequency1 setRequestedFrequencyPattern(Frequency34Choice requestedFrequencyPattern) {
+	public Frequency1 setRequestedFrequencyPattern(Frequency37Choice requestedFrequencyPattern) {
 		this.requestedFrequencyPattern = requestedFrequencyPattern;
 		return this;
 	}

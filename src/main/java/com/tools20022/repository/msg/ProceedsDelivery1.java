@@ -133,7 +133,7 @@ public class ProceedsDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProceedsDelivery1, Max35Text> mmSecuritiesAccountIdentification = new MMMessageAttribute<ProceedsDelivery1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProceedsDelivery1.mmObject();
@@ -145,6 +145,16 @@ public class ProceedsDelivery1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProceedsDelivery1 obj) {
+			return obj.getSecuritiesAccountIdentification();
+		}
+
+		@Override
+		public void setValue(ProceedsDelivery1 obj, Max35Text value) {
+			obj.setSecuritiesAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "CshAcctId", required = true)
@@ -184,7 +194,7 @@ public class ProceedsDelivery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProceedsDelivery1, CashAccountIdentification1Choice> mmCashAccountIdentification = new MMMessageAttribute<ProceedsDelivery1, CashAccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProceedsDelivery1.mmObject();
@@ -196,6 +206,16 @@ public class ProceedsDelivery1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification1Choice getValue(ProceedsDelivery1 obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(ProceedsDelivery1 obj, CashAccountIdentification1Choice value) {
+			obj.setCashAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -233,7 +253,7 @@ public class ProceedsDelivery1 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProceedsDelivery1, Optional<PartyIdentification2Choice>> mmAccountOwnerIdentification = new MMMessageAttribute<ProceedsDelivery1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProceedsDelivery1.mmObject();
@@ -245,6 +265,16 @@ public class ProceedsDelivery1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(ProceedsDelivery1 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(ProceedsDelivery1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrId")
@@ -282,7 +312,7 @@ public class ProceedsDelivery1 {
 	 * definition} = "Identification of the institution servicing the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProceedsDelivery1, Optional<PartyIdentification2Choice>> mmAccountServicerIdentification = new MMMessageAttribute<ProceedsDelivery1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProceedsDelivery1.mmObject();
@@ -294,6 +324,16 @@ public class ProceedsDelivery1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(ProceedsDelivery1 obj) {
+			return obj.getAccountServicerIdentification();
+		}
+
+		@Override
+		public void setValue(ProceedsDelivery1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountServicerIdentification(value.orElse(null));
 		}
 	};
 	/**

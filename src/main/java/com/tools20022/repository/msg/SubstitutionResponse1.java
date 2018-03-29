@@ -27,6 +27,8 @@ import com.tools20022.repository.codeset.Status4Code;
 import com.tools20022.repository.entity.CollateralSubstitution;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CollateralSubstitutionResponse1;
+import com.tools20022.repository.msg.CollateralSubstitutionResponse2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -139,7 +141,7 @@ public class SubstitutionResponse1 {
 	 * "Indicates if the substitution request was accepted or rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubstitutionResponse1, Status4Code> mmResponseType = new MMMessageAttribute<SubstitutionResponse1, Status4Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubstitutionResponse1.mmObject();
@@ -151,6 +153,16 @@ public class SubstitutionResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
+		}
+
+		@Override
+		public Status4Code getValue(SubstitutionResponse1 obj) {
+			return obj.getResponseType();
+		}
+
+		@Override
+		public void setValue(SubstitutionResponse1 obj, Status4Code value) {
+			obj.setResponseType(value);
 		}
 	};
 	@XmlElement(name = "CollSbstitnAccptncDtls")
@@ -188,7 +200,7 @@ public class SubstitutionResponse1 {
 	 * "Provides details about the accepted collateral substitution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralSubstitutionAcceptanceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubstitutionResponse1, Optional<CollateralSubstitutionResponse1>> mmCollateralSubstitutionAcceptanceDetails = new MMMessageAssociationEnd<SubstitutionResponse1, Optional<CollateralSubstitutionResponse1>>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralSubstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubstitutionResponse1.mmObject();
@@ -200,7 +212,17 @@ public class SubstitutionResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse1.mmObject();
+			type_lazy = () -> CollateralSubstitutionResponse1.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralSubstitutionResponse1> getValue(SubstitutionResponse1 obj) {
+			return obj.getCollateralSubstitutionAcceptanceDetails();
+		}
+
+		@Override
+		public void setValue(SubstitutionResponse1 obj, Optional<CollateralSubstitutionResponse1> value) {
+			obj.setCollateralSubstitutionAcceptanceDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollSbstitnRjctnDtls")
@@ -238,7 +260,7 @@ public class SubstitutionResponse1 {
 	 * "Provides details about the rejected collateral substitution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralSubstitutionRejectionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubstitutionResponse1, Optional<CollateralSubstitutionResponse2>> mmCollateralSubstitutionRejectionDetails = new MMMessageAssociationEnd<SubstitutionResponse1, Optional<CollateralSubstitutionResponse2>>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralSubstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubstitutionResponse1.mmObject();
@@ -250,7 +272,17 @@ public class SubstitutionResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse2.mmObject();
+			type_lazy = () -> CollateralSubstitutionResponse2.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralSubstitutionResponse2> getValue(SubstitutionResponse1 obj) {
+			return obj.getCollateralSubstitutionRejectionDetails();
+		}
+
+		@Override
+		public void setValue(SubstitutionResponse1 obj, Optional<CollateralSubstitutionResponse2> value) {
+			obj.setCollateralSubstitutionRejectionDetails(value.orElse(null));
 		}
 	};
 
@@ -285,7 +317,7 @@ public class SubstitutionResponse1 {
 		return collateralSubstitutionAcceptanceDetails == null ? Optional.empty() : Optional.of(collateralSubstitutionAcceptanceDetails);
 	}
 
-	public SubstitutionResponse1 setCollateralSubstitutionAcceptanceDetails(com.tools20022.repository.msg.CollateralSubstitutionResponse1 collateralSubstitutionAcceptanceDetails) {
+	public SubstitutionResponse1 setCollateralSubstitutionAcceptanceDetails(CollateralSubstitutionResponse1 collateralSubstitutionAcceptanceDetails) {
 		this.collateralSubstitutionAcceptanceDetails = collateralSubstitutionAcceptanceDetails;
 		return this;
 	}
@@ -294,7 +326,7 @@ public class SubstitutionResponse1 {
 		return collateralSubstitutionRejectionDetails == null ? Optional.empty() : Optional.of(collateralSubstitutionRejectionDetails);
 	}
 
-	public SubstitutionResponse1 setCollateralSubstitutionRejectionDetails(com.tools20022.repository.msg.CollateralSubstitutionResponse2 collateralSubstitutionRejectionDetails) {
+	public SubstitutionResponse1 setCollateralSubstitutionRejectionDetails(CollateralSubstitutionResponse2 collateralSubstitutionRejectionDetails) {
 		this.collateralSubstitutionRejectionDetails = collateralSubstitutionRejectionDetails;
 		return this;
 	}

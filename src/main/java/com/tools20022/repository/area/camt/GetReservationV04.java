@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.MessageHeader9;
 import com.tools20022.repository.msg.ReservationQuery2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -85,7 +84,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GetReservationV04"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -123,7 +122,7 @@ public class GetReservationV04 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetReservationV04, MessageHeader9> mmMessageHeader = new MMMessageBuildingBlock<GetReservationV04, MessageHeader9>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class GetReservationV04 {
 			complexType_lazy = () -> MessageHeader9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetReservationV04.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader9 getValue(GetReservationV04 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(GetReservationV04 obj, MessageHeader9 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "RsvatnQryDef")
@@ -167,7 +168,7 @@ public class GetReservationV04 {
 	 * definition} = "Definition of the reservation query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReservationQueryDefinition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetReservationV04, Optional<ReservationQuery2>> mmReservationQueryDefinition = new MMMessageBuildingBlock<GetReservationV04, Optional<ReservationQuery2>>() {
 		{
 			xmlTag = "RsvatnQryDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +179,14 @@ public class GetReservationV04 {
 			complexType_lazy = () -> ReservationQuery2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetReservationV04.class.getMethod("getReservationQueryDefinition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ReservationQuery2> getValue(GetReservationV04 obj) {
+			return obj.getReservationQueryDefinition();
+		}
+
+		@Override
+		public void setValue(GetReservationV04 obj, Optional<ReservationQuery2> value) {
+			obj.setReservationQueryDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -213,7 +216,7 @@ public class GetReservationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetReservationV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<GetReservationV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,19 +226,21 @@ public class GetReservationV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetReservationV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(GetReservationV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(GetReservationV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GetReservationV04";
 				definition = "Scope\r\nThe GetReservation message is sent by a member to the transaction administrator.\r\nIt is used to request information on the details of one or more reservation facilities set by the member and managed by the transaction administrator.\r\nUsage\r\nThe member can request reservations information based on the following elements:\r\n- identification of the system;\r\n- identification of the account;\r\n- status of the reservation (default and/or current);\r\n- type of reservation.\r\nThis message will be replied to by a ReturnReservation message.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

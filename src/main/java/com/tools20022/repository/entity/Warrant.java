@@ -23,10 +23,11 @@ import com.tools20022.repository.choice.WarrantStyle2Choice;
 import com.tools20022.repository.choice.WarrantStyle3Choice;
 import com.tools20022.repository.codeset.WarrantStyleCode;
 import com.tools20022.repository.datatype.BaseOneRate;
+import com.tools20022.repository.entity.QuantityRatio;
+import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -245,7 +246,7 @@ public class Warrant extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSubscriptionPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Warrant, SecuritiesPricing> mmSubscriptionPrice = new MMBusinessAssociationEnd<Warrant, SecuritiesPricing>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmSubscriptionPrice, FinancialInstrumentAttributes20.mmSubscriptionPrice, FinancialInstrumentAttributes35.mmSubscriptionPrice,
 					FinancialInstrumentAttributes41.mmSubscriptionPrice, FinancialInstrumentAttributes4.mmSubscriptionPrice, FinancialInstrumentAttributes13.mmSubscriptionPrice, FinancialInstrumentAttributes21.mmSubscriptionPrice,
@@ -262,9 +263,19 @@ public class Warrant extends Security {
 			definition = "Pre-determined price at which the holder of a warrant is entitled to buy the underlying instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant;
+			opposite_lazy = () -> SecuritiesPricing.mmRelatedWarrant;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			type_lazy = () -> SecuritiesPricing.mmObject();
+		}
+
+		@Override
+		public SecuritiesPricing getValue(Warrant obj) {
+			return obj.getSubscriptionPrice();
+		}
+
+		@Override
+		public void setValue(Warrant obj, SecuritiesPricing value) {
+			obj.setSubscriptionPrice(value);
 		}
 	};
 	protected BaseOneRate multiplier;
@@ -305,7 +316,7 @@ public class Warrant extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMultiplier = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Warrant, BaseOneRate> mmMultiplier = new MMBusinessAttribute<Warrant, BaseOneRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Warrant1.mmMultiplier, Warrant2.mmMultiplier, Warrant3.mmMultiplier);
 			isDerived = false;
@@ -318,12 +329,14 @@ public class Warrant extends Security {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Warrant.class.getMethod("getMultiplier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BaseOneRate getValue(Warrant obj) {
+			return obj.getMultiplier();
+		}
+
+		@Override
+		public void setValue(Warrant obj, BaseOneRate value) {
+			obj.setMultiplier(value);
 		}
 	};
 	protected WarrantStyleCode style;
@@ -373,7 +386,7 @@ public class Warrant extends Security {
 	 * definition} = "Specifies the expiration style of the warrant."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStyle = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Warrant, WarrantStyleCode> mmStyle = new MMBusinessAttribute<Warrant, WarrantStyleCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(WarrantStyle2Choice.mmCode, WarrantStyle2Choice.mmProprietary, Warrant2.mmType, Warrant3.mmType, WarrantStyle3Choice.mmCode, WarrantStyle3Choice.mmProprietary);
 			isDerived = false;
@@ -386,12 +399,14 @@ public class Warrant extends Security {
 			simpleType_lazy = () -> WarrantStyleCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Warrant.class.getMethod("getStyle", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public WarrantStyleCode getValue(Warrant obj) {
+			return obj.getStyle();
+		}
+
+		@Override
+		public void setValue(Warrant obj, WarrantStyleCode value) {
+			obj.setStyle(value);
 		}
 	};
 	protected QuantityRatio warrantParity;
@@ -448,11 +463,11 @@ public class Warrant extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the ratio between the quantity of warrants and the quantity of underlying securities."
+	 * "Provides the ratio between the quantity of warrants and the quantity of underlying securities. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmWarrantParity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Warrant, QuantityRatio> mmWarrantParity = new MMBusinessAssociationEnd<Warrant, QuantityRatio>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes48.mmWarrantParity, FinancialInstrumentAttributes55.mmWarrantParity, FinancialInstrumentAttributes66.mmWarrantParity,
 					FinancialInstrumentAttributes70.mmWarrantParity, FinancialInstrumentAttributes79.mmWarrantParity, FinancialInstrumentAttributes85.mmWarrantParity);
@@ -460,12 +475,22 @@ public class Warrant extends Security {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WarrantParity";
-			definition = "Provides the ratio between the quantity of warrants and the quantity of underlying securities.";
+			definition = "Provides the ratio between the quantity of warrants and the quantity of underlying securities. ";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmWarrant;
+			opposite_lazy = () -> QuantityRatio.mmWarrant;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
+			type_lazy = () -> QuantityRatio.mmObject();
+		}
+
+		@Override
+		public QuantityRatio getValue(Warrant obj) {
+			return obj.getWarrantParity();
+		}
+
+		@Override
+		public void setValue(Warrant obj, QuantityRatio value) {
+			obj.setWarrantParity(value);
 		}
 	};
 
@@ -476,7 +501,7 @@ public class Warrant extends Security {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Warrant";
 				definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant, com.tools20022.repository.entity.QuantityRatio.mmWarrant);
+				associationDomain_lazy = () -> Arrays.asList(SecuritiesPricing.mmRelatedWarrant, QuantityRatio.mmWarrant);
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmWarrant, FinancialInstrument28.mmWarrant, FinancialInstrument54.mmWarrant);
 				superType_lazy = () -> Security.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Warrant.mmSubscriptionPrice, com.tools20022.repository.entity.Warrant.mmMultiplier, com.tools20022.repository.entity.Warrant.mmStyle,
@@ -496,7 +521,7 @@ public class Warrant extends Security {
 		return subscriptionPrice;
 	}
 
-	public Warrant setSubscriptionPrice(com.tools20022.repository.entity.SecuritiesPricing subscriptionPrice) {
+	public Warrant setSubscriptionPrice(SecuritiesPricing subscriptionPrice) {
 		this.subscriptionPrice = Objects.requireNonNull(subscriptionPrice);
 		return this;
 	}
@@ -523,7 +548,7 @@ public class Warrant extends Security {
 		return warrantParity;
 	}
 
-	public Warrant setWarrantParity(com.tools20022.repository.entity.QuantityRatio warrantParity) {
+	public Warrant setWarrantParity(QuantityRatio warrantParity) {
 		this.warrantParity = Objects.requireNonNull(warrantParity);
 		return this;
 	}

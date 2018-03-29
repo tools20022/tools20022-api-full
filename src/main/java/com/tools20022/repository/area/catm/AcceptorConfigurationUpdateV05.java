@@ -21,12 +21,11 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.TerminalManagementPreviousVersion;
+import com.tools20022.repository.area.TerminalManagementArchive;
 import com.tools20022.repository.msg.AcceptorConfiguration5;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header27;
-import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -57,9 +56,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion
- * CardPaymentsExchangesTerminalManagementISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -68,8 +65,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AccptrCfgtnUpd"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.TerminalManagementPreviousVersion
- * TerminalManagementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.TerminalManagementArchive
+ * TerminalManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.003.001.05}</li>
@@ -141,7 +138,7 @@ public class AcceptorConfigurationUpdateV05 {
 	 * AcceptorConfigurationUpdateV04.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorConfigurationUpdateV05, Header27> mmHeader = new MMMessageBuildingBlock<AcceptorConfigurationUpdateV05, Header27>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +151,14 @@ public class AcceptorConfigurationUpdateV05 {
 			complexType_lazy = () -> Header27.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorConfigurationUpdateV05.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header27 getValue(AcceptorConfigurationUpdateV05 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationUpdateV05 obj, Header27 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "AccptrCfgtn", required = true)
@@ -202,7 +201,7 @@ public class AcceptorConfigurationUpdateV05 {
 	 * AcceptorConfigurationUpdateV04.mmAcceptorConfiguration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAcceptorConfiguration = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorConfigurationUpdateV05, AcceptorConfiguration5> mmAcceptorConfiguration = new MMMessageBuildingBlock<AcceptorConfigurationUpdateV05, AcceptorConfiguration5>() {
 		{
 			xmlTag = "AccptrCfgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,12 +214,14 @@ public class AcceptorConfigurationUpdateV05 {
 			complexType_lazy = () -> AcceptorConfiguration5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorConfigurationUpdateV05.class.getMethod("getAcceptorConfiguration", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorConfiguration5 getValue(AcceptorConfigurationUpdateV05 obj) {
+			return obj.getAcceptorConfiguration();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationUpdateV05 obj, AcceptorConfiguration5 value) {
+			obj.setAcceptorConfiguration(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -262,7 +263,7 @@ public class AcceptorConfigurationUpdateV05 {
 	 * AcceptorConfigurationUpdateV04.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorConfigurationUpdateV05, Optional<ContentInformationType12>> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorConfigurationUpdateV05, Optional<ContentInformationType12>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,12 +276,14 @@ public class AcceptorConfigurationUpdateV05 {
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorConfigurationUpdateV05.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType12> getValue(AcceptorConfigurationUpdateV05 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationUpdateV05 obj, Optional<ContentInformationType12> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
@@ -292,10 +295,10 @@ public class AcceptorConfigurationUpdateV05 {
 				definition = "Update of the acceptor configuration to be downloaded by the terminal management system.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV06.mmObject());
 				previousVersion_lazy = () -> AcceptorConfigurationUpdateV04.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCfgtnUpd";
-				businessArea_lazy = () -> TerminalManagementPreviousVersion.mmObject();
+				businessArea_lazy = () -> TerminalManagementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05.mmHeader, com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05.mmAcceptorConfiguration,
 						com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

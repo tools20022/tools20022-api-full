@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountReport10;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -69,7 +70,7 @@ public class Accounts4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "AcctRpt", required = true)
-	protected List<com.tools20022.repository.msg.AccountReport10> accountReport;
+	protected List<AccountReport10> accountReport;
 	/**
 	 * 
 	 <p>
@@ -101,7 +102,7 @@ public class Accounts4 {
 	 * "Reports either on the account information or on a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Accounts4, List<AccountReport10>> mmAccountReport = new MMMessageAssociationEnd<Accounts4, List<AccountReport10>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountContract;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Accounts4.mmObject();
@@ -112,7 +113,17 @@ public class Accounts4 {
 			definition = "Reports either on the account information or on a business error.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountReport10.mmObject();
+			type_lazy = () -> AccountReport10.mmObject();
+		}
+
+		@Override
+		public List<AccountReport10> getValue(Accounts4 obj) {
+			return obj.getAccountReport();
+		}
+
+		@Override
+		public void setValue(Accounts4 obj, List<AccountReport10> value) {
+			obj.setAccountReport(value);
 		}
 	};
 
@@ -134,7 +145,7 @@ public class Accounts4 {
 		return accountReport == null ? accountReport = new ArrayList<>() : accountReport;
 	}
 
-	public Accounts4 setAccountReport(List<com.tools20022.repository.msg.AccountReport10> accountReport) {
+	public Accounts4 setAccountReport(List<AccountReport10> accountReport) {
 		this.accountReport = Objects.requireNonNull(accountReport);
 		return this;
 	}

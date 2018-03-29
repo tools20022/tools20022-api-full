@@ -26,7 +26,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InformationPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -408,7 +407,7 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * definition} = "Country of the proprietary identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCountry = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IdentificationIssuerRole, CountryCode> mmCountry = new MMBusinessAttribute<IdentificationIssuerRole, CountryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmDomesticIdentificationSource, AlternateSecurityIdentification1.mmDomesticIdentificationSource, IdentificationSource1Choice.mmDomestic,
 					IdentificationSource2Choice.mmDomestic, AlternateFinancialInstrumentIdentification1.mmDomesticIdentificationSource, AlternateSecurityIdentification4.mmDomesticIdentificationSource);
@@ -422,12 +421,14 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationIssuerRole.class.getMethod("getCountry", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CountryCode getValue(IdentificationIssuerRole obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(IdentificationIssuerRole obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	protected Max35Text entityName;
@@ -489,7 +490,7 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * definition} = "Entity that issues the proprietary identification."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEntityName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IdentificationIssuerRole, Max35Text> mmEntityName = new MMBusinessAttribute<IdentificationIssuerRole, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmProprietaryIdentificationSource, AlternateSecurityIdentification1.mmProprietaryIdentificationSource, SecuritiesCertificate1.mmIssuer,
 					SecuritiesCertificate2.mmIssuer, SecuritiesCertificate3.mmIssuer, AlternateFinancialInstrumentIdentification1.mmProprietaryIdentificationSource, AlternateSecurityIdentification4.mmProprietaryIdentificationSource,
@@ -504,12 +505,14 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationIssuerRole.class.getMethod("getEntityName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(IdentificationIssuerRole obj) {
+			return obj.getEntityName();
+		}
+
+		@Override
+		public void setValue(IdentificationIssuerRole obj, Max35Text value) {
+			obj.setEntityName(value);
 		}
 	};
 	protected Max35Text ownerCode;
@@ -540,7 +543,7 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOwnerCode = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IdentificationIssuerRole, Max35Text> mmOwnerCode = new MMBusinessAttribute<IdentificationIssuerRole, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IdentificationIssuerRole.mmObject();
@@ -552,12 +555,14 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationIssuerRole.class.getMethod("getOwnerCode", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(IdentificationIssuerRole obj) {
+			return obj.getOwnerCode();
+		}
+
+		@Override
+		public void setValue(IdentificationIssuerRole obj, Max35Text value) {
+			obj.setOwnerCode(value);
 		}
 	};
 

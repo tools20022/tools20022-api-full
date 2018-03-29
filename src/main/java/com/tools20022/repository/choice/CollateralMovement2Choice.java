@@ -125,7 +125,7 @@ public class CollateralMovement2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement2Choice, CollateralMovement3> mmCollateralMovementDetails = new MMMessageAssociationEnd<CollateralMovement2Choice, CollateralMovement3>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralMovement2Choice.mmObject();
@@ -139,6 +139,16 @@ public class CollateralMovement2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralMovement3.mmObject();
+		}
+
+		@Override
+		public CollateralMovement3 getValue(CollateralMovement2Choice obj) {
+			return obj.getCollateralMovementDetails();
+		}
+
+		@Override
+		public void setValue(CollateralMovement2Choice obj, CollateralMovement3 value) {
+			obj.setCollateralMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "Rtr", required = true)
@@ -183,7 +193,7 @@ public class CollateralMovement2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturn = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement2Choice, Collateral4> mmReturn = new MMMessageAssociationEnd<CollateralMovement2Choice, Collateral4>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralMovement2Choice.mmObject();
@@ -197,6 +207,16 @@ public class CollateralMovement2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Collateral4.mmObject();
+		}
+
+		@Override
+		public Collateral4 getValue(CollateralMovement2Choice obj) {
+			return obj.getReturn();
+		}
+
+		@Override
+		public void setValue(CollateralMovement2Choice obj, Collateral4 value) {
+			obj.setReturn(value);
 		}
 	};
 

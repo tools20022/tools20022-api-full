@@ -116,7 +116,7 @@ public class Purpose3Choice {
 	 * Purpose2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesPurposeCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Purpose3Choice, ExternalSecuritiesPurpose1Code> mmSecuritiesPurposeCode = new MMMessageAttribute<Purpose3Choice, ExternalSecuritiesPurpose1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Purpose3Choice.mmObject();
@@ -129,6 +129,16 @@ public class Purpose3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalSecuritiesPurpose1Code.mmObject();
+		}
+
+		@Override
+		public ExternalSecuritiesPurpose1Code getValue(Purpose3Choice obj) {
+			return obj.getSecuritiesPurposeCode();
+		}
+
+		@Override
+		public void setValue(Purpose3Choice obj, ExternalSecuritiesPurpose1Code value) {
+			obj.setSecuritiesPurposeCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class Purpose3Choice {
 	 * Purpose2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Purpose3Choice, GenericIdentification1> mmProprietary = new MMMessageAttribute<Purpose3Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Purpose3Choice.mmObject();
@@ -186,6 +196,16 @@ public class Purpose3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(Purpose3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Purpose3Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -113,7 +113,7 @@ public class ExpectedExecutionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails1, Optional<DateAndDateTimeChoice>> mmExpectedTradeDateTime = new MMMessageAttribute<ExpectedExecutionDetails1, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails1.mmObject();
@@ -125,6 +125,16 @@ public class ExpectedExecutionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(ExpectedExecutionDetails1 obj) {
+			return obj.getExpectedTradeDateTime();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails1 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setExpectedTradeDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdSttlmDt")
@@ -163,7 +173,7 @@ public class ExpectedExecutionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails1, Optional<ISODate>> mmExpectedSettlementDate = new MMMessageAttribute<ExpectedExecutionDetails1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails1.mmObject();
@@ -175,6 +185,16 @@ public class ExpectedExecutionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ExpectedExecutionDetails1 obj) {
+			return obj.getExpectedSettlementDate();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails1 obj, Optional<ISODate> value) {
+			obj.setExpectedSettlementDate(value.orElse(null));
 		}
 	};
 

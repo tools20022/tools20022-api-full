@@ -119,7 +119,7 @@ public class MarketClientSide6Choice {
 	 * MarketClientSide4Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketClientSide6Choice, MarketClientSide1Code> mmCode = new MMMessageAttribute<MarketClientSide6Choice, MarketClientSide1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmMarketClientSide;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketClientSide6Choice.mmObject();
@@ -133,6 +133,16 @@ public class MarketClientSide6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarketClientSide1Code.mmObject();
+		}
+
+		@Override
+		public MarketClientSide1Code getValue(MarketClientSide6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MarketClientSide6Choice obj, MarketClientSide1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -180,7 +190,7 @@ public class MarketClientSide6Choice {
 	 * MarketClientSide4Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketClientSide6Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<MarketClientSide6Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmMarketClientSide;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketClientSide6Choice.mmObject();
@@ -194,6 +204,16 @@ public class MarketClientSide6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(MarketClientSide6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MarketClientSide6Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

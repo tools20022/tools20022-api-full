@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.RatioFormat23Choice;
+import com.tools20022.repository.choice.RatioFormat24Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,7 +111,7 @@ public class CorporateActionRateSD7Choice {
 	 * CorporateActionRateSD6Choice.mmAdditionalQuantityForExistingSecurities}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalQuantityForExistingSecurities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRateSD7Choice, Optional<RatioFormat23Choice>> mmAdditionalQuantityForExistingSecurities = new MMMessageAssociationEnd<CorporateActionRateSD7Choice, Optional<RatioFormat23Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionRateSD7Choice.mmObject();
 			isDerived = false;
@@ -122,7 +124,17 @@ public class CorporateActionRateSD7Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RatioFormat23Choice.mmObject();
+			type_lazy = () -> RatioFormat23Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat23Choice> getValue(CorporateActionRateSD7Choice obj) {
+			return obj.getAdditionalQuantityForExistingSecurities();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD7Choice obj, Optional<RatioFormat23Choice> value) {
+			obj.setAdditionalQuantityForExistingSecurities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewToOd")
@@ -163,7 +175,7 @@ public class CorporateActionRateSD7Choice {
 	 * CorporateActionRateSD6Choice.mmNewToOld}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewToOld = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRateSD7Choice, Optional<RatioFormat24Choice>> mmNewToOld = new MMMessageAssociationEnd<CorporateActionRateSD7Choice, Optional<RatioFormat24Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionRateSD7Choice.mmObject();
 			isDerived = false;
@@ -176,7 +188,17 @@ public class CorporateActionRateSD7Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RatioFormat24Choice.mmObject();
+			type_lazy = () -> RatioFormat24Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat24Choice> getValue(CorporateActionRateSD7Choice obj) {
+			return obj.getNewToOld();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD7Choice obj, Optional<RatioFormat24Choice> value) {
+			obj.setNewToOld(value.orElse(null));
 		}
 	};
 
@@ -198,7 +220,7 @@ public class CorporateActionRateSD7Choice {
 		return additionalQuantityForExistingSecurities == null ? Optional.empty() : Optional.of(additionalQuantityForExistingSecurities);
 	}
 
-	public CorporateActionRateSD7Choice setAdditionalQuantityForExistingSecurities(com.tools20022.repository.choice.RatioFormat23Choice additionalQuantityForExistingSecurities) {
+	public CorporateActionRateSD7Choice setAdditionalQuantityForExistingSecurities(RatioFormat23Choice additionalQuantityForExistingSecurities) {
 		this.additionalQuantityForExistingSecurities = additionalQuantityForExistingSecurities;
 		return this;
 	}
@@ -207,7 +229,7 @@ public class CorporateActionRateSD7Choice {
 		return newToOld == null ? Optional.empty() : Optional.of(newToOld);
 	}
 
-	public CorporateActionRateSD7Choice setNewToOld(com.tools20022.repository.choice.RatioFormat24Choice newToOld) {
+	public CorporateActionRateSD7Choice setNewToOld(RatioFormat24Choice newToOld) {
 		this.newToOld = newToOld;
 		return this;
 	}

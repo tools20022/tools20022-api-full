@@ -99,7 +99,7 @@ public class UnitOfMeasure5Choice {
 	 * "Specifies unit of quantity of a commodity or financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOfMeasure5Choice, UnitOfMeasure8Code> mmCode = new MMMessageAttribute<UnitOfMeasure5Choice, UnitOfMeasure8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure5Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class UnitOfMeasure5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasure8Code.mmObject();
+		}
+
+		@Override
+		public UnitOfMeasure8Code getValue(UnitOfMeasure5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnitOfMeasure5Choice obj, UnitOfMeasure8Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -143,7 +153,7 @@ public class UnitOfMeasure5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnitOfMeasure5Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<UnitOfMeasure5Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure5Choice.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class UnitOfMeasure5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(UnitOfMeasure5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnitOfMeasure5Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

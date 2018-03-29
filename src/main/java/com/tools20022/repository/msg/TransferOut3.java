@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +118,7 @@ public class TransferOut3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferOut3, IndividualPerson3> mmInvestor = new MMMessageAssociationEnd<TransferOut3, IndividualPerson3>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut3.mmObject();
@@ -129,7 +130,17 @@ public class TransferOut3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson3.mmObject();
+			type_lazy = () -> IndividualPerson3.mmObject();
+		}
+
+		@Override
+		public IndividualPerson3 getValue(TransferOut3 obj) {
+			return obj.getInvestor();
+		}
+
+		@Override
+		public void setValue(TransferOut3 obj, IndividualPerson3 value) {
+			obj.setInvestor(value);
 		}
 	};
 	@XmlElement(name = "InvstrAdr", required = true)
@@ -164,7 +175,7 @@ public class TransferOut3 {
 	 * definition} = "Information that locates the investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestorAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferOut3, PostalAddress1> mmInvestorAddress = new MMMessageAssociationEnd<TransferOut3, PostalAddress1>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut3.mmObject();
@@ -176,7 +187,17 @@ public class TransferOut3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public PostalAddress1 getValue(TransferOut3 obj) {
+			return obj.getInvestorAddress();
+		}
+
+		@Override
+		public void setValue(TransferOut3 obj, PostalAddress1 value) {
+			obj.setInvestorAddress(value);
 		}
 	};
 	@XmlElement(name = "ClntAcct", required = true)
@@ -212,7 +233,7 @@ public class TransferOut3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClientAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferOut3, Account4> mmClientAccount = new MMMessageAssociationEnd<TransferOut3, Account4>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut3.mmObject();
@@ -224,7 +245,17 @@ public class TransferOut3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account4.mmObject();
+			type_lazy = () -> Account4.mmObject();
+		}
+
+		@Override
+		public Account4 getValue(TransferOut3 obj) {
+			return obj.getClientAccount();
+		}
+
+		@Override
+		public void setValue(TransferOut3 obj, Account4 value) {
+			obj.setClientAccount(value);
 		}
 	};
 	@XmlElement(name = "NmneeAcct", required = true)
@@ -260,7 +291,7 @@ public class TransferOut3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNomineeAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferOut3, Account3> mmNomineeAccount = new MMMessageAssociationEnd<TransferOut3, Account3>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountPartyRole.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut3.mmObject();
@@ -272,7 +303,17 @@ public class TransferOut3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account3.mmObject();
+			type_lazy = () -> Account3.mmObject();
+		}
+
+		@Override
+		public Account3 getValue(TransferOut3 obj) {
+			return obj.getNomineeAccount();
+		}
+
+		@Override
+		public void setValue(TransferOut3 obj, Account3 value) {
+			obj.setNomineeAccount(value);
 		}
 	};
 	@XmlElement(name = "NewPlanMgr", required = true)
@@ -305,7 +346,7 @@ public class TransferOut3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewPlanManager = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferOut3, PartyIdentification2Choice> mmNewPlanManager = new MMMessageAssociationEnd<TransferOut3, PartyIdentification2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut3.mmObject();
 			isDerived = false;
@@ -318,9 +359,19 @@ public class TransferOut3 {
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
+
+		@Override
+		public PartyIdentification2Choice getValue(TransferOut3 obj) {
+			return obj.getNewPlanManager();
+		}
+
+		@Override
+		public void setValue(TransferOut3 obj, PartyIdentification2Choice value) {
+			obj.setNewPlanManager(value);
+		}
 	};
 	@XmlElement(name = "PdctTrf", required = true)
-	protected List<com.tools20022.repository.msg.PEPISATransfer1> productTransfer;
+	protected List<PEPISATransfer1> productTransfer;
 	/**
 	 * 
 	 <p>
@@ -353,7 +404,7 @@ public class TransferOut3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProductTransfer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferOut3, List<PEPISATransfer1>> mmProductTransfer = new MMMessageAssociationEnd<TransferOut3, List<PEPISATransfer1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut3.mmObject();
@@ -364,11 +415,21 @@ public class TransferOut3 {
 			definition = "Transfer of a security on a securities account servicer after the receipt of a securities settlement instruction, or the transfer of cash on an account servicer after the receipt of a payment instruction. The transfer consists of a debit/credit operation in the books of the account servicer.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PEPISATransfer1.mmObject();
+			type_lazy = () -> PEPISATransfer1.mmObject();
+		}
+
+		@Override
+		public List<PEPISATransfer1> getValue(TransferOut3 obj) {
+			return obj.getProductTransfer();
+		}
+
+		@Override
+		public void setValue(TransferOut3 obj, List<PEPISATransfer1> value) {
+			obj.setProductTransfer(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -395,7 +456,7 @@ public class TransferOut3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferOut3, List<Extension1>> mmExtension = new MMMessageAssociationEnd<TransferOut3, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut3.mmObject();
 			isDerived = false;
@@ -405,7 +466,17 @@ public class TransferOut3 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(TransferOut3 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(TransferOut3 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -429,7 +500,7 @@ public class TransferOut3 {
 		return investor;
 	}
 
-	public TransferOut3 setInvestor(com.tools20022.repository.msg.IndividualPerson3 investor) {
+	public TransferOut3 setInvestor(IndividualPerson3 investor) {
 		this.investor = Objects.requireNonNull(investor);
 		return this;
 	}
@@ -438,7 +509,7 @@ public class TransferOut3 {
 		return investorAddress;
 	}
 
-	public TransferOut3 setInvestorAddress(com.tools20022.repository.msg.PostalAddress1 investorAddress) {
+	public TransferOut3 setInvestorAddress(PostalAddress1 investorAddress) {
 		this.investorAddress = Objects.requireNonNull(investorAddress);
 		return this;
 	}
@@ -447,7 +518,7 @@ public class TransferOut3 {
 		return clientAccount;
 	}
 
-	public TransferOut3 setClientAccount(com.tools20022.repository.msg.Account4 clientAccount) {
+	public TransferOut3 setClientAccount(Account4 clientAccount) {
 		this.clientAccount = Objects.requireNonNull(clientAccount);
 		return this;
 	}
@@ -456,7 +527,7 @@ public class TransferOut3 {
 		return nomineeAccount;
 	}
 
-	public TransferOut3 setNomineeAccount(com.tools20022.repository.msg.Account3 nomineeAccount) {
+	public TransferOut3 setNomineeAccount(Account3 nomineeAccount) {
 		this.nomineeAccount = Objects.requireNonNull(nomineeAccount);
 		return this;
 	}
@@ -474,7 +545,7 @@ public class TransferOut3 {
 		return productTransfer == null ? productTransfer = new ArrayList<>() : productTransfer;
 	}
 
-	public TransferOut3 setProductTransfer(List<com.tools20022.repository.msg.PEPISATransfer1> productTransfer) {
+	public TransferOut3 setProductTransfer(List<PEPISATransfer1> productTransfer) {
 		this.productTransfer = Objects.requireNonNull(productTransfer);
 		return this;
 	}
@@ -483,7 +554,7 @@ public class TransferOut3 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public TransferOut3 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public TransferOut3 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

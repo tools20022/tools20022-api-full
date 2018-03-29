@@ -138,7 +138,7 @@ public class CorporateActionOption128 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption128, OptionNumber1Choice> mmOptionNumber = new MMMessageAssociationEnd<CorporateActionOption128, OptionNumber1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption128.mmObject();
@@ -152,6 +152,16 @@ public class CorporateActionOption128 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OptionNumber1Choice.mmObject();
+		}
+
+		@Override
+		public OptionNumber1Choice getValue(CorporateActionOption128 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption128 obj, OptionNumber1Choice value) {
+			obj.setOptionNumber(value);
 		}
 	};
 	@XmlElement(name = "OptnTp", required = true)
@@ -192,7 +202,7 @@ public class CorporateActionOption128 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption128, CorporateActionOption29Choice> mmOptionType = new MMMessageAssociationEnd<CorporateActionOption128, CorporateActionOption29Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption128.mmObject();
@@ -206,6 +216,16 @@ public class CorporateActionOption128 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionOption29Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption29Choice getValue(CorporateActionOption128 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption128 obj, CorporateActionOption29Choice value) {
+			obj.setOptionType(value);
 		}
 	};
 	@XmlElement(name = "InstdQty", required = true)
@@ -244,7 +264,7 @@ public class CorporateActionOption128 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption128, Quantity40Choice> mmInstructedQuantity = new MMMessageAttribute<CorporateActionOption128, Quantity40Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption128.mmObject();
@@ -256,6 +276,16 @@ public class CorporateActionOption128 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity40Choice.mmObject();
+		}
+
+		@Override
+		public Quantity40Choice getValue(CorporateActionOption128 obj) {
+			return obj.getInstructedQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption128 obj, Quantity40Choice value) {
+			obj.setInstructedQuantity(value);
 		}
 	};
 

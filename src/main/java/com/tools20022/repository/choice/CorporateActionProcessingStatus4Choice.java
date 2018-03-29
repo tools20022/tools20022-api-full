@@ -134,7 +134,7 @@ public class CorporateActionProcessingStatus4Choice {
 	 * CorporateActionProcessingStatus3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionProcessingStatus4Choice, CorporateActionEventStatus1> mmCode = new MMMessageAttribute<CorporateActionProcessingStatus4Choice, CorporateActionEventStatus1>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.mmObject();
@@ -148,6 +148,16 @@ public class CorporateActionProcessingStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionEventStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventStatus1 getValue(CorporateActionProcessingStatus4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionProcessingStatus4Choice obj, CorporateActionEventStatus1 value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -200,7 +210,7 @@ public class CorporateActionProcessingStatus4Choice {
 	 * CorporateActionProcessingStatus3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionProcessingStatus4Choice, GenericIdentification25> mmProprietary = new MMMessageAttribute<CorporateActionProcessingStatus4Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus4Choice.mmObject();
@@ -214,6 +224,16 @@ public class CorporateActionProcessingStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(CorporateActionProcessingStatus4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionProcessingStatus4Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ChargeType1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +118,7 @@ public class Charge11 {
 	 * definition} = "Amount of money asked or paid for the charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge11, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Charge11, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge11.mmObject();
@@ -129,6 +130,16 @@ public class Charge11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(Charge11 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Charge11 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -165,7 +176,7 @@ public class Charge11 {
 	 * definition} = "Rate used to calculate the amount of the charge or fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge11, PercentageRate> mmRate = new MMMessageAttribute<Charge11, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge11.mmObject();
@@ -177,6 +188,16 @@ public class Charge11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Charge11 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Charge11 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -212,7 +233,7 @@ public class Charge11 {
 	 * definition} = "Type of service for which a charge is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge11, ChargeType1> mmType = new MMMessageAttribute<Charge11, ChargeType1>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge11.mmObject();
@@ -223,7 +244,17 @@ public class Charge11 {
 			definition = "Type of service for which a charge is asked or paid.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.ChargeType1.mmObject();
+			complexType_lazy = () -> ChargeType1.mmObject();
+		}
+
+		@Override
+		public ChargeType1 getValue(Charge11 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Charge11 obj, ChargeType1 value) {
+			obj.setType(value);
 		}
 	};
 	/**
@@ -308,7 +339,7 @@ public class Charge11 {
 		return type;
 	}
 
-	public Charge11 setType(com.tools20022.repository.msg.ChargeType1 type) {
+	public Charge11 setType(ChargeType1 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}

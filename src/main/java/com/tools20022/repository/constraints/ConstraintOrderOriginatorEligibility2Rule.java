@@ -61,12 +61,16 @@ public class ConstraintOrderOriginatorEligibility2Rule {
 	 */
 	public static final MMConstraint<InvestmentAccount21> forInvestmentAccount21 = new MMConstraint<InvestmentAccount21>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility2Rule::checkInvestmentAccount21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility2Rule";
 			definition = "OrderOriginatorEligibility may only be present if one or more of the parties identified in OwnerIdentification is/are the originator of the order.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility2Rule.forInvestmentAccount58);
 			owner_lazy = () -> InvestmentAccount21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount21 obj) throws Exception {
+			checkInvestmentAccount21(obj);
 		}
 	};
 	/**
@@ -97,12 +101,16 @@ public class ConstraintOrderOriginatorEligibility2Rule {
 	 */
 	public static final MMConstraint<InvestmentAccount58> forInvestmentAccount58 = new MMConstraint<InvestmentAccount58>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility2Rule::checkInvestmentAccount58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility2Rule";
 			definition = "OrderOriginatorEligibility may only be present if one or more of the parties identified in OwnerIdentification is/are the originator of the order.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility2Rule.forInvestmentAccount21;
 			owner_lazy = () -> InvestmentAccount58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount58 obj) throws Exception {
+			checkInvestmentAccount58(obj);
 		}
 	};
 

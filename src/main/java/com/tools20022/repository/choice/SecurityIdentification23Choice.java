@@ -175,7 +175,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmISIN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, ISINIdentifier> mmISIN = new MMMessageAttribute<SecurityIdentification23Choice, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -189,6 +189,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, ISINIdentifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "SEDOL", required = true)
@@ -241,7 +251,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmSEDOL}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSEDOL = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, SEDOLIdentifier> mmSEDOL = new MMMessageAttribute<SecurityIdentification23Choice, SEDOLIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSEDOL;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -255,6 +265,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
+		}
+
+		@Override
+		public SEDOLIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getSEDOL();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, SEDOLIdentifier value) {
+			obj.setSEDOL(value);
 		}
 	};
 	@XmlElement(name = "CUSIP", required = true)
@@ -307,7 +327,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmCUSIP}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCUSIP = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, CUSIPIdentifier> mmCUSIP = new MMMessageAttribute<SecurityIdentification23Choice, CUSIPIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCUSIP;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -321,6 +341,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
+		}
+
+		@Override
+		public CUSIPIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getCUSIP();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, CUSIPIdentifier value) {
+			obj.setCUSIP(value);
 		}
 	};
 	@XmlElement(name = "RIC", required = true)
@@ -373,7 +403,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmRIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, RICIdentifier> mmRIC = new MMMessageAttribute<SecurityIdentification23Choice, RICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmRIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -387,6 +417,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RICIdentifier.mmObject();
+		}
+
+		@Override
+		public RICIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getRIC();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, RICIdentifier value) {
+			obj.setRIC(value);
 		}
 	};
 	@XmlElement(name = "TckrSymb", required = true)
@@ -439,7 +479,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmTickerSymbol}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, TickerIdentifier> mmTickerSymbol = new MMMessageAttribute<SecurityIdentification23Choice, TickerIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmTickerSymbol;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -453,6 +493,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TickerIdentifier.mmObject();
+		}
+
+		@Override
+		public TickerIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getTickerSymbol();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, TickerIdentifier value) {
+			obj.setTickerSymbol(value);
 		}
 	};
 	@XmlElement(name = "Blmbrg", required = true)
@@ -504,7 +554,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmBloomberg}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBloomberg = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, BloombergIdentifier> mmBloomberg = new MMMessageAttribute<SecurityIdentification23Choice, BloombergIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmBloomberg;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -518,6 +568,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BloombergIdentifier.mmObject();
+		}
+
+		@Override
+		public BloombergIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getBloomberg();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, BloombergIdentifier value) {
+			obj.setBloomberg(value);
 		}
 	};
 	@XmlElement(name = "CTA", required = true)
@@ -570,7 +630,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmCTA}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCTA = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, ConsolidatedTapeAssociationIdentifier> mmCTA = new MMMessageAttribute<SecurityIdentification23Choice, ConsolidatedTapeAssociationIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCTA;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -584,6 +644,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConsolidatedTapeAssociationIdentifier.mmObject();
+		}
+
+		@Override
+		public ConsolidatedTapeAssociationIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getCTA();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, ConsolidatedTapeAssociationIdentifier value) {
+			obj.setCTA(value);
 		}
 	};
 	@XmlElement(name = "QUICK", required = true)
@@ -636,7 +706,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmQUICK}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQUICK = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, QUICKIdentifier> mmQUICK = new MMMessageAttribute<SecurityIdentification23Choice, QUICKIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmQUICK;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -650,6 +720,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> QUICKIdentifier.mmObject();
+		}
+
+		@Override
+		public QUICKIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getQUICK();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, QUICKIdentifier value) {
+			obj.setQUICK(value);
 		}
 	};
 	@XmlElement(name = "Wrtppr", required = true)
@@ -702,7 +782,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmWertpapier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWertpapier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, WertpapierIdentifier> mmWertpapier = new MMMessageAttribute<SecurityIdentification23Choice, WertpapierIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmWertpapier;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -716,6 +796,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WertpapierIdentifier.mmObject();
+		}
+
+		@Override
+		public WertpapierIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getWertpapier();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, WertpapierIdentifier value) {
+			obj.setWertpapier(value);
 		}
 	};
 	@XmlElement(name = "Dtch", required = true)
@@ -766,7 +856,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmDutch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDutch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, DutchIdentifier> mmDutch = new MMMessageAttribute<SecurityIdentification23Choice, DutchIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmDutch;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -780,6 +870,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DutchIdentifier.mmObject();
+		}
+
+		@Override
+		public DutchIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getDutch();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, DutchIdentifier value) {
+			obj.setDutch(value);
 		}
 	};
 	@XmlElement(name = "Vlrn", required = true)
@@ -832,7 +932,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmValoren}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValoren = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, ValorenIdentifier> mmValoren = new MMMessageAttribute<SecurityIdentification23Choice, ValorenIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmValoren;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -846,6 +946,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ValorenIdentifier.mmObject();
+		}
+
+		@Override
+		public ValorenIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getValoren();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, ValorenIdentifier value) {
+			obj.setValoren(value);
 		}
 	};
 	@XmlElement(name = "SCVM", required = true)
@@ -898,7 +1008,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmSicovam}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSicovam = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, SicovamIdentifier> mmSicovam = new MMMessageAttribute<SecurityIdentification23Choice, SicovamIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSicovam;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -912,6 +1022,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SicovamIdentifier.mmObject();
+		}
+
+		@Override
+		public SicovamIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getSicovam();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, SicovamIdentifier value) {
+			obj.setSicovam(value);
 		}
 	};
 	@XmlElement(name = "Belgn", required = true)
@@ -962,7 +1082,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmBelgian}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBelgian = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, BelgianIdentifier> mmBelgian = new MMMessageAttribute<SecurityIdentification23Choice, BelgianIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmBelgian;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -976,6 +1096,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BelgianIdentifier.mmObject();
+		}
+
+		@Override
+		public BelgianIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getBelgian();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, BelgianIdentifier value) {
+			obj.setBelgian(value);
 		}
 	};
 	@XmlElement(name = "Cmon", required = true)
@@ -1028,7 +1158,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmCommon}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommon = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, EuroclearClearstreamIdentifier> mmCommon = new MMMessageAttribute<SecurityIdentification23Choice, EuroclearClearstreamIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCommon;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -1042,6 +1172,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EuroclearClearstreamIdentifier.mmObject();
+		}
+
+		@Override
+		public EuroclearClearstreamIdentifier getValue(SecurityIdentification23Choice obj) {
+			return obj.getCommon();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, EuroclearClearstreamIdentifier value) {
+			obj.setCommon(value);
 		}
 	};
 	@XmlElement(name = "OthrPrtryId", required = true)
@@ -1094,7 +1234,7 @@ public class SecurityIdentification23Choice {
 	 * SecurityIdentification3Choice.mmOtherProprietaryIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification23Choice, AlternateSecurityIdentification7> mmOtherProprietaryIdentification = new MMMessageAttribute<SecurityIdentification23Choice, AlternateSecurityIdentification7>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification23Choice.mmObject();
@@ -1108,6 +1248,16 @@ public class SecurityIdentification23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AlternateSecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public AlternateSecurityIdentification7 getValue(SecurityIdentification23Choice obj) {
+			return obj.getOtherProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification23Choice obj, AlternateSecurityIdentification7 value) {
+			obj.setOtherProprietaryIdentification(value);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DetailedAmount8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class CardTransactionAmount5 {
 	 * CardTransactionAmount1.mmTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionAmount5, CurrencyAndAmount> mmTotalAmount = new MMMessageAttribute<CardTransactionAmount5, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionAmount5.mmObject();
@@ -137,6 +138,16 @@ public class CardTransactionAmount5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(CardTransactionAmount5 obj) {
+			return obj.getTotalAmount();
+		}
+
+		@Override
+		public void setValue(CardTransactionAmount5 obj, CurrencyAndAmount value) {
+			obj.setTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "CrdhldrBllgTxAmt")
@@ -179,7 +190,7 @@ public class CardTransactionAmount5 {
 	 * CardTransactionAmount1.mmCardholderBillingTransactionAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCardholderBillingTransactionAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionAmount5, Optional<DetailedAmount8>> mmCardholderBillingTransactionAmount = new MMMessageAssociationEnd<CardTransactionAmount5, Optional<DetailedAmount8>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmDetailedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionAmount5.mmObject();
@@ -192,7 +203,17 @@ public class CardTransactionAmount5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
+			type_lazy = () -> DetailedAmount8.mmObject();
+		}
+
+		@Override
+		public Optional<DetailedAmount8> getValue(CardTransactionAmount5 obj) {
+			return obj.getCardholderBillingTransactionAmount();
+		}
+
+		@Override
+		public void setValue(CardTransactionAmount5 obj, Optional<DetailedAmount8> value) {
+			obj.setCardholderBillingTransactionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcncltnTxAmt")
@@ -230,7 +251,7 @@ public class CardTransactionAmount5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReconciliationTransactionAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionAmount5, Optional<DetailedAmount8>> mmReconciliationTransactionAmount = new MMMessageAssociationEnd<CardTransactionAmount5, Optional<DetailedAmount8>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmDetailedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionAmount5.mmObject();
@@ -242,7 +263,17 @@ public class CardTransactionAmount5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount8.mmObject();
+			type_lazy = () -> DetailedAmount8.mmObject();
+		}
+
+		@Override
+		public Optional<DetailedAmount8> getValue(CardTransactionAmount5 obj) {
+			return obj.getReconciliationTransactionAmount();
+		}
+
+		@Override
+		public void setValue(CardTransactionAmount5 obj, Optional<DetailedAmount8> value) {
+			obj.setReconciliationTransactionAmount(value.orElse(null));
 		}
 	};
 
@@ -275,7 +306,7 @@ public class CardTransactionAmount5 {
 		return cardholderBillingTransactionAmount == null ? Optional.empty() : Optional.of(cardholderBillingTransactionAmount);
 	}
 
-	public CardTransactionAmount5 setCardholderBillingTransactionAmount(com.tools20022.repository.msg.DetailedAmount8 cardholderBillingTransactionAmount) {
+	public CardTransactionAmount5 setCardholderBillingTransactionAmount(DetailedAmount8 cardholderBillingTransactionAmount) {
 		this.cardholderBillingTransactionAmount = cardholderBillingTransactionAmount;
 		return this;
 	}
@@ -284,7 +315,7 @@ public class CardTransactionAmount5 {
 		return reconciliationTransactionAmount == null ? Optional.empty() : Optional.of(reconciliationTransactionAmount);
 	}
 
-	public CardTransactionAmount5 setReconciliationTransactionAmount(com.tools20022.repository.msg.DetailedAmount8 reconciliationTransactionAmount) {
+	public CardTransactionAmount5 setReconciliationTransactionAmount(DetailedAmount8 reconciliationTransactionAmount) {
 		this.reconciliationTransactionAmount = reconciliationTransactionAmount;
 		return this;
 	}

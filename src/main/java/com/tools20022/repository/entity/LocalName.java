@@ -21,9 +21,9 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -297,7 +297,7 @@ public class LocalName {
 	 * definition} = "Name of the security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFullName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<LocalName, Max350Text> mmFullName = new MMBusinessAttribute<LocalName, Max350Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmName, SecurityIdentification1.mmName, FinancialInstrument17.mmName, FinancialInstrument6.mmName, FinancialInstrument10.mmName, FinancialInstrument29.mmName,
 					FinancialInstrument7.mmName, FinancialInstrument12.mmName, FinancialInstrument26.mmName, FinancialInstrument30.mmName, FinancialInstrument11.mmName, FinancialInstrument25.mmName, FinancialInstrument27.mmName,
@@ -319,12 +319,14 @@ public class LocalName {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return LocalName.class.getMethod("getFullName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(LocalName obj) {
+			return obj.getFullName();
+		}
+
+		@Override
+		public void setValue(LocalName obj, Max350Text value) {
+			obj.setFullName(value);
 		}
 	};
 	protected SecuritiesIdentification relatedSecurity;
@@ -361,7 +363,7 @@ public class LocalName {
 	 * definition} = "Identification which contains a name."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<LocalName, Optional<SecuritiesIdentification>> mmRelatedSecurity = new MMBusinessAssociationEnd<LocalName, Optional<SecuritiesIdentification>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
@@ -370,9 +372,19 @@ public class LocalName {
 			definition = "Identification which contains a name.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmName;
+			opposite_lazy = () -> SecuritiesIdentification.mmName;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
+			type_lazy = () -> SecuritiesIdentification.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesIdentification> getValue(LocalName obj) {
+			return obj.getRelatedSecurity();
+		}
+
+		@Override
+		public void setValue(LocalName obj, Optional<SecuritiesIdentification> value) {
+			obj.setRelatedSecurity(value.orElse(null));
 		}
 	};
 	protected Max35Text shortName;
@@ -459,10 +471,10 @@ public class LocalName {
 	 * name} = "ShortName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Short name of the security."</li>
+	 * definition} = "Short name of the security"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmShortName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<LocalName, Max35Text> mmShortName = new MMBusinessAttribute<LocalName, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes1.mmISOSecurityShortName, FinancialInstrumentName1.mmISOShortName, FinancialInstrument51.mmShortName, FinancialInstrument50.mmShortName,
 					FinancialInstrument45.mmShortName, FinancialInstrument49.mmShortName, FinancialInstrument48.mmShortName, FinancialInstrument47.mmShortName, FinancialInstrument46.mmShortName, SecurityInstrumentDescription9.mmShortName,
@@ -472,18 +484,20 @@ public class LocalName {
 			elementContext_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShortName";
-			definition = "Short name of the security.";
+			definition = "Short name of the security";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return LocalName.class.getMethod("getShortName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(LocalName obj) {
+			return obj.getShortName();
+		}
+
+		@Override
+		public void setValue(LocalName obj, Max35Text value) {
+			obj.setShortName(value);
 		}
 	};
 	protected LanguageCode language;
@@ -511,7 +525,7 @@ public class LocalName {
 	 * definition} = "Language in which the security name is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmLanguage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<LocalName, LanguageCode> mmLanguage = new MMBusinessAttribute<LocalName, LanguageCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
@@ -523,12 +537,14 @@ public class LocalName {
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return LocalName.class.getMethod("getLanguage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public LanguageCode getValue(LocalName obj) {
+			return obj.getLanguage();
+		}
+
+		@Override
+		public void setValue(LocalName obj, LanguageCode value) {
+			obj.setLanguage(value);
 		}
 	};
 
@@ -539,7 +555,7 @@ public class LocalName {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LocalName";
 				definition = "Name of the security.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesIdentification.mmName);
+				associationDomain_lazy = () -> Arrays.asList(SecuritiesIdentification.mmName);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.LocalName.mmFullName, com.tools20022.repository.entity.LocalName.mmRelatedSecurity, com.tools20022.repository.entity.LocalName.mmShortName,
 						com.tools20022.repository.entity.LocalName.mmLanguage);
 				derivationComponent_lazy = () -> Arrays.asList(FinancialInstrumentName1.mmObject());
@@ -566,7 +582,7 @@ public class LocalName {
 		return relatedSecurity == null ? Optional.empty() : Optional.of(relatedSecurity);
 	}
 
-	public LocalName setRelatedSecurity(com.tools20022.repository.entity.SecuritiesIdentification relatedSecurity) {
+	public LocalName setRelatedSecurity(SecuritiesIdentification relatedSecurity) {
 		this.relatedSecurity = relatedSecurity;
 		return this;
 	}

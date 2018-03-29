@@ -113,7 +113,7 @@ public class ErrorHandling1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorHandling1Choice, ErrorHandling1Code> mmCode = new MMMessageAttribute<ErrorHandling1Choice, ErrorHandling1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ErrorHandling1Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class ErrorHandling1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ErrorHandling1Code.mmObject();
+		}
+
+		@Override
+		public ErrorHandling1Code getValue(ErrorHandling1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ErrorHandling1Choice obj, ErrorHandling1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class ErrorHandling1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorHandling1Choice, Max4AlphaNumericText> mmProprietary = new MMMessageAttribute<ErrorHandling1Choice, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ErrorHandling1Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class ErrorHandling1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(ErrorHandling1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ErrorHandling1Choice obj, Max4AlphaNumericText value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -107,7 +107,7 @@ public class PaymentStatusCode3Choice {
 	 * definition} = "Qualifies further the pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode3Choice, PendingStatus4Code> mmPendingStatus = new MMMessageAttribute<PaymentStatusCode3Choice, PendingStatus4Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode3Choice.mmObject();
@@ -119,6 +119,16 @@ public class PaymentStatusCode3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingStatus4Code.mmObject();
+		}
+
+		@Override
+		public PendingStatus4Code getValue(PaymentStatusCode3Choice obj) {
+			return obj.getPendingStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode3Choice obj, PendingStatus4Code value) {
+			obj.setPendingStatus(value);
 		}
 	};
 	@XmlElement(name = "FnlSts", required = true)
@@ -156,7 +166,7 @@ public class PaymentStatusCode3Choice {
 	 * definition} = "Qualifies further the final status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusCode3Choice, FinalStatusCode> mmFinalStatus = new MMMessageAttribute<PaymentStatusCode3Choice, FinalStatusCode>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode3Choice.mmObject();
@@ -168,6 +178,16 @@ public class PaymentStatusCode3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinalStatusCode.mmObject();
+		}
+
+		@Override
+		public FinalStatusCode getValue(PaymentStatusCode3Choice obj) {
+			return obj.getFinalStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusCode3Choice obj, FinalStatusCode value) {
+			obj.setFinalStatus(value);
 		}
 	};
 

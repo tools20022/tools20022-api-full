@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.Product;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BillingServiceCommonIdentification1;
+import com.tools20022.repository.msg.BillingSubServiceIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +137,7 @@ public class BillingServiceIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingServiceIdentification1, Max35Text> mmIdentification = new MMMessageAttribute<BillingServiceIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmObject();
@@ -148,6 +150,16 @@ public class BillingServiceIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BillingServiceIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(BillingServiceIdentification1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubSvc")
@@ -195,7 +207,7 @@ public class BillingServiceIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingServiceIdentification1, Optional<BillingSubServiceIdentification1>> mmSubService = new MMMessageAttribute<BillingServiceIdentification1, Optional<BillingSubServiceIdentification1>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmObject();
@@ -207,7 +219,17 @@ public class BillingServiceIdentification1 {
 			nextVersions_lazy = () -> Arrays.asList(BillingServiceIdentification3.mmSubService);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BillingSubServiceIdentification1.mmObject();
+			complexType_lazy = () -> BillingSubServiceIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<BillingSubServiceIdentification1> getValue(BillingServiceIdentification1 obj) {
+			return obj.getSubService();
+		}
+
+		@Override
+		public void setValue(BillingServiceIdentification1 obj, Optional<BillingSubServiceIdentification1> value) {
+			obj.setSubService(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -249,7 +271,7 @@ public class BillingServiceIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingServiceIdentification1, Max70Text> mmDescription = new MMMessageAttribute<BillingServiceIdentification1, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmObject();
 			isDerived = false;
@@ -261,6 +283,16 @@ public class BillingServiceIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(BillingServiceIdentification1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(BillingServiceIdentification1 obj, Max70Text value) {
+			obj.setDescription(value);
 		}
 	};
 	@XmlElement(name = "CmonCd")
@@ -303,7 +335,7 @@ public class BillingServiceIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingServiceIdentification1, Optional<BillingServiceCommonIdentification1>> mmCommonCode = new MMMessageAttribute<BillingServiceIdentification1, Optional<BillingServiceCommonIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmObject();
 			isDerived = false;
@@ -314,7 +346,17 @@ public class BillingServiceIdentification1 {
 			nextVersions_lazy = () -> Arrays.asList(BillingServiceIdentification3.mmCommonCode);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BillingServiceCommonIdentification1.mmObject();
+			complexType_lazy = () -> BillingServiceCommonIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<BillingServiceCommonIdentification1> getValue(BillingServiceIdentification1 obj) {
+			return obj.getCommonCode();
+		}
+
+		@Override
+		public void setValue(BillingServiceIdentification1 obj, Optional<BillingServiceCommonIdentification1> value) {
+			obj.setCommonCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcTp")
@@ -356,7 +398,7 @@ public class BillingServiceIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingServiceIdentification1, Optional<Max12Text>> mmServiceType = new MMMessageAttribute<BillingServiceIdentification1, Optional<Max12Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmObject();
 			isDerived = false;
@@ -368,6 +410,16 @@ public class BillingServiceIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max12Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max12Text> getValue(BillingServiceIdentification1 obj) {
+			return obj.getServiceType();
+		}
+
+		@Override
+		public void setValue(BillingServiceIdentification1 obj, Optional<Max12Text> value) {
+			obj.setServiceType(value.orElse(null));
 		}
 	};
 
@@ -401,7 +453,7 @@ public class BillingServiceIdentification1 {
 		return subService == null ? Optional.empty() : Optional.of(subService);
 	}
 
-	public BillingServiceIdentification1 setSubService(com.tools20022.repository.msg.BillingSubServiceIdentification1 subService) {
+	public BillingServiceIdentification1 setSubService(BillingSubServiceIdentification1 subService) {
 		this.subService = subService;
 		return this;
 	}
@@ -419,7 +471,7 @@ public class BillingServiceIdentification1 {
 		return commonCode == null ? Optional.empty() : Optional.of(commonCode);
 	}
 
-	public BillingServiceIdentification1 setCommonCode(com.tools20022.repository.msg.BillingServiceCommonIdentification1 commonCode) {
+	public BillingServiceIdentification1 setCommonCode(BillingServiceCommonIdentification1 commonCode) {
 		this.commonCode = commonCode;
 		return this;
 	}

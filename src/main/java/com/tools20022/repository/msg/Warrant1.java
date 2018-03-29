@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.Warrant;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -108,7 +109,7 @@ public class Warrant1 {
 	 * definition} = "Date on which the warrant expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Warrant1, Optional<ISODateTime>> mmExpiryDate = new MMMessageAttribute<Warrant1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant1.mmObject();
@@ -120,6 +121,16 @@ public class Warrant1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Warrant1 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(Warrant1 obj, Optional<ISODateTime> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mltplr")
@@ -157,7 +168,7 @@ public class Warrant1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMultiplier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Warrant1, Optional<BaseOneRate>> mmMultiplier = new MMMessageAttribute<Warrant1, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmMultiplier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant1.mmObject();
@@ -169,6 +180,16 @@ public class Warrant1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(Warrant1 obj) {
+			return obj.getMultiplier();
+		}
+
+		@Override
+		public void setValue(Warrant1 obj, Optional<BaseOneRate> value) {
+			obj.setMultiplier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcptPric")
@@ -205,7 +226,7 @@ public class Warrant1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Warrant1, Optional<Price1>> mmSubscriptionPrice = new MMMessageAttribute<Warrant1, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmSubscriptionPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant1.mmObject();
@@ -216,7 +237,17 @@ public class Warrant1 {
 			definition = "Pre-determined price at which the holder of a warrant is entitled to buy the underlying instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(Warrant1 obj) {
+			return obj.getSubscriptionPrice();
+		}
+
+		@Override
+		public void setValue(Warrant1 obj, Optional<Price1> value) {
+			obj.setSubscriptionPrice(value.orElse(null));
 		}
 	};
 
@@ -256,7 +287,7 @@ public class Warrant1 {
 		return subscriptionPrice == null ? Optional.empty() : Optional.of(subscriptionPrice);
 	}
 
-	public Warrant1 setSubscriptionPrice(com.tools20022.repository.msg.Price1 subscriptionPrice) {
+	public Warrant1 setSubscriptionPrice(Price1 subscriptionPrice) {
 		this.subscriptionPrice = subscriptionPrice;
 		return this;
 	}

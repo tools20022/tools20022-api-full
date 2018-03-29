@@ -29,7 +29,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <strong>Constant fields:</strong>
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageSet#getMessageDefinition
- * messageDefinition} = List of 670 elements</li>
+ * messageDefinition} = List of 744 elements</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelCatalogueEntry#getBusinessProcessCatalogue
  * businessProcessCatalogue} =

@@ -108,7 +108,7 @@ public class AdditionalRightThreshold1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRightThreshold = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalRightThreshold1Choice, Max35Text> mmAdditionalRightThreshold = new MMMessageAttribute<AdditionalRightThreshold1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmAdditionalRightThreshold;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmObject();
@@ -120,6 +120,16 @@ public class AdditionalRightThreshold1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AdditionalRightThreshold1Choice obj) {
+			return obj.getAdditionalRightThreshold();
+		}
+
+		@Override
+		public void setValue(AdditionalRightThreshold1Choice obj, Max35Text value) {
+			obj.setAdditionalRightThreshold(value);
 		}
 	};
 	@XmlElement(name = "AddtlRghtThrshldPctg", required = true)
@@ -159,7 +169,7 @@ public class AdditionalRightThreshold1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRightThresholdPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalRightThreshold1Choice, PercentageRate> mmAdditionalRightThresholdPercentage = new MMMessageAttribute<AdditionalRightThreshold1Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmAdditionalRightThresholdPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmObject();
@@ -171,6 +181,16 @@ public class AdditionalRightThreshold1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(AdditionalRightThreshold1Choice obj) {
+			return obj.getAdditionalRightThresholdPercentage();
+		}
+
+		@Override
+		public void setValue(AdditionalRightThreshold1Choice obj, PercentageRate value) {
+			obj.setAdditionalRightThresholdPercentage(value);
 		}
 	};
 

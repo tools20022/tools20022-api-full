@@ -135,7 +135,7 @@ public class ReservationOrError4Choice {
 	 * ReservationOrError2Choice.mmBusinessReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationOrError4Choice, CurrentAndDefaultReservation2> mmBusinessReport = new MMMessageAssociationEnd<ReservationOrError4Choice, CurrentAndDefaultReservation2>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReservationOrError4Choice.mmObject();
@@ -150,6 +150,16 @@ public class ReservationOrError4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CurrentAndDefaultReservation2.mmObject();
+		}
+
+		@Override
+		public CurrentAndDefaultReservation2 getValue(ReservationOrError4Choice obj) {
+			return obj.getBusinessReport();
+		}
+
+		@Override
+		public void setValue(ReservationOrError4Choice obj, CurrentAndDefaultReservation2 value) {
+			obj.setBusinessReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -195,7 +205,7 @@ public class ReservationOrError4Choice {
 	 * ReservationOrError2Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationOrError4Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<ReservationOrError4Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReservationOrError4Choice.mmObject();
 			isDerived = false;
@@ -208,6 +218,16 @@ public class ReservationOrError4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(ReservationOrError4Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(ReservationOrError4Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

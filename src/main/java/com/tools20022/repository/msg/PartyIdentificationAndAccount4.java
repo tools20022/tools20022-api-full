@@ -28,6 +28,9 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.ContactPersonRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
+import com.tools20022.repository.msg.ContactIdentification2;
+import com.tools20022.repository.msg.SubAccount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -141,7 +144,7 @@ public class PartyIdentificationAndAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount4, PartyIdentification2Choice> mmPartyIdentification = new MMMessageAttribute<PartyIdentificationAndAccount4, PartyIdentification2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount4.mmObject();
@@ -154,6 +157,16 @@ public class PartyIdentificationAndAccount4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(PartyIdentificationAndAccount4 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount4 obj, PartyIdentification2Choice value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -199,7 +212,7 @@ public class PartyIdentificationAndAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount4, Optional<AccountIdentification1>> mmAccountIdentification = new MMMessageAttribute<PartyIdentificationAndAccount4, Optional<AccountIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount4.mmObject();
@@ -211,7 +224,17 @@ public class PartyIdentificationAndAccount4 {
 			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount123.mmAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1> getValue(PartyIdentificationAndAccount4 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount4 obj, Optional<AccountIdentification1> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgRef")
@@ -253,7 +276,7 @@ public class PartyIdentificationAndAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount4, Optional<Max35Text>> mmProcessingReference = new MMMessageAttribute<PartyIdentificationAndAccount4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount4.mmObject();
 			isDerived = false;
@@ -265,6 +288,16 @@ public class PartyIdentificationAndAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentificationAndAccount4 obj) {
+			return obj.getProcessingReference();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount4 obj, Optional<Max35Text> value) {
+			obj.setProcessingReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgDt")
@@ -307,7 +340,7 @@ public class PartyIdentificationAndAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount4, Optional<DateAndDateTimeChoice>> mmProcessingDate = new MMMessageAttribute<PartyIdentificationAndAccount4, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount4.mmObject();
 			isDerived = false;
@@ -319,6 +352,16 @@ public class PartyIdentificationAndAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PartyIdentificationAndAccount4 obj) {
+			return obj.getProcessingDate();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount4 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setProcessingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubAcctDtls")
@@ -364,7 +407,7 @@ public class PartyIdentificationAndAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount4, Optional<SubAccount1>> mmSubAccountDetails = new MMMessageAssociationEnd<PartyIdentificationAndAccount4, Optional<SubAccount1>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount4.mmObject();
@@ -377,7 +420,17 @@ public class PartyIdentificationAndAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubAccount1.mmObject();
+			type_lazy = () -> SubAccount1.mmObject();
+		}
+
+		@Override
+		public Optional<SubAccount1> getValue(PartyIdentificationAndAccount4 obj) {
+			return obj.getSubAccountDetails();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount4 obj, Optional<SubAccount1> value) {
+			obj.setSubAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctPrsn")
@@ -421,7 +474,7 @@ public class PartyIdentificationAndAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount4, Optional<ContactIdentification2>> mmContactPerson = new MMMessageAssociationEnd<PartyIdentificationAndAccount4, Optional<ContactIdentification2>>() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount4.mmObject();
@@ -434,7 +487,17 @@ public class PartyIdentificationAndAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
+			type_lazy = () -> ContactIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification2> getValue(PartyIdentificationAndAccount4 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount4 obj, Optional<ContactIdentification2> value) {
+			obj.setContactPerson(value.orElse(null));
 		}
 	};
 
@@ -468,7 +531,7 @@ public class PartyIdentificationAndAccount4 {
 		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public PartyIdentificationAndAccount4 setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
+	public PartyIdentificationAndAccount4 setAccountIdentification(AccountIdentification1 accountIdentification) {
 		this.accountIdentification = accountIdentification;
 		return this;
 	}
@@ -495,7 +558,7 @@ public class PartyIdentificationAndAccount4 {
 		return subAccountDetails == null ? Optional.empty() : Optional.of(subAccountDetails);
 	}
 
-	public PartyIdentificationAndAccount4 setSubAccountDetails(com.tools20022.repository.msg.SubAccount1 subAccountDetails) {
+	public PartyIdentificationAndAccount4 setSubAccountDetails(SubAccount1 subAccountDetails) {
 		this.subAccountDetails = subAccountDetails;
 		return this;
 	}
@@ -504,7 +567,7 @@ public class PartyIdentificationAndAccount4 {
 		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public PartyIdentificationAndAccount4 setContactPerson(com.tools20022.repository.msg.ContactIdentification2 contactPerson) {
+	public PartyIdentificationAndAccount4 setContactPerson(ContactIdentification2 contactPerson) {
 		this.contactPerson = contactPerson;
 		return this;
 	}

@@ -103,10 +103,12 @@ public class BalanceTransferFundingLimit1 {
 	 * name} = "CurrencyAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Balance in account to be transferred."</li>
+	 * definition} =
+	 * "Maximum value and related currency that can be sent by the new account servicer to the old account servicer in case of a negative closing balance."
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceTransferFundingLimit1, ActiveCurrencyAndAmount> mmCurrencyAmount = new MMMessageAttribute<BalanceTransferFundingLimit1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceTransferFundingLimit1.mmObject();
@@ -114,10 +116,20 @@ public class BalanceTransferFundingLimit1 {
 			xmlTag = "CcyAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAmount";
-			definition = "Balance in account to be transferred.";
+			definition = "Maximum value and related currency that can be sent by the new account servicer to the old account servicer in case of a negative closing balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(BalanceTransferFundingLimit1 obj) {
+			return obj.getCurrencyAmount();
+		}
+
+		@Override
+		public void setValue(BalanceTransferFundingLimit1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCurrencyAmount(value);
 		}
 	};
 

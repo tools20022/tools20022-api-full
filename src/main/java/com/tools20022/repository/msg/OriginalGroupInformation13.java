@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StatusReasonInformation4;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -133,7 +134,7 @@ public class OriginalGroupInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation13, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalGroupInformation13, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
@@ -145,6 +146,16 @@ public class OriginalGroupInformation13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation13 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation13 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "NtwkFileNm", required = true)
@@ -178,7 +189,7 @@ public class OriginalGroupInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetworkFileName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation13, Max35Text> mmNetworkFileName = new MMMessageAttribute<OriginalGroupInformation13, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
 			isDerived = false;
@@ -189,6 +200,16 @@ public class OriginalGroupInformation13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation13 obj) {
+			return obj.getNetworkFileName();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation13 obj, Max35Text value) {
+			obj.setNetworkFileName(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -222,7 +243,7 @@ public class OriginalGroupInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation13, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalGroupInformation13, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
 			isDerived = false;
@@ -233,6 +254,16 @@ public class OriginalGroupInformation13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation13 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation13 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "GrpSts")
@@ -270,7 +301,7 @@ public class OriginalGroupInformation13 {
 	 * definition} = "Specifies the status of a group of transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation13, Optional<TransactionGroupStatus2Code>> mmGroupStatus = new MMMessageAttribute<OriginalGroupInformation13, Optional<TransactionGroupStatus2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
@@ -282,6 +313,16 @@ public class OriginalGroupInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionGroupStatus2Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionGroupStatus2Code> getValue(OriginalGroupInformation13 obj) {
+			return obj.getGroupStatus();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation13 obj, Optional<TransactionGroupStatus2Code> value) {
+			obj.setGroupStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsRsnInf")
@@ -318,7 +359,7 @@ public class OriginalGroupInformation13 {
 	 * definition} = "Detailed information on the status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupInformation13, Optional<StatusReasonInformation4>> mmStatusReasonInformation = new MMMessageAssociationEnd<OriginalGroupInformation13, Optional<StatusReasonInformation4>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation13.mmObject();
@@ -330,7 +371,17 @@ public class OriginalGroupInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation4.mmObject();
+			type_lazy = () -> StatusReasonInformation4.mmObject();
+		}
+
+		@Override
+		public Optional<StatusReasonInformation4> getValue(OriginalGroupInformation13 obj) {
+			return obj.getStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation13 obj, Optional<StatusReasonInformation4> value) {
+			obj.setStatusReasonInformation(value.orElse(null));
 		}
 	};
 	/**
@@ -442,7 +493,7 @@ public class OriginalGroupInformation13 {
 		return statusReasonInformation == null ? Optional.empty() : Optional.of(statusReasonInformation);
 	}
 
-	public OriginalGroupInformation13 setStatusReasonInformation(com.tools20022.repository.msg.StatusReasonInformation4 statusReasonInformation) {
+	public OriginalGroupInformation13 setStatusReasonInformation(StatusReasonInformation4 statusReasonInformation) {
 		this.statusReasonInformation = statusReasonInformation;
 		return this;
 	}

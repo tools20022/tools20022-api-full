@@ -127,7 +127,7 @@ public class TransactionReportOrError2Choice {
 	 * TransactionReportOrError1Choice.mmBusinessReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReportOrError2Choice, Transactions6> mmBusinessReport = new MMMessageAssociationEnd<TransactionReportOrError2Choice, Transactions6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -141,6 +141,16 @@ public class TransactionReportOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Transactions6.mmObject();
+		}
+
+		@Override
+		public Transactions6 getValue(TransactionReportOrError2Choice obj) {
+			return obj.getBusinessReport();
+		}
+
+		@Override
+		public void setValue(TransactionReportOrError2Choice obj, Transactions6 value) {
+			obj.setBusinessReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -186,7 +196,7 @@ public class TransactionReportOrError2Choice {
 	 * TransactionReportOrError1Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReportOrError2Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<TransactionReportOrError2Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -199,6 +209,16 @@ public class TransactionReportOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(TransactionReportOrError2Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(TransactionReportOrError2Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

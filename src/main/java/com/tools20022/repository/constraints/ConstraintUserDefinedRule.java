@@ -62,12 +62,16 @@ public class ConstraintUserDefinedRule {
 	 */
 	public static final MMConstraint<BreakdownByUserDefinedParameter1> forBreakdownByUserDefinedParameter1 = new MMConstraint<BreakdownByUserDefinedParameter1>() {
 		{
-			validator = ConstraintUserDefinedRule::checkBreakdownByUserDefinedParameter1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedRule";
 			definition = "At least one message element in the list (Party, Country, Currency, UserDefined) must be present. More than one element in the list (Party, Country, Currency, UserDefined) may be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUserDefinedRule.forBreakdownByUserDefinedParameter3);
 			owner_lazy = () -> BreakdownByUserDefinedParameter1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BreakdownByUserDefinedParameter1 obj) throws Exception {
+			checkBreakdownByUserDefinedParameter1(obj);
 		}
 	};
 	/**
@@ -98,12 +102,16 @@ public class ConstraintUserDefinedRule {
 	 */
 	public static final MMConstraint<BreakdownByUserDefinedParameter3> forBreakdownByUserDefinedParameter3 = new MMConstraint<BreakdownByUserDefinedParameter3>() {
 		{
-			validator = ConstraintUserDefinedRule::checkBreakdownByUserDefinedParameter3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserDefinedRule";
 			definition = "At least one message element in the list (Party, Country, Currency, UserDefined) must be present. More than one element in the list (Party, Country, Currency, UserDefined) may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUserDefinedRule.forBreakdownByUserDefinedParameter1;
 			owner_lazy = () -> BreakdownByUserDefinedParameter3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BreakdownByUserDefinedParameter3 obj) throws Exception {
+			checkBreakdownByUserDefinedParameter3(obj);
 		}
 	};
 

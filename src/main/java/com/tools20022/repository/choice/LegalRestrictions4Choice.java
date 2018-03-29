@@ -117,7 +117,7 @@ public class LegalRestrictions4Choice {
 	 * LegalRestrictions3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegalRestrictions4Choice, LegalRestrictions1Code> mmCode = new MMMessageAttribute<LegalRestrictions4Choice, LegalRestrictions1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRestriction.mmLegalRestrictionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalRestrictions4Choice.mmObject();
@@ -130,6 +130,16 @@ public class LegalRestrictions4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LegalRestrictions1Code.mmObject();
+		}
+
+		@Override
+		public LegalRestrictions1Code getValue(LegalRestrictions4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LegalRestrictions4Choice obj, LegalRestrictions1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -171,7 +181,7 @@ public class LegalRestrictions4Choice {
 	 * LegalRestrictions3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LegalRestrictions4Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<LegalRestrictions4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRestriction.mmLegalRestrictionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalRestrictions4Choice.mmObject();
@@ -185,6 +195,16 @@ public class LegalRestrictions4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(LegalRestrictions4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LegalRestrictions4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

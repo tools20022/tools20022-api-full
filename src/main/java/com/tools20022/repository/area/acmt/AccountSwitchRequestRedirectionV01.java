@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.CashAccount36;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.AccountSwitching;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -38,11 +37,12 @@ import javax.xml.bind.annotation.*;
 
 /**
  * The AccountSwitchRequestRedirection message is sent by the new account
- * servicer to the account switch servicer to set up the redirection of payment
- * and collection transactions that are processed after completion of the
- * account switch. It is routed to the previous account servicer to signal that
- * it should schedule the cancellation of all payment arrangements on the old
- * account.
+ * servicer to a central account switch servicer to set up the redirection of
+ * payment and collection transactions that are processed after completion of
+ * the account switch. It is routed to the previous account servicer to signal
+ * that it should schedule the cancellation of all payment arrangements on the
+ * old account. This message may also be used by the new bank to amend the new
+ * account details, if the details previously provided were incorrect.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -96,7 +96,7 @@ import javax.xml.bind.annotation.*;
  * "AccountSwitchRequestRedirectionV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AccountSwitchRequestRedirection message is sent by the new account servicer to the account switch servicer to set up the redirection of payment and collection transactions that are processed after completion of the account switch. It is routed to the previous account servicer to signal that it should schedule the cancellation of all payment arrangements on the old account."
+ * "The AccountSwitchRequestRedirection message is sent by the new account servicer to a central account switch servicer to set up the redirection of payment and collection transactions that are processed after completion of the account switch.  It is routed to the previous account servicer to signal that it should schedule the cancellation of all payment arrangements on the old account. This message may also be used by the new bank to amend the new account details, if the details previously provided were incorrect."
  * </li>
  * </ul>
  */
@@ -130,7 +130,7 @@ public class AccountSwitchRequestRedirectionV01 {
 	 * definition} = "Unique identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,12 +141,14 @@ public class AccountSwitchRequestRedirectionV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchRequestRedirectionV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(AccountSwitchRequestRedirectionV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(AccountSwitchRequestRedirectionV01 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSwtchDtls", required = true)
@@ -175,7 +177,7 @@ public class AccountSwitchRequestRedirectionV01 {
 	 * "Contains information about the details of the account switch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountSwitchDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, AccountSwitchDetails1> mmAccountSwitchDetails = new MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, AccountSwitchDetails1>() {
 		{
 			xmlTag = "AcctSwtchDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,12 +188,14 @@ public class AccountSwitchRequestRedirectionV01 {
 			complexType_lazy = () -> AccountSwitchDetails1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchRequestRedirectionV01.class.getMethod("getAccountSwitchDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountSwitchDetails1 getValue(AccountSwitchRequestRedirectionV01 obj) {
+			return obj.getAccountSwitchDetails();
+		}
+
+		@Override
+		public void setValue(AccountSwitchRequestRedirectionV01 obj, AccountSwitchDetails1 value) {
+			obj.setAccountSwitchDetails(value);
 		}
 	};
 	@XmlElement(name = "NewAcct", required = true)
@@ -220,7 +224,7 @@ public class AccountSwitchRequestRedirectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNewAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, CashAccount36> mmNewAccount = new MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, CashAccount36>() {
 		{
 			xmlTag = "NewAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,12 +235,14 @@ public class AccountSwitchRequestRedirectionV01 {
 			complexType_lazy = () -> CashAccount36.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchRequestRedirectionV01.class.getMethod("getNewAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CashAccount36 getValue(AccountSwitchRequestRedirectionV01 obj) {
+			return obj.getNewAccount();
+		}
+
+		@Override
+		public void setValue(AccountSwitchRequestRedirectionV01 obj, CashAccount36 value) {
+			obj.setNewAccount(value);
 		}
 	};
 	@XmlElement(name = "OdAcct", required = true)
@@ -265,7 +271,7 @@ public class AccountSwitchRequestRedirectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOldAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, CashAccount36> mmOldAccount = new MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, CashAccount36>() {
 		{
 			xmlTag = "OdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,12 +282,14 @@ public class AccountSwitchRequestRedirectionV01 {
 			complexType_lazy = () -> CashAccount36.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchRequestRedirectionV01.class.getMethod("getOldAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CashAccount36 getValue(AccountSwitchRequestRedirectionV01 obj) {
+			return obj.getOldAccount();
+		}
+
+		@Override
+		public void setValue(AccountSwitchRequestRedirectionV01 obj, CashAccount36 value) {
+			obj.setOldAccount(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -311,7 +319,7 @@ public class AccountSwitchRequestRedirectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<AccountSwitchRequestRedirectionV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +329,14 @@ public class AccountSwitchRequestRedirectionV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchRequestRedirectionV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(AccountSwitchRequestRedirectionV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AccountSwitchRequestRedirectionV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -336,7 +346,7 @@ public class AccountSwitchRequestRedirectionV01 {
 				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT3"}));
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountSwitchRequestRedirectionV01";
-				definition = "The AccountSwitchRequestRedirection message is sent by the new account servicer to the account switch servicer to set up the redirection of payment and collection transactions that are processed after completion of the account switch. It is routed to the previous account servicer to signal that it should schedule the cancellation of all payment arrangements on the old account.";
+				definition = "The AccountSwitchRequestRedirection message is sent by the new account servicer to a central account switch servicer to set up the redirection of payment and collection transactions that are processed after completion of the account switch.  It is routed to the previous account servicer to signal that it should schedule the cancellation of all payment arrangements on the old account. This message may also be used by the new bank to amend the new account details, if the details previously provided were incorrect.";
 				messageSet_lazy = () -> Arrays.asList(AccountSwitching.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctSwtchReqRdrctn";

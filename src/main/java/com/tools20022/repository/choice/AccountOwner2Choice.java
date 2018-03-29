@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.IndividualPersonIdentification3Choice;
 import com.tools20022.repository.entity.AccountOwnerRole;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Person;
@@ -117,7 +118,7 @@ public class AccountOwner2Choice {
 	 * AccountOwner1Choice.mmIndividualOwnerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualOwnerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOwner2Choice, IndividualPersonIdentification3Choice> mmIndividualOwnerIdentification = new MMMessageAssociationEnd<AccountOwner2Choice, IndividualPersonIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOwner2Choice.mmObject();
@@ -130,7 +131,17 @@ public class AccountOwner2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentification3Choice.mmObject();
+			type_lazy = () -> IndividualPersonIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public IndividualPersonIdentification3Choice getValue(AccountOwner2Choice obj) {
+			return obj.getIndividualOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(AccountOwner2Choice obj, IndividualPersonIdentification3Choice value) {
+			obj.setIndividualOwnerIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgOwnrId", required = true)
@@ -172,7 +183,7 @@ public class AccountOwner2Choice {
 	 * AccountOwner1Choice.mmOrganisationOwnerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisationOwnerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOwner2Choice, PartyIdentification96> mmOrganisationOwnerIdentification = new MMMessageAssociationEnd<AccountOwner2Choice, PartyIdentification96>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOwner2Choice.mmObject();
@@ -186,6 +197,16 @@ public class AccountOwner2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification96.mmObject();
+		}
+
+		@Override
+		public PartyIdentification96 getValue(AccountOwner2Choice obj) {
+			return obj.getOrganisationOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(AccountOwner2Choice obj, PartyIdentification96 value) {
+			obj.setOrganisationOwnerIdentification(value);
 		}
 	};
 
@@ -208,7 +229,7 @@ public class AccountOwner2Choice {
 		return individualOwnerIdentification;
 	}
 
-	public AccountOwner2Choice setIndividualOwnerIdentification(com.tools20022.repository.choice.IndividualPersonIdentification3Choice individualOwnerIdentification) {
+	public AccountOwner2Choice setIndividualOwnerIdentification(IndividualPersonIdentification3Choice individualOwnerIdentification) {
 		this.individualOwnerIdentification = Objects.requireNonNull(individualOwnerIdentification);
 		return this;
 	}

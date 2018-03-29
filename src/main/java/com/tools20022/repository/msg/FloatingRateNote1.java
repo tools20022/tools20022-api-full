@@ -131,7 +131,7 @@ public class FloatingRateNote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceRateIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FloatingRateNote1, ISINIdentifier> mmReferenceRateIndex = new MMMessageAttribute<FloatingRateNote1, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingRateNote1.mmObject();
@@ -144,6 +144,16 @@ public class FloatingRateNote1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(FloatingRateNote1 obj) {
+			return obj.getReferenceRateIndex();
+		}
+
+		@Override
+		public void setValue(FloatingRateNote1 obj, ISINIdentifier value) {
+			obj.setReferenceRateIndex(value);
 		}
 	};
 	@XmlElement(name = "BsisPtSprd", required = true)
@@ -190,7 +200,7 @@ public class FloatingRateNote1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasisPointSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FloatingRateNote1, Number> mmBasisPointSpread = new MMMessageAttribute<FloatingRateNote1, Number>() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmBasisPointSpread;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingRateNote1.mmObject();
@@ -203,6 +213,16 @@ public class FloatingRateNote1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(FloatingRateNote1 obj) {
+			return obj.getBasisPointSpread();
+		}
+
+		@Override
+		public void setValue(FloatingRateNote1 obj, Number value) {
+			obj.setBasisPointSpread(value);
 		}
 	};
 

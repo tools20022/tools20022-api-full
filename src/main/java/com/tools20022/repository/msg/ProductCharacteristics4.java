@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProductCharacteristics1Choice;
 import com.tools20022.repository.entity.ProductCharacteristics;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Quantity16;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -59,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ProductCharacteristics4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -115,7 +116,7 @@ public class ProductCharacteristics4 {
 	 * ProductCharacteristics3.mmCharacteristic}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCharacteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductCharacteristics4, Optional<ProductCharacteristics1Choice>> mmCharacteristic = new MMMessageAttribute<ProductCharacteristics4, Optional<ProductCharacteristics1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProductCharacteristics.mmCharacteristics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics4.mmObject();
@@ -128,6 +129,16 @@ public class ProductCharacteristics4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ProductCharacteristics1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProductCharacteristics1Choice> getValue(ProductCharacteristics4 obj) {
+			return obj.getCharacteristic();
+		}
+
+		@Override
+		public void setValue(ProductCharacteristics4 obj, Optional<ProductCharacteristics1Choice> value) {
+			obj.setCharacteristic(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValMeasr")
@@ -164,7 +175,7 @@ public class ProductCharacteristics4 {
 	 * ProductCharacteristics3.mmValueMeasure}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductCharacteristics4, Optional<Quantity16>> mmValueMeasure = new MMMessageAttribute<ProductCharacteristics4, Optional<Quantity16>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics4.mmObject();
 			isDerived = false;
@@ -175,7 +186,17 @@ public class ProductCharacteristics4 {
 			previousVersion_lazy = () -> ProductCharacteristics3.mmValueMeasure;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Quantity16.mmObject();
+			complexType_lazy = () -> Quantity16.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity16> getValue(ProductCharacteristics4 obj) {
+			return obj.getValueMeasure();
+		}
+
+		@Override
+		public void setValue(ProductCharacteristics4 obj, Optional<Quantity16> value) {
+			obj.setValueMeasure(value.orElse(null));
 		}
 	};
 
@@ -185,7 +206,7 @@ public class ProductCharacteristics4 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics4.mmCharacteristic, com.tools20022.repository.msg.ProductCharacteristics4.mmValueMeasure);
 				trace_lazy = () -> ProductCharacteristics.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics4";
 				definition = "Product characteristic applicable to this trade product.";
 				previousVersion_lazy = () -> ProductCharacteristics3.mmObject();
@@ -207,7 +228,7 @@ public class ProductCharacteristics4 {
 		return valueMeasure == null ? Optional.empty() : Optional.of(valueMeasure);
 	}
 
-	public ProductCharacteristics4 setValueMeasure(com.tools20022.repository.msg.Quantity16 valueMeasure) {
+	public ProductCharacteristics4 setValueMeasure(Quantity16 valueMeasure) {
 		this.valueMeasure = valueMeasure;
 		return this;
 	}

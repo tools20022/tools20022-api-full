@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.admi.ReportQueryRequestV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReportQuerySearchCriteria2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class ReportQueryCriteria2 {
 	 * ReportQueryCriteria1.mmNewQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQueryCriteria2, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<ReportQueryCriteria2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQueryCriteria2.mmObject();
 			isDerived = false;
@@ -131,6 +132,16 @@ public class ReportQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReportQueryCriteria2 obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(ReportQueryCriteria2 obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchCrit", required = true)
@@ -168,7 +179,7 @@ public class ReportQueryCriteria2 {
 	 * ReportQueryCriteria1.mmSearchCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportQueryCriteria2, ReportQuerySearchCriteria2> mmSearchCriteria = new MMMessageAssociationEnd<ReportQueryCriteria2, ReportQuerySearchCriteria2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQueryCriteria2.mmObject();
 			isDerived = false;
@@ -180,7 +191,17 @@ public class ReportQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria2.mmObject();
+			type_lazy = () -> ReportQuerySearchCriteria2.mmObject();
+		}
+
+		@Override
+		public ReportQuerySearchCriteria2 getValue(ReportQueryCriteria2 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(ReportQueryCriteria2 obj, ReportQuerySearchCriteria2 value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class ReportQueryCriteria2 {
 		return searchCriteria;
 	}
 
-	public ReportQueryCriteria2 setSearchCriteria(com.tools20022.repository.msg.ReportQuerySearchCriteria2 searchCriteria) {
+	public ReportQueryCriteria2 setSearchCriteria(ReportQuerySearchCriteria2 searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}

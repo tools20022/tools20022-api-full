@@ -106,7 +106,7 @@ public class PostalAddress4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddressLine = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress4, List<Max70Text>> mmAddressLine = new MMMessageAttribute<PostalAddress4, List<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress4.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class PostalAddress4 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public List<Max70Text> getValue(PostalAddress4 obj) {
+			return obj.getAddressLine();
+		}
+
+		@Override
+		public void setValue(PostalAddress4 obj, List<Max70Text> value) {
+			obj.setAddressLine(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -152,7 +162,7 @@ public class PostalAddress4 {
 	 * definition} = "Nation with its own government."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress4, CountryCode> mmCountry = new MMMessageAttribute<PostalAddress4, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress4.mmObject();
@@ -164,6 +174,16 @@ public class PostalAddress4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PostalAddress4 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PostalAddress4 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

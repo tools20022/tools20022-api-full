@@ -113,7 +113,7 @@ public class RenounceableEntitlementStatusTypeFormat2Choice {
 	 * definition} = "Standard code to specify the renounceable status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RenounceableEntitlementStatusTypeFormat2Choice, RenounceableStatus1Code> mmCode = new MMMessageAttribute<RenounceableEntitlementStatusTypeFormat2Choice, RenounceableStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat2Choice.mmObject();
@@ -125,6 +125,16 @@ public class RenounceableEntitlementStatusTypeFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RenounceableStatus1Code.mmObject();
+		}
+
+		@Override
+		public RenounceableStatus1Code getValue(RenounceableEntitlementStatusTypeFormat2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RenounceableEntitlementStatusTypeFormat2Choice obj, RenounceableStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -162,7 +172,7 @@ public class RenounceableEntitlementStatusTypeFormat2Choice {
 	 * definition} = "Proprietary identification of the renounceable status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RenounceableEntitlementStatusTypeFormat2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<RenounceableEntitlementStatusTypeFormat2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmRenounceableEntitlementStatusType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat2Choice.mmObject();
@@ -175,6 +185,16 @@ public class RenounceableEntitlementStatusTypeFormat2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(RenounceableEntitlementStatusTypeFormat2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RenounceableEntitlementStatusTypeFormat2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

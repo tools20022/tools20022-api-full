@@ -112,7 +112,7 @@ public class ValidationStatusInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValidationStatusInformation1, TechnicalValidationStatus1Code> mmStatus = new MMMessageAttribute<ValidationStatusInformation1, TechnicalValidationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmValidationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
@@ -124,6 +124,16 @@ public class ValidationStatusInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TechnicalValidationStatus1Code.mmObject();
+		}
+
+		@Override
+		public TechnicalValidationStatus1Code getValue(ValidationStatusInformation1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(ValidationStatusInformation1 obj, TechnicalValidationStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "StsRsn")
@@ -161,7 +171,7 @@ public class ValidationStatusInformation1 {
 	 * definition} = "The reason for the validation status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValidationStatusInformation1, Optional<StatusReason4Choice>> mmStatusReason = new MMMessageAttribute<ValidationStatusInformation1, Optional<StatusReason4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmValidationStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
@@ -173,6 +183,16 @@ public class ValidationStatusInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatusReason4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatusReason4Choice> getValue(ValidationStatusInformation1 obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(ValidationStatusInformation1 obj, Optional<StatusReason4Choice> value) {
+			obj.setStatusReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlStsRsnInf")
@@ -204,7 +224,7 @@ public class ValidationStatusInformation1 {
 	 * definition} = "Further details on the validation status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValidationStatusInformation1, List<Max105Text>> mmAdditionalStatusReasonInformation = new MMMessageAttribute<ValidationStatusInformation1, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class ValidationStatusInformation1 {
 			definition = "Further details on the validation status reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(ValidationStatusInformation1 obj) {
+			return obj.getAdditionalStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(ValidationStatusInformation1 obj, List<Max105Text> value) {
+			obj.setAdditionalStatusReasonInformation(value);
 		}
 	};
 

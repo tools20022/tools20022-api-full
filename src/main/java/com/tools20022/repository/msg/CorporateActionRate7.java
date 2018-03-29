@@ -126,7 +126,7 @@ public class CorporateActionRate7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalQuantityForSubscribedResultantSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate7, Optional<RatioFormat5Choice>> mmAdditionalQuantityForSubscribedResultantSecurities = new MMMessageAttribute<CorporateActionRate7, Optional<RatioFormat5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmAdditionalQuantityForSubscribedResultantSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate7.mmObject();
@@ -139,6 +139,16 @@ public class CorporateActionRate7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RatioFormat5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat5Choice> getValue(CorporateActionRate7 obj) {
+			return obj.getAdditionalQuantityForSubscribedResultantSecurities();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate7 obj, Optional<RatioFormat5Choice> value) {
+			obj.setAdditionalQuantityForSubscribedResultantSecurities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlQtyForExstgScties")
@@ -181,7 +191,7 @@ public class CorporateActionRate7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalQuantityForExistingSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate7, Optional<RatioFormat5Choice>> mmAdditionalQuantityForExistingSecurities = new MMMessageAttribute<CorporateActionRate7, Optional<RatioFormat5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmAdditionalQuantityForExistingSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate7.mmObject();
@@ -194,6 +204,16 @@ public class CorporateActionRate7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RatioFormat5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat5Choice> getValue(CorporateActionRate7 obj) {
+			return obj.getAdditionalQuantityForExistingSecurities();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate7 obj, Optional<RatioFormat5Choice> value) {
+			obj.setAdditionalQuantityForExistingSecurities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewToOd")
@@ -236,7 +256,7 @@ public class CorporateActionRate7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewToOld = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate7, Optional<RatioFormat6Choice>> mmNewToOld = new MMMessageAttribute<CorporateActionRate7, Optional<RatioFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmNewToOld;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate7.mmObject();
@@ -249,6 +269,16 @@ public class CorporateActionRate7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RatioFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat6Choice> getValue(CorporateActionRate7 obj) {
+			return obj.getNewToOld();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate7 obj, Optional<RatioFormat6Choice> value) {
+			obj.setNewToOld(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewSctiesToUndrlygScties")
@@ -291,7 +321,7 @@ public class CorporateActionRate7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewSecuritiesToUnderlyingSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate7, Optional<RatioFormat6Choice>> mmNewSecuritiesToUnderlyingSecurities = new MMMessageAttribute<CorporateActionRate7, Optional<RatioFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmNewSecuritiesToUnderlyingSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate7.mmObject();
@@ -304,6 +334,16 @@ public class CorporateActionRate7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RatioFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat6Choice> getValue(CorporateActionRate7 obj) {
+			return obj.getNewSecuritiesToUnderlyingSecurities();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate7 obj, Optional<RatioFormat6Choice> value) {
+			obj.setNewSecuritiesToUnderlyingSecurities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfrmatnRate")
@@ -343,7 +383,7 @@ public class CorporateActionRate7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransformationRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRate7, Optional<PercentageRate>> mmTransformationRate = new MMMessageAttribute<CorporateActionRate7, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmTransformationRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRate7.mmObject();
@@ -355,6 +395,16 @@ public class CorporateActionRate7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CorporateActionRate7 obj) {
+			return obj.getTransformationRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRate7 obj, Optional<PercentageRate> value) {
+			obj.setTransformationRate(value.orElse(null));
 		}
 	};
 

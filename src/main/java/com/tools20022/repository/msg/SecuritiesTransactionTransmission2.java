@@ -110,7 +110,7 @@ public class SecuritiesTransactionTransmission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransmissionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionTransmission2, TrueFalseIndicator> mmTransmissionIndicator = new MMMessageAttribute<SecuritiesTransactionTransmission2, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class SecuritiesTransactionTransmission2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(SecuritiesTransactionTransmission2 obj) {
+			return obj.getTransmissionIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionTransmission2 obj, TrueFalseIndicator value) {
+			obj.setTransmissionIndicator(value);
 		}
 	};
 	@XmlElement(name = "TrnsmttgBuyr")
@@ -160,7 +170,7 @@ public class SecuritiesTransactionTransmission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransmittingBuyer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionTransmission2, Optional<LEIIdentifier>> mmTransmittingBuyer = new MMMessageAttribute<SecuritiesTransactionTransmission2, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmObject();
@@ -172,6 +182,16 @@ public class SecuritiesTransactionTransmission2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(SecuritiesTransactionTransmission2 obj) {
+			return obj.getTransmittingBuyer();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionTransmission2 obj, Optional<LEIIdentifier> value) {
+			obj.setTransmittingBuyer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrnsmttgSellr")
@@ -211,7 +231,7 @@ public class SecuritiesTransactionTransmission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransmittingSeller = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionTransmission2, Optional<LEIIdentifier>> mmTransmittingSeller = new MMMessageAttribute<SecuritiesTransactionTransmission2, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionTransmission2.mmObject();
@@ -223,6 +243,16 @@ public class SecuritiesTransactionTransmission2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(SecuritiesTransactionTransmission2 obj) {
+			return obj.getTransmittingSeller();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionTransmission2 obj, Optional<LEIIdentifier> value) {
+			obj.setTransmittingSeller(value.orElse(null));
 		}
 	};
 

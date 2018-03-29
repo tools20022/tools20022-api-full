@@ -117,7 +117,7 @@ public class RejectionOrRepairStatus33Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairStatus33Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RejectionOrRepairStatus33Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus33Choice.mmObject();
@@ -130,6 +130,16 @@ public class RejectionOrRepairStatus33Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(RejectionOrRepairStatus33Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus33Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -169,7 +179,7 @@ public class RejectionOrRepairStatus33Choice {
 	 * definition} = "Specifies the reason of the rejection or repair status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairStatus33Choice, List<RejectionOrRepairReason27>> mmReason = new MMMessageAssociationEnd<RejectionOrRepairStatus33Choice, List<RejectionOrRepairReason27>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus33Choice.mmObject();
@@ -182,6 +192,16 @@ public class RejectionOrRepairStatus33Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionOrRepairReason27.mmObject();
+		}
+
+		@Override
+		public List<RejectionOrRepairReason27> getValue(RejectionOrRepairStatus33Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus33Choice obj, List<RejectionOrRepairReason27> value) {
+			obj.setReason(value);
 		}
 	};
 

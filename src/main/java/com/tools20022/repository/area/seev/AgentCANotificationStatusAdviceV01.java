@@ -24,7 +24,6 @@ import com.tools20022.repository.choice.NotificationCancellationRequestStatus1Ch
 import com.tools20022.repository.msg.CorporateActionInformation2;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -257,7 +256,7 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,12 +267,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCANotificationStatusAdviceV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AgtCANtfctnAdvcId", required = true)
@@ -303,7 +304,7 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgentCANotificationAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, DocumentIdentification8> mmAgentCANotificationAdviceIdentification = new MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "AgtCANtfctnAdvcId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,12 +315,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationStatusAdviceV01.class.getMethod("getAgentCANotificationAdviceIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCANotificationStatusAdviceV01 obj) {
+			return obj.getAgentCANotificationAdviceIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setAgentCANotificationAdviceIdentification(value);
 		}
 	};
 	@XmlElement(name = "AgtCANtfctnCxlReqId", required = true)
@@ -349,7 +352,7 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgentCANotificationCancellationRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, DocumentIdentification8> mmAgentCANotificationCancellationRequestIdentification = new MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "AgtCANtfctnCxlReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -360,12 +363,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationStatusAdviceV01.class.getMethod("getAgentCANotificationCancellationRequestIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCANotificationStatusAdviceV01 obj) {
+			return obj.getAgentCANotificationCancellationRequestIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setAgentCANotificationCancellationRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "CorpActnGnlInf", required = true)
@@ -393,7 +398,7 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, CorporateActionInformation2> mmCorporateActionGeneralInformation = new MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, CorporateActionInformation2>() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,12 +409,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			complexType_lazy = () -> CorporateActionInformation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationStatusAdviceV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInformation2 getValue(AgentCANotificationStatusAdviceV01 obj) {
+			return obj.getCorporateActionGeneralInformation();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationStatusAdviceV01 obj, CorporateActionInformation2 value) {
+			obj.setCorporateActionGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "NtfctnCxlReqSts", required = true)
@@ -439,7 +446,7 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationCancellationRequestStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, NotificationCancellationRequestStatus1Choice> mmNotificationCancellationRequestStatus = new MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, NotificationCancellationRequestStatus1Choice>() {
 		{
 			xmlTag = "NtfctnCxlReqSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -450,12 +457,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			complexType_lazy = () -> NotificationCancellationRequestStatus1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationStatusAdviceV01.class.getMethod("getNotificationCancellationRequestStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public NotificationCancellationRequestStatus1Choice getValue(AgentCANotificationStatusAdviceV01 obj) {
+			return obj.getNotificationCancellationRequestStatus();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationStatusAdviceV01 obj, NotificationCancellationRequestStatus1Choice value) {
+			obj.setNotificationCancellationRequestStatus(value);
 		}
 	};
 	@XmlElement(name = "NtfctnAdvcSts", required = true)
@@ -484,7 +493,7 @@ public class AgentCANotificationStatusAdviceV01 {
 	 * "Status of the notification advice sent by the issuer (agent)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationAdviceStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, NotificationAdviceStatus1Choice> mmNotificationAdviceStatus = new MMMessageBuildingBlock<AgentCANotificationStatusAdviceV01, NotificationAdviceStatus1Choice>() {
 		{
 			xmlTag = "NtfctnAdvcSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -495,12 +504,14 @@ public class AgentCANotificationStatusAdviceV01 {
 			complexType_lazy = () -> NotificationAdviceStatus1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationStatusAdviceV01.class.getMethod("getNotificationAdviceStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public NotificationAdviceStatus1Choice getValue(AgentCANotificationStatusAdviceV01 obj) {
+			return obj.getNotificationAdviceStatus();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationStatusAdviceV01 obj, NotificationAdviceStatus1Choice value) {
+			obj.setNotificationAdviceStatus(value);
 		}
 	};
 

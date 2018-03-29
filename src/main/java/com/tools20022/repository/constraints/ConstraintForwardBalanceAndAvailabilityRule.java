@@ -63,13 +63,17 @@ public class ConstraintForwardBalanceAndAvailabilityRule {
 	 */
 	public static final MMConstraint<CashBalance3> forCashBalance3 = new MMConstraint<CashBalance3>() {
 		{
-			validator = ConstraintForwardBalanceAndAvailabilityRule::checkCashBalance3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardBalanceAndAvailabilityRule";
 			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintForwardBalanceAndAvailabilityRule.forCashBalance7);
 			owner_lazy = () -> CashBalance3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Availability[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Type</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Type/CodeOrProprietary</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/CodeOrProprietary/Code</leftOperand><rightOperand>ForwardAvailable</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CashBalance3 obj) throws Exception {
+			checkCashBalance3(obj);
 		}
 	};
 	/**
@@ -110,7 +114,6 @@ public class ConstraintForwardBalanceAndAvailabilityRule {
 	 */
 	public static final MMConstraint<CashBalance7> forCashBalance7 = new MMConstraint<CashBalance7>() {
 		{
-			validator = ConstraintForwardBalanceAndAvailabilityRule::checkCashBalance7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardBalanceAndAvailabilityRule";
 			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
@@ -118,6 +121,11 @@ public class ConstraintForwardBalanceAndAvailabilityRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintForwardBalanceAndAvailabilityRule.forCashBalance3;
 			owner_lazy = () -> CashBalance7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Availability[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Type</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Type/CodeOrProprietary</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/CodeOrProprietary/Code</leftOperand><rightOperand>ForwardAvailable</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CashBalance7 obj) throws Exception {
+			checkCashBalance7(obj);
 		}
 	};
 	/**
@@ -146,12 +154,16 @@ public class ConstraintForwardBalanceAndAvailabilityRule {
 	 */
 	public static final MMConstraint<CashBalance8> forCashBalance8 = new MMConstraint<CashBalance8>() {
 		{
-			validator = ConstraintForwardBalanceAndAvailabilityRule::checkCashBalance8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardBalanceAndAvailabilityRule";
 			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintForwardBalanceAndAvailabilityRule.forCashBalance7;
 			owner_lazy = () -> CashBalance8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashBalance8 obj) throws Exception {
+			checkCashBalance8(obj);
 		}
 	};
 

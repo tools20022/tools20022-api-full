@@ -55,12 +55,16 @@ public class ConstraintCompletePriceCancellation1Rule {
 	 */
 	public static final MMConstraint<PriceReportCancellationV04> forPriceReportCancellationV04 = new MMConstraint<PriceReportCancellationV04>() {
 		{
-			validator = ConstraintCompletePriceCancellation1Rule::checkPriceReportCancellationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletePriceCancellation1Rule";
 			definition = "If CompletePriceCancellation is \"false\" or \"0\" (No), then one or more instances of CancelledPriceValuationDetails must be present.";
 			owner_lazy = () -> PriceReportCancellationV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancelledPriceValuationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CompletePriceCancellation</leftOperand><rightOperand>False</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PriceReportCancellationV04 obj) throws Exception {
+			checkPriceReportCancellationV04(obj);
 		}
 	};
 

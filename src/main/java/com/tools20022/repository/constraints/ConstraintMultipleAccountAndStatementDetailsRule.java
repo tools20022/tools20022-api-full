@@ -63,12 +63,50 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV07> forCorporateActionInstructionStatementReportV07 = new MMConstraint<CorporateActionInstructionStatementReportV07>() {
 		{
-			validator = ConstraintMultipleAccountAndStatementDetailsRule::checkCorporateActionInstructionStatementReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleAccountAndStatementDetailsRule";
 			definition = "If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME (Multiple Events) then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule.forCorporateActionInstructionStatementReportV06;
 			owner_lazy = () -> CorporateActionInstructionStatementReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV07 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV07(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V07
+	 * CorporateActionInstructionStatementReport002V07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MultipleAccountAndStatementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME (Multiple Events) then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionStatementReport002V07> forCorporateActionInstructionStatementReport002V07 = new MMConstraint<CorporateActionInstructionStatementReport002V07>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MultipleAccountAndStatementDetailsRule";
+			definition = "If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME (Multiple Events) then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
+			owner_lazy = () -> CorporateActionInstructionStatementReport002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReport002V07 obj) throws Exception {
+			checkCorporateActionInstructionStatementReport002V07(obj);
 		}
 	};
 	/**
@@ -109,7 +147,6 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV06> forCorporateActionInstructionStatementReportV06 = new MMConstraint<CorporateActionInstructionStatementReportV06>() {
 		{
-			validator = ConstraintMultipleAccountAndStatementDetailsRule::checkCorporateActionInstructionStatementReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleAccountAndStatementDetailsRule";
 			definition = "If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME (Multiple Events) then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
@@ -117,35 +154,10 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule.forCorporateActionInstructionStatementReportV05;
 			owner_lazy = () -> CorporateActionInstructionStatementReportV06.mmObject();
 		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06
-	 * CorporateActionInstructionStatementReport002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "MultipleAccountAndStatementDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME (Multiple Events) then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstructionStatementReport002V06> forCorporateActionInstructionStatementReport002V06 = new MMConstraint<CorporateActionInstructionStatementReport002V06>() {
-		{
-			validator = ConstraintMultipleAccountAndStatementDetailsRule::checkCorporateActionInstructionStatementReport002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "MultipleAccountAndStatementDetailsRule";
-			definition = "If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME (Multiple Events) then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
-			owner_lazy = () -> CorporateActionInstructionStatementReport002V06.mmObject();
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV06 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV06(obj);
 		}
 	};
 	/**
@@ -171,11 +183,15 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV01> forCorporateActionInstructionStatementReportV01 = new MMConstraint<CorporateActionInstructionStatementReportV01>() {
 		{
-			validator = ConstraintMultipleAccountAndStatementDetailsRule::checkCorporateActionInstructionStatementReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleAccountAndStatementDetailsRule";
 			definition = "If StatementGeneralDetails/ReportingType is MASE then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV01 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV01(obj);
 		}
 	};
 	/**
@@ -201,11 +217,15 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV02> forCorporateActionInstructionStatementReportV02 = new MMConstraint<CorporateActionInstructionStatementReportV02>() {
 		{
-			validator = ConstraintMultipleAccountAndStatementDetailsRule::checkCorporateActionInstructionStatementReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleAccountAndStatementDetailsRule";
 			definition = "If StatementGeneralDetails/ReportingType is MASE then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV02 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV02(obj);
 		}
 	};
 	/**
@@ -231,11 +251,15 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV03> forCorporateActionInstructionStatementReportV03 = new MMConstraint<CorporateActionInstructionStatementReportV03>() {
 		{
-			validator = ConstraintMultipleAccountAndStatementDetailsRule::checkCorporateActionInstructionStatementReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleAccountAndStatementDetailsRule";
 			definition = "If StatementGeneralDetails/ReportingType is MASE then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV03 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV03(obj);
 		}
 	};
 	/**
@@ -270,12 +294,16 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV04> forCorporateActionInstructionStatementReportV04 = new MMConstraint<CorporateActionInstructionStatementReportV04>() {
 		{
-			validator = ConstraintMultipleAccountAndStatementDetailsRule::checkCorporateActionInstructionStatementReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleAccountAndStatementDetailsRule";
 			definition = "If StatementGeneralDetails/ReportingType is MASE then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule.forCorporateActionInstructionStatementReportV05);
 			owner_lazy = () -> CorporateActionInstructionStatementReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV04 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV04(obj);
 		}
 	};
 	/**
@@ -316,13 +344,51 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV05> forCorporateActionInstructionStatementReportV05 = new MMConstraint<CorporateActionInstructionStatementReportV05>() {
 		{
-			validator = ConstraintMultipleAccountAndStatementDetailsRule::checkCorporateActionInstructionStatementReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleAccountAndStatementDetailsRule";
 			definition = "If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME (Multiple Events) then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule.forCorporateActionInstructionStatementReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMultipleAccountAndStatementDetailsRule.forCorporateActionInstructionStatementReportV04;
 			owner_lazy = () -> CorporateActionInstructionStatementReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV05 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV05(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V05
+	 * CorporateActionInstructionStatementReport002V05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MultipleAccountAndStatementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME (Multiple Events) then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionStatementReport002V05> forCorporateActionInstructionStatementReport002V05 = new MMConstraint<CorporateActionInstructionStatementReport002V05>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MultipleAccountAndStatementDetailsRule";
+			definition = "If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then AccountAndStatementDetails may be repeated and AccountAndStatementDetails/CorporateActionEventAndBalance must not be repeated in any occurrences of AccountAndStatementDetails.\r\nIf StatementGeneralDetails/ReportingType is SAME (Multiple Events) then AccountAndStatementDetails must not be repeated, and AccountAndStatementDetails/CorporateActionEventAndBalance may be repeated.";
+			owner_lazy = () -> CorporateActionInstructionStatementReport002V05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReport002V05 obj) throws Exception {
+			checkCorporateActionInstructionStatementReport002V05(obj);
 		}
 	};
 
@@ -350,7 +416,7 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 * AccountAndStatementDetails/CorporateActionEventAndBalance may be
 	 * repeated.
 	 */
-	public static void checkCorporateActionInstructionStatementReportV06(CorporateActionInstructionStatementReportV06 obj) throws Exception {
+	public static void checkCorporateActionInstructionStatementReport002V07(CorporateActionInstructionStatementReport002V07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -364,7 +430,7 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 * AccountAndStatementDetails/CorporateActionEventAndBalance may be
 	 * repeated.
 	 */
-	public static void checkCorporateActionInstructionStatementReport002V06(CorporateActionInstructionStatementReport002V06 obj) throws Exception {
+	public static void checkCorporateActionInstructionStatementReportV06(CorporateActionInstructionStatementReportV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -435,6 +501,20 @@ public class ConstraintMultipleAccountAndStatementDetailsRule {
 	 * repeated.
 	 */
 	public static void checkCorporateActionInstructionStatementReportV05(CorporateActionInstructionStatementReportV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If StatementGeneralDetails/ReportingType is MASE (Multiple Accounts) then
+	 * AccountAndStatementDetails may be repeated and
+	 * AccountAndStatementDetails/CorporateActionEventAndBalance must not be
+	 * repeated in any occurrences of AccountAndStatementDetails.<br>
+	 * If StatementGeneralDetails/ReportingType is SAME (Multiple Events) then
+	 * AccountAndStatementDetails must not be repeated, and
+	 * AccountAndStatementDetails/CorporateActionEventAndBalance may be
+	 * repeated.
+	 */
+	public static void checkCorporateActionInstructionStatementReport002V05(CorporateActionInstructionStatementReport002V05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

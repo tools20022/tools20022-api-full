@@ -125,7 +125,7 @@ public class CollateralConfirmation1 {
 	 * "Reference to the collateral substitution request identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralConfirmation1, Max35Text> mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute<CollateralConfirmation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralConfirmation1.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class CollateralConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CollateralConfirmation1 obj) {
+			return obj.getCollateralSubstitutionRequestIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralConfirmation1 obj, Max35Text value) {
+			obj.setCollateralSubstitutionRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "CollSbstitnRspnId")
@@ -168,7 +178,7 @@ public class CollateralConfirmation1 {
 	 * "Reference to the collateral substitution response identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralSubstitutionResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralConfirmation1, Optional<Max35Text>> mmCollateralSubstitutionResponseIdentification = new MMMessageAttribute<CollateralConfirmation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralConfirmation1.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class CollateralConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CollateralConfirmation1 obj) {
+			return obj.getCollateralSubstitutionResponseIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralConfirmation1 obj, Optional<Max35Text> value) {
+			obj.setCollateralSubstitutionResponseIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConfTp", required = true)
@@ -218,7 +238,7 @@ public class CollateralConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralConfirmation1, CollateralSubstitutionConfirmation1Code> mmConfirmationType = new MMMessageAttribute<CollateralConfirmation1, CollateralSubstitutionConfirmation1Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmSubstitutionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralConfirmation1.mmObject();
@@ -230,6 +250,16 @@ public class CollateralConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralSubstitutionConfirmation1Code.mmObject();
+		}
+
+		@Override
+		public CollateralSubstitutionConfirmation1Code getValue(CollateralConfirmation1 obj) {
+			return obj.getConfirmationType();
+		}
+
+		@Override
+		public void setValue(CollateralConfirmation1 obj, CollateralSubstitutionConfirmation1Code value) {
+			obj.setConfirmationType(value);
 		}
 	};
 	@XmlElement(name = "Cmnt")
@@ -263,7 +293,7 @@ public class CollateralConfirmation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmComment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralConfirmation1, Optional<Max140Text>> mmComment = new MMMessageAttribute<CollateralConfirmation1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralConfirmation1.mmObject();
 			isDerived = false;
@@ -274,6 +304,16 @@ public class CollateralConfirmation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(CollateralConfirmation1 obj) {
+			return obj.getComment();
+		}
+
+		@Override
+		public void setValue(CollateralConfirmation1 obj, Optional<Max140Text> value) {
+			obj.setComment(value.orElse(null));
 		}
 	};
 

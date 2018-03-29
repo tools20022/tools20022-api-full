@@ -157,7 +157,7 @@ public class SecuritiesTradeDetails5 {
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails5, Optional<DateAndDateTimeChoice>> mmTradeDate = new MMMessageAttribute<SecuritiesTradeDetails5, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails5.mmObject();
@@ -170,6 +170,16 @@ public class SecuritiesTradeDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(SecuritiesTradeDetails5 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails5 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OpngSttlmDt", required = true)
@@ -211,7 +221,7 @@ public class SecuritiesTradeDetails5 {
 	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails5, DateAndDateTimeChoice> mmOpeningSettlementDate = new MMMessageAttribute<SecuritiesTradeDetails5, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmOpeningSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails5.mmObject();
@@ -224,6 +234,16 @@ public class SecuritiesTradeDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(SecuritiesTradeDetails5 obj) {
+			return obj.getOpeningSettlementDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails5 obj, DateAndDateTimeChoice value) {
+			obj.setOpeningSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "NbOfDaysAcrd")
@@ -265,7 +285,7 @@ public class SecuritiesTradeDetails5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails5, Optional<Max3Number>> mmNumberOfDaysAccrued = new MMMessageAttribute<SecuritiesTradeDetails5, Optional<Max3Number>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails5.mmObject();
@@ -278,6 +298,16 @@ public class SecuritiesTradeDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Number.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Number> getValue(SecuritiesTradeDetails5 obj) {
+			return obj.getNumberOfDaysAccrued();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails5 obj, Optional<Max3Number> value) {
+			obj.setNumberOfDaysAccrued(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrPrcgAddtlDtls")
@@ -314,7 +344,7 @@ public class SecuritiesTradeDetails5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionProcessingAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails5, Optional<Max350Text>> mmInstructionProcessingAdditionalDetails = new MMMessageAttribute<SecuritiesTradeDetails5, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails5.mmObject();
 			isDerived = false;
@@ -326,6 +356,16 @@ public class SecuritiesTradeDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SecuritiesTradeDetails5 obj) {
+			return obj.getInstructionProcessingAdditionalDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails5 obj, Optional<Max350Text> value) {
+			obj.setInstructionProcessingAdditionalDetails(value.orElse(null));
 		}
 	};
 

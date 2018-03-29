@@ -115,7 +115,7 @@ public class ATMSecurityConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumSymmetricKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>> mmMaximumSymmetricKey = new MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class ATMSecurityConfiguration2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMSecurityConfiguration2 obj) {
+			return obj.getMaximumSymmetricKey();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration2 obj, Optional<Number> value) {
+			obj.setMaximumSymmetricKey(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAsmmtrcKey")
@@ -159,7 +169,7 @@ public class ATMSecurityConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAsymmetricKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>> mmMaximumAsymmetricKey = new MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class ATMSecurityConfiguration2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMSecurityConfiguration2 obj) {
+			return obj.getMaximumAsymmetricKey();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration2 obj, Optional<Number> value) {
+			obj.setMaximumAsymmetricKey(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxRSAKeyLngth")
@@ -203,7 +223,7 @@ public class ATMSecurityConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumRSAKeyLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>> mmMaximumRSAKeyLength = new MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class ATMSecurityConfiguration2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMSecurityConfiguration2 obj) {
+			return obj.getMaximumRSAKeyLength();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration2 obj, Optional<Number> value) {
+			obj.setMaximumRSAKeyLength(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxRootKeyLngth")
@@ -247,7 +277,7 @@ public class ATMSecurityConfiguration2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumRootKeyLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>> mmMaximumRootKeyLength = new MMMessageAttribute<ATMSecurityConfiguration2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration2.mmObject();
 			isDerived = false;
@@ -258,6 +288,16 @@ public class ATMSecurityConfiguration2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMSecurityConfiguration2 obj) {
+			return obj.getMaximumRootKeyLength();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration2 obj, Optional<Number> value) {
+			obj.setMaximumRootKeyLength(value.orElse(null));
 		}
 	};
 

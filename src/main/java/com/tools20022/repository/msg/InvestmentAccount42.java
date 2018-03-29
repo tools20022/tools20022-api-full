@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -137,7 +138,7 @@ public class InvestmentAccount42 {
 	 * InvestmentAccount21.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount42, Optional<AccountIdentification1>> mmAccountIdentification = new MMMessageAttribute<InvestmentAccount42, Optional<AccountIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount42.mmObject();
@@ -149,7 +150,17 @@ public class InvestmentAccount42 {
 			previousVersion_lazy = () -> InvestmentAccount21.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1> getValue(InvestmentAccount42 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount42 obj, Optional<AccountIdentification1> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OwnrId")
@@ -192,7 +203,7 @@ public class InvestmentAccount42 {
 	 * InvestmentAccount21.mmOwnerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount42, Optional<PartyIdentification2Choice>> mmOwnerIdentification = new MMMessageAttribute<InvestmentAccount42, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount42.mmObject();
@@ -205,6 +216,16 @@ public class InvestmentAccount42 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(InvestmentAccount42 obj) {
+			return obj.getOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount42 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -249,7 +270,7 @@ public class InvestmentAccount42 {
 	 * InvestmentAccount21.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount42, Optional<PartyIdentification2Choice>> mmAccountServicer = new MMMessageAttribute<InvestmentAccount42, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount42.mmObject();
@@ -262,6 +283,16 @@ public class InvestmentAccount42 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(InvestmentAccount42 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount42 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -286,7 +317,7 @@ public class InvestmentAccount42 {
 		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public InvestmentAccount42 setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
+	public InvestmentAccount42 setAccountIdentification(AccountIdentification1 accountIdentification) {
 		this.accountIdentification = accountIdentification;
 		return this;
 	}

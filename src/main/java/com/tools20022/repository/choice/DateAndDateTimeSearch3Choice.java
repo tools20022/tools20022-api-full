@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DatePeriodSearch1Choice;
+import com.tools20022.repository.choice.DateTimePeriod1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -106,7 +108,7 @@ public class DateAndDateTimeSearch3Choice {
 	 * DateAndDateTimeSearchChoice.mmDateTimeSearch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTimeSearch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndDateTimeSearch3Choice, DateTimePeriod1Choice> mmDateTimeSearch = new MMMessageAttribute<DateAndDateTimeSearch3Choice, DateTimePeriod1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeSearch3Choice.mmObject();
 			isDerived = false;
@@ -117,7 +119,17 @@ public class DateAndDateTimeSearch3Choice {
 			previousVersion_lazy = () -> DateAndDateTimeSearchChoice.mmDateTimeSearch;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateTimePeriod1Choice.mmObject();
+			complexType_lazy = () -> DateTimePeriod1Choice.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod1Choice getValue(DateAndDateTimeSearch3Choice obj) {
+			return obj.getDateTimeSearch();
+		}
+
+		@Override
+		public void setValue(DateAndDateTimeSearch3Choice obj, DateTimePeriod1Choice value) {
+			obj.setDateTimeSearch(value);
 		}
 	};
 	@XmlElement(name = "DtSch", required = true)
@@ -155,7 +167,7 @@ public class DateAndDateTimeSearch3Choice {
 	 * DateAndDateTimeSearchChoice.mmDateSearch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateSearch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndDateTimeSearch3Choice, DatePeriodSearch1Choice> mmDateSearch = new MMMessageAttribute<DateAndDateTimeSearch3Choice, DatePeriodSearch1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeSearch3Choice.mmObject();
 			isDerived = false;
@@ -166,7 +178,17 @@ public class DateAndDateTimeSearch3Choice {
 			previousVersion_lazy = () -> DateAndDateTimeSearchChoice.mmDateSearch;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DatePeriodSearch1Choice.mmObject();
+			complexType_lazy = () -> DatePeriodSearch1Choice.mmObject();
+		}
+
+		@Override
+		public DatePeriodSearch1Choice getValue(DateAndDateTimeSearch3Choice obj) {
+			return obj.getDateSearch();
+		}
+
+		@Override
+		public void setValue(DateAndDateTimeSearch3Choice obj, DatePeriodSearch1Choice value) {
+			obj.setDateSearch(value);
 		}
 	};
 
@@ -188,7 +210,7 @@ public class DateAndDateTimeSearch3Choice {
 		return dateTimeSearch;
 	}
 
-	public DateAndDateTimeSearch3Choice setDateTimeSearch(com.tools20022.repository.choice.DateTimePeriod1Choice dateTimeSearch) {
+	public DateAndDateTimeSearch3Choice setDateTimeSearch(DateTimePeriod1Choice dateTimeSearch) {
 		this.dateTimeSearch = Objects.requireNonNull(dateTimeSearch);
 		return this;
 	}
@@ -197,7 +219,7 @@ public class DateAndDateTimeSearch3Choice {
 		return dateSearch;
 	}
 
-	public DateAndDateTimeSearch3Choice setDateSearch(com.tools20022.repository.choice.DatePeriodSearch1Choice dateSearch) {
+	public DateAndDateTimeSearch3Choice setDateSearch(DatePeriodSearch1Choice dateSearch) {
 		this.dateSearch = Objects.requireNonNull(dateSearch);
 		return this;
 	}

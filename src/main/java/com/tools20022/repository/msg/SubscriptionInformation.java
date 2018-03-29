@@ -123,7 +123,7 @@ public class SubscriptionInformation {
 	 * definition} = "Date the investment plan starts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateOfFirstSubscription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionInformation, ISODate> mmDateOfFirstSubscription = new MMMessageAttribute<SubscriptionInformation, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionInformation.mmObject();
@@ -135,6 +135,16 @@ public class SubscriptionInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SubscriptionInformation obj) {
+			return obj.getDateOfFirstSubscription();
+		}
+
+		@Override
+		public void setValue(SubscriptionInformation obj, ISODate value) {
+			obj.setDateOfFirstSubscription(value);
 		}
 	};
 	@XmlElement(name = "EqtyCmpnt")
@@ -174,7 +184,7 @@ public class SubscriptionInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEquityComponent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionInformation, Optional<CurrencyAndAmount>> mmEquityComponent = new MMMessageAttribute<SubscriptionInformation, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SubscriptionExecution.mmEquityComponent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionInformation.mmObject();
@@ -186,6 +196,16 @@ public class SubscriptionInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(SubscriptionInformation obj) {
+			return obj.getEquityComponent();
+		}
+
+		@Override
+		public void setValue(SubscriptionInformation obj, Optional<CurrencyAndAmount> value) {
+			obj.setEquityComponent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshCmpnt")
@@ -223,7 +243,7 @@ public class SubscriptionInformation {
 	 * definition} = "Amount subscribed in the current tax year into cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashComponent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionInformation, Optional<CurrencyAndAmount>> mmCashComponent = new MMMessageAttribute<SubscriptionInformation, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SubscriptionExecution.mmCashComponent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionInformation.mmObject();
@@ -235,6 +255,16 @@ public class SubscriptionInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(SubscriptionInformation obj) {
+			return obj.getCashComponent();
+		}
+
+		@Override
+		public void setValue(SubscriptionInformation obj, Optional<CurrencyAndAmount> value) {
+			obj.setCashComponent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlAmtYrToDt", required = true)
@@ -272,7 +302,7 @@ public class SubscriptionInformation {
 	 * definition} = "Total amount subscribed in the current tax year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmountYearToDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionInformation, CurrencyAndAmount> mmTotalAmountYearToDate = new MMMessageAttribute<SubscriptionInformation, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmTotalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionInformation.mmObject();
@@ -284,6 +314,16 @@ public class SubscriptionInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(SubscriptionInformation obj) {
+			return obj.getTotalAmountYearToDate();
+		}
+
+		@Override
+		public void setValue(SubscriptionInformation obj, CurrencyAndAmount value) {
+			obj.setTotalAmountYearToDate(value);
 		}
 	};
 

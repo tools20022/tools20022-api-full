@@ -53,11 +53,15 @@ public class ConstraintNameAndAddress1Rule {
 	 */
 	public static final MMConstraint<DeliveryParameters2> forDeliveryParameters2 = new MMConstraint<DeliveryParameters2>() {
 		{
-			validator = ConstraintNameAndAddress1Rule::checkDeliveryParameters2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress1Rule";
 			definition = "If RegisteredAddressIndicator is \"true\" or \"1\" (Yes), then NameAndAddress is not allowed.\nIf RegisteredAddressIndicator is \"false\" or \"0\" (No), then NameAndAddress must be present.";
 			owner_lazy = () -> DeliveryParameters2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveryParameters2 obj) throws Exception {
+			checkDeliveryParameters2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintNameAndAddress1Rule {
 	 */
 	public static final MMConstraint<DeliveryParameters4> forDeliveryParameters4 = new MMConstraint<DeliveryParameters4>() {
 		{
-			validator = ConstraintNameAndAddress1Rule::checkDeliveryParameters4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress1Rule";
 			definition = "If RegisteredAddressIndicator is \"true\" or \"1\" (Yes), then NameAndAddress is not allowed.\nIf RegisteredAddressIndicator is \"false\" or \"0\" (No), then NameAndAddress must be present.";
 			owner_lazy = () -> DeliveryParameters4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveryParameters4 obj) throws Exception {
+			checkDeliveryParameters4(obj);
 		}
 	};
 

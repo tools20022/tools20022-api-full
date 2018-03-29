@@ -97,7 +97,7 @@ public class LocalDateTime1 {
 	 * definition} = "Date time of the beginning of the period (inclusive)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LocalDateTime1, Optional<ISODateTime>> mmFromDateTime = new MMMessageAttribute<LocalDateTime1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalDateTime1.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class LocalDateTime1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(LocalDateTime1 obj) {
+			return obj.getFromDateTime();
+		}
+
+		@Override
+		public void setValue(LocalDateTime1 obj, Optional<ISODateTime> value) {
+			obj.setFromDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ToDtTm")
@@ -138,7 +148,7 @@ public class LocalDateTime1 {
 	 * definition} = "Date time of the end of the period (exclusive)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LocalDateTime1, Optional<ISODateTime>> mmToDateTime = new MMMessageAttribute<LocalDateTime1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalDateTime1.mmObject();
 			isDerived = false;
@@ -149,6 +159,16 @@ public class LocalDateTime1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(LocalDateTime1 obj) {
+			return obj.getToDateTime();
+		}
+
+		@Override
+		public void setValue(LocalDateTime1 obj, Optional<ISODateTime> value) {
+			obj.setToDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UTCOffset", required = true)
@@ -181,7 +201,7 @@ public class LocalDateTime1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUTCOffset = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LocalDateTime1, Number> mmUTCOffset = new MMMessageAttribute<LocalDateTime1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalDateTime1.mmObject();
 			isDerived = false;
@@ -192,6 +212,16 @@ public class LocalDateTime1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(LocalDateTime1 obj) {
+			return obj.getUTCOffset();
+		}
+
+		@Override
+		public void setValue(LocalDateTime1 obj, Number value) {
+			obj.setUTCOffset(value);
 		}
 	};
 

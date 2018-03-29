@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV01;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
+import com.tools20022.repository.choice.CancellationReason11Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
@@ -127,7 +128,7 @@ public class CancellationProcessingStatus6Choice {
 	 * definition} = "Trade is in cancelation pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationProcessingStatus6Choice, CancellationReason11Choice> mmCancellationPending = new MMMessageAssociationEnd<CancellationProcessingStatus6Choice, CancellationReason11Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmObject();
@@ -139,7 +140,17 @@ public class CancellationProcessingStatus6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CancellationReason11Choice.mmObject();
+			type_lazy = () -> CancellationReason11Choice.mmObject();
+		}
+
+		@Override
+		public CancellationReason11Choice getValue(CancellationProcessingStatus6Choice obj) {
+			return obj.getCancellationPending();
+		}
+
+		@Override
+		public void setValue(CancellationProcessingStatus6Choice obj, CancellationReason11Choice value) {
+			obj.setCancellationPending(value);
 		}
 	};
 	@XmlElement(name = "CxlReqd", required = true)
@@ -175,7 +186,7 @@ public class CancellationProcessingStatus6Choice {
 	 * definition} = "Cancelation request for the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationRequested = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationProcessingStatus6Choice, ProprietaryReason1> mmCancellationRequested = new MMMessageAssociationEnd<CancellationProcessingStatus6Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCancellationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmObject();
@@ -188,6 +199,16 @@ public class CancellationProcessingStatus6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(CancellationProcessingStatus6Choice obj) {
+			return obj.getCancellationRequested();
+		}
+
+		@Override
+		public void setValue(CancellationProcessingStatus6Choice obj, ProprietaryReason1 value) {
+			obj.setCancellationRequested(value);
 		}
 	};
 	@XmlElement(name = "CxlCmpltd", required = true)
@@ -223,7 +244,7 @@ public class CancellationProcessingStatus6Choice {
 	 * definition} = "Cancellation is completed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationCompleted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationProcessingStatus6Choice, ProprietaryReason1> mmCancellationCompleted = new MMMessageAssociationEnd<CancellationProcessingStatus6Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCancellationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmObject();
@@ -236,6 +257,16 @@ public class CancellationProcessingStatus6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(CancellationProcessingStatus6Choice obj) {
+			return obj.getCancellationCompleted();
+		}
+
+		@Override
+		public void setValue(CancellationProcessingStatus6Choice obj, ProprietaryReason1 value) {
+			obj.setCancellationCompleted(value);
 		}
 	};
 	@XmlElement(name = "PrtrySts")
@@ -274,7 +305,7 @@ public class CancellationProcessingStatus6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationProcessingStatus6Choice, Optional<ProprietaryStatusAndReason1>> mmProprietaryStatus = new MMMessageAssociationEnd<CancellationProcessingStatus6Choice, Optional<ProprietaryStatusAndReason1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationProcessingStatus6Choice.mmObject();
@@ -287,6 +318,16 @@ public class CancellationProcessingStatus6Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryStatusAndReason1> getValue(CancellationProcessingStatus6Choice obj) {
+			return obj.getProprietaryStatus();
+		}
+
+		@Override
+		public void setValue(CancellationProcessingStatus6Choice obj, Optional<ProprietaryStatusAndReason1> value) {
+			obj.setProprietaryStatus(value.orElse(null));
 		}
 	};
 
@@ -311,7 +352,7 @@ public class CancellationProcessingStatus6Choice {
 		return cancellationPending;
 	}
 
-	public CancellationProcessingStatus6Choice setCancellationPending(com.tools20022.repository.choice.CancellationReason11Choice cancellationPending) {
+	public CancellationProcessingStatus6Choice setCancellationPending(CancellationReason11Choice cancellationPending) {
 		this.cancellationPending = Objects.requireNonNull(cancellationPending);
 		return this;
 	}

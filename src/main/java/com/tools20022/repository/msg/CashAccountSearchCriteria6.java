@@ -28,6 +28,9 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.CashBalance9;
+import com.tools20022.repository.msg.PartyIdentification125;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -140,7 +143,7 @@ public class CashAccountSearchCriteria6 {
 	 * CashAccountSearchCriteria5.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountSearchCriteria6, List<AccountIdentificationSearchCriteria2Choice>> mmAccountIdentification = new MMMessageAssociationEnd<CashAccountSearchCriteria6, List<AccountIdentificationSearchCriteria2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountSearchCriteria6.mmObject();
@@ -153,6 +156,16 @@ public class CashAccountSearchCriteria6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
+		}
+
+		@Override
+		public List<AccountIdentificationSearchCriteria2Choice> getValue(CashAccountSearchCriteria6 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccountSearchCriteria6 obj, List<AccountIdentificationSearchCriteria2Choice> value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -195,7 +208,7 @@ public class CashAccountSearchCriteria6 {
 	 * CashAccountSearchCriteria5.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountSearchCriteria6, List<CashAccountType2Choice>> mmType = new MMMessageAttribute<CashAccountSearchCriteria6, List<CashAccountType2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountSearchCriteria6.mmObject();
@@ -207,6 +220,16 @@ public class CashAccountSearchCriteria6 {
 			previousVersion_lazy = () -> CashAccountSearchCriteria5.mmType;
 			minOccurs = 0;
 			complexType_lazy = () -> CashAccountType2Choice.mmObject();
+		}
+
+		@Override
+		public List<CashAccountType2Choice> getValue(CashAccountSearchCriteria6 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashAccountSearchCriteria6 obj, List<CashAccountType2Choice> value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -249,7 +272,7 @@ public class CashAccountSearchCriteria6 {
 	 * CashAccountSearchCriteria5.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountSearchCriteria6, List<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<CashAccountSearchCriteria6, List<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountSearchCriteria6.mmObject();
@@ -262,9 +285,19 @@ public class CashAccountSearchCriteria6 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyCode> getValue(CashAccountSearchCriteria6 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccountSearchCriteria6 obj, List<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value);
+		}
 	};
 	@XmlElement(name = "Bal")
-	protected List<com.tools20022.repository.msg.CashBalance9> balance;
+	protected List<CashBalance9> balance;
 	/**
 	 * 
 	 <p>
@@ -301,7 +334,7 @@ public class CashAccountSearchCriteria6 {
 	 * CashAccountSearchCriteria5.mmBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountSearchCriteria6, List<CashBalance9>> mmBalance = new MMMessageAssociationEnd<CashAccountSearchCriteria6, List<CashBalance9>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountSearchCriteria6.mmObject();
@@ -313,7 +346,17 @@ public class CashAccountSearchCriteria6 {
 			previousVersion_lazy = () -> CashAccountSearchCriteria5.mmBalance;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalance9.mmObject();
+			type_lazy = () -> CashBalance9.mmObject();
+		}
+
+		@Override
+		public List<CashBalance9> getValue(CashAccountSearchCriteria6 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(CashAccountSearchCriteria6 obj, List<CashBalance9> value) {
+			obj.setBalance(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -354,7 +397,7 @@ public class CashAccountSearchCriteria6 {
 	 * CashAccountSearchCriteria5.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountSearchCriteria6, Optional<PartyIdentification125>> mmAccountOwner = new MMMessageAssociationEnd<CashAccountSearchCriteria6, Optional<PartyIdentification125>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountSearchCriteria6.mmObject();
@@ -367,7 +410,17 @@ public class CashAccountSearchCriteria6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification125.mmObject();
+			type_lazy = () -> PartyIdentification125.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification125> getValue(CashAccountSearchCriteria6 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(CashAccountSearchCriteria6 obj, Optional<PartyIdentification125> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -409,7 +462,7 @@ public class CashAccountSearchCriteria6 {
 	 * CashAccountSearchCriteria5.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountSearchCriteria6, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountServicer = new MMMessageAssociationEnd<CashAccountSearchCriteria6, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountSearchCriteria6.mmObject();
@@ -422,7 +475,17 @@ public class CashAccountSearchCriteria6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(CashAccountSearchCriteria6 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(CashAccountSearchCriteria6 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -475,7 +538,7 @@ public class CashAccountSearchCriteria6 {
 		return balance == null ? balance = new ArrayList<>() : balance;
 	}
 
-	public CashAccountSearchCriteria6 setBalance(List<com.tools20022.repository.msg.CashBalance9> balance) {
+	public CashAccountSearchCriteria6 setBalance(List<CashBalance9> balance) {
 		this.balance = Objects.requireNonNull(balance);
 		return this;
 	}
@@ -484,7 +547,7 @@ public class CashAccountSearchCriteria6 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public CashAccountSearchCriteria6 setAccountOwner(com.tools20022.repository.msg.PartyIdentification125 accountOwner) {
+	public CashAccountSearchCriteria6 setAccountOwner(PartyIdentification125 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -493,7 +556,7 @@ public class CashAccountSearchCriteria6 {
 		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public CashAccountSearchCriteria6 setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+	public CashAccountSearchCriteria6 setAccountServicer(BranchAndFinancialInstitutionIdentification5 accountServicer) {
 		this.accountServicer = accountServicer;
 		return this;
 	}

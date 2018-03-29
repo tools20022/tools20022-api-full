@@ -117,7 +117,7 @@ public class SignedQuantityFormat7 {
 	 * SignedQuantityFormat1.mmShortLongPosition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SignedQuantityFormat7, ShortLong1Code> mmShortLongPosition = new MMMessageAttribute<SignedQuantityFormat7, ShortLong1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat7.mmObject();
@@ -130,6 +130,16 @@ public class SignedQuantityFormat7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public ShortLong1Code getValue(SignedQuantityFormat7 obj) {
+			return obj.getShortLongPosition();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat7 obj, ShortLong1Code value) {
+			obj.setShortLongPosition(value);
 		}
 	};
 	@XmlElement(name = "QtyChc", required = true)
@@ -170,7 +180,7 @@ public class SignedQuantityFormat7 {
 	 * SignedQuantityFormat1.mmQuantityChoice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SignedQuantityFormat7, Quantity19Choice> mmQuantityChoice = new MMMessageAssociationEnd<SignedQuantityFormat7, Quantity19Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat7.mmObject();
@@ -184,6 +194,16 @@ public class SignedQuantityFormat7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Quantity19Choice.mmObject();
+		}
+
+		@Override
+		public Quantity19Choice getValue(SignedQuantityFormat7 obj) {
+			return obj.getQuantityChoice();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat7 obj, Quantity19Choice value) {
+			obj.setQuantityChoice(value);
 		}
 	};
 

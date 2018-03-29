@@ -107,7 +107,7 @@ public class PlaceOrUnderConfirmationChoice1 {
 	 * definition} = "Party to which the presentation is to be made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlaceOfPresentation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PlaceOrUnderConfirmationChoice1, PlaceOfPresentation1> mmPlaceOfPresentation = new MMMessageAssociationEnd<PlaceOrUnderConfirmationChoice1, PlaceOfPresentation1>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingPlaceOfPresentation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmObject();
@@ -120,6 +120,16 @@ public class PlaceOrUnderConfirmationChoice1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PlaceOfPresentation1.mmObject();
+		}
+
+		@Override
+		public PlaceOfPresentation1 getValue(PlaceOrUnderConfirmationChoice1 obj) {
+			return obj.getPlaceOfPresentation();
+		}
+
+		@Override
+		public void setValue(PlaceOrUnderConfirmationChoice1 obj, PlaceOfPresentation1 value) {
+			obj.setPlaceOfPresentation(value);
 		}
 	};
 	@XmlElement(name = "PresntnUdrConf", required = true)
@@ -152,7 +162,7 @@ public class PlaceOrUnderConfirmationChoice1 {
 	 * definition} = "Place of presentation when there is a confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPresentationUnderConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOrUnderConfirmationChoice1, PresentationParty1Code> mmPresentationUnderConfirmation = new MMMessageAttribute<PlaceOrUnderConfirmationChoice1, PresentationParty1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class PlaceOrUnderConfirmationChoice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PresentationParty1Code.mmObject();
+		}
+
+		@Override
+		public PresentationParty1Code getValue(PlaceOrUnderConfirmationChoice1 obj) {
+			return obj.getPresentationUnderConfirmation();
+		}
+
+		@Override
+		public void setValue(PlaceOrUnderConfirmationChoice1 obj, PresentationParty1Code value) {
+			obj.setPresentationUnderConfirmation(value);
 		}
 	};
 

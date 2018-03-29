@@ -502,6 +502,7 @@ class ListBuilderForAccount_00 {
 		list.add((T) QuantityAndAccount59.mmCashAccount);
 		list.add((T) QuantityAndAccount60.mmCashAccount);
 		list.add((T) CollateralAccount3.mmIdentification);
+		list.add((T) SettlementAccount1.mmIdentification);
 		list.add((T) PositionAccount2.mmIdentification);
 		list.add((T) CollateralAccount4.mmIdentification);
 		list.add((T) Account24.mmIdentification);
@@ -527,7 +528,6 @@ class ListBuilderForAccount_00 {
 		list.add((T) QuantityAndAccount68.mmCashAccount);
 		list.add((T) CashOption56.mmCashAccountIdentification);
 		list.add((T) CashOption57.mmCashAccountIdentification);
-		list.add((T) CashOption61.mmCashAccountIdentification);
 		ListBuilderForAccount_01.addElems(list);
 		return list;
 	}

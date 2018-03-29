@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument29;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class ModificationScope13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope13, DataModification2Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope13, DataModification2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope13.mmObject();
 			isDerived = false;
@@ -133,6 +134,16 @@ public class ModificationScope13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
+		}
+
+		@Override
+		public DataModification2Code getValue(ModificationScope13 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope13 obj, DataModification2Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "FndDtls", required = true)
@@ -171,7 +182,7 @@ public class ModificationScope13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope13, FinancialInstrument29> mmFundDetails = new MMMessageAssociationEnd<ModificationScope13, FinancialInstrument29>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope13.mmObject();
 			isDerived = false;
@@ -183,7 +194,17 @@ public class ModificationScope13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument29.mmObject();
+			type_lazy = () -> FinancialInstrument29.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument29 getValue(ModificationScope13 obj) {
+			return obj.getFundDetails();
+		}
+
+		@Override
+		public void setValue(ModificationScope13 obj, FinancialInstrument29 value) {
+			obj.setFundDetails(value);
 		}
 	};
 
@@ -215,7 +236,7 @@ public class ModificationScope13 {
 		return fundDetails;
 	}
 
-	public ModificationScope13 setFundDetails(com.tools20022.repository.msg.FinancialInstrument29 fundDetails) {
+	public ModificationScope13 setFundDetails(FinancialInstrument29 fundDetails) {
 		this.fundDetails = Objects.requireNonNull(fundDetails);
 		return this;
 	}

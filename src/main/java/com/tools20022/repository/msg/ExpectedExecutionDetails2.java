@@ -128,7 +128,7 @@ public class ExpectedExecutionDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails2, Optional<DateAndDateTimeChoice>> mmExpectedTradeDateTime = new MMMessageAttribute<ExpectedExecutionDetails2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails2.mmObject();
@@ -141,6 +141,16 @@ public class ExpectedExecutionDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(ExpectedExecutionDetails2 obj) {
+			return obj.getExpectedTradeDateTime();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setExpectedTradeDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdCshSttlmDt")
@@ -187,7 +197,7 @@ public class ExpectedExecutionDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedCashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails2, Optional<ISODate>> mmExpectedCashSettlementDate = new MMMessageAttribute<ExpectedExecutionDetails2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails2.mmObject();
@@ -200,6 +210,16 @@ public class ExpectedExecutionDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ExpectedExecutionDetails2 obj) {
+			return obj.getExpectedCashSettlementDate();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails2 obj, Optional<ISODate> value) {
+			obj.setExpectedCashSettlementDate(value.orElse(null));
 		}
 	};
 

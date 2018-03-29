@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification122;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -83,6 +84,11 @@ public class PositionAccount1 {
 	 * type} = {@linkplain com.tools20022.repository.msg.PartyIdentification122
 	 * PartyIdentification122}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
+	 * OrganisationIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.PositionAccount1
@@ -100,8 +106,9 @@ public class PositionAccount1 {
 	 * definition} = "Unique identifier of the position account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PositionAccount1, PartyIdentification122> mmIdentification = new MMMessageAssociationEnd<PositionAccount1, PartyIdentification122>() {
 		{
+			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
@@ -111,7 +118,17 @@ public class PositionAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification122.mmObject();
+			type_lazy = () -> PartyIdentification122.mmObject();
+		}
+
+		@Override
+		public PartyIdentification122 getValue(PositionAccount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PositionAccount1 obj, PartyIdentification122 value) {
+			obj.setIdentification(value);
 		}
 	};
 
@@ -133,7 +150,7 @@ public class PositionAccount1 {
 		return identification;
 	}
 
-	public PositionAccount1 setIdentification(com.tools20022.repository.msg.PartyIdentification122 identification) {
+	public PositionAccount1 setIdentification(PartyIdentification122 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

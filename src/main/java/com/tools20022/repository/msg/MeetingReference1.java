@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.IssuerMeeting;
 import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +118,7 @@ public class MeetingReference1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMeetingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingReference1, Optional<Max35Text>> mmMeetingIdentification = new MMMessageAttribute<MeetingReference1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingReference1.mmObject();
@@ -129,6 +130,16 @@ public class MeetingReference1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MeetingReference1 obj) {
+			return obj.getMeetingIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingReference1 obj, Optional<Max35Text> value) {
+			obj.setMeetingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrMtgId")
@@ -167,7 +178,7 @@ public class MeetingReference1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerMeetingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingReference1, Optional<Max35Text>> mmIssuerMeetingIdentification = new MMMessageAttribute<MeetingReference1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> IssuerMeeting.mmIssuerMeetingIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingReference1.mmObject();
@@ -179,6 +190,16 @@ public class MeetingReference1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MeetingReference1 obj) {
+			return obj.getIssuerMeetingIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingReference1 obj, Optional<Max35Text> value) {
+			obj.setIssuerMeetingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtgDtAndTm", required = true)
@@ -215,7 +236,7 @@ public class MeetingReference1 {
 	 * definition} = "Date and time at which the meeting will take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMeetingDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingReference1, ISODateTime> mmMeetingDateAndTime = new MMMessageAttribute<MeetingReference1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDateAndTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingReference1.mmObject();
@@ -227,6 +248,16 @@ public class MeetingReference1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(MeetingReference1 obj) {
+			return obj.getMeetingDateAndTime();
+		}
+
+		@Override
+		public void setValue(MeetingReference1 obj, ISODateTime value) {
+			obj.setMeetingDateAndTime(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -265,7 +296,7 @@ public class MeetingReference1 {
 	 * "Specifies the type of meeting for which instructions are sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingReference1, MeetingType1Code> mmType = new MMMessageAttribute<MeetingReference1, MeetingType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingReference1.mmObject();
@@ -278,9 +309,19 @@ public class MeetingReference1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingType1Code.mmObject();
 		}
+
+		@Override
+		public MeetingType1Code getValue(MeetingReference1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MeetingReference1 obj, MeetingType1Code value) {
+			obj.setType(value);
+		}
 	};
 	@XmlElement(name = "Lctn")
-	protected List<com.tools20022.repository.msg.PostalAddress1> location;
+	protected List<PostalAddress1> location;
 	/**
 	 * 
 	 <p>
@@ -313,7 +354,7 @@ public class MeetingReference1 {
 	 * "Place of the company meeting for the scheduled meeting date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingReference1, List<PostalAddress1>> mmLocation = new MMMessageAssociationEnd<MeetingReference1, List<PostalAddress1>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingReference1.mmObject();
@@ -325,7 +366,17 @@ public class MeetingReference1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public List<PostalAddress1> getValue(MeetingReference1 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(MeetingReference1 obj, List<PostalAddress1> value) {
+			obj.setLocation(value);
 		}
 	};
 
@@ -384,7 +435,7 @@ public class MeetingReference1 {
 		return location == null ? location = new ArrayList<>() : location;
 	}
 
-	public MeetingReference1 setLocation(List<com.tools20022.repository.msg.PostalAddress1> location) {
+	public MeetingReference1 setLocation(List<PostalAddress1> location) {
 		this.location = Objects.requireNonNull(location);
 		return this;
 	}

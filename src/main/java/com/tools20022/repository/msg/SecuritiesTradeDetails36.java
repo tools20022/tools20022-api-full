@@ -31,6 +31,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max3Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarketIdentification78;
+import com.tools20022.repository.msg.Price2;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -198,7 +200,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmTradeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails36, List<Max35Text>> mmTradeIdentification = new MMMessageAttribute<SecuritiesTradeDetails36, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -211,6 +213,16 @@ public class SecuritiesTradeDetails36 {
 			previousVersion_lazy = () -> SecuritiesTradeDetails18.mmTradeIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, List<Max35Text> value) {
+			obj.setTradeIdentification(value);
 		}
 	};
 	@XmlElement(name = "CollTxId")
@@ -262,7 +274,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmCollateralTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails36, List<Max35Text>> mmCollateralTransactionIdentification = new MMMessageAttribute<SecuritiesTradeDetails36, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -275,6 +287,16 @@ public class SecuritiesTradeDetails36 {
 			previousVersion_lazy = () -> SecuritiesTradeDetails18.mmCollateralTransactionIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getCollateralTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, List<Max35Text> value) {
+			obj.setCollateralTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrTxId")
@@ -326,7 +348,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmAccountOwnerTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails36, List<Max35Text>> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<SecuritiesTradeDetails36, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -339,6 +361,16 @@ public class SecuritiesTradeDetails36 {
 			previousVersion_lazy = () -> SecuritiesTradeDetails18.mmAccountOwnerTransactionIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, List<Max35Text> value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcrTxId")
@@ -390,7 +422,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmProcessorTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails36, Optional<Max35Text>> mmProcessorTransactionIdentification = new MMMessageAttribute<SecuritiesTradeDetails36, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -404,6 +436,16 @@ public class SecuritiesTradeDetails36 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getProcessorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, Optional<Max35Text> value) {
+			obj.setProcessorTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfTrad")
@@ -452,7 +494,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmPlaceOfTrade}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlaceOfTrade = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTradeDetails36, Optional<MarketIdentification78>> mmPlaceOfTrade = new MMMessageAssociationEnd<SecuritiesTradeDetails36, Optional<MarketIdentification78>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTradingMarket;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -466,7 +508,17 @@ public class SecuritiesTradeDetails36 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification78.mmObject();
+			type_lazy = () -> MarketIdentification78.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification78> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, Optional<MarketIdentification78> value) {
+			obj.setPlaceOfTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfClr")
@@ -519,7 +571,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmPlaceOfClearing}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfClearing = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails36, Optional<AnyBICIdentifier>> mmPlaceOfClearing = new MMMessageAttribute<SecuritiesTradeDetails36, Optional<AnyBICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -533,6 +585,16 @@ public class SecuritiesTradeDetails36 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<AnyBICIdentifier> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getPlaceOfClearing();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, Optional<AnyBICIdentifier> value) {
+			obj.setPlaceOfClearing(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -581,7 +643,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTradeDetails36, Optional<TradeDate1Choice>> mmTradeDate = new MMMessageAssociationEnd<SecuritiesTradeDetails36, Optional<TradeDate1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -596,6 +658,16 @@ public class SecuritiesTradeDetails36 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TradeDate1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TradeDate1Choice> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, Optional<TradeDate1Choice> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -646,7 +718,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTradeDetails36, SettlementDate1Choice> mmSettlementDate = new MMMessageAssociationEnd<SecuritiesTradeDetails36, SettlementDate1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -661,6 +733,16 @@ public class SecuritiesTradeDetails36 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementDate1Choice.mmObject();
+		}
+
+		@Override
+		public SettlementDate1Choice getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, SettlementDate1Choice value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "DealPric")
@@ -710,7 +792,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmDealPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDealPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTradeDetails36, Optional<Price2>> mmDealPrice = new MMMessageAssociationEnd<SecuritiesTradeDetails36, Optional<Price2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmDealPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -724,7 +806,17 @@ public class SecuritiesTradeDetails36 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price2.mmObject();
+			type_lazy = () -> Price2.mmObject();
+		}
+
+		@Override
+		public Optional<Price2> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getDealPrice();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, Optional<Price2> value) {
+			obj.setDealPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfDaysAcrd")
@@ -776,7 +868,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmNumberOfDaysAccrued}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTradeDetails36, Optional<Max3Number>> mmNumberOfDaysAccrued = new MMMessageAttribute<SecuritiesTradeDetails36, Optional<Max3Number>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -790,6 +882,16 @@ public class SecuritiesTradeDetails36 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Number.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Number> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getNumberOfDaysAccrued();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, Optional<Max3Number> value) {
+			obj.setNumberOfDaysAccrued(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradTxCond")
@@ -841,7 +943,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmTradeTransactionCondition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeTransactionCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTradeDetails36, List<TradeTransactionCondition1Choice>> mmTradeTransactionCondition = new MMMessageAssociationEnd<SecuritiesTradeDetails36, List<TradeTransactionCondition1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -855,6 +957,16 @@ public class SecuritiesTradeDetails36 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TradeTransactionCondition1Choice.mmObject();
+		}
+
+		@Override
+		public List<TradeTransactionCondition1Choice> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getTradeTransactionCondition();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, List<TradeTransactionCondition1Choice> value) {
+			obj.setTradeTransactionCondition(value);
 		}
 	};
 	@XmlElement(name = "TpOfPric")
@@ -904,7 +1016,7 @@ public class SecuritiesTradeDetails36 {
 	 * SecuritiesTradeDetails18.mmTypeOfPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTypeOfPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTradeDetails36, Optional<TypeOfPrice3Choice>> mmTypeOfPrice = new MMMessageAssociationEnd<SecuritiesTradeDetails36, Optional<TypeOfPrice3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTradeDetails36.mmObject();
@@ -919,6 +1031,16 @@ public class SecuritiesTradeDetails36 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TypeOfPrice3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfPrice3Choice> getValue(SecuritiesTradeDetails36 obj) {
+			return obj.getTypeOfPrice();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeDetails36 obj, Optional<TypeOfPrice3Choice> value) {
+			obj.setTypeOfPrice(value.orElse(null));
 		}
 	};
 
@@ -994,7 +1116,7 @@ public class SecuritiesTradeDetails36 {
 		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public SecuritiesTradeDetails36 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification78 placeOfTrade) {
+	public SecuritiesTradeDetails36 setPlaceOfTrade(MarketIdentification78 placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
 		return this;
 	}
@@ -1030,7 +1152,7 @@ public class SecuritiesTradeDetails36 {
 		return dealPrice == null ? Optional.empty() : Optional.of(dealPrice);
 	}
 
-	public SecuritiesTradeDetails36 setDealPrice(com.tools20022.repository.msg.Price2 dealPrice) {
+	public SecuritiesTradeDetails36 setDealPrice(Price2 dealPrice) {
 		this.dealPrice = dealPrice;
 		return this;
 	}

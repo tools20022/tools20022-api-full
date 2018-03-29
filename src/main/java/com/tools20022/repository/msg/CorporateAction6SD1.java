@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.codeset.TargetCompanyAgreementCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MergerDetailsType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -114,7 +115,7 @@ public class CorporateAction6SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateAction6SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateAction6SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction6SD1.mmObject();
 			isDerived = false;
@@ -125,6 +126,16 @@ public class CorporateAction6SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateAction6SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateAction6SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrgrDtls")
@@ -157,7 +168,7 @@ public class CorporateAction6SD1 {
 	 * definition} = "Provides additional information about mergers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMergerDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateAction6SD1, Optional<MergerDetailsType1>> mmMergerDetails = new MMMessageAttribute<CorporateAction6SD1, Optional<MergerDetailsType1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction6SD1.mmObject();
 			isDerived = false;
@@ -167,7 +178,17 @@ public class CorporateAction6SD1 {
 			definition = "Provides additional information about mergers.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.MergerDetailsType1.mmObject();
+			complexType_lazy = () -> MergerDetailsType1.mmObject();
+		}
+
+		@Override
+		public Optional<MergerDetailsType1> getValue(CorporateAction6SD1 obj) {
+			return obj.getMergerDetails();
+		}
+
+		@Override
+		public void setValue(CorporateAction6SD1 obj, Optional<MergerDetailsType1> value) {
+			obj.setMergerDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrgtCpnyAgrmt")
@@ -202,7 +223,7 @@ public class CorporateAction6SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetCompanyAgreement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateAction6SD1, Optional<TargetCompanyAgreementCode>> mmTargetCompanyAgreement = new MMMessageAttribute<CorporateAction6SD1, Optional<TargetCompanyAgreementCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction6SD1.mmObject();
 			isDerived = false;
@@ -213,6 +234,16 @@ public class CorporateAction6SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TargetCompanyAgreementCode.mmObject();
+		}
+
+		@Override
+		public Optional<TargetCompanyAgreementCode> getValue(CorporateAction6SD1 obj) {
+			return obj.getTargetCompanyAgreement();
+		}
+
+		@Override
+		public void setValue(CorporateAction6SD1 obj, Optional<TargetCompanyAgreementCode> value) {
+			obj.setTargetCompanyAgreement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfNewShrsIssd")
@@ -245,7 +276,7 @@ public class CorporateAction6SD1 {
 	 * definition} = "Total number of new shares to be issued.\r\n発行新株式数."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfNewSharesIssued = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateAction6SD1, Optional<FinancialInstrumentQuantity15Choice>> mmTotalNumberOfNewSharesIssued = new MMMessageAttribute<CorporateAction6SD1, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction6SD1.mmObject();
 			isDerived = false;
@@ -256,6 +287,16 @@ public class CorporateAction6SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(CorporateAction6SD1 obj) {
+			return obj.getTotalNumberOfNewSharesIssued();
+		}
+
+		@Override
+		public void setValue(CorporateAction6SD1 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setTotalNumberOfNewSharesIssued(value.orElse(null));
 		}
 	};
 
@@ -287,7 +328,7 @@ public class CorporateAction6SD1 {
 		return mergerDetails == null ? Optional.empty() : Optional.of(mergerDetails);
 	}
 
-	public CorporateAction6SD1 setMergerDetails(com.tools20022.repository.msg.MergerDetailsType1 mergerDetails) {
+	public CorporateAction6SD1 setMergerDetails(MergerDetailsType1 mergerDetails) {
 		this.mergerDetails = mergerDetails;
 		return this;
 	}

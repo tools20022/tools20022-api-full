@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TaxReport1;
 import com.tools20022.repository.msg.TaxReportHeader1;
 import com.tools20022.repository.msgset.InvoiceTaxReportISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +119,7 @@ public class InvoiceTaxReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvoiceTaxReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceTaxReportV01, TaxReportHeader1> mmInvoiceTaxReportHeader = new MMMessageBuildingBlock<InvoiceTaxReportV01, TaxReportHeader1>() {
 		{
 			xmlTag = "InvcTaxRptHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,12 +130,14 @@ public class InvoiceTaxReportV01 {
 			complexType_lazy = () -> TaxReportHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceTaxReportV01.class.getMethod("getInvoiceTaxReportHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TaxReportHeader1 getValue(InvoiceTaxReportV01 obj) {
+			return obj.getInvoiceTaxReportHeader();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportV01 obj, TaxReportHeader1 value) {
+			obj.setInvoiceTaxReportHeader(value);
 		}
 	};
 	@XmlElement(name = "TaxRpt", required = true)
@@ -165,7 +166,7 @@ public class InvoiceTaxReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTaxReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceTaxReportV01, List<TaxReport1>> mmTaxReport = new MMMessageBuildingBlock<InvoiceTaxReportV01, List<TaxReport1>>() {
 		{
 			xmlTag = "TaxRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +176,14 @@ public class InvoiceTaxReportV01 {
 			complexType_lazy = () -> TaxReport1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceTaxReportV01.class.getMethod("getTaxReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<TaxReport1> getValue(InvoiceTaxReportV01 obj) {
+			return obj.getTaxReport();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportV01 obj, List<TaxReport1> value) {
+			obj.setTaxReport(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -210,7 +213,7 @@ public class InvoiceTaxReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceTaxReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<InvoiceTaxReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,12 +223,14 @@ public class InvoiceTaxReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceTaxReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(InvoiceTaxReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(InvoiceTaxReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

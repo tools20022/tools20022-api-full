@@ -110,7 +110,7 @@ public class OpenInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossNotionalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpenInterest1, ActiveCurrencyAndAmount> mmGrossNotionalAmount = new MMMessageAttribute<OpenInterest1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpenInterest1.mmObject();
@@ -122,6 +122,16 @@ public class OpenInterest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(OpenInterest1 obj) {
+			return obj.getGrossNotionalAmount();
+		}
+
+		@Override
+		public void setValue(OpenInterest1 obj, ActiveCurrencyAndAmount value) {
+			obj.setGrossNotionalAmount(value);
 		}
 	};
 	@XmlElement(name = "NbOfLots")
@@ -158,7 +168,7 @@ public class OpenInterest1 {
 	 * definition} = "Open interest in number of lots, if applicable.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfLots = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpenInterest1, Optional<PositiveNumber>> mmNumberOfLots = new MMMessageAttribute<OpenInterest1, Optional<PositiveNumber>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpenInterest1.mmObject();
@@ -170,6 +180,16 @@ public class OpenInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PositiveNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PositiveNumber> getValue(OpenInterest1 obj) {
+			return obj.getNumberOfLots();
+		}
+
+		@Override
+		public void setValue(OpenInterest1 obj, Optional<PositiveNumber> value) {
+			obj.setNumberOfLots(value.orElse(null));
 		}
 	};
 

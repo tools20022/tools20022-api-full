@@ -103,7 +103,7 @@ public class SettlementDateCode4Choice {
 	 * definition} = "Settlement date expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDateCode4Choice, DateType4Code> mmCode = new MMMessageAttribute<SettlementDateCode4Choice, DateType4Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDateCode4Choice.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class SettlementDateCode4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType4Code.mmObject();
+		}
+
+		@Override
+		public DateType4Code getValue(SettlementDateCode4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementDateCode4Choice obj, DateType4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -149,7 +159,7 @@ public class SettlementDateCode4Choice {
 	 * definition} = "Settlement date expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementDateCode4Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<SettlementDateCode4Choice, GenericIdentification25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDateCode4Choice.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class SettlementDateCode4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(SettlementDateCode4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementDateCode4Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

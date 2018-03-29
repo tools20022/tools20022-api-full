@@ -61,12 +61,16 @@ public class ConstraintIdentificationNationalityOfInvestorRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount81> forPartyIdentificationAndAccount81 = new MMConstraint<PartyIdentificationAndAccount81>() {
 		{
-			validator = ConstraintIdentificationNationalityOfInvestorRule::checkPartyIdentificationAndAccount81;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNationalityOfInvestorRule";
 			definition = "Identification and/or Nationality must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationNationalityOfInvestorRule.forPartyIdentificationAndAccount108);
 			owner_lazy = () -> PartyIdentificationAndAccount81.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount81 obj) throws Exception {
+			checkPartyIdentificationAndAccount81(obj);
 		}
 	};
 	/**
@@ -90,11 +94,15 @@ public class ConstraintIdentificationNationalityOfInvestorRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount88> forPartyIdentificationAndAccount88 = new MMConstraint<PartyIdentificationAndAccount88>() {
 		{
-			validator = ConstraintIdentificationNationalityOfInvestorRule::checkPartyIdentificationAndAccount88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNationalityOfInvestorRule";
 			definition = "Identification and/or Nationality must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount88 obj) throws Exception {
+			checkPartyIdentificationAndAccount88(obj);
 		}
 	};
 	/**
@@ -124,12 +132,16 @@ public class ConstraintIdentificationNationalityOfInvestorRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount108> forPartyIdentificationAndAccount108 = new MMConstraint<PartyIdentificationAndAccount108>() {
 		{
-			validator = ConstraintIdentificationNationalityOfInvestorRule::checkPartyIdentificationAndAccount108;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNationalityOfInvestorRule";
 			definition = "Identification and/or Nationality must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIdentificationNationalityOfInvestorRule.forPartyIdentificationAndAccount81;
 			owner_lazy = () -> PartyIdentificationAndAccount108.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount108 obj) throws Exception {
+			checkPartyIdentificationAndAccount108(obj);
 		}
 	};
 	/**
@@ -153,11 +165,15 @@ public class ConstraintIdentificationNationalityOfInvestorRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount135> forPartyIdentificationAndAccount135 = new MMConstraint<PartyIdentificationAndAccount135>() {
 		{
-			validator = ConstraintIdentificationNationalityOfInvestorRule::checkPartyIdentificationAndAccount135;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationNationalityOfInvestorRule";
 			definition = "Identification and/or Nationality must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount135.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount135 obj) throws Exception {
+			checkPartyIdentificationAndAccount135(obj);
 		}
 	};
 

@@ -62,12 +62,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount30> forQuantityAndAccount30 = new MMConstraint<QuantityAndAccount30>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount43);
 			owner_lazy = () -> QuantityAndAccount30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount30 obj) throws Exception {
+			checkQuantityAndAccount30(obj);
 		}
 	};
 	/**
@@ -93,11 +97,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount33> forQuantityAndAccount33 = new MMConstraint<QuantityAndAccount33>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount33 obj) throws Exception {
+			checkQuantityAndAccount33(obj);
 		}
 	};
 	/**
@@ -123,11 +131,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification9> forAccountIdentification9 = new MMConstraint<AccountIdentification9>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification9 obj) throws Exception {
+			checkAccountIdentification9(obj);
 		}
 	};
 	/**
@@ -153,11 +165,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification14> forAccountIdentification14 = new MMConstraint<AccountIdentification14>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification14 obj) throws Exception {
+			checkAccountIdentification14(obj);
 		}
 	};
 	/**
@@ -191,12 +207,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification15> forAccountIdentification15 = new MMConstraint<AccountIdentification15>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification31);
 			owner_lazy = () -> AccountIdentification15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification15 obj) throws Exception {
+			checkAccountIdentification15(obj);
 		}
 	};
 	/**
@@ -222,11 +242,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification21> forAccountIdentification21 = new MMConstraint<AccountIdentification21>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification21 obj) throws Exception {
+			checkAccountIdentification21(obj);
 		}
 	};
 	/**
@@ -252,11 +276,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance2> forAccountAndBalance2 = new MMConstraint<AccountAndBalance2>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance2 obj) throws Exception {
+			checkAccountAndBalance2(obj);
 		}
 	};
 	/**
@@ -282,11 +310,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance5> forAccountAndBalance5 = new MMConstraint<AccountAndBalance5>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance5 obj) throws Exception {
+			checkAccountAndBalance5(obj);
 		}
 	};
 	/**
@@ -312,11 +344,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance10> forAccountAndBalance10 = new MMConstraint<AccountAndBalance10>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance10 obj) throws Exception {
+			checkAccountAndBalance10(obj);
 		}
 	};
 	/**
@@ -342,11 +378,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance12> forAccountAndBalance12 = new MMConstraint<AccountAndBalance12>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance12 obj) throws Exception {
+			checkAccountAndBalance12(obj);
 		}
 	};
 	/**
@@ -380,12 +420,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance17> forAccountAndBalance17 = new MMConstraint<AccountAndBalance17>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance35);
 			owner_lazy = () -> AccountAndBalance17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance17 obj) throws Exception {
+			checkAccountAndBalance17(obj);
 		}
 	};
 	/**
@@ -411,11 +455,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance20> forAccountAndBalance20 = new MMConstraint<AccountAndBalance20>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance20 obj) throws Exception {
+			checkAccountAndBalance20(obj);
 		}
 	};
 	/**
@@ -441,11 +489,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification8> forAccountIdentification8 = new MMConstraint<AccountIdentification8>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification8 obj) throws Exception {
+			checkAccountIdentification8(obj);
 		}
 	};
 	/**
@@ -471,11 +523,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification17> forAccountIdentification17 = new MMConstraint<AccountIdentification17>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification17 obj) throws Exception {
+			checkAccountIdentification17(obj);
 		}
 	};
 	/**
@@ -501,11 +557,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification19> forAccountIdentification19 = new MMConstraint<AccountIdentification19>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification19 obj) throws Exception {
+			checkAccountIdentification19(obj);
 		}
 	};
 	/**
@@ -531,11 +591,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption9> forCorporateActionOption9 = new MMConstraint<CorporateActionOption9>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption9 obj) throws Exception {
+			checkCorporateActionOption9(obj);
 		}
 	};
 	/**
@@ -561,11 +625,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption18> forCorporateActionOption18 = new MMConstraint<CorporateActionOption18>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption18 obj) throws Exception {
+			checkCorporateActionOption18(obj);
 		}
 	};
 	/**
@@ -591,11 +659,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption22> forCorporateActionOption22 = new MMConstraint<CorporateActionOption22>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption22 obj) throws Exception {
+			checkCorporateActionOption22(obj);
 		}
 	};
 	/**
@@ -621,11 +693,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption27> forCorporateActionOption27 = new MMConstraint<CorporateActionOption27>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption27 obj) throws Exception {
+			checkCorporateActionOption27(obj);
 		}
 	};
 	/**
@@ -651,11 +727,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption26> forCorporateActionOption26 = new MMConstraint<CorporateActionOption26>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption26 obj) throws Exception {
+			checkCorporateActionOption26(obj);
 		}
 	};
 	/**
@@ -689,12 +769,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption41> forCorporateActionOption41 = new MMConstraint<CorporateActionOption41>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forCorporateActionOption116);
 			owner_lazy = () -> CorporateActionOption41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption41 obj) throws Exception {
+			checkCorporateActionOption41(obj);
 		}
 	};
 	/**
@@ -720,11 +804,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption50> forCorporateActionOption50 = new MMConstraint<CorporateActionOption50>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption50 obj) throws Exception {
+			checkCorporateActionOption50(obj);
 		}
 	};
 	/**
@@ -750,11 +838,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification6> forAccountIdentification6 = new MMConstraint<AccountIdentification6>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification6 obj) throws Exception {
+			checkAccountIdentification6(obj);
 		}
 	};
 	/**
@@ -780,11 +872,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification12> forAccountIdentification12 = new MMConstraint<AccountIdentification12>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification12 obj) throws Exception {
+			checkAccountIdentification12(obj);
 		}
 	};
 	/**
@@ -810,11 +906,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification16> forAccountIdentification16 = new MMConstraint<AccountIdentification16>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification16 obj) throws Exception {
+			checkAccountIdentification16(obj);
 		}
 	};
 	/**
@@ -840,11 +940,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification22> forAccountIdentification22 = new MMConstraint<AccountIdentification22>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification22 obj) throws Exception {
+			checkAccountIdentification22(obj);
 		}
 	};
 	/**
@@ -870,11 +974,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification23> forAccountIdentification23 = new MMConstraint<AccountIdentification23>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification23 obj) throws Exception {
+			checkAccountIdentification23(obj);
 		}
 	};
 	/**
@@ -900,11 +1008,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification24> forAccountIdentification24 = new MMConstraint<AccountIdentification24>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification24 obj) throws Exception {
+			checkAccountIdentification24(obj);
 		}
 	};
 	/**
@@ -938,12 +1050,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification25> forAccountIdentification25 = new MMConstraint<AccountIdentification25>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification33);
 			owner_lazy = () -> AccountIdentification25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification25 obj) throws Exception {
+			checkAccountIdentification25(obj);
 		}
 	};
 	/**
@@ -969,11 +1085,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification29> forAccountIdentification29 = new MMConstraint<AccountIdentification29>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification29 obj) throws Exception {
+			checkAccountIdentification29(obj);
 		}
 	};
 	/**
@@ -999,11 +1119,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption29> forCorporateActionOption29 = new MMConstraint<CorporateActionOption29>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption29 obj) throws Exception {
+			checkCorporateActionOption29(obj);
 		}
 	};
 	/**
@@ -1029,11 +1153,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance3> forAccountAndBalance3 = new MMConstraint<AccountAndBalance3>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance3 obj) throws Exception {
+			checkAccountAndBalance3(obj);
 		}
 	};
 	/**
@@ -1059,11 +1187,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance6> forAccountAndBalance6 = new MMConstraint<AccountAndBalance6>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance6 obj) throws Exception {
+			checkAccountAndBalance6(obj);
 		}
 	};
 	/**
@@ -1089,11 +1221,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance11> forAccountAndBalance11 = new MMConstraint<AccountAndBalance11>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance11 obj) throws Exception {
+			checkAccountAndBalance11(obj);
 		}
 	};
 	/**
@@ -1119,11 +1255,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance13> forAccountAndBalance13 = new MMConstraint<AccountAndBalance13>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance13 obj) throws Exception {
+			checkAccountAndBalance13(obj);
 		}
 	};
 	/**
@@ -1149,11 +1289,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance16> forAccountAndBalance16 = new MMConstraint<AccountAndBalance16>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance16 obj) throws Exception {
+			checkAccountAndBalance16(obj);
 		}
 	};
 	/**
@@ -1179,11 +1323,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance19> forAccountAndBalance19 = new MMConstraint<AccountAndBalance19>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance19 obj) throws Exception {
+			checkAccountAndBalance19(obj);
 		}
 	};
 	/**
@@ -1217,12 +1365,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance22> forAccountAndBalance22 = new MMConstraint<AccountAndBalance22>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance26);
 			owner_lazy = () -> AccountAndBalance22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance22 obj) throws Exception {
+			checkAccountAndBalance22(obj);
 		}
 	};
 	/**
@@ -1248,11 +1400,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance23> forAccountAndBalance23 = new MMConstraint<AccountAndBalance23>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance23 obj) throws Exception {
+			checkAccountAndBalance23(obj);
 		}
 	};
 	/**
@@ -1278,11 +1434,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance1> forAccountAndBalance1 = new MMConstraint<AccountAndBalance1>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance1 obj) throws Exception {
+			checkAccountAndBalance1(obj);
 		}
 	};
 	/**
@@ -1308,11 +1468,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance7> forAccountAndBalance7 = new MMConstraint<AccountAndBalance7>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance7 obj) throws Exception {
+			checkAccountAndBalance7(obj);
 		}
 	};
 	/**
@@ -1338,11 +1502,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance9> forAccountAndBalance9 = new MMConstraint<AccountAndBalance9>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance9 obj) throws Exception {
+			checkAccountAndBalance9(obj);
 		}
 	};
 	/**
@@ -1368,11 +1536,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance14> forAccountAndBalance14 = new MMConstraint<AccountAndBalance14>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance14 obj) throws Exception {
+			checkAccountAndBalance14(obj);
 		}
 	};
 	/**
@@ -1398,11 +1570,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance15> forAccountAndBalance15 = new MMConstraint<AccountAndBalance15>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance15 obj) throws Exception {
+			checkAccountAndBalance15(obj);
 		}
 	};
 	/**
@@ -1428,11 +1604,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance18> forAccountAndBalance18 = new MMConstraint<AccountAndBalance18>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance18 obj) throws Exception {
+			checkAccountAndBalance18(obj);
 		}
 	};
 	/**
@@ -1466,12 +1646,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance21> forAccountAndBalance21 = new MMConstraint<AccountAndBalance21>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance25);
 			owner_lazy = () -> AccountAndBalance21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance21 obj) throws Exception {
+			checkAccountAndBalance21(obj);
 		}
 	};
 	/**
@@ -1497,11 +1681,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance24> forAccountAndBalance24 = new MMConstraint<AccountAndBalance24>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance24 obj) throws Exception {
+			checkAccountAndBalance24(obj);
 		}
 	};
 	/**
@@ -1527,11 +1715,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount1> forQuantityAndAccount1 = new MMConstraint<QuantityAndAccount1>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount1 obj) throws Exception {
+			checkQuantityAndAccount1(obj);
 		}
 	};
 	/**
@@ -1557,11 +1749,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount5> forQuantityAndAccount5 = new MMConstraint<QuantityAndAccount5>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount5 obj) throws Exception {
+			checkQuantityAndAccount5(obj);
 		}
 	};
 	/**
@@ -1587,11 +1783,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount17> forQuantityAndAccount17 = new MMConstraint<QuantityAndAccount17>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount17 obj) throws Exception {
+			checkQuantityAndAccount17(obj);
 		}
 	};
 	/**
@@ -1617,11 +1817,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount24> forQuantityAndAccount24 = new MMConstraint<QuantityAndAccount24>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount24 obj) throws Exception {
+			checkQuantityAndAccount24(obj);
 		}
 	};
 	/**
@@ -1655,12 +1859,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount25> forQuantityAndAccount25 = new MMConstraint<QuantityAndAccount25>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount39);
 			owner_lazy = () -> QuantityAndAccount25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount25 obj) throws Exception {
+			checkQuantityAndAccount25(obj);
 		}
 	};
 	/**
@@ -1686,11 +1894,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount34> forQuantityAndAccount34 = new MMConstraint<QuantityAndAccount34>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount34 obj) throws Exception {
+			checkQuantityAndAccount34(obj);
 		}
 	};
 	/**
@@ -1716,11 +1928,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount2> forQuantityAndAccount2 = new MMConstraint<QuantityAndAccount2>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount2 obj) throws Exception {
+			checkQuantityAndAccount2(obj);
 		}
 	};
 	/**
@@ -1746,11 +1962,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount12> forQuantityAndAccount12 = new MMConstraint<QuantityAndAccount12>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount12 obj) throws Exception {
+			checkQuantityAndAccount12(obj);
 		}
 	};
 	/**
@@ -1776,11 +1996,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount15> forQuantityAndAccount15 = new MMConstraint<QuantityAndAccount15>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount15 obj) throws Exception {
+			checkQuantityAndAccount15(obj);
 		}
 	};
 	/**
@@ -1806,11 +2030,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount20> forQuantityAndAccount20 = new MMConstraint<QuantityAndAccount20>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount20 obj) throws Exception {
+			checkQuantityAndAccount20(obj);
 		}
 	};
 	/**
@@ -1844,12 +2072,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount28> forQuantityAndAccount28 = new MMConstraint<QuantityAndAccount28>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount41);
 			owner_lazy = () -> QuantityAndAccount28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount28 obj) throws Exception {
+			checkQuantityAndAccount28(obj);
 		}
 	};
 	/**
@@ -1875,11 +2107,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount37> forQuantityAndAccount37 = new MMConstraint<QuantityAndAccount37>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount37 obj) throws Exception {
+			checkQuantityAndAccount37(obj);
 		}
 	};
 	/**
@@ -1905,11 +2141,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount3> forQuantityAndAccount3 = new MMConstraint<QuantityAndAccount3>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount3 obj) throws Exception {
+			checkQuantityAndAccount3(obj);
 		}
 	};
 	/**
@@ -1935,11 +2175,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount13> forQuantityAndAccount13 = new MMConstraint<QuantityAndAccount13>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount13 obj) throws Exception {
+			checkQuantityAndAccount13(obj);
 		}
 	};
 	/**
@@ -1965,11 +2209,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount8> forQuantityAndAccount8 = new MMConstraint<QuantityAndAccount8>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount8 obj) throws Exception {
+			checkQuantityAndAccount8(obj);
 		}
 	};
 	/**
@@ -1995,11 +2243,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount14> forQuantityAndAccount14 = new MMConstraint<QuantityAndAccount14>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount14 obj) throws Exception {
+			checkQuantityAndAccount14(obj);
 		}
 	};
 	/**
@@ -2025,11 +2277,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification7> forAccountIdentification7 = new MMConstraint<AccountIdentification7>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification7 obj) throws Exception {
+			checkAccountIdentification7(obj);
 		}
 	};
 	/**
@@ -2055,11 +2311,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification13> forAccountIdentification13 = new MMConstraint<AccountIdentification13>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification13 obj) throws Exception {
+			checkAccountIdentification13(obj);
 		}
 	};
 	/**
@@ -2093,12 +2353,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification18> forAccountIdentification18 = new MMConstraint<AccountIdentification18>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification32);
 			owner_lazy = () -> AccountIdentification18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification18 obj) throws Exception {
+			checkAccountIdentification18(obj);
 		}
 	};
 	/**
@@ -2124,11 +2388,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification20> forAccountIdentification20 = new MMConstraint<AccountIdentification20>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification20 obj) throws Exception {
+			checkAccountIdentification20(obj);
 		}
 	};
 	/**
@@ -2154,11 +2422,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount4> forQuantityAndAccount4 = new MMConstraint<QuantityAndAccount4>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount4 obj) throws Exception {
+			checkQuantityAndAccount4(obj);
 		}
 	};
 	/**
@@ -2184,11 +2456,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount22> forQuantityAndAccount22 = new MMConstraint<QuantityAndAccount22>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount22 obj) throws Exception {
+			checkQuantityAndAccount22(obj);
 		}
 	};
 	/**
@@ -2222,12 +2498,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount27> forQuantityAndAccount27 = new MMConstraint<QuantityAndAccount27>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount42);
 			owner_lazy = () -> QuantityAndAccount27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount27 obj) throws Exception {
+			checkQuantityAndAccount27(obj);
 		}
 	};
 	/**
@@ -2253,11 +2533,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount36> forQuantityAndAccount36 = new MMConstraint<QuantityAndAccount36>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount36 obj) throws Exception {
+			checkQuantityAndAccount36(obj);
 		}
 	};
 	/**
@@ -2283,11 +2567,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount9> forQuantityAndAccount9 = new MMConstraint<QuantityAndAccount9>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount9 obj) throws Exception {
+			checkQuantityAndAccount9(obj);
 		}
 	};
 	/**
@@ -2313,11 +2601,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount23> forQuantityAndAccount23 = new MMConstraint<QuantityAndAccount23>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount23 obj) throws Exception {
+			checkQuantityAndAccount23(obj);
 		}
 	};
 	/**
@@ -2351,12 +2643,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount26> forQuantityAndAccount26 = new MMConstraint<QuantityAndAccount26>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount45);
 			owner_lazy = () -> QuantityAndAccount26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount26 obj) throws Exception {
+			checkQuantityAndAccount26(obj);
 		}
 	};
 	/**
@@ -2382,11 +2678,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount35> forQuantityAndAccount35 = new MMConstraint<QuantityAndAccount35>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount35 obj) throws Exception {
+			checkQuantityAndAccount35(obj);
 		}
 	};
 	/**
@@ -2412,11 +2712,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification11> forAccountIdentification11 = new MMConstraint<AccountIdentification11>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification11 obj) throws Exception {
+			checkAccountIdentification11(obj);
 		}
 	};
 	/**
@@ -2455,13 +2759,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance26> forAccountAndBalance26 = new MMConstraint<AccountAndBalance26>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance34);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance22;
 			owner_lazy = () -> AccountAndBalance26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance26 obj) throws Exception {
+			checkAccountAndBalance26(obj);
 		}
 	};
 	/**
@@ -2500,13 +2808,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance25> forAccountAndBalance25 = new MMConstraint<AccountAndBalance25>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance33);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance21;
 			owner_lazy = () -> AccountAndBalance25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance25 obj) throws Exception {
+			checkAccountAndBalance25(obj);
 		}
 	};
 	/**
@@ -2532,11 +2844,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance32> forAccountAndBalance32 = new MMConstraint<AccountAndBalance32>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance32 obj) throws Exception {
+			checkAccountAndBalance32(obj);
 		}
 	};
 	/**
@@ -2562,11 +2878,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance29> forAccountAndBalance29 = new MMConstraint<AccountAndBalance29>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance29 obj) throws Exception {
+			checkAccountAndBalance29(obj);
 		}
 	};
 	/**
@@ -2605,13 +2925,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount39> forQuantityAndAccount39 = new MMConstraint<QuantityAndAccount39>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount25;
 			owner_lazy = () -> QuantityAndAccount39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount39 obj) throws Exception {
+			checkQuantityAndAccount39(obj);
 		}
 	};
 	/**
@@ -2650,13 +2974,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount41> forQuantityAndAccount41 = new MMConstraint<QuantityAndAccount41>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount64);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount28;
 			owner_lazy = () -> QuantityAndAccount41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount41 obj) throws Exception {
+			checkQuantityAndAccount41(obj);
 		}
 	};
 	/**
@@ -2695,13 +3023,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount42> forQuantityAndAccount42 = new MMConstraint<QuantityAndAccount42>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount63);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount27;
 			owner_lazy = () -> QuantityAndAccount42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount42 obj) throws Exception {
+			checkQuantityAndAccount42(obj);
 		}
 	};
 	/**
@@ -2740,13 +3072,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount43> forQuantityAndAccount43 = new MMConstraint<QuantityAndAccount43>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount30;
 			owner_lazy = () -> QuantityAndAccount43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount43 obj) throws Exception {
+			checkQuantityAndAccount43(obj);
 		}
 	};
 	/**
@@ -2785,13 +3121,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount45> forQuantityAndAccount45 = new MMConstraint<QuantityAndAccount45>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount67);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount26;
 			owner_lazy = () -> QuantityAndAccount45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount45 obj) throws Exception {
+			checkQuantityAndAccount45(obj);
 		}
 	};
 	/**
@@ -2822,12 +3162,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance34> forAccountAndBalance34 = new MMConstraint<AccountAndBalance34>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance26;
 			owner_lazy = () -> AccountAndBalance34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance34 obj) throws Exception {
+			checkAccountAndBalance34(obj);
 		}
 	};
 	/**
@@ -2858,12 +3202,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance35> forAccountAndBalance35 = new MMConstraint<AccountAndBalance35>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance17;
 			owner_lazy = () -> AccountAndBalance35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance35 obj) throws Exception {
+			checkAccountAndBalance35(obj);
 		}
 	};
 	/**
@@ -2902,13 +3250,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification33> forAccountIdentification33 = new MMConstraint<AccountIdentification33>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification40);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification25;
 			owner_lazy = () -> AccountIdentification33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification33 obj) throws Exception {
+			checkAccountIdentification33(obj);
 		}
 	};
 	/**
@@ -2947,13 +3299,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption116> forCorporateActionOption116 = new MMConstraint<CorporateActionOption116>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption116;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forCorporateActionOption141);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forCorporateActionOption41;
 			owner_lazy = () -> CorporateActionOption116.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption116 obj) throws Exception {
+			checkCorporateActionOption116(obj);
 		}
 	};
 	/**
@@ -2984,12 +3340,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification31> forAccountIdentification31 = new MMConstraint<AccountIdentification31>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification15;
 			owner_lazy = () -> AccountIdentification31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification31 obj) throws Exception {
+			checkAccountIdentification31(obj);
 		}
 	};
 	/**
@@ -3020,12 +3380,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance33> forAccountAndBalance33 = new MMConstraint<AccountAndBalance33>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance25;
 			owner_lazy = () -> AccountAndBalance33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance33 obj) throws Exception {
+			checkAccountAndBalance33(obj);
 		}
 	};
 	/**
@@ -3056,12 +3420,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification32> forAccountIdentification32 = new MMConstraint<AccountIdentification32>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification18;
 			owner_lazy = () -> AccountIdentification32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification32 obj) throws Exception {
+			checkAccountIdentification32(obj);
 		}
 	};
 	/**
@@ -3087,11 +3455,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption121> forCorporateActionOption121 = new MMConstraint<CorporateActionOption121>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption121;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption121.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption121 obj) throws Exception {
+			checkCorporateActionOption121(obj);
 		}
 	};
 	/**
@@ -3117,11 +3489,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance38> forAccountAndBalance38 = new MMConstraint<AccountAndBalance38>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance38 obj) throws Exception {
+			checkAccountAndBalance38(obj);
 		}
 	};
 	/**
@@ -3147,11 +3523,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification35> forAccountIdentification35 = new MMConstraint<AccountIdentification35>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification35 obj) throws Exception {
+			checkAccountIdentification35(obj);
 		}
 	};
 	/**
@@ -3177,11 +3557,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance37> forAccountAndBalance37 = new MMConstraint<AccountAndBalance37>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance37 obj) throws Exception {
+			checkAccountAndBalance37(obj);
 		}
 	};
 	/**
@@ -3207,11 +3591,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification34> forAccountIdentification34 = new MMConstraint<AccountIdentification34>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification34 obj) throws Exception {
+			checkAccountIdentification34(obj);
 		}
 	};
 	/**
@@ -3237,11 +3625,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification37> forAccountIdentification37 = new MMConstraint<AccountIdentification37>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification37 obj) throws Exception {
+			checkAccountIdentification37(obj);
 		}
 	};
 	/**
@@ -3267,11 +3659,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountAndBalance39> forAccountAndBalance39 = new MMConstraint<AccountAndBalance39>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountAndBalance39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, eg, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountAndBalance39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountAndBalance39 obj) throws Exception {
+			checkAccountAndBalance39(obj);
 		}
 	};
 	/**
@@ -3305,12 +3701,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount47> forQuantityAndAccount47 = new MMConstraint<QuantityAndAccount47>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount56);
 			owner_lazy = () -> QuantityAndAccount47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount47 obj) throws Exception {
+			checkQuantityAndAccount47(obj);
 		}
 	};
 	/**
@@ -3344,12 +3744,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount51> forQuantityAndAccount51 = new MMConstraint<QuantityAndAccount51>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount57);
 			owner_lazy = () -> QuantityAndAccount51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount51 obj) throws Exception {
+			checkQuantityAndAccount51(obj);
 		}
 	};
 	/**
@@ -3383,12 +3787,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount49> forQuantityAndAccount49 = new MMConstraint<QuantityAndAccount49>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount58);
 			owner_lazy = () -> QuantityAndAccount49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount49 obj) throws Exception {
+			checkQuantityAndAccount49(obj);
 		}
 	};
 	/**
@@ -3414,11 +3822,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount50> forQuantityAndAccount50 = new MMConstraint<QuantityAndAccount50>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount50 obj) throws Exception {
+			checkQuantityAndAccount50(obj);
 		}
 	};
 	/**
@@ -3452,12 +3864,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount55> forQuantityAndAccount55 = new MMConstraint<QuantityAndAccount55>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount60);
 			owner_lazy = () -> QuantityAndAccount55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount55 obj) throws Exception {
+			checkQuantityAndAccount55(obj);
 		}
 	};
 	/**
@@ -3491,12 +3907,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification39> forAccountIdentification39 = new MMConstraint<AccountIdentification39>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification42);
 			owner_lazy = () -> AccountIdentification39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification39 obj) throws Exception {
+			checkAccountIdentification39(obj);
 		}
 	};
 	/**
@@ -3535,13 +3955,17 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification40> forAccountIdentification40 = new MMConstraint<AccountIdentification40>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification43);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification33;
 			owner_lazy = () -> AccountIdentification40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification40 obj) throws Exception {
+			checkAccountIdentification40(obj);
 		}
 	};
 	/**
@@ -3567,11 +3991,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification41> forAccountIdentification41 = new MMConstraint<AccountIdentification41>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification41 obj) throws Exception {
+			checkAccountIdentification41(obj);
 		}
 	};
 	/**
@@ -3602,12 +4030,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount57> forQuantityAndAccount57 = new MMConstraint<QuantityAndAccount57>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount51;
 			owner_lazy = () -> QuantityAndAccount57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount57 obj) throws Exception {
+			checkQuantityAndAccount57(obj);
 		}
 	};
 	/**
@@ -3638,12 +4070,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount58> forQuantityAndAccount58 = new MMConstraint<QuantityAndAccount58>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount49;
 			owner_lazy = () -> QuantityAndAccount58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount58 obj) throws Exception {
+			checkQuantityAndAccount58(obj);
 		}
 	};
 	/**
@@ -3674,12 +4110,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount56> forQuantityAndAccount56 = new MMConstraint<QuantityAndAccount56>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount47;
 			owner_lazy = () -> QuantityAndAccount56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount56 obj) throws Exception {
+			checkQuantityAndAccount56(obj);
 		}
 	};
 	/**
@@ -3710,12 +4150,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount60> forQuantityAndAccount60 = new MMConstraint<QuantityAndAccount60>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount55;
 			owner_lazy = () -> QuantityAndAccount60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount60 obj) throws Exception {
+			checkQuantityAndAccount60(obj);
 		}
 	};
 	/**
@@ -3746,12 +4190,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification42> forAccountIdentification42 = new MMConstraint<AccountIdentification42>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification39;
 			owner_lazy = () -> AccountIdentification42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification42 obj) throws Exception {
+			checkAccountIdentification42(obj);
 		}
 	};
 	/**
@@ -3782,12 +4230,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount64> forQuantityAndAccount64 = new MMConstraint<QuantityAndAccount64>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount41;
 			owner_lazy = () -> QuantityAndAccount64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount64 obj) throws Exception {
+			checkQuantityAndAccount64(obj);
 		}
 	};
 	/**
@@ -3818,12 +4270,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount63> forQuantityAndAccount63 = new MMConstraint<QuantityAndAccount63>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount42;
 			owner_lazy = () -> QuantityAndAccount63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount63 obj) throws Exception {
+			checkQuantityAndAccount63(obj);
 		}
 	};
 	/**
@@ -3854,12 +4310,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount65> forQuantityAndAccount65 = new MMConstraint<QuantityAndAccount65>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount39;
 			owner_lazy = () -> QuantityAndAccount65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount65 obj) throws Exception {
+			checkQuantityAndAccount65(obj);
 		}
 	};
 	/**
@@ -3890,12 +4350,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount67> forQuantityAndAccount67 = new MMConstraint<QuantityAndAccount67>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount45;
 			owner_lazy = () -> QuantityAndAccount67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount67 obj) throws Exception {
+			checkQuantityAndAccount67(obj);
 		}
 	};
 	/**
@@ -3926,12 +4390,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount68> forQuantityAndAccount68 = new MMConstraint<QuantityAndAccount68>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forQuantityAndAccount43;
 			owner_lazy = () -> QuantityAndAccount68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount68 obj) throws Exception {
+			checkQuantityAndAccount68(obj);
 		}
 	};
 	/**
@@ -3962,12 +4430,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption141> forCorporateActionOption141 = new MMConstraint<CorporateActionOption141>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption141;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "SafekeepingPlace must only be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forCorporateActionOption116;
 			owner_lazy = () -> CorporateActionOption141.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption141 obj) throws Exception {
+			checkCorporateActionOption141(obj);
 		}
 	};
 	/**
@@ -3998,12 +4470,16 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification43> forAccountIdentification43 = new MMConstraint<AccountIdentification43>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification40;
 			owner_lazy = () -> AccountIdentification43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification43 obj) throws Exception {
+			checkAccountIdentification43(obj);
 		}
 	};
 	/**
@@ -4029,11 +4505,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<CorporateActionOption144> forCorporateActionOption144 = new MMConstraint<CorporateActionOption144>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkCorporateActionOption144;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "SafekeepingPlace must only be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> CorporateActionOption144.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption144 obj) throws Exception {
+			checkCorporateActionOption144(obj);
 		}
 	};
 	/**
@@ -4059,11 +4539,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<AccountIdentification44> forAccountIdentification44 = new MMConstraint<AccountIdentification44>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkAccountIdentification44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "SafekeepingPlace is only to be used by global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> AccountIdentification44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountIdentification44 obj) throws Exception {
+			checkAccountIdentification44(obj);
 		}
 	};
 	/**
@@ -4089,11 +4573,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount69> forQuantityAndAccount69 = new MMConstraint<QuantityAndAccount69>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount69 obj) throws Exception {
+			checkQuantityAndAccount69(obj);
 		}
 	};
 	/**
@@ -4119,11 +4607,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount70> forQuantityAndAccount70 = new MMConstraint<QuantityAndAccount70>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount70 obj) throws Exception {
+			checkQuantityAndAccount70(obj);
 		}
 	};
 	/**
@@ -4149,11 +4641,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount71> forQuantityAndAccount71 = new MMConstraint<QuantityAndAccount71>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount71 obj) throws Exception {
+			checkQuantityAndAccount71(obj);
 		}
 	};
 	/**
@@ -4179,11 +4675,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount72> forQuantityAndAccount72 = new MMConstraint<QuantityAndAccount72>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount72.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount72 obj) throws Exception {
+			checkQuantityAndAccount72(obj);
 		}
 	};
 	/**
@@ -4209,11 +4709,15 @@ public class ConstraintSafekeepingPlaceRule {
 	 */
 	public static final MMConstraint<QuantityAndAccount76> forQuantityAndAccount76 = new MMConstraint<QuantityAndAccount76>() {
 		{
-			validator = ConstraintSafekeepingPlaceRule::checkQuantityAndAccount76;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceRule";
 			definition = "The SafekeepingPlace functionality in the settlement instructions is only to be used for global custodians that allow their clients to specify where the securities are to be held, for example, in an ICSD account versus an account at the local CSD.";
 			owner_lazy = () -> QuantityAndAccount76.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuantityAndAccount76 obj) throws Exception {
+			checkQuantityAndAccount76(obj);
 		}
 	};
 

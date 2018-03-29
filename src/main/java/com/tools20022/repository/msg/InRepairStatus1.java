@@ -23,6 +23,8 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
+import com.tools20022.repository.msg.InRepairStatusReason1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +120,7 @@ public class InRepairStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatus1, NoReasonCode> mmNoReason = new MMMessageAttribute<InRepairStatus1, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus1.mmObject();
@@ -130,6 +132,16 @@ public class InRepairStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(InRepairStatus1 obj) {
+			return obj.getNoReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatus1 obj, NoReasonCode value) {
+			obj.setNoReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -165,7 +177,7 @@ public class InRepairStatus1 {
 	 * definition} = "Reason of an in repair status in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InRepairStatus1, InRepairStatusReason1> mmReason = new MMMessageAssociationEnd<InRepairStatus1, InRepairStatusReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus1.mmObject();
@@ -177,7 +189,17 @@ public class InRepairStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InRepairStatusReason1.mmObject();
+			type_lazy = () -> InRepairStatusReason1.mmObject();
+		}
+
+		@Override
+		public InRepairStatusReason1 getValue(InRepairStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatus1 obj, InRepairStatusReason1 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -215,7 +237,7 @@ public class InRepairStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InRepairStatus1, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<InRepairStatus1, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus1.mmObject();
@@ -227,7 +249,17 @@ public class InRepairStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(InRepairStatus1 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(InRepairStatus1 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	/**
@@ -310,7 +342,7 @@ public class InRepairStatus1 {
 		return reason;
 	}
 
-	public InRepairStatus1 setReason(com.tools20022.repository.msg.InRepairStatusReason1 reason) {
+	public InRepairStatus1 setReason(InRepairStatusReason1 reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}
@@ -319,7 +351,7 @@ public class InRepairStatus1 {
 		return dataSourceScheme;
 	}
 
-	public InRepairStatus1 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public InRepairStatus1 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

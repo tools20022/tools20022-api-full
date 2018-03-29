@@ -25,7 +25,6 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.GroupHeader44;
 import com.tools20022.repository.msg.OriginalNotification3;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +125,7 @@ public class NotificationToReceiveStatusReportV02 {
 	 * "Set of elements used to provide further details on the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveStatusReportV02, GroupHeader44> mmGroupHeader = new MMMessageBuildingBlock<NotificationToReceiveStatusReportV02, GroupHeader44>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class NotificationToReceiveStatusReportV02 {
 			complexType_lazy = () -> GroupHeader44.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveStatusReportV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader44 getValue(NotificationToReceiveStatusReportV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveStatusReportV02 obj, GroupHeader44 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlNtfctnAndSts", required = true)
@@ -172,7 +173,7 @@ public class NotificationToReceiveStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalNotificationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveStatusReportV02, OriginalNotification3> mmOriginalNotificationAndStatus = new MMMessageBuildingBlock<NotificationToReceiveStatusReportV02, OriginalNotification3>() {
 		{
 			xmlTag = "OrgnlNtfctnAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,12 +184,14 @@ public class NotificationToReceiveStatusReportV02 {
 			complexType_lazy = () -> OriginalNotification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveStatusReportV02.class.getMethod("getOriginalNotificationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalNotification3 getValue(NotificationToReceiveStatusReportV02 obj) {
+			return obj.getOriginalNotificationAndStatus();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveStatusReportV02 obj, OriginalNotification3 value) {
+			obj.setOriginalNotificationAndStatus(value);
 		}
 	};
 

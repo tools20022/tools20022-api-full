@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LimitAmount1;
+import com.tools20022.repository.msg.LimitJournalEntry1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,7 +105,7 @@ public class LimitJournal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitJournal1, LimitAmount1> mmLimit = new MMMessageAssociationEnd<LimitJournal1, LimitAmount1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournal1.mmObject();
 			isDerived = false;
@@ -114,7 +116,17 @@ public class LimitJournal1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitAmount1.mmObject();
+			type_lazy = () -> LimitAmount1.mmObject();
+		}
+
+		@Override
+		public LimitAmount1 getValue(LimitJournal1 obj) {
+			return obj.getLimit();
+		}
+
+		@Override
+		public void setValue(LimitJournal1 obj, LimitAmount1 value) {
+			obj.setLimit(value);
 		}
 	};
 	@XmlElement(name = "JrnlActvtyDt", required = true)
@@ -145,7 +157,7 @@ public class LimitJournal1 {
 	 * definition} = "Date upon which journal activity takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmJournalActivityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitJournal1, ISODate> mmJournalActivityDate = new MMMessageAttribute<LimitJournal1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournal1.mmObject();
 			isDerived = false;
@@ -157,9 +169,19 @@ public class LimitJournal1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public ISODate getValue(LimitJournal1 obj) {
+			return obj.getJournalActivityDate();
+		}
+
+		@Override
+		public void setValue(LimitJournal1 obj, ISODate value) {
+			obj.setJournalActivityDate(value);
+		}
 	};
 	@XmlElement(name = "JrnlNtry")
-	protected List<com.tools20022.repository.msg.LimitJournalEntry1> journalEntry;
+	protected List<LimitJournalEntry1> journalEntry;
 	/**
 	 * 
 	 <p>
@@ -187,7 +209,7 @@ public class LimitJournal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmJournalEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitJournal1, List<LimitJournalEntry1>> mmJournalEntry = new MMMessageAssociationEnd<LimitJournal1, List<LimitJournalEntry1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournal1.mmObject();
 			isDerived = false;
@@ -197,7 +219,17 @@ public class LimitJournal1 {
 			definition = "Recording of transaction data pertaining to a transaction in a journal.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
+			type_lazy = () -> LimitJournalEntry1.mmObject();
+		}
+
+		@Override
+		public List<LimitJournalEntry1> getValue(LimitJournal1 obj) {
+			return obj.getJournalEntry();
+		}
+
+		@Override
+		public void setValue(LimitJournal1 obj, List<LimitJournalEntry1> value) {
+			obj.setJournalEntry(value);
 		}
 	};
 
@@ -218,7 +250,7 @@ public class LimitJournal1 {
 		return limit;
 	}
 
-	public LimitJournal1 setLimit(com.tools20022.repository.msg.LimitAmount1 limit) {
+	public LimitJournal1 setLimit(LimitAmount1 limit) {
 		this.limit = Objects.requireNonNull(limit);
 		return this;
 	}
@@ -236,7 +268,7 @@ public class LimitJournal1 {
 		return journalEntry == null ? journalEntry = new ArrayList<>() : journalEntry;
 	}
 
-	public LimitJournal1 setJournalEntry(List<com.tools20022.repository.msg.LimitJournalEntry1> journalEntry) {
+	public LimitJournal1 setJournalEntry(List<LimitJournalEntry1> journalEntry) {
 		this.journalEntry = Objects.requireNonNull(journalEntry);
 		return this;
 	}

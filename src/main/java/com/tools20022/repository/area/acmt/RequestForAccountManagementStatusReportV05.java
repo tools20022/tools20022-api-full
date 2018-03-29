@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AccountManagementLatestVersion;
 import com.tools20022.repository.msg.AccountManagementMessageReference4;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +129,7 @@ public class RequestForAccountManagementStatusReportV05 {
 	 * RequestForAccountManagementStatusReportV04.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForAccountManagementStatusReportV05, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<RequestForAccountManagementStatusReportV05, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +141,14 @@ public class RequestForAccountManagementStatusReportV05 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForAccountManagementStatusReportV05.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(RequestForAccountManagementStatusReportV05 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(RequestForAccountManagementStatusReportV05 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqDtls", required = true)
@@ -182,7 +183,7 @@ public class RequestForAccountManagementStatusReportV05 {
 	 * RequestForAccountManagementStatusReportV04.mmRequestDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForAccountManagementStatusReportV05, AccountManagementMessageReference4> mmRequestDetails = new MMMessageBuildingBlock<RequestForAccountManagementStatusReportV05, AccountManagementMessageReference4>() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +195,14 @@ public class RequestForAccountManagementStatusReportV05 {
 			complexType_lazy = () -> AccountManagementMessageReference4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForAccountManagementStatusReportV05.class.getMethod("getRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountManagementMessageReference4 getValue(RequestForAccountManagementStatusReportV05 obj) {
+			return obj.getRequestDetails();
+		}
+
+		@Override
+		public void setValue(RequestForAccountManagementStatusReportV05 obj, AccountManagementMessageReference4 value) {
+			obj.setRequestDetails(value);
 		}
 	};
 

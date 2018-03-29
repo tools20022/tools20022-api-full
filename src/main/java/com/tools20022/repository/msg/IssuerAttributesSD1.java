@@ -111,7 +111,7 @@ public class IssuerAttributesSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuerAttributesSD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<IssuerAttributesSD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class IssuerAttributesSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(IssuerAttributesSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(IssuerAttributesSD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -156,7 +166,7 @@ public class IssuerAttributesSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuerAttributesSD1, RestrictedFINXMax140Text> mmName = new MMMessageAttribute<IssuerAttributesSD1, RestrictedFINXMax140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class IssuerAttributesSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax140Text getValue(IssuerAttributesSD1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(IssuerAttributesSD1 obj, RestrictedFINXMax140Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "RegdNbTp")
@@ -199,7 +219,7 @@ public class IssuerAttributesSD1 {
 	 * definition} = "Registered number type of the entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegisteredNumberType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuerAttributesSD1, Optional<RegisteredNumberType1Code>> mmRegisteredNumberType = new MMMessageAttribute<IssuerAttributesSD1, Optional<RegisteredNumberType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -210,6 +230,16 @@ public class IssuerAttributesSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RegisteredNumberType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<RegisteredNumberType1Code> getValue(IssuerAttributesSD1 obj) {
+			return obj.getRegisteredNumberType();
+		}
+
+		@Override
+		public void setValue(IssuerAttributesSD1 obj, Optional<RegisteredNumberType1Code> value) {
+			obj.setRegisteredNumberType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrRegdNbTp")
@@ -241,7 +271,7 @@ public class IssuerAttributesSD1 {
 	 * definition} = "Other type of Registered Number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherRegisteredNumberType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuerAttributesSD1, Optional<Max35Text>> mmOtherRegisteredNumberType = new MMMessageAttribute<IssuerAttributesSD1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -252,6 +282,16 @@ public class IssuerAttributesSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IssuerAttributesSD1 obj) {
+			return obj.getOtherRegisteredNumberType();
+		}
+
+		@Override
+		public void setValue(IssuerAttributesSD1 obj, Optional<Max35Text> value) {
+			obj.setOtherRegisteredNumberType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnNb", required = true)
@@ -285,7 +325,7 @@ public class IssuerAttributesSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuerAttributesSD1, Max16Text> mmRegistrationNumber = new MMMessageAttribute<IssuerAttributesSD1, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -296,6 +336,16 @@ public class IssuerAttributesSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(IssuerAttributesSD1 obj) {
+			return obj.getRegistrationNumber();
+		}
+
+		@Override
+		public void setValue(IssuerAttributesSD1 obj, Max16Text value) {
+			obj.setRegistrationNumber(value);
 		}
 	};
 	@XmlElement(name = "IssrId", required = true)
@@ -328,7 +378,7 @@ public class IssuerAttributesSD1 {
 	 * definition} = "ASX Issuer Code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuerAttributesSD1, Exact3UpperCaseAlphaNumericText> mmIssuerIdentification = new MMMessageAttribute<IssuerAttributesSD1, Exact3UpperCaseAlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAttributesSD1.mmObject();
 			isDerived = false;
@@ -339,6 +389,16 @@ public class IssuerAttributesSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3UpperCaseAlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact3UpperCaseAlphaNumericText getValue(IssuerAttributesSD1 obj) {
+			return obj.getIssuerIdentification();
+		}
+
+		@Override
+		public void setValue(IssuerAttributesSD1 obj, Exact3UpperCaseAlphaNumericText value) {
+			obj.setIssuerIdentification(value);
 		}
 	};
 

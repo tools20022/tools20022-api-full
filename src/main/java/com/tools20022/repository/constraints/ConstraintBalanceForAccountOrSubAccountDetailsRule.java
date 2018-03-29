@@ -68,13 +68,17 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV09> forSecuritiesBalanceCustodyReportV09 = new MMConstraint<SecuritiesBalanceCustodyReportV09>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceCustodyReportV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceCustodyReportV08;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV09.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV09 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV09(obj);
 		}
 	};
 	/**
@@ -110,13 +114,17 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV09> forSecuritiesBalanceAccountingReportV09 = new MMConstraint<SecuritiesBalanceAccountingReportV09>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceAccountingReportV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceAccountingReportV08;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV09.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV09 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV09(obj);
 		}
 	};
 	/**
@@ -146,12 +154,16 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReport002V09> forSecuritiesBalanceAccountingReport002V09 = new MMConstraint<SecuritiesBalanceAccountingReport002V09>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceAccountingReport002V09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReport002V09.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReport002V09 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReport002V09(obj);
 		}
 	};
 	/**
@@ -181,12 +193,16 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReport002V09> forSecuritiesBalanceCustodyReport002V09 = new MMConstraint<SecuritiesBalanceCustodyReport002V09>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceCustodyReport002V09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReport002V09.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReport002V09 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReport002V09(obj);
 		}
 	};
 	/**
@@ -231,7 +247,6 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV08> forSecuritiesBalanceCustodyReportV08 = new MMConstraint<SecuritiesBalanceCustodyReportV08>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceCustodyReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
@@ -239,6 +254,11 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceCustodyReportV07;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV08.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV08 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV08(obj);
 		}
 	};
 	/**
@@ -283,7 +303,6 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV08> forSecuritiesBalanceAccountingReportV08 = new MMConstraint<SecuritiesBalanceAccountingReportV08>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceAccountingReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
@@ -291,6 +310,11 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceAccountingReportV07;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV08.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV08 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV08(obj);
 		}
 	};
 	/**
@@ -316,11 +340,15 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<AccountingStatementOfHoldings> forAccountingStatementOfHoldings = new MMConstraint<AccountingStatementOfHoldings>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkAccountingStatementOfHoldings;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either BalanceForAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then BalanceForAccount and SubAccountDetails are not allowed.";
 			owner_lazy = () -> AccountingStatementOfHoldings.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountingStatementOfHoldings obj) throws Exception {
+			checkAccountingStatementOfHoldings(obj);
 		}
 	};
 	/**
@@ -346,11 +374,15 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<AccountingStatementOfHoldingsV02> forAccountingStatementOfHoldingsV02 = new MMConstraint<AccountingStatementOfHoldingsV02>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkAccountingStatementOfHoldingsV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either BalanceForAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then BalanceForAccount and SubAccountDetails may be present.";
 			owner_lazy = () -> AccountingStatementOfHoldingsV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountingStatementOfHoldingsV02 obj) throws Exception {
+			checkAccountingStatementOfHoldingsV02(obj);
 		}
 	};
 	/**
@@ -380,12 +412,16 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV03> forSecuritiesBalanceAccountingReportV03 = new MMConstraint<SecuritiesBalanceAccountingReportV03>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceAccountingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV03 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV03(obj);
 		}
 	};
 	/**
@@ -415,12 +451,16 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV04> forSecuritiesBalanceAccountingReportV04 = new MMConstraint<SecuritiesBalanceAccountingReportV04>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceAccountingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV04 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV04(obj);
 		}
 	};
 	/**
@@ -450,12 +490,16 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV05> forSecuritiesBalanceAccountingReportV05 = new MMConstraint<SecuritiesBalanceAccountingReportV05>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceAccountingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV05 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV05(obj);
 		}
 	};
 	/**
@@ -494,13 +538,17 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV06> forSecuritiesBalanceAccountingReportV06 = new MMConstraint<SecuritiesBalanceAccountingReportV06>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceAccountingReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceAccountingReportV07);
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV06 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV06(obj);
 		}
 	};
 	/**
@@ -526,11 +574,15 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<CustodyStatementOfHoldings> forCustodyStatementOfHoldings = new MMConstraint<CustodyStatementOfHoldings>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkCustodyStatementOfHoldings;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either BalanceForAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then BalanceForAccount and SubAccountDetails are not allowed.";
 			owner_lazy = () -> CustodyStatementOfHoldings.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustodyStatementOfHoldings obj) throws Exception {
+			checkCustodyStatementOfHoldings(obj);
 		}
 	};
 	/**
@@ -556,11 +608,15 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<CustodyStatementOfHoldingsV02> forCustodyStatementOfHoldingsV02 = new MMConstraint<CustodyStatementOfHoldingsV02>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkCustodyStatementOfHoldingsV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either BalanceForAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then BalanceForAccount and SubAccountDetails may be present.";
 			owner_lazy = () -> CustodyStatementOfHoldingsV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustodyStatementOfHoldingsV02 obj) throws Exception {
+			checkCustodyStatementOfHoldingsV02(obj);
 		}
 	};
 	/**
@@ -590,12 +646,16 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV03> forSecuritiesBalanceCustodyReportV03 = new MMConstraint<SecuritiesBalanceCustodyReportV03>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceCustodyReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV03 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV03(obj);
 		}
 	};
 	/**
@@ -625,12 +685,16 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV04> forSecuritiesBalanceCustodyReportV04 = new MMConstraint<SecuritiesBalanceCustodyReportV04>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceCustodyReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV04 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV04(obj);
 		}
 	};
 	/**
@@ -660,12 +724,16 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV05> forSecuritiesBalanceCustodyReportV05 = new MMConstraint<SecuritiesBalanceCustodyReportV05>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceCustodyReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV05 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV05(obj);
 		}
 	};
 	/**
@@ -704,13 +772,17 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV06> forSecuritiesBalanceCustodyReportV06 = new MMConstraint<SecuritiesBalanceCustodyReportV06>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceCustodyReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceCustodyReportV07);
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV06 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV06(obj);
 		}
 	};
 	/**
@@ -755,7 +827,6 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV07> forSecuritiesBalanceCustodyReportV07 = new MMConstraint<SecuritiesBalanceCustodyReportV07>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceCustodyReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
@@ -763,6 +834,11 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceCustodyReportV06;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV07 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV07(obj);
 		}
 	};
 	/**
@@ -807,7 +883,6 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV07> forSecuritiesBalanceAccountingReportV07 = new MMConstraint<SecuritiesBalanceAccountingReportV07>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkSecuritiesBalanceAccountingReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is TRUE (Yes), then either BalanceForAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is FALSE (No), then BalanceForAccount and SubAccountDetails must be absent.";
@@ -815,6 +890,11 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountDetailsRule.forSecuritiesBalanceAccountingReportV06;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SubAccountDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/BalanceForAccount[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV07 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV07(obj);
 		}
 	};
 	/**
@@ -840,11 +920,15 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<AccountingStatementOfHoldings1> forAccountingStatementOfHoldings1 = new MMConstraint<AccountingStatementOfHoldings1>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkAccountingStatementOfHoldings1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either BalanceForAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then BalanceForAccount and SubAccountDetails are not allowed.";
 			owner_lazy = () -> AccountingStatementOfHoldings1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountingStatementOfHoldings1 obj) throws Exception {
+			checkAccountingStatementOfHoldings1(obj);
 		}
 	};
 	/**
@@ -870,11 +954,15 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<AccountingStatementOfHoldings2> forAccountingStatementOfHoldings2 = new MMConstraint<AccountingStatementOfHoldings2>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkAccountingStatementOfHoldings2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either BalanceForAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then BalanceForAccount and SubAccountDetails may be present.";
 			owner_lazy = () -> AccountingStatementOfHoldings2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountingStatementOfHoldings2 obj) throws Exception {
+			checkAccountingStatementOfHoldings2(obj);
 		}
 	};
 	/**
@@ -900,11 +988,15 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<CustodyStatementOfHoldings1> forCustodyStatementOfHoldings1 = new MMConstraint<CustodyStatementOfHoldings1>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkCustodyStatementOfHoldings1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either BalanceForAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then BalanceForAccount and SubAccountDetails are not allowed.";
 			owner_lazy = () -> CustodyStatementOfHoldings1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustodyStatementOfHoldings1 obj) throws Exception {
+			checkCustodyStatementOfHoldings1(obj);
 		}
 	};
 	/**
@@ -930,11 +1022,15 @@ public class ConstraintBalanceForAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<CustodyStatementOfHoldings2> forCustodyStatementOfHoldings2 = new MMConstraint<CustodyStatementOfHoldings2>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountDetailsRule::checkCustodyStatementOfHoldings2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either BalanceForAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then BalanceForAccount and SubAccountDetails may be present.";
 			owner_lazy = () -> CustodyStatementOfHoldings2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustodyStatementOfHoldings2 obj) throws Exception {
+			checkCustodyStatementOfHoldings2(obj);
 		}
 	};
 

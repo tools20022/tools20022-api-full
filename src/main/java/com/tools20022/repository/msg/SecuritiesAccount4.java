@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +124,7 @@ public class SecuritiesAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount4, AccountIdentification1> mmIdentification = new MMMessageAttribute<SecuritiesAccount4, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
@@ -134,7 +135,17 @@ public class SecuritiesAccount4 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(SecuritiesAccount4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount4 obj, AccountIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -173,7 +184,7 @@ public class SecuritiesAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount4, Max35Text> mmName = new MMMessageAttribute<SecuritiesAccount4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
@@ -185,6 +196,16 @@ public class SecuritiesAccount4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SecuritiesAccount4 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount4 obj, Max35Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmSplmtryId")
@@ -218,7 +239,7 @@ public class SecuritiesAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentSupplementaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount4, Optional<Max35Text>> mmFinancialInstrumentSupplementaryIdentification = new MMMessageAttribute<SecuritiesAccount4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
 			isDerived = false;
@@ -229,6 +250,16 @@ public class SecuritiesAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesAccount4 obj) {
+			return obj.getFinancialInstrumentSupplementaryIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount4 obj, Optional<Max35Text> value) {
+			obj.setFinancialInstrumentSupplementaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmId")
@@ -268,7 +299,7 @@ public class SecuritiesAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount4, Optional<SecurityIdentification3Choice>> mmFinancialInstrumentIdentification = new MMMessageAttribute<SecuritiesAccount4, Optional<SecurityIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
@@ -280,6 +311,16 @@ public class SecuritiesAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification3Choice> getValue(SecuritiesAccount4 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount4 obj, Optional<SecurityIdentification3Choice> value) {
+			obj.setFinancialInstrumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmNm")
@@ -319,7 +360,7 @@ public class SecuritiesAccount4 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount4, Optional<Max350Text>> mmFinancialInstrumentName = new MMMessageAttribute<SecuritiesAccount4, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
@@ -332,6 +373,16 @@ public class SecuritiesAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SecuritiesAccount4 obj) {
+			return obj.getFinancialInstrumentName();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount4 obj, Optional<Max350Text> value) {
+			obj.setFinancialInstrumentName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -370,7 +421,7 @@ public class SecuritiesAccount4 {
 	 * "Specifies the current state of an account, eg, enabled or deleted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount4, AccountStatus1Code> mmStatus = new MMMessageAttribute<SecuritiesAccount4, AccountStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount4.mmObject();
@@ -382,6 +433,16 @@ public class SecuritiesAccount4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountStatus1Code.mmObject();
+		}
+
+		@Override
+		public AccountStatus1Code getValue(SecuritiesAccount4 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount4 obj, AccountStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 
@@ -405,7 +466,7 @@ public class SecuritiesAccount4 {
 		return identification;
 	}
 
-	public SecuritiesAccount4 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public SecuritiesAccount4 setIdentification(AccountIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

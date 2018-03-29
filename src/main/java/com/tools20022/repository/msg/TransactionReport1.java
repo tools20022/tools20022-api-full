@@ -114,7 +114,7 @@ public class TransactionReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReport1, PaymentIdentification4Choice> mmPaymentIdentification = new MMMessageAssociationEnd<TransactionReport1, PaymentIdentification4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReport1.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class TransactionReport1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaymentIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public PaymentIdentification4Choice getValue(TransactionReport1 obj) {
+			return obj.getPaymentIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionReport1 obj, PaymentIdentification4Choice value) {
+			obj.setPaymentIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxOrErr", required = true)
@@ -168,7 +178,7 @@ public class TransactionReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReport1, TransactionOrError1Choice> mmTransactionOrError = new MMMessageAssociationEnd<TransactionReport1, TransactionOrError1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReport1.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class TransactionReport1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransactionOrError1Choice.mmObject();
+		}
+
+		@Override
+		public TransactionOrError1Choice getValue(TransactionReport1 obj) {
+			return obj.getTransactionOrError();
+		}
+
+		@Override
+		public void setValue(TransactionReport1 obj, TransactionOrError1Choice value) {
+			obj.setTransactionOrError(value);
 		}
 	};
 

@@ -146,7 +146,7 @@ public class PriceFormatSD2Choice {
 	 * PriceFormatSD1Choice.mmNotSpecifiedPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormatSD2Choice, PriceValueType10Code> mmNotSpecifiedPrice = new MMMessageAttribute<PriceFormatSD2Choice, PriceValueType10Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormatSD2Choice.mmObject();
 			isDerived = false;
@@ -160,6 +160,16 @@ public class PriceFormatSD2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType10Code.mmObject();
+		}
+
+		@Override
+		public PriceValueType10Code getValue(PriceFormatSD2Choice obj) {
+			return obj.getNotSpecifiedPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormatSD2Choice obj, PriceValueType10Code value) {
+			obj.setNotSpecifiedPrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
@@ -209,7 +219,7 @@ public class PriceFormatSD2Choice {
 	 * PriceFormatSD1Choice.mmAmountPricePerFinancialInstrumentQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormatSD2Choice, AmountPricePerFinancialInstrumentQuantity4> mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd<PriceFormatSD2Choice, AmountPricePerFinancialInstrumentQuantity4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormatSD2Choice.mmObject();
 			isDerived = false;
@@ -224,6 +234,16 @@ public class PriceFormatSD2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
+		}
+
+		@Override
+		public AmountPricePerFinancialInstrumentQuantity4 getValue(PriceFormatSD2Choice obj) {
+			return obj.getAmountPricePerFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(PriceFormatSD2Choice obj, AmountPricePerFinancialInstrumentQuantity4 value) {
+			obj.setAmountPricePerFinancialInstrumentQuantity(value);
 		}
 	};
 

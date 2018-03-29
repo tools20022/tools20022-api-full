@@ -131,7 +131,7 @@ public class PendingProcessingReason5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingReason5Choice, PendingProcessingReason3Code> mmCode = new MMMessageAttribute<PendingProcessingReason5Choice, PendingProcessingReason3Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason5Choice.mmObject();
@@ -145,6 +145,16 @@ public class PendingProcessingReason5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingProcessingReason3Code.mmObject();
+		}
+
+		@Override
+		public PendingProcessingReason3Code getValue(PendingProcessingReason5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason5Choice obj, PendingProcessingReason3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -195,7 +205,7 @@ public class PendingProcessingReason5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingReason5Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<PendingProcessingReason5Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason5Choice.mmObject();
@@ -209,6 +219,16 @@ public class PendingProcessingReason5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(PendingProcessingReason5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason5Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

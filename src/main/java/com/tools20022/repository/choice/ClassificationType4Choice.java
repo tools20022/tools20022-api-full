@@ -108,7 +108,7 @@ public class ClassificationType4Choice {
 	 * definition} = "ISO 10962 Classification of Financial Instrument (CFI)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType4Choice, CFIIdentifier> mmClassificationFinancialInstrument = new MMMessageAttribute<ClassificationType4Choice, CFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType4Choice.mmObject();
@@ -120,6 +120,16 @@ public class ClassificationType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
+		}
+
+		@Override
+		public CFIIdentifier getValue(ClassificationType4Choice obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ClassificationType4Choice obj, CFIIdentifier value) {
+			obj.setClassificationFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "AltrnClssfctn", required = true)
@@ -156,7 +166,7 @@ public class ClassificationType4Choice {
 	 * definition} = "Proprietary classification of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateClassification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClassificationType4Choice, GenericIdentification18> mmAlternateClassification = new MMMessageAssociationEnd<ClassificationType4Choice, GenericIdentification18>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType4Choice.mmObject();
@@ -169,6 +179,16 @@ public class ClassificationType4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification18.mmObject();
+		}
+
+		@Override
+		public GenericIdentification18 getValue(ClassificationType4Choice obj) {
+			return obj.getAlternateClassification();
+		}
+
+		@Override
+		public void setValue(ClassificationType4Choice obj, GenericIdentification18 value) {
+			obj.setAlternateClassification(value);
 		}
 	};
 

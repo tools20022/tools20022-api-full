@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NumberAndSumOfTransactions1;
+import com.tools20022.repository.msg.NumberAndSumOfTransactions2;
+import com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -101,7 +104,7 @@ public class TotalTransactions1 {
 	 * "Indicates the total number and sum of debit and credit entries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalEntries = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalTransactions1, Optional<NumberAndSumOfTransactions2>> mmTotalEntries = new MMMessageAssociationEnd<TotalTransactions1, Optional<NumberAndSumOfTransactions2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTransactions1.mmObject();
 			isDerived = false;
@@ -112,7 +115,17 @@ public class TotalTransactions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions2.mmObject();
+			type_lazy = () -> NumberAndSumOfTransactions2.mmObject();
+		}
+
+		@Override
+		public Optional<NumberAndSumOfTransactions2> getValue(TotalTransactions1 obj) {
+			return obj.getTotalEntries();
+		}
+
+		@Override
+		public void setValue(TotalTransactions1 obj, Optional<NumberAndSumOfTransactions2> value) {
+			obj.setTotalEntries(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlCdtNtries")
@@ -144,7 +157,7 @@ public class TotalTransactions1 {
 	 * definition} = "Indicates the total number and sum of credit entries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalCreditEntries = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalTransactions1, Optional<NumberAndSumOfTransactions1>> mmTotalCreditEntries = new MMMessageAssociationEnd<TotalTransactions1, Optional<NumberAndSumOfTransactions1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTransactions1.mmObject();
 			isDerived = false;
@@ -155,7 +168,17 @@ public class TotalTransactions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions1.mmObject();
+			type_lazy = () -> NumberAndSumOfTransactions1.mmObject();
+		}
+
+		@Override
+		public Optional<NumberAndSumOfTransactions1> getValue(TotalTransactions1 obj) {
+			return obj.getTotalCreditEntries();
+		}
+
+		@Override
+		public void setValue(TotalTransactions1 obj, Optional<NumberAndSumOfTransactions1> value) {
+			obj.setTotalCreditEntries(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlDbtNtries")
@@ -187,7 +210,7 @@ public class TotalTransactions1 {
 	 * definition} = "Indicates the total number and sum of debit entries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalDebitEntries = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalTransactions1, Optional<NumberAndSumOfTransactions1>> mmTotalDebitEntries = new MMMessageAssociationEnd<TotalTransactions1, Optional<NumberAndSumOfTransactions1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTransactions1.mmObject();
 			isDerived = false;
@@ -198,11 +221,21 @@ public class TotalTransactions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions1.mmObject();
+			type_lazy = () -> NumberAndSumOfTransactions1.mmObject();
+		}
+
+		@Override
+		public Optional<NumberAndSumOfTransactions1> getValue(TotalTransactions1 obj) {
+			return obj.getTotalDebitEntries();
+		}
+
+		@Override
+		public void setValue(TotalTransactions1 obj, Optional<NumberAndSumOfTransactions1> value) {
+			obj.setTotalDebitEntries(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNtriesPerBkTxCd")
-	protected List<com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1> totalEntriesPerBankTransactionCode;
+	protected List<NumberAndSumOfTransactionsPerBankTransactionCode1> totalEntriesPerBankTransactionCode;
 	/**
 	 * 
 	 <p>
@@ -232,7 +265,7 @@ public class TotalTransactions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalEntriesPerBankTransactionCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalTransactions1, List<NumberAndSumOfTransactionsPerBankTransactionCode1>> mmTotalEntriesPerBankTransactionCode = new MMMessageAssociationEnd<TotalTransactions1, List<NumberAndSumOfTransactionsPerBankTransactionCode1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalTransactions1.mmObject();
 			isDerived = false;
@@ -242,7 +275,17 @@ public class TotalTransactions1 {
 			definition = "Indicates the total number and sum of entries per bank transaction code.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
+			type_lazy = () -> NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
+		}
+
+		@Override
+		public List<NumberAndSumOfTransactionsPerBankTransactionCode1> getValue(TotalTransactions1 obj) {
+			return obj.getTotalEntriesPerBankTransactionCode();
+		}
+
+		@Override
+		public void setValue(TotalTransactions1 obj, List<NumberAndSumOfTransactionsPerBankTransactionCode1> value) {
+			obj.setTotalEntriesPerBankTransactionCode(value);
 		}
 	};
 
@@ -264,7 +307,7 @@ public class TotalTransactions1 {
 		return totalEntries == null ? Optional.empty() : Optional.of(totalEntries);
 	}
 
-	public TotalTransactions1 setTotalEntries(com.tools20022.repository.msg.NumberAndSumOfTransactions2 totalEntries) {
+	public TotalTransactions1 setTotalEntries(NumberAndSumOfTransactions2 totalEntries) {
 		this.totalEntries = totalEntries;
 		return this;
 	}
@@ -273,7 +316,7 @@ public class TotalTransactions1 {
 		return totalCreditEntries == null ? Optional.empty() : Optional.of(totalCreditEntries);
 	}
 
-	public TotalTransactions1 setTotalCreditEntries(com.tools20022.repository.msg.NumberAndSumOfTransactions1 totalCreditEntries) {
+	public TotalTransactions1 setTotalCreditEntries(NumberAndSumOfTransactions1 totalCreditEntries) {
 		this.totalCreditEntries = totalCreditEntries;
 		return this;
 	}
@@ -282,7 +325,7 @@ public class TotalTransactions1 {
 		return totalDebitEntries == null ? Optional.empty() : Optional.of(totalDebitEntries);
 	}
 
-	public TotalTransactions1 setTotalDebitEntries(com.tools20022.repository.msg.NumberAndSumOfTransactions1 totalDebitEntries) {
+	public TotalTransactions1 setTotalDebitEntries(NumberAndSumOfTransactions1 totalDebitEntries) {
 		this.totalDebitEntries = totalDebitEntries;
 		return this;
 	}
@@ -291,7 +334,7 @@ public class TotalTransactions1 {
 		return totalEntriesPerBankTransactionCode == null ? totalEntriesPerBankTransactionCode = new ArrayList<>() : totalEntriesPerBankTransactionCode;
 	}
 
-	public TotalTransactions1 setTotalEntriesPerBankTransactionCode(List<com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1> totalEntriesPerBankTransactionCode) {
+	public TotalTransactions1 setTotalEntriesPerBankTransactionCode(List<NumberAndSumOfTransactionsPerBankTransactionCode1> totalEntriesPerBankTransactionCode) {
 		this.totalEntriesPerBankTransactionCode = Objects.requireNonNull(totalEntriesPerBankTransactionCode);
 		return this;
 	}

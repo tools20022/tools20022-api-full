@@ -116,7 +116,7 @@ public class CorporateActionPriceSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPriceSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionPriceSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPriceSD1.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class CorporateActionPriceSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionPriceSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionPriceSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DclrdCshInLieuPric")
@@ -170,7 +180,7 @@ public class CorporateActionPriceSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredCashInLieuPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPriceSD1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmDeclaredCashInLieuPrice = new MMMessageAttribute<CorporateActionPriceSD1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPriceSD1.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class CorporateActionPriceSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(CorporateActionPriceSD1 obj) {
+			return obj.getDeclaredCashInLieuPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPriceSD1 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setDeclaredCashInLieuPrice(value.orElse(null));
 		}
 	};
 

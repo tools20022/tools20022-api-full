@@ -127,7 +127,7 @@ public class CancellationRejectionStatus1 {
 	 * "Reason advising the rejection of the instruction cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationRejectionStatus1, RejectionReason2Code> mmReason = new MMMessageAttribute<CancellationRejectionStatus1, RejectionReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmInstructionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRejectionStatus1.mmObject();
@@ -139,6 +139,16 @@ public class CancellationRejectionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason2Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason2Code getValue(CancellationRejectionStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancellationRejectionStatus1 obj, RejectionReason2Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -172,7 +182,7 @@ public class CancellationRejectionStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationRejectionStatus1, Extended350Code> mmExtendedReason = new MMMessageAttribute<CancellationRejectionStatus1, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRejectionStatus1.mmObject();
 			isDerived = false;
@@ -183,6 +193,16 @@ public class CancellationRejectionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(CancellationRejectionStatus1 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(CancellationRejectionStatus1 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -219,7 +239,7 @@ public class CancellationRejectionStatus1 {
 	 * definition} = "Additional information about the reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationRejectionStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CancellationRejectionStatus1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRejectionStatus1.mmObject();
@@ -231,6 +251,16 @@ public class CancellationRejectionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CancellationRejectionStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CancellationRejectionStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	/**

@@ -111,7 +111,7 @@ public class IdentificationSource2Choice {
 	 * definition} = "Country of the proprietary identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomestic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationSource2Choice, CountryCode> mmDomestic = new MMMessageAttribute<IdentificationSource2Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource2Choice.mmObject();
@@ -123,6 +123,16 @@ public class IdentificationSource2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(IdentificationSource2Choice obj) {
+			return obj.getDomestic();
+		}
+
+		@Override
+		public void setValue(IdentificationSource2Choice obj, CountryCode value) {
+			obj.setDomestic(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -160,7 +170,7 @@ public class IdentificationSource2Choice {
 	 * definition} = "Entity that issues the proprietary identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationSource2Choice, RestrictedFINExact2Text> mmProprietary = new MMMessageAttribute<IdentificationSource2Choice, RestrictedFINExact2Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource2Choice.mmObject();
@@ -172,6 +182,16 @@ public class IdentificationSource2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINExact2Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINExact2Text getValue(IdentificationSource2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IdentificationSource2Choice obj, RestrictedFINExact2Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

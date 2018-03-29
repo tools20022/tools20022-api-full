@@ -118,7 +118,7 @@ public class PendingCancellationStatus6Choice {
 	 * definition} = "Reason not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationStatus6Choice, NoReasonCode> mmNotSpecifiedReason = new MMMessageAttribute<PendingCancellationStatus6Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationStatus6Choice.mmObject();
@@ -131,6 +131,16 @@ public class PendingCancellationStatus6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingCancellationStatus6Choice obj) {
+			return obj.getNotSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingCancellationStatus6Choice obj, NoReasonCode value) {
+			obj.setNotSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -170,7 +180,7 @@ public class PendingCancellationStatus6Choice {
 	 * definition} = "Reason for the pending cancellation status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingCancellationStatus6Choice, List<PendingCancellationStatusReason6>> mmReason = new MMMessageAssociationEnd<PendingCancellationStatus6Choice, List<PendingCancellationStatusReason6>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationStatus6Choice.mmObject();
@@ -183,6 +193,16 @@ public class PendingCancellationStatus6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingCancellationStatusReason6.mmObject();
+		}
+
+		@Override
+		public List<PendingCancellationStatusReason6> getValue(PendingCancellationStatus6Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingCancellationStatus6Choice obj, List<PendingCancellationStatusReason6> value) {
+			obj.setReason(value);
 		}
 	};
 

@@ -49,11 +49,15 @@ public class ConstraintForeignExchangeTradeProductAndOptionRule2 {
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {
 		{
-			validator = ConstraintForeignExchangeTradeProductAndOptionRule2::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeTradeProductAndOptionRule2";
 			definition = "If ForeignExchangeTradeProduct is not present, then Option must be present.";
 			owner_lazy = () -> Trade1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Trade1 obj) throws Exception {
+			checkTrade1(obj);
 		}
 	};
 

@@ -135,7 +135,7 @@ public class Equity2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreferenceToIncome = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity2, PreferenceToIncome4Choice> mmPreferenceToIncome = new MMMessageAttribute<Equity2, PreferenceToIncome4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmPreferenceToIncome;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
@@ -148,6 +148,16 @@ public class Equity2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PreferenceToIncome4Choice.mmObject();
+		}
+
+		@Override
+		public PreferenceToIncome4Choice getValue(Equity2 obj) {
+			return obj.getPreferenceToIncome();
+		}
+
+		@Override
+		public void setValue(Equity2 obj, PreferenceToIncome4Choice value) {
+			obj.setPreferenceToIncome(value);
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -192,7 +202,7 @@ public class Equity2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity2, Optional<ISODateTime>> mmMaturityDate = new MMMessageAttribute<Equity2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
@@ -205,6 +215,16 @@ public class Equity2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Equity2 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(Equity2 obj, Optional<ISODateTime> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonPdAmt")
@@ -248,7 +268,7 @@ public class Equity2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonPaidAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity2, Optional<ActiveCurrencyAndAmount>> mmNonPaidAmount = new MMMessageAttribute<Equity2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmNonPaidAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
@@ -261,6 +281,16 @@ public class Equity2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Equity2 obj) {
+			return obj.getNonPaidAmount();
+		}
+
+		@Override
+		public void setValue(Equity2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNonPaidAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ParVal")
@@ -304,7 +334,7 @@ public class Equity2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity2, Optional<ActiveCurrencyAndAmount>> mmParValue = new MMMessageAttribute<Equity2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmParValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
@@ -317,6 +347,16 @@ public class Equity2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Equity2 obj) {
+			return obj.getParValue();
+		}
+
+		@Override
+		public void setValue(Equity2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setParValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VtngRghtsPerShr")
@@ -360,7 +400,7 @@ public class Equity2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVotingRightsPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equity2, Optional<Number>> mmVotingRightsPerShare = new MMMessageAttribute<Equity2, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Equity.mmVotingRightsPerShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
@@ -373,6 +413,16 @@ public class Equity2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Equity2 obj) {
+			return obj.getVotingRightsPerShare();
+		}
+
+		@Override
+		public void setValue(Equity2 obj, Optional<Number> value) {
+			obj.setVotingRightsPerShare(value.orElse(null));
 		}
 	};
 

@@ -111,7 +111,7 @@ public class UnitOrFaceAmountChoice {
 	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOrFaceAmountChoice, DecimalNumber> mmUnit = new MMMessageAttribute<UnitOrFaceAmountChoice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOrFaceAmountChoice.mmObject();
@@ -123,6 +123,16 @@ public class UnitOrFaceAmountChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(UnitOrFaceAmountChoice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(UnitOrFaceAmountChoice obj, DecimalNumber value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "FaceAmt", required = true)
@@ -162,7 +172,7 @@ public class UnitOrFaceAmountChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOrFaceAmountChoice, CurrencyAndAmount> mmFaceAmount = new MMMessageAttribute<UnitOrFaceAmountChoice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOrFaceAmountChoice.mmObject();
@@ -174,6 +184,16 @@ public class UnitOrFaceAmountChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(UnitOrFaceAmountChoice obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(UnitOrFaceAmountChoice obj, CurrencyAndAmount value) {
+			obj.setFaceAmount(value);
 		}
 	};
 

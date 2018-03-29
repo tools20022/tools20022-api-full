@@ -51,11 +51,15 @@ public class ConstraintConfirmationAndReturnInformation {
 	 */
 	public static final MMConstraint<InvestigationStatus> forInvestigationStatus = new MMConstraint<InvestigationStatus>() {
 		{
-			validator = ConstraintConfirmationAndReturnInformation::checkInvestigationStatus;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationAndReturnInformation";
 			definition = "If the InvestigationStatus is NOT a Confirmation with value MODI or CNCL, then ReturnInformation is not allowed.";
 			owner_lazy = () -> InvestigationStatus.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestigationStatus obj) throws Exception {
+			checkInvestigationStatus(obj);
 		}
 	};
 

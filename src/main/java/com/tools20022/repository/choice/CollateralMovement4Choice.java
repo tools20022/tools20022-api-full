@@ -134,7 +134,7 @@ public class CollateralMovement4Choice {
 	 * CollateralMovement3Choice.mmCollateralMovementDirection}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralMovementDirection = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement4Choice, CollateralMovement8> mmCollateralMovementDirection = new MMMessageAssociationEnd<CollateralMovement4Choice, CollateralMovement8>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralMovement4Choice.mmObject();
@@ -149,6 +149,16 @@ public class CollateralMovement4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralMovement8.mmObject();
+		}
+
+		@Override
+		public CollateralMovement8 getValue(CollateralMovement4Choice obj) {
+			return obj.getCollateralMovementDirection();
+		}
+
+		@Override
+		public void setValue(CollateralMovement4Choice obj, CollateralMovement8 value) {
+			obj.setCollateralMovementDirection(value);
 		}
 	};
 	@XmlElement(name = "Rtr", required = true)
@@ -198,7 +208,7 @@ public class CollateralMovement4Choice {
 	 * CollateralMovement3Choice.mmReturn}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturn = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement4Choice, Collateral11> mmReturn = new MMMessageAssociationEnd<CollateralMovement4Choice, Collateral11>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralMovement4Choice.mmObject();
@@ -213,6 +223,16 @@ public class CollateralMovement4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Collateral11.mmObject();
+		}
+
+		@Override
+		public Collateral11 getValue(CollateralMovement4Choice obj) {
+			return obj.getReturn();
+		}
+
+		@Override
+		public void setValue(CollateralMovement4Choice obj, Collateral11 value) {
+			obj.setReturn(value);
 		}
 	};
 

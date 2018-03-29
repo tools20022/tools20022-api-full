@@ -109,7 +109,7 @@ public class AssetHolding1 {
 	 * definition} = "Specifies financial instrument pledged as collateral."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssetType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetHolding1, AssetHolding1Choice> mmAssetType = new MMMessageAssociationEnd<AssetHolding1, AssetHolding1Choice>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetHolding1.mmObject();
@@ -122,6 +122,16 @@ public class AssetHolding1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AssetHolding1Choice.mmObject();
+		}
+
+		@Override
+		public AssetHolding1Choice getValue(AssetHolding1 obj) {
+			return obj.getAssetType();
+		}
+
+		@Override
+		public void setValue(AssetHolding1 obj, AssetHolding1Choice value) {
+			obj.setAssetType(value);
 		}
 	};
 	@XmlElement(name = "PstHrcutVal", required = true)
@@ -159,7 +169,7 @@ public class AssetHolding1 {
 	 * "Mark-to-market post-haircut value of the collateral asset holding.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostHaircutValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetHolding1, ActiveCurrencyAndAmount> mmPostHaircutValue = new MMMessageAttribute<AssetHolding1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetHolding1.mmObject();
@@ -171,6 +181,16 @@ public class AssetHolding1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AssetHolding1 obj) {
+			return obj.getPostHaircutValue();
+		}
+
+		@Override
+		public void setValue(AssetHolding1 obj, ActiveCurrencyAndAmount value) {
+			obj.setPostHaircutValue(value);
 		}
 	};
 	@XmlElement(name = "CollRqrmnt", required = true)
@@ -209,7 +229,7 @@ public class AssetHolding1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralRequirement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetHolding1, CollateralAccountType3Code> mmCollateralRequirement = new MMMessageAttribute<AssetHolding1, CollateralAccountType3Code>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AssetHolding1.mmObject();
@@ -221,6 +241,16 @@ public class AssetHolding1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralAccountType3Code.mmObject();
+		}
+
+		@Override
+		public CollateralAccountType3Code getValue(AssetHolding1 obj) {
+			return obj.getCollateralRequirement();
+		}
+
+		@Override
+		public void setValue(AssetHolding1 obj, CollateralAccountType3Code value) {
+			obj.setCollateralRequirement(value);
 		}
 	};
 

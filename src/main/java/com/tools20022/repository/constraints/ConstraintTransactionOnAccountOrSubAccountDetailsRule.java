@@ -66,12 +66,16 @@ public class ConstraintTransactionOnAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<StatementOfInvestmentFundTransactionsV03> forStatementOfInvestmentFundTransactionsV03 = new MMConstraint<StatementOfInvestmentFundTransactionsV03>() {
 		{
-			validator = ConstraintTransactionOnAccountOrSubAccountDetailsRule::checkStatementOfInvestmentFundTransactionsV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either one or more occurrences of TransactionOnAccount or one or more occurrences of SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule.forStatementOfInvestmentFundTransactionsV02;
 			owner_lazy = () -> StatementOfInvestmentFundTransactionsV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatementOfInvestmentFundTransactionsV03 obj) throws Exception {
+			checkStatementOfInvestmentFundTransactionsV03(obj);
 		}
 	};
 	/**
@@ -106,12 +110,16 @@ public class ConstraintTransactionOnAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<StatementOfInvestmentFundTransactionsV02> forStatementOfInvestmentFundTransactionsV02 = new MMConstraint<StatementOfInvestmentFundTransactionsV02>() {
 		{
-			validator = ConstraintTransactionOnAccountOrSubAccountDetailsRule::checkStatementOfInvestmentFundTransactionsV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either TransactionOnAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule.forStatementOfInvestmentFundTransactionsV03);
 			owner_lazy = () -> StatementOfInvestmentFundTransactionsV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatementOfInvestmentFundTransactionsV02 obj) throws Exception {
+			checkStatementOfInvestmentFundTransactionsV02(obj);
 		}
 	};
 	/**
@@ -137,11 +145,15 @@ public class ConstraintTransactionOnAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<StatementOfInvestmentFundTransactions> forStatementOfInvestmentFundTransactions = new MMConstraint<StatementOfInvestmentFundTransactions>() {
 		{
-			validator = ConstraintTransactionOnAccountOrSubAccountDetailsRule::checkStatementOfInvestmentFundTransactions;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either TransactionOnAccount or SubAccountDetails is mandatory. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed.";
 			owner_lazy = () -> StatementOfInvestmentFundTransactions.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatementOfInvestmentFundTransactions obj) throws Exception {
+			checkStatementOfInvestmentFundTransactions(obj);
 		}
 	};
 	/**
@@ -167,11 +179,15 @@ public class ConstraintTransactionOnAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<StatementOfInvestmentFundTransactions1> forStatementOfInvestmentFundTransactions1 = new MMConstraint<StatementOfInvestmentFundTransactions1>() {
 		{
-			validator = ConstraintTransactionOnAccountOrSubAccountDetailsRule::checkStatementOfInvestmentFundTransactions1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either TransactionOnAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed.";
 			owner_lazy = () -> StatementOfInvestmentFundTransactions1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatementOfInvestmentFundTransactions1 obj) throws Exception {
+			checkStatementOfInvestmentFundTransactions1(obj);
 		}
 	};
 	/**
@@ -206,12 +222,16 @@ public class ConstraintTransactionOnAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<StatementOfInvestmentFundTransactions2> forStatementOfInvestmentFundTransactions2 = new MMConstraint<StatementOfInvestmentFundTransactions2>() {
 		{
-			validator = ConstraintTransactionOnAccountOrSubAccountDetailsRule::checkStatementOfInvestmentFundTransactions2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either TransactionOnAccount or SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule.forStatementOfInvestmentFundTransactions3);
 			owner_lazy = () -> StatementOfInvestmentFundTransactions2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatementOfInvestmentFundTransactions2 obj) throws Exception {
+			checkStatementOfInvestmentFundTransactions2(obj);
 		}
 	};
 	/**
@@ -243,12 +263,16 @@ public class ConstraintTransactionOnAccountOrSubAccountDetailsRule {
 	 */
 	public static final MMConstraint<StatementOfInvestmentFundTransactions3> forStatementOfInvestmentFundTransactions3 = new MMConstraint<StatementOfInvestmentFundTransactions3>() {
 		{
-			validator = ConstraintTransactionOnAccountOrSubAccountDetailsRule::checkStatementOfInvestmentFundTransactions3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOnAccountOrSubAccountDetailsRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is \"true\" or \"1\" (Yes), then either one or more occurrences of TransactionOnAccount or one or more occurrences of SubAccountDetails must be present. If StatementGeneralDetails/ActivityIndicator is \"false\" or \"0\" (No), then TransactionOnAccount and SubAccountDetails are not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionOnAccountOrSubAccountDetailsRule.forStatementOfInvestmentFundTransactions2;
 			owner_lazy = () -> StatementOfInvestmentFundTransactions3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatementOfInvestmentFundTransactions3 obj) throws Exception {
+			checkStatementOfInvestmentFundTransactions3(obj);
 		}
 	};
 

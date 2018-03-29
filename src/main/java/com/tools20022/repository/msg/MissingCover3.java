@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.PaymentInvestigationCase;
 import com.tools20022.repository.entity.PaymentInvestigationCaseResolution;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SettlementInstruction3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -128,7 +129,7 @@ public class MissingCover3 {
 	 * "Indicates whether or not the claim is related to a missing cover."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMissingCoverIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MissingCover3, YesNoIndicator> mmMissingCoverIndicator = new MMMessageAttribute<MissingCover3, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCase.mmMissingCoverIndication;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MissingCover3.mmObject();
@@ -140,6 +141,16 @@ public class MissingCover3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(MissingCover3 obj) {
+			return obj.getMissingCoverIndicator();
+		}
+
+		@Override
+		public void setValue(MissingCover3 obj, YesNoIndicator value) {
+			obj.setMissingCoverIndicator(value);
 		}
 	};
 	@XmlElement(name = "CoverCrrctn")
@@ -176,7 +187,7 @@ public class MissingCover3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCoverCorrection = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MissingCover3, Optional<SettlementInstruction3>> mmCoverCorrection = new MMMessageAssociationEnd<MissingCover3, Optional<SettlementInstruction3>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmCoverCorrection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MissingCover3.mmObject();
@@ -188,7 +199,17 @@ public class MissingCover3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementInstruction3.mmObject();
+			type_lazy = () -> SettlementInstruction3.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementInstruction3> getValue(MissingCover3 obj) {
+			return obj.getCoverCorrection();
+		}
+
+		@Override
+		public void setValue(MissingCover3 obj, Optional<SettlementInstruction3> value) {
+			obj.setCoverCorrection(value.orElse(null));
 		}
 	};
 
@@ -220,7 +241,7 @@ public class MissingCover3 {
 		return coverCorrection == null ? Optional.empty() : Optional.of(coverCorrection);
 	}
 
-	public MissingCover3 setCoverCorrection(com.tools20022.repository.msg.SettlementInstruction3 coverCorrection) {
+	public MissingCover3 setCoverCorrection(SettlementInstruction3 coverCorrection) {
 		this.coverCorrection = coverCorrection;
 		return this;
 	}

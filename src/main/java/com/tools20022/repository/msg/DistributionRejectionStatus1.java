@@ -98,7 +98,7 @@ public class DistributionRejectionStatus1 {
 	 * definition} = "The rejection reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionRejectionStatus1, List<RejectionReason19FormatChoice>> mmReason = new MMMessageAttribute<DistributionRejectionStatus1, List<RejectionReason19FormatChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DistributionRejectionStatus1.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class DistributionRejectionStatus1 {
 			definition = "The rejection reason.";
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason19FormatChoice.mmObject();
+		}
+
+		@Override
+		public List<RejectionReason19FormatChoice> getValue(DistributionRejectionStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(DistributionRejectionStatus1 obj, List<RejectionReason19FormatChoice> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -139,7 +149,7 @@ public class DistributionRejectionStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionRejectionStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<DistributionRejectionStatus1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DistributionRejectionStatus1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class DistributionRejectionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(DistributionRejectionStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(DistributionRejectionStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

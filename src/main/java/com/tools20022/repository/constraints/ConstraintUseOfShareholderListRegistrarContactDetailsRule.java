@@ -60,12 +60,16 @@ public class ConstraintUseOfShareholderListRegistrarContactDetailsRule {
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation5SD1> forUpdatedAdditionalInformation5SD1 = new MMConstraint<UpdatedAdditionalInformation5SD1>() {
 		{
-			validator = ConstraintUseOfShareholderListRegistrarContactDetailsRule::checkUpdatedAdditionalInformation5SD1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UseOfShareholderListRegistrarContactDetailsRule";
 			definition = "Shareholder list registrar phone number must start with \"+81\".";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUseOfShareholderListRegistrarContactDetailsRule.forUpdatedAdditionalInformation5SD3);
 			owner_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedAdditionalInformation5SD1 obj) throws Exception {
+			checkUpdatedAdditionalInformation5SD1(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintUseOfShareholderListRegistrarContactDetailsRule {
 	 */
 	public static final MMConstraint<UpdatedAdditionalInformation5SD3> forUpdatedAdditionalInformation5SD3 = new MMConstraint<UpdatedAdditionalInformation5SD3>() {
 		{
-			validator = ConstraintUseOfShareholderListRegistrarContactDetailsRule::checkUpdatedAdditionalInformation5SD3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UseOfShareholderListRegistrarContactDetailsRule";
 			definition = "Shareholder list registrar phone number must start with \"+81\".";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUseOfShareholderListRegistrarContactDetailsRule.forUpdatedAdditionalInformation5SD1;
 			owner_lazy = () -> UpdatedAdditionalInformation5SD3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UpdatedAdditionalInformation5SD3 obj) throws Exception {
+			checkUpdatedAdditionalInformation5SD3(obj);
 		}
 	};
 

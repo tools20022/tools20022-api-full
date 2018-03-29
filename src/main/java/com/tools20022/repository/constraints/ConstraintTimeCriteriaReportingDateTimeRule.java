@@ -55,12 +55,16 @@ public class ConstraintTimeCriteriaReportingDateTimeRule {
 	 */
 	public static final MMConstraint<TradeQueryCriteria3> forTradeQueryCriteria3 = new MMConstraint<TradeQueryCriteria3>() {
 		{
-			validator = ConstraintTimeCriteriaReportingDateTimeRule::checkTradeQueryCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeCriteriaReportingDateTimeRule";
 			definition = "If TradeLifeCycleHistory equals false, then TimeCriteria/ReportingDateTime must be absent.";
 			owner_lazy = () -> TradeQueryCriteria3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TimeCriteria/ReportingDateTime</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TradeLifeCycleHistory</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TradeQueryCriteria3 obj) throws Exception {
+			checkTradeQueryCriteria3(obj);
 		}
 	};
 

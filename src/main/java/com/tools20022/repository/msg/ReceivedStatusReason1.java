@@ -117,7 +117,7 @@ public class ReceivedStatusReason1 {
 	 * definition} = "Reason for the received status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceivedStatusReason1, ReceivedReason1Choice> mmReason = new MMMessageAssociationEnd<ReceivedStatusReason1, ReceivedReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivedStatusReason1.mmObject();
@@ -130,6 +130,16 @@ public class ReceivedStatusReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReceivedReason1Choice.mmObject();
+		}
+
+		@Override
+		public ReceivedReason1Choice getValue(ReceivedStatusReason1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ReceivedStatusReason1 obj, ReceivedReason1Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -161,7 +171,7 @@ public class ReceivedStatusReason1 {
 	 * definition} = "Additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReceivedStatusReason1, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<ReceivedStatusReason1, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivedStatusReason1.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class ReceivedStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(ReceivedStatusReason1 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(ReceivedStatusReason1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

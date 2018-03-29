@@ -122,7 +122,7 @@ public class DistributionTypeFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionTypeFormat1Choice, DistributionType1Code> mmCode = new MMMessageAttribute<DistributionTypeFormat1Choice, DistributionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionTypeFormat1Choice.mmObject();
@@ -134,6 +134,16 @@ public class DistributionTypeFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionType1Code.mmObject();
+		}
+
+		@Override
+		public DistributionType1Code getValue(DistributionTypeFormat1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DistributionTypeFormat1Choice obj, DistributionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -170,7 +180,7 @@ public class DistributionTypeFormat1Choice {
 	 * definition} = "Proprietary identification of the type of distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DistributionTypeFormat1Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<DistributionTypeFormat1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionTypeFormat1Choice.mmObject();
@@ -183,6 +193,16 @@ public class DistributionTypeFormat1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(DistributionTypeFormat1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DistributionTypeFormat1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

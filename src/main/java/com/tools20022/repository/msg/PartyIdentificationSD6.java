@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationSD4;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -131,7 +133,7 @@ public class PartyIdentificationSD6 {
 	 * PartyIdentificationSD2.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD6, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<PartyIdentificationSD6, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD6.mmObject();
 			isDerived = false;
@@ -143,6 +145,16 @@ public class PartyIdentificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PartyIdentificationSD6 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD6 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtId")
@@ -182,7 +194,7 @@ public class PartyIdentificationSD6 {
 	 * PartyIdentificationSD2.mmAgentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD6, Optional<Max8Text>> mmAgentIdentification = new MMMessageAttribute<PartyIdentificationSD6, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD6.mmObject();
 			isDerived = false;
@@ -195,6 +207,16 @@ public class PartyIdentificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(PartyIdentificationSD6 obj) {
+			return obj.getAgentIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD6 obj, Optional<Max8Text> value) {
+			obj.setAgentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtTelNb")
@@ -234,7 +256,7 @@ public class PartyIdentificationSD6 {
 	 * PartyIdentificationSD2.mmAgentTelephoneNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentTelephoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD6, Optional<PhoneNumber>> mmAgentTelephoneNumber = new MMMessageAttribute<PartyIdentificationSD6, Optional<PhoneNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD6.mmObject();
 			isDerived = false;
@@ -247,6 +269,16 @@ public class PartyIdentificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(PartyIdentificationSD6 obj) {
+			return obj.getAgentTelephoneNumber();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD6 obj, Optional<PhoneNumber> value) {
+			obj.setAgentTelephoneNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctInf")
@@ -285,7 +317,7 @@ public class PartyIdentificationSD6 {
 	 * PartyIdentificationSD2.mmContactInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationSD6, Optional<PartyIdentificationSD4>> mmContactInformation = new MMMessageAssociationEnd<PartyIdentificationSD6, Optional<PartyIdentificationSD4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD6.mmObject();
 			isDerived = false;
@@ -298,7 +330,17 @@ public class PartyIdentificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD4.mmObject();
+			type_lazy = () -> PartyIdentificationSD4.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationSD4> getValue(PartyIdentificationSD6 obj) {
+			return obj.getContactInformation();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD6 obj, Optional<PartyIdentificationSD4> value) {
+			obj.setContactInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtEmailAdr")
@@ -338,7 +380,7 @@ public class PartyIdentificationSD6 {
 	 * PartyIdentificationSD2.mmAgentEmailAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD6, Optional<Max256Text>> mmAgentEmailAddress = new MMMessageAttribute<PartyIdentificationSD6, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD6.mmObject();
 			isDerived = false;
@@ -351,6 +393,16 @@ public class PartyIdentificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(PartyIdentificationSD6 obj) {
+			return obj.getAgentEmailAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD6 obj, Optional<Max256Text> value) {
+			obj.setAgentEmailAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtAdr")
@@ -390,7 +442,7 @@ public class PartyIdentificationSD6 {
 	 * PartyIdentificationSD2.mmAgentAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD6, Optional<PostalAddress1>> mmAgentAddress = new MMMessageAttribute<PartyIdentificationSD6, Optional<PostalAddress1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD6.mmObject();
 			isDerived = false;
@@ -402,7 +454,17 @@ public class PartyIdentificationSD6 {
 			previousVersion_lazy = () -> PartyIdentificationSD2.mmAgentAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			complexType_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress1> getValue(PartyIdentificationSD6 obj) {
+			return obj.getAgentAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD6 obj, Optional<PostalAddress1> value) {
+			obj.setAgentAddress(value.orElse(null));
 		}
 	};
 
@@ -454,7 +516,7 @@ public class PartyIdentificationSD6 {
 		return contactInformation == null ? Optional.empty() : Optional.of(contactInformation);
 	}
 
-	public PartyIdentificationSD6 setContactInformation(com.tools20022.repository.msg.PartyIdentificationSD4 contactInformation) {
+	public PartyIdentificationSD6 setContactInformation(PartyIdentificationSD4 contactInformation) {
 		this.contactInformation = contactInformation;
 		return this;
 	}
@@ -472,7 +534,7 @@ public class PartyIdentificationSD6 {
 		return agentAddress == null ? Optional.empty() : Optional.of(agentAddress);
 	}
 
-	public PartyIdentificationSD6 setAgentAddress(com.tools20022.repository.msg.PostalAddress1 agentAddress) {
+	public PartyIdentificationSD6 setAgentAddress(PostalAddress1 agentAddress) {
 		this.agentAddress = agentAddress;
 		return this;
 	}

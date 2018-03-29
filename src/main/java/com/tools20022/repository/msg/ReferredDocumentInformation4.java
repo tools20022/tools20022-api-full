@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentLineInformation1;
+import com.tools20022.repository.msg.ReferredDocumentType2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -120,7 +122,7 @@ public class ReferredDocumentInformation4 {
 	 * ReferredDocumentInformation3.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReferredDocumentInformation4, Optional<ReferredDocumentType2>> mmType = new MMMessageAssociationEnd<ReferredDocumentInformation4, Optional<ReferredDocumentType2>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation4.mmObject();
@@ -133,7 +135,17 @@ public class ReferredDocumentInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType2.mmObject();
+			type_lazy = () -> ReferredDocumentType2.mmObject();
+		}
+
+		@Override
+		public Optional<ReferredDocumentType2> getValue(ReferredDocumentInformation4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation4 obj, Optional<ReferredDocumentType2> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nb")
@@ -171,7 +183,7 @@ public class ReferredDocumentInformation4 {
 	 * ReferredDocumentInformation3.mmNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentInformation4, Optional<Max35Text>> mmNumber = new MMMessageAttribute<ReferredDocumentInformation4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation4.mmObject();
 			isDerived = false;
@@ -183,6 +195,16 @@ public class ReferredDocumentInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReferredDocumentInformation4 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation4 obj, Optional<Max35Text> value) {
+			obj.setNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdDt")
@@ -224,7 +246,7 @@ public class ReferredDocumentInformation4 {
 	 * ReferredDocumentInformation3.mmRelatedDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentInformation4, Optional<ISODate>> mmRelatedDate = new MMMessageAttribute<ReferredDocumentInformation4, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation4.mmObject();
@@ -238,9 +260,19 @@ public class ReferredDocumentInformation4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public Optional<ISODate> getValue(ReferredDocumentInformation4 obj) {
+			return obj.getRelatedDate();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation4 obj, Optional<ISODate> value) {
+			obj.setRelatedDate(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "LineDtls")
-	protected List<com.tools20022.repository.msg.DocumentLineInformation1> lineDetails;
+	protected List<DocumentLineInformation1> lineDetails;
 	/**
 	 * 
 	 <p>
@@ -274,7 +306,7 @@ public class ReferredDocumentInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLineDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReferredDocumentInformation4, List<DocumentLineInformation1>> mmLineDetails = new MMMessageAssociationEnd<ReferredDocumentInformation4, List<DocumentLineInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation4.mmObject();
@@ -285,7 +317,17 @@ public class ReferredDocumentInformation4 {
 			definition = "Set of elements used to provide the content of the referred document line.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentLineInformation1.mmObject();
+			type_lazy = () -> DocumentLineInformation1.mmObject();
+		}
+
+		@Override
+		public List<DocumentLineInformation1> getValue(ReferredDocumentInformation4 obj) {
+			return obj.getLineDetails();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation4 obj, List<DocumentLineInformation1> value) {
+			obj.setLineDetails(value);
 		}
 	};
 
@@ -309,7 +351,7 @@ public class ReferredDocumentInformation4 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public ReferredDocumentInformation4 setType(com.tools20022.repository.msg.ReferredDocumentType2 type) {
+	public ReferredDocumentInformation4 setType(ReferredDocumentType2 type) {
 		this.type = type;
 		return this;
 	}
@@ -336,7 +378,7 @@ public class ReferredDocumentInformation4 {
 		return lineDetails == null ? lineDetails = new ArrayList<>() : lineDetails;
 	}
 
-	public ReferredDocumentInformation4 setLineDetails(List<com.tools20022.repository.msg.DocumentLineInformation1> lineDetails) {
+	public ReferredDocumentInformation4 setLineDetails(List<DocumentLineInformation1> lineDetails) {
 		this.lineDetails = Objects.requireNonNull(lineDetails);
 		return this;
 	}

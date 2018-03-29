@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentTransactionDetails8;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.PlainCardData3;
+import com.tools20022.repository.msg.PointOfInteraction1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -125,7 +129,7 @@ public class TransactionData1 {
 	 * definition} = "Brand name of the card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardBrand = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionData1, Optional<Max35Text>> mmCardBrand = new MMMessageAttribute<TransactionData1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCardBrand;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
@@ -137,6 +141,16 @@ public class TransactionData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionData1 obj) {
+			return obj.getCardBrand();
+		}
+
+		@Override
+		public void setValue(TransactionData1 obj, Optional<Max35Text> value) {
+			obj.setCardBrand(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardData")
@@ -172,7 +186,7 @@ public class TransactionData1 {
 	 * "Card data associated with the card performing the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionData1, Optional<PlainCardData3>> mmCardData = new MMMessageAssociationEnd<TransactionData1, Optional<PlainCardData3>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentCard.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
@@ -184,7 +198,17 @@ public class TransactionData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PlainCardData3.mmObject();
+			type_lazy = () -> PlainCardData3.mmObject();
+		}
+
+		@Override
+		public Optional<PlainCardData3> getValue(TransactionData1 obj) {
+			return obj.getCardData();
+		}
+
+		@Override
+		public void setValue(TransactionData1 obj, Optional<PlainCardData3> value) {
+			obj.setCardData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtOfIntractn")
@@ -220,7 +244,7 @@ public class TransactionData1 {
 	 * definition} = "Point of interaction (POI) performing the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPointOfInteraction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionData1, Optional<PointOfInteraction1>> mmPointOfInteraction = new MMMessageAssociationEnd<TransactionData1, Optional<PointOfInteraction1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
@@ -232,7 +256,17 @@ public class TransactionData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction1.mmObject();
+			type_lazy = () -> PointOfInteraction1.mmObject();
+		}
+
+		@Override
+		public Optional<PointOfInteraction1> getValue(TransactionData1 obj) {
+			return obj.getPointOfInteraction();
+		}
+
+		@Override
+		public void setValue(TransactionData1 obj, Optional<PointOfInteraction1> value) {
+			obj.setPointOfInteraction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDtls")
@@ -268,7 +302,7 @@ public class TransactionData1 {
 	 * definition} = "Details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionData1, Optional<CardPaymentTransactionDetails8>> mmTransactionDetails = new MMMessageAssociationEnd<TransactionData1, Optional<CardPaymentTransactionDetails8>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
@@ -280,7 +314,17 @@ public class TransactionData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionDetails8.mmObject();
+			type_lazy = () -> CardPaymentTransactionDetails8.mmObject();
+		}
+
+		@Override
+		public Optional<CardPaymentTransactionDetails8> getValue(TransactionData1 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(TransactionData1 obj, Optional<CardPaymentTransactionDetails8> value) {
+			obj.setTransactionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrePdAcct")
@@ -316,7 +360,7 @@ public class TransactionData1 {
 	 * definition} = "PrePaid Account for funds transfer or loading."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrePaidAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionData1, Optional<CashAccount24>> mmPrePaidAccount = new MMMessageAssociationEnd<TransactionData1, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmRelatedAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionData1.mmObject();
@@ -328,7 +372,17 @@ public class TransactionData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(TransactionData1 obj) {
+			return obj.getPrePaidAccount();
+		}
+
+		@Override
+		public void setValue(TransactionData1 obj, Optional<CashAccount24> value) {
+			obj.setPrePaidAccount(value.orElse(null));
 		}
 	};
 
@@ -361,7 +415,7 @@ public class TransactionData1 {
 		return cardData == null ? Optional.empty() : Optional.of(cardData);
 	}
 
-	public TransactionData1 setCardData(com.tools20022.repository.msg.PlainCardData3 cardData) {
+	public TransactionData1 setCardData(PlainCardData3 cardData) {
 		this.cardData = cardData;
 		return this;
 	}
@@ -370,7 +424,7 @@ public class TransactionData1 {
 		return pointOfInteraction == null ? Optional.empty() : Optional.of(pointOfInteraction);
 	}
 
-	public TransactionData1 setPointOfInteraction(com.tools20022.repository.msg.PointOfInteraction1 pointOfInteraction) {
+	public TransactionData1 setPointOfInteraction(PointOfInteraction1 pointOfInteraction) {
 		this.pointOfInteraction = pointOfInteraction;
 		return this;
 	}
@@ -379,7 +433,7 @@ public class TransactionData1 {
 		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public TransactionData1 setTransactionDetails(com.tools20022.repository.msg.CardPaymentTransactionDetails8 transactionDetails) {
+	public TransactionData1 setTransactionDetails(CardPaymentTransactionDetails8 transactionDetails) {
 		this.transactionDetails = transactionDetails;
 		return this;
 	}
@@ -388,7 +442,7 @@ public class TransactionData1 {
 		return prePaidAccount == null ? Optional.empty() : Optional.of(prePaidAccount);
 	}
 
-	public TransactionData1 setPrePaidAccount(com.tools20022.repository.msg.CashAccount24 prePaidAccount) {
+	public TransactionData1 setPrePaidAccount(CashAccount24 prePaidAccount) {
 		this.prePaidAccount = prePaidAccount;
 		return this;
 	}

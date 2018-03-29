@@ -50,11 +50,15 @@ public class ConstraintConfirmationPartyType2Rule {
 	 */
 	public static final MMConstraint<Undertaking3> forUndertaking3 = new MMConstraint<Undertaking3>() {
 		{
-			validator = ConstraintConfirmationPartyType2Rule::checkUndertaking3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationPartyType2Rule";
 			definition = "If ConfirmationPartyType is \"CONF\", then one occurrence of AdditionalParty/Type/Code must be \"CONF\".";
 			owner_lazy = () -> Undertaking3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Undertaking3 obj) throws Exception {
+			checkUndertaking3(obj);
 		}
 	};
 

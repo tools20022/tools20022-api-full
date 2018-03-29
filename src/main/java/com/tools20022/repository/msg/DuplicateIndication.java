@@ -101,7 +101,7 @@ public class DuplicateIndication {
 	 * "Reference of the original message, in case this is a duplicate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DuplicateIndication, Max30Text> mmReference = new MMMessageAttribute<DuplicateIndication, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DuplicateIndication.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class DuplicateIndication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(DuplicateIndication obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(DuplicateIndication obj, Max30Text value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "Info", required = true)
@@ -143,7 +153,7 @@ public class DuplicateIndication {
 	 * definition} = "Information about the duplicate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmJustification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DuplicateIndication, Max140Text> mmJustification = new MMMessageAttribute<DuplicateIndication, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DuplicateIndication.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class DuplicateIndication {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(DuplicateIndication obj) {
+			return obj.getJustification();
+		}
+
+		@Override
+		public void setValue(DuplicateIndication obj, Max140Text value) {
+			obj.setJustification(value);
 		}
 	};
 

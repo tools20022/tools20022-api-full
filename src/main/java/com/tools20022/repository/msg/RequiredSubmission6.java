@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.entity.TradeCertificate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BICIdentification1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -86,7 +87,7 @@ public class RequiredSubmission6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Submitr", required = true)
-	protected List<com.tools20022.repository.msg.BICIdentification1> submitter;
+	protected List<BICIdentification1> submitter;
 	/**
 	 * 
 	 <p>
@@ -125,7 +126,7 @@ public class RequiredSubmission6 {
 	 * RequiredSubmission5.mmSubmitter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequiredSubmission6, List<BICIdentification1>> mmSubmitter = new MMMessageAssociationEnd<RequiredSubmission6, List<BICIdentification1>>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission6.mmObject();
@@ -137,7 +138,17 @@ public class RequiredSubmission6 {
 			previousVersion_lazy = () -> RequiredSubmission5.mmSubmitter;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public List<BICIdentification1> getValue(RequiredSubmission6 obj) {
+			return obj.getSubmitter();
+		}
+
+		@Override
+		public void setValue(RequiredSubmission6 obj, List<BICIdentification1> value) {
+			obj.setSubmitter(value);
 		}
 	};
 	@XmlElement(name = "CertTp", required = true)
@@ -182,7 +193,7 @@ public class RequiredSubmission6 {
 	 * RequiredSubmission5.mmCertificateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequiredSubmission6, Exact4AlphaNumericText> mmCertificateType = new MMMessageAttribute<RequiredSubmission6, Exact4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> TradeCertificate.mmCertificateType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission6.mmObject();
@@ -195,6 +206,16 @@ public class RequiredSubmission6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(RequiredSubmission6 obj) {
+			return obj.getCertificateType();
+		}
+
+		@Override
+		public void setValue(RequiredSubmission6 obj, Exact4AlphaNumericText value) {
+			obj.setCertificateType(value);
 		}
 	};
 	@XmlElement(name = "CertTpDesc", required = true)
@@ -226,7 +247,7 @@ public class RequiredSubmission6 {
 	 * definition} = "Description of the certificate type required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateTypeDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequiredSubmission6, Max140Text> mmCertificateTypeDescription = new MMMessageAttribute<RequiredSubmission6, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission6.mmObject();
 			isDerived = false;
@@ -237,6 +258,16 @@ public class RequiredSubmission6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(RequiredSubmission6 obj) {
+			return obj.getCertificateTypeDescription();
+		}
+
+		@Override
+		public void setValue(RequiredSubmission6 obj, Max140Text value) {
+			obj.setCertificateTypeDescription(value);
 		}
 	};
 
@@ -260,7 +291,7 @@ public class RequiredSubmission6 {
 		return submitter == null ? submitter = new ArrayList<>() : submitter;
 	}
 
-	public RequiredSubmission6 setSubmitter(List<com.tools20022.repository.msg.BICIdentification1> submitter) {
+	public RequiredSubmission6 setSubmitter(List<BICIdentification1> submitter) {
 		this.submitter = Objects.requireNonNull(submitter);
 		return this;
 	}

@@ -29,6 +29,7 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.CFIIdentifier;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -149,7 +150,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SecurityIdentification14>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SecurityIdentification14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -161,7 +162,17 @@ public class SecuritiesSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification14> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<SecurityIdentification14> value) {
+			obj.setFinancialInstrumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClssfctnFinInstrm")
@@ -204,7 +215,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesSearchCriteria1, Optional<CFIIdentifier>> mmClassificationFinancialInstrument = new MMMessageAttribute<SecuritiesSearchCriteria1, Optional<CFIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -216,6 +227,16 @@ public class SecuritiesSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<CFIIdentifier> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<CFIIdentifier> value) {
+			obj.setClassificationFinancialInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -259,7 +280,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesSearchCriteria1, Optional<DateSearchChoice>> mmMaturityDate = new MMMessageAttribute<SecuritiesSearchCriteria1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -272,6 +293,16 @@ public class SecuritiesSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<DateSearchChoice> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseDt")
@@ -312,7 +343,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesSearchCriteria1, Optional<DateSearchChoice>> mmIssueDate = new MMMessageAttribute<SecuritiesSearchCriteria1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -324,6 +355,16 @@ public class SecuritiesSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<DateSearchChoice> value) {
+			obj.setIssueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseCcy")
@@ -367,7 +408,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesSearchCriteria1, Optional<ActiveOrHistoricCurrencyCode>> mmIssueCurrency = new MMMessageAttribute<SecuritiesSearchCriteria1, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -380,6 +421,16 @@ public class SecuritiesSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getIssueCurrency();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setIssueCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfIsse")
@@ -424,7 +475,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesSearchCriteria1, Optional<CountryCode>> mmCountryOfIssue = new MMMessageAttribute<SecuritiesSearchCriteria1, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -437,6 +488,16 @@ public class SecuritiesSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getCountryOfIssue();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<CountryCode> value) {
+			obj.setCountryOfIssue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctySts")
@@ -481,7 +542,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesSearchCriteria1, Optional<SecurityStatus2Choice>> mmSecurityStatus = new MMMessageAttribute<SecuritiesSearchCriteria1, Optional<SecurityStatus2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -494,6 +555,16 @@ public class SecuritiesSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityStatus2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityStatus2Choice> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getSecurityStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<SecurityStatus2Choice> value) {
+			obj.setSecurityStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MntngCSD")
@@ -533,7 +604,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMaintainingCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>> mmMaintainingCSD = new MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -546,6 +617,16 @@ public class SecuritiesSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification1Choice> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getMaintainingCSD();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<SystemPartyIdentification1Choice> value) {
+			obj.setMaintainingCSD(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstrCSD")
@@ -585,7 +666,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestorCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>> mmInvestorCSD = new MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -598,6 +679,16 @@ public class SecuritiesSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification1Choice> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getInvestorCSD();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<SystemPartyIdentification1Choice> value) {
+			obj.setInvestorCSD(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrCSD")
@@ -637,7 +728,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>> mmIssuerCSD = new MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -650,6 +741,16 @@ public class SecuritiesSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification1Choice> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getIssuerCSD();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<SystemPartyIdentification1Choice> value) {
+			obj.setIssuerCSD(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TechIssrCSD")
@@ -689,7 +790,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTechnicalIssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>> mmTechnicalIssuerCSD = new MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -702,6 +803,16 @@ public class SecuritiesSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification1Choice> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getTechnicalIssuerCSD();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<SystemPartyIdentification1Choice> value) {
+			obj.setTechnicalIssuerCSD(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CSD")
@@ -741,7 +852,7 @@ public class SecuritiesSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>> mmCSD = new MMMessageAssociationEnd<SecuritiesSearchCriteria1, Optional<SystemPartyIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesSearchCriteria1.mmObject();
 			isDerived = false;
@@ -754,6 +865,16 @@ public class SecuritiesSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification1Choice> getValue(SecuritiesSearchCriteria1 obj) {
+			return obj.getCSD();
+		}
+
+		@Override
+		public void setValue(SecuritiesSearchCriteria1 obj, Optional<SystemPartyIdentification1Choice> value) {
+			obj.setCSD(value.orElse(null));
 		}
 	};
 
@@ -780,7 +901,7 @@ public class SecuritiesSearchCriteria1 {
 		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public SecuritiesSearchCriteria1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public SecuritiesSearchCriteria1 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 		return this;
 	}

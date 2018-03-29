@@ -52,11 +52,15 @@ public class ConstraintTotalReversedInterbankSettlementAmount2Rule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmount2Rule::checkFIToFIPaymentReversalV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmount2Rule";
 			definition = "GroupHeader/TotalReversedInterbankSettlementAmount must equal the sum of all individual TransactionInformation/ReversedInterbankSettlementAmount when present.";
 			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
+			checkFIToFIPaymentReversalV01(obj);
 		}
 	};
 

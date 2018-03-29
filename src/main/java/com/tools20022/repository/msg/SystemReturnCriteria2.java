@@ -105,7 +105,7 @@ public class SystemReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemReturnCriteria2, Optional<RequestedIndicator>> mmSystemIdentificationIndicator = new MMMessageAttribute<SystemReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class SystemReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SystemReturnCriteria2 obj) {
+			return obj.getSystemIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(SystemReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setSystemIdentificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MmbIdInd")
@@ -149,7 +159,7 @@ public class SystemReturnCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemberIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemReturnCriteria2, Optional<RequestedIndicator>> mmMemberIdentificationIndicator = new MMMessageAttribute<SystemReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class SystemReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SystemReturnCriteria2 obj) {
+			return obj.getMemberIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(SystemReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setMemberIdentificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryIdInd")
@@ -193,7 +213,7 @@ public class SystemReturnCriteria2 {
 	 * "Indicates whether the country identification is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemReturnCriteria2, Optional<RequestedIndicator>> mmCountryIdentificationIndicator = new MMMessageAttribute<SystemReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 			isDerived = false;
@@ -204,6 +224,16 @@ public class SystemReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SystemReturnCriteria2 obj) {
+			return obj.getCountryIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(SystemReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setCountryIdentificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctIdInd")
@@ -237,7 +267,7 @@ public class SystemReturnCriteria2 {
 	 * "Indicates whether the account identification is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemReturnCriteria2, Optional<RequestedIndicator>> mmAccountIdentificationIndicator = new MMMessageAttribute<SystemReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemReturnCriteria2.mmObject();
 			isDerived = false;
@@ -248,6 +278,16 @@ public class SystemReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SystemReturnCriteria2 obj) {
+			return obj.getAccountIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(SystemReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setAccountIdentificationIndicator(value.orElse(null));
 		}
 	};
 

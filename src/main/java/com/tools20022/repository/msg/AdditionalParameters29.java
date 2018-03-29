@@ -162,7 +162,7 @@ public class AdditionalParameters29 {
 	 * AdditionalParameters22.mmPreConfirmation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters29, Optional<PreConfirmation1Code>> mmPreConfirmation = new MMMessageAttribute<AdditionalParameters29, Optional<PreConfirmation1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPreConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters29.mmObject();
@@ -176,6 +176,16 @@ public class AdditionalParameters29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PreConfirmation1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PreConfirmation1Code> getValue(AdditionalParameters29 obj) {
+			return obj.getPreConfirmation();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters29 obj, Optional<PreConfirmation1Code> value) {
+			obj.setPreConfirmation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtlSttlm")
@@ -221,7 +231,7 @@ public class AdditionalParameters29 {
 	 * AdditionalParameters22.mmPartialSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters29, Optional<PartialSettlement2Code>> mmPartialSettlement = new MMMessageAttribute<AdditionalParameters29, Optional<PartialSettlement2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPartialSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters29.mmObject();
@@ -235,6 +245,16 @@ public class AdditionalParameters29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartialSettlement2Code.mmObject();
+		}
+
+		@Override
+		public Optional<PartialSettlement2Code> getValue(AdditionalParameters29 obj) {
+			return obj.getPartialSettlement();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters29 obj, Optional<PartialSettlement2Code> value) {
+			obj.setPartialSettlement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsPrtlConfId")
@@ -281,7 +301,7 @@ public class AdditionalParameters29 {
 	 * AdditionalParameters22.mmPreviousPartialConfirmationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousPartialConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>> mmPreviousPartialConfirmationIdentification = new MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters29.mmObject();
@@ -295,6 +315,16 @@ public class AdditionalParameters29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters29 obj) {
+			return obj.getPreviousPartialConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters29 obj, Optional<Max35Text> value) {
+			obj.setPreviousPartialConfirmationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrptyAgtSvcPrvdrCollTxId")
@@ -344,7 +374,7 @@ public class AdditionalParameters29 {
 	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTripartyAgentServiceProviderCollateralTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>> mmTripartyAgentServiceProviderCollateralTransactionIdentification = new MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters29.mmObject();
@@ -358,6 +388,16 @@ public class AdditionalParameters29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters29 obj) {
+			return obj.getTripartyAgentServiceProviderCollateralTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters29 obj, Optional<Max35Text> value) {
+			obj.setTripartyAgentServiceProviderCollateralTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntTrptyCollTxId")
@@ -406,7 +446,7 @@ public class AdditionalParameters29 {
 	 * mmClientTripartyCollateralTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>> mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters29.mmObject();
@@ -420,6 +460,16 @@ public class AdditionalParameters29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters29 obj) {
+			return obj.getClientTripartyCollateralTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters29 obj, Optional<Max35Text> value) {
+			obj.setClientTripartyCollateralTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntCollInstrId")
@@ -463,7 +513,7 @@ public class AdditionalParameters29 {
 	 * AdditionalParameters22.mmClientCollateralInstructionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientCollateralInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>> mmClientCollateralInstructionIdentification = new MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters29.mmObject();
@@ -476,6 +526,16 @@ public class AdditionalParameters29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters29 obj) {
+			return obj.getClientCollateralInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters29 obj, Optional<Max35Text> value) {
+			obj.setClientCollateralInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrptyAgtSvcPrvdrCollInstrId")
@@ -521,7 +581,7 @@ public class AdditionalParameters29 {
 	 * AdditionalParameters22.mmTripartyCollateralInstructionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTripartyAgentServiceProviderCollateralInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>> mmTripartyAgentServiceProviderCollateralInstructionIdentification = new MMMessageAttribute<AdditionalParameters29, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters29.mmObject();
@@ -534,6 +594,16 @@ public class AdditionalParameters29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters29 obj) {
+			return obj.getTripartyAgentServiceProviderCollateralInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters29 obj, Optional<Max35Text> value) {
+			obj.setTripartyAgentServiceProviderCollateralInstructionIdentification(value.orElse(null));
 		}
 	};
 

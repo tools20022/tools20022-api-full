@@ -51,11 +51,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrder3> forRedemptionBulkOrder3 = new MMConstraint<RedemptionBulkOrder3>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkRedemptionBulkOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> RedemptionBulkOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrder3 obj) throws Exception {
+			checkRedemptionBulkOrder3(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<RedemptionBulkExecution3> forRedemptionBulkExecution3 = new MMConstraint<RedemptionBulkExecution3>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkRedemptionBulkExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> RedemptionBulkExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkExecution3 obj) throws Exception {
+			checkRedemptionBulkExecution3(obj);
 		}
 	};
 	/**
@@ -111,11 +119,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrder4> forRedemptionBulkOrder4 = new MMConstraint<RedemptionBulkOrder4>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkRedemptionBulkOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> RedemptionBulkOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrder4 obj) throws Exception {
+			checkRedemptionBulkOrder4(obj);
 		}
 	};
 	/**
@@ -141,11 +153,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrder3> forRedemptionMultipleOrder3 = new MMConstraint<RedemptionMultipleOrder3>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkRedemptionMultipleOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> RedemptionMultipleOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder3 obj) throws Exception {
+			checkRedemptionMultipleOrder3(obj);
 		}
 	};
 	/**
@@ -171,11 +187,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleExecution3> forRedemptionMultipleExecution3 = new MMConstraint<RedemptionMultipleExecution3>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkRedemptionMultipleExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> RedemptionMultipleExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleExecution3 obj) throws Exception {
+			checkRedemptionMultipleExecution3(obj);
 		}
 	};
 	/**
@@ -201,11 +221,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrder4> forRedemptionMultipleOrder4 = new MMConstraint<RedemptionMultipleOrder4>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkRedemptionMultipleOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> RedemptionMultipleOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrder4 obj) throws Exception {
+			checkRedemptionMultipleOrder4(obj);
 		}
 	};
 	/**
@@ -231,11 +255,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrder3> forSubscriptionBulkOrder3 = new MMConstraint<SubscriptionBulkOrder3>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkSubscriptionBulkOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> SubscriptionBulkOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder3 obj) throws Exception {
+			checkSubscriptionBulkOrder3(obj);
 		}
 	};
 	/**
@@ -261,11 +289,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkExecution3> forSubscriptionBulkExecution3 = new MMConstraint<SubscriptionBulkExecution3>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkSubscriptionBulkExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> SubscriptionBulkExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkExecution3 obj) throws Exception {
+			checkSubscriptionBulkExecution3(obj);
 		}
 	};
 	/**
@@ -291,11 +323,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrder4> forSubscriptionBulkOrder4 = new MMConstraint<SubscriptionBulkOrder4>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkSubscriptionBulkOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> SubscriptionBulkOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrder4 obj) throws Exception {
+			checkSubscriptionBulkOrder4(obj);
 		}
 	};
 	/**
@@ -321,11 +357,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder3> forSubscriptionMultipleOrder3 = new MMConstraint<SubscriptionMultipleOrder3>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkSubscriptionMultipleOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> SubscriptionMultipleOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrder3 obj) throws Exception {
+			checkSubscriptionMultipleOrder3(obj);
 		}
 	};
 	/**
@@ -351,11 +391,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleExecution3> forSubscriptionMultipleExecution3 = new MMConstraint<SubscriptionMultipleExecution3>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkSubscriptionMultipleExecution3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualExecutionDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> SubscriptionMultipleExecution3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleExecution3 obj) throws Exception {
+			checkSubscriptionMultipleExecution3(obj);
 		}
 	};
 	/**
@@ -381,11 +425,15 @@ public class ConstraintCashSettlementDateRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrder4> forSubscriptionMultipleOrder4 = new MMConstraint<SubscriptionMultipleOrder4>() {
 		{
-			validator = ConstraintCashSettlementDateRule::checkSubscriptionMultipleOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementDateRule";
 			definition = "Either CashSettlementDate is present or all occurrences of IndividualOrderDetails/CashSettlementDate are present, but not both.";
 			owner_lazy = () -> SubscriptionMultipleOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrder4 obj) throws Exception {
+			checkSubscriptionMultipleOrder4(obj);
 		}
 	};
 

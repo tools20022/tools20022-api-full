@@ -117,7 +117,7 @@ public class PartyIdentification99Choice {
 	 * PartyIdentification8Choice.mmNameAndAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification99Choice, NameAndAddress8> mmNameAndAddress = new MMMessageAssociationEnd<PartyIdentification99Choice, NameAndAddress8>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification99Choice.mmObject();
@@ -131,6 +131,16 @@ public class PartyIdentification99Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NameAndAddress8.mmObject();
+		}
+
+		@Override
+		public NameAndAddress8 getValue(PartyIdentification99Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification99Choice obj, NameAndAddress8 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "AnyBIC", required = true)
@@ -172,7 +182,7 @@ public class PartyIdentification99Choice {
 	 * PartyIdentification8Choice.mmBICOrBEI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAnyBIC = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification99Choice, PartyIdentification44> mmAnyBIC = new MMMessageAssociationEnd<PartyIdentification99Choice, PartyIdentification44>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification99Choice.mmObject();
@@ -186,6 +196,16 @@ public class PartyIdentification99Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification44.mmObject();
+		}
+
+		@Override
+		public PartyIdentification44 getValue(PartyIdentification99Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification99Choice obj, PartyIdentification44 value) {
+			obj.setAnyBIC(value);
 		}
 	};
 

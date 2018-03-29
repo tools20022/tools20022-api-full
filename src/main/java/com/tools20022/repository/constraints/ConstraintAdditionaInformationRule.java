@@ -51,11 +51,15 @@ public class ConstraintAdditionaInformationRule {
 	 */
 	public static final MMConstraint<CancelledStatusReason16> forCancelledStatusReason16 = new MMConstraint<CancelledStatusReason16>() {
 		{
-			validator = ConstraintAdditionaInformationRule::checkCancelledStatusReason16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionaInformationRule";
 			definition = "The AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> CancelledStatusReason16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CancelledStatusReason16 obj) throws Exception {
+			checkCancelledStatusReason16(obj);
 		}
 	};
 

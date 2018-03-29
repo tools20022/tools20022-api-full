@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.CashAccount24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -100,7 +102,7 @@ public class ShortPositionsReportDetails1 {
 	 * definition} = "Identification of participant account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ShortPositionsReportDetails1, BranchAndFinancialInstitutionIdentification5> mmParticipantIdentification = new MMMessageAssociationEnd<ShortPositionsReportDetails1, BranchAndFinancialInstitutionIdentification5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
@@ -111,7 +113,17 @@ public class ShortPositionsReportDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification5 getValue(ShortPositionsReportDetails1 obj) {
+			return obj.getParticipantIdentification();
+		}
+
+		@Override
+		public void setValue(ShortPositionsReportDetails1 obj, BranchAndFinancialInstitutionIdentification5 value) {
+			obj.setParticipantIdentification(value);
 		}
 	};
 	@XmlElement(name = "PtcptAcct", required = true)
@@ -142,7 +154,7 @@ public class ShortPositionsReportDetails1 {
 	 * definition} = "Information about participant account number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ShortPositionsReportDetails1, CashAccount24> mmParticipantAccount = new MMMessageAssociationEnd<ShortPositionsReportDetails1, CashAccount24>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
@@ -153,7 +165,17 @@ public class ShortPositionsReportDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public CashAccount24 getValue(ShortPositionsReportDetails1 obj) {
+			return obj.getParticipantAccount();
+		}
+
+		@Override
+		public void setValue(ShortPositionsReportDetails1 obj, CashAccount24 value) {
+			obj.setParticipantAccount(value);
 		}
 	};
 	@XmlElement(name = "ShrtPosAmt", required = true)
@@ -186,7 +208,7 @@ public class ShortPositionsReportDetails1 {
 	 * definition} = "Information about participant account balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortPositionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ShortPositionsReportDetails1, ActiveCurrencyAndAmount> mmShortPositionAmount = new MMMessageAttribute<ShortPositionsReportDetails1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPositionsReportDetails1.mmObject();
 			isDerived = false;
@@ -197,6 +219,16 @@ public class ShortPositionsReportDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ShortPositionsReportDetails1 obj) {
+			return obj.getShortPositionAmount();
+		}
+
+		@Override
+		public void setValue(ShortPositionsReportDetails1 obj, ActiveCurrencyAndAmount value) {
+			obj.setShortPositionAmount(value);
 		}
 	};
 
@@ -218,7 +250,7 @@ public class ShortPositionsReportDetails1 {
 		return participantIdentification;
 	}
 
-	public ShortPositionsReportDetails1 setParticipantIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 participantIdentification) {
+	public ShortPositionsReportDetails1 setParticipantIdentification(BranchAndFinancialInstitutionIdentification5 participantIdentification) {
 		this.participantIdentification = Objects.requireNonNull(participantIdentification);
 		return this;
 	}
@@ -227,7 +259,7 @@ public class ShortPositionsReportDetails1 {
 		return participantAccount;
 	}
 
-	public ShortPositionsReportDetails1 setParticipantAccount(com.tools20022.repository.msg.CashAccount24 participantAccount) {
+	public ShortPositionsReportDetails1 setParticipantAccount(CashAccount24 participantAccount) {
 		this.participantAccount = Objects.requireNonNull(participantAccount);
 		return this;
 	}

@@ -56,12 +56,16 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<AccountNotification4> forAccountNotification4 = new MMConstraint<AccountNotification4>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkAccountNotification4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of Item/Amount must have the same currency as the currency of TotalAmount.";
 			owner_lazy = () -> AccountNotification4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/Item[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountNotification4 obj) throws Exception {
+			checkAccountNotification4(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<OriginalNotificationReference1> forOriginalNotificationReference1 = new MMConstraint<OriginalNotificationReference1>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkOriginalNotificationReference1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of OriginalItem/Amount must have the same currency as the currency of TotalAmount.";
 			owner_lazy = () -> OriginalNotificationReference1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalItem[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalNotificationReference1 obj) throws Exception {
+			checkOriginalNotificationReference1(obj);
 		}
 	};
 	/**
@@ -126,12 +134,16 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<OriginalNotificationReference2> forOriginalNotificationReference2 = new MMConstraint<OriginalNotificationReference2>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkOriginalNotificationReference2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of OriginalItem/Amount must have the same currency as the currency of TotalAmount.";
 			owner_lazy = () -> OriginalNotificationReference2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalItemAndStatus[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalNotificationReference2 obj) throws Exception {
+			checkOriginalNotificationReference2(obj);
 		}
 	};
 	/**
@@ -169,13 +181,17 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<AccountNotification6> forAccountNotification6 = new MMConstraint<AccountNotification6>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkAccountNotification6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of Item/Amount must have the same currency as the currency of TotalAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forAccountNotification10);
 			owner_lazy = () -> AccountNotification6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/Item[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountNotification6 obj) throws Exception {
+			checkAccountNotification6(obj);
 		}
 	};
 	/**
@@ -213,13 +229,17 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<OriginalNotificationReference4> forOriginalNotificationReference4 = new MMConstraint<OriginalNotificationReference4>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkOriginalNotificationReference4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of OriginalItem/Amount must have the same currency as the currency of TotalAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forOriginalNotificationReference6);
 			owner_lazy = () -> OriginalNotificationReference4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalItem[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalNotificationReference4 obj) throws Exception {
+			checkOriginalNotificationReference4(obj);
 		}
 	};
 	/**
@@ -257,13 +277,17 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<OriginalNotificationReference3> forOriginalNotificationReference3 = new MMConstraint<OriginalNotificationReference3>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkOriginalNotificationReference3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of OriginalItem/Amount must have the same currency as the currency of TotalAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forOriginalNotificationReference5);
 			owner_lazy = () -> OriginalNotificationReference3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalItemAndStatus[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalNotificationReference3 obj) throws Exception {
+			checkOriginalNotificationReference3(obj);
 		}
 	};
 	/**
@@ -306,7 +330,6 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<AccountNotification10> forAccountNotification10 = new MMConstraint<AccountNotification10>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkAccountNotification10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of Item/Amount must have the same currency as the currency of TotalAmount.";
@@ -314,6 +337,11 @@ public class ConstraintTotalAmountAndAmount1Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forAccountNotification6;
 			owner_lazy = () -> AccountNotification10.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/Item[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountNotification10 obj) throws Exception {
+			checkAccountNotification10(obj);
 		}
 	};
 	/**
@@ -356,7 +384,6 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<OriginalNotificationReference6> forOriginalNotificationReference6 = new MMConstraint<OriginalNotificationReference6>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkOriginalNotificationReference6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of OriginalItem/Amount must have the same currency as the currency of TotalAmount.";
@@ -364,6 +391,11 @@ public class ConstraintTotalAmountAndAmount1Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forOriginalNotificationReference4;
 			owner_lazy = () -> OriginalNotificationReference6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalItem[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalNotificationReference6 obj) throws Exception {
+			checkOriginalNotificationReference6(obj);
 		}
 	};
 	/**
@@ -406,7 +438,6 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<OriginalNotificationReference5> forOriginalNotificationReference5 = new MMConstraint<OriginalNotificationReference5>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkOriginalNotificationReference5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of OriginalItem/Amount must have the same currency as the currency of TotalAmount.";
@@ -414,6 +445,11 @@ public class ConstraintTotalAmountAndAmount1Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forOriginalNotificationReference3;
 			owner_lazy = () -> OriginalNotificationReference5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalItemAndStatus[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalNotificationReference5 obj) throws Exception {
+			checkOriginalNotificationReference5(obj);
 		}
 	};
 	/**
@@ -448,13 +484,17 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<AccountNotification13> forAccountNotification13 = new MMConstraint<AccountNotification13>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkAccountNotification13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of Item/Amount must have the same currency as the currency of TotalAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forAccountNotification10;
 			owner_lazy = () -> AccountNotification13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/Item[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountNotification13 obj) throws Exception {
+			checkAccountNotification13(obj);
 		}
 	};
 	/**
@@ -489,13 +529,17 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<OriginalNotificationReference8> forOriginalNotificationReference8 = new MMConstraint<OriginalNotificationReference8>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkOriginalNotificationReference8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of OriginalItem/Amount must have the same currency as the currency of TotalAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forOriginalNotificationReference6;
 			owner_lazy = () -> OriginalNotificationReference8.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalItem[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalNotificationReference8 obj) throws Exception {
+			checkOriginalNotificationReference8(obj);
 		}
 	};
 	/**
@@ -530,13 +574,17 @@ public class ConstraintTotalAmountAndAmount1Rule {
 	 */
 	public static final MMConstraint<OriginalNotificationReference7> forOriginalNotificationReference7 = new MMConstraint<OriginalNotificationReference7>() {
 		{
-			validator = ConstraintTotalAmountAndAmount1Rule::checkOriginalNotificationReference7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountAndAmount1Rule";
 			definition = "If TotalAmount is present, then all occurrences of OriginalItem/Amount must have the same currency as the currency of TotalAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalAmountAndAmount1Rule.forOriginalNotificationReference5;
 			owner_lazy = () -> OriginalNotificationReference7.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/OriginalItemAndStatus[*]/Amount/@Currency</leftOperand><rightOperand>/TotalAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OriginalNotificationReference7 obj) throws Exception {
+			checkOriginalNotificationReference7(obj);
 		}
 	};
 

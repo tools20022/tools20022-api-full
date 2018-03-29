@@ -110,7 +110,7 @@ public class AuditTrailOrBusinessError2Choice {
 	 * AuditTrailOrBusinessError1Choice.mmAuditTrail}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuditTrail = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuditTrailOrBusinessError2Choice, List<AuditTrail1>> mmAuditTrail = new MMMessageAssociationEnd<AuditTrailOrBusinessError2Choice, List<AuditTrail1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AuditTrailOrBusinessError2Choice.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class AuditTrailOrBusinessError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AuditTrail1.mmObject();
+		}
+
+		@Override
+		public List<AuditTrail1> getValue(AuditTrailOrBusinessError2Choice obj) {
+			return obj.getAuditTrail();
+		}
+
+		@Override
+		public void setValue(AuditTrailOrBusinessError2Choice obj, List<AuditTrail1> value) {
+			obj.setAuditTrail(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -157,7 +167,7 @@ public class AuditTrailOrBusinessError2Choice {
 	 * AuditTrailOrBusinessError1Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuditTrailOrBusinessError2Choice, List<ErrorHandling4>> mmBusinessError = new MMMessageAssociationEnd<AuditTrailOrBusinessError2Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AuditTrailOrBusinessError2Choice.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class AuditTrailOrBusinessError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(AuditTrailOrBusinessError2Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(AuditTrailOrBusinessError2Choice obj, List<ErrorHandling4> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

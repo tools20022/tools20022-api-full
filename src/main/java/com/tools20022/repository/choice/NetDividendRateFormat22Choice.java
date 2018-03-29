@@ -133,7 +133,7 @@ public class NetDividendRateFormat22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateFormat22Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<NetDividendRateFormat22Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat22Choice.mmObject();
@@ -146,6 +146,16 @@ public class NetDividendRateFormat22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(NetDividendRateFormat22Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat22Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtAndRateSts", required = true)
@@ -189,7 +199,7 @@ public class NetDividendRateFormat22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetDividendRateFormat22Choice, AmountAndRateStatus1> mmAmountAndRateStatus = new MMMessageAssociationEnd<NetDividendRateFormat22Choice, AmountAndRateStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat22Choice.mmObject();
@@ -203,6 +213,16 @@ public class NetDividendRateFormat22Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndRateStatus1.mmObject();
+		}
+
+		@Override
+		public AmountAndRateStatus1 getValue(NetDividendRateFormat22Choice obj) {
+			return obj.getAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat22Choice obj, AmountAndRateStatus1 value) {
+			obj.setAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -245,7 +265,7 @@ public class NetDividendRateFormat22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetDividendRateFormat22Choice, RateTypeAndAmountAndStatus29> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<NetDividendRateFormat22Choice, RateTypeAndAmountAndStatus29>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat22Choice.mmObject();
 			isDerived = false;
@@ -259,6 +279,16 @@ public class NetDividendRateFormat22Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus29.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus29 getValue(NetDividendRateFormat22Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat22Choice obj, RateTypeAndAmountAndStatus29 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -302,7 +332,7 @@ public class NetDividendRateFormat22Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateFormat22Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<NetDividendRateFormat22Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateFormat22Choice.mmObject();
 			isDerived = false;
@@ -315,6 +345,16 @@ public class NetDividendRateFormat22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(NetDividendRateFormat22Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(NetDividendRateFormat22Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

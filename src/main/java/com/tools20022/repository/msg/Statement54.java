@@ -126,7 +126,7 @@ public class Statement54 {
 	 * definition} = "Date or period of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementDateOrPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement54, Optional<DateAndPeriod1Choice>> mmStatementDateOrPeriod = new MMMessageAssociationEnd<Statement54, Optional<DateAndPeriod1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement54.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class Statement54 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndPeriod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndPeriod1Choice> getValue(Statement54 obj) {
+			return obj.getStatementDateOrPeriod();
+		}
+
+		@Override
+		public void setValue(Statement54 obj, Optional<DateAndPeriod1Choice> value) {
+			obj.setStatementDateOrPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -173,7 +183,7 @@ public class Statement54 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement54, Optional<Frequency26Choice>> mmFrequency = new MMMessageAttribute<Statement54, Optional<Frequency26Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement54.mmObject();
 			isDerived = false;
@@ -185,6 +195,16 @@ public class Statement54 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Frequency26Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency26Choice> getValue(Statement54 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Statement54 obj, Optional<Frequency26Choice> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdTp")
@@ -218,7 +238,7 @@ public class Statement54 {
 	 * "Indicates whether the statement is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement54, Optional<UpdateType16Choice>> mmUpdateType = new MMMessageAssociationEnd<Statement54, Optional<UpdateType16Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement54.mmObject();
 			isDerived = false;
@@ -231,6 +251,16 @@ public class Statement54 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> UpdateType16Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UpdateType16Choice> getValue(Statement54 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Statement54 obj, Optional<UpdateType16Choice> value) {
+			obj.setUpdateType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtBsis")
@@ -265,7 +295,7 @@ public class Statement54 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement54, Optional<StatementBasis9Choice>> mmStatementBasis = new MMMessageAttribute<Statement54, Optional<StatementBasis9Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement54.mmObject();
 			isDerived = false;
@@ -277,6 +307,16 @@ public class Statement54 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementBasis9Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementBasis9Choice> getValue(Statement54 obj) {
+			return obj.getStatementBasis();
+		}
+
+		@Override
+		public void setValue(Statement54 obj, Optional<StatementBasis9Choice> value) {
+			obj.setStatementBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtTp")
@@ -311,7 +351,7 @@ public class Statement54 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement54, Optional<StatementType6Choice>> mmStatementType = new MMMessageAttribute<Statement54, Optional<StatementType6Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement54.mmObject();
 			isDerived = false;
@@ -323,6 +363,16 @@ public class Statement54 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementType6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementType6Choice> getValue(Statement54 obj) {
+			return obj.getStatementType();
+		}
+
+		@Override
+		public void setValue(Statement54 obj, Optional<StatementType6Choice> value) {
+			obj.setStatementType(value.orElse(null));
 		}
 	};
 

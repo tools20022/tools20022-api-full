@@ -103,7 +103,7 @@ public class GeneralInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation3, Max35Text> mmMessageIdentification = new MMMessageAttribute<GeneralInformation3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation3.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class GeneralInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GeneralInformation3 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(GeneralInformation3 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgFctn", required = true)
@@ -147,7 +157,7 @@ public class GeneralInformation3 {
 	 * "Indicates whether the message is sent as a request or as a response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation3, MessageFunction2Code> mmMessageFunction = new MMMessageAttribute<GeneralInformation3, MessageFunction2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation3.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class GeneralInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction2Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction2Code getValue(GeneralInformation3 obj) {
+			return obj.getMessageFunction();
+		}
+
+		@Override
+		public void setValue(GeneralInformation3 obj, MessageFunction2Code value) {
+			obj.setMessageFunction(value);
 		}
 	};
 	@XmlElement(name = "ReqRef")
@@ -190,7 +210,7 @@ public class GeneralInformation3 {
 	 * "Reference to the request message for which the notification is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralInformation3, Optional<Max35Text>> mmRequestReference = new MMMessageAttribute<GeneralInformation3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation3.mmObject();
 			isDerived = false;
@@ -201,6 +221,16 @@ public class GeneralInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GeneralInformation3 obj) {
+			return obj.getRequestReference();
+		}
+
+		@Override
+		public void setValue(GeneralInformation3 obj, Optional<Max35Text> value) {
+			obj.setRequestReference(value.orElse(null));
 		}
 	};
 

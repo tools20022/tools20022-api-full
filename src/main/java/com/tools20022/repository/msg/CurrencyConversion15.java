@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyConversion14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -61,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CurrencyConversion15"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -116,7 +117,7 @@ public class CurrencyConversion15 {
 	 * CurrencyConversion13.mmAcceptedByCardholder}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptedByCardholder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion15, Optional<TrueFalseIndicator>> mmAcceptedByCardholder = new MMMessageAttribute<CurrencyConversion15, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion15.mmObject();
 			isDerived = false;
@@ -128,6 +129,16 @@ public class CurrencyConversion15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(CurrencyConversion15 obj) {
+			return obj.getAcceptedByCardholder();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion15 obj, Optional<TrueFalseIndicator> value) {
+			obj.setAcceptedByCardholder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Convs")
@@ -165,7 +176,7 @@ public class CurrencyConversion15 {
 	 * CurrencyConversion13.mmConversion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConversion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyConversion15, Optional<CurrencyConversion14>> mmConversion = new MMMessageAssociationEnd<CurrencyConversion15, Optional<CurrencyConversion14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion15.mmObject();
 			isDerived = false;
@@ -177,7 +188,17 @@ public class CurrencyConversion15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion14.mmObject();
+			type_lazy = () -> CurrencyConversion14.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyConversion14> getValue(CurrencyConversion15 obj) {
+			return obj.getConversion();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion15 obj, Optional<CurrencyConversion14> value) {
+			obj.setConversion(value.orElse(null));
 		}
 	};
 
@@ -187,7 +208,7 @@ public class CurrencyConversion15 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyConversion15.mmAcceptedByCardholder, com.tools20022.repository.msg.CurrencyConversion15.mmConversion);
 				trace_lazy = () -> CurrencyExchange.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion15";
 				definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider.";
 				previousVersion_lazy = () -> CurrencyConversion13.mmObject();
@@ -209,7 +230,7 @@ public class CurrencyConversion15 {
 		return conversion == null ? Optional.empty() : Optional.of(conversion);
 	}
 
-	public CurrencyConversion15 setConversion(com.tools20022.repository.msg.CurrencyConversion14 conversion) {
+	public CurrencyConversion15 setConversion(CurrencyConversion14 conversion) {
 		this.conversion = conversion;
 		return this;
 	}

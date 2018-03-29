@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification32;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -112,7 +113,7 @@ public class ReversalReasonInformation6 {
 	 * definition} = "Party that issues the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReversalReasonInformation6, Optional<PartyIdentification32>> mmOriginator = new MMMessageAssociationEnd<ReversalReasonInformation6, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation6.mmObject();
@@ -124,7 +125,17 @@ public class ReversalReasonInformation6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(ReversalReasonInformation6 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation6 obj, Optional<PartyIdentification32> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -160,7 +171,7 @@ public class ReversalReasonInformation6 {
 	 * definition} = "Specifies the reason for the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReversalReasonInformation6, Optional<ReversalReason4Choice>> mmReason = new MMMessageAssociationEnd<ReversalReasonInformation6, Optional<ReversalReason4Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation6.mmObject();
@@ -173,6 +184,16 @@ public class ReversalReasonInformation6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReversalReason4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReversalReason4Choice> getValue(ReversalReasonInformation6 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation6 obj, Optional<ReversalReason4Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -204,7 +225,7 @@ public class ReversalReasonInformation6 {
 	 * definition} = "Further details on the reversal reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReversalReasonInformation6, List<Max105Text>> mmAdditionalInformation = new MMMessageAttribute<ReversalReasonInformation6, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation6.mmObject();
 			isDerived = false;
@@ -214,6 +235,16 @@ public class ReversalReasonInformation6 {
 			definition = "Further details on the reversal reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(ReversalReasonInformation6 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation6 obj, List<Max105Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -236,7 +267,7 @@ public class ReversalReasonInformation6 {
 		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public ReversalReasonInformation6 setOriginator(com.tools20022.repository.msg.PartyIdentification32 originator) {
+	public ReversalReasonInformation6 setOriginator(PartyIdentification32 originator) {
 		this.originator = originator;
 		return this;
 	}

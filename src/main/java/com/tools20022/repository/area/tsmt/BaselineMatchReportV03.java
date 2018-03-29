@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -162,7 +161,7 @@ public class BaselineMatchReportV03 {
 	 * definition} = "Identifies the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, MessageIdentification1> mmReportIdentification = new MMMessageBuildingBlock<BaselineMatchReportV03, MessageIdentification1>() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,12 +172,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(BaselineMatchReportV03 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, MessageIdentification1 value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -208,7 +209,7 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<BaselineMatchReportV03, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,12 +220,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(BaselineMatchReportV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId")
@@ -254,7 +257,7 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, Optional<DocumentIdentification3>> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<BaselineMatchReportV03, Optional<DocumentIdentification3>>() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,12 +268,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification3> getValue(BaselineMatchReportV03 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, Optional<DocumentIdentification3> value) {
+			obj.setEstablishedBaselineIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -299,7 +304,7 @@ public class BaselineMatchReportV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, TransactionStatus4> mmTransactionStatus = new MMMessageBuildingBlock<BaselineMatchReportV03, TransactionStatus4>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,12 +315,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus4 getValue(BaselineMatchReportV03 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, TransactionStatus4 value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
@@ -345,7 +352,7 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<BaselineMatchReportV03, List<DocumentIdentification5>>() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -356,12 +363,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getUserTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification5> getValue(BaselineMatchReportV03 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, List<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -390,7 +399,7 @@ public class BaselineMatchReportV03 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, PartyIdentification26> mmBuyer = new MMMessageBuildingBlock<BaselineMatchReportV03, PartyIdentification26>() {
 		{
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,12 +410,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getBuyer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification26 getValue(BaselineMatchReportV03 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, PartyIdentification26 value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "Sellr", required = true)
@@ -435,7 +446,7 @@ public class BaselineMatchReportV03 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSeller = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, PartyIdentification26> mmSeller = new MMMessageBuildingBlock<BaselineMatchReportV03, PartyIdentification26>() {
 		{
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,12 +457,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getSeller", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification26 getValue(BaselineMatchReportV03 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, PartyIdentification26 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "BuyrBk", required = true)
@@ -481,7 +494,7 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, BICIdentification1> mmBuyerBank = new MMMessageBuildingBlock<BaselineMatchReportV03, BICIdentification1>() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -492,12 +505,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getBuyerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(BaselineMatchReportV03 obj) {
+			return obj.getBuyerBank();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, BICIdentification1 value) {
+			obj.setBuyerBank(value);
 		}
 	};
 	@XmlElement(name = "SellrBk", required = true)
@@ -527,7 +542,7 @@ public class BaselineMatchReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, BICIdentification1> mmSellerBank = new MMMessageBuildingBlock<BaselineMatchReportV03, BICIdentification1>() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -538,12 +553,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getSellerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(BaselineMatchReportV03 obj) {
+			return obj.getSellerBank();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, BICIdentification1 value) {
+			obj.setSellerBank(value);
 		}
 	};
 	@XmlElement(name = "BaselnEstblishmtTrils", required = true)
@@ -569,7 +586,7 @@ public class BaselineMatchReportV03 {
 	 * definition} = "Specifies the number of matching trials for a baseline."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBaselineEstablishmentTrials = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, Limit1> mmBaselineEstablishmentTrials = new MMMessageBuildingBlock<BaselineMatchReportV03, Limit1>() {
 		{
 			xmlTag = "BaselnEstblishmtTrils";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -580,12 +597,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> Limit1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getBaselineEstablishmentTrials", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Limit1 getValue(BaselineMatchReportV03 obj) {
+			return obj.getBaselineEstablishmentTrials();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, Limit1 value) {
+			obj.setBaselineEstablishmentTrials(value);
 		}
 	};
 	@XmlElement(name = "CmpardDocRef", required = true)
@@ -613,7 +632,7 @@ public class BaselineMatchReportV03 {
 	 * definition} = "Identifies the two baselines compared in this report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmComparedDocumentReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, List<DocumentIdentification4>> mmComparedDocumentReference = new MMMessageBuildingBlock<BaselineMatchReportV03, List<DocumentIdentification4>>() {
 		{
 			xmlTag = "CmpardDocRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -624,12 +643,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> DocumentIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getComparedDocumentReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification4> getValue(BaselineMatchReportV03 obj) {
+			return obj.getComparedDocumentReference();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, List<DocumentIdentification4> value) {
+			obj.setComparedDocumentReference(value);
 		}
 	};
 	@XmlElement(name = "Rpt", required = true)
@@ -657,7 +678,7 @@ public class BaselineMatchReportV03 {
 	 * "Description of the differences between the two proposed baselines."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, MisMatchReport3> mmReport = new MMMessageBuildingBlock<BaselineMatchReportV03, MisMatchReport3>() {
 		{
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -668,12 +689,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> MisMatchReport3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MisMatchReport3 getValue(BaselineMatchReportV03 obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, MisMatchReport3 value) {
+			obj.setReport(value);
 		}
 	};
 	@XmlElement(name = "ReqForActn")
@@ -701,7 +724,7 @@ public class BaselineMatchReportV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BaselineMatchReportV03, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<BaselineMatchReportV03, Optional<PendingActivity2>>() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -712,12 +735,14 @@ public class BaselineMatchReportV03 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BaselineMatchReportV03.class.getMethod("getRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PendingActivity2> getValue(BaselineMatchReportV03 obj) {
+			return obj.getRequestForAction();
+		}
+
+		@Override
+		public void setValue(BaselineMatchReportV03 obj, Optional<PendingActivity2> value) {
+			obj.setRequestForAction(value.orElse(null));
 		}
 	};
 

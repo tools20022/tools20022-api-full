@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +116,7 @@ public class FinancialInstrumentAttributesSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD9, Max350Text> mmPlaceAndName = new MMMessageAttribute<FinancialInstrumentAttributesSD9, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.mmObject();
 			isDerived = false;
@@ -127,6 +128,16 @@ public class FinancialInstrumentAttributesSD9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(FinancialInstrumentAttributesSD9 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD9 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "OrgtgSctyId")
@@ -167,7 +178,7 @@ public class FinancialInstrumentAttributesSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginatingSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributesSD9, Optional<OtherIdentification2>> mmOriginatingSecurityIdentification = new MMMessageAssociationEnd<FinancialInstrumentAttributesSD9, Optional<OtherIdentification2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.mmObject();
 			isDerived = false;
@@ -179,7 +190,17 @@ public class FinancialInstrumentAttributesSD9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification2.mmObject();
+			type_lazy = () -> OtherIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<OtherIdentification2> getValue(FinancialInstrumentAttributesSD9 obj) {
+			return obj.getOriginatingSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD9 obj, Optional<OtherIdentification2> value) {
+			obj.setOriginatingSecurityIdentification(value.orElse(null));
 		}
 	};
 
@@ -210,7 +231,7 @@ public class FinancialInstrumentAttributesSD9 {
 		return originatingSecurityIdentification == null ? Optional.empty() : Optional.of(originatingSecurityIdentification);
 	}
 
-	public FinancialInstrumentAttributesSD9 setOriginatingSecurityIdentification(com.tools20022.repository.msg.OtherIdentification2 originatingSecurityIdentification) {
+	public FinancialInstrumentAttributesSD9 setOriginatingSecurityIdentification(OtherIdentification2 originatingSecurityIdentification) {
 		this.originatingSecurityIdentification = originatingSecurityIdentification;
 		return this;
 	}

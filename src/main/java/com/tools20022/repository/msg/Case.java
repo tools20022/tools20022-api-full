@@ -152,7 +152,7 @@ public class Case {
 	 * definition} = "Unique id assigned by the case creator."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Case, Max35Text> mmIdentification = new MMMessageAttribute<Case, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCase.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
@@ -164,6 +164,16 @@ public class Case {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Case obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Case obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Cretr", required = true)
@@ -199,7 +209,7 @@ public class Case {
 	 * definition} = "Party that created the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Case, AnyBICIdentifier> mmCreator = new MMMessageAttribute<Case, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
@@ -211,6 +221,16 @@ public class Case {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(Case obj) {
+			return obj.getCreator();
+		}
+
+		@Override
+		public void setValue(Case obj, AnyBICIdentifier value) {
+			obj.setCreator(value);
 		}
 	};
 	@XmlElement(name = "ReopCaseIndctn")
@@ -242,7 +262,7 @@ public class Case {
 	 * "Set to yes if the case was closed and needs to be re-opened."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReopenCaseIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Case, Optional<YesNoIndicator>> mmReopenCaseIndication = new MMMessageAttribute<Case, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Case.mmObject();
 			isDerived = false;
@@ -253,6 +273,16 @@ public class Case {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Case obj) {
+			return obj.getReopenCaseIndication();
+		}
+
+		@Override
+		public void setValue(Case obj, Optional<YesNoIndicator> value) {
+			obj.setReopenCaseIndication(value.orElse(null));
 		}
 	};
 

@@ -102,7 +102,7 @@ public class AdvisingPartyAdditionalInformation1 {
 	 * "Unique and unambiguous identifier assigned as a reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdvisingPartyAdditionalInformation1, Optional<Max35Text>> mmReferenceNumber = new MMMessageAttribute<AdvisingPartyAdditionalInformation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class AdvisingPartyAdditionalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdvisingPartyAdditionalInformation1 obj) {
+			return obj.getReferenceNumber();
+		}
+
+		@Override
+		public void setValue(AdvisingPartyAdditionalInformation1 obj, Optional<Max35Text> value) {
+			obj.setReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BkToBnfcryInf")
@@ -146,7 +156,7 @@ public class AdvisingPartyAdditionalInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankToBeneficiaryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdvisingPartyAdditionalInformation1, List<Max2000Text>> mmBankToBeneficiaryInformation = new MMMessageAttribute<AdvisingPartyAdditionalInformation1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdvisingPartyAdditionalInformation1.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class AdvisingPartyAdditionalInformation1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(AdvisingPartyAdditionalInformation1 obj) {
+			return obj.getBankToBeneficiaryInformation();
+		}
+
+		@Override
+		public void setValue(AdvisingPartyAdditionalInformation1 obj, List<Max2000Text> value) {
+			obj.setBankToBeneficiaryInformation(value);
 		}
 	};
 

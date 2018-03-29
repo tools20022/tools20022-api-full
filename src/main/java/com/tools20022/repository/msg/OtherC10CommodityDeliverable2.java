@@ -111,7 +111,7 @@ public class OtherC10CommodityDeliverable2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherC10CommodityDeliverable2, AssetClassProductType11Code> mmBaseProduct = new MMMessageAttribute<OtherC10CommodityDeliverable2, AssetClassProductType11Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherC10CommodityDeliverable2.mmObject();
@@ -123,6 +123,16 @@ public class OtherC10CommodityDeliverable2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType11Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType11Code getValue(OtherC10CommodityDeliverable2 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(OtherC10CommodityDeliverable2 obj, AssetClassProductType11Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct")
@@ -160,7 +170,7 @@ public class OtherC10CommodityDeliverable2 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherC10CommodityDeliverable2, Optional<AssetClassSubProductType47Code>> mmSubProduct = new MMMessageAttribute<OtherC10CommodityDeliverable2, Optional<AssetClassSubProductType47Code>>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherC10CommodityDeliverable2.mmObject();
@@ -172,6 +182,16 @@ public class OtherC10CommodityDeliverable2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassSubProductType47Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClassSubProductType47Code> getValue(OtherC10CommodityDeliverable2 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(OtherC10CommodityDeliverable2 obj, Optional<AssetClassSubProductType47Code> value) {
+			obj.setSubProduct(value.orElse(null));
 		}
 	};
 

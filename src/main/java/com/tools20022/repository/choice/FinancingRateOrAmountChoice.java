@@ -111,7 +111,7 @@ public class FinancingRateOrAmountChoice {
 	 * definition} = "Amount expressed as an absolute value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingRateOrAmountChoice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<FinancingRateOrAmountChoice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmRequestedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancingRateOrAmountChoice.mmObject();
@@ -123,6 +123,16 @@ public class FinancingRateOrAmountChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(FinancingRateOrAmountChoice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(FinancingRateOrAmountChoice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -160,7 +170,7 @@ public class FinancingRateOrAmountChoice {
 	 * definition} = "Amount expressed as a percentage rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingRateOrAmountChoice, PercentageRate> mmRate = new MMMessageAttribute<FinancingRateOrAmountChoice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmRequestedPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancingRateOrAmountChoice.mmObject();
@@ -172,6 +182,16 @@ public class FinancingRateOrAmountChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(FinancingRateOrAmountChoice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(FinancingRateOrAmountChoice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 

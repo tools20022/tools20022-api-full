@@ -130,7 +130,7 @@ public class SectorAndLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SectorAndLocation1, SNA2008SectorIdentifier> mmSector = new MMMessageAttribute<SectorAndLocation1, SNA2008SectorIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SectorAndLocation1.mmObject();
@@ -143,6 +143,16 @@ public class SectorAndLocation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
+		}
+
+		@Override
+		public SNA2008SectorIdentifier getValue(SectorAndLocation1 obj) {
+			return obj.getSector();
+		}
+
+		@Override
+		public void setValue(SectorAndLocation1 obj, SNA2008SectorIdentifier value) {
+			obj.setSector(value);
 		}
 	};
 	@XmlElement(name = "Lctn", required = true)
@@ -188,7 +198,7 @@ public class SectorAndLocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SectorAndLocation1, CountryCode> mmLocation = new MMMessageAttribute<SectorAndLocation1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SectorAndLocation1.mmObject();
@@ -201,6 +211,16 @@ public class SectorAndLocation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(SectorAndLocation1 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(SectorAndLocation1 obj, CountryCode value) {
+			obj.setLocation(value);
 		}
 	};
 

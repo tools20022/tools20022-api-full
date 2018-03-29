@@ -138,7 +138,7 @@ public class CollateralMovement7 {
 	 * CollateralMovement5.mmAgreedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralMovement7, ActiveCurrencyAndAmount> mmAgreedAmount = new MMMessageAttribute<CollateralMovement7, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement7.mmObject();
@@ -152,6 +152,16 @@ public class CollateralMovement7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralMovement7 obj) {
+			return obj.getAgreedAmount();
+		}
+
+		@Override
+		public void setValue(CollateralMovement7 obj, ActiveCurrencyAndAmount value) {
+			obj.setAgreedAmount(value);
 		}
 	};
 	@XmlElement(name = "MvmntDrctn")
@@ -203,7 +213,7 @@ public class CollateralMovement7 {
 	 * CollateralMovement5.mmMovementDirection}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovementDirection = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement7, List<CollateralMovement4Choice>> mmMovementDirection = new MMMessageAssociationEnd<CollateralMovement7, List<CollateralMovement4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement7.mmObject();
@@ -217,6 +227,16 @@ public class CollateralMovement7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CollateralMovement4Choice.mmObject();
+		}
+
+		@Override
+		public List<CollateralMovement4Choice> getValue(CollateralMovement7 obj) {
+			return obj.getMovementDirection();
+		}
+
+		@Override
+		public void setValue(CollateralMovement7 obj, List<CollateralMovement4Choice> value) {
+			obj.setMovementDirection(value);
 		}
 	};
 

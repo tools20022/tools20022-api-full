@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportingRecordStatus1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericValidationRuleIdentification1;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -107,7 +109,7 @@ public class StatusReportRecord3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReportRecord3, Max140Text> mmOriginalRecordIdentification = new MMMessageAttribute<StatusReportRecord3, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 			isDerived = false;
@@ -118,6 +120,16 @@ public class StatusReportRecord3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(StatusReportRecord3 obj) {
+			return obj.getOriginalRecordIdentification();
+		}
+
+		@Override
+		public void setValue(StatusReportRecord3 obj, Max140Text value) {
+			obj.setOriginalRecordIdentification(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -150,7 +162,7 @@ public class StatusReportRecord3 {
 	 * definition} = "Defines status of the reported transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReportRecord3, ReportingRecordStatus1Code> mmStatus = new MMMessageAttribute<StatusReportRecord3, ReportingRecordStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 			isDerived = false;
@@ -162,9 +174,19 @@ public class StatusReportRecord3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
+
+		@Override
+		public ReportingRecordStatus1Code getValue(StatusReportRecord3 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(StatusReportRecord3 obj, ReportingRecordStatus1Code value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "VldtnRule")
-	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
+	protected List<GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * 
 	 <p>
@@ -193,7 +215,7 @@ public class StatusReportRecord3 {
 	 * "Provides the details of the rule which could not be validated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReportRecord3, List<GenericValidationRuleIdentification1>> mmValidationRule = new MMMessageAssociationEnd<StatusReportRecord3, List<GenericValidationRuleIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 			isDerived = false;
@@ -203,11 +225,21 @@ public class StatusReportRecord3 {
 			definition = "Provides the details of the rule which could not be validated.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
+			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericValidationRuleIdentification1> getValue(StatusReportRecord3 obj) {
+			return obj.getValidationRule();
+		}
+
+		@Override
+		public void setValue(StatusReportRecord3 obj, List<GenericValidationRuleIdentification1> value) {
+			obj.setValidationRule(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -236,7 +268,7 @@ public class StatusReportRecord3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReportRecord3, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<StatusReportRecord3, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 			isDerived = false;
@@ -246,7 +278,17 @@ public class StatusReportRecord3 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(StatusReportRecord3 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(StatusReportRecord3 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -286,7 +328,7 @@ public class StatusReportRecord3 {
 		return validationRule == null ? validationRule = new ArrayList<>() : validationRule;
 	}
 
-	public StatusReportRecord3 setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+	public StatusReportRecord3 setValidationRule(List<GenericValidationRuleIdentification1> validationRule) {
 		this.validationRule = Objects.requireNonNull(validationRule);
 		return this;
 	}
@@ -295,7 +337,7 @@ public class StatusReportRecord3 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public StatusReportRecord3 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public StatusReportRecord3 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

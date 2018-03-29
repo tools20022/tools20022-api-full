@@ -118,7 +118,7 @@ public class OtherIdentification3Choice {
 	 * OtherIdentification2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification3Choice, PartyIdentificationType7Code> mmCode = new MMMessageAttribute<OtherIdentification3Choice, PartyIdentificationType7Code>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.OtherIdentification3Choice.mmObject();
@@ -131,6 +131,16 @@ public class OtherIdentification3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartyIdentificationType7Code.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationType7Code getValue(OtherIdentification3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OtherIdentification3Choice obj, PartyIdentificationType7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class OtherIdentification3Choice {
 	 * OtherIdentification2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherIdentification3Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<OtherIdentification3Choice, GenericIdentification47>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.OtherIdentification3Choice.mmObject();
@@ -186,6 +196,16 @@ public class OtherIdentification3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(OtherIdentification3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OtherIdentification3Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

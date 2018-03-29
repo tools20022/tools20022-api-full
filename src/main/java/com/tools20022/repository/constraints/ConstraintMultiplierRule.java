@@ -53,11 +53,15 @@ public class ConstraintMultiplierRule {
 	 */
 	public static final MMConstraint<SecurityInstrumentDescription1> forSecurityInstrumentDescription1 = new MMConstraint<SecurityInstrumentDescription1>() {
 		{
-			validator = ConstraintMultiplierRule::checkSecurityInstrumentDescription1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplierRule";
 			definition = "Multiplier cannot be equal to zero.";
 			owner_lazy = () -> SecurityInstrumentDescription1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityInstrumentDescription1 obj) throws Exception {
+			checkSecurityInstrumentDescription1(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintMultiplierRule {
 	 */
 	public static final MMConstraint<SecurityInstrumentDescription2> forSecurityInstrumentDescription2 = new MMConstraint<SecurityInstrumentDescription2>() {
 		{
-			validator = ConstraintMultiplierRule::checkSecurityInstrumentDescription2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplierRule";
 			definition = "Multiplier cannot be equal to zero.";
 			owner_lazy = () -> SecurityInstrumentDescription2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityInstrumentDescription2 obj) throws Exception {
+			checkSecurityInstrumentDescription2(obj);
 		}
 	};
 	/**
@@ -109,11 +117,15 @@ public class ConstraintMultiplierRule {
 	 */
 	public static final MMConstraint<DerivativeInstrument5.PriceMultiplier> forPriceMultiplier = new MMConstraint<DerivativeInstrument5.PriceMultiplier>() {
 		{
-			validator = ConstraintMultiplierRule::checkDerivativeInstrument5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplierRule";
 			definition = "Price Multiplier must not be zero.";
 			owner_lazy = () -> DerivativeInstrument5.mmPriceMultiplier;
+		}
+
+		@Override
+		public void executeValidator(DerivativeInstrument5.PriceMultiplier obj) throws Exception {
+			checkDerivativeInstrument5(obj);
 		}
 	};
 	/**
@@ -137,11 +149,15 @@ public class ConstraintMultiplierRule {
 	 */
 	public static final MMConstraint<DerivativeInstrument6.PriceMultiplier> forPriceMultiplier = new MMConstraint<DerivativeInstrument6.PriceMultiplier>() {
 		{
-			validator = ConstraintMultiplierRule::checkDerivativeInstrument6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiplierRule";
 			definition = "Price Multiplier must not be zero.";
 			owner_lazy = () -> DerivativeInstrument6.mmPriceMultiplier;
+		}
+
+		@Override
+		public void executeValidator(DerivativeInstrument6.PriceMultiplier obj) throws Exception {
+			checkDerivativeInstrument6(obj);
 		}
 	};
 

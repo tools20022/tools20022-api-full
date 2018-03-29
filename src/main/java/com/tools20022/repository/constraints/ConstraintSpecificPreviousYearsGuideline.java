@@ -60,12 +60,16 @@ public class ConstraintSpecificPreviousYearsGuideline {
 	 */
 	public static final MMConstraint<PreviousYearChoice> forPreviousYearChoice = new MMConstraint<PreviousYearChoice>() {
 		{
-			validator = ConstraintSpecificPreviousYearsGuideline::checkPreviousYearChoice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificPreviousYearsGuideline";
 			definition = "SpecificPreviousYears must not contain the current year.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSpecificPreviousYearsGuideline.forPreviousYear2Choice);
 			owner_lazy = () -> PreviousYearChoice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PreviousYearChoice obj) throws Exception {
+			checkPreviousYearChoice(obj);
 		}
 	};
 	/**
@@ -88,11 +92,15 @@ public class ConstraintSpecificPreviousYearsGuideline {
 	 */
 	public static final MMConstraint<PreviousYear1> forPreviousYear1 = new MMConstraint<PreviousYear1>() {
 		{
-			validator = ConstraintSpecificPreviousYearsGuideline::checkPreviousYear1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificPreviousYearsGuideline";
 			definition = "SpecificPreviousYears must not contain the current year.";
 			owner_lazy = () -> PreviousYear1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PreviousYear1 obj) throws Exception {
+			checkPreviousYear1(obj);
 		}
 	};
 	/**
@@ -115,11 +123,15 @@ public class ConstraintSpecificPreviousYearsGuideline {
 	 */
 	public static final MMConstraint<PreviousYear2> forPreviousYear2 = new MMConstraint<PreviousYear2>() {
 		{
-			validator = ConstraintSpecificPreviousYearsGuideline::checkPreviousYear2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificPreviousYearsGuideline";
 			definition = "SpecificPreviousYears must not contain the current year.";
 			owner_lazy = () -> PreviousYear2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PreviousYear2 obj) throws Exception {
+			checkPreviousYear2(obj);
 		}
 	};
 	/**
@@ -148,12 +160,16 @@ public class ConstraintSpecificPreviousYearsGuideline {
 	 */
 	public static final MMConstraint<PreviousYear2Choice> forPreviousYear2Choice = new MMConstraint<PreviousYear2Choice>() {
 		{
-			validator = ConstraintSpecificPreviousYearsGuideline::checkPreviousYear2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificPreviousYearsGuideline";
 			definition = "SpecificPreviousYears must not contain the current year.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSpecificPreviousYearsGuideline.forPreviousYearChoice;
 			owner_lazy = () -> PreviousYear2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PreviousYear2Choice obj) throws Exception {
+			checkPreviousYear2Choice(obj);
 		}
 	};
 

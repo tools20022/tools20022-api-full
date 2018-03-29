@@ -129,7 +129,7 @@ public class IdentificationAssignment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationAssignment1, Max35Text> mmMessageIdentification = new MMMessageAttribute<IdentificationAssignment1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -140,6 +140,16 @@ public class IdentificationAssignment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IdentificationAssignment1 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationAssignment1 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -172,7 +182,7 @@ public class IdentificationAssignment1 {
 	 * "Date and time at which the identification assignment was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationAssignment1, ISODateTime> mmCreationDateTime = new MMMessageAttribute<IdentificationAssignment1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -183,6 +193,16 @@ public class IdentificationAssignment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(IdentificationAssignment1 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(IdentificationAssignment1 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "Cretr")
@@ -213,7 +233,7 @@ public class IdentificationAssignment1 {
 	 * definition} = "Party that created the identification assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationAssignment1, Optional<Party7Choice>> mmCreator = new MMMessageAssociationEnd<IdentificationAssignment1, Optional<Party7Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -225,6 +245,16 @@ public class IdentificationAssignment1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Party7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Party7Choice> getValue(IdentificationAssignment1 obj) {
+			return obj.getCreator();
+		}
+
+		@Override
+		public void setValue(IdentificationAssignment1 obj, Optional<Party7Choice> value) {
+			obj.setCreator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Assgnr", required = true)
@@ -257,7 +287,7 @@ public class IdentificationAssignment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssigner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationAssignment1, Party7Choice> mmAssigner = new MMMessageAssociationEnd<IdentificationAssignment1, Party7Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -269,6 +299,16 @@ public class IdentificationAssignment1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party7Choice.mmObject();
+		}
+
+		@Override
+		public Party7Choice getValue(IdentificationAssignment1 obj) {
+			return obj.getAssigner();
+		}
+
+		@Override
+		public void setValue(IdentificationAssignment1 obj, Party7Choice value) {
+			obj.setAssigner(value);
 		}
 	};
 	@XmlElement(name = "Assgne", required = true)
@@ -301,7 +341,7 @@ public class IdentificationAssignment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationAssignment1, Party7Choice> mmAssignee = new MMMessageAssociationEnd<IdentificationAssignment1, Party7Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationAssignment1.mmObject();
 			isDerived = false;
@@ -313,6 +353,16 @@ public class IdentificationAssignment1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party7Choice.mmObject();
+		}
+
+		@Override
+		public Party7Choice getValue(IdentificationAssignment1 obj) {
+			return obj.getAssignee();
+		}
+
+		@Override
+		public void setValue(IdentificationAssignment1 obj, Party7Choice value) {
+			obj.setAssignee(value);
 		}
 	};
 

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.InstructionForMeeting;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EligiblePosition1;
+import com.tools20022.repository.msg.SecurityIdentification3;
+import com.tools20022.repository.msg.SecurityPosition4;
+import com.tools20022.repository.msg.VoteInstruction1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -116,7 +120,7 @@ public class SecurityPosition3 {
 	 * "Security held in an account on which the balance is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityPosition3, SecurityIdentification3> mmIdentification = new MMMessageAttribute<SecurityPosition3, SecurityIdentification3>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition3.mmObject();
@@ -127,7 +131,17 @@ public class SecurityPosition3 {
 			definition = "Security held in an account on which the balance is calculated.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
+			complexType_lazy = () -> SecurityIdentification3.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification3 getValue(SecurityPosition3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityPosition3 obj, SecurityIdentification3 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -163,7 +177,7 @@ public class SecurityPosition3 {
 	 * definition} = "Amount of securities that are eligible for the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition3, Optional<EligiblePosition1>> mmAccount = new MMMessageAssociationEnd<SecurityPosition3, Optional<EligiblePosition1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition3.mmObject();
@@ -175,7 +189,17 @@ public class SecurityPosition3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition1.mmObject();
+			type_lazy = () -> EligiblePosition1.mmObject();
+		}
+
+		@Override
+		public Optional<EligiblePosition1> getValue(SecurityPosition3 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(SecurityPosition3 obj, Optional<EligiblePosition1> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VoteInstr")
@@ -211,7 +235,7 @@ public class SecurityPosition3 {
 	 * definition} = "Specifies how a party has voted for each agenda item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition3, Optional<VoteInstruction1>> mmVoteInstruction = new MMMessageAssociationEnd<SecurityPosition3, Optional<VoteInstruction1>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmVoteInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition3.mmObject();
@@ -223,11 +247,21 @@ public class SecurityPosition3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.VoteInstruction1.mmObject();
+			type_lazy = () -> VoteInstruction1.mmObject();
+		}
+
+		@Override
+		public Optional<VoteInstruction1> getValue(SecurityPosition3 obj) {
+			return obj.getVoteInstruction();
+		}
+
+		@Override
+		public void setValue(SecurityPosition3 obj, Optional<VoteInstruction1> value) {
+			obj.setVoteInstruction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctySubPos")
-	protected List<com.tools20022.repository.msg.SecurityPosition4> securitySubPosition;
+	protected List<SecurityPosition4> securitySubPosition;
 	/**
 	 * 
 	 <p>
@@ -260,7 +294,7 @@ public class SecurityPosition3 {
 	 * "Subdivision of an account used to segregate specific holdings."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritySubPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition3, List<SecurityPosition4>> mmSecuritySubPosition = new MMMessageAssociationEnd<SecurityPosition3, List<SecurityPosition4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition3.mmObject();
@@ -272,7 +306,17 @@ public class SecurityPosition3 {
 			maxOccurs = 1000;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityPosition4.mmObject();
+			type_lazy = () -> SecurityPosition4.mmObject();
+		}
+
+		@Override
+		public List<SecurityPosition4> getValue(SecurityPosition3 obj) {
+			return obj.getSecuritySubPosition();
+		}
+
+		@Override
+		public void setValue(SecurityPosition3 obj, List<SecurityPosition4> value) {
+			obj.setSecuritySubPosition(value);
 		}
 	};
 
@@ -295,7 +339,7 @@ public class SecurityPosition3 {
 		return identification;
 	}
 
-	public SecurityPosition3 setIdentification(com.tools20022.repository.msg.SecurityIdentification3 identification) {
+	public SecurityPosition3 setIdentification(SecurityIdentification3 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -304,7 +348,7 @@ public class SecurityPosition3 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public SecurityPosition3 setAccount(com.tools20022.repository.msg.EligiblePosition1 account) {
+	public SecurityPosition3 setAccount(EligiblePosition1 account) {
 		this.account = account;
 		return this;
 	}
@@ -313,7 +357,7 @@ public class SecurityPosition3 {
 		return voteInstruction == null ? Optional.empty() : Optional.of(voteInstruction);
 	}
 
-	public SecurityPosition3 setVoteInstruction(com.tools20022.repository.msg.VoteInstruction1 voteInstruction) {
+	public SecurityPosition3 setVoteInstruction(VoteInstruction1 voteInstruction) {
 		this.voteInstruction = voteInstruction;
 		return this;
 	}
@@ -322,7 +366,7 @@ public class SecurityPosition3 {
 		return securitySubPosition == null ? securitySubPosition = new ArrayList<>() : securitySubPosition;
 	}
 
-	public SecurityPosition3 setSecuritySubPosition(List<com.tools20022.repository.msg.SecurityPosition4> securitySubPosition) {
+	public SecurityPosition3 setSecuritySubPosition(List<SecurityPosition4> securitySubPosition) {
 		this.securitySubPosition = Objects.requireNonNull(securitySubPosition);
 		return this;
 	}

@@ -27,7 +27,6 @@ import com.tools20022.repository.choice.PartyIdentification10Choice;
 import com.tools20022.repository.choice.PartyIdentification13Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -225,7 +224,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, DocumentIdentification11> mmIdentification = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, DocumentIdentification11>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,12 +235,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification11 getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, DocumentIdentification11 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Pgntn", required = true)
@@ -270,7 +271,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Pagination> mmPagination = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,12 +282,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -313,7 +316,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * definition} = "Provides general information on the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Statement20> mmStatementGeneralDetails = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Statement20>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,12 +327,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> Statement20.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement20 getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, Statement20 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -357,7 +362,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<PartyIdentification13Choice>> mmAccountOwner = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<PartyIdentification13Choice>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,12 +373,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification13Choice> getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, Optional<PartyIdentification13Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -403,7 +410,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountServicer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<PartyIdentification10Choice>> mmAccountServicer = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -414,12 +421,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getAccountServicer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -447,7 +456,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, SecuritiesAccount11> mmSafekeepingAccount = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, SecuritiesAccount11>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -458,12 +467,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> SecuritiesAccount11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount11 getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, SecuritiesAccount11 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "IntrmyInf")
@@ -492,7 +503,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIntermediaryInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, List<Intermediary2>> mmIntermediaryInformation = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, List<Intermediary2>>() {
 		{
 			xmlTag = "IntrmyInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -503,12 +514,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> Intermediary2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getIntermediaryInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Intermediary2> getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getIntermediaryInformation();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, List<Intermediary2> value) {
+			obj.setIntermediaryInformation(value);
 		}
 	};
 	@XmlElement(name = "BalForAcct")
@@ -538,7 +551,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBalanceForAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, List<AggregateBalanceInformation8>> mmBalanceForAccount = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, List<AggregateBalanceInformation8>>() {
 		{
 			xmlTag = "BalForAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -548,12 +561,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> AggregateBalanceInformation8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getBalanceForAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AggregateBalanceInformation8> getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getBalanceForAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, List<AggregateBalanceInformation8> value) {
+			obj.setBalanceForAccount(value);
 		}
 	};
 	@XmlElement(name = "SubAcctDtls")
@@ -581,7 +596,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * definition} = "Sub-account of the safekeeping or investment account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, List<SubAccountIdentification10>> mmSubAccountDetails = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, List<SubAccountIdentification10>>() {
 		{
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -591,12 +606,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> SubAccountIdentification10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getSubAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SubAccountIdentification10> getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getSubAccountDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, List<SubAccountIdentification10> value) {
+			obj.setSubAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctBaseCcyTtlAmts")
@@ -625,7 +642,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * "Total valuation amounts provided in the base currency of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountBaseCurrencyTotalAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<TotalValueInPageAndStatement2>> mmAccountBaseCurrencyTotalAmounts = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<TotalValueInPageAndStatement2>>() {
 		{
 			xmlTag = "AcctBaseCcyTtlAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -636,12 +653,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> TotalValueInPageAndStatement2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getAccountBaseCurrencyTotalAmounts", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TotalValueInPageAndStatement2> getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getAccountBaseCurrencyTotalAmounts();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, Optional<TotalValueInPageAndStatement2> value) {
+			obj.setAccountBaseCurrencyTotalAmounts(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AltrnRptgCcyTtlAmts")
@@ -671,7 +690,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAlternateReportingCurrencyTotalAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<TotalValueInPageAndStatement2>> mmAlternateReportingCurrencyTotalAmounts = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<TotalValueInPageAndStatement2>>() {
 		{
 			xmlTag = "AltrnRptgCcyTtlAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -682,12 +701,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> TotalValueInPageAndStatement2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getAlternateReportingCurrencyTotalAmounts", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TotalValueInPageAndStatement2> getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getAlternateReportingCurrencyTotalAmounts();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, Optional<TotalValueInPageAndStatement2> value) {
+			obj.setAlternateReportingCurrencyTotalAmounts(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -716,7 +737,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<PartyIdentification10Choice>> mmMessageOriginator = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -727,12 +748,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getMessageOriginator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -762,7 +785,7 @@ public class SecuritiesBalanceAccountingReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<PartyIdentification10Choice>> mmMessageRecipient = new MMMessageBuildingBlock<SecuritiesBalanceAccountingReportV03, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -773,12 +796,14 @@ public class SecuritiesBalanceAccountingReportV03 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBalanceAccountingReportV03.class.getMethod("getMessageRecipient", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(SecuritiesBalanceAccountingReportV03 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceAccountingReportV03 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 

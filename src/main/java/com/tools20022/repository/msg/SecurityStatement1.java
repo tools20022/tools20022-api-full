@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesReferenceDataChange1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,7 +115,7 @@ public class SecurityStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityStatement1, ISODate> mmSystemDate = new MMMessageAttribute<SecurityStatement1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityStatement1.mmObject();
 			isDerived = false;
@@ -127,9 +128,19 @@ public class SecurityStatement1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public ISODate getValue(SecurityStatement1 obj) {
+			return obj.getSystemDate();
+		}
+
+		@Override
+		public void setValue(SecurityStatement1 obj, ISODate value) {
+			obj.setSystemDate(value);
+		}
 	};
 	@XmlElement(name = "Chng")
-	protected List<com.tools20022.repository.msg.SecuritiesReferenceDataChange1> change;
+	protected List<SecuritiesReferenceDataChange1> change;
 	/**
 	 * 
 	 <p>
@@ -167,7 +178,7 @@ public class SecurityStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityStatement1, List<SecuritiesReferenceDataChange1>> mmChange = new MMMessageAssociationEnd<SecurityStatement1, List<SecuritiesReferenceDataChange1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityStatement1.mmObject();
 			isDerived = false;
@@ -178,7 +189,17 @@ public class SecurityStatement1 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityStatement2.mmChange);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmObject();
+			type_lazy = () -> SecuritiesReferenceDataChange1.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesReferenceDataChange1> getValue(SecurityStatement1 obj) {
+			return obj.getChange();
+		}
+
+		@Override
+		public void setValue(SecurityStatement1 obj, List<SecuritiesReferenceDataChange1> value) {
+			obj.setChange(value);
 		}
 	};
 
@@ -209,7 +230,7 @@ public class SecurityStatement1 {
 		return change == null ? change = new ArrayList<>() : change;
 	}
 
-	public SecurityStatement1 setChange(List<com.tools20022.repository.msg.SecuritiesReferenceDataChange1> change) {
+	public SecurityStatement1 setChange(List<SecuritiesReferenceDataChange1> change) {
 		this.change = Objects.requireNonNull(change);
 		return this;
 	}

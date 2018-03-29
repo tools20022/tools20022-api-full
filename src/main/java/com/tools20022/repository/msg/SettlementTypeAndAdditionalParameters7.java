@@ -131,7 +131,7 @@ public class SettlementTypeAndAdditionalParameters7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTypeAndAdditionalParameters7, Optional<RestrictedFINXMax16Text>> mmCommonIdentification = new MMMessageAttribute<SettlementTypeAndAdditionalParameters7, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters7.mmObject();
@@ -144,6 +144,16 @@ public class SettlementTypeAndAdditionalParameters7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(SettlementTypeAndAdditionalParameters7 obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementTypeAndAdditionalParameters7 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCommonIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -186,7 +196,7 @@ public class SettlementTypeAndAdditionalParameters7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTypeAndAdditionalParameters7, Optional<RestrictedFINXMax16Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<SettlementTypeAndAdditionalParameters7, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters7.mmObject();
@@ -199,6 +209,16 @@ public class SettlementTypeAndAdditionalParameters7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(SettlementTypeAndAdditionalParameters7 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementTypeAndAdditionalParameters7 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcncltnInd")
@@ -236,7 +256,7 @@ public class SettlementTypeAndAdditionalParameters7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTypeAndAdditionalParameters7, Optional<YesNoIndicator>> mmReconciliationIndicator = new MMMessageAttribute<SettlementTypeAndAdditionalParameters7, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters7.mmObject();
 			isDerived = false;
@@ -248,6 +268,16 @@ public class SettlementTypeAndAdditionalParameters7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SettlementTypeAndAdditionalParameters7 obj) {
+			return obj.getReconciliationIndicator();
+		}
+
+		@Override
+		public void setValue(SettlementTypeAndAdditionalParameters7 obj, Optional<YesNoIndicator> value) {
+			obj.setReconciliationIndicator(value.orElse(null));
 		}
 	};
 

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ChargesInformation6;
+import com.tools20022.repository.msg.OriginalGroupInformation3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +131,7 @@ public class StatementResolutionEntry1 {
 	 * "Set of elements used to provide information on the original messsage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalGroupInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatementResolutionEntry1, Optional<OriginalGroupInformation3>> mmOriginalGroupInformation = new MMMessageAssociationEnd<StatementResolutionEntry1, Optional<OriginalGroupInformation3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementResolutionEntry1.mmObject();
 			isDerived = false;
@@ -140,7 +142,17 @@ public class StatementResolutionEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation3.mmObject();
+			type_lazy = () -> OriginalGroupInformation3.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalGroupInformation3> getValue(StatementResolutionEntry1 obj) {
+			return obj.getOriginalGroupInformation();
+		}
+
+		@Override
+		public void setValue(StatementResolutionEntry1 obj, Optional<OriginalGroupInformation3> value) {
+			obj.setOriginalGroupInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlStmtId")
@@ -174,7 +186,7 @@ public class StatementResolutionEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementResolutionEntry1, Optional<Max35Text>> mmOriginalStatementIdentification = new MMMessageAttribute<StatementResolutionEntry1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementResolutionEntry1.mmObject();
 			isDerived = false;
@@ -185,6 +197,16 @@ public class StatementResolutionEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StatementResolutionEntry1 obj) {
+			return obj.getOriginalStatementIdentification();
+		}
+
+		@Override
+		public void setValue(StatementResolutionEntry1 obj, Optional<Max35Text> value) {
+			obj.setOriginalStatementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrRef")
@@ -223,7 +245,7 @@ public class StatementResolutionEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementResolutionEntry1, Optional<Max35Text>> mmAccountServicerReference = new MMMessageAttribute<StatementResolutionEntry1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementResolutionEntry1.mmObject();
@@ -235,6 +257,16 @@ public class StatementResolutionEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StatementResolutionEntry1 obj) {
+			return obj.getAccountServicerReference();
+		}
+
+		@Override
+		public void setValue(StatementResolutionEntry1 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrrctdAmt")
@@ -274,7 +306,7 @@ public class StatementResolutionEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorrectedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementResolutionEntry1, Optional<ActiveOrHistoricCurrencyAndAmount>> mmCorrectedAmount = new MMMessageAttribute<StatementResolutionEntry1, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementResolutionEntry1.mmObject();
@@ -287,9 +319,19 @@ public class StatementResolutionEntry1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(StatementResolutionEntry1 obj) {
+			return obj.getCorrectedAmount();
+		}
+
+		@Override
+		public void setValue(StatementResolutionEntry1 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setCorrectedAmount(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Chrgs")
-	protected List<com.tools20022.repository.msg.ChargesInformation6> charges;
+	protected List<ChargesInformation6> charges;
 	/**
 	 * 
 	 <p>
@@ -323,7 +365,7 @@ public class StatementResolutionEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatementResolutionEntry1, List<ChargesInformation6>> mmCharges = new MMMessageAssociationEnd<StatementResolutionEntry1, List<ChargesInformation6>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCharges;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementResolutionEntry1.mmObject();
@@ -334,7 +376,17 @@ public class StatementResolutionEntry1 {
 			definition = "Provides information on the charges included in the original entry amount.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
+			type_lazy = () -> ChargesInformation6.mmObject();
+		}
+
+		@Override
+		public List<ChargesInformation6> getValue(StatementResolutionEntry1 obj) {
+			return obj.getCharges();
+		}
+
+		@Override
+		public void setValue(StatementResolutionEntry1 obj, List<ChargesInformation6> value) {
+			obj.setCharges(value);
 		}
 	};
 	@XmlElement(name = "Purp")
@@ -372,7 +424,7 @@ public class StatementResolutionEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatementResolutionEntry1, Optional<Purpose2Choice>> mmPurpose = new MMMessageAssociationEnd<StatementResolutionEntry1, Optional<Purpose2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementResolutionEntry1.mmObject();
@@ -385,6 +437,16 @@ public class StatementResolutionEntry1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Purpose2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Purpose2Choice> getValue(StatementResolutionEntry1 obj) {
+			return obj.getPurpose();
+		}
+
+		@Override
+		public void setValue(StatementResolutionEntry1 obj, Optional<Purpose2Choice> value) {
+			obj.setPurpose(value.orElse(null));
 		}
 	};
 
@@ -409,7 +471,7 @@ public class StatementResolutionEntry1 {
 		return originalGroupInformation == null ? Optional.empty() : Optional.of(originalGroupInformation);
 	}
 
-	public StatementResolutionEntry1 setOriginalGroupInformation(com.tools20022.repository.msg.OriginalGroupInformation3 originalGroupInformation) {
+	public StatementResolutionEntry1 setOriginalGroupInformation(OriginalGroupInformation3 originalGroupInformation) {
 		this.originalGroupInformation = originalGroupInformation;
 		return this;
 	}
@@ -445,7 +507,7 @@ public class StatementResolutionEntry1 {
 		return charges == null ? charges = new ArrayList<>() : charges;
 	}
 
-	public StatementResolutionEntry1 setCharges(List<com.tools20022.repository.msg.ChargesInformation6> charges) {
+	public StatementResolutionEntry1 setCharges(List<ChargesInformation6> charges) {
 		this.charges = Objects.requireNonNull(charges);
 		return this;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.SNA2008SectorIdentifier;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.Sector;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -112,7 +113,7 @@ public class FinancialInstrument59 {
 	 * definition} = "Specifies the ISIN of the collateral.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument59, ISINOct2015Identifier> mmIdentification = new MMMessageAttribute<FinancialInstrument59, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument59.mmObject();
@@ -124,6 +125,16 @@ public class FinancialInstrument59 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(FinancialInstrument59 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument59 obj, ISINOct2015Identifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -161,7 +172,7 @@ public class FinancialInstrument59 {
 	 * definition} = "Identifies the security issuer.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument59, LEIIdentifier> mmIssuer = new MMMessageAttribute<FinancialInstrument59, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument59.mmObject();
@@ -173,6 +184,16 @@ public class FinancialInstrument59 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(FinancialInstrument59 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument59 obj, LEIIdentifier value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "Sctr")
@@ -187,6 +208,10 @@ public class FinancialInstrument59 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.SNA2008SectorIdentifier
 	 * SNA2008SectorIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Sector Sector}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -205,8 +230,9 @@ public class FinancialInstrument59 {
 	 * definition} = "Sector for the security issuer, for example, 0500."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument59, Optional<SNA2008SectorIdentifier>> mmSector = new MMMessageAttribute<FinancialInstrument59, Optional<SNA2008SectorIdentifier>>() {
 		{
+			businessComponentTrace_lazy = () -> Sector.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument59.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
@@ -216,6 +242,16 @@ public class FinancialInstrument59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SNA2008SectorIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<SNA2008SectorIdentifier> getValue(FinancialInstrument59 obj) {
+			return obj.getSector();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument59 obj, Optional<SNA2008SectorIdentifier> value) {
+			obj.setSector(value.orElse(null));
 		}
 	};
 

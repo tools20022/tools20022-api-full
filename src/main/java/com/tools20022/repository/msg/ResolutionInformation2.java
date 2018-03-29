@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Charges2;
+import com.tools20022.repository.msg.Compensation1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -145,7 +147,7 @@ public class ResolutionInformation2 {
 	 * ResolutionInformation1.mmInterbankSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResolutionInformation2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmInterbankSettlementAmount = new MMMessageAttribute<ResolutionInformation2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResolutionInformation2.mmObject();
@@ -158,6 +160,16 @@ public class ResolutionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(ResolutionInformation2 obj) {
+			return obj.getInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(ResolutionInformation2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setInterbankSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt")
@@ -201,7 +213,7 @@ public class ResolutionInformation2 {
 	 * ResolutionInformation1.mmInterbankSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResolutionInformation2, Optional<ISODate>> mmInterbankSettlementDate = new MMMessageAttribute<ResolutionInformation2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResolutionInformation2.mmObject();
@@ -214,6 +226,16 @@ public class ResolutionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ResolutionInformation2 obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(ResolutionInformation2 obj, Optional<ISODate> value) {
+			obj.setInterbankSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrChanl")
@@ -258,7 +280,7 @@ public class ResolutionInformation2 {
 	 * ResolutionInformation1.mmClearingChannel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResolutionInformation2, Optional<ClearingChannel2Code>> mmClearingChannel = new MMMessageAttribute<ResolutionInformation2, Optional<ClearingChannel2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmClearingChannel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResolutionInformation2.mmObject();
@@ -271,6 +293,16 @@ public class ResolutionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingChannel2Code> getValue(ResolutionInformation2 obj) {
+			return obj.getClearingChannel();
+		}
+
+		@Override
+		public void setValue(ResolutionInformation2 obj, Optional<ClearingChannel2Code> value) {
+			obj.setClearingChannel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Compstn")
@@ -307,7 +339,7 @@ public class ResolutionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCompensation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ResolutionInformation2, Optional<Compensation1>> mmCompensation = new MMMessageAssociationEnd<ResolutionInformation2, Optional<Compensation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResolutionInformation2.mmObject();
@@ -319,11 +351,21 @@ public class ResolutionInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Compensation1.mmObject();
+			type_lazy = () -> Compensation1.mmObject();
+		}
+
+		@Override
+		public Optional<Compensation1> getValue(ResolutionInformation2 obj) {
+			return obj.getCompensation();
+		}
+
+		@Override
+		public void setValue(ResolutionInformation2 obj, Optional<Compensation1> value) {
+			obj.setCompensation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Chrgs")
-	protected List<com.tools20022.repository.msg.Charges2> charges;
+	protected List<Charges2> charges;
 	/**
 	 * 
 	 <p>
@@ -355,7 +397,7 @@ public class ResolutionInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ResolutionInformation2, List<Charges2>> mmCharges = new MMMessageAssociationEnd<ResolutionInformation2, List<Charges2>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResolutionInformation2.mmObject();
@@ -366,7 +408,17 @@ public class ResolutionInformation2 {
 			definition = "Provides information on the charges to be paid by the charge bearer(s) related to the payment transaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Charges2.mmObject();
+			type_lazy = () -> Charges2.mmObject();
+		}
+
+		@Override
+		public List<Charges2> getValue(ResolutionInformation2 obj) {
+			return obj.getCharges();
+		}
+
+		@Override
+		public void setValue(ResolutionInformation2 obj, List<Charges2> value) {
+			obj.setCharges(value);
 		}
 	};
 
@@ -418,7 +470,7 @@ public class ResolutionInformation2 {
 		return compensation == null ? Optional.empty() : Optional.of(compensation);
 	}
 
-	public ResolutionInformation2 setCompensation(com.tools20022.repository.msg.Compensation1 compensation) {
+	public ResolutionInformation2 setCompensation(Compensation1 compensation) {
 		this.compensation = compensation;
 		return this;
 	}
@@ -427,7 +479,7 @@ public class ResolutionInformation2 {
 		return charges == null ? charges = new ArrayList<>() : charges;
 	}
 
-	public ResolutionInformation2 setCharges(List<com.tools20022.repository.msg.Charges2> charges) {
+	public ResolutionInformation2 setCharges(List<Charges2> charges) {
 		this.charges = Objects.requireNonNull(charges);
 		return this;
 	}

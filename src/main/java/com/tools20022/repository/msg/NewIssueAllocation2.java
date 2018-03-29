@@ -151,7 +151,7 @@ public class NewIssueAllocation2 {
 	 * NewIssueAllocation1.mmRestricted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestricted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NewIssueAllocation2, YesNoIndicator> mmRestricted = new MMMessageAttribute<NewIssueAllocation2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmRestricted;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation2.mmObject();
@@ -164,6 +164,16 @@ public class NewIssueAllocation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(NewIssueAllocation2 obj) {
+			return obj.getRestricted();
+		}
+
+		@Override
+		public void setValue(NewIssueAllocation2 obj, YesNoIndicator value) {
+			obj.setRestricted(value);
 		}
 	};
 	@XmlElement(name = "XmptPrsnRsn")
@@ -200,7 +210,7 @@ public class NewIssueAllocation2 {
 	 * NewIssueAllocation1.mmExemptPersonReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptPersonReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NewIssueAllocation2, Optional<Max350Text>> mmExemptPersonReason = new MMMessageAttribute<NewIssueAllocation2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation2.mmObject();
 			isDerived = false;
@@ -212,6 +222,16 @@ public class NewIssueAllocation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(NewIssueAllocation2 obj) {
+			return obj.getExemptPersonReason();
+		}
+
+		@Override
+		public void setValue(NewIssueAllocation2 obj, Optional<Max350Text> value) {
+			obj.setExemptPersonReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DeMnms")
@@ -244,7 +264,7 @@ public class NewIssueAllocation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeMinimus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NewIssueAllocation2, Optional<DeMinimus1Choice>> mmDeMinimus = new MMMessageAssociationEnd<NewIssueAllocation2, Optional<DeMinimus1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NewIssueAllocation2.mmObject();
 			isDerived = false;
@@ -256,6 +276,16 @@ public class NewIssueAllocation2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DeMinimus1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DeMinimus1Choice> getValue(NewIssueAllocation2 obj) {
+			return obj.getDeMinimus();
+		}
+
+		@Override
+		public void setValue(NewIssueAllocation2 obj, Optional<DeMinimus1Choice> value) {
+			obj.setDeMinimus(value.orElse(null));
 		}
 	};
 

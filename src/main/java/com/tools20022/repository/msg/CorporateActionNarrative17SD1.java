@@ -104,7 +104,7 @@ public class CorporateActionNarrative17SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative17SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionNarrative17SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative17SD1.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class CorporateActionNarrative17SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNarrative17SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative17SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrAddtlInf", required = true)
@@ -147,7 +157,7 @@ public class CorporateActionNarrative17SD1 {
 	 * "Other additional information in the local language.\r\n備考."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative17SD1, Max450Text> mmOtherAdditionalInformation = new MMMessageAttribute<CorporateActionNarrative17SD1, Max450Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative17SD1.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class CorporateActionNarrative17SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max450Text.mmObject();
+		}
+
+		@Override
+		public Max450Text getValue(CorporateActionNarrative17SD1 obj) {
+			return obj.getOtherAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative17SD1 obj, Max450Text value) {
+			obj.setOtherAdditionalInformation(value);
 		}
 	};
 

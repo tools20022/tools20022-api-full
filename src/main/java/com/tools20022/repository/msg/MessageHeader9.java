@@ -144,7 +144,7 @@ public class MessageHeader9 {
 	 * MessageHeader2.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageHeader9, Max35Text> mmMessageIdentification = new MMMessageAttribute<MessageHeader9, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader9.mmObject();
 			isDerived = false;
@@ -156,6 +156,16 @@ public class MessageHeader9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MessageHeader9 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(MessageHeader9 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -191,7 +201,7 @@ public class MessageHeader9 {
 	 * MessageHeader2.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageHeader9, Optional<ISODateTime>> mmCreationDateTime = new MMMessageAttribute<MessageHeader9, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader9.mmObject();
 			isDerived = false;
@@ -203,6 +213,16 @@ public class MessageHeader9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(MessageHeader9 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(MessageHeader9 obj, Optional<ISODateTime> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqTp")
@@ -239,7 +259,7 @@ public class MessageHeader9 {
 	 * MessageHeader2.mmRequestType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageHeader9, Optional<RequestType4Choice>> mmRequestType = new MMMessageAttribute<MessageHeader9, Optional<RequestType4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader9.mmObject();
 			isDerived = false;
@@ -251,6 +271,16 @@ public class MessageHeader9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RequestType4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RequestType4Choice> getValue(MessageHeader9 obj) {
+			return obj.getRequestType();
+		}
+
+		@Override
+		public void setValue(MessageHeader9 obj, Optional<RequestType4Choice> value) {
+			obj.setRequestType(value.orElse(null));
 		}
 	};
 

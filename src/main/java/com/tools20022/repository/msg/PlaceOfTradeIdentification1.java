@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarketIdentification84;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -115,7 +116,7 @@ public class PlaceOfTradeIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketTypeAndIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PlaceOfTradeIdentification1, Optional<MarketIdentification84>> mmMarketTypeAndIdentification = new MMMessageAssociationEnd<PlaceOfTradeIdentification1, Optional<MarketIdentification84>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlaceOfTradeIdentification1.mmObject();
@@ -128,7 +129,17 @@ public class PlaceOfTradeIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification84.mmObject();
+			type_lazy = () -> MarketIdentification84.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification84> getValue(PlaceOfTradeIdentification1 obj) {
+			return obj.getMarketTypeAndIdentification();
+		}
+
+		@Override
+		public void setValue(PlaceOfTradeIdentification1 obj, Optional<MarketIdentification84> value) {
+			obj.setMarketTypeAndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -171,7 +182,7 @@ public class PlaceOfTradeIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfTradeIdentification1, Optional<LEIIdentifier>> mmLEI = new MMMessageAttribute<PlaceOfTradeIdentification1, Optional<LEIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlaceOfTradeIdentification1.mmObject();
 			isDerived = false;
@@ -183,6 +194,16 @@ public class PlaceOfTradeIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(PlaceOfTradeIdentification1 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(PlaceOfTradeIdentification1 obj, Optional<LEIIdentifier> value) {
+			obj.setLEI(value.orElse(null));
 		}
 	};
 
@@ -204,7 +225,7 @@ public class PlaceOfTradeIdentification1 {
 		return marketTypeAndIdentification == null ? Optional.empty() : Optional.of(marketTypeAndIdentification);
 	}
 
-	public PlaceOfTradeIdentification1 setMarketTypeAndIdentification(com.tools20022.repository.msg.MarketIdentification84 marketTypeAndIdentification) {
+	public PlaceOfTradeIdentification1 setMarketTypeAndIdentification(MarketIdentification84 marketTypeAndIdentification) {
 		this.marketTypeAndIdentification = marketTypeAndIdentification;
 		return this;
 	}

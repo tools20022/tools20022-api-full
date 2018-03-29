@@ -117,7 +117,7 @@ public class ExposureType16Choice {
 	 * ExposureType10Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExposureType16Choice, ExposureType4Code> mmCode = new MMMessageAttribute<ExposureType16Choice, ExposureType4Code>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExposureType16Choice.mmObject();
@@ -130,6 +130,16 @@ public class ExposureType16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExposureType4Code.mmObject();
+		}
+
+		@Override
+		public ExposureType4Code getValue(ExposureType16Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ExposureType16Choice obj, ExposureType4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class ExposureType16Choice {
 	 * ExposureType10Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExposureType16Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<ExposureType16Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExposureType16Choice.mmObject();
@@ -186,6 +196,16 @@ public class ExposureType16Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ExposureType16Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ExposureType16Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

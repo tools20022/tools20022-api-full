@@ -52,11 +52,15 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 */
 	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {
 		{
-			validator = ConstraintInvestmentAccountDetailsRule::checkSwitchOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetailsRule";
 			definition = "Either InvestmentAccountDetails or (all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and of RedemptionLegDetails/InvestmentAccountDetails) must be present, but not both.";
 			owner_lazy = () -> SwitchOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder3 obj) throws Exception {
+			checkSwitchOrder3(obj);
 		}
 	};
 	/**
@@ -90,12 +94,16 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 */
 	public static final MMConstraint<SwitchExecution4> forSwitchExecution4 = new MMConstraint<SwitchExecution4>() {
 		{
-			validator = ConstraintInvestmentAccountDetailsRule::checkSwitchExecution4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetailsRule";
 			definition = "Either InvestmentAccountDetails or (all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and of RedemptionLegDetails/InvestmentAccountDetails) must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountDetailsRule.forSwitchExecution7);
 			owner_lazy = () -> SwitchExecution4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchExecution4 obj) throws Exception {
+			checkSwitchExecution4(obj);
 		}
 	};
 	/**
@@ -128,12 +136,16 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 */
 	public static final MMConstraint<SwitchOrder4> forSwitchOrder4 = new MMConstraint<SwitchOrder4>() {
 		{
-			validator = ConstraintInvestmentAccountDetailsRule::checkSwitchOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetailsRule";
 			definition = "Either InvestmentAccountDetails or (all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and of RedemptionLegDetails/InvestmentAccountDetails) must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountDetailsRule.forSwitchOrder7);
 			owner_lazy = () -> SwitchOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder4 obj) throws Exception {
+			checkSwitchOrder4(obj);
 		}
 	};
 	/**
@@ -164,12 +176,16 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 */
 	public static final MMConstraint<SwitchExecution7> forSwitchExecution7 = new MMConstraint<SwitchExecution7>() {
 		{
-			validator = ConstraintInvestmentAccountDetailsRule::checkSwitchExecution7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetailsRule";
 			definition = "Either InvestmentAccountDetails or all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and RedemptionLegDetails/InvestmentAccountDetails must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountDetailsRule.forSwitchExecution4;
 			owner_lazy = () -> SwitchExecution7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchExecution7 obj) throws Exception {
+			checkSwitchExecution7(obj);
 		}
 	};
 	/**
@@ -199,12 +215,16 @@ public class ConstraintInvestmentAccountDetailsRule {
 	 */
 	public static final MMConstraint<SwitchOrder7> forSwitchOrder7 = new MMConstraint<SwitchOrder7>() {
 		{
-			validator = ConstraintInvestmentAccountDetailsRule::checkSwitchOrder7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetailsRule";
 			definition = "Either InvestmentAccountDetails or all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and RedemptionLegDetails/InvestmentAccountDetails must be present, but not both.\r\nEither InvestmentAccountDetails or all occurrences of SubscriptionLegDetails/InvestmentAccountDetails and RedemptionLegDetails/InvestmentAccountDetails must be present, but not both.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountDetailsRule.forSwitchOrder4;
 			owner_lazy = () -> SwitchOrder7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder7 obj) throws Exception {
+			checkSwitchOrder7(obj);
 		}
 	};
 

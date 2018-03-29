@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContractValuationData5;
+import com.tools20022.repository.msg.TradeCollateralReport4;
+import com.tools20022.repository.msg.TradeCounterpartyReport7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +107,7 @@ public class CounterpartySpecificData20 {
 	 * definition} = "Counterparty data details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartySpecificData20, TradeCounterpartyReport7> mmCounterparty = new MMMessageAssociationEnd<CounterpartySpecificData20, TradeCounterpartyReport7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySpecificData20.mmObject();
 			isDerived = false;
@@ -115,7 +118,17 @@ public class CounterpartySpecificData20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeCounterpartyReport7.mmObject();
+			type_lazy = () -> TradeCounterpartyReport7.mmObject();
+		}
+
+		@Override
+		public TradeCounterpartyReport7 getValue(CounterpartySpecificData20 obj) {
+			return obj.getCounterparty();
+		}
+
+		@Override
+		public void setValue(CounterpartySpecificData20 obj, TradeCounterpartyReport7 value) {
+			obj.setCounterparty(value);
 		}
 	};
 	@XmlElement(name = "Valtn")
@@ -146,7 +159,7 @@ public class CounterpartySpecificData20 {
 	 * definition} = "Data related to contract valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartySpecificData20, Optional<ContractValuationData5>> mmValuation = new MMMessageAssociationEnd<CounterpartySpecificData20, Optional<ContractValuationData5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySpecificData20.mmObject();
 			isDerived = false;
@@ -157,7 +170,17 @@ public class CounterpartySpecificData20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContractValuationData5.mmObject();
+			type_lazy = () -> ContractValuationData5.mmObject();
+		}
+
+		@Override
+		public Optional<ContractValuationData5> getValue(CounterpartySpecificData20 obj) {
+			return obj.getValuation();
+		}
+
+		@Override
+		public void setValue(CounterpartySpecificData20 obj, Optional<ContractValuationData5> value) {
+			obj.setValuation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Coll")
@@ -189,7 +212,7 @@ public class CounterpartySpecificData20 {
 	 * "Information related to collateral agreement between counterparties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartySpecificData20, Optional<TradeCollateralReport4>> mmCollateral = new MMMessageAssociationEnd<CounterpartySpecificData20, Optional<TradeCollateralReport4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySpecificData20.mmObject();
 			isDerived = false;
@@ -200,7 +223,17 @@ public class CounterpartySpecificData20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport4.mmObject();
+			type_lazy = () -> TradeCollateralReport4.mmObject();
+		}
+
+		@Override
+		public Optional<TradeCollateralReport4> getValue(CounterpartySpecificData20 obj) {
+			return obj.getCollateral();
+		}
+
+		@Override
+		public void setValue(CounterpartySpecificData20 obj, Optional<TradeCollateralReport4> value) {
+			obj.setCollateral(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgDtTm", required = true)
@@ -234,7 +267,7 @@ public class CounterpartySpecificData20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartySpecificData20, ISODateTime> mmReportingDateTime = new MMMessageAttribute<CounterpartySpecificData20, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySpecificData20.mmObject();
 			isDerived = false;
@@ -245,6 +278,16 @@ public class CounterpartySpecificData20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CounterpartySpecificData20 obj) {
+			return obj.getReportingDateTime();
+		}
+
+		@Override
+		public void setValue(CounterpartySpecificData20 obj, ISODateTime value) {
+			obj.setReportingDateTime(value);
 		}
 	};
 
@@ -266,7 +309,7 @@ public class CounterpartySpecificData20 {
 		return counterparty;
 	}
 
-	public CounterpartySpecificData20 setCounterparty(com.tools20022.repository.msg.TradeCounterpartyReport7 counterparty) {
+	public CounterpartySpecificData20 setCounterparty(TradeCounterpartyReport7 counterparty) {
 		this.counterparty = Objects.requireNonNull(counterparty);
 		return this;
 	}
@@ -275,7 +318,7 @@ public class CounterpartySpecificData20 {
 		return valuation == null ? Optional.empty() : Optional.of(valuation);
 	}
 
-	public CounterpartySpecificData20 setValuation(com.tools20022.repository.msg.ContractValuationData5 valuation) {
+	public CounterpartySpecificData20 setValuation(ContractValuationData5 valuation) {
 		this.valuation = valuation;
 		return this;
 	}
@@ -284,7 +327,7 @@ public class CounterpartySpecificData20 {
 		return collateral == null ? Optional.empty() : Optional.of(collateral);
 	}
 
-	public CounterpartySpecificData20 setCollateral(com.tools20022.repository.msg.TradeCollateralReport4 collateral) {
+	public CounterpartySpecificData20 setCollateral(TradeCollateralReport4 collateral) {
 		this.collateral = collateral;
 		return this;
 	}

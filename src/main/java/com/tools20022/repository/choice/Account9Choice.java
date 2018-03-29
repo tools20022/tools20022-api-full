@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.CashAccountIdentification6Choice;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Tax;
@@ -112,7 +113,7 @@ public class Account9Choice {
 	 * definition} = "Account in which cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account9Choice, CashAccountIdentification6Choice> mmCashAccount = new MMMessageAssociationEnd<Account9Choice, CashAccountIdentification6Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Account9Choice.mmObject();
@@ -125,7 +126,17 @@ public class Account9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification6Choice.mmObject();
+			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification6Choice getValue(Account9Choice obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(Account9Choice obj, CashAccountIdentification6Choice value) {
+			obj.setCashAccount(value);
 		}
 	};
 	@XmlElement(name = "ChrgsAcct", required = true)
@@ -167,7 +178,7 @@ public class Account9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargesAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account9Choice, CashAccountIdentification6Choice> mmChargesAccount = new MMMessageAssociationEnd<Account9Choice, CashAccountIdentification6Choice>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargesDebitAccount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Account9Choice.mmObject();
@@ -180,7 +191,17 @@ public class Account9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification6Choice.mmObject();
+			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification6Choice getValue(Account9Choice obj) {
+			return obj.getChargesAccount();
+		}
+
+		@Override
+		public void setValue(Account9Choice obj, CashAccountIdentification6Choice value) {
+			obj.setChargesAccount(value);
 		}
 	};
 	@XmlElement(name = "TaxAcct", required = true)
@@ -222,7 +243,7 @@ public class Account9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account9Choice, CashAccountIdentification6Choice> mmTaxAccount = new MMMessageAssociationEnd<Account9Choice, CashAccountIdentification6Choice>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxAccount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Account9Choice.mmObject();
@@ -235,7 +256,17 @@ public class Account9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification6Choice.mmObject();
+			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification6Choice getValue(Account9Choice obj) {
+			return obj.getTaxAccount();
+		}
+
+		@Override
+		public void setValue(Account9Choice obj, CashAccountIdentification6Choice value) {
+			obj.setTaxAccount(value);
 		}
 	};
 
@@ -258,7 +289,7 @@ public class Account9Choice {
 		return cashAccount;
 	}
 
-	public Account9Choice setCashAccount(com.tools20022.repository.choice.CashAccountIdentification6Choice cashAccount) {
+	public Account9Choice setCashAccount(CashAccountIdentification6Choice cashAccount) {
 		this.cashAccount = Objects.requireNonNull(cashAccount);
 		return this;
 	}
@@ -267,7 +298,7 @@ public class Account9Choice {
 		return chargesAccount;
 	}
 
-	public Account9Choice setChargesAccount(com.tools20022.repository.choice.CashAccountIdentification6Choice chargesAccount) {
+	public Account9Choice setChargesAccount(CashAccountIdentification6Choice chargesAccount) {
 		this.chargesAccount = Objects.requireNonNull(chargesAccount);
 		return this;
 	}
@@ -276,7 +307,7 @@ public class Account9Choice {
 		return taxAccount;
 	}
 
-	public Account9Choice setTaxAccount(com.tools20022.repository.choice.CashAccountIdentification6Choice taxAccount) {
+	public Account9Choice setTaxAccount(CashAccountIdentification6Choice taxAccount) {
 		this.taxAccount = Objects.requireNonNull(taxAccount);
 		return this;
 	}

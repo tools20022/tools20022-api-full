@@ -58,12 +58,16 @@ public class ConstraintSettlementMethod2Part2Rule {
 	 */
 	public static final MMConstraint<SettlementInformation6> forSettlementInformation6 = new MMConstraint<SettlementInformation6>() {
 		{
-			validator = ConstraintSettlementMethod2Part2Rule::checkSettlementInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod2Part2Rule";
 			definition = "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;.";
 			owner_lazy = () -> SettlementInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>CoverMethod</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation6 obj) throws Exception {
+			checkSettlementInformation6(obj);
 		}
 	};
 	/**
@@ -93,12 +97,16 @@ public class ConstraintSettlementMethod2Part2Rule {
 	 */
 	public static final MMConstraint<SettlementInformation8> forSettlementInformation8 = new MMConstraint<SettlementInformation8>() {
 		{
-			validator = ConstraintSettlementMethod2Part2Rule::checkSettlementInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod2Part2Rule";
 			definition = "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;.";
 			owner_lazy = () -> SettlementInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>CoverMethod</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation8 obj) throws Exception {
+			checkSettlementInformation8(obj);
 		}
 	};
 

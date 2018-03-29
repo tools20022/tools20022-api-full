@@ -98,7 +98,7 @@ public class Price4 {
 	 * definition} = "Value of the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Price4, PriceRateOrAmountChoice> mmValue = new MMMessageAttribute<Price4, PriceRateOrAmountChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class Price4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PriceRateOrAmountChoice.mmObject();
+		}
+
+		@Override
+		public PriceRateOrAmountChoice getValue(Price4 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(Price4 obj, PriceRateOrAmountChoice value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -145,7 +155,7 @@ public class Price4 {
 	 * definition} = "Specification of the price type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Price4, Optional<PriceValueType7Code>> mmType = new MMMessageAttribute<Price4, Optional<PriceValueType7Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
@@ -157,6 +167,16 @@ public class Price4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceValueType7Code.mmObject();
+		}
+
+		@Override
+		public Optional<PriceValueType7Code> getValue(Price4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Price4 obj, Optional<PriceValueType7Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 

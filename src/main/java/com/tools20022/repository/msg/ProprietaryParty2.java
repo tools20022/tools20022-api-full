@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -100,7 +101,7 @@ public class ProprietaryParty2 {
 	 * definition} = "Specifies the type of proprietary party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryParty2, Max35Text> mmType = new MMMessageAttribute<ProprietaryParty2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryParty2.mmObject();
 			isDerived = false;
@@ -111,6 +112,16 @@ public class ProprietaryParty2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryParty2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProprietaryParty2 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Pty", required = true)
@@ -146,7 +157,7 @@ public class ProprietaryParty2 {
 	 * definition} = "Proprietary party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProprietaryParty2, PartyIdentification32> mmParty = new MMMessageAssociationEnd<ProprietaryParty2, PartyIdentification32>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryParty2.mmObject();
@@ -158,7 +169,17 @@ public class ProprietaryParty2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public PartyIdentification32 getValue(ProprietaryParty2 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(ProprietaryParty2 obj, PartyIdentification32 value) {
+			obj.setParty(value);
 		}
 	};
 
@@ -189,7 +210,7 @@ public class ProprietaryParty2 {
 		return party;
 	}
 
-	public ProprietaryParty2 setParty(com.tools20022.repository.msg.PartyIdentification32 party) {
+	public ProprietaryParty2 setParty(PartyIdentification32 party) {
 		this.party = Objects.requireNonNull(party);
 		return this;
 	}

@@ -100,7 +100,7 @@ public class StatementTerm1Choice {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementTerm1Choice, ISODate> mmStatementDate = new MMMessageAttribute<StatementTerm1Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementTerm1Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class StatementTerm1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(StatementTerm1Choice obj) {
+			return obj.getStatementDate();
+		}
+
+		@Override
+		public void setValue(StatementTerm1Choice obj, ISODate value) {
+			obj.setStatementDate(value);
 		}
 	};
 	@XmlElement(name = "StmtPrd", required = true)
@@ -148,7 +158,7 @@ public class StatementTerm1Choice {
 	 * definition} = "Period on which the statement is reporting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementTerm1Choice, DatePeriodDetails> mmStatementPeriod = new MMMessageAttribute<StatementTerm1Choice, DatePeriodDetails>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmReportedPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementTerm1Choice.mmObject();
@@ -160,6 +170,16 @@ public class StatementTerm1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public DatePeriodDetails getValue(StatementTerm1Choice obj) {
+			return obj.getStatementPeriod();
+		}
+
+		@Override
+		public void setValue(StatementTerm1Choice obj, DatePeriodDetails value) {
+			obj.setStatementPeriod(value);
 		}
 	};
 

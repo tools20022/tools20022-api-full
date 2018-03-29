@@ -100,7 +100,7 @@ public class FinancialInstrumentForm2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the booking appareance of the financial Instrument."</li>
+	 * "Indicates the booking appearance of the financial Instrument."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -108,18 +108,28 @@ public class FinancialInstrumentForm2 {
 	 * FinancialInstrumentForm1.mmBookingAppearance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBookingAppearance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentForm2, Optional<Appearance3Choice>> mmBookingAppearance = new MMMessageAttribute<FinancialInstrumentForm2, Optional<Appearance3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentForm2.mmObject();
 			isDerived = false;
 			xmlTag = "BookgApprnc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingAppearance";
-			definition = "Indicates the booking appareance of the financial Instrument.";
+			definition = "Indicates the booking appearance of the financial Instrument.";
 			previousVersion_lazy = () -> FinancialInstrumentForm1.mmBookingAppearance;
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Appearance3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Appearance3Choice> getValue(FinancialInstrumentForm2 obj) {
+			return obj.getBookingAppearance();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentForm2 obj, Optional<Appearance3Choice> value) {
+			obj.setBookingAppearance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglForm")
@@ -157,7 +167,7 @@ public class FinancialInstrumentForm2 {
 	 * FinancialInstrumentForm1.mmLegalForm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentForm2, Optional<FormOfSecurity8Choice>> mmLegalForm = new MMMessageAttribute<FinancialInstrumentForm2, Optional<FormOfSecurity8Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentForm2.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class FinancialInstrumentForm2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FormOfSecurity8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FormOfSecurity8Choice> getValue(FinancialInstrumentForm2 obj) {
+			return obj.getLegalForm();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentForm2 obj, Optional<FormOfSecurity8Choice> value) {
+			obj.setLegalForm(value.orElse(null));
 		}
 	};
 

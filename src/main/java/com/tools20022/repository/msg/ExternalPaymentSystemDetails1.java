@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ClearingCircuits1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -102,7 +103,7 @@ public class ExternalPaymentSystemDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingPositionsRegisterAllowedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExternalPaymentSystemDetails1, YesNoIndicator> mmClearingPositionsRegisterAllowedIndicator = new MMMessageAttribute<ExternalPaymentSystemDetails1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExternalPaymentSystemDetails1.mmObject();
 			isDerived = false;
@@ -114,9 +115,19 @@ public class ExternalPaymentSystemDetails1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(ExternalPaymentSystemDetails1 obj) {
+			return obj.getClearingPositionsRegisterAllowedIndicator();
+		}
+
+		@Override
+		public void setValue(ExternalPaymentSystemDetails1 obj, YesNoIndicator value) {
+			obj.setClearingPositionsRegisterAllowedIndicator(value);
+		}
 	};
 	@XmlElement(name = "ClrCrcts", required = true)
-	protected List<com.tools20022.repository.msg.ClearingCircuits1> clearingCircuits;
+	protected List<ClearingCircuits1> clearingCircuits;
 	/**
 	 * 
 	 <p>
@@ -143,7 +154,7 @@ public class ExternalPaymentSystemDetails1 {
 	 * definition} = "List of the clearing schemes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingCircuits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExternalPaymentSystemDetails1, List<ClearingCircuits1>> mmClearingCircuits = new MMMessageAssociationEnd<ExternalPaymentSystemDetails1, List<ClearingCircuits1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExternalPaymentSystemDetails1.mmObject();
 			isDerived = false;
@@ -153,7 +164,17 @@ public class ExternalPaymentSystemDetails1 {
 			definition = "List of the clearing schemes.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ClearingCircuits1.mmObject();
+			type_lazy = () -> ClearingCircuits1.mmObject();
+		}
+
+		@Override
+		public List<ClearingCircuits1> getValue(ExternalPaymentSystemDetails1 obj) {
+			return obj.getClearingCircuits();
+		}
+
+		@Override
+		public void setValue(ExternalPaymentSystemDetails1 obj, List<ClearingCircuits1> value) {
+			obj.setClearingCircuits(value);
 		}
 	};
 
@@ -184,7 +205,7 @@ public class ExternalPaymentSystemDetails1 {
 		return clearingCircuits == null ? clearingCircuits = new ArrayList<>() : clearingCircuits;
 	}
 
-	public ExternalPaymentSystemDetails1 setClearingCircuits(List<com.tools20022.repository.msg.ClearingCircuits1> clearingCircuits) {
+	public ExternalPaymentSystemDetails1 setClearingCircuits(List<ClearingCircuits1> clearingCircuits) {
 		this.clearingCircuits = Objects.requireNonNull(clearingCircuits);
 		return this;
 	}

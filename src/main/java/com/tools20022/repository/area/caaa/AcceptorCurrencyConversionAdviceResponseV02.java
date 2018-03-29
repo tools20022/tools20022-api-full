@@ -17,7 +17,6 @@
 
 package com.tools20022.repository.area.caaa;
 
-import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
@@ -27,7 +26,7 @@ import com.tools20022.repository.msg.AcceptorCancellationAdviceResponse7;
 import com.tools20022.repository.msg.ContentInformationType16;
 import com.tools20022.repository.msg.Header36;
 import com.tools20022.repository.msgset.CAPEMaintenance20172018;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -60,6 +59,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion
+ * CardPaymentsExchangesAcceptortoAcquirerISOLatestversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.CAPEMaintenance20172018
  * CAPEMaintenance20172018}</li>
  * </ul>
@@ -76,12 +78,9 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.019.001.02}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
- * semanticMarkup} = type=prefix, prefix=DRAFT1</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorCurrencyConversionAdviceResponseV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -129,7 +128,7 @@ public class AcceptorCurrencyConversionAdviceResponseV02 {
 	 * AcceptorCurrencyConversionAdviceResponseV01.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCurrencyConversionAdviceResponseV02, Header36> mmHeader = new MMMessageBuildingBlock<AcceptorCurrencyConversionAdviceResponseV02, Header36>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,12 +140,14 @@ public class AcceptorCurrencyConversionAdviceResponseV02 {
 			complexType_lazy = () -> Header36.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCurrencyConversionAdviceResponseV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header36 getValue(AcceptorCurrencyConversionAdviceResponseV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorCurrencyConversionAdviceResponseV02 obj, Header36 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "CcyConvsAdvcRspn", required = true)
@@ -181,7 +182,7 @@ public class AcceptorCurrencyConversionAdviceResponseV02 {
 	 * mmCurrencyConversionAdviceResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCurrencyConversionAdviceResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCurrencyConversionAdviceResponseV02, AcceptorCancellationAdviceResponse7> mmCurrencyConversionAdviceResponse = new MMMessageBuildingBlock<AcceptorCurrencyConversionAdviceResponseV02, AcceptorCancellationAdviceResponse7>() {
 		{
 			xmlTag = "CcyConvsAdvcRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,12 +194,14 @@ public class AcceptorCurrencyConversionAdviceResponseV02 {
 			complexType_lazy = () -> AcceptorCancellationAdviceResponse7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCurrencyConversionAdviceResponseV02.class.getMethod("getCurrencyConversionAdviceResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorCancellationAdviceResponse7 getValue(AcceptorCurrencyConversionAdviceResponseV02 obj) {
+			return obj.getCurrencyConversionAdviceResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorCurrencyConversionAdviceResponseV02 obj, AcceptorCancellationAdviceResponse7 value) {
+			obj.setCurrencyConversionAdviceResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -231,7 +234,7 @@ public class AcceptorCurrencyConversionAdviceResponseV02 {
 	 * AcceptorCurrencyConversionAdviceResponseV01.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCurrencyConversionAdviceResponseV02, Optional<ContentInformationType16>> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorCurrencyConversionAdviceResponseV02, Optional<ContentInformationType16>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,24 +246,25 @@ public class AcceptorCurrencyConversionAdviceResponseV02 {
 			complexType_lazy = () -> ContentInformationType16.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCurrencyConversionAdviceResponseV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType16> getValue(AcceptorCurrencyConversionAdviceResponseV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorCurrencyConversionAdviceResponseV02 obj, Optional<ContentInformationType16> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT1"}));
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCurrencyConversionAdviceResponseV02";
 				definition = "The AcceptorCurrencyConversionAdviceResponse message is sent by the service provider to acknowledge the acceptor about the notification of the reception of the currency conversion advice.";
 				previousVersion_lazy = () -> AcceptorCurrencyConversionAdviceResponseV01.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEMaintenance20172018.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOLatestversion.mmObject(), CAPEMaintenance20172018.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCcyConvsAdvcRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();

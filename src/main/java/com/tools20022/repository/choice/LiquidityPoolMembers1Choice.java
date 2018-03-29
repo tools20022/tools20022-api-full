@@ -100,7 +100,7 @@ public class LiquidityPoolMembers1Choice {
 	 * definition} = "Information about head member of liquidity pool."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHeadMemberDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityPoolMembers1Choice, AccountOwnerAndIdentification1> mmHeadMemberDetails = new MMMessageAssociationEnd<LiquidityPoolMembers1Choice, AccountOwnerAndIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LiquidityPoolMembers1Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class LiquidityPoolMembers1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountOwnerAndIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountOwnerAndIdentification1 getValue(LiquidityPoolMembers1Choice obj) {
+			return obj.getHeadMemberDetails();
+		}
+
+		@Override
+		public void setValue(LiquidityPoolMembers1Choice obj, AccountOwnerAndIdentification1 value) {
+			obj.setHeadMemberDetails(value);
 		}
 	};
 	@XmlElement(name = "SubrdntMmbDtls", required = true)
@@ -143,7 +153,7 @@ public class LiquidityPoolMembers1Choice {
 	 * definition} = "List of subordinate liquidity pool member."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubordinateMemberDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityPoolMembers1Choice, AccountOwnerAndIdentificationList1> mmSubordinateMemberDetails = new MMMessageAssociationEnd<LiquidityPoolMembers1Choice, AccountOwnerAndIdentificationList1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LiquidityPoolMembers1Choice.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class LiquidityPoolMembers1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountOwnerAndIdentificationList1.mmObject();
+		}
+
+		@Override
+		public AccountOwnerAndIdentificationList1 getValue(LiquidityPoolMembers1Choice obj) {
+			return obj.getSubordinateMemberDetails();
+		}
+
+		@Override
+		public void setValue(LiquidityPoolMembers1Choice obj, AccountOwnerAndIdentificationList1 value) {
+			obj.setSubordinateMemberDetails(value);
 		}
 	};
 

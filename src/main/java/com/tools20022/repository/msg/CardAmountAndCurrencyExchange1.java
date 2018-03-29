@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyExchange3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class CardAmountAndCurrencyExchange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAmountAndCurrencyExchange1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<CardAmountAndCurrencyExchange1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmObject();
@@ -129,6 +130,16 @@ public class CardAmountAndCurrencyExchange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CardAmountAndCurrencyExchange1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CardAmountAndCurrencyExchange1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CcyXchg")
@@ -164,7 +175,7 @@ public class CardAmountAndCurrencyExchange1 {
 	 * definition} = "Reports on currency exchange information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAmountAndCurrencyExchange1, Optional<CurrencyExchange3>> mmCurrencyExchange = new MMMessageAssociationEnd<CardAmountAndCurrencyExchange1, Optional<CurrencyExchange3>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmObject();
@@ -176,7 +187,17 @@ public class CardAmountAndCurrencyExchange1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyExchange3.mmObject();
+			type_lazy = () -> CurrencyExchange3.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyExchange3> getValue(CardAmountAndCurrencyExchange1 obj) {
+			return obj.getCurrencyExchange();
+		}
+
+		@Override
+		public void setValue(CardAmountAndCurrencyExchange1 obj, Optional<CurrencyExchange3> value) {
+			obj.setCurrencyExchange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -214,7 +235,7 @@ public class CardAmountAndCurrencyExchange1 {
 	 * definition} = "Identification or qualification of the type of amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardAmountAndCurrencyExchange1, Optional<TypeOfAmount3Code>> mmType = new MMMessageAttribute<CardAmountAndCurrencyExchange1, Optional<TypeOfAmount3Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmObject();
@@ -226,6 +247,16 @@ public class CardAmountAndCurrencyExchange1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TypeOfAmount3Code.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfAmount3Code> getValue(CardAmountAndCurrencyExchange1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CardAmountAndCurrencyExchange1 obj, Optional<TypeOfAmount3Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 
@@ -257,7 +288,7 @@ public class CardAmountAndCurrencyExchange1 {
 		return currencyExchange == null ? Optional.empty() : Optional.of(currencyExchange);
 	}
 
-	public CardAmountAndCurrencyExchange1 setCurrencyExchange(com.tools20022.repository.msg.CurrencyExchange3 currencyExchange) {
+	public CardAmountAndCurrencyExchange1 setCurrencyExchange(CurrencyExchange3 currencyExchange) {
 		this.currencyExchange = currencyExchange;
 		return this;
 	}

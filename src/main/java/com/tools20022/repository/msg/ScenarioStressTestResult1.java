@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.CCPPortfolioStressTestingResultReportV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification166;
+import com.tools20022.repository.msg.PortfolioStressTestResult1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +112,7 @@ public class ScenarioStressTestResult1 {
 	 * definition} = "Identification of the stressed account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ScenarioStressTestResult1, GenericIdentification166> mmIdentification = new MMMessageAssociationEnd<ScenarioStressTestResult1, GenericIdentification166>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScenarioStressTestResult1.mmObject();
 			isDerived = false;
@@ -121,11 +123,21 @@ public class ScenarioStressTestResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification166.mmObject();
+			type_lazy = () -> GenericIdentification166.mmObject();
+		}
+
+		@Override
+		public GenericIdentification166 getValue(ScenarioStressTestResult1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ScenarioStressTestResult1 obj, GenericIdentification166 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrtflStrssTstRslt", required = true)
-	protected List<com.tools20022.repository.msg.PortfolioStressTestResult1> portfolioStressTestResult;
+	protected List<PortfolioStressTestResult1> portfolioStressTestResult;
 	/**
 	 * 
 	 <p>
@@ -155,7 +167,7 @@ public class ScenarioStressTestResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPortfolioStressTestResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ScenarioStressTestResult1, List<PortfolioStressTestResult1>> mmPortfolioStressTestResult = new MMMessageAssociationEnd<ScenarioStressTestResult1, List<PortfolioStressTestResult1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScenarioStressTestResult1.mmObject();
 			isDerived = false;
@@ -165,7 +177,17 @@ public class ScenarioStressTestResult1 {
 			definition = "Result from the application of a stress test scenario to the positions in a cleared portfolio.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PortfolioStressTestResult1.mmObject();
+			type_lazy = () -> PortfolioStressTestResult1.mmObject();
+		}
+
+		@Override
+		public List<PortfolioStressTestResult1> getValue(ScenarioStressTestResult1 obj) {
+			return obj.getPortfolioStressTestResult();
+		}
+
+		@Override
+		public void setValue(ScenarioStressTestResult1 obj, List<PortfolioStressTestResult1> value) {
+			obj.setPortfolioStressTestResult(value);
 		}
 	};
 
@@ -187,7 +209,7 @@ public class ScenarioStressTestResult1 {
 		return identification;
 	}
 
-	public ScenarioStressTestResult1 setIdentification(com.tools20022.repository.msg.GenericIdentification166 identification) {
+	public ScenarioStressTestResult1 setIdentification(GenericIdentification166 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -196,7 +218,7 @@ public class ScenarioStressTestResult1 {
 		return portfolioStressTestResult == null ? portfolioStressTestResult = new ArrayList<>() : portfolioStressTestResult;
 	}
 
-	public ScenarioStressTestResult1 setPortfolioStressTestResult(List<com.tools20022.repository.msg.PortfolioStressTestResult1> portfolioStressTestResult) {
+	public ScenarioStressTestResult1 setPortfolioStressTestResult(List<PortfolioStressTestResult1> portfolioStressTestResult) {
 		this.portfolioStressTestResult = Objects.requireNonNull(portfolioStressTestResult);
 		return this;
 	}

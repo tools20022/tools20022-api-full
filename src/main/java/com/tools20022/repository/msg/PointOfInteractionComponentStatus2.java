@@ -134,7 +134,7 @@ public class PointOfInteractionComponentStatus2 {
 	 * PointOfInteractionComponentStatus1.mmVersionNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentStatus2, Optional<Max256Text>> mmVersionNumber = new MMMessageAttribute<PointOfInteractionComponentStatus2, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmSystemVersion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmObject();
@@ -148,6 +148,16 @@ public class PointOfInteractionComponentStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(PointOfInteractionComponentStatus2 obj) {
+			return obj.getVersionNumber();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentStatus2 obj, Optional<Max256Text> value) {
+			obj.setVersionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -198,7 +208,7 @@ public class PointOfInteractionComponentStatus2 {
 	 * PointOfInteractionComponentStatus1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentStatus2, Optional<POIComponentStatus1Code>> mmStatus = new MMMessageAttribute<PointOfInteractionComponentStatus2, Optional<POIComponentStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus2.mmObject();
@@ -212,6 +222,16 @@ public class PointOfInteractionComponentStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> POIComponentStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<POIComponentStatus1Code> getValue(PointOfInteractionComponentStatus2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentStatus2 obj, Optional<POIComponentStatus1Code> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 

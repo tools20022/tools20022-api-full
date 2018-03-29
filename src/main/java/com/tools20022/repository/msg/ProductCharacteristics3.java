@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ProductCharacteristics1Choice;
 import com.tools20022.repository.entity.ProductCharacteristics;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Quantity10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -130,7 +131,7 @@ public class ProductCharacteristics3 {
 	 * ProductCharacteristics2.mmCharacteristic}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCharacteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductCharacteristics3, Optional<ProductCharacteristics1Choice>> mmCharacteristic = new MMMessageAttribute<ProductCharacteristics3, Optional<ProductCharacteristics1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProductCharacteristics.mmCharacteristics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics3.mmObject();
@@ -144,6 +145,16 @@ public class ProductCharacteristics3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ProductCharacteristics1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProductCharacteristics1Choice> getValue(ProductCharacteristics3 obj) {
+			return obj.getCharacteristic();
+		}
+
+		@Override
+		public void setValue(ProductCharacteristics3 obj, Optional<ProductCharacteristics1Choice> value) {
+			obj.setCharacteristic(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValMeasr")
@@ -188,7 +199,7 @@ public class ProductCharacteristics3 {
 	 * ProductCharacteristics2.mmValueMeasure}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductCharacteristics3, Optional<Quantity10>> mmValueMeasure = new MMMessageAttribute<ProductCharacteristics3, Optional<Quantity10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics3.mmObject();
 			isDerived = false;
@@ -200,7 +211,17 @@ public class ProductCharacteristics3 {
 			previousVersion_lazy = () -> ProductCharacteristics2.mmValueMeasure;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
+			complexType_lazy = () -> Quantity10.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity10> getValue(ProductCharacteristics3 obj) {
+			return obj.getValueMeasure();
+		}
+
+		@Override
+		public void setValue(ProductCharacteristics3 obj, Optional<Quantity10> value) {
+			obj.setValueMeasure(value.orElse(null));
 		}
 	};
 
@@ -233,7 +254,7 @@ public class ProductCharacteristics3 {
 		return valueMeasure == null ? Optional.empty() : Optional.of(valueMeasure);
 	}
 
-	public ProductCharacteristics3 setValueMeasure(com.tools20022.repository.msg.Quantity10 valueMeasure) {
+	public ProductCharacteristics3 setValueMeasure(Quantity10 valueMeasure) {
 		this.valueMeasure = valueMeasure;
 		return this;
 	}

@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReversalReasonInformation6;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -133,7 +134,7 @@ public class OriginalGroupInformation22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation22, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalGroupInformation22, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation22.mmObject();
@@ -145,6 +146,16 @@ public class OriginalGroupInformation22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation22 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation22 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -178,7 +189,7 @@ public class OriginalGroupInformation22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation22, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalGroupInformation22, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation22.mmObject();
 			isDerived = false;
@@ -189,6 +200,16 @@ public class OriginalGroupInformation22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation22 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation22 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCreDtTm")
@@ -225,7 +246,7 @@ public class OriginalGroupInformation22 {
 	 * definition} = "Date and time at which the original message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation22, Optional<ISODateTime>> mmOriginalCreationDateTime = new MMMessageAttribute<OriginalGroupInformation22, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation22.mmObject();
@@ -238,9 +259,19 @@ public class OriginalGroupInformation22 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		@Override
+		public Optional<ISODateTime> getValue(OriginalGroupInformation22 obj) {
+			return obj.getOriginalCreationDateTime();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation22 obj, Optional<ISODateTime> value) {
+			obj.setOriginalCreationDateTime(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "RvslRsnInf")
-	protected List<com.tools20022.repository.msg.ReversalReasonInformation6> reversalReasonInformation;
+	protected List<ReversalReasonInformation6> reversalReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -275,7 +306,7 @@ public class OriginalGroupInformation22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversalReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupInformation22, List<ReversalReasonInformation6>> mmReversalReasonInformation = new MMMessageAssociationEnd<OriginalGroupInformation22, List<ReversalReasonInformation6>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation22.mmObject();
@@ -286,7 +317,17 @@ public class OriginalGroupInformation22 {
 			definition = "Set of elements used to provide detailed information on the reversal reason.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation6.mmObject();
+			type_lazy = () -> ReversalReasonInformation6.mmObject();
+		}
+
+		@Override
+		public List<ReversalReasonInformation6> getValue(OriginalGroupInformation22 obj) {
+			return obj.getReversalReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation22 obj, List<ReversalReasonInformation6> value) {
+			obj.setReversalReasonInformation(value);
 		}
 	};
 
@@ -338,7 +379,7 @@ public class OriginalGroupInformation22 {
 		return reversalReasonInformation == null ? reversalReasonInformation = new ArrayList<>() : reversalReasonInformation;
 	}
 
-	public OriginalGroupInformation22 setReversalReasonInformation(List<com.tools20022.repository.msg.ReversalReasonInformation6> reversalReasonInformation) {
+	public OriginalGroupInformation22 setReversalReasonInformation(List<ReversalReasonInformation6> reversalReasonInformation) {
 		this.reversalReasonInformation = Objects.requireNonNull(reversalReasonInformation);
 		return this;
 	}

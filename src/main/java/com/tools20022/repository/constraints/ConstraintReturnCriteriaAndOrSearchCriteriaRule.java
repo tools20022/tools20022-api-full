@@ -53,11 +53,15 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<AccountCriteria2> forAccountCriteria2 = new MMConstraint<AccountCriteria2>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkAccountCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			owner_lazy = () -> AccountCriteria2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountCriteria2 obj) throws Exception {
+			checkAccountCriteria2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<AccountCriteria3> forAccountCriteria3 = new MMConstraint<AccountCriteria3>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkAccountCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			owner_lazy = () -> AccountCriteria3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountCriteria3 obj) throws Exception {
+			checkAccountCriteria3(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<AccountCriteria4> forAccountCriteria4 = new MMConstraint<AccountCriteria4>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkAccountCriteria4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			owner_lazy = () -> AccountCriteria4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountCriteria4 obj) throws Exception {
+			checkAccountCriteria4(obj);
 		}
 	};
 	/**
@@ -155,13 +167,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<AccountCriteria5> forAccountCriteria5 = new MMConstraint<AccountCriteria5>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkAccountCriteria5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forAccountCriteria6);
 			owner_lazy = () -> AccountCriteria5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountCriteria5 obj) throws Exception {
+			checkAccountCriteria5(obj);
 		}
 	};
 	/**
@@ -187,11 +203,15 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<BusinessDayInformationCriteria> forBusinessDayInformationCriteria = new MMConstraint<BusinessDayInformationCriteria>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkBusinessDayInformationCriteria;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			owner_lazy = () -> BusinessDayInformationCriteria.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BusinessDayInformationCriteria obj) throws Exception {
+			checkBusinessDayInformationCriteria(obj);
 		}
 	};
 	/**
@@ -229,13 +249,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<BusinessDayCriteria1> forBusinessDayCriteria1 = new MMConstraint<BusinessDayCriteria1>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkBusinessDayCriteria1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forBusinessDayCriteria2);
 			owner_lazy = () -> BusinessDayCriteria1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BusinessDayCriteria1 obj) throws Exception {
+			checkBusinessDayCriteria1(obj);
 		}
 	};
 	/**
@@ -260,11 +284,15 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<LimitCriteria1> forLimitCriteria1 = new MMConstraint<LimitCriteria1>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkLimitCriteria1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			owner_lazy = () -> LimitCriteria1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria1 obj) throws Exception {
+			checkLimitCriteria1(obj);
 		}
 	};
 	/**
@@ -289,11 +317,15 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<LimitCriteria2> forLimitCriteria2 = new MMConstraint<LimitCriteria2>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkLimitCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			owner_lazy = () -> LimitCriteria2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria2 obj) throws Exception {
+			checkLimitCriteria2(obj);
 		}
 	};
 	/**
@@ -330,13 +362,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<LimitCriteria3> forLimitCriteria3 = new MMConstraint<LimitCriteria3>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkLimitCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forLimitCriteria4);
 			owner_lazy = () -> LimitCriteria3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria3 obj) throws Exception {
+			checkLimitCriteria3(obj);
 		}
 	};
 	/**
@@ -362,11 +398,15 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<ReservationCriteria1> forReservationCriteria1 = new MMConstraint<ReservationCriteria1>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkReservationCriteria1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			owner_lazy = () -> ReservationCriteria1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReservationCriteria1 obj) throws Exception {
+			checkReservationCriteria1(obj);
 		}
 	};
 	/**
@@ -404,13 +444,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<ReservationCriteria2> forReservationCriteria2 = new MMConstraint<ReservationCriteria2>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkReservationCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forReservationCriteria3);
 			owner_lazy = () -> ReservationCriteria2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ReservationCriteria2 obj) throws Exception {
+			checkReservationCriteria2(obj);
 		}
 	};
 	/**
@@ -449,13 +493,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<StandingOrderCriteria1> forStandingOrderCriteria1 = new MMConstraint<StandingOrderCriteria1>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkStandingOrderCriteria1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forStandingOrderCriteria2);
 			owner_lazy = () -> StandingOrderCriteria1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingOrderCriteria1 obj) throws Exception {
+			checkStandingOrderCriteria1(obj);
 		}
 	};
 	/**
@@ -488,12 +536,16 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<MemberCriteria> forMemberCriteria = new MMConstraint<MemberCriteria>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkMemberCriteria;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forMemberCriteria3);
 			owner_lazy = () -> MemberCriteria.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MemberCriteria obj) throws Exception {
+			checkMemberCriteria(obj);
 		}
 	};
 	/**
@@ -528,12 +580,16 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<BusinessInformationCriteria> forBusinessInformationCriteria = new MMConstraint<BusinessInformationCriteria>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkBusinessInformationCriteria;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forBusinessInformationCriteria1);
 			owner_lazy = () -> BusinessInformationCriteria.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BusinessInformationCriteria obj) throws Exception {
+			checkBusinessInformationCriteria(obj);
 		}
 	};
 	/**
@@ -559,11 +615,15 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<MemberCriteria2> forMemberCriteria2 = new MMConstraint<MemberCriteria2>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkMemberCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			owner_lazy = () -> MemberCriteria2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MemberCriteria2 obj) throws Exception {
+			checkMemberCriteria2(obj);
 		}
 	};
 	/**
@@ -605,7 +665,6 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<LimitCriteria4> forLimitCriteria4 = new MMConstraint<LimitCriteria4>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkLimitCriteria4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
@@ -613,6 +672,11 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forLimitCriteria3;
 			owner_lazy = () -> LimitCriteria4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria4 obj) throws Exception {
+			checkLimitCriteria4(obj);
 		}
 	};
 	/**
@@ -648,13 +712,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<StandingOrderCriteria2> forStandingOrderCriteria2 = new MMConstraint<StandingOrderCriteria2>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkStandingOrderCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forStandingOrderCriteria1;
 			owner_lazy = () -> StandingOrderCriteria2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingOrderCriteria2 obj) throws Exception {
+			checkStandingOrderCriteria2(obj);
 		}
 	};
 	/**
@@ -685,12 +753,16 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<MemberCriteria3> forMemberCriteria3 = new MMConstraint<MemberCriteria3>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkMemberCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forMemberCriteria;
 			owner_lazy = () -> MemberCriteria3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MemberCriteria3 obj) throws Exception {
+			checkMemberCriteria3(obj);
 		}
 	};
 	/**
@@ -725,13 +797,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<AccountCriteria6> forAccountCriteria6 = new MMConstraint<AccountCriteria6>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkAccountCriteria6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forAccountCriteria5;
 			owner_lazy = () -> AccountCriteria6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountCriteria6 obj) throws Exception {
+			checkAccountCriteria6(obj);
 		}
 	};
 	/**
@@ -766,13 +842,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<BusinessDayCriteria2> forBusinessDayCriteria2 = new MMConstraint<BusinessDayCriteria2>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkBusinessDayCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forBusinessDayCriteria1;
 			owner_lazy = () -> BusinessDayCriteria2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BusinessDayCriteria2 obj) throws Exception {
+			checkBusinessDayCriteria2(obj);
 		}
 	};
 	/**
@@ -804,12 +884,16 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<BusinessInformationCriteria1> forBusinessInformationCriteria1 = new MMConstraint<BusinessInformationCriteria1>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkBusinessInformationCriteria1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forBusinessInformationCriteria;
 			owner_lazy = () -> BusinessInformationCriteria1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BusinessInformationCriteria1 obj) throws Exception {
+			checkBusinessInformationCriteria1(obj);
 		}
 	};
 	/**
@@ -844,13 +928,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<ReservationCriteria3> forReservationCriteria3 = new MMConstraint<ReservationCriteria3>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkReservationCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forReservationCriteria2;
 			owner_lazy = () -> ReservationCriteria3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ReservationCriteria3 obj) throws Exception {
+			checkReservationCriteria3(obj);
 		}
 	};
 	/**
@@ -884,13 +972,17 @@ public class ConstraintReturnCriteriaAndOrSearchCriteriaRule {
 	 */
 	public static final MMConstraint<LimitCriteria5> forLimitCriteria5 = new MMConstraint<LimitCriteria5>() {
 		{
-			validator = ConstraintReturnCriteriaAndOrSearchCriteriaRule::checkLimitCriteria5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteriaAndOrSearchCriteriaRule";
 			definition = "If ReturnCriteria is not present, then at least one occurrence of SearchCriteria must be present. If ReturnCriteria is present, then any occurrence of SearchCriteria is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReturnCriteriaAndOrSearchCriteriaRule.forLimitCriteria4;
 			owner_lazy = () -> LimitCriteria5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria5 obj) throws Exception {
+			checkLimitCriteria5(obj);
 		}
 	};
 

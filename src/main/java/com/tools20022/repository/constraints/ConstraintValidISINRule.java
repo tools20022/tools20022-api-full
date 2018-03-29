@@ -50,11 +50,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<InflationIndex1Choice> forInflationIndex1Choice = new MMConstraint<InflationIndex1Choice>() {
 		{
-			validator = ConstraintValidISINRule::checkInflationIndex1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> InflationIndex1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InflationIndex1Choice obj) throws Exception {
+			checkInflationIndex1Choice(obj);
 		}
 	};
 	/**
@@ -78,11 +82,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<SecurityInstrumentDescription9> forSecurityInstrumentDescription9 = new MMConstraint<SecurityInstrumentDescription9>() {
 		{
-			validator = ConstraintValidISINRule::checkSecurityInstrumentDescription9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> SecurityInstrumentDescription9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityInstrumentDescription9 obj) throws Exception {
+			checkSecurityInstrumentDescription9(obj);
 		}
 	};
 	/**
@@ -106,11 +114,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<VolumeCapReport2> forVolumeCapReport2 = new MMConstraint<VolumeCapReport2>() {
 		{
-			validator = ConstraintValidISINRule::checkVolumeCapReport2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> VolumeCapReport2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(VolumeCapReport2 obj) throws Exception {
+			checkVolumeCapReport2(obj);
 		}
 	};
 	/**
@@ -134,11 +146,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<FinancialInstrument46Choice> forFinancialInstrument46Choice = new MMConstraint<FinancialInstrument46Choice>() {
 		{
-			validator = ConstraintValidISINRule::checkFinancialInstrument46Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> FinancialInstrument46Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument46Choice obj) throws Exception {
+			checkFinancialInstrument46Choice(obj);
 		}
 	};
 	/**
@@ -162,11 +178,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport11> forTransparencyDataReport11 = new MMConstraint<TransparencyDataReport11>() {
 		{
-			validator = ConstraintValidISINRule::checkTransparencyDataReport11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> TransparencyDataReport11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport11 obj) throws Exception {
+			checkTransparencyDataReport11(obj);
 		}
 	};
 	/**
@@ -190,11 +210,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport13> forTransparencyDataReport13 = new MMConstraint<TransparencyDataReport13>() {
 		{
-			validator = ConstraintValidISINRule::checkTransparencyDataReport13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> TransparencyDataReport13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport13 obj) throws Exception {
+			checkTransparencyDataReport13(obj);
 		}
 	};
 	/**
@@ -218,11 +242,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport12> forTransparencyDataReport12 = new MMConstraint<TransparencyDataReport12>() {
 		{
-			validator = ConstraintValidISINRule::checkTransparencyDataReport12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> TransparencyDataReport12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport12 obj) throws Exception {
+			checkTransparencyDataReport12(obj);
 		}
 	};
 	/**
@@ -246,11 +274,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport15> forTransparencyDataReport15 = new MMConstraint<TransparencyDataReport15>() {
 		{
-			validator = ConstraintValidISINRule::checkTransparencyDataReport15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> TransparencyDataReport15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport15 obj) throws Exception {
+			checkTransparencyDataReport15(obj);
 		}
 	};
 	/**
@@ -274,11 +306,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport10> forTransparencyDataReport10 = new MMConstraint<TransparencyDataReport10>() {
 		{
-			validator = ConstraintValidISINRule::checkTransparencyDataReport10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> TransparencyDataReport10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport10 obj) throws Exception {
+			checkTransparencyDataReport10(obj);
 		}
 	};
 	/**
@@ -302,11 +338,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport14> forTransparencyDataReport14 = new MMConstraint<TransparencyDataReport14>() {
 		{
-			validator = ConstraintValidISINRule::checkTransparencyDataReport14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> TransparencyDataReport14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport14 obj) throws Exception {
+			checkTransparencyDataReport14(obj);
 		}
 	};
 	/**
@@ -330,11 +370,15 @@ public class ConstraintValidISINRule {
 	 */
 	public static final MMConstraint<CreditDefaultSwapDerivative4> forCreditDefaultSwapDerivative4 = new MMConstraint<CreditDefaultSwapDerivative4>() {
 		{
-			validator = ConstraintValidISINRule::checkCreditDefaultSwapDerivative4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidISINRule";
 			definition = "ISIN code must pass checksum validation.";
 			owner_lazy = () -> CreditDefaultSwapDerivative4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditDefaultSwapDerivative4 obj) throws Exception {
+			checkCreditDefaultSwapDerivative4(obj);
 		}
 	};
 

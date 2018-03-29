@@ -117,7 +117,7 @@ public class FundOrderType3 {
 	 * definition} = "Specifies the category of the investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundOrderType3, FundOrderType4Code> mmOrderType = new MMMessageAttribute<FundOrderType3, FundOrderType4Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderType3.mmObject();
@@ -129,6 +129,16 @@ public class FundOrderType3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType4Code.mmObject();
+		}
+
+		@Override
+		public FundOrderType4Code getValue(FundOrderType3 obj) {
+			return obj.getOrderType();
+		}
+
+		@Override
+		public void setValue(FundOrderType3 obj, FundOrderType4Code value) {
+			obj.setOrderType(value);
 		}
 	};
 	@XmlElement(name = "XtndedOrdrTp", required = true)
@@ -165,7 +175,7 @@ public class FundOrderType3 {
 	 * definition} = "Specifies the category of the investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedOrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundOrderType3, Extended350Code> mmExtendedOrderType = new MMMessageAttribute<FundOrderType3, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderType3.mmObject();
@@ -177,6 +187,16 @@ public class FundOrderType3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(FundOrderType3 obj) {
+			return obj.getExtendedOrderType();
+		}
+
+		@Override
+		public void setValue(FundOrderType3 obj, Extended350Code value) {
+			obj.setExtendedOrderType(value);
 		}
 	};
 	/**

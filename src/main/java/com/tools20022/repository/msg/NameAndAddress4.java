@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class NameAndAddress4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NameAndAddress4, Optional<Max350Text>> mmName = new MMMessageAttribute<NameAndAddress4, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndAddress4.mmObject();
@@ -122,6 +123,16 @@ public class NameAndAddress4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(NameAndAddress4 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(NameAndAddress4 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Adr", required = true)
@@ -157,7 +168,7 @@ public class NameAndAddress4 {
 	 * definition} = "Postal address of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NameAndAddress4, PostalAddress1> mmAddress = new MMMessageAssociationEnd<NameAndAddress4, PostalAddress1>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndAddress4.mmObject();
@@ -169,7 +180,17 @@ public class NameAndAddress4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public PostalAddress1 getValue(NameAndAddress4 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(NameAndAddress4 obj, PostalAddress1 value) {
+			obj.setAddress(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class NameAndAddress4 {
 		return address;
 	}
 
-	public NameAndAddress4 setAddress(com.tools20022.repository.msg.PostalAddress1 address) {
+	public NameAndAddress4 setAddress(PostalAddress1 address) {
 		this.address = Objects.requireNonNull(address);
 		return this;
 	}

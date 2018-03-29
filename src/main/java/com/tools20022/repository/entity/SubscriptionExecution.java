@@ -25,7 +25,6 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -224,7 +223,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * definition} = "Amount subscribed into equity (not including dividends)."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEquityComponent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmEquityComponent = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionInformation.mmEquityComponent, SubscriptionInformation1.mmEquityComponent);
 			isDerived = false;
@@ -237,12 +236,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionExecution.class.getMethod("getEquityComponent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SubscriptionExecution obj) {
+			return obj.getEquityComponent();
+		}
+
+		@Override
+		public void setValue(SubscriptionExecution obj, CurrencyAndAmount value) {
+			obj.setEquityComponent(value);
 		}
 	};
 	protected CurrencyAndAmount cashComponent;
@@ -283,7 +284,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * definition} = "Amount subscribed into cash."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCashComponent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmCashComponent = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionInformation.mmCashComponent, SubscriptionInformation1.mmCashComponent);
 			isDerived = false;
@@ -296,12 +297,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionExecution.class.getMethod("getCashComponent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SubscriptionExecution obj) {
+			return obj.getCashComponent();
+		}
+
+		@Override
+		public void setValue(SubscriptionExecution obj, CurrencyAndAmount value) {
+			obj.setCashComponent(value);
 		}
 	};
 	protected CurrencyAndAmount investedNetAmount;
@@ -368,7 +371,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInvestedNetAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmInvestedNetAmount = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionExecution3.mmNetAmount, SubscriptionExecution5.mmNetAmount, SubscriptionExecution4.mmNetAmount, SubscriptionExecution6.mmNetAmount, SwitchSubscriptionLegExecution2.mmNetAmount,
 					SwitchSubscriptionLegExecution3.mmNetAmount, SubscriptionExecution9.mmNetAmount, SubscriptionExecution13.mmNetAmount, SubscriptionExecution12.mmNetAmount, SwitchSubscriptionLegExecution4.mmNetAmount);
@@ -382,12 +385,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionExecution.class.getMethod("getInvestedNetAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SubscriptionExecution obj) {
+			return obj.getInvestedNetAmount();
+		}
+
+		@Override
+		public void setValue(SubscriptionExecution obj, CurrencyAndAmount value) {
+			obj.setInvestedNetAmount(value);
 		}
 	};
 	protected CurrencyAndAmount refund;
@@ -444,7 +449,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRefund = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmRefund = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionExecution3.mmRefund, SubscriptionExecution5.mmRefund, SubscriptionExecution4.mmRefund, SubscriptionExecution6.mmRefund, SubscriptionExecution7.mmRefund,
 					SubscriptionExecution13.mmRefund, SubscriptionExecution12.mmRefund);
@@ -458,12 +463,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionExecution.class.getMethod("getRefund", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SubscriptionExecution obj) {
+			return obj.getRefund();
+		}
+
+		@Override
+		public void setValue(SubscriptionExecution obj, CurrencyAndAmount value) {
+			obj.setRefund(value);
 		}
 	};
 	protected CurrencyAndAmount subscriptionInterest;
@@ -521,7 +528,7 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSubscriptionInterest = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount> mmSubscriptionInterest = new MMBusinessAttribute<SubscriptionExecution, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SubscriptionExecution3.mmSubscriptionInterest, SubscriptionExecution5.mmSubscriptionInterest, SubscriptionExecution4.mmSubscriptionInterest, SubscriptionExecution6.mmSubscriptionInterest,
 					SubscriptionExecution7.mmSubscriptionInterest, SubscriptionExecution13.mmSubscriptionInterest, SubscriptionExecution12.mmSubscriptionInterest);
@@ -535,12 +542,14 @@ public class SubscriptionExecution extends InvestmentFundOrderExecution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionExecution.class.getMethod("getSubscriptionInterest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SubscriptionExecution obj) {
+			return obj.getSubscriptionInterest();
+		}
+
+		@Override
+		public void setValue(SubscriptionExecution obj, CurrencyAndAmount value) {
+			obj.setSubscriptionInterest(value);
 		}
 	};
 

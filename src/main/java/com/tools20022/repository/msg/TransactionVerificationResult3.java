@@ -126,7 +126,7 @@ public class TransactionVerificationResult3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult3, AuthenticationMethod4Code> mmMethod = new MMMessageAttribute<TransactionVerificationResult3, AuthenticationMethod4Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class TransactionVerificationResult3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod4Code.mmObject();
+		}
+
+		@Override
+		public AuthenticationMethod4Code getValue(TransactionVerificationResult3 obj) {
+			return obj.getMethod();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult3 obj, AuthenticationMethod4Code value) {
+			obj.setMethod(value);
 		}
 	};
 	@XmlElement(name = "VrfctnNtty")
@@ -178,7 +188,7 @@ public class TransactionVerificationResult3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVerificationEntity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult3, Optional<AuthenticationEntity2Code>> mmVerificationEntity = new MMMessageAttribute<TransactionVerificationResult3, Optional<AuthenticationEntity2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class TransactionVerificationResult3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AuthenticationEntity2Code.mmObject();
+		}
+
+		@Override
+		public Optional<AuthenticationEntity2Code> getValue(TransactionVerificationResult3 obj) {
+			return obj.getVerificationEntity();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult3 obj, Optional<AuthenticationEntity2Code> value) {
+			obj.setVerificationEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rslt")
@@ -230,7 +250,7 @@ public class TransactionVerificationResult3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult3, Optional<Verification1Code>> mmResult = new MMMessageAttribute<TransactionVerificationResult3, Optional<Verification1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class TransactionVerificationResult3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Verification1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Verification1Code> getValue(TransactionVerificationResult3 obj) {
+			return obj.getResult();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult3 obj, Optional<Verification1Code> value) {
+			obj.setResult(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRslt")
@@ -281,7 +311,7 @@ public class TransactionVerificationResult3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult3, Optional<Max500Text>> mmAdditionalResult = new MMMessageAttribute<TransactionVerificationResult3, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult3.mmObject();
 			isDerived = false;
@@ -293,6 +323,16 @@ public class TransactionVerificationResult3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(TransactionVerificationResult3 obj) {
+			return obj.getAdditionalResult();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult3 obj, Optional<Max500Text> value) {
+			obj.setAdditionalResult(value.orElse(null));
 		}
 	};
 

@@ -120,7 +120,7 @@ public class AmountsAndValueDate4 {
 	 * "Call amount and currency of a foreign exchange option trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCallAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountsAndValueDate4, ActiveOrHistoricCurrencyAndAmount> mmCallAmount = new MMMessageAttribute<AmountsAndValueDate4, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyOption.mmCallAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate4.mmObject();
@@ -132,6 +132,16 @@ public class AmountsAndValueDate4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(AmountsAndValueDate4 obj) {
+			return obj.getCallAmount();
+		}
+
+		@Override
+		public void setValue(AmountsAndValueDate4 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setCallAmount(value);
 		}
 	};
 	@XmlElement(name = "PutAmt", required = true)
@@ -170,7 +180,7 @@ public class AmountsAndValueDate4 {
 	 * "Put amount and currency of a foreign exchange option trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPutAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountsAndValueDate4, ActiveOrHistoricCurrencyAndAmount> mmPutAmount = new MMMessageAttribute<AmountsAndValueDate4, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyOption.mmPutAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate4.mmObject();
@@ -182,6 +192,16 @@ public class AmountsAndValueDate4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(AmountsAndValueDate4 obj) {
+			return obj.getPutAmount();
+		}
+
+		@Override
+		public void setValue(AmountsAndValueDate4 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setPutAmount(value);
 		}
 	};
 	@XmlElement(name = "OptnSttlmCcy")
@@ -221,7 +241,7 @@ public class AmountsAndValueDate4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountsAndValueDate4, Optional<ActiveOrHistoricCurrencyCode>> mmOptionSettlementCurrency = new MMMessageAttribute<AmountsAndValueDate4, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyOption.mmOptionSettlementCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate4.mmObject();
@@ -233,6 +253,16 @@ public class AmountsAndValueDate4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(AmountsAndValueDate4 obj) {
+			return obj.getOptionSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(AmountsAndValueDate4 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setOptionSettlementCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlSttlmDt", required = true)
@@ -270,7 +300,7 @@ public class AmountsAndValueDate4 {
 	 * "Date on which the trade is settled, ie, the amounts are due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountsAndValueDate4, ISODate> mmFinalSettlementDate = new MMMessageAttribute<AmountsAndValueDate4, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmFinalSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate4.mmObject();
@@ -282,6 +312,16 @@ public class AmountsAndValueDate4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(AmountsAndValueDate4 obj) {
+			return obj.getFinalSettlementDate();
+		}
+
+		@Override
+		public void setValue(AmountsAndValueDate4 obj, ISODate value) {
+			obj.setFinalSettlementDate(value);
 		}
 	};
 

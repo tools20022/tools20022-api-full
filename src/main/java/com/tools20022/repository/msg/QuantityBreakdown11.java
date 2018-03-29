@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.DateAndDateTime1Choice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification37;
+import com.tools20022.repository.msg.Price4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -119,7 +121,7 @@ public class QuantityBreakdown11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityBreakdown11, Optional<GenericIdentification37>> mmLotNumber = new MMMessageAttribute<QuantityBreakdown11, Optional<GenericIdentification37>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
@@ -131,7 +133,17 @@ public class QuantityBreakdown11 {
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
+			complexType_lazy = () -> GenericIdentification37.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification37> getValue(QuantityBreakdown11 obj) {
+			return obj.getLotNumber();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown11 obj, Optional<GenericIdentification37> value) {
+			obj.setLotNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotQty")
@@ -172,7 +184,7 @@ public class QuantityBreakdown11 {
 	 * "Quantity of financial instruments that is part of the lot described."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityBreakdown11, Optional<FinancialInstrumentQuantity1Choice>> mmLotQuantity = new MMMessageAssociationEnd<QuantityBreakdown11, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
@@ -186,6 +198,16 @@ public class QuantityBreakdown11 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(QuantityBreakdown11 obj) {
+			return obj.getLotQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown11 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setLotQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotDtTm")
@@ -226,7 +248,7 @@ public class QuantityBreakdown11 {
 	 * definition} = "Date/time at which the lot was purchased."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityBreakdown11, Optional<DateAndDateTime1Choice>> mmLotDateTime = new MMMessageAttribute<QuantityBreakdown11, Optional<DateAndDateTime1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
@@ -239,6 +261,16 @@ public class QuantityBreakdown11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime1Choice> getValue(QuantityBreakdown11 obj) {
+			return obj.getLotDateTime();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown11 obj, Optional<DateAndDateTime1Choice> value) {
+			obj.setLotDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotPric")
@@ -276,7 +308,7 @@ public class QuantityBreakdown11 {
 	 * definition} = "Price at which the lot was purchased."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityBreakdown11, Optional<Price4>> mmLotPrice = new MMMessageAssociationEnd<QuantityBreakdown11, Optional<Price4>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
@@ -289,7 +321,17 @@ public class QuantityBreakdown11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			type_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(QuantityBreakdown11 obj) {
+			return obj.getLotPrice();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown11 obj, Optional<Price4> value) {
+			obj.setLotPrice(value.orElse(null));
 		}
 	};
 
@@ -312,7 +354,7 @@ public class QuantityBreakdown11 {
 		return lotNumber == null ? Optional.empty() : Optional.of(lotNumber);
 	}
 
-	public QuantityBreakdown11 setLotNumber(com.tools20022.repository.msg.GenericIdentification37 lotNumber) {
+	public QuantityBreakdown11 setLotNumber(GenericIdentification37 lotNumber) {
 		this.lotNumber = lotNumber;
 		return this;
 	}
@@ -339,7 +381,7 @@ public class QuantityBreakdown11 {
 		return lotPrice == null ? Optional.empty() : Optional.of(lotPrice);
 	}
 
-	public QuantityBreakdown11 setLotPrice(com.tools20022.repository.msg.Price4 lotPrice) {
+	public QuantityBreakdown11 setLotPrice(Price4 lotPrice) {
 		this.lotPrice = lotPrice;
 		return this;
 	}

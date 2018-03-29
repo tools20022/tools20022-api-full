@@ -122,7 +122,7 @@ public class SubBalanceType11Choice {
 	 * SubBalanceType5Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceType11Choice, SecuritiesBalanceType12Code> mmCode = new MMMessageAttribute<SubBalanceType11Choice, SecuritiesBalanceType12Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceType11Choice.mmObject();
@@ -136,6 +136,16 @@ public class SubBalanceType11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType12Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType12Code getValue(SubBalanceType11Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SubBalanceType11Choice obj, SecuritiesBalanceType12Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -180,7 +190,7 @@ public class SubBalanceType11Choice {
 	 * SubBalanceType5Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceType11Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<SubBalanceType11Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceType11Choice.mmObject();
@@ -193,6 +203,16 @@ public class SubBalanceType11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(SubBalanceType11Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SubBalanceType11Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

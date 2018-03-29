@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -146,7 +145,7 @@ public class TradeLegNotificationCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegNotificationCancellationV03, PartyIdentification35Choice> mmClearingMember = new MMMessageBuildingBlock<TradeLegNotificationCancellationV03, PartyIdentification35Choice>() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +156,14 @@ public class TradeLegNotificationCancellationV03 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegNotificationCancellationV03.class.getMethod("getClearingMember", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification35Choice getValue(TradeLegNotificationCancellationV03 obj) {
+			return obj.getClearingMember();
+		}
+
+		@Override
+		public void setValue(TradeLegNotificationCancellationV03 obj, PartyIdentification35Choice value) {
+			obj.setClearingMember(value);
 		}
 	};
 	@XmlElement(name = "ClrAcct", required = true)
@@ -192,7 +193,7 @@ public class TradeLegNotificationCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegNotificationCancellationV03, SecuritiesAccount18> mmClearingAccount = new MMMessageBuildingBlock<TradeLegNotificationCancellationV03, SecuritiesAccount18>() {
 		{
 			xmlTag = "ClrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,12 +204,14 @@ public class TradeLegNotificationCancellationV03 {
 			complexType_lazy = () -> SecuritiesAccount18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegNotificationCancellationV03.class.getMethod("getClearingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount18 getValue(TradeLegNotificationCancellationV03 obj) {
+			return obj.getClearingAccount();
+		}
+
+		@Override
+		public void setValue(TradeLegNotificationCancellationV03 obj, SecuritiesAccount18 value) {
+			obj.setClearingAccount(value);
 		}
 	};
 	@XmlElement(name = "DlvryAcct")
@@ -238,7 +241,7 @@ public class TradeLegNotificationCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDeliveryAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegNotificationCancellationV03, Optional<SecuritiesAccount19>> mmDeliveryAccount = new MMMessageBuildingBlock<TradeLegNotificationCancellationV03, Optional<SecuritiesAccount19>>() {
 		{
 			xmlTag = "DlvryAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,12 +252,14 @@ public class TradeLegNotificationCancellationV03 {
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegNotificationCancellationV03.class.getMethod("getDeliveryAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SecuritiesAccount19> getValue(TradeLegNotificationCancellationV03 obj) {
+			return obj.getDeliveryAccount();
+		}
+
+		@Override
+		public void setValue(TradeLegNotificationCancellationV03 obj, Optional<SecuritiesAccount19> value) {
+			obj.setDeliveryAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonClrMmb")
@@ -284,7 +289,7 @@ public class TradeLegNotificationCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNonClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegNotificationCancellationV03, Optional<PartyIdentificationAndAccount31>> mmNonClearingMember = new MMMessageBuildingBlock<TradeLegNotificationCancellationV03, Optional<PartyIdentificationAndAccount31>>() {
 		{
 			xmlTag = "NonClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,12 +300,14 @@ public class TradeLegNotificationCancellationV03 {
 			complexType_lazy = () -> PartyIdentificationAndAccount31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegNotificationCancellationV03.class.getMethod("getNonClearingMember", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentificationAndAccount31> getValue(TradeLegNotificationCancellationV03 obj) {
+			return obj.getNonClearingMember();
+		}
+
+		@Override
+		public void setValue(TradeLegNotificationCancellationV03 obj, Optional<PartyIdentificationAndAccount31> value) {
+			obj.setNonClearingMember(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrDtls")
@@ -329,7 +336,7 @@ public class TradeLegNotificationCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegNotificationCancellationV03, Optional<Clearing4>> mmClearingDetails = new MMMessageBuildingBlock<TradeLegNotificationCancellationV03, Optional<Clearing4>>() {
 		{
 			xmlTag = "ClrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,12 +347,14 @@ public class TradeLegNotificationCancellationV03 {
 			complexType_lazy = () -> Clearing4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegNotificationCancellationV03.class.getMethod("getClearingDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Clearing4> getValue(TradeLegNotificationCancellationV03 obj) {
+			return obj.getClearingDetails();
+		}
+
+		@Override
+		public void setValue(TradeLegNotificationCancellationV03 obj, Optional<Clearing4> value) {
+			obj.setClearingDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradLegDtls", required = true)
@@ -374,7 +383,7 @@ public class TradeLegNotificationCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeLegDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegNotificationCancellationV03, TradeLeg8> mmTradeLegDetails = new MMMessageBuildingBlock<TradeLegNotificationCancellationV03, TradeLeg8>() {
 		{
 			xmlTag = "TradLegDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -385,12 +394,14 @@ public class TradeLegNotificationCancellationV03 {
 			complexType_lazy = () -> TradeLeg8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegNotificationCancellationV03.class.getMethod("getTradeLegDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeLeg8 getValue(TradeLegNotificationCancellationV03 obj) {
+			return obj.getTradeLegDetails();
+		}
+
+		@Override
+		public void setValue(TradeLegNotificationCancellationV03 obj, TradeLeg8 value) {
+			obj.setTradeLegDetails(value);
 		}
 	};
 	@XmlElement(name = "SttlmDtls", required = true)
@@ -419,7 +430,7 @@ public class TradeLegNotificationCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegNotificationCancellationV03, Settlement1> mmSettlementDetails = new MMMessageBuildingBlock<TradeLegNotificationCancellationV03, Settlement1>() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -430,12 +441,14 @@ public class TradeLegNotificationCancellationV03 {
 			complexType_lazy = () -> Settlement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegNotificationCancellationV03.class.getMethod("getSettlementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Settlement1 getValue(TradeLegNotificationCancellationV03 obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(TradeLegNotificationCancellationV03 obj, Settlement1 value) {
+			obj.setSettlementDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -465,7 +478,7 @@ public class TradeLegNotificationCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegNotificationCancellationV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<TradeLegNotificationCancellationV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -475,12 +488,14 @@ public class TradeLegNotificationCancellationV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegNotificationCancellationV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(TradeLegNotificationCancellationV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(TradeLegNotificationCancellationV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

@@ -118,7 +118,7 @@ public class PartiallySettledStatus10 {
 	 * RejectedStatus9.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartiallySettledStatus10, PartiallySettled21Choice> mmReason = new MMMessageAssociationEnd<PartiallySettledStatus10, PartiallySettled21Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmPartiallySettledStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartiallySettledStatus10.mmObject();
@@ -132,6 +132,16 @@ public class PartiallySettledStatus10 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartiallySettled21Choice.mmObject();
+		}
+
+		@Override
+		public PartiallySettled21Choice getValue(PartiallySettledStatus10 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PartiallySettledStatus10 obj, PartiallySettled21Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -174,7 +184,7 @@ public class PartiallySettledStatus10 {
 	 * RejectedStatus9.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartiallySettledStatus10, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<PartiallySettledStatus10, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartiallySettledStatus10.mmObject();
@@ -187,6 +197,16 @@ public class PartiallySettledStatus10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PartiallySettledStatus10 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PartiallySettledStatus10 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

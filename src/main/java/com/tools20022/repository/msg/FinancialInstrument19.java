@@ -130,7 +130,7 @@ public class FinancialInstrument19 {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument19, SecurityIdentification7Choice> mmIdentification = new MMMessageAttribute<FinancialInstrument19, SecurityIdentification7Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument19.mmObject();
@@ -142,6 +142,16 @@ public class FinancialInstrument19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7Choice getValue(FinancialInstrument19 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument19 obj, SecurityIdentification7Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -181,7 +191,7 @@ public class FinancialInstrument19 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument19, Optional<Max105Text>> mmName = new MMMessageAttribute<FinancialInstrument19, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument19.mmObject();
@@ -194,6 +204,16 @@ public class FinancialInstrument19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(FinancialInstrument19 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument19 obj, Optional<Max105Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClssTp")
@@ -233,7 +253,7 @@ public class FinancialInstrument19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument19, Optional<RestrictedFINMax30Text>> mmClassType = new MMMessageAttribute<FinancialInstrument19, Optional<RestrictedFINMax30Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument19.mmObject();
@@ -245,6 +265,16 @@ public class FinancialInstrument19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax30Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax30Text> getValue(FinancialInstrument19 obj) {
+			return obj.getClassType();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument19 obj, Optional<RestrictedFINMax30Text> value) {
+			obj.setClassType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesForm")
@@ -286,7 +316,7 @@ public class FinancialInstrument19 {
 	 * "Form, ie, ownership, of the security, eg, registered or bearer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument19, Optional<FormOfSecurity1Code>> mmSecuritiesForm = new MMMessageAttribute<FinancialInstrument19, Optional<FormOfSecurity1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument19.mmObject();
@@ -299,6 +329,16 @@ public class FinancialInstrument19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<FormOfSecurity1Code> getValue(FinancialInstrument19 obj) {
+			return obj.getSecuritiesForm();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument19 obj, Optional<FormOfSecurity1Code> value) {
+			obj.setSecuritiesForm(value.orElse(null));
 		}
 	};
 

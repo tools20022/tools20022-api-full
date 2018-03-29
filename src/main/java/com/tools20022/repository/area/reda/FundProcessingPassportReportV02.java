@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.FundProcessingPassport1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -141,7 +140,7 @@ public class FundProcessingPassportReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundProcessingPassportReportV02, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<FundProcessingPassportReportV02, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,12 +151,14 @@ public class FundProcessingPassportReportV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundProcessingPassportReportV02.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(FundProcessingPassportReportV02 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassportReportV02 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "FPP", required = true)
@@ -187,7 +188,7 @@ public class FundProcessingPassportReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFundProcessingPassport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FundProcessingPassportReportV02, List<FundProcessingPassport1>> mmFundProcessingPassport = new MMMessageBuildingBlock<FundProcessingPassportReportV02, List<FundProcessingPassport1>>() {
 		{
 			xmlTag = "FPP";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,12 +198,14 @@ public class FundProcessingPassportReportV02 {
 			complexType_lazy = () -> FundProcessingPassport1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FundProcessingPassportReportV02.class.getMethod("getFundProcessingPassport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<FundProcessingPassport1> getValue(FundProcessingPassportReportV02 obj) {
+			return obj.getFundProcessingPassport();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassportReportV02 obj, List<FundProcessingPassport1> value) {
+			obj.setFundProcessingPassport(value);
 		}
 	};
 

@@ -123,7 +123,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -134,6 +134,16 @@ public class UpdatedAdditionalInformation6SD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(UpdatedAdditionalInformation6SD3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation6SD3 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesCdtAcctId")
@@ -167,7 +177,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesCreditAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max50Text>> mmSecuritiesCreditAccountIdentification = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max50Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class UpdatedAdditionalInformation6SD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max50Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max50Text> getValue(UpdatedAdditionalInformation6SD3 obj) {
+			return obj.getSecuritiesCreditAccountIdentification();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation6SD3 obj, Optional<Max50Text> value) {
+			obj.setSecuritiesCreditAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OfferrShr")
@@ -212,7 +232,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfferorShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<ISINIdentifier>> mmOfferorShare = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<ISINIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -223,6 +243,16 @@ public class UpdatedAdditionalInformation6SD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<ISINIdentifier> getValue(UpdatedAdditionalInformation6SD3 obj) {
+			return obj.getOfferorShare();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation6SD3 obj, Optional<ISINIdentifier> value) {
+			obj.setOfferorShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OfferrShrLclCd")
@@ -257,7 +287,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfferorShareLocalCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max5AlphaNumericText>> mmOfferorShareLocalCode = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max5AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -268,6 +298,16 @@ public class UpdatedAdditionalInformation6SD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5AlphaNumericText> getValue(UpdatedAdditionalInformation6SD3 obj) {
+			return obj.getOfferorShareLocalCode();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation6SD3 obj, Optional<Max5AlphaNumericText> value) {
+			obj.setOfferorShareLocalCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclLangNm")
@@ -301,7 +341,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocalLanguageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max240Text>> mmLocalLanguageName = new MMMessageAttribute<UpdatedAdditionalInformation6SD3, Optional<Max240Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
@@ -312,6 +352,16 @@ public class UpdatedAdditionalInformation6SD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max240Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max240Text> getValue(UpdatedAdditionalInformation6SD3 obj) {
+			return obj.getLocalLanguageName();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation6SD3 obj, Optional<Max240Text> value) {
+			obj.setLocalLanguageName(value.orElse(null));
 		}
 	};
 

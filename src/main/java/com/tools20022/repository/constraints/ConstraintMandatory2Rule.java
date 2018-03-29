@@ -51,11 +51,15 @@ public class ConstraintMandatory2Rule {
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestV01> forInvoiceFinancingRequestV01 = new MMConstraint<InvoiceFinancingRequestV01>() {
 		{
-			validator = ConstraintMandatory2Rule::checkInvoiceFinancingRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory2Rule";
 			definition = "If RequestGroupInformation/FinancingRequester/IBAN\nis not present, then InvoiceRequestInformation/Supplier/IBAN must be present.\n.";
 			owner_lazy = () -> InvoiceFinancingRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvoiceFinancingRequestV01 obj) throws Exception {
+			checkInvoiceFinancingRequestV01(obj);
 		}
 	};
 

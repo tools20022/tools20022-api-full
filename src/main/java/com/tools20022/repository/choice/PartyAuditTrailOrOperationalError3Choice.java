@@ -118,7 +118,7 @@ public class PartyAuditTrailOrOperationalError3Choice {
 	 * PartyAuditTrailOrOperationalError2Choice.mmPartyAuditTrailReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyAuditTrailReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAuditTrailOrOperationalError3Choice, List<PartyAuditTrailReport3>> mmPartyAuditTrailReport = new MMMessageAssociationEnd<PartyAuditTrailOrOperationalError3Choice, List<PartyAuditTrailReport3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyAuditTrailOrOperationalError3Choice.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class PartyAuditTrailOrOperationalError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyAuditTrailReport3.mmObject();
+		}
+
+		@Override
+		public List<PartyAuditTrailReport3> getValue(PartyAuditTrailOrOperationalError3Choice obj) {
+			return obj.getPartyAuditTrailReport();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailOrOperationalError3Choice obj, List<PartyAuditTrailReport3> value) {
+			obj.setPartyAuditTrailReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -165,7 +175,7 @@ public class PartyAuditTrailOrOperationalError3Choice {
 	 * PartyAuditTrailOrOperationalError2Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAuditTrailOrOperationalError3Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<PartyAuditTrailOrOperationalError3Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyAuditTrailOrOperationalError3Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class PartyAuditTrailOrOperationalError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(PartyAuditTrailOrOperationalError3Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailOrOperationalError3Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max64Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IsabelSignatureHash1;
+import com.tools20022.repository.msg.IsabelSignatureRecord1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +115,7 @@ public class IsabelSignature2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelSignature2, IsabelSignatureHash1> mmHeader = new MMMessageAssociationEnd<IsabelSignature2, IsabelSignatureHash1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignature2.mmObject();
 			isDerived = false;
@@ -125,11 +127,21 @@ public class IsabelSignature2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelSignatureHash1.mmObject();
+			type_lazy = () -> IsabelSignatureHash1.mmObject();
+		}
+
+		@Override
+		public IsabelSignatureHash1 getValue(IsabelSignature2 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(IsabelSignature2 obj, IsabelSignatureHash1 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "Rcrd", required = true)
-	protected List<com.tools20022.repository.msg.IsabelSignatureRecord1> record;
+	protected List<IsabelSignatureRecord1> record;
 	/**
 	 * 
 	 <p>
@@ -163,7 +175,7 @@ public class IsabelSignature2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecord = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelSignature2, List<IsabelSignatureRecord1>> mmRecord = new MMMessageAssociationEnd<IsabelSignature2, List<IsabelSignatureRecord1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignature2.mmObject();
 			isDerived = false;
@@ -175,7 +187,17 @@ public class IsabelSignature2 {
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelSignatureRecord1.mmObject();
+			type_lazy = () -> IsabelSignatureRecord1.mmObject();
+		}
+
+		@Override
+		public List<IsabelSignatureRecord1> getValue(IsabelSignature2 obj) {
+			return obj.getRecord();
+		}
+
+		@Override
+		public void setValue(IsabelSignature2 obj, List<IsabelSignatureRecord1> value) {
+			obj.setRecord(value);
 		}
 	};
 	@XmlElement(name = "RandBlck", required = true)
@@ -215,7 +237,7 @@ public class IsabelSignature2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRandomBlock = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSignature2, Max64Text> mmRandomBlock = new MMMessageAttribute<IsabelSignature2, Max64Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignature2.mmObject();
 			isDerived = false;
@@ -227,6 +249,16 @@ public class IsabelSignature2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max64Text.mmObject();
+		}
+
+		@Override
+		public Max64Text getValue(IsabelSignature2 obj) {
+			return obj.getRandomBlock();
+		}
+
+		@Override
+		public void setValue(IsabelSignature2 obj, Max64Text value) {
+			obj.setRandomBlock(value);
 		}
 	};
 
@@ -248,7 +280,7 @@ public class IsabelSignature2 {
 		return header;
 	}
 
-	public IsabelSignature2 setHeader(com.tools20022.repository.msg.IsabelSignatureHash1 header) {
+	public IsabelSignature2 setHeader(IsabelSignatureHash1 header) {
 		this.header = Objects.requireNonNull(header);
 		return this;
 	}
@@ -257,7 +289,7 @@ public class IsabelSignature2 {
 		return record == null ? record = new ArrayList<>() : record;
 	}
 
-	public IsabelSignature2 setRecord(List<com.tools20022.repository.msg.IsabelSignatureRecord1> record) {
+	public IsabelSignature2 setRecord(List<IsabelSignatureRecord1> record) {
 		this.record = Objects.requireNonNull(record);
 		return this;
 	}

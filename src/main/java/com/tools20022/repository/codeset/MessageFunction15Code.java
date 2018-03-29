@@ -94,7 +94,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MessageFunction15Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -503,7 +503,7 @@ public class MessageFunction15Code extends MMCode {
 			{
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FAUQ");
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction15Code";
 				definition = "Type of message supporting a service.";
 				previousVersion_lazy = () -> MessageFunction12Code.mmObject();

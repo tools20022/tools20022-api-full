@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EUCapitalGain1;
+import com.tools20022.repository.msg.TaxationBasis1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -111,7 +113,7 @@ public class TaxCalculationInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation3, Optional<TaxationBasis1>> mmBasis = new MMMessageAttribute<TaxCalculationInformation3, Optional<TaxationBasis1>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation3.mmObject();
@@ -122,7 +124,17 @@ public class TaxCalculationInformation3 {
 			definition = "Basis used to determine the capital gain or loss, eg, the purchase price.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxationBasis1.mmObject();
+			complexType_lazy = () -> TaxationBasis1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxationBasis1> getValue(TaxCalculationInformation3 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation3 obj, Optional<TaxationBasis1> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EUCptlGn")
@@ -161,7 +173,7 @@ public class TaxCalculationInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation3, Optional<EUCapitalGain1>> mmEUCapitalGain = new MMMessageAttribute<TaxCalculationInformation3, Optional<EUCapitalGain1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation3.mmObject();
@@ -172,7 +184,17 @@ public class TaxCalculationInformation3 {
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.EUCapitalGain1.mmObject();
+			complexType_lazy = () -> EUCapitalGain1.mmObject();
+		}
+
+		@Override
+		public Optional<EUCapitalGain1> getValue(TaxCalculationInformation3 obj) {
+			return obj.getEUCapitalGain();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation3 obj, Optional<EUCapitalGain1> value) {
+			obj.setEUCapitalGain(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblAmt")
@@ -210,7 +232,7 @@ public class TaxCalculationInformation3 {
 	 * definition} = "Amount of money that it is to be taxed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation3, Optional<ActiveCurrencyAnd13DecimalAmount>> mmTaxableAmount = new MMMessageAttribute<TaxCalculationInformation3, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation3.mmObject();
@@ -222,6 +244,16 @@ public class TaxCalculationInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(TaxCalculationInformation3 obj) {
+			return obj.getTaxableAmount();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation3 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setTaxableAmount(value.orElse(null));
 		}
 	};
 
@@ -244,7 +276,7 @@ public class TaxCalculationInformation3 {
 		return basis == null ? Optional.empty() : Optional.of(basis);
 	}
 
-	public TaxCalculationInformation3 setBasis(com.tools20022.repository.msg.TaxationBasis1 basis) {
+	public TaxCalculationInformation3 setBasis(TaxationBasis1 basis) {
 		this.basis = basis;
 		return this;
 	}
@@ -253,7 +285,7 @@ public class TaxCalculationInformation3 {
 		return eUCapitalGain == null ? Optional.empty() : Optional.of(eUCapitalGain);
 	}
 
-	public TaxCalculationInformation3 setEUCapitalGain(com.tools20022.repository.msg.EUCapitalGain1 eUCapitalGain) {
+	public TaxCalculationInformation3 setEUCapitalGain(EUCapitalGain1 eUCapitalGain) {
 		this.eUCapitalGain = eUCapitalGain;
 		return this;
 	}

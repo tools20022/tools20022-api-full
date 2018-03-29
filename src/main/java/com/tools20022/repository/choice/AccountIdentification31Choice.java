@@ -127,7 +127,7 @@ public class AccountIdentification31Choice {
 	 * AccountIdentification1Choice.mmIBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification31Choice, IBANIdentifier> mmIBAN = new MMMessageAttribute<AccountIdentification31Choice, IBANIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification31Choice.mmObject();
@@ -140,6 +140,16 @@ public class AccountIdentification31Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
+		}
+
+		@Override
+		public IBANIdentifier getValue(AccountIdentification31Choice obj) {
+			return obj.getIBAN();
+		}
+
+		@Override
+		public void setValue(AccountIdentification31Choice obj, IBANIdentifier value) {
+			obj.setIBAN(value);
 		}
 	};
 	@XmlElement(name = "BBAN", required = true)
@@ -184,7 +194,7 @@ public class AccountIdentification31Choice {
 	 * AccountIdentification1Choice.mmBBAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification31Choice, BBANIdentifier> mmBBAN = new MMMessageAttribute<AccountIdentification31Choice, BBANIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmBBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification31Choice.mmObject();
@@ -197,6 +207,16 @@ public class AccountIdentification31Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
+		}
+
+		@Override
+		public BBANIdentifier getValue(AccountIdentification31Choice obj) {
+			return obj.getBBAN();
+		}
+
+		@Override
+		public void setValue(AccountIdentification31Choice obj, BBANIdentifier value) {
+			obj.setBBAN(value);
 		}
 	};
 	@XmlElement(name = "UPIC", required = true)
@@ -241,7 +261,7 @@ public class AccountIdentification31Choice {
 	 * AccountIdentification1Choice.mmUPIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification31Choice, UPICIdentifier> mmUPIC = new MMMessageAttribute<AccountIdentification31Choice, UPICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmUPIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification31Choice.mmObject();
@@ -254,6 +274,16 @@ public class AccountIdentification31Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
+		}
+
+		@Override
+		public UPICIdentifier getValue(AccountIdentification31Choice obj) {
+			return obj.getUPIC();
+		}
+
+		@Override
+		public void setValue(AccountIdentification31Choice obj, UPICIdentifier value) {
+			obj.setUPIC(value);
 		}
 	};
 	@XmlElement(name = "DmstAcct", required = true)
@@ -298,7 +328,7 @@ public class AccountIdentification31Choice {
 	 * AccountIdentification1Choice.mmDomesticAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomesticAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification31Choice, SimpleIdentificationInformation4> mmDomesticAccount = new MMMessageAttribute<AccountIdentification31Choice, SimpleIdentificationInformation4>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification31Choice.mmObject();
@@ -311,6 +341,16 @@ public class AccountIdentification31Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation4.mmObject();
+		}
+
+		@Override
+		public SimpleIdentificationInformation4 getValue(AccountIdentification31Choice obj) {
+			return obj.getDomesticAccount();
+		}
+
+		@Override
+		public void setValue(AccountIdentification31Choice obj, SimpleIdentificationInformation4 value) {
+			obj.setDomesticAccount(value);
 		}
 	};
 

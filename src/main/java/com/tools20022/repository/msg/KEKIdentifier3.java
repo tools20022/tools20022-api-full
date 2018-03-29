@@ -118,7 +118,7 @@ public class KEKIdentifier3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KEKIdentifier3, Optional<Max140Text>> mmName = new MMMessageAttribute<KEKIdentifier3, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class KEKIdentifier3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(KEKIdentifier3 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(KEKIdentifier3 obj, Optional<Max140Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -173,7 +183,7 @@ public class KEKIdentifier3 {
 	 * KEKIdentifier2.mmKeyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KEKIdentifier3, Max140Text> mmIdentification = new MMMessageAttribute<KEKIdentifier3, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class KEKIdentifier3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(KEKIdentifier3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(KEKIdentifier3 obj, Max140Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -229,7 +249,7 @@ public class KEKIdentifier3 {
 	 * KEKIdentifier2.mmKeyVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KEKIdentifier3, Optional<Max140Text>> mmVersion = new MMMessageAttribute<KEKIdentifier3, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class KEKIdentifier3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(KEKIdentifier3 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(KEKIdentifier3 obj, Optional<Max140Text> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KeyChckVal")
@@ -274,7 +304,7 @@ public class KEKIdentifier3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyCheckValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KEKIdentifier3, Optional<Max35Binary>> mmKeyCheckValue = new MMMessageAttribute<KEKIdentifier3, Optional<Max35Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
 			isDerived = false;
@@ -285,6 +315,16 @@ public class KEKIdentifier3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Binary> getValue(KEKIdentifier3 obj) {
+			return obj.getKeyCheckValue();
+		}
+
+		@Override
+		public void setValue(KEKIdentifier3 obj, Optional<Max35Binary> value) {
+			obj.setKeyCheckValue(value.orElse(null));
 		}
 	};
 

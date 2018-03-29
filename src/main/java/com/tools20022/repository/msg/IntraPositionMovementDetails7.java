@@ -25,6 +25,9 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection9;
+import com.tools20022.repository.msg.GenericIdentification37;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -163,7 +166,7 @@ public class IntraPositionMovementDetails7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<References27Choice>> mmIdentification = new MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<References27Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
@@ -176,6 +179,16 @@ public class IntraPositionMovementDetails7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> References27Choice.mmObject();
+		}
+
+		@Override
+		public Optional<References27Choice> getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, Optional<References27Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttldQty", required = true)
@@ -212,7 +225,7 @@ public class IntraPositionMovementDetails7 {
 	 * definition} = "Quantity of financial instrument effectively settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, FinancialInstrumentQuantity1Choice> mmSettledQuantity = new MMMessageAssociationEnd<IntraPositionMovementDetails7, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
@@ -225,6 +238,16 @@ public class IntraPositionMovementDetails7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getSettledQuantity();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setSettledQuantity(value);
 		}
 	};
 	@XmlElement(name = "PrevslySttldQty")
@@ -261,7 +284,7 @@ public class IntraPositionMovementDetails7 {
 	 * definition} = "Quantity of financial instrument previously settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviouslySettledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<FinancialInstrumentQuantity1Choice>> mmPreviouslySettledQuantity = new MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
@@ -274,6 +297,16 @@ public class IntraPositionMovementDetails7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getPreviouslySettledQuantity();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setPreviouslySettledQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmngToBeSttldQty")
@@ -311,7 +344,7 @@ public class IntraPositionMovementDetails7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRemainingToBeSettledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<FinancialInstrumentQuantity1Choice>> mmRemainingToBeSettledQuantity = new MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
@@ -324,6 +357,16 @@ public class IntraPositionMovementDetails7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getRemainingToBeSettledQuantity();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setRemainingToBeSettledQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesSubBalId")
@@ -357,7 +400,7 @@ public class IntraPositionMovementDetails7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesSubBalanceIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<GenericIdentification37>> mmSecuritiesSubBalanceIdentification = new MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<GenericIdentification37>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
 			isDerived = false;
@@ -368,7 +411,17 @@ public class IntraPositionMovementDetails7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
+			type_lazy = () -> GenericIdentification37.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification37> getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getSecuritiesSubBalanceIdentification();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, Optional<GenericIdentification37> value) {
+			obj.setSecuritiesSubBalanceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalTo", required = true)
@@ -405,7 +458,7 @@ public class IntraPositionMovementDetails7 {
 	 * definition} = "Balance to which the securities were moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, SecuritiesBalanceType3Choice> mmBalanceTo = new MMMessageAssociationEnd<IntraPositionMovementDetails7, SecuritiesBalanceType3Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
@@ -418,6 +471,16 @@ public class IntraPositionMovementDetails7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesBalanceType3Choice.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType3Choice getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getBalanceTo();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, SecuritiesBalanceType3Choice value) {
+			obj.setBalanceTo(value);
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -454,7 +517,7 @@ public class IntraPositionMovementDetails7 {
 	 * definition} = "Date and time at which the securities were moved."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, DateAndDateTimeChoice> mmSettlementDate = new MMMessageAssociationEnd<IntraPositionMovementDetails7, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
@@ -467,6 +530,16 @@ public class IntraPositionMovementDetails7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, DateAndDateTimeChoice value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "AvlblDt")
@@ -505,7 +578,7 @@ public class IntraPositionMovementDetails7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAvailableDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<DateAndDateTimeChoice>> mmAvailableDate = new MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmAvailableDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
@@ -518,6 +591,16 @@ public class IntraPositionMovementDetails7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getAvailableDate();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setAvailableDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtTp")
@@ -554,7 +637,7 @@ public class IntraPositionMovementDetails7 {
 	 * definition} = "Specifies the type of corporate event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorporateActionEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<CorporateActionEventType3Choice>> mmCorporateActionEventType = new MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<CorporateActionEventType3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
@@ -567,6 +650,16 @@ public class IntraPositionMovementDetails7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventType3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionEventType3Choice> getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getCorporateActionEventType();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, Optional<CorporateActionEventType3Choice> value) {
+			obj.setCorporateActionEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollMntrAmt")
@@ -604,7 +697,7 @@ public class IntraPositionMovementDetails7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralMonitorAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<AmountAndDirection9>> mmCollateralMonitorAmount = new MMMessageAssociationEnd<IntraPositionMovementDetails7, Optional<AmountAndDirection9>>() {
 		{
 			businessElementTrace_lazy = () -> IntraPositionTransfer.mmCollateralAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
@@ -616,7 +709,17 @@ public class IntraPositionMovementDetails7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection9.mmObject();
+			type_lazy = () -> AmountAndDirection9.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection9> getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getCollateralMonitorAmount();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, Optional<AmountAndDirection9> value) {
+			obj.setCollateralMonitorAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrPrcgAddtlDtls")
@@ -650,7 +753,7 @@ public class IntraPositionMovementDetails7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionProcessingAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionMovementDetails7, Optional<Max350Text>> mmInstructionProcessingAdditionalDetails = new MMMessageAttribute<IntraPositionMovementDetails7, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
 			isDerived = false;
@@ -662,9 +765,19 @@ public class IntraPositionMovementDetails7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max350Text> getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getInstructionProcessingAdditionalDetails();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, Optional<Max350Text> value) {
+			obj.setInstructionProcessingAdditionalDetails(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -693,7 +806,7 @@ public class IntraPositionMovementDetails7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovementDetails7, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<IntraPositionMovementDetails7, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovementDetails7.mmObject();
 			isDerived = false;
@@ -703,7 +816,17 @@ public class IntraPositionMovementDetails7 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(IntraPositionMovementDetails7 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementDetails7 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -777,7 +900,7 @@ public class IntraPositionMovementDetails7 {
 		return securitiesSubBalanceIdentification == null ? Optional.empty() : Optional.of(securitiesSubBalanceIdentification);
 	}
 
-	public IntraPositionMovementDetails7 setSecuritiesSubBalanceIdentification(com.tools20022.repository.msg.GenericIdentification37 securitiesSubBalanceIdentification) {
+	public IntraPositionMovementDetails7 setSecuritiesSubBalanceIdentification(GenericIdentification37 securitiesSubBalanceIdentification) {
 		this.securitiesSubBalanceIdentification = securitiesSubBalanceIdentification;
 		return this;
 	}
@@ -822,7 +945,7 @@ public class IntraPositionMovementDetails7 {
 		return collateralMonitorAmount == null ? Optional.empty() : Optional.of(collateralMonitorAmount);
 	}
 
-	public IntraPositionMovementDetails7 setCollateralMonitorAmount(com.tools20022.repository.msg.AmountAndDirection9 collateralMonitorAmount) {
+	public IntraPositionMovementDetails7 setCollateralMonitorAmount(AmountAndDirection9 collateralMonitorAmount) {
 		this.collateralMonitorAmount = collateralMonitorAmount;
 		return this;
 	}
@@ -840,7 +963,7 @@ public class IntraPositionMovementDetails7 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public IntraPositionMovementDetails7 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public IntraPositionMovementDetails7 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

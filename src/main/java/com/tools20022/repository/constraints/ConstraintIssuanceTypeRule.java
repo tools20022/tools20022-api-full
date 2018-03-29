@@ -55,12 +55,16 @@ public class ConstraintIssuanceTypeRule {
 	 */
 	public static final MMConstraint<UndertakingAdvice1> forUndertakingAdvice1 = new MMConstraint<UndertakingAdvice1>() {
 		{
-			validator = ConstraintIssuanceTypeRule::checkUndertakingAdvice1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceTypeRule";
 			definition = "Issuance type must be for either 'UndertakingIssuedViaAdvisingParty' (ISAD) or 'UndertakingIsuuedViaConfirmingParty' (ISCO).";
 			owner_lazy = () -> UndertakingAdvice1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/UndertakingIssuanceMessage/UndertakingDetails/IssuanceType</leftOperand><rightOperand>UndertakingViaAdvisingParty</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/UndertakingIssuanceMessage/UndertakingDetails/IssuanceType</leftOperand><rightOperand>UndertakingIssuedViaConfirmingParty</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UndertakingAdvice1 obj) throws Exception {
+			checkUndertakingAdvice1(obj);
 		}
 	};
 

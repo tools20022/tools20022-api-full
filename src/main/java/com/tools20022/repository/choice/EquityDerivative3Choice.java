@@ -118,7 +118,7 @@ public class EquityDerivative3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasket = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EquityDerivative3Choice, UnderlyingEquityType3Code> mmBasket = new MMMessageAttribute<EquityDerivative3Choice, UnderlyingEquityType3Code>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.EquityDerivative3Choice.mmObject();
@@ -130,6 +130,16 @@ public class EquityDerivative3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingEquityType3Code.mmObject();
+		}
+
+		@Override
+		public UnderlyingEquityType3Code getValue(EquityDerivative3Choice obj) {
+			return obj.getBasket();
+		}
+
+		@Override
+		public void setValue(EquityDerivative3Choice obj, UnderlyingEquityType3Code value) {
+			obj.setBasket(value);
 		}
 	};
 	@XmlElement(name = "Indx", required = true)
@@ -169,7 +179,7 @@ public class EquityDerivative3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EquityDerivative3Choice, UnderlyingEquityType4Code> mmIndex = new MMMessageAttribute<EquityDerivative3Choice, UnderlyingEquityType4Code>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.EquityDerivative3Choice.mmObject();
@@ -181,6 +191,16 @@ public class EquityDerivative3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingEquityType4Code.mmObject();
+		}
+
+		@Override
+		public UnderlyingEquityType4Code getValue(EquityDerivative3Choice obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(EquityDerivative3Choice obj, UnderlyingEquityType4Code value) {
+			obj.setIndex(value);
 		}
 	};
 	@XmlElement(name = "SnglNm", required = true)
@@ -220,7 +240,7 @@ public class EquityDerivative3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSingleName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EquityDerivative3Choice, UnderlyingEquityType5Code> mmSingleName = new MMMessageAttribute<EquityDerivative3Choice, UnderlyingEquityType5Code>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.EquityDerivative3Choice.mmObject();
@@ -232,6 +252,16 @@ public class EquityDerivative3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingEquityType5Code.mmObject();
+		}
+
+		@Override
+		public UnderlyingEquityType5Code getValue(EquityDerivative3Choice obj) {
+			return obj.getSingleName();
+		}
+
+		@Override
+		public void setValue(EquityDerivative3Choice obj, UnderlyingEquityType5Code value) {
+			obj.setSingleName(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -271,7 +301,7 @@ public class EquityDerivative3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EquityDerivative3Choice, UnderlyingEquityType6Code> mmOther = new MMMessageAttribute<EquityDerivative3Choice, UnderlyingEquityType6Code>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.EquityDerivative3Choice.mmObject();
@@ -283,6 +313,16 @@ public class EquityDerivative3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingEquityType6Code.mmObject();
+		}
+
+		@Override
+		public UnderlyingEquityType6Code getValue(EquityDerivative3Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(EquityDerivative3Choice obj, UnderlyingEquityType6Code value) {
+			obj.setOther(value);
 		}
 	};
 

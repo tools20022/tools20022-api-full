@@ -116,7 +116,7 @@ public class RecordTechnicalData2 {
 	 * RecordTechnicalData1.mmReceiptDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceiptDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecordTechnicalData2, ISODateTime> mmReceiptDateTime = new MMMessageAttribute<RecordTechnicalData2, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData2.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class RecordTechnicalData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(RecordTechnicalData2 obj) {
+			return obj.getReceiptDateTime();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData2 obj, ISODateTime value) {
+			obj.setReceiptDateTime(value);
 		}
 	};
 	@XmlElement(name = "CxlRsn", required = true)
@@ -161,7 +171,7 @@ public class RecordTechnicalData2 {
 	 * "Specifies the reason for the cancellation the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecordTechnicalData2, CancelledStatusReason15Code> mmCancellationReason = new MMMessageAttribute<RecordTechnicalData2, CancelledStatusReason15Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData2.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class RecordTechnicalData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason15Code.mmObject();
+		}
+
+		@Override
+		public CancelledStatusReason15Code getValue(RecordTechnicalData2 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData2 obj, CancelledStatusReason15Code value) {
+			obj.setCancellationReason(value);
 		}
 	};
 

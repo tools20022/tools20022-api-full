@@ -109,7 +109,7 @@ public class CorporateActionCertificateSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCertificateSD1, Max15AlphaNumericText> mmCertificateNumber = new MMMessageAttribute<CorporateActionCertificateSD1, Max15AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCertificateSD1.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class CorporateActionCertificateSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max15AlphaNumericText getValue(CorporateActionCertificateSD1 obj) {
+			return obj.getCertificateNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionCertificateSD1 obj, Max15AlphaNumericText value) {
+			obj.setCertificateNumber(value);
 		}
 	};
 	@XmlElement(name = "CertSeqNb")
@@ -153,7 +163,7 @@ public class CorporateActionCertificateSD1 {
 	 * definition} = "Additional identifier assigned by DTC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCertificateSD1, Optional<Max15AlphaNumericText>> mmCertificateSequenceNumber = new MMMessageAttribute<CorporateActionCertificateSD1, Optional<Max15AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCertificateSD1.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class CorporateActionCertificateSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15AlphaNumericText> getValue(CorporateActionCertificateSD1 obj) {
+			return obj.getCertificateSequenceNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionCertificateSD1 obj, Optional<Max15AlphaNumericText> value) {
+			obj.setCertificateSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertRegnNm")
@@ -195,7 +215,7 @@ public class CorporateActionCertificateSD1 {
 	 * definition} = "Registration name of the beneficial holder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateRegistrationName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCertificateSD1, Optional<Max30Text>> mmCertificateRegistrationName = new MMMessageAttribute<CorporateActionCertificateSD1, Optional<Max30Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCertificateSD1.mmObject();
 			isDerived = false;
@@ -206,6 +226,16 @@ public class CorporateActionCertificateSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max30Text> getValue(CorporateActionCertificateSD1 obj) {
+			return obj.getCertificateRegistrationName();
+		}
+
+		@Override
+		public void setValue(CorporateActionCertificateSD1 obj, Optional<Max30Text> value) {
+			obj.setCertificateRegistrationName(value.orElse(null));
 		}
 	};
 

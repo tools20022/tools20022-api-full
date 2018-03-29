@@ -25,6 +25,7 @@ import com.tools20022.repository.area.camt.DuplicateV05;
 import com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV04;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryData6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class ProprietaryData7 {
 	 * ProprietaryData4.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryData7, Max35Text> mmType = new MMMessageAttribute<ProprietaryData7, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData7.mmObject();
 			isDerived = false;
@@ -131,6 +132,16 @@ public class ProprietaryData7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryData7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProprietaryData7 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Data", required = true)
@@ -166,7 +177,7 @@ public class ProprietaryData7 {
 	 * ProprietaryData4.mmData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProprietaryData7, ProprietaryData6> mmData = new MMMessageAssociationEnd<ProprietaryData7, ProprietaryData6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData7.mmObject();
 			isDerived = false;
@@ -178,7 +189,17 @@ public class ProprietaryData7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryData6.mmObject();
+			type_lazy = () -> ProprietaryData6.mmObject();
+		}
+
+		@Override
+		public ProprietaryData6 getValue(ProprietaryData7 obj) {
+			return obj.getData();
+		}
+
+		@Override
+		public void setValue(ProprietaryData7 obj, ProprietaryData6 value) {
+			obj.setData(value);
 		}
 	};
 
@@ -210,7 +231,7 @@ public class ProprietaryData7 {
 		return data;
 	}
 
-	public ProprietaryData7 setData(com.tools20022.repository.msg.ProprietaryData6 data) {
+	public ProprietaryData7 setData(ProprietaryData6 data) {
 		this.data = Objects.requireNonNull(data);
 		return this;
 	}

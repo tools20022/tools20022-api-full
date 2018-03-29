@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -109,7 +110,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria2 {
 	 * mmSecuritiesAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountAuditTrailSearchCriteria2, Optional<SecuritiesAccount19>> mmSecuritiesAccountIdentification = new MMMessageAttribute<SecuritiesAccountAuditTrailSearchCriteria2, Optional<SecuritiesAccount19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountAuditTrailSearchCriteria2.mmObject();
 			isDerived = false;
@@ -120,7 +121,17 @@ public class SecuritiesAccountAuditTrailSearchCriteria2 {
 			previousVersion_lazy = () -> SecuritiesAccountAuditTrailSearchCriteria1.mmSecuritiesAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			complexType_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount19> getValue(SecuritiesAccountAuditTrailSearchCriteria2 obj) {
+			return obj.getSecuritiesAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountAuditTrailSearchCriteria2 obj, Optional<SecuritiesAccount19> value) {
+			obj.setSecuritiesAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -158,7 +169,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria2 {
 	 * SecuritiesAccountAuditTrailSearchCriteria1.mmDatePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountAuditTrailSearchCriteria2, Optional<DateSearchChoice>> mmDatePeriod = new MMMessageAttribute<SecuritiesAccountAuditTrailSearchCriteria2, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountAuditTrailSearchCriteria2.mmObject();
 			isDerived = false;
@@ -170,6 +181,16 @@ public class SecuritiesAccountAuditTrailSearchCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(SecuritiesAccountAuditTrailSearchCriteria2 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountAuditTrailSearchCriteria2 obj, Optional<DateSearchChoice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 
@@ -192,7 +213,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria2 {
 		return securitiesAccountIdentification == null ? Optional.empty() : Optional.of(securitiesAccountIdentification);
 	}
 
-	public SecuritiesAccountAuditTrailSearchCriteria2 setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 securitiesAccountIdentification) {
+	public SecuritiesAccountAuditTrailSearchCriteria2 setSecuritiesAccountIdentification(SecuritiesAccount19 securitiesAccountIdentification) {
 		this.securitiesAccountIdentification = securitiesAccountIdentification;
 		return this;
 	}

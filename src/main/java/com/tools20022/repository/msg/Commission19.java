@@ -115,7 +115,7 @@ public class Commission19 {
 	 * Commission10.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission19, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<Commission19, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission19.mmObject();
@@ -128,6 +128,16 @@ public class Commission19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(Commission19 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Commission19 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -158,7 +168,7 @@ public class Commission19 {
 	 * definition} = "Additional information about the type of commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission19, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<Commission19, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission19.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class Commission19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(Commission19 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Commission19 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

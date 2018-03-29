@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header32;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +125,7 @@ public class ATMReconciliationAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMReconciliationAcknowledgementV02, Header32> mmHeader = new MMMessageBuildingBlock<ATMReconciliationAcknowledgementV02, Header32>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class ATMReconciliationAcknowledgementV02 {
 			complexType_lazy = () -> Header32.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMReconciliationAcknowledgementV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header32 getValue(ATMReconciliationAcknowledgementV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAcknowledgementV02 obj, Header32 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "PrtctdATMRcncltnAck")
@@ -170,7 +171,7 @@ public class ATMReconciliationAcknowledgementV02 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProtectedATMReconciliationAcknowledgement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMReconciliationAcknowledgementV02, Optional<ContentInformationType10>> mmProtectedATMReconciliationAcknowledgement = new MMMessageBuildingBlock<ATMReconciliationAcknowledgementV02, Optional<ContentInformationType10>>() {
 		{
 			xmlTag = "PrtctdATMRcncltnAck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +182,14 @@ public class ATMReconciliationAcknowledgementV02 {
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMReconciliationAcknowledgementV02.class.getMethod("getProtectedATMReconciliationAcknowledgement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMReconciliationAcknowledgementV02 obj) {
+			return obj.getProtectedATMReconciliationAcknowledgement();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAcknowledgementV02 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedATMReconciliationAcknowledgement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMRcncltnAck")
@@ -216,7 +219,7 @@ public class ATMReconciliationAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMReconciliationAcknowledgement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMReconciliationAcknowledgementV02, Optional<ATMReconciliationAcknowledgement2>> mmATMReconciliationAcknowledgement = new MMMessageBuildingBlock<ATMReconciliationAcknowledgementV02, Optional<ATMReconciliationAcknowledgement2>>() {
 		{
 			xmlTag = "ATMRcncltnAck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +230,14 @@ public class ATMReconciliationAcknowledgementV02 {
 			complexType_lazy = () -> ATMReconciliationAcknowledgement2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMReconciliationAcknowledgementV02.class.getMethod("getATMReconciliationAcknowledgement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ATMReconciliationAcknowledgement2> getValue(ATMReconciliationAcknowledgementV02 obj) {
+			return obj.getATMReconciliationAcknowledgement();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAcknowledgementV02 obj, Optional<ATMReconciliationAcknowledgement2> value) {
+			obj.setATMReconciliationAcknowledgement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -260,7 +265,7 @@ public class ATMReconciliationAcknowledgementV02 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMReconciliationAcknowledgementV02, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<ATMReconciliationAcknowledgementV02, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,12 +276,14 @@ public class ATMReconciliationAcknowledgementV02 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMReconciliationAcknowledgementV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(ATMReconciliationAcknowledgementV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAcknowledgementV02 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

@@ -116,7 +116,7 @@ public class Party2Choice {
 	 * "Unique and unambiguous way of identifying an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrganisationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Party2Choice, OrganisationIdentification2> mmOrganisationIdentification = new MMMessageAttribute<Party2Choice, OrganisationIdentification2>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party2Choice.mmObject();
@@ -128,6 +128,16 @@ public class Party2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OrganisationIdentification2.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification2 getValue(Party2Choice obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(Party2Choice obj, OrganisationIdentification2 value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvtId", required = true)
@@ -163,7 +173,7 @@ public class Party2Choice {
 	 * "Unique and unambiguous identification of a person, eg, passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party2Choice, List<PersonIdentification3>> mmPrivateIdentification = new MMMessageAssociationEnd<Party2Choice, List<PersonIdentification3>>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party2Choice.mmObject();
@@ -176,6 +186,16 @@ public class Party2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentification3.mmObject();
+		}
+
+		@Override
+		public List<PersonIdentification3> getValue(Party2Choice obj) {
+			return obj.getPrivateIdentification();
+		}
+
+		@Override
+		public void setValue(Party2Choice obj, List<PersonIdentification3> value) {
+			obj.setPrivateIdentification(value);
 		}
 	};
 

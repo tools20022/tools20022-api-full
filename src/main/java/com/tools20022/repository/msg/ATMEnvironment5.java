@@ -21,6 +21,10 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCustomer2;
+import com.tools20022.repository.msg.AutomatedTellerMachine2;
+import com.tools20022.repository.msg.ContentInformationType10;
+import com.tools20022.repository.msg.PlainCardData14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +112,7 @@ public class ATMEnvironment5 {
 	 * ATMEnvironment2.mmATM}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMEnvironment5, AutomatedTellerMachine2> mmATM = new MMMessageAssociationEnd<ATMEnvironment5, AutomatedTellerMachine2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment5.mmObject();
 			isDerived = false;
@@ -120,7 +124,17 @@ public class ATMEnvironment5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine2.mmObject();
+			type_lazy = () -> AutomatedTellerMachine2.mmObject();
+		}
+
+		@Override
+		public AutomatedTellerMachine2 getValue(ATMEnvironment5 obj) {
+			return obj.getATM();
+		}
+
+		@Override
+		public void setValue(ATMEnvironment5 obj, AutomatedTellerMachine2 value) {
+			obj.setATM(value);
 		}
 	};
 	@XmlElement(name = "Cstmr", required = true)
@@ -156,7 +170,7 @@ public class ATMEnvironment5 {
 	 * ATMEnvironment2.mmCustomer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCustomer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMEnvironment5, ATMCustomer2> mmCustomer = new MMMessageAssociationEnd<ATMEnvironment5, ATMCustomer2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment5.mmObject();
 			isDerived = false;
@@ -168,7 +182,17 @@ public class ATMEnvironment5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCustomer2.mmObject();
+			type_lazy = () -> ATMCustomer2.mmObject();
+		}
+
+		@Override
+		public ATMCustomer2 getValue(ATMEnvironment5 obj) {
+			return obj.getCustomer();
+		}
+
+		@Override
+		public void setValue(ATMEnvironment5 obj, ATMCustomer2 value) {
+			obj.setCustomer(value);
 		}
 	};
 	@XmlElement(name = "PrtctdCardData")
@@ -205,7 +229,7 @@ public class ATMEnvironment5 {
 	 * ATMEnvironment2.mmProtectedCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectedCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMEnvironment5, Optional<ContentInformationType10>> mmProtectedCardData = new MMMessageAssociationEnd<ATMEnvironment5, Optional<ContentInformationType10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment5.mmObject();
 			isDerived = false;
@@ -217,7 +241,17 @@ public class ATMEnvironment5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
+			type_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMEnvironment5 obj) {
+			return obj.getProtectedCardData();
+		}
+
+		@Override
+		public void setValue(ATMEnvironment5 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedCardData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlainCardData")
@@ -254,7 +288,7 @@ public class ATMEnvironment5 {
 	 * ATMEnvironment2.mmPlainCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlainCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMEnvironment5, Optional<PlainCardData14>> mmPlainCardData = new MMMessageAssociationEnd<ATMEnvironment5, Optional<PlainCardData14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment5.mmObject();
 			isDerived = false;
@@ -266,7 +300,17 @@ public class ATMEnvironment5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PlainCardData14.mmObject();
+			type_lazy = () -> PlainCardData14.mmObject();
+		}
+
+		@Override
+		public Optional<PlainCardData14> getValue(ATMEnvironment5 obj) {
+			return obj.getPlainCardData();
+		}
+
+		@Override
+		public void setValue(ATMEnvironment5 obj, Optional<PlainCardData14> value) {
+			obj.setPlainCardData(value.orElse(null));
 		}
 	};
 
@@ -289,7 +333,7 @@ public class ATMEnvironment5 {
 		return aTM;
 	}
 
-	public ATMEnvironment5 setATM(com.tools20022.repository.msg.AutomatedTellerMachine2 aTM) {
+	public ATMEnvironment5 setATM(AutomatedTellerMachine2 aTM) {
 		this.aTM = Objects.requireNonNull(aTM);
 		return this;
 	}
@@ -298,7 +342,7 @@ public class ATMEnvironment5 {
 		return customer;
 	}
 
-	public ATMEnvironment5 setCustomer(com.tools20022.repository.msg.ATMCustomer2 customer) {
+	public ATMEnvironment5 setCustomer(ATMCustomer2 customer) {
 		this.customer = Objects.requireNonNull(customer);
 		return this;
 	}
@@ -307,7 +351,7 @@ public class ATMEnvironment5 {
 		return protectedCardData == null ? Optional.empty() : Optional.of(protectedCardData);
 	}
 
-	public ATMEnvironment5 setProtectedCardData(com.tools20022.repository.msg.ContentInformationType10 protectedCardData) {
+	public ATMEnvironment5 setProtectedCardData(ContentInformationType10 protectedCardData) {
 		this.protectedCardData = protectedCardData;
 		return this;
 	}
@@ -316,7 +360,7 @@ public class ATMEnvironment5 {
 		return plainCardData == null ? Optional.empty() : Optional.of(plainCardData);
 	}
 
-	public ATMEnvironment5 setPlainCardData(com.tools20022.repository.msg.PlainCardData14 plainCardData) {
+	public ATMEnvironment5 setPlainCardData(PlainCardData14 plainCardData) {
 		this.plainCardData = plainCardData;
 		return this;
 	}

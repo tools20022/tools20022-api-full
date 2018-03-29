@@ -95,7 +95,7 @@ public class CreditTaxType1 {
 	 * definition} = "Type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTaxType1, RateType3FormatChoice> mmTaxType = new MMMessageAttribute<CreditTaxType1, RateType3FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTaxType1.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class CreditTaxType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> RateType3FormatChoice.mmObject();
+		}
+
+		@Override
+		public RateType3FormatChoice getValue(CreditTaxType1 obj) {
+			return obj.getTaxType();
+		}
+
+		@Override
+		public void setValue(CreditTaxType1 obj, RateType3FormatChoice value) {
+			obj.setTaxType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -137,7 +147,7 @@ public class CreditTaxType1 {
 	 * definition} = "The value of the related tax expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTaxType1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<CreditTaxType1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTaxType1.mmObject();
 			isDerived = false;
@@ -148,6 +158,16 @@ public class CreditTaxType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CreditTaxType1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CreditTaxType1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

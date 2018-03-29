@@ -98,7 +98,7 @@ public class CommunicationMethod3Choice {
 	 * definition} = "Method of transmission expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationMethod3Choice, CommunicationMethod1Code> mmCode = new MMMessageAttribute<CommunicationMethod3Choice, CommunicationMethod1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommunicationMethod3Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class CommunicationMethod3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CommunicationMethod1Code.mmObject();
+		}
+
+		@Override
+		public CommunicationMethod1Code getValue(CommunicationMethod3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CommunicationMethod3Choice obj, CommunicationMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class CommunicationMethod3Choice {
 	 * definition} = "Method of transmission expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationMethod3Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<CommunicationMethod3Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommunicationMethod3Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class CommunicationMethod3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CommunicationMethod3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CommunicationMethod3Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

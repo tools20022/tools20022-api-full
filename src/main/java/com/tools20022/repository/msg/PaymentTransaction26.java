@@ -105,7 +105,7 @@ public class PaymentTransaction26 {
 	 * definition} = "Choice between cash-in or cash-out."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInOrOut = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransaction26, Optional<CashInOrOut6Choice>> mmCashInOrOut = new MMMessageAssociationEnd<PaymentTransaction26, Optional<CashInOrOut6Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction26.mmObject();
@@ -118,6 +118,16 @@ public class PaymentTransaction26 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CashInOrOut6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CashInOrOut6Choice> getValue(PaymentTransaction26 obj) {
+			return obj.getCashInOrOut();
+		}
+
+		@Override
+		public void setValue(PaymentTransaction26 obj, Optional<CashInOrOut6Choice> value) {
+			obj.setCashInOrOut(value.orElse(null));
 		}
 	};
 

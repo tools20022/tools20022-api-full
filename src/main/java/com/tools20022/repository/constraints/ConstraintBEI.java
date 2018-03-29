@@ -52,11 +52,15 @@ public class ConstraintBEI {
 	 */
 	public static final MMConstraint<BEIIdentifier> forBEIIdentifier = new MMConstraint<BEIIdentifier>() {
 		{
-			validator = ConstraintBEI::checkBEIIdentifier;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BEI";
 			definition = "Valid BICs for non-financial institutions are registered by the ISO 9362 Registration Authority in the BIC directory, and consist of eight (8) or eleven (11) contiguous characters.";
 			owner_lazy = () -> BEIIdentifier.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BEIIdentifier obj) throws Exception {
+			checkBEIIdentifier(obj);
 		}
 	};
 

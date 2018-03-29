@@ -20,10 +20,12 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.CashClearingSystemMember;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.OrganisationName;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -208,6 +210,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.ClearingAccount1#mmCollateralAccountOwner
  * ClearingAccount1.mmCollateralAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PositionAccount1#mmIdentification
+ * PositionAccount1.mmIdentification}</li>
  * <li>
  * {@linkplain com.tools20022.repository.choice.Party34Choice#mmOrganisationIdentification
  * Party34Choice.mmOrganisationIdentification}</li>
@@ -669,7 +674,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBICFI = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<OrganisationIdentification, BICFIIdentifier> mmBICFI = new MMBusinessAttribute<OrganisationIdentification, BICFIIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmIdentification, CashAccount15.mmServicer, CashAccount14.mmServicer, OrderDeskContactDetails.mmIdentification, CashAccount21.mmServicer, CashAccount22.mmServicer,
 					FinancialInstitutionIdentification3Choice.mmBIC, MemberIdentificationChoice.mmBIC, MemberIdentification2Choice.mmBICFI, PaymentInstructionReference1Details.mmInstructingAgentIdentification,
@@ -701,12 +706,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrganisationIdentification.class.getMethod("getBICFI", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICFIIdentifier getValue(OrganisationIdentification obj) {
+			return obj.getBICFI();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, BICFIIdentifier value) {
+			obj.setBICFI(value);
 		}
 	};
 	protected AnyBICIdentifier anyBIC;
@@ -1417,7 +1424,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAnyBIC = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<OrganisationIdentification, AnyBICIdentifier> mmAnyBIC = new MMBusinessAttribute<OrganisationIdentification, AnyBICIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyIdentification1Choice.mmBICOrBEI, PartyIdentification2Choice.mmBICOrBEI, PartyIdentification4Choice.mmBICOrBEI, PartyIdentification5Choice.mmBICOrBEI,
 					OrganisationIdentification4.mmBICOrBEI, OrganisationIdentification8.mmAnyBIC, AccountCashEntrySearch2.mmAccountOwner, AccountCashEntrySearch2.mmAccountServicer, CashAccountDetails1.mmAccountOwner,
@@ -1475,12 +1482,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrganisationIdentification.class.getMethod("getAnyBIC", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AnyBICIdentifier getValue(OrganisationIdentification obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.OrganisationName> organisationName;
@@ -1539,7 +1548,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrganisationName = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<OrganisationIdentification, List<OrganisationName>> mmOrganisationName = new MMBusinessAssociationEnd<OrganisationIdentification, List<OrganisationName>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation2.mmName, Organisation4.mmName, Organisation3.mmName, Organisation21.mmName, OrganisationIdentification27.mmName, Organisation27.mmName, Organisation31.mmName);
 			isDerived = false;
@@ -1551,6 +1560,16 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			opposite_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmOrganisation;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
+		}
+
+		@Override
+		public List<OrganisationName> getValue(OrganisationIdentification obj) {
+			return obj.getOrganisationName();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, List<OrganisationName> value) {
+			obj.setOrganisationName(value);
 		}
 	};
 	protected Organisation organisation;
@@ -1584,24 +1603,34 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * name} = "Organisation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Organisation which is identified."</li>
+	 * definition} = "Organisation which is identified"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<OrganisationIdentification, Optional<Organisation>> mmOrganisation = new MMBusinessAssociationEnd<OrganisationIdentification, Optional<Organisation>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
-			definition = "Organisation which is identified.";
+			definition = "Organisation which is identified";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmOrganisationIdentification;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 		}
+
+		@Override
+		public Optional<Organisation> getValue(OrganisationIdentification obj) {
+			return obj.getOrganisation();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, Optional<Organisation> value) {
+			obj.setOrganisation(value.orElse(null));
+		}
 	};
-	protected List<com.tools20022.repository.entity.CashClearingSystemMember> clearingSystemMemberIdentificationType;
+	protected List<CashClearingSystemMember> clearingSystemMemberIdentificationType;
 	/**
 	 * 
 	 <p>
@@ -1696,7 +1725,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmClearingSystemMemberIdentificationType = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<OrganisationIdentification, List<CashClearingSystemMember>> mmClearingSystemMemberIdentificationType = new MMBusinessAssociationEnd<OrganisationIdentification, List<CashClearingSystemMember>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstitutionIdentification3Choice.mmClearingSystemMemberIdentification, MemberIdentificationChoice.mmClearingSystemMemberIdentification,
 					MemberIdentification2Choice.mmClearingSystemMemberIdentification, FinancialInstitutionIdentification8.mmClearingSystemMemberIdentification, FinancialInstitutionIdentification3.mmClearingSystemMemberIdentification,
@@ -1710,9 +1739,19 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			name = "ClearingSystemMemberIdentificationType";
 			definition = "Unique and unambiguous identifier of a clearing system member, assigned by the system or system administrator.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmOrganisationIdentification;
+			opposite_lazy = () -> CashClearingSystemMember.mmOrganisationIdentification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
+			type_lazy = () -> CashClearingSystemMember.mmObject();
+		}
+
+		@Override
+		public List<CashClearingSystemMember> getValue(OrganisationIdentification obj) {
+			return obj.getClearingSystemMemberIdentificationType();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, List<CashClearingSystemMember> value) {
+			obj.setClearingSystemMemberIdentificationType(value);
 		}
 	};
 	protected BICNonFIIdentifier bICNonFI;
@@ -1771,7 +1810,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBICNonFI = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<OrganisationIdentification, BICNonFIIdentifier> mmBICNonFI = new MMBusinessAttribute<OrganisationIdentification, BICNonFIIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmIBEI, OrganisationIdentification2.mmBEI, FinancialInstrumentStipulations.mmIssuerIdentification, FinancialInstrumentStipulations2.mmIssuerIdentification,
 					NonFinancialInstitutionIdentification1.mmBEI, PartyIdentification25.mmBEI, PartyIdentification9.mmBEI, PartyIdentification5.mmBEI);
@@ -1785,12 +1824,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> BICNonFIIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrganisationIdentification.class.getMethod("getBICNonFI", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICNonFIIdentifier getValue(OrganisationIdentification obj) {
+			return obj.getBICNonFI();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, BICNonFIIdentifier value) {
+			obj.setBICNonFI(value);
 		}
 	};
 	protected EANGLNIdentifier eANGLN;
@@ -1833,7 +1874,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEANGLN = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<OrganisationIdentification, EANGLNIdentifier> mmEANGLN = new MMBusinessAttribute<OrganisationIdentification, EANGLNIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmEANGLN, NonFinancialInstitutionIdentification1.mmEANGLN);
 			isDerived = false;
@@ -1846,12 +1887,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> EANGLNIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrganisationIdentification.class.getMethod("getEANGLN", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public EANGLNIdentifier getValue(OrganisationIdentification obj) {
+			return obj.getEANGLN();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, EANGLNIdentifier value) {
+			obj.setEANGLN(value);
 		}
 	};
 	protected CHIPSUniversalIdentifier cHIPSUniversalIdentifier;
@@ -1894,7 +1937,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCHIPSUniversalIdentifier = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<OrganisationIdentification, com.tools20022.repository.datatype.CHIPSUniversalIdentifier> mmCHIPSUniversalIdentifier = new MMBusinessAttribute<OrganisationIdentification, com.tools20022.repository.datatype.CHIPSUniversalIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmCHIPSUniversalIdentification, NonFinancialInstitutionIdentification1.mmCHIPSUniversalIdentification);
 			isDerived = false;
@@ -1907,12 +1950,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> com.tools20022.repository.datatype.CHIPSUniversalIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrganisationIdentification.class.getMethod("getCHIPSUniversalIdentifier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public com.tools20022.repository.datatype.CHIPSUniversalIdentifier getValue(OrganisationIdentification obj) {
+			return obj.getCHIPSUniversalIdentifier();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, com.tools20022.repository.datatype.CHIPSUniversalIdentifier value) {
+			obj.setCHIPSUniversalIdentifier(value);
 		}
 	};
 	protected DunsIdentifier dUNS;
@@ -1955,7 +2000,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDUNS = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<OrganisationIdentification, DunsIdentifier> mmDUNS = new MMBusinessAttribute<OrganisationIdentification, DunsIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmDUNS, NonFinancialInstitutionIdentification1.mmDUNS);
 			isDerived = false;
@@ -1968,12 +2013,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> DunsIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrganisationIdentification.class.getMethod("getDUNS", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DunsIdentifier getValue(OrganisationIdentification obj) {
+			return obj.getDUNS();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, DunsIdentifier value) {
+			obj.setDUNS(value);
 		}
 	};
 	protected Max35Text bankPartyIdentification;
@@ -2015,7 +2062,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBankPartyIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<OrganisationIdentification, Max35Text> mmBankPartyIdentification = new MMBusinessAttribute<OrganisationIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification2.mmBankPartyIdentification, NonFinancialInstitutionIdentification1.mmBankPartyIdentification);
 			isDerived = false;
@@ -2028,12 +2075,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrganisationIdentification.class.getMethod("getBankPartyIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(OrganisationIdentification obj) {
+			return obj.getBankPartyIdentification();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, Max35Text value) {
+			obj.setBankPartyIdentification(value);
 		}
 	};
 	protected MICIdentifier mIC;
@@ -2179,7 +2228,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMIC = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<OrganisationIdentification, MICIdentifier> mmMIC = new MMBusinessAttribute<OrganisationIdentification, MICIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(MarketIdentification1Choice.mmMarketIdentifierCode, MarketIdentification3Choice.mmMarketIdentifierCode, MarketIdentification3Choice.mmDescription,
 					MarketIdentification2Choice.mmMarketIdentifierCode, MarketIdentification4Choice.mmMarketIdentifierCode, MarketIdentification4Choice.mmDescription, PriceSourceFormatChoice.mmLocalMarketPlace,
@@ -2200,12 +2249,14 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrganisationIdentification.class.getMethod("getMIC", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MICIdentifier getValue(OrganisationIdentification obj) {
+			return obj.getMIC();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification obj, MICIdentifier value) {
+			obj.setMIC(value);
 		}
 	};
 
@@ -2217,7 +2268,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 				name = "OrganisationIdentification";
 				definition = "Unique and unambiguous way to identify an organisation.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmOrganisationIdentification, com.tools20022.repository.entity.OrganisationName.mmOrganisation,
-						com.tools20022.repository.entity.CashClearingSystemMember.mmOrganisationIdentification);
+						CashClearingSystemMember.mmOrganisationIdentification);
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstitutionIdentification3Choice.mmNameAndAddress, FinancialInstitutionIdentification8.mmOther, Party2Choice.mmOrganisationIdentification,
 						Party6Choice.mmOrganisationIdentification, Party11Choice.mmOrganisationIdentification, FinancialInstitutionIdentification5Choice.mmNameAndAddress, FinancialInstitutionIdentification5Choice.mmCombinedIdentification,
 						FinancialInstitutionIdentification7.mmOther, Party8Choice.mmOrganisationIdentification, ProprietaryAgent1.mmAgent, ProprietaryAgent2.mmAgent, ProprietaryAgent3.mmAgent, Charges2.mmAgent,
@@ -2227,8 +2278,8 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 						PartyOrganisation1Choice.mmOrganisationIdentification, Party5Choice.mmOrganisationIdentification, FinancialInstitutionIdentification6Choice.mmNameAndAddress, TradingVenueIdentification1Choice.mmOther,
 						CashAccountCharacteristics2.mmAccountServicer, Party29Choice.mmOrganisationIdentification, Party29Choice.mmFinancialInstitutionIdentification, Party1.mmOrganisationIdentification,
 						FinancialInstitutionIdentification7Choice.mmNameAndAddress, OrganisationIdentification5Choice.mmOther, FinancialInstitutionIdentification10.mmParty, FinancialInstitutionIdentification8Choice.mmNameAndAddress,
-						ClearingAccount1.mmCollateralAccountOwner, Party34Choice.mmOrganisationIdentification, FinancialInstitutionIdentification15.mmParty, FinancialInstitutionIdentification9Choice.mmNameAndAddress,
-						Party36Choice.mmOrganisationIdentification);
+						ClearingAccount1.mmCollateralAccountOwner, PositionAccount1.mmIdentification, Party34Choice.mmOrganisationIdentification, FinancialInstitutionIdentification15.mmParty,
+						FinancialInstitutionIdentification9Choice.mmNameAndAddress, Party36Choice.mmOrganisationIdentification);
 				superType_lazy = () -> PartyIdentificationInformation.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.OrganisationIdentification.mmBICFI, com.tools20022.repository.entity.OrganisationIdentification.mmAnyBIC,
 						com.tools20022.repository.entity.OrganisationIdentification.mmOrganisationName, com.tools20022.repository.entity.OrganisationIdentification.mmOrganisation,
@@ -2298,7 +2349,7 @@ public class OrganisationIdentification extends PartyIdentificationInformation {
 		return clearingSystemMemberIdentificationType == null ? clearingSystemMemberIdentificationType = new ArrayList<>() : clearingSystemMemberIdentificationType;
 	}
 
-	public OrganisationIdentification setClearingSystemMemberIdentificationType(List<com.tools20022.repository.entity.CashClearingSystemMember> clearingSystemMemberIdentificationType) {
+	public OrganisationIdentification setClearingSystemMemberIdentificationType(List<CashClearingSystemMember> clearingSystemMemberIdentificationType) {
 		this.clearingSystemMemberIdentificationType = Objects.requireNonNull(clearingSystemMemberIdentificationType);
 		return this;
 	}

@@ -109,7 +109,7 @@ public class CancelledCompleteReason1 {
 	 * definition} = "Reason for the cancelled complete status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancelledCompleteReason1, CancellationCompleteReason1Choice> mmReason = new MMMessageAssociationEnd<CancelledCompleteReason1, CancellationCompleteReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledCompleteReason1.mmObject();
@@ -122,6 +122,16 @@ public class CancelledCompleteReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationCompleteReason1Choice.mmObject();
+		}
+
+		@Override
+		public CancellationCompleteReason1Choice getValue(CancelledCompleteReason1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancelledCompleteReason1 obj, CancellationCompleteReason1Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -161,7 +171,7 @@ public class CancelledCompleteReason1 {
 	 * "Additional information about the cancelled complete status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledCompleteReason1, Optional<Max350Text>> mmAdditionalReasonInformation = new MMMessageAttribute<CancelledCompleteReason1, Optional<Max350Text>>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledCompleteReason1.mmObject();
@@ -174,6 +184,16 @@ public class CancelledCompleteReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CancelledCompleteReason1 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(CancelledCompleteReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

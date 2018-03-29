@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,7 +127,7 @@ public class PaginationBalance1 {
 	 * "Opening balance of the financial instrument in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstOpeningBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaginationBalance1, Optional<FinancialInstrumentQuantity1>> mmFirstOpeningBalance = new MMMessageAttribute<PaginationBalance1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaginationBalance1.mmObject();
 			isDerived = false;
@@ -136,7 +137,17 @@ public class PaginationBalance1 {
 			definition = "Opening balance of the financial instrument in the statement.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(PaginationBalance1 obj) {
+			return obj.getFirstOpeningBalance();
+		}
+
+		@Override
+		public void setValue(PaginationBalance1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setFirstOpeningBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyOpngBal")
@@ -171,7 +182,7 @@ public class PaginationBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediaryOpeningBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaginationBalance1, Optional<FinancialInstrumentQuantity1>> mmIntermediaryOpeningBalance = new MMMessageAttribute<PaginationBalance1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaginationBalance1.mmObject();
 			isDerived = false;
@@ -181,7 +192,17 @@ public class PaginationBalance1 {
 			definition = "Opening balance of this page only. It must be the interemdiary closing balance of the previous page (part of the same statement).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(PaginationBalance1 obj) {
+			return obj.getIntermediaryOpeningBalance();
+		}
+
+		@Override
+		public void setValue(PaginationBalance1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setIntermediaryOpeningBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlClsgBal")
@@ -215,7 +236,7 @@ public class PaginationBalance1 {
 	 * "Closing balance of the financial instrument in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalClosingBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaginationBalance1, Optional<FinancialInstrumentQuantity1>> mmFinalClosingBalance = new MMMessageAttribute<PaginationBalance1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaginationBalance1.mmObject();
 			isDerived = false;
@@ -225,7 +246,17 @@ public class PaginationBalance1 {
 			definition = "Closing balance of the financial instrument in the statement.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(PaginationBalance1 obj) {
+			return obj.getFinalClosingBalance();
+		}
+
+		@Override
+		public void setValue(PaginationBalance1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setFinalClosingBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyClsgBal")
@@ -260,7 +291,7 @@ public class PaginationBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediaryClosingBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaginationBalance1, Optional<FinancialInstrumentQuantity1>> mmIntermediaryClosingBalance = new MMMessageAttribute<PaginationBalance1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaginationBalance1.mmObject();
 			isDerived = false;
@@ -270,7 +301,17 @@ public class PaginationBalance1 {
 			definition = "Closing Balance of this page only. Must be the interemdiary opening balance of the next page (part of the same statement).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(PaginationBalance1 obj) {
+			return obj.getIntermediaryClosingBalance();
+		}
+
+		@Override
+		public void setValue(PaginationBalance1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setIntermediaryClosingBalance(value.orElse(null));
 		}
 	};
 	/**
@@ -388,7 +429,7 @@ public class PaginationBalance1 {
 		return firstOpeningBalance == null ? Optional.empty() : Optional.of(firstOpeningBalance);
 	}
 
-	public PaginationBalance1 setFirstOpeningBalance(com.tools20022.repository.msg.FinancialInstrumentQuantity1 firstOpeningBalance) {
+	public PaginationBalance1 setFirstOpeningBalance(FinancialInstrumentQuantity1 firstOpeningBalance) {
 		this.firstOpeningBalance = firstOpeningBalance;
 		return this;
 	}
@@ -397,7 +438,7 @@ public class PaginationBalance1 {
 		return intermediaryOpeningBalance == null ? Optional.empty() : Optional.of(intermediaryOpeningBalance);
 	}
 
-	public PaginationBalance1 setIntermediaryOpeningBalance(com.tools20022.repository.msg.FinancialInstrumentQuantity1 intermediaryOpeningBalance) {
+	public PaginationBalance1 setIntermediaryOpeningBalance(FinancialInstrumentQuantity1 intermediaryOpeningBalance) {
 		this.intermediaryOpeningBalance = intermediaryOpeningBalance;
 		return this;
 	}
@@ -406,7 +447,7 @@ public class PaginationBalance1 {
 		return finalClosingBalance == null ? Optional.empty() : Optional.of(finalClosingBalance);
 	}
 
-	public PaginationBalance1 setFinalClosingBalance(com.tools20022.repository.msg.FinancialInstrumentQuantity1 finalClosingBalance) {
+	public PaginationBalance1 setFinalClosingBalance(FinancialInstrumentQuantity1 finalClosingBalance) {
 		this.finalClosingBalance = finalClosingBalance;
 		return this;
 	}
@@ -415,7 +456,7 @@ public class PaginationBalance1 {
 		return intermediaryClosingBalance == null ? Optional.empty() : Optional.of(intermediaryClosingBalance);
 	}
 
-	public PaginationBalance1 setIntermediaryClosingBalance(com.tools20022.repository.msg.FinancialInstrumentQuantity1 intermediaryClosingBalance) {
+	public PaginationBalance1 setIntermediaryClosingBalance(FinancialInstrumentQuantity1 intermediaryClosingBalance) {
 		this.intermediaryClosingBalance = intermediaryClosingBalance;
 		return this;
 	}

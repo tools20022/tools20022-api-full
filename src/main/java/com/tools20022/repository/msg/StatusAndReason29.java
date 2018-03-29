@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08;
 import com.tools20022.repository.choice.MatchingStatus32Choice;
 import com.tools20022.repository.choice.ProcessingStatus62Choice;
 import com.tools20022.repository.choice.SettlementStatus22Choice;
@@ -72,6 +73,10 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07#mmStatusAndReason
  * SecuritiesSettlementTransactionGenerationNotification002V07.mmStatusAndReason
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08#mmStatusAndReason
+ * SecuritiesSettlementTransactionGenerationNotification002V08.mmStatusAndReason
  * }</li>
  * </ul>
  * </li>
@@ -136,7 +141,7 @@ public class StatusAndReason29 {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason29, Optional<ProcessingStatus62Choice>> mmProcessingStatus = new MMMessageAssociationEnd<StatusAndReason29, Optional<ProcessingStatus62Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason29.mmObject();
@@ -149,6 +154,16 @@ public class StatusAndReason29 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus62Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingStatus62Choice> getValue(StatusAndReason29 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason29 obj, Optional<ProcessingStatus62Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts")
@@ -187,7 +202,7 @@ public class StatusAndReason29 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason29, Optional<MatchingStatus32Choice>> mmInferredMatchingStatus = new MMMessageAssociationEnd<StatusAndReason29, Optional<MatchingStatus32Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason29.mmObject();
@@ -200,6 +215,16 @@ public class StatusAndReason29 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus32Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus32Choice> getValue(StatusAndReason29 obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason29 obj, Optional<MatchingStatus32Choice> value) {
+			obj.setInferredMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSts")
@@ -236,7 +261,7 @@ public class StatusAndReason29 {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason29, Optional<MatchingStatus32Choice>> mmMatchingStatus = new MMMessageAssociationEnd<StatusAndReason29, Optional<MatchingStatus32Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason29.mmObject();
@@ -249,6 +274,16 @@ public class StatusAndReason29 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus32Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus32Choice> getValue(StatusAndReason29 obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason29 obj, Optional<MatchingStatus32Choice> value) {
+			obj.setMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -285,7 +320,7 @@ public class StatusAndReason29 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason29, Optional<SettlementStatus22Choice>> mmSettlementStatus = new MMMessageAssociationEnd<StatusAndReason29, Optional<SettlementStatus22Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason29.mmObject();
@@ -299,6 +334,16 @@ public class StatusAndReason29 {
 			isComposite = true;
 			type_lazy = () -> SettlementStatus22Choice.mmObject();
 		}
+
+		@Override
+		public Optional<SettlementStatus22Choice> getValue(StatusAndReason29 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason29 obj, Optional<SettlementStatus22Choice> value) {
+			obj.setSettlementStatus(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -306,7 +351,8 @@ public class StatusAndReason29 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason29.mmProcessingStatus, com.tools20022.repository.msg.StatusAndReason29.mmInferredMatchingStatus,
 						com.tools20022.repository.msg.StatusAndReason29.mmMatchingStatus, com.tools20022.repository.msg.StatusAndReason29.mmSettlementStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotification002V06.mmStatusAndReason, SecuritiesSettlementTransactionGenerationNotification002V07.mmStatusAndReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotification002V06.mmStatusAndReason, SecuritiesSettlementTransactionGenerationNotification002V07.mmStatusAndReason,
+						SecuritiesSettlementTransactionGenerationNotification002V08.mmStatusAndReason);
 				trace_lazy = () -> Status.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatusAndReason29);

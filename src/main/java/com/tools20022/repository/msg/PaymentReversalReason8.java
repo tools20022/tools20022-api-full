@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification125;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +120,7 @@ public class PaymentReversalReason8 {
 	 * PaymentReversalReason7.mmOriginator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentReversalReason8, Optional<PartyIdentification125>> mmOriginator = new MMMessageAssociationEnd<PaymentReversalReason8, Optional<PartyIdentification125>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReversalReason8.mmObject();
@@ -132,7 +133,17 @@ public class PaymentReversalReason8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification125.mmObject();
+			type_lazy = () -> PartyIdentification125.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification125> getValue(PaymentReversalReason8 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(PaymentReversalReason8 obj, Optional<PartyIdentification125> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -173,7 +184,7 @@ public class PaymentReversalReason8 {
 	 * PaymentReversalReason7.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentReversalReason8, Optional<ReversalReason4Choice>> mmReason = new MMMessageAssociationEnd<PaymentReversalReason8, Optional<ReversalReason4Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReversalReason8.mmObject();
@@ -187,6 +198,16 @@ public class PaymentReversalReason8 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReversalReason4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReversalReason4Choice> getValue(PaymentReversalReason8 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PaymentReversalReason8 obj, Optional<ReversalReason4Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -228,7 +249,7 @@ public class PaymentReversalReason8 {
 	 * PaymentReversalReason7.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReversalReason8, List<Max105Text>> mmAdditionalInformation = new MMMessageAttribute<PaymentReversalReason8, List<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReversalReason8.mmObject();
@@ -240,6 +261,16 @@ public class PaymentReversalReason8 {
 			previousVersion_lazy = () -> PaymentReversalReason7.mmAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(PaymentReversalReason8 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PaymentReversalReason8 obj, List<Max105Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -263,7 +294,7 @@ public class PaymentReversalReason8 {
 		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public PaymentReversalReason8 setOriginator(com.tools20022.repository.msg.PartyIdentification125 originator) {
+	public PaymentReversalReason8 setOriginator(PartyIdentification125 originator) {
 		this.originator = originator;
 		return this;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DTCTaxReliefSD1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -101,7 +102,7 @@ public class DTCTaxReliefSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DTCTaxReliefSD2, Max350Text> mmPlaceAndName = new MMMessageAttribute<DTCTaxReliefSD2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD2.mmObject();
 			isDerived = false;
@@ -112,6 +113,16 @@ public class DTCTaxReliefSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(DTCTaxReliefSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(DTCTaxReliefSD2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCTaxRlfCtgy", required = true)
@@ -148,7 +159,7 @@ public class DTCTaxReliefSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCTaxReliefCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DTCTaxReliefSD2, DTCTaxReliefSD1> mmDTCTaxReliefCategory = new MMMessageAttribute<DTCTaxReliefSD2, DTCTaxReliefSD1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD2.mmObject();
 			isDerived = false;
@@ -159,7 +170,17 @@ public class DTCTaxReliefSD2 {
 			definition = "Provides information about the defined tax relief categories used by DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD1.mmObject();
+			complexType_lazy = () -> DTCTaxReliefSD1.mmObject();
+		}
+
+		@Override
+		public DTCTaxReliefSD1 getValue(DTCTaxReliefSD2 obj) {
+			return obj.getDTCTaxReliefCategory();
+		}
+
+		@Override
+		public void setValue(DTCTaxReliefSD2 obj, DTCTaxReliefSD1 value) {
+			obj.setDTCTaxReliefCategory(value);
 		}
 	};
 	@XmlElement(name = "InstrQty", required = true)
@@ -196,7 +217,7 @@ public class DTCTaxReliefSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DTCTaxReliefSD2, FinancialInstrumentQuantity15Choice> mmInstructionQuantity = new MMMessageAttribute<DTCTaxReliefSD2, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD2.mmObject();
 			isDerived = false;
@@ -208,6 +229,16 @@ public class DTCTaxReliefSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(DTCTaxReliefSD2 obj) {
+			return obj.getInstructionQuantity();
+		}
+
+		@Override
+		public void setValue(DTCTaxReliefSD2 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setInstructionQuantity(value);
 		}
 	};
 
@@ -238,7 +269,7 @@ public class DTCTaxReliefSD2 {
 		return dTCTaxReliefCategory;
 	}
 
-	public DTCTaxReliefSD2 setDTCTaxReliefCategory(com.tools20022.repository.msg.DTCTaxReliefSD1 dTCTaxReliefCategory) {
+	public DTCTaxReliefSD2 setDTCTaxReliefCategory(DTCTaxReliefSD1 dTCTaxReliefCategory) {
 		this.dTCTaxReliefCategory = Objects.requireNonNull(dTCTaxReliefCategory);
 		return this;
 	}

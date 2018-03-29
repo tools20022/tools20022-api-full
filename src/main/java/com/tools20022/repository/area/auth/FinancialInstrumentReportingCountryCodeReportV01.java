@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.msg.SecuritiesCountryIdentification2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +114,7 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 	 * "Report detailing all countries and their 2 character ISO 3166 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCountryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingCountryCodeReportV01, List<SecuritiesCountryIdentification2>> mmCountryData = new MMMessageBuildingBlock<FinancialInstrumentReportingCountryCodeReportV01, List<SecuritiesCountryIdentification2>>() {
 		{
 			xmlTag = "CtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +124,14 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 			complexType_lazy = () -> SecuritiesCountryIdentification2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingCountryCodeReportV01.class.getMethod("getCountryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecuritiesCountryIdentification2> getValue(FinancialInstrumentReportingCountryCodeReportV01 obj) {
+			return obj.getCountryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingCountryCodeReportV01 obj, List<SecuritiesCountryIdentification2> value) {
+			obj.setCountryData(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -160,7 +161,7 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingCountryCodeReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FinancialInstrumentReportingCountryCodeReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,12 +171,14 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingCountryCodeReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FinancialInstrumentReportingCountryCodeReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingCountryCodeReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

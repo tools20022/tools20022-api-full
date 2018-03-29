@@ -123,7 +123,7 @@ public class InvestigationRejectionJustification1 {
 	 * "Reason for the rejection of a case assignment, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationRejectionJustification1, InvestigationRejection1Code> mmRejectionReason = new MMMessageAttribute<InvestigationRejectionJustification1, InvestigationRejection1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmInvestigationRejection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestigationRejectionJustification1.mmObject();
@@ -135,6 +135,16 @@ public class InvestigationRejectionJustification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestigationRejection1Code.mmObject();
+		}
+
+		@Override
+		public InvestigationRejection1Code getValue(InvestigationRejectionJustification1 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(InvestigationRejectionJustification1 obj, InvestigationRejection1Code value) {
+			obj.setRejectionReason(value);
 		}
 	};
 

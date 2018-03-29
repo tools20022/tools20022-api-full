@@ -120,7 +120,7 @@ public class CancelledStatusReason9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancelledStatusReason9, CancelledReason6Choice> mmReasonCode = new MMMessageAssociationEnd<CancelledStatusReason9, CancelledReason6Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatusReason9.mmObject();
@@ -133,6 +133,16 @@ public class CancelledStatusReason9 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancelledReason6Choice.mmObject();
+		}
+
+		@Override
+		public CancelledReason6Choice getValue(CancelledStatusReason9 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(CancelledStatusReason9 obj, CancelledReason6Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -171,7 +181,7 @@ public class CancelledStatusReason9 {
 	 * "Provides additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatusReason9, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<CancelledStatusReason9, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatusReason9.mmObject();
@@ -183,6 +193,16 @@ public class CancelledStatusReason9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(CancelledStatusReason9 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(CancelledStatusReason9 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

@@ -123,7 +123,7 @@ public class AssetClassCommodityEnergy1Choice {
 	 * definition} = "Definition of Electricity energy commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmElectricity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityElectricity1> mmElectricity = new MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityElectricity1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
@@ -136,6 +136,16 @@ public class AssetClassCommodityEnergy1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnergyCommodityElectricity1.mmObject();
+		}
+
+		@Override
+		public EnergyCommodityElectricity1 getValue(AssetClassCommodityEnergy1Choice obj) {
+			return obj.getElectricity();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnergy1Choice obj, EnergyCommodityElectricity1 value) {
+			obj.setElectricity(value);
 		}
 	};
 	@XmlElement(name = "NtrlGas", required = true)
@@ -172,7 +182,7 @@ public class AssetClassCommodityEnergy1Choice {
 	 * definition} = "Definition of Natural Gas energy commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNaturalGas = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityNaturalGas1> mmNaturalGas = new MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityNaturalGas1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
@@ -185,6 +195,16 @@ public class AssetClassCommodityEnergy1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnergyCommodityNaturalGas1.mmObject();
+		}
+
+		@Override
+		public EnergyCommodityNaturalGas1 getValue(AssetClassCommodityEnergy1Choice obj) {
+			return obj.getNaturalGas();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnergy1Choice obj, EnergyCommodityNaturalGas1 value) {
+			obj.setNaturalGas(value);
 		}
 	};
 	@XmlElement(name = "Oil", required = true)
@@ -220,7 +240,7 @@ public class AssetClassCommodityEnergy1Choice {
 	 * definition} = "Definition of Oil energy commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOil = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityOil1> mmOil = new MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityOil1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
@@ -233,6 +253,16 @@ public class AssetClassCommodityEnergy1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnergyCommodityOil1.mmObject();
+		}
+
+		@Override
+		public EnergyCommodityOil1 getValue(AssetClassCommodityEnergy1Choice obj) {
+			return obj.getOil();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnergy1Choice obj, EnergyCommodityOil1 value) {
+			obj.setOil(value);
 		}
 	};
 	@XmlElement(name = "Coal", required = true)
@@ -268,7 +298,7 @@ public class AssetClassCommodityEnergy1Choice {
 	 * definition} = "Definition of Coal energy commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCoal = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityCoal1> mmCoal = new MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityCoal1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
@@ -281,6 +311,16 @@ public class AssetClassCommodityEnergy1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnergyCommodityCoal1.mmObject();
+		}
+
+		@Override
+		public EnergyCommodityCoal1 getValue(AssetClassCommodityEnergy1Choice obj) {
+			return obj.getCoal();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnergy1Choice obj, EnergyCommodityCoal1 value) {
+			obj.setCoal(value);
 		}
 	};
 	@XmlElement(name = "IntrNrgy", required = true)
@@ -317,7 +357,7 @@ public class AssetClassCommodityEnergy1Choice {
 	 * definition} = "Inter energy commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterEnergy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityInterEnergy1> mmInterEnergy = new MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityInterEnergy1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
@@ -330,6 +370,16 @@ public class AssetClassCommodityEnergy1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnergyCommodityInterEnergy1.mmObject();
+		}
+
+		@Override
+		public EnergyCommodityInterEnergy1 getValue(AssetClassCommodityEnergy1Choice obj) {
+			return obj.getInterEnergy();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnergy1Choice obj, EnergyCommodityInterEnergy1 value) {
+			obj.setInterEnergy(value);
 		}
 	};
 	@XmlElement(name = "RnwblNrgy", required = true)
@@ -366,7 +416,7 @@ public class AssetClassCommodityEnergy1Choice {
 	 * definition} = "Renewable energy commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRenewableEnergy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityRenewableEnergy1> mmRenewableEnergy = new MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityRenewableEnergy1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
@@ -379,6 +429,16 @@ public class AssetClassCommodityEnergy1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnergyCommodityRenewableEnergy1.mmObject();
+		}
+
+		@Override
+		public EnergyCommodityRenewableEnergy1 getValue(AssetClassCommodityEnergy1Choice obj) {
+			return obj.getRenewableEnergy();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnergy1Choice obj, EnergyCommodityRenewableEnergy1 value) {
+			obj.setRenewableEnergy(value);
 		}
 	};
 	@XmlElement(name = "LghtEnd", required = true)
@@ -415,7 +475,7 @@ public class AssetClassCommodityEnergy1Choice {
 	 * definition} = "Light end energy commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLightEnd = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityLightEnd1> mmLightEnd = new MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityLightEnd1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
@@ -428,6 +488,16 @@ public class AssetClassCommodityEnergy1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnergyCommodityLightEnd1.mmObject();
+		}
+
+		@Override
+		public EnergyCommodityLightEnd1 getValue(AssetClassCommodityEnergy1Choice obj) {
+			return obj.getLightEnd();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnergy1Choice obj, EnergyCommodityLightEnd1 value) {
+			obj.setLightEnd(value);
 		}
 	};
 	@XmlElement(name = "Dstllts", required = true)
@@ -464,7 +534,7 @@ public class AssetClassCommodityEnergy1Choice {
 	 * definition} = "Distillates energy commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDistillates = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityDistillates1> mmDistillates = new MMMessageAssociationEnd<AssetClassCommodityEnergy1Choice, EnergyCommodityDistillates1>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnergy1Choice.mmObject();
@@ -477,6 +547,16 @@ public class AssetClassCommodityEnergy1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnergyCommodityDistillates1.mmObject();
+		}
+
+		@Override
+		public EnergyCommodityDistillates1 getValue(AssetClassCommodityEnergy1Choice obj) {
+			return obj.getDistillates();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityEnergy1Choice obj, EnergyCommodityDistillates1 value) {
+			obj.setDistillates(value);
 		}
 	};
 

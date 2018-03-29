@@ -24,7 +24,6 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentTerms3;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -101,7 +100,7 @@ public class Penalty extends Adjustment {
 	 * definition} = "Amount used as a basis to calculate the penalty amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPenaltyBasisAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Penalty, CurrencyAndAmount> mmPenaltyBasisAmount = new MMBusinessAttribute<Penalty, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTerms3.mmPenaltyBasisAmount);
 			isDerived = false;
@@ -114,12 +113,14 @@ public class Penalty extends Adjustment {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Penalty.class.getMethod("getPenaltyBasisAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Penalty obj) {
+			return obj.getPenaltyBasisAmount();
+		}
+
+		@Override
+		public void setValue(Penalty obj, CurrencyAndAmount value) {
+			obj.setPenaltyBasisAmount(value);
 		}
 	};
 

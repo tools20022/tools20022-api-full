@@ -52,11 +52,15 @@ public class ConstraintBICFI {
 	 */
 	public static final MMConstraint<BICFIIdentifier> forBICFIIdentifier = new MMConstraint<BICFIIdentifier>() {
 		{
-			validator = ConstraintBICFI::checkBICFIIdentifier;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICFI";
 			definition = "Valid BICs for financial institutions are registered by the ISO 9362 Registration Authority in the BIC directory, and consist of eight (8) or eleven (11) contiguous characters.";
 			owner_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BICFIIdentifier obj) throws Exception {
+			checkBICFIIdentifier(obj);
 		}
 	};
 

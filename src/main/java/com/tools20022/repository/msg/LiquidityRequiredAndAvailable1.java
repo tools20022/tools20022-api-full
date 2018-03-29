@@ -22,7 +22,11 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SettlementDate6Code;
+import com.tools20022.repository.entity.Liquidity;
+import com.tools20022.repository.entity.SecuritiesDeliveryObligation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LiquidResources1;
+import com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -53,6 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * LiquidityRequiredAndAvailable1.mmStressLiquidResourceRequirementAmount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.Liquidity Liquidity}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -94,6 +100,11 @@ public class LiquidityRequiredAndAvailable1 {
 	 * type} = {@linkplain com.tools20022.repository.msg.LiquidResources1
 	 * LiquidResources1}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#mmValue
+	 * Liquidity.mmValue}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.LiquidityRequiredAndAvailable1
@@ -113,8 +124,9 @@ public class LiquidityRequiredAndAvailable1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLiquidResources = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityRequiredAndAvailable1, LiquidResources1> mmLiquidResources = new MMMessageAssociationEnd<LiquidityRequiredAndAvailable1, LiquidResources1>() {
 		{
+			businessElementTrace_lazy = () -> Liquidity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityRequiredAndAvailable1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdRsrcs";
@@ -124,7 +136,17 @@ public class LiquidityRequiredAndAvailable1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LiquidResources1.mmObject();
+			type_lazy = () -> LiquidResources1.mmObject();
+		}
+
+		@Override
+		public LiquidResources1 getValue(LiquidityRequiredAndAvailable1 obj) {
+			return obj.getLiquidResources();
+		}
+
+		@Override
+		public void setValue(LiquidityRequiredAndAvailable1 obj, LiquidResources1 value) {
+			obj.setLiquidResources(value);
 		}
 	};
 	@XmlElement(name = "LqdtyHrzn", required = true)
@@ -139,6 +161,11 @@ public class LiquidityRequiredAndAvailable1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SettlementDate6Code
 	 * SettlementDate6Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesDeliveryObligation#mmSettlementDateCode
+	 * SecuritiesDeliveryObligation.mmSettlementDateCode}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,8 +186,9 @@ public class LiquidityRequiredAndAvailable1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLiquidityHorizon = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityRequiredAndAvailable1, SettlementDate6Code> mmLiquidityHorizon = new MMMessageAttribute<LiquidityRequiredAndAvailable1, SettlementDate6Code>() {
 		{
+			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmSettlementDateCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityRequiredAndAvailable1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyHrzn";
@@ -170,6 +198,16 @@ public class LiquidityRequiredAndAvailable1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementDate6Code.mmObject();
+		}
+
+		@Override
+		public SettlementDate6Code getValue(LiquidityRequiredAndAvailable1 obj) {
+			return obj.getLiquidityHorizon();
+		}
+
+		@Override
+		public void setValue(LiquidityRequiredAndAvailable1 obj, SettlementDate6Code value) {
+			obj.setLiquidityHorizon(value);
 		}
 	};
 	@XmlElement(name = "StrssLqdRsrcRqrmntAmt", required = true)
@@ -183,6 +221,11 @@ public class LiquidityRequiredAndAvailable1 {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1
 	 * StressLiquidResourceRequirementAmount1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#mmValue
+	 * Liquidity.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -203,8 +246,9 @@ public class LiquidityRequiredAndAvailable1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStressLiquidResourceRequirementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityRequiredAndAvailable1, StressLiquidResourceRequirementAmount1> mmStressLiquidResourceRequirementAmount = new MMMessageAssociationEnd<LiquidityRequiredAndAvailable1, StressLiquidResourceRequirementAmount1>() {
 		{
+			businessElementTrace_lazy = () -> Liquidity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityRequiredAndAvailable1.mmObject();
 			isDerived = false;
 			xmlTag = "StrssLqdRsrcRqrmntAmt";
@@ -214,7 +258,17 @@ public class LiquidityRequiredAndAvailable1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1.mmObject();
+			type_lazy = () -> StressLiquidResourceRequirementAmount1.mmObject();
+		}
+
+		@Override
+		public StressLiquidResourceRequirementAmount1 getValue(LiquidityRequiredAndAvailable1 obj) {
+			return obj.getStressLiquidResourceRequirementAmount();
+		}
+
+		@Override
+		public void setValue(LiquidityRequiredAndAvailable1 obj, StressLiquidResourceRequirementAmount1 value) {
+			obj.setStressLiquidResourceRequirementAmount(value);
 		}
 	};
 
@@ -223,6 +277,7 @@ public class LiquidityRequiredAndAvailable1 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityRequiredAndAvailable1.mmLiquidResources, com.tools20022.repository.msg.LiquidityRequiredAndAvailable1.mmLiquidityHorizon,
 						com.tools20022.repository.msg.LiquidityRequiredAndAvailable1.mmStressLiquidResourceRequirementAmount);
+				trace_lazy = () -> Liquidity.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLiquidityHorizonRule.forLiquidityRequiredAndAvailable1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,7 +292,7 @@ public class LiquidityRequiredAndAvailable1 {
 		return liquidResources;
 	}
 
-	public LiquidityRequiredAndAvailable1 setLiquidResources(com.tools20022.repository.msg.LiquidResources1 liquidResources) {
+	public LiquidityRequiredAndAvailable1 setLiquidResources(LiquidResources1 liquidResources) {
 		this.liquidResources = Objects.requireNonNull(liquidResources);
 		return this;
 	}
@@ -255,7 +310,7 @@ public class LiquidityRequiredAndAvailable1 {
 		return stressLiquidResourceRequirementAmount;
 	}
 
-	public LiquidityRequiredAndAvailable1 setStressLiquidResourceRequirementAmount(com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1 stressLiquidResourceRequirementAmount) {
+	public LiquidityRequiredAndAvailable1 setStressLiquidResourceRequirementAmount(StressLiquidResourceRequirementAmount1 stressLiquidResourceRequirementAmount) {
 		this.stressLiquidResourceRequirementAmount = Objects.requireNonNull(stressLiquidResourceRequirementAmount);
 		return this;
 	}

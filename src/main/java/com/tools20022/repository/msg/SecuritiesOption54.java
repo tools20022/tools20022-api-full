@@ -116,7 +116,7 @@ public class SecuritiesOption54 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConditionalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption54, Optional<FinancialInstrumentQuantity15Choice>> mmConditionalQuantity = new MMMessageAttribute<SecuritiesOption54, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmConditionalQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption54.mmObject();
@@ -129,6 +129,16 @@ public class SecuritiesOption54 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(SecuritiesOption54 obj) {
+			return obj.getConditionalQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption54 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setConditionalQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdQty", required = true)
@@ -167,7 +177,7 @@ public class SecuritiesOption54 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption54, Quantity40Choice> mmInstructedQuantity = new MMMessageAttribute<SecuritiesOption54, Quantity40Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption54.mmObject();
@@ -179,6 +189,16 @@ public class SecuritiesOption54 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity40Choice.mmObject();
+		}
+
+		@Override
+		public Quantity40Choice getValue(SecuritiesOption54 obj) {
+			return obj.getInstructedQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption54 obj, Quantity40Choice value) {
+			obj.setInstructedQuantity(value);
 		}
 	};
 

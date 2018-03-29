@@ -57,12 +57,16 @@ public class ConstraintCancellationStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupInformation24> forOriginalGroupInformation24 = new MMConstraint<OriginalGroupInformation24>() {
 		{
-			validator = ConstraintCancellationStatusReasonInformationRule::checkOriginalGroupInformation24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformationRule";
 			definition = "If GroupCancellationStatus is present and is different from RJCR or PNCR, then CancellationStatusReasonInformation/AdditionalInformation is not allowed.";
 			owner_lazy = () -> OriginalGroupInformation24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupCancellationStatus</leftOperand><rightOperand>PendingCancellationRequest</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupCancellationStatus</leftOperand><rightOperand>RejectedCancellationRequest</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupCancellationStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation24 obj) throws Exception {
+			checkOriginalGroupInformation24(obj);
 		}
 	};
 	/**
@@ -92,12 +96,16 @@ public class ConstraintCancellationStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInformation3> forOriginalPaymentInformation3 = new MMConstraint<OriginalPaymentInformation3>() {
 		{
-			validator = ConstraintCancellationStatusReasonInformationRule::checkOriginalPaymentInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformationRule";
 			definition = "If PaymentInformationCancellationStatus is present and is different from RJCR or PNCR, then CancellationStatusReasonInformation/AdditionalInformation is not allowed.";
 			owner_lazy = () -> OriginalPaymentInformation3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>PendingCancellationRequest</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>RejectedCancellationRequest</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInformation3 obj) throws Exception {
+			checkOriginalPaymentInformation3(obj);
 		}
 	};
 	/**
@@ -136,13 +144,17 @@ public class ConstraintCancellationStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupHeader5> forOriginalGroupHeader5 = new MMConstraint<OriginalGroupHeader5>() {
 		{
-			validator = ConstraintCancellationStatusReasonInformationRule::checkOriginalGroupHeader5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformationRule";
 			definition = "If GroupCancellationStatus is present and is different from RJCR or PNCR, then CancellationStatusReasonInformation/AdditionalInformation is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellationStatusReasonInformationRule.forOriginalGroupHeader9);
 			owner_lazy = () -> OriginalGroupHeader5.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupCancellationStatus</leftOperand><rightOperand>PendingCancellationRequest</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupCancellationStatus</leftOperand><rightOperand>RejectedCancellationRequest</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupCancellationStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupHeader5 obj) throws Exception {
+			checkOriginalGroupHeader5(obj);
 		}
 	};
 	/**
@@ -181,13 +193,17 @@ public class ConstraintCancellationStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction3> forOriginalPaymentInstruction3 = new MMConstraint<OriginalPaymentInstruction3>() {
 		{
-			validator = ConstraintCancellationStatusReasonInformationRule::checkOriginalPaymentInstruction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformationRule";
 			definition = "If PaymentInformationCancellationStatus is present and is different from RJCR or PNCR, then CancellationStatusReasonInformation/AdditionalInformation is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellationStatusReasonInformationRule.forOriginalPaymentInstruction10);
 			owner_lazy = () -> OriginalPaymentInstruction3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>PendingCancellationRequest</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>RejectedCancellationRequest</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction3 obj) throws Exception {
+			checkOriginalPaymentInstruction3(obj);
 		}
 	};
 	/**
@@ -232,7 +248,6 @@ public class ConstraintCancellationStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction10> forOriginalPaymentInstruction10 = new MMConstraint<OriginalPaymentInstruction10>() {
 		{
-			validator = ConstraintCancellationStatusReasonInformationRule::checkOriginalPaymentInstruction10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformationRule";
 			definition = "If PaymentInformationCancellationStatus is present and is different from RJCR or PNCR, then CancellationStatusReasonInformation/AdditionalInformation is not allowed.";
@@ -240,6 +255,11 @@ public class ConstraintCancellationStatusReasonInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellationStatusReasonInformationRule.forOriginalPaymentInstruction3;
 			owner_lazy = () -> OriginalPaymentInstruction10.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>PendingCancellationRequest</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>RejectedCancellationRequest</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction10 obj) throws Exception {
+			checkOriginalPaymentInstruction10(obj);
 		}
 	};
 	/**
@@ -284,7 +304,6 @@ public class ConstraintCancellationStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction17> forOriginalPaymentInstruction17 = new MMConstraint<OriginalPaymentInstruction17>() {
 		{
-			validator = ConstraintCancellationStatusReasonInformationRule::checkOriginalPaymentInstruction17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformationRule";
 			definition = "If PaymentInformationCancellationStatus is present and is different from RJCR (RejectedCancellationRequest) or PNCR (PendingCancellationRequest), then CancellationStatusReasonInformation/AdditionalInformation is not allowed.";
@@ -292,6 +311,11 @@ public class ConstraintCancellationStatusReasonInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellationStatusReasonInformationRule.forOriginalPaymentInstruction10;
 			owner_lazy = () -> OriginalPaymentInstruction17.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>PendingCancellationRequest</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>RejectedCancellationRequest</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction17 obj) throws Exception {
+			checkOriginalPaymentInstruction17(obj);
 		}
 	};
 	/**
@@ -336,7 +360,6 @@ public class ConstraintCancellationStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction22> forOriginalPaymentInstruction22 = new MMConstraint<OriginalPaymentInstruction22>() {
 		{
-			validator = ConstraintCancellationStatusReasonInformationRule::checkOriginalPaymentInstruction22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformationRule";
 			definition = "If PaymentInformationCancellationStatus is present and is different from RJCR (RejectedCancellationRequest) or PNCR (PendingCancellationRequest), then CancellationStatusReasonInformation/AdditionalInformation is not allowed.";
@@ -344,6 +367,11 @@ public class ConstraintCancellationStatusReasonInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellationStatusReasonInformationRule.forOriginalPaymentInstruction17;
 			owner_lazy = () -> OriginalPaymentInstruction22.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>PendingCancellationRequest</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>RejectedCancellationRequest</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction22 obj) throws Exception {
+			checkOriginalPaymentInstruction22(obj);
 		}
 	};
 	/**
@@ -379,13 +407,17 @@ public class ConstraintCancellationStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction26> forOriginalPaymentInstruction26 = new MMConstraint<OriginalPaymentInstruction26>() {
 		{
-			validator = ConstraintCancellationStatusReasonInformationRule::checkOriginalPaymentInstruction26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformationRule";
 			definition = "If PaymentInformationCancellationStatus is present and is different from RJCR (RejectedCancellationRequest) or PNCR (PendingCancellationRequest), then CancellationStatusReasonInformation/AdditionalInformation is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellationStatusReasonInformationRule.forOriginalPaymentInstruction22;
 			owner_lazy = () -> OriginalPaymentInstruction26.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>PendingCancellationRequest</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand><rightOperand>RejectedCancellationRequest</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationCancellationStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction26 obj) throws Exception {
+			checkOriginalPaymentInstruction26(obj);
 		}
 	};
 	/**
@@ -421,13 +453,17 @@ public class ConstraintCancellationStatusReasonInformationRule {
 	 */
 	public static final MMConstraint<OriginalGroupHeader9> forOriginalGroupHeader9 = new MMConstraint<OriginalGroupHeader9>() {
 		{
-			validator = ConstraintCancellationStatusReasonInformationRule::checkOriginalGroupHeader9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformationRule";
 			definition = "If GroupCancellationStatus is present and is different from RJCR or PNCR, then CancellationStatusReasonInformation/AdditionalInformation is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellationStatusReasonInformationRule.forOriginalGroupHeader5;
 			owner_lazy = () -> OriginalGroupHeader9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupCancellationStatus</leftOperand><rightOperand>PendingCancellationRequest</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupCancellationStatus</leftOperand><rightOperand>RejectedCancellationRequest</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CancellationStatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupCancellationStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupHeader9 obj) throws Exception {
+			checkOriginalGroupHeader9(obj);
 		}
 	};
 

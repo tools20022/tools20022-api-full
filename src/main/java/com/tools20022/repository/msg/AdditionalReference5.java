@@ -115,7 +115,7 @@ public class AdditionalReference5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference5, RestrictedFINMax16Text> mmReference = new MMMessageAttribute<AdditionalReference5, RestrictedFINMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference5.mmObject();
@@ -127,6 +127,16 @@ public class AdditionalReference5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINMax16Text getValue(AdditionalReference5 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(AdditionalReference5 obj, RestrictedFINMax16Text value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "MsgNm")
@@ -159,7 +169,7 @@ public class AdditionalReference5 {
 	 * definition} = "Name of a message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference5, Optional<RestrictedFINMax15Text>> mmMessageName = new MMMessageAttribute<AdditionalReference5, Optional<RestrictedFINMax15Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference5.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class AdditionalReference5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax15Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax15Text> getValue(AdditionalReference5 obj) {
+			return obj.getMessageName();
+		}
+
+		@Override
+		public void setValue(AdditionalReference5 obj, Optional<RestrictedFINMax15Text> value) {
+			obj.setMessageName(value.orElse(null));
 		}
 	};
 

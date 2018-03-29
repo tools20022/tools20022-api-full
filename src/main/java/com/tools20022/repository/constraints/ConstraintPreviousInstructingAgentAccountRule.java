@@ -52,11 +52,15 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation2> forCreditTransferTransactionInformation2 = new MMConstraint<CreditTransferTransactionInformation2>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransactionInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation2 obj) throws Exception {
+			checkCreditTransferTransactionInformation2(obj);
 		}
 	};
 	/**
@@ -86,12 +90,16 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation11> forCreditTransferTransactionInformation11 = new MMConstraint<CreditTransferTransactionInformation11>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransactionInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			owner_lazy = () -> CreditTransferTransactionInformation11.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation11 obj) throws Exception {
+			checkCreditTransferTransactionInformation11(obj);
 		}
 	};
 	/**
@@ -121,12 +129,16 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction2> forCreditTransferTransaction2 = new MMConstraint<CreditTransferTransaction2>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			owner_lazy = () -> CreditTransferTransaction2.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction2 obj) throws Exception {
+			checkCreditTransferTransaction2(obj);
 		}
 	};
 	/**
@@ -165,13 +177,17 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction7> forCreditTransferTransaction7 = new MMConstraint<CreditTransferTransaction7>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forCreditTransferTransaction19);
 			owner_lazy = () -> CreditTransferTransaction7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction7 obj) throws Exception {
+			checkCreditTransferTransaction7(obj);
 		}
 	};
 	/**
@@ -197,11 +213,15 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation3> forCreditTransferTransactionInformation3 = new MMConstraint<CreditTransferTransactionInformation3>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransactionInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation3 obj) throws Exception {
+			checkCreditTransferTransactionInformation3(obj);
 		}
 	};
 	/**
@@ -231,12 +251,16 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation12> forCreditTransferTransactionInformation12 = new MMConstraint<CreditTransferTransactionInformation12>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransactionInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			owner_lazy = () -> CreditTransferTransactionInformation12.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation12 obj) throws Exception {
+			checkCreditTransferTransactionInformation12(obj);
 		}
 	};
 	/**
@@ -266,12 +290,16 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation13> forCreditTransferTransactionInformation13 = new MMConstraint<CreditTransferTransactionInformation13>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransactionInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			owner_lazy = () -> CreditTransferTransactionInformation13.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation13 obj) throws Exception {
+			checkCreditTransferTransactionInformation13(obj);
 		}
 	};
 	/**
@@ -310,13 +338,17 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction3> forCreditTransferTransaction3 = new MMConstraint<CreditTransferTransaction3>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forCreditTransferTransaction18);
 			owner_lazy = () -> CreditTransferTransaction3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction3 obj) throws Exception {
+			checkCreditTransferTransaction3(obj);
 		}
 	};
 	/**
@@ -346,12 +378,16 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction4> forCreditTransferTransaction4 = new MMConstraint<CreditTransferTransaction4>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			owner_lazy = () -> CreditTransferTransaction4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction4 obj) throws Exception {
+			checkCreditTransferTransaction4(obj);
 		}
 	};
 	/**
@@ -390,13 +426,17 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction8> forCreditTransferTransaction8 = new MMConstraint<CreditTransferTransaction8>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forCreditTransferTransaction17);
 			owner_lazy = () -> CreditTransferTransaction8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction8 obj) throws Exception {
+			checkCreditTransferTransaction8(obj);
 		}
 	};
 	/**
@@ -426,12 +466,16 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<PaymentComplementaryInformation2> forPaymentComplementaryInformation2 = new MMConstraint<PaymentComplementaryInformation2>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkPaymentComplementaryInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			owner_lazy = () -> PaymentComplementaryInformation2.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentComplementaryInformation2 obj) throws Exception {
+			checkPaymentComplementaryInformation2(obj);
 		}
 	};
 	/**
@@ -470,13 +514,17 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<PaymentComplementaryInformation3> forPaymentComplementaryInformation3 = new MMConstraint<PaymentComplementaryInformation3>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkPaymentComplementaryInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forPaymentComplementaryInformation4);
 			owner_lazy = () -> PaymentComplementaryInformation3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentComplementaryInformation3 obj) throws Exception {
+			checkPaymentComplementaryInformation3(obj);
 		}
 	};
 	/**
@@ -506,12 +554,16 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation7> forCreditTransferTransactionInformation7 = new MMConstraint<CreditTransferTransactionInformation7>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "ISO20022 Rule: \nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation7 obj) throws Exception {
+			checkCreditTransferTransactionInformation7(obj);
 		}
 	};
 	/**
@@ -541,12 +593,16 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation9> forCreditTransferTransactionInformation9 = new MMConstraint<CreditTransferTransactionInformation9>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransactionInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "ISO20022 Rule: \nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation9 obj) throws Exception {
+			checkCreditTransferTransactionInformation9(obj);
 		}
 	};
 	/**
@@ -591,7 +647,6 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<PaymentComplementaryInformation4> forPaymentComplementaryInformation4 = new MMConstraint<PaymentComplementaryInformation4>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkPaymentComplementaryInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
@@ -599,6 +654,11 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forPaymentComplementaryInformation3;
 			owner_lazy = () -> PaymentComplementaryInformation4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentComplementaryInformation4 obj) throws Exception {
+			checkPaymentComplementaryInformation4(obj);
 		}
 	};
 	/**
@@ -643,7 +703,6 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction17> forCreditTransferTransaction17 = new MMConstraint<CreditTransferTransaction17>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
@@ -651,6 +710,11 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forCreditTransferTransaction8;
 			owner_lazy = () -> CreditTransferTransaction17.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction17 obj) throws Exception {
+			checkCreditTransferTransaction17(obj);
 		}
 	};
 	/**
@@ -695,7 +759,6 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction19> forCreditTransferTransaction19 = new MMConstraint<CreditTransferTransaction19>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
@@ -703,6 +766,11 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forCreditTransferTransaction7;
 			owner_lazy = () -> CreditTransferTransaction19.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction19 obj) throws Exception {
+			checkCreditTransferTransaction19(obj);
 		}
 	};
 	/**
@@ -747,7 +815,6 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction18> forCreditTransferTransaction18 = new MMConstraint<CreditTransferTransaction18>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
@@ -755,6 +822,11 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forCreditTransferTransaction3;
 			owner_lazy = () -> CreditTransferTransaction18.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction18 obj) throws Exception {
+			checkCreditTransferTransaction18(obj);
 		}
 	};
 	/**
@@ -790,13 +862,17 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction23> forCreditTransferTransaction23 = new MMConstraint<CreditTransferTransaction23>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forCreditTransferTransaction17;
 			owner_lazy = () -> CreditTransferTransaction23.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction23 obj) throws Exception {
+			checkCreditTransferTransaction23(obj);
 		}
 	};
 	/**
@@ -832,13 +908,17 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction25> forCreditTransferTransaction25 = new MMConstraint<CreditTransferTransaction25>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forCreditTransferTransaction19;
 			owner_lazy = () -> CreditTransferTransaction25.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction25 obj) throws Exception {
+			checkCreditTransferTransaction25(obj);
 		}
 	};
 	/**
@@ -883,7 +963,6 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<PaymentComplementaryInformation5> forPaymentComplementaryInformation5 = new MMConstraint<PaymentComplementaryInformation5>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkPaymentComplementaryInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
@@ -891,6 +970,11 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forPaymentComplementaryInformation4;
 			owner_lazy = () -> PaymentComplementaryInformation5.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentComplementaryInformation5 obj) throws Exception {
+			checkPaymentComplementaryInformation5(obj);
 		}
 	};
 	/**
@@ -926,13 +1010,17 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction24> forCreditTransferTransaction24 = new MMConstraint<CreditTransferTransaction24>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransaction24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forCreditTransferTransaction18;
 			owner_lazy = () -> CreditTransferTransaction24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction24 obj) throws Exception {
+			checkCreditTransferTransaction24(obj);
 		}
 	};
 	/**
@@ -968,13 +1056,17 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 */
 	public static final MMConstraint<PaymentComplementaryInformation6> forPaymentComplementaryInformation6 = new MMConstraint<PaymentComplementaryInformation6>() {
 		{
-			validator = ConstraintPreviousInstructingAgentAccountRule::checkPaymentComplementaryInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
 			definition = "If PreviousInstructingAgentAccount is present, then PreviousInstructingAgent must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousInstructingAgentAccountRule.forPaymentComplementaryInformation5;
 			owner_lazy = () -> PaymentComplementaryInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentComplementaryInformation6 obj) throws Exception {
+			checkPaymentComplementaryInformation6(obj);
 		}
 	};
 

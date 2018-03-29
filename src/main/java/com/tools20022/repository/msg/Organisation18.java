@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.OrganisationName;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommunicationAddress5;
+import com.tools20022.repository.msg.GenericIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -139,7 +141,7 @@ public class Organisation18 {
 	 * Organisation8.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation18, GenericIdentification32> mmIdentification = new MMMessageAssociationEnd<Organisation18, GenericIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation18.mmObject();
@@ -153,7 +155,17 @@ public class Organisation18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public GenericIdentification32 getValue(Organisation18 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Organisation18 obj, GenericIdentification32 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonNm", required = true)
@@ -204,7 +216,7 @@ public class Organisation18 {
 	 * Organisation8.mmCommonName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation18, Max70Text> mmCommonName = new MMMessageAttribute<Organisation18, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation18.mmObject();
@@ -218,6 +230,16 @@ public class Organisation18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(Organisation18 obj) {
+			return obj.getCommonName();
+		}
+
+		@Override
+		public void setValue(Organisation18 obj, Max70Text value) {
+			obj.setCommonName(value);
 		}
 	};
 	@XmlElement(name = "Lctn", required = true)
@@ -261,7 +283,7 @@ public class Organisation18 {
 	 * Organisation8.mmAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation18, CommunicationAddress5> mmLocation = new MMMessageAttribute<Organisation18, CommunicationAddress5>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation18.mmObject();
@@ -273,7 +295,17 @@ public class Organisation18 {
 			previousVersion_lazy = () -> Organisation8.mmAddress;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CommunicationAddress5.mmObject();
+			complexType_lazy = () -> CommunicationAddress5.mmObject();
+		}
+
+		@Override
+		public CommunicationAddress5 getValue(Organisation18 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(Organisation18 obj, CommunicationAddress5 value) {
+			obj.setLocation(value);
 		}
 	};
 	@XmlElement(name = "SelctdLang")
@@ -314,7 +346,7 @@ public class Organisation18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSelectedLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation18, Optional<LanguageCode>> mmSelectedLanguage = new MMMessageAttribute<Organisation18, Optional<LanguageCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation18.mmObject();
 			isDerived = false;
@@ -326,6 +358,16 @@ public class Organisation18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public Optional<LanguageCode> getValue(Organisation18 obj) {
+			return obj.getSelectedLanguage();
+		}
+
+		@Override
+		public void setValue(Organisation18 obj, Optional<LanguageCode> value) {
+			obj.setSelectedLanguage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchmeData")
@@ -364,7 +406,7 @@ public class Organisation18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation18, Optional<Max140Text>> mmSchemeData = new MMMessageAttribute<Organisation18, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation18.mmObject();
 			isDerived = false;
@@ -376,6 +418,16 @@ public class Organisation18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Organisation18 obj) {
+			return obj.getSchemeData();
+		}
+
+		@Override
+		public void setValue(Organisation18 obj, Optional<Max140Text> value) {
+			obj.setSchemeData(value.orElse(null));
 		}
 	};
 
@@ -400,7 +452,7 @@ public class Organisation18 {
 		return identification;
 	}
 
-	public Organisation18 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public Organisation18 setIdentification(GenericIdentification32 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -418,7 +470,7 @@ public class Organisation18 {
 		return location;
 	}
 
-	public Organisation18 setLocation(com.tools20022.repository.msg.CommunicationAddress5 location) {
+	public Organisation18 setLocation(CommunicationAddress5 location) {
 		this.location = Objects.requireNonNull(location);
 		return this;
 	}

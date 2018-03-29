@@ -121,7 +121,7 @@ public class CorporateActionCancellation2 {
 	 * "Specifies reasons for cancellation of a corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellation2, CorporateActionCancellationReason1Code> mmCancellationReasonCode = new MMMessageAttribute<CorporateActionCancellation2, CorporateActionCancellationReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation2.mmObject();
@@ -134,6 +134,16 @@ public class CorporateActionCancellation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionCancellationReason1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionCancellationReason1Code getValue(CorporateActionCancellation2 obj) {
+			return obj.getCancellationReasonCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellation2 obj, CorporateActionCancellationReason1Code value) {
+			obj.setCancellationReasonCode(value);
 		}
 	};
 	@XmlElement(name = "CxlRsn")
@@ -175,7 +185,7 @@ public class CorporateActionCancellation2 {
 	 * "Additional information about cancellation of a corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellation2, Optional<RestrictedFINXMax140Text>> mmCancellationReason = new MMMessageAttribute<CorporateActionCancellation2, Optional<RestrictedFINXMax140Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation2.mmObject();
@@ -188,6 +198,16 @@ public class CorporateActionCancellation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax140Text> getValue(CorporateActionCancellation2 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellation2 obj, Optional<RestrictedFINXMax140Text> value) {
+			obj.setCancellationReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts", required = true)
@@ -227,7 +247,7 @@ public class CorporateActionCancellation2 {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionCancellation2, CorporateActionProcessingStatus1Choice> mmProcessingStatus = new MMMessageAssociationEnd<CorporateActionCancellation2, CorporateActionProcessingStatus1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellation2.mmObject();
@@ -241,6 +261,16 @@ public class CorporateActionCancellation2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionProcessingStatus1Choice getValue(CorporateActionCancellation2 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellation2 obj, CorporateActionProcessingStatus1Choice value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 

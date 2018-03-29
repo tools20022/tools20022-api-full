@@ -120,7 +120,7 @@ public class PartyIdentification118Choice {
 	 * PartyIdentification115Choice.mmAnyBIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification118Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification118Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification118Choice.mmObject();
@@ -133,6 +133,16 @@ public class PartyIdentification118Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification118Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification118Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "LEI", required = true)
@@ -147,6 +157,11 @@ public class PartyIdentification118Choice {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.LEIIdentifier
 	 * LEIIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation#mmLEI
+	 * PartyIdentificationInformation.mmLEI}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -165,8 +180,9 @@ public class PartyIdentification118Choice {
 	 * definition} = "Specifies the Legal Entity Identifier of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification118Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<PartyIdentification118Choice, LEIIdentifier>() {
 		{
+			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification118Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
@@ -176,6 +192,16 @@ public class PartyIdentification118Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(PartyIdentification118Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification118Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 

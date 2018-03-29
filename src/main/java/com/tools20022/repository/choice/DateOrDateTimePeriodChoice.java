@@ -131,7 +131,7 @@ public class DateOrDateTimePeriodChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateOrDateTimePeriodChoice, DatePeriodDetails> mmDate = new MMMessageAssociationEnd<DateOrDateTimePeriodChoice, DatePeriodDetails>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateOrDateTimePeriodChoice.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class DateOrDateTimePeriodChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public DatePeriodDetails getValue(DateOrDateTimePeriodChoice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateOrDateTimePeriodChoice obj, DatePeriodDetails value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtTm", required = true)
@@ -185,7 +195,7 @@ public class DateOrDateTimePeriodChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateOrDateTimePeriodChoice, DateTimePeriodDetails> mmDateTime = new MMMessageAssociationEnd<DateOrDateTimePeriodChoice, DateTimePeriodDetails>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateOrDateTimePeriodChoice.mmObject();
 			isDerived = false;
@@ -198,6 +208,16 @@ public class DateOrDateTimePeriodChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateTimePeriodDetails.mmObject();
+		}
+
+		@Override
+		public DateTimePeriodDetails getValue(DateOrDateTimePeriodChoice obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(DateOrDateTimePeriodChoice obj, DateTimePeriodDetails value) {
+			obj.setDateTime(value);
 		}
 	};
 

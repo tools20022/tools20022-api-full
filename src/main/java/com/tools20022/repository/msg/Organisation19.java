@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.OrganisationName;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +123,7 @@ public class Organisation19 {
 	 * Organisation18.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation19, GenericIdentification32> mmIdentification = new MMMessageAssociationEnd<Organisation19, GenericIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation19.mmObject();
@@ -135,7 +136,17 @@ public class Organisation19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public GenericIdentification32 getValue(Organisation19 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Organisation19 obj, GenericIdentification32 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonNm", required = true)
@@ -178,7 +189,7 @@ public class Organisation19 {
 	 * Organisation18.mmCommonName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation19, Max70Text> mmCommonName = new MMMessageAttribute<Organisation19, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation19.mmObject();
@@ -191,6 +202,16 @@ public class Organisation19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(Organisation19 obj) {
+			return obj.getCommonName();
+		}
+
+		@Override
+		public void setValue(Organisation19 obj, Max70Text value) {
+			obj.setCommonName(value);
 		}
 	};
 	@XmlElement(name = "SelctdLang")
@@ -228,7 +249,7 @@ public class Organisation19 {
 	 * Organisation18.mmSelectedLanguage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSelectedLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation19, Optional<LanguageCode>> mmSelectedLanguage = new MMMessageAttribute<Organisation19, Optional<LanguageCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation19.mmObject();
 			isDerived = false;
@@ -240,6 +261,16 @@ public class Organisation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public Optional<LanguageCode> getValue(Organisation19 obj) {
+			return obj.getSelectedLanguage();
+		}
+
+		@Override
+		public void setValue(Organisation19 obj, Optional<LanguageCode> value) {
+			obj.setSelectedLanguage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchmeData")
@@ -275,7 +306,7 @@ public class Organisation19 {
 	 * Organisation18.mmSchemeData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation19, Optional<Max140Text>> mmSchemeData = new MMMessageAttribute<Organisation19, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation19.mmObject();
 			isDerived = false;
@@ -287,6 +318,16 @@ public class Organisation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Organisation19 obj) {
+			return obj.getSchemeData();
+		}
+
+		@Override
+		public void setValue(Organisation19 obj, Optional<Max140Text> value) {
+			obj.setSchemeData(value.orElse(null));
 		}
 	};
 
@@ -310,7 +351,7 @@ public class Organisation19 {
 		return identification;
 	}
 
-	public Organisation19 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public Organisation19 setIdentification(GenericIdentification32 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

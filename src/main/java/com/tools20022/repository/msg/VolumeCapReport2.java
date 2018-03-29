@@ -122,7 +122,7 @@ public class VolumeCapReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VolumeCapReport2, Optional<Max35Text>> mmTechnicalRecordIdentification = new MMMessageAttribute<VolumeCapReport2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class VolumeCapReport2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(VolumeCapReport2 obj) {
+			return obj.getTechnicalRecordIdentification();
+		}
+
+		@Override
+		public void setValue(VolumeCapReport2 obj, Optional<Max35Text> value) {
+			obj.setTechnicalRecordIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -170,7 +180,7 @@ public class VolumeCapReport2 {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VolumeCapReport2, ISINOct2015Identifier> mmIdentification = new MMMessageAttribute<VolumeCapReport2, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VolumeCapReport2.mmObject();
@@ -182,6 +192,16 @@ public class VolumeCapReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(VolumeCapReport2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(VolumeCapReport2 obj, ISINOct2015Identifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -214,7 +234,7 @@ public class VolumeCapReport2 {
 	 * definition} = "Currency of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VolumeCapReport2, ActiveOrHistoricCurrencyCode> mmCurrency = new MMMessageAttribute<VolumeCapReport2, ActiveOrHistoricCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -225,6 +245,16 @@ public class VolumeCapReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(VolumeCapReport2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(VolumeCapReport2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "TtlTradgVol", required = true)
@@ -259,7 +289,7 @@ public class VolumeCapReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTradingVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VolumeCapReport2, ImpliedCurrencyAndAmount> mmTotalTradingVolume = new MMMessageAttribute<VolumeCapReport2, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -270,6 +300,16 @@ public class VolumeCapReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(VolumeCapReport2 obj) {
+			return obj.getTotalTradingVolume();
+		}
+
+		@Override
+		public void setValue(VolumeCapReport2 obj, ImpliedCurrencyAndAmount value) {
+			obj.setTotalTradingVolume(value);
 		}
 	};
 	@XmlElement(name = "TtlRefPricTradgVol", required = true)
@@ -304,7 +344,7 @@ public class VolumeCapReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalReferencePriceTradingVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VolumeCapReport2, ImpliedCurrencyAndAmount> mmTotalReferencePriceTradingVolume = new MMMessageAttribute<VolumeCapReport2, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -315,6 +355,16 @@ public class VolumeCapReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(VolumeCapReport2 obj) {
+			return obj.getTotalReferencePriceTradingVolume();
+		}
+
+		@Override
+		public void setValue(VolumeCapReport2 obj, ImpliedCurrencyAndAmount value) {
+			obj.setTotalReferencePriceTradingVolume(value);
 		}
 	};
 	@XmlElement(name = "TtlNgtdTxsTradgVol", required = true)
@@ -349,7 +399,7 @@ public class VolumeCapReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNegotiatedTransactionsTradingVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VolumeCapReport2, ImpliedCurrencyAndAmount> mmTotalNegotiatedTransactionsTradingVolume = new MMMessageAttribute<VolumeCapReport2, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VolumeCapReport2.mmObject();
 			isDerived = false;
@@ -360,6 +410,16 @@ public class VolumeCapReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(VolumeCapReport2 obj) {
+			return obj.getTotalNegotiatedTransactionsTradingVolume();
+		}
+
+		@Override
+		public void setValue(VolumeCapReport2 obj, ImpliedCurrencyAndAmount value) {
+			obj.setTotalNegotiatedTransactionsTradingVolume(value);
 		}
 	};
 

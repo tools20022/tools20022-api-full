@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.ChargeBearerType2Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -284,7 +285,7 @@ public class CreditTransferTransactionInformation7 {
 	 * definition} = "Set of elements to reference a payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, PaymentIdentification2> mmPaymentIdentification = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, PaymentIdentification2>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -296,7 +297,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentIdentification2.mmObject();
+			type_lazy = () -> PaymentIdentification2.mmObject();
+		}
+
+		@Override
+		public PaymentIdentification2 getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getPaymentIdentification();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, PaymentIdentification2 value) {
+			obj.setPaymentIdentification(value);
 		}
 	};
 	@XmlElement(name = "PmtTpInf")
@@ -334,7 +345,7 @@ public class CreditTransferTransactionInformation7 {
 	 * "Set of elements used to further specify the type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTypeInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<PaymentTypeInformation10>> mmPaymentTypeInformation = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<PaymentTypeInformation10>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmProcessingInstructions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -346,7 +357,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation10.mmObject();
+			type_lazy = () -> PaymentTypeInformation10.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTypeInformation10> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getPaymentTypeInformation();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<PaymentTypeInformation10> value) {
+			obj.setPaymentTypeInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmAmt", required = true)
@@ -386,7 +407,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTransferTransactionInformation7, EuroMax9Amount> mmInterbankSettlementAmount = new MMMessageAttribute<CreditTransferTransactionInformation7, EuroMax9Amount>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -398,6 +419,16 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EuroMax9Amount.mmObject();
+		}
+
+		@Override
+		public EuroMax9Amount getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, EuroMax9Amount value) {
+			obj.setInterbankSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt")
@@ -436,7 +467,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTransferTransactionInformation7, Optional<ISODate>> mmInterbankSettlementDate = new MMMessageAttribute<CreditTransferTransactionInformation7, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -448,6 +479,16 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<ISODate> value) {
+			obj.setInterbankSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmTmIndctn")
@@ -486,7 +527,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTimeIndication = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<SettlementDateTimeIndication1>> mmSettlementTimeIndication = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<SettlementDateTimeIndication1>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -498,7 +539,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementDateTimeIndication1.mmObject();
+			type_lazy = () -> SettlementDateTimeIndication1.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementDateTimeIndication1> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getSettlementTimeIndication();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<SettlementDateTimeIndication1> value) {
+			obj.setSettlementTimeIndication(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmTmReq")
@@ -536,7 +587,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTimeRequest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<SettlementTimeRequest1>> mmSettlementTimeRequest = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<SettlementTimeRequest1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmSettlementTimeRequest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -548,7 +599,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementTimeRequest1.mmObject();
+			type_lazy = () -> SettlementTimeRequest1.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementTimeRequest1> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getSettlementTimeRequest();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<SettlementTimeRequest1> value) {
+			obj.setSettlementTimeRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AccptncDtTm")
@@ -587,7 +648,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptanceDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTransferTransactionInformation7, Optional<ISODateTime>> mmAcceptanceDateTime = new MMMessageAttribute<CreditTransferTransactionInformation7, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmAcceptanceDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -599,6 +660,16 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getAcceptanceDateTime();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<ISODateTime> value) {
+			obj.setAcceptanceDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolgAdjstmntDt")
@@ -637,7 +708,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolingAdjustmentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTransferTransactionInformation7, Optional<ISODate>> mmPoolingAdjustmentDate = new MMMessageAttribute<CreditTransferTransactionInformation7, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPoolingAdjustmentDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -649,6 +720,16 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getPoolingAdjustmentDate();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<ISODate> value) {
+			obj.setPoolingAdjustmentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdAmt")
@@ -688,7 +769,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTransferTransactionInformation7, Optional<CurrencyAndAmount>> mmInstructedAmount = new MMMessageAttribute<CreditTransferTransactionInformation7, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -700,6 +781,16 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<CurrencyAndAmount> value) {
+			obj.setInstructedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgRate")
@@ -738,7 +829,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTransferTransactionInformation7, Optional<BaseOneRate>> mmExchangeRate = new MMMessageAttribute<CreditTransferTransactionInformation7, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -750,6 +841,16 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<BaseOneRate> value) {
+			obj.setExchangeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgBr", required = true)
@@ -789,7 +890,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditTransferTransactionInformation7, ChargeBearerType2Code> mmChargeBearer = new MMMessageAttribute<CreditTransferTransactionInformation7, ChargeBearerType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -802,9 +903,19 @@ public class CreditTransferTransactionInformation7 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeBearerType2Code.mmObject();
 		}
+
+		@Override
+		public ChargeBearerType2Code getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getChargeBearer();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, ChargeBearerType2Code value) {
+			obj.setChargeBearer(value);
+		}
 	};
 	@XmlElement(name = "ChrgsInf")
-	protected List<com.tools20022.repository.msg.ChargesInformation2> chargesInformation;
+	protected List<ChargesInformation2> chargesInformation;
 	/**
 	 * 
 	 <p>
@@ -837,7 +948,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargesInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<ChargesInformation2>> mmChargesInformation = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<ChargesInformation2>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -848,7 +959,17 @@ public class CreditTransferTransactionInformation7 {
 			definition = "Provides information on the charges related to the payment transaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ChargesInformation2.mmObject();
+			type_lazy = () -> ChargesInformation2.mmObject();
+		}
+
+		@Override
+		public List<ChargesInformation2> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getChargesInformation();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, List<ChargesInformation2> value) {
+			obj.setChargesInformation(value);
 		}
 	};
 	@XmlElement(name = "PrvsInstgAgt")
@@ -884,7 +1005,7 @@ public class CreditTransferTransactionInformation7 {
 	 * definition} = "Agent immediately prior to the instructing agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousInstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>> mmPreviousInstructingAgent = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -896,7 +1017,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getPreviousInstructingAgent();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<FinancialInstitution2> value) {
+			obj.setPreviousInstructingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsInstgAgtAcct")
@@ -934,7 +1065,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousInstructingAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>> mmPreviousInstructingAgentAccount = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -946,7 +1077,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getPreviousInstructingAgentAccount();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<CashAccount7> value) {
+			obj.setPreviousInstructingAgentAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstgAgt")
@@ -984,7 +1125,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>> mmInstructingAgent = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -996,7 +1137,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getInstructingAgent();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<FinancialInstitution2> value) {
+			obj.setInstructingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdAgt")
@@ -1034,7 +1185,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>> mmInstructedAgent = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1046,7 +1197,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getInstructedAgent();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<FinancialInstitution2> value) {
+			obj.setInstructedAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyAgt1")
@@ -1084,7 +1245,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryAgent1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>> mmIntermediaryAgent1 = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1096,7 +1257,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getIntermediaryAgent1();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<FinancialInstitution2> value) {
+			obj.setIntermediaryAgent1(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyAgt1Acct")
@@ -1134,7 +1305,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryAgent1Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>> mmIntermediaryAgent1Account = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1146,7 +1317,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getIntermediaryAgent1Account();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<CashAccount7> value) {
+			obj.setIntermediaryAgent1Account(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyAgt2")
@@ -1184,7 +1365,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryAgent2 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>> mmIntermediaryAgent2 = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1196,7 +1377,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getIntermediaryAgent2();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<FinancialInstitution2> value) {
+			obj.setIntermediaryAgent2(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyAgt2Acct")
@@ -1234,7 +1425,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryAgent2Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>> mmIntermediaryAgent2Account = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1246,7 +1437,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getIntermediaryAgent2Account();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<CashAccount7> value) {
+			obj.setIntermediaryAgent2Account(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyAgt3")
@@ -1284,7 +1485,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryAgent3 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>> mmIntermediaryAgent3 = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1296,7 +1497,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getIntermediaryAgent3();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<FinancialInstitution2> value) {
+			obj.setIntermediaryAgent3(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyAgt3Acct")
@@ -1334,7 +1545,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryAgent3Account = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>> mmIntermediaryAgent3Account = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1346,7 +1557,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getIntermediaryAgent3Account();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<CashAccount7> value) {
+			obj.setIntermediaryAgent3Account(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UltmtDbtr")
@@ -1384,7 +1605,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<PartyIdentification20>> mmUltimateDebtor = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<PartyIdentification20>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1396,7 +1617,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification20.mmObject();
+			type_lazy = () -> PartyIdentification20.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification20> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getUltimateDebtor();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<PartyIdentification20> value) {
+			obj.setUltimateDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitgPty")
@@ -1434,7 +1665,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<PartyIdentification20>> mmInitiatingParty = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<PartyIdentification20>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1446,7 +1677,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification20.mmObject();
+			type_lazy = () -> PartyIdentification20.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification20> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<PartyIdentification20> value) {
+			obj.setInitiatingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dbtr", required = true)
@@ -1483,7 +1724,7 @@ public class CreditTransferTransactionInformation7 {
 	 * "Party that owes an amount of money to the (ultimate) creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, PartyIdentification20> mmDebtor = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, PartyIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1495,7 +1736,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification20.mmObject();
+			type_lazy = () -> PartyIdentification20.mmObject();
+		}
+
+		@Override
+		public PartyIdentification20 getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, PartyIdentification20 value) {
+			obj.setDebtor(value);
 		}
 	};
 	@XmlElement(name = "DbtrAcct", required = true)
@@ -1533,7 +1784,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, CashAccount8> mmDebtorAccount = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, CashAccount8>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1545,7 +1796,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount8.mmObject();
+			type_lazy = () -> CashAccount8.mmObject();
+		}
+
+		@Override
+		public CashAccount8 getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getDebtorAccount();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, CashAccount8 value) {
+			obj.setDebtorAccount(value);
 		}
 	};
 	@XmlElement(name = "DbtrAgt", required = true)
@@ -1582,7 +1843,7 @@ public class CreditTransferTransactionInformation7 {
 	 * "Financial institution servicing an account for the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, FinancialInstitution2> mmDebtorAgent = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, FinancialInstitution2>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1594,7 +1855,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public FinancialInstitution2 getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, FinancialInstitution2 value) {
+			obj.setDebtorAgent(value);
 		}
 	};
 	@XmlElement(name = "DbtrAgtAcct")
@@ -1632,7 +1903,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>> mmDebtorAgentAccount = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1644,7 +1915,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getDebtorAgentAccount();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<CashAccount7> value) {
+			obj.setDebtorAgentAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt", required = true)
@@ -1681,7 +1962,7 @@ public class CreditTransferTransactionInformation7 {
 	 * "Financial institution servicing an account for the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, FinancialInstitution2> mmCreditorAgent = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, FinancialInstitution2>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1693,7 +1974,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public FinancialInstitution2 getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, FinancialInstitution2 value) {
+			obj.setCreditorAgent(value);
 		}
 	};
 	@XmlElement(name = "CdtrAgtAcct")
@@ -1731,7 +2022,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>> mmCreditorAgentAccount = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1743,7 +2034,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getCreditorAgentAccount();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<CashAccount7> value) {
+			obj.setCreditorAgentAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr", required = true)
@@ -1779,7 +2080,7 @@ public class CreditTransferTransactionInformation7 {
 	 * definition} = "Party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, PartyIdentification20> mmCreditor = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, PartyIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1791,7 +2092,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification20.mmObject();
+			type_lazy = () -> PartyIdentification20.mmObject();
+		}
+
+		@Override
+		public PartyIdentification20 getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, PartyIdentification20 value) {
+			obj.setCreditor(value);
 		}
 	};
 	@XmlElement(name = "CdtrAcct", required = true)
@@ -1829,7 +2140,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, CashAccount8> mmCreditorAccount = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, CashAccount8>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1841,7 +2152,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount8.mmObject();
+			type_lazy = () -> CashAccount8.mmObject();
+		}
+
+		@Override
+		public CashAccount8 getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getCreditorAccount();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, CashAccount8 value) {
+			obj.setCreditorAccount(value);
 		}
 	};
 	@XmlElement(name = "UltmtCdtr")
@@ -1877,7 +2198,7 @@ public class CreditTransferTransactionInformation7 {
 	 * definition} = "Ultimate party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<PartyIdentification20>> mmUltimateCreditor = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<PartyIdentification20>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1889,11 +2210,21 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification20.mmObject();
+			type_lazy = () -> PartyIdentification20.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification20> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getUltimateCreditor();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<PartyIdentification20> value) {
+			obj.setUltimateCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrForCdtrAgt")
-	protected List<com.tools20022.repository.msg.InstructionForCreditorAgent1> instructionForCreditorAgent;
+	protected List<InstructionForCreditorAgent1> instructionForCreditorAgent;
 	/**
 	 * 
 	 <p>
@@ -1928,7 +2259,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionForCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<InstructionForCreditorAgent1>> mmInstructionForCreditorAgent = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<InstructionForCreditorAgent1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructionForCreditorAgent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1939,11 +2270,21 @@ public class CreditTransferTransactionInformation7 {
 			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the creditor agent. \n\nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the creditor's agent, or can be information required by the creditor's agent to process the instruction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InstructionForCreditorAgent1.mmObject();
+			type_lazy = () -> InstructionForCreditorAgent1.mmObject();
+		}
+
+		@Override
+		public List<InstructionForCreditorAgent1> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getInstructionForCreditorAgent();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, List<InstructionForCreditorAgent1> value) {
+			obj.setInstructionForCreditorAgent(value);
 		}
 	};
 	@XmlElement(name = "InstrForNxtAgt")
-	protected List<com.tools20022.repository.msg.InstructionForNextAgent1> instructionForNextAgent;
+	protected List<InstructionForNextAgent1> instructionForNextAgent;
 	/**
 	 * 
 	 <p>
@@ -1978,7 +2319,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionForNextAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<InstructionForNextAgent1>> mmInstructionForNextAgent = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<InstructionForNextAgent1>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -1989,7 +2330,17 @@ public class CreditTransferTransactionInformation7 {
 			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. \n\nUsage: The next agent may not be the creditor agent.\nThe instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InstructionForNextAgent1.mmObject();
+			type_lazy = () -> InstructionForNextAgent1.mmObject();
+		}
+
+		@Override
+		public List<InstructionForNextAgent1> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getInstructionForNextAgent();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, List<InstructionForNextAgent1> value) {
+			obj.setInstructionForNextAgent(value);
 		}
 	};
 	@XmlElement(name = "Purp")
@@ -2027,7 +2378,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<Purpose1Choice>> mmPurpose = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<Purpose1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -2041,9 +2392,19 @@ public class CreditTransferTransactionInformation7 {
 			isComposite = true;
 			type_lazy = () -> Purpose1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<Purpose1Choice> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getPurpose();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<Purpose1Choice> value) {
+			obj.setPurpose(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "RgltryRptg")
-	protected List<com.tools20022.repository.msg.RegulatoryReporting2> regulatoryReporting;
+	protected List<RegulatoryReporting2> regulatoryReporting;
 	/**
 	 * 
 	 <p>
@@ -2076,7 +2437,7 @@ public class CreditTransferTransactionInformation7 {
 	 * "Information needed due to regulatory and statutory requirements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegulatoryReporting = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<RegulatoryReporting2>> mmRegulatoryReporting = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<RegulatoryReporting2>>() {
 		{
 			businessElementTrace_lazy = () -> FinancialTransaction.mmRegulatoryReport;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -2088,11 +2449,21 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RegulatoryReporting2.mmObject();
+			type_lazy = () -> RegulatoryReporting2.mmObject();
+		}
+
+		@Override
+		public List<RegulatoryReporting2> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getRegulatoryReporting();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, List<RegulatoryReporting2> value) {
+			obj.setRegulatoryReporting(value);
 		}
 	};
 	@XmlElement(name = "RltdRmtInf")
-	protected List<com.tools20022.repository.msg.RemittanceLocation1> relatedRemittanceInformation;
+	protected List<RemittanceLocation1> relatedRemittanceInformation;
 	/**
 	 * 
 	 <p>
@@ -2126,7 +2497,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedRemittanceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<RemittanceLocation1>> mmRelatedRemittanceInformation = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, List<RemittanceLocation1>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmRemittanceLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -2138,7 +2509,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RemittanceLocation1.mmObject();
+			type_lazy = () -> RemittanceLocation1.mmObject();
+		}
+
+		@Override
+		public List<RemittanceLocation1> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getRelatedRemittanceInformation();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, List<RemittanceLocation1> value) {
+			obj.setRelatedRemittanceInformation(value);
 		}
 	};
 	@XmlElement(name = "RmtInf")
@@ -2176,7 +2557,7 @@ public class CreditTransferTransactionInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRemittanceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<RemittanceInformation4>> mmRemittanceInformation = new MMMessageAssociationEnd<CreditTransferTransactionInformation7, Optional<RemittanceInformation4>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAssociatedDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditTransferTransactionInformation7.mmObject();
@@ -2188,7 +2569,17 @@ public class CreditTransferTransactionInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RemittanceInformation4.mmObject();
+			type_lazy = () -> RemittanceInformation4.mmObject();
+		}
+
+		@Override
+		public Optional<RemittanceInformation4> getValue(CreditTransferTransactionInformation7 obj) {
+			return obj.getRemittanceInformation();
+		}
+
+		@Override
+		public void setValue(CreditTransferTransactionInformation7 obj, Optional<RemittanceInformation4> value) {
+			obj.setRemittanceInformation(value.orElse(null));
 		}
 	};
 
@@ -2243,7 +2634,7 @@ public class CreditTransferTransactionInformation7 {
 		return paymentIdentification;
 	}
 
-	public CreditTransferTransactionInformation7 setPaymentIdentification(com.tools20022.repository.msg.PaymentIdentification2 paymentIdentification) {
+	public CreditTransferTransactionInformation7 setPaymentIdentification(PaymentIdentification2 paymentIdentification) {
 		this.paymentIdentification = Objects.requireNonNull(paymentIdentification);
 		return this;
 	}
@@ -2252,7 +2643,7 @@ public class CreditTransferTransactionInformation7 {
 		return paymentTypeInformation == null ? Optional.empty() : Optional.of(paymentTypeInformation);
 	}
 
-	public CreditTransferTransactionInformation7 setPaymentTypeInformation(com.tools20022.repository.msg.PaymentTypeInformation10 paymentTypeInformation) {
+	public CreditTransferTransactionInformation7 setPaymentTypeInformation(PaymentTypeInformation10 paymentTypeInformation) {
 		this.paymentTypeInformation = paymentTypeInformation;
 		return this;
 	}
@@ -2279,7 +2670,7 @@ public class CreditTransferTransactionInformation7 {
 		return settlementTimeIndication == null ? Optional.empty() : Optional.of(settlementTimeIndication);
 	}
 
-	public CreditTransferTransactionInformation7 setSettlementTimeIndication(com.tools20022.repository.msg.SettlementDateTimeIndication1 settlementTimeIndication) {
+	public CreditTransferTransactionInformation7 setSettlementTimeIndication(SettlementDateTimeIndication1 settlementTimeIndication) {
 		this.settlementTimeIndication = settlementTimeIndication;
 		return this;
 	}
@@ -2288,7 +2679,7 @@ public class CreditTransferTransactionInformation7 {
 		return settlementTimeRequest == null ? Optional.empty() : Optional.of(settlementTimeRequest);
 	}
 
-	public CreditTransferTransactionInformation7 setSettlementTimeRequest(com.tools20022.repository.msg.SettlementTimeRequest1 settlementTimeRequest) {
+	public CreditTransferTransactionInformation7 setSettlementTimeRequest(SettlementTimeRequest1 settlementTimeRequest) {
 		this.settlementTimeRequest = settlementTimeRequest;
 		return this;
 	}
@@ -2342,7 +2733,7 @@ public class CreditTransferTransactionInformation7 {
 		return chargesInformation == null ? chargesInformation = new ArrayList<>() : chargesInformation;
 	}
 
-	public CreditTransferTransactionInformation7 setChargesInformation(List<com.tools20022.repository.msg.ChargesInformation2> chargesInformation) {
+	public CreditTransferTransactionInformation7 setChargesInformation(List<ChargesInformation2> chargesInformation) {
 		this.chargesInformation = Objects.requireNonNull(chargesInformation);
 		return this;
 	}
@@ -2351,7 +2742,7 @@ public class CreditTransferTransactionInformation7 {
 		return previousInstructingAgent == null ? Optional.empty() : Optional.of(previousInstructingAgent);
 	}
 
-	public CreditTransferTransactionInformation7 setPreviousInstructingAgent(com.tools20022.repository.msg.FinancialInstitution2 previousInstructingAgent) {
+	public CreditTransferTransactionInformation7 setPreviousInstructingAgent(FinancialInstitution2 previousInstructingAgent) {
 		this.previousInstructingAgent = previousInstructingAgent;
 		return this;
 	}
@@ -2360,7 +2751,7 @@ public class CreditTransferTransactionInformation7 {
 		return previousInstructingAgentAccount == null ? Optional.empty() : Optional.of(previousInstructingAgentAccount);
 	}
 
-	public CreditTransferTransactionInformation7 setPreviousInstructingAgentAccount(com.tools20022.repository.msg.CashAccount7 previousInstructingAgentAccount) {
+	public CreditTransferTransactionInformation7 setPreviousInstructingAgentAccount(CashAccount7 previousInstructingAgentAccount) {
 		this.previousInstructingAgentAccount = previousInstructingAgentAccount;
 		return this;
 	}
@@ -2369,7 +2760,7 @@ public class CreditTransferTransactionInformation7 {
 		return instructingAgent == null ? Optional.empty() : Optional.of(instructingAgent);
 	}
 
-	public CreditTransferTransactionInformation7 setInstructingAgent(com.tools20022.repository.msg.FinancialInstitution2 instructingAgent) {
+	public CreditTransferTransactionInformation7 setInstructingAgent(FinancialInstitution2 instructingAgent) {
 		this.instructingAgent = instructingAgent;
 		return this;
 	}
@@ -2378,7 +2769,7 @@ public class CreditTransferTransactionInformation7 {
 		return instructedAgent == null ? Optional.empty() : Optional.of(instructedAgent);
 	}
 
-	public CreditTransferTransactionInformation7 setInstructedAgent(com.tools20022.repository.msg.FinancialInstitution2 instructedAgent) {
+	public CreditTransferTransactionInformation7 setInstructedAgent(FinancialInstitution2 instructedAgent) {
 		this.instructedAgent = instructedAgent;
 		return this;
 	}
@@ -2387,7 +2778,7 @@ public class CreditTransferTransactionInformation7 {
 		return intermediaryAgent1 == null ? Optional.empty() : Optional.of(intermediaryAgent1);
 	}
 
-	public CreditTransferTransactionInformation7 setIntermediaryAgent1(com.tools20022.repository.msg.FinancialInstitution2 intermediaryAgent1) {
+	public CreditTransferTransactionInformation7 setIntermediaryAgent1(FinancialInstitution2 intermediaryAgent1) {
 		this.intermediaryAgent1 = intermediaryAgent1;
 		return this;
 	}
@@ -2396,7 +2787,7 @@ public class CreditTransferTransactionInformation7 {
 		return intermediaryAgent1Account == null ? Optional.empty() : Optional.of(intermediaryAgent1Account);
 	}
 
-	public CreditTransferTransactionInformation7 setIntermediaryAgent1Account(com.tools20022.repository.msg.CashAccount7 intermediaryAgent1Account) {
+	public CreditTransferTransactionInformation7 setIntermediaryAgent1Account(CashAccount7 intermediaryAgent1Account) {
 		this.intermediaryAgent1Account = intermediaryAgent1Account;
 		return this;
 	}
@@ -2405,7 +2796,7 @@ public class CreditTransferTransactionInformation7 {
 		return intermediaryAgent2 == null ? Optional.empty() : Optional.of(intermediaryAgent2);
 	}
 
-	public CreditTransferTransactionInformation7 setIntermediaryAgent2(com.tools20022.repository.msg.FinancialInstitution2 intermediaryAgent2) {
+	public CreditTransferTransactionInformation7 setIntermediaryAgent2(FinancialInstitution2 intermediaryAgent2) {
 		this.intermediaryAgent2 = intermediaryAgent2;
 		return this;
 	}
@@ -2414,7 +2805,7 @@ public class CreditTransferTransactionInformation7 {
 		return intermediaryAgent2Account == null ? Optional.empty() : Optional.of(intermediaryAgent2Account);
 	}
 
-	public CreditTransferTransactionInformation7 setIntermediaryAgent2Account(com.tools20022.repository.msg.CashAccount7 intermediaryAgent2Account) {
+	public CreditTransferTransactionInformation7 setIntermediaryAgent2Account(CashAccount7 intermediaryAgent2Account) {
 		this.intermediaryAgent2Account = intermediaryAgent2Account;
 		return this;
 	}
@@ -2423,7 +2814,7 @@ public class CreditTransferTransactionInformation7 {
 		return intermediaryAgent3 == null ? Optional.empty() : Optional.of(intermediaryAgent3);
 	}
 
-	public CreditTransferTransactionInformation7 setIntermediaryAgent3(com.tools20022.repository.msg.FinancialInstitution2 intermediaryAgent3) {
+	public CreditTransferTransactionInformation7 setIntermediaryAgent3(FinancialInstitution2 intermediaryAgent3) {
 		this.intermediaryAgent3 = intermediaryAgent3;
 		return this;
 	}
@@ -2432,7 +2823,7 @@ public class CreditTransferTransactionInformation7 {
 		return intermediaryAgent3Account == null ? Optional.empty() : Optional.of(intermediaryAgent3Account);
 	}
 
-	public CreditTransferTransactionInformation7 setIntermediaryAgent3Account(com.tools20022.repository.msg.CashAccount7 intermediaryAgent3Account) {
+	public CreditTransferTransactionInformation7 setIntermediaryAgent3Account(CashAccount7 intermediaryAgent3Account) {
 		this.intermediaryAgent3Account = intermediaryAgent3Account;
 		return this;
 	}
@@ -2441,7 +2832,7 @@ public class CreditTransferTransactionInformation7 {
 		return ultimateDebtor == null ? Optional.empty() : Optional.of(ultimateDebtor);
 	}
 
-	public CreditTransferTransactionInformation7 setUltimateDebtor(com.tools20022.repository.msg.PartyIdentification20 ultimateDebtor) {
+	public CreditTransferTransactionInformation7 setUltimateDebtor(PartyIdentification20 ultimateDebtor) {
 		this.ultimateDebtor = ultimateDebtor;
 		return this;
 	}
@@ -2450,7 +2841,7 @@ public class CreditTransferTransactionInformation7 {
 		return initiatingParty == null ? Optional.empty() : Optional.of(initiatingParty);
 	}
 
-	public CreditTransferTransactionInformation7 setInitiatingParty(com.tools20022.repository.msg.PartyIdentification20 initiatingParty) {
+	public CreditTransferTransactionInformation7 setInitiatingParty(PartyIdentification20 initiatingParty) {
 		this.initiatingParty = initiatingParty;
 		return this;
 	}
@@ -2459,7 +2850,7 @@ public class CreditTransferTransactionInformation7 {
 		return debtor;
 	}
 
-	public CreditTransferTransactionInformation7 setDebtor(com.tools20022.repository.msg.PartyIdentification20 debtor) {
+	public CreditTransferTransactionInformation7 setDebtor(PartyIdentification20 debtor) {
 		this.debtor = Objects.requireNonNull(debtor);
 		return this;
 	}
@@ -2468,7 +2859,7 @@ public class CreditTransferTransactionInformation7 {
 		return debtorAccount;
 	}
 
-	public CreditTransferTransactionInformation7 setDebtorAccount(com.tools20022.repository.msg.CashAccount8 debtorAccount) {
+	public CreditTransferTransactionInformation7 setDebtorAccount(CashAccount8 debtorAccount) {
 		this.debtorAccount = Objects.requireNonNull(debtorAccount);
 		return this;
 	}
@@ -2477,7 +2868,7 @@ public class CreditTransferTransactionInformation7 {
 		return debtorAgent;
 	}
 
-	public CreditTransferTransactionInformation7 setDebtorAgent(com.tools20022.repository.msg.FinancialInstitution2 debtorAgent) {
+	public CreditTransferTransactionInformation7 setDebtorAgent(FinancialInstitution2 debtorAgent) {
 		this.debtorAgent = Objects.requireNonNull(debtorAgent);
 		return this;
 	}
@@ -2486,7 +2877,7 @@ public class CreditTransferTransactionInformation7 {
 		return debtorAgentAccount == null ? Optional.empty() : Optional.of(debtorAgentAccount);
 	}
 
-	public CreditTransferTransactionInformation7 setDebtorAgentAccount(com.tools20022.repository.msg.CashAccount7 debtorAgentAccount) {
+	public CreditTransferTransactionInformation7 setDebtorAgentAccount(CashAccount7 debtorAgentAccount) {
 		this.debtorAgentAccount = debtorAgentAccount;
 		return this;
 	}
@@ -2495,7 +2886,7 @@ public class CreditTransferTransactionInformation7 {
 		return creditorAgent;
 	}
 
-	public CreditTransferTransactionInformation7 setCreditorAgent(com.tools20022.repository.msg.FinancialInstitution2 creditorAgent) {
+	public CreditTransferTransactionInformation7 setCreditorAgent(FinancialInstitution2 creditorAgent) {
 		this.creditorAgent = Objects.requireNonNull(creditorAgent);
 		return this;
 	}
@@ -2504,7 +2895,7 @@ public class CreditTransferTransactionInformation7 {
 		return creditorAgentAccount == null ? Optional.empty() : Optional.of(creditorAgentAccount);
 	}
 
-	public CreditTransferTransactionInformation7 setCreditorAgentAccount(com.tools20022.repository.msg.CashAccount7 creditorAgentAccount) {
+	public CreditTransferTransactionInformation7 setCreditorAgentAccount(CashAccount7 creditorAgentAccount) {
 		this.creditorAgentAccount = creditorAgentAccount;
 		return this;
 	}
@@ -2513,7 +2904,7 @@ public class CreditTransferTransactionInformation7 {
 		return creditor;
 	}
 
-	public CreditTransferTransactionInformation7 setCreditor(com.tools20022.repository.msg.PartyIdentification20 creditor) {
+	public CreditTransferTransactionInformation7 setCreditor(PartyIdentification20 creditor) {
 		this.creditor = Objects.requireNonNull(creditor);
 		return this;
 	}
@@ -2522,7 +2913,7 @@ public class CreditTransferTransactionInformation7 {
 		return creditorAccount;
 	}
 
-	public CreditTransferTransactionInformation7 setCreditorAccount(com.tools20022.repository.msg.CashAccount8 creditorAccount) {
+	public CreditTransferTransactionInformation7 setCreditorAccount(CashAccount8 creditorAccount) {
 		this.creditorAccount = Objects.requireNonNull(creditorAccount);
 		return this;
 	}
@@ -2531,7 +2922,7 @@ public class CreditTransferTransactionInformation7 {
 		return ultimateCreditor == null ? Optional.empty() : Optional.of(ultimateCreditor);
 	}
 
-	public CreditTransferTransactionInformation7 setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification20 ultimateCreditor) {
+	public CreditTransferTransactionInformation7 setUltimateCreditor(PartyIdentification20 ultimateCreditor) {
 		this.ultimateCreditor = ultimateCreditor;
 		return this;
 	}
@@ -2540,7 +2931,7 @@ public class CreditTransferTransactionInformation7 {
 		return instructionForCreditorAgent == null ? instructionForCreditorAgent = new ArrayList<>() : instructionForCreditorAgent;
 	}
 
-	public CreditTransferTransactionInformation7 setInstructionForCreditorAgent(List<com.tools20022.repository.msg.InstructionForCreditorAgent1> instructionForCreditorAgent) {
+	public CreditTransferTransactionInformation7 setInstructionForCreditorAgent(List<InstructionForCreditorAgent1> instructionForCreditorAgent) {
 		this.instructionForCreditorAgent = Objects.requireNonNull(instructionForCreditorAgent);
 		return this;
 	}
@@ -2549,7 +2940,7 @@ public class CreditTransferTransactionInformation7 {
 		return instructionForNextAgent == null ? instructionForNextAgent = new ArrayList<>() : instructionForNextAgent;
 	}
 
-	public CreditTransferTransactionInformation7 setInstructionForNextAgent(List<com.tools20022.repository.msg.InstructionForNextAgent1> instructionForNextAgent) {
+	public CreditTransferTransactionInformation7 setInstructionForNextAgent(List<InstructionForNextAgent1> instructionForNextAgent) {
 		this.instructionForNextAgent = Objects.requireNonNull(instructionForNextAgent);
 		return this;
 	}
@@ -2567,7 +2958,7 @@ public class CreditTransferTransactionInformation7 {
 		return regulatoryReporting == null ? regulatoryReporting = new ArrayList<>() : regulatoryReporting;
 	}
 
-	public CreditTransferTransactionInformation7 setRegulatoryReporting(List<com.tools20022.repository.msg.RegulatoryReporting2> regulatoryReporting) {
+	public CreditTransferTransactionInformation7 setRegulatoryReporting(List<RegulatoryReporting2> regulatoryReporting) {
 		this.regulatoryReporting = Objects.requireNonNull(regulatoryReporting);
 		return this;
 	}
@@ -2576,7 +2967,7 @@ public class CreditTransferTransactionInformation7 {
 		return relatedRemittanceInformation == null ? relatedRemittanceInformation = new ArrayList<>() : relatedRemittanceInformation;
 	}
 
-	public CreditTransferTransactionInformation7 setRelatedRemittanceInformation(List<com.tools20022.repository.msg.RemittanceLocation1> relatedRemittanceInformation) {
+	public CreditTransferTransactionInformation7 setRelatedRemittanceInformation(List<RemittanceLocation1> relatedRemittanceInformation) {
 		this.relatedRemittanceInformation = Objects.requireNonNull(relatedRemittanceInformation);
 		return this;
 	}
@@ -2585,7 +2976,7 @@ public class CreditTransferTransactionInformation7 {
 		return remittanceInformation == null ? Optional.empty() : Optional.of(remittanceInformation);
 	}
 
-	public CreditTransferTransactionInformation7 setRemittanceInformation(com.tools20022.repository.msg.RemittanceInformation4 remittanceInformation) {
+	public CreditTransferTransactionInformation7 setRemittanceInformation(RemittanceInformation4 remittanceInformation) {
 		this.remittanceInformation = remittanceInformation;
 		return this;
 	}

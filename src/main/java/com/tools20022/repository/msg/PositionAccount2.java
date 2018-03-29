@@ -24,6 +24,8 @@ import com.tools20022.repository.area.auth.CCPAccountPositionReportV01;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.Position;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification165;
+import com.tools20022.repository.msg.Position1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +121,7 @@ public class PositionAccount2 {
 	 * definition} = "Unique internal identification of the position account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PositionAccount2, GenericIdentification165> mmIdentification = new MMMessageAssociationEnd<PositionAccount2, GenericIdentification165>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionAccount2.mmObject();
@@ -131,11 +133,21 @@ public class PositionAccount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification165.mmObject();
+			type_lazy = () -> GenericIdentification165.mmObject();
+		}
+
+		@Override
+		public GenericIdentification165 getValue(PositionAccount2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PositionAccount2 obj, GenericIdentification165 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Pos", required = true)
-	protected List<com.tools20022.repository.msg.Position1> position;
+	protected List<Position1> position;
 	/**
 	 * 
 	 <p>
@@ -166,7 +178,7 @@ public class PositionAccount2 {
 	 * "Position in a financial instrument or set of financial instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PositionAccount2, List<Position1>> mmPosition = new MMMessageAssociationEnd<PositionAccount2, List<Position1>>() {
 		{
 			businessComponentTrace_lazy = () -> Position.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PositionAccount2.mmObject();
@@ -177,7 +189,17 @@ public class PositionAccount2 {
 			definition = "Position in a financial instrument or set of financial instruments.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Position1.mmObject();
+			type_lazy = () -> Position1.mmObject();
+		}
+
+		@Override
+		public List<Position1> getValue(PositionAccount2 obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(PositionAccount2 obj, List<Position1> value) {
+			obj.setPosition(value);
 		}
 	};
 
@@ -200,7 +222,7 @@ public class PositionAccount2 {
 		return identification;
 	}
 
-	public PositionAccount2 setIdentification(com.tools20022.repository.msg.GenericIdentification165 identification) {
+	public PositionAccount2 setIdentification(GenericIdentification165 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -209,7 +231,7 @@ public class PositionAccount2 {
 		return position == null ? position = new ArrayList<>() : position;
 	}
 
-	public PositionAccount2 setPosition(List<com.tools20022.repository.msg.Position1> position) {
+	public PositionAccount2 setPosition(List<Position1> position) {
 		this.position = Objects.requireNonNull(position);
 		return this;
 	}

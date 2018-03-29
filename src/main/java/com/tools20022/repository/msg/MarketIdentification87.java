@@ -104,7 +104,7 @@ public class MarketIdentification87 {
 	 * "Country in which the financial instrument is to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification87, CountryCode> mmCountry = new MMMessageAttribute<MarketIdentification87, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification87.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class MarketIdentification87 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(MarketIdentification87 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(MarketIdentification87 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "ClssfctnTp", required = true)
@@ -146,7 +156,7 @@ public class MarketIdentification87 {
 	 * definition} = "Type of instrument covered by the SSI instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClassificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification87, ClassificationType1Choice> mmClassificationType = new MMMessageAssociationEnd<MarketIdentification87, ClassificationType1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification87.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class MarketIdentification87 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ClassificationType1Choice.mmObject();
+		}
+
+		@Override
+		public ClassificationType1Choice getValue(MarketIdentification87 obj) {
+			return obj.getClassificationType();
+		}
+
+		@Override
+		public void setValue(MarketIdentification87 obj, ClassificationType1Choice value) {
+			obj.setClassificationType(value);
 		}
 	};
 	@XmlElement(name = "SttlmPurp")
@@ -190,7 +210,7 @@ public class MarketIdentification87 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementPurpose = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification87, Optional<Purpose3Choice>> mmSettlementPurpose = new MMMessageAssociationEnd<MarketIdentification87, Optional<Purpose3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification87.mmObject();
 			isDerived = false;
@@ -202,6 +222,16 @@ public class MarketIdentification87 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Purpose3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Purpose3Choice> getValue(MarketIdentification87 obj) {
+			return obj.getSettlementPurpose();
+		}
+
+		@Override
+		public void setValue(MarketIdentification87 obj, Optional<Purpose3Choice> value) {
+			obj.setSettlementPurpose(value.orElse(null));
 		}
 	};
 

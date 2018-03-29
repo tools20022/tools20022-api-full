@@ -113,7 +113,7 @@ public class BenchmarkCurveName7Choice {
 	 * BenchmarkCurveName2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BenchmarkCurveName7Choice, BenchmarkCurveName1Code> mmCode = new MMMessageAttribute<BenchmarkCurveName7Choice, BenchmarkCurveName1Code>() {
 		{
 			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BenchmarkCurveName7Choice.mmObject();
@@ -126,6 +126,16 @@ public class BenchmarkCurveName7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BenchmarkCurveName1Code.mmObject();
+		}
+
+		@Override
+		public BenchmarkCurveName1Code getValue(BenchmarkCurveName7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurveName7Choice obj, BenchmarkCurveName1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class BenchmarkCurveName7Choice {
 	 * BenchmarkCurveName2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BenchmarkCurveName7Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<BenchmarkCurveName7Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BenchmarkCurveName7Choice.mmObject();
@@ -180,6 +190,16 @@ public class BenchmarkCurveName7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(BenchmarkCurveName7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurveName7Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

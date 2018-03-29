@@ -53,11 +53,15 @@ public class ConstraintCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {
 		{
-			validator = ConstraintCreditDebitIndicator1Rule::checkTransactions2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator1Rule";
 			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
 			owner_lazy = () -> Transactions2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions2 obj) throws Exception {
+			checkTransactions2(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
 		{
-			validator = ConstraintCreditDebitIndicator1Rule::checkTransactions3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator1Rule";
 			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
 			owner_lazy = () -> Transactions3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions3 obj) throws Exception {
+			checkTransactions3(obj);
 		}
 	};
 	/**
@@ -111,11 +119,15 @@ public class ConstraintCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<Transactions4> forTransactions4 = new MMConstraint<Transactions4>() {
 		{
-			validator = ConstraintCreditDebitIndicator1Rule::checkTransactions4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator1Rule";
 			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
 			owner_lazy = () -> Transactions4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions4 obj) throws Exception {
+			checkTransactions4(obj);
 		}
 	};
 	/**
@@ -152,13 +164,17 @@ public class ConstraintCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<Transactions5> forTransactions5 = new MMConstraint<Transactions5>() {
 		{
-			validator = ConstraintCreditDebitIndicator1Rule::checkTransactions5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator1Rule";
 			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\r\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditDebitIndicator1Rule.forTransactions6);
 			owner_lazy = () -> Transactions5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionReport[*]/TransactionOrError/Transaction/CreditDebitIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentCommonInformation/CreditDebitIndicator</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Transactions5 obj) throws Exception {
+			checkTransactions5(obj);
 		}
 	};
 	/**
@@ -200,7 +216,6 @@ public class ConstraintCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<Transactions6> forTransactions6 = new MMConstraint<Transactions6>() {
 		{
-			validator = ConstraintCreditDebitIndicator1Rule::checkTransactions6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator1Rule";
 			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\r\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
@@ -208,6 +223,11 @@ public class ConstraintCreditDebitIndicator1Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditDebitIndicator1Rule.forTransactions5;
 			owner_lazy = () -> Transactions6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionReport[*]/TransactionOrError/Transaction/CreditDebitIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentCommonInformation/CreditDebitIndicator</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Transactions6 obj) throws Exception {
+			checkTransactions6(obj);
 		}
 	};
 	/**
@@ -241,13 +261,17 @@ public class ConstraintCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<Transactions7> forTransactions7 = new MMConstraint<Transactions7>() {
 		{
-			validator = ConstraintCreditDebitIndicator1Rule::checkTransactions7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator1Rule";
 			definition = "If PaymentCommonInformation/CreditDebitIndicator is present, then TransactionReport/Transaction/CreditDebitIndicator is not allowed.\r\nIf PaymentCommonInformation/CreditDebitIndicator is not present, then TransactionReport/Transaction/CreditDebitIndicator is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditDebitIndicator1Rule.forTransactions6;
 			owner_lazy = () -> Transactions7.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionReport[*]/TransactionOrError/Transaction/CreditDebitIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentCommonInformation/CreditDebitIndicator</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Transactions7 obj) throws Exception {
+			checkTransactions7(obj);
 		}
 	};
 

@@ -112,7 +112,7 @@ public class BlockTrade2Choice {
 	 * "Block parent or child information expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockTrade2Choice, BlockTrade1Code> mmCode = new MMMessageAttribute<BlockTrade2Choice, BlockTrade1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBlockTrade;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BlockTrade2Choice.mmObject();
@@ -125,6 +125,16 @@ public class BlockTrade2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BlockTrade1Code.mmObject();
+		}
+
+		@Override
+		public BlockTrade1Code getValue(BlockTrade2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BlockTrade2Choice obj, BlockTrade1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class BlockTrade2Choice {
 	 * "Block parent or child information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BlockTrade2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<BlockTrade2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBlockTrade;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BlockTrade2Choice.mmObject();
@@ -179,6 +189,16 @@ public class BlockTrade2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(BlockTrade2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BlockTrade2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

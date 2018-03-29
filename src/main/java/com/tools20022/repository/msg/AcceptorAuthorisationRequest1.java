@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV01;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentContext1;
+import com.tools20022.repository.msg.CardPaymentEnvironment1;
+import com.tools20022.repository.msg.CardPaymentTransaction1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +126,7 @@ public class AcceptorAuthorisationRequest1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationRequest1, CardPaymentEnvironment1> mmEnvironment = new MMMessageAssociationEnd<AcceptorAuthorisationRequest1, CardPaymentEnvironment1>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationRequest1.mmObject();
@@ -135,7 +138,17 @@ public class AcceptorAuthorisationRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment1.mmObject();
+			type_lazy = () -> CardPaymentEnvironment1.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment1 getValue(AcceptorAuthorisationRequest1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequest1 obj, CardPaymentEnvironment1 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cntxt", required = true)
@@ -172,7 +185,7 @@ public class AcceptorAuthorisationRequest1 {
 	 * "Context in which the transaction is performed (payment and sale)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationRequest1, CardPaymentContext1> mmContext = new MMMessageAssociationEnd<AcceptorAuthorisationRequest1, CardPaymentContext1>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationRequest1.mmObject();
@@ -184,7 +197,17 @@ public class AcceptorAuthorisationRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentContext1.mmObject();
+			type_lazy = () -> CardPaymentContext1.mmObject();
+		}
+
+		@Override
+		public CardPaymentContext1 getValue(AcceptorAuthorisationRequest1 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequest1 obj, CardPaymentContext1 value) {
+			obj.setContext(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -221,7 +244,7 @@ public class AcceptorAuthorisationRequest1 {
 	 * "Card payment transaction for which the authorisation is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationRequest1, CardPaymentTransaction1> mmTransaction = new MMMessageAssociationEnd<AcceptorAuthorisationRequest1, CardPaymentTransaction1>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationRequest1.mmObject();
@@ -233,7 +256,17 @@ public class AcceptorAuthorisationRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction1.mmObject();
+			type_lazy = () -> CardPaymentTransaction1.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction1 getValue(AcceptorAuthorisationRequest1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequest1 obj, CardPaymentTransaction1 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -258,7 +291,7 @@ public class AcceptorAuthorisationRequest1 {
 		return environment;
 	}
 
-	public AcceptorAuthorisationRequest1 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment1 environment) {
+	public AcceptorAuthorisationRequest1 setEnvironment(CardPaymentEnvironment1 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -267,7 +300,7 @@ public class AcceptorAuthorisationRequest1 {
 		return context;
 	}
 
-	public AcceptorAuthorisationRequest1 setContext(com.tools20022.repository.msg.CardPaymentContext1 context) {
+	public AcceptorAuthorisationRequest1 setContext(CardPaymentContext1 context) {
 		this.context = Objects.requireNonNull(context);
 		return this;
 	}
@@ -276,7 +309,7 @@ public class AcceptorAuthorisationRequest1 {
 		return transaction;
 	}
 
-	public AcceptorAuthorisationRequest1 setTransaction(com.tools20022.repository.msg.CardPaymentTransaction1 transaction) {
+	public AcceptorAuthorisationRequest1 setTransaction(CardPaymentTransaction1 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

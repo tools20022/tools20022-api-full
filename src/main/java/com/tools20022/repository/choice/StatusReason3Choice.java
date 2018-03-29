@@ -106,7 +106,7 @@ public class StatusReason3Choice {
 	 * definition} = "Reason for the status in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReason3Choice, TransactionRejectReason4Code> mmCode = new MMMessageAttribute<StatusReason3Choice, TransactionRejectReason4Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusReason3Choice.mmObject();
@@ -118,6 +118,16 @@ public class StatusReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionRejectReason4Code.mmObject();
+		}
+
+		@Override
+		public TransactionRejectReason4Code getValue(StatusReason3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(StatusReason3Choice obj, TransactionRejectReason4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class StatusReason3Choice {
 	 * "Reason for the status not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReason3Choice, RestrictedRR01CodeText> mmProprietary = new MMMessageAttribute<StatusReason3Choice, RestrictedRR01CodeText>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusReason3Choice.mmObject();
@@ -168,6 +178,16 @@ public class StatusReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedRR01CodeText.mmObject();
+		}
+
+		@Override
+		public RestrictedRR01CodeText getValue(StatusReason3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StatusReason3Choice obj, RestrictedRR01CodeText value) {
+			obj.setProprietary(value);
 		}
 	};
 

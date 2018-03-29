@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.BusinessDayReportOrError7Choice;
 import com.tools20022.repository.msg.MessageHeader7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +109,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReturnBusinessDayInformationV06"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -148,7 +147,7 @@ public class ReturnBusinessDayInformationV06 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnBusinessDayInformationV06, MessageHeader7> mmMessageHeader = new MMMessageBuildingBlock<ReturnBusinessDayInformationV06, MessageHeader7>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,12 +158,14 @@ public class ReturnBusinessDayInformationV06 {
 			complexType_lazy = () -> MessageHeader7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnBusinessDayInformationV06.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader7 getValue(ReturnBusinessDayInformationV06 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ReturnBusinessDayInformationV06 obj, MessageHeader7 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "RptOrErr", required = true)
@@ -192,7 +193,7 @@ public class ReturnBusinessDayInformationV06 {
 	 * definition} = "Reports on business day information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportOrError = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnBusinessDayInformationV06, BusinessDayReportOrError7Choice> mmReportOrError = new MMMessageBuildingBlock<ReturnBusinessDayInformationV06, BusinessDayReportOrError7Choice>() {
 		{
 			xmlTag = "RptOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,12 +204,14 @@ public class ReturnBusinessDayInformationV06 {
 			complexType_lazy = () -> BusinessDayReportOrError7Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnBusinessDayInformationV06.class.getMethod("getReportOrError", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BusinessDayReportOrError7Choice getValue(ReturnBusinessDayInformationV06 obj) {
+			return obj.getReportOrError();
+		}
+
+		@Override
+		public void setValue(ReturnBusinessDayInformationV06 obj, BusinessDayReportOrError7Choice value) {
+			obj.setReportOrError(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -238,7 +241,7 @@ public class ReturnBusinessDayInformationV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnBusinessDayInformationV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ReturnBusinessDayInformationV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,19 +251,21 @@ public class ReturnBusinessDayInformationV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnBusinessDayInformationV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ReturnBusinessDayInformationV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ReturnBusinessDayInformationV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnBusinessDayInformationV06";
 				definition = "Scope\r\nThe ReturnBusinessDayInformation message is sent by the transaction administrator to a member of the system.\r\nIt is used to provide information on different types of administrative data linked to the system.\r\nThe ReturnBusinessDayInformation message can be sent as a response to a related GetBusines DayInformation message (pull mode), or initiated by the transaction administrator (push mode). The push of information can take place either at prearranged times or as a warning or alarm when a problem has occurred.\r\nUsage\r\nThe transaction administrator is in charge of providing the members with business information. The term business day information covers all information related to the management of the system, that is, not related to the transactions or requests created in the system. The type of business information available can vary depending on the system.\r\nThe member can request information about the static data of the system through a series of criteria, corresponding to the known information stored within the transaction administrator. Based on the criteria received within the request, the transaction administrator will select items that match the request and report them to the requester.\r\nThe transaction administrator may also send a ReturnBusinessDayInformation message with pre-defined information at times previously agreed with the member or to warn the member about a particular problem that may have arisen and which needs attention.\r\nThe message from the transaction administrator can contain information based on the following elements:\r\n- identification of the system\r\n- status of the system and period in which this status is valid\r\n- currency within the system concerned and details of the hours of availability linked to that particular currency\r\n- events related to the functioning of the system and the timing of their occurrence\r\nAdditional information on the generic design of the Get/Return messages can be found in the MDR Part 1 section How to Use the Cash Management Messages.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

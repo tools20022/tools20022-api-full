@@ -114,7 +114,7 @@ public class SettlementType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementType2Choice, SettlementType1Code> mmCode = new MMMessageAttribute<SettlementType2Choice, SettlementType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementType2Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class SettlementType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementType1Code.mmObject();
+		}
+
+		@Override
+		public SettlementType1Code getValue(SettlementType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementType2Choice obj, SettlementType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class SettlementType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementType2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<SettlementType2Choice, GenericIdentification40>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementType2Choice.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class SettlementType2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(SettlementType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementType2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -52,11 +52,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<GenericIdentification20> forGenericIdentification20 = new MMConstraint<GenericIdentification20>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkGenericIdentification20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName.";
 			owner_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification20 obj) throws Exception {
+			checkGenericIdentification20(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<GenericIdentification25> forGenericIdentification25 = new MMConstraint<GenericIdentification25>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkGenericIdentification25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification25 obj) throws Exception {
+			checkGenericIdentification25(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<GenericIdentification19> forGenericIdentification19 = new MMConstraint<GenericIdentification19>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkGenericIdentification19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName.";
 			owner_lazy = () -> GenericIdentification19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification19 obj) throws Exception {
+			checkGenericIdentification19(obj);
 		}
 	};
 	/**
@@ -142,11 +154,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<GenericIdentification24> forGenericIdentification24 = new MMConstraint<GenericIdentification24>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkGenericIdentification24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GenericIdentification24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification24 obj) throws Exception {
+			checkGenericIdentification24(obj);
 		}
 	};
 	/**
@@ -172,11 +188,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<SecuritiesCertificate1> forSecuritiesCertificate1 = new MMConstraint<SecuritiesCertificate1>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkSecuritiesCertificate1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName.";
 			owner_lazy = () -> SecuritiesCertificate1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCertificate1 obj) throws Exception {
+			checkSecuritiesCertificate1(obj);
 		}
 	};
 	/**
@@ -202,11 +222,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<GenericIdentification23> forGenericIdentification23 = new MMConstraint<GenericIdentification23>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkGenericIdentification23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GenericIdentification23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification23 obj) throws Exception {
+			checkGenericIdentification23(obj);
 		}
 	};
 	/**
@@ -232,11 +256,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<SecuritiesCertificate2> forSecuritiesCertificate2 = new MMConstraint<SecuritiesCertificate2>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkSecuritiesCertificate2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesCertificate2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCertificate2 obj) throws Exception {
+			checkSecuritiesCertificate2(obj);
 		}
 	};
 	/**
@@ -262,11 +290,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<ProprietaryQuantity3> forProprietaryQuantity3 = new MMConstraint<ProprietaryQuantity3>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkProprietaryQuantity3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName.";
 			owner_lazy = () -> ProprietaryQuantity3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProprietaryQuantity3 obj) throws Exception {
+			checkProprietaryQuantity3(obj);
 		}
 	};
 	/**
@@ -292,11 +324,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<ProprietaryQuantity2> forProprietaryQuantity2 = new MMConstraint<ProprietaryQuantity2>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkProprietaryQuantity2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName.";
 			owner_lazy = () -> ProprietaryQuantity2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProprietaryQuantity2 obj) throws Exception {
+			checkProprietaryQuantity2(obj);
 		}
 	};
 	/**
@@ -322,11 +358,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<ProprietaryQuantity5> forProprietaryQuantity5 = new MMConstraint<ProprietaryQuantity5>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkProprietaryQuantity5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> ProprietaryQuantity5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProprietaryQuantity5 obj) throws Exception {
+			checkProprietaryQuantity5(obj);
 		}
 	};
 	/**
@@ -352,11 +392,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<ProprietaryQuantity4> forProprietaryQuantity4 = new MMConstraint<ProprietaryQuantity4>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkProprietaryQuantity4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> ProprietaryQuantity4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProprietaryQuantity4 obj) throws Exception {
+			checkProprietaryQuantity4(obj);
 		}
 	};
 	/**
@@ -382,11 +426,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<GenericIdentification22> forGenericIdentification22 = new MMConstraint<GenericIdentification22>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkGenericIdentification22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName.";
 			owner_lazy = () -> GenericIdentification22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification22 obj) throws Exception {
+			checkGenericIdentification22(obj);
 		}
 	};
 	/**
@@ -412,11 +460,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<GenericIdentification28> forGenericIdentification28 = new MMConstraint<GenericIdentification28>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkGenericIdentification28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GenericIdentification28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification28 obj) throws Exception {
+			checkGenericIdentification28(obj);
 		}
 	};
 	/**
@@ -442,11 +494,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<GenericIdentification34> forGenericIdentification34 = new MMConstraint<GenericIdentification34>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkGenericIdentification34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName.";
 			owner_lazy = () -> GenericIdentification34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification34 obj) throws Exception {
+			checkGenericIdentification34(obj);
 		}
 	};
 	/**
@@ -472,11 +528,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<ProprietaryQuantity6> forProprietaryQuantity6 = new MMConstraint<ProprietaryQuantity6>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkProprietaryQuantity6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName.";
 			owner_lazy = () -> ProprietaryQuantity6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProprietaryQuantity6 obj) throws Exception {
+			checkProprietaryQuantity6(obj);
 		}
 	};
 	/**
@@ -502,11 +562,15 @@ public class ConstraintCoexistenceIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<GenericIdentification51> forGenericIdentification51 = new MMConstraint<GenericIdentification51>() {
 		{
-			validator = ConstraintCoexistenceIssuerSchemeNameRule::checkGenericIdentification51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIssuerSchemeNameRule";
 			definition = "During ISO 15022-20022 coexistence, Issuer length must be 4 characters and SchemeName length must be 4 characters or less. Issuer and Scheme Name must be an ISO registered Issuer and SchemeName.";
 			owner_lazy = () -> GenericIdentification51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification51 obj) throws Exception {
+			checkGenericIdentification51(obj);
 		}
 	};
 

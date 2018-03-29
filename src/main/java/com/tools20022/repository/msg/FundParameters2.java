@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.InvestmentFund;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument17;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -91,7 +92,7 @@ public class FundParameters2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "FinInstrmDtls")
-	protected List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails;
+	protected List<FinancialInstrument17> financialInstrumentDetails;
 	/**
 	 * 
 	 <p>
@@ -125,7 +126,7 @@ public class FundParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundParameters2, List<FinancialInstrument17>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<FundParameters2, List<FinancialInstrument17>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundParameters2.mmObject();
@@ -136,7 +137,17 @@ public class FundParameters2 {
 			definition = "Financial instrument for which the fund processing passport report report is requested.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
+			type_lazy = () -> FinancialInstrument17.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrument17> getValue(FundParameters2 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(FundParameters2 obj, List<FinancialInstrument17> value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "FndMgmtCpny")
@@ -175,7 +186,7 @@ public class FundParameters2 {
 	 * "Fund management company for which the report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFundManagementCompany = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundParameters2, Optional<PartyIdentification2Choice>> mmFundManagementCompany = new MMMessageAttribute<FundParameters2, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundParameters2.mmObject();
@@ -187,6 +198,16 @@ public class FundParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(FundParameters2 obj) {
+			return obj.getFundManagementCompany();
+		}
+
+		@Override
+		public void setValue(FundParameters2 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setFundManagementCompany(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtFr")
@@ -220,7 +241,7 @@ public class FundParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundParameters2, Optional<ISODate>> mmDateFrom = new MMMessageAttribute<FundParameters2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundParameters2.mmObject();
 			isDerived = false;
@@ -231,6 +252,16 @@ public class FundParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FundParameters2 obj) {
+			return obj.getDateFrom();
+		}
+
+		@Override
+		public void setValue(FundParameters2 obj, Optional<ISODate> value) {
+			obj.setDateFrom(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfDmcl")
@@ -269,7 +300,7 @@ public class FundParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundParameters2, Optional<CountryCode>> mmCountryOfDomicile = new MMMessageAttribute<FundParameters2, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmDomicileCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundParameters2.mmObject();
@@ -281,6 +312,16 @@ public class FundParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(FundParameters2 obj) {
+			return obj.getCountryOfDomicile();
+		}
+
+		@Override
+		public void setValue(FundParameters2 obj, Optional<CountryCode> value) {
+			obj.setCountryOfDomicile(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegdDstrbtnCtry")
@@ -312,7 +353,7 @@ public class FundParameters2 {
 	 * definition} = "Countries where the fund is registered for distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegisteredDistributionCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundParameters2, Optional<CountryCode>> mmRegisteredDistributionCountry = new MMMessageAttribute<FundParameters2, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundParameters2.mmObject();
 			isDerived = false;
@@ -323,6 +364,16 @@ public class FundParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(FundParameters2 obj) {
+			return obj.getRegisteredDistributionCountry();
+		}
+
+		@Override
+		public void setValue(FundParameters2 obj, Optional<CountryCode> value) {
+			obj.setRegisteredDistributionCountry(value.orElse(null));
 		}
 	};
 
@@ -346,7 +397,7 @@ public class FundParameters2 {
 		return financialInstrumentDetails == null ? financialInstrumentDetails = new ArrayList<>() : financialInstrumentDetails;
 	}
 
-	public FundParameters2 setFinancialInstrumentDetails(List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails) {
+	public FundParameters2 setFinancialInstrumentDetails(List<FinancialInstrument17> financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}

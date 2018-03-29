@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -159,7 +158,7 @@ public class AgentCAMovementInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAMovementInstructionV01, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<AgentCAMovementInstructionV01, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,12 +169,14 @@ public class AgentCAMovementInstructionV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAMovementInstructionV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCAMovementInstructionV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCAMovementInstructionV01 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AgtCAElctnAdvcId")
@@ -205,7 +206,7 @@ public class AgentCAMovementInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgentCAElectionAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAMovementInstructionV01, Optional<DocumentIdentification8>> mmAgentCAElectionAdviceIdentification = new MMMessageBuildingBlock<AgentCAMovementInstructionV01, Optional<DocumentIdentification8>>() {
 		{
 			xmlTag = "AgtCAElctnAdvcId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,12 +217,14 @@ public class AgentCAMovementInstructionV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAMovementInstructionV01.class.getMethod("getAgentCAElectionAdviceIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification8> getValue(AgentCAMovementInstructionV01 obj) {
+			return obj.getAgentCAElectionAdviceIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCAMovementInstructionV01 obj, Optional<DocumentIdentification8> value) {
+			obj.setAgentCAElectionAdviceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnGnlInf", required = true)
@@ -249,7 +252,7 @@ public class AgentCAMovementInstructionV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAMovementInstructionV01, CorporateActionInformation1> mmCorporateActionGeneralInformation = new MMMessageBuildingBlock<AgentCAMovementInstructionV01, CorporateActionInformation1>() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,12 +263,14 @@ public class AgentCAMovementInstructionV01 {
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAMovementInstructionV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInformation1 getValue(AgentCAMovementInstructionV01 obj) {
+			return obj.getCorporateActionGeneralInformation();
+		}
+
+		@Override
+		public void setValue(AgentCAMovementInstructionV01 obj, CorporateActionInformation1 value) {
+			obj.setCorporateActionGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "MvmntGnlInf", required = true)
@@ -293,7 +298,7 @@ public class AgentCAMovementInstructionV01 {
 	 * definition} = "Provides general information about the movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMovementGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAMovementInstructionV01, CorporateActionMovement1> mmMovementGeneralInformation = new MMMessageBuildingBlock<AgentCAMovementInstructionV01, CorporateActionMovement1>() {
 		{
 			xmlTag = "MvmntGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,12 +309,14 @@ public class AgentCAMovementInstructionV01 {
 			complexType_lazy = () -> CorporateActionMovement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAMovementInstructionV01.class.getMethod("getMovementGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionMovement1 getValue(AgentCAMovementInstructionV01 obj) {
+			return obj.getMovementGeneralInformation();
+		}
+
+		@Override
+		public void setValue(AgentCAMovementInstructionV01 obj, CorporateActionMovement1 value) {
+			obj.setMovementGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "UndrlygSctiesMvmntDtls")
@@ -338,7 +345,7 @@ public class AgentCAMovementInstructionV01 {
 	 * "Information related to the movement of the underlying securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlyingSecuritiesMovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAMovementInstructionV01, List<UnderlyingSecurityMovement1>> mmUnderlyingSecuritiesMovementDetails = new MMMessageBuildingBlock<AgentCAMovementInstructionV01, List<UnderlyingSecurityMovement1>>() {
 		{
 			xmlTag = "UndrlygSctiesMvmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -348,12 +355,14 @@ public class AgentCAMovementInstructionV01 {
 			complexType_lazy = () -> UnderlyingSecurityMovement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAMovementInstructionV01.class.getMethod("getUnderlyingSecuritiesMovementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<UnderlyingSecurityMovement1> getValue(AgentCAMovementInstructionV01 obj) {
+			return obj.getUnderlyingSecuritiesMovementDetails();
+		}
+
+		@Override
+		public void setValue(AgentCAMovementInstructionV01 obj, List<UnderlyingSecurityMovement1> value) {
+			obj.setUnderlyingSecuritiesMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "UndrlygCshMvmntDtls")
@@ -381,7 +390,7 @@ public class AgentCAMovementInstructionV01 {
 	 * "Information related to the movement of the underlying cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlyingCashMovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAMovementInstructionV01, List<CashMovement2>> mmUnderlyingCashMovementDetails = new MMMessageBuildingBlock<AgentCAMovementInstructionV01, List<CashMovement2>>() {
 		{
 			xmlTag = "UndrlygCshMvmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,12 +400,14 @@ public class AgentCAMovementInstructionV01 {
 			complexType_lazy = () -> CashMovement2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAMovementInstructionV01.class.getMethod("getUnderlyingCashMovementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CashMovement2> getValue(AgentCAMovementInstructionV01 obj) {
+			return obj.getUnderlyingCashMovementDetails();
+		}
+
+		@Override
+		public void setValue(AgentCAMovementInstructionV01 obj, List<CashMovement2> value) {
+			obj.setUnderlyingCashMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "PrcdsMvmntDtls")
@@ -424,7 +435,7 @@ public class AgentCAMovementInstructionV01 {
 	 * definition} = "Information related to the movement of the CA proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProceedsMovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAMovementInstructionV01, Optional<ProceedsMovement1>> mmProceedsMovementDetails = new MMMessageBuildingBlock<AgentCAMovementInstructionV01, Optional<ProceedsMovement1>>() {
 		{
 			xmlTag = "PrcdsMvmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -435,12 +446,14 @@ public class AgentCAMovementInstructionV01 {
 			complexType_lazy = () -> ProceedsMovement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAMovementInstructionV01.class.getMethod("getProceedsMovementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ProceedsMovement1> getValue(AgentCAMovementInstructionV01 obj) {
+			return obj.getProceedsMovementDetails();
+		}
+
+		@Override
+		public void setValue(AgentCAMovementInstructionV01 obj, Optional<ProceedsMovement1> value) {
+			obj.setProceedsMovementDetails(value.orElse(null));
 		}
 	};
 

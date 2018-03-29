@@ -124,7 +124,7 @@ public class ClassificationType3Choice {
 	 * definition} = "ISO 10962 Classification of Financial Instrument (CFI)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType3Choice, CFIIdentifier> mmClassificationFinancialInstrument = new MMMessageAttribute<ClassificationType3Choice, CFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType3Choice.mmObject();
@@ -137,6 +137,16 @@ public class ClassificationType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
+		}
+
+		@Override
+		public CFIIdentifier getValue(ClassificationType3Choice obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ClassificationType3Choice obj, CFIIdentifier value) {
+			obj.setClassificationFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "AltrnClssfctn", required = true)
@@ -176,7 +186,7 @@ public class ClassificationType3Choice {
 	 * definition} = "Proprietary classification of financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateClassification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClassificationType3Choice, GenericIdentification23> mmAlternateClassification = new MMMessageAssociationEnd<ClassificationType3Choice, GenericIdentification23>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType3Choice.mmObject();
@@ -190,6 +200,16 @@ public class ClassificationType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification23.mmObject();
+		}
+
+		@Override
+		public GenericIdentification23 getValue(ClassificationType3Choice obj) {
+			return obj.getAlternateClassification();
+		}
+
+		@Override
+		public void setValue(ClassificationType3Choice obj, GenericIdentification23 value) {
+			obj.setAlternateClassification(value);
 		}
 	};
 

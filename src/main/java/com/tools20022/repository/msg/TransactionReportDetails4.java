@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.choice.PaymentIdentification3Choice;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ErrorHandling2;
+import com.tools20022.repository.msg.Transaction4;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,7 +124,7 @@ public class TransactionReportDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReportDetails4, PaymentIdentification3Choice> mmInstructionReference = new MMMessageAssociationEnd<TransactionReportDetails4, PaymentIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportDetails4.mmObject();
@@ -135,6 +137,16 @@ public class TransactionReportDetails4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaymentIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public PaymentIdentification3Choice getValue(TransactionReportDetails4 obj) {
+			return obj.getInstructionReference();
+		}
+
+		@Override
+		public void setValue(TransactionReportDetails4 obj, PaymentIdentification3Choice value) {
+			obj.setInstructionReference(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -169,7 +181,7 @@ public class TransactionReportDetails4 {
 	 * definition} = "Requested information on the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReportDetails4, Transaction4> mmTransaction = new MMMessageAssociationEnd<TransactionReportDetails4, Transaction4>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportDetails4.mmObject();
@@ -181,7 +193,17 @@ public class TransactionReportDetails4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Transaction4.mmObject();
+			type_lazy = () -> Transaction4.mmObject();
+		}
+
+		@Override
+		public Transaction4 getValue(TransactionReportDetails4 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(TransactionReportDetails4 obj, Transaction4 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -213,7 +235,7 @@ public class TransactionReportDetails4 {
 	 * "Reason why the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReportDetails4, ErrorHandling2> mmBusinessError = new MMMessageAssociationEnd<TransactionReportDetails4, ErrorHandling2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportDetails4.mmObject();
 			isDerived = false;
@@ -224,7 +246,17 @@ public class TransactionReportDetails4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
+			type_lazy = () -> ErrorHandling2.mmObject();
+		}
+
+		@Override
+		public ErrorHandling2 getValue(TransactionReportDetails4 obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(TransactionReportDetails4 obj, ErrorHandling2 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	/**
@@ -305,7 +337,7 @@ public class TransactionReportDetails4 {
 		return transaction;
 	}
 
-	public TransactionReportDetails4 setTransaction(com.tools20022.repository.msg.Transaction4 transaction) {
+	public TransactionReportDetails4 setTransaction(Transaction4 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
@@ -314,7 +346,7 @@ public class TransactionReportDetails4 {
 		return businessError;
 	}
 
-	public TransactionReportDetails4 setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+	public TransactionReportDetails4 setBusinessError(ErrorHandling2 businessError) {
 		this.businessError = Objects.requireNonNull(businessError);
 		return this;
 	}

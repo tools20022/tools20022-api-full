@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
+import com.tools20022.repository.choice.MatchingReason1Choice;
+import com.tools20022.repository.choice.MatchingReason4Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
@@ -135,7 +137,7 @@ public class MatchingStatus23Choice {
 	 * MatchingStatus9Choice.mmMatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus23Choice, ProprietaryReason1> mmMatched = new MMMessageAssociationEnd<MatchingStatus23Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
@@ -149,6 +151,16 @@ public class MatchingStatus23Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(MatchingStatus23Choice obj) {
+			return obj.getMatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus23Choice obj, ProprietaryReason1 value) {
+			obj.setMatched(value);
 		}
 	};
 	@XmlElement(name = "MtchdWthTlrnce", required = true)
@@ -191,7 +203,7 @@ public class MatchingStatus23Choice {
 	 * MatchingStatus9Choice.mmMatchedWithTolerance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchedWithTolerance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingStatus23Choice, ProprietaryReason1> mmMatchedWithTolerance = new MMMessageAttribute<MatchingStatus23Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
@@ -204,6 +216,16 @@ public class MatchingStatus23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(MatchingStatus23Choice obj) {
+			return obj.getMatchedWithTolerance();
+		}
+
+		@Override
+		public void setValue(MatchingStatus23Choice obj, ProprietaryReason1 value) {
+			obj.setMatchedWithTolerance(value);
 		}
 	};
 	@XmlElement(name = "MtchgAllgd", required = true)
@@ -245,7 +267,7 @@ public class MatchingStatus23Choice {
 	 * MatchingStatus9Choice.mmMatchingAlleged}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingAlleged = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus23Choice, MatchingReason4Choice> mmMatchingAlleged = new MMMessageAssociationEnd<MatchingStatus23Choice, MatchingReason4Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
@@ -258,7 +280,17 @@ public class MatchingStatus23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.MatchingReason4Choice.mmObject();
+			type_lazy = () -> MatchingReason4Choice.mmObject();
+		}
+
+		@Override
+		public MatchingReason4Choice getValue(MatchingStatus23Choice obj) {
+			return obj.getMatchingAlleged();
+		}
+
+		@Override
+		public void setValue(MatchingStatus23Choice obj, MatchingReason4Choice value) {
+			obj.setMatchingAlleged(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -300,7 +332,7 @@ public class MatchingStatus23Choice {
 	 * MatchingStatus9Choice.mmUnmatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus23Choice, MatchingReason1Choice> mmUnmatched = new MMMessageAssociationEnd<MatchingStatus23Choice, MatchingReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
@@ -313,7 +345,17 @@ public class MatchingStatus23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.MatchingReason1Choice.mmObject();
+			type_lazy = () -> MatchingReason1Choice.mmObject();
+		}
+
+		@Override
+		public MatchingReason1Choice getValue(MatchingStatus23Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus23Choice obj, MatchingReason1Choice value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "PrtrySts")
@@ -357,7 +399,7 @@ public class MatchingStatus23Choice {
 	 * MatchingStatus9Choice.mmProprietaryStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus23Choice, Optional<ProprietaryStatusAndReason1>> mmProprietaryStatus = new MMMessageAssociationEnd<MatchingStatus23Choice, Optional<ProprietaryStatusAndReason1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus23Choice.mmObject();
@@ -371,6 +413,16 @@ public class MatchingStatus23Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryStatusAndReason1> getValue(MatchingStatus23Choice obj) {
+			return obj.getProprietaryStatus();
+		}
+
+		@Override
+		public void setValue(MatchingStatus23Choice obj, Optional<ProprietaryStatusAndReason1> value) {
+			obj.setProprietaryStatus(value.orElse(null));
 		}
 	};
 
@@ -414,7 +466,7 @@ public class MatchingStatus23Choice {
 		return matchingAlleged;
 	}
 
-	public MatchingStatus23Choice setMatchingAlleged(com.tools20022.repository.choice.MatchingReason4Choice matchingAlleged) {
+	public MatchingStatus23Choice setMatchingAlleged(MatchingReason4Choice matchingAlleged) {
 		this.matchingAlleged = Objects.requireNonNull(matchingAlleged);
 		return this;
 	}
@@ -423,7 +475,7 @@ public class MatchingStatus23Choice {
 		return unmatched;
 	}
 
-	public MatchingStatus23Choice setUnmatched(com.tools20022.repository.choice.MatchingReason1Choice unmatched) {
+	public MatchingStatus23Choice setUnmatched(MatchingReason1Choice unmatched) {
 		this.unmatched = Objects.requireNonNull(unmatched);
 		return this;
 	}

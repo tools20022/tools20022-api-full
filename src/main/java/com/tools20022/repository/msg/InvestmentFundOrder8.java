@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument57;
+import com.tools20022.repository.msg.InvestmentAccount58;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +135,7 @@ public class InvestmentFundOrder8 {
 	 * InvestmentFundOrder2.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder8, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<InvestmentFundOrder8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder8.mmObject();
@@ -146,6 +148,16 @@ public class InvestmentFundOrder8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundOrder8 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder8 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRef", required = true)
@@ -189,7 +201,7 @@ public class InvestmentFundOrder8 {
 	 * InvestmentFundOrder2.mmOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder8, Max35Text> mmOrderReference = new MMMessageAttribute<InvestmentFundOrder8, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder8.mmObject();
@@ -202,6 +214,16 @@ public class InvestmentFundOrder8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InvestmentFundOrder8 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder8 obj, Max35Text value) {
+			obj.setOrderReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -245,7 +267,7 @@ public class InvestmentFundOrder8 {
 	 * InvestmentFundOrder2.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder8, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<InvestmentFundOrder8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder8.mmObject();
@@ -258,6 +280,16 @@ public class InvestmentFundOrder8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundOrder8 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder8 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -301,7 +333,7 @@ public class InvestmentFundOrder8 {
 	 * InvestmentFundOrder2.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder8, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<InvestmentFundOrder8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmCancellationRequestIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder8.mmObject();
@@ -314,6 +346,16 @@ public class InvestmentFundOrder8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundOrder8 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder8 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealRef")
@@ -357,7 +399,7 @@ public class InvestmentFundOrder8 {
 	 * InvestmentFundOrder2.mmDealReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder8, Optional<Max35Text>> mmDealReference = new MMMessageAttribute<InvestmentFundOrder8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder8.mmObject();
@@ -370,6 +412,16 @@ public class InvestmentFundOrder8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundOrder8 obj) {
+			return obj.getDealReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder8 obj, Optional<Max35Text> value) {
+			obj.setDealReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls")
@@ -412,7 +464,7 @@ public class InvestmentFundOrder8 {
 	 * InvestmentFundOrder2.mmInvestmentAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundOrder8, Optional<InvestmentAccount58>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<InvestmentFundOrder8, Optional<InvestmentAccount58>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder8.mmObject();
@@ -425,7 +477,17 @@ public class InvestmentFundOrder8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount58.mmObject();
+			type_lazy = () -> InvestmentAccount58.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount58> getValue(InvestmentFundOrder8 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder8 obj, Optional<InvestmentAccount58> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
@@ -468,7 +530,7 @@ public class InvestmentFundOrder8 {
 	 * InvestmentFundOrder2.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundOrder8, Optional<FinancialInstrument57>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<InvestmentFundOrder8, Optional<FinancialInstrument57>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder8.mmObject();
@@ -481,7 +543,17 @@ public class InvestmentFundOrder8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument57.mmObject();
+			type_lazy = () -> FinancialInstrument57.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrument57> getValue(InvestmentFundOrder8 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder8 obj, Optional<FinancialInstrument57> value) {
+			obj.setFinancialInstrumentDetails(value.orElse(null));
 		}
 	};
 
@@ -551,7 +623,7 @@ public class InvestmentFundOrder8 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public InvestmentFundOrder8 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
+	public InvestmentFundOrder8 setInvestmentAccountDetails(InvestmentAccount58 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -560,7 +632,7 @@ public class InvestmentFundOrder8 {
 		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public InvestmentFundOrder8 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument57 financialInstrumentDetails) {
+	public InvestmentFundOrder8 setFinancialInstrumentDetails(FinancialInstrument57 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 		return this;
 	}

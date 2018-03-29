@@ -103,7 +103,7 @@ public class StrategyParameters1 {
 	 * definition} = "Name of parameter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StrategyParameters1, Optional<Max35Text>> mmName = new MMMessageAttribute<StrategyParameters1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StrategyParameters1.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class StrategyParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StrategyParameters1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(StrategyParameters1 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -149,7 +159,7 @@ public class StrategyParameters1 {
 	 * definition} = "Type of the parameter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StrategyParameters1, Optional<Max35Text>> mmType = new MMMessageAttribute<StrategyParameters1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StrategyParameters1.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class StrategyParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StrategyParameters1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(StrategyParameters1 obj, Optional<Max35Text> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrgtStrtgy")
@@ -197,7 +217,7 @@ public class StrategyParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetStrategy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StrategyParameters1, Optional<Max70Text>> mmTargetStrategy = new MMMessageAttribute<StrategyParameters1, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StrategyParameters1.mmObject();
 			isDerived = false;
@@ -209,6 +229,16 @@ public class StrategyParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(StrategyParameters1 obj) {
+			return obj.getTargetStrategy();
+		}
+
+		@Override
+		public void setValue(StrategyParameters1 obj, Optional<Max70Text> value) {
+			obj.setTargetStrategy(value.orElse(null));
 		}
 	};
 

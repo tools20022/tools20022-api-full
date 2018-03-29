@@ -117,7 +117,7 @@ public class PendingStatus26Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingStatus26Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<PendingStatus26Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingStatus26Choice.mmObject();
@@ -130,6 +130,16 @@ public class PendingStatus26Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingStatus26Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingStatus26Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -168,7 +178,7 @@ public class PendingStatus26Choice {
 	 * definition} = "Specifies the reason of the PendingStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatus26Choice, List<PendingReason4>> mmReason = new MMMessageAssociationEnd<PendingStatus26Choice, List<PendingReason4>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingStatus26Choice.mmObject();
@@ -181,6 +191,16 @@ public class PendingStatus26Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingReason4.mmObject();
+		}
+
+		@Override
+		public List<PendingReason4> getValue(PendingStatus26Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingStatus26Choice obj, List<PendingReason4> value) {
+			obj.setReason(value);
 		}
 	};
 

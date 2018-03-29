@@ -104,7 +104,7 @@ public class Beneficiary1 {
 	 * "New beneficiary address, or new beneficiary name and address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewAddressOrNewBeneficiary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Beneficiary1, AddressOrParty1Choice> mmNewAddressOrNewBeneficiary = new MMMessageAssociationEnd<Beneficiary1, AddressOrParty1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Beneficiary1.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class Beneficiary1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AddressOrParty1Choice.mmObject();
+		}
+
+		@Override
+		public AddressOrParty1Choice getValue(Beneficiary1 obj) {
+			return obj.getNewAddressOrNewBeneficiary();
+		}
+
+		@Override
+		public void setValue(Beneficiary1 obj, AddressOrParty1Choice value) {
+			obj.setNewAddressOrNewBeneficiary(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -147,7 +157,7 @@ public class Beneficiary1 {
 	 * "Additional information concerning the amended beneficiary details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Beneficiary1, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<Beneficiary1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Beneficiary1.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class Beneficiary1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(Beneficiary1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Beneficiary1 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

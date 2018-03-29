@@ -124,7 +124,7 @@ public class Quantity9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnitOfMeasure = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity9, UnitOfMeasure3Choice> mmUnitOfMeasure = new MMMessageAssociationEnd<Quantity9, UnitOfMeasure3Choice>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity9.mmObject();
@@ -138,6 +138,16 @@ public class Quantity9 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnitOfMeasure3Choice.mmObject();
+		}
+
+		@Override
+		public UnitOfMeasure3Choice getValue(Quantity9 obj) {
+			return obj.getUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(Quantity9 obj, UnitOfMeasure3Choice value) {
+			obj.setUnitOfMeasure(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -188,7 +198,7 @@ public class Quantity9 {
 	 * Quantity4.mmValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity9, DecimalNumber> mmValue = new MMMessageAttribute<Quantity9, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity9.mmObject();
@@ -202,6 +212,16 @@ public class Quantity9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(Quantity9 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(Quantity9 obj, DecimalNumber value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "Fctr")
@@ -252,7 +272,7 @@ public class Quantity9 {
 	 * Quantity4.mmFactor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity9, Optional<Max15NumericText>> mmFactor = new MMMessageAttribute<Quantity9, Optional<Max15NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity9.mmObject();
@@ -266,6 +286,16 @@ public class Quantity9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(Quantity9 obj) {
+			return obj.getFactor();
+		}
+
+		@Override
+		public void setValue(Quantity9 obj, Optional<Max15NumericText> value) {
+			obj.setFactor(value.orElse(null));
 		}
 	};
 

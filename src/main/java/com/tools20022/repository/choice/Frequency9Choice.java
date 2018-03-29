@@ -123,7 +123,7 @@ public class Frequency9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Frequency9Choice, EventFrequency7Code> mmCode = new MMMessageAttribute<Frequency9Choice, EventFrequency7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Frequency9Choice.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class Frequency9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency7Code.mmObject();
+		}
+
+		@Override
+		public EventFrequency7Code getValue(Frequency9Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Frequency9Choice obj, EventFrequency7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class Frequency9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Frequency9Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<Frequency9Choice, GenericIdentification20>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Frequency9Choice.mmObject();
 			isDerived = false;
@@ -192,6 +202,16 @@ public class Frequency9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(Frequency9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Frequency9Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -116,7 +116,7 @@ public class PaymentTransaction20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransaction20, Optional<ActiveCurrencyAndAmount>> mmSettlementAmount = new MMMessageAttribute<PaymentTransaction20, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction20.mmObject();
@@ -128,6 +128,16 @@ public class PaymentTransaction20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(PaymentTransaction20 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(PaymentTransaction20 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDt")
@@ -166,7 +176,7 @@ public class PaymentTransaction20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransaction20, Optional<ISODate>> mmSettlementDate = new MMMessageAttribute<PaymentTransaction20, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction20.mmObject();
@@ -178,6 +188,16 @@ public class PaymentTransaction20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PaymentTransaction20 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(PaymentTransaction20 obj, Optional<ISODate> value) {
+			obj.setSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshInOrOut", required = true)
@@ -212,7 +232,7 @@ public class PaymentTransaction20 {
 	 * definition} = "Choice between cash-in or cash-out."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInOrOut = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransaction20, CashInOrOut4Choice> mmCashInOrOut = new MMMessageAssociationEnd<PaymentTransaction20, CashInOrOut4Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction20.mmObject();
@@ -225,6 +245,16 @@ public class PaymentTransaction20 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CashInOrOut4Choice.mmObject();
+		}
+
+		@Override
+		public CashInOrOut4Choice getValue(PaymentTransaction20 obj) {
+			return obj.getCashInOrOut();
+		}
+
+		@Override
+		public void setValue(PaymentTransaction20 obj, CashInOrOut4Choice value) {
+			obj.setCashInOrOut(value);
 		}
 	};
 

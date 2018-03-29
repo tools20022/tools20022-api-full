@@ -106,7 +106,7 @@ public class FloatingRateIdentification1 {
 	 * definition} = "List of floating rate curves."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FloatingRateIdentification1, Optional<BenchmarkCurveName2Code>> mmCode = new MMMessageAttribute<FloatingRateIdentification1, Optional<BenchmarkCurveName2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingRateIdentification1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class FloatingRateIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BenchmarkCurveName2Code.mmObject();
+		}
+
+		@Override
+		public Optional<BenchmarkCurveName2Code> getValue(FloatingRateIdentification1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FloatingRateIdentification1 obj, Optional<BenchmarkCurveName2Code> value) {
+			obj.setCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -150,7 +160,7 @@ public class FloatingRateIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FloatingRateIdentification1, Optional<Max35Text>> mmProprietary = new MMMessageAttribute<FloatingRateIdentification1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingRateIdentification1.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class FloatingRateIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FloatingRateIdentification1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FloatingRateIdentification1 obj, Optional<Max35Text> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 

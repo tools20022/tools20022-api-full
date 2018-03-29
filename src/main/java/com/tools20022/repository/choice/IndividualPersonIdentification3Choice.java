@@ -117,7 +117,7 @@ public class IndividualPersonIdentification3Choice {
 	 * IndividualPersonIdentification1Choice.mmIdentificationNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentificationNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPersonIdentification3Choice, GenericIdentification81> mmIdentificationNumber = new MMMessageAssociationEnd<IndividualPersonIdentification3Choice, GenericIdentification81>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentification3Choice.mmObject();
@@ -131,6 +131,16 @@ public class IndividualPersonIdentification3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification81.mmObject();
+		}
+
+		@Override
+		public GenericIdentification81 getValue(IndividualPersonIdentification3Choice obj) {
+			return obj.getIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(IndividualPersonIdentification3Choice obj, GenericIdentification81 value) {
+			obj.setIdentificationNumber(value);
 		}
 	};
 	@XmlElement(name = "PrsnNm", required = true)
@@ -171,7 +181,7 @@ public class IndividualPersonIdentification3Choice {
 	 * IndividualPersonIdentification1Choice.mmPersonName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPersonName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPersonIdentification3Choice, IndividualPerson35> mmPersonName = new MMMessageAssociationEnd<IndividualPersonIdentification3Choice, IndividualPerson35>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmPersonName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentification3Choice.mmObject();
@@ -185,6 +195,16 @@ public class IndividualPersonIdentification3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IndividualPerson35.mmObject();
+		}
+
+		@Override
+		public IndividualPerson35 getValue(IndividualPersonIdentification3Choice obj) {
+			return obj.getPersonName();
+		}
+
+		@Override
+		public void setValue(IndividualPersonIdentification3Choice obj, IndividualPerson35 value) {
+			obj.setPersonName(value);
 		}
 	};
 

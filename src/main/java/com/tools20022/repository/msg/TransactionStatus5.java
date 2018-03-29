@@ -134,7 +134,7 @@ public class TransactionStatus5 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionStatus5, BaselineStatus3Code> mmStatus = new MMMessageAttribute<TransactionStatus5, BaselineStatus3Code>() {
 		{
 			businessElementTrace_lazy = () -> BaselineStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionStatus5.mmObject();
@@ -146,6 +146,16 @@ public class TransactionStatus5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus3Code.mmObject();
+		}
+
+		@Override
+		public BaselineStatus3Code getValue(TransactionStatus5 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransactionStatus5 obj, BaselineStatus3Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "ChngDtTm", required = true)
@@ -182,7 +192,7 @@ public class TransactionStatus5 {
 	 * definition} = "Date and time at which the current status will change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChangeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionStatus5, ISODateTime> mmChangeDateTime = new MMMessageAttribute<TransactionStatus5, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionStatus5.mmObject();
@@ -194,6 +204,16 @@ public class TransactionStatus5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(TransactionStatus5 obj) {
+			return obj.getChangeDateTime();
+		}
+
+		@Override
+		public void setValue(TransactionStatus5 obj, ISODateTime value) {
+			obj.setChangeDateTime(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -225,7 +245,7 @@ public class TransactionStatus5 {
 	 * definition} = "Additional information on the reason for the time-out."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionStatus5, Optional<Max140Text>> mmDescription = new MMMessageAttribute<TransactionStatus5, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionStatus5.mmObject();
 			isDerived = false;
@@ -236,6 +256,16 @@ public class TransactionStatus5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(TransactionStatus5 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(TransactionStatus5 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DetailedInstructionConfirmation;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -122,7 +123,7 @@ public class MeetingInstructionDetailedStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingInstructionDetailedStatus, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<MeetingInstructionDetailedStatus, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmObject();
@@ -135,9 +136,19 @@ public class MeetingInstructionDetailedStatus {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(MeetingInstructionDetailedStatus obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionDetailedStatus obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "PrtcptnRegnConf")
-	protected List<com.tools20022.repository.msg.DetailedInstructionConfirmation> participationRegistrationConfirmation;
+	protected List<DetailedInstructionConfirmation> participationRegistrationConfirmation;
 	/**
 	 * 
 	 <p>
@@ -170,7 +181,7 @@ public class MeetingInstructionDetailedStatus {
 	 * definition} = "Status relative to vote participation instruction(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipationRegistrationConfirmation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>> mmParticipationRegistrationConfirmation = new MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmObject();
@@ -181,11 +192,21 @@ public class MeetingInstructionDetailedStatus {
 			definition = "Status relative to vote participation instruction(s).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedInstructionConfirmation.mmObject();
+			type_lazy = () -> DetailedInstructionConfirmation.mmObject();
+		}
+
+		@Override
+		public List<DetailedInstructionConfirmation> getValue(MeetingInstructionDetailedStatus obj) {
+			return obj.getParticipationRegistrationConfirmation();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionDetailedStatus obj, List<DetailedInstructionConfirmation> value) {
+			obj.setParticipationRegistrationConfirmation(value);
 		}
 	};
 	@XmlElement(name = "VtngInstrConf")
-	protected List<com.tools20022.repository.msg.DetailedInstructionConfirmation> votingInstructionConfirmation;
+	protected List<DetailedInstructionConfirmation> votingInstructionConfirmation;
 	/**
 	 * 
 	 <p>
@@ -218,7 +239,7 @@ public class MeetingInstructionDetailedStatus {
 	 * definition} = "Status relative to vote instruction(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVotingInstructionConfirmation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>> mmVotingInstructionConfirmation = new MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmObject();
@@ -229,11 +250,21 @@ public class MeetingInstructionDetailedStatus {
 			definition = "Status relative to vote instruction(s).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedInstructionConfirmation.mmObject();
+			type_lazy = () -> DetailedInstructionConfirmation.mmObject();
+		}
+
+		@Override
+		public List<DetailedInstructionConfirmation> getValue(MeetingInstructionDetailedStatus obj) {
+			return obj.getVotingInstructionConfirmation();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionDetailedStatus obj, List<DetailedInstructionConfirmation> value) {
+			obj.setVotingInstructionConfirmation(value);
 		}
 	};
 	@XmlElement(name = "PrxyAssgnmtConf")
-	protected List<com.tools20022.repository.msg.DetailedInstructionConfirmation> proxyAssignmentConfirmation;
+	protected List<DetailedInstructionConfirmation> proxyAssignmentConfirmation;
 	/**
 	 * 
 	 <p>
@@ -266,7 +297,7 @@ public class MeetingInstructionDetailedStatus {
 	 * definition} = "Status relative to proxy assignment instruction(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProxyAssignmentConfirmation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>> mmProxyAssignmentConfirmation = new MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmObject();
@@ -277,11 +308,21 @@ public class MeetingInstructionDetailedStatus {
 			definition = "Status relative to proxy assignment instruction(s).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedInstructionConfirmation.mmObject();
+			type_lazy = () -> DetailedInstructionConfirmation.mmObject();
+		}
+
+		@Override
+		public List<DetailedInstructionConfirmation> getValue(MeetingInstructionDetailedStatus obj) {
+			return obj.getProxyAssignmentConfirmation();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionDetailedStatus obj, List<DetailedInstructionConfirmation> value) {
+			obj.setProxyAssignmentConfirmation(value);
 		}
 	};
 	@XmlElement(name = "MtgAttndncConf")
-	protected List<com.tools20022.repository.msg.DetailedInstructionConfirmation> meetingAttendanceConfirmation;
+	protected List<DetailedInstructionConfirmation> meetingAttendanceConfirmation;
 	/**
 	 * 
 	 <p>
@@ -315,7 +356,7 @@ public class MeetingInstructionDetailedStatus {
 	 * "Status relative to attendance registration instruction(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMeetingAttendanceConfirmation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>> mmMeetingAttendanceConfirmation = new MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmObject();
@@ -326,11 +367,21 @@ public class MeetingInstructionDetailedStatus {
 			definition = "Status relative to attendance registration instruction(s).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedInstructionConfirmation.mmObject();
+			type_lazy = () -> DetailedInstructionConfirmation.mmObject();
+		}
+
+		@Override
+		public List<DetailedInstructionConfirmation> getValue(MeetingInstructionDetailedStatus obj) {
+			return obj.getMeetingAttendanceConfirmation();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionDetailedStatus obj, List<DetailedInstructionConfirmation> value) {
+			obj.setMeetingAttendanceConfirmation(value);
 		}
 	};
 	@XmlElement(name = "SctiesRegnConf")
-	protected List<com.tools20022.repository.msg.DetailedInstructionConfirmation> securitiesRegistrationConfirmation;
+	protected List<DetailedInstructionConfirmation> securitiesRegistrationConfirmation;
 	/**
 	 * 
 	 <p>
@@ -364,7 +415,7 @@ public class MeetingInstructionDetailedStatus {
 	 * "Status relative to securities registration instruction(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesRegistrationConfirmation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>> mmSecuritiesRegistrationConfirmation = new MMMessageAssociationEnd<MeetingInstructionDetailedStatus, List<DetailedInstructionConfirmation>>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingInstructionDetailedStatus.mmObject();
@@ -375,7 +426,17 @@ public class MeetingInstructionDetailedStatus {
 			definition = "Status relative to securities registration instruction(s).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DetailedInstructionConfirmation.mmObject();
+			type_lazy = () -> DetailedInstructionConfirmation.mmObject();
+		}
+
+		@Override
+		public List<DetailedInstructionConfirmation> getValue(MeetingInstructionDetailedStatus obj) {
+			return obj.getSecuritiesRegistrationConfirmation();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionDetailedStatus obj, List<DetailedInstructionConfirmation> value) {
+			obj.setSecuritiesRegistrationConfirmation(value);
 		}
 	};
 
@@ -409,7 +470,7 @@ public class MeetingInstructionDetailedStatus {
 		return participationRegistrationConfirmation == null ? participationRegistrationConfirmation = new ArrayList<>() : participationRegistrationConfirmation;
 	}
 
-	public MeetingInstructionDetailedStatus setParticipationRegistrationConfirmation(List<com.tools20022.repository.msg.DetailedInstructionConfirmation> participationRegistrationConfirmation) {
+	public MeetingInstructionDetailedStatus setParticipationRegistrationConfirmation(List<DetailedInstructionConfirmation> participationRegistrationConfirmation) {
 		this.participationRegistrationConfirmation = Objects.requireNonNull(participationRegistrationConfirmation);
 		return this;
 	}
@@ -418,7 +479,7 @@ public class MeetingInstructionDetailedStatus {
 		return votingInstructionConfirmation == null ? votingInstructionConfirmation = new ArrayList<>() : votingInstructionConfirmation;
 	}
 
-	public MeetingInstructionDetailedStatus setVotingInstructionConfirmation(List<com.tools20022.repository.msg.DetailedInstructionConfirmation> votingInstructionConfirmation) {
+	public MeetingInstructionDetailedStatus setVotingInstructionConfirmation(List<DetailedInstructionConfirmation> votingInstructionConfirmation) {
 		this.votingInstructionConfirmation = Objects.requireNonNull(votingInstructionConfirmation);
 		return this;
 	}
@@ -427,7 +488,7 @@ public class MeetingInstructionDetailedStatus {
 		return proxyAssignmentConfirmation == null ? proxyAssignmentConfirmation = new ArrayList<>() : proxyAssignmentConfirmation;
 	}
 
-	public MeetingInstructionDetailedStatus setProxyAssignmentConfirmation(List<com.tools20022.repository.msg.DetailedInstructionConfirmation> proxyAssignmentConfirmation) {
+	public MeetingInstructionDetailedStatus setProxyAssignmentConfirmation(List<DetailedInstructionConfirmation> proxyAssignmentConfirmation) {
 		this.proxyAssignmentConfirmation = Objects.requireNonNull(proxyAssignmentConfirmation);
 		return this;
 	}
@@ -436,7 +497,7 @@ public class MeetingInstructionDetailedStatus {
 		return meetingAttendanceConfirmation == null ? meetingAttendanceConfirmation = new ArrayList<>() : meetingAttendanceConfirmation;
 	}
 
-	public MeetingInstructionDetailedStatus setMeetingAttendanceConfirmation(List<com.tools20022.repository.msg.DetailedInstructionConfirmation> meetingAttendanceConfirmation) {
+	public MeetingInstructionDetailedStatus setMeetingAttendanceConfirmation(List<DetailedInstructionConfirmation> meetingAttendanceConfirmation) {
 		this.meetingAttendanceConfirmation = Objects.requireNonNull(meetingAttendanceConfirmation);
 		return this;
 	}
@@ -445,7 +506,7 @@ public class MeetingInstructionDetailedStatus {
 		return securitiesRegistrationConfirmation == null ? securitiesRegistrationConfirmation = new ArrayList<>() : securitiesRegistrationConfirmation;
 	}
 
-	public MeetingInstructionDetailedStatus setSecuritiesRegistrationConfirmation(List<com.tools20022.repository.msg.DetailedInstructionConfirmation> securitiesRegistrationConfirmation) {
+	public MeetingInstructionDetailedStatus setSecuritiesRegistrationConfirmation(List<DetailedInstructionConfirmation> securitiesRegistrationConfirmation) {
 		this.securitiesRegistrationConfirmation = Objects.requireNonNull(securitiesRegistrationConfirmation);
 		return this;
 	}

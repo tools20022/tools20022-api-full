@@ -111,7 +111,7 @@ public class SystemPartyIdentification2 {
 	 * definition} = "Starting date from which the identification is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification2, ISODate> mmValidFrom = new MMMessageAttribute<SystemPartyIdentification2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification2.mmObject();
@@ -123,6 +123,16 @@ public class SystemPartyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SystemPartyIdentification2 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification2 obj, ISODate value) {
+			obj.setValidFrom(value);
 		}
 	};
 	@XmlElement(name = "Id")
@@ -160,7 +170,7 @@ public class SystemPartyIdentification2 {
 	 * definition} = "Unique and unambiguous way to identify a system party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification2, Optional<BICFIIdentifier>> mmIdentification = new MMMessageAttribute<SystemPartyIdentification2, Optional<BICFIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification2.mmObject();
@@ -172,6 +182,16 @@ public class SystemPartyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICFIIdentifier> getValue(SystemPartyIdentification2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification2 obj, Optional<BICFIIdentifier> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 

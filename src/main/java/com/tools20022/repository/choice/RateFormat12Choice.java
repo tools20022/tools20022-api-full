@@ -119,7 +119,7 @@ public class RateFormat12Choice {
 	 * RateFormat3Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateFormat12Choice, BaseOne14Rate> mmRate = new MMMessageAttribute<RateFormat12Choice, BaseOne14Rate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat12Choice.mmObject();
@@ -133,6 +133,16 @@ public class RateFormat12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOne14Rate.mmObject();
+		}
+
+		@Override
+		public BaseOne14Rate getValue(RateFormat12Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateFormat12Choice obj, BaseOne14Rate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -173,7 +183,7 @@ public class RateFormat12Choice {
 	 * RateFormat3Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateFormat12Choice, RateType5Code> mmNotSpecifiedRate = new MMMessageAttribute<RateFormat12Choice, RateType5Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat12Choice.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class RateFormat12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType5Code.mmObject();
+		}
+
+		@Override
+		public RateType5Code getValue(RateFormat12Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RateFormat12Choice obj, RateType5Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

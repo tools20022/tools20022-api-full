@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Unit10;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,7 +115,7 @@ public class Unit9 {
 	 * Unit4.mmTotalUnitsNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit9, DecimalNumber> mmTotalUnitsNumber = new MMMessageAttribute<Unit9, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit9.mmObject();
@@ -128,9 +129,19 @@ public class Unit9 {
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
+
+		@Override
+		public DecimalNumber getValue(Unit9 obj) {
+			return obj.getTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(Unit9 obj, DecimalNumber value) {
+			obj.setTotalUnitsNumber(value);
+		}
 	};
 	@XmlElement(name = "UnitDtls")
-	protected List<com.tools20022.repository.msg.Unit10> unitDetails;
+	protected List<Unit10> unitDetails;
 	/**
 	 * 
 	 <p>
@@ -166,7 +177,7 @@ public class Unit9 {
 	 * Unit4.mmUnitDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit9, List<Unit10>> mmUnitDetails = new MMMessageAttribute<Unit9, List<Unit10>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit9.mmObject();
@@ -178,7 +189,17 @@ public class Unit9 {
 			previousVersion_lazy = () -> Unit4.mmUnitDetails;
 			maxOccurs = 2;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Unit10.mmObject();
+			complexType_lazy = () -> Unit10.mmObject();
+		}
+
+		@Override
+		public List<Unit10> getValue(Unit9 obj) {
+			return obj.getUnitDetails();
+		}
+
+		@Override
+		public void setValue(Unit9 obj, List<Unit10> value) {
+			obj.setUnitDetails(value);
 		}
 	};
 
@@ -210,7 +231,7 @@ public class Unit9 {
 		return unitDetails == null ? unitDetails = new ArrayList<>() : unitDetails;
 	}
 
-	public Unit9 setUnitDetails(List<com.tools20022.repository.msg.Unit10> unitDetails) {
+	public Unit9 setUnitDetails(List<Unit10> unitDetails) {
 		this.unitDetails = Objects.requireNonNull(unitDetails);
 		return this;
 	}

@@ -108,7 +108,7 @@ public class StandingOrderType1Choice {
 	 * definition} = "Liquidity transfer standing order type, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderType1Choice, StandingOrderType1Code> mmCode = new MMMessageAttribute<StandingOrderType1Choice, StandingOrderType1Code>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderType1Choice.mmObject();
@@ -120,6 +120,16 @@ public class StandingOrderType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StandingOrderType1Code.mmObject();
+		}
+
+		@Override
+		public StandingOrderType1Code getValue(StandingOrderType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(StandingOrderType1Choice obj, StandingOrderType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class StandingOrderType1Choice {
 	 * "Liquidity transfer standing order type, in a free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderType1Choice, GenericIdentification1> mmProprietary = new MMMessageAttribute<StandingOrderType1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderType1Choice.mmObject();
@@ -170,6 +180,16 @@ public class StandingOrderType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(StandingOrderType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StandingOrderType1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

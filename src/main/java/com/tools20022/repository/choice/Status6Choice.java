@@ -106,7 +106,7 @@ public class Status6Choice {
 	 * definition} = "Status expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status6Choice, TradeStatus4Code> mmCode = new MMMessageAttribute<Status6Choice, TradeStatus4Code>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status6Choice.mmObject();
@@ -118,6 +118,16 @@ public class Status6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeStatus4Code.mmObject();
+		}
+
+		@Override
+		public TradeStatus4Code getValue(Status6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Status6Choice obj, TradeStatus4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -154,7 +164,7 @@ public class Status6Choice {
 	 * definition} = "Status expressed as a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status6Choice, Max35Text> mmProprietary = new MMMessageAttribute<Status6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status6Choice.mmObject();
@@ -166,6 +176,16 @@ public class Status6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Status6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Status6Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

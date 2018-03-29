@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader47;
 import com.tools20022.repository.msg.MandateAcceptance4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsMandatesISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -165,7 +164,7 @@ public class MandateAcceptanceReportV04 {
 	 * MandateAcceptanceReportV03.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateAcceptanceReportV04, GroupHeader47> mmGroupHeader = new MMMessageBuildingBlock<MandateAcceptanceReportV04, GroupHeader47>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +177,14 @@ public class MandateAcceptanceReportV04 {
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateAcceptanceReportV04.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader47 getValue(MandateAcceptanceReportV04 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(MandateAcceptanceReportV04 obj, GroupHeader47 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "UndrlygAccptncDtls", required = true)
@@ -226,7 +227,7 @@ public class MandateAcceptanceReportV04 {
 	 * MandateAcceptanceReportV03.mmUnderlyingAcceptanceDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlyingAcceptanceDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateAcceptanceReportV04, List<MandateAcceptance4>> mmUnderlyingAcceptanceDetails = new MMMessageBuildingBlock<MandateAcceptanceReportV04, List<MandateAcceptance4>>() {
 		{
 			xmlTag = "UndrlygAccptncDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,12 +239,14 @@ public class MandateAcceptanceReportV04 {
 			complexType_lazy = () -> MandateAcceptance4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateAcceptanceReportV04.class.getMethod("getUnderlyingAcceptanceDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MandateAcceptance4> getValue(MandateAcceptanceReportV04 obj) {
+			return obj.getUnderlyingAcceptanceDetails();
+		}
+
+		@Override
+		public void setValue(MandateAcceptanceReportV04 obj, List<MandateAcceptance4> value) {
+			obj.setUnderlyingAcceptanceDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -286,7 +289,7 @@ public class MandateAcceptanceReportV04 {
 	 * MandateAcceptanceReportV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateAcceptanceReportV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MandateAcceptanceReportV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,12 +301,14 @@ public class MandateAcceptanceReportV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateAcceptanceReportV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MandateAcceptanceReportV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MandateAcceptanceReportV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

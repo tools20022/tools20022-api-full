@@ -105,7 +105,7 @@ public class NamePrefix1Choice {
 	 * definition} = "Name prefix expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NamePrefix1Choice, NamePrefix1Code> mmCode = new MMMessageAttribute<NamePrefix1Choice, NamePrefix1Code>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNamePrefix;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NamePrefix1Choice.mmObject();
@@ -117,6 +117,16 @@ public class NamePrefix1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NamePrefix1Code.mmObject();
+		}
+
+		@Override
+		public NamePrefix1Code getValue(NamePrefix1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(NamePrefix1Choice obj, NamePrefix1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -154,7 +164,7 @@ public class NamePrefix1Choice {
 	 * definition} = "Name prefix expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NamePrefix1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<NamePrefix1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNamePrefix;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NamePrefix1Choice.mmObject();
@@ -166,6 +176,16 @@ public class NamePrefix1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(NamePrefix1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(NamePrefix1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

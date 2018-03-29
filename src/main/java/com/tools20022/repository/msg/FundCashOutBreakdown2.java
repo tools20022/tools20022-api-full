@@ -25,6 +25,9 @@ import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Charge16;
+import com.tools20022.repository.msg.Commission9;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -161,7 +164,7 @@ public class FundCashOutBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashOutBreakdown2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmAmount = new MMMessageAttribute<FundCashOutBreakdown2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
@@ -174,6 +177,16 @@ public class FundCashOutBreakdown2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(FundCashOutBreakdown2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(FundCashOutBreakdown2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnitsNb")
@@ -220,7 +233,7 @@ public class FundCashOutBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashOutBreakdown2, Optional<FinancialInstrumentQuantity1>> mmUnitsNumber = new MMMessageAttribute<FundCashOutBreakdown2, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
@@ -232,7 +245,17 @@ public class FundCashOutBreakdown2 {
 			nextVersions_lazy = () -> Arrays.asList(FundCashOutBreakdown3.mmUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(FundCashOutBreakdown2 obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(FundCashOutBreakdown2 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewAmtInd")
@@ -275,7 +298,7 @@ public class FundCashOutBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashOutBreakdown2, Optional<YesNoIndicator>> mmNewAmountIndicator = new MMMessageAttribute<FundCashOutBreakdown2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
 			isDerived = false;
@@ -287,6 +310,16 @@ public class FundCashOutBreakdown2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(FundCashOutBreakdown2 obj) {
+			return obj.getNewAmountIndicator();
+		}
+
+		@Override
+		public void setValue(FundCashOutBreakdown2 obj, Optional<YesNoIndicator> value) {
+			obj.setNewAmountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtFndTxOutTp", required = true)
@@ -326,7 +359,7 @@ public class FundCashOutBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestmentFundTransactionOutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashOutBreakdown2, InvestmentFundTransactionOutType1Code> mmInvestmentFundTransactionOutType = new MMMessageAttribute<FundCashOutBreakdown2, InvestmentFundTransactionOutType1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
@@ -338,6 +371,16 @@ public class FundCashOutBreakdown2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundTransactionOutType1Code.mmObject();
+		}
+
+		@Override
+		public InvestmentFundTransactionOutType1Code getValue(FundCashOutBreakdown2 obj) {
+			return obj.getInvestmentFundTransactionOutType();
+		}
+
+		@Override
+		public void setValue(FundCashOutBreakdown2 obj, InvestmentFundTransactionOutType1Code value) {
+			obj.setInvestmentFundTransactionOutType(value);
 		}
 	};
 	@XmlElement(name = "XtndedInvstmtFndTxOutTp", required = true)
@@ -377,7 +420,7 @@ public class FundCashOutBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedInvestmentFundTransactionOutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashOutBreakdown2, Extended350Code> mmExtendedInvestmentFundTransactionOutType = new MMMessageAttribute<FundCashOutBreakdown2, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
@@ -389,6 +432,16 @@ public class FundCashOutBreakdown2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(FundCashOutBreakdown2 obj) {
+			return obj.getExtendedInvestmentFundTransactionOutType();
+		}
+
+		@Override
+		public void setValue(FundCashOutBreakdown2 obj, Extended350Code value) {
+			obj.setExtendedInvestmentFundTransactionOutType(value);
 		}
 	};
 	@XmlElement(name = "OrgnlOrdrQtyTp", required = true)
@@ -428,7 +481,7 @@ public class FundCashOutBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalOrderQuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashOutBreakdown2, OrderQuantityType2Code> mmOriginalOrderQuantityType = new MMMessageAttribute<FundCashOutBreakdown2, OrderQuantityType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
@@ -440,6 +493,16 @@ public class FundCashOutBreakdown2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderQuantityType2Code.mmObject();
+		}
+
+		@Override
+		public OrderQuantityType2Code getValue(FundCashOutBreakdown2 obj) {
+			return obj.getOriginalOrderQuantityType();
+		}
+
+		@Override
+		public void setValue(FundCashOutBreakdown2 obj, OrderQuantityType2Code value) {
+			obj.setOriginalOrderQuantityType(value);
 		}
 	};
 	@XmlElement(name = "XtndedOrgnlOrdrQtyTp", required = true)
@@ -479,7 +542,7 @@ public class FundCashOutBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedOriginalOrderQuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashOutBreakdown2, Extended350Code> mmExtendedOriginalOrderQuantityType = new MMMessageAttribute<FundCashOutBreakdown2, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
@@ -492,9 +555,19 @@ public class FundCashOutBreakdown2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
+
+		@Override
+		public Extended350Code getValue(FundCashOutBreakdown2 obj) {
+			return obj.getExtendedOriginalOrderQuantityType();
+		}
+
+		@Override
+		public void setValue(FundCashOutBreakdown2 obj, Extended350Code value) {
+			obj.setExtendedOriginalOrderQuantityType(value);
+		}
 	};
 	@XmlElement(name = "ChrgDtls")
-	protected List<com.tools20022.repository.msg.Charge16> chargeDetails;
+	protected List<Charge16> chargeDetails;
 	/**
 	 * 
 	 <p>
@@ -533,7 +606,7 @@ public class FundCashOutBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashOutBreakdown2, List<Charge16>> mmChargeDetails = new MMMessageAssociationEnd<FundCashOutBreakdown2, List<Charge16>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
@@ -545,11 +618,21 @@ public class FundCashOutBreakdown2 {
 			nextVersions_lazy = () -> Arrays.asList(FundCashOutBreakdown3.mmChargeDetails);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Charge16.mmObject();
+			type_lazy = () -> Charge16.mmObject();
+		}
+
+		@Override
+		public List<Charge16> getValue(FundCashOutBreakdown2 obj) {
+			return obj.getChargeDetails();
+		}
+
+		@Override
+		public void setValue(FundCashOutBreakdown2 obj, List<Charge16> value) {
+			obj.setChargeDetails(value);
 		}
 	};
 	@XmlElement(name = "ComssnDtls")
-	protected List<com.tools20022.repository.msg.Commission9> commissionDetails;
+	protected List<Commission9> commissionDetails;
 	/**
 	 * 
 	 <p>
@@ -591,7 +674,7 @@ public class FundCashOutBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashOutBreakdown2, List<Commission9>> mmCommissionDetails = new MMMessageAssociationEnd<FundCashOutBreakdown2, List<Commission9>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown2.mmObject();
@@ -603,7 +686,17 @@ public class FundCashOutBreakdown2 {
 			nextVersions_lazy = () -> Arrays.asList(FundCashOutBreakdown3.mmCommissionDetails);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Commission9.mmObject();
+			type_lazy = () -> Commission9.mmObject();
+		}
+
+		@Override
+		public List<Commission9> getValue(FundCashOutBreakdown2 obj) {
+			return obj.getCommissionDetails();
+		}
+
+		@Override
+		public void setValue(FundCashOutBreakdown2 obj, List<Commission9> value) {
+			obj.setCommissionDetails(value);
 		}
 	};
 	/**
@@ -734,7 +827,7 @@ public class FundCashOutBreakdown2 {
 		return unitsNumber == null ? Optional.empty() : Optional.of(unitsNumber);
 	}
 
-	public FundCashOutBreakdown2 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+	public FundCashOutBreakdown2 setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
 		this.unitsNumber = unitsNumber;
 		return this;
 	}
@@ -788,7 +881,7 @@ public class FundCashOutBreakdown2 {
 		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public FundCashOutBreakdown2 setChargeDetails(List<com.tools20022.repository.msg.Charge16> chargeDetails) {
+	public FundCashOutBreakdown2 setChargeDetails(List<Charge16> chargeDetails) {
 		this.chargeDetails = Objects.requireNonNull(chargeDetails);
 		return this;
 	}
@@ -797,7 +890,7 @@ public class FundCashOutBreakdown2 {
 		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public FundCashOutBreakdown2 setCommissionDetails(List<com.tools20022.repository.msg.Commission9> commissionDetails) {
+	public FundCashOutBreakdown2 setCommissionDetails(List<Commission9> commissionDetails) {
 		this.commissionDetails = Objects.requireNonNull(commissionDetails);
 		return this;
 	}

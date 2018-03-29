@@ -34,6 +34,7 @@ import com.tools20022.repository.entity.ExposureCalculation;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.entity.VariationMarginTerm;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AggregatedIndependentAmount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -161,7 +162,7 @@ public class MarginCall1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExposedAmountPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCall1, Optional<ActiveCurrencyAndAmount>> mmExposedAmountPartyA = new MMMessageAttribute<MarginCall1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
@@ -173,6 +174,16 @@ public class MarginCall1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginCall1 obj) {
+			return obj.getExposedAmountPartyA();
+		}
+
+		@Override
+		public void setValue(MarginCall1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setExposedAmountPartyA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpsdAmtPtyB")
@@ -211,7 +222,7 @@ public class MarginCall1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExposedAmountPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCall1, Optional<ActiveCurrencyAndAmount>> mmExposedAmountPartyB = new MMMessageAttribute<MarginCall1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
@@ -223,6 +234,16 @@ public class MarginCall1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginCall1 obj) {
+			return obj.getExposedAmountPartyB();
+		}
+
+		@Override
+		public void setValue(MarginCall1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setExposedAmountPartyB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpsrCnvntn")
@@ -261,7 +282,7 @@ public class MarginCall1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExposureConvention = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCall1, Optional<ExposureConventionType1Code>> mmExposureConvention = new MMMessageAttribute<MarginCall1, Optional<ExposureConventionType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralAgreement.mmMarginConvention;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
@@ -273,6 +294,16 @@ public class MarginCall1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExposureConventionType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExposureConventionType1Code> getValue(MarginCall1 obj) {
+			return obj.getExposureConvention();
+		}
+
+		@Override
+		public void setValue(MarginCall1 obj, Optional<ExposureConventionType1Code> value) {
+			obj.setExposureConvention(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndpdntAmtPtyA")
@@ -310,7 +341,7 @@ public class MarginCall1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndependentAmountPartyA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall1, Optional<AggregatedIndependentAmount1>> mmIndependentAmountPartyA = new MMMessageAssociationEnd<MarginCall1, Optional<AggregatedIndependentAmount1>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmCurrentIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
@@ -322,7 +353,17 @@ public class MarginCall1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AggregatedIndependentAmount1.mmObject();
+			type_lazy = () -> AggregatedIndependentAmount1.mmObject();
+		}
+
+		@Override
+		public Optional<AggregatedIndependentAmount1> getValue(MarginCall1 obj) {
+			return obj.getIndependentAmountPartyA();
+		}
+
+		@Override
+		public void setValue(MarginCall1 obj, Optional<AggregatedIndependentAmount1> value) {
+			obj.setIndependentAmountPartyA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndpdntAmtPtyB")
@@ -360,7 +401,7 @@ public class MarginCall1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndependentAmountPartyB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall1, Optional<AggregatedIndependentAmount1>> mmIndependentAmountPartyB = new MMMessageAssociationEnd<MarginCall1, Optional<AggregatedIndependentAmount1>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmCurrentIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
@@ -372,7 +413,17 @@ public class MarginCall1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AggregatedIndependentAmount1.mmObject();
+			type_lazy = () -> AggregatedIndependentAmount1.mmObject();
+		}
+
+		@Override
+		public Optional<AggregatedIndependentAmount1> getValue(MarginCall1 obj) {
+			return obj.getIndependentAmountPartyB();
+		}
+
+		@Override
+		public void setValue(MarginCall1 obj, Optional<AggregatedIndependentAmount1> value) {
+			obj.setIndependentAmountPartyB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrgnTerms")
@@ -409,7 +460,7 @@ public class MarginCall1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall1, Optional<MarginTerms1Choice>> mmMarginTerms = new MMMessageAssociationEnd<MarginCall1, Optional<MarginTerms1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> VariationMarginTerm.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
@@ -422,6 +473,16 @@ public class MarginCall1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarginTerms1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarginTerms1Choice> getValue(MarginCall1 obj) {
+			return obj.getMarginTerms();
+		}
+
+		@Override
+		public void setValue(MarginCall1 obj, Optional<MarginTerms1Choice> value) {
+			obj.setMarginTerms(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollBal")
@@ -459,7 +520,7 @@ public class MarginCall1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall1, Optional<CollateralBalance1Choice>> mmCollateralBalance = new MMMessageAssociationEnd<MarginCall1, Optional<CollateralBalance1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
@@ -472,6 +533,16 @@ public class MarginCall1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CollateralBalance1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralBalance1Choice> getValue(MarginCall1 obj) {
+			return obj.getCollateralBalance();
+		}
+
+		@Override
+		public void setValue(MarginCall1 obj, Optional<CollateralBalance1Choice> value) {
+			obj.setCollateralBalance(value.orElse(null));
 		}
 	};
 
@@ -525,7 +596,7 @@ public class MarginCall1 {
 		return independentAmountPartyA == null ? Optional.empty() : Optional.of(independentAmountPartyA);
 	}
 
-	public MarginCall1 setIndependentAmountPartyA(com.tools20022.repository.msg.AggregatedIndependentAmount1 independentAmountPartyA) {
+	public MarginCall1 setIndependentAmountPartyA(AggregatedIndependentAmount1 independentAmountPartyA) {
 		this.independentAmountPartyA = independentAmountPartyA;
 		return this;
 	}
@@ -534,7 +605,7 @@ public class MarginCall1 {
 		return independentAmountPartyB == null ? Optional.empty() : Optional.of(independentAmountPartyB);
 	}
 
-	public MarginCall1 setIndependentAmountPartyB(com.tools20022.repository.msg.AggregatedIndependentAmount1 independentAmountPartyB) {
+	public MarginCall1 setIndependentAmountPartyB(AggregatedIndependentAmount1 independentAmountPartyB) {
 		this.independentAmountPartyB = independentAmountPartyB;
 		return this;
 	}

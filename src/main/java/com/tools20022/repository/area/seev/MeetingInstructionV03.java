@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.MeetingReference4;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SecurityIdentification11;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -146,7 +145,7 @@ public class MeetingInstructionV03 {
 	 * definition} = "Identifies the meeting instruction message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionV03, MessageIdentification1> mmIdentification = new MMMessageBuildingBlock<MeetingInstructionV03, MessageIdentification1>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +156,14 @@ public class MeetingInstructionV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionV03.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(MeetingInstructionV03 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionV03 obj, MessageIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "MtgRef", required = true)
@@ -190,7 +191,7 @@ public class MeetingInstructionV03 {
 	 * definition} = "Series of elements which allow to identify a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMeetingReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionV03, MeetingReference4> mmMeetingReference = new MMMessageBuildingBlock<MeetingInstructionV03, MeetingReference4>() {
 		{
 			xmlTag = "MtgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,12 +202,14 @@ public class MeetingInstructionV03 {
 			complexType_lazy = () -> MeetingReference4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionV03.class.getMethod("getMeetingReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MeetingReference4 getValue(MeetingInstructionV03 obj) {
+			return obj.getMeetingReference();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionV03 obj, MeetingReference4 value) {
+			obj.setMeetingReference(value);
 		}
 	};
 	@XmlElement(name = "InstgPty", required = true)
@@ -234,7 +237,7 @@ public class MeetingInstructionV03 {
 	 * definition} = "Party notifying the instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstructingParty = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionV03, PartyIdentification9Choice> mmInstructingParty = new MMMessageBuildingBlock<MeetingInstructionV03, PartyIdentification9Choice>() {
 		{
 			xmlTag = "InstgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,12 +248,14 @@ public class MeetingInstructionV03 {
 			complexType_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionV03.class.getMethod("getInstructingParty", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification9Choice getValue(MeetingInstructionV03 obj) {
+			return obj.getInstructingParty();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionV03 obj, PartyIdentification9Choice value) {
+			obj.setInstructingParty(value);
 		}
 	};
 	@XmlElement(name = "SctyId", required = true)
@@ -279,7 +284,7 @@ public class MeetingInstructionV03 {
 	 * "Identifies the security for which the meeting is organised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionV03, SecurityIdentification11> mmSecurityIdentification = new MMMessageBuildingBlock<MeetingInstructionV03, SecurityIdentification11>() {
 		{
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,12 +295,14 @@ public class MeetingInstructionV03 {
 			complexType_lazy = () -> SecurityIdentification11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionV03.class.getMethod("getSecurityIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecurityIdentification11 getValue(MeetingInstructionV03 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionV03 obj, SecurityIdentification11 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "Instr", required = true)
@@ -324,7 +331,7 @@ public class MeetingInstructionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MeetingInstructionV03, List<Instruction2>> mmInstruction = new MMMessageBuildingBlock<MeetingInstructionV03, List<Instruction2>>() {
 		{
 			xmlTag = "Instr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,12 +341,14 @@ public class MeetingInstructionV03 {
 			complexType_lazy = () -> Instruction2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingInstructionV03.class.getMethod("getInstruction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Instruction2> getValue(MeetingInstructionV03 obj) {
+			return obj.getInstruction();
+		}
+
+		@Override
+		public void setValue(MeetingInstructionV03 obj, List<Instruction2> value) {
+			obj.setInstruction(value);
 		}
 	};
 

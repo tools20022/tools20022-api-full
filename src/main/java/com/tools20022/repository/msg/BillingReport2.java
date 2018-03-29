@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DatePeriodDetails;
+import com.tools20022.repository.msg.InvoiceLegalIssue1;
+import com.tools20022.repository.msg.InvoiceTotals2;
+import com.tools20022.repository.msg.ServiceCategoryTotals2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -127,7 +131,7 @@ public class BillingReport2 {
 	 * BillingReport1.mmRegulatoryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegulatoryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingReport2, InvoiceLegalIssue1> mmRegulatoryData = new MMMessageAssociationEnd<BillingReport2, InvoiceLegalIssue1>() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport2.mmObject();
@@ -140,7 +144,17 @@ public class BillingReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
+			type_lazy = () -> InvoiceLegalIssue1.mmObject();
+		}
+
+		@Override
+		public InvoiceLegalIssue1 getValue(BillingReport2 obj) {
+			return obj.getRegulatoryData();
+		}
+
+		@Override
+		public void setValue(BillingReport2 obj, InvoiceLegalIssue1 value) {
+			obj.setRegulatoryData(value);
 		}
 	};
 	@XmlElement(name = "InvcDt", required = true)
@@ -181,7 +195,7 @@ public class BillingReport2 {
 	 * BillingReport1.mmInvoiceDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvoiceDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingReport2, ISODate> mmInvoiceDate = new MMMessageAttribute<BillingReport2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport2.mmObject();
@@ -194,6 +208,16 @@ public class BillingReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(BillingReport2 obj) {
+			return obj.getInvoiceDate();
+		}
+
+		@Override
+		public void setValue(BillingReport2 obj, ISODate value) {
+			obj.setInvoiceDate(value);
 		}
 	};
 	@XmlElement(name = "BllgId", required = true)
@@ -234,7 +258,7 @@ public class BillingReport2 {
 	 * BillingReport1.mmBillingIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingReport2, Max35Text> mmBillingIdentification = new MMMessageAttribute<BillingReport2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport2.mmObject();
@@ -247,6 +271,16 @@ public class BillingReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BillingReport2 obj) {
+			return obj.getBillingIdentification();
+		}
+
+		@Override
+		public void setValue(BillingReport2 obj, Max35Text value) {
+			obj.setBillingIdentification(value);
 		}
 	};
 	@XmlElement(name = "BllgPrd", required = true)
@@ -288,7 +322,7 @@ public class BillingReport2 {
 	 * BillingReport1.mmBillingPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBillingPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingReport2, DatePeriodDetails> mmBillingPeriod = new MMMessageAttribute<BillingReport2, DatePeriodDetails>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmPeriodCovered;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport2.mmObject();
@@ -300,7 +334,17 @@ public class BillingReport2 {
 			previousVersion_lazy = () -> BillingReport1.mmBillingPeriod;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
+			complexType_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public DatePeriodDetails getValue(BillingReport2 obj) {
+			return obj.getBillingPeriod();
+		}
+
+		@Override
+		public void setValue(BillingReport2 obj, DatePeriodDetails value) {
+			obj.setBillingPeriod(value);
 		}
 	};
 	@XmlElement(name = "CSDOrNCB")
@@ -342,7 +386,7 @@ public class BillingReport2 {
 	 * BillingReport1.mmCSDOrNCB}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingReport2, Optional<CSDOrNCB1Choice>> mmCSDOrNCB = new MMMessageAssociationEnd<BillingReport2, Optional<CSDOrNCB1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport2.mmObject();
@@ -356,6 +400,16 @@ public class BillingReport2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CSDOrNCB1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CSDOrNCB1Choice> getValue(BillingReport2 obj) {
+			return obj.getCSDOrNCB();
+		}
+
+		@Override
+		public void setValue(BillingReport2 obj, Optional<CSDOrNCB1Choice> value) {
+			obj.setCSDOrNCB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvcTtls", required = true)
@@ -394,7 +448,7 @@ public class BillingReport2 {
 	 * BillingReport1.mmInvoiceTotals}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoiceTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingReport2, InvoiceTotals2> mmInvoiceTotals = new MMMessageAssociationEnd<BillingReport2, InvoiceTotals2>() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport2.mmObject();
@@ -407,11 +461,21 @@ public class BillingReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvoiceTotals2.mmObject();
+			type_lazy = () -> InvoiceTotals2.mmObject();
+		}
+
+		@Override
+		public InvoiceTotals2 getValue(BillingReport2 obj) {
+			return obj.getInvoiceTotals();
+		}
+
+		@Override
+		public void setValue(BillingReport2 obj, InvoiceTotals2 value) {
+			obj.setInvoiceTotals(value);
 		}
 	};
 	@XmlElement(name = "SvcCtgyTtls", required = true)
-	protected List<com.tools20022.repository.msg.ServiceCategoryTotals2> serviceCategoryTotals;
+	protected List<ServiceCategoryTotals2> serviceCategoryTotals;
 	/**
 	 * 
 	 <p>
@@ -446,7 +510,7 @@ public class BillingReport2 {
 	 * BillingReport1.mmServiceCategoryTotals}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceCategoryTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingReport2, List<ServiceCategoryTotals2>> mmServiceCategoryTotals = new MMMessageAssociationEnd<BillingReport2, List<ServiceCategoryTotals2>>() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport2.mmObject();
@@ -458,7 +522,17 @@ public class BillingReport2 {
 			previousVersion_lazy = () -> BillingReport1.mmServiceCategoryTotals;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals2.mmObject();
+			type_lazy = () -> ServiceCategoryTotals2.mmObject();
+		}
+
+		@Override
+		public List<ServiceCategoryTotals2> getValue(BillingReport2 obj) {
+			return obj.getServiceCategoryTotals();
+		}
+
+		@Override
+		public void setValue(BillingReport2 obj, List<ServiceCategoryTotals2> value) {
+			obj.setServiceCategoryTotals(value);
 		}
 	};
 
@@ -483,7 +557,7 @@ public class BillingReport2 {
 		return regulatoryData;
 	}
 
-	public BillingReport2 setRegulatoryData(com.tools20022.repository.msg.InvoiceLegalIssue1 regulatoryData) {
+	public BillingReport2 setRegulatoryData(InvoiceLegalIssue1 regulatoryData) {
 		this.regulatoryData = Objects.requireNonNull(regulatoryData);
 		return this;
 	}
@@ -510,7 +584,7 @@ public class BillingReport2 {
 		return billingPeriod;
 	}
 
-	public BillingReport2 setBillingPeriod(com.tools20022.repository.msg.DatePeriodDetails billingPeriod) {
+	public BillingReport2 setBillingPeriod(DatePeriodDetails billingPeriod) {
 		this.billingPeriod = Objects.requireNonNull(billingPeriod);
 		return this;
 	}
@@ -528,7 +602,7 @@ public class BillingReport2 {
 		return invoiceTotals;
 	}
 
-	public BillingReport2 setInvoiceTotals(com.tools20022.repository.msg.InvoiceTotals2 invoiceTotals) {
+	public BillingReport2 setInvoiceTotals(InvoiceTotals2 invoiceTotals) {
 		this.invoiceTotals = Objects.requireNonNull(invoiceTotals);
 		return this;
 	}
@@ -537,7 +611,7 @@ public class BillingReport2 {
 		return serviceCategoryTotals == null ? serviceCategoryTotals = new ArrayList<>() : serviceCategoryTotals;
 	}
 
-	public BillingReport2 setServiceCategoryTotals(List<com.tools20022.repository.msg.ServiceCategoryTotals2> serviceCategoryTotals) {
+	public BillingReport2 setServiceCategoryTotals(List<ServiceCategoryTotals2> serviceCategoryTotals) {
 		this.serviceCategoryTotals = Objects.requireNonNull(serviceCategoryTotals);
 		return this;
 	}

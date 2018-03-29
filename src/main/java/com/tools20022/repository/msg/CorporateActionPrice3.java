@@ -113,7 +113,7 @@ public class CorporateActionPrice3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPrice3, Optional<PriceFormat11Choice>> mmMaximumPrice = new MMMessageAttribute<CorporateActionPrice3, Optional<PriceFormat11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMaximumPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice3.mmObject();
@@ -126,6 +126,16 @@ public class CorporateActionPrice3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat11Choice> getValue(CorporateActionPrice3 obj) {
+			return obj.getMaximumPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice3 obj, Optional<PriceFormat11Choice> value) {
+			obj.setMaximumPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinPric")
@@ -168,7 +178,7 @@ public class CorporateActionPrice3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPrice3, Optional<PriceFormat11Choice>> mmMinimumPrice = new MMMessageAttribute<CorporateActionPrice3, Optional<PriceFormat11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMinimumPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice3.mmObject();
@@ -181,6 +191,16 @@ public class CorporateActionPrice3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat11Choice> getValue(CorporateActionPrice3 obj) {
+			return obj.getMinimumPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice3 obj, Optional<PriceFormat11Choice> value) {
+			obj.setMinimumPrice(value.orElse(null));
 		}
 	};
 

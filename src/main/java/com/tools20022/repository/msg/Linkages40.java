@@ -112,7 +112,7 @@ public class Linkages40 {
 	 * Linkages21.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages40, References47Choice> mmReference = new MMMessageAssociationEnd<Linkages40, References47Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages40.mmObject();
@@ -127,6 +127,16 @@ public class Linkages40 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> References47Choice.mmObject();
+		}
+
+		@Override
+		public References47Choice getValue(Linkages40 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Linkages40 obj, References47Choice value) {
+			obj.setReference(value);
 		}
 	};
 

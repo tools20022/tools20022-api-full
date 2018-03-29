@@ -114,7 +114,7 @@ public class MatchingDenied3Choice {
 	 * MatchingDenied1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingDenied3Choice, MatchingProcess1Code> mmCode = new MMMessageAttribute<MatchingDenied3Choice, MatchingProcess1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingDenied3Choice.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class MatchingDenied3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MatchingProcess1Code.mmObject();
+		}
+
+		@Override
+		public MatchingProcess1Code getValue(MatchingDenied3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MatchingDenied3Choice obj, MatchingProcess1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class MatchingDenied3Choice {
 	 * MatchingDenied1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingDenied3Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<MatchingDenied3Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingDenied3Choice.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class MatchingDenied3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(MatchingDenied3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingDenied3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

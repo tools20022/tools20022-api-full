@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader47;
 import com.tools20022.repository.msg.MandateCancellation4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PaymentsMandatesISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -167,7 +166,7 @@ public class MandateCancellationRequestV04 {
 	 * MandateCancellationRequestV03.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCancellationRequestV04, GroupHeader47> mmGroupHeader = new MMMessageBuildingBlock<MandateCancellationRequestV04, GroupHeader47>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,12 +179,14 @@ public class MandateCancellationRequestV04 {
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCancellationRequestV04.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader47 getValue(MandateCancellationRequestV04 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(MandateCancellationRequestV04 obj, GroupHeader47 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "UndrlygCxlDtls", required = true)
@@ -227,7 +228,7 @@ public class MandateCancellationRequestV04 {
 	 * MandateCancellationRequestV03.mmUnderlyingCancellationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlyingCancellationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCancellationRequestV04, List<MandateCancellation4>> mmUnderlyingCancellationDetails = new MMMessageBuildingBlock<MandateCancellationRequestV04, List<MandateCancellation4>>() {
 		{
 			xmlTag = "UndrlygCxlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,12 +240,14 @@ public class MandateCancellationRequestV04 {
 			complexType_lazy = () -> MandateCancellation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCancellationRequestV04.class.getMethod("getUnderlyingCancellationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MandateCancellation4> getValue(MandateCancellationRequestV04 obj) {
+			return obj.getUnderlyingCancellationDetails();
+		}
+
+		@Override
+		public void setValue(MandateCancellationRequestV04 obj, List<MandateCancellation4> value) {
+			obj.setUnderlyingCancellationDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -287,7 +290,7 @@ public class MandateCancellationRequestV04 {
 	 * MandateCancellationRequestV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateCancellationRequestV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MandateCancellationRequestV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,12 +302,14 @@ public class MandateCancellationRequestV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateCancellationRequestV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MandateCancellationRequestV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MandateCancellationRequestV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

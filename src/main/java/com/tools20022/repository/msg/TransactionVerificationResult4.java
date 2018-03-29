@@ -131,7 +131,7 @@ public class TransactionVerificationResult4 {
 	 * TransactionVerificationResult3.mmMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult4, AuthenticationMethod6Code> mmMethod = new MMMessageAttribute<TransactionVerificationResult4, AuthenticationMethod6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class TransactionVerificationResult4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod6Code.mmObject();
+		}
+
+		@Override
+		public AuthenticationMethod6Code getValue(TransactionVerificationResult4 obj) {
+			return obj.getMethod();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult4 obj, AuthenticationMethod6Code value) {
+			obj.setMethod(value);
 		}
 	};
 	@XmlElement(name = "VrfctnNtty")
@@ -189,7 +199,7 @@ public class TransactionVerificationResult4 {
 	 * TransactionVerificationResult3.mmVerificationEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVerificationEntity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult4, Optional<AuthenticationEntity2Code>> mmVerificationEntity = new MMMessageAttribute<TransactionVerificationResult4, Optional<AuthenticationEntity2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmObject();
 			isDerived = false;
@@ -202,6 +212,16 @@ public class TransactionVerificationResult4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AuthenticationEntity2Code.mmObject();
+		}
+
+		@Override
+		public Optional<AuthenticationEntity2Code> getValue(TransactionVerificationResult4 obj) {
+			return obj.getVerificationEntity();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult4 obj, Optional<AuthenticationEntity2Code> value) {
+			obj.setVerificationEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rslt")
@@ -247,7 +267,7 @@ public class TransactionVerificationResult4 {
 	 * TransactionVerificationResult3.mmResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult4, Optional<Verification1Code>> mmResult = new MMMessageAttribute<TransactionVerificationResult4, Optional<Verification1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmObject();
 			isDerived = false;
@@ -260,6 +280,16 @@ public class TransactionVerificationResult4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Verification1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Verification1Code> getValue(TransactionVerificationResult4 obj) {
+			return obj.getResult();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult4 obj, Optional<Verification1Code> value) {
+			obj.setResult(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRslt")
@@ -304,7 +334,7 @@ public class TransactionVerificationResult4 {
 	 * TransactionVerificationResult3.mmAdditionalResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult4, Optional<Max500Text>> mmAdditionalResult = new MMMessageAttribute<TransactionVerificationResult4, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult4.mmObject();
 			isDerived = false;
@@ -317,6 +347,16 @@ public class TransactionVerificationResult4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(TransactionVerificationResult4 obj) {
+			return obj.getAdditionalResult();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult4 obj, Optional<Max500Text> value) {
+			obj.setAdditionalResult(value.orElse(null));
 		}
 	};
 

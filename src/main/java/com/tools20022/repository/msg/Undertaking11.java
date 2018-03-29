@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -115,7 +116,7 @@ public class Undertaking11 {
 	 * "Details related to the requested new amount for the local undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewUndertakingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking11, Optional<UndertakingAmount2>> mmNewUndertakingAmount = new MMMessageAttribute<Undertaking11, Optional<UndertakingAmount2>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmUndertakingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking11.mmObject();
@@ -126,7 +127,17 @@ public class Undertaking11 {
 			definition = "Details related to the requested new amount for the local undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.UndertakingAmount2.mmObject();
+			complexType_lazy = () -> UndertakingAmount2.mmObject();
+		}
+
+		@Override
+		public Optional<UndertakingAmount2> getValue(Undertaking11 obj) {
+			return obj.getNewUndertakingAmount();
+		}
+
+		@Override
+		public void setValue(Undertaking11 obj, Optional<UndertakingAmount2> value) {
+			obj.setNewUndertakingAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewXpryDtls")
@@ -164,7 +175,7 @@ public class Undertaking11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewExpiryDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking11, Optional<ExpiryDetails1>> mmNewExpiryDetails = new MMMessageAttribute<Undertaking11, Optional<ExpiryDetails1>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmExpiry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking11.mmObject();
@@ -175,7 +186,17 @@ public class Undertaking11 {
 			definition = "Details related to the requested new expiry terms for the local undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ExpiryDetails1.mmObject();
+			complexType_lazy = () -> ExpiryDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<ExpiryDetails1> getValue(Undertaking11 obj) {
+			return obj.getNewExpiryDetails();
+		}
+
+		@Override
+		public void setValue(Undertaking11 obj, Optional<ExpiryDetails1> value) {
+			obj.setNewExpiryDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewBnfcry")
@@ -214,7 +235,7 @@ public class Undertaking11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewBeneficiary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking11, Optional<PartyIdentification43>> mmNewBeneficiary = new MMMessageAttribute<Undertaking11, Optional<PartyIdentification43>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking11.mmObject();
@@ -225,7 +246,17 @@ public class Undertaking11 {
 			definition = "Details related to the requested new beneficiary for the local undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			complexType_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(Undertaking11 obj) {
+			return obj.getNewBeneficiary();
+		}
+
+		@Override
+		public void setValue(Undertaking11 obj, Optional<PartyIdentification43> value) {
+			obj.setNewBeneficiary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewUdrtkgTermsAndConds")
@@ -258,7 +289,7 @@ public class Undertaking11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewUndertakingTermsAndConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking11, Optional<Narrative1>> mmNewUndertakingTermsAndConditions = new MMMessageAttribute<Undertaking11, Optional<Narrative1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking11.mmObject();
 			isDerived = false;
@@ -268,7 +299,17 @@ public class Undertaking11 {
 			definition = "Details related to the requested new terms and conditions for the local undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Narrative1.mmObject();
+			complexType_lazy = () -> Narrative1.mmObject();
+		}
+
+		@Override
+		public Optional<Narrative1> getValue(Undertaking11 obj) {
+			return obj.getNewUndertakingTermsAndConditions();
+		}
+
+		@Override
+		public void setValue(Undertaking11 obj, Optional<Narrative1> value) {
+			obj.setNewUndertakingTermsAndConditions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryChanl")
@@ -307,7 +348,7 @@ public class Undertaking11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking11, Optional<CommunicationChannel1>> mmDeliveryChannel = new MMMessageAttribute<Undertaking11, Optional<CommunicationChannel1>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking11.mmObject();
@@ -318,7 +359,17 @@ public class Undertaking11 {
 			definition = "Details related to the delivery channel for the amended local undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
+			complexType_lazy = () -> CommunicationChannel1.mmObject();
+		}
+
+		@Override
+		public Optional<CommunicationChannel1> getValue(Undertaking11 obj) {
+			return obj.getDeliveryChannel();
+		}
+
+		@Override
+		public void setValue(Undertaking11 obj, Optional<CommunicationChannel1> value) {
+			obj.setDeliveryChannel(value.orElse(null));
 		}
 	};
 
@@ -341,7 +392,7 @@ public class Undertaking11 {
 		return newUndertakingAmount == null ? Optional.empty() : Optional.of(newUndertakingAmount);
 	}
 
-	public Undertaking11 setNewUndertakingAmount(com.tools20022.repository.msg.UndertakingAmount2 newUndertakingAmount) {
+	public Undertaking11 setNewUndertakingAmount(UndertakingAmount2 newUndertakingAmount) {
 		this.newUndertakingAmount = newUndertakingAmount;
 		return this;
 	}
@@ -350,7 +401,7 @@ public class Undertaking11 {
 		return newExpiryDetails == null ? Optional.empty() : Optional.of(newExpiryDetails);
 	}
 
-	public Undertaking11 setNewExpiryDetails(com.tools20022.repository.msg.ExpiryDetails1 newExpiryDetails) {
+	public Undertaking11 setNewExpiryDetails(ExpiryDetails1 newExpiryDetails) {
 		this.newExpiryDetails = newExpiryDetails;
 		return this;
 	}
@@ -359,7 +410,7 @@ public class Undertaking11 {
 		return newBeneficiary == null ? Optional.empty() : Optional.of(newBeneficiary);
 	}
 
-	public Undertaking11 setNewBeneficiary(com.tools20022.repository.msg.PartyIdentification43 newBeneficiary) {
+	public Undertaking11 setNewBeneficiary(PartyIdentification43 newBeneficiary) {
 		this.newBeneficiary = newBeneficiary;
 		return this;
 	}
@@ -368,7 +419,7 @@ public class Undertaking11 {
 		return newUndertakingTermsAndConditions == null ? Optional.empty() : Optional.of(newUndertakingTermsAndConditions);
 	}
 
-	public Undertaking11 setNewUndertakingTermsAndConditions(com.tools20022.repository.msg.Narrative1 newUndertakingTermsAndConditions) {
+	public Undertaking11 setNewUndertakingTermsAndConditions(Narrative1 newUndertakingTermsAndConditions) {
 		this.newUndertakingTermsAndConditions = newUndertakingTermsAndConditions;
 		return this;
 	}
@@ -377,7 +428,7 @@ public class Undertaking11 {
 		return deliveryChannel == null ? Optional.empty() : Optional.of(deliveryChannel);
 	}
 
-	public Undertaking11 setDeliveryChannel(com.tools20022.repository.msg.CommunicationChannel1 deliveryChannel) {
+	public Undertaking11 setDeliveryChannel(CommunicationChannel1 deliveryChannel) {
 		this.deliveryChannel = deliveryChannel;
 		return this;
 	}

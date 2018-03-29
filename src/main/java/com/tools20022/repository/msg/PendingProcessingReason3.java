@@ -135,7 +135,7 @@ public class PendingProcessingReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingProcessingReason3, PendingProcessingReason3Choice> mmCode = new MMMessageAssociationEnd<PendingProcessingReason3, PendingProcessingReason3Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingProcessingReason3.mmObject();
@@ -150,6 +150,16 @@ public class PendingProcessingReason3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingProcessingReason3Choice.mmObject();
+		}
+
+		@Override
+		public PendingProcessingReason3Choice getValue(PendingProcessingReason3 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason3 obj, PendingProcessingReason3Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -199,7 +209,7 @@ public class PendingProcessingReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingReason3, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<PendingProcessingReason3, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingProcessingReason3.mmObject();
@@ -213,6 +223,16 @@ public class PendingProcessingReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(PendingProcessingReason3 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason3 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

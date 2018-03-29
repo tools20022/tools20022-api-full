@@ -55,12 +55,16 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader33> forGroupHeader33 = new MMConstraint<GroupHeader33>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader33.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader33 obj) throws Exception {
+			checkGroupHeader33(obj);
 		}
 	};
 	/**
@@ -97,13 +101,17 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader49> forGroupHeader49 = new MMConstraint<GroupHeader49>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndDateRule.forGroupHeader70);
 			owner_lazy = () -> GroupHeader49.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader49 obj) throws Exception {
+			checkGroupHeader49(obj);
 		}
 	};
 	/**
@@ -132,12 +140,16 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader34> forGroupHeader34 = new MMConstraint<GroupHeader34>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader34.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader34 obj) throws Exception {
+			checkGroupHeader34(obj);
 		}
 	};
 	/**
@@ -166,12 +178,16 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader50> forGroupHeader50 = new MMConstraint<GroupHeader50>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader50.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader50 obj) throws Exception {
+			checkGroupHeader50(obj);
 		}
 	};
 	/**
@@ -200,12 +216,16 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader41> forGroupHeader41 = new MMConstraint<GroupHeader41>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalReversedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader41.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader41 obj) throws Exception {
+			checkGroupHeader41(obj);
 		}
 	};
 	/**
@@ -242,13 +262,17 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader57> forGroupHeader57 = new MMConstraint<GroupHeader57>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalReversedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndDateRule.forGroupHeader71);
 			owner_lazy = () -> GroupHeader57.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader57 obj) throws Exception {
+			checkGroupHeader57(obj);
 		}
 	};
 	/**
@@ -277,12 +301,16 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader35> forGroupHeader35 = new MMConstraint<GroupHeader35>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader35.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader35 obj) throws Exception {
+			checkGroupHeader35(obj);
 		}
 	};
 	/**
@@ -311,12 +339,16 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader51> forGroupHeader51 = new MMConstraint<GroupHeader51>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader51.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader51 obj) throws Exception {
+			checkGroupHeader51(obj);
 		}
 	};
 	/**
@@ -345,12 +377,16 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader38> forGroupHeader38 = new MMConstraint<GroupHeader38>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalReturnedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader38.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader38 obj) throws Exception {
+			checkGroupHeader38(obj);
 		}
 	};
 	/**
@@ -387,13 +423,17 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader54> forGroupHeader54 = new MMConstraint<GroupHeader54>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalReturnedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndDateRule.forGroupHeader72);
 			owner_lazy = () -> GroupHeader54.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader54 obj) throws Exception {
+			checkGroupHeader54(obj);
 		}
 	};
 	/**
@@ -427,13 +467,17 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader70> forGroupHeader70 = new MMConstraint<GroupHeader70>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndDateRule.forGroupHeader49;
 			owner_lazy = () -> GroupHeader70.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader70 obj) throws Exception {
+			checkGroupHeader70(obj);
 		}
 	};
 	/**
@@ -467,13 +511,17 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader72> forGroupHeader72 = new MMConstraint<GroupHeader72>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalReturnedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndDateRule.forGroupHeader54;
 			owner_lazy = () -> GroupHeader72.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReturnedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader72 obj) throws Exception {
+			checkGroupHeader72(obj);
 		}
 	};
 	/**
@@ -507,13 +555,17 @@ public class ConstraintTotalInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<GroupHeader71> forGroupHeader71 = new MMConstraint<GroupHeader71>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndDateRule::checkGroupHeader71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndDateRule";
 			definition = "If TotalReversedInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndDateRule.forGroupHeader57;
 			owner_lazy = () -> GroupHeader71.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalReversedInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader71 obj) throws Exception {
+			checkGroupHeader71(obj);
 		}
 	};
 

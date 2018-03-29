@@ -127,7 +127,7 @@ public class CorporateActionReversalReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionReversalReason1Choice, CorporateActionReversalReason1Code> mmCode = new MMMessageAttribute<CorporateActionReversalReason1Choice, CorporateActionReversalReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmReversalReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionReversalReason1Choice.mmObject();
@@ -140,6 +140,16 @@ public class CorporateActionReversalReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionReversalReason1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionReversalReason1Code getValue(CorporateActionReversalReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionReversalReason1Choice obj, CorporateActionReversalReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -186,7 +196,7 @@ public class CorporateActionReversalReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionReversalReason1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<CorporateActionReversalReason1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmReversalReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionReversalReason1Choice.mmObject();
@@ -199,6 +209,16 @@ public class CorporateActionReversalReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CorporateActionReversalReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionReversalReason1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

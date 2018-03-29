@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DataSetIdentification2;
+import com.tools20022.repository.msg.ManagementPlanContent1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +115,7 @@ public class TerminalManagementDataSet2 {
 	 * "Identification of the data set containing the management plan."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet2, DataSetIdentification2> mmIdentification = new MMMessageAssociationEnd<TerminalManagementDataSet2, DataSetIdentification2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet2.mmObject();
 			isDerived = false;
@@ -124,7 +126,17 @@ public class TerminalManagementDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification2.mmObject();
+			type_lazy = () -> DataSetIdentification2.mmObject();
+		}
+
+		@Override
+		public DataSetIdentification2 getValue(TerminalManagementDataSet2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet2 obj, DataSetIdentification2 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SeqCntr")
@@ -158,7 +170,7 @@ public class TerminalManagementDataSet2 {
 	 * "Counter to identify a single data set within the whole transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalManagementDataSet2, Optional<Max9NumericText>> mmSequenceCounter = new MMMessageAttribute<TerminalManagementDataSet2, Optional<Max9NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet2.mmObject();
 			isDerived = false;
@@ -169,6 +181,16 @@ public class TerminalManagementDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max9NumericText> getValue(TerminalManagementDataSet2 obj) {
+			return obj.getSequenceCounter();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet2 obj, Optional<Max9NumericText> value) {
+			obj.setSequenceCounter(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cntt")
@@ -199,7 +221,7 @@ public class TerminalManagementDataSet2 {
 	 * definition} = "Content of the management plan."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet2, Optional<ManagementPlanContent1>> mmContent = new MMMessageAssociationEnd<TerminalManagementDataSet2, Optional<ManagementPlanContent1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet2.mmObject();
 			isDerived = false;
@@ -210,7 +232,17 @@ public class TerminalManagementDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent1.mmObject();
+			type_lazy = () -> ManagementPlanContent1.mmObject();
+		}
+
+		@Override
+		public Optional<ManagementPlanContent1> getValue(TerminalManagementDataSet2 obj) {
+			return obj.getContent();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet2 obj, Optional<ManagementPlanContent1> value) {
+			obj.setContent(value.orElse(null));
 		}
 	};
 
@@ -234,7 +266,7 @@ public class TerminalManagementDataSet2 {
 		return identification;
 	}
 
-	public TerminalManagementDataSet2 setIdentification(com.tools20022.repository.msg.DataSetIdentification2 identification) {
+	public TerminalManagementDataSet2 setIdentification(DataSetIdentification2 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -252,7 +284,7 @@ public class TerminalManagementDataSet2 {
 		return content == null ? Optional.empty() : Optional.of(content);
 	}
 
-	public TerminalManagementDataSet2 setContent(com.tools20022.repository.msg.ManagementPlanContent1 content) {
+	public TerminalManagementDataSet2 setContent(ManagementPlanContent1 content) {
 		this.content = content;
 		return this;
 	}

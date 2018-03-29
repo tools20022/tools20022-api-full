@@ -114,7 +114,7 @@ public class MandateAuthentication1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageAuthenticationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateAuthentication1, Optional<Max16Text>> mmMessageAuthenticationCode = new MMMessageAttribute<MandateAuthentication1, Optional<Max16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Authentication.mmAuthenticationEntity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAuthentication1.mmObject();
@@ -126,6 +126,16 @@ public class MandateAuthentication1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(MandateAuthentication1 obj) {
+			return obj.getMessageAuthenticationCode();
+		}
+
+		@Override
+		public void setValue(MandateAuthentication1 obj, Optional<Max16Text> value) {
+			obj.setMessageAuthenticationCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -162,7 +172,7 @@ public class MandateAuthentication1 {
 	 * definition} = "Date when the authentication was conducted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateAuthentication1, Optional<ISODate>> mmDate = new MMMessageAttribute<MandateAuthentication1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAuthentication1.mmObject();
@@ -174,6 +184,16 @@ public class MandateAuthentication1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MandateAuthentication1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(MandateAuthentication1 obj, Optional<ISODate> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Chanl")
@@ -210,7 +230,7 @@ public class MandateAuthentication1 {
 	 * definition} = "Channel used to transmit the authentication information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChannel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAuthentication1, Optional<AuthenticationChannel1Choice>> mmChannel = new MMMessageAssociationEnd<MandateAuthentication1, Optional<AuthenticationChannel1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Authentication.mmAuthenticationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAuthentication1.mmObject();
@@ -223,6 +243,16 @@ public class MandateAuthentication1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AuthenticationChannel1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AuthenticationChannel1Choice> getValue(MandateAuthentication1 obj) {
+			return obj.getChannel();
+		}
+
+		@Override
+		public void setValue(MandateAuthentication1 obj, Optional<AuthenticationChannel1Choice> value) {
+			obj.setChannel(value.orElse(null));
 		}
 	};
 

@@ -109,7 +109,7 @@ public class Counterparty10Choice {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty10Choice, PartyIdentificationAndAccount131> mmSeller = new MMMessageAssociationEnd<Counterparty10Choice, PartyIdentificationAndAccount131>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty10Choice.mmObject();
@@ -123,6 +123,16 @@ public class Counterparty10Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount131.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount131 getValue(Counterparty10Choice obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(Counterparty10Choice obj, PartyIdentificationAndAccount131 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -163,7 +173,7 @@ public class Counterparty10Choice {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty10Choice, PartyIdentificationAndAccount131> mmBuyer = new MMMessageAssociationEnd<Counterparty10Choice, PartyIdentificationAndAccount131>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty10Choice.mmObject();
@@ -177,6 +187,16 @@ public class Counterparty10Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount131.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount131 getValue(Counterparty10Choice obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(Counterparty10Choice obj, PartyIdentificationAndAccount131 value) {
+			obj.setBuyer(value);
 		}
 	};
 

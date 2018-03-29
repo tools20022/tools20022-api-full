@@ -53,11 +53,15 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<FundCashForecast1> forFundCashForecast1 = new MMConstraint<FundCashForecast1>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkFundCashForecast1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If Exceptional NetCashFlow Indicator is \"true\" or \"1\" (Yes), then CashInForecastDetails/ExceptionalCashFlowIndicator and CashOutForecastDetails/ ExceptionalCashFlowIndicator must be present.";
 			owner_lazy = () -> FundCashForecast1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundCashForecast1 obj) throws Exception {
+			checkFundCashForecast1(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<FundCashForecast3> forFundCashForecast3 = new MMConstraint<FundCashForecast3>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkFundCashForecast3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If Exceptional NetCashFlow Indicator is \"true\" or \"1\" (Yes), then CashInForecastDetails/ExceptionalCashFlowIndicator and CashOutForecastDetails/ ExceptionalCashFlowIndicator must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExceptionalCashFlowIndicatorRule.forFundCashForecast7);
 			owner_lazy = () -> FundCashForecast3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundCashForecast3 obj) throws Exception {
+			checkFundCashForecast3(obj);
 		}
 	};
 	/**
@@ -122,11 +130,15 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<FundCashForecast2> forFundCashForecast2 = new MMConstraint<FundCashForecast2>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkFundCashForecast2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then either SortingCriteriaDetails/ForecastBreakdownDetails/CashInForecastDetails/ExceptionalCashFlowIndicator or SortingCriteriaDetails/ForecastBreakdownDetails/CashOutForecastDetails/ExceptionalCashFlowIndicator, or both, must be present.";
 			owner_lazy = () -> FundCashForecast2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundCashForecast2 obj) throws Exception {
+			checkFundCashForecast2(obj);
 		}
 	};
 	/**
@@ -160,12 +172,16 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<FundCashForecast4> forFundCashForecast4 = new MMConstraint<FundCashForecast4>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkFundCashForecast4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then one of the following must be present: \nBreakdownByParty/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByParty/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCountry/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCountry/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCurrency/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCurrency/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByUserDefinedParameter/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByUserDefinedParameter/CashOutForecast/ExceptionalCashFlowIndicator.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExceptionalCashFlowIndicatorRule.forFundCashForecast6);
 			owner_lazy = () -> FundCashForecast4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundCashForecast4 obj) throws Exception {
+			checkFundCashForecast4(obj);
 		}
 	};
 	/**
@@ -191,11 +207,15 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<EstimatedFundCashForecast2> forEstimatedFundCashForecast2 = new MMConstraint<EstimatedFundCashForecast2>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkEstimatedFundCashForecast2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If Exceptional NetCashFlowIndicator is \"true\" or \"1\" (Yes), then either SortingCriteriaDetails/ForecastBreakdownDetails/EstimatedCashInForecastDetails/ExceptionalCashFlowIndicator or SortingCriteriaDetails/ForecastBreakdownDetails/EstimatedCashOutForecastDetails/ExceptionalCashFlowIndicator, or both, must be present.";
 			owner_lazy = () -> EstimatedFundCashForecast2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EstimatedFundCashForecast2 obj) throws Exception {
+			checkEstimatedFundCashForecast2(obj);
 		}
 	};
 	/**
@@ -230,12 +250,16 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<EstimatedFundCashForecast4> forEstimatedFundCashForecast4 = new MMConstraint<EstimatedFundCashForecast4>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkEstimatedFundCashForecast4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then one of the following must be present: \nBreakdownByParty/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByParty/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCountry/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCountry/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCurrency/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByCurrency/CashOutForecast/ExceptionalCashFlowIndicator, or\nBreakdownByUserDefinedParameter/CashInForecast/ExceptionalCashFlowIndicator, or\nBreakdownByUserDefinedParameter/CashOutForecast/ExceptionalCashFlowIndicator.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExceptionalCashFlowIndicatorRule.forEstimatedFundCashForecast5);
 			owner_lazy = () -> EstimatedFundCashForecast4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EstimatedFundCashForecast4 obj) throws Exception {
+			checkEstimatedFundCashForecast4(obj);
 		}
 	};
 	/**
@@ -261,11 +285,15 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<EstimatedFundCashForecast1> forEstimatedFundCashForecast1 = new MMConstraint<EstimatedFundCashForecast1>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkEstimatedFundCashForecast1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If Exceptional NetCashFlowIndicator is \"true\" or \"1\" (Yes), then either EstimatedCashInForecastDetails/ExceptionalCashFlowIndicator and EstimatedCashOutForecastDetails/ExceptionalCashFlowIndicator, or both, must be present.";
 			owner_lazy = () -> EstimatedFundCashForecast1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EstimatedFundCashForecast1 obj) throws Exception {
+			checkEstimatedFundCashForecast1(obj);
 		}
 	};
 	/**
@@ -300,12 +328,16 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<EstimatedFundCashForecast3> forEstimatedFundCashForecast3 = new MMConstraint<EstimatedFundCashForecast3>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkEstimatedFundCashForecast3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If Exceptional NetCashFlowIndicator is \"true\" or \"1\" (Yes), then either EstimatedCashInForecastDetails/ExceptionalCashFlowIndicator and EstimatedCashOutForecastDetails/ExceptionalCashFlowIndicator, or both, must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExceptionalCashFlowIndicatorRule.forEstimatedFundCashForecast6);
 			owner_lazy = () -> EstimatedFundCashForecast3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EstimatedFundCashForecast3 obj) throws Exception {
+			checkEstimatedFundCashForecast3(obj);
 		}
 	};
 	/**
@@ -336,12 +368,16 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<FundCashForecast7> forFundCashForecast7 = new MMConstraint<FundCashForecast7>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkFundCashForecast7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If Exceptional NetCashFlow Indicator is \"true\" or \"1\" (Yes), then CashInForecastDetails/ExceptionalCashFlowIndicator and CashOutForecastDetails/ ExceptionalCashFlowIndicator must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExceptionalCashFlowIndicatorRule.forFundCashForecast3;
 			owner_lazy = () -> FundCashForecast7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundCashForecast7 obj) throws Exception {
+			checkFundCashForecast7(obj);
 		}
 	};
 	/**
@@ -373,12 +409,16 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<EstimatedFundCashForecast6> forEstimatedFundCashForecast6 = new MMConstraint<EstimatedFundCashForecast6>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkEstimatedFundCashForecast6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If Exceptional NetCashFlowIndicator is \"true\" or \"1\" (Yes), then either EstimatedCashInForecastDetails/ExceptionalCashFlowIndicator or EstimatedCashOutForecastDetails/ExceptionalCashFlowIndicator must be present. Both may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExceptionalCashFlowIndicatorRule.forEstimatedFundCashForecast3;
 			owner_lazy = () -> EstimatedFundCashForecast6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EstimatedFundCashForecast6 obj) throws Exception {
+			checkEstimatedFundCashForecast6(obj);
 		}
 	};
 	/**
@@ -409,12 +449,16 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<FundCashForecast6> forFundCashForecast6 = new MMConstraint<FundCashForecast6>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkFundCashForecast6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then at least one or more of the following must be present:\r\nBreakdownByParty/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByParty/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCountry/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCountry/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCurrency/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCurrency/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByUserDefinedParameter/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByUserDefinedParameter/CashOutForecast/ExceptionalCashFlowIndicator.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExceptionalCashFlowIndicatorRule.forFundCashForecast4;
 			owner_lazy = () -> FundCashForecast6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundCashForecast6 obj) throws Exception {
+			checkFundCashForecast6(obj);
 		}
 	};
 	/**
@@ -446,12 +490,16 @@ public class ConstraintExceptionalCashFlowIndicatorRule {
 	 */
 	public static final MMConstraint<EstimatedFundCashForecast5> forEstimatedFundCashForecast5 = new MMConstraint<EstimatedFundCashForecast5>() {
 		{
-			validator = ConstraintExceptionalCashFlowIndicatorRule::checkEstimatedFundCashForecast5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExceptionalCashFlowIndicatorRule";
 			definition = "If ExceptionalNetCashFlowIndicator is \"true\" or \"1\" (Yes), then at least one or more of the following must be present:\r\nBreakdownByParty/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByParty/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCountry/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCountry/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCurrency/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByCurrency/CashOutForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByUserDefinedParameter/CashInForecast/ExceptionalCashFlowIndicator, or\r\nBreakdownByUserDefinedParameter/CashOutForecast/ExceptionalCashFlowIndicator.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExceptionalCashFlowIndicatorRule.forEstimatedFundCashForecast4;
 			owner_lazy = () -> EstimatedFundCashForecast5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EstimatedFundCashForecast5 obj) throws Exception {
+			checkEstimatedFundCashForecast5(obj);
 		}
 	};
 

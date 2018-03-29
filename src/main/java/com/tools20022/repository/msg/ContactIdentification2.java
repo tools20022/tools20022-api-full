@@ -124,7 +124,7 @@ public class ContactIdentification2 {
 	 * definition} = "Specifies the terms used to formally address a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNamePrefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentification2, Optional<NamePrefix1Code>> mmNamePrefix = new MMMessageAttribute<ContactIdentification2, Optional<NamePrefix1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNamePrefix;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
@@ -136,6 +136,16 @@ public class ContactIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NamePrefix1Code.mmObject();
+		}
+
+		@Override
+		public Optional<NamePrefix1Code> getValue(ContactIdentification2 obj) {
+			return obj.getNamePrefix();
+		}
+
+		@Override
+		public void setValue(ContactIdentification2 obj, Optional<NamePrefix1Code> value) {
+			obj.setNamePrefix(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GvnNm")
@@ -172,7 +182,7 @@ public class ContactIdentification2 {
 	 * definition} = "First name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentification2, Optional<Max35Text>> mmGivenName = new MMMessageAttribute<ContactIdentification2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
@@ -184,6 +194,16 @@ public class ContactIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ContactIdentification2 obj) {
+			return obj.getGivenName();
+		}
+
+		@Override
+		public void setValue(ContactIdentification2 obj, Optional<Max35Text> value) {
+			obj.setGivenName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -222,7 +242,7 @@ public class ContactIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentification2, Max35Text> mmName = new MMMessageAttribute<ContactIdentification2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
@@ -234,6 +254,16 @@ public class ContactIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ContactIdentification2 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(ContactIdentification2 obj, Max35Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PhneNb")
@@ -272,7 +302,7 @@ public class ContactIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentification2, Optional<PhoneNumber>> mmPhoneNumber = new MMMessageAttribute<ContactIdentification2, Optional<PhoneNumber>>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
@@ -284,6 +314,16 @@ public class ContactIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(ContactIdentification2 obj) {
+			return obj.getPhoneNumber();
+		}
+
+		@Override
+		public void setValue(ContactIdentification2 obj, Optional<PhoneNumber> value) {
+			obj.setPhoneNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MobNb")
@@ -322,7 +362,7 @@ public class ContactIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMobileNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentification2, Optional<PhoneNumber>> mmMobileNumber = new MMMessageAttribute<ContactIdentification2, Optional<PhoneNumber>>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmMobileNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
@@ -334,6 +374,16 @@ public class ContactIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(ContactIdentification2 obj) {
+			return obj.getMobileNumber();
+		}
+
+		@Override
+		public void setValue(ContactIdentification2 obj, Optional<PhoneNumber> value) {
+			obj.setMobileNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FaxNb")
@@ -372,7 +422,7 @@ public class ContactIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentification2, Optional<PhoneNumber>> mmFaxNumber = new MMMessageAttribute<ContactIdentification2, Optional<PhoneNumber>>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmFaxNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
@@ -384,6 +434,16 @@ public class ContactIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(ContactIdentification2 obj) {
+			return obj.getFaxNumber();
+		}
+
+		@Override
+		public void setValue(ContactIdentification2 obj, Optional<PhoneNumber> value) {
+			obj.setFaxNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EmailAdr")
@@ -420,7 +480,7 @@ public class ContactIdentification2 {
 	 * definition} = "Address for electronic mail (e-mail)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentification2, Optional<Max256Text>> mmEmailAddress = new MMMessageAttribute<ContactIdentification2, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
@@ -432,6 +492,16 @@ public class ContactIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(ContactIdentification2 obj) {
+			return obj.getEmailAddress();
+		}
+
+		@Override
+		public void setValue(ContactIdentification2 obj, Optional<Max256Text> value) {
+			obj.setEmailAddress(value.orElse(null));
 		}
 	};
 

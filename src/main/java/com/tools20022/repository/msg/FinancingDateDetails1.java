@@ -111,7 +111,7 @@ public class FinancingDateDetails1 {
 	 * "Date on which the financing transaction has been booked in an account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBookDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingDateDetails1, List<ISODate>> mmBookDate = new MMMessageAttribute<FinancingDateDetails1, List<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingDateDetails1.mmObject();
@@ -122,6 +122,16 @@ public class FinancingDateDetails1 {
 			definition = "Date on which the financing transaction has been booked in an account.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public List<ISODate> getValue(FinancingDateDetails1 obj) {
+			return obj.getBookDate();
+		}
+
+		@Override
+		public void setValue(FinancingDateDetails1 obj, List<ISODate> value) {
+			obj.setBookDate(value);
 		}
 	};
 	@XmlElement(name = "CdtDt", required = true)
@@ -158,7 +168,7 @@ public class FinancingDateDetails1 {
 	 * definition} = "Date on which a financed amount has been credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingDateDetails1, ISODate> mmCreditDate = new MMMessageAttribute<FinancingDateDetails1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingDateDetails1.mmObject();
@@ -170,6 +180,16 @@ public class FinancingDateDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(FinancingDateDetails1 obj) {
+			return obj.getCreditDate();
+		}
+
+		@Override
+		public void setValue(FinancingDateDetails1 obj, ISODate value) {
+			obj.setCreditDate(value);
 		}
 	};
 	@XmlElement(name = "DbtDt")
@@ -206,7 +226,7 @@ public class FinancingDateDetails1 {
 	 * definition} = "Date on which a financed amount has been debited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebitDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingDateDetails1, Optional<ISODate>> mmDebitDate = new MMMessageAttribute<FinancingDateDetails1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingDateDetails1.mmObject();
@@ -218,6 +238,16 @@ public class FinancingDateDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(FinancingDateDetails1 obj) {
+			return obj.getDebitDate();
+		}
+
+		@Override
+		public void setValue(FinancingDateDetails1 obj, Optional<ISODate> value) {
+			obj.setDebitDate(value.orElse(null));
 		}
 	};
 

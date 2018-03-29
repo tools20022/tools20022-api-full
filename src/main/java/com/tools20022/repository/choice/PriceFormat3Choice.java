@@ -105,7 +105,7 @@ public class PriceFormat3Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat3Choice, AmountPrice1> mmAmount = new MMMessageAttribute<PriceFormat3Choice, AmountPrice1>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat3Choice.mmObject();
@@ -117,6 +117,16 @@ public class PriceFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountPrice1.mmObject();
+		}
+
+		@Override
+		public AmountPrice1 getValue(PriceFormat3Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PriceFormat3Choice obj, AmountPrice1 value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -153,7 +163,7 @@ public class PriceFormat3Choice {
 	 * definition} = "Price expressed as a rate, ie, percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat3Choice, PriceRate1> mmRate = new MMMessageAttribute<PriceFormat3Choice, PriceRate1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat3Choice.mmObject();
@@ -165,6 +175,16 @@ public class PriceFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PriceRate1.mmObject();
+		}
+
+		@Override
+		public PriceRate1 getValue(PriceFormat3Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PriceFormat3Choice obj, PriceRate1 value) {
+			obj.setRate(value);
 		}
 	};
 

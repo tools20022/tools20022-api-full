@@ -33,6 +33,8 @@ import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection29;
+import com.tools20022.repository.msg.PartyIdentification54;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +132,7 @@ public class Commission16 {
 	 * definition} = "Specification of the commission type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission16, CommissionType2Choice> mmType = new MMMessageAssociationEnd<Commission16, CommissionType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
@@ -144,6 +146,16 @@ public class Commission16 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CommissionType2Choice.mmObject();
+		}
+
+		@Override
+		public CommissionType2Choice getValue(Commission16 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Commission16 obj, CommissionType2Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Comssn", required = true)
@@ -183,7 +195,7 @@ public class Commission16 {
 	 * "Amount of money due to a party as compensation for a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission16, AmountOrRate2Choice> mmCommission = new MMMessageAttribute<Commission16, AmountOrRate2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Commission.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
@@ -196,6 +208,16 @@ public class Commission16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountOrRate2Choice.mmObject();
+		}
+
+		@Override
+		public AmountOrRate2Choice getValue(Commission16 obj) {
+			return obj.getCommission();
+		}
+
+		@Override
+		public void setValue(Commission16 obj, AmountOrRate2Choice value) {
+			obj.setCommission(value);
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -235,7 +257,7 @@ public class Commission16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission16, Optional<PartyIdentification54>> mmRecipientIdentification = new MMMessageAssociationEnd<Commission16, Optional<PartyIdentification54>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
@@ -248,7 +270,17 @@ public class Commission16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification54.mmObject();
+			type_lazy = () -> PartyIdentification54.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification54> getValue(Commission16 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Commission16 obj, Optional<PartyIdentification54> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClctnDt")
@@ -286,7 +318,7 @@ public class Commission16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission16, Optional<ISODate>> mmCalculationDate = new MMMessageAttribute<Commission16, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCalculationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
@@ -298,6 +330,16 @@ public class Commission16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Commission16 obj) {
+			return obj.getCalculationDate();
+		}
+
+		@Override
+		public void setValue(Commission16 obj, Optional<ISODate> value) {
+			obj.setCalculationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlComssn")
@@ -334,7 +376,7 @@ public class Commission16 {
 	 * definition} = "Total value of the commissions for a specific trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission16, Optional<AmountAndDirection29>> mmTotalCommission = new MMMessageAttribute<Commission16, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
@@ -345,7 +387,17 @@ public class Commission16 {
 			definition = "Total value of the commissions for a specific trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(Commission16 obj) {
+			return obj.getTotalCommission();
+		}
+
+		@Override
+		public void setValue(Commission16 obj, Optional<AmountAndDirection29> value) {
+			obj.setTotalCommission(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlVATAmt")
@@ -379,7 +431,7 @@ public class Commission16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalVATAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission16, Optional<ActiveCurrencyAndAmount>> mmTotalVATAmount = new MMMessageAttribute<Commission16, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
 			isDerived = false;
@@ -390,6 +442,16 @@ public class Commission16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Commission16 obj) {
+			return obj.getTotalVATAmount();
+		}
+
+		@Override
+		public void setValue(Commission16 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalVATAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VATRate")
@@ -424,7 +486,7 @@ public class Commission16 {
 	 * definition} = "Specifies the VAT rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVATRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission16, Optional<BaseOneRate>> mmVATRate = new MMMessageAttribute<Commission16, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
@@ -436,6 +498,16 @@ public class Commission16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(Commission16 obj) {
+			return obj.getVATRate();
+		}
+
+		@Override
+		public void setValue(Commission16 obj, Optional<BaseOneRate> value) {
+			obj.setVATRate(value.orElse(null));
 		}
 	};
 
@@ -478,7 +550,7 @@ public class Commission16 {
 		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public Commission16 setRecipientIdentification(com.tools20022.repository.msg.PartyIdentification54 recipientIdentification) {
+	public Commission16 setRecipientIdentification(PartyIdentification54 recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
 		return this;
 	}
@@ -496,7 +568,7 @@ public class Commission16 {
 		return totalCommission == null ? Optional.empty() : Optional.of(totalCommission);
 	}
 
-	public Commission16 setTotalCommission(com.tools20022.repository.msg.AmountAndDirection29 totalCommission) {
+	public Commission16 setTotalCommission(AmountAndDirection29 totalCommission) {
 		this.totalCommission = totalCommission;
 		return this;
 	}

@@ -131,7 +131,7 @@ public class InvestigationStatus2Choice {
 	 * "Specifies the status of the investigation, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus2Choice, InvestigationExecutionConfirmation3Code> mmConfirmation = new MMMessageAttribute<InvestigationStatus2Choice, InvestigationExecutionConfirmation3Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus2Choice.mmObject();
@@ -143,6 +143,16 @@ public class InvestigationStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestigationExecutionConfirmation3Code.mmObject();
+		}
+
+		@Override
+		public InvestigationExecutionConfirmation3Code getValue(InvestigationStatus2Choice obj) {
+			return obj.getConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus2Choice obj, InvestigationExecutionConfirmation3Code value) {
+			obj.setConfirmation(value);
 		}
 	};
 	@XmlElement(name = "RjctdMod", required = true)
@@ -181,7 +191,7 @@ public class InvestigationStatus2Choice {
 	 * "Reason for the rejection of a modification request, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedModification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus2Choice, List<ModificationRejection2Code>> mmRejectedModification = new MMMessageAttribute<InvestigationStatus2Choice, List<ModificationRejection2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedModification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus2Choice.mmObject();
@@ -192,6 +202,16 @@ public class InvestigationStatus2Choice {
 			definition = "Reason for the rejection of a modification request, in a coded form.";
 			minOccurs = 1;
 			simpleType_lazy = () -> ModificationRejection2Code.mmObject();
+		}
+
+		@Override
+		public List<ModificationRejection2Code> getValue(InvestigationStatus2Choice obj) {
+			return obj.getRejectedModification();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus2Choice obj, List<ModificationRejection2Code> value) {
+			obj.setRejectedModification(value);
 		}
 	};
 	@XmlElement(name = "DplctOf", required = true)
@@ -228,7 +248,7 @@ public class InvestigationStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDuplicateOf = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestigationStatus2Choice, Case2> mmDuplicateOf = new MMMessageAssociationEnd<InvestigationStatus2Choice, Case2>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmDuplicateCase;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus2Choice.mmObject();
@@ -241,6 +261,16 @@ public class InvestigationStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Case2.mmObject();
+		}
+
+		@Override
+		public Case2 getValue(InvestigationStatus2Choice obj) {
+			return obj.getDuplicateOf();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus2Choice obj, Case2 value) {
+			obj.setDuplicateOf(value);
 		}
 	};
 	@XmlElement(name = "AssgnmtCxlConf", required = true)
@@ -280,7 +310,7 @@ public class InvestigationStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssignmentCancellationConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus2Choice, YesNoIndicator> mmAssignmentCancellationConfirmation = new MMMessageAttribute<InvestigationStatus2Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus2Choice.mmObject();
@@ -292,6 +322,16 @@ public class InvestigationStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestigationStatus2Choice obj) {
+			return obj.getAssignmentCancellationConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus2Choice obj, YesNoIndicator value) {
+			obj.setAssignmentCancellationConfirmation(value);
 		}
 	};
 

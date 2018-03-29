@@ -30,7 +30,6 @@ import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountSwitchDetails1;
 import com.tools20022.repository.msg.Frequency1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -137,7 +136,7 @@ public class AccountSwitching extends CashAccountService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSwitchReceivedDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountSwitching, ISODateTime> mmSwitchReceivedDateTime = new MMBusinessAttribute<AccountSwitching, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountSwitchDetails1.mmSwitchReceivedDateTime);
 			isDerived = false;
@@ -150,12 +149,14 @@ public class AccountSwitching extends CashAccountService {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitching.class.getMethod("getSwitchReceivedDateTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(AccountSwitching obj) {
+			return obj.getSwitchReceivedDateTime();
+		}
+
+		@Override
+		public void setValue(AccountSwitching obj, ISODateTime value) {
+			obj.setSwitchReceivedDateTime(value);
 		}
 	};
 	protected ISODate switchDate;
@@ -196,7 +197,7 @@ public class AccountSwitching extends CashAccountService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSwitchDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountSwitching, ISODate> mmSwitchDate = new MMBusinessAttribute<AccountSwitching, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountSwitchDetails1.mmSwitchDate, Frequency1.mmStartDate);
 			isDerived = false;
@@ -209,12 +210,14 @@ public class AccountSwitching extends CashAccountService {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitching.class.getMethod("getSwitchDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(AccountSwitching obj) {
+			return obj.getSwitchDate();
+		}
+
+		@Override
+		public void setValue(AccountSwitching obj, ISODate value) {
+			obj.setSwitchDate(value);
 		}
 	};
 	protected SwitchStatusCode switchStatus;
@@ -253,7 +256,7 @@ public class AccountSwitching extends CashAccountService {
 	 * "State of the account switch at the time the message is sent."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSwitchStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountSwitching, SwitchStatusCode> mmSwitchStatus = new MMBusinessAttribute<AccountSwitching, SwitchStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountSwitchDetails1.mmSwitchStatus);
 			isDerived = false;
@@ -266,12 +269,14 @@ public class AccountSwitching extends CashAccountService {
 			simpleType_lazy = () -> SwitchStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitching.class.getMethod("getSwitchStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SwitchStatusCode getValue(AccountSwitching obj) {
+			return obj.getSwitchStatus();
+		}
+
+		@Override
+		public void setValue(AccountSwitching obj, SwitchStatusCode value) {
+			obj.setSwitchStatus(value);
 		}
 	};
 	protected Max35Text uniqueReferenceNumber;
@@ -309,29 +314,31 @@ public class AccountSwitching extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique number that provides unique and unambiguous identification of the account switch."
+	 * "Unique number that provides unique and unambiguous identification of the account switch. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUniqueReferenceNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountSwitching, Max35Text> mmUniqueReferenceNumber = new MMBusinessAttribute<AccountSwitching, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountSwitchDetails1.mmUniqueReferenceNumber, AccountSwitchDetails1.mmRoutingUniqueReferenceNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountSwitching.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UniqueReferenceNumber";
-			definition = "Unique number that provides unique and unambiguous identification of the account switch.";
+			definition = "Unique number that provides unique and unambiguous identification of the account switch. ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitching.class.getMethod("getUniqueReferenceNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(AccountSwitching obj) {
+			return obj.getUniqueReferenceNumber();
+		}
+
+		@Override
+		public void setValue(AccountSwitching obj, Max35Text value) {
+			obj.setUniqueReferenceNumber(value);
 		}
 	};
 	protected SwitchTypeCode switchType;
@@ -371,7 +378,7 @@ public class AccountSwitching extends CashAccountService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSwitchType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountSwitching, SwitchTypeCode> mmSwitchType = new MMBusinessAttribute<AccountSwitching, SwitchTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountSwitchDetails1.mmSwitchType);
 			isDerived = false;
@@ -384,12 +391,14 @@ public class AccountSwitching extends CashAccountService {
 			simpleType_lazy = () -> SwitchTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitching.class.getMethod("getSwitchType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SwitchTypeCode getValue(AccountSwitching obj) {
+			return obj.getSwitchType();
+		}
+
+		@Override
+		public void setValue(AccountSwitching obj, SwitchTypeCode value) {
+			obj.setSwitchType(value);
 		}
 	};
 	protected BalanceTransferWindowCode balanceTransferWindow;
@@ -429,7 +438,7 @@ public class AccountSwitching extends CashAccountService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBalanceTransferWindow = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountSwitching, BalanceTransferWindowCode> mmBalanceTransferWindow = new MMBusinessAttribute<AccountSwitching, BalanceTransferWindowCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountSwitchDetails1.mmBalanceTransferWindow);
 			isDerived = false;
@@ -442,12 +451,14 @@ public class AccountSwitching extends CashAccountService {
 			simpleType_lazy = () -> BalanceTransferWindowCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitching.class.getMethod("getBalanceTransferWindow", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BalanceTransferWindowCode getValue(AccountSwitching obj) {
+			return obj.getBalanceTransferWindow();
+		}
+
+		@Override
+		public void setValue(AccountSwitching obj, BalanceTransferWindowCode value) {
+			obj.setBalanceTransferWindow(value);
 		}
 	};
 

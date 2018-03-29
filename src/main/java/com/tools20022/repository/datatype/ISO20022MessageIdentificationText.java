@@ -19,12 +19,12 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMText;
-import com.tools20022.repository.datatype.ISO20022MessageIdentificationText.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.String;
 import java.util.concurrent.atomic.AtomicReference;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * ISO 20022 Message identifier of an MX message.
@@ -48,10 +48,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * definition} = "ISO 20022 Message identifier of an MX message."</li>
  * </ul>
  */
-@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class ISO20022MessageIdentificationText {
 
 	final static private AtomicReference<MMText> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
 	protected String value;
 
 	final static public MMText mmObject() {
@@ -67,24 +69,23 @@ public class ISO20022MessageIdentificationText {
 		return mmObject_lazy.get();
 	}
 
+	public ISO20022MessageIdentificationText() {
+	}
+
 	public ISO20022MessageIdentificationText(String value) {
+		this.value = value;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
 		this.value = value;
 	}
 
 	@Override
 	public String toString() {
-		return value;
-	}
-
-	protected static class InternalXmlAdapter extends XmlAdapter<String, ISO20022MessageIdentificationText> {
-		@Override
-		public ISO20022MessageIdentificationText unmarshal(String value) {
-			return new ISO20022MessageIdentificationText(value);
-		}
-
-		@Override
-		public String marshal(ISO20022MessageIdentificationText typedData) {
-			return typedData.value;
-		}
+		return value == null ? null : value.toString();
 	}
 }

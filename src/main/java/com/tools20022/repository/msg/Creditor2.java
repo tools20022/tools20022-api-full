@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CreditorRole;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentificationAndName3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class Creditor2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Creditor2, Optional<PartyIdentification2Choice>> mmCreditor = new MMMessageAttribute<Creditor2, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Creditor2.mmObject();
@@ -139,6 +140,16 @@ public class Creditor2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Creditor2 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(Creditor2 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId", required = true)
@@ -177,7 +188,7 @@ public class Creditor2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Creditor2, AccountIdentificationAndName3> mmAccountIdentification = new MMMessageAttribute<Creditor2, AccountIdentificationAndName3>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Creditor2.mmObject();
@@ -188,7 +199,17 @@ public class Creditor2 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
+			complexType_lazy = () -> AccountIdentificationAndName3.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationAndName3 getValue(Creditor2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(Creditor2 obj, AccountIdentificationAndName3 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "FnlAgt", required = true)
@@ -227,7 +248,7 @@ public class Creditor2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Creditor2, FinancialInstitutionIdentification3Choice> mmFinalAgent = new MMMessageAttribute<Creditor2, FinancialInstitutionIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Creditor2.mmObject();
@@ -239,6 +260,16 @@ public class Creditor2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification3Choice getValue(Creditor2 obj) {
+			return obj.getFinalAgent();
+		}
+
+		@Override
+		public void setValue(Creditor2 obj, FinancialInstitutionIdentification3Choice value) {
+			obj.setFinalAgent(value);
 		}
 	};
 
@@ -270,7 +301,7 @@ public class Creditor2 {
 		return accountIdentification;
 	}
 
-	public Creditor2 setAccountIdentification(com.tools20022.repository.msg.AccountIdentificationAndName3 accountIdentification) {
+	public Creditor2 setAccountIdentification(AccountIdentificationAndName3 accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}

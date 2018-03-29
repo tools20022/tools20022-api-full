@@ -112,7 +112,7 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice {
 	 * GeneralBusinessInformationCriteriaDefinitionChoice.mmQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformationCriteriaDefinition1Choice, Max35Text> mmQueryName = new MMMessageAttribute<GeneralBusinessInformationCriteriaDefinition1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessInformationCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GeneralBusinessInformationCriteriaDefinition1Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationCriteriaDefinition1Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -161,7 +171,7 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice {
 	 * GeneralBusinessInformationCriteriaDefinitionChoice.mmNewCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessInformationCriteriaDefinition1Choice, BusinessInformationCriteria1> mmNewCriteria = new MMMessageAssociationEnd<GeneralBusinessInformationCriteriaDefinition1Choice, BusinessInformationCriteria1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessInformationCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessInformationCriteria1.mmObject();
+		}
+
+		@Override
+		public BusinessInformationCriteria1 getValue(GeneralBusinessInformationCriteriaDefinition1Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationCriteriaDefinition1Choice obj, BusinessInformationCriteria1 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

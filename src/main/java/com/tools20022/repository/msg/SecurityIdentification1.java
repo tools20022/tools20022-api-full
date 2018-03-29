@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +127,7 @@ public class SecurityIdentification1 {
 	 * definition} = "Identification of a security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification1, SecurityIdentification7> mmIdentification = new MMMessageAttribute<SecurityIdentification1, SecurityIdentification7>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification1.mmObject();
@@ -137,7 +138,17 @@ public class SecurityIdentification1 {
 			definition = "Identification of a security by an ISIN.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(SecurityIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification1 obj, SecurityIdentification7 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -174,7 +185,7 @@ public class SecurityIdentification1 {
 	 * definition} = "Name of the financial instrument in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification1, Max350Text> mmName = new MMMessageAttribute<SecurityIdentification1, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification1.mmObject();
@@ -186,6 +197,16 @@ public class SecurityIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecurityIdentification1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification1 obj, Max350Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "ClssTp")
@@ -224,7 +245,7 @@ public class SecurityIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification1, Optional<Max35Text>> mmClassType = new MMMessageAttribute<SecurityIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification1.mmObject();
@@ -236,6 +257,16 @@ public class SecurityIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecurityIdentification1 obj) {
+			return obj.getClassType();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification1 obj, Optional<Max35Text> value) {
+			obj.setClassType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UmbrllNm")
@@ -273,7 +304,7 @@ public class SecurityIdentification1 {
 	 * "Name of the umbrella fund in which financial instrument is contained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUmbrellaName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification1, Optional<Max35Text>> mmUmbrellaName = new MMMessageAttribute<SecurityIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> UmbrellaFund.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification1.mmObject();
@@ -285,6 +316,16 @@ public class SecurityIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecurityIdentification1 obj) {
+			return obj.getUmbrellaName();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification1 obj, Optional<Max35Text> value) {
+			obj.setUmbrellaName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BaseCcy", required = true)
@@ -322,7 +363,7 @@ public class SecurityIdentification1 {
 	 * definition} = "Currency of the investment fund class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification1, ActiveCurrencyCode> mmBaseCurrency = new MMMessageAttribute<SecurityIdentification1, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmTradingCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification1.mmObject();
@@ -334,6 +375,16 @@ public class SecurityIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(SecurityIdentification1 obj) {
+			return obj.getBaseCurrency();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification1 obj, ActiveCurrencyCode value) {
+			obj.setBaseCurrency(value);
 		}
 	};
 	@XmlElement(name = "CtryOfDmcl", required = true)
@@ -372,7 +423,7 @@ public class SecurityIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification1, CountryCode> mmCountryOfDomicile = new MMMessageAttribute<SecurityIdentification1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmDomicileCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification1.mmObject();
@@ -384,6 +435,16 @@ public class SecurityIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(SecurityIdentification1 obj) {
+			return obj.getCountryOfDomicile();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification1 obj, CountryCode value) {
+			obj.setCountryOfDomicile(value);
 		}
 	};
 	@XmlElement(name = "RegdDstrbtnCtry", required = true)
@@ -420,7 +481,7 @@ public class SecurityIdentification1 {
 	 * definition} = "Countries where the fund is registered for distribution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegisteredDistributionCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification1, List<CountryCode>> mmRegisteredDistributionCountry = new MMMessageAttribute<SecurityIdentification1, List<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegisteredDistributionCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification1.mmObject();
@@ -431,6 +492,16 @@ public class SecurityIdentification1 {
 			definition = "Countries where the fund is registered for distribution.";
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public List<CountryCode> getValue(SecurityIdentification1 obj) {
+			return obj.getRegisteredDistributionCountry();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification1 obj, List<CountryCode> value) {
+			obj.setRegisteredDistributionCountry(value);
 		}
 	};
 
@@ -454,7 +525,7 @@ public class SecurityIdentification1 {
 		return identification;
 	}
 
-	public SecurityIdentification1 setIdentification(com.tools20022.repository.msg.SecurityIdentification7 identification) {
+	public SecurityIdentification1 setIdentification(SecurityIdentification7 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

@@ -134,7 +134,7 @@ public class Agreement3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement3, Optional<Max350Text>> mmDescription = new MMMessageAttribute<Agreement3, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
@@ -147,6 +147,16 @@ public class Agreement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(Agreement3 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(Agreement3 obj, Optional<Max350Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -185,7 +195,7 @@ public class Agreement3 {
 	 * definition} = "Numeric representation of the day of the month and year."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement3, Optional<ISODateTime>> mmDate = new MMMessageAttribute<Agreement3, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
@@ -198,6 +208,16 @@ public class Agreement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Agreement3 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(Agreement3 obj, Optional<ISODateTime> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -238,7 +258,7 @@ public class Agreement3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement3, Optional<CurrencyCode>> mmCurrency = new MMMessageAttribute<Agreement3, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
@@ -251,6 +271,16 @@ public class Agreement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(Agreement3 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(Agreement3 obj, Optional<CurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgTp")
@@ -290,7 +320,7 @@ public class Agreement3 {
 	 * definition} = "Type of financing closing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement3, Optional<ClosingType1Code>> mmClosingType = new MMMessageAttribute<Agreement3, Optional<ClosingType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmTerminationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
@@ -303,6 +333,16 @@ public class Agreement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ClosingType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ClosingType1Code> getValue(Agreement3 obj) {
+			return obj.getClosingType();
+		}
+
+		@Override
+		public void setValue(Agreement3 obj, Optional<ClosingType1Code> value) {
+			obj.setClosingType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -343,7 +383,7 @@ public class Agreement3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement3, Optional<ISODateTime>> mmStartDate = new MMMessageAttribute<Agreement3, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
@@ -356,6 +396,16 @@ public class Agreement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Agreement3 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(Agreement3 obj, Optional<ISODateTime> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryTp")
@@ -395,7 +445,7 @@ public class Agreement3 {
 	 * definition} = "Identifies type of settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement3, Optional<DeliveryType2Code>> mmDeliveryType = new MMMessageAttribute<Agreement3, Optional<DeliveryType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmDeliveryType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
@@ -408,6 +458,16 @@ public class Agreement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveryType2Code> getValue(Agreement3 obj) {
+			return obj.getDeliveryType();
+		}
+
+		@Override
+		public void setValue(Agreement3 obj, Optional<DeliveryType2Code> value) {
+			obj.setDeliveryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrgnRatio")
@@ -449,7 +509,7 @@ public class Agreement3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarginRatio = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Agreement3, Optional<PercentageRate>> mmMarginRatio = new MMMessageAttribute<Agreement3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancingAgreement.mmMarginRatio;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Agreement3.mmObject();
@@ -462,6 +522,16 @@ public class Agreement3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Agreement3 obj) {
+			return obj.getMarginRatio();
+		}
+
+		@Override
+		public void setValue(Agreement3 obj, Optional<PercentageRate> value) {
+			obj.setMarginRatio(value.orElse(null));
 		}
 	};
 

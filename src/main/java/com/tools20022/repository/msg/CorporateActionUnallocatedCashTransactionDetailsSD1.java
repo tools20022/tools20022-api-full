@@ -137,7 +137,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, CreditDebitCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD1.mmObject();
 			isDerived = false;
@@ -150,6 +150,16 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "TxAmt")
@@ -193,7 +203,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Optional<RestrictedFINActiveCurrencyAndAmount>> mmTransactionAmount = new MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD1.mmObject();
 			isDerived = false;
@@ -206,6 +216,16 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj) {
+			return obj.getTransactionAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setTransactionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UallctdRsnCd", required = true)
@@ -250,7 +270,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnallocatedReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Max4AlphaNumericText> mmUnallocatedReasonCode = new MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD1.mmObject();
 			isDerived = false;
@@ -263,6 +283,16 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj) {
+			return obj.getUnallocatedReasonCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj, Max4AlphaNumericText value) {
+			obj.setUnallocatedReasonCode(value);
 		}
 	};
 	@XmlElement(name = "ContraPtcptNb")
@@ -308,7 +338,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Optional<Max8Text>> mmContraParticipantNumber = new MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD1.mmObject();
 			isDerived = false;
@@ -321,6 +351,16 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj) {
+			return obj.getContraParticipantNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj, Optional<Max8Text> value) {
+			obj.setContraParticipantNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EarlstPmtDt")
@@ -367,7 +407,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEarliestPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Optional<DateFormat22Choice>> mmEarliestPaymentDate = new MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD1.mmObject();
 			isDerived = false;
@@ -380,6 +420,16 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj) {
+			return obj.getEarliestPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setEarliestPaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsnCd")
@@ -423,7 +473,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Optional<DTCAdjustmentPaymentType1Code>> mmReasonCode = new MMMessageAttribute<CorporateActionUnallocatedCashTransactionDetailsSD1, Optional<DTCAdjustmentPaymentType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD1.mmObject();
 			isDerived = false;
@@ -436,6 +486,16 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAdjustmentPaymentType1Code> getValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedCashTransactionDetailsSD1 obj, Optional<DTCAdjustmentPaymentType1Code> value) {
+			obj.setReasonCode(value.orElse(null));
 		}
 	};
 

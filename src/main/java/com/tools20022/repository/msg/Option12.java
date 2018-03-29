@@ -106,7 +106,7 @@ public class Option12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option12, OptionType1Code> mmType = new MMMessageAttribute<Option12, OptionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option12.mmObject();
@@ -118,6 +118,16 @@ public class Option12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionType1Code.mmObject();
+		}
+
+		@Override
+		public OptionType1Code getValue(Option12 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Option12 obj, OptionType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "DtOrPrd", required = true)
@@ -149,7 +159,7 @@ public class Option12 {
 	 * "Provides the exercise date or notice period for a call/put option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateOrPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Option12, OptionDateOrPeriod1Choice> mmDateOrPeriod = new MMMessageAssociationEnd<Option12, OptionDateOrPeriod1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option12.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class Option12 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OptionDateOrPeriod1Choice.mmObject();
+		}
+
+		@Override
+		public OptionDateOrPeriod1Choice getValue(Option12 obj) {
+			return obj.getDateOrPeriod();
+		}
+
+		@Override
+		public void setValue(Option12 obj, OptionDateOrPeriod1Choice value) {
+			obj.setDateOrPeriod(value);
 		}
 	};
 

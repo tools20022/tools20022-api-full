@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BICIdentification1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -72,7 +73,7 @@ public class RequiredSubmission2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Submitr", required = true)
-	protected List<com.tools20022.repository.msg.BICIdentification1> submitter;
+	protected List<BICIdentification1> submitter;
 	/**
 	 * 
 	 <p>
@@ -106,7 +107,7 @@ public class RequiredSubmission2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequiredSubmission2, List<BICIdentification1>> mmSubmitter = new MMMessageAssociationEnd<RequiredSubmission2, List<BICIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission2.mmObject();
@@ -117,7 +118,17 @@ public class RequiredSubmission2 {
 			definition = "Specifies with party(ies) is authorised to submit the data set as part of the transaction.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public List<BICIdentification1> getValue(RequiredSubmission2 obj) {
+			return obj.getSubmitter();
+		}
+
+		@Override
+		public void setValue(RequiredSubmission2 obj, List<BICIdentification1> value) {
+			obj.setSubmitter(value);
 		}
 	};
 
@@ -139,7 +150,7 @@ public class RequiredSubmission2 {
 		return submitter == null ? submitter = new ArrayList<>() : submitter;
 	}
 
-	public RequiredSubmission2 setSubmitter(List<com.tools20022.repository.msg.BICIdentification1> submitter) {
+	public RequiredSubmission2 setSubmitter(List<BICIdentification1> submitter) {
 		this.submitter = Objects.requireNonNull(submitter);
 		return this;
 	}

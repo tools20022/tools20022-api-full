@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Pagination;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class TradeQueryHeader3 {
 	 * definition} = "Indicates the day and time that the query was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportExecutionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeQueryHeader3, Optional<ISODateTime>> mmReportExecutionDateTime = new MMMessageAttribute<TradeQueryHeader3, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryHeader3.mmObject();
 			isDerived = false;
@@ -128,6 +129,16 @@ public class TradeQueryHeader3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TradeQueryHeader3 obj) {
+			return obj.getReportExecutionDateTime();
+		}
+
+		@Override
+		public void setValue(TradeQueryHeader3 obj, Optional<ISODateTime> value) {
+			obj.setReportExecutionDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptAsOfDt")
@@ -160,7 +171,7 @@ public class TradeQueryHeader3 {
 	 * "Indicates the day which the data the data is provided for."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportAsOfDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeQueryHeader3, Optional<ISODate>> mmReportAsOfDate = new MMMessageAttribute<TradeQueryHeader3, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryHeader3.mmObject();
 			isDerived = false;
@@ -171,6 +182,16 @@ public class TradeQueryHeader3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TradeQueryHeader3 obj) {
+			return obj.getReportAsOfDate();
+		}
+
+		@Override
+		public void setValue(TradeQueryHeader3 obj, Optional<ISODate> value) {
+			obj.setReportAsOfDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgPgntn", required = true)
@@ -201,7 +222,7 @@ public class TradeQueryHeader3 {
 	 * "Provides details on the page number of the message.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeQueryHeader3, Pagination> mmMessagePagination = new MMMessageAssociationEnd<TradeQueryHeader3, Pagination>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryHeader3.mmObject();
 			isDerived = false;
@@ -212,7 +233,17 @@ public class TradeQueryHeader3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			type_lazy = () -> Pagination.mmObject();
+		}
+
+		@Override
+		public Pagination getValue(TradeQueryHeader3 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(TradeQueryHeader3 obj, Pagination value) {
+			obj.setMessagePagination(value);
 		}
 	};
 	@XmlElement(name = "NbRcrds", required = true)
@@ -244,7 +275,7 @@ public class TradeQueryHeader3 {
 	 * definition} = "Indicates the number of records in the page."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberRecords = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeQueryHeader3, Number> mmNumberRecords = new MMMessageAttribute<TradeQueryHeader3, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryHeader3.mmObject();
 			isDerived = false;
@@ -255,6 +286,16 @@ public class TradeQueryHeader3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(TradeQueryHeader3 obj) {
+			return obj.getNumberRecords();
+		}
+
+		@Override
+		public void setValue(TradeQueryHeader3 obj, Number value) {
+			obj.setNumberRecords(value);
 		}
 	};
 
@@ -295,7 +336,7 @@ public class TradeQueryHeader3 {
 		return messagePagination;
 	}
 
-	public TradeQueryHeader3 setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+	public TradeQueryHeader3 setMessagePagination(Pagination messagePagination) {
 		this.messagePagination = Objects.requireNonNull(messagePagination);
 		return this;
 	}

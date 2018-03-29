@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.SecuritiesTransaction;
 import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RecordTechnicalData2;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +121,7 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionReport2, Max52Text> mmTransactionIdentification = new MMMessageAttribute<SecuritiesTransactionReport2, Max52Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
@@ -131,6 +133,16 @@ public class SecuritiesTransactionReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(SecuritiesTransactionReport2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionReport2 obj, Max52Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "ExctgPty", required = true)
@@ -170,7 +182,7 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionReport2, LEIIdentifier> mmExecutingParty = new MMMessageAttribute<SecuritiesTransactionReport2, LEIIdentifier>() {
 		{
 			businessComponentTrace_lazy = () -> ExecutingTrader.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
@@ -182,6 +194,16 @@ public class SecuritiesTransactionReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(SecuritiesTransactionReport2 obj) {
+			return obj.getExecutingParty();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionReport2 obj, LEIIdentifier value) {
+			obj.setExecutingParty(value);
 		}
 	};
 	@XmlElement(name = "SubmitgPty", required = true)
@@ -221,7 +243,7 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmittingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionReport2, LEIIdentifier> mmSubmittingParty = new MMMessageAttribute<SecuritiesTransactionReport2, LEIIdentifier>() {
 		{
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
@@ -233,6 +255,16 @@ public class SecuritiesTransactionReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(SecuritiesTransactionReport2 obj) {
+			return obj.getSubmittingParty();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionReport2 obj, LEIIdentifier value) {
+			obj.setSubmittingParty(value);
 		}
 	};
 	@XmlElement(name = "TechAttrbts")
@@ -265,7 +297,7 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTechnicalAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTransactionReport2, Optional<RecordTechnicalData2>> mmTechnicalAttributes = new MMMessageAssociationEnd<SecuritiesTransactionReport2, Optional<RecordTechnicalData2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
@@ -276,11 +308,21 @@ public class SecuritiesTransactionReport2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData2.mmObject();
+			type_lazy = () -> RecordTechnicalData2.mmObject();
+		}
+
+		@Override
+		public Optional<RecordTechnicalData2> getValue(SecuritiesTransactionReport2 obj) {
+			return obj.getTechnicalAttributes();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionReport2 obj, Optional<RecordTechnicalData2> value) {
+			obj.setTechnicalAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -309,7 +351,7 @@ public class SecuritiesTransactionReport2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTransactionReport2, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<SecuritiesTransactionReport2, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
@@ -319,7 +361,17 @@ public class SecuritiesTransactionReport2 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesTransactionReport2 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionReport2 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -370,7 +422,7 @@ public class SecuritiesTransactionReport2 {
 		return technicalAttributes == null ? Optional.empty() : Optional.of(technicalAttributes);
 	}
 
-	public SecuritiesTransactionReport2 setTechnicalAttributes(com.tools20022.repository.msg.RecordTechnicalData2 technicalAttributes) {
+	public SecuritiesTransactionReport2 setTechnicalAttributes(RecordTechnicalData2 technicalAttributes) {
 		this.technicalAttributes = technicalAttributes;
 		return this;
 	}
@@ -379,7 +431,7 @@ public class SecuritiesTransactionReport2 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public SecuritiesTransactionReport2 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public SecuritiesTransactionReport2 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

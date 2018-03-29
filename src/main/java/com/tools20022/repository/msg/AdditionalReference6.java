@@ -250,7 +250,7 @@ public class AdditionalReference6 {
 	 * AdditionalReference4.mmReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference6, Max35Text> mmReference = new MMMessageAttribute<AdditionalReference6, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
@@ -264,6 +264,16 @@ public class AdditionalReference6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AdditionalReference6 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(AdditionalReference6 obj, Max35Text value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "RefIssr")
@@ -314,7 +324,7 @@ public class AdditionalReference6 {
 	 * AdditionalReference4.mmReferenceIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference6, Optional<PartyIdentification90Choice>> mmReferenceIssuer = new MMMessageAttribute<AdditionalReference6, Optional<PartyIdentification90Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
@@ -328,6 +338,16 @@ public class AdditionalReference6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification90Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification90Choice> getValue(AdditionalReference6 obj) {
+			return obj.getReferenceIssuer();
+		}
+
+		@Override
+		public void setValue(AdditionalReference6 obj, Optional<PartyIdentification90Choice> value) {
+			obj.setReferenceIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgNm")
@@ -372,7 +392,7 @@ public class AdditionalReference6 {
 	 * AdditionalReference4.mmMessageName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalReference6, Optional<Max35Text>> mmMessageName = new MMMessageAttribute<AdditionalReference6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
 			isDerived = false;
@@ -385,6 +405,16 @@ public class AdditionalReference6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalReference6 obj) {
+			return obj.getMessageName();
+		}
+
+		@Override
+		public void setValue(AdditionalReference6 obj, Optional<Max35Text> value) {
+			obj.setMessageName(value.orElse(null));
 		}
 	};
 

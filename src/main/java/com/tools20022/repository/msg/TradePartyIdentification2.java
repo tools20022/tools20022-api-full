@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.entity.TreasuryTradingParty;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FundIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class TradePartyIdentification2 {
 	 * definition} = "Specifies the party which is the buyer or the seller."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentification2, OptionParty1Code> mmRole = new MMMessageAttribute<TradePartyIdentification2, OptionParty1Code>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmBuyerOrSeller;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification2.mmObject();
@@ -130,6 +131,16 @@ public class TradePartyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionParty1Code.mmObject();
+		}
+
+		@Override
+		public OptionParty1Code getValue(TradePartyIdentification2 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification2 obj, OptionParty1Code value) {
+			obj.setRole(value);
 		}
 	};
 	@XmlElement(name = "SubmitgPty", required = true)
@@ -169,7 +180,7 @@ public class TradePartyIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmittingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentification2, BICIdentifier> mmSubmittingParty = new MMMessageAttribute<TradePartyIdentification2, BICIdentifier>() {
 		{
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification2.mmObject();
@@ -181,6 +192,16 @@ public class TradePartyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(TradePartyIdentification2 obj) {
+			return obj.getSubmittingParty();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification2 obj, BICIdentifier value) {
+			obj.setSubmittingParty(value);
 		}
 	};
 	@XmlElement(name = "FndInf")
@@ -217,7 +238,7 @@ public class TradePartyIdentification2 {
 	 * "Identifies the fund which is one of the parties in a treasury trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification2, Optional<FundIdentification1>> mmFundInformation = new MMMessageAssociationEnd<TradePartyIdentification2, Optional<FundIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradingParty.mmInvestmentFund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification2.mmObject();
@@ -229,7 +250,17 @@ public class TradePartyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundIdentification1.mmObject();
+			type_lazy = () -> FundIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<FundIdentification1> getValue(TradePartyIdentification2 obj) {
+			return obj.getFundInformation();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification2 obj, Optional<FundIdentification1> value) {
+			obj.setFundInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradPty", required = true)
@@ -268,7 +299,7 @@ public class TradePartyIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyIdentification2, PartyIdentification7Choice> mmTradeParty = new MMMessageAssociationEnd<TradePartyIdentification2, PartyIdentification7Choice>() {
 		{
 			businessComponentTrace_lazy = () -> TreasuryTradingParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentification2.mmObject();
@@ -281,6 +312,16 @@ public class TradePartyIdentification2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification7Choice getValue(TradePartyIdentification2 obj) {
+			return obj.getTradeParty();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentification2 obj, PartyIdentification7Choice value) {
+			obj.setTradeParty(value);
 		}
 	};
 
@@ -321,7 +362,7 @@ public class TradePartyIdentification2 {
 		return fundInformation == null ? Optional.empty() : Optional.of(fundInformation);
 	}
 
-	public TradePartyIdentification2 setFundInformation(com.tools20022.repository.msg.FundIdentification1 fundInformation) {
+	public TradePartyIdentification2 setFundInformation(FundIdentification1 fundInformation) {
 		this.fundInformation = fundInformation;
 		return this;
 	}

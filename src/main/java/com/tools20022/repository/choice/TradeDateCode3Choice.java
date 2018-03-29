@@ -110,7 +110,7 @@ public class TradeDateCode3Choice {
 	 * TradeDateCode1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDateCode3Choice, DateType3Code> mmCode = new MMMessageAttribute<TradeDateCode3Choice, DateType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDateCode3Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class TradeDateCode3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType3Code.mmObject();
+		}
+
+		@Override
+		public DateType3Code getValue(TradeDateCode3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TradeDateCode3Choice obj, DateType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class TradeDateCode3Choice {
 	 * TradeDateCode1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDateCode3Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<TradeDateCode3Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDateCode3Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class TradeDateCode3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(TradeDateCode3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TradeDateCode3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

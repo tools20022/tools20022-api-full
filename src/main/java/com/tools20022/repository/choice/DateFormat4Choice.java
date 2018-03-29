@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.DateType6Code;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
@@ -115,7 +116,7 @@ public class DateFormat4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat4Choice, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<DateFormat4Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat4Choice.mmObject();
 			isDerived = false;
@@ -126,7 +127,17 @@ public class DateFormat4Choice {
 			nextVersions_lazy = () -> Arrays.asList(DateFormat56Choice.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat4Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat4Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdDt", required = true)
@@ -167,7 +178,7 @@ public class DateFormat4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat4Choice, DateType6Code> mmNotSpecifiedDate = new MMMessageAttribute<DateFormat4Choice, DateType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat4Choice.mmObject();
 			isDerived = false;
@@ -179,6 +190,16 @@ public class DateFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType6Code.mmObject();
+		}
+
+		@Override
+		public DateType6Code getValue(DateFormat4Choice obj) {
+			return obj.getNotSpecifiedDate();
+		}
+
+		@Override
+		public void setValue(DateFormat4Choice obj, DateType6Code value) {
+			obj.setNotSpecifiedDate(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -219,7 +240,7 @@ public class DateFormat4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat4Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<DateFormat4Choice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat4Choice.mmObject();
 			isDerived = false;
@@ -231,6 +252,16 @@ public class DateFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(DateFormat4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DateFormat4Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -253,7 +284,7 @@ public class DateFormat4Choice {
 		return date;
 	}
 
-	public DateFormat4Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat4Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}

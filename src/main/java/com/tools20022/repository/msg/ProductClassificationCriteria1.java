@@ -112,7 +112,7 @@ public class ProductClassificationCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductClassificationCriteria1, List<CFIOct2015Identifier>> mmClassificationFinancialInstrument = new MMMessageAttribute<ProductClassificationCriteria1, List<CFIOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductClassificationCriteria1.mmObject();
@@ -123,6 +123,16 @@ public class ProductClassificationCriteria1 {
 			definition = "Identifier is an ISO 10962 Classification of Financial Instrument (CFI).";
 			minOccurs = 0;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public List<CFIOct2015Identifier> getValue(ProductClassificationCriteria1 obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ProductClassificationCriteria1 obj, List<CFIOct2015Identifier> value) {
+			obj.setClassificationFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "UnqPdctIdr")
@@ -161,7 +171,7 @@ public class ProductClassificationCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueProductIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductClassificationCriteria1, List<Max52Text>> mmUniqueProductIdentifier = new MMMessageAttribute<ProductClassificationCriteria1, List<Max52Text>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmProductIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductClassificationCriteria1.mmObject();
@@ -172,6 +182,16 @@ public class ProductClassificationCriteria1 {
 			definition = "Identifier code is a Unique Product Identifier.\r\n\r\nUsage:\r\nDefined as a text as the UPI identifier is not yet defined/available.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public List<Max52Text> getValue(ProductClassificationCriteria1 obj) {
+			return obj.getUniqueProductIdentifier();
+		}
+
+		@Override
+		public void setValue(ProductClassificationCriteria1 obj, List<Max52Text> value) {
+			obj.setUniqueProductIdentifier(value);
 		}
 	};
 

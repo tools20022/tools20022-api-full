@@ -165,7 +165,7 @@ public class PostalAddress21 {
 	 * PostalAddress3.mmAddressType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddressType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<AddressType2Choice>> mmAddressType = new MMMessageAttribute<PostalAddress21, Optional<AddressType2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmAddressType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -178,6 +178,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AddressType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AddressType2Choice> getValue(PostalAddress21 obj) {
+			return obj.getAddressType();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<AddressType2Choice> value) {
+			obj.setAddressType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MlngInd")
@@ -220,7 +230,7 @@ public class PostalAddress21 {
 	 * PostalAddress3.mmMailingIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMailingIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<YesNoIndicator>> mmMailingIndicator = new MMMessageAttribute<PostalAddress21, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> MailingInstructions.mmMailingIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -233,6 +243,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(PostalAddress21 obj) {
+			return obj.getMailingIndicator();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<YesNoIndicator> value) {
+			obj.setMailingIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnAdrInd")
@@ -276,7 +296,7 @@ public class PostalAddress21 {
 	 * PostalAddress3.mmRegistrationAddressIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationAddressIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<YesNoIndicator>> mmRegistrationAddressIndicator = new MMMessageAttribute<PostalAddress21, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> MailingInstructions.mmRegistrationAddressIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -289,6 +309,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(PostalAddress21 obj) {
+			return obj.getRegistrationAddressIndicator();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<YesNoIndicator> value) {
+			obj.setRegistrationAddressIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CareOf")
@@ -327,7 +357,7 @@ public class PostalAddress21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCareOf = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max70Text>> mmCareOf = new MMMessageAttribute<PostalAddress21, Optional<Max70Text>>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -339,6 +369,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(PostalAddress21 obj) {
+			return obj.getCareOf();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max70Text> value) {
+			obj.setCareOf(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AdrLine")
@@ -372,7 +412,7 @@ public class PostalAddress21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddressLine = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, List<Max70Text>> mmAddressLine = new MMMessageAttribute<PostalAddress21, List<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
 			isDerived = false;
@@ -383,6 +423,16 @@ public class PostalAddress21 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public List<Max70Text> getValue(PostalAddress21 obj) {
+			return obj.getAddressLine();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, List<Max70Text> value) {
+			obj.setAddressLine(value);
 		}
 	};
 	@XmlElement(name = "StrtNm")
@@ -419,7 +469,7 @@ public class PostalAddress21 {
 	 * definition} = "Name of the street or thoroughfare."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStreetName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max70Text>> mmStreetName = new MMMessageAttribute<PostalAddress21, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -431,6 +481,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(PostalAddress21 obj) {
+			return obj.getStreetName();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max70Text> value) {
+			obj.setStreetName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BldgNb")
@@ -468,7 +528,7 @@ public class PostalAddress21 {
 	 * "Number that identifies the position of the building on a street."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuildingNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max16Text>> mmBuildingNumber = new MMMessageAttribute<PostalAddress21, Optional<Max16Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetBuildingIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -480,6 +540,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(PostalAddress21 obj) {
+			return obj.getBuildingNumber();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max16Text> value) {
+			obj.setBuildingNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BldgNm")
@@ -516,7 +586,7 @@ public class PostalAddress21 {
 	 * definition} = "Name of the building or house."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuildingName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max35Text>> mmBuildingName = new MMMessageAttribute<PostalAddress21, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmBuildingName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -528,6 +598,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PostalAddress21 obj) {
+			return obj.getBuildingName();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max35Text> value) {
+			obj.setBuildingName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstBx")
@@ -566,7 +646,7 @@ public class PostalAddress21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostBox = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max10Text>> mmPostBox = new MMMessageAttribute<PostalAddress21, Optional<Max10Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostOfficeBox;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -578,6 +658,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max10Text> getValue(PostalAddress21 obj) {
+			return obj.getPostBox();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max10Text> value) {
+			obj.setPostBox(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SdInBldg")
@@ -614,7 +704,7 @@ public class PostalAddress21 {
 	 * definition} = "Side or wing of the building, for example, ‘wing A’."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSideInBuilding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max35Text>> mmSideInBuilding = new MMMessageAttribute<PostalAddress21, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmBuildingIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -626,6 +716,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PostalAddress21 obj) {
+			return obj.getSideInBuilding();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max35Text> value) {
+			obj.setSideInBuilding(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Flr")
@@ -662,7 +762,7 @@ public class PostalAddress21 {
 	 * definition} = "Floor or storey within the building."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFloor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max70Text>> mmFloor = new MMMessageAttribute<PostalAddress21, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmFloor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -674,6 +774,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(PostalAddress21 obj) {
+			return obj.getFloor();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max70Text> value) {
+			obj.setFloor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SuiteId")
@@ -710,7 +820,7 @@ public class PostalAddress21 {
 	 * definition} = "Identification of the suite or apartment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSuiteIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max10Text>> mmSuiteIdentification = new MMMessageAttribute<PostalAddress21, Optional<Max10Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmSuiteIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -722,6 +832,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max10Text> getValue(PostalAddress21 obj) {
+			return obj.getSuiteIdentification();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max10Text> value) {
+			obj.setSuiteIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstCd")
@@ -760,7 +880,7 @@ public class PostalAddress21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max16Text>> mmPostCode = new MMMessageAttribute<PostalAddress21, Optional<Max16Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostCodeIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -772,6 +892,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(PostalAddress21 obj) {
+			return obj.getPostCode();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max16Text> value) {
+			obj.setPostCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DstrctNm")
@@ -809,7 +939,7 @@ public class PostalAddress21 {
 	 * "Name of a district, that is, a part of the town or region."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDistrictName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max35Text>> mmDistrictName = new MMMessageAttribute<PostalAddress21, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmDistrictName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -821,6 +951,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PostalAddress21 obj) {
+			return obj.getDistrictName();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max35Text> value) {
+			obj.setDistrictName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vllg")
@@ -857,7 +997,7 @@ public class PostalAddress21 {
 	 * definition} = "Name of the village."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVillage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max70Text>> mmVillage = new MMMessageAttribute<PostalAddress21, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -869,6 +1009,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(PostalAddress21 obj) {
+			return obj.getVillage();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max70Text> value) {
+			obj.setVillage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TwnNm")
@@ -905,7 +1055,7 @@ public class PostalAddress21 {
 	 * definition} = "Name of the town or city."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTownName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max35Text>> mmTownName = new MMMessageAttribute<PostalAddress21, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -917,6 +1067,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PostalAddress21 obj) {
+			return obj.getTownName();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max35Text> value) {
+			obj.setTownName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Stat")
@@ -953,7 +1113,7 @@ public class PostalAddress21 {
 	 * definition} = "Name of the state, county or country sub-division."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmState = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, Optional<Max70Text>> mmState = new MMMessageAttribute<PostalAddress21, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmState;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -965,6 +1125,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(PostalAddress21 obj) {
+			return obj.getState();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, Optional<Max70Text> value) {
+			obj.setState(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -1001,7 +1171,7 @@ public class PostalAddress21 {
 	 * definition} = "Country of the address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress21, CountryCode> mmCountry = new MMMessageAttribute<PostalAddress21, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
@@ -1013,6 +1183,16 @@ public class PostalAddress21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PostalAddress21 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PostalAddress21 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

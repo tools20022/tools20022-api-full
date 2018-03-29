@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -147,7 +148,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * "Unique technical identifier for an instance of a leg within a switch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchSubscriptionLegOrder2, Optional<Max35Text>> mmLegIdentification = new MMMessageAttribute<SwitchSubscriptionLegOrder2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
 			isDerived = false;
@@ -158,6 +159,16 @@ public class SwitchSubscriptionLegOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getLegIdentification();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, Optional<Max35Text> value) {
+			obj.setLegIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls", required = true)
@@ -193,7 +204,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * definition} = "Investment fund class related to an order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, FinancialInstrument6> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, FinancialInstrument6>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -205,7 +216,17 @@ public class SwitchSubscriptionLegOrder2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument6.mmObject();
+			type_lazy = () -> FinancialInstrument6.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument6 getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, FinancialInstrument6 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmQtyChc")
@@ -242,7 +263,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * definition} = "Investment fund class related to an order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, Optional<FinancialInstrumentQuantity4Choice>> mmFinancialInstrumentQuantityChoice = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, Optional<FinancialInstrumentQuantity4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -255,6 +276,16 @@ public class SwitchSubscriptionLegOrder2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity4Choice> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getFinancialInstrumentQuantityChoice();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, Optional<FinancialInstrumentQuantity4Choice> value) {
+			obj.setFinancialInstrumentQuantityChoice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmPref")
@@ -294,7 +325,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchSubscriptionLegOrder2, Optional<IncomePreference1Code>> mmIncomePreference = new MMMessageAttribute<SwitchSubscriptionLegOrder2, Optional<IncomePreference1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -306,6 +337,16 @@ public class SwitchSubscriptionLegOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
+		}
+
+		@Override
+		public Optional<IncomePreference1Code> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getIncomePreference();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, Optional<IncomePreference1Code> value) {
+			obj.setIncomePreference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdSttlmCcy")
@@ -342,7 +383,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * definition} = "Currency requested for settlement of cash proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchSubscriptionLegOrder2, Optional<CurrencyCode>> mmRequestedSettlementCurrency = new MMMessageAttribute<SwitchSubscriptionLegOrder2, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedSettlementCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -354,6 +395,16 @@ public class SwitchSubscriptionLegOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getRequestedSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, Optional<CurrencyCode> value) {
+			obj.setRequestedSettlementCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdNAVCcy")
@@ -392,7 +443,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchSubscriptionLegOrder2, Optional<CurrencyCode>> mmRequestedNAVCurrency = new MMMessageAttribute<SwitchSubscriptionLegOrder2, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -405,9 +456,19 @@ public class SwitchSubscriptionLegOrder2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getRequestedNAVCurrency();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, Optional<CurrencyCode> value) {
+			obj.setRequestedNAVCurrency(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ChrgDtls")
-	protected List<com.tools20022.repository.msg.Charge8> chargeDetails;
+	protected List<Charge8> chargeDetails;
 	/**
 	 * 
 	 <p>
@@ -438,7 +499,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * definition} = "Amount of money associated with a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, List<Charge8>> mmChargeDetails = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, List<Charge8>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -449,11 +510,21 @@ public class SwitchSubscriptionLegOrder2 {
 			definition = "Amount of money associated with a service.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Charge8.mmObject();
+			type_lazy = () -> Charge8.mmObject();
+		}
+
+		@Override
+		public List<Charge8> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getChargeDetails();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, List<Charge8> value) {
+			obj.setChargeDetails(value);
 		}
 	};
 	@XmlElement(name = "ComssnDtls")
-	protected List<com.tools20022.repository.msg.Commission6> commissionDetails;
+	protected List<Commission6> commissionDetails;
 	/**
 	 * 
 	 <p>
@@ -486,7 +557,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * "Commission linked to the execution of an investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, List<Commission6>> mmCommissionDetails = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, List<Commission6>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -497,11 +568,21 @@ public class SwitchSubscriptionLegOrder2 {
 			definition = "Commission linked to the execution of an investment fund order.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Commission6.mmObject();
+			type_lazy = () -> Commission6.mmObject();
+		}
+
+		@Override
+		public List<Commission6> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getCommissionDetails();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, List<Commission6> value) {
+			obj.setCommissionDetails(value);
 		}
 	};
 	@XmlElement(name = "TaxDtls")
-	protected List<com.tools20022.repository.msg.Tax6> taxDetails;
+	protected List<Tax6> taxDetails;
 	/**
 	 * 
 	 <p>
@@ -532,7 +613,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * definition} = "Tax related to an investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, List<Tax6>> mmTaxDetails = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, List<Tax6>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -543,7 +624,17 @@ public class SwitchSubscriptionLegOrder2 {
 			definition = "Tax related to an investment fund order.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Tax6.mmObject();
+			type_lazy = () -> Tax6.mmObject();
+		}
+
+		@Override
+		public List<Tax6> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getTaxDetails();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, List<Tax6> value) {
+			obj.setTaxDetails(value);
 		}
 	};
 	@XmlElement(name = "SttlmAndCtdyDtls")
@@ -581,7 +672,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * "Parameters used to execute the settlement of an investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAndCustodyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, Optional<FundSettlementParameters4>> mmSettlementAndCustodyDetails = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, Optional<FundSettlementParameters4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -593,7 +684,17 @@ public class SwitchSubscriptionLegOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters4.mmObject();
+			type_lazy = () -> FundSettlementParameters4.mmObject();
+		}
+
+		@Override
+		public Optional<FundSettlementParameters4> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getSettlementAndCustodyDetails();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, Optional<FundSettlementParameters4> value) {
+			obj.setSettlementAndCustodyDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PhysDlvryInd", required = true)
@@ -628,7 +729,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhysicalDeliveryIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchSubscriptionLegOrder2, YesNoIndicator> mmPhysicalDeliveryIndicator = new MMMessageAttribute<SwitchSubscriptionLegOrder2, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
 			isDerived = false;
@@ -639,6 +740,16 @@ public class SwitchSubscriptionLegOrder2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getPhysicalDeliveryIndicator();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, YesNoIndicator value) {
+			obj.setPhysicalDeliveryIndicator(value);
 		}
 	};
 	@XmlElement(name = "PhysDlvryDtls")
@@ -675,7 +786,7 @@ public class SwitchSubscriptionLegOrder2 {
 	 * "Information related to physical delivery of the securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPhysicalDeliveryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, Optional<NameAndAddress4>> mmPhysicalDeliveryDetails = new MMMessageAssociationEnd<SwitchSubscriptionLegOrder2, Optional<NameAndAddress4>>() {
 		{
 			businessElementTrace_lazy = () -> PhysicalDelivery.mmAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder2.mmObject();
@@ -687,7 +798,17 @@ public class SwitchSubscriptionLegOrder2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress4.mmObject();
+			type_lazy = () -> NameAndAddress4.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress4> getValue(SwitchSubscriptionLegOrder2 obj) {
+			return obj.getPhysicalDeliveryDetails();
+		}
+
+		@Override
+		public void setValue(SwitchSubscriptionLegOrder2 obj, Optional<NameAndAddress4> value) {
+			obj.setPhysicalDeliveryDetails(value.orElse(null));
 		}
 	};
 
@@ -731,7 +852,7 @@ public class SwitchSubscriptionLegOrder2 {
 		return financialInstrumentDetails;
 	}
 
-	public SwitchSubscriptionLegOrder2 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument6 financialInstrumentDetails) {
+	public SwitchSubscriptionLegOrder2 setFinancialInstrumentDetails(FinancialInstrument6 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}
@@ -776,7 +897,7 @@ public class SwitchSubscriptionLegOrder2 {
 		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public SwitchSubscriptionLegOrder2 setChargeDetails(List<com.tools20022.repository.msg.Charge8> chargeDetails) {
+	public SwitchSubscriptionLegOrder2 setChargeDetails(List<Charge8> chargeDetails) {
 		this.chargeDetails = Objects.requireNonNull(chargeDetails);
 		return this;
 	}
@@ -785,7 +906,7 @@ public class SwitchSubscriptionLegOrder2 {
 		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public SwitchSubscriptionLegOrder2 setCommissionDetails(List<com.tools20022.repository.msg.Commission6> commissionDetails) {
+	public SwitchSubscriptionLegOrder2 setCommissionDetails(List<Commission6> commissionDetails) {
 		this.commissionDetails = Objects.requireNonNull(commissionDetails);
 		return this;
 	}
@@ -794,7 +915,7 @@ public class SwitchSubscriptionLegOrder2 {
 		return taxDetails == null ? taxDetails = new ArrayList<>() : taxDetails;
 	}
 
-	public SwitchSubscriptionLegOrder2 setTaxDetails(List<com.tools20022.repository.msg.Tax6> taxDetails) {
+	public SwitchSubscriptionLegOrder2 setTaxDetails(List<Tax6> taxDetails) {
 		this.taxDetails = Objects.requireNonNull(taxDetails);
 		return this;
 	}
@@ -803,7 +924,7 @@ public class SwitchSubscriptionLegOrder2 {
 		return settlementAndCustodyDetails == null ? Optional.empty() : Optional.of(settlementAndCustodyDetails);
 	}
 
-	public SwitchSubscriptionLegOrder2 setSettlementAndCustodyDetails(com.tools20022.repository.msg.FundSettlementParameters4 settlementAndCustodyDetails) {
+	public SwitchSubscriptionLegOrder2 setSettlementAndCustodyDetails(FundSettlementParameters4 settlementAndCustodyDetails) {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
 		return this;
 	}
@@ -821,7 +942,7 @@ public class SwitchSubscriptionLegOrder2 {
 		return physicalDeliveryDetails == null ? Optional.empty() : Optional.of(physicalDeliveryDetails);
 	}
 
-	public SwitchSubscriptionLegOrder2 setPhysicalDeliveryDetails(com.tools20022.repository.msg.NameAndAddress4 physicalDeliveryDetails) {
+	public SwitchSubscriptionLegOrder2 setPhysicalDeliveryDetails(NameAndAddress4 physicalDeliveryDetails) {
 		this.physicalDeliveryDetails = physicalDeliveryDetails;
 		return this;
 	}

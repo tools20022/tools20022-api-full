@@ -25,6 +25,7 @@ import com.tools20022.repository.area.caam.*;
 import com.tools20022.repository.area.catp.*;
 import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EnvelopedData4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -286,7 +287,7 @@ public class ContentInformationType10 {
 	 * ContentInformationType7.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContentInformationType10, ContentType2Code> mmContentType = new MMMessageAttribute<ContentInformationType10, ContentType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 			isDerived = false;
@@ -299,6 +300,16 @@ public class ContentInformationType10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
+		}
+
+		@Override
+		public ContentType2Code getValue(ContentInformationType10 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(ContentInformationType10 obj, ContentType2Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "EnvlpdData", required = true)
@@ -344,7 +355,7 @@ public class ContentInformationType10 {
 	 * ContentInformationType7.mmEnvelopedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType10, EnvelopedData4> mmEnvelopedData = new MMMessageAssociationEnd<ContentInformationType10, EnvelopedData4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 			isDerived = false;
@@ -357,7 +368,17 @@ public class ContentInformationType10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EnvelopedData4.mmObject();
+			type_lazy = () -> EnvelopedData4.mmObject();
+		}
+
+		@Override
+		public EnvelopedData4 getValue(ContentInformationType10 obj) {
+			return obj.getEnvelopedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType10 obj, EnvelopedData4 value) {
+			obj.setEnvelopedData(value);
 		}
 	};
 
@@ -406,7 +427,7 @@ public class ContentInformationType10 {
 		return envelopedData;
 	}
 
-	public ContentInformationType10 setEnvelopedData(com.tools20022.repository.msg.EnvelopedData4 envelopedData) {
+	public ContentInformationType10 setEnvelopedData(EnvelopedData4 envelopedData) {
 		this.envelopedData = Objects.requireNonNull(envelopedData);
 		return this;
 	}

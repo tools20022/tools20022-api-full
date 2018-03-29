@@ -25,7 +25,6 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.AccountNotification4;
 import com.tools20022.repository.msg.GroupHeader43;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +122,7 @@ public class NotificationToReceiveV02 {
 	 * "Set of elements used to provide further details on the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveV02, GroupHeader43> mmGroupHeader = new MMMessageBuildingBlock<NotificationToReceiveV02, GroupHeader43>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class NotificationToReceiveV02 {
 			complexType_lazy = () -> GroupHeader43.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader43 getValue(NotificationToReceiveV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveV02 obj, GroupHeader43 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Ntfctn", required = true)
@@ -169,7 +170,7 @@ public class NotificationToReceiveV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveV02, AccountNotification4> mmNotification = new MMMessageBuildingBlock<NotificationToReceiveV02, AccountNotification4>() {
 		{
 			xmlTag = "Ntfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,12 +181,14 @@ public class NotificationToReceiveV02 {
 			complexType_lazy = () -> AccountNotification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveV02.class.getMethod("getNotification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountNotification4 getValue(NotificationToReceiveV02 obj) {
+			return obj.getNotification();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveV02 obj, AccountNotification4 value) {
+			obj.setNotification(value);
 		}
 	};
 

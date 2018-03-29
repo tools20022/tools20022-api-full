@@ -117,7 +117,7 @@ public class RateType42Choice {
 	 * RateType28Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType42Choice, WithholdingTaxRateType1Code> mmCode = new MMMessageAttribute<RateType42Choice, WithholdingTaxRateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmWithholdingTaxType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType42Choice.mmObject();
@@ -130,6 +130,16 @@ public class RateType42Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WithholdingTaxRateType1Code.mmObject();
+		}
+
+		@Override
+		public WithholdingTaxRateType1Code getValue(RateType42Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateType42Choice obj, WithholdingTaxRateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class RateType42Choice {
 	 * RateType28Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateType42Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<RateType42Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmWithholdingTaxType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType42Choice.mmObject();
@@ -186,6 +196,16 @@ public class RateType42Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(RateType42Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateType42Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

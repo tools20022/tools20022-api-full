@@ -22,6 +22,10 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashMovement2;
+import com.tools20022.repository.msg.CorporateActionMovement1;
+import com.tools20022.repository.msg.ProceedsMovement1;
+import com.tools20022.repository.msg.UnderlyingSecurityMovement1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +117,7 @@ public class MovementInstruction1 {
 	 * definition} = "Provides general information about the movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovementGeneralInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MovementInstruction1, CorporateActionMovement1> mmMovementGeneralInformation = new MMMessageAssociationEnd<MovementInstruction1, CorporateActionMovement1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementInstruction1.mmObject();
 			isDerived = false;
@@ -124,11 +128,21 @@ public class MovementInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
+			type_lazy = () -> CorporateActionMovement1.mmObject();
+		}
+
+		@Override
+		public CorporateActionMovement1 getValue(MovementInstruction1 obj) {
+			return obj.getMovementGeneralInformation();
+		}
+
+		@Override
+		public void setValue(MovementInstruction1 obj, CorporateActionMovement1 value) {
+			obj.setMovementGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "UndrlygSctiesMvmntDtls")
-	protected List<com.tools20022.repository.msg.UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails;
+	protected List<UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails;
 	/**
 	 * 
 	 <p>
@@ -157,7 +171,7 @@ public class MovementInstruction1 {
 	 * "Provides information about the underlying securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingSecuritiesMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MovementInstruction1, List<UnderlyingSecurityMovement1>> mmUnderlyingSecuritiesMovementDetails = new MMMessageAssociationEnd<MovementInstruction1, List<UnderlyingSecurityMovement1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementInstruction1.mmObject();
 			isDerived = false;
@@ -167,11 +181,21 @@ public class MovementInstruction1 {
 			definition = "Provides information about the underlying securities movement.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmObject();
+			type_lazy = () -> UnderlyingSecurityMovement1.mmObject();
+		}
+
+		@Override
+		public List<UnderlyingSecurityMovement1> getValue(MovementInstruction1 obj) {
+			return obj.getUnderlyingSecuritiesMovementDetails();
+		}
+
+		@Override
+		public void setValue(MovementInstruction1 obj, List<UnderlyingSecurityMovement1> value) {
+			obj.setUnderlyingSecuritiesMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "UndrlygCshMvmntDtls")
-	protected List<com.tools20022.repository.msg.CashMovement2> underlyingCashMovementDetails;
+	protected List<CashMovement2> underlyingCashMovementDetails;
 	/**
 	 * 
 	 <p>
@@ -198,7 +222,7 @@ public class MovementInstruction1 {
 	 * definition} = "Provides information about the underlying cash movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingCashMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MovementInstruction1, List<CashMovement2>> mmUnderlyingCashMovementDetails = new MMMessageAssociationEnd<MovementInstruction1, List<CashMovement2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementInstruction1.mmObject();
 			isDerived = false;
@@ -208,11 +232,21 @@ public class MovementInstruction1 {
 			definition = "Provides information about the underlying cash movement.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashMovement2.mmObject();
+			type_lazy = () -> CashMovement2.mmObject();
+		}
+
+		@Override
+		public List<CashMovement2> getValue(MovementInstruction1 obj) {
+			return obj.getUnderlyingCashMovementDetails();
+		}
+
+		@Override
+		public void setValue(MovementInstruction1 obj, List<CashMovement2> value) {
+			obj.setUnderlyingCashMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "PrcdsMvmntDtls")
-	protected List<com.tools20022.repository.msg.ProceedsMovement1> proceedsMovementDetails;
+	protected List<ProceedsMovement1> proceedsMovementDetails;
 	/**
 	 * 
 	 <p>
@@ -240,7 +274,7 @@ public class MovementInstruction1 {
 	 * "Provides information about the proceeds, ie, outturned resources."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProceedsMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MovementInstruction1, List<ProceedsMovement1>> mmProceedsMovementDetails = new MMMessageAssociationEnd<MovementInstruction1, List<ProceedsMovement1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementInstruction1.mmObject();
 			isDerived = false;
@@ -250,7 +284,17 @@ public class MovementInstruction1 {
 			definition = "Provides information about the proceeds, ie, outturned resources.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProceedsMovement1.mmObject();
+			type_lazy = () -> ProceedsMovement1.mmObject();
+		}
+
+		@Override
+		public List<ProceedsMovement1> getValue(MovementInstruction1 obj) {
+			return obj.getProceedsMovementDetails();
+		}
+
+		@Override
+		public void setValue(MovementInstruction1 obj, List<ProceedsMovement1> value) {
+			obj.setProceedsMovementDetails(value);
 		}
 	};
 
@@ -273,7 +317,7 @@ public class MovementInstruction1 {
 		return movementGeneralInformation;
 	}
 
-	public MovementInstruction1 setMovementGeneralInformation(com.tools20022.repository.msg.CorporateActionMovement1 movementGeneralInformation) {
+	public MovementInstruction1 setMovementGeneralInformation(CorporateActionMovement1 movementGeneralInformation) {
 		this.movementGeneralInformation = Objects.requireNonNull(movementGeneralInformation);
 		return this;
 	}
@@ -282,7 +326,7 @@ public class MovementInstruction1 {
 		return underlyingSecuritiesMovementDetails == null ? underlyingSecuritiesMovementDetails = new ArrayList<>() : underlyingSecuritiesMovementDetails;
 	}
 
-	public MovementInstruction1 setUnderlyingSecuritiesMovementDetails(List<com.tools20022.repository.msg.UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails) {
+	public MovementInstruction1 setUnderlyingSecuritiesMovementDetails(List<UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails) {
 		this.underlyingSecuritiesMovementDetails = Objects.requireNonNull(underlyingSecuritiesMovementDetails);
 		return this;
 	}
@@ -291,7 +335,7 @@ public class MovementInstruction1 {
 		return underlyingCashMovementDetails == null ? underlyingCashMovementDetails = new ArrayList<>() : underlyingCashMovementDetails;
 	}
 
-	public MovementInstruction1 setUnderlyingCashMovementDetails(List<com.tools20022.repository.msg.CashMovement2> underlyingCashMovementDetails) {
+	public MovementInstruction1 setUnderlyingCashMovementDetails(List<CashMovement2> underlyingCashMovementDetails) {
 		this.underlyingCashMovementDetails = Objects.requireNonNull(underlyingCashMovementDetails);
 		return this;
 	}
@@ -300,7 +344,7 @@ public class MovementInstruction1 {
 		return proceedsMovementDetails == null ? proceedsMovementDetails = new ArrayList<>() : proceedsMovementDetails;
 	}
 
-	public MovementInstruction1 setProceedsMovementDetails(List<com.tools20022.repository.msg.ProceedsMovement1> proceedsMovementDetails) {
+	public MovementInstruction1 setProceedsMovementDetails(List<ProceedsMovement1> proceedsMovementDetails) {
 		this.proceedsMovementDetails = Objects.requireNonNull(proceedsMovementDetails);
 		return this;
 	}

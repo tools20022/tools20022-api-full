@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount16;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -113,7 +114,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountAuditTrailSearchCriteria1, Optional<CashAccount16>> mmCashAccountIdentification = new MMMessageAttribute<CashAccountAuditTrailSearchCriteria1, Optional<CashAccount16>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -124,7 +125,17 @@ public class CashAccountAuditTrailSearchCriteria1 {
 			nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailSearchCriteria2.mmCashAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			complexType_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount16> getValue(CashAccountAuditTrailSearchCriteria1 obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailSearchCriteria1 obj, Optional<CashAccount16> value) {
+			obj.setCashAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -165,7 +176,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountAuditTrailSearchCriteria1, Optional<DateSearchChoice>> mmDatePeriod = new MMMessageAttribute<CashAccountAuditTrailSearchCriteria1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -177,6 +188,16 @@ public class CashAccountAuditTrailSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(CashAccountAuditTrailSearchCriteria1 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailSearchCriteria1 obj, Optional<DateSearchChoice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 
@@ -198,7 +219,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 		return cashAccountIdentification == null ? Optional.empty() : Optional.of(cashAccountIdentification);
 	}
 
-	public CashAccountAuditTrailSearchCriteria1 setCashAccountIdentification(com.tools20022.repository.msg.CashAccount16 cashAccountIdentification) {
+	public CashAccountAuditTrailSearchCriteria1 setCashAccountIdentification(CashAccount16 cashAccountIdentification) {
 		this.cashAccountIdentification = cashAccountIdentification;
 		return this;
 	}

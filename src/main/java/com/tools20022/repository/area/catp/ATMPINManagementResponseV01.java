@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header20;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +128,7 @@ public class ATMPINManagementResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMPINManagementResponseV01, Header20> mmHeader = new MMMessageBuildingBlock<ATMPINManagementResponseV01, Header20>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,12 +139,14 @@ public class ATMPINManagementResponseV01 {
 			complexType_lazy = () -> Header20.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMPINManagementResponseV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header20 getValue(ATMPINManagementResponseV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMPINManagementResponseV01 obj, Header20 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "PrtctdATMPINMgmtRspn")
@@ -173,7 +174,7 @@ public class ATMPINManagementResponseV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProtectedATMPINManagementResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMPINManagementResponseV01, Optional<ContentInformationType10>> mmProtectedATMPINManagementResponse = new MMMessageBuildingBlock<ATMPINManagementResponseV01, Optional<ContentInformationType10>>() {
 		{
 			xmlTag = "PrtctdATMPINMgmtRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class ATMPINManagementResponseV01 {
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMPINManagementResponseV01.class.getMethod("getProtectedATMPINManagementResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMPINManagementResponseV01 obj) {
+			return obj.getProtectedATMPINManagementResponse();
+		}
+
+		@Override
+		public void setValue(ATMPINManagementResponseV01 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedATMPINManagementResponse(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMPINMgmtRspn")
@@ -219,7 +222,7 @@ public class ATMPINManagementResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMPINManagementResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMPINManagementResponseV01, Optional<ATMPINManagementResponse1>> mmATMPINManagementResponse = new MMMessageBuildingBlock<ATMPINManagementResponseV01, Optional<ATMPINManagementResponse1>>() {
 		{
 			xmlTag = "ATMPINMgmtRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +233,14 @@ public class ATMPINManagementResponseV01 {
 			complexType_lazy = () -> ATMPINManagementResponse1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMPINManagementResponseV01.class.getMethod("getATMPINManagementResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ATMPINManagementResponse1> getValue(ATMPINManagementResponseV01 obj) {
+			return obj.getATMPINManagementResponse();
+		}
+
+		@Override
+		public void setValue(ATMPINManagementResponseV01 obj, Optional<ATMPINManagementResponse1> value) {
+			obj.setATMPINManagementResponse(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -263,7 +268,7 @@ public class ATMPINManagementResponseV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMPINManagementResponseV01, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<ATMPINManagementResponseV01, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,12 +279,14 @@ public class ATMPINManagementResponseV01 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMPINManagementResponseV01.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(ATMPINManagementResponseV01 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ATMPINManagementResponseV01 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

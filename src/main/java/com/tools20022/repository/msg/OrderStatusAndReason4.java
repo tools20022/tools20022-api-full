@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RejectedStatus4;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,7 +135,7 @@ public class OrderStatusAndReason4 {
 	 * definition} = "Status of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatusAndReason4, OrderStatus3Code> mmStatus = new MMMessageAttribute<OrderStatusAndReason4, OrderStatus3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason4.mmObject();
@@ -146,6 +147,16 @@ public class OrderStatusAndReason4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderStatus3Code.mmObject();
+		}
+
+		@Override
+		public OrderStatus3Code getValue(OrderStatusAndReason4 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason4 obj, OrderStatus3Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -181,7 +192,7 @@ public class OrderStatusAndReason4 {
 	 * definition} = "Status of the order is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason4, RejectedStatus4> mmRejected = new MMMessageAssociationEnd<OrderStatusAndReason4, RejectedStatus4>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason4.mmObject();
@@ -193,7 +204,17 @@ public class OrderStatusAndReason4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RejectedStatus4.mmObject();
+			type_lazy = () -> RejectedStatus4.mmObject();
+		}
+
+		@Override
+		public RejectedStatus4 getValue(OrderStatusAndReason4 obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason4 obj, RejectedStatus4 value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -230,7 +251,7 @@ public class OrderStatusAndReason4 {
 	 * definition} = "Party that initiates the status of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason4, Optional<PartyIdentification2Choice>> mmStatusInitiator = new MMMessageAssociationEnd<OrderStatusAndReason4, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason4.mmObject();
@@ -243,6 +264,16 @@ public class OrderStatusAndReason4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(OrderStatusAndReason4 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason4 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 	/**
@@ -323,7 +354,7 @@ public class OrderStatusAndReason4 {
 		return rejected;
 	}
 
-	public OrderStatusAndReason4 setRejected(com.tools20022.repository.msg.RejectedStatus4 rejected) {
+	public OrderStatusAndReason4 setRejected(RejectedStatus4 rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}

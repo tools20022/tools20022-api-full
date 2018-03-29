@@ -115,7 +115,7 @@ public class SecurityOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityOrBusinessError1Choice, List<SecurityAttributes3>> mmSecurityReport = new MMMessageAssociationEnd<SecurityOrBusinessError1Choice, List<SecurityAttributes3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class SecurityOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityAttributes3.mmObject();
+		}
+
+		@Override
+		public List<SecurityAttributes3> getValue(SecurityOrBusinessError1Choice obj) {
+			return obj.getSecurityReport();
+		}
+
+		@Override
+		public void setValue(SecurityOrBusinessError1Choice obj, List<SecurityAttributes3> value) {
+			obj.setSecurityReport(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -165,7 +175,7 @@ public class SecurityOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityOrBusinessError1Choice, List<BusinessError1>> mmBusinessError = new MMMessageAssociationEnd<SecurityOrBusinessError1Choice, List<BusinessError1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class SecurityOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessError1.mmObject();
+		}
+
+		@Override
+		public List<BusinessError1> getValue(SecurityOrBusinessError1Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(SecurityOrBusinessError1Choice obj, List<BusinessError1> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

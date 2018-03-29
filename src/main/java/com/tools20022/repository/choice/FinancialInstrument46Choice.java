@@ -118,7 +118,7 @@ public class FinancialInstrument46Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument46Choice, ISINOct2015Identifier> mmISIN = new MMMessageAttribute<FinancialInstrument46Choice, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrument46Choice.mmObject();
@@ -130,6 +130,16 @@ public class FinancialInstrument46Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(FinancialInstrument46Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument46Choice obj, ISINOct2015Identifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "Indx", required = true)
@@ -168,7 +178,7 @@ public class FinancialInstrument46Choice {
 	 * "Name of the index on which the financial instrument is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument46Choice, BenchmarkCurveName2Code> mmIndex = new MMMessageAttribute<FinancialInstrument46Choice, BenchmarkCurveName2Code>() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmIndex;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrument46Choice.mmObject();
@@ -180,6 +190,16 @@ public class FinancialInstrument46Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BenchmarkCurveName2Code.mmObject();
+		}
+
+		@Override
+		public BenchmarkCurveName2Code getValue(FinancialInstrument46Choice obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument46Choice obj, BenchmarkCurveName2Code value) {
+			obj.setIndex(value);
 		}
 	};
 

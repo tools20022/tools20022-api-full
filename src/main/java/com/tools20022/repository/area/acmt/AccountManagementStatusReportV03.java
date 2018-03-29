@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AccountManagementStatusAndReason2;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -150,7 +149,7 @@ public class AccountManagementStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountManagementStatusReportV03, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<AccountManagementStatusReportV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,12 +161,14 @@ public class AccountManagementStatusReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountManagementStatusReportV03.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(AccountManagementStatusReportV03 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusReportV03 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)
@@ -204,7 +205,7 @@ public class AccountManagementStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountManagementStatusReportV03, List<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<AccountManagementStatusReportV03, List<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,12 +217,14 @@ public class AccountManagementStatusReportV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountManagementStatusReportV03.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(AccountManagementStatusReportV03 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusReportV03 obj, List<AdditionalReference3> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "StsRpt", required = true)
@@ -259,7 +262,7 @@ public class AccountManagementStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountManagementStatusReportV03, AccountManagementStatusAndReason2> mmStatusReport = new MMMessageBuildingBlock<AccountManagementStatusReportV03, AccountManagementStatusAndReason2>() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,12 +274,14 @@ public class AccountManagementStatusReportV03 {
 			complexType_lazy = () -> AccountManagementStatusAndReason2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountManagementStatusReportV03.class.getMethod("getStatusReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountManagementStatusAndReason2 getValue(AccountManagementStatusReportV03 obj) {
+			return obj.getStatusReport();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusReportV03 obj, AccountManagementStatusAndReason2 value) {
+			obj.setStatusReport(value);
 		}
 	};
 

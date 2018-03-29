@@ -121,7 +121,7 @@ public class Reporting6Choice {
 	 * Reporting2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reporting6Choice, Reporting2Code> mmCode = new MMMessageAttribute<Reporting6Choice, Reporting2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmReportingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reporting6Choice.mmObject();
@@ -135,6 +135,16 @@ public class Reporting6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Reporting2Code.mmObject();
+		}
+
+		@Override
+		public Reporting2Code getValue(Reporting6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Reporting6Choice obj, Reporting2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -181,7 +191,7 @@ public class Reporting6Choice {
 	 * Reporting2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reporting6Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<Reporting6Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmReportingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reporting6Choice.mmObject();
@@ -195,6 +205,16 @@ public class Reporting6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(Reporting6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Reporting6Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

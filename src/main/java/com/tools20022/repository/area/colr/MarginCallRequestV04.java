@@ -28,7 +28,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -171,7 +170,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, Max35Text> mmTransactionIdentification = new MMMessageBuildingBlock<MarginCallRequestV04, Max35Text>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,12 +182,14 @@ public class MarginCallRequestV04 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(MarginCallRequestV04 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "Oblgtn", required = true)
@@ -222,7 +223,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmObligation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, Obligation4> mmObligation = new MMMessageBuildingBlock<MarginCallRequestV04, Obligation4>() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +235,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getObligation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Obligation4 getValue(MarginCallRequestV04 obj) {
+			return obj.getObligation();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, Obligation4 value) {
+			obj.setObligation(value);
 		}
 	};
 	@XmlElement(name = "Agrmt")
@@ -271,7 +274,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, Optional<Agreement4>> mmAgreement = new MMMessageBuildingBlock<MarginCallRequestV04, Optional<Agreement4>>() {
 		{
 			xmlTag = "Agrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,12 +286,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> Agreement4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getAgreement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Agreement4> getValue(MarginCallRequestV04 obj) {
+			return obj.getAgreement();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, Optional<Agreement4> value) {
+			obj.setAgreement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrgnCallRslt", required = true)
@@ -323,7 +328,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmMarginCallResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarginCallResult = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, MarginCallResult3> mmMarginCallResult = new MMMessageBuildingBlock<MarginCallRequestV04, MarginCallResult3>() {
 		{
 			xmlTag = "MrgnCallRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,12 +340,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> MarginCallResult3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getMarginCallResult", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MarginCallResult3 getValue(MarginCallRequestV04 obj) {
+			return obj.getMarginCallResult();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, MarginCallResult3 value) {
+			obj.setMarginCallResult(value);
 		}
 	};
 	@XmlElement(name = "MrgnDtlsDueToA")
@@ -374,7 +381,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmMarginDetailsDueToA}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarginDetailsDueToA = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, Optional<MarginCall1>> mmMarginDetailsDueToA = new MMMessageBuildingBlock<MarginCallRequestV04, Optional<MarginCall1>>() {
 		{
 			xmlTag = "MrgnDtlsDueToA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,12 +393,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> MarginCall1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getMarginDetailsDueToA", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarginCall1> getValue(MarginCallRequestV04 obj) {
+			return obj.getMarginDetailsDueToA();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, Optional<MarginCall1> value) {
+			obj.setMarginDetailsDueToA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrgnDtlsDueToB")
@@ -425,7 +434,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmMarginDetailsDueToB}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarginDetailsDueToB = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, Optional<MarginCall1>> mmMarginDetailsDueToB = new MMMessageBuildingBlock<MarginCallRequestV04, Optional<MarginCall1>>() {
 		{
 			xmlTag = "MrgnDtlsDueToB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,12 +446,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> MarginCall1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getMarginDetailsDueToB", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarginCall1> getValue(MarginCallRequestV04 obj) {
+			return obj.getMarginDetailsDueToB();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, Optional<MarginCall1> value) {
+			obj.setMarginDetailsDueToB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RqrmntDtlsDueToA")
@@ -477,7 +488,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmRequirementDetailsDueToA}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequirementDetailsDueToA = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, Optional<MarginRequirement1Choice>> mmRequirementDetailsDueToA = new MMMessageBuildingBlock<MarginCallRequestV04, Optional<MarginRequirement1Choice>>() {
 		{
 			xmlTag = "RqrmntDtlsDueToA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -489,12 +500,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> MarginRequirement1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getRequirementDetailsDueToA", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarginRequirement1Choice> getValue(MarginCallRequestV04 obj) {
+			return obj.getRequirementDetailsDueToA();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, Optional<MarginRequirement1Choice> value) {
+			obj.setRequirementDetailsDueToA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RqrmntDtlsDueToB")
@@ -529,7 +542,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmRequirementDetailsDueToB}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequirementDetailsDueToB = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, Optional<MarginRequirement1Choice>> mmRequirementDetailsDueToB = new MMMessageBuildingBlock<MarginCallRequestV04, Optional<MarginRequirement1Choice>>() {
 		{
 			xmlTag = "RqrmntDtlsDueToB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -541,12 +554,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> MarginRequirement1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getRequirementDetailsDueToB", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarginRequirement1Choice> getValue(MarginCallRequestV04 obj) {
+			return obj.getRequirementDetailsDueToB();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, Optional<MarginRequirement1Choice> value) {
+			obj.setRequirementDetailsDueToB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdCollDueToA")
@@ -581,7 +596,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmExpectedCollateralDueToA}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExpectedCollateralDueToA = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, Optional<ExpectedCollateral2Choice>> mmExpectedCollateralDueToA = new MMMessageBuildingBlock<MarginCallRequestV04, Optional<ExpectedCollateral2Choice>>() {
 		{
 			xmlTag = "XpctdCollDueToA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -593,12 +608,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> ExpectedCollateral2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getExpectedCollateralDueToA", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ExpectedCollateral2Choice> getValue(MarginCallRequestV04 obj) {
+			return obj.getExpectedCollateralDueToA();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, Optional<ExpectedCollateral2Choice> value) {
+			obj.setExpectedCollateralDueToA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdCollDueToB")
@@ -633,7 +650,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmExpectedCollateralDueToB}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExpectedCollateralDueToB = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, Optional<ExpectedCollateral2Choice>> mmExpectedCollateralDueToB = new MMMessageBuildingBlock<MarginCallRequestV04, Optional<ExpectedCollateral2Choice>>() {
 		{
 			xmlTag = "XpctdCollDueToB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -645,12 +662,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> ExpectedCollateral2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getExpectedCollateralDueToB", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ExpectedCollateral2Choice> getValue(MarginCallRequestV04 obj) {
+			return obj.getExpectedCollateralDueToB();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, Optional<ExpectedCollateral2Choice> value) {
+			obj.setExpectedCollateralDueToB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrgnCallDtls")
@@ -679,7 +698,7 @@ public class MarginCallRequestV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarginCallDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, List<MarginCall2>> mmMarginCallDetails = new MMMessageBuildingBlock<MarginCallRequestV04, List<MarginCall2>>() {
 		{
 			xmlTag = "MrgnCallDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -689,12 +708,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> MarginCall2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getMarginCallDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MarginCall2> getValue(MarginCallRequestV04 obj) {
+			return obj.getMarginCallDetails();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, List<MarginCall2> value) {
+			obj.setMarginCallDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -729,7 +750,7 @@ public class MarginCallRequestV04 {
 	 * MarginCallRequestV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MarginCallRequestV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MarginCallRequestV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -740,12 +761,14 @@ public class MarginCallRequestV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MarginCallRequestV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MarginCallRequestV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MarginCallRequestV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

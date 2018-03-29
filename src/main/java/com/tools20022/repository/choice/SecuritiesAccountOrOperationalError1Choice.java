@@ -119,7 +119,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountOrOperationalError1Choice, List<SecuritiesAccountReport1>> mmSecuritiesAccountReport = new MMMessageAssociationEnd<SecuritiesAccountOrOperationalError1Choice, List<SecuritiesAccountReport1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class SecuritiesAccountOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccountReport1.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccountReport1> getValue(SecuritiesAccountOrOperationalError1Choice obj) {
+			return obj.getSecuritiesAccountReport();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountOrOperationalError1Choice obj, List<SecuritiesAccountReport1> value) {
+			obj.setSecuritiesAccountReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -169,7 +179,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountOrOperationalError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<SecuritiesAccountOrOperationalError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class SecuritiesAccountOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(SecuritiesAccountOrOperationalError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountOrOperationalError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

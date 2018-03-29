@@ -103,7 +103,7 @@ public class MemoryCharacteristics1 {
 	 * definition} = "Identification or name of the memory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemoryCharacteristics1, Max35Text> mmIdentification = new MMMessageAttribute<MemoryCharacteristics1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemoryCharacteristics1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class MemoryCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MemoryCharacteristics1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MemoryCharacteristics1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "TtlSz", required = true)
@@ -146,7 +156,7 @@ public class MemoryCharacteristics1 {
 	 * definition} = "Total size of the memory unit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemoryCharacteristics1, DecimalNumber> mmTotalSize = new MMMessageAttribute<MemoryCharacteristics1, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemoryCharacteristics1.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class MemoryCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(MemoryCharacteristics1 obj) {
+			return obj.getTotalSize();
+		}
+
+		@Override
+		public void setValue(MemoryCharacteristics1 obj, DecimalNumber value) {
+			obj.setTotalSize(value);
 		}
 	};
 	@XmlElement(name = "FreeSz", required = true)
@@ -189,7 +209,7 @@ public class MemoryCharacteristics1 {
 	 * definition} = "Total size of the available memory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFreeSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemoryCharacteristics1, DecimalNumber> mmFreeSize = new MMMessageAttribute<MemoryCharacteristics1, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemoryCharacteristics1.mmObject();
 			isDerived = false;
@@ -200,6 +220,16 @@ public class MemoryCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(MemoryCharacteristics1 obj) {
+			return obj.getFreeSize();
+		}
+
+		@Override
+		public void setValue(MemoryCharacteristics1 obj, DecimalNumber value) {
+			obj.setFreeSize(value);
 		}
 	};
 	@XmlElement(name = "Unit", required = true)
@@ -232,7 +262,7 @@ public class MemoryCharacteristics1 {
 	 * definition} = "Memory unit of the sizes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemoryCharacteristics1, MemoryUnit1Code> mmUnit = new MMMessageAttribute<MemoryCharacteristics1, MemoryUnit1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemoryCharacteristics1.mmObject();
 			isDerived = false;
@@ -243,6 +273,16 @@ public class MemoryCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MemoryUnit1Code.mmObject();
+		}
+
+		@Override
+		public MemoryUnit1Code getValue(MemoryCharacteristics1 obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(MemoryCharacteristics1 obj, MemoryUnit1Code value) {
+			obj.setUnit(value);
 		}
 	};
 

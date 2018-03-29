@@ -133,7 +133,7 @@ public class FundOrderType2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundOrderType2, FundOrderType3Code> mmOrderType = new MMMessageAttribute<FundOrderType2, FundOrderType3Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderType2.mmObject();
@@ -146,6 +146,16 @@ public class FundOrderType2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType3Code.mmObject();
+		}
+
+		@Override
+		public FundOrderType3Code getValue(FundOrderType2 obj) {
+			return obj.getOrderType();
+		}
+
+		@Override
+		public void setValue(FundOrderType2 obj, FundOrderType3Code value) {
+			obj.setOrderType(value);
 		}
 	};
 	@XmlElement(name = "XtndedOrdrTp", required = true)
@@ -190,7 +200,7 @@ public class FundOrderType2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedOrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundOrderType2, Extended350Code> mmExtendedOrderType = new MMMessageAttribute<FundOrderType2, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundOrderType2.mmObject();
@@ -203,6 +213,16 @@ public class FundOrderType2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(FundOrderType2 obj) {
+			return obj.getExtendedOrderType();
+		}
+
+		@Override
+		public void setValue(FundOrderType2 obj, Extended350Code value) {
+			obj.setExtendedOrderType(value);
 		}
 	};
 	/**

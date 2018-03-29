@@ -99,7 +99,7 @@ public class OtherAmount1 {
 	 * definition} = "Type of amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherAmount1, OtherAmountType1Choice> mmType = new MMMessageAssociationEnd<OtherAmount1, OtherAmountType1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmount1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class OtherAmount1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OtherAmountType1Choice.mmObject();
+		}
+
+		@Override
+		public OtherAmountType1Choice getValue(OtherAmount1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(OtherAmount1 obj, OtherAmountType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -147,7 +157,7 @@ public class OtherAmount1 {
 	 * definition} = "Currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherAmount1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<OtherAmount1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAmount1.mmObject();
@@ -159,6 +169,16 @@ public class OtherAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(OtherAmount1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(OtherAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

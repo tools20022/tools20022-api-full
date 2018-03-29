@@ -118,7 +118,7 @@ public class CashAccount17 {
 	 * definition} = "Identification of the cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount17, CashAccountIdentification1Choice> mmAccountIdentification = new MMMessageAttribute<CashAccount17, CashAccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount17.mmObject();
@@ -130,6 +130,16 @@ public class CashAccount17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification1Choice getValue(CashAccount17 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount17 obj, CashAccountIdentification1Choice value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "PmtCcy", required = true)
@@ -166,7 +176,7 @@ public class CashAccount17 {
 	 * definition} = "Currency of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount17, ActiveCurrencyCode> mmPaymentCurrency = new MMMessageAttribute<CashAccount17, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount17.mmObject();
@@ -178,6 +188,16 @@ public class CashAccount17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CashAccount17 obj) {
+			return obj.getPaymentCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccount17 obj, ActiveCurrencyCode value) {
+			obj.setPaymentCurrency(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -214,7 +234,7 @@ public class CashAccount17 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount17, Optional<PartyIdentification2Choice>> mmAccountOwnerIdentification = new MMMessageAttribute<CashAccount17, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount17.mmObject();
@@ -226,6 +246,16 @@ public class CashAccount17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CashAccount17 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount17 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrspdtBkId", required = true)
@@ -262,7 +292,7 @@ public class CashAccount17 {
 	 * definition} = "Identification of the cash correspondent back."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorrespondentBankIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount17, BICIdentifier> mmCorrespondentBankIdentification = new MMMessageAttribute<CashAccount17, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount17.mmObject();
@@ -274,6 +304,16 @@ public class CashAccount17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(CashAccount17 obj) {
+			return obj.getCorrespondentBankIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount17 obj, BICIdentifier value) {
+			obj.setCorrespondentBankIdentification(value);
 		}
 	};
 

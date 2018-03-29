@@ -101,7 +101,7 @@ public class GeographicCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLatitude = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeographicCoordinates1, Max16Text> mmLatitude = new MMMessageAttribute<GeographicCoordinates1, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeographicCoordinates1.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class GeographicCoordinates1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(GeographicCoordinates1 obj) {
+			return obj.getLatitude();
+		}
+
+		@Override
+		public void setValue(GeographicCoordinates1 obj, Max16Text value) {
+			obj.setLatitude(value);
 		}
 	};
 	@XmlElement(name = "Long", required = true)
@@ -145,7 +155,7 @@ public class GeographicCoordinates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongitude = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeographicCoordinates1, Max16Text> mmLongitude = new MMMessageAttribute<GeographicCoordinates1, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeographicCoordinates1.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class GeographicCoordinates1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(GeographicCoordinates1 obj) {
+			return obj.getLongitude();
+		}
+
+		@Override
+		public void setValue(GeographicCoordinates1 obj, Max16Text value) {
+			obj.setLongitude(value);
 		}
 	};
 

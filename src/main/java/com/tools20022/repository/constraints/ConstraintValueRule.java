@@ -60,12 +60,16 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation5> forPriceInformation5 = new MMConstraint<PriceInformation5>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation12);
 			owner_lazy = () -> PriceInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation5 obj) throws Exception {
+			checkPriceInformation5(obj);
 		}
 	};
 	/**
@@ -91,11 +95,15 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation7> forPriceInformation7 = new MMConstraint<PriceInformation7>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			owner_lazy = () -> PriceInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation7 obj) throws Exception {
+			checkPriceInformation7(obj);
 		}
 	};
 	/**
@@ -121,11 +129,15 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation1> forPriceInformation1 = new MMConstraint<PriceInformation1>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If Type is not MRKT, then Value may not be expressed with UnknownIndicator.";
 			owner_lazy = () -> PriceInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation1 obj) throws Exception {
+			checkPriceInformation1(obj);
 		}
 	};
 	/**
@@ -151,11 +163,15 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation2> forPriceInformation2 = new MMConstraint<PriceInformation2>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If Type is not MRKT, then Value may not be expressed with UnknownIndicator.";
 			owner_lazy = () -> PriceInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation2 obj) throws Exception {
+			checkPriceInformation2(obj);
 		}
 	};
 	/**
@@ -189,12 +205,16 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation6> forPriceInformation6 = new MMConstraint<PriceInformation6>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation13);
 			owner_lazy = () -> PriceInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation6 obj) throws Exception {
+			checkPriceInformation6(obj);
 		}
 	};
 	/**
@@ -220,11 +240,15 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation8> forPriceInformation8 = new MMConstraint<PriceInformation8>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			owner_lazy = () -> PriceInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation8 obj) throws Exception {
+			checkPriceInformation8(obj);
 		}
 	};
 	/**
@@ -250,11 +274,15 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation4> forPriceInformation4 = new MMConstraint<PriceInformation4>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If Type/Code is not MRKT, then Value may not be expressed with UnknownIndicator.";
 			owner_lazy = () -> PriceInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation4 obj) throws Exception {
+			checkPriceInformation4(obj);
 		}
 	};
 	/**
@@ -285,12 +313,16 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation12> forPriceInformation12 = new MMConstraint<PriceInformation12>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation5;
 			owner_lazy = () -> PriceInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation12 obj) throws Exception {
+			checkPriceInformation12(obj);
 		}
 	};
 	/**
@@ -329,13 +361,17 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation13> forPriceInformation13 = new MMConstraint<PriceInformation13>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation18);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation6;
 			owner_lazy = () -> PriceInformation13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation13 obj) throws Exception {
+			checkPriceInformation13(obj);
 		}
 	};
 	/**
@@ -361,11 +397,15 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation16> forPriceInformation16 = new MMConstraint<PriceInformation16>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			owner_lazy = () -> PriceInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation16 obj) throws Exception {
+			checkPriceInformation16(obj);
 		}
 	};
 	/**
@@ -391,11 +431,15 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation14> forPriceInformation14 = new MMConstraint<PriceInformation14>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			owner_lazy = () -> PriceInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation14 obj) throws Exception {
+			checkPriceInformation14(obj);
 		}
 	};
 	/**
@@ -426,12 +470,16 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation18> forPriceInformation18 = new MMConstraint<PriceInformation18>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation13;
 			owner_lazy = () -> PriceInformation18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation18 obj) throws Exception {
+			checkPriceInformation18(obj);
 		}
 	};
 	/**
@@ -457,11 +505,15 @@ public class ConstraintValueRule {
 	 */
 	public static final MMConstraint<PriceInformation19> forPriceInformation19 = new MMConstraint<PriceInformation19>() {
 		{
-			validator = ConstraintValueRule::checkPriceInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			owner_lazy = () -> PriceInformation19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceInformation19 obj) throws Exception {
+			checkPriceInformation19(obj);
 		}
 	};
 

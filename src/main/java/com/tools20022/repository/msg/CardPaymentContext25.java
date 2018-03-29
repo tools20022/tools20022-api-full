@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentContext25;
+import com.tools20022.repository.msg.SaleContext2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -113,7 +115,7 @@ public class CardPaymentContext25 {
 	 * CardPaymentContext19.mmPaymentContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentContext25, Optional<PaymentContext25>> mmPaymentContext = new MMMessageAssociationEnd<CardPaymentContext25, Optional<PaymentContext25>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentContext25.mmObject();
@@ -126,7 +128,17 @@ public class CardPaymentContext25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentContext25.mmObject();
+			type_lazy = () -> PaymentContext25.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentContext25> getValue(CardPaymentContext25 obj) {
+			return obj.getPaymentContext();
+		}
+
+		@Override
+		public void setValue(CardPaymentContext25 obj, Optional<PaymentContext25> value) {
+			obj.setPaymentContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SaleCntxt")
@@ -168,7 +180,7 @@ public class CardPaymentContext25 {
 	 * CardPaymentContext19.mmSaleContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSaleContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentContext25, Optional<SaleContext2>> mmSaleContext = new MMMessageAssociationEnd<CardPaymentContext25, Optional<SaleContext2>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentContext25.mmObject();
@@ -181,7 +193,17 @@ public class CardPaymentContext25 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
+			type_lazy = () -> SaleContext2.mmObject();
+		}
+
+		@Override
+		public Optional<SaleContext2> getValue(CardPaymentContext25 obj) {
+			return obj.getSaleContext();
+		}
+
+		@Override
+		public void setValue(CardPaymentContext25 obj, Optional<SaleContext2> value) {
+			obj.setSaleContext(value.orElse(null));
 		}
 	};
 
@@ -204,7 +226,7 @@ public class CardPaymentContext25 {
 		return paymentContext == null ? Optional.empty() : Optional.of(paymentContext);
 	}
 
-	public CardPaymentContext25 setPaymentContext(com.tools20022.repository.msg.PaymentContext25 paymentContext) {
+	public CardPaymentContext25 setPaymentContext(PaymentContext25 paymentContext) {
 		this.paymentContext = paymentContext;
 		return this;
 	}
@@ -213,7 +235,7 @@ public class CardPaymentContext25 {
 		return saleContext == null ? Optional.empty() : Optional.of(saleContext);
 	}
 
-	public CardPaymentContext25 setSaleContext(com.tools20022.repository.msg.SaleContext2 saleContext) {
+	public CardPaymentContext25 setSaleContext(SaleContext2 saleContext) {
 		this.saleContext = saleContext;
 		return this;
 	}

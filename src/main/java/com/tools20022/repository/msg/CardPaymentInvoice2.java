@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CommercialTradeSettlement;
 import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvoiceHeader2;
+import com.tools20022.repository.msg.LineItem16;
+import com.tools20022.repository.msg.TradeAgreement13;
+import com.tools20022.repository.msg.TradeDelivery2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,7 +138,7 @@ public class CardPaymentInvoice2 {
 	 * CardPaymentInvoice1.mmInvoiceHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoiceHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentInvoice2, InvoiceHeader2> mmInvoiceHeader = new MMMessageAssociationEnd<CardPaymentInvoice2, InvoiceHeader2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice2.mmObject();
 			isDerived = false;
@@ -147,7 +151,17 @@ public class CardPaymentInvoice2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvoiceHeader2.mmObject();
+			type_lazy = () -> InvoiceHeader2.mmObject();
+		}
+
+		@Override
+		public InvoiceHeader2 getValue(CardPaymentInvoice2 obj) {
+			return obj.getInvoiceHeader();
+		}
+
+		@Override
+		public void setValue(CardPaymentInvoice2 obj, InvoiceHeader2 value) {
+			obj.setInvoiceHeader(value);
 		}
 	};
 	@XmlElement(name = "TradAgrmt", required = true)
@@ -197,7 +211,7 @@ public class CardPaymentInvoice2 {
 	 * CardPaymentInvoice1.mmTradeAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeAgreement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentInvoice2, TradeAgreement13> mmTradeAgreement = new MMMessageAssociationEnd<CardPaymentInvoice2, TradeAgreement13>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmGoverningDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice2.mmObject();
@@ -211,7 +225,17 @@ public class CardPaymentInvoice2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeAgreement13.mmObject();
+			type_lazy = () -> TradeAgreement13.mmObject();
+		}
+
+		@Override
+		public TradeAgreement13 getValue(CardPaymentInvoice2 obj) {
+			return obj.getTradeAgreement();
+		}
+
+		@Override
+		public void setValue(CardPaymentInvoice2 obj, TradeAgreement13 value) {
+			obj.setTradeAgreement(value);
 		}
 	};
 	@XmlElement(name = "TradDlvry", required = true)
@@ -262,7 +286,7 @@ public class CardPaymentInvoice2 {
 	 * CardPaymentInvoice1.mmTradeDelivery}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeDelivery = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentInvoice2, TradeDelivery2> mmTradeDelivery = new MMMessageAssociationEnd<CardPaymentInvoice2, TradeDelivery2>() {
 		{
 			businessElementTrace_lazy = () -> CommercialTradeSettlement.mmProductDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice2.mmObject();
@@ -276,11 +300,21 @@ public class CardPaymentInvoice2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeDelivery2.mmObject();
+			type_lazy = () -> TradeDelivery2.mmObject();
+		}
+
+		@Override
+		public TradeDelivery2 getValue(CardPaymentInvoice2 obj) {
+			return obj.getTradeDelivery();
+		}
+
+		@Override
+		public void setValue(CardPaymentInvoice2 obj, TradeDelivery2 value) {
+			obj.setTradeDelivery(value);
 		}
 	};
 	@XmlElement(name = "LineItm")
-	protected List<com.tools20022.repository.msg.LineItem16> lineItem;
+	protected List<LineItem16> lineItem;
 	/**
 	 * 
 	 <p>
@@ -326,7 +360,7 @@ public class CardPaymentInvoice2 {
 	 * CardPaymentInvoice1.mmLineItem}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLineItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentInvoice2, List<LineItem16>> mmLineItem = new MMMessageAssociationEnd<CardPaymentInvoice2, List<LineItem16>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmLineItem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice2.mmObject();
@@ -339,7 +373,17 @@ public class CardPaymentInvoice2 {
 			previousVersion_lazy = () -> CardPaymentInvoice1.mmLineItem;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LineItem16.mmObject();
+			type_lazy = () -> LineItem16.mmObject();
+		}
+
+		@Override
+		public List<LineItem16> getValue(CardPaymentInvoice2 obj) {
+			return obj.getLineItem();
+		}
+
+		@Override
+		public void setValue(CardPaymentInvoice2 obj, List<LineItem16> value) {
+			obj.setLineItem(value);
 		}
 	};
 
@@ -364,7 +408,7 @@ public class CardPaymentInvoice2 {
 		return invoiceHeader;
 	}
 
-	public CardPaymentInvoice2 setInvoiceHeader(com.tools20022.repository.msg.InvoiceHeader2 invoiceHeader) {
+	public CardPaymentInvoice2 setInvoiceHeader(InvoiceHeader2 invoiceHeader) {
 		this.invoiceHeader = Objects.requireNonNull(invoiceHeader);
 		return this;
 	}
@@ -373,7 +417,7 @@ public class CardPaymentInvoice2 {
 		return tradeAgreement;
 	}
 
-	public CardPaymentInvoice2 setTradeAgreement(com.tools20022.repository.msg.TradeAgreement13 tradeAgreement) {
+	public CardPaymentInvoice2 setTradeAgreement(TradeAgreement13 tradeAgreement) {
 		this.tradeAgreement = Objects.requireNonNull(tradeAgreement);
 		return this;
 	}
@@ -382,7 +426,7 @@ public class CardPaymentInvoice2 {
 		return tradeDelivery;
 	}
 
-	public CardPaymentInvoice2 setTradeDelivery(com.tools20022.repository.msg.TradeDelivery2 tradeDelivery) {
+	public CardPaymentInvoice2 setTradeDelivery(TradeDelivery2 tradeDelivery) {
 		this.tradeDelivery = Objects.requireNonNull(tradeDelivery);
 		return this;
 	}
@@ -391,7 +435,7 @@ public class CardPaymentInvoice2 {
 		return lineItem == null ? lineItem = new ArrayList<>() : lineItem;
 	}
 
-	public CardPaymentInvoice2 setLineItem(List<com.tools20022.repository.msg.LineItem16> lineItem) {
+	public CardPaymentInvoice2 setLineItem(List<LineItem16> lineItem) {
 		this.lineItem = Objects.requireNonNull(lineItem);
 		return this;
 	}

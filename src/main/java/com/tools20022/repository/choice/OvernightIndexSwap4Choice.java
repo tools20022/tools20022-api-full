@@ -126,7 +126,7 @@ public class OvernightIndexSwap4Choice {
 	 * OvernightIndexSwap3Choice.mmDataSetAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwap4Choice, ReportPeriodActivity3Code> mmDataSetAction = new MMMessageAttribute<OvernightIndexSwap4Choice, ReportPeriodActivity3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OvernightIndexSwap4Choice.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class OvernightIndexSwap4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity3Code.mmObject();
+		}
+
+		@Override
+		public ReportPeriodActivity3Code getValue(OvernightIndexSwap4Choice obj) {
+			return obj.getDataSetAction();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwap4Choice obj, ReportPeriodActivity3Code value) {
+			obj.setDataSetAction(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -176,7 +186,7 @@ public class OvernightIndexSwap4Choice {
 	 * OvernightIndexSwap3Choice.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OvernightIndexSwap4Choice, List<OvernightIndexSwapTransaction4>> mmTransaction = new MMMessageAssociationEnd<OvernightIndexSwap4Choice, List<OvernightIndexSwapTransaction4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.OvernightIndexSwap4Choice.mmObject();
 			isDerived = false;
@@ -188,6 +198,16 @@ public class OvernightIndexSwap4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OvernightIndexSwapTransaction4.mmObject();
+		}
+
+		@Override
+		public List<OvernightIndexSwapTransaction4> getValue(OvernightIndexSwap4Choice obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwap4Choice obj, List<OvernightIndexSwapTransaction4> value) {
+			obj.setTransaction(value);
 		}
 	};
 

@@ -27,6 +27,8 @@ import com.tools20022.repository.choice.DateFormat22Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1;
+import com.tools20022.repository.msg.SecurityIdentification15;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -128,7 +130,7 @@ public class CorporateActionGeneralInformationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD3, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionGeneralInformationSD3, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -140,6 +142,16 @@ public class CorporateActionGeneralInformationSD3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionGeneralInformationSD3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD3 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "SctyId", required = true)
@@ -183,7 +195,7 @@ public class CorporateActionGeneralInformationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD3, SecurityIdentification15> mmSecurityIdentification = new MMMessageAttribute<CorporateActionGeneralInformationSD3, SecurityIdentification15>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -195,7 +207,17 @@ public class CorporateActionGeneralInformationSD3 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD16.mmSecurityIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
+			complexType_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification15 getValue(CorporateActionGeneralInformationSD3 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD3 obj, SecurityIdentification15 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "RcrdDt")
@@ -232,7 +254,7 @@ public class CorporateActionGeneralInformationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD3, Optional<ISODate>> mmRecordDate = new MMMessageAttribute<CorporateActionGeneralInformationSD3, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -244,6 +266,16 @@ public class CorporateActionGeneralInformationSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionGeneralInformationSD3 obj) {
+			return obj.getRecordDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD3 obj, Optional<ISODate> value) {
+			obj.setRecordDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtDt")
@@ -281,7 +313,7 @@ public class CorporateActionGeneralInformationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD3, Optional<DateFormat22Choice>> mmPaymentDate = new MMMessageAttribute<CorporateActionGeneralInformationSD3, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -294,9 +326,19 @@ public class CorporateActionGeneralInformationSD3 {
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
 		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(CorporateActionGeneralInformationSD3 obj) {
+			return obj.getPaymentDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD3 obj, Optional<DateFormat22Choice> value) {
+			obj.setPaymentDate(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "UallctdDtls")
-	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1> unallocatedDetails;
+	protected List<CorporateActionUnallocatedDetailsSD1> unallocatedDetails;
 	/**
 	 * 
 	 <p>
@@ -335,7 +377,7 @@ public class CorporateActionGeneralInformationSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnallocatedDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionGeneralInformationSD3, List<CorporateActionUnallocatedDetailsSD1>> mmUnallocatedDetails = new MMMessageAssociationEnd<CorporateActionGeneralInformationSD3, List<CorporateActionUnallocatedDetailsSD1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD3.mmObject();
 			isDerived = false;
@@ -347,7 +389,17 @@ public class CorporateActionGeneralInformationSD3 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD16.mmUnallocatedDetails);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1.mmObject();
+			type_lazy = () -> CorporateActionUnallocatedDetailsSD1.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionUnallocatedDetailsSD1> getValue(CorporateActionGeneralInformationSD3 obj) {
+			return obj.getUnallocatedDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD3 obj, List<CorporateActionUnallocatedDetailsSD1> value) {
+			obj.setUnallocatedDetails(value);
 		}
 	};
 
@@ -380,7 +432,7 @@ public class CorporateActionGeneralInformationSD3 {
 		return securityIdentification;
 	}
 
-	public CorporateActionGeneralInformationSD3 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
+	public CorporateActionGeneralInformationSD3 setSecurityIdentification(SecurityIdentification15 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}
@@ -407,7 +459,7 @@ public class CorporateActionGeneralInformationSD3 {
 		return unallocatedDetails == null ? unallocatedDetails = new ArrayList<>() : unallocatedDetails;
 	}
 
-	public CorporateActionGeneralInformationSD3 setUnallocatedDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD1> unallocatedDetails) {
+	public CorporateActionGeneralInformationSD3 setUnallocatedDetails(List<CorporateActionUnallocatedDetailsSD1> unallocatedDetails) {
 		this.unallocatedDetails = Objects.requireNonNull(unallocatedDetails);
 		return this;
 	}

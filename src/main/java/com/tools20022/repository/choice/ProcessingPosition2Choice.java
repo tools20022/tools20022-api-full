@@ -117,7 +117,7 @@ public class ProcessingPosition2Choice {
 	 * definition} = "Processing position expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessingPosition2Choice, ProcessingPosition1Code> mmCode = new MMMessageAttribute<ProcessingPosition2Choice, ProcessingPosition1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingPosition2Choice.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class ProcessingPosition2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProcessingPosition1Code.mmObject();
+		}
+
+		@Override
+		public ProcessingPosition1Code getValue(ProcessingPosition2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ProcessingPosition2Choice obj, ProcessingPosition1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class ProcessingPosition2Choice {
 	 * definition} = "Processing position expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessingPosition2Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<ProcessingPosition2Choice, GenericIdentification20>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingPosition2Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class ProcessingPosition2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(ProcessingPosition2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ProcessingPosition2Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

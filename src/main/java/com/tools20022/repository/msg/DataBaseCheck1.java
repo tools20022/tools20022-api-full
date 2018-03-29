@@ -98,7 +98,7 @@ public class DataBaseCheck1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatabaseCheck = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataBaseCheck1, YesNoIndicator> mmDatabaseCheck = new MMMessageAttribute<DataBaseCheck1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataBaseCheck1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class DataBaseCheck1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DataBaseCheck1 obj) {
+			return obj.getDatabaseCheck();
+		}
+
+		@Override
+		public void setValue(DataBaseCheck1 obj, YesNoIndicator value) {
+			obj.setDatabaseCheck(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -139,7 +149,7 @@ public class DataBaseCheck1 {
 	 * definition} = "Identification of the database."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataBaseCheck1, Max35Text> mmIdentification = new MMMessageAttribute<DataBaseCheck1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataBaseCheck1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class DataBaseCheck1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DataBaseCheck1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DataBaseCheck1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

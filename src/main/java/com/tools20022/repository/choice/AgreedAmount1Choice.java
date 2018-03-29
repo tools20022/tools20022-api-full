@@ -129,7 +129,7 @@ public class AgreedAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgreedAmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AgreedAmount1Choice, AgreedAmount1> mmAgreedAmountDetails = new MMMessageAssociationEnd<AgreedAmount1Choice, AgreedAmount1>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AgreedAmount1Choice.mmObject();
@@ -142,6 +142,16 @@ public class AgreedAmount1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AgreedAmount1.mmObject();
+		}
+
+		@Override
+		public AgreedAmount1 getValue(AgreedAmount1Choice obj) {
+			return obj.getAgreedAmountDetails();
+		}
+
+		@Override
+		public void setValue(AgreedAmount1Choice obj, AgreedAmount1 value) {
+			obj.setAgreedAmountDetails(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
@@ -178,7 +188,7 @@ public class AgreedAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AgreedAmount1Choice, Amount1> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<AgreedAmount1Choice, Amount1>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AgreedAmount1Choice.mmObject();
@@ -191,6 +201,16 @@ public class AgreedAmount1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Amount1.mmObject();
+		}
+
+		@Override
+		public Amount1 getValue(AgreedAmount1Choice obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(AgreedAmount1Choice obj, Amount1 value) {
+			obj.setSegregatedIndependentAmount(value);
 		}
 	};
 

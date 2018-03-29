@@ -117,7 +117,7 @@ public class RequestDetails19 {
 	 * RequestDetails3.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails19, Max35Text> mmType = new MMMessageAttribute<RequestDetails19, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails19.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class RequestDetails19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RequestDetails19 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(RequestDetails19 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "RqstrId")
@@ -166,7 +176,7 @@ public class RequestDetails19 {
 	 * RequestDetails3.mmKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestorIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails19, Optional<PartyIdentification73Choice>> mmRequestorIdentification = new MMMessageAttribute<RequestDetails19, Optional<PartyIdentification73Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails19.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class RequestDetails19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(RequestDetails19 obj) {
+			return obj.getRequestorIdentification();
+		}
+
+		@Override
+		public void setValue(RequestDetails19 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setRequestorIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlReqInf")
@@ -210,7 +230,7 @@ public class RequestDetails19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalRequestInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails19, List<Max35Text>> mmAdditionalRequestInformation = new MMMessageAttribute<RequestDetails19, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails19.mmObject();
 			isDerived = false;
@@ -220,6 +240,16 @@ public class RequestDetails19 {
 			definition = "Additional information to support the processing request.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(RequestDetails19 obj) {
+			return obj.getAdditionalRequestInformation();
+		}
+
+		@Override
+		public void setValue(RequestDetails19 obj, List<Max35Text> value) {
+			obj.setAdditionalRequestInformation(value);
 		}
 	};
 

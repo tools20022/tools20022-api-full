@@ -52,11 +52,15 @@ public class ConstraintDeclarationDetailsRule {
 	 */
 	public static final MMConstraint<PartyIdentification33> forPartyIdentification33 = new MMConstraint<PartyIdentification33>() {
 		{
-			validator = ConstraintDeclarationDetailsRule::checkPartyIdentification33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyIdentification33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification33 obj) throws Exception {
+			checkPartyIdentification33(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintDeclarationDetailsRule {
 	 */
 	public static final MMConstraint<PartyIdentification34> forPartyIdentification34 = new MMConstraint<PartyIdentification34>() {
 		{
-			validator = ConstraintDeclarationDetailsRule::checkPartyIdentification34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyIdentification34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification34 obj) throws Exception {
+			checkPartyIdentification34(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintDeclarationDetailsRule {
 	 */
 	public static final MMConstraint<PartyIdentification50> forPartyIdentification50 = new MMConstraint<PartyIdentification50>() {
 		{
-			validator = ConstraintDeclarationDetailsRule::checkPartyIdentification50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyIdentification50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification50 obj) throws Exception {
+			checkPartyIdentification50(obj);
 		}
 	};
 	/**
@@ -142,11 +154,15 @@ public class ConstraintDeclarationDetailsRule {
 	 */
 	public static final MMConstraint<PartyIdentification51> forPartyIdentification51 = new MMConstraint<PartyIdentification51>() {
 		{
-			validator = ConstraintDeclarationDetailsRule::checkPartyIdentification51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyIdentification51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification51 obj) throws Exception {
+			checkPartyIdentification51(obj);
 		}
 	};
 	/**
@@ -180,12 +196,16 @@ public class ConstraintDeclarationDetailsRule {
 	 */
 	public static final MMConstraint<PartyIdentification56> forPartyIdentification56 = new MMConstraint<PartyIdentification56>() {
 		{
-			validator = ConstraintDeclarationDetailsRule::checkPartyIdentification56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeclarationDetailsRule.forPartyIdentification93);
 			owner_lazy = () -> PartyIdentification56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification56 obj) throws Exception {
+			checkPartyIdentification56(obj);
 		}
 	};
 	/**
@@ -211,11 +231,15 @@ public class ConstraintDeclarationDetailsRule {
 	 */
 	public static final MMConstraint<PartyIdentification57> forPartyIdentification57 = new MMConstraint<PartyIdentification57>() {
 		{
-			validator = ConstraintDeclarationDetailsRule::checkPartyIdentification57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyIdentification57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification57 obj) throws Exception {
+			checkPartyIdentification57(obj);
 		}
 	};
 	/**
@@ -246,12 +270,16 @@ public class ConstraintDeclarationDetailsRule {
 	 */
 	public static final MMConstraint<PartyIdentification93> forPartyIdentification93 = new MMConstraint<PartyIdentification93>() {
 		{
-			validator = ConstraintDeclarationDetailsRule::checkPartyIdentification93;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeclarationDetailsRule.forPartyIdentification56;
 			owner_lazy = () -> PartyIdentification93.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification93 obj) throws Exception {
+			checkPartyIdentification93(obj);
 		}
 	};
 	/**
@@ -277,11 +305,15 @@ public class ConstraintDeclarationDetailsRule {
 	 */
 	public static final MMConstraint<PartyIdentification101> forPartyIdentification101 = new MMConstraint<PartyIdentification101>() {
 		{
-			validator = ConstraintDeclarationDetailsRule::checkPartyIdentification101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetailsRule";
 			definition = "Unless bilaterally agreed, DeclarionDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyIdentification101.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification101 obj) throws Exception {
+			checkPartyIdentification101(obj);
 		}
 	};
 

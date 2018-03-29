@@ -118,7 +118,7 @@ public class AccountOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOrOperationalError1Choice, List<AccountReport13>> mmAccountReport = new MMMessageAssociationEnd<AccountOrOperationalError1Choice, List<AccountReport13>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class AccountOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountReport13.mmObject();
+		}
+
+		@Override
+		public List<AccountReport13> getValue(AccountOrOperationalError1Choice obj) {
+			return obj.getAccountReport();
+		}
+
+		@Override
+		public void setValue(AccountOrOperationalError1Choice obj, List<AccountReport13> value) {
+			obj.setAccountReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -170,7 +180,7 @@ public class AccountOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOrOperationalError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<AccountOrOperationalError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class AccountOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(AccountOrOperationalError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(AccountOrOperationalError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

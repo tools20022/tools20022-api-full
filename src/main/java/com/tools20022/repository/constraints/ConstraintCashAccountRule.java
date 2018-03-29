@@ -60,12 +60,16 @@ public class ConstraintCashAccountRule {
 	 */
 	public static final MMConstraint<IntraBalanceCancellation1> forIntraBalanceCancellation1 = new MMConstraint<IntraBalanceCancellation1>() {
 		{
-			validator = ConstraintCashAccountRule::checkIntraBalanceCancellation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountRule";
 			definition = "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceCancellation3);
 			owner_lazy = () -> IntraBalanceCancellation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceCancellation1 obj) throws Exception {
+			checkIntraBalanceCancellation1(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintCashAccountRule {
 	 */
 	public static final MMConstraint<IntraBalanceMovements1> forIntraBalanceMovements1 = new MMConstraint<IntraBalanceMovements1>() {
 		{
-			validator = ConstraintCashAccountRule::checkIntraBalanceMovements1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountRule";
 			definition = "CashAccount must be present or Movement(*)/CashAccount must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceMovements2);
 			owner_lazy = () -> IntraBalanceMovements1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceMovements1 obj) throws Exception {
+			checkIntraBalanceMovements1(obj);
 		}
 	};
 	/**
@@ -138,12 +146,16 @@ public class ConstraintCashAccountRule {
 	 */
 	public static final MMConstraint<IntraBalanceModification1> forIntraBalanceModification1 = new MMConstraint<IntraBalanceModification1>() {
 		{
-			validator = ConstraintCashAccountRule::checkIntraBalanceModification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountRule";
 			definition = "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceModification3);
 			owner_lazy = () -> IntraBalanceModification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceModification1 obj) throws Exception {
+			checkIntraBalanceModification1(obj);
 		}
 	};
 	/**
@@ -174,12 +186,16 @@ public class ConstraintCashAccountRule {
 	 */
 	public static final MMConstraint<IntraBalanceCancellation3> forIntraBalanceCancellation3 = new MMConstraint<IntraBalanceCancellation3>() {
 		{
-			validator = ConstraintCashAccountRule::checkIntraBalanceCancellation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountRule";
 			definition = "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceCancellation1;
 			owner_lazy = () -> IntraBalanceCancellation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceCancellation3 obj) throws Exception {
+			checkIntraBalanceCancellation3(obj);
 		}
 	};
 	/**
@@ -210,12 +226,16 @@ public class ConstraintCashAccountRule {
 	 */
 	public static final MMConstraint<IntraBalanceMovements2> forIntraBalanceMovements2 = new MMConstraint<IntraBalanceMovements2>() {
 		{
-			validator = ConstraintCashAccountRule::checkIntraBalanceMovements2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountRule";
 			definition = "CashAccount must be present or Movement(*)/CashAccount must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceMovements1;
 			owner_lazy = () -> IntraBalanceMovements2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceMovements2 obj) throws Exception {
+			checkIntraBalanceMovements2(obj);
 		}
 	};
 	/**
@@ -246,12 +266,16 @@ public class ConstraintCashAccountRule {
 	 */
 	public static final MMConstraint<IntraBalanceModification3> forIntraBalanceModification3 = new MMConstraint<IntraBalanceModification3>() {
 		{
-			validator = ConstraintCashAccountRule::checkIntraBalanceModification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountRule";
 			definition = "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceModification1;
 			owner_lazy = () -> IntraBalanceModification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceModification3 obj) throws Exception {
+			checkIntraBalanceModification3(obj);
 		}
 	};
 

@@ -118,7 +118,7 @@ public class ElectionAmendmentStatus1Choice {
 	 * "Provides information about the processing status of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ElectionAmendmentStatus1Choice, CorporateActionAmendmentProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<ElectionAmendmentStatus1Choice, CorporateActionAmendmentProcessingStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionAmendmentStatus1Choice.mmObject();
@@ -131,6 +131,16 @@ public class ElectionAmendmentStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionAmendmentProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionAmendmentProcessingStatus1 getValue(ElectionAmendmentStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(ElectionAmendmentStatus1Choice obj, CorporateActionAmendmentProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -167,7 +177,7 @@ public class ElectionAmendmentStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ElectionAmendmentStatus1Choice, CorporateActionAmendmentRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<ElectionAmendmentStatus1Choice, CorporateActionAmendmentRejectionStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionAmendmentStatus1Choice.mmObject();
@@ -180,6 +190,16 @@ public class ElectionAmendmentStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionAmendmentRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionAmendmentRejectionStatus1 getValue(ElectionAmendmentStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(ElectionAmendmentStatus1Choice obj, CorporateActionAmendmentRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

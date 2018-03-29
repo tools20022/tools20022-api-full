@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm5Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -117,7 +118,7 @@ public class Parameter2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter2, Optional<Algorithm5Code>> mmDigestAlgorithm = new MMMessageAttribute<Parameter2, Optional<Algorithm5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter2.mmObject();
 			isDerived = false;
@@ -129,6 +130,16 @@ public class Parameter2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm5Code.mmObject();
+		}
+
+		@Override
+		public Optional<Algorithm5Code> getValue(Parameter2 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter2 obj, Optional<Algorithm5Code> value) {
+			obj.setDigestAlgorithm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MskGnrtrAlgo")
@@ -169,7 +180,7 @@ public class Parameter2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter2, Optional<AlgorithmIdentification8>> mmMaskGeneratorAlgorithm = new MMMessageAttribute<Parameter2, Optional<AlgorithmIdentification8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter2.mmObject();
 			isDerived = false;
@@ -180,7 +191,17 @@ public class Parameter2 {
 			nextVersions_lazy = () -> Arrays.asList(Parameter4.mmMaskGeneratorAlgorithm);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification8.mmObject();
+			complexType_lazy = () -> AlgorithmIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<AlgorithmIdentification8> getValue(Parameter2 obj) {
+			return obj.getMaskGeneratorAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter2 obj, Optional<AlgorithmIdentification8> value) {
+			obj.setMaskGeneratorAlgorithm(value.orElse(null));
 		}
 	};
 
@@ -212,7 +233,7 @@ public class Parameter2 {
 		return maskGeneratorAlgorithm == null ? Optional.empty() : Optional.of(maskGeneratorAlgorithm);
 	}
 
-	public Parameter2 setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification8 maskGeneratorAlgorithm) {
+	public Parameter2 setMaskGeneratorAlgorithm(AlgorithmIdentification8 maskGeneratorAlgorithm) {
 		this.maskGeneratorAlgorithm = maskGeneratorAlgorithm;
 		return this;
 	}

@@ -116,7 +116,7 @@ public class CountryAndResidentialStatusType2 {
 	 * CountryAndResidentialStatusType1.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CountryAndResidentialStatusType2, CountryCode> mmCountry = new MMMessageAttribute<CountryAndResidentialStatusType2, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType2.mmObject();
@@ -129,6 +129,16 @@ public class CountryAndResidentialStatusType2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(CountryAndResidentialStatusType2 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(CountryAndResidentialStatusType2 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "ResdtlSts", required = true)
@@ -173,7 +183,7 @@ public class CountryAndResidentialStatusType2 {
 	 * CountryAndResidentialStatusType1.mmResidentialStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResidentialStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CountryAndResidentialStatusType2, ResidentialStatus1Code> mmResidentialStatus = new MMMessageAttribute<CountryAndResidentialStatusType2, ResidentialStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmResidentialStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType2.mmObject();
@@ -186,6 +196,16 @@ public class CountryAndResidentialStatusType2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResidentialStatus1Code.mmObject();
+		}
+
+		@Override
+		public ResidentialStatus1Code getValue(CountryAndResidentialStatusType2 obj) {
+			return obj.getResidentialStatus();
+		}
+
+		@Override
+		public void setValue(CountryAndResidentialStatusType2 obj, ResidentialStatus1Code value) {
+			obj.setResidentialStatus(value);
 		}
 	};
 

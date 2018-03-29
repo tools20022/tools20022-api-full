@@ -124,7 +124,7 @@ public class SettlementStandingInstructionDatabase4Choice {
 	 * SettlementStandingInstructionDatabase1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementStandingInstructionDatabase4Choice, SettlementStandingInstructionDatabase1Code> mmCode = new MMMessageAttribute<SettlementStandingInstructionDatabase4Choice, SettlementStandingInstructionDatabase1Code>() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmSettlementStandingInstructionDatabase;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStandingInstructionDatabase4Choice.mmObject();
@@ -138,6 +138,16 @@ public class SettlementStandingInstructionDatabase4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementStandingInstructionDatabase1Code.mmObject();
+		}
+
+		@Override
+		public SettlementStandingInstructionDatabase1Code getValue(SettlementStandingInstructionDatabase4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementStandingInstructionDatabase4Choice obj, SettlementStandingInstructionDatabase1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +195,7 @@ public class SettlementStandingInstructionDatabase4Choice {
 	 * SettlementStandingInstructionDatabase1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementStandingInstructionDatabase4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<SettlementStandingInstructionDatabase4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmSettlementStandingInstructionDatabase;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStandingInstructionDatabase4Choice.mmObject();
@@ -199,6 +209,16 @@ public class SettlementStandingInstructionDatabase4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(SettlementStandingInstructionDatabase4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementStandingInstructionDatabase4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

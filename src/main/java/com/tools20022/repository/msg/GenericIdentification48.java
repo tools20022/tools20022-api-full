@@ -115,7 +115,7 @@ public class GenericIdentification48 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification48, Max35Text> mmIdentification = new MMMessageAttribute<GenericIdentification48, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification48.mmObject();
@@ -127,6 +127,16 @@ public class GenericIdentification48 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification48 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification48 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -158,7 +168,7 @@ public class GenericIdentification48 {
 	 * definition} = "Version of the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification48, Max35Text> mmVersion = new MMMessageAttribute<GenericIdentification48, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification48.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class GenericIdentification48 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification48 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(GenericIdentification48 obj, Max35Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -205,7 +225,7 @@ public class GenericIdentification48 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification48, Max35Text> mmIssuer = new MMMessageAttribute<GenericIdentification48, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification48.mmObject();
@@ -217,6 +237,16 @@ public class GenericIdentification48 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification48 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification48 obj, Max35Text value) {
+			obj.setIssuer(value);
 		}
 	};
 

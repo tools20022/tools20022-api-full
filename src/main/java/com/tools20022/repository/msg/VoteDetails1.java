@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Vote1Choice;
 import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.VoteInstructionForMeetingResolution1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class VoteDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteDetails1, Vote1Choice> mmVoteInstructionForAgendaResolution = new MMMessageAssociationEnd<VoteDetails1, Vote1Choice>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteDetails1.mmObject();
@@ -119,6 +120,16 @@ public class VoteDetails1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Vote1Choice.mmObject();
+		}
+
+		@Override
+		public Vote1Choice getValue(VoteDetails1 obj) {
+			return obj.getVoteInstructionForAgendaResolution();
+		}
+
+		@Override
+		public void setValue(VoteDetails1 obj, Vote1Choice value) {
+			obj.setVoteInstructionForAgendaResolution(value);
 		}
 	};
 	@XmlElement(name = "VoteInstrForMtgRsltn")
@@ -156,7 +167,7 @@ public class VoteDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteDetails1, Optional<VoteInstructionForMeetingResolution1>> mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd<VoteDetails1, Optional<VoteInstructionForMeetingResolution1>>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteDetails1.mmObject();
@@ -168,7 +179,17 @@ public class VoteDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.VoteInstructionForMeetingResolution1.mmObject();
+			type_lazy = () -> VoteInstructionForMeetingResolution1.mmObject();
+		}
+
+		@Override
+		public Optional<VoteInstructionForMeetingResolution1> getValue(VoteDetails1 obj) {
+			return obj.getVoteInstructionForMeetingResolution();
+		}
+
+		@Override
+		public void setValue(VoteDetails1 obj, Optional<VoteInstructionForMeetingResolution1> value) {
+			obj.setVoteInstructionForMeetingResolution(value.orElse(null));
 		}
 	};
 
@@ -199,7 +220,7 @@ public class VoteDetails1 {
 		return voteInstructionForMeetingResolution == null ? Optional.empty() : Optional.of(voteInstructionForMeetingResolution);
 	}
 
-	public VoteDetails1 setVoteInstructionForMeetingResolution(com.tools20022.repository.msg.VoteInstructionForMeetingResolution1 voteInstructionForMeetingResolution) {
+	public VoteDetails1 setVoteInstructionForMeetingResolution(VoteInstructionForMeetingResolution1 voteInstructionForMeetingResolution) {
 		this.voteInstructionForMeetingResolution = voteInstructionForMeetingResolution;
 		return this;
 	}

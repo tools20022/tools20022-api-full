@@ -52,11 +52,15 @@ public class ConstraintTotalReturnedInterbankSettlementAmount2Rule {
 	 */
 	public static final MMConstraint<PaymentReturnV01> forPaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
 		{
-			validator = ConstraintTotalReturnedInterbankSettlementAmount2Rule::checkPaymentReturnV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmount2Rule";
 			definition = "GroupHeader/TotalReturnedInterbankSettlementAmount must equal the sum of all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount when present.";
 			owner_lazy = () -> PaymentReturnV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV01 obj) throws Exception {
+			checkPaymentReturnV01(obj);
 		}
 	};
 

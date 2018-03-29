@@ -108,7 +108,7 @@ public class Charge21 {
 	 * definition} = "Type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Charge21, ChargeType1Choice> mmChargeType = new MMMessageAssociationEnd<Charge21, ChargeType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge21.mmObject();
@@ -121,6 +121,16 @@ public class Charge21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ChargeType1Choice.mmObject();
+		}
+
+		@Override
+		public ChargeType1Choice getValue(Charge21 obj) {
+			return obj.getChargeType();
+		}
+
+		@Override
+		public void setValue(Charge21 obj, ChargeType1Choice value) {
+			obj.setChargeType(value);
 		}
 	};
 	@XmlElement(name = "ChrgAmtOrRate", required = true)
@@ -154,7 +164,7 @@ public class Charge21 {
 	 * definition} = "Amount or rate of the charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeAmountOrRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Charge21, AmountRate1Choice> mmChargeAmountOrRate = new MMMessageAssociationEnd<Charge21, AmountRate1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge21.mmObject();
@@ -167,6 +177,16 @@ public class Charge21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountRate1Choice.mmObject();
+		}
+
+		@Override
+		public AmountRate1Choice getValue(Charge21 obj) {
+			return obj.getChargeAmountOrRate();
+		}
+
+		@Override
+		public void setValue(Charge21 obj, AmountRate1Choice value) {
+			obj.setChargeAmountOrRate(value);
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -204,7 +224,7 @@ public class Charge21 {
 	 * "Party entitled to the amount of money resulting from a charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge21, Optional<PartyIdentification2Choice>> mmRecipientIdentification = new MMMessageAttribute<Charge21, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge21.mmObject();
@@ -216,6 +236,16 @@ public class Charge21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Charge21 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Charge21 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 

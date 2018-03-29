@@ -115,7 +115,7 @@ public class GenericIdentification27 {
 	 * definition} = "Identification assigned by an institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification27, Max4AlphaNumericText> mmIdentification = new MMMessageAttribute<GenericIdentification27, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification27.mmObject();
@@ -127,6 +127,16 @@ public class GenericIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(GenericIdentification27 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification27 obj, Max4AlphaNumericText value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SchmeNm")
@@ -164,7 +174,7 @@ public class GenericIdentification27 {
 	 * definition} = "Name of the identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification27, Optional<Max4AlphaNumericText>> mmSchemeName = new MMMessageAttribute<GenericIdentification27, Optional<Max4AlphaNumericText>>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification27.mmObject();
@@ -176,6 +186,16 @@ public class GenericIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(GenericIdentification27 obj) {
+			return obj.getSchemeName();
+		}
+
+		@Override
+		public void setValue(GenericIdentification27 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setSchemeName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -213,7 +233,7 @@ public class GenericIdentification27 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification27, Max4AlphaNumericText> mmIssuer = new MMMessageAttribute<GenericIdentification27, Max4AlphaNumericText>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification27.mmObject();
@@ -225,6 +245,16 @@ public class GenericIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(GenericIdentification27 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification27 obj, Max4AlphaNumericText value) {
+			obj.setIssuer(value);
 		}
 	};
 

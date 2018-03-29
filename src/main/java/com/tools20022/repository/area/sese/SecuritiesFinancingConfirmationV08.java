@@ -24,7 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset._SR2018_SettlementandReconciliation;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -111,6 +111,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion
+ * SettlementAndReconciliationISOLatestversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_SettlementandReconciliation
  * _SR2018_SettlementandReconciliation}</li>
@@ -204,7 +207,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmTransactionIdentificationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, TransactionTypeAndAdditionalParameters16> mmTransactionIdentificationDetails = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, TransactionTypeAndAdditionalParameters16>() {
 		{
 			xmlTag = "TxIdDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,12 +219,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> TransactionTypeAndAdditionalParameters16.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getTransactionIdentificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionTypeAndAdditionalParameters16 getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getTransactionIdentificationDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, TransactionTypeAndAdditionalParameters16 value) {
+			obj.setTransactionIdentificationDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlParams")
@@ -254,7 +259,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmAdditionalParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdditionalParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<AdditionalParameters24>> mmAdditionalParameters = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<AdditionalParameters24>>() {
 		{
 			xmlTag = "AddtlParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,12 +271,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> AdditionalParameters24.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getAdditionalParameters", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalParameters24> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getAdditionalParameters();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<AdditionalParameters24> value) {
+			obj.setAdditionalParameters(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDtls", required = true)
@@ -304,7 +311,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmTradeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, SecuritiesTradeDetails74> mmTradeDetails = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, SecuritiesTradeDetails74>() {
 		{
 			xmlTag = "TradDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,12 +323,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> SecuritiesTradeDetails74.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getTradeDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesTradeDetails74 getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getTradeDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, SecuritiesTradeDetails74 value) {
+			obj.setTradeDetails(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmId", required = true)
@@ -356,7 +365,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, SecurityIdentification19> mmFinancialInstrumentIdentification = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, SecurityIdentification19>() {
 		{
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,12 +377,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> SecurityIdentification19.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getFinancialInstrumentIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecurityIdentification19 getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, SecurityIdentification19 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmAttrbts")
@@ -406,7 +417,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmFinancialInstrumentAttributes}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancialInstrumentAttributes = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<FinancialInstrumentAttributes91>> mmFinancialInstrumentAttributes = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<FinancialInstrumentAttributes91>>() {
 		{
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -418,12 +429,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> FinancialInstrumentAttributes91.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getFinancialInstrumentAttributes", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<FinancialInstrumentAttributes91> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<FinancialInstrumentAttributes91> value) {
+			obj.setFinancialInstrumentAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtyAndAcctDtls", required = true)
@@ -458,7 +471,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmQuantityAndAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQuantityAndAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, QuantityAndAccount40> mmQuantityAndAccountDetails = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, QuantityAndAccount40>() {
 		{
 			xmlTag = "QtyAndAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -470,12 +483,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> QuantityAndAccount40.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getQuantityAndAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public QuantityAndAccount40 getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getQuantityAndAccountDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, QuantityAndAccount40 value) {
+			obj.setQuantityAndAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "SctiesFincgDtls")
@@ -509,7 +524,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmSecuritiesFinancingDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecuritiesFinancingDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<SecuritiesFinancingTransactionDetails37>> mmSecuritiesFinancingDetails = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<SecuritiesFinancingTransactionDetails37>>() {
 		{
 			xmlTag = "SctiesFincgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -521,12 +536,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> SecuritiesFinancingTransactionDetails37.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getSecuritiesFinancingDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SecuritiesFinancingTransactionDetails37> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getSecuritiesFinancingDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<SecuritiesFinancingTransactionDetails37> value) {
+			obj.setSecuritiesFinancingDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StgSttlmInstrDtls")
@@ -562,7 +579,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStandingSettlementInstructionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<StandingSettlementInstruction14>> mmStandingSettlementInstructionDetails = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<StandingSettlementInstruction14>>() {
 		{
 			xmlTag = "StgSttlmInstrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -574,12 +591,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> StandingSettlementInstruction14.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getStandingSettlementInstructionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<StandingSettlementInstruction14> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getStandingSettlementInstructionDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<StandingSettlementInstruction14> value) {
+			obj.setStandingSettlementInstructionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmParams")
@@ -614,7 +633,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmSettlementParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<SettlementDetails147>> mmSettlementParameters = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<SettlementDetails147>>() {
 		{
 			xmlTag = "SttlmParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -626,12 +645,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> SettlementDetails147.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getSettlementParameters", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementDetails147> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getSettlementParameters();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<SettlementDetails147> value) {
+			obj.setSettlementParameters(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvrgSttlmPties")
@@ -664,7 +685,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDeliveringSettlementParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<SettlementParties62>> mmDeliveringSettlementParties = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<SettlementParties62>>() {
 		{
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -676,12 +697,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> SettlementParties62.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getDeliveringSettlementParties", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementParties62> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getDeliveringSettlementParties();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<SettlementParties62> value) {
+			obj.setDeliveringSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvgSttlmPties")
@@ -714,7 +737,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReceivingSettlementParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<SettlementParties62>> mmReceivingSettlementParties = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<SettlementParties62>>() {
 		{
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -726,12 +749,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> SettlementParties62.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getReceivingSettlementParties", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementParties62> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getReceivingSettlementParties();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<SettlementParties62> value) {
+			obj.setReceivingSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshPties")
@@ -765,7 +790,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmCashParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCashParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<CashParties26>> mmCashParties = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<CashParties26>>() {
 		{
 			xmlTag = "CshPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -777,12 +802,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> CashParties26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getCashParties", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CashParties26> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getCashParties();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<CashParties26> value) {
+			obj.setCashParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttldAmt")
@@ -817,7 +844,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmSettledAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettledAmount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<AmountAndDirection87>> mmSettledAmount = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<AmountAndDirection87>>() {
 		{
 			xmlTag = "SttldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -829,12 +856,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> AmountAndDirection87.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getSettledAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AmountAndDirection87> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getSettledAmount();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<AmountAndDirection87> value) {
+			obj.setSettledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrAmts")
@@ -866,7 +895,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmOtherAmounts}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<OtherAmounts41>> mmOtherAmounts = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<OtherAmounts41>>() {
 		{
 			xmlTag = "OthrAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -878,12 +907,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> OtherAmounts41.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getOtherAmounts", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<OtherAmounts41> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getOtherAmounts();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<OtherAmounts41> value) {
+			obj.setOtherAmounts(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrBizPties")
@@ -915,7 +946,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmOtherBusinessParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherBusinessParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<OtherParties27>> mmOtherBusinessParties = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, Optional<OtherParties27>>() {
 		{
 			xmlTag = "OthrBizPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -927,12 +958,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> OtherParties27.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getOtherBusinessParties", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<OtherParties27> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getOtherBusinessParties();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, Optional<OtherParties27> value) {
+			obj.setOtherBusinessParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -967,7 +1000,7 @@ public class SecuritiesFinancingConfirmationV08 {
 	 * SecuritiesFinancingConfirmationV07.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<SecuritiesFinancingConfirmationV08, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -978,12 +1011,14 @@ public class SecuritiesFinancingConfirmationV08 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingConfirmationV08.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesFinancingConfirmationV08 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingConfirmationV08 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -999,7 +1034,7 @@ public class SecuritiesFinancingConfirmationV08 {
 				name = "SecuritiesFinancingConfirmationV08";
 				definition = "Scope\r\nA securities financing transaction account servicer sends a SecuritiesFinancingConfirmation to an account owner to confirm or advise of the partial or full settlement of the opening or closing leg of a securities financing transaction. \r\n\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants\r\n- an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or \r\n- a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.\r\n\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
 				previousVersion_lazy = () -> SecuritiesFinancingConfirmationV07.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_SettlementandReconciliation.mmObject());
+				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOLatestversion.mmObject(), _SR2018_SettlementandReconciliation.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesFincgConf";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();

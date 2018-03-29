@@ -62,13 +62,17 @@ public class ConstraintNumberOfTransactionsAndCreditTransfersRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV07> forFIToFICustomerCreditTransferV07 = new MMConstraint<FIToFICustomerCreditTransferV07>() {
 		{
-			validator = ConstraintNumberOfTransactionsAndCreditTransfersRule::checkFIToFICustomerCreditTransferV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsAndCreditTransfersRule";
 			definition = "GroupHeader/NumberOfTransactions must equal the number of occurrences of CreditTransferTransactionInformation.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionsAndCreditTransfersRule.forFIToFICustomerCreditTransferV06;
 			owner_lazy = () -> FIToFICustomerCreditTransferV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/NumberOfTransactions</leftOperand><rightOperand>number of occurrences of CreditTransferTransactionInformation</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV07 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV07(obj);
 		}
 	};
 	/**
@@ -113,7 +117,6 @@ public class ConstraintNumberOfTransactionsAndCreditTransfersRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV06> forFIToFICustomerCreditTransferV06 = new MMConstraint<FIToFICustomerCreditTransferV06>() {
 		{
-			validator = ConstraintNumberOfTransactionsAndCreditTransfersRule::checkFIToFICustomerCreditTransferV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsAndCreditTransfersRule";
 			definition = "GroupHeader/NumberOfTransactions must equal the number of occurrences of CreditTransferTransactionInformation.";
@@ -121,6 +124,11 @@ public class ConstraintNumberOfTransactionsAndCreditTransfersRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionsAndCreditTransfersRule.forFIToFICustomerCreditTransferV05;
 			owner_lazy = () -> FIToFICustomerCreditTransferV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/NumberOfTransactions</leftOperand><rightOperand>number of occurrences of CreditTransferTransactionInformation</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV06 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV06(obj);
 		}
 	};
 	/**
@@ -150,12 +158,16 @@ public class ConstraintNumberOfTransactionsAndCreditTransfersRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV02> forFIToFICustomerCreditTransferV02 = new MMConstraint<FIToFICustomerCreditTransferV02>() {
 		{
-			validator = ConstraintNumberOfTransactionsAndCreditTransfersRule::checkFIToFICustomerCreditTransferV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsAndCreditTransfersRule";
 			definition = "GroupHeader/NumberOfTransactions must equal the number of occurrences of CreditTransferTransactionInformation.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/NumberOfTransactions</leftOperand><rightOperand>number of occurrences of CreditTransferTransactionInformation</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV02 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV02(obj);
 		}
 	};
 	/**
@@ -185,12 +197,16 @@ public class ConstraintNumberOfTransactionsAndCreditTransfersRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV03> forFIToFICustomerCreditTransferV03 = new MMConstraint<FIToFICustomerCreditTransferV03>() {
 		{
-			validator = ConstraintNumberOfTransactionsAndCreditTransfersRule::checkFIToFICustomerCreditTransferV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsAndCreditTransfersRule";
 			definition = "GroupHeader/NumberOfTransactions must equal the number of occurrences of CreditTransferTransactionInformation.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/NumberOfTransactions</leftOperand><rightOperand>number of occurrences of CreditTransferTransactionInformation</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV03 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV03(obj);
 		}
 	};
 	/**
@@ -229,13 +245,17 @@ public class ConstraintNumberOfTransactionsAndCreditTransfersRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV04> forFIToFICustomerCreditTransferV04 = new MMConstraint<FIToFICustomerCreditTransferV04>() {
 		{
-			validator = ConstraintNumberOfTransactionsAndCreditTransfersRule::checkFIToFICustomerCreditTransferV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsAndCreditTransfersRule";
 			definition = "GroupHeader/NumberOfTransactions must equal the number of occurrences of CreditTransferTransactionInformation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNumberOfTransactionsAndCreditTransfersRule.forFIToFICustomerCreditTransferV05);
 			owner_lazy = () -> FIToFICustomerCreditTransferV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/NumberOfTransactions</leftOperand><rightOperand>number of occurrences of CreditTransferTransactionInformation</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV04 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV04(obj);
 		}
 	};
 	/**
@@ -280,7 +300,6 @@ public class ConstraintNumberOfTransactionsAndCreditTransfersRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV05> forFIToFICustomerCreditTransferV05 = new MMConstraint<FIToFICustomerCreditTransferV05>() {
 		{
-			validator = ConstraintNumberOfTransactionsAndCreditTransfersRule::checkFIToFICustomerCreditTransferV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsAndCreditTransfersRule";
 			definition = "GroupHeader/NumberOfTransactions must equal the number of occurrences of CreditTransferTransactionInformation.";
@@ -288,6 +307,11 @@ public class ConstraintNumberOfTransactionsAndCreditTransfersRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionsAndCreditTransfersRule.forFIToFICustomerCreditTransferV04;
 			owner_lazy = () -> FIToFICustomerCreditTransferV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/NumberOfTransactions</leftOperand><rightOperand>number of occurrences of CreditTransferTransactionInformation</rightOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV05 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV05(obj);
 		}
 	};
 

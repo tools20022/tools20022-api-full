@@ -28,7 +28,6 @@ import com.tools20022.repository.choice.PartyIdentification13Choice;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat3Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -189,7 +188,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, DocumentIdentification11> mmIdentification = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, DocumentIdentification11>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,12 +199,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification11 getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, DocumentIdentification11 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlParams")
@@ -233,7 +234,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Additional parameters to the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdditionalParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<AdditionalParameters3>> mmAdditionalParameters = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<AdditionalParameters3>>() {
 		{
 			xmlTag = "AddtlParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,12 +245,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> AdditionalParameters3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getAdditionalParameters", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalParameters3> getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getAdditionalParameters();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, Optional<AdditionalParameters3> value) {
+			obj.setAdditionalParameters(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -277,7 +280,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<PartyIdentification13Choice>> mmAccountOwner = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<PartyIdentification13Choice>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,12 +291,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> PartyIdentification13Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification13Choice> getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, Optional<PartyIdentification13Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -321,7 +326,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, SecuritiesAccount13> mmSafekeepingAccount = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, SecuritiesAccount13>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,12 +337,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount13 getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, SecuritiesAccount13 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -367,7 +374,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingPlace = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<SafekeepingPlaceFormat3Choice>> mmSafekeepingPlace = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<SafekeepingPlaceFormat3Choice>>() {
 		{
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,12 +385,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> SafekeepingPlaceFormat3Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getSafekeepingPlace", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SafekeepingPlaceFormat3Choice> getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, Optional<SafekeepingPlaceFormat3Choice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmId", required = true)
@@ -413,7 +422,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancialInstrumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, SecurityIdentification11> mmFinancialInstrumentIdentification = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, SecurityIdentification11>() {
 		{
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,12 +433,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> SecurityIdentification11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getFinancialInstrumentIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecurityIdentification11 getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, SecurityIdentification11 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmAttrbts")
@@ -457,7 +468,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Elements characterising a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancialInstrumentAttributes = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<FinancialInstrumentAttributes4>> mmFinancialInstrumentAttributes = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<FinancialInstrumentAttributes4>>() {
 		{
 			xmlTag = "FinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -468,12 +479,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> FinancialInstrumentAttributes4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getFinancialInstrumentAttributes", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<FinancialInstrumentAttributes4> getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, Optional<FinancialInstrumentAttributes4> value) {
+			obj.setFinancialInstrumentAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntraPosDtls", required = true)
@@ -501,7 +514,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * definition} = "Intra-position movement transaction details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIntraPositionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, IntraPositionDetails2> mmIntraPositionDetails = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, IntraPositionDetails2>() {
 		{
 			xmlTag = "IntraPosDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -512,12 +525,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> IntraPositionDetails2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getIntraPositionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IntraPositionDetails2 getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getIntraPositionDetails();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, IntraPositionDetails2 value) {
+			obj.setIntraPositionDetails(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -546,7 +561,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<PartyIdentification10Choice>> mmMessageOriginator = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -557,12 +572,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getMessageOriginator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -592,7 +609,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<PartyIdentification10Choice>> mmMessageRecipient = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -603,12 +620,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getMessageRecipient", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -637,7 +656,7 @@ public class IntraPositionMovementConfirmationV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, List<Extension2>> mmExtension = new MMMessageBuildingBlock<IntraPositionMovementConfirmationV01, List<Extension2>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -647,12 +666,14 @@ public class IntraPositionMovementConfirmationV01 {
 			complexType_lazy = () -> Extension2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementConfirmationV01.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension2> getValue(IntraPositionMovementConfirmationV01 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementConfirmationV01 obj, List<Extension2> value) {
+			obj.setExtension(value);
 		}
 	};
 

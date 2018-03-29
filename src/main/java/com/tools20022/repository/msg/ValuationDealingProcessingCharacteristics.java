@@ -156,7 +156,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Frequency of the valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, EventFrequency2Code> mmValuationFrequency = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, EventFrequency2Code>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
@@ -168,6 +168,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
+		}
+
+		@Override
+		public EventFrequency2Code getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getValuationFrequency();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, EventFrequency2Code value) {
+			obj.setValuationFrequency(value);
 		}
 	};
 	@XmlElement(name = "ValtnFrqcyDesc")
@@ -201,7 +211,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationFrequencyDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>> mmValuationFrequencyDescription = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -212,6 +222,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getValuationFrequencyDescription();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, Optional<Max350Text> value) {
+			obj.setValuationFrequencyDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcptDealgFrqcy", required = true)
@@ -244,7 +264,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Frequency at which the subscriptions are done."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionDealingFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, EventFrequency2Code> mmSubscriptionDealingFrequency = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, EventFrequency2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -255,6 +275,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
+		}
+
+		@Override
+		public EventFrequency2Code getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getSubscriptionDealingFrequency();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, EventFrequency2Code value) {
+			obj.setSubscriptionDealingFrequency(value);
 		}
 	};
 	@XmlElement(name = "SbcptDealFrqcyDesc")
@@ -287,7 +317,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * "Description of frequency at which the subscription is done."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionDealFrequencyDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>> mmSubscriptionDealFrequencyDescription = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -298,6 +328,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getSubscriptionDealFrequencyDescription();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, Optional<Max350Text> value) {
+			obj.setSubscriptionDealFrequencyDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtdSbcptPrd")
@@ -337,7 +377,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitedSubscriptionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>> mmLimitedSubscriptionPeriod = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmLimitedSubscriptionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
@@ -349,6 +389,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getLimitedSubscriptionPeriod();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, Optional<Max350Text> value) {
+			obj.setLimitedSubscriptionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedDealgFrqcy", required = true)
@@ -381,7 +431,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Frequency at which the redemptions are done."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRedemptionDealingFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, EventFrequency2Code> mmRedemptionDealingFrequency = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, EventFrequency2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -392,6 +442,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
+		}
+
+		@Override
+		public EventFrequency2Code getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getRedemptionDealingFrequency();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, EventFrequency2Code value) {
+			obj.setRedemptionDealingFrequency(value);
 		}
 	};
 	@XmlElement(name = "RedDealFrqcyDesc")
@@ -424,7 +484,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRedemptionDealFrequencyDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>> mmRedemptionDealFrequencyDescription = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
@@ -435,6 +495,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getRedemptionDealFrequencyDescription();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, Optional<Max350Text> value) {
+			obj.setRedemptionDealFrequencyDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtdRedPrd")
@@ -473,7 +543,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitedRedemptionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>> mmLimitedRedemptionPeriod = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmLimitedRedemptionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
@@ -485,6 +555,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getLimitedRedemptionPeriod();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, Optional<Max350Text> value) {
+			obj.setLimitedRedemptionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DcmlstnPric", required = true)
@@ -523,7 +603,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDecimalisationPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, Number> mmDecimalisationPrice = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, Number>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
@@ -535,6 +615,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getDecimalisationPrice();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, Number value) {
+			obj.setDecimalisationPrice(value);
 		}
 	};
 	@XmlElement(name = "DcmlstnUnits", required = true)
@@ -573,7 +663,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDecimalisationUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, Number> mmDecimalisationUnits = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, Number>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
@@ -585,6 +675,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getDecimalisationUnits();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, Number value) {
+			obj.setDecimalisationUnits(value);
 		}
 	};
 	@XmlElement(name = "DualFndInd", required = true)
@@ -622,7 +722,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Indicates whether the fund has two prices."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDualFundIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, YesNoIndicator> mmDualFundIndicator = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDualFundIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
@@ -634,6 +734,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getDualFundIndicator();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, YesNoIndicator value) {
+			obj.setDualFundIndicator(value);
 		}
 	};
 	@XmlElement(name = "PricMtd", required = true)
@@ -671,7 +781,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * definition} = "Type of pricing calculation method."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, PriceMethod1Code> mmPriceMethod = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, PriceMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
@@ -683,6 +793,16 @@ public class ValuationDealingProcessingCharacteristics {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
+		}
+
+		@Override
+		public PriceMethod1Code getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getPriceMethod();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, PriceMethod1Code value) {
+			obj.setPriceMethod(value);
 		}
 	};
 	@XmlElement(name = "PricCcy", required = true)
@@ -722,7 +842,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationDealingProcessingCharacteristics, List<ActiveCurrencyCode>> mmPriceCurrency = new MMMessageAttribute<ValuationDealingProcessingCharacteristics, List<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
@@ -733,6 +853,16 @@ public class ValuationDealingProcessingCharacteristics {
 			definition = "Currencies in which the prices for the investment fund class are published by the fund management company.";
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<ActiveCurrencyCode> getValue(ValuationDealingProcessingCharacteristics obj) {
+			return obj.getPriceCurrency();
+		}
+
+		@Override
+		public void setValue(ValuationDealingProcessingCharacteristics obj, List<ActiveCurrencyCode> value) {
+			obj.setPriceCurrency(value);
 		}
 	};
 

@@ -109,7 +109,7 @@ public class PaymentType2Choice {
 	 * definition} = "Type, or nature, of the payment, eg, express payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentType2Choice, PaymentType3Code> mmPaymentType = new MMMessageAttribute<PaymentType2Choice, PaymentType3Code>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentType2Choice.mmObject();
@@ -121,6 +121,16 @@ public class PaymentType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentType3Code.mmObject();
+		}
+
+		@Override
+		public PaymentType3Code getValue(PaymentType2Choice obj) {
+			return obj.getPaymentType();
+		}
+
+		@Override
+		public void setValue(PaymentType2Choice obj, PaymentType3Code value) {
+			obj.setPaymentType(value);
 		}
 	};
 	@XmlElement(name = "PrtryPmtTp", required = true)
@@ -158,7 +168,7 @@ public class PaymentType2Choice {
 	 * definition} = "Payment type that is not included in a predefined list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryPaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentType2Choice, Max4AlphaNumericText> mmProprietaryPaymentType = new MMMessageAttribute<PaymentType2Choice, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentType2Choice.mmObject();
@@ -170,6 +180,16 @@ public class PaymentType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(PaymentType2Choice obj) {
+			return obj.getProprietaryPaymentType();
+		}
+
+		@Override
+		public void setValue(PaymentType2Choice obj, Max4AlphaNumericText value) {
+			obj.setProprietaryPaymentType(value);
 		}
 	};
 

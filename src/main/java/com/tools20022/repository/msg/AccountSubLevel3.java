@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -143,7 +144,7 @@ public class AccountSubLevel3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSubLevel3, SecuritiesAccount19> mmAccountIdentification = new MMMessageAssociationEnd<AccountSubLevel3, SecuritiesAccount19>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel3.mmObject();
@@ -156,7 +157,17 @@ public class AccountSubLevel3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount19 getValue(AccountSubLevel3 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountSubLevel3 obj, SecuritiesAccount19 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr", required = true)
@@ -202,7 +213,7 @@ public class AccountSubLevel3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSubLevel3, PartyIdentification100> mmAccountOwner = new MMMessageAttribute<AccountSubLevel3, PartyIdentification100>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel3.mmObject();
@@ -214,7 +225,17 @@ public class AccountSubLevel3 {
 			nextVersions_lazy = () -> Arrays.asList(AccountSubLevel13.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100 getValue(AccountSubLevel3 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(AccountSubLevel3 obj, PartyIdentification100 value) {
+			obj.setAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr", required = true)
@@ -262,7 +283,7 @@ public class AccountSubLevel3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSubLevel3, PartyIdentification100> mmAccountServicer = new MMMessageAttribute<AccountSubLevel3, PartyIdentification100>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel3.mmObject();
@@ -274,11 +295,21 @@ public class AccountSubLevel3 {
 			nextVersions_lazy = () -> Arrays.asList(AccountSubLevel13.mmAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100 getValue(AccountSubLevel3 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(AccountSubLevel3 obj, PartyIdentification100 value) {
+			obj.setAccountServicer(value);
 		}
 	};
 	@XmlElement(name = "BnfclOwnr")
-	protected List<com.tools20022.repository.msg.BeneficialOwner2> beneficialOwner;
+	protected List<BeneficialOwner2> beneficialOwner;
 	/**
 	 * 
 	 <p>
@@ -320,7 +351,7 @@ public class AccountSubLevel3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficialOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSubLevel3, List<BeneficialOwner2>> mmBeneficialOwner = new MMMessageAssociationEnd<AccountSubLevel3, List<BeneficialOwner2>>() {
 		{
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel3.mmObject();
@@ -332,11 +363,21 @@ public class AccountSubLevel3 {
 			nextVersions_lazy = () -> Arrays.asList(AccountSubLevel13.mmBeneficialOwner);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BeneficialOwner2.mmObject();
+			type_lazy = () -> BeneficialOwner2.mmObject();
+		}
+
+		@Override
+		public List<BeneficialOwner2> getValue(AccountSubLevel3 obj) {
+			return obj.getBeneficialOwner();
+		}
+
+		@Override
+		public void setValue(AccountSubLevel3 obj, List<BeneficialOwner2> value) {
+			obj.setBeneficialOwner(value);
 		}
 	};
 	@XmlElement(name = "BalForAcct")
-	protected List<com.tools20022.repository.msg.AggregateHoldingBalance1> balanceForAccount;
+	protected List<AggregateHoldingBalance1> balanceForAccount;
 	/**
 	 * 
 	 <p>
@@ -371,7 +412,7 @@ public class AccountSubLevel3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceForAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSubLevel3, List<AggregateHoldingBalance1>> mmBalanceForAccount = new MMMessageAssociationEnd<AccountSubLevel3, List<AggregateHoldingBalance1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel3.mmObject();
@@ -382,11 +423,21 @@ public class AccountSubLevel3 {
 			definition = "Report on the net position of a financial instrument on the sub-account, for a certain date.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
+			type_lazy = () -> AggregateHoldingBalance1.mmObject();
+		}
+
+		@Override
+		public List<AggregateHoldingBalance1> getValue(AccountSubLevel3 obj) {
+			return obj.getBalanceForAccount();
+		}
+
+		@Override
+		public void setValue(AccountSubLevel3 obj, List<AggregateHoldingBalance1> value) {
+			obj.setBalanceForAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctSubLvl4")
-	protected List<com.tools20022.repository.msg.AccountSubLevel4> accountSubLevel4;
+	protected List<AccountSubLevel4> accountSubLevel4;
 	/**
 	 * 
 	 <p>
@@ -426,7 +477,7 @@ public class AccountSubLevel3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountSubLevel4 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSubLevel3, List<AccountSubLevel4>> mmAccountSubLevel4 = new MMMessageAssociationEnd<AccountSubLevel3, List<AccountSubLevel4>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel3.mmObject();
@@ -438,11 +489,21 @@ public class AccountSubLevel3 {
 			nextVersions_lazy = () -> Arrays.asList(AccountSubLevel13.mmAccountSubLevel4);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountSubLevel4.mmObject();
+			type_lazy = () -> AccountSubLevel4.mmObject();
+		}
+
+		@Override
+		public List<AccountSubLevel4> getValue(AccountSubLevel3 obj) {
+			return obj.getAccountSubLevel4();
+		}
+
+		@Override
+		public void setValue(AccountSubLevel3 obj, List<AccountSubLevel4> value) {
+			obj.setAccountSubLevel4(value);
 		}
 	};
 	@XmlElement(name = "AcctSubLvl4Diff")
-	protected List<com.tools20022.repository.msg.AggregateHoldingBalance2> accountSubLevel4Difference;
+	protected List<AggregateHoldingBalance2> accountSubLevel4Difference;
 	/**
 	 * 
 	 <p>
@@ -485,7 +546,7 @@ public class AccountSubLevel3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountSubLevel4Difference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSubLevel3, List<AggregateHoldingBalance2>> mmAccountSubLevel4Difference = new MMMessageAssociationEnd<AccountSubLevel3, List<AggregateHoldingBalance2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel3.mmObject();
@@ -497,11 +558,21 @@ public class AccountSubLevel3 {
 			nextVersions_lazy = () -> Arrays.asList(AccountSubLevel13.mmAccountSubLevel4Difference);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance2.mmObject();
+			type_lazy = () -> AggregateHoldingBalance2.mmObject();
+		}
+
+		@Override
+		public List<AggregateHoldingBalance2> getValue(AccountSubLevel3 obj) {
+			return obj.getAccountSubLevel4Difference();
+		}
+
+		@Override
+		public void setValue(AccountSubLevel3 obj, List<AggregateHoldingBalance2> value) {
+			obj.setAccountSubLevel4Difference(value);
 		}
 	};
 	@XmlElement(name = "Agt")
-	protected List<com.tools20022.repository.msg.Intermediary29> agent;
+	protected List<Intermediary29> agent;
 	/**
 	 * 
 	 <p>
@@ -534,7 +605,7 @@ public class AccountSubLevel3 {
 	 * "Identification of a related party acting as an intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSubLevel3, List<Intermediary29>> mmAgent = new MMMessageAssociationEnd<AccountSubLevel3, List<Intermediary29>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel3.mmObject();
@@ -545,11 +616,21 @@ public class AccountSubLevel3 {
 			definition = "Identification of a related party acting as an intermediary.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary29.mmObject();
+			type_lazy = () -> Intermediary29.mmObject();
+		}
+
+		@Override
+		public List<Intermediary29> getValue(AccountSubLevel3 obj) {
+			return obj.getAgent();
+		}
+
+		@Override
+		public void setValue(AccountSubLevel3 obj, List<Intermediary29> value) {
+			obj.setAgent(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -586,7 +667,7 @@ public class AccountSubLevel3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSubLevel3, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<AccountSubLevel3, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSubLevel3.mmObject();
 			isDerived = false;
@@ -597,7 +678,17 @@ public class AccountSubLevel3 {
 			nextVersions_lazy = () -> Arrays.asList(AccountSubLevel13.mmSupplementaryData);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(AccountSubLevel3 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AccountSubLevel3 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -623,7 +714,7 @@ public class AccountSubLevel3 {
 		return accountIdentification;
 	}
 
-	public AccountSubLevel3 setAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 accountIdentification) {
+	public AccountSubLevel3 setAccountIdentification(SecuritiesAccount19 accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}
@@ -632,7 +723,7 @@ public class AccountSubLevel3 {
 		return accountOwner;
 	}
 
-	public AccountSubLevel3 setAccountOwner(com.tools20022.repository.msg.PartyIdentification100 accountOwner) {
+	public AccountSubLevel3 setAccountOwner(PartyIdentification100 accountOwner) {
 		this.accountOwner = Objects.requireNonNull(accountOwner);
 		return this;
 	}
@@ -641,7 +732,7 @@ public class AccountSubLevel3 {
 		return accountServicer;
 	}
 
-	public AccountSubLevel3 setAccountServicer(com.tools20022.repository.msg.PartyIdentification100 accountServicer) {
+	public AccountSubLevel3 setAccountServicer(PartyIdentification100 accountServicer) {
 		this.accountServicer = Objects.requireNonNull(accountServicer);
 		return this;
 	}
@@ -650,7 +741,7 @@ public class AccountSubLevel3 {
 		return beneficialOwner == null ? beneficialOwner = new ArrayList<>() : beneficialOwner;
 	}
 
-	public AccountSubLevel3 setBeneficialOwner(List<com.tools20022.repository.msg.BeneficialOwner2> beneficialOwner) {
+	public AccountSubLevel3 setBeneficialOwner(List<BeneficialOwner2> beneficialOwner) {
 		this.beneficialOwner = Objects.requireNonNull(beneficialOwner);
 		return this;
 	}
@@ -659,7 +750,7 @@ public class AccountSubLevel3 {
 		return balanceForAccount == null ? balanceForAccount = new ArrayList<>() : balanceForAccount;
 	}
 
-	public AccountSubLevel3 setBalanceForAccount(List<com.tools20022.repository.msg.AggregateHoldingBalance1> balanceForAccount) {
+	public AccountSubLevel3 setBalanceForAccount(List<AggregateHoldingBalance1> balanceForAccount) {
 		this.balanceForAccount = Objects.requireNonNull(balanceForAccount);
 		return this;
 	}
@@ -668,7 +759,7 @@ public class AccountSubLevel3 {
 		return accountSubLevel4 == null ? accountSubLevel4 = new ArrayList<>() : accountSubLevel4;
 	}
 
-	public AccountSubLevel3 setAccountSubLevel4(List<com.tools20022.repository.msg.AccountSubLevel4> accountSubLevel4) {
+	public AccountSubLevel3 setAccountSubLevel4(List<AccountSubLevel4> accountSubLevel4) {
 		this.accountSubLevel4 = Objects.requireNonNull(accountSubLevel4);
 		return this;
 	}
@@ -677,7 +768,7 @@ public class AccountSubLevel3 {
 		return accountSubLevel4Difference == null ? accountSubLevel4Difference = new ArrayList<>() : accountSubLevel4Difference;
 	}
 
-	public AccountSubLevel3 setAccountSubLevel4Difference(List<com.tools20022.repository.msg.AggregateHoldingBalance2> accountSubLevel4Difference) {
+	public AccountSubLevel3 setAccountSubLevel4Difference(List<AggregateHoldingBalance2> accountSubLevel4Difference) {
 		this.accountSubLevel4Difference = Objects.requireNonNull(accountSubLevel4Difference);
 		return this;
 	}
@@ -686,7 +777,7 @@ public class AccountSubLevel3 {
 		return agent == null ? agent = new ArrayList<>() : agent;
 	}
 
-	public AccountSubLevel3 setAgent(List<com.tools20022.repository.msg.Intermediary29> agent) {
+	public AccountSubLevel3 setAgent(List<Intermediary29> agent) {
 		this.agent = Objects.requireNonNull(agent);
 		return this;
 	}
@@ -695,7 +786,7 @@ public class AccountSubLevel3 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public AccountSubLevel3 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public AccountSubLevel3 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

@@ -107,7 +107,7 @@ public class AmountType1FormatChoice {
 	 * definition} = "Standard code to specify the value of the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountType1FormatChoice, AmountType1Code> mmCode = new MMMessageAttribute<AmountType1FormatChoice, AmountType1Code>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingAmount.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountType1FormatChoice.mmObject();
@@ -119,6 +119,16 @@ public class AmountType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AmountType1Code.mmObject();
+		}
+
+		@Override
+		public AmountType1Code getValue(AmountType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AmountType1FormatChoice obj, AmountType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class AmountType1FormatChoice {
 	 * definition} = "Proprietary code to express the value of the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<AmountType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingAmount.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountType1FormatChoice.mmObject();
@@ -168,6 +178,16 @@ public class AmountType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(AmountType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AmountType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

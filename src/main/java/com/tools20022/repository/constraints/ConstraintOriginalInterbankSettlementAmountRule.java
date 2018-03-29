@@ -50,11 +50,15 @@ public class ConstraintOriginalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
 		{
-			validator = ConstraintOriginalInterbankSettlementAmountRule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInterbankSettlementAmountRule";
 			definition = "TransactionInformation/OriginalInterbankSettlementAmount is not allowed.";
 			owner_lazy = () -> PaymentCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentCancellationRequestV01 obj) throws Exception {
+			checkPaymentCancellationRequestV01(obj);
 		}
 	};
 

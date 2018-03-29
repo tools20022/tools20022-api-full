@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AdministrationLatestVersion;
 import com.tools20022.repository.msg.Event2;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +112,7 @@ public class SystemEventNotificationV02 {
 	 * definition} = "Detailed information about a system event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEventInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SystemEventNotificationV02, Event2> mmEventInformation = new MMMessageBuildingBlock<SystemEventNotificationV02, Event2>() {
 		{
 			xmlTag = "EvtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,12 +123,14 @@ public class SystemEventNotificationV02 {
 			complexType_lazy = () -> Event2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemEventNotificationV02.class.getMethod("getEventInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Event2 getValue(SystemEventNotificationV02 obj) {
+			return obj.getEventInformation();
+		}
+
+		@Override
+		public void setValue(SystemEventNotificationV02 obj, Event2 value) {
+			obj.setEventInformation(value);
 		}
 	};
 

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification4;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +122,7 @@ public class FinancialInstitutionIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingSystemMemberIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstitutionIdentification6, Optional<ClearingSystemMemberIdentification2Choice>> mmClearingSystemMemberIdentification = new MMMessageAssociationEnd<FinancialInstitutionIdentification6, Optional<ClearingSystemMemberIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
@@ -134,6 +135,16 @@ public class FinancialInstitutionIdentification6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ClearingSystemMemberIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingSystemMemberIdentification2Choice> getValue(FinancialInstitutionIdentification6 obj) {
+			return obj.getClearingSystemMemberIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification6 obj, Optional<ClearingSystemMemberIdentification2Choice> value) {
+			obj.setClearingSystemMemberIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryId")
@@ -171,7 +182,7 @@ public class FinancialInstitutionIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstitutionIdentification6, Optional<GenericIdentification4>> mmProprietaryIdentification = new MMMessageAssociationEnd<FinancialInstitutionIdentification6, Optional<GenericIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
@@ -183,7 +194,17 @@ public class FinancialInstitutionIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
+			type_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification4> getValue(FinancialInstitutionIdentification6 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification6 obj, Optional<GenericIdentification4> value) {
+			obj.setProprietaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BIC")
@@ -223,7 +244,7 @@ public class FinancialInstitutionIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification6, Optional<BICIdentifier>> mmBIC = new MMMessageAttribute<FinancialInstitutionIdentification6, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
@@ -235,6 +256,16 @@ public class FinancialInstitutionIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(FinancialInstitutionIdentification6 obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification6 obj, Optional<BICIdentifier> value) {
+			obj.setBIC(value.orElse(null));
 		}
 	};
 
@@ -273,7 +304,7 @@ public class FinancialInstitutionIdentification6 {
 		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public FinancialInstitutionIdentification6 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification4 proprietaryIdentification) {
+	public FinancialInstitutionIdentification6 setProprietaryIdentification(GenericIdentification4 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
 		return this;
 	}

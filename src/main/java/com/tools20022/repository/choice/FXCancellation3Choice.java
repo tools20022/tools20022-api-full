@@ -123,7 +123,7 @@ public class FXCancellation3Choice {
 	 * FXCancellation1Choice.mmIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FXCancellation3Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<FXCancellation3Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FXCancellation3Choice.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class FXCancellation3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FXCancellation3Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(FXCancellation3Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -177,7 +187,7 @@ public class FXCancellation3Choice {
 	 * FXCancellation1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FXCancellation3Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<FXCancellation3Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FXCancellation3Choice.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class FXCancellation3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(FXCancellation3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FXCancellation3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

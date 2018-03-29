@@ -112,7 +112,7 @@ public class CashBalanceReturnCriteria1 {
 	 * CashBalanceReturnCriteria.mmTypeIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceReturnCriteria1, RequestedIndicator> mmTypeIndicator = new MMMessageAttribute<CashBalanceReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria1.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class CashBalanceReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(CashBalanceReturnCriteria1 obj) {
+			return obj.getTypeIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalanceReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setTypeIndicator(value);
 		}
 	};
 	@XmlElement(name = "StsInd", required = true)
@@ -161,7 +171,7 @@ public class CashBalanceReturnCriteria1 {
 	 * CashBalanceReturnCriteria.mmStatusIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceReturnCriteria1, RequestedIndicator> mmStatusIndicator = new MMMessageAttribute<CashBalanceReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria1.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class CashBalanceReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(CashBalanceReturnCriteria1 obj) {
+			return obj.getStatusIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalanceReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setStatusIndicator(value);
 		}
 	};
 	@XmlElement(name = "ValDtInd", required = true)
@@ -210,7 +230,7 @@ public class CashBalanceReturnCriteria1 {
 	 * CashBalanceReturnCriteria.mmValueDateIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceReturnCriteria1, RequestedIndicator> mmValueDateIndicator = new MMMessageAttribute<CashBalanceReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria1.mmObject();
 			isDerived = false;
@@ -222,6 +242,16 @@ public class CashBalanceReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(CashBalanceReturnCriteria1 obj) {
+			return obj.getValueDateIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalanceReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setValueDateIndicator(value);
 		}
 	};
 	@XmlElement(name = "NbOfPmtsInd", required = true)
@@ -259,7 +289,7 @@ public class CashBalanceReturnCriteria1 {
 	 * CashBalanceReturnCriteria.mmNumberOfPaymentsIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfPaymentsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceReturnCriteria1, RequestedIndicator> mmNumberOfPaymentsIndicator = new MMMessageAttribute<CashBalanceReturnCriteria1, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria1.mmObject();
 			isDerived = false;
@@ -271,6 +301,16 @@ public class CashBalanceReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(CashBalanceReturnCriteria1 obj) {
+			return obj.getNumberOfPaymentsIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalanceReturnCriteria1 obj, RequestedIndicator value) {
+			obj.setNumberOfPaymentsIndicator(value);
 		}
 	};
 

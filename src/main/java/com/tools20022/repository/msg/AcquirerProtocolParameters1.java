@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -110,7 +111,7 @@ public class AcquirerProtocolParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "AcqrrId", required = true)
-	protected List<com.tools20022.repository.msg.GenericIdentification32> acquirerIdentification;
+	protected List<GenericIdentification32> acquirerIdentification;
 	/**
 	 * 
 	 <p>
@@ -143,7 +144,7 @@ public class AcquirerProtocolParameters1 {
 	 * definition} = "Identification of the acquirer using this protocol."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcquirerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerProtocolParameters1, List<GenericIdentification32>> mmAcquirerIdentification = new MMMessageAssociationEnd<AcquirerProtocolParameters1, List<GenericIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -154,7 +155,17 @@ public class AcquirerProtocolParameters1 {
 			definition = "Identification of the acquirer using this protocol.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification32> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getAcquirerIdentification();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, List<GenericIdentification32> value) {
+			obj.setAcquirerIdentification(value);
 		}
 	};
 	@XmlElement(name = "ApplId")
@@ -193,7 +204,7 @@ public class AcquirerProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerProtocolParameters1, List<Max35Text>> mmApplicationIdentification = new MMMessageAttribute<AcquirerProtocolParameters1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -205,9 +216,19 @@ public class AcquirerProtocolParameters1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public List<Max35Text> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, List<Max35Text> value) {
+			obj.setApplicationIdentification(value);
+		}
 	};
 	@XmlElement(name = "Hst")
-	protected List<com.tools20022.repository.msg.AcquirerHostConfiguration1> host;
+	protected List<AcquirerHostConfiguration1> host;
 	/**
 	 * 
 	 <p>
@@ -240,7 +261,7 @@ public class AcquirerProtocolParameters1 {
 	 * definition} = "Acquirer host configuration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHost = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerProtocolParameters1, List<AcquirerHostConfiguration1>> mmHost = new MMMessageAssociationEnd<AcquirerProtocolParameters1, List<AcquirerHostConfiguration1>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmTerminalManagementSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -251,7 +272,17 @@ public class AcquirerProtocolParameters1 {
 			definition = "Acquirer host configuration.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration1.mmObject();
+			type_lazy = () -> AcquirerHostConfiguration1.mmObject();
+		}
+
+		@Override
+		public List<AcquirerHostConfiguration1> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getHost();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, List<AcquirerHostConfiguration1> value) {
+			obj.setHost(value);
 		}
 	};
 	@XmlElement(name = "OnLineTx")
@@ -290,7 +321,7 @@ public class AcquirerProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOnLineTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerProtocolParameters1, Optional<AcquirerProtocolParameters2>> mmOnLineTransaction = new MMMessageAssociationEnd<AcquirerProtocolParameters1, Optional<AcquirerProtocolParameters2>>() {
 		{
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -302,7 +333,17 @@ public class AcquirerProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters2.mmObject();
+			type_lazy = () -> AcquirerProtocolParameters2.mmObject();
+		}
+
+		@Override
+		public Optional<AcquirerProtocolParameters2> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getOnLineTransaction();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, Optional<AcquirerProtocolParameters2> value) {
+			obj.setOnLineTransaction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OffLineTx")
@@ -341,7 +382,7 @@ public class AcquirerProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOffLineTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerProtocolParameters1, Optional<AcquirerProtocolParameters2>> mmOffLineTransaction = new MMMessageAssociationEnd<AcquirerProtocolParameters1, Optional<AcquirerProtocolParameters2>>() {
 		{
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -353,7 +394,17 @@ public class AcquirerProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters2.mmObject();
+			type_lazy = () -> AcquirerProtocolParameters2.mmObject();
+		}
+
+		@Override
+		public Optional<AcquirerProtocolParameters2> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getOffLineTransaction();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, Optional<AcquirerProtocolParameters2> value) {
+			obj.setOffLineTransaction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcncltnXchg")
@@ -389,7 +440,7 @@ public class AcquirerProtocolParameters1 {
 	 * definition} = "Configuration parameters of reconciliation exchanges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReconciliationExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerProtocolParameters1, Optional<ExchangeConfiguration1>> mmReconciliationExchange = new MMMessageAssociationEnd<AcquirerProtocolParameters1, Optional<ExchangeConfiguration1>>() {
 		{
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -401,7 +452,17 @@ public class AcquirerProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration1.mmObject();
+			type_lazy = () -> ExchangeConfiguration1.mmObject();
+		}
+
+		@Override
+		public Optional<ExchangeConfiguration1> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getReconciliationExchange();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, Optional<ExchangeConfiguration1> value) {
+			obj.setReconciliationExchange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcncltnByAcqrr")
@@ -441,7 +502,7 @@ public class AcquirerProtocolParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationByAcquirer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerProtocolParameters1, Optional<TrueFalseIndicator>> mmReconciliationByAcquirer = new MMMessageAttribute<AcquirerProtocolParameters1, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmReconciliationByAcquirer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -453,6 +514,16 @@ public class AcquirerProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getReconciliationByAcquirer();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, Optional<TrueFalseIndicator> value) {
+			obj.setReconciliationByAcquirer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlsPerCcy")
@@ -491,7 +562,7 @@ public class AcquirerProtocolParameters1 {
 	 * "Indicates the reconciliation total amounts are computed per currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalsPerCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerProtocolParameters1, Optional<TrueFalseIndicator>> mmTotalsPerCurrency = new MMMessageAttribute<AcquirerProtocolParameters1, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmTotalsPerCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -503,6 +574,16 @@ public class AcquirerProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getTotalsPerCurrency();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, Optional<TrueFalseIndicator> value) {
+			obj.setTotalsPerCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BtchTrfCntt")
@@ -540,7 +621,7 @@ public class AcquirerProtocolParameters1 {
 	 * definition} = "Types of transaction to include in the batch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBatchTransferContent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerProtocolParameters1, List<BatchTransactionType1Code>> mmBatchTransferContent = new MMMessageAttribute<AcquirerProtocolParameters1, List<BatchTransactionType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmBatchTransferContent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -552,9 +633,19 @@ public class AcquirerProtocolParameters1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> BatchTransactionType1Code.mmObject();
 		}
+
+		@Override
+		public List<BatchTransactionType1Code> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getBatchTransferContent();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, List<BatchTransactionType1Code> value) {
+			obj.setBatchTransferContent(value);
+		}
 	};
 	@XmlElement(name = "MsgItm")
-	protected List<com.tools20022.repository.msg.MessageItemCondition1> messageItem;
+	protected List<MessageItemCondition1> messageItem;
 	/**
 	 * 
 	 <p>
@@ -581,7 +672,7 @@ public class AcquirerProtocolParameters1 {
 	 * definition} = "Configuration of a message item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerProtocolParameters1, List<MessageItemCondition1>> mmMessageItem = new MMMessageAssociationEnd<AcquirerProtocolParameters1, List<MessageItemCondition1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
 			isDerived = false;
@@ -591,7 +682,17 @@ public class AcquirerProtocolParameters1 {
 			definition = "Configuration of a message item.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageItemCondition1.mmObject();
+			type_lazy = () -> MessageItemCondition1.mmObject();
+		}
+
+		@Override
+		public List<MessageItemCondition1> getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getMessageItem();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, List<MessageItemCondition1> value) {
+			obj.setMessageItem(value);
 		}
 	};
 	@XmlElement(name = "PrtctCardData", required = true)
@@ -630,7 +731,7 @@ public class AcquirerProtocolParameters1 {
 	 * "Indicator to require protection of sensitive card data in messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtectCardData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcquirerProtocolParameters1, TrueFalseIndicator> mmProtectCardData = new MMMessageAttribute<AcquirerProtocolParameters1, TrueFalseIndicator>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmProtectCardData;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
@@ -642,6 +743,16 @@ public class AcquirerProtocolParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(AcquirerProtocolParameters1 obj) {
+			return obj.getProtectCardData();
+		}
+
+		@Override
+		public void setValue(AcquirerProtocolParameters1 obj, TrueFalseIndicator value) {
+			obj.setProtectCardData(value);
 		}
 	};
 
@@ -669,7 +780,7 @@ public class AcquirerProtocolParameters1 {
 		return acquirerIdentification == null ? acquirerIdentification = new ArrayList<>() : acquirerIdentification;
 	}
 
-	public AcquirerProtocolParameters1 setAcquirerIdentification(List<com.tools20022.repository.msg.GenericIdentification32> acquirerIdentification) {
+	public AcquirerProtocolParameters1 setAcquirerIdentification(List<GenericIdentification32> acquirerIdentification) {
 		this.acquirerIdentification = Objects.requireNonNull(acquirerIdentification);
 		return this;
 	}
@@ -687,7 +798,7 @@ public class AcquirerProtocolParameters1 {
 		return host == null ? host = new ArrayList<>() : host;
 	}
 
-	public AcquirerProtocolParameters1 setHost(List<com.tools20022.repository.msg.AcquirerHostConfiguration1> host) {
+	public AcquirerProtocolParameters1 setHost(List<AcquirerHostConfiguration1> host) {
 		this.host = Objects.requireNonNull(host);
 		return this;
 	}
@@ -696,7 +807,7 @@ public class AcquirerProtocolParameters1 {
 		return onLineTransaction == null ? Optional.empty() : Optional.of(onLineTransaction);
 	}
 
-	public AcquirerProtocolParameters1 setOnLineTransaction(com.tools20022.repository.msg.AcquirerProtocolParameters2 onLineTransaction) {
+	public AcquirerProtocolParameters1 setOnLineTransaction(AcquirerProtocolParameters2 onLineTransaction) {
 		this.onLineTransaction = onLineTransaction;
 		return this;
 	}
@@ -705,7 +816,7 @@ public class AcquirerProtocolParameters1 {
 		return offLineTransaction == null ? Optional.empty() : Optional.of(offLineTransaction);
 	}
 
-	public AcquirerProtocolParameters1 setOffLineTransaction(com.tools20022.repository.msg.AcquirerProtocolParameters2 offLineTransaction) {
+	public AcquirerProtocolParameters1 setOffLineTransaction(AcquirerProtocolParameters2 offLineTransaction) {
 		this.offLineTransaction = offLineTransaction;
 		return this;
 	}
@@ -714,7 +825,7 @@ public class AcquirerProtocolParameters1 {
 		return reconciliationExchange == null ? Optional.empty() : Optional.of(reconciliationExchange);
 	}
 
-	public AcquirerProtocolParameters1 setReconciliationExchange(com.tools20022.repository.msg.ExchangeConfiguration1 reconciliationExchange) {
+	public AcquirerProtocolParameters1 setReconciliationExchange(ExchangeConfiguration1 reconciliationExchange) {
 		this.reconciliationExchange = reconciliationExchange;
 		return this;
 	}
@@ -750,7 +861,7 @@ public class AcquirerProtocolParameters1 {
 		return messageItem == null ? messageItem = new ArrayList<>() : messageItem;
 	}
 
-	public AcquirerProtocolParameters1 setMessageItem(List<com.tools20022.repository.msg.MessageItemCondition1> messageItem) {
+	public AcquirerProtocolParameters1 setMessageItem(List<MessageItemCondition1> messageItem) {
 		this.messageItem = Objects.requireNonNull(messageItem);
 		return this;
 	}

@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.CardPaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AuthorisationResult9;
+import com.tools20022.repository.msg.TransactionIdentifier1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -142,7 +144,7 @@ public class ATMTransaction5 {
 	 * ATMTransaction3.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction5, TransactionIdentifier1> mmTransactionIdentification = new MMMessageAssociationEnd<ATMTransaction5, TransactionIdentifier1>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
@@ -155,7 +157,17 @@ public class ATMTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(ATMTransaction5 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, TransactionIdentifier1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -198,7 +210,7 @@ public class ATMTransaction5 {
 	 * ATMTransaction3.mmTransactionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction5, ATMTransactionStatus1Code> mmTransactionStatus = new MMMessageAttribute<ATMTransaction5, ATMTransactionStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
@@ -211,6 +223,16 @@ public class ATMTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMTransactionStatus1Code.mmObject();
+		}
+
+		@Override
+		public ATMTransactionStatus1Code getValue(ATMTransaction5 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, ATMTransactionStatus1Code value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "Incdnt")
@@ -254,7 +276,7 @@ public class ATMTransaction5 {
 	 * ATMTransaction3.mmIncident}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncident = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction5, List<FailureReason4Code>> mmIncident = new MMMessageAttribute<ATMTransaction5, List<FailureReason4Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentStatus.mmFailureReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
@@ -266,6 +288,16 @@ public class ATMTransaction5 {
 			previousVersion_lazy = () -> ATMTransaction3.mmIncident;
 			minOccurs = 0;
 			simpleType_lazy = () -> FailureReason4Code.mmObject();
+		}
+
+		@Override
+		public List<FailureReason4Code> getValue(ATMTransaction5 obj) {
+			return obj.getIncident();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, List<FailureReason4Code> value) {
+			obj.setIncident(value);
 		}
 	};
 	@XmlElement(name = "IncdntDtl")
@@ -297,7 +329,7 @@ public class ATMTransaction5 {
 	 * definition} = "Explanation of the incident."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncidentDetail = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction5, List<Max70Text>> mmIncidentDetail = new MMMessageAttribute<ATMTransaction5, List<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
 			isDerived = false;
@@ -307,6 +339,16 @@ public class ATMTransaction5 {
 			definition = "Explanation of the incident.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public List<Max70Text> getValue(ATMTransaction5 obj) {
+			return obj.getIncidentDetail();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, List<Max70Text> value) {
+			obj.setIncidentDetail(value);
 		}
 	};
 	@XmlElement(name = "RcncltnId")
@@ -344,7 +386,7 @@ public class ATMTransaction5 {
 	 * ATMTransaction3.mmReconciliationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction5, Optional<Max35Text>> mmReconciliationIdentification = new MMMessageAttribute<ATMTransaction5, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
 			isDerived = false;
@@ -356,6 +398,16 @@ public class ATMTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMTransaction5 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, Optional<Max35Text> value) {
+			obj.setReconciliationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdRct")
@@ -393,7 +445,7 @@ public class ATMTransaction5 {
 	 * ATMTransaction3.mmRequestedReceipt}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedReceipt = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction5, Optional<TrueFalseIndicator>> mmRequestedReceipt = new MMMessageAttribute<ATMTransaction5, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
 			isDerived = false;
@@ -405,6 +457,16 @@ public class ATMTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMTransaction5 obj) {
+			return obj.getRequestedReceipt();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, Optional<TrueFalseIndicator> value) {
+			obj.setRequestedReceipt(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RctPrtd")
@@ -443,7 +505,7 @@ public class ATMTransaction5 {
 	 * ATMTransaction3.mmReceiptPrinted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceiptPrinted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction5, Optional<TrueFalseIndicator>> mmReceiptPrinted = new MMMessageAttribute<ATMTransaction5, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
 			isDerived = false;
@@ -455,6 +517,16 @@ public class ATMTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMTransaction5 obj) {
+			return obj.getReceiptPrinted();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, Optional<TrueFalseIndicator> value) {
+			obj.setReceiptPrinted(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CaptrdCard")
@@ -492,7 +564,7 @@ public class ATMTransaction5 {
 	 * ATMTransaction3.mmCapturedCard}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCapturedCard = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction5, Optional<TrueFalseIndicator>> mmCapturedCard = new MMMessageAttribute<ATMTransaction5, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
 			isDerived = false;
@@ -504,6 +576,16 @@ public class ATMTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMTransaction5 obj) {
+			return obj.getCapturedCard();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, Optional<TrueFalseIndicator> value) {
+			obj.setCapturedCard(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthstnRslt")
@@ -544,7 +626,7 @@ public class ATMTransaction5 {
 	 * ATMTransaction3.mmAuthorisationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction5, Optional<AuthorisationResult9>> mmAuthorisationResult = new MMMessageAssociationEnd<ATMTransaction5, Optional<AuthorisationResult9>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmValidation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
@@ -557,7 +639,17 @@ public class ATMTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult9.mmObject();
+			type_lazy = () -> AuthorisationResult9.mmObject();
+		}
+
+		@Override
+		public Optional<AuthorisationResult9> getValue(ATMTransaction5 obj) {
+			return obj.getAuthorisationResult();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, Optional<AuthorisationResult9> value) {
+			obj.setAuthorisationResult(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ICCRltdData")
@@ -597,7 +689,7 @@ public class ATMTransaction5 {
 	 * ATMTransaction3.mmICCRelatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction5, Optional<Max10000Binary>> mmICCRelatedData = new MMMessageAttribute<ATMTransaction5, Optional<Max10000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction5.mmObject();
 			isDerived = false;
@@ -609,6 +701,16 @@ public class ATMTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max10000Binary> getValue(ATMTransaction5 obj) {
+			return obj.getICCRelatedData();
+		}
+
+		@Override
+		public void setValue(ATMTransaction5 obj, Optional<Max10000Binary> value) {
+			obj.setICCRelatedData(value.orElse(null));
 		}
 	};
 
@@ -634,7 +736,7 @@ public class ATMTransaction5 {
 		return transactionIdentification;
 	}
 
-	public ATMTransaction5 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public ATMTransaction5 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
 		return this;
 	}
@@ -706,7 +808,7 @@ public class ATMTransaction5 {
 		return authorisationResult == null ? Optional.empty() : Optional.of(authorisationResult);
 	}
 
-	public ATMTransaction5 setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult9 authorisationResult) {
+	public ATMTransaction5 setAuthorisationResult(AuthorisationResult9 authorisationResult) {
 		this.authorisationResult = authorisationResult;
 		return this;
 	}

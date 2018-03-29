@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.CashBalance6;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -137,7 +139,7 @@ public class BilateralLimit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BilateralLimit1, BranchAndFinancialInstitutionIdentification5> mmCounterpartyIdentification = new MMMessageAssociationEnd<BilateralLimit1, BranchAndFinancialInstitutionIdentification5>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BilateralLimit1.mmObject();
@@ -150,7 +152,17 @@ public class BilateralLimit1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification5 getValue(BilateralLimit1 obj) {
+			return obj.getCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(BilateralLimit1 obj, BranchAndFinancialInstitutionIdentification5 value) {
+			obj.setCounterpartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "LmtAmt", required = true)
@@ -197,7 +209,7 @@ public class BilateralLimit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BilateralLimit1, Amount2Choice> mmLimitAmount = new MMMessageAttribute<BilateralLimit1, Amount2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BilateralLimit1.mmObject();
@@ -210,6 +222,16 @@ public class BilateralLimit1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Amount2Choice getValue(BilateralLimit1 obj) {
+			return obj.getLimitAmount();
+		}
+
+		@Override
+		public void setValue(BilateralLimit1 obj, Amount2Choice value) {
+			obj.setLimitAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -255,7 +277,7 @@ public class BilateralLimit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BilateralLimit1, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<BilateralLimit1, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BilateralLimit1.mmObject();
@@ -269,9 +291,19 @@ public class BilateralLimit1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
+
+		@Override
+		public CreditDebitCode getValue(BilateralLimit1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(BilateralLimit1 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
+		}
 	};
 	@XmlElement(name = "BilBal")
-	protected List<com.tools20022.repository.msg.CashBalance6> bilateralBalance;
+	protected List<CashBalance6> bilateralBalance;
 	/**
 	 * 
 	 <p>
@@ -312,7 +344,7 @@ public class BilateralLimit1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBilateralBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BilateralLimit1, List<CashBalance6>> mmBilateralBalance = new MMMessageAssociationEnd<BilateralLimit1, List<CashBalance6>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BilateralLimit1.mmObject();
@@ -324,7 +356,17 @@ public class BilateralLimit1 {
 			nextVersions_lazy = () -> Arrays.asList(BilateralLimit2.mmBilateralBalance);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
+			type_lazy = () -> CashBalance6.mmObject();
+		}
+
+		@Override
+		public List<CashBalance6> getValue(BilateralLimit1 obj) {
+			return obj.getBilateralBalance();
+		}
+
+		@Override
+		public void setValue(BilateralLimit1 obj, List<CashBalance6> value) {
+			obj.setBilateralBalance(value);
 		}
 	};
 
@@ -348,7 +390,7 @@ public class BilateralLimit1 {
 		return counterpartyIdentification;
 	}
 
-	public BilateralLimit1 setCounterpartyIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 counterpartyIdentification) {
+	public BilateralLimit1 setCounterpartyIdentification(BranchAndFinancialInstitutionIdentification5 counterpartyIdentification) {
 		this.counterpartyIdentification = Objects.requireNonNull(counterpartyIdentification);
 		return this;
 	}
@@ -375,7 +417,7 @@ public class BilateralLimit1 {
 		return bilateralBalance == null ? bilateralBalance = new ArrayList<>() : bilateralBalance;
 	}
 
-	public BilateralLimit1 setBilateralBalance(List<com.tools20022.repository.msg.CashBalance6> bilateralBalance) {
+	public BilateralLimit1 setBilateralBalance(List<CashBalance6> bilateralBalance) {
 		this.bilateralBalance = Objects.requireNonNull(bilateralBalance);
 		return this;
 	}

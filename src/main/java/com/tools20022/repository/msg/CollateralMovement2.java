@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Collateral2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class CollateralMovement2 {
 	 * "Provides the collateral movement direction that is a delivery only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliver = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement2, Collateral2> mmDeliver = new MMMessageAssociationEnd<CollateralMovement2, Collateral2>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement2.mmObject();
@@ -118,7 +119,17 @@ public class CollateralMovement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Collateral2.mmObject();
+			type_lazy = () -> Collateral2.mmObject();
+		}
+
+		@Override
+		public Collateral2 getValue(CollateralMovement2 obj) {
+			return obj.getDeliver();
+		}
+
+		@Override
+		public void setValue(CollateralMovement2 obj, Collateral2 value) {
+			obj.setDeliver(value);
 		}
 	};
 	@XmlElement(name = "Rtr")
@@ -155,7 +166,7 @@ public class CollateralMovement2 {
 	 * "Provides the collateral movement direction that is a return only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturn = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement2, Optional<Collateral2>> mmReturn = new MMMessageAssociationEnd<CollateralMovement2, Optional<Collateral2>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement2.mmObject();
@@ -167,7 +178,17 @@ public class CollateralMovement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Collateral2.mmObject();
+			type_lazy = () -> Collateral2.mmObject();
+		}
+
+		@Override
+		public Optional<Collateral2> getValue(CollateralMovement2 obj) {
+			return obj.getReturn();
+		}
+
+		@Override
+		public void setValue(CollateralMovement2 obj, Optional<Collateral2> value) {
+			obj.setReturn(value.orElse(null));
 		}
 	};
 
@@ -189,7 +210,7 @@ public class CollateralMovement2 {
 		return deliver;
 	}
 
-	public CollateralMovement2 setDeliver(com.tools20022.repository.msg.Collateral2 deliver) {
+	public CollateralMovement2 setDeliver(Collateral2 deliver) {
 		this.deliver = Objects.requireNonNull(deliver);
 		return this;
 	}
@@ -198,7 +219,7 @@ public class CollateralMovement2 {
 		return return_ == null ? Optional.empty() : Optional.of(return_);
 	}
 
-	public CollateralMovement2 setReturn(com.tools20022.repository.msg.Collateral2 return_) {
+	public CollateralMovement2 setReturn(Collateral2 return_) {
 		this.return_ = return_;
 		return this;
 	}

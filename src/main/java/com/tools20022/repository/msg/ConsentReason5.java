@@ -109,7 +109,7 @@ public class ConsentReason5 {
 	 * definition} = "Reason provided for the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConsentReason5, ConsentOrRejectionReason5Choice> mmCode = new MMMessageAssociationEnd<ConsentReason5, ConsentOrRejectionReason5Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConsentReason5.mmObject();
@@ -122,6 +122,16 @@ public class ConsentReason5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ConsentOrRejectionReason5Choice.mmObject();
+		}
+
+		@Override
+		public ConsentOrRejectionReason5Choice getValue(ConsentReason5 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ConsentReason5 obj, ConsentOrRejectionReason5Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -163,7 +173,7 @@ public class ConsentReason5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConsentReason5, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<ConsentReason5, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConsentReason5.mmObject();
@@ -176,6 +186,16 @@ public class ConsentReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(ConsentReason5 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(ConsentReason5 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

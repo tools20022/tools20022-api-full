@@ -91,7 +91,7 @@ public class Addition1 {
 	 * definition} = "Content of the new element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProposedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Addition1, Max140Text> mmProposedValue = new MMMessageAttribute<Addition1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Addition1.mmObject();
 			isDerived = false;
@@ -102,6 +102,16 @@ public class Addition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(Addition1 obj) {
+			return obj.getProposedValue();
+		}
+
+		@Override
+		public void setValue(Addition1 obj, Max140Text value) {
+			obj.setProposedValue(value);
 		}
 	};
 

@@ -53,11 +53,15 @@ public class ConstraintTotalReversedInterbankSettlementAmount1Rule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
 		{
-			validator = ConstraintTotalReversedInterbankSettlementAmount1Rule::checkFIToFIPaymentReversalV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmount1Rule";
 			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
+			checkFIToFIPaymentReversalV01(obj);
 		}
 	};
 

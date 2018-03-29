@@ -60,12 +60,16 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV07> forAccountOpeningInstructionV07 = new MMConstraint<AccountOpeningInstructionV07>() {
 		{
-			validator = ConstraintInvestmentAccountIdentificationRule::checkAccountOpeningInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountIdentificationRule";
 			definition = "If InstructionDetails/OpeningType/Code is SUPA (SupplementaryAccountOpening), then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV06;
 			owner_lazy = () -> AccountOpeningInstructionV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV07 obj) throws Exception {
+			checkAccountOpeningInstructionV07(obj);
 		}
 	};
 	/**
@@ -106,13 +110,17 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV06> forAccountOpeningInstructionV06 = new MMConstraint<AccountOpeningInstructionV06>() {
 		{
-			validator = ConstraintInvestmentAccountIdentificationRule::checkAccountOpeningInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountIdentificationRule";
 			definition = "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV05;
 			owner_lazy = () -> AccountOpeningInstructionV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV06 obj) throws Exception {
+			checkAccountOpeningInstructionV06(obj);
 		}
 	};
 	/**
@@ -138,11 +146,15 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV02> forAccountOpeningInstructionV02 = new MMConstraint<AccountOpeningInstructionV02>() {
 		{
-			validator = ConstraintInvestmentAccountIdentificationRule::checkAccountOpeningInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountIdentificationRule";
 			definition = "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related.";
 			owner_lazy = () -> AccountOpeningInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV02 obj) throws Exception {
+			checkAccountOpeningInstructionV02(obj);
 		}
 	};
 	/**
@@ -177,12 +189,16 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV03> forAccountOpeningInstructionV03 = new MMConstraint<AccountOpeningInstructionV03>() {
 		{
-			validator = ConstraintInvestmentAccountIdentificationRule::checkAccountOpeningInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountIdentificationRule";
 			definition = "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV04);
 			owner_lazy = () -> AccountOpeningInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV03 obj) throws Exception {
+			checkAccountOpeningInstructionV03(obj);
 		}
 	};
 	/**
@@ -223,13 +239,17 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV04> forAccountOpeningInstructionV04 = new MMConstraint<AccountOpeningInstructionV04>() {
 		{
-			validator = ConstraintInvestmentAccountIdentificationRule::checkAccountOpeningInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountIdentificationRule";
 			definition = "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV03;
 			owner_lazy = () -> AccountOpeningInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV04 obj) throws Exception {
+			checkAccountOpeningInstructionV04(obj);
 		}
 	};
 	/**
@@ -270,13 +290,17 @@ public class ConstraintInvestmentAccountIdentificationRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV05> forAccountOpeningInstructionV05 = new MMConstraint<AccountOpeningInstructionV05>() {
 		{
-			validator = ConstraintInvestmentAccountIdentificationRule::checkAccountOpeningInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountIdentificationRule";
 			definition = "If InstructionDetails/OpeningType is SUPA, then InvestmentAccount/Identification must be present and must contain the identification of the main account to which the supplementary account is related.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestmentAccountIdentificationRule.forAccountOpeningInstructionV04;
 			owner_lazy = () -> AccountOpeningInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV05 obj) throws Exception {
+			checkAccountOpeningInstructionV05(obj);
 		}
 	};
 

@@ -102,7 +102,7 @@ public class SingleOrMassQuote2Choice {
 	 * definition} = "Details related to a single quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSingleQuoteDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleOrMassQuote2Choice, SingleQuote1> mmSingleQuoteDetails = new MMMessageAssociationEnd<SingleOrMassQuote2Choice, SingleQuote1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuoteVariable.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SingleOrMassQuote2Choice.mmObject();
@@ -115,6 +115,16 @@ public class SingleOrMassQuote2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SingleQuote1.mmObject();
+		}
+
+		@Override
+		public SingleQuote1 getValue(SingleOrMassQuote2Choice obj) {
+			return obj.getSingleQuoteDetails();
+		}
+
+		@Override
+		public void setValue(SingleOrMassQuote2Choice obj, SingleQuote1 value) {
+			obj.setSingleQuoteDetails(value);
 		}
 	};
 	@XmlElement(name = "MassQtDtls", required = true)
@@ -145,7 +155,7 @@ public class SingleOrMassQuote2Choice {
 	 * definition} = "Details related to a mass quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMassQuoteDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleOrMassQuote2Choice, QuoteStatus2> mmMassQuoteDetails = new MMMessageAssociationEnd<SingleOrMassQuote2Choice, QuoteStatus2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SingleOrMassQuote2Choice.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class SingleOrMassQuote2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuoteStatus2.mmObject();
+		}
+
+		@Override
+		public QuoteStatus2 getValue(SingleOrMassQuote2Choice obj) {
+			return obj.getMassQuoteDetails();
+		}
+
+		@Override
+		public void setValue(SingleOrMassQuote2Choice obj, QuoteStatus2 value) {
+			obj.setMassQuoteDetails(value);
 		}
 	};
 

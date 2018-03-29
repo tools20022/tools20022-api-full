@@ -126,7 +126,7 @@ public class AllegementStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AllegementStatus1Choice, AllegementStatus1Code> mmCode = new MMMessageAttribute<AllegementStatus1Choice, AllegementStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAllegedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AllegementStatus1Choice.mmObject();
@@ -140,6 +140,16 @@ public class AllegementStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AllegementStatus1Code.mmObject();
+		}
+
+		@Override
+		public AllegementStatus1Code getValue(AllegementStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AllegementStatus1Choice obj, AllegementStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -188,7 +198,7 @@ public class AllegementStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AllegementStatus1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<AllegementStatus1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAllegedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AllegementStatus1Choice.mmObject();
@@ -202,6 +212,16 @@ public class AllegementStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(AllegementStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AllegementStatus1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

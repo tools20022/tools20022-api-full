@@ -116,7 +116,7 @@ public class AmountPrice7 {
 	 * AmountPrice6.mmAmountPriceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPrice7, AmountPriceType3Code> mmAmountPriceType = new MMMessageAttribute<AmountPrice7, AmountPriceType3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPrice7.mmObject();
@@ -130,6 +130,16 @@ public class AmountPrice7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AmountPriceType3Code.mmObject();
+		}
+
+		@Override
+		public AmountPriceType3Code getValue(AmountPrice7 obj) {
+			return obj.getAmountPriceType();
+		}
+
+		@Override
+		public void setValue(AmountPrice7 obj, AmountPriceType3Code value) {
+			obj.setAmountPriceType(value);
 		}
 	};
 	@XmlElement(name = "PricVal", required = true)
@@ -174,7 +184,7 @@ public class AmountPrice7 {
 	 * AmountPrice6.mmPriceValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPrice7, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmPriceValue = new MMMessageAttribute<AmountPrice7, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPrice7.mmObject();
@@ -188,6 +198,16 @@ public class AmountPrice7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(AmountPrice7 obj) {
+			return obj.getPriceValue();
+		}
+
+		@Override
+		public void setValue(AmountPrice7 obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setPriceValue(value);
 		}
 	};
 

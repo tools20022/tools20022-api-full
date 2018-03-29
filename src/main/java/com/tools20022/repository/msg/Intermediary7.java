@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.entity.IntermediaryRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +126,7 @@ public class Intermediary7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary7, PartyIdentification2Choice> mmIdentification = new MMMessageAttribute<Intermediary7, PartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary7.mmObject();
@@ -138,6 +139,16 @@ public class Intermediary7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(Intermediary7 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary7 obj, PartyIdentification2Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -182,7 +193,7 @@ public class Intermediary7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary7, Optional<Account2>> mmAccount = new MMMessageAttribute<Intermediary7, Optional<Account2>>() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary7.mmObject();
@@ -194,7 +205,17 @@ public class Intermediary7 {
 			nextVersions_lazy = () -> Arrays.asList(Intermediary33.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Account2.mmObject();
+			complexType_lazy = () -> Account2.mmObject();
+		}
+
+		@Override
+		public Optional<Account2> getValue(Intermediary7 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Intermediary7 obj, Optional<Account2> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 
@@ -226,7 +247,7 @@ public class Intermediary7 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public Intermediary7 setAccount(com.tools20022.repository.msg.Account2 account) {
+	public Intermediary7 setAccount(Account2 account) {
 		this.account = account;
 		return this;
 	}

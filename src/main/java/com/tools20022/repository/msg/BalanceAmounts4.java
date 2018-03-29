@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -122,7 +123,7 @@ public class BalanceAmounts4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHoldingValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>> mmHoldingValue = new MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts4.mmObject();
@@ -134,7 +135,17 @@ public class BalanceAmounts4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
+			type_lazy = () -> AmountAndDirection14.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection14> getValue(BalanceAmounts4 obj) {
+			return obj.getHoldingValue();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts4 obj, Optional<AmountAndDirection14> value) {
+			obj.setHoldingValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsHldgVal")
@@ -172,7 +183,7 @@ public class BalanceAmounts4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousHoldingValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>> mmPreviousHoldingValue = new MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts4.mmObject();
@@ -184,7 +195,17 @@ public class BalanceAmounts4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
+			type_lazy = () -> AmountAndDirection14.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection14> getValue(BalanceAmounts4 obj) {
+			return obj.getPreviousHoldingValue();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts4 obj, Optional<AmountAndDirection14> value) {
+			obj.setPreviousHoldingValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BookVal")
@@ -222,7 +243,7 @@ public class BalanceAmounts4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBookValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>> mmBookValue = new MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts4.mmObject();
@@ -234,7 +255,17 @@ public class BalanceAmounts4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
+			type_lazy = () -> AmountAndDirection14.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection14> getValue(BalanceAmounts4 obj) {
+			return obj.getBookValue();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts4 obj, Optional<AmountAndDirection14> value) {
+			obj.setBookValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ElgblCollVal")
@@ -270,7 +301,7 @@ public class BalanceAmounts4 {
 	 * definition} = "Value of the position eligible for collateral purposes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEligibleCollateralValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>> mmEligibleCollateralValue = new MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmEligibleCollateralValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts4.mmObject();
@@ -282,7 +313,17 @@ public class BalanceAmounts4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
+			type_lazy = () -> AmountAndDirection14.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection14> getValue(BalanceAmounts4 obj) {
+			return obj.getEligibleCollateralValue();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts4 obj, Optional<AmountAndDirection14> value) {
+			obj.setEligibleCollateralValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstAmt")
@@ -319,7 +360,7 @@ public class BalanceAmounts4 {
 	 * "Interest amount that has accrued in between coupon payment periods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccruedInterestAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>> mmAccruedInterestAmount = new MMMessageAssociationEnd<BalanceAmounts4, Optional<AmountAndDirection14>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts4.mmObject();
@@ -331,7 +372,17 @@ public class BalanceAmounts4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
+			type_lazy = () -> AmountAndDirection14.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection14> getValue(BalanceAmounts4 obj) {
+			return obj.getAccruedInterestAmount();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts4 obj, Optional<AmountAndDirection14> value) {
+			obj.setAccruedInterestAmount(value.orElse(null));
 		}
 	};
 
@@ -355,7 +406,7 @@ public class BalanceAmounts4 {
 		return holdingValue == null ? Optional.empty() : Optional.of(holdingValue);
 	}
 
-	public BalanceAmounts4 setHoldingValue(com.tools20022.repository.msg.AmountAndDirection14 holdingValue) {
+	public BalanceAmounts4 setHoldingValue(AmountAndDirection14 holdingValue) {
 		this.holdingValue = holdingValue;
 		return this;
 	}
@@ -364,7 +415,7 @@ public class BalanceAmounts4 {
 		return previousHoldingValue == null ? Optional.empty() : Optional.of(previousHoldingValue);
 	}
 
-	public BalanceAmounts4 setPreviousHoldingValue(com.tools20022.repository.msg.AmountAndDirection14 previousHoldingValue) {
+	public BalanceAmounts4 setPreviousHoldingValue(AmountAndDirection14 previousHoldingValue) {
 		this.previousHoldingValue = previousHoldingValue;
 		return this;
 	}
@@ -373,7 +424,7 @@ public class BalanceAmounts4 {
 		return bookValue == null ? Optional.empty() : Optional.of(bookValue);
 	}
 
-	public BalanceAmounts4 setBookValue(com.tools20022.repository.msg.AmountAndDirection14 bookValue) {
+	public BalanceAmounts4 setBookValue(AmountAndDirection14 bookValue) {
 		this.bookValue = bookValue;
 		return this;
 	}
@@ -382,7 +433,7 @@ public class BalanceAmounts4 {
 		return eligibleCollateralValue == null ? Optional.empty() : Optional.of(eligibleCollateralValue);
 	}
 
-	public BalanceAmounts4 setEligibleCollateralValue(com.tools20022.repository.msg.AmountAndDirection14 eligibleCollateralValue) {
+	public BalanceAmounts4 setEligibleCollateralValue(AmountAndDirection14 eligibleCollateralValue) {
 		this.eligibleCollateralValue = eligibleCollateralValue;
 		return this;
 	}
@@ -391,7 +442,7 @@ public class BalanceAmounts4 {
 		return accruedInterestAmount == null ? Optional.empty() : Optional.of(accruedInterestAmount);
 	}
 
-	public BalanceAmounts4 setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection14 accruedInterestAmount) {
+	public BalanceAmounts4 setAccruedInterestAmount(AmountAndDirection14 accruedInterestAmount) {
 		this.accruedInterestAmount = accruedInterestAmount;
 		return this;
 	}

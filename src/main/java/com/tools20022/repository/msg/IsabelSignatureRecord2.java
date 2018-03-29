@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SignatureOriginType1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IsabelLRCIExtension1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class IsabelSignatureRecord2 {
 	 * IsabelSignatureRecord1.mmSignatureType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignatureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSignatureRecord2, SignatureOriginType1Code> mmSignatureType = new MMMessageAttribute<IsabelSignatureRecord2, SignatureOriginType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureRecord2.mmObject();
 			isDerived = false;
@@ -136,6 +137,16 @@ public class IsabelSignatureRecord2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SignatureOriginType1Code.mmObject();
+		}
+
+		@Override
+		public SignatureOriginType1Code getValue(IsabelSignatureRecord2 obj) {
+			return obj.getSignatureType();
+		}
+
+		@Override
+		public void setValue(IsabelSignatureRecord2 obj, SignatureOriginType1Code value) {
+			obj.setSignatureType(value);
 		}
 	};
 	@XmlElement(name = "SrlNb", required = true)
@@ -173,7 +184,7 @@ public class IsabelSignatureRecord2 {
 	 * IsabelSignatureRecord1.mmSerialNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSignatureRecord2, Max20AlphaNumericText> mmSerialNumber = new MMMessageAttribute<IsabelSignatureRecord2, Max20AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureRecord2.mmObject();
 			isDerived = false;
@@ -185,6 +196,16 @@ public class IsabelSignatureRecord2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max20AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max20AlphaNumericText getValue(IsabelSignatureRecord2 obj) {
+			return obj.getSerialNumber();
+		}
+
+		@Override
+		public void setValue(IsabelSignatureRecord2 obj, Max20AlphaNumericText value) {
+			obj.setSerialNumber(value);
 		}
 	};
 	@XmlElement(name = "Cert", required = true)
@@ -223,7 +244,7 @@ public class IsabelSignatureRecord2 {
 	 * IsabelSignatureRecord1.mmCertificate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSignatureRecord2, Max4kBinary> mmCertificate = new MMMessageAttribute<IsabelSignatureRecord2, Max4kBinary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureRecord2.mmObject();
 			isDerived = false;
@@ -235,6 +256,16 @@ public class IsabelSignatureRecord2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4kBinary.mmObject();
+		}
+
+		@Override
+		public Max4kBinary getValue(IsabelSignatureRecord2 obj) {
+			return obj.getCertificate();
+		}
+
+		@Override
+		public void setValue(IsabelSignatureRecord2 obj, Max4kBinary value) {
+			obj.setCertificate(value);
 		}
 	};
 	@XmlElement(name = "Sgntr", required = true)
@@ -273,7 +304,7 @@ public class IsabelSignatureRecord2 {
 	 * IsabelSignatureRecord1.mmSignature}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSignatureRecord2, Max1kBinary> mmSignature = new MMMessageAttribute<IsabelSignatureRecord2, Max1kBinary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureRecord2.mmObject();
 			isDerived = false;
@@ -285,6 +316,16 @@ public class IsabelSignatureRecord2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max1kBinary.mmObject();
+		}
+
+		@Override
+		public Max1kBinary getValue(IsabelSignatureRecord2 obj) {
+			return obj.getSignature();
+		}
+
+		@Override
+		public void setValue(IsabelSignatureRecord2 obj, Max1kBinary value) {
+			obj.setSignature(value);
 		}
 	};
 	@XmlElement(name = "Algo", required = true)
@@ -323,7 +364,7 @@ public class IsabelSignatureRecord2 {
 	 * IsabelSignatureRecord1.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSignatureRecord2, Max105Text> mmAlgorithm = new MMMessageAttribute<IsabelSignatureRecord2, Max105Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureRecord2.mmObject();
 			isDerived = false;
@@ -335,6 +376,16 @@ public class IsabelSignatureRecord2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Max105Text getValue(IsabelSignatureRecord2 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(IsabelSignatureRecord2 obj, Max105Text value) {
+			obj.setAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "SgnrId", required = true)
@@ -373,7 +424,7 @@ public class IsabelSignatureRecord2 {
 	 * IsabelSignatureRecord1.mmSignerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSignatureRecord2, Max13AlphaNumericText> mmSignerIdentification = new MMMessageAttribute<IsabelSignatureRecord2, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureRecord2.mmObject();
 			isDerived = false;
@@ -385,6 +436,16 @@ public class IsabelSignatureRecord2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelSignatureRecord2 obj) {
+			return obj.getSignerIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelSignatureRecord2 obj, Max13AlphaNumericText value) {
+			obj.setSignerIdentification(value);
 		}
 	};
 	@XmlElement(name = "LRCIXtnsn")
@@ -417,7 +478,7 @@ public class IsabelSignatureRecord2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLRCIExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelSignatureRecord2, Optional<IsabelLRCIExtension1>> mmLRCIExtension = new MMMessageAssociationEnd<IsabelSignatureRecord2, Optional<IsabelLRCIExtension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignatureRecord2.mmObject();
 			isDerived = false;
@@ -428,7 +489,17 @@ public class IsabelSignatureRecord2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelLRCIExtension1.mmObject();
+			type_lazy = () -> IsabelLRCIExtension1.mmObject();
+		}
+
+		@Override
+		public Optional<IsabelLRCIExtension1> getValue(IsabelSignatureRecord2 obj) {
+			return obj.getLRCIExtension();
+		}
+
+		@Override
+		public void setValue(IsabelSignatureRecord2 obj, Optional<IsabelLRCIExtension1> value) {
+			obj.setLRCIExtension(value.orElse(null));
 		}
 	};
 
@@ -506,7 +577,7 @@ public class IsabelSignatureRecord2 {
 		return lRCIExtension == null ? Optional.empty() : Optional.of(lRCIExtension);
 	}
 
-	public IsabelSignatureRecord2 setLRCIExtension(com.tools20022.repository.msg.IsabelLRCIExtension1 lRCIExtension) {
+	public IsabelSignatureRecord2 setLRCIExtension(IsabelLRCIExtension1 lRCIExtension) {
 		this.lRCIExtension = lRCIExtension;
 		return this;
 	}

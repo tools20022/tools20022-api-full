@@ -163,7 +163,7 @@ public class Identification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Max35Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<Identification7, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -176,6 +176,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Identification7 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Max35Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -217,7 +227,7 @@ public class Identification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -230,6 +240,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId")
@@ -272,7 +292,7 @@ public class Identification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -285,6 +305,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setMarketInfrastructureTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcrTxId")
@@ -323,7 +353,7 @@ public class Identification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmProcessorTransactionIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProcessorTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -335,6 +365,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getProcessorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setProcessorTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmonId")
@@ -376,7 +416,7 @@ public class Identification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmCommonIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -389,6 +429,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setCommonIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradId")
@@ -430,7 +480,7 @@ public class Identification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, List<Max35Text>> mmTradeIdentification = new MMMessageAttribute<Identification7, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -442,6 +492,16 @@ public class Identification7 {
 			definition = "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(Identification7 obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, List<Max35Text> value) {
+			obj.setTradeIdentification(value);
 		}
 	};
 	@XmlElement(name = "MstrId")
@@ -483,7 +543,7 @@ public class Identification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmMasterIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -496,6 +556,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getMasterIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setMasterIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BsktId")
@@ -535,7 +605,7 @@ public class Identification7 {
 	 * definition} = "Identification of a basket trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasketIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmBasketIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmBasketIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -548,6 +618,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getBasketIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setBasketIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndxId")
@@ -587,7 +667,7 @@ public class Identification7 {
 	 * definition} = "Reference identifying a index trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmIndexIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -600,6 +680,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getIndexIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setIndexIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ListId")
@@ -641,7 +731,7 @@ public class Identification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmListIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -654,6 +744,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setListIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrgmId")
@@ -693,7 +793,7 @@ public class Identification7 {
 	 * definition} = "Program reference which identifies a program trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProgramIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmProgramIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProgramIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -706,6 +806,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getProgramIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setProgramIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolId")
@@ -745,7 +855,7 @@ public class Identification7 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmPoolIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -758,6 +868,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setPoolIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -799,7 +919,7 @@ public class Identification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification7, Optional<Max35Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<Identification7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification7.mmObject();
@@ -812,6 +932,16 @@ public class Identification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Identification7 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(Identification7 obj, Optional<Max35Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 

@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification30;
+import com.tools20022.repository.msg.ProprietaryReason4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +121,7 @@ public class ProprietaryStatusAndReason6 {
 	 * ProprietaryStatusAndReason1.mmProprietaryStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryStatusAndReason6, GenericIdentification30> mmProprietaryStatus = new MMMessageAttribute<ProprietaryStatusAndReason6, GenericIdentification30>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason6.mmObject();
@@ -131,11 +133,21 @@ public class ProprietaryStatusAndReason6 {
 			previousVersion_lazy = () -> ProprietaryStatusAndReason1.mmProprietaryStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
+			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ProprietaryStatusAndReason6 obj) {
+			return obj.getProprietaryStatus();
+		}
+
+		@Override
+		public void setValue(ProprietaryStatusAndReason6 obj, GenericIdentification30 value) {
+			obj.setProprietaryStatus(value);
 		}
 	};
 	@XmlElement(name = "PrtryRsn")
-	protected List<com.tools20022.repository.msg.ProprietaryReason4> proprietaryReason;
+	protected List<ProprietaryReason4> proprietaryReason;
 	/**
 	 * 
 	 <p>
@@ -174,7 +186,7 @@ public class ProprietaryStatusAndReason6 {
 	 * ProprietaryStatusAndReason1.mmProprietaryReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProprietaryStatusAndReason6, List<ProprietaryReason4>> mmProprietaryReason = new MMMessageAssociationEnd<ProprietaryStatusAndReason6, List<ProprietaryReason4>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason6.mmObject();
@@ -186,7 +198,17 @@ public class ProprietaryStatusAndReason6 {
 			previousVersion_lazy = () -> ProprietaryStatusAndReason1.mmProprietaryReason;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason4.mmObject();
+			type_lazy = () -> ProprietaryReason4.mmObject();
+		}
+
+		@Override
+		public List<ProprietaryReason4> getValue(ProprietaryStatusAndReason6 obj) {
+			return obj.getProprietaryReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryStatusAndReason6 obj, List<ProprietaryReason4> value) {
+			obj.setProprietaryReason(value);
 		}
 	};
 
@@ -209,7 +231,7 @@ public class ProprietaryStatusAndReason6 {
 		return proprietaryStatus;
 	}
 
-	public ProprietaryStatusAndReason6 setProprietaryStatus(com.tools20022.repository.msg.GenericIdentification30 proprietaryStatus) {
+	public ProprietaryStatusAndReason6 setProprietaryStatus(GenericIdentification30 proprietaryStatus) {
 		this.proprietaryStatus = Objects.requireNonNull(proprietaryStatus);
 		return this;
 	}
@@ -218,7 +240,7 @@ public class ProprietaryStatusAndReason6 {
 		return proprietaryReason == null ? proprietaryReason = new ArrayList<>() : proprietaryReason;
 	}
 
-	public ProprietaryStatusAndReason6 setProprietaryReason(List<com.tools20022.repository.msg.ProprietaryReason4> proprietaryReason) {
+	public ProprietaryStatusAndReason6 setProprietaryReason(List<ProprietaryReason4> proprietaryReason) {
 		this.proprietaryReason = Objects.requireNonNull(proprietaryReason);
 		return this;
 	}

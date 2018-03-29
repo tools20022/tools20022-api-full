@@ -51,11 +51,15 @@ public class ConstraintPendingAdditionalInformation {
 	 */
 	public static final MMConstraint<TransferCancellationStatus> forTransferCancellationStatus = new MMConstraint<TransferCancellationStatus>() {
 		{
-			validator = ConstraintPendingAdditionalInformation::checkTransferCancellationStatus;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingAdditionalInformation";
 			definition = "If Status is Pending, then AdditionalInformation is allowed. If Status is not Pending, then AdditionalInformation is not allowed.";
 			owner_lazy = () -> TransferCancellationStatus.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatus obj) throws Exception {
+			checkTransferCancellationStatus(obj);
 		}
 	};
 

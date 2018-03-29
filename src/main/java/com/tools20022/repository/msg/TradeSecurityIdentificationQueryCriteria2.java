@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecurityIdentificationQuery3Choice;
 import com.tools20022.repository.codeset.Operation3Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentificationQueryCriteria1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,7 +115,7 @@ public class TradeSecurityIdentificationQueryCriteria2 {
 	 * definition} = "Specifies the AND/OR operators as query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeSecurityIdentificationQueryCriteria2, Operation3Code> mmOperator = new MMMessageAttribute<TradeSecurityIdentificationQueryCriteria2, Operation3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSecurityIdentificationQueryCriteria2.mmObject();
 			isDerived = false;
@@ -126,9 +127,19 @@ public class TradeSecurityIdentificationQueryCriteria2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Operation3Code.mmObject();
 		}
+
+		@Override
+		public Operation3Code getValue(TradeSecurityIdentificationQueryCriteria2 obj) {
+			return obj.getOperator();
+		}
+
+		@Override
+		public void setValue(TradeSecurityIdentificationQueryCriteria2 obj, Operation3Code value) {
+			obj.setOperator(value);
+		}
 	};
 	@XmlElement(name = "Id")
-	protected List<com.tools20022.repository.msg.SecurityIdentificationQueryCriteria1> identification;
+	protected List<SecurityIdentificationQueryCriteria1> identification;
 	/**
 	 * 
 	 <p>
@@ -156,7 +167,7 @@ public class TradeSecurityIdentificationQueryCriteria2 {
 	 * definition} = "Identification of the product through ISIN or AII.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeSecurityIdentificationQueryCriteria2, List<SecurityIdentificationQueryCriteria1>> mmIdentification = new MMMessageAssociationEnd<TradeSecurityIdentificationQueryCriteria2, List<SecurityIdentificationQueryCriteria1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSecurityIdentificationQueryCriteria2.mmObject();
 			isDerived = false;
@@ -166,7 +177,17 @@ public class TradeSecurityIdentificationQueryCriteria2 {
 			definition = "Identification of the product through ISIN or AII.\r\n";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentificationQueryCriteria1.mmObject();
+			type_lazy = () -> SecurityIdentificationQueryCriteria1.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentificationQueryCriteria1> getValue(TradeSecurityIdentificationQueryCriteria2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TradeSecurityIdentificationQueryCriteria2 obj, List<SecurityIdentificationQueryCriteria1> value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "UndrlygInstrmId")
@@ -200,7 +221,7 @@ public class TradeSecurityIdentificationQueryCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeSecurityIdentificationQueryCriteria2, List<SecurityIdentificationQuery3Choice>> mmUnderlyingInstrumentIdentification = new MMMessageAssociationEnd<TradeSecurityIdentificationQueryCriteria2, List<SecurityIdentificationQuery3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeSecurityIdentificationQueryCriteria2.mmObject();
 			isDerived = false;
@@ -211,6 +232,16 @@ public class TradeSecurityIdentificationQueryCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentificationQuery3Choice.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentificationQuery3Choice> getValue(TradeSecurityIdentificationQueryCriteria2 obj) {
+			return obj.getUnderlyingInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(TradeSecurityIdentificationQueryCriteria2 obj, List<SecurityIdentificationQuery3Choice> value) {
+			obj.setUnderlyingInstrumentIdentification(value);
 		}
 	};
 
@@ -242,7 +273,7 @@ public class TradeSecurityIdentificationQueryCriteria2 {
 		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public TradeSecurityIdentificationQueryCriteria2 setIdentification(List<com.tools20022.repository.msg.SecurityIdentificationQueryCriteria1> identification) {
+	public TradeSecurityIdentificationQueryCriteria2 setIdentification(List<SecurityIdentificationQueryCriteria1> identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

@@ -96,7 +96,7 @@ public class SystemClosureDetails {
 	 * definition} = "Period of time when the system is closed/not operating."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemClosureDetails, DateTimePeriodChoice> mmPeriod = new MMMessageAttribute<SystemClosureDetails, DateTimePeriodChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemClosureDetails.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class SystemClosureDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public DateTimePeriodChoice getValue(SystemClosureDetails obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(SystemClosureDetails obj, DateTimePeriodChoice value) {
+			obj.setPeriod(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -139,7 +149,7 @@ public class SystemClosureDetails {
 	 * definition} = "Reason the system is closed/not operating."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemClosureDetails, ClosureReasonChoice> mmReason = new MMMessageAttribute<SystemClosureDetails, ClosureReasonChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemClosureDetails.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class SystemClosureDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ClosureReasonChoice.mmObject();
+		}
+
+		@Override
+		public ClosureReasonChoice getValue(SystemClosureDetails obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SystemClosureDetails obj, ClosureReasonChoice value) {
+			obj.setReason(value);
 		}
 	};
 

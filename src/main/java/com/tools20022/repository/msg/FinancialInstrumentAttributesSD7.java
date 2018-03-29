@@ -111,7 +111,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD7, Max350Text> mmPlaceAndName = new MMMessageAttribute<FinancialInstrumentAttributesSD7, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class FinancialInstrumentAttributesSD7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(FinancialInstrumentAttributesSD7 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD7 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "IssrDesc")
@@ -156,7 +166,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * definition} = "Name of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD7, Optional<Max70Text>> mmIssuerDescription = new MMMessageAttribute<FinancialInstrumentAttributesSD7, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class FinancialInstrumentAttributesSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(FinancialInstrumentAttributesSD7 obj) {
+			return obj.getIssuerDescription();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD7 obj, Optional<Max70Text> value) {
+			obj.setIssuerDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfIncorprtn")
@@ -202,7 +222,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * definition} = "Country of incorporation of the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfIncorporation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD7, Optional<CountryCode>> mmCountryOfIncorporation = new MMMessageAttribute<FinancialInstrumentAttributesSD7, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class FinancialInstrumentAttributesSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(FinancialInstrumentAttributesSD7 obj) {
+			return obj.getCountryOfIncorporation();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD7 obj, Optional<CountryCode> value) {
+			obj.setCountryOfIncorporation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmryXchgFlg")
@@ -251,7 +281,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrimaryExchangeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD7, Optional<YesNoIndicator>> mmPrimaryExchangeFlag = new MMMessageAttribute<FinancialInstrumentAttributesSD7, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -263,6 +293,16 @@ public class FinancialInstrumentAttributesSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(FinancialInstrumentAttributesSD7 obj) {
+			return obj.getPrimaryExchangeFlag();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD7 obj, Optional<YesNoIndicator> value) {
+			obj.setPrimaryExchangeFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SECRegdFlg")
@@ -300,7 +340,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSECRegisteredFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD7, Optional<YesNoIndicator>> mmSECRegisteredFlag = new MMMessageAttribute<FinancialInstrumentAttributesSD7, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
@@ -312,6 +352,16 @@ public class FinancialInstrumentAttributesSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(FinancialInstrumentAttributesSD7 obj) {
+			return obj.getSECRegisteredFlag();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD7 obj, Optional<YesNoIndicator> value) {
+			obj.setSECRegisteredFlag(value.orElse(null));
 		}
 	};
 

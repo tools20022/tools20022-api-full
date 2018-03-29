@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.DefaultFund;
 import com.tools20022.repository.entity.DefaultFundContribution;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount31;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class Contribution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Contribution1, Optional<AccountIdentification4Choice>> mmAccount = new MMMessageAttribute<Contribution1, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Contribution1.mmObject();
@@ -133,6 +134,16 @@ public class Contribution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(Contribution1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Contribution1 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqrdAmt", required = true)
@@ -171,7 +182,7 @@ public class Contribution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequiredAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Contribution1, ActiveCurrencyAndAmount> mmRequiredAmount = new MMMessageAttribute<Contribution1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> DefaultFund.mmTotalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Contribution1.mmObject();
@@ -183,6 +194,16 @@ public class Contribution1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Contribution1 obj) {
+			return obj.getRequiredAmount();
+		}
+
+		@Override
+		public void setValue(Contribution1 obj, ActiveCurrencyAndAmount value) {
+			obj.setRequiredAmount(value);
 		}
 	};
 	@XmlElement(name = "IncrCvrgAmt")
@@ -221,7 +242,7 @@ public class Contribution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncreaseCoverageAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Contribution1, Optional<ActiveCurrencyAndAmount>> mmIncreaseCoverageAmount = new MMMessageAttribute<Contribution1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> DefaultFundContribution.mmExcessOrDeficitAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Contribution1.mmObject();
@@ -233,6 +254,16 @@ public class Contribution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Contribution1 obj) {
+			return obj.getIncreaseCoverageAmount();
+		}
+
+		@Override
+		public void setValue(Contribution1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setIncreaseCoverageAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonClrMmb")
@@ -268,7 +299,7 @@ public class Contribution1 {
 	 * definition} = "Provides the identification for the non-clearing member."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Contribution1, Optional<PartyIdentificationAndAccount31>> mmNonClearingMember = new MMMessageAssociationEnd<Contribution1, Optional<PartyIdentificationAndAccount31>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Contribution1.mmObject();
@@ -280,7 +311,17 @@ public class Contribution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount31> getValue(Contribution1 obj) {
+			return obj.getNonClearingMember();
+		}
+
+		@Override
+		public void setValue(Contribution1 obj, Optional<PartyIdentificationAndAccount31> value) {
+			obj.setNonClearingMember(value.orElse(null));
 		}
 	};
 
@@ -330,7 +371,7 @@ public class Contribution1 {
 		return nonClearingMember == null ? Optional.empty() : Optional.of(nonClearingMember);
 	}
 
-	public Contribution1 setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
+	public Contribution1 setNonClearingMember(PartyIdentificationAndAccount31 nonClearingMember) {
 		this.nonClearingMember = nonClearingMember;
 		return this;
 	}

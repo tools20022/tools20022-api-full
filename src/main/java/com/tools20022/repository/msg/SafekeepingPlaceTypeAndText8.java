@@ -125,7 +125,7 @@ public class SafekeepingPlaceTypeAndText8 {
 	 * SafekeepingPlaceTypeAndText3.mmSafekeepingPlaceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingPlaceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceTypeAndText8, SafekeepingPlace3Code> mmSafekeepingPlaceType = new MMMessageAttribute<SafekeepingPlaceTypeAndText8, SafekeepingPlace3Code>() {
 		{
 			businessElementTrace_lazy = () -> SafekeepingPlace.mmSafekeepingPlaceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingPlaceTypeAndText8.mmObject();
@@ -139,6 +139,16 @@ public class SafekeepingPlaceTypeAndText8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SafekeepingPlace3Code.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlace3Code getValue(SafekeepingPlaceTypeAndText8 obj) {
+			return obj.getSafekeepingPlaceType();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceTypeAndText8 obj, SafekeepingPlace3Code value) {
+			obj.setSafekeepingPlaceType(value);
 		}
 	};
 	@XmlElement(name = "Id")
@@ -180,7 +190,7 @@ public class SafekeepingPlaceTypeAndText8 {
 	 * SafekeepingPlaceTypeAndText3.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceTypeAndText8, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<SafekeepingPlaceTypeAndText8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingPlaceTypeAndText8.mmObject();
@@ -193,6 +203,16 @@ public class SafekeepingPlaceTypeAndText8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SafekeepingPlaceTypeAndText8 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceTypeAndText8 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 

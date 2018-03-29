@@ -27,7 +27,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.Obligation4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -158,7 +157,7 @@ public class CollateralProposalResponseV04 {
 	 * CollateralProposalResponseV03.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralProposalResponseV04, Max35Text> mmTransactionIdentification = new MMMessageBuildingBlock<CollateralProposalResponseV04, Max35Text>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,12 +170,14 @@ public class CollateralProposalResponseV04 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralProposalResponseV04.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CollateralProposalResponseV04 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseV04 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "Oblgtn", required = true)
@@ -218,7 +219,7 @@ public class CollateralProposalResponseV04 {
 	 * CollateralProposalResponseV03.mmObligation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralProposalResponseV04, Obligation4> mmObligation = new MMMessageBuildingBlock<CollateralProposalResponseV04, Obligation4>() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,12 +232,14 @@ public class CollateralProposalResponseV04 {
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralProposalResponseV04.class.getMethod("getObligation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Obligation4 getValue(CollateralProposalResponseV04 obj) {
+			return obj.getObligation();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseV04 obj, Obligation4 value) {
+			obj.setObligation(value);
 		}
 	};
 	@XmlElement(name = "PrpslRspn", required = true)
@@ -279,7 +282,7 @@ public class CollateralProposalResponseV04 {
 	 * CollateralProposalResponseV03.mmProposalResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProposalResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralProposalResponseV04, CollateralProposalResponse2Choice> mmProposalResponse = new MMMessageBuildingBlock<CollateralProposalResponseV04, CollateralProposalResponse2Choice>() {
 		{
 			xmlTag = "PrpslRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,12 +295,14 @@ public class CollateralProposalResponseV04 {
 			complexType_lazy = () -> CollateralProposalResponse2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralProposalResponseV04.class.getMethod("getProposalResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CollateralProposalResponse2Choice getValue(CollateralProposalResponseV04 obj) {
+			return obj.getProposalResponse();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseV04 obj, CollateralProposalResponse2Choice value) {
+			obj.setProposalResponse(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -340,7 +345,7 @@ public class CollateralProposalResponseV04 {
 	 * CollateralProposalResponseV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralProposalResponseV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CollateralProposalResponseV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -352,12 +357,14 @@ public class CollateralProposalResponseV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralProposalResponseV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CollateralProposalResponseV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CollateralProposalResponseV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

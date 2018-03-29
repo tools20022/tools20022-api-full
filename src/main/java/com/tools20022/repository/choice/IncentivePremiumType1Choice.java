@@ -107,7 +107,7 @@ public class IncentivePremiumType1Choice {
 	 * definition} = "Number of securities giving right to a premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPerSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncentivePremiumType1Choice, Number> mmPerSecurity = new MMMessageAttribute<IncentivePremiumType1Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPerSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IncentivePremiumType1Choice.mmObject();
@@ -119,6 +119,16 @@ public class IncentivePremiumType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(IncentivePremiumType1Choice obj) {
+			return obj.getPerSecurity();
+		}
+
+		@Override
+		public void setValue(IncentivePremiumType1Choice obj, Number value) {
+			obj.setPerSecurity(value);
 		}
 	};
 	@XmlElement(name = "PerVote", required = true)
@@ -155,7 +165,7 @@ public class IncentivePremiumType1Choice {
 	 * definition} = "Number of votes giving right to a premium."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPerVote = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncentivePremiumType1Choice, Number> mmPerVote = new MMMessageAttribute<IncentivePremiumType1Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPerVote;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IncentivePremiumType1Choice.mmObject();
@@ -167,6 +177,16 @@ public class IncentivePremiumType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(IncentivePremiumType1Choice obj) {
+			return obj.getPerVote();
+		}
+
+		@Override
+		public void setValue(IncentivePremiumType1Choice obj, Number value) {
+			obj.setPerVote(value);
 		}
 	};
 	@XmlElement(name = "PerAttndee", required = true)
@@ -204,7 +224,7 @@ public class IncentivePremiumType1Choice {
 	 * definition} = "Indicates that the premium is given per attendee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPerAttendee = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncentivePremiumType1Choice, YesNoIndicator> mmPerAttendee = new MMMessageAttribute<IncentivePremiumType1Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> IncentivePremium.mmPerAttendee;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IncentivePremiumType1Choice.mmObject();
@@ -216,6 +236,16 @@ public class IncentivePremiumType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(IncentivePremiumType1Choice obj) {
+			return obj.getPerAttendee();
+		}
+
+		@Override
+		public void setValue(IncentivePremiumType1Choice obj, YesNoIndicator value) {
+			obj.setPerAttendee(value);
 		}
 	};
 

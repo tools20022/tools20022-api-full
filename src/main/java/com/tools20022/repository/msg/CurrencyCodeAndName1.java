@@ -96,7 +96,7 @@ public class CurrencyCodeAndName1 {
 	 * definition} = "Currency is specified by its code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyCodeAndName1, ActiveOrHistoricCurrencyCode> mmCode = new MMMessageAttribute<CurrencyCodeAndName1, ActiveOrHistoricCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyCodeAndName1.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class CurrencyCodeAndName1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CurrencyCodeAndName1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CurrencyCodeAndName1 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -138,7 +148,7 @@ public class CurrencyCodeAndName1 {
 	 * definition} = "Currency is specified by its name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyCodeAndName1, Max70Text> mmName = new MMMessageAttribute<CurrencyCodeAndName1, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyCodeAndName1.mmObject();
 			isDerived = false;
@@ -149,6 +159,16 @@ public class CurrencyCodeAndName1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(CurrencyCodeAndName1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CurrencyCodeAndName1 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 

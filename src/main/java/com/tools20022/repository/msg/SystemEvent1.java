@@ -111,7 +111,7 @@ public class SystemEvent1 {
 	 * definition} = "Nature of the event that has occurred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemEvent1, SystemEventType1Choice> mmType = new MMMessageAttribute<SystemEvent1, SystemEventType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemEvent1.mmObject();
@@ -123,6 +123,16 @@ public class SystemEvent1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemEventType1Choice.mmObject();
+		}
+
+		@Override
+		public SystemEventType1Choice getValue(SystemEvent1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SystemEvent1 obj, SystemEventType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "SchdldTm", required = true)
@@ -158,7 +168,7 @@ public class SystemEvent1 {
 	 * definition} = "Date and time at which the event is foreseen to occur."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemEvent1, ISODateTime> mmScheduledTime = new MMMessageAttribute<SystemEvent1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemEvent1.mmObject();
@@ -170,6 +180,16 @@ public class SystemEvent1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(SystemEvent1 obj) {
+			return obj.getScheduledTime();
+		}
+
+		@Override
+		public void setValue(SystemEvent1 obj, ISODateTime value) {
+			obj.setScheduledTime(value);
 		}
 	};
 	@XmlElement(name = "FctvTm")
@@ -206,7 +226,7 @@ public class SystemEvent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemEvent1, Optional<ISODateTime>> mmEffectiveTime = new MMMessageAttribute<SystemEvent1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemEvent1.mmObject();
@@ -218,6 +238,16 @@ public class SystemEvent1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(SystemEvent1 obj) {
+			return obj.getEffectiveTime();
+		}
+
+		@Override
+		public void setValue(SystemEvent1 obj, Optional<ISODateTime> value) {
+			obj.setEffectiveTime(value.orElse(null));
 		}
 	};
 

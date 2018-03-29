@@ -111,7 +111,7 @@ public class MatchingStatus28Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingStatus28Choice, MatchingStatus1Code> mmCode = new MMMessageAttribute<MatchingStatus28Choice, MatchingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus28Choice.mmObject();
@@ -124,6 +124,16 @@ public class MatchingStatus28Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MatchingStatus1Code.mmObject();
+		}
+
+		@Override
+		public MatchingStatus1Code getValue(MatchingStatus28Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MatchingStatus28Choice obj, MatchingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class MatchingStatus28Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingStatus28Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<MatchingStatus28Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus28Choice.mmObject();
@@ -177,6 +187,16 @@ public class MatchingStatus28Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(MatchingStatus28Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus28Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

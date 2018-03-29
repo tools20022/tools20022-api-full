@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V07;
 import com.tools20022.repository.choice.Frequency26Choice;
 import com.tools20022.repository.choice.Number3Choice;
 import com.tools20022.repository.choice.Period5Choice;
@@ -63,6 +64,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.msg.Statement67#mmActivityIndicator
  * Statement67.mmActivityIndicator}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V07#mmStatementGeneralDetails
+ * IntraPositionMovementPostingReport002V07.mmStatementGeneralDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,7 +135,7 @@ public class Statement67 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement67, Optional<Number3Choice>> mmReportNumber = new MMMessageAttribute<Statement67, Optional<Number3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement67.mmObject();
 			isDerived = false;
@@ -137,6 +147,16 @@ public class Statement67 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Number3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Number3Choice> getValue(Statement67 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(Statement67 obj, Optional<Number3Choice> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryRef")
@@ -173,7 +193,7 @@ public class Statement67 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement67, Optional<RestrictedFINXMax16Text>> mmQueryReference = new MMMessageAttribute<Statement67, Optional<RestrictedFINXMax16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement67.mmObject();
 			isDerived = false;
@@ -185,6 +205,16 @@ public class Statement67 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Statement67 obj) {
+			return obj.getQueryReference();
+		}
+
+		@Override
+		public void setValue(Statement67 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setQueryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtId")
@@ -216,7 +246,7 @@ public class Statement67 {
 	 * definition} = "Reference common to all pages of a statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement67, Optional<RestrictedFINXMax16Text>> mmStatementIdentification = new MMMessageAttribute<Statement67, Optional<RestrictedFINXMax16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement67.mmObject();
 			isDerived = false;
@@ -227,6 +257,16 @@ public class Statement67 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Statement67 obj) {
+			return obj.getStatementIdentification();
+		}
+
+		@Override
+		public void setValue(Statement67 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setStatementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtPrd", required = true)
@@ -261,7 +301,7 @@ public class Statement67 {
 	 * definition} = "Period for the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement67, Period5Choice> mmStatementPeriod = new MMMessageAttribute<Statement67, Period5Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement67.mmObject();
 			isDerived = false;
@@ -273,6 +313,16 @@ public class Statement67 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Period5Choice.mmObject();
+		}
+
+		@Override
+		public Period5Choice getValue(Statement67 obj) {
+			return obj.getStatementPeriod();
+		}
+
+		@Override
+		public void setValue(Statement67 obj, Period5Choice value) {
+			obj.setStatementPeriod(value);
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -307,7 +357,7 @@ public class Statement67 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement67, Optional<Frequency26Choice>> mmFrequency = new MMMessageAttribute<Statement67, Optional<Frequency26Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement67.mmObject();
 			isDerived = false;
@@ -319,6 +369,16 @@ public class Statement67 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Frequency26Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency26Choice> getValue(Statement67 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Statement67 obj, Optional<Frequency26Choice> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdTp")
@@ -352,7 +412,7 @@ public class Statement67 {
 	 * "Indicates whether the statement is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement67, Optional<UpdateType16Choice>> mmUpdateType = new MMMessageAssociationEnd<Statement67, Optional<UpdateType16Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement67.mmObject();
 			isDerived = false;
@@ -365,6 +425,16 @@ public class Statement67 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> UpdateType16Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UpdateType16Choice> getValue(Statement67 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Statement67 obj, Optional<UpdateType16Choice> value) {
+			obj.setUpdateType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -401,7 +471,7 @@ public class Statement67 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement67, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<Statement67, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement67.mmObject();
 			isDerived = false;
@@ -414,6 +484,16 @@ public class Statement67 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(Statement67 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(Statement67 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -422,6 +502,7 @@ public class Statement67 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement67.mmReportNumber, com.tools20022.repository.msg.Statement67.mmQueryReference,
 						com.tools20022.repository.msg.Statement67.mmStatementIdentification, com.tools20022.repository.msg.Statement67.mmStatementPeriod, com.tools20022.repository.msg.Statement67.mmFrequency,
 						com.tools20022.repository.msg.Statement67.mmUpdateType, com.tools20022.repository.msg.Statement67.mmActivityIndicator);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementPostingReport002V07.mmStatementGeneralDetails);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportNumberRule.forStatement67);
 				registrationStatus = MMRegistrationStatus.REGISTERED;

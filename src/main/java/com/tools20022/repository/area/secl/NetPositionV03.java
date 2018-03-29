@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.ReportParameters1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -135,7 +134,7 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetPositionV03, ReportParameters1> mmReportParameters = new MMMessageBuildingBlock<NetPositionV03, ReportParameters1>() {
 		{
 			xmlTag = "RptParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,12 +145,14 @@ public class NetPositionV03 {
 			complexType_lazy = () -> ReportParameters1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetPositionV03.class.getMethod("getReportParameters", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportParameters1 getValue(NetPositionV03 obj) {
+			return obj.getReportParameters();
+		}
+
+		@Override
+		public void setValue(NetPositionV03 obj, ReportParameters1 value) {
+			obj.setReportParameters(value);
 		}
 	};
 	@XmlElement(name = "Pgntn", required = true)
@@ -178,7 +179,7 @@ public class NetPositionV03 {
 	 * definition} = "Provides information about the number of used pages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetPositionV03, Pagination> mmPagination = new MMMessageBuildingBlock<NetPositionV03, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +190,14 @@ public class NetPositionV03 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetPositionV03.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(NetPositionV03 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(NetPositionV03 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "ClrMmb", required = true)
@@ -224,7 +227,7 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetPositionV03, PartyIdentification35Choice> mmClearingMember = new MMMessageBuildingBlock<NetPositionV03, PartyIdentification35Choice>() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,12 +238,14 @@ public class NetPositionV03 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetPositionV03.class.getMethod("getClearingMember", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification35Choice getValue(NetPositionV03 obj) {
+			return obj.getClearingMember();
+		}
+
+		@Override
+		public void setValue(NetPositionV03 obj, PartyIdentification35Choice value) {
+			obj.setClearingMember(value);
 		}
 	};
 	@XmlElement(name = "ClrSgmt")
@@ -270,7 +275,7 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingSegment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetPositionV03, Optional<PartyIdentification35Choice>> mmClearingSegment = new MMMessageBuildingBlock<NetPositionV03, Optional<PartyIdentification35Choice>>() {
 		{
 			xmlTag = "ClrSgmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,12 +286,14 @@ public class NetPositionV03 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetPositionV03.class.getMethod("getClearingSegment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification35Choice> getValue(NetPositionV03 obj) {
+			return obj.getClearingSegment();
+		}
+
+		@Override
+		public void setValue(NetPositionV03 obj, Optional<PartyIdentification35Choice> value) {
+			obj.setClearingSegment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetPosRpt", required = true)
@@ -315,7 +322,7 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNetPositionReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetPositionV03, List<NetPosition3>> mmNetPositionReport = new MMMessageBuildingBlock<NetPositionV03, List<NetPosition3>>() {
 		{
 			xmlTag = "NetPosRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,12 +332,14 @@ public class NetPositionV03 {
 			complexType_lazy = () -> NetPosition3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetPositionV03.class.getMethod("getNetPositionReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<NetPosition3> getValue(NetPositionV03 obj) {
+			return obj.getNetPositionReport();
+		}
+
+		@Override
+		public void setValue(NetPositionV03 obj, List<NetPosition3> value) {
+			obj.setNetPositionReport(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -360,7 +369,7 @@ public class NetPositionV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetPositionV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<NetPositionV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -370,12 +379,14 @@ public class NetPositionV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetPositionV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(NetPositionV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(NetPositionV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

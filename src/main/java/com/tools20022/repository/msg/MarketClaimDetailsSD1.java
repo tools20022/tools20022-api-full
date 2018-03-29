@@ -127,7 +127,7 @@ public class MarketClaimDetailsSD1 {
 	 * "Country in which the account owner has one's fiscal domicile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFiscalDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketClaimDetailsSD1, CountryCode> mmFiscalDomicile = new MMMessageAttribute<MarketClaimDetailsSD1, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class MarketClaimDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(MarketClaimDetailsSD1 obj) {
+			return obj.getFiscalDomicile();
+		}
+
+		@Override
+		public void setValue(MarketClaimDetailsSD1 obj, CountryCode value) {
+			obj.setFiscalDomicile(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrId")
@@ -178,7 +188,7 @@ public class MarketClaimDetailsSD1 {
 	 * "Identification of the document assigned by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketClaimDetailsSD1, Optional<Max35Text>> mmAccountServicerIdentification = new MMMessageAttribute<MarketClaimDetailsSD1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
@@ -191,6 +201,16 @@ public class MarketClaimDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MarketClaimDetailsSD1 obj) {
+			return obj.getAccountServicerIdentification();
+		}
+
+		@Override
+		public void setValue(MarketClaimDetailsSD1 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -231,7 +251,7 @@ public class MarketClaimDetailsSD1 {
 	 * "Identification of the document assigned by the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketClaimDetailsSD1, Optional<Max35Text>> mmAccountOwnerIdentification = new MMMessageAttribute<MarketClaimDetailsSD1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
@@ -244,6 +264,16 @@ public class MarketClaimDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MarketClaimDetailsSD1 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(MarketClaimDetailsSD1 obj, Optional<Max35Text> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxRate")
@@ -278,7 +308,7 @@ public class MarketClaimDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketClaimDetailsSD1, Optional<PercentageRate>> mmTaxRate = new MMMessageAttribute<MarketClaimDetailsSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
@@ -289,6 +319,16 @@ public class MarketClaimDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(MarketClaimDetailsSD1 obj) {
+			return obj.getTaxRate();
+		}
+
+		@Override
+		public void setValue(MarketClaimDetailsSD1 obj, Optional<PercentageRate> value) {
+			obj.setTaxRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshCompstn")
@@ -322,7 +362,7 @@ public class MarketClaimDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashCompensation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketClaimDetailsSD1, Optional<FinancialInstrumentQuantity18Choice>> mmCashCompensation = new MMMessageAssociationEnd<MarketClaimDetailsSD1, Optional<FinancialInstrumentQuantity18Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
@@ -334,6 +374,16 @@ public class MarketClaimDetailsSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity18Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity18Choice> getValue(MarketClaimDetailsSD1 obj) {
+			return obj.getCashCompensation();
+		}
+
+		@Override
+		public void setValue(MarketClaimDetailsSD1 obj, Optional<FinancialInstrumentQuantity18Choice> value) {
+			obj.setCashCompensation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DvddCrrctn")
@@ -367,7 +417,7 @@ public class MarketClaimDetailsSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDividendCorrection = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketClaimDetailsSD1, Optional<FinancialInstrumentQuantity18Choice>> mmDividendCorrection = new MMMessageAssociationEnd<MarketClaimDetailsSD1, Optional<FinancialInstrumentQuantity18Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
@@ -379,6 +429,16 @@ public class MarketClaimDetailsSD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity18Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity18Choice> getValue(MarketClaimDetailsSD1 obj) {
+			return obj.getDividendCorrection();
+		}
+
+		@Override
+		public void setValue(MarketClaimDetailsSD1 obj, Optional<FinancialInstrumentQuantity18Choice> value) {
+			obj.setDividendCorrection(value.orElse(null));
 		}
 	};
 

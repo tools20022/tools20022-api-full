@@ -23,6 +23,8 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.ChequeIssue;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount4;
+import com.tools20022.repository.msg.Cheque4;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,7 +132,7 @@ public class PaymentInstrument9 {
 	 * definition} = "Currency associated with the payment instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument9, ActiveCurrencyCode> mmSettlementCurrency = new MMMessageAttribute<PaymentInstrument9, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument9.mmObject();
@@ -143,9 +145,19 @@ public class PaymentInstrument9 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyCode getValue(PaymentInstrument9 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument9 obj, ActiveCurrencyCode value) {
+			obj.setSettlementCurrency(value);
+		}
 	};
 	@XmlElement(name = "CshAcctDtls", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount4> cashAccountDetails;
+	protected List<CashAccount4> cashAccountDetails;
 	/**
 	 * 
 	 <p>
@@ -179,7 +191,7 @@ public class PaymentInstrument9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument9, List<CashAccount4>> mmCashAccountDetails = new MMMessageAssociationEnd<PaymentInstrument9, List<CashAccount4>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument9.mmObject();
@@ -191,7 +203,17 @@ public class PaymentInstrument9 {
 			maxOccurs = 3;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
+			type_lazy = () -> CashAccount4.mmObject();
+		}
+
+		@Override
+		public List<CashAccount4> getValue(PaymentInstrument9 obj) {
+			return obj.getCashAccountDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument9 obj, List<CashAccount4> value) {
+			obj.setCashAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "ChqDtls", required = true)
@@ -225,7 +247,7 @@ public class PaymentInstrument9 {
 	 * definition} = "Settlement instructions for a payment by cheque."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument9, Cheque4> mmChequeDetails = new MMMessageAssociationEnd<PaymentInstrument9, Cheque4>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument9.mmObject();
@@ -237,7 +259,17 @@ public class PaymentInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Cheque4.mmObject();
+			type_lazy = () -> Cheque4.mmObject();
+		}
+
+		@Override
+		public Cheque4 getValue(PaymentInstrument9 obj) {
+			return obj.getChequeDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument9 obj, Cheque4 value) {
+			obj.setChequeDetails(value);
 		}
 	};
 	@XmlElement(name = "BkrsDrftDtls", required = true)
@@ -271,7 +303,7 @@ public class PaymentInstrument9 {
 	 * definition} = "Settlement instructions for a payment by draft."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBankersDraftDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument9, Cheque4> mmBankersDraftDetails = new MMMessageAssociationEnd<PaymentInstrument9, Cheque4>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument9.mmObject();
@@ -283,7 +315,17 @@ public class PaymentInstrument9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Cheque4.mmObject();
+			type_lazy = () -> Cheque4.mmObject();
+		}
+
+		@Override
+		public Cheque4 getValue(PaymentInstrument9 obj) {
+			return obj.getBankersDraftDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument9 obj, Cheque4 value) {
+			obj.setBankersDraftDetails(value);
 		}
 	};
 	/**
@@ -371,7 +413,7 @@ public class PaymentInstrument9 {
 		return cashAccountDetails == null ? cashAccountDetails = new ArrayList<>() : cashAccountDetails;
 	}
 
-	public PaymentInstrument9 setCashAccountDetails(List<com.tools20022.repository.msg.CashAccount4> cashAccountDetails) {
+	public PaymentInstrument9 setCashAccountDetails(List<CashAccount4> cashAccountDetails) {
 		this.cashAccountDetails = Objects.requireNonNull(cashAccountDetails);
 		return this;
 	}
@@ -380,7 +422,7 @@ public class PaymentInstrument9 {
 		return chequeDetails;
 	}
 
-	public PaymentInstrument9 setChequeDetails(com.tools20022.repository.msg.Cheque4 chequeDetails) {
+	public PaymentInstrument9 setChequeDetails(Cheque4 chequeDetails) {
 		this.chequeDetails = Objects.requireNonNull(chequeDetails);
 		return this;
 	}
@@ -389,7 +431,7 @@ public class PaymentInstrument9 {
 		return bankersDraftDetails;
 	}
 
-	public PaymentInstrument9 setBankersDraftDetails(com.tools20022.repository.msg.Cheque4 bankersDraftDetails) {
+	public PaymentInstrument9 setBankersDraftDetails(Cheque4 bankersDraftDetails) {
 		this.bankersDraftDetails = Objects.requireNonNull(bankersDraftDetails);
 		return this;
 	}

@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PartyIdentification26Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DeliveringPartiesAndAccount6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class FundSettlementParameters7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundSettlementParameters7, PartyIdentification26Choice> mmSettlementPlace = new MMMessageAttribute<FundSettlementParameters7, PartyIdentification26Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters7.mmObject();
@@ -122,6 +123,16 @@ public class FundSettlementParameters7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification26Choice getValue(FundSettlementParameters7 obj) {
+			return obj.getSettlementPlace();
+		}
+
+		@Override
+		public void setValue(FundSettlementParameters7 obj, PartyIdentification26Choice value) {
+			obj.setSettlementPlace(value);
 		}
 	};
 	@XmlElement(name = "DlvrgSdDtls", required = true)
@@ -160,7 +171,7 @@ public class FundSettlementParameters7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveringSideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundSettlementParameters7, DeliveringPartiesAndAccount6> mmDeliveringSideDetails = new MMMessageAssociationEnd<FundSettlementParameters7, DeliveringPartiesAndAccount6>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters7.mmObject();
@@ -172,7 +183,17 @@ public class FundSettlementParameters7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount6.mmObject();
+			type_lazy = () -> DeliveringPartiesAndAccount6.mmObject();
+		}
+
+		@Override
+		public DeliveringPartiesAndAccount6 getValue(FundSettlementParameters7 obj) {
+			return obj.getDeliveringSideDetails();
+		}
+
+		@Override
+		public void setValue(FundSettlementParameters7 obj, DeliveringPartiesAndAccount6 value) {
+			obj.setDeliveringSideDetails(value);
 		}
 	};
 
@@ -203,7 +224,7 @@ public class FundSettlementParameters7 {
 		return deliveringSideDetails;
 	}
 
-	public FundSettlementParameters7 setDeliveringSideDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount6 deliveringSideDetails) {
+	public FundSettlementParameters7 setDeliveringSideDetails(DeliveringPartiesAndAccount6 deliveringSideDetails) {
 		this.deliveringSideDetails = Objects.requireNonNull(deliveringSideDetails);
 		return this;
 	}

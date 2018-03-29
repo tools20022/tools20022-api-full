@@ -119,7 +119,7 @@ public class StandingOrderCriteria1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderCriteria1Choice, Max35Text> mmQueryName = new MMMessageAttribute<StandingOrderCriteria1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderCriteria1Choice.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class StandingOrderCriteria1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(StandingOrderCriteria1Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(StandingOrderCriteria1Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -169,7 +179,7 @@ public class StandingOrderCriteria1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderCriteria1Choice, StandingOrderCriteria1> mmNewCriteria = new MMMessageAssociationEnd<StandingOrderCriteria1Choice, StandingOrderCriteria1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderCriteria1Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class StandingOrderCriteria1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StandingOrderCriteria1.mmObject();
+		}
+
+		@Override
+		public StandingOrderCriteria1 getValue(StandingOrderCriteria1Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(StandingOrderCriteria1Choice obj, StandingOrderCriteria1 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

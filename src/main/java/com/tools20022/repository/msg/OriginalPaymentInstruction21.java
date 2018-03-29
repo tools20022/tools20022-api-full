@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentReversalReason7;
+import com.tools20022.repository.msg.PaymentTransaction77;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -182,7 +184,7 @@ public class OriginalPaymentInstruction21 {
 	 * OriginalPaymentInstruction16.mmReversalPaymentInformationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReversalPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction21, Optional<Max35Text>> mmReversalPaymentInformationIdentification = new MMMessageAttribute<OriginalPaymentInstruction21, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction21.mmObject();
@@ -196,6 +198,16 @@ public class OriginalPaymentInstruction21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OriginalPaymentInstruction21 obj) {
+			return obj.getReversalPaymentInformationIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction21 obj, Optional<Max35Text> value) {
+			obj.setReversalPaymentInformationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInfId", required = true)
@@ -247,7 +259,7 @@ public class OriginalPaymentInstruction21 {
 	 * OriginalPaymentInstruction16.mmOriginalPaymentInformationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction21, Max35Text> mmOriginalPaymentInformationIdentification = new MMMessageAttribute<OriginalPaymentInstruction21, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction21.mmObject();
@@ -261,6 +273,16 @@ public class OriginalPaymentInstruction21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalPaymentInstruction21 obj) {
+			return obj.getOriginalPaymentInformationIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction21 obj, Max35Text value) {
+			obj.setOriginalPaymentInformationIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlNbOfTxs")
@@ -308,7 +330,7 @@ public class OriginalPaymentInstruction21 {
 	 * OriginalPaymentInstruction16.mmOriginalNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction21, Optional<Max15NumericText>> mmOriginalNumberOfTransactions = new MMMessageAttribute<OriginalPaymentInstruction21, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction21.mmObject();
 			isDerived = false;
@@ -321,6 +343,16 @@ public class OriginalPaymentInstruction21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(OriginalPaymentInstruction21 obj) {
+			return obj.getOriginalNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction21 obj, Optional<Max15NumericText> value) {
+			obj.setOriginalNumberOfTransactions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCtrlSum")
@@ -368,7 +400,7 @@ public class OriginalPaymentInstruction21 {
 	 * OriginalPaymentInstruction16.mmOriginalControlSum}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction21, Optional<DecimalNumber>> mmOriginalControlSum = new MMMessageAttribute<OriginalPaymentInstruction21, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction21.mmObject();
 			isDerived = false;
@@ -381,6 +413,16 @@ public class OriginalPaymentInstruction21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(OriginalPaymentInstruction21 obj) {
+			return obj.getOriginalControlSum();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction21 obj, Optional<DecimalNumber> value) {
+			obj.setOriginalControlSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BtchBookg")
@@ -428,7 +470,7 @@ public class OriginalPaymentInstruction21 {
 	 * OriginalPaymentInstruction16.mmBatchBooking}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBatchBooking = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction21, Optional<BatchBookingIndicator>> mmBatchBooking = new MMMessageAttribute<OriginalPaymentInstruction21, Optional<BatchBookingIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction21.mmObject();
 			isDerived = false;
@@ -441,6 +483,16 @@ public class OriginalPaymentInstruction21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BatchBookingIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<BatchBookingIndicator> getValue(OriginalPaymentInstruction21 obj) {
+			return obj.getBatchBooking();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction21 obj, Optional<BatchBookingIndicator> value) {
+			obj.setBatchBooking(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtInfRvsl")
@@ -488,7 +540,7 @@ public class OriginalPaymentInstruction21 {
 	 * OriginalPaymentInstruction16.mmPaymentInformationReversal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInformationReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction21, Optional<TrueFalseIndicator>> mmPaymentInformationReversal = new MMMessageAttribute<OriginalPaymentInstruction21, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction21.mmObject();
 			isDerived = false;
@@ -502,9 +554,19 @@ public class OriginalPaymentInstruction21 {
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(OriginalPaymentInstruction21 obj) {
+			return obj.getPaymentInformationReversal();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction21 obj, Optional<TrueFalseIndicator> value) {
+			obj.setPaymentInformationReversal(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "RvslRsnInf")
-	protected List<com.tools20022.repository.msg.PaymentReversalReason7> reversalReasonInformation;
+	protected List<PaymentReversalReason7> reversalReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -549,7 +611,7 @@ public class OriginalPaymentInstruction21 {
 	 * OriginalPaymentInstruction16.mmReversalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversalReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalPaymentInstruction21, List<PaymentReversalReason7>> mmReversalReasonInformation = new MMMessageAssociationEnd<OriginalPaymentInstruction21, List<PaymentReversalReason7>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction21.mmObject();
@@ -562,11 +624,21 @@ public class OriginalPaymentInstruction21 {
 			previousVersion_lazy = () -> OriginalPaymentInstruction16.mmReversalReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentReversalReason7.mmObject();
+			type_lazy = () -> PaymentReversalReason7.mmObject();
+		}
+
+		@Override
+		public List<PaymentReversalReason7> getValue(OriginalPaymentInstruction21 obj) {
+			return obj.getReversalReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction21 obj, List<PaymentReversalReason7> value) {
+			obj.setReversalReasonInformation(value);
 		}
 	};
 	@XmlElement(name = "TxInf")
-	protected List<com.tools20022.repository.msg.PaymentTransaction77> transactionInformation;
+	protected List<PaymentTransaction77> transactionInformation;
 	/**
 	 * 
 	 <p>
@@ -612,7 +684,7 @@ public class OriginalPaymentInstruction21 {
 	 * OriginalPaymentInstruction16.mmTransactionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalPaymentInstruction21, List<PaymentTransaction77>> mmTransactionInformation = new MMMessageAssociationEnd<OriginalPaymentInstruction21, List<PaymentTransaction77>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction21.mmObject();
@@ -625,7 +697,17 @@ public class OriginalPaymentInstruction21 {
 			previousVersion_lazy = () -> OriginalPaymentInstruction16.mmTransactionInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction77.mmObject();
+			type_lazy = () -> PaymentTransaction77.mmObject();
+		}
+
+		@Override
+		public List<PaymentTransaction77> getValue(OriginalPaymentInstruction21 obj) {
+			return obj.getTransactionInformation();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction21 obj, List<PaymentTransaction77> value) {
+			obj.setTransactionInformation(value);
 		}
 	};
 
@@ -711,7 +793,7 @@ public class OriginalPaymentInstruction21 {
 		return reversalReasonInformation == null ? reversalReasonInformation = new ArrayList<>() : reversalReasonInformation;
 	}
 
-	public OriginalPaymentInstruction21 setReversalReasonInformation(List<com.tools20022.repository.msg.PaymentReversalReason7> reversalReasonInformation) {
+	public OriginalPaymentInstruction21 setReversalReasonInformation(List<PaymentReversalReason7> reversalReasonInformation) {
 		this.reversalReasonInformation = Objects.requireNonNull(reversalReasonInformation);
 		return this;
 	}
@@ -720,7 +802,7 @@ public class OriginalPaymentInstruction21 {
 		return transactionInformation == null ? transactionInformation = new ArrayList<>() : transactionInformation;
 	}
 
-	public OriginalPaymentInstruction21 setTransactionInformation(List<com.tools20022.repository.msg.PaymentTransaction77> transactionInformation) {
+	public OriginalPaymentInstruction21 setTransactionInformation(List<PaymentTransaction77> transactionInformation) {
 		this.transactionInformation = Objects.requireNonNull(transactionInformation);
 		return this;
 	}

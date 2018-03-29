@@ -154,7 +154,7 @@ public class OtherCollateralResponse1 {
 	 * CashCollateralResponse1.mmResponseType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateralResponse1, Status4Code> mmResponseType = new MMMessageAttribute<OtherCollateralResponse1, Status4Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmObject();
@@ -168,6 +168,16 @@ public class OtherCollateralResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
+		}
+
+		@Override
+		public Status4Code getValue(OtherCollateralResponse1 obj) {
+			return obj.getResponseType();
+		}
+
+		@Override
+		public void setValue(OtherCollateralResponse1 obj, Status4Code value) {
+			obj.setResponseType(value);
 		}
 	};
 	@XmlElement(name = "CollId")
@@ -212,7 +222,7 @@ public class OtherCollateralResponse1 {
 	 * CashCollateralResponse1.mmCollateralIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateralResponse1, Optional<Max35Text>> mmCollateralIdentification = new MMMessageAttribute<OtherCollateralResponse1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmObject();
 			isDerived = false;
@@ -225,6 +235,16 @@ public class OtherCollateralResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OtherCollateralResponse1 obj) {
+			return obj.getCollateralIdentification();
+		}
+
+		@Override
+		public void setValue(OtherCollateralResponse1 obj, Optional<Max35Text> value) {
+			obj.setCollateralIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsstNb")
@@ -266,7 +286,7 @@ public class OtherCollateralResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssetNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateralResponse1, Optional<Max35Text>> mmAssetNumber = new MMMessageAttribute<OtherCollateralResponse1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmObject();
 			isDerived = false;
@@ -278,6 +298,16 @@ public class OtherCollateralResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OtherCollateralResponse1 obj) {
+			return obj.getAssetNumber();
+		}
+
+		@Override
+		public void setValue(OtherCollateralResponse1 obj, Optional<Max35Text> value) {
+			obj.setAssetNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -330,7 +360,7 @@ public class OtherCollateralResponse1 {
 	 * CashCollateralResponse1.mmRejectionReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateralResponse1, Optional<RejectionReasonV021Code>> mmRejectionReason = new MMMessageAttribute<OtherCollateralResponse1, Optional<RejectionReasonV021Code>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmObject();
@@ -344,6 +374,16 @@ public class OtherCollateralResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReasonV021Code.mmObject();
+		}
+
+		@Override
+		public Optional<RejectionReasonV021Code> getValue(OtherCollateralResponse1 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(OtherCollateralResponse1 obj, Optional<RejectionReasonV021Code> value) {
+			obj.setRejectionReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctnInf")
@@ -390,7 +430,7 @@ public class OtherCollateralResponse1 {
 	 * CashCollateralResponse1.mmRejectionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateralResponse1, Optional<Max35Text>> mmRejectionInformation = new MMMessageAttribute<OtherCollateralResponse1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmObject();
 			isDerived = false;
@@ -403,6 +443,16 @@ public class OtherCollateralResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OtherCollateralResponse1 obj) {
+			return obj.getRejectionInformation();
+		}
+
+		@Override
+		public void setValue(OtherCollateralResponse1 obj, Optional<Max35Text> value) {
+			obj.setRejectionInformation(value.orElse(null));
 		}
 	};
 

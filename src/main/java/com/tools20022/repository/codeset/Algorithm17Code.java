@@ -93,7 +93,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Algorithm17Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -491,7 +491,7 @@ public class Algorithm17Code extends MMCode {
 			{
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MACC");
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm17Code";
 				definition = "Cryptographic algorithms for the MAC (Message Authentication Code).";
 				previousVersion_lazy = () -> Algorithm12Code.mmObject();

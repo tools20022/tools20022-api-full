@@ -53,11 +53,15 @@ public class ConstraintInstructedQuantityRule {
 	 */
 	public static final MMConstraint<InstructedOrQuantityToReceive1Choice> forInstructedOrQuantityToReceive1Choice = new MMConstraint<InstructedOrQuantityToReceive1Choice>() {
 		{
-			validator = ConstraintInstructedQuantityRule::checkInstructedOrQuantityToReceive1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedQuantityRule";
 			definition = "InstructedQuantity must be provided unless QuantityToReceive is requested in the related CorporateActionNotification message, eg, for event types Priority Issue (PRIO) and Dividend Reinvestment (DRIP).";
 			owner_lazy = () -> InstructedOrQuantityToReceive1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InstructedOrQuantityToReceive1Choice obj) throws Exception {
+			checkInstructedOrQuantityToReceive1Choice(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintInstructedQuantityRule {
 	 */
 	public static final MMConstraint<InstructedOrQuantityToReceive2Choice> forInstructedOrQuantityToReceive2Choice = new MMConstraint<InstructedOrQuantityToReceive2Choice>() {
 		{
-			validator = ConstraintInstructedQuantityRule::checkInstructedOrQuantityToReceive2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedQuantityRule";
 			definition = "InstructedQuantity must be provided unless QuantityToReceive is requested in the related CorporateActionNotification message, eg, for event types Priority Issue (PRIO) and Dividend Reinvestment (DRIP).";
 			owner_lazy = () -> InstructedOrQuantityToReceive2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InstructedOrQuantityToReceive2Choice obj) throws Exception {
+			checkInstructedOrQuantityToReceive2Choice(obj);
 		}
 	};
 

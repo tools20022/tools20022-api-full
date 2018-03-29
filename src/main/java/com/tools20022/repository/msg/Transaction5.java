@@ -25,6 +25,9 @@ import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountCashEntryDetails3;
+import com.tools20022.repository.msg.PaymentDetails7;
+import com.tools20022.repository.msg.SystemDetails2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -120,7 +123,7 @@ public class Transaction5 {
 	 * "Destination of the payment (be it a member or a system or both)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transaction5, Optional<SystemDetails2>> mmPaymentTo = new MMMessageAssociationEnd<Transaction5, Optional<SystemDetails2>>() {
 		{
 			businessComponentTrace_lazy = () -> System.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction5.mmObject();
@@ -132,7 +135,17 @@ public class Transaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemDetails2.mmObject();
+			type_lazy = () -> SystemDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<SystemDetails2> getValue(Transaction5 obj) {
+			return obj.getPaymentTo();
+		}
+
+		@Override
+		public void setValue(Transaction5 obj, Optional<SystemDetails2> value) {
+			obj.setPaymentTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtFr")
@@ -167,7 +180,7 @@ public class Transaction5 {
 	 * "Origin of the payment (be it a member or a system or both)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transaction5, Optional<SystemDetails2>> mmPaymentFrom = new MMMessageAssociationEnd<Transaction5, Optional<SystemDetails2>>() {
 		{
 			businessComponentTrace_lazy = () -> System.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction5.mmObject();
@@ -179,7 +192,17 @@ public class Transaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemDetails2.mmObject();
+			type_lazy = () -> SystemDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<SystemDetails2> getValue(Transaction5 obj) {
+			return obj.getPaymentFrom();
+		}
+
+		@Override
+		public void setValue(Transaction5 obj, Optional<SystemDetails2> value) {
+			obj.setPaymentFrom(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -218,7 +241,7 @@ public class Transaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction5, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<Transaction5, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction5.mmObject();
@@ -230,6 +253,16 @@ public class Transaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(Transaction5 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(Transaction5 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pmt")
@@ -266,7 +299,7 @@ public class Transaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transaction5, Optional<PaymentDetails7>> mmPayment = new MMMessageAssociationEnd<Transaction5, Optional<PaymentDetails7>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction5.mmObject();
@@ -278,7 +311,17 @@ public class Transaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentDetails7.mmObject();
+			type_lazy = () -> PaymentDetails7.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentDetails7> getValue(Transaction5 obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(Transaction5 obj, Optional<PaymentDetails7> value) {
+			obj.setPayment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctNtry")
@@ -316,7 +359,7 @@ public class Transaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transaction5, Optional<AccountCashEntryDetails3>> mmAccountEntry = new MMMessageAssociationEnd<Transaction5, Optional<AccountCashEntryDetails3>>() {
 		{
 			businessElementTrace_lazy = () -> BookEntry.mmCashEntry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction5.mmObject();
@@ -328,7 +371,17 @@ public class Transaction5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
+			type_lazy = () -> AccountCashEntryDetails3.mmObject();
+		}
+
+		@Override
+		public Optional<AccountCashEntryDetails3> getValue(Transaction5 obj) {
+			return obj.getAccountEntry();
+		}
+
+		@Override
+		public void setValue(Transaction5 obj, Optional<AccountCashEntryDetails3> value) {
+			obj.setAccountEntry(value.orElse(null));
 		}
 	};
 
@@ -353,7 +406,7 @@ public class Transaction5 {
 		return paymentTo == null ? Optional.empty() : Optional.of(paymentTo);
 	}
 
-	public Transaction5 setPaymentTo(com.tools20022.repository.msg.SystemDetails2 paymentTo) {
+	public Transaction5 setPaymentTo(SystemDetails2 paymentTo) {
 		this.paymentTo = paymentTo;
 		return this;
 	}
@@ -362,7 +415,7 @@ public class Transaction5 {
 		return paymentFrom == null ? Optional.empty() : Optional.of(paymentFrom);
 	}
 
-	public Transaction5 setPaymentFrom(com.tools20022.repository.msg.SystemDetails2 paymentFrom) {
+	public Transaction5 setPaymentFrom(SystemDetails2 paymentFrom) {
 		this.paymentFrom = paymentFrom;
 		return this;
 	}
@@ -380,7 +433,7 @@ public class Transaction5 {
 		return payment == null ? Optional.empty() : Optional.of(payment);
 	}
 
-	public Transaction5 setPayment(com.tools20022.repository.msg.PaymentDetails7 payment) {
+	public Transaction5 setPayment(PaymentDetails7 payment) {
 		this.payment = payment;
 		return this;
 	}
@@ -389,7 +442,7 @@ public class Transaction5 {
 		return accountEntry == null ? Optional.empty() : Optional.of(accountEntry);
 	}
 
-	public Transaction5 setAccountEntry(com.tools20022.repository.msg.AccountCashEntryDetails3 accountEntry) {
+	public Transaction5 setAccountEntry(AccountCashEntryDetails3 accountEntry) {
 		this.accountEntry = accountEntry;
 		return this;
 	}

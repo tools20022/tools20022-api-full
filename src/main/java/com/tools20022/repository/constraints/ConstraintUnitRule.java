@@ -61,13 +61,17 @@ public class ConstraintUnitRule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV07> forAccountDetailsConfirmationV07 = new MMConstraint<AccountDetailsConfirmationV07>() {
 		{
-			validator = ConstraintUnitRule::checkAccountDetailsConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitRule";
 			definition = "If SavingsInvestmentPlan is present, then SavingsInvestmentPlan/Quantity/Unit is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUnit1Rule.forAccountDetailsConfirmationV06;
 			owner_lazy = () -> AccountDetailsConfirmationV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SavingsInvestmentPlan[*]/Quantity/Unit</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SavingsInvestmentPlan[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV07 obj) throws Exception {
+			checkAccountDetailsConfirmationV07(obj);
 		}
 	};
 	/**
@@ -102,13 +106,17 @@ public class ConstraintUnitRule {
 	 */
 	public static final MMConstraint<AccountModificationInstructionV07> forAccountModificationInstructionV07 = new MMConstraint<AccountModificationInstructionV07>() {
 		{
-			validator = ConstraintUnitRule::checkAccountModificationInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitRule";
 			definition = "If ModifiedSavingsInvestmentPlan is present, then ModifiedSavingsInvestmentPlan/InvestmentPlan/Quantity/Unit is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUnit1Rule.forAccountModificationInstructionV06;
 			owner_lazy = () -> AccountModificationInstructionV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ModifiedSavingsInvestmentPlan[*]/InvestmentPlan/Quantity/Unit</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ModifiedSavingsInvestmentPlan[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountModificationInstructionV07 obj) throws Exception {
+			checkAccountModificationInstructionV07(obj);
 		}
 	};
 	/**
@@ -143,13 +151,17 @@ public class ConstraintUnitRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV07> forAccountOpeningInstructionV07 = new MMConstraint<AccountOpeningInstructionV07>() {
 		{
-			validator = ConstraintUnitRule::checkAccountOpeningInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitRule";
 			definition = "If SavingsInvestmentPlan is present, then SavingsInvestmentPlan/Quantity/Unit is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUnitRule.forAccountOpeningInstructionV06;
 			owner_lazy = () -> AccountOpeningInstructionV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SavingsInvestmentPlan[*]/Quantity/Unit</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SavingsInvestmentPlan[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV07 obj) throws Exception {
+			checkAccountOpeningInstructionV07(obj);
 		}
 	};
 	/**
@@ -192,7 +204,6 @@ public class ConstraintUnitRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV06> forAccountOpeningInstructionV06 = new MMConstraint<AccountOpeningInstructionV06>() {
 		{
-			validator = ConstraintUnitRule::checkAccountOpeningInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitRule";
 			definition = "If SavingsInvestmentPlan is present, then SavingsInvestmentPlan/Quantity/Unit is not allowed.";
@@ -200,6 +211,11 @@ public class ConstraintUnitRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUnitRule.forAccountOpeningInstructionV05;
 			owner_lazy = () -> AccountOpeningInstructionV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SavingsInvestmentPlan[*]/Quantity/Unit</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SavingsInvestmentPlan[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV06 obj) throws Exception {
+			checkAccountOpeningInstructionV06(obj);
 		}
 	};
 	/**
@@ -237,13 +253,17 @@ public class ConstraintUnitRule {
 	 */
 	public static final MMConstraint<AccountDetailsConfirmationV03> forAccountDetailsConfirmationV03 = new MMConstraint<AccountDetailsConfirmationV03>() {
 		{
-			validator = ConstraintUnitRule::checkAccountDetailsConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitRule";
 			definition = "If SavingsInvestmentPlan is present, then SavingsInvestmentPlan\\Quantity\\Unit is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUnit1Rule.forAccountDetailsConfirmationV04);
 			owner_lazy = () -> AccountDetailsConfirmationV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SavingsInvestmentPlan[*]/Quantity/Unit</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SavingsInvestmentPlan[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountDetailsConfirmationV03 obj) throws Exception {
+			checkAccountDetailsConfirmationV03(obj);
 		}
 	};
 	/**
@@ -273,12 +293,16 @@ public class ConstraintUnitRule {
 	 */
 	public static final MMConstraint<AccountModificationInstructionV03> forAccountModificationInstructionV03 = new MMConstraint<AccountModificationInstructionV03>() {
 		{
-			validator = ConstraintUnitRule::checkAccountModificationInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitRule";
 			definition = "If ModifiedSavingsInvestmentPlan is present, then ModifiedSavingsInvestmentPlan\\InvestmentPlan\\Quantity\\Unit is not allowed.";
 			owner_lazy = () -> AccountModificationInstructionV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ModifiedSavingsInvestmentPlan[*]/InvestmentPlan/Quantity/Unit</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ModifiedSavingsInvestmentPlan[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountModificationInstructionV03 obj) throws Exception {
+			checkAccountModificationInstructionV03(obj);
 		}
 	};
 	/**
@@ -316,13 +340,17 @@ public class ConstraintUnitRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV03> forAccountOpeningInstructionV03 = new MMConstraint<AccountOpeningInstructionV03>() {
 		{
-			validator = ConstraintUnitRule::checkAccountOpeningInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitRule";
 			definition = "If SavingsInvestmentPlan is present, then SavingsInvestmentPlan\\Quantity\\Unit is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUnit1Rule.forAccountOpeningInstructionV04);
 			owner_lazy = () -> AccountOpeningInstructionV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SavingsInvestmentPlan[*]/Quantity/Unit</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SavingsInvestmentPlan[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV03 obj) throws Exception {
+			checkAccountOpeningInstructionV03(obj);
 		}
 	};
 	/**
@@ -365,7 +393,6 @@ public class ConstraintUnitRule {
 	 */
 	public static final MMConstraint<AccountOpeningInstructionV05> forAccountOpeningInstructionV05 = new MMConstraint<AccountOpeningInstructionV05>() {
 		{
-			validator = ConstraintUnitRule::checkAccountOpeningInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitRule";
 			definition = "If SavingsInvestmentPlan is present, then SavingsInvestmentPlan/Quantity/Unit is not allowed.";
@@ -373,6 +400,11 @@ public class ConstraintUnitRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUnit1Rule.forAccountOpeningInstructionV04;
 			owner_lazy = () -> AccountOpeningInstructionV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/SavingsInvestmentPlan[*]/Quantity/Unit</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SavingsInvestmentPlan[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountOpeningInstructionV05 obj) throws Exception {
+			checkAccountOpeningInstructionV05(obj);
 		}
 	};
 

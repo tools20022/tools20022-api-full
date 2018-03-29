@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.IntraPositionDetails9;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactionIdentifications10;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -167,7 +166,7 @@ public class IntraPositionMovementStatusAdviceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, TransactionIdentifications10> mmTransactionIdentification = new MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, TransactionIdentifications10>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +177,14 @@ public class IntraPositionMovementStatusAdviceV02 {
 			complexType_lazy = () -> TransactionIdentifications10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementStatusAdviceV02.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionIdentifications10 getValue(IntraPositionMovementStatusAdviceV02 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementStatusAdviceV02 obj, TransactionIdentifications10 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -212,7 +213,7 @@ public class IntraPositionMovementStatusAdviceV02 {
 	 * "Provides details on the processing status of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, Optional<IntraPositionProcessingStatus1Choice>> mmProcessingStatus = new MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, Optional<IntraPositionProcessingStatus1Choice>>() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,12 +224,14 @@ public class IntraPositionMovementStatusAdviceV02 {
 			complexType_lazy = () -> IntraPositionProcessingStatus1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementStatusAdviceV02.class.getMethod("getProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<IntraPositionProcessingStatus1Choice> getValue(IntraPositionMovementStatusAdviceV02 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementStatusAdviceV02 obj, Optional<IntraPositionProcessingStatus1Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -256,7 +259,7 @@ public class IntraPositionMovementStatusAdviceV02 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, Optional<SettlementStatus2Choice>> mmSettlementStatus = new MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, Optional<SettlementStatus2Choice>>() {
 		{
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,12 +270,14 @@ public class IntraPositionMovementStatusAdviceV02 {
 			complexType_lazy = () -> SettlementStatus2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementStatusAdviceV02.class.getMethod("getSettlementStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementStatus2Choice> getValue(IntraPositionMovementStatusAdviceV02 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementStatusAdviceV02 obj, Optional<SettlementStatus2Choice> value) {
+			obj.setSettlementStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDtls")
@@ -300,7 +305,7 @@ public class IntraPositionMovementStatusAdviceV02 {
 	 * definition} = "Identifies the details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, Optional<IntraPositionDetails9>> mmTransactionDetails = new MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, Optional<IntraPositionDetails9>>() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -311,12 +316,14 @@ public class IntraPositionMovementStatusAdviceV02 {
 			complexType_lazy = () -> IntraPositionDetails9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementStatusAdviceV02.class.getMethod("getTransactionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<IntraPositionDetails9> getValue(IntraPositionMovementStatusAdviceV02 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementStatusAdviceV02 obj, Optional<IntraPositionDetails9> value) {
+			obj.setTransactionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -346,7 +353,7 @@ public class IntraPositionMovementStatusAdviceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<IntraPositionMovementStatusAdviceV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -356,12 +363,14 @@ public class IntraPositionMovementStatusAdviceV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntraPositionMovementStatusAdviceV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(IntraPositionMovementStatusAdviceV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovementStatusAdviceV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

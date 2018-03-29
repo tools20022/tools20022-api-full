@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.choice.FundParameters1Choice;
 import com.tools20022.repository.choice.FundParameters2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,7 +126,7 @@ public class RequestParameters {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestParameters, AdditionalReference3> mmPreviousReference = new MMMessageAssociationEnd<RequestParameters, AdditionalReference3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestParameters.mmObject();
 			isDerived = false;
@@ -136,7 +137,17 @@ public class RequestParameters {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(RequestParameters obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(RequestParameters obj, AdditionalReference3 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -168,7 +179,7 @@ public class RequestParameters {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestParameters, Optional<AdditionalReference3>> mmRelatedReference = new MMMessageAssociationEnd<RequestParameters, Optional<AdditionalReference3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestParameters.mmObject();
 			isDerived = false;
@@ -179,7 +190,17 @@ public class RequestParameters {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference3> getValue(RequestParameters obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(RequestParameters obj, Optional<AdditionalReference3> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FndCshFcstRpt", required = true)
@@ -212,7 +233,7 @@ public class RequestParameters {
 	 * "Parameters for which the fund cash forecast report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundCashForecastReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestParameters, FundCashForecastParameters1> mmFundCashForecastReport = new MMMessageAssociationEnd<RequestParameters, FundCashForecastParameters1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestParameters.mmObject();
 			isDerived = false;
@@ -223,7 +244,17 @@ public class RequestParameters {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters1.mmObject();
+			type_lazy = () -> FundCashForecastParameters1.mmObject();
+		}
+
+		@Override
+		public FundCashForecastParameters1 getValue(RequestParameters obj) {
+			return obj.getFundCashForecastReport();
+		}
+
+		@Override
+		public void setValue(RequestParameters obj, FundCashForecastParameters1 value) {
+			obj.setFundCashForecastReport(value);
 		}
 	};
 	@XmlElement(name = "FndPrcgPsptRpt", required = true)
@@ -256,7 +287,7 @@ public class RequestParameters {
 	 * "Parameters for which the fund processing passport report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundProcessingPassportReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestParameters, List<FundParameters1Choice>> mmFundProcessingPassportReport = new MMMessageAssociationEnd<RequestParameters, List<FundParameters1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestParameters.mmObject();
 			isDerived = false;
@@ -267,6 +298,16 @@ public class RequestParameters {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FundParameters1Choice.mmObject();
+		}
+
+		@Override
+		public List<FundParameters1Choice> getValue(RequestParameters obj) {
+			return obj.getFundProcessingPassportReport();
+		}
+
+		@Override
+		public void setValue(RequestParameters obj, List<FundParameters1Choice> value) {
+			obj.setFundProcessingPassportReport(value);
 		}
 	};
 	@XmlElement(name = "PricRpt", required = true)
@@ -298,7 +339,7 @@ public class RequestParameters {
 	 * definition} = "Parameters for which the price report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestParameters, FundParameters2Choice> mmPriceReport = new MMMessageAssociationEnd<RequestParameters, FundParameters2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestParameters.mmObject();
 			isDerived = false;
@@ -310,6 +351,16 @@ public class RequestParameters {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FundParameters2Choice.mmObject();
+		}
+
+		@Override
+		public FundParameters2Choice getValue(RequestParameters obj) {
+			return obj.getPriceReport();
+		}
+
+		@Override
+		public void setValue(RequestParameters obj, FundParameters2Choice value) {
+			obj.setPriceReport(value);
 		}
 	};
 	@XmlElement(name = "StmtByAcct", required = true)
@@ -341,7 +392,7 @@ public class RequestParameters {
 	 * "Account and statement parameters for which the statement is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementByAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestParameters, StatementDetails> mmStatementByAccount = new MMMessageAssociationEnd<RequestParameters, StatementDetails>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestParameters.mmObject();
 			isDerived = false;
@@ -352,7 +403,17 @@ public class RequestParameters {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatementDetails.mmObject();
+			type_lazy = () -> StatementDetails.mmObject();
+		}
+
+		@Override
+		public StatementDetails getValue(RequestParameters obj) {
+			return obj.getStatementByAccount();
+		}
+
+		@Override
+		public void setValue(RequestParameters obj, StatementDetails value) {
+			obj.setStatementByAccount(value);
 		}
 	};
 	@XmlElement(name = "StmtByAcctAndFinInstrm", required = true)
@@ -386,7 +447,7 @@ public class RequestParameters {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementByAccountAndFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestParameters, StatementAndFinancialInstrumentDetails> mmStatementByAccountAndFinancialInstrument = new MMMessageAssociationEnd<RequestParameters, StatementAndFinancialInstrumentDetails>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestParameters.mmObject();
 			isDerived = false;
@@ -397,7 +458,17 @@ public class RequestParameters {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails.mmObject();
+			type_lazy = () -> StatementAndFinancialInstrumentDetails.mmObject();
+		}
+
+		@Override
+		public StatementAndFinancialInstrumentDetails getValue(RequestParameters obj) {
+			return obj.getStatementByAccountAndFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(RequestParameters obj, StatementAndFinancialInstrumentDetails value) {
+			obj.setStatementByAccountAndFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "UsrDfndRpt", required = true)
@@ -430,7 +501,7 @@ public class RequestParameters {
 	 * "Parameters for which the user defined report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUserDefinedReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestParameters, GenericReportParameters> mmUserDefinedReport = new MMMessageAssociationEnd<RequestParameters, GenericReportParameters>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestParameters.mmObject();
 			isDerived = false;
@@ -441,7 +512,17 @@ public class RequestParameters {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
+			type_lazy = () -> GenericReportParameters.mmObject();
+		}
+
+		@Override
+		public GenericReportParameters getValue(RequestParameters obj) {
+			return obj.getUserDefinedReport();
+		}
+
+		@Override
+		public void setValue(RequestParameters obj, GenericReportParameters value) {
+			obj.setUserDefinedReport(value);
 		}
 	};
 	/**
@@ -531,7 +612,7 @@ public class RequestParameters {
 		return previousReference;
 	}
 
-	public RequestParameters setPreviousReference(com.tools20022.repository.msg.AdditionalReference3 previousReference) {
+	public RequestParameters setPreviousReference(AdditionalReference3 previousReference) {
 		this.previousReference = Objects.requireNonNull(previousReference);
 		return this;
 	}
@@ -540,7 +621,7 @@ public class RequestParameters {
 		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public RequestParameters setRelatedReference(com.tools20022.repository.msg.AdditionalReference3 relatedReference) {
+	public RequestParameters setRelatedReference(AdditionalReference3 relatedReference) {
 		this.relatedReference = relatedReference;
 		return this;
 	}
@@ -549,7 +630,7 @@ public class RequestParameters {
 		return fundCashForecastReport;
 	}
 
-	public RequestParameters setFundCashForecastReport(com.tools20022.repository.msg.FundCashForecastParameters1 fundCashForecastReport) {
+	public RequestParameters setFundCashForecastReport(FundCashForecastParameters1 fundCashForecastReport) {
 		this.fundCashForecastReport = Objects.requireNonNull(fundCashForecastReport);
 		return this;
 	}
@@ -576,7 +657,7 @@ public class RequestParameters {
 		return statementByAccount;
 	}
 
-	public RequestParameters setStatementByAccount(com.tools20022.repository.msg.StatementDetails statementByAccount) {
+	public RequestParameters setStatementByAccount(StatementDetails statementByAccount) {
 		this.statementByAccount = Objects.requireNonNull(statementByAccount);
 		return this;
 	}
@@ -585,7 +666,7 @@ public class RequestParameters {
 		return statementByAccountAndFinancialInstrument;
 	}
 
-	public RequestParameters setStatementByAccountAndFinancialInstrument(com.tools20022.repository.msg.StatementAndFinancialInstrumentDetails statementByAccountAndFinancialInstrument) {
+	public RequestParameters setStatementByAccountAndFinancialInstrument(StatementAndFinancialInstrumentDetails statementByAccountAndFinancialInstrument) {
 		this.statementByAccountAndFinancialInstrument = Objects.requireNonNull(statementByAccountAndFinancialInstrument);
 		return this;
 	}
@@ -594,7 +675,7 @@ public class RequestParameters {
 		return userDefinedReport;
 	}
 
-	public RequestParameters setUserDefinedReport(com.tools20022.repository.msg.GenericReportParameters userDefinedReport) {
+	public RequestParameters setUserDefinedReport(GenericReportParameters userDefinedReport) {
 		this.userDefinedReport = Objects.requireNonNull(userDefinedReport);
 		return this;
 	}

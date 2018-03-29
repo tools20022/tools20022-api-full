@@ -131,7 +131,7 @@ public class PartyIdentification33Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification33Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification33Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification33Choice.mmObject();
@@ -144,6 +144,16 @@ public class PartyIdentification33Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification33Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification33Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -191,7 +201,7 @@ public class PartyIdentification33Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification33Choice, GenericIdentification29> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification33Choice, GenericIdentification29>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification33Choice.mmObject();
@@ -204,6 +214,16 @@ public class PartyIdentification33Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification29.mmObject();
+		}
+
+		@Override
+		public GenericIdentification29 getValue(PartyIdentification33Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification33Choice obj, GenericIdentification29 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -250,7 +270,7 @@ public class PartyIdentification33Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification33Choice, NameAndAddress6> mmNameAndAddress = new MMMessageAttribute<PartyIdentification33Choice, NameAndAddress6>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification33Choice.mmObject();
@@ -263,6 +283,16 @@ public class PartyIdentification33Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress6.mmObject();
+		}
+
+		@Override
+		public NameAndAddress6 getValue(PartyIdentification33Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification33Choice obj, NameAndAddress6 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 

@@ -103,7 +103,7 @@ public class RejectedStatus8 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus8, Max350Text> mmExtendedReason = new MMMessageAttribute<RejectedStatus8, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus8.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class RejectedStatus8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(RejectedStatus8 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus8 obj, Max350Text value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -151,7 +161,7 @@ public class RejectedStatus8 {
 	 * definition} = "Additional information about the rejected status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus8, Optional<RestrictedFINMax210Text>> mmAdditionalInformation = new MMMessageAttribute<RejectedStatus8, Optional<RestrictedFINMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus8.mmObject();
@@ -163,6 +173,16 @@ public class RejectedStatus8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax210Text> getValue(RejectedStatus8 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(RejectedStatus8 obj, Optional<RestrictedFINMax210Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

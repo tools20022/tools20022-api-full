@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Warrant;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Organisation27;
+import com.tools20022.repository.msg.Price1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -112,7 +114,7 @@ public class Warrant3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMultiplier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Warrant3, Optional<BaseOneRate>> mmMultiplier = new MMMessageAttribute<Warrant3, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmMultiplier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant3.mmObject();
@@ -124,6 +126,16 @@ public class Warrant3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(Warrant3 obj) {
+			return obj.getMultiplier();
+		}
+
+		@Override
+		public void setValue(Warrant3 obj, Optional<BaseOneRate> value) {
+			obj.setMultiplier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcptPric")
@@ -160,7 +172,7 @@ public class Warrant3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Warrant3, Optional<Price1>> mmSubscriptionPrice = new MMMessageAttribute<Warrant3, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmSubscriptionPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant3.mmObject();
@@ -171,7 +183,17 @@ public class Warrant3 {
 			definition = "Pre-determined price at which the holder of a warrant is entitled to buy the underlying instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(Warrant3 obj) {
+			return obj.getSubscriptionPrice();
+		}
+
+		@Override
+		public void setValue(Warrant3 obj, Optional<Price1> value) {
+			obj.setSubscriptionPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -208,7 +230,7 @@ public class Warrant3 {
 	 * definition} = "Indicates when a warrant can be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Warrant3, Optional<WarrantStyle3Choice>> mmType = new MMMessageAttribute<Warrant3, Optional<WarrantStyle3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmStyle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant3.mmObject();
@@ -221,9 +243,19 @@ public class Warrant3 {
 			minOccurs = 0;
 			complexType_lazy = () -> WarrantStyle3Choice.mmObject();
 		}
+
+		@Override
+		public Optional<WarrantStyle3Choice> getValue(Warrant3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Warrant3 obj, Optional<WarrantStyle3Choice> value) {
+			obj.setType(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "WarrtAgt")
-	protected List<com.tools20022.repository.msg.Organisation27> warrantAgent;
+	protected List<Organisation27> warrantAgent;
 	/**
 	 * 
 	 <p>
@@ -255,7 +287,7 @@ public class Warrant3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWarrantAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Warrant3, List<Organisation27>> mmWarrantAgent = new MMMessageAssociationEnd<Warrant3, List<Organisation27>>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant3.mmObject();
@@ -266,7 +298,17 @@ public class Warrant3 {
 			definition = "Entity appointed by the issuer to process the exercising of warrants, sometimes responsible for the issuance of the warrants into the market.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Organisation27.mmObject();
+			type_lazy = () -> Organisation27.mmObject();
+		}
+
+		@Override
+		public List<Organisation27> getValue(Warrant3 obj) {
+			return obj.getWarrantAgent();
+		}
+
+		@Override
+		public void setValue(Warrant3 obj, List<Organisation27> value) {
+			obj.setWarrantAgent(value);
 		}
 	};
 
@@ -298,7 +340,7 @@ public class Warrant3 {
 		return subscriptionPrice == null ? Optional.empty() : Optional.of(subscriptionPrice);
 	}
 
-	public Warrant3 setSubscriptionPrice(com.tools20022.repository.msg.Price1 subscriptionPrice) {
+	public Warrant3 setSubscriptionPrice(Price1 subscriptionPrice) {
 		this.subscriptionPrice = subscriptionPrice;
 		return this;
 	}
@@ -316,7 +358,7 @@ public class Warrant3 {
 		return warrantAgent == null ? warrantAgent = new ArrayList<>() : warrantAgent;
 	}
 
-	public Warrant3 setWarrantAgent(List<com.tools20022.repository.msg.Organisation27> warrantAgent) {
+	public Warrant3 setWarrantAgent(List<Organisation27> warrantAgent) {
 		this.warrantAgent = Objects.requireNonNull(warrantAgent);
 		return this;
 	}

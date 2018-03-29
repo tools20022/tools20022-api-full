@@ -122,7 +122,7 @@ public class DividendTypeFormat4SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendTypeFormat4SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<DividendTypeFormat4SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class DividendTypeFormat4SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(DividendTypeFormat4SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat4SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsnlDvddFlg", required = true)
@@ -167,7 +177,7 @@ public class DividendTypeFormat4SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProvisionalDividendFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator> mmProvisionalDividendFlag = new MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class DividendTypeFormat4SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DividendTypeFormat4SD1 obj) {
+			return obj.getProvisionalDividendFlag();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat4SD1 obj, YesNoIndicator value) {
+			obj.setProvisionalDividendFlag(value);
 		}
 	};
 	@XmlElement(name = "CommrtvDvddFlg", required = true)
@@ -212,7 +232,7 @@ public class DividendTypeFormat4SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommemorativeDividendFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator> mmCommemorativeDividendFlag = new MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
@@ -223,6 +243,16 @@ public class DividendTypeFormat4SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DividendTypeFormat4SD1 obj) {
+			return obj.getCommemorativeDividendFlag();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat4SD1 obj, YesNoIndicator value) {
+			obj.setCommemorativeDividendFlag(value);
 		}
 	};
 	@XmlElement(name = "SpclDvddFlg", required = true)
@@ -257,7 +287,7 @@ public class DividendTypeFormat4SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpecialDividendFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator> mmSpecialDividendFlag = new MMMessageAttribute<DividendTypeFormat4SD1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DividendTypeFormat4SD1.mmObject();
 			isDerived = false;
@@ -268,6 +298,16 @@ public class DividendTypeFormat4SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DividendTypeFormat4SD1 obj) {
+			return obj.getSpecialDividendFlag();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat4SD1 obj, YesNoIndicator value) {
+			obj.setSpecialDividendFlag(value);
 		}
 	};
 

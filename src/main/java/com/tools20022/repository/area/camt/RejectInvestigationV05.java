@@ -27,7 +27,7 @@ import com.tools20022.repository.msg.CaseAssignment4;
 import com.tools20022.repository.msg.InvestigationRejectionJustification1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -82,6 +82,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
+ * ExceptionsandInvestigationsISOLatestversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance
  * _SR2018_MX_Payments_Maintenance}</li>
@@ -150,7 +153,7 @@ public class RejectInvestigationV05 {
 	 * RejectInvestigationV04.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectInvestigationV05, CaseAssignment4> mmAssignment = new MMMessageBuildingBlock<RejectInvestigationV05, CaseAssignment4>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,12 +165,14 @@ public class RejectInvestigationV05 {
 			complexType_lazy = () -> CaseAssignment4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectInvestigationV05.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment4 getValue(RejectInvestigationV05 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(RejectInvestigationV05 obj, CaseAssignment4 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case")
@@ -198,7 +203,7 @@ public class RejectInvestigationV05 {
 	 * RejectInvestigationV04.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectInvestigationV05, Optional<Case4>> mmCase = new MMMessageBuildingBlock<RejectInvestigationV05, Optional<Case4>>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +215,14 @@ public class RejectInvestigationV05 {
 			complexType_lazy = () -> Case4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectInvestigationV05.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Case4> getValue(RejectInvestigationV05 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(RejectInvestigationV05 obj, Optional<Case4> value) {
+			obj.setCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Justfn", required = true)
@@ -249,7 +256,7 @@ public class RejectInvestigationV05 {
 	 * RejectInvestigationV04.mmJustification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectInvestigationV05, InvestigationRejectionJustification1> mmJustification = new MMMessageBuildingBlock<RejectInvestigationV05, InvestigationRejectionJustification1>() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,12 +268,14 @@ public class RejectInvestigationV05 {
 			complexType_lazy = () -> InvestigationRejectionJustification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectInvestigationV05.class.getMethod("getJustification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvestigationRejectionJustification1 getValue(RejectInvestigationV05 obj) {
+			return obj.getJustification();
+		}
+
+		@Override
+		public void setValue(RejectInvestigationV05 obj, InvestigationRejectionJustification1 value) {
+			obj.setJustification(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -301,7 +310,7 @@ public class RejectInvestigationV05 {
 	 * RejectInvestigationV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectInvestigationV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<RejectInvestigationV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,12 +321,14 @@ public class RejectInvestigationV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectInvestigationV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(RejectInvestigationV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(RejectInvestigationV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -328,7 +339,7 @@ public class RejectInvestigationV05 {
 				name = "RejectInvestigationV05";
 				definition = "Scope\r\nThe Reject Investigation message is sent by a case assignee to a case creator or case assigner to reject a case given to him.\r\nUsage\r\nThe Reject Investigation message is used to notify the case creator or case assigner the rejection of an assignment by the case assignee in a:\r\n- request to cancel payment case\r\n- request to modify payment case\r\n- unable to apply case\r\n- claim non receipt case\r\nRejecting a case assignment occurs when:\r\n- the case assignee is unable to trace the original payment instruction\r\n- the case assignee is unable, or does not have authority, to process the assigned case (indicate \"You have by-passed a party\",\r\n- the case assignee has received a non expected message, and rejects the message with a wrong message indicator\r\n- the case assignee has not yet received the Resolution Of Investigation message and the case has already been reopened\r\n- the case assignee has rejects an non-cash related query\r\nThe Reject Investigation message covers one and only one case at a time. If the case assignee needs to reject several case assignments, then multiple Reject Investigation messages must be sent.\r\nThe Reject Investigation message must be forwarded by all subsequent case assignee(s) until it reaches the case assigner and must not be used in place of a Resolution Of Investigation or Case Status Report message.";
 				previousVersion_lazy = () -> RejectInvestigationV04.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_Payments_Maintenance.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOLatestversion.mmObject(), _SR2018_MX_Payments_Maintenance.mmObject());
 				rootElement = "Document";
 				xmlTag = "RjctInvstgtn";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();

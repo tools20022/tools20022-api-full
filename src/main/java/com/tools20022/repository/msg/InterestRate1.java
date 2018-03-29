@@ -118,7 +118,7 @@ public class InterestRate1 {
 	 * definition} = "Value of interest rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRate1, Optional<InterestRate12Choice>> mmRate = new MMMessageAssociationEnd<InterestRate1, Optional<InterestRate12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRate1.mmObject();
@@ -131,6 +131,16 @@ public class InterestRate1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestRate12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRate12Choice> getValue(InterestRate1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(InterestRate1 obj, Optional<InterestRate12Choice> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtFrqcy")
@@ -166,7 +176,7 @@ public class InterestRate1 {
 	 * definition} = "Information related to payment frequency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentFrequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRate1, Optional<InterestRateFrequency2Choice>> mmPaymentFrequency = new MMMessageAssociationEnd<InterestRate1, Optional<InterestRateFrequency2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmPaymentFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRate1.mmObject();
@@ -179,6 +189,16 @@ public class InterestRate1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestRateFrequency2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRateFrequency2Choice> getValue(InterestRate1 obj) {
+			return obj.getPaymentFrequency();
+		}
+
+		@Override
+		public void setValue(InterestRate1 obj, Optional<InterestRateFrequency2Choice> value) {
+			obj.setPaymentFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RstFrqcy")
@@ -214,7 +234,7 @@ public class InterestRate1 {
 	 * definition} = "Information related to reset of payment frequency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResetFrequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRate1, Optional<InterestRateFrequency2Choice>> mmResetFrequency = new MMMessageAssociationEnd<InterestRate1, Optional<InterestRateFrequency2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmPaymentFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRate1.mmObject();
@@ -227,6 +247,16 @@ public class InterestRate1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestRateFrequency2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRateFrequency2Choice> getValue(InterestRate1 obj) {
+			return obj.getResetFrequency();
+		}
+
+		@Override
+		public void setValue(InterestRate1 obj, Optional<InterestRateFrequency2Choice> value) {
+			obj.setResetFrequency(value.orElse(null));
 		}
 	};
 

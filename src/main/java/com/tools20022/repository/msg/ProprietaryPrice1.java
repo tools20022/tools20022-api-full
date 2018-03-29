@@ -98,7 +98,7 @@ public class ProprietaryPrice1 {
 	 * definition} = "Identifies the type of price reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryPrice1, Max35Text> mmType = new MMMessageAttribute<ProprietaryPrice1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryPrice1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class ProprietaryPrice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryPrice1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProprietaryPrice1 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Pric", required = true)
@@ -146,7 +156,7 @@ public class ProprietaryPrice1 {
 	 * "Proprietary price specification related to the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryPrice1, CurrencyAndAmount> mmPrice = new MMMessageAttribute<ProprietaryPrice1, CurrencyAndAmount>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryPrice1.mmObject();
@@ -158,6 +168,16 @@ public class ProprietaryPrice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ProprietaryPrice1 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(ProprietaryPrice1 obj, CurrencyAndAmount value) {
+			obj.setPrice(value);
 		}
 	};
 

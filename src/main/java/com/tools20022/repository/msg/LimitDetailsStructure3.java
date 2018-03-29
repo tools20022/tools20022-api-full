@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LimitIdentificationDetails2;
+import com.tools20022.repository.msg.LimitIdentificationDetails3;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -84,7 +86,7 @@ public class LimitDetailsStructure3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "CurLmtId", required = true)
-	protected List<com.tools20022.repository.msg.LimitIdentificationDetails2> currentLimitIdentification;
+	protected List<LimitIdentificationDetails2> currentLimitIdentification;
 	/**
 	 * 
 	 <p>
@@ -117,7 +119,7 @@ public class LimitDetailsStructure3 {
 	 * definition} = "Identification of the current limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitDetailsStructure3, List<LimitIdentificationDetails2>> mmCurrentLimitIdentification = new MMMessageAssociationEnd<LimitDetailsStructure3, List<LimitIdentificationDetails2>>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetailsStructure3.mmObject();
@@ -128,11 +130,21 @@ public class LimitDetailsStructure3 {
 			definition = "Identification of the current limit.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails2.mmObject();
+			type_lazy = () -> LimitIdentificationDetails2.mmObject();
+		}
+
+		@Override
+		public List<LimitIdentificationDetails2> getValue(LimitDetailsStructure3 obj) {
+			return obj.getCurrentLimitIdentification();
+		}
+
+		@Override
+		public void setValue(LimitDetailsStructure3 obj, List<LimitIdentificationDetails2> value) {
+			obj.setCurrentLimitIdentification(value);
 		}
 	};
 	@XmlElement(name = "AllCurLmts", required = true)
-	protected List<com.tools20022.repository.msg.LimitIdentificationDetails3> allCurrentLimits;
+	protected List<LimitIdentificationDetails3> allCurrentLimits;
 	/**
 	 * 
 	 <p>
@@ -165,7 +177,7 @@ public class LimitDetailsStructure3 {
 	 * definition} = "Identification of the current limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAllCurrentLimits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitDetailsStructure3, List<LimitIdentificationDetails3>> mmAllCurrentLimits = new MMMessageAssociationEnd<LimitDetailsStructure3, List<LimitIdentificationDetails3>>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetailsStructure3.mmObject();
@@ -176,7 +188,17 @@ public class LimitDetailsStructure3 {
 			definition = "Identification of the current limit.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails3.mmObject();
+			type_lazy = () -> LimitIdentificationDetails3.mmObject();
+		}
+
+		@Override
+		public List<LimitIdentificationDetails3> getValue(LimitDetailsStructure3 obj) {
+			return obj.getAllCurrentLimits();
+		}
+
+		@Override
+		public void setValue(LimitDetailsStructure3 obj, List<LimitIdentificationDetails3> value) {
+			obj.setAllCurrentLimits(value);
 		}
 	};
 	/**
@@ -247,7 +269,7 @@ public class LimitDetailsStructure3 {
 		return currentLimitIdentification == null ? currentLimitIdentification = new ArrayList<>() : currentLimitIdentification;
 	}
 
-	public LimitDetailsStructure3 setCurrentLimitIdentification(List<com.tools20022.repository.msg.LimitIdentificationDetails2> currentLimitIdentification) {
+	public LimitDetailsStructure3 setCurrentLimitIdentification(List<LimitIdentificationDetails2> currentLimitIdentification) {
 		this.currentLimitIdentification = Objects.requireNonNull(currentLimitIdentification);
 		return this;
 	}
@@ -256,7 +278,7 @@ public class LimitDetailsStructure3 {
 		return allCurrentLimits == null ? allCurrentLimits = new ArrayList<>() : allCurrentLimits;
 	}
 
-	public LimitDetailsStructure3 setAllCurrentLimits(List<com.tools20022.repository.msg.LimitIdentificationDetails3> allCurrentLimits) {
+	public LimitDetailsStructure3 setAllCurrentLimits(List<LimitIdentificationDetails3> allCurrentLimits) {
 		this.allCurrentLimits = Objects.requireNonNull(allCurrentLimits);
 		return this;
 	}

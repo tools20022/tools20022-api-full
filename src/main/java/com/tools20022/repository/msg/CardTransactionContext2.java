@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardTransactionCondition1;
+import com.tools20022.repository.msg.CardTransactionRiskIndicator1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -147,7 +149,7 @@ public class CardTransactionContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardPresent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, Optional<TrueFalseIndicator>> mmCardPresent = new MMMessageAttribute<CardTransactionContext2, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPresent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
@@ -159,6 +161,16 @@ public class CardTransactionContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(CardTransactionContext2 obj) {
+			return obj.getCardPresent();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setCardPresent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrdhldrPres")
@@ -198,7 +210,7 @@ public class CardTransactionContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardholderPresent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, Optional<TrueFalseIndicator>> mmCardholderPresent = new MMMessageAttribute<CardTransactionContext2, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardholderPresent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
@@ -210,6 +222,16 @@ public class CardTransactionContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(CardTransactionContext2 obj) {
+			return obj.getCardholderPresent();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setCardholderPresent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LctnCtgy")
@@ -249,7 +271,7 @@ public class CardTransactionContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, Optional<LocationCategory2Code>> mmLocationCategory = new MMMessageAttribute<CardTransactionContext2, Optional<LocationCategory2Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
@@ -261,6 +283,16 @@ public class CardTransactionContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LocationCategory2Code.mmObject();
+		}
+
+		@Override
+		public Optional<LocationCategory2Code> getValue(CardTransactionContext2 obj) {
+			return obj.getLocationCategory();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, Optional<LocationCategory2Code> value) {
+			obj.setLocationCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttndncCntxt")
@@ -300,7 +332,7 @@ public class CardTransactionContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, Optional<AttendanceContext1Code>> mmAttendanceContext = new MMMessageAttribute<CardTransactionContext2, Optional<AttendanceContext1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendanceContext;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
@@ -312,6 +344,16 @@ public class CardTransactionContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AttendanceContext1Code> getValue(CardTransactionContext2 obj) {
+			return obj.getAttendanceContext();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, Optional<AttendanceContext1Code> value) {
+			obj.setAttendanceContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxEnvt")
@@ -349,7 +391,7 @@ public class CardTransactionContext2 {
 	 * definition} = "Indicates the environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionEnvironment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, Optional<TransactionEnvironment2Code>> mmTransactionEnvironment = new MMMessageAttribute<CardTransactionContext2, Optional<TransactionEnvironment2Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionEnvironment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
@@ -361,6 +403,16 @@ public class CardTransactionContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment2Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionEnvironment2Code> getValue(CardTransactionContext2 obj) {
+			return obj.getTransactionEnvironment();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, Optional<TransactionEnvironment2Code> value) {
+			obj.setTransactionEnvironment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HstgCtgy")
@@ -395,7 +447,7 @@ public class CardTransactionContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostingCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, Optional<TransactionEnvironment3Code>> mmHostingCategory = new MMMessageAttribute<CardTransactionContext2, Optional<TransactionEnvironment3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
 			isDerived = false;
@@ -406,6 +458,16 @@ public class CardTransactionContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment3Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionEnvironment3Code> getValue(CardTransactionContext2 obj) {
+			return obj.getHostingCategory();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, Optional<TransactionEnvironment3Code> value) {
+			obj.setHostingCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxChanl")
@@ -445,7 +507,7 @@ public class CardTransactionContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, Optional<TransactionChannel3Code>> mmTransactionChannel = new MMMessageAttribute<CardTransactionContext2, Optional<TransactionChannel3Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionChannel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
@@ -457,6 +519,16 @@ public class CardTransactionContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionChannel3Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionChannel3Code> getValue(CardTransactionContext2 obj) {
+			return obj.getTransactionChannel();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, Optional<TransactionChannel3Code> value) {
+			obj.setTransactionChannel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardDataNtryMd", required = true)
@@ -496,7 +568,7 @@ public class CardTransactionContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, CardDataReading2Code> mmCardDataEntryMode = new MMMessageAttribute<CardTransactionContext2, CardDataReading2Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardDataEntryMode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
@@ -508,6 +580,16 @@ public class CardTransactionContext2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardDataReading2Code.mmObject();
+		}
+
+		@Override
+		public CardDataReading2Code getValue(CardTransactionContext2 obj) {
+			return obj.getCardDataEntryMode();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, CardDataReading2Code value) {
+			obj.setCardDataEntryMode(value);
 		}
 	};
 	@XmlElement(name = "FllbckInd")
@@ -542,7 +624,7 @@ public class CardTransactionContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFallbackIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, Optional<CardFallback1Code>> mmFallbackIndicator = new MMMessageAttribute<CardTransactionContext2, Optional<CardFallback1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
 			isDerived = false;
@@ -553,6 +635,16 @@ public class CardTransactionContext2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardFallback1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardFallback1Code> getValue(CardTransactionContext2 obj) {
+			return obj.getFallbackIndicator();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, Optional<CardFallback1Code> value) {
+			obj.setFallbackIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SpprtdOptn")
@@ -585,7 +677,7 @@ public class CardTransactionContext2 {
 	 * definition} = "Payment options the card acceptor can support."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSupportedOption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionContext2, List<SupportedPaymentOption1Code>> mmSupportedOption = new MMMessageAttribute<CardTransactionContext2, List<SupportedPaymentOption1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
 			isDerived = false;
@@ -596,9 +688,19 @@ public class CardTransactionContext2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> SupportedPaymentOption1Code.mmObject();
 		}
+
+		@Override
+		public List<SupportedPaymentOption1Code> getValue(CardTransactionContext2 obj) {
+			return obj.getSupportedOption();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, List<SupportedPaymentOption1Code> value) {
+			obj.setSupportedOption(value);
+		}
 	};
 	@XmlElement(name = "SpclConds")
-	protected List<com.tools20022.repository.msg.CardTransactionCondition1> specialConditions;
+	protected List<CardTransactionCondition1> specialConditions;
 	/**
 	 * 
 	 <p>
@@ -636,7 +738,7 @@ public class CardTransactionContext2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSpecialConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionContext2, List<CardTransactionCondition1>> mmSpecialConditions = new MMMessageAssociationEnd<CardTransactionContext2, List<CardTransactionCondition1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
 			isDerived = false;
@@ -647,11 +749,21 @@ public class CardTransactionContext2 {
 			nextVersions_lazy = () -> Arrays.asList(CardTransactionContext4.mmSpecialConditions);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransactionCondition1.mmObject();
+			type_lazy = () -> CardTransactionCondition1.mmObject();
+		}
+
+		@Override
+		public List<CardTransactionCondition1> getValue(CardTransactionContext2 obj) {
+			return obj.getSpecialConditions();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, List<CardTransactionCondition1> value) {
+			obj.setSpecialConditions(value);
 		}
 	};
 	@XmlElement(name = "RskInd")
-	protected List<com.tools20022.repository.msg.CardTransactionRiskIndicator1> riskIndicator;
+	protected List<CardTransactionRiskIndicator1> riskIndicator;
 	/**
 	 * 
 	 <p>
@@ -680,7 +792,7 @@ public class CardTransactionContext2 {
 	 * "Indicates to the issuer the level of risk of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRiskIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionContext2, List<CardTransactionRiskIndicator1>> mmRiskIndicator = new MMMessageAssociationEnd<CardTransactionContext2, List<CardTransactionRiskIndicator1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext2.mmObject();
 			isDerived = false;
@@ -690,7 +802,17 @@ public class CardTransactionContext2 {
 			definition = "Indicates to the issuer the level of risk of the transaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransactionRiskIndicator1.mmObject();
+			type_lazy = () -> CardTransactionRiskIndicator1.mmObject();
+		}
+
+		@Override
+		public List<CardTransactionRiskIndicator1> getValue(CardTransactionContext2 obj) {
+			return obj.getRiskIndicator();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext2 obj, List<CardTransactionRiskIndicator1> value) {
+			obj.setRiskIndicator(value);
 		}
 	};
 
@@ -808,7 +930,7 @@ public class CardTransactionContext2 {
 		return specialConditions == null ? specialConditions = new ArrayList<>() : specialConditions;
 	}
 
-	public CardTransactionContext2 setSpecialConditions(List<com.tools20022.repository.msg.CardTransactionCondition1> specialConditions) {
+	public CardTransactionContext2 setSpecialConditions(List<CardTransactionCondition1> specialConditions) {
 		this.specialConditions = Objects.requireNonNull(specialConditions);
 		return this;
 	}
@@ -817,7 +939,7 @@ public class CardTransactionContext2 {
 		return riskIndicator == null ? riskIndicator = new ArrayList<>() : riskIndicator;
 	}
 
-	public CardTransactionContext2 setRiskIndicator(List<com.tools20022.repository.msg.CardTransactionRiskIndicator1> riskIndicator) {
+	public CardTransactionContext2 setRiskIndicator(List<CardTransactionRiskIndicator1> riskIndicator) {
 		this.riskIndicator = Objects.requireNonNull(riskIndicator);
 		return this;
 	}

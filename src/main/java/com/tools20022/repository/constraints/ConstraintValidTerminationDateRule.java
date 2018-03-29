@@ -51,11 +51,15 @@ public class ConstraintValidTerminationDateRule {
 	 */
 	public static final MMConstraint<TradingVenueAttributes1> forTradingVenueAttributes1 = new MMConstraint<TradingVenueAttributes1>() {
 		{
-			validator = ConstraintValidTerminationDateRule::checkTradingVenueAttributes1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidTerminationDateRule";
 			definition = "TerminationDate cannot be a date earlier than FirstTradeDate, RequestForAdmissionDate or AdmissionApprovalDate.";
 			owner_lazy = () -> TradingVenueAttributes1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TradingVenueAttributes1 obj) throws Exception {
+			checkTradingVenueAttributes1(obj);
 		}
 	};
 

@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV02;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMContext9;
+import com.tools20022.repository.msg.ATMTransaction18;
+import com.tools20022.repository.msg.AutomatedTellerMachine3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +115,7 @@ public class ATMWithdrawalCompletionAcknowledgement2 {
 	 * definition} = "ATM information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMWithdrawalCompletionAcknowledgement2, AutomatedTellerMachine3> mmATM = new MMMessageAssociationEnd<ATMWithdrawalCompletionAcknowledgement2, AutomatedTellerMachine3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMWithdrawalCompletionAcknowledgement2.mmObject();
 			isDerived = false;
@@ -123,7 +126,17 @@ public class ATMWithdrawalCompletionAcknowledgement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine3.mmObject();
+			type_lazy = () -> AutomatedTellerMachine3.mmObject();
+		}
+
+		@Override
+		public AutomatedTellerMachine3 getValue(ATMWithdrawalCompletionAcknowledgement2 obj) {
+			return obj.getATM();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAcknowledgement2 obj, AutomatedTellerMachine3 value) {
+			obj.setATM(value);
 		}
 	};
 	@XmlElement(name = "Cntxt", required = true)
@@ -154,7 +167,7 @@ public class ATMWithdrawalCompletionAcknowledgement2 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMWithdrawalCompletionAcknowledgement2, ATMContext9> mmContext = new MMMessageAssociationEnd<ATMWithdrawalCompletionAcknowledgement2, ATMContext9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMWithdrawalCompletionAcknowledgement2.mmObject();
 			isDerived = false;
@@ -165,7 +178,17 @@ public class ATMWithdrawalCompletionAcknowledgement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMContext9.mmObject();
+			type_lazy = () -> ATMContext9.mmObject();
+		}
+
+		@Override
+		public ATMContext9 getValue(ATMWithdrawalCompletionAcknowledgement2 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAcknowledgement2 obj, ATMContext9 value) {
+			obj.setContext(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -196,7 +219,7 @@ public class ATMWithdrawalCompletionAcknowledgement2 {
 	 * definition} = "Acknowledgement of the withdrawal completion advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMWithdrawalCompletionAcknowledgement2, ATMTransaction18> mmTransaction = new MMMessageAssociationEnd<ATMWithdrawalCompletionAcknowledgement2, ATMTransaction18>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMWithdrawalCompletionAcknowledgement2.mmObject();
 			isDerived = false;
@@ -207,7 +230,17 @@ public class ATMWithdrawalCompletionAcknowledgement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction18.mmObject();
+			type_lazy = () -> ATMTransaction18.mmObject();
+		}
+
+		@Override
+		public ATMTransaction18 getValue(ATMWithdrawalCompletionAcknowledgement2 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAcknowledgement2 obj, ATMTransaction18 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -230,7 +263,7 @@ public class ATMWithdrawalCompletionAcknowledgement2 {
 		return aTM;
 	}
 
-	public ATMWithdrawalCompletionAcknowledgement2 setATM(com.tools20022.repository.msg.AutomatedTellerMachine3 aTM) {
+	public ATMWithdrawalCompletionAcknowledgement2 setATM(AutomatedTellerMachine3 aTM) {
 		this.aTM = Objects.requireNonNull(aTM);
 		return this;
 	}
@@ -239,7 +272,7 @@ public class ATMWithdrawalCompletionAcknowledgement2 {
 		return context;
 	}
 
-	public ATMWithdrawalCompletionAcknowledgement2 setContext(com.tools20022.repository.msg.ATMContext9 context) {
+	public ATMWithdrawalCompletionAcknowledgement2 setContext(ATMContext9 context) {
 		this.context = Objects.requireNonNull(context);
 		return this;
 	}
@@ -248,7 +281,7 @@ public class ATMWithdrawalCompletionAcknowledgement2 {
 		return transaction;
 	}
 
-	public ATMWithdrawalCompletionAcknowledgement2 setTransaction(com.tools20022.repository.msg.ATMTransaction18 transaction) {
+	public ATMWithdrawalCompletionAcknowledgement2 setTransaction(ATMTransaction18 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

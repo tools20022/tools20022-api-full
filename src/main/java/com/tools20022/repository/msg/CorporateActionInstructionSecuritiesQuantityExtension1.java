@@ -102,7 +102,7 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionSecuritiesQuantityExtension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionInstructionSecuritiesQuantityExtension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionInstructionSecuritiesQuantityExtension1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionSecuritiesQuantityExtension1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "BdQty")
@@ -148,7 +158,7 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 	 * definition} = "Quantity of bonds in exchange of warrants."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBondQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionInstructionSecuritiesQuantityExtension1, Optional<FinancialInstrumentQuantity15Choice>> mmBondQuantity = new MMMessageAttribute<CorporateActionInstructionSecuritiesQuantityExtension1, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionSecuritiesQuantityExtension1.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class CorporateActionInstructionSecuritiesQuantityExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(CorporateActionInstructionSecuritiesQuantityExtension1 obj) {
+			return obj.getBondQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionSecuritiesQuantityExtension1 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setBondQuantity(value.orElse(null));
 		}
 	};
 

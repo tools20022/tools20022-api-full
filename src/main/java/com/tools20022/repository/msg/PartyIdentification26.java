@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification4;
+import com.tools20022.repository.msg.PostalAddress5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -149,7 +151,7 @@ public class PartyIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification26, Max70Text> mmName = new MMMessageAttribute<PartyIdentification26, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
@@ -161,6 +163,16 @@ public class PartyIdentification26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PartyIdentification26 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification26 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PrtryId")
@@ -200,7 +212,7 @@ public class PartyIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification26, Optional<GenericIdentification4>> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification26, Optional<GenericIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
@@ -211,7 +223,17 @@ public class PartyIdentification26 {
 			definition = "Unique and unambiguous identifier assigned to a party using a proprietary identification scheme.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
+			complexType_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification4> getValue(PartyIdentification26 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification26 obj, Optional<GenericIdentification4> value) {
+			obj.setProprietaryIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstlAdr", required = true)
@@ -249,7 +271,7 @@ public class PartyIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification26, PostalAddress5> mmPostalAddress = new MMMessageAssociationEnd<PartyIdentification26, PostalAddress5>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
@@ -261,7 +283,17 @@ public class PartyIdentification26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress5.mmObject();
+			type_lazy = () -> PostalAddress5.mmObject();
+		}
+
+		@Override
+		public PostalAddress5 getValue(PartyIdentification26 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification26 obj, PostalAddress5 value) {
+			obj.setPostalAddress(value);
 		}
 	};
 
@@ -295,7 +327,7 @@ public class PartyIdentification26 {
 		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public PartyIdentification26 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification4 proprietaryIdentification) {
+	public PartyIdentification26 setProprietaryIdentification(GenericIdentification4 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
 		return this;
 	}
@@ -304,7 +336,7 @@ public class PartyIdentification26 {
 		return postalAddress;
 	}
 
-	public PartyIdentification26 setPostalAddress(com.tools20022.repository.msg.PostalAddress5 postalAddress) {
+	public PartyIdentification26 setPostalAddress(PostalAddress5 postalAddress) {
 		this.postalAddress = Objects.requireNonNull(postalAddress);
 		return this;
 	}

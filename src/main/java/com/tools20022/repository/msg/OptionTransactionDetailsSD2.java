@@ -170,7 +170,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Max350Text> mmPlaceAndName = new MMMessageAttribute<OptionTransactionDetailsSD2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -182,6 +182,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -223,7 +233,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Max15Text> mmTransactionIdentification = new MMMessageAttribute<OptionTransactionDetailsSD2, Max15Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -235,6 +245,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15Text.mmObject();
+		}
+
+		@Override
+		public Max15Text getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Max15Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSeqNb")
@@ -277,7 +297,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Optional<Max3NumericText>> mmTransactionSequenceNumber = new MMMessageAttribute<OptionTransactionDetailsSD2, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -289,6 +309,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getTransactionSequenceNumber();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<Max3NumericText> value) {
+			obj.setTransactionSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxIdDt", required = true)
@@ -330,7 +360,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, ISODateTime> mmTransactionIdentificationDate = new MMMessageAttribute<OptionTransactionDetailsSD2, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -342,6 +372,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getTransactionIdentificationDate();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, ISODateTime value) {
+			obj.setTransactionIdentificationDate(value);
 		}
 	};
 	@XmlElement(name = "TxIdQty", required = true)
@@ -383,7 +423,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentificationQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD2, FinancialInstrumentQuantity15Choice> mmTransactionIdentificationQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD2, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -396,6 +436,16 @@ public class OptionTransactionDetailsSD2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getTransactionIdentificationQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setTransactionIdentificationQuantity(value);
 		}
 	};
 	@XmlElement(name = "TxIdOvrsbcptQty")
@@ -436,7 +486,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentificationOversubscriptionQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>> mmTransactionIdentificationOversubscriptionQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -449,6 +499,16 @@ public class OptionTransactionDetailsSD2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getTransactionIdentificationOversubscriptionQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setTransactionIdentificationOversubscriptionQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AccptdQty")
@@ -490,7 +550,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcceptedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>> mmAcceptedQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -503,6 +563,16 @@ public class OptionTransactionDetailsSD2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getAcceptedQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setAcceptedQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UaccptdQty")
@@ -544,7 +614,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnacceptedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>> mmUnacceptedQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -557,6 +627,16 @@ public class OptionTransactionDetailsSD2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getUnacceptedQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setUnacceptedQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitldAmt")
@@ -597,7 +677,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>> mmEntitledAmount = new MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -609,6 +689,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getEntitledAmount();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setEntitledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitldQty")
@@ -649,7 +739,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEntitledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>> mmEntitledQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -662,6 +752,16 @@ public class OptionTransactionDetailsSD2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getEntitledQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setEntitledQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitldOvrsbcptQty")
@@ -701,7 +801,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEntitledOversubscriptionQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>> mmEntitledOversubscriptionQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -714,6 +814,16 @@ public class OptionTransactionDetailsSD2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getEntitledOversubscriptionQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setEntitledOversubscriptionQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RfnddOvrsbcptAmt")
@@ -756,7 +866,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRefundedOversubscriptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>> mmRefundedOversubscriptionAmount = new MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -768,6 +878,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getRefundedOversubscriptionAmount();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setRefundedOversubscriptionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcptAmt")
@@ -808,7 +928,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>> mmSubscriptionAmount = new MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -820,6 +940,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getSubscriptionAmount();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setSubscriptionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OvrsbcptAmt")
@@ -861,7 +991,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOversubscriptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>> mmOversubscriptionAmount = new MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -873,6 +1003,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getOversubscriptionAmount();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setOversubscriptionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlSbcptAdjstmntAmt")
@@ -915,7 +1055,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalSubscriptionAdjustmentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>> mmFinalSubscriptionAdjustmentAmount = new MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -927,6 +1067,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getFinalSubscriptionAdjustmentAmount();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setFinalSubscriptionAdjustmentAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshInLieuOfShr")
@@ -977,7 +1127,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashInLieuOfShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>> mmCashInLieuOfShare = new MMMessageAttribute<OptionTransactionDetailsSD2, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmCashInLieuOfShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
@@ -991,6 +1141,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getCashInLieuOfShare();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setCashInLieuOfShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrRefId")
@@ -1031,7 +1191,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD2, Optional<Max15Text>> mmCustomerReferenceIdentification = new MMMessageAttribute<OptionTransactionDetailsSD2, Optional<Max15Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -1043,6 +1203,16 @@ public class OptionTransactionDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max15Text> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getCustomerReferenceIdentification();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<Max15Text> value) {
+			obj.setCustomerReferenceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtNtrdQty")
@@ -1084,7 +1254,7 @@ public class OptionTransactionDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgentEnteredQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>> mmAgentEnteredQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD2.mmObject();
 			isDerived = false;
@@ -1097,6 +1267,16 @@ public class OptionTransactionDetailsSD2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(OptionTransactionDetailsSD2 obj) {
+			return obj.getAgentEnteredQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD2 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setAgentEnteredQuantity(value.orElse(null));
 		}
 	};
 

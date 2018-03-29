@@ -102,7 +102,7 @@ public class CUSIPIdentification1 {
 	 * definition} = "Country in which the CUSIP has been assigned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCUSIPCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CUSIPIdentification1, Optional<CountryCode>> mmCUSIPCountry = new MMMessageAttribute<CUSIPIdentification1, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CUSIPIdentification1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class CUSIPIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(CUSIPIdentification1 obj) {
+			return obj.getCUSIPCountry();
+		}
+
+		@Override
+		public void setValue(CUSIPIdentification1 obj, Optional<CountryCode> value) {
+			obj.setCUSIPCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CUSIPId", required = true)
@@ -149,7 +159,7 @@ public class CUSIPIdentification1 {
 	 * definition} = "CUSIP identification of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCUSIPIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CUSIPIdentification1, CUSIPIdentifier> mmCUSIPIdentification = new MMMessageAttribute<CUSIPIdentification1, CUSIPIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CUSIPIdentification1.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class CUSIPIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
+		}
+
+		@Override
+		public CUSIPIdentifier getValue(CUSIPIdentification1 obj) {
+			return obj.getCUSIPIdentification();
+		}
+
+		@Override
+		public void setValue(CUSIPIdentification1 obj, CUSIPIdentifier value) {
+			obj.setCUSIPIdentification(value);
 		}
 	};
 

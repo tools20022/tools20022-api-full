@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommunicationAddressDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +135,7 @@ public class ContactIdentificationAndAddress {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentificationAndAddress, Optional<Max35Text>> mmName = new MMMessageAttribute<ContactIdentificationAndAddress, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress.mmObject();
@@ -147,6 +148,16 @@ public class ContactIdentificationAndAddress {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ContactIdentificationAndAddress obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(ContactIdentificationAndAddress obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Role", required = true)
@@ -192,7 +203,7 @@ public class ContactIdentificationAndAddress {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContactIdentificationAndAddress, PaymentRole1Code> mmRole = new MMMessageAttribute<ContactIdentificationAndAddress, PaymentRole1Code>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress.mmObject();
@@ -205,6 +216,16 @@ public class ContactIdentificationAndAddress {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentRole1Code.mmObject();
+		}
+
+		@Override
+		public PaymentRole1Code getValue(ContactIdentificationAndAddress obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(ContactIdentificationAndAddress obj, PaymentRole1Code value) {
+			obj.setRole(value);
 		}
 	};
 	@XmlElement(name = "ComAdr", required = true)
@@ -249,7 +270,7 @@ public class ContactIdentificationAndAddress {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContactIdentificationAndAddress, CommunicationAddressDetails> mmCommunicationAddress = new MMMessageAssociationEnd<ContactIdentificationAndAddress, CommunicationAddressDetails>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactIdentificationAndAddress.mmObject();
@@ -262,7 +283,17 @@ public class ContactIdentificationAndAddress {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddressDetails.mmObject();
+			type_lazy = () -> CommunicationAddressDetails.mmObject();
+		}
+
+		@Override
+		public CommunicationAddressDetails getValue(ContactIdentificationAndAddress obj) {
+			return obj.getCommunicationAddress();
+		}
+
+		@Override
+		public void setValue(ContactIdentificationAndAddress obj, CommunicationAddressDetails value) {
+			obj.setCommunicationAddress(value);
 		}
 	};
 
@@ -304,7 +335,7 @@ public class ContactIdentificationAndAddress {
 		return communicationAddress;
 	}
 
-	public ContactIdentificationAndAddress setCommunicationAddress(com.tools20022.repository.msg.CommunicationAddressDetails communicationAddress) {
+	public ContactIdentificationAndAddress setCommunicationAddress(CommunicationAddressDetails communicationAddress) {
 		this.communicationAddress = Objects.requireNonNull(communicationAddress);
 		return this;
 	}

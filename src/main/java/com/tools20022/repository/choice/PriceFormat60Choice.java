@@ -132,7 +132,7 @@ public class PriceFormat60Choice {
 	 * definition} = "Price expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat60Choice, PercentagePrice1> mmPercentagePrice = new MMMessageAssociationEnd<PriceFormat60Choice, PercentagePrice1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat60Choice.mmObject();
@@ -146,6 +146,16 @@ public class PriceFormat60Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PercentagePrice1.mmObject();
+		}
+
+		@Override
+		public PercentagePrice1 getValue(PriceFormat60Choice obj) {
+			return obj.getPercentagePrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat60Choice obj, PercentagePrice1 value) {
+			obj.setPercentagePrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPric", required = true)
@@ -184,7 +194,7 @@ public class PriceFormat60Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat60Choice, AmountPrice5> mmAmountPrice = new MMMessageAssociationEnd<PriceFormat60Choice, AmountPrice5>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat60Choice.mmObject();
@@ -198,6 +208,16 @@ public class PriceFormat60Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPrice5.mmObject();
+		}
+
+		@Override
+		public AmountPrice5 getValue(PriceFormat60Choice obj) {
+			return obj.getAmountPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat60Choice obj, AmountPrice5 value) {
+			obj.setAmountPrice(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdPric", required = true)
@@ -233,7 +253,7 @@ public class PriceFormat60Choice {
 	 * definition} = "Value of the price not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat60Choice, PriceValueType8Code> mmNotSpecifiedPrice = new MMMessageAttribute<PriceFormat60Choice, PriceValueType8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat60Choice.mmObject();
 			isDerived = false;
@@ -245,6 +265,16 @@ public class PriceFormat60Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType8Code.mmObject();
+		}
+
+		@Override
+		public PriceValueType8Code getValue(PriceFormat60Choice obj) {
+			return obj.getNotSpecifiedPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat60Choice obj, PriceValueType8Code value) {
+			obj.setNotSpecifiedPrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
@@ -286,7 +316,7 @@ public class PriceFormat60Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat60Choice, AmountPricePerFinancialInstrumentQuantity7> mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd<PriceFormat60Choice, AmountPricePerFinancialInstrumentQuantity7>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat60Choice.mmObject();
@@ -300,6 +330,16 @@ public class PriceFormat60Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity7.mmObject();
+		}
+
+		@Override
+		public AmountPricePerFinancialInstrumentQuantity7 getValue(PriceFormat60Choice obj) {
+			return obj.getAmountPricePerFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(PriceFormat60Choice obj, AmountPricePerFinancialInstrumentQuantity7 value) {
+			obj.setAmountPricePerFinancialInstrumentQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerAmt", required = true)
@@ -338,7 +378,7 @@ public class PriceFormat60Choice {
 	 * definition} = "Price expressed as a ratio: amount price per amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat60Choice, AmountPricePerAmount3> mmAmountPricePerAmount = new MMMessageAssociationEnd<PriceFormat60Choice, AmountPricePerAmount3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat60Choice.mmObject();
@@ -352,6 +392,16 @@ public class PriceFormat60Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerAmount3.mmObject();
+		}
+
+		@Override
+		public AmountPricePerAmount3 getValue(PriceFormat60Choice obj) {
+			return obj.getAmountPricePerAmount();
+		}
+
+		@Override
+		public void setValue(PriceFormat60Choice obj, AmountPricePerAmount3 value) {
+			obj.setAmountPricePerAmount(value);
 		}
 	};
 	@XmlElement(name = "IndxPts", required = true)
@@ -392,7 +442,7 @@ public class PriceFormat60Choice {
 	 * definition} = "Price expressed in index points."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat60Choice, RestrictedFINDecimalNumber> mmIndexPoints = new MMMessageAttribute<PriceFormat60Choice, RestrictedFINDecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexPoints;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat60Choice.mmObject();
@@ -405,6 +455,16 @@ public class PriceFormat60Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
+		}
+
+		@Override
+		public RestrictedFINDecimalNumber getValue(PriceFormat60Choice obj) {
+			return obj.getIndexPoints();
+		}
+
+		@Override
+		public void setValue(PriceFormat60Choice obj, RestrictedFINDecimalNumber value) {
+			obj.setIndexPoints(value);
 		}
 	};
 

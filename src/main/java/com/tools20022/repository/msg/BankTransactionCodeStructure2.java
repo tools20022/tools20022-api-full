@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ExternalBankTransactionDomainCode;
 import com.tools20022.repository.entity.BankTransaction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BankTransactionCodeStructure3;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -112,7 +113,7 @@ public class BankTransactionCodeStructure2 {
 	 * "Specifies the business area of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BankTransactionCodeStructure2, ExternalBankTransactionDomainCode> mmCode = new MMMessageAttribute<BankTransactionCodeStructure2, ExternalBankTransactionDomainCode>() {
 		{
 			businessElementTrace_lazy = () -> BankTransaction.mmDomain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure2.mmObject();
@@ -124,6 +125,16 @@ public class BankTransactionCodeStructure2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalBankTransactionDomainCode.mmObject();
+		}
+
+		@Override
+		public ExternalBankTransactionDomainCode getValue(BankTransactionCodeStructure2 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BankTransactionCodeStructure2 obj, ExternalBankTransactionDomainCode value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Fmly", required = true)
@@ -162,7 +173,7 @@ public class BankTransactionCodeStructure2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFamily = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BankTransactionCodeStructure2, BankTransactionCodeStructure3> mmFamily = new MMMessageAssociationEnd<BankTransactionCodeStructure2, BankTransactionCodeStructure3>() {
 		{
 			businessElementTrace_lazy = () -> BankTransaction.mmFamily;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure2.mmObject();
@@ -174,7 +185,17 @@ public class BankTransactionCodeStructure2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure3.mmObject();
+			type_lazy = () -> BankTransactionCodeStructure3.mmObject();
+		}
+
+		@Override
+		public BankTransactionCodeStructure3 getValue(BankTransactionCodeStructure2 obj) {
+			return obj.getFamily();
+		}
+
+		@Override
+		public void setValue(BankTransactionCodeStructure2 obj, BankTransactionCodeStructure3 value) {
+			obj.setFamily(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class BankTransactionCodeStructure2 {
 		return family;
 	}
 
-	public BankTransactionCodeStructure2 setFamily(com.tools20022.repository.msg.BankTransactionCodeStructure3 family) {
+	public BankTransactionCodeStructure2 setFamily(BankTransactionCodeStructure3 family) {
 		this.family = Objects.requireNonNull(family);
 		return this;
 	}

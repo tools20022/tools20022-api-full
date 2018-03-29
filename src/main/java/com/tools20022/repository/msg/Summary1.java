@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.ExposureTerm;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SummaryAmounts1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +136,7 @@ public class Summary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExposedAmountPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Summary1, Optional<ActiveCurrencyAndAmount>> mmExposedAmountPartyA = new MMMessageAttribute<Summary1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
@@ -147,6 +148,16 @@ public class Summary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Summary1 obj) {
+			return obj.getExposedAmountPartyA();
+		}
+
+		@Override
+		public void setValue(Summary1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setExposedAmountPartyA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpsdAmtPtyB")
@@ -185,7 +196,7 @@ public class Summary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExposedAmountPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Summary1, Optional<ActiveCurrencyAndAmount>> mmExposedAmountPartyB = new MMMessageAttribute<Summary1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalExposedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
@@ -197,6 +208,16 @@ public class Summary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Summary1 obj) {
+			return obj.getExposedAmountPartyB();
+		}
+
+		@Override
+		public void setValue(Summary1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setExposedAmountPartyB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpsrTp", required = true)
@@ -235,7 +256,7 @@ public class Summary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExposureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Summary1, ExposureType1Code> mmExposureType = new MMMessageAttribute<Summary1, ExposureType1Code>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
@@ -247,6 +268,16 @@ public class Summary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExposureType1Code.mmObject();
+		}
+
+		@Override
+		public ExposureType1Code getValue(Summary1 obj) {
+			return obj.getExposureType();
+		}
+
+		@Override
+		public void setValue(Summary1 obj, ExposureType1Code value) {
+			obj.setExposureType(value);
 		}
 	};
 	@XmlElement(name = "TtlValOfColl", required = true)
@@ -285,7 +316,7 @@ public class Summary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalValueOfCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Summary1, ActiveCurrencyAndAmount> mmTotalValueOfCollateral = new MMMessageAttribute<Summary1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmTotalCollateralCurrentValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
@@ -297,6 +328,16 @@ public class Summary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Summary1 obj) {
+			return obj.getTotalValueOfCollateral();
+		}
+
+		@Override
+		public void setValue(Summary1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalValueOfCollateral(value);
 		}
 	};
 	@XmlElement(name = "NetXcssDfcit")
@@ -330,7 +371,7 @@ public class Summary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetExcessDeficit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Summary1, Optional<ActiveCurrencyAndAmount>> mmNetExcessDeficit = new MMMessageAttribute<Summary1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
 			isDerived = false;
@@ -341,6 +382,16 @@ public class Summary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Summary1 obj) {
+			return obj.getNetExcessDeficit();
+		}
+
+		@Override
+		public void setValue(Summary1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNetExcessDeficit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetXcssDfcitInd")
@@ -374,7 +425,7 @@ public class Summary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetExcessDeficitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Summary1, Optional<ShortLong1Code>> mmNetExcessDeficitIndicator = new MMMessageAttribute<Summary1, Optional<ShortLong1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
 			isDerived = false;
@@ -385,6 +436,16 @@ public class Summary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ShortLong1Code> getValue(Summary1 obj) {
+			return obj.getNetExcessDeficitIndicator();
+		}
+
+		@Override
+		public void setValue(Summary1 obj, Optional<ShortLong1Code> value) {
+			obj.setNetExcessDeficitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValtnDtTm", required = true)
@@ -420,7 +481,7 @@ public class Summary1 {
 	 * definition} = "Date/time at which the collateral was valued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Summary1, ISODateTime> mmValuationDateTime = new MMMessageAttribute<Summary1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmMarginCallValuationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
@@ -432,6 +493,16 @@ public class Summary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Summary1 obj) {
+			return obj.getValuationDateTime();
+		}
+
+		@Override
+		public void setValue(Summary1 obj, ISODateTime value) {
+			obj.setValuationDateTime(value);
 		}
 	};
 	@XmlElement(name = "ReqdSttlmDt")
@@ -469,7 +540,7 @@ public class Summary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Summary1, Optional<ISODate>> mmRequestedSettlementDate = new MMMessageAttribute<Summary1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
@@ -481,6 +552,16 @@ public class Summary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Summary1 obj) {
+			return obj.getRequestedSettlementDate();
+		}
+
+		@Override
+		public void setValue(Summary1 obj, Optional<ISODate> value) {
+			obj.setRequestedSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SummryDtls")
@@ -512,7 +593,7 @@ public class Summary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSummaryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Summary1, Optional<SummaryAmounts1>> mmSummaryDetails = new MMMessageAssociationEnd<Summary1, Optional<SummaryAmounts1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
 			isDerived = false;
@@ -523,7 +604,17 @@ public class Summary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SummaryAmounts1.mmObject();
+			type_lazy = () -> SummaryAmounts1.mmObject();
+		}
+
+		@Override
+		public Optional<SummaryAmounts1> getValue(Summary1 obj) {
+			return obj.getSummaryDetails();
+		}
+
+		@Override
+		public void setValue(Summary1 obj, Optional<SummaryAmounts1> value) {
+			obj.setSummaryDetails(value.orElse(null));
 		}
 	};
 
@@ -618,7 +709,7 @@ public class Summary1 {
 		return summaryDetails == null ? Optional.empty() : Optional.of(summaryDetails);
 	}
 
-	public Summary1 setSummaryDetails(com.tools20022.repository.msg.SummaryAmounts1 summaryDetails) {
+	public Summary1 setSummaryDetails(SummaryAmounts1 summaryDetails) {
 		this.summaryDetails = summaryDetails;
 		return this;
 	}

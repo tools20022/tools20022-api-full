@@ -107,7 +107,7 @@ public class IsabelHeader2Choice {
 	 * "File provided in the payload contains payment initiation requests."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelHeader2Choice, IsabelPaymentHeader2> mmPayment = new MMMessageAssociationEnd<IsabelHeader2Choice, IsabelPaymentHeader2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class IsabelHeader2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IsabelPaymentHeader2.mmObject();
+		}
+
+		@Override
+		public IsabelPaymentHeader2 getValue(IsabelHeader2Choice obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(IsabelHeader2Choice obj, IsabelPaymentHeader2 value) {
+			obj.setPayment(value);
 		}
 	};
 	@XmlElement(name = "Rpt", required = true)
@@ -149,7 +159,7 @@ public class IsabelHeader2Choice {
 	 * definition} = "File provided in the payload contains reporting data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelHeader2Choice, IsabelReportHeader3> mmReport = new MMMessageAssociationEnd<IsabelHeader2Choice, IsabelReportHeader3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class IsabelHeader2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IsabelReportHeader3.mmObject();
+		}
+
+		@Override
+		public IsabelReportHeader3 getValue(IsabelHeader2Choice obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(IsabelHeader2Choice obj, IsabelReportHeader3 value) {
+			obj.setReport(value);
 		}
 	};
 	@XmlElement(name = "Qry", required = true)
@@ -193,7 +213,7 @@ public class IsabelHeader2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuery = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelHeader2Choice, IsabelQueryHeader1> mmQuery = new MMMessageAssociationEnd<IsabelHeader2Choice, IsabelQueryHeader1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -205,6 +225,16 @@ public class IsabelHeader2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IsabelQueryHeader1.mmObject();
+		}
+
+		@Override
+		public IsabelQueryHeader1 getValue(IsabelHeader2Choice obj) {
+			return obj.getQuery();
+		}
+
+		@Override
+		public void setValue(IsabelHeader2Choice obj, IsabelQueryHeader1 value) {
+			obj.setQuery(value);
 		}
 	};
 	@XmlElement(name = "QryRspn", required = true)
@@ -237,7 +267,7 @@ public class IsabelHeader2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQueryResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelHeader2Choice, IsabelReportHeader4> mmQueryResponse = new MMMessageAssociationEnd<IsabelHeader2Choice, IsabelReportHeader4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -249,6 +279,16 @@ public class IsabelHeader2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IsabelReportHeader4.mmObject();
+		}
+
+		@Override
+		public IsabelReportHeader4 getValue(IsabelHeader2Choice obj) {
+			return obj.getQueryResponse();
+		}
+
+		@Override
+		public void setValue(IsabelHeader2Choice obj, IsabelReportHeader4 value) {
+			obj.setQueryResponse(value);
 		}
 	};
 	@XmlElement(name = "Ntfctn", required = true)
@@ -280,7 +320,7 @@ public class IsabelHeader2Choice {
 	 * definition} = "File provided in the payload contains ISANot instances."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNotification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelHeader2Choice, IsabelNotificationHeader2> mmNotification = new MMMessageAssociationEnd<IsabelHeader2Choice, IsabelNotificationHeader2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -292,6 +332,16 @@ public class IsabelHeader2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IsabelNotificationHeader2.mmObject();
+		}
+
+		@Override
+		public IsabelNotificationHeader2 getValue(IsabelHeader2Choice obj) {
+			return obj.getNotification();
+		}
+
+		@Override
+		public void setValue(IsabelHeader2Choice obj, IsabelNotificationHeader2 value) {
+			obj.setNotification(value);
 		}
 	};
 	@XmlElement(name = "Admstn", required = true)
@@ -323,7 +373,7 @@ public class IsabelHeader2Choice {
 	 * "File provided in the payload contains administrative instances."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdministration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelHeader2Choice, IsabelAdminHeader2> mmAdministration = new MMMessageAssociationEnd<IsabelHeader2Choice, IsabelAdminHeader2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelHeader2Choice.mmObject();
 			isDerived = false;
@@ -335,6 +385,16 @@ public class IsabelHeader2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IsabelAdminHeader2.mmObject();
+		}
+
+		@Override
+		public IsabelAdminHeader2 getValue(IsabelHeader2Choice obj) {
+			return obj.getAdministration();
+		}
+
+		@Override
+		public void setValue(IsabelHeader2Choice obj, IsabelAdminHeader2 value) {
+			obj.setAdministration(value);
 		}
 	};
 

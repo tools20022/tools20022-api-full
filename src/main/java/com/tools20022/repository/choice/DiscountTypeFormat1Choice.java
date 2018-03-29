@@ -109,7 +109,7 @@ public class DiscountTypeFormat1Choice {
 	 * definition} = "Standard code to specify the type of discount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscountTypeFormat1Choice, DiscountType1Code> mmCode = new MMMessageAttribute<DiscountTypeFormat1Choice, DiscountType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmObject();
@@ -121,6 +121,16 @@ public class DiscountTypeFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DiscountType1Code.mmObject();
+		}
+
+		@Override
+		public DiscountType1Code getValue(DiscountTypeFormat1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DiscountTypeFormat1Choice obj, DiscountType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class DiscountTypeFormat1Choice {
 	 * definition} = "Proprietary code for specifying the type of discount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DiscountTypeFormat1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<DiscountTypeFormat1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmObject();
@@ -170,6 +180,16 @@ public class DiscountTypeFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(DiscountTypeFormat1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DiscountTypeFormat1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

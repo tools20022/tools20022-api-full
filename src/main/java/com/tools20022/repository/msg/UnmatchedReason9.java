@@ -114,7 +114,7 @@ public class UnmatchedReason9 {
 	 * "Specifies the reason why the instruction has an unmatched status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnmatchedReason9, UnmatchedReason13Choice> mmCode = new MMMessageAssociationEnd<UnmatchedReason9, UnmatchedReason13Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnmatchedReason9.mmObject();
@@ -128,6 +128,16 @@ public class UnmatchedReason9 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnmatchedReason13Choice.mmObject();
+		}
+
+		@Override
+		public UnmatchedReason13Choice getValue(UnmatchedReason9 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason9 obj, UnmatchedReason13Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -170,7 +180,7 @@ public class UnmatchedReason9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnmatchedReason9, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<UnmatchedReason9, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnmatchedReason9.mmObject();
@@ -183,6 +193,16 @@ public class UnmatchedReason9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(UnmatchedReason9 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason9 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

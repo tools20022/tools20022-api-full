@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader47;
 import com.tools20022.repository.msg.MandateAmendment3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -168,7 +167,7 @@ public class MandateAmendmentRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateAmendmentRequestV03, GroupHeader47> mmGroupHeader = new MMMessageBuildingBlock<MandateAmendmentRequestV03, GroupHeader47>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,12 +179,14 @@ public class MandateAmendmentRequestV03 {
 			complexType_lazy = () -> GroupHeader47.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateAmendmentRequestV03.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader47 getValue(MandateAmendmentRequestV03 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(MandateAmendmentRequestV03 obj, GroupHeader47 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "UndrlygAmdmntDtls", required = true)
@@ -222,7 +223,7 @@ public class MandateAmendmentRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlyingAmendmentDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateAmendmentRequestV03, List<MandateAmendment3>> mmUnderlyingAmendmentDetails = new MMMessageBuildingBlock<MandateAmendmentRequestV03, List<MandateAmendment3>>() {
 		{
 			xmlTag = "UndrlygAmdmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,12 +234,14 @@ public class MandateAmendmentRequestV03 {
 			complexType_lazy = () -> MandateAmendment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateAmendmentRequestV03.class.getMethod("getUnderlyingAmendmentDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MandateAmendment3> getValue(MandateAmendmentRequestV03 obj) {
+			return obj.getUnderlyingAmendmentDetails();
+		}
+
+		@Override
+		public void setValue(MandateAmendmentRequestV03 obj, List<MandateAmendment3> value) {
+			obj.setUnderlyingAmendmentDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -276,7 +279,7 @@ public class MandateAmendmentRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MandateAmendmentRequestV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MandateAmendmentRequestV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,12 +290,14 @@ public class MandateAmendmentRequestV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MandateAmendmentRequestV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MandateAmendmentRequestV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MandateAmendmentRequestV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

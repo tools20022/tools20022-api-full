@@ -136,7 +136,7 @@ public class TransferReference8 {
 	 * TransferReference1.mmTransferReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference8, Max35Text> mmTransferReference = new MMMessageAttribute<TransferReference8, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference8.mmObject();
@@ -150,6 +150,16 @@ public class TransferReference8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransferReference8 obj) {
+			return obj.getTransferReference();
+		}
+
+		@Override
+		public void setValue(TransferReference8 obj, Max35Text value) {
+			obj.setTransferReference(value);
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -196,7 +206,7 @@ public class TransferReference8 {
 	 * TransferReference1.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference8, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<TransferReference8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference8.mmObject();
 			isDerived = false;
@@ -209,6 +219,16 @@ public class TransferReference8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferReference8 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(TransferReference8 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfConfRef")
@@ -250,7 +270,7 @@ public class TransferReference8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferConfirmationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference8, Optional<Max35Text>> mmTransferConfirmationReference = new MMMessageAttribute<TransferReference8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference8.mmObject();
 			isDerived = false;
@@ -262,6 +282,16 @@ public class TransferReference8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferReference8 obj) {
+			return obj.getTransferConfirmationReference();
+		}
+
+		@Override
+		public void setValue(TransferReference8 obj, Optional<Max35Text> value) {
+			obj.setTransferConfirmationReference(value.orElse(null));
 		}
 	};
 

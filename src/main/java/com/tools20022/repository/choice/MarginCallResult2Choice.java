@@ -112,7 +112,7 @@ public class MarginCallResult2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginCallResultDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCallResult2Choice, MarginCallResult2> mmMarginCallResultDetails = new MMMessageAssociationEnd<MarginCallResult2Choice, MarginCallResult2>() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginCallResult2Choice.mmObject();
@@ -125,6 +125,16 @@ public class MarginCallResult2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarginCallResult2.mmObject();
+		}
+
+		@Override
+		public MarginCallResult2 getValue(MarginCallResult2Choice obj) {
+			return obj.getMarginCallResultDetails();
+		}
+
+		@Override
+		public void setValue(MarginCallResult2Choice obj, MarginCallResult2 value) {
+			obj.setMarginCallResultDetails(value);
 		}
 	};
 	@XmlElement(name = "MrgnCallAmt", required = true)
@@ -159,7 +169,7 @@ public class MarginCallResult2Choice {
 	 * definition} = "Provides the summation of the call amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginCallAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCallResult2Choice, Result1> mmMarginCallAmount = new MMMessageAssociationEnd<MarginCallResult2Choice, Result1>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmVariationMargin;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginCallResult2Choice.mmObject();
@@ -172,6 +182,16 @@ public class MarginCallResult2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Result1.mmObject();
+		}
+
+		@Override
+		public Result1 getValue(MarginCallResult2Choice obj) {
+			return obj.getMarginCallAmount();
+		}
+
+		@Override
+		public void setValue(MarginCallResult2Choice obj, Result1 value) {
+			obj.setMarginCallAmount(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
@@ -208,7 +228,7 @@ public class MarginCallResult2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCallResult2Choice, Result1> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<MarginCallResult2Choice, Result1>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginCallResult2Choice.mmObject();
@@ -221,6 +241,16 @@ public class MarginCallResult2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Result1.mmObject();
+		}
+
+		@Override
+		public Result1 getValue(MarginCallResult2Choice obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(MarginCallResult2Choice obj, Result1 value) {
+			obj.setSegregatedIndependentAmount(value);
 		}
 	};
 

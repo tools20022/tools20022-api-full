@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CashForecastMessage1Code;
 import com.tools20022.repository.codeset.NoCriteria1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FundCashForecastParameters2;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,7 +112,7 @@ public class FundCashForecastParameters1 {
 	 * definition} = "Specifes the fund cash forecast message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashForecastType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecastParameters1, CashForecastMessage1Code> mmCashForecastType = new MMMessageAttribute<FundCashForecastParameters1, CashForecastMessage1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters1.mmObject();
 			isDerived = false;
@@ -122,6 +123,16 @@ public class FundCashForecastParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashForecastMessage1Code.mmObject();
+		}
+
+		@Override
+		public CashForecastMessage1Code getValue(FundCashForecastParameters1 obj) {
+			return obj.getCashForecastType();
+		}
+
+		@Override
+		public void setValue(FundCashForecastParameters1 obj, CashForecastMessage1Code value) {
+			obj.setCashForecastType(value);
 		}
 	};
 	@XmlElement(name = "Params", required = true)
@@ -153,7 +164,7 @@ public class FundCashForecastParameters1 {
 	 * definition} = "Report parameters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundCashForecastParameters1, FundCashForecastParameters2> mmParameters = new MMMessageAssociationEnd<FundCashForecastParameters1, FundCashForecastParameters2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters1.mmObject();
 			isDerived = false;
@@ -164,7 +175,17 @@ public class FundCashForecastParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters2.mmObject();
+			type_lazy = () -> FundCashForecastParameters2.mmObject();
+		}
+
+		@Override
+		public FundCashForecastParameters2 getValue(FundCashForecastParameters1 obj) {
+			return obj.getParameters();
+		}
+
+		@Override
+		public void setValue(FundCashForecastParameters1 obj, FundCashForecastParameters2 value) {
+			obj.setParameters(value);
 		}
 	};
 	@XmlElement(name = "NoCrit", required = true)
@@ -199,7 +220,7 @@ public class FundCashForecastParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoCriteria = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundCashForecastParameters1, NoCriteria1Code> mmNoCriteria = new MMMessageAttribute<FundCashForecastParameters1, NoCriteria1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters1.mmObject();
 			isDerived = false;
@@ -210,6 +231,16 @@ public class FundCashForecastParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoCriteria1Code.mmObject();
+		}
+
+		@Override
+		public NoCriteria1Code getValue(FundCashForecastParameters1 obj) {
+			return obj.getNoCriteria();
+		}
+
+		@Override
+		public void setValue(FundCashForecastParameters1 obj, NoCriteria1Code value) {
+			obj.setNoCriteria(value);
 		}
 	};
 	/**
@@ -288,7 +319,7 @@ public class FundCashForecastParameters1 {
 		return parameters;
 	}
 
-	public FundCashForecastParameters1 setParameters(com.tools20022.repository.msg.FundCashForecastParameters2 parameters) {
+	public FundCashForecastParameters1 setParameters(FundCashForecastParameters2 parameters) {
 		this.parameters = Objects.requireNonNull(parameters);
 		return this;
 	}

@@ -118,7 +118,7 @@ public class ReservationCriteria1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationCriteria1Choice, Max35Text> mmQueryName = new MMMessageAttribute<ReservationCriteria1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReservationCriteria1Choice.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class ReservationCriteria1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReservationCriteria1Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(ReservationCriteria1Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -169,7 +179,7 @@ public class ReservationCriteria1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationCriteria1Choice, ReservationCriteria2> mmNewCriteria = new MMMessageAssociationEnd<ReservationCriteria1Choice, ReservationCriteria2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReservationCriteria1Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class ReservationCriteria1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReservationCriteria2.mmObject();
+		}
+
+		@Override
+		public ReservationCriteria2 getValue(ReservationCriteria1Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(ReservationCriteria1Choice obj, ReservationCriteria2 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

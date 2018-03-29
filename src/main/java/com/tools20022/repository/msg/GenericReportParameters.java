@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.AccountIdentificationFormatChoice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument17;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -109,7 +110,7 @@ public class GenericReportParameters {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericReportParameters, List<AccountIdentificationFormatChoice>> mmAccountIdentification = new MMMessageAttribute<GenericReportParameters, List<AccountIdentificationFormatChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
@@ -120,9 +121,19 @@ public class GenericReportParameters {
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 		}
+
+		@Override
+		public List<AccountIdentificationFormatChoice> getValue(GenericReportParameters obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(GenericReportParameters obj, List<AccountIdentificationFormatChoice> value) {
+			obj.setAccountIdentification(value);
+		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
-	protected List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails;
+	protected List<FinancialInstrument17> financialInstrumentDetails;
 	/**
 	 * 
 	 <p>
@@ -150,7 +161,7 @@ public class GenericReportParameters {
 	 * "Financial instrument for which the user-defined report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GenericReportParameters, List<FinancialInstrument17>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<GenericReportParameters, List<FinancialInstrument17>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
@@ -160,7 +171,17 @@ public class GenericReportParameters {
 			definition = "Financial instrument for which the user-defined report is requested.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
+			type_lazy = () -> FinancialInstrument17.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrument17> getValue(GenericReportParameters obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(GenericReportParameters obj, List<FinancialInstrument17> value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "RptDesc", required = true)
@@ -192,7 +213,7 @@ public class GenericReportParameters {
 	 * definition} = "Type of report requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericReportParameters, Max70Text> mmReportDescription = new MMMessageAttribute<GenericReportParameters, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
@@ -203,6 +224,16 @@ public class GenericReportParameters {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(GenericReportParameters obj) {
+			return obj.getReportDescription();
+		}
+
+		@Override
+		public void setValue(GenericReportParameters obj, Max70Text value) {
+			obj.setReportDescription(value);
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -234,7 +265,7 @@ public class GenericReportParameters {
 	 * definition} = "Date for which the report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericReportParameters, Optional<ISODate>> mmDate = new MMMessageAttribute<GenericReportParameters, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
@@ -245,6 +276,16 @@ public class GenericReportParameters {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(GenericReportParameters obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(GenericReportParameters obj, Optional<ISODate> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsrDfndParam")
@@ -277,7 +318,7 @@ public class GenericReportParameters {
 	 * "Parameters that cannot be specifed in the structured fields provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserDefinedParameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericReportParameters, List<Max70Text>> mmUserDefinedParameter = new MMMessageAttribute<GenericReportParameters, List<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericReportParameters.mmObject();
 			isDerived = false;
@@ -288,6 +329,16 @@ public class GenericReportParameters {
 			maxOccurs = 10;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public List<Max70Text> getValue(GenericReportParameters obj) {
+			return obj.getUserDefinedParameter();
+		}
+
+		@Override
+		public void setValue(GenericReportParameters obj, List<Max70Text> value) {
+			obj.setUserDefinedParameter(value);
 		}
 	};
 
@@ -318,7 +369,7 @@ public class GenericReportParameters {
 		return financialInstrumentDetails == null ? financialInstrumentDetails = new ArrayList<>() : financialInstrumentDetails;
 	}
 
-	public GenericReportParameters setFinancialInstrumentDetails(List<com.tools20022.repository.msg.FinancialInstrument17> financialInstrumentDetails) {
+	public GenericReportParameters setFinancialInstrumentDetails(List<FinancialInstrument17> financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeSearch2Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraBalanceStatusType2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class IntraBalanceQueryStatus2 {
 	 * IntraBalanceQueryStatus1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceQueryStatus2, IntraBalanceStatusType2> mmType = new MMMessageAssociationEnd<IntraBalanceQueryStatus2, IntraBalanceStatusType2>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryStatus2.mmObject();
@@ -129,7 +130,17 @@ public class IntraBalanceQueryStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusType2.mmObject();
+			type_lazy = () -> IntraBalanceStatusType2.mmObject();
+		}
+
+		@Override
+		public IntraBalanceStatusType2 getValue(IntraBalanceQueryStatus2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryStatus2 obj, IntraBalanceStatusType2 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -166,7 +177,7 @@ public class IntraBalanceQueryStatus2 {
 	 * IntraBalanceQueryStatus1.mmDatePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDatePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceQueryStatus2, Optional<DateAndDateTimeSearch2Choice>> mmDatePeriod = new MMMessageAssociationEnd<IntraBalanceQueryStatus2, Optional<DateAndDateTimeSearch2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryStatus2.mmObject();
 			isDerived = false;
@@ -179,6 +190,16 @@ public class IntraBalanceQueryStatus2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeSearch2Choice> getValue(IntraBalanceQueryStatus2 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(IntraBalanceQueryStatus2 obj, Optional<DateAndDateTimeSearch2Choice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 
@@ -201,7 +222,7 @@ public class IntraBalanceQueryStatus2 {
 		return type;
 	}
 
-	public IntraBalanceQueryStatus2 setType(com.tools20022.repository.msg.IntraBalanceStatusType2 type) {
+	public IntraBalanceQueryStatus2 setType(IntraBalanceStatusType2 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}

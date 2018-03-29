@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.BankServicesBillingStatementV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BillingStatement1;
+import com.tools20022.repository.msg.ContactDetails3;
+import com.tools20022.repository.msg.PartyIdentification58;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -138,7 +141,7 @@ public class StatementGroup1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementGroup1, Max35Text> mmGroupIdentification = new MMMessageAttribute<StatementGroup1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementGroup1.mmObject();
 			isDerived = false;
@@ -150,6 +153,16 @@ public class StatementGroup1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(StatementGroup1 obj) {
+			return obj.getGroupIdentification();
+		}
+
+		@Override
+		public void setValue(StatementGroup1 obj, Max35Text value) {
+			obj.setGroupIdentification(value);
 		}
 	};
 	@XmlElement(name = "Sndr", required = true)
@@ -187,7 +200,7 @@ public class StatementGroup1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSender = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatementGroup1, PartyIdentification58> mmSender = new MMMessageAssociationEnd<StatementGroup1, PartyIdentification58>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementGroup1.mmObject();
 			isDerived = false;
@@ -199,11 +212,21 @@ public class StatementGroup1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification58.mmObject();
+			type_lazy = () -> PartyIdentification58.mmObject();
+		}
+
+		@Override
+		public PartyIdentification58 getValue(StatementGroup1 obj) {
+			return obj.getSender();
+		}
+
+		@Override
+		public void setValue(StatementGroup1 obj, PartyIdentification58 value) {
+			obj.setSender(value);
 		}
 	};
 	@XmlElement(name = "SndrIndvCtct")
-	protected List<com.tools20022.repository.msg.ContactDetails3> senderIndividualContact;
+	protected List<ContactDetails3> senderIndividualContact;
 	/**
 	 * 
 	 <p>
@@ -241,7 +264,7 @@ public class StatementGroup1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSenderIndividualContact = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementGroup1, List<ContactDetails3>> mmSenderIndividualContact = new MMMessageAttribute<StatementGroup1, List<ContactDetails3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementGroup1.mmObject();
 			isDerived = false;
@@ -252,7 +275,17 @@ public class StatementGroup1 {
 			nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmSenderIndividualContact);
 			maxOccurs = 2;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ContactDetails3.mmObject();
+			complexType_lazy = () -> ContactDetails3.mmObject();
+		}
+
+		@Override
+		public List<ContactDetails3> getValue(StatementGroup1 obj) {
+			return obj.getSenderIndividualContact();
+		}
+
+		@Override
+		public void setValue(StatementGroup1 obj, List<ContactDetails3> value) {
+			obj.setSenderIndividualContact(value);
 		}
 	};
 	@XmlElement(name = "Rcvr", required = true)
@@ -290,7 +323,7 @@ public class StatementGroup1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceiver = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatementGroup1, PartyIdentification58> mmReceiver = new MMMessageAssociationEnd<StatementGroup1, PartyIdentification58>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementGroup1.mmObject();
 			isDerived = false;
@@ -302,11 +335,21 @@ public class StatementGroup1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification58.mmObject();
+			type_lazy = () -> PartyIdentification58.mmObject();
+		}
+
+		@Override
+		public PartyIdentification58 getValue(StatementGroup1 obj) {
+			return obj.getReceiver();
+		}
+
+		@Override
+		public void setValue(StatementGroup1 obj, PartyIdentification58 value) {
+			obj.setReceiver(value);
 		}
 	};
 	@XmlElement(name = "RcvrIndvCtct")
-	protected List<com.tools20022.repository.msg.ContactDetails3> receiverIndividualContact;
+	protected List<ContactDetails3> receiverIndividualContact;
 	/**
 	 * 
 	 <p>
@@ -344,7 +387,7 @@ public class StatementGroup1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceiverIndividualContact = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementGroup1, List<ContactDetails3>> mmReceiverIndividualContact = new MMMessageAttribute<StatementGroup1, List<ContactDetails3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementGroup1.mmObject();
 			isDerived = false;
@@ -355,11 +398,21 @@ public class StatementGroup1 {
 			nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmReceiverIndividualContact);
 			maxOccurs = 2;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ContactDetails3.mmObject();
+			complexType_lazy = () -> ContactDetails3.mmObject();
+		}
+
+		@Override
+		public List<ContactDetails3> getValue(StatementGroup1 obj) {
+			return obj.getReceiverIndividualContact();
+		}
+
+		@Override
+		public void setValue(StatementGroup1 obj, List<ContactDetails3> value) {
+			obj.setReceiverIndividualContact(value);
 		}
 	};
 	@XmlElement(name = "BllgStmt", required = true)
-	protected List<com.tools20022.repository.msg.BillingStatement1> billingStatement;
+	protected List<BillingStatement1> billingStatement;
 	/**
 	 * 
 	 <p>
@@ -396,7 +449,7 @@ public class StatementGroup1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBillingStatement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatementGroup1, List<BillingStatement1>> mmBillingStatement = new MMMessageAssociationEnd<StatementGroup1, List<BillingStatement1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatementGroup1.mmObject();
 			isDerived = false;
@@ -407,7 +460,17 @@ public class StatementGroup1 {
 			nextVersions_lazy = () -> Arrays.asList(StatementGroup2.mmBillingStatement);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BillingStatement1.mmObject();
+			type_lazy = () -> BillingStatement1.mmObject();
+		}
+
+		@Override
+		public List<BillingStatement1> getValue(StatementGroup1 obj) {
+			return obj.getBillingStatement();
+		}
+
+		@Override
+		public void setValue(StatementGroup1 obj, List<BillingStatement1> value) {
+			obj.setBillingStatement(value);
 		}
 	};
 
@@ -441,7 +504,7 @@ public class StatementGroup1 {
 		return sender;
 	}
 
-	public StatementGroup1 setSender(com.tools20022.repository.msg.PartyIdentification58 sender) {
+	public StatementGroup1 setSender(PartyIdentification58 sender) {
 		this.sender = Objects.requireNonNull(sender);
 		return this;
 	}
@@ -450,7 +513,7 @@ public class StatementGroup1 {
 		return senderIndividualContact == null ? senderIndividualContact = new ArrayList<>() : senderIndividualContact;
 	}
 
-	public StatementGroup1 setSenderIndividualContact(List<com.tools20022.repository.msg.ContactDetails3> senderIndividualContact) {
+	public StatementGroup1 setSenderIndividualContact(List<ContactDetails3> senderIndividualContact) {
 		this.senderIndividualContact = Objects.requireNonNull(senderIndividualContact);
 		return this;
 	}
@@ -459,7 +522,7 @@ public class StatementGroup1 {
 		return receiver;
 	}
 
-	public StatementGroup1 setReceiver(com.tools20022.repository.msg.PartyIdentification58 receiver) {
+	public StatementGroup1 setReceiver(PartyIdentification58 receiver) {
 		this.receiver = Objects.requireNonNull(receiver);
 		return this;
 	}
@@ -468,7 +531,7 @@ public class StatementGroup1 {
 		return receiverIndividualContact == null ? receiverIndividualContact = new ArrayList<>() : receiverIndividualContact;
 	}
 
-	public StatementGroup1 setReceiverIndividualContact(List<com.tools20022.repository.msg.ContactDetails3> receiverIndividualContact) {
+	public StatementGroup1 setReceiverIndividualContact(List<ContactDetails3> receiverIndividualContact) {
 		this.receiverIndividualContact = Objects.requireNonNull(receiverIndividualContact);
 		return this;
 	}
@@ -477,7 +540,7 @@ public class StatementGroup1 {
 		return billingStatement == null ? billingStatement = new ArrayList<>() : billingStatement;
 	}
 
-	public StatementGroup1 setBillingStatement(List<com.tools20022.repository.msg.BillingStatement1> billingStatement) {
+	public StatementGroup1 setBillingStatement(List<BillingStatement1> billingStatement) {
 		this.billingStatement = Objects.requireNonNull(billingStatement);
 		return this;
 	}

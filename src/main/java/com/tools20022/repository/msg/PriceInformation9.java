@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.SourceOfPrice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarketIdentification77;
+import com.tools20022.repository.msg.Price4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +131,7 @@ public class PriceInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation9, Price4> mmValue = new MMMessageAttribute<PriceInformation9, Price4>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation9.mmObject();
@@ -141,7 +143,17 @@ public class PriceInformation9 {
 			nextVersions_lazy = () -> Arrays.asList(PriceInformation11.mmValue);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Price4 getValue(PriceInformation9 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(PriceInformation9 obj, Price4 value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "QtnDt")
@@ -192,7 +204,7 @@ public class PriceInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation9, Optional<DateAndDateTime1Choice>> mmQuotationDate = new MMMessageAttribute<PriceInformation9, Optional<DateAndDateTime1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmQuotationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation9.mmObject();
@@ -206,6 +218,16 @@ public class PriceInformation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime1Choice> getValue(PriceInformation9 obj) {
+			return obj.getQuotationDate();
+		}
+
+		@Override
+		public void setValue(PriceInformation9 obj, Optional<DateAndDateTime1Choice> value) {
+			obj.setQuotationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricClctnPrd")
@@ -253,7 +275,7 @@ public class PriceInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceCalculationPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation9, Optional<DateTimePeriodChoice>> mmPriceCalculationPeriod = new MMMessageAttribute<PriceInformation9, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation9.mmObject();
@@ -266,6 +288,16 @@ public class PriceInformation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(PriceInformation9 obj) {
+			return obj.getPriceCalculationPeriod();
+		}
+
+		@Override
+		public void setValue(PriceInformation9 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setPriceCalculationPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SrcOfPric")
@@ -314,7 +346,7 @@ public class PriceInformation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceOfPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation9, Optional<MarketIdentification77>> mmSourceOfPrice = new MMMessageAttribute<PriceInformation9, Optional<MarketIdentification77>>() {
 		{
 			businessElementTrace_lazy = () -> SourceOfPrice.mmMarketIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation9.mmObject();
@@ -327,7 +359,17 @@ public class PriceInformation9 {
 			nextVersions_lazy = () -> Arrays.asList(PriceInformation11.mmSourceOfPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification77.mmObject();
+			complexType_lazy = () -> MarketIdentification77.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification77> getValue(PriceInformation9 obj) {
+			return obj.getSourceOfPrice();
+		}
+
+		@Override
+		public void setValue(PriceInformation9 obj, Optional<MarketIdentification77> value) {
+			obj.setSourceOfPrice(value.orElse(null));
 		}
 	};
 
@@ -351,7 +393,7 @@ public class PriceInformation9 {
 		return value;
 	}
 
-	public PriceInformation9 setValue(com.tools20022.repository.msg.Price4 value) {
+	public PriceInformation9 setValue(Price4 value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}
@@ -378,7 +420,7 @@ public class PriceInformation9 {
 		return sourceOfPrice == null ? Optional.empty() : Optional.of(sourceOfPrice);
 	}
 
-	public PriceInformation9 setSourceOfPrice(com.tools20022.repository.msg.MarketIdentification77 sourceOfPrice) {
+	public PriceInformation9 setSourceOfPrice(MarketIdentification77 sourceOfPrice) {
 		this.sourceOfPrice = sourceOfPrice;
 		return this;
 	}

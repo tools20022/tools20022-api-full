@@ -25,6 +25,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionRateSD2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class CorporateActionRateSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionRateSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -123,6 +124,16 @@ public class CorporateActionRateSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionRateSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DfrrdIntrstRate")
@@ -160,7 +171,7 @@ public class CorporateActionRateSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeferredInterestRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD1, Optional<PercentageRate>> mmDeferredInterestRate = new MMMessageAttribute<CorporateActionRateSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -172,6 +183,16 @@ public class CorporateActionRateSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CorporateActionRateSD1 obj) {
+			return obj.getDeferredInterestRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD1 obj, Optional<PercentageRate> value) {
+			obj.setDeferredInterestRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstShrtfllRate")
@@ -209,7 +230,7 @@ public class CorporateActionRateSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestShortfallRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD1, Optional<PercentageRate>> mmInterestShortfallRate = new MMMessageAttribute<CorporateActionRateSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -221,6 +242,16 @@ public class CorporateActionRateSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CorporateActionRateSD1 obj) {
+			return obj.getInterestShortfallRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD1 obj, Optional<PercentageRate> value) {
+			obj.setInterestShortfallRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RealsdLossRate")
@@ -258,7 +289,7 @@ public class CorporateActionRateSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRealisedLossRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD1, Optional<PercentageRate>> mmRealisedLossRate = new MMMessageAttribute<CorporateActionRateSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -270,6 +301,16 @@ public class CorporateActionRateSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CorporateActionRateSD1 obj) {
+			return obj.getRealisedLossRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD1 obj, Optional<PercentageRate> value) {
+			obj.setRealisedLossRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmrcnOrGblDpstRctRatio")
@@ -301,7 +342,7 @@ public class CorporateActionRateSD1 {
 	 * "American or Global Depository Receipt(s) per ordinary share(s) ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmericanOrGlobalDepositReceiptRatio = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionRateSD1, Optional<CorporateActionRateSD2>> mmAmericanOrGlobalDepositReceiptRatio = new MMMessageAssociationEnd<CorporateActionRateSD1, Optional<CorporateActionRateSD2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD1.mmObject();
 			isDerived = false;
@@ -312,7 +353,17 @@ public class CorporateActionRateSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD2.mmObject();
+			type_lazy = () -> CorporateActionRateSD2.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionRateSD2> getValue(CorporateActionRateSD1 obj) {
+			return obj.getAmericanOrGlobalDepositReceiptRatio();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD1 obj, Optional<CorporateActionRateSD2> value) {
+			obj.setAmericanOrGlobalDepositReceiptRatio(value.orElse(null));
 		}
 	};
 
@@ -371,7 +422,7 @@ public class CorporateActionRateSD1 {
 		return americanOrGlobalDepositReceiptRatio == null ? Optional.empty() : Optional.of(americanOrGlobalDepositReceiptRatio);
 	}
 
-	public CorporateActionRateSD1 setAmericanOrGlobalDepositReceiptRatio(com.tools20022.repository.msg.CorporateActionRateSD2 americanOrGlobalDepositReceiptRatio) {
+	public CorporateActionRateSD1 setAmericanOrGlobalDepositReceiptRatio(CorporateActionRateSD2 americanOrGlobalDepositReceiptRatio) {
 		this.americanOrGlobalDepositReceiptRatio = americanOrGlobalDepositReceiptRatio;
 		return this;
 	}

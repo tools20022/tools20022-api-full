@@ -111,7 +111,7 @@ public class SecurityIdentification8 {
 	 * definition} = "Security identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification8, SecurityIdentification10Choice> mmSecurityIdentification = new MMMessageAssociationEnd<SecurityIdentification8, SecurityIdentification10Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification8.mmObject();
@@ -124,6 +124,16 @@ public class SecurityIdentification8 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification10Choice getValue(SecurityIdentification8 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification8 obj, SecurityIdentification10Choice value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -160,7 +170,7 @@ public class SecurityIdentification8 {
 	 * definition} = "Textual description of a security instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification8, Max140Text> mmDescription = new MMMessageAttribute<SecurityIdentification8, Max140Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification8.mmObject();
@@ -172,6 +182,16 @@ public class SecurityIdentification8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(SecurityIdentification8 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification8 obj, Max140Text value) {
+			obj.setDescription(value);
 		}
 	};
 

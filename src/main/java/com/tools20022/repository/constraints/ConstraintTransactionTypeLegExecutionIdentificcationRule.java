@@ -52,11 +52,15 @@ public class ConstraintTransactionTypeLegExecutionIdentificcationRule {
 	 */
 	public static final MMConstraint<InvestmentFundTransaction2> forInvestmentFundTransaction2 = new MMConstraint<InvestmentFundTransaction2>() {
 		{
-			validator = ConstraintTransactionTypeLegExecutionIdentificcationRule::checkInvestmentFundTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTypeLegExecutionIdentificcationRule";
 			definition = "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional. If TransactionType is not SWII and not SWIO, then LegExecutionIdentification is not allowed.";
 			owner_lazy = () -> InvestmentFundTransaction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentFundTransaction2 obj) throws Exception {
+			checkInvestmentFundTransaction2(obj);
 		}
 	};
 

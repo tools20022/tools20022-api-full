@@ -96,7 +96,7 @@ public class Reference17 {
 	 * definition} = "Identification of the collateral substitution request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference17, Max35Text> mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute<Reference17, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference17.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class Reference17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference17 obj) {
+			return obj.getCollateralSubstitutionRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Reference17 obj, Max35Text value) {
+			obj.setCollateralSubstitutionRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "CollSbstitnRspnId")
@@ -137,7 +147,7 @@ public class Reference17 {
 	 * definition} = "Identification of the collateral substitution response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralSubstitutionResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference17, Optional<Max35Text>> mmCollateralSubstitutionResponseIdentification = new MMMessageAttribute<Reference17, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference17.mmObject();
 			isDerived = false;
@@ -148,6 +158,16 @@ public class Reference17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference17 obj) {
+			return obj.getCollateralSubstitutionResponseIdentification();
+		}
+
+		@Override
+		public void setValue(Reference17 obj, Optional<Max35Text> value) {
+			obj.setCollateralSubstitutionResponseIdentification(value.orElse(null));
 		}
 	};
 

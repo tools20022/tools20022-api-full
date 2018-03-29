@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -226,7 +225,7 @@ public class FIToFIPaymentCancellationRequestV04 {
 	 * FIToFIPaymentCancellationRequestV03.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, CaseAssignment3> mmAssignment = new MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, CaseAssignment3>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,12 +238,14 @@ public class FIToFIPaymentCancellationRequestV04 {
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentCancellationRequestV04.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment3 getValue(FIToFIPaymentCancellationRequestV04 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentCancellationRequestV04 obj, CaseAssignment3 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case")
@@ -283,7 +284,7 @@ public class FIToFIPaymentCancellationRequestV04 {
 	 * FIToFIPaymentCancellationRequestV03.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, Optional<Case3>> mmCase = new MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, Optional<Case3>>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,12 +297,14 @@ public class FIToFIPaymentCancellationRequestV04 {
 			complexType_lazy = () -> Case3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentCancellationRequestV04.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Case3> getValue(FIToFIPaymentCancellationRequestV04 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentCancellationRequestV04 obj, Optional<Case3> value) {
+			obj.setCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrlData")
@@ -343,7 +346,7 @@ public class FIToFIPaymentCancellationRequestV04 {
 	 * FIToFIPaymentCancellationRequestV03.mmControlData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmControlData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, Optional<ControlData1>> mmControlData = new MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, Optional<ControlData1>>() {
 		{
 			xmlTag = "CtrlData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -356,12 +359,14 @@ public class FIToFIPaymentCancellationRequestV04 {
 			complexType_lazy = () -> ControlData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentCancellationRequestV04.class.getMethod("getControlData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ControlData1> getValue(FIToFIPaymentCancellationRequestV04 obj) {
+			return obj.getControlData();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentCancellationRequestV04 obj, Optional<ControlData1> value) {
+			obj.setControlData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -402,7 +407,7 @@ public class FIToFIPaymentCancellationRequestV04 {
 	 * FIToFIPaymentCancellationRequestV03.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, List<UnderlyingTransaction10>> mmUnderlying = new MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, List<UnderlyingTransaction10>>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -414,12 +419,14 @@ public class FIToFIPaymentCancellationRequestV04 {
 			complexType_lazy = () -> UnderlyingTransaction10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentCancellationRequestV04.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<UnderlyingTransaction10> getValue(FIToFIPaymentCancellationRequestV04 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentCancellationRequestV04 obj, List<UnderlyingTransaction10> value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -462,7 +469,7 @@ public class FIToFIPaymentCancellationRequestV04 {
 	 * FIToFIPaymentCancellationRequestV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FIToFIPaymentCancellationRequestV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -474,12 +481,14 @@ public class FIToFIPaymentCancellationRequestV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentCancellationRequestV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FIToFIPaymentCancellationRequestV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentCancellationRequestV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

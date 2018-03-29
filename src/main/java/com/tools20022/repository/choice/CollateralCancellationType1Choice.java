@@ -111,7 +111,7 @@ public class CollateralCancellationType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralCancellationType1Choice, CollateralManagementCancellationReason1Code> mmCode = new MMMessageAttribute<CollateralCancellationType1Choice, CollateralManagementCancellationReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmCollateralManagementCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralCancellationType1Choice.mmObject();
@@ -123,6 +123,16 @@ public class CollateralCancellationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralManagementCancellationReason1Code.mmObject();
+		}
+
+		@Override
+		public CollateralManagementCancellationReason1Code getValue(CollateralCancellationType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CollateralCancellationType1Choice obj, CollateralManagementCancellationReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class CollateralCancellationType1Choice {
 	 * "Provides the cancellation reason using a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralCancellationType1Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<CollateralCancellationType1Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmCollateralManagementCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralCancellationType1Choice.mmObject();
@@ -173,6 +183,16 @@ public class CollateralCancellationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CollateralCancellationType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CollateralCancellationType1Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

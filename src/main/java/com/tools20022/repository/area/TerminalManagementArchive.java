@@ -74,8 +74,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV04
  * StatusReportV04}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV01
+ * MaintenanceDelegationResponseV01}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01
  * MaintenanceDelegationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02
+ * MaintenanceDelegationRequestV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05
+ * AcceptorConfigurationUpdateV05}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV05
+ * StatusReportV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV05
+ * ManagementPlanReplacementV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,7 +123,8 @@ public class TerminalManagementArchive {
 				messageDefinition_lazy = () -> Arrays.asList(ManagementPlanReplacementV01.mmObject(), ManagementPlanReplacementV02.mmObject(), StatusReportV01.mmObject(), StatusReportV02.mmObject(),
 						AcceptorConfigurationUpdateV01.mmObject(), AcceptorConfigurationUpdateV02.mmObject(), TerminalManagementRejectionV01.mmObject(), TerminalManagementRejectionV02.mmObject(), AcceptorConfigurationUpdateV03.mmObject(),
 						ManagementPlanReplacementV03.mmObject(), StatusReportV03.mmObject(), AcceptorConfigurationUpdateV04.mmObject(), ManagementPlanReplacementV04.mmObject(), StatusReportV04.mmObject(),
-						MaintenanceDelegationRequestV01.mmObject());
+						MaintenanceDelegationResponseV01.mmObject(), MaintenanceDelegationRequestV01.mmObject(), MaintenanceDelegationRequestV02.mmObject(), AcceptorConfigurationUpdateV05.mmObject(), StatusReportV05.mmObject(),
+						ManagementPlanReplacementV05.mmObject());
 				code = "catm";
 			}
 		});

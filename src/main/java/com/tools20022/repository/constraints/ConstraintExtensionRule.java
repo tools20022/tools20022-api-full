@@ -51,11 +51,15 @@ public class ConstraintExtensionRule {
 	 */
 	public static final MMConstraint<Extension1> forExtension1 = new MMConstraint<Extension1>() {
 		{
-			validator = ConstraintExtensionRule::checkExtension1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtensionRule";
 			definition = "This component may not be used without the explicit approval of the Registration Authority and without strict usage rules published by the Registration Authority.";
 			owner_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Extension1 obj) throws Exception {
+			checkExtension1(obj);
 		}
 	};
 

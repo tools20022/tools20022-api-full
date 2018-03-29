@@ -139,7 +139,7 @@ public class IssuerInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IssuerInformation1, PartyIdentification9Choice> mmIdentification = new MMMessageAssociationEnd<IssuerInformation1, PartyIdentification9Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerInformation1.mmObject();
@@ -153,6 +153,16 @@ public class IssuerInformation1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification9Choice getValue(IssuerInformation1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(IssuerInformation1 obj, PartyIdentification9Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "URLAdr")
@@ -199,7 +209,7 @@ public class IssuerInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IssuerInformation1, Optional<Max256Text>> mmURLAddress = new MMMessageAttribute<IssuerInformation1, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerInformation1.mmObject();
@@ -212,6 +222,16 @@ public class IssuerInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(IssuerInformation1 obj) {
+			return obj.getURLAddress();
+		}
+
+		@Override
+		public void setValue(IssuerInformation1 obj, Optional<Max256Text> value) {
+			obj.setURLAddress(value.orElse(null));
 		}
 	};
 

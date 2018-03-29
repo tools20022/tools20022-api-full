@@ -117,7 +117,7 @@ public class GenericDocumentIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GenericDocumentIdentification2, Optional<DocumentNumber2Choice>> mmMessageNumber = new MMMessageAssociationEnd<GenericDocumentIdentification2, Optional<DocumentNumber2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification2.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class GenericDocumentIdentification2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber2Choice> getValue(GenericDocumentIdentification2 obj) {
+			return obj.getMessageNumber();
+		}
+
+		@Override
+		public void setValue(GenericDocumentIdentification2 obj, Optional<DocumentNumber2Choice> value) {
+			obj.setMessageNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -165,7 +175,7 @@ public class GenericDocumentIdentification2 {
 	 * definition} = "Identification of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericDocumentIdentification2, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<GenericDocumentIdentification2, RestrictedFINXMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericDocumentIdentification2.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class GenericDocumentIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(GenericDocumentIdentification2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericDocumentIdentification2 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

@@ -122,7 +122,7 @@ public class TEFRARules2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TEFRARules2Choice, TEFRARules1Code> mmCode = new MMMessageAttribute<TEFRARules2Choice, TEFRARules1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTEFRARule;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TEFRARules2Choice.mmObject();
@@ -135,6 +135,16 @@ public class TEFRARules2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TEFRARules1Code.mmObject();
+		}
+
+		@Override
+		public TEFRARules1Code getValue(TEFRARules2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TEFRARules2Choice obj, TEFRARules1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class TEFRARules2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TEFRARules2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<TEFRARules2Choice, GenericIdentification40>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTEFRARule;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TEFRARules2Choice.mmObject();
@@ -193,6 +203,16 @@ public class TEFRARules2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(TEFRARules2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TEFRARules2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

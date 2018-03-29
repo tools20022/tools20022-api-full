@@ -106,7 +106,7 @@ public class MeetingTypeClassification1Choice {
 	 * definition} = "Classifies the type of meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingTypeClassification1Choice, MeetingTypeClassification1Code> mmCode = new MMMessageAttribute<MeetingTypeClassification1Choice, MeetingTypeClassification1Code>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmMeetingEventClassification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MeetingTypeClassification1Choice.mmObject();
@@ -118,6 +118,16 @@ public class MeetingTypeClassification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingTypeClassification1Code.mmObject();
+		}
+
+		@Override
+		public MeetingTypeClassification1Code getValue(MeetingTypeClassification1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MeetingTypeClassification1Choice obj, MeetingTypeClassification1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class MeetingTypeClassification1Choice {
 	 * "Specifies the reason for cancelling a meeting in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingTypeClassification1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<MeetingTypeClassification1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmMeetingEventClassification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MeetingTypeClassification1Choice.mmObject();
@@ -168,6 +178,16 @@ public class MeetingTypeClassification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(MeetingTypeClassification1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MeetingTypeClassification1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

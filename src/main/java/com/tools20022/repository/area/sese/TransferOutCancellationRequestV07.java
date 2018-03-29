@@ -27,8 +27,7 @@ import com.tools20022.repository.msg.CopyInformation4;
 import com.tools20022.repository.msg.MarketPracticeVersion1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.References20;
-import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -78,8 +77,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion
+ * InvestmentFundsISOPreviousversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -162,7 +161,7 @@ public class TransferOutCancellationRequestV07 {
 	 * TransferOutCancellationRequestV06.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutCancellationRequestV07, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<TransferOutCancellationRequestV07, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +174,14 @@ public class TransferOutCancellationRequestV07 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutCancellationRequestV07.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(TransferOutCancellationRequestV07 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(TransferOutCancellationRequestV07 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "Refs")
@@ -214,7 +215,7 @@ public class TransferOutCancellationRequestV07 {
 	 * TransferOutCancellationRequestV06.mmReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutCancellationRequestV07, List<References20>> mmReferences = new MMMessageBuildingBlock<TransferOutCancellationRequestV07, List<References20>>() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +226,14 @@ public class TransferOutCancellationRequestV07 {
 			complexType_lazy = () -> References20.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutCancellationRequestV07.class.getMethod("getReferences", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<References20> getValue(TransferOutCancellationRequestV07 obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(TransferOutCancellationRequestV07 obj, List<References20> value) {
+			obj.setReferences(value);
 		}
 	};
 	@XmlElement(name = "Cxl", required = true)
@@ -264,7 +267,7 @@ public class TransferOutCancellationRequestV07 {
 	 * TransferOutCancellationRequestV06.mmCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutCancellationRequestV07, List<Cancellation12Choice>> mmCancellation = new MMMessageBuildingBlock<TransferOutCancellationRequestV07, List<Cancellation12Choice>>() {
 		{
 			xmlTag = "Cxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,12 +278,14 @@ public class TransferOutCancellationRequestV07 {
 			complexType_lazy = () -> Cancellation12Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutCancellationRequestV07.class.getMethod("getCancellation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Cancellation12Choice> getValue(TransferOutCancellationRequestV07 obj) {
+			return obj.getCancellation();
+		}
+
+		@Override
+		public void setValue(TransferOutCancellationRequestV07 obj, List<Cancellation12Choice> value) {
+			obj.setCancellation(value);
 		}
 	};
 	@XmlElement(name = "MktPrctcVrsn")
@@ -322,7 +327,7 @@ public class TransferOutCancellationRequestV07 {
 	 * TransferOutCancellationRequestV06.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutCancellationRequestV07, Optional<MarketPracticeVersion1>> mmMarketPracticeVersion = new MMMessageBuildingBlock<TransferOutCancellationRequestV07, Optional<MarketPracticeVersion1>>() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,12 +340,14 @@ public class TransferOutCancellationRequestV07 {
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutCancellationRequestV07.class.getMethod("getMarketPracticeVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarketPracticeVersion1> getValue(TransferOutCancellationRequestV07 obj) {
+			return obj.getMarketPracticeVersion();
+		}
+
+		@Override
+		public void setValue(TransferOutCancellationRequestV07 obj, Optional<MarketPracticeVersion1> value) {
+			obj.setMarketPracticeVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -382,7 +389,7 @@ public class TransferOutCancellationRequestV07 {
 	 * TransferOutCancellationRequestV06.mmCopyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferOutCancellationRequestV07, Optional<CopyInformation4>> mmCopyDetails = new MMMessageBuildingBlock<TransferOutCancellationRequestV07, Optional<CopyInformation4>>() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -395,12 +402,14 @@ public class TransferOutCancellationRequestV07 {
 			complexType_lazy = () -> CopyInformation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferOutCancellationRequestV07.class.getMethod("getCopyDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyInformation4> getValue(TransferOutCancellationRequestV07 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(TransferOutCancellationRequestV07 obj, Optional<CopyInformation4> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 
@@ -412,7 +421,7 @@ public class TransferOutCancellationRequestV07 {
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the TransferOutCancellationRequest message to the executing party, for example, a transfer agent, to request the cancellation of a previously sent TransferOutInstruction.\r\nUsage\r\nThe TransferOutCancellationRequest message is used to request cancellation of a previously sent TransferOutInstruction. There are two ways to specify the transfer cancellation request. Either:\r\n- the transfer reference of the original transfer is quoted, or,\r\n- all the details of the original transfer (this includes TransferReference) are quoted but this is not recommended.\r\nThe message identification of the TransferOutInstruction message in which the original transfer was conveyed may also be quoted in PreviousReference. It is also possible to request the cancellation of a TransferOutInstruction message by quoting its message identification in PreviousReference.";
 				nextVersions_lazy = () -> Arrays.asList(TransferOutCancellationRequestV08.mmObject());
 				previousVersion_lazy = () -> TransferOutCancellationRequestV06.mmObject();
-				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "TrfOutCxlReq";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();

@@ -24,6 +24,8 @@ import com.tools20022.repository.choice.DateOrDateTimePeriodChoice;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.ValuationStatistics;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValue5;
+import com.tools20022.repository.msg.PriceValueChange1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +119,7 @@ public class StatisticsByUserDefinedTimePeriod2 {
 	 * definition} = "Reference period for the valuation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, DateOrDateTimePeriodChoice> mmPeriod = new MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, DateOrDateTimePeriodChoice>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod2.mmObject();
@@ -129,6 +131,16 @@ public class StatisticsByUserDefinedTimePeriod2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateOrDateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public DateOrDateTimePeriodChoice getValue(StatisticsByUserDefinedTimePeriod2 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(StatisticsByUserDefinedTimePeriod2 obj, DateOrDateTimePeriodChoice value) {
+			obj.setPeriod(value);
 		}
 	};
 	@XmlElement(name = "HghstPricVal")
@@ -165,7 +177,7 @@ public class StatisticsByUserDefinedTimePeriod2 {
 	 * definition} = "Highest price for the referenced period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHighestPriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, Optional<PriceValue5>> mmHighestPriceValue = new MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, Optional<PriceValue5>>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmHighestPriceValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod2.mmObject();
@@ -176,7 +188,17 @@ public class StatisticsByUserDefinedTimePeriod2 {
 			definition = "Highest price for the referenced period.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue5.mmObject();
+			complexType_lazy = () -> PriceValue5.mmObject();
+		}
+
+		@Override
+		public Optional<PriceValue5> getValue(StatisticsByUserDefinedTimePeriod2 obj) {
+			return obj.getHighestPriceValue();
+		}
+
+		@Override
+		public void setValue(StatisticsByUserDefinedTimePeriod2 obj, Optional<PriceValue5> value) {
+			obj.setHighestPriceValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LwstPricVal")
@@ -213,7 +235,7 @@ public class StatisticsByUserDefinedTimePeriod2 {
 	 * definition} = "Lowest price for the referenced period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLowestPriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, Optional<PriceValue5>> mmLowestPriceValue = new MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, Optional<PriceValue5>>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmLowestPriceValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod2.mmObject();
@@ -224,7 +246,17 @@ public class StatisticsByUserDefinedTimePeriod2 {
 			definition = "Lowest price for the referenced period.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue5.mmObject();
+			complexType_lazy = () -> PriceValue5.mmObject();
+		}
+
+		@Override
+		public Optional<PriceValue5> getValue(StatisticsByUserDefinedTimePeriod2 obj) {
+			return obj.getLowestPriceValue();
+		}
+
+		@Override
+		public void setValue(StatisticsByUserDefinedTimePeriod2 obj, Optional<PriceValue5> value) {
+			obj.setLowestPriceValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricChng")
@@ -262,7 +294,7 @@ public class StatisticsByUserDefinedTimePeriod2 {
 	 * definition} = "Change in price since the previous valuation date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, Optional<PriceValueChange1>> mmPriceChange = new MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, Optional<PriceValueChange1>>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmPriceChange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod2.mmObject();
@@ -273,7 +305,17 @@ public class StatisticsByUserDefinedTimePeriod2 {
 			definition = "Change in price since the previous valuation date.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
+			complexType_lazy = () -> PriceValueChange1.mmObject();
+		}
+
+		@Override
+		public Optional<PriceValueChange1> getValue(StatisticsByUserDefinedTimePeriod2 obj) {
+			return obj.getPriceChange();
+		}
+
+		@Override
+		public void setValue(StatisticsByUserDefinedTimePeriod2 obj, Optional<PriceValueChange1> value) {
+			obj.setPriceChange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Yld")
@@ -313,7 +355,7 @@ public class StatisticsByUserDefinedTimePeriod2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, Optional<PercentageRate>> mmYield = new MMMessageAttribute<StatisticsByUserDefinedTimePeriod2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmYield;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod2.mmObject();
@@ -325,6 +367,16 @@ public class StatisticsByUserDefinedTimePeriod2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(StatisticsByUserDefinedTimePeriod2 obj) {
+			return obj.getYield();
+		}
+
+		@Override
+		public void setValue(StatisticsByUserDefinedTimePeriod2 obj, Optional<PercentageRate> value) {
+			obj.setYield(value.orElse(null));
 		}
 	};
 
@@ -357,7 +409,7 @@ public class StatisticsByUserDefinedTimePeriod2 {
 		return highestPriceValue == null ? Optional.empty() : Optional.of(highestPriceValue);
 	}
 
-	public StatisticsByUserDefinedTimePeriod2 setHighestPriceValue(com.tools20022.repository.msg.PriceValue5 highestPriceValue) {
+	public StatisticsByUserDefinedTimePeriod2 setHighestPriceValue(PriceValue5 highestPriceValue) {
 		this.highestPriceValue = highestPriceValue;
 		return this;
 	}
@@ -366,7 +418,7 @@ public class StatisticsByUserDefinedTimePeriod2 {
 		return lowestPriceValue == null ? Optional.empty() : Optional.of(lowestPriceValue);
 	}
 
-	public StatisticsByUserDefinedTimePeriod2 setLowestPriceValue(com.tools20022.repository.msg.PriceValue5 lowestPriceValue) {
+	public StatisticsByUserDefinedTimePeriod2 setLowestPriceValue(PriceValue5 lowestPriceValue) {
 		this.lowestPriceValue = lowestPriceValue;
 		return this;
 	}
@@ -375,7 +427,7 @@ public class StatisticsByUserDefinedTimePeriod2 {
 		return priceChange == null ? Optional.empty() : Optional.of(priceChange);
 	}
 
-	public StatisticsByUserDefinedTimePeriod2 setPriceChange(com.tools20022.repository.msg.PriceValueChange1 priceChange) {
+	public StatisticsByUserDefinedTimePeriod2 setPriceChange(PriceValueChange1 priceChange) {
 		this.priceChange = priceChange;
 		return this;
 	}

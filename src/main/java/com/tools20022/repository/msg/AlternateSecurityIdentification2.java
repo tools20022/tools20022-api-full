@@ -111,7 +111,7 @@ public class AlternateSecurityIdentification2 {
 	 * "Identifies the type of financial instrument identifier type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateSecurityIdentification2, Max35Text> mmType = new MMMessageAttribute<AlternateSecurityIdentification2, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification2.mmObject();
@@ -123,6 +123,16 @@ public class AlternateSecurityIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AlternateSecurityIdentification2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(AlternateSecurityIdentification2 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -159,7 +169,7 @@ public class AlternateSecurityIdentification2 {
 	 * definition} = "Unique and unambiguous identifier of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateSecurityIdentification2, Max35Text> mmIdentification = new MMMessageAttribute<AlternateSecurityIdentification2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification2.mmObject();
@@ -171,6 +181,16 @@ public class AlternateSecurityIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AlternateSecurityIdentification2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AlternateSecurityIdentification2 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

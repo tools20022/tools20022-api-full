@@ -127,7 +127,7 @@ public class CancellationReason9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason9Choice, CancelledStatusReason12Code> mmCode = new MMMessageAttribute<CancellationReason9Choice, CancelledStatusReason12Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason9Choice.mmObject();
@@ -140,6 +140,16 @@ public class CancellationReason9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason12Code.mmObject();
+		}
+
+		@Override
+		public CancelledStatusReason12Code getValue(CancellationReason9Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationReason9Choice obj, CancelledStatusReason12Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -186,7 +196,7 @@ public class CancellationReason9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationReason9Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<CancellationReason9Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason9Choice.mmObject();
@@ -200,6 +210,16 @@ public class CancellationReason9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CancellationReason9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CancellationReason9Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

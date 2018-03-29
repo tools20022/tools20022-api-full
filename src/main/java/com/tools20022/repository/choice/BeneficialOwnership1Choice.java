@@ -127,7 +127,7 @@ public class BeneficialOwnership1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwnership1Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<BeneficialOwnership1Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBeneficialOwnershipIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnership1Choice.mmObject();
@@ -141,6 +141,16 @@ public class BeneficialOwnership1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(BeneficialOwnership1Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(BeneficialOwnership1Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -190,7 +200,7 @@ public class BeneficialOwnership1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwnership1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<BeneficialOwnership1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBeneficialOwnershipIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnership1Choice.mmObject();
@@ -204,6 +214,16 @@ public class BeneficialOwnership1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(BeneficialOwnership1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BeneficialOwnership1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

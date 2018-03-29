@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.PhoneAddress;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.VotingCondition;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommunicationAddress4;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +119,7 @@ public class VoteMethods2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVoteThroughNetwork = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VoteMethods2, List<AnyBICIdentifier>> mmVoteThroughNetwork = new MMMessageAttribute<VoteMethods2, List<AnyBICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmVoteLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteMethods2.mmObject();
@@ -130,9 +132,19 @@ public class VoteMethods2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
+
+		@Override
+		public List<AnyBICIdentifier> getValue(VoteMethods2 obj) {
+			return obj.getVoteThroughNetwork();
+		}
+
+		@Override
+		public void setValue(VoteMethods2 obj, List<AnyBICIdentifier> value) {
+			obj.setVoteThroughNetwork(value);
+		}
 	};
 	@XmlElement(name = "VoteByMail")
-	protected List<com.tools20022.repository.msg.PostalAddress1> voteByMail;
+	protected List<PostalAddress1> voteByMail;
 	/**
 	 * 
 	 <p>
@@ -163,7 +175,7 @@ public class VoteMethods2 {
 	 * definition} = "Specifies the address where voting ballot can be sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteByMail = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteMethods2, List<PostalAddress1>> mmVoteByMail = new MMMessageAssociationEnd<VoteMethods2, List<PostalAddress1>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteMethods2.mmObject();
@@ -175,11 +187,21 @@ public class VoteMethods2 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public List<PostalAddress1> getValue(VoteMethods2 obj) {
+			return obj.getVoteByMail();
+		}
+
+		@Override
+		public void setValue(VoteMethods2 obj, List<PostalAddress1> value) {
+			obj.setVoteByMail(value);
 		}
 	};
 	@XmlElement(name = "ElctrncVote")
-	protected List<com.tools20022.repository.msg.CommunicationAddress4> electronicVote;
+	protected List<CommunicationAddress4> electronicVote;
 	/**
 	 * 
 	 <p>
@@ -212,7 +234,7 @@ public class VoteMethods2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmElectronicVote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteMethods2, List<CommunicationAddress4>> mmElectronicVote = new MMMessageAssociationEnd<VoteMethods2, List<CommunicationAddress4>>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteMethods2.mmObject();
@@ -224,7 +246,17 @@ public class VoteMethods2 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress4.mmObject();
+			type_lazy = () -> CommunicationAddress4.mmObject();
+		}
+
+		@Override
+		public List<CommunicationAddress4> getValue(VoteMethods2 obj) {
+			return obj.getElectronicVote();
+		}
+
+		@Override
+		public void setValue(VoteMethods2 obj, List<CommunicationAddress4> value) {
+			obj.setElectronicVote(value);
 		}
 	};
 	@XmlElement(name = "VoteByTel")
@@ -260,7 +292,7 @@ public class VoteMethods2 {
 	 * "Telephone number providing access to an automated voting system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVoteByTelephone = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VoteMethods2, List<Max35Text>> mmVoteByTelephone = new MMMessageAttribute<VoteMethods2, List<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> PhoneAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteMethods2.mmObject();
@@ -272,6 +304,16 @@ public class VoteMethods2 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(VoteMethods2 obj) {
+			return obj.getVoteByTelephone();
+		}
+
+		@Override
+		public void setValue(VoteMethods2 obj, List<Max35Text> value) {
+			obj.setVoteByTelephone(value);
 		}
 	};
 
@@ -303,7 +345,7 @@ public class VoteMethods2 {
 		return voteByMail == null ? voteByMail = new ArrayList<>() : voteByMail;
 	}
 
-	public VoteMethods2 setVoteByMail(List<com.tools20022.repository.msg.PostalAddress1> voteByMail) {
+	public VoteMethods2 setVoteByMail(List<PostalAddress1> voteByMail) {
 		this.voteByMail = Objects.requireNonNull(voteByMail);
 		return this;
 	}
@@ -312,7 +354,7 @@ public class VoteMethods2 {
 		return electronicVote == null ? electronicVote = new ArrayList<>() : electronicVote;
 	}
 
-	public VoteMethods2 setElectronicVote(List<com.tools20022.repository.msg.CommunicationAddress4> electronicVote) {
+	public VoteMethods2 setElectronicVote(List<CommunicationAddress4> electronicVote) {
 		this.electronicVote = Objects.requireNonNull(electronicVote);
 		return this;
 	}

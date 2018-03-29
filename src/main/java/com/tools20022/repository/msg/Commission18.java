@@ -114,7 +114,7 @@ public class Commission18 {
 	 * Commission10.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission18, PercentageRate> mmRate = new MMMessageAttribute<Commission18, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission18.mmObject();
@@ -127,6 +127,16 @@ public class Commission18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Commission18 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Commission18 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -157,7 +167,7 @@ public class Commission18 {
 	 * definition} = "Additional information about the type of markup."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission18, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<Commission18, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission18.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class Commission18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(Commission18 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Commission18 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

@@ -104,7 +104,7 @@ public class IndustrialProductCommodityConstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndustrialProductCommodityConstruction1, AssetClassProductType6Code> mmBaseProduct = new MMMessageAttribute<IndustrialProductCommodityConstruction1, AssetClassProductType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndustrialProductCommodityConstruction1.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class IndustrialProductCommodityConstruction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType6Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType6Code getValue(IndustrialProductCommodityConstruction1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(IndustrialProductCommodityConstruction1 obj, AssetClassProductType6Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct")
@@ -147,7 +157,7 @@ public class IndustrialProductCommodityConstruction1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndustrialProductCommodityConstruction1, Optional<AssetClassSubProductType33Code>> mmSubProduct = new MMMessageAttribute<IndustrialProductCommodityConstruction1, Optional<AssetClassSubProductType33Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndustrialProductCommodityConstruction1.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class IndustrialProductCommodityConstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassSubProductType33Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClassSubProductType33Code> getValue(IndustrialProductCommodityConstruction1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(IndustrialProductCommodityConstruction1 obj, Optional<AssetClassSubProductType33Code> value) {
+			obj.setSubProduct(value.orElse(null));
 		}
 	};
 

@@ -105,7 +105,7 @@ public class BusinessDayInformationQueryDefinition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationQueryDefinition, Optional<QueryType1Code>> mmQueryType = new MMMessageAttribute<BusinessDayInformationQueryDefinition, Optional<QueryType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationQueryDefinition.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class BusinessDayInformationQueryDefinition {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType1Code> getValue(BusinessDayInformationQueryDefinition obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationQueryDefinition obj, Optional<QueryType1Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BizDayInfCrit")
@@ -147,7 +157,7 @@ public class BusinessDayInformationQueryDefinition {
 	 * definition} = "Defines the business day information query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessDayInformationCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayInformationQueryDefinition, Optional<BusinessDayInformationCriteriaDefinitionChoice>> mmBusinessDayInformationCriteria = new MMMessageAssociationEnd<BusinessDayInformationQueryDefinition, Optional<BusinessDayInformationCriteriaDefinitionChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationQueryDefinition.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class BusinessDayInformationQueryDefinition {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BusinessDayInformationCriteriaDefinitionChoice.mmObject();
+		}
+
+		@Override
+		public Optional<BusinessDayInformationCriteriaDefinitionChoice> getValue(BusinessDayInformationQueryDefinition obj) {
+			return obj.getBusinessDayInformationCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationQueryDefinition obj, Optional<BusinessDayInformationCriteriaDefinitionChoice> value) {
+			obj.setBusinessDayInformationCriteria(value.orElse(null));
 		}
 	};
 

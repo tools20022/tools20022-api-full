@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV01;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentAttributes31;
+import com.tools20022.repository.msg.SecurityIdentification14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +128,7 @@ public class UnderlyingFinancialInstrument1 {
 	 * definition} = "Identification of the underlying security by an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingFinancialInstrument1, SecurityIdentification14> mmIdentification = new MMMessageAssociationEnd<UnderlyingFinancialInstrument1, SecurityIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingFinancialInstrument1.mmObject();
@@ -139,7 +141,17 @@ public class UnderlyingFinancialInstrument1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification14 getValue(UnderlyingFinancialInstrument1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingFinancialInstrument1 obj, SecurityIdentification14 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Attrbts")
@@ -177,7 +189,7 @@ public class UnderlyingFinancialInstrument1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingFinancialInstrument1, Optional<FinancialInstrumentAttributes31>> mmAttributes = new MMMessageAssociationEnd<UnderlyingFinancialInstrument1, Optional<FinancialInstrumentAttributes31>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingFinancialInstrument1.mmObject();
@@ -189,7 +201,17 @@ public class UnderlyingFinancialInstrument1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes31.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes31.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentAttributes31> getValue(UnderlyingFinancialInstrument1 obj) {
+			return obj.getAttributes();
+		}
+
+		@Override
+		public void setValue(UnderlyingFinancialInstrument1 obj, Optional<FinancialInstrumentAttributes31> value) {
+			obj.setAttributes(value.orElse(null));
 		}
 	};
 
@@ -213,7 +235,7 @@ public class UnderlyingFinancialInstrument1 {
 		return identification;
 	}
 
-	public UnderlyingFinancialInstrument1 setIdentification(com.tools20022.repository.msg.SecurityIdentification14 identification) {
+	public UnderlyingFinancialInstrument1 setIdentification(SecurityIdentification14 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -222,7 +244,7 @@ public class UnderlyingFinancialInstrument1 {
 		return attributes == null ? Optional.empty() : Optional.of(attributes);
 	}
 
-	public UnderlyingFinancialInstrument1 setAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes31 attributes) {
+	public UnderlyingFinancialInstrument1 setAttributes(FinancialInstrumentAttributes31 attributes) {
 		this.attributes = attributes;
 		return this;
 	}

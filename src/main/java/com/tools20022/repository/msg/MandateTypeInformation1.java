@@ -125,7 +125,7 @@ public class MandateTypeInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateTypeInformation1, Optional<ServiceLevel8Choice>> mmServiceLevel = new MMMessageAssociationEnd<MandateTypeInformation1, Optional<ServiceLevel8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation1.mmObject();
@@ -139,6 +139,16 @@ public class MandateTypeInformation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ServiceLevel8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ServiceLevel8Choice> getValue(MandateTypeInformation1 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(MandateTypeInformation1 obj, Optional<ServiceLevel8Choice> value) {
+			obj.setServiceLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclInstrm")
@@ -185,7 +195,7 @@ public class MandateTypeInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateTypeInformation1, Optional<LocalInstrument2Choice>> mmLocalInstrument = new MMMessageAssociationEnd<MandateTypeInformation1, Optional<LocalInstrument2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmMandatePaymentType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation1.mmObject();
@@ -199,6 +209,16 @@ public class MandateTypeInformation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LocalInstrument2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LocalInstrument2Choice> getValue(MandateTypeInformation1 obj) {
+			return obj.getLocalInstrument();
+		}
+
+		@Override
+		public void setValue(MandateTypeInformation1 obj, Optional<LocalInstrument2Choice> value) {
+			obj.setLocalInstrument(value.orElse(null));
 		}
 	};
 

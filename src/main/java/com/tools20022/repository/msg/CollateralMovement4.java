@@ -129,7 +129,7 @@ public class CollateralMovement4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralMovement4, ActiveCurrencyAndAmount> mmAgreedAmount = new MMMessageAttribute<CollateralMovement4, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement4.mmObject();
@@ -142,6 +142,16 @@ public class CollateralMovement4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralMovement4 obj) {
+			return obj.getAgreedAmount();
+		}
+
+		@Override
+		public void setValue(CollateralMovement4 obj, ActiveCurrencyAndAmount value) {
+			obj.setAgreedAmount(value);
 		}
 	};
 	@XmlElement(name = "MvmntDtls")
@@ -188,7 +198,7 @@ public class CollateralMovement4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement4, List<CollateralMovement2Choice>> mmMovementDetails = new MMMessageAssociationEnd<CollateralMovement4, List<CollateralMovement2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement4.mmObject();
@@ -201,6 +211,16 @@ public class CollateralMovement4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CollateralMovement2Choice.mmObject();
+		}
+
+		@Override
+		public List<CollateralMovement2Choice> getValue(CollateralMovement4 obj) {
+			return obj.getMovementDetails();
+		}
+
+		@Override
+		public void setValue(CollateralMovement4 obj, List<CollateralMovement2Choice> value) {
+			obj.setMovementDetails(value);
 		}
 	};
 

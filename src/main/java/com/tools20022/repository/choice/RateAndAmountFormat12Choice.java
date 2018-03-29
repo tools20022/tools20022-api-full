@@ -119,7 +119,7 @@ public class RateAndAmountFormat12Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat12Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat12Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat12Choice.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class RateAndAmountFormat12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat12Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat12Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -166,7 +176,7 @@ public class RateAndAmountFormat12Choice {
 	 * definition} = "Value is expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat12Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat12Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat12Choice.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class RateAndAmountFormat12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat12Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat12Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

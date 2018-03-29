@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1;
+import com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3;
+import com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -134,7 +137,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 	 * CorporateActionUnallocatedDetailsSD2.mmUnallocatedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnallocatedDistributionBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionUnallocatedDetailsSD3, Optional<CorporateActionUnallocatedBalanceSD2Choice>> mmUnallocatedDistributionBalance = new MMMessageAssociationEnd<CorporateActionUnallocatedDetailsSD3, Optional<CorporateActionUnallocatedBalanceSD2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD3.mmObject();
 			isDerived = false;
@@ -149,6 +152,16 @@ public class CorporateActionUnallocatedDetailsSD3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CorporateActionUnallocatedBalanceSD2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionUnallocatedBalanceSD2Choice> getValue(CorporateActionUnallocatedDetailsSD3 obj) {
+			return obj.getUnallocatedDistributionBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedDetailsSD3 obj, Optional<CorporateActionUnallocatedBalanceSD2Choice> value) {
+			obj.setUnallocatedDistributionBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UallctdRedBal")
@@ -190,7 +203,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnallocatedRedemptionBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionUnallocatedDetailsSD3, Optional<CorporateActionUnallocatedBalanceSD1>> mmUnallocatedRedemptionBalance = new MMMessageAssociationEnd<CorporateActionUnallocatedDetailsSD3, Optional<CorporateActionUnallocatedBalanceSD1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD3.mmObject();
 			isDerived = false;
@@ -202,11 +215,21 @@ public class CorporateActionUnallocatedDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1.mmObject();
+			type_lazy = () -> CorporateActionUnallocatedBalanceSD1.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionUnallocatedBalanceSD1> getValue(CorporateActionUnallocatedDetailsSD3 obj) {
+			return obj.getUnallocatedRedemptionBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedDetailsSD3 obj, Optional<CorporateActionUnallocatedBalanceSD1> value) {
+			obj.setUnallocatedRedemptionBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UallctdSctiesTxDtls")
-	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD4> unallocatedSecuritiesTransactionDetails;
+	protected List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD4> unallocatedSecuritiesTransactionDetails;
 	/**
 	 * 
 	 <p>
@@ -254,7 +277,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 	 * mmUnallocatedSecuritiesTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnallocatedSecuritiesTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionUnallocatedDetailsSD3, List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD4>> mmUnallocatedSecuritiesTransactionDetails = new MMMessageAssociationEnd<CorporateActionUnallocatedDetailsSD3, List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD3.mmObject();
 			isDerived = false;
@@ -267,11 +290,21 @@ public class CorporateActionUnallocatedDetailsSD3 {
 			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD2.mmUnallocatedSecuritiesTransactionDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD4.mmObject();
+			type_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD4.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD4> getValue(CorporateActionUnallocatedDetailsSD3 obj) {
+			return obj.getUnallocatedSecuritiesTransactionDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedDetailsSD3 obj, List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD4> value) {
+			obj.setUnallocatedSecuritiesTransactionDetails(value);
 		}
 	};
 	@XmlElement(name = "UallctdCshTxDtls")
-	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3> unallocatedCashTransactionDetails;
+	protected List<CorporateActionUnallocatedCashTransactionDetailsSD3> unallocatedCashTransactionDetails;
 	/**
 	 * 
 	 <p>
@@ -318,7 +351,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnallocatedCashTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionUnallocatedDetailsSD3, List<CorporateActionUnallocatedCashTransactionDetailsSD3>> mmUnallocatedCashTransactionDetails = new MMMessageAssociationEnd<CorporateActionUnallocatedDetailsSD3, List<CorporateActionUnallocatedCashTransactionDetailsSD3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD3.mmObject();
 			isDerived = false;
@@ -331,7 +364,17 @@ public class CorporateActionUnallocatedDetailsSD3 {
 			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD2.mmUnallocatedCashTransactionDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3.mmObject();
+			type_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD3.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionUnallocatedCashTransactionDetailsSD3> getValue(CorporateActionUnallocatedDetailsSD3 obj) {
+			return obj.getUnallocatedCashTransactionDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedDetailsSD3 obj, List<CorporateActionUnallocatedCashTransactionDetailsSD3> value) {
+			obj.setUnallocatedCashTransactionDetails(value);
 		}
 	};
 
@@ -365,7 +408,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 		return unallocatedRedemptionBalance == null ? Optional.empty() : Optional.of(unallocatedRedemptionBalance);
 	}
 
-	public CorporateActionUnallocatedDetailsSD3 setUnallocatedRedemptionBalance(com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD1 unallocatedRedemptionBalance) {
+	public CorporateActionUnallocatedDetailsSD3 setUnallocatedRedemptionBalance(CorporateActionUnallocatedBalanceSD1 unallocatedRedemptionBalance) {
 		this.unallocatedRedemptionBalance = unallocatedRedemptionBalance;
 		return this;
 	}
@@ -374,7 +417,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 		return unallocatedSecuritiesTransactionDetails == null ? unallocatedSecuritiesTransactionDetails = new ArrayList<>() : unallocatedSecuritiesTransactionDetails;
 	}
 
-	public CorporateActionUnallocatedDetailsSD3 setUnallocatedSecuritiesTransactionDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD4> unallocatedSecuritiesTransactionDetails) {
+	public CorporateActionUnallocatedDetailsSD3 setUnallocatedSecuritiesTransactionDetails(List<CorporateActionUnallocatedSecuritiesTransactionDetailsSD4> unallocatedSecuritiesTransactionDetails) {
 		this.unallocatedSecuritiesTransactionDetails = Objects.requireNonNull(unallocatedSecuritiesTransactionDetails);
 		return this;
 	}
@@ -383,7 +426,7 @@ public class CorporateActionUnallocatedDetailsSD3 {
 		return unallocatedCashTransactionDetails == null ? unallocatedCashTransactionDetails = new ArrayList<>() : unallocatedCashTransactionDetails;
 	}
 
-	public CorporateActionUnallocatedDetailsSD3 setUnallocatedCashTransactionDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD3> unallocatedCashTransactionDetails) {
+	public CorporateActionUnallocatedDetailsSD3 setUnallocatedCashTransactionDetails(List<CorporateActionUnallocatedCashTransactionDetailsSD3> unallocatedCashTransactionDetails) {
 		this.unallocatedCashTransactionDetails = Objects.requireNonNull(unallocatedCashTransactionDetails);
 		return this;
 	}

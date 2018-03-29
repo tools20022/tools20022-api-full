@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccountReturnCriteria2;
+import com.tools20022.repository.msg.CollateralValueSearchCriteria1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -119,7 +121,7 @@ public class CollateralValueCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValueCriteria1, Optional<Max35Text>> mmQueryName = new MMMessageAttribute<CollateralValueCriteria1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueCriteria1.mmObject();
 			isDerived = false;
@@ -131,6 +133,16 @@ public class CollateralValueCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CollateralValueCriteria1 obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(CollateralValueCriteria1 obj, Optional<Max35Text> value) {
+			obj.setQueryName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchCrit")
@@ -171,7 +183,7 @@ public class CollateralValueCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueCriteria1, Optional<CollateralValueSearchCriteria1>> mmSearchCriteria = new MMMessageAssociationEnd<CollateralValueCriteria1, Optional<CollateralValueSearchCriteria1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueCriteria1.mmObject();
 			isDerived = false;
@@ -183,7 +195,17 @@ public class CollateralValueCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
+			type_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralValueSearchCriteria1> getValue(CollateralValueCriteria1 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(CollateralValueCriteria1 obj, Optional<CollateralValueSearchCriteria1> value) {
+			obj.setSearchCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -223,7 +245,7 @@ public class CollateralValueCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueCriteria1, Optional<CashAccountReturnCriteria2>> mmReturnCriteria = new MMMessageAssociationEnd<CollateralValueCriteria1, Optional<CashAccountReturnCriteria2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueCriteria1.mmObject();
 			isDerived = false;
@@ -235,7 +257,17 @@ public class CollateralValueCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
+			type_lazy = () -> CashAccountReturnCriteria2.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountReturnCriteria2> getValue(CollateralValueCriteria1 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(CollateralValueCriteria1 obj, Optional<CashAccountReturnCriteria2> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -267,7 +299,7 @@ public class CollateralValueCriteria1 {
 		return searchCriteria == null ? Optional.empty() : Optional.of(searchCriteria);
 	}
 
-	public CollateralValueCriteria1 setSearchCriteria(com.tools20022.repository.msg.CollateralValueSearchCriteria1 searchCriteria) {
+	public CollateralValueCriteria1 setSearchCriteria(CollateralValueSearchCriteria1 searchCriteria) {
 		this.searchCriteria = searchCriteria;
 		return this;
 	}
@@ -276,7 +308,7 @@ public class CollateralValueCriteria1 {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public CollateralValueCriteria1 setReturnCriteria(com.tools20022.repository.msg.CashAccountReturnCriteria2 returnCriteria) {
+	public CollateralValueCriteria1 setReturnCriteria(CashAccountReturnCriteria2 returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

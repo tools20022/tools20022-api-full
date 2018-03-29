@@ -116,7 +116,7 @@ public class BuyIn1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWarningIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn1, Optional<YesNoIndicator>> mmWarningIndicator = new MMMessageAttribute<BuyIn1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn1.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class BuyIn1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(BuyIn1 obj) {
+			return obj.getWarningIndicator();
+		}
+
+		@Override
+		public void setValue(BuyIn1 obj, Optional<YesNoIndicator> value) {
+			obj.setWarningIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdBuyInDt", required = true)
@@ -171,7 +181,7 @@ public class BuyIn1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedBuyInDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BuyIn1, DateFormat15Choice> mmExpectedBuyInDate = new MMMessageAttribute<BuyIn1, DateFormat15Choice>() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmBuyinDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BuyIn1.mmObject();
@@ -184,6 +194,16 @@ public class BuyIn1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat15Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat15Choice getValue(BuyIn1 obj) {
+			return obj.getExpectedBuyInDate();
+		}
+
+		@Override
+		public void setValue(BuyIn1 obj, DateFormat15Choice value) {
+			obj.setExpectedBuyInDate(value);
 		}
 	};
 

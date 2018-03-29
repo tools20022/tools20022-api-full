@@ -53,11 +53,15 @@ public class ConstraintPreviousReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference1> forMessageAndBusinessReference1 = new MMConstraint<MessageAndBusinessReference1>() {
 		{
-			validator = ConstraintPreviousReferenceRule::checkMessageAndBusinessReference1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceRule";
 			definition = "If PreviousReference/MessageName is present, it must contain 540 or 542 or must start with sese.001 or sese.002 or sese.005 or sese.006 and Reference must contain the MessageReference from the Application Header.";
 			owner_lazy = () -> MessageAndBusinessReference1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference1 obj) throws Exception {
+			checkMessageAndBusinessReference1(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintPreviousReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference6> forMessageAndBusinessReference6 = new MMConstraint<MessageAndBusinessReference6>() {
 		{
-			validator = ConstraintPreviousReferenceRule::checkMessageAndBusinessReference6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceRule";
 			definition = "If PreviousReference/MessageName is present, it must contain 540 or 542 or must start with sese.001, sese.002, sese.005 or sese.006 and and PreviousReference/Reference must contain the reference of a message in this list.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference7);
 			owner_lazy = () -> MessageAndBusinessReference6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference6 obj) throws Exception {
+			checkMessageAndBusinessReference6(obj);
 		}
 	};
 	/**
@@ -135,13 +143,17 @@ public class ConstraintPreviousReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference7> forMessageAndBusinessReference7 = new MMConstraint<MessageAndBusinessReference7>() {
 		{
-			validator = ConstraintPreviousReferenceRule::checkMessageAndBusinessReference7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceRule";
 			definition = "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference8);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference6;
 			owner_lazy = () -> MessageAndBusinessReference7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference7 obj) throws Exception {
+			checkMessageAndBusinessReference7(obj);
 		}
 	};
 	/**
@@ -180,13 +192,17 @@ public class ConstraintPreviousReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference8> forMessageAndBusinessReference8 = new MMConstraint<MessageAndBusinessReference8>() {
 		{
-			validator = ConstraintPreviousReferenceRule::checkMessageAndBusinessReference8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceRule";
 			definition = "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference11);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference7;
 			owner_lazy = () -> MessageAndBusinessReference8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference8 obj) throws Exception {
+			checkMessageAndBusinessReference8(obj);
 		}
 	};
 	/**
@@ -217,12 +233,16 @@ public class ConstraintPreviousReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference11> forMessageAndBusinessReference11 = new MMConstraint<MessageAndBusinessReference11>() {
 		{
-			validator = ConstraintPreviousReferenceRule::checkMessageAndBusinessReference11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceRule";
 			definition = "If Reference/PreviousReference/MessageName is present, it must start with sese.001, sese.002, sese.005, sese.006, sese.012 or sese.014.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousReferenceRule.forMessageAndBusinessReference8;
 			owner_lazy = () -> MessageAndBusinessReference11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference11 obj) throws Exception {
+			checkMessageAndBusinessReference11(obj);
 		}
 	};
 

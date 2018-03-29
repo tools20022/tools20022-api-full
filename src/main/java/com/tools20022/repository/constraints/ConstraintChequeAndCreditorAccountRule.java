@@ -56,12 +56,16 @@ public class ConstraintChequeAndCreditorAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation3> forPaymentInstructionInformation3 = new MMConstraint<PaymentInstructionInformation3>() {
 		{
-			validator = ConstraintChequeAndCreditorAccountRule::checkPaymentInstructionInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeAndCreditorAccountRule";
 			definition = "If PaymentMethod is CHK, then CreditTransferTransactionInformation/CreditorAccount is not allowed.";
 			owner_lazy = () -> PaymentInstructionInformation3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation3 obj) throws Exception {
+			checkPaymentInstructionInformation3(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintChequeAndCreditorAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction6> forPaymentInstruction6 = new MMConstraint<PaymentInstruction6>() {
 		{
-			validator = ConstraintChequeAndCreditorAccountRule::checkPaymentInstruction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeAndCreditorAccountRule";
 			definition = "If PaymentMethod is CHK, then CreditTransferTransactionInformation/CreditorAccount is not allowed.";
 			owner_lazy = () -> PaymentInstruction6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction6 obj) throws Exception {
+			checkPaymentInstruction6(obj);
 		}
 	};
 	/**
@@ -134,13 +142,17 @@ public class ConstraintChequeAndCreditorAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
 		{
-			validator = ConstraintChequeAndCreditorAccountRule::checkPaymentInstruction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeAndCreditorAccountRule";
 			definition = "If PaymentMethod is CHK, then CreditTransferTransactionInformation/CreditorAccount is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeAndCreditorAccountRule.forPaymentInstruction16);
 			owner_lazy = () -> PaymentInstruction9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction9 obj) throws Exception {
+			checkPaymentInstruction9(obj);
 		}
 	};
 	/**
@@ -183,7 +195,6 @@ public class ConstraintChequeAndCreditorAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction16> forPaymentInstruction16 = new MMConstraint<PaymentInstruction16>() {
 		{
-			validator = ConstraintChequeAndCreditorAccountRule::checkPaymentInstruction16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeAndCreditorAccountRule";
 			definition = "If PaymentMethod is CHK, then CreditTransferTransactionInformation/CreditorAccount is not allowed.";
@@ -191,6 +202,11 @@ public class ConstraintChequeAndCreditorAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeAndCreditorAccountRule.forPaymentInstruction9;
 			owner_lazy = () -> PaymentInstruction16.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction16 obj) throws Exception {
+			checkPaymentInstruction16(obj);
 		}
 	};
 	/**
@@ -236,7 +252,6 @@ public class ConstraintChequeAndCreditorAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction20> forPaymentInstruction20 = new MMConstraint<PaymentInstruction20>() {
 		{
-			validator = ConstraintChequeAndCreditorAccountRule::checkPaymentInstruction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeAndCreditorAccountRule";
 			definition = "If PaymentMethod is CHK (Cheque), then CreditTransferTransactionInformation/CreditorAccount is not allowed.";
@@ -245,6 +260,11 @@ public class ConstraintChequeAndCreditorAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeAndCreditorAccountRule.forPaymentInstruction16;
 			owner_lazy = () -> PaymentInstruction20.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction20 obj) throws Exception {
+			checkPaymentInstruction20(obj);
 		}
 	};
 	/**
@@ -279,13 +299,17 @@ public class ConstraintChequeAndCreditorAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
 		{
-			validator = ConstraintChequeAndCreditorAccountRule::checkPaymentInstruction22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeAndCreditorAccountRule";
 			definition = "If PaymentMethod is CHK (Cheque), then CreditTransferTransactionInformation/CreditorAccount is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeAndCreditorAccountRule.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction22.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction22 obj) throws Exception {
+			checkPaymentInstruction22(obj);
 		}
 	};
 	/**
@@ -320,13 +344,17 @@ public class ConstraintChequeAndCreditorAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction24> forPaymentInstruction24 = new MMConstraint<PaymentInstruction24>() {
 		{
-			validator = ConstraintChequeAndCreditorAccountRule::checkPaymentInstruction24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeAndCreditorAccountRule";
 			definition = "If PaymentMethod is CHK (Cheque), then CreditTransferTransactionInformation/CreditorAccount is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeAndCreditorAccountRule.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction24 obj) throws Exception {
+			checkPaymentInstruction24(obj);
 		}
 	};
 

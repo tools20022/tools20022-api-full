@@ -26,9 +26,9 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -301,7 +301,7 @@ public class Undertaking {
 	 * definition} = "Digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmElectronicSignature = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<ElectronicSignature>> mmElectronicSignature = new MMBusinessAssociationEnd<Undertaking, Optional<ElectronicSignature>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyAndSignature1.mmSignature, UndertakingAmendmentMessage1.mmDigitalSignature, Amendment2.mmDigitalSignature, UndertakingAmendmentResponseMessage1.mmDigitalSignature,
 					UndertakingIssuanceMessage.mmDigitalSignature, UndertakingAdvice1.mmDigitalSignature);
@@ -312,9 +312,19 @@ public class Undertaking {
 			definition = "Digital signature.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ElectronicSignature.mmUndertaking;
+			opposite_lazy = () -> ElectronicSignature.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ElectronicSignature.mmObject();
+			type_lazy = () -> ElectronicSignature.mmObject();
+		}
+
+		@Override
+		public Optional<ElectronicSignature> getValue(Undertaking obj) {
+			return obj.getElectronicSignature();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<ElectronicSignature> value) {
+			obj.setElectronicSignature(value.orElse(null));
 		}
 	};
 	protected UndertakingStatus undertakingStatus;
@@ -364,7 +374,7 @@ public class Undertaking {
 	 * definition} = "Status of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUndertakingStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, UndertakingStatus> mmUndertakingStatus = new MMBusinessAssociationEnd<Undertaking, UndertakingStatus>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Amendment1.mmTerminationDetails, Amendment3.mmTerminationDetails, Amendment7.mmAmendmentStatus);
 			isDerived = false;
@@ -374,9 +384,19 @@ public class Undertaking {
 			definition = "Status of the undertaking.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmUndertaking;
+			opposite_lazy = () -> UndertakingStatus.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.UndertakingStatus.mmObject();
+			type_lazy = () -> UndertakingStatus.mmObject();
+		}
+
+		@Override
+		public UndertakingStatus getValue(Undertaking obj) {
+			return obj.getUndertakingStatus();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, UndertakingStatus value) {
+			obj.setUndertakingStatus(value);
 		}
 	};
 	protected Max35Text identification;
@@ -429,7 +449,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, Max35Text> mmIdentification = new MMBusinessAttribute<Undertaking, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking9.mmIdentification, Undertaking6.mmIdentification, Undertaking7.mmIdentification, Amendment1.mmUndertakingIdentification, Undertaking3.mmIdentification,
 					Undertaking8.mmIdentification);
@@ -443,12 +463,14 @@ public class Undertaking {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Undertaking obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	protected Demand demand;
@@ -499,7 +521,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDemand = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<Demand>> mmDemand = new MMBusinessAssociationEnd<Undertaking, Optional<Demand>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DemandRefusal1.mmDemandDetails, ExtendOrPayQuery1.mmDemandDetails, ExtendOrPayQuery2.mmDemandDetails);
 			isDerived = false;
@@ -509,9 +531,19 @@ public class Undertaking {
 			definition = "Document signed by the beneficiary demanding payment under a demand guarantee or standby letter of credit.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Demand.mmUndertaking;
+			opposite_lazy = () -> Demand.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
+			type_lazy = () -> Demand.mmObject();
+		}
+
+		@Override
+		public Optional<Demand> getValue(Undertaking obj) {
+			return obj.getDemand();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<Demand> value) {
+			obj.setDemand(value.orElse(null));
 		}
 	};
 	protected ISODate terminationDate;
@@ -547,7 +579,7 @@ public class Undertaking {
 	 * definition} = "Date when the undertaking terminates."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTerminationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, ISODate> mmTerminationDate = new MMBusinessAttribute<Undertaking, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingTermination3.mmEffectiveDate);
 			isDerived = false;
@@ -560,12 +592,14 @@ public class Undertaking {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getTerminationDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(Undertaking obj) {
+			return obj.getTerminationDate();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, ISODate value) {
+			obj.setTerminationDate(value);
 		}
 	};
 	protected UndertakingAmount undertakingAmount;
@@ -633,7 +667,7 @@ public class Undertaking {
 	 * definition} = "Amount of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUndertakingAmount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, UndertakingAmount> mmUndertakingAmount = new MMBusinessAssociationEnd<Undertaking, UndertakingAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking11.mmNewUndertakingAmount, Amendment1.mmUndertakingAmountAdjustment, Undertaking10.mmNewUndertakingAmount, Amendment3.mmIncreaseDecreaseAmount,
 					Undertaking2.mmCounterUndertakingAmount, Undertaking1.mmUndertakingAmount, Undertaking4.mmLocalUndertakingAmount, Undertaking3.mmUndertakingAmount, PaymentObligation2.mmPaymentObligationAmount);
@@ -644,9 +678,19 @@ public class Undertaking {
 			definition = "Amount of the undertaking.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmUndertaking;
+			opposite_lazy = () -> UndertakingAmount.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.UndertakingAmount.mmObject();
+			type_lazy = () -> UndertakingAmount.mmObject();
+		}
+
+		@Override
+		public UndertakingAmount getValue(Undertaking obj) {
+			return obj.getUndertakingAmount();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, UndertakingAmount value) {
+			obj.setUndertakingAmount(value);
 		}
 	};
 	protected Expiry expiry;
@@ -716,7 +760,7 @@ public class Undertaking {
 	 * definition} = "Expiry information about the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmExpiry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Expiry> mmExpiry = new MMBusinessAssociationEnd<Undertaking, Expiry>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExpiryDetails1.mmExpiryTerms, Undertaking11.mmNewExpiryDetails, Amendment1.mmNewExpiryDetails, ExpiryDetails2.mmExpiryTerms, Undertaking10.mmNewExpiryDetails, Amendment3.mmNewExpiryDetails,
 					Undertaking2.mmExpiryDetails, Undertaking1.mmExpiryDetails, Undertaking4.mmExpiryDetails, Undertaking3.mmExpiryDetails);
@@ -727,9 +771,19 @@ public class Undertaking {
 			definition = "Expiry information about the undertaking.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Expiry.mmUndertaking;
+			opposite_lazy = () -> Expiry.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
+			type_lazy = () -> Expiry.mmObject();
+		}
+
+		@Override
+		public Expiry getValue(Undertaking obj) {
+			return obj.getExpiry();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Expiry value) {
+			obj.setExpiry(value);
 		}
 	};
 	protected UndertakingPartyRole partyRole;
@@ -782,7 +836,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, UndertakingPartyRole> mmPartyRole = new MMBusinessAssociationEnd<Undertaking, UndertakingPartyRole>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmAdditionalParty, Undertaking4.mmAdditionalParty, Undertaking3.mmAdditionalParty);
 			isDerived = false;
@@ -792,9 +846,19 @@ public class Undertaking {
 			definition = "Role played by a party in the context of an undertaking or in the context of the business linked to the undertaking.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingPartyRole.mmUndertaking;
+			opposite_lazy = () -> UndertakingPartyRole.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.UndertakingPartyRole.mmObject();
+			type_lazy = () -> UndertakingPartyRole.mmObject();
+		}
+
+		@Override
+		public UndertakingPartyRole getValue(Undertaking obj) {
+			return obj.getPartyRole();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, UndertakingPartyRole value) {
+			obj.setPartyRole(value);
 		}
 	};
 	protected AmendmentOfUndertaking undertakingAmendment;
@@ -833,7 +897,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUndertakingAmendment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<AmendmentOfUndertaking>> mmUndertakingAmendment = new MMBusinessAssociationEnd<Undertaking, Optional<AmendmentOfUndertaking>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
@@ -842,9 +906,19 @@ public class Undertaking {
 			definition = "Modification of an undertaking such as an guarantee or standby letter of credit.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmUndertaking;
+			opposite_lazy = () -> AmendmentOfUndertaking.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmObject();
+			type_lazy = () -> AmendmentOfUndertaking.mmObject();
+		}
+
+		@Override
+		public Optional<AmendmentOfUndertaking> getValue(Undertaking obj) {
+			return obj.getUndertakingAmendment();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<AmendmentOfUndertaking> value) {
+			obj.setUndertakingAmendment(value.orElse(null));
 		}
 	};
 	protected UndertakingDocument specifiedDocument;
@@ -907,7 +981,7 @@ public class Undertaking {
 	 * definition} = "Document related to the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSpecifiedDocument = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<UndertakingDocument>> mmSpecifiedDocument = new MMBusinessAssociationEnd<Undertaking, Optional<UndertakingDocument>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Amendment1.mmEnclosedFile, Amendment3.mmEnclosedFile, Trigger1.mmDocumentaryEvent, Undertaking1.mmEnclosedFile, Undertaking3.mmEnclosedFile, UndertakingAdvice2.mmEnclosedFile,
 					UndertakingStatusAdvice1.mmEnclosedFile, UndertakingTerminationNotice1.mmEnclosedFile);
@@ -918,9 +992,19 @@ public class Undertaking {
 			definition = "Document related to the undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmUndertaking;
+			opposite_lazy = () -> UndertakingDocument.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.UndertakingDocument.mmObject();
+			type_lazy = () -> UndertakingDocument.mmObject();
+		}
+
+		@Override
+		public Optional<UndertakingDocument> getValue(Undertaking obj) {
+			return obj.getSpecifiedDocument();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<UndertakingDocument> value) {
+			obj.setSpecifiedDocument(value.orElse(null));
 		}
 	};
 	protected ISODateTime dateOfAdvice;
@@ -957,7 +1041,7 @@ public class Undertaking {
 	 * "Date on which the undertaking or its amendment is advised."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDateOfAdvice = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, ISODateTime> mmDateOfAdvice = new MMBusinessAttribute<Undertaking, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingConfirmation1.mmDate);
 			isDerived = false;
@@ -970,12 +1054,14 @@ public class Undertaking {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getDateOfAdvice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Undertaking obj) {
+			return obj.getDateOfAdvice();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, ISODateTime value) {
+			obj.setDateOfAdvice(value);
 		}
 	};
 	protected Max35Text purpose;
@@ -1010,7 +1096,7 @@ public class Undertaking {
 	 * definition} = "Description of the purpose of the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPurpose = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, Max35Text> mmPurpose = new MMBusinessAttribute<Undertaking, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmPurpose);
 			isDerived = false;
@@ -1023,12 +1109,14 @@ public class Undertaking {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getPurpose", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Undertaking obj) {
+			return obj.getPurpose();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Max35Text value) {
+			obj.setPurpose(value);
 		}
 	};
 	protected UndertakingNameCode undertakingName;
@@ -1072,7 +1160,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUndertakingName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, UndertakingNameCode> mmUndertakingName = new MMBusinessAttribute<Undertaking, UndertakingNameCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking2.mmName, Undertaking1.mmName, Undertaking4.mmName, Undertaking3.mmName);
 			isDerived = false;
@@ -1085,12 +1173,14 @@ public class Undertaking {
 			simpleType_lazy = () -> UndertakingNameCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getUndertakingName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UndertakingNameCode getValue(Undertaking obj) {
+			return obj.getUndertakingName();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, UndertakingNameCode value) {
+			obj.setUndertakingName(value);
 		}
 	};
 	protected ExternalUndertakingTypeCode type;
@@ -1134,29 +1224,31 @@ public class Undertaking {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of guarantee or standby letter of credit, for example, performance, payment, etc."
+	 * "Type of guarantee or standby letter of credit, for example, performance,  payment, etc."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, ExternalUndertakingTypeCode> mmType = new MMBusinessAttribute<Undertaking, ExternalUndertakingTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingType1Choice.mmCode, UndertakingType1Choice.mmProprietary, Undertaking1.mmType, Undertaking4.mmType, Undertaking3.mmType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
-			definition = "Type of guarantee or standby letter of credit, for example, performance, payment, etc.";
+			definition = "Type of guarantee or standby letter of credit, for example, performance,  payment, etc.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ExternalUndertakingTypeCode getValue(Undertaking obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, ExternalUndertakingTypeCode value) {
+			obj.setType(value);
 		}
 	};
 	protected YesNoIndicator confirmationIndicator;
@@ -1201,7 +1293,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmConfirmationIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, YesNoIndicator> mmConfirmationIndicator = new MMBusinessAttribute<Undertaking, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmConfirmationIndicator, Undertaking4.mmConfirmationIndicator, Undertaking3.mmConfirmationIndicator);
 			isDerived = false;
@@ -1214,12 +1306,14 @@ public class Undertaking {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getConfirmationIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Undertaking obj) {
+			return obj.getConfirmationIndicator();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, YesNoIndicator value) {
+			obj.setConfirmationIndicator(value);
 		}
 	};
 	protected YesNoIndicator counterUndertakingIndicator;
@@ -1257,7 +1351,7 @@ public class Undertaking {
 	 * "Indicates whether the undertaking is a counter-undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCounterUndertakingIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, YesNoIndicator> mmCounterUndertakingIndicator = new MMBusinessAttribute<Undertaking, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmCounterUndertakingIndicator);
 			isDerived = false;
@@ -1270,12 +1364,14 @@ public class Undertaking {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getCounterUndertakingIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Undertaking obj) {
+			return obj.getCounterUndertakingIndicator();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, YesNoIndicator value) {
+			obj.setCounterUndertakingIndicator(value);
 		}
 	};
 	protected ExternalTypeOfPartyCode relatedChargesPayableBy;
@@ -1332,7 +1428,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRelatedChargesPayableBy = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, ExternalTypeOfPartyCode> mmRelatedChargesPayableBy = new MMBusinessAttribute<Undertaking, ExternalTypeOfPartyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking2.mmConfirmationChargesPayableBy, Undertaking1.mmTransferChargesPayableBy, Undertaking1.mmConfirmationChargesPayableBy, Undertaking4.mmConfirmationChargesPayableBy,
 					Undertaking4.mmTransferChargesPayableBy, Undertaking3.mmConfirmationChargesPayableBy, Undertaking3.mmTransferChargesPayableBy);
@@ -1346,12 +1442,14 @@ public class Undertaking {
 			simpleType_lazy = () -> ExternalTypeOfPartyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getRelatedChargesPayableBy", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ExternalTypeOfPartyCode getValue(Undertaking obj) {
+			return obj.getRelatedChargesPayableBy();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, ExternalTypeOfPartyCode value) {
+			obj.setRelatedChargesPayableBy(value);
 		}
 	};
 	protected YesNoIndicator standardClaimDocumentIndicator;
@@ -1390,7 +1488,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStandardClaimDocumentIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, YesNoIndicator> mmStandardClaimDocumentIndicator = new MMBusinessAttribute<Undertaking, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking2.mmStandardClaimDocumentIndicator);
 			isDerived = false;
@@ -1403,12 +1501,14 @@ public class Undertaking {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getStandardClaimDocumentIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Undertaking obj) {
+			return obj.getStandardClaimDocumentIndicator();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, YesNoIndicator value) {
+			obj.setStandardClaimDocumentIndicator(value);
 		}
 	};
 	protected UnderlyingTransaction underlyingTransaction;
@@ -1461,7 +1561,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUnderlyingTransaction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<UnderlyingTransaction>> mmUnderlyingTransaction = new MMBusinessAssociationEnd<Undertaking, Optional<UnderlyingTransaction>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmUnderlyingTransaction, Undertaking4.mmUnderlyingTransaction, Undertaking3.mmUnderlyingTransaction);
 			isDerived = false;
@@ -1471,9 +1571,19 @@ public class Undertaking {
 			definition = "Reference information on a commercial obligation between the beneficiary and applicant for which an undertaking is issued.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmUndertaking;
+			opposite_lazy = () -> UnderlyingTransaction.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.UnderlyingTransaction.mmObject();
+			type_lazy = () -> UnderlyingTransaction.mmObject();
+		}
+
+		@Override
+		public Optional<UnderlyingTransaction> getValue(Undertaking obj) {
+			return obj.getUnderlyingTransaction();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<UnderlyingTransaction> value) {
+			obj.setUnderlyingTransaction(value.orElse(null));
 		}
 	};
 	protected ModelForm modelForm;
@@ -1518,23 +1628,33 @@ public class Undertaking {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions."
+	 * "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmModelForm = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<ModelForm>> mmModelForm = new MMBusinessAssociationEnd<Undertaking, Optional<ModelForm>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmUndertakingWording, Undertaking4.mmUndertakingWording);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ModelForm";
-			definition = "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions.";
+			definition = "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions. ";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ModelForm.mmUndertaking;
+			opposite_lazy = () -> ModelForm.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ModelForm.mmObject();
+			type_lazy = () -> ModelForm.mmObject();
+		}
+
+		@Override
+		public Optional<ModelForm> getValue(Undertaking obj) {
+			return obj.getModelForm();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<ModelForm> value) {
+			obj.setModelForm(value.orElse(null));
 		}
 	};
 	protected YesNoIndicator multipleDemandIndicator;
@@ -1579,7 +1699,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMultipleDemandIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, YesNoIndicator> mmMultipleDemandIndicator = new MMBusinessAttribute<Undertaking, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmMultipleDemandIndicator, Undertaking4.mmMultipleDemandIndicator, Undertaking3.mmMultipleDemandIndicator);
 			isDerived = false;
@@ -1592,12 +1712,14 @@ public class Undertaking {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getMultipleDemandIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Undertaking obj) {
+			return obj.getMultipleDemandIndicator();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, YesNoIndicator value) {
+			obj.setMultipleDemandIndicator(value);
 		}
 	};
 	protected YesNoIndicator partialDemandIndicator;
@@ -1642,7 +1764,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPartialDemandIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, YesNoIndicator> mmPartialDemandIndicator = new MMBusinessAttribute<Undertaking, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmPartialDemandIndicator, Undertaking4.mmPartialDemandIndicator, Undertaking3.mmPartialDemandIndicator);
 			isDerived = false;
@@ -1655,12 +1777,14 @@ public class Undertaking {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getPartialDemandIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Undertaking obj) {
+			return obj.getPartialDemandIndicator();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, YesNoIndicator value) {
+			obj.setPartialDemandIndicator(value);
 		}
 	};
 	protected YesNoIndicator transferIndicator;
@@ -1703,7 +1827,7 @@ public class Undertaking {
 	 * definition} = "Indicates whether the undertaking is transferrable."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTransferIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Undertaking, YesNoIndicator> mmTransferIndicator = new MMBusinessAttribute<Undertaking, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmTransferIndicator, Undertaking4.mmTransferIndicator, Undertaking3.mmTransferIndicator);
 			isDerived = false;
@@ -1716,12 +1840,14 @@ public class Undertaking {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Undertaking.class.getMethod("getTransferIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Undertaking obj) {
+			return obj.getTransferIndicator();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, YesNoIndicator value) {
+			obj.setTransferIndicator(value);
 		}
 	};
 	protected AutomaticVariation predefinedVariation;
@@ -1773,7 +1899,7 @@ public class Undertaking {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPredefinedVariation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<AutomaticVariation>> mmPredefinedVariation = new MMBusinessAssociationEnd<Undertaking, Optional<AutomaticVariation>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmAutomaticAmountVariation, Undertaking4.mmAutomaticAmountVariation, Undertaking3.mmAutomaticAmountVariation);
 			isDerived = false;
@@ -1783,9 +1909,19 @@ public class Undertaking {
 			definition = "Changes that may be made to the undertaking covered by clauses in the existing undertaking and its amendments.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmUndertaking;
+			opposite_lazy = () -> AutomaticVariation.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.AutomaticVariation.mmObject();
+			type_lazy = () -> AutomaticVariation.mmObject();
+		}
+
+		@Override
+		public Optional<AutomaticVariation> getValue(Undertaking obj) {
+			return obj.getPredefinedVariation();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<AutomaticVariation> value) {
+			obj.setPredefinedVariation(value.orElse(null));
 		}
 	};
 	protected Charges charges;
@@ -1820,7 +1956,7 @@ public class Undertaking {
 	 * definition} = "Amount and currency of the commissions and changes."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCharges = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<Charges>> mmCharges = new MMBusinessAssociationEnd<Undertaking, Optional<Charges>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
@@ -1829,9 +1965,19 @@ public class Undertaking {
 			definition = "Amount and currency of the commissions and changes.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Charges.mmRelatedUndertaking;
+			opposite_lazy = () -> Charges.mmRelatedUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
+			type_lazy = () -> Charges.mmObject();
+		}
+
+		@Override
+		public Optional<Charges> getValue(Undertaking obj) {
+			return obj.getCharges();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<Charges> value) {
+			obj.setCharges(value.orElse(null));
 		}
 	};
 	protected Presentation presentation;
@@ -1884,7 +2030,7 @@ public class Undertaking {
 	 * definition} = "Presentation information related to the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPresentation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<Presentation>> mmPresentation = new MMBusinessAssociationEnd<Undertaking, Optional<Presentation>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking1.mmPresentationDetails, Demand1.mmPresentationDetails, Undertaking4.mmPresentationDetails, Undertaking3.mmPresentationDetails);
 			isDerived = false;
@@ -1894,9 +2040,19 @@ public class Undertaking {
 			definition = "Presentation information related to the undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Presentation.mmPresentedUndertaking;
+			opposite_lazy = () -> Presentation.mmPresentedUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Presentation.mmObject();
+			type_lazy = () -> Presentation.mmObject();
+		}
+
+		@Override
+		public Optional<Presentation> getValue(Undertaking obj) {
+			return obj.getPresentation();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<Presentation> value) {
+			obj.setPresentation(value.orElse(null));
 		}
 	};
 	protected UndertakingExtension undertakingExtension;
@@ -1942,7 +2098,7 @@ public class Undertaking {
 	 * "Specifies information related to the extension of an undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUndertakingExtension = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Undertaking, Optional<UndertakingExtension>> mmUndertakingExtension = new MMBusinessAssociationEnd<Undertaking, Optional<UndertakingExtension>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExpiryTerms1.mmAutoExtension);
 			isDerived = false;
@@ -1952,9 +2108,19 @@ public class Undertaking {
 			definition = "Specifies information related to the extension of an undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmUndertaking;
+			opposite_lazy = () -> UndertakingExtension.mmUndertaking;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmObject();
+			type_lazy = () -> UndertakingExtension.mmObject();
+		}
+
+		@Override
+		public Optional<UndertakingExtension> getValue(Undertaking obj) {
+			return obj.getUndertakingExtension();
+		}
+
+		@Override
+		public void setValue(Undertaking obj, Optional<UndertakingExtension> value) {
+			obj.setUndertakingExtension(value.orElse(null));
 		}
 	};
 
@@ -1965,11 +2131,9 @@ public class Undertaking {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Undertaking";
 				definition = "Independent undertaking, such as a demand guarantee or standby letter of credit, that provides financial assurance, to be collected on the presentation of documents that comply with its terms and conditions.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Charges.mmRelatedUndertaking, com.tools20022.repository.entity.ElectronicSignature.mmUndertaking,
-						com.tools20022.repository.entity.Presentation.mmPresentedUndertaking, com.tools20022.repository.entity.UndertakingStatus.mmUndertaking, com.tools20022.repository.entity.UndertakingPartyRole.mmUndertaking,
-						com.tools20022.repository.entity.Demand.mmUndertaking, com.tools20022.repository.entity.Expiry.mmUndertaking, com.tools20022.repository.entity.UndertakingDocument.mmUndertaking,
-						com.tools20022.repository.entity.AmendmentOfUndertaking.mmUndertaking, com.tools20022.repository.entity.UndertakingAmount.mmUndertaking, com.tools20022.repository.entity.UndertakingExtension.mmUndertaking,
-						com.tools20022.repository.entity.ModelForm.mmUndertaking, com.tools20022.repository.entity.UnderlyingTransaction.mmUndertaking, com.tools20022.repository.entity.AutomaticVariation.mmUndertaking);
+				associationDomain_lazy = () -> Arrays.asList(Charges.mmRelatedUndertaking, ElectronicSignature.mmUndertaking, Presentation.mmPresentedUndertaking, UndertakingStatus.mmUndertaking, UndertakingPartyRole.mmUndertaking,
+						Demand.mmUndertaking, Expiry.mmUndertaking, UndertakingDocument.mmUndertaking, AmendmentOfUndertaking.mmUndertaking, UndertakingAmount.mmUndertaking, UndertakingExtension.mmUndertaking, ModelForm.mmUndertaking,
+						UnderlyingTransaction.mmUndertaking, AutomaticVariation.mmUndertaking);
 				derivationElement_lazy = () -> Arrays.asList(ExtendOrPayQuery1.mmUndertakingIdentification, Undertaking1.mmCounterUndertaking, Demand1.mmUndertakingIdentification, UndertakingIssuanceMessage.mmUndertakingDetails,
 						UndertakingAdvice1.mmUndertakingIssuanceMessage, UndertakingAdvice2.mmUndertakingIssuanceMessage, UndertakingNonExtensionRequest1.mmUndertakingIdentification);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Undertaking.mmElectronicSignature, com.tools20022.repository.entity.Undertaking.mmUndertakingStatus,
@@ -1999,7 +2163,7 @@ public class Undertaking {
 		return electronicSignature == null ? Optional.empty() : Optional.of(electronicSignature);
 	}
 
-	public Undertaking setElectronicSignature(com.tools20022.repository.entity.ElectronicSignature electronicSignature) {
+	public Undertaking setElectronicSignature(ElectronicSignature electronicSignature) {
 		this.electronicSignature = electronicSignature;
 		return this;
 	}
@@ -2008,7 +2172,7 @@ public class Undertaking {
 		return undertakingStatus;
 	}
 
-	public Undertaking setUndertakingStatus(com.tools20022.repository.entity.UndertakingStatus undertakingStatus) {
+	public Undertaking setUndertakingStatus(UndertakingStatus undertakingStatus) {
 		this.undertakingStatus = Objects.requireNonNull(undertakingStatus);
 		return this;
 	}
@@ -2026,7 +2190,7 @@ public class Undertaking {
 		return demand == null ? Optional.empty() : Optional.of(demand);
 	}
 
-	public Undertaking setDemand(com.tools20022.repository.entity.Demand demand) {
+	public Undertaking setDemand(Demand demand) {
 		this.demand = demand;
 		return this;
 	}
@@ -2044,7 +2208,7 @@ public class Undertaking {
 		return undertakingAmount;
 	}
 
-	public Undertaking setUndertakingAmount(com.tools20022.repository.entity.UndertakingAmount undertakingAmount) {
+	public Undertaking setUndertakingAmount(UndertakingAmount undertakingAmount) {
 		this.undertakingAmount = Objects.requireNonNull(undertakingAmount);
 		return this;
 	}
@@ -2053,7 +2217,7 @@ public class Undertaking {
 		return expiry;
 	}
 
-	public Undertaking setExpiry(com.tools20022.repository.entity.Expiry expiry) {
+	public Undertaking setExpiry(Expiry expiry) {
 		this.expiry = Objects.requireNonNull(expiry);
 		return this;
 	}
@@ -2062,7 +2226,7 @@ public class Undertaking {
 		return partyRole;
 	}
 
-	public Undertaking setPartyRole(com.tools20022.repository.entity.UndertakingPartyRole partyRole) {
+	public Undertaking setPartyRole(UndertakingPartyRole partyRole) {
 		this.partyRole = Objects.requireNonNull(partyRole);
 		return this;
 	}
@@ -2071,7 +2235,7 @@ public class Undertaking {
 		return undertakingAmendment == null ? Optional.empty() : Optional.of(undertakingAmendment);
 	}
 
-	public Undertaking setUndertakingAmendment(com.tools20022.repository.entity.AmendmentOfUndertaking undertakingAmendment) {
+	public Undertaking setUndertakingAmendment(AmendmentOfUndertaking undertakingAmendment) {
 		this.undertakingAmendment = undertakingAmendment;
 		return this;
 	}
@@ -2080,7 +2244,7 @@ public class Undertaking {
 		return specifiedDocument == null ? Optional.empty() : Optional.of(specifiedDocument);
 	}
 
-	public Undertaking setSpecifiedDocument(com.tools20022.repository.entity.UndertakingDocument specifiedDocument) {
+	public Undertaking setSpecifiedDocument(UndertakingDocument specifiedDocument) {
 		this.specifiedDocument = specifiedDocument;
 		return this;
 	}
@@ -2161,7 +2325,7 @@ public class Undertaking {
 		return underlyingTransaction == null ? Optional.empty() : Optional.of(underlyingTransaction);
 	}
 
-	public Undertaking setUnderlyingTransaction(com.tools20022.repository.entity.UnderlyingTransaction underlyingTransaction) {
+	public Undertaking setUnderlyingTransaction(UnderlyingTransaction underlyingTransaction) {
 		this.underlyingTransaction = underlyingTransaction;
 		return this;
 	}
@@ -2170,7 +2334,7 @@ public class Undertaking {
 		return modelForm == null ? Optional.empty() : Optional.of(modelForm);
 	}
 
-	public Undertaking setModelForm(com.tools20022.repository.entity.ModelForm modelForm) {
+	public Undertaking setModelForm(ModelForm modelForm) {
 		this.modelForm = modelForm;
 		return this;
 	}
@@ -2206,7 +2370,7 @@ public class Undertaking {
 		return predefinedVariation == null ? Optional.empty() : Optional.of(predefinedVariation);
 	}
 
-	public Undertaking setPredefinedVariation(com.tools20022.repository.entity.AutomaticVariation predefinedVariation) {
+	public Undertaking setPredefinedVariation(AutomaticVariation predefinedVariation) {
 		this.predefinedVariation = predefinedVariation;
 		return this;
 	}
@@ -2215,7 +2379,7 @@ public class Undertaking {
 		return charges == null ? Optional.empty() : Optional.of(charges);
 	}
 
-	public Undertaking setCharges(com.tools20022.repository.entity.Charges charges) {
+	public Undertaking setCharges(Charges charges) {
 		this.charges = charges;
 		return this;
 	}
@@ -2224,7 +2388,7 @@ public class Undertaking {
 		return presentation == null ? Optional.empty() : Optional.of(presentation);
 	}
 
-	public Undertaking setPresentation(com.tools20022.repository.entity.Presentation presentation) {
+	public Undertaking setPresentation(Presentation presentation) {
 		this.presentation = presentation;
 		return this;
 	}
@@ -2233,7 +2397,7 @@ public class Undertaking {
 		return undertakingExtension == null ? Optional.empty() : Optional.of(undertakingExtension);
 	}
 
-	public Undertaking setUndertakingExtension(com.tools20022.repository.entity.UndertakingExtension undertakingExtension) {
+	public Undertaking setUndertakingExtension(UndertakingExtension undertakingExtension) {
 		this.undertakingExtension = undertakingExtension;
 		return this;
 	}

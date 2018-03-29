@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ISATransfer22;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -110,7 +111,7 @@ public class ISATransfer25 {
 	 * ISATransfer20.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISATransfer25, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<ISATransfer25, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer25.mmObject();
 			isDerived = false;
@@ -123,9 +124,19 @@ public class ISATransfer25 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(ISATransfer25 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(ISATransfer25 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "PdctTrf", required = true)
-	protected List<com.tools20022.repository.msg.ISATransfer22> productTransfer;
+	protected List<ISATransfer22> productTransfer;
 	/**
 	 * 
 	 <p>
@@ -162,7 +173,7 @@ public class ISATransfer25 {
 	 * ISATransfer20.mmProductTransfer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProductTransfer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISATransfer25, List<ISATransfer22>> mmProductTransfer = new MMMessageAssociationEnd<ISATransfer25, List<ISATransfer22>>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer25.mmObject();
@@ -174,7 +185,17 @@ public class ISATransfer25 {
 			previousVersion_lazy = () -> ISATransfer20.mmProductTransfer;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ISATransfer22.mmObject();
+			type_lazy = () -> ISATransfer22.mmObject();
+		}
+
+		@Override
+		public List<ISATransfer22> getValue(ISATransfer25 obj) {
+			return obj.getProductTransfer();
+		}
+
+		@Override
+		public void setValue(ISATransfer25 obj, List<ISATransfer22> value) {
+			obj.setProductTransfer(value);
 		}
 	};
 
@@ -206,7 +227,7 @@ public class ISATransfer25 {
 		return productTransfer == null ? productTransfer = new ArrayList<>() : productTransfer;
 	}
 
-	public ISATransfer25 setProductTransfer(List<com.tools20022.repository.msg.ISATransfer22> productTransfer) {
+	public ISATransfer25 setProductTransfer(List<ISATransfer22> productTransfer) {
 		this.productTransfer = Objects.requireNonNull(productTransfer);
 		return this;
 	}

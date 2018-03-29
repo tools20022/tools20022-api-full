@@ -138,7 +138,7 @@ public class RiskManagementLimitIdentificationDetails {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RiskManagementLimitIdentificationDetails, Optional<SystemIdentificationChoice>> mmSystemIdentification = new MMMessageAttribute<RiskManagementLimitIdentificationDetails, Optional<SystemIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmObject();
@@ -150,6 +150,16 @@ public class RiskManagementLimitIdentificationDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentificationChoice> getValue(RiskManagementLimitIdentificationDetails obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(RiskManagementLimitIdentificationDetails obj, Optional<SystemIdentificationChoice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -186,7 +196,7 @@ public class RiskManagementLimitIdentificationDetails {
 	 * definition} = "Nature of the risk management limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RiskManagementLimitIdentificationDetails, RiskLimitType1Code> mmType = new MMMessageAttribute<RiskManagementLimitIdentificationDetails, RiskLimitType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmObject();
@@ -198,6 +208,16 @@ public class RiskManagementLimitIdentificationDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RiskLimitType1Code.mmObject();
+		}
+
+		@Override
+		public RiskLimitType1Code getValue(RiskManagementLimitIdentificationDetails obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(RiskManagementLimitIdentificationDetails obj, RiskLimitType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "BilLmtCtrPtyId")
@@ -237,7 +257,7 @@ public class RiskManagementLimitIdentificationDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RiskManagementLimitIdentificationDetails, Optional<MemberIdentificationChoice>> mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute<RiskManagementLimitIdentificationDetails, Optional<MemberIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmObject();
@@ -249,6 +269,16 @@ public class RiskManagementLimitIdentificationDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<MemberIdentificationChoice> getValue(RiskManagementLimitIdentificationDetails obj) {
+			return obj.getBilateralLimitCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(RiskManagementLimitIdentificationDetails obj, Optional<MemberIdentificationChoice> value) {
+			obj.setBilateralLimitCounterpartyIdentification(value.orElse(null));
 		}
 	};
 

@@ -124,7 +124,7 @@ public class PaymentType3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentType3Choice, PaymentType3Code> mmCode = new MMMessageAttribute<PaymentType3Choice, PaymentType3Code>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentType3Choice.mmObject();
@@ -137,6 +137,16 @@ public class PaymentType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentType3Code.mmObject();
+		}
+
+		@Override
+		public PaymentType3Code getValue(PaymentType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PaymentType3Choice obj, PaymentType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class PaymentType3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentType3Choice, Max4AlphaNumericText> mmProprietary = new MMMessageAttribute<PaymentType3Choice, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentType3Choice.mmObject();
@@ -195,6 +205,16 @@ public class PaymentType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(PaymentType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PaymentType3Choice obj, Max4AlphaNumericText value) {
+			obj.setProprietary(value);
 		}
 	};
 

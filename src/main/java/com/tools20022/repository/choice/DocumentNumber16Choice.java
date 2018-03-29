@@ -117,7 +117,7 @@ public class DocumentNumber16Choice {
 	 * definition} = "Message type number of the document referenced."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentNumber16Choice, Exact3NumericText> mmShortNumber = new MMMessageAttribute<DocumentNumber16Choice, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentNumber16Choice.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class DocumentNumber16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(DocumentNumber16Choice obj) {
+			return obj.getShortNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber16Choice obj, Exact3NumericText value) {
+			obj.setShortNumber(value);
 		}
 	};
 	@XmlElement(name = "LngNb", required = true)
@@ -164,7 +174,7 @@ public class DocumentNumber16Choice {
 	 * definition} = "MX Message identifier of the referenced document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentNumber16Choice, ISO20022MessageIdentificationText> mmLongNumber = new MMMessageAttribute<DocumentNumber16Choice, ISO20022MessageIdentificationText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentNumber16Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class DocumentNumber16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISO20022MessageIdentificationText.mmObject();
+		}
+
+		@Override
+		public ISO20022MessageIdentificationText getValue(DocumentNumber16Choice obj) {
+			return obj.getLongNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber16Choice obj, ISO20022MessageIdentificationText value) {
+			obj.setLongNumber(value);
 		}
 	};
 	@XmlElement(name = "PrtryNb", required = true)
@@ -211,7 +231,7 @@ public class DocumentNumber16Choice {
 	 * definition} = "Proprietary document identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentNumber16Choice, GenericIdentification163> mmProprietaryNumber = new MMMessageAttribute<DocumentNumber16Choice, GenericIdentification163>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentNumber16Choice.mmObject();
 			isDerived = false;
@@ -223,6 +243,16 @@ public class DocumentNumber16Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification163.mmObject();
+		}
+
+		@Override
+		public GenericIdentification163 getValue(DocumentNumber16Choice obj) {
+			return obj.getProprietaryNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber16Choice obj, GenericIdentification163 value) {
+			obj.setProprietaryNumber(value);
 		}
 	};
 

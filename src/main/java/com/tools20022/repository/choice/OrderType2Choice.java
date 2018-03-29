@@ -130,7 +130,7 @@ public class OrderType2Choice {
 	 * FundOrderType1Choice.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderType2Choice, FundOrderType7Code> mmType = new MMMessageAttribute<OrderType2Choice, FundOrderType7Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrderType2Choice.mmObject();
@@ -144,6 +144,16 @@ public class OrderType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType7Code.mmObject();
+		}
+
+		@Override
+		public FundOrderType7Code getValue(OrderType2Choice obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(OrderType2Choice obj, FundOrderType7Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -194,7 +204,7 @@ public class OrderType2Choice {
 	 * FundOrderType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderType2Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<OrderType2Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrderType2Choice.mmObject();
@@ -208,6 +218,16 @@ public class OrderType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(OrderType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OrderType2Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

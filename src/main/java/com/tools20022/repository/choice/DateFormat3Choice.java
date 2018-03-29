@@ -96,7 +96,7 @@ public class DateFormat3Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat3Choice, ISODate> mmDate = new MMMessageAttribute<DateFormat3Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat3Choice.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class DateFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DateFormat3Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat3Choice obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -139,7 +149,7 @@ public class DateFormat3Choice {
 	 * definition} = "Indicates that date is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat3Choice, DateType1Code> mmDateCode = new MMMessageAttribute<DateFormat3Choice, DateType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat3Choice.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class DateFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType1Code.mmObject();
+		}
+
+		@Override
+		public DateType1Code getValue(DateFormat3Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat3Choice obj, DateType1Code value) {
+			obj.setDateCode(value);
 		}
 	};
 

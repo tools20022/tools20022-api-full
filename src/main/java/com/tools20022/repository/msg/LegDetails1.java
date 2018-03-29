@@ -113,7 +113,7 @@ public class LegDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRatioQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegDetails1, Optional<PercentageRate>> mmRatioQuantity = new MMMessageAttribute<LegDetails1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Leg.mmRatioQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LegDetails1.mmObject();
@@ -125,6 +125,16 @@ public class LegDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(LegDetails1 obj) {
+			return obj.getRatioQuantity();
+		}
+
+		@Override
+		public void setValue(LegDetails1 obj, Optional<PercentageRate> value) {
+			obj.setRatioQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sd")
@@ -162,7 +172,7 @@ public class LegDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegDetails1, Optional<Side1Code>> mmSide = new MMMessageAttribute<LegDetails1, Optional<Side1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LegDetails1.mmObject();
@@ -174,6 +184,16 @@ public class LegDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Side1Code> getValue(LegDetails1 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(LegDetails1 obj, Optional<Side1Code> value) {
+			obj.setSide(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -211,7 +231,7 @@ public class LegDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegDetails1, Optional<CurrencyCode>> mmCurrency = new MMMessageAttribute<LegDetails1, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Leg.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LegDetails1.mmObject();
@@ -223,6 +243,16 @@ public class LegDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(LegDetails1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(LegDetails1 obj, Optional<CurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 

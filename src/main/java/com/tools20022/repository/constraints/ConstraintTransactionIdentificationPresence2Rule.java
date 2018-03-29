@@ -64,13 +64,17 @@ public class ConstraintTransactionIdentificationPresence2Rule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV05> forSecuritiesTransactionCancellationRequestV05 = new MMConstraint<SecuritiesTransactionCancellationRequestV05>() {
 		{
-			validator = ConstraintTransactionIdentificationPresence2Rule::checkSecuritiesTransactionCancellationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationPresence2Rule";
 			definition = "If AccountOwnerTransactionIdentification is NONREF then at least one of the other references must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresence2Rule.forSecuritiesTransactionCancellationRequestV04;
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicerTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarketInfrastructureTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProcessorTransactionIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/SecuritiesSettlementTransactionIdentification/TransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/SecuritiesFinancingTransactionIdentification/TransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/IntraPositionMovementIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/OtherTransactionIdentification/Identification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV05 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV05(obj);
 		}
 	};
 	/**
@@ -100,12 +104,16 @@ public class ConstraintTransactionIdentificationPresence2Rule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequest002V05> forSecuritiesTransactionCancellationRequest002V05 = new MMConstraint<SecuritiesTransactionCancellationRequest002V05>() {
 		{
-			validator = ConstraintTransactionIdentificationPresence2Rule::checkSecuritiesTransactionCancellationRequest002V05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationPresence2Rule";
 			definition = "If AccountOwnerTransactionIdentification is NONREF then at least one of the other references must be present.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequest002V05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicerTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarketInfrastructureTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProcessorTransactionIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/SecuritiesSettlementTransactionIdentification/TransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/SecuritiesFinancingTransactionIdentification/TransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/IntraPositionMovementIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/OtherTransactionIdentification/Identification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequest002V05 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequest002V05(obj);
 		}
 	};
 	/**
@@ -144,13 +152,17 @@ public class ConstraintTransactionIdentificationPresence2Rule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV04> forSecuritiesTransactionCancellationRequestV04 = new MMConstraint<SecuritiesTransactionCancellationRequestV04>() {
 		{
-			validator = ConstraintTransactionIdentificationPresence2Rule::checkSecuritiesTransactionCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationPresence2Rule";
 			definition = "If AccountOwnerTransactionIdentification is NONREF then at least one of the other references must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionIdentificationPresence2Rule.forSecuritiesTransactionCancellationRequestV05);
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicerTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/MarketInfrastructureTransactionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ProcessorTransactionIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/SecuritiesSettlementTransactionIdentification/TransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/SecuritiesFinancingTransactionIdentification/TransactionIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/IntraPositionMovementIdentification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AccountOwnerTransactionIdentification/OtherTransactionIdentification/Identification</leftOperand><rightOperand>NONREF</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV04 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV04(obj);
 		}
 	};
 

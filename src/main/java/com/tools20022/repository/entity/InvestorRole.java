@@ -28,7 +28,6 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +132,7 @@ public class InvestorRole extends TradePartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIndividualInvestor = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestorRole, RankCode> mmIndividualInvestor = new MMBusinessAttribute<InvestorRole, RankCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
@@ -145,12 +144,14 @@ public class InvestorRole extends TradePartyRole {
 			simpleType_lazy = () -> RankCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestorRole.class.getMethod("getIndividualInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RankCode getValue(InvestorRole obj) {
+			return obj.getIndividualInvestor();
+		}
+
+		@Override
+		public void setValue(InvestorRole obj, RankCode value) {
+			obj.setIndividualInvestor(value);
 		}
 	};
 	protected RankCode corporateInvestor;
@@ -191,7 +192,7 @@ public class InvestorRole extends TradePartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCorporateInvestor = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestorRole, RankCode> mmCorporateInvestor = new MMBusinessAttribute<InvestorRole, RankCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccount33.mmCashAccountDesignation, AccountDesignation1Choice.mmCode);
 			isDerived = false;
@@ -204,12 +205,14 @@ public class InvestorRole extends TradePartyRole {
 			simpleType_lazy = () -> RankCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestorRole.class.getMethod("getCorporateInvestor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RankCode getValue(InvestorRole obj) {
+			return obj.getCorporateInvestor();
+		}
+
+		@Override
+		public void setValue(InvestorRole obj, RankCode value) {
+			obj.setCorporateInvestor(value);
 		}
 	};
 	protected EligibilityCode capacity;
@@ -449,7 +452,7 @@ public class InvestorRole extends TradePartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCapacity = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestorRole, EligibilityCode> mmCapacity = new MMBusinessAttribute<InvestorRole, EligibilityCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestorCapacity1Choice.mmCode, InvestorCapacity1Choice.mmProprietary, SecuritiesTradeDetails25.mmInvestorCapacity, SecuritiesTradeDetails26.mmInvestorCapacity,
 					InvestorCapacity2Choice.mmCode, InvestorCapacity2Choice.mmProprietary, SecuritiesTradeDetails27.mmInvestorCapacity, SecuritiesTradeDetails28.mmInvestorCapacity, SecuritiesTradeDetails6.mmInvestorCapacity,
@@ -477,12 +480,14 @@ public class InvestorRole extends TradePartyRole {
 			simpleType_lazy = () -> EligibilityCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestorRole.class.getMethod("getCapacity", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public EligibilityCode getValue(InvestorRole obj) {
+			return obj.getCapacity();
+		}
+
+		@Override
+		public void setValue(InvestorRole obj, EligibilityCode value) {
+			obj.setCapacity(value);
 		}
 	};
 	protected YesNoIndicator investorProtectionAssociationMembership;
@@ -524,7 +529,7 @@ public class InvestorRole extends TradePartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInvestorProtectionAssociationMembership = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestorRole, YesNoIndicator> mmInvestorProtectionAssociationMembership = new MMBusinessAttribute<InvestorRole, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ConfirmationPartyDetails6.mmInvestorProtectionAssociationMembership, ConfirmationPartyDetails5.mmInvestorProtectionAssociationMembership);
 			isDerived = false;
@@ -537,12 +542,14 @@ public class InvestorRole extends TradePartyRole {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestorRole.class.getMethod("getInvestorProtectionAssociationMembership", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(InvestorRole obj) {
+			return obj.getInvestorProtectionAssociationMembership();
+		}
+
+		@Override
+		public void setValue(InvestorRole obj, YesNoIndicator value) {
+			obj.setInvestorProtectionAssociationMembership(value);
 		}
 	};
 	protected InvestorTypeCode type;
@@ -586,28 +593,30 @@ public class InvestorRole extends TradePartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies whether the investor is a corporate or an individual."</li>
+	 * "Specifies whether the investor is a corporate or an individual"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestorRole, InvestorTypeCode> mmType = new MMBusinessAttribute<InvestorRole, InvestorTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestorType2Choice.mmCode, InvestorType2Choice.mmProprietary, InvestorType3Choice.mmCode, InvestorType3Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
-			definition = "Specifies whether the investor is a corporate or an individual.";
+			definition = "Specifies whether the investor is a corporate or an individual";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestorTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestorRole.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvestorTypeCode getValue(InvestorRole obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InvestorRole obj, InvestorTypeCode value) {
+			obj.setType(value);
 		}
 	};
 

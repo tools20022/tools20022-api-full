@@ -27,7 +27,6 @@ import com.tools20022.repository.choice.Status24Choice;
 import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -196,7 +195,7 @@ public class OrderInstructionStatusReportV04 {
 	 * OrderInstructionStatusReportV03.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderInstructionStatusReportV04, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<OrderInstructionStatusReportV04, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,12 +207,14 @@ public class OrderInstructionStatusReportV04 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderInstructionStatusReportV04.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(OrderInstructionStatusReportV04 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OrderInstructionStatusReportV04 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ref")
@@ -243,7 +244,7 @@ public class OrderInstructionStatusReportV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderInstructionStatusReportV04, Optional<References61Choice>> mmReference = new MMMessageBuildingBlock<OrderInstructionStatusReportV04, Optional<References61Choice>>() {
 		{
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,12 +255,14 @@ public class OrderInstructionStatusReportV04 {
 			complexType_lazy = () -> References61Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderInstructionStatusReportV04.class.getMethod("getReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<References61Choice> getValue(OrderInstructionStatusReportV04 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(OrderInstructionStatusReportV04 obj, Optional<References61Choice> value) {
+			obj.setReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsRpt", required = true)
@@ -287,7 +290,7 @@ public class OrderInstructionStatusReportV04 {
 	 * definition} = "Status of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderInstructionStatusReportV04, Status24Choice> mmStatusReport = new MMMessageBuildingBlock<OrderInstructionStatusReportV04, Status24Choice>() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,12 +301,14 @@ public class OrderInstructionStatusReportV04 {
 			complexType_lazy = () -> Status24Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderInstructionStatusReportV04.class.getMethod("getStatusReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Status24Choice getValue(OrderInstructionStatusReportV04 obj) {
+			return obj.getStatusReport();
+		}
+
+		@Override
+		public void setValue(OrderInstructionStatusReportV04 obj, Status24Choice value) {
+			obj.setStatusReport(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -337,7 +342,7 @@ public class OrderInstructionStatusReportV04 {
 	 * OrderInstructionStatusReportV03.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderInstructionStatusReportV04, List<Extension1>> mmExtension = new MMMessageBuildingBlock<OrderInstructionStatusReportV04, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -348,12 +353,14 @@ public class OrderInstructionStatusReportV04 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderInstructionStatusReportV04.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(OrderInstructionStatusReportV04 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(OrderInstructionStatusReportV04 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

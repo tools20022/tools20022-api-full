@@ -98,7 +98,7 @@ public class FrequencyCodeAndDSSCode1Choice {
 	 * definition} = "Frequency expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequencyAsCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrequencyCodeAndDSSCode1Choice, EventFrequency1Code> mmFrequencyAsCode = new MMMessageAttribute<FrequencyCodeAndDSSCode1Choice, EventFrequency1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FrequencyCodeAndDSSCode1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class FrequencyCodeAndDSSCode1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
+		}
+
+		@Override
+		public EventFrequency1Code getValue(FrequencyCodeAndDSSCode1Choice obj) {
+			return obj.getFrequencyAsCode();
+		}
+
+		@Override
+		public void setValue(FrequencyCodeAndDSSCode1Choice obj, EventFrequency1Code value) {
+			obj.setFrequencyAsCode(value);
 		}
 	};
 	@XmlElement(name = "FrqcyAsDSS", required = true)
@@ -143,7 +153,7 @@ public class FrequencyCodeAndDSSCode1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequencyAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FrequencyCodeAndDSSCode1Choice, GenericIdentification7> mmFrequencyAsDSS = new MMMessageAttribute<FrequencyCodeAndDSSCode1Choice, GenericIdentification7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FrequencyCodeAndDSSCode1Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class FrequencyCodeAndDSSCode1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification7.mmObject();
+		}
+
+		@Override
+		public GenericIdentification7 getValue(FrequencyCodeAndDSSCode1Choice obj) {
+			return obj.getFrequencyAsDSS();
+		}
+
+		@Override
+		public void setValue(FrequencyCodeAndDSSCode1Choice obj, GenericIdentification7 value) {
+			obj.setFrequencyAsDSS(value);
 		}
 	};
 

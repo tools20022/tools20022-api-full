@@ -57,11 +57,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<RequestForOrderStatusReportV04> forRequestForOrderStatusReportV04 = new MMConstraint<RequestForOrderStatusReportV04>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkRequestForOrderStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> RequestForOrderStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestForOrderStatusReportV04 obj) throws Exception {
+			checkRequestForOrderStatusReportV04(obj);
 		}
 	};
 	/**
@@ -87,11 +91,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<OrderCancellationStatusReportV04> forOrderCancellationStatusReportV04 = new MMConstraint<OrderCancellationStatusReportV04>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkOrderCancellationStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used to reference an order cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> OrderCancellationStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderCancellationStatusReportV04 obj) throws Exception {
+			checkOrderCancellationStatusReportV04(obj);
 		}
 	};
 	/**
@@ -122,12 +130,16 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV04> forOrderInstructionStatusReportV04 = new MMConstraint<OrderInstructionStatusReportV04>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkOrderInstructionStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "Reference/OtherReference should be used to reference an order instruction sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV03;
 			owner_lazy = () -> OrderInstructionStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderInstructionStatusReportV04 obj) throws Exception {
+			checkOrderInstructionStatusReportV04(obj);
 		}
 	};
 	/**
@@ -153,11 +165,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<RequestForOrderConfirmationStatusReportV02> forRequestForOrderConfirmationStatusReportV02 = new MMConstraint<RequestForOrderConfirmationStatusReportV02>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkRequestForOrderConfirmationStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> RequestForOrderConfirmationStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestForOrderConfirmationStatusReportV02 obj) throws Exception {
+			checkRequestForOrderConfirmationStatusReportV02(obj);
 		}
 	};
 	/**
@@ -183,11 +199,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<OrderConfirmationStatusReportV02> forOrderConfirmationStatusReportV02 = new MMConstraint<OrderConfirmationStatusReportV02>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkOrderConfirmationStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used to reference an order confirmation cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> OrderConfirmationStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderConfirmationStatusReportV02 obj) throws Exception {
+			checkOrderConfirmationStatusReportV02(obj);
 		}
 	};
 	/**
@@ -213,11 +233,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<OrderCancellationStatusReportV03> forOrderCancellationStatusReportV03 = new MMConstraint<OrderCancellationStatusReportV03>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkOrderCancellationStatusReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used to reference an order cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> OrderCancellationStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderCancellationStatusReportV03 obj) throws Exception {
+			checkOrderCancellationStatusReportV03(obj);
 		}
 	};
 	/**
@@ -243,11 +267,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<OrderConfirmationStatusReportV01> forOrderConfirmationStatusReportV01 = new MMConstraint<OrderConfirmationStatusReportV01>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkOrderConfirmationStatusReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> OrderConfirmationStatusReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderConfirmationStatusReportV01 obj) throws Exception {
+			checkOrderConfirmationStatusReportV01(obj);
 		}
 	};
 	/**
@@ -281,12 +309,16 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV03> forOrderInstructionStatusReportV03 = new MMConstraint<OrderInstructionStatusReportV03>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkOrderInstructionStatusReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forOrderInstructionStatusReportV04);
 			owner_lazy = () -> OrderInstructionStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderInstructionStatusReportV03 obj) throws Exception {
+			checkOrderInstructionStatusReportV03(obj);
 		}
 	};
 	/**
@@ -312,11 +344,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV02> forOrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkOrderInstructionStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email'.";
 			owner_lazy = () -> OrderInstructionStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderInstructionStatusReportV02 obj) throws Exception {
+			checkOrderInstructionStatusReportV02(obj);
 		}
 	};
 	/**
@@ -342,11 +378,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference> forAccountManagementMessageReference = new MMConstraint<AccountManagementMessageReference>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkAccountManagementMessageReference;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> AccountManagementMessageReference.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference obj) throws Exception {
+			checkAccountManagementMessageReference(obj);
 		}
 	};
 	/**
@@ -380,12 +420,16 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference1> forAccountManagementMessageReference1 = new MMConstraint<AccountManagementMessageReference1>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkAccountManagementMessageReference1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forAccountManagementMessageReference2);
 			owner_lazy = () -> AccountManagementMessageReference1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference1 obj) throws Exception {
+			checkAccountManagementMessageReference1(obj);
 		}
 	};
 	/**
@@ -411,11 +455,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference5> forMessageAndBusinessReference5 = new MMConstraint<MessageAndBusinessReference5>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkMessageAndBusinessReference5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> MessageAndBusinessReference5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference5 obj) throws Exception {
+			checkMessageAndBusinessReference5(obj);
 		}
 	};
 	/**
@@ -441,11 +489,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference2> forMessageAndBusinessReference2 = new MMConstraint<MessageAndBusinessReference2>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkMessageAndBusinessReference2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used for orders sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> MessageAndBusinessReference2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference2 obj) throws Exception {
+			checkMessageAndBusinessReference2(obj);
 		}
 	};
 	/**
@@ -471,11 +523,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference4> forMessageAndBusinessReference4 = new MMConstraint<MessageAndBusinessReference4>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkMessageAndBusinessReference4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> MessageAndBusinessReference4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference4 obj) throws Exception {
+			checkMessageAndBusinessReference4(obj);
 		}
 	};
 	/**
@@ -514,13 +570,17 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference2> forAccountManagementMessageReference2 = new MMConstraint<AccountManagementMessageReference2>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkAccountManagementMessageReference2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "LinkedReference/OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \r\nIf LinkedReference/OtherReference is present, LinkedReference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forAccountManagementMessageReference3);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forAccountManagementMessageReference1;
 			owner_lazy = () -> AccountManagementMessageReference2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference2 obj) throws Exception {
+			checkAccountManagementMessageReference2(obj);
 		}
 	};
 	/**
@@ -551,12 +611,16 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference3> forAccountManagementMessageReference3 = new MMConstraint<AccountManagementMessageReference3>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkAccountManagementMessageReference3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "LinkedReference/OtherReference should be used for an account opening or an account modification instruction sent by proprietary way or for system references. \r\nIf LinkedReference/OtherReference is present, LinkedReference/OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forAccountManagementMessageReference2;
 			owner_lazy = () -> AccountManagementMessageReference3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference3 obj) throws Exception {
+			checkAccountManagementMessageReference3(obj);
 		}
 	};
 	/**
@@ -582,11 +646,15 @@ public class ConstraintOtherReferenceGuideline {
 	 */
 	public static final MMConstraint<LinkedMessage4Choice> forLinkedMessage4Choice = new MMConstraint<LinkedMessage4Choice>() {
 		{
-			validator = ConstraintOtherReferenceGuideline::checkLinkedMessage4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
 			definition = "OtherReference should be used for an account opening or an account modification instruction sent in a proprietary way or for system references. \r\nIf OtherReference is present, OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'.";
 			owner_lazy = () -> LinkedMessage4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LinkedMessage4Choice obj) throws Exception {
+			checkLinkedMessage4Choice(obj);
 		}
 	};
 

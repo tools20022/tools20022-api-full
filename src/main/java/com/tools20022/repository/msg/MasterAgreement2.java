@@ -115,7 +115,7 @@ public class MasterAgreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MasterAgreement2, Optional<Max50Text>> mmType = new MMMessageAttribute<MasterAgreement2, Optional<Max50Text>>() {
 		{
 			businessElementTrace_lazy = () -> MasterAgreement.mmMasterAgreementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MasterAgreement2.mmObject();
@@ -127,6 +127,16 @@ public class MasterAgreement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max50Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max50Text> getValue(MasterAgreement2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MasterAgreement2 obj, Optional<Max50Text> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -166,7 +176,7 @@ public class MasterAgreement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MasterAgreement2, Optional<ISORestrictedYear>> mmVersion = new MMMessageAttribute<MasterAgreement2, Optional<ISORestrictedYear>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MasterAgreement2.mmObject();
@@ -178,6 +188,16 @@ public class MasterAgreement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISORestrictedYear.mmObject();
+		}
+
+		@Override
+		public Optional<ISORestrictedYear> getValue(MasterAgreement2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(MasterAgreement2 obj, Optional<ISORestrictedYear> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 

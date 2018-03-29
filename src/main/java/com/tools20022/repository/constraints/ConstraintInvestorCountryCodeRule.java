@@ -53,11 +53,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties2> forOtherParties2 = new MMConstraint<OtherParties2>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties2 obj) throws Exception {
+			checkOtherParties2(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties8> forOtherParties8 = new MMConstraint<OtherParties8>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties8 obj) throws Exception {
+			checkOtherParties8(obj);
 		}
 	};
 	/**
@@ -119,12 +127,16 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties19> forOtherParties19 = new MMConstraint<OtherParties19>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties27);
 			owner_lazy = () -> OtherParties19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties19 obj) throws Exception {
+			checkOtherParties19(obj);
 		}
 	};
 	/**
@@ -149,11 +161,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties24> forOtherParties24 = new MMConstraint<OtherParties24>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties24 obj) throws Exception {
+			checkOtherParties24(obj);
 		}
 	};
 	/**
@@ -178,11 +194,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties7> forOtherParties7 = new MMConstraint<OtherParties7>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties7 obj) throws Exception {
+			checkOtherParties7(obj);
 		}
 	};
 	/**
@@ -207,11 +227,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties9> forOtherParties9 = new MMConstraint<OtherParties9>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties9 obj) throws Exception {
+			checkOtherParties9(obj);
 		}
 	};
 	/**
@@ -236,11 +260,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties14> forOtherParties14 = new MMConstraint<OtherParties14>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties14 obj) throws Exception {
+			checkOtherParties14(obj);
 		}
 	};
 	/**
@@ -265,11 +293,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties15> forOtherParties15 = new MMConstraint<OtherParties15>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties15 obj) throws Exception {
+			checkOtherParties15(obj);
 		}
 	};
 	/**
@@ -295,11 +327,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails5> forTransactionDetails5 = new MMConstraint<TransactionDetails5>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails5 obj) throws Exception {
+			checkTransactionDetails5(obj);
 		}
 	};
 	/**
@@ -325,11 +361,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails9> forTransactionDetails9 = new MMConstraint<TransactionDetails9>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails9 obj) throws Exception {
+			checkTransactionDetails9(obj);
 		}
 	};
 	/**
@@ -355,11 +395,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails22> forTransactionDetails22 = new MMConstraint<TransactionDetails22>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails22 obj) throws Exception {
+			checkTransactionDetails22(obj);
 		}
 	};
 	/**
@@ -385,11 +429,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails23> forTransactionDetails23 = new MMConstraint<TransactionDetails23>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails23 obj) throws Exception {
+			checkTransactionDetails23(obj);
 		}
 	};
 	/**
@@ -415,11 +463,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails36> forTransactionDetails36 = new MMConstraint<TransactionDetails36>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails36 obj) throws Exception {
+			checkTransactionDetails36(obj);
 		}
 	};
 	/**
@@ -445,11 +497,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails47> forTransactionDetails47 = new MMConstraint<TransactionDetails47>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails47 obj) throws Exception {
+			checkTransactionDetails47(obj);
 		}
 	};
 	/**
@@ -483,12 +539,16 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails53> forTransactionDetails53 = new MMConstraint<TransactionDetails53>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails61);
 			owner_lazy = () -> TransactionDetails53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails53 obj) throws Exception {
+			checkTransactionDetails53(obj);
 		}
 	};
 	/**
@@ -514,11 +574,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails58> forTransactionDetails58 = new MMConstraint<TransactionDetails58>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails58 obj) throws Exception {
+			checkTransactionDetails58(obj);
 		}
 	};
 	/**
@@ -543,11 +607,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties4> forOtherParties4 = new MMConstraint<OtherParties4>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties4 obj) throws Exception {
+			checkOtherParties4(obj);
 		}
 	};
 	/**
@@ -580,12 +648,16 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties10> forOtherParties10 = new MMConstraint<OtherParties10>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties26);
 			owner_lazy = () -> OtherParties10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties10 obj) throws Exception {
+			checkOtherParties10(obj);
 		}
 	};
 	/**
@@ -610,11 +682,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties3> forOtherParties3 = new MMConstraint<OtherParties3>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties3 obj) throws Exception {
+			checkOtherParties3(obj);
 		}
 	};
 	/**
@@ -647,12 +723,16 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties11> forOtherParties11 = new MMConstraint<OtherParties11>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties28);
 			owner_lazy = () -> OtherParties11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties11 obj) throws Exception {
+			checkOtherParties11(obj);
 		}
 	};
 	/**
@@ -677,11 +757,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties12> forOtherParties12 = new MMConstraint<OtherParties12>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties12 obj) throws Exception {
+			checkOtherParties12(obj);
 		}
 	};
 	/**
@@ -706,11 +790,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties5> forOtherParties5 = new MMConstraint<OtherParties5>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties5 obj) throws Exception {
+			checkOtherParties5(obj);
 		}
 	};
 	/**
@@ -735,11 +823,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties16> forOtherParties16 = new MMConstraint<OtherParties16>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties16 obj) throws Exception {
+			checkOtherParties16(obj);
 		}
 	};
 	/**
@@ -764,11 +856,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties17> forOtherParties17 = new MMConstraint<OtherParties17>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties17 obj) throws Exception {
+			checkOtherParties17(obj);
 		}
 	};
 	/**
@@ -793,11 +889,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties6> forOtherParties6 = new MMConstraint<OtherParties6>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties6 obj) throws Exception {
+			checkOtherParties6(obj);
 		}
 	};
 	/**
@@ -822,11 +922,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties13> forOtherParties13 = new MMConstraint<OtherParties13>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties13 obj) throws Exception {
+			checkOtherParties13(obj);
 		}
 	};
 	/**
@@ -865,13 +969,17 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails61> forTransactionDetails61 = new MMConstraint<TransactionDetails61>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails70);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails53;
 			owner_lazy = () -> TransactionDetails61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails61 obj) throws Exception {
+			checkTransactionDetails61(obj);
 		}
 	};
 	/**
@@ -897,11 +1005,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails66> forTransactionDetails66 = new MMConstraint<TransactionDetails66>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails66 obj) throws Exception {
+			checkTransactionDetails66(obj);
 		}
 	};
 	/**
@@ -940,13 +1052,17 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails70> forTransactionDetails70 = new MMConstraint<TransactionDetails70>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails79);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails61;
 			owner_lazy = () -> TransactionDetails70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails70 obj) throws Exception {
+			checkTransactionDetails70(obj);
 		}
 	};
 	/**
@@ -972,11 +1088,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails71> forTransactionDetails71 = new MMConstraint<TransactionDetails71>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails71 obj) throws Exception {
+			checkTransactionDetails71(obj);
 		}
 	};
 	/**
@@ -1006,12 +1126,16 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties27> forOtherParties27 = new MMConstraint<OtherParties27>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties19;
 			owner_lazy = () -> OtherParties27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties27 obj) throws Exception {
+			checkOtherParties27(obj);
 		}
 	};
 	/**
@@ -1050,13 +1174,17 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails79> forTransactionDetails79 = new MMConstraint<TransactionDetails79>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails97);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails70;
 			owner_lazy = () -> TransactionDetails79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails79 obj) throws Exception {
+			checkTransactionDetails79(obj);
 		}
 	};
 	/**
@@ -1094,13 +1222,17 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties26> forOtherParties26 = new MMConstraint<OtherParties26>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties30);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties10;
 			owner_lazy = () -> OtherParties26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties26 obj) throws Exception {
+			checkOtherParties26(obj);
 		}
 	};
 	/**
@@ -1138,13 +1270,17 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties28> forOtherParties28 = new MMConstraint<OtherParties28>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties11;
 			owner_lazy = () -> OtherParties28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties28 obj) throws Exception {
+			checkOtherParties28(obj);
 		}
 	};
 	/**
@@ -1169,11 +1305,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties29> forOtherParties29 = new MMConstraint<OtherParties29>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> OtherParties29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties29 obj) throws Exception {
+			checkOtherParties29(obj);
 		}
 	};
 	/**
@@ -1199,11 +1339,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails87> forTransactionDetails87 = new MMConstraint<TransactionDetails87>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails87;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails87.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails87 obj) throws Exception {
+			checkTransactionDetails87(obj);
 		}
 	};
 	/**
@@ -1233,12 +1377,16 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties31> forOtherParties31 = new MMConstraint<OtherParties31>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties28;
 			owner_lazy = () -> OtherParties31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties31 obj) throws Exception {
+			checkOtherParties31(obj);
 		}
 	};
 	/**
@@ -1268,12 +1416,16 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<OtherParties30> forOtherParties30 = new MMConstraint<OtherParties30>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkOtherParties30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties26;
 			owner_lazy = () -> OtherParties30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties30 obj) throws Exception {
+			checkOtherParties30(obj);
 		}
 	};
 	/**
@@ -1312,13 +1464,17 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails97> forTransactionDetails97 = new MMConstraint<TransactionDetails97>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails97;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is present with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails105);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails79;
 			owner_lazy = () -> TransactionDetails97.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails97 obj) throws Exception {
+			checkTransactionDetails97(obj);
 		}
 	};
 	/**
@@ -1344,11 +1500,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails100> forTransactionDetails100 = new MMConstraint<TransactionDetails100>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails100;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails100.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails100 obj) throws Exception {
+			checkTransactionDetails100(obj);
 		}
 	};
 	/**
@@ -1379,12 +1539,16 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails105> forTransactionDetails105 = new MMConstraint<TransactionDetails105>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails105;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is present with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails97;
 			owner_lazy = () -> TransactionDetails105.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails105 obj) throws Exception {
+			checkTransactionDetails105(obj);
 		}
 	};
 	/**
@@ -1410,11 +1574,15 @@ public class ConstraintInvestorCountryCodeRule {
 	 */
 	public static final MMConstraint<TransactionDetails110> forTransactionDetails110 = new MMConstraint<TransactionDetails110>() {
 		{
-			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails110;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails110.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails110 obj) throws Exception {
+			checkTransactionDetails110(obj);
 		}
 	};
 

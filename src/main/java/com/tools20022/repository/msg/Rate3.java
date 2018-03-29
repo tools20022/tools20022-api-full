@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.RateType4Choice;
 import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyAndAmountRange2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class Rate3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Rate3, RateType4Choice> mmType = new MMMessageAssociationEnd<Rate3, RateType4Choice>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Rate3.mmObject();
@@ -127,6 +128,16 @@ public class Rate3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateType4Choice.mmObject();
+		}
+
+		@Override
+		public RateType4Choice getValue(Rate3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Rate3 obj, RateType4Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "VldtyRg")
@@ -169,7 +180,7 @@ public class Rate3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidityRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Rate3, Optional<CurrencyAndAmountRange2>> mmValidityRange = new MMMessageAssociationEnd<Rate3, Optional<CurrencyAndAmountRange2>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateValidityRange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Rate3.mmObject();
@@ -182,7 +193,17 @@ public class Rate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyAndAmountRange2.mmObject();
+			type_lazy = () -> CurrencyAndAmountRange2.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmountRange2> getValue(Rate3 obj) {
+			return obj.getValidityRange();
+		}
+
+		@Override
+		public void setValue(Rate3 obj, Optional<CurrencyAndAmountRange2> value) {
+			obj.setValidityRange(value.orElse(null));
 		}
 	};
 
@@ -214,7 +235,7 @@ public class Rate3 {
 		return validityRange == null ? Optional.empty() : Optional.of(validityRange);
 	}
 
-	public Rate3 setValidityRange(com.tools20022.repository.msg.CurrencyAndAmountRange2 validityRange) {
+	public Rate3 setValidityRange(CurrencyAndAmountRange2 validityRange) {
 		this.validityRange = validityRange;
 		return this;
 	}

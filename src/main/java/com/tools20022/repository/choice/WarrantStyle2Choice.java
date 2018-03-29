@@ -121,7 +121,7 @@ public class WarrantStyle2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WarrantStyle2Choice, WarrantStyle1Code> mmCode = new MMMessageAttribute<WarrantStyle2Choice, WarrantStyle1Code>() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.WarrantStyle2Choice.mmObject();
@@ -134,6 +134,16 @@ public class WarrantStyle2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WarrantStyle1Code.mmObject();
+		}
+
+		@Override
+		public WarrantStyle1Code getValue(WarrantStyle2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(WarrantStyle2Choice obj, WarrantStyle1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -178,7 +188,7 @@ public class WarrantStyle2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<WarrantStyle2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<WarrantStyle2Choice, GenericIdentification40>() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.WarrantStyle2Choice.mmObject();
@@ -192,6 +202,16 @@ public class WarrantStyle2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(WarrantStyle2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(WarrantStyle2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

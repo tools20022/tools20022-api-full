@@ -116,7 +116,7 @@ public class GrossDividendRateFormat32Choice {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat32Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<GrossDividendRateFormat32Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat32Choice.mmObject();
@@ -129,6 +129,16 @@ public class GrossDividendRateFormat32Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(GrossDividendRateFormat32Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat32Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtAndRateSts", required = true)
@@ -164,7 +174,7 @@ public class GrossDividendRateFormat32Choice {
 	 * definition} = "Specifies an amount and a rate status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GrossDividendRateFormat32Choice, AmountAndRateStatus2> mmAmountAndRateStatus = new MMMessageAssociationEnd<GrossDividendRateFormat32Choice, AmountAndRateStatus2>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat32Choice.mmObject();
@@ -177,6 +187,16 @@ public class GrossDividendRateFormat32Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndRateStatus2.mmObject();
+		}
+
+		@Override
+		public AmountAndRateStatus2 getValue(GrossDividendRateFormat32Choice obj) {
+			return obj.getAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat32Choice obj, AmountAndRateStatus2 value) {
+			obj.setAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -211,7 +231,7 @@ public class GrossDividendRateFormat32Choice {
 	 * definition} = "Specifies different formats for the gross dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GrossDividendRateFormat32Choice, RateTypeAndAmountAndStatus44> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<GrossDividendRateFormat32Choice, RateTypeAndAmountAndStatus44>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat32Choice.mmObject();
 			isDerived = false;
@@ -224,6 +244,16 @@ public class GrossDividendRateFormat32Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus44.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus44 getValue(GrossDividendRateFormat32Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat32Choice obj, RateTypeAndAmountAndStatus44 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

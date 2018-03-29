@@ -50,11 +50,15 @@ public class ConstraintProgressReportAndPeriodIntervalRule {
 	 */
 	public static final MMConstraint<List1> forList1 = new MMConstraint<List1>() {
 		{
-			validator = ConstraintProgressReportAndPeriodIntervalRule::checkList1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressReportAndPeriodIntervalRule";
 			definition = "ProgressPeriodInterval may only be present if ProgressReport contains the value \"true\" or \"1\" (Yes).";
 			owner_lazy = () -> List1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(List1 obj) throws Exception {
+			checkList1(obj);
 		}
 	};
 

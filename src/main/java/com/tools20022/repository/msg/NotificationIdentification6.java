@@ -118,7 +118,7 @@ public class NotificationIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationIdentification6, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<NotificationIdentification6, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCorporateActionNotificationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification6.mmObject();
@@ -131,6 +131,16 @@ public class NotificationIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(NotificationIdentification6 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification6 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -173,7 +183,7 @@ public class NotificationIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NotificationIdentification6, Optional<DateAndDateTime2Choice>> mmCreationDateTime = new MMMessageAttribute<NotificationIdentification6, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmCreationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationIdentification6.mmObject();
@@ -186,6 +196,16 @@ public class NotificationIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(NotificationIdentification6 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(NotificationIdentification6 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 

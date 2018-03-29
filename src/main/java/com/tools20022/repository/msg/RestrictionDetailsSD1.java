@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -101,7 +102,7 @@ public class RestrictionDetailsSD1 {
 	 * definition} = "Type of restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRestrictionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RestrictionDetailsSD1, GenericIdentification36> mmRestrictionType = new MMMessageAssociationEnd<RestrictionDetailsSD1, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RestrictionDetailsSD1.mmObject();
 			isDerived = false;
@@ -112,7 +113,17 @@ public class RestrictionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
+			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(RestrictionDetailsSD1 obj) {
+			return obj.getRestrictionType();
+		}
+
+		@Override
+		public void setValue(RestrictionDetailsSD1 obj, GenericIdentification36 value) {
+			obj.setRestrictionType(value);
 		}
 	};
 	@XmlElement(name = "FsclDmcl", required = true)
@@ -145,7 +156,7 @@ public class RestrictionDetailsSD1 {
 	 * "Country in which the account owner has one's fiscal domicile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFiscalDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RestrictionDetailsSD1, CountryCode> mmFiscalDomicile = new MMMessageAttribute<RestrictionDetailsSD1, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RestrictionDetailsSD1.mmObject();
 			isDerived = false;
@@ -156,6 +167,16 @@ public class RestrictionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(RestrictionDetailsSD1 obj) {
+			return obj.getFiscalDomicile();
+		}
+
+		@Override
+		public void setValue(RestrictionDetailsSD1 obj, CountryCode value) {
+			obj.setFiscalDomicile(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -187,7 +208,7 @@ public class RestrictionDetailsSD1 {
 	 * definition} = "Reference to the applicable restriction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RestrictionDetailsSD1, Max35Text> mmIdentification = new MMMessageAttribute<RestrictionDetailsSD1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RestrictionDetailsSD1.mmObject();
 			isDerived = false;
@@ -198,6 +219,16 @@ public class RestrictionDetailsSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RestrictionDetailsSD1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(RestrictionDetailsSD1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 
@@ -219,7 +250,7 @@ public class RestrictionDetailsSD1 {
 		return restrictionType;
 	}
 
-	public RestrictionDetailsSD1 setRestrictionType(com.tools20022.repository.msg.GenericIdentification36 restrictionType) {
+	public RestrictionDetailsSD1 setRestrictionType(GenericIdentification36 restrictionType) {
 		this.restrictionType = Objects.requireNonNull(restrictionType);
 		return this;
 	}

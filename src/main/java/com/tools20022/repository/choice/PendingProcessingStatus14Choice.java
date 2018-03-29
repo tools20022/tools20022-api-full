@@ -117,7 +117,7 @@ public class PendingProcessingStatus14Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingStatus14Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<PendingProcessingStatus14Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingStatus14Choice.mmObject();
@@ -130,6 +130,16 @@ public class PendingProcessingStatus14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingProcessingStatus14Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingProcessingStatus14Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -169,7 +179,7 @@ public class PendingProcessingStatus14Choice {
 	 * definition} = "Specifies the reason of the pending processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingProcessingStatus14Choice, List<PendingProcessingReason11>> mmReason = new MMMessageAssociationEnd<PendingProcessingStatus14Choice, List<PendingProcessingReason11>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingProcessingStatus14Choice.mmObject();
@@ -182,6 +192,16 @@ public class PendingProcessingStatus14Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingProcessingReason11.mmObject();
+		}
+
+		@Override
+		public List<PendingProcessingReason11> getValue(PendingProcessingStatus14Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingProcessingStatus14Choice obj, List<PendingProcessingReason11> value) {
+			obj.setReason(value);
 		}
 	};
 

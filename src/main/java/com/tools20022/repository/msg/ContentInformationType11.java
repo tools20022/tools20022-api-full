@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.*;
 import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AuthenticatedData4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -174,7 +175,7 @@ public class ContentInformationType11 {
 	 * ContentInformationType8.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContentInformationType11, ContentType2Code> mmContentType = new MMMessageAttribute<ContentInformationType11, ContentType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.mmObject();
 			isDerived = false;
@@ -188,9 +189,19 @@ public class ContentInformationType11 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
 		}
+
+		@Override
+		public ContentType2Code getValue(ContentInformationType11 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(ContentInformationType11 obj, ContentType2Code value) {
+			obj.setContentType(value);
+		}
 	};
 	@XmlElement(name = "AuthntcdData")
-	protected List<com.tools20022.repository.msg.AuthenticatedData4> authenticatedData;
+	protected List<AuthenticatedData4> authenticatedData;
 	/**
 	 * 
 	 <p>
@@ -230,7 +241,7 @@ public class ContentInformationType11 {
 	 * ContentInformationType8.mmAuthenticatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType11, List<AuthenticatedData4>> mmAuthenticatedData = new MMMessageAssociationEnd<ContentInformationType11, List<AuthenticatedData4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType11.mmObject();
 			isDerived = false;
@@ -242,7 +253,17 @@ public class ContentInformationType11 {
 			previousVersion_lazy = () -> ContentInformationType8.mmAuthenticatedData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
+			type_lazy = () -> AuthenticatedData4.mmObject();
+		}
+
+		@Override
+		public List<AuthenticatedData4> getValue(ContentInformationType11 obj) {
+			return obj.getAuthenticatedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType11 obj, List<AuthenticatedData4> value) {
+			obj.setAuthenticatedData(value);
 		}
 	};
 
@@ -278,7 +299,7 @@ public class ContentInformationType11 {
 		return authenticatedData == null ? authenticatedData = new ArrayList<>() : authenticatedData;
 	}
 
-	public ContentInformationType11 setAuthenticatedData(List<com.tools20022.repository.msg.AuthenticatedData4> authenticatedData) {
+	public ContentInformationType11 setAuthenticatedData(List<AuthenticatedData4> authenticatedData) {
 		this.authenticatedData = Objects.requireNonNull(authenticatedData);
 		return this;
 	}

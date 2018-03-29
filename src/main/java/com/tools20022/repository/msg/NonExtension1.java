@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -127,7 +128,7 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonExtension1, Optional<Number>> mmNotificationPeriod = new MMMessageAttribute<NonExtension1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingExtension.mmNonExtensionNoticePeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonExtension1.mmObject();
@@ -139,6 +140,16 @@ public class NonExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(NonExtension1 obj) {
+			return obj.getNotificationPeriod();
+		}
+
+		@Override
+		public void setValue(NonExtension1 obj, Optional<Number> value) {
+			obj.setNotificationPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtfctnMtd")
@@ -177,7 +188,7 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonExtension1, Optional<CommunicationMethod1Choice>> mmNotificationMethod = new MMMessageAttribute<NonExtension1, Optional<CommunicationMethod1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonExtension1.mmObject();
@@ -189,6 +200,16 @@ public class NonExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CommunicationMethod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CommunicationMethod1Choice> getValue(NonExtension1 obj) {
+			return obj.getNotificationMethod();
+		}
+
+		@Override
+		public void setValue(NonExtension1 obj, Optional<CommunicationMethod1Choice> value) {
+			obj.setNotificationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtfctnRcptTp")
@@ -225,7 +246,7 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNotificationRecipientType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonExtension1, Optional<PartyType1Choice>> mmNotificationRecipientType = new MMMessageAssociationEnd<NonExtension1, Optional<PartyType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonExtension1.mmObject();
@@ -238,6 +259,16 @@ public class NonExtension1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyType1Choice> getValue(NonExtension1 obj) {
+			return obj.getNotificationRecipientType();
+		}
+
+		@Override
+		public void setValue(NonExtension1 obj, Optional<PartyType1Choice> value) {
+			obj.setNotificationRecipientType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtfctnRcptNm")
@@ -275,7 +306,7 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationRecipientName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonExtension1, Optional<Max140Text>> mmNotificationRecipientName = new MMMessageAttribute<NonExtension1, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonExtension1.mmObject();
@@ -287,6 +318,16 @@ public class NonExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(NonExtension1 obj) {
+			return obj.getNotificationRecipientName();
+		}
+
+		@Override
+		public void setValue(NonExtension1 obj, Optional<Max140Text> value) {
+			obj.setNotificationRecipientName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtfctnRcptAdr")
@@ -324,7 +365,7 @@ public class NonExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationRecipientAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonExtension1, Optional<PostalAddress6>> mmNotificationRecipientAddress = new MMMessageAttribute<NonExtension1, Optional<PostalAddress6>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonExtension1.mmObject();
@@ -335,7 +376,17 @@ public class NonExtension1 {
 			definition = "Address of party to whom the notice of non-extension is intended to be delivered.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PostalAddress6.mmObject();
+			complexType_lazy = () -> PostalAddress6.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress6> getValue(NonExtension1 obj) {
+			return obj.getNotificationRecipientAddress();
+		}
+
+		@Override
+		public void setValue(NonExtension1 obj, Optional<PostalAddress6> value) {
+			obj.setNotificationRecipientAddress(value.orElse(null));
 		}
 	};
 
@@ -396,7 +447,7 @@ public class NonExtension1 {
 		return notificationRecipientAddress == null ? Optional.empty() : Optional.of(notificationRecipientAddress);
 	}
 
-	public NonExtension1 setNotificationRecipientAddress(com.tools20022.repository.msg.PostalAddress6 notificationRecipientAddress) {
+	public NonExtension1 setNotificationRecipientAddress(PostalAddress6 notificationRecipientAddress) {
 		this.notificationRecipientAddress = notificationRecipientAddress;
 		return this;
 	}

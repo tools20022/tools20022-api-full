@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.QuoteOriginator;
 import com.tools20022.repository.entity.QuoteRequestor;
 import com.tools20022.repository.entity.SecuritiesQuoteVariable;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +137,7 @@ public class Quote3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, Optional<QuoteType1Code>> mmType = new MMMessageAttribute<Quote3, Optional<QuoteType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
@@ -149,6 +150,16 @@ public class Quote3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QuoteType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QuoteType1Code> getValue(Quote3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<QuoteType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qlfr")
@@ -188,7 +199,7 @@ public class Quote3 {
 	 * definition} = "Qualifies the use of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, List<Qualifier1Code>> mmQualifier = new MMMessageAttribute<Quote3, List<Qualifier1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmQualifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
@@ -200,6 +211,16 @@ public class Quote3 {
 			definition = "Qualifies the use of the quote.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Qualifier1Code.mmObject();
+		}
+
+		@Override
+		public List<Qualifier1Code> getValue(Quote3 obj) {
+			return obj.getQualifier();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, List<Qualifier1Code> value) {
+			obj.setQualifier(value);
 		}
 	};
 	@XmlElement(name = "VldUntilDtTm")
@@ -238,7 +259,7 @@ public class Quote3 {
 	 * definition} = "Expresses the validity date and time of the Quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, Optional<ISODateTime>> mmValidUntilDateTime = new MMMessageAttribute<Quote3, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
@@ -251,6 +272,16 @@ public class Quote3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Quote3 obj) {
+			return obj.getValidUntilDateTime();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<ISODateTime> value) {
+			obj.setValidUntilDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsClsgPric")
@@ -287,7 +318,7 @@ public class Quote3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousClosingPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, Optional<Price1>> mmPreviousClosingPrice = new MMMessageAttribute<Quote3, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmPreviousClosingPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
@@ -298,7 +329,17 @@ public class Quote3 {
 			definition = "Previous closing price of the financial instrument - Useful for verifying its identification.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(Quote3 obj) {
+			return obj.getPreviousClosingPrice();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<Price1> value) {
+			obj.setPreviousClosingPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricTp")
@@ -340,7 +381,7 @@ public class Quote3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, Optional<PriceValueType3Code>> mmPriceType = new MMMessageAttribute<Quote3, Optional<PriceValueType3Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
@@ -353,6 +394,16 @@ public class Quote3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceValueType3Code.mmObject();
+		}
+
+		@Override
+		public Optional<PriceValueType3Code> getValue(Quote3 obj) {
+			return obj.getPriceType();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<PriceValueType3Code> value) {
+			obj.setPriceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdPric")
@@ -392,7 +443,7 @@ public class Quote3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, Optional<Price1>> mmRequestedPrice = new MMMessageAttribute<Quote3, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmRequestedPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
@@ -404,7 +455,17 @@ public class Quote3 {
 			definition = "Is used to specify the desired currency of the quoted price when they differ from the normal trading currency of the instrument being quote requested.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(Quote3 obj) {
+			return obj.getRequestedPrice();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<Price1> value) {
+			obj.setRequestedPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -442,7 +503,7 @@ public class Quote3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, Optional<CurrencyCode>> mmCurrency = new MMMessageAttribute<Quote3, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
@@ -454,6 +515,16 @@ public class Quote3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(Quote3 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<CurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtOrgtr")
@@ -485,7 +556,7 @@ public class Quote3 {
 	 * definition} = "Originator of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteOriginator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, Optional<PartyIdentification24Choice>> mmQuoteOriginator = new MMMessageAttribute<Quote3, Optional<PartyIdentification24Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
@@ -496,6 +567,16 @@ public class Quote3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification24Choice> getValue(Quote3 obj) {
+			return obj.getQuoteOriginator();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<PartyIdentification24Choice> value) {
+			obj.setQuoteOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtOrgtrRole")
@@ -534,7 +615,7 @@ public class Quote3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteOriginatorRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, Optional<OriginatorRole1Code>> mmQuoteOriginatorRole = new MMMessageAttribute<Quote3, Optional<OriginatorRole1Code>>() {
 		{
 			businessElementTrace_lazy = () -> QuoteOriginator.mmQuoteOriginatorType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
@@ -546,6 +627,16 @@ public class Quote3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OriginatorRole1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OriginatorRole1Code> getValue(Quote3 obj) {
+			return obj.getQuoteOriginatorRole();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<OriginatorRole1Code> value) {
+			obj.setQuoteOriginatorRole(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RqstrElgblty")
@@ -583,7 +674,7 @@ public class Quote3 {
 	 * "Identifies if the requestor of the quote is an elligible counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestorEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quote3, Optional<Eligibility1Code>> mmRequestorEligibility = new MMMessageAttribute<Quote3, Optional<Eligibility1Code>>() {
 		{
 			businessElementTrace_lazy = () -> QuoteRequestor.mmRequestorEligibility;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
@@ -595,6 +686,16 @@ public class Quote3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Eligibility1Code> getValue(Quote3 obj) {
+			return obj.getRequestorEligibility();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<Eligibility1Code> value) {
+			obj.setRequestorEligibility(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SrcOfQt")
@@ -625,7 +726,7 @@ public class Quote3 {
 	 * definition} = "Identifies the source of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSourceOfQuote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quote3, Optional<PartyIdentification25Choice>> mmSourceOfQuote = new MMMessageAssociationEnd<Quote3, Optional<PartyIdentification25Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
@@ -637,6 +738,16 @@ public class Quote3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification25Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification25Choice> getValue(Quote3 obj) {
+			return obj.getSourceOfQuote();
+		}
+
+		@Override
+		public void setValue(Quote3 obj, Optional<PartyIdentification25Choice> value) {
+			obj.setSourceOfQuote(value.orElse(null));
 		}
 	};
 
@@ -695,7 +806,7 @@ public class Quote3 {
 		return previousClosingPrice == null ? Optional.empty() : Optional.of(previousClosingPrice);
 	}
 
-	public Quote3 setPreviousClosingPrice(com.tools20022.repository.msg.Price1 previousClosingPrice) {
+	public Quote3 setPreviousClosingPrice(Price1 previousClosingPrice) {
 		this.previousClosingPrice = previousClosingPrice;
 		return this;
 	}
@@ -713,7 +824,7 @@ public class Quote3 {
 		return requestedPrice == null ? Optional.empty() : Optional.of(requestedPrice);
 	}
 
-	public Quote3 setRequestedPrice(com.tools20022.repository.msg.Price1 requestedPrice) {
+	public Quote3 setRequestedPrice(Price1 requestedPrice) {
 		this.requestedPrice = requestedPrice;
 		return this;
 	}

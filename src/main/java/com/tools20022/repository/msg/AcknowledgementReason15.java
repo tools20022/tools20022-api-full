@@ -115,7 +115,7 @@ public class AcknowledgementReason15 {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcknowledgementReason15, AcknowledgementReason18Choice> mmCode = new MMMessageAssociationEnd<AcknowledgementReason15, AcknowledgementReason18Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason15.mmObject();
@@ -129,6 +129,16 @@ public class AcknowledgementReason15 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcknowledgementReason18Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason18Choice getValue(AcknowledgementReason15 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason15 obj, AcknowledgementReason18Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -171,7 +181,7 @@ public class AcknowledgementReason15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason15, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AcknowledgementReason15, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason15.mmObject();
@@ -184,6 +194,16 @@ public class AcknowledgementReason15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(AcknowledgementReason15 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason15 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

@@ -17,7 +17,6 @@
 
 package com.tools20022.repository.area.catm;
 
-import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
@@ -27,7 +26,7 @@ import com.tools20022.repository.msg.ContentInformationType18;
 import com.tools20022.repository.msg.Header29;
 import com.tools20022.repository.msg.MaintenanceDelegationRequest4;
 import com.tools20022.repository.msgset.CAPEMaintenance20172018;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -59,6 +58,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
+ * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.CAPEMaintenance20172018
  * CAPEMaintenance20172018}</li>
  * </ul>
@@ -75,12 +77,9 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.005.001.04}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
- * semanticMarkup} = type=prefix, prefix=DRAFT1</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MaintenanceDelegationRequestV04"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -127,7 +126,7 @@ public class MaintenanceDelegationRequestV04 {
 	 * MaintenanceDelegationRequestV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MaintenanceDelegationRequestV04, Optional<Header29>> mmHeader = new MMMessageBuildingBlock<MaintenanceDelegationRequestV04, Optional<Header29>>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +138,14 @@ public class MaintenanceDelegationRequestV04 {
 			complexType_lazy = () -> Header29.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MaintenanceDelegationRequestV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Header29> getValue(MaintenanceDelegationRequestV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegationRequestV04 obj, Optional<Header29> value) {
+			obj.setHeader(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MntncDlgtnReq", required = true)
@@ -178,7 +179,7 @@ public class MaintenanceDelegationRequestV04 {
 	 * MaintenanceDelegationRequestV03.mmMaintenanceDelegationRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMaintenanceDelegationRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MaintenanceDelegationRequestV04, MaintenanceDelegationRequest4> mmMaintenanceDelegationRequest = new MMMessageBuildingBlock<MaintenanceDelegationRequestV04, MaintenanceDelegationRequest4>() {
 		{
 			xmlTag = "MntncDlgtnReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class MaintenanceDelegationRequestV04 {
 			complexType_lazy = () -> MaintenanceDelegationRequest4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MaintenanceDelegationRequestV04.class.getMethod("getMaintenanceDelegationRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MaintenanceDelegationRequest4 getValue(MaintenanceDelegationRequestV04 obj) {
+			return obj.getMaintenanceDelegationRequest();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegationRequestV04 obj, MaintenanceDelegationRequest4 value) {
+			obj.setMaintenanceDelegationRequest(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -229,7 +232,7 @@ public class MaintenanceDelegationRequestV04 {
 	 * MaintenanceDelegationRequestV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MaintenanceDelegationRequestV04, ContentInformationType18> mmSecurityTrailer = new MMMessageBuildingBlock<MaintenanceDelegationRequestV04, ContentInformationType18>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,24 +244,25 @@ public class MaintenanceDelegationRequestV04 {
 			complexType_lazy = () -> ContentInformationType18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MaintenanceDelegationRequestV04.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType18 getValue(MaintenanceDelegationRequestV04 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegationRequestV04 obj, ContentInformationType18 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT1"}));
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegationRequestV04";
 				definition = "A terminal manager requests to the master terminal manager the delegation of maintenance functions or maintenance operation on the terminal estate managed by the master terminal manager.";
 				previousVersion_lazy = () -> MaintenanceDelegationRequestV03.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEMaintenance20172018.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPEMaintenance20172018.mmObject());
 				rootElement = "Document";
 				xmlTag = "MntncDlgtnReq";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

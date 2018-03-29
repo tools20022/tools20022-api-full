@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
+import com.tools20022.repository.msg.CashAccountType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -111,7 +113,7 @@ public class InvestmentAccount15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount15, Optional<AccountIdentification1>> mmAccountIdentification = new MMMessageAttribute<InvestmentAccount15, Optional<AccountIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount15.mmObject();
@@ -122,7 +124,17 @@ public class InvestmentAccount15 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1> getValue(InvestmentAccount15 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount15 obj, Optional<AccountIdentification1> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -160,7 +172,7 @@ public class InvestmentAccount15 {
 	 * definition} = "Account type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount15, Optional<CashAccountType1>> mmType = new MMMessageAttribute<InvestmentAccount15, Optional<CashAccountType1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount15.mmObject();
@@ -171,7 +183,17 @@ public class InvestmentAccount15 {
 			definition = "Account type.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CashAccountType1.mmObject();
+			complexType_lazy = () -> CashAccountType1.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountType1> getValue(InvestmentAccount15 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount15 obj, Optional<CashAccountType1> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 
@@ -193,7 +215,7 @@ public class InvestmentAccount15 {
 		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public InvestmentAccount15 setAccountIdentification(com.tools20022.repository.msg.AccountIdentification1 accountIdentification) {
+	public InvestmentAccount15 setAccountIdentification(AccountIdentification1 accountIdentification) {
 		this.accountIdentification = accountIdentification;
 		return this;
 	}
@@ -202,7 +224,7 @@ public class InvestmentAccount15 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public InvestmentAccount15 setType(com.tools20022.repository.msg.CashAccountType1 type) {
+	public InvestmentAccount15 setType(CashAccountType1 type) {
 		this.type = type;
 		return this;
 	}

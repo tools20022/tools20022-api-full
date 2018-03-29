@@ -21,12 +21,11 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion;
+import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.AcceptorReconciliationRequest5;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header30;
-import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -62,9 +61,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion
- * CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -73,8 +70,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AccptrRcncltnReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion
- * AcceptortoAcquirerCardTransactionPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
+ * AcceptortoAcquirerCardTransactionArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.009.001.05}</li>
@@ -144,7 +141,7 @@ public class AcceptorReconciliationRequestV05 {
 	 * AcceptorReconciliationRequestV04.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationRequestV05, Header30> mmHeader = new MMMessageBuildingBlock<AcceptorReconciliationRequestV05, Header30>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +154,14 @@ public class AcceptorReconciliationRequestV05 {
 			complexType_lazy = () -> Header30.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationRequestV05.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header30 getValue(AcceptorReconciliationRequestV05 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationRequestV05 obj, Header30 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "RcncltnReq", required = true)
@@ -203,7 +202,7 @@ public class AcceptorReconciliationRequestV05 {
 	 * AcceptorReconciliationRequestV04.mmReconciliationRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReconciliationRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationRequestV05, AcceptorReconciliationRequest5> mmReconciliationRequest = new MMMessageBuildingBlock<AcceptorReconciliationRequestV05, AcceptorReconciliationRequest5>() {
 		{
 			xmlTag = "RcncltnReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,12 +215,14 @@ public class AcceptorReconciliationRequestV05 {
 			complexType_lazy = () -> AcceptorReconciliationRequest5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationRequestV05.class.getMethod("getReconciliationRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorReconciliationRequest5 getValue(AcceptorReconciliationRequestV05 obj) {
+			return obj.getReconciliationRequest();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationRequestV05 obj, AcceptorReconciliationRequest5 value) {
+			obj.setReconciliationRequest(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -262,7 +263,7 @@ public class AcceptorReconciliationRequestV05 {
 	 * AcceptorReconciliationRequestV04.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationRequestV05, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorReconciliationRequestV05, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,12 +276,14 @@ public class AcceptorReconciliationRequestV05 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationRequestV05.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(AcceptorReconciliationRequestV05 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationRequestV05 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
@@ -292,10 +295,10 @@ public class AcceptorReconciliationRequestV05 {
 				definition = "The AcceptorReconciliationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to ensure that the debits and credits performed by the acceptor matches the computed balances of the acquirer for the debits and credits performed during the same reconciliation period.\r\nIf the acceptor or the acquirer notices a difference in totals, the discrepancy will be resolved by other means, outside the scope of the protocol.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationRequestV06.mmObject());
 				previousVersion_lazy = () -> AcceptorReconciliationRequestV04.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrRcncltnReq";
-				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
+				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05.mmReconciliationRequest,
 						com.tools20022.repository.area.caaa.AcceptorReconciliationRequestV05.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

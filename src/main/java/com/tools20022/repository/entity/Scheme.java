@@ -22,9 +22,9 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -330,7 +330,7 @@ public class Scheme {
 	 * definition} = "Short textual description of the scheme."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNameShort = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Scheme, Max35Text> mmNameShort = new MMBusinessAttribute<Scheme, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(GenericIdentification1.mmSchemeName, GenericIdentification13.mmSchemeName, GenericIdentification20.mmSchemeName, GenericIdentification25.mmSchemeName, GenericIdentification47.mmSchemeName,
 					GenericIdentification41.mmSchemeName, PersonIdentificationSchemeName1Choice.mmProprietary, GenericIdentification19.mmSchemeName, GenericIdentification24.mmSchemeName, SecuritiesCertificate1.mmSchemeName,
@@ -353,12 +353,14 @@ public class Scheme {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Scheme.class.getMethod("getNameShort", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Scheme obj) {
+			return obj.getNameShort();
+		}
+
+		@Override
+		public void setValue(Scheme obj, Max35Text value) {
+			obj.setNameShort(value);
 		}
 	};
 	protected Max35Text code;
@@ -447,7 +449,7 @@ public class Scheme {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCode = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Scheme, Max35Text> mmCode = new MMBusinessAttribute<Scheme, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(GenericIdentification8.mmIdentificationType, FinancialIdentificationSchemeName1Choice.mmCode, FinancialIdentificationSchemeName1Choice.mmProprietary, AccountSchemeName1Choice.mmCode,
 					AccountSchemeName1Choice.mmProprietary, GenericIdentification4.mmIdentificationType, OrganisationIdentificationSchemeName1Choice.mmCode, OrganisationIdentificationSchemeName1Choice.mmProprietary,
@@ -464,15 +466,17 @@ public class Scheme {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Scheme.class.getMethod("getCode", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Scheme obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Scheme obj, Max35Text value) {
+			obj.setCode(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.GenericIdentification> identification;
+	protected List<GenericIdentification> identification;
 	/**
 	 * 
 	 <p>
@@ -524,7 +528,7 @@ public class Scheme {
 	 * "Identification information for which a scheme is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Scheme, List<GenericIdentification>> mmIdentification = new MMBusinessAssociationEnd<Scheme, List<GenericIdentification>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherIdentification1.mmType, OtherIdentification2.mmType, OtherIdentification3.mmType, OtherIdentification4.mmType);
 			isDerived = false;
@@ -533,9 +537,19 @@ public class Scheme {
 			name = "Identification";
 			definition = "Identification information for which a scheme is specified.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmScheme;
+			opposite_lazy = () -> GenericIdentification.mmScheme;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
+			type_lazy = () -> GenericIdentification.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification> getValue(Scheme obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Scheme obj, List<GenericIdentification> value) {
+			obj.setIdentification(value);
 		}
 	};
 	protected Rating rating;
@@ -571,7 +585,7 @@ public class Scheme {
 	 * "Rating for which an identification by scheme is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRating = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Scheme, Rating> mmRating = new MMBusinessAssociationEnd<Scheme, Rating>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -580,9 +594,19 @@ public class Scheme {
 			definition = "Rating for which an identification by scheme is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Rating.mmRatingScheme;
+			opposite_lazy = () -> Rating.mmRatingScheme;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Rating.mmObject();
+			type_lazy = () -> Rating.mmObject();
+		}
+
+		@Override
+		public Rating getValue(Scheme obj) {
+			return obj.getRating();
+		}
+
+		@Override
+		public void setValue(Scheme obj, Rating value) {
+			obj.setRating(value);
 		}
 	};
 	protected CreditorRole creditorRole;
@@ -619,7 +643,7 @@ public class Scheme {
 	 * "Creditor for which an identification by scheme is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCreditorRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Scheme, CreditorRole> mmCreditorRole = new MMBusinessAssociationEnd<Scheme, CreditorRole>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -628,12 +652,22 @@ public class Scheme {
 			definition = "Creditor for which an identification by scheme is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CreditorRole.mmSchemeIdentification;
+			opposite_lazy = () -> CreditorRole.mmSchemeIdentification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CreditorRole.mmObject();
+			type_lazy = () -> CreditorRole.mmObject();
+		}
+
+		@Override
+		public CreditorRole getValue(Scheme obj) {
+			return obj.getCreditorRole();
+		}
+
+		@Override
+		public void setValue(Scheme obj, CreditorRole value) {
+			obj.setCreditorRole(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.InformationPartyRole> informationPartyRole;
+	protected List<InformationPartyRole> informationPartyRole;
 	/**
 	 * 
 	 <p>
@@ -667,7 +701,7 @@ public class Scheme {
 	 * definition} = "Role played by a party as source of a scheme code."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInformationPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Scheme, List<InformationPartyRole>> mmInformationPartyRole = new MMBusinessAssociationEnd<Scheme, List<InformationPartyRole>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -675,9 +709,19 @@ public class Scheme {
 			name = "InformationPartyRole";
 			definition = "Role played by a party as source of a scheme code.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmScheme;
+			opposite_lazy = () -> InformationPartyRole.mmScheme;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InformationPartyRole.mmObject();
+			type_lazy = () -> InformationPartyRole.mmObject();
+		}
+
+		@Override
+		public List<InformationPartyRole> getValue(Scheme obj) {
+			return obj.getInformationPartyRole();
+		}
+
+		@Override
+		public void setValue(Scheme obj, List<InformationPartyRole> value) {
+			obj.setInformationPartyRole(value);
 		}
 	};
 	protected Max35Text version;
@@ -705,7 +749,7 @@ public class Scheme {
 	 * definition} = "Version number of the scheme."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmVersion = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Scheme, Max35Text> mmVersion = new MMBusinessAttribute<Scheme, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -717,12 +761,14 @@ public class Scheme {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Scheme.class.getMethod("getVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Scheme obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(Scheme obj, Max35Text value) {
+			obj.setVersion(value);
 		}
 	};
 	protected DateTimePeriod assessmentValidityPeriod;
@@ -759,7 +805,7 @@ public class Scheme {
 	 * "Period during which the version of the scheme applies (see ISO-8601)."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAssessmentValidityPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Scheme, DateTimePeriod> mmAssessmentValidityPeriod = new MMBusinessAssociationEnd<Scheme, DateTimePeriod>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -768,9 +814,19 @@ public class Scheme {
 			definition = "Period during which the version of the scheme applies (see ISO-8601).";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmAssessmentValidityScheme;
+			opposite_lazy = () -> DateTimePeriod.mmAssessmentValidityScheme;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod getValue(Scheme obj) {
+			return obj.getAssessmentValidityPeriod();
+		}
+
+		@Override
+		public void setValue(Scheme obj, DateTimePeriod value) {
+			obj.setAssessmentValidityPeriod(value);
 		}
 	};
 	protected Max70Text nameLong;
@@ -798,7 +854,7 @@ public class Scheme {
 	 * definition} = "Long textual description of the scheme."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNameLong = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Scheme, Max70Text> mmNameLong = new MMBusinessAttribute<Scheme, Max70Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -810,12 +866,14 @@ public class Scheme {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Scheme.class.getMethod("getNameLong", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max70Text getValue(Scheme obj) {
+			return obj.getNameLong();
+		}
+
+		@Override
+		public void setValue(Scheme obj, Max70Text value) {
+			obj.setNameLong(value);
 		}
 	};
 	protected Max350Text description;
@@ -843,7 +901,7 @@ public class Scheme {
 	 * definition} = "Textual description of the scheme."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Scheme, Max350Text> mmDescription = new MMBusinessAttribute<Scheme, Max350Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -855,12 +913,14 @@ public class Scheme {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Scheme.class.getMethod("getDescription", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(Scheme obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(Scheme obj, Max350Text value) {
+			obj.setDescription(value);
 		}
 	};
 	protected Max35Text domainValueCode;
@@ -890,7 +950,7 @@ public class Scheme {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDomainValueCode = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Scheme, Max35Text> mmDomainValueCode = new MMBusinessAttribute<Scheme, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -902,12 +962,14 @@ public class Scheme {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Scheme.class.getMethod("getDomainValueCode", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Scheme obj) {
+			return obj.getDomainValueCode();
+		}
+
+		@Override
+		public void setValue(Scheme obj, Max35Text value) {
+			obj.setDomainValueCode(value);
 		}
 	};
 	protected Max70Text domainValueName;
@@ -937,7 +999,7 @@ public class Scheme {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDomainValueName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Scheme, Max70Text> mmDomainValueName = new MMBusinessAttribute<Scheme, Max70Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -949,12 +1011,14 @@ public class Scheme {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Scheme.class.getMethod("getDomainValueName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max70Text getValue(Scheme obj) {
+			return obj.getDomainValueName();
+		}
+
+		@Override
+		public void setValue(Scheme obj, Max70Text value) {
+			obj.setDomainValueName(value);
 		}
 	};
 	protected Sector sector;
@@ -988,7 +1052,7 @@ public class Scheme {
 	 * definition} = "Specifies the sector to which the scheme applies."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSector = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Scheme, Sector> mmSector = new MMBusinessAssociationEnd<Scheme, Sector>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -997,9 +1061,19 @@ public class Scheme {
 			definition = "Specifies the sector to which the scheme applies.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Sector.mmScheme;
+			opposite_lazy = () -> Sector.mmScheme;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
+			type_lazy = () -> Sector.mmObject();
+		}
+
+		@Override
+		public Sector getValue(Scheme obj) {
+			return obj.getSector();
+		}
+
+		@Override
+		public void setValue(Scheme obj, Sector value) {
+			obj.setSector(value);
 		}
 	};
 	protected AssetClassification assetClassification;
@@ -1035,7 +1109,7 @@ public class Scheme {
 	 * definition} = "Asset for which a classification by scheme is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAssetClassification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Scheme, AssetClassification> mmAssetClassification = new MMBusinessAssociationEnd<Scheme, AssetClassification>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
@@ -1044,9 +1118,19 @@ public class Scheme {
 			definition = "Asset for which a classification by scheme is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmAssetClassScheme;
+			opposite_lazy = () -> AssetClassification.mmAssetClassScheme;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmObject();
+			type_lazy = () -> AssetClassification.mmObject();
+		}
+
+		@Override
+		public AssetClassification getValue(Scheme obj) {
+			return obj.getAssetClassification();
+		}
+
+		@Override
+		public void setValue(Scheme obj, AssetClassification value) {
+			obj.setAssetClassification(value);
 		}
 	};
 
@@ -1057,9 +1141,8 @@ public class Scheme {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Scheme";
 				definition = "Information regarding an enumerated code list and its owner.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InformationPartyRole.mmScheme, com.tools20022.repository.entity.GenericIdentification.mmScheme,
-						com.tools20022.repository.entity.DateTimePeriod.mmAssessmentValidityScheme, com.tools20022.repository.entity.AssetClassification.mmAssetClassScheme, com.tools20022.repository.entity.Rating.mmRatingScheme,
-						com.tools20022.repository.entity.Sector.mmScheme, com.tools20022.repository.entity.CreditorRole.mmSchemeIdentification);
+				associationDomain_lazy = () -> Arrays.asList(InformationPartyRole.mmScheme, GenericIdentification.mmScheme, DateTimePeriod.mmAssessmentValidityScheme, AssetClassification.mmAssetClassScheme, Rating.mmRatingScheme,
+						Sector.mmScheme, CreditorRole.mmSchemeIdentification);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Scheme.mmNameShort, com.tools20022.repository.entity.Scheme.mmCode, com.tools20022.repository.entity.Scheme.mmIdentification,
 						com.tools20022.repository.entity.Scheme.mmRating, com.tools20022.repository.entity.Scheme.mmCreditorRole, com.tools20022.repository.entity.Scheme.mmInformationPartyRole,
 						com.tools20022.repository.entity.Scheme.mmVersion, com.tools20022.repository.entity.Scheme.mmAssessmentValidityPeriod, com.tools20022.repository.entity.Scheme.mmNameLong,
@@ -1098,7 +1181,7 @@ public class Scheme {
 		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public Scheme setIdentification(List<com.tools20022.repository.entity.GenericIdentification> identification) {
+	public Scheme setIdentification(List<GenericIdentification> identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -1107,7 +1190,7 @@ public class Scheme {
 		return rating;
 	}
 
-	public Scheme setRating(com.tools20022.repository.entity.Rating rating) {
+	public Scheme setRating(Rating rating) {
 		this.rating = Objects.requireNonNull(rating);
 		return this;
 	}
@@ -1116,7 +1199,7 @@ public class Scheme {
 		return creditorRole;
 	}
 
-	public Scheme setCreditorRole(com.tools20022.repository.entity.CreditorRole creditorRole) {
+	public Scheme setCreditorRole(CreditorRole creditorRole) {
 		this.creditorRole = Objects.requireNonNull(creditorRole);
 		return this;
 	}
@@ -1125,7 +1208,7 @@ public class Scheme {
 		return informationPartyRole == null ? informationPartyRole = new ArrayList<>() : informationPartyRole;
 	}
 
-	public Scheme setInformationPartyRole(List<com.tools20022.repository.entity.InformationPartyRole> informationPartyRole) {
+	public Scheme setInformationPartyRole(List<InformationPartyRole> informationPartyRole) {
 		this.informationPartyRole = Objects.requireNonNull(informationPartyRole);
 		return this;
 	}
@@ -1143,7 +1226,7 @@ public class Scheme {
 		return assessmentValidityPeriod;
 	}
 
-	public Scheme setAssessmentValidityPeriod(com.tools20022.repository.entity.DateTimePeriod assessmentValidityPeriod) {
+	public Scheme setAssessmentValidityPeriod(DateTimePeriod assessmentValidityPeriod) {
 		this.assessmentValidityPeriod = Objects.requireNonNull(assessmentValidityPeriod);
 		return this;
 	}
@@ -1188,7 +1271,7 @@ public class Scheme {
 		return sector;
 	}
 
-	public Scheme setSector(com.tools20022.repository.entity.Sector sector) {
+	public Scheme setSector(Sector sector) {
 		this.sector = Objects.requireNonNull(sector);
 		return this;
 	}
@@ -1197,7 +1280,7 @@ public class Scheme {
 		return assetClassification;
 	}
 
-	public Scheme setAssetClassification(com.tools20022.repository.entity.AssetClassification assetClassification) {
+	public Scheme setAssetClassification(AssetClassification assetClassification) {
 		this.assetClassification = Objects.requireNonNull(assetClassification);
 		return this;
 	}

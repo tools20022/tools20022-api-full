@@ -54,12 +54,16 @@ public class ConstraintManifestRule {
 	 */
 	public static final MMConstraint<QualifiedPartyAndXMLSignature1> forQualifiedPartyAndXMLSignature1 = new MMConstraint<QualifiedPartyAndXMLSignature1>() {
 		{
-			validator = ConstraintManifestRule::checkQualifiedPartyAndXMLSignature1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManifestRule";
 			definition = "When a signature is created for a message component that contains IDREFs or IDs, a manifest must be used to include the referenced data.";
 			owner_lazy = () -> QualifiedPartyAndXMLSignature1.mmObject();
 			expressionLanguage = " ";
+		}
+
+		@Override
+		public void executeValidator(QualifiedPartyAndXMLSignature1 obj) throws Exception {
+			checkQualifiedPartyAndXMLSignature1(obj);
 		}
 	};
 

@@ -107,7 +107,7 @@ public class CallType3Choice {
 	 * CallType2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CallType3Choice, CallType1Code> mmCode = new MMMessageAttribute<CallType3Choice, CallType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CallType3Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class CallType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CallType1Code.mmObject();
+		}
+
+		@Override
+		public CallType1Code getValue(CallType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CallType3Choice obj, CallType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class CallType3Choice {
 	 * CallType2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CallType3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<CallType3Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CallType3Choice.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class CallType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CallType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CallType3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

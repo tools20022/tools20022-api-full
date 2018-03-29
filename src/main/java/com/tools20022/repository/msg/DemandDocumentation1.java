@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Document9;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -106,7 +107,7 @@ public class DemandDocumentation1 {
 	 * definition} = "Indication as to whether the presentation is complete."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompleteIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DemandDocumentation1, YesNoIndicator> mmCompleteIndicator = new MMMessageAttribute<DemandDocumentation1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
 			isDerived = false;
@@ -117,6 +118,16 @@ public class DemandDocumentation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DemandDocumentation1 obj) {
+			return obj.getCompleteIndicator();
+		}
+
+		@Override
+		public void setValue(DemandDocumentation1 obj, YesNoIndicator value) {
+			obj.setCompleteIndicator(value);
 		}
 	};
 	@XmlElement(name = "CmpltnInf")
@@ -148,7 +159,7 @@ public class DemandDocumentation1 {
 	 * definition} = "Information related to an incomplete presentation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompletionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DemandDocumentation1, Optional<Max2000Text>> mmCompletionInformation = new MMMessageAttribute<DemandDocumentation1, Optional<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
 			isDerived = false;
@@ -160,9 +171,19 @@ public class DemandDocumentation1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max2000Text> getValue(DemandDocumentation1 obj) {
+			return obj.getCompletionInformation();
+		}
+
+		@Override
+		public void setValue(DemandDocumentation1 obj, Optional<Max2000Text> value) {
+			obj.setCompletionInformation(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "NclsdFile")
-	protected List<com.tools20022.repository.msg.Document9> enclosedFile;
+	protected List<Document9> enclosedFile;
 	/**
 	 * 
 	 <p>
@@ -193,7 +214,7 @@ public class DemandDocumentation1 {
 	 * definition} = "Document or template enclosed in the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DemandDocumentation1, List<Document9>> mmEnclosedFile = new MMMessageAssociationEnd<DemandDocumentation1, List<Document9>>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingDocument.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
@@ -204,7 +225,17 @@ public class DemandDocumentation1 {
 			definition = "Document or template enclosed in the demand.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
+			type_lazy = () -> Document9.mmObject();
+		}
+
+		@Override
+		public List<Document9> getValue(DemandDocumentation1 obj) {
+			return obj.getEnclosedFile();
+		}
+
+		@Override
+		public void setValue(DemandDocumentation1 obj, List<Document9> value) {
+			obj.setEnclosedFile(value);
 		}
 	};
 	@XmlElement(name = "DmndNrrtv")
@@ -237,7 +268,7 @@ public class DemandDocumentation1 {
 	 * definition} = "Narrative text constituting the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDemandNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DemandDocumentation1, Optional<Max20000Text>> mmDemandNarrative = new MMMessageAttribute<DemandDocumentation1, Optional<Max20000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
 			isDerived = false;
@@ -248,6 +279,16 @@ public class DemandDocumentation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max20000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max20000Text> getValue(DemandDocumentation1 obj) {
+			return obj.getDemandNarrative();
+		}
+
+		@Override
+		public void setValue(DemandDocumentation1 obj, Optional<Max20000Text> value) {
+			obj.setDemandNarrative(value.orElse(null));
 		}
 	};
 
@@ -287,7 +328,7 @@ public class DemandDocumentation1 {
 		return enclosedFile == null ? enclosedFile = new ArrayList<>() : enclosedFile;
 	}
 
-	public DemandDocumentation1 setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
+	public DemandDocumentation1 setEnclosedFile(List<Document9> enclosedFile) {
 		this.enclosedFile = Objects.requireNonNull(enclosedFile);
 		return this;
 	}

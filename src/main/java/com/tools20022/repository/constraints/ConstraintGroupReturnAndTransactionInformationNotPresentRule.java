@@ -62,13 +62,17 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV08> forPaymentReturnV08 = new MMConstraint<PaymentReturnV08>() {
 		{
-			validator = ConstraintGroupReturnAndTransactionInformationNotPresentRule::checkPaymentReturnV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndTransactionInformationNotPresentRule";
 			definition = "If GroupHeader/GroupReturn is true, then TransactionInformation is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReturnAndTransactionInformationNotPresentRule.forPaymentReturnV07;
 			owner_lazy = () -> PaymentReturnV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReturn</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReturn</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV08 obj) throws Exception {
+			checkPaymentReturnV08(obj);
 		}
 	};
 	/**
@@ -113,7 +117,6 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV07> forPaymentReturnV07 = new MMConstraint<PaymentReturnV07>() {
 		{
-			validator = ConstraintGroupReturnAndTransactionInformationNotPresentRule::checkPaymentReturnV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndTransactionInformationNotPresentRule";
 			definition = "If GroupHeader/GroupReturn is true, then TransactionInformation is not allowed.";
@@ -121,6 +124,11 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReturnAndTransactionInformationNotPresentRule.forPaymentReturnV06;
 			owner_lazy = () -> PaymentReturnV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReturn</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReturn</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV07 obj) throws Exception {
+			checkPaymentReturnV07(obj);
 		}
 	};
 	/**
@@ -150,12 +158,16 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV02> forPaymentReturnV02 = new MMConstraint<PaymentReturnV02>() {
 		{
-			validator = ConstraintGroupReturnAndTransactionInformationNotPresentRule::checkPaymentReturnV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndTransactionInformationNotPresentRule";
 			definition = "If GroupHeader/GroupReturn is true, then TransactionInformation is not allowed.";
 			owner_lazy = () -> PaymentReturnV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReturn</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReturn</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV02 obj) throws Exception {
+			checkPaymentReturnV02(obj);
 		}
 	};
 	/**
@@ -185,12 +197,16 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV03> forPaymentReturnV03 = new MMConstraint<PaymentReturnV03>() {
 		{
-			validator = ConstraintGroupReturnAndTransactionInformationNotPresentRule::checkPaymentReturnV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndTransactionInformationNotPresentRule";
 			definition = "If GroupHeader/GroupReturn is true, then TransactionInformation is not allowed.";
 			owner_lazy = () -> PaymentReturnV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReturn</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReturn</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV03 obj) throws Exception {
+			checkPaymentReturnV03(obj);
 		}
 	};
 	/**
@@ -229,13 +245,17 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV04> forPaymentReturnV04 = new MMConstraint<PaymentReturnV04>() {
 		{
-			validator = ConstraintGroupReturnAndTransactionInformationNotPresentRule::checkPaymentReturnV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndTransactionInformationNotPresentRule";
 			definition = "If GroupHeader/GroupReturn is true, then TransactionInformation is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReturnAndTransactionInformationNotPresentRule.forPaymentReturnV05);
 			owner_lazy = () -> PaymentReturnV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReturn</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReturn</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV04 obj) throws Exception {
+			checkPaymentReturnV04(obj);
 		}
 	};
 	/**
@@ -280,7 +300,6 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV05> forPaymentReturnV05 = new MMConstraint<PaymentReturnV05>() {
 		{
-			validator = ConstraintGroupReturnAndTransactionInformationNotPresentRule::checkPaymentReturnV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndTransactionInformationNotPresentRule";
 			definition = "If GroupHeader/GroupReturn is true, then TransactionInformation is not allowed.";
@@ -288,6 +307,11 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReturnAndTransactionInformationNotPresentRule.forPaymentReturnV04;
 			owner_lazy = () -> PaymentReturnV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReturn</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReturn</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV05 obj) throws Exception {
+			checkPaymentReturnV05(obj);
 		}
 	};
 	/**
@@ -332,7 +356,6 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV06> forPaymentReturnV06 = new MMConstraint<PaymentReturnV06>() {
 		{
-			validator = ConstraintGroupReturnAndTransactionInformationNotPresentRule::checkPaymentReturnV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndTransactionInformationNotPresentRule";
 			definition = "If GroupHeader/GroupReturn is true, then TransactionInformation is not allowed.";
@@ -340,6 +363,11 @@ public class ConstraintGroupReturnAndTransactionInformationNotPresentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReturnAndTransactionInformationNotPresentRule.forPaymentReturnV05;
 			owner_lazy = () -> PaymentReturnV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/GroupReturn</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupHeader/GroupReturn</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV06 obj) throws Exception {
+			checkPaymentReturnV06(obj);
 		}
 	};
 

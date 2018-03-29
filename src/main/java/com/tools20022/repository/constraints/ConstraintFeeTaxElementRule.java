@@ -60,12 +60,16 @@ public class ConstraintFeeTaxElementRule {
 	 */
 	public static final MMConstraint<FeeAndTax1> forFeeAndTax1 = new MMConstraint<FeeAndTax1>() {
 		{
-			validator = ConstraintFeeTaxElementRule::checkFeeAndTax1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeTaxElementRule";
 			definition = "One of the elements (CommercialAgreementReference, IndividualFee, IndividualTax) must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFeeTaxElementRule.forFees1);
 			owner_lazy = () -> FeeAndTax1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FeeAndTax1 obj) throws Exception {
+			checkFeeAndTax1(obj);
 		}
 	};
 	/**
@@ -95,12 +99,16 @@ public class ConstraintFeeTaxElementRule {
 	 */
 	public static final MMConstraint<Fees1> forFees1 = new MMConstraint<Fees1>() {
 		{
-			validator = ConstraintFeeTaxElementRule::checkFees1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeTaxElementRule";
 			definition = "One of the elements (CommercialAgreementReference, IndividualFee, IndividualTax) must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFeeTaxElementRule.forFeeAndTax1;
 			owner_lazy = () -> Fees1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Fees1 obj) throws Exception {
+			checkFees1(obj);
 		}
 	};
 

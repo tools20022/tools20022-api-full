@@ -26,7 +26,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.choice.Investment1Choice;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +119,7 @@ public class CCPInvestmentsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvestment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPInvestmentsReportV01, List<Investment1Choice>> mmInvestment = new MMMessageBuildingBlock<CCPInvestmentsReportV01, List<Investment1Choice>>() {
 		{
 			xmlTag = "Invstmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,12 +129,14 @@ public class CCPInvestmentsReportV01 {
 			complexType_lazy = () -> Investment1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPInvestmentsReportV01.class.getMethod("getInvestment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Investment1Choice> getValue(CCPInvestmentsReportV01 obj) {
+			return obj.getInvestment();
+		}
+
+		@Override
+		public void setValue(CCPInvestmentsReportV01 obj, List<Investment1Choice> value) {
+			obj.setInvestment(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -165,7 +166,7 @@ public class CCPInvestmentsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPInvestmentsReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPInvestmentsReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +176,14 @@ public class CCPInvestmentsReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPInvestmentsReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CCPInvestmentsReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CCPInvestmentsReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

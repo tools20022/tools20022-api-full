@@ -114,7 +114,7 @@ public class CommissionType1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommissionType1, CommissionType5Code> mmStructured = new MMMessageAttribute<CommissionType1, CommissionType5Code>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionType1.mmObject();
@@ -126,6 +126,16 @@ public class CommissionType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CommissionType5Code.mmObject();
+		}
+
+		@Override
+		public CommissionType5Code getValue(CommissionType1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(CommissionType1 obj, CommissionType5Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -162,7 +172,7 @@ public class CommissionType1 {
 	 * definition} = "Additional information about the type of commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommissionType1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CommissionType1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionType1.mmObject();
@@ -174,6 +184,16 @@ public class CommissionType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CommissionType1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CommissionType1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

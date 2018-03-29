@@ -133,7 +133,7 @@ public class ValuationData2 {
 	 * "Reference to the latest trade identification of the NDF opening trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationData2, Max35Text> mmValuationReference = new MMMessageAttribute<ValuationData2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationData2.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class ValuationData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ValuationData2 obj) {
+			return obj.getValuationReference();
+		}
+
+		@Override
+		public void setValue(ValuationData2 obj, Max35Text value) {
+			obj.setValuationReference(value);
 		}
 	};
 	@XmlElement(name = "SttlmCcy")
@@ -182,7 +192,7 @@ public class ValuationData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationData2, Optional<ActiveOrHistoricCurrencyCode>> mmSettlementCurrency = new MMMessageAttribute<ValuationData2, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> NonDeliverableTrade.mmSettlementCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationData2.mmObject();
@@ -194,6 +204,16 @@ public class ValuationData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(ValuationData2 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(ValuationData2 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setSettlementCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlValtnInf")
@@ -226,7 +246,7 @@ public class ValuationData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalValuationInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationData2, Optional<Max140Text>> mmAdditionalValuationInformation = new MMMessageAttribute<ValuationData2, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationData2.mmObject();
 			isDerived = false;
@@ -237,6 +257,16 @@ public class ValuationData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(ValuationData2 obj) {
+			return obj.getAdditionalValuationInformation();
+		}
+
+		@Override
+		public void setValue(ValuationData2 obj, Optional<Max140Text> value) {
+			obj.setAdditionalValuationInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmPty")
@@ -275,7 +305,7 @@ public class ValuationData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValuationData2, Optional<PartyIdentification8Choice>> mmSettlementParty = new MMMessageAttribute<ValuationData2, Optional<PartyIdentification8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationData2.mmObject();
@@ -287,6 +317,16 @@ public class ValuationData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8Choice> getValue(ValuationData2 obj) {
+			return obj.getSettlementParty();
+		}
+
+		@Override
+		public void setValue(ValuationData2 obj, Optional<PartyIdentification8Choice> value) {
+			obj.setSettlementParty(value.orElse(null));
 		}
 	};
 

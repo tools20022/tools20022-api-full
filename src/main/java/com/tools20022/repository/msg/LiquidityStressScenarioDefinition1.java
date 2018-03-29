@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification166;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +124,7 @@ public class LiquidityStressScenarioDefinition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityStressScenarioDefinition1, GenericIdentification166> mmIdentification = new MMMessageAssociationEnd<LiquidityStressScenarioDefinition1, GenericIdentification166>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityStressScenarioDefinition1.mmObject();
 			isDerived = false;
@@ -134,7 +135,17 @@ public class LiquidityStressScenarioDefinition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification166.mmObject();
+			type_lazy = () -> GenericIdentification166.mmObject();
+		}
+
+		@Override
+		public GenericIdentification166 getValue(LiquidityStressScenarioDefinition1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(LiquidityStressScenarioDefinition1 obj, GenericIdentification166 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -168,7 +179,7 @@ public class LiquidityStressScenarioDefinition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityStressScenarioDefinition1, Max2000Text> mmDescription = new MMMessageAttribute<LiquidityStressScenarioDefinition1, Max2000Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityStressScenarioDefinition1.mmObject();
 			isDerived = false;
@@ -179,6 +190,16 @@ public class LiquidityStressScenarioDefinition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public Max2000Text getValue(LiquidityStressScenarioDefinition1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(LiquidityStressScenarioDefinition1 obj, Max2000Text value) {
+			obj.setDescription(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -211,7 +232,7 @@ public class LiquidityStressScenarioDefinition1 {
 	 * "CCP’s internal classification of stress scenario type.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityStressScenarioDefinition1, Optional<Max35Text>> mmType = new MMMessageAttribute<LiquidityStressScenarioDefinition1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityStressScenarioDefinition1.mmObject();
 			isDerived = false;
@@ -222,6 +243,16 @@ public class LiquidityStressScenarioDefinition1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LiquidityStressScenarioDefinition1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(LiquidityStressScenarioDefinition1 obj, Optional<Max35Text> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrssCcy", required = true)
@@ -254,7 +285,7 @@ public class LiquidityStressScenarioDefinition1 {
 	 * definition} = "Stress currency, or if aggregate, report ‘XLL’.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStressCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityStressScenarioDefinition1, ActiveCurrencyCode> mmStressCurrency = new MMMessageAttribute<LiquidityStressScenarioDefinition1, ActiveCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityStressScenarioDefinition1.mmObject();
 			isDerived = false;
@@ -265,6 +296,16 @@ public class LiquidityStressScenarioDefinition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(LiquidityStressScenarioDefinition1 obj) {
+			return obj.getStressCurrency();
+		}
+
+		@Override
+		public void setValue(LiquidityStressScenarioDefinition1 obj, ActiveCurrencyCode value) {
+			obj.setStressCurrency(value);
 		}
 	};
 
@@ -287,7 +328,7 @@ public class LiquidityStressScenarioDefinition1 {
 		return identification;
 	}
 
-	public LiquidityStressScenarioDefinition1 setIdentification(com.tools20022.repository.msg.GenericIdentification166 identification) {
+	public LiquidityStressScenarioDefinition1 setIdentification(GenericIdentification166 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

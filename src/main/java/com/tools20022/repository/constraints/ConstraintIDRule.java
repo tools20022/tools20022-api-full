@@ -51,11 +51,15 @@ public class ConstraintIDRule {
 	 */
 	public static final MMConstraint<QualifiedPartyAndXMLSignature1> forQualifiedPartyAndXMLSignature1 = new MMConstraint<QualifiedPartyAndXMLSignature1>() {
 		{
-			validator = ConstraintIDRule::checkQualifiedPartyAndXMLSignature1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IDRule";
 			definition = "When a signature is created for a message component that contains IDREFs or IDs, these elements MUST not be excluded from the signature.";
 			owner_lazy = () -> QualifiedPartyAndXMLSignature1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QualifiedPartyAndXMLSignature1 obj) throws Exception {
+			checkQualifiedPartyAndXMLSignature1(obj);
 		}
 	};
 

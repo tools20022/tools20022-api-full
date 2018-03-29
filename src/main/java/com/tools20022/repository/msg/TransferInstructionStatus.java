@@ -108,7 +108,7 @@ public class TransferInstructionStatus {
 	 * definition} = "Status of the transfer instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstructionStatus, TransferStatus1Code> mmStatus = new MMMessageAttribute<TransferInstructionStatus, TransferStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmTransferStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus.mmObject();
@@ -120,6 +120,16 @@ public class TransferInstructionStatus {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferStatus1Code.mmObject();
+		}
+
+		@Override
+		public TransferStatus1Code getValue(TransferInstructionStatus obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransferInstructionStatus obj, TransferStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -151,7 +161,7 @@ public class TransferInstructionStatus {
 	 * definition} = "Additional information about the status in textual form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstructionStatus, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<TransferInstructionStatus, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class TransferInstructionStatus {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransferInstructionStatus obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TransferInstructionStatus obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

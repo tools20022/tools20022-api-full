@@ -113,7 +113,7 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionCashMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionOptionCashMovementDetailsExtension2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionCashMovementDetailsExtension2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "PyoutNb", required = true)
@@ -159,7 +169,7 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Exact3NumericText> mmPayoutNumber = new MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionCashMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CorporateActionOptionCashMovementDetailsExtension2 obj) {
+			return obj.getPayoutNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionCashMovementDetailsExtension2 obj, Exact3NumericText value) {
+			obj.setPayoutNumber(value);
 		}
 	};
 	@XmlElement(name = "DTCCshRate")
@@ -208,7 +228,7 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCCashRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Optional<DecimalNumber>> mmDTCCashRate = new MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionCashMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -220,6 +240,16 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionOptionCashMovementDetailsExtension2 obj) {
+			return obj.getDTCCashRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionCashMovementDetailsExtension2 obj, Optional<DecimalNumber> value) {
+			obj.setDTCCashRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCPayMtd")
@@ -256,7 +286,7 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Optional<Max3Text>> mmDTCPayMethod = new MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Optional<Max3Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionCashMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -268,6 +298,16 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(CorporateActionOptionCashMovementDetailsExtension2 obj) {
+			return obj.getDTCPayMethod();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionCashMovementDetailsExtension2 obj, Optional<Max3Text> value) {
+			obj.setDTCPayMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCPayOrdr")
@@ -304,7 +344,7 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Optional<Max3Text>> mmDTCPayOrder = new MMMessageAttribute<CorporateActionOptionCashMovementDetailsExtension2, Optional<Max3Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionCashMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -316,6 +356,16 @@ public class CorporateActionOptionCashMovementDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(CorporateActionOptionCashMovementDetailsExtension2 obj) {
+			return obj.getDTCPayOrder();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionCashMovementDetailsExtension2 obj, Optional<Max3Text> value) {
+			obj.setDTCPayOrder(value.orElse(null));
 		}
 	};
 

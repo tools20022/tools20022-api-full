@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CardServiceType3Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CryptographicKey6;
+import com.tools20022.repository.msg.KEKIdentifier3;
+import com.tools20022.repository.msg.ResponseType2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +116,7 @@ public class CardTransaction14 {
 	 * definition} = "Type of key exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyExchangeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransaction14, CardServiceType3Code> mmKeyExchangeType = new MMMessageAttribute<CardTransaction14, CardServiceType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
@@ -124,6 +127,16 @@ public class CardTransaction14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardServiceType3Code.mmObject();
+		}
+
+		@Override
+		public CardServiceType3Code getValue(CardTransaction14 obj) {
+			return obj.getKeyExchangeType();
+		}
+
+		@Override
+		public void setValue(CardTransaction14 obj, CardServiceType3Code value) {
+			obj.setKeyExchangeType(value);
 		}
 	};
 	@XmlElement(name = "InitrDtTm", required = true)
@@ -155,7 +168,7 @@ public class CardTransaction14 {
 	 * definition} = "Date and time of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitiatorDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransaction14, ISODateTime> mmInitiatorDateTime = new MMMessageAttribute<CardTransaction14, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
@@ -167,9 +180,19 @@ public class CardTransaction14 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		@Override
+		public ISODateTime getValue(CardTransaction14 obj) {
+			return obj.getInitiatorDateTime();
+		}
+
+		@Override
+		public void setValue(CardTransaction14 obj, ISODateTime value) {
+			obj.setInitiatorDateTime(value);
+		}
 	};
 	@XmlElement(name = "KeyVrfctn")
-	protected List<com.tools20022.repository.msg.KEKIdentifier3> keyVerification;
+	protected List<KEKIdentifier3> keyVerification;
 	/**
 	 * 
 	 <p>
@@ -196,7 +219,7 @@ public class CardTransaction14 {
 	 * definition} = "Key that has been verified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyVerification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction14, List<KEKIdentifier3>> mmKeyVerification = new MMMessageAssociationEnd<CardTransaction14, List<KEKIdentifier3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
@@ -206,11 +229,21 @@ public class CardTransaction14 {
 			definition = "Key that has been verified.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();
+			type_lazy = () -> KEKIdentifier3.mmObject();
+		}
+
+		@Override
+		public List<KEKIdentifier3> getValue(CardTransaction14 obj) {
+			return obj.getKeyVerification();
+		}
+
+		@Override
+		public void setValue(CardTransaction14 obj, List<KEKIdentifier3> value) {
+			obj.setKeyVerification(value);
 		}
 	};
 	@XmlElement(name = "Key")
-	protected List<com.tools20022.repository.msg.CryptographicKey6> key;
+	protected List<CryptographicKey6> key;
 	/**
 	 * 
 	 <p>
@@ -242,7 +275,7 @@ public class CardTransaction14 {
 	 * CardTransaction13.mmKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction14, List<CryptographicKey6>> mmKey = new MMMessageAssociationEnd<CardTransaction14, List<CryptographicKey6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
@@ -253,7 +286,17 @@ public class CardTransaction14 {
 			previousVersion_lazy = () -> CardTransaction13.mmKey;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey6.mmObject();
+			type_lazy = () -> CryptographicKey6.mmObject();
+		}
+
+		@Override
+		public List<CryptographicKey6> getValue(CardTransaction14 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(CardTransaction14 obj, List<CryptographicKey6> value) {
+			obj.setKey(value);
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -284,7 +327,7 @@ public class CardTransaction14 {
 	 * definition} = "Response to the key exchange request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransaction14, ResponseType2> mmTransactionResponse = new MMMessageAssociationEnd<CardTransaction14, ResponseType2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
 			isDerived = false;
@@ -295,7 +338,17 @@ public class CardTransaction14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType2.mmObject();
+			type_lazy = () -> ResponseType2.mmObject();
+		}
+
+		@Override
+		public ResponseType2 getValue(CardTransaction14 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(CardTransaction14 obj, ResponseType2 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 
@@ -336,7 +389,7 @@ public class CardTransaction14 {
 		return keyVerification == null ? keyVerification = new ArrayList<>() : keyVerification;
 	}
 
-	public CardTransaction14 setKeyVerification(List<com.tools20022.repository.msg.KEKIdentifier3> keyVerification) {
+	public CardTransaction14 setKeyVerification(List<KEKIdentifier3> keyVerification) {
 		this.keyVerification = Objects.requireNonNull(keyVerification);
 		return this;
 	}
@@ -345,7 +398,7 @@ public class CardTransaction14 {
 		return key == null ? key = new ArrayList<>() : key;
 	}
 
-	public CardTransaction14 setKey(List<com.tools20022.repository.msg.CryptographicKey6> key) {
+	public CardTransaction14 setKey(List<CryptographicKey6> key) {
 		this.key = Objects.requireNonNull(key);
 		return this;
 	}
@@ -354,7 +407,7 @@ public class CardTransaction14 {
 		return transactionResponse;
 	}
 
-	public CardTransaction14 setTransactionResponse(com.tools20022.repository.msg.ResponseType2 transactionResponse) {
+	public CardTransaction14 setTransactionResponse(ResponseType2 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}

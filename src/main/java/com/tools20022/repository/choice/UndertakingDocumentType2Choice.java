@@ -108,7 +108,7 @@ public class UndertakingDocumentType2Choice {
 	 * definition} = "Document type.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingDocumentType2Choice, ExternalUndertakingDocumentType2Code> mmCode = new MMMessageAttribute<UndertakingDocumentType2Choice, ExternalUndertakingDocumentType2Code>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UndertakingDocumentType2Choice.mmObject();
@@ -120,6 +120,16 @@ public class UndertakingDocumentType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingDocumentType2Code.mmObject();
+		}
+
+		@Override
+		public ExternalUndertakingDocumentType2Code getValue(UndertakingDocumentType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UndertakingDocumentType2Choice obj, ExternalUndertakingDocumentType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class UndertakingDocumentType2Choice {
 	 * definition} = "Document type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingDocumentType2Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<UndertakingDocumentType2Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UndertakingDocumentType2Choice.mmObject();
@@ -168,6 +178,16 @@ public class UndertakingDocumentType2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(UndertakingDocumentType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UndertakingDocumentType2Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

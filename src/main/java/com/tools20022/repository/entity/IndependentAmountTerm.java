@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.IndependentAmount1;
 import com.tools20022.repository.msg.IndependentAmount2;
 import com.tools20022.repository.msg.Margin1;
 import com.tools20022.repository.msg.SegregatedIndependentAmountMargin1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,29 +129,31 @@ public class IndependentAmountTerm extends ExposureTerm {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Determines how the independent amount was applied in the calculation. \r\r\nIt is either: \r\r\n- Before threshold, effectively acting as an add on to exposure, \r\r\n- After threshold where the amount is an add on to the credit support amount and forms part of the variation margin requirement,\r\r\n- Segregated where it is treated independently of variation margin for segregation purposes.Defines the specific terms used to calculate an independent amount."
+	 * "Determines how the independent amount was applied in the calculation. \r\r\nIt is either:\r\r\n- Before threshold, effectively acting as an add on to exposure, \r\r\n- After threshold where the amount is an add on to the credit support amount and forms part of the variation margin requirement,\r\r\n- Segregated where it is treated independently of variation margin for segregation purposes.Defines the specific terms used to calculate an independent amount."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmConvention = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IndependentAmountTerm, IndependentAmountConventionTypeCode> mmConvention = new MMBusinessAttribute<IndependentAmountTerm, IndependentAmountConventionTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndependentAmount1.mmConvention, IndependentAmount2.mmConvention);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IndependentAmountTerm.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Convention";
-			definition = "Determines how the independent amount was applied in the calculation. \r\r\nIt is either: \r\r\n- Before threshold, effectively acting as an add on to exposure, \r\r\n- After threshold where the amount is an add on to the credit support amount and forms part of the variation margin requirement,\r\r\n- Segregated where it is treated independently of variation margin for segregation purposes.Defines the specific terms used to calculate an independent amount.";
+			definition = "Determines how the independent amount was applied in the calculation. \r\r\nIt is either:\r\r\n- Before threshold, effectively acting as an add on to exposure, \r\r\n- After threshold where the amount is an add on to the credit support amount and forms part of the variation margin requirement,\r\r\n- Segregated where it is treated independently of variation margin for segregation purposes.Defines the specific terms used to calculate an independent amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IndependentAmountConventionTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IndependentAmountTerm.class.getMethod("getConvention", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IndependentAmountConventionTypeCode getValue(IndependentAmountTerm obj) {
+			return obj.getConvention();
+		}
+
+		@Override
+		public void setValue(IndependentAmountTerm obj, IndependentAmountConventionTypeCode value) {
+			obj.setConvention(value);
 		}
 	};
 

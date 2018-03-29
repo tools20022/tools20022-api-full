@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.datatype.PositiveNumber;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IsabelEpaymentTokenResponse1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -103,7 +104,7 @@ public class IsabelLRCIExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmImageHashAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelLRCIExtension1, Max105Text> mmImageHashAlgorithm = new MMMessageAttribute<IsabelLRCIExtension1, Max105Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIExtension1.mmObject();
 			isDerived = false;
@@ -114,6 +115,16 @@ public class IsabelLRCIExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Max105Text getValue(IsabelLRCIExtension1 obj) {
+			return obj.getImageHashAlgorithm();
+		}
+
+		@Override
+		public void setValue(IsabelLRCIExtension1 obj, Max105Text value) {
+			obj.setImageHashAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "TknRspn", required = true)
@@ -146,7 +157,7 @@ public class IsabelLRCIExtension1 {
 	 * "Block of data on which the signature is calculated by the LRCI client."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTokenResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelLRCIExtension1, IsabelEpaymentTokenResponse1> mmTokenResponse = new MMMessageAssociationEnd<IsabelLRCIExtension1, IsabelEpaymentTokenResponse1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIExtension1.mmObject();
 			isDerived = false;
@@ -157,7 +168,17 @@ public class IsabelLRCIExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmObject();
+			type_lazy = () -> IsabelEpaymentTokenResponse1.mmObject();
+		}
+
+		@Override
+		public IsabelEpaymentTokenResponse1 getValue(IsabelLRCIExtension1 obj) {
+			return obj.getTokenResponse();
+		}
+
+		@Override
+		public void setValue(IsabelLRCIExtension1 obj, IsabelEpaymentTokenResponse1 value) {
+			obj.setTokenResponse(value);
 		}
 	};
 	@XmlElement(name = "TknRspnPmtInfIndx", required = true)
@@ -192,7 +213,7 @@ public class IsabelLRCIExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTokenResponsePaymentInformationIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelLRCIExtension1, PositiveNumber> mmTokenResponsePaymentInformationIndex = new MMMessageAttribute<IsabelLRCIExtension1, PositiveNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelLRCIExtension1.mmObject();
 			isDerived = false;
@@ -203,6 +224,16 @@ public class IsabelLRCIExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PositiveNumber.mmObject();
+		}
+
+		@Override
+		public PositiveNumber getValue(IsabelLRCIExtension1 obj) {
+			return obj.getTokenResponsePaymentInformationIndex();
+		}
+
+		@Override
+		public void setValue(IsabelLRCIExtension1 obj, PositiveNumber value) {
+			obj.setTokenResponsePaymentInformationIndex(value);
 		}
 	};
 
@@ -233,7 +264,7 @@ public class IsabelLRCIExtension1 {
 		return tokenResponse;
 	}
 
-	public IsabelLRCIExtension1 setTokenResponse(com.tools20022.repository.msg.IsabelEpaymentTokenResponse1 tokenResponse) {
+	public IsabelLRCIExtension1 setTokenResponse(IsabelEpaymentTokenResponse1 tokenResponse) {
 		this.tokenResponse = Objects.requireNonNull(tokenResponse);
 		return this;
 	}

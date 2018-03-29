@@ -114,7 +114,7 @@ public class AcknowledgementReason13 {
 	 * definition} = "Reason provided for the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcknowledgementReason13, AcknowledgementReason16Choice> mmCode = new MMMessageAssociationEnd<AcknowledgementReason13, AcknowledgementReason16Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason13.mmObject();
@@ -128,6 +128,16 @@ public class AcknowledgementReason13 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcknowledgementReason16Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason16Choice getValue(AcknowledgementReason13 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason13 obj, AcknowledgementReason16Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -170,7 +180,7 @@ public class AcknowledgementReason13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason13, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AcknowledgementReason13, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason13.mmObject();
@@ -183,6 +193,16 @@ public class AcknowledgementReason13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(AcknowledgementReason13 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason13 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

@@ -55,12 +55,16 @@ public class ConstraintDeltaIndicatorRule {
 	 */
 	public static final MMConstraint<Trade2> forTrade2 = new MMConstraint<Trade2>() {
 		{
-			validator = ConstraintDeltaIndicatorRule::checkTrade2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeltaIndicatorRule";
 			definition = "If ForeignExchangeTradeProduct is equal to value 'SPOT'or'FORW', then DeltaIndicator Must be present.";
 			owner_lazy = () -> Trade2.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'SPOT' or 'FORWT' \r\nFollowing Must be True\r\n\t/DeltaIndicator Must be present";
+		}
+
+		@Override
+		public void executeValidator(Trade2 obj) throws Exception {
+			checkTrade2(obj);
 		}
 	};
 	/**
@@ -89,12 +93,16 @@ public class ConstraintDeltaIndicatorRule {
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {
 		{
-			validator = ConstraintDeltaIndicatorRule::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeltaIndicatorRule";
 			definition = "If ForeignExchangeTradeProduct is equal to value 'SPOT' or 'FORW', then DeltaIndicator Must be present.";
 			owner_lazy = () -> Trade1.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'SPOT' or 'FORWT' \r\nFollowing Must be True\r\n\t/DeltaIndicator Must be present";
+		}
+
+		@Override
+		public void executeValidator(Trade1 obj) throws Exception {
+			checkTrade1(obj);
 		}
 	};
 

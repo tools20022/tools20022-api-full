@@ -110,7 +110,7 @@ public class AlternateIdentification2 {
 	 * definition} = "Unique and unambiguous identifier of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateIdentification2, RestrictedFINXMax31Text> mmIdentification = new MMMessageAttribute<AlternateIdentification2, RestrictedFINXMax31Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateIdentification2.mmObject();
@@ -122,6 +122,16 @@ public class AlternateIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax31Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax31Text getValue(AlternateIdentification2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AlternateIdentification2 obj, RestrictedFINXMax31Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdSrc", required = true)
@@ -158,7 +168,7 @@ public class AlternateIdentification2 {
 	 * definition} = "Source of the security identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentificationSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AlternateIdentification2, IdentificationSource2Choice> mmIdentificationSource = new MMMessageAssociationEnd<AlternateIdentification2, IdentificationSource2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateIdentification2.mmObject();
@@ -171,6 +181,16 @@ public class AlternateIdentification2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IdentificationSource2Choice.mmObject();
+		}
+
+		@Override
+		public IdentificationSource2Choice getValue(AlternateIdentification2 obj) {
+			return obj.getIdentificationSource();
+		}
+
+		@Override
+		public void setValue(AlternateIdentification2 obj, IdentificationSource2Choice value) {
+			obj.setIdentificationSource(value);
 		}
 	};
 

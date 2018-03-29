@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.Recipient5Choice;
 import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +128,7 @@ public class KeyTransport4 {
 	 * KeyTransport3.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KeyTransport4, Optional<Number>> mmVersion = new MMMessageAttribute<KeyTransport4, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport4.mmObject();
 			isDerived = false;
@@ -140,6 +141,16 @@ public class KeyTransport4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(KeyTransport4 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(KeyTransport4 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptId", required = true)
@@ -183,7 +194,7 @@ public class KeyTransport4 {
 	 * KeyTransport3.mmRecipientIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KeyTransport4, Recipient5Choice> mmRecipientIdentification = new MMMessageAssociationEnd<KeyTransport4, Recipient5Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport4.mmObject();
 			isDerived = false;
@@ -197,6 +208,16 @@ public class KeyTransport4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Recipient5Choice.mmObject();
+		}
+
+		@Override
+		public Recipient5Choice getValue(KeyTransport4 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(KeyTransport4 obj, Recipient5Choice value) {
+			obj.setRecipientIdentification(value);
 		}
 	};
 	@XmlElement(name = "KeyNcrptnAlgo", required = true)
@@ -240,7 +261,7 @@ public class KeyTransport4 {
 	 * KeyTransport3.mmKeyEncryptionAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyEncryptionAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KeyTransport4, AlgorithmIdentification11> mmKeyEncryptionAlgorithm = new MMMessageAssociationEnd<KeyTransport4, AlgorithmIdentification11>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport4.mmObject();
 			isDerived = false;
@@ -253,7 +274,17 @@ public class KeyTransport4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification11.mmObject();
+			type_lazy = () -> AlgorithmIdentification11.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification11 getValue(KeyTransport4 obj) {
+			return obj.getKeyEncryptionAlgorithm();
+		}
+
+		@Override
+		public void setValue(KeyTransport4 obj, AlgorithmIdentification11 value) {
+			obj.setKeyEncryptionAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcrptdKey", required = true)
@@ -298,7 +329,7 @@ public class KeyTransport4 {
 	 * KeyTransport3.mmEncryptedKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptedKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KeyTransport4, Max5000Binary> mmEncryptedKey = new MMMessageAttribute<KeyTransport4, Max5000Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport4.mmObject();
 			isDerived = false;
@@ -311,6 +342,16 @@ public class KeyTransport4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
+		}
+
+		@Override
+		public Max5000Binary getValue(KeyTransport4 obj) {
+			return obj.getEncryptedKey();
+		}
+
+		@Override
+		public void setValue(KeyTransport4 obj, Max5000Binary value) {
+			obj.setEncryptedKey(value);
 		}
 	};
 
@@ -352,7 +393,7 @@ public class KeyTransport4 {
 		return keyEncryptionAlgorithm;
 	}
 
-	public KeyTransport4 setKeyEncryptionAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification11 keyEncryptionAlgorithm) {
+	public KeyTransport4 setKeyEncryptionAlgorithm(AlgorithmIdentification11 keyEncryptionAlgorithm) {
 		this.keyEncryptionAlgorithm = Objects.requireNonNull(keyEncryptionAlgorithm);
 		return this;
 	}

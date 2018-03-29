@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ElementIdentification3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +117,7 @@ public class ValidationResult3 {
 	 * definition} = "Sequential number assigned to the error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValidationResult3, Number> mmSequenceNumber = new MMMessageAttribute<ValidationResult3, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationResult3.mmObject();
 			isDerived = false;
@@ -127,6 +128,16 @@ public class ValidationResult3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ValidationResult3 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(ValidationResult3 obj, Number value) {
+			obj.setSequenceNumber(value);
 		}
 	};
 	@XmlElement(name = "RuleId", required = true)
@@ -160,7 +171,7 @@ public class ValidationResult3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRuleIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValidationResult3, Max35Text> mmRuleIdentification = new MMMessageAttribute<ValidationResult3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationResult3.mmObject();
 			isDerived = false;
@@ -171,6 +182,16 @@ public class ValidationResult3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ValidationResult3 obj) {
+			return obj.getRuleIdentification();
+		}
+
+		@Override
+		public void setValue(ValidationResult3 obj, Max35Text value) {
+			obj.setRuleIdentification(value);
 		}
 	};
 	@XmlElement(name = "RuleDesc", required = true)
@@ -202,7 +223,7 @@ public class ValidationResult3 {
 	 * definition} = "Detailed description of the rule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRuleDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ValidationResult3, Max350Text> mmRuleDescription = new MMMessageAttribute<ValidationResult3, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationResult3.mmObject();
 			isDerived = false;
@@ -214,9 +235,19 @@ public class ValidationResult3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
+
+		@Override
+		public Max350Text getValue(ValidationResult3 obj) {
+			return obj.getRuleDescription();
+		}
+
+		@Override
+		public void setValue(ValidationResult3 obj, Max350Text value) {
+			obj.setRuleDescription(value);
+		}
 	};
 	@XmlElement(name = "Elmt")
-	protected List<com.tools20022.repository.msg.ElementIdentification3> element;
+	protected List<ElementIdentification3> element;
 	/**
 	 * 
 	 <p>
@@ -243,7 +274,7 @@ public class ValidationResult3 {
 	 * definition} = "Description of the elements that violated the rule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmElement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ValidationResult3, List<ElementIdentification3>> mmElement = new MMMessageAssociationEnd<ValidationResult3, List<ElementIdentification3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationResult3.mmObject();
 			isDerived = false;
@@ -253,7 +284,17 @@ public class ValidationResult3 {
 			definition = "Description of the elements that violated the rule.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ElementIdentification3.mmObject();
+			type_lazy = () -> ElementIdentification3.mmObject();
+		}
+
+		@Override
+		public List<ElementIdentification3> getValue(ValidationResult3 obj) {
+			return obj.getElement();
+		}
+
+		@Override
+		public void setValue(ValidationResult3 obj, List<ElementIdentification3> value) {
+			obj.setElement(value);
 		}
 	};
 
@@ -303,7 +344,7 @@ public class ValidationResult3 {
 		return element == null ? element = new ArrayList<>() : element;
 	}
 
-	public ValidationResult3 setElement(List<com.tools20022.repository.msg.ElementIdentification3> element) {
+	public ValidationResult3 setElement(List<ElementIdentification3> element) {
 		this.element = Objects.requireNonNull(element);
 		return this;
 	}

@@ -21,6 +21,10 @@ import com.tools20022.metamodel.MMBinary;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * Specifies a binary string with a minimum length of 5 bytes, and a maximum
@@ -45,9 +49,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class Min5Max16Binary {
 
 	final static private AtomicReference<MMBinary> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
+	protected String value;
 
 	final static public MMBinary mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBinary() {
@@ -61,5 +69,25 @@ public class Min5Max16Binary {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Min5Max16Binary() {
+	}
+
+	public Min5Max16Binary(String value) {
+		this.value = value;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value == null ? null : value.toString();
 	}
 }

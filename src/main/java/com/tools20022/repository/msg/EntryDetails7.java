@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BatchInformation2;
+import com.tools20022.repository.msg.EntryTransaction8;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -116,7 +118,7 @@ public class EntryDetails7 {
 	 * EntryDetails6.mmBatch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBatch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EntryDetails7, Optional<BatchInformation2>> mmBatch = new MMMessageAssociationEnd<EntryDetails7, Optional<BatchInformation2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntryDetails7.mmObject();
 			isDerived = false;
@@ -129,11 +131,21 @@ public class EntryDetails7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BatchInformation2.mmObject();
+			type_lazy = () -> BatchInformation2.mmObject();
+		}
+
+		@Override
+		public Optional<BatchInformation2> getValue(EntryDetails7 obj) {
+			return obj.getBatch();
+		}
+
+		@Override
+		public void setValue(EntryDetails7 obj, Optional<BatchInformation2> value) {
+			obj.setBatch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDtls")
-	protected List<com.tools20022.repository.msg.EntryTransaction8> transactionDetails;
+	protected List<EntryTransaction8> transactionDetails;
 	/**
 	 * 
 	 <p>
@@ -176,7 +188,7 @@ public class EntryDetails7 {
 	 * EntryDetails6.mmTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EntryDetails7, List<EntryTransaction8>> mmTransactionDetails = new MMMessageAssociationEnd<EntryDetails7, List<EntryTransaction8>>() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntryDetails7.mmObject();
@@ -189,7 +201,17 @@ public class EntryDetails7 {
 			previousVersion_lazy = () -> EntryDetails6.mmTransactionDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EntryTransaction8.mmObject();
+			type_lazy = () -> EntryTransaction8.mmObject();
+		}
+
+		@Override
+		public List<EntryTransaction8> getValue(EntryDetails7 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(EntryDetails7 obj, List<EntryTransaction8> value) {
+			obj.setTransactionDetails(value);
 		}
 	};
 
@@ -213,7 +235,7 @@ public class EntryDetails7 {
 		return batch == null ? Optional.empty() : Optional.of(batch);
 	}
 
-	public EntryDetails7 setBatch(com.tools20022.repository.msg.BatchInformation2 batch) {
+	public EntryDetails7 setBatch(BatchInformation2 batch) {
 		this.batch = batch;
 		return this;
 	}
@@ -222,7 +244,7 @@ public class EntryDetails7 {
 		return transactionDetails == null ? transactionDetails = new ArrayList<>() : transactionDetails;
 	}
 
-	public EntryDetails7 setTransactionDetails(List<com.tools20022.repository.msg.EntryTransaction8> transactionDetails) {
+	public EntryDetails7 setTransactionDetails(List<EntryTransaction8> transactionDetails) {
 		this.transactionDetails = Objects.requireNonNull(transactionDetails);
 		return this;
 	}

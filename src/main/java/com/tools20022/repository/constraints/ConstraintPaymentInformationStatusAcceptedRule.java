@@ -58,12 +58,16 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInformation1> forOriginalPaymentInformation1 = new MMConstraint<OriginalPaymentInformation1>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			owner_lazy = () -> OriginalPaymentInformation1.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInformation1 obj) throws Exception {
+			checkOriginalPaymentInformation1(obj);
 		}
 	};
 	/**
@@ -93,12 +97,16 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction1> forOriginalPaymentInstruction1 = new MMConstraint<OriginalPaymentInstruction1>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			owner_lazy = () -> OriginalPaymentInstruction1.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction1 obj) throws Exception {
+			checkOriginalPaymentInstruction1(obj);
 		}
 	};
 	/**
@@ -137,13 +145,17 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction6> forOriginalPaymentInstruction6 = new MMConstraint<OriginalPaymentInstruction6>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPaymentInformationStatusAcceptedRule.forOriginalPaymentInstruction12);
 			owner_lazy = () -> OriginalPaymentInstruction6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction6 obj) throws Exception {
+			checkOriginalPaymentInstruction6(obj);
 		}
 	};
 	/**
@@ -173,12 +185,16 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInformation5> forOriginalPaymentInformation5 = new MMConstraint<OriginalPaymentInformation5>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			owner_lazy = () -> OriginalPaymentInformation5.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInformation5 obj) throws Exception {
+			checkOriginalPaymentInformation5(obj);
 		}
 	};
 	/**
@@ -208,12 +224,16 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction5> forOriginalPaymentInstruction5 = new MMConstraint<OriginalPaymentInstruction5>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			owner_lazy = () -> OriginalPaymentInstruction5.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction5 obj) throws Exception {
+			checkOriginalPaymentInstruction5(obj);
 		}
 	};
 	/**
@@ -252,13 +272,17 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction9> forOriginalPaymentInstruction9 = new MMConstraint<OriginalPaymentInstruction9>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPaymentInformationStatusAcceptedRule.forOriginalPaymentInstruction14);
 			owner_lazy = () -> OriginalPaymentInstruction9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction9 obj) throws Exception {
+			checkOriginalPaymentInstruction9(obj);
 		}
 	};
 	/**
@@ -303,7 +327,6 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction12> forOriginalPaymentInstruction12 = new MMConstraint<OriginalPaymentInstruction12>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
@@ -311,6 +334,11 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationStatusAcceptedRule.forOriginalPaymentInstruction6;
 			owner_lazy = () -> OriginalPaymentInstruction12.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction12 obj) throws Exception {
+			checkOriginalPaymentInstruction12(obj);
 		}
 	};
 	/**
@@ -355,7 +383,6 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction14> forOriginalPaymentInstruction14 = new MMConstraint<OriginalPaymentInstruction14>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
@@ -363,6 +390,11 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationStatusAcceptedRule.forOriginalPaymentInstruction9;
 			owner_lazy = () -> OriginalPaymentInstruction14.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction14 obj) throws Exception {
+			checkOriginalPaymentInstruction14(obj);
 		}
 	};
 	/**
@@ -407,7 +439,6 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction18> forOriginalPaymentInstruction18 = new MMConstraint<OriginalPaymentInstruction18>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC (AcceptedTechnicalValidation), ACCP (AcceptedCustomerProfile), ACSP (AcceptedSettlementInProcess), ACSC (AcceptedSettlementCompleted) or ACWC (AcceptedWithChange), then TransactionInformationAndStatus/TransactionStatus must be different from RJCT (Rejected).";
@@ -415,6 +446,11 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationStatusAcceptedRule.forOriginalPaymentInstruction12;
 			owner_lazy = () -> OriginalPaymentInstruction18.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction18 obj) throws Exception {
+			checkOriginalPaymentInstruction18(obj);
 		}
 	};
 	/**
@@ -459,7 +495,6 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction19> forOriginalPaymentInstruction19 = new MMConstraint<OriginalPaymentInstruction19>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
@@ -467,6 +502,11 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationStatusAcceptedRule.forOriginalPaymentInstruction14;
 			owner_lazy = () -> OriginalPaymentInstruction19.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction19 obj) throws Exception {
+			checkOriginalPaymentInstruction19(obj);
 		}
 	};
 	/**
@@ -511,7 +551,6 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction23> forOriginalPaymentInstruction23 = new MMConstraint<OriginalPaymentInstruction23>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC (AcceptedTechnicalValidation), ACCP (AcceptedCustomerProfile), ACSP (AcceptedSettlementInProcess), ACSC (AcceptedSettlementCompleted) or ACWC (AcceptedWithChange), then TransactionInformationAndStatus/TransactionStatus must be different from RJCT (Rejected).";
@@ -519,6 +558,11 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationStatusAcceptedRule.forOriginalPaymentInstruction18;
 			owner_lazy = () -> OriginalPaymentInstruction23.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction23 obj) throws Exception {
+			checkOriginalPaymentInstruction23(obj);
 		}
 	};
 	/**
@@ -554,13 +598,17 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction24> forOriginalPaymentInstruction24 = new MMConstraint<OriginalPaymentInstruction24>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC, ACCP, ACSP, ACSC or ACWC, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationStatusAcceptedRule.forOriginalPaymentInstruction19;
 			owner_lazy = () -> OriginalPaymentInstruction24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction24 obj) throws Exception {
+			checkOriginalPaymentInstruction24(obj);
 		}
 	};
 	/**
@@ -596,13 +644,17 @@ public class ConstraintPaymentInformationStatusAcceptedRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction27> forOriginalPaymentInstruction27 = new MMConstraint<OriginalPaymentInstruction27>() {
 		{
-			validator = ConstraintPaymentInformationStatusAcceptedRule::checkOriginalPaymentInstruction27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatusAcceptedRule";
 			definition = "If OriginalPaymentInformationAndStatus/PaymentInformationStatus is present and is equal to ACTC (AcceptedTechnicalValidation), ACCP (AcceptedCustomerProfile), ACSP (AcceptedSettlementInProcess), ACSC (AcceptedSettlementCompleted) or ACWC (AcceptedWithChange), then TransactionInformationAndStatus/TransactionStatus must be different from RJCT (Rejected).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationStatusAcceptedRule.forOriginalPaymentInstruction23;
 			owner_lazy = () -> OriginalPaymentInstruction27.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/TransactionInformationAndStatus[*]/TransactionStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentInformationStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"WithInList\"><leftOperand>/PaymentInformationStatus</leftOperand><rightOperand>ValidationGroupStatus1Code</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[1]/TransactionStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction27 obj) throws Exception {
+			checkOriginalPaymentInstruction27(obj);
 		}
 	};
 

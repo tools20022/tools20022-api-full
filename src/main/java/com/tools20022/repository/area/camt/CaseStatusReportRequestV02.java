@@ -25,7 +25,6 @@ import com.tools20022.repository.area.CashManagementPreviousVersion;
 import com.tools20022.repository.msg.Case2;
 import com.tools20022.repository.msg.ReportHeader2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -145,7 +144,7 @@ public class CaseStatusReportRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportRequestV02, ReportHeader2> mmRequestHeader = new MMMessageBuildingBlock<CaseStatusReportRequestV02, ReportHeader2>() {
 		{
 			xmlTag = "ReqHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,12 +155,14 @@ public class CaseStatusReportRequestV02 {
 			complexType_lazy = () -> ReportHeader2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportRequestV02.class.getMethod("getRequestHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportHeader2 getValue(CaseStatusReportRequestV02 obj) {
+			return obj.getRequestHeader();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportRequestV02 obj, ReportHeader2 value) {
+			obj.setRequestHeader(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -187,7 +188,7 @@ public class CaseStatusReportRequestV02 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CaseStatusReportRequestV02, Case2> mmCase = new MMMessageBuildingBlock<CaseStatusReportRequestV02, Case2>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,12 +199,14 @@ public class CaseStatusReportRequestV02 {
 			complexType_lazy = () -> Case2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CaseStatusReportRequestV02.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case2 getValue(CaseStatusReportRequestV02 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(CaseStatusReportRequestV02 obj, Case2 value) {
+			obj.setCase(value);
 		}
 	};
 

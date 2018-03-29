@@ -24,6 +24,8 @@ import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification41;
+import com.tools20022.repository.msg.ProprietaryData3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -153,7 +155,7 @@ public class PartyAndSignature1 {
 	 * definition} = "Entity involved in an activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAndSignature1, PartyIdentification41> mmParty = new MMMessageAssociationEnd<PartyAndSignature1, PartyIdentification41>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndSignature1.mmObject();
@@ -165,7 +167,17 @@ public class PartyAndSignature1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification41.mmObject();
+			type_lazy = () -> PartyIdentification41.mmObject();
+		}
+
+		@Override
+		public PartyIdentification41 getValue(PartyAndSignature1 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(PartyAndSignature1 obj, PartyIdentification41 value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "Sgntr", required = true)
@@ -201,7 +213,7 @@ public class PartyAndSignature1 {
 	 * definition} = "Signature of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAndSignature1, ProprietaryData3> mmSignature = new MMMessageAssociationEnd<PartyAndSignature1, ProprietaryData3>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndSignature1.mmObject();
@@ -213,7 +225,17 @@ public class PartyAndSignature1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryData3.mmObject();
+			type_lazy = () -> ProprietaryData3.mmObject();
+		}
+
+		@Override
+		public ProprietaryData3 getValue(PartyAndSignature1 obj) {
+			return obj.getSignature();
+		}
+
+		@Override
+		public void setValue(PartyAndSignature1 obj, ProprietaryData3 value) {
+			obj.setSignature(value);
 		}
 	};
 
@@ -240,7 +262,7 @@ public class PartyAndSignature1 {
 		return party;
 	}
 
-	public PartyAndSignature1 setParty(com.tools20022.repository.msg.PartyIdentification41 party) {
+	public PartyAndSignature1 setParty(PartyIdentification41 party) {
 		this.party = Objects.requireNonNull(party);
 		return this;
 	}
@@ -249,7 +271,7 @@ public class PartyAndSignature1 {
 		return signature;
 	}
 
-	public PartyAndSignature1 setSignature(com.tools20022.repository.msg.ProprietaryData3 signature) {
+	public PartyAndSignature1 setSignature(ProprietaryData3 signature) {
 		this.signature = Objects.requireNonNull(signature);
 		return this;
 	}

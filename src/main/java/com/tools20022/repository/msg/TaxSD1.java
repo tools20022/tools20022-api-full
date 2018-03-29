@@ -118,7 +118,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<TaxSD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TaxSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrgnTaxCdtAmt")
@@ -160,7 +170,7 @@ public class TaxSD1 {
 	 * definition} = "Amount of foreign tax credit per security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignTaxCreditAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<RestrictedFINActiveCurrencyAndAmount>> mmForeignTaxCreditAmount = new MMMessageAttribute<TaxSD1, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(TaxSD1 obj) {
+			return obj.getForeignTaxCreditAmount();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setForeignTaxCreditAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrgnTaxCdtRate")
@@ -202,7 +222,7 @@ public class TaxSD1 {
 	 * definition} = "Percent of foreign tax credit per security\n.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignTaxCreditRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<PercentageRate>> mmForeignTaxCreditRate = new MMMessageAttribute<TaxSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -213,6 +233,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxSD1 obj) {
+			return obj.getForeignTaxCreditRate();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<PercentageRate> value) {
+			obj.setForeignTaxCreditRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrgnSrcAmt")
@@ -246,7 +276,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignSourceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<RestrictedFINActiveCurrencyAndAmount>> mmForeignSourceAmount = new MMMessageAttribute<TaxSD1, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -257,6 +287,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(TaxSD1 obj) {
+			return obj.getForeignSourceAmount();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setForeignSourceAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrgnSrcRate")
@@ -290,7 +330,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignSourceRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<PercentageRate>> mmForeignSourceRate = new MMMessageAttribute<TaxSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -301,6 +341,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxSD1 obj) {
+			return obj.getForeignSourceRate();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<PercentageRate> value) {
+			obj.setForeignSourceRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxAdvntgTp")
@@ -332,7 +382,7 @@ public class TaxSD1 {
 	 * definition} = "Form of tax advantage on the dividend."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxAdvantageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<TaxAdvantageType1Code>> mmTaxAdvantageType = new MMMessageAttribute<TaxSD1, Optional<TaxAdvantageType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -343,6 +393,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TaxAdvantageType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TaxAdvantageType1Code> getValue(TaxSD1 obj) {
+			return obj.getTaxAdvantageType();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<TaxAdvantageType1Code> value) {
+			obj.setTaxAdvantageType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxAdvntgAmt")
@@ -374,7 +434,7 @@ public class TaxSD1 {
 	 * definition} = "Amount of the tax advantage on the dividend."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxAdvantageAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<RestrictedFINActiveCurrencyAndAmount>> mmTaxAdvantageAmount = new MMMessageAttribute<TaxSD1, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -385,6 +445,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(TaxSD1 obj) {
+			return obj.getTaxAdvantageAmount();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setTaxAdvantageAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxAdvntgRate")
@@ -416,7 +486,7 @@ public class TaxSD1 {
 	 * definition} = "Percent of the tax advantage on the dividend."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxAdvantageRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<PercentageRate>> mmTaxAdvantageRate = new MMMessageAttribute<TaxSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -427,6 +497,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxSD1 obj) {
+			return obj.getTaxAdvantageRate();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<PercentageRate> value) {
+			obj.setTaxAdvantageRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SndryOrOthrRate")
@@ -460,7 +540,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSundryOrOtherRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<PercentageRate>> mmSundryOrOtherRate = new MMMessageAttribute<TaxSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -471,6 +551,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxSD1 obj) {
+			return obj.getSundryOrOtherRate();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<PercentageRate> value) {
+			obj.setSundryOrOtherRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxDfrrdRate")
@@ -503,7 +593,7 @@ public class TaxSD1 {
 	 * "Percentage of the amount of income eligible for deferred taxation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxDeferredRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<PercentageRate>> mmTaxDeferredRate = new MMMessageAttribute<TaxSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -514,6 +604,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxSD1 obj) {
+			return obj.getTaxDeferredRate();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<PercentageRate> value) {
+			obj.setTaxDeferredRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxFreeRate")
@@ -547,7 +647,7 @@ public class TaxSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxFreeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxSD1, Optional<PercentageRate>> mmTaxFreeRate = new MMMessageAttribute<TaxSD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
@@ -558,6 +658,16 @@ public class TaxSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxSD1 obj) {
+			return obj.getTaxFreeRate();
+		}
+
+		@Override
+		public void setValue(TaxSD1 obj, Optional<PercentageRate> value) {
+			obj.setTaxFreeRate(value.orElse(null));
 		}
 	};
 

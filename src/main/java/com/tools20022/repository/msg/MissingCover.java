@@ -115,7 +115,7 @@ public class MissingCover {
 	 * "Indicates whether or not the claim is related to a missing cover."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMissingCoverIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MissingCover, YesNoIndicator> mmMissingCoverIndication = new MMMessageAttribute<MissingCover, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCase.mmMissingCoverIndication;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MissingCover.mmObject();
@@ -127,6 +127,16 @@ public class MissingCover {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(MissingCover obj) {
+			return obj.getMissingCoverIndication();
+		}
+
+		@Override
+		public void setValue(MissingCover obj, YesNoIndicator value) {
+			obj.setMissingCoverIndication(value);
 		}
 	};
 

@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.InstructionProcessingStatus10Choice;
 import com.tools20022.repository.choice.MatchingStatus7Choice;
 import com.tools20022.repository.choice.SettlementStatus7Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryReason1;
+import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -141,7 +143,7 @@ public class StatusAndReason15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason15, Optional<MatchingStatus7Choice>> mmInferredMatchingStatus = new MMMessageAssociationEnd<StatusAndReason15, Optional<MatchingStatus7Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason15.mmObject();
 			isDerived = false;
@@ -155,6 +157,16 @@ public class StatusAndReason15 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus7Choice> getValue(StatusAndReason15 obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason15 obj, Optional<MatchingStatus7Choice> value) {
+			obj.setInferredMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSts")
@@ -197,7 +209,7 @@ public class StatusAndReason15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason15, Optional<MatchingStatus7Choice>> mmMatchingStatus = new MMMessageAssociationEnd<StatusAndReason15, Optional<MatchingStatus7Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason15.mmObject();
 			isDerived = false;
@@ -211,6 +223,16 @@ public class StatusAndReason15 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus7Choice> getValue(StatusAndReason15 obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason15 obj, Optional<MatchingStatus7Choice> value) {
+			obj.setMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -253,7 +275,7 @@ public class StatusAndReason15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason15, Optional<SettlementStatus7Choice>> mmSettlementStatus = new MMMessageAssociationEnd<StatusAndReason15, Optional<SettlementStatus7Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason15.mmObject();
 			isDerived = false;
@@ -267,6 +289,16 @@ public class StatusAndReason15 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementStatus7Choice> getValue(StatusAndReason15 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason15 obj, Optional<SettlementStatus7Choice> value) {
+			obj.setSettlementStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrPrcgSts")
@@ -309,7 +341,7 @@ public class StatusAndReason15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason15, Optional<InstructionProcessingStatus10Choice>> mmInstructionProcessingStatus = new MMMessageAssociationEnd<StatusAndReason15, Optional<InstructionProcessingStatus10Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason15.mmObject();
 			isDerived = false;
@@ -323,6 +355,16 @@ public class StatusAndReason15 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InstructionProcessingStatus10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InstructionProcessingStatus10Choice> getValue(StatusAndReason15 obj) {
+			return obj.getInstructionProcessingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason15 obj, Optional<InstructionProcessingStatus10Choice> value) {
+			obj.setInstructionProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sttld")
@@ -361,7 +403,7 @@ public class StatusAndReason15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason15, Optional<ProprietaryReason1>> mmSettled = new MMMessageAssociationEnd<StatusAndReason15, Optional<ProprietaryReason1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason15.mmObject();
 			isDerived = false;
@@ -373,7 +415,17 @@ public class StatusAndReason15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason1.mmObject();
+			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryReason1> getValue(StatusAndReason15 obj) {
+			return obj.getSettled();
+		}
+
+		@Override
+		public void setValue(StatusAndReason15 obj, Optional<ProprietaryReason1> value) {
+			obj.setSettled(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -416,7 +468,7 @@ public class StatusAndReason15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason15, Optional<ProprietaryStatusAndReason1>> mmProprietary = new MMMessageAssociationEnd<StatusAndReason15, Optional<ProprietaryStatusAndReason1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason15.mmObject();
 			isDerived = false;
@@ -429,7 +481,17 @@ public class StatusAndReason15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusAndReason1.mmObject();
+			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryStatusAndReason1> getValue(StatusAndReason15 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StatusAndReason15 obj, Optional<ProprietaryStatusAndReason1> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 
@@ -491,7 +553,7 @@ public class StatusAndReason15 {
 		return settled == null ? Optional.empty() : Optional.of(settled);
 	}
 
-	public StatusAndReason15 setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
+	public StatusAndReason15 setSettled(ProprietaryReason1 settled) {
 		this.settled = settled;
 		return this;
 	}
@@ -500,7 +562,7 @@ public class StatusAndReason15 {
 		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public StatusAndReason15 setProprietary(com.tools20022.repository.msg.ProprietaryStatusAndReason1 proprietary) {
+	public StatusAndReason15 setProprietary(ProprietaryStatusAndReason1 proprietary) {
 		this.proprietary = proprietary;
 		return this;
 	}

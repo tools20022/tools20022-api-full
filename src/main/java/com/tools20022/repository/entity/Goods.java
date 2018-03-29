@@ -22,10 +22,11 @@ import com.tools20022.repository.choice.CertifiedCharacteristics1Choice;
 import com.tools20022.repository.choice.CertifiedCharacteristics2Choice;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.GoodsPartyRole;
 import com.tools20022.repository.entity.Product;
+import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -148,7 +149,7 @@ public class Goods extends Product {
 	 * "Specifies the transport information related to the delivery of goods."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Goods, Optional<Transport>> mmTransport = new MMBusinessAssociationEnd<Goods, Optional<Transport>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
@@ -160,6 +161,16 @@ public class Goods extends Product {
 			opposite_lazy = () -> com.tools20022.repository.entity.Transport.mmTransportedGoods;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
+		}
+
+		@Override
+		public Optional<Transport> getValue(Goods obj) {
+			return obj.getTransport();
+		}
+
+		@Override
+		public void setValue(Goods obj, Optional<Transport> value) {
+			obj.setTransport(value.orElse(null));
 		}
 	};
 	protected Max70Text analysis;
@@ -199,7 +210,7 @@ public class Goods extends Product {
 	 * "Analysis of the goods, as proven by the trade certificate."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAnalysis = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Goods, Max70Text> mmAnalysis = new MMBusinessAttribute<Goods, Max70Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmAnalysis, CertifiedCharacteristics2Choice.mmAnalysis);
 			isDerived = false;
@@ -212,12 +223,14 @@ public class Goods extends Product {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Goods.class.getMethod("getAnalysis", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max70Text getValue(Goods obj) {
+			return obj.getAnalysis();
+		}
+
+		@Override
+		public void setValue(Goods obj, Max70Text value) {
+			obj.setAnalysis(value);
 		}
 	};
 	protected YesNoIndicator healthCheck;
@@ -257,7 +270,7 @@ public class Goods extends Product {
 	 * definition} = "Indicates if the goods have passed the health check."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmHealthCheck = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Goods, YesNoIndicator> mmHealthCheck = new MMBusinessAttribute<Goods, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmHealthIndication, CertifiedCharacteristics2Choice.mmHealthIndication);
 			isDerived = false;
@@ -270,12 +283,14 @@ public class Goods extends Product {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Goods.class.getMethod("getHealthCheck", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Goods obj) {
+			return obj.getHealthCheck();
+		}
+
+		@Override
+		public void setValue(Goods obj, YesNoIndicator value) {
+			obj.setHealthCheck(value);
 		}
 	};
 	protected YesNoIndicator phytosanitaryInspection;
@@ -316,7 +331,7 @@ public class Goods extends Product {
 	 * "Indicates if the goods have passed the phytosanitary inspection."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPhytosanitaryInspection = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Goods, YesNoIndicator> mmPhytosanitaryInspection = new MMBusinessAttribute<Goods, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmPhytosanitaryIndication, CertifiedCharacteristics2Choice.mmPhytosanitaryIndication);
 			isDerived = false;
@@ -329,15 +344,17 @@ public class Goods extends Product {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Goods.class.getMethod("getPhytosanitaryInspection", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Goods obj) {
+			return obj.getPhytosanitaryInspection();
+		}
+
+		@Override
+		public void setValue(Goods obj, YesNoIndicator value) {
+			obj.setPhytosanitaryInspection(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.GoodsPartyRole> partyRole;
+	protected List<GoodsPartyRole> partyRole;
 	/**
 	 * 
 	 <p>
@@ -371,7 +388,7 @@ public class Goods extends Product {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Goods, List<GoodsPartyRole>> mmPartyRole = new MMBusinessAssociationEnd<Goods, List<GoodsPartyRole>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Goods.mmObject();
@@ -379,9 +396,19 @@ public class Goods extends Product {
 			name = "PartyRole";
 			definition = "Role played by a party in the context of producing goods.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.GoodsPartyRole.mmItem;
+			opposite_lazy = () -> GoodsPartyRole.mmItem;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.GoodsPartyRole.mmObject();
+			type_lazy = () -> GoodsPartyRole.mmObject();
+		}
+
+		@Override
+		public List<GoodsPartyRole> getValue(Goods obj) {
+			return obj.getPartyRole();
+		}
+
+		@Override
+		public void setValue(Goods obj, List<GoodsPartyRole> value) {
+			obj.setPartyRole(value);
 		}
 	};
 
@@ -392,7 +419,7 @@ public class Goods extends Product {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Goods";
 				definition = "Good is a physical product that can be delivered to a purchaser and that involves the transfer of ownership from seller to customer.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.mmTransportedGoods, com.tools20022.repository.entity.GoodsPartyRole.mmItem);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.mmTransportedGoods, GoodsPartyRole.mmItem);
 				derivationElement_lazy = () -> Arrays.asList(CommercialDataSet2.mmGoods, CommercialDataSet3.mmGoods, Baseline4.mmGoods, CommercialDataSet4.mmGoods, Baseline5.mmGoods, CommercialDataSet5.mmGoods);
 				superType_lazy = () -> Product.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Goods.mmTransport, com.tools20022.repository.entity.Goods.mmAnalysis, com.tools20022.repository.entity.Goods.mmHealthCheck,
@@ -448,7 +475,7 @@ public class Goods extends Product {
 		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public Goods setPartyRole(List<com.tools20022.repository.entity.GoodsPartyRole> partyRole) {
+	public Goods setPartyRole(List<GoodsPartyRole> partyRole) {
 		this.partyRole = Objects.requireNonNull(partyRole);
 		return this;
 	}

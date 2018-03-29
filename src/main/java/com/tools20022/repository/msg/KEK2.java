@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification2;
+import com.tools20022.repository.msg.KEKIdentifier1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +116,7 @@ public class KEK2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KEK2, Optional<Number>> mmVersion = new MMMessageAttribute<KEK2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEK2.mmObject();
 			isDerived = false;
@@ -126,6 +128,16 @@ public class KEK2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(KEK2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(KEK2 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KEKId", required = true)
@@ -161,7 +173,7 @@ public class KEK2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKEKIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KEK2, KEKIdentifier1> mmKEKIdentification = new MMMessageAssociationEnd<KEK2, KEKIdentifier1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEK2.mmObject();
 			isDerived = false;
@@ -173,7 +185,17 @@ public class KEK2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier1.mmObject();
+			type_lazy = () -> KEKIdentifier1.mmObject();
+		}
+
+		@Override
+		public KEKIdentifier1 getValue(KEK2 obj) {
+			return obj.getKEKIdentification();
+		}
+
+		@Override
+		public void setValue(KEK2 obj, KEKIdentifier1 value) {
+			obj.setKEKIdentification(value);
 		}
 	};
 	@XmlElement(name = "KeyNcrptnAlgo", required = true)
@@ -211,7 +233,7 @@ public class KEK2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyEncryptionAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KEK2, AlgorithmIdentification2> mmKeyEncryptionAlgorithm = new MMMessageAssociationEnd<KEK2, AlgorithmIdentification2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEK2.mmObject();
 			isDerived = false;
@@ -223,7 +245,17 @@ public class KEK2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification2.mmObject();
+			type_lazy = () -> AlgorithmIdentification2.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification2 getValue(KEK2 obj) {
+			return obj.getKeyEncryptionAlgorithm();
+		}
+
+		@Override
+		public void setValue(KEK2 obj, AlgorithmIdentification2 value) {
+			obj.setKeyEncryptionAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcrptdKey", required = true)
@@ -261,7 +293,7 @@ public class KEK2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptedKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KEK2, Max140Binary> mmEncryptedKey = new MMMessageAttribute<KEK2, Max140Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEK2.mmObject();
 			isDerived = false;
@@ -273,6 +305,16 @@ public class KEK2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Max140Binary getValue(KEK2 obj) {
+			return obj.getEncryptedKey();
+		}
+
+		@Override
+		public void setValue(KEK2 obj, Max140Binary value) {
+			obj.setEncryptedKey(value);
 		}
 	};
 
@@ -305,7 +347,7 @@ public class KEK2 {
 		return kEKIdentification;
 	}
 
-	public KEK2 setKEKIdentification(com.tools20022.repository.msg.KEKIdentifier1 kEKIdentification) {
+	public KEK2 setKEKIdentification(KEKIdentifier1 kEKIdentification) {
 		this.kEKIdentification = Objects.requireNonNull(kEKIdentification);
 		return this;
 	}
@@ -314,7 +356,7 @@ public class KEK2 {
 		return keyEncryptionAlgorithm;
 	}
 
-	public KEK2 setKeyEncryptionAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification2 keyEncryptionAlgorithm) {
+	public KEK2 setKeyEncryptionAlgorithm(AlgorithmIdentification2 keyEncryptionAlgorithm) {
 		this.keyEncryptionAlgorithm = Objects.requireNonNull(keyEncryptionAlgorithm);
 		return this;
 	}

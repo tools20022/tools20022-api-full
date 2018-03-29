@@ -27,6 +27,7 @@ import com.tools20022.repository.choice.SequenceRange1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -144,7 +145,7 @@ public class ReportingRequest4 {
 	 * ReportingRequest3.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportingRequest4, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<ReportingRequest4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportingRequest4.mmObject();
 			isDerived = false;
@@ -156,6 +157,16 @@ public class ReportingRequest4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReportingRequest4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ReportingRequest4 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdMsgNmId", required = true)
@@ -192,7 +203,7 @@ public class ReportingRequest4 {
 	 * ReportingRequest3.mmRequestedMessageNameIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportingRequest4, Max35Text> mmRequestedMessageNameIdentification = new MMMessageAttribute<ReportingRequest4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportingRequest4.mmObject();
 			isDerived = false;
@@ -204,6 +215,16 @@ public class ReportingRequest4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportingRequest4 obj) {
+			return obj.getRequestedMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(ReportingRequest4 obj, Max35Text value) {
+			obj.setRequestedMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -246,7 +267,7 @@ public class ReportingRequest4 {
 	 * ReportingRequest3.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingRequest4, Optional<CashAccount24>> mmAccount = new MMMessageAssociationEnd<ReportingRequest4, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportingRequest4.mmObject();
@@ -259,7 +280,17 @@ public class ReportingRequest4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(ReportingRequest4 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(ReportingRequest4 obj, Optional<CashAccount24> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr", required = true)
@@ -300,7 +331,7 @@ public class ReportingRequest4 {
 	 * ReportingRequest3.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingRequest4, Party35Choice> mmAccountOwner = new MMMessageAssociationEnd<ReportingRequest4, Party35Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportingRequest4.mmObject();
@@ -314,6 +345,16 @@ public class ReportingRequest4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party35Choice.mmObject();
+		}
+
+		@Override
+		public Party35Choice getValue(ReportingRequest4 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(ReportingRequest4 obj, Party35Choice value) {
+			obj.setAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -357,7 +398,7 @@ public class ReportingRequest4 {
 	 * ReportingRequest3.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingRequest4, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountServicer = new MMMessageAssociationEnd<ReportingRequest4, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportingRequest4.mmObject();
@@ -370,7 +411,17 @@ public class ReportingRequest4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(ReportingRequest4 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(ReportingRequest4 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgPrd")
@@ -411,7 +462,7 @@ public class ReportingRequest4 {
 	 * ReportingRequest3.mmReportingPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingRequest4, Optional<ReportingPeriod2>> mmReportingPeriod = new MMMessageAssociationEnd<ReportingRequest4, Optional<ReportingPeriod2>>() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportingRequest4.mmObject();
@@ -424,7 +475,17 @@ public class ReportingRequest4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReportingPeriod2.mmObject();
+			type_lazy = () -> ReportingPeriod2.mmObject();
+		}
+
+		@Override
+		public Optional<ReportingPeriod2> getValue(ReportingRequest4 obj) {
+			return obj.getReportingPeriod();
+		}
+
+		@Override
+		public void setValue(ReportingRequest4 obj, Optional<ReportingPeriod2> value) {
+			obj.setReportingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgSeq")
@@ -458,7 +519,7 @@ public class ReportingRequest4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingSequence = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingRequest4, Optional<SequenceRange1Choice>> mmReportingSequence = new MMMessageAssociationEnd<ReportingRequest4, Optional<SequenceRange1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportingRequest4.mmObject();
 			isDerived = false;
@@ -470,6 +531,16 @@ public class ReportingRequest4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SequenceRange1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SequenceRange1Choice> getValue(ReportingRequest4 obj) {
+			return obj.getReportingSequence();
+		}
+
+		@Override
+		public void setValue(ReportingRequest4 obj, Optional<SequenceRange1Choice> value) {
+			obj.setReportingSequence(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdTxTp")
@@ -510,7 +581,7 @@ public class ReportingRequest4 {
 	 * ReportingRequest3.mmRequestedTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestedTransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingRequest4, Optional<TransactionType2>> mmRequestedTransactionType = new MMMessageAssociationEnd<ReportingRequest4, Optional<TransactionType2>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashEntry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportingRequest4.mmObject();
@@ -523,11 +594,21 @@ public class ReportingRequest4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionType2.mmObject();
+			type_lazy = () -> TransactionType2.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionType2> getValue(ReportingRequest4 obj) {
+			return obj.getRequestedTransactionType();
+		}
+
+		@Override
+		public void setValue(ReportingRequest4 obj, Optional<TransactionType2> value) {
+			obj.setRequestedTransactionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdBalTp")
-	protected List<com.tools20022.repository.msg.BalanceType13> requestedBalanceType;
+	protected List<BalanceType13> requestedBalanceType;
 	/**
 	 * 
 	 <p>
@@ -564,7 +645,7 @@ public class ReportingRequest4 {
 	 * ReportingRequest3.mmRequestedBalanceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestedBalanceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingRequest4, List<BalanceType13>> mmRequestedBalanceType = new MMMessageAssociationEnd<ReportingRequest4, List<BalanceType13>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportingRequest4.mmObject();
@@ -576,7 +657,17 @@ public class ReportingRequest4 {
 			previousVersion_lazy = () -> ReportingRequest3.mmRequestedBalanceType;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BalanceType13.mmObject();
+			type_lazy = () -> BalanceType13.mmObject();
+		}
+
+		@Override
+		public List<BalanceType13> getValue(ReportingRequest4 obj) {
+			return obj.getRequestedBalanceType();
+		}
+
+		@Override
+		public void setValue(ReportingRequest4 obj, List<BalanceType13> value) {
+			obj.setRequestedBalanceType(value);
 		}
 	};
 
@@ -621,7 +712,7 @@ public class ReportingRequest4 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public ReportingRequest4 setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+	public ReportingRequest4 setAccount(CashAccount24 account) {
 		this.account = account;
 		return this;
 	}
@@ -639,7 +730,7 @@ public class ReportingRequest4 {
 		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public ReportingRequest4 setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+	public ReportingRequest4 setAccountServicer(BranchAndFinancialInstitutionIdentification5 accountServicer) {
 		this.accountServicer = accountServicer;
 		return this;
 	}
@@ -648,7 +739,7 @@ public class ReportingRequest4 {
 		return reportingPeriod == null ? Optional.empty() : Optional.of(reportingPeriod);
 	}
 
-	public ReportingRequest4 setReportingPeriod(com.tools20022.repository.msg.ReportingPeriod2 reportingPeriod) {
+	public ReportingRequest4 setReportingPeriod(ReportingPeriod2 reportingPeriod) {
 		this.reportingPeriod = reportingPeriod;
 		return this;
 	}
@@ -666,7 +757,7 @@ public class ReportingRequest4 {
 		return requestedTransactionType == null ? Optional.empty() : Optional.of(requestedTransactionType);
 	}
 
-	public ReportingRequest4 setRequestedTransactionType(com.tools20022.repository.msg.TransactionType2 requestedTransactionType) {
+	public ReportingRequest4 setRequestedTransactionType(TransactionType2 requestedTransactionType) {
 		this.requestedTransactionType = requestedTransactionType;
 		return this;
 	}
@@ -675,7 +766,7 @@ public class ReportingRequest4 {
 		return requestedBalanceType == null ? requestedBalanceType = new ArrayList<>() : requestedBalanceType;
 	}
 
-	public ReportingRequest4 setRequestedBalanceType(List<com.tools20022.repository.msg.BalanceType13> requestedBalanceType) {
+	public ReportingRequest4 setRequestedBalanceType(List<BalanceType13> requestedBalanceType) {
 		this.requestedBalanceType = Objects.requireNonNull(requestedBalanceType);
 		return this;
 	}

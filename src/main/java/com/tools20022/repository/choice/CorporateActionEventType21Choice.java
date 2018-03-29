@@ -119,7 +119,7 @@ public class CorporateActionEventType21Choice {
 	 * definition} = "Event types expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventType21Choice, CorporateActionEventType12Code> mmCode = new MMMessageAttribute<CorporateActionEventType21Choice, CorporateActionEventType12Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType21Choice.mmObject();
@@ -132,6 +132,16 @@ public class CorporateActionEventType21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventType12Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType12Code getValue(CorporateActionEventType21Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventType21Choice obj, CorporateActionEventType12Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class CorporateActionEventType21Choice {
 	 * definition} = "Event types expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventType21Choice, GenericIdentification25> mmProprietary = new MMMessageAttribute<CorporateActionEventType21Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType21Choice.mmObject();
@@ -185,6 +195,16 @@ public class CorporateActionEventType21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(CorporateActionEventType21Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventType21Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

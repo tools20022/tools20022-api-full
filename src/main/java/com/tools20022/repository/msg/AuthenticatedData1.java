@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.Recipient1Choice;
 import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification1;
+import com.tools20022.repository.msg.EncapsulatedContent1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -114,7 +116,7 @@ public class AuthenticatedData1 {
 	 * definition} = "Version of the data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthenticatedData1, Optional<Number>> mmVersion = new MMMessageAttribute<AuthenticatedData1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData1.mmObject();
 			isDerived = false;
@@ -125,6 +127,16 @@ public class AuthenticatedData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(AuthenticatedData1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData1 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -155,7 +167,7 @@ public class AuthenticatedData1 {
 	 * definition} = "Information related to the transport key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthenticatedData1, List<Recipient1Choice>> mmRecipient = new MMMessageAssociationEnd<AuthenticatedData1, List<Recipient1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData1.mmObject();
 			isDerived = false;
@@ -166,6 +178,16 @@ public class AuthenticatedData1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Recipient1Choice.mmObject();
+		}
+
+		@Override
+		public List<Recipient1Choice> getValue(AuthenticatedData1 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData1 obj, List<Recipient1Choice> value) {
+			obj.setRecipient(value);
 		}
 	};
 	@XmlElement(name = "MACAlgo", required = true)
@@ -197,7 +219,7 @@ public class AuthenticatedData1 {
 	 * definition} = "Algorithm to compute message authentication code (MAC)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMACAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthenticatedData1, AlgorithmIdentification1> mmMACAlgorithm = new MMMessageAssociationEnd<AuthenticatedData1, AlgorithmIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData1.mmObject();
 			isDerived = false;
@@ -208,7 +230,17 @@ public class AuthenticatedData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification1.mmObject();
+			type_lazy = () -> AlgorithmIdentification1.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification1 getValue(AuthenticatedData1 obj) {
+			return obj.getMACAlgorithm();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData1 obj, AlgorithmIdentification1 value) {
+			obj.setMACAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcpsltdCntt", required = true)
@@ -239,7 +271,7 @@ public class AuthenticatedData1 {
 	 * definition} = "Data to authenticate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthenticatedData1, EncapsulatedContent1> mmEncapsulatedContent = new MMMessageAssociationEnd<AuthenticatedData1, EncapsulatedContent1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData1.mmObject();
 			isDerived = false;
@@ -250,7 +282,17 @@ public class AuthenticatedData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.mmObject();
+			type_lazy = () -> EncapsulatedContent1.mmObject();
+		}
+
+		@Override
+		public EncapsulatedContent1 getValue(AuthenticatedData1 obj) {
+			return obj.getEncapsulatedContent();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData1 obj, EncapsulatedContent1 value) {
+			obj.setEncapsulatedContent(value);
 		}
 	};
 	@XmlElement(name = "MAC", required = true)
@@ -282,7 +324,7 @@ public class AuthenticatedData1 {
 	 * definition} = "Encrypted data which authenticates the data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMAC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthenticatedData1, Max35Binary> mmMAC = new MMMessageAttribute<AuthenticatedData1, Max35Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData1.mmObject();
 			isDerived = false;
@@ -293,6 +335,16 @@ public class AuthenticatedData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Binary.mmObject();
+		}
+
+		@Override
+		public Max35Binary getValue(AuthenticatedData1 obj) {
+			return obj.getMAC();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData1 obj, Max35Binary value) {
+			obj.setMAC(value);
 		}
 	};
 
@@ -333,7 +385,7 @@ public class AuthenticatedData1 {
 		return mACAlgorithm;
 	}
 
-	public AuthenticatedData1 setMACAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification1 mACAlgorithm) {
+	public AuthenticatedData1 setMACAlgorithm(AlgorithmIdentification1 mACAlgorithm) {
 		this.mACAlgorithm = Objects.requireNonNull(mACAlgorithm);
 		return this;
 	}
@@ -342,7 +394,7 @@ public class AuthenticatedData1 {
 		return encapsulatedContent;
 	}
 
-	public AuthenticatedData1 setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent1 encapsulatedContent) {
+	public AuthenticatedData1 setEncapsulatedContent(EncapsulatedContent1 encapsulatedContent) {
 		this.encapsulatedContent = Objects.requireNonNull(encapsulatedContent);
 		return this;
 	}

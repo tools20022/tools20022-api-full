@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ContractClosureReason1Choice;
 import com.tools20022.repository.choice.UnderlyingContract1Choice;
 import com.tools20022.repository.entity.Agreement;
+import com.tools20022.repository.entity.MasterAgreement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
@@ -99,9 +100,6 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.choice.ContractClosureReason1Choice
  * ContractClosureReason1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes89
- * FinancialInstrumentAttributes89}</li>
  * </ul>
  * </li>
  * <li>
@@ -154,21 +152,31 @@ public class Contract extends Agreement {
 	 * name} = "MasterAgreement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Agreement that governs a contract agreed between parties."
-	 * </li>
+	 * definition} =
+	 * "Agreement that governs a contract agreed between  parties."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMasterAgreement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Contract, List<MasterAgreement>> mmMasterAgreement = new MMBusinessAssociationEnd<Contract, List<MasterAgreement>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Contract.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MasterAgreement";
-			definition = "Agreement that governs a contract agreed between parties.";
+			definition = "Agreement that governs a contract agreed between  parties.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmGovernedContract;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmObject();
+		}
+
+		@Override
+		public List<MasterAgreement> getValue(Contract obj) {
+			return obj.getMasterAgreement();
+		}
+
+		@Override
+		public void setValue(Contract obj, List<MasterAgreement> value) {
+			obj.setMasterAgreement(value);
 		}
 	};
 
@@ -184,8 +192,7 @@ public class Contract extends Agreement {
 				subType_lazy = () -> Arrays.asList(AccountContract.mmObject(), Mandate.mmObject(), RegisteredContract.mmObject());
 				superType_lazy = () -> Agreement.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Contract.mmMasterAgreement);
-				derivationComponent_lazy = () -> Arrays.asList(UnderlyingContract1Choice.mmObject(), TransactionCertificateContract1.mmObject(), TradeContract1.mmObject(), ContractClosureReason1Choice.mmObject(),
-						FinancialInstrumentAttributes89.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(UnderlyingContract1Choice.mmObject(), TransactionCertificateContract1.mmObject(), TradeContract1.mmObject(), ContractClosureReason1Choice.mmObject());
 			}
 
 			@Override

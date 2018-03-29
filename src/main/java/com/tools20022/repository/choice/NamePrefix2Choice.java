@@ -98,7 +98,7 @@ public class NamePrefix2Choice {
 	 * definition} = "Prefix for name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNamePrefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NamePrefix2Choice, NamePrefix1Code> mmNamePrefix = new MMMessageAttribute<NamePrefix2Choice, NamePrefix1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NamePrefix2Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class NamePrefix2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NamePrefix1Code.mmObject();
+		}
+
+		@Override
+		public NamePrefix1Code getValue(NamePrefix2Choice obj) {
+			return obj.getNamePrefix();
+		}
+
+		@Override
+		public void setValue(NamePrefix2Choice obj, NamePrefix1Code value) {
+			obj.setNamePrefix(value);
 		}
 	};
 	@XmlElement(name = "XtndedNmPrfx", required = true)
@@ -141,7 +151,7 @@ public class NamePrefix2Choice {
 	 * definition} = "Name prefix that is extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedNamePrefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NamePrefix2Choice, Extended350Code> mmExtendedNamePrefix = new MMMessageAttribute<NamePrefix2Choice, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NamePrefix2Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class NamePrefix2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(NamePrefix2Choice obj) {
+			return obj.getExtendedNamePrefix();
+		}
+
+		@Override
+		public void setValue(NamePrefix2Choice obj, Extended350Code value) {
+			obj.setExtendedNamePrefix(value);
 		}
 	};
 

@@ -27,6 +27,10 @@ import com.tools20022.repository.choice.RemittanceInformation3Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification;
+import com.tools20022.repository.msg.CashAccount3;
+import com.tools20022.repository.msg.Intermediary1;
+import com.tools20022.repository.msg.PartyIdentification1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -154,7 +158,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Remittance information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRemittanceChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<RemittanceInformation3Choice>> mmRemittanceChoice = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<RemittanceInformation3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAssociatedDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -167,6 +171,16 @@ public class PaymentComplementaryInformation {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RemittanceInformation3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RemittanceInformation3Choice> getValue(PaymentComplementaryInformation obj) {
+			return obj.getRemittanceChoice();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<RemittanceInformation3Choice> value) {
+			obj.setRemittanceChoice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dbtr")
@@ -202,7 +216,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Debtor or Ordering customer of the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<PartyIdentification1>> mmDebtor = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<PartyIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -214,7 +228,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification1.mmObject();
+			type_lazy = () -> PartyIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification1> getValue(PaymentComplementaryInformation obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<PartyIdentification1> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAcct")
@@ -250,7 +274,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Debtor account or Ordering customer account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<CashAccount3>> mmDebtorAccount = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<CashAccount3>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -262,7 +286,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
+			type_lazy = () -> CashAccount3.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount3> getValue(PaymentComplementaryInformation obj) {
+			return obj.getDebtorAccount();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<CashAccount3> value) {
+			obj.setDebtorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstAgt")
@@ -299,7 +333,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "First Agent or Field 52 in Fin messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFirstAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<BranchAndFinancialInstitutionIdentification>> mmFirstAgent = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<BranchAndFinancialInstitutionIdentification>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -311,7 +345,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification> getValue(PaymentComplementaryInformation obj) {
+			return obj.getFirstAgent();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<BranchAndFinancialInstitutionIdentification> value) {
+			obj.setFirstAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -348,7 +392,7 @@ public class PaymentComplementaryInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<AmountType1Choice>> mmAmount = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<AmountType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -361,6 +405,16 @@ public class PaymentComplementaryInformation {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AmountType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AmountType1Choice> getValue(PaymentComplementaryInformation obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<AmountType1Choice> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NstrVstrAcct")
@@ -396,7 +450,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Indicates the account used to cover a payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNostroVostroAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<CashAccount3>> mmNostroVostroAccount = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<CashAccount3>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -408,7 +462,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
+			type_lazy = () -> CashAccount3.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount3> getValue(PaymentComplementaryInformation obj) {
+			return obj.getNostroVostroAccount();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<CashAccount3> value) {
+			obj.setNostroVostroAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Intrmy")
@@ -444,7 +508,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Intermediary bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<Intermediary1>> mmIntermediary = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<Intermediary1>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryAgentRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -456,7 +520,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary1.mmObject();
+			type_lazy = () -> Intermediary1.mmObject();
+		}
+
+		@Override
+		public Optional<Intermediary1> getValue(PaymentComplementaryInformation obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<Intermediary1> value) {
+			obj.setIntermediary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstSttlmAgt")
@@ -493,7 +567,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Correspondent of the first agent (Field 53 in MT202)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFirstSettlementAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<BranchAndFinancialInstitutionIdentification>> mmFirstSettlementAgent = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<BranchAndFinancialInstitutionIdentification>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -505,7 +579,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification> getValue(PaymentComplementaryInformation obj) {
+			return obj.getFirstSettlementAgent();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<BranchAndFinancialInstitutionIdentification> value) {
+			obj.setFirstSettlementAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LastSttlmAgt")
@@ -542,7 +626,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Correspondent of the Final agent (Field 54 of Mt 202)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLastSettlementAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<BranchAndFinancialInstitutionIdentification>> mmLastSettlementAgent = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<BranchAndFinancialInstitutionIdentification>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -554,7 +638,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification> getValue(PaymentComplementaryInformation obj) {
+			return obj.getLastSettlementAgent();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<BranchAndFinancialInstitutionIdentification> value) {
+			obj.setLastSettlementAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmySttlmAgt")
@@ -591,7 +685,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Equivalent to Field 55 in MT202."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediarySettlementAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<BranchAndFinancialInstitutionIdentification>> mmIntermediarySettlementAgent = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<BranchAndFinancialInstitutionIdentification>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -603,7 +697,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification> getValue(PaymentComplementaryInformation obj) {
+			return obj.getIntermediarySettlementAgent();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<BranchAndFinancialInstitutionIdentification> value) {
+			obj.setIntermediarySettlementAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr")
@@ -640,7 +744,7 @@ public class PaymentComplementaryInformation {
 	 * "Creditor or Beneficiary customer of the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<PartyIdentification1>> mmCreditor = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<PartyIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -652,7 +756,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification1.mmObject();
+			type_lazy = () -> PartyIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification1> getValue(PaymentComplementaryInformation obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<PartyIdentification1> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAcct")
@@ -688,7 +802,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Creditor account or Beneficiary customer account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<CashAccount3>> mmCreditorAccount = new MMMessageAssociationEnd<PaymentComplementaryInformation, Optional<CashAccount3>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
@@ -700,7 +814,17 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount3.mmObject();
+			type_lazy = () -> CashAccount3.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount3> getValue(PaymentComplementaryInformation obj) {
+			return obj.getCreditorAccount();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, Optional<CashAccount3> value) {
+			obj.setCreditorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SndrToRcvrInf")
@@ -732,7 +856,7 @@ public class PaymentComplementaryInformation {
 	 * definition} = "Unformatted information from the sender to the receiver."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSenderToReceiverInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentComplementaryInformation, List<Max35Text>> mmSenderToReceiverInformation = new MMMessageAttribute<PaymentComplementaryInformation, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentComplementaryInformation.mmObject();
 			isDerived = false;
@@ -743,6 +867,16 @@ public class PaymentComplementaryInformation {
 			maxOccurs = 6;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(PaymentComplementaryInformation obj) {
+			return obj.getSenderToReceiverInformation();
+		}
+
+		@Override
+		public void setValue(PaymentComplementaryInformation obj, List<Max35Text> value) {
+			obj.setSenderToReceiverInformation(value);
 		}
 	};
 
@@ -780,7 +914,7 @@ public class PaymentComplementaryInformation {
 		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public PaymentComplementaryInformation setDebtor(com.tools20022.repository.msg.PartyIdentification1 debtor) {
+	public PaymentComplementaryInformation setDebtor(PartyIdentification1 debtor) {
 		this.debtor = debtor;
 		return this;
 	}
@@ -789,7 +923,7 @@ public class PaymentComplementaryInformation {
 		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public PaymentComplementaryInformation setDebtorAccount(com.tools20022.repository.msg.CashAccount3 debtorAccount) {
+	public PaymentComplementaryInformation setDebtorAccount(CashAccount3 debtorAccount) {
 		this.debtorAccount = debtorAccount;
 		return this;
 	}
@@ -798,7 +932,7 @@ public class PaymentComplementaryInformation {
 		return firstAgent == null ? Optional.empty() : Optional.of(firstAgent);
 	}
 
-	public PaymentComplementaryInformation setFirstAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification firstAgent) {
+	public PaymentComplementaryInformation setFirstAgent(BranchAndFinancialInstitutionIdentification firstAgent) {
 		this.firstAgent = firstAgent;
 		return this;
 	}
@@ -816,7 +950,7 @@ public class PaymentComplementaryInformation {
 		return nostroVostroAccount == null ? Optional.empty() : Optional.of(nostroVostroAccount);
 	}
 
-	public PaymentComplementaryInformation setNostroVostroAccount(com.tools20022.repository.msg.CashAccount3 nostroVostroAccount) {
+	public PaymentComplementaryInformation setNostroVostroAccount(CashAccount3 nostroVostroAccount) {
 		this.nostroVostroAccount = nostroVostroAccount;
 		return this;
 	}
@@ -825,7 +959,7 @@ public class PaymentComplementaryInformation {
 		return intermediary == null ? Optional.empty() : Optional.of(intermediary);
 	}
 
-	public PaymentComplementaryInformation setIntermediary(com.tools20022.repository.msg.Intermediary1 intermediary) {
+	public PaymentComplementaryInformation setIntermediary(Intermediary1 intermediary) {
 		this.intermediary = intermediary;
 		return this;
 	}
@@ -834,7 +968,7 @@ public class PaymentComplementaryInformation {
 		return firstSettlementAgent == null ? Optional.empty() : Optional.of(firstSettlementAgent);
 	}
 
-	public PaymentComplementaryInformation setFirstSettlementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification firstSettlementAgent) {
+	public PaymentComplementaryInformation setFirstSettlementAgent(BranchAndFinancialInstitutionIdentification firstSettlementAgent) {
 		this.firstSettlementAgent = firstSettlementAgent;
 		return this;
 	}
@@ -843,7 +977,7 @@ public class PaymentComplementaryInformation {
 		return lastSettlementAgent == null ? Optional.empty() : Optional.of(lastSettlementAgent);
 	}
 
-	public PaymentComplementaryInformation setLastSettlementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification lastSettlementAgent) {
+	public PaymentComplementaryInformation setLastSettlementAgent(BranchAndFinancialInstitutionIdentification lastSettlementAgent) {
 		this.lastSettlementAgent = lastSettlementAgent;
 		return this;
 	}
@@ -852,7 +986,7 @@ public class PaymentComplementaryInformation {
 		return intermediarySettlementAgent == null ? Optional.empty() : Optional.of(intermediarySettlementAgent);
 	}
 
-	public PaymentComplementaryInformation setIntermediarySettlementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification intermediarySettlementAgent) {
+	public PaymentComplementaryInformation setIntermediarySettlementAgent(BranchAndFinancialInstitutionIdentification intermediarySettlementAgent) {
 		this.intermediarySettlementAgent = intermediarySettlementAgent;
 		return this;
 	}
@@ -861,7 +995,7 @@ public class PaymentComplementaryInformation {
 		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public PaymentComplementaryInformation setCreditor(com.tools20022.repository.msg.PartyIdentification1 creditor) {
+	public PaymentComplementaryInformation setCreditor(PartyIdentification1 creditor) {
 		this.creditor = creditor;
 		return this;
 	}
@@ -870,7 +1004,7 @@ public class PaymentComplementaryInformation {
 		return creditorAccount == null ? Optional.empty() : Optional.of(creditorAccount);
 	}
 
-	public PaymentComplementaryInformation setCreditorAccount(com.tools20022.repository.msg.CashAccount3 creditorAccount) {
+	public PaymentComplementaryInformation setCreditorAccount(CashAccount3 creditorAccount) {
 		this.creditorAccount = creditorAccount;
 		return this;
 	}

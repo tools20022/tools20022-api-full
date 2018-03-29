@@ -106,7 +106,7 @@ public class ProductCategory1 {
 	 * "Specifies the type of product category by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductCategory1, ProductCategory1Code> mmType = new MMMessageAttribute<ProductCategory1, ProductCategory1Code>() {
 		{
 			businessElementTrace_lazy = () -> ProductCategory.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCategory1.mmObject();
@@ -118,6 +118,16 @@ public class ProductCategory1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProductCategory1Code.mmObject();
+		}
+
+		@Override
+		public ProductCategory1Code getValue(ProductCategory1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ProductCategory1 obj, ProductCategory1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Ctgy", required = true)
@@ -154,7 +164,7 @@ public class ProductCategory1 {
 	 * definition} = "Specifies the category of a product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductCategory1, Max35Text> mmCategory = new MMMessageAttribute<ProductCategory1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ProductCategory.mmCategory;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCategory1.mmObject();
@@ -166,6 +176,16 @@ public class ProductCategory1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProductCategory1 obj) {
+			return obj.getCategory();
+		}
+
+		@Override
+		public void setValue(ProductCategory1 obj, Max35Text value) {
+			obj.setCategory(value);
 		}
 	};
 

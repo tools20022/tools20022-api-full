@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification71;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -148,7 +149,7 @@ public class TMSProtocolParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters2, TerminalManagementAction3Code> mmActionType = new MMMessageAttribute<TMSProtocolParameters2, TerminalManagementAction3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -160,6 +161,16 @@ public class TMSProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction3Code getValue(TMSProtocolParameters2 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, TerminalManagementAction3Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "TermnlMgrId", required = true)
@@ -205,7 +216,7 @@ public class TMSProtocolParameters2 {
 	 * TMSProtocolParameters1.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSProtocolParameters2, GenericIdentification71> mmTerminalManagerIdentification = new MMMessageAssociationEnd<TMSProtocolParameters2, GenericIdentification71>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -218,7 +229,17 @@ public class TMSProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
+			type_lazy = () -> GenericIdentification71.mmObject();
+		}
+
+		@Override
+		public GenericIdentification71 getValue(TMSProtocolParameters2 obj) {
+			return obj.getTerminalManagerIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, GenericIdentification71 value) {
+			obj.setTerminalManagerIdentification(value);
 		}
 	};
 	@XmlElement(name = "MntncSvc", required = true)
@@ -264,7 +285,7 @@ public class TMSProtocolParameters2 {
 	 * TMSProtocolParameters1.mmMaintenanceService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaintenanceService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters2, List<DataSetCategory10Code>> mmMaintenanceService = new MMMessageAttribute<TMSProtocolParameters2, List<DataSetCategory10Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -276,6 +297,16 @@ public class TMSProtocolParameters2 {
 			previousVersion_lazy = () -> TMSProtocolParameters1.mmMaintenanceService;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory10Code.mmObject();
+		}
+
+		@Override
+		public List<DataSetCategory10Code> getValue(TMSProtocolParameters2 obj) {
+			return obj.getMaintenanceService();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, List<DataSetCategory10Code> value) {
+			obj.setMaintenanceService(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -320,7 +351,7 @@ public class TMSProtocolParameters2 {
 	 * TMSProtocolParameters1.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters2, Max256Text> mmVersion = new MMMessageAttribute<TMSProtocolParameters2, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -333,6 +364,16 @@ public class TMSProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(TMSProtocolParameters2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, Max256Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "ApplId")
@@ -379,7 +420,7 @@ public class TMSProtocolParameters2 {
 	 * TMSProtocolParameters1.mmApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters2, List<Max35Text>> mmApplicationIdentification = new MMMessageAttribute<TMSProtocolParameters2, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -391,6 +432,16 @@ public class TMSProtocolParameters2 {
 			previousVersion_lazy = () -> TMSProtocolParameters1.mmApplicationIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(TMSProtocolParameters2 obj) {
+			return obj.getApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, List<Max35Text> value) {
+			obj.setApplicationIdentification(value);
 		}
 	};
 	@XmlElement(name = "HstId", required = true)
@@ -430,7 +481,7 @@ public class TMSProtocolParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters2, Max35Text> mmHostIdentification = new MMMessageAttribute<TMSProtocolParameters2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -442,6 +493,16 @@ public class TMSProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TMSProtocolParameters2 obj) {
+			return obj.getHostIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, Max35Text value) {
+			obj.setHostIdentification(value);
 		}
 	};
 	@XmlElement(name = "POIId")
@@ -486,7 +547,7 @@ public class TMSProtocolParameters2 {
 	 * TMSProtocolParameters1.mmPOIIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters2, Optional<Max35Text>> mmPOIIdentification = new MMMessageAttribute<TMSProtocolParameters2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -499,6 +560,16 @@ public class TMSProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSProtocolParameters2 obj) {
+			return obj.getPOIIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, Optional<Max35Text> value) {
+			obj.setPOIIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitgPtyId")
@@ -545,7 +616,7 @@ public class TMSProtocolParameters2 {
 	 * TMSProtocolParameters1.mmInitiatingPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitiatingPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters2, Optional<Max35Text>> mmInitiatingPartyIdentification = new MMMessageAttribute<TMSProtocolParameters2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -558,6 +629,16 @@ public class TMSProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSProtocolParameters2 obj) {
+			return obj.getInitiatingPartyIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, Optional<Max35Text> value) {
+			obj.setInitiatingPartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptPtyId")
@@ -604,7 +685,7 @@ public class TMSProtocolParameters2 {
 	 * TMSProtocolParameters1.mmRecipientPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters2, Optional<Max35Text>> mmRecipientPartyIdentification = new MMMessageAttribute<TMSProtocolParameters2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -617,6 +698,16 @@ public class TMSProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TMSProtocolParameters2 obj) {
+			return obj.getRecipientPartyIdentification();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, Optional<Max35Text> value) {
+			obj.setRecipientPartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FileTrf")
@@ -659,7 +750,7 @@ public class TMSProtocolParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFileTransfer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSProtocolParameters2, Optional<TrueFalseIndicator>> mmFileTransfer = new MMMessageAttribute<TMSProtocolParameters2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSProtocolParameters2.mmObject();
 			isDerived = false;
@@ -671,6 +762,16 @@ public class TMSProtocolParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(TMSProtocolParameters2 obj) {
+			return obj.getFileTransfer();
+		}
+
+		@Override
+		public void setValue(TMSProtocolParameters2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setFileTransfer(value.orElse(null));
 		}
 	};
 
@@ -706,7 +807,7 @@ public class TMSProtocolParameters2 {
 		return terminalManagerIdentification;
 	}
 
-	public TMSProtocolParameters2 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+	public TMSProtocolParameters2 setTerminalManagerIdentification(GenericIdentification71 terminalManagerIdentification) {
 		this.terminalManagerIdentification = Objects.requireNonNull(terminalManagerIdentification);
 		return this;
 	}

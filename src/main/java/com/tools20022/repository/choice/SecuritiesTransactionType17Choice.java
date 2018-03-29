@@ -116,7 +116,7 @@ public class SecuritiesTransactionType17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionType17Choice, SecuritiesTransactionType11Code> mmCode = new MMMessageAttribute<SecuritiesTransactionType17Choice, SecuritiesTransactionType11Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionType17Choice.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class SecuritiesTransactionType17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesTransactionType11Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionType11Code getValue(SecuritiesTransactionType17Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionType17Choice obj, SecuritiesTransactionType11Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -168,7 +178,7 @@ public class SecuritiesTransactionType17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTransactionType17Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<SecuritiesTransactionType17Choice, GenericIdentification40>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionType17Choice.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class SecuritiesTransactionType17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(SecuritiesTransactionType17Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionType17Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

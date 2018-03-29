@@ -109,7 +109,7 @@ public class MarketInfrastructureIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketInfrastructureIdentification1Choice, ExternalMarketInfrastructure1Code> mmCode = new MMMessageAttribute<MarketInfrastructureIdentification1Choice, ExternalMarketInfrastructure1Code>() {
 		{
 			businessComponentTrace_lazy = () -> SystemIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmObject();
@@ -121,6 +121,16 @@ public class MarketInfrastructureIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalMarketInfrastructure1Code.mmObject();
+		}
+
+		@Override
+		public ExternalMarketInfrastructure1Code getValue(MarketInfrastructureIdentification1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MarketInfrastructureIdentification1Choice obj, ExternalMarketInfrastructure1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class MarketInfrastructureIdentification1Choice {
 	 * definition} = "Clearing system identification in a proprietary form.\n."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketInfrastructureIdentification1Choice, Max35Text> mmProprietary = new MMMessageAttribute<MarketInfrastructureIdentification1Choice, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SystemIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice.mmObject();
@@ -169,6 +179,16 @@ public class MarketInfrastructureIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MarketInfrastructureIdentification1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MarketInfrastructureIdentification1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

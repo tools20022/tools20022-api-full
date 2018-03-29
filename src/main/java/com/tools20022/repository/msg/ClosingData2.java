@@ -29,6 +29,9 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AgreedRate1;
+import com.tools20022.repository.msg.AmountsAndValueDate1;
+import com.tools20022.repository.msg.ValuationData2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -137,7 +140,7 @@ public class ClosingData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingData2, ISODate> mmTradeDate = new MMMessageAttribute<ClosingData2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData2.mmObject();
@@ -149,6 +152,16 @@ public class ClosingData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ClosingData2 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(ClosingData2 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "NtfctnId", required = true)
@@ -181,7 +194,7 @@ public class ClosingData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingData2, Max35Text> mmNotificationIdentification = new MMMessageAttribute<ClosingData2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData2.mmObject();
 			isDerived = false;
@@ -192,6 +205,16 @@ public class ClosingData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ClosingData2 obj) {
+			return obj.getNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(ClosingData2 obj, Max35Text value) {
+			obj.setNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonRef")
@@ -227,7 +250,7 @@ public class ClosingData2 {
 	 * definition} = "Reference common to the parties of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingData2, Optional<Max35Text>> mmCommonReference = new MMMessageAttribute<ClosingData2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData2.mmObject();
@@ -239,6 +262,16 @@ public class ClosingData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ClosingData2 obj) {
+			return obj.getCommonReference();
+		}
+
+		@Override
+		public void setValue(ClosingData2 obj, Optional<Max35Text> value) {
+			obj.setCommonReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -271,7 +304,7 @@ public class ClosingData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingData2, Optional<Max35Text>> mmRelatedReference = new MMMessageAttribute<ClosingData2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData2.mmObject();
 			isDerived = false;
@@ -282,6 +315,16 @@ public class ClosingData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ClosingData2 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(ClosingData2 obj, Optional<Max35Text> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmdOrCclRsn")
@@ -318,7 +361,7 @@ public class ClosingData2 {
 	 * "Describes the reason for the cancellation or the amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendOrCancelReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosingData2, Optional<Max35Text>> mmAmendOrCancelReason = new MMMessageAttribute<ClosingData2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData2.mmObject();
@@ -330,6 +373,16 @@ public class ClosingData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ClosingData2 obj) {
+			return obj.getAmendOrCancelReason();
+		}
+
+		@Override
+		public void setValue(ClosingData2 obj, Optional<Max35Text> value) {
+			obj.setAmendOrCancelReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradAmts", required = true)
@@ -366,7 +419,7 @@ public class ClosingData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClosingData2, AmountsAndValueDate1> mmTradeAmounts = new MMMessageAssociationEnd<ClosingData2, AmountsAndValueDate1>() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmNonDeliverableTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData2.mmObject();
@@ -378,7 +431,17 @@ public class ClosingData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
+			type_lazy = () -> AmountsAndValueDate1.mmObject();
+		}
+
+		@Override
+		public AmountsAndValueDate1 getValue(ClosingData2 obj) {
+			return obj.getTradeAmounts();
+		}
+
+		@Override
+		public void setValue(ClosingData2 obj, AmountsAndValueDate1 value) {
+			obj.setTradeAmounts(value);
 		}
 	};
 	@XmlElement(name = "ValtnRate", required = true)
@@ -415,7 +478,7 @@ public class ClosingData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuationRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClosingData2, AgreedRate1> mmValuationRate = new MMMessageAssociationEnd<ClosingData2, AgreedRate1>() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData2.mmObject();
@@ -427,7 +490,17 @@ public class ClosingData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
+			type_lazy = () -> AgreedRate1.mmObject();
+		}
+
+		@Override
+		public AgreedRate1 getValue(ClosingData2 obj) {
+			return obj.getValuationRate();
+		}
+
+		@Override
+		public void setValue(ClosingData2 obj, AgreedRate1 value) {
+			obj.setValuationRate(value);
 		}
 	};
 	@XmlElement(name = "ValtnInf", required = true)
@@ -464,7 +537,7 @@ public class ClosingData2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuationInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClosingData2, ValuationData2> mmValuationInformation = new MMMessageAssociationEnd<ClosingData2, ValuationData2>() {
 		{
 			businessComponentTrace_lazy = () -> FixingCondition.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClosingData2.mmObject();
@@ -476,7 +549,17 @@ public class ClosingData2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ValuationData2.mmObject();
+			type_lazy = () -> ValuationData2.mmObject();
+		}
+
+		@Override
+		public ValuationData2 getValue(ClosingData2 obj) {
+			return obj.getValuationInformation();
+		}
+
+		@Override
+		public void setValue(ClosingData2 obj, ValuationData2 value) {
+			obj.setValuationInformation(value);
 		}
 	};
 
@@ -546,7 +629,7 @@ public class ClosingData2 {
 		return tradeAmounts;
 	}
 
-	public ClosingData2 setTradeAmounts(com.tools20022.repository.msg.AmountsAndValueDate1 tradeAmounts) {
+	public ClosingData2 setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
 		this.tradeAmounts = Objects.requireNonNull(tradeAmounts);
 		return this;
 	}
@@ -555,7 +638,7 @@ public class ClosingData2 {
 		return valuationRate;
 	}
 
-	public ClosingData2 setValuationRate(com.tools20022.repository.msg.AgreedRate1 valuationRate) {
+	public ClosingData2 setValuationRate(AgreedRate1 valuationRate) {
 		this.valuationRate = Objects.requireNonNull(valuationRate);
 		return this;
 	}
@@ -564,7 +647,7 @@ public class ClosingData2 {
 		return valuationInformation;
 	}
 
-	public ClosingData2 setValuationInformation(com.tools20022.repository.msg.ValuationData2 valuationInformation) {
+	public ClosingData2 setValuationInformation(ValuationData2 valuationInformation) {
 		this.valuationInformation = Objects.requireNonNull(valuationInformation);
 		return this;
 	}

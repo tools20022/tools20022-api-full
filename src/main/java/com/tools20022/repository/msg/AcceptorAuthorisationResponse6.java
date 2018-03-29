@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV06;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment65;
+import com.tools20022.repository.msg.CardPaymentTransaction67;
+import com.tools20022.repository.msg.CardPaymentTransaction77;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -145,7 +149,7 @@ public class AcceptorAuthorisationResponse6 {
 	 * AcceptorAuthorisationResponse5.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationResponse6, CardPaymentEnvironment65> mmEnvironment = new MMMessageAssociationEnd<AcceptorAuthorisationResponse6, CardPaymentEnvironment65>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse6.mmObject();
@@ -159,7 +163,17 @@ public class AcceptorAuthorisationResponse6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment65.mmObject();
+			type_lazy = () -> CardPaymentEnvironment65.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment65 getValue(AcceptorAuthorisationResponse6 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponse6 obj, CardPaymentEnvironment65 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -210,7 +224,7 @@ public class AcceptorAuthorisationResponse6 {
 	 * AcceptorAuthorisationResponse5.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationResponse6, CardPaymentTransaction77> mmTransaction = new MMMessageAssociationEnd<AcceptorAuthorisationResponse6, CardPaymentTransaction77>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse6.mmObject();
@@ -224,7 +238,17 @@ public class AcceptorAuthorisationResponse6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction77.mmObject();
+			type_lazy = () -> CardPaymentTransaction77.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction77 getValue(AcceptorAuthorisationResponse6 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponse6 obj, CardPaymentTransaction77 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -275,7 +299,7 @@ public class AcceptorAuthorisationResponse6 {
 	 * AcceptorAuthorisationResponse5.mmTransactionResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationResponse6, CardPaymentTransaction67> mmTransactionResponse = new MMMessageAssociationEnd<AcceptorAuthorisationResponse6, CardPaymentTransaction67>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse6.mmObject();
@@ -289,11 +313,21 @@ public class AcceptorAuthorisationResponse6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction67.mmObject();
+			type_lazy = () -> CardPaymentTransaction67.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction67 getValue(AcceptorAuthorisationResponse6 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponse6 obj, CardPaymentTransaction67 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -334,7 +368,7 @@ public class AcceptorAuthorisationResponse6 {
 	 * AcceptorAuthorisationResponse5.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationResponse6, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<AcceptorAuthorisationResponse6, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse6.mmObject();
 			isDerived = false;
@@ -346,7 +380,17 @@ public class AcceptorAuthorisationResponse6 {
 			previousVersion_lazy = () -> AcceptorAuthorisationResponse5.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(AcceptorAuthorisationResponse6 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponse6 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -372,7 +416,7 @@ public class AcceptorAuthorisationResponse6 {
 		return environment;
 	}
 
-	public AcceptorAuthorisationResponse6 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment65 environment) {
+	public AcceptorAuthorisationResponse6 setEnvironment(CardPaymentEnvironment65 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -381,7 +425,7 @@ public class AcceptorAuthorisationResponse6 {
 		return transaction;
 	}
 
-	public AcceptorAuthorisationResponse6 setTransaction(com.tools20022.repository.msg.CardPaymentTransaction77 transaction) {
+	public AcceptorAuthorisationResponse6 setTransaction(CardPaymentTransaction77 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
@@ -390,7 +434,7 @@ public class AcceptorAuthorisationResponse6 {
 		return transactionResponse;
 	}
 
-	public AcceptorAuthorisationResponse6 setTransactionResponse(com.tools20022.repository.msg.CardPaymentTransaction67 transactionResponse) {
+	public AcceptorAuthorisationResponse6 setTransactionResponse(CardPaymentTransaction67 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}
@@ -399,7 +443,7 @@ public class AcceptorAuthorisationResponse6 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public AcceptorAuthorisationResponse6 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public AcceptorAuthorisationResponse6 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

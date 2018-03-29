@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NetworkParameters2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +117,7 @@ public class ClockSynchronisation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOITimeZone = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClockSynchronisation1, Max70Text> mmPOITimeZone = new MMMessageAttribute<ClockSynchronisation1, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClockSynchronisation1.mmObject();
 			isDerived = false;
@@ -129,9 +130,19 @@ public class ClockSynchronisation1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
+
+		@Override
+		public Max70Text getValue(ClockSynchronisation1 obj) {
+			return obj.getPOITimeZone();
+		}
+
+		@Override
+		public void setValue(ClockSynchronisation1 obj, Max70Text value) {
+			obj.setPOITimeZone(value);
+		}
 	};
 	@XmlElement(name = "SynctnSvr")
-	protected List<com.tools20022.repository.msg.NetworkParameters2> synchronisationServer;
+	protected List<NetworkParameters2> synchronisationServer;
 	/**
 	 * 
 	 <p>
@@ -166,7 +177,7 @@ public class ClockSynchronisation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSynchronisationServer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClockSynchronisation1, List<NetworkParameters2>> mmSynchronisationServer = new MMMessageAssociationEnd<ClockSynchronisation1, List<NetworkParameters2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClockSynchronisation1.mmObject();
 			isDerived = false;
@@ -177,7 +188,17 @@ public class ClockSynchronisation1 {
 			nextVersions_lazy = () -> Arrays.asList(ClockSynchronisation2.mmSynchronisationServer);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters2.mmObject();
+			type_lazy = () -> NetworkParameters2.mmObject();
+		}
+
+		@Override
+		public List<NetworkParameters2> getValue(ClockSynchronisation1 obj) {
+			return obj.getSynchronisationServer();
+		}
+
+		@Override
+		public void setValue(ClockSynchronisation1 obj, List<NetworkParameters2> value) {
+			obj.setSynchronisationServer(value);
 		}
 	};
 
@@ -208,7 +229,7 @@ public class ClockSynchronisation1 {
 		return synchronisationServer == null ? synchronisationServer = new ArrayList<>() : synchronisationServer;
 	}
 
-	public ClockSynchronisation1 setSynchronisationServer(List<com.tools20022.repository.msg.NetworkParameters2> synchronisationServer) {
+	public ClockSynchronisation1 setSynchronisationServer(List<NetworkParameters2> synchronisationServer) {
 		this.synchronisationServer = Objects.requireNonNull(synchronisationServer);
 		return this;
 	}

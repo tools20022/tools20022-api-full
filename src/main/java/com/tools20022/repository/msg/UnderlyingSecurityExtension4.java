@@ -108,7 +108,7 @@ public class UnderlyingSecurityExtension4 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension4, Max350Text> mmPlaceAndName = new MMMessageAttribute<UnderlyingSecurityExtension4, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension4.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class UnderlyingSecurityExtension4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(UnderlyingSecurityExtension4 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension4 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCAsstTp")
@@ -156,7 +166,7 @@ public class UnderlyingSecurityExtension4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension4, Optional<DTCAssetType1Code>> mmDTCAssetType = new MMMessageAttribute<UnderlyingSecurityExtension4, Optional<DTCAssetType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension4.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class UnderlyingSecurityExtension4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAssetType1Code> getValue(UnderlyingSecurityExtension4 obj) {
+			return obj.getDTCAssetType();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension4 obj, Optional<DTCAssetType1Code> value) {
+			obj.setDTCAssetType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCAsstClss")
@@ -205,7 +225,7 @@ public class UnderlyingSecurityExtension4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurityExtension4, Optional<AssetClass1Code>> mmDTCAssetClass = new MMMessageAttribute<UnderlyingSecurityExtension4, Optional<AssetClass1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityExtension4.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class UnderlyingSecurityExtension4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClass1Code> getValue(UnderlyingSecurityExtension4 obj) {
+			return obj.getDTCAssetClass();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurityExtension4 obj, Optional<AssetClass1Code> value) {
+			obj.setDTCAssetClass(value.orElse(null));
 		}
 	};
 

@@ -52,11 +52,15 @@ public class ConstraintFamilyAndSubFamilyRule {
 	 */
 	public static final MMConstraint<BankTransactionCodeStructure1> forBankTransactionCodeStructure1 = new MMConstraint<BankTransactionCodeStructure1>() {
 		{
-			validator = ConstraintFamilyAndSubFamilyRule::checkBankTransactionCodeStructure1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FamilyAndSubFamilyRule";
 			definition = "A specific (non-generic) SubFamily code may only be provided if a specific (non-generic) Family code is present.";
 			owner_lazy = () -> BankTransactionCodeStructure1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankTransactionCodeStructure1 obj) throws Exception {
+			checkBankTransactionCodeStructure1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintFamilyAndSubFamilyRule {
 	 */
 	public static final MMConstraint<BankTransactionCodeStructure4> forBankTransactionCodeStructure4 = new MMConstraint<BankTransactionCodeStructure4>() {
 		{
-			validator = ConstraintFamilyAndSubFamilyRule::checkBankTransactionCodeStructure4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FamilyAndSubFamilyRule";
 			definition = "If a specific (non-generic) Family code is not present, then a specific (non-generic) SubFamily code is not allowed.";
 			owner_lazy = () -> BankTransactionCodeStructure4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BankTransactionCodeStructure4 obj) throws Exception {
+			checkBankTransactionCodeStructure4(obj);
 		}
 	};
 

@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.HoldingBalance5;
+import com.tools20022.repository.msg.SubAccount2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -161,7 +163,7 @@ public class SafekeepingAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount4, Max35Text> mmAccountIdentification = new MMMessageAttribute<SafekeepingAccount4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount4.mmObject();
@@ -174,6 +176,16 @@ public class SafekeepingAccount4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SafekeepingAccount4 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount4 obj, Max35Text value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -218,7 +230,7 @@ public class SafekeepingAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingAccount4, Optional<PartyIdentification9Choice>> mmAccountOwner = new MMMessageAssociationEnd<SafekeepingAccount4, Optional<PartyIdentification9Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount4.mmObject();
@@ -232,6 +244,16 @@ public class SafekeepingAccount4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification9Choice> getValue(SafekeepingAccount4 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount4 obj, Optional<PartyIdentification9Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubAcctDtls")
@@ -276,7 +298,7 @@ public class SafekeepingAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingAccount4, Optional<SubAccount2>> mmSubAccountDetails = new MMMessageAssociationEnd<SafekeepingAccount4, Optional<SubAccount2>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount4.mmObject();
@@ -289,11 +311,21 @@ public class SafekeepingAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubAccount2.mmObject();
+			type_lazy = () -> SubAccount2.mmObject();
+		}
+
+		@Override
+		public Optional<SubAccount2> getValue(SafekeepingAccount4 obj) {
+			return obj.getSubAccountDetails();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount4 obj, Optional<SubAccount2> value) {
+			obj.setSubAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdBal", required = true)
-	protected List<com.tools20022.repository.msg.HoldingBalance5> instructedBalance;
+	protected List<HoldingBalance5> instructedBalance;
 	/**
 	 * 
 	 <p>
@@ -334,7 +366,7 @@ public class SafekeepingAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingAccount4, List<HoldingBalance5>> mmInstructedBalance = new MMMessageAttribute<SafekeepingAccount4, List<HoldingBalance5>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount4.mmObject();
@@ -346,7 +378,17 @@ public class SafekeepingAccount4 {
 			nextVersions_lazy = () -> Arrays.asList(SafekeepingAccount6.mmInstructedBalance);
 			maxOccurs = 10;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.HoldingBalance5.mmObject();
+			complexType_lazy = () -> HoldingBalance5.mmObject();
+		}
+
+		@Override
+		public List<HoldingBalance5> getValue(SafekeepingAccount4 obj) {
+			return obj.getInstructedBalance();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount4 obj, List<HoldingBalance5> value) {
+			obj.setInstructedBalance(value);
 		}
 	};
 	@XmlElement(name = "RghtsHldr")
@@ -391,7 +433,7 @@ public class SafekeepingAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRightsHolder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafekeepingAccount4, List<PartyIdentification9Choice>> mmRightsHolder = new MMMessageAssociationEnd<SafekeepingAccount4, List<PartyIdentification9Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount4.mmObject();
@@ -405,6 +447,16 @@ public class SafekeepingAccount4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification9Choice> getValue(SafekeepingAccount4 obj) {
+			return obj.getRightsHolder();
+		}
+
+		@Override
+		public void setValue(SafekeepingAccount4 obj, List<PartyIdentification9Choice> value) {
+			obj.setRightsHolder(value);
 		}
 	};
 
@@ -449,7 +501,7 @@ public class SafekeepingAccount4 {
 		return subAccountDetails == null ? Optional.empty() : Optional.of(subAccountDetails);
 	}
 
-	public SafekeepingAccount4 setSubAccountDetails(com.tools20022.repository.msg.SubAccount2 subAccountDetails) {
+	public SafekeepingAccount4 setSubAccountDetails(SubAccount2 subAccountDetails) {
 		this.subAccountDetails = subAccountDetails;
 		return this;
 	}
@@ -458,7 +510,7 @@ public class SafekeepingAccount4 {
 		return instructedBalance == null ? instructedBalance = new ArrayList<>() : instructedBalance;
 	}
 
-	public SafekeepingAccount4 setInstructedBalance(List<com.tools20022.repository.msg.HoldingBalance5> instructedBalance) {
+	public SafekeepingAccount4 setInstructedBalance(List<HoldingBalance5> instructedBalance) {
 		this.instructedBalance = Objects.requireNonNull(instructedBalance);
 		return this;
 	}

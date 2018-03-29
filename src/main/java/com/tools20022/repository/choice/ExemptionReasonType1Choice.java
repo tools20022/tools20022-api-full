@@ -104,7 +104,7 @@ public class ExemptionReasonType1Choice {
 	 * definition} = "Reason for a tax exemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExemptionReasonType1Choice, TaxExemptReason1Code> mmExemptionReason = new MMMessageAttribute<ExemptionReasonType1Choice, TaxExemptReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExemptionReasonType1Choice.mmObject();
@@ -116,6 +116,16 @@ public class ExemptionReasonType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxExemptReason1Code.mmObject();
+		}
+
+		@Override
+		public TaxExemptReason1Code getValue(ExemptionReasonType1Choice obj) {
+			return obj.getExemptionReason();
+		}
+
+		@Override
+		public void setValue(ExemptionReasonType1Choice obj, TaxExemptReason1Code value) {
+			obj.setExemptionReason(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -153,7 +163,7 @@ public class ExemptionReasonType1Choice {
 	 * definition} = "Reason for a tax exemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExemptionReasonType1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<ExemptionReasonType1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExemptionReasonType1Choice.mmObject();
@@ -165,6 +175,16 @@ public class ExemptionReasonType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(ExemptionReasonType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ExemptionReasonType1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

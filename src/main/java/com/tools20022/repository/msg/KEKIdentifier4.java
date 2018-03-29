@@ -104,7 +104,7 @@ public class KEKIdentifier4 {
 	 * KEKIdentifier3.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KEKIdentifier4, Optional<Max140Text>> mmName = new MMMessageAttribute<KEKIdentifier4, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier4.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class KEKIdentifier4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(KEKIdentifier4 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(KEKIdentifier4 obj, Optional<Max140Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KeyId")
@@ -151,7 +161,7 @@ public class KEKIdentifier4 {
 	 * KEKIdentifier3.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KEKIdentifier4, Optional<Max140Text>> mmKeyIdentification = new MMMessageAttribute<KEKIdentifier4, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier4.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class KEKIdentifier4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(KEKIdentifier4 obj) {
+			return obj.getKeyIdentification();
+		}
+
+		@Override
+		public void setValue(KEKIdentifier4 obj, Optional<Max140Text> value) {
+			obj.setKeyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KeyVrsn")
@@ -198,7 +218,7 @@ public class KEKIdentifier4 {
 	 * KEKIdentifier3.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KEKIdentifier4, Optional<Max140Text>> mmKeyVersion = new MMMessageAttribute<KEKIdentifier4, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KEKIdentifier4.mmObject();
 			isDerived = false;
@@ -210,6 +230,16 @@ public class KEKIdentifier4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(KEKIdentifier4 obj) {
+			return obj.getKeyVersion();
+		}
+
+		@Override
+		public void setValue(KEKIdentifier4 obj, Optional<Max140Text> value) {
+			obj.setKeyVersion(value.orElse(null));
 		}
 	};
 

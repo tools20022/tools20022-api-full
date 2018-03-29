@@ -99,7 +99,7 @@ public class CurrencyQuery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyQuery1, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<CurrencyQuery1, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyQuery1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class CurrencyQuery1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(CurrencyQuery1 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(CurrencyQuery1 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyCrit")
@@ -140,7 +150,7 @@ public class CurrencyQuery1 {
 	 * definition} = " Defines of the currency query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyQuery1, Optional<CurrencyCriteria1Choice>> mmCurrencyCriteria = new MMMessageAssociationEnd<CurrencyQuery1, Optional<CurrencyCriteria1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyQuery1.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class CurrencyQuery1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CurrencyCriteria1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCriteria1Choice> getValue(CurrencyQuery1 obj) {
+			return obj.getCurrencyCriteria();
+		}
+
+		@Override
+		public void setValue(CurrencyQuery1 obj, Optional<CurrencyCriteria1Choice> value) {
+			obj.setCurrencyCriteria(value.orElse(null));
 		}
 	};
 

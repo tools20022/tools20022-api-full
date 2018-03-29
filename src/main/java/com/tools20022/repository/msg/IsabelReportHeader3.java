@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max13AlphaNumericText;
 import com.tools20022.repository.datatype.Max64Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IsabelFile4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class IsabelReportHeader3 {
 	 * definition} = "Unique identification of the actual sender of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader3, Max13AlphaNumericText> mmActualSenderIdentification = new MMMessageAttribute<IsabelReportHeader3, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
@@ -128,6 +129,16 @@ public class IsabelReportHeader3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelReportHeader3 obj) {
+			return obj.getActualSenderIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader3 obj, Max13AlphaNumericText value) {
+			obj.setActualSenderIdentification(value);
 		}
 	};
 	@XmlElement(name = "PyldCreDt", required = true)
@@ -160,7 +171,7 @@ public class IsabelReportHeader3 {
 	 * "Date and time at which the file in the payload was actually created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelReportHeader3, DateAndDateTimeChoice> mmPayloadCreationDate = new MMMessageAssociationEnd<IsabelReportHeader3, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
@@ -172,6 +183,16 @@ public class IsabelReportHeader3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IsabelReportHeader3 obj) {
+			return obj.getPayloadCreationDate();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader3 obj, DateAndDateTimeChoice value) {
+			obj.setPayloadCreationDate(value);
 		}
 	};
 	@XmlElement(name = "File", required = true)
@@ -202,7 +223,7 @@ public class IsabelReportHeader3 {
 	 * definition} = "Characteristics of the file contained in the payload."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelReportHeader3, IsabelFile4> mmFile = new MMMessageAssociationEnd<IsabelReportHeader3, IsabelFile4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
@@ -213,7 +234,17 @@ public class IsabelReportHeader3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelFile4.mmObject();
+			type_lazy = () -> IsabelFile4.mmObject();
+		}
+
+		@Override
+		public IsabelFile4 getValue(IsabelReportHeader3 obj) {
+			return obj.getFile();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader3 obj, IsabelFile4 value) {
+			obj.setFile(value);
 		}
 	};
 	@XmlElement(name = "SndTmStmp", required = true)
@@ -245,7 +276,7 @@ public class IsabelReportHeader3 {
 	 * definition} = "Time stamp on when the file is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSendTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader3, ISODateTime> mmSendTimeStamp = new MMMessageAttribute<IsabelReportHeader3, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
@@ -256,6 +287,16 @@ public class IsabelReportHeader3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(IsabelReportHeader3 obj) {
+			return obj.getSendTimeStamp();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader3 obj, ISODateTime value) {
+			obj.setSendTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "BkRef", required = true)
@@ -287,7 +328,7 @@ public class IsabelReportHeader3 {
 	 * definition} = "Unique reference as assigned by the bank to the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader3, Max64Text> mmBankReference = new MMMessageAttribute<IsabelReportHeader3, Max64Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
@@ -298,6 +339,16 @@ public class IsabelReportHeader3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max64Text.mmObject();
+		}
+
+		@Override
+		public Max64Text getValue(IsabelReportHeader3 obj) {
+			return obj.getBankReference();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader3 obj, Max64Text value) {
+			obj.setBankReference(value);
 		}
 	};
 	@XmlElement(name = "DIVFileDesc")
@@ -331,7 +382,7 @@ public class IsabelReportHeader3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDIVFileDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelReportHeader3, Optional<Max70Text>> mmDIVFileDescription = new MMMessageAttribute<IsabelReportHeader3, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
@@ -342,6 +393,16 @@ public class IsabelReportHeader3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(IsabelReportHeader3 obj) {
+			return obj.getDIVFileDescription();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader3 obj, Optional<Max70Text> value) {
+			obj.setDIVFileDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EBkg")
@@ -373,7 +434,7 @@ public class IsabelReportHeader3 {
 	 * definition} = "Unique identification used for the e-banking module."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEBanking = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelReportHeader3, Optional<IsabelEbanking1Choice>> mmEBanking = new MMMessageAssociationEnd<IsabelReportHeader3, Optional<IsabelEbanking1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelReportHeader3.mmObject();
 			isDerived = false;
@@ -385,6 +446,16 @@ public class IsabelReportHeader3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> IsabelEbanking1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<IsabelEbanking1Choice> getValue(IsabelReportHeader3 obj) {
+			return obj.getEBanking();
+		}
+
+		@Override
+		public void setValue(IsabelReportHeader3 obj, Optional<IsabelEbanking1Choice> value) {
+			obj.setEBanking(value.orElse(null));
 		}
 	};
 
@@ -425,7 +496,7 @@ public class IsabelReportHeader3 {
 		return file;
 	}
 
-	public IsabelReportHeader3 setFile(com.tools20022.repository.msg.IsabelFile4 file) {
+	public IsabelReportHeader3 setFile(IsabelFile4 file) {
 		this.file = Objects.requireNonNull(file);
 		return this;
 	}

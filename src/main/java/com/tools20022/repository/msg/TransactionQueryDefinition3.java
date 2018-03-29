@@ -101,7 +101,7 @@ public class TransactionQueryDefinition3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionQueryDefinition3, Optional<QueryType1Code>> mmQueryType = new MMMessageAttribute<TransactionQueryDefinition3, Optional<QueryType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionQueryDefinition3.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class TransactionQueryDefinition3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType1Code> getValue(TransactionQueryDefinition3 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(TransactionQueryDefinition3 obj, Optional<QueryType1Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxCrit")
@@ -143,7 +153,7 @@ public class TransactionQueryDefinition3 {
 	 * definition} = "Defines the transaction query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionQueryDefinition3, Optional<TransactionCriteriaDefinition3Choice>> mmTransactionCriteria = new MMMessageAssociationEnd<TransactionQueryDefinition3, Optional<TransactionCriteriaDefinition3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionQueryDefinition3.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class TransactionQueryDefinition3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TransactionCriteriaDefinition3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionCriteriaDefinition3Choice> getValue(TransactionQueryDefinition3 obj) {
+			return obj.getTransactionCriteria();
+		}
+
+		@Override
+		public void setValue(TransactionQueryDefinition3 obj, Optional<TransactionCriteriaDefinition3Choice> value) {
+			obj.setTransactionCriteria(value.orElse(null));
 		}
 	};
 

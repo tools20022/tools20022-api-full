@@ -108,7 +108,7 @@ public class TransferCancellationRejectedStatus1Choice {
 	 * definition} = "Reason of the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferCancellationRejectedStatus1Choice, TransferCancellationRejectionReason1> mmReason = new MMMessageAssociationEnd<TransferCancellationRejectedStatus1Choice, TransferCancellationRejectionReason1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferCancellationRejectedStatus1Choice.mmObject();
@@ -121,6 +121,16 @@ public class TransferCancellationRejectedStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferCancellationRejectionReason1.mmObject();
+		}
+
+		@Override
+		public TransferCancellationRejectionReason1 getValue(TransferCancellationRejectedStatus1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(TransferCancellationRejectedStatus1Choice obj, TransferCancellationRejectionReason1 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -158,7 +168,7 @@ public class TransferCancellationRejectedStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferCancellationRejectedStatus1Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<TransferCancellationRejectedStatus1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferCancellationRejectedStatus1Choice.mmObject();
@@ -171,6 +181,16 @@ public class TransferCancellationRejectedStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(TransferCancellationRejectedStatus1Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(TransferCancellationRejectedStatus1Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 

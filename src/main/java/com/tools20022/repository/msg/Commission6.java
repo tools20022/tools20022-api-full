@@ -29,6 +29,9 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommissionType1;
+import com.tools20022.repository.msg.CommissionWaiver2;
+import com.tools20022.repository.msg.TaxationBasis1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -120,7 +123,7 @@ public class Commission6 {
 	 * definition} = "Service for which the commission is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission6, Optional<CommissionType1>> mmType = new MMMessageAttribute<Commission6, Optional<CommissionType1>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission6.mmObject();
@@ -131,7 +134,17 @@ public class Commission6 {
 			definition = "Service for which the commission is asked or paid.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CommissionType1.mmObject();
+			complexType_lazy = () -> CommissionType1.mmObject();
+		}
+
+		@Override
+		public Optional<CommissionType1> getValue(Commission6 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Commission6 obj, Optional<CommissionType1> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bsis")
@@ -167,7 +180,7 @@ public class Commission6 {
 	 * definition} = "Basis upon which a commission is charged, eg, flat fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission6, Optional<TaxationBasis1>> mmBasis = new MMMessageAttribute<Commission6, Optional<TaxationBasis1>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission6.mmObject();
@@ -178,7 +191,17 @@ public class Commission6 {
 			definition = "Basis upon which a commission is charged, eg, flat fee.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxationBasis1.mmObject();
+			complexType_lazy = () -> TaxationBasis1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxationBasis1> getValue(Commission6 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(Commission6 obj, Optional<TaxationBasis1> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -215,7 +238,7 @@ public class Commission6 {
 	 * definition} = "Commission expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission6, Optional<ActiveCurrencyAnd13DecimalAmount>> mmAmount = new MMMessageAttribute<Commission6, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission6.mmObject();
@@ -227,6 +250,16 @@ public class Commission6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(Commission6 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Commission6 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -263,7 +296,7 @@ public class Commission6 {
 	 * definition} = "Commission expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission6, Optional<PercentageRate>> mmRate = new MMMessageAttribute<Commission6, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission6.mmObject();
@@ -275,6 +308,16 @@ public class Commission6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Commission6 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Commission6 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -312,7 +355,7 @@ public class Commission6 {
 	 * "Party entitled to the amount of money resulting from a commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission6, Optional<PartyIdentification2Choice>> mmRecipientIdentification = new MMMessageAttribute<Commission6, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission6.mmObject();
@@ -324,6 +367,16 @@ public class Commission6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Commission6 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Commission6 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ComrclAgrmtRef")
@@ -361,7 +414,7 @@ public class Commission6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission6, Optional<Max35Text>> mmCommercialAgreementReference = new MMMessageAttribute<Commission6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission6.mmObject();
@@ -373,6 +426,16 @@ public class Commission6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Commission6 obj) {
+			return obj.getCommercialAgreementReference();
+		}
+
+		@Override
+		public void setValue(Commission6 obj, Optional<Max35Text> value) {
+			obj.setCommercialAgreementReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WvgDtls")
@@ -408,7 +471,7 @@ public class Commission6 {
 	 * "Voluntary non-enforcement of the right to all or part of a commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWaivingDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission6, Optional<CommissionWaiver2>> mmWaivingDetails = new MMMessageAssociationEnd<Commission6, Optional<CommissionWaiver2>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionWaiving;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission6.mmObject();
@@ -420,7 +483,17 @@ public class Commission6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommissionWaiver2.mmObject();
+			type_lazy = () -> CommissionWaiver2.mmObject();
+		}
+
+		@Override
+		public Optional<CommissionWaiver2> getValue(Commission6 obj) {
+			return obj.getWaivingDetails();
+		}
+
+		@Override
+		public void setValue(Commission6 obj, Optional<CommissionWaiver2> value) {
+			obj.setWaivingDetails(value.orElse(null));
 		}
 	};
 
@@ -444,7 +517,7 @@ public class Commission6 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public Commission6 setType(com.tools20022.repository.msg.CommissionType1 type) {
+	public Commission6 setType(CommissionType1 type) {
 		this.type = type;
 		return this;
 	}
@@ -453,7 +526,7 @@ public class Commission6 {
 		return basis == null ? Optional.empty() : Optional.of(basis);
 	}
 
-	public Commission6 setBasis(com.tools20022.repository.msg.TaxationBasis1 basis) {
+	public Commission6 setBasis(TaxationBasis1 basis) {
 		this.basis = basis;
 		return this;
 	}
@@ -498,7 +571,7 @@ public class Commission6 {
 		return waivingDetails == null ? Optional.empty() : Optional.of(waivingDetails);
 	}
 
-	public Commission6 setWaivingDetails(com.tools20022.repository.msg.CommissionWaiver2 waivingDetails) {
+	public Commission6 setWaivingDetails(CommissionWaiver2 waivingDetails) {
 		this.waivingDetails = waivingDetails;
 		return this;
 	}

@@ -106,7 +106,7 @@ public class SettlementOrIntraPosition2Choice {
 	 * SettlementOrIntraPosition1Choice.mmIntraPositionMovement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntraPositionMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementOrIntraPosition2Choice, IntraPosition5> mmIntraPositionMovement = new MMMessageAssociationEnd<SettlementOrIntraPosition2Choice, IntraPosition5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrIntraPosition2Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class SettlementOrIntraPosition2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IntraPosition5.mmObject();
+		}
+
+		@Override
+		public IntraPosition5 getValue(SettlementOrIntraPosition2Choice obj) {
+			return obj.getIntraPositionMovement();
+		}
+
+		@Override
+		public void setValue(SettlementOrIntraPosition2Choice obj, IntraPosition5 value) {
+			obj.setIntraPositionMovement(value);
 		}
 	};
 	@XmlElement(name = "SttlmTx", required = true)
@@ -154,7 +164,7 @@ public class SettlementOrIntraPosition2Choice {
 	 * SettlementOrIntraPosition1Choice.mmSettlementTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementOrIntraPosition2Choice, TransactionDetails94> mmSettlementTransaction = new MMMessageAssociationEnd<SettlementOrIntraPosition2Choice, TransactionDetails94>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrIntraPosition2Choice.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class SettlementOrIntraPosition2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransactionDetails94.mmObject();
+		}
+
+		@Override
+		public TransactionDetails94 getValue(SettlementOrIntraPosition2Choice obj) {
+			return obj.getSettlementTransaction();
+		}
+
+		@Override
+		public void setValue(SettlementOrIntraPosition2Choice obj, TransactionDetails94 value) {
+			obj.setSettlementTransaction(value);
 		}
 	};
 

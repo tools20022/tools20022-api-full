@@ -125,7 +125,7 @@ public class TradeData4 {
 	 * "Party that assigned the status to the foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusOriginator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData4, Optional<Max35Text>> mmStatusOriginator = new MMMessageAttribute<TradeData4, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> StatusOriginator.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData4.mmObject();
@@ -137,6 +137,16 @@ public class TradeData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeData4 obj) {
+			return obj.getStatusOriginator();
+		}
+
+		@Override
+		public void setValue(TradeData4 obj, Optional<Max35Text> value) {
+			obj.setStatusOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CurSts", required = true)
@@ -173,7 +183,7 @@ public class TradeData4 {
 	 * definition} = "Specifies the new status of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData4, Status5Choice> mmCurrentStatus = new MMMessageAttribute<TradeData4, Status5Choice>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData4.mmObject();
@@ -185,6 +195,16 @@ public class TradeData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Status5Choice.mmObject();
+		}
+
+		@Override
+		public Status5Choice getValue(TradeData4 obj) {
+			return obj.getCurrentStatus();
+		}
+
+		@Override
+		public void setValue(TradeData4 obj, Status5Choice value) {
+			obj.setCurrentStatus(value);
 		}
 	};
 	@XmlElement(name = "CurStsSubTp")
@@ -221,7 +241,7 @@ public class TradeData4 {
 	 * "Additional information about the current status of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentStatusSubType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData4, Optional<Max70Text>> mmCurrentStatusSubType = new MMMessageAttribute<TradeData4, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData4.mmObject();
@@ -233,6 +253,16 @@ public class TradeData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TradeData4 obj) {
+			return obj.getCurrentStatusSubType();
+		}
+
+		@Override
+		public void setValue(TradeData4 obj, Optional<Max70Text> value) {
+			obj.setCurrentStatusSubType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CurStsDtTm", required = true)
@@ -265,7 +295,7 @@ public class TradeData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentStatusDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData4, ISODateTime> mmCurrentStatusDateTime = new MMMessageAttribute<TradeData4, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData4.mmObject();
 			isDerived = false;
@@ -276,6 +306,16 @@ public class TradeData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(TradeData4 obj) {
+			return obj.getCurrentStatusDateTime();
+		}
+
+		@Override
+		public void setValue(TradeData4 obj, ISODateTime value) {
+			obj.setCurrentStatusDateTime(value);
 		}
 	};
 	@XmlElement(name = "PrvsSts")
@@ -307,7 +347,7 @@ public class TradeData4 {
 	 * definition} = "Specifies the previous status of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData4, Optional<Status5Choice>> mmPreviousStatus = new MMMessageAttribute<TradeData4, Optional<Status5Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData4.mmObject();
 			isDerived = false;
@@ -318,6 +358,16 @@ public class TradeData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Status5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Status5Choice> getValue(TradeData4 obj) {
+			return obj.getPreviousStatus();
+		}
+
+		@Override
+		public void setValue(TradeData4 obj, Optional<Status5Choice> value) {
+			obj.setPreviousStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsStsSubTp")
@@ -350,7 +400,7 @@ public class TradeData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousStatusSubType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData4, Optional<Max70Text>> mmPreviousStatusSubType = new MMMessageAttribute<TradeData4, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData4.mmObject();
 			isDerived = false;
@@ -361,6 +411,16 @@ public class TradeData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TradeData4 obj) {
+			return obj.getPreviousStatusSubType();
+		}
+
+		@Override
+		public void setValue(TradeData4 obj, Optional<Max70Text> value) {
+			obj.setPreviousStatusSubType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdctTp")
@@ -398,7 +458,7 @@ public class TradeData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProductType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData4, Optional<Max35Text>> mmProductType = new MMMessageAttribute<TradeData4, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmProductCategory;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeData4.mmObject();
@@ -410,6 +470,16 @@ public class TradeData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeData4 obj) {
+			return obj.getProductType();
+		}
+
+		@Override
+		public void setValue(TradeData4 obj, Optional<Max35Text> value) {
+			obj.setProductType(value.orElse(null));
 		}
 	};
 

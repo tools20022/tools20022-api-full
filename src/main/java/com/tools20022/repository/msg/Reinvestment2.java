@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.Reinvestment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument51;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class Reinvestment2 {
 	 * Reinvestment1.mmFundDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reinvestment2, FinancialInstrument51> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<Reinvestment2, FinancialInstrument51>() {
 		{
 			businessElementTrace_lazy = () -> Reinvestment.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reinvestment2.mmObject();
@@ -146,7 +147,17 @@ public class Reinvestment2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument51.mmObject();
+			type_lazy = () -> FinancialInstrument51.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument51 getValue(Reinvestment2 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(Reinvestment2 obj, FinancialInstrument51 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "ReqdNAVCcy")
@@ -198,7 +209,7 @@ public class Reinvestment2 {
 	 * Reinvestment1.mmRequestedNAVCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reinvestment2, Optional<ActiveCurrencyCode>> mmRequestedNAVCurrency = new MMMessageAttribute<Reinvestment2, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reinvestment2.mmObject();
@@ -212,6 +223,16 @@ public class Reinvestment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(Reinvestment2 obj) {
+			return obj.getRequestedNAVCurrency();
+		}
+
+		@Override
+		public void setValue(Reinvestment2 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setRequestedNAVCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinvstmtPctg", required = true)
@@ -261,7 +282,7 @@ public class Reinvestment2 {
 	 * Reinvestment1.mmReinvestmentPercentage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinvestmentPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reinvestment2, PercentageRate> mmReinvestmentPercentage = new MMMessageAttribute<Reinvestment2, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Reinvestment.mmPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reinvestment2.mmObject();
@@ -275,6 +296,16 @@ public class Reinvestment2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Reinvestment2 obj) {
+			return obj.getReinvestmentPercentage();
+		}
+
+		@Override
+		public void setValue(Reinvestment2 obj, PercentageRate value) {
+			obj.setReinvestmentPercentage(value);
 		}
 	};
 
@@ -299,7 +330,7 @@ public class Reinvestment2 {
 		return financialInstrumentDetails;
 	}
 
-	public Reinvestment2 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument51 financialInstrumentDetails) {
+	public Reinvestment2 setFinancialInstrumentDetails(FinancialInstrument51 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}

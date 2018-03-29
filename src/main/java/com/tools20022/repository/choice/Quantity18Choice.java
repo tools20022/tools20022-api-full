@@ -116,7 +116,7 @@ public class Quantity18Choice {
 	 * Quantity4Choice.mmOriginalAndCurrentFaceAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity18Choice, OriginalAndCurrentQuantities6> mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd<Quantity18Choice, OriginalAndCurrentQuantities6>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity18Choice.mmObject();
@@ -130,6 +130,16 @@ public class Quantity18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalAndCurrentQuantities6.mmObject();
+		}
+
+		@Override
+		public OriginalAndCurrentQuantities6 getValue(Quantity18Choice obj) {
+			return obj.getOriginalAndCurrentFaceAmount();
+		}
+
+		@Override
+		public void setValue(Quantity18Choice obj, OriginalAndCurrentQuantities6 value) {
+			obj.setOriginalAndCurrentFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "SgndQty", required = true)
@@ -165,7 +175,7 @@ public class Quantity18Choice {
 	 * Quantity4Choice.mmSignedQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity18Choice, SignedQuantityFormat6> mmSignedQuantity = new MMMessageAssociationEnd<Quantity18Choice, SignedQuantityFormat6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity18Choice.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class Quantity18Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat6.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat6 getValue(Quantity18Choice obj) {
+			return obj.getSignedQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity18Choice obj, SignedQuantityFormat6 value) {
+			obj.setSignedQuantity(value);
 		}
 	};
 

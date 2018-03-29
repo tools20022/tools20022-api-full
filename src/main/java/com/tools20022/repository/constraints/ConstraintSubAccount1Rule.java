@@ -52,11 +52,15 @@ public class ConstraintSubAccount1Rule {
 	 */
 	public static final MMConstraint<DetailedInstructionStatus1> forDetailedInstructionStatus1 = new MMConstraint<DetailedInstructionStatus1>() {
 		{
-			validator = ConstraintSubAccount1Rule::checkDetailedInstructionStatus1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount1Rule";
 			definition = "If SubAccountIdentification is present, then AccountIdentification must be present.";
 			owner_lazy = () -> DetailedInstructionStatus1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus1 obj) throws Exception {
+			checkDetailedInstructionStatus1(obj);
 		}
 	};
 	/**
@@ -94,13 +98,17 @@ public class ConstraintSubAccount1Rule {
 	 */
 	public static final MMConstraint<DetailedInstructionStatus8> forDetailedInstructionStatus8 = new MMConstraint<DetailedInstructionStatus8>() {
 		{
-			validator = ConstraintSubAccount1Rule::checkDetailedInstructionStatus8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount1Rule";
 			definition = "If SubAccountIdentification is present, then AccountIdentification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubAccount1Rule.forDetailedInstructionStatus11);
 			owner_lazy = () -> DetailedInstructionStatus8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SubAccountIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus8 obj) throws Exception {
+			checkDetailedInstructionStatus8(obj);
 		}
 	};
 	/**
@@ -126,11 +134,15 @@ public class ConstraintSubAccount1Rule {
 	 */
 	public static final MMConstraint<DetailedInstructionStatus2> forDetailedInstructionStatus2 = new MMConstraint<DetailedInstructionStatus2>() {
 		{
-			validator = ConstraintSubAccount1Rule::checkDetailedInstructionStatus2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount1Rule";
 			definition = "If SubAccountIdentification is present, then AccountIdentification is mandatory.";
 			owner_lazy = () -> DetailedInstructionStatus2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus2 obj) throws Exception {
+			checkDetailedInstructionStatus2(obj);
 		}
 	};
 	/**
@@ -168,13 +180,17 @@ public class ConstraintSubAccount1Rule {
 	 */
 	public static final MMConstraint<DetailedInstructionStatus9> forDetailedInstructionStatus9 = new MMConstraint<DetailedInstructionStatus9>() {
 		{
-			validator = ConstraintSubAccount1Rule::checkDetailedInstructionStatus9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount1Rule";
 			definition = "If SubAccountIdentification is present, then AccountIdentification must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubAccount1Rule.forDetailedInstructionStatus10);
 			owner_lazy = () -> DetailedInstructionStatus9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SubAccountIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus9 obj) throws Exception {
+			checkDetailedInstructionStatus9(obj);
 		}
 	};
 	/**
@@ -209,13 +225,17 @@ public class ConstraintSubAccount1Rule {
 	 */
 	public static final MMConstraint<DetailedInstructionStatus10> forDetailedInstructionStatus10 = new MMConstraint<DetailedInstructionStatus10>() {
 		{
-			validator = ConstraintSubAccount1Rule::checkDetailedInstructionStatus10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount1Rule";
 			definition = "If SubAccountIdentification is present, then AccountIdentification must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubAccount1Rule.forDetailedInstructionStatus9;
 			owner_lazy = () -> DetailedInstructionStatus10.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SubAccountIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus10 obj) throws Exception {
+			checkDetailedInstructionStatus10(obj);
 		}
 	};
 	/**
@@ -250,13 +270,17 @@ public class ConstraintSubAccount1Rule {
 	 */
 	public static final MMConstraint<DetailedInstructionStatus11> forDetailedInstructionStatus11 = new MMConstraint<DetailedInstructionStatus11>() {
 		{
-			validator = ConstraintSubAccount1Rule::checkDetailedInstructionStatus11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccount1Rule";
 			definition = "If SubAccountIdentification is present, then AccountIdentification must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSubAccount1Rule.forDetailedInstructionStatus8;
 			owner_lazy = () -> DetailedInstructionStatus11.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SubAccountIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DetailedInstructionStatus11 obj) throws Exception {
+			checkDetailedInstructionStatus11(obj);
 		}
 	};
 

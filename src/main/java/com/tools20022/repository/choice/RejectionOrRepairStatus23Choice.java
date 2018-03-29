@@ -117,7 +117,7 @@ public class RejectionOrRepairStatus23Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairStatus23Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RejectionOrRepairStatus23Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus23Choice.mmObject();
@@ -130,6 +130,16 @@ public class RejectionOrRepairStatus23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(RejectionOrRepairStatus23Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus23Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -169,7 +179,7 @@ public class RejectionOrRepairStatus23Choice {
 	 * definition} = "Specifies the reason of the RejectionOrRepairStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairStatus23Choice, List<RejectionOrRepairReason5>> mmReason = new MMMessageAssociationEnd<RejectionOrRepairStatus23Choice, List<RejectionOrRepairReason5>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus23Choice.mmObject();
@@ -182,6 +192,16 @@ public class RejectionOrRepairStatus23Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionOrRepairReason5.mmObject();
+		}
+
+		@Override
+		public List<RejectionOrRepairReason5> getValue(RejectionOrRepairStatus23Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus23Choice obj, List<RejectionOrRepairReason5> value) {
+			obj.setReason(value);
 		}
 	};
 

@@ -126,7 +126,7 @@ public class List2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List2, Max35Text> mmListIdentification = new MMMessageAttribute<List2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.List2.mmObject();
@@ -139,6 +139,16 @@ public class List2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(List2 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(List2 obj, Max35Text value) {
+			obj.setListIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradOrgtnDtTm")
@@ -179,7 +189,7 @@ public class List2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeOriginationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List2, Optional<ISODateTime>> mmTradeOriginationDateTime = new MMMessageAttribute<List2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeOriginationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.List2.mmObject();
@@ -192,6 +202,16 @@ public class List2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(List2 obj) {
+			return obj.getTradeOriginationDateTime();
+		}
+
+		@Override
+		public void setValue(List2 obj, Optional<ISODateTime> value) {
+			obj.setTradeOriginationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -230,7 +250,7 @@ public class List2 {
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List2, Optional<ISODateTime>> mmTradeDate = new MMMessageAttribute<List2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.List2.mmObject();
@@ -243,6 +263,16 @@ public class List2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(List2 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(List2 obj, Optional<ISODateTime> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 

@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.TradeData15;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -127,7 +126,7 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 	 * "Provides information on the status of a trade in a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV06, TradeData15> mmTradeData = new MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV06, TradeData15>() {
 		{
 			xmlTag = "TradData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 			complexType_lazy = () -> TradeData15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeStatusNotificationV06.class.getMethod("getTradeData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeData15 getValue(ForeignExchangeTradeStatusNotificationV06 obj) {
+			return obj.getTradeData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeStatusNotificationV06 obj, TradeData15 value) {
+			obj.setTradeData(value);
 		}
 	};
 	@XmlElement(name = "RgltryRptg")
@@ -173,7 +174,7 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRegulatoryReporting = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV06, Optional<RegulatoryReporting6>> mmRegulatoryReporting = new MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV06, Optional<RegulatoryReporting6>>() {
 		{
 			xmlTag = "RgltryRptg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 			complexType_lazy = () -> RegulatoryReporting6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeStatusNotificationV06.class.getMethod("getRegulatoryReporting", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<RegulatoryReporting6> getValue(ForeignExchangeTradeStatusNotificationV06 obj) {
+			return obj.getRegulatoryReporting();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeStatusNotificationV06 obj, Optional<RegulatoryReporting6> value) {
+			obj.setRegulatoryReporting(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -219,7 +222,7 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ForeignExchangeTradeStatusNotificationV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,12 +232,14 @@ public class ForeignExchangeTradeStatusNotificationV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeStatusNotificationV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ForeignExchangeTradeStatusNotificationV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeStatusNotificationV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

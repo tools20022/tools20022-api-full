@@ -136,7 +136,7 @@ public class CorporateActionOption10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption10Choice, CorporateActionOption7Code> mmCode = new MMMessageAttribute<CorporateActionOption10Choice, CorporateActionOption7Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionOption10Choice.mmObject();
@@ -150,6 +150,16 @@ public class CorporateActionOption10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionOption7Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption7Code getValue(CorporateActionOption10Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption10Choice obj, CorporateActionOption7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -198,7 +208,7 @@ public class CorporateActionOption10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption10Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<CorporateActionOption10Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionOption10Choice.mmObject();
@@ -213,6 +223,16 @@ public class CorporateActionOption10Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CorporateActionOption10Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption10Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

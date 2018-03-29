@@ -121,7 +121,7 @@ public class PlainCardData17 {
 	 * PlainCardData16.mmPAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData17, Optional<Min8Max28NumericText>> mmPAN = new MMMessageAttribute<PlainCardData17, Optional<Min8Max28NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData17.mmObject();
@@ -134,6 +134,16 @@ public class PlainCardData17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min8Max28NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Min8Max28NumericText> getValue(PlainCardData17 obj) {
+			return obj.getPAN();
+		}
+
+		@Override
+		public void setValue(PlainCardData17 obj, Optional<Min8Max28NumericText> value) {
+			obj.setPAN(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trck1")
@@ -172,7 +182,7 @@ public class PlainCardData17 {
 	 * PlainCardData16.mmTrack1}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrack1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData17, Optional<Max76Text>> mmTrack1 = new MMMessageAttribute<PlainCardData17, Optional<Max76Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData17.mmObject();
 			isDerived = false;
@@ -184,6 +194,16 @@ public class PlainCardData17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max76Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max76Text> getValue(PlainCardData17 obj) {
+			return obj.getTrack1();
+		}
+
+		@Override
+		public void setValue(PlainCardData17 obj, Optional<Max76Text> value) {
+			obj.setTrack1(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trck2")
@@ -222,7 +242,7 @@ public class PlainCardData17 {
 	 * PlainCardData16.mmTrack2}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrack2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData17, Optional<Max37Text>> mmTrack2 = new MMMessageAttribute<PlainCardData17, Optional<Max37Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData17.mmObject();
 			isDerived = false;
@@ -234,6 +254,16 @@ public class PlainCardData17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max37Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max37Text> getValue(PlainCardData17 obj) {
+			return obj.getTrack2();
+		}
+
+		@Override
+		public void setValue(PlainCardData17 obj, Optional<Max37Text> value) {
+			obj.setTrack2(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trck3")
@@ -272,7 +302,7 @@ public class PlainCardData17 {
 	 * PlainCardData16.mmTrack3}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrack3 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData17, Optional<Max104Text>> mmTrack3 = new MMMessageAttribute<PlainCardData17, Optional<Max104Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData17.mmObject();
 			isDerived = false;
@@ -284,6 +314,16 @@ public class PlainCardData17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max104Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max104Text> getValue(PlainCardData17 obj) {
+			return obj.getTrack3();
+		}
+
+		@Override
+		public void setValue(PlainCardData17 obj, Optional<Max104Text> value) {
+			obj.setTrack3(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlCardData")
@@ -315,7 +355,7 @@ public class PlainCardData17 {
 	 * definition} = "Additional card issuer specific data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalCardData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData17, List<Max35Text>> mmAdditionalCardData = new MMMessageAttribute<PlainCardData17, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData17.mmObject();
 			isDerived = false;
@@ -325,6 +365,16 @@ public class PlainCardData17 {
 			definition = "Additional card issuer specific data.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(PlainCardData17 obj) {
+			return obj.getAdditionalCardData();
+		}
+
+		@Override
+		public void setValue(PlainCardData17 obj, List<Max35Text> value) {
+			obj.setAdditionalCardData(value);
 		}
 	};
 	@XmlElement(name = "NtryMd")
@@ -357,7 +407,7 @@ public class PlainCardData17 {
 	 * definition} = "Entry mode of the card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData17, Optional<CardDataReading5Code>> mmEntryMode = new MMMessageAttribute<PlainCardData17, Optional<CardDataReading5Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData17.mmObject();
 			isDerived = false;
@@ -368,6 +418,16 @@ public class PlainCardData17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardDataReading5Code> getValue(PlainCardData17 obj) {
+			return obj.getEntryMode();
+		}
+
+		@Override
+		public void setValue(PlainCardData17 obj, Optional<CardDataReading5Code> value) {
+			obj.setEntryMode(value.orElse(null));
 		}
 	};
 

@@ -27,6 +27,8 @@ import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount33;
+import com.tools20022.repository.msg.PaymentInstrument13;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,7 +131,7 @@ public class CashSettlement2 {
 	 * InvestmentFundCashSettlementInformation8.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashSettlement2, DataModification2Code> mmModificationScopeIndication = new MMMessageAttribute<CashSettlement2, DataModification2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashSettlement2.mmObject();
 			isDerived = false;
@@ -142,9 +144,19 @@ public class CashSettlement2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
+
+		@Override
+		public DataModification2Code getValue(CashSettlement2 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(CashSettlement2 obj, DataModification2Code value) {
+			obj.setModificationScopeIndication(value);
+		}
 	};
 	@XmlElement(name = "CshAcctDtls")
-	protected List<com.tools20022.repository.msg.CashAccount33> cashAccountDetails;
+	protected List<CashAccount33> cashAccountDetails;
 	/**
 	 * 
 	 <p>
@@ -177,7 +189,7 @@ public class CashSettlement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashSettlement2, List<CashAccount33>> mmCashAccountDetails = new MMMessageAssociationEnd<CashSettlement2, List<CashAccount33>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashSettlement2.mmObject();
@@ -188,11 +200,21 @@ public class CashSettlement2 {
 			definition = "Account to credit or debit. When this is an account to debit, this is for the payment of a subscription to an investment fund, a savings plan payment, the purchase of securities or the payment of charges. When this is an account to credit, this is for the payment of an amount as a result of a redemption of investment fund units, the sale of securities, interest and dividend payments. A single account may be specified for all cash movements on the account or cash accounts may be specified for specific types of transactions on the account.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount33.mmObject();
+			type_lazy = () -> CashAccount33.mmObject();
+		}
+
+		@Override
+		public List<CashAccount33> getValue(CashSettlement2 obj) {
+			return obj.getCashAccountDetails();
+		}
+
+		@Override
+		public void setValue(CashSettlement2 obj, List<CashAccount33> value) {
+			obj.setCashAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "OthrCshSttlmDtls")
-	protected List<com.tools20022.repository.msg.PaymentInstrument13> otherCashSettlementDetails;
+	protected List<PaymentInstrument13> otherCashSettlementDetails;
 	/**
 	 * 
 	 <p>
@@ -223,7 +245,7 @@ public class CashSettlement2 {
 	 * definition} = "Method of payment other than a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCashSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashSettlement2, List<PaymentInstrument13>> mmOtherCashSettlementDetails = new MMMessageAssociationEnd<CashSettlement2, List<PaymentInstrument13>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashSettlement2.mmObject();
@@ -234,7 +256,17 @@ public class CashSettlement2 {
 			definition = "Method of payment other than a cash account.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentInstrument13.mmObject();
+			type_lazy = () -> PaymentInstrument13.mmObject();
+		}
+
+		@Override
+		public List<PaymentInstrument13> getValue(CashSettlement2 obj) {
+			return obj.getOtherCashSettlementDetails();
+		}
+
+		@Override
+		public void setValue(CashSettlement2 obj, List<PaymentInstrument13> value) {
+			obj.setOtherCashSettlementDetails(value);
 		}
 	};
 
@@ -268,7 +300,7 @@ public class CashSettlement2 {
 		return cashAccountDetails == null ? cashAccountDetails = new ArrayList<>() : cashAccountDetails;
 	}
 
-	public CashSettlement2 setCashAccountDetails(List<com.tools20022.repository.msg.CashAccount33> cashAccountDetails) {
+	public CashSettlement2 setCashAccountDetails(List<CashAccount33> cashAccountDetails) {
 		this.cashAccountDetails = Objects.requireNonNull(cashAccountDetails);
 		return this;
 	}
@@ -277,7 +309,7 @@ public class CashSettlement2 {
 		return otherCashSettlementDetails == null ? otherCashSettlementDetails = new ArrayList<>() : otherCashSettlementDetails;
 	}
 
-	public CashSettlement2 setOtherCashSettlementDetails(List<com.tools20022.repository.msg.PaymentInstrument13> otherCashSettlementDetails) {
+	public CashSettlement2 setOtherCashSettlementDetails(List<PaymentInstrument13> otherCashSettlementDetails) {
 		this.otherCashSettlementDetails = Objects.requireNonNull(otherCashSettlementDetails);
 		return this;
 	}

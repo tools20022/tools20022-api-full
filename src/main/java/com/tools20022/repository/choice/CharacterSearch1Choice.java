@@ -112,7 +112,7 @@ public class CharacterSearch1Choice {
 	 * CharacterSearchChoice.mmEqual}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CharacterSearch1Choice, Max35Text> mmEqual = new MMMessageAttribute<CharacterSearch1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CharacterSearch1Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class CharacterSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CharacterSearch1Choice obj) {
+			return obj.getEqual();
+		}
+
+		@Override
+		public void setValue(CharacterSearch1Choice obj, Max35Text value) {
+			obj.setEqual(value);
 		}
 	};
 	@XmlElement(name = "NEQ", required = true)
@@ -161,7 +171,7 @@ public class CharacterSearch1Choice {
 	 * CharacterSearchChoice.mmNotEqual}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotEqual = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CharacterSearch1Choice, Max35Text> mmNotEqual = new MMMessageAttribute<CharacterSearch1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CharacterSearch1Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class CharacterSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CharacterSearch1Choice obj) {
+			return obj.getNotEqual();
+		}
+
+		@Override
+		public void setValue(CharacterSearch1Choice obj, Max35Text value) {
+			obj.setNotEqual(value);
 		}
 	};
 	@XmlElement(name = "CT", required = true)
@@ -209,7 +229,7 @@ public class CharacterSearch1Choice {
 	 * CharacterSearchChoice.mmContain}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CharacterSearch1Choice, Max35Text> mmContain = new MMMessageAttribute<CharacterSearch1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CharacterSearch1Choice.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class CharacterSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CharacterSearch1Choice obj) {
+			return obj.getContain();
+		}
+
+		@Override
+		public void setValue(CharacterSearch1Choice obj, Max35Text value) {
+			obj.setContain(value);
 		}
 	};
 	@XmlElement(name = "NCT", required = true)
@@ -258,7 +288,7 @@ public class CharacterSearch1Choice {
 	 * CharacterSearchChoice.mmNotContain}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotContain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CharacterSearch1Choice, Max35Text> mmNotContain = new MMMessageAttribute<CharacterSearch1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CharacterSearch1Choice.mmObject();
 			isDerived = false;
@@ -270,6 +300,16 @@ public class CharacterSearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CharacterSearch1Choice obj) {
+			return obj.getNotContain();
+		}
+
+		@Override
+		public void setValue(CharacterSearch1Choice obj, Max35Text value) {
+			obj.setNotContain(value);
 		}
 	};
 

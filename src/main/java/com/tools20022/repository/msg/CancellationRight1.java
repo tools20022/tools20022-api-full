@@ -117,7 +117,7 @@ public class CancellationRight1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationRight1, CancellationRight2Code> mmStructured = new MMMessageAttribute<CancellationRight1, CancellationRight2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCancellationRight;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRight1.mmObject();
@@ -129,6 +129,16 @@ public class CancellationRight1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationRight2Code.mmObject();
+		}
+
+		@Override
+		public CancellationRight2Code getValue(CancellationRight1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(CancellationRight1 obj, CancellationRight2Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -165,7 +175,7 @@ public class CancellationRight1 {
 	 * definition} = "Additional information about the type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationRight1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CancellationRight1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRight1.mmObject();
@@ -177,6 +187,16 @@ public class CancellationRight1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CancellationRight1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CancellationRight1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

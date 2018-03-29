@@ -192,7 +192,7 @@ public class AccountForAction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountForAction1, AccountIdentification4Choice> mmIdentification = new MMMessageAttribute<AccountForAction1, AccountIdentification4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountForAction1.mmObject();
@@ -204,6 +204,16 @@ public class AccountForAction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification4Choice getValue(AccountForAction1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountForAction1 obj, AccountIdentification4Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -241,7 +251,7 @@ public class AccountForAction1 {
 	 * definition} = "Medium of exchange of value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountForAction1, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<AccountForAction1, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountForAction1.mmObject();
@@ -253,6 +263,16 @@ public class AccountForAction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(AccountForAction1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(AccountForAction1 obj, ActiveCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 

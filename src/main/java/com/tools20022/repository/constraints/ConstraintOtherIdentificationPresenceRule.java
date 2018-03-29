@@ -64,13 +64,17 @@ public class ConstraintOtherIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<SecurityIdentification14> forSecurityIdentification14 = new MMConstraint<SecurityIdentification14>() {
 		{
-			validator = ConstraintOtherIdentificationPresenceRule::checkSecurityIdentification14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentificationPresenceRule";
 			definition = "If OtherIdentification is not present then either ISIN or Description must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherIdentificationPresenceRule.forSecurityIdentification19);
 			owner_lazy = () -> SecurityIdentification14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ISIN</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification14 obj) throws Exception {
+			checkSecurityIdentification14(obj);
 		}
 	};
 	/**
@@ -100,12 +104,16 @@ public class ConstraintOtherIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<SecurityIdentification15> forSecurityIdentification15 = new MMConstraint<SecurityIdentification15>() {
 		{
-			validator = ConstraintOtherIdentificationPresenceRule::checkSecurityIdentification15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentificationPresenceRule";
 			definition = "If OtherIdentification is not present then either ISIN or Description must be present.";
 			owner_lazy = () -> SecurityIdentification15.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ISIN</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification15 obj) throws Exception {
+			checkSecurityIdentification15(obj);
 		}
 	};
 	/**
@@ -135,12 +143,16 @@ public class ConstraintOtherIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<SecurityIdentification16> forSecurityIdentification16 = new MMConstraint<SecurityIdentification16>() {
 		{
-			validator = ConstraintOtherIdentificationPresenceRule::checkSecurityIdentification16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentificationPresenceRule";
 			definition = "If OtherIdentification is not present then either ISIN or Description must be present.";
 			owner_lazy = () -> SecurityIdentification16.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ISIN</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification16 obj) throws Exception {
+			checkSecurityIdentification16(obj);
 		}
 	};
 	/**
@@ -175,13 +187,17 @@ public class ConstraintOtherIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<SecurityIdentification19> forSecurityIdentification19 = new MMConstraint<SecurityIdentification19>() {
 		{
-			validator = ConstraintOtherIdentificationPresenceRule::checkSecurityIdentification19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentificationPresenceRule";
 			definition = "If OtherIdentification is not present then either ISIN or Description must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherIdentificationPresenceRule.forSecurityIdentification14;
 			owner_lazy = () -> SecurityIdentification19.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ISIN</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification19 obj) throws Exception {
+			checkSecurityIdentification19(obj);
 		}
 	};
 	/**
@@ -211,12 +227,16 @@ public class ConstraintOtherIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<SecurityIdentification20> forSecurityIdentification20 = new MMConstraint<SecurityIdentification20>() {
 		{
-			validator = ConstraintOtherIdentificationPresenceRule::checkSecurityIdentification20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentificationPresenceRule";
 			definition = "If OtherIdentification is not present then either ISIN or Description must be present.";
 			owner_lazy = () -> SecurityIdentification20.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ISIN</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification20 obj) throws Exception {
+			checkSecurityIdentification20(obj);
 		}
 	};
 	/**
@@ -246,12 +266,16 @@ public class ConstraintOtherIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<SecurityIdentification32> forSecurityIdentification32 = new MMConstraint<SecurityIdentification32>() {
 		{
-			validator = ConstraintOtherIdentificationPresenceRule::checkSecurityIdentification32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentificationPresenceRule";
 			definition = "If OtherIdentification is not present then either ISIN or Description must be present.";
 			owner_lazy = () -> SecurityIdentification32.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ISIN</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification32 obj) throws Exception {
+			checkSecurityIdentification32(obj);
 		}
 	};
 	/**
@@ -281,12 +305,16 @@ public class ConstraintOtherIdentificationPresenceRule {
 	 */
 	public static final MMConstraint<SecurityIdentification21> forSecurityIdentification21 = new MMConstraint<SecurityIdentification21>() {
 		{
-			validator = ConstraintOtherIdentificationPresenceRule::checkSecurityIdentification21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIdentificationPresenceRule";
 			definition = "If OtherIdentification is not present then either ISIN or Description must be present.";
 			owner_lazy = () -> SecurityIdentification21.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ISIN</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Description</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/OtherIdentification[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecurityIdentification21 obj) throws Exception {
+			checkSecurityIdentification21(obj);
 		}
 	};
 

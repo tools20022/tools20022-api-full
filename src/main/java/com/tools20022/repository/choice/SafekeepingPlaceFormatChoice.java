@@ -113,7 +113,7 @@ public class SafekeepingPlaceFormatChoice {
 	 * definition} = "Place of safekeeping expressed as a code and BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceFormatChoice, SafekeepingPlaceAsCodeAndPartyIdentification> mmIdentification = new MMMessageAttribute<SafekeepingPlaceFormatChoice, SafekeepingPlaceAsCodeAndPartyIdentification>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmObject();
@@ -125,6 +125,16 @@ public class SafekeepingPlaceFormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SafekeepingPlaceAsCodeAndPartyIdentification.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlaceAsCodeAndPartyIdentification getValue(SafekeepingPlaceFormatChoice obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceFormatChoice obj, SafekeepingPlaceAsCodeAndPartyIdentification value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdAsDSS", required = true)
@@ -163,7 +173,7 @@ public class SafekeepingPlaceFormatChoice {
 	 * "Place of safekeeping expressed with a propriety identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceFormatChoice, GenericIdentification5> mmIdentificationAsDSS = new MMMessageAttribute<SafekeepingPlaceFormatChoice, GenericIdentification5>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmObject();
@@ -175,6 +185,16 @@ public class SafekeepingPlaceFormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification5.mmObject();
+		}
+
+		@Override
+		public GenericIdentification5 getValue(SafekeepingPlaceFormatChoice obj) {
+			return obj.getIdentificationAsDSS();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceFormatChoice obj, GenericIdentification5 value) {
+			obj.setIdentificationAsDSS(value);
 		}
 	};
 	@XmlElement(name = "IdAsCtry", required = true)
@@ -211,7 +231,7 @@ public class SafekeepingPlaceFormatChoice {
 	 * definition} = "Place of safekeeping expressed with a country code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationAsCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafekeepingPlaceFormatChoice, CountryCode> mmIdentificationAsCountry = new MMMessageAttribute<SafekeepingPlaceFormatChoice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormatChoice.mmObject();
@@ -223,6 +243,16 @@ public class SafekeepingPlaceFormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(SafekeepingPlaceFormatChoice obj) {
+			return obj.getIdentificationAsCountry();
+		}
+
+		@Override
+		public void setValue(SafekeepingPlaceFormatChoice obj, CountryCode value) {
+			obj.setIdentificationAsCountry(value);
 		}
 	};
 

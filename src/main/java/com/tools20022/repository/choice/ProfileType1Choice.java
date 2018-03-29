@@ -98,7 +98,7 @@ public class ProfileType1Choice {
 	 * definition} = "Type of profile expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProfileType1Choice, ProfileType1Code> mmCode = new MMMessageAttribute<ProfileType1Choice, ProfileType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProfileType1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class ProfileType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProfileType1Code.mmObject();
+		}
+
+		@Override
+		public ProfileType1Code getValue(ProfileType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ProfileType1Choice obj, ProfileType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -140,7 +150,7 @@ public class ProfileType1Choice {
 	 * definition} = "Type of profile expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProfileType1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<ProfileType1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProfileType1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class ProfileType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(ProfileType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ProfileType1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

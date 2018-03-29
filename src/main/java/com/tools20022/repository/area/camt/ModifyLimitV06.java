@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.LimitStructure2;
 import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +92,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ModifyLimitV06"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -131,7 +130,7 @@ public class ModifyLimitV06 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyLimitV06, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<ModifyLimitV06, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +141,14 @@ public class ModifyLimitV06 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyLimitV06.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(ModifyLimitV06 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ModifyLimitV06 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "LmtDtls")
@@ -176,7 +177,7 @@ public class ModifyLimitV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmLimitDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyLimitV06, List<LimitStructure2>> mmLimitDetails = new MMMessageBuildingBlock<ModifyLimitV06, List<LimitStructure2>>() {
 		{
 			xmlTag = "LmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,12 +187,14 @@ public class ModifyLimitV06 {
 			complexType_lazy = () -> LimitStructure2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyLimitV06.class.getMethod("getLimitDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<LimitStructure2> getValue(ModifyLimitV06 obj) {
+			return obj.getLimitDetails();
+		}
+
+		@Override
+		public void setValue(ModifyLimitV06 obj, List<LimitStructure2> value) {
+			obj.setLimitDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -221,7 +224,7 @@ public class ModifyLimitV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyLimitV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ModifyLimitV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,19 +234,21 @@ public class ModifyLimitV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyLimitV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ModifyLimitV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ModifyLimitV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModifyLimitV06";
 				definition = "Scope\nThe ModifyLimit message is sent by a member to the transaction administrator.\nIt is used to request modifications in the details of one particular, several or all limits set by the member and managed by the transaction administrator.\nEach ModifyLimit message can alter only one type of limit (current or default).\nUsage\nAt any time during the operating hours of the system, the member can request modifications in the limits it has set. For example, the reason may be to unlock the payments queue regarding a particular member, or following a risk management decision issued after an exceptional event has occurred.\nThe member will submit a message requesting modifications in one or more of the following criteria: \n- type of limit (current/default)\n- identification of the system\n- identification of the counterparty\n- value of the limit(s) (default and/or current limit(s))\n- point in time when the limit becomes effective\nBased on the criteria received within the ModifyLimit message, the transaction administrator will execute or reject the requested modification. The transaction administrator may send a Receipt message as a reply to the ModifyLimit request. To verify the outcome of the request, the member may submit a GetLimit message with the appropriate search criteria.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

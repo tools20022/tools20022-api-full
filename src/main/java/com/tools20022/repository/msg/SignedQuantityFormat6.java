@@ -117,7 +117,7 @@ public class SignedQuantityFormat6 {
 	 * SignedQuantityFormat2.mmShortLongPosition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SignedQuantityFormat6, ShortLong1Code> mmShortLongPosition = new MMMessageAttribute<SignedQuantityFormat6, ShortLong1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -130,6 +130,16 @@ public class SignedQuantityFormat6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public ShortLong1Code getValue(SignedQuantityFormat6 obj) {
+			return obj.getShortLongPosition();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat6 obj, ShortLong1Code value) {
+			obj.setShortLongPosition(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -171,7 +181,7 @@ public class SignedQuantityFormat6 {
 	 * SignedQuantityFormat2.mmQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SignedQuantityFormat6, FinancialInstrumentQuantity1Choice> mmQuantity = new MMMessageAssociationEnd<SignedQuantityFormat6, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat6.mmObject();
@@ -185,6 +195,16 @@ public class SignedQuantityFormat6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(SignedQuantityFormat6 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat6 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 

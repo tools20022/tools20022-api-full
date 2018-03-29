@@ -130,7 +130,7 @@ public class ConversionTypeFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConversionTypeFormat1Choice, ConversionType1Code> mmCode = new MMMessageAttribute<ConversionTypeFormat1Choice, ConversionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConversionTypeFormat1Choice.mmObject();
@@ -144,6 +144,16 @@ public class ConversionTypeFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConversionType1Code.mmObject();
+		}
+
+		@Override
+		public ConversionType1Code getValue(ConversionTypeFormat1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ConversionTypeFormat1Choice obj, ConversionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -191,7 +201,7 @@ public class ConversionTypeFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConversionTypeFormat1Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<ConversionTypeFormat1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConversionTypeFormat1Choice.mmObject();
@@ -206,6 +216,16 @@ public class ConversionTypeFormat1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(ConversionTypeFormat1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ConversionTypeFormat1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument59;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class SpecificCollateral2 {
 	 * "Identification of collateral placed as security for repo.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SpecificCollateral2, FinancialInstrument59> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<SpecificCollateral2, FinancialInstrument59>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SpecificCollateral2.mmObject();
@@ -117,7 +118,17 @@ public class SpecificCollateral2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument59.mmObject();
+			type_lazy = () -> FinancialInstrument59.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument59 getValue(SpecificCollateral2 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SpecificCollateral2 obj, FinancialInstrument59 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 
@@ -139,7 +150,7 @@ public class SpecificCollateral2 {
 		return financialInstrumentIdentification;
 	}
 
-	public SpecificCollateral2 setFinancialInstrumentIdentification(com.tools20022.repository.msg.FinancialInstrument59 financialInstrumentIdentification) {
+	public SpecificCollateral2 setFinancialInstrumentIdentification(FinancialInstrument59 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}

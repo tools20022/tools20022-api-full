@@ -128,7 +128,7 @@ public class PaymentInstrument17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument17Choice, List<CashAccount26>> mmCashAccountDetails = new MMMessageAssociationEnd<PaymentInstrument17Choice, List<CashAccount26>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument17Choice.mmObject();
@@ -141,6 +141,16 @@ public class PaymentInstrument17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CashAccount26.mmObject();
+		}
+
+		@Override
+		public List<CashAccount26> getValue(PaymentInstrument17Choice obj) {
+			return obj.getCashAccountDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument17Choice obj, List<CashAccount26> value) {
+			obj.setCashAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "PmtCardDtls", required = true)
@@ -184,7 +194,7 @@ public class PaymentInstrument17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentCardDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument17Choice, PaymentCard2> mmPaymentCardDetails = new MMMessageAssociationEnd<PaymentInstrument17Choice, PaymentCard2>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument17Choice.mmObject();
@@ -198,6 +208,16 @@ public class PaymentInstrument17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaymentCard2.mmObject();
+		}
+
+		@Override
+		public PaymentCard2 getValue(PaymentInstrument17Choice obj) {
+			return obj.getPaymentCardDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument17Choice obj, PaymentCard2 value) {
+			obj.setPaymentCardDetails(value);
 		}
 	};
 	@XmlElement(name = "DrctDbtDtls", required = true)
@@ -240,7 +260,7 @@ public class PaymentInstrument17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDirectDebitDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument17Choice, DirectDebitMandate4> mmDirectDebitDetails = new MMMessageAssociationEnd<PaymentInstrument17Choice, DirectDebitMandate4>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument17Choice.mmObject();
@@ -254,6 +274,16 @@ public class PaymentInstrument17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DirectDebitMandate4.mmObject();
+		}
+
+		@Override
+		public DirectDebitMandate4 getValue(PaymentInstrument17Choice obj) {
+			return obj.getDirectDebitDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument17Choice obj, DirectDebitMandate4 value) {
+			obj.setDirectDebitDetails(value);
 		}
 	};
 	@XmlElement(name = "Chq", required = true)
@@ -299,7 +329,7 @@ public class PaymentInstrument17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCheque = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument17Choice, YesNoIndicator> mmCheque = new MMMessageAttribute<PaymentInstrument17Choice, YesNoIndicator>() {
 		{
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument17Choice.mmObject();
@@ -312,6 +342,16 @@ public class PaymentInstrument17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PaymentInstrument17Choice obj) {
+			return obj.getCheque();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument17Choice obj, YesNoIndicator value) {
+			obj.setCheque(value);
 		}
 	};
 	@XmlElement(name = "BkrsDrft", required = true)
@@ -357,7 +397,7 @@ public class PaymentInstrument17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankersDraft = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument17Choice, YesNoIndicator> mmBankersDraft = new MMMessageAttribute<PaymentInstrument17Choice, YesNoIndicator>() {
 		{
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument17Choice.mmObject();
@@ -370,6 +410,16 @@ public class PaymentInstrument17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PaymentInstrument17Choice obj) {
+			return obj.getBankersDraft();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument17Choice obj, YesNoIndicator value) {
+			obj.setBankersDraft(value);
 		}
 	};
 

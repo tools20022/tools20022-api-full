@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification7;
+import com.tools20022.repository.msg.TransactionStatus4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +132,7 @@ public class ReportLine1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine1, Max35Text> mmTransactionIdentification = new MMMessageAttribute<ReportLine1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine1.mmObject();
 			isDerived = false;
@@ -141,6 +143,16 @@ public class ReportLine1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportLine1 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ReportLine1 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -170,7 +182,7 @@ public class ReportLine1 {
 	 * definition} = "Identifies the status of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportLine1, TransactionStatus4> mmTransactionStatus = new MMMessageAssociationEnd<ReportLine1, TransactionStatus4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine1.mmObject();
 			isDerived = false;
@@ -181,7 +193,17 @@ public class ReportLine1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionStatus4.mmObject();
+			type_lazy = () -> TransactionStatus4.mmObject();
+		}
+
+		@Override
+		public TransactionStatus4 getValue(ReportLine1 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(ReportLine1 obj, TransactionStatus4 value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "PurchsOrdrRef", required = true)
@@ -219,7 +241,7 @@ public class ReportLine1 {
 	 * "Unique identification of the purchase order, assigned by the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine1, DocumentIdentification7> mmPurchaseOrderReference = new MMMessageAttribute<ReportLine1, DocumentIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine1.mmObject();
@@ -230,7 +252,17 @@ public class ReportLine1 {
 			definition = "Unique identification of the purchase order, assigned by the buyer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
+			complexType_lazy = () -> DocumentIdentification7.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification7 getValue(ReportLine1 obj) {
+			return obj.getPurchaseOrderReference();
+		}
+
+		@Override
+		public void setValue(ReportLine1 obj, DocumentIdentification7 value) {
+			obj.setPurchaseOrderReference(value);
 		}
 	};
 	@XmlElement(name = "PurchsOrdrTtlNetAmt", required = true)
@@ -269,7 +301,7 @@ public class ReportLine1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurchaseOrderTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine1, CurrencyAndAmount> mmPurchaseOrderTotalNetAmount = new MMMessageAttribute<ReportLine1, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmTotalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine1.mmObject();
@@ -281,6 +313,16 @@ public class ReportLine1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReportLine1 obj) {
+			return obj.getPurchaseOrderTotalNetAmount();
+		}
+
+		@Override
+		public void setValue(ReportLine1 obj, CurrencyAndAmount value) {
+			obj.setPurchaseOrderTotalNetAmount(value);
 		}
 	};
 	@XmlElement(name = "AcmltdNetAmt", required = true)
@@ -313,7 +355,7 @@ public class ReportLine1 {
 	 * "Accumulated net amount, after adjustments, intended to be paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccumulatedNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine1, CurrencyAndAmount> mmAccumulatedNetAmount = new MMMessageAttribute<ReportLine1, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine1.mmObject();
 			isDerived = false;
@@ -324,6 +366,16 @@ public class ReportLine1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReportLine1 obj) {
+			return obj.getAccumulatedNetAmount();
+		}
+
+		@Override
+		public void setValue(ReportLine1 obj, CurrencyAndAmount value) {
+			obj.setAccumulatedNetAmount(value);
 		}
 	};
 
@@ -357,7 +409,7 @@ public class ReportLine1 {
 		return transactionStatus;
 	}
 
-	public ReportLine1 setTransactionStatus(com.tools20022.repository.msg.TransactionStatus4 transactionStatus) {
+	public ReportLine1 setTransactionStatus(TransactionStatus4 transactionStatus) {
 		this.transactionStatus = Objects.requireNonNull(transactionStatus);
 		return this;
 	}
@@ -366,7 +418,7 @@ public class ReportLine1 {
 		return purchaseOrderReference;
 	}
 
-	public ReportLine1 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+	public ReportLine1 setPurchaseOrderReference(DocumentIdentification7 purchaseOrderReference) {
 		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
 		return this;
 	}

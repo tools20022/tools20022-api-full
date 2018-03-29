@@ -57,11 +57,15 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01> forRedemptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkRedemptionBulkOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of BulkExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			owner_lazy = () -> RedemptionBulkOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -87,11 +91,15 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationAmendmentV01> forRedemptionOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkRedemptionOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of MultipleExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			owner_lazy = () -> RedemptionOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkRedemptionOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -117,11 +125,15 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01> forSubscriptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkSubscriptionBulkOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of BulkExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -147,11 +159,15 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationAmendmentV01> forSubscriptionOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkSubscriptionOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of MultipleExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			owner_lazy = () -> SubscriptionOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkSubscriptionOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -182,12 +198,16 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationV04> forSubscriptionBulkOrderConfirmationV04 = new MMConstraint<SubscriptionBulkOrderConfirmationV04>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkSubscriptionBulkOrderConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of BulkExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forSubscriptionBulkOrderConfirmationV03;
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationV04 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -218,12 +238,16 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationV04> forRedemptionBulkOrderConfirmationV04 = new MMConstraint<RedemptionBulkOrderConfirmationV04>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkRedemptionBulkOrderConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of BulkExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forRedemptionBulkOrderConfirmationV03;
 			owner_lazy = () -> RedemptionBulkOrderConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationV04 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -254,12 +278,16 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationV04> forSubscriptionOrderConfirmationV04 = new MMConstraint<SubscriptionOrderConfirmationV04>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkSubscriptionOrderConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of MultipleExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forSubscriptionOrderConfirmationV03;
 			owner_lazy = () -> SubscriptionOrderConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmationV04 obj) throws Exception {
+			checkSubscriptionOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -290,12 +318,16 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationV04> forRedemptionOrderConfirmationV04 = new MMConstraint<RedemptionOrderConfirmationV04>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkRedemptionOrderConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of MultipleExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forRedemptionOrderConfirmationV03;
 			owner_lazy = () -> RedemptionOrderConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmationV04 obj) throws Exception {
+			checkRedemptionOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -329,12 +361,16 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationV03> forRedemptionBulkOrderConfirmationV03 = new MMConstraint<RedemptionBulkOrderConfirmationV03>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkRedemptionBulkOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of BulkExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forRedemptionBulkOrderConfirmationV04);
 			owner_lazy = () -> RedemptionBulkOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationV03 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -368,12 +404,16 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationV03> forRedemptionOrderConfirmationV03 = new MMConstraint<RedemptionOrderConfirmationV03>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkRedemptionOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of MultipleExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forRedemptionOrderConfirmationV04);
 			owner_lazy = () -> RedemptionOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmationV03 obj) throws Exception {
+			checkRedemptionOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -407,12 +447,16 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationV03> forSubscriptionBulkOrderConfirmationV03 = new MMConstraint<SubscriptionBulkOrderConfirmationV03>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkSubscriptionBulkOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of BulkExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forSubscriptionBulkOrderConfirmationV04);
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationV03 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -446,12 +490,16 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationV03> forSubscriptionOrderConfirmationV03 = new MMConstraint<SubscriptionOrderConfirmationV03>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkSubscriptionOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of MultipleExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderReferenceRule.forSubscriptionOrderConfirmationV04);
 			owner_lazy = () -> SubscriptionOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmationV03 obj) throws Exception {
+			checkSubscriptionOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -477,11 +525,15 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<OrderConfirmationDetails1> forOrderConfirmationDetails1 = new MMConstraint<OrderConfirmationDetails1>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkOrderConfirmationDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If the confirmation message was not solicited by the receiver, then the value of the OrderReference element in every occurrence of BulkExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			owner_lazy = () -> OrderConfirmationDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderConfirmationDetails1 obj) throws Exception {
+			checkOrderConfirmationDetails1(obj);
 		}
 	};
 	/**
@@ -507,11 +559,15 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmation1> forRedemptionOrderConfirmation1 = new MMConstraint<RedemptionOrderConfirmation1>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkRedemptionOrderConfirmation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If the confirmation message was not solicited by the receiver, then the value of the OrderReference element in every occurrence of MultipleExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			owner_lazy = () -> RedemptionOrderConfirmation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmation1 obj) throws Exception {
+			checkRedemptionOrderConfirmation1(obj);
 		}
 	};
 	/**
@@ -537,11 +593,15 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmation1> forSubscriptionBulkOrderConfirmation1 = new MMConstraint<SubscriptionBulkOrderConfirmation1>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkSubscriptionBulkOrderConfirmation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If this message is not solicited by the receiver, then the value of the OrderReference element in every occurrence of BulkExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			owner_lazy = () -> SubscriptionBulkOrderConfirmation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmation1 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmation1(obj);
 		}
 	};
 	/**
@@ -567,11 +627,15 @@ public class ConstraintOrderReferenceRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmation1> forSubscriptionOrderConfirmation1 = new MMConstraint<SubscriptionOrderConfirmation1>() {
 		{
-			validator = ConstraintOrderReferenceRule::checkSubscriptionOrderConfirmation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderReferenceRule";
 			definition = "If the confirmation message was not solicited by the receiver, then the value of the OrderReference element in every occurrence of MultipleExecutionDetails/IndividualExecutionDetails must be UNSOLICITED.";
 			owner_lazy = () -> SubscriptionOrderConfirmation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmation1 obj) throws Exception {
+			checkSubscriptionOrderConfirmation1(obj);
 		}
 	};
 

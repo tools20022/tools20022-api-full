@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.DocumentIdentification9;
 import com.tools20022.repository.msg.TransactionDetails2;
 import com.tools20022.repository.msg.TransactionDetails3;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -195,7 +194,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,12 +205,14 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportCancellationRequestV02.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(RegulatoryTransactionReportCancellationRequestV02 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportCancellationRequestV02 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptgInstn", required = true)
@@ -240,7 +241,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * "Identification of the firm that executed the transaction.\n."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportingInstitution = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, PartyIdentification23Choice> mmReportingInstitution = new MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, PartyIdentification23Choice>() {
 		{
 			xmlTag = "RptgInstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,12 +252,14 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			complexType_lazy = () -> PartyIdentification23Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportCancellationRequestV02.class.getMethod("getReportingInstitution", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification23Choice getValue(RegulatoryTransactionReportCancellationRequestV02 obj) {
+			return obj.getReportingInstitution();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportCancellationRequestV02 obj, PartyIdentification23Choice value) {
+			obj.setReportingInstitution(value);
 		}
 	};
 	@XmlElement(name = "RptgAgt")
@@ -286,7 +289,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, Optional<PartyIdentification24Choice>> mmReportingAgent = new MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, Optional<PartyIdentification24Choice>>() {
 		{
 			xmlTag = "RptgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,12 +300,14 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportCancellationRequestV02.class.getMethod("getReportingAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification24Choice> getValue(RegulatoryTransactionReportCancellationRequestV02 obj) {
+			return obj.getReportingAgent();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportCancellationRequestV02 obj, Optional<PartyIdentification24Choice> value) {
+			obj.setReportingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlByTxDtls", required = true)
@@ -332,7 +337,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationByTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, List<TransactionDetails3>> mmCancellationByTransactionDetails = new MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, List<TransactionDetails3>>() {
 		{
 			xmlTag = "CxlByTxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,12 +347,14 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			complexType_lazy = () -> TransactionDetails3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportCancellationRequestV02.class.getMethod("getCancellationByTransactionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<TransactionDetails3> getValue(RegulatoryTransactionReportCancellationRequestV02 obj) {
+			return obj.getCancellationByTransactionDetails();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportCancellationRequestV02 obj, List<TransactionDetails3> value) {
+			obj.setCancellationByTransactionDetails(value);
 		}
 	};
 	@XmlElement(name = "PrvsRef", required = true)
@@ -377,7 +384,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, DocumentIdentification9> mmPreviousReference = new MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, DocumentIdentification9>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,12 +395,14 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			complexType_lazy = () -> DocumentIdentification9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportCancellationRequestV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification9 getValue(RegulatoryTransactionReportCancellationRequestV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportCancellationRequestV02 obj, DocumentIdentification9 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "CxlByTradRef", required = true)
@@ -423,7 +432,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationByTradeReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, List<TransactionDetails2>> mmCancellationByTradeReference = new MMMessageBuildingBlock<RegulatoryTransactionReportCancellationRequestV02, List<TransactionDetails2>>() {
 		{
 			xmlTag = "CxlByTradRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -433,12 +442,14 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			complexType_lazy = () -> TransactionDetails2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportCancellationRequestV02.class.getMethod("getCancellationByTradeReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<TransactionDetails2> getValue(RegulatoryTransactionReportCancellationRequestV02 obj) {
+			return obj.getCancellationByTradeReference();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportCancellationRequestV02 obj, List<TransactionDetails2> value) {
+			obj.setCancellationByTradeReference(value);
 		}
 	};
 

@@ -116,7 +116,7 @@ public class Party1Choice {
 	 * "Unique and unambiguous way of identifying an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrganisationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Party1Choice, NonFinancialInstitutionIdentification1> mmOrganisationIdentification = new MMMessageAttribute<Party1Choice, NonFinancialInstitutionIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party1Choice.mmObject();
@@ -128,6 +128,16 @@ public class Party1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
+		}
+
+		@Override
+		public NonFinancialInstitutionIdentification1 getValue(Party1Choice obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(Party1Choice obj, NonFinancialInstitutionIdentification1 value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvtId", required = true)
@@ -163,7 +173,7 @@ public class Party1Choice {
 	 * "Unique and unambiguous identification of a person, eg, passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party1Choice, List<PersonIdentification2>> mmPrivateIdentification = new MMMessageAssociationEnd<Party1Choice, List<PersonIdentification2>>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party1Choice.mmObject();
@@ -176,6 +186,16 @@ public class Party1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentification2.mmObject();
+		}
+
+		@Override
+		public List<PersonIdentification2> getValue(Party1Choice obj) {
+			return obj.getPrivateIdentification();
+		}
+
+		@Override
+		public void setValue(Party1Choice obj, List<PersonIdentification2> value) {
+			obj.setPrivateIdentification(value);
 		}
 	};
 

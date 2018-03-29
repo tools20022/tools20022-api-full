@@ -127,7 +127,7 @@ public class MandateTypeInformation2 {
 	 * MandateTypeInformation1.mmServiceLevel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateTypeInformation2, Optional<ServiceLevel8Choice>> mmServiceLevel = new MMMessageAssociationEnd<MandateTypeInformation2, Optional<ServiceLevel8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation2.mmObject();
@@ -141,6 +141,16 @@ public class MandateTypeInformation2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ServiceLevel8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ServiceLevel8Choice> getValue(MandateTypeInformation2 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(MandateTypeInformation2 obj, Optional<ServiceLevel8Choice> value) {
+			obj.setServiceLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LclInstrm")
@@ -184,7 +194,7 @@ public class MandateTypeInformation2 {
 	 * MandateTypeInformation1.mmLocalInstrument}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateTypeInformation2, Optional<LocalInstrument2Choice>> mmLocalInstrument = new MMMessageAssociationEnd<MandateTypeInformation2, Optional<LocalInstrument2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmMandatePaymentType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation2.mmObject();
@@ -198,6 +208,16 @@ public class MandateTypeInformation2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LocalInstrument2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LocalInstrument2Choice> getValue(MandateTypeInformation2 obj) {
+			return obj.getLocalInstrument();
+		}
+
+		@Override
+		public void setValue(MandateTypeInformation2 obj, Optional<LocalInstrument2Choice> value) {
+			obj.setLocalInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtgyPurp")
@@ -236,7 +256,7 @@ public class MandateTypeInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCategoryPurpose = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateTypeInformation2, Optional<CategoryPurpose1Choice>> mmCategoryPurpose = new MMMessageAssociationEnd<MandateTypeInformation2, Optional<CategoryPurpose1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmCategoryPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation2.mmObject();
@@ -249,6 +269,16 @@ public class MandateTypeInformation2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CategoryPurpose1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CategoryPurpose1Choice> getValue(MandateTypeInformation2 obj) {
+			return obj.getCategoryPurpose();
+		}
+
+		@Override
+		public void setValue(MandateTypeInformation2 obj, Optional<CategoryPurpose1Choice> value) {
+			obj.setCategoryPurpose(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Clssfctn")
@@ -285,7 +315,7 @@ public class MandateTypeInformation2 {
 	 * definition} = "Type of direct debit instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClassification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateTypeInformation2, Optional<MandateClassification1Choice>> mmClassification = new MMMessageAssociationEnd<MandateTypeInformation2, Optional<MandateClassification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmClassification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation2.mmObject();
@@ -298,6 +328,16 @@ public class MandateTypeInformation2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MandateClassification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MandateClassification1Choice> getValue(MandateTypeInformation2 obj) {
+			return obj.getClassification();
+		}
+
+		@Override
+		public void setValue(MandateTypeInformation2 obj, Optional<MandateClassification1Choice> value) {
+			obj.setClassification(value.orElse(null));
 		}
 	};
 

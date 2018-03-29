@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PercentageTolerance1;
+import com.tools20022.repository.msg.Quantity2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -151,7 +153,7 @@ public class LineItemDetails5 {
 	 * definition} = "Sequential number assigned to a line item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLineItemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemDetails5, Max35Text> mmLineItemIdentification = new MMMessageAttribute<LineItemDetails5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
@@ -163,6 +165,16 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(LineItemDetails5 obj) {
+			return obj.getLineItemIdentification();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, Max35Text value) {
+			obj.setLineItemIdentification(value);
 		}
 	};
 	@XmlElement(name = "PdctNm")
@@ -200,7 +212,7 @@ public class LineItemDetails5 {
 	 * "Name of the product detailed in the corresponding line item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProductName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemDetails5, Optional<Max70Text>> mmProductName = new MMMessageAttribute<LineItemDetails5, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
@@ -212,6 +224,16 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(LineItemDetails5 obj) {
+			return obj.getProductName();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, Optional<Max70Text> value) {
+			obj.setProductName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdctIdr")
@@ -248,7 +270,7 @@ public class LineItemDetails5 {
 	 * definition} = "Identifies the product of the corresponding line item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProductIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItemDetails5, List<ProductIdentifier2Choice>> mmProductIdentifier = new MMMessageAssociationEnd<LineItemDetails5, List<ProductIdentifier2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmProductIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
@@ -260,6 +282,16 @@ public class LineItemDetails5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProductIdentifier2Choice.mmObject();
+		}
+
+		@Override
+		public List<ProductIdentifier2Choice> getValue(LineItemDetails5 obj) {
+			return obj.getProductIdentifier();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, List<ProductIdentifier2Choice> value) {
+			obj.setProductIdentifier(value);
 		}
 	};
 	@XmlElement(name = "PdctChrtcs")
@@ -296,7 +328,7 @@ public class LineItemDetails5 {
 	 * definition} = "Identifies the characteristic of a product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProductCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItemDetails5, List<ProductCharacteristics1Choice>> mmProductCharacteristics = new MMMessageAssociationEnd<LineItemDetails5, List<ProductCharacteristics1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmCharacteristics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
@@ -308,6 +340,16 @@ public class LineItemDetails5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProductCharacteristics1Choice.mmObject();
+		}
+
+		@Override
+		public List<ProductCharacteristics1Choice> getValue(LineItemDetails5 obj) {
+			return obj.getProductCharacteristics();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, List<ProductCharacteristics1Choice> value) {
+			obj.setProductCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "PdctCtgy")
@@ -344,7 +386,7 @@ public class LineItemDetails5 {
 	 * definition} = "Identifies the category of product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProductCategory = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItemDetails5, List<ProductCategory1Choice>> mmProductCategory = new MMMessageAssociationEnd<LineItemDetails5, List<ProductCategory1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmProductCategory;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
@@ -356,6 +398,16 @@ public class LineItemDetails5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProductCategory1Choice.mmObject();
+		}
+
+		@Override
+		public List<ProductCategory1Choice> getValue(LineItemDetails5 obj) {
+			return obj.getProductCategory();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, List<ProductCategory1Choice> value) {
+			obj.setProductCategory(value);
 		}
 	};
 	@XmlElement(name = "OrdrdQty", required = true)
@@ -391,7 +443,7 @@ public class LineItemDetails5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItemDetails5, Quantity2> mmOrderedQuantity = new MMMessageAssociationEnd<LineItemDetails5, Quantity2>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
@@ -403,7 +455,17 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Quantity2.mmObject();
+			type_lazy = () -> Quantity2.mmObject();
+		}
+
+		@Override
+		public Quantity2 getValue(LineItemDetails5 obj) {
+			return obj.getOrderedQuantity();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, Quantity2 value) {
+			obj.setOrderedQuantity(value);
 		}
 	};
 	@XmlElement(name = "AccptdQty", required = true)
@@ -433,7 +495,7 @@ public class LineItemDetails5 {
 	 * definition} = "Quantity accepted by data set submission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcceptedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItemDetails5, Quantity2> mmAcceptedQuantity = new MMMessageAssociationEnd<LineItemDetails5, Quantity2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
 			isDerived = false;
@@ -444,7 +506,17 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Quantity2.mmObject();
+			type_lazy = () -> Quantity2.mmObject();
+		}
+
+		@Override
+		public Quantity2 getValue(LineItemDetails5 obj) {
+			return obj.getAcceptedQuantity();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, Quantity2 value) {
+			obj.setAcceptedQuantity(value);
 		}
 	};
 	@XmlElement(name = "OutsdngQty", required = true)
@@ -475,7 +547,7 @@ public class LineItemDetails5 {
 	 * "Difference between the ordered quantity and the accepted one."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOutstandingQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItemDetails5, Quantity2> mmOutstandingQuantity = new MMMessageAssociationEnd<LineItemDetails5, Quantity2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
 			isDerived = false;
@@ -486,7 +558,17 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Quantity2.mmObject();
+			type_lazy = () -> Quantity2.mmObject();
+		}
+
+		@Override
+		public Quantity2 getValue(LineItemDetails5 obj) {
+			return obj.getOutstandingQuantity();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, Quantity2 value) {
+			obj.setOutstandingQuantity(value);
 		}
 	};
 	@XmlElement(name = "PdgQty", required = true)
@@ -518,7 +600,7 @@ public class LineItemDetails5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItemDetails5, Quantity2> mmPendingQuantity = new MMMessageAssociationEnd<LineItemDetails5, Quantity2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
 			isDerived = false;
@@ -529,7 +611,17 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Quantity2.mmObject();
+			type_lazy = () -> Quantity2.mmObject();
+		}
+
+		@Override
+		public Quantity2 getValue(LineItemDetails5 obj) {
+			return obj.getPendingQuantity();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, Quantity2 value) {
+			obj.setPendingQuantity(value);
 		}
 	};
 	@XmlElement(name = "QtyTlrnce")
@@ -565,7 +657,7 @@ public class LineItemDetails5 {
 	 * definition} = "Variance allowed on the quantity of goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityTolerance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItemDetails5, Optional<PercentageTolerance1>> mmQuantityTolerance = new MMMessageAssociationEnd<LineItemDetails5, Optional<PercentageTolerance1>>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmQuantityTolerance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
@@ -577,7 +669,17 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PercentageTolerance1.mmObject();
+			type_lazy = () -> PercentageTolerance1.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageTolerance1> getValue(LineItemDetails5 obj) {
+			return obj.getQuantityTolerance();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, Optional<PercentageTolerance1> value) {
+			obj.setQuantityTolerance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrdAmt", required = true)
@@ -617,7 +719,7 @@ public class LineItemDetails5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemDetails5, CurrencyAndAmount> mmOrderedAmount = new MMMessageAttribute<LineItemDetails5, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmTotalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
@@ -629,6 +731,16 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItemDetails5 obj) {
+			return obj.getOrderedAmount();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, CurrencyAndAmount value) {
+			obj.setOrderedAmount(value);
 		}
 	};
 	@XmlElement(name = "AccptdAmt", required = true)
@@ -661,7 +773,7 @@ public class LineItemDetails5 {
 	 * definition} = "Price multiplied by the accepted quantity for a line."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemDetails5, CurrencyAndAmount> mmAcceptedAmount = new MMMessageAttribute<LineItemDetails5, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
 			isDerived = false;
@@ -672,6 +784,16 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItemDetails5 obj) {
+			return obj.getAcceptedAmount();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, CurrencyAndAmount value) {
+			obj.setAcceptedAmount(value);
 		}
 	};
 	@XmlElement(name = "OutsdngAmt", required = true)
@@ -704,7 +826,7 @@ public class LineItemDetails5 {
 	 * definition} = "Price multiplied by the outstanding quantity for a line."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOutstandingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemDetails5, CurrencyAndAmount> mmOutstandingAmount = new MMMessageAttribute<LineItemDetails5, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
 			isDerived = false;
@@ -715,6 +837,16 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItemDetails5 obj) {
+			return obj.getOutstandingAmount();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, CurrencyAndAmount value) {
+			obj.setOutstandingAmount(value);
 		}
 	};
 	@XmlElement(name = "PdgAmt", required = true)
@@ -747,7 +879,7 @@ public class LineItemDetails5 {
 	 * definition} = "Price multiplied by the pending quantity for a line."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemDetails5, CurrencyAndAmount> mmPendingAmount = new MMMessageAttribute<LineItemDetails5, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
 			isDerived = false;
@@ -758,6 +890,16 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItemDetails5 obj) {
+			return obj.getPendingAmount();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, CurrencyAndAmount value) {
+			obj.setPendingAmount(value);
 		}
 	};
 	@XmlElement(name = "PricTlrnce")
@@ -793,7 +935,7 @@ public class LineItemDetails5 {
 	 * definition} = "Variance on price for the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceTolerance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItemDetails5, Optional<PercentageTolerance1>> mmPriceTolerance = new MMMessageAssociationEnd<LineItemDetails5, Optional<PercentageTolerance1>>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmPriceTolerance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemDetails5.mmObject();
@@ -805,7 +947,17 @@ public class LineItemDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PercentageTolerance1.mmObject();
+			type_lazy = () -> PercentageTolerance1.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageTolerance1> getValue(LineItemDetails5 obj) {
+			return obj.getPriceTolerance();
+		}
+
+		@Override
+		public void setValue(LineItemDetails5 obj, Optional<PercentageTolerance1> value) {
+			obj.setPriceTolerance(value.orElse(null));
 		}
 	};
 
@@ -877,7 +1029,7 @@ public class LineItemDetails5 {
 		return orderedQuantity;
 	}
 
-	public LineItemDetails5 setOrderedQuantity(com.tools20022.repository.msg.Quantity2 orderedQuantity) {
+	public LineItemDetails5 setOrderedQuantity(Quantity2 orderedQuantity) {
 		this.orderedQuantity = Objects.requireNonNull(orderedQuantity);
 		return this;
 	}
@@ -886,7 +1038,7 @@ public class LineItemDetails5 {
 		return acceptedQuantity;
 	}
 
-	public LineItemDetails5 setAcceptedQuantity(com.tools20022.repository.msg.Quantity2 acceptedQuantity) {
+	public LineItemDetails5 setAcceptedQuantity(Quantity2 acceptedQuantity) {
 		this.acceptedQuantity = Objects.requireNonNull(acceptedQuantity);
 		return this;
 	}
@@ -895,7 +1047,7 @@ public class LineItemDetails5 {
 		return outstandingQuantity;
 	}
 
-	public LineItemDetails5 setOutstandingQuantity(com.tools20022.repository.msg.Quantity2 outstandingQuantity) {
+	public LineItemDetails5 setOutstandingQuantity(Quantity2 outstandingQuantity) {
 		this.outstandingQuantity = Objects.requireNonNull(outstandingQuantity);
 		return this;
 	}
@@ -904,7 +1056,7 @@ public class LineItemDetails5 {
 		return pendingQuantity;
 	}
 
-	public LineItemDetails5 setPendingQuantity(com.tools20022.repository.msg.Quantity2 pendingQuantity) {
+	public LineItemDetails5 setPendingQuantity(Quantity2 pendingQuantity) {
 		this.pendingQuantity = Objects.requireNonNull(pendingQuantity);
 		return this;
 	}
@@ -913,7 +1065,7 @@ public class LineItemDetails5 {
 		return quantityTolerance == null ? Optional.empty() : Optional.of(quantityTolerance);
 	}
 
-	public LineItemDetails5 setQuantityTolerance(com.tools20022.repository.msg.PercentageTolerance1 quantityTolerance) {
+	public LineItemDetails5 setQuantityTolerance(PercentageTolerance1 quantityTolerance) {
 		this.quantityTolerance = quantityTolerance;
 		return this;
 	}
@@ -958,7 +1110,7 @@ public class LineItemDetails5 {
 		return priceTolerance == null ? Optional.empty() : Optional.of(priceTolerance);
 	}
 
-	public LineItemDetails5 setPriceTolerance(com.tools20022.repository.msg.PercentageTolerance1 priceTolerance) {
+	public LineItemDetails5 setPriceTolerance(PercentageTolerance1 priceTolerance) {
 		this.priceTolerance = priceTolerance;
 		return this;
 	}

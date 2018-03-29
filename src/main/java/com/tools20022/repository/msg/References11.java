@@ -24,6 +24,7 @@ import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -163,7 +164,7 @@ public class References11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References11, Optional<AdditionalReference2>> mmPoolReference = new MMMessageAttribute<References11, Optional<AdditionalReference2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References11.mmObject();
 			isDerived = false;
@@ -174,7 +175,17 @@ public class References11 {
 			nextVersions_lazy = () -> Arrays.asList(References15.mmPoolReference);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
+			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference2> getValue(References11 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(References11 obj, Optional<AdditionalReference2> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -215,7 +226,7 @@ public class References11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References11, Optional<AdditionalReference2>> mmPreviousReference = new MMMessageAttribute<References11, Optional<AdditionalReference2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References11.mmObject();
 			isDerived = false;
@@ -226,7 +237,17 @@ public class References11 {
 			nextVersions_lazy = () -> Arrays.asList(References15.mmPreviousReference);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
+			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference2> getValue(References11 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(References11 obj, Optional<AdditionalReference2> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -267,7 +288,7 @@ public class References11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References11, Optional<AdditionalReference2>> mmRelatedReference = new MMMessageAttribute<References11, Optional<AdditionalReference2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References11.mmObject();
 			isDerived = false;
@@ -278,7 +299,17 @@ public class References11 {
 			nextVersions_lazy = () -> Arrays.asList(References15.mmRelatedReference);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
+			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference2> getValue(References11 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(References11 obj, Optional<AdditionalReference2> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyRef")
@@ -317,7 +348,7 @@ public class References11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References11, Optional<AdditionalReference2>> mmCounterpartyReference = new MMMessageAttribute<References11, Optional<AdditionalReference2>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.References11.mmObject();
@@ -328,7 +359,17 @@ public class References11 {
 			definition = "Unambiguous identification of the transfer allocated by the counterparty.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
+			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference2> getValue(References11 obj) {
+			return obj.getCounterpartyReference();
+		}
+
+		@Override
+		public void setValue(References11 obj, Optional<AdditionalReference2> value) {
+			obj.setCounterpartyReference(value.orElse(null));
 		}
 	};
 
@@ -356,7 +397,7 @@ public class References11 {
 		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public References11 setPoolReference(com.tools20022.repository.msg.AdditionalReference2 poolReference) {
+	public References11 setPoolReference(AdditionalReference2 poolReference) {
 		this.poolReference = poolReference;
 		return this;
 	}
@@ -365,7 +406,7 @@ public class References11 {
 		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public References11 setPreviousReference(com.tools20022.repository.msg.AdditionalReference2 previousReference) {
+	public References11 setPreviousReference(AdditionalReference2 previousReference) {
 		this.previousReference = previousReference;
 		return this;
 	}
@@ -374,7 +415,7 @@ public class References11 {
 		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public References11 setRelatedReference(com.tools20022.repository.msg.AdditionalReference2 relatedReference) {
+	public References11 setRelatedReference(AdditionalReference2 relatedReference) {
 		this.relatedReference = relatedReference;
 		return this;
 	}
@@ -383,7 +424,7 @@ public class References11 {
 		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public References11 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
+	public References11 setCounterpartyReference(AdditionalReference2 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
 		return this;
 	}

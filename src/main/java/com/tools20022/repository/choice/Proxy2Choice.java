@@ -114,7 +114,7 @@ public class Proxy2Choice {
 	 * Proxy1Choice.mmProxy}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Proxy2Choice, ProxyAppointmentInformation3> mmProxy = new MMMessageAssociationEnd<Proxy2Choice, ProxyAppointmentInformation3>() {
 		{
 			businessComponentTrace_lazy = () -> ProxyAppointmentCondition.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Proxy2Choice.mmObject();
@@ -128,6 +128,16 @@ public class Proxy2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProxyAppointmentInformation3.mmObject();
+		}
+
+		@Override
+		public ProxyAppointmentInformation3 getValue(Proxy2Choice obj) {
+			return obj.getProxy();
+		}
+
+		@Override
+		public void setValue(Proxy2Choice obj, ProxyAppointmentInformation3 value) {
+			obj.setProxy(value);
 		}
 	};
 	@XmlElement(name = "PrxyNotAllwd", required = true)
@@ -164,7 +174,7 @@ public class Proxy2Choice {
 	 * Proxy1Choice.mmProxyNotAllowed}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProxyNotAllowed = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Proxy2Choice, ProxyNotAllowedCode> mmProxyNotAllowed = new MMMessageAttribute<Proxy2Choice, ProxyNotAllowedCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Proxy2Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class Proxy2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProxyNotAllowedCode.mmObject();
+		}
+
+		@Override
+		public ProxyNotAllowedCode getValue(Proxy2Choice obj) {
+			return obj.getProxyNotAllowed();
+		}
+
+		@Override
+		public void setValue(Proxy2Choice obj, ProxyNotAllowedCode value) {
+			obj.setProxyNotAllowed(value);
 		}
 	};
 

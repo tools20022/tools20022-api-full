@@ -20,10 +20,10 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
+import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -718,7 +718,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * "Specifies reasons for cancellation of a corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCorporateActionCancellationReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatusReason, CorporateActionCancellationReasonCode> mmCorporateActionCancellationReason = new MMBusinessAttribute<CorporateActionStatusReason, CorporateActionCancellationReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionCancellation3.mmCancellationReasonCode, CorporateActionCancellation3.mmCancellationReason, CorporateActionCancellation4.mmCancellationReasonCode,
 					CorporateActionCancellation4.mmCancellationReason, CorporateActionCancellation2SD1.mmLocalLanguageCancellationReason);
@@ -732,12 +732,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			simpleType_lazy = () -> CorporateActionCancellationReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatusReason.class.getMethod("getCorporateActionCancellationReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionCancellationReasonCode getValue(CorporateActionStatusReason obj) {
+			return obj.getCorporateActionCancellationReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatusReason obj, CorporateActionCancellationReasonCode value) {
+			obj.setCorporateActionCancellationReason(value);
 		}
 	};
 	protected CorporateActionStatus corporateActionStatus;
@@ -775,7 +777,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * definition} = "Corporate actions status for which a reason is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionStatusReason, Optional<CorporateActionStatus>> mmCorporateActionStatus = new MMBusinessAssociationEnd<CorporateActionStatusReason, Optional<CorporateActionStatus>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
@@ -787,6 +789,16 @@ public class CorporateActionStatusReason extends StatusReason {
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmCorporateActionStatusReason;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionStatus> getValue(CorporateActionStatusReason obj) {
+			return obj.getCorporateActionStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatusReason obj, Optional<CorporateActionStatus> value) {
+			obj.setCorporateActionStatus(value.orElse(null));
 		}
 	};
 	protected AcknowledgementReasonCode acceptedReason;
@@ -960,7 +972,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAcceptedReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatusReason, AcknowledgementReasonCode> mmAcceptedReason = new MMBusinessAttribute<CorporateActionStatusReason, AcknowledgementReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptedReason1Choice.mmCode, AcceptedReason1Choice.mmProprietary, AcceptedStatusReason1.mmReasonCode, AcceptedStatus1Choice.mmReason,
 					InstructionCancellationRequestStatus1Choice.mmAccepted, AcceptedReason2Choice.mmCode, AcceptedReason2Choice.mmProprietary, AcceptedStatusReason2.mmReasonCode, AcceptedStatus2Choice.mmReason,
@@ -985,12 +997,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			simpleType_lazy = () -> AcknowledgementReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatusReason.class.getMethod("getAcceptedReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcknowledgementReasonCode getValue(CorporateActionStatusReason obj) {
+			return obj.getAcceptedReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatusReason obj, AcknowledgementReasonCode value) {
+			obj.setAcceptedReason(value);
 		}
 	};
 	protected CorporateActionReversalReasonCode reversalReason;
@@ -1049,7 +1063,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * definition} = "Reason for the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmReversalReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatusReason, CorporateActionReversalReasonCode> mmReversalReason = new MMBusinessAttribute<CorporateActionStatusReason, CorporateActionReversalReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionReversalReason1Choice.mmCode, CorporateActionReversalReason1Choice.mmProprietary, CorporateActionReversalReason2Choice.mmCode,
 					CorporateActionReversalReason2Choice.mmProprietary, CorporateActionReversalReason3Choice.mmCode, CorporateActionReversalReason3Choice.mmProprietary, CorporateActionReversalReason4Choice.mmCode,
@@ -1064,12 +1078,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			simpleType_lazy = () -> CorporateActionReversalReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatusReason.class.getMethod("getReversalReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionReversalReasonCode getValue(CorporateActionStatusReason obj) {
+			return obj.getReversalReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatusReason obj, CorporateActionReversalReasonCode value) {
+			obj.setReversalReason(value);
 		}
 	};
 	protected FailedSettlementReasonCode movementFailureReason;
@@ -1112,7 +1128,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * definition} = "The reason for the failure."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMovementFailureReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatusReason, FailedSettlementReasonCode> mmMovementFailureReason = new MMBusinessAttribute<CorporateActionStatusReason, FailedSettlementReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FailedSettlementReason1FormatChoice.mmCode, FailedSettlementReason1FormatChoice.mmProprietary, FailedMovement1.mmReason);
 			isDerived = false;
@@ -1125,12 +1141,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			simpleType_lazy = () -> FailedSettlementReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatusReason.class.getMethod("getMovementFailureReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FailedSettlementReasonCode getValue(CorporateActionStatusReason obj) {
+			return obj.getMovementFailureReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatusReason obj, FailedSettlementReasonCode value) {
+			obj.setMovementFailureReason(value);
 		}
 	};
 	protected RejectionReasonCode movementRejectionReason;
@@ -1160,7 +1178,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMovementRejectionReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CorporateActionStatusReason, RejectionReasonCode> mmMovementRejectionReason = new MMBusinessAttribute<CorporateActionStatusReason, RejectionReasonCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
@@ -1172,12 +1190,14 @@ public class CorporateActionStatusReason extends StatusReason {
 			simpleType_lazy = () -> RejectionReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionStatusReason.class.getMethod("getMovementRejectionReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RejectionReasonCode getValue(CorporateActionStatusReason obj) {
+			return obj.getMovementRejectionReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionStatusReason obj, RejectionReasonCode value) {
+			obj.setMovementRejectionReason(value);
 		}
 	};
 

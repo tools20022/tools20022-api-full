@@ -52,11 +52,15 @@ public class ConstraintRequiredTransportDataSetRule {
 	 */
 	public static final MMConstraint<RequiredSubmission1> forRequiredSubmission1 = new MMConstraint<RequiredSubmission1>() {
 		{
-			validator = ConstraintRequiredTransportDataSetRule::checkRequiredSubmission1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredTransportDataSetRule";
 			definition = "If RequiredCommercialDataSet is FALSE, then RequiredTransportDataSet must be FALSE. If RequiredCommercialDataSet is TRUE, then RequiredTransportDataSet may be FALSE or TRUE.";
 			owner_lazy = () -> RequiredSubmission1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequiredSubmission1 obj) throws Exception {
+			checkRequiredSubmission1(obj);
 		}
 	};
 

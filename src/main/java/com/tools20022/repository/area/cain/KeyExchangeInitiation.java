@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcquirerKeyExchangeInitiation1;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header17;
 import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +112,7 @@ public class KeyExchangeInitiation {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<KeyExchangeInitiation, Header17> mmHeader = new MMMessageBuildingBlock<KeyExchangeInitiation, Header17>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,12 +123,14 @@ public class KeyExchangeInitiation {
 			complexType_lazy = () -> Header17.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return KeyExchangeInitiation.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header17 getValue(KeyExchangeInitiation obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(KeyExchangeInitiation obj, Header17 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "KeyXchgInitn", required = true)
@@ -157,7 +158,7 @@ public class KeyExchangeInitiation {
 	 * definition} = "Information related to the key exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmKeyExchangeInitiation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<KeyExchangeInitiation, AcquirerKeyExchangeInitiation1> mmKeyExchangeInitiation = new MMMessageBuildingBlock<KeyExchangeInitiation, AcquirerKeyExchangeInitiation1>() {
 		{
 			xmlTag = "KeyXchgInitn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,12 +169,14 @@ public class KeyExchangeInitiation {
 			complexType_lazy = () -> AcquirerKeyExchangeInitiation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return KeyExchangeInitiation.class.getMethod("getKeyExchangeInitiation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcquirerKeyExchangeInitiation1 getValue(KeyExchangeInitiation obj) {
+			return obj.getKeyExchangeInitiation();
+		}
+
+		@Override
+		public void setValue(KeyExchangeInitiation obj, AcquirerKeyExchangeInitiation1 value) {
+			obj.setKeyExchangeInitiation(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -202,7 +205,7 @@ public class KeyExchangeInitiation {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<KeyExchangeInitiation, ContentInformationType12> mmSecurityTrailer = new MMMessageBuildingBlock<KeyExchangeInitiation, ContentInformationType12>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,12 +216,14 @@ public class KeyExchangeInitiation {
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return KeyExchangeInitiation.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType12 getValue(KeyExchangeInitiation obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(KeyExchangeInitiation obj, ContentInformationType12 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

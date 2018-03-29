@@ -55,11 +55,15 @@ public class ConstraintStatusCancelledGuideline {
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV02> forOrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
 		{
-			validator = ConstraintStatusCancelledGuideline::checkOrderInstructionStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusCancelledGuideline";
 			definition = "Status 'cancelled' must be used to report a cancellation that is not originated by the instructing party.\n\nIf a cancellation has been originated by the instructing party then the message OrderCancellationStatusReport must be used to report the status of this cancellation request.";
 			owner_lazy = () -> OrderInstructionStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderInstructionStatusReportV02 obj) throws Exception {
+			checkOrderInstructionStatusReportV02(obj);
 		}
 	};
 

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +116,7 @@ public class SecuritiesAccountReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountReport1, SecuritiesAccount13> mmSecuritiesAccountIdentification = new MMMessageAssociationEnd<SecuritiesAccountReport1, SecuritiesAccount13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReport1.mmObject();
 			isDerived = false;
@@ -127,7 +128,17 @@ public class SecuritiesAccountReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			type_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount13 getValue(SecuritiesAccountReport1 obj) {
+			return obj.getSecuritiesAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReport1 obj, SecuritiesAccount13 value) {
+			obj.setSecuritiesAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesAcctOrErr", required = true)
@@ -169,7 +180,7 @@ public class SecuritiesAccountReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccountOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountReport1, SecuritiesAccountOrBusinessError1Choice> mmSecuritiesAccountOrError = new MMMessageAssociationEnd<SecuritiesAccountReport1, SecuritiesAccountOrBusinessError1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReport1.mmObject();
 			isDerived = false;
@@ -182,6 +193,16 @@ public class SecuritiesAccountReport1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccountOrBusinessError1Choice.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccountOrBusinessError1Choice getValue(SecuritiesAccountReport1 obj) {
+			return obj.getSecuritiesAccountOrError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReport1 obj, SecuritiesAccountOrBusinessError1Choice value) {
+			obj.setSecuritiesAccountOrError(value);
 		}
 	};
 
@@ -203,7 +224,7 @@ public class SecuritiesAccountReport1 {
 		return securitiesAccountIdentification;
 	}
 
-	public SecuritiesAccountReport1 setSecuritiesAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccountIdentification) {
+	public SecuritiesAccountReport1 setSecuritiesAccountIdentification(SecuritiesAccount13 securitiesAccountIdentification) {
 		this.securitiesAccountIdentification = Objects.requireNonNull(securitiesAccountIdentification);
 		return this;
 	}

@@ -119,7 +119,7 @@ public class PaymentPeriod2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentPeriod2, PaymentTime2Code> mmCode = new MMMessageAttribute<PaymentPeriod2, PaymentTime2Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentTerms.mmPaymentTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentPeriod2.mmObject();
@@ -132,6 +132,16 @@ public class PaymentPeriod2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentTime2Code.mmObject();
+		}
+
+		@Override
+		public PaymentTime2Code getValue(PaymentPeriod2 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PaymentPeriod2 obj, PaymentTime2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "NbOfDays")
@@ -175,7 +185,7 @@ public class PaymentPeriod2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentPeriod2, Optional<Number>> mmNumberOfDays = new MMMessageAttribute<PaymentPeriod2, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentPeriod2.mmObject();
@@ -188,6 +198,16 @@ public class PaymentPeriod2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(PaymentPeriod2 obj) {
+			return obj.getNumberOfDays();
+		}
+
+		@Override
+		public void setValue(PaymentPeriod2 obj, Optional<Number> value) {
+			obj.setNumberOfDays(value.orElse(null));
 		}
 	};
 

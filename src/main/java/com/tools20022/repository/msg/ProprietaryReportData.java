@@ -95,7 +95,7 @@ public class ProprietaryReportData {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryReportData, Max35Text> mmData = new MMMessageAttribute<ProprietaryReportData, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryReportData.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class ProprietaryReportData {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ProprietaryReportData obj) {
+			return obj.getData();
+		}
+
+		@Override
+		public void setValue(ProprietaryReportData obj, Max35Text value) {
+			obj.setData(value);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Exact3NumericText;
 import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionPayout1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,7 +115,7 @@ public class CorporateActionOption99 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption99, Exact3NumericText> mmOptionNumber = new MMMessageAttribute<CorporateActionOption99, Exact3NumericText>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption99.mmObject();
@@ -128,9 +129,19 @@ public class CorporateActionOption99 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
+
+		@Override
+		public Exact3NumericText getValue(CorporateActionOption99 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption99 obj, Exact3NumericText value) {
+			obj.setOptionNumber(value);
+		}
 	};
 	@XmlElement(name = "PyoutDtls")
-	protected List<com.tools20022.repository.msg.CorporateActionPayout1> payoutDetails;
+	protected List<CorporateActionPayout1> payoutDetails;
 	/**
 	 * 
 	 <p>
@@ -161,7 +172,7 @@ public class CorporateActionOption99 {
 	 * "Additional information about the securities or cash payout."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayoutDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption99, List<CorporateActionPayout1>> mmPayoutDetails = new MMMessageAssociationEnd<CorporateActionOption99, List<CorporateActionPayout1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption99.mmObject();
 			isDerived = false;
@@ -172,7 +183,17 @@ public class CorporateActionOption99 {
 			definition = "Additional information about the securities or cash payout.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
+			type_lazy = () -> CorporateActionPayout1.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionPayout1> getValue(CorporateActionOption99 obj) {
+			return obj.getPayoutDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption99 obj, List<CorporateActionPayout1> value) {
+			obj.setPayoutDetails(value);
 		}
 	};
 
@@ -203,7 +224,7 @@ public class CorporateActionOption99 {
 		return payoutDetails == null ? payoutDetails = new ArrayList<>() : payoutDetails;
 	}
 
-	public CorporateActionOption99 setPayoutDetails(List<com.tools20022.repository.msg.CorporateActionPayout1> payoutDetails) {
+	public CorporateActionOption99 setPayoutDetails(List<CorporateActionPayout1> payoutDetails) {
 		this.payoutDetails = Objects.requireNonNull(payoutDetails);
 		return this;
 	}

@@ -123,7 +123,7 @@ public class NonFinancialInstitutionSector2 {
 	 * NonFinancialInstitutionSector1.mmSector}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonFinancialInstitutionSector2, List<NACEDomainIdentifier>> mmSector = new MMMessageAttribute<NonFinancialInstitutionSector2, List<NACEDomainIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmSector;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionSector2.mmObject();
@@ -135,6 +135,16 @@ public class NonFinancialInstitutionSector2 {
 			previousVersion_lazy = () -> NonFinancialInstitutionSector1.mmSector;
 			minOccurs = 0;
 			simpleType_lazy = () -> NACEDomainIdentifier.mmObject();
+		}
+
+		@Override
+		public List<NACEDomainIdentifier> getValue(NonFinancialInstitutionSector2 obj) {
+			return obj.getSector();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionSector2 obj, List<NACEDomainIdentifier> value) {
+			obj.setSector(value);
 		}
 	};
 	@XmlElement(name = "ClrThrshld")
@@ -174,7 +184,7 @@ public class NonFinancialInstitutionSector2 {
 	 * NonFinancialInstitutionSector1.mmClearingThreshold}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingThreshold = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonFinancialInstitutionSector2, Optional<TrueFalseIndicator>> mmClearingThreshold = new MMMessageAttribute<NonFinancialInstitutionSector2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionSector2.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class NonFinancialInstitutionSector2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(NonFinancialInstitutionSector2 obj) {
+			return obj.getClearingThreshold();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionSector2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setClearingThreshold(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrctlyLkdActvty")
@@ -225,7 +245,7 @@ public class NonFinancialInstitutionSector2 {
 	 * NonFinancialInstitutionSector1.mmDirectlyLinkedActivity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDirectlyLinkedActivity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonFinancialInstitutionSector2, Optional<TrueFalseIndicator>> mmDirectlyLinkedActivity = new MMMessageAttribute<NonFinancialInstitutionSector2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionSector2.mmObject();
 			isDerived = false;
@@ -237,6 +257,16 @@ public class NonFinancialInstitutionSector2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(NonFinancialInstitutionSector2 obj) {
+			return obj.getDirectlyLinkedActivity();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionSector2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setDirectlyLinkedActivity(value.orElse(null));
 		}
 	};
 

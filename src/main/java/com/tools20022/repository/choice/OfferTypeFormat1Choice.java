@@ -119,7 +119,7 @@ public class OfferTypeFormat1Choice {
 	 * "Standard code to specify the conditions that apply to the offer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OfferTypeFormat1Choice, OfferType1Code> mmCode = new MMMessageAttribute<OfferTypeFormat1Choice, OfferType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOfferType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OfferTypeFormat1Choice.mmObject();
@@ -131,6 +131,16 @@ public class OfferTypeFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OfferType1Code.mmObject();
+		}
+
+		@Override
+		public OfferType1Code getValue(OfferTypeFormat1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OfferTypeFormat1Choice obj, OfferType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -168,7 +178,7 @@ public class OfferTypeFormat1Choice {
 	 * "Proprietary identification of the conditions that apply to the offer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OfferTypeFormat1Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<OfferTypeFormat1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOfferType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OfferTypeFormat1Choice.mmObject();
@@ -181,6 +191,16 @@ public class OfferTypeFormat1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(OfferTypeFormat1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OfferTypeFormat1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

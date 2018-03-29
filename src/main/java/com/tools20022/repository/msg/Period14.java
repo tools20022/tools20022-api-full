@@ -57,7 +57,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Period14"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -112,7 +112,7 @@ public class Period14 {
 	 * Period1.mmStartDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Period14, DateFormat56Choice> mmStartDate = new MMMessageAttribute<Period14, DateFormat56Choice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Period14.mmObject();
@@ -125,6 +125,16 @@ public class Period14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat56Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat56Choice getValue(Period14 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(Period14 obj, DateFormat56Choice value) {
+			obj.setStartDate(value);
 		}
 	};
 	@XmlElement(name = "EndDt", required = true)
@@ -166,7 +176,7 @@ public class Period14 {
 	 * Period1.mmEndDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Period14, DateFormat56Choice> mmEndDate = new MMMessageAttribute<Period14, DateFormat56Choice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Period14.mmObject();
@@ -180,6 +190,16 @@ public class Period14 {
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat56Choice.mmObject();
 		}
+
+		@Override
+		public DateFormat56Choice getValue(Period14 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(Period14 obj, DateFormat56Choice value) {
+			obj.setEndDate(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -188,7 +208,7 @@ public class Period14 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Period14.mmStartDate, com.tools20022.repository.msg.Period14.mmEndDate);
 				trace_lazy = () -> DateTimePeriod.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period14";
 				definition = "Time span defined by a start date and time, and an end date and time.";
 				previousVersion_lazy = () -> Period1.mmObject();

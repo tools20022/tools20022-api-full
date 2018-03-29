@@ -108,7 +108,7 @@ public class RejectionReason21FormatChoice {
 	 * "Provides the interest rejection reason using an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason21FormatChoice, InterestRejectionReason1Code> mmCode = new MMMessageAttribute<RejectionReason21FormatChoice, InterestRejectionReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmInterestRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason21FormatChoice.mmObject();
@@ -120,6 +120,16 @@ public class RejectionReason21FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestRejectionReason1Code.mmObject();
+		}
+
+		@Override
+		public InterestRejectionReason1Code getValue(RejectionReason21FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionReason21FormatChoice obj, InterestRejectionReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class RejectionReason21FormatChoice {
 	 * "Provides the interest rejection reason using a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason21FormatChoice, GenericIdentification30> mmProprietary = new MMMessageAttribute<RejectionReason21FormatChoice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmInterestRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason21FormatChoice.mmObject();
@@ -170,6 +180,16 @@ public class RejectionReason21FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(RejectionReason21FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionReason21FormatChoice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

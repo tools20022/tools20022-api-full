@@ -61,12 +61,16 @@ public class ConstraintOtherDocumentation1Guideline {
 	 */
 	public static final MMConstraint<PowerOfAttorneyRequirements2> forPowerOfAttorneyRequirements2 = new MMConstraint<PowerOfAttorneyRequirements2>() {
 		{
-			validator = ConstraintOtherDocumentation1Guideline::checkPowerOfAttorneyRequirements2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentation1Guideline";
 			definition = "If PowerOfAttorney specific deadlines are announced, it is recommended that OtherDocumentation be used.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherDocumentation1Guideline.forPowerOfAttorneyRequirements3);
 			owner_lazy = () -> PowerOfAttorneyRequirements2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PowerOfAttorneyRequirements2 obj) throws Exception {
+			checkPowerOfAttorneyRequirements2(obj);
 		}
 	};
 	/**
@@ -97,12 +101,16 @@ public class ConstraintOtherDocumentation1Guideline {
 	 */
 	public static final MMConstraint<PowerOfAttorneyRequirements3> forPowerOfAttorneyRequirements3 = new MMConstraint<PowerOfAttorneyRequirements3>() {
 		{
-			validator = ConstraintOtherDocumentation1Guideline::checkPowerOfAttorneyRequirements3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentation1Guideline";
 			definition = "If PowerOfAttorney specific deadlines are announced, it is recommended that OtherDocumentation be used.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherDocumentation1Guideline.forPowerOfAttorneyRequirements2;
 			owner_lazy = () -> PowerOfAttorneyRequirements3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PowerOfAttorneyRequirements3 obj) throws Exception {
+			checkPowerOfAttorneyRequirements3(obj);
 		}
 	};
 

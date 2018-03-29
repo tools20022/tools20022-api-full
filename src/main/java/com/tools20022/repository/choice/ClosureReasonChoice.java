@@ -102,7 +102,7 @@ public class ClosureReasonChoice {
 	 * definition} = "Reason the system is closed/not operating."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosureReasonChoice, SystemClosureReason1Code> mmCode = new MMMessageAttribute<ClosureReasonChoice, SystemClosureReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosureReasonChoice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class ClosureReasonChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemClosureReason1Code.mmObject();
+		}
+
+		@Override
+		public SystemClosureReason1Code getValue(ClosureReasonChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ClosureReasonChoice obj, SystemClosureReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "PrtryRsn", required = true)
@@ -144,7 +154,7 @@ public class ClosureReasonChoice {
 	 * definition} = "Type of closure reason is a bilaterally agreed code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosureReasonChoice, Max35Text> mmProprietaryReason = new MMMessageAttribute<ClosureReasonChoice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosureReasonChoice.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class ClosureReasonChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ClosureReasonChoice obj) {
+			return obj.getProprietaryReason();
+		}
+
+		@Override
+		public void setValue(ClosureReasonChoice obj, Max35Text value) {
+			obj.setProprietaryReason(value);
 		}
 	};
 

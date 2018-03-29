@@ -113,7 +113,7 @@ public class Series1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeriesDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Series1, Optional<DateFormat42Choice>> mmSeriesDate = new MMMessageAssociationEnd<Series1, Optional<DateFormat42Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Series1.mmObject();
@@ -126,6 +126,16 @@ public class Series1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat42Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat42Choice> getValue(Series1 obj) {
+			return obj.getSeriesDate();
+		}
+
+		@Override
+		public void setValue(Series1 obj, Optional<DateFormat42Choice> value) {
+			obj.setSeriesDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SrsNm")
@@ -163,7 +173,7 @@ public class Series1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSeriesName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Series1, Optional<Max35Text>> mmSeriesName = new MMMessageAttribute<Series1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Series1.mmObject();
@@ -175,6 +185,16 @@ public class Series1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Series1 obj) {
+			return obj.getSeriesName();
+		}
+
+		@Override
+		public void setValue(Series1 obj, Optional<Max35Text> value) {
+			obj.setSeriesName(value.orElse(null));
 		}
 	};
 

@@ -130,7 +130,7 @@ public class PaymentStatusReasonCode7Choice {
 	 * PaymentStatusReasonCode6Choice.mmUnmatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnmatched = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusReasonCode7Choice, UnmatchedStatusReason1Code> mmUnmatched = new MMMessageAttribute<PaymentStatusReasonCode7Choice, UnmatchedStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmUnmatchedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode7Choice.mmObject();
@@ -143,6 +143,16 @@ public class PaymentStatusReasonCode7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnmatchedStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public UnmatchedStatusReason1Code getValue(PaymentStatusReasonCode7Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReasonCode7Choice obj, UnmatchedStatusReason1Code value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "Canc", required = true)
@@ -185,7 +195,7 @@ public class PaymentStatusReasonCode7Choice {
 	 * PaymentStatusReasonCode6Choice.mmCancelled}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancelled = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusReasonCode7Choice, CancelledStatusReason1Code> mmCancelled = new MMMessageAttribute<PaymentStatusReasonCode7Choice, CancelledStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode7Choice.mmObject();
@@ -198,6 +208,16 @@ public class PaymentStatusReasonCode7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public CancelledStatusReason1Code getValue(PaymentStatusReasonCode7Choice obj) {
+			return obj.getCancelled();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReasonCode7Choice obj, CancelledStatusReason1Code value) {
+			obj.setCancelled(value);
 		}
 	};
 	@XmlElement(name = "Sspd", required = true)
@@ -240,7 +260,7 @@ public class PaymentStatusReasonCode7Choice {
 	 * PaymentStatusReasonCode6Choice.mmSuspended}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSuspended = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusReasonCode7Choice, SuspendedStatusReason1Code> mmSuspended = new MMMessageAttribute<PaymentStatusReasonCode7Choice, SuspendedStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode7Choice.mmObject();
@@ -253,6 +273,16 @@ public class PaymentStatusReasonCode7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public SuspendedStatusReason1Code getValue(PaymentStatusReasonCode7Choice obj) {
+			return obj.getSuspended();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReasonCode7Choice obj, SuspendedStatusReason1Code value) {
+			obj.setSuspended(value);
 		}
 	};
 	@XmlElement(name = "PdgFlngSttlm", required = true)
@@ -296,7 +326,7 @@ public class PaymentStatusReasonCode7Choice {
 	 * PaymentStatusReasonCode6Choice.mmPendingFailingSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingFailingSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusReasonCode7Choice, PendingFailingSettlement1Code> mmPendingFailingSettlement = new MMMessageAttribute<PaymentStatusReasonCode7Choice, PendingFailingSettlement1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmPendingFailingSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode7Choice.mmObject();
@@ -309,6 +339,16 @@ public class PaymentStatusReasonCode7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingFailingSettlement1Code.mmObject();
+		}
+
+		@Override
+		public PendingFailingSettlement1Code getValue(PaymentStatusReasonCode7Choice obj) {
+			return obj.getPendingFailingSettlement();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReasonCode7Choice obj, PendingFailingSettlement1Code value) {
+			obj.setPendingFailingSettlement(value);
 		}
 	};
 	@XmlElement(name = "PdgSttlm", required = true)
@@ -351,7 +391,7 @@ public class PaymentStatusReasonCode7Choice {
 	 * PaymentStatusReasonCode6Choice.mmPendingSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusReasonCode7Choice, PendingSettlement2Code> mmPendingSettlement = new MMMessageAttribute<PaymentStatusReasonCode7Choice, PendingSettlement2Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmPendingSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode7Choice.mmObject();
@@ -364,6 +404,16 @@ public class PaymentStatusReasonCode7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingSettlement2Code.mmObject();
+		}
+
+		@Override
+		public PendingSettlement2Code getValue(PaymentStatusReasonCode7Choice obj) {
+			return obj.getPendingSettlement();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReasonCode7Choice obj, PendingSettlement2Code value) {
+			obj.setPendingSettlement(value);
 		}
 	};
 	@XmlElement(name = "PrtryRjctn", required = true)
@@ -403,7 +453,7 @@ public class PaymentStatusReasonCode7Choice {
 	 * PaymentStatusReasonCode6Choice.mmProprietaryRejection}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryRejection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusReasonCode7Choice, ProprietaryStatusJustification1> mmProprietaryRejection = new MMMessageAttribute<PaymentStatusReasonCode7Choice, ProprietaryStatusJustification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode7Choice.mmObject();
 			isDerived = false;
@@ -415,6 +465,16 @@ public class PaymentStatusReasonCode7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProprietaryStatusJustification1.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusJustification1 getValue(PaymentStatusReasonCode7Choice obj) {
+			return obj.getProprietaryRejection();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReasonCode7Choice obj, ProprietaryStatusJustification1 value) {
+			obj.setProprietaryRejection(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -451,7 +511,7 @@ public class PaymentStatusReasonCode7Choice {
 	 * PaymentStatusReasonCode6Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentStatusReasonCode7Choice, Max35Text> mmProprietary = new MMMessageAttribute<PaymentStatusReasonCode7Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusReasonCode7Choice.mmObject();
 			isDerived = false;
@@ -463,6 +523,16 @@ public class PaymentStatusReasonCode7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentStatusReasonCode7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReasonCode7Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

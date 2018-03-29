@@ -55,12 +55,16 @@ public class ConstraintCashPartiesCurrencyPresenceRule {
 	 */
 	public static final MMConstraint<StandingSettlementInstructionV01> forStandingSettlementInstructionV01 = new MMConstraint<StandingSettlementInstructionV01>() {
 		{
-			validator = ConstraintCashPartiesCurrencyPresenceRule::checkStandingSettlementInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashPartiesCurrencyPresenceRule";
 			definition = "If SettlementDetails/CashPartiesDetails is present then SettlementCurrency must be present.";
 			owner_lazy = () -> StandingSettlementInstructionV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementCurrency</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementDetails/CashPartiesDetails</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(StandingSettlementInstructionV01 obj) throws Exception {
+			checkStandingSettlementInstructionV01(obj);
 		}
 	};
 

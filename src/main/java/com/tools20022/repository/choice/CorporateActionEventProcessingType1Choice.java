@@ -117,7 +117,7 @@ public class CorporateActionEventProcessingType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventProcessingType1Choice, CorporateActionEventProcessingType1Code> mmCode = new MMMessageAttribute<CorporateActionEventProcessingType1Choice, CorporateActionEventProcessingType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventProcessingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingType1Choice.mmObject();
@@ -130,6 +130,16 @@ public class CorporateActionEventProcessingType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventProcessingType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventProcessingType1Code getValue(CorporateActionEventProcessingType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventProcessingType1Choice obj, CorporateActionEventProcessingType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -171,7 +181,7 @@ public class CorporateActionEventProcessingType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventProcessingType1Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<CorporateActionEventProcessingType1Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventProcessingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingType1Choice.mmObject();
@@ -185,6 +195,16 @@ public class CorporateActionEventProcessingType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(CorporateActionEventProcessingType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventProcessingType1Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

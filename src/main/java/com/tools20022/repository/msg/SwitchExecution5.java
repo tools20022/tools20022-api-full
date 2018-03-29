@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SwitchExecution;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentAccount30;
+import com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4;
+import com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -108,7 +111,7 @@ public class SwitchExecution5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchExecution5, Optional<InvestmentAccount30>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SwitchExecution5, Optional<InvestmentAccount30>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecution5.mmObject();
@@ -120,11 +123,21 @@ public class SwitchExecution5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
+			type_lazy = () -> InvestmentAccount30.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount30> getValue(SwitchExecution5 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(SwitchExecution5 obj, Optional<InvestmentAccount30> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedLeg", required = true)
-	protected List<com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4> redemptionLeg;
+	protected List<SwitchExecutionRedemptionLeg4> redemptionLeg;
 	/**
 	 * 
 	 <p>
@@ -159,7 +172,7 @@ public class SwitchExecution5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRedemptionLeg = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchExecution5, List<SwitchExecutionRedemptionLeg4>> mmRedemptionLeg = new MMMessageAssociationEnd<SwitchExecution5, List<SwitchExecutionRedemptionLeg4>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchExecution.mmRedemptionLeg;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecution5.mmObject();
@@ -170,11 +183,21 @@ public class SwitchExecution5 {
 			definition = "Redemption leg information of the switch order / switch order confirmation for which the advice is given.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4.mmObject();
+			type_lazy = () -> SwitchExecutionRedemptionLeg4.mmObject();
+		}
+
+		@Override
+		public List<SwitchExecutionRedemptionLeg4> getValue(SwitchExecution5 obj) {
+			return obj.getRedemptionLeg();
+		}
+
+		@Override
+		public void setValue(SwitchExecution5 obj, List<SwitchExecutionRedemptionLeg4> value) {
+			obj.setRedemptionLeg(value);
 		}
 	};
 	@XmlElement(name = "SbcptLeg", required = true)
-	protected List<com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4> subscriptionLeg;
+	protected List<SwitchExecutionSubscriptionLeg4> subscriptionLeg;
 	/**
 	 * 
 	 <p>
@@ -209,7 +232,7 @@ public class SwitchExecution5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionLeg = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchExecution5, List<SwitchExecutionSubscriptionLeg4>> mmSubscriptionLeg = new MMMessageAssociationEnd<SwitchExecution5, List<SwitchExecutionSubscriptionLeg4>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchExecution.mmSubscriptionLeg;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchExecution5.mmObject();
@@ -220,7 +243,17 @@ public class SwitchExecution5 {
 			definition = "Subscription leg information of the switch order / switch order confirmation for which the advice is given.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4.mmObject();
+			type_lazy = () -> SwitchExecutionSubscriptionLeg4.mmObject();
+		}
+
+		@Override
+		public List<SwitchExecutionSubscriptionLeg4> getValue(SwitchExecution5 obj) {
+			return obj.getSubscriptionLeg();
+		}
+
+		@Override
+		public void setValue(SwitchExecution5 obj, List<SwitchExecutionSubscriptionLeg4> value) {
+			obj.setSubscriptionLeg(value);
 		}
 	};
 
@@ -243,7 +276,7 @@ public class SwitchExecution5 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public SwitchExecution5 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public SwitchExecution5 setInvestmentAccountDetails(InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -252,7 +285,7 @@ public class SwitchExecution5 {
 		return redemptionLeg == null ? redemptionLeg = new ArrayList<>() : redemptionLeg;
 	}
 
-	public SwitchExecution5 setRedemptionLeg(List<com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4> redemptionLeg) {
+	public SwitchExecution5 setRedemptionLeg(List<SwitchExecutionRedemptionLeg4> redemptionLeg) {
 		this.redemptionLeg = Objects.requireNonNull(redemptionLeg);
 		return this;
 	}
@@ -261,7 +294,7 @@ public class SwitchExecution5 {
 		return subscriptionLeg == null ? subscriptionLeg = new ArrayList<>() : subscriptionLeg;
 	}
 
-	public SwitchExecution5 setSubscriptionLeg(List<com.tools20022.repository.msg.SwitchExecutionSubscriptionLeg4> subscriptionLeg) {
+	public SwitchExecution5 setSubscriptionLeg(List<SwitchExecutionSubscriptionLeg4> subscriptionLeg) {
 		this.subscriptionLeg = Objects.requireNonNull(subscriptionLeg);
 		return this;
 	}

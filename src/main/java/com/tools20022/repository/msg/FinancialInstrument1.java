@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BasicCollateralValuation1Details;
+import com.tools20022.repository.msg.FinancialInstrumentAttributes2;
+import com.tools20022.repository.msg.SecurityIdentification11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +114,7 @@ public class FinancialInstrument1 {
 	 * definition} = "Identification of the instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument1, SecurityIdentification11> mmIdentification = new MMMessageAssociationEnd<FinancialInstrument1, SecurityIdentification11>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument1.mmObject();
@@ -123,7 +126,17 @@ public class FinancialInstrument1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
+			type_lazy = () -> SecurityIdentification11.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification11 getValue(FinancialInstrument1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument1 obj, SecurityIdentification11 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Attrbts")
@@ -159,7 +172,7 @@ public class FinancialInstrument1 {
 	 * definition} = "Elements characterising a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument1, Optional<FinancialInstrumentAttributes2>> mmAttributes = new MMMessageAssociationEnd<FinancialInstrument1, Optional<FinancialInstrumentAttributes2>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument1.mmObject();
@@ -171,7 +184,17 @@ public class FinancialInstrument1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentAttributes2> getValue(FinancialInstrument1 obj) {
+			return obj.getAttributes();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument1 obj, Optional<FinancialInstrumentAttributes2> value) {
+			obj.setAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValtnHrcutDtls")
@@ -208,7 +231,7 @@ public class FinancialInstrument1 {
 	 * definition} = "Elements used to calculate the valuation haircut."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuationHaircutDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument1, Optional<BasicCollateralValuation1Details>> mmValuationHaircutDetails = new MMMessageAssociationEnd<FinancialInstrument1, Optional<BasicCollateralValuation1Details>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument1.mmObject();
@@ -220,7 +243,17 @@ public class FinancialInstrument1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BasicCollateralValuation1Details.mmObject();
+			type_lazy = () -> BasicCollateralValuation1Details.mmObject();
+		}
+
+		@Override
+		public Optional<BasicCollateralValuation1Details> getValue(FinancialInstrument1 obj) {
+			return obj.getValuationHaircutDetails();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument1 obj, Optional<BasicCollateralValuation1Details> value) {
+			obj.setValuationHaircutDetails(value.orElse(null));
 		}
 	};
 
@@ -243,7 +276,7 @@ public class FinancialInstrument1 {
 		return identification;
 	}
 
-	public FinancialInstrument1 setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
+	public FinancialInstrument1 setIdentification(SecurityIdentification11 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -252,7 +285,7 @@ public class FinancialInstrument1 {
 		return attributes == null ? Optional.empty() : Optional.of(attributes);
 	}
 
-	public FinancialInstrument1 setAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes2 attributes) {
+	public FinancialInstrument1 setAttributes(FinancialInstrumentAttributes2 attributes) {
 		this.attributes = attributes;
 		return this;
 	}
@@ -261,7 +294,7 @@ public class FinancialInstrument1 {
 		return valuationHaircutDetails == null ? Optional.empty() : Optional.of(valuationHaircutDetails);
 	}
 
-	public FinancialInstrument1 setValuationHaircutDetails(com.tools20022.repository.msg.BasicCollateralValuation1Details valuationHaircutDetails) {
+	public FinancialInstrument1 setValuationHaircutDetails(BasicCollateralValuation1Details valuationHaircutDetails) {
 		this.valuationHaircutDetails = valuationHaircutDetails;
 		return this;
 	}

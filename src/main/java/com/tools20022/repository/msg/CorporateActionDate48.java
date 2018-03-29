@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.CorporateActionDeadline;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BorrowerLendingDeadline1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -162,7 +163,7 @@ public class CorporateActionDate48 {
 	 * CorporateActionDate29.mmEarlyResponseDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEarlyResponseDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>> mmEarlyResponseDeadline = new MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmEarlyResponseDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -178,6 +179,16 @@ public class CorporateActionDate48 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat31Choice> getValue(CorporateActionDate48 obj) {
+			return obj.getEarlyResponseDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, Optional<DateFormat31Choice> value) {
+			obj.setEarlyResponseDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CoverXprtnDt")
@@ -231,7 +242,7 @@ public class CorporateActionDate48 {
 	 * CorporateActionDate29.mmCoverExpirationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCoverExpirationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>> mmCoverExpirationDate = new MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmCoverExpirationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -247,6 +258,16 @@ public class CorporateActionDate48 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat31Choice> getValue(CorporateActionDate48 obj) {
+			return obj.getCoverExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, Optional<DateFormat31Choice> value) {
+			obj.setCoverExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctDt")
@@ -300,7 +321,7 @@ public class CorporateActionDate48 {
 	 * CorporateActionDate29.mmProtectDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>> mmProtectDate = new MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmProtectDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -316,6 +337,16 @@ public class CorporateActionDate48 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat31Choice> getValue(CorporateActionDate48 obj) {
+			return obj.getProtectDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, Optional<DateFormat31Choice> value) {
+			obj.setProtectDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktDdln")
@@ -369,7 +400,7 @@ public class CorporateActionDate48 {
 	 * CorporateActionDate29.mmMarketDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>> mmMarketDeadline = new MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -385,6 +416,16 @@ public class CorporateActionDate48 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat31Choice> getValue(CorporateActionDate48 obj) {
+			return obj.getMarketDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, Optional<DateFormat31Choice> value) {
+			obj.setMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnDdln")
@@ -438,7 +479,7 @@ public class CorporateActionDate48 {
 	 * CorporateActionDate29.mmResponseDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponseDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat32Choice>> mmResponseDeadline = new MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat32Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmResponseDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -454,6 +495,16 @@ public class CorporateActionDate48 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat32Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat32Choice> getValue(CorporateActionDate48 obj) {
+			return obj.getResponseDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, Optional<DateFormat32Choice> value) {
+			obj.setResponseDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt")
@@ -507,7 +558,7 @@ public class CorporateActionDate48 {
 	 * CorporateActionDate29.mmExpiryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>> mmExpiryDate = new MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -523,6 +574,16 @@ public class CorporateActionDate48 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat31Choice> getValue(CorporateActionDate48 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, Optional<DateFormat31Choice> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcptCostDbtDt")
@@ -576,7 +637,7 @@ public class CorporateActionDate48 {
 	 * CorporateActionDate29.mmSubscriptionCostDebitDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionCostDebitDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>> mmSubscriptionCostDebitDate = new MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmSubscriptionCostDebitDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -592,6 +653,16 @@ public class CorporateActionDate48 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat31Choice> getValue(CorporateActionDate48 obj) {
+			return obj.getSubscriptionCostDebitDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, Optional<DateFormat31Choice> value) {
+			obj.setSubscriptionCostDebitDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DpstryCoverXprtnDt")
@@ -645,7 +716,7 @@ public class CorporateActionDate48 {
 	 * CorporateActionDate29.mmDepositoryCoverExpirationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepositoryCoverExpirationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>> mmDepositoryCoverExpirationDate = new MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmDepositoryCoverExpirationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -661,6 +732,16 @@ public class CorporateActionDate48 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat31Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat31Choice> getValue(CorporateActionDate48 obj) {
+			return obj.getDepositoryCoverExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, Optional<DateFormat31Choice> value) {
+			obj.setDepositoryCoverExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StockLndgDdln")
@@ -711,7 +792,7 @@ public class CorporateActionDate48 {
 	 * CorporateActionDate29.mmStockLendingDeadline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>> mmStockLendingDeadline = new MMMessageAssociationEnd<CorporateActionDate48, Optional<DateFormat31Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmStockLendingDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -727,9 +808,19 @@ public class CorporateActionDate48 {
 			isComposite = true;
 			type_lazy = () -> DateFormat31Choice.mmObject();
 		}
+
+		@Override
+		public Optional<DateFormat31Choice> getValue(CorporateActionDate48 obj) {
+			return obj.getStockLendingDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, Optional<DateFormat31Choice> value) {
+			obj.setStockLendingDeadline(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "BrrwrStockLndgDdln")
-	protected List<com.tools20022.repository.msg.BorrowerLendingDeadline1> borrowerStockLendingDeadline;
+	protected List<BorrowerLendingDeadline1> borrowerStockLendingDeadline;
 	/**
 	 * 
 	 <p>
@@ -771,7 +862,7 @@ public class CorporateActionDate48 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBorrowerStockLendingDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate48, List<BorrowerLendingDeadline1>> mmBorrowerStockLendingDeadline = new MMMessageAssociationEnd<CorporateActionDate48, List<BorrowerLendingDeadline1>>() {
 		{
 			businessComponentTrace_lazy = () -> Deadline.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate48.mmObject();
@@ -783,7 +874,17 @@ public class CorporateActionDate48 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmBorrowerStockLendingDeadline);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline1.mmObject();
+			type_lazy = () -> BorrowerLendingDeadline1.mmObject();
+		}
+
+		@Override
+		public List<BorrowerLendingDeadline1> getValue(CorporateActionDate48 obj) {
+			return obj.getBorrowerStockLendingDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate48 obj, List<BorrowerLendingDeadline1> value) {
+			obj.setBorrowerStockLendingDeadline(value);
 		}
 	};
 
@@ -892,7 +993,7 @@ public class CorporateActionDate48 {
 		return borrowerStockLendingDeadline == null ? borrowerStockLendingDeadline = new ArrayList<>() : borrowerStockLendingDeadline;
 	}
 
-	public CorporateActionDate48 setBorrowerStockLendingDeadline(List<com.tools20022.repository.msg.BorrowerLendingDeadline1> borrowerStockLendingDeadline) {
+	public CorporateActionDate48 setBorrowerStockLendingDeadline(List<BorrowerLendingDeadline1> borrowerStockLendingDeadline) {
 		this.borrowerStockLendingDeadline = Objects.requireNonNull(borrowerStockLendingDeadline);
 		return this;
 	}

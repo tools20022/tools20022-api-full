@@ -104,7 +104,7 @@ public class FinancialInstrumentAggregateBalance1Choice {
 	 * definition} = "Indicates whether holdings are present."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAggregateBalance1Choice, YesNoIndicator> mmHoldingsIndicator = new MMMessageAttribute<FinancialInstrumentAggregateBalance1Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class FinancialInstrumentAggregateBalance1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FinancialInstrumentAggregateBalance1Choice obj) {
+			return obj.getHoldingsIndicator();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAggregateBalance1Choice obj, YesNoIndicator value) {
+			obj.setHoldingsIndicator(value);
 		}
 	};
 	@XmlElement(name = "HldgBal", required = true)
@@ -146,7 +156,7 @@ public class FinancialInstrumentAggregateBalance1Choice {
 	 * definition} = "Balance of holdings."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHoldingBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAggregateBalance1Choice, FinancialInstrumentAggregateBalance2> mmHoldingBalance = new MMMessageAssociationEnd<FinancialInstrumentAggregateBalance1Choice, FinancialInstrumentAggregateBalance2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentAggregateBalance1Choice.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class FinancialInstrumentAggregateBalance1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentAggregateBalance2.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentAggregateBalance2 getValue(FinancialInstrumentAggregateBalance1Choice obj) {
+			return obj.getHoldingBalance();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAggregateBalance1Choice obj, FinancialInstrumentAggregateBalance2 value) {
+			obj.setHoldingBalance(value);
 		}
 	};
 

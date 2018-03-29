@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.CashBalanceType2Choice;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.QuantityBreakdown45;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,7 +112,7 @@ public class CashSubBalanceTypeAndQuantityBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashSubBalanceTypeAndQuantityBreakdown2, CashBalanceType2Choice> mmType = new MMMessageAttribute<CashSubBalanceTypeAndQuantityBreakdown2, CashBalanceType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
@@ -124,9 +125,19 @@ public class CashSubBalanceTypeAndQuantityBreakdown2 {
 			minOccurs = 1;
 			complexType_lazy = () -> CashBalanceType2Choice.mmObject();
 		}
+
+		@Override
+		public CashBalanceType2Choice getValue(CashSubBalanceTypeAndQuantityBreakdown2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashSubBalanceTypeAndQuantityBreakdown2 obj, CashBalanceType2Choice value) {
+			obj.setType(value);
+		}
 	};
 	@XmlElement(name = "QtyBrkdwn")
-	protected List<com.tools20022.repository.msg.QuantityBreakdown45> quantityBreakdown;
+	protected List<QuantityBreakdown45> quantityBreakdown;
 	/**
 	 * 
 	 <p>
@@ -161,7 +172,7 @@ public class CashSubBalanceTypeAndQuantityBreakdown2 {
 	 * "Breakdown of a quantity into lots such as tax lots, instrument series."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityBreakdown = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashSubBalanceTypeAndQuantityBreakdown2, List<QuantityBreakdown45>> mmQuantityBreakdown = new MMMessageAttribute<CashSubBalanceTypeAndQuantityBreakdown2, List<QuantityBreakdown45>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
@@ -171,7 +182,17 @@ public class CashSubBalanceTypeAndQuantityBreakdown2 {
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series.";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown45.mmObject();
+			complexType_lazy = () -> QuantityBreakdown45.mmObject();
+		}
+
+		@Override
+		public List<QuantityBreakdown45> getValue(CashSubBalanceTypeAndQuantityBreakdown2 obj) {
+			return obj.getQuantityBreakdown();
+		}
+
+		@Override
+		public void setValue(CashSubBalanceTypeAndQuantityBreakdown2 obj, List<QuantityBreakdown45> value) {
+			obj.setQuantityBreakdown(value);
 		}
 	};
 
@@ -202,7 +223,7 @@ public class CashSubBalanceTypeAndQuantityBreakdown2 {
 		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public CashSubBalanceTypeAndQuantityBreakdown2 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown45> quantityBreakdown) {
+	public CashSubBalanceTypeAndQuantityBreakdown2 setQuantityBreakdown(List<QuantityBreakdown45> quantityBreakdown) {
 		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
 		return this;
 	}

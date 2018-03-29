@@ -142,7 +142,7 @@ public class Participation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfVotingRights = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Participation3, Optional<Number>> mmTotalNumberOfVotingRights = new MMMessageAttribute<Participation3, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfVotingRights;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Participation3.mmObject();
@@ -155,6 +155,16 @@ public class Participation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Participation3 obj) {
+			return obj.getTotalNumberOfVotingRights();
+		}
+
+		@Override
+		public void setValue(Participation3 obj, Optional<Number> value) {
+			obj.setTotalNumberOfVotingRights(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgOfVtngRghts")
@@ -196,7 +206,7 @@ public class Participation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageOfVotingRights = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Participation3, Optional<PercentageRate>> mmPercentageOfVotingRights = new MMMessageAttribute<Participation3, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Participation3.mmObject();
 			isDerived = false;
@@ -208,6 +218,16 @@ public class Participation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Participation3 obj) {
+			return obj.getPercentageOfVotingRights();
+		}
+
+		@Override
+		public void setValue(Participation3 obj, Optional<PercentageRate> value) {
+			obj.setPercentageOfVotingRights(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfSctiesOutsdng")
@@ -254,7 +274,7 @@ public class Participation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Participation3, Optional<ActiveCurrencyAndAmount>> mmTotalNumberOfSecuritiesOutstanding = new MMMessageAttribute<Participation3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmTotalNumberOfSecuritiesOutstanding;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Participation3.mmObject();
@@ -267,6 +287,16 @@ public class Participation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Participation3 obj) {
+			return obj.getTotalNumberOfSecuritiesOutstanding();
+		}
+
+		@Override
+		public void setValue(Participation3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalNumberOfSecuritiesOutstanding(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClctnDt")
@@ -311,7 +341,7 @@ public class Participation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Participation3, Optional<ISODate>> mmCalculationDate = new MMMessageAttribute<Participation3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingParticipation.mmCalculationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Participation3.mmObject();
@@ -324,6 +354,16 @@ public class Participation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Participation3 obj) {
+			return obj.getCalculationDate();
+		}
+
+		@Override
+		public void setValue(Participation3 obj, Optional<ISODate> value) {
+			obj.setCalculationDate(value.orElse(null));
 		}
 	};
 

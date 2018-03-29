@@ -23,8 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.CCPMemberRequirementsReportV01;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
-import com.tools20022.repository.entity.MarginAmountRequirement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification165;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -60,10 +60,6 @@ import javax.xml.bind.annotation.XmlType;
  * IntraDayRequirement1.mmMarginAccountIdentification}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
- * trace} =
- * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement
- * MarginAmountRequirement}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -127,7 +123,7 @@ public class IntraDayRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraDayMarginCall = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount> mmIntraDayMarginCall = new MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraDayRequirement1.mmObject();
 			isDerived = false;
@@ -138,6 +134,16 @@ public class IntraDayRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IntraDayRequirement1 obj) {
+			return obj.getIntraDayMarginCall();
+		}
+
+		@Override
+		public void setValue(IntraDayRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setIntraDayMarginCall(value);
 		}
 	};
 	@XmlElement(name = "PeakInitlMrgnLblty", required = true)
@@ -172,7 +178,7 @@ public class IntraDayRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeakInitialMarginLiability = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount> mmPeakInitialMarginLiability = new MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraDayRequirement1.mmObject();
 			isDerived = false;
@@ -183,6 +189,16 @@ public class IntraDayRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IntraDayRequirement1 obj) {
+			return obj.getPeakInitialMarginLiability();
+		}
+
+		@Override
+		public void setValue(IntraDayRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setPeakInitialMarginLiability(value);
 		}
 	};
 	@XmlElement(name = "PeakVartnMrgnLblty", required = true)
@@ -217,7 +233,7 @@ public class IntraDayRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeakVariationMarginLiability = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount> mmPeakVariationMarginLiability = new MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraDayRequirement1.mmObject();
 			isDerived = false;
@@ -228,6 +244,16 @@ public class IntraDayRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IntraDayRequirement1 obj) {
+			return obj.getPeakVariationMarginLiability();
+		}
+
+		@Override
+		public void setValue(IntraDayRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setPeakVariationMarginLiability(value);
 		}
 	};
 	@XmlElement(name = "AggtPeakLblty", required = true)
@@ -262,7 +288,7 @@ public class IntraDayRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAggregatePeakLiability = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount> mmAggregatePeakLiability = new MMMessageAttribute<IntraDayRequirement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraDayRequirement1.mmObject();
 			isDerived = false;
@@ -273,6 +299,16 @@ public class IntraDayRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IntraDayRequirement1 obj) {
+			return obj.getAggregatePeakLiability();
+		}
+
+		@Override
+		public void setValue(IntraDayRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAggregatePeakLiability(value);
 		}
 	};
 	@XmlElement(name = "MrgnAcctId", required = true)
@@ -306,7 +342,7 @@ public class IntraDayRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraDayRequirement1, GenericIdentification165> mmMarginAccountIdentification = new MMMessageAssociationEnd<IntraDayRequirement1, GenericIdentification165>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraDayRequirement1.mmObject();
 			isDerived = false;
@@ -317,7 +353,17 @@ public class IntraDayRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification165.mmObject();
+			type_lazy = () -> GenericIdentification165.mmObject();
+		}
+
+		@Override
+		public GenericIdentification165 getValue(IntraDayRequirement1 obj) {
+			return obj.getMarginAccountIdentification();
+		}
+
+		@Override
+		public void setValue(IntraDayRequirement1 obj, GenericIdentification165 value) {
+			obj.setMarginAccountIdentification(value);
 		}
 	};
 
@@ -328,7 +374,6 @@ public class IntraDayRequirement1 {
 						com.tools20022.repository.msg.IntraDayRequirement1.mmPeakVariationMarginLiability, com.tools20022.repository.msg.IntraDayRequirement1.mmAggregatePeakLiability,
 						com.tools20022.repository.msg.IntraDayRequirement1.mmMarginAccountIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CCPMemberRequirementsReportV01.mmIntraDayRequirementAmount);
-				trace_lazy = () -> MarginAmountRequirement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraDayRequirement1";
@@ -378,7 +423,7 @@ public class IntraDayRequirement1 {
 		return marginAccountIdentification;
 	}
 
-	public IntraDayRequirement1 setMarginAccountIdentification(com.tools20022.repository.msg.GenericIdentification165 marginAccountIdentification) {
+	public IntraDayRequirement1 setMarginAccountIdentification(GenericIdentification165 marginAccountIdentification) {
 		this.marginAccountIdentification = Objects.requireNonNull(marginAccountIdentification);
 		return this;
 	}

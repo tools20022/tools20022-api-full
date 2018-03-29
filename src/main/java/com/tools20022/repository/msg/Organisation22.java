@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ModificationScope34;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -154,7 +155,7 @@ public class Organisation22 {
 	 * Organisation24.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation22, Max350Text> mmName = new MMMessageAttribute<Organisation22, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation22.mmObject();
@@ -168,6 +169,16 @@ public class Organisation22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(Organisation22 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(Organisation22 obj, Max350Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "ShrtNm")
@@ -210,7 +221,7 @@ public class Organisation22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation22, Optional<Max35Text>> mmShortName = new MMMessageAttribute<Organisation22, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation22.mmObject();
@@ -223,6 +234,16 @@ public class Organisation22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Organisation22 obj) {
+			return obj.getShortName();
+		}
+
+		@Override
+		public void setValue(Organisation22 obj, Optional<Max35Text> value) {
+			obj.setShortName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -272,7 +293,7 @@ public class Organisation22 {
 	 * Organisation24.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation22, Optional<PartyIdentification72Choice>> mmIdentification = new MMMessageAttribute<Organisation22, Optional<PartyIdentification72Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation22.mmObject();
@@ -286,6 +307,16 @@ public class Organisation22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification72Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification72Choice> getValue(Organisation22 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Organisation22 obj, Optional<PartyIdentification72Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglNttyIdr")
@@ -337,7 +368,7 @@ public class Organisation22 {
 	 * Organisation24.mmLegalEntityIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation22, Optional<LEIIdentifier>> mmLegalEntityIdentifier = new MMMessageAttribute<Organisation22, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation22.mmObject();
@@ -351,6 +382,16 @@ public class Organisation22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(Organisation22 obj) {
+			return obj.getLegalEntityIdentifier();
+		}
+
+		@Override
+		public void setValue(Organisation22 obj, Optional<LEIIdentifier> value) {
+			obj.setLegalEntityIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Purp")
@@ -398,7 +439,7 @@ public class Organisation22 {
 	 * Organisation24.mmPurpose}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation22, Optional<Max35Text>> mmPurpose = new MMMessageAttribute<Organisation22, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation22.mmObject();
@@ -412,6 +453,16 @@ public class Organisation22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Organisation22 obj) {
+			return obj.getPurpose();
+		}
+
+		@Override
+		public void setValue(Organisation22 obj, Optional<Max35Text> value) {
+			obj.setPurpose(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnCtry")
@@ -460,7 +511,7 @@ public class Organisation22 {
 	 * Organisation24.mmRegistrationCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation22, Optional<CountryCode>> mmRegistrationCountry = new MMMessageAttribute<Organisation22, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation22.mmObject();
@@ -474,6 +525,16 @@ public class Organisation22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(Organisation22 obj) {
+			return obj.getRegistrationCountry();
+		}
+
+		@Override
+		public void setValue(Organisation22 obj, Optional<CountryCode> value) {
+			obj.setRegistrationCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnDt")
@@ -523,7 +584,7 @@ public class Organisation22 {
 	 * Organisation24.mmRegistrationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation22, Optional<ISODate>> mmRegistrationDate = new MMMessageAttribute<Organisation22, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmRegistrationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation22.mmObject();
@@ -538,9 +599,19 @@ public class Organisation22 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public Optional<ISODate> getValue(Organisation22 obj) {
+			return obj.getRegistrationDate();
+		}
+
+		@Override
+		public void setValue(Organisation22 obj, Optional<ISODate> value) {
+			obj.setRegistrationDate(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ModfdPstlAdr")
-	protected List<com.tools20022.repository.msg.ModificationScope34> modifiedPostalAddress;
+	protected List<ModificationScope34> modifiedPostalAddress;
 	/**
 	 * 
 	 <p>
@@ -580,7 +651,7 @@ public class Organisation22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModifiedPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation22, List<ModificationScope34>> mmModifiedPostalAddress = new MMMessageAssociationEnd<Organisation22, List<ModificationScope34>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation22.mmObject();
@@ -592,7 +663,17 @@ public class Organisation22 {
 			nextVersions_lazy = () -> Arrays.asList(Organisation29.mmModifiedPostalAddress);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ModificationScope34.mmObject();
+			type_lazy = () -> ModificationScope34.mmObject();
+		}
+
+		@Override
+		public List<ModificationScope34> getValue(Organisation22 obj) {
+			return obj.getModifiedPostalAddress();
+		}
+
+		@Override
+		public void setValue(Organisation22 obj, List<ModificationScope34> value) {
+			obj.setModifiedPostalAddress(value);
 		}
 	};
 	@XmlElement(name = "TpOfOrg")
@@ -636,7 +717,7 @@ public class Organisation22 {
 	 * Organisation24.mmTypeOfOrganisation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTypeOfOrganisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation22, Optional<OrganisationType1Choice>> mmTypeOfOrganisation = new MMMessageAssociationEnd<Organisation22, Optional<OrganisationType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation22.mmObject();
 			isDerived = false;
@@ -650,6 +731,16 @@ public class Organisation22 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OrganisationType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationType1Choice> getValue(Organisation22 obj) {
+			return obj.getTypeOfOrganisation();
+		}
+
+		@Override
+		public void setValue(Organisation22 obj, Optional<OrganisationType1Choice> value) {
+			obj.setTypeOfOrganisation(value.orElse(null));
 		}
 	};
 
@@ -738,7 +829,7 @@ public class Organisation22 {
 		return modifiedPostalAddress == null ? modifiedPostalAddress = new ArrayList<>() : modifiedPostalAddress;
 	}
 
-	public Organisation22 setModifiedPostalAddress(List<com.tools20022.repository.msg.ModificationScope34> modifiedPostalAddress) {
+	public Organisation22 setModifiedPostalAddress(List<ModificationScope34> modifiedPostalAddress) {
 		this.modifiedPostalAddress = Objects.requireNonNull(modifiedPostalAddress);
 		return this;
 	}

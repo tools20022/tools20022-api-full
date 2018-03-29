@@ -109,7 +109,7 @@ public class MarginTerms1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginTerms1Choice, Margin1> mmMarginDetails = new MMMessageAssociationEnd<MarginTerms1Choice, Margin1>() {
 		{
 			businessComponentTrace_lazy = () -> ExposureTerm.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginTerms1Choice.mmObject();
@@ -122,6 +122,16 @@ public class MarginTerms1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Margin1.mmObject();
+		}
+
+		@Override
+		public Margin1 getValue(MarginTerms1Choice obj) {
+			return obj.getMarginDetails();
+		}
+
+		@Override
+		public void setValue(MarginTerms1Choice obj, Margin1 value) {
+			obj.setMarginDetails(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmtMrgn", required = true)
@@ -160,7 +170,7 @@ public class MarginTerms1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmountMargin = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginTerms1Choice, SegregatedIndependentAmountMargin1> mmSegregatedIndependentAmountMargin = new MMMessageAssociationEnd<MarginTerms1Choice, SegregatedIndependentAmountMargin1>() {
 		{
 			businessComponentTrace_lazy = () -> IndependentAmountTerm.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginTerms1Choice.mmObject();
@@ -173,6 +183,16 @@ public class MarginTerms1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SegregatedIndependentAmountMargin1.mmObject();
+		}
+
+		@Override
+		public SegregatedIndependentAmountMargin1 getValue(MarginTerms1Choice obj) {
+			return obj.getSegregatedIndependentAmountMargin();
+		}
+
+		@Override
+		public void setValue(MarginTerms1Choice obj, SegregatedIndependentAmountMargin1 value) {
+			obj.setSegregatedIndependentAmountMargin(value);
 		}
 	};
 

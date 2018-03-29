@@ -56,11 +56,15 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 */
 	public static final MMConstraint<SwitchOrder2> forSwitchOrder2 = new MMConstraint<SwitchOrder2>() {
 		{
-			validator = ConstraintFinancialInstrumentQuantity1Rule::checkSwitchOrder2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity1Rule";
 			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
 			owner_lazy = () -> SwitchOrder2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder2 obj) throws Exception {
+			checkSwitchOrder2(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 */
 	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {
 		{
-			validator = ConstraintFinancialInstrumentQuantity1Rule::checkSwitchOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity1Rule";
 			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
 			owner_lazy = () -> SwitchOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder3 obj) throws Exception {
+			checkSwitchOrder3(obj);
 		}
 	};
 	/**
@@ -122,12 +130,16 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 */
 	public static final MMConstraint<SwitchOrder4> forSwitchOrder4 = new MMConstraint<SwitchOrder4>() {
 		{
-			validator = ConstraintFinancialInstrumentQuantity1Rule::checkSwitchOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity1Rule";
 			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentQuantity1Rule.forSwitchOrder7);
 			owner_lazy = () -> SwitchOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder4 obj) throws Exception {
+			checkSwitchOrder4(obj);
 		}
 	};
 	/**
@@ -157,12 +169,16 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 */
 	public static final MMConstraint<SwitchOrder7> forSwitchOrder7 = new MMConstraint<SwitchOrder7>() {
 		{
-			validator = ConstraintFinancialInstrumentQuantity1Rule::checkSwitchOrder7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity1Rule";
 			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\r\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFinancialInstrumentQuantity1Rule.forSwitchOrder4;
 			owner_lazy = () -> SwitchOrder7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder7 obj) throws Exception {
+			checkSwitchOrder7(obj);
 		}
 	};
 

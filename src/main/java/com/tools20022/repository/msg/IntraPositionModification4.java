@@ -29,6 +29,9 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RequestDetails18;
+import com.tools20022.repository.msg.SecuritiesAccount19;
+import com.tools20022.repository.msg.SystemPartyIdentification6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -136,7 +139,7 @@ public class IntraPositionModification4 {
 	 * IntraPositionModification2.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionModification4, Optional<SystemPartyIdentification6>> mmAccountOwner = new MMMessageAssociationEnd<IntraPositionModification4, Optional<SystemPartyIdentification6>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification4.mmObject();
@@ -149,7 +152,17 @@ public class IntraPositionModification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
+			type_lazy = () -> SystemPartyIdentification6.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification6> getValue(IntraPositionModification4 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification4 obj, Optional<SystemPartyIdentification6> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -190,7 +203,7 @@ public class IntraPositionModification4 {
 	 * IntraPositionModification2.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionModification4, Optional<SecuritiesAccount19>> mmSafekeepingAccount = new MMMessageAssociationEnd<IntraPositionModification4, Optional<SecuritiesAccount19>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification4.mmObject();
@@ -203,7 +216,17 @@ public class IntraPositionModification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount19> getValue(IntraPositionModification4 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification4 obj, Optional<SecuritiesAccount19> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -248,7 +271,7 @@ public class IntraPositionModification4 {
 	 * IntraPositionModification2.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionModification4, Optional<ProcessingStatus71Choice>> mmProcessingStatus = new MMMessageAssociationEnd<IntraPositionModification4, Optional<ProcessingStatus71Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification4.mmObject();
@@ -263,6 +286,16 @@ public class IntraPositionModification4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingStatus71Choice> getValue(IntraPositionModification4 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification4 obj, Optional<ProcessingStatus71Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqRef", required = true)
@@ -299,7 +332,7 @@ public class IntraPositionModification4 {
 	 * IntraPositionModification2.mmRequestReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionModification4, Max35Text> mmRequestReference = new MMMessageAttribute<IntraPositionModification4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification4.mmObject();
 			isDerived = false;
@@ -311,6 +344,16 @@ public class IntraPositionModification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IntraPositionModification4 obj) {
+			return obj.getRequestReference();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification4 obj, Max35Text value) {
+			obj.setRequestReference(value);
 		}
 	};
 	@XmlElement(name = "StsDt")
@@ -355,7 +398,7 @@ public class IntraPositionModification4 {
 	 * IntraPositionModification2.mmStatusDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionModification4, Optional<ISODateTime>> mmStatusDate = new MMMessageAttribute<IntraPositionModification4, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification4.mmObject();
@@ -369,6 +412,16 @@ public class IntraPositionModification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(IntraPositionModification4 obj) {
+			return obj.getStatusDate();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification4 obj, Optional<ISODateTime> value) {
+			obj.setStatusDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqDtls")
@@ -411,7 +464,7 @@ public class IntraPositionModification4 {
 	 * IntraPositionModification2.mmRequestDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionModification4, Optional<RequestDetails18>> mmRequestDetails = new MMMessageAssociationEnd<IntraPositionModification4, Optional<RequestDetails18>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmRelatedSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification4.mmObject();
@@ -424,7 +477,17 @@ public class IntraPositionModification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequestDetails18.mmObject();
+			type_lazy = () -> RequestDetails18.mmObject();
+		}
+
+		@Override
+		public Optional<RequestDetails18> getValue(IntraPositionModification4 obj) {
+			return obj.getRequestDetails();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification4 obj, Optional<RequestDetails18> value) {
+			obj.setRequestDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Undrlyg")
@@ -464,7 +527,7 @@ public class IntraPositionModification4 {
 	 * IntraPositionModification2.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlying = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionModification4, Optional<SettlementOrIntraPosition2Choice>> mmUnderlying = new MMMessageAssociationEnd<IntraPositionModification4, Optional<SettlementOrIntraPosition2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionModification4.mmObject();
 			isDerived = false;
@@ -478,6 +541,16 @@ public class IntraPositionModification4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementOrIntraPosition2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementOrIntraPosition2Choice> getValue(IntraPositionModification4 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(IntraPositionModification4 obj, Optional<SettlementOrIntraPosition2Choice> value) {
+			obj.setUnderlying(value.orElse(null));
 		}
 	};
 
@@ -504,7 +577,7 @@ public class IntraPositionModification4 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public IntraPositionModification4 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification6 accountOwner) {
+	public IntraPositionModification4 setAccountOwner(SystemPartyIdentification6 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -513,7 +586,7 @@ public class IntraPositionModification4 {
 		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public IntraPositionModification4 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount19 safekeepingAccount) {
+	public IntraPositionModification4 setSafekeepingAccount(SecuritiesAccount19 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
 		return this;
 	}
@@ -549,7 +622,7 @@ public class IntraPositionModification4 {
 		return requestDetails == null ? Optional.empty() : Optional.of(requestDetails);
 	}
 
-	public IntraPositionModification4 setRequestDetails(com.tools20022.repository.msg.RequestDetails18 requestDetails) {
+	public IntraPositionModification4 setRequestDetails(RequestDetails18 requestDetails) {
 		this.requestDetails = requestDetails;
 		return this;
 	}

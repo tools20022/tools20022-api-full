@@ -112,7 +112,7 @@ public class DerivativeBasicAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrencyAndAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeBasicAttributes1, ActiveOrHistoricCurrencyAndAmount> mmNotionalCurrencyAndAmount = new MMMessageAttribute<DerivativeBasicAttributes1, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeBasicAttributes1.mmObject();
@@ -124,6 +124,16 @@ public class DerivativeBasicAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(DerivativeBasicAttributes1 obj) {
+			return obj.getNotionalCurrencyAndAmount();
+		}
+
+		@Override
+		public void setValue(DerivativeBasicAttributes1 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setNotionalCurrencyAndAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrstInclInPric")
@@ -158,7 +168,7 @@ public class DerivativeBasicAttributes1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestIncludedInPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeBasicAttributes1, Optional<YesNoIndicator>> mmInterestIncludedInPrice = new MMMessageAttribute<DerivativeBasicAttributes1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeBasicAttributes1.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class DerivativeBasicAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(DerivativeBasicAttributes1 obj) {
+			return obj.getInterestIncludedInPrice();
+		}
+
+		@Override
+		public void setValue(DerivativeBasicAttributes1 obj, Optional<YesNoIndicator> value) {
+			obj.setInterestIncludedInPrice(value.orElse(null));
 		}
 	};
 

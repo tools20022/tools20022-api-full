@@ -98,7 +98,7 @@ public class EnergyQuantityUnit1Choice {
 	 * definition} = "Energy quantity units, expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyQuantityUnit1Choice, EnergyQuantityUnit1Code> mmCode = new MMMessageAttribute<EnergyQuantityUnit1Choice, EnergyQuantityUnit1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EnergyQuantityUnit1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class EnergyQuantityUnit1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EnergyQuantityUnit1Code.mmObject();
+		}
+
+		@Override
+		public EnergyQuantityUnit1Code getValue(EnergyQuantityUnit1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(EnergyQuantityUnit1Choice obj, EnergyQuantityUnit1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -142,7 +152,7 @@ public class EnergyQuantityUnit1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyQuantityUnit1Choice, Max52Text> mmProprietary = new MMMessageAttribute<EnergyQuantityUnit1Choice, Max52Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EnergyQuantityUnit1Choice.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class EnergyQuantityUnit1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(EnergyQuantityUnit1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(EnergyQuantityUnit1Choice obj, Max52Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

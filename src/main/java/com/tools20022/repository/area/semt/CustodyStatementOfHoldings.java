@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -180,7 +179,7 @@ public class CustodyStatementOfHoldings {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustodyStatementOfHoldings, List<AdditionalReference2>> mmPreviousReference = new MMMessageBuildingBlock<CustodyStatementOfHoldings, List<AdditionalReference2>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +189,14 @@ public class CustodyStatementOfHoldings {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustodyStatementOfHoldings.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference2> getValue(CustodyStatementOfHoldings obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(CustodyStatementOfHoldings obj, List<AdditionalReference2> value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -224,7 +225,7 @@ public class CustodyStatementOfHoldings {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustodyStatementOfHoldings, List<AdditionalReference2>> mmRelatedReference = new MMMessageBuildingBlock<CustodyStatementOfHoldings, List<AdditionalReference2>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +235,14 @@ public class CustodyStatementOfHoldings {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustodyStatementOfHoldings.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference2> getValue(CustodyStatementOfHoldings obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(CustodyStatementOfHoldings obj, List<AdditionalReference2> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "MsgPgntn", required = true)
@@ -266,7 +269,7 @@ public class CustodyStatementOfHoldings {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustodyStatementOfHoldings, Pagination> mmMessagePagination = new MMMessageBuildingBlock<CustodyStatementOfHoldings, Pagination>() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,12 +280,14 @@ public class CustodyStatementOfHoldings {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustodyStatementOfHoldings.class.getMethod("getMessagePagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(CustodyStatementOfHoldings obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(CustodyStatementOfHoldings obj, Pagination value) {
+			obj.setMessagePagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -310,7 +315,7 @@ public class CustodyStatementOfHoldings {
 	 * "General information related to the custody statement of holdings."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustodyStatementOfHoldings, Statement3> mmStatementGeneralDetails = new MMMessageBuildingBlock<CustodyStatementOfHoldings, Statement3>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +326,14 @@ public class CustodyStatementOfHoldings {
 			complexType_lazy = () -> Statement3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustodyStatementOfHoldings.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement3 getValue(CustodyStatementOfHoldings obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(CustodyStatementOfHoldings obj, Statement3 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
@@ -354,7 +361,7 @@ public class CustodyStatementOfHoldings {
 	 * definition} = "The safekeeping or investment account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustodyStatementOfHoldings, SafekeepingAccount1> mmAccountDetails = new MMMessageBuildingBlock<CustodyStatementOfHoldings, SafekeepingAccount1>() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,12 +372,14 @@ public class CustodyStatementOfHoldings {
 			complexType_lazy = () -> SafekeepingAccount1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustodyStatementOfHoldings.class.getMethod("getAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SafekeepingAccount1 getValue(CustodyStatementOfHoldings obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(CustodyStatementOfHoldings obj, SafekeepingAccount1 value) {
+			obj.setAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "BalForAcct")
@@ -400,7 +409,7 @@ public class CustodyStatementOfHoldings {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBalanceForAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustodyStatementOfHoldings, List<AggregateBalanceInformation1>> mmBalanceForAccount = new MMMessageBuildingBlock<CustodyStatementOfHoldings, List<AggregateBalanceInformation1>>() {
 		{
 			xmlTag = "BalForAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -410,12 +419,14 @@ public class CustodyStatementOfHoldings {
 			complexType_lazy = () -> AggregateBalanceInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustodyStatementOfHoldings.class.getMethod("getBalanceForAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AggregateBalanceInformation1> getValue(CustodyStatementOfHoldings obj) {
+			return obj.getBalanceForAccount();
+		}
+
+		@Override
+		public void setValue(CustodyStatementOfHoldings obj, List<AggregateBalanceInformation1> value) {
+			obj.setBalanceForAccount(value);
 		}
 	};
 	@XmlElement(name = "SubAcctDtls")
@@ -444,7 +455,7 @@ public class CustodyStatementOfHoldings {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustodyStatementOfHoldings, List<SubAccountIdentification1>> mmSubAccountDetails = new MMMessageBuildingBlock<CustodyStatementOfHoldings, List<SubAccountIdentification1>>() {
 		{
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -454,12 +465,14 @@ public class CustodyStatementOfHoldings {
 			complexType_lazy = () -> SubAccountIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustodyStatementOfHoldings.class.getMethod("getSubAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SubAccountIdentification1> getValue(CustodyStatementOfHoldings obj) {
+			return obj.getSubAccountDetails();
+		}
+
+		@Override
+		public void setValue(CustodyStatementOfHoldings obj, List<SubAccountIdentification1> value) {
+			obj.setSubAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "TtlVals")
@@ -487,7 +500,7 @@ public class CustodyStatementOfHoldings {
 	 * definition} = "Value of total holdings reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTotalValues = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustodyStatementOfHoldings, Optional<TotalValueInPageAndStatement>> mmTotalValues = new MMMessageBuildingBlock<CustodyStatementOfHoldings, Optional<TotalValueInPageAndStatement>>() {
 		{
 			xmlTag = "TtlVals";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -498,12 +511,14 @@ public class CustodyStatementOfHoldings {
 			complexType_lazy = () -> TotalValueInPageAndStatement.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustodyStatementOfHoldings.class.getMethod("getTotalValues", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TotalValueInPageAndStatement> getValue(CustodyStatementOfHoldings obj) {
+			return obj.getTotalValues();
+		}
+
+		@Override
+		public void setValue(CustodyStatementOfHoldings obj, Optional<TotalValueInPageAndStatement> value) {
+			obj.setTotalValues(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -532,7 +547,7 @@ public class CustodyStatementOfHoldings {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustodyStatementOfHoldings, List<Extension1>> mmExtension = new MMMessageBuildingBlock<CustodyStatementOfHoldings, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -542,12 +557,14 @@ public class CustodyStatementOfHoldings {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustodyStatementOfHoldings.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(CustodyStatementOfHoldings obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(CustodyStatementOfHoldings obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.PartyIdentification58Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternatePartyIdentification9;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -131,7 +132,7 @@ public class PartyIdentification120 {
 	 * PartyIdentification102.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification120, PartyIdentification58Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification120, PartyIdentification58Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification120.mmObject();
@@ -146,6 +147,16 @@ public class PartyIdentification120 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification58Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification58Choice getValue(PartyIdentification120 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification120 obj, PartyIdentification58Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -186,7 +197,7 @@ public class PartyIdentification120 {
 	 * PartyIdentification102.mmProcessingIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification120, Optional<RestrictedFINXMax16Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentification120, Optional<RestrictedFINXMax16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification120.mmObject();
 			isDerived = false;
@@ -200,9 +211,19 @@ public class PartyIdentification120 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(PartyIdentification120 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification120 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AltrnId")
-	protected List<com.tools20022.repository.msg.AlternatePartyIdentification9> alternateIdentification;
+	protected List<AlternatePartyIdentification9> alternateIdentification;
 	/**
 	 * 
 	 <p>
@@ -245,7 +266,7 @@ public class PartyIdentification120 {
 	 * PartyIdentification102.mmAlternateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification120, List<AlternatePartyIdentification9>> mmAlternateIdentification = new MMMessageAssociationEnd<PartyIdentification120, List<AlternatePartyIdentification9>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification120.mmObject();
@@ -258,7 +279,17 @@ public class PartyIdentification120 {
 			previousVersion_lazy = () -> PartyIdentification102.mmAlternateIdentification;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification9.mmObject();
+			type_lazy = () -> AlternatePartyIdentification9.mmObject();
+		}
+
+		@Override
+		public List<AlternatePartyIdentification9> getValue(PartyIdentification120 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification120 obj, List<AlternatePartyIdentification9> value) {
+			obj.setAlternateIdentification(value);
 		}
 	};
 
@@ -301,7 +332,7 @@ public class PartyIdentification120 {
 		return alternateIdentification == null ? alternateIdentification = new ArrayList<>() : alternateIdentification;
 	}
 
-	public PartyIdentification120 setAlternateIdentification(List<com.tools20022.repository.msg.AlternatePartyIdentification9> alternateIdentification) {
+	public PartyIdentification120 setAlternateIdentification(List<AlternatePartyIdentification9> alternateIdentification) {
 		this.alternateIdentification = Objects.requireNonNull(alternateIdentification);
 		return this;
 	}

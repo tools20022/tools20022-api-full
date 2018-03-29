@@ -111,7 +111,7 @@ public class ProfitAndLoss2Choice {
 	 * ProfitAndLoss1Choice.mmProfit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProfit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProfitAndLoss2Choice, ActiveCurrencyAndAmount> mmProfit = new MMMessageAttribute<ProfitAndLoss2Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInterimProfitAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProfitAndLoss2Choice.mmObject();
@@ -124,6 +124,16 @@ public class ProfitAndLoss2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ProfitAndLoss2Choice obj) {
+			return obj.getProfit();
+		}
+
+		@Override
+		public void setValue(ProfitAndLoss2Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setProfit(value);
 		}
 	};
 	@XmlElement(name = "Loss", required = true)
@@ -166,7 +176,7 @@ public class ProfitAndLoss2Choice {
 	 * ProfitAndLoss1Choice.mmLoss}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProfitAndLoss2Choice, ActiveCurrencyAndAmount> mmLoss = new MMMessageAttribute<ProfitAndLoss2Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInterimProfitAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProfitAndLoss2Choice.mmObject();
@@ -179,6 +189,16 @@ public class ProfitAndLoss2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ProfitAndLoss2Choice obj) {
+			return obj.getLoss();
+		}
+
+		@Override
+		public void setValue(ProfitAndLoss2Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setLoss(value);
 		}
 	};
 

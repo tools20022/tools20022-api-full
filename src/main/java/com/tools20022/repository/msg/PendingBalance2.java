@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SettlementTypeAndIdentification5;
+import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +112,7 @@ public class PendingBalance2 {
 	 * definition} = "Signed quantity of balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingBalance2, SignedQuantityFormat4> mmBalance = new MMMessageAssociationEnd<PendingBalance2, SignedQuantityFormat4>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingBalance2.mmObject();
@@ -123,11 +125,21 @@ public class PendingBalance2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			type_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat4 getValue(PendingBalance2 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(PendingBalance2 obj, SignedQuantityFormat4 value) {
+			obj.setBalance(value);
 		}
 	};
 	@XmlElement(name = "PdgTxs")
-	protected List<com.tools20022.repository.msg.SettlementTypeAndIdentification5> pendingTransactions;
+	protected List<SettlementTypeAndIdentification5> pendingTransactions;
 	/**
 	 * 
 	 <p>
@@ -157,7 +169,7 @@ public class PendingBalance2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingTransactions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingBalance2, List<SettlementTypeAndIdentification5>> mmPendingTransactions = new MMMessageAssociationEnd<PendingBalance2, List<SettlementTypeAndIdentification5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingBalance2.mmObject();
 			isDerived = false;
@@ -167,7 +179,17 @@ public class PendingBalance2 {
 			definition = "Overall process covering the trade and settlement transactions of financial instruments.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification5.mmObject();
+			type_lazy = () -> SettlementTypeAndIdentification5.mmObject();
+		}
+
+		@Override
+		public List<SettlementTypeAndIdentification5> getValue(PendingBalance2 obj) {
+			return obj.getPendingTransactions();
+		}
+
+		@Override
+		public void setValue(PendingBalance2 obj, List<SettlementTypeAndIdentification5> value) {
+			obj.setPendingTransactions(value);
 		}
 	};
 
@@ -189,7 +211,7 @@ public class PendingBalance2 {
 		return balance;
 	}
 
-	public PendingBalance2 setBalance(com.tools20022.repository.msg.SignedQuantityFormat4 balance) {
+	public PendingBalance2 setBalance(SignedQuantityFormat4 balance) {
 		this.balance = Objects.requireNonNull(balance);
 		return this;
 	}
@@ -198,7 +220,7 @@ public class PendingBalance2 {
 		return pendingTransactions == null ? pendingTransactions = new ArrayList<>() : pendingTransactions;
 	}
 
-	public PendingBalance2 setPendingTransactions(List<com.tools20022.repository.msg.SettlementTypeAndIdentification5> pendingTransactions) {
+	public PendingBalance2 setPendingTransactions(List<SettlementTypeAndIdentification5> pendingTransactions) {
 		this.pendingTransactions = Objects.requireNonNull(pendingTransactions);
 		return this;
 	}

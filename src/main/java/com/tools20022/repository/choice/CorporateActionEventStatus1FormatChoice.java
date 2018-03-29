@@ -107,7 +107,7 @@ public class CorporateActionEventStatus1FormatChoice {
 	 * definition} = "Standard code to specify the status of the CA event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventStatus1FormatChoice, CorporateActionEventStatus1Code> mmCode = new MMMessageAttribute<CorporateActionEventStatus1FormatChoice, CorporateActionEventStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmEventStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice.mmObject();
@@ -119,6 +119,16 @@ public class CorporateActionEventStatus1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventStatus1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventStatus1Code getValue(CorporateActionEventStatus1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventStatus1FormatChoice obj, CorporateActionEventStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class CorporateActionEventStatus1FormatChoice {
 	 * definition} = "Proprietary code to express the status of the CA event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventStatus1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<CorporateActionEventStatus1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmEventStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventStatus1FormatChoice.mmObject();
@@ -168,6 +178,16 @@ public class CorporateActionEventStatus1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CorporateActionEventStatus1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventStatus1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

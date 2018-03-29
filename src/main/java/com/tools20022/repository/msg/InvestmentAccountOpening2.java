@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -149,7 +150,7 @@ public class InvestmentAccountOpening2 {
 	 * InvestmentAccountOpening1.mmOpeningType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOpening2, AccountOpeningType1Code> mmOpeningType = new MMMessageAttribute<InvestmentAccountOpening2, AccountOpeningType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening2.mmObject();
 			isDerived = false;
@@ -162,6 +163,16 @@ public class InvestmentAccountOpening2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountOpeningType1Code.mmObject();
+		}
+
+		@Override
+		public AccountOpeningType1Code getValue(InvestmentAccountOpening2 obj) {
+			return obj.getOpeningType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOpening2 obj, AccountOpeningType1Code value) {
+			obj.setOpeningType(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -208,7 +219,7 @@ public class InvestmentAccountOpening2 {
 	 * InvestmentAccountOpening1.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOpening2, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<InvestmentAccountOpening2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening2.mmObject();
 			isDerived = false;
@@ -221,6 +232,16 @@ public class InvestmentAccountOpening2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccountOpening2 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOpening2 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -272,7 +293,7 @@ public class InvestmentAccountOpening2 {
 	 * InvestmentAccountOpening1.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOpening2, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<InvestmentAccountOpening2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening2.mmObject();
@@ -286,6 +307,16 @@ public class InvestmentAccountOpening2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccountOpening2 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOpening2 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyRef")
@@ -338,7 +369,7 @@ public class InvestmentAccountOpening2 {
 	 * InvestmentAccountOpening1.mmCounterpartyReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOpening2, Optional<AdditionalReference6>> mmCounterpartyReference = new MMMessageAttribute<InvestmentAccountOpening2, Optional<AdditionalReference6>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening2.mmObject();
@@ -351,7 +382,17 @@ public class InvestmentAccountOpening2 {
 			previousVersion_lazy = () -> InvestmentAccountOpening1.mmCounterpartyReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
+			complexType_lazy = () -> AdditionalReference6.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference6> getValue(InvestmentAccountOpening2 obj) {
+			return obj.getCounterpartyReference();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOpening2 obj, Optional<AdditionalReference6> value) {
+			obj.setCounterpartyReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExstgAcctId")
@@ -391,7 +432,7 @@ public class InvestmentAccountOpening2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExistingAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOpening2, Optional<Max35Text>> mmExistingAccountIdentification = new MMMessageAttribute<InvestmentAccountOpening2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpening2.mmObject();
 			isDerived = false;
@@ -403,6 +444,16 @@ public class InvestmentAccountOpening2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccountOpening2 obj) {
+			return obj.getExistingAccountIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOpening2 obj, Optional<Max35Text> value) {
+			obj.setExistingAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -455,7 +506,7 @@ public class InvestmentAccountOpening2 {
 		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public InvestmentAccountOpening2 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference6 counterpartyReference) {
+	public InvestmentAccountOpening2 setCounterpartyReference(AdditionalReference6 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
 		return this;
 	}

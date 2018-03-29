@@ -118,7 +118,7 @@ public class Adjustment7 {
 	 * Adjustment6.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Adjustment7, AdjustmentType1Choice> mmType = new MMMessageAssociationEnd<Adjustment7, AdjustmentType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment7.mmObject();
@@ -132,6 +132,16 @@ public class Adjustment7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdjustmentType1Choice.mmObject();
+		}
+
+		@Override
+		public AdjustmentType1Choice getValue(Adjustment7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Adjustment7 obj, AdjustmentType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AmtOrPctg", required = true)
@@ -173,7 +183,7 @@ public class Adjustment7 {
 	 * Adjustment6.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountOrPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment7, AmountOrPercentage2Choice> mmAmountOrPercentage = new MMMessageAttribute<Adjustment7, AmountOrPercentage2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment7.mmObject();
@@ -186,6 +196,16 @@ public class Adjustment7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountOrPercentage2Choice.mmObject();
+		}
+
+		@Override
+		public AmountOrPercentage2Choice getValue(Adjustment7 obj) {
+			return obj.getAmountOrPercentage();
+		}
+
+		@Override
+		public void setValue(Adjustment7 obj, AmountOrPercentage2Choice value) {
+			obj.setAmountOrPercentage(value);
 		}
 	};
 	@XmlElement(name = "Drctn", required = true)
@@ -229,7 +249,7 @@ public class Adjustment7 {
 	 * Adjustment6.mmDirection}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment7, AdjustmentDirection1Code> mmDirection = new MMMessageAttribute<Adjustment7, AdjustmentDirection1Code>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment7.mmObject();
@@ -242,6 +262,16 @@ public class Adjustment7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
+		}
+
+		@Override
+		public AdjustmentDirection1Code getValue(Adjustment7 obj) {
+			return obj.getDirection();
+		}
+
+		@Override
+		public void setValue(Adjustment7 obj, AdjustmentDirection1Code value) {
+			obj.setDirection(value);
 		}
 	};
 

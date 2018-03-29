@@ -52,11 +52,15 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 */
 	public static final MMConstraint<Transfer18> forTransfer18 = new MMConstraint<Transfer18>() {
 		{
-			validator = ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1::checkTransfer18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleAndMultipleTransferConfirmationReferencesGuideline1";
 			definition = "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message.";
 			owner_lazy = () -> Transfer18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer18 obj) throws Exception {
+			checkTransfer18(obj);
 		}
 	};
 	/**
@@ -90,12 +94,16 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 */
 	public static final MMConstraint<Transfer26> forTransfer26 = new MMConstraint<Transfer26>() {
 		{
-			validator = ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1::checkTransfer26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleAndMultipleTransferConfirmationReferencesGuideline1";
 			definition = "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.forTransfer29);
 			owner_lazy = () -> Transfer26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer26 obj) throws Exception {
+			checkTransfer26(obj);
 		}
 	};
 	/**
@@ -120,11 +128,15 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 */
 	public static final MMConstraint<Transfer13> forTransfer13 = new MMConstraint<Transfer13>() {
 		{
-			validator = ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1::checkTransfer13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleAndMultipleTransferConfirmationReferencesGuideline1";
 			definition = "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message.";
 			owner_lazy = () -> Transfer13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer13 obj) throws Exception {
+			checkTransfer13(obj);
 		}
 	};
 	/**
@@ -158,12 +170,16 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 */
 	public static final MMConstraint<Transfer23> forTransfer23 = new MMConstraint<Transfer23>() {
 		{
-			validator = ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1::checkTransfer23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleAndMultipleTransferConfirmationReferencesGuideline1";
 			definition = "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.forTransfer28);
 			owner_lazy = () -> Transfer23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer23 obj) throws Exception {
+			checkTransfer23(obj);
 		}
 	};
 	/**
@@ -203,13 +219,17 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 */
 	public static final MMConstraint<Transfer28> forTransfer28 = new MMConstraint<Transfer28>() {
 		{
-			validator = ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1::checkTransfer28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleAndMultipleTransferConfirmationReferencesGuideline1";
 			definition = "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.forTransfer31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.forTransfer23;
 			owner_lazy = () -> Transfer28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer28 obj) throws Exception {
+			checkTransfer28(obj);
 		}
 	};
 	/**
@@ -249,13 +269,17 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 */
 	public static final MMConstraint<Transfer29> forTransfer29 = new MMConstraint<Transfer29>() {
 		{
-			validator = ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1::checkTransfer29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleAndMultipleTransferConfirmationReferencesGuideline1";
 			definition = "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.forTransfer33);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.forTransfer26;
 			owner_lazy = () -> Transfer29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer29 obj) throws Exception {
+			checkTransfer29(obj);
 		}
 	};
 	/**
@@ -286,12 +310,16 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 */
 	public static final MMConstraint<Transfer31> forTransfer31 = new MMConstraint<Transfer31>() {
 		{
-			validator = ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1::checkTransfer31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleAndMultipleTransferConfirmationReferencesGuideline1";
 			definition = "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.forTransfer28;
 			owner_lazy = () -> Transfer31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer31 obj) throws Exception {
+			checkTransfer31(obj);
 		}
 	};
 	/**
@@ -322,12 +350,16 @@ public class ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1
 	 */
 	public static final MMConstraint<Transfer33> forTransfer33 = new MMConstraint<Transfer33>() {
 		{
-			validator = ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1::checkTransfer33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleAndMultipleTransferConfirmationReferencesGuideline1";
 			definition = "TransferConfirmationReference may each be repeated across multiple instances of the TransferDetails component where the executing party allocates a common reference to several transfers that are being confirmed in the same message.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSingleAndMultipleTransferConfirmationReferencesGuideline1.forTransfer29;
 			owner_lazy = () -> Transfer33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer33 obj) throws Exception {
+			checkTransfer33(obj);
 		}
 	};
 

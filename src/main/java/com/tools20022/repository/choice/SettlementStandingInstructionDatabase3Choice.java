@@ -115,7 +115,7 @@ public class SettlementStandingInstructionDatabase3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementStandingInstructionDatabase3Choice, SettlementStandingInstructionDatabase1Code> mmCode = new MMMessageAttribute<SettlementStandingInstructionDatabase3Choice, SettlementStandingInstructionDatabase1Code>() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmSettlementStandingInstructionDatabase;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStandingInstructionDatabase3Choice.mmObject();
@@ -128,6 +128,16 @@ public class SettlementStandingInstructionDatabase3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementStandingInstructionDatabase1Code.mmObject();
+		}
+
+		@Override
+		public SettlementStandingInstructionDatabase1Code getValue(SettlementStandingInstructionDatabase3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementStandingInstructionDatabase3Choice obj, SettlementStandingInstructionDatabase1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -170,7 +180,7 @@ public class SettlementStandingInstructionDatabase3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementStandingInstructionDatabase3Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<SettlementStandingInstructionDatabase3Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmSettlementStandingInstructionDatabase;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStandingInstructionDatabase3Choice.mmObject();
@@ -183,6 +193,16 @@ public class SettlementStandingInstructionDatabase3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(SettlementStandingInstructionDatabase3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementStandingInstructionDatabase3Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

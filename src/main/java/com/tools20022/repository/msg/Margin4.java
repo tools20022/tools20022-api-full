@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.MarginType1Choice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Amount2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class Margin4 {
 	 * definition} = "Specifies the type of margin that is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Margin4, MarginType1Choice> mmType = new MMMessageAttribute<Margin4, MarginType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmMarginType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Margin4.mmObject();
@@ -126,6 +127,16 @@ public class Margin4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MarginType1Choice.mmObject();
+		}
+
+		@Override
+		public MarginType1Choice getValue(Margin4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Margin4 obj, MarginType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -161,7 +172,7 @@ public class Margin4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Margin4, Amount2> mmAmount = new MMMessageAssociationEnd<Margin4, Amount2>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmTotalMarginAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Margin4.mmObject();
@@ -173,7 +184,17 @@ public class Margin4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
+			type_lazy = () -> Amount2.mmObject();
+		}
+
+		@Override
+		public Amount2 getValue(Margin4 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Margin4 obj, Amount2 value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -207,7 +228,7 @@ public class Margin4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Margin4, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<Margin4, Optional<CreditDebitCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Margin4.mmObject();
 			isDerived = false;
@@ -218,6 +239,16 @@ public class Margin4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(Margin4 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(Margin4 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 
@@ -249,7 +280,7 @@ public class Margin4 {
 		return amount;
 	}
 
-	public Margin4 setAmount(com.tools20022.repository.msg.Amount2 amount) {
+	public Margin4 setAmount(Amount2 amount) {
 		this.amount = Objects.requireNonNull(amount);
 		return this;
 	}

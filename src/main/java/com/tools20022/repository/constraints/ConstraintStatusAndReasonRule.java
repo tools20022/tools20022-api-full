@@ -60,12 +60,16 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraPositionPending1> forIntraPositionPending1 = new MMConstraint<IntraPositionPending1>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraPositionPending1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraPositionPending3);
 			owner_lazy = () -> IntraPositionPending1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionPending1 obj) throws Exception {
+			checkIntraPositionPending1(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraBalanceMovements1> forIntraBalanceMovements1 = new MMConstraint<IntraBalanceMovements1>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraBalanceMovements1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraBalanceMovements2);
 			owner_lazy = () -> IntraBalanceMovements1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceMovements1 obj) throws Exception {
+			checkIntraBalanceMovements1(obj);
 		}
 	};
 	/**
@@ -138,12 +146,16 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraPositionMovements1> forIntraPositionMovements1 = new MMConstraint<IntraPositionMovements1>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraPositionMovements1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraPositionMovements2);
 			owner_lazy = () -> IntraPositionMovements1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovements1 obj) throws Exception {
+			checkIntraPositionMovements1(obj);
 		}
 	};
 	/**
@@ -177,12 +189,16 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraBalancePending1> forIntraBalancePending1 = new MMConstraint<IntraBalancePending1>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraBalancePending1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraBalancePending3);
 			owner_lazy = () -> IntraBalancePending1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalancePending1 obj) throws Exception {
+			checkIntraBalancePending1(obj);
 		}
 	};
 	/**
@@ -213,12 +229,16 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraBalancePending3> forIntraBalancePending3 = new MMConstraint<IntraBalancePending3>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraBalancePending3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraBalancePending1;
 			owner_lazy = () -> IntraBalancePending3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalancePending3 obj) throws Exception {
+			checkIntraBalancePending3(obj);
 		}
 	};
 	/**
@@ -257,13 +277,17 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraPositionMovements2> forIntraPositionMovements2 = new MMConstraint<IntraPositionMovements2>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraPositionMovements2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraPositionMovements3);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraPositionMovements1;
 			owner_lazy = () -> IntraPositionMovements2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovements2 obj) throws Exception {
+			checkIntraPositionMovements2(obj);
 		}
 	};
 	/**
@@ -302,13 +326,17 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraPositionPending3> forIntraPositionPending3 = new MMConstraint<IntraPositionPending3>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraPositionPending3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraPositionPending5);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraPositionPending1;
 			owner_lazy = () -> IntraPositionPending3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionPending3 obj) throws Exception {
+			checkIntraPositionPending3(obj);
 		}
 	};
 	/**
@@ -339,12 +367,16 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraBalanceMovements2> forIntraBalanceMovements2 = new MMConstraint<IntraBalanceMovements2>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraBalanceMovements2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraBalanceMovements1;
 			owner_lazy = () -> IntraBalanceMovements2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceMovements2 obj) throws Exception {
+			checkIntraBalanceMovements2(obj);
 		}
 	};
 	/**
@@ -375,12 +407,16 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraPositionMovements3> forIntraPositionMovements3 = new MMConstraint<IntraPositionMovements3>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraPositionMovements3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraPositionMovements2;
 			owner_lazy = () -> IntraPositionMovements3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovements3 obj) throws Exception {
+			checkIntraPositionMovements3(obj);
 		}
 	};
 	/**
@@ -411,12 +447,16 @@ public class ConstraintStatusAndReasonRule {
 	 */
 	public static final MMConstraint<IntraPositionPending5> forIntraPositionPending5 = new MMConstraint<IntraPositionPending5>() {
 		{
-			validator = ConstraintStatusAndReasonRule::checkIntraPositionPending5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReasonRule";
 			definition = "StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusAndReasonRule.forIntraPositionPending3;
 			owner_lazy = () -> IntraPositionPending5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionPending5 obj) throws Exception {
+			checkIntraPositionPending5(obj);
 		}
 	};
 

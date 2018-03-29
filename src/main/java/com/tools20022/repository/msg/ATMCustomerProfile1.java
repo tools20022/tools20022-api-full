@@ -111,7 +111,7 @@ public class ATMCustomerProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRetrievalMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCustomerProfile1, ATMCustomerProfile1Code> mmRetrievalMode = new MMMessageAttribute<ATMCustomerProfile1, ATMCustomerProfile1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class ATMCustomerProfile1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMCustomerProfile1Code.mmObject();
+		}
+
+		@Override
+		public ATMCustomerProfile1Code getValue(ATMCustomerProfile1 obj) {
+			return obj.getRetrievalMode();
+		}
+
+		@Override
+		public void setValue(ATMCustomerProfile1 obj, ATMCustomerProfile1Code value) {
+			obj.setRetrievalMode(value);
 		}
 	};
 	@XmlElement(name = "PrflRef")
@@ -161,7 +171,7 @@ public class ATMCustomerProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProfileReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCustomerProfile1, Optional<Max35Text>> mmProfileReference = new MMMessageAttribute<ATMCustomerProfile1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class ATMCustomerProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMCustomerProfile1 obj) {
+			return obj.getProfileReference();
+		}
+
+		@Override
+		public void setValue(ATMCustomerProfile1 obj, Optional<Max35Text> value) {
+			obj.setProfileReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrId")
@@ -212,7 +232,7 @@ public class ATMCustomerProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCustomerProfile1, Optional<Max35Text>> mmCustomerIdentification = new MMMessageAttribute<ATMCustomerProfile1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmObject();
 			isDerived = false;
@@ -224,6 +244,16 @@ public class ATMCustomerProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMCustomerProfile1 obj) {
+			return obj.getCustomerIdentification();
+		}
+
+		@Override
+		public void setValue(ATMCustomerProfile1 obj, Optional<Max35Text> value) {
+			obj.setCustomerIdentification(value.orElse(null));
 		}
 	};
 

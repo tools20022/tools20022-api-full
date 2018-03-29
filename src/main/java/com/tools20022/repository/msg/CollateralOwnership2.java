@@ -115,7 +115,7 @@ public class CollateralOwnership2 {
 	 * CollateralOwnership1.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralOwnership2, YesNoIndicator> mmProprietary = new MMMessageAttribute<CollateralOwnership2, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralOwnership2.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class CollateralOwnership2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CollateralOwnership2 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CollateralOwnership2 obj, YesNoIndicator value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "ClntNm")
@@ -168,7 +178,7 @@ public class CollateralOwnership2 {
 	 * CollateralOwnership1.mmClientName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClientName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralOwnership2, Optional<PartyIdentification100Choice>> mmClientName = new MMMessageAssociationEnd<CollateralOwnership2, Optional<PartyIdentification100Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CollateralPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralOwnership2.mmObject();
@@ -182,6 +192,16 @@ public class CollateralOwnership2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification100Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification100Choice> getValue(CollateralOwnership2 obj) {
+			return obj.getClientName();
+		}
+
+		@Override
+		public void setValue(CollateralOwnership2 obj, Optional<PartyIdentification100Choice> value) {
+			obj.setClientName(value.orElse(null));
 		}
 	};
 

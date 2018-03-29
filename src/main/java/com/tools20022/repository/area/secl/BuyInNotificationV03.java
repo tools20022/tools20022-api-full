@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.BuyIn4;
 import com.tools20022.repository.msg.SettlementObligation7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -141,7 +140,7 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInNotificationV03, Optional<Max35Text>> mmTransactionIdentification = new MMMessageBuildingBlock<BuyInNotificationV03, Optional<Max35Text>>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,12 +151,14 @@ public class BuyInNotificationV03 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInNotificationV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(BuyInNotificationV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(BuyInNotificationV03 obj, Optional<Max35Text> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrMmb", required = true)
@@ -187,7 +188,7 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInNotificationV03, PartyIdentification35Choice> mmClearingMember = new MMMessageBuildingBlock<BuyInNotificationV03, PartyIdentification35Choice>() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,12 +199,14 @@ public class BuyInNotificationV03 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInNotificationV03.class.getMethod("getClearingMember", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification35Choice getValue(BuyInNotificationV03 obj) {
+			return obj.getClearingMember();
+		}
+
+		@Override
+		public void setValue(BuyInNotificationV03 obj, PartyIdentification35Choice value) {
+			obj.setClearingMember(value);
 		}
 	};
 	@XmlElement(name = "NtfctnDtls")
@@ -231,7 +234,7 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInNotificationV03, Optional<BuyIn4>> mmNotificationDetails = new MMMessageBuildingBlock<BuyInNotificationV03, Optional<BuyIn4>>() {
 		{
 			xmlTag = "NtfctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,12 +245,14 @@ public class BuyInNotificationV03 {
 			complexType_lazy = () -> BuyIn4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInNotificationV03.class.getMethod("getNotificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<BuyIn4> getValue(BuyInNotificationV03 obj) {
+			return obj.getNotificationDetails();
+		}
+
+		@Override
+		public void setValue(BuyInNotificationV03 obj, Optional<BuyIn4> value) {
+			obj.setNotificationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlSttlmOblgtn", required = true)
@@ -277,7 +282,7 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalSettlementObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInNotificationV03, SettlementObligation7> mmOriginalSettlementObligation = new MMMessageBuildingBlock<BuyInNotificationV03, SettlementObligation7>() {
 		{
 			xmlTag = "OrgnlSttlmOblgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,12 +293,14 @@ public class BuyInNotificationV03 {
 			complexType_lazy = () -> SettlementObligation7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInNotificationV03.class.getMethod("getOriginalSettlementObligation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SettlementObligation7 getValue(BuyInNotificationV03 obj) {
+			return obj.getOriginalSettlementObligation();
+		}
+
+		@Override
+		public void setValue(BuyInNotificationV03 obj, SettlementObligation7 value) {
+			obj.setOriginalSettlementObligation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -323,7 +330,7 @@ public class BuyInNotificationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInNotificationV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<BuyInNotificationV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,12 +340,14 @@ public class BuyInNotificationV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInNotificationV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(BuyInNotificationV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(BuyInNotificationV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

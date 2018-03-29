@@ -20,13 +20,11 @@ package com.tools20022.repository.datatype;
 import com.tools20022.metamodel.MMAmount;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.EuroCurrencyCode;
-import com.tools20022.repository.datatype.EuroMax15Amount.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.*;
 
 /**
  * Number of monetary units specified in a currency, where the unit of currency
@@ -67,11 +65,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </li>
  * </ul>
  */
-@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class EuroMax15Amount {
 
 	final static private AtomicReference<MMAmount> mmObject_lazy = new AtomicReference<>();
-	protected BigDecimal value;
+	@XmlValue
+	protected BigDecimal amount;
+	@XmlAttribute(name = "ccy", required = true)
+	protected EuroCurrencyCode currency;
 
 	final static public MMAmount mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMAmount() {
@@ -91,23 +93,29 @@ public class EuroMax15Amount {
 		return mmObject_lazy.get();
 	}
 
-	public EuroMax15Amount(BigDecimal value) {
-		this.value = value;
+	public EuroMax15Amount() {
 	}
 
-	public BigDecimal toBigDecimal() {
-		return value;
+	public EuroMax15Amount(BigDecimal amount, EuroCurrencyCode currency) {
+		this.amount = amount;
+		this.currency = currency;
 	}
 
-	protected static class InternalXmlAdapter extends XmlAdapter<BigDecimal, EuroMax15Amount> {
-		@Override
-		public EuroMax15Amount unmarshal(BigDecimal value) {
-			return new EuroMax15Amount(value);
-		}
+	public BigDecimal getAmount() {
+		return amount;
+	}
 
-		@Override
-		public BigDecimal marshal(EuroMax15Amount typedData) {
-			return typedData.value;
-		}
+	public EuroCurrencyCode getCurrency() {
+		return currency;
+	}
+
+	public void setAmountAndCurrency(BigDecimal amount, EuroCurrencyCode currency) {
+		this.amount = amount;
+		this.currency = currency;
+	}
+
+	@Override
+	public String toString() {
+		return amount + " " + currency;
 	}
 }

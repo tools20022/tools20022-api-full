@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.choice.UpdateType11Choice;
 import com.tools20022.repository.msg.TransactionDetails64;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -186,7 +185,7 @@ public class SecuritiesSettlementTransactionModificationRequestV03 {
 	 * mmModifiedTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmModifiedTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionModificationRequestV03, TransactionDetails64> mmModifiedTransactionDetails = new MMMessageBuildingBlock<SecuritiesSettlementTransactionModificationRequestV03, TransactionDetails64>() {
 		{
 			xmlTag = "ModfdTxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,12 +198,14 @@ public class SecuritiesSettlementTransactionModificationRequestV03 {
 			complexType_lazy = () -> TransactionDetails64.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionModificationRequestV03.class.getMethod("getModifiedTransactionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionDetails64 getValue(SecuritiesSettlementTransactionModificationRequestV03 obj) {
+			return obj.getModifiedTransactionDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionModificationRequestV03 obj, TransactionDetails64 value) {
+			obj.setModifiedTransactionDetails(value);
 		}
 	};
 	@XmlElement(name = "UpdTp", required = true)
@@ -245,7 +246,7 @@ public class SecuritiesSettlementTransactionModificationRequestV03 {
 	 * SecuritiesSettlementTransactionModificationRequestV02.mmUpdateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUpdateType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionModificationRequestV03, List<UpdateType11Choice>> mmUpdateType = new MMMessageBuildingBlock<SecuritiesSettlementTransactionModificationRequestV03, List<UpdateType11Choice>>() {
 		{
 			xmlTag = "UpdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,12 +259,14 @@ public class SecuritiesSettlementTransactionModificationRequestV03 {
 			complexType_lazy = () -> UpdateType11Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionModificationRequestV03.class.getMethod("getUpdateType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<UpdateType11Choice> getValue(SecuritiesSettlementTransactionModificationRequestV03 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionModificationRequestV03 obj, List<UpdateType11Choice> value) {
+			obj.setUpdateType(value);
 		}
 	};
 

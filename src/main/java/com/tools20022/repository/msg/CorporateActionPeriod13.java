@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -118,7 +119,7 @@ public class CorporateActionPeriod13 {
 	 * CorporateActionPeriod11.mmPriceCalculationPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceCalculationPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod13, Optional<Period11>> mmPriceCalculationPeriod = new MMMessageAssociationEnd<CorporateActionPeriod13, Optional<Period11>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceCalculationPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod13.mmObject();
@@ -131,7 +132,17 @@ public class CorporateActionPeriod13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Period11.mmObject();
+			type_lazy = () -> Period11.mmObject();
+		}
+
+		@Override
+		public Optional<Period11> getValue(CorporateActionPeriod13 obj) {
+			return obj.getPriceCalculationPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod13 obj, Optional<Period11> value) {
+			obj.setPriceCalculationPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActnPrd")
@@ -173,7 +184,7 @@ public class CorporateActionPeriod13 {
 	 * CorporateActionPeriod11.mmActionPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActionPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod13, Optional<Period11>> mmActionPeriod = new MMMessageAssociationEnd<CorporateActionPeriod13, Optional<Period11>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmActionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod13.mmObject();
@@ -186,7 +197,17 @@ public class CorporateActionPeriod13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Period11.mmObject();
+			type_lazy = () -> Period11.mmObject();
+		}
+
+		@Override
+		public Optional<Period11> getValue(CorporateActionPeriod13 obj) {
+			return obj.getActionPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod13 obj, Optional<Period11> value) {
+			obj.setActionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ParllTradgPrd")
@@ -228,7 +249,7 @@ public class CorporateActionPeriod13 {
 	 * CorporateActionPeriod11.mmParallelTradingPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParallelTradingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPeriod13, Optional<Period11>> mmParallelTradingPeriod = new MMMessageAssociationEnd<CorporateActionPeriod13, Optional<Period11>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmParallelTradingPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod13.mmObject();
@@ -241,7 +262,17 @@ public class CorporateActionPeriod13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Period11.mmObject();
+			type_lazy = () -> Period11.mmObject();
+		}
+
+		@Override
+		public Optional<Period11> getValue(CorporateActionPeriod13 obj) {
+			return obj.getParallelTradingPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionPeriod13 obj, Optional<Period11> value) {
+			obj.setParallelTradingPeriod(value.orElse(null));
 		}
 	};
 
@@ -265,7 +296,7 @@ public class CorporateActionPeriod13 {
 		return priceCalculationPeriod == null ? Optional.empty() : Optional.of(priceCalculationPeriod);
 	}
 
-	public CorporateActionPeriod13 setPriceCalculationPeriod(com.tools20022.repository.msg.Period11 priceCalculationPeriod) {
+	public CorporateActionPeriod13 setPriceCalculationPeriod(Period11 priceCalculationPeriod) {
 		this.priceCalculationPeriod = priceCalculationPeriod;
 		return this;
 	}
@@ -274,7 +305,7 @@ public class CorporateActionPeriod13 {
 		return actionPeriod == null ? Optional.empty() : Optional.of(actionPeriod);
 	}
 
-	public CorporateActionPeriod13 setActionPeriod(com.tools20022.repository.msg.Period11 actionPeriod) {
+	public CorporateActionPeriod13 setActionPeriod(Period11 actionPeriod) {
 		this.actionPeriod = actionPeriod;
 		return this;
 	}
@@ -283,7 +314,7 @@ public class CorporateActionPeriod13 {
 		return parallelTradingPeriod == null ? Optional.empty() : Optional.of(parallelTradingPeriod);
 	}
 
-	public CorporateActionPeriod13 setParallelTradingPeriod(com.tools20022.repository.msg.Period11 parallelTradingPeriod) {
+	public CorporateActionPeriod13 setParallelTradingPeriod(Period11 parallelTradingPeriod) {
 		this.parallelTradingPeriod = parallelTradingPeriod;
 		return this;
 	}

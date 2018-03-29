@@ -123,7 +123,7 @@ public class AcceptedStatus7Choice {
 	 * AcceptedStatus4Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptedStatus7Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<AcceptedStatus7Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcceptedStatus7Choice.mmObject();
@@ -136,6 +136,16 @@ public class AcceptedStatus7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AcceptedStatus7Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(AcceptedStatus7Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -176,7 +186,7 @@ public class AcceptedStatus7Choice {
 	 * AcceptedStatus4Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptedStatus7Choice, List<AcceptedStatusReason8>> mmReason = new MMMessageAssociationEnd<AcceptedStatus7Choice, List<AcceptedStatusReason8>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcceptedStatus7Choice.mmObject();
@@ -189,6 +199,16 @@ public class AcceptedStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcceptedStatusReason8.mmObject();
+		}
+
+		@Override
+		public List<AcceptedStatusReason8> getValue(AcceptedStatus7Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AcceptedStatus7Choice obj, List<AcceptedStatusReason8> value) {
+			obj.setReason(value);
 		}
 	};
 

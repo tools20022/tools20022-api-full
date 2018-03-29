@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.cain.AcquirerFinancialInitiation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardTransaction5;
+import com.tools20022.repository.msg.CardTransactionContext1;
+import com.tools20022.repository.msg.CardTransactionEnvironment1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +111,7 @@ public class AcquirerFinancialInitiation1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerFinancialInitiation1, CardTransactionEnvironment1> mmEnvironment = new MMMessageAssociationEnd<AcquirerFinancialInitiation1, CardTransactionEnvironment1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerFinancialInitiation1.mmObject();
 			isDerived = false;
@@ -119,7 +122,17 @@ public class AcquirerFinancialInitiation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment1.mmObject();
+			type_lazy = () -> CardTransactionEnvironment1.mmObject();
+		}
+
+		@Override
+		public CardTransactionEnvironment1 getValue(AcquirerFinancialInitiation1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcquirerFinancialInitiation1 obj, CardTransactionEnvironment1 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cntxt", required = true)
@@ -151,7 +164,7 @@ public class AcquirerFinancialInitiation1 {
 	 * definition} = "Context in which the transaction is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerFinancialInitiation1, CardTransactionContext1> mmContext = new MMMessageAssociationEnd<AcquirerFinancialInitiation1, CardTransactionContext1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerFinancialInitiation1.mmObject();
 			isDerived = false;
@@ -162,7 +175,17 @@ public class AcquirerFinancialInitiation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransactionContext1.mmObject();
+			type_lazy = () -> CardTransactionContext1.mmObject();
+		}
+
+		@Override
+		public CardTransactionContext1 getValue(AcquirerFinancialInitiation1 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(AcquirerFinancialInitiation1 obj, CardTransactionContext1 value) {
+			obj.setContext(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -195,7 +218,7 @@ public class AcquirerFinancialInitiation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerFinancialInitiation1, CardTransaction5> mmTransaction = new MMMessageAssociationEnd<AcquirerFinancialInitiation1, CardTransaction5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerFinancialInitiation1.mmObject();
 			isDerived = false;
@@ -206,7 +229,17 @@ public class AcquirerFinancialInitiation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransaction5.mmObject();
+			type_lazy = () -> CardTransaction5.mmObject();
+		}
+
+		@Override
+		public CardTransaction5 getValue(AcquirerFinancialInitiation1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcquirerFinancialInitiation1 obj, CardTransaction5 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -229,7 +262,7 @@ public class AcquirerFinancialInitiation1 {
 		return environment;
 	}
 
-	public AcquirerFinancialInitiation1 setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment1 environment) {
+	public AcquirerFinancialInitiation1 setEnvironment(CardTransactionEnvironment1 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -238,7 +271,7 @@ public class AcquirerFinancialInitiation1 {
 		return context;
 	}
 
-	public AcquirerFinancialInitiation1 setContext(com.tools20022.repository.msg.CardTransactionContext1 context) {
+	public AcquirerFinancialInitiation1 setContext(CardTransactionContext1 context) {
 		this.context = Objects.requireNonNull(context);
 		return this;
 	}
@@ -247,7 +280,7 @@ public class AcquirerFinancialInitiation1 {
 		return transaction;
 	}
 
-	public AcquirerFinancialInitiation1 setTransaction(com.tools20022.repository.msg.CardTransaction5 transaction) {
+	public AcquirerFinancialInitiation1 setTransaction(CardTransaction5 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

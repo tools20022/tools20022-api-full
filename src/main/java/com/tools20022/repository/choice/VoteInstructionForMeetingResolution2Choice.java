@@ -121,7 +121,7 @@ public class VoteInstructionForMeetingResolution2Choice {
 	 * VoteInstructionForMeetingResolution1Choice.mmVoteIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVoteIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VoteInstructionForMeetingResolution2Choice, VoteInstruction4Code> mmVoteIndication = new MMMessageAttribute<VoteInstructionForMeetingResolution2Choice, VoteInstruction4Code>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
 			componentContext_lazy = () -> com.tools20022.repository.choice.VoteInstructionForMeetingResolution2Choice.mmObject();
@@ -134,6 +134,16 @@ public class VoteInstructionForMeetingResolution2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> VoteInstruction4Code.mmObject();
+		}
+
+		@Override
+		public VoteInstruction4Code getValue(VoteInstructionForMeetingResolution2Choice obj) {
+			return obj.getVoteIndication();
+		}
+
+		@Override
+		public void setValue(VoteInstructionForMeetingResolution2Choice obj, VoteInstruction4Code value) {
+			obj.setVoteIndication(value);
 		}
 	};
 	@XmlElement(name = "Shrhldr", required = true)
@@ -176,7 +186,7 @@ public class VoteInstructionForMeetingResolution2Choice {
 	 * VoteInstructionForMeetingResolution1Choice.mmShareholder}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShareholder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteInstructionForMeetingResolution2Choice, NameAndAddress9> mmShareholder = new MMMessageAssociationEnd<VoteInstructionForMeetingResolution2Choice, NameAndAddress9>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.VoteInstructionForMeetingResolution2Choice.mmObject();
@@ -190,6 +200,16 @@ public class VoteInstructionForMeetingResolution2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NameAndAddress9.mmObject();
+		}
+
+		@Override
+		public NameAndAddress9 getValue(VoteInstructionForMeetingResolution2Choice obj) {
+			return obj.getShareholder();
+		}
+
+		@Override
+		public void setValue(VoteInstructionForMeetingResolution2Choice obj, NameAndAddress9 value) {
+			obj.setShareholder(value);
 		}
 	};
 

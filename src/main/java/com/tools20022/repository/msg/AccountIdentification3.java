@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class AccountIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification3, AccountIdentification1> mmIdentification = new MMMessageAttribute<AccountIdentification3, AccountIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification3.mmObject();
@@ -125,7 +126,17 @@ public class AccountIdentification3 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(AccountIdentification3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentification3 obj, AccountIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -162,7 +173,7 @@ public class AccountIdentification3 {
 	 * definition} = "Entity that assigns the information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification3, Max8Text> mmIssuer = new MMMessageAttribute<AccountIdentification3, Max8Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification3.mmObject();
@@ -174,6 +185,16 @@ public class AccountIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Max8Text getValue(AccountIdentification3 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(AccountIdentification3 obj, Max8Text value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "Inf", required = true)
@@ -208,7 +229,7 @@ public class AccountIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification3, Exact4AlphaNumericText> mmInformation = new MMMessageAttribute<AccountIdentification3, Exact4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification3.mmObject();
 			isDerived = false;
@@ -219,6 +240,16 @@ public class AccountIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(AccountIdentification3 obj) {
+			return obj.getInformation();
+		}
+
+		@Override
+		public void setValue(AccountIdentification3 obj, Exact4AlphaNumericText value) {
+			obj.setInformation(value);
 		}
 	};
 
@@ -241,7 +272,7 @@ public class AccountIdentification3 {
 		return identification;
 	}
 
-	public AccountIdentification3 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public AccountIdentification3 setIdentification(AccountIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

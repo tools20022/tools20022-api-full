@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.DateCode3Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +118,7 @@ public class DateFormat11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat11Choice, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<DateFormat11Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat11Choice.mmObject();
 			isDerived = false;
@@ -128,7 +130,17 @@ public class DateFormat11Choice {
 			nextVersions_lazy = () -> Arrays.asList(DateFormat33Choice.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat11Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat11Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -170,7 +182,7 @@ public class DateFormat11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat11Choice, DateCode3Choice> mmDateCode = new MMMessageAssociationEnd<DateFormat11Choice, DateCode3Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat11Choice.mmObject();
 			isDerived = false;
@@ -183,7 +195,17 @@ public class DateFormat11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateCode3Choice.mmObject();
+			type_lazy = () -> DateCode3Choice.mmObject();
+		}
+
+		@Override
+		public DateCode3Choice getValue(DateFormat11Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat11Choice obj, DateCode3Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -205,7 +227,7 @@ public class DateFormat11Choice {
 		return date;
 	}
 
-	public DateFormat11Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat11Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -214,7 +236,7 @@ public class DateFormat11Choice {
 		return dateCode;
 	}
 
-	public DateFormat11Choice setDateCode(com.tools20022.repository.choice.DateCode3Choice dateCode) {
+	public DateFormat11Choice setDateCode(DateCode3Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

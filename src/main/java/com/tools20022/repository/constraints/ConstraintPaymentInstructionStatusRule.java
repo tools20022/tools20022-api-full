@@ -55,11 +55,15 @@ public class ConstraintPaymentInstructionStatusRule {
 	 */
 	public static final MMConstraint<Transactions2> forTransactions2 = new MMConstraint<Transactions2>() {
 		{
-			validator = ConstraintPaymentInstructionStatusRule::checkTransactions2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusRule";
 			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
 			owner_lazy = () -> Transactions2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions2 obj) throws Exception {
+			checkTransactions2(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintPaymentInstructionStatusRule {
 	 */
 	public static final MMConstraint<Transactions3> forTransactions3 = new MMConstraint<Transactions3>() {
 		{
-			validator = ConstraintPaymentInstructionStatusRule::checkTransactions3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusRule";
 			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
 			owner_lazy = () -> Transactions3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions3 obj) throws Exception {
+			checkTransactions3(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintPaymentInstructionStatusRule {
 	 */
 	public static final MMConstraint<Transactions4> forTransactions4 = new MMConstraint<Transactions4>() {
 		{
-			validator = ConstraintPaymentInstructionStatusRule::checkTransactions4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusRule";
 			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
 			owner_lazy = () -> Transactions4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transactions4 obj) throws Exception {
+			checkTransactions4(obj);
 		}
 	};
 	/**
@@ -154,13 +166,17 @@ public class ConstraintPaymentInstructionStatusRule {
 	 */
 	public static final MMConstraint<Transactions5> forTransactions5 = new MMConstraint<Transactions5>() {
 		{
-			validator = ConstraintPaymentInstructionStatusRule::checkTransactions5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusRule";
 			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPaymentInstructionStatusRule.forTransactions6);
 			owner_lazy = () -> Transactions5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionReport[*]/TransactionOrError/Transaction/Payment/Status[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentCommonInformation/CommonStatus[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Transactions5 obj) throws Exception {
+			checkTransactions5(obj);
 		}
 	};
 	/**
@@ -202,7 +218,6 @@ public class ConstraintPaymentInstructionStatusRule {
 	 */
 	public static final MMConstraint<Transactions6> forTransactions6 = new MMConstraint<Transactions6>() {
 		{
-			validator = ConstraintPaymentInstructionStatusRule::checkTransactions6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusRule";
 			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
@@ -210,6 +225,11 @@ public class ConstraintPaymentInstructionStatusRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInstructionStatusRule.forTransactions5;
 			owner_lazy = () -> Transactions6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionReport[*]/TransactionOrError/Transaction/Payment/Status[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentCommonInformation/CommonStatus[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Transactions6 obj) throws Exception {
+			checkTransactions6(obj);
 		}
 	};
 	/**
@@ -243,13 +263,17 @@ public class ConstraintPaymentInstructionStatusRule {
 	 */
 	public static final MMConstraint<Transactions7> forTransactions7 = new MMConstraint<Transactions7>() {
 		{
-			validator = ConstraintPaymentInstructionStatusRule::checkTransactions7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusRule";
 			definition = "If PaymentCommonInformation/PaymentInstructionStatus is present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is not allowed.\nIf PaymentCommonInformation/PaymentInstructionStatus is not present, then TransactionReport/Transaction/Payment/InstructionStatus/PaymentInstructionStatus is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInstructionStatusRule.forTransactions6;
 			owner_lazy = () -> Transactions7.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionReport[*]/TransactionOrError/Transaction/Payment/Status[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentCommonInformation/CommonStatus[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Transactions7 obj) throws Exception {
+			checkTransactions7(obj);
 		}
 	};
 

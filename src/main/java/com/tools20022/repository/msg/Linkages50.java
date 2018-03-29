@@ -21,10 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06;
-import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07;
-import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07;
-import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.choice.ProcessingPosition23Choice;
 import com.tools20022.repository.datatype.RestrictedFINMax16Text;
 import com.tools20022.repository.GeneratedRepository;
@@ -70,6 +67,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07#mmLinkages
  * SecuritiesSettlementTransactionConfirmation002V07.mmLinkages}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08#mmLinkages
+ * SecuritiesSettlementTransactionConfirmation002V08.mmLinkages}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V09#mmLinkages
+ * SecuritiesSettlementTransactionStatusAdvice002V09.mmLinkages}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,7 +130,7 @@ public class Linkages50 {
 	 * Linkages41.mmProcessingPosition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages50, Optional<ProcessingPosition23Choice>> mmProcessingPosition = new MMMessageAssociationEnd<Linkages50, Optional<ProcessingPosition23Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages50.mmObject();
 			isDerived = false;
@@ -140,6 +143,16 @@ public class Linkages50 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition23Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition23Choice> getValue(Linkages50 obj) {
+			return obj.getProcessingPosition();
+		}
+
+		@Override
+		public void setValue(Linkages50 obj, Optional<ProcessingPosition23Choice> value) {
+			obj.setProcessingPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesSttlmTxId", required = true)
@@ -178,7 +191,7 @@ public class Linkages50 {
 	 * Linkages41.mmSecuritiesSettlementTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesSettlementTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Linkages50, RestrictedFINMax16Text> mmSecuritiesSettlementTransactionIdentification = new MMMessageAttribute<Linkages50, RestrictedFINMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages50.mmObject();
 			isDerived = false;
@@ -191,6 +204,16 @@ public class Linkages50 {
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINMax16Text.mmObject();
 		}
+
+		@Override
+		public RestrictedFINMax16Text getValue(Linkages50 obj) {
+			return obj.getSecuritiesSettlementTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Linkages50 obj, RestrictedFINMax16Text value) {
+			obj.setSecuritiesSettlementTransactionIdentification(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -198,7 +221,8 @@ public class Linkages50 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages50.mmProcessingPosition, com.tools20022.repository.msg.Linkages50.mmSecuritiesSettlementTransactionIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdvice002V07.mmLinkages, SecuritiesSettlementTransactionConfirmation002V06.mmLinkages,
-						SecuritiesSettlementTransactionStatusAdvice002V08.mmLinkages, SecuritiesSettlementTransactionConfirmation002V07.mmLinkages);
+						SecuritiesSettlementTransactionStatusAdvice002V08.mmLinkages, SecuritiesSettlementTransactionConfirmation002V07.mmLinkages, SecuritiesSettlementTransactionConfirmation002V08.mmLinkages,
+						SecuritiesSettlementTransactionStatusAdvice002V09.mmLinkages);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Linkages50";

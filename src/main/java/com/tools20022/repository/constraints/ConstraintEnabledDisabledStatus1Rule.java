@@ -51,12 +51,16 @@ public class ConstraintEnabledDisabledStatus1Rule {
 	 */
 	public static final MMConstraint<AccountStatus2> forAccountStatus2 = new MMConstraint<AccountStatus2>() {
 		{
-			validator = ConstraintEnabledDisabledStatus1Rule::checkAccountStatus2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnabledDisabledStatus1Rule";
 			definition = "If Enabled is present, then Disabled is not allowed.";
 			owner_lazy = () -> AccountStatus2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Disabled</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Enabled</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AccountStatus2 obj) throws Exception {
+			checkAccountStatus2(obj);
 		}
 	};
 

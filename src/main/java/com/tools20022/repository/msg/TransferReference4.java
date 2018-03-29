@@ -104,7 +104,7 @@ public class TransferReference4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference4, Max35Text> mmTransferReference = new MMMessageAttribute<TransferReference4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference4.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class TransferReference4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransferReference4 obj) {
+			return obj.getTransferReference();
+		}
+
+		@Override
+		public void setValue(TransferReference4 obj, Max35Text value) {
+			obj.setTransferReference(value);
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -148,7 +158,7 @@ public class TransferReference4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference4, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<TransferReference4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference4.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class TransferReference4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferReference4 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(TransferReference4 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 

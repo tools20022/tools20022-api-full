@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress5;
+import com.tools20022.repository.msg.PartyIdentificationSD4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -142,7 +144,7 @@ public class PartyIdentificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<PartyIdentificationSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -154,6 +156,16 @@ public class PartyIdentificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(PartyIdentificationSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "AgtTp", required = true)
@@ -197,7 +209,7 @@ public class PartyIdentificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD1, AgentType1Code> mmAgentType = new MMMessageAttribute<PartyIdentificationSD1, AgentType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -210,6 +222,16 @@ public class PartyIdentificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AgentType1Code.mmObject();
+		}
+
+		@Override
+		public AgentType1Code getValue(PartyIdentificationSD1 obj) {
+			return obj.getAgentType();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD1 obj, AgentType1Code value) {
+			obj.setAgentType(value);
 		}
 	};
 	@XmlElement(name = "AgtId")
@@ -252,7 +274,7 @@ public class PartyIdentificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD1, Optional<Max8Text>> mmAgentIdentification = new MMMessageAttribute<PartyIdentificationSD1, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -265,6 +287,16 @@ public class PartyIdentificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(PartyIdentificationSD1 obj) {
+			return obj.getAgentIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD1 obj, Optional<Max8Text> value) {
+			obj.setAgentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtNmAndAdr", required = true)
@@ -307,7 +339,7 @@ public class PartyIdentificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD1, NameAndAddress5> mmAgentNameAndAddress = new MMMessageAttribute<PartyIdentificationSD1, NameAndAddress5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -319,7 +351,17 @@ public class PartyIdentificationSD1 {
 			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationSD5.mmAgentNameAndAddress);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
+			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public NameAndAddress5 getValue(PartyIdentificationSD1 obj) {
+			return obj.getAgentNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD1 obj, NameAndAddress5 value) {
+			obj.setAgentNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "AgtTelNb")
@@ -362,7 +404,7 @@ public class PartyIdentificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentTelephoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD1, Optional<PhoneNumber>> mmAgentTelephoneNumber = new MMMessageAttribute<PartyIdentificationSD1, Optional<PhoneNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -375,6 +417,16 @@ public class PartyIdentificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public Optional<PhoneNumber> getValue(PartyIdentificationSD1 obj) {
+			return obj.getAgentTelephoneNumber();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD1 obj, Optional<PhoneNumber> value) {
+			obj.setAgentTelephoneNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtEmailAdr")
@@ -417,7 +469,7 @@ public class PartyIdentificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationSD1, Optional<Max256Text>> mmAgentEmailAddress = new MMMessageAttribute<PartyIdentificationSD1, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -430,6 +482,16 @@ public class PartyIdentificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(PartyIdentificationSD1 obj) {
+			return obj.getAgentEmailAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD1 obj, Optional<Max256Text> value) {
+			obj.setAgentEmailAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctInf")
@@ -471,7 +533,7 @@ public class PartyIdentificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationSD1, Optional<PartyIdentificationSD4>> mmContactInformation = new MMMessageAssociationEnd<PartyIdentificationSD1, Optional<PartyIdentificationSD4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD1.mmObject();
 			isDerived = false;
@@ -484,7 +546,17 @@ public class PartyIdentificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD4.mmObject();
+			type_lazy = () -> PartyIdentificationSD4.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationSD4> getValue(PartyIdentificationSD1 obj) {
+			return obj.getContactInformation();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD1 obj, Optional<PartyIdentificationSD4> value) {
+			obj.setContactInformation(value.orElse(null));
 		}
 	};
 
@@ -537,7 +609,7 @@ public class PartyIdentificationSD1 {
 		return agentNameAndAddress;
 	}
 
-	public PartyIdentificationSD1 setAgentNameAndAddress(com.tools20022.repository.msg.NameAndAddress5 agentNameAndAddress) {
+	public PartyIdentificationSD1 setAgentNameAndAddress(NameAndAddress5 agentNameAndAddress) {
 		this.agentNameAndAddress = Objects.requireNonNull(agentNameAndAddress);
 		return this;
 	}
@@ -564,7 +636,7 @@ public class PartyIdentificationSD1 {
 		return contactInformation == null ? Optional.empty() : Optional.of(contactInformation);
 	}
 
-	public PartyIdentificationSD1 setContactInformation(com.tools20022.repository.msg.PartyIdentificationSD4 contactInformation) {
+	public PartyIdentificationSD1 setContactInformation(PartyIdentificationSD4 contactInformation) {
 		this.contactInformation = contactInformation;
 		return this;
 	}

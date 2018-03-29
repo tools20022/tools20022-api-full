@@ -52,11 +52,15 @@ public class ConstraintSettlementMethodRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
 		{
-			validator = ConstraintSettlementMethodRule::checkFIToFIPaymentReversalV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethodRule";
 			definition = "GroupHeader/SettlementInformation/SettlementMethod/COVE is not allowed when returning direct debit transactions.";
 			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
+			checkFIToFIPaymentReversalV01(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintSettlementMethodRule {
 	 */
 	public static final MMConstraint<PaymentReturnV01> forPaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
 		{
-			validator = ConstraintSettlementMethodRule::checkPaymentReturnV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethodRule";
 			definition = "GroupHeader/SettlementInformation/SettlementMethod/COVE is not allowed when returning direct debit transactions.";
 			owner_lazy = () -> PaymentReturnV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV01 obj) throws Exception {
+			checkPaymentReturnV01(obj);
 		}
 	};
 

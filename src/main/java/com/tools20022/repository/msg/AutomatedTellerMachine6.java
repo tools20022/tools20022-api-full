@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TransactionEnvironment2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMEquipment1;
+import com.tools20022.repository.msg.PostalAddress17;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -136,7 +138,7 @@ public class AutomatedTellerMachine6 {
 	 * AutomatedTellerMachine1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomatedTellerMachine6, Max35Text> mmIdentification = new MMMessageAttribute<AutomatedTellerMachine6, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine6.mmObject();
 			isDerived = false;
@@ -149,6 +151,16 @@ public class AutomatedTellerMachine6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AutomatedTellerMachine6 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AutomatedTellerMachine6 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlId")
@@ -193,7 +205,7 @@ public class AutomatedTellerMachine6 {
 	 * AutomatedTellerMachine1.mmAdditionalIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomatedTellerMachine6, Optional<Max35Text>> mmAdditionalIdentification = new MMMessageAttribute<AutomatedTellerMachine6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine6.mmObject();
 			isDerived = false;
@@ -206,6 +218,16 @@ public class AutomatedTellerMachine6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AutomatedTellerMachine6 obj) {
+			return obj.getAdditionalIdentification();
+		}
+
+		@Override
+		public void setValue(AutomatedTellerMachine6 obj, Optional<Max35Text> value) {
+			obj.setAdditionalIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeqNb")
@@ -250,7 +272,7 @@ public class AutomatedTellerMachine6 {
 	 * AutomatedTellerMachine1.mmSequenceNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomatedTellerMachine6, Optional<Max35Text>> mmSequenceNumber = new MMMessageAttribute<AutomatedTellerMachine6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine6.mmObject();
 			isDerived = false;
@@ -263,6 +285,16 @@ public class AutomatedTellerMachine6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AutomatedTellerMachine6 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(AutomatedTellerMachine6 obj, Optional<Max35Text> value) {
+			obj.setSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lctn")
@@ -298,7 +330,7 @@ public class AutomatedTellerMachine6 {
 	 * AutomatedTellerMachine1.mmLocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AutomatedTellerMachine6, Optional<PostalAddress17>> mmLocation = new MMMessageAssociationEnd<AutomatedTellerMachine6, Optional<PostalAddress17>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine6.mmObject();
 			isDerived = false;
@@ -310,7 +342,17 @@ public class AutomatedTellerMachine6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress17.mmObject();
+			type_lazy = () -> PostalAddress17.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress17> getValue(AutomatedTellerMachine6 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(AutomatedTellerMachine6 obj, Optional<PostalAddress17> value) {
+			obj.setLocation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LctnCtgy")
@@ -348,7 +390,7 @@ public class AutomatedTellerMachine6 {
 	 * AutomatedTellerMachine1.mmLocationCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomatedTellerMachine6, Optional<TransactionEnvironment2Code>> mmLocationCategory = new MMMessageAttribute<AutomatedTellerMachine6, Optional<TransactionEnvironment2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine6.mmObject();
 			isDerived = false;
@@ -360,6 +402,16 @@ public class AutomatedTellerMachine6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment2Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionEnvironment2Code> getValue(AutomatedTellerMachine6 obj) {
+			return obj.getLocationCategory();
+		}
+
+		@Override
+		public void setValue(AutomatedTellerMachine6 obj, Optional<TransactionEnvironment2Code> value) {
+			obj.setLocationCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Eqpmnt")
@@ -395,7 +447,7 @@ public class AutomatedTellerMachine6 {
 	 * AutomatedTellerMachine1.mmEquipment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEquipment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AutomatedTellerMachine6, Optional<ATMEquipment1>> mmEquipment = new MMMessageAssociationEnd<AutomatedTellerMachine6, Optional<ATMEquipment1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine6.mmObject();
 			isDerived = false;
@@ -407,7 +459,17 @@ public class AutomatedTellerMachine6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
+			type_lazy = () -> ATMEquipment1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMEquipment1> getValue(AutomatedTellerMachine6 obj) {
+			return obj.getEquipment();
+		}
+
+		@Override
+		public void setValue(AutomatedTellerMachine6 obj, Optional<ATMEquipment1> value) {
+			obj.setEquipment(value.orElse(null));
 		}
 	};
 
@@ -459,7 +521,7 @@ public class AutomatedTellerMachine6 {
 		return location == null ? Optional.empty() : Optional.of(location);
 	}
 
-	public AutomatedTellerMachine6 setLocation(com.tools20022.repository.msg.PostalAddress17 location) {
+	public AutomatedTellerMachine6 setLocation(PostalAddress17 location) {
 		this.location = location;
 		return this;
 	}
@@ -477,7 +539,7 @@ public class AutomatedTellerMachine6 {
 		return equipment == null ? Optional.empty() : Optional.of(equipment);
 	}
 
-	public AutomatedTellerMachine6 setEquipment(com.tools20022.repository.msg.ATMEquipment1 equipment) {
+	public AutomatedTellerMachine6 setEquipment(ATMEquipment1 equipment) {
 		this.equipment = equipment;
 		return this;
 	}

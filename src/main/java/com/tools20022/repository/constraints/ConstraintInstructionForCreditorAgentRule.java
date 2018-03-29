@@ -52,11 +52,15 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation1> forCreditTransferTransactionInformation1 = new MMConstraint<CreditTransferTransactionInformation1>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransactionInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation1 obj) throws Exception {
+			checkCreditTransferTransactionInformation1(obj);
 		}
 	};
 	/**
@@ -86,12 +90,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation10> forCreditTransferTransactionInformation10 = new MMConstraint<CreditTransferTransactionInformation10>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransactionInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation10.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation10 obj) throws Exception {
+			checkCreditTransferTransactionInformation10(obj);
 		}
 	};
 	/**
@@ -121,12 +129,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction1> forCreditTransferTransaction1 = new MMConstraint<CreditTransferTransaction1>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransaction1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction1 obj) throws Exception {
+			checkCreditTransferTransaction1(obj);
 		}
 	};
 	/**
@@ -165,13 +177,17 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction6> forCreditTransferTransaction6 = new MMConstraint<CreditTransferTransaction6>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionForCreditorAgentRule.forCreditTransferTransaction20);
 			owner_lazy = () -> CreditTransferTransaction6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction6 obj) throws Exception {
+			checkCreditTransferTransaction6(obj);
 		}
 	};
 	/**
@@ -197,11 +213,15 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation2> forCreditTransferTransactionInformation2 = new MMConstraint<CreditTransferTransactionInformation2>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransactionInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation2 obj) throws Exception {
+			checkCreditTransferTransactionInformation2(obj);
 		}
 	};
 	/**
@@ -231,12 +251,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation11> forCreditTransferTransactionInformation11 = new MMConstraint<CreditTransferTransactionInformation11>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransactionInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation11.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"WithInList\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PartialInstruction3Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionForCreditorAgent[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation11 obj) throws Exception {
+			checkCreditTransferTransactionInformation11(obj);
 		}
 	};
 	/**
@@ -266,12 +290,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction2> forCreditTransferTransaction2 = new MMConstraint<CreditTransferTransaction2>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransaction2.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"WithInList\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PartialInstruction3Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionForCreditorAgent[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction2 obj) throws Exception {
+			checkCreditTransferTransaction2(obj);
 		}
 	};
 	/**
@@ -310,13 +338,17 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction7> forCreditTransferTransaction7 = new MMConstraint<CreditTransferTransaction7>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionForCreditorAgentRule.forCreditTransferTransaction19);
 			owner_lazy = () -> CreditTransferTransaction7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"WithInList\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PartialInstruction3Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionForCreditorAgent[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction7 obj) throws Exception {
+			checkCreditTransferTransaction7(obj);
 		}
 	};
 	/**
@@ -346,12 +378,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation14> forCreditTransferTransactionInformation14 = new MMConstraint<CreditTransferTransactionInformation14>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransactionInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation14.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"WithInList\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PartialInstruction3Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionForCreditorAgent[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation14 obj) throws Exception {
+			checkCreditTransferTransactionInformation14(obj);
 		}
 	};
 	/**
@@ -381,12 +417,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction5> forCreditTransferTransaction5 = new MMConstraint<CreditTransferTransaction5>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransaction5.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"WithInList\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PartialInstruction3Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionForCreditorAgent[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction5 obj) throws Exception {
+			checkCreditTransferTransaction5(obj);
 		}
 	};
 	/**
@@ -425,13 +465,17 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction10> forCreditTransferTransaction10 = new MMConstraint<CreditTransferTransaction10>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionForCreditorAgentRule.forCreditTransferTransaction21);
 			owner_lazy = () -> CreditTransferTransaction10.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"WithInList\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PartialInstruction3Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionForCreditorAgent[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction10 obj) throws Exception {
+			checkCreditTransferTransaction10(obj);
 		}
 	};
 	/**
@@ -461,12 +505,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation7> forCreditTransferTransactionInformation7 = new MMConstraint<CreditTransferTransactionInformation7>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "ISO20022 Rule: \nIf InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionForCreditorAgent[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation7 obj) throws Exception {
+			checkCreditTransferTransactionInformation7(obj);
 		}
 	};
 	/**
@@ -496,12 +544,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation9> forCreditTransferTransactionInformation9 = new MMConstraint<CreditTransferTransactionInformation9>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransactionInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "ISO20022 Rule: \nIf InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"WithInList\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PartialInstruction3Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionForCreditorAgent[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation9 obj) throws Exception {
+			checkCreditTransferTransactionInformation9(obj);
 		}
 	};
 	/**
@@ -545,7 +597,6 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction19> forCreditTransferTransaction19 = new MMConstraint<CreditTransferTransaction19>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains PayCreditorByCheque (CHQB), then CreditorAccount is not allowed.";
@@ -553,6 +604,11 @@ public class ConstraintInstructionForCreditorAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionForCreditorAgentRule.forCreditTransferTransaction7;
 			owner_lazy = () -> CreditTransferTransaction19.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction19 obj) throws Exception {
+			checkCreditTransferTransaction19(obj);
 		}
 	};
 	/**
@@ -596,7 +652,6 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction20> forCreditTransferTransaction20 = new MMConstraint<CreditTransferTransaction20>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
@@ -604,6 +659,11 @@ public class ConstraintInstructionForCreditorAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionForCreditorAgentRule.forCreditTransferTransaction6;
 			owner_lazy = () -> CreditTransferTransaction20.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction20 obj) throws Exception {
+			checkCreditTransferTransaction20(obj);
 		}
 	};
 	/**
@@ -648,7 +708,6 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction21> forCreditTransferTransaction21 = new MMConstraint<CreditTransferTransaction21>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
@@ -656,6 +715,11 @@ public class ConstraintInstructionForCreditorAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionForCreditorAgentRule.forCreditTransferTransaction10;
 			owner_lazy = () -> CreditTransferTransaction21.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction21 obj) throws Exception {
+			checkCreditTransferTransaction21(obj);
 		}
 	};
 	/**
@@ -691,13 +755,17 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction25> forCreditTransferTransaction25 = new MMConstraint<CreditTransferTransaction25>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB (PayCreditorByCheque), then CreditorAccount is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionForCreditorAgentRule.forCreditTransferTransaction19;
 			owner_lazy = () -> CreditTransferTransaction25.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction25 obj) throws Exception {
+			checkCreditTransferTransaction25(obj);
 		}
 	};
 	/**
@@ -733,13 +801,17 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction26> forCreditTransferTransaction26 = new MMConstraint<CreditTransferTransaction26>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionForCreditorAgentRule.forCreditTransferTransaction20;
 			owner_lazy = () -> CreditTransferTransaction26.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction26 obj) throws Exception {
+			checkCreditTransferTransaction26(obj);
 		}
 	};
 	/**
@@ -775,13 +847,17 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction22> forCreditTransferTransaction22 = new MMConstraint<CreditTransferTransaction22>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB (PayCreditorByCheque), then CreditorAccount is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionForCreditorAgentRule.forCreditTransferTransaction21;
 			owner_lazy = () -> CreditTransferTransaction22.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction22 obj) throws Exception {
+			checkCreditTransferTransaction22(obj);
 		}
 	};
 	/**
@@ -811,12 +887,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction27> forCreditTransferTransaction27 = new MMConstraint<CreditTransferTransaction27>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB, then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransaction27.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"WithInList\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PartialInstruction3Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionForCreditorAgent[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction27 obj) throws Exception {
+			checkCreditTransferTransaction27(obj);
 		}
 	};
 	/**
@@ -846,12 +926,16 @@ public class ConstraintInstructionForCreditorAgentRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction30> forCreditTransferTransaction30 = new MMConstraint<CreditTransferTransaction30>() {
 		{
-			validator = ConstraintInstructionForCreditorAgentRule::checkCreditTransferTransaction30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgentRule";
 			definition = "If InstructionForCreditorAgent/Code contains CHQB (PayCreditorByCheque), then CreditorAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransaction30.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InstructionForCreditorAgent[*]/Code</leftOperand><rightOperand>PayCreditorByCheque</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction30 obj) throws Exception {
+			checkCreditTransferTransaction30(obj);
 		}
 	};
 

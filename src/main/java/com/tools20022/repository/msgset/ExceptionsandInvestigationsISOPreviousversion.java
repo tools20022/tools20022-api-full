@@ -33,10 +33,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageSet#getMessageDefinition
  * messageDefinition} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV04
- * UnableToApplyV04}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04
- * ClaimNonReceiptV04}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV04
  * NotificationOfCaseAssignmentV04}</li>
@@ -55,28 +51,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV03
  * DebitAuthorisationResponseV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04
- * DebitAuthorisationRequestV04}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV03
  * CaseStatusReportRequestV03}</li>
  * <li>{@linkplain com.tools20022.repository.area.camt.CaseStatusReportV04
  * CaseStatusReportV04}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV05
+ * UnableToApplyV05}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV06
- * AdditionalPaymentInformationV06}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06
+ * CustomerPaymentCancellationRequestV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05
- * FIToFIPaymentCancellationRequestV05}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV07
+ * AdditionalPaymentInformationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03
- * RequestToModifyPaymentV03}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07
+ * ResolutionOfInvestigationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06
- * ResolutionOfInvestigationV06}</li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV06
+ * FIToFIPaymentCancellationRequestV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05
- * CustomerPaymentCancellationRequestV05}</li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05
+ * DebitAuthorisationRequestV05}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05
+ * ClaimNonReceiptV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04
+ * RequestToModifyPaymentV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -107,10 +107,10 @@ public class ExceptionsandInvestigationsISOPreviousversion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Exceptions and Investigations - ISO - Previous version";
 				definition = "Set of messages to support payment-related investigation activities such as cancellation, modification, unable to apply and claim of non-receipt.\r\n";
-				messageDefinition_lazy = () -> Arrays.asList(UnableToApplyV04.mmObject(), ClaimNonReceiptV04.mmObject(), NotificationOfCaseAssignmentV04.mmObject(), RejectInvestigationV04.mmObject(), CancelCaseAssignmentV03.mmObject(),
-						RequestForDuplicateV04.mmObject(), DuplicateV04.mmObject(), ProprietaryFormatInvestigationV03.mmObject(), DebitAuthorisationResponseV03.mmObject(), DebitAuthorisationRequestV04.mmObject(),
-						CaseStatusReportRequestV03.mmObject(), CaseStatusReportV04.mmObject(), AdditionalPaymentInformationV06.mmObject(), FIToFIPaymentCancellationRequestV05.mmObject(), RequestToModifyPaymentV03.mmObject(),
-						ResolutionOfInvestigationV06.mmObject(), CustomerPaymentCancellationRequestV05.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(NotificationOfCaseAssignmentV04.mmObject(), RejectInvestigationV04.mmObject(), CancelCaseAssignmentV03.mmObject(), RequestForDuplicateV04.mmObject(), DuplicateV04.mmObject(),
+						ProprietaryFormatInvestigationV03.mmObject(), DebitAuthorisationResponseV03.mmObject(), CaseStatusReportRequestV03.mmObject(), CaseStatusReportV04.mmObject(), UnableToApplyV05.mmObject(),
+						CustomerPaymentCancellationRequestV06.mmObject(), AdditionalPaymentInformationV07.mmObject(), ResolutionOfInvestigationV07.mmObject(), FIToFIPaymentCancellationRequestV06.mmObject(),
+						DebitAuthorisationRequestV05.mmObject(), ClaimNonReceiptV05.mmObject(), RequestToModifyPaymentV04.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

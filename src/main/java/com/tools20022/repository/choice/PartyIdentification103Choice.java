@@ -24,9 +24,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06;
-import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05;
-import com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04;
-import com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V05;
+import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
@@ -80,6 +78,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06#mmAccountOwner
  * IntraPositionMovementPostingReport002V06.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V07#mmAccountOwner
+ * IntraPositionMovementConfirmation002V07.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V07#mmAccountOwner
+ * IntraPositionMovementPostingReport002V07.mmAccountOwner}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,7 +143,7 @@ public class PartyIdentification103Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification103Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification103Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification103Choice.mmObject();
@@ -151,6 +155,16 @@ public class PartyIdentification103Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification103Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification103Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -192,7 +206,7 @@ public class PartyIdentification103Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification103Choice, GenericIdentification84> mmProprietaryIdentification = new MMMessageAssociationEnd<PartyIdentification103Choice, GenericIdentification84>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification103Choice.mmObject();
@@ -207,6 +221,16 @@ public class PartyIdentification103Choice {
 			isComposite = true;
 			type_lazy = () -> GenericIdentification84.mmObject();
 		}
+
+		@Override
+		public GenericIdentification84 getValue(PartyIdentification103Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification103Choice obj, GenericIdentification84 value) {
+			obj.setProprietaryIdentification(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -214,7 +238,8 @@ public class PartyIdentification103Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification103Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification103Choice.mmProprietaryIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementPostingReport002V05.mmAccountOwner, IntraPositionMovementInstruction002V04.mmAccountOwner, IntraPositionMovementConfirmation002V05.mmAccountOwner,
-						IntraPositionMovementConfirmation002V06.mmAccountOwner, IntraPositionMovementPostingReport002V06.mmAccountOwner);
+						IntraPositionMovementConfirmation002V06.mmAccountOwner, IntraPositionMovementPostingReport002V06.mmAccountOwner, IntraPositionMovementConfirmation002V07.mmAccountOwner,
+						IntraPositionMovementPostingReport002V07.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

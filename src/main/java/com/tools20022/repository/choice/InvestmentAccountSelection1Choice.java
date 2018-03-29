@@ -108,7 +108,7 @@ public class InvestmentAccountSelection1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountSelection1Choice, AccountIdentification1> mmAccountIdentification = new MMMessageAttribute<InvestmentAccountSelection1Choice, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentAccountSelection1Choice.mmObject();
@@ -120,6 +120,16 @@ public class InvestmentAccountSelection1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(InvestmentAccountSelection1Choice obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountSelection1Choice obj, AccountIdentification1 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "OthrAcctSelctnData", required = true)
@@ -157,7 +167,7 @@ public class InvestmentAccountSelection1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherAccountSelectionData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccountSelection1Choice, InvestmentAccount44> mmOtherAccountSelectionData = new MMMessageAssociationEnd<InvestmentAccountSelection1Choice, InvestmentAccount44>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentAccountSelection1Choice.mmObject();
@@ -170,6 +180,16 @@ public class InvestmentAccountSelection1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccount44.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount44 getValue(InvestmentAccountSelection1Choice obj) {
+			return obj.getOtherAccountSelectionData();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountSelection1Choice obj, InvestmentAccount44 value) {
+			obj.setOtherAccountSelectionData(value);
 		}
 	};
 

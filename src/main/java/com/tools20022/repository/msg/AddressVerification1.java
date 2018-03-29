@@ -100,7 +100,7 @@ public class AddressVerification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddressDigits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AddressVerification1, Optional<Max5NumericText>> mmAddressDigits = new MMMessageAttribute<AddressVerification1, Optional<Max5NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AddressVerification1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class AddressVerification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5NumericText> getValue(AddressVerification1 obj) {
+			return obj.getAddressDigits();
+		}
+
+		@Override
+		public void setValue(AddressVerification1 obj, Optional<Max5NumericText> value) {
+			obj.setAddressDigits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstlCdDgts")
@@ -143,7 +153,7 @@ public class AddressVerification1 {
 	 * definition} = "Numeric characters from the cardholder's postal code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostalCodeDigits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AddressVerification1, Optional<Max5NumericText>> mmPostalCodeDigits = new MMMessageAttribute<AddressVerification1, Optional<Max5NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AddressVerification1.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class AddressVerification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5NumericText> getValue(AddressVerification1 obj) {
+			return obj.getPostalCodeDigits();
+		}
+
+		@Override
+		public void setValue(AddressVerification1 obj, Optional<Max5NumericText> value) {
+			obj.setPostalCodeDigits(value.orElse(null));
 		}
 	};
 

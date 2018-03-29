@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ErrorAction4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -116,7 +116,7 @@ public class ErrorAction4 {
 	 * ErrorAction3.mmActionResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorAction4, List<TerminalManagementActionResult4Code>> mmActionResult = new MMMessageAttribute<ErrorAction4, List<TerminalManagementActionResult4Code>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction4.mmObject();
@@ -128,6 +128,16 @@ public class ErrorAction4 {
 			previousVersion_lazy = () -> ErrorAction3.mmActionResult;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult4Code.mmObject();
+		}
+
+		@Override
+		public List<TerminalManagementActionResult4Code> getValue(ErrorAction4 obj) {
+			return obj.getActionResult();
+		}
+
+		@Override
+		public void setValue(ErrorAction4 obj, List<TerminalManagementActionResult4Code> value) {
+			obj.setActionResult(value);
 		}
 	};
 	@XmlElement(name = "ActnToPrc", required = true)
@@ -169,7 +179,7 @@ public class ErrorAction4 {
 	 * ErrorAction3.mmActionToProcess}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionToProcess = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorAction4, TerminalManagementErrorAction2Code> mmActionToProcess = new MMMessageAttribute<ErrorAction4, TerminalManagementErrorAction2Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionToProcess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction4.mmObject();
@@ -183,6 +193,16 @@ public class ErrorAction4 {
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementErrorAction2Code.mmObject();
 		}
+
+		@Override
+		public TerminalManagementErrorAction2Code getValue(ErrorAction4 obj) {
+			return obj.getActionToProcess();
+		}
+
+		@Override
+		public void setValue(ErrorAction4 obj, TerminalManagementErrorAction2Code value) {
+			obj.setActionToProcess(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -191,7 +211,7 @@ public class ErrorAction4 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorAction4.mmActionResult, com.tools20022.repository.msg.ErrorAction4.mmActionToProcess);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ErrorAction4";
 				definition = "Action to perform in case of error on the related action in progress.";
 				previousVersion_lazy = () -> ErrorAction3.mmObject();

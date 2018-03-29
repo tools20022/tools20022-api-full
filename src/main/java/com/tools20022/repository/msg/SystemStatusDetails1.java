@@ -110,7 +110,7 @@ public class SystemStatusDetails1 {
 	 * definition} = "Current status of a system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemStatusDetails1, SystemStatus2Code> mmStatus = new MMMessageAttribute<SystemStatusDetails1, SystemStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatusDetails1.mmObject();
@@ -122,6 +122,16 @@ public class SystemStatusDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemStatus2Code.mmObject();
+		}
+
+		@Override
+		public SystemStatus2Code getValue(SystemStatusDetails1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(SystemStatusDetails1 obj, SystemStatus2Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "VldtyTm")
@@ -160,7 +170,7 @@ public class SystemStatusDetails1 {
 	 * "Period of time during which the status of the system is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemStatusDetails1, Optional<DateTimePeriodChoice>> mmValidityTime = new MMMessageAttribute<SystemStatusDetails1, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmValidityTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatusDetails1.mmObject();
@@ -172,6 +182,16 @@ public class SystemStatusDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(SystemStatusDetails1 obj) {
+			return obj.getValidityTime();
+		}
+
+		@Override
+		public void setValue(SystemStatusDetails1 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setValidityTime(value.orElse(null));
 		}
 	};
 

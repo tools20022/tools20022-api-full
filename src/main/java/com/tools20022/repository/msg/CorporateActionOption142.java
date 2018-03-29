@@ -28,6 +28,10 @@ import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionNarrative32;
+import com.tools20022.repository.msg.CorporateActionPrice60;
+import com.tools20022.repository.msg.CorporateActionRate71;
+import com.tools20022.repository.msg.SecurityIdentification19;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -181,7 +185,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmOptionNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, OptionNumber1Choice> mmOptionNumber = new MMMessageAssociationEnd<CorporateActionOption142, OptionNumber1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -196,6 +200,16 @@ public class CorporateActionOption142 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OptionNumber1Choice.mmObject();
+		}
+
+		@Override
+		public OptionNumber1Choice getValue(CorporateActionOption142 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, OptionNumber1Choice value) {
+			obj.setOptionNumber(value);
 		}
 	};
 	@XmlElement(name = "OptnTp", required = true)
@@ -241,7 +255,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmOptionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, CorporateActionOption20Choice> mmOptionType = new MMMessageAssociationEnd<CorporateActionOption142, CorporateActionOption20Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -256,6 +270,16 @@ public class CorporateActionOption142 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionOption20Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption20Choice getValue(CorporateActionOption142 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, CorporateActionOption20Choice value) {
+			obj.setOptionType(value);
 		}
 	};
 	@XmlElement(name = "FrctnDspstn")
@@ -300,7 +324,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmFractionDisposition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFractionDisposition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, Optional<FractionDispositionType28Choice>> mmFractionDisposition = new MMMessageAssociationEnd<CorporateActionOption142, Optional<FractionDispositionType28Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -315,6 +339,16 @@ public class CorporateActionOption142 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FractionDispositionType28Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FractionDispositionType28Choice> getValue(CorporateActionOption142 obj) {
+			return obj.getFractionDisposition();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<FractionDispositionType28Choice> value) {
+			obj.setFractionDisposition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChngTp")
@@ -359,7 +393,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmChangeType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChangeType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, List<CorporateActionChangeTypeFormat6Choice>> mmChangeType = new MMMessageAssociationEnd<CorporateActionOption142, List<CorporateActionChangeTypeFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesModification.mmChangeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -373,6 +407,16 @@ public class CorporateActionOption142 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CorporateActionChangeTypeFormat6Choice.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionChangeTypeFormat6Choice> getValue(CorporateActionOption142 obj) {
+			return obj.getChangeType();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, List<CorporateActionChangeTypeFormat6Choice> value) {
+			obj.setChangeType(value);
 		}
 	};
 	@XmlElement(name = "ElgblForCollInd")
@@ -420,7 +464,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmEligibleForCollateralIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEligibleForCollateralIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption142, Optional<YesNoIndicator>> mmEligibleForCollateralIndicator = new MMMessageAttribute<CorporateActionOption142, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmEligibleForCollateral;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -434,6 +478,16 @@ public class CorporateActionOption142 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionOption142 obj) {
+			return obj.getEligibleForCollateralIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<YesNoIndicator> value) {
+			obj.setEligibleForCollateralIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyToBuy")
@@ -481,7 +535,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmCurrencyToBuy}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyToBuy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption142, Optional<ActiveCurrencyCode>> mmCurrencyToBuy = new MMMessageAttribute<CorporateActionOption142, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmCurrencyToBuy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -495,6 +549,16 @@ public class CorporateActionOption142 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(CorporateActionOption142 obj) {
+			return obj.getCurrencyToBuy();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrencyToBuy(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyToSell")
@@ -542,7 +606,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmCurrencyToSell}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyToSell = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption142, Optional<ActiveCurrencyCode>> mmCurrencyToSell = new MMMessageAttribute<CorporateActionOption142, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmCurrencyToSell;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -556,6 +620,16 @@ public class CorporateActionOption142 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(CorporateActionOption142 obj) {
+			return obj.getCurrencyToSell();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrencyToSell(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyOptn")
@@ -603,7 +677,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmCurrencyOption}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyOption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption142, Optional<ActiveCurrencyCode>> mmCurrencyOption = new MMMessageAttribute<CorporateActionOption142, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmCurrencyOption;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -617,6 +691,16 @@ public class CorporateActionOption142 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(CorporateActionOption142 obj) {
+			return obj.getCurrencyOption();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrencyOption(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyId")
@@ -661,7 +745,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, Optional<SecurityIdentification19>> mmSecurityIdentification = new MMMessageAssociationEnd<CorporateActionOption142, Optional<SecurityIdentification19>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -675,7 +759,17 @@ public class CorporateActionOption142 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification19> getValue(CorporateActionOption142 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<SecurityIdentification19> value) {
+			obj.setSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesQtyOrInstdAmt", required = true)
@@ -722,7 +816,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmSecuritiesQuantityOrInstructedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesQuantityOrInstructedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, SecuritiesQuantityOrAmount3Choice> mmSecuritiesQuantityOrInstructedAmount = new MMMessageAssociationEnd<CorporateActionOption142, SecuritiesQuantityOrAmount3Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -737,6 +831,16 @@ public class CorporateActionOption142 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesQuantityOrAmount3Choice.mmObject();
+		}
+
+		@Override
+		public SecuritiesQuantityOrAmount3Choice getValue(CorporateActionOption142 obj) {
+			return obj.getSecuritiesQuantityOrInstructedAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, SecuritiesQuantityOrAmount3Choice value) {
+			obj.setSecuritiesQuantityOrInstructedAmount(value);
 		}
 	};
 	@XmlElement(name = "ExctnReqdDtTm")
@@ -783,7 +887,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmExecutionRequestedDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExecutionRequestedDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, Optional<DateAndDateTime2Choice>> mmExecutionRequestedDateTime = new MMMessageAssociationEnd<CorporateActionOption142, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmExecutionRequestedDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -798,6 +902,16 @@ public class CorporateActionOption142 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(CorporateActionOption142 obj) {
+			return obj.getExecutionRequestedDateTime();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setExecutionRequestedDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RateAndAmtDtls")
@@ -843,7 +957,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmRateAndAmountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateAndAmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, Optional<CorporateActionRate71>> mmRateAndAmountDetails = new MMMessageAssociationEnd<CorporateActionOption142, Optional<CorporateActionRate71>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -857,7 +971,17 @@ public class CorporateActionOption142 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionRate71.mmObject();
+			type_lazy = () -> CorporateActionRate71.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionRate71> getValue(CorporateActionOption142 obj) {
+			return obj.getRateAndAmountDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<CorporateActionRate71> value) {
+			obj.setRateAndAmountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricDtls")
@@ -903,7 +1027,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmPriceDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, Optional<CorporateActionPrice60>> mmPriceDetails = new MMMessageAssociationEnd<CorporateActionOption142, Optional<CorporateActionPrice60>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
@@ -917,7 +1041,17 @@ public class CorporateActionOption142 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice60.mmObject();
+			type_lazy = () -> CorporateActionPrice60.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionPrice60> getValue(CorporateActionOption142 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<CorporateActionPrice60> value) {
+			obj.setPriceDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -957,7 +1091,7 @@ public class CorporateActionOption142 {
 	 * CorporateActionOption131.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption142, Optional<CorporateActionNarrative32>> mmAdditionalInformation = new MMMessageAssociationEnd<CorporateActionOption142, Optional<CorporateActionNarrative32>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption142.mmObject();
 			isDerived = false;
@@ -970,7 +1104,17 @@ public class CorporateActionOption142 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative32.mmObject();
+			type_lazy = () -> CorporateActionNarrative32.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionNarrative32> getValue(CorporateActionOption142 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption142 obj, Optional<CorporateActionNarrative32> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 
@@ -1074,7 +1218,7 @@ public class CorporateActionOption142 {
 		return securityIdentification == null ? Optional.empty() : Optional.of(securityIdentification);
 	}
 
-	public CorporateActionOption142 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification19 securityIdentification) {
+	public CorporateActionOption142 setSecurityIdentification(SecurityIdentification19 securityIdentification) {
 		this.securityIdentification = securityIdentification;
 		return this;
 	}
@@ -1101,7 +1245,7 @@ public class CorporateActionOption142 {
 		return rateAndAmountDetails == null ? Optional.empty() : Optional.of(rateAndAmountDetails);
 	}
 
-	public CorporateActionOption142 setRateAndAmountDetails(com.tools20022.repository.msg.CorporateActionRate71 rateAndAmountDetails) {
+	public CorporateActionOption142 setRateAndAmountDetails(CorporateActionRate71 rateAndAmountDetails) {
 		this.rateAndAmountDetails = rateAndAmountDetails;
 		return this;
 	}
@@ -1110,7 +1254,7 @@ public class CorporateActionOption142 {
 		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public CorporateActionOption142 setPriceDetails(com.tools20022.repository.msg.CorporateActionPrice60 priceDetails) {
+	public CorporateActionOption142 setPriceDetails(CorporateActionPrice60 priceDetails) {
 		this.priceDetails = priceDetails;
 		return this;
 	}
@@ -1119,7 +1263,7 @@ public class CorporateActionOption142 {
 		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public CorporateActionOption142 setAdditionalInformation(com.tools20022.repository.msg.CorporateActionNarrative32 additionalInformation) {
+	public CorporateActionOption142 setAdditionalInformation(CorporateActionNarrative32 additionalInformation) {
 		this.additionalInformation = additionalInformation;
 		return this;
 	}

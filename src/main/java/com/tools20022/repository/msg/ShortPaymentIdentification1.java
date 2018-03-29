@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.InstructingAgentRole;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class ShortPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ShortPaymentIdentification1, Max35Text> mmTransactionIdentification = new MMMessageAttribute<ShortPaymentIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPaymentIdentification1.mmObject();
@@ -130,6 +131,16 @@ public class ShortPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ShortPaymentIdentification1 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ShortPaymentIdentification1 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt", required = true)
@@ -168,7 +179,7 @@ public class ShortPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterBankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ShortPaymentIdentification1, ISODate> mmInterBankSettlementDate = new MMMessageAttribute<ShortPaymentIdentification1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPaymentIdentification1.mmObject();
@@ -180,6 +191,16 @@ public class ShortPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ShortPaymentIdentification1 obj) {
+			return obj.getInterBankSettlementDate();
+		}
+
+		@Override
+		public void setValue(ShortPaymentIdentification1 obj, ISODate value) {
+			obj.setInterBankSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "InstgAgt", required = true)
@@ -218,7 +239,7 @@ public class ShortPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ShortPaymentIdentification1, BranchAndFinancialInstitutionIdentification5> mmInstructingAgent = new MMMessageAssociationEnd<ShortPaymentIdentification1, BranchAndFinancialInstitutionIdentification5>() {
 		{
 			businessComponentTrace_lazy = () -> InstructingAgentRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ShortPaymentIdentification1.mmObject();
@@ -230,7 +251,17 @@ public class ShortPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification5 getValue(ShortPaymentIdentification1 obj) {
+			return obj.getInstructingAgent();
+		}
+
+		@Override
+		public void setValue(ShortPaymentIdentification1 obj, BranchAndFinancialInstitutionIdentification5 value) {
+			obj.setInstructingAgent(value);
 		}
 	};
 
@@ -271,7 +302,7 @@ public class ShortPaymentIdentification1 {
 		return instructingAgent;
 	}
 
-	public ShortPaymentIdentification1 setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingAgent) {
+	public ShortPaymentIdentification1 setInstructingAgent(BranchAndFinancialInstitutionIdentification5 instructingAgent) {
 		this.instructingAgent = Objects.requireNonNull(instructingAgent);
 		return this;
 	}

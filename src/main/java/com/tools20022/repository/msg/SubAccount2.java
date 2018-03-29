@@ -101,7 +101,7 @@ public class SubAccount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccount2, Max35Text> mmIdentification = new MMMessageAttribute<SubAccount2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccount2.mmObject();
@@ -113,6 +113,16 @@ public class SubAccount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SubAccount2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SubAccount2 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

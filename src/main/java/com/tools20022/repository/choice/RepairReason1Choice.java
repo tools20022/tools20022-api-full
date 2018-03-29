@@ -128,7 +128,7 @@ public class RepairReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepairReason1Choice, RepairReason4Code> mmCode = new MMMessageAttribute<RepairReason1Choice, RepairReason4Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepairReason1Choice.mmObject();
@@ -142,6 +142,16 @@ public class RepairReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RepairReason4Code.mmObject();
+		}
+
+		@Override
+		public RepairReason4Code getValue(RepairReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RepairReason1Choice obj, RepairReason4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -192,7 +202,7 @@ public class RepairReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepairReason1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<RepairReason1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepairReason1Choice.mmObject();
@@ -206,6 +216,16 @@ public class RepairReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(RepairReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RepairReason1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

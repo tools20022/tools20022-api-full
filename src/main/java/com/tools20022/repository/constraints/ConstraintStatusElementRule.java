@@ -50,11 +50,15 @@ public class ConstraintStatusElementRule {
 	 */
 	public static final MMConstraint<AccountStatus2> forAccountStatus2 = new MMConstraint<AccountStatus2>() {
 		{
-			validator = ConstraintStatusElementRule::checkAccountStatus2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusElementRule";
 			definition = "One of the elements (Enabled, Disabled, Pending, PendingOpening, Proforma, Closed, ClosurePending, Other) must be present.";
 			owner_lazy = () -> AccountStatus2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountStatus2 obj) throws Exception {
+			checkAccountStatus2(obj);
 		}
 	};
 

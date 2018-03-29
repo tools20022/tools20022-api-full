@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorCancellationAdviceResponse1;
 import com.tools20022.repository.msg.ContentInformationType3;
 import com.tools20022.repository.msg.Header2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +124,7 @@ public class AcceptorCancellationAdviceResponseV01 {
 	 * "Cancellation advice response message management information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV01, Header2> mmHeader = new MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV01, Header2>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,12 +135,14 @@ public class AcceptorCancellationAdviceResponseV01 {
 			complexType_lazy = () -> Header2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCancellationAdviceResponseV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header2 getValue(AcceptorCancellationAdviceResponseV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdviceResponseV01 obj, Header2 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "AccptrCxlAdvcRspn", required = true)
@@ -169,7 +170,7 @@ public class AcceptorCancellationAdviceResponseV01 {
 	 * definition} = "Information related to the cancellation advice response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAcceptorCancellationAdviceResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV01, AcceptorCancellationAdviceResponse1> mmAcceptorCancellationAdviceResponse = new MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV01, AcceptorCancellationAdviceResponse1>() {
 		{
 			xmlTag = "AccptrCxlAdvcRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,12 +181,14 @@ public class AcceptorCancellationAdviceResponseV01 {
 			complexType_lazy = () -> AcceptorCancellationAdviceResponse1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCancellationAdviceResponseV01.class.getMethod("getAcceptorCancellationAdviceResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorCancellationAdviceResponse1 getValue(AcceptorCancellationAdviceResponseV01 obj) {
+			return obj.getAcceptorCancellationAdviceResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdviceResponseV01 obj, AcceptorCancellationAdviceResponse1 value) {
+			obj.setAcceptorCancellationAdviceResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -213,7 +216,7 @@ public class AcceptorCancellationAdviceResponseV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV01, ContentInformationType3> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV01, ContentInformationType3>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +227,14 @@ public class AcceptorCancellationAdviceResponseV01 {
 			complexType_lazy = () -> ContentInformationType3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCancellationAdviceResponseV01.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType3 getValue(AcceptorCancellationAdviceResponseV01 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdviceResponseV01 obj, ContentInformationType3 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

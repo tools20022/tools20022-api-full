@@ -36,6 +36,10 @@ import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection29;
+import com.tools20022.repository.msg.AmountAndDirection5;
+import com.tools20022.repository.msg.OtherAmounts16;
+import com.tools20022.repository.msg.Price4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -162,7 +166,7 @@ public class TwoLegTransactionDetails1 {
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TwoLegTransactionDetails1, Optional<TradeDate1Choice>> mmTradeDate = new MMMessageAttribute<TwoLegTransactionDetails1, Optional<TradeDate1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
@@ -174,6 +178,16 @@ public class TwoLegTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeDate1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TradeDate1Choice> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<TradeDate1Choice> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OpngLegId")
@@ -212,7 +226,7 @@ public class TwoLegTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TwoLegTransactionDetails1, Optional<Max35Text>> mmOpeningLegIdentification = new MMMessageAttribute<TwoLegTransactionDetails1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
@@ -224,6 +238,16 @@ public class TwoLegTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getOpeningLegIdentification();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<Max35Text> value) {
+			obj.setOpeningLegIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgLegId")
@@ -262,7 +286,7 @@ public class TwoLegTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TwoLegTransactionDetails1, Optional<Max35Text>> mmClosingLegIdentification = new MMMessageAttribute<TwoLegTransactionDetails1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
@@ -274,6 +298,16 @@ public class TwoLegTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getClosingLegIdentification();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<Max35Text> value) {
+			obj.setClosingLegIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrssTradAmt")
@@ -312,7 +346,7 @@ public class TwoLegTransactionDetails1 {
 	 * "Principal amount of a trade (price multiplied by quantity)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossTradeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TwoLegTransactionDetails1, Optional<AmountAndDirection29>> mmGrossTradeAmount = new MMMessageAttribute<TwoLegTransactionDetails1, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
@@ -323,11 +357,21 @@ public class TwoLegTransactionDetails1 {
 			definition = "Principal amount of a trade (price multiplied by quantity).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getGrossTradeAmount();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<AmountAndDirection29> value) {
+			obj.setGrossTradeAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrAmts")
-	protected List<com.tools20022.repository.msg.OtherAmounts16> otherAmounts;
+	protected List<OtherAmounts16> otherAmounts;
 	/**
 	 * 
 	 <p>
@@ -359,7 +403,7 @@ public class TwoLegTransactionDetails1 {
 	 * definition} = "Identifies other amounts pertaining to the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TwoLegTransactionDetails1, List<OtherAmounts16>> mmOtherAmounts = new MMMessageAssociationEnd<TwoLegTransactionDetails1, List<OtherAmounts16>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesFinancing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
@@ -370,7 +414,17 @@ public class TwoLegTransactionDetails1 {
 			definition = "Identifies other amounts pertaining to the transaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherAmounts16.mmObject();
+			type_lazy = () -> OtherAmounts16.mmObject();
+		}
+
+		@Override
+		public List<OtherAmounts16> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getOtherAmounts();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, List<OtherAmounts16> value) {
+			obj.setOtherAmounts(value);
 		}
 	};
 	@XmlElement(name = "ScndLegNrrtv")
@@ -404,7 +458,7 @@ public class TwoLegTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondLegNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TwoLegTransactionDetails1, Optional<Max140Text>> mmSecondLegNarrative = new MMMessageAttribute<TwoLegTransactionDetails1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
@@ -415,6 +469,16 @@ public class TwoLegTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getSecondLegNarrative();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<Max140Text> value) {
+			obj.setSecondLegNarrative(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndPric")
@@ -450,7 +514,7 @@ public class TwoLegTransactionDetails1 {
 	 * definition} = "Negotiated fixed price of the security to buy it back."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TwoLegTransactionDetails1, Optional<Price4>> mmEndPrice = new MMMessageAttribute<TwoLegTransactionDetails1, Optional<Price4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmEndPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
@@ -461,7 +525,17 @@ public class TwoLegTransactionDetails1 {
 			definition = "Negotiated fixed price of the security to buy it back.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getEndPrice();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<Price4> value) {
+			obj.setEndPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -501,7 +575,7 @@ public class TwoLegTransactionDetails1 {
 	 * "Closing date/time or maturity date/time of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TwoLegTransactionDetails1, Optional<ClosingDate1Choice>> mmClosingDate = new MMMessageAssociationEnd<TwoLegTransactionDetails1, Optional<ClosingDate1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
@@ -515,6 +589,16 @@ public class TwoLegTransactionDetails1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ClosingDate1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ClosingDate1Choice> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<ClosingDate1Choice> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgSttlmAmt")
@@ -552,7 +636,7 @@ public class TwoLegTransactionDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosingSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TwoLegTransactionDetails1, Optional<AmountAndDirection5>> mmClosingSettlementAmount = new MMMessageAssociationEnd<TwoLegTransactionDetails1, Optional<AmountAndDirection5>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmTerminationTransactionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
@@ -564,7 +648,17 @@ public class TwoLegTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
+			type_lazy = () -> AmountAndDirection5.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection5> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getClosingSettlementAmount();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<AmountAndDirection5> value) {
+			obj.setClosingSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgDt")
@@ -597,7 +691,7 @@ public class TwoLegTransactionDetails1 {
 	 * definition} = "Processing date of the trading session."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TwoLegTransactionDetails1, Optional<TradeDate4Choice>> mmProcessingDate = new MMMessageAttribute<TwoLegTransactionDetails1, Optional<TradeDate4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
 			isDerived = false;
@@ -608,6 +702,16 @@ public class TwoLegTransactionDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TradeDate4Choice> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getProcessingDate();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<TradeDate4Choice> value) {
+			obj.setProcessingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TwoLegTxTp")
@@ -644,7 +748,7 @@ public class TwoLegTransactionDetails1 {
 	 * definition} = "Specifies the type of the second leg transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTwoLegTransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TwoLegTransactionDetails1, Optional<TwoLegTransactionType1Choice>> mmTwoLegTransactionType = new MMMessageAssociationEnd<TwoLegTransactionDetails1, Optional<TwoLegTransactionType1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesFinancing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TwoLegTransactionDetails1.mmObject();
@@ -657,6 +761,16 @@ public class TwoLegTransactionDetails1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TwoLegTransactionType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TwoLegTransactionType1Choice> getValue(TwoLegTransactionDetails1 obj) {
+			return obj.getTwoLegTransactionType();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionDetails1 obj, Optional<TwoLegTransactionType1Choice> value) {
+			obj.setTwoLegTransactionType(value.orElse(null));
 		}
 	};
 
@@ -712,7 +826,7 @@ public class TwoLegTransactionDetails1 {
 		return grossTradeAmount == null ? Optional.empty() : Optional.of(grossTradeAmount);
 	}
 
-	public TwoLegTransactionDetails1 setGrossTradeAmount(com.tools20022.repository.msg.AmountAndDirection29 grossTradeAmount) {
+	public TwoLegTransactionDetails1 setGrossTradeAmount(AmountAndDirection29 grossTradeAmount) {
 		this.grossTradeAmount = grossTradeAmount;
 		return this;
 	}
@@ -721,7 +835,7 @@ public class TwoLegTransactionDetails1 {
 		return otherAmounts == null ? otherAmounts = new ArrayList<>() : otherAmounts;
 	}
 
-	public TwoLegTransactionDetails1 setOtherAmounts(List<com.tools20022.repository.msg.OtherAmounts16> otherAmounts) {
+	public TwoLegTransactionDetails1 setOtherAmounts(List<OtherAmounts16> otherAmounts) {
 		this.otherAmounts = Objects.requireNonNull(otherAmounts);
 		return this;
 	}
@@ -739,7 +853,7 @@ public class TwoLegTransactionDetails1 {
 		return endPrice == null ? Optional.empty() : Optional.of(endPrice);
 	}
 
-	public TwoLegTransactionDetails1 setEndPrice(com.tools20022.repository.msg.Price4 endPrice) {
+	public TwoLegTransactionDetails1 setEndPrice(Price4 endPrice) {
 		this.endPrice = endPrice;
 		return this;
 	}
@@ -757,7 +871,7 @@ public class TwoLegTransactionDetails1 {
 		return closingSettlementAmount == null ? Optional.empty() : Optional.of(closingSettlementAmount);
 	}
 
-	public TwoLegTransactionDetails1 setClosingSettlementAmount(com.tools20022.repository.msg.AmountAndDirection5 closingSettlementAmount) {
+	public TwoLegTransactionDetails1 setClosingSettlementAmount(AmountAndDirection5 closingSettlementAmount) {
 		this.closingSettlementAmount = closingSettlementAmount;
 		return this;
 	}

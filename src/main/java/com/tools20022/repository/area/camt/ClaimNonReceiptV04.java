@@ -27,9 +27,7 @@ import com.tools20022.repository.msg.Case3;
 import com.tools20022.repository.msg.CaseAssignment3;
 import com.tools20022.repository.msg.MissingCover3;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -113,9 +111,6 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion
- * ExceptionsandInvestigationsISOPreviousversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
@@ -192,7 +187,7 @@ public class ClaimNonReceiptV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ClaimNonReceiptV04, CaseAssignment3> mmAssignment = new MMMessageBuildingBlock<ClaimNonReceiptV04, CaseAssignment3>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,12 +199,14 @@ public class ClaimNonReceiptV04 {
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ClaimNonReceiptV04.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment3 getValue(ClaimNonReceiptV04 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(ClaimNonReceiptV04 obj, CaseAssignment3 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -243,7 +240,7 @@ public class ClaimNonReceiptV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ClaimNonReceiptV04, Case3> mmCase = new MMMessageBuildingBlock<ClaimNonReceiptV04, Case3>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,12 +252,14 @@ public class ClaimNonReceiptV04 {
 			complexType_lazy = () -> Case3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ClaimNonReceiptV04.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case3 getValue(ClaimNonReceiptV04 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(ClaimNonReceiptV04 obj, Case3 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -298,7 +297,7 @@ public class ClaimNonReceiptV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ClaimNonReceiptV04, UnderlyingTransaction2Choice> mmUnderlying = new MMMessageBuildingBlock<ClaimNonReceiptV04, UnderlyingTransaction2Choice>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,12 +309,14 @@ public class ClaimNonReceiptV04 {
 			complexType_lazy = () -> UnderlyingTransaction2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ClaimNonReceiptV04.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnderlyingTransaction2Choice getValue(ClaimNonReceiptV04 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(ClaimNonReceiptV04 obj, UnderlyingTransaction2Choice value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "CoverDtls")
@@ -352,7 +353,7 @@ public class ClaimNonReceiptV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCoverDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ClaimNonReceiptV04, Optional<MissingCover3>> mmCoverDetails = new MMMessageBuildingBlock<ClaimNonReceiptV04, Optional<MissingCover3>>() {
 		{
 			xmlTag = "CoverDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,12 +365,14 @@ public class ClaimNonReceiptV04 {
 			complexType_lazy = () -> MissingCover3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ClaimNonReceiptV04.class.getMethod("getCoverDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MissingCover3> getValue(ClaimNonReceiptV04 obj) {
+			return obj.getCoverDetails();
+		}
+
+		@Override
+		public void setValue(ClaimNonReceiptV04 obj, Optional<MissingCover3> value) {
+			obj.setCoverDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -407,7 +410,7 @@ public class ClaimNonReceiptV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ClaimNonReceiptV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ClaimNonReceiptV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -418,12 +421,14 @@ public class ClaimNonReceiptV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ClaimNonReceiptV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ClaimNonReceiptV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ClaimNonReceiptV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -435,7 +440,7 @@ public class ClaimNonReceiptV04 {
 				definition = "Scope\nThe Claim Non Receipt message is sent by a case creator/case assigner to a case assignee.\nThis message is used to initiate an investigation for missing funds at the creditor (missing credit entry to its account) or at an agent along the processing chain (missing cover for a received payment instruction).\nUsage\nThe claim non receipt case occurs in two situations: \n- The creditor is expecting funds from a particular debtor and cannot find the corresponding credit entry on its account. In this situation, it is understood that the creditor will contact its debtor, and that the debtor will trigger the claim non receipt case on its behalf. A workflow where the creditor directly addresses a Claim Non Receipt message to its account servicing institution is not retained.\n- An agent in the processing chain cannot find a cover payment corresponding to a received payment instruction. In this situation, the agent may directly trigger the investigation by sending a Claim Non Receipt message to the sender of the original payment instruction.\nThe Claim Non Receipt message covers one and only one payment instruction at a time. If several expected payment instructions/cover instructions are found missing, then multiple Claim Non Receipt messages must be sent.\nDepending on the result of the investigation by a case assignee (incorrect routing, errors/omissions when processing the instruction or even the absence of an error) and the stage at which the payment instruction is being process, the claim non receipt case may lead to a: \n- Request To Cancel Payment message, sent to the subsequent agent in the payment processing chain, if the original payment instruction has been incorrectly routed through the chain of agents. (This also implies that a new, corrected, payment instruction is issued).\n- Request To Modify Payment message, sent to the subsequent agent in the payment processing chain, if a truncation or omission has occurred during the processing of the original payment instruction.\nIf the above situations occur, the assignee wanting to request a payment cancellation or payment modification should first send out a Resolution Of Investigation with a confirmation status that indicates that either cancellation (CWFW) modification (MWFW) or unable to apply (UWFW) will follow. (See section on Resolution Of Investigation for more details).\nIn the cover is missing, the case assignee may also simply issue the omitted cover payment or when the initial cover information was incorrect, update the cover (through modification and/or cancellation as required) with the correction information provided in the ClaimNonReceipt message. The case assignee will issue a Resolution Of Investigation message with the CorrectionTransaction element mentioning the references of the cover payment.\nThe Claim Non Receipt message may be forwarded to subsequent case assignees.\nThe ClaimNonReceipt message has the following main characteristics: \n- Case Identification: \nThe case creator assigns a unique case identification. This information will be passed unchanged to subsequent case assignee(s).\n- Underlying Payment: \nThe case creator refers to the underlying payment instruction for the unambiguous identification of the payment instruction. This identification needs to be updated by the subsequent case assigner(s) in order to match the one used with their case assignee(s).\n- MissingCoverIndicator: \nThe MissingCoverIndication element distinguishes between a missing cover situation (when set to YES) or a missing funds situation (when set to NO).\n- CoverCorrection\nThe CoverCorrection element allows the case assigner to provide corrected cover information, when these are incorrect in the underlying payment instruction for which the cover is issued.";
 				nextVersions_lazy = () -> Arrays.asList(ClaimNonReceiptV05.mmObject());
 				previousVersion_lazy = () -> ClaimNonReceiptV03.mmObject();
-				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOPreviousversion.mmObject(), ISOArchive.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "ClmNonRct";
 				businessArea_lazy = () -> CashManagementArchive.mmObject();

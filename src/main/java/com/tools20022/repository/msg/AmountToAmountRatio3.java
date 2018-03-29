@@ -104,7 +104,7 @@ public class AmountToAmountRatio3 {
 	 * definition} = "Numerator of the quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountToAmountRatio3, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount1 = new MMMessageAttribute<AmountToAmountRatio3, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountRatio.mmAmount1;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountToAmountRatio3.mmObject();
@@ -116,6 +116,16 @@ public class AmountToAmountRatio3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(AmountToAmountRatio3 obj) {
+			return obj.getAmount1();
+		}
+
+		@Override
+		public void setValue(AmountToAmountRatio3 obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount1(value);
 		}
 	};
 	@XmlElement(name = "Amt2", required = true)
@@ -153,7 +163,7 @@ public class AmountToAmountRatio3 {
 	 * definition} = "Denominator of the quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountToAmountRatio3, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount2 = new MMMessageAttribute<AmountToAmountRatio3, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountRatio.mmAmount2;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountToAmountRatio3.mmObject();
@@ -165,6 +175,16 @@ public class AmountToAmountRatio3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(AmountToAmountRatio3 obj) {
+			return obj.getAmount2();
+		}
+
+		@Override
+		public void setValue(AmountToAmountRatio3 obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount2(value);
 		}
 	};
 

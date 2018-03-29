@@ -54,12 +54,16 @@ public class ConstraintNonWorkingDayAdjustmentRule {
 	 */
 	public static final MMConstraint<TimeFrame3> forTimeFrame3 = new MMConstraint<TimeFrame3>() {
 		{
-			validator = ConstraintNonWorkingDayAdjustmentRule::checkTimeFrame3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonWorkingDayAdjustmentRule";
 			definition = "If NonWorkingDayAdjustment element is present then TradeMinus element must also be present.";
 			owner_lazy = () -> TimeFrame3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TradeMinus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/NonWorkingDayAdjustment</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TimeFrame3 obj) throws Exception {
+			checkTimeFrame3(obj);
 		}
 	};
 

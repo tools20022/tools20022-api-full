@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.CorporateActionEventRegistration;
 import com.tools20022.repository.entity.CorporateActionServicing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NotificationIdentification2;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -138,7 +139,7 @@ public class EventInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventInformation2, RestrictedFINXMax16Text> mmCorporateActionEventIdentification = new MMMessageAttribute<EventInformation2, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation2.mmObject();
@@ -151,6 +152,16 @@ public class EventInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(EventInformation2 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(EventInformation2 obj, RestrictedFINXMax16Text value) {
+			obj.setCorporateActionEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "OffclCorpActnEvtId")
@@ -193,7 +204,7 @@ public class EventInformation2 {
 	 * "Provides the reference of the linked official corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOfficialCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventInformation2, Optional<RestrictedFINXMax16Text>> mmOfficialCorporateActionEventIdentification = new MMMessageAttribute<EventInformation2, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmOfficialCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation2.mmObject();
@@ -206,6 +217,16 @@ public class EventInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(EventInformation2 obj) {
+			return obj.getOfficialCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(EventInformation2 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setOfficialCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp", required = true)
@@ -245,7 +266,7 @@ public class EventInformation2 {
 	 * definition} = "Type of corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventInformation2, CorporateActionEventType4Choice> mmEventType = new MMMessageAssociationEnd<EventInformation2, CorporateActionEventType4Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation2.mmObject();
@@ -259,6 +280,16 @@ public class EventInformation2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventType4Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType4Choice getValue(EventInformation2 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(EventInformation2 obj, CorporateActionEventType4Choice value) {
+			obj.setEventType(value);
 		}
 	};
 	@XmlElement(name = "MndtryVlntryEvtTp", required = true)
@@ -300,7 +331,7 @@ public class EventInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMandatoryVoluntaryEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventInformation2, CorporateActionMandatoryVoluntary2Choice> mmMandatoryVoluntaryEventType = new MMMessageAssociationEnd<EventInformation2, CorporateActionMandatoryVoluntary2Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation2.mmObject();
@@ -314,6 +345,16 @@ public class EventInformation2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionMandatoryVoluntary2Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionMandatoryVoluntary2Choice getValue(EventInformation2 obj) {
+			return obj.getMandatoryVoluntaryEventType();
+		}
+
+		@Override
+		public void setValue(EventInformation2 obj, CorporateActionMandatoryVoluntary2Choice value) {
+			obj.setMandatoryVoluntaryEventType(value);
 		}
 	};
 	@XmlElement(name = "LastNtfctnId")
@@ -355,7 +396,7 @@ public class EventInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLastNotificationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventInformation2, Optional<NotificationIdentification2>> mmLastNotificationIdentification = new MMMessageAssociationEnd<EventInformation2, Optional<NotificationIdentification2>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionServicing.mmCorporateActionEventNotification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventInformation2.mmObject();
@@ -368,7 +409,17 @@ public class EventInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NotificationIdentification2.mmObject();
+			type_lazy = () -> NotificationIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<NotificationIdentification2> getValue(EventInformation2 obj) {
+			return obj.getLastNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(EventInformation2 obj, Optional<NotificationIdentification2> value) {
+			obj.setLastNotificationIdentification(value.orElse(null));
 		}
 	};
 
@@ -436,7 +487,7 @@ public class EventInformation2 {
 		return lastNotificationIdentification == null ? Optional.empty() : Optional.of(lastNotificationIdentification);
 	}
 
-	public EventInformation2 setLastNotificationIdentification(com.tools20022.repository.msg.NotificationIdentification2 lastNotificationIdentification) {
+	public EventInformation2 setLastNotificationIdentification(NotificationIdentification2 lastNotificationIdentification) {
 		this.lastNotificationIdentification = lastNotificationIdentification;
 		return this;
 	}

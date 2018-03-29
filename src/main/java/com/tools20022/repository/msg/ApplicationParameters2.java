@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -135,7 +136,7 @@ public class ApplicationParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ApplicationParameters2, Max35Text> mmApplicationIdentification = new MMMessageAttribute<ApplicationParameters2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters2.mmObject();
@@ -148,6 +149,16 @@ public class ApplicationParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ApplicationParameters2 obj) {
+			return obj.getApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(ApplicationParameters2 obj, Max35Text value) {
+			obj.setApplicationIdentification(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -188,7 +199,7 @@ public class ApplicationParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ApplicationParameters2, Max16Text> mmVersion = new MMMessageAttribute<ApplicationParameters2, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters2.mmObject();
 			isDerived = false;
@@ -200,6 +211,16 @@ public class ApplicationParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(ApplicationParameters2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(ApplicationParameters2 obj, Max16Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "Params")
@@ -241,7 +262,7 @@ public class ApplicationParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ApplicationParameters2, List<Max10000Binary>> mmParameters = new MMMessageAttribute<ApplicationParameters2, List<Max10000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters2.mmObject();
 			isDerived = false;
@@ -252,6 +273,16 @@ public class ApplicationParameters2 {
 			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters3.mmParameters);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		@Override
+		public List<Max10000Binary> getValue(ApplicationParameters2 obj) {
+			return obj.getParameters();
+		}
+
+		@Override
+		public void setValue(ApplicationParameters2 obj, List<Max10000Binary> value) {
+			obj.setParameters(value);
 		}
 	};
 	@XmlElement(name = "NcrptdParams")
@@ -293,7 +324,7 @@ public class ApplicationParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncryptedParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ApplicationParameters2, Optional<ContentInformationType5>> mmEncryptedParameters = new MMMessageAssociationEnd<ApplicationParameters2, Optional<ContentInformationType5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters2.mmObject();
 			isDerived = false;
@@ -305,7 +336,17 @@ public class ApplicationParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType5.mmObject();
+			type_lazy = () -> ContentInformationType5.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType5> getValue(ApplicationParameters2 obj) {
+			return obj.getEncryptedParameters();
+		}
+
+		@Override
+		public void setValue(ApplicationParameters2 obj, Optional<ContentInformationType5> value) {
+			obj.setEncryptedParameters(value.orElse(null));
 		}
 	};
 
@@ -357,7 +398,7 @@ public class ApplicationParameters2 {
 		return encryptedParameters == null ? Optional.empty() : Optional.of(encryptedParameters);
 	}
 
-	public ApplicationParameters2 setEncryptedParameters(com.tools20022.repository.msg.ContentInformationType5 encryptedParameters) {
+	public ApplicationParameters2 setEncryptedParameters(ContentInformationType5 encryptedParameters) {
 		this.encryptedParameters = encryptedParameters;
 		return this;
 	}

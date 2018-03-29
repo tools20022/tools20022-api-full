@@ -125,7 +125,7 @@ public class TemporaryFinancialInstrumentIndicator3Choice {
 	 * TemporaryFinancialInstrumentIndicator1Choice.mmTemporaryIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTemporaryIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TemporaryFinancialInstrumentIndicator3Choice, YesNoIndicator> mmTemporaryIndicator = new MMMessageAttribute<TemporaryFinancialInstrumentIndicator3Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator3Choice.mmObject();
@@ -139,6 +139,16 @@ public class TemporaryFinancialInstrumentIndicator3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(TemporaryFinancialInstrumentIndicator3Choice obj) {
+			return obj.getTemporaryIndicator();
+		}
+
+		@Override
+		public void setValue(TemporaryFinancialInstrumentIndicator3Choice obj, YesNoIndicator value) {
+			obj.setTemporaryIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class TemporaryFinancialInstrumentIndicator3Choice {
 	 * TemporaryFinancialInstrumentIndicator1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TemporaryFinancialInstrumentIndicator3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<TemporaryFinancialInstrumentIndicator3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator3Choice.mmObject();
@@ -196,6 +206,16 @@ public class TemporaryFinancialInstrumentIndicator3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(TemporaryFinancialInstrumentIndicator3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TemporaryFinancialInstrumentIndicator3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

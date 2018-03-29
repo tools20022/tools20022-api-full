@@ -126,7 +126,7 @@ public class SettlementStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementStatus5Choice, SecuritiesSettlementStatus2Code> mmCode = new MMMessageAttribute<SettlementStatus5Choice, SecuritiesSettlementStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStatus5Choice.mmObject();
@@ -139,6 +139,16 @@ public class SettlementStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesSettlementStatus2Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlementStatus2Code getValue(SettlementStatus5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementStatus5Choice obj, SecuritiesSettlementStatus2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +195,7 @@ public class SettlementStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementStatus5Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<SettlementStatus5Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementStatus5Choice.mmObject();
@@ -199,6 +209,16 @@ public class SettlementStatus5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(SettlementStatus5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementStatus5Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

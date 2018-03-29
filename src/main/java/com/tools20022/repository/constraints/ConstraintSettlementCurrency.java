@@ -51,11 +51,15 @@ public class ConstraintSettlementCurrency {
 	 */
 	public static final MMConstraint<Order3> forOrder3 = new MMConstraint<Order3>() {
 		{
-			validator = ConstraintSettlementCurrency::checkOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "SettlementCurrency must be present if ForeignExchangeExecutionRequested equals Yes.";
 			owner_lazy = () -> Order3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Order3 obj) throws Exception {
+			checkOrder3(obj);
 		}
 	};
 	/**
@@ -80,11 +84,15 @@ public class ConstraintSettlementCurrency {
 	 */
 	public static final MMConstraint<Order6> forOrder6 = new MMConstraint<Order6>() {
 		{
-			validator = ConstraintSettlementCurrency::checkOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "SettlementCurrency must be present if ForeignExchangeExecutionRequested equals Yes.";
 			owner_lazy = () -> Order6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Order6 obj) throws Exception {
+			checkOrder6(obj);
 		}
 	};
 

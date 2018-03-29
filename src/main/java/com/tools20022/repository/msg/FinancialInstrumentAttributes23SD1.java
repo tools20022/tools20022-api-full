@@ -109,7 +109,7 @@ public class FinancialInstrumentAttributes23SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes23SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<FinancialInstrumentAttributes23SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes23SD1.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class FinancialInstrumentAttributes23SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(FinancialInstrumentAttributes23SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes23SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstFctvDtClssfctn", required = true)
@@ -154,7 +164,7 @@ public class FinancialInstrumentAttributes23SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostEffectiveDateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes23SD1, InstitutionalClassificationCode> mmPostEffectiveDateClassification = new MMMessageAttribute<FinancialInstrumentAttributes23SD1, InstitutionalClassificationCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes23SD1.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class FinancialInstrumentAttributes23SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstitutionalClassificationCode.mmObject();
+		}
+
+		@Override
+		public InstitutionalClassificationCode getValue(FinancialInstrumentAttributes23SD1 obj) {
+			return obj.getPostEffectiveDateClassification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes23SD1 obj, InstitutionalClassificationCode value) {
+			obj.setPostEffectiveDateClassification(value);
 		}
 	};
 

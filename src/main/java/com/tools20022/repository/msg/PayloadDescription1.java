@@ -21,6 +21,10 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ApplicationSpecifics1;
+import com.tools20022.repository.msg.ManifestDetails1;
+import com.tools20022.repository.msg.PayloadDetails1;
+import com.tools20022.repository.msg.PayloadTypeDetails1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -101,7 +105,7 @@ public class PayloadDescription1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayloadDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PayloadDescription1, PayloadDetails1> mmPayloadDetails = new MMMessageAssociationEnd<PayloadDescription1, PayloadDetails1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDescription1.mmObject();
 			isDerived = false;
@@ -112,7 +116,17 @@ public class PayloadDescription1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PayloadDetails1.mmObject();
+			type_lazy = () -> PayloadDetails1.mmObject();
+		}
+
+		@Override
+		public PayloadDetails1 getValue(PayloadDescription1 obj) {
+			return obj.getPayloadDetails();
+		}
+
+		@Override
+		public void setValue(PayloadDescription1 obj, PayloadDetails1 value) {
+			obj.setPayloadDetails(value);
 		}
 	};
 	@XmlElement(name = "ApplSpcfcInf")
@@ -145,7 +159,7 @@ public class PayloadDescription1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmApplicationSpecificInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PayloadDescription1, Optional<ApplicationSpecifics1>> mmApplicationSpecificInformation = new MMMessageAssociationEnd<PayloadDescription1, Optional<ApplicationSpecifics1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDescription1.mmObject();
 			isDerived = false;
@@ -156,7 +170,17 @@ public class PayloadDescription1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ApplicationSpecifics1.mmObject();
+			type_lazy = () -> ApplicationSpecifics1.mmObject();
+		}
+
+		@Override
+		public Optional<ApplicationSpecifics1> getValue(PayloadDescription1 obj) {
+			return obj.getApplicationSpecificInformation();
+		}
+
+		@Override
+		public void setValue(PayloadDescription1 obj, Optional<ApplicationSpecifics1> value) {
+			obj.setApplicationSpecificInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PyldTpDtls", required = true)
@@ -187,7 +211,7 @@ public class PayloadDescription1 {
 	 * definition} = "Identification of the type of payload."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayloadTypeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PayloadDescription1, PayloadTypeDetails1> mmPayloadTypeDetails = new MMMessageAssociationEnd<PayloadDescription1, PayloadTypeDetails1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDescription1.mmObject();
 			isDerived = false;
@@ -198,11 +222,21 @@ public class PayloadDescription1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PayloadTypeDetails1.mmObject();
+			type_lazy = () -> PayloadTypeDetails1.mmObject();
+		}
+
+		@Override
+		public PayloadTypeDetails1 getValue(PayloadDescription1 obj) {
+			return obj.getPayloadTypeDetails();
+		}
+
+		@Override
+		public void setValue(PayloadDescription1 obj, PayloadTypeDetails1 value) {
+			obj.setPayloadTypeDetails(value);
 		}
 	};
 	@XmlElement(name = "MnfstDtls")
-	protected List<com.tools20022.repository.msg.ManifestDetails1> manifestDetails;
+	protected List<ManifestDetails1> manifestDetails;
 	/**
 	 * 
 	 <p>
@@ -231,7 +265,7 @@ public class PayloadDescription1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmManifestDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PayloadDescription1, List<ManifestDetails1>> mmManifestDetails = new MMMessageAssociationEnd<PayloadDescription1, List<ManifestDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDescription1.mmObject();
 			isDerived = false;
@@ -241,7 +275,17 @@ public class PayloadDescription1 {
 			definition = "Manifest that describes the related items or attachments.\r\nThis block is repeated for each different type of item.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ManifestDetails1.mmObject();
+			type_lazy = () -> ManifestDetails1.mmObject();
+		}
+
+		@Override
+		public List<ManifestDetails1> getValue(PayloadDescription1 obj) {
+			return obj.getManifestDetails();
+		}
+
+		@Override
+		public void setValue(PayloadDescription1 obj, List<ManifestDetails1> value) {
+			obj.setManifestDetails(value);
 		}
 	};
 
@@ -263,7 +307,7 @@ public class PayloadDescription1 {
 		return payloadDetails;
 	}
 
-	public PayloadDescription1 setPayloadDetails(com.tools20022.repository.msg.PayloadDetails1 payloadDetails) {
+	public PayloadDescription1 setPayloadDetails(PayloadDetails1 payloadDetails) {
 		this.payloadDetails = Objects.requireNonNull(payloadDetails);
 		return this;
 	}
@@ -272,7 +316,7 @@ public class PayloadDescription1 {
 		return applicationSpecificInformation == null ? Optional.empty() : Optional.of(applicationSpecificInformation);
 	}
 
-	public PayloadDescription1 setApplicationSpecificInformation(com.tools20022.repository.msg.ApplicationSpecifics1 applicationSpecificInformation) {
+	public PayloadDescription1 setApplicationSpecificInformation(ApplicationSpecifics1 applicationSpecificInformation) {
 		this.applicationSpecificInformation = applicationSpecificInformation;
 		return this;
 	}
@@ -281,7 +325,7 @@ public class PayloadDescription1 {
 		return payloadTypeDetails;
 	}
 
-	public PayloadDescription1 setPayloadTypeDetails(com.tools20022.repository.msg.PayloadTypeDetails1 payloadTypeDetails) {
+	public PayloadDescription1 setPayloadTypeDetails(PayloadTypeDetails1 payloadTypeDetails) {
 		this.payloadTypeDetails = Objects.requireNonNull(payloadTypeDetails);
 		return this;
 	}
@@ -290,7 +334,7 @@ public class PayloadDescription1 {
 		return manifestDetails == null ? manifestDetails = new ArrayList<>() : manifestDetails;
 	}
 
-	public PayloadDescription1 setManifestDetails(List<com.tools20022.repository.msg.ManifestDetails1> manifestDetails) {
+	public PayloadDescription1 setManifestDetails(List<ManifestDetails1> manifestDetails) {
 		this.manifestDetails = Objects.requireNonNull(manifestDetails);
 		return this;
 	}

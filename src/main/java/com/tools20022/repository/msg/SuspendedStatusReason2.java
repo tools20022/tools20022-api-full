@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +137,7 @@ public class SuspendedStatusReason2 {
 	 * definition} = "Reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReason2, SuspendedStatusReason3Code> mmReason = new MMMessageAttribute<SuspendedStatusReason2, SuspendedStatusReason3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason2.mmObject();
@@ -148,6 +149,16 @@ public class SuspendedStatusReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReason3Code.mmObject();
+		}
+
+		@Override
+		public SuspendedStatusReason3Code getValue(SuspendedStatusReason2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason2 obj, SuspendedStatusReason3Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -180,7 +191,7 @@ public class SuspendedStatusReason2 {
 	 * definition} = "Reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReason2, Extended350Code> mmExtendedReason = new MMMessageAttribute<SuspendedStatusReason2, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason2.mmObject();
 			isDerived = false;
@@ -191,6 +202,16 @@ public class SuspendedStatusReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(SuspendedStatusReason2 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason2 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -227,7 +248,7 @@ public class SuspendedStatusReason2 {
 	 * "Proprietary identification of the reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SuspendedStatusReason2, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<SuspendedStatusReason2, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason2.mmObject();
@@ -239,7 +260,17 @@ public class SuspendedStatusReason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(SuspendedStatusReason2 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason2 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -277,7 +308,7 @@ public class SuspendedStatusReason2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReason2, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<SuspendedStatusReason2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason2.mmObject();
@@ -289,6 +320,16 @@ public class SuspendedStatusReason2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SuspendedStatusReason2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason2 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	/**
@@ -385,7 +426,7 @@ public class SuspendedStatusReason2 {
 		return dataSourceScheme;
 	}
 
-	public SuspendedStatusReason2 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public SuspendedStatusReason2 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

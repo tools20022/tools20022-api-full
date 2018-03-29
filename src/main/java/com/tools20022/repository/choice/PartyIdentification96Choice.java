@@ -129,7 +129,7 @@ public class PartyIdentification96Choice {
 	 * PartyIdentification90Choice.mmAnyBIC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification96Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification96Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification96Choice.mmObject();
@@ -142,6 +142,16 @@ public class PartyIdentification96Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification96Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification96Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -186,7 +196,7 @@ public class PartyIdentification96Choice {
 	 * PartyIdentification90Choice.mmProprietaryIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification96Choice, GenericIdentification1> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification96Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification96Choice.mmObject();
@@ -199,6 +209,16 @@ public class PartyIdentification96Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(PartyIdentification96Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification96Choice obj, GenericIdentification1 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -241,7 +261,7 @@ public class PartyIdentification96Choice {
 	 * PartyIdentification90Choice.mmNameAndAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification96Choice, NameAndAddress15> mmNameAndAddress = new MMMessageAttribute<PartyIdentification96Choice, NameAndAddress15>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification96Choice.mmObject();
@@ -254,6 +274,16 @@ public class PartyIdentification96Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NameAndAddress15.mmObject();
+		}
+
+		@Override
+		public NameAndAddress15 getValue(PartyIdentification96Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification96Choice obj, NameAndAddress15 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "TaxIdNb", required = true)
@@ -290,7 +320,7 @@ public class PartyIdentification96Choice {
 	 * definition} = "Number assigned by a tax authority to an entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification96Choice, Max35Text> mmTaxIdentificationNumber = new MMMessageAttribute<PartyIdentification96Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification96Choice.mmObject();
@@ -302,6 +332,16 @@ public class PartyIdentification96Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PartyIdentification96Choice obj) {
+			return obj.getTaxIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(PartyIdentification96Choice obj, Max35Text value) {
+			obj.setTaxIdentificationNumber(value);
 		}
 	};
 	@XmlElement(name = "NtlRegnNb", required = true)
@@ -339,7 +379,7 @@ public class PartyIdentification96Choice {
 	 * "Number assigned by a national registration authority to an entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNationalRegistrationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification96Choice, Max35Text> mmNationalRegistrationNumber = new MMMessageAttribute<PartyIdentification96Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmNationalRegistrationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification96Choice.mmObject();
@@ -351,6 +391,16 @@ public class PartyIdentification96Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PartyIdentification96Choice obj) {
+			return obj.getNationalRegistrationNumber();
+		}
+
+		@Override
+		public void setValue(PartyIdentification96Choice obj, Max35Text value) {
+			obj.setNationalRegistrationNumber(value);
 		}
 	};
 

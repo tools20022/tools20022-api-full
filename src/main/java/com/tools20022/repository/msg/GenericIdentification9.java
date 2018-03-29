@@ -145,7 +145,7 @@ public class GenericIdentification9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification9, Max35Text> mmIdentification = new MMMessageAttribute<GenericIdentification9, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification9.mmObject();
@@ -157,6 +157,16 @@ public class GenericIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification9 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification9 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdTp", required = true)
@@ -194,7 +204,7 @@ public class GenericIdentification9 {
 	 * definition} = "Specifies the nature of the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification9, PersonIdentificationType1Code> mmIdentificationType = new MMMessageAttribute<GenericIdentification9, PersonIdentificationType1Code>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification9.mmObject();
@@ -206,6 +216,16 @@ public class GenericIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PersonIdentificationType1Code.mmObject();
+		}
+
+		@Override
+		public PersonIdentificationType1Code getValue(GenericIdentification9 obj) {
+			return obj.getIdentificationType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification9 obj, PersonIdentificationType1Code value) {
+			obj.setIdentificationType(value);
 		}
 	};
 	@XmlElement(name = "XtndedIdTp", required = true)
@@ -243,7 +263,7 @@ public class GenericIdentification9 {
 	 * definition} = "Specifies the nature of the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification9, Extended350Code> mmExtendedIdentificationType = new MMMessageAttribute<GenericIdentification9, Extended350Code>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification9.mmObject();
@@ -255,6 +275,16 @@ public class GenericIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(GenericIdentification9 obj) {
+			return obj.getExtendedIdentificationType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification9 obj, Extended350Code value) {
+			obj.setExtendedIdentificationType(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -291,7 +321,7 @@ public class GenericIdentification9 {
 	 * definition} = "Entity that assigns the identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification9, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<GenericIdentification9, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification9.mmObject();
@@ -303,6 +333,16 @@ public class GenericIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentification9 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification9 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseDt")
@@ -339,7 +379,7 @@ public class GenericIdentification9 {
 	 * definition} = "Date at which the identification was issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification9, Optional<ISODate>> mmIssueDate = new MMMessageAttribute<GenericIdentification9, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification9.mmObject();
@@ -351,6 +391,16 @@ public class GenericIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(GenericIdentification9 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(GenericIdentification9 obj, Optional<ISODate> value) {
+			obj.setIssueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt")
@@ -387,7 +437,7 @@ public class GenericIdentification9 {
 	 * definition} = "Date at which the identification expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification9, Optional<ISODate>> mmExpiryDate = new MMMessageAttribute<GenericIdentification9, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification9.mmObject();
@@ -399,6 +449,16 @@ public class GenericIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(GenericIdentification9 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(GenericIdentification9 obj, Optional<ISODate> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	/**

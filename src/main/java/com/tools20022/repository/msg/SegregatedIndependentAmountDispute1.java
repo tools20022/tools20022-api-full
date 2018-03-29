@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DisputeResolutionType1Choice;
 import com.tools20022.repository.entity.DisputeManagement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Dispute1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -103,7 +104,7 @@ public class SegregatedIndependentAmountDispute1 {
 	 * definition} = "Details of the disputed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDisputeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SegregatedIndependentAmountDispute1, Dispute1> mmDisputeDetails = new MMMessageAssociationEnd<SegregatedIndependentAmountDispute1, Dispute1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmObject();
 			isDerived = false;
@@ -114,7 +115,17 @@ public class SegregatedIndependentAmountDispute1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
+			type_lazy = () -> Dispute1.mmObject();
+		}
+
+		@Override
+		public Dispute1 getValue(SegregatedIndependentAmountDispute1 obj) {
+			return obj.getDisputeDetails();
+		}
+
+		@Override
+		public void setValue(SegregatedIndependentAmountDispute1 obj, Dispute1 value) {
+			obj.setDisputeDetails(value);
 		}
 	};
 	@XmlElement(name = "DsptRsltnTp1Chc")
@@ -148,7 +159,7 @@ public class SegregatedIndependentAmountDispute1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDisputeResolutionType1Choice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SegregatedIndependentAmountDispute1, List<DisputeResolutionType1Choice>> mmDisputeResolutionType1Choice = new MMMessageAssociationEnd<SegregatedIndependentAmountDispute1, List<DisputeResolutionType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SegregatedIndependentAmountDispute1.mmObject();
 			isDerived = false;
@@ -159,6 +170,16 @@ public class SegregatedIndependentAmountDispute1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DisputeResolutionType1Choice.mmObject();
+		}
+
+		@Override
+		public List<DisputeResolutionType1Choice> getValue(SegregatedIndependentAmountDispute1 obj) {
+			return obj.getDisputeResolutionType1Choice();
+		}
+
+		@Override
+		public void setValue(SegregatedIndependentAmountDispute1 obj, List<DisputeResolutionType1Choice> value) {
+			obj.setDisputeResolutionType1Choice(value);
 		}
 	};
 
@@ -187,7 +208,7 @@ public class SegregatedIndependentAmountDispute1 {
 		return disputeDetails;
 	}
 
-	public SegregatedIndependentAmountDispute1 setDisputeDetails(com.tools20022.repository.msg.Dispute1 disputeDetails) {
+	public SegregatedIndependentAmountDispute1 setDisputeDetails(Dispute1 disputeDetails) {
 		this.disputeDetails = Objects.requireNonNull(disputeDetails);
 		return this;
 	}

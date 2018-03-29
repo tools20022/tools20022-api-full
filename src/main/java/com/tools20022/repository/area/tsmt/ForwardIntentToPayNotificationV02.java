@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -148,7 +147,7 @@ public class ForwardIntentToPayNotificationV02 {
 	 * ForwardIntentToPayNotificationV01.mmNotificationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, MessageIdentification1> mmNotificationIdentification = new MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, MessageIdentification1>() {
 		{
 			xmlTag = "NtfctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,12 +159,14 @@ public class ForwardIntentToPayNotificationV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardIntentToPayNotificationV02.class.getMethod("getNotificationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ForwardIntentToPayNotificationV02 obj) {
+			return obj.getNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(ForwardIntentToPayNotificationV02 obj, MessageIdentification1 value) {
+			obj.setNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -200,7 +201,7 @@ public class ForwardIntentToPayNotificationV02 {
 	 * ForwardIntentToPayNotificationV01.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +213,14 @@ public class ForwardIntentToPayNotificationV02 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardIntentToPayNotificationV02.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(ForwardIntentToPayNotificationV02 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ForwardIntentToPayNotificationV02 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId", required = true)
@@ -252,7 +255,7 @@ public class ForwardIntentToPayNotificationV02 {
 	 * ForwardIntentToPayNotificationV01.mmEstablishedBaselineIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, DocumentIdentification3> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, DocumentIdentification3>() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,12 +267,14 @@ public class ForwardIntentToPayNotificationV02 {
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardIntentToPayNotificationV02.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification3 getValue(ForwardIntentToPayNotificationV02 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(ForwardIntentToPayNotificationV02 obj, DocumentIdentification3 value) {
+			obj.setEstablishedBaselineIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -303,7 +308,7 @@ public class ForwardIntentToPayNotificationV02 {
 	 * ForwardIntentToPayNotificationV01.mmTransactionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, TransactionStatus4> mmTransactionStatus = new MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, TransactionStatus4>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,12 +320,14 @@ public class ForwardIntentToPayNotificationV02 {
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardIntentToPayNotificationV02.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus4 getValue(ForwardIntentToPayNotificationV02 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(ForwardIntentToPayNotificationV02 obj, TransactionStatus4 value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
@@ -355,7 +362,7 @@ public class ForwardIntentToPayNotificationV02 {
 	 * ForwardIntentToPayNotificationV01.mmUserTransactionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, List<DocumentIdentification5>>() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,12 +374,14 @@ public class ForwardIntentToPayNotificationV02 {
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardIntentToPayNotificationV02.class.getMethod("getUserTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification5> getValue(ForwardIntentToPayNotificationV02 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(ForwardIntentToPayNotificationV02 obj, List<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "BuyrBk", required = true)
@@ -407,7 +416,7 @@ public class ForwardIntentToPayNotificationV02 {
 	 * ForwardIntentToPayNotificationV01.mmBuyerBank}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, BICIdentification1> mmBuyerBank = new MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, BICIdentification1>() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -419,12 +428,14 @@ public class ForwardIntentToPayNotificationV02 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardIntentToPayNotificationV02.class.getMethod("getBuyerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(ForwardIntentToPayNotificationV02 obj) {
+			return obj.getBuyerBank();
+		}
+
+		@Override
+		public void setValue(ForwardIntentToPayNotificationV02 obj, BICIdentification1 value) {
+			obj.setBuyerBank(value);
 		}
 	};
 	@XmlElement(name = "SellrBk", required = true)
@@ -459,7 +470,7 @@ public class ForwardIntentToPayNotificationV02 {
 	 * ForwardIntentToPayNotificationV01.mmSellerBank}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, BICIdentification1> mmSellerBank = new MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, BICIdentification1>() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -471,12 +482,14 @@ public class ForwardIntentToPayNotificationV02 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardIntentToPayNotificationV02.class.getMethod("getSellerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(ForwardIntentToPayNotificationV02 obj) {
+			return obj.getSellerBank();
+		}
+
+		@Override
+		public void setValue(ForwardIntentToPayNotificationV02 obj, BICIdentification1 value) {
+			obj.setSellerBank(value);
 		}
 	};
 	@XmlElement(name = "InttToPay", required = true)
@@ -508,7 +521,7 @@ public class ForwardIntentToPayNotificationV02 {
 	 * ForwardIntentToPayNotificationV01.mmIntentToPay}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIntentToPay = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, IntentToPay2> mmIntentToPay = new MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, IntentToPay2>() {
 		{
 			xmlTag = "InttToPay";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -520,12 +533,14 @@ public class ForwardIntentToPayNotificationV02 {
 			complexType_lazy = () -> IntentToPay2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardIntentToPayNotificationV02.class.getMethod("getIntentToPay", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IntentToPay2 getValue(ForwardIntentToPayNotificationV02 obj) {
+			return obj.getIntentToPay();
+		}
+
+		@Override
+		public void setValue(ForwardIntentToPayNotificationV02 obj, IntentToPay2 value) {
+			obj.setIntentToPay(value);
 		}
 	};
 	@XmlElement(name = "ReqForActn")
@@ -558,7 +573,7 @@ public class ForwardIntentToPayNotificationV02 {
 	 * ForwardIntentToPayNotificationV01.mmRequestForAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<ForwardIntentToPayNotificationV02, Optional<PendingActivity2>>() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -570,12 +585,14 @@ public class ForwardIntentToPayNotificationV02 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardIntentToPayNotificationV02.class.getMethod("getRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PendingActivity2> getValue(ForwardIntentToPayNotificationV02 obj) {
+			return obj.getRequestForAction();
+		}
+
+		@Override
+		public void setValue(ForwardIntentToPayNotificationV02 obj, Optional<PendingActivity2> value) {
+			obj.setRequestForAction(value.orElse(null));
 		}
 	};
 

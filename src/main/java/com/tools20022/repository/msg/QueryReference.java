@@ -95,7 +95,7 @@ public class QueryReference {
 	 * definition} = "Unique and unambiguous identification of the query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QueryReference, Max35Text> mmQueryReference = new MMMessageAttribute<QueryReference, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QueryReference.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class QueryReference {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(QueryReference obj) {
+			return obj.getQueryReference();
+		}
+
+		@Override
+		public void setValue(QueryReference obj, Max35Text value) {
+			obj.setQueryReference(value);
 		}
 	};
 	@XmlElement(name = "QryNm")
@@ -136,7 +146,7 @@ public class QueryReference {
 	 * definition} = "Name of the query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QueryReference, Optional<Max35Text>> mmQueryName = new MMMessageAttribute<QueryReference, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QueryReference.mmObject();
 			isDerived = false;
@@ -147,6 +157,16 @@ public class QueryReference {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(QueryReference obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(QueryReference obj, Optional<Max35Text> value) {
+			obj.setQueryName(value.orElse(null));
 		}
 	};
 

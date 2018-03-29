@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommissionType1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +119,7 @@ public class Commission7 {
 	 * definition} = "Commission expressed as an amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission7, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Commission7, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission7.mmObject();
@@ -130,6 +131,16 @@ public class Commission7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(Commission7 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Commission7 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -166,7 +177,7 @@ public class Commission7 {
 	 * definition} = "Commission expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission7, PercentageRate> mmRate = new MMMessageAttribute<Commission7, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission7.mmObject();
@@ -178,6 +189,16 @@ public class Commission7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Commission7 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Commission7 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -213,7 +234,7 @@ public class Commission7 {
 	 * definition} = "Service for which the commission is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission7, CommissionType1> mmType = new MMMessageAttribute<Commission7, CommissionType1>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission7.mmObject();
@@ -224,7 +245,17 @@ public class Commission7 {
 			definition = "Service for which the commission is asked or paid.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CommissionType1.mmObject();
+			complexType_lazy = () -> CommissionType1.mmObject();
+		}
+
+		@Override
+		public CommissionType1 getValue(Commission7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Commission7 obj, CommissionType1 value) {
+			obj.setType(value);
 		}
 	};
 	/**
@@ -309,7 +340,7 @@ public class Commission7 {
 		return type;
 	}
 
-	public Commission7 setType(com.tools20022.repository.msg.CommissionType1 type) {
+	public Commission7 setType(CommissionType1 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}

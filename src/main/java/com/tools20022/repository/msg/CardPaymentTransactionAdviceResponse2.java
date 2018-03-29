@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionIdentifier1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -100,7 +101,7 @@ public class CardPaymentTransactionAdviceResponse2 {
 	 * definition} = "Unique identification of the transaction by the POI."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransactionAdviceResponse2, TransactionIdentifier1> mmTransactionIdentification = new MMMessageAssociationEnd<CardPaymentTransactionAdviceResponse2, TransactionIdentifier1>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmCardPayment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse2.mmObject();
@@ -112,7 +113,17 @@ public class CardPaymentTransactionAdviceResponse2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(CardPaymentTransactionAdviceResponse2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransactionAdviceResponse2 obj, TransactionIdentifier1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 
@@ -134,7 +145,7 @@ public class CardPaymentTransactionAdviceResponse2 {
 		return transactionIdentification;
 	}
 
-	public CardPaymentTransactionAdviceResponse2 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public CardPaymentTransactionAdviceResponse2 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
 		return this;
 	}

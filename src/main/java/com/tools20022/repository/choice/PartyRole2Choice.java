@@ -126,7 +126,7 @@ public class PartyRole2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyRole2Choice, InvestmentFundRole6Code> mmCode = new MMMessageAttribute<PartyRole2Choice, InvestmentFundRole6Code>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyRole2Choice.mmObject();
@@ -139,6 +139,16 @@ public class PartyRole2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundRole6Code.mmObject();
+		}
+
+		@Override
+		public InvestmentFundRole6Code getValue(PartyRole2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PartyRole2Choice obj, InvestmentFundRole6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -186,7 +196,7 @@ public class PartyRole2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyRole2Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<PartyRole2Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyRole2Choice.mmObject();
@@ -200,6 +210,16 @@ public class PartyRole2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(PartyRole2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PartyRole2Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

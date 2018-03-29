@@ -129,7 +129,7 @@ public class CancellationReason19 {
 	 * CancellationReason13.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationReason19, CancellationReason24Choice> mmCode = new MMMessageAssociationEnd<CancellationReason19, CancellationReason24Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationReason19.mmObject();
@@ -144,6 +144,16 @@ public class CancellationReason19 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationReason24Choice.mmObject();
+		}
+
+		@Override
+		public CancellationReason24Choice getValue(CancellationReason19 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationReason19 obj, CancellationReason24Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -191,7 +201,7 @@ public class CancellationReason19 {
 	 * CancellationReason13.mmCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason19, Optional<RestrictedFINMax16Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<CancellationReason19, Optional<RestrictedFINMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationReason19.mmObject();
@@ -205,6 +215,16 @@ public class CancellationReason19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax16Text> getValue(CancellationReason19 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CancellationReason19 obj, Optional<RestrictedFINMax16Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RestrictedIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +109,7 @@ public class FinancialInstitutionIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstitutionIdentification5, RestrictedIdentification1> mmProprietaryIdentification = new MMMessageAssociationEnd<FinancialInstitutionIdentification5, RestrictedIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification5.mmObject();
@@ -120,7 +121,17 @@ public class FinancialInstitutionIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RestrictedIdentification1.mmObject();
+			type_lazy = () -> RestrictedIdentification1.mmObject();
+		}
+
+		@Override
+		public RestrictedIdentification1 getValue(FinancialInstitutionIdentification5 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification5 obj, RestrictedIdentification1 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 
@@ -142,7 +153,7 @@ public class FinancialInstitutionIdentification5 {
 		return proprietaryIdentification;
 	}
 
-	public FinancialInstitutionIdentification5 setProprietaryIdentification(com.tools20022.repository.msg.RestrictedIdentification1 proprietaryIdentification) {
+	public FinancialInstitutionIdentification5 setProprietaryIdentification(RestrictedIdentification1 proprietaryIdentification) {
 		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
 		return this;
 	}

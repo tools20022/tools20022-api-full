@@ -22,6 +22,10 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Debt2;
+import com.tools20022.repository.msg.Derivative1;
+import com.tools20022.repository.msg.Equity2;
+import com.tools20022.repository.msg.Warrant2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -106,7 +110,7 @@ public class FinancialInstrument28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEquity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument28, Optional<Equity2>> mmEquity = new MMMessageAssociationEnd<FinancialInstrument28, Optional<Equity2>>() {
 		{
 			businessComponentTrace_lazy = () -> Equity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument28.mmObject();
@@ -118,7 +122,17 @@ public class FinancialInstrument28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Equity2.mmObject();
+			type_lazy = () -> Equity2.mmObject();
+		}
+
+		@Override
+		public Optional<Equity2> getValue(FinancialInstrument28 obj) {
+			return obj.getEquity();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument28 obj, Optional<Equity2> value) {
+			obj.setEquity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Warrt")
@@ -154,7 +168,7 @@ public class FinancialInstrument28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWarrant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument28, Optional<Warrant2>> mmWarrant = new MMMessageAssociationEnd<FinancialInstrument28, Optional<Warrant2>>() {
 		{
 			businessComponentTrace_lazy = () -> Warrant.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument28.mmObject();
@@ -166,7 +180,17 @@ public class FinancialInstrument28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Warrant2.mmObject();
+			type_lazy = () -> Warrant2.mmObject();
+		}
+
+		@Override
+		public Optional<Warrant2> getValue(FinancialInstrument28 obj) {
+			return obj.getWarrant();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument28 obj, Optional<Warrant2> value) {
+			obj.setWarrant(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Debt")
@@ -202,7 +226,7 @@ public class FinancialInstrument28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebt = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument28, Optional<Debt2>> mmDebt = new MMMessageAssociationEnd<FinancialInstrument28, Optional<Debt2>>() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument28.mmObject();
@@ -214,7 +238,17 @@ public class FinancialInstrument28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
+			type_lazy = () -> Debt2.mmObject();
+		}
+
+		@Override
+		public Optional<Debt2> getValue(FinancialInstrument28 obj) {
+			return obj.getDebt();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument28 obj, Optional<Debt2> value) {
+			obj.setDebt(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Deriv")
@@ -250,7 +284,7 @@ public class FinancialInstrument28 {
 	 * definition} = "Choice between type of derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDerivative = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument28, Optional<Derivative1>> mmDerivative = new MMMessageAssociationEnd<FinancialInstrument28, Optional<Derivative1>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument28.mmObject();
@@ -262,7 +296,17 @@ public class FinancialInstrument28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Derivative1.mmObject();
+			type_lazy = () -> Derivative1.mmObject();
+		}
+
+		@Override
+		public Optional<Derivative1> getValue(FinancialInstrument28 obj) {
+			return obj.getDerivative();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument28 obj, Optional<Derivative1> value) {
+			obj.setDerivative(value.orElse(null));
 		}
 	};
 
@@ -285,7 +329,7 @@ public class FinancialInstrument28 {
 		return equity == null ? Optional.empty() : Optional.of(equity);
 	}
 
-	public FinancialInstrument28 setEquity(com.tools20022.repository.msg.Equity2 equity) {
+	public FinancialInstrument28 setEquity(Equity2 equity) {
 		this.equity = equity;
 		return this;
 	}
@@ -294,7 +338,7 @@ public class FinancialInstrument28 {
 		return warrant == null ? Optional.empty() : Optional.of(warrant);
 	}
 
-	public FinancialInstrument28 setWarrant(com.tools20022.repository.msg.Warrant2 warrant) {
+	public FinancialInstrument28 setWarrant(Warrant2 warrant) {
 		this.warrant = warrant;
 		return this;
 	}
@@ -303,7 +347,7 @@ public class FinancialInstrument28 {
 		return debt == null ? Optional.empty() : Optional.of(debt);
 	}
 
-	public FinancialInstrument28 setDebt(com.tools20022.repository.msg.Debt2 debt) {
+	public FinancialInstrument28 setDebt(Debt2 debt) {
 		this.debt = debt;
 		return this;
 	}
@@ -312,7 +356,7 @@ public class FinancialInstrument28 {
 		return derivative == null ? Optional.empty() : Optional.of(derivative);
 	}
 
-	public FinancialInstrument28 setDerivative(com.tools20022.repository.msg.Derivative1 derivative) {
+	public FinancialInstrument28 setDerivative(Derivative1 derivative) {
 		this.derivative = derivative;
 		return this;
 	}

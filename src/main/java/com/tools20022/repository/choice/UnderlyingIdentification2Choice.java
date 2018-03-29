@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SwapLegIdentification2;
 import java.util.Arrays;
@@ -95,7 +96,7 @@ public class UnderlyingIdentification2Choice {
 	 * definition} = "Underlying of a swap transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSwap = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingIdentification2Choice, SwapLegIdentification2> mmSwap = new MMMessageAssociationEnd<UnderlyingIdentification2Choice, SwapLegIdentification2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmObject();
 			isDerived = false;
@@ -107,6 +108,16 @@ public class UnderlyingIdentification2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SwapLegIdentification2.mmObject();
+		}
+
+		@Override
+		public SwapLegIdentification2 getValue(UnderlyingIdentification2Choice obj) {
+			return obj.getSwap();
+		}
+
+		@Override
+		public void setValue(UnderlyingIdentification2Choice obj, SwapLegIdentification2 value) {
+			obj.setSwap(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -138,7 +149,7 @@ public class UnderlyingIdentification2Choice {
 	 * definition} = "Underlying of any other type of transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingIdentification2Choice, FinancialInstrumentIdentification7Choice> mmOther = new MMMessageAssociationEnd<UnderlyingIdentification2Choice, FinancialInstrumentIdentification7Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnderlyingIdentification2Choice.mmObject();
 			isDerived = false;
@@ -149,7 +160,17 @@ public class UnderlyingIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.mmObject();
+			type_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentIdentification7Choice getValue(UnderlyingIdentification2Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(UnderlyingIdentification2Choice obj, FinancialInstrumentIdentification7Choice value) {
+			obj.setOther(value);
 		}
 	};
 
@@ -179,7 +200,7 @@ public class UnderlyingIdentification2Choice {
 		return other;
 	}
 
-	public UnderlyingIdentification2Choice setOther(com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice other) {
+	public UnderlyingIdentification2Choice setOther(FinancialInstrumentIdentification7Choice other) {
 		this.other = Objects.requireNonNull(other);
 		return this;
 	}

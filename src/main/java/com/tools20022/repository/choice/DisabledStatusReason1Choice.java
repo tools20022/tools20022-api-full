@@ -126,7 +126,7 @@ public class DisabledStatusReason1Choice {
 	 * EnabledStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisabledStatusReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<DisabledStatusReason1Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class DisabledStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(DisabledStatusReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(DisabledStatusReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -182,7 +192,7 @@ public class DisabledStatusReason1Choice {
 	 * EnabledStatusReason1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DisabledStatusReason1Choice, List<DisabledStatusReason1>> mmReason = new MMMessageAssociationEnd<DisabledStatusReason1Choice, List<DisabledStatusReason1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DisabledStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class DisabledStatusReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DisabledStatusReason1.mmObject();
+		}
+
+		@Override
+		public List<DisabledStatusReason1> getValue(DisabledStatusReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(DisabledStatusReason1Choice obj, List<DisabledStatusReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

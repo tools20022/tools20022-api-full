@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.ReportHeader3;
 import com.tools20022.repository.msg.StatementGroup1;
 import com.tools20022.repository.msgset.BankServicesBillingISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -155,7 +154,7 @@ public class BankServicesBillingStatementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankServicesBillingStatementV01, ReportHeader3> mmReportHeader = new MMMessageBuildingBlock<BankServicesBillingStatementV01, ReportHeader3>() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,12 +166,14 @@ public class BankServicesBillingStatementV01 {
 			complexType_lazy = () -> ReportHeader3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankServicesBillingStatementV01.class.getMethod("getReportHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportHeader3 getValue(BankServicesBillingStatementV01 obj) {
+			return obj.getReportHeader();
+		}
+
+		@Override
+		public void setValue(BankServicesBillingStatementV01 obj, ReportHeader3 value) {
+			obj.setReportHeader(value);
 		}
 	};
 	@XmlElement(name = "BllgStmtGrp", required = true)
@@ -209,7 +210,7 @@ public class BankServicesBillingStatementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBillingStatementGroup = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankServicesBillingStatementV01, List<StatementGroup1>> mmBillingStatementGroup = new MMMessageBuildingBlock<BankServicesBillingStatementV01, List<StatementGroup1>>() {
 		{
 			xmlTag = "BllgStmtGrp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,12 +221,14 @@ public class BankServicesBillingStatementV01 {
 			complexType_lazy = () -> StatementGroup1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankServicesBillingStatementV01.class.getMethod("getBillingStatementGroup", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<StatementGroup1> getValue(BankServicesBillingStatementV01 obj) {
+			return obj.getBillingStatementGroup();
+		}
+
+		@Override
+		public void setValue(BankServicesBillingStatementV01 obj, List<StatementGroup1> value) {
+			obj.setBillingStatementGroup(value);
 		}
 	};
 

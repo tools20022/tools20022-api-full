@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +123,7 @@ public class SecuritiesReferenceDataChange2 {
 	 * SecuritiesReferenceDataChange1.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesReferenceDataChange2, SecurityIdentification19> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<SecuritiesReferenceDataChange2, SecurityIdentification19>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -134,7 +135,17 @@ public class SecuritiesReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification19 getValue(SecuritiesReferenceDataChange2 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataChange2 obj, SecurityIdentification19 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "FldNm", required = true)
@@ -173,7 +184,7 @@ public class SecuritiesReferenceDataChange2 {
 	 * SecuritiesReferenceDataChange1.mmFieldName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReferenceDataChange2, Max35Text> mmFieldName = new MMMessageAttribute<SecuritiesReferenceDataChange2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -185,6 +196,16 @@ public class SecuritiesReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SecuritiesReferenceDataChange2 obj) {
+			return obj.getFieldName();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataChange2 obj, Max35Text value) {
+			obj.setFieldName(value);
 		}
 	};
 	@XmlElement(name = "OdFldVal", required = true)
@@ -222,7 +243,7 @@ public class SecuritiesReferenceDataChange2 {
 	 * SecuritiesReferenceDataChange1.mmOldFieldValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReferenceDataChange2, Max350Text> mmOldFieldValue = new MMMessageAttribute<SecuritiesReferenceDataChange2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -234,6 +255,16 @@ public class SecuritiesReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecuritiesReferenceDataChange2 obj) {
+			return obj.getOldFieldValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataChange2 obj, Max350Text value) {
+			obj.setOldFieldValue(value);
 		}
 	};
 	@XmlElement(name = "NewFldVal", required = true)
@@ -270,7 +301,7 @@ public class SecuritiesReferenceDataChange2 {
 	 * SecuritiesReferenceDataChange1.mmNewFieldValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReferenceDataChange2, Max350Text> mmNewFieldValue = new MMMessageAttribute<SecuritiesReferenceDataChange2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -282,6 +313,16 @@ public class SecuritiesReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecuritiesReferenceDataChange2 obj) {
+			return obj.getNewFieldValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataChange2 obj, Max350Text value) {
+			obj.setNewFieldValue(value);
 		}
 	};
 	@XmlElement(name = "OprTmStmp", required = true)
@@ -318,7 +359,7 @@ public class SecuritiesReferenceDataChange2 {
 	 * SecuritiesReferenceDataChange1.mmOperationTimeStamp}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReferenceDataChange2, ISODateTime> mmOperationTimeStamp = new MMMessageAttribute<SecuritiesReferenceDataChange2, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange2.mmObject();
 			isDerived = false;
@@ -330,6 +371,16 @@ public class SecuritiesReferenceDataChange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(SecuritiesReferenceDataChange2 obj) {
+			return obj.getOperationTimeStamp();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataChange2 obj, ISODateTime value) {
+			obj.setOperationTimeStamp(value);
 		}
 	};
 
@@ -353,7 +404,7 @@ public class SecuritiesReferenceDataChange2 {
 		return financialInstrumentIdentification;
 	}
 
-	public SecuritiesReferenceDataChange2 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+	public SecuritiesReferenceDataChange2 setFinancialInstrumentIdentification(SecurityIdentification19 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}

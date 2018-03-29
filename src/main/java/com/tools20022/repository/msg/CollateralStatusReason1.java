@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.entity.CollateralStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StatusReasonInformation10;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +121,7 @@ public class CollateralStatusReason1 {
 	 * definition} = "Status of the collateral data maintenance instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralStatusReason1, Status6Code> mmStatus = new MMMessageAttribute<CollateralStatusReason1, Status6Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralStatusReason1.mmObject();
@@ -133,9 +134,19 @@ public class CollateralStatusReason1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
+
+		@Override
+		public Status6Code getValue(CollateralStatusReason1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CollateralStatusReason1 obj, Status6Code value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "Rsn")
-	protected List<com.tools20022.repository.msg.StatusReasonInformation10> reason;
+	protected List<StatusReasonInformation10> reason;
 	/**
 	 * 
 	 <p>
@@ -169,7 +180,7 @@ public class CollateralStatusReason1 {
 	 * "Reason for the status of a collateral data maintenance instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralStatusReason1, List<StatusReasonInformation10>> mmReason = new MMMessageAssociationEnd<CollateralStatusReason1, List<StatusReasonInformation10>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralStatusReason1.mmObject();
@@ -180,7 +191,17 @@ public class CollateralStatusReason1 {
 			definition = "Reason for the status of a collateral data maintenance instruction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
+			type_lazy = () -> StatusReasonInformation10.mmObject();
+		}
+
+		@Override
+		public List<StatusReasonInformation10> getValue(CollateralStatusReason1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CollateralStatusReason1 obj, List<StatusReasonInformation10> value) {
+			obj.setReason(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class CollateralStatusReason1 {
 		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public CollateralStatusReason1 setReason(List<com.tools20022.repository.msg.StatusReasonInformation10> reason) {
+	public CollateralStatusReason1 setReason(List<StatusReasonInformation10> reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}

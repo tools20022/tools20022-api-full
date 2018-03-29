@@ -113,7 +113,7 @@ public class ListIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ListIdentification1, Max35Text> mmListIdentification = new MMMessageAttribute<ListIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListIdentification1.mmObject();
@@ -126,6 +126,16 @@ public class ListIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ListIdentification1 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(ListIdentification1 obj, Max35Text value) {
+			obj.setListIdentification(value);
 		}
 	};
 

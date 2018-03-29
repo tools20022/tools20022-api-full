@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PointOfInteraction;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification32;
+import com.tools20022.repository.msg.PointOfInteractionCapabilities4;
+import com.tools20022.repository.msg.PostalAddress18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +114,7 @@ public class CardAcceptorTerminal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAcceptorTerminal1, GenericIdentification32> mmIdentification = new MMMessageAssociationEnd<CardAcceptorTerminal1, GenericIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAcceptorTerminal1.mmObject();
@@ -123,7 +126,17 @@ public class CardAcceptorTerminal1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public GenericIdentification32 getValue(CardAcceptorTerminal1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CardAcceptorTerminal1 obj, GenericIdentification32 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Lctn")
@@ -159,7 +172,7 @@ public class CardAcceptorTerminal1 {
 	 * definition} = "Location of the terminal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAcceptorTerminal1, Optional<PostalAddress18>> mmLocation = new MMMessageAssociationEnd<CardAcceptorTerminal1, Optional<PostalAddress18>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAcceptorTerminal1.mmObject();
@@ -171,7 +184,17 @@ public class CardAcceptorTerminal1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress18.mmObject();
+			type_lazy = () -> PostalAddress18.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress18> getValue(CardAcceptorTerminal1 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(CardAcceptorTerminal1 obj, Optional<PostalAddress18> value) {
+			obj.setLocation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cpblties", required = true)
@@ -208,7 +231,7 @@ public class CardAcceptorTerminal1 {
 	 * definition} = "Capabilities of the terminal performing the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardAcceptorTerminal1, PointOfInteractionCapabilities4> mmCapabilities = new MMMessageAssociationEnd<CardAcceptorTerminal1, PointOfInteractionCapabilities4>() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardAcceptorTerminal1.mmObject();
@@ -220,7 +243,17 @@ public class CardAcceptorTerminal1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities4.mmObject();
+			type_lazy = () -> PointOfInteractionCapabilities4.mmObject();
+		}
+
+		@Override
+		public PointOfInteractionCapabilities4 getValue(CardAcceptorTerminal1 obj) {
+			return obj.getCapabilities();
+		}
+
+		@Override
+		public void setValue(CardAcceptorTerminal1 obj, PointOfInteractionCapabilities4 value) {
+			obj.setCapabilities(value);
 		}
 	};
 
@@ -243,7 +276,7 @@ public class CardAcceptorTerminal1 {
 		return identification;
 	}
 
-	public CardAcceptorTerminal1 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public CardAcceptorTerminal1 setIdentification(GenericIdentification32 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -252,7 +285,7 @@ public class CardAcceptorTerminal1 {
 		return location == null ? Optional.empty() : Optional.of(location);
 	}
 
-	public CardAcceptorTerminal1 setLocation(com.tools20022.repository.msg.PostalAddress18 location) {
+	public CardAcceptorTerminal1 setLocation(PostalAddress18 location) {
 		this.location = location;
 		return this;
 	}
@@ -261,7 +294,7 @@ public class CardAcceptorTerminal1 {
 		return capabilities;
 	}
 
-	public CardAcceptorTerminal1 setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities4 capabilities) {
+	public CardAcceptorTerminal1 setCapabilities(PointOfInteractionCapabilities4 capabilities) {
 		this.capabilities = Objects.requireNonNull(capabilities);
 		return this;
 	}

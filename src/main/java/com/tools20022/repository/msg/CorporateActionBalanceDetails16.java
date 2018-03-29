@@ -26,6 +26,9 @@ import com.tools20022.repository.choice.BalanceFormat2Choice;
 import com.tools20022.repository.choice.Quantity8Choice;
 import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InstructedBalanceDetails4;
+import com.tools20022.repository.msg.PendingBalance2;
+import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -161,7 +164,7 @@ public class CorporateActionBalanceDetails16 {
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Quantity8Choice> mmTotalEligibleBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Quantity8Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmEligibleBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -174,6 +177,16 @@ public class CorporateActionBalanceDetails16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity8Choice.mmObject();
+		}
+
+		@Override
+		public Quantity8Choice getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getTotalEligibleBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Quantity8Choice value) {
+			obj.setTotalEligibleBalance(value);
 		}
 	};
 	@XmlElement(name = "UinstdBal", required = true)
@@ -214,7 +227,7 @@ public class CorporateActionBalanceDetails16 {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUninstructedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, BalanceFormat2Choice> mmUninstructedBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, BalanceFormat2Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmUninstructedBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -227,6 +240,16 @@ public class CorporateActionBalanceDetails16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat2Choice.mmObject();
+		}
+
+		@Override
+		public BalanceFormat2Choice getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getUninstructedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, BalanceFormat2Choice value) {
+			obj.setUninstructedBalance(value);
 		}
 	};
 	@XmlElement(name = "TtlInstdBalDtls", required = true)
@@ -263,7 +286,7 @@ public class CorporateActionBalanceDetails16 {
 	 * definition} = "Provides information about the total instructed balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalInstructedBalanceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBalanceDetails16, InstructedBalanceDetails4> mmTotalInstructedBalanceDetails = new MMMessageAssociationEnd<CorporateActionBalanceDetails16, InstructedBalanceDetails4>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -275,7 +298,17 @@ public class CorporateActionBalanceDetails16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InstructedBalanceDetails4.mmObject();
+			type_lazy = () -> InstructedBalanceDetails4.mmObject();
+		}
+
+		@Override
+		public InstructedBalanceDetails4 getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getTotalInstructedBalanceDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, InstructedBalanceDetails4 value) {
+			obj.setTotalInstructedBalanceDetails(value);
 		}
 	};
 	@XmlElement(name = "BlckdBal")
@@ -316,7 +349,7 @@ public class CorporateActionBalanceDetails16 {
 	 * definition} = "Balance of financial instruments that are blocked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBlockedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmBlockedBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -328,7 +361,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of financial instruments that are blocked.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getBlockedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setBlockedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrrwdBal")
@@ -371,7 +414,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBorrowedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmBorrowedBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -383,7 +426,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of financial instruments that have been borrowed from another party.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getBorrowedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setBorrowedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollInBal")
@@ -426,7 +479,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralInBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmCollateralInBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -438,7 +491,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of securities that belong to a third party and that are held for the purpose of collateralisation.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getCollateralInBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setCollateralInBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollOutBal")
@@ -481,7 +544,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralOutBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmCollateralOutBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -493,7 +556,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of securities that belong to the safekeeping account indicated within this message, and are deposited with a third party for the purpose of collateralisation.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getCollateralOutBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setCollateralOutBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OnLnBal")
@@ -536,7 +609,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOnLoanBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmOnLoanBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -548,7 +621,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of financial instruments that have been loaned to a third party.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getOnLoanBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setOnLoanBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OutForRegnBal")
@@ -591,7 +674,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOutForRegistrationBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmOutForRegistrationBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -603,7 +686,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of financial instruments currently being processed by the institution responsible for registering the new beneficial owner (or nominee).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getOutForRegistrationBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setOutForRegistrationBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmPosBal")
@@ -646,7 +739,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementPositionBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmSettlementPositionBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -658,7 +751,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of securities representing only settled transactions; pending transactions not included.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getSettlementPositionBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setSettlementPositionBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrtPosBal")
@@ -701,7 +804,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStreetPositionBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmStreetPositionBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -713,7 +816,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of financial instruments that remain registered in the name of the prior beneficial owner.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getStreetPositionBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setStreetPositionBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDtPosBal")
@@ -756,7 +869,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDatePositionBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmTradeDatePositionBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -768,7 +881,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of securities based on trade date, for example, includes all pending transactions in addition to the balance of settled transactions.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getTradeDatePositionBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setTradeDatePositionBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InTrnsShipmntBal")
@@ -811,7 +934,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInTransshipmentBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmInTransshipmentBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -823,7 +946,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of physical securities that are in the process of being transferred from one depository/agent to another.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getInTransshipmentBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setInTransshipmentBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegdBal")
@@ -866,7 +999,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegisteredBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmRegisteredBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -878,7 +1011,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of financial instruments that are registered (in the name of a nominee name or of the beneficial owner).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getRegisteredBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setRegisteredBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OblgtdBal")
@@ -921,7 +1064,7 @@ public class CorporateActionBalanceDetails16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmObligatedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>> mmObligatedBalance = new MMMessageAttribute<CorporateActionBalanceDetails16, Optional<SignedQuantityFormat4>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -933,11 +1076,21 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Position that account holders should return to the account servicer to participate in the event or to fulfil their obligation for the event to be complete, for example, return of securities for late announced drawing.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getObligatedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setObligatedBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdgDlvryBal")
-	protected List<com.tools20022.repository.msg.PendingBalance2> pendingDeliveryBalance;
+	protected List<PendingBalance2> pendingDeliveryBalance;
 	/**
 	 * 
 	 <p>
@@ -973,7 +1126,7 @@ public class CorporateActionBalanceDetails16 {
 	 * "Balance of financial instruments that are pending delivery."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingDeliveryBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBalanceDetails16, List<PendingBalance2>> mmPendingDeliveryBalance = new MMMessageAssociationEnd<CorporateActionBalanceDetails16, List<PendingBalance2>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -985,11 +1138,21 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of financial instruments that are pending delivery.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PendingBalance2.mmObject();
+			type_lazy = () -> PendingBalance2.mmObject();
+		}
+
+		@Override
+		public List<PendingBalance2> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getPendingDeliveryBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, List<PendingBalance2> value) {
+			obj.setPendingDeliveryBalance(value);
 		}
 	};
 	@XmlElement(name = "PdgRctBal")
-	protected List<com.tools20022.repository.msg.PendingBalance2> pendingReceiptBalance;
+	protected List<PendingBalance2> pendingReceiptBalance;
 	/**
 	 * 
 	 <p>
@@ -1025,7 +1188,7 @@ public class CorporateActionBalanceDetails16 {
 	 * "Balance of financial instruments that are pending receipt."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingReceiptBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBalanceDetails16, List<PendingBalance2>> mmPendingReceiptBalance = new MMMessageAssociationEnd<CorporateActionBalanceDetails16, List<PendingBalance2>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails16.mmObject();
@@ -1037,7 +1200,17 @@ public class CorporateActionBalanceDetails16 {
 			definition = "Balance of financial instruments that are pending receipt.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PendingBalance2.mmObject();
+			type_lazy = () -> PendingBalance2.mmObject();
+		}
+
+		@Override
+		public List<PendingBalance2> getValue(CorporateActionBalanceDetails16 obj) {
+			return obj.getPendingReceiptBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionBalanceDetails16 obj, List<PendingBalance2> value) {
+			obj.setPendingReceiptBalance(value);
 		}
 	};
 
@@ -1085,7 +1258,7 @@ public class CorporateActionBalanceDetails16 {
 		return totalInstructedBalanceDetails;
 	}
 
-	public CorporateActionBalanceDetails16 setTotalInstructedBalanceDetails(com.tools20022.repository.msg.InstructedBalanceDetails4 totalInstructedBalanceDetails) {
+	public CorporateActionBalanceDetails16 setTotalInstructedBalanceDetails(InstructedBalanceDetails4 totalInstructedBalanceDetails) {
 		this.totalInstructedBalanceDetails = Objects.requireNonNull(totalInstructedBalanceDetails);
 		return this;
 	}
@@ -1094,7 +1267,7 @@ public class CorporateActionBalanceDetails16 {
 		return blockedBalance == null ? Optional.empty() : Optional.of(blockedBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setBlockedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 blockedBalance) {
+	public CorporateActionBalanceDetails16 setBlockedBalance(SignedQuantityFormat4 blockedBalance) {
 		this.blockedBalance = blockedBalance;
 		return this;
 	}
@@ -1103,7 +1276,7 @@ public class CorporateActionBalanceDetails16 {
 		return borrowedBalance == null ? Optional.empty() : Optional.of(borrowedBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setBorrowedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 borrowedBalance) {
+	public CorporateActionBalanceDetails16 setBorrowedBalance(SignedQuantityFormat4 borrowedBalance) {
 		this.borrowedBalance = borrowedBalance;
 		return this;
 	}
@@ -1112,7 +1285,7 @@ public class CorporateActionBalanceDetails16 {
 		return collateralInBalance == null ? Optional.empty() : Optional.of(collateralInBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setCollateralInBalance(com.tools20022.repository.msg.SignedQuantityFormat4 collateralInBalance) {
+	public CorporateActionBalanceDetails16 setCollateralInBalance(SignedQuantityFormat4 collateralInBalance) {
 		this.collateralInBalance = collateralInBalance;
 		return this;
 	}
@@ -1121,7 +1294,7 @@ public class CorporateActionBalanceDetails16 {
 		return collateralOutBalance == null ? Optional.empty() : Optional.of(collateralOutBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setCollateralOutBalance(com.tools20022.repository.msg.SignedQuantityFormat4 collateralOutBalance) {
+	public CorporateActionBalanceDetails16 setCollateralOutBalance(SignedQuantityFormat4 collateralOutBalance) {
 		this.collateralOutBalance = collateralOutBalance;
 		return this;
 	}
@@ -1130,7 +1303,7 @@ public class CorporateActionBalanceDetails16 {
 		return onLoanBalance == null ? Optional.empty() : Optional.of(onLoanBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setOnLoanBalance(com.tools20022.repository.msg.SignedQuantityFormat4 onLoanBalance) {
+	public CorporateActionBalanceDetails16 setOnLoanBalance(SignedQuantityFormat4 onLoanBalance) {
 		this.onLoanBalance = onLoanBalance;
 		return this;
 	}
@@ -1139,7 +1312,7 @@ public class CorporateActionBalanceDetails16 {
 		return outForRegistrationBalance == null ? Optional.empty() : Optional.of(outForRegistrationBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setOutForRegistrationBalance(com.tools20022.repository.msg.SignedQuantityFormat4 outForRegistrationBalance) {
+	public CorporateActionBalanceDetails16 setOutForRegistrationBalance(SignedQuantityFormat4 outForRegistrationBalance) {
 		this.outForRegistrationBalance = outForRegistrationBalance;
 		return this;
 	}
@@ -1148,7 +1321,7 @@ public class CorporateActionBalanceDetails16 {
 		return settlementPositionBalance == null ? Optional.empty() : Optional.of(settlementPositionBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setSettlementPositionBalance(com.tools20022.repository.msg.SignedQuantityFormat4 settlementPositionBalance) {
+	public CorporateActionBalanceDetails16 setSettlementPositionBalance(SignedQuantityFormat4 settlementPositionBalance) {
 		this.settlementPositionBalance = settlementPositionBalance;
 		return this;
 	}
@@ -1157,7 +1330,7 @@ public class CorporateActionBalanceDetails16 {
 		return streetPositionBalance == null ? Optional.empty() : Optional.of(streetPositionBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setStreetPositionBalance(com.tools20022.repository.msg.SignedQuantityFormat4 streetPositionBalance) {
+	public CorporateActionBalanceDetails16 setStreetPositionBalance(SignedQuantityFormat4 streetPositionBalance) {
 		this.streetPositionBalance = streetPositionBalance;
 		return this;
 	}
@@ -1166,7 +1339,7 @@ public class CorporateActionBalanceDetails16 {
 		return tradeDatePositionBalance == null ? Optional.empty() : Optional.of(tradeDatePositionBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setTradeDatePositionBalance(com.tools20022.repository.msg.SignedQuantityFormat4 tradeDatePositionBalance) {
+	public CorporateActionBalanceDetails16 setTradeDatePositionBalance(SignedQuantityFormat4 tradeDatePositionBalance) {
 		this.tradeDatePositionBalance = tradeDatePositionBalance;
 		return this;
 	}
@@ -1175,7 +1348,7 @@ public class CorporateActionBalanceDetails16 {
 		return inTransshipmentBalance == null ? Optional.empty() : Optional.of(inTransshipmentBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setInTransshipmentBalance(com.tools20022.repository.msg.SignedQuantityFormat4 inTransshipmentBalance) {
+	public CorporateActionBalanceDetails16 setInTransshipmentBalance(SignedQuantityFormat4 inTransshipmentBalance) {
 		this.inTransshipmentBalance = inTransshipmentBalance;
 		return this;
 	}
@@ -1184,7 +1357,7 @@ public class CorporateActionBalanceDetails16 {
 		return registeredBalance == null ? Optional.empty() : Optional.of(registeredBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setRegisteredBalance(com.tools20022.repository.msg.SignedQuantityFormat4 registeredBalance) {
+	public CorporateActionBalanceDetails16 setRegisteredBalance(SignedQuantityFormat4 registeredBalance) {
 		this.registeredBalance = registeredBalance;
 		return this;
 	}
@@ -1193,7 +1366,7 @@ public class CorporateActionBalanceDetails16 {
 		return obligatedBalance == null ? Optional.empty() : Optional.of(obligatedBalance);
 	}
 
-	public CorporateActionBalanceDetails16 setObligatedBalance(com.tools20022.repository.msg.SignedQuantityFormat4 obligatedBalance) {
+	public CorporateActionBalanceDetails16 setObligatedBalance(SignedQuantityFormat4 obligatedBalance) {
 		this.obligatedBalance = obligatedBalance;
 		return this;
 	}
@@ -1202,7 +1375,7 @@ public class CorporateActionBalanceDetails16 {
 		return pendingDeliveryBalance == null ? pendingDeliveryBalance = new ArrayList<>() : pendingDeliveryBalance;
 	}
 
-	public CorporateActionBalanceDetails16 setPendingDeliveryBalance(List<com.tools20022.repository.msg.PendingBalance2> pendingDeliveryBalance) {
+	public CorporateActionBalanceDetails16 setPendingDeliveryBalance(List<PendingBalance2> pendingDeliveryBalance) {
 		this.pendingDeliveryBalance = Objects.requireNonNull(pendingDeliveryBalance);
 		return this;
 	}
@@ -1211,7 +1384,7 @@ public class CorporateActionBalanceDetails16 {
 		return pendingReceiptBalance == null ? pendingReceiptBalance = new ArrayList<>() : pendingReceiptBalance;
 	}
 
-	public CorporateActionBalanceDetails16 setPendingReceiptBalance(List<com.tools20022.repository.msg.PendingBalance2> pendingReceiptBalance) {
+	public CorporateActionBalanceDetails16 setPendingReceiptBalance(List<PendingBalance2> pendingReceiptBalance) {
 		this.pendingReceiptBalance = Objects.requireNonNull(pendingReceiptBalance);
 		return this;
 	}

@@ -118,7 +118,7 @@ public class Event2 {
 	 * Event1.mmEventCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Event2, Max4AlphaNumericText> mmEventCode = new MMMessageAttribute<Event2, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Event2.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class Event2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(Event2 obj) {
+			return obj.getEventCode();
+		}
+
+		@Override
+		public void setValue(Event2 obj, Max4AlphaNumericText value) {
+			obj.setEventCode(value);
 		}
 	};
 	@XmlElement(name = "EvtParam")
@@ -166,7 +176,7 @@ public class Event2 {
 	 * Event1.mmEventParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventParameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Event2, List<Max35Text>> mmEventParameter = new MMMessageAttribute<Event2, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Event2.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class Event2 {
 			previousVersion_lazy = () -> Event1.mmEventParameter;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(Event2 obj) {
+			return obj.getEventParameter();
+		}
+
+		@Override
+		public void setValue(Event2 obj, List<Max35Text> value) {
+			obj.setEventParameter(value);
 		}
 	};
 	@XmlElement(name = "EvtDesc")
@@ -213,7 +233,7 @@ public class Event2 {
 	 * Event1.mmEventDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Event2, Optional<Max1000Text>> mmEventDescription = new MMMessageAttribute<Event2, Optional<Max1000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Event2.mmObject();
 			isDerived = false;
@@ -225,6 +245,16 @@ public class Event2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max1000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max1000Text> getValue(Event2 obj) {
+			return obj.getEventDescription();
+		}
+
+		@Override
+		public void setValue(Event2 obj, Optional<Max1000Text> value) {
+			obj.setEventDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTm")
@@ -260,7 +290,7 @@ public class Event2 {
 	 * Event1.mmEventTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Event2, Optional<ISODateTime>> mmEventTime = new MMMessageAttribute<Event2, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Event2.mmObject();
 			isDerived = false;
@@ -272,6 +302,16 @@ public class Event2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Event2 obj) {
+			return obj.getEventTime();
+		}
+
+		@Override
+		public void setValue(Event2 obj, Optional<ISODateTime> value) {
+			obj.setEventTime(value.orElse(null));
 		}
 	};
 

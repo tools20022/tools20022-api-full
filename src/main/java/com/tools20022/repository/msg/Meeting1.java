@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.entity.Quorum;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -122,7 +123,7 @@ public class Meeting1 {
 	 * definition} = "Date and time at which the meeting will take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Meeting1, ISODateTime> mmDateAndTime = new MMMessageAttribute<Meeting1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDateAndTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting1.mmObject();
@@ -134,6 +135,16 @@ public class Meeting1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Meeting1 obj) {
+			return obj.getDateAndTime();
+		}
+
+		@Override
+		public void setValue(Meeting1 obj, ISODateTime value) {
+			obj.setDateAndTime(value);
 		}
 	};
 	@XmlElement(name = "DtSts", required = true)
@@ -170,7 +181,7 @@ public class Meeting1 {
 	 * definition} = "Indicates the status of a meeting date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Meeting1, MeetingDateStatus1Code> mmDateStatus = new MMMessageAttribute<Meeting1, MeetingDateStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDateStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting1.mmObject();
@@ -182,6 +193,16 @@ public class Meeting1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingDateStatus1Code.mmObject();
+		}
+
+		@Override
+		public MeetingDateStatus1Code getValue(Meeting1 obj) {
+			return obj.getDateStatus();
+		}
+
+		@Override
+		public void setValue(Meeting1 obj, MeetingDateStatus1Code value) {
+			obj.setDateStatus(value);
 		}
 	};
 	@XmlElement(name = "QrmReqrd")
@@ -220,7 +241,7 @@ public class Meeting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuorumRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Meeting1, Optional<YesNoIndicator>> mmQuorumRequired = new MMMessageAttribute<Meeting1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuorumRequired;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting1.mmObject();
@@ -233,9 +254,19 @@ public class Meeting1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Meeting1 obj) {
+			return obj.getQuorumRequired();
+		}
+
+		@Override
+		public void setValue(Meeting1 obj, Optional<YesNoIndicator> value) {
+			obj.setQuorumRequired(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Lctn", required = true)
-	protected List<com.tools20022.repository.msg.PostalAddress1> location;
+	protected List<PostalAddress1> location;
 	/**
 	 * 
 	 <p>
@@ -267,7 +298,7 @@ public class Meeting1 {
 	 * "Place of the company meeting for the scheduled meeting date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Meeting1, List<PostalAddress1>> mmLocation = new MMMessageAssociationEnd<Meeting1, List<PostalAddress1>>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmMeetingLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting1.mmObject();
@@ -279,7 +310,17 @@ public class Meeting1 {
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public List<PostalAddress1> getValue(Meeting1 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(Meeting1 obj, List<PostalAddress1> value) {
+			obj.setLocation(value);
 		}
 	};
 	@XmlElement(name = "QrmQty")
@@ -316,7 +357,7 @@ public class Meeting1 {
 	 * "Minimum quantity of securities required to hold a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Meeting1, Optional<Max35Text>> mmQuorumQuantity = new MMMessageAttribute<Meeting1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting1.mmObject();
@@ -328,6 +369,16 @@ public class Meeting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Meeting1 obj) {
+			return obj.getQuorumQuantity();
+		}
+
+		@Override
+		public void setValue(Meeting1 obj, Optional<Max35Text> value) {
+			obj.setQuorumQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QrmQtyPctg")
@@ -364,7 +415,7 @@ public class Meeting1 {
 	 * definition} = "Percentage of securities required to vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuorumQuantityPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Meeting1, Optional<PercentageRate>> mmQuorumQuantityPercentage = new MMMessageAttribute<Meeting1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting1.mmObject();
@@ -376,6 +427,16 @@ public class Meeting1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Meeting1 obj) {
+			return obj.getQuorumQuantityPercentage();
+		}
+
+		@Override
+		public void setValue(Meeting1 obj, Optional<PercentageRate> value) {
+			obj.setQuorumQuantityPercentage(value.orElse(null));
 		}
 	};
 	/**
@@ -460,7 +521,7 @@ public class Meeting1 {
 		return location == null ? location = new ArrayList<>() : location;
 	}
 
-	public Meeting1 setLocation(List<com.tools20022.repository.msg.PostalAddress1> location) {
+	public Meeting1 setLocation(List<PostalAddress1> location) {
 		this.location = Objects.requireNonNull(location);
 		return this;
 	}

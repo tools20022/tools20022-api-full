@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.NamePrefix1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -183,7 +184,7 @@ public class IndividualPerson10 {
 	 * definition} = "Specifies the terms used to formally address a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNamePrefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<NamePrefix1Code>> mmNamePrefix = new MMMessageAttribute<IndividualPerson10, Optional<NamePrefix1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNamePrefix;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -195,6 +196,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NamePrefix1Code.mmObject();
+		}
+
+		@Override
+		public Optional<NamePrefix1Code> getValue(IndividualPerson10 obj) {
+			return obj.getNamePrefix();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<NamePrefix1Code> value) {
+			obj.setNamePrefix(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedNmPrfx")
@@ -232,7 +243,7 @@ public class IndividualPerson10 {
 	 * definition} = "Specifies the terms used to formally address a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedNamePrefix = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<Extended350Code>> mmExtendedNamePrefix = new MMMessageAttribute<IndividualPerson10, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNamePrefix;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -244,6 +255,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(IndividualPerson10 obj) {
+			return obj.getExtendedNamePrefix();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<Extended350Code> value) {
+			obj.setExtendedNamePrefix(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GvnNm", required = true)
@@ -280,7 +301,7 @@ public class IndividualPerson10 {
 	 * definition} = "First name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Max35Text> mmGivenName = new MMMessageAttribute<IndividualPerson10, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -292,6 +313,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IndividualPerson10 obj) {
+			return obj.getGivenName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Max35Text value) {
+			obj.setGivenName(value);
 		}
 	};
 	@XmlElement(name = "MddlNm")
@@ -328,7 +359,7 @@ public class IndividualPerson10 {
 	 * definition} = "Second name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMiddleName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<Max35Text>> mmMiddleName = new MMMessageAttribute<IndividualPerson10, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmMiddleName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -340,6 +371,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPerson10 obj) {
+			return obj.getMiddleName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<Max35Text> value) {
+			obj.setMiddleName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -378,7 +419,7 @@ public class IndividualPerson10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Max350Text> mmName = new MMMessageAttribute<IndividualPerson10, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -390,6 +431,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(IndividualPerson10 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Max350Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "NmSfx")
@@ -428,7 +479,7 @@ public class IndividualPerson10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameSuffix = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<Max35Text>> mmNameSuffix = new MMMessageAttribute<IndividualPerson10, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNameSuffix;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -440,6 +491,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPerson10 obj) {
+			return obj.getNameSuffix();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<Max35Text> value) {
+			obj.setNameSuffix(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Gndr")
@@ -476,7 +537,7 @@ public class IndividualPerson10 {
 	 * definition} = "Specifies the gender of the person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGender = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<GenderCode>> mmGender = new MMMessageAttribute<IndividualPerson10, Optional<GenderCode>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmGender;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -488,6 +549,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> GenderCode.mmObject();
+		}
+
+		@Override
+		public Optional<GenderCode> getValue(IndividualPerson10 obj) {
+			return obj.getGender();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<GenderCode> value) {
+			obj.setGender(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lang")
@@ -527,7 +598,7 @@ public class IndividualPerson10 {
 	 * definition} = "Language in which a person communicates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<LanguageCode>> mmLanguage = new MMMessageAttribute<IndividualPerson10, Optional<LanguageCode>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmLanguage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -540,6 +611,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public Optional<LanguageCode> getValue(IndividualPerson10 obj) {
+			return obj.getLanguage();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<LanguageCode> value) {
+			obj.setLanguage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BirthDt", required = true)
@@ -576,7 +657,7 @@ public class IndividualPerson10 {
 	 * definition} = "Date on which a person is born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, ISODate> mmBirthDate = new MMMessageAttribute<IndividualPerson10, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -588,6 +669,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(IndividualPerson10 obj) {
+			return obj.getBirthDate();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, ISODate value) {
+			obj.setBirthDate(value);
 		}
 	};
 	@XmlElement(name = "CtryOfBirth")
@@ -627,7 +718,7 @@ public class IndividualPerson10 {
 	 * definition} = "Country where a person was born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfBirth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<CountryCode>> mmCountryOfBirth = new MMMessageAttribute<IndividualPerson10, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPlaceOfBirth;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -640,6 +731,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(IndividualPerson10 obj) {
+			return obj.getCountryOfBirth();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<CountryCode> value) {
+			obj.setCountryOfBirth(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvcOfBirth")
@@ -676,7 +777,7 @@ public class IndividualPerson10 {
 	 * definition} = "Province where a person was born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProvinceOfBirth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<Max35Text>> mmProvinceOfBirth = new MMMessageAttribute<IndividualPerson10, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmProvince;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -688,6 +789,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPerson10 obj) {
+			return obj.getProvinceOfBirth();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<Max35Text> value) {
+			obj.setProvinceOfBirth(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CityOfBirth")
@@ -724,7 +835,7 @@ public class IndividualPerson10 {
 	 * definition} = "City where a person was born."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCityOfBirth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<Max35Text>> mmCityOfBirth = new MMMessageAttribute<IndividualPerson10, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -736,6 +847,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPerson10 obj) {
+			return obj.getCityOfBirth();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<Max35Text> value) {
+			obj.setCityOfBirth(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prfssn")
@@ -772,7 +893,7 @@ public class IndividualPerson10 {
 	 * definition} = "Name of the occupation or job of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProfession = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<Max35Text>> mmProfession = new MMMessageAttribute<IndividualPerson10, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmProfession;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -784,6 +905,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPerson10 obj) {
+			return obj.getProfession();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<Max35Text> value) {
+			obj.setProfession(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxtnCtry")
@@ -820,7 +951,7 @@ public class IndividualPerson10 {
 	 * definition} = "Country of taxation of an individual person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxationCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<CountryCode>> mmTaxationCountry = new MMMessageAttribute<IndividualPerson10, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -832,6 +963,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(IndividualPerson10 obj) {
+			return obj.getTaxationCountry();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<CountryCode> value) {
+			obj.setTaxationCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryAndResdtlSts")
@@ -871,7 +1012,7 @@ public class IndividualPerson10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryAndResidentialStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<CountryAndResidentialStatusType1>> mmCountryAndResidentialStatus = new MMMessageAttribute<IndividualPerson10, Optional<CountryAndResidentialStatusType1>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmResidentialStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -882,11 +1023,21 @@ public class IndividualPerson10 {
 			definition = "Country and residential status of an individual, for example, non-pernament resident.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmObject();
+			complexType_lazy = () -> CountryAndResidentialStatusType1.mmObject();
+		}
+
+		@Override
+		public Optional<CountryAndResidentialStatusType1> getValue(IndividualPerson10 obj) {
+			return obj.getCountryAndResidentialStatus();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<CountryAndResidentialStatusType1> value) {
+			obj.setCountryAndResidentialStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstlAdr", required = true)
-	protected List<com.tools20022.repository.msg.PostalAddress3> postalAddress;
+	protected List<PostalAddress3> postalAddress;
 	/**
 	 * 
 	 <p>
@@ -920,7 +1071,7 @@ public class IndividualPerson10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson10, List<PostalAddress3>> mmPostalAddress = new MMMessageAssociationEnd<IndividualPerson10, List<PostalAddress3>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -932,11 +1083,21 @@ public class IndividualPerson10 {
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress3.mmObject();
+			type_lazy = () -> PostalAddress3.mmObject();
+		}
+
+		@Override
+		public List<PostalAddress3> getValue(IndividualPerson10 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, List<PostalAddress3> value) {
+			obj.setPostalAddress(value);
 		}
 	};
 	@XmlElement(name = "Ctznsh", required = true)
-	protected List<com.tools20022.repository.msg.CitizenshipInformation> citizenship;
+	protected List<CitizenshipInformation> citizenship;
 	/**
 	 * 
 	 <p>
@@ -970,7 +1131,7 @@ public class IndividualPerson10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCitizenship = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson10, List<CitizenshipInformation>> mmCitizenship = new MMMessageAssociationEnd<IndividualPerson10, List<CitizenshipInformation>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmNationality;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -982,7 +1143,17 @@ public class IndividualPerson10 {
 			maxOccurs = 3;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation.mmObject();
+			type_lazy = () -> CitizenshipInformation.mmObject();
+		}
+
+		@Override
+		public List<CitizenshipInformation> getValue(IndividualPerson10 obj) {
+			return obj.getCitizenship();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, List<CitizenshipInformation> value) {
+			obj.setCitizenship(value);
 		}
 	};
 	@XmlElement(name = "EmplngCpny")
@@ -1020,7 +1191,7 @@ public class IndividualPerson10 {
 	 * "Organisation represented by a person, or for which a person works."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmployingCompany = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<Max140Text>> mmEmployingCompany = new MMMessageAttribute<IndividualPerson10, Optional<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> EmployingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -1032,6 +1203,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(IndividualPerson10 obj) {
+			return obj.getEmployingCompany();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<Max140Text> value) {
+			obj.setEmployingCompany(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BizFctn")
@@ -1068,7 +1249,7 @@ public class IndividualPerson10 {
 	 * definition} = "Title of the function."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson10, Optional<Max35Text>> mmBusinessFunction = new MMMessageAttribute<IndividualPerson10, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBusinessFunctionTitle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -1080,6 +1261,16 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPerson10 obj) {
+			return obj.getBusinessFunction();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<Max35Text> value) {
+			obj.setBusinessFunction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmryComAdr")
@@ -1117,7 +1308,7 @@ public class IndividualPerson10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrimaryCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson10, Optional<CommunicationAddress3>> mmPrimaryCommunicationAddress = new MMMessageAssociationEnd<IndividualPerson10, Optional<CommunicationAddress3>>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -1129,7 +1320,17 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress3.mmObject();
+			type_lazy = () -> CommunicationAddress3.mmObject();
+		}
+
+		@Override
+		public Optional<CommunicationAddress3> getValue(IndividualPerson10 obj) {
+			return obj.getPrimaryCommunicationAddress();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<CommunicationAddress3> value) {
+			obj.setPrimaryCommunicationAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryComAdr")
@@ -1167,7 +1368,7 @@ public class IndividualPerson10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecondaryCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson10, Optional<CommunicationAddress3>> mmSecondaryCommunicationAddress = new MMMessageAssociationEnd<IndividualPerson10, Optional<CommunicationAddress3>>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -1179,11 +1380,21 @@ public class IndividualPerson10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress3.mmObject();
+			type_lazy = () -> CommunicationAddress3.mmObject();
+		}
+
+		@Override
+		public Optional<CommunicationAddress3> getValue(IndividualPerson10 obj) {
+			return obj.getSecondaryCommunicationAddress();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, Optional<CommunicationAddress3> value) {
+			obj.setSecondaryCommunicationAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrId")
-	protected List<com.tools20022.repository.msg.GenericIdentification9> otherIdentification;
+	protected List<GenericIdentification9> otherIdentification;
 	/**
 	 * 
 	 <p>
@@ -1217,7 +1428,7 @@ public class IndividualPerson10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson10, List<GenericIdentification9>> mmOtherIdentification = new MMMessageAssociationEnd<IndividualPerson10, List<GenericIdentification9>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson10.mmObject();
@@ -1229,7 +1440,17 @@ public class IndividualPerson10 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification9.mmObject();
+			type_lazy = () -> GenericIdentification9.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification9> getValue(IndividualPerson10 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(IndividualPerson10 obj, List<GenericIdentification9> value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 	/**
@@ -1435,7 +1656,7 @@ public class IndividualPerson10 {
 		return countryAndResidentialStatus == null ? Optional.empty() : Optional.of(countryAndResidentialStatus);
 	}
 
-	public IndividualPerson10 setCountryAndResidentialStatus(com.tools20022.repository.msg.CountryAndResidentialStatusType1 countryAndResidentialStatus) {
+	public IndividualPerson10 setCountryAndResidentialStatus(CountryAndResidentialStatusType1 countryAndResidentialStatus) {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
 		return this;
 	}
@@ -1444,7 +1665,7 @@ public class IndividualPerson10 {
 		return postalAddress == null ? postalAddress = new ArrayList<>() : postalAddress;
 	}
 
-	public IndividualPerson10 setPostalAddress(List<com.tools20022.repository.msg.PostalAddress3> postalAddress) {
+	public IndividualPerson10 setPostalAddress(List<PostalAddress3> postalAddress) {
 		this.postalAddress = Objects.requireNonNull(postalAddress);
 		return this;
 	}
@@ -1453,7 +1674,7 @@ public class IndividualPerson10 {
 		return citizenship == null ? citizenship = new ArrayList<>() : citizenship;
 	}
 
-	public IndividualPerson10 setCitizenship(List<com.tools20022.repository.msg.CitizenshipInformation> citizenship) {
+	public IndividualPerson10 setCitizenship(List<CitizenshipInformation> citizenship) {
 		this.citizenship = Objects.requireNonNull(citizenship);
 		return this;
 	}
@@ -1480,7 +1701,7 @@ public class IndividualPerson10 {
 		return primaryCommunicationAddress == null ? Optional.empty() : Optional.of(primaryCommunicationAddress);
 	}
 
-	public IndividualPerson10 setPrimaryCommunicationAddress(com.tools20022.repository.msg.CommunicationAddress3 primaryCommunicationAddress) {
+	public IndividualPerson10 setPrimaryCommunicationAddress(CommunicationAddress3 primaryCommunicationAddress) {
 		this.primaryCommunicationAddress = primaryCommunicationAddress;
 		return this;
 	}
@@ -1489,7 +1710,7 @@ public class IndividualPerson10 {
 		return secondaryCommunicationAddress == null ? Optional.empty() : Optional.of(secondaryCommunicationAddress);
 	}
 
-	public IndividualPerson10 setSecondaryCommunicationAddress(com.tools20022.repository.msg.CommunicationAddress3 secondaryCommunicationAddress) {
+	public IndividualPerson10 setSecondaryCommunicationAddress(CommunicationAddress3 secondaryCommunicationAddress) {
 		this.secondaryCommunicationAddress = secondaryCommunicationAddress;
 		return this;
 	}
@@ -1498,7 +1719,7 @@ public class IndividualPerson10 {
 		return otherIdentification == null ? otherIdentification = new ArrayList<>() : otherIdentification;
 	}
 
-	public IndividualPerson10 setOtherIdentification(List<com.tools20022.repository.msg.GenericIdentification9> otherIdentification) {
+	public IndividualPerson10 setOtherIdentification(List<GenericIdentification9> otherIdentification) {
 		this.otherIdentification = Objects.requireNonNull(otherIdentification);
 		return this;
 	}

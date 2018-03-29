@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantityChoice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
@@ -110,7 +111,7 @@ public class QuantityOrAmount1Choice {
 	 * "Quantity is expressed in units, face amount or amortised amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityOrAmount1Choice, FinancialInstrumentQuantityChoice> mmQuantity = new MMMessageAttribute<QuantityOrAmount1Choice, FinancialInstrumentQuantityChoice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityOrAmount1Choice.mmObject();
@@ -121,7 +122,17 @@ public class QuantityOrAmount1Choice {
 			definition = "Quantity is expressed in units, face amount or amortised amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantityChoice.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantityChoice getValue(QuantityOrAmount1Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityOrAmount1Choice obj, FinancialInstrumentQuantityChoice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -159,7 +170,7 @@ public class QuantityOrAmount1Choice {
 	 * definition} = "Quantity is expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityOrAmount1Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<QuantityOrAmount1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityOrAmount1Choice.mmObject();
@@ -171,6 +182,16 @@ public class QuantityOrAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(QuantityOrAmount1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(QuantityOrAmount1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 
@@ -192,7 +213,7 @@ public class QuantityOrAmount1Choice {
 		return quantity;
 	}
 
-	public QuantityOrAmount1Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantityChoice quantity) {
+	public QuantityOrAmount1Choice setQuantity(FinancialInstrumentQuantityChoice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

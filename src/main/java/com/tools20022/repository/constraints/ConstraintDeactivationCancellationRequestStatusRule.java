@@ -51,11 +51,15 @@ public class ConstraintDeactivationCancellationRequestStatusRule {
 	 */
 	public static final MMConstraint<AgentCADeactivationStatusAdviceV01> forAgentCADeactivationStatusAdviceV01 = new MMConstraint<AgentCADeactivationStatusAdviceV01>() {
 		{
-			validator = ConstraintDeactivationCancellationRequestStatusRule::checkAgentCADeactivationStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationCancellationRequestStatusRule";
 			definition = "If AgentCADeactivationCancellationRequestIdentification is present, then DeactivationCancellationRequestStatus must be present.";
 			owner_lazy = () -> AgentCADeactivationStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCADeactivationStatusAdviceV01 obj) throws Exception {
+			checkAgentCADeactivationStatusAdviceV01(obj);
 		}
 	};
 

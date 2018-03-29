@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.TransactionDetails3;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -129,7 +128,7 @@ public class RegulatoryTransactionReportV02 {
 	 * definition} = "Identification of the RegulatoryTransactionReport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportV02, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<RegulatoryTransactionReportV02, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,12 +139,14 @@ public class RegulatoryTransactionReportV02 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportV02.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(RegulatoryTransactionReportV02 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportV02 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxDtls", required = true)
@@ -175,7 +176,7 @@ public class RegulatoryTransactionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportV02, List<TransactionDetails3>> mmTransactionDetails = new MMMessageBuildingBlock<RegulatoryTransactionReportV02, List<TransactionDetails3>>() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,12 +186,14 @@ public class RegulatoryTransactionReportV02 {
 			complexType_lazy = () -> TransactionDetails3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportV02.class.getMethod("getTransactionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<TransactionDetails3> getValue(RegulatoryTransactionReportV02 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportV02 obj, List<TransactionDetails3> value) {
+			obj.setTransactionDetails(value);
 		}
 	};
 	@XmlElement(name = "RptgInstn", required = true)
@@ -220,7 +223,7 @@ public class RegulatoryTransactionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportingInstitution = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportV02, PartyIdentification23Choice> mmReportingInstitution = new MMMessageBuildingBlock<RegulatoryTransactionReportV02, PartyIdentification23Choice>() {
 		{
 			xmlTag = "RptgInstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,12 +234,14 @@ public class RegulatoryTransactionReportV02 {
 			complexType_lazy = () -> PartyIdentification23Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportV02.class.getMethod("getReportingInstitution", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification23Choice getValue(RegulatoryTransactionReportV02 obj) {
+			return obj.getReportingInstitution();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportV02 obj, PartyIdentification23Choice value) {
+			obj.setReportingInstitution(value);
 		}
 	};
 	@XmlElement(name = "RptgAgt")
@@ -266,7 +271,7 @@ public class RegulatoryTransactionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportV02, Optional<PartyIdentification24Choice>> mmReportingAgent = new MMMessageBuildingBlock<RegulatoryTransactionReportV02, Optional<PartyIdentification24Choice>>() {
 		{
 			xmlTag = "RptgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,12 +282,14 @@ public class RegulatoryTransactionReportV02 {
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportV02.class.getMethod("getReportingAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification24Choice> getValue(RegulatoryTransactionReportV02 obj) {
+			return obj.getReportingAgent();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportV02 obj, Optional<PartyIdentification24Choice> value) {
+			obj.setReportingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -311,7 +318,7 @@ public class RegulatoryTransactionReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RegulatoryTransactionReportV02, List<Extension1>> mmExtension = new MMMessageBuildingBlock<RegulatoryTransactionReportV02, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +328,14 @@ public class RegulatoryTransactionReportV02 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RegulatoryTransactionReportV02.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(RegulatoryTransactionReportV02 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(RegulatoryTransactionReportV02 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

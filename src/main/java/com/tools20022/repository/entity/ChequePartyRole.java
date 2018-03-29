@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Cheque;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.ArrayList;
@@ -115,7 +116,7 @@ public class ChequePartyRole extends Role {
 	 * definition} = "Identifies the cheque for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ChequePartyRole, List<Cheque>> mmCheque = new MMBusinessAssociationEnd<ChequePartyRole, List<Cheque>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ChequePartyRole.mmObject();
@@ -126,6 +127,16 @@ public class ChequePartyRole extends Role {
 			opposite_lazy = () -> com.tools20022.repository.entity.Cheque.mmChequePartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
+		}
+
+		@Override
+		public List<Cheque> getValue(ChequePartyRole obj) {
+			return obj.getCheque();
+		}
+
+		@Override
+		public void setValue(ChequePartyRole obj, List<Cheque> value) {
+			obj.setCheque(value);
 		}
 	};
 

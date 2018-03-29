@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.BalanceQuantity8Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -120,7 +121,7 @@ public class OpeningBalance4Choice {
 	 * OpeningBalance1Choice.mmFirst}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirst = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningBalance4Choice, BalanceQuantity8Choice> mmFirst = new MMMessageAttribute<OpeningBalance4Choice, BalanceQuantity8Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningBalance4Choice.mmObject();
@@ -133,7 +134,17 @@ public class OpeningBalance4Choice {
 			previousVersion_lazy = () -> OpeningBalance1Choice.mmFirst;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.BalanceQuantity8Choice.mmObject();
+			complexType_lazy = () -> BalanceQuantity8Choice.mmObject();
+		}
+
+		@Override
+		public BalanceQuantity8Choice getValue(OpeningBalance4Choice obj) {
+			return obj.getFirst();
+		}
+
+		@Override
+		public void setValue(OpeningBalance4Choice obj, BalanceQuantity8Choice value) {
+			obj.setFirst(value);
 		}
 	};
 	@XmlElement(name = "Intrmy", required = true)
@@ -181,7 +192,7 @@ public class OpeningBalance4Choice {
 	 * OpeningBalance1Choice.mmIntermediary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningBalance4Choice, BalanceQuantity8Choice> mmIntermediary = new MMMessageAttribute<OpeningBalance4Choice, BalanceQuantity8Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningBalance4Choice.mmObject();
@@ -194,7 +205,17 @@ public class OpeningBalance4Choice {
 			previousVersion_lazy = () -> OpeningBalance1Choice.mmIntermediary;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.BalanceQuantity8Choice.mmObject();
+			complexType_lazy = () -> BalanceQuantity8Choice.mmObject();
+		}
+
+		@Override
+		public BalanceQuantity8Choice getValue(OpeningBalance4Choice obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(OpeningBalance4Choice obj, BalanceQuantity8Choice value) {
+			obj.setIntermediary(value);
 		}
 	};
 
@@ -217,7 +238,7 @@ public class OpeningBalance4Choice {
 		return first;
 	}
 
-	public OpeningBalance4Choice setFirst(com.tools20022.repository.choice.BalanceQuantity8Choice first) {
+	public OpeningBalance4Choice setFirst(BalanceQuantity8Choice first) {
 		this.first = Objects.requireNonNull(first);
 		return this;
 	}
@@ -226,7 +247,7 @@ public class OpeningBalance4Choice {
 		return intermediary;
 	}
 
-	public OpeningBalance4Choice setIntermediary(com.tools20022.repository.choice.BalanceQuantity8Choice intermediary) {
+	public OpeningBalance4Choice setIntermediary(BalanceQuantity8Choice intermediary) {
 		this.intermediary = Objects.requireNonNull(intermediary);
 		return this;
 	}

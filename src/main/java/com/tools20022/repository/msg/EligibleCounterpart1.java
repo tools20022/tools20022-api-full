@@ -131,7 +131,7 @@ public class EligibleCounterpart1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibleCounterpart1, SystemPartyIdentification1Choice> mmIssuerIdentification = new MMMessageAttribute<EligibleCounterpart1, SystemPartyIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class EligibleCounterpart1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification1Choice getValue(EligibleCounterpart1 obj) {
+			return obj.getIssuerIdentification();
+		}
+
+		@Override
+		public void setValue(EligibleCounterpart1 obj, SystemPartyIdentification1Choice value) {
+			obj.setIssuerIdentification(value);
 		}
 	};
 	@XmlElement(name = "ElgblCntrptId", required = true)
@@ -185,7 +195,7 @@ public class EligibleCounterpart1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEligibleCounterpartIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibleCounterpart1, SystemPartyIdentification1Choice> mmEligibleCounterpartIdentification = new MMMessageAttribute<EligibleCounterpart1, SystemPartyIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class EligibleCounterpart1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification1Choice getValue(EligibleCounterpart1 obj) {
+			return obj.getEligibleCounterpartIdentification();
+		}
+
+		@Override
+		public void setValue(EligibleCounterpart1 obj, SystemPartyIdentification1Choice value) {
+			obj.setEligibleCounterpartIdentification(value);
 		}
 	};
 	@XmlElement(name = "VldFr", required = true)
@@ -236,7 +256,7 @@ public class EligibleCounterpart1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibleCounterpart1, ISODate> mmValidFrom = new MMMessageAttribute<EligibleCounterpart1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
@@ -248,6 +268,16 @@ public class EligibleCounterpart1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(EligibleCounterpart1 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(EligibleCounterpart1 obj, ISODate value) {
+			obj.setValidFrom(value);
 		}
 	};
 	@XmlElement(name = "VldTo")
@@ -287,7 +317,7 @@ public class EligibleCounterpart1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibleCounterpart1, Optional<ISODate>> mmValidTo = new MMMessageAttribute<EligibleCounterpart1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
@@ -299,6 +329,16 @@ public class EligibleCounterpart1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(EligibleCounterpart1 obj) {
+			return obj.getValidTo();
+		}
+
+		@Override
+		public void setValue(EligibleCounterpart1 obj, Optional<ISODate> value) {
+			obj.setValidTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ElgbltyTp", required = true)
@@ -339,7 +379,7 @@ public class EligibleCounterpart1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEligibilityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibleCounterpart1, EligibilityType1Code> mmEligibilityType = new MMMessageAttribute<EligibleCounterpart1, EligibilityType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
@@ -351,6 +391,16 @@ public class EligibleCounterpart1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EligibilityType1Code.mmObject();
+		}
+
+		@Override
+		public EligibilityType1Code getValue(EligibleCounterpart1 obj) {
+			return obj.getEligibilityType();
+		}
+
+		@Override
+		public void setValue(EligibleCounterpart1 obj, EligibilityType1Code value) {
+			obj.setEligibilityType(value);
 		}
 	};
 	@XmlElement(name = "ElgbltyId", required = true)
@@ -390,7 +440,7 @@ public class EligibleCounterpart1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEligibilityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EligibleCounterpart1, EligibilityIdentification1Choice> mmEligibilityIdentification = new MMMessageAssociationEnd<EligibleCounterpart1, EligibilityIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleCounterpart1.mmObject();
 			isDerived = false;
@@ -403,6 +453,16 @@ public class EligibleCounterpart1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EligibilityIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public EligibilityIdentification1Choice getValue(EligibleCounterpart1 obj) {
+			return obj.getEligibilityIdentification();
+		}
+
+		@Override
+		public void setValue(EligibleCounterpart1 obj, EligibilityIdentification1Choice value) {
+			obj.setEligibilityIdentification(value);
 		}
 	};
 

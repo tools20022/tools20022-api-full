@@ -437,7 +437,17 @@ class ListBuilderForSupplementaryData1_00 {
 		list.add((T) CollateralProposalResponseV04.mmSupplementaryData);
 		list.add((T) CollateralSubstitutionRequestV04.mmSupplementaryData);
 		list.add((T) CollateralAndExposureReportV03.mmSupplementaryData);
+		list.add((T) CorporateActionMovementPreliminaryAdviceCancellationAdvice002V06.mmSupplementaryData);
 		list.add((T) CorporateActionNarrative002V04.mmSupplementaryData);
+		list.add((T) CorporateActionNotification002V06.mmSupplementaryData);
+		list.add((T) CorporateActionInstructionStatusAdvice002V07.mmSupplementaryData);
+		list.add((T) CorporateActionMovementPreliminaryAdvice002V07.mmSupplementaryData);
+		list.add((T) CorporateActionMovementReversalAdvice002V07.mmSupplementaryData);
+		list.add((T) CorporateActionMovementConfirmation002V07.mmSupplementaryData);
+		list.add((T) CorporateActionInstructionCancellationRequestStatusAdvice002V06.mmSupplementaryData);
+		list.add((T) CorporateActionInstruction002V06.mmSupplementaryData);
+		list.add((T) CorporateActionCancellationAdvice002V06.mmSupplementaryData);
+		list.add((T) CorporateActionInstructionStatementReport002V05.mmSupplementaryData);
 		list.add((T) SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmSupplementaryData);
 		list.add((T) SecuritiesSettlementTransactionAllegementNotification002V05.mmSupplementaryData);
 		list.add((T) SecuritiesSettlementTransactionStatusAdvice002V07.mmSupplementaryData);
@@ -534,16 +544,6 @@ class ListBuilderForSupplementaryData1_00 {
 		list.add((T) CollateralProposalResponseV05.mmSupplementaryData);
 		list.add((T) CollateralProposalV05.mmSupplementaryData);
 		list.add((T) MandateSuspensionRequestV01.mmSupplementaryData);
-		list.add((T) MandateCopyRequestV01.mmSupplementaryData);
-		list.add((T) IntraPositionMovementConfirmation002V06.mmSupplementaryData);
-		list.add((T) CorporateActionInstruction002V07.mmSupplementaryData);
-		list.add((T) IntraPositionMovementStatusAdvice002V05.mmSupplementaryData);
-		list.add((T) CorporateActionMovementPreliminaryAdvice002V08.mmSupplementaryData);
-		list.add((T) SecuritiesSettlementTransactionAllegementNotification002V06.mmSupplementaryData);
-		list.add((T) CorporateActionCancellationAdvice002V07.mmSupplementaryData);
-		list.add((T) SecuritiesSettlementTransactionInstruction002V07.mmSupplementaryData);
-		list.add((T) CorporateActionMovementReversalAdvice002V08.mmSupplementaryData);
-		list.add((T) CorporateActionInstructionCancellationRequest002V07.mmSupplementaryData);
 		ListBuilderForSupplementaryData1_01.addElems(list);
 		return list;
 	}

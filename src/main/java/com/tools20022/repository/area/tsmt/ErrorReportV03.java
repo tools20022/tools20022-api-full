@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -145,7 +144,7 @@ public class ErrorReportV03 {
 	 * definition} = "Identifies the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ErrorReportV03, MessageIdentification1> mmReportIdentification = new MMMessageBuildingBlock<ErrorReportV03, MessageIdentification1>() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,12 +155,14 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ErrorReportV03.class.getMethod("getReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ErrorReportV03 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(ErrorReportV03 obj, MessageIdentification1 value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId")
@@ -191,7 +192,7 @@ public class ErrorReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ErrorReportV03, Optional<SimpleIdentificationInformation>> mmTransactionIdentification = new MMMessageBuildingBlock<ErrorReportV03, Optional<SimpleIdentificationInformation>>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,12 +203,14 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ErrorReportV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SimpleIdentificationInformation> getValue(ErrorReportV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ErrorReportV03 obj, Optional<SimpleIdentificationInformation> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId")
@@ -237,7 +240,7 @@ public class ErrorReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ErrorReportV03, Optional<DocumentIdentification3>> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<ErrorReportV03, Optional<DocumentIdentification3>>() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,12 +251,14 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ErrorReportV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification3> getValue(ErrorReportV03 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(ErrorReportV03 obj, Optional<DocumentIdentification3> value) {
+			obj.setEstablishedBaselineIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxSts")
@@ -282,7 +287,7 @@ public class ErrorReportV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ErrorReportV03, Optional<TransactionStatus4>> mmTransactionStatus = new MMMessageBuildingBlock<ErrorReportV03, Optional<TransactionStatus4>>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,12 +298,14 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ErrorReportV03.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransactionStatus4> getValue(ErrorReportV03 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(ErrorReportV03 obj, Optional<TransactionStatus4> value) {
+			obj.setTransactionStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
@@ -328,7 +335,7 @@ public class ErrorReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ErrorReportV03, Optional<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<ErrorReportV03, Optional<DocumentIdentification5>>() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,12 +346,14 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ErrorReportV03.class.getMethod("getUserTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification5> getValue(ErrorReportV03 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(ErrorReportV03 obj, Optional<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctdMsgRef")
@@ -372,7 +381,7 @@ public class ErrorReportV03 {
 	 * definition} = "Reference to the identification of the rejected message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRejectedMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ErrorReportV03, Optional<MessageIdentification1>> mmRejectedMessageReference = new MMMessageBuildingBlock<ErrorReportV03, Optional<MessageIdentification1>>() {
 		{
 			xmlTag = "RjctdMsgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,12 +392,14 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ErrorReportV03.class.getMethod("getRejectedMessageReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MessageIdentification1> getValue(ErrorReportV03 obj) {
+			return obj.getRejectedMessageReference();
+		}
+
+		@Override
+		public void setValue(ErrorReportV03 obj, Optional<MessageIdentification1> value) {
+			obj.setRejectedMessageReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfErrs", required = true)
@@ -416,7 +427,7 @@ public class ErrorReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNumberOfErrors = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ErrorReportV03, Count1> mmNumberOfErrors = new MMMessageBuildingBlock<ErrorReportV03, Count1>() {
 		{
 			xmlTag = "NbOfErrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -427,12 +438,14 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> Count1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ErrorReportV03.class.getMethod("getNumberOfErrors", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Count1 getValue(ErrorReportV03 obj) {
+			return obj.getNumberOfErrors();
+		}
+
+		@Override
+		public void setValue(ErrorReportV03 obj, Count1 value) {
+			obj.setNumberOfErrors(value);
 		}
 	};
 	@XmlElement(name = "ErrDesc", required = true)
@@ -460,7 +473,7 @@ public class ErrorReportV03 {
 	 * definition} = "Describes the error that is the cause of the rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmErrorDescription = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ErrorReportV03, List<ValidationResult3>> mmErrorDescription = new MMMessageBuildingBlock<ErrorReportV03, List<ValidationResult3>>() {
 		{
 			xmlTag = "ErrDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -470,12 +483,14 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> ValidationResult3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ErrorReportV03.class.getMethod("getErrorDescription", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ValidationResult3> getValue(ErrorReportV03 obj) {
+			return obj.getErrorDescription();
+		}
+
+		@Override
+		public void setValue(ErrorReportV03 obj, List<ValidationResult3> value) {
+			obj.setErrorDescription(value);
 		}
 	};
 	@XmlElement(name = "ReqForActn")
@@ -503,7 +518,7 @@ public class ErrorReportV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ErrorReportV03, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<ErrorReportV03, Optional<PendingActivity2>>() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -514,12 +529,14 @@ public class ErrorReportV03 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ErrorReportV03.class.getMethod("getRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PendingActivity2> getValue(ErrorReportV03 obj) {
+			return obj.getRequestForAction();
+		}
+
+		@Override
+		public void setValue(ErrorReportV03 obj, Optional<PendingActivity2> value) {
+			obj.setRequestForAction(value.orElse(null));
 		}
 	};
 

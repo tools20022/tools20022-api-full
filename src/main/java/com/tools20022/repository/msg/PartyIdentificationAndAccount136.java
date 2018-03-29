@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternatePartyIdentification9;
+import com.tools20022.repository.msg.PartyTextInformation3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -128,7 +130,7 @@ public class PartyIdentificationAndAccount136 {
 	 * definition} = "Identification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount136, PartyIdentification104Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount136, PartyIdentification104Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmObject();
@@ -142,6 +144,16 @@ public class PartyIdentificationAndAccount136 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification104Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification104Choice getValue(PartyIdentificationAndAccount136 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount136 obj, PartyIdentification104Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -181,7 +193,7 @@ public class PartyIdentificationAndAccount136 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount136, Optional<LEIIdentifier>> mmLEI = new MMMessageAttribute<PartyIdentificationAndAccount136, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmObject();
@@ -193,6 +205,16 @@ public class PartyIdentificationAndAccount136 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(PartyIdentificationAndAccount136 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount136 obj, Optional<LEIIdentifier> value) {
+			obj.setLEI(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AltrnId")
@@ -232,7 +254,7 @@ public class PartyIdentificationAndAccount136 {
 	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount136, Optional<AlternatePartyIdentification9>> mmAlternateIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount136, Optional<AlternatePartyIdentification9>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmObject();
@@ -245,7 +267,17 @@ public class PartyIdentificationAndAccount136 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification9.mmObject();
+			type_lazy = () -> AlternatePartyIdentification9.mmObject();
+		}
+
+		@Override
+		public Optional<AlternatePartyIdentification9> getValue(PartyIdentificationAndAccount136 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount136 obj, Optional<AlternatePartyIdentification9> value) {
+			obj.setAlternateIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -286,7 +318,7 @@ public class PartyIdentificationAndAccount136 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount136, Optional<RestrictedFINXMax35Text>> mmSafekeepingAccount = new MMMessageAttribute<PartyIdentificationAndAccount136, Optional<RestrictedFINXMax35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmObject();
@@ -299,6 +331,16 @@ public class PartyIdentificationAndAccount136 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax35Text> getValue(PartyIdentificationAndAccount136 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount136 obj, Optional<RestrictedFINXMax35Text> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -336,7 +378,7 @@ public class PartyIdentificationAndAccount136 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount136, Optional<RestrictedFINXMax16Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentificationAndAccount136, Optional<RestrictedFINXMax16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmObject();
 			isDerived = false;
@@ -348,6 +390,16 @@ public class PartyIdentificationAndAccount136 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(PartyIdentificationAndAccount136 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount136 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -381,7 +433,7 @@ public class PartyIdentificationAndAccount136 {
 	 * definition} = "Provides additional information regarding the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount136, Optional<PartyTextInformation3>> mmAdditionalInformation = new MMMessageAssociationEnd<PartyIdentificationAndAccount136, Optional<PartyTextInformation3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount136.mmObject();
 			isDerived = false;
@@ -393,7 +445,17 @@ public class PartyIdentificationAndAccount136 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyTextInformation3.mmObject();
+			type_lazy = () -> PartyTextInformation3.mmObject();
+		}
+
+		@Override
+		public Optional<PartyTextInformation3> getValue(PartyIdentificationAndAccount136 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount136 obj, Optional<PartyTextInformation3> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 
@@ -435,7 +497,7 @@ public class PartyIdentificationAndAccount136 {
 		return alternateIdentification == null ? Optional.empty() : Optional.of(alternateIdentification);
 	}
 
-	public PartyIdentificationAndAccount136 setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification9 alternateIdentification) {
+	public PartyIdentificationAndAccount136 setAlternateIdentification(AlternatePartyIdentification9 alternateIdentification) {
 		this.alternateIdentification = alternateIdentification;
 		return this;
 	}
@@ -462,7 +524,7 @@ public class PartyIdentificationAndAccount136 {
 		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public PartyIdentificationAndAccount136 setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation3 additionalInformation) {
+	public PartyIdentificationAndAccount136 setAdditionalInformation(PartyTextInformation3 additionalInformation) {
 		this.additionalInformation = additionalInformation;
 		return this;
 	}

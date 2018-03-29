@@ -132,7 +132,7 @@ public class PriceFormat44Choice {
 	 * PriceFormat23Choice.mmPercentagePrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat44Choice, PercentagePrice1> mmPercentagePrice = new MMMessageAssociationEnd<PriceFormat44Choice, PercentagePrice1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat44Choice.mmObject();
@@ -147,6 +147,16 @@ public class PriceFormat44Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PercentagePrice1.mmObject();
+		}
+
+		@Override
+		public PercentagePrice1 getValue(PriceFormat44Choice obj) {
+			return obj.getPercentagePrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat44Choice obj, PercentagePrice1 value) {
+			obj.setPercentagePrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPric", required = true)
@@ -190,7 +200,7 @@ public class PriceFormat44Choice {
 	 * PriceFormat23Choice.mmAmountPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat44Choice, AmountPrice3> mmAmountPrice = new MMMessageAssociationEnd<PriceFormat44Choice, AmountPrice3>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat44Choice.mmObject();
@@ -205,6 +215,16 @@ public class PriceFormat44Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPrice3.mmObject();
+		}
+
+		@Override
+		public AmountPrice3 getValue(PriceFormat44Choice obj) {
+			return obj.getAmountPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat44Choice obj, AmountPrice3 value) {
+			obj.setAmountPrice(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdPric", required = true)
@@ -245,7 +265,7 @@ public class PriceFormat44Choice {
 	 * PriceFormat23Choice.mmNotSpecifiedPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat44Choice, PriceValueType10Code> mmNotSpecifiedPrice = new MMMessageAttribute<PriceFormat44Choice, PriceValueType10Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat44Choice.mmObject();
 			isDerived = false;
@@ -258,6 +278,16 @@ public class PriceFormat44Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType10Code.mmObject();
+		}
+
+		@Override
+		public PriceValueType10Code getValue(PriceFormat44Choice obj) {
+			return obj.getNotSpecifiedPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat44Choice obj, PriceValueType10Code value) {
+			obj.setNotSpecifiedPrice(value);
 		}
 	};
 	@XmlElement(name = "IndxPts", required = true)
@@ -303,7 +333,7 @@ public class PriceFormat44Choice {
 	 * PriceFormat23Choice.mmIndexPoints}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat44Choice, DecimalNumber> mmIndexPoints = new MMMessageAttribute<PriceFormat44Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexPoints;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat44Choice.mmObject();
@@ -317,6 +347,16 @@ public class PriceFormat44Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(PriceFormat44Choice obj) {
+			return obj.getIndexPoints();
+		}
+
+		@Override
+		public void setValue(PriceFormat44Choice obj, DecimalNumber value) {
+			obj.setIndexPoints(value);
 		}
 	};
 

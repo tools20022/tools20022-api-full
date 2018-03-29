@@ -22,6 +22,10 @@ import com.tools20022.metamodel.MMSchemaType;
 import com.tools20022.metamodel.MMSchemaTypeKind;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * W3C XML Schema Built-in datatype "token".
@@ -45,9 +49,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "W3C XML Schema Built-in datatype \"token\"."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class token {
 
 	final static private AtomicReference<MMSchemaType> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
+	protected String value;
 
 	final static public MMSchemaType mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMSchemaType() {
@@ -60,5 +68,25 @@ public class token {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public token() {
+	}
+
+	public token(String value) {
+		this.value = value;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value == null ? null : value.toString();
 	}
 }

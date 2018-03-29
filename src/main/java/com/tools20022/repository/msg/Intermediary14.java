@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification23;
+import com.tools20022.repository.msg.SecuritiesAccount2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +126,7 @@ public class Intermediary14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary14, PartyIdentification23> mmIdentification = new MMMessageAttribute<Intermediary14, PartyIdentification23>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
@@ -136,7 +138,17 @@ public class Intermediary14 {
 			definition = "Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun & Bradstreet Identification.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification23.mmObject();
+			complexType_lazy = () -> PartyIdentification23.mmObject();
+		}
+
+		@Override
+		public PartyIdentification23 getValue(Intermediary14 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary14 obj, PartyIdentification23 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Role", required = true)
@@ -178,7 +190,7 @@ public class Intermediary14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary14, PartyRole1Choice> mmRole = new MMMessageAttribute<Intermediary14, PartyRole1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
@@ -191,6 +203,16 @@ public class Intermediary14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyRole1Choice.mmObject();
+		}
+
+		@Override
+		public PartyRole1Choice getValue(Intermediary14 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(Intermediary14 obj, PartyRole1Choice value) {
+			obj.setRole(value);
 		}
 	};
 	@XmlElement(name = "SfkpgDtls")
@@ -225,7 +247,7 @@ public class Intermediary14 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary14, Optional<SecuritiesAccount2>> mmSafekeepingDetails = new MMMessageAssociationEnd<Intermediary14, Optional<SecuritiesAccount2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
@@ -237,7 +259,17 @@ public class Intermediary14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
+			type_lazy = () -> SecuritiesAccount2.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount2> getValue(Intermediary14 obj) {
+			return obj.getSafekeepingDetails();
+		}
+
+		@Override
+		public void setValue(Intermediary14 obj, Optional<SecuritiesAccount2> value) {
+			obj.setSafekeepingDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshDtls")
@@ -274,7 +306,7 @@ public class Intermediary14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary14, Optional<AccountIdentification3Choice>> mmCashDetails = new MMMessageAssociationEnd<Intermediary14, Optional<AccountIdentification3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
@@ -287,6 +319,16 @@ public class Intermediary14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification3Choice> getValue(Intermediary14 obj) {
+			return obj.getCashDetails();
+		}
+
+		@Override
+		public void setValue(Intermediary14 obj, Optional<AccountIdentification3Choice> value) {
+			obj.setCashDetails(value.orElse(null));
 		}
 	};
 
@@ -309,7 +351,7 @@ public class Intermediary14 {
 		return identification;
 	}
 
-	public Intermediary14 setIdentification(com.tools20022.repository.msg.PartyIdentification23 identification) {
+	public Intermediary14 setIdentification(PartyIdentification23 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -327,7 +369,7 @@ public class Intermediary14 {
 		return safekeepingDetails == null ? Optional.empty() : Optional.of(safekeepingDetails);
 	}
 
-	public Intermediary14 setSafekeepingDetails(com.tools20022.repository.msg.SecuritiesAccount2 safekeepingDetails) {
+	public Intermediary14 setSafekeepingDetails(SecuritiesAccount2 safekeepingDetails) {
 		this.safekeepingDetails = safekeepingDetails;
 		return this;
 	}

@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.DebitAuthorisationDetails;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -147,7 +146,7 @@ public class RequestToCancelPayment {
 	 * "Identifies the assignment of a case from an assigner to an assignee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToCancelPayment, CaseAssignment> mmAssignment = new MMMessageBuildingBlock<RequestToCancelPayment, CaseAssignment>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,12 +157,14 @@ public class RequestToCancelPayment {
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToCancelPayment.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment getValue(RequestToCancelPayment obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(RequestToCancelPayment obj, CaseAssignment value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -189,7 +190,7 @@ public class RequestToCancelPayment {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToCancelPayment, Case> mmCase = new MMMessageBuildingBlock<RequestToCancelPayment, Case>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,12 +201,14 @@ public class RequestToCancelPayment {
 			complexType_lazy = () -> Case.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToCancelPayment.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case getValue(RequestToCancelPayment obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(RequestToCancelPayment obj, Case value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -233,7 +236,7 @@ public class RequestToCancelPayment {
 	 * definition} = "Identifies the payment instruction to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToCancelPayment, PaymentInstructionExtract> mmUnderlying = new MMMessageBuildingBlock<RequestToCancelPayment, PaymentInstructionExtract>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,12 +247,14 @@ public class RequestToCancelPayment {
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToCancelPayment.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentInstructionExtract getValue(RequestToCancelPayment obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(RequestToCancelPayment obj, PaymentInstructionExtract value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Justfn", required = true)
@@ -277,7 +282,7 @@ public class RequestToCancelPayment {
 	 * definition} = "Defines the reason for requesting the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToCancelPayment, DebitAuthorisationDetails> mmJustification = new MMMessageBuildingBlock<RequestToCancelPayment, DebitAuthorisationDetails>() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,12 +293,14 @@ public class RequestToCancelPayment {
 			complexType_lazy = () -> DebitAuthorisationDetails.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToCancelPayment.class.getMethod("getJustification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DebitAuthorisationDetails getValue(RequestToCancelPayment obj) {
+			return obj.getJustification();
+		}
+
+		@Override
+		public void setValue(RequestToCancelPayment obj, DebitAuthorisationDetails value) {
+			obj.setJustification(value);
 		}
 	};
 

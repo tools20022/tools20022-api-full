@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -142,7 +143,7 @@ public class PendingSettlementStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingSettlementStatus2, PendingSettlementStatusReason2Code> mmReason = new MMMessageAttribute<PendingSettlementStatus2, PendingSettlementStatusReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmObject();
@@ -155,6 +156,16 @@ public class PendingSettlementStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingSettlementStatusReason2Code.mmObject();
+		}
+
+		@Override
+		public PendingSettlementStatusReason2Code getValue(PendingSettlementStatus2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatus2 obj, PendingSettlementStatusReason2Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -195,7 +206,7 @@ public class PendingSettlementStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingSettlementStatus2, Extended350Code> mmExtendedReason = new MMMessageAttribute<PendingSettlementStatus2, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmObject();
 			isDerived = false;
@@ -207,6 +218,16 @@ public class PendingSettlementStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(PendingSettlementStatus2 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatus2 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -252,7 +273,7 @@ public class PendingSettlementStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingSettlementStatus2, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<PendingSettlementStatus2, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmObject();
@@ -265,7 +286,17 @@ public class PendingSettlementStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(PendingSettlementStatus2 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatus2 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -311,7 +342,7 @@ public class PendingSettlementStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingSettlementStatus2, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<PendingSettlementStatus2, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingSettlementStatus2.mmObject();
@@ -324,6 +355,16 @@ public class PendingSettlementStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingSettlementStatus2 obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingSettlementStatus2 obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	/**
@@ -423,7 +464,7 @@ public class PendingSettlementStatus2 {
 		return dataSourceScheme;
 	}
 
-	public PendingSettlementStatus2 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public PendingSettlementStatus2 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

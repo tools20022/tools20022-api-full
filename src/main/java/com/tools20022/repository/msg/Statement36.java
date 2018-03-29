@@ -133,7 +133,7 @@ public class Statement36 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement36, Optional<Max35Text>> mmQueryReference = new MMMessageAttribute<Statement36, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement36.mmObject();
 			isDerived = false;
@@ -146,6 +146,16 @@ public class Statement36 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Statement36 obj) {
+			return obj.getQueryReference();
+		}
+
+		@Override
+		public void setValue(Statement36 obj, Optional<Max35Text> value) {
+			obj.setQueryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtId")
@@ -184,7 +194,7 @@ public class Statement36 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement36, Optional<Max35Text>> mmReportIdentification = new MMMessageAttribute<Statement36, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement36.mmObject();
 			isDerived = false;
@@ -196,6 +206,16 @@ public class Statement36 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Statement36 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(Statement36 obj, Optional<Max35Text> value) {
+			obj.setReportIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HistrcData", required = true)
@@ -239,7 +259,7 @@ public class Statement36 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHistoricData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement36, TrueFalseIndicator> mmHistoricData = new MMMessageAttribute<Statement36, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement36.mmObject();
 			isDerived = false;
@@ -252,6 +272,16 @@ public class Statement36 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(Statement36 obj) {
+			return obj.getHistoricData();
+		}
+
+		@Override
+		public void setValue(Statement36 obj, TrueFalseIndicator value) {
+			obj.setHistoricData(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -296,7 +326,7 @@ public class Statement36 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement36, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<Statement36, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement36.mmObject();
 			isDerived = false;
@@ -309,6 +339,16 @@ public class Statement36 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement36 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(Statement36 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 	@XmlElement(name = "SubAcctInd", required = true)
@@ -353,7 +393,7 @@ public class Statement36 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement36, YesNoIndicator> mmSubAccountIndicator = new MMMessageAttribute<Statement36, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement36.mmObject();
 			isDerived = false;
@@ -366,6 +406,16 @@ public class Statement36 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement36 obj) {
+			return obj.getSubAccountIndicator();
+		}
+
+		@Override
+		public void setValue(Statement36 obj, YesNoIndicator value) {
+			obj.setSubAccountIndicator(value);
 		}
 	};
 

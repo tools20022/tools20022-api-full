@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import com.tools20022.repository.entity.InvoiceFinancingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount7;
+import com.tools20022.repository.msg.FinancingDateDetails1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +124,7 @@ public class FinancingAllowedSummary1 {
 	 * definition} = "Number of invoices/instalments financed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancedItemNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingAllowedSummary1, Number> mmFinancedItemNumber = new MMMessageAttribute<FinancingAllowedSummary1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingAllowedSummary1.mmObject();
 			isDerived = false;
@@ -133,6 +135,16 @@ public class FinancingAllowedSummary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(FinancingAllowedSummary1 obj) {
+			return obj.getFinancedItemNumber();
+		}
+
+		@Override
+		public void setValue(FinancingAllowedSummary1 obj, Number value) {
+			obj.setFinancedItemNumber(value);
 		}
 	};
 	@XmlElement(name = "TtlAccptdItmsAmt", required = true)
@@ -167,7 +179,7 @@ public class FinancingAllowedSummary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAcceptedItemsAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingAllowedSummary1, ActiveCurrencyAndAmount> mmTotalAcceptedItemsAmount = new MMMessageAttribute<FinancingAllowedSummary1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingAllowedSummary1.mmObject();
 			isDerived = false;
@@ -178,6 +190,16 @@ public class FinancingAllowedSummary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(FinancingAllowedSummary1 obj) {
+			return obj.getTotalAcceptedItemsAmount();
+		}
+
+		@Override
+		public void setValue(FinancingAllowedSummary1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalAcceptedItemsAmount(value);
 		}
 	};
 	@XmlElement(name = "ApldPctg")
@@ -217,7 +239,7 @@ public class FinancingAllowedSummary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAppliedPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingAllowedSummary1, Optional<PercentageRate>> mmAppliedPercentage = new MMMessageAttribute<FinancingAllowedSummary1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmAppliedPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingAllowedSummary1.mmObject();
@@ -229,6 +251,16 @@ public class FinancingAllowedSummary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(FinancingAllowedSummary1 obj) {
+			return obj.getAppliedPercentage();
+		}
+
+		@Override
+		public void setValue(FinancingAllowedSummary1 obj, Optional<PercentageRate> value) {
+			obj.setAppliedPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlFincdAmt", required = true)
@@ -268,7 +300,7 @@ public class FinancingAllowedSummary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalFinancedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingAllowedSummary1, ActiveCurrencyAndAmount> mmTotalFinancedAmount = new MMMessageAttribute<FinancingAllowedSummary1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmFinancedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingAllowedSummary1.mmObject();
@@ -280,6 +312,16 @@ public class FinancingAllowedSummary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(FinancingAllowedSummary1 obj) {
+			return obj.getTotalFinancedAmount();
+		}
+
+		@Override
+		public void setValue(FinancingAllowedSummary1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalFinancedAmount(value);
 		}
 	};
 	@XmlElement(name = "FincgDtDtls")
@@ -316,7 +358,7 @@ public class FinancingAllowedSummary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancingDateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancingAllowedSummary1, Optional<FinancingDateDetails1>> mmFinancingDateDetails = new MMMessageAssociationEnd<FinancingAllowedSummary1, Optional<FinancingDateDetails1>>() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingAllowedSummary1.mmObject();
@@ -328,7 +370,17 @@ public class FinancingAllowedSummary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancingDateDetails1.mmObject();
+			type_lazy = () -> FinancingDateDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancingDateDetails1> getValue(FinancingAllowedSummary1 obj) {
+			return obj.getFinancingDateDetails();
+		}
+
+		@Override
+		public void setValue(FinancingAllowedSummary1 obj, Optional<FinancingDateDetails1> value) {
+			obj.setFinancingDateDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtAcct")
@@ -366,7 +418,7 @@ public class FinancingAllowedSummary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancingAllowedSummary1, Optional<CashAccount7>> mmCreditAccount = new MMMessageAssociationEnd<FinancingAllowedSummary1, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingAllowedSummary1.mmObject();
@@ -378,7 +430,17 @@ public class FinancingAllowedSummary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(FinancingAllowedSummary1 obj) {
+			return obj.getCreditAccount();
+		}
+
+		@Override
+		public void setValue(FinancingAllowedSummary1 obj, Optional<CashAccount7> value) {
+			obj.setCreditAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FincgAcct")
@@ -416,7 +478,7 @@ public class FinancingAllowedSummary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancingAllowedSummary1, Optional<CashAccount7>> mmFinancingAccount = new MMMessageAssociationEnd<FinancingAllowedSummary1, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingAllowedSummary1.mmObject();
@@ -428,7 +490,17 @@ public class FinancingAllowedSummary1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(FinancingAllowedSummary1 obj) {
+			return obj.getFinancingAccount();
+		}
+
+		@Override
+		public void setValue(FinancingAllowedSummary1 obj, Optional<CashAccount7> value) {
+			obj.setFinancingAccount(value.orElse(null));
 		}
 	};
 
@@ -489,7 +561,7 @@ public class FinancingAllowedSummary1 {
 		return financingDateDetails == null ? Optional.empty() : Optional.of(financingDateDetails);
 	}
 
-	public FinancingAllowedSummary1 setFinancingDateDetails(com.tools20022.repository.msg.FinancingDateDetails1 financingDateDetails) {
+	public FinancingAllowedSummary1 setFinancingDateDetails(FinancingDateDetails1 financingDateDetails) {
 		this.financingDateDetails = financingDateDetails;
 		return this;
 	}
@@ -498,7 +570,7 @@ public class FinancingAllowedSummary1 {
 		return creditAccount == null ? Optional.empty() : Optional.of(creditAccount);
 	}
 
-	public FinancingAllowedSummary1 setCreditAccount(com.tools20022.repository.msg.CashAccount7 creditAccount) {
+	public FinancingAllowedSummary1 setCreditAccount(CashAccount7 creditAccount) {
 		this.creditAccount = creditAccount;
 		return this;
 	}
@@ -507,7 +579,7 @@ public class FinancingAllowedSummary1 {
 		return financingAccount == null ? Optional.empty() : Optional.of(financingAccount);
 	}
 
-	public FinancingAllowedSummary1 setFinancingAccount(com.tools20022.repository.msg.CashAccount7 financingAccount) {
+	public FinancingAllowedSummary1 setFinancingAccount(CashAccount7 financingAccount) {
 		this.financingAccount = financingAccount;
 		return this;
 	}

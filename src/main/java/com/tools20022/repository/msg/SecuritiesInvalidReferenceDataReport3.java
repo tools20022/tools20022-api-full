@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.FinancialInstrumentReportingInvalidReferenceDataReportV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesReferenceDataReport5;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +115,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesInvalidReferenceDataReport3, SecuritiesReferenceDataReport5> mmFinancialInstrument = new MMMessageAssociationEnd<SecuritiesInvalidReferenceDataReport3, SecuritiesReferenceDataReport5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.mmObject();
 			isDerived = false;
@@ -124,11 +126,21 @@ public class SecuritiesInvalidReferenceDataReport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
+			type_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+		}
+
+		@Override
+		public SecuritiesReferenceDataReport5 getValue(SecuritiesInvalidReferenceDataReport3 obj) {
+			return obj.getFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(SecuritiesInvalidReferenceDataReport3 obj, SecuritiesReferenceDataReport5 value) {
+			obj.setFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -157,7 +169,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesInvalidReferenceDataReport3, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<SecuritiesInvalidReferenceDataReport3, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3.mmObject();
 			isDerived = false;
@@ -167,7 +179,17 @@ public class SecuritiesInvalidReferenceDataReport3 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesInvalidReferenceDataReport3 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesInvalidReferenceDataReport3 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -189,7 +211,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 		return financialInstrument;
 	}
 
-	public SecuritiesInvalidReferenceDataReport3 setFinancialInstrument(com.tools20022.repository.msg.SecuritiesReferenceDataReport5 financialInstrument) {
+	public SecuritiesInvalidReferenceDataReport3 setFinancialInstrument(SecuritiesReferenceDataReport5 financialInstrument) {
 		this.financialInstrument = Objects.requireNonNull(financialInstrument);
 		return this;
 	}
@@ -198,7 +220,7 @@ public class SecuritiesInvalidReferenceDataReport3 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public SecuritiesInvalidReferenceDataReport3 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public SecuritiesInvalidReferenceDataReport3 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

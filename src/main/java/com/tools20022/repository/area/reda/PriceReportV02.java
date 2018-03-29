@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.PriceValuation2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -142,7 +141,7 @@ public class PriceReportV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV02, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<PriceReportV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,12 +152,14 @@ public class PriceReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV02.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PriceReportV02 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(PriceReportV02 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -186,7 +187,7 @@ public class PriceReportV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV02, List<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<PriceReportV02, List<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,12 +197,14 @@ public class PriceReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(PriceReportV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(PriceReportV02 obj, List<AdditionalReference3> value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -230,7 +233,7 @@ public class PriceReportV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV02, Optional<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<PriceReportV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,12 +244,14 @@ public class PriceReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PriceReportV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(PriceReportV02 obj, Optional<AdditionalReference3> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricValtnDtls", required = true)
@@ -274,7 +279,7 @@ public class PriceReportV02 {
 	 * "Information related to the price valuation of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPriceValuationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV02, List<PriceValuation2>> mmPriceValuationDetails = new MMMessageBuildingBlock<PriceReportV02, List<PriceValuation2>>() {
 		{
 			xmlTag = "PricValtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,12 +289,14 @@ public class PriceReportV02 {
 			complexType_lazy = () -> PriceValuation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV02.class.getMethod("getPriceValuationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PriceValuation2> getValue(PriceReportV02 obj) {
+			return obj.getPriceValuationDetails();
+		}
+
+		@Override
+		public void setValue(PriceReportV02 obj, List<PriceValuation2> value) {
+			obj.setPriceValuationDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -318,7 +325,7 @@ public class PriceReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportV02, List<Extension1>> mmExtension = new MMMessageBuildingBlock<PriceReportV02, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,12 +335,14 @@ public class PriceReportV02 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportV02.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(PriceReportV02 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(PriceReportV02 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

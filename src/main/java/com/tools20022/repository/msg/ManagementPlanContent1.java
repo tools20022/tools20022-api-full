@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TMSAction1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -78,7 +79,7 @@ public class ManagementPlanContent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Actn", required = true)
-	protected List<com.tools20022.repository.msg.TMSAction1> action;
+	protected List<TMSAction1> action;
 	/**
 	 * 
 	 <p>
@@ -106,7 +107,7 @@ public class ManagementPlanContent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ManagementPlanContent1, List<TMSAction1>> mmAction = new MMMessageAssociationEnd<ManagementPlanContent1, List<TMSAction1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ManagementPlanContent1.mmObject();
 			isDerived = false;
@@ -116,7 +117,17 @@ public class ManagementPlanContent1 {
 			definition = "Terminal management action to be performed by the point of interaction (POI).";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSAction1.mmObject();
+			type_lazy = () -> TMSAction1.mmObject();
+		}
+
+		@Override
+		public List<TMSAction1> getValue(ManagementPlanContent1 obj) {
+			return obj.getAction();
+		}
+
+		@Override
+		public void setValue(ManagementPlanContent1 obj, List<TMSAction1> value) {
+			obj.setAction(value);
 		}
 	};
 
@@ -139,7 +150,7 @@ public class ManagementPlanContent1 {
 		return action == null ? action = new ArrayList<>() : action;
 	}
 
-	public ManagementPlanContent1 setAction(List<com.tools20022.repository.msg.TMSAction1> action) {
+	public ManagementPlanContent1 setAction(List<TMSAction1> action) {
 		this.action = Objects.requireNonNull(action);
 		return this;
 	}

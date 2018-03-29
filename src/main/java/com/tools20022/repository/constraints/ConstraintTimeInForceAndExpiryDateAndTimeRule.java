@@ -51,11 +51,15 @@ public class ConstraintTimeInForceAndExpiryDateAndTimeRule {
 	 */
 	public static final MMConstraint<OrderParameters1> forOrderParameters1 = new MMConstraint<OrderParameters1>() {
 		{
-			validator = ConstraintTimeInForceAndExpiryDateAndTimeRule::checkOrderParameters1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeInForceAndExpiryDateAndTimeRule";
 			definition = "If TimeInForce contains the value GTHD (GoodThroughDate) or the value GTCA (GoodUntilCancelled) then ExpiryDateAndTime must be present.";
 			owner_lazy = () -> OrderParameters1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderParameters1 obj) throws Exception {
+			checkOrderParameters1(obj);
 		}
 	};
 

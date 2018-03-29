@@ -114,7 +114,7 @@ public class PayInScheduleItems {
 	 * definition} = "Currency and amount to be paid in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PayInScheduleItems, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<PayInScheduleItems, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayInScheduleItems.mmObject();
@@ -126,6 +126,16 @@ public class PayInScheduleItems {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(PayInScheduleItems obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PayInScheduleItems obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Ddln", required = true)
@@ -157,7 +167,7 @@ public class PayInScheduleItems {
 	 * definition} = "Time by which the amount must be paid in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PayInScheduleItems, ISOTime> mmDeadline = new MMMessageAttribute<PayInScheduleItems, ISOTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayInScheduleItems.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class PayInScheduleItems {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public ISOTime getValue(PayInScheduleItems obj) {
+			return obj.getDeadline();
+		}
+
+		@Override
+		public void setValue(PayInScheduleItems obj, ISOTime value) {
+			obj.setDeadline(value);
 		}
 	};
 

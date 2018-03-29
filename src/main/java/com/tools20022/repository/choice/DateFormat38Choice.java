@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.DateCode22Choice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateCodeAndTimeFormat4;
 import java.util.Arrays;
@@ -105,7 +107,7 @@ public class DateFormat38Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat38Choice, DateAndDateTimeChoice> mmDate = new MMMessageAssociationEnd<DateFormat38Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat38Choice.mmObject();
 			isDerived = false;
@@ -117,7 +119,17 @@ public class DateFormat38Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat38Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat38Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCdAndTm", required = true)
@@ -148,7 +160,7 @@ public class DateFormat38Choice {
 	 * definition} = "Specifies a date code and a time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCodeAndTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat38Choice, DateCodeAndTimeFormat4> mmDateCodeAndTime = new MMMessageAssociationEnd<DateFormat38Choice, DateCodeAndTimeFormat4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat38Choice.mmObject();
 			isDerived = false;
@@ -160,6 +172,16 @@ public class DateFormat38Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateCodeAndTimeFormat4.mmObject();
+		}
+
+		@Override
+		public DateCodeAndTimeFormat4 getValue(DateFormat38Choice obj) {
+			return obj.getDateCodeAndTime();
+		}
+
+		@Override
+		public void setValue(DateFormat38Choice obj, DateCodeAndTimeFormat4 value) {
+			obj.setDateCodeAndTime(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -193,7 +215,7 @@ public class DateFormat38Choice {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat38Choice, DateCode22Choice> mmDateCode = new MMMessageAssociationEnd<DateFormat38Choice, DateCode22Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat38Choice.mmObject();
 			isDerived = false;
@@ -205,7 +227,17 @@ public class DateFormat38Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateCode22Choice.mmObject();
+			type_lazy = () -> DateCode22Choice.mmObject();
+		}
+
+		@Override
+		public DateCode22Choice getValue(DateFormat38Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat38Choice obj, DateCode22Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -227,7 +259,7 @@ public class DateFormat38Choice {
 		return date;
 	}
 
-	public DateFormat38Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat38Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -245,7 +277,7 @@ public class DateFormat38Choice {
 		return dateCode;
 	}
 
-	public DateFormat38Choice setDateCode(com.tools20022.repository.choice.DateCode22Choice dateCode) {
+	public DateFormat38Choice setDateCode(DateCode22Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

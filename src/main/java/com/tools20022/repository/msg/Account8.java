@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +105,7 @@ public class Account8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account8, AccountIdentification1> mmIdentification = new MMMessageAttribute<Account8, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account8.mmObject();
@@ -115,7 +116,17 @@ public class Account8 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(Account8 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Account8 obj, AccountIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 
@@ -137,7 +148,7 @@ public class Account8 {
 		return identification;
 	}
 
-	public Account8 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public Account8 setIdentification(AccountIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

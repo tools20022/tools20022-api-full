@@ -33,6 +33,8 @@ import com.tools20022.repository.entity.CorporateActionDistribution;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BeneficialOwner1;
+import com.tools20022.repository.msg.ProceedsDelivery1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -114,7 +116,7 @@ public class CorporateActionAdditionalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "BnfclOwnrDtls")
-	protected List<com.tools20022.repository.msg.BeneficialOwner1> beneficialOwnerDetails;
+	protected List<BeneficialOwner1> beneficialOwnerDetails;
 	/**
 	 * 
 	 <p>
@@ -147,7 +149,7 @@ public class CorporateActionAdditionalInformation1 {
 	 * "Provides information about the beneficial owner of the securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficialOwnerDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionAdditionalInformation1, List<BeneficialOwner1>> mmBeneficialOwnerDetails = new MMMessageAssociationEnd<CorporateActionAdditionalInformation1, List<BeneficialOwner1>>() {
 		{
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmObject();
@@ -158,7 +160,17 @@ public class CorporateActionAdditionalInformation1 {
 			definition = "Provides information about the beneficial owner of the securities.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
+			type_lazy = () -> BeneficialOwner1.mmObject();
+		}
+
+		@Override
+		public List<BeneficialOwner1> getValue(CorporateActionAdditionalInformation1 obj) {
+			return obj.getBeneficialOwnerDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionAdditionalInformation1 obj, List<BeneficialOwner1> value) {
+			obj.setBeneficialOwnerDetails(value);
 		}
 	};
 	@XmlElement(name = "RegnDtls")
@@ -195,7 +207,7 @@ public class CorporateActionAdditionalInformation1 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<Max350Text>> mmRegistrationDetails = new MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmObject();
@@ -207,6 +219,16 @@ public class CorporateActionAdditionalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionAdditionalInformation1 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionAdditionalInformation1 obj, Optional<Max350Text> value) {
+			obj.setRegistrationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvrId")
@@ -246,7 +268,7 @@ public class CorporateActionAdditionalInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceiverIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<PartyIdentification2Choice>> mmReceiverIdentification = new MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmObject();
@@ -258,6 +280,16 @@ public class CorporateActionAdditionalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CorporateActionAdditionalInformation1 obj) {
+			return obj.getReceiverIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionAdditionalInformation1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setReceiverIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertfctnInd")
@@ -297,7 +329,7 @@ public class CorporateActionAdditionalInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<YesNoIndicator>> mmCertificationIndicator = new MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmObject();
@@ -309,6 +341,16 @@ public class CorporateActionAdditionalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionAdditionalInformation1 obj) {
+			return obj.getCertificationIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionAdditionalInformation1 obj, Optional<YesNoIndicator> value) {
+			obj.setCertificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertfctnTp")
@@ -346,7 +388,7 @@ public class CorporateActionAdditionalInformation1 {
 	 * definition} = "Type of certification which is required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<BeneficiaryCertificationType1FormatChoice>> mmCertificationType = new MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<BeneficiaryCertificationType1FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmObject();
@@ -359,9 +401,19 @@ public class CorporateActionAdditionalInformation1 {
 			minOccurs = 0;
 			complexType_lazy = () -> BeneficiaryCertificationType1FormatChoice.mmObject();
 		}
+
+		@Override
+		public Optional<BeneficiaryCertificationType1FormatChoice> getValue(CorporateActionAdditionalInformation1 obj) {
+			return obj.getCertificationType();
+		}
+
+		@Override
+		public void setValue(CorporateActionAdditionalInformation1 obj, Optional<BeneficiaryCertificationType1FormatChoice> value) {
+			obj.setCertificationType(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "DlvryDtls")
-	protected List<com.tools20022.repository.msg.ProceedsDelivery1> deliveryDetails;
+	protected List<ProceedsDelivery1> deliveryDetails;
 	/**
 	 * 
 	 <p>
@@ -395,7 +447,7 @@ public class CorporateActionAdditionalInformation1 {
 	 * "Provides information about the delivery details of proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionAdditionalInformation1, List<ProceedsDelivery1>> mmDeliveryDetails = new MMMessageAssociationEnd<CorporateActionAdditionalInformation1, List<ProceedsDelivery1>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmObject();
@@ -406,7 +458,17 @@ public class CorporateActionAdditionalInformation1 {
 			definition = "Provides information about the delivery details of proceeds.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProceedsDelivery1.mmObject();
+			type_lazy = () -> ProceedsDelivery1.mmObject();
+		}
+
+		@Override
+		public List<ProceedsDelivery1> getValue(CorporateActionAdditionalInformation1 obj) {
+			return obj.getDeliveryDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionAdditionalInformation1 obj, List<ProceedsDelivery1> value) {
+			obj.setDeliveryDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlInstr")
@@ -440,7 +502,7 @@ public class CorporateActionAdditionalInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<Max350Text>> mmAdditionalInstruction = new MMMessageAttribute<CorporateActionAdditionalInformation1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAdditionalInformation1.mmObject();
 			isDerived = false;
@@ -451,6 +513,16 @@ public class CorporateActionAdditionalInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionAdditionalInformation1 obj) {
+			return obj.getAdditionalInstruction();
+		}
+
+		@Override
+		public void setValue(CorporateActionAdditionalInformation1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInstruction(value.orElse(null));
 		}
 	};
 
@@ -477,7 +549,7 @@ public class CorporateActionAdditionalInformation1 {
 		return beneficialOwnerDetails == null ? beneficialOwnerDetails = new ArrayList<>() : beneficialOwnerDetails;
 	}
 
-	public CorporateActionAdditionalInformation1 setBeneficialOwnerDetails(List<com.tools20022.repository.msg.BeneficialOwner1> beneficialOwnerDetails) {
+	public CorporateActionAdditionalInformation1 setBeneficialOwnerDetails(List<BeneficialOwner1> beneficialOwnerDetails) {
 		this.beneficialOwnerDetails = Objects.requireNonNull(beneficialOwnerDetails);
 		return this;
 	}
@@ -522,7 +594,7 @@ public class CorporateActionAdditionalInformation1 {
 		return deliveryDetails == null ? deliveryDetails = new ArrayList<>() : deliveryDetails;
 	}
 
-	public CorporateActionAdditionalInformation1 setDeliveryDetails(List<com.tools20022.repository.msg.ProceedsDelivery1> deliveryDetails) {
+	public CorporateActionAdditionalInformation1 setDeliveryDetails(List<ProceedsDelivery1> deliveryDetails) {
 		this.deliveryDetails = Objects.requireNonNull(deliveryDetails);
 		return this;
 	}

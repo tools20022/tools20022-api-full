@@ -101,7 +101,7 @@ public class TonsOrCurrency2Choice {
 	 * definition} = "Total number of specific transactions expresses in tons."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TonsOrCurrency2Choice, DecimalNumber> mmNumber = new MMMessageAttribute<TonsOrCurrency2Choice, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TonsOrCurrency2Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class TonsOrCurrency2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(TonsOrCurrency2Choice obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(TonsOrCurrency2Choice obj, DecimalNumber value) {
+			obj.setNumber(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -146,7 +156,7 @@ public class TonsOrCurrency2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TonsOrCurrency2Choice, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<TonsOrCurrency2Choice, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TonsOrCurrency2Choice.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class TonsOrCurrency2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(TonsOrCurrency2Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TonsOrCurrency2Choice obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

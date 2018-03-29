@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MessageAndBusinessReference5;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -156,7 +155,7 @@ public class RequestForOrderConfirmationStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForOrderConfirmationStatusReportV01, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<RequestForOrderConfirmationStatusReportV01, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,12 +167,14 @@ public class RequestForOrderConfirmationStatusReportV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForOrderConfirmationStatusReportV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(RequestForOrderConfirmationStatusReportV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(RequestForOrderConfirmationStatusReportV01 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqDtls", required = true)
@@ -211,7 +212,7 @@ public class RequestForOrderConfirmationStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForOrderConfirmationStatusReportV01, List<MessageAndBusinessReference5>> mmRequestDetails = new MMMessageBuildingBlock<RequestForOrderConfirmationStatusReportV01, List<MessageAndBusinessReference5>>() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,12 +223,14 @@ public class RequestForOrderConfirmationStatusReportV01 {
 			complexType_lazy = () -> MessageAndBusinessReference5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForOrderConfirmationStatusReportV01.class.getMethod("getRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MessageAndBusinessReference5> getValue(RequestForOrderConfirmationStatusReportV01 obj) {
+			return obj.getRequestDetails();
+		}
+
+		@Override
+		public void setValue(RequestForOrderConfirmationStatusReportV01 obj, List<MessageAndBusinessReference5> value) {
+			obj.setRequestDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -264,7 +267,7 @@ public class RequestForOrderConfirmationStatusReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForOrderConfirmationStatusReportV01, List<Extension1>> mmExtension = new MMMessageBuildingBlock<RequestForOrderConfirmationStatusReportV01, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,12 +278,14 @@ public class RequestForOrderConfirmationStatusReportV01 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForOrderConfirmationStatusReportV01.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(RequestForOrderConfirmationStatusReportV01 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(RequestForOrderConfirmationStatusReportV01 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

@@ -109,7 +109,7 @@ public class OriginalMandate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMandate1Choice, Max35Text> mmOriginalMandateIdentification = new MMMessageAttribute<OriginalMandate1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OriginalMandate1Choice.mmObject();
@@ -121,6 +121,16 @@ public class OriginalMandate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalMandate1Choice obj) {
+			return obj.getOriginalMandateIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalMandate1Choice obj, Max35Text value) {
+			obj.setOriginalMandateIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMndt", required = true)
@@ -157,7 +167,7 @@ public class OriginalMandate1Choice {
 	 * "Set of elements used to provide the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalMandate1Choice, MandateInformation1> mmOriginalMandate = new MMMessageAssociationEnd<OriginalMandate1Choice, MandateInformation1>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.OriginalMandate1Choice.mmObject();
@@ -170,6 +180,16 @@ public class OriginalMandate1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MandateInformation1.mmObject();
+		}
+
+		@Override
+		public MandateInformation1 getValue(OriginalMandate1Choice obj) {
+			return obj.getOriginalMandate();
+		}
+
+		@Override
+		public void setValue(OriginalMandate1Choice obj, MandateInformation1 value) {
+			obj.setOriginalMandate(value);
 		}
 	};
 

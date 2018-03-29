@@ -126,7 +126,7 @@ public class ClassificationType30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType30Choice, CFIIdentifier> mmClassificationFinancialInstrument = new MMMessageAttribute<ClassificationType30Choice, CFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType30Choice.mmObject();
@@ -140,6 +140,16 @@ public class ClassificationType30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
+		}
+
+		@Override
+		public CFIIdentifier getValue(ClassificationType30Choice obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ClassificationType30Choice obj, CFIIdentifier value) {
+			obj.setClassificationFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "AltrnClssfctn", required = true)
@@ -188,7 +198,7 @@ public class ClassificationType30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClassificationType30Choice, GenericIdentification36> mmAlternateClassification = new MMMessageAttribute<ClassificationType30Choice, GenericIdentification36>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType30Choice.mmObject();
@@ -202,6 +212,16 @@ public class ClassificationType30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(ClassificationType30Choice obj) {
+			return obj.getAlternateClassification();
+		}
+
+		@Override
+		public void setValue(ClassificationType30Choice obj, GenericIdentification36 value) {
+			obj.setAlternateClassification(value);
 		}
 	};
 

@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Amendment1;
+import com.tools20022.repository.msg.PartyAndSignature2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +106,7 @@ public class UndertakingAmendmentMessage1 {
 	 * definition} = "Details related to the proposed undertaking amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingAmendmentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingAmendmentMessage1, Amendment1> mmUndertakingAmendmentDetails = new MMMessageAssociationEnd<UndertakingAmendmentMessage1, Amendment1>() {
 		{
 			businessComponentTrace_lazy = () -> AmendmentOfUndertaking.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmendmentMessage1.mmObject();
@@ -116,7 +118,17 @@ public class UndertakingAmendmentMessage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amendment1.mmObject();
+			type_lazy = () -> Amendment1.mmObject();
+		}
+
+		@Override
+		public Amendment1 getValue(UndertakingAmendmentMessage1 obj) {
+			return obj.getUndertakingAmendmentDetails();
+		}
+
+		@Override
+		public void setValue(UndertakingAmendmentMessage1 obj, Amendment1 value) {
+			obj.setUndertakingAmendmentDetails(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -152,7 +164,7 @@ public class UndertakingAmendmentMessage1 {
 	 * definition} = "Digital signature of the proposed amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingAmendmentMessage1, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageAssociationEnd<UndertakingAmendmentMessage1, Optional<PartyAndSignature2>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmElectronicSignature;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmendmentMessage1.mmObject();
@@ -164,7 +176,17 @@ public class UndertakingAmendmentMessage1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyAndSignature2.mmObject();
+			type_lazy = () -> PartyAndSignature2.mmObject();
+		}
+
+		@Override
+		public Optional<PartyAndSignature2> getValue(UndertakingAmendmentMessage1 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(UndertakingAmendmentMessage1 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 
@@ -186,7 +208,7 @@ public class UndertakingAmendmentMessage1 {
 		return undertakingAmendmentDetails;
 	}
 
-	public UndertakingAmendmentMessage1 setUndertakingAmendmentDetails(com.tools20022.repository.msg.Amendment1 undertakingAmendmentDetails) {
+	public UndertakingAmendmentMessage1 setUndertakingAmendmentDetails(Amendment1 undertakingAmendmentDetails) {
 		this.undertakingAmendmentDetails = Objects.requireNonNull(undertakingAmendmentDetails);
 		return this;
 	}
@@ -195,7 +217,7 @@ public class UndertakingAmendmentMessage1 {
 		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public UndertakingAmendmentMessage1 setDigitalSignature(com.tools20022.repository.msg.PartyAndSignature2 digitalSignature) {
+	public UndertakingAmendmentMessage1 setDigitalSignature(PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
 		return this;
 	}

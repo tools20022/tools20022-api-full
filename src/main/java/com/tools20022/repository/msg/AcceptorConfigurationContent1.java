@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AcquirerProtocolParameters1;
+import com.tools20022.repository.msg.ApplicationParameters1;
+import com.tools20022.repository.msg.HostCommunicationParameter1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -88,7 +91,7 @@ public class AcceptorConfigurationContent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "AcqrrPrtcolParams")
-	protected List<com.tools20022.repository.msg.AcquirerProtocolParameters1> acquirerProtocolParameters;
+	protected List<AcquirerProtocolParameters1> acquirerProtocolParameters;
 	/**
 	 * 
 	 <p>
@@ -121,7 +124,7 @@ public class AcceptorConfigurationContent1 {
 	 * definition} = "Acceptor parameters dedicated to an acquirer protocol."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcquirerProtocolParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfigurationContent1, List<AcquirerProtocolParameters1>> mmAcquirerProtocolParameters = new MMMessageAssociationEnd<AcceptorConfigurationContent1, List<AcquirerProtocolParameters1>>() {
 		{
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent1.mmObject();
@@ -132,7 +135,17 @@ public class AcceptorConfigurationContent1 {
 			definition = "Acceptor parameters dedicated to an acquirer protocol.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters1.mmObject();
+			type_lazy = () -> AcquirerProtocolParameters1.mmObject();
+		}
+
+		@Override
+		public List<AcquirerProtocolParameters1> getValue(AcceptorConfigurationContent1 obj) {
+			return obj.getAcquirerProtocolParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent1 obj, List<AcquirerProtocolParameters1> value) {
+			obj.setAcquirerProtocolParameters(value);
 		}
 	};
 	@XmlElement(name = "MrchntParams")
@@ -170,7 +183,7 @@ public class AcceptorConfigurationContent1 {
 	 * definition} = "Acceptor parameters dedicated to the merchant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMerchantParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorConfigurationContent1, List<Max10000Binary>> mmMerchantParameters = new MMMessageAttribute<AcceptorConfigurationContent1, List<Max10000Binary>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmRetailerParameters;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent1.mmObject();
@@ -182,9 +195,19 @@ public class AcceptorConfigurationContent1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
+
+		@Override
+		public List<Max10000Binary> getValue(AcceptorConfigurationContent1 obj) {
+			return obj.getMerchantParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent1 obj, List<Max10000Binary> value) {
+			obj.setMerchantParameters(value);
+		}
 	};
 	@XmlElement(name = "ApplParams")
-	protected List<com.tools20022.repository.msg.ApplicationParameters1> applicationParameters;
+	protected List<ApplicationParameters1> applicationParameters;
 	/**
 	 * 
 	 <p>
@@ -218,7 +241,7 @@ public class AcceptorConfigurationContent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmApplicationParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfigurationContent1, List<ApplicationParameters1>> mmApplicationParameters = new MMMessageAssociationEnd<AcceptorConfigurationContent1, List<ApplicationParameters1>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationParameters;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent1.mmObject();
@@ -229,11 +252,21 @@ public class AcceptorConfigurationContent1 {
 			definition = "Acceptor parameters dedicated to a payment application of the point of interaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ApplicationParameters1.mmObject();
+			type_lazy = () -> ApplicationParameters1.mmObject();
+		}
+
+		@Override
+		public List<ApplicationParameters1> getValue(AcceptorConfigurationContent1 obj) {
+			return obj.getApplicationParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent1 obj, List<ApplicationParameters1> value) {
+			obj.setApplicationParameters(value);
 		}
 	};
 	@XmlElement(name = "HstComParams")
-	protected List<com.tools20022.repository.msg.HostCommunicationParameter1> hostCommunicationParameters;
+	protected List<HostCommunicationParameter1> hostCommunicationParameters;
 	/**
 	 * 
 	 <p>
@@ -268,7 +301,7 @@ public class AcceptorConfigurationContent1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHostCommunicationParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfigurationContent1, List<HostCommunicationParameter1>> mmHostCommunicationParameters = new MMMessageAssociationEnd<AcceptorConfigurationContent1, List<HostCommunicationParameter1>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmTerminalManagementSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfigurationContent1.mmObject();
@@ -279,7 +312,17 @@ public class AcceptorConfigurationContent1 {
 			definition = "Acceptor parameters dedicated to the communication with an acquirer host.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter1.mmObject();
+			type_lazy = () -> HostCommunicationParameter1.mmObject();
+		}
+
+		@Override
+		public List<HostCommunicationParameter1> getValue(AcceptorConfigurationContent1 obj) {
+			return obj.getHostCommunicationParameters();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationContent1 obj, List<HostCommunicationParameter1> value) {
+			obj.setHostCommunicationParameters(value);
 		}
 	};
 
@@ -303,7 +346,7 @@ public class AcceptorConfigurationContent1 {
 		return acquirerProtocolParameters == null ? acquirerProtocolParameters = new ArrayList<>() : acquirerProtocolParameters;
 	}
 
-	public AcceptorConfigurationContent1 setAcquirerProtocolParameters(List<com.tools20022.repository.msg.AcquirerProtocolParameters1> acquirerProtocolParameters) {
+	public AcceptorConfigurationContent1 setAcquirerProtocolParameters(List<AcquirerProtocolParameters1> acquirerProtocolParameters) {
 		this.acquirerProtocolParameters = Objects.requireNonNull(acquirerProtocolParameters);
 		return this;
 	}
@@ -321,7 +364,7 @@ public class AcceptorConfigurationContent1 {
 		return applicationParameters == null ? applicationParameters = new ArrayList<>() : applicationParameters;
 	}
 
-	public AcceptorConfigurationContent1 setApplicationParameters(List<com.tools20022.repository.msg.ApplicationParameters1> applicationParameters) {
+	public AcceptorConfigurationContent1 setApplicationParameters(List<ApplicationParameters1> applicationParameters) {
 		this.applicationParameters = Objects.requireNonNull(applicationParameters);
 		return this;
 	}
@@ -330,7 +373,7 @@ public class AcceptorConfigurationContent1 {
 		return hostCommunicationParameters == null ? hostCommunicationParameters = new ArrayList<>() : hostCommunicationParameters;
 	}
 
-	public AcceptorConfigurationContent1 setHostCommunicationParameters(List<com.tools20022.repository.msg.HostCommunicationParameter1> hostCommunicationParameters) {
+	public AcceptorConfigurationContent1 setHostCommunicationParameters(List<HostCommunicationParameter1> hostCommunicationParameters) {
 		this.hostCommunicationParameters = Objects.requireNonNull(hostCommunicationParameters);
 		return this;
 	}

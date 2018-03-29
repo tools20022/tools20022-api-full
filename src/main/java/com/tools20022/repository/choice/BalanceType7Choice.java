@@ -111,7 +111,7 @@ public class BalanceType7Choice {
 	 * definition} = "Balance type expressed in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceType7Choice, FinancialAssetBalanceType1Code> mmCode = new MMMessageAttribute<BalanceType7Choice, FinancialAssetBalanceType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceType7Choice.mmObject();
@@ -123,6 +123,16 @@ public class BalanceType7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialAssetBalanceType1Code.mmObject();
+		}
+
+		@Override
+		public FinancialAssetBalanceType1Code getValue(BalanceType7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BalanceType7Choice obj, FinancialAssetBalanceType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -160,7 +170,7 @@ public class BalanceType7Choice {
 	 * definition} = "Balance type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceType7Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<BalanceType7Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceType7Choice.mmObject();
@@ -172,6 +182,16 @@ public class BalanceType7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(BalanceType7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BalanceType7Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "Acct", required = true)
@@ -207,7 +227,7 @@ public class BalanceType7Choice {
 	 * definition} = "Account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceType7Choice, AccountIdentification5> mmAccount = new MMMessageAssociationEnd<BalanceType7Choice, AccountIdentification5>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceType7Choice.mmObject();
@@ -220,6 +240,16 @@ public class BalanceType7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification5.mmObject();
+		}
+
+		@Override
+		public AccountIdentification5 getValue(BalanceType7Choice obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(BalanceType7Choice obj, AccountIdentification5 value) {
+			obj.setAccount(value);
 		}
 	};
 

@@ -24,7 +24,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -139,7 +138,7 @@ public class TransportByRail extends Transport {
 	 * definition} = "Identifies the carriage."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCarriageIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TransportByRail, Max35Text> mmCarriageIdentification = new MMBusinessAttribute<TransportByRail, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TransportByRail.mmObject();
@@ -151,12 +150,14 @@ public class TransportByRail extends Transport {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransportByRail.class.getMethod("getCarriageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TransportByRail obj) {
+			return obj.getCarriageIdentification();
+		}
+
+		@Override
+		public void setValue(TransportByRail obj, Max35Text value) {
+			obj.setCarriageIdentification(value);
 		}
 	};
 

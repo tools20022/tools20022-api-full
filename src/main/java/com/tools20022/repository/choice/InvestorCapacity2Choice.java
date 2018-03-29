@@ -112,7 +112,7 @@ public class InvestorCapacity2Choice {
 	 * definition} = "Investor capacity expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestorCapacity2Choice, Eligibility1Code> mmCode = new MMMessageAttribute<InvestorCapacity2Choice, Eligibility1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestorRole.mmCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestorCapacity2Choice.mmObject();
@@ -125,6 +125,16 @@ public class InvestorCapacity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
+		}
+
+		@Override
+		public Eligibility1Code getValue(InvestorCapacity2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InvestorCapacity2Choice obj, Eligibility1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class InvestorCapacity2Choice {
 	 * definition} = "Investor capacity expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestorCapacity2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<InvestorCapacity2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> InvestorRole.mmCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestorCapacity2Choice.mmObject();
@@ -178,6 +188,16 @@ public class InvestorCapacity2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(InvestorCapacity2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InvestorCapacity2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

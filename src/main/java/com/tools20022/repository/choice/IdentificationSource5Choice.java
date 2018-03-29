@@ -119,7 +119,7 @@ public class IdentificationSource5Choice {
 	 * IdentificationSource3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomesticIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationSource5Choice, CountryCode> mmDomesticIdentificationSource = new MMMessageAttribute<IdentificationSource5Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource5Choice.mmObject();
@@ -132,6 +132,16 @@ public class IdentificationSource5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(IdentificationSource5Choice obj) {
+			return obj.getDomesticIdentificationSource();
+		}
+
+		@Override
+		public void setValue(IdentificationSource5Choice obj, CountryCode value) {
+			obj.setDomesticIdentificationSource(value);
 		}
 	};
 	@XmlElement(name = "PrtryIdSrc", required = true)
@@ -173,7 +183,7 @@ public class IdentificationSource5Choice {
 	 * IdentificationSource3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationSource5Choice, Max35Text> mmProprietaryIdentificationSource = new MMMessageAttribute<IdentificationSource5Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource5Choice.mmObject();
@@ -186,6 +196,16 @@ public class IdentificationSource5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IdentificationSource5Choice obj) {
+			return obj.getProprietaryIdentificationSource();
+		}
+
+		@Override
+		public void setValue(IdentificationSource5Choice obj, Max35Text value) {
+			obj.setProprietaryIdentificationSource(value);
 		}
 	};
 

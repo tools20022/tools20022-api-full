@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -208,7 +207,7 @@ public class CustomerPaymentCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, CaseAssignment3> mmAssignment = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, CaseAssignment3>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,12 +218,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV02.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment3 getValue(CustomerPaymentCancellationRequestV02 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV02 obj, CaseAssignment3 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case")
@@ -250,7 +251,7 @@ public class CustomerPaymentCancellationRequestV02 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, Optional<Case3>> mmCase = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, Optional<Case3>>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,12 +262,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			complexType_lazy = () -> Case3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV02.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Case3> getValue(CustomerPaymentCancellationRequestV02 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV02 obj, Optional<Case3> value) {
+			obj.setCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrlData")
@@ -295,7 +298,7 @@ public class CustomerPaymentCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmControlData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, Optional<ControlData1>> mmControlData = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, Optional<ControlData1>>() {
 		{
 			xmlTag = "CtrlData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -306,12 +309,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			complexType_lazy = () -> ControlData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV02.class.getMethod("getControlData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ControlData1> getValue(CustomerPaymentCancellationRequestV02 obj) {
+			return obj.getControlData();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV02 obj, Optional<ControlData1> value) {
+			obj.setControlData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -339,7 +344,7 @@ public class CustomerPaymentCancellationRequestV02 {
 	 * definition} = "Identifies the payment instruction to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, List<UnderlyingTransaction6>> mmUnderlying = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, List<UnderlyingTransaction6>>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,12 +354,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			complexType_lazy = () -> UnderlyingTransaction6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV02.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<UnderlyingTransaction6> getValue(CustomerPaymentCancellationRequestV02 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV02 obj, List<UnderlyingTransaction6> value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -384,7 +391,7 @@ public class CustomerPaymentCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CustomerPaymentCancellationRequestV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -394,12 +401,14 @@ public class CustomerPaymentCancellationRequestV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentCancellationRequestV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CustomerPaymentCancellationRequestV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentCancellationRequestV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

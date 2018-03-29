@@ -116,7 +116,7 @@ public class PartyIdentification99 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification99, PartyIdentification93Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification99, PartyIdentification93Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification99.mmObject();
@@ -130,6 +130,16 @@ public class PartyIdentification99 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification93Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification93Choice getValue(PartyIdentification99 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification99 obj, PartyIdentification93Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -172,7 +182,7 @@ public class PartyIdentification99 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification99, Optional<LEIIdentifier>> mmLEI = new MMMessageAttribute<PartyIdentification99, Optional<LEIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification99.mmObject();
 			isDerived = false;
@@ -184,6 +194,16 @@ public class PartyIdentification99 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(PartyIdentification99 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification99 obj, Optional<LEIIdentifier> value) {
+			obj.setLEI(value.orElse(null));
 		}
 	};
 

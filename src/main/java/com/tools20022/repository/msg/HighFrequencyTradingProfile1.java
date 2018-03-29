@@ -103,7 +103,7 @@ public class HighFrequencyTradingProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HighFrequencyTradingProfile1, Optional<ISODate>> mmDate = new MMMessageAttribute<HighFrequencyTradingProfile1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class HighFrequencyTradingProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(HighFrequencyTradingProfile1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(HighFrequencyTradingProfile1 obj, Optional<ISODate> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmFrqcy")
@@ -145,7 +155,7 @@ public class HighFrequencyTradingProfile1 {
 	 * definition} = "Frequency of settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementFrequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HighFrequencyTradingProfile1, Optional<SettlementFrequency1Choice>> mmSettlementFrequency = new MMMessageAssociationEnd<HighFrequencyTradingProfile1, Optional<SettlementFrequency1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class HighFrequencyTradingProfile1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementFrequency1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementFrequency1Choice> getValue(HighFrequencyTradingProfile1 obj) {
+			return obj.getSettlementFrequency();
+		}
+
+		@Override
+		public void setValue(HighFrequencyTradingProfile1 obj, Optional<SettlementFrequency1Choice> value) {
+			obj.setSettlementFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CnsldtnTp")
@@ -190,7 +210,7 @@ public class HighFrequencyTradingProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsolidationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HighFrequencyTradingProfile1, Optional<ConsolidationType1Choice>> mmConsolidationType = new MMMessageAssociationEnd<HighFrequencyTradingProfile1, Optional<ConsolidationType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmObject();
 			isDerived = false;
@@ -202,6 +222,16 @@ public class HighFrequencyTradingProfile1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ConsolidationType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ConsolidationType1Choice> getValue(HighFrequencyTradingProfile1 obj) {
+			return obj.getConsolidationType();
+		}
+
+		@Override
+		public void setValue(HighFrequencyTradingProfile1 obj, Optional<ConsolidationType1Choice> value) {
+			obj.setConsolidationType(value.orElse(null));
 		}
 	};
 

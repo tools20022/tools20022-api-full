@@ -99,7 +99,7 @@ public class CorporateActionDateSD6 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD6, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionDateSD6, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD6.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class CorporateActionDateSD6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionDateSD6 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD6 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "LtryDt")
@@ -143,7 +153,7 @@ public class CorporateActionDateSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotteryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD6, Optional<ISODate>> mmLotteryDate = new MMMessageAttribute<CorporateActionDateSD6, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD6.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class CorporateActionDateSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionDateSD6 obj) {
+			return obj.getLotteryDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD6 obj, Optional<ISODate> value) {
+			obj.setLotteryDate(value.orElse(null));
 		}
 	};
 

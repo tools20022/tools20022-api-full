@@ -117,7 +117,7 @@ public class ATMTransactionAmounts9 {
 	 * definition} = "Type of media."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMediaType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts9, ATMMediaType2Code> mmMediaType = new MMMessageAttribute<ATMTransactionAmounts9, ATMMediaType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts9.mmObject();
@@ -129,6 +129,16 @@ public class ATMTransactionAmounts9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMMediaType2Code.mmObject();
+		}
+
+		@Override
+		public ATMMediaType2Code getValue(ATMTransactionAmounts9 obj) {
+			return obj.getMediaType();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts9 obj, ATMMediaType2Code value) {
+			obj.setMediaType(value);
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -166,7 +176,7 @@ public class ATMTransactionAmounts9 {
 	 * definition} = "Currency of the media."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts9, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<ATMTransactionAmounts9, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts9.mmObject();
@@ -178,6 +188,16 @@ public class ATMTransactionAmounts9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(ATMTransactionAmounts9 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts9 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinNb")
@@ -209,7 +229,7 @@ public class ATMTransactionAmounts9 {
 	 * definition} = "Minimum number of media."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts9, Optional<Number>> mmMinimumNumber = new MMMessageAttribute<ATMTransactionAmounts9, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts9.mmObject();
 			isDerived = false;
@@ -220,6 +240,16 @@ public class ATMTransactionAmounts9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMTransactionAmounts9 obj) {
+			return obj.getMinimumNumber();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts9 obj, Optional<Number> value) {
+			obj.setMinimumNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxNb")
@@ -251,7 +281,7 @@ public class ATMTransactionAmounts9 {
 	 * definition} = "Maximum number of media."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts9, Optional<Number>> mmMaximumNumber = new MMMessageAttribute<ATMTransactionAmounts9, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts9.mmObject();
 			isDerived = false;
@@ -262,6 +292,16 @@ public class ATMTransactionAmounts9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMTransactionAmounts9 obj) {
+			return obj.getMaximumNumber();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts9 obj, Optional<Number> value) {
+			obj.setMaximumNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DispFlg")
@@ -295,7 +335,7 @@ public class ATMTransactionAmounts9 {
 	 * "True if limits may be displayed to the customer on the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisplayFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransactionAmounts9, Optional<TrueFalseIndicator>> mmDisplayFlag = new MMMessageAttribute<ATMTransactionAmounts9, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts9.mmObject();
 			isDerived = false;
@@ -306,6 +346,16 @@ public class ATMTransactionAmounts9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMTransactionAmounts9 obj) {
+			return obj.getDisplayFlag();
+		}
+
+		@Override
+		public void setValue(ATMTransactionAmounts9 obj, Optional<TrueFalseIndicator> value) {
+			obj.setDisplayFlag(value.orElse(null));
 		}
 	};
 

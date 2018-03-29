@@ -115,7 +115,7 @@ public class GenericIdentification39 {
 	 * "Proprietary information issued by the data source scheme issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification39, RestrictedFINMax30Text> mmIdentification = new MMMessageAttribute<GenericIdentification39, RestrictedFINMax30Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification39.mmObject();
@@ -127,6 +127,16 @@ public class GenericIdentification39 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINMax30Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINMax30Text getValue(GenericIdentification39 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification39 obj, RestrictedFINMax30Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -164,7 +174,7 @@ public class GenericIdentification39 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification39, Optional<RestrictedFINMax8Text>> mmIssuer = new MMMessageAttribute<GenericIdentification39, Optional<RestrictedFINMax8Text>>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification39.mmObject();
@@ -176,6 +186,16 @@ public class GenericIdentification39 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax8Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax8Text> getValue(GenericIdentification39 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification39 obj, Optional<RestrictedFINMax8Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 

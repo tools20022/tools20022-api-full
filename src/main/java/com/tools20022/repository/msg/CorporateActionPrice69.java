@@ -120,7 +120,7 @@ public class CorporateActionPrice69 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat57Choice>> mmCashInLieuOfSharePrice = new MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat57Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice69.mmObject();
@@ -134,6 +134,16 @@ public class CorporateActionPrice69 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat57Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat57Choice> getValue(CorporateActionPrice69 obj) {
+			return obj.getCashInLieuOfSharePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice69 obj, Optional<PriceFormat57Choice> value) {
+			obj.setCashInLieuOfSharePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OverSbcptDpstPric")
@@ -174,7 +184,7 @@ public class CorporateActionPrice69 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat57Choice>> mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat57Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmOverSubscriptionDepositPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice69.mmObject();
@@ -188,6 +198,16 @@ public class CorporateActionPrice69 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat57Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat57Choice> getValue(CorporateActionPrice69 obj) {
+			return obj.getOverSubscriptionDepositPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice69 obj, Optional<PriceFormat57Choice> value) {
+			obj.setOverSubscriptionDepositPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxCshToInst")
@@ -223,7 +243,7 @@ public class CorporateActionPrice69 {
 	 * definition} = "Maximum cash amount that may be instructed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMaximumCashToInstruct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat62Choice>> mmMaximumCashToInstruct = new MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat62Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmMaximumCashToInstruct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice69.mmObject();
@@ -236,6 +256,16 @@ public class CorporateActionPrice69 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat62Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat62Choice> getValue(CorporateActionPrice69 obj) {
+			return obj.getMaximumCashToInstruct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice69 obj, Optional<PriceFormat62Choice> value) {
+			obj.setMaximumCashToInstruct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinCshToInst")
@@ -271,7 +301,7 @@ public class CorporateActionPrice69 {
 	 * definition} = "Minimum cash amount that may be instructed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumCashToInstruct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat62Choice>> mmMinimumCashToInstruct = new MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat62Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmMinimumCashToInstruct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice69.mmObject();
@@ -284,6 +314,16 @@ public class CorporateActionPrice69 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat62Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat62Choice> getValue(CorporateActionPrice69 obj) {
+			return obj.getMinimumCashToInstruct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice69 obj, Optional<PriceFormat62Choice> value) {
+			obj.setMinimumCashToInstruct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinMltplCshToInst")
@@ -320,7 +360,7 @@ public class CorporateActionPrice69 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumMultipleCashToInstruct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat62Choice>> mmMinimumMultipleCashToInstruct = new MMMessageAssociationEnd<CorporateActionPrice69, Optional<PriceFormat62Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmMinimumMultipleCashToInstruct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice69.mmObject();
@@ -333,6 +373,16 @@ public class CorporateActionPrice69 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat62Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat62Choice> getValue(CorporateActionPrice69 obj) {
+			return obj.getMinimumMultipleCashToInstruct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice69 obj, Optional<PriceFormat62Choice> value) {
+			obj.setMinimumMultipleCashToInstruct(value.orElse(null));
 		}
 	};
 

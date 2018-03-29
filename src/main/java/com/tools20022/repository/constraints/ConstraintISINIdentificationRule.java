@@ -52,11 +52,15 @@ public class ConstraintISINIdentificationRule {
 	 */
 	public static final MMConstraint<FinancialInstrument16> forFinancialInstrument16 = new MMConstraint<FinancialInstrument16>() {
 		{
-			validator = ConstraintISINIdentificationRule::checkFinancialInstrument16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINIdentificationRule";
 			definition = "If CountryOfDomicile is AT, BE, CH, DE, ES, FR, GB, IE, IT, LU or NL then Identification\\ISIN must be present.";
 			owner_lazy = () -> FinancialInstrument16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument16 obj) throws Exception {
+			checkFinancialInstrument16(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintISINIdentificationRule {
 	 */
 	public static final MMConstraint<FinancialInstrument20> forFinancialInstrument20 = new MMConstraint<FinancialInstrument20>() {
 		{
-			validator = ConstraintISINIdentificationRule::checkFinancialInstrument20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINIdentificationRule";
 			definition = "If CountryOfDomicile is AT, BE, CH, DE, ES, FR, GB, IE, IT, LU or NL then Identification\\ISIN must be present.";
 			owner_lazy = () -> FinancialInstrument20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument20 obj) throws Exception {
+			checkFinancialInstrument20(obj);
 		}
 	};
 

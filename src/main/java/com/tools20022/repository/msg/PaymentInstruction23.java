@@ -28,6 +28,7 @@ import com.tools20022.repository.codeset.PaymentMethod7Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -194,7 +195,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmPaymentInformationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction23, Optional<Max35Text>> mmPaymentInformationIdentification = new MMMessageAttribute<PaymentInstruction23, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -207,6 +208,16 @@ public class PaymentInstruction23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentInstruction23 obj) {
+			return obj.getPaymentInformationIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, Optional<Max35Text> value) {
+			obj.setPaymentInformationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtMtd", required = true)
@@ -251,7 +262,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmPaymentMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction23, PaymentMethod7Code> mmPaymentMethod = new MMMessageAttribute<PaymentInstruction23, PaymentMethod7Code>() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -264,6 +275,16 @@ public class PaymentInstruction23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentMethod7Code.mmObject();
+		}
+
+		@Override
+		public PaymentMethod7Code getValue(PaymentInstruction23 obj) {
+			return obj.getPaymentMethod();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, PaymentMethod7Code value) {
+			obj.setPaymentMethod(value);
 		}
 	};
 	@XmlElement(name = "PmtTpInf")
@@ -306,7 +327,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmPaymentTypeInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTypeInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction23, Optional<PaymentTypeInformation19>> mmPaymentTypeInformation = new MMMessageAssociationEnd<PaymentInstruction23, Optional<PaymentTypeInformation19>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmProcessingInstructions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -319,7 +340,17 @@ public class PaymentInstruction23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation19.mmObject();
+			type_lazy = () -> PaymentTypeInformation19.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTypeInformation19> getValue(PaymentInstruction23 obj) {
+			return obj.getPaymentTypeInformation();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, Optional<PaymentTypeInformation19> value) {
+			obj.setPaymentTypeInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdExctnDt", required = true)
@@ -364,7 +395,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmRequestedExecutionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction23, DateAndDateTimeChoice> mmRequestedExecutionDate = new MMMessageAttribute<PaymentInstruction23, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -377,6 +408,16 @@ public class PaymentInstruction23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(PaymentInstruction23 obj) {
+			return obj.getRequestedExecutionDate();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, DateAndDateTimeChoice value) {
+			obj.setRequestedExecutionDate(value);
 		}
 	};
 	@XmlElement(name = "Dbtr", required = true)
@@ -418,7 +459,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmDebtor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction23, PartyIdentification43> mmDebtor = new MMMessageAssociationEnd<PaymentInstruction23, PartyIdentification43>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -431,7 +472,17 @@ public class PaymentInstruction23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public PartyIdentification43 getValue(PaymentInstruction23 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, PartyIdentification43 value) {
+			obj.setDebtor(value);
 		}
 	};
 	@XmlElement(name = "DbtrAcct")
@@ -473,7 +524,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmDebtorAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction23, Optional<CashAccount24>> mmDebtorAccount = new MMMessageAssociationEnd<PaymentInstruction23, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -486,7 +537,17 @@ public class PaymentInstruction23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(PaymentInstruction23 obj) {
+			return obj.getDebtorAccount();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, Optional<CashAccount24> value) {
+			obj.setDebtorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt", required = true)
@@ -529,7 +590,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmDebtorAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction23, BranchAndFinancialInstitutionIdentification5> mmDebtorAgent = new MMMessageAssociationEnd<PaymentInstruction23, BranchAndFinancialInstitutionIdentification5>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -542,7 +603,17 @@ public class PaymentInstruction23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification5 getValue(PaymentInstruction23 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, BranchAndFinancialInstitutionIdentification5 value) {
+			obj.setDebtorAgent(value);
 		}
 	};
 	@XmlElement(name = "UltmtDbtr")
@@ -585,7 +656,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmUltimateDebtor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction23, Optional<PartyIdentification43>> mmUltimateDebtor = new MMMessageAssociationEnd<PaymentInstruction23, Optional<PartyIdentification43>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -598,7 +669,17 @@ public class PaymentInstruction23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(PaymentInstruction23 obj) {
+			return obj.getUltimateDebtor();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, Optional<PartyIdentification43> value) {
+			obj.setUltimateDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgBr")
@@ -643,7 +724,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmChargeBearer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction23, Optional<ChargeBearerType1Code>> mmChargeBearer = new MMMessageAttribute<PaymentInstruction23, Optional<ChargeBearerType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -657,9 +738,19 @@ public class PaymentInstruction23 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearerType1Code.mmObject();
 		}
+
+		@Override
+		public Optional<ChargeBearerType1Code> getValue(PaymentInstruction23 obj) {
+			return obj.getChargeBearer();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, Optional<ChargeBearerType1Code> value) {
+			obj.setChargeBearer(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CdtTrfTx", required = true)
-	protected List<com.tools20022.repository.msg.CreditTransferTransaction22> creditTransferTransaction;
+	protected List<CreditTransferTransaction22> creditTransferTransaction;
 	/**
 	 * 
 	 <p>
@@ -699,7 +790,7 @@ public class PaymentInstruction23 {
 	 * PaymentInstruction19.mmCreditTransferTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditTransferTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstruction23, List<CreditTransferTransaction22>> mmCreditTransferTransaction = new MMMessageAssociationEnd<PaymentInstruction23, List<CreditTransferTransaction22>>() {
 		{
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction23.mmObject();
@@ -711,7 +802,17 @@ public class PaymentInstruction23 {
 			previousVersion_lazy = () -> PaymentInstruction19.mmCreditTransferTransaction;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CreditTransferTransaction22.mmObject();
+			type_lazy = () -> CreditTransferTransaction22.mmObject();
+		}
+
+		@Override
+		public List<CreditTransferTransaction22> getValue(PaymentInstruction23 obj) {
+			return obj.getCreditTransferTransaction();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction23 obj, List<CreditTransferTransaction22> value) {
+			obj.setCreditTransferTransaction(value);
 		}
 	};
 
@@ -763,7 +864,7 @@ public class PaymentInstruction23 {
 		return paymentTypeInformation == null ? Optional.empty() : Optional.of(paymentTypeInformation);
 	}
 
-	public PaymentInstruction23 setPaymentTypeInformation(com.tools20022.repository.msg.PaymentTypeInformation19 paymentTypeInformation) {
+	public PaymentInstruction23 setPaymentTypeInformation(PaymentTypeInformation19 paymentTypeInformation) {
 		this.paymentTypeInformation = paymentTypeInformation;
 		return this;
 	}
@@ -781,7 +882,7 @@ public class PaymentInstruction23 {
 		return debtor;
 	}
 
-	public PaymentInstruction23 setDebtor(com.tools20022.repository.msg.PartyIdentification43 debtor) {
+	public PaymentInstruction23 setDebtor(PartyIdentification43 debtor) {
 		this.debtor = Objects.requireNonNull(debtor);
 		return this;
 	}
@@ -790,7 +891,7 @@ public class PaymentInstruction23 {
 		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public PaymentInstruction23 setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
+	public PaymentInstruction23 setDebtorAccount(CashAccount24 debtorAccount) {
 		this.debtorAccount = debtorAccount;
 		return this;
 	}
@@ -799,7 +900,7 @@ public class PaymentInstruction23 {
 		return debtorAgent;
 	}
 
-	public PaymentInstruction23 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+	public PaymentInstruction23 setDebtorAgent(BranchAndFinancialInstitutionIdentification5 debtorAgent) {
 		this.debtorAgent = Objects.requireNonNull(debtorAgent);
 		return this;
 	}
@@ -808,7 +909,7 @@ public class PaymentInstruction23 {
 		return ultimateDebtor == null ? Optional.empty() : Optional.of(ultimateDebtor);
 	}
 
-	public PaymentInstruction23 setUltimateDebtor(com.tools20022.repository.msg.PartyIdentification43 ultimateDebtor) {
+	public PaymentInstruction23 setUltimateDebtor(PartyIdentification43 ultimateDebtor) {
 		this.ultimateDebtor = ultimateDebtor;
 		return this;
 	}
@@ -826,7 +927,7 @@ public class PaymentInstruction23 {
 		return creditTransferTransaction == null ? creditTransferTransaction = new ArrayList<>() : creditTransferTransaction;
 	}
 
-	public PaymentInstruction23 setCreditTransferTransaction(List<com.tools20022.repository.msg.CreditTransferTransaction22> creditTransferTransaction) {
+	public PaymentInstruction23 setCreditTransferTransaction(List<CreditTransferTransaction22> creditTransferTransaction) {
 		this.creditTransferTransaction = Objects.requireNonNull(creditTransferTransaction);
 		return this;
 	}

@@ -96,7 +96,7 @@ public class PaymentTokenIdentifiers1 {
 	 * definition} = "Identifier of the token provider."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProviderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTokenIdentifiers1, Max35Text> mmProviderIdentification = new MMMessageAttribute<PaymentTokenIdentifiers1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class PaymentTokenIdentifiers1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentTokenIdentifiers1 obj) {
+			return obj.getProviderIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTokenIdentifiers1 obj, Max35Text value) {
+			obj.setProviderIdentification(value);
 		}
 	};
 	@XmlElement(name = "RqstrId", required = true)
@@ -138,7 +148,7 @@ public class PaymentTokenIdentifiers1 {
 	 * definition} = "Identifier of the token requestor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestorIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTokenIdentifiers1, Max35Text> mmRequestorIdentification = new MMMessageAttribute<PaymentTokenIdentifiers1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmObject();
 			isDerived = false;
@@ -149,6 +159,16 @@ public class PaymentTokenIdentifiers1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentTokenIdentifiers1 obj) {
+			return obj.getRequestorIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTokenIdentifiers1 obj, Max35Text value) {
+			obj.setRequestorIdentification(value);
 		}
 	};
 

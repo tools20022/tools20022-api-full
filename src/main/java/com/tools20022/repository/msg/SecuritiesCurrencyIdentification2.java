@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max1Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CountryCodeAndName3;
+import com.tools20022.repository.msg.CurrencyCodeAndName1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -130,7 +132,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCurrencyIdentification2, CurrencyCodeAndName1> mmCurrency = new MMMessageAssociationEnd<SecuritiesCurrencyIdentification2, CurrencyCodeAndName1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -141,7 +143,17 @@ public class SecuritiesCurrencyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyCodeAndName1.mmObject();
+			type_lazy = () -> CurrencyCodeAndName1.mmObject();
+		}
+
+		@Override
+		public CurrencyCodeAndName1 getValue(SecuritiesCurrencyIdentification2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(SecuritiesCurrencyIdentification2 obj, CurrencyCodeAndName1 value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "FrctnlDgt")
@@ -175,7 +187,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFractionalDigit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCurrencyIdentification2, Optional<Max1Number>> mmFractionalDigit = new MMMessageAttribute<SecuritiesCurrencyIdentification2, Optional<Max1Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -186,6 +198,16 @@ public class SecuritiesCurrencyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max1Number.mmObject();
+		}
+
+		@Override
+		public Optional<Max1Number> getValue(SecuritiesCurrencyIdentification2 obj) {
+			return obj.getFractionalDigit();
+		}
+
+		@Override
+		public void setValue(SecuritiesCurrencyIdentification2 obj, Optional<Max1Number> value) {
+			obj.setFractionalDigit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryDtls", required = true)
@@ -216,7 +238,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * definition} = "Details the country name and ISO 3166 country code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCountryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCurrencyIdentification2, CountryCodeAndName3> mmCountryDetails = new MMMessageAssociationEnd<SecuritiesCurrencyIdentification2, CountryCodeAndName3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -227,7 +249,17 @@ public class SecuritiesCurrencyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CountryCodeAndName3.mmObject();
+			type_lazy = () -> CountryCodeAndName3.mmObject();
+		}
+
+		@Override
+		public CountryCodeAndName3 getValue(SecuritiesCurrencyIdentification2 obj) {
+			return obj.getCountryDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesCurrencyIdentification2 obj, CountryCodeAndName3 value) {
+			obj.setCountryDetails(value);
 		}
 	};
 	@XmlElement(name = "PreEuro", required = true)
@@ -260,7 +292,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * definition} = "Specifies if a currency is a pre Euro currency or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreEuro = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCurrencyIdentification2, TrueFalseIndicator> mmPreEuro = new MMMessageAttribute<SecuritiesCurrencyIdentification2, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -271,6 +303,16 @@ public class SecuritiesCurrencyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(SecuritiesCurrencyIdentification2 obj) {
+			return obj.getPreEuro();
+		}
+
+		@Override
+		public void setValue(SecuritiesCurrencyIdentification2 obj, TrueFalseIndicator value) {
+			obj.setPreEuro(value);
 		}
 	};
 	@XmlElement(name = "Mod")
@@ -304,7 +346,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * "Modification status for the record compared to the previous report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCurrencyIdentification2, Optional<Modification1Code>> mmModification = new MMMessageAttribute<SecuritiesCurrencyIdentification2, Optional<Modification1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -315,6 +357,16 @@ public class SecuritiesCurrencyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Modification1Code> getValue(SecuritiesCurrencyIdentification2 obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(SecuritiesCurrencyIdentification2 obj, Optional<Modification1Code> value) {
+			obj.setModification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtyPrd", required = true)
@@ -345,7 +397,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * definition} = "Details the validity of the specific record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesCurrencyIdentification2, Period4Choice> mmValidityPeriod = new MMMessageAssociationEnd<SecuritiesCurrencyIdentification2, Period4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -357,6 +409,16 @@ public class SecuritiesCurrencyIdentification2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Period4Choice.mmObject();
+		}
+
+		@Override
+		public Period4Choice getValue(SecuritiesCurrencyIdentification2 obj) {
+			return obj.getValidityPeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesCurrencyIdentification2 obj, Period4Choice value) {
+			obj.setValidityPeriod(value);
 		}
 	};
 	@XmlElement(name = "LastUpdtd")
@@ -388,7 +450,7 @@ public class SecuritiesCurrencyIdentification2 {
 	 * definition} = "Date when this record was last modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastUpdated = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesCurrencyIdentification2, Optional<ISODate>> mmLastUpdated = new MMMessageAttribute<SecuritiesCurrencyIdentification2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCurrencyIdentification2.mmObject();
 			isDerived = false;
@@ -399,6 +461,16 @@ public class SecuritiesCurrencyIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SecuritiesCurrencyIdentification2 obj) {
+			return obj.getLastUpdated();
+		}
+
+		@Override
+		public void setValue(SecuritiesCurrencyIdentification2 obj, Optional<ISODate> value) {
+			obj.setLastUpdated(value.orElse(null));
 		}
 	};
 
@@ -423,7 +495,7 @@ public class SecuritiesCurrencyIdentification2 {
 		return currency;
 	}
 
-	public SecuritiesCurrencyIdentification2 setCurrency(com.tools20022.repository.msg.CurrencyCodeAndName1 currency) {
+	public SecuritiesCurrencyIdentification2 setCurrency(CurrencyCodeAndName1 currency) {
 		this.currency = Objects.requireNonNull(currency);
 		return this;
 	}
@@ -441,7 +513,7 @@ public class SecuritiesCurrencyIdentification2 {
 		return countryDetails;
 	}
 
-	public SecuritiesCurrencyIdentification2 setCountryDetails(com.tools20022.repository.msg.CountryCodeAndName3 countryDetails) {
+	public SecuritiesCurrencyIdentification2 setCountryDetails(CountryCodeAndName3 countryDetails) {
 		this.countryDetails = Objects.requireNonNull(countryDetails);
 		return this;
 	}

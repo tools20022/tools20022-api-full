@@ -65,13 +65,17 @@ public class ConstraintReceiversIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation16> forReceiveInformation16 = new MMConstraint<ReceiveInformation16>() {
 		{
-			validator = ConstraintReceiversIntermediary1DetailsRule::checkReceiveInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary1DetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediary1Details is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediary1DetailsRule.forReceiveInformation19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediaryDetailsRule.forReceiveInformation15;
 			owner_lazy = () -> ReceiveInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation16 obj) throws Exception {
+			checkReceiveInformation16(obj);
 		}
 	};
 	/**
@@ -110,13 +114,17 @@ public class ConstraintReceiversIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<ReceivingPartiesAndAccount14> forReceivingPartiesAndAccount14 = new MMConstraint<ReceivingPartiesAndAccount14>() {
 		{
-			validator = ConstraintReceiversIntermediary1DetailsRule::checkReceivingPartiesAndAccount14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary1DetailsRule";
 			definition = "If ReceiversIntermediary2Details is present, then ReceiversIntermediary1Details must also be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediary1DetailsRule.forReceivingPartiesAndAccount18);
 			owner_lazy = () -> ReceivingPartiesAndAccount14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount14 obj) throws Exception {
+			checkReceivingPartiesAndAccount14(obj);
 		}
 	};
 	/**
@@ -155,13 +163,17 @@ public class ConstraintReceiversIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<ReceivingPartiesAndAccount13> forReceivingPartiesAndAccount13 = new MMConstraint<ReceivingPartiesAndAccount13>() {
 		{
-			validator = ConstraintReceiversIntermediary1DetailsRule::checkReceivingPartiesAndAccount13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary1DetailsRule";
 			definition = "If ReceiversIntermediary2Details is present, then ReceiversIntermediary1Details must also be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReceiversIntermediary1DetailsRule.forReceivingPartiesAndAccount17);
 			owner_lazy = () -> ReceivingPartiesAndAccount13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount13 obj) throws Exception {
+			checkReceivingPartiesAndAccount13(obj);
 		}
 	};
 	/**
@@ -191,12 +203,16 @@ public class ConstraintReceiversIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<ReceivingPartiesAndAccount16> forReceivingPartiesAndAccount16 = new MMConstraint<ReceivingPartiesAndAccount16>() {
 		{
-			validator = ConstraintReceiversIntermediary1DetailsRule::checkReceivingPartiesAndAccount16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary1DetailsRule";
 			definition = "If ReceiversIntermediary2Details is present, then ReceiversIntermediary1Details must be present. If ReceiversIntermediary2Details is not present, then ReceiversIntermediary1Details is optional.";
 			owner_lazy = () -> ReceivingPartiesAndAccount16.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount16 obj) throws Exception {
+			checkReceivingPartiesAndAccount16(obj);
 		}
 	};
 	/**
@@ -227,12 +243,16 @@ public class ConstraintReceiversIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<ReceiveInformation19> forReceiveInformation19 = new MMConstraint<ReceiveInformation19>() {
 		{
-			validator = ConstraintReceiversIntermediary1DetailsRule::checkReceiveInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary1DetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/ReceiversIntermediary1Details is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediary1DetailsRule.forReceiveInformation16;
 			owner_lazy = () -> ReceiveInformation19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceiveInformation19 obj) throws Exception {
+			checkReceiveInformation19(obj);
 		}
 	};
 	/**
@@ -268,13 +288,17 @@ public class ConstraintReceiversIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<ReceivingPartiesAndAccount17> forReceivingPartiesAndAccount17 = new MMConstraint<ReceivingPartiesAndAccount17>() {
 		{
-			validator = ConstraintReceiversIntermediary1DetailsRule::checkReceivingPartiesAndAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary1DetailsRule";
 			definition = "If ReceiversIntermediary2Details is present, then ReceiversIntermediary1Details must also be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediary1DetailsRule.forReceivingPartiesAndAccount13;
 			owner_lazy = () -> ReceivingPartiesAndAccount17.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount17 obj) throws Exception {
+			checkReceivingPartiesAndAccount17(obj);
 		}
 	};
 	/**
@@ -310,13 +334,17 @@ public class ConstraintReceiversIntermediary1DetailsRule {
 	 */
 	public static final MMConstraint<ReceivingPartiesAndAccount18> forReceivingPartiesAndAccount18 = new MMConstraint<ReceivingPartiesAndAccount18>() {
 		{
-			validator = ConstraintReceiversIntermediary1DetailsRule::checkReceivingPartiesAndAccount18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary1DetailsRule";
 			definition = "If ReceiversIntermediary2Details is present, then ReceiversIntermediary1Details must also be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReceiversIntermediary1DetailsRule.forReceivingPartiesAndAccount14;
 			owner_lazy = () -> ReceivingPartiesAndAccount18.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary1Details</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReceiversIntermediary2Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ReceivingPartiesAndAccount18 obj) throws Exception {
+			checkReceivingPartiesAndAccount18(obj);
 		}
 	};
 

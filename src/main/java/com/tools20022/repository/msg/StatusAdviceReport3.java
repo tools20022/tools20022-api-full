@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportingMessageStatus1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericValidationRuleIdentification1;
+import com.tools20022.repository.msg.OriginalReportStatistics3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -103,7 +105,7 @@ public class StatusAdviceReport3 {
 	 * definition} = "Provides the status for the full message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusAdviceReport3, ReportingMessageStatus1Code> mmStatus = new MMMessageAttribute<StatusAdviceReport3, ReportingMessageStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 			isDerived = false;
@@ -115,9 +117,19 @@ public class StatusAdviceReport3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportingMessageStatus1Code.mmObject();
 		}
+
+		@Override
+		public ReportingMessageStatus1Code getValue(StatusAdviceReport3 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(StatusAdviceReport3 obj, ReportingMessageStatus1Code value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "VldtnRule")
-	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
+	protected List<GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * 
 	 <p>
@@ -146,7 +158,7 @@ public class StatusAdviceReport3 {
 	 * "Provides the details of the rule which could not be validated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAdviceReport3, List<GenericValidationRuleIdentification1>> mmValidationRule = new MMMessageAssociationEnd<StatusAdviceReport3, List<GenericValidationRuleIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 			isDerived = false;
@@ -156,7 +168,17 @@ public class StatusAdviceReport3 {
 			definition = "Provides the details of the rule which could not be validated.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
+			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericValidationRuleIdentification1> getValue(StatusAdviceReport3 obj) {
+			return obj.getValidationRule();
+		}
+
+		@Override
+		public void setValue(StatusAdviceReport3 obj, List<GenericValidationRuleIdentification1> value) {
+			obj.setValidationRule(value);
 		}
 	};
 	@XmlElement(name = "MsgDt")
@@ -190,7 +212,7 @@ public class StatusAdviceReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusAdviceReport3, Optional<ISODate>> mmMessageDate = new MMMessageAttribute<StatusAdviceReport3, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 			isDerived = false;
@@ -201,6 +223,16 @@ public class StatusAdviceReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(StatusAdviceReport3 obj) {
+			return obj.getMessageDate();
+		}
+
+		@Override
+		public void setValue(StatusAdviceReport3 obj, Optional<ISODate> value) {
+			obj.setMessageDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sttstcs")
@@ -233,7 +265,7 @@ public class StatusAdviceReport3 {
 	 * "Statistical information on the results of the records processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatistics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAdviceReport3, Optional<OriginalReportStatistics3>> mmStatistics = new MMMessageAssociationEnd<StatusAdviceReport3, Optional<OriginalReportStatistics3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAdviceReport3.mmObject();
 			isDerived = false;
@@ -244,7 +276,17 @@ public class StatusAdviceReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalReportStatistics3.mmObject();
+			type_lazy = () -> OriginalReportStatistics3.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalReportStatistics3> getValue(StatusAdviceReport3 obj) {
+			return obj.getStatistics();
+		}
+
+		@Override
+		public void setValue(StatusAdviceReport3 obj, Optional<OriginalReportStatistics3> value) {
+			obj.setStatistics(value.orElse(null));
 		}
 	};
 
@@ -275,7 +317,7 @@ public class StatusAdviceReport3 {
 		return validationRule == null ? validationRule = new ArrayList<>() : validationRule;
 	}
 
-	public StatusAdviceReport3 setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+	public StatusAdviceReport3 setValidationRule(List<GenericValidationRuleIdentification1> validationRule) {
 		this.validationRule = Objects.requireNonNull(validationRule);
 		return this;
 	}
@@ -293,7 +335,7 @@ public class StatusAdviceReport3 {
 		return statistics == null ? Optional.empty() : Optional.of(statistics);
 	}
 
-	public StatusAdviceReport3 setStatistics(com.tools20022.repository.msg.OriginalReportStatistics3 statistics) {
+	public StatusAdviceReport3 setStatistics(OriginalReportStatistics3 statistics) {
 		this.statistics = statistics;
 		return this;
 	}

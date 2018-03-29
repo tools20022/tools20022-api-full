@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CurrencyDetails3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -112,7 +112,7 @@ public class CurrencyDetails3 {
 	 * CurrencyDetails1.mmAlphaCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlphaCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDetails3, ActiveCurrencyCode> mmAlphaCode = new MMMessageAttribute<CurrencyDetails3, ActiveCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails3.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class CurrencyDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CurrencyDetails3 obj) {
+			return obj.getAlphaCode();
+		}
+
+		@Override
+		public void setValue(CurrencyDetails3 obj, ActiveCurrencyCode value) {
+			obj.setAlphaCode(value);
 		}
 	};
 	@XmlElement(name = "NmrcCd", required = true)
@@ -161,7 +171,7 @@ public class CurrencyDetails3 {
 	 * CurrencyDetails1.mmNumericCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumericCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDetails3, Exact3NumericText> mmNumericCode = new MMMessageAttribute<CurrencyDetails3, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails3.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class CurrencyDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CurrencyDetails3 obj) {
+			return obj.getNumericCode();
+		}
+
+		@Override
+		public void setValue(CurrencyDetails3 obj, Exact3NumericText value) {
+			obj.setNumericCode(value);
 		}
 	};
 	@XmlElement(name = "Dcml", required = true)
@@ -210,7 +230,7 @@ public class CurrencyDetails3 {
 	 * CurrencyDetails1.mmDecimal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDecimal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDetails3, Number> mmDecimal = new MMMessageAttribute<CurrencyDetails3, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails3.mmObject();
 			isDerived = false;
@@ -222,6 +242,16 @@ public class CurrencyDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(CurrencyDetails3 obj) {
+			return obj.getDecimal();
+		}
+
+		@Override
+		public void setValue(CurrencyDetails3 obj, Number value) {
+			obj.setDecimal(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -258,7 +288,7 @@ public class CurrencyDetails3 {
 	 * CurrencyDetails1.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyDetails3, Optional<Max35Text>> mmName = new MMMessageAttribute<CurrencyDetails3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDetails3.mmObject();
 			isDerived = false;
@@ -271,6 +301,16 @@ public class CurrencyDetails3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(CurrencyDetails3 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CurrencyDetails3 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -279,7 +319,7 @@ public class CurrencyDetails3 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDetails3.mmAlphaCode, com.tools20022.repository.msg.CurrencyDetails3.mmNumericCode, com.tools20022.repository.msg.CurrencyDetails3.mmDecimal,
 						com.tools20022.repository.msg.CurrencyDetails3.mmName);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDetails3";
 				definition = "Details of a currency.";
 				previousVersion_lazy = () -> CurrencyDetails1.mmObject();

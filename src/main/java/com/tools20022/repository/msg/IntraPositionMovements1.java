@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.IntraPositionTransfer;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraPositionMovement1;
+import com.tools20022.repository.msg.IntraPositionStatusAndReason1;
+import com.tools20022.repository.msg.SecuritiesAccount13;
+import com.tools20022.repository.msg.SystemPartyIdentification5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -140,7 +144,7 @@ public class IntraPositionMovements1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovements1, Optional<SystemPartyIdentification5>> mmAccountOwner = new MMMessageAssociationEnd<IntraPositionMovements1, Optional<SystemPartyIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovements1.mmObject();
@@ -153,7 +157,17 @@ public class IntraPositionMovements1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
+			type_lazy = () -> SystemPartyIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification5> getValue(IntraPositionMovements1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovements1 obj, Optional<SystemPartyIdentification5> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -197,7 +211,7 @@ public class IntraPositionMovements1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovements1, Optional<SecuritiesAccount13>> mmSafekeepingAccount = new MMMessageAssociationEnd<IntraPositionMovements1, Optional<SecuritiesAccount13>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovements1.mmObject();
@@ -210,7 +224,17 @@ public class IntraPositionMovements1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			type_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount13> getValue(IntraPositionMovements1 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovements1 obj, Optional<SecuritiesAccount13> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsAndRsn")
@@ -250,7 +274,7 @@ public class IntraPositionMovements1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovements1, Optional<IntraPositionStatusAndReason1>> mmStatusAndReason = new MMMessageAssociationEnd<IntraPositionMovements1, Optional<IntraPositionStatusAndReason1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovements1.mmObject();
 			isDerived = false;
@@ -262,11 +286,21 @@ public class IntraPositionMovements1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraPositionStatusAndReason1.mmObject();
+			type_lazy = () -> IntraPositionStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public Optional<IntraPositionStatusAndReason1> getValue(IntraPositionMovements1 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovements1 obj, Optional<IntraPositionStatusAndReason1> value) {
+			obj.setStatusAndReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mvmnt", required = true)
-	protected List<com.tools20022.repository.msg.IntraPositionMovement1> movement;
+	protected List<IntraPositionMovement1> movement;
 	/**
 	 * 
 	 <p>
@@ -306,7 +340,7 @@ public class IntraPositionMovements1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionMovements1, List<IntraPositionMovement1>> mmMovement = new MMMessageAssociationEnd<IntraPositionMovements1, List<IntraPositionMovement1>>() {
 		{
 			businessComponentTrace_lazy = () -> IntraPositionTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionMovements1.mmObject();
@@ -318,7 +352,17 @@ public class IntraPositionMovements1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovements2.mmMovement);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraPositionMovement1.mmObject();
+			type_lazy = () -> IntraPositionMovement1.mmObject();
+		}
+
+		@Override
+		public List<IntraPositionMovement1> getValue(IntraPositionMovements1 obj) {
+			return obj.getMovement();
+		}
+
+		@Override
+		public void setValue(IntraPositionMovements1 obj, List<IntraPositionMovement1> value) {
+			obj.setMovement(value);
 		}
 	};
 
@@ -344,7 +388,7 @@ public class IntraPositionMovements1 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public IntraPositionMovements1 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+	public IntraPositionMovements1 setAccountOwner(SystemPartyIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -353,7 +397,7 @@ public class IntraPositionMovements1 {
 		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public IntraPositionMovements1 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+	public IntraPositionMovements1 setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
 		return this;
 	}
@@ -362,7 +406,7 @@ public class IntraPositionMovements1 {
 		return statusAndReason == null ? Optional.empty() : Optional.of(statusAndReason);
 	}
 
-	public IntraPositionMovements1 setStatusAndReason(com.tools20022.repository.msg.IntraPositionStatusAndReason1 statusAndReason) {
+	public IntraPositionMovements1 setStatusAndReason(IntraPositionStatusAndReason1 statusAndReason) {
 		this.statusAndReason = statusAndReason;
 		return this;
 	}
@@ -371,7 +415,7 @@ public class IntraPositionMovements1 {
 		return movement == null ? movement = new ArrayList<>() : movement;
 	}
 
-	public IntraPositionMovements1 setMovement(List<com.tools20022.repository.msg.IntraPositionMovement1> movement) {
+	public IntraPositionMovements1 setMovement(List<IntraPositionMovement1> movement) {
 		this.movement = Objects.requireNonNull(movement);
 		return this;
 	}

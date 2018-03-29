@@ -24,6 +24,9 @@ import com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsN
 import com.tools20022.repository.entity.ForeignExchangeTrade;
 import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AgreedRate3;
+import com.tools20022.repository.msg.AmountsAndValueDate1;
+import com.tools20022.repository.msg.TradeData16;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +124,7 @@ public class SplitTradeDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SplitTradeDetails3, Optional<TradeData16>> mmStatusDetails = new MMMessageAssociationEnd<SplitTradeDetails3, Optional<TradeData16>>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTrade.mmTreasuryTradeSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SplitTradeDetails3.mmObject();
@@ -133,7 +136,17 @@ public class SplitTradeDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeData16.mmObject();
+			type_lazy = () -> TradeData16.mmObject();
+		}
+
+		@Override
+		public Optional<TradeData16> getValue(SplitTradeDetails3 obj) {
+			return obj.getStatusDetails();
+		}
+
+		@Override
+		public void setValue(SplitTradeDetails3 obj, Optional<TradeData16> value) {
+			obj.setStatusDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradAmts", required = true)
@@ -169,7 +182,7 @@ public class SplitTradeDetails3 {
 	 * definition} = "Amounts of the foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SplitTradeDetails3, AmountsAndValueDate1> mmTradeAmounts = new MMMessageAssociationEnd<SplitTradeDetails3, AmountsAndValueDate1>() {
 		{
 			businessComponentTrace_lazy = () -> ForeignExchangeTrade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SplitTradeDetails3.mmObject();
@@ -181,7 +194,17 @@ public class SplitTradeDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
+			type_lazy = () -> AmountsAndValueDate1.mmObject();
+		}
+
+		@Override
+		public AmountsAndValueDate1 getValue(SplitTradeDetails3 obj) {
+			return obj.getTradeAmounts();
+		}
+
+		@Override
+		public void setValue(SplitTradeDetails3 obj, AmountsAndValueDate1 value) {
+			obj.setTradeAmounts(value);
 		}
 	};
 	@XmlElement(name = "AgrdRate")
@@ -217,7 +240,7 @@ public class SplitTradeDetails3 {
 	 * definition} = "Exchange rate as agreed by the traders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgreedRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SplitTradeDetails3, Optional<AgreedRate3>> mmAgreedRate = new MMMessageAssociationEnd<SplitTradeDetails3, Optional<AgreedRate3>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SplitTradeDetails3.mmObject();
@@ -229,7 +252,17 @@ public class SplitTradeDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AgreedRate3.mmObject();
+			type_lazy = () -> AgreedRate3.mmObject();
+		}
+
+		@Override
+		public Optional<AgreedRate3> getValue(SplitTradeDetails3 obj) {
+			return obj.getAgreedRate();
+		}
+
+		@Override
+		public void setValue(SplitTradeDetails3 obj, Optional<AgreedRate3> value) {
+			obj.setAgreedRate(value.orElse(null));
 		}
 	};
 
@@ -253,7 +286,7 @@ public class SplitTradeDetails3 {
 		return statusDetails == null ? Optional.empty() : Optional.of(statusDetails);
 	}
 
-	public SplitTradeDetails3 setStatusDetails(com.tools20022.repository.msg.TradeData16 statusDetails) {
+	public SplitTradeDetails3 setStatusDetails(TradeData16 statusDetails) {
 		this.statusDetails = statusDetails;
 		return this;
 	}
@@ -262,7 +295,7 @@ public class SplitTradeDetails3 {
 		return tradeAmounts;
 	}
 
-	public SplitTradeDetails3 setTradeAmounts(com.tools20022.repository.msg.AmountsAndValueDate1 tradeAmounts) {
+	public SplitTradeDetails3 setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
 		this.tradeAmounts = Objects.requireNonNull(tradeAmounts);
 		return this;
 	}
@@ -271,7 +304,7 @@ public class SplitTradeDetails3 {
 		return agreedRate == null ? Optional.empty() : Optional.of(agreedRate);
 	}
 
-	public SplitTradeDetails3 setAgreedRate(com.tools20022.repository.msg.AgreedRate3 agreedRate) {
+	public SplitTradeDetails3 setAgreedRate(AgreedRate3 agreedRate) {
 		this.agreedRate = agreedRate;
 		return this;
 	}

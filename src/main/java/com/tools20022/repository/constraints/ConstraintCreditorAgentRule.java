@@ -51,11 +51,15 @@ public class ConstraintCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
 		{
-			validator = ConstraintCreditorAgentRule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentRule";
 			definition = "GroupHeader/CreditorAgent is not allowed.";
 			owner_lazy = () -> PaymentCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentCancellationRequestV01 obj) throws Exception {
+			checkPaymentCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -79,11 +83,15 @@ public class ConstraintCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<PaymentStatusReportV02>() {
 		{
-			validator = ConstraintCreditorAgentRule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentRule";
 			definition = "GroupHeader/CreditorAgent is not allowed.";
 			owner_lazy = () -> PaymentStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentStatusReportV02 obj) throws Exception {
+			checkPaymentStatusReportV02(obj);
 		}
 	};
 	/**
@@ -109,11 +117,15 @@ public class ConstraintCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
 		{
-			validator = ConstraintCreditorAgentRule::checkPaymentInstructionInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentRule";
 			definition = "If PaymentMethod is CHK and if CreditTransferTransactionInformation/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransactionInformation/CreditorAgent is mandatory. \n\nIf PaymentMethod is CHK and if CreditTransferTransactionInformation/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransactionInformation/CreditorAgent is not allowed.";
 			owner_lazy = () -> PaymentInstructionInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation1 obj) throws Exception {
+			checkPaymentInstructionInformation1(obj);
 		}
 	};
 	/**
@@ -139,11 +151,15 @@ public class ConstraintCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction5> forPaymentInstruction5 = new MMConstraint<PaymentInstruction5>() {
 		{
-			validator = ConstraintCreditorAgentRule::checkPaymentInstruction5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentRule";
 			definition = "If PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is not allowed.";
 			owner_lazy = () -> PaymentInstruction5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction5 obj) throws Exception {
+			checkPaymentInstruction5(obj);
 		}
 	};
 	/**
@@ -169,11 +185,15 @@ public class ConstraintCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction8> forPaymentInstruction8 = new MMConstraint<PaymentInstruction8>() {
 		{
-			validator = ConstraintCreditorAgentRule::checkPaymentInstruction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentRule";
 			definition = "If PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is not allowed.";
 			owner_lazy = () -> PaymentInstruction8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction8 obj) throws Exception {
+			checkPaymentInstruction8(obj);
 		}
 	};
 	/**
@@ -207,12 +227,16 @@ public class ConstraintCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction11> forPaymentInstruction11 = new MMConstraint<PaymentInstruction11>() {
 		{
-			validator = ConstraintCreditorAgentRule::checkPaymentInstruction11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentRule";
 			definition = "If PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditorAgentRule.forPaymentInstruction17);
 			owner_lazy = () -> PaymentInstruction11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction11 obj) throws Exception {
+			checkPaymentInstruction11(obj);
 		}
 	};
 	/**
@@ -251,13 +275,17 @@ public class ConstraintCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction17> forPaymentInstruction17 = new MMConstraint<PaymentInstruction17>() {
 		{
-			validator = ConstraintCreditorAgentRule::checkPaymentInstruction17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentRule";
 			definition = "If PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to MLFA, CRFA, RGFA or PUFA, then CreditTransferTransaction/CreditorAgent is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditorAgentRule.forPaymentInstruction19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorAgentRule.forPaymentInstruction11;
 			owner_lazy = () -> PaymentInstruction17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction17 obj) throws Exception {
+			checkPaymentInstruction17(obj);
 		}
 	};
 	/**
@@ -296,13 +324,17 @@ public class ConstraintCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction19> forPaymentInstruction19 = new MMConstraint<PaymentInstruction19>() {
 		{
-			validator = ConstraintCreditorAgentRule::checkPaymentInstruction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentRule";
 			definition = "If PaymentMethod is CHK (Cheque) and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK (Cheque) and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/CreditorAgent is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditorAgentRule.forPaymentInstruction23);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorAgentRule.forPaymentInstruction17;
 			owner_lazy = () -> PaymentInstruction19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction19 obj) throws Exception {
+			checkPaymentInstruction19(obj);
 		}
 	};
 	/**
@@ -333,12 +365,16 @@ public class ConstraintCreditorAgentRule {
 	 */
 	public static final MMConstraint<PaymentInstruction23> forPaymentInstruction23 = new MMConstraint<PaymentInstruction23>() {
 		{
-			validator = ConstraintCreditorAgentRule::checkPaymentInstruction23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentRule";
 			definition = "If PaymentMethod is CHK (Cheque) and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is present and is equal to CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/CreditorAgent is mandatory. \r\n\r\nIf PaymentMethod is CHK (Cheque) and if CreditTransferTransaction/ ChequeInstruction/DeliveryMethod is not present or is not equal to CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/CreditorAgent is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditorAgentRule.forPaymentInstruction19;
 			owner_lazy = () -> PaymentInstruction23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction23 obj) throws Exception {
+			checkPaymentInstruction23(obj);
 		}
 	};
 

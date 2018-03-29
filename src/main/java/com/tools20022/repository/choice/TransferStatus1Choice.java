@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.RejectedStatus8Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.Status;
@@ -148,7 +149,7 @@ public class TransferStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus1Choice, TransferInstructionStatus3> mmStatus = new MMMessageAssociationEnd<TransferStatus1Choice, TransferInstructionStatus3>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmObject();
@@ -162,6 +163,16 @@ public class TransferStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferInstructionStatus3.mmObject();
+		}
+
+		@Override
+		public TransferInstructionStatus3 getValue(TransferStatus1Choice obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransferStatus1Choice obj, TransferInstructionStatus3 value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "PdgSttlm", required = true)
@@ -206,7 +217,7 @@ public class TransferStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus1Choice, PendingSettlementStatus2> mmPendingSettlement = new MMMessageAssociationEnd<TransferStatus1Choice, PendingSettlementStatus2>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmPendingSettlementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmObject();
@@ -220,6 +231,16 @@ public class TransferStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingSettlementStatus2.mmObject();
+		}
+
+		@Override
+		public PendingSettlementStatus2 getValue(TransferStatus1Choice obj) {
+			return obj.getPendingSettlement();
+		}
+
+		@Override
+		public void setValue(TransferStatus1Choice obj, PendingSettlementStatus2 value) {
+			obj.setPendingSettlement(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -264,7 +285,7 @@ public class TransferStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus1Choice, TransferUnmatchedStatus2> mmUnmatched = new MMMessageAssociationEnd<TransferStatus1Choice, TransferUnmatchedStatus2>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmObject();
@@ -278,6 +299,16 @@ public class TransferStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferUnmatchedStatus2.mmObject();
+		}
+
+		@Override
+		public TransferUnmatchedStatus2 getValue(TransferStatus1Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(TransferStatus1Choice obj, TransferUnmatchedStatus2 value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "InRpr", required = true)
@@ -321,7 +352,7 @@ public class TransferStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus1Choice, InRepairStatus3> mmInRepair = new MMMessageAssociationEnd<TransferStatus1Choice, InRepairStatus3>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmObject();
@@ -336,9 +367,19 @@ public class TransferStatus1Choice {
 			isComposite = true;
 			type_lazy = () -> InRepairStatus3.mmObject();
 		}
+
+		@Override
+		public InRepairStatus3 getValue(TransferStatus1Choice obj) {
+			return obj.getInRepair();
+		}
+
+		@Override
+		public void setValue(TransferStatus1Choice obj, InRepairStatus3 value) {
+			obj.setInRepair(value);
+		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
-	protected List<com.tools20022.repository.choice.RejectedStatus8Choice> rejected;
+	protected List<RejectedStatus8Choice> rejected;
 	/**
 	 * 
 	 <p>
@@ -379,7 +420,7 @@ public class TransferStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus1Choice, List<RejectedStatus8Choice>> mmRejected = new MMMessageAssociationEnd<TransferStatus1Choice, List<RejectedStatus8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmObject();
@@ -392,7 +433,17 @@ public class TransferStatus1Choice {
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectedStatus8Choice.mmObject();
+			type_lazy = () -> RejectedStatus8Choice.mmObject();
+		}
+
+		@Override
+		public List<RejectedStatus8Choice> getValue(TransferStatus1Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(TransferStatus1Choice obj, List<RejectedStatus8Choice> value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "FaildSttlm", required = true)
@@ -439,7 +490,7 @@ public class TransferStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFailedSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus1Choice, FailedSettlementStatus1> mmFailedSettlement = new MMMessageAssociationEnd<TransferStatus1Choice, FailedSettlementStatus1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmObject();
@@ -453,6 +504,16 @@ public class TransferStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FailedSettlementStatus1.mmObject();
+		}
+
+		@Override
+		public FailedSettlementStatus1 getValue(TransferStatus1Choice obj) {
+			return obj.getFailedSettlement();
+		}
+
+		@Override
+		public void setValue(TransferStatus1Choice obj, FailedSettlementStatus1 value) {
+			obj.setFailedSettlement(value);
 		}
 	};
 	@XmlElement(name = "Canc", required = true)
@@ -496,7 +557,7 @@ public class TransferStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus1Choice, CancelledStatus3> mmCancelled = new MMMessageAssociationEnd<TransferStatus1Choice, CancelledStatus3>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmObject();
@@ -510,6 +571,16 @@ public class TransferStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancelledStatus3.mmObject();
+		}
+
+		@Override
+		public CancelledStatus3 getValue(TransferStatus1Choice obj) {
+			return obj.getCancelled();
+		}
+
+		@Override
+		public void setValue(TransferStatus1Choice obj, CancelledStatus3 value) {
+			obj.setCancelled(value);
 		}
 	};
 	@XmlElement(name = "Rvsd", required = true)
@@ -553,7 +624,7 @@ public class TransferStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus1Choice, ReversedStatus1> mmReversed = new MMMessageAssociationEnd<TransferStatus1Choice, ReversedStatus1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmObject();
@@ -567,6 +638,16 @@ public class TransferStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReversedStatus1.mmObject();
+		}
+
+		@Override
+		public ReversedStatus1 getValue(TransferStatus1Choice obj) {
+			return obj.getReversed();
+		}
+
+		@Override
+		public void setValue(TransferStatus1Choice obj, ReversedStatus1 value) {
+			obj.setReversed(value);
 		}
 	};
 	@XmlElement(name = "CxlPdg", required = true)
@@ -611,7 +692,7 @@ public class TransferStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatus1Choice, CancellationPendingStatus1> mmCancellationPending = new MMMessageAssociationEnd<TransferStatus1Choice, CancellationPendingStatus1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferStatus1Choice.mmObject();
@@ -625,6 +706,16 @@ public class TransferStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationPendingStatus1.mmObject();
+		}
+
+		@Override
+		public CancellationPendingStatus1 getValue(TransferStatus1Choice obj) {
+			return obj.getCancellationPending();
+		}
+
+		@Override
+		public void setValue(TransferStatus1Choice obj, CancellationPendingStatus1 value) {
+			obj.setCancellationPending(value);
 		}
 	};
 
@@ -686,7 +777,7 @@ public class TransferStatus1Choice {
 		return rejected == null ? rejected = new ArrayList<>() : rejected;
 	}
 
-	public TransferStatus1Choice setRejected(List<com.tools20022.repository.choice.RejectedStatus8Choice> rejected) {
+	public TransferStatus1Choice setRejected(List<RejectedStatus8Choice> rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}

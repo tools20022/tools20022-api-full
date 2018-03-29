@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalParameters1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -103,7 +104,7 @@ public class BreakdownByParty2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByParty2, PartyIdentification2Choice> mmParty = new MMMessageAttribute<BreakdownByParty2, PartyIdentification2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty2.mmObject();
 			isDerived = false;
@@ -114,6 +115,16 @@ public class BreakdownByParty2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(BreakdownByParty2 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(BreakdownByParty2 obj, PartyIdentification2Choice value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "AddtlParams")
@@ -145,7 +156,7 @@ public class BreakdownByParty2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByParty2, Optional<AdditionalParameters1>> mmAdditionalParameters = new MMMessageAssociationEnd<BreakdownByParty2, Optional<AdditionalParameters1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty2.mmObject();
 			isDerived = false;
@@ -156,7 +167,17 @@ public class BreakdownByParty2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
+			type_lazy = () -> AdditionalParameters1.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalParameters1> getValue(BreakdownByParty2 obj) {
+			return obj.getAdditionalParameters();
+		}
+
+		@Override
+		public void setValue(BreakdownByParty2 obj, Optional<AdditionalParameters1> value) {
+			obj.setAdditionalParameters(value.orElse(null));
 		}
 	};
 
@@ -186,7 +207,7 @@ public class BreakdownByParty2 {
 		return additionalParameters == null ? Optional.empty() : Optional.of(additionalParameters);
 	}
 
-	public BreakdownByParty2 setAdditionalParameters(com.tools20022.repository.msg.AdditionalParameters1 additionalParameters) {
+	public BreakdownByParty2 setAdditionalParameters(AdditionalParameters1 additionalParameters) {
 		this.additionalParameters = additionalParameters;
 		return this;
 	}

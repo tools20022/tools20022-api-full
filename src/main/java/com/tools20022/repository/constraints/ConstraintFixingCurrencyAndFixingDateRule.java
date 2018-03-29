@@ -55,12 +55,16 @@ public class ConstraintFixingCurrencyAndFixingDateRule {
 	 */
 	public static final MMConstraint<Trade2> forTrade2 = new MMConstraint<Trade2>() {
 		{
-			validator = ConstraintFixingCurrencyAndFixingDateRule::checkTrade2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingCurrencyAndFixingDateRule";
 			definition = "If ForeignExchangeTradeProduct is equal to value 'NDFO', then FixingCurrency and FixingDate must be present. \r\n";
 			owner_lazy = () -> Trade2.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'NDFO'\r\nFollowing must be true\r\n\t/FixingCurrency must be present\r\nAnd/FixingDate must be present\r\n";
+		}
+
+		@Override
+		public void executeValidator(Trade2 obj) throws Exception {
+			checkTrade2(obj);
 		}
 	};
 	/**
@@ -89,12 +93,16 @@ public class ConstraintFixingCurrencyAndFixingDateRule {
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {
 		{
-			validator = ConstraintFixingCurrencyAndFixingDateRule::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingCurrencyAndFixingDateRule";
 			definition = "If ForeignExchangeTradeProduct is equal to value 'NDFO', then FixingCurrency and FixingDate must be present.";
 			owner_lazy = () -> Trade1.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'NDFO'\r\nFollowing must be true\r\n\t/FixingCurrency must be present\r\nAnd/FixingDate must be present";
+		}
+
+		@Override
+		public void executeValidator(Trade1 obj) throws Exception {
+			checkTrade1(obj);
 		}
 	};
 

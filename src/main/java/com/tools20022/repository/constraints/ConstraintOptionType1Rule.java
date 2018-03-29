@@ -55,11 +55,15 @@ public class ConstraintOptionType1Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption5> forCorporateActionOption5 = new MMConstraint<CorporateActionOption5>() {
 		{
-			validator = ConstraintOptionType1Rule::checkCorporateActionOption5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType1Rule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption5 obj) throws Exception {
+			checkCorporateActionOption5(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintOptionType1Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption13> forCorporateActionOption13 = new MMConstraint<CorporateActionOption13>() {
 		{
-			validator = ConstraintOptionType1Rule::checkCorporateActionOption13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType1Rule";
 			definition = "If for an exercise of warrants or an exercise of rights, the proceeds are known, the more precise OptionType/Code values like CASH, SECU, CASE or NOAC must be used. \r\nIf the proceeds are at issuer choice, ie, the proceeds are not known upfront, then OptionType/Code EXER must be used.";
 			owner_lazy = () -> CorporateActionOption13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption13 obj) throws Exception {
+			checkCorporateActionOption13(obj);
 		}
 	};
 

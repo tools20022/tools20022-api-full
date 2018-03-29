@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ClockSynchronisation1;
+import com.tools20022.repository.msg.LocalDateTime1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -133,7 +135,7 @@ public class PaymentTerminalParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVendorIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerminalParameters2, Optional<Max35Text>> mmVendorIdentification = new MMMessageAttribute<PaymentTerminalParameters2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters2.mmObject();
 			isDerived = false;
@@ -145,6 +147,16 @@ public class PaymentTerminalParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentTerminalParameters2 obj) {
+			return obj.getVendorIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentTerminalParameters2 obj, Optional<Max35Text> value) {
+			obj.setVendorIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -184,7 +196,7 @@ public class PaymentTerminalParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerminalParameters2, Max256Text> mmVersion = new MMMessageAttribute<PaymentTerminalParameters2, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters2.mmObject();
 			isDerived = false;
@@ -196,6 +208,16 @@ public class PaymentTerminalParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(PaymentTerminalParameters2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(PaymentTerminalParameters2 obj, Max256Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "ClckSynctn")
@@ -241,7 +263,7 @@ public class PaymentTerminalParameters2 {
 	 * PaymentTerminalParameters1.mmClockSynchronisation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClockSynchronisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTerminalParameters2, Optional<ClockSynchronisation1>> mmClockSynchronisation = new MMMessageAssociationEnd<PaymentTerminalParameters2, Optional<ClockSynchronisation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters2.mmObject();
 			isDerived = false;
@@ -254,7 +276,17 @@ public class PaymentTerminalParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ClockSynchronisation1.mmObject();
+			type_lazy = () -> ClockSynchronisation1.mmObject();
+		}
+
+		@Override
+		public Optional<ClockSynchronisation1> getValue(PaymentTerminalParameters2 obj) {
+			return obj.getClockSynchronisation();
+		}
+
+		@Override
+		public void setValue(PaymentTerminalParameters2 obj, Optional<ClockSynchronisation1> value) {
+			obj.setClockSynchronisation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmZoneLine")
@@ -301,7 +333,7 @@ public class PaymentTerminalParameters2 {
 	 * PaymentTerminalParameters1.mmTimeZoneLine}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeZoneLine = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerminalParameters2, List<Max70Text>> mmTimeZoneLine = new MMMessageAttribute<PaymentTerminalParameters2, List<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters2.mmObject();
 			isDerived = false;
@@ -314,9 +346,19 @@ public class PaymentTerminalParameters2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
+
+		@Override
+		public List<Max70Text> getValue(PaymentTerminalParameters2 obj) {
+			return obj.getTimeZoneLine();
+		}
+
+		@Override
+		public void setValue(PaymentTerminalParameters2 obj, List<Max70Text> value) {
+			obj.setTimeZoneLine(value);
+		}
 	};
 	@XmlElement(name = "LclDtTm")
-	protected List<com.tools20022.repository.msg.LocalDateTime1> localDateTime;
+	protected List<LocalDateTime1> localDateTime;
 	/**
 	 * 
 	 <p>
@@ -351,7 +393,7 @@ public class PaymentTerminalParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTerminalParameters2, List<LocalDateTime1>> mmLocalDateTime = new MMMessageAssociationEnd<PaymentTerminalParameters2, List<LocalDateTime1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters2.mmObject();
 			isDerived = false;
@@ -362,7 +404,17 @@ public class PaymentTerminalParameters2 {
 			nextVersions_lazy = () -> Arrays.asList(PaymentTerminalParameters3.mmLocalDateTime);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LocalDateTime1.mmObject();
+			type_lazy = () -> LocalDateTime1.mmObject();
+		}
+
+		@Override
+		public List<LocalDateTime1> getValue(PaymentTerminalParameters2 obj) {
+			return obj.getLocalDateTime();
+		}
+
+		@Override
+		public void setValue(PaymentTerminalParameters2 obj, List<LocalDateTime1> value) {
+			obj.setLocalDateTime(value);
 		}
 	};
 	@XmlElement(name = "OthrParams")
@@ -410,7 +462,7 @@ public class PaymentTerminalParameters2 {
 	 * PaymentTerminalParameters1.mmOtherParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTerminalParameters2, Optional<Max10000Binary>> mmOtherParameters = new MMMessageAttribute<PaymentTerminalParameters2, Optional<Max10000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters2.mmObject();
 			isDerived = false;
@@ -423,6 +475,16 @@ public class PaymentTerminalParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max10000Binary> getValue(PaymentTerminalParameters2 obj) {
+			return obj.getOtherParameters();
+		}
+
+		@Override
+		public void setValue(PaymentTerminalParameters2 obj, Optional<Max10000Binary> value) {
+			obj.setOtherParameters(value.orElse(null));
 		}
 	};
 
@@ -465,7 +527,7 @@ public class PaymentTerminalParameters2 {
 		return clockSynchronisation == null ? Optional.empty() : Optional.of(clockSynchronisation);
 	}
 
-	public PaymentTerminalParameters2 setClockSynchronisation(com.tools20022.repository.msg.ClockSynchronisation1 clockSynchronisation) {
+	public PaymentTerminalParameters2 setClockSynchronisation(ClockSynchronisation1 clockSynchronisation) {
 		this.clockSynchronisation = clockSynchronisation;
 		return this;
 	}
@@ -483,7 +545,7 @@ public class PaymentTerminalParameters2 {
 		return localDateTime == null ? localDateTime = new ArrayList<>() : localDateTime;
 	}
 
-	public PaymentTerminalParameters2 setLocalDateTime(List<com.tools20022.repository.msg.LocalDateTime1> localDateTime) {
+	public PaymentTerminalParameters2 setLocalDateTime(List<LocalDateTime1> localDateTime) {
 		this.localDateTime = Objects.requireNonNull(localDateTime);
 		return this;
 	}

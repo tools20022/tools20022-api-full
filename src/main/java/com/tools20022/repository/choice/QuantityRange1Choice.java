@@ -110,7 +110,7 @@ public class QuantityRange1Choice {
 	 * definition} = "Lower boundary of a range of quantity values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityRange1Choice, QuantityRangeBoundary1> mmFromQuantity = new MMMessageAssociationEnd<QuantityRange1Choice, QuantityRangeBoundary1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class QuantityRange1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuantityRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public QuantityRangeBoundary1 getValue(QuantityRange1Choice obj) {
+			return obj.getFromQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityRange1Choice obj, QuantityRangeBoundary1 value) {
+			obj.setFromQuantity(value);
 		}
 	};
 	@XmlElement(name = "ToQty", required = true)
@@ -152,7 +162,7 @@ public class QuantityRange1Choice {
 	 * definition} = "Upper boundary of a range of quantity values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityRange1Choice, QuantityRangeBoundary1> mmToQuantity = new MMMessageAssociationEnd<QuantityRange1Choice, QuantityRangeBoundary1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class QuantityRange1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuantityRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public QuantityRangeBoundary1 getValue(QuantityRange1Choice obj) {
+			return obj.getToQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityRange1Choice obj, QuantityRangeBoundary1 value) {
+			obj.setToQuantity(value);
 		}
 	};
 	@XmlElement(name = "FrToQty", required = true)
@@ -196,7 +216,7 @@ public class QuantityRange1Choice {
 	 * definition} = "Range of valid quantity values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromToQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityRange1Choice, FromToQuantityRange1> mmFromToQuantity = new MMMessageAttribute<QuantityRange1Choice, FromToQuantityRange1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -207,6 +227,16 @@ public class QuantityRange1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FromToQuantityRange1.mmObject();
+		}
+
+		@Override
+		public FromToQuantityRange1 getValue(QuantityRange1Choice obj) {
+			return obj.getFromToQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityRange1Choice obj, FromToQuantityRange1 value) {
+			obj.setFromToQuantity(value);
 		}
 	};
 	@XmlElement(name = "EQQty", required = true)
@@ -240,7 +270,7 @@ public class QuantityRange1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqualQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityRange1Choice, DecimalNumber> mmEqualQuantity = new MMMessageAttribute<QuantityRange1Choice, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -251,6 +281,16 @@ public class QuantityRange1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(QuantityRange1Choice obj) {
+			return obj.getEqualQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityRange1Choice obj, DecimalNumber value) {
+			obj.setEqualQuantity(value);
 		}
 	};
 	@XmlElement(name = "NEQQty", required = true)
@@ -284,7 +324,7 @@ public class QuantityRange1Choice {
 	 * "Value that a quantity must not match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotEqualQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityRange1Choice, DecimalNumber> mmNotEqualQuantity = new MMMessageAttribute<QuantityRange1Choice, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
@@ -295,6 +335,16 @@ public class QuantityRange1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(QuantityRange1Choice obj) {
+			return obj.getNotEqualQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityRange1Choice obj, DecimalNumber value) {
+			obj.setNotEqualQuantity(value);
 		}
 	};
 

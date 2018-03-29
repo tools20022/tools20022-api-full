@@ -105,7 +105,7 @@ public class SettlementTimeRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCLSTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTimeRequest1, ISOTime> mmCLSTime = new MMMessageAttribute<SettlementTimeRequest1, ISOTime>() {
 		{
 			businessElementTrace_lazy = () -> SettlementTimeRequest.mmCLSTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTimeRequest1.mmObject();
@@ -117,6 +117,16 @@ public class SettlementTimeRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public ISOTime getValue(SettlementTimeRequest1 obj) {
+			return obj.getCLSTime();
+		}
+
+		@Override
+		public void setValue(SettlementTimeRequest1 obj, ISOTime value) {
+			obj.setCLSTime(value);
 		}
 	};
 

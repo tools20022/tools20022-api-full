@@ -123,7 +123,7 @@ public class SettleStyle1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettleStyle1Choice, List<SettleStyle1Code>> mmCode = new MMMessageAttribute<SettleStyle1Choice, List<SettleStyle1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmSettleStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettleStyle1Choice.mmObject();
@@ -135,6 +135,16 @@ public class SettleStyle1Choice {
 			nextVersions_lazy = () -> Arrays.asList(SettleStyle2Choice.mmCode);
 			minOccurs = 0;
 			simpleType_lazy = () -> SettleStyle1Code.mmObject();
+		}
+
+		@Override
+		public List<SettleStyle1Code> getValue(SettleStyle1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettleStyle1Choice obj, List<SettleStyle1Code> value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class SettleStyle1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettleStyle1Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<SettleStyle1Choice, GenericIdentification40>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmSettleStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettleStyle1Choice.mmObject();
@@ -193,6 +203,16 @@ public class SettleStyle1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(SettleStyle1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettleStyle1Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

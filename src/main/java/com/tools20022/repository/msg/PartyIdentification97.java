@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPersonRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -142,7 +143,7 @@ public class PartyIdentification97 {
 	 * PartyIdentification21.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification97, PartyIdentification70Choice> mmPartyIdentification = new MMMessageAttribute<PartyIdentification97, PartyIdentification70Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification97.mmObject();
@@ -156,6 +157,16 @@ public class PartyIdentification97 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification70Choice getValue(PartyIdentification97 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification97 obj, PartyIdentification70Choice value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcgRef")
@@ -202,7 +213,7 @@ public class PartyIdentification97 {
 	 * PartyIdentification21.mmProcessingReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification97, Optional<Max35Text>> mmProcessingReference = new MMMessageAttribute<PartyIdentification97, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification97.mmObject();
 			isDerived = false;
@@ -215,6 +226,16 @@ public class PartyIdentification97 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentification97 obj) {
+			return obj.getProcessingReference();
+		}
+
+		@Override
+		public void setValue(PartyIdentification97 obj, Optional<Max35Text> value) {
+			obj.setProcessingReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgDt")
@@ -262,7 +283,7 @@ public class PartyIdentification97 {
 	 * PartyIdentification21.mmProcessingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification97, Optional<DateAndDateTimeChoice>> mmProcessingDate = new MMMessageAttribute<PartyIdentification97, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification97.mmObject();
 			isDerived = false;
@@ -275,6 +296,16 @@ public class PartyIdentification97 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PartyIdentification97 obj) {
+			return obj.getProcessingDate();
+		}
+
+		@Override
+		public void setValue(PartyIdentification97 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setProcessingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctPrsn")
@@ -323,7 +354,7 @@ public class PartyIdentification97 {
 	 * PartyIdentification21.mmContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification97, Optional<ContactIdentification2>> mmContactPerson = new MMMessageAssociationEnd<PartyIdentification97, Optional<ContactIdentification2>>() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification97.mmObject();
@@ -337,7 +368,17 @@ public class PartyIdentification97 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
+			type_lazy = () -> ContactIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification2> getValue(PartyIdentification97 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(PartyIdentification97 obj, Optional<ContactIdentification2> value) {
+			obj.setContactPerson(value.orElse(null));
 		}
 	};
 
@@ -389,7 +430,7 @@ public class PartyIdentification97 {
 		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public PartyIdentification97 setContactPerson(com.tools20022.repository.msg.ContactIdentification2 contactPerson) {
+	public PartyIdentification97 setContactPerson(ContactIdentification2 contactPerson) {
 		this.contactPerson = contactPerson;
 		return this;
 	}

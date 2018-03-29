@@ -51,11 +51,15 @@ public class ConstraintStandingInstructionCancellationRequestStatusRule {
 	 */
 	public static final MMConstraint<AgentCAStandingInstructionStatusAdviceV01> forAgentCAStandingInstructionStatusAdviceV01 = new MMConstraint<AgentCAStandingInstructionStatusAdviceV01>() {
 		{
-			validator = ConstraintStandingInstructionCancellationRequestStatusRule::checkAgentCAStandingInstructionStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionCancellationRequestStatusRule";
 			definition = "If AgentCAStandingInstructionCancellationRequestIdentification is present, then StandingInstructionCancellationRequestStatus must be present.";
 			owner_lazy = () -> AgentCAStandingInstructionStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCAStandingInstructionStatusAdviceV01 obj) throws Exception {
+			checkAgentCAStandingInstructionStatusAdviceV01(obj);
 		}
 	};
 

@@ -115,7 +115,7 @@ public class Parameter5 {
 	 * Parameter3.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter5, Optional<Algorithm11Code>> mmDigestAlgorithm = new MMMessageAttribute<Parameter5, Optional<Algorithm11Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter5.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class Parameter5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
+		}
+
+		@Override
+		public Optional<Algorithm11Code> getValue(Parameter5 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter5 obj, Optional<Algorithm11Code> value) {
+			obj.setDigestAlgorithm(value.orElse(null));
 		}
 	};
 

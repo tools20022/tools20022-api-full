@@ -127,7 +127,7 @@ public class CorporateActionElection1 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionElection1, CorporateActionOption1FormatChoice> mmOptionType = new MMMessageAttribute<CorporateActionElection1, CorporateActionOption1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection1.mmObject();
@@ -139,6 +139,16 @@ public class CorporateActionElection1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption1FormatChoice getValue(CorporateActionElection1 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionElection1 obj, CorporateActionOption1FormatChoice value) {
+			obj.setOptionType(value);
 		}
 	};
 	@XmlElement(name = "OptnNb", required = true)
@@ -177,7 +187,7 @@ public class CorporateActionElection1 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionElection1, Exact3NumericText> mmOptionNumber = new MMMessageAttribute<CorporateActionElection1, Exact3NumericText>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection1.mmObject();
@@ -189,6 +199,16 @@ public class CorporateActionElection1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CorporateActionElection1 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionElection1 obj, Exact3NumericText value) {
+			obj.setOptionNumber(value);
 		}
 	};
 	@XmlElement(name = "OrgnlInstdQty", required = true)
@@ -228,7 +248,7 @@ public class CorporateActionElection1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalInstructedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionElection1, UnitOrFaceAmount1Choice> mmOriginalInstructedQuantity = new MMMessageAttribute<CorporateActionElection1, UnitOrFaceAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection1.mmObject();
@@ -240,6 +260,16 @@ public class CorporateActionElection1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
+		}
+
+		@Override
+		public UnitOrFaceAmount1Choice getValue(CorporateActionElection1 obj) {
+			return obj.getOriginalInstructedQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionElection1 obj, UnitOrFaceAmount1Choice value) {
+			obj.setOriginalInstructedQuantity(value);
 		}
 	};
 	@XmlElement(name = "RmngQty", required = true)
@@ -279,7 +309,7 @@ public class CorporateActionElection1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionElection1, UnitOrFaceAmount1Choice> mmRemainingQuantity = new MMMessageAttribute<CorporateActionElection1, UnitOrFaceAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionElection.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionElection1.mmObject();
@@ -291,6 +321,16 @@ public class CorporateActionElection1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
+		}
+
+		@Override
+		public UnitOrFaceAmount1Choice getValue(CorporateActionElection1 obj) {
+			return obj.getRemainingQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionElection1 obj, UnitOrFaceAmount1Choice value) {
+			obj.setRemainingQuantity(value);
 		}
 	};
 

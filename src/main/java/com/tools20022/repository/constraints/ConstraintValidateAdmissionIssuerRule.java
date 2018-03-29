@@ -55,12 +55,16 @@ public class ConstraintValidateAdmissionIssuerRule {
 	 */
 	public static final MMConstraint<TradingVenueAttributes1> forTradingVenueAttributes1 = new MMConstraint<TradingVenueAttributes1>() {
 		{
-			validator = ConstraintValidateAdmissionIssuerRule::checkTradingVenueAttributes1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidateAdmissionIssuerRule";
 			definition = "When IssuerRequest is equal to true, then AdmissionApprovalDateByIssuer must be present.";
 			owner_lazy = () -> TradingVenueAttributes1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdmissionApprovalDateByIssuer</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IssuerRequest</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TradingVenueAttributes1 obj) throws Exception {
+			checkTradingVenueAttributes1(obj);
 		}
 	};
 

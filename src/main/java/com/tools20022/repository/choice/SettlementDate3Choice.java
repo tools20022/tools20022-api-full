@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
@@ -118,7 +119,7 @@ public class SettlementDate3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDate3Choice, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<SettlementDate3Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDate3Choice.mmObject();
 			isDerived = false;
@@ -130,7 +131,17 @@ public class SettlementDate3Choice {
 			nextVersions_lazy = () -> Arrays.asList(SettlementDate11Choice.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(SettlementDate3Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(SettlementDate3Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -180,7 +191,7 @@ public class SettlementDate3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDate3Choice, GenericIdentification20> mmDateCode = new MMMessageAttribute<SettlementDate3Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDate3Choice.mmObject();
@@ -194,6 +205,16 @@ public class SettlementDate3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(SettlementDate3Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(SettlementDate3Choice obj, GenericIdentification20 value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -215,7 +236,7 @@ public class SettlementDate3Choice {
 		return date;
 	}
 
-	public SettlementDate3Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public SettlementDate3Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}

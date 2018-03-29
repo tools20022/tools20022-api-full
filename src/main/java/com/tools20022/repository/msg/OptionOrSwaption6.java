@@ -123,7 +123,7 @@ public class OptionOrSwaption6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionOrSwaption6, Optional<OptionType2Code>> mmOptionType = new MMMessageAttribute<OptionOrSwaption6, Optional<OptionType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionOrSwaption6.mmObject();
@@ -135,6 +135,16 @@ public class OptionOrSwaption6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<OptionType2Code> getValue(OptionOrSwaption6 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(OptionOrSwaption6 obj, Optional<OptionType2Code> value) {
+			obj.setOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrkPric")
@@ -174,7 +184,7 @@ public class OptionOrSwaption6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionOrSwaption6, Optional<SecuritiesTransactionPrice9Choice>> mmStrikePrice = new MMMessageAttribute<OptionOrSwaption6, Optional<SecuritiesTransactionPrice9Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmStrikePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionOrSwaption6.mmObject();
@@ -186,6 +196,16 @@ public class OptionOrSwaption6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesTransactionPrice9Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesTransactionPrice9Choice> getValue(OptionOrSwaption6 obj) {
+			return obj.getStrikePrice();
+		}
+
+		@Override
+		public void setValue(OptionOrSwaption6 obj, Optional<SecuritiesTransactionPrice9Choice> value) {
+			obj.setStrikePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnExrcStyle")
@@ -225,7 +245,7 @@ public class OptionOrSwaption6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionExerciseStyle = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionOrSwaption6, List<OptionStyle6Code>> mmOptionExerciseStyle = new MMMessageAttribute<OptionOrSwaption6, List<OptionStyle6Code>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionOrSwaption6.mmObject();
@@ -236,6 +256,16 @@ public class OptionOrSwaption6 {
 			definition = "Indication as to whether the option may be exercised only at a fixed date (European, and Asian style), a series of pre-specified dates (Bermudan) or at any time during the life of the contract (American style). This field does not have to be populated for ISIN instruments.";
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionStyle6Code.mmObject();
+		}
+
+		@Override
+		public List<OptionStyle6Code> getValue(OptionOrSwaption6 obj) {
+			return obj.getOptionExerciseStyle();
+		}
+
+		@Override
+		public void setValue(OptionOrSwaption6 obj, List<OptionStyle6Code> value) {
+			obj.setOptionExerciseStyle(value);
 		}
 	};
 	@XmlElement(name = "MtrtyDtOfUndrlyg")
@@ -273,7 +303,7 @@ public class OptionOrSwaption6 {
 	 * "In case of swaptions, maturity date of the underlying swap."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDateOfUnderlying = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionOrSwaption6, Optional<ISODate>> mmMaturityDateOfUnderlying = new MMMessageAttribute<OptionOrSwaption6, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionOrSwaption6.mmObject();
@@ -285,6 +315,16 @@ public class OptionOrSwaption6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(OptionOrSwaption6 obj) {
+			return obj.getMaturityDateOfUnderlying();
+		}
+
+		@Override
+		public void setValue(OptionOrSwaption6 obj, Optional<ISODate> value) {
+			obj.setMaturityDateOfUnderlying(value.orElse(null));
 		}
 	};
 

@@ -117,7 +117,7 @@ public class AuditTrailOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuditTrail = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuditTrailOrBusinessError1Choice, List<AuditTrail1>> mmAuditTrail = new MMMessageAssociationEnd<AuditTrailOrBusinessError1Choice, List<AuditTrail1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class AuditTrailOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AuditTrail1.mmObject();
+		}
+
+		@Override
+		public List<AuditTrail1> getValue(AuditTrailOrBusinessError1Choice obj) {
+			return obj.getAuditTrail();
+		}
+
+		@Override
+		public void setValue(AuditTrailOrBusinessError1Choice obj, List<AuditTrail1> value) {
+			obj.setAuditTrail(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -167,7 +177,7 @@ public class AuditTrailOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuditTrailOrBusinessError1Choice, List<ErrorHandling3>> mmBusinessError = new MMMessageAssociationEnd<AuditTrailOrBusinessError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class AuditTrailOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(AuditTrailOrBusinessError1Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(AuditTrailOrBusinessError1Choice obj, List<ErrorHandling3> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

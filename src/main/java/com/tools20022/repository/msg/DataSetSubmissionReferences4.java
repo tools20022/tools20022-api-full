@@ -28,6 +28,9 @@ import com.tools20022.repository.codeset.BaselineStatus3Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification3;
+import com.tools20022.repository.msg.DocumentIdentification5;
+import com.tools20022.repository.msg.DocumentIdentification7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +139,7 @@ public class DataSetSubmissionReferences4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetSubmissionReferences4, Max35Text> mmTransactionIdentification = new MMMessageAttribute<DataSetSubmissionReferences4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
@@ -147,6 +150,16 @@ public class DataSetSubmissionReferences4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DataSetSubmissionReferences4 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences4 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PurchsOrdrRef", required = true)
@@ -180,7 +193,7 @@ public class DataSetSubmissionReferences4 {
 	 * "Reference to the purchase order of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetSubmissionReferences4, DocumentIdentification7> mmPurchaseOrderReference = new MMMessageAttribute<DataSetSubmissionReferences4, DocumentIdentification7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
@@ -190,11 +203,21 @@ public class DataSetSubmissionReferences4 {
 			definition = "Reference to the purchase order of the underlying transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
+			complexType_lazy = () -> DocumentIdentification7.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification7 getValue(DataSetSubmissionReferences4 obj) {
+			return obj.getPurchaseOrderReference();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences4 obj, DocumentIdentification7 value) {
+			obj.setPurchaseOrderReference(value);
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
-	protected List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference;
+	protected List<DocumentIdentification5> userTransactionReference;
 	/**
 	 * 
 	 <p>
@@ -223,7 +246,7 @@ public class DataSetSubmissionReferences4 {
 	 * "Own reference to the transaction for the financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUserTransactionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DataSetSubmissionReferences4, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageAssociationEnd<DataSetSubmissionReferences4, List<DocumentIdentification5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
@@ -234,7 +257,17 @@ public class DataSetSubmissionReferences4 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification5.mmObject();
+			type_lazy = () -> DocumentIdentification5.mmObject();
+		}
+
+		@Override
+		public List<DocumentIdentification5> getValue(DataSetSubmissionReferences4 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences4 obj, List<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "ForcdMtch", required = true)
@@ -269,7 +302,7 @@ public class DataSetSubmissionReferences4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForcedMatch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetSubmissionReferences4, YesNoIndicator> mmForcedMatch = new MMMessageAttribute<DataSetSubmissionReferences4, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
@@ -280,6 +313,16 @@ public class DataSetSubmissionReferences4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DataSetSubmissionReferences4 obj) {
+			return obj.getForcedMatch();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences4 obj, YesNoIndicator value) {
+			obj.setForcedMatch(value);
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId", required = true)
@@ -313,7 +356,7 @@ public class DataSetSubmissionReferences4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEstablishedBaselineIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DataSetSubmissionReferences4, DocumentIdentification3> mmEstablishedBaselineIdentification = new MMMessageAssociationEnd<DataSetSubmissionReferences4, DocumentIdentification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
@@ -324,7 +367,17 @@ public class DataSetSubmissionReferences4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification3.mmObject();
+			type_lazy = () -> DocumentIdentification3.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification3 getValue(DataSetSubmissionReferences4 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences4 obj, DocumentIdentification3 value) {
+			obj.setEstablishedBaselineIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -358,7 +411,7 @@ public class DataSetSubmissionReferences4 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataSetSubmissionReferences4, BaselineStatus3Code> mmTransactionStatus = new MMMessageAttribute<DataSetSubmissionReferences4, BaselineStatus3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DataSetSubmissionReferences4.mmObject();
 			isDerived = false;
@@ -369,6 +422,16 @@ public class DataSetSubmissionReferences4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus3Code.mmObject();
+		}
+
+		@Override
+		public BaselineStatus3Code getValue(DataSetSubmissionReferences4 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(DataSetSubmissionReferences4 obj, BaselineStatus3Code value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 
@@ -402,7 +465,7 @@ public class DataSetSubmissionReferences4 {
 		return purchaseOrderReference;
 	}
 
-	public DataSetSubmissionReferences4 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+	public DataSetSubmissionReferences4 setPurchaseOrderReference(DocumentIdentification7 purchaseOrderReference) {
 		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
 		return this;
 	}
@@ -411,7 +474,7 @@ public class DataSetSubmissionReferences4 {
 		return userTransactionReference == null ? userTransactionReference = new ArrayList<>() : userTransactionReference;
 	}
 
-	public DataSetSubmissionReferences4 setUserTransactionReference(List<com.tools20022.repository.msg.DocumentIdentification5> userTransactionReference) {
+	public DataSetSubmissionReferences4 setUserTransactionReference(List<DocumentIdentification5> userTransactionReference) {
 		this.userTransactionReference = Objects.requireNonNull(userTransactionReference);
 		return this;
 	}
@@ -429,7 +492,7 @@ public class DataSetSubmissionReferences4 {
 		return establishedBaselineIdentification;
 	}
 
-	public DataSetSubmissionReferences4 setEstablishedBaselineIdentification(com.tools20022.repository.msg.DocumentIdentification3 establishedBaselineIdentification) {
+	public DataSetSubmissionReferences4 setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
 		this.establishedBaselineIdentification = Objects.requireNonNull(establishedBaselineIdentification);
 		return this;
 	}

@@ -27,7 +27,7 @@ import com.tools20022.repository.msg.CaseAssignment4;
 import com.tools20022.repository.msg.DebitAuthorisationConfirmation2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -75,6 +75,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
+ * ExceptionsandInvestigationsISOLatestversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance
  * _SR2018_MX_Payments_Maintenance}</li>
@@ -143,7 +146,7 @@ public class DebitAuthorisationResponseV04 {
 	 * DebitAuthorisationResponseV03.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationResponseV04, CaseAssignment4> mmAssignment = new MMMessageBuildingBlock<DebitAuthorisationResponseV04, CaseAssignment4>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,12 +158,14 @@ public class DebitAuthorisationResponseV04 {
 			complexType_lazy = () -> CaseAssignment4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationResponseV04.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment4 getValue(DebitAuthorisationResponseV04 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationResponseV04 obj, CaseAssignment4 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case")
@@ -191,7 +196,7 @@ public class DebitAuthorisationResponseV04 {
 	 * DebitAuthorisationResponseV03.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationResponseV04, Optional<Case4>> mmCase = new MMMessageBuildingBlock<DebitAuthorisationResponseV04, Optional<Case4>>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,12 +208,14 @@ public class DebitAuthorisationResponseV04 {
 			complexType_lazy = () -> Case4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationResponseV04.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Case4> getValue(DebitAuthorisationResponseV04 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationResponseV04 obj, Optional<Case4> value) {
+			obj.setCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Conf", required = true)
@@ -241,7 +248,7 @@ public class DebitAuthorisationResponseV04 {
 	 * DebitAuthorisationResponseV03.mmConfirmation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmConfirmation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationResponseV04, DebitAuthorisationConfirmation2> mmConfirmation = new MMMessageBuildingBlock<DebitAuthorisationResponseV04, DebitAuthorisationConfirmation2>() {
 		{
 			xmlTag = "Conf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,12 +260,14 @@ public class DebitAuthorisationResponseV04 {
 			complexType_lazy = () -> DebitAuthorisationConfirmation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationResponseV04.class.getMethod("getConfirmation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DebitAuthorisationConfirmation2 getValue(DebitAuthorisationResponseV04 obj) {
+			return obj.getConfirmation();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationResponseV04 obj, DebitAuthorisationConfirmation2 value) {
+			obj.setConfirmation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -293,7 +302,7 @@ public class DebitAuthorisationResponseV04 {
 	 * DebitAuthorisationResponseV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationResponseV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<DebitAuthorisationResponseV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,12 +313,14 @@ public class DebitAuthorisationResponseV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationResponseV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(DebitAuthorisationResponseV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationResponseV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -320,7 +331,7 @@ public class DebitAuthorisationResponseV04 {
 				name = "DebitAuthorisationResponseV04";
 				definition = "Scope\r\nThe Debit Authorisation Response message is sent by an account owner to its account servicing institution. This message is used to approve or reject a debit authorisation request.\r\nUsage\r\nThe Debit Authorisation Response message is used to reply to a Debit Authorisation Request message.\r\nThe Debit Authorisation Response message covers one and only one payment instruction at a time. If an account owner needs to reply to several Debit Authorisation Request messages, then multiple Debit Authorisation Response messages must be sent.\r\nThe Debit Authorisation Response message indicates whether the account owner agrees with the request by means of a code. It also allows further details to be given about the debit authorisation, such as acceptable amount and value date for the debit.\r\nThe Debit Authorisation Response message must be used exclusively between the account owner and the account servicing institution. It must not be used in place of a Resolution Of Investigation message between subsequent agents.";
 				previousVersion_lazy = () -> DebitAuthorisationResponseV03.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_Payments_Maintenance.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOLatestversion.mmObject(), _SR2018_MX_Payments_Maintenance.mmObject());
 				rootElement = "Document";
 				xmlTag = "DbtAuthstnRspn";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();

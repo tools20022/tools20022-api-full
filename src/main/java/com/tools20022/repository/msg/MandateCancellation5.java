@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pain.MandateCancellationRequestV05;
 import com.tools20022.repository.choice.OriginalMandate4Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalMessageInformation1;
+import com.tools20022.repository.msg.PaymentCancellationReason1;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +124,7 @@ public class MandateCancellation5 {
 	 * MandateCancellation4.mmOriginalMessageInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateCancellation5, Optional<OriginalMessageInformation1>> mmOriginalMessageInformation = new MMMessageAssociationEnd<MandateCancellation5, Optional<OriginalMessageInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateCancellation5.mmObject();
 			isDerived = false;
@@ -133,7 +136,17 @@ public class MandateCancellation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
+			type_lazy = () -> OriginalMessageInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalMessageInformation1> getValue(MandateCancellation5 obj) {
+			return obj.getOriginalMessageInformation();
+		}
+
+		@Override
+		public void setValue(MandateCancellation5 obj, Optional<OriginalMessageInformation1> value) {
+			obj.setOriginalMessageInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRsn", required = true)
@@ -171,7 +184,7 @@ public class MandateCancellation5 {
 	 * MandateCancellation4.mmCancellationReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateCancellation5, PaymentCancellationReason1> mmCancellationReason = new MMMessageAssociationEnd<MandateCancellation5, PaymentCancellationReason1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateCancellation5.mmObject();
 			isDerived = false;
@@ -183,7 +196,17 @@ public class MandateCancellation5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCancellationReason1.mmObject();
+			type_lazy = () -> PaymentCancellationReason1.mmObject();
+		}
+
+		@Override
+		public PaymentCancellationReason1 getValue(MandateCancellation5 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(MandateCancellation5 obj, PaymentCancellationReason1 value) {
+			obj.setCancellationReason(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMndt", required = true)
@@ -220,7 +243,7 @@ public class MandateCancellation5 {
 	 * MandateCancellation4.mmOriginalMandate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateCancellation5, OriginalMandate4Choice> mmOriginalMandate = new MMMessageAssociationEnd<MandateCancellation5, OriginalMandate4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateCancellation5.mmObject();
 			isDerived = false;
@@ -234,9 +257,19 @@ public class MandateCancellation5 {
 			isComposite = true;
 			type_lazy = () -> OriginalMandate4Choice.mmObject();
 		}
+
+		@Override
+		public OriginalMandate4Choice getValue(MandateCancellation5 obj) {
+			return obj.getOriginalMandate();
+		}
+
+		@Override
+		public void setValue(MandateCancellation5 obj, OriginalMandate4Choice value) {
+			obj.setOriginalMandate(value);
+		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -272,7 +305,7 @@ public class MandateCancellation5 {
 	 * MandateCancellation4.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSupplementaryData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateCancellation5, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAttribute<MandateCancellation5, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateCancellation5.mmObject();
 			isDerived = false;
@@ -282,7 +315,17 @@ public class MandateCancellation5 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			previousVersion_lazy = () -> MandateCancellation4.mmSupplementaryData;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			complexType_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(MandateCancellation5 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MandateCancellation5 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -306,7 +349,7 @@ public class MandateCancellation5 {
 		return originalMessageInformation == null ? Optional.empty() : Optional.of(originalMessageInformation);
 	}
 
-	public MandateCancellation5 setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+	public MandateCancellation5 setOriginalMessageInformation(OriginalMessageInformation1 originalMessageInformation) {
 		this.originalMessageInformation = originalMessageInformation;
 		return this;
 	}
@@ -315,7 +358,7 @@ public class MandateCancellation5 {
 		return cancellationReason;
 	}
 
-	public MandateCancellation5 setCancellationReason(com.tools20022.repository.msg.PaymentCancellationReason1 cancellationReason) {
+	public MandateCancellation5 setCancellationReason(PaymentCancellationReason1 cancellationReason) {
 		this.cancellationReason = Objects.requireNonNull(cancellationReason);
 		return this;
 	}
@@ -333,7 +376,7 @@ public class MandateCancellation5 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public MandateCancellation5 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public MandateCancellation5 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

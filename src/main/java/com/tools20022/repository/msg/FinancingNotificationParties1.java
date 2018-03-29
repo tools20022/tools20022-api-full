@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvoiceFinancingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.QualifiedPartyIdentification1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +111,7 @@ public class FinancingNotificationParties1 {
 	 * definition} = "Party that notifies a third party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNotifyingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancingNotificationParties1, QualifiedPartyIdentification1> mmNotifyingParty = new MMMessageAssociationEnd<FinancingNotificationParties1, QualifiedPartyIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingNotificationParties1.mmObject();
@@ -122,7 +123,17 @@ public class FinancingNotificationParties1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public QualifiedPartyIdentification1 getValue(FinancingNotificationParties1 obj) {
+			return obj.getNotifyingParty();
+		}
+
+		@Override
+		public void setValue(FinancingNotificationParties1 obj, QualifiedPartyIdentification1 value) {
+			obj.setNotifyingParty(value);
 		}
 	};
 	@XmlElement(name = "NtfctnRcvr", required = true)
@@ -159,7 +170,7 @@ public class FinancingNotificationParties1 {
 	 * definition} = "Party (to be) notified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNotificationReceiver = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancingNotificationParties1, QualifiedPartyIdentification1> mmNotificationReceiver = new MMMessageAssociationEnd<FinancingNotificationParties1, QualifiedPartyIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingNotificationParties1.mmObject();
@@ -171,11 +182,21 @@ public class FinancingNotificationParties1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public QualifiedPartyIdentification1 getValue(FinancingNotificationParties1 obj) {
+			return obj.getNotificationReceiver();
+		}
+
+		@Override
+		public void setValue(FinancingNotificationParties1 obj, QualifiedPartyIdentification1 value) {
+			obj.setNotificationReceiver(value);
 		}
 	};
 	@XmlElement(name = "AckRcvr")
-	protected List<com.tools20022.repository.msg.QualifiedPartyIdentification1> acknowledgementReceiver;
+	protected List<QualifiedPartyIdentification1> acknowledgementReceiver;
 	/**
 	 * 
 	 <p>
@@ -210,7 +231,7 @@ public class FinancingNotificationParties1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcknowledgementReceiver = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancingNotificationParties1, List<QualifiedPartyIdentification1>> mmAcknowledgementReceiver = new MMMessageAssociationEnd<FinancingNotificationParties1, List<QualifiedPartyIdentification1>>() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingNotificationParties1.mmObject();
@@ -221,7 +242,17 @@ public class FinancingNotificationParties1 {
 			definition = "Party to whom a notification acknowledgement has to be sent by the notification receiver.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedPartyIdentification1> getValue(FinancingNotificationParties1 obj) {
+			return obj.getAcknowledgementReceiver();
+		}
+
+		@Override
+		public void setValue(FinancingNotificationParties1 obj, List<QualifiedPartyIdentification1> value) {
+			obj.setAcknowledgementReceiver(value);
 		}
 	};
 
@@ -243,7 +274,7 @@ public class FinancingNotificationParties1 {
 		return notifyingParty;
 	}
 
-	public FinancingNotificationParties1 setNotifyingParty(com.tools20022.repository.msg.QualifiedPartyIdentification1 notifyingParty) {
+	public FinancingNotificationParties1 setNotifyingParty(QualifiedPartyIdentification1 notifyingParty) {
 		this.notifyingParty = Objects.requireNonNull(notifyingParty);
 		return this;
 	}
@@ -252,7 +283,7 @@ public class FinancingNotificationParties1 {
 		return notificationReceiver;
 	}
 
-	public FinancingNotificationParties1 setNotificationReceiver(com.tools20022.repository.msg.QualifiedPartyIdentification1 notificationReceiver) {
+	public FinancingNotificationParties1 setNotificationReceiver(QualifiedPartyIdentification1 notificationReceiver) {
 		this.notificationReceiver = Objects.requireNonNull(notificationReceiver);
 		return this;
 	}
@@ -261,7 +292,7 @@ public class FinancingNotificationParties1 {
 		return acknowledgementReceiver == null ? acknowledgementReceiver = new ArrayList<>() : acknowledgementReceiver;
 	}
 
-	public FinancingNotificationParties1 setAcknowledgementReceiver(List<com.tools20022.repository.msg.QualifiedPartyIdentification1> acknowledgementReceiver) {
+	public FinancingNotificationParties1 setAcknowledgementReceiver(List<QualifiedPartyIdentification1> acknowledgementReceiver) {
 		this.acknowledgementReceiver = Objects.requireNonNull(acknowledgementReceiver);
 		return this;
 	}

@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CreditTransferTransaction9;
+import com.tools20022.repository.msg.GroupHeader63;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -104,7 +107,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FIToFIDirectDebitTransactionInformationDetails1, GroupHeader63> mmGroupHeader = new MMMessageAssociationEnd<FIToFIDirectDebitTransactionInformationDetails1, GroupHeader63>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isDerived = false;
@@ -115,11 +118,21 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GroupHeader63.mmObject();
+			type_lazy = () -> GroupHeader63.mmObject();
+		}
+
+		@Override
+		public GroupHeader63 getValue(FIToFIDirectDebitTransactionInformationDetails1 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFIDirectDebitTransactionInformationDetails1 obj, GroupHeader63 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "CdtInstr", required = true)
-	protected List<com.tools20022.repository.msg.CreditTransferTransaction9> creditInstruction;
+	protected List<CreditTransferTransaction9> creditInstruction;
 	/**
 	 * 
 	 <p>
@@ -149,7 +162,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FIToFIDirectDebitTransactionInformationDetails1, List<CreditTransferTransaction9>> mmCreditInstruction = new MMMessageAssociationEnd<FIToFIDirectDebitTransactionInformationDetails1, List<CreditTransferTransaction9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isDerived = false;
@@ -159,11 +172,21 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 			definition = "Characteristics that apply to the credit side of the payment transaction(s) included in the message.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CreditTransferTransaction9.mmObject();
+			type_lazy = () -> CreditTransferTransaction9.mmObject();
+		}
+
+		@Override
+		public List<CreditTransferTransaction9> getValue(FIToFIDirectDebitTransactionInformationDetails1 obj) {
+			return obj.getCreditInstruction();
+		}
+
+		@Override
+		public void setValue(FIToFIDirectDebitTransactionInformationDetails1 obj, List<CreditTransferTransaction9> value) {
+			obj.setCreditInstruction(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -192,7 +215,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FIToFIDirectDebitTransactionInformationDetails1, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<FIToFIDirectDebitTransactionInformationDetails1, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FIToFIDirectDebitTransactionInformationDetails1.mmObject();
 			isDerived = false;
@@ -202,7 +225,17 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(FIToFIDirectDebitTransactionInformationDetails1 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FIToFIDirectDebitTransactionInformationDetails1 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -224,7 +257,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 		return groupHeader;
 	}
 
-	public FIToFIDirectDebitTransactionInformationDetails1 setGroupHeader(com.tools20022.repository.msg.GroupHeader63 groupHeader) {
+	public FIToFIDirectDebitTransactionInformationDetails1 setGroupHeader(GroupHeader63 groupHeader) {
 		this.groupHeader = Objects.requireNonNull(groupHeader);
 		return this;
 	}
@@ -233,7 +266,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 		return creditInstruction == null ? creditInstruction = new ArrayList<>() : creditInstruction;
 	}
 
-	public FIToFIDirectDebitTransactionInformationDetails1 setCreditInstruction(List<com.tools20022.repository.msg.CreditTransferTransaction9> creditInstruction) {
+	public FIToFIDirectDebitTransactionInformationDetails1 setCreditInstruction(List<CreditTransferTransaction9> creditInstruction) {
 		this.creditInstruction = Objects.requireNonNull(creditInstruction);
 		return this;
 	}
@@ -242,7 +275,7 @@ public class FIToFIDirectDebitTransactionInformationDetails1 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public FIToFIDirectDebitTransactionInformationDetails1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public FIToFIDirectDebitTransactionInformationDetails1 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -136,7 +137,7 @@ public class TransferReference9 {
 	 * TransferReference5.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference9, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<TransferReference9, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference9.mmObject();
@@ -149,6 +150,16 @@ public class TransferReference9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferReference9 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(TransferReference9 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfRef", required = true)
@@ -200,7 +211,7 @@ public class TransferReference9 {
 	 * TransferReference5.mmTransferReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference9, Max35Text> mmTransferReference = new MMMessageAttribute<TransferReference9, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference9.mmObject();
@@ -214,6 +225,16 @@ public class TransferReference9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransferReference9 obj) {
+			return obj.getTransferReference();
+		}
+
+		@Override
+		public void setValue(TransferReference9 obj, Max35Text value) {
+			obj.setTransferReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -266,7 +287,7 @@ public class TransferReference9 {
 	 * TransferReference5.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference9, Optional<AdditionalReference7>> mmClientReference = new MMMessageAttribute<TransferReference9, Optional<AdditionalReference7>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference9.mmObject();
@@ -279,7 +300,17 @@ public class TransferReference9 {
 			previousVersion_lazy = () -> TransferReference5.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference7.mmObject();
+			complexType_lazy = () -> AdditionalReference7.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference7> getValue(TransferReference9 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(TransferReference9 obj, Optional<AdditionalReference7> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyRef")
@@ -327,7 +358,7 @@ public class TransferReference9 {
 	 * TransferReference5.mmCounterpartyReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference9, Optional<AdditionalReference7>> mmCounterpartyReference = new MMMessageAttribute<TransferReference9, Optional<AdditionalReference7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference9.mmObject();
 			isDerived = false;
@@ -339,7 +370,17 @@ public class TransferReference9 {
 			previousVersion_lazy = () -> TransferReference5.mmCounterpartyReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference7.mmObject();
+			complexType_lazy = () -> AdditionalReference7.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference7> getValue(TransferReference9 obj) {
+			return obj.getCounterpartyReference();
+		}
+
+		@Override
+		public void setValue(TransferReference9 obj, Optional<AdditionalReference7> value) {
+			obj.setCounterpartyReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -386,7 +427,7 @@ public class TransferReference9 {
 	 * TransferReference5.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference9, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<TransferReference9, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference9.mmObject();
 			isDerived = false;
@@ -399,6 +440,16 @@ public class TransferReference9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferReference9 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(TransferReference9 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 
@@ -441,7 +492,7 @@ public class TransferReference9 {
 		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public TransferReference9 setClientReference(com.tools20022.repository.msg.AdditionalReference7 clientReference) {
+	public TransferReference9 setClientReference(AdditionalReference7 clientReference) {
 		this.clientReference = clientReference;
 		return this;
 	}
@@ -450,7 +501,7 @@ public class TransferReference9 {
 		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public TransferReference9 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference7 counterpartyReference) {
+	public TransferReference9 setCounterpartyReference(AdditionalReference7 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
 		return this;
 	}

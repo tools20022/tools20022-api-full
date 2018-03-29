@@ -100,7 +100,7 @@ public class SubscriptionRequest {
 	 * "Used to subscribe or unsubscribe for the receipt of a certain message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionRequest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubscriptionRequest, SubscriptionRequest1Code> mmSubscriptionRequest = new MMMessageAttribute<SubscriptionRequest, SubscriptionRequest1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionRequest.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class SubscriptionRequest {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SubscriptionRequest1Code.mmObject();
+		}
+
+		@Override
+		public SubscriptionRequest1Code getValue(SubscriptionRequest obj) {
+			return obj.getSubscriptionRequest();
+		}
+
+		@Override
+		public void setValue(SubscriptionRequest obj, SubscriptionRequest1Code value) {
+			obj.setSubscriptionRequest(value);
 		}
 	};
 

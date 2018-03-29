@@ -116,7 +116,7 @@ public class PriceRateOrAmount3Choice {
 	 * PriceRateOrAmountChoice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateOrAmount3Choice, PercentageRate> mmRate = new MMMessageAttribute<PriceRateOrAmount3Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmount3Choice.mmObject();
@@ -129,6 +129,16 @@ public class PriceRateOrAmount3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PriceRateOrAmount3Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PriceRateOrAmount3Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -171,7 +181,7 @@ public class PriceRateOrAmount3Choice {
 	 * PriceRateOrAmountChoice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateOrAmount3Choice, ActiveOrHistoricCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<PriceRateOrAmount3Choice, ActiveOrHistoricCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmount3Choice.mmObject();
@@ -184,6 +194,16 @@ public class PriceRateOrAmount3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAnd13DecimalAmount getValue(PriceRateOrAmount3Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PriceRateOrAmount3Choice obj, ActiveOrHistoricCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

@@ -120,7 +120,7 @@ public class DividendTypeFormat9Choice {
 	 * DividendTypeFormat5Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendTypeFormat9Choice, CorporateActionFrequencyType5Code> mmCode = new MMMessageAttribute<DividendTypeFormat9Choice, CorporateActionFrequencyType5Code>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat9Choice.mmObject();
@@ -133,6 +133,16 @@ public class DividendTypeFormat9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionFrequencyType5Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionFrequencyType5Code getValue(DividendTypeFormat9Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat9Choice obj, CorporateActionFrequencyType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -176,7 +186,7 @@ public class DividendTypeFormat9Choice {
 	 * DividendTypeFormat5Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DividendTypeFormat9Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<DividendTypeFormat9Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat9Choice.mmObject();
@@ -190,6 +200,16 @@ public class DividendTypeFormat9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(DividendTypeFormat9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat9Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

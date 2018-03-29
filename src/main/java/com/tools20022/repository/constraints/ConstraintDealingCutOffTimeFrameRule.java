@@ -56,12 +56,16 @@ public class ConstraintDealingCutOffTimeFrameRule {
 	 */
 	public static final MMConstraint<ProcessingCharacteristics2> forProcessingCharacteristics2 = new MMConstraint<ProcessingCharacteristics2>() {
 		{
-			validator = ConstraintDealingCutOffTimeFrameRule::checkProcessingCharacteristics2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingCutOffTimeFrameRule";
 			definition = "If DealingCutOffTimeFrame is present then OtherTimeFrameDescription or ReferToOrderDesk or TradeMinus must be present.";
 			owner_lazy = () -> ProcessingCharacteristics2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealingCutOffTimeFrame/OtherTimeFrameDescription</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealingCutOffTimeFrame/TradeMinus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealingCutOffTimeFrame/ReferToOrderDesk</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealingCutOffTimeFrame</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ProcessingCharacteristics2 obj) throws Exception {
+			checkProcessingCharacteristics2(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintDealingCutOffTimeFrameRule {
 	 */
 	public static final MMConstraint<ProcessingCharacteristics3> forProcessingCharacteristics3 = new MMConstraint<ProcessingCharacteristics3>() {
 		{
-			validator = ConstraintDealingCutOffTimeFrameRule::checkProcessingCharacteristics3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingCutOffTimeFrameRule";
 			definition = "If DealingCutOffTimeFrame is present then OtherTimeFrameDescription or ReferToOrderDesk or TradeMinus must be present.";
 			owner_lazy = () -> ProcessingCharacteristics3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealingCutOffTimeFrame/OtherTimeFrameDescription</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealingCutOffTimeFrame/TradeMinus</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealingCutOffTimeFrame/ReferToOrderDesk</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealingCutOffTimeFrame</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(ProcessingCharacteristics3 obj) throws Exception {
+			checkProcessingCharacteristics3(obj);
 		}
 	};
 

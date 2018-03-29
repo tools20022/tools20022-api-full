@@ -117,7 +117,7 @@ public class PriceDetails8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails8, Optional<PriceFormat27Choice>> mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd<PriceDetails8, Optional<PriceFormat27Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails8.mmObject();
@@ -130,6 +130,16 @@ public class PriceDetails8 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat27Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat27Choice> getValue(PriceDetails8 obj) {
+			return obj.getGenericCashPricePaidPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails8 obj, Optional<PriceFormat27Choice> value) {
+			obj.setGenericCashPricePaidPerProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricRcvdPerPdct")
@@ -166,7 +176,7 @@ public class PriceDetails8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails8, Optional<PriceFormat26Choice>> mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd<PriceDetails8, Optional<PriceFormat26Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails8.mmObject();
@@ -179,6 +189,16 @@ public class PriceDetails8 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat26Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat26Choice> getValue(PriceDetails8 obj) {
+			return obj.getGenericCashPriceReceivedPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails8 obj, Optional<PriceFormat26Choice> value) {
+			obj.setGenericCashPriceReceivedPerProduct(value.orElse(null));
 		}
 	};
 

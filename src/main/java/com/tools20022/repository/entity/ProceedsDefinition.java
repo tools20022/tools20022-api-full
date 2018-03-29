@@ -28,9 +28,10 @@ import com.tools20022.repository.codeset.NonEligibleProceedsIndicatorCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -261,7 +262,7 @@ public class ProceedsDefinition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSpecialConcessionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProceedsDefinition, CurrencyAndAmount> mmSpecialConcessionAmount = new MMBusinessAttribute<ProceedsDefinition, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmSpecialConcession, OtherAmounts14.mmSpecialConcession, OtherAmounts20.mmSpecialConcession, OtherAmounts4.mmSpecialConcession, OtherAmounts5.mmSpecialConcession,
 					OtherAmounts17.mmSpecialConcession, OtherAmounts23.mmSpecialConcession, OtherAmounts3.mmSpecialConcession, OtherAmounts7.mmSpecialConcession, OtherAmounts9.mmSpecialConcession, OtherAmounts10.mmSpecialConcession,
@@ -279,12 +280,14 @@ public class ProceedsDefinition {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProceedsDefinition.class.getMethod("getSpecialConcessionAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(ProceedsDefinition obj) {
+			return obj.getSpecialConcessionAmount();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, CurrencyAndAmount value) {
+			obj.setSpecialConcessionAmount(value);
 		}
 	};
 	protected DebitCreditCode creditDebitIndicator;
@@ -649,7 +652,7 @@ public class ProceedsDefinition {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProceedsDefinition, DebitCreditCode> mmCreditDebitIndicator = new MMBusinessAttribute<ProceedsDefinition, DebitCreditCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesOption3.mmCreditDebitIndicator, CashOption2.mmCreditDebitIndicator, SecuritiesOption8.mmCreditDebitIndicator, CashOption9.mmCreditDebitIndicator,
 					SecuritiesOption18.mmCreditDebitIndicator, CashOption12.mmCreditDebitIndicator, SecuritiesOption20.mmCreditDebitIndicator, CashOption13.mmCreditDebitIndicator, SecuritiesOption26.mmCreditDebitIndicator,
@@ -684,12 +687,14 @@ public class ProceedsDefinition {
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProceedsDefinition.class.getMethod("getCreditDebitIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DebitCreditCode getValue(ProceedsDefinition obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, DebitCreditCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	protected ISODateTime earliestPaymentDate;
@@ -827,7 +832,7 @@ public class ProceedsDefinition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEarliestPaymentDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProceedsDefinition, ISODateTime> mmEarliestPaymentDate = new MMBusinessAttribute<ProceedsDefinition, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecurityDate1.mmEarliestPaymentDate, CorporateActionDate7.mmEarliestPaymentDate, SecurityDate3.mmEarliestPaymentDate, SecurityDate6.mmEarliestPaymentDate,
 					SecurityDate7.mmEarliestPaymentDate, CorporateActionDate24.mmEarliestPaymentDate, SecurityDate2.mmEarliestPaymentDate, CorporateActionDate9.mmEarliestPaymentDate, SecurityDate4.mmEarliestPaymentDate,
@@ -846,12 +851,14 @@ public class ProceedsDefinition {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProceedsDefinition.class.getMethod("getEarliestPaymentDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(ProceedsDefinition obj) {
+			return obj.getEarliestPaymentDate();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, ISODateTime value) {
+			obj.setEarliestPaymentDate(value);
 		}
 	};
 	protected ISODateTime valueDate;
@@ -945,7 +952,7 @@ public class ProceedsDefinition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProceedsDefinition, ISODateTime> mmValueDate = new MMBusinessAttribute<ProceedsDefinition, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate7.mmValueDate, CorporateActionDate24.mmValueDate, CorporateActionDate9.mmValueDate, CorporateActionDate12.mmValueDate, CorporateActionDate17.mmValueDate,
 					CorporateActionDate20.mmValueDate, CorporateActionDate23.mmValueDate, CorporateActionDate26.mmValueDate, CashOption5.mmValueDate, CashOption7.mmValueDate, CashOption19.mmValueDate, CashOption23.mmValueDate,
@@ -961,12 +968,14 @@ public class ProceedsDefinition {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProceedsDefinition.class.getMethod("getValueDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(ProceedsDefinition obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, ISODateTime value) {
+			obj.setValueDate(value);
 		}
 	};
 	protected NonEligibleProceedsIndicatorCode nonEligibleProceedsIndicator;
@@ -1195,7 +1204,7 @@ public class ProceedsDefinition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNonEligibleProceedsIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProceedsDefinition, NonEligibleProceedsIndicatorCode> mmNonEligibleProceedsIndicator = new MMBusinessAttribute<ProceedsDefinition, NonEligibleProceedsIndicatorCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(NonEligibleProceedsIndicator1Choice.mmCode, NonEligibleProceedsIndicator1Choice.mmProprietary, SecuritiesOption4.mmNonEligibleProceedsIndicator, CashOption3.mmNonEligibleProceedsIndicator,
 					NonEligibleProceedsIndicator2Choice.mmCode, NonEligibleProceedsIndicator2Choice.mmProprietary, SecuritiesOption10.mmNonEligibleProceedsIndicator, CashOption6.mmNonEligibleProceedsIndicator,
@@ -1223,12 +1232,14 @@ public class ProceedsDefinition {
 			simpleType_lazy = () -> NonEligibleProceedsIndicatorCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProceedsDefinition.class.getMethod("getNonEligibleProceedsIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public NonEligibleProceedsIndicatorCode getValue(ProceedsDefinition obj) {
+			return obj.getNonEligibleProceedsIndicator();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, NonEligibleProceedsIndicatorCode value) {
+			obj.setNonEligibleProceedsIndicator(value);
 		}
 	};
 	protected Max35Text issuerOfferorTaxabilityIndicator;
@@ -1420,7 +1431,7 @@ public class ProceedsDefinition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIssuerOfferorTaxabilityIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProceedsDefinition, Max35Text> mmIssuerOfferorTaxabilityIndicator = new MMBusinessAttribute<ProceedsDefinition, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesOption24.mmIssuerOfferorTaxabilityIndicator, CashOption16.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption29.mmIssuerOfferorTaxabilityIndicator,
 					CashOption20.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption33.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption38.mmIssuerOfferorTaxabilityIndicator, CashOption25.mmIssuerOfferorTaxabilityIndicator,
@@ -1446,12 +1457,14 @@ public class ProceedsDefinition {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProceedsDefinition.class.getMethod("getIssuerOfferorTaxabilityIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ProceedsDefinition obj) {
+			return obj.getIssuerOfferorTaxabilityIndicator();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, Max35Text value) {
+			obj.setIssuerOfferorTaxabilityIndicator(value);
 		}
 	};
 	protected ISODateTime offerPriceFixingDate;
@@ -1511,7 +1524,7 @@ public class ProceedsDefinition {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOfferPriceFixingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProceedsDefinition, ISODateTime> mmOfferPriceFixingDate = new MMBusinessAttribute<ProceedsDefinition, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate22.mmFixingDate, CorporateActionDate25.mmFixingDate, CorporateActionDate27.mmFixingDate, CorporateActionDate28.mmFixingDate, CorporateActionDate44.mmFixingDate,
 					CorporateActionDate58.mmFixingDate, CorporateActionDate61.mmFixingDate, CorporateActionDate74.mmFixingDate);
@@ -1525,12 +1538,14 @@ public class ProceedsDefinition {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProceedsDefinition.class.getMethod("getOfferPriceFixingDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(ProceedsDefinition obj) {
+			return obj.getOfferPriceFixingDate();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, ISODateTime value) {
+			obj.setOfferPriceFixingDate(value);
 		}
 	};
 	protected CorporateActionOption option;
@@ -1568,7 +1583,7 @@ public class ProceedsDefinition {
 	 * definition} = "Option for which proceeds are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProceedsDefinition, Optional<CorporateActionOption>> mmOption = new MMBusinessAssociationEnd<ProceedsDefinition, Optional<CorporateActionOption>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
@@ -1577,9 +1592,19 @@ public class ProceedsDefinition {
 			definition = "Option for which proceeds are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmProceedsDefinition;
+			opposite_lazy = () -> CorporateActionOption.mmProceedsDefinition;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
+			type_lazy = () -> CorporateActionOption.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionOption> getValue(ProceedsDefinition obj) {
+			return obj.getOption();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, Optional<CorporateActionOption> value) {
+			obj.setOption(value.orElse(null));
 		}
 	};
 	protected CorporateActionEvent corporateAction;
@@ -1617,7 +1642,7 @@ public class ProceedsDefinition {
 	 * definition} = "Corporate action for which the proceeds are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateAction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ProceedsDefinition, CorporateActionEvent> mmCorporateAction = new MMBusinessAssociationEnd<ProceedsDefinition, CorporateActionEvent>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
@@ -1626,9 +1651,19 @@ public class ProceedsDefinition {
 			definition = "Corporate action for which the proceeds are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmProceedsDefinition;
+			opposite_lazy = () -> CorporateActionEvent.mmProceedsDefinition;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
+			type_lazy = () -> CorporateActionEvent.mmObject();
+		}
+
+		@Override
+		public CorporateActionEvent getValue(ProceedsDefinition obj) {
+			return obj.getCorporateAction();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, CorporateActionEvent value) {
+			obj.setCorporateAction(value);
 		}
 	};
 	protected CountryCode countryOfIncomeSource;
@@ -1734,7 +1769,7 @@ public class ProceedsDefinition {
 	 * definition} = "Indicates the country from which the income originates."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCountryOfIncomeSource = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ProceedsDefinition, CountryCode> mmCountryOfIncomeSource = new MMBusinessAttribute<ProceedsDefinition, CountryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashOption44.mmCountryOfIncomeSource, SecuritiesOption49.mmCountryOfIncomeSource, CashOption43.mmCountryOfIncomeSource, SecuritiesOption50.mmCountryOfIncomeSource,
 					CashOption46.mmCountryOfIncomeSource, SecuritiesOption55.mmCountryOfIncomeSource, CashOption49.mmCountryOfIncomeSource, SecuritiesOption57.mmCountryOfIncomeSource, CashOption52.mmCountryOfIncomeSource,
@@ -1751,12 +1786,14 @@ public class ProceedsDefinition {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProceedsDefinition.class.getMethod("getCountryOfIncomeSource", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CountryCode getValue(ProceedsDefinition obj) {
+			return obj.getCountryOfIncomeSource();
+		}
+
+		@Override
+		public void setValue(ProceedsDefinition obj, CountryCode value) {
+			obj.setCountryOfIncomeSource(value);
 		}
 	};
 
@@ -1767,7 +1804,7 @@ public class ProceedsDefinition {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProceedsDefinition";
 				definition = "Definition of exchanges of cash and/or securities available in the processing of corporate actions.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmProceedsDefinition, com.tools20022.repository.entity.CorporateActionOption.mmProceedsDefinition);
+				associationDomain_lazy = () -> Arrays.asList(CorporateActionEvent.mmProceedsDefinition, CorporateActionOption.mmProceedsDefinition);
 				subType_lazy = () -> Arrays.asList(SecuritiesProceedsDefinition.mmObject(), CashProceedsDefinition.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProceedsDefinition.mmSpecialConcessionAmount, com.tools20022.repository.entity.ProceedsDefinition.mmCreditDebitIndicator,
 						com.tools20022.repository.entity.ProceedsDefinition.mmEarliestPaymentDate, com.tools20022.repository.entity.ProceedsDefinition.mmValueDate,
@@ -1853,7 +1890,7 @@ public class ProceedsDefinition {
 		return option == null ? Optional.empty() : Optional.of(option);
 	}
 
-	public ProceedsDefinition setOption(com.tools20022.repository.entity.CorporateActionOption option) {
+	public ProceedsDefinition setOption(CorporateActionOption option) {
 		this.option = option;
 		return this;
 	}
@@ -1862,7 +1899,7 @@ public class ProceedsDefinition {
 		return corporateAction;
 	}
 
-	public ProceedsDefinition setCorporateAction(com.tools20022.repository.entity.CorporateActionEvent corporateAction) {
+	public ProceedsDefinition setCorporateAction(CorporateActionEvent corporateAction) {
 		this.corporateAction = Objects.requireNonNull(corporateAction);
 		return this;
 	}

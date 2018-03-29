@@ -52,11 +52,15 @@ public class ConstraintBeneficiaryRule {
 	 */
 	public static final MMConstraint<AccountParties2> forAccountParties2 = new MMConstraint<AccountParties2>() {
 		{
-			validator = ConstraintBeneficiaryRule::checkAccountParties2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryRule";
 			definition = "If CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.\n.";
 			owner_lazy = () -> AccountParties2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties2 obj) throws Exception {
+			checkAccountParties2(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintBeneficiaryRule {
 	 */
 	public static final MMConstraint<AccountParties5> forAccountParties5 = new MMConstraint<AccountParties5>() {
 		{
-			validator = ConstraintBeneficiaryRule::checkAccountParties5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryRule";
 			definition = "If CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.";
 			owner_lazy = () -> AccountParties5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties5 obj) throws Exception {
+			checkAccountParties5(obj);
 		}
 	};
 	/**
@@ -120,12 +128,16 @@ public class ConstraintBeneficiaryRule {
 	 */
 	public static final MMConstraint<AccountParties6> forAccountParties6 = new MMConstraint<AccountParties6>() {
 		{
-			validator = ConstraintBeneficiaryRule::checkAccountParties6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryRule";
 			definition = "If CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBeneficiaryRule.forAccountParties9);
 			owner_lazy = () -> AccountParties6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties6 obj) throws Exception {
+			checkAccountParties6(obj);
 		}
 	};
 	/**
@@ -167,13 +179,17 @@ public class ConstraintBeneficiaryRule {
 	 */
 	public static final MMConstraint<AccountParties9> forAccountParties9 = new MMConstraint<AccountParties9>() {
 		{
-			validator = ConstraintBeneficiaryRule::checkAccountParties9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryRule";
 			definition = "If PrincipalAccountParty/CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBeneficiaryRule.forAccountParties12, com.tools20022.repository.constraints.ConstraintBeneficiaryRule.forAccountParties10);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBeneficiaryRule.forAccountParties6;
 			owner_lazy = () -> AccountParties9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties9 obj) throws Exception {
+			checkAccountParties9(obj);
 		}
 	};
 	/**
@@ -212,13 +228,17 @@ public class ConstraintBeneficiaryRule {
 	 */
 	public static final MMConstraint<AccountParties10> forAccountParties10 = new MMConstraint<AccountParties10>() {
 		{
-			validator = ConstraintBeneficiaryRule::checkAccountParties10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryRule";
 			definition = "If PrincipalAccountParty/CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBeneficiaryRule.forAccountParties13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBeneficiaryRule.forAccountParties9;
 			owner_lazy = () -> AccountParties10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties10 obj) throws Exception {
+			checkAccountParties10(obj);
 		}
 	};
 	/**
@@ -249,12 +269,16 @@ public class ConstraintBeneficiaryRule {
 	 */
 	public static final MMConstraint<AccountParties12> forAccountParties12 = new MMConstraint<AccountParties12>() {
 		{
-			validator = ConstraintBeneficiaryRule::checkAccountParties12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryRule";
 			definition = "If PrincipalAccountParty/CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBeneficiaryRule.forAccountParties9;
 			owner_lazy = () -> AccountParties12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties12 obj) throws Exception {
+			checkAccountParties12(obj);
 		}
 	};
 	/**
@@ -285,12 +309,16 @@ public class ConstraintBeneficiaryRule {
 	 */
 	public static final MMConstraint<AccountParties13> forAccountParties13 = new MMConstraint<AccountParties13>() {
 		{
-			validator = ConstraintBeneficiaryRule::checkAccountParties13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryRule";
 			definition = "If PrincipalAccountParty/CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBeneficiaryRule.forAccountParties10;
 			owner_lazy = () -> AccountParties13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties13 obj) throws Exception {
+			checkAccountParties13(obj);
 		}
 	};
 

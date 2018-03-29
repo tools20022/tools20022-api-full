@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification25;
@@ -128,7 +129,7 @@ public class CorporateActionProcessingStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionProcessingStatus3Choice, CorporateActionProcessingStatus1Choice> mmCode = new MMMessageAttribute<CorporateActionProcessingStatus3Choice, CorporateActionProcessingStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.mmObject();
@@ -140,7 +141,17 @@ public class CorporateActionProcessingStatus3Choice {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionProcessingStatus4Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmObject();
+			complexType_lazy = () -> CorporateActionProcessingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionProcessingStatus1Choice getValue(CorporateActionProcessingStatus3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionProcessingStatus3Choice obj, CorporateActionProcessingStatus1Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -188,7 +199,7 @@ public class CorporateActionProcessingStatus3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionProcessingStatus3Choice, GenericIdentification25> mmProprietary = new MMMessageAttribute<CorporateActionProcessingStatus3Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus3Choice.mmObject();
@@ -201,6 +212,16 @@ public class CorporateActionProcessingStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(CorporateActionProcessingStatus3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionProcessingStatus3Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -224,7 +245,7 @@ public class CorporateActionProcessingStatus3Choice {
 		return code;
 	}
 
-	public CorporateActionProcessingStatus3Choice setCode(com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice code) {
+	public CorporateActionProcessingStatus3Choice setCode(CorporateActionProcessingStatus1Choice code) {
 		this.code = Objects.requireNonNull(code);
 		return this;
 	}

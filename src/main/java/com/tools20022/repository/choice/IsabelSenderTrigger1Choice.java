@@ -100,7 +100,7 @@ public class IsabelSenderTrigger1Choice {
 	 * "Trigger used by the sender to generate the file, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSenderTrigger1Choice, SenderTrigger1Code> mmCode = new MMMessageAttribute<IsabelSenderTrigger1Choice, SenderTrigger1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelSenderTrigger1Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class IsabelSenderTrigger1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SenderTrigger1Code.mmObject();
+		}
+
+		@Override
+		public SenderTrigger1Code getValue(IsabelSenderTrigger1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(IsabelSenderTrigger1Choice obj, SenderTrigger1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -145,7 +155,7 @@ public class IsabelSenderTrigger1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelSenderTrigger1Choice, Max4AlphaNumericText> mmProprietary = new MMMessageAttribute<IsabelSenderTrigger1Choice, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IsabelSenderTrigger1Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class IsabelSenderTrigger1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(IsabelSenderTrigger1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IsabelSenderTrigger1Choice obj, Max4AlphaNumericText value) {
+			obj.setProprietary(value);
 		}
 	};
 

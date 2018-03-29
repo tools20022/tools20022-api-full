@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.entity.InvestmentFund;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument17;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ public class FundParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundParameters3, FinancialInstrument17> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<FundParameters3, FinancialInstrument17>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundParameters3.mmObject();
@@ -129,7 +130,17 @@ public class FundParameters3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
+			type_lazy = () -> FinancialInstrument17.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument17 getValue(FundParameters3 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(FundParameters3 obj, FinancialInstrument17 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "ValtnDtTm")
@@ -169,7 +180,7 @@ public class FundParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundParameters3, Optional<DateAndDateTimeChoice>> mmValuationDateTime = new MMMessageAttribute<FundParameters3, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundParameters3.mmObject();
@@ -181,6 +192,16 @@ public class FundParameters3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(FundParameters3 obj) {
+			return obj.getValuationDateTime();
+		}
+
+		@Override
+		public void setValue(FundParameters3 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setValuationDateTime(value.orElse(null));
 		}
 	};
 
@@ -203,7 +224,7 @@ public class FundParameters3 {
 		return financialInstrumentDetails;
 	}
 
-	public FundParameters3 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument17 financialInstrumentDetails) {
+	public FundParameters3 setFinancialInstrumentDetails(FinancialInstrument17 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}

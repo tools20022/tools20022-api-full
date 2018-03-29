@@ -29,10 +29,9 @@ import com.tools20022.repository.datatype.BICNonFIIdentifier;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
-import com.tools20022.repository.entity.FinancialProduct;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -243,7 +242,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Country in which the investment fund is domiciled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDomicileCountry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentFund, Country> mmDomicileCountry = new MMBusinessAssociationEnd<InvestmentFund, Country>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmCountryOfDomicile, SecurityIdentification1.mmCountryOfDomicile, FundParameters2.mmCountryOfDomicile, FundParameters4.mmCountryOfDomicile,
 					FinancialInstrument21.mmCountryOfDomicile, FinancialInstrument22.mmCountryOfDomicile);
@@ -254,12 +253,22 @@ public class InvestmentFund extends FinancialProduct {
 			definition = "Country in which the investment fund is domiciled.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmDomiciledFunds;
+			opposite_lazy = () -> Country.mmDomiciledFunds;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
+			type_lazy = () -> Country.mmObject();
+		}
+
+		@Override
+		public Country getValue(InvestmentFund obj) {
+			return obj.getDomicileCountry();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, Country value) {
+			obj.setDomicileCountry(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.ContactPoint> orderDesk;
+	protected List<ContactPoint> orderDesk;
 	/**
 	 * 
 	 <p>
@@ -302,7 +311,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Entity appointed by the fund, to which orders should be submitted."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrderDesk = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentFund, List<ContactPoint>> mmOrderDesk = new MMBusinessAssociationEnd<InvestmentFund, List<ContactPoint>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FundProcessingPassport1.mmMainFundOrderDesk);
 			isDerived = false;
@@ -311,9 +320,19 @@ public class InvestmentFund extends FinancialProduct {
 			name = "OrderDesk";
 			definition = "Entity appointed by the fund, to which orders should be submitted.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmRelatedInvestmentFund;
+			opposite_lazy = () -> ContactPoint.mmRelatedInvestmentFund;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
+			type_lazy = () -> ContactPoint.mmObject();
+		}
+
+		@Override
+		public List<ContactPoint> getValue(InvestmentFund obj) {
+			return obj.getOrderDesk();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, List<ContactPoint> value) {
+			obj.setOrderDesk(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.InvestmentFundClass> investmentFundClass;
@@ -370,7 +389,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Sub-set of an investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestmentFundClass = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentFund, List<InvestmentFundClass>> mmInvestmentFundClass = new MMBusinessAssociationEnd<InvestmentFund, List<InvestmentFundClass>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FundProcessingPassport1.mmFundDetails, FundProcessingPassport1.mmInvestmentRestrictions, FundParameters2.mmFinancialInstrumentDetails, FundParameters3.mmFinancialInstrumentDetails,
 					FundParameters4.mmFinancialInstrumentDetails);
@@ -383,6 +402,16 @@ public class InvestmentFund extends FinancialProduct {
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentFund;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFundClass> getValue(InvestmentFund obj) {
+			return obj.getInvestmentFundClass();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, List<InvestmentFundClass> value) {
+			obj.setInvestmentFundClass(value);
 		}
 	};
 	protected Max35Text fundType;
@@ -432,7 +461,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Legal form of the fund, eg, UCITS, SICAV, OEIC, Unit Trust, and FCP."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFundType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentFund, Max35Text> mmFundType = new MMBusinessAttribute<InvestmentFund, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccount19.mmFundType, InvestmentAccount29.mmFundType, InvestmentAccount44.mmFundType, InvestmentAccount52.mmFundType, InvestmentAccount64.mmFundType);
 			isDerived = false;
@@ -445,12 +474,14 @@ public class InvestmentFund extends FinancialProduct {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFund.class.getMethod("getFundType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(InvestmentFund obj) {
+			return obj.getFundType();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, Max35Text value) {
+			obj.setFundType(value);
 		}
 	};
 	protected TreasuryTradingParty treasuryTradingParty;
@@ -489,7 +520,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Party which executes a treasury trade on behalf of an investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTreasuryTradingParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentFund, com.tools20022.repository.entity.TreasuryTradingParty> mmTreasuryTradingParty = new MMBusinessAssociationEnd<InvestmentFund, com.tools20022.repository.entity.TreasuryTradingParty>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -501,6 +532,16 @@ public class InvestmentFund extends FinancialProduct {
 			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TreasuryTradingParty.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.TreasuryTradingParty getValue(InvestmentFund obj) {
+			return obj.getTreasuryTradingParty();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, com.tools20022.repository.entity.TreasuryTradingParty value) {
+			obj.setTreasuryTradingParty(value);
 		}
 	};
 	protected BICNonFIIdentifier identification;
@@ -547,7 +588,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Identification of the investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentFund, BICNonFIIdentifier> mmIdentification = new MMBusinessAttribute<InvestmentFund, BICNonFIIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FundIdentification1.mmFundIdentification, FundIdentification2.mmFundIdentification, FundIdentification3.mmFundIdentification, FundIdentification4.mmFundIdentification);
 			isDerived = false;
@@ -560,15 +601,17 @@ public class InvestmentFund extends FinancialProduct {
 			simpleType_lazy = () -> BICNonFIIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFund.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICNonFIIdentifier getValue(InvestmentFund obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, BICNonFIIdentifier value) {
+			obj.setIdentification(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.CustodianRole> custodian;
+	protected List<CustodianRole> custodian;
 	/**
 	 * 
 	 <p>
@@ -603,7 +646,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Party which settles the trades for the account of the fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCustodian = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentFund, List<CustodianRole>> mmCustodian = new MMBusinessAssociationEnd<InvestmentFund, List<CustodianRole>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -611,12 +654,22 @@ public class InvestmentFund extends FinancialProduct {
 			name = "Custodian";
 			definition = "Party which settles the trades for the account of the fund.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CustodianRole.mmInvestmentFund;
+			opposite_lazy = () -> CustodianRole.mmInvestmentFund;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CustodianRole.mmObject();
+			type_lazy = () -> CustodianRole.mmObject();
+		}
+
+		@Override
+		public List<CustodianRole> getValue(InvestmentFund obj) {
+			return obj.getCustodian();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, List<CustodianRole> value) {
+			obj.setCustodian(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.InvestmentFundPartyRole> partyRole;
+	protected List<InvestmentFundPartyRole> partyRole;
 	/**
 	 * 
 	 <p>
@@ -653,7 +706,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentFund, List<InvestmentFundPartyRole>> mmPartyRole = new MMBusinessAssociationEnd<InvestmentFund, List<InvestmentFundPartyRole>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -661,9 +714,19 @@ public class InvestmentFund extends FinancialProduct {
 			name = "PartyRole";
 			definition = "Specifies each role linked to an investment fund and played by a party in that context.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmInvestmentFund;
+			opposite_lazy = () -> InvestmentFundPartyRole.mmInvestmentFund;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmObject();
+			type_lazy = () -> InvestmentFundPartyRole.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFundPartyRole> getValue(InvestmentFund obj) {
+			return obj.getPartyRole();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, List<InvestmentFundPartyRole> value) {
+			obj.setPartyRole(value);
 		}
 	};
 	protected InvestmentFundFamily family;
@@ -701,7 +764,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Family to which the investment fund belongs."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmFamily = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentFund, Optional<InvestmentFundFamily>> mmFamily = new MMBusinessAssociationEnd<InvestmentFund, Optional<InvestmentFundFamily>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -710,9 +773,19 @@ public class InvestmentFund extends FinancialProduct {
 			definition = "Family to which the investment fund belongs.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmInvestmentFund;
+			opposite_lazy = () -> InvestmentFundFamily.mmInvestmentFund;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundFamily.mmObject();
+			type_lazy = () -> InvestmentFundFamily.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentFundFamily> getValue(InvestmentFund obj) {
+			return obj.getFamily();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, Optional<InvestmentFundFamily> value) {
+			obj.setFamily(value.orElse(null));
 		}
 	};
 	protected FundStructureCode structure;
@@ -742,7 +815,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Structure of the subfund, eg, single fund, multi-class."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStructure = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentFund, FundStructureCode> mmStructure = new MMBusinessAttribute<InvestmentFund, FundStructureCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -754,12 +827,14 @@ public class InvestmentFund extends FinancialProduct {
 			simpleType_lazy = () -> FundStructureCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFund.class.getMethod("getStructure", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FundStructureCode getValue(InvestmentFund obj) {
+			return obj.getStructure();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, FundStructureCode value) {
+			obj.setStructure(value);
 		}
 	};
 	protected FundLegalFormCode legalForm;
@@ -789,7 +864,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Legal form of a fund, eg, corporation or trust."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmLegalForm = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentFund, FundLegalFormCode> mmLegalForm = new MMBusinessAttribute<InvestmentFund, FundLegalFormCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -801,12 +876,14 @@ public class InvestmentFund extends FinancialProduct {
 			simpleType_lazy = () -> FundLegalFormCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFund.class.getMethod("getLegalForm", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FundLegalFormCode getValue(InvestmentFund obj) {
+			return obj.getLegalForm();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, FundLegalFormCode value) {
+			obj.setLegalForm(value);
 		}
 	};
 	protected YesNoIndicator subFundIndicator;
@@ -841,7 +918,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSubFundIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentFund, YesNoIndicator> mmSubFundIndicator = new MMBusinessAttribute<InvestmentFund, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -854,12 +931,14 @@ public class InvestmentFund extends FinancialProduct {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFund.class.getMethod("getSubFundIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(InvestmentFund obj) {
+			return obj.getSubFundIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, YesNoIndicator value) {
+			obj.setSubFundIndicator(value);
 		}
 	};
 	protected ISODate endOfFiscalYear;
@@ -889,7 +968,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Date at which the books are closed and profit and loss is determined."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEndOfFiscalYear = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentFund, ISODate> mmEndOfFiscalYear = new MMBusinessAttribute<InvestmentFund, ISODate>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -901,12 +980,14 @@ public class InvestmentFund extends FinancialProduct {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFund.class.getMethod("getEndOfFiscalYear", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(InvestmentFund obj) {
+			return obj.getEndOfFiscalYear();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, ISODate value) {
+			obj.setEndOfFiscalYear(value);
 		}
 	};
 	protected ISODate accountingYearEndDate;
@@ -935,7 +1016,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Last day of the accounting year for the fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAccountingYearEndDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentFund, ISODate> mmAccountingYearEndDate = new MMBusinessAttribute<InvestmentFund, ISODate>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -947,12 +1028,14 @@ public class InvestmentFund extends FinancialProduct {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFund.class.getMethod("getAccountingYearEndDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(InvestmentFund obj) {
+			return obj.getAccountingYearEndDate();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, ISODate value) {
+			obj.setAccountingYearEndDate(value);
 		}
 	};
 	protected ISODate firstAccountingYearEndDate;
@@ -981,7 +1064,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Last day of the first accounting year for the fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFirstAccountingYearEndDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentFund, ISODate> mmFirstAccountingYearEndDate = new MMBusinessAttribute<InvestmentFund, ISODate>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -993,12 +1076,14 @@ public class InvestmentFund extends FinancialProduct {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFund.class.getMethod("getFirstAccountingYearEndDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(InvestmentFund obj) {
+			return obj.getFirstAccountingYearEndDate();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, ISODate value) {
+			obj.setFirstAccountingYearEndDate(value);
 		}
 	};
 	protected UmbrellaFund umbrellaFund;
@@ -1035,7 +1120,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * definition} = "Umbrella fund for which compartments are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUmbrellaFund = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<InvestmentFund, Optional<UmbrellaFund>> mmUmbrellaFund = new MMBusinessAssociationEnd<InvestmentFund, Optional<UmbrellaFund>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFund.mmObject();
@@ -1047,6 +1132,16 @@ public class InvestmentFund extends FinancialProduct {
 			opposite_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmSubFund;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmObject();
+		}
+
+		@Override
+		public Optional<UmbrellaFund> getValue(InvestmentFund obj) {
+			return obj.getUmbrellaFund();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, Optional<UmbrellaFund> value) {
+			obj.setUmbrellaFund(value.orElse(null));
 		}
 	};
 	protected CountryCode authorisedCountry;
@@ -1084,7 +1179,7 @@ public class InvestmentFund extends FinancialProduct {
 	 * "Country in which it is authorised to commercialise the fund."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAuthorisedCountry = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<InvestmentFund, CountryCode> mmAuthorisedCountry = new MMBusinessAttribute<InvestmentFund, CountryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(MainFundOrderDeskLocation1.mmCountry);
 			isDerived = false;
@@ -1097,12 +1192,14 @@ public class InvestmentFund extends FinancialProduct {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFund.class.getMethod("getAuthorisedCountry", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CountryCode getValue(InvestmentFund obj) {
+			return obj.getAuthorisedCountry();
+		}
+
+		@Override
+		public void setValue(InvestmentFund obj, CountryCode value) {
+			obj.setAuthorisedCountry(value);
 		}
 	};
 
@@ -1113,9 +1210,9 @@ public class InvestmentFund extends FinancialProduct {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFund";
 				definition = "Distinct pool of financial instruments managed by a single investment policy. May or not be part of an umbrella fund. The pool is issued in at least one investment fund class.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentFund, com.tools20022.repository.entity.UmbrellaFund.mmSubFund,
-						com.tools20022.repository.entity.Country.mmDomiciledFunds, com.tools20022.repository.entity.ContactPoint.mmRelatedInvestmentFund, com.tools20022.repository.entity.InvestmentFundFamily.mmInvestmentFund,
-						com.tools20022.repository.entity.InvestmentFundPartyRole.mmInvestmentFund, com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund, com.tools20022.repository.entity.CustodianRole.mmInvestmentFund);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmInvestmentFund, com.tools20022.repository.entity.UmbrellaFund.mmSubFund, Country.mmDomiciledFunds,
+						ContactPoint.mmRelatedInvestmentFund, InvestmentFundFamily.mmInvestmentFund, InvestmentFundPartyRole.mmInvestmentFund, com.tools20022.repository.entity.TreasuryTradingParty.mmInvestmentFund,
+						CustodianRole.mmInvestmentFund);
 				derivationElement_lazy = () -> Arrays.asList(PriceValuation2.mmFinancialInstrumentDetails, PriceValuation3.mmFinancialInstrumentDetails);
 				superType_lazy = () -> FinancialProduct.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFund.mmDomicileCountry, com.tools20022.repository.entity.InvestmentFund.mmOrderDesk,
@@ -1140,7 +1237,7 @@ public class InvestmentFund extends FinancialProduct {
 		return domicileCountry;
 	}
 
-	public InvestmentFund setDomicileCountry(com.tools20022.repository.entity.Country domicileCountry) {
+	public InvestmentFund setDomicileCountry(Country domicileCountry) {
 		this.domicileCountry = Objects.requireNonNull(domicileCountry);
 		return this;
 	}
@@ -1149,7 +1246,7 @@ public class InvestmentFund extends FinancialProduct {
 		return orderDesk == null ? orderDesk = new ArrayList<>() : orderDesk;
 	}
 
-	public InvestmentFund setOrderDesk(List<com.tools20022.repository.entity.ContactPoint> orderDesk) {
+	public InvestmentFund setOrderDesk(List<ContactPoint> orderDesk) {
 		this.orderDesk = Objects.requireNonNull(orderDesk);
 		return this;
 	}
@@ -1194,7 +1291,7 @@ public class InvestmentFund extends FinancialProduct {
 		return custodian == null ? custodian = new ArrayList<>() : custodian;
 	}
 
-	public InvestmentFund setCustodian(List<com.tools20022.repository.entity.CustodianRole> custodian) {
+	public InvestmentFund setCustodian(List<CustodianRole> custodian) {
 		this.custodian = Objects.requireNonNull(custodian);
 		return this;
 	}
@@ -1203,7 +1300,7 @@ public class InvestmentFund extends FinancialProduct {
 		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public InvestmentFund setPartyRole(List<com.tools20022.repository.entity.InvestmentFundPartyRole> partyRole) {
+	public InvestmentFund setPartyRole(List<InvestmentFundPartyRole> partyRole) {
 		this.partyRole = Objects.requireNonNull(partyRole);
 		return this;
 	}
@@ -1212,7 +1309,7 @@ public class InvestmentFund extends FinancialProduct {
 		return family == null ? Optional.empty() : Optional.of(family);
 	}
 
-	public InvestmentFund setFamily(com.tools20022.repository.entity.InvestmentFundFamily family) {
+	public InvestmentFund setFamily(InvestmentFundFamily family) {
 		this.family = family;
 		return this;
 	}

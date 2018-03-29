@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ErrorHandling3;
+import com.tools20022.repository.msg.SecurityIdentification14;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,7 +111,7 @@ public class BusinessError1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessError1, SecurityIdentification14> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<BusinessError1, SecurityIdentification14>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessError1.mmObject();
 			isDerived = false;
@@ -121,11 +123,21 @@ public class BusinessError1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification14 getValue(BusinessError1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(BusinessError1 obj, SecurityIdentification14 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
-	protected List<com.tools20022.repository.msg.ErrorHandling3> businessError;
+	protected List<ErrorHandling3> businessError;
 	/**
 	 * 
 	 <p>
@@ -159,7 +171,7 @@ public class BusinessError1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessError1, List<ErrorHandling3>> mmBusinessError = new MMMessageAssociationEnd<BusinessError1, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessError1.mmObject();
 			isDerived = false;
@@ -170,7 +182,17 @@ public class BusinessError1 {
 			nextVersions_lazy = () -> Arrays.asList(BusinessError2.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling3.mmObject();
+			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(BusinessError1 obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(BusinessError1 obj, List<ErrorHandling3> value) {
+			obj.setBusinessError(value);
 		}
 	};
 
@@ -192,7 +214,7 @@ public class BusinessError1 {
 		return financialInstrumentIdentification;
 	}
 
-	public BusinessError1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public BusinessError1 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -201,7 +223,7 @@ public class BusinessError1 {
 		return businessError == null ? businessError = new ArrayList<>() : businessError;
 	}
 
-	public BusinessError1 setBusinessError(List<com.tools20022.repository.msg.ErrorHandling3> businessError) {
+	public BusinessError1 setBusinessError(List<ErrorHandling3> businessError) {
 		this.businessError = Objects.requireNonNull(businessError);
 		return this;
 	}

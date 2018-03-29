@@ -99,7 +99,7 @@ public class ExchangeRateReportOrError2Choice {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExchangeRateReportOrError2Choice, List<ErrorHandling3>> mmBusinessError = new MMMessageAssociationEnd<ExchangeRateReportOrError2Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExchangeRateReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class ExchangeRateReportOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(ExchangeRateReportOrError2Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(ExchangeRateReportOrError2Choice obj, List<ErrorHandling3> value) {
+			obj.setBusinessError(value);
 		}
 	};
 	@XmlElement(name = "CcyXchg", required = true)
@@ -140,7 +150,7 @@ public class ExchangeRateReportOrError2Choice {
 	 * definition} = "Requested business information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExchangeRateReportOrError2Choice, CurrencyExchange7> mmCurrencyExchange = new MMMessageAssociationEnd<ExchangeRateReportOrError2Choice, CurrencyExchange7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExchangeRateReportOrError2Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class ExchangeRateReportOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CurrencyExchange7.mmObject();
+		}
+
+		@Override
+		public CurrencyExchange7 getValue(ExchangeRateReportOrError2Choice obj) {
+			return obj.getCurrencyExchange();
+		}
+
+		@Override
+		public void setValue(ExchangeRateReportOrError2Choice obj, CurrencyExchange7 value) {
+			obj.setCurrencyExchange(value);
 		}
 	};
 

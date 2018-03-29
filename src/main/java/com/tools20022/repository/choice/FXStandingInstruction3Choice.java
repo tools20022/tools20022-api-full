@@ -115,7 +115,7 @@ public class FXStandingInstruction3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FXStandingInstruction3Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<FXStandingInstruction3Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmFXStandingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FXStandingInstruction3Choice.mmObject();
@@ -128,6 +128,16 @@ public class FXStandingInstruction3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FXStandingInstruction3Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(FXStandingInstruction3Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class FXStandingInstruction3Choice {
 	 * "FX Standing instruction information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FXStandingInstruction3Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<FXStandingInstruction3Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> StandingSettlementInstruction.mmFXStandingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FXStandingInstruction3Choice.mmObject();
@@ -182,6 +192,16 @@ public class FXStandingInstruction3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(FXStandingInstruction3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FXStandingInstruction3Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

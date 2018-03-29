@@ -107,7 +107,7 @@ public class SecuritiesOrCash1Choice {
 	 * "Securities settlement chain parties, accounts and other details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOrCash1Choice, SettlementParties35> mmSecuritiesDetails = new MMMessageAssociationEnd<SecuritiesOrCash1Choice, SettlementParties35>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class SecuritiesOrCash1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementParties35.mmObject();
+		}
+
+		@Override
+		public SettlementParties35 getValue(SecuritiesOrCash1Choice obj) {
+			return obj.getSecuritiesDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrCash1Choice obj, SettlementParties35 value) {
+			obj.setSecuritiesDetails(value);
 		}
 	};
 	@XmlElement(name = "CshPtiesDtls", required = true)
@@ -149,7 +159,7 @@ public class SecuritiesOrCash1Choice {
 	 * definition} = "Cash settlement chain parties and accounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashPartiesDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOrCash1Choice, CashParties24> mmCashPartiesDetails = new MMMessageAssociationEnd<SecuritiesOrCash1Choice, CashParties24>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesOrCash1Choice.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class SecuritiesOrCash1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CashParties24.mmObject();
+		}
+
+		@Override
+		public CashParties24 getValue(SecuritiesOrCash1Choice obj) {
+			return obj.getCashPartiesDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrCash1Choice obj, CashParties24 value) {
+			obj.setCashPartiesDetails(value);
 		}
 	};
 

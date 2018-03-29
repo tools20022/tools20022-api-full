@@ -99,7 +99,7 @@ public class SpreadRate1 {
 	 * definition} = "Specifies the sign of the rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SpreadRate1, PlusOrMinusIndicator> mmSign = new MMMessageAttribute<SpreadRate1, PlusOrMinusIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SpreadRate1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class SpreadRate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public PlusOrMinusIndicator getValue(SpreadRate1 obj) {
+			return obj.getSign();
+		}
+
+		@Override
+		public void setValue(SpreadRate1 obj, PlusOrMinusIndicator value) {
+			obj.setSign(value);
 		}
 	};
 	@XmlElement(name = "RateOrAmt", required = true)
@@ -140,7 +150,7 @@ public class SpreadRate1 {
 	 * "Specifies if the spreadf is expressed as an amount or a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateOrAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SpreadRate1, AmountOrRate1Choice> mmRateOrAmount = new MMMessageAssociationEnd<SpreadRate1, AmountOrRate1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SpreadRate1.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class SpreadRate1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountOrRate1Choice.mmObject();
+		}
+
+		@Override
+		public AmountOrRate1Choice getValue(SpreadRate1 obj) {
+			return obj.getRateOrAmount();
+		}
+
+		@Override
+		public void setValue(SpreadRate1 obj, AmountOrRate1Choice value) {
+			obj.setRateOrAmount(value);
 		}
 	};
 

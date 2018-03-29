@@ -24,6 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount22;
+import com.tools20022.repository.msg.ContactAttributes1;
+import com.tools20022.repository.msg.ProcessingCharacteristics2;
+import com.tools20022.repository.msg.ProcessingCharacteristics3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +123,7 @@ public class LocalMarketAnnex2 {
 	 * definition} = "Country in which the processing characteristic applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LocalMarketAnnex2, List<CountryCode>> mmCountry = new MMMessageAttribute<LocalMarketAnnex2, List<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex2.mmObject();
@@ -130,6 +134,16 @@ public class LocalMarketAnnex2 {
 			definition = "Country in which the processing characteristic applies.";
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public List<CountryCode> getValue(LocalMarketAnnex2 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(LocalMarketAnnex2 obj, List<CountryCode> value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "LclOrdrDsk", required = true)
@@ -166,7 +180,7 @@ public class LocalMarketAnnex2 {
 	 * "Organisation established primarily to provide financial services."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalOrderDesk = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LocalMarketAnnex2, ContactAttributes1> mmLocalOrderDesk = new MMMessageAssociationEnd<LocalMarketAnnex2, ContactAttributes1>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex2.mmObject();
@@ -178,7 +192,17 @@ public class LocalMarketAnnex2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactAttributes1.mmObject();
+			type_lazy = () -> ContactAttributes1.mmObject();
+		}
+
+		@Override
+		public ContactAttributes1 getValue(LocalMarketAnnex2 obj) {
+			return obj.getLocalOrderDesk();
+		}
+
+		@Override
+		public void setValue(LocalMarketAnnex2 obj, ContactAttributes1 value) {
+			obj.setLocalOrderDesk(value);
 		}
 	};
 	@XmlElement(name = "SbcptPrcgChrtcs", required = true)
@@ -217,7 +241,7 @@ public class LocalMarketAnnex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LocalMarketAnnex2, ProcessingCharacteristics2> mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd<LocalMarketAnnex2, ProcessingCharacteristics2>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex2.mmObject();
@@ -229,7 +253,17 @@ public class LocalMarketAnnex2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics2.mmObject();
+			type_lazy = () -> ProcessingCharacteristics2.mmObject();
+		}
+
+		@Override
+		public ProcessingCharacteristics2 getValue(LocalMarketAnnex2 obj) {
+			return obj.getSubscriptionProcessingCharacteristics();
+		}
+
+		@Override
+		public void setValue(LocalMarketAnnex2 obj, ProcessingCharacteristics2 value) {
+			obj.setSubscriptionProcessingCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "RedPrcgChrtcs", required = true)
@@ -268,7 +302,7 @@ public class LocalMarketAnnex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LocalMarketAnnex2, ProcessingCharacteristics3> mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd<LocalMarketAnnex2, ProcessingCharacteristics3>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex2.mmObject();
@@ -280,11 +314,21 @@ public class LocalMarketAnnex2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
+			type_lazy = () -> ProcessingCharacteristics3.mmObject();
+		}
+
+		@Override
+		public ProcessingCharacteristics3 getValue(LocalMarketAnnex2 obj) {
+			return obj.getRedemptionProcessingCharacteristics();
+		}
+
+		@Override
+		public void setValue(LocalMarketAnnex2 obj, ProcessingCharacteristics3 value) {
+			obj.setRedemptionProcessingCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "SttlmDtls", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount22> settlementDetails;
+	protected List<CashAccount22> settlementDetails;
 	/**
 	 * 
 	 <p>
@@ -316,7 +360,7 @@ public class LocalMarketAnnex2 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LocalMarketAnnex2, List<CashAccount22>> mmSettlementDetails = new MMMessageAssociationEnd<LocalMarketAnnex2, List<CashAccount22>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmSettlementAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex2.mmObject();
@@ -327,7 +371,17 @@ public class LocalMarketAnnex2 {
 			definition = "Account to or from which a cash entry is made.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
+			type_lazy = () -> CashAccount22.mmObject();
+		}
+
+		@Override
+		public List<CashAccount22> getValue(LocalMarketAnnex2 obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(LocalMarketAnnex2 obj, List<CashAccount22> value) {
+			obj.setSettlementDetails(value);
 		}
 	};
 
@@ -360,7 +414,7 @@ public class LocalMarketAnnex2 {
 		return localOrderDesk;
 	}
 
-	public LocalMarketAnnex2 setLocalOrderDesk(com.tools20022.repository.msg.ContactAttributes1 localOrderDesk) {
+	public LocalMarketAnnex2 setLocalOrderDesk(ContactAttributes1 localOrderDesk) {
 		this.localOrderDesk = Objects.requireNonNull(localOrderDesk);
 		return this;
 	}
@@ -369,7 +423,7 @@ public class LocalMarketAnnex2 {
 		return subscriptionProcessingCharacteristics;
 	}
 
-	public LocalMarketAnnex2 setSubscriptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics2 subscriptionProcessingCharacteristics) {
+	public LocalMarketAnnex2 setSubscriptionProcessingCharacteristics(ProcessingCharacteristics2 subscriptionProcessingCharacteristics) {
 		this.subscriptionProcessingCharacteristics = Objects.requireNonNull(subscriptionProcessingCharacteristics);
 		return this;
 	}
@@ -378,7 +432,7 @@ public class LocalMarketAnnex2 {
 		return redemptionProcessingCharacteristics;
 	}
 
-	public LocalMarketAnnex2 setRedemptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics3 redemptionProcessingCharacteristics) {
+	public LocalMarketAnnex2 setRedemptionProcessingCharacteristics(ProcessingCharacteristics3 redemptionProcessingCharacteristics) {
 		this.redemptionProcessingCharacteristics = Objects.requireNonNull(redemptionProcessingCharacteristics);
 		return this;
 	}
@@ -387,7 +441,7 @@ public class LocalMarketAnnex2 {
 		return settlementDetails == null ? settlementDetails = new ArrayList<>() : settlementDetails;
 	}
 
-	public LocalMarketAnnex2 setSettlementDetails(List<com.tools20022.repository.msg.CashAccount22> settlementDetails) {
+	public LocalMarketAnnex2 setSettlementDetails(List<CashAccount22> settlementDetails) {
 		this.settlementDetails = Objects.requireNonNull(settlementDetails);
 		return this;
 	}

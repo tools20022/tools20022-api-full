@@ -121,7 +121,7 @@ public class PriceInformation3 {
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation3, PriceRateOrAmountOrUnknownChoice> mmValue = new MMMessageAttribute<PriceInformation3, PriceRateOrAmountOrUnknownChoice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
@@ -133,6 +133,16 @@ public class PriceInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PriceRateOrAmountOrUnknownChoice.mmObject();
+		}
+
+		@Override
+		public PriceRateOrAmountOrUnknownChoice getValue(PriceInformation3 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(PriceInformation3 obj, PriceRateOrAmountOrUnknownChoice value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "PricTp", required = true)
@@ -171,7 +181,7 @@ public class PriceInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceInformation3, UnitPriceType1Choice> mmPriceType = new MMMessageAssociationEnd<PriceInformation3, UnitPriceType1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
@@ -184,6 +194,16 @@ public class PriceInformation3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnitPriceType1Choice.mmObject();
+		}
+
+		@Override
+		public UnitPriceType1Choice getValue(PriceInformation3 obj) {
+			return obj.getPriceType();
+		}
+
+		@Override
+		public void setValue(PriceInformation3 obj, UnitPriceType1Choice value) {
+			obj.setPriceType(value);
 		}
 	};
 	@XmlElement(name = "SrcOfPric")
@@ -221,7 +241,7 @@ public class PriceInformation3 {
 	 * definition} = "Place from which the price was obtained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceOfPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation3, Optional<PriceSourceFormatChoice>> mmSourceOfPrice = new MMMessageAttribute<PriceInformation3, Optional<PriceSourceFormatChoice>>() {
 		{
 			businessComponentTrace_lazy = () -> SourceOfPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
@@ -233,6 +253,16 @@ public class PriceInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceSourceFormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceSourceFormatChoice> getValue(PriceInformation3 obj) {
+			return obj.getSourceOfPrice();
+		}
+
+		@Override
+		public void setValue(PriceInformation3 obj, Optional<PriceSourceFormatChoice> value) {
+			obj.setSourceOfPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtnDt")
@@ -272,7 +302,7 @@ public class PriceInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation3, Optional<DateAndDateTimeChoice>> mmQuotationDate = new MMMessageAttribute<PriceInformation3, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmQuotationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
@@ -284,6 +314,16 @@ public class PriceInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PriceInformation3 obj) {
+			return obj.getQuotationDate();
+		}
+
+		@Override
+		public void setValue(PriceInformation3 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setQuotationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "YlddInd")
@@ -323,7 +363,7 @@ public class PriceInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYieldedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation3, Optional<YesNoIndicator>> mmYieldedIndicator = new MMMessageAttribute<PriceInformation3, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmYielded;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation3.mmObject();
@@ -335,6 +375,16 @@ public class PriceInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(PriceInformation3 obj) {
+			return obj.getYieldedIndicator();
+		}
+
+		@Override
+		public void setValue(PriceInformation3 obj, Optional<YesNoIndicator> value) {
+			obj.setYieldedIndicator(value.orElse(null));
 		}
 	};
 

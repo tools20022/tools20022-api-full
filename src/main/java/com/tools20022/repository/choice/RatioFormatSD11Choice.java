@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.RateType12FormatChoice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.QuantityToQuantityRatio1;
 import java.util.Arrays;
@@ -98,7 +99,7 @@ public class RatioFormatSD11Choice {
 	 * "The ratio is expressed as a quantity per another quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityToQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormatSD11Choice, QuantityToQuantityRatio1> mmQuantityToQuantity = new MMMessageAttribute<RatioFormatSD11Choice, QuantityToQuantityRatio1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormatSD11Choice.mmObject();
 			isDerived = false;
@@ -109,6 +110,16 @@ public class RatioFormatSD11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityToQuantityRatio1.mmObject();
+		}
+
+		@Override
+		public QuantityToQuantityRatio1 getValue(RatioFormatSD11Choice obj) {
+			return obj.getQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormatSD11Choice obj, QuantityToQuantityRatio1 value) {
+			obj.setQuantityToQuantity(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -141,7 +152,7 @@ public class RatioFormatSD11Choice {
 	 * definition} = "The value of the ratio is not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormatSD11Choice, RateType12FormatChoice> mmNotSpecifiedRate = new MMMessageAttribute<RatioFormatSD11Choice, RateType12FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormatSD11Choice.mmObject();
 			isDerived = false;
@@ -151,7 +162,17 @@ public class RatioFormatSD11Choice {
 			definition = "The value of the ratio is not specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.RateType12FormatChoice.mmObject();
+			complexType_lazy = () -> RateType12FormatChoice.mmObject();
+		}
+
+		@Override
+		public RateType12FormatChoice getValue(RatioFormatSD11Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RatioFormatSD11Choice obj, RateType12FormatChoice value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 
@@ -181,7 +202,7 @@ public class RatioFormatSD11Choice {
 		return notSpecifiedRate;
 	}
 
-	public RatioFormatSD11Choice setNotSpecifiedRate(com.tools20022.repository.choice.RateType12FormatChoice notSpecifiedRate) {
+	public RatioFormatSD11Choice setNotSpecifiedRate(RateType12FormatChoice notSpecifiedRate) {
 		this.notSpecifiedRate = Objects.requireNonNull(notSpecifiedRate);
 		return this;
 	}

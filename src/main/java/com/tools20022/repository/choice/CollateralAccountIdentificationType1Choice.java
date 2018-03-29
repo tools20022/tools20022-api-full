@@ -124,7 +124,7 @@ public class CollateralAccountIdentificationType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAccountIdentificationType1Choice, Optional<CollateralAccountType1Code>> mmType = new MMMessageAttribute<CollateralAccountIdentificationType1Choice, Optional<CollateralAccountType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralAccountIdentificationType1Choice.mmObject();
@@ -137,6 +137,16 @@ public class CollateralAccountIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CollateralAccountType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralAccountType1Code> getValue(CollateralAccountIdentificationType1Choice obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CollateralAccountIdentificationType1Choice obj, Optional<CollateralAccountType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -183,7 +193,7 @@ public class CollateralAccountIdentificationType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAccountIdentificationType1Choice, GenericIdentification29> mmProprietary = new MMMessageAttribute<CollateralAccountIdentificationType1Choice, GenericIdentification29>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralAccountIdentificationType1Choice.mmObject();
@@ -196,6 +206,16 @@ public class CollateralAccountIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification29.mmObject();
+		}
+
+		@Override
+		public GenericIdentification29 getValue(CollateralAccountIdentificationType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CollateralAccountIdentificationType1Choice obj, GenericIdentification29 value) {
+			obj.setProprietary(value);
 		}
 	};
 

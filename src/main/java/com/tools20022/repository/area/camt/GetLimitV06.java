@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.LimitQuery3;
 import com.tools20022.repository.msg.MessageHeader9;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -75,7 +74,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GetLimitV06"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -113,7 +112,7 @@ public class GetLimitV06 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetLimitV06, MessageHeader9> mmMessageHeader = new MMMessageBuildingBlock<GetLimitV06, MessageHeader9>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,12 +123,14 @@ public class GetLimitV06 {
 			complexType_lazy = () -> MessageHeader9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetLimitV06.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader9 getValue(GetLimitV06 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(GetLimitV06 obj, MessageHeader9 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "LmtQryDef")
@@ -156,7 +157,7 @@ public class GetLimitV06 {
 	 * definition} = "Defines the limit query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmLimitQueryDefinition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetLimitV06, Optional<LimitQuery3>> mmLimitQueryDefinition = new MMMessageBuildingBlock<GetLimitV06, Optional<LimitQuery3>>() {
 		{
 			xmlTag = "LmtQryDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,12 +168,14 @@ public class GetLimitV06 {
 			complexType_lazy = () -> LimitQuery3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetLimitV06.class.getMethod("getLimitQueryDefinition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<LimitQuery3> getValue(GetLimitV06 obj) {
+			return obj.getLimitQueryDefinition();
+		}
+
+		@Override
+		public void setValue(GetLimitV06 obj, Optional<LimitQuery3> value) {
+			obj.setLimitQueryDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -202,7 +205,7 @@ public class GetLimitV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetLimitV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<GetLimitV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,19 +215,21 @@ public class GetLimitV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetLimitV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(GetLimitV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(GetLimitV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GetLimitV06";
 				definition = "The GetLimit message is used to request information on the details of one or more limits set by the member (or on behalf of the member) and managed by the transaction administrator.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

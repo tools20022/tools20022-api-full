@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.BalanceQuantity7Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -110,7 +111,7 @@ public class ClosingBalance2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinal = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClosingBalance2Choice, BalanceQuantity7Choice> mmFinal = new MMMessageAssociationEnd<ClosingBalance2Choice, BalanceQuantity7Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingBalance2Choice.mmObject();
@@ -123,7 +124,17 @@ public class ClosingBalance2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.BalanceQuantity7Choice.mmObject();
+			type_lazy = () -> BalanceQuantity7Choice.mmObject();
+		}
+
+		@Override
+		public BalanceQuantity7Choice getValue(ClosingBalance2Choice obj) {
+			return obj.getFinal();
+		}
+
+		@Override
+		public void setValue(ClosingBalance2Choice obj, BalanceQuantity7Choice value) {
+			obj.setFinal(value);
 		}
 	};
 	@XmlElement(name = "Intrmy", required = true)
@@ -165,7 +176,7 @@ public class ClosingBalance2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClosingBalance2Choice, BalanceQuantity7Choice> mmIntermediary = new MMMessageAssociationEnd<ClosingBalance2Choice, BalanceQuantity7Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosingBalance2Choice.mmObject();
@@ -178,7 +189,17 @@ public class ClosingBalance2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.BalanceQuantity7Choice.mmObject();
+			type_lazy = () -> BalanceQuantity7Choice.mmObject();
+		}
+
+		@Override
+		public BalanceQuantity7Choice getValue(ClosingBalance2Choice obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(ClosingBalance2Choice obj, BalanceQuantity7Choice value) {
+			obj.setIntermediary(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class ClosingBalance2Choice {
 		return final_;
 	}
 
-	public ClosingBalance2Choice setFinal(com.tools20022.repository.choice.BalanceQuantity7Choice final_) {
+	public ClosingBalance2Choice setFinal(BalanceQuantity7Choice final_) {
 		this.final_ = Objects.requireNonNull(final_);
 		return this;
 	}
@@ -209,7 +230,7 @@ public class ClosingBalance2Choice {
 		return intermediary;
 	}
 
-	public ClosingBalance2Choice setIntermediary(com.tools20022.repository.choice.BalanceQuantity7Choice intermediary) {
+	public ClosingBalance2Choice setIntermediary(BalanceQuantity7Choice intermediary) {
 		this.intermediary = Objects.requireNonNull(intermediary);
 		return this;
 	}

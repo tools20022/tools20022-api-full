@@ -111,7 +111,7 @@ public class AdditionalBalanceInformation3 {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalBalanceInformation3, SubBalanceQuantity1Choice> mmQuantity = new MMMessageAttribute<AdditionalBalanceInformation3, SubBalanceQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation3.mmObject();
@@ -123,6 +123,16 @@ public class AdditionalBalanceInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceQuantity1Choice getValue(AdditionalBalanceInformation3 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(AdditionalBalanceInformation3 obj, SubBalanceQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "AddtlBalInf", required = true)
@@ -161,7 +171,7 @@ public class AdditionalBalanceInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalBalanceInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AdditionalBalanceInformation3, SubBalanceType1Choice> mmAdditionalBalanceInformation = new MMMessageAssociationEnd<AdditionalBalanceInformation3, SubBalanceType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation3.mmObject();
@@ -174,6 +184,16 @@ public class AdditionalBalanceInformation3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SubBalanceType1Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceType1Choice getValue(AdditionalBalanceInformation3 obj) {
+			return obj.getAdditionalBalanceInformation();
+		}
+
+		@Override
+		public void setValue(AdditionalBalanceInformation3 obj, SubBalanceType1Choice value) {
+			obj.setAdditionalBalanceInformation(value);
 		}
 	};
 

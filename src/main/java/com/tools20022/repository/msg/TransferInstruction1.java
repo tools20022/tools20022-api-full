@@ -112,7 +112,7 @@ public class TransferInstruction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstruction1, Optional<YesNoIndicator>> mmTransferIndicator = new MMMessageAttribute<TransferInstruction1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstruction1.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class TransferInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(TransferInstruction1 obj) {
+			return obj.getTransferIndicator();
+		}
+
+		@Override
+		public void setValue(TransferInstruction1 obj, Optional<YesNoIndicator> value) {
+			obj.setTransferIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -152,20 +162,31 @@ public class TransferInstruction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the additional switch parameter(s) to be supplied."</li>
+	 * "Specifies an additional parameter to be applied to the requested transaction schedule."
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstruction1, Max35Text> mmCode = new MMMessageAttribute<TransferInstruction1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Specifies the additional switch parameter(s) to be supplied.";
+			definition = "Specifies an additional parameter to be applied to the requested transaction schedule.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransferInstruction1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TransferInstruction1 obj, Max35Text value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -194,20 +215,32 @@ public class TransferInstruction1 {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Additional switch parameter(s) in a proprietary format."</li>
+	 * definition} =
+	 * "Specifies an additional parameter to be applied to the transaction schedule in a proprietary format."
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstruction1, Optional<Max256Text>> mmProprietary = new MMMessageAttribute<TransferInstruction1, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Additional switch parameter(s) in a proprietary format.";
+			definition = "Specifies an additional parameter to be applied to the transaction schedule in a proprietary format.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(TransferInstruction1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TransferInstruction1 obj, Optional<Max256Text> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDtTm")
@@ -240,7 +273,7 @@ public class TransferInstruction1 {
 	 * "The date and time at which the event specified by Code commences."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstruction1, Optional<ISODateTime>> mmStartDateTime = new MMMessageAttribute<TransferInstruction1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstruction1.mmObject();
 			isDerived = false;
@@ -251,6 +284,16 @@ public class TransferInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TransferInstruction1 obj) {
+			return obj.getStartDateTime();
+		}
+
+		@Override
+		public void setValue(TransferInstruction1 obj, Optional<ISODateTime> value) {
+			obj.setStartDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -282,7 +325,7 @@ public class TransferInstruction1 {
 	 * definition} = "The date on which the event specified by Code commences."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstruction1, Optional<ISODate>> mmStartDate = new MMMessageAttribute<TransferInstruction1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstruction1.mmObject();
 			isDerived = false;
@@ -293,6 +336,16 @@ public class TransferInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransferInstruction1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(TransferInstruction1 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -324,7 +377,7 @@ public class TransferInstruction1 {
 	 * definition} = "Additional switch parameters in a free text format.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstruction1, Optional<Max350Text>> mmDescription = new MMMessageAttribute<TransferInstruction1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstruction1.mmObject();
 			isDerived = false;
@@ -335,6 +388,16 @@ public class TransferInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransferInstruction1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(TransferInstruction1 obj, Optional<Max350Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

@@ -52,12 +52,16 @@ public class ConstraintDomainOrProprietaryRule {
 	 */
 	public static final MMConstraint<BankTransactionCodeStructure4> forBankTransactionCodeStructure4 = new MMConstraint<BankTransactionCodeStructure4>() {
 		{
-			validator = ConstraintDomainOrProprietaryRule::checkBankTransactionCodeStructure4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomainOrProprietaryRule";
 			definition = "Either Proprietary or Domain or both must be present.";
 			owner_lazy = () -> BankTransactionCodeStructure4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Domain</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Proprietary</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(BankTransactionCodeStructure4 obj) throws Exception {
+			checkBankTransactionCodeStructure4(obj);
 		}
 	};
 

@@ -107,7 +107,7 @@ public class SettlementTax1 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTax1, Optional<TaxTypeFormat1Choice>> mmTypeCode = new MMMessageAttribute<SettlementTax1, Optional<TaxTypeFormat1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTax1.mmObject();
@@ -119,6 +119,16 @@ public class SettlementTax1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TaxTypeFormat1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxTypeFormat1Choice> getValue(SettlementTax1 obj) {
+			return obj.getTypeCode();
+		}
+
+		@Override
+		public void setValue(SettlementTax1 obj, Optional<TaxTypeFormat1Choice> value) {
+			obj.setTypeCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClctdAmt")
@@ -156,7 +166,7 @@ public class SettlementTax1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculatedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTax1, List<CurrencyAndAmount>> mmCalculatedAmount = new MMMessageAttribute<SettlementTax1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTax1.mmObject();
@@ -167,6 +177,16 @@ public class SettlementTax1 {
 			definition = "Monetary value resulting from the calculation of this tax, levy or duty.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementTax1 obj) {
+			return obj.getCalculatedAmount();
+		}
+
+		@Override
+		public void setValue(SettlementTax1 obj, List<CurrencyAndAmount> value) {
+			obj.setCalculatedAmount(value);
 		}
 	};
 	@XmlElement(name = "BsisAmt")
@@ -204,7 +224,7 @@ public class SettlementTax1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasisAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTax1, List<CurrencyAndAmount>> mmBasisAmount = new MMMessageAttribute<SettlementTax1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTax1.mmObject();
@@ -215,6 +235,16 @@ public class SettlementTax1 {
 			definition = "Monetary value used as the basis on which this tax, levy or duty is calculated.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementTax1 obj) {
+			return obj.getBasisAmount();
+		}
+
+		@Override
+		public void setValue(SettlementTax1 obj, List<CurrencyAndAmount> value) {
+			obj.setBasisAmount(value);
 		}
 	};
 	@XmlElement(name = "TaxPtDt")
@@ -251,7 +281,7 @@ public class SettlementTax1 {
 	 * "Date of the tax point when this tax, levy or duty becomes applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxPointDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTax1, Optional<ISODate>> mmTaxPointDate = new MMMessageAttribute<SettlementTax1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTax1.mmObject();
@@ -263,6 +293,16 @@ public class SettlementTax1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SettlementTax1 obj) {
+			return obj.getTaxPointDate();
+		}
+
+		@Override
+		public void setValue(SettlementTax1 obj, Optional<ISODate> value) {
+			obj.setTaxPointDate(value.orElse(null));
 		}
 	};
 

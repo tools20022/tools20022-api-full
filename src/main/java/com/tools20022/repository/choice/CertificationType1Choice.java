@@ -108,7 +108,7 @@ public class CertificationType1Choice {
 	 * definition} = "Certificate type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificationType1Choice, CertificateType2Code> mmCode = new MMMessageAttribute<CertificationType1Choice, CertificateType2Code>() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCertificateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertificationType1Choice.mmObject();
@@ -120,6 +120,16 @@ public class CertificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CertificateType2Code.mmObject();
+		}
+
+		@Override
+		public CertificateType2Code getValue(CertificationType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CertificationType1Choice obj, CertificateType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class CertificationType1Choice {
 	 * definition} = "Certificate type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificationType1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<CertificationType1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> PrivateCertificate.mmCertificateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertificationType1Choice.mmObject();
@@ -169,6 +179,16 @@ public class CertificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CertificationType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CertificationType1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

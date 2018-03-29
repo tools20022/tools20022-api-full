@@ -25,6 +25,7 @@ import com.tools20022.repository.area.sese.SecuritiesTransactionStatusQueryV04;
 import com.tools20022.repository.choice.DocumentNumber5Choice;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Identification15;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,7 +130,7 @@ public class DocumentNumber12 {
 	 * DocumentNumber9.mmNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentNumber12, DocumentNumber5Choice> mmNumber = new MMMessageAssociationEnd<DocumentNumber12, DocumentNumber5Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentNumber12.mmObject();
 			isDerived = false;
@@ -144,9 +145,19 @@ public class DocumentNumber12 {
 			isComposite = true;
 			type_lazy = () -> DocumentNumber5Choice.mmObject();
 		}
+
+		@Override
+		public DocumentNumber5Choice getValue(DocumentNumber12 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber12 obj, DocumentNumber5Choice value) {
+			obj.setNumber(value);
+		}
 	};
 	@XmlElement(name = "Refs", required = true)
-	protected List<com.tools20022.repository.msg.Identification15> references;
+	protected List<Identification15> references;
 	/**
 	 * 
 	 <p>
@@ -182,7 +193,7 @@ public class DocumentNumber12 {
 	 * DocumentNumber9.mmReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentNumber12, List<Identification15>> mmReferences = new MMMessageAssociationEnd<DocumentNumber12, List<Identification15>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentNumber12.mmObject();
 			isDerived = false;
@@ -194,7 +205,17 @@ public class DocumentNumber12 {
 			previousVersion_lazy = () -> DocumentNumber9.mmReferences;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Identification15.mmObject();
+			type_lazy = () -> Identification15.mmObject();
+		}
+
+		@Override
+		public List<Identification15> getValue(DocumentNumber12 obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(DocumentNumber12 obj, List<Identification15> value) {
+			obj.setReferences(value);
 		}
 	};
 
@@ -228,7 +249,7 @@ public class DocumentNumber12 {
 		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public DocumentNumber12 setReferences(List<com.tools20022.repository.msg.Identification15> references) {
+	public DocumentNumber12 setReferences(List<Identification15> references) {
 		this.references = Objects.requireNonNull(references);
 		return this;
 	}

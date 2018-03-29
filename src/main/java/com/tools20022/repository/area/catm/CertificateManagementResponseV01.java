@@ -21,12 +21,11 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.TerminalManagementLatestVersion;
+import com.tools20022.repository.area.TerminalManagementPreviousVersion;
 import com.tools20022.repository.msg.CertificateManagementResponse1;
 import com.tools20022.repository.msg.ContentInformationType13;
 import com.tools20022.repository.msg.Header29;
-import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -59,8 +58,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
- * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOPreviousversion
+ * CardPaymentsExchangesTerminalManagementISOPreviousversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -69,8 +68,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CertMgmtRspn"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
- * TerminalManagementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.TerminalManagementPreviousVersion
+ * TerminalManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.008.001.01}</li>
@@ -131,7 +130,7 @@ public class CertificateManagementResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CertificateManagementResponseV01, Header29> mmHeader = new MMMessageBuildingBlock<CertificateManagementResponseV01, Header29>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +142,14 @@ public class CertificateManagementResponseV01 {
 			complexType_lazy = () -> Header29.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CertificateManagementResponseV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header29 getValue(CertificateManagementResponseV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(CertificateManagementResponseV01 obj, Header29 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "CertMgmtRspn", required = true)
@@ -186,7 +187,7 @@ public class CertificateManagementResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCertificateManagementResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CertificateManagementResponseV01, CertificateManagementResponse1> mmCertificateManagementResponse = new MMMessageBuildingBlock<CertificateManagementResponseV01, CertificateManagementResponse1>() {
 		{
 			xmlTag = "CertMgmtRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,12 +199,14 @@ public class CertificateManagementResponseV01 {
 			complexType_lazy = () -> CertificateManagementResponse1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CertificateManagementResponseV01.class.getMethod("getCertificateManagementResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CertificateManagementResponse1 getValue(CertificateManagementResponseV01 obj) {
+			return obj.getCertificateManagementResponse();
+		}
+
+		@Override
+		public void setValue(CertificateManagementResponseV01 obj, CertificateManagementResponse1 value) {
+			obj.setCertificateManagementResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -240,7 +243,7 @@ public class CertificateManagementResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CertificateManagementResponseV01, Optional<ContentInformationType13>> mmSecurityTrailer = new MMMessageBuildingBlock<CertificateManagementResponseV01, Optional<ContentInformationType13>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,12 +255,14 @@ public class CertificateManagementResponseV01 {
 			complexType_lazy = () -> ContentInformationType13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CertificateManagementResponseV01.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType13> getValue(CertificateManagementResponseV01 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(CertificateManagementResponseV01 obj, Optional<ContentInformationType13> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
@@ -268,10 +273,10 @@ public class CertificateManagementResponseV01 {
 				name = "CertificateManagementResponseV01";
 				definition = "The CertificateManagementResponse is sent by a terminal manager in response to a CertificateManagementRequest to provide the outcome of the requested service.";
 				nextVersions_lazy = () -> Arrays.asList(CertificateManagementResponseV02.mmObject());
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CertMgmtRspn";
-				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();
+				businessArea_lazy = () -> TerminalManagementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmHeader,
 						com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmCertificateManagementResponse, com.tools20022.repository.area.catm.CertificateManagementResponseV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

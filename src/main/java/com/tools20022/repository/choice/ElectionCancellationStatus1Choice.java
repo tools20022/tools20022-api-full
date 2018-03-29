@@ -120,7 +120,7 @@ public class ElectionCancellationStatus1Choice {
 	 * "Provides information about the processing status of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ElectionCancellationStatus1Choice, CorporateActionCancellationProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<ElectionCancellationStatus1Choice, CorporateActionCancellationProcessingStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionCancellationStatus1Choice.mmObject();
@@ -133,6 +133,16 @@ public class ElectionCancellationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionCancellationProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionCancellationProcessingStatus1 getValue(ElectionCancellationStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(ElectionCancellationStatus1Choice obj, CorporateActionCancellationProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -169,7 +179,7 @@ public class ElectionCancellationStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ElectionCancellationStatus1Choice, CorporateActionCancellationRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<ElectionCancellationStatus1Choice, CorporateActionCancellationRejectionStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionCancellationStatus1Choice.mmObject();
@@ -182,6 +192,16 @@ public class ElectionCancellationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionCancellationRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionCancellationRejectionStatus1 getValue(ElectionCancellationStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(ElectionCancellationStatus1Choice obj, CorporateActionCancellationRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

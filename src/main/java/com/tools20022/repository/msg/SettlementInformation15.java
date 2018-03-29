@@ -24,6 +24,8 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4;
+import com.tools20022.repository.msg.CashAccount16;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -130,7 +132,7 @@ public class SettlementInformation15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructingReimbursementAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInformation15, Optional<BranchAndFinancialInstitutionIdentification4>> mmInstructingReimbursementAgent = new MMMessageAssociationEnd<SettlementInformation15, Optional<BranchAndFinancialInstitutionIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation15.mmObject();
@@ -142,7 +144,17 @@ public class SettlementInformation15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification4> getValue(SettlementInformation15 obj) {
+			return obj.getInstructingReimbursementAgent();
+		}
+
+		@Override
+		public void setValue(SettlementInformation15 obj, Optional<BranchAndFinancialInstitutionIdentification4> value) {
+			obj.setInstructingReimbursementAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstgRmbrsmntAgtAcct")
@@ -179,7 +191,7 @@ public class SettlementInformation15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructingReimbursementAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInformation15, Optional<CashAccount16>> mmInstructingReimbursementAgentAccount = new MMMessageAssociationEnd<SettlementInformation15, Optional<CashAccount16>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation15.mmObject();
@@ -191,7 +203,17 @@ public class SettlementInformation15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			type_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount16> getValue(SettlementInformation15 obj) {
+			return obj.getInstructingReimbursementAgentAccount();
+		}
+
+		@Override
+		public void setValue(SettlementInformation15 obj, Optional<CashAccount16> value) {
+			obj.setInstructingReimbursementAgentAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdRmbrsmntAgt")
@@ -230,7 +252,7 @@ public class SettlementInformation15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedReimbursementAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInformation15, Optional<BranchAndFinancialInstitutionIdentification4>> mmInstructedReimbursementAgent = new MMMessageAssociationEnd<SettlementInformation15, Optional<BranchAndFinancialInstitutionIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation15.mmObject();
@@ -242,7 +264,17 @@ public class SettlementInformation15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification4> getValue(SettlementInformation15 obj) {
+			return obj.getInstructedReimbursementAgent();
+		}
+
+		@Override
+		public void setValue(SettlementInformation15 obj, Optional<BranchAndFinancialInstitutionIdentification4> value) {
+			obj.setInstructedReimbursementAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdRmbrsmntAgtAcct")
@@ -279,7 +311,7 @@ public class SettlementInformation15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedReimbursementAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInformation15, Optional<CashAccount16>> mmInstructedReimbursementAgentAccount = new MMMessageAssociationEnd<SettlementInformation15, Optional<CashAccount16>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation15.mmObject();
@@ -291,7 +323,17 @@ public class SettlementInformation15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			type_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount16> getValue(SettlementInformation15 obj) {
+			return obj.getInstructedReimbursementAgentAccount();
+		}
+
+		@Override
+		public void setValue(SettlementInformation15 obj, Optional<CashAccount16> value) {
+			obj.setInstructedReimbursementAgentAccount(value.orElse(null));
 		}
 	};
 
@@ -316,7 +358,7 @@ public class SettlementInformation15 {
 		return instructingReimbursementAgent == null ? Optional.empty() : Optional.of(instructingReimbursementAgent);
 	}
 
-	public SettlementInformation15 setInstructingReimbursementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 instructingReimbursementAgent) {
+	public SettlementInformation15 setInstructingReimbursementAgent(BranchAndFinancialInstitutionIdentification4 instructingReimbursementAgent) {
 		this.instructingReimbursementAgent = instructingReimbursementAgent;
 		return this;
 	}
@@ -325,7 +367,7 @@ public class SettlementInformation15 {
 		return instructingReimbursementAgentAccount == null ? Optional.empty() : Optional.of(instructingReimbursementAgentAccount);
 	}
 
-	public SettlementInformation15 setInstructingReimbursementAgentAccount(com.tools20022.repository.msg.CashAccount16 instructingReimbursementAgentAccount) {
+	public SettlementInformation15 setInstructingReimbursementAgentAccount(CashAccount16 instructingReimbursementAgentAccount) {
 		this.instructingReimbursementAgentAccount = instructingReimbursementAgentAccount;
 		return this;
 	}
@@ -334,7 +376,7 @@ public class SettlementInformation15 {
 		return instructedReimbursementAgent == null ? Optional.empty() : Optional.of(instructedReimbursementAgent);
 	}
 
-	public SettlementInformation15 setInstructedReimbursementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 instructedReimbursementAgent) {
+	public SettlementInformation15 setInstructedReimbursementAgent(BranchAndFinancialInstitutionIdentification4 instructedReimbursementAgent) {
 		this.instructedReimbursementAgent = instructedReimbursementAgent;
 		return this;
 	}
@@ -343,7 +385,7 @@ public class SettlementInformation15 {
 		return instructedReimbursementAgentAccount == null ? Optional.empty() : Optional.of(instructedReimbursementAgentAccount);
 	}
 
-	public SettlementInformation15 setInstructedReimbursementAgentAccount(com.tools20022.repository.msg.CashAccount16 instructedReimbursementAgentAccount) {
+	public SettlementInformation15 setInstructedReimbursementAgentAccount(CashAccount16 instructedReimbursementAgentAccount) {
 		this.instructedReimbursementAgentAccount = instructedReimbursementAgentAccount;
 		return this;
 	}

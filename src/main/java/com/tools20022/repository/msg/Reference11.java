@@ -101,7 +101,7 @@ public class Reference11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIOIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference11, Optional<Max35Text>> mmIOIIdentification = new MMMessageAttribute<Reference11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference11.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class Reference11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference11 obj) {
+			return obj.getIOIIdentification();
+		}
+
+		@Override
+		public void setValue(Reference11 obj, Optional<Max35Text> value) {
+			obj.setIOIIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtId")
@@ -147,7 +157,7 @@ public class Reference11 {
 	 * "Unique identifier for quote. Required for previously quoted orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference11, Optional<Max35Text>> mmQuoteIdentification = new MMMessageAttribute<Reference11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference11.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class Reference11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference11 obj) {
+			return obj.getQuoteIdentification();
+		}
+
+		@Override
+		public void setValue(Reference11 obj, Optional<Max35Text> value) {
+			obj.setQuoteIdentification(value.orElse(null));
 		}
 	};
 

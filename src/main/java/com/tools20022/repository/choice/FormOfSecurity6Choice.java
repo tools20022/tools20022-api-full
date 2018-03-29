@@ -119,7 +119,7 @@ public class FormOfSecurity6Choice {
 	 * FormOfSecurity2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FormOfSecurity6Choice, FormOfSecurity1Code> mmCode = new MMMessageAttribute<FormOfSecurity6Choice, FormOfSecurity1Code>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FormOfSecurity6Choice.mmObject();
@@ -133,6 +133,16 @@ public class FormOfSecurity6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
+		}
+
+		@Override
+		public FormOfSecurity1Code getValue(FormOfSecurity6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FormOfSecurity6Choice obj, FormOfSecurity1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -178,7 +188,7 @@ public class FormOfSecurity6Choice {
 	 * FormOfSecurity2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FormOfSecurity6Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<FormOfSecurity6Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FormOfSecurity6Choice.mmObject();
@@ -192,6 +202,16 @@ public class FormOfSecurity6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(FormOfSecurity6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FormOfSecurity6Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

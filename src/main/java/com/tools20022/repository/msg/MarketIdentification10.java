@@ -127,7 +127,7 @@ public class MarketIdentification10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification10, Optional<MarketIdentification2Choice>> mmIdentification = new MMMessageAssociationEnd<MarketIdentification10, Optional<MarketIdentification2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification10.mmObject();
@@ -141,6 +141,16 @@ public class MarketIdentification10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification2Choice> getValue(MarketIdentification10 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MarketIdentification10 obj, Optional<MarketIdentification2Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -179,7 +189,7 @@ public class MarketIdentification10 {
 	 * definition} = "Nature of a market in which transactions take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification10, MarketType7Choice> mmType = new MMMessageAssociationEnd<MarketIdentification10, MarketType7Choice>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification10.mmObject();
@@ -193,6 +203,16 @@ public class MarketIdentification10 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarketType7Choice.mmObject();
+		}
+
+		@Override
+		public MarketType7Choice getValue(MarketIdentification10 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MarketIdentification10 obj, MarketType7Choice value) {
+			obj.setType(value);
 		}
 	};
 

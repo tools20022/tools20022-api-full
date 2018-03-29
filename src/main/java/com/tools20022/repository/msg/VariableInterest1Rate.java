@@ -128,7 +128,7 @@ public class VariableInterest1Rate {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VariableInterest1Rate, Max35Text> mmIndex = new MMMessageAttribute<VariableInterest1Rate, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariableInterest1Rate.mmObject();
@@ -141,6 +141,16 @@ public class VariableInterest1Rate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(VariableInterest1Rate obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(VariableInterest1Rate obj, Max35Text value) {
+			obj.setIndex(value);
 		}
 	};
 	@XmlElement(name = "BsisPtSprd")
@@ -179,7 +189,7 @@ public class VariableInterest1Rate {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasisPointSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VariableInterest1Rate, Optional<Number>> mmBasisPointSpread = new MMMessageAttribute<VariableInterest1Rate, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmBasisPointSpread;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VariableInterest1Rate.mmObject();
@@ -191,6 +201,16 @@ public class VariableInterest1Rate {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(VariableInterest1Rate obj) {
+			return obj.getBasisPointSpread();
+		}
+
+		@Override
+		public void setValue(VariableInterest1Rate obj, Optional<Number> value) {
+			obj.setBasisPointSpread(value.orElse(null));
 		}
 	};
 

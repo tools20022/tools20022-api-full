@@ -51,11 +51,15 @@ public class ConstraintVesselNameBPORule {
 	 */
 	public static final MMConstraint<SingleTransport8> forSingleTransport8 = new MMConstraint<SingleTransport8>() {
 		{
-			validator = ConstraintVesselNameBPORule::checkSingleTransport8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VesselNameBPORule";
 			definition = "In case of transport by sea, VesselName must be present if PaymentObligation (BPO) is used in this transaction.”.";
 			owner_lazy = () -> SingleTransport8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SingleTransport8 obj) throws Exception {
+			checkSingleTransport8(obj);
 		}
 	};
 

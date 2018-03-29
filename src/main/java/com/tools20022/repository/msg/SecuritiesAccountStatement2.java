@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -109,7 +110,7 @@ public class SecuritiesAccountStatement2 {
 	 * SecuritiesAccountStatement1.mmSystemDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountStatement2, ISODate> mmSystemDate = new MMMessageAttribute<SecuritiesAccountStatement2, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatement2.mmObject();
 			isDerived = false;
@@ -122,9 +123,19 @@ public class SecuritiesAccountStatement2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public ISODate getValue(SecuritiesAccountStatement2 obj) {
+			return obj.getSystemDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountStatement2 obj, ISODate value) {
+			obj.setSystemDate(value);
+		}
 	};
 	@XmlElement(name = "Chng")
-	protected List<com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange2> change;
+	protected List<SecuritiesAccountReferenceDataChange2> change;
 	/**
 	 * 
 	 <p>
@@ -159,7 +170,7 @@ public class SecuritiesAccountStatement2 {
 	 * SecuritiesAccountStatement1.mmChange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountStatement2, List<SecuritiesAccountReferenceDataChange2>> mmChange = new MMMessageAssociationEnd<SecuritiesAccountStatement2, List<SecuritiesAccountReferenceDataChange2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatement2.mmObject();
 			isDerived = false;
@@ -170,7 +181,17 @@ public class SecuritiesAccountStatement2 {
 			previousVersion_lazy = () -> SecuritiesAccountStatement1.mmChange;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange2.mmObject();
+			type_lazy = () -> SecuritiesAccountReferenceDataChange2.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccountReferenceDataChange2> getValue(SecuritiesAccountStatement2 obj) {
+			return obj.getChange();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountStatement2 obj, List<SecuritiesAccountReferenceDataChange2> value) {
+			obj.setChange(value);
 		}
 	};
 
@@ -201,7 +222,7 @@ public class SecuritiesAccountStatement2 {
 		return change == null ? change = new ArrayList<>() : change;
 	}
 
-	public SecuritiesAccountStatement2 setChange(List<com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange2> change) {
+	public SecuritiesAccountStatement2 setChange(List<SecuritiesAccountReferenceDataChange2> change) {
 		this.change = Objects.requireNonNull(change);
 		return this;
 	}

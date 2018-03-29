@@ -115,7 +115,7 @@ public class FreightCommodityDry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FreightCommodityDry1, AssetClassProductType4Code> mmBaseProduct = new MMMessageAttribute<FreightCommodityDry1, AssetClassProductType4Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FreightCommodityDry1.mmObject();
@@ -127,6 +127,16 @@ public class FreightCommodityDry1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType4Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType4Code getValue(FreightCommodityDry1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(FreightCommodityDry1 obj, AssetClassProductType4Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -164,7 +174,7 @@ public class FreightCommodityDry1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FreightCommodityDry1, AssetClassSubProductType31Code> mmSubProduct = new MMMessageAttribute<FreightCommodityDry1, AssetClassSubProductType31Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FreightCommodityDry1.mmObject();
@@ -176,6 +186,16 @@ public class FreightCommodityDry1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType31Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType31Code getValue(FreightCommodityDry1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(FreightCommodityDry1 obj, AssetClassSubProductType31Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 	@XmlElement(name = "AddtlSubPdct")
@@ -210,7 +230,7 @@ public class FreightCommodityDry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FreightCommodityDry1, Optional<AssetClassDetailedSubProductType14Code>> mmAdditionalSubProduct = new MMMessageAttribute<FreightCommodityDry1, Optional<AssetClassDetailedSubProductType14Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FreightCommodityDry1.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class FreightCommodityDry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassDetailedSubProductType14Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClassDetailedSubProductType14Code> getValue(FreightCommodityDry1 obj) {
+			return obj.getAdditionalSubProduct();
+		}
+
+		@Override
+		public void setValue(FreightCommodityDry1 obj, Optional<AssetClassDetailedSubProductType14Code> value) {
+			obj.setAdditionalSubProduct(value.orElse(null));
 		}
 	};
 

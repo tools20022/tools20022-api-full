@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryQuantity2;
@@ -126,7 +127,7 @@ public class Quantity2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity2Choice, FinancialInstrumentQuantity1Choice> mmQuantity = new MMMessageAssociationEnd<Quantity2Choice, FinancialInstrumentQuantity1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity2Choice.mmObject();
 			isDerived = false;
@@ -138,7 +139,17 @@ public class Quantity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(Quantity2Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity2Choice obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "PrtryQty", required = true)
@@ -177,7 +188,7 @@ public class Quantity2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity2Choice, ProprietaryQuantity2> mmProprietaryQuantity = new MMMessageAssociationEnd<Quantity2Choice, ProprietaryQuantity2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity2Choice.mmObject();
 			isDerived = false;
@@ -190,6 +201,16 @@ public class Quantity2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryQuantity2.mmObject();
+		}
+
+		@Override
+		public ProprietaryQuantity2 getValue(Quantity2Choice obj) {
+			return obj.getProprietaryQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity2Choice obj, ProprietaryQuantity2 value) {
+			obj.setProprietaryQuantity(value);
 		}
 	};
 
@@ -220,7 +241,7 @@ public class Quantity2Choice {
 		return quantity;
 	}
 
-	public Quantity2Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice quantity) {
+	public Quantity2Choice setQuantity(FinancialInstrumentQuantity1Choice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

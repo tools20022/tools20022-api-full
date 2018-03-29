@@ -53,11 +53,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption10> forCorporateActionOption10 = new MMConstraint<CorporateActionOption10>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption10 obj) throws Exception {
+			checkCorporateActionOption10(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption15> forCorporateActionOption15 = new MMConstraint<CorporateActionOption15>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption15 obj) throws Exception {
+			checkCorporateActionOption15(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption20> forCorporateActionOption20 = new MMConstraint<CorporateActionOption20>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption20 obj) throws Exception {
+			checkCorporateActionOption20(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption32> forCorporateActionOption32 = new MMConstraint<CorporateActionOption32>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption32 obj) throws Exception {
+			checkCorporateActionOption32(obj);
 		}
 	};
 	/**
@@ -173,11 +189,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption35> forCorporateActionOption35 = new MMConstraint<CorporateActionOption35>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption35 obj) throws Exception {
+			checkCorporateActionOption35(obj);
 		}
 	};
 	/**
@@ -203,11 +223,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption44> forCorporateActionOption44 = new MMConstraint<CorporateActionOption44>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption44 obj) throws Exception {
+			checkCorporateActionOption44(obj);
 		}
 	};
 	/**
@@ -241,12 +265,16 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption52> forCorporateActionOption52 = new MMConstraint<CorporateActionOption52>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption100);
 			owner_lazy = () -> CorporateActionOption52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption52 obj) throws Exception {
+			checkCorporateActionOption52(obj);
 		}
 	};
 	/**
@@ -272,11 +300,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption55> forCorporateActionOption55 = new MMConstraint<CorporateActionOption55>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption55 obj) throws Exception {
+			checkCorporateActionOption55(obj);
 		}
 	};
 	/**
@@ -302,11 +334,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption3> forCorporateActionOption3 = new MMConstraint<CorporateActionOption3>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption3 obj) throws Exception {
+			checkCorporateActionOption3(obj);
 		}
 	};
 	/**
@@ -332,11 +368,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption17> forCorporateActionOption17 = new MMConstraint<CorporateActionOption17>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption17 obj) throws Exception {
+			checkCorporateActionOption17(obj);
 		}
 	};
 	/**
@@ -362,11 +402,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption19> forCorporateActionOption19 = new MMConstraint<CorporateActionOption19>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption19 obj) throws Exception {
+			checkCorporateActionOption19(obj);
 		}
 	};
 	/**
@@ -392,11 +436,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption34> forCorporateActionOption34 = new MMConstraint<CorporateActionOption34>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption34 obj) throws Exception {
+			checkCorporateActionOption34(obj);
 		}
 	};
 	/**
@@ -422,11 +470,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption36> forCorporateActionOption36 = new MMConstraint<CorporateActionOption36>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption36 obj) throws Exception {
+			checkCorporateActionOption36(obj);
 		}
 	};
 	/**
@@ -452,11 +504,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption45> forCorporateActionOption45 = new MMConstraint<CorporateActionOption45>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption45 obj) throws Exception {
+			checkCorporateActionOption45(obj);
 		}
 	};
 	/**
@@ -490,12 +546,16 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption51> forCorporateActionOption51 = new MMConstraint<CorporateActionOption51>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption101);
 			owner_lazy = () -> CorporateActionOption51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption51 obj) throws Exception {
+			checkCorporateActionOption51(obj);
 		}
 	};
 	/**
@@ -521,11 +581,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption56> forCorporateActionOption56 = new MMConstraint<CorporateActionOption56>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption56 obj) throws Exception {
+			checkCorporateActionOption56(obj);
 		}
 	};
 	/**
@@ -564,13 +628,17 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption100> forCorporateActionOption100 = new MMConstraint<CorporateActionOption100>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption100;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption115);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption52;
 			owner_lazy = () -> CorporateActionOption100.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption100 obj) throws Exception {
+			checkCorporateActionOption100(obj);
 		}
 	};
 	/**
@@ -609,13 +677,17 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption101> forCorporateActionOption101 = new MMConstraint<CorporateActionOption101>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption114);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption51;
 			owner_lazy = () -> CorporateActionOption101.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption101 obj) throws Exception {
+			checkCorporateActionOption101(obj);
 		}
 	};
 	/**
@@ -641,11 +713,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption108> forCorporateActionOption108 = new MMConstraint<CorporateActionOption108>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption108;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption108.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption108 obj) throws Exception {
+			checkCorporateActionOption108(obj);
 		}
 	};
 	/**
@@ -671,11 +747,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption106> forCorporateActionOption106 = new MMConstraint<CorporateActionOption106>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption106;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, eg, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption106.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption106 obj) throws Exception {
+			checkCorporateActionOption106(obj);
 		}
 	};
 	/**
@@ -714,13 +794,17 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption115> forCorporateActionOption115 = new MMConstraint<CorporateActionOption115>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption115;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption129);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption100;
 			owner_lazy = () -> CorporateActionOption115.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption115 obj) throws Exception {
+			checkCorporateActionOption115(obj);
 		}
 	};
 	/**
@@ -759,13 +843,17 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption114> forCorporateActionOption114 = new MMConstraint<CorporateActionOption114>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption114;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption130);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption101;
 			owner_lazy = () -> CorporateActionOption114.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption114 obj) throws Exception {
+			checkCorporateActionOption114(obj);
 		}
 	};
 	/**
@@ -791,11 +879,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption125> forCorporateActionOption125 = new MMConstraint<CorporateActionOption125>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption125;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption125.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption125 obj) throws Exception {
+			checkCorporateActionOption125(obj);
 		}
 	};
 	/**
@@ -821,11 +913,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption127> forCorporateActionOption127 = new MMConstraint<CorporateActionOption127>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption127;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption127.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption127 obj) throws Exception {
+			checkCorporateActionOption127(obj);
 		}
 	};
 	/**
@@ -864,13 +960,17 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption130> forCorporateActionOption130 = new MMConstraint<CorporateActionOption130>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption130;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption138);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption114;
 			owner_lazy = () -> CorporateActionOption130.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption130 obj) throws Exception {
+			checkCorporateActionOption130(obj);
 		}
 	};
 	/**
@@ -909,13 +1009,17 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption129> forCorporateActionOption129 = new MMConstraint<CorporateActionOption129>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption129;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption139);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption115;
 			owner_lazy = () -> CorporateActionOption129.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption129 obj) throws Exception {
+			checkCorporateActionOption129(obj);
 		}
 	};
 	/**
@@ -941,11 +1045,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption135> forCorporateActionOption135 = new MMConstraint<CorporateActionOption135>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption135;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption135.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption135 obj) throws Exception {
+			checkCorporateActionOption135(obj);
 		}
 	};
 	/**
@@ -971,11 +1079,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption133> forCorporateActionOption133 = new MMConstraint<CorporateActionOption133>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption133;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption133.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption133 obj) throws Exception {
+			checkCorporateActionOption133(obj);
 		}
 	};
 	/**
@@ -1006,12 +1118,16 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption138> forCorporateActionOption138 = new MMConstraint<CorporateActionOption138>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption138;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption130;
 			owner_lazy = () -> CorporateActionOption138.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption138 obj) throws Exception {
+			checkCorporateActionOption138(obj);
 		}
 	};
 	/**
@@ -1042,12 +1158,16 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption139> forCorporateActionOption139 = new MMConstraint<CorporateActionOption139>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption139;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption129;
 			owner_lazy = () -> CorporateActionOption139.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption139 obj) throws Exception {
+			checkCorporateActionOption139(obj);
 		}
 	};
 	/**
@@ -1073,11 +1193,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption148> forCorporateActionOption148 = new MMConstraint<CorporateActionOption148>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption148;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption148.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption148 obj) throws Exception {
+			checkCorporateActionOption148(obj);
 		}
 	};
 	/**
@@ -1103,11 +1227,15 @@ public class ConstraintOptionNumberGuideline {
 	 */
 	public static final MMConstraint<CorporateActionOption150> forCorporateActionOption150 = new MMConstraint<CorporateActionOption150>() {
 		{
-			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption150;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption150.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption150 obj) throws Exception {
+			checkCorporateActionOption150(obj);
 		}
 	};
 

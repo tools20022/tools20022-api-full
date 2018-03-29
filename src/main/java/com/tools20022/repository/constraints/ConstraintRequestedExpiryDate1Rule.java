@@ -53,12 +53,16 @@ public class ConstraintRequestedExpiryDate1Rule {
 	 */
 	public static final MMConstraint<Demand1> forDemand1 = new MMConstraint<Demand1>() {
 		{
-			validator = ConstraintRequestedExpiryDate1Rule::checkDemand1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExpiryDate1Rule";
 			definition = "Requested expiry date must be present when demand type is Pay or Extend.";
 			owner_lazy = () -> Demand1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedExpiryDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type</leftOperand><rightOperand>PayOrExtend</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Demand1 obj) throws Exception {
+			checkDemand1(obj);
 		}
 	};
 

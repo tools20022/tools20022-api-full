@@ -148,7 +148,7 @@ public class CounterpartyIdentification2Choice {
 	 * CounterpartyIdentification1Choice.mmLEI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartyIdentification2Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<CounterpartyIdentification2Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyIdentification2Choice.mmObject();
@@ -162,6 +162,16 @@ public class CounterpartyIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(CounterpartyIdentification2Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(CounterpartyIdentification2Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -213,7 +223,7 @@ public class CounterpartyIdentification2Choice {
 	 * CounterpartyIdentification1Choice.mmOther}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartyIdentification2Choice, ReportedPartyIdentification1> mmOther = new MMMessageAssociationEnd<CounterpartyIdentification2Choice, ReportedPartyIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CounterpartyIdentification2Choice.mmObject();
@@ -228,6 +238,16 @@ public class CounterpartyIdentification2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReportedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public ReportedPartyIdentification1 getValue(CounterpartyIdentification2Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(CounterpartyIdentification2Choice obj, ReportedPartyIdentification1 value) {
+			obj.setOther(value);
 		}
 	};
 

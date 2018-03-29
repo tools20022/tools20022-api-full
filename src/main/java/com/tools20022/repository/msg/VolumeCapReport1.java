@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.Period4Choice;
 import com.tools20022.repository.datatype.MICIdentifier;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.VolumeCapReport2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -118,7 +119,7 @@ public class VolumeCapReport1 {
 	 * definition} = "Date or date range the report relates to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VolumeCapReport1, Optional<Period4Choice>> mmReportingPeriod = new MMMessageAssociationEnd<VolumeCapReport1, Optional<Period4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VolumeCapReport1.mmObject();
 			isDerived = false;
@@ -130,6 +131,16 @@ public class VolumeCapReport1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period4Choice> getValue(VolumeCapReport1 obj) {
+			return obj.getReportingPeriod();
+		}
+
+		@Override
+		public void setValue(VolumeCapReport1 obj, Optional<Period4Choice> value) {
+			obj.setReportingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgVn")
@@ -169,7 +180,7 @@ public class VolumeCapReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VolumeCapReport1, Optional<MICIdentifier>> mmTradingVenue = new MMMessageAttribute<VolumeCapReport1, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VolumeCapReport1.mmObject();
@@ -182,9 +193,19 @@ public class VolumeCapReport1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(VolumeCapReport1 obj) {
+			return obj.getTradingVenue();
+		}
+
+		@Override
+		public void setValue(VolumeCapReport1 obj, Optional<MICIdentifier> value) {
+			obj.setTradingVenue(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "InstrmRpt", required = true)
-	protected List<com.tools20022.repository.msg.VolumeCapReport2> instrumentReport;
+	protected List<VolumeCapReport2> instrumentReport;
 	/**
 	 * 
 	 <p>
@@ -211,7 +232,7 @@ public class VolumeCapReport1 {
 	 * definition} = "Volume cap data specific to a reporting period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstrumentReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VolumeCapReport1, List<VolumeCapReport2>> mmInstrumentReport = new MMMessageAssociationEnd<VolumeCapReport1, List<VolumeCapReport2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VolumeCapReport1.mmObject();
 			isDerived = false;
@@ -221,7 +242,17 @@ public class VolumeCapReport1 {
 			definition = "Volume cap data specific to a reporting period.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.VolumeCapReport2.mmObject();
+			type_lazy = () -> VolumeCapReport2.mmObject();
+		}
+
+		@Override
+		public List<VolumeCapReport2> getValue(VolumeCapReport1 obj) {
+			return obj.getInstrumentReport();
+		}
+
+		@Override
+		public void setValue(VolumeCapReport1 obj, List<VolumeCapReport2> value) {
+			obj.setInstrumentReport(value);
 		}
 	};
 
@@ -263,7 +294,7 @@ public class VolumeCapReport1 {
 		return instrumentReport == null ? instrumentReport = new ArrayList<>() : instrumentReport;
 	}
 
-	public VolumeCapReport1 setInstrumentReport(List<com.tools20022.repository.msg.VolumeCapReport2> instrumentReport) {
+	public VolumeCapReport1 setInstrumentReport(List<VolumeCapReport2> instrumentReport) {
 		this.instrumentReport = Objects.requireNonNull(instrumentReport);
 		return this;
 	}

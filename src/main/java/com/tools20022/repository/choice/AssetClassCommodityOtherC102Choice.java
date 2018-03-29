@@ -106,7 +106,7 @@ public class AssetClassCommodityOtherC102Choice {
 	 * definition} = "Other C10 deliverable commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliverable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityOtherC102Choice, OtherC10CommodityDeliverable2> mmDeliverable = new MMMessageAssociationEnd<AssetClassCommodityOtherC102Choice, OtherC10CommodityDeliverable2>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmObject();
@@ -119,6 +119,16 @@ public class AssetClassCommodityOtherC102Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OtherC10CommodityDeliverable2.mmObject();
+		}
+
+		@Override
+		public OtherC10CommodityDeliverable2 getValue(AssetClassCommodityOtherC102Choice obj) {
+			return obj.getDeliverable();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityOtherC102Choice obj, OtherC10CommodityDeliverable2 value) {
+			obj.setDeliverable(value);
 		}
 	};
 	@XmlElement(name = "NonDlvrbl", required = true)
@@ -155,7 +165,7 @@ public class AssetClassCommodityOtherC102Choice {
 	 * definition} = "Other C10 non-deliverable commodity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonDeliverable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AssetClassCommodityOtherC102Choice, OtherC10CommodityNonDeliverable2> mmNonDeliverable = new MMMessageAssociationEnd<AssetClassCommodityOtherC102Choice, OtherC10CommodityNonDeliverable2>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityOtherC102Choice.mmObject();
@@ -168,6 +178,16 @@ public class AssetClassCommodityOtherC102Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OtherC10CommodityNonDeliverable2.mmObject();
+		}
+
+		@Override
+		public OtherC10CommodityNonDeliverable2 getValue(AssetClassCommodityOtherC102Choice obj) {
+			return obj.getNonDeliverable();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodityOtherC102Choice obj, OtherC10CommodityNonDeliverable2 value) {
+			obj.setNonDeliverable(value);
 		}
 	};
 

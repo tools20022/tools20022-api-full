@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MessageIdentification4;
 import com.tools20022.repository.msg.VerificationReport1;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -134,7 +133,7 @@ public class IdentificationVerificationReportV01 {
 	 * definition} = "Identifies the identification assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IdentificationVerificationReportV01, IdentificationAssignment1> mmAssignment = new MMMessageBuildingBlock<IdentificationVerificationReportV01, IdentificationAssignment1>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +144,14 @@ public class IdentificationVerificationReportV01 {
 			complexType_lazy = () -> IdentificationAssignment1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationVerificationReportV01.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IdentificationAssignment1 getValue(IdentificationVerificationReportV01 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(IdentificationVerificationReportV01 obj, IdentificationAssignment1 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "OrgnlAssgnmt")
@@ -179,7 +180,7 @@ public class IdentificationVerificationReportV01 {
 	 * "Provides for the reference to the original identification assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IdentificationVerificationReportV01, Optional<MessageIdentification4>> mmOriginalAssignment = new MMMessageBuildingBlock<IdentificationVerificationReportV01, Optional<MessageIdentification4>>() {
 		{
 			xmlTag = "OrgnlAssgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class IdentificationVerificationReportV01 {
 			complexType_lazy = () -> MessageIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationVerificationReportV01.class.getMethod("getOriginalAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MessageIdentification4> getValue(IdentificationVerificationReportV01 obj) {
+			return obj.getOriginalAssignment();
+		}
+
+		@Override
+		public void setValue(IdentificationVerificationReportV01 obj, Optional<MessageIdentification4> value) {
+			obj.setOriginalAssignment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rpt", required = true)
@@ -225,7 +228,7 @@ public class IdentificationVerificationReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IdentificationVerificationReportV01, List<VerificationReport1>> mmReport = new MMMessageBuildingBlock<IdentificationVerificationReportV01, List<VerificationReport1>>() {
 		{
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,12 +238,14 @@ public class IdentificationVerificationReportV01 {
 			complexType_lazy = () -> VerificationReport1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IdentificationVerificationReportV01.class.getMethod("getReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<VerificationReport1> getValue(IdentificationVerificationReportV01 obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(IdentificationVerificationReportV01 obj, List<VerificationReport1> value) {
+			obj.setReport(value);
 		}
 	};
 

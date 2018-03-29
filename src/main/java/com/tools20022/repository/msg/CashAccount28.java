@@ -112,7 +112,7 @@ public class CashAccount28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount28, AccountIdentification4Choice> mmIdentification = new MMMessageAssociationEnd<CashAccount28, AccountIdentification4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount28.mmObject();
@@ -125,6 +125,16 @@ public class CashAccount28 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification4Choice getValue(CashAccount28 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount28 obj, AccountIdentification4Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -163,7 +173,7 @@ public class CashAccount28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount28, Optional<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<CashAccount28, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount28.mmObject();
@@ -175,6 +185,16 @@ public class CashAccount28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(CashAccount28 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccount28 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -212,7 +232,7 @@ public class CashAccount28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount28, Optional<Max70Text>> mmName = new MMMessageAttribute<CashAccount28, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount28.mmObject();
@@ -224,6 +244,16 @@ public class CashAccount28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CashAccount28 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CashAccount28 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 

@@ -51,11 +51,15 @@ public class ConstraintStandardFeeAmountCalculation {
 	 */
 	public static final MMConstraint<Fee1> forFee1 = new MMConstraint<Fee1>() {
 		{
-			validator = ConstraintStandardFeeAmountCalculation::checkFee1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardFeeAmountCalculation";
 			definition = "If StandardAmount, RequestedAmount and DiscountDetails/Amount are all present, then StandardAmount minus DiscountDetails/Amount must equal RequestedAmount.";
 			owner_lazy = () -> Fee1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Fee1 obj) throws Exception {
+			checkFee1(obj);
 		}
 	};
 

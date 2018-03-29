@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.AgentCAElectionAdviceV01;
 import com.tools20022.repository.codeset.ElectionType1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentIdentification8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class ElectionAdviceFunction1 {
 	 * definition} = "Type of election advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ElectionAdviceFunction1, ElectionType1Code> mmElectionType = new MMMessageAttribute<ElectionAdviceFunction1, ElectionType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ElectionAdviceFunction1.mmObject();
 			isDerived = false;
@@ -135,6 +136,16 @@ public class ElectionAdviceFunction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ElectionType1Code.mmObject();
+		}
+
+		@Override
+		public ElectionType1Code getValue(ElectionAdviceFunction1 obj) {
+			return obj.getElectionType();
+		}
+
+		@Override
+		public void setValue(ElectionAdviceFunction1 obj, ElectionType1Code value) {
+			obj.setElectionType(value);
 		}
 	};
 	@XmlElement(name = "PrvsAgtCAElctnAdvcId")
@@ -169,7 +180,7 @@ public class ElectionAdviceFunction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousAgentCAElectionAdviceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>> mmPreviousAgentCAElectionAdviceIdentification = new MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ElectionAdviceFunction1.mmObject();
 			isDerived = false;
@@ -179,7 +190,17 @@ public class ElectionAdviceFunction1 {
 			definition = "Identification of the previous Agent Corporate Action Election Advice that is being amended.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
+			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentIdentification8> getValue(ElectionAdviceFunction1 obj) {
+			return obj.getPreviousAgentCAElectionAdviceIdentification();
+		}
+
+		@Override
+		public void setValue(ElectionAdviceFunction1 obj, Optional<DocumentIdentification8> value) {
+			obj.setPreviousAgentCAElectionAdviceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtCAElctnStsAdvcId")
@@ -214,7 +235,7 @@ public class ElectionAdviceFunction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentCAElectionStatusAdviceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>> mmAgentCAElectionStatusAdviceIdentification = new MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ElectionAdviceFunction1.mmObject();
 			isDerived = false;
@@ -224,7 +245,17 @@ public class ElectionAdviceFunction1 {
 			definition = "Identification of the Agent Corporate Action Election Status Advice by which the issuer (agent) accepts the election amendment request.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
+			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentIdentification8> getValue(ElectionAdviceFunction1 obj) {
+			return obj.getAgentCAElectionStatusAdviceIdentification();
+		}
+
+		@Override
+		public void setValue(ElectionAdviceFunction1 obj, Optional<DocumentIdentification8> value) {
+			obj.setAgentCAElectionStatusAdviceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtCAElctnAmdmntReqId")
@@ -259,7 +290,7 @@ public class ElectionAdviceFunction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentCAElectionAmendmentRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>> mmAgentCAElectionAmendmentRequestIdentification = new MMMessageAttribute<ElectionAdviceFunction1, Optional<DocumentIdentification8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ElectionAdviceFunction1.mmObject();
 			isDerived = false;
@@ -269,7 +300,17 @@ public class ElectionAdviceFunction1 {
 			definition = "Identification of the Agent Corporate Action Election Amendment Request by which the CSD request the authorisation to amend an election.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification8.mmObject();
+			complexType_lazy = () -> DocumentIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentIdentification8> getValue(ElectionAdviceFunction1 obj) {
+			return obj.getAgentCAElectionAmendmentRequestIdentification();
+		}
+
+		@Override
+		public void setValue(ElectionAdviceFunction1 obj, Optional<DocumentIdentification8> value) {
+			obj.setAgentCAElectionAmendmentRequestIdentification(value.orElse(null));
 		}
 	};
 
@@ -302,7 +343,7 @@ public class ElectionAdviceFunction1 {
 		return previousAgentCAElectionAdviceIdentification == null ? Optional.empty() : Optional.of(previousAgentCAElectionAdviceIdentification);
 	}
 
-	public ElectionAdviceFunction1 setPreviousAgentCAElectionAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 previousAgentCAElectionAdviceIdentification) {
+	public ElectionAdviceFunction1 setPreviousAgentCAElectionAdviceIdentification(DocumentIdentification8 previousAgentCAElectionAdviceIdentification) {
 		this.previousAgentCAElectionAdviceIdentification = previousAgentCAElectionAdviceIdentification;
 		return this;
 	}
@@ -311,7 +352,7 @@ public class ElectionAdviceFunction1 {
 		return agentCAElectionStatusAdviceIdentification == null ? Optional.empty() : Optional.of(agentCAElectionStatusAdviceIdentification);
 	}
 
-	public ElectionAdviceFunction1 setAgentCAElectionStatusAdviceIdentification(com.tools20022.repository.msg.DocumentIdentification8 agentCAElectionStatusAdviceIdentification) {
+	public ElectionAdviceFunction1 setAgentCAElectionStatusAdviceIdentification(DocumentIdentification8 agentCAElectionStatusAdviceIdentification) {
 		this.agentCAElectionStatusAdviceIdentification = agentCAElectionStatusAdviceIdentification;
 		return this;
 	}
@@ -320,7 +361,7 @@ public class ElectionAdviceFunction1 {
 		return agentCAElectionAmendmentRequestIdentification == null ? Optional.empty() : Optional.of(agentCAElectionAmendmentRequestIdentification);
 	}
 
-	public ElectionAdviceFunction1 setAgentCAElectionAmendmentRequestIdentification(com.tools20022.repository.msg.DocumentIdentification8 agentCAElectionAmendmentRequestIdentification) {
+	public ElectionAdviceFunction1 setAgentCAElectionAmendmentRequestIdentification(DocumentIdentification8 agentCAElectionAmendmentRequestIdentification) {
 		this.agentCAElectionAmendmentRequestIdentification = agentCAElectionAmendmentRequestIdentification;
 		return this;
 	}

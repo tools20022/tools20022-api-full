@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.CardPaymentBatchTransfer3;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header12;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -136,7 +135,7 @@ public class AcceptorBatchTransferV04 {
 	 * AcceptorBatchTransferV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferV04, Header12> mmHeader = new MMMessageBuildingBlock<AcceptorBatchTransferV04, Header12>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +148,14 @@ public class AcceptorBatchTransferV04 {
 			complexType_lazy = () -> Header12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header12 getValue(AcceptorBatchTransferV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferV04 obj, Header12 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "BtchTrf", required = true)
@@ -197,7 +198,7 @@ public class AcceptorBatchTransferV04 {
 	 * AcceptorBatchTransferV03.mmBatchTransfer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBatchTransfer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferV04, CardPaymentBatchTransfer3> mmBatchTransfer = new MMMessageBuildingBlock<AcceptorBatchTransferV04, CardPaymentBatchTransfer3>() {
 		{
 			xmlTag = "BtchTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +211,14 @@ public class AcceptorBatchTransferV04 {
 			complexType_lazy = () -> CardPaymentBatchTransfer3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferV04.class.getMethod("getBatchTransfer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CardPaymentBatchTransfer3 getValue(AcceptorBatchTransferV04 obj) {
+			return obj.getBatchTransfer();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferV04 obj, CardPaymentBatchTransfer3 value) {
+			obj.setBatchTransfer(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -257,7 +260,7 @@ public class AcceptorBatchTransferV04 {
 	 * AcceptorBatchTransferV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferV04, ContentInformationType12> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorBatchTransferV04, ContentInformationType12>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +273,14 @@ public class AcceptorBatchTransferV04 {
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferV04.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType12 getValue(AcceptorBatchTransferV04 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferV04 obj, ContentInformationType12 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

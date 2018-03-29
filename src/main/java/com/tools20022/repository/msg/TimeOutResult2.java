@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsmt.TimeOutNotificationV03;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionStatus5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -102,7 +103,7 @@ public class TimeOutResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionFutureStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TimeOutResult2, TransactionStatus5> mmTransactionFutureStatus = new MMMessageAssociationEnd<TimeOutResult2, TransactionStatus5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TimeOutResult2.mmObject();
 			isDerived = false;
@@ -113,7 +114,17 @@ public class TimeOutResult2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionStatus5.mmObject();
+			type_lazy = () -> TransactionStatus5.mmObject();
+		}
+
+		@Override
+		public TransactionStatus5 getValue(TimeOutResult2 obj) {
+			return obj.getTransactionFutureStatus();
+		}
+
+		@Override
+		public void setValue(TimeOutResult2 obj, TransactionStatus5 value) {
+			obj.setTransactionFutureStatus(value);
 		}
 	};
 
@@ -135,7 +146,7 @@ public class TimeOutResult2 {
 		return transactionFutureStatus;
 	}
 
-	public TimeOutResult2 setTransactionFutureStatus(com.tools20022.repository.msg.TransactionStatus5 transactionFutureStatus) {
+	public TimeOutResult2 setTransactionFutureStatus(TransactionStatus5 transactionFutureStatus) {
 		this.transactionFutureStatus = Objects.requireNonNull(transactionFutureStatus);
 		return this;
 	}

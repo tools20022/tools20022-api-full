@@ -84,7 +84,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Account Switching"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The Account Switch Service provides the central functions required to support the guaranteed switch of a customer’s account and the transfer of payments arrangements associated with the account from one payment institution to another payment institution in seven working days. Payment institutions may use some of the central functions to provide a partial account switch."
+ * "The Account Switch Service provides the central functions required to support the guaranteed switch of a customer’s account and the transfer of payments arrangements associated with the account from one payment institution to another payment institution in seven working days. Payment institutions may use some of the central functions to provide a partial account switch. "
  * </li>
  * </ul>
  */
@@ -98,7 +98,7 @@ public class AccountSwitching {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Account Switching";
-				definition = "The Account Switch Service provides the central functions required to support the guaranteed switch of a customer’s account and the transfer of payments arrangements associated with the account from one payment institution to another payment institution in seven working days. Payment institutions may use some of the central functions to provide a partial account switch.";
+				definition = "The Account Switch Service provides the central functions required to support the guaranteed switch of a customer’s account and the transfer of payments arrangements associated with the account from one payment institution to another payment institution in seven working days. Payment institutions may use some of the central functions to provide a partial account switch. ";
 				messageDefinition_lazy = () -> Arrays.asList(AccountSwitchInformationResponseV01.mmObject(), AccountSwitchBalanceTransferAcknowledgementV01.mmObject(), AccountSwitchTechnicalRejectionV01.mmObject(),
 						AccountSwitchPaymentResponseV01.mmObject(), AccountSwitchNotifyAccountSwitchCompleteV01.mmObject(), AccountSwitchRequestBalanceTransferV01.mmObject(), AccountSwitchInformationRequestV01.mmObject(),
 						AccountSwitchRequestRedirectionV01.mmObject(), AccountSwitchTerminationSwitchV01.mmObject(), AccountSwitchCancelExistingPaymentV01.mmObject(), AccountSwitchRequestPaymentV01.mmObject());

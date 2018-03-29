@@ -51,11 +51,15 @@ public class ConstraintStockLocateRequiredRule {
 	 */
 	public static final MMConstraint<OrderParameters1> forOrderParameters1 = new MMConstraint<OrderParameters1>() {
 		{
-			validator = ConstraintStockLocateRequiredRule::checkOrderParameters1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLocateRequiredRule";
 			definition = "If Type contains the value SSHO (SellShort), then StockLocatedRequired must be present and must contain the value \"true\" or \"1\" (Yes).";
 			owner_lazy = () -> OrderParameters1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderParameters1 obj) throws Exception {
+			checkOrderParameters1(obj);
 		}
 	};
 

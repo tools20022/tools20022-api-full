@@ -155,7 +155,7 @@ public class GroupHeader59 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader59, Max35Text> mmMessageIdentification = new MMMessageAttribute<GroupHeader59, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader59.mmObject();
@@ -168,6 +168,16 @@ public class GroupHeader59 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GroupHeader59 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader59 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -211,7 +221,7 @@ public class GroupHeader59 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader59, ISODateTime> mmCreationDateTime = new MMMessageAttribute<GroupHeader59, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader59.mmObject();
@@ -224,6 +234,16 @@ public class GroupHeader59 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(GroupHeader59 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(GroupHeader59 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "MsgSndr")
@@ -263,7 +283,7 @@ public class GroupHeader59 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageSender = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader59, Optional<Party12Choice>> mmMessageSender = new MMMessageAssociationEnd<GroupHeader59, Optional<Party12Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader59.mmObject();
 			isDerived = false;
@@ -276,6 +296,16 @@ public class GroupHeader59 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Party12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Party12Choice> getValue(GroupHeader59 obj) {
+			return obj.getMessageSender();
+		}
+
+		@Override
+		public void setValue(GroupHeader59 obj, Optional<Party12Choice> value) {
+			obj.setMessageSender(value.orElse(null));
 		}
 	};
 

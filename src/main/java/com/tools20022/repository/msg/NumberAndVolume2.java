@@ -101,7 +101,7 @@ public class NumberAndVolume2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberAndVolume2, DecimalNumberFraction5> mmNumber = new MMMessageAttribute<NumberAndVolume2, DecimalNumberFraction5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndVolume2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class NumberAndVolume2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumberFraction5.mmObject();
+		}
+
+		@Override
+		public DecimalNumberFraction5 getValue(NumberAndVolume2 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(NumberAndVolume2 obj, DecimalNumberFraction5 value) {
+			obj.setNumber(value);
 		}
 	};
 	@XmlElement(name = "Vol", required = true)
@@ -145,7 +155,7 @@ public class NumberAndVolume2 {
 	 * "Total volume of specific transactions executed on the reporting day."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberAndVolume2, ActiveOrHistoricCurrencyAndAmount> mmVolume = new MMMessageAttribute<NumberAndVolume2, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndVolume2.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class NumberAndVolume2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(NumberAndVolume2 obj) {
+			return obj.getVolume();
+		}
+
+		@Override
+		public void setValue(NumberAndVolume2 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setVolume(value);
 		}
 	};
 

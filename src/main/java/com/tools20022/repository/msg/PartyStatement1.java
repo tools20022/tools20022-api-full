@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.reda.PartyActivityAdviceV01;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyReferenceDataChange1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,7 +109,7 @@ public class PartyStatement1 {
 	 * definition} = "Date for which the statement is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyStatement1, ISODate> mmSystemDate = new MMMessageAttribute<PartyStatement1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyStatement1.mmObject();
 			isDerived = false;
@@ -120,9 +121,19 @@ public class PartyStatement1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public ISODate getValue(PartyStatement1 obj) {
+			return obj.getSystemDate();
+		}
+
+		@Override
+		public void setValue(PartyStatement1 obj, ISODate value) {
+			obj.setSystemDate(value);
+		}
 	};
 	@XmlElement(name = "Chng")
-	protected List<com.tools20022.repository.msg.PartyReferenceDataChange1> change;
+	protected List<PartyReferenceDataChange1> change;
 	/**
 	 * 
 	 <p>
@@ -151,7 +162,7 @@ public class PartyStatement1 {
 	 * "Provides information on the actual change occurred to a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyStatement1, List<PartyReferenceDataChange1>> mmChange = new MMMessageAssociationEnd<PartyStatement1, List<PartyReferenceDataChange1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyStatement1.mmObject();
 			isDerived = false;
@@ -161,7 +172,17 @@ public class PartyStatement1 {
 			definition = "Provides information on the actual change occurred to a party.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyReferenceDataChange1.mmObject();
+			type_lazy = () -> PartyReferenceDataChange1.mmObject();
+		}
+
+		@Override
+		public List<PartyReferenceDataChange1> getValue(PartyStatement1 obj) {
+			return obj.getChange();
+		}
+
+		@Override
+		public void setValue(PartyStatement1 obj, List<PartyReferenceDataChange1> value) {
+			obj.setChange(value);
 		}
 	};
 
@@ -192,7 +213,7 @@ public class PartyStatement1 {
 		return change == null ? change = new ArrayList<>() : change;
 	}
 
-	public PartyStatement1 setChange(List<com.tools20022.repository.msg.PartyReferenceDataChange1> change) {
+	public PartyStatement1 setChange(List<PartyReferenceDataChange1> change) {
 		this.change = Objects.requireNonNull(change);
 		return this;
 	}

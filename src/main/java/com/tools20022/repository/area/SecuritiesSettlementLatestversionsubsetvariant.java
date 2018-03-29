@@ -68,6 +68,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06
  * SecuritiesFinancingModificationInstruction002V06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotification002V05
+ * PortfolioTransferNotification002V05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08
+ * SecuritiesFinancingConfirmation002V08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08
+ * SecuritiesFinancingInstruction002V08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V07
+ * SecuritiesSettlementTransactionAllegementNotification002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08
+ * SecuritiesSettlementTransactionConfirmation002V08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08
+ * SecuritiesSettlementTransactionGenerationNotification002V08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08
+ * SecuritiesSettlementTransactionInstruction002V08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V06
+ * SecuritiesSettlementTransactionModificationRequest002V06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V07
+ * SecuritiesSettlementTransactionReversalAdvice002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V09
+ * SecuritiesSettlementTransactionStatusAdvice002V09}</li>
  * </ul>
  * </li>
  * <li>
@@ -101,7 +131,11 @@ public class SecuritiesSettlementLatestversionsubsetvariant {
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmObject(), SecuritiesSettlementAllegementRemovalAdvice002V04.mmObject(),
 						SecuritiesTransactionStatusQuery002V04.mmObject(), SecuritiesSettlementTransactionCounterpartyResponse002V02.mmObject(), SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmObject(),
 						SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmObject(), SecuritiesTransactionCancellationRequest002V05.mmObject(), SecuritiesSettlementConditionModificationStatusAdvice002V07.mmObject(),
-						SecuritiesFinancingStatusAdvice002V07.mmObject(), SecuritiesSettlementConditionsModificationRequest002V07.mmObject(), SecuritiesFinancingModificationInstruction002V06.mmObject());
+						SecuritiesFinancingStatusAdvice002V07.mmObject(), SecuritiesSettlementConditionsModificationRequest002V07.mmObject(), SecuritiesFinancingModificationInstruction002V06.mmObject(),
+						PortfolioTransferNotification002V05.mmObject(), SecuritiesFinancingConfirmation002V08.mmObject(), SecuritiesFinancingInstruction002V08.mmObject(),
+						SecuritiesSettlementTransactionAllegementNotification002V07.mmObject(), SecuritiesSettlementTransactionConfirmation002V08.mmObject(), SecuritiesSettlementTransactionGenerationNotification002V08.mmObject(),
+						SecuritiesSettlementTransactionInstruction002V08.mmObject(), SecuritiesSettlementTransactionModificationRequest002V06.mmObject(), SecuritiesSettlementTransactionReversalAdvice002V07.mmObject(),
+						SecuritiesSettlementTransactionStatusAdvice002V09.mmObject());
 				code = "sese";
 			}
 		});

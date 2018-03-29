@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
+import com.tools20022.repository.msg.GenericIdentification165;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +108,7 @@ public class PortfolioStressTestResult1 {
 	 * definition} = "Identification of the portfolio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPortfolioIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PortfolioStressTestResult1, GenericIdentification165> mmPortfolioIdentification = new MMMessageAssociationEnd<PortfolioStressTestResult1, GenericIdentification165>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PortfolioStressTestResult1.mmObject();
 			isDerived = false;
@@ -117,7 +119,17 @@ public class PortfolioStressTestResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification165.mmObject();
+			type_lazy = () -> GenericIdentification165.mmObject();
+		}
+
+		@Override
+		public GenericIdentification165 getValue(PortfolioStressTestResult1 obj) {
+			return obj.getPortfolioIdentification();
+		}
+
+		@Override
+		public void setValue(PortfolioStressTestResult1 obj, GenericIdentification165 value) {
+			obj.setPortfolioIdentification(value);
 		}
 	};
 	@XmlElement(name = "StrssLoss", required = true)
@@ -150,7 +162,7 @@ public class PortfolioStressTestResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStressLoss = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PortfolioStressTestResult1, AmountAndDirection6> mmStressLoss = new MMMessageAssociationEnd<PortfolioStressTestResult1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PortfolioStressTestResult1.mmObject();
 			isDerived = false;
@@ -161,7 +173,17 @@ public class PortfolioStressTestResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(PortfolioStressTestResult1 obj) {
+			return obj.getStressLoss();
+		}
+
+		@Override
+		public void setValue(PortfolioStressTestResult1 obj, AmountAndDirection6 value) {
+			obj.setStressLoss(value);
 		}
 	};
 	@XmlElement(name = "Cover1Flg", required = true)
@@ -196,7 +218,7 @@ public class PortfolioStressTestResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCover1Flag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PortfolioStressTestResult1, YesNoIndicator> mmCover1Flag = new MMMessageAttribute<PortfolioStressTestResult1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PortfolioStressTestResult1.mmObject();
 			isDerived = false;
@@ -207,6 +229,16 @@ public class PortfolioStressTestResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PortfolioStressTestResult1 obj) {
+			return obj.getCover1Flag();
+		}
+
+		@Override
+		public void setValue(PortfolioStressTestResult1 obj, YesNoIndicator value) {
+			obj.setCover1Flag(value);
 		}
 	};
 	@XmlElement(name = "Cover2Flg", required = true)
@@ -241,7 +273,7 @@ public class PortfolioStressTestResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCover2Flag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PortfolioStressTestResult1, YesNoIndicator> mmCover2Flag = new MMMessageAttribute<PortfolioStressTestResult1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PortfolioStressTestResult1.mmObject();
 			isDerived = false;
@@ -252,6 +284,16 @@ public class PortfolioStressTestResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PortfolioStressTestResult1 obj) {
+			return obj.getCover2Flag();
+		}
+
+		@Override
+		public void setValue(PortfolioStressTestResult1 obj, YesNoIndicator value) {
+			obj.setCover2Flag(value);
 		}
 	};
 
@@ -273,7 +315,7 @@ public class PortfolioStressTestResult1 {
 		return portfolioIdentification;
 	}
 
-	public PortfolioStressTestResult1 setPortfolioIdentification(com.tools20022.repository.msg.GenericIdentification165 portfolioIdentification) {
+	public PortfolioStressTestResult1 setPortfolioIdentification(GenericIdentification165 portfolioIdentification) {
 		this.portfolioIdentification = Objects.requireNonNull(portfolioIdentification);
 		return this;
 	}
@@ -282,7 +324,7 @@ public class PortfolioStressTestResult1 {
 		return stressLoss;
 	}
 
-	public PortfolioStressTestResult1 setStressLoss(com.tools20022.repository.msg.AmountAndDirection6 stressLoss) {
+	public PortfolioStressTestResult1 setStressLoss(AmountAndDirection6 stressLoss) {
 		this.stressLoss = Objects.requireNonNull(stressLoss);
 		return this;
 	}

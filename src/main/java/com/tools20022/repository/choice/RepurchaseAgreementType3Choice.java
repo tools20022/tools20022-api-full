@@ -107,7 +107,7 @@ public class RepurchaseAgreementType3Choice {
 	 * RepurchaseAgreementType1Choice.mmSpecificCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSpecificCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseAgreementType3Choice, SpecificCollateral2> mmSpecificCollateral = new MMMessageAssociationEnd<RepurchaseAgreementType3Choice, SpecificCollateral2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepurchaseAgreementType3Choice.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class RepurchaseAgreementType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SpecificCollateral2.mmObject();
+		}
+
+		@Override
+		public SpecificCollateral2 getValue(RepurchaseAgreementType3Choice obj) {
+			return obj.getSpecificCollateral();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreementType3Choice obj, SpecificCollateral2 value) {
+			obj.setSpecificCollateral(value);
 		}
 	};
 	@XmlElement(name = "GnlColl", required = true)
@@ -157,7 +167,7 @@ public class RepurchaseAgreementType3Choice {
 	 * RepurchaseAgreementType1Choice.mmGeneralCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepurchaseAgreementType3Choice, GeneralCollateral3> mmGeneralCollateral = new MMMessageAssociationEnd<RepurchaseAgreementType3Choice, GeneralCollateral3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepurchaseAgreementType3Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class RepurchaseAgreementType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneralCollateral3.mmObject();
+		}
+
+		@Override
+		public GeneralCollateral3 getValue(RepurchaseAgreementType3Choice obj) {
+			return obj.getGeneralCollateral();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreementType3Choice obj, GeneralCollateral3 value) {
+			obj.setGeneralCollateral(value);
 		}
 	};
 

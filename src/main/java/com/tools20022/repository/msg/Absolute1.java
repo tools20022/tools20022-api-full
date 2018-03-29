@@ -103,7 +103,7 @@ public class Absolute1 {
 	 * definition} = "Unit of measure for the absolute stress.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Absolute1, Max35Text> mmUnit = new MMMessageAttribute<Absolute1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Absolute1.mmObject();
@@ -115,6 +115,16 @@ public class Absolute1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Absolute1 obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(Absolute1 obj, Max35Text value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -150,7 +160,7 @@ public class Absolute1 {
 	 * definition} = "Number of units of measure shifted.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Absolute1, Number> mmQuantity = new MMMessageAttribute<Absolute1, Number>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Absolute1.mmObject();
@@ -162,6 +172,16 @@ public class Absolute1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Absolute1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Absolute1 obj, Number value) {
+			obj.setQuantity(value);
 		}
 	};
 

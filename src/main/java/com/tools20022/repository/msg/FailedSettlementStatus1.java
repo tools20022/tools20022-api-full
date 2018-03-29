@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,7 +136,7 @@ public class FailedSettlementStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailedSettlementStatus1, Max350Text> mmReason = new MMMessageAttribute<FailedSettlementStatus1, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FailedSettlementStatus1.mmObject();
@@ -148,6 +149,16 @@ public class FailedSettlementStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(FailedSettlementStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(FailedSettlementStatus1 obj, Max350Text value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -192,7 +203,7 @@ public class FailedSettlementStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FailedSettlementStatus1, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<FailedSettlementStatus1, GenericIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FailedSettlementStatus1.mmObject();
@@ -205,7 +216,17 @@ public class FailedSettlementStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(FailedSettlementStatus1 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(FailedSettlementStatus1 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -251,7 +272,7 @@ public class FailedSettlementStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailedSettlementStatus1, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<FailedSettlementStatus1, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FailedSettlementStatus1.mmObject();
@@ -264,6 +285,16 @@ public class FailedSettlementStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(FailedSettlementStatus1 obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(FailedSettlementStatus1 obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	/**
@@ -351,7 +382,7 @@ public class FailedSettlementStatus1 {
 		return dataSourceScheme;
 	}
 
-	public FailedSettlementStatus1 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public FailedSettlementStatus1 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

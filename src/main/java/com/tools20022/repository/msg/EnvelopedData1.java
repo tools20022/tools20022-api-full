@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Recipient1Choice;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EncryptedContent1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -103,7 +104,7 @@ public class EnvelopedData1 {
 	 * definition} = "Version of the data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnvelopedData1, Optional<Number>> mmVersion = new MMMessageAttribute<EnvelopedData1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData1.mmObject();
 			isDerived = false;
@@ -114,6 +115,16 @@ public class EnvelopedData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(EnvelopedData1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(EnvelopedData1 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -145,7 +156,7 @@ public class EnvelopedData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnvelopedData1, List<Recipient1Choice>> mmRecipient = new MMMessageAssociationEnd<EnvelopedData1, List<Recipient1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData1.mmObject();
 			isDerived = false;
@@ -156,6 +167,16 @@ public class EnvelopedData1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Recipient1Choice.mmObject();
+		}
+
+		@Override
+		public List<Recipient1Choice> getValue(EnvelopedData1 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(EnvelopedData1 obj, List<Recipient1Choice> value) {
+			obj.setRecipient(value);
 		}
 	};
 	@XmlElement(name = "NcrptdCntt", required = true)
@@ -185,7 +206,7 @@ public class EnvelopedData1 {
 	 * definition} = "Encrypted data with an encryption key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncryptedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnvelopedData1, EncryptedContent1> mmEncryptedContent = new MMMessageAssociationEnd<EnvelopedData1, EncryptedContent1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData1.mmObject();
 			isDerived = false;
@@ -196,7 +217,17 @@ public class EnvelopedData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EncryptedContent1.mmObject();
+			type_lazy = () -> EncryptedContent1.mmObject();
+		}
+
+		@Override
+		public EncryptedContent1 getValue(EnvelopedData1 obj) {
+			return obj.getEncryptedContent();
+		}
+
+		@Override
+		public void setValue(EnvelopedData1 obj, EncryptedContent1 value) {
+			obj.setEncryptedContent(value);
 		}
 	};
 
@@ -236,7 +267,7 @@ public class EnvelopedData1 {
 		return encryptedContent;
 	}
 
-	public EnvelopedData1 setEncryptedContent(com.tools20022.repository.msg.EncryptedContent1 encryptedContent) {
+	public EnvelopedData1 setEncryptedContent(EncryptedContent1 encryptedContent) {
 		this.encryptedContent = Objects.requireNonNull(encryptedContent);
 		return this;
 	}

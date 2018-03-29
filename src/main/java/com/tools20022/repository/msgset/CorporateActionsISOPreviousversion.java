@@ -38,44 +38,44 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageDefinition} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06
- * CorporateActionMovementPreliminaryAdviceCancellationAdviceV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06
- * CorporateActionInstructionCancellationRequestStatusAdviceV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
- * CorporateActionInstructionV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07
- * CorporateActionMovementPreliminaryAdviceV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05
- * CorporateActionInstructionStatementReportV05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07
- * CorporateActionMovementConfirmationV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06
- * CorporateActionNotificationV06}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV05
  * CorporateActionEventProcessingStatusAdviceV05}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestV06
  * CorporateActionInstructionCancellationRequestV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07
- * CorporateActionInstructionStatusAdviceV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07
- * CorporateActionMovementReversalAdviceV07}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrativeV04
  * CorporateActionNarrativeV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06
- * CorporateActionCancellationAdviceV06}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07
+ * CorporateActionCancellationAdviceV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07
+ * CorporateActionNotificationV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08
+ * CorporateActionMovementConfirmationV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06
+ * CorporateActionInstructionStatementReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08
+ * CorporateActionMovementPreliminaryAdviceV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08
+ * CorporateActionMovementReversalAdviceV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07
+ * CorporateActionInstructionCancellationRequestStatusAdviceV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07
+ * CorporateActionInstructionV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08
+ * CorporateActionInstructionStatusAdviceV08}</li>
  * </ul>
  * </li>
  * <li>
@@ -106,10 +106,10 @@ public class CorporateActionsISOPreviousversion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Corporate Actions - ISO - Previous version";
 				definition = "Set of messages used by intermediaries, such as (I)CSD's, global custodians or local custodians, involved in the corporate action processing chain between the issuer (agent) and the investors. The messages support corporate action events announcements and entitlements, elections, reminders, movements preliminary advices, movements confirmations, movements reversals and status reporting. \r\n";
-				messageDefinition_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmObject(), CorporateActionInstructionCancellationRequestStatusAdviceV06.mmObject(),
-						CorporateActionInstructionV06.mmObject(), CorporateActionMovementPreliminaryAdviceV07.mmObject(), CorporateActionInstructionStatementReportV05.mmObject(), CorporateActionMovementConfirmationV07.mmObject(),
-						CorporateActionNotificationV06.mmObject(), CorporateActionEventProcessingStatusAdviceV05.mmObject(), CorporateActionInstructionCancellationRequestV06.mmObject(), CorporateActionInstructionStatusAdviceV07.mmObject(),
-						CorporateActionMovementReversalAdviceV07.mmObject(), CorporateActionNarrativeV04.mmObject(), CorporateActionCancellationAdviceV06.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdviceV05.mmObject(), CorporateActionInstructionCancellationRequestV06.mmObject(), CorporateActionNarrativeV04.mmObject(),
+						CorporateActionCancellationAdviceV07.mmObject(), CorporateActionNotificationV07.mmObject(), CorporateActionMovementConfirmationV08.mmObject(), CorporateActionInstructionStatementReportV06.mmObject(),
+						CorporateActionMovementPreliminaryAdviceV08.mmObject(), CorporateActionMovementReversalAdviceV08.mmObject(), CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmObject(),
+						CorporateActionInstructionCancellationRequestStatusAdviceV07.mmObject(), CorporateActionInstructionV07.mmObject(), CorporateActionInstructionStatusAdviceV08.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

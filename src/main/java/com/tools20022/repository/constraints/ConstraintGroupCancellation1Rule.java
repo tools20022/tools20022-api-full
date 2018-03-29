@@ -53,11 +53,15 @@ public class ConstraintGroupCancellation1Rule {
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01>() {
 		{
-			validator = ConstraintGroupCancellation1Rule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellation1Rule";
 			definition = "If GroupHeader/GroupCancellation is true, then TransactionInformation is not allowed.\nIf GroupHeader/GroupCancellation is false, then at least one occurrence of TransactionInformation must be present.";
 			owner_lazy = () -> com.tools20022.repository.area.pain.PaymentCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(com.tools20022.repository.area.pain.PaymentCancellationRequestV01 obj) throws Exception {
+			checkPaymentCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintGroupCancellation1Rule {
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01>() {
 		{
-			validator = ConstraintGroupCancellation1Rule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellation1Rule";
 			definition = "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present.\n.";
 			owner_lazy = () -> com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(com.tools20022.repository.area.pacs.PaymentCancellationRequestV01 obj) throws Exception {
+			checkPaymentCancellationRequestV01(obj);
 		}
 	};
 

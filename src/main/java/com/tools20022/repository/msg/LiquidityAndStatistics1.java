@@ -136,7 +136,7 @@ public class LiquidityAndStatistics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityAndStatistics1, TrueFalseIndicator> mmGrossIndicator = new MMMessageAttribute<LiquidityAndStatistics1, TrueFalseIndicator>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
@@ -149,6 +149,16 @@ public class LiquidityAndStatistics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(LiquidityAndStatistics1 obj) {
+			return obj.getGrossIndicator();
+		}
+
+		@Override
+		public void setValue(LiquidityAndStatistics1 obj, TrueFalseIndicator value) {
+			obj.setGrossIndicator(value);
 		}
 	};
 	@XmlElement(name = "IndTp", required = true)
@@ -190,7 +200,7 @@ public class LiquidityAndStatistics1 {
 	 * "Type of liquidity measure, of a financial instrument, on a market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicatorType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityAndStatistics1, LiquidityIndicatorType1Code> mmIndicatorType = new MMMessageAttribute<LiquidityAndStatistics1, LiquidityIndicatorType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmIndicatorType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
@@ -203,6 +213,16 @@ public class LiquidityAndStatistics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LiquidityIndicatorType1Code.mmObject();
+		}
+
+		@Override
+		public LiquidityIndicatorType1Code getValue(LiquidityAndStatistics1 obj) {
+			return obj.getIndicatorType();
+		}
+
+		@Override
+		public void setValue(LiquidityAndStatistics1 obj, LiquidityIndicatorType1Code value) {
+			obj.setIndicatorType(value);
 		}
 	};
 	@XmlElement(name = "WghtdAvrgLqdty", required = true)
@@ -245,7 +265,7 @@ public class LiquidityAndStatistics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWeightedAverageLiquidity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityAndStatistics1, PercentageRate> mmWeightedAverageLiquidity = new MMMessageAttribute<LiquidityAndStatistics1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmWeightedAverageLiquidity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
@@ -258,6 +278,16 @@ public class LiquidityAndStatistics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(LiquidityAndStatistics1 obj) {
+			return obj.getWeightedAverageLiquidity();
+		}
+
+		@Override
+		public void setValue(LiquidityAndStatistics1 obj, PercentageRate value) {
+			obj.setWeightedAverageLiquidity(value);
 		}
 	};
 	@XmlElement(name = "OutMainCtryIndx", required = true)
@@ -300,7 +330,7 @@ public class LiquidityAndStatistics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOutMainCountryIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityAndStatistics1, ActiveCurrencyAndAmount> mmOutMainCountryIndex = new MMMessageAttribute<LiquidityAndStatistics1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmOutMainCountryIndex;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
@@ -313,6 +343,16 @@ public class LiquidityAndStatistics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(LiquidityAndStatistics1 obj) {
+			return obj.getOutMainCountryIndex();
+		}
+
+		@Override
+		public void setValue(LiquidityAndStatistics1 obj, ActiveCurrencyAndAmount value) {
+			obj.setOutMainCountryIndex(value);
 		}
 	};
 	@XmlElement(name = "CrossPct")
@@ -348,7 +388,7 @@ public class LiquidityAndStatistics1 {
 	 * definition} = "Percentage of program that crosses in Currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCrossPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityAndStatistics1, Optional<PercentageRate>> mmCrossPercent = new MMMessageAttribute<LiquidityAndStatistics1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
 			isDerived = false;
@@ -360,6 +400,16 @@ public class LiquidityAndStatistics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(LiquidityAndStatistics1 obj) {
+			return obj.getCrossPercent();
+		}
+
+		@Override
+		public void setValue(LiquidityAndStatistics1 obj, Optional<PercentageRate> value) {
+			obj.setCrossPercent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SdVal1")
@@ -402,7 +452,7 @@ public class LiquidityAndStatistics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSideValue1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityAndStatistics1, Optional<ActiveCurrencyAndAmount>> mmSideValue1 = new MMMessageAttribute<LiquidityAndStatistics1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmSideValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
@@ -415,6 +465,16 @@ public class LiquidityAndStatistics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(LiquidityAndStatistics1 obj) {
+			return obj.getSideValue1();
+		}
+
+		@Override
+		public void setValue(LiquidityAndStatistics1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSideValue1(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SdVal2")
@@ -457,7 +517,7 @@ public class LiquidityAndStatistics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSideValue2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityAndStatistics1, Optional<ActiveCurrencyAndAmount>> mmSideValue2 = new MMMessageAttribute<LiquidityAndStatistics1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmSideValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityAndStatistics1.mmObject();
@@ -470,6 +530,16 @@ public class LiquidityAndStatistics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(LiquidityAndStatistics1 obj) {
+			return obj.getSideValue2();
+		}
+
+		@Override
+		public void setValue(LiquidityAndStatistics1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSideValue2(value.orElse(null));
 		}
 	};
 

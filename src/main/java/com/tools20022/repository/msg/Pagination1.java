@@ -20,14 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV07;
-import com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09;
-import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09;
-import com.tools20022.repository.area.seev.CorporateActionNotificationV08;
-import com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV07;
-import com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV07;
-import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV09;
-import com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV08;
+import com.tools20022.repository.area.seev.*;
+import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.sese.PortfolioTransferNotification002V05;
 import com.tools20022.repository.area.sese.PortfolioTransferNotificationV05;
 import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
@@ -89,6 +84,33 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmPagination
  * CorporateActionMovementPreliminaryAdviceV09.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V07#mmPagination
+ * CorporateActionInstructionStatementReport002V07.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V09#mmPagination
+ * CorporateActionMovementConfirmation002V09.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V09#mmPagination
+ * CorporateActionMovementPreliminaryAdvice002V09.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V08#mmPagination
+ * CorporateActionNotification002V08.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V07#mmPagination
+ * IntraPositionMovementPostingReport002V07.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotification002V05#mmPagination
+ * PortfolioTransferNotification002V05.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V07#mmPagination
+ * SecuritiesSettlementTransactionAllegementReport002V07.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V09#mmPagination
+ * SecuritiesTransactionPendingReport002V09.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V08#mmPagination
+ * SecuritiesTransactionPostingReport002V08.mmPagination}</li>
  * </ul>
  * </li>
  * <li>
@@ -150,7 +172,7 @@ public class Pagination1 {
 	 * Pagination.mmPageNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Pagination1, Max5NumericText> mmPageNumber = new MMMessageAttribute<Pagination1, Max5NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Pagination1.mmObject();
 			isDerived = false;
@@ -162,6 +184,16 @@ public class Pagination1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Max5NumericText getValue(Pagination1 obj) {
+			return obj.getPageNumber();
+		}
+
+		@Override
+		public void setValue(Pagination1 obj, Max5NumericText value) {
+			obj.setPageNumber(value);
 		}
 	};
 	@XmlElement(name = "LastPgInd", required = true)
@@ -198,7 +230,7 @@ public class Pagination1 {
 	 * Pagination.mmLastPageIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastPageIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Pagination1, YesNoIndicator> mmLastPageIndicator = new MMMessageAttribute<Pagination1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Pagination1.mmObject();
 			isDerived = false;
@@ -211,6 +243,16 @@ public class Pagination1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(Pagination1 obj) {
+			return obj.getLastPageIndicator();
+		}
+
+		@Override
+		public void setValue(Pagination1 obj, YesNoIndicator value) {
+			obj.setLastPageIndicator(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -219,7 +261,10 @@ public class Pagination1 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Pagination1.mmPageNumber, com.tools20022.repository.msg.Pagination1.mmLastPageIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementPostingReportV07.mmPagination, SecuritiesTransactionPendingReportV09.mmPagination, SecuritiesSettlementTransactionAllegementReportV07.mmPagination,
 						PortfolioTransferNotificationV05.mmPagination, SecuritiesTransactionPostingReportV08.mmPagination, CorporateActionInstructionStatementReportV07.mmPagination, CorporateActionNotificationV08.mmPagination,
-						CorporateActionMovementConfirmationV09.mmPagination, CorporateActionMovementPreliminaryAdviceV09.mmPagination);
+						CorporateActionMovementConfirmationV09.mmPagination, CorporateActionMovementPreliminaryAdviceV09.mmPagination, CorporateActionInstructionStatementReport002V07.mmPagination,
+						CorporateActionMovementConfirmation002V09.mmPagination, CorporateActionMovementPreliminaryAdvice002V09.mmPagination, CorporateActionNotification002V08.mmPagination,
+						IntraPositionMovementPostingReport002V07.mmPagination, PortfolioTransferNotification002V05.mmPagination, SecuritiesSettlementTransactionAllegementReport002V07.mmPagination,
+						SecuritiesTransactionPendingReport002V09.mmPagination, SecuritiesTransactionPostingReport002V08.mmPagination);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Pagination1";

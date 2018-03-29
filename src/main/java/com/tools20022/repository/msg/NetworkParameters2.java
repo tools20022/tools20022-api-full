@@ -113,7 +113,7 @@ public class NetworkParameters2 {
 	 * definition} = "IP address or hostname."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters2, Max35Text> mmAddress = new MMMessageAttribute<NetworkParameters2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmNetworkAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters2.mmObject();
@@ -125,6 +125,16 @@ public class NetworkParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(NetworkParameters2 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(NetworkParameters2 obj, Max35Text value) {
+			obj.setAddress(value);
 		}
 	};
 	@XmlElement(name = "PortNb")
@@ -157,7 +167,7 @@ public class NetworkParameters2 {
 	 * "Port number of the server, if the default port number is not used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters2, Optional<Number>> mmPortNumber = new MMMessageAttribute<NetworkParameters2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters2.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class NetworkParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(NetworkParameters2 obj) {
+			return obj.getPortNumber();
+		}
+
+		@Override
+		public void setValue(NetworkParameters2 obj, Optional<Number> value) {
+			obj.setPortNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dely")
@@ -199,7 +219,7 @@ public class NetworkParameters2 {
 	 * definition} = "Delay between two contacts of the server."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelay = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters2, Optional<ISOTime>> mmDelay = new MMMessageAttribute<NetworkParameters2, Optional<ISOTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters2.mmObject();
 			isDerived = false;
@@ -210,6 +230,16 @@ public class NetworkParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISOTime> getValue(NetworkParameters2 obj) {
+			return obj.getDelay();
+		}
+
+		@Override
+		public void setValue(NetworkParameters2 obj, Optional<ISOTime> value) {
+			obj.setDelay(value.orElse(null));
 		}
 	};
 

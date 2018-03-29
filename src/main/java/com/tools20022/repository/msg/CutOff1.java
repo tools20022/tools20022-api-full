@@ -113,7 +113,7 @@ public class CutOff1 {
 	 * definition} = "Identification for the updated netting cut off."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCutOffUpdateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CutOff1, Max35Text> mmCutOffUpdateIdentification = new MMMessageAttribute<CutOff1, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SystemEventInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CutOff1.mmObject();
@@ -125,6 +125,16 @@ public class CutOff1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CutOff1 obj) {
+			return obj.getCutOffUpdateIdentification();
+		}
+
+		@Override
+		public void setValue(CutOff1 obj, Max35Text value) {
+			obj.setCutOffUpdateIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -161,7 +171,7 @@ public class CutOff1 {
 	 * definition} = "Currency linked to the netting cut off."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CutOff1, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<CutOff1, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CutOff1.mmObject();
@@ -173,6 +183,16 @@ public class CutOff1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CutOff1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CutOff1 obj, ActiveCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "CutOffTm", required = true)
@@ -208,7 +228,7 @@ public class CutOff1 {
 	 * definition} = "Cut off time value for the netting cut off."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCutOffTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CutOff1, ISOTime> mmCutOffTime = new MMMessageAttribute<CutOff1, ISOTime>() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CutOff1.mmObject();
@@ -220,6 +240,16 @@ public class CutOff1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public ISOTime getValue(CutOff1 obj) {
+			return obj.getCutOffTime();
+		}
+
+		@Override
+		public void setValue(CutOff1 obj, ISOTime value) {
+			obj.setCutOffTime(value);
 		}
 	};
 	@XmlElement(name = "ValDtOffset", required = true)
@@ -253,7 +283,7 @@ public class CutOff1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDateOffset = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CutOff1, DateOffsetText> mmValueDateOffset = new MMMessageAttribute<CutOff1, DateOffsetText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CutOff1.mmObject();
 			isDerived = false;
@@ -264,6 +294,16 @@ public class CutOff1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateOffsetText.mmObject();
+		}
+
+		@Override
+		public DateOffsetText getValue(CutOff1 obj) {
+			return obj.getValueDateOffset();
+		}
+
+		@Override
+		public void setValue(CutOff1 obj, DateOffsetText value) {
+			obj.setValueDateOffset(value);
 		}
 	};
 

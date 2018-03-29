@@ -22,6 +22,9 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Addition1;
+import com.tools20022.repository.msg.Deletion1;
+import com.tools20022.repository.msg.Replacement1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +123,7 @@ public class ComparisonResult1 {
 	 * definition} = "Sequence number assigned to the element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElementSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ComparisonResult1, Number> mmElementSequenceNumber = new MMMessageAttribute<ComparisonResult1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ComparisonResult1.mmObject();
 			isDerived = false;
@@ -131,6 +134,16 @@ public class ComparisonResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ComparisonResult1 obj) {
+			return obj.getElementSequenceNumber();
+		}
+
+		@Override
+		public void setValue(ComparisonResult1 obj, Number value) {
+			obj.setElementSequenceNumber(value);
 		}
 	};
 	@XmlElement(name = "ElmtPth", required = true)
@@ -164,7 +177,7 @@ public class ComparisonResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElementPath = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ComparisonResult1, Max350Text> mmElementPath = new MMMessageAttribute<ComparisonResult1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ComparisonResult1.mmObject();
 			isDerived = false;
@@ -175,6 +188,16 @@ public class ComparisonResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(ComparisonResult1 obj) {
+			return obj.getElementPath();
+		}
+
+		@Override
+		public void setValue(ComparisonResult1 obj, Max350Text value) {
+			obj.setElementPath(value);
 		}
 	};
 	@XmlElement(name = "ElmtNm", required = true)
@@ -206,7 +229,7 @@ public class ComparisonResult1 {
 	 * definition} = "Name of the element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElementName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ComparisonResult1, Max35Text> mmElementName = new MMMessageAttribute<ComparisonResult1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ComparisonResult1.mmObject();
 			isDerived = false;
@@ -217,6 +240,16 @@ public class ComparisonResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ComparisonResult1 obj) {
+			return obj.getElementName();
+		}
+
+		@Override
+		public void setValue(ComparisonResult1 obj, Max35Text value) {
+			obj.setElementName(value);
 		}
 	};
 	@XmlElement(name = "Rplcmnt", required = true)
@@ -247,7 +280,7 @@ public class ComparisonResult1 {
 	 * definition} = "Replacement of an existing content by a different one."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReplacement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ComparisonResult1, Replacement1> mmReplacement = new MMMessageAssociationEnd<ComparisonResult1, Replacement1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ComparisonResult1.mmObject();
 			isDerived = false;
@@ -258,7 +291,17 @@ public class ComparisonResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Replacement1.mmObject();
+			type_lazy = () -> Replacement1.mmObject();
+		}
+
+		@Override
+		public Replacement1 getValue(ComparisonResult1 obj) {
+			return obj.getReplacement();
+		}
+
+		@Override
+		public void setValue(ComparisonResult1 obj, Replacement1 value) {
+			obj.setReplacement(value);
 		}
 	};
 	@XmlElement(name = "Deltn", required = true)
@@ -288,7 +331,7 @@ public class ComparisonResult1 {
 	 * definition} = "Deletion of the current element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeletion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ComparisonResult1, Deletion1> mmDeletion = new MMMessageAssociationEnd<ComparisonResult1, Deletion1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ComparisonResult1.mmObject();
 			isDerived = false;
@@ -299,7 +342,17 @@ public class ComparisonResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Deletion1.mmObject();
+			type_lazy = () -> Deletion1.mmObject();
+		}
+
+		@Override
+		public Deletion1 getValue(ComparisonResult1 obj) {
+			return obj.getDeletion();
+		}
+
+		@Override
+		public void setValue(ComparisonResult1 obj, Deletion1 value) {
+			obj.setDeletion(value);
 		}
 	};
 	@XmlElement(name = "Addtn", required = true)
@@ -329,7 +382,7 @@ public class ComparisonResult1 {
 	 * definition} = "Addition of a new element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ComparisonResult1, Addition1> mmAddition = new MMMessageAssociationEnd<ComparisonResult1, Addition1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ComparisonResult1.mmObject();
 			isDerived = false;
@@ -340,7 +393,17 @@ public class ComparisonResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Addition1.mmObject();
+			type_lazy = () -> Addition1.mmObject();
+		}
+
+		@Override
+		public Addition1 getValue(ComparisonResult1 obj) {
+			return obj.getAddition();
+		}
+
+		@Override
+		public void setValue(ComparisonResult1 obj, Addition1 value) {
+			obj.setAddition(value);
 		}
 	};
 	/**
@@ -444,7 +507,7 @@ public class ComparisonResult1 {
 		return replacement;
 	}
 
-	public ComparisonResult1 setReplacement(com.tools20022.repository.msg.Replacement1 replacement) {
+	public ComparisonResult1 setReplacement(Replacement1 replacement) {
 		this.replacement = Objects.requireNonNull(replacement);
 		return this;
 	}
@@ -453,7 +516,7 @@ public class ComparisonResult1 {
 		return deletion;
 	}
 
-	public ComparisonResult1 setDeletion(com.tools20022.repository.msg.Deletion1 deletion) {
+	public ComparisonResult1 setDeletion(Deletion1 deletion) {
 		this.deletion = Objects.requireNonNull(deletion);
 		return this;
 	}
@@ -462,7 +525,7 @@ public class ComparisonResult1 {
 		return addition;
 	}
 
-	public ComparisonResult1 setAddition(com.tools20022.repository.msg.Addition1 addition) {
+	public ComparisonResult1 setAddition(Addition1 addition) {
 		this.addition = Objects.requireNonNull(addition);
 		return this;
 	}

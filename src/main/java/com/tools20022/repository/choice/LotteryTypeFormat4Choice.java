@@ -119,7 +119,7 @@ public class LotteryTypeFormat4Choice {
 	 * LotteryTypeFormat1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LotteryTypeFormat4Choice, LotteryType1Code> mmCode = new MMMessageAttribute<LotteryTypeFormat4Choice, LotteryType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LotteryTypeFormat4Choice.mmObject();
@@ -132,6 +132,16 @@ public class LotteryTypeFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LotteryType1Code.mmObject();
+		}
+
+		@Override
+		public LotteryType1Code getValue(LotteryTypeFormat4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LotteryTypeFormat4Choice obj, LotteryType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -174,7 +184,7 @@ public class LotteryTypeFormat4Choice {
 	 * LotteryTypeFormat1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LotteryTypeFormat4Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<LotteryTypeFormat4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LotteryTypeFormat4Choice.mmObject();
@@ -188,6 +198,16 @@ public class LotteryTypeFormat4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(LotteryTypeFormat4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LotteryTypeFormat4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

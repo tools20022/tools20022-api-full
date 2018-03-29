@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.CrossType1Code;
 import com.tools20022.repository.codeset.Prioritisation1Code;
 import com.tools20022.repository.entity.CrossTrade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Order9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class CrossOrder1 {
 	 * definition} = "Type of cross being submitted to a market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCrossType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CrossOrder1, CrossType1Code> mmCrossType = new MMMessageAttribute<CrossOrder1, CrossType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmCrossType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder1.mmObject();
@@ -126,6 +127,16 @@ public class CrossOrder1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CrossType1Code.mmObject();
+		}
+
+		@Override
+		public CrossType1Code getValue(CrossOrder1 obj) {
+			return obj.getCrossType();
+		}
+
+		@Override
+		public void setValue(CrossOrder1 obj, CrossType1Code value) {
+			obj.setCrossType(value);
 		}
 	};
 	@XmlElement(name = "Prtistn", required = true)
@@ -167,7 +178,7 @@ public class CrossOrder1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrioritisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CrossOrder1, Prioritisation1Code> mmPrioritisation = new MMMessageAttribute<CrossOrder1, Prioritisation1Code>() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmPrioritisation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder1.mmObject();
@@ -180,6 +191,16 @@ public class CrossOrder1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Prioritisation1Code.mmObject();
+		}
+
+		@Override
+		public Prioritisation1Code getValue(CrossOrder1 obj) {
+			return obj.getPrioritisation();
+		}
+
+		@Override
+		public void setValue(CrossOrder1 obj, Prioritisation1Code value) {
+			obj.setPrioritisation(value);
 		}
 	};
 	@XmlElement(name = "BuySdDtls", required = true)
@@ -216,7 +237,7 @@ public class CrossOrder1 {
 	 * definition} = "Buyside order details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuySideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CrossOrder1, Order9> mmBuySideDetails = new MMMessageAssociationEnd<CrossOrder1, Order9>() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmBuySideOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder1.mmObject();
@@ -229,7 +250,17 @@ public class CrossOrder1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Order9.mmObject();
+			type_lazy = () -> Order9.mmObject();
+		}
+
+		@Override
+		public Order9 getValue(CrossOrder1 obj) {
+			return obj.getBuySideDetails();
+		}
+
+		@Override
+		public void setValue(CrossOrder1 obj, Order9 value) {
+			obj.setBuySideDetails(value);
 		}
 	};
 	@XmlElement(name = "SellSdDtls", required = true)
@@ -266,7 +297,7 @@ public class CrossOrder1 {
 	 * definition} = "Sell side order details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSellSideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CrossOrder1, Order9> mmSellSideDetails = new MMMessageAssociationEnd<CrossOrder1, Order9>() {
 		{
 			businessElementTrace_lazy = () -> CrossTrade.mmSellSideOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CrossOrder1.mmObject();
@@ -279,7 +310,17 @@ public class CrossOrder1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Order9.mmObject();
+			type_lazy = () -> Order9.mmObject();
+		}
+
+		@Override
+		public Order9 getValue(CrossOrder1 obj) {
+			return obj.getSellSideDetails();
+		}
+
+		@Override
+		public void setValue(CrossOrder1 obj, Order9 value) {
+			obj.setSellSideDetails(value);
 		}
 	};
 
@@ -320,7 +361,7 @@ public class CrossOrder1 {
 		return buySideDetails;
 	}
 
-	public CrossOrder1 setBuySideDetails(com.tools20022.repository.msg.Order9 buySideDetails) {
+	public CrossOrder1 setBuySideDetails(Order9 buySideDetails) {
 		this.buySideDetails = Objects.requireNonNull(buySideDetails);
 		return this;
 	}
@@ -329,7 +370,7 @@ public class CrossOrder1 {
 		return sellSideDetails;
 	}
 
-	public CrossOrder1 setSellSideDetails(com.tools20022.repository.msg.Order9 sellSideDetails) {
+	public CrossOrder1 setSellSideDetails(Order9 sellSideDetails) {
 		this.sellSideDetails = Objects.requireNonNull(sellSideDetails);
 		return this;
 	}

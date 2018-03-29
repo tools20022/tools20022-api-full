@@ -120,7 +120,7 @@ public class MarketDetail2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketDetail2, MICIdentifier> mmIdentification = new MMMessageAttribute<MarketDetail2, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketDetail2.mmObject();
@@ -132,6 +132,16 @@ public class MarketDetail2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(MarketDetail2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MarketDetail2 obj, MICIdentifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AvrgDalyNbOfTxs")
@@ -165,7 +175,7 @@ public class MarketDetail2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAverageDailyNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketDetail2, Optional<DecimalNumber>> mmAverageDailyNumberOfTransactions = new MMMessageAttribute<MarketDetail2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketDetail2.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class MarketDetail2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(MarketDetail2 obj) {
+			return obj.getAverageDailyNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(MarketDetail2 obj, Optional<DecimalNumber> value) {
+			obj.setAverageDailyNumberOfTransactions(value.orElse(null));
 		}
 	};
 

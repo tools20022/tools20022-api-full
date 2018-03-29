@@ -108,7 +108,7 @@ public class TaxIdentificationType1Choice {
 	 * "Type of tax identification number or identifier expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxIdentificationType1Choice, TaxIdentificationNumberType1Code> mmCode = new MMMessageAttribute<TaxIdentificationType1Choice, TaxIdentificationNumberType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxIdentificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxIdentificationType1Choice.mmObject();
@@ -120,6 +120,16 @@ public class TaxIdentificationType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxIdentificationNumberType1Code.mmObject();
+		}
+
+		@Override
+		public TaxIdentificationNumberType1Code getValue(TaxIdentificationType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TaxIdentificationType1Choice obj, TaxIdentificationNumberType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -152,7 +162,7 @@ public class TaxIdentificationType1Choice {
 	 * "Type of tax identification number expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxIdentificationType1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<TaxIdentificationType1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxIdentificationType1Choice.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class TaxIdentificationType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(TaxIdentificationType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TaxIdentificationType1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

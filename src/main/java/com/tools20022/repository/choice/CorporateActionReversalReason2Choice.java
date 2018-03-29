@@ -112,7 +112,7 @@ public class CorporateActionReversalReason2Choice {
 	 * definition} = "Standard code to specify the reason for the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionReversalReason2Choice, CorporateActionReversalReason1Code> mmCode = new MMMessageAttribute<CorporateActionReversalReason2Choice, CorporateActionReversalReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmReversalReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionReversalReason2Choice.mmObject();
@@ -124,6 +124,16 @@ public class CorporateActionReversalReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionReversalReason1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionReversalReason1Code getValue(CorporateActionReversalReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionReversalReason2Choice obj, CorporateActionReversalReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class CorporateActionReversalReason2Choice {
 	 * "Proprietary identification for the reason of the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionReversalReason2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<CorporateActionReversalReason2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmReversalReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionReversalReason2Choice.mmObject();
@@ -174,6 +184,16 @@ public class CorporateActionReversalReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(CorporateActionReversalReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionReversalReason2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

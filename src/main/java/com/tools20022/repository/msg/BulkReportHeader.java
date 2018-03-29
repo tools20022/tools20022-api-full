@@ -105,7 +105,7 @@ public class BulkReportHeader {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BulkReportHeader, Max35Text> mmReportIdentification = new MMMessageAttribute<BulkReportHeader, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BulkReportHeader.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class BulkReportHeader {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BulkReportHeader obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(BulkReportHeader obj, Max35Text value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "TrchNb", required = true)
@@ -147,7 +157,7 @@ public class BulkReportHeader {
 	 * definition} = "Sequence number of the report tranche."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrancheNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BulkReportHeader, Number> mmTrancheNumber = new MMMessageAttribute<BulkReportHeader, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BulkReportHeader.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class BulkReportHeader {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(BulkReportHeader obj) {
+			return obj.getTrancheNumber();
+		}
+
+		@Override
+		public void setValue(BulkReportHeader obj, Number value) {
+			obj.setTrancheNumber(value);
 		}
 	};
 	@XmlElement(name = "LastTrchInd", required = true)
@@ -191,7 +211,7 @@ public class BulkReportHeader {
 	 * "Indicates whether this tranche is the last tranche of the full report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastTrancheIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BulkReportHeader, YesNoIndicator> mmLastTrancheIndicator = new MMMessageAttribute<BulkReportHeader, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BulkReportHeader.mmObject();
 			isDerived = false;
@@ -202,6 +222,16 @@ public class BulkReportHeader {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(BulkReportHeader obj) {
+			return obj.getLastTrancheIndicator();
+		}
+
+		@Override
+		public void setValue(BulkReportHeader obj, YesNoIndicator value) {
+			obj.setLastTrancheIndicator(value);
 		}
 	};
 

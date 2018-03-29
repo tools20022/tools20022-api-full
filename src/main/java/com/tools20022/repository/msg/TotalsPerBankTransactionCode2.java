@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.BankTransaction;
 import com.tools20022.repository.entity.CashAvailability;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BankTransactionCodeStructure4;
+import com.tools20022.repository.msg.CashBalanceAvailability2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -136,7 +138,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * "Number of individual entries for the bank transaction code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfEntries = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<Max15NumericText>> mmNumberOfEntries = new MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -147,6 +149,16 @@ public class TotalsPerBankTransactionCode2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(TotalsPerBankTransactionCode2 obj) {
+			return obj.getNumberOfEntries();
+		}
+
+		@Override
+		public void setValue(TotalsPerBankTransactionCode2 obj, Optional<Max15NumericText> value) {
+			obj.setNumberOfEntries(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sum")
@@ -179,7 +191,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * definition} = "Total of all individual entries included in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<DecimalNumber>> mmSum = new MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -190,6 +202,16 @@ public class TotalsPerBankTransactionCode2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(TotalsPerBankTransactionCode2 obj) {
+			return obj.getSum();
+		}
+
+		@Override
+		public void setValue(TotalsPerBankTransactionCode2 obj, Optional<DecimalNumber> value) {
+			obj.setSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNetNtryAmt")
@@ -224,7 +246,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNetEntryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<DecimalNumber>> mmTotalNetEntryAmount = new MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -235,6 +257,16 @@ public class TotalsPerBankTransactionCode2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(TotalsPerBankTransactionCode2 obj) {
+			return obj.getTotalNetEntryAmount();
+		}
+
+		@Override
+		public void setValue(TotalsPerBankTransactionCode2 obj, Optional<DecimalNumber> value) {
+			obj.setTotalNetEntryAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -269,7 +301,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<CreditDebitCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -280,6 +312,16 @@ public class TotalsPerBankTransactionCode2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(TotalsPerBankTransactionCode2 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(TotalsPerBankTransactionCode2 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FcstInd")
@@ -314,7 +356,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForecastIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<TrueFalseIndicator>> mmForecastIndicator = new MMMessageAttribute<TotalsPerBankTransactionCode2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmObject();
 			isDerived = false;
@@ -325,6 +367,16 @@ public class TotalsPerBankTransactionCode2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(TotalsPerBankTransactionCode2 obj) {
+			return obj.getForecastIndicator();
+		}
+
+		@Override
+		public void setValue(TotalsPerBankTransactionCode2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setForecastIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BkTxCd", required = true)
@@ -363,7 +415,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalsPerBankTransactionCode2, BankTransactionCodeStructure4> mmBankTransactionCode = new MMMessageAssociationEnd<TotalsPerBankTransactionCode2, BankTransactionCodeStructure4>() {
 		{
 			businessComponentTrace_lazy = () -> BankTransaction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmObject();
@@ -375,11 +427,21 @@ public class TotalsPerBankTransactionCode2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure4.mmObject();
+			type_lazy = () -> BankTransactionCodeStructure4.mmObject();
+		}
+
+		@Override
+		public BankTransactionCodeStructure4 getValue(TotalsPerBankTransactionCode2 obj) {
+			return obj.getBankTransactionCode();
+		}
+
+		@Override
+		public void setValue(TotalsPerBankTransactionCode2 obj, BankTransactionCodeStructure4 value) {
+			obj.setBankTransactionCode(value);
 		}
 	};
 	@XmlElement(name = "Avlbty")
-	protected List<com.tools20022.repository.msg.CashBalanceAvailability2> availability;
+	protected List<CashBalanceAvailability2> availability;
 	/**
 	 * 
 	 <p>
@@ -414,7 +476,7 @@ public class TotalsPerBankTransactionCode2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalsPerBankTransactionCode2, List<CashBalanceAvailability2>> mmAvailability = new MMMessageAssociationEnd<TotalsPerBankTransactionCode2, List<CashBalanceAvailability2>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAvailability.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalsPerBankTransactionCode2.mmObject();
@@ -425,7 +487,17 @@ public class TotalsPerBankTransactionCode2 {
 			definition = "Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmObject();
+			type_lazy = () -> CashBalanceAvailability2.mmObject();
+		}
+
+		@Override
+		public List<CashBalanceAvailability2> getValue(TotalsPerBankTransactionCode2 obj) {
+			return obj.getAvailability();
+		}
+
+		@Override
+		public void setValue(TotalsPerBankTransactionCode2 obj, List<CashBalanceAvailability2> value) {
+			obj.setAvailability(value);
 		}
 	};
 
@@ -496,7 +568,7 @@ public class TotalsPerBankTransactionCode2 {
 		return bankTransactionCode;
 	}
 
-	public TotalsPerBankTransactionCode2 setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure4 bankTransactionCode) {
+	public TotalsPerBankTransactionCode2 setBankTransactionCode(BankTransactionCodeStructure4 bankTransactionCode) {
 		this.bankTransactionCode = Objects.requireNonNull(bankTransactionCode);
 		return this;
 	}
@@ -505,7 +577,7 @@ public class TotalsPerBankTransactionCode2 {
 		return availability == null ? availability = new ArrayList<>() : availability;
 	}
 
-	public TotalsPerBankTransactionCode2 setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability2> availability) {
+	public TotalsPerBankTransactionCode2 setAvailability(List<CashBalanceAvailability2> availability) {
 		this.availability = Objects.requireNonNull(availability);
 		return this;
 	}

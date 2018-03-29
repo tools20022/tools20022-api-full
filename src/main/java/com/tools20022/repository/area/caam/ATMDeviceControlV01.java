@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType13;
 import com.tools20022.repository.msg.Header20;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +125,7 @@ public class ATMDeviceControlV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMDeviceControlV01, Header20> mmHeader = new MMMessageBuildingBlock<ATMDeviceControlV01, Header20>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class ATMDeviceControlV01 {
 			complexType_lazy = () -> Header20.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMDeviceControlV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header20 getValue(ATMDeviceControlV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMDeviceControlV01 obj, Header20 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "PrtctdATMDvcCtrl")
@@ -170,7 +171,7 @@ public class ATMDeviceControlV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProtectedATMDeviceControl = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMDeviceControlV01, Optional<ContentInformationType10>> mmProtectedATMDeviceControl = new MMMessageBuildingBlock<ATMDeviceControlV01, Optional<ContentInformationType10>>() {
 		{
 			xmlTag = "PrtctdATMDvcCtrl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +182,14 @@ public class ATMDeviceControlV01 {
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMDeviceControlV01.class.getMethod("getProtectedATMDeviceControl", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMDeviceControlV01 obj) {
+			return obj.getProtectedATMDeviceControl();
+		}
+
+		@Override
+		public void setValue(ATMDeviceControlV01 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedATMDeviceControl(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMDvcCtrl")
@@ -214,7 +217,7 @@ public class ATMDeviceControlV01 {
 	 * definition} = "Information related to the control of an ATM device."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMDeviceControl = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMDeviceControlV01, Optional<ATMDeviceControl1>> mmATMDeviceControl = new MMMessageBuildingBlock<ATMDeviceControlV01, Optional<ATMDeviceControl1>>() {
 		{
 			xmlTag = "ATMDvcCtrl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +228,14 @@ public class ATMDeviceControlV01 {
 			complexType_lazy = () -> ATMDeviceControl1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMDeviceControlV01.class.getMethod("getATMDeviceControl", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ATMDeviceControl1> getValue(ATMDeviceControlV01 obj) {
+			return obj.getATMDeviceControl();
+		}
+
+		@Override
+		public void setValue(ATMDeviceControlV01 obj, Optional<ATMDeviceControl1> value) {
+			obj.setATMDeviceControl(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -259,7 +264,7 @@ public class ATMDeviceControlV01 {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMDeviceControlV01, Optional<ContentInformationType13>> mmSecurityTrailer = new MMMessageBuildingBlock<ATMDeviceControlV01, Optional<ContentInformationType13>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +275,14 @@ public class ATMDeviceControlV01 {
 			complexType_lazy = () -> ContentInformationType13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMDeviceControlV01.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType13> getValue(ATMDeviceControlV01 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ATMDeviceControlV01 obj, Optional<ContentInformationType13> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

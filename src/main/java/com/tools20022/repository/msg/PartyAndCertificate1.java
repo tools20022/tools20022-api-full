@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max10KBinary;
 import com.tools20022.repository.datatype.Max15PlusSignedNumericText;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Authorisation1;
+import com.tools20022.repository.msg.PartyIdentification41;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +121,7 @@ public class PartyAndCertificate1 {
 	 * definition} = "Entity involved in an activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAndCertificate1, PartyIdentification41> mmParty = new MMMessageAssociationEnd<PartyAndCertificate1, PartyIdentification41>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndCertificate1.mmObject();
@@ -131,7 +133,17 @@ public class PartyAndCertificate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification41.mmObject();
+			type_lazy = () -> PartyIdentification41.mmObject();
+		}
+
+		@Override
+		public PartyIdentification41 getValue(PartyAndCertificate1 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(PartyAndCertificate1 obj, PartyIdentification41 value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "Cert")
@@ -169,7 +181,7 @@ public class PartyAndCertificate1 {
 	 * definition} = "Security certificate used to sign electronically."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyAndCertificate1, Optional<Max10KBinary>> mmCertificate = new MMMessageAttribute<PartyAndCertificate1, Optional<Max10KBinary>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicSignature.mmRelatedSecurityCertificate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndCertificate1.mmObject();
@@ -181,6 +193,16 @@ public class PartyAndCertificate1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
+		}
+
+		@Override
+		public Optional<Max10KBinary> getValue(PartyAndCertificate1 obj) {
+			return obj.getCertificate();
+		}
+
+		@Override
+		public void setValue(PartyAndCertificate1 obj, Optional<Max10KBinary> value) {
+			obj.setCertificate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SgntrOrdr")
@@ -218,7 +240,7 @@ public class PartyAndCertificate1 {
 	 * definition} = "Order in which the mandate holder has to sign."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignatureOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyAndCertificate1, Optional<Max15PlusSignedNumericText>> mmSignatureOrder = new MMMessageAttribute<PartyAndCertificate1, Optional<Max15PlusSignedNumericText>>() {
 		{
 			businessElementTrace_lazy = () -> SignatureCondition.mmSignatureOrder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndCertificate1.mmObject();
@@ -230,6 +252,16 @@ public class PartyAndCertificate1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15PlusSignedNumericText> getValue(PartyAndCertificate1 obj) {
+			return obj.getSignatureOrder();
+		}
+
+		@Override
+		public void setValue(PartyAndCertificate1 obj, Optional<Max15PlusSignedNumericText> value) {
+			obj.setSignatureOrder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Authstn", required = true)
@@ -265,7 +297,7 @@ public class PartyAndCertificate1 {
 	 * definition} = "Authorisation granted to a mandate holder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAndCertificate1, Authorisation1> mmAuthorisation = new MMMessageAssociationEnd<PartyAndCertificate1, Authorisation1>() {
 		{
 			businessElementTrace_lazy = () -> BankOperation.mmOperationThreshold;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndCertificate1.mmObject();
@@ -277,7 +309,17 @@ public class PartyAndCertificate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Authorisation1.mmObject();
+			type_lazy = () -> Authorisation1.mmObject();
+		}
+
+		@Override
+		public Authorisation1 getValue(PartyAndCertificate1 obj) {
+			return obj.getAuthorisation();
+		}
+
+		@Override
+		public void setValue(PartyAndCertificate1 obj, Authorisation1 value) {
+			obj.setAuthorisation(value);
 		}
 	};
 
@@ -301,7 +343,7 @@ public class PartyAndCertificate1 {
 		return party;
 	}
 
-	public PartyAndCertificate1 setParty(com.tools20022.repository.msg.PartyIdentification41 party) {
+	public PartyAndCertificate1 setParty(PartyIdentification41 party) {
 		this.party = Objects.requireNonNull(party);
 		return this;
 	}
@@ -328,7 +370,7 @@ public class PartyAndCertificate1 {
 		return authorisation;
 	}
 
-	public PartyAndCertificate1 setAuthorisation(com.tools20022.repository.msg.Authorisation1 authorisation) {
+	public PartyAndCertificate1 setAuthorisation(Authorisation1 authorisation) {
 		this.authorisation = Objects.requireNonNull(authorisation);
 		return this;
 	}

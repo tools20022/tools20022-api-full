@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NumberAndSumOfTransactions2;
+import com.tools20022.repository.msg.PaymentCommon3;
+import com.tools20022.repository.msg.TransactionReport4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +120,7 @@ public class Transactions7 {
 	 * Transactions6.mmPaymentCommonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentCommonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transactions7, Optional<PaymentCommon3>> mmPaymentCommonInformation = new MMMessageAssociationEnd<Transactions7, Optional<PaymentCommon3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transactions7.mmObject();
 			isDerived = false;
@@ -129,7 +132,17 @@ public class Transactions7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCommon3.mmObject();
+			type_lazy = () -> PaymentCommon3.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCommon3> getValue(Transactions7 obj) {
+			return obj.getPaymentCommonInformation();
+		}
+
+		@Override
+		public void setValue(Transactions7 obj, Optional<PaymentCommon3> value) {
+			obj.setPaymentCommonInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxsSummry")
@@ -165,7 +178,7 @@ public class Transactions7 {
 	 * Transactions6.mmTransactionsSummary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionsSummary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transactions7, Optional<NumberAndSumOfTransactions2>> mmTransactionsSummary = new MMMessageAssociationEnd<Transactions7, Optional<NumberAndSumOfTransactions2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transactions7.mmObject();
 			isDerived = false;
@@ -177,11 +190,21 @@ public class Transactions7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactions2.mmObject();
+			type_lazy = () -> NumberAndSumOfTransactions2.mmObject();
+		}
+
+		@Override
+		public Optional<NumberAndSumOfTransactions2> getValue(Transactions7 obj) {
+			return obj.getTransactionsSummary();
+		}
+
+		@Override
+		public void setValue(Transactions7 obj, Optional<NumberAndSumOfTransactions2> value) {
+			obj.setTransactionsSummary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxRpt", required = true)
-	protected List<com.tools20022.repository.msg.TransactionReport4> transactionReport;
+	protected List<TransactionReport4> transactionReport;
 	/**
 	 * 
 	 <p>
@@ -213,7 +236,7 @@ public class Transactions7 {
 	 * Transactions6.mmTransactionReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transactions7, List<TransactionReport4>> mmTransactionReport = new MMMessageAssociationEnd<Transactions7, List<TransactionReport4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transactions7.mmObject();
 			isDerived = false;
@@ -224,7 +247,17 @@ public class Transactions7 {
 			previousVersion_lazy = () -> Transactions6.mmTransactionReport;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionReport4.mmObject();
+			type_lazy = () -> TransactionReport4.mmObject();
+		}
+
+		@Override
+		public List<TransactionReport4> getValue(Transactions7 obj) {
+			return obj.getTransactionReport();
+		}
+
+		@Override
+		public void setValue(Transactions7 obj, List<TransactionReport4> value) {
+			obj.setTransactionReport(value);
 		}
 	};
 
@@ -249,7 +282,7 @@ public class Transactions7 {
 		return paymentCommonInformation == null ? Optional.empty() : Optional.of(paymentCommonInformation);
 	}
 
-	public Transactions7 setPaymentCommonInformation(com.tools20022.repository.msg.PaymentCommon3 paymentCommonInformation) {
+	public Transactions7 setPaymentCommonInformation(PaymentCommon3 paymentCommonInformation) {
 		this.paymentCommonInformation = paymentCommonInformation;
 		return this;
 	}
@@ -258,7 +291,7 @@ public class Transactions7 {
 		return transactionsSummary == null ? Optional.empty() : Optional.of(transactionsSummary);
 	}
 
-	public Transactions7 setTransactionsSummary(com.tools20022.repository.msg.NumberAndSumOfTransactions2 transactionsSummary) {
+	public Transactions7 setTransactionsSummary(NumberAndSumOfTransactions2 transactionsSummary) {
 		this.transactionsSummary = transactionsSummary;
 		return this;
 	}
@@ -267,7 +300,7 @@ public class Transactions7 {
 		return transactionReport == null ? transactionReport = new ArrayList<>() : transactionReport;
 	}
 
-	public Transactions7 setTransactionReport(List<com.tools20022.repository.msg.TransactionReport4> transactionReport) {
+	public Transactions7 setTransactionReport(List<TransactionReport4> transactionReport) {
 		this.transactionReport = Objects.requireNonNull(transactionReport);
 		return this;
 	}

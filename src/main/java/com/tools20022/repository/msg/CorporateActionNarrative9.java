@@ -117,7 +117,7 @@ public class CorporateActionNarrative9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative9, List<Max350Text>> mmAdditionalText = new MMMessageAttribute<CorporateActionNarrative9, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative9.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class CorporateActionNarrative9 {
 			definition = "Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative9 obj) {
+			return obj.getAdditionalText();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative9 obj, List<Max350Text> value) {
+			obj.setAdditionalText(value);
 		}
 	};
 	@XmlElement(name = "InfConds")
@@ -169,7 +179,7 @@ public class CorporateActionNarrative9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative9, List<Max350Text>> mmInformationConditions = new MMMessageAttribute<CorporateActionNarrative9, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmInformationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative9.mmObject();
@@ -181,6 +191,16 @@ public class CorporateActionNarrative9 {
 			definition = "Provides conditional information related to the event, for example, an offer is subject to 50 percent acceptance, the offeror allows the securities holder to set some conditions.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative9 obj) {
+			return obj.getInformationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative9 obj, List<Max350Text> value) {
+			obj.setInformationConditions(value);
 		}
 	};
 	@XmlElement(name = "InfToCmplyWth")
@@ -222,7 +242,7 @@ public class CorporateActionNarrative9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative9, List<Max350Text>> mmInformationToComplyWith = new MMMessageAttribute<CorporateActionNarrative9, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative9.mmObject();
@@ -234,6 +254,16 @@ public class CorporateActionNarrative9 {
 			definition = "Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or Sophisticated Investor Letter (SIL) to be provided.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative9 obj) {
+			return obj.getInformationToComplyWith();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative9 obj, List<Max350Text> value) {
+			obj.setInformationToComplyWith(value);
 		}
 	};
 	@XmlElement(name = "PtyCtctNrrtv")
@@ -275,7 +305,7 @@ public class CorporateActionNarrative9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative9, List<Max350Text>> mmPartyContactNarrative = new MMMessageAttribute<CorporateActionNarrative9, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative9.mmObject();
@@ -287,6 +317,16 @@ public class CorporateActionNarrative9 {
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative9 obj) {
+			return obj.getPartyContactNarrative();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative9 obj, List<Max350Text> value) {
+			obj.setPartyContactNarrative(value);
 		}
 	};
 

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorDiagnosticRequest1;
 import com.tools20022.repository.msg.ContentInformationType3;
 import com.tools20022.repository.msg.Header1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +125,7 @@ public class AcceptorDiagnosticRequestV01 {
 	 * definition} = "Diagnostic request message management information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorDiagnosticRequestV01, Header1> mmHeader = new MMMessageBuildingBlock<AcceptorDiagnosticRequestV01, Header1>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class AcceptorDiagnosticRequestV01 {
 			complexType_lazy = () -> Header1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorDiagnosticRequestV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header1 getValue(AcceptorDiagnosticRequestV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticRequestV01 obj, Header1 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "DgnstcReq", required = true)
@@ -170,7 +171,7 @@ public class AcceptorDiagnosticRequestV01 {
 	 * definition} = "Information related to the diagnostic request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDiagnosticRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorDiagnosticRequestV01, AcceptorDiagnosticRequest1> mmDiagnosticRequest = new MMMessageBuildingBlock<AcceptorDiagnosticRequestV01, AcceptorDiagnosticRequest1>() {
 		{
 			xmlTag = "DgnstcReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +182,14 @@ public class AcceptorDiagnosticRequestV01 {
 			complexType_lazy = () -> AcceptorDiagnosticRequest1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorDiagnosticRequestV01.class.getMethod("getDiagnosticRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorDiagnosticRequest1 getValue(AcceptorDiagnosticRequestV01 obj) {
+			return obj.getDiagnosticRequest();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticRequestV01 obj, AcceptorDiagnosticRequest1 value) {
+			obj.setDiagnosticRequest(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -214,7 +217,7 @@ public class AcceptorDiagnosticRequestV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorDiagnosticRequestV01, ContentInformationType3> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorDiagnosticRequestV01, ContentInformationType3>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +228,14 @@ public class AcceptorDiagnosticRequestV01 {
 			complexType_lazy = () -> ContentInformationType3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorDiagnosticRequestV01.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType3 getValue(AcceptorDiagnosticRequestV01 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorDiagnosticRequestV01 obj, ContentInformationType3 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

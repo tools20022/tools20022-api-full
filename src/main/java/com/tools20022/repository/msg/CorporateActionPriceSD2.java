@@ -102,7 +102,7 @@ public class CorporateActionPriceSD2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPriceSD2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionPriceSD2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPriceSD2.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class CorporateActionPriceSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionPriceSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionPriceSD2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCCshInLieuPric")
@@ -151,7 +161,7 @@ public class CorporateActionPriceSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCCashInLieuPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPriceSD2, Optional<RateAndAmountFormat17Choice>> mmDTCCashInLieuPrice = new MMMessageAttribute<CorporateActionPriceSD2, Optional<RateAndAmountFormat17Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPriceSD2.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class CorporateActionPriceSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat17Choice> getValue(CorporateActionPriceSD2 obj) {
+			return obj.getDTCCashInLieuPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPriceSD2 obj, Optional<RateAndAmountFormat17Choice> value) {
+			obj.setDTCCashInLieuPrice(value.orElse(null));
 		}
 	};
 

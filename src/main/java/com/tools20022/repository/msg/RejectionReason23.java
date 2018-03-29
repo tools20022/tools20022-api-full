@@ -132,7 +132,7 @@ public class RejectionReason23 {
 	 * RejectionReason3.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason23, MessageRejectedReason1Code> mmReason = new MMMessageAttribute<RejectionReason23, MessageRejectedReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason23.mmObject();
@@ -145,6 +145,16 @@ public class RejectionReason23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageRejectedReason1Code.mmObject();
+		}
+
+		@Override
+		public MessageRejectedReason1Code getValue(RejectionReason23 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectionReason23 obj, MessageRejectedReason1Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -186,7 +196,7 @@ public class RejectionReason23 {
 	 * RejectionReason3.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason23, Optional<Max140Text>> mmAdditionalInformation = new MMMessageAttribute<RejectionReason23, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason23.mmObject();
@@ -199,6 +209,16 @@ public class RejectionReason23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(RejectionReason23 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(RejectionReason23 obj, Optional<Max140Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkdMsg")
@@ -230,7 +250,7 @@ public class RejectionReason23 {
 	 * definition} = "Identification of the invalid or unrecognised reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkedMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionReason23, Optional<LinkedMessage1Choice>> mmLinkedMessage = new MMMessageAssociationEnd<RejectionReason23, Optional<LinkedMessage1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason23.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class RejectionReason23 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LinkedMessage1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LinkedMessage1Choice> getValue(RejectionReason23 obj) {
+			return obj.getLinkedMessage();
+		}
+
+		@Override
+		public void setValue(RejectionReason23 obj, Optional<LinkedMessage1Choice> value) {
+			obj.setLinkedMessage(value.orElse(null));
 		}
 	};
 

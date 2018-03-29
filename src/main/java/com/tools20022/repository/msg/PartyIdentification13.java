@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class PartyIdentification13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification13, Max70Text> mmName = new MMMessageAttribute<PartyIdentification13, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification13.mmObject();
@@ -126,6 +127,16 @@ public class PartyIdentification13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PartyIdentification13 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification13 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -163,7 +174,7 @@ public class PartyIdentification13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification13, Optional<PostalAddress4>> mmPostalAddress = new MMMessageAssociationEnd<PartyIdentification13, Optional<PostalAddress4>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification13.mmObject();
@@ -175,7 +186,17 @@ public class PartyIdentification13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress4.mmObject();
+			type_lazy = () -> PostalAddress4.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress4> getValue(PartyIdentification13 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification13 obj, Optional<PostalAddress4> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 
@@ -206,7 +227,7 @@ public class PartyIdentification13 {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public PartyIdentification13 setPostalAddress(com.tools20022.repository.msg.PostalAddress4 postalAddress) {
+	public PartyIdentification13 setPostalAddress(PostalAddress4 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}

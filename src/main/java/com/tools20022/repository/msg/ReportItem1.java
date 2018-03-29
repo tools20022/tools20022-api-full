@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.SecuritiesEntry;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount19;
+import com.tools20022.repository.msg.SecurityIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +117,7 @@ public class ReportItem1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportItem1, SecuritiesAccount19> mmAccountIdentification = new MMMessageAssociationEnd<ReportItem1, SecuritiesAccount19>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
@@ -127,7 +129,17 @@ public class ReportItem1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount19 getValue(ReportItem1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(ReportItem1 obj, SecuritiesAccount19 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctLvl", required = true)
@@ -160,7 +172,7 @@ public class ReportItem1 {
 	 * "Level of the safekeeping account or sub-account of the report item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportItem1, HoldingAccountLevel1Code> mmAccountLevel = new MMMessageAttribute<ReportItem1, HoldingAccountLevel1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
 			isDerived = false;
@@ -171,6 +183,16 @@ public class ReportItem1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> HoldingAccountLevel1Code.mmObject();
+		}
+
+		@Override
+		public HoldingAccountLevel1Code getValue(ReportItem1 obj) {
+			return obj.getAccountLevel();
+		}
+
+		@Override
+		public void setValue(ReportItem1 obj, HoldingAccountLevel1Code value) {
+			obj.setAccountLevel(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmId")
@@ -206,7 +228,7 @@ public class ReportItem1 {
 	 * definition} = "Financial instrument identification of the report item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportItem1, Optional<SecurityIdentification19>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<ReportItem1, Optional<SecurityIdentification19>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
@@ -218,7 +240,17 @@ public class ReportItem1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification19> getValue(ReportItem1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(ReportItem1 obj, Optional<SecurityIdentification19> value) {
+			obj.setFinancialInstrumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ItmDt")
@@ -254,7 +286,7 @@ public class ReportItem1 {
 	 * definition} = "Date of the report item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportItem1, Optional<ISODate>> mmItemDate = new MMMessageAttribute<ReportItem1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
@@ -266,6 +298,16 @@ public class ReportItem1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ReportItem1 obj) {
+			return obj.getItemDate();
+		}
+
+		@Override
+		public void setValue(ReportItem1 obj, Optional<ISODate> value) {
+			obj.setItemDate(value.orElse(null));
 		}
 	};
 
@@ -288,7 +330,7 @@ public class ReportItem1 {
 		return accountIdentification;
 	}
 
-	public ReportItem1 setAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 accountIdentification) {
+	public ReportItem1 setAccountIdentification(SecuritiesAccount19 accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}
@@ -306,7 +348,7 @@ public class ReportItem1 {
 		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public ReportItem1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+	public ReportItem1 setFinancialInstrumentIdentification(SecurityIdentification19 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 		return this;
 	}

@@ -23,10 +23,9 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
-import com.tools20022.repository.entity.Security;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -403,7 +402,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPaymentDirectionIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, com.tools20022.repository.datatype.PaymentDirectionIndicator> mmPaymentDirectionIndicator = new MMBusinessAttribute<Debt, com.tools20022.repository.datatype.PaymentDirectionIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentDirection1Choice.mmIndicator, PaymentDirection1Choice.mmProprietary, PaymentDirection2Choice.mmIndicator, PaymentDirection2Choice.mmProprietary,
 					FinancialInstrumentAttributes8.mmPaymentDirection, FinancialInstrumentAttributes20.mmPaymentDirection, FinancialInstrumentAttributes4.mmPaymentDirection, PaymentDirection3Choice.mmIndicator,
@@ -421,12 +420,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> com.tools20022.repository.datatype.PaymentDirectionIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPaymentDirectionIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public com.tools20022.repository.datatype.PaymentDirectionIndicator getValue(Debt obj) {
+			return obj.getPaymentDirectionIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, com.tools20022.repository.datatype.PaymentDirectionIndicator value) {
+			obj.setPaymentDirectionIndicator(value);
 		}
 	};
 	protected ISODateTime nextCallableDate;
@@ -662,7 +663,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNextCallableDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, ISODateTime> mmNextCallableDate = new MMBusinessAttribute<Debt, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmNextCallableDate, FinancialInstrumentAttributes20.mmNextCallableDate, FinancialInstrumentAttributes35.mmNextCallableDate,
 					FinancialInstrumentAttributes41.mmNextCallableDate, FinancialInstrumentAttributes6.mmNextCallableDate, FinancialInstrumentAttributes9.mmNextCallableDate, FinancialInstrumentAttributes18.mmNextCallableDate,
@@ -692,12 +693,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getNextCallableDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Debt obj) {
+			return obj.getNextCallableDate();
+		}
+
+		@Override
+		public void setValue(Debt obj, ISODateTime value) {
+			obj.setNextCallableDate(value);
 		}
 	};
 	protected ISODateTime putableDate;
@@ -933,7 +936,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPutableDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, ISODateTime> mmPutableDate = new MMBusinessAttribute<Debt, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmPutableDate, FinancialInstrumentAttributes20.mmPutableDate, FinancialInstrumentAttributes35.mmPutableDate, FinancialInstrumentAttributes41.mmPutableDate,
 					FinancialInstrumentAttributes6.mmPutableDate, FinancialInstrumentAttributes9.mmPutableDate, FinancialInstrumentAttributes18.mmPutableDate, FinancialInstrumentAttributes22.mmPutableDate,
@@ -962,12 +965,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPutableDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Debt obj) {
+			return obj.getPutableDate();
+		}
+
+		@Override
+		public void setValue(Debt obj, ISODateTime value) {
+			obj.setPutableDate(value);
 		}
 	};
 	protected ISODateTime datedDate;
@@ -1202,7 +1207,7 @@ public class Debt extends Security {
 	 * "First date/time at which a security begins to accrue interest."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDatedDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, ISODateTime> mmDatedDate = new MMBusinessAttribute<Debt, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmDatedDate, FinancialInstrumentAttributes20.mmDatedDate, FinancialInstrumentAttributes35.mmDatedDate, FinancialInstrumentAttributes41.mmDatedDate,
 					FinancialInstrumentAttributes6.mmDatedDate, FinancialInstrumentAttributes9.mmDatedDate, FinancialInstrumentAttributes18.mmDatedDate, FinancialInstrumentAttributes22.mmDatedDate,
@@ -1231,12 +1236,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getDatedDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Debt obj) {
+			return obj.getDatedDate();
+		}
+
+		@Override
+		public void setValue(Debt obj, ISODateTime value) {
+			obj.setDatedDate(value);
 		}
 	};
 	protected ISODateTime firstPaymentDate;
@@ -1358,7 +1365,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFirstPaymentDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, ISODateTime> mmFirstPaymentDate = new MMBusinessAttribute<Debt, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmFirstPaymentDate, FinancialInstrumentAttributes20.mmFirstPaymentDate, FinancialInstrumentAttributes35.mmFirstPaymentDate,
 					FinancialInstrumentAttributes41.mmFirstPaymentDate, FinancialInstrumentAttributes4.mmFirstPaymentDate, FinancialInstrumentAttributes13.mmFirstPaymentDate, FinancialInstrumentAttributes21.mmFirstPaymentDate,
@@ -1378,12 +1385,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getFirstPaymentDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Debt obj) {
+			return obj.getFirstPaymentDate();
+		}
+
+		@Override
+		public void setValue(Debt obj, ISODateTime value) {
+			obj.setFirstPaymentDate(value);
 		}
 	};
 	protected PercentageRate factor;
@@ -1998,7 +2007,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFactor = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, PercentageRate> mmFactor = new MMBusinessAttribute<Debt, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmPreviousFactor, FinancialInstrumentAttributes8.mmCurrentFactor, FinancialInstrumentAttributes8.mmNextFactor,
 					FinancialInstrumentAttributes20.mmPreviousFactor, FinancialInstrumentAttributes20.mmCurrentFactor, FinancialInstrumentAttributes20.mmNextFactor, FinancialInstrumentAttributes35.mmPreviousFactor,
@@ -2057,12 +2066,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getFactor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Debt obj) {
+			return obj.getFactor();
+		}
+
+		@Override
+		public void setValue(Debt obj, PercentageRate value) {
+			obj.setFactor(value);
 		}
 	};
 	protected Max15NumericText poolNumber;
@@ -2188,7 +2199,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPoolNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, Max15NumericText> mmPoolNumber = new MMBusinessAttribute<Debt, Max15NumericText>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmPoolNumber, FinancialInstrumentAttributes20.mmPoolNumber, FinancialInstrumentAttributes35.mmPoolNumber, FinancialInstrumentAttributes41.mmPoolNumber,
 					FinancialInstrumentAttributes4.mmPoolNumber, FinancialInstrumentAttributes13.mmPoolNumber, FinancialInstrumentAttributes21.mmPoolNumber, FinancialInstrumentAttributes26.mmPoolNumber,
@@ -2208,12 +2219,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPoolNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max15NumericText getValue(Debt obj) {
+			return obj.getPoolNumber();
+		}
+
+		@Override
+		public void setValue(Debt obj, Max15NumericText value) {
+			obj.setPoolNumber(value);
 		}
 	};
 	protected YesNoIndicator variableRateIndicator;
@@ -2339,7 +2352,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmVariableRateIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmVariableRateIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmVariableRateIndicator, FinancialInstrumentAttributes20.mmVariableRateIndicator, FinancialInstrumentAttributes35.mmVariableRateIndicator,
 					FinancialInstrumentAttributes41.mmVariableRateIndicator, FinancialInstrumentAttributes4.mmVariableRateIndicator, FinancialInstrumentAttributes13.mmVariableRateIndicator,
@@ -2360,12 +2373,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getVariableRateIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getVariableRateIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setVariableRateIndicator(value);
 		}
 	};
 	protected YesNoIndicator callableIndicator;
@@ -2494,7 +2509,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCallableIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmCallableIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmCallableIndicator, FinancialInstrumentAttributes20.mmCallableIndicator, FinancialInstrumentAttributes35.mmCallableIndicator,
 					FinancialInstrumentAttributes41.mmCallableIndicator, FinancialInstrumentAttributes4.mmCallableIndicator, FinancialInstrumentAttributes13.mmCallableIndicator, FinancialInstrumentAttributes21.mmCallableIndicator,
@@ -2515,12 +2530,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getCallableIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getCallableIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setCallableIndicator(value);
 		}
 	};
 	protected YesNoIndicator putableIndicator;
@@ -2649,7 +2666,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPutableIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmPutableIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmPutableIndicator, FinancialInstrumentAttributes20.mmPutableIndicator, FinancialInstrumentAttributes35.mmPutableIndicator,
 					FinancialInstrumentAttributes41.mmPutableIndicator, FinancialInstrumentAttributes4.mmPutableIndicator, FinancialInstrumentAttributes13.mmPutableIndicator, FinancialInstrumentAttributes21.mmPutableIndicator,
@@ -2670,12 +2687,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPutableIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getPutableIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setPutableIndicator(value);
 		}
 	};
 	protected PercentageRate yieldToMaturityRate;
@@ -2746,7 +2765,7 @@ public class Debt extends Security {
 	 * "Rate of return anticipated on a bond when held until maturity date."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmYieldToMaturityRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, PercentageRate> mmYieldToMaturityRate = new MMBusinessAttribute<Debt, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes35.mmYieldToMaturityRate, FinancialInstrumentAttributes41.mmYieldToMaturityRate, FinancialInstrumentAttributes36.mmYieldToMaturityRate,
 					FinancialInstrumentAttributes42.mmYieldToMaturityRate, FinancialInstrumentAttributes63.mmYieldToMaturityRate, FinancialInstrumentAttributes64.mmYieldToMaturityRate, FinancialInstrumentAttributes75.mmYieldToMaturityRate,
@@ -2762,12 +2781,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getYieldToMaturityRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Debt obj) {
+			return obj.getYieldToMaturityRate();
+		}
+
+		@Override
+		public void setValue(Debt obj, PercentageRate value) {
+			obj.setYieldToMaturityRate(value);
 		}
 	};
 	protected CurrencyAndAmount accruedCapitalisationAmount;
@@ -2908,7 +2929,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAccruedCapitalisationAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, CurrencyAndAmount> mmAccruedCapitalisationAmount = new MMBusinessAttribute<Debt, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmAccruedCapitalisationAmount, OtherAmounts14.mmAccruedCapitalisationAmount, OtherAmounts20.mmAccruedCapitalisationAmount, OtherAmounts4.mmAccruedCapitalisationAmount,
 					OtherAmounts5.mmAccruedCapitalisationAmount, OtherAmounts17.mmAccruedCapitalisationAmount, OtherAmounts23.mmAccruedCapitalisationAmount, OtherAmounts3.mmAccruedCapitalisationAmount,
@@ -2930,12 +2951,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getAccruedCapitalisationAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Debt obj) {
+			return obj.getAccruedCapitalisationAmount();
+		}
+
+		@Override
+		public void setValue(Debt obj, CurrencyAndAmount value) {
+			obj.setAccruedCapitalisationAmount(value);
 		}
 	};
 	protected ISODateTime nextCouponDate;
@@ -3086,7 +3109,7 @@ public class Debt extends Security {
 	 * "Next payment date of an interest bearing financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNextCouponDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, ISODateTime> mmNextCouponDate = new MMBusinessAttribute<Debt, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes6.mmNextCouponDate, FinancialInstrumentAttributes9.mmNextCouponDate, FinancialInstrumentAttributes18.mmNextCouponDate,
 					FinancialInstrumentAttributes22.mmNextCouponDate, FinancialInstrumentAttributes32.mmNextCouponDate, FinancialInstrumentAttributes38.mmNextCouponDate, FinancialInstrumentAttributes7.mmNextCouponDate,
@@ -3109,12 +3132,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getNextCouponDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Debt obj) {
+			return obj.getNextCouponDate();
+		}
+
+		@Override
+		public void setValue(Debt obj, ISODateTime value) {
+			obj.setNextCouponDate(value);
 		}
 	};
 	protected ISODateTime nextFactorDate;
@@ -3163,7 +3188,7 @@ public class Debt extends Security {
 	 * "The date that the current factor will be changed to a new factor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNextFactorDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, ISODateTime> mmNextFactorDate = new MMBusinessAttribute<Debt, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmNextFactorDate, FinancialInstrumentAttributes31.mmNextFactorDate, FinancialInstrumentAttributes44.mmNextFactorDate, Debt2.mmNextFactorDate,
 					FinancialInstrumentAttributes2.mmNextFactorDate, Debt3.mmNextFactorDate);
@@ -3177,12 +3202,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getNextFactorDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Debt obj) {
+			return obj.getNextFactorDate();
+		}
+
+		@Override
+		public void setValue(Debt obj, ISODateTime value) {
+			obj.setNextFactorDate(value);
 		}
 	};
 	protected YesNoIndicator oddCouponIndicator;
@@ -3233,7 +3260,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOddCouponIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmOddCouponIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmOddCouponIndicator, FinancialInstrumentAttributes31.mmOddCouponIndicator, FinancialInstrumentAttributes44.mmOddCouponIndicator, Debt2.mmOddCouponIndicator,
 					FinancialInstrumentAttributes2.mmOddCouponIndicator, Debt3.mmOddCouponIndicator);
@@ -3247,12 +3274,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getOddCouponIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getOddCouponIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setOddCouponIndicator(value);
 		}
 	};
 	protected Number cPProgram;
@@ -3289,29 +3318,31 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The program under which a commercial paper is issued. The values that are most used are: \n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other."
+	 * "The program under which a commercial paper is issued. The values that are most used are:\n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other"
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCPProgram = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, Number> mmCPProgram = new MMBusinessAttribute<Debt, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmCPProgram, Debt2.mmCPProgram, Debt3.mmCPProgram);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CPProgram";
-			definition = "The program under which a commercial paper is issued. The values that are most used are: \n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other.";
+			definition = "The program under which a commercial paper is issued. The values that are most used are:\n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getCPProgram", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(Debt obj) {
+			return obj.getCPProgram();
+		}
+
+		@Override
+		public void setValue(Debt obj, Number value) {
+			obj.setCPProgram(value);
 		}
 	};
 	protected Max350Text cPRegistrationType;
@@ -3350,7 +3381,7 @@ public class Debt extends Security {
 	 * definition} = "Registration type of a commercial paper issuance."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCPRegistrationType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, Max350Text> mmCPRegistrationType = new MMBusinessAttribute<Debt, Max350Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmCPRegistrationType, Debt2.mmCPRegistrationType, Debt3.mmCPRegistrationType);
 			isDerived = false;
@@ -3363,12 +3394,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getCPRegistrationType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(Debt obj) {
+			return obj.getCPRegistrationType();
+		}
+
+		@Override
+		public void setValue(Debt obj, Max350Text value) {
+			obj.setCPRegistrationType(value);
 		}
 	};
 	protected YesNoIndicator convertibleIndicator;
@@ -3426,7 +3459,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmConvertibleIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmConvertibleIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmConvertibleIndicator, FinancialInstrumentStipulations.mmConvertibleIndicator, FinancialInstrumentAttributes31.mmConvertibleIndicator,
 					FinancialInstrumentStipulations2.mmConvertibleIndicator, FinancialInstrumentAttributes44.mmConvertibleIndicator, Debt2.mmCouponRange, FinancialInstrumentAttributes2.mmConvertibleIndicator, Debt3.mmCouponRange);
@@ -3440,12 +3473,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getConvertibleIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getConvertibleIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setConvertibleIndicator(value);
 		}
 	};
 	protected YesNoIndicator preFundedIndicator;
@@ -3493,7 +3528,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPreFundedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmPreFundedIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPreFundedIndicator, FinancialInstrumentStipulations.mmPreFundedIndicator, FinancialInstrumentStipulations2.mmPreFundedIndicator, Debt2.mmPreFundedIndicator,
 					Debt3.mmPreFundedIndicator);
@@ -3507,12 +3542,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPreFundedIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getPreFundedIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setPreFundedIndicator(value);
 		}
 	};
 	protected YesNoIndicator escrowedIndicator;
@@ -3560,7 +3597,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEscrowedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmEscrowedIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmEscrowedIndicator, FinancialInstrumentStipulations.mmEscrowedIndicator, FinancialInstrumentStipulations2.mmEscrowedIndicator, Debt2.mmEscrowedIndicator, Debt3.mmEscrowedIndicator);
 			isDerived = false;
@@ -3573,12 +3610,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getEscrowedIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getEscrowedIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setEscrowedIndicator(value);
 		}
 	};
 	protected YesNoIndicator perpetualIndicator;
@@ -3624,7 +3663,7 @@ public class Debt extends Security {
 	 * definition} = "Indicates whether the security has no maturity date."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPerpetualIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmPerpetualIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPerpetualIndicator, FinancialInstrumentStipulations.mmPerpetualIndicator, FinancialInstrumentStipulations2.mmPerpetualIndicator, Debt2.mmPerpetualIndicator,
 					Debt3.mmPerpetualIndicator);
@@ -3638,12 +3677,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPerpetualIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getPerpetualIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setPerpetualIndicator(value);
 		}
 	};
 	protected YesNoIndicator subordinatedIndicator;
@@ -3687,7 +3728,7 @@ public class Debt extends Security {
 	 * "Indicates whether the security is a subordinated security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSubordinatedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmSubordinatedIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmSubordinatedIndicator, Debt2.mmSubordinatedIndicator, Debt3.mmSubordinatedIndicator);
 			isDerived = false;
@@ -3700,12 +3741,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getSubordinatedIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getSubordinatedIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setSubordinatedIndicator(value);
 		}
 	};
 	protected YesNoIndicator extendibleIndicator;
@@ -3750,7 +3793,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmExtendibleIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmExtendibleIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendibleIndicator, Debt2.mmExtendibleIndicator, Debt3.mmExtendibleIndicator);
 			isDerived = false;
@@ -3763,12 +3806,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getExtendibleIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getExtendibleIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setExtendibleIndicator(value);
 		}
 	};
 	protected DateTimePeriod extendiblePeriod;
@@ -3815,7 +3860,7 @@ public class Debt extends Security {
 	 * definition} = "Period during which a date might be extended."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmExtendiblePeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Debt, DateTimePeriod> mmExtendiblePeriod = new MMBusinessAssociationEnd<Debt, DateTimePeriod>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendiblePeriod, Debt2.mmExtendiblePeriod, Debt3.mmExtendiblePeriod);
 			isDerived = false;
@@ -3825,9 +3870,19 @@ public class Debt extends Security {
 			definition = "Period during which a date might be extended.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmExtendiblePeriodDebt;
+			opposite_lazy = () -> DateTimePeriod.mmExtendiblePeriodDebt;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod getValue(Debt obj) {
+			return obj.getExtendiblePeriod();
+		}
+
+		@Override
+		public void setValue(Debt obj, DateTimePeriod value) {
+			obj.setExtendiblePeriod(value);
 		}
 	};
 	protected CurrencyAndAmount overAllotmentAmount;
@@ -3878,7 +3933,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOverAllotmentAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, CurrencyAndAmount> mmOverAllotmentAmount = new MMBusinessAttribute<Debt, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentAmount, FinancialInstrumentStipulations.mmOverAllotmentAmount, FinancialInstrumentStipulations2.mmOverAllotmentAmount, Debt2.mmOverAllotmentAmount,
 					Debt3.mmOverAllotmentAmount);
@@ -3892,12 +3947,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getOverAllotmentAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Debt obj) {
+			return obj.getOverAllotmentAmount();
+		}
+
+		@Override
+		public void setValue(Debt obj, CurrencyAndAmount value) {
+			obj.setOverAllotmentAmount(value);
 		}
 	};
 	protected PercentageRate overAllotmentRate;
@@ -3945,7 +4002,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOverAllotmentRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, PercentageRate> mmOverAllotmentRate = new MMBusinessAttribute<Debt, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentRate, FinancialInstrumentStipulations.mmOverAllotmentRate, FinancialInstrumentStipulations2.mmOverAllotmentRate, Debt2.mmOverAllotmentRate, Debt3.mmOverAllotmentRate);
 			isDerived = false;
@@ -3958,12 +4015,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getOverAllotmentRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Debt obj) {
+			return obj.getOverAllotmentRate();
+		}
+
+		@Override
+		public void setValue(Debt obj, PercentageRate value) {
+			obj.setOverAllotmentRate(value);
 		}
 	};
 	protected YesNoIndicator amortisableIndicator;
@@ -4017,7 +4076,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAmortisableIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmAmortisableIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmAmortisableIndicator, FinancialInstrumentStipulations.mmAmortisableIndicator, FinancialInstrumentStipulations.mmAlternativeMinimumTaxIndicator,
 					FinancialInstrumentStipulations2.mmAmortisableIndicator, Debt2.mmAmortisableIndicator, Debt3.mmAmortisableIndicator);
@@ -4031,12 +4090,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getAmortisableIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getAmortisableIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setAmortisableIndicator(value);
 		}
 	};
 	protected DistributionPolicyCode capitalisedInterest;
@@ -4081,7 +4142,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCapitalisedInterest = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DistributionPolicyCode> mmCapitalisedInterest = new MMBusinessAttribute<Debt, DistributionPolicyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmCapitalisedInterest, Debt2.mmCapitalisedInterest, Debt3.mmCapitalisedInterest);
 			isDerived = false;
@@ -4094,12 +4155,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DistributionPolicyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getCapitalisedInterest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DistributionPolicyCode getValue(Debt obj) {
+			return obj.getCapitalisedInterest();
+		}
+
+		@Override
+		public void setValue(Debt obj, DistributionPolicyCode value) {
+			obj.setCapitalisedInterest(value);
 		}
 	};
 	protected List<CurrencyAndAmount> actualDenominationAmount;
@@ -4142,7 +4205,7 @@ public class Debt extends Security {
 	 * definition} = "Nominal value per security unit."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmActualDenominationAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, List<CurrencyAndAmount>> mmActualDenominationAmount = new MMBusinessAttribute<Debt, List<CurrencyAndAmount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmActualDenominationAmount, Debt2.mmActualDenominationAmount, Debt3.mmActualDenominationAmount);
 			isDerived = false;
@@ -4154,12 +4217,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getActualDenominationAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CurrencyAndAmount> getValue(Debt obj) {
+			return obj.getActualDenominationAmount();
+		}
+
+		@Override
+		public void setValue(Debt obj, List<CurrencyAndAmount> value) {
+			obj.setActualDenominationAmount(value);
 		}
 	};
 	protected DecimalNumber pieces;
@@ -4199,7 +4264,7 @@ public class Debt extends Security {
 	 * definition} = "Number of pieces composing a pool of financial assets."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPieces = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DecimalNumber> mmPieces = new MMBusinessAttribute<Debt, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPieces, Debt2.mmPieces, Debt3.mmPieces);
 			isDerived = false;
@@ -4212,12 +4277,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPieces", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(Debt obj) {
+			return obj.getPieces();
+		}
+
+		@Override
+		public void setValue(Debt obj, DecimalNumber value) {
+			obj.setPieces(value);
 		}
 	};
 	protected DecimalNumber poolsMaximum;
@@ -4257,7 +4324,7 @@ public class Debt extends Security {
 	 * definition} = "Collection of assets by which a security is backed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPoolsMaximum = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DecimalNumber> mmPoolsMaximum = new MMBusinessAttribute<Debt, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsMaximum, Debt2.mmPoolsMaximum, Debt3.mmPoolsMaximum);
 			isDerived = false;
@@ -4270,12 +4337,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPoolsMaximum", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(Debt obj) {
+			return obj.getPoolsMaximum();
+		}
+
+		@Override
+		public void setValue(Debt obj, DecimalNumber value) {
+			obj.setPoolsMaximum(value);
 		}
 	};
 	protected DecimalNumber poolsPerMillion;
@@ -4317,7 +4386,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPoolsPerMillion = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DecimalNumber> mmPoolsPerMillion = new MMBusinessAttribute<Debt, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerMillion, Debt2.mmPoolsPerMillion, Debt3.mmPoolsPerMillion);
 			isDerived = false;
@@ -4330,12 +4399,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPoolsPerMillion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(Debt obj) {
+			return obj.getPoolsPerMillion();
+		}
+
+		@Override
+		public void setValue(Debt obj, DecimalNumber value) {
+			obj.setPoolsPerMillion(value);
 		}
 	};
 	protected DecimalNumber poolsPerLot;
@@ -4377,7 +4448,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPoolsPerLot = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DecimalNumber> mmPoolsPerLot = new MMBusinessAttribute<Debt, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerLot, Debt2.mmPoolsPerLot, Debt3.mmPoolsPerLot);
 			isDerived = false;
@@ -4390,12 +4461,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPoolsPerLot", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(Debt obj) {
+			return obj.getPoolsPerLot();
+		}
+
+		@Override
+		public void setValue(Debt obj, DecimalNumber value) {
+			obj.setPoolsPerLot(value);
 		}
 	};
 	protected DecimalNumber poolsPerTrade;
@@ -4437,7 +4510,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPoolsPerTrade = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DecimalNumber> mmPoolsPerTrade = new MMBusinessAttribute<Debt, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerTrade, Debt2.mmPoolsPerTrade, Debt3.mmPoolsPerTrade);
 			isDerived = false;
@@ -4450,12 +4523,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPoolsPerTrade", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(Debt obj) {
+			return obj.getPoolsPerTrade();
+		}
+
+		@Override
+		public void setValue(Debt obj, DecimalNumber value) {
+			obj.setPoolsPerTrade(value);
 		}
 	};
 	protected YesNoIndicator constantPrePaymentPenalty;
@@ -4500,7 +4575,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmConstantPrePaymentPenalty = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmConstantPrePaymentPenalty = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentPenaltyIndicator, Debt2.mmConstantPrePaymentPenaltyIndicator, Debt3.mmConstantPrePaymentPenaltyIndicator);
 			isDerived = false;
@@ -4513,12 +4588,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getConstantPrePaymentPenalty", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getConstantPrePaymentPenalty();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setConstantPrePaymentPenalty(value);
 		}
 	};
 	protected PrePaymentSpeedCode prePaymentSpeed;
@@ -4556,7 +4633,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPrePaymentSpeed = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, PrePaymentSpeedCode> mmPrePaymentSpeed = new MMBusinessAttribute<Debt, PrePaymentSpeedCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPrePaymentSpeed);
 			isDerived = false;
@@ -4569,12 +4646,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> PrePaymentSpeedCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPrePaymentSpeed", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PrePaymentSpeedCode getValue(Debt obj) {
+			return obj.getPrePaymentSpeed();
+		}
+
+		@Override
+		public void setValue(Debt obj, PrePaymentSpeedCode value) {
+			obj.setPrePaymentSpeed(value);
 		}
 	};
 	protected PercentageRate constantPrePaymentYield;
@@ -4619,7 +4698,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmConstantPrePaymentYield = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, PercentageRate> mmConstantPrePaymentYield = new MMBusinessAttribute<Debt, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentYield, Debt2.mmConstantPrePaymentYield, Debt3.mmConstantPrePaymentYield);
 			isDerived = false;
@@ -4632,12 +4711,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getConstantPrePaymentYield", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Debt obj) {
+			return obj.getConstantPrePaymentYield();
+		}
+
+		@Override
+		public void setValue(Debt obj, PercentageRate value) {
+			obj.setConstantPrePaymentYield(value);
 		}
 	};
 	protected PercentageRate weightedAverageCoupon;
@@ -4682,7 +4763,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmWeightedAverageCoupon = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, PercentageRate> mmWeightedAverageCoupon = new MMBusinessAttribute<Debt, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageCoupon, Debt2.mmWeightedAverageCoupon, Debt3.mmWeightedAverageCoupon);
 			isDerived = false;
@@ -4695,12 +4776,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getWeightedAverageCoupon", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Debt obj) {
+			return obj.getWeightedAverageCoupon();
+		}
+
+		@Override
+		public void setValue(Debt obj, PercentageRate value) {
+			obj.setWeightedAverageCoupon(value);
 		}
 	};
 	protected DecimalNumber weightedAverageLife;
@@ -4745,7 +4828,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmWeightedAverageLife = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DecimalNumber> mmWeightedAverageLife = new MMBusinessAttribute<Debt, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLife, Debt2.mmWeightedAverageLife, Debt3.mmWeightedAverageLife);
 			isDerived = false;
@@ -4758,12 +4841,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getWeightedAverageLife", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(Debt obj) {
+			return obj.getWeightedAverageLife();
+		}
+
+		@Override
+		public void setValue(Debt obj, DecimalNumber value) {
+			obj.setWeightedAverageLife(value);
 		}
 	};
 	protected DecimalNumber weightedAverageLoan;
@@ -4808,7 +4893,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmWeightedAverageLoan = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DecimalNumber> mmWeightedAverageLoan = new MMBusinessAttribute<Debt, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLoan, Debt2.mmWeightedAverageLoan, Debt3.mmWeightedAverageLoan);
 			isDerived = false;
@@ -4821,12 +4906,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getWeightedAverageLoan", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(Debt obj) {
+			return obj.getWeightedAverageLoan();
+		}
+
+		@Override
+		public void setValue(Debt obj, DecimalNumber value) {
+			obj.setWeightedAverageLoan(value);
 		}
 	};
 	protected DecimalNumber weightedAverageMaturity;
@@ -4871,7 +4958,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmWeightedAverageMaturity = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DecimalNumber> mmWeightedAverageMaturity = new MMBusinessAttribute<Debt, DecimalNumber>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageMaturity, Debt2.mmWeightedAverageMaturity, Debt3.mmWeightedAverageMaturity);
 			isDerived = false;
@@ -4884,12 +4971,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getWeightedAverageMaturity", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(Debt obj) {
+			return obj.getWeightedAverageMaturity();
+		}
+
+		@Override
+		public void setValue(Debt obj, DecimalNumber value) {
+			obj.setWeightedAverageMaturity(value);
 		}
 	};
 	protected YesNoIndicator insuredIndicator;
@@ -4937,7 +5026,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInsuredIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmInsuredIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmInsuredIndicator, FinancialInstrumentStipulations.mmInsuredIndicator, FinancialInstrumentStipulations2.mmInsuredIndicator, Debt2.mmInsuredIndicator, Debt3.mmInsuredIndicator);
 			isDerived = false;
@@ -4950,12 +5039,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getInsuredIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getInsuredIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setInsuredIndicator(value);
 		}
 	};
 	protected YesNoIndicator bankQualified;
@@ -5000,7 +5091,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBankQualified = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmBankQualified = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmBankQualifiedIndicator, Debt2.mmBankQualifiedIndicator, Debt3.mmBankQualifiedIndicator);
 			isDerived = false;
@@ -5013,12 +5104,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getBankQualified", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getBankQualified();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setBankQualified(value);
 		}
 	};
 	protected PercentageRate autoReinvestment;
@@ -5064,7 +5157,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAutoReinvestment = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, PercentageRate> mmAutoReinvestment = new MMBusinessAttribute<Debt, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmAutoReinvestment, FinancialInstrumentStipulations2.mmAutoReinvestment, Debt2.mmAutoReinvestment, Debt3.mmAutoReinvestment);
 			isDerived = false;
@@ -5077,12 +5170,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getAutoReinvestment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Debt obj) {
+			return obj.getAutoReinvestment();
+		}
+
+		@Override
+		public void setValue(Debt obj, PercentageRate value) {
+			obj.setAutoReinvestment(value);
 		}
 	};
 	protected DateTimePeriod customDate;
@@ -5131,7 +5226,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCustomDate = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Debt, DateTimePeriod> mmCustomDate = new MMBusinessAssociationEnd<Debt, DateTimePeriod>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmCustomDate, FinancialInstrumentStipulations2.mmCustomDate);
 			isDerived = false;
@@ -5141,9 +5236,19 @@ public class Debt extends Security {
 			definition = "Indicates an instruction to override an investment's default start and/or end date with a custom date.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmCustomDateDebt;
+			opposite_lazy = () -> DateTimePeriod.mmCustomDateDebt;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod getValue(Debt obj) {
+			return obj.getCustomDate();
+		}
+
+		@Override
+		public void setValue(Debt obj, DateTimePeriod value) {
+			obj.setCustomDate(value);
 		}
 	};
 	protected Number lookBack;
@@ -5191,7 +5296,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmLookBack = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, Number> mmLookBack = new MMBusinessAttribute<Debt, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmLookBack, FinancialInstrumentStipulations2.mmLookBack, Debt2.mmLookBack, Debt3.mmLookBack);
 			isDerived = false;
@@ -5205,12 +5310,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getLookBack", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(Debt obj) {
+			return obj.getLookBack();
+		}
+
+		@Override
+		public void setValue(Debt obj, Number value) {
+			obj.setLookBack(value);
 		}
 	};
 	protected SecuritiesQuantity minimumDenomination;
@@ -5257,7 +5364,7 @@ public class Debt extends Security {
 	 * definition} = "Indicates the minimum denomination of a security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMinimumDenomination = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Debt, com.tools20022.repository.entity.SecuritiesQuantity> mmMinimumDenomination = new MMBusinessAssociationEnd<Debt, com.tools20022.repository.entity.SecuritiesQuantity>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMinimumDenomination, FinancialInstrumentStipulations2.mmMinimumDenomination);
 			isDerived = false;
@@ -5270,6 +5377,16 @@ public class Debt extends Security {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumDenominationDebt;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesQuantity getValue(Debt obj) {
+			return obj.getMinimumDenomination();
+		}
+
+		@Override
+		public void setValue(Debt obj, com.tools20022.repository.entity.SecuritiesQuantity value) {
+			obj.setMinimumDenomination(value);
 		}
 	};
 	protected Number maximumSubstitution;
@@ -5314,7 +5431,7 @@ public class Debt extends Security {
 	 * definition} = "Maximum number of time the collateral can be substitute."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMaximumSubstitution = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, Number> mmMaximumSubstitution = new MMBusinessAttribute<Debt, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMaximumSubstitution, FinancialInstrumentStipulations2.mmMaximumSubstitution, Debt2.mmMaximumSubstitution, Debt3.mmMaximumSubstitution);
 			isDerived = false;
@@ -5327,12 +5444,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getMaximumSubstitution", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(Debt obj) {
+			return obj.getMaximumSubstitution();
+		}
+
+		@Override
+		public void setValue(Debt obj, Number value) {
+			obj.setMaximumSubstitution(value);
 		}
 	};
 	protected SecuritiesQuantity minimumIncrement;
@@ -5383,7 +5502,7 @@ public class Debt extends Security {
 	 * definition} = "Indicates the minimum tradable increments of a security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMinimumIncrement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Debt, com.tools20022.repository.entity.SecuritiesQuantity> mmMinimumIncrement = new MMBusinessAssociationEnd<Debt, com.tools20022.repository.entity.SecuritiesQuantity>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMinimumIncrement, FinancialInstrumentStipulations2.mmMinimumIncrement, Debt2.mmMinimumIncrement, Debt3.mmMinimumIncrement);
 			isDerived = false;
@@ -5396,6 +5515,16 @@ public class Debt extends Security {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumIncrementDebt;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.SecuritiesQuantity getValue(Debt obj) {
+			return obj.getMinimumIncrement();
+		}
+
+		@Override
+		public void setValue(Debt obj, com.tools20022.repository.entity.SecuritiesQuantity value) {
+			obj.setMinimumIncrement(value);
 		}
 	};
 	protected Max350Text production;
@@ -5436,7 +5565,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmProduction = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, Max350Text> mmProduction = new MMBusinessAttribute<Debt, Max350Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmProduction, FinancialInstrumentStipulations2.mmProduction);
 			isDerived = false;
@@ -5449,12 +5578,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getProduction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max350Text getValue(Debt obj) {
+			return obj.getProduction();
+		}
+
+		@Override
+		public void setValue(Debt obj, Max350Text value) {
+			obj.setProduction(value);
 		}
 	};
 	protected YesNoIndicator restricted;
@@ -5495,7 +5626,7 @@ public class Debt extends Security {
 	 * "Identifies if the securities is restricted or not (as per Rule 144)."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRestricted = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmRestricted = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmRestrictedIndicator, FinancialInstrumentStipulations2.mmRestrictedIndicator);
 			isDerived = false;
@@ -5508,12 +5639,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getRestricted", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getRestricted();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setRestricted(value);
 		}
 	};
 	protected FrequencyCode priceFrequency;
@@ -5559,7 +5692,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPriceFrequency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, FrequencyCode> mmPriceFrequency = new MMBusinessAttribute<Debt, FrequencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmPriceFrequency, FinancialInstrumentStipulations2.mmPriceFrequency, Debt2.mmPriceFrequency, Debt3.mmPriceFrequency);
 			isDerived = false;
@@ -5572,12 +5705,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> FrequencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPriceFrequency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FrequencyCode getValue(Debt obj) {
+			return obj.getPriceFrequency();
+		}
+
+		@Override
+		public void setValue(Debt obj, FrequencyCode value) {
+			obj.setPriceFrequency(value);
 		}
 	};
 	protected FrequencyCode substitutionFrequency;
@@ -5624,7 +5759,7 @@ public class Debt extends Security {
 	 * "Indicates the maximum number of times collateral can be substituted."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSubstitutionFrequency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, FrequencyCode> mmSubstitutionFrequency = new MMBusinessAttribute<Debt, FrequencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionFrequency, FinancialInstrumentStipulations2.mmSubstitutionFrequency, Debt2.mmSubstitutionFrequency, Debt3.mmSubstitutionFrequency);
 			isDerived = false;
@@ -5637,12 +5772,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> FrequencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getSubstitutionFrequency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FrequencyCode getValue(Debt obj) {
+			return obj.getSubstitutionFrequency();
+		}
+
+		@Override
+		public void setValue(Debt obj, FrequencyCode value) {
+			obj.setSubstitutionFrequency(value);
 		}
 	};
 	protected Number substitutionLeft;
@@ -5686,7 +5823,7 @@ public class Debt extends Security {
 	 * "Number of remaining times the collateral can be substitute."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSubstitutionLeft = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, Number> mmSubstitutionLeft = new MMBusinessAttribute<Debt, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionLeft, FinancialInstrumentStipulations2.mmSubstitutionLeft, Debt2.mmSubstitutionLeft, Debt3.mmSubstitutionLeft);
 			isDerived = false;
@@ -5699,12 +5836,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getSubstitutionLeft", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(Debt obj) {
+			return obj.getSubstitutionLeft();
+		}
+
+		@Override
+		public void setValue(Debt obj, Number value) {
+			obj.setSubstitutionLeft(value);
 		}
 	};
 	protected YesNoIndicator wholePool;
@@ -5746,7 +5885,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmWholePool = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmWholePool = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmWholePoolIndicator, FinancialInstrumentStipulations2.mmWholePoolIndicator);
 			isDerived = false;
@@ -5759,12 +5898,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getWholePool", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getWholePool();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setWholePool(value);
 		}
 	};
 	protected YesNoIndicator alternativeMinimumTax;
@@ -5809,7 +5950,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAlternativeMinimumTax = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmAlternativeMinimumTax = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations2.mmAlternativeMinimumTaxIndicator, Debt2.mmAlternativeMinimumTaxIndicator, Debt3.mmAlternativeMinimumTaxIndicator);
 			isDerived = false;
@@ -5822,12 +5963,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getAlternativeMinimumTax", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getAlternativeMinimumTax();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setAlternativeMinimumTax(value);
 		}
 	};
 	protected InterestCalculation nextInterest;
@@ -5867,7 +6010,7 @@ public class Debt extends Security {
 	 * "Specifies the interest applicable to the next interest payment period."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNextInterest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Debt, InterestCalculation> mmNextInterest = new MMBusinessAssociationEnd<Debt, InterestCalculation>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
@@ -5877,9 +6020,19 @@ public class Debt extends Security {
 			definition = "Specifies the interest applicable to the next interest payment period.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmDebtInstrument;
+			opposite_lazy = () -> InterestCalculation.mmDebtInstrument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InterestCalculation.mmObject();
+			type_lazy = () -> InterestCalculation.mmObject();
+		}
+
+		@Override
+		public InterestCalculation getValue(Debt obj) {
+			return obj.getNextInterest();
+		}
+
+		@Override
+		public void setValue(Debt obj, InterestCalculation value) {
+			obj.setNextInterest(value);
 		}
 	};
 	protected ISODateTime extendibleDate;
@@ -5907,7 +6060,7 @@ public class Debt extends Security {
 	 * definition} = "Date/time to which a date might be extended."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmExtendibleDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, ISODateTime> mmExtendibleDate = new MMBusinessAttribute<Debt, ISODateTime>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
@@ -5919,12 +6072,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getExtendibleDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Debt obj) {
+			return obj.getExtendibleDate();
+		}
+
+		@Override
+		public void setValue(Debt obj, ISODateTime value) {
+			obj.setExtendibleDate(value);
 		}
 	};
 	protected YesNoIndicator sinkableIndicator;
@@ -5955,7 +6110,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSinkableIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmSinkableIndicator = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
@@ -5967,12 +6122,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getSinkableIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getSinkableIndicator();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setSinkableIndicator(value);
 		}
 	};
 	protected YesNoIndicator insured;
@@ -6003,7 +6160,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInsured = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, YesNoIndicator> mmInsured = new MMBusinessAttribute<Debt, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
@@ -6015,12 +6172,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getInsured", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Debt obj) {
+			return obj.getInsured();
+		}
+
+		@Override
+		public void setValue(Debt obj, YesNoIndicator value) {
+			obj.setInsured(value);
 		}
 	};
 	protected Max35Text geographics;
@@ -6059,7 +6218,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmGeographics = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, Max35Text> mmGeographics = new MMBusinessAttribute<Debt, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt2.mmGeographics, Debt3.mmGeographics);
 			isDerived = false;
@@ -6072,12 +6231,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getGeographics", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Debt obj) {
+			return obj.getGeographics();
+		}
+
+		@Override
+		public void setValue(Debt obj, Max35Text value) {
+			obj.setGeographics(value);
 		}
 	};
 	protected CurrencyCode paymentCurrency;
@@ -6114,7 +6275,7 @@ public class Debt extends Security {
 	 * definition} = "Currency of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPaymentCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, CurrencyCode> mmPaymentCurrency = new MMBusinessAttribute<Debt, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt2.mmPaymentCurrency, Debt3.mmPaymentCurrency);
 			isDerived = false;
@@ -6127,12 +6288,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getPaymentCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(Debt obj) {
+			return obj.getPaymentCurrency();
+		}
+
+		@Override
+		public void setValue(Debt obj, CurrencyCode value) {
+			obj.setPaymentCurrency(value);
 		}
 	};
 	protected SecuritiesPricing dirtyPrice;
@@ -6177,7 +6340,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDirtyPrice = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, SecuritiesPricing> mmDirtyPrice = new MMBusinessAttribute<Debt, SecuritiesPricing>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmDirtyPrice, UnderlyingAttributes2.mmDirtyPrice, UnderlyingAttributes3.mmDirtyPrice);
 			isDerived = false;
@@ -6187,15 +6350,17 @@ public class Debt extends Security {
 			definition = "Price that includes interest that has accrued since issue of the most recent coupon payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			complexType_lazy = () -> SecuritiesPricing.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getDirtyPrice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesPricing getValue(Debt obj) {
+			return obj.getDirtyPrice();
+		}
+
+		@Override
+		public void setValue(Debt obj, SecuritiesPricing value) {
+			obj.setDirtyPrice(value);
 		}
 	};
 	protected DebtInstrumentSeniorityTypeCode debtSeniority;
@@ -6226,7 +6391,7 @@ public class Debt extends Security {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDebtSeniority = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Debt, DebtInstrumentSeniorityTypeCode> mmDebtSeniority = new MMBusinessAttribute<Debt, DebtInstrumentSeniorityTypeCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
@@ -6238,12 +6403,14 @@ public class Debt extends Security {
 			simpleType_lazy = () -> DebtInstrumentSeniorityTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Debt.class.getMethod("getDebtSeniority", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DebtInstrumentSeniorityTypeCode getValue(Debt obj) {
+			return obj.getDebtSeniority();
+		}
+
+		@Override
+		public void setValue(Debt obj, DebtInstrumentSeniorityTypeCode value) {
+			obj.setDebtSeniority(value);
 		}
 	};
 
@@ -6254,9 +6421,8 @@ public class Debt extends Security {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Debt";
 				definition = "Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmExtendiblePeriodDebt, com.tools20022.repository.entity.DateTimePeriod.mmCustomDateDebt,
-						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumDenominationDebt, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumIncrementDebt,
-						com.tools20022.repository.entity.InterestCalculation.mmDebtInstrument);
+				associationDomain_lazy = () -> Arrays.asList(DateTimePeriod.mmExtendiblePeriodDebt, DateTimePeriod.mmCustomDateDebt, com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumDenominationDebt,
+						com.tools20022.repository.entity.SecuritiesQuantity.mmMinimumIncrementDebt, InterestCalculation.mmDebtInstrument);
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmDebt, FinancialInstrument28.mmDebt, SingleQuote1.mmStipulations, SingleQuote1.mmUnderlyingStipulations,
 						QuoteCancellation1Choice.mmStipulations, QuoteCancellation1Choice.mmUnderlyingStipulations, QuoteRequest1.mmStipulations, QuoteRequest1.mmUnderlyingStipulations, RequestForQuote.mmStipulations,
 						RequestForQuote.mmUnderlyingStipulations, Quote1.mmStipulations, Quote1.mmUnderlyingStipulations, FinancialInstrument54.mmDebt, SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes,
@@ -6506,7 +6672,7 @@ public class Debt extends Security {
 		return extendiblePeriod;
 	}
 
-	public Debt setExtendiblePeriod(com.tools20022.repository.entity.DateTimePeriod extendiblePeriod) {
+	public Debt setExtendiblePeriod(DateTimePeriod extendiblePeriod) {
 		this.extendiblePeriod = Objects.requireNonNull(extendiblePeriod);
 		return this;
 	}
@@ -6695,7 +6861,7 @@ public class Debt extends Security {
 		return customDate;
 	}
 
-	public Debt setCustomDate(com.tools20022.repository.entity.DateTimePeriod customDate) {
+	public Debt setCustomDate(DateTimePeriod customDate) {
 		this.customDate = Objects.requireNonNull(customDate);
 		return this;
 	}
@@ -6803,7 +6969,7 @@ public class Debt extends Security {
 		return nextInterest;
 	}
 
-	public Debt setNextInterest(com.tools20022.repository.entity.InterestCalculation nextInterest) {
+	public Debt setNextInterest(InterestCalculation nextInterest) {
 		this.nextInterest = Objects.requireNonNull(nextInterest);
 		return this;
 	}
@@ -6857,7 +7023,7 @@ public class Debt extends Security {
 		return dirtyPrice;
 	}
 
-	public Debt setDirtyPrice(com.tools20022.repository.entity.SecuritiesPricing dirtyPrice) {
+	public Debt setDirtyPrice(SecuritiesPricing dirtyPrice) {
 		this.dirtyPrice = Objects.requireNonNull(dirtyPrice);
 		return this;
 	}

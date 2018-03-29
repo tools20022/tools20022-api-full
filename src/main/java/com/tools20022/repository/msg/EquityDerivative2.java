@@ -106,7 +106,7 @@ public class EquityDerivative2 {
 	 * definition} = "Underlying type of the equity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EquityDerivative2, EquityDerivative3Choice> mmUnderlyingType = new MMMessageAssociationEnd<EquityDerivative2, EquityDerivative3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EquityDerivative2.mmObject();
@@ -119,6 +119,16 @@ public class EquityDerivative2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EquityDerivative3Choice.mmObject();
+		}
+
+		@Override
+		public EquityDerivative3Choice getValue(EquityDerivative2 obj) {
+			return obj.getUnderlyingType();
+		}
+
+		@Override
+		public void setValue(EquityDerivative2 obj, EquityDerivative3Choice value) {
+			obj.setUnderlyingType(value);
 		}
 	};
 	@XmlElement(name = "Param")
@@ -151,7 +161,7 @@ public class EquityDerivative2 {
 	 * definition} = "Return parameter for the equity derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EquityDerivative2, Optional<EquityReturnParameter1Code>> mmParameter = new MMMessageAttribute<EquityDerivative2, Optional<EquityReturnParameter1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EquityDerivative2.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class EquityDerivative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EquityReturnParameter1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EquityReturnParameter1Code> getValue(EquityDerivative2 obj) {
+			return obj.getParameter();
+		}
+
+		@Override
+		public void setValue(EquityDerivative2 obj, Optional<EquityReturnParameter1Code> value) {
+			obj.setParameter(value.orElse(null));
 		}
 	};
 

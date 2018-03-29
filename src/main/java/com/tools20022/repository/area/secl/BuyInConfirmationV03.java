@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.BuyIn2;
 import com.tools20022.repository.msg.SettlementObligation7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -131,7 +130,7 @@ public class BuyInConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInConfirmationV03, Optional<Max35Text>> mmTransactionIdentification = new MMMessageBuildingBlock<BuyInConfirmationV03, Optional<Max35Text>>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +141,14 @@ public class BuyInConfirmationV03 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInConfirmationV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(BuyInConfirmationV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(BuyInConfirmationV03 obj, Optional<Max35Text> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrMmb", required = true)
@@ -177,7 +178,7 @@ public class BuyInConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInConfirmationV03, PartyIdentification35Choice> mmClearingMember = new MMMessageBuildingBlock<BuyInConfirmationV03, PartyIdentification35Choice>() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,12 +189,14 @@ public class BuyInConfirmationV03 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInConfirmationV03.class.getMethod("getClearingMember", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification35Choice getValue(BuyInConfirmationV03 obj) {
+			return obj.getClearingMember();
+		}
+
+		@Override
+		public void setValue(BuyInConfirmationV03 obj, PartyIdentification35Choice value) {
+			obj.setClearingMember(value);
 		}
 	};
 	@XmlElement(name = "BuyInDtls", required = true)
@@ -219,7 +222,7 @@ public class BuyInConfirmationV03 {
 	 * definition} = "Provides the buy-in details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyInDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInConfirmationV03, BuyIn2> mmBuyInDetails = new MMMessageBuildingBlock<BuyInConfirmationV03, BuyIn2>() {
 		{
 			xmlTag = "BuyInDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +233,14 @@ public class BuyInConfirmationV03 {
 			complexType_lazy = () -> BuyIn2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInConfirmationV03.class.getMethod("getBuyInDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BuyIn2 getValue(BuyInConfirmationV03 obj) {
+			return obj.getBuyInDetails();
+		}
+
+		@Override
+		public void setValue(BuyInConfirmationV03 obj, BuyIn2 value) {
+			obj.setBuyInDetails(value);
 		}
 	};
 	@XmlElement(name = "OrgnlSttlmOblgtn")
@@ -265,7 +270,7 @@ public class BuyInConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalSettlementObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInConfirmationV03, Optional<SettlementObligation7>> mmOriginalSettlementObligation = new MMMessageBuildingBlock<BuyInConfirmationV03, Optional<SettlementObligation7>>() {
 		{
 			xmlTag = "OrgnlSttlmOblgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,12 +281,14 @@ public class BuyInConfirmationV03 {
 			complexType_lazy = () -> SettlementObligation7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInConfirmationV03.class.getMethod("getOriginalSettlementObligation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementObligation7> getValue(BuyInConfirmationV03 obj) {
+			return obj.getOriginalSettlementObligation();
+		}
+
+		@Override
+		public void setValue(BuyInConfirmationV03 obj, Optional<SettlementObligation7> value) {
+			obj.setOriginalSettlementObligation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -311,7 +318,7 @@ public class BuyInConfirmationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BuyInConfirmationV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<BuyInConfirmationV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +328,14 @@ public class BuyInConfirmationV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BuyInConfirmationV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(BuyInConfirmationV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(BuyInConfirmationV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

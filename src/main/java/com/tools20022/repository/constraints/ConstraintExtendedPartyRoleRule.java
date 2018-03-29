@@ -51,11 +51,15 @@ public class ConstraintExtendedPartyRoleRule {
 	 */
 	public static final MMConstraint<AccountParties2> forAccountParties2 = new MMConstraint<AccountParties2>() {
 		{
-			validator = ConstraintExtendedPartyRoleRule::checkAccountParties2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedPartyRoleRule";
 			definition = "If OtherParty is present, then OtherParty/ExtendedPartyRole must be present.";
 			owner_lazy = () -> AccountParties2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties2 obj) throws Exception {
+			checkAccountParties2(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintExtendedPartyRoleRule {
 	 */
 	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {
 		{
-			validator = ConstraintExtendedPartyRoleRule::checkAccountParties3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedPartyRoleRule";
 			definition = "If OtherParty is present, then OtherParty/ExtendedPartyRole must be present.";
 			owner_lazy = () -> AccountParties3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties3 obj) throws Exception {
+			checkAccountParties3(obj);
 		}
 	};
 

@@ -53,11 +53,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace7> forAggregateBalancePerSafekeepingPlace7 = new MMConstraint<AggregateBalancePerSafekeepingPlace7>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace7 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace7(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation8> forAggregateBalanceInformation8 = new MMConstraint<AggregateBalanceInformation8>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation8 obj) throws Exception {
+			checkAggregateBalanceInformation8(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace10> forAggregateBalancePerSafekeepingPlace10 = new MMConstraint<AggregateBalancePerSafekeepingPlace10>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace10 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace10(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation11> forAggregateBalanceInformation11 = new MMConstraint<AggregateBalanceInformation11>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation11 obj) throws Exception {
+			checkAggregateBalanceInformation11(obj);
 		}
 	};
 	/**
@@ -173,11 +189,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace12> forAggregateBalancePerSafekeepingPlace12 = new MMConstraint<AggregateBalancePerSafekeepingPlace12>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace12 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace12(obj);
 		}
 	};
 	/**
@@ -203,11 +223,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation13> forAggregateBalanceInformation13 = new MMConstraint<AggregateBalanceInformation13>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation13 obj) throws Exception {
+			checkAggregateBalanceInformation13(obj);
 		}
 	};
 	/**
@@ -233,11 +257,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace14> forAggregateBalancePerSafekeepingPlace14 = new MMConstraint<AggregateBalancePerSafekeepingPlace14>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace14 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace14(obj);
 		}
 	};
 	/**
@@ -263,11 +291,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation15> forAggregateBalanceInformation15 = new MMConstraint<AggregateBalanceInformation15>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation15 obj) throws Exception {
+			checkAggregateBalanceInformation15(obj);
 		}
 	};
 	/**
@@ -293,11 +325,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace16> forAggregateBalancePerSafekeepingPlace16 = new MMConstraint<AggregateBalancePerSafekeepingPlace16>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace16 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace16(obj);
 		}
 	};
 	/**
@@ -323,11 +359,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation17> forAggregateBalanceInformation17 = new MMConstraint<AggregateBalanceInformation17>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation17 obj) throws Exception {
+			checkAggregateBalanceInformation17(obj);
 		}
 	};
 	/**
@@ -353,11 +393,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace18> forAggregateBalancePerSafekeepingPlace18 = new MMConstraint<AggregateBalancePerSafekeepingPlace18>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace18 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace18(obj);
 		}
 	};
 	/**
@@ -383,11 +427,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation19> forAggregateBalanceInformation19 = new MMConstraint<AggregateBalanceInformation19>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation19 obj) throws Exception {
+			checkAggregateBalanceInformation19(obj);
 		}
 	};
 	/**
@@ -422,12 +470,16 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace21> forAggregateBalancePerSafekeepingPlace21 = new MMConstraint<AggregateBalancePerSafekeepingPlace21>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalancePerSafekeepingPlace25);
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace21 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace21(obj);
 		}
 	};
 	/**
@@ -461,12 +513,16 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation22> forAggregateBalanceInformation22 = new MMConstraint<AggregateBalanceInformation22>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalanceInformation26);
 			owner_lazy = () -> AggregateBalanceInformation22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation22 obj) throws Exception {
+			checkAggregateBalanceInformation22(obj);
 		}
 	};
 	/**
@@ -492,11 +548,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace22> forAggregateBalancePerSafekeepingPlace22 = new MMConstraint<AggregateBalancePerSafekeepingPlace22>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace22 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace22(obj);
 		}
 	};
 	/**
@@ -522,11 +582,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation23> forAggregateBalanceInformation23 = new MMConstraint<AggregateBalanceInformation23>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation23 obj) throws Exception {
+			checkAggregateBalanceInformation23(obj);
 		}
 	};
 	/**
@@ -552,11 +616,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace8> forAggregateBalancePerSafekeepingPlace8 = new MMConstraint<AggregateBalancePerSafekeepingPlace8>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace8 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace8(obj);
 		}
 	};
 	/**
@@ -582,11 +650,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation9> forAggregateBalanceInformation9 = new MMConstraint<AggregateBalanceInformation9>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation9 obj) throws Exception {
+			checkAggregateBalanceInformation9(obj);
 		}
 	};
 	/**
@@ -612,11 +684,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace9> forAggregateBalancePerSafekeepingPlace9 = new MMConstraint<AggregateBalancePerSafekeepingPlace9>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace9 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace9(obj);
 		}
 	};
 	/**
@@ -642,11 +718,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation10> forAggregateBalanceInformation10 = new MMConstraint<AggregateBalanceInformation10>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation10 obj) throws Exception {
+			checkAggregateBalanceInformation10(obj);
 		}
 	};
 	/**
@@ -672,11 +752,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace11> forAggregateBalancePerSafekeepingPlace11 = new MMConstraint<AggregateBalancePerSafekeepingPlace11>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace11 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace11(obj);
 		}
 	};
 	/**
@@ -702,11 +786,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation12> forAggregateBalanceInformation12 = new MMConstraint<AggregateBalanceInformation12>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation12 obj) throws Exception {
+			checkAggregateBalanceInformation12(obj);
 		}
 	};
 	/**
@@ -732,11 +820,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace13> forAggregateBalancePerSafekeepingPlace13 = new MMConstraint<AggregateBalancePerSafekeepingPlace13>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace13 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace13(obj);
 		}
 	};
 	/**
@@ -762,11 +854,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation14> forAggregateBalanceInformation14 = new MMConstraint<AggregateBalanceInformation14>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation14 obj) throws Exception {
+			checkAggregateBalanceInformation14(obj);
 		}
 	};
 	/**
@@ -792,11 +888,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace15> forAggregateBalancePerSafekeepingPlace15 = new MMConstraint<AggregateBalancePerSafekeepingPlace15>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace15 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace15(obj);
 		}
 	};
 	/**
@@ -822,11 +922,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation16> forAggregateBalanceInformation16 = new MMConstraint<AggregateBalanceInformation16>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation16 obj) throws Exception {
+			checkAggregateBalanceInformation16(obj);
 		}
 	};
 	/**
@@ -852,11 +956,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace17> forAggregateBalancePerSafekeepingPlace17 = new MMConstraint<AggregateBalancePerSafekeepingPlace17>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace17 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace17(obj);
 		}
 	};
 	/**
@@ -882,11 +990,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation18> forAggregateBalanceInformation18 = new MMConstraint<AggregateBalanceInformation18>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation18 obj) throws Exception {
+			checkAggregateBalanceInformation18(obj);
 		}
 	};
 	/**
@@ -921,12 +1033,16 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace20> forAggregateBalancePerSafekeepingPlace20 = new MMConstraint<AggregateBalancePerSafekeepingPlace20>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalancePerSafekeepingPlace24);
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace20 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace20(obj);
 		}
 	};
 	/**
@@ -960,12 +1076,16 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation21> forAggregateBalanceInformation21 = new MMConstraint<AggregateBalanceInformation21>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalanceInformation25);
 			owner_lazy = () -> AggregateBalanceInformation21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation21 obj) throws Exception {
+			checkAggregateBalanceInformation21(obj);
 		}
 	};
 	/**
@@ -991,11 +1111,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace23> forAggregateBalancePerSafekeepingPlace23 = new MMConstraint<AggregateBalancePerSafekeepingPlace23>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace23 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace23(obj);
 		}
 	};
 	/**
@@ -1021,11 +1145,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation24> forAggregateBalanceInformation24 = new MMConstraint<AggregateBalanceInformation24>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation24 obj) throws Exception {
+			checkAggregateBalanceInformation24(obj);
 		}
 	};
 	/**
@@ -1051,11 +1179,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace19> forAggregateBalancePerSafekeepingPlace19 = new MMConstraint<AggregateBalancePerSafekeepingPlace19>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the sender and receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace19 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace19(obj);
 		}
 	};
 	/**
@@ -1081,11 +1213,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace6> forAggregateBalancePerSafekeepingPlace6 = new MMConstraint<AggregateBalancePerSafekeepingPlace6>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, SubBalanceAdditionnalDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace6 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace6(obj);
 		}
 	};
 	/**
@@ -1111,11 +1247,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation6> forAggregateBalanceInformation6 = new MMConstraint<AggregateBalanceInformation6>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, SubBalanceAdditionnalDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation6 obj) throws Exception {
+			checkAggregateBalanceInformation6(obj);
 		}
 	};
 	/**
@@ -1141,11 +1281,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace5> forAggregateBalancePerSafekeepingPlace5 = new MMConstraint<AggregateBalancePerSafekeepingPlace5>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, HoldingAdditionnalDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace5 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace5(obj);
 		}
 	};
 	/**
@@ -1171,11 +1315,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation7> forAggregateBalanceInformation7 = new MMConstraint<AggregateBalanceInformation7>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, SubBalanceAdditionnalDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation7 obj) throws Exception {
+			checkAggregateBalanceInformation7(obj);
 		}
 	};
 	/**
@@ -1214,13 +1362,17 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation26> forAggregateBalanceInformation26 = new MMConstraint<AggregateBalanceInformation26>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalanceInformation31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalanceInformation22;
 			owner_lazy = () -> AggregateBalanceInformation26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation26 obj) throws Exception {
+			checkAggregateBalanceInformation26(obj);
 		}
 	};
 	/**
@@ -1259,13 +1411,17 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation25> forAggregateBalanceInformation25 = new MMConstraint<AggregateBalanceInformation25>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalanceInformation30);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalanceInformation21;
 			owner_lazy = () -> AggregateBalanceInformation25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation25 obj) throws Exception {
+			checkAggregateBalanceInformation25(obj);
 		}
 	};
 	/**
@@ -1306,13 +1462,17 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace24> forAggregateBalancePerSafekeepingPlace24 = new MMConstraint<AggregateBalancePerSafekeepingPlace24>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalancePerSafekeepingPlace28);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalancePerSafekeepingPlace20;
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace24 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace24(obj);
 		}
 	};
 	/**
@@ -1353,13 +1513,17 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace25> forAggregateBalancePerSafekeepingPlace25 = new MMConstraint<AggregateBalancePerSafekeepingPlace25>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalancePerSafekeepingPlace29);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalancePerSafekeepingPlace21;
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace25 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace25(obj);
 		}
 	};
 	/**
@@ -1385,11 +1549,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation28> forAggregateBalanceInformation28 = new MMConstraint<AggregateBalanceInformation28>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation28 obj) throws Exception {
+			checkAggregateBalanceInformation28(obj);
 		}
 	};
 	/**
@@ -1415,11 +1583,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation27> forAggregateBalanceInformation27 = new MMConstraint<AggregateBalanceInformation27>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation27 obj) throws Exception {
+			checkAggregateBalanceInformation27(obj);
 		}
 	};
 	/**
@@ -1445,11 +1617,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace26> forAggregateBalancePerSafekeepingPlace26 = new MMConstraint<AggregateBalancePerSafekeepingPlace26>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace26 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace26(obj);
 		}
 	};
 	/**
@@ -1475,11 +1651,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace27> forAggregateBalancePerSafekeepingPlace27 = new MMConstraint<AggregateBalancePerSafekeepingPlace27>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace27 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace27(obj);
 		}
 	};
 	/**
@@ -1510,12 +1690,16 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation30> forAggregateBalanceInformation30 = new MMConstraint<AggregateBalanceInformation30>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalanceInformation25;
 			owner_lazy = () -> AggregateBalanceInformation30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation30 obj) throws Exception {
+			checkAggregateBalanceInformation30(obj);
 		}
 	};
 	/**
@@ -1546,12 +1730,16 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation31> forAggregateBalanceInformation31 = new MMConstraint<AggregateBalanceInformation31>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalanceInformation26;
 			owner_lazy = () -> AggregateBalanceInformation31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation31 obj) throws Exception {
+			checkAggregateBalanceInformation31(obj);
 		}
 	};
 	/**
@@ -1583,12 +1771,16 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace28> forAggregateBalancePerSafekeepingPlace28 = new MMConstraint<AggregateBalancePerSafekeepingPlace28>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalancePerSafekeepingPlace24;
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace28 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace28(obj);
 		}
 	};
 	/**
@@ -1620,12 +1812,16 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace29> forAggregateBalancePerSafekeepingPlace29 = new MMConstraint<AggregateBalancePerSafekeepingPlace29>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintHoldingAdditionalDetailsRule.forAggregateBalancePerSafekeepingPlace25;
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace29 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace29(obj);
 		}
 	};
 	/**
@@ -1651,11 +1847,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation32> forAggregateBalanceInformation32 = new MMConstraint<AggregateBalanceInformation32>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation32 obj) throws Exception {
+			checkAggregateBalanceInformation32(obj);
 		}
 	};
 	/**
@@ -1681,11 +1881,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation33> forAggregateBalanceInformation33 = new MMConstraint<AggregateBalanceInformation33>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalanceInformation33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalanceInformation33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation33 obj) throws Exception {
+			checkAggregateBalanceInformation33(obj);
 		}
 	};
 	/**
@@ -1711,11 +1915,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace31> forAggregateBalancePerSafekeepingPlace31 = new MMConstraint<AggregateBalancePerSafekeepingPlace31>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace31 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace31(obj);
 		}
 	};
 	/**
@@ -1741,11 +1949,15 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace30> forAggregateBalancePerSafekeepingPlace30 = new MMConstraint<AggregateBalancePerSafekeepingPlace30>() {
 		{
-			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if SubBalanceAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace30 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace30(obj);
 		}
 	};
 

@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponse002V02;
+import com.tools20022.repository.choice.ConsentStatus5Choice;
+import com.tools20022.repository.choice.PendingStatus20Choice;
+import com.tools20022.repository.choice.RejectionStatus27Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
@@ -117,7 +120,7 @@ public class ResponseStatus8Choice {
 	 * definition} = "Reason provided for the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsented = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ResponseStatus8Choice, ConsentStatus5Choice> mmConsented = new MMMessageAssociationEnd<ResponseStatus8Choice, ConsentStatus5Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ResponseStatus8Choice.mmObject();
@@ -129,7 +132,17 @@ public class ResponseStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.ConsentStatus5Choice.mmObject();
+			type_lazy = () -> ConsentStatus5Choice.mmObject();
+		}
+
+		@Override
+		public ConsentStatus5Choice getValue(ResponseStatus8Choice obj) {
+			return obj.getConsented();
+		}
+
+		@Override
+		public void setValue(ResponseStatus8Choice obj, ConsentStatus5Choice value) {
+			obj.setConsented(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -165,7 +178,7 @@ public class ResponseStatus8Choice {
 	 * definition} = "Rejected status of an instruction, advice or request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ResponseStatus8Choice, RejectionStatus27Choice> mmRejected = new MMMessageAssociationEnd<ResponseStatus8Choice, RejectionStatus27Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ResponseStatus8Choice.mmObject();
@@ -177,7 +190,17 @@ public class ResponseStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectionStatus27Choice.mmObject();
+			type_lazy = () -> RejectionStatus27Choice.mmObject();
+		}
+
+		@Override
+		public RejectionStatus27Choice getValue(ResponseStatus8Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(ResponseStatus8Choice obj, RejectionStatus27Choice value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "Pdg", required = true)
@@ -213,7 +236,7 @@ public class ResponseStatus8Choice {
 	 * definition} = "Pending status of an instruction, advice or request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ResponseStatus8Choice, PendingStatus20Choice> mmPending = new MMMessageAssociationEnd<ResponseStatus8Choice, PendingStatus20Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ResponseStatus8Choice.mmObject();
@@ -225,7 +248,17 @@ public class ResponseStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingStatus20Choice.mmObject();
+			type_lazy = () -> PendingStatus20Choice.mmObject();
+		}
+
+		@Override
+		public PendingStatus20Choice getValue(ResponseStatus8Choice obj) {
+			return obj.getPending();
+		}
+
+		@Override
+		public void setValue(ResponseStatus8Choice obj, PendingStatus20Choice value) {
+			obj.setPending(value);
 		}
 	};
 
@@ -249,7 +282,7 @@ public class ResponseStatus8Choice {
 		return consented;
 	}
 
-	public ResponseStatus8Choice setConsented(com.tools20022.repository.choice.ConsentStatus5Choice consented) {
+	public ResponseStatus8Choice setConsented(ConsentStatus5Choice consented) {
 		this.consented = Objects.requireNonNull(consented);
 		return this;
 	}
@@ -258,7 +291,7 @@ public class ResponseStatus8Choice {
 		return rejected;
 	}
 
-	public ResponseStatus8Choice setRejected(com.tools20022.repository.choice.RejectionStatus27Choice rejected) {
+	public ResponseStatus8Choice setRejected(RejectionStatus27Choice rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}
@@ -267,7 +300,7 @@ public class ResponseStatus8Choice {
 		return pending;
 	}
 
-	public ResponseStatus8Choice setPending(com.tools20022.repository.choice.PendingStatus20Choice pending) {
+	public ResponseStatus8Choice setPending(PendingStatus20Choice pending) {
 		this.pending = Objects.requireNonNull(pending);
 		return this;
 	}

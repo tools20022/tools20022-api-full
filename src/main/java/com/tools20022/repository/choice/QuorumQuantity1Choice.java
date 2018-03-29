@@ -106,7 +106,7 @@ public class QuorumQuantity1Choice {
 	 * "Minimum quantity of securities required to hold a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuorumQuantity1Choice, Max35Text> mmQuorumQuantity = new MMMessageAttribute<QuorumQuantity1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuorumQuantity1Choice.mmObject();
@@ -118,6 +118,16 @@ public class QuorumQuantity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(QuorumQuantity1Choice obj) {
+			return obj.getQuorumQuantity();
+		}
+
+		@Override
+		public void setValue(QuorumQuantity1Choice obj, Max35Text value) {
+			obj.setQuorumQuantity(value);
 		}
 	};
 	@XmlElement(name = "QrmQtyPctg", required = true)
@@ -157,7 +167,7 @@ public class QuorumQuantity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuorumQuantityPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuorumQuantity1Choice, PercentageRate> mmQuorumQuantityPercentage = new MMMessageAttribute<QuorumQuantity1Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuorumQuantity1Choice.mmObject();
@@ -169,6 +179,16 @@ public class QuorumQuantity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(QuorumQuantity1Choice obj) {
+			return obj.getQuorumQuantityPercentage();
+		}
+
+		@Override
+		public void setValue(QuorumQuantity1Choice obj, PercentageRate value) {
+			obj.setQuorumQuantityPercentage(value);
 		}
 	};
 

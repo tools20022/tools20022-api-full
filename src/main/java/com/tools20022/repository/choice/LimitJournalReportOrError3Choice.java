@@ -111,7 +111,7 @@ public class LimitJournalReportOrError3Choice {
 	 * LimitJournalReportOrError1Choice.mmBusinessReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitJournalReportOrError3Choice, List<LimitJournalReport2>> mmBusinessReport = new MMMessageAssociationEnd<LimitJournalReportOrError3Choice, List<LimitJournalReport2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitJournalReportOrError3Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class LimitJournalReportOrError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitJournalReport2.mmObject();
+		}
+
+		@Override
+		public List<LimitJournalReport2> getValue(LimitJournalReportOrError3Choice obj) {
+			return obj.getBusinessReport();
+		}
+
+		@Override
+		public void setValue(LimitJournalReportOrError3Choice obj, List<LimitJournalReport2> value) {
+			obj.setBusinessReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -160,7 +170,7 @@ public class LimitJournalReportOrError3Choice {
 	 * LimitJournalReportOrError1Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitJournalReportOrError3Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<LimitJournalReportOrError3Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitJournalReportOrError3Choice.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class LimitJournalReportOrError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(LimitJournalReportOrError3Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(LimitJournalReportOrError3Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

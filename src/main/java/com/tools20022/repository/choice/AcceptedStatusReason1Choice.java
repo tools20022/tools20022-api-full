@@ -108,7 +108,7 @@ public class AcceptedStatusReason1Choice {
 	 * PendingStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptedStatusReason1Choice, AcceptedStatusReason1Code> mmCode = new MMMessageAttribute<AcceptedStatusReason1Choice, AcceptedStatusReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcceptedStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class AcceptedStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AcceptedStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public AcceptedStatusReason1Code getValue(AcceptedStatusReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason1Choice obj, AcceptedStatusReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class AcceptedStatusReason1Choice {
 	 * PendingStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptedStatusReason1Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<AcceptedStatusReason1Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcceptedStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class AcceptedStatusReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(AcceptedStatusReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason1Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

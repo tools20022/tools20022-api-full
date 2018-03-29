@@ -24,6 +24,7 @@ import com.tools20022.repository.area.camt.ModifyLimitV06;
 import com.tools20022.repository.choice.LimitIdentification1Choice;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Limit8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class LimitStructure2 {
 	 * LimitStructure1.mmLimitIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitStructure2, LimitIdentification1Choice> mmLimitIdentification = new MMMessageAssociationEnd<LimitStructure2, LimitIdentification1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitStructure2.mmObject();
@@ -140,6 +141,16 @@ public class LimitStructure2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public LimitIdentification1Choice getValue(LimitStructure2 obj) {
+			return obj.getLimitIdentification();
+		}
+
+		@Override
+		public void setValue(LimitStructure2 obj, LimitIdentification1Choice value) {
+			obj.setLimitIdentification(value);
 		}
 	};
 	@XmlElement(name = "NewLmtValSet", required = true)
@@ -179,7 +190,7 @@ public class LimitStructure2 {
 	 * LimitStructure1.mmNewLimitValueSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewLimitValueSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitStructure2, Limit8> mmNewLimitValueSet = new MMMessageAssociationEnd<LimitStructure2, Limit8>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitStructure2.mmObject();
@@ -192,7 +203,17 @@ public class LimitStructure2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Limit8.mmObject();
+			type_lazy = () -> Limit8.mmObject();
+		}
+
+		@Override
+		public Limit8 getValue(LimitStructure2 obj) {
+			return obj.getNewLimitValueSet();
+		}
+
+		@Override
+		public void setValue(LimitStructure2 obj, Limit8 value) {
+			obj.setNewLimitValueSet(value);
 		}
 	};
 
@@ -225,7 +246,7 @@ public class LimitStructure2 {
 		return newLimitValueSet;
 	}
 
-	public LimitStructure2 setNewLimitValueSet(com.tools20022.repository.msg.Limit8 newLimitValueSet) {
+	public LimitStructure2 setNewLimitValueSet(Limit8 newLimitValueSet) {
 		this.newLimitValueSet = Objects.requireNonNull(newLimitValueSet);
 		return this;
 	}

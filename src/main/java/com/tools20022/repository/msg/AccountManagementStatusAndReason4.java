@@ -148,7 +148,7 @@ public class AccountManagementStatusAndReason4 {
 	 * AccountManagementStatusAndReason3.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason4, Status20Choice> mmStatus = new MMMessageAttribute<AccountManagementStatusAndReason4, Status20Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmObject();
@@ -162,6 +162,16 @@ public class AccountManagementStatusAndReason4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Status20Choice.mmObject();
+		}
+
+		@Override
+		public Status20Choice getValue(AccountManagementStatusAndReason4 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason4 obj, Status20Choice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -208,7 +218,7 @@ public class AccountManagementStatusAndReason4 {
 	 * AccountManagementStatusAndReason3.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason4, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<AccountManagementStatusAndReason4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmObject();
 			isDerived = false;
@@ -221,6 +231,16 @@ public class AccountManagementStatusAndReason4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementStatusAndReason4 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason4 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExstgAcctId")
@@ -260,7 +280,7 @@ public class AccountManagementStatusAndReason4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExistingAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason4, Optional<Max35Text>> mmExistingAccountIdentification = new MMMessageAttribute<AccountManagementStatusAndReason4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmObject();
 			isDerived = false;
@@ -272,6 +292,16 @@ public class AccountManagementStatusAndReason4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementStatusAndReason4 obj) {
+			return obj.getExistingAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason4 obj, Optional<Max35Text> value) {
+			obj.setExistingAccountIdentification(value.orElse(null));
 		}
 	};
 

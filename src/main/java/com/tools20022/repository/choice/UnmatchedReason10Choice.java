@@ -133,7 +133,7 @@ public class UnmatchedReason10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnmatchedReason10Choice, UnmatchedReason7Code> mmCode = new MMMessageAttribute<UnmatchedReason10Choice, UnmatchedReason7Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedReason10Choice.mmObject();
@@ -147,6 +147,16 @@ public class UnmatchedReason10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnmatchedReason7Code.mmObject();
+		}
+
+		@Override
+		public UnmatchedReason7Code getValue(UnmatchedReason10Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason10Choice obj, UnmatchedReason7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -196,7 +206,7 @@ public class UnmatchedReason10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnmatchedReason10Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<UnmatchedReason10Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnmatchedReason10Choice.mmObject();
@@ -210,6 +220,16 @@ public class UnmatchedReason10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(UnmatchedReason10Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnmatchedReason10Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -113,7 +113,7 @@ public class RateAndAmountFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat2Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat2Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat2Choice.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class RateAndAmountFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat2Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat2Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -165,7 +175,7 @@ public class RateAndAmountFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat2Choice, CurrencyAndAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat2Choice, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat2Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class RateAndAmountFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(RateAndAmountFormat2Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat2Choice obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

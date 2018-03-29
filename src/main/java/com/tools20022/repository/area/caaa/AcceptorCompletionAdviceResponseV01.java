@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1;
 import com.tools20022.repository.msg.ContentInformationType3;
 import com.tools20022.repository.msg.Header2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +125,7 @@ public class AcceptorCompletionAdviceResponseV01 {
 	 * "Completion advice response message management information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCompletionAdviceResponseV01, Header2> mmHeader = new MMMessageBuildingBlock<AcceptorCompletionAdviceResponseV01, Header2>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class AcceptorCompletionAdviceResponseV01 {
 			complexType_lazy = () -> Header2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCompletionAdviceResponseV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header2 getValue(AcceptorCompletionAdviceResponseV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceResponseV01 obj, Header2 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "CmpltnAdvcRspn", required = true)
@@ -170,7 +171,7 @@ public class AcceptorCompletionAdviceResponseV01 {
 	 * definition} = "Information related to the completion advice response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCompletionAdviceResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCompletionAdviceResponseV01, AcceptorCompletionAdviceResponse1> mmCompletionAdviceResponse = new MMMessageBuildingBlock<AcceptorCompletionAdviceResponseV01, AcceptorCompletionAdviceResponse1>() {
 		{
 			xmlTag = "CmpltnAdvcRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +182,14 @@ public class AcceptorCompletionAdviceResponseV01 {
 			complexType_lazy = () -> AcceptorCompletionAdviceResponse1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCompletionAdviceResponseV01.class.getMethod("getCompletionAdviceResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorCompletionAdviceResponse1 getValue(AcceptorCompletionAdviceResponseV01 obj) {
+			return obj.getCompletionAdviceResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceResponseV01 obj, AcceptorCompletionAdviceResponse1 value) {
+			obj.setCompletionAdviceResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -214,7 +217,7 @@ public class AcceptorCompletionAdviceResponseV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCompletionAdviceResponseV01, ContentInformationType3> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorCompletionAdviceResponseV01, ContentInformationType3>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +228,14 @@ public class AcceptorCompletionAdviceResponseV01 {
 			complexType_lazy = () -> ContentInformationType3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCompletionAdviceResponseV01.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType3 getValue(AcceptorCompletionAdviceResponseV01 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorCompletionAdviceResponseV01 obj, ContentInformationType3 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

@@ -111,7 +111,7 @@ public class SecurityIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification2Choice, ISINIdentifier> mmISIN = new MMMessageAttribute<SecurityIdentification2Choice, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification2Choice.mmObject();
@@ -123,6 +123,16 @@ public class SecurityIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(SecurityIdentification2Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification2Choice obj, ISINIdentifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "Sdl", required = true)
@@ -162,7 +172,7 @@ public class SecurityIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSedol = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification2Choice, SEDOLIdentifier> mmSedol = new MMMessageAttribute<SecurityIdentification2Choice, SEDOLIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSEDOL;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification2Choice.mmObject();
@@ -174,6 +184,16 @@ public class SecurityIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
+		}
+
+		@Override
+		public SEDOLIdentifier getValue(SecurityIdentification2Choice obj) {
+			return obj.getSedol();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification2Choice obj, SEDOLIdentifier value) {
+			obj.setSedol(value);
 		}
 	};
 

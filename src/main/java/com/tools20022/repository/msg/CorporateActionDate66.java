@@ -112,7 +112,7 @@ public class CorporateActionDate66 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecordDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate66, Optional<DateFormat49Choice>> mmRecordDate = new MMMessageAssociationEnd<CorporateActionDate66, Optional<DateFormat49Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate66.mmObject();
@@ -126,6 +126,16 @@ public class CorporateActionDate66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat49Choice> getValue(CorporateActionDate66 obj) {
+			return obj.getRecordDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate66 obj, Optional<DateFormat49Choice> value) {
+			obj.setRecordDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExDvddDt")
@@ -166,7 +176,7 @@ public class CorporateActionDate66 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExDividendDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate66, Optional<DateFormat49Choice>> mmExDividendDate = new MMMessageAssociationEnd<CorporateActionDate66, Optional<DateFormat49Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmExDividendDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate66.mmObject();
@@ -180,6 +190,16 @@ public class CorporateActionDate66 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat49Choice> getValue(CorporateActionDate66 obj) {
+			return obj.getExDividendDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate66 obj, Optional<DateFormat49Choice> value) {
+			obj.setExDividendDate(value.orElse(null));
 		}
 	};
 

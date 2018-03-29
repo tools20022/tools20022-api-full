@@ -136,7 +136,7 @@ public class PriceFormat13Choice {
 	 * definition} = "Price expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat13Choice, PercentagePrice1> mmPercentagePrice = new MMMessageAssociationEnd<PriceFormat13Choice, PercentagePrice1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat13Choice.mmObject();
@@ -150,6 +150,16 @@ public class PriceFormat13Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PercentagePrice1.mmObject();
+		}
+
+		@Override
+		public PercentagePrice1 getValue(PriceFormat13Choice obj) {
+			return obj.getPercentagePrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat13Choice obj, PercentagePrice1 value) {
+			obj.setPercentagePrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPric", required = true)
@@ -188,7 +198,7 @@ public class PriceFormat13Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat13Choice, AmountPrice5> mmAmountPrice = new MMMessageAssociationEnd<PriceFormat13Choice, AmountPrice5>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat13Choice.mmObject();
@@ -202,6 +212,16 @@ public class PriceFormat13Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPrice5.mmObject();
+		}
+
+		@Override
+		public AmountPrice5 getValue(PriceFormat13Choice obj) {
+			return obj.getAmountPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat13Choice obj, AmountPrice5 value) {
+			obj.setAmountPrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
@@ -243,7 +263,7 @@ public class PriceFormat13Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat13Choice, AmountPricePerFinancialInstrumentQuantity4> mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd<PriceFormat13Choice, AmountPricePerFinancialInstrumentQuantity4>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerFinancialInstrumentQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat13Choice.mmObject();
@@ -257,6 +277,16 @@ public class PriceFormat13Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
+		}
+
+		@Override
+		public AmountPricePerFinancialInstrumentQuantity4 getValue(PriceFormat13Choice obj) {
+			return obj.getAmountPricePerFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(PriceFormat13Choice obj, AmountPricePerFinancialInstrumentQuantity4 value) {
+			obj.setAmountPricePerFinancialInstrumentQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerAmt", required = true)
@@ -295,7 +325,7 @@ public class PriceFormat13Choice {
 	 * definition} = "Price expressed as a ratio: amount price per amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat13Choice, AmountPricePerAmount3> mmAmountPricePerAmount = new MMMessageAssociationEnd<PriceFormat13Choice, AmountPricePerAmount3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat13Choice.mmObject();
@@ -309,6 +339,16 @@ public class PriceFormat13Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerAmount3.mmObject();
+		}
+
+		@Override
+		public AmountPricePerAmount3 getValue(PriceFormat13Choice obj) {
+			return obj.getAmountPricePerAmount();
+		}
+
+		@Override
+		public void setValue(PriceFormat13Choice obj, AmountPricePerAmount3 value) {
+			obj.setAmountPricePerAmount(value);
 		}
 	};
 

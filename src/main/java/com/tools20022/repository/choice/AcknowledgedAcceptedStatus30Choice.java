@@ -116,7 +116,7 @@ public class AcknowledgedAcceptedStatus30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgedAcceptedStatus30Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<AcknowledgedAcceptedStatus30Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus30Choice.mmObject();
@@ -129,6 +129,16 @@ public class AcknowledgedAcceptedStatus30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AcknowledgedAcceptedStatus30Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(AcknowledgedAcceptedStatus30Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -167,7 +177,7 @@ public class AcknowledgedAcceptedStatus30Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgedAcceptedStatus30Choice, List<AcknowledgementReason18>> mmReason = new MMMessageAttribute<AcknowledgedAcceptedStatus30Choice, List<AcknowledgementReason18>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus30Choice.mmObject();
@@ -178,6 +188,16 @@ public class AcknowledgedAcceptedStatus30Choice {
 			definition = "Specifies the reason of the acknowledged accepted status.";
 			minOccurs = 1;
 			complexType_lazy = () -> AcknowledgementReason18.mmObject();
+		}
+
+		@Override
+		public List<AcknowledgementReason18> getValue(AcknowledgedAcceptedStatus30Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AcknowledgedAcceptedStatus30Choice obj, List<AcknowledgementReason18> value) {
+			obj.setReason(value);
 		}
 	};
 

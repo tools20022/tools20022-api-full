@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashBalanceReturnCriteria;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -124,7 +125,7 @@ public class CashAccountReturnCriteria2 {
 	 * definition} = "Indicates whether the account name is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>> mmNameIndicator = new MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -135,6 +136,16 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getNameIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setNameIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyInd")
@@ -167,7 +178,7 @@ public class CashAccountReturnCriteria2 {
 	 * definition} = "Indicates whether the account currency is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>> mmCurrencyIndicator = new MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -178,6 +189,16 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getCurrencyIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setCurrencyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpInd")
@@ -210,7 +231,7 @@ public class CashAccountReturnCriteria2 {
 	 * definition} = "Indicates whether the account type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>> mmTypeIndicator = new MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -221,6 +242,16 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getTypeIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setTypeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MulLmtInd")
@@ -253,7 +284,7 @@ public class CashAccountReturnCriteria2 {
 	 * definition} = "Indicates whether the multilateral limit is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMultilateralLimitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>> mmMultilateralLimitIndicator = new MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -264,6 +295,16 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getMultilateralLimitIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setMultilateralLimitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MulBalRtrCrit")
@@ -296,7 +337,7 @@ public class CashAccountReturnCriteria2 {
 	 * "Defines the criteria used to report on a multilateral balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMultilateralBalanceReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountReturnCriteria2, Optional<CashBalanceReturnCriteria>> mmMultilateralBalanceReturnCriteria = new MMMessageAssociationEnd<CashAccountReturnCriteria2, Optional<CashBalanceReturnCriteria>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -307,7 +348,17 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
+			type_lazy = () -> CashBalanceReturnCriteria.mmObject();
+		}
+
+		@Override
+		public Optional<CashBalanceReturnCriteria> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getMultilateralBalanceReturnCriteria();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<CashBalanceReturnCriteria> value) {
+			obj.setMultilateralBalanceReturnCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BilLmtInd")
@@ -340,7 +391,7 @@ public class CashAccountReturnCriteria2 {
 	 * definition} = "Indicates whether the bilateral limit is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBilateralLimitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>> mmBilateralLimitIndicator = new MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -351,6 +402,16 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getBilateralLimitIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setBilateralLimitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BilBalRtrCrit")
@@ -383,7 +444,7 @@ public class CashAccountReturnCriteria2 {
 	 * "Defines the criteria used to report on a bilateral balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBilateralBalanceReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountReturnCriteria2, Optional<CashBalanceReturnCriteria>> mmBilateralBalanceReturnCriteria = new MMMessageAssociationEnd<CashAccountReturnCriteria2, Optional<CashBalanceReturnCriteria>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -394,7 +455,17 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
+			type_lazy = () -> CashBalanceReturnCriteria.mmObject();
+		}
+
+		@Override
+		public Optional<CashBalanceReturnCriteria> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getBilateralBalanceReturnCriteria();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<CashBalanceReturnCriteria> value) {
+			obj.setBilateralBalanceReturnCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StgOrdrInd")
@@ -428,7 +499,7 @@ public class CashAccountReturnCriteria2 {
 	 * "Indicates whether the account standing order is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandingOrderIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>> mmStandingOrderIndicator = new MMMessageAttribute<CashAccountReturnCriteria2, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -439,6 +510,16 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getStandingOrderIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<RequestedIndicator> value) {
+			obj.setStandingOrderIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrInd")
@@ -472,7 +553,7 @@ public class CashAccountReturnCriteria2 {
 	 * "Indicates whether the account owner information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReturnCriteria2, Optional<YesNoIndicator>> mmAccountOwnerIndicator = new MMMessageAttribute<CashAccountReturnCriteria2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -483,6 +564,16 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getAccountOwnerIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<YesNoIndicator> value) {
+			obj.setAccountOwnerIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrInd")
@@ -516,7 +607,7 @@ public class CashAccountReturnCriteria2 {
 	 * "Indicates whether the account servicer information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountReturnCriteria2, Optional<YesNoIndicator>> mmAccountServicerIndicator = new MMMessageAttribute<CashAccountReturnCriteria2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountReturnCriteria2.mmObject();
 			isDerived = false;
@@ -527,6 +618,16 @@ public class CashAccountReturnCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CashAccountReturnCriteria2 obj) {
+			return obj.getAccountServicerIndicator();
+		}
+
+		@Override
+		public void setValue(CashAccountReturnCriteria2 obj, Optional<YesNoIndicator> value) {
+			obj.setAccountServicerIndicator(value.orElse(null));
 		}
 	};
 
@@ -587,7 +688,7 @@ public class CashAccountReturnCriteria2 {
 		return multilateralBalanceReturnCriteria == null ? Optional.empty() : Optional.of(multilateralBalanceReturnCriteria);
 	}
 
-	public CashAccountReturnCriteria2 setMultilateralBalanceReturnCriteria(com.tools20022.repository.msg.CashBalanceReturnCriteria multilateralBalanceReturnCriteria) {
+	public CashAccountReturnCriteria2 setMultilateralBalanceReturnCriteria(CashBalanceReturnCriteria multilateralBalanceReturnCriteria) {
 		this.multilateralBalanceReturnCriteria = multilateralBalanceReturnCriteria;
 		return this;
 	}
@@ -605,7 +706,7 @@ public class CashAccountReturnCriteria2 {
 		return bilateralBalanceReturnCriteria == null ? Optional.empty() : Optional.of(bilateralBalanceReturnCriteria);
 	}
 
-	public CashAccountReturnCriteria2 setBilateralBalanceReturnCriteria(com.tools20022.repository.msg.CashBalanceReturnCriteria bilateralBalanceReturnCriteria) {
+	public CashAccountReturnCriteria2 setBilateralBalanceReturnCriteria(CashBalanceReturnCriteria bilateralBalanceReturnCriteria) {
 		this.bilateralBalanceReturnCriteria = bilateralBalanceReturnCriteria;
 		return this;
 	}

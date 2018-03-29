@@ -102,7 +102,7 @@ public class RateOrName1Choice {
 	 * definition} = "Pricing expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateOrName1Choice, Rate2> mmRate = new MMMessageAssociationEnd<RateOrName1Choice, Rate2>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateOrName1Choice.mmObject();
@@ -115,6 +115,16 @@ public class RateOrName1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Rate2.mmObject();
+		}
+
+		@Override
+		public Rate2 getValue(RateOrName1Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateOrName1Choice obj, Rate2 value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "RateNm", required = true)
@@ -144,7 +154,7 @@ public class RateOrName1Choice {
 	 * definition} = "Pricing expressed as a rate name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateOrName1Choice, RateName1> mmRateName = new MMMessageAssociationEnd<RateOrName1Choice, RateName1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateOrName1Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class RateOrName1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateName1.mmObject();
+		}
+
+		@Override
+		public RateName1 getValue(RateOrName1Choice obj) {
+			return obj.getRateName();
+		}
+
+		@Override
+		public void setValue(RateOrName1Choice obj, RateName1 value) {
+			obj.setRateName(value);
 		}
 	};
 

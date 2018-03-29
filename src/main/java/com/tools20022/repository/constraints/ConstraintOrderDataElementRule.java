@@ -51,11 +51,15 @@ public class ConstraintOrderDataElementRule {
 	 */
 	public static final MMConstraint<FundOrderData5> forFundOrderData5 = new MMConstraint<FundOrderData5>() {
 		{
-			validator = ConstraintOrderDataElementRule::checkFundOrderData5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderDataElementRule";
 			definition = "One of the elements (InvestmentAccountDetails, FinancialInstrumentDetails, UnitsNumber, NetAmount, GrossAmount, HoldingsRedemptionRate, SettlementAmount, UnitCurrency, QuotedCurrency) must be present.";
 			owner_lazy = () -> FundOrderData5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundOrderData5 obj) throws Exception {
+			checkFundOrderData5(obj);
 		}
 	};
 

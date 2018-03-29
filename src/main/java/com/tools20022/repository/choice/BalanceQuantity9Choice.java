@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.Quantity6Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification56;
@@ -119,7 +120,7 @@ public class BalanceQuantity9Choice {
 	 * BalanceQuantity4Choice.mmQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceQuantity9Choice, Quantity6Choice> mmQuantity = new MMMessageAttribute<BalanceQuantity9Choice, Quantity6Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceQuantity9Choice.mmObject();
@@ -132,7 +133,17 @@ public class BalanceQuantity9Choice {
 			previousVersion_lazy = () -> BalanceQuantity4Choice.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.Quantity6Choice.mmObject();
+			complexType_lazy = () -> Quantity6Choice.mmObject();
+		}
+
+		@Override
+		public Quantity6Choice getValue(BalanceQuantity9Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(BalanceQuantity9Choice obj, Quantity6Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -178,7 +189,7 @@ public class BalanceQuantity9Choice {
 	 * BalanceQuantity4Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceQuantity9Choice, GenericIdentification56> mmProprietary = new MMMessageAttribute<BalanceQuantity9Choice, GenericIdentification56>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceQuantity9Choice.mmObject();
@@ -192,6 +203,16 @@ public class BalanceQuantity9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification56.mmObject();
+		}
+
+		@Override
+		public GenericIdentification56 getValue(BalanceQuantity9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BalanceQuantity9Choice obj, GenericIdentification56 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -214,7 +235,7 @@ public class BalanceQuantity9Choice {
 		return quantity;
 	}
 
-	public BalanceQuantity9Choice setQuantity(com.tools20022.repository.choice.Quantity6Choice quantity) {
+	public BalanceQuantity9Choice setQuantity(Quantity6Choice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

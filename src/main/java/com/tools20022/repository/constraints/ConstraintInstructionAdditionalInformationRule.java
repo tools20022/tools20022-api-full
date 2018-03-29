@@ -56,12 +56,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption5> forCorporateActionOption5 = new MMConstraint<CorporateActionOption5>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption5 obj) throws Exception {
+			checkCorporateActionOption5(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption13> forCorporateActionOption13 = new MMConstraint<CorporateActionOption13>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption13 obj) throws Exception {
+			checkCorporateActionOption13(obj);
 		}
 	};
 	/**
@@ -126,12 +134,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption25> forCorporateActionOption25 = new MMConstraint<CorporateActionOption25>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption25.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption25 obj) throws Exception {
+			checkCorporateActionOption25(obj);
 		}
 	};
 	/**
@@ -161,12 +173,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption30> forCorporateActionOption30 = new MMConstraint<CorporateActionOption30>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption30.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption30 obj) throws Exception {
+			checkCorporateActionOption30(obj);
 		}
 	};
 	/**
@@ -196,12 +212,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption38> forCorporateActionOption38 = new MMConstraint<CorporateActionOption38>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption38.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption38 obj) throws Exception {
+			checkCorporateActionOption38(obj);
 		}
 	};
 	/**
@@ -231,12 +251,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption47> forCorporateActionOption47 = new MMConstraint<CorporateActionOption47>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption47.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption47 obj) throws Exception {
+			checkCorporateActionOption47(obj);
 		}
 	};
 	/**
@@ -275,13 +299,17 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption57> forCorporateActionOption57 = new MMConstraint<CorporateActionOption57>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructionAdditionalInformationRule.forCorporateActionOption103);
 			owner_lazy = () -> CorporateActionOption57.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption57 obj) throws Exception {
+			checkCorporateActionOption57(obj);
 		}
 	};
 	/**
@@ -311,12 +339,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption58> forCorporateActionOption58 = new MMConstraint<CorporateActionOption58>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption58.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption58 obj) throws Exception {
+			checkCorporateActionOption58(obj);
 		}
 	};
 	/**
@@ -361,7 +393,6 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption103> forCorporateActionOption103 = new MMConstraint<CorporateActionOption103>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption103;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
@@ -369,6 +400,11 @@ public class ConstraintInstructionAdditionalInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionAdditionalInformationRule.forCorporateActionOption57;
 			owner_lazy = () -> CorporateActionOption103.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption103 obj) throws Exception {
+			checkCorporateActionOption103(obj);
 		}
 	};
 	/**
@@ -398,12 +434,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption107> forCorporateActionOption107 = new MMConstraint<CorporateActionOption107>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption107;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI, then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption107.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption107 obj) throws Exception {
+			checkCorporateActionOption107(obj);
 		}
 	};
 	/**
@@ -448,7 +488,6 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption118> forCorporateActionOption118 = new MMConstraint<CorporateActionOption118>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption118;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI (Split Instruction), then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
@@ -456,6 +495,11 @@ public class ConstraintInstructionAdditionalInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionAdditionalInformationRule.forCorporateActionOption103;
 			owner_lazy = () -> CorporateActionOption118.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption118 obj) throws Exception {
+			checkCorporateActionOption118(obj);
 		}
 	};
 	/**
@@ -485,12 +529,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption123> forCorporateActionOption123 = new MMConstraint<CorporateActionOption123>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption123;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI (Split Instruction), then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption123.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption123 obj) throws Exception {
+			checkCorporateActionOption123(obj);
 		}
 	};
 	/**
@@ -535,7 +583,6 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption131> forCorporateActionOption131 = new MMConstraint<CorporateActionOption131>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption131;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI (Split Instruction), then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
@@ -543,6 +590,11 @@ public class ConstraintInstructionAdditionalInformationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionAdditionalInformationRule.forCorporateActionOption118;
 			owner_lazy = () -> CorporateActionOption131.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption131 obj) throws Exception {
+			checkCorporateActionOption131(obj);
 		}
 	};
 	/**
@@ -572,12 +624,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption134> forCorporateActionOption134 = new MMConstraint<CorporateActionOption134>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption134;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI (Split Instruction), then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption134.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption134 obj) throws Exception {
+			checkCorporateActionOption134(obj);
 		}
 	};
 	/**
@@ -613,13 +669,17 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption142> forCorporateActionOption142 = new MMConstraint<CorporateActionOption142>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption142;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI (Split Instruction), then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructionAdditionalInformationRule.forCorporateActionOption131;
 			owner_lazy = () -> CorporateActionOption142.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption142 obj) throws Exception {
+			checkCorporateActionOption142(obj);
 		}
 	};
 	/**
@@ -649,12 +709,16 @@ public class ConstraintInstructionAdditionalInformationRule {
 	 */
 	public static final MMConstraint<CorporateActionOption146> forCorporateActionOption146 = new MMConstraint<CorporateActionOption146>() {
 		{
-			validator = ConstraintInstructionAdditionalInformationRule::checkCorporateActionOption146;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionAdditionalInformationRule";
 			definition = "If OptionType/Code is SPLI (Split Instruction), then at least one occurrence of AdditionalInformation/InstructionAdditionalInformation must be present.";
 			owner_lazy = () -> CorporateActionOption146.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation/InstructionAdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OptionType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/OptionType/Code</leftOperand><rightOperand>SplitInstruction</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption146 obj) throws Exception {
+			checkCorporateActionOption146(obj);
 		}
 	};
 

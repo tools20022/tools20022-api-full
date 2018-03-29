@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Charge23;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -68,7 +69,7 @@ public class TotalCharges5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "ChrgDtls", required = true)
-	protected List<com.tools20022.repository.msg.Charge23> chargeDetails;
+	protected List<Charge23> chargeDetails;
 	/**
 	 * 
 	 <p>
@@ -97,7 +98,7 @@ public class TotalCharges5 {
 	 * definition} = "Information related to a specific charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalCharges5, List<Charge23>> mmChargeDetails = new MMMessageAssociationEnd<TotalCharges5, List<Charge23>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalCharges5.mmObject();
@@ -109,7 +110,17 @@ public class TotalCharges5 {
 			maxOccurs = 4;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Charge23.mmObject();
+			type_lazy = () -> Charge23.mmObject();
+		}
+
+		@Override
+		public List<Charge23> getValue(TotalCharges5 obj) {
+			return obj.getChargeDetails();
+		}
+
+		@Override
+		public void setValue(TotalCharges5 obj, List<Charge23> value) {
+			obj.setChargeDetails(value);
 		}
 	};
 
@@ -131,7 +142,7 @@ public class TotalCharges5 {
 		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public TotalCharges5 setChargeDetails(List<com.tools20022.repository.msg.Charge23> chargeDetails) {
+	public TotalCharges5 setChargeDetails(List<Charge23> chargeDetails) {
 		this.chargeDetails = Objects.requireNonNull(chargeDetails);
 		return this;
 	}

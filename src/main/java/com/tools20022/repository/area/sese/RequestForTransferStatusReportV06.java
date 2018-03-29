@@ -27,7 +27,7 @@ import com.tools20022.repository.msg.MarketPracticeVersion1;
 import com.tools20022.repository.msg.MessageAndBusinessReference11;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset._SR2018_InvestmentFundsMaintenance20172018;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -66,6 +66,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
+ * InvestmentFundsISOLatestversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_InvestmentFundsMaintenance20172018
  * _SR2018_InvestmentFundsMaintenance20172018}</li>
@@ -135,7 +138,7 @@ public class RequestForTransferStatusReportV06 {
 	 * RequestForTransferStatusReportV05.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForTransferStatusReportV06, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<RequestForTransferStatusReportV06, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,12 +150,14 @@ public class RequestForTransferStatusReportV06 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForTransferStatusReportV06.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(RequestForTransferStatusReportV06 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(RequestForTransferStatusReportV06 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqDtls", required = true)
@@ -187,7 +192,7 @@ public class RequestForTransferStatusReportV06 {
 	 * RequestForTransferStatusReportV05.mmRequestDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForTransferStatusReportV06, List<MessageAndBusinessReference11>> mmRequestDetails = new MMMessageBuildingBlock<RequestForTransferStatusReportV06, List<MessageAndBusinessReference11>>() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,12 +203,14 @@ public class RequestForTransferStatusReportV06 {
 			complexType_lazy = () -> MessageAndBusinessReference11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForTransferStatusReportV06.class.getMethod("getRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MessageAndBusinessReference11> getValue(RequestForTransferStatusReportV06 obj) {
+			return obj.getRequestDetails();
+		}
+
+		@Override
+		public void setValue(RequestForTransferStatusReportV06 obj, List<MessageAndBusinessReference11> value) {
+			obj.setRequestDetails(value);
 		}
 	};
 	@XmlElement(name = "MktPrctcVrsn")
@@ -237,7 +244,7 @@ public class RequestForTransferStatusReportV06 {
 	 * RequestForTransferStatusReportV05.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForTransferStatusReportV06, Optional<MarketPracticeVersion1>> mmMarketPracticeVersion = new MMMessageBuildingBlock<RequestForTransferStatusReportV06, Optional<MarketPracticeVersion1>>() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,12 +256,14 @@ public class RequestForTransferStatusReportV06 {
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForTransferStatusReportV06.class.getMethod("getMarketPracticeVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarketPracticeVersion1> getValue(RequestForTransferStatusReportV06 obj) {
+			return obj.getMarketPracticeVersion();
+		}
+
+		@Override
+		public void setValue(RequestForTransferStatusReportV06 obj, Optional<MarketPracticeVersion1> value) {
+			obj.setMarketPracticeVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -288,7 +297,7 @@ public class RequestForTransferStatusReportV06 {
 	 * RequestForTransferStatusReportV05.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForTransferStatusReportV06, List<Extension1>> mmExtension = new MMMessageBuildingBlock<RequestForTransferStatusReportV06, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,12 +308,14 @@ public class RequestForTransferStatusReportV06 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForTransferStatusReportV06.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(RequestForTransferStatusReportV06 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(RequestForTransferStatusReportV06 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -315,7 +326,7 @@ public class RequestForTransferStatusReportV06 {
 				name = "RequestForTransferStatusReportV06";
 				definition = "Scope\r\nThe RequestForTransferStatusReport is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent to request the status of a previously instructed transfer.\r\nUsage\r\nThe RequestForTransferStatusReport is used to request either:\r\n- the status of one or several transfer instructions or,\r\n- the status of one or several transfer cancellation instructions.";
 				previousVersion_lazy = () -> RequestForTransferStatusReportV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_InvestmentFundsMaintenance20172018.mmObject());
+				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject(), _SR2018_InvestmentFundsMaintenance20172018.mmObject());
 				rootElement = "Document";
 				xmlTag = "ReqForTrfStsRpt";
 				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();

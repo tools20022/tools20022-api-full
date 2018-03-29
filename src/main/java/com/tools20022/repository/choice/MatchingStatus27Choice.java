@@ -120,7 +120,7 @@ public class MatchingStatus27Choice {
 	 * MatchingStatus1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingStatus27Choice, MatchingStatus1Code> mmCode = new MMMessageAttribute<MatchingStatus27Choice, MatchingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus27Choice.mmObject();
@@ -134,6 +134,16 @@ public class MatchingStatus27Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MatchingStatus1Code.mmObject();
+		}
+
+		@Override
+		public MatchingStatus1Code getValue(MatchingStatus27Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MatchingStatus27Choice obj, MatchingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class MatchingStatus27Choice {
 	 * MatchingStatus1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingStatus27Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<MatchingStatus27Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus27Choice.mmObject();
@@ -193,6 +203,16 @@ public class MatchingStatus27Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(MatchingStatus27Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus27Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

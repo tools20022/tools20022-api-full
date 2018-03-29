@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.secl.DefaultFundContributionReportV02;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection21;
+import com.tools20022.repository.msg.Collateral3;
+import com.tools20022.repository.msg.DefaultFund1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -85,7 +88,7 @@ public class DefaultFundReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "DfltFndClctn", required = true)
-	protected List<com.tools20022.repository.msg.DefaultFund1> defaultFundCalculation;
+	protected List<DefaultFund1> defaultFundCalculation;
 	/**
 	 * 
 	 <p>
@@ -114,7 +117,7 @@ public class DefaultFundReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefaultFundCalculation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DefaultFundReport1, List<DefaultFund1>> mmDefaultFundCalculation = new MMMessageAssociationEnd<DefaultFundReport1, List<DefaultFund1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DefaultFundReport1.mmObject();
 			isDerived = false;
@@ -124,11 +127,21 @@ public class DefaultFundReport1 {
 			definition = "Provides details about the calculation of the clearing member contribution to the default fund.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DefaultFund1.mmObject();
+			type_lazy = () -> DefaultFund1.mmObject();
+		}
+
+		@Override
+		public List<DefaultFund1> getValue(DefaultFundReport1 obj) {
+			return obj.getDefaultFundCalculation();
+		}
+
+		@Override
+		public void setValue(DefaultFundReport1 obj, List<DefaultFund1> value) {
+			obj.setDefaultFundCalculation(value);
 		}
 	};
 	@XmlElement(name = "CollDesc", required = true)
-	protected List<com.tools20022.repository.msg.Collateral3> collateralDescription;
+	protected List<Collateral3> collateralDescription;
 	/**
 	 * 
 	 <p>
@@ -155,7 +168,7 @@ public class DefaultFundReport1 {
 	 * definition} = "Provides details about the collateral held."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralDescription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DefaultFundReport1, List<Collateral3>> mmCollateralDescription = new MMMessageAssociationEnd<DefaultFundReport1, List<Collateral3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DefaultFundReport1.mmObject();
 			isDerived = false;
@@ -165,7 +178,17 @@ public class DefaultFundReport1 {
 			definition = "Provides details about the collateral held.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Collateral3.mmObject();
+			type_lazy = () -> Collateral3.mmObject();
+		}
+
+		@Override
+		public List<Collateral3> getValue(DefaultFundReport1 obj) {
+			return obj.getCollateralDescription();
+		}
+
+		@Override
+		public void setValue(DefaultFundReport1 obj, List<Collateral3> value) {
+			obj.setCollateralDescription(value);
 		}
 	};
 	@XmlElement(name = "NetXcssOrDfcit", required = true)
@@ -198,7 +221,7 @@ public class DefaultFundReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetExcessOrDeficit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DefaultFundReport1, AmountAndDirection21> mmNetExcessOrDeficit = new MMMessageAssociationEnd<DefaultFundReport1, AmountAndDirection21>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DefaultFundReport1.mmObject();
 			isDerived = false;
@@ -209,7 +232,17 @@ public class DefaultFundReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection21.mmObject();
+			type_lazy = () -> AmountAndDirection21.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection21 getValue(DefaultFundReport1 obj) {
+			return obj.getNetExcessOrDeficit();
+		}
+
+		@Override
+		public void setValue(DefaultFundReport1 obj, AmountAndDirection21 value) {
+			obj.setNetExcessOrDeficit(value);
 		}
 	};
 
@@ -232,7 +265,7 @@ public class DefaultFundReport1 {
 		return defaultFundCalculation == null ? defaultFundCalculation = new ArrayList<>() : defaultFundCalculation;
 	}
 
-	public DefaultFundReport1 setDefaultFundCalculation(List<com.tools20022.repository.msg.DefaultFund1> defaultFundCalculation) {
+	public DefaultFundReport1 setDefaultFundCalculation(List<DefaultFund1> defaultFundCalculation) {
 		this.defaultFundCalculation = Objects.requireNonNull(defaultFundCalculation);
 		return this;
 	}
@@ -241,7 +274,7 @@ public class DefaultFundReport1 {
 		return collateralDescription == null ? collateralDescription = new ArrayList<>() : collateralDescription;
 	}
 
-	public DefaultFundReport1 setCollateralDescription(List<com.tools20022.repository.msg.Collateral3> collateralDescription) {
+	public DefaultFundReport1 setCollateralDescription(List<Collateral3> collateralDescription) {
 		this.collateralDescription = Objects.requireNonNull(collateralDescription);
 		return this;
 	}
@@ -250,7 +283,7 @@ public class DefaultFundReport1 {
 		return netExcessOrDeficit;
 	}
 
-	public DefaultFundReport1 setNetExcessOrDeficit(com.tools20022.repository.msg.AmountAndDirection21 netExcessOrDeficit) {
+	public DefaultFundReport1 setNetExcessOrDeficit(AmountAndDirection21 netExcessOrDeficit) {
 		this.netExcessOrDeficit = Objects.requireNonNull(netExcessOrDeficit);
 		return this;
 	}

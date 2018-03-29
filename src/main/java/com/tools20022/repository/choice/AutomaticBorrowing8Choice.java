@@ -112,7 +112,7 @@ public class AutomaticBorrowing8Choice {
 	 * "Condition for automatic borrowing expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticBorrowing8Choice, AutoBorrowing1Code> mmCode = new MMMessageAttribute<AutomaticBorrowing8Choice, AutoBorrowing1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing8Choice.mmObject();
@@ -125,6 +125,16 @@ public class AutomaticBorrowing8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AutoBorrowing1Code.mmObject();
+		}
+
+		@Override
+		public AutoBorrowing1Code getValue(AutomaticBorrowing8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AutomaticBorrowing8Choice obj, AutoBorrowing1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class AutomaticBorrowing8Choice {
 	 * "Condition for automatic borrowing expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticBorrowing8Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<AutomaticBorrowing8Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing8Choice.mmObject();
@@ -179,6 +189,16 @@ public class AutomaticBorrowing8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(AutomaticBorrowing8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AutomaticBorrowing8Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

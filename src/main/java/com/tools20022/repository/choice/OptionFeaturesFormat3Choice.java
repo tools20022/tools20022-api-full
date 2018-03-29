@@ -113,7 +113,7 @@ public class OptionFeaturesFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionFeaturesFormat3Choice, OptionFeatures1Code> mmCode = new MMMessageAttribute<OptionFeaturesFormat3Choice, OptionFeatures1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionFeaturesFormat3Choice.mmObject();
@@ -125,6 +125,16 @@ public class OptionFeaturesFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionFeatures1Code.mmObject();
+		}
+
+		@Override
+		public OptionFeatures1Code getValue(OptionFeaturesFormat3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionFeaturesFormat3Choice obj, OptionFeatures1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class OptionFeaturesFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionFeaturesFormat3Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<OptionFeaturesFormat3Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionFeaturesFormat3Choice.mmObject();
@@ -176,6 +186,16 @@ public class OptionFeaturesFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(OptionFeaturesFormat3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionFeaturesFormat3Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -111,7 +111,7 @@ public class ExposureType9Choice {
 	 * "Collateral movement exposure type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExposureType9Choice, ExposureType3Code> mmCode = new MMMessageAttribute<ExposureType9Choice, ExposureType3Code>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExposureType9Choice.mmObject();
@@ -124,6 +124,16 @@ public class ExposureType9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExposureType3Code.mmObject();
+		}
+
+		@Override
+		public ExposureType3Code getValue(ExposureType9Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ExposureType9Choice obj, ExposureType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class ExposureType9Choice {
 	 * "Collateral movement exposure type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExposureType9Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<ExposureType9Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExposureType9Choice.mmObject();
@@ -178,6 +188,16 @@ public class ExposureType9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(ExposureType9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ExposureType9Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -130,7 +130,7 @@ public class PartyIdentification76 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification76, PersonOrOrganisation1Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification76, PersonOrOrganisation1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification76.mmObject();
@@ -144,6 +144,16 @@ public class PartyIdentification76 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonOrOrganisation1Choice.mmObject();
+		}
+
+		@Override
+		public PersonOrOrganisation1Choice getValue(PartyIdentification76 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification76 obj, PersonOrOrganisation1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtryOfBrnch")
@@ -190,7 +200,7 @@ public class PartyIdentification76 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification76, Optional<CountryCode>> mmCountryOfBranch = new MMMessageAttribute<PartyIdentification76, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification76.mmObject();
@@ -203,6 +213,16 @@ public class PartyIdentification76 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(PartyIdentification76 obj) {
+			return obj.getCountryOfBranch();
+		}
+
+		@Override
+		public void setValue(PartyIdentification76 obj, Optional<CountryCode> value) {
+			obj.setCountryOfBranch(value.orElse(null));
 		}
 	};
 

@@ -99,7 +99,7 @@ public class RestrictionStatus1Choice {
 	 * definition} = "Status of the restriction expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RestrictionStatus1Choice, RestrictionStatus1Code> mmCode = new MMMessageAttribute<RestrictionStatus1Choice, RestrictionStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RestrictionStatus1Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class RestrictionStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictionStatus1Code.mmObject();
+		}
+
+		@Override
+		public RestrictionStatus1Code getValue(RestrictionStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RestrictionStatus1Choice obj, RestrictionStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -142,7 +152,7 @@ public class RestrictionStatus1Choice {
 	 * "Status of the restriction expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RestrictionStatus1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<RestrictionStatus1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RestrictionStatus1Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class RestrictionStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(RestrictionStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RestrictionStatus1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

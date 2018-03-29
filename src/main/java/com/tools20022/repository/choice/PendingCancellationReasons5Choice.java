@@ -114,7 +114,7 @@ public class PendingCancellationReasons5Choice {
 	 * "Specifies the reason why the cancellation request is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationReasons5Choice, PendingReason7Code> mmCode = new MMMessageAttribute<PendingCancellationReasons5Choice, PendingReason7Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReasons5Choice.mmObject();
@@ -127,6 +127,16 @@ public class PendingCancellationReasons5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingReason7Code.mmObject();
+		}
+
+		@Override
+		public PendingReason7Code getValue(PendingCancellationReasons5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReasons5Choice obj, PendingReason7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -168,7 +178,7 @@ public class PendingCancellationReasons5Choice {
 	 * "Specifies the reason why the cancellation request is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationReasons5Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<PendingCancellationReasons5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReasons5Choice.mmObject();
@@ -181,6 +191,16 @@ public class PendingCancellationReasons5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(PendingCancellationReasons5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReasons5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

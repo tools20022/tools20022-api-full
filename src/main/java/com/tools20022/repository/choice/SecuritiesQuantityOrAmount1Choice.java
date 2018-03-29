@@ -99,7 +99,7 @@ public class SecuritiesQuantityOrAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesQuantityOrAmount1Choice, SecuritiesOption54> mmSecuritiesQuantity = new MMMessageAssociationEnd<SecuritiesQuantityOrAmount1Choice, SecuritiesOption54>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class SecuritiesQuantityOrAmount1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesOption54.mmObject();
+		}
+
+		@Override
+		public SecuritiesOption54 getValue(SecuritiesQuantityOrAmount1Choice obj) {
+			return obj.getSecuritiesQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesQuantityOrAmount1Choice obj, SecuritiesOption54 value) {
+			obj.setSecuritiesQuantity(value);
 		}
 	};
 	@XmlElement(name = "InstdAmt", required = true)
@@ -143,7 +153,7 @@ public class SecuritiesQuantityOrAmount1Choice {
 	 * definition} = "Cash amount to be instructed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesQuantityOrAmount1Choice, RestrictedFINActiveCurrencyAndAmount> mmInstructedAmount = new MMMessageAttribute<SecuritiesQuantityOrAmount1Choice, RestrictedFINActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesQuantityOrAmount1Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class SecuritiesQuantityOrAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAndAmount getValue(SecuritiesQuantityOrAmount1Choice obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(SecuritiesQuantityOrAmount1Choice obj, RestrictedFINActiveCurrencyAndAmount value) {
+			obj.setInstructedAmount(value);
 		}
 	};
 

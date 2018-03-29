@@ -116,7 +116,7 @@ public class TemporaryFinancialInstrumentIndicator4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTemporaryIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TemporaryFinancialInstrumentIndicator4Choice, YesNoIndicator> mmTemporaryIndicator = new MMMessageAttribute<TemporaryFinancialInstrumentIndicator4Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice.mmObject();
@@ -129,6 +129,16 @@ public class TemporaryFinancialInstrumentIndicator4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(TemporaryFinancialInstrumentIndicator4Choice obj) {
+			return obj.getTemporaryIndicator();
+		}
+
+		@Override
+		public void setValue(TemporaryFinancialInstrumentIndicator4Choice obj, YesNoIndicator value) {
+			obj.setTemporaryIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class TemporaryFinancialInstrumentIndicator4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TemporaryFinancialInstrumentIndicator4Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<TemporaryFinancialInstrumentIndicator4Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice.mmObject();
@@ -180,6 +190,16 @@ public class TemporaryFinancialInstrumentIndicator4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(TemporaryFinancialInstrumentIndicator4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TemporaryFinancialInstrumentIndicator4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

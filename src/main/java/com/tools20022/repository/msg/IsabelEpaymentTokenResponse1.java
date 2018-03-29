@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max1kBinary;
 import com.tools20022.repository.datatype.Max50Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IsabelLRCIPaymentInformation1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -108,7 +109,7 @@ public class IsabelEpaymentTokenResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLRCITransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEpaymentTokenResponse1, Max50Binary> mmLRCITransactionIdentification = new MMMessageAttribute<IsabelEpaymentTokenResponse1, Max50Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmObject();
 			isDerived = false;
@@ -120,9 +121,19 @@ public class IsabelEpaymentTokenResponse1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Binary.mmObject();
 		}
+
+		@Override
+		public Max50Binary getValue(IsabelEpaymentTokenResponse1 obj) {
+			return obj.getLRCITransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelEpaymentTokenResponse1 obj, Max50Binary value) {
+			obj.setLRCITransactionIdentification(value);
+		}
 	};
 	@XmlElement(name = "PmtInf", required = true)
-	protected List<com.tools20022.repository.msg.IsabelLRCIPaymentInformation1> paymentInformation;
+	protected List<IsabelLRCIPaymentInformation1> paymentInformation;
 	/**
 	 * 
 	 <p>
@@ -152,7 +163,7 @@ public class IsabelEpaymentTokenResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelEpaymentTokenResponse1, List<IsabelLRCIPaymentInformation1>> mmPaymentInformation = new MMMessageAssociationEnd<IsabelEpaymentTokenResponse1, List<IsabelLRCIPaymentInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmObject();
 			isDerived = false;
@@ -163,7 +174,17 @@ public class IsabelEpaymentTokenResponse1 {
 			maxOccurs = 100;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmObject();
+			type_lazy = () -> IsabelLRCIPaymentInformation1.mmObject();
+		}
+
+		@Override
+		public List<IsabelLRCIPaymentInformation1> getValue(IsabelEpaymentTokenResponse1 obj) {
+			return obj.getPaymentInformation();
+		}
+
+		@Override
+		public void setValue(IsabelEpaymentTokenResponse1 obj, List<IsabelLRCIPaymentInformation1> value) {
+			obj.setPaymentInformation(value);
 		}
 	};
 	@XmlElement(name = "SvrSgntr", required = true)
@@ -197,7 +218,7 @@ public class IsabelEpaymentTokenResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServerSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelEpaymentTokenResponse1, Max1kBinary> mmServerSignature = new MMMessageAttribute<IsabelEpaymentTokenResponse1, Max1kBinary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmObject();
 			isDerived = false;
@@ -208,6 +229,16 @@ public class IsabelEpaymentTokenResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max1kBinary.mmObject();
+		}
+
+		@Override
+		public Max1kBinary getValue(IsabelEpaymentTokenResponse1 obj) {
+			return obj.getServerSignature();
+		}
+
+		@Override
+		public void setValue(IsabelEpaymentTokenResponse1 obj, Max1kBinary value) {
+			obj.setServerSignature(value);
 		}
 	};
 
@@ -238,7 +269,7 @@ public class IsabelEpaymentTokenResponse1 {
 		return paymentInformation == null ? paymentInformation = new ArrayList<>() : paymentInformation;
 	}
 
-	public IsabelEpaymentTokenResponse1 setPaymentInformation(List<com.tools20022.repository.msg.IsabelLRCIPaymentInformation1> paymentInformation) {
+	public IsabelEpaymentTokenResponse1 setPaymentInformation(List<IsabelLRCIPaymentInformation1> paymentInformation) {
 		this.paymentInformation = Objects.requireNonNull(paymentInformation);
 		return this;
 	}

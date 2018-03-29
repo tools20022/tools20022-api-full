@@ -98,7 +98,7 @@ public class Result1 {
 	 * definition} = "Amount payable by party B to party A."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDueToPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Result1, Optional<ActiveCurrencyAndAmount>> mmDueToPartyA = new MMMessageAttribute<Result1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Result1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class Result1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Result1 obj) {
+			return obj.getDueToPartyA();
+		}
+
+		@Override
+		public void setValue(Result1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setDueToPartyA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DueToPtyB")
@@ -140,7 +150,7 @@ public class Result1 {
 	 * definition} = "Amount payable by party A to party B."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDueToPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Result1, Optional<ActiveCurrencyAndAmount>> mmDueToPartyB = new MMMessageAttribute<Result1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Result1.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class Result1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Result1 obj) {
+			return obj.getDueToPartyB();
+		}
+
+		@Override
+		public void setValue(Result1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setDueToPartyB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -183,7 +203,7 @@ public class Result1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Result1, Optional<Max210Text>> mmAdditionalInformation = new MMMessageAttribute<Result1, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Result1.mmObject();
 			isDerived = false;
@@ -194,6 +214,16 @@ public class Result1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(Result1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Result1 obj, Optional<Max210Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

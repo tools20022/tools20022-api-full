@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.CurrencyQueryDefinition3;
 import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -99,7 +98,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GetCurrencyExchangeRateV03"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -137,7 +136,7 @@ public class GetCurrencyExchangeRateV03 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetCurrencyExchangeRateV03, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<GetCurrencyExchangeRateV03, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,12 +147,14 @@ public class GetCurrencyExchangeRateV03 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetCurrencyExchangeRateV03.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(GetCurrencyExchangeRateV03 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(GetCurrencyExchangeRateV03 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "CcyQryDef")
@@ -181,7 +182,7 @@ public class GetCurrencyExchangeRateV03 {
 	 * definition} = "Definition of the currency exchange query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCurrencyQueryDefinition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetCurrencyExchangeRateV03, Optional<CurrencyQueryDefinition3>> mmCurrencyQueryDefinition = new MMMessageBuildingBlock<GetCurrencyExchangeRateV03, Optional<CurrencyQueryDefinition3>>() {
 		{
 			xmlTag = "CcyQryDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,12 +193,14 @@ public class GetCurrencyExchangeRateV03 {
 			complexType_lazy = () -> CurrencyQueryDefinition3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetCurrencyExchangeRateV03.class.getMethod("getCurrencyQueryDefinition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CurrencyQueryDefinition3> getValue(GetCurrencyExchangeRateV03 obj) {
+			return obj.getCurrencyQueryDefinition();
+		}
+
+		@Override
+		public void setValue(GetCurrencyExchangeRateV03 obj, Optional<CurrencyQueryDefinition3> value) {
+			obj.setCurrencyQueryDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -227,7 +230,7 @@ public class GetCurrencyExchangeRateV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetCurrencyExchangeRateV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<GetCurrencyExchangeRateV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,19 +240,21 @@ public class GetCurrencyExchangeRateV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetCurrencyExchangeRateV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(GetCurrencyExchangeRateV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(GetCurrencyExchangeRateV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GetCurrencyExchangeRateV03";
 				definition = "Scope\r\nThe GetCurrencyExchangeRate message is sent by a member to the transaction administrator.\r\nIt is used to request information on static data maintained by the transaction administrator and related to currency exchange details as maintained for the system operations by the transaction administrator.\r\nUsage\r\nThe transaction administrator is in charge of providing the members with business information. The term business information covers all information related to the management of the system, i.e., not related to the transactions created into the system. The type of business information available can vary depending on the system.\r\nWhen a system manages a pool of accounts in various currencies for a member, there is a need to maintain currency exchange details in between the various currencies and the reporting or base currency. The reporting or base currency is used to calculate the actual position of the members in terms of aggregate limits and balances and allow the system to contain risk within the defined and agreed boundaries. The currency exchange details can be fixed for the entire operational day, or regularly updated according to near real time market feeds.\r\nAt any point in time during operating hours of the system, the member can query the transaction administrator to get information about the static data related to a currency exchange details.\r\nThe member can request information based on the following elements:\r\n- the currency to be converted (source currency)\r\n- the currency into which the amount is converted (target currency)\r\nThis message will be replied to by a ReturnCurrencyExchangeRate message.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

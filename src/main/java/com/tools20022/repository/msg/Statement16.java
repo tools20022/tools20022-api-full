@@ -152,7 +152,7 @@ public class Statement16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementDateOrPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement16, Optional<DateAndPeriod1Choice>> mmStatementDateOrPeriod = new MMMessageAssociationEnd<Statement16, Optional<DateAndPeriod1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement16.mmObject();
 			isDerived = false;
@@ -166,6 +166,16 @@ public class Statement16 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndPeriod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndPeriod1Choice> getValue(Statement16 obj) {
+			return obj.getStatementDateOrPeriod();
+		}
+
+		@Override
+		public void setValue(Statement16 obj, Optional<DateAndPeriod1Choice> value) {
+			obj.setStatementDateOrPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -207,7 +217,7 @@ public class Statement16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement16, Optional<Frequency4Choice>> mmFrequency = new MMMessageAttribute<Statement16, Optional<Frequency4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement16.mmObject();
 			isDerived = false;
@@ -220,6 +230,16 @@ public class Statement16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Frequency4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency4Choice> getValue(Statement16 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Statement16 obj, Optional<Frequency4Choice> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdTp")
@@ -260,7 +280,7 @@ public class Statement16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement16, Optional<UpdateType2Choice>> mmUpdateType = new MMMessageAssociationEnd<Statement16, Optional<UpdateType2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement16.mmObject();
 			isDerived = false;
@@ -274,6 +294,16 @@ public class Statement16 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> UpdateType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UpdateType2Choice> getValue(Statement16 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Statement16 obj, Optional<UpdateType2Choice> value) {
+			obj.setUpdateType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtBsis")
@@ -316,7 +346,7 @@ public class Statement16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement16, Optional<StatementBasis3Choice>> mmStatementBasis = new MMMessageAttribute<Statement16, Optional<StatementBasis3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement16.mmObject();
 			isDerived = false;
@@ -329,6 +359,16 @@ public class Statement16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementBasis3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementBasis3Choice> getValue(Statement16 obj) {
+			return obj.getStatementBasis();
+		}
+
+		@Override
+		public void setValue(Statement16 obj, Optional<StatementBasis3Choice> value) {
+			obj.setStatementBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtTp")
@@ -371,7 +411,7 @@ public class Statement16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement16, Optional<StatementType2Choice>> mmStatementType = new MMMessageAttribute<Statement16, Optional<StatementType2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement16.mmObject();
 			isDerived = false;
@@ -384,6 +424,16 @@ public class Statement16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementType2Choice> getValue(Statement16 obj) {
+			return obj.getStatementType();
+		}
+
+		@Override
+		public void setValue(Statement16 obj, Optional<StatementType2Choice> value) {
+			obj.setStatementType(value.orElse(null));
 		}
 	};
 

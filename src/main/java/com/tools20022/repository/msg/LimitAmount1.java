@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CreditDebitAmount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class LimitAmount1 {
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitAmount1, CreditDebitAmount1> mmAmount = new MMMessageAttribute<LimitAmount1, CreditDebitAmount1>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitAmount1.mmObject();
@@ -116,7 +117,17 @@ public class LimitAmount1 {
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CreditDebitAmount1.mmObject();
+			complexType_lazy = () -> CreditDebitAmount1.mmObject();
+		}
+
+		@Override
+		public CreditDebitAmount1 getValue(LimitAmount1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(LimitAmount1 obj, CreditDebitAmount1 value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "UtlstnAmt", required = true)
@@ -155,7 +166,7 @@ public class LimitAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUtilisationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitAmount1, CreditDebitAmount1> mmUtilisationAmount = new MMMessageAttribute<LimitAmount1, CreditDebitAmount1>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmUsedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitAmount1.mmObject();
@@ -166,7 +177,17 @@ public class LimitAmount1 {
 			definition = "Utilised amount of money of the limit expressed in an eligible currency.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CreditDebitAmount1.mmObject();
+			complexType_lazy = () -> CreditDebitAmount1.mmObject();
+		}
+
+		@Override
+		public CreditDebitAmount1 getValue(LimitAmount1 obj) {
+			return obj.getUtilisationAmount();
+		}
+
+		@Override
+		public void setValue(LimitAmount1 obj, CreditDebitAmount1 value) {
+			obj.setUtilisationAmount(value);
 		}
 	};
 	@XmlElement(name = "AvlblAmt", required = true)
@@ -205,7 +226,7 @@ public class LimitAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAvailableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitAmount1, CreditDebitAmount1> mmAvailableAmount = new MMMessageAttribute<LimitAmount1, CreditDebitAmount1>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAvailableAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitAmount1.mmObject();
@@ -216,7 +237,17 @@ public class LimitAmount1 {
 			definition = "Remaining amount of money of the limit expressed in an eligible currency.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CreditDebitAmount1.mmObject();
+			complexType_lazy = () -> CreditDebitAmount1.mmObject();
+		}
+
+		@Override
+		public CreditDebitAmount1 getValue(LimitAmount1 obj) {
+			return obj.getAvailableAmount();
+		}
+
+		@Override
+		public void setValue(LimitAmount1 obj, CreditDebitAmount1 value) {
+			obj.setAvailableAmount(value);
 		}
 	};
 
@@ -238,7 +269,7 @@ public class LimitAmount1 {
 		return amount;
 	}
 
-	public LimitAmount1 setAmount(com.tools20022.repository.msg.CreditDebitAmount1 amount) {
+	public LimitAmount1 setAmount(CreditDebitAmount1 amount) {
 		this.amount = Objects.requireNonNull(amount);
 		return this;
 	}
@@ -247,7 +278,7 @@ public class LimitAmount1 {
 		return utilisationAmount;
 	}
 
-	public LimitAmount1 setUtilisationAmount(com.tools20022.repository.msg.CreditDebitAmount1 utilisationAmount) {
+	public LimitAmount1 setUtilisationAmount(CreditDebitAmount1 utilisationAmount) {
 		this.utilisationAmount = Objects.requireNonNull(utilisationAmount);
 		return this;
 	}
@@ -256,7 +287,7 @@ public class LimitAmount1 {
 		return availableAmount;
 	}
 
-	public LimitAmount1 setAvailableAmount(com.tools20022.repository.msg.CreditDebitAmount1 availableAmount) {
+	public LimitAmount1 setAvailableAmount(CreditDebitAmount1 availableAmount) {
 		this.availableAmount = Objects.requireNonNull(availableAmount);
 		return this;
 	}

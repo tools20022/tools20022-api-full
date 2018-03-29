@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AccountManagementStatusAndReason1;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -138,7 +137,7 @@ public class AccountManagementStatusReportV02 {
 	 * definition} = "Identifies the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountManagementStatusReportV02, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<AccountManagementStatusReportV02, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +148,14 @@ public class AccountManagementStatusReportV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountManagementStatusReportV02.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(AccountManagementStatusReportV02 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusReportV02 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)
@@ -183,7 +184,7 @@ public class AccountManagementStatusReportV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountManagementStatusReportV02, List<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<AccountManagementStatusReportV02, List<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +195,14 @@ public class AccountManagementStatusReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountManagementStatusReportV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(AccountManagementStatusReportV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusReportV02 obj, List<AdditionalReference3> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "StsRpt", required = true)
@@ -229,7 +232,7 @@ public class AccountManagementStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountManagementStatusReportV02, AccountManagementStatusAndReason1> mmStatusReport = new MMMessageBuildingBlock<AccountManagementStatusReportV02, AccountManagementStatusAndReason1>() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +243,14 @@ public class AccountManagementStatusReportV02 {
 			complexType_lazy = () -> AccountManagementStatusAndReason1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountManagementStatusReportV02.class.getMethod("getStatusReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountManagementStatusAndReason1 getValue(AccountManagementStatusReportV02 obj) {
+			return obj.getStatusReport();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusReportV02 obj, AccountManagementStatusAndReason1 value) {
+			obj.setStatusReport(value);
 		}
 	};
 

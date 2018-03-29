@@ -150,7 +150,7 @@ public class PaymentContext17 {
 	 * PaymentContext11.mmCardPresent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardPresent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentContext17, Optional<TrueFalseIndicator>> mmCardPresent = new MMMessageAttribute<PaymentContext17, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPresent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext17.mmObject();
@@ -164,6 +164,16 @@ public class PaymentContext17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(PaymentContext17 obj) {
+			return obj.getCardPresent();
+		}
+
+		@Override
+		public void setValue(PaymentContext17 obj, Optional<TrueFalseIndicator> value) {
+			obj.setCardPresent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrdhldrPres")
@@ -216,7 +226,7 @@ public class PaymentContext17 {
 	 * PaymentContext11.mmCardholderPresent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardholderPresent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentContext17, Optional<TrueFalseIndicator>> mmCardholderPresent = new MMMessageAttribute<PaymentContext17, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardholderPresent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext17.mmObject();
@@ -230,6 +240,16 @@ public class PaymentContext17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(PaymentContext17 obj) {
+			return obj.getCardholderPresent();
+		}
+
+		@Override
+		public void setValue(PaymentContext17 obj, Optional<TrueFalseIndicator> value) {
+			obj.setCardholderPresent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OnLineCntxt")
@@ -280,7 +300,7 @@ public class PaymentContext17 {
 	 * PaymentContext11.mmOnLineContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOnLineContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentContext17, Optional<TrueFalseIndicator>> mmOnLineContext = new MMMessageAttribute<PaymentContext17, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmOnLineContext;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext17.mmObject();
@@ -294,6 +314,16 @@ public class PaymentContext17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(PaymentContext17 obj) {
+			return obj.getOnLineContext();
+		}
+
+		@Override
+		public void setValue(PaymentContext17 obj, Optional<TrueFalseIndicator> value) {
+			obj.setOnLineContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AttndncCntxt")
@@ -345,7 +375,7 @@ public class PaymentContext17 {
 	 * PaymentContext11.mmAttendanceContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentContext17, Optional<AttendanceContext1Code>> mmAttendanceContext = new MMMessageAttribute<PaymentContext17, Optional<AttendanceContext1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendanceContext;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext17.mmObject();
@@ -359,6 +389,16 @@ public class PaymentContext17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AttendanceContext1Code> getValue(PaymentContext17 obj) {
+			return obj.getAttendanceContext();
+		}
+
+		@Override
+		public void setValue(PaymentContext17 obj, Optional<AttendanceContext1Code> value) {
+			obj.setAttendanceContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxEnvt")
@@ -409,7 +449,7 @@ public class PaymentContext17 {
 	 * PaymentContext11.mmTransactionEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionEnvironment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentContext17, Optional<TransactionEnvironment1Code>> mmTransactionEnvironment = new MMMessageAttribute<PaymentContext17, Optional<TransactionEnvironment1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionEnvironment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext17.mmObject();
@@ -423,6 +463,16 @@ public class PaymentContext17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionEnvironment1Code> getValue(PaymentContext17 obj) {
+			return obj.getTransactionEnvironment();
+		}
+
+		@Override
+		public void setValue(PaymentContext17 obj, Optional<TransactionEnvironment1Code> value) {
+			obj.setTransactionEnvironment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxChanl")
@@ -475,7 +525,7 @@ public class PaymentContext17 {
 	 * PaymentContext11.mmTransactionChannel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentContext17, Optional<TransactionChannel3Code>> mmTransactionChannel = new MMMessageAttribute<PaymentContext17, Optional<TransactionChannel3Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionChannel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext17.mmObject();
@@ -489,6 +539,16 @@ public class PaymentContext17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionChannel3Code.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionChannel3Code> getValue(PaymentContext17 obj) {
+			return obj.getTransactionChannel();
+		}
+
+		@Override
+		public void setValue(PaymentContext17 obj, Optional<TransactionChannel3Code> value) {
+			obj.setTransactionChannel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardDataNtryMd", required = true)
@@ -539,7 +599,7 @@ public class PaymentContext17 {
 	 * PaymentContext11.mmCardDataEntryMode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentContext17, CardDataReading5Code> mmCardDataEntryMode = new MMMessageAttribute<PaymentContext17, CardDataReading5Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardDataEntryMode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext17.mmObject();
@@ -553,6 +613,16 @@ public class PaymentContext17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CardDataReading5Code.mmObject();
+		}
+
+		@Override
+		public CardDataReading5Code getValue(PaymentContext17 obj) {
+			return obj.getCardDataEntryMode();
+		}
+
+		@Override
+		public void setValue(PaymentContext17 obj, CardDataReading5Code value) {
+			obj.setCardDataEntryMode(value);
 		}
 	};
 	@XmlElement(name = "FllbckInd")
@@ -598,7 +668,7 @@ public class PaymentContext17 {
 	 * PaymentContext11.mmFallbackIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFallbackIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentContext17, Optional<CardFallback1Code>> mmFallbackIndicator = new MMMessageAttribute<PaymentContext17, Optional<CardFallback1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext17.mmObject();
 			isDerived = false;
@@ -611,6 +681,16 @@ public class PaymentContext17 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardFallback1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardFallback1Code> getValue(PaymentContext17 obj) {
+			return obj.getFallbackIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentContext17 obj, Optional<CardFallback1Code> value) {
+			obj.setFallbackIndicator(value.orElse(null));
 		}
 	};
 

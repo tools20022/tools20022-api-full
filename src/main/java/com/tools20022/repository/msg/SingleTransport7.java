@@ -22,6 +22,10 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransportByAir5;
+import com.tools20022.repository.msg.TransportByRail5;
+import com.tools20022.repository.msg.TransportByRoad5;
+import com.tools20022.repository.msg.TransportBySea6;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -81,7 +85,7 @@ public class SingleTransport7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "TrnsprtByAir")
-	protected List<com.tools20022.repository.msg.TransportByAir5> transportByAir;
+	protected List<TransportByAir5> transportByAir;
 	/**
 	 * 
 	 <p>
@@ -119,7 +123,7 @@ public class SingleTransport7 {
 	 * SingleTransport4.mmTransportByAir}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransportByAir = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleTransport7, List<TransportByAir5>> mmTransportByAir = new MMMessageAssociationEnd<SingleTransport7, List<TransportByAir5>>() {
 		{
 			businessComponentTrace_lazy = () -> TransportByAir.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleTransport7.mmObject();
@@ -131,11 +135,21 @@ public class SingleTransport7 {
 			previousVersion_lazy = () -> SingleTransport4.mmTransportByAir;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransportByAir5.mmObject();
+			type_lazy = () -> TransportByAir5.mmObject();
+		}
+
+		@Override
+		public List<TransportByAir5> getValue(SingleTransport7 obj) {
+			return obj.getTransportByAir();
+		}
+
+		@Override
+		public void setValue(SingleTransport7 obj, List<TransportByAir5> value) {
+			obj.setTransportByAir(value);
 		}
 	};
 	@XmlElement(name = "TrnsprtBySea")
-	protected List<com.tools20022.repository.msg.TransportBySea6> transportBySea;
+	protected List<TransportBySea6> transportBySea;
 	/**
 	 * 
 	 <p>
@@ -173,7 +187,7 @@ public class SingleTransport7 {
 	 * SingleTransport4.mmTransportBySea}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransportBySea = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleTransport7, List<TransportBySea6>> mmTransportBySea = new MMMessageAssociationEnd<SingleTransport7, List<TransportBySea6>>() {
 		{
 			businessComponentTrace_lazy = () -> TransportBySea.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleTransport7.mmObject();
@@ -185,11 +199,21 @@ public class SingleTransport7 {
 			previousVersion_lazy = () -> SingleTransport4.mmTransportBySea;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransportBySea6.mmObject();
+			type_lazy = () -> TransportBySea6.mmObject();
+		}
+
+		@Override
+		public List<TransportBySea6> getValue(SingleTransport7 obj) {
+			return obj.getTransportBySea();
+		}
+
+		@Override
+		public void setValue(SingleTransport7 obj, List<TransportBySea6> value) {
+			obj.setTransportBySea(value);
 		}
 	};
 	@XmlElement(name = "TrnsprtByRoad")
-	protected List<com.tools20022.repository.msg.TransportByRoad5> transportByRoad;
+	protected List<TransportByRoad5> transportByRoad;
 	/**
 	 * 
 	 <p>
@@ -227,7 +251,7 @@ public class SingleTransport7 {
 	 * SingleTransport4.mmTransportByRoad}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransportByRoad = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleTransport7, List<TransportByRoad5>> mmTransportByRoad = new MMMessageAssociationEnd<SingleTransport7, List<TransportByRoad5>>() {
 		{
 			businessComponentTrace_lazy = () -> TransportByRoad.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleTransport7.mmObject();
@@ -239,11 +263,21 @@ public class SingleTransport7 {
 			previousVersion_lazy = () -> SingleTransport4.mmTransportByRoad;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransportByRoad5.mmObject();
+			type_lazy = () -> TransportByRoad5.mmObject();
+		}
+
+		@Override
+		public List<TransportByRoad5> getValue(SingleTransport7 obj) {
+			return obj.getTransportByRoad();
+		}
+
+		@Override
+		public void setValue(SingleTransport7 obj, List<TransportByRoad5> value) {
+			obj.setTransportByRoad(value);
 		}
 	};
 	@XmlElement(name = "TrnsprtByRail")
-	protected List<com.tools20022.repository.msg.TransportByRail5> transportByRail;
+	protected List<TransportByRail5> transportByRail;
 	/**
 	 * 
 	 <p>
@@ -281,7 +315,7 @@ public class SingleTransport7 {
 	 * SingleTransport4.mmTransportByRail}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransportByRail = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SingleTransport7, List<TransportByRail5>> mmTransportByRail = new MMMessageAssociationEnd<SingleTransport7, List<TransportByRail5>>() {
 		{
 			businessComponentTrace_lazy = () -> TransportByRail.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SingleTransport7.mmObject();
@@ -293,7 +327,17 @@ public class SingleTransport7 {
 			previousVersion_lazy = () -> SingleTransport4.mmTransportByRail;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransportByRail5.mmObject();
+			type_lazy = () -> TransportByRail5.mmObject();
+		}
+
+		@Override
+		public List<TransportByRail5> getValue(SingleTransport7 obj) {
+			return obj.getTransportByRail();
+		}
+
+		@Override
+		public void setValue(SingleTransport7 obj, List<TransportByRail5> value) {
+			obj.setTransportByRail(value);
 		}
 	};
 
@@ -317,7 +361,7 @@ public class SingleTransport7 {
 		return transportByAir == null ? transportByAir = new ArrayList<>() : transportByAir;
 	}
 
-	public SingleTransport7 setTransportByAir(List<com.tools20022.repository.msg.TransportByAir5> transportByAir) {
+	public SingleTransport7 setTransportByAir(List<TransportByAir5> transportByAir) {
 		this.transportByAir = Objects.requireNonNull(transportByAir);
 		return this;
 	}
@@ -326,7 +370,7 @@ public class SingleTransport7 {
 		return transportBySea == null ? transportBySea = new ArrayList<>() : transportBySea;
 	}
 
-	public SingleTransport7 setTransportBySea(List<com.tools20022.repository.msg.TransportBySea6> transportBySea) {
+	public SingleTransport7 setTransportBySea(List<TransportBySea6> transportBySea) {
 		this.transportBySea = Objects.requireNonNull(transportBySea);
 		return this;
 	}
@@ -335,7 +379,7 @@ public class SingleTransport7 {
 		return transportByRoad == null ? transportByRoad = new ArrayList<>() : transportByRoad;
 	}
 
-	public SingleTransport7 setTransportByRoad(List<com.tools20022.repository.msg.TransportByRoad5> transportByRoad) {
+	public SingleTransport7 setTransportByRoad(List<TransportByRoad5> transportByRoad) {
 		this.transportByRoad = Objects.requireNonNull(transportByRoad);
 		return this;
 	}
@@ -344,7 +388,7 @@ public class SingleTransport7 {
 		return transportByRail == null ? transportByRail = new ArrayList<>() : transportByRail;
 	}
 
-	public SingleTransport7 setTransportByRail(List<com.tools20022.repository.msg.TransportByRail5> transportByRail) {
+	public SingleTransport7 setTransportByRail(List<TransportByRail5> transportByRail) {
 		this.transportByRail = Objects.requireNonNull(transportByRail);
 		return this;
 	}

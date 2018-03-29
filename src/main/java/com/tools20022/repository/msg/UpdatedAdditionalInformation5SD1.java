@@ -140,7 +140,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
@@ -152,6 +152,16 @@ public class UpdatedAdditionalInformation5SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(UpdatedAdditionalInformation5SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation5SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DstrbtnAmtPerShr")
@@ -193,7 +203,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDistributionAmountPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<RateAndAmountFormat2Choice>> mmDistributionAmountPerShare = new MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<RateAndAmountFormat2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
@@ -205,6 +215,16 @@ public class UpdatedAdditionalInformation5SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat2Choice> getValue(UpdatedAdditionalInformation5SD1 obj) {
+			return obj.getDistributionAmountPerShare();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation5SD1 obj, Optional<RateAndAmountFormat2Choice> value) {
+			obj.setDistributionAmountPerShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetAsstDcrRatio")
@@ -247,7 +267,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAssetDecreaseRatio = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<PercentageRate>> mmNetAssetDecreaseRatio = new MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
@@ -259,6 +279,16 @@ public class UpdatedAdditionalInformation5SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(UpdatedAdditionalInformation5SD1 obj) {
+			return obj.getNetAssetDecreaseRatio();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation5SD1 obj, Optional<PercentageRate> value) {
+			obj.setNetAssetDecreaseRatio(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcmltdPrftPerShr")
@@ -300,7 +330,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccumulatedProfitPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<RateAndAmountFormat2Choice>> mmAccumulatedProfitPerShare = new MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<RateAndAmountFormat2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
@@ -312,6 +342,16 @@ public class UpdatedAdditionalInformation5SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat2Choice> getValue(UpdatedAdditionalInformation5SD1 obj) {
+			return obj.getAccumulatedProfitPerShare();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation5SD1 obj, Optional<RateAndAmountFormat2Choice> value) {
+			obj.setAccumulatedProfitPerShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DmdDvddPerShr")
@@ -353,7 +393,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeemedDividendPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<RateAndAmountFormat2Choice>> mmDeemedDividendPerShare = new MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<RateAndAmountFormat2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
@@ -365,6 +405,16 @@ public class UpdatedAdditionalInformation5SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat2Choice> getValue(UpdatedAdditionalInformation5SD1 obj) {
+			return obj.getDeemedDividendPerShare();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation5SD1 obj, Optional<RateAndAmountFormat2Choice> value) {
+			obj.setDeemedDividendPerShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsdlDstrbtnAmtPerShr")
@@ -406,7 +456,7 @@ public class UpdatedAdditionalInformation5SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResidualDistributionAmountPerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<RateAndAmountFormat2Choice>> mmResidualDistributionAmountPerShare = new MMMessageAttribute<UpdatedAdditionalInformation5SD1, Optional<RateAndAmountFormat2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1.mmObject();
 			isDerived = false;
@@ -418,6 +468,16 @@ public class UpdatedAdditionalInformation5SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat2Choice> getValue(UpdatedAdditionalInformation5SD1 obj) {
+			return obj.getResidualDistributionAmountPerShare();
+		}
+
+		@Override
+		public void setValue(UpdatedAdditionalInformation5SD1 obj, Optional<RateAndAmountFormat2Choice> value) {
+			obj.setResidualDistributionAmountPerShare(value.orElse(null));
 		}
 	};
 

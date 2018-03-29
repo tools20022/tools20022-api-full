@@ -24,8 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.CCPMemberRequirementsReportV01;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.ClearingMemberRole;
+import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification167;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -102,6 +105,11 @@ public class DefaultFundRequirement1 {
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification167
 	 * GenericIdentification167}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.ClearingMemberRole#mmClearingSystemMemberIdentification
+	 * ClearingMemberRole.mmClearingSystemMemberIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.DefaultFundRequirement1
@@ -119,8 +127,9 @@ public class DefaultFundRequirement1 {
 	 * definition} = "Identification of the clearing member."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingMemberIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DefaultFundRequirement1, GenericIdentification167> mmClearingMemberIdentification = new MMMessageAssociationEnd<DefaultFundRequirement1, GenericIdentification167>() {
 		{
+			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingSystemMemberIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DefaultFundRequirement1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrMmbId";
@@ -130,7 +139,17 @@ public class DefaultFundRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification167.mmObject();
+			type_lazy = () -> GenericIdentification167.mmObject();
+		}
+
+		@Override
+		public GenericIdentification167 getValue(DefaultFundRequirement1 obj) {
+			return obj.getClearingMemberIdentification();
+		}
+
+		@Override
+		public void setValue(DefaultFundRequirement1 obj, GenericIdentification167 value) {
+			obj.setClearingMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "SvcId")
@@ -144,6 +163,11 @@ public class DefaultFundRequirement1 {
 	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.System#mmSystemIdentification
+	 * System.mmSystemIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -164,8 +188,9 @@ public class DefaultFundRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DefaultFundRequirement1, Optional<Max35Text>> mmServiceIdentification = new MMMessageAttribute<DefaultFundRequirement1, Optional<Max35Text>>() {
 		{
+			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DefaultFundRequirement1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcId";
@@ -175,6 +200,16 @@ public class DefaultFundRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DefaultFundRequirement1 obj) {
+			return obj.getServiceIdentification();
+		}
+
+		@Override
+		public void setValue(DefaultFundRequirement1 obj, Optional<Max35Text> value) {
+			obj.setServiceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -189,6 +224,11 @@ public class DefaultFundRequirement1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashEntry#mmAmount
+	 * CashEntry.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -209,8 +249,9 @@ public class DefaultFundRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DefaultFundRequirement1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<DefaultFundRequirement1, ActiveCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DefaultFundRequirement1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
@@ -220,6 +261,16 @@ public class DefaultFundRequirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(DefaultFundRequirement1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(DefaultFundRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 
@@ -243,7 +294,7 @@ public class DefaultFundRequirement1 {
 		return clearingMemberIdentification;
 	}
 
-	public DefaultFundRequirement1 setClearingMemberIdentification(com.tools20022.repository.msg.GenericIdentification167 clearingMemberIdentification) {
+	public DefaultFundRequirement1 setClearingMemberIdentification(GenericIdentification167 clearingMemberIdentification) {
 		this.clearingMemberIdentification = Objects.requireNonNull(clearingMemberIdentification);
 		return this;
 	}

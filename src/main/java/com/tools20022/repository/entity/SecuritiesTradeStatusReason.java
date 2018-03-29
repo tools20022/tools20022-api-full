@@ -20,10 +20,10 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
+import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -1173,7 +1173,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * definition} = "Reason for the unmatched status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUnmatchedReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, UnmatchedReasonCode> mmUnmatchedReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, UnmatchedReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnmatchedReason1Choice.mmCode, UnmatchedReason1Choice.mmProprietary, UnmatchedReason1.mmCode, UnmatchedReason9Choice.mmCode, UnmatchedReason9Choice.mmProprietary, UnmatchedReason6.mmCode,
 					UnmatchedReason13Choice.mmCode, UnmatchedReason13Choice.mmProprietary, UnmatchedReason9.mmCode, UnmatchedReason6Choice.mmCode, UnmatchedReason6Choice.mmProprietary, UnmatchedReason4.mmCode,
@@ -1200,12 +1200,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> UnmatchedReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getUnmatchedReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnmatchedReasonCode getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getUnmatchedReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, UnmatchedReasonCode value) {
+			obj.setUnmatchedReason(value);
 		}
 	};
 	protected DeniedReasonCode deniedReason;
@@ -1606,7 +1608,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * definition} = "Specifies the reason why the request was denied."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDeniedReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, DeniedReasonCode> mmDeniedReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, DeniedReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeniedReason2Choice.mmCode, DeniedReason2Choice.mmProprietary, DeniedReason2.mmCode, DeniedStatus2Choice.mmReason, DeniedStatus6Choice.mmReason,
 					ModificationProcessingStatus2Choice.mmDenied, ProcessingStatus2Choice.mmDenied, ProcessingStatus13Choice.mmDenied, ProcessingStatus20Choice.mmDenied, DeniedReason6Choice.mmCode, DeniedReason6Choice.mmProprietary,
@@ -1639,12 +1641,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> DeniedReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getDeniedReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DeniedReasonCode getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getDeniedReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, DeniedReasonCode value) {
+			obj.setDeniedReason(value);
 		}
 	};
 	protected SecuritiesTradeStatus securitiesTradeStatus;
@@ -1684,7 +1688,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesTradeStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesTradeStatusReason, Optional<SecuritiesTradeStatus>> mmSecuritiesTradeStatus = new MMBusinessAssociationEnd<SecuritiesTradeStatusReason, Optional<SecuritiesTradeStatus>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
@@ -1696,6 +1700,16 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmReason;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatus.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesTradeStatus> getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getSecuritiesTradeStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, Optional<SecuritiesTradeStatus> value) {
+			obj.setSecuritiesTradeStatus(value.orElse(null));
 		}
 	};
 	protected GeneratedReasonCode generatedReason;
@@ -1844,7 +1858,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * definition} = "Specifies the reason why the transaction was generated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmGeneratedReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, GeneratedReasonCode> mmGeneratedReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, GeneratedReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneratedReasons1Choice.mmCode, GeneratedReasons1Choice.mmProprietary, GeneratedReason1.mmCode, GeneratedReasons2Choice.mmCode, GeneratedReasons2Choice.mmProprietary,
 					GeneratedReason2.mmCode, GeneratedStatus1Choice.mmReason, InstructionProcessingStatus3Choice.mmGenerated, GeneratedStatus2Choice.mmReason, InstructionProcessingStatus6Choice.mmGenerated,
@@ -1864,12 +1878,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> GeneratedReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getGeneratedReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GeneratedReasonCode getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getGeneratedReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, GeneratedReasonCode value) {
+			obj.setGeneratedReason(value);
 		}
 	};
 	protected AllegementReasonCode allegementReason;
@@ -1919,7 +1935,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * definition} = "Reason why the instruction has an allegement status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAllegementReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, AllegementReasonCode> mmAllegementReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, AllegementReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AllegmentReason1Choice.mmCode, AllegmentReason1Choice.mmProprietary, MatchingReason3Choice.mmReason, AllegementReason1Choice.mmCode, AllegementReason1Choice.mmProprietary);
 			isDerived = false;
@@ -1932,12 +1948,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> AllegementReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getAllegementReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AllegementReasonCode getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getAllegementReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, AllegementReasonCode value) {
+			obj.setAllegementReason(value);
 		}
 	};
 	protected PendingSettlementStatusReasonCode pendingSettlementReason;
@@ -1990,7 +2008,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * definition} = "Reason for the settlement pending status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPendingSettlementReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, PendingSettlementStatusReasonCode> mmPendingSettlementReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, PendingSettlementStatusReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PendingSettlementStatusReason1.mmStructured, PendingSettlementStatusChoice.mmReason, PendingSettlementStatus2.mmReason, TransferStatus1Choice.mmPendingSettlement,
 					TransferStatus2Choice.mmPendingSettlement, PendingSettlementStatus3Choice.mmReason);
@@ -2004,12 +2022,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> PendingSettlementStatusReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getPendingSettlementReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PendingSettlementStatusReasonCode getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getPendingSettlementReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, PendingSettlementStatusReasonCode value) {
+			obj.setPendingSettlementReason(value);
 		}
 	};
 	protected RepoCallAcknowledgementReasonCode repoCallAcknowledgementReason;
@@ -2141,7 +2161,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRepoCallAcknowledgementReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, RepoCallAcknowledgementReasonCode> mmRepoCallAcknowledgementReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, RepoCallAcknowledgementReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcknowledgementReason3Choice.mmCode, AcknowledgementReason3Choice.mmProprietary, AcknowledgementReason2.mmCode, AcknowledgedAcceptedStatus2Choice.mmReason,
 					RepoCallRequestStatus2Choice.mmAcknowledgedAccepted, Reason1Choice.mmRepoCallAcknowledgementReason, Reason6Choice.mmRepoCallAcknowledgementReason, AcknowledgementReason7Choice.mmCode,
@@ -2161,12 +2181,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> RepoCallAcknowledgementReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getRepoCallAcknowledgementReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RepoCallAcknowledgementReasonCode getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getRepoCallAcknowledgementReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, RepoCallAcknowledgementReasonCode value) {
+			obj.setRepoCallAcknowledgementReason(value);
 		}
 	};
 	protected RepairReasonV2Code repairReason;
@@ -2585,7 +2607,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * "Specifies the reason why the instruction/request has a repair status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRepairReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, RepairReasonV2Code> mmRepairReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, RepairReasonV2Code>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RepairReason1Choice.mmCode, RepairReason1Choice.mmProprietary, RepairReason1.mmCode, RepairStatus1Choice.mmReason, ProcessingStatus1Choice.mmRepair, RepairStatus5Choice.mmReason,
 					ProcessingStatus19Choice.mmRepair, RepairReason6.mmCode, RepairStatus8Choice.mmReason, ModificationProcessingStatus2Choice.mmRepaired, ProcessingStatus2Choice.mmRepair, ProcessingStatus13Choice.mmRepair,
@@ -2619,12 +2641,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> RepairReasonV2Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getRepairReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RepairReasonV2Code getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getRepairReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, RepairReasonV2Code value) {
+			obj.setRepairReason(value);
 		}
 	};
 	protected DeliveryReturnCode deliveryReturnReason;
@@ -2654,7 +2678,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * definition} = "Reason why the trade was returned."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDeliveryReturnReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, DeliveryReturnCode> mmDeliveryReturnReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, DeliveryReturnCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
@@ -2666,12 +2690,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> DeliveryReturnCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getDeliveryReturnReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DeliveryReturnCode getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getDeliveryReturnReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, DeliveryReturnCode value) {
+			obj.setDeliveryReturnReason(value);
 		}
 	};
 	protected CounterpartyResponseStatusReasonCode counterpartyStatusReason;
@@ -2740,7 +2766,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCounterpartyStatusReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, CounterpartyResponseStatusReasonCode> mmCounterpartyStatusReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, CounterpartyResponseStatusReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ConsentOrRejectionReason2Choice.mmCode, ConsentOrRejectionReason2Choice.mmProprietary, RejectionReason12.mmCode, ConsentOrRejectionReason3Choice.mmCode,
 					ConsentOrRejectionReason3Choice.mmProprietary, RejectionReason13.mmCode, RejectionReason29.mmCode, ConsentOrRejectionReason4Choice.mmCode, ConsentOrRejectionReason4Choice.mmProprietary, RejectionReason40.mmCode,
@@ -2755,12 +2781,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> CounterpartyResponseStatusReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getCounterpartyStatusReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CounterpartyResponseStatusReasonCode getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getCounterpartyStatusReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, CounterpartyResponseStatusReasonCode value) {
+			obj.setCounterpartyStatusReason(value);
 		}
 	};
 	protected ModifiedStatusReasonCode modifiedStatusReason;
@@ -2849,7 +2877,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * "Specifies the reason why the related instruction is modified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmModifiedStatusReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesTradeStatusReason, ModifiedStatusReasonCode> mmModifiedStatusReason = new MMBusinessAttribute<SecuritiesTradeStatusReason, ModifiedStatusReasonCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ModificationReason2Choice.mmCode, ModificationReason2Choice.mmProprietary, ModificationReason2.mmCode, ModificationProcessingStatus2Choice.mmModified, ModificationReason3Choice.mmCode,
 					ModificationReason3Choice.mmProprietary, ModificationReason3.mmCode, ModificationProcessingStatus3Choice.mmModified, ModificationProcessingStatus4Choice.mmModified, ModificationProcessingStatus6Choice.mmModified,
@@ -2865,12 +2893,14 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 			simpleType_lazy = () -> ModifiedStatusReasonCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTradeStatusReason.class.getMethod("getModifiedStatusReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ModifiedStatusReasonCode getValue(SecuritiesTradeStatusReason obj) {
+			return obj.getModifiedStatusReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesTradeStatusReason obj, ModifiedStatusReasonCode value) {
+			obj.setModifiedStatusReason(value);
 		}
 	};
 

@@ -55,12 +55,16 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 */
 	public static final MMConstraint<TradeLegNotificationV03> forTradeLegNotificationV03 = new MMConstraint<TradeLegNotificationV03>() {
 		{
-			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkTradeLegNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
 			definition = "Depository or PlaceOfListing must be present.";
 			owner_lazy = () -> TradeLegNotificationV03.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementDetails/Depository</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TradeLegDetails/PlaceOfListing</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TradeLegNotificationV03 obj) throws Exception {
+			checkTradeLegNotificationV03(obj);
 		}
 	};
 	/**
@@ -88,12 +92,16 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 */
 	public static final MMConstraint<TradeLegNotificationCancellationV03> forTradeLegNotificationCancellationV03 = new MMConstraint<TradeLegNotificationCancellationV03>() {
 		{
-			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkTradeLegNotificationCancellationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
 			definition = "Depository or PlaceOfListing must be present.";
 			owner_lazy = () -> TradeLegNotificationCancellationV03.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementDetails/Depository</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TradeLegDetails/PlaceOfListing</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TradeLegNotificationCancellationV03 obj) throws Exception {
+			checkTradeLegNotificationCancellationV03(obj);
 		}
 	};
 	/**
@@ -120,12 +128,16 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 */
 	public static final MMConstraint<TradeLeg3> forTradeLeg3 = new MMConstraint<TradeLeg3>() {
 		{
-			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkTradeLeg3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
 			definition = "Depository or PlaceOfListing must be present.";
 			owner_lazy = () -> TradeLeg3.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PlaceOfListing</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementDetails/Depository</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TradeLeg3 obj) throws Exception {
+			checkTradeLeg3(obj);
 		}
 	};
 	/**
@@ -160,13 +172,17 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 */
 	public static final MMConstraint<TradeLeg6> forTradeLeg6 = new MMConstraint<TradeLeg6>() {
 		{
-			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkTradeLeg6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
 			definition = "Depository or PlaceOfListing must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forTradeLeg9);
 			owner_lazy = () -> TradeLeg6.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PlaceOfListing</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementDetails/Depository</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TradeLeg6 obj) throws Exception {
+			checkTradeLeg6(obj);
 		}
 	};
 	/**
@@ -193,12 +209,16 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 */
 	public static final MMConstraint<NetPosition1> forNetPosition1 = new MMConstraint<NetPosition1>() {
 		{
-			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkNetPosition1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
 			definition = "At least Depository or PlaceOfListing must be present.";
 			owner_lazy = () -> NetPosition1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Depository</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TradeLegDetails[*]/PlaceOfListing</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(NetPosition1 obj) throws Exception {
+			checkNetPosition1(obj);
 		}
 	};
 	/**
@@ -233,13 +253,17 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 */
 	public static final MMConstraint<NetPosition2> forNetPosition2 = new MMConstraint<NetPosition2>() {
 		{
-			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkNetPosition2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
 			definition = "At least Depository or PlaceOfListing must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forNetPosition3);
 			owner_lazy = () -> NetPosition2.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Depository</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TradeLegDetails[*]/PlaceOfListing</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(NetPosition2 obj) throws Exception {
+			checkNetPosition2(obj);
 		}
 	};
 	/**
@@ -271,13 +295,17 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 */
 	public static final MMConstraint<NetPosition3> forNetPosition3 = new MMConstraint<NetPosition3>() {
 		{
-			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkNetPosition3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
 			definition = "At least Depository or PlaceOfListing must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forNetPosition2;
 			owner_lazy = () -> NetPosition3.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Depository</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TradeLegDetails[*]/PlaceOfListing</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(NetPosition3 obj) throws Exception {
+			checkNetPosition3(obj);
 		}
 	};
 	/**
@@ -309,13 +337,17 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 */
 	public static final MMConstraint<TradeLeg9> forTradeLeg9 = new MMConstraint<TradeLeg9>() {
 		{
-			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkTradeLeg9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
 			definition = "Depository or PlaceOfListing must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forTradeLeg6;
 			owner_lazy = () -> TradeLeg9.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PlaceOfListing</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettlementDetails/Depository</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TradeLeg9 obj) throws Exception {
+			checkTradeLeg9(obj);
 		}
 	};
 

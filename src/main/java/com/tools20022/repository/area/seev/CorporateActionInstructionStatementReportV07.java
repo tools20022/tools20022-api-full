@@ -27,7 +27,7 @@ import com.tools20022.repository.msg.Pagination1;
 import com.tools20022.repository.msg.Statement65;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_CA_Maintenance_2017_2018;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -74,6 +74,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOLatestversion
+ * CorporateActionsISOLatestversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_CA_Maintenance_2017_2018
  * _SR2018_CA_Maintenance_2017_2018}</li>
@@ -155,7 +158,7 @@ public class CorporateActionInstructionStatementReportV07 {
 	 * CorporateActionInstructionStatementReportV06.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionStatementReportV07, Pagination1> mmPagination = new MMMessageBuildingBlock<CorporateActionInstructionStatementReportV07, Pagination1>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,12 +170,14 @@ public class CorporateActionInstructionStatementReportV07 {
 			complexType_lazy = () -> Pagination1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionStatementReportV07.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination1 getValue(CorporateActionInstructionStatementReportV07 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionStatementReportV07 obj, Pagination1 value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -206,7 +211,7 @@ public class CorporateActionInstructionStatementReportV07 {
 	 * CorporateActionInstructionStatementReportV06.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionStatementReportV07, Statement65> mmStatementGeneralDetails = new MMMessageBuildingBlock<CorporateActionInstructionStatementReportV07, Statement65>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,12 +223,14 @@ public class CorporateActionInstructionStatementReportV07 {
 			complexType_lazy = () -> Statement65.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionStatementReportV07.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement65 getValue(CorporateActionInstructionStatementReportV07 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionStatementReportV07 obj, Statement65 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctAndStmtDtls", required = true)
@@ -259,7 +266,7 @@ public class CorporateActionInstructionStatementReportV07 {
 	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountAndStatementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionStatementReportV07, List<AccountIdentification43>> mmAccountAndStatementDetails = new MMMessageBuildingBlock<CorporateActionInstructionStatementReportV07, List<AccountIdentification43>>() {
 		{
 			xmlTag = "AcctAndStmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +277,14 @@ public class CorporateActionInstructionStatementReportV07 {
 			complexType_lazy = () -> AccountIdentification43.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionStatementReportV07.class.getMethod("getAccountAndStatementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountIdentification43> getValue(CorporateActionInstructionStatementReportV07 obj) {
+			return obj.getAccountAndStatementDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionStatementReportV07 obj, List<AccountIdentification43> value) {
+			obj.setAccountAndStatementDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -310,7 +319,7 @@ public class CorporateActionInstructionStatementReportV07 {
 	 * CorporateActionInstructionStatementReportV06.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionStatementReportV07, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CorporateActionInstructionStatementReportV07, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +330,14 @@ public class CorporateActionInstructionStatementReportV07 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionStatementReportV07.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CorporateActionInstructionStatementReportV07 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionStatementReportV07 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -339,7 +350,7 @@ public class CorporateActionInstructionStatementReportV07 {
 				name = "CorporateActionInstructionStatementReportV07";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionInstructionStatementReport message to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
 				previousVersion_lazy = () -> CorporateActionInstructionStatementReportV06.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_CA_Maintenance_2017_2018.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOLatestversion.mmObject(), _SR2018_CA_Maintenance_2017_2018.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStmtRpt";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();

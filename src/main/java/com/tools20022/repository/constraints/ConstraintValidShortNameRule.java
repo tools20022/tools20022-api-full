@@ -48,11 +48,15 @@ public class ConstraintValidShortNameRule {
 	 */
 	public static final MMConstraint<SecurityInstrumentDescription9> forSecurityInstrumentDescription9 = new MMConstraint<SecurityInstrumentDescription9>() {
 		{
-			validator = ConstraintValidShortNameRule::checkSecurityInstrumentDescription9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidShortNameRule";
 			definition = "ShortName must conform with ISO 18774.";
 			owner_lazy = () -> SecurityInstrumentDescription9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityInstrumentDescription9 obj) throws Exception {
+			checkSecurityInstrumentDescription9(obj);
 		}
 	};
 

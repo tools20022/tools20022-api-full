@@ -136,7 +136,7 @@ public class GrossDividendRateFormat19Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat19Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<GrossDividendRateFormat19Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat19Choice.mmObject();
@@ -150,6 +150,16 @@ public class GrossDividendRateFormat19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(GrossDividendRateFormat19Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat19Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtAndRateSts", required = true)
@@ -193,7 +203,7 @@ public class GrossDividendRateFormat19Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GrossDividendRateFormat19Choice, AmountAndRateStatus1> mmAmountAndRateStatus = new MMMessageAssociationEnd<GrossDividendRateFormat19Choice, AmountAndRateStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat19Choice.mmObject();
@@ -207,6 +217,16 @@ public class GrossDividendRateFormat19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndRateStatus1.mmObject();
+		}
+
+		@Override
+		public AmountAndRateStatus1 getValue(GrossDividendRateFormat19Choice obj) {
+			return obj.getAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat19Choice obj, AmountAndRateStatus1 value) {
+			obj.setAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -249,7 +269,7 @@ public class GrossDividendRateFormat19Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GrossDividendRateFormat19Choice, RateTypeAndAmountAndStatus22> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<GrossDividendRateFormat19Choice, RateTypeAndAmountAndStatus22>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat19Choice.mmObject();
 			isDerived = false;
@@ -263,6 +283,16 @@ public class GrossDividendRateFormat19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus22.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus22 getValue(GrossDividendRateFormat19Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat19Choice obj, RateTypeAndAmountAndStatus22 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -306,7 +336,7 @@ public class GrossDividendRateFormat19Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat19Choice, RateType13Code> mmNotSpecifiedRate = new MMMessageAttribute<GrossDividendRateFormat19Choice, RateType13Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat19Choice.mmObject();
 			isDerived = false;
@@ -319,6 +349,16 @@ public class GrossDividendRateFormat19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType13Code.mmObject();
+		}
+
+		@Override
+		public RateType13Code getValue(GrossDividendRateFormat19Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat19Choice obj, RateType13Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

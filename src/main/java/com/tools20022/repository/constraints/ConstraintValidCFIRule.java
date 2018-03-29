@@ -49,11 +49,15 @@ public class ConstraintValidCFIRule {
 	 */
 	public static final MMConstraint<SecurityInstrumentDescription9> forSecurityInstrumentDescription9 = new MMConstraint<SecurityInstrumentDescription9>() {
 		{
-			validator = ConstraintValidCFIRule::checkSecurityInstrumentDescription9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidCFIRule";
 			definition = "The CFI code must be a valid CFI code as defined by 10962.";
 			owner_lazy = () -> SecurityInstrumentDescription9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecurityInstrumentDescription9 obj) throws Exception {
+			checkSecurityInstrumentDescription9(obj);
 		}
 	};
 

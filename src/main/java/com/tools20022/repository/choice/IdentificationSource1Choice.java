@@ -111,7 +111,7 @@ public class IdentificationSource1Choice {
 	 * definition} = "Country of the proprietary identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomestic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationSource1Choice, CountryCode> mmDomestic = new MMMessageAttribute<IdentificationSource1Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource1Choice.mmObject();
@@ -123,6 +123,16 @@ public class IdentificationSource1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(IdentificationSource1Choice obj) {
+			return obj.getDomestic();
+		}
+
+		@Override
+		public void setValue(IdentificationSource1Choice obj, CountryCode value) {
+			obj.setDomestic(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class IdentificationSource1Choice {
 	 * definition} = "Entity that issues the proprietary identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationSource1Choice, Max35Text> mmProprietary = new MMMessageAttribute<IdentificationSource1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationSource1Choice.mmObject();
@@ -171,6 +181,16 @@ public class IdentificationSource1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IdentificationSource1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IdentificationSource1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -126,7 +126,7 @@ public class RejectionOrRepairStatus30Choice {
 	 * RejectionOrRepairStatus25Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairStatus30Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RejectionOrRepairStatus30Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus30Choice.mmObject();
@@ -140,6 +140,16 @@ public class RejectionOrRepairStatus30Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(RejectionOrRepairStatus30Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus30Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -184,7 +194,7 @@ public class RejectionOrRepairStatus30Choice {
 	 * RejectionOrRepairStatus25Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairStatus30Choice, List<RejectionOrRepairReason24>> mmReason = new MMMessageAssociationEnd<RejectionOrRepairStatus30Choice, List<RejectionOrRepairReason24>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus30Choice.mmObject();
@@ -198,6 +208,16 @@ public class RejectionOrRepairStatus30Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionOrRepairReason24.mmObject();
+		}
+
+		@Override
+		public List<RejectionOrRepairReason24> getValue(RejectionOrRepairStatus30Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus30Choice obj, List<RejectionOrRepairReason24> value) {
+			obj.setReason(value);
 		}
 	};
 

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.EventType1Choice;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -97,7 +98,7 @@ public class ExecutionType1Choice {
 	 * definition} = "Execution type is executed based on a time trigger."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExecutionType1Choice, ISOTime> mmTime = new MMMessageAttribute<ExecutionType1Choice, ISOTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExecutionType1Choice.mmObject();
 			isDerived = false;
@@ -108,6 +109,16 @@ public class ExecutionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public ISOTime getValue(ExecutionType1Choice obj) {
+			return obj.getTime();
+		}
+
+		@Override
+		public void setValue(ExecutionType1Choice obj, ISOTime value) {
+			obj.setTime(value);
 		}
 	};
 	@XmlElement(name = "Evt", required = true)
@@ -139,7 +150,7 @@ public class ExecutionType1Choice {
 	 * "Execution type is executed based on an event driven trigger."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExecutionType1Choice, EventType1Choice> mmEvent = new MMMessageAssociationEnd<ExecutionType1Choice, EventType1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ExecutionType1Choice.mmObject();
 			isDerived = false;
@@ -150,7 +161,17 @@ public class ExecutionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.EventType1Choice.mmObject();
+			type_lazy = () -> EventType1Choice.mmObject();
+		}
+
+		@Override
+		public EventType1Choice getValue(ExecutionType1Choice obj) {
+			return obj.getEvent();
+		}
+
+		@Override
+		public void setValue(ExecutionType1Choice obj, EventType1Choice value) {
+			obj.setEvent(value);
 		}
 	};
 
@@ -180,7 +201,7 @@ public class ExecutionType1Choice {
 		return event;
 	}
 
-	public ExecutionType1Choice setEvent(com.tools20022.repository.choice.EventType1Choice event) {
+	public ExecutionType1Choice setEvent(EventType1Choice event) {
 		this.event = Objects.requireNonNull(event);
 		return this;
 	}

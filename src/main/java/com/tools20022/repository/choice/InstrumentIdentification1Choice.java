@@ -107,7 +107,7 @@ public class InstrumentIdentification1Choice {
 	 * definition} = "Financial Instrument excluding investment funds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstrumentIdentification1Choice, FinancialInstrument1> mmOtherFinancialInstrument = new MMMessageAssociationEnd<InstrumentIdentification1Choice, FinancialInstrument1>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstrumentIdentification1Choice.mmObject();
@@ -120,6 +120,16 @@ public class InstrumentIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrument1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument1 getValue(InstrumentIdentification1Choice obj) {
+			return obj.getOtherFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(InstrumentIdentification1Choice obj, FinancialInstrument1 value) {
+			obj.setOtherFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "InvstmtFnd", required = true)
@@ -157,7 +167,7 @@ public class InstrumentIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentFund = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstrumentIdentification1Choice, FinancialInstrument13> mmInvestmentFund = new MMMessageAssociationEnd<InstrumentIdentification1Choice, FinancialInstrument13>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstrumentIdentification1Choice.mmObject();
@@ -170,6 +180,16 @@ public class InstrumentIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrument13.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument13 getValue(InstrumentIdentification1Choice obj) {
+			return obj.getInvestmentFund();
+		}
+
+		@Override
+		public void setValue(InstrumentIdentification1Choice obj, FinancialInstrument13 value) {
+			obj.setInvestmentFund(value);
 		}
 	};
 

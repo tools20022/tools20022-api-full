@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BusinessDayReturnCriteria2;
+import com.tools20022.repository.msg.BusinessDaySearchCriteria1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +128,7 @@ public class BusinessDayCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayCriteria1, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<BusinessDayCriteria1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayCriteria1.mmObject();
 			isDerived = false;
@@ -139,9 +141,19 @@ public class BusinessDayCriteria1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(BusinessDayCriteria1 obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(BusinessDayCriteria1 obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.BusinessDaySearchCriteria1> searchCriteria;
+	protected List<BusinessDaySearchCriteria1> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -178,7 +190,7 @@ public class BusinessDayCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayCriteria1, List<BusinessDaySearchCriteria1>> mmSearchCriteria = new MMMessageAssociationEnd<BusinessDayCriteria1, List<BusinessDaySearchCriteria1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayCriteria1.mmObject();
 			isDerived = false;
@@ -189,7 +201,17 @@ public class BusinessDayCriteria1 {
 			nextVersions_lazy = () -> Arrays.asList(BusinessDayCriteria2.mmSearchCriteria);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BusinessDaySearchCriteria1.mmObject();
+			type_lazy = () -> BusinessDaySearchCriteria1.mmObject();
+		}
+
+		@Override
+		public List<BusinessDaySearchCriteria1> getValue(BusinessDayCriteria1 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessDayCriteria1 obj, List<BusinessDaySearchCriteria1> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -229,7 +251,7 @@ public class BusinessDayCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayCriteria1, Optional<BusinessDayReturnCriteria2>> mmReturnCriteria = new MMMessageAssociationEnd<BusinessDayCriteria1, Optional<BusinessDayReturnCriteria2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayCriteria1.mmObject();
 			isDerived = false;
@@ -241,7 +263,17 @@ public class BusinessDayCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BusinessDayReturnCriteria2.mmObject();
+			type_lazy = () -> BusinessDayReturnCriteria2.mmObject();
+		}
+
+		@Override
+		public Optional<BusinessDayReturnCriteria2> getValue(BusinessDayCriteria1 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessDayCriteria1 obj, Optional<BusinessDayReturnCriteria2> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -274,7 +306,7 @@ public class BusinessDayCriteria1 {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public BusinessDayCriteria1 setSearchCriteria(List<com.tools20022.repository.msg.BusinessDaySearchCriteria1> searchCriteria) {
+	public BusinessDayCriteria1 setSearchCriteria(List<BusinessDaySearchCriteria1> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -283,7 +315,7 @@ public class BusinessDayCriteria1 {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public BusinessDayCriteria1 setReturnCriteria(com.tools20022.repository.msg.BusinessDayReturnCriteria2 returnCriteria) {
+	public BusinessDayCriteria1 setReturnCriteria(BusinessDayReturnCriteria2 returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

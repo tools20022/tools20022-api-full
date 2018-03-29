@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CertificationRequest2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class CertificationRequest1 {
 	 * definition} = "Information of the certificate to create."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertificateRequestInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificationRequest1, CertificationRequest2> mmCertificateRequestInformation = new MMMessageAssociationEnd<CertificationRequest1, CertificationRequest2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmObject();
 			isDerived = false;
@@ -121,7 +122,17 @@ public class CertificationRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CertificationRequest2.mmObject();
+			type_lazy = () -> CertificationRequest2.mmObject();
+		}
+
+		@Override
+		public CertificationRequest2 getValue(CertificationRequest1 obj) {
+			return obj.getCertificateRequestInformation();
+		}
+
+		@Override
+		public void setValue(CertificationRequest1 obj, CertificationRequest2 value) {
+			obj.setCertificateRequestInformation(value);
 		}
 	};
 	@XmlElement(name = "KeyId")
@@ -161,7 +172,7 @@ public class CertificationRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificationRequest1, Optional<Max140Text>> mmKeyIdentification = new MMMessageAttribute<CertificationRequest1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmObject();
 			isDerived = false;
@@ -169,10 +180,20 @@ public class CertificationRequest1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentification";
 			definition = "Identification of the key.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.mmVersion);
+			nextVersions_lazy = () -> Arrays.asList(CertificationRequest2.mmVersion);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(CertificationRequest1 obj) {
+			return obj.getKeyIdentification();
+		}
+
+		@Override
+		public void setValue(CertificationRequest1 obj, Optional<Max140Text> value) {
+			obj.setKeyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "KeyVrsn")
@@ -204,7 +225,7 @@ public class CertificationRequest1 {
 	 * definition} = "Version of the key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKeyVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificationRequest1, Optional<Max140Text>> mmKeyVersion = new MMMessageAttribute<CertificationRequest1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmObject();
 			isDerived = false;
@@ -215,6 +236,16 @@ public class CertificationRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(CertificationRequest1 obj) {
+			return obj.getKeyVersion();
+		}
+
+		@Override
+		public void setValue(CertificationRequest1 obj, Optional<Max140Text> value) {
+			obj.setKeyVersion(value.orElse(null));
 		}
 	};
 
@@ -227,7 +258,7 @@ public class CertificationRequest1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificationRequest1";
 				definition = "Certification request PKCS#10 (Public Key Certificate Standard 10) for creation or renewal of an X.509 certificate.";
-				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(CertificationRequest2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
@@ -237,7 +268,7 @@ public class CertificationRequest1 {
 		return certificateRequestInformation;
 	}
 
-	public CertificationRequest1 setCertificateRequestInformation(com.tools20022.repository.msg.CertificationRequest2 certificateRequestInformation) {
+	public CertificationRequest1 setCertificateRequestInformation(CertificationRequest2 certificateRequestInformation) {
 		this.certificateRequestInformation = Objects.requireNonNull(certificateRequestInformation);
 		return this;
 	}

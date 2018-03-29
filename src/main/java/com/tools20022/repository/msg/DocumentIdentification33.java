@@ -156,7 +156,7 @@ public class DocumentIdentification33 {
 	 * DocumentIdentification14.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification33, DocumentIdentification3Choice> mmIdentification = new MMMessageAssociationEnd<DocumentIdentification33, DocumentIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification33.mmObject();
@@ -171,6 +171,16 @@ public class DocumentIdentification33 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification3Choice getValue(DocumentIdentification33 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification33 obj, DocumentIdentification3Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "DocNb")
@@ -210,7 +220,7 @@ public class DocumentIdentification33 {
 	 * DocumentIdentification14.mmDocumentNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocumentNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification33, Optional<DocumentNumber5Choice>> mmDocumentNumber = new MMMessageAssociationEnd<DocumentIdentification33, Optional<DocumentNumber5Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification33.mmObject();
 			isDerived = false;
@@ -224,6 +234,16 @@ public class DocumentIdentification33 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber5Choice> getValue(DocumentIdentification33 obj) {
+			return obj.getDocumentNumber();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification33 obj, Optional<DocumentNumber5Choice> value) {
+			obj.setDocumentNumber(value.orElse(null));
 		}
 	};
 

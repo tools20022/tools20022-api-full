@@ -112,7 +112,7 @@ public class SecurityIdentification9 {
 	 * definition} = "Security identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification9, SecurityIdentification10Choice> mmSecurityIdentification = new MMMessageAssociationEnd<SecurityIdentification9, SecurityIdentification10Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification9.mmObject();
@@ -125,6 +125,16 @@ public class SecurityIdentification9 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification10Choice getValue(SecurityIdentification9 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification9 obj, SecurityIdentification10Choice value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -161,7 +171,7 @@ public class SecurityIdentification9 {
 	 * definition} = "Textual description of a security instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification9, Optional<Max140Text>> mmDescription = new MMMessageAttribute<SecurityIdentification9, Optional<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification9.mmObject();
@@ -173,6 +183,16 @@ public class SecurityIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(SecurityIdentification9 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification9 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

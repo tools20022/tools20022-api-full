@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CurrencyOption;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Option4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class OptionData3 {
 	 * "Date at which the trading parties have agreed on an option trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionData3, ISODate> mmTradeDate = new MMMessageAttribute<OptionData3, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData3.mmObject();
@@ -131,6 +132,16 @@ public class OptionData3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(OptionData3 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(OptionData3 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "NtfctnId", required = true)
@@ -163,7 +174,7 @@ public class OptionData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionData3, Max35Text> mmNotificationIdentification = new MMMessageAttribute<OptionData3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData3.mmObject();
 			isDerived = false;
@@ -174,6 +185,16 @@ public class OptionData3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OptionData3 obj) {
+			return obj.getNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(OptionData3 obj, Max35Text value) {
+			obj.setNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonRef")
@@ -209,7 +230,7 @@ public class OptionData3 {
 	 * definition} = "Reference common to the parties of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionData3, Optional<Max35Text>> mmCommonReference = new MMMessageAttribute<OptionData3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData3.mmObject();
@@ -221,6 +242,16 @@ public class OptionData3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OptionData3 obj) {
+			return obj.getCommonReference();
+		}
+
+		@Override
+		public void setValue(OptionData3 obj, Optional<Max35Text> value) {
+			obj.setCommonReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -253,7 +284,7 @@ public class OptionData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionData3, Optional<Max35Text>> mmRelatedReference = new MMMessageAttribute<OptionData3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData3.mmObject();
 			isDerived = false;
@@ -264,6 +295,16 @@ public class OptionData3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OptionData3 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(OptionData3 obj, Optional<Max35Text> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmdOrCclRsn")
@@ -295,7 +336,7 @@ public class OptionData3 {
 	 * "Describes the reason for the cancellation or the amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendOrCancelReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionData3, Optional<Max35Text>> mmAmendOrCancelReason = new MMMessageAttribute<OptionData3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData3.mmObject();
 			isDerived = false;
@@ -306,6 +347,16 @@ public class OptionData3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OptionData3 obj) {
+			return obj.getAmendOrCancelReason();
+		}
+
+		@Override
+		public void setValue(OptionData3 obj, Optional<Max35Text> value) {
+			obj.setAmendOrCancelReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Optn", required = true)
@@ -339,7 +390,7 @@ public class OptionData3 {
 	 * definition} = "Set of data defining a foreign exchange option sold."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionData3, Option4> mmOption = new MMMessageAssociationEnd<OptionData3, Option4>() {
 		{
 			businessComponentTrace_lazy = () -> CurrencyOption.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionData3.mmObject();
@@ -351,7 +402,17 @@ public class OptionData3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Option4.mmObject();
+			type_lazy = () -> Option4.mmObject();
+		}
+
+		@Override
+		public Option4 getValue(OptionData3 obj) {
+			return obj.getOption();
+		}
+
+		@Override
+		public void setValue(OptionData3 obj, Option4 value) {
+			obj.setOption(value);
 		}
 	};
 
@@ -420,7 +481,7 @@ public class OptionData3 {
 		return option;
 	}
 
-	public OptionData3 setOption(com.tools20022.repository.msg.Option4 option) {
+	public OptionData3 setOption(Option4 option) {
 		this.option = Objects.requireNonNull(option);
 		return this;
 	}

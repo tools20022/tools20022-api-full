@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.FinancingInformationAndStatus1;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.OriginalRequestInformation1;
 import com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -163,7 +162,7 @@ public class InvoiceFinancingRequestStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceFinancingRequestStatusV01, MessageIdentification1> mmStatusIdentification = new MMMessageBuildingBlock<InvoiceFinancingRequestStatusV01, MessageIdentification1>() {
 		{
 			xmlTag = "StsId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,12 +173,14 @@ public class InvoiceFinancingRequestStatusV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceFinancingRequestStatusV01.class.getMethod("getStatusIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(InvoiceFinancingRequestStatusV01 obj) {
+			return obj.getStatusIdentification();
+		}
+
+		@Override
+		public void setValue(InvoiceFinancingRequestStatusV01 obj, MessageIdentification1 value) {
+			obj.setStatusIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlReqInfAndSts", required = true)
@@ -209,7 +210,7 @@ public class InvoiceFinancingRequestStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalRequestInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceFinancingRequestStatusV01, OriginalRequestInformation1> mmOriginalRequestInformationAndStatus = new MMMessageBuildingBlock<InvoiceFinancingRequestStatusV01, OriginalRequestInformation1>() {
 		{
 			xmlTag = "OrgnlReqInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,12 +221,14 @@ public class InvoiceFinancingRequestStatusV01 {
 			complexType_lazy = () -> OriginalRequestInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceFinancingRequestStatusV01.class.getMethod("getOriginalRequestInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalRequestInformation1 getValue(InvoiceFinancingRequestStatusV01 obj) {
+			return obj.getOriginalRequestInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(InvoiceFinancingRequestStatusV01 obj, OriginalRequestInformation1 value) {
+			obj.setOriginalRequestInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "FincgInfAndSts")
@@ -254,7 +257,7 @@ public class InvoiceFinancingRequestStatusV01 {
 	 * "Information concerning the business status of a financing request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancingInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceFinancingRequestStatusV01, Optional<FinancingInformationAndStatus1>> mmFinancingInformationAndStatus = new MMMessageBuildingBlock<InvoiceFinancingRequestStatusV01, Optional<FinancingInformationAndStatus1>>() {
 		{
 			xmlTag = "FincgInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,12 +268,14 @@ public class InvoiceFinancingRequestStatusV01 {
 			complexType_lazy = () -> FinancingInformationAndStatus1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceFinancingRequestStatusV01.class.getMethod("getFinancingInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<FinancingInformationAndStatus1> getValue(InvoiceFinancingRequestStatusV01 obj) {
+			return obj.getFinancingInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(InvoiceFinancingRequestStatusV01 obj, Optional<FinancingInformationAndStatus1> value) {
+			obj.setFinancingInformationAndStatus(value.orElse(null));
 		}
 	};
 

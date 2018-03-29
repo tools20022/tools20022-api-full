@@ -134,7 +134,7 @@ public class PriceDetails10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails10, Optional<PriceFormat23Choice>> mmGenericCashPricePaidPerProduct = new MMMessageAssociationEnd<PriceDetails10, Optional<PriceFormat23Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPricePaidPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails10.mmObject();
@@ -148,6 +148,16 @@ public class PriceDetails10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat23Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat23Choice> getValue(PriceDetails10 obj) {
+			return obj.getGenericCashPricePaidPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails10 obj, Optional<PriceFormat23Choice> value) {
+			obj.setGenericCashPricePaidPerProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GncCshPricRcvdPerPdct")
@@ -192,7 +202,7 @@ public class PriceDetails10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceDetails10, Optional<PriceFormat20Choice>> mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd<PriceDetails10, Optional<PriceFormat20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceDetails10.mmObject();
@@ -206,6 +216,16 @@ public class PriceDetails10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat20Choice> getValue(PriceDetails10 obj) {
+			return obj.getGenericCashPriceReceivedPerProduct();
+		}
+
+		@Override
+		public void setValue(PriceDetails10 obj, Optional<PriceFormat20Choice> value) {
+			obj.setGenericCashPriceReceivedPerProduct(value.orElse(null));
 		}
 	};
 

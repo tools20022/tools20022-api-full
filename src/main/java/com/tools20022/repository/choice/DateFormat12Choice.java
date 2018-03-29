@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.DateType6Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -115,7 +116,7 @@ public class DateFormat12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat12Choice, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<DateFormat12Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat12Choice.mmObject();
 			isDerived = false;
@@ -127,7 +128,17 @@ public class DateFormat12Choice {
 			nextVersions_lazy = () -> Arrays.asList(DateFormat47Choice.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat12Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat12Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdDt", required = true)
@@ -171,7 +182,7 @@ public class DateFormat12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat12Choice, DateType6Code> mmNotSpecifiedDate = new MMMessageAttribute<DateFormat12Choice, DateType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat12Choice.mmObject();
 			isDerived = false;
@@ -184,6 +195,16 @@ public class DateFormat12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType6Code.mmObject();
+		}
+
+		@Override
+		public DateType6Code getValue(DateFormat12Choice obj) {
+			return obj.getNotSpecifiedDate();
+		}
+
+		@Override
+		public void setValue(DateFormat12Choice obj, DateType6Code value) {
+			obj.setNotSpecifiedDate(value);
 		}
 	};
 
@@ -205,7 +226,7 @@ public class DateFormat12Choice {
 		return date;
 	}
 
-	public DateFormat12Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat12Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}

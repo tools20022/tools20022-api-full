@@ -104,11 +104,11 @@ public class BalanceTransferReference1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Used in the payment transaction to enable the receiving bank to match the payment with the message."
+	 * "Used by the debtor in a suitable reference field of a payment message sent over an alternative payment channel to enable the creditor to match the payment with the payment request."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceTransferReference1, Max35Text> mmBalanceTransferReference = new MMMessageAttribute<BalanceTransferReference1, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentObligation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceTransferReference1.mmObject();
@@ -116,10 +116,20 @@ public class BalanceTransferReference1 {
 			xmlTag = "BalTrfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTransferReference";
-			definition = "Used in the payment transaction to enable the receiving bank to match the payment with the message.";
+			definition = "Used by the debtor in a suitable reference field of a payment message sent over an alternative payment channel to enable the creditor to match the payment with the payment request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BalanceTransferReference1 obj) {
+			return obj.getBalanceTransferReference();
+		}
+
+		@Override
+		public void setValue(BalanceTransferReference1 obj, Max35Text value) {
+			obj.setBalanceTransferReference(value);
 		}
 	};
 

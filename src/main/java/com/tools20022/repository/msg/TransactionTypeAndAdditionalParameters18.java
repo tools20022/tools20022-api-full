@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07;
+import com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08;
 import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
@@ -75,6 +76,10 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07#mmTransactionTypeAndAdditionalParameters
  * SecuritiesFinancingInstruction002V07.mmTransactionTypeAndAdditionalParameters
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08#mmTransactionTypeAndAdditionalParameters
+ * SecuritiesFinancingInstruction002V08.mmTransactionTypeAndAdditionalParameters
  * }</li>
  * </ul>
  * </li>
@@ -141,7 +146,7 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesFinancingTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters18, SecuritiesFinancingTransactionType2Code> mmSecuritiesFinancingTransactionType = new MMMessageAttribute<TransactionTypeAndAdditionalParameters18, SecuritiesFinancingTransactionType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmObject();
@@ -154,6 +159,16 @@ public class TransactionTypeAndAdditionalParameters18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesFinancingTransactionType2Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesFinancingTransactionType2Code getValue(TransactionTypeAndAdditionalParameters18 obj) {
+			return obj.getSecuritiesFinancingTransactionType();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters18 obj, SecuritiesFinancingTransactionType2Code value) {
+			obj.setSecuritiesFinancingTransactionType(value);
 		}
 	};
 	@XmlElement(name = "Pmt", required = true)
@@ -196,7 +211,7 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters18, DeliveryReceiptType2Code> mmPayment = new MMMessageAttribute<TransactionTypeAndAdditionalParameters18, DeliveryReceiptType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmObject();
@@ -209,6 +224,16 @@ public class TransactionTypeAndAdditionalParameters18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
+		}
+
+		@Override
+		public DeliveryReceiptType2Code getValue(TransactionTypeAndAdditionalParameters18 obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters18 obj, DeliveryReceiptType2Code value) {
+			obj.setPayment(value);
 		}
 	};
 	@XmlElement(name = "CmonId")
@@ -251,7 +276,7 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters18, Optional<RestrictedFINXMax16Text>> mmCommonIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters18, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmObject();
@@ -264,6 +289,16 @@ public class TransactionTypeAndAdditionalParameters18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(TransactionTypeAndAdditionalParameters18 obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters18 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCommonIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcncltnInd")
@@ -301,7 +336,7 @@ public class TransactionTypeAndAdditionalParameters18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters18, Optional<YesNoIndicator>> mmReconciliationIndicator = new MMMessageAttribute<TransactionTypeAndAdditionalParameters18, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmObject();
 			isDerived = false;
@@ -314,6 +349,16 @@ public class TransactionTypeAndAdditionalParameters18 {
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(TransactionTypeAndAdditionalParameters18 obj) {
+			return obj.getReconciliationIndicator();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters18 obj, Optional<YesNoIndicator> value) {
+			obj.setReconciliationIndicator(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -322,7 +367,7 @@ public class TransactionTypeAndAdditionalParameters18 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmSecuritiesFinancingTransactionType,
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmCommonIdentification,
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters18.mmReconciliationIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingInstruction002V07.mmTransactionTypeAndAdditionalParameters);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingInstruction002V07.mmTransactionTypeAndAdditionalParameters, SecuritiesFinancingInstruction002V08.mmTransactionTypeAndAdditionalParameters);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

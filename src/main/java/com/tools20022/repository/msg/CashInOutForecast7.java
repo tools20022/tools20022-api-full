@@ -119,7 +119,7 @@ public class CashInOutForecast7 {
 	 * CashInForecast6.mmCashSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashInOutForecast7, Optional<ISODate>> mmCashSettlementDate = new MMMessageAttribute<CashInOutForecast7, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashInOutForecast7.mmObject();
@@ -132,6 +132,16 @@ public class CashInOutForecast7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CashInOutForecast7 obj) {
+			return obj.getCashSettlementDate();
+		}
+
+		@Override
+		public void setValue(CashInOutForecast7 obj, Optional<ISODate> value) {
+			obj.setCashSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -174,7 +184,7 @@ public class CashInOutForecast7 {
 	 * CashInForecast6.mmSubTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashInOutForecast7, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<CashInOutForecast7, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashInOutForecast7.mmObject();
@@ -187,6 +197,16 @@ public class CashInOutForecast7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(CashInOutForecast7 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CashInOutForecast7 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

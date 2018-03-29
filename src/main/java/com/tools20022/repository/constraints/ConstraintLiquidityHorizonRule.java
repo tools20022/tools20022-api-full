@@ -49,11 +49,15 @@ public class ConstraintLiquidityHorizonRule {
 	 */
 	public static final MMConstraint<LiquidityRequiredAndAvailable1> forLiquidityRequiredAndAvailable1 = new MMConstraint<LiquidityRequiredAndAvailable1>() {
 		{
-			validator = ConstraintLiquidityHorizonRule::checkLiquidityRequiredAndAvailable1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityHorizonRule";
 			definition = "In each iteration, the value of LiquidityHorizon must be different.";
 			owner_lazy = () -> LiquidityRequiredAndAvailable1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LiquidityRequiredAndAvailable1 obj) throws Exception {
+			checkLiquidityRequiredAndAvailable1(obj);
 		}
 	};
 

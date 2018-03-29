@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternatePartyIdentification3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -143,7 +144,7 @@ public class PartyIdentification57 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOwnerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification57, PartyIdentification52Choice> mmOwnerIdentification = new MMMessageAssociationEnd<PartyIdentification57, PartyIdentification52Choice>() {
 		{
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification57.mmObject();
@@ -158,9 +159,19 @@ public class PartyIdentification57 {
 			isComposite = true;
 			type_lazy = () -> PartyIdentification52Choice.mmObject();
 		}
+
+		@Override
+		public PartyIdentification52Choice getValue(PartyIdentification57 obj) {
+			return obj.getOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification57 obj, PartyIdentification52Choice value) {
+			obj.setOwnerIdentification(value);
+		}
 	};
 	@XmlElement(name = "AltrnId")
-	protected List<com.tools20022.repository.msg.AlternatePartyIdentification3> alternateIdentification;
+	protected List<AlternatePartyIdentification3> alternateIdentification;
 	/**
 	 * 
 	 <p>
@@ -196,7 +207,7 @@ public class PartyIdentification57 {
 	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification57, List<AlternatePartyIdentification3>> mmAlternateIdentification = new MMMessageAssociationEnd<PartyIdentification57, List<AlternatePartyIdentification3>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification57.mmObject();
@@ -208,7 +219,17 @@ public class PartyIdentification57 {
 			definition = "Alternate identification for a party.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification3.mmObject();
+			type_lazy = () -> AlternatePartyIdentification3.mmObject();
+		}
+
+		@Override
+		public List<AlternatePartyIdentification3> getValue(PartyIdentification57 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification57 obj, List<AlternatePartyIdentification3> value) {
+			obj.setAlternateIdentification(value);
 		}
 	};
 	@XmlElement(name = "DmclCtry")
@@ -250,7 +271,7 @@ public class PartyIdentification57 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomicileCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification57, Optional<CountryCode>> mmDomicileCountry = new MMMessageAttribute<PartyIdentification57, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification57.mmObject();
@@ -263,6 +284,16 @@ public class PartyIdentification57 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(PartyIdentification57 obj) {
+			return obj.getDomicileCountry();
+		}
+
+		@Override
+		public void setValue(PartyIdentification57 obj, Optional<CountryCode> value) {
+			obj.setDomicileCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonDmclCtry")
@@ -304,7 +335,7 @@ public class PartyIdentification57 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonDomicileCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification57, List<CountryCode>> mmNonDomicileCountry = new MMMessageAttribute<PartyIdentification57, List<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification57.mmObject();
@@ -316,6 +347,16 @@ public class PartyIdentification57 {
 			definition = "Holder of the security certifies, in line with the terms of the corporate action, that it is not domiciled in the country indicated.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public List<CountryCode> getValue(PartyIdentification57 obj) {
+			return obj.getNonDomicileCountry();
+		}
+
+		@Override
+		public void setValue(PartyIdentification57 obj, List<CountryCode> value) {
+			obj.setNonDomicileCountry(value);
 		}
 	};
 	@XmlElement(name = "OwndSctiesQty", required = true)
@@ -356,7 +397,7 @@ public class PartyIdentification57 {
 	 * "Quantity of securities belonging to the beneficial owner specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOwnedSecuritiesQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification57, FinancialInstrumentQuantity15Choice> mmOwnedSecuritiesQuantity = new MMMessageAssociationEnd<PartyIdentification57, FinancialInstrumentQuantity15Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification57.mmObject();
@@ -370,6 +411,16 @@ public class PartyIdentification57 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(PartyIdentification57 obj) {
+			return obj.getOwnedSecuritiesQuantity();
+		}
+
+		@Override
+		public void setValue(PartyIdentification57 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setOwnedSecuritiesQuantity(value);
 		}
 	};
 	@XmlElement(name = "CertfctnTp")
@@ -409,7 +460,7 @@ public class PartyIdentification57 {
 	 * definition} = "Type of certification which is required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification57, List<BeneficiaryCertificationType8Choice>> mmCertificationType = new MMMessageAssociationEnd<PartyIdentification57, List<BeneficiaryCertificationType8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification57.mmObject();
@@ -422,6 +473,16 @@ public class PartyIdentification57 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BeneficiaryCertificationType8Choice.mmObject();
+		}
+
+		@Override
+		public List<BeneficiaryCertificationType8Choice> getValue(PartyIdentification57 obj) {
+			return obj.getCertificationType();
+		}
+
+		@Override
+		public void setValue(PartyIdentification57 obj, List<BeneficiaryCertificationType8Choice> value) {
+			obj.setCertificationType(value);
 		}
 	};
 	@XmlElement(name = "DclrtnDtls")
@@ -464,7 +525,7 @@ public class PartyIdentification57 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification57, Optional<RestrictedFINXMax350Text>> mmDeclarationDetails = new MMMessageAttribute<PartyIdentification57, Optional<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmDeclaration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification57.mmObject();
@@ -477,6 +538,16 @@ public class PartyIdentification57 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax350Text> getValue(PartyIdentification57 obj) {
+			return obj.getDeclarationDetails();
+		}
+
+		@Override
+		public void setValue(PartyIdentification57 obj, Optional<RestrictedFINXMax350Text> value) {
+			obj.setDeclarationDetails(value.orElse(null));
 		}
 	};
 
@@ -511,7 +582,7 @@ public class PartyIdentification57 {
 		return alternateIdentification == null ? alternateIdentification = new ArrayList<>() : alternateIdentification;
 	}
 
-	public PartyIdentification57 setAlternateIdentification(List<com.tools20022.repository.msg.AlternatePartyIdentification3> alternateIdentification) {
+	public PartyIdentification57 setAlternateIdentification(List<AlternatePartyIdentification3> alternateIdentification) {
 		this.alternateIdentification = Objects.requireNonNull(alternateIdentification);
 		return this;
 	}

@@ -112,7 +112,7 @@ public class CSDOrNCB1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCSDIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CSDOrNCB1Choice, BICFIIdentifier> mmCSDIdentification = new MMMessageAttribute<CSDOrNCB1Choice, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CSDOrNCB1Choice.mmObject();
@@ -124,6 +124,16 @@ public class CSDOrNCB1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(CSDOrNCB1Choice obj) {
+			return obj.getCSDIdentification();
+		}
+
+		@Override
+		public void setValue(CSDOrNCB1Choice obj, BICFIIdentifier value) {
+			obj.setCSDIdentification(value);
 		}
 	};
 	@XmlElement(name = "NCBId", required = true)
@@ -163,7 +173,7 @@ public class CSDOrNCB1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNCBIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CSDOrNCB1Choice, BICFIIdentifier> mmNCBIdentification = new MMMessageAttribute<CSDOrNCB1Choice, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CSDOrNCB1Choice.mmObject();
@@ -175,6 +185,16 @@ public class CSDOrNCB1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(CSDOrNCB1Choice obj) {
+			return obj.getNCBIdentification();
+		}
+
+		@Override
+		public void setValue(CSDOrNCB1Choice obj, BICFIIdentifier value) {
+			obj.setNCBIdentification(value);
 		}
 	};
 

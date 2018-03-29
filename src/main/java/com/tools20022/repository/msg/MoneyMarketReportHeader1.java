@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.*;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriod1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class MoneyMarketReportHeader1 {
 	 * definition} = "Agent which is subject to reporting requirements."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MoneyMarketReportHeader1, LEIIdentifier> mmReportingAgent = new MMMessageAttribute<MoneyMarketReportHeader1, LEIIdentifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketReportHeader1.mmObject();
 			isDerived = false;
@@ -143,6 +144,16 @@ public class MoneyMarketReportHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(MoneyMarketReportHeader1 obj) {
+			return obj.getReportingAgent();
+		}
+
+		@Override
+		public void setValue(MoneyMarketReportHeader1 obj, LEIIdentifier value) {
+			obj.setReportingAgent(value);
 		}
 	};
 	@XmlElement(name = "RefPrd", required = true)
@@ -175,7 +186,7 @@ public class MoneyMarketReportHeader1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferencePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MoneyMarketReportHeader1, DateTimePeriod1> mmReferencePeriod = new MMMessageAssociationEnd<MoneyMarketReportHeader1, DateTimePeriod1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketReportHeader1.mmObject();
 			isDerived = false;
@@ -186,7 +197,17 @@ public class MoneyMarketReportHeader1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriod1.mmObject();
+			type_lazy = () -> DateTimePeriod1.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod1 getValue(MoneyMarketReportHeader1 obj) {
+			return obj.getReferencePeriod();
+		}
+
+		@Override
+		public void setValue(MoneyMarketReportHeader1 obj, DateTimePeriod1 value) {
+			obj.setReferencePeriod(value);
 		}
 	};
 
@@ -219,7 +240,7 @@ public class MoneyMarketReportHeader1 {
 		return referencePeriod;
 	}
 
-	public MoneyMarketReportHeader1 setReferencePeriod(com.tools20022.repository.msg.DateTimePeriod1 referencePeriod) {
+	public MoneyMarketReportHeader1 setReferencePeriod(DateTimePeriod1 referencePeriod) {
 		this.referencePeriod = Objects.requireNonNull(referencePeriod);
 		return this;
 	}

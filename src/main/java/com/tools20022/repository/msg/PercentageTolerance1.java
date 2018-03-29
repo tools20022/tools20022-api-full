@@ -107,7 +107,7 @@ public class PercentageTolerance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlusPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentageTolerance1, PercentageRate> mmPlusPercent = new MMMessageAttribute<PercentageTolerance1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Tolerance.mmPlusPercent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PercentageTolerance1.mmObject();
@@ -119,6 +119,16 @@ public class PercentageTolerance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PercentageTolerance1 obj) {
+			return obj.getPlusPercent();
+		}
+
+		@Override
+		public void setValue(PercentageTolerance1 obj, PercentageRate value) {
+			obj.setPlusPercent(value);
 		}
 	};
 	@XmlElement(name = "MnsPct", required = true)
@@ -158,7 +168,7 @@ public class PercentageTolerance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinusPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentageTolerance1, PercentageRate> mmMinusPercent = new MMMessageAttribute<PercentageTolerance1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Tolerance.mmMinusPercent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PercentageTolerance1.mmObject();
@@ -170,6 +180,16 @@ public class PercentageTolerance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PercentageTolerance1 obj) {
+			return obj.getMinusPercent();
+		}
+
+		@Override
+		public void setValue(PercentageTolerance1 obj, PercentageRate value) {
+			obj.setMinusPercent(value);
 		}
 	};
 

@@ -107,7 +107,7 @@ public class BusinessDayInformationCriteriaDefinitionChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationCriteriaDefinitionChoice, Max35Text> mmQueryName = new MMMessageAttribute<BusinessDayInformationCriteriaDefinitionChoice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayInformationCriteriaDefinitionChoice.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class BusinessDayInformationCriteriaDefinitionChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BusinessDayInformationCriteriaDefinitionChoice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationCriteriaDefinitionChoice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -149,7 +159,7 @@ public class BusinessDayInformationCriteriaDefinitionChoice {
 	 * definition} = "Explicitly defines the query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayInformationCriteriaDefinitionChoice, BusinessDayInformationCriteria> mmNewCriteria = new MMMessageAssociationEnd<BusinessDayInformationCriteriaDefinitionChoice, BusinessDayInformationCriteria>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayInformationCriteriaDefinitionChoice.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class BusinessDayInformationCriteriaDefinitionChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessDayInformationCriteria.mmObject();
+		}
+
+		@Override
+		public BusinessDayInformationCriteria getValue(BusinessDayInformationCriteriaDefinitionChoice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationCriteriaDefinitionChoice obj, BusinessDayInformationCriteria value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

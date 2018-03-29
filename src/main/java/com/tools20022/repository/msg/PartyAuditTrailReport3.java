@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AuditTrailOrBusinessError2Choice;
 import com.tools20022.repository.choice.DatePeriodSearch1Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class PartyAuditTrailReport3 {
 	 * PartyAuditTrailReport2.mmPartyAuditTrailOrError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAuditTrailReport3, AuditTrailOrBusinessError2Choice> mmPartyAuditTrailOrError = new MMMessageAssociationEnd<PartyAuditTrailReport3, AuditTrailOrBusinessError2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailReport3.mmObject();
 			isDerived = false;
@@ -125,6 +126,16 @@ public class PartyAuditTrailReport3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AuditTrailOrBusinessError2Choice.mmObject();
+		}
+
+		@Override
+		public AuditTrailOrBusinessError2Choice getValue(PartyAuditTrailReport3 obj) {
+			return obj.getPartyAuditTrailOrError();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailReport3 obj, AuditTrailOrBusinessError2Choice value) {
+			obj.setPartyAuditTrailOrError(value);
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -162,7 +173,7 @@ public class PartyAuditTrailReport3 {
 	 * PartyAuditTrailReport2.mmDatePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyAuditTrailReport3, Optional<DatePeriodSearch1Choice>> mmDatePeriod = new MMMessageAttribute<PartyAuditTrailReport3, Optional<DatePeriodSearch1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailReport3.mmObject();
 			isDerived = false;
@@ -174,6 +185,16 @@ public class PartyAuditTrailReport3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DatePeriodSearch1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodSearch1Choice> getValue(PartyAuditTrailReport3 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailReport3 obj, Optional<DatePeriodSearch1Choice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyId", required = true)
@@ -211,7 +232,7 @@ public class PartyAuditTrailReport3 {
 	 * PartyAuditTrailReport2.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAuditTrailReport3, SystemPartyIdentification3> mmPartyIdentification = new MMMessageAssociationEnd<PartyAuditTrailReport3, SystemPartyIdentification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailReport3.mmObject();
 			isDerived = false;
@@ -223,7 +244,17 @@ public class PartyAuditTrailReport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
+			type_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification3 getValue(PartyAuditTrailReport3 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailReport3 obj, SystemPartyIdentification3 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 
@@ -264,7 +295,7 @@ public class PartyAuditTrailReport3 {
 		return partyIdentification;
 	}
 
-	public PartyAuditTrailReport3 setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+	public PartyAuditTrailReport3 setPartyIdentification(SystemPartyIdentification3 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}

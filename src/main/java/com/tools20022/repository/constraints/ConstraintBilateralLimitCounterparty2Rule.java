@@ -51,11 +51,15 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 */
 	public static final MMConstraint<RiskManagementLimitIdentificationDetails> forRiskManagementLimitIdentificationDetails = new MMConstraint<RiskManagementLimitIdentificationDetails>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty2Rule::checkRiskManagementLimitIdentificationDetails;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty2Rule";
 			definition = "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present.";
 			owner_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RiskManagementLimitIdentificationDetails obj) throws Exception {
+			checkRiskManagementLimitIdentificationDetails(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 */
 	public static final MMConstraint<LimitIdentificationDetails1> forLimitIdentificationDetails1 = new MMConstraint<LimitIdentificationDetails1>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty2Rule::checkLimitIdentificationDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty2Rule";
 			definition = "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present.";
 			owner_lazy = () -> LimitIdentificationDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitIdentificationDetails1 obj) throws Exception {
+			checkLimitIdentificationDetails1(obj);
 		}
 	};
 	/**
@@ -111,11 +119,15 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 */
 	public static final MMConstraint<LimitIdentificationDetails2> forLimitIdentificationDetails2 = new MMConstraint<LimitIdentificationDetails2>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty2Rule::checkLimitIdentificationDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty2Rule";
 			definition = "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present.";
 			owner_lazy = () -> LimitIdentificationDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitIdentificationDetails2 obj) throws Exception {
+			checkLimitIdentificationDetails2(obj);
 		}
 	};
 	/**
@@ -141,11 +153,15 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 */
 	public static final MMConstraint<LimitIdentificationDetails3> forLimitIdentificationDetails3 = new MMConstraint<LimitIdentificationDetails3>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty2Rule::checkLimitIdentificationDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty2Rule";
 			definition = "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present.";
 			owner_lazy = () -> LimitIdentificationDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitIdentificationDetails3 obj) throws Exception {
+			checkLimitIdentificationDetails3(obj);
 		}
 	};
 	/**
@@ -175,12 +191,16 @@ public class ConstraintBilateralLimitCounterparty2Rule {
 	 */
 	public static final MMConstraint<LimitIdentification1> forLimitIdentification1 = new MMConstraint<LimitIdentification1>() {
 		{
-			validator = ConstraintBilateralLimitCounterparty2Rule::checkLimitIdentification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterparty2Rule";
 			definition = "If Type is BILI or NELI or INBI, then BilateralLimitCounterpartyIdentification must be present.";
 			owner_lazy = () -> LimitIdentification1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/BilateralLimitCounterpartyIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/Code</leftOperand><rightOperand>Bilateral</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/Code</leftOperand><rightOperand>NetBilateral</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type/Code</leftOperand><rightOperand>IndirectBilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LimitIdentification1 obj) throws Exception {
+			checkLimitIdentification1(obj);
 		}
 	};
 

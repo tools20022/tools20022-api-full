@@ -127,7 +127,7 @@ public class ATMAccountStatement2 {
 	 * definition} = "Date of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMAccountStatement2, Optional<ISODate>> mmTransactionDate = new MMMessageAttribute<ATMAccountStatement2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement2.mmObject();
@@ -139,6 +139,16 @@ public class ATMAccountStatement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ATMAccountStatement2 obj) {
+			return obj.getTransactionDate();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement2 obj, Optional<ISODate> value) {
+			obj.setTransactionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -175,7 +185,7 @@ public class ATMAccountStatement2 {
 	 * definition} = "Value date of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMAccountStatement2, Optional<ISODate>> mmValueDate = new MMMessageAttribute<ATMAccountStatement2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement2.mmObject();
@@ -187,6 +197,16 @@ public class ATMAccountStatement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ATMAccountStatement2 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement2 obj, Optional<ISODate> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShrtTxt")
@@ -218,7 +238,7 @@ public class ATMAccountStatement2 {
 	 * definition} = "Short text to display or print for the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMAccountStatement2, Optional<Max70Text>> mmShortText = new MMMessageAttribute<ATMAccountStatement2, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement2.mmObject();
 			isDerived = false;
@@ -229,6 +249,16 @@ public class ATMAccountStatement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(ATMAccountStatement2 obj) {
+			return obj.getShortText();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement2 obj, Optional<Max70Text> value) {
+			obj.setShortText(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtTx")
@@ -261,7 +291,7 @@ public class ATMAccountStatement2 {
 	 * definition} = "True if credit transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMAccountStatement2, Optional<TrueFalseIndicator>> mmCreditTransaction = new MMMessageAttribute<ATMAccountStatement2, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement2.mmObject();
 			isDerived = false;
@@ -272,6 +302,16 @@ public class ATMAccountStatement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMAccountStatement2 obj) {
+			return obj.getCreditTransaction();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setCreditTransaction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -309,7 +349,7 @@ public class ATMAccountStatement2 {
 	 * definition} = "Amount of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMAccountStatement2, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<ATMAccountStatement2, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement2.mmObject();
@@ -321,6 +361,16 @@ public class ATMAccountStatement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(ATMAccountStatement2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement2 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -358,7 +408,7 @@ public class ATMAccountStatement2 {
 	 * definition} = "Currency of the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMAccountStatement2, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<ATMAccountStatement2, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement2.mmObject();
@@ -370,6 +420,16 @@ public class ATMAccountStatement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(ATMAccountStatement2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement2 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LngTxt")
@@ -401,7 +461,7 @@ public class ATMAccountStatement2 {
 	 * definition} = "Alternative text of the statement to print or display."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMAccountStatement2, Optional<Max256Text>> mmLongText = new MMMessageAttribute<ATMAccountStatement2, Optional<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement2.mmObject();
 			isDerived = false;
@@ -412,6 +472,16 @@ public class ATMAccountStatement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(ATMAccountStatement2 obj) {
+			return obj.getLongText();
+		}
+
+		@Override
+		public void setValue(ATMAccountStatement2 obj, Optional<Max256Text> value) {
+			obj.setLongText(value.orElse(null));
 		}
 	};
 

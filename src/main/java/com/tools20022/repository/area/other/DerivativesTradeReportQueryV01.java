@@ -27,7 +27,6 @@ import com.tools20022.repository.choice.PartyIdentification97Choice;
 import com.tools20022.repository.choice.TradeReportQuery3Choice;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTradeRepositoryReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +120,7 @@ public class DerivativesTradeReportQueryV01 {
 	 * definition} = "Indicates the authority that requests the query report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestingAuthority = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DerivativesTradeReportQueryV01, PartyIdentification97Choice> mmRequestingAuthority = new MMMessageBuildingBlock<DerivativesTradeReportQueryV01, PartyIdentification97Choice>() {
 		{
 			xmlTag = "RqstngAuthrty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +131,14 @@ public class DerivativesTradeReportQueryV01 {
 			complexType_lazy = () -> PartyIdentification97Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DerivativesTradeReportQueryV01.class.getMethod("getRequestingAuthority", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification97Choice getValue(DerivativesTradeReportQueryV01 obj) {
+			return obj.getRequestingAuthority();
+		}
+
+		@Override
+		public void setValue(DerivativesTradeReportQueryV01 obj, PartyIdentification97Choice value) {
+			obj.setRequestingAuthority(value);
 		}
 	};
 	@XmlElement(name = "TradQryData", required = true)
@@ -165,7 +166,7 @@ public class DerivativesTradeReportQueryV01 {
 	 * definition} = "Criteria for defining recurrent and ad-hoc queries."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeQueryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DerivativesTradeReportQueryV01, TradeReportQuery3Choice> mmTradeQueryData = new MMMessageBuildingBlock<DerivativesTradeReportQueryV01, TradeReportQuery3Choice>() {
 		{
 			xmlTag = "TradQryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +177,14 @@ public class DerivativesTradeReportQueryV01 {
 			complexType_lazy = () -> TradeReportQuery3Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DerivativesTradeReportQueryV01.class.getMethod("getTradeQueryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeReportQuery3Choice getValue(DerivativesTradeReportQueryV01 obj) {
+			return obj.getTradeQueryData();
+		}
+
+		@Override
+		public void setValue(DerivativesTradeReportQueryV01 obj, TradeReportQuery3Choice value) {
+			obj.setTradeQueryData(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -211,7 +214,7 @@ public class DerivativesTradeReportQueryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DerivativesTradeReportQueryV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<DerivativesTradeReportQueryV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,12 +224,14 @@ public class DerivativesTradeReportQueryV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DerivativesTradeReportQueryV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(DerivativesTradeReportQueryV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(DerivativesTradeReportQueryV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

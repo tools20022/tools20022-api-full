@@ -122,7 +122,7 @@ public class DetailedAmount18 {
 	 * DetailedAmount13.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount18, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<DetailedAmount18, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount18.mmObject();
@@ -135,6 +135,16 @@ public class DetailedAmount18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(DetailedAmount18 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(DetailedAmount18 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -177,7 +187,7 @@ public class DetailedAmount18 {
 	 * DetailedAmount13.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount18, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<DetailedAmount18, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount18.mmObject();
@@ -190,6 +200,16 @@ public class DetailedAmount18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(DetailedAmount18 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(DetailedAmount18 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgAcctTo")
@@ -222,7 +242,7 @@ public class DetailedAmount18 {
 	 * definition} = "True if amount charged to the source account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeAccountTo = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount18, Optional<TrueFalseIndicator>> mmChargeAccountTo = new MMMessageAttribute<DetailedAmount18, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount18.mmObject();
 			isDerived = false;
@@ -233,6 +253,16 @@ public class DetailedAmount18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(DetailedAmount18 obj) {
+			return obj.getChargeAccountTo();
+		}
+
+		@Override
+		public void setValue(DetailedAmount18 obj, Optional<TrueFalseIndicator> value) {
+			obj.setChargeAccountTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Labl")
@@ -269,7 +299,7 @@ public class DetailedAmount18 {
 	 * DetailedAmount13.mmLabel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount18, Optional<Max70Text>> mmLabel = new MMMessageAttribute<DetailedAmount18, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount18.mmObject();
 			isDerived = false;
@@ -281,6 +311,16 @@ public class DetailedAmount18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(DetailedAmount18 obj) {
+			return obj.getLabel();
+		}
+
+		@Override
+		public void setValue(DetailedAmount18 obj, Optional<Max70Text> value) {
+			obj.setLabel(value.orElse(null));
 		}
 	};
 

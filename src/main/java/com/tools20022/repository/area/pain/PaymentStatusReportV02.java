@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader5;
 import com.tools20022.repository.msg.OriginalGroupInformation1;
 import com.tools20022.repository.msg.PaymentTransactionInformation1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -169,7 +168,7 @@ public class PaymentStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentStatusReportV02, GroupHeader5> mmGroupHeader = new MMMessageBuildingBlock<PaymentStatusReportV02, GroupHeader5>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,12 +179,14 @@ public class PaymentStatusReportV02 {
 			complexType_lazy = () -> GroupHeader5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentStatusReportV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader5 getValue(PaymentStatusReportV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReportV02 obj, GroupHeader5 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
@@ -215,7 +216,7 @@ public class PaymentStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentStatusReportV02, OriginalGroupInformation1> mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock<PaymentStatusReportV02, OriginalGroupInformation1>() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,12 +227,14 @@ public class PaymentStatusReportV02 {
 			complexType_lazy = () -> OriginalGroupInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentStatusReportV02.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalGroupInformation1 getValue(PaymentStatusReportV02 obj) {
+			return obj.getOriginalGroupInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReportV02 obj, OriginalGroupInformation1 value) {
+			obj.setOriginalGroupInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "TxInfAndSts")
@@ -261,7 +264,7 @@ public class PaymentStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentStatusReportV02, List<PaymentTransactionInformation1>> mmTransactionInformationAndStatus = new MMMessageBuildingBlock<PaymentStatusReportV02, List<PaymentTransactionInformation1>>() {
 		{
 			xmlTag = "TxInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,12 +274,14 @@ public class PaymentStatusReportV02 {
 			complexType_lazy = () -> PaymentTransactionInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentStatusReportV02.class.getMethod("getTransactionInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentTransactionInformation1> getValue(PaymentStatusReportV02 obj) {
+			return obj.getTransactionInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(PaymentStatusReportV02 obj, List<PaymentTransactionInformation1> value) {
+			obj.setTransactionInformationAndStatus(value);
 		}
 	};
 

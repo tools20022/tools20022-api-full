@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Assignee;
 import com.tools20022.repository.entity.InvestigationCase;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public class ClaimNonReceipt1 {
 	 * "Specifies the date the original payment instruction was processed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateProcessed = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClaimNonReceipt1, ISODate> mmDateProcessed = new MMMessageAttribute<ClaimNonReceipt1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClaimNonReceipt1.mmObject();
@@ -121,6 +122,16 @@ public class ClaimNonReceipt1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ClaimNonReceipt1 obj) {
+			return obj.getDateProcessed();
+		}
+
+		@Override
+		public void setValue(ClaimNonReceipt1 obj, ISODate value) {
+			obj.setDateProcessed(value);
 		}
 	};
 	@XmlElement(name = "OrgnlNxtAgt", required = true)
@@ -157,7 +168,7 @@ public class ClaimNonReceipt1 {
 	 * "Specifies the next party the original payment instruction was sent to."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalNextAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClaimNonReceipt1, BranchAndFinancialInstitutionIdentification5> mmOriginalNextAgent = new MMMessageAssociationEnd<ClaimNonReceipt1, BranchAndFinancialInstitutionIdentification5>() {
 		{
 			businessComponentTrace_lazy = () -> Assignee.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClaimNonReceipt1.mmObject();
@@ -169,7 +180,17 @@ public class ClaimNonReceipt1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification5 getValue(ClaimNonReceipt1 obj) {
+			return obj.getOriginalNextAgent();
+		}
+
+		@Override
+		public void setValue(ClaimNonReceipt1 obj, BranchAndFinancialInstitutionIdentification5 value) {
+			obj.setOriginalNextAgent(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class ClaimNonReceipt1 {
 		return originalNextAgent;
 	}
 
-	public ClaimNonReceipt1 setOriginalNextAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 originalNextAgent) {
+	public ClaimNonReceipt1 setOriginalNextAgent(BranchAndFinancialInstitutionIdentification5 originalNextAgent) {
 		this.originalNextAgent = Objects.requireNonNull(originalNextAgent);
 		return this;
 	}

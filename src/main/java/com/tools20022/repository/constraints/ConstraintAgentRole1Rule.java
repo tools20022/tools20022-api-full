@@ -57,12 +57,16 @@ public class ConstraintAgentRole1Rule {
 	 */
 	public static final MMConstraint<IssuerAgent1> forIssuerAgent1 = new MMConstraint<IssuerAgent1>() {
 		{
-			validator = ConstraintAgentRole1Rule::checkIssuerAgent1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentRole1Rule";
 			definition = "PRIN can only be present in a single occurrence of Role.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAgentRole1Rule.forIssuerAgent2);
 			owner_lazy = () -> IssuerAgent1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IssuerAgent1 obj) throws Exception {
+			checkIssuerAgent1(obj);
 		}
 	};
 	/**
@@ -90,12 +94,16 @@ public class ConstraintAgentRole1Rule {
 	 */
 	public static final MMConstraint<IssuerAgent2> forIssuerAgent2 = new MMConstraint<IssuerAgent2>() {
 		{
-			validator = ConstraintAgentRole1Rule::checkIssuerAgent2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentRole1Rule";
 			definition = "PRIN can only be present in a single occurrence of Role.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAgentRole1Rule.forIssuerAgent1;
 			owner_lazy = () -> IssuerAgent2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IssuerAgent2 obj) throws Exception {
+			checkIssuerAgent2(obj);
 		}
 	};
 

@@ -135,7 +135,7 @@ public class SecurityInstrumentDescription2 {
 	 * definition} = "Description of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription2, Optional<Max350Text>> mmDescription = new MMMessageAttribute<SecurityInstrumentDescription2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription2.mmObject();
 			isDerived = false;
@@ -146,6 +146,16 @@ public class SecurityInstrumentDescription2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SecurityInstrumentDescription2 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription2 obj, Optional<Max350Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClssfctnTp")
@@ -187,7 +197,7 @@ public class SecurityInstrumentDescription2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClassificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityInstrumentDescription2, Optional<SecurityClassificationType1Choice>> mmClassificationType = new MMMessageAssociationEnd<SecurityInstrumentDescription2, Optional<SecurityClassificationType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription2.mmObject();
@@ -201,6 +211,16 @@ public class SecurityInstrumentDescription2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecurityClassificationType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityClassificationType1Choice> getValue(SecurityInstrumentDescription2 obj) {
+			return obj.getClassificationType();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription2 obj, Optional<SecurityClassificationType1Choice> value) {
+			obj.setClassificationType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfListg")
@@ -239,7 +259,7 @@ public class SecurityInstrumentDescription2 {
 	 * "Provides the place of listing using a market identifier code (MIC)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfListing = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription2, Optional<MICIdentifier>> mmPlaceOfListing = new MMMessageAttribute<SecurityInstrumentDescription2, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription2.mmObject();
@@ -251,6 +271,16 @@ public class SecurityInstrumentDescription2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(SecurityInstrumentDescription2 obj) {
+			return obj.getPlaceOfListing();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription2 obj, Optional<MICIdentifier> value) {
+			obj.setPlaceOfListing(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExrcDt")
@@ -287,7 +317,7 @@ public class SecurityInstrumentDescription2 {
 	 * definition} = "Exercise date/time of a derivative contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExerciseDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription2, Optional<ISODate>> mmExerciseDate = new MMMessageAttribute<SecurityInstrumentDescription2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmExerciseDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription2.mmObject();
@@ -299,6 +329,16 @@ public class SecurityInstrumentDescription2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SecurityInstrumentDescription2 obj) {
+			return obj.getExerciseDate();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription2 obj, Optional<ISODate> value) {
+			obj.setExerciseDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -336,7 +376,7 @@ public class SecurityInstrumentDescription2 {
 	 * "Maturity date/time at which an interest bearing security becomes due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription2, Optional<ISODate>> mmMaturityDate = new MMMessageAttribute<SecurityInstrumentDescription2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription2.mmObject();
@@ -348,6 +388,16 @@ public class SecurityInstrumentDescription2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SecurityInstrumentDescription2 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription2 obj, Optional<ISODate> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnTp")
@@ -387,7 +437,7 @@ public class SecurityInstrumentDescription2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription2, Optional<OptionTypeCode>> mmOptionType = new MMMessageAttribute<SecurityInstrumentDescription2, Optional<OptionTypeCode>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription2.mmObject();
@@ -399,6 +449,16 @@ public class SecurityInstrumentDescription2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionTypeCode.mmObject();
+		}
+
+		@Override
+		public Optional<OptionTypeCode> getValue(SecurityInstrumentDescription2 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription2 obj, Optional<OptionTypeCode> value) {
+			obj.setOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrkPric")
@@ -441,7 +501,7 @@ public class SecurityInstrumentDescription2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription2, Optional<PriceRateOrAmountChoice>> mmStrikePrice = new MMMessageAttribute<SecurityInstrumentDescription2, Optional<PriceRateOrAmountChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription2.mmObject();
@@ -454,6 +514,16 @@ public class SecurityInstrumentDescription2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceRateOrAmountChoice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceRateOrAmountChoice> getValue(SecurityInstrumentDescription2 obj) {
+			return obj.getStrikePrice();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription2 obj, Optional<PriceRateOrAmountChoice> value) {
+			obj.setStrikePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mltplr")
@@ -487,7 +557,7 @@ public class SecurityInstrumentDescription2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMultiplier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription2, Optional<BaseOneRate>> mmMultiplier = new MMMessageAttribute<SecurityInstrumentDescription2, Optional<BaseOneRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription2.mmObject();
 			isDerived = false;
@@ -498,6 +568,16 @@ public class SecurityInstrumentDescription2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(SecurityInstrumentDescription2 obj) {
+			return obj.getMultiplier();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription2 obj, Optional<BaseOneRate> value) {
+			obj.setMultiplier(value.orElse(null));
 		}
 	};
 

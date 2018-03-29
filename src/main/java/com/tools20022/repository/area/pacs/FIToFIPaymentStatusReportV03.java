@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader37;
 import com.tools20022.repository.msg.OriginalGroupInformation20;
 import com.tools20022.repository.msg.PaymentTransactionInformation26;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -161,7 +160,7 @@ public class FIToFIPaymentStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusReportV03, GroupHeader37> mmGroupHeader = new MMMessageBuildingBlock<FIToFIPaymentStatusReportV03, GroupHeader37>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,12 +171,14 @@ public class FIToFIPaymentStatusReportV03 {
 			complexType_lazy = () -> GroupHeader37.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusReportV03.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader37 getValue(FIToFIPaymentStatusReportV03 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusReportV03 obj, GroupHeader37 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
@@ -207,7 +208,7 @@ public class FIToFIPaymentStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusReportV03, OriginalGroupInformation20> mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock<FIToFIPaymentStatusReportV03, OriginalGroupInformation20>() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,12 +219,14 @@ public class FIToFIPaymentStatusReportV03 {
 			complexType_lazy = () -> OriginalGroupInformation20.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusReportV03.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalGroupInformation20 getValue(FIToFIPaymentStatusReportV03 obj) {
+			return obj.getOriginalGroupInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusReportV03 obj, OriginalGroupInformation20 value) {
+			obj.setOriginalGroupInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "TxInfAndSts")
@@ -253,7 +256,7 @@ public class FIToFIPaymentStatusReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusReportV03, List<PaymentTransactionInformation26>> mmTransactionInformationAndStatus = new MMMessageBuildingBlock<FIToFIPaymentStatusReportV03, List<PaymentTransactionInformation26>>() {
 		{
 			xmlTag = "TxInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,12 +266,14 @@ public class FIToFIPaymentStatusReportV03 {
 			complexType_lazy = () -> PaymentTransactionInformation26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusReportV03.class.getMethod("getTransactionInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentTransactionInformation26> getValue(FIToFIPaymentStatusReportV03 obj) {
+			return obj.getTransactionInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusReportV03 obj, List<PaymentTransactionInformation26> value) {
+			obj.setTransactionInformationAndStatus(value);
 		}
 	};
 

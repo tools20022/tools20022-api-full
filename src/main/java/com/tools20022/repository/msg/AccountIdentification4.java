@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SimpleIdentificationInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +105,7 @@ public class AccountIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification4, SimpleIdentificationInformation1> mmProprietary = new MMMessageAssociationEnd<AccountIdentification4, SimpleIdentificationInformation1>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification4.mmObject();
@@ -116,7 +117,17 @@ public class AccountIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SimpleIdentificationInformation1.mmObject();
+			type_lazy = () -> SimpleIdentificationInformation1.mmObject();
+		}
+
+		@Override
+		public SimpleIdentificationInformation1 getValue(AccountIdentification4 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AccountIdentification4 obj, SimpleIdentificationInformation1 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -138,7 +149,7 @@ public class AccountIdentification4 {
 		return proprietary;
 	}
 
-	public AccountIdentification4 setProprietary(com.tools20022.repository.msg.SimpleIdentificationInformation1 proprietary) {
+	public AccountIdentification4 setProprietary(SimpleIdentificationInformation1 proprietary) {
 		this.proprietary = Objects.requireNonNull(proprietary);
 		return this;
 	}

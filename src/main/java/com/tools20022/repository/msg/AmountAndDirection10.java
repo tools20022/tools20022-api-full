@@ -34,6 +34,7 @@ import com.tools20022.repository.entity.ForeignExchangeTrade;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ForeignExchangeTerms11;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -172,7 +173,7 @@ public class AmountAndDirection10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection10, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection10, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.mmObject();
@@ -186,6 +187,16 @@ public class AmountAndDirection10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AmountAndDirection10 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection10 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -234,7 +245,7 @@ public class AmountAndDirection10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection10, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<AmountAndDirection10, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.mmObject();
@@ -248,6 +259,16 @@ public class AmountAndDirection10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(AmountAndDirection10 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection10 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
@@ -298,7 +319,7 @@ public class AmountAndDirection10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection10, Optional<ActiveOrHistoricCurrencyAndAmount>> mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute<AmountAndDirection10, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.mmObject();
@@ -312,6 +333,16 @@ public class AmountAndDirection10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(AmountAndDirection10 obj) {
+			return obj.getOriginalCurrencyAndOrderedAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection10 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setOriginalCurrencyAndOrderedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FXDtls")
@@ -359,7 +390,7 @@ public class AmountAndDirection10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountAndDirection10, Optional<ForeignExchangeTerms11>> mmForeignExchangeDetails = new MMMessageAssociationEnd<AmountAndDirection10, Optional<ForeignExchangeTerms11>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection10.mmObject();
@@ -373,7 +404,17 @@ public class AmountAndDirection10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms11.mmObject();
+			type_lazy = () -> ForeignExchangeTerms11.mmObject();
+		}
+
+		@Override
+		public Optional<ForeignExchangeTerms11> getValue(AmountAndDirection10 obj) {
+			return obj.getForeignExchangeDetails();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection10 obj, Optional<ForeignExchangeTerms11> value) {
+			obj.setForeignExchangeDetails(value.orElse(null));
 		}
 	};
 
@@ -434,7 +475,7 @@ public class AmountAndDirection10 {
 		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public AmountAndDirection10 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms11 foreignExchangeDetails) {
+	public AmountAndDirection10 setForeignExchangeDetails(ForeignExchangeTerms11 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 		return this;
 	}

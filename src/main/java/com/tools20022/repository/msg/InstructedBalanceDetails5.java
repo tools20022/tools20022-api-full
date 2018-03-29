@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.ChoiceCorporateAction;
 import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InstructedCorporateActionOption6;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,7 +136,7 @@ public class InstructedBalanceDetails5 {
 	 * InstructedBalanceDetails3.mmTotalInstructedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalInstructedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructedBalanceDetails5, BalanceFormat5Choice> mmTotalInstructedBalance = new MMMessageAttribute<InstructedBalanceDetails5, BalanceFormat5Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructedBalanceDetails5.mmObject();
@@ -150,9 +151,19 @@ public class InstructedBalanceDetails5 {
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceFormat5Choice.mmObject();
 		}
+
+		@Override
+		public BalanceFormat5Choice getValue(InstructedBalanceDetails5 obj) {
+			return obj.getTotalInstructedBalance();
+		}
+
+		@Override
+		public void setValue(InstructedBalanceDetails5 obj, BalanceFormat5Choice value) {
+			obj.setTotalInstructedBalance(value);
+		}
 	};
 	@XmlElement(name = "OptnDtls")
-	protected List<com.tools20022.repository.msg.InstructedCorporateActionOption6> optionDetails;
+	protected List<InstructedCorporateActionOption6> optionDetails;
 	/**
 	 * 
 	 <p>
@@ -199,7 +210,7 @@ public class InstructedBalanceDetails5 {
 	 * InstructedBalanceDetails3.mmOptionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructedBalanceDetails5, List<InstructedCorporateActionOption6>> mmOptionDetails = new MMMessageAssociationEnd<InstructedBalanceDetails5, List<InstructedCorporateActionOption6>>() {
 		{
 			businessElementTrace_lazy = () -> ChoiceCorporateAction.mmCorporateActionOptionDefinition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructedBalanceDetails5.mmObject();
@@ -212,7 +223,17 @@ public class InstructedBalanceDetails5 {
 			previousVersion_lazy = () -> InstructedBalanceDetails3.mmOptionDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InstructedCorporateActionOption6.mmObject();
+			type_lazy = () -> InstructedCorporateActionOption6.mmObject();
+		}
+
+		@Override
+		public List<InstructedCorporateActionOption6> getValue(InstructedBalanceDetails5 obj) {
+			return obj.getOptionDetails();
+		}
+
+		@Override
+		public void setValue(InstructedBalanceDetails5 obj, List<InstructedCorporateActionOption6> value) {
+			obj.setOptionDetails(value);
 		}
 	};
 
@@ -245,7 +266,7 @@ public class InstructedBalanceDetails5 {
 		return optionDetails == null ? optionDetails = new ArrayList<>() : optionDetails;
 	}
 
-	public InstructedBalanceDetails5 setOptionDetails(List<com.tools20022.repository.msg.InstructedCorporateActionOption6> optionDetails) {
+	public InstructedBalanceDetails5 setOptionDetails(List<InstructedCorporateActionOption6> optionDetails) {
 		this.optionDetails = Objects.requireNonNull(optionDetails);
 		return this;
 	}

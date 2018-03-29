@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReferredDocumentType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -115,7 +116,7 @@ public class ReferredDocumentInformation2 {
 	 * "Specifies the type of the document, for example commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReferredDocumentInformation2, Optional<ReferredDocumentType1>> mmType = new MMMessageAssociationEnd<ReferredDocumentInformation2, Optional<ReferredDocumentType1>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation2.mmObject();
@@ -127,7 +128,17 @@ public class ReferredDocumentInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
+			type_lazy = () -> ReferredDocumentType1.mmObject();
+		}
+
+		@Override
+		public Optional<ReferredDocumentType1> getValue(ReferredDocumentInformation2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation2 obj, Optional<ReferredDocumentType1> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DocNb")
@@ -165,7 +176,7 @@ public class ReferredDocumentInformation2 {
 	 * "Unique and unambiguous identification number of the referred document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentInformation2, Optional<Max35Text>> mmDocumentNumber = new MMMessageAttribute<ReferredDocumentInformation2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation2.mmObject();
@@ -177,6 +188,16 @@ public class ReferredDocumentInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReferredDocumentInformation2 obj) {
+			return obj.getDocumentNumber();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation2 obj, Optional<Max35Text> value) {
+			obj.setDocumentNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdDt")
@@ -214,7 +235,7 @@ public class ReferredDocumentInformation2 {
 	 * "Date associated with the referred document, eg, date of issue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentInformation2, Optional<ISODate>> mmRelatedDate = new MMMessageAttribute<ReferredDocumentInformation2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation2.mmObject();
@@ -226,6 +247,16 @@ public class ReferredDocumentInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ReferredDocumentInformation2 obj) {
+			return obj.getRelatedDate();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation2 obj, Optional<ISODate> value) {
+			obj.setRelatedDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DocAmt")
@@ -260,7 +291,7 @@ public class ReferredDocumentInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentInformation2, Optional<ActiveCurrencyAndAmount>> mmDocumentAmount = new MMMessageAttribute<ReferredDocumentInformation2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation2.mmObject();
 			isDerived = false;
@@ -271,6 +302,16 @@ public class ReferredDocumentInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ReferredDocumentInformation2 obj) {
+			return obj.getDocumentAmount();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentInformation2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setDocumentAmount(value.orElse(null));
 		}
 	};
 
@@ -293,7 +334,7 @@ public class ReferredDocumentInformation2 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public ReferredDocumentInformation2 setType(com.tools20022.repository.msg.ReferredDocumentType1 type) {
+	public ReferredDocumentInformation2 setType(ReferredDocumentType1 type) {
 		this.type = type;
 		return this;
 	}

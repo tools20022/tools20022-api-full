@@ -117,7 +117,7 @@ public class ActiveOrHistoricAmountRange2Choice {
 	 * ActiveOrHistoricAmountRange1Choice.mmImpliedCurrencyAndAmountRange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ActiveOrHistoricAmountRange2Choice, ImpliedCurrencyAndAmountRange1> mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd<ActiveOrHistoricAmountRange2Choice, ImpliedCurrencyAndAmountRange1>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ActiveOrHistoricAmountRange2Choice.mmObject();
@@ -131,6 +131,16 @@ public class ActiveOrHistoricAmountRange2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ImpliedCurrencyAndAmountRange1.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmountRange1 getValue(ActiveOrHistoricAmountRange2Choice obj) {
+			return obj.getImpliedCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(ActiveOrHistoricAmountRange2Choice obj, ImpliedCurrencyAndAmountRange1 value) {
+			obj.setImpliedCurrencyAndAmountRange(value);
 		}
 	};
 	@XmlElement(name = "CcyAndAmtRg", required = true)
@@ -173,7 +183,7 @@ public class ActiveOrHistoricAmountRange2Choice {
 	 * ActiveOrHistoricAmountRange1Choice.mmCurrencyAndAmountRange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ActiveOrHistoricAmountRange2Choice, ActiveOrHistoricCurrencyAndAmountRange2> mmCurrencyAndAmountRange = new MMMessageAssociationEnd<ActiveOrHistoricAmountRange2Choice, ActiveOrHistoricCurrencyAndAmountRange2>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ActiveOrHistoricAmountRange2Choice.mmObject();
@@ -187,6 +197,16 @@ public class ActiveOrHistoricAmountRange2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ActiveOrHistoricCurrencyAndAmountRange2.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmountRange2 getValue(ActiveOrHistoricAmountRange2Choice obj) {
+			return obj.getCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(ActiveOrHistoricAmountRange2Choice obj, ActiveOrHistoricCurrencyAndAmountRange2 value) {
+			obj.setCurrencyAndAmountRange(value);
 		}
 	};
 

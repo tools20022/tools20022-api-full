@@ -27,6 +27,7 @@ import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashBalance4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -132,7 +133,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportQuerySearchCriteria1, List<AccountIdentificationSearchCriteria2Choice>> mmAccountIdentification = new MMMessageAssociationEnd<ReportQuerySearchCriteria1, List<AccountIdentificationSearchCriteria2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -145,9 +146,19 @@ public class ReportQuerySearchCriteria1 {
 			isComposite = true;
 			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
+
+		@Override
+		public List<AccountIdentificationSearchCriteria2Choice> getValue(ReportQuerySearchCriteria1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria1 obj, List<AccountIdentificationSearchCriteria2Choice> value) {
+			obj.setAccountIdentification(value);
+		}
 	};
 	@XmlElement(name = "Bal")
-	protected List<com.tools20022.repository.msg.CashBalance4> balance;
+	protected List<CashBalance4> balance;
 	/**
 	 * 
 	 <p>
@@ -184,7 +195,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportQuerySearchCriteria1, List<CashBalance4>> mmBalance = new MMMessageAssociationEnd<ReportQuerySearchCriteria1, List<CashBalance4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -195,7 +206,17 @@ public class ReportQuerySearchCriteria1 {
 			nextVersions_lazy = () -> Arrays.asList(ReportQuerySearchCriteria2.mmBalance);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
+			type_lazy = () -> CashBalance4.mmObject();
+		}
+
+		@Override
+		public List<CashBalance4> getValue(ReportQuerySearchCriteria1 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria1 obj, List<CashBalance4> value) {
+			obj.setBalance(value);
 		}
 	};
 	@XmlElement(name = "RptNm")
@@ -236,7 +257,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria1, Optional<Max4AlphaNumericText>> mmReportName = new MMMessageAttribute<ReportQuerySearchCriteria1, Optional<Max4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -248,6 +269,16 @@ public class ReportQuerySearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(ReportQuerySearchCriteria1 obj) {
+			return obj.getReportName();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria1 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setReportName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyId", required = true)
@@ -288,7 +319,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria1, PartyIdentification71Choice> mmPartyIdentification = new MMMessageAttribute<ReportQuerySearchCriteria1, PartyIdentification71Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -300,6 +331,16 @@ public class ReportQuerySearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification71Choice getValue(ReportQuerySearchCriteria1 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria1 obj, PartyIdentification71Choice value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "RspnsblPtyId")
@@ -340,7 +381,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria1, Optional<PartyIdentification71Choice>> mmResponsiblePartyIdentification = new MMMessageAttribute<ReportQuerySearchCriteria1, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -352,6 +393,16 @@ public class ReportQuerySearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(ReportQuerySearchCriteria1 obj) {
+			return obj.getResponsiblePartyIdentification();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria1 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setResponsiblePartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtSch")
@@ -392,7 +443,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateSearch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria1, Optional<DateSearchChoice>> mmDateSearch = new MMMessageAttribute<ReportQuerySearchCriteria1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -404,6 +455,16 @@ public class ReportQuerySearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(ReportQuerySearchCriteria1 obj) {
+			return obj.getDateSearch();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria1 obj, Optional<DateSearchChoice> value) {
+			obj.setDateSearch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchdldTm")
@@ -446,7 +507,7 @@ public class ReportQuerySearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportQuerySearchCriteria1, Optional<DateTimePeriodChoice>> mmScheduledTime = new MMMessageAttribute<ReportQuerySearchCriteria1, Optional<DateTimePeriodChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
@@ -458,6 +519,16 @@ public class ReportQuerySearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(ReportQuerySearchCriteria1 obj) {
+			return obj.getScheduledTime();
+		}
+
+		@Override
+		public void setValue(ReportQuerySearchCriteria1 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setScheduledTime(value.orElse(null));
 		}
 	};
 
@@ -491,7 +562,7 @@ public class ReportQuerySearchCriteria1 {
 		return balance == null ? balance = new ArrayList<>() : balance;
 	}
 
-	public ReportQuerySearchCriteria1 setBalance(List<com.tools20022.repository.msg.CashBalance4> balance) {
+	public ReportQuerySearchCriteria1 setBalance(List<CashBalance4> balance) {
 		this.balance = Objects.requireNonNull(balance);
 		return this;
 	}

@@ -121,7 +121,7 @@ public class AlternateSecurityIdentification7 {
 	 * AlternateSecurityIdentification1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateSecurityIdentification7, Max35Text> mmIdentification = new MMMessageAttribute<AlternateSecurityIdentification7, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification7.mmObject();
@@ -134,6 +134,16 @@ public class AlternateSecurityIdentification7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AlternateSecurityIdentification7 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AlternateSecurityIdentification7 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdSrc", required = true)
@@ -172,7 +182,7 @@ public class AlternateSecurityIdentification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentificationSource = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AlternateSecurityIdentification7, IdentificationSource1Choice> mmIdentificationSource = new MMMessageAssociationEnd<AlternateSecurityIdentification7, IdentificationSource1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmGenericIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification7.mmObject();
@@ -185,6 +195,16 @@ public class AlternateSecurityIdentification7 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IdentificationSource1Choice.mmObject();
+		}
+
+		@Override
+		public IdentificationSource1Choice getValue(AlternateSecurityIdentification7 obj) {
+			return obj.getIdentificationSource();
+		}
+
+		@Override
+		public void setValue(AlternateSecurityIdentification7 obj, IdentificationSource1Choice value) {
+			obj.setIdentificationSource(value);
 		}
 	};
 

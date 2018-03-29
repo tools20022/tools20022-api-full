@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.SystemPartyIdentification1Choice;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.GeneratedRepository;
@@ -102,7 +103,7 @@ public class EligibilityIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibilityIdentification2Choice, CountryCode> mmCountry = new MMMessageAttribute<EligibilityIdentification2Choice, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EligibilityIdentification2Choice.mmObject();
 			isDerived = false;
@@ -113,6 +114,16 @@ public class EligibilityIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(EligibilityIdentification2Choice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(EligibilityIdentification2Choice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmId", required = true)
@@ -146,7 +157,7 @@ public class EligibilityIdentification2Choice {
 	 * "ISIN used to identify the security to be defined as eligible."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibilityIdentification2Choice, ISINOct2015Identifier> mmFinancialInstrumentIdentification = new MMMessageAttribute<EligibilityIdentification2Choice, ISINOct2015Identifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EligibilityIdentification2Choice.mmObject();
 			isDerived = false;
@@ -157,6 +168,16 @@ public class EligibilityIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(EligibilityIdentification2Choice obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(EligibilityIdentification2Choice obj, ISINOct2015Identifier value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "IssrCSDId", required = true)
@@ -191,7 +212,7 @@ public class EligibilityIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerCSDIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibilityIdentification2Choice, SystemPartyIdentification1Choice> mmIssuerCSDIdentification = new MMMessageAttribute<EligibilityIdentification2Choice, SystemPartyIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EligibilityIdentification2Choice.mmObject();
 			isDerived = false;
@@ -201,7 +222,17 @@ public class EligibilityIdentification2Choice {
 			definition = "Issuer CSD identification used to identify the securities to be defined as eligible.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
+			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification1Choice getValue(EligibilityIdentification2Choice obj) {
+			return obj.getIssuerCSDIdentification();
+		}
+
+		@Override
+		public void setValue(EligibilityIdentification2Choice obj, SystemPartyIdentification1Choice value) {
+			obj.setIssuerCSDIdentification(value);
 		}
 	};
 
@@ -241,7 +272,7 @@ public class EligibilityIdentification2Choice {
 		return issuerCSDIdentification;
 	}
 
-	public EligibilityIdentification2Choice setIssuerCSDIdentification(com.tools20022.repository.choice.SystemPartyIdentification1Choice issuerCSDIdentification) {
+	public EligibilityIdentification2Choice setIssuerCSDIdentification(SystemPartyIdentification1Choice issuerCSDIdentification) {
 		this.issuerCSDIdentification = Objects.requireNonNull(issuerCSDIdentification);
 		return this;
 	}

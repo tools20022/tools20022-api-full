@@ -32,6 +32,10 @@ import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
+import com.tools20022.repository.msg.OrganisationIdentification8;
+import com.tools20022.repository.msg.Restriction1;
+import com.tools20022.repository.msg.StatementFrequencyAndForm1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -185,7 +189,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<AccountIdentification4Choice>> mmIdentification = new MMMessageAttribute<CustomerAccount7, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -198,6 +202,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(CustomerAccount7 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -241,7 +255,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<Max70Text>> mmName = new MMMessageAttribute<CustomerAccount7, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -254,6 +268,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CustomerAccount7 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -297,7 +321,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<AccountStatus3Code>> mmStatus = new MMMessageAttribute<CustomerAccount7, Optional<AccountStatus3Code>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -310,6 +334,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AccountStatus3Code.mmObject();
+		}
+
+		@Override
+		public Optional<AccountStatus3Code> getValue(CustomerAccount7 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<AccountStatus3Code> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -351,7 +385,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<CashAccountType2Choice>> mmType = new MMMessageAttribute<CustomerAccount7, Optional<CashAccountType2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -364,6 +398,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CashAccountType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountType2Choice> getValue(CustomerAccount7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<CashAccountType2Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -406,7 +450,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<CustomerAccount7, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -419,6 +463,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(CustomerAccount7 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinMnthlyPmtVal")
@@ -463,7 +517,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMinimumMonthlyPaymentValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumMonthlyPaymentValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMinimumMonthlyPaymentValue = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AccountReportedMovement.mmMonthlyPaymentValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -476,6 +530,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMinimumMonthlyPaymentValue();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMinimumMonthlyPaymentValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxMnthlyPmtVal")
@@ -520,7 +584,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMaximumMonthlyPaymentValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumMonthlyPaymentValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMaximumMonthlyPaymentValue = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AccountReportedMovement.mmMonthlyPaymentValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -533,6 +597,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMaximumMonthlyPaymentValue();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumMonthlyPaymentValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinMnthlyRcvdVal")
@@ -577,7 +651,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMinimumMonthlyReceivedValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumMonthlyReceivedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMinimumMonthlyReceivedValue = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AccountReportedMovement.mmMonthlyReceivedValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -590,6 +664,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMinimumMonthlyReceivedValue();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMinimumMonthlyReceivedValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxMnthlyRcvdVal")
@@ -634,7 +718,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMaximumMonthlyReceivedValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumMonthlyReceivedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMaximumMonthlyReceivedValue = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AccountReportedMovement.mmMonthlyReceivedValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -647,6 +731,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMaximumMonthlyReceivedValue();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumMonthlyReceivedValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinMnthlyTxNb")
@@ -691,7 +785,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMinimumMonthlyTransactionNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumMonthlyTransactionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<Max5NumericText>> mmMinimumMonthlyTransactionNumber = new MMMessageAttribute<CustomerAccount7, Optional<Max5NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> AccountReportedMovement.mmMonthlyTransactionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -704,6 +798,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5NumericText> getValue(CustomerAccount7 obj) {
+			return obj.getMinimumMonthlyTransactionNumber();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<Max5NumericText> value) {
+			obj.setMinimumMonthlyTransactionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxMnthlyTxNb")
@@ -748,7 +852,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMaximumMonthlyTransactionNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumMonthlyTransactionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<Max5NumericText>> mmMaximumMonthlyTransactionNumber = new MMMessageAttribute<CustomerAccount7, Optional<Max5NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> AccountReportedMovement.mmMonthlyTransactionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -761,6 +865,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5NumericText> getValue(CustomerAccount7 obj) {
+			return obj.getMaximumMonthlyTransactionNumber();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<Max5NumericText> value) {
+			obj.setMaximumMonthlyTransactionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinAvrgBal")
@@ -805,7 +919,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMinimumAverageBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumAverageBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMinimumAverageBalance = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AccountReportedMovement.mmAverageBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -818,6 +932,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMinimumAverageBalance();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMinimumAverageBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAvrgBal")
@@ -862,7 +986,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMaximumAverageBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAverageBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMaximumAverageBalance = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AccountReportedMovement.mmAverageBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -875,6 +999,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMaximumAverageBalance();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumAverageBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctPurp")
@@ -916,7 +1050,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmAccountPurpose}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<Max140Text>> mmAccountPurpose = new MMMessageAttribute<CustomerAccount7, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -929,6 +1063,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(CustomerAccount7 obj) {
+			return obj.getAccountPurpose();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<Max140Text> value) {
+			obj.setAccountPurpose(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinFlrNtfctnAmt")
@@ -973,7 +1117,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMinimumFloorNotificationAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumFloorNotificationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMinimumFloorNotificationAmount = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmFloorNotificationAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -986,6 +1130,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMinimumFloorNotificationAmount();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMinimumFloorNotificationAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxFlrNtfctnAmt")
@@ -1030,7 +1184,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMaximumFloorNotificationAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumFloorNotificationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMaximumFloorNotificationAmount = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmFloorNotificationAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1043,6 +1197,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMaximumFloorNotificationAmount();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumFloorNotificationAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinClngNtfctnAmt")
@@ -1087,7 +1251,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMinimumCeilingNotificationAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumCeilingNotificationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMinimumCeilingNotificationAmount = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmCeilingNotificationAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1100,6 +1264,16 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMinimumCeilingNotificationAmount();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMinimumCeilingNotificationAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxClngNtfctnAmt")
@@ -1144,7 +1318,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmMaximumCeilingNotificationAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumCeilingNotificationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>> mmMaximumCeilingNotificationAmount = new MMMessageAttribute<CustomerAccount7, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmCeilingNotificationAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1158,9 +1332,19 @@ public class CustomerAccount7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(CustomerAccount7 obj) {
+			return obj.getMaximumCeilingNotificationAmount();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumCeilingNotificationAmount(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "StmtFrqcyAndFrmt")
-	protected List<com.tools20022.repository.msg.StatementFrequencyAndForm1> statementFrequencyAndFormat;
+	protected List<StatementFrequencyAndForm1> statementFrequencyAndFormat;
 	/**
 	 * 
 	 <p>
@@ -1196,7 +1380,7 @@ public class CustomerAccount7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementFrequencyAndFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, List<StatementFrequencyAndForm1>> mmStatementFrequencyAndFormat = new MMMessageAttribute<CustomerAccount7, List<StatementFrequencyAndForm1>>() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1206,11 +1390,21 @@ public class CustomerAccount7 {
 			name = "StatementFrequencyAndFormat";
 			definition = "Specifies how often statements (for audit purposes) will be sent, in which format, to which address.";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.StatementFrequencyAndForm1.mmObject();
+			complexType_lazy = () -> StatementFrequencyAndForm1.mmObject();
+		}
+
+		@Override
+		public List<StatementFrequencyAndForm1> getValue(CustomerAccount7 obj) {
+			return obj.getStatementFrequencyAndFormat();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, List<StatementFrequencyAndForm1> value) {
+			obj.setStatementFrequencyAndFormat(value);
 		}
 	};
 	@XmlElement(name = "Rstrctn")
-	protected List<com.tools20022.repository.msg.Restriction1> restriction;
+	protected List<Restriction1> restriction;
 	/**
 	 * 
 	 <p>
@@ -1247,7 +1441,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmRestriction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRestriction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CustomerAccount7, List<Restriction1>> mmRestriction = new MMMessageAssociationEnd<CustomerAccount7, List<Restriction1>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmAccountRestriction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1259,7 +1453,17 @@ public class CustomerAccount7 {
 			previousVersion_lazy = () -> CustomerAccount2.mmRestriction;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Restriction1.mmObject();
+			type_lazy = () -> Restriction1.mmObject();
+		}
+
+		@Override
+		public List<Restriction1> getValue(CustomerAccount7 obj) {
+			return obj.getRestriction();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, List<Restriction1> value) {
+			obj.setRestriction(value);
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -1300,7 +1504,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmClosingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CustomerAccount7, Optional<DateSearchChoice>> mmClosingDate = new MMMessageAssociationEnd<CustomerAccount7, Optional<DateSearchChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmClosingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1314,6 +1518,16 @@ public class CustomerAccount7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(CustomerAccount7 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<DateSearchChoice> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OpngDt")
@@ -1354,7 +1568,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmOpeningDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOpeningDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CustomerAccount7, Optional<DateSearchChoice>> mmOpeningDate = new MMMessageAssociationEnd<CustomerAccount7, Optional<DateSearchChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmOpeningDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1368,6 +1582,16 @@ public class CustomerAccount7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(CustomerAccount7 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<DateSearchChoice> value) {
+			obj.setOpeningDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefAcctId")
@@ -1412,7 +1636,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmReferenceAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccount7, Optional<AccountIdentification4Choice>> mmReferenceAccountIdentification = new MMMessageAttribute<CustomerAccount7, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1426,9 +1650,19 @@ public class CustomerAccount7 {
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(CustomerAccount7 obj) {
+			return obj.getReferenceAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setReferenceAccountIdentification(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Prtry")
-	protected List<com.tools20022.repository.msg.GenericIdentification1> proprietary;
+	protected List<GenericIdentification1> proprietary;
 	/**
 	 * 
 	 <p>
@@ -1465,7 +1699,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CustomerAccount7, List<GenericIdentification1>> mmProprietary = new MMMessageAssociationEnd<CustomerAccount7, List<GenericIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1477,7 +1711,17 @@ public class CustomerAccount7 {
 			previousVersion_lazy = () -> CustomerAccount2.mmProprietary;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification1> getValue(CustomerAccount7 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, List<GenericIdentification1> value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -1519,7 +1763,7 @@ public class CustomerAccount7 {
 	 * CustomerAccount2.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CustomerAccount7, Optional<OrganisationIdentification8>> mmAccountOwner = new MMMessageAssociationEnd<CustomerAccount7, Optional<OrganisationIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccount7.mmObject();
@@ -1532,7 +1776,17 @@ public class CustomerAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification8.mmObject();
+			type_lazy = () -> OrganisationIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationIdentification8> getValue(CustomerAccount7 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(CustomerAccount7 obj, Optional<OrganisationIdentification8> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 
@@ -1727,7 +1981,7 @@ public class CustomerAccount7 {
 		return statementFrequencyAndFormat == null ? statementFrequencyAndFormat = new ArrayList<>() : statementFrequencyAndFormat;
 	}
 
-	public CustomerAccount7 setStatementFrequencyAndFormat(List<com.tools20022.repository.msg.StatementFrequencyAndForm1> statementFrequencyAndFormat) {
+	public CustomerAccount7 setStatementFrequencyAndFormat(List<StatementFrequencyAndForm1> statementFrequencyAndFormat) {
 		this.statementFrequencyAndFormat = Objects.requireNonNull(statementFrequencyAndFormat);
 		return this;
 	}
@@ -1736,7 +1990,7 @@ public class CustomerAccount7 {
 		return restriction == null ? restriction = new ArrayList<>() : restriction;
 	}
 
-	public CustomerAccount7 setRestriction(List<com.tools20022.repository.msg.Restriction1> restriction) {
+	public CustomerAccount7 setRestriction(List<Restriction1> restriction) {
 		this.restriction = Objects.requireNonNull(restriction);
 		return this;
 	}
@@ -1772,7 +2026,7 @@ public class CustomerAccount7 {
 		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public CustomerAccount7 setProprietary(List<com.tools20022.repository.msg.GenericIdentification1> proprietary) {
+	public CustomerAccount7 setProprietary(List<GenericIdentification1> proprietary) {
 		this.proprietary = Objects.requireNonNull(proprietary);
 		return this;
 	}
@@ -1781,7 +2035,7 @@ public class CustomerAccount7 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public CustomerAccount7 setAccountOwner(com.tools20022.repository.msg.OrganisationIdentification8 accountOwner) {
+	public CustomerAccount7 setAccountOwner(OrganisationIdentification8 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}

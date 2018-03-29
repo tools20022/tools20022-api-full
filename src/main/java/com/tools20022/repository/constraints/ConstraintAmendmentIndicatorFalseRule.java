@@ -56,12 +56,16 @@ public class ConstraintAmendmentIndicatorFalseRule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation6> forMandateRelatedInformation6 = new MMConstraint<MandateRelatedInformation6>() {
 		{
-			validator = ConstraintAmendmentIndicatorFalseRule::checkMandateRelatedInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorFalseRule";
 			definition = "If AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
 			owner_lazy = () -> MandateRelatedInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AmendmentInformationDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AmendmentIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation6 obj) throws Exception {
+			checkMandateRelatedInformation6(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintAmendmentIndicatorFalseRule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation7> forMandateRelatedInformation7 = new MMConstraint<MandateRelatedInformation7>() {
 		{
-			validator = ConstraintAmendmentIndicatorFalseRule::checkMandateRelatedInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorFalseRule";
 			definition = "If AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
 			owner_lazy = () -> MandateRelatedInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AmendmentInformationDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AmendmentIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation7 obj) throws Exception {
+			checkMandateRelatedInformation7(obj);
 		}
 	};
 	/**
@@ -134,13 +142,17 @@ public class ConstraintAmendmentIndicatorFalseRule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation8> forMandateRelatedInformation8 = new MMConstraint<MandateRelatedInformation8>() {
 		{
-			validator = ConstraintAmendmentIndicatorFalseRule::checkMandateRelatedInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorFalseRule";
 			definition = "If AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAmendmentIndicatorFalseRule.forMandateRelatedInformation10);
 			owner_lazy = () -> MandateRelatedInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AmendmentInformationDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AmendmentIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation8 obj) throws Exception {
+			checkMandateRelatedInformation8(obj);
 		}
 	};
 	/**
@@ -170,12 +182,16 @@ public class ConstraintAmendmentIndicatorFalseRule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation9> forMandateRelatedInformation9 = new MMConstraint<MandateRelatedInformation9>() {
 		{
-			validator = ConstraintAmendmentIndicatorFalseRule::checkMandateRelatedInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorFalseRule";
 			definition = "If AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
 			owner_lazy = () -> MandateRelatedInformation9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AmendmentInformationDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AmendmentIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation9 obj) throws Exception {
+			checkMandateRelatedInformation9(obj);
 		}
 	};
 	/**
@@ -218,7 +234,6 @@ public class ConstraintAmendmentIndicatorFalseRule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation10> forMandateRelatedInformation10 = new MMConstraint<MandateRelatedInformation10>() {
 		{
-			validator = ConstraintAmendmentIndicatorFalseRule::checkMandateRelatedInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorFalseRule";
 			definition = "If AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
@@ -226,6 +241,11 @@ public class ConstraintAmendmentIndicatorFalseRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmendmentIndicatorFalseRule.forMandateRelatedInformation8;
 			owner_lazy = () -> MandateRelatedInformation10.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AmendmentInformationDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AmendmentIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation10 obj) throws Exception {
+			checkMandateRelatedInformation10(obj);
 		}
 	};
 	/**
@@ -268,7 +288,6 @@ public class ConstraintAmendmentIndicatorFalseRule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation11> forMandateRelatedInformation11 = new MMConstraint<MandateRelatedInformation11>() {
 		{
-			validator = ConstraintAmendmentIndicatorFalseRule::checkMandateRelatedInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorFalseRule";
 			definition = "If AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
@@ -276,6 +295,11 @@ public class ConstraintAmendmentIndicatorFalseRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmendmentIndicatorFalseRule.forMandateRelatedInformation10;
 			owner_lazy = () -> MandateRelatedInformation11.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AmendmentInformationDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AmendmentIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation11 obj) throws Exception {
+			checkMandateRelatedInformation11(obj);
 		}
 	};
 	/**
@@ -310,13 +334,17 @@ public class ConstraintAmendmentIndicatorFalseRule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation12> forMandateRelatedInformation12 = new MMConstraint<MandateRelatedInformation12>() {
 		{
-			validator = ConstraintAmendmentIndicatorFalseRule::checkMandateRelatedInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorFalseRule";
 			definition = "If AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmendmentIndicatorFalseRule.forMandateRelatedInformation11;
 			owner_lazy = () -> MandateRelatedInformation12.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AmendmentInformationDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AmendmentIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation12 obj) throws Exception {
+			checkMandateRelatedInformation12(obj);
 		}
 	};
 

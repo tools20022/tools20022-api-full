@@ -115,7 +115,7 @@ public class BreakdownByUserDefinedParameter2 {
 	 * definition} = "Party for which the cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByUserDefinedParameter2, Optional<PartyIdentification2Choice>> mmParty = new MMMessageAttribute<BreakdownByUserDefinedParameter2, Optional<PartyIdentification2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class BreakdownByUserDefinedParameter2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(BreakdownByUserDefinedParameter2 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter2 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -157,7 +167,7 @@ public class BreakdownByUserDefinedParameter2 {
 	 * definition} = "Country for which the cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByUserDefinedParameter2, Optional<CountryCode>> mmCountry = new MMMessageAttribute<BreakdownByUserDefinedParameter2, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class BreakdownByUserDefinedParameter2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(BreakdownByUserDefinedParameter2 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter2 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -200,7 +220,7 @@ public class BreakdownByUserDefinedParameter2 {
 	 * definition} = "Currency for which the cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByUserDefinedParameter2, Optional<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<BreakdownByUserDefinedParameter2, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmObject();
 			isDerived = false;
@@ -211,6 +231,16 @@ public class BreakdownByUserDefinedParameter2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(BreakdownByUserDefinedParameter2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter2 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsrDfnd")
@@ -243,7 +273,7 @@ public class BreakdownByUserDefinedParameter2 {
 	 * definition} = "Parameter for which the cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByUserDefinedParameter2, Optional<DataFormat2Choice>> mmUserDefined = new MMMessageAttribute<BreakdownByUserDefinedParameter2, Optional<DataFormat2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByUserDefinedParameter2.mmObject();
 			isDerived = false;
@@ -254,6 +284,16 @@ public class BreakdownByUserDefinedParameter2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DataFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DataFormat2Choice> getValue(BreakdownByUserDefinedParameter2 obj) {
+			return obj.getUserDefined();
+		}
+
+		@Override
+		public void setValue(BreakdownByUserDefinedParameter2 obj, Optional<DataFormat2Choice> value) {
+			obj.setUserDefined(value.orElse(null));
 		}
 	};
 

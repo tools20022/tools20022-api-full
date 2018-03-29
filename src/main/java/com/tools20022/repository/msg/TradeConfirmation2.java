@@ -112,7 +112,7 @@ public class TradeConfirmation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeConfirmation2, TradeConfirmationType1Code> mmType = new MMMessageAttribute<TradeConfirmation2, TradeConfirmationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeConfirmation2.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class TradeConfirmation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeConfirmationType1Code.mmObject();
+		}
+
+		@Override
+		public TradeConfirmationType1Code getValue(TradeConfirmation2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TradeConfirmation2 obj, TradeConfirmationType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "TmStmp", required = true)
@@ -165,7 +175,7 @@ public class TradeConfirmation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeConfirmation2, ISODateTime> mmTimeStamp = new MMMessageAttribute<TradeConfirmation2, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeConfirmation2.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class TradeConfirmation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(TradeConfirmation2 obj) {
+			return obj.getTimeStamp();
+		}
+
+		@Override
+		public void setValue(TradeConfirmation2 obj, ISODateTime value) {
+			obj.setTimeStamp(value);
 		}
 	};
 

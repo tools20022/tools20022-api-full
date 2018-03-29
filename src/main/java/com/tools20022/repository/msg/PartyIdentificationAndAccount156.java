@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification113;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class PartyIdentificationAndAccount156 {
 	 * PartyIdentificationAndAccount125.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount156, Optional<PartyIdentification113>> mmPartyIdentification = new MMMessageAttribute<PartyIdentificationAndAccount156, Optional<PartyIdentification113>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount156.mmObject();
@@ -131,7 +132,17 @@ public class PartyIdentificationAndAccount156 {
 			previousVersion_lazy = () -> PartyIdentificationAndAccount125.mmPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			complexType_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(PartyIdentificationAndAccount156 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount156 obj, Optional<PartyIdentification113> value) {
+			obj.setPartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -173,7 +184,7 @@ public class PartyIdentificationAndAccount156 {
 	 * PartyIdentificationAndAccount125.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount156, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<PartyIdentificationAndAccount156, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount156.mmObject();
@@ -186,6 +197,16 @@ public class PartyIdentificationAndAccount156 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentificationAndAccount156 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount156 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfSttlm", required = true)
@@ -228,7 +249,7 @@ public class PartyIdentificationAndAccount156 {
 	 * PartyIdentificationAndAccount125.mmPlaceOfSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount156, PartyIdentification113> mmPlaceOfSettlement = new MMMessageAttribute<PartyIdentificationAndAccount156, PartyIdentification113>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount156.mmObject();
@@ -240,7 +261,17 @@ public class PartyIdentificationAndAccount156 {
 			previousVersion_lazy = () -> PartyIdentificationAndAccount125.mmPlaceOfSettlement;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			complexType_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public PartyIdentification113 getValue(PartyIdentificationAndAccount156 obj) {
+			return obj.getPlaceOfSettlement();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount156 obj, PartyIdentification113 value) {
+			obj.setPlaceOfSettlement(value);
 		}
 	};
 
@@ -264,7 +295,7 @@ public class PartyIdentificationAndAccount156 {
 		return partyIdentification == null ? Optional.empty() : Optional.of(partyIdentification);
 	}
 
-	public PartyIdentificationAndAccount156 setPartyIdentification(com.tools20022.repository.msg.PartyIdentification113 partyIdentification) {
+	public PartyIdentificationAndAccount156 setPartyIdentification(PartyIdentification113 partyIdentification) {
 		this.partyIdentification = partyIdentification;
 		return this;
 	}
@@ -282,7 +313,7 @@ public class PartyIdentificationAndAccount156 {
 		return placeOfSettlement;
 	}
 
-	public PartyIdentificationAndAccount156 setPlaceOfSettlement(com.tools20022.repository.msg.PartyIdentification113 placeOfSettlement) {
+	public PartyIdentificationAndAccount156 setPlaceOfSettlement(PartyIdentification113 placeOfSettlement) {
 		this.placeOfSettlement = Objects.requireNonNull(placeOfSettlement);
 		return this;
 	}

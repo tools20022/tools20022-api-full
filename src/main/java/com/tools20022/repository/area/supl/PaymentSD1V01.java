@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SupplementaryDataLatestVersion;
 import com.tools20022.repository.msg.TransactionData1;
 import com.tools20022.repository.msgset.SupplementaryDataISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +103,7 @@ public class PaymentSD1V01 {
 	 * "Structured card remittance information supplied in a payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCardRemittanceInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentSD1V01, TransactionData1> mmCardRemittanceInformation = new MMMessageBuildingBlock<PaymentSD1V01, TransactionData1>() {
 		{
 			xmlTag = "CardRmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,12 +114,14 @@ public class PaymentSD1V01 {
 			complexType_lazy = () -> TransactionData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentSD1V01.class.getMethod("getCardRemittanceInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionData1 getValue(PaymentSD1V01 obj) {
+			return obj.getCardRemittanceInformation();
+		}
+
+		@Override
+		public void setValue(PaymentSD1V01 obj, TransactionData1 value) {
+			obj.setCardRemittanceInformation(value);
 		}
 	};
 

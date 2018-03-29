@@ -123,7 +123,7 @@ public class RateAndAmountFormat38Choice {
 	 * RateAndAmountFormat19Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat38Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat38Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat38Choice.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class RateAndAmountFormat38Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat38Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat38Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -176,7 +186,7 @@ public class RateAndAmountFormat38Choice {
 	 * RateAndAmountFormat19Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat38Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<RateAndAmountFormat38Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat38Choice.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class RateAndAmountFormat38Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(RateAndAmountFormat38Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat38Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -229,7 +249,7 @@ public class RateAndAmountFormat38Choice {
 	 * RateAndAmountFormat19Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat38Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat38Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat38Choice.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class RateAndAmountFormat38Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat38Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat38Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "IndxPts", required = true)
@@ -287,7 +317,7 @@ public class RateAndAmountFormat38Choice {
 	 * RateAndAmountFormat19Choice.mmIndexPoints}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat38Choice, DecimalNumber> mmIndexPoints = new MMMessageAttribute<RateAndAmountFormat38Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexPoints;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat38Choice.mmObject();
@@ -301,6 +331,16 @@ public class RateAndAmountFormat38Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(RateAndAmountFormat38Choice obj) {
+			return obj.getIndexPoints();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat38Choice obj, DecimalNumber value) {
+			obj.setIndexPoints(value);
 		}
 	};
 

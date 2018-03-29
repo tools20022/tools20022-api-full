@@ -108,7 +108,7 @@ public class DocumentFormat1Choice {
 	 * definition} = "Document format.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentFormat1Choice, ExternalDocumentFormat1Code> mmCode = new MMMessageAttribute<DocumentFormat1Choice, ExternalDocumentFormat1Code>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentFormat1Choice.mmObject();
@@ -120,6 +120,16 @@ public class DocumentFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentFormat1Code.mmObject();
+		}
+
+		@Override
+		public ExternalDocumentFormat1Code getValue(DocumentFormat1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DocumentFormat1Choice obj, ExternalDocumentFormat1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class DocumentFormat1Choice {
 	 * definition} = "Document format expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentFormat1Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<DocumentFormat1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DocumentFormat1Choice.mmObject();
@@ -168,6 +178,16 @@ public class DocumentFormat1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(DocumentFormat1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DocumentFormat1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

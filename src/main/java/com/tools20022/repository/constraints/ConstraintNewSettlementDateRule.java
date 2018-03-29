@@ -61,12 +61,16 @@ public class ConstraintNewSettlementDateRule {
 	 */
 	public static final MMConstraint<TradeData8> forTradeData8 = new MMConstraint<TradeData8>() {
 		{
-			validator = ConstraintNewSettlementDateRule::checkTradeData8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewSettlementDateRule";
 			definition = "The New Settlement Date element is only to be used when there has been an amendment to the Settlement Date. For example, when there has been a currency calendar amendment or a settlement deferral event.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNewSettlementDateRule.forTradeData11);
 			owner_lazy = () -> TradeData8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TradeData8 obj) throws Exception {
+			checkTradeData8(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintNewSettlementDateRule {
 	 */
 	public static final MMConstraint<TradeData11> forTradeData11 = new MMConstraint<TradeData11>() {
 		{
-			validator = ConstraintNewSettlementDateRule::checkTradeData11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewSettlementDateRule";
 			definition = "New Settlement Date is only to be used when there has been an amendment to the settlement date. For example, when there has been a currency calendar amendment or a settlement deferral event.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNewSettlementDateRule.forTradeData8;
 			owner_lazy = () -> TradeData11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TradeData11 obj) throws Exception {
+			checkTradeData11(obj);
 		}
 	};
 

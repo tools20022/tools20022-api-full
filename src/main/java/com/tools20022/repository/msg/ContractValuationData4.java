@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.CollateralValuation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection54;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -118,7 +119,7 @@ public class ContractValuationData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContractValuationData4, Optional<AmountAndDirection54>> mmValue = new MMMessageAssociationEnd<ContractValuationData4, Optional<AmountAndDirection54>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractValuationData4.mmObject();
@@ -130,7 +131,17 @@ public class ContractValuationData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection54.mmObject();
+			type_lazy = () -> AmountAndDirection54.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection54> getValue(ContractValuationData4 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(ContractValuationData4 obj, Optional<AmountAndDirection54> value) {
+			obj.setValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmStmp")
@@ -169,7 +180,7 @@ public class ContractValuationData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractValuationData4, Optional<ISODateTime>> mmTimeStamp = new MMMessageAttribute<ContractValuationData4, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractValuationData4.mmObject();
@@ -181,6 +192,16 @@ public class ContractValuationData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ContractValuationData4 obj) {
+			return obj.getTimeStamp();
+		}
+
+		@Override
+		public void setValue(ContractValuationData4 obj, Optional<ISODateTime> value) {
+			obj.setTimeStamp(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -215,7 +236,7 @@ public class ContractValuationData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractValuationData4, Optional<ValuationType1Code>> mmType = new MMMessageAttribute<ContractValuationData4, Optional<ValuationType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractValuationData4.mmObject();
 			isDerived = false;
@@ -226,6 +247,16 @@ public class ContractValuationData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ValuationType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ValuationType1Code> getValue(ContractValuationData4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ContractValuationData4 obj, Optional<ValuationType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 
@@ -249,7 +280,7 @@ public class ContractValuationData4 {
 		return value == null ? Optional.empty() : Optional.of(value);
 	}
 
-	public ContractValuationData4 setValue(com.tools20022.repository.msg.AmountAndDirection54 value) {
+	public ContractValuationData4 setValue(AmountAndDirection54 value) {
 		this.value = value;
 		return this;
 	}

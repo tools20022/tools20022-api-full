@@ -125,7 +125,7 @@ public class AccountBalanceSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceSD5, Max350Text> mmPlaceAndName = new MMMessageAttribute<AccountBalanceSD5, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD5.mmObject();
 			isDerived = false;
@@ -137,6 +137,16 @@ public class AccountBalanceSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(AccountBalanceSD5 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD5 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "TxPos")
@@ -180,7 +190,7 @@ public class AccountBalanceSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceSD5, Optional<AdjustedBalanceTypeSD1Choice>> mmTransactionPosition = new MMMessageAttribute<AccountBalanceSD5, Optional<AdjustedBalanceTypeSD1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD5.mmObject();
 			isDerived = false;
@@ -193,6 +203,16 @@ public class AccountBalanceSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AdjustedBalanceTypeSD1Choice> getValue(AccountBalanceSD5 obj) {
+			return obj.getTransactionPosition();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD5 obj, Optional<AdjustedBalanceTypeSD1Choice> value) {
+			obj.setTransactionPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsOfDt")
@@ -227,7 +247,7 @@ public class AccountBalanceSD5 {
 	 * definition} = "Effective date of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAsOfDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceSD5, Optional<ISODate>> mmAsOfDate = new MMMessageAttribute<AccountBalanceSD5, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD5.mmObject();
 			isDerived = false;
@@ -239,6 +259,16 @@ public class AccountBalanceSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AccountBalanceSD5 obj) {
+			return obj.getAsOfDate();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD5 obj, Optional<ISODate> value) {
+			obj.setAsOfDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ContraPtcptNb")
@@ -283,7 +313,7 @@ public class AccountBalanceSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountBalanceSD5, Optional<Max8Text>> mmContraParticipantNumber = new MMMessageAttribute<AccountBalanceSD5, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD5.mmObject();
 			isDerived = false;
@@ -296,6 +326,16 @@ public class AccountBalanceSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(AccountBalanceSD5 obj) {
+			return obj.getContraParticipantNumber();
+		}
+
+		@Override
+		public void setValue(AccountBalanceSD5 obj, Optional<Max8Text> value) {
+			obj.setContraParticipantNumber(value.orElse(null));
 		}
 	};
 

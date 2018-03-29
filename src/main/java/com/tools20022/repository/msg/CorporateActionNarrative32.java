@@ -132,7 +132,7 @@ public class CorporateActionNarrative32 {
 	 * CorporateActionNarrative8.mmInformationToComplyWith}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative32, List<Max350Text>> mmInformationToComplyWith = new MMMessageAttribute<CorporateActionNarrative32, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative32.mmObject();
@@ -145,6 +145,16 @@ public class CorporateActionNarrative32 {
 			previousVersion_lazy = () -> CorporateActionNarrative8.mmInformationToComplyWith;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative32 obj) {
+			return obj.getInformationToComplyWith();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative32 obj, List<Max350Text> value) {
+			obj.setInformationToComplyWith(value);
 		}
 	};
 	@XmlElement(name = "DlvryDtls")
@@ -192,7 +202,7 @@ public class CorporateActionNarrative32 {
 	 * CorporateActionNarrative8.mmDeliveryDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative32, List<Max350Text>> mmDeliveryDetails = new MMMessageAttribute<CorporateActionNarrative32, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative32.mmObject();
@@ -205,6 +215,16 @@ public class CorporateActionNarrative32 {
 			previousVersion_lazy = () -> CorporateActionNarrative8.mmDeliveryDetails;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative32 obj) {
+			return obj.getDeliveryDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative32 obj, List<Max350Text> value) {
+			obj.setDeliveryDetails(value);
 		}
 	};
 	@XmlElement(name = "FXInstrsAddtlInf")
@@ -252,7 +272,7 @@ public class CorporateActionNarrative32 {
 	 * mmForeignExchangeInstructionsAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignExchangeInstructionsAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative32, List<Max350Text>> mmForeignExchangeInstructionsAdditionalInformation = new MMMessageAttribute<CorporateActionNarrative32, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative32.mmObject();
@@ -265,6 +285,16 @@ public class CorporateActionNarrative32 {
 			previousVersion_lazy = () -> CorporateActionNarrative8.mmForeignExchangeInstructionsAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative32 obj) {
+			return obj.getForeignExchangeInstructionsAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative32 obj, List<Max350Text> value) {
+			obj.setForeignExchangeInstructionsAdditionalInformation(value);
 		}
 	};
 	@XmlElement(name = "InstrAddtlInf")
@@ -303,7 +333,7 @@ public class CorporateActionNarrative32 {
 	 * CorporateActionNarrative8.mmInstructionAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative32, List<Max350Text>> mmInstructionAdditionalInformation = new MMMessageAttribute<CorporateActionNarrative32, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative32.mmObject();
 			isDerived = false;
@@ -314,6 +344,16 @@ public class CorporateActionNarrative32 {
 			previousVersion_lazy = () -> CorporateActionNarrative8.mmInstructionAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative32 obj) {
+			return obj.getInstructionAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative32 obj, List<Max350Text> value) {
+			obj.setInstructionAdditionalInformation(value);
 		}
 	};
 

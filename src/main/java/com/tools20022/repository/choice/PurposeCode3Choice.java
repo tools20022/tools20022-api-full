@@ -110,7 +110,7 @@ public class PurposeCode3Choice {
 	 * definition} = "Specifies the type of securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PurposeCode3Choice, SecuritiesAccountPurposeType1Code> mmCode = new MMMessageAttribute<PurposeCode3Choice, SecuritiesAccountPurposeType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PurposeCode3Choice.mmObject();
@@ -122,6 +122,16 @@ public class PurposeCode3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccountPurposeType1Code getValue(PurposeCode3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PurposeCode3Choice obj, SecuritiesAccountPurposeType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -158,7 +168,7 @@ public class PurposeCode3Choice {
 	 * definition} = "Account type is defined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PurposeCode3Choice, GenericIdentification27> mmProprietary = new MMMessageAssociationEnd<PurposeCode3Choice, GenericIdentification27>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PurposeCode3Choice.mmObject();
@@ -171,6 +181,16 @@ public class PurposeCode3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification27.mmObject();
+		}
+
+		@Override
+		public GenericIdentification27 getValue(PurposeCode3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PurposeCode3Choice obj, GenericIdentification27 value) {
+			obj.setProprietary(value);
 		}
 	};
 

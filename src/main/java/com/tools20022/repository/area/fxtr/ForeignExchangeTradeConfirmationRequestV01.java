@@ -27,7 +27,6 @@ import com.tools20022.repository.codeset.QueryTradeStatus1Code;
 import com.tools20022.repository.datatype.Max35NumericText;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.FXPostTradeConfirmation;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -137,7 +136,7 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 	 * definition} = "Message management information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, Header23> mmHeader = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, Header23>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,12 +147,14 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 			complexType_lazy = () -> Header23.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationRequestV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header23 getValue(ForeignExchangeTradeConfirmationRequestV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationRequestV01 obj, Header23 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "ReqId", required = true)
@@ -181,7 +182,7 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 	 * definition} = "Identifies the confirm request messge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, MessageIdentification1> mmRequestIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, MessageIdentification1>() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,12 +193,14 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationRequestV01.class.getMethod("getRequestIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ForeignExchangeTradeConfirmationRequestV01 obj) {
+			return obj.getRequestIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationRequestV01 obj, MessageIdentification1 value) {
+			obj.setRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradDtl", required = true)
@@ -223,7 +226,7 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 	 * definition} = "Details of the treasury trade confirmed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeDetail = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, Trade2> mmTradeDetail = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, Trade2>() {
 		{
 			xmlTag = "TradDtl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +237,14 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 			complexType_lazy = () -> Trade2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationRequestV01.class.getMethod("getTradeDetail", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Trade2 getValue(ForeignExchangeTradeConfirmationRequestV01 obj) {
+			return obj.getTradeDetail();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationRequestV01 obj, Trade2 value) {
+			obj.setTradeDetail(value);
 		}
 	};
 	@XmlElement(name = "ConfTp", required = true)
@@ -267,7 +272,7 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 	 * definition} = "Identifies the type of confirmation message being sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmConfirmationType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, ConfirmationRequest1Code> mmConfirmationType = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, ConfirmationRequest1Code>() {
 		{
 			xmlTag = "ConfTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,12 +283,14 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 			simpleType_lazy = () -> ConfirmationRequest1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationRequestV01.class.getMethod("getConfirmationType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ConfirmationRequest1Code getValue(ForeignExchangeTradeConfirmationRequestV01 obj) {
+			return obj.getConfirmationType();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationRequestV01 obj, ConfirmationRequest1Code value) {
+			obj.setConfirmationType(value);
 		}
 	};
 	@XmlElement(name = "QryPrd", required = true)
@@ -310,7 +317,7 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 	 * definition} = "Period of the inquiry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryPeriod = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, Period4> mmQueryPeriod = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, Period4>() {
 		{
 			xmlTag = "QryPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +328,14 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 			complexType_lazy = () -> Period4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationRequestV01.class.getMethod("getQueryPeriod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Period4 getValue(ForeignExchangeTradeConfirmationRequestV01 obj) {
+			return obj.getQueryPeriod();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationRequestV01 obj, Period4 value) {
+			obj.setQueryPeriod(value);
 		}
 	};
 	@XmlElement(name = "QryStartNb", required = true)
@@ -354,7 +363,7 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 	 * definition} = "Start number in request result."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryStartNumber = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, Max35NumericText> mmQueryStartNumber = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, Max35NumericText>() {
 		{
 			xmlTag = "QryStartNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,12 +374,14 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationRequestV01.class.getMethod("getQueryStartNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35NumericText getValue(ForeignExchangeTradeConfirmationRequestV01 obj) {
+			return obj.getQueryStartNumber();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationRequestV01 obj, Max35NumericText value) {
+			obj.setQueryStartNumber(value);
 		}
 	};
 	@XmlElement(name = "QryTradSts", required = true)
@@ -398,7 +409,7 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 	 * definition} = "Specifies the inquiry status of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryTradeStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, QueryTradeStatus1Code> mmQueryTradeStatus = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, QueryTradeStatus1Code>() {
 		{
 			xmlTag = "QryTradSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -409,12 +420,14 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 			simpleType_lazy = () -> QueryTradeStatus1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationRequestV01.class.getMethod("getQueryTradeStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public QueryTradeStatus1Code getValue(ForeignExchangeTradeConfirmationRequestV01 obj) {
+			return obj.getQueryTradeStatus();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationRequestV01 obj, QueryTradeStatus1Code value) {
+			obj.setQueryTradeStatus(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -444,7 +457,7 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationRequestV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -454,12 +467,14 @@ public class ForeignExchangeTradeConfirmationRequestV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ForeignExchangeTradeConfirmationRequestV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationRequestV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

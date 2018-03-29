@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LimitReport6;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -74,7 +75,7 @@ public class Limits6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "CurLmt")
-	protected List<com.tools20022.repository.msg.LimitReport6> currentLimit;
+	protected List<LimitReport6> currentLimit;
 	/**
 	 * 
 	 <p>
@@ -111,7 +112,7 @@ public class Limits6 {
 	 * Limits5.mmCurrentLimit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Limits6, List<LimitReport6>> mmCurrentLimit = new MMMessageAssociationEnd<Limits6, List<LimitReport6>>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limits6.mmObject();
@@ -123,11 +124,21 @@ public class Limits6 {
 			previousVersion_lazy = () -> Limits5.mmCurrentLimit;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitReport6.mmObject();
+			type_lazy = () -> LimitReport6.mmObject();
+		}
+
+		@Override
+		public List<LimitReport6> getValue(Limits6 obj) {
+			return obj.getCurrentLimit();
+		}
+
+		@Override
+		public void setValue(Limits6 obj, List<LimitReport6> value) {
+			obj.setCurrentLimit(value);
 		}
 	};
 	@XmlElement(name = "DfltLmt")
-	protected List<com.tools20022.repository.msg.LimitReport6> defaultLimit;
+	protected List<LimitReport6> defaultLimit;
 	/**
 	 * 
 	 <p>
@@ -164,7 +175,7 @@ public class Limits6 {
 	 * Limits5.mmDefaultLimit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefaultLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Limits6, List<LimitReport6>> mmDefaultLimit = new MMMessageAssociationEnd<Limits6, List<LimitReport6>>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Limits6.mmObject();
@@ -176,7 +187,17 @@ public class Limits6 {
 			previousVersion_lazy = () -> Limits5.mmDefaultLimit;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitReport6.mmObject();
+			type_lazy = () -> LimitReport6.mmObject();
+		}
+
+		@Override
+		public List<LimitReport6> getValue(Limits6 obj) {
+			return obj.getDefaultLimit();
+		}
+
+		@Override
+		public void setValue(Limits6 obj, List<LimitReport6> value) {
+			obj.setDefaultLimit(value);
 		}
 	};
 
@@ -199,7 +220,7 @@ public class Limits6 {
 		return currentLimit == null ? currentLimit = new ArrayList<>() : currentLimit;
 	}
 
-	public Limits6 setCurrentLimit(List<com.tools20022.repository.msg.LimitReport6> currentLimit) {
+	public Limits6 setCurrentLimit(List<LimitReport6> currentLimit) {
 		this.currentLimit = Objects.requireNonNull(currentLimit);
 		return this;
 	}
@@ -208,7 +229,7 @@ public class Limits6 {
 		return defaultLimit == null ? defaultLimit = new ArrayList<>() : defaultLimit;
 	}
 
-	public Limits6 setDefaultLimit(List<com.tools20022.repository.msg.LimitReport6> defaultLimit) {
+	public Limits6 setDefaultLimit(List<LimitReport6> defaultLimit) {
 		this.defaultLimit = Objects.requireNonNull(defaultLimit);
 		return this;
 	}

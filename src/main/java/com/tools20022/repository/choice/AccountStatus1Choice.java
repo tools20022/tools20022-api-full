@@ -105,7 +105,7 @@ public class AccountStatus1Choice {
 	 * definition} = "Status of the account expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountStatus1Choice, AccountStatus4Code> mmCode = new MMMessageAttribute<AccountStatus1Choice, AccountStatus4Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountStatus1Choice.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class AccountStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountStatus4Code.mmObject();
+		}
+
+		@Override
+		public AccountStatus4Code getValue(AccountStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AccountStatus1Choice obj, AccountStatus4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -147,7 +157,7 @@ public class AccountStatus1Choice {
 	 * definition} = "Status of the account expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatus1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<AccountStatus1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountStatus1Choice.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class AccountStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(AccountStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AccountStatus1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -127,7 +127,7 @@ public class BalanceDetails4 {
 	 * definition} = "Specifies the nature of a balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceDetails4, List<BalanceType3Choice>> mmBalanceType = new MMMessageAssociationEnd<BalanceDetails4, List<BalanceType3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails4.mmObject();
@@ -139,6 +139,16 @@ public class BalanceDetails4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BalanceType3Choice.mmObject();
+		}
+
+		@Override
+		public List<BalanceType3Choice> getValue(BalanceDetails4 obj) {
+			return obj.getBalanceType();
+		}
+
+		@Override
+		public void setValue(BalanceDetails4 obj, List<BalanceType3Choice> value) {
+			obj.setBalanceType(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyTp", required = true)
@@ -178,7 +188,7 @@ public class BalanceDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails4, BalanceCounterparty1Code> mmCounterpartyType = new MMMessageAttribute<BalanceDetails4, BalanceCounterparty1Code>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCalculationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails4.mmObject();
@@ -190,6 +200,16 @@ public class BalanceDetails4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceCounterparty1Code.mmObject();
+		}
+
+		@Override
+		public BalanceCounterparty1Code getValue(BalanceDetails4 obj) {
+			return obj.getCounterpartyType();
+		}
+
+		@Override
+		public void setValue(BalanceDetails4 obj, BalanceCounterparty1Code value) {
+			obj.setCounterpartyType(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyId")
@@ -228,7 +248,7 @@ public class BalanceDetails4 {
 	 * "Identifies the counterparty for which the balance is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails4, List<MemberIdentificationChoice>> mmCounterpartyIdentification = new MMMessageAttribute<BalanceDetails4, List<MemberIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCounterparty;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails4.mmObject();
@@ -239,6 +259,16 @@ public class BalanceDetails4 {
 			definition = "Identifies the counterparty for which the balance is calculated.";
 			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public List<MemberIdentificationChoice> getValue(BalanceDetails4 obj) {
+			return obj.getCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(BalanceDetails4 obj, List<MemberIdentificationChoice> value) {
+			obj.setCounterpartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "BalValDt")
@@ -277,7 +307,7 @@ public class BalanceDetails4 {
 	 * "Date and time at which the balance is or will be available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails4, List<DateAndDateTimeSearchChoice>> mmBalanceValueDate = new MMMessageAttribute<BalanceDetails4, List<DateAndDateTimeSearchChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails4.mmObject();
@@ -288,6 +318,16 @@ public class BalanceDetails4 {
 			definition = "Date and time at which the balance is or will be available.";
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
+		}
+
+		@Override
+		public List<DateAndDateTimeSearchChoice> getValue(BalanceDetails4 obj) {
+			return obj.getBalanceValueDate();
+		}
+
+		@Override
+		public void setValue(BalanceDetails4 obj, List<DateAndDateTimeSearchChoice> value) {
+			obj.setBalanceValueDate(value);
 		}
 	};
 

@@ -100,7 +100,7 @@ public class CorporateActionOptionExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionExtension2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionOptionExtension2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionExtension2.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class CorporateActionOptionExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionOptionExtension2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionExtension2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCCOptnTp")
@@ -148,7 +158,7 @@ public class CorporateActionOptionExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCCOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionExtension2, Optional<Max4AlphaNumericText>> mmDTCCOptionType = new MMMessageAttribute<CorporateActionOptionExtension2, Optional<Max4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionExtension2.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class CorporateActionOptionExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(CorporateActionOptionExtension2 obj) {
+			return obj.getDTCCOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionExtension2 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setDTCCOptionType(value.orElse(null));
 		}
 	};
 

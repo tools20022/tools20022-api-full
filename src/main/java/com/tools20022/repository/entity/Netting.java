@@ -22,11 +22,13 @@ import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.entity.Price;
+import com.tools20022.repository.entity.SecuritiesClearing;
+import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CutOffData1;
 import com.tools20022.repository.msg.NetObligation1;
 import com.tools20022.repository.msg.NettingCutOff1;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -113,7 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Netting extends ObligationFulfilment {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
-	protected List<com.tools20022.repository.entity.Price> averageDealPrice;
+	protected List<Price> averageDealPrice;
 	/**
 	 * 
 	 <p>
@@ -144,7 +146,7 @@ public class Netting extends ObligationFulfilment {
 	 * definition} = "Average price of the netted trades."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAverageDealPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Netting, List<Price>> mmAverageDealPrice = new MMBusinessAssociationEnd<Netting, List<Price>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
@@ -152,9 +154,19 @@ public class Netting extends ObligationFulfilment {
 			name = "AverageDealPrice";
 			definition = "Average price of the netted trades.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Price.mmNetting;
+			opposite_lazy = () -> Price.mmNetting;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
+			type_lazy = () -> Price.mmObject();
+		}
+
+		@Override
+		public List<Price> getValue(Netting obj) {
+			return obj.getAverageDealPrice();
+		}
+
+		@Override
+		public void setValue(Netting obj, List<Price> value) {
+			obj.setAverageDealPrice(value);
 		}
 	};
 	protected SecuritiesClearing relatedSecuritiesClearingProcess;
@@ -190,7 +202,7 @@ public class Netting extends ObligationFulfilment {
 	 * definition} = "Clearing process which includes the netting."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedSecuritiesClearingProcess = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Netting, Optional<SecuritiesClearing>> mmRelatedSecuritiesClearingProcess = new MMBusinessAssociationEnd<Netting, Optional<SecuritiesClearing>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
@@ -199,9 +211,19 @@ public class Netting extends ObligationFulfilment {
 			definition = "Clearing process which includes the netting.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmNetting;
+			opposite_lazy = () -> SecuritiesClearing.mmNetting;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesClearing.mmObject();
+			type_lazy = () -> SecuritiesClearing.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesClearing> getValue(Netting obj) {
+			return obj.getRelatedSecuritiesClearingProcess();
+		}
+
+		@Override
+		public void setValue(Netting obj, Optional<SecuritiesClearing> value) {
+			obj.setRelatedSecuritiesClearingProcess(value.orElse(null));
 		}
 	};
 	protected ActiveCurrencyAndAmount netPositionAmount;
@@ -230,7 +252,7 @@ public class Netting extends ObligationFulfilment {
 	 * definition} = "Calculated position."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNetPositionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Netting, ActiveCurrencyAndAmount> mmNetPositionAmount = new MMBusinessAttribute<Netting, ActiveCurrencyAndAmount>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
@@ -242,12 +264,14 @@ public class Netting extends ObligationFulfilment {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Netting.class.getMethod("getNetPositionAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveCurrencyAndAmount getValue(Netting obj) {
+			return obj.getNetPositionAmount();
+		}
+
+		@Override
+		public void setValue(Netting obj, ActiveCurrencyAndAmount value) {
+			obj.setNetPositionAmount(value);
 		}
 	};
 	protected DebitCreditCode amountDirection;
@@ -284,7 +308,7 @@ public class Netting extends ObligationFulfilment {
 	 * definition} = "Specifies whether the amount is a debit or a credit."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAmountDirection = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Netting, DebitCreditCode> mmAmountDirection = new MMBusinessAttribute<Netting, DebitCreditCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(NetObligation1.mmObligationDirection);
 			isDerived = false;
@@ -297,12 +321,14 @@ public class Netting extends ObligationFulfilment {
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Netting.class.getMethod("getAmountDirection", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DebitCreditCode getValue(Netting obj) {
+			return obj.getAmountDirection();
+		}
+
+		@Override
+		public void setValue(Netting obj, DebitCreditCode value) {
+			obj.setAmountDirection(value);
 		}
 	};
 	protected SecuritiesQuantity netQuantity;
@@ -338,7 +364,7 @@ public class Netting extends ObligationFulfilment {
 	 * definition} = "Calculated net quantity of securities."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNetQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Netting, SecuritiesQuantity> mmNetQuantity = new MMBusinessAssociationEnd<Netting, SecuritiesQuantity>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
@@ -347,9 +373,19 @@ public class Netting extends ObligationFulfilment {
 			definition = "Calculated net quantity of securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmNetting;
+			opposite_lazy = () -> SecuritiesQuantity.mmNetting;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
+			type_lazy = () -> SecuritiesQuantity.mmObject();
+		}
+
+		@Override
+		public SecuritiesQuantity getValue(Netting obj) {
+			return obj.getNetQuantity();
+		}
+
+		@Override
+		public void setValue(Netting obj, SecuritiesQuantity value) {
+			obj.setNetQuantity(value);
 		}
 	};
 	protected CurrencyAndAmount positionAmount;
@@ -378,7 +414,7 @@ public class Netting extends ObligationFulfilment {
 	 * definition} = "Intra-position amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPositionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Netting, CurrencyAndAmount> mmPositionAmount = new MMBusinessAttribute<Netting, CurrencyAndAmount>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
@@ -390,12 +426,14 @@ public class Netting extends ObligationFulfilment {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Netting.class.getMethod("getPositionAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Netting obj) {
+			return obj.getPositionAmount();
+		}
+
+		@Override
+		public void setValue(Netting obj, CurrencyAndAmount value) {
+			obj.setPositionAmount(value);
 		}
 	};
 
@@ -406,7 +444,7 @@ public class Netting extends ObligationFulfilment {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Netting";
 				definition = "Offset of payables against receivables to reduce credit exposure to a counterparty.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesQuantity.mmNetting, com.tools20022.repository.entity.Price.mmNetting, com.tools20022.repository.entity.SecuritiesClearing.mmNetting);
+				associationDomain_lazy = () -> Arrays.asList(SecuritiesQuantity.mmNetting, Price.mmNetting, SecuritiesClearing.mmNetting);
 				derivationElement_lazy = () -> Arrays.asList(CutOffData1.mmNettingCutOffDetails);
 				superType_lazy = () -> ObligationFulfilment.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Netting.mmAverageDealPrice, com.tools20022.repository.entity.Netting.mmRelatedSecuritiesClearingProcess,
@@ -427,7 +465,7 @@ public class Netting extends ObligationFulfilment {
 		return averageDealPrice == null ? averageDealPrice = new ArrayList<>() : averageDealPrice;
 	}
 
-	public Netting setAverageDealPrice(List<com.tools20022.repository.entity.Price> averageDealPrice) {
+	public Netting setAverageDealPrice(List<Price> averageDealPrice) {
 		this.averageDealPrice = Objects.requireNonNull(averageDealPrice);
 		return this;
 	}
@@ -436,7 +474,7 @@ public class Netting extends ObligationFulfilment {
 		return relatedSecuritiesClearingProcess == null ? Optional.empty() : Optional.of(relatedSecuritiesClearingProcess);
 	}
 
-	public Netting setRelatedSecuritiesClearingProcess(com.tools20022.repository.entity.SecuritiesClearing relatedSecuritiesClearingProcess) {
+	public Netting setRelatedSecuritiesClearingProcess(SecuritiesClearing relatedSecuritiesClearingProcess) {
 		this.relatedSecuritiesClearingProcess = relatedSecuritiesClearingProcess;
 		return this;
 	}
@@ -463,7 +501,7 @@ public class Netting extends ObligationFulfilment {
 		return netQuantity;
 	}
 
-	public Netting setNetQuantity(com.tools20022.repository.entity.SecuritiesQuantity netQuantity) {
+	public Netting setNetQuantity(SecuritiesQuantity netQuantity) {
 		this.netQuantity = Objects.requireNonNull(netQuantity);
 		return this;
 	}

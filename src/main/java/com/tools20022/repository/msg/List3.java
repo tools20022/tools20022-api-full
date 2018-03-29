@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ListStrikePriceDetails1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,7 +128,7 @@ public class List3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List3, Max35Text> mmListIdentification = new MMMessageAttribute<List3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.List3.mmObject();
@@ -140,6 +141,16 @@ public class List3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(List3 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(List3 obj, Max35Text value) {
+			obj.setListIdentification(value);
 		}
 	};
 	@XmlElement(name = "NbOfStrks", required = true)
@@ -174,7 +185,7 @@ public class List3 {
 	 * "Identifies the number of strike price entries in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfStrikes = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List3, Number> mmNumberOfStrikes = new MMMessageAttribute<List3, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List3.mmObject();
 			isDerived = false;
@@ -186,6 +197,16 @@ public class List3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(List3 obj) {
+			return obj.getNumberOfStrikes();
+		}
+
+		@Override
+		public void setValue(List3 obj, Number value) {
+			obj.setNumberOfStrikes(value);
 		}
 	};
 	@XmlElement(name = "TtlNbOfStrks", required = true)
@@ -221,7 +242,7 @@ public class List3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfStrikes = new MMMessageAttribute() {
+	public static final MMMessageAttribute<List3, Number> mmTotalNumberOfStrikes = new MMMessageAttribute<List3, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.List3.mmObject();
 			isDerived = false;
@@ -234,9 +255,19 @@ public class List3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Number getValue(List3 obj) {
+			return obj.getTotalNumberOfStrikes();
+		}
+
+		@Override
+		public void setValue(List3 obj, Number value) {
+			obj.setTotalNumberOfStrikes(value);
+		}
 	};
 	@XmlElement(name = "StrkPricDtls", required = true)
-	protected List<com.tools20022.repository.msg.ListStrikePriceDetails1> strikePriceDetails;
+	protected List<ListStrikePriceDetails1> strikePriceDetails;
 	/**
 	 * 
 	 <p>
@@ -269,7 +300,7 @@ public class List3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStrikePriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<List3, List<ListStrikePriceDetails1>> mmStrikePriceDetails = new MMMessageAssociationEnd<List3, List<ListStrikePriceDetails1>>() {
 		{
 			businessComponentTrace_lazy = () -> ListTrading.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.List3.mmObject();
@@ -280,7 +311,17 @@ public class List3 {
 			definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
+			type_lazy = () -> ListStrikePriceDetails1.mmObject();
+		}
+
+		@Override
+		public List<ListStrikePriceDetails1> getValue(List3 obj) {
+			return obj.getStrikePriceDetails();
+		}
+
+		@Override
+		public void setValue(List3 obj, List<ListStrikePriceDetails1> value) {
+			obj.setStrikePriceDetails(value);
 		}
 	};
 
@@ -330,7 +371,7 @@ public class List3 {
 		return strikePriceDetails == null ? strikePriceDetails = new ArrayList<>() : strikePriceDetails;
 	}
 
-	public List3 setStrikePriceDetails(List<com.tools20022.repository.msg.ListStrikePriceDetails1> strikePriceDetails) {
+	public List3 setStrikePriceDetails(List<ListStrikePriceDetails1> strikePriceDetails) {
 		this.strikePriceDetails = Objects.requireNonNull(strikePriceDetails);
 		return this;
 	}

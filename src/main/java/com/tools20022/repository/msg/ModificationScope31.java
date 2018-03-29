@@ -25,6 +25,7 @@ import com.tools20022.repository.area.acmt.AccountModificationInstructionV06;
 import com.tools20022.repository.area.acmt.AccountModificationInstructionV07;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DocumentToSend3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +124,7 @@ public class ModificationScope31 {
 	 * ModificationScope22.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope31, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope31, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope31.mmObject();
 			isDerived = false;
@@ -135,6 +136,16 @@ public class ModificationScope31 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope31 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope31 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "SvcLvlAgrmt", required = true)
@@ -172,7 +183,7 @@ public class ModificationScope31 {
 	 * ModificationScope22.mmServiceLevelAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevelAgreement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope31, DocumentToSend3> mmServiceLevelAgreement = new MMMessageAssociationEnd<ModificationScope31, DocumentToSend3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope31.mmObject();
 			isDerived = false;
@@ -184,7 +195,17 @@ public class ModificationScope31 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentToSend3.mmObject();
+			type_lazy = () -> DocumentToSend3.mmObject();
+		}
+
+		@Override
+		public DocumentToSend3 getValue(ModificationScope31 obj) {
+			return obj.getServiceLevelAgreement();
+		}
+
+		@Override
+		public void setValue(ModificationScope31 obj, DocumentToSend3 value) {
+			obj.setServiceLevelAgreement(value);
 		}
 	};
 
@@ -216,7 +237,7 @@ public class ModificationScope31 {
 		return serviceLevelAgreement;
 	}
 
-	public ModificationScope31 setServiceLevelAgreement(com.tools20022.repository.msg.DocumentToSend3 serviceLevelAgreement) {
+	public ModificationScope31 setServiceLevelAgreement(DocumentToSend3 serviceLevelAgreement) {
 		this.serviceLevelAgreement = Objects.requireNonNull(serviceLevelAgreement);
 		return this;
 	}

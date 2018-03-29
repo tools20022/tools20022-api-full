@@ -25,7 +25,6 @@ import com.tools20022.repository.datatype.Min3Max4Text;
 import com.tools20022.repository.entity.CardPaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -390,7 +389,7 @@ public class MerchantRole extends CardPaymentPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMerchantCategoryCode = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<MerchantRole, Min3Max4Text> mmMerchantCategoryCode = new MMBusinessAttribute<MerchantRole, Min3Max4Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransactionDetails8.mmMerchantCategoryCode, CommonData1.mmMerchantCategoryCode, CardPaymentTransaction4.mmMerchantCategoryCode, CommonData2.mmMerchantCategoryCode,
 					CardPaymentTransaction14.mmMerchantCategoryCode, CardPaymentTransaction7.mmMerchantCategoryCode, CardPaymentTransaction16.mmMerchantCategoryCode, CardPaymentTransaction20.mmMerchantCategoryCode,
@@ -417,12 +416,14 @@ public class MerchantRole extends CardPaymentPartyRole {
 			simpleType_lazy = () -> Min3Max4Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MerchantRole.class.getMethod("getMerchantCategoryCode", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Min3Max4Text getValue(MerchantRole obj) {
+			return obj.getMerchantCategoryCode();
+		}
+
+		@Override
+		public void setValue(MerchantRole obj, Min3Max4Text value) {
+			obj.setMerchantCategoryCode(value);
 		}
 	};
 	protected Max35Text merchantIdentification;
@@ -450,7 +451,7 @@ public class MerchantRole extends CardPaymentPartyRole {
 	 * definition} = "Number that identifies the merchant to the card issuer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMerchantIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<MerchantRole, Max35Text> mmMerchantIdentification = new MMBusinessAttribute<MerchantRole, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MerchantRole.mmObject();
@@ -462,12 +463,14 @@ public class MerchantRole extends CardPaymentPartyRole {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MerchantRole.class.getMethod("getMerchantIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(MerchantRole obj) {
+			return obj.getMerchantIdentification();
+		}
+
+		@Override
+		public void setValue(MerchantRole obj, Max35Text value) {
+			obj.setMerchantIdentification(value);
 		}
 	};
 

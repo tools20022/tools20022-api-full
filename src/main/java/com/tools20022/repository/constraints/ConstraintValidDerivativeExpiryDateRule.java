@@ -53,11 +53,15 @@ public class ConstraintValidDerivativeExpiryDateRule {
 	 */
 	public static final MMConstraint<SecuritiesReferenceDataReport5> forSecuritiesReferenceDataReport5 = new MMConstraint<SecuritiesReferenceDataReport5>() {
 		{
-			validator = ConstraintValidDerivativeExpiryDateRule::checkSecuritiesReferenceDataReport5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidDerivativeExpiryDateRule";
 			definition = "DerivativesInstrumentAttributes/ExpiryDate cannot be a date earlier than TradingVenueRelatedAttributes/FirstTradeDate, TradingVenueRelatedAttributes/RequestForAdmissionDate or TradingVenueRelatedAttributes/AdmissionApprovalDate.";
 			owner_lazy = () -> SecuritiesReferenceDataReport5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesReferenceDataReport5 obj) throws Exception {
+			checkSecuritiesReferenceDataReport5(obj);
 		}
 	};
 

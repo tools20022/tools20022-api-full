@@ -30,7 +30,6 @@ import com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails24;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactionIdentifications1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -197,7 +196,7 @@ public class SecuritiesFinancingStatusAdviceV05 {
 	 * SecuritiesFinancingStatusAdviceV04.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, TransactionIdentifications1> mmTransactionIdentification = new MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, TransactionIdentifications1>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +209,14 @@ public class SecuritiesFinancingStatusAdviceV05 {
 			complexType_lazy = () -> TransactionIdentifications1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingStatusAdviceV05.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionIdentifications1 getValue(SecuritiesFinancingStatusAdviceV05 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingStatusAdviceV05 obj, TransactionIdentifications1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -256,7 +257,7 @@ public class SecuritiesFinancingStatusAdviceV05 {
 	 * SecuritiesFinancingStatusAdviceV04.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<ProcessingStatus38Choice>> mmProcessingStatus = new MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<ProcessingStatus38Choice>>() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +270,14 @@ public class SecuritiesFinancingStatusAdviceV05 {
 			complexType_lazy = () -> ProcessingStatus38Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingStatusAdviceV05.class.getMethod("getProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ProcessingStatus38Choice> getValue(SecuritiesFinancingStatusAdviceV05 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingStatusAdviceV05 obj, Optional<ProcessingStatus38Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSts")
@@ -315,7 +318,7 @@ public class SecuritiesFinancingStatusAdviceV05 {
 	 * SecuritiesFinancingStatusAdviceV04.mmMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMatchingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<MatchingStatus20Choice>> mmMatchingStatus = new MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<MatchingStatus20Choice>>() {
 		{
 			xmlTag = "MtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,12 +331,14 @@ public class SecuritiesFinancingStatusAdviceV05 {
 			complexType_lazy = () -> MatchingStatus20Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingStatusAdviceV05.class.getMethod("getMatchingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MatchingStatus20Choice> getValue(SecuritiesFinancingStatusAdviceV05 obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingStatusAdviceV05 obj, Optional<MatchingStatus20Choice> value) {
+			obj.setMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts")
@@ -376,7 +381,7 @@ public class SecuritiesFinancingStatusAdviceV05 {
 	 * SecuritiesFinancingStatusAdviceV04.mmInferredMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInferredMatchingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<MatchingStatus20Choice>> mmInferredMatchingStatus = new MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<MatchingStatus20Choice>>() {
 		{
 			xmlTag = "IfrrdMtchgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -389,12 +394,14 @@ public class SecuritiesFinancingStatusAdviceV05 {
 			complexType_lazy = () -> MatchingStatus20Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingStatusAdviceV05.class.getMethod("getInferredMatchingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MatchingStatus20Choice> getValue(SecuritiesFinancingStatusAdviceV05 obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingStatusAdviceV05 obj, Optional<MatchingStatus20Choice> value) {
+			obj.setInferredMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -435,7 +442,7 @@ public class SecuritiesFinancingStatusAdviceV05 {
 	 * SecuritiesFinancingStatusAdviceV04.mmSettlementStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<SettlementStatus10Choice>> mmSettlementStatus = new MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<SettlementStatus10Choice>>() {
 		{
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -448,12 +455,14 @@ public class SecuritiesFinancingStatusAdviceV05 {
 			complexType_lazy = () -> SettlementStatus10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingStatusAdviceV05.class.getMethod("getSettlementStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementStatus10Choice> getValue(SecuritiesFinancingStatusAdviceV05 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingStatusAdviceV05 obj, Optional<SettlementStatus10Choice> value) {
+			obj.setSettlementStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RepoCallReqSts")
@@ -495,7 +504,7 @@ public class SecuritiesFinancingStatusAdviceV05 {
 	 * SecuritiesFinancingStatusAdviceV04.mmRepoCallRequestStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRepoCallRequestStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<RepoCallRequestStatus5Choice>> mmRepoCallRequestStatus = new MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<RepoCallRequestStatus5Choice>>() {
 		{
 			xmlTag = "RepoCallReqSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -508,12 +517,14 @@ public class SecuritiesFinancingStatusAdviceV05 {
 			complexType_lazy = () -> RepoCallRequestStatus5Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingStatusAdviceV05.class.getMethod("getRepoCallRequestStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<RepoCallRequestStatus5Choice> getValue(SecuritiesFinancingStatusAdviceV05 obj) {
+			return obj.getRepoCallRequestStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingStatusAdviceV05 obj, Optional<RepoCallRequestStatus5Choice> value) {
+			obj.setRepoCallRequestStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDtls")
@@ -554,7 +565,7 @@ public class SecuritiesFinancingStatusAdviceV05 {
 	 * SecuritiesFinancingStatusAdviceV04.mmTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<SecuritiesFinancingTransactionDetails24>> mmTransactionDetails = new MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, Optional<SecuritiesFinancingTransactionDetails24>>() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -567,12 +578,14 @@ public class SecuritiesFinancingStatusAdviceV05 {
 			complexType_lazy = () -> SecuritiesFinancingTransactionDetails24.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingStatusAdviceV05.class.getMethod("getTransactionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SecuritiesFinancingTransactionDetails24> getValue(SecuritiesFinancingStatusAdviceV05 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingStatusAdviceV05 obj, Optional<SecuritiesFinancingTransactionDetails24> value) {
+			obj.setTransactionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -615,7 +628,7 @@ public class SecuritiesFinancingStatusAdviceV05 {
 	 * SecuritiesFinancingStatusAdviceV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<SecuritiesFinancingStatusAdviceV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -627,12 +640,14 @@ public class SecuritiesFinancingStatusAdviceV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesFinancingStatusAdviceV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesFinancingStatusAdviceV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesFinancingStatusAdviceV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

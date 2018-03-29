@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.FundOrderDesk;
 import com.tools20022.repository.entity.InvestmentFund;
 import com.tools20022.repository.entity.Location;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.UTCOffset1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class MainFundOrderDeskLocation1 {
 	 * "Country in which it is authorised to commercialise the fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MainFundOrderDeskLocation1, CountryCode> mmCountry = new MMMessageAttribute<MainFundOrderDeskLocation1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmAuthorisedCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MainFundOrderDeskLocation1.mmObject();
@@ -124,6 +125,16 @@ public class MainFundOrderDeskLocation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(MainFundOrderDeskLocation1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(MainFundOrderDeskLocation1 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "TmZoneOffSet", required = true)
@@ -161,7 +172,7 @@ public class MainFundOrderDeskLocation1 {
 	 * "Offset of the reporting time before or after 00: 00 hour UTC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeZoneOffSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MainFundOrderDeskLocation1, UTCOffset1> mmTimeZoneOffSet = new MMMessageAttribute<MainFundOrderDeskLocation1, UTCOffset1>() {
 		{
 			businessElementTrace_lazy = () -> Location.mmTimeZone;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MainFundOrderDeskLocation1.mmObject();
@@ -172,7 +183,17 @@ public class MainFundOrderDeskLocation1 {
 			definition = "Offset of the reporting time before or after 00: 00 hour UTC.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.UTCOffset1.mmObject();
+			complexType_lazy = () -> UTCOffset1.mmObject();
+		}
+
+		@Override
+		public UTCOffset1 getValue(MainFundOrderDeskLocation1 obj) {
+			return obj.getTimeZoneOffSet();
+		}
+
+		@Override
+		public void setValue(MainFundOrderDeskLocation1 obj, UTCOffset1 value) {
+			obj.setTimeZoneOffSet(value);
 		}
 	};
 
@@ -203,7 +224,7 @@ public class MainFundOrderDeskLocation1 {
 		return timeZoneOffSet;
 	}
 
-	public MainFundOrderDeskLocation1 setTimeZoneOffSet(com.tools20022.repository.msg.UTCOffset1 timeZoneOffSet) {
+	public MainFundOrderDeskLocation1 setTimeZoneOffSet(UTCOffset1 timeZoneOffSet) {
 		this.timeZoneOffSet = Objects.requireNonNull(timeZoneOffSet);
 		return this;
 	}

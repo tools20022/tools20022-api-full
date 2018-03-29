@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification15;
@@ -106,7 +107,7 @@ public class BalanceQuantity3Choice {
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceQuantity3Choice, FinancialInstrumentQuantity1Choice> mmQuantity = new MMMessageAttribute<BalanceQuantity3Choice, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceQuantity3Choice.mmObject();
@@ -117,7 +118,17 @@ public class BalanceQuantity3Choice {
 			definition = "Total quantity of financial instruments of the balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(BalanceQuantity3Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(BalanceQuantity3Choice obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +166,7 @@ public class BalanceQuantity3Choice {
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceQuantity3Choice, GenericIdentification15> mmProprietary = new MMMessageAttribute<BalanceQuantity3Choice, GenericIdentification15>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceQuantity3Choice.mmObject();
@@ -167,6 +178,16 @@ public class BalanceQuantity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification15.mmObject();
+		}
+
+		@Override
+		public GenericIdentification15 getValue(BalanceQuantity3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BalanceQuantity3Choice obj, GenericIdentification15 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -188,7 +209,7 @@ public class BalanceQuantity3Choice {
 		return quantity;
 	}
 
-	public BalanceQuantity3Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice quantity) {
+	public BalanceQuantity3Choice setQuantity(FinancialInstrumentQuantity1Choice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

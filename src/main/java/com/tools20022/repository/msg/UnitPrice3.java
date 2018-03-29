@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValue1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +124,7 @@ public class UnitPrice3 {
 	 * definition} = "Type and information about a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice3, TypeOfPrice2Code> mmPriceType = new MMMessageAttribute<UnitPrice3, TypeOfPrice2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice3.mmObject();
@@ -135,6 +136,16 @@ public class UnitPrice3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPrice2Code.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice2Code getValue(UnitPrice3 obj) {
+			return obj.getPriceType();
+		}
+
+		@Override
+		public void setValue(UnitPrice3 obj, TypeOfPrice2Code value) {
+			obj.setPriceType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -170,7 +181,7 @@ public class UnitPrice3 {
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice3, PriceValue1> mmValue = new MMMessageAttribute<UnitPrice3, PriceValue1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice3.mmObject();
@@ -181,7 +192,17 @@ public class UnitPrice3 {
 			definition = "Value of the price, eg, as a currency and value.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public PriceValue1 getValue(UnitPrice3 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(UnitPrice3 obj, PriceValue1 value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "PricMtd")
@@ -218,7 +239,7 @@ public class UnitPrice3 {
 	 * definition} = "Type of pricing calculation method."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice3, Optional<PriceMethod1Code>> mmPriceMethod = new MMMessageAttribute<UnitPrice3, Optional<PriceMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice3.mmObject();
@@ -230,6 +251,16 @@ public class UnitPrice3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PriceMethod1Code> getValue(UnitPrice3 obj) {
+			return obj.getPriceMethod();
+		}
+
+		@Override
+		public void setValue(UnitPrice3 obj, Optional<PriceMethod1Code> value) {
+			obj.setPriceMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstNAV")
@@ -268,7 +299,7 @@ public class UnitPrice3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice3, Optional<CurrencyAndAmount>> mmAccruedInterestNAV = new MMMessageAttribute<UnitPrice3, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice3.mmObject();
@@ -280,6 +311,16 @@ public class UnitPrice3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(UnitPrice3 obj) {
+			return obj.getAccruedInterestNAV();
+		}
+
+		@Override
+		public void setValue(UnitPrice3 obj, Optional<CurrencyAndAmount> value) {
+			obj.setAccruedInterestNAV(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfDaysAcrd")
@@ -320,7 +361,7 @@ public class UnitPrice3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice3, Optional<Number>> mmNumberOfDaysAccrued = new MMMessageAttribute<UnitPrice3, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice3.mmObject();
@@ -333,6 +374,16 @@ public class UnitPrice3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(UnitPrice3 obj) {
+			return obj.getNumberOfDaysAccrued();
+		}
+
+		@Override
+		public void setValue(UnitPrice3 obj, Optional<Number> value) {
+			obj.setNumberOfDaysAccrued(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblIncmPerShr")
@@ -371,7 +422,7 @@ public class UnitPrice3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableIncomePerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice3, Optional<CurrencyAndAmount>> mmTaxableIncomePerShare = new MMMessageAttribute<UnitPrice3, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice3.mmObject();
@@ -383,6 +434,16 @@ public class UnitPrice3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(UnitPrice3 obj) {
+			return obj.getTaxableIncomePerShare();
+		}
+
+		@Override
+		public void setValue(UnitPrice3 obj, Optional<CurrencyAndAmount> value) {
+			obj.setTaxableIncomePerShare(value.orElse(null));
 		}
 	};
 
@@ -414,7 +475,7 @@ public class UnitPrice3 {
 		return value;
 	}
 
-	public UnitPrice3 setValue(com.tools20022.repository.msg.PriceValue1 value) {
+	public UnitPrice3 setValue(PriceValue1 value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}

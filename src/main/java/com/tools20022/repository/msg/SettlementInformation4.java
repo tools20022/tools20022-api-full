@@ -127,7 +127,7 @@ public class SettlementInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesQuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInformation4, Optional<SettlementUnitType2Choice>> mmSecuritiesQuantityType = new MMMessageAttribute<SettlementInformation4, Optional<SettlementUnitType2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation4.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class SettlementInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementUnitType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementUnitType2Choice> getValue(SettlementInformation4 obj) {
+			return obj.getSecuritiesQuantityType();
+		}
+
+		@Override
+		public void setValue(SettlementInformation4 obj, Optional<SettlementUnitType2Choice> value) {
+			obj.setSecuritiesQuantityType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrctSttlmMnth")
@@ -182,7 +192,7 @@ public class SettlementInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractSettlementMonth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInformation4, Optional<ISOYearMonth>> mmContractSettlementMonth = new MMMessageAttribute<SettlementInformation4, Optional<ISOYearMonth>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation4.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class SettlementInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
+		}
+
+		@Override
+		public Optional<ISOYearMonth> getValue(SettlementInformation4 obj) {
+			return obj.getContractSettlementMonth();
+		}
+
+		@Override
+		public void setValue(SettlementInformation4 obj, Optional<ISOYearMonth> value) {
+			obj.setContractSettlementMonth(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinDnmtn")
@@ -236,7 +256,7 @@ public class SettlementInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumDenomination = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInformation4, Optional<FinancialInstrumentQuantity1Choice>> mmMinimumDenomination = new MMMessageAttribute<SettlementInformation4, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation4.mmObject();
 			isDerived = false;
@@ -248,6 +268,16 @@ public class SettlementInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(SettlementInformation4 obj) {
+			return obj.getMinimumDenomination();
+		}
+
+		@Override
+		public void setValue(SettlementInformation4 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setMinimumDenomination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinMltplQty")
@@ -289,7 +319,7 @@ public class SettlementInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumMultipleQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInformation4, Optional<FinancialInstrumentQuantity1Choice>> mmMinimumMultipleQuantity = new MMMessageAttribute<SettlementInformation4, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation4.mmObject();
 			isDerived = false;
@@ -301,6 +331,16 @@ public class SettlementInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(SettlementInformation4 obj) {
+			return obj.getMinimumMultipleQuantity();
+		}
+
+		@Override
+		public void setValue(SettlementInformation4 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setMinimumMultipleQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DevtgSttlmUnit")
@@ -343,7 +383,7 @@ public class SettlementInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeviatingSettlementUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInformation4, List<FinancialInstrumentQuantity1Choice>> mmDeviatingSettlementUnit = new MMMessageAttribute<SettlementInformation4, List<FinancialInstrumentQuantity1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInformation4.mmObject();
 			isDerived = false;
@@ -354,6 +394,16 @@ public class SettlementInformation4 {
 			nextVersions_lazy = () -> Arrays.asList(SettlementInformation17.mmDeviatingSettlementUnit);
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentQuantity1Choice> getValue(SettlementInformation4 obj) {
+			return obj.getDeviatingSettlementUnit();
+		}
+
+		@Override
+		public void setValue(SettlementInformation4 obj, List<FinancialInstrumentQuantity1Choice> value) {
+			obj.setDeviatingSettlementUnit(value);
 		}
 	};
 

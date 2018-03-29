@@ -25,6 +25,10 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BICIdentification1;
+import com.tools20022.repository.msg.PartyIdentification5;
+import com.tools20022.repository.msg.PendingActivity1;
+import com.tools20022.repository.msg.TransactionStatus1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,7 +134,7 @@ public class ReportSpecification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportSpecification2, List<Max35Text>> mmTransactionIdentification = new MMMessageAttribute<ReportSpecification2, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -141,9 +145,19 @@ public class ReportSpecification2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public List<Max35Text> getValue(ReportSpecification2 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<Max35Text> value) {
+			obj.setTransactionIdentification(value);
+		}
 	};
 	@XmlElement(name = "TxSts")
-	protected List<com.tools20022.repository.msg.TransactionStatus1> transactionStatus;
+	protected List<TransactionStatus1> transactionStatus;
 	/**
 	 * 
 	 <p>
@@ -171,7 +185,7 @@ public class ReportSpecification2 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportSpecification2, List<TransactionStatus1>> mmTransactionStatus = new MMMessageAssociationEnd<ReportSpecification2, List<TransactionStatus1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -181,7 +195,17 @@ public class ReportSpecification2 {
 			definition = "Identifies the status of the transaction by means of a code.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionStatus1.mmObject();
+			type_lazy = () -> TransactionStatus1.mmObject();
+		}
+
+		@Override
+		public List<TransactionStatus1> getValue(ReportSpecification2 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<TransactionStatus1> value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "SubmitrTxRef")
@@ -215,7 +239,7 @@ public class ReportSpecification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmitterTransactionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportSpecification2, List<Max35Text>> mmSubmitterTransactionReference = new MMMessageAttribute<ReportSpecification2, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -226,9 +250,19 @@ public class ReportSpecification2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public List<Max35Text> getValue(ReportSpecification2 obj) {
+			return obj.getSubmitterTransactionReference();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<Max35Text> value) {
+			obj.setSubmitterTransactionReference(value);
+		}
 	};
 	@XmlElement(name = "NttiesToBeRptd")
-	protected List<com.tools20022.repository.msg.BICIdentification1> entitiesToBeReported;
+	protected List<BICIdentification1> entitiesToBeReported;
 	/**
 	 * 
 	 <p>
@@ -256,7 +290,7 @@ public class ReportSpecification2 {
 	 * "Specifies a list of entities for which the TSU must generate a report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEntitiesToBeReported = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportSpecification2, List<BICIdentification1>> mmEntitiesToBeReported = new MMMessageAssociationEnd<ReportSpecification2, List<BICIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -266,11 +300,21 @@ public class ReportSpecification2 {
 			definition = "Specifies a list of entities for which the TSU must generate a report.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public List<BICIdentification1> getValue(ReportSpecification2 obj) {
+			return obj.getEntitiesToBeReported();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<BICIdentification1> value) {
+			obj.setEntitiesToBeReported(value);
 		}
 	};
 	@XmlElement(name = "Crspdt")
-	protected List<com.tools20022.repository.msg.BICIdentification1> correspondent;
+	protected List<BICIdentification1> correspondent;
 	/**
 	 * 
 	 <p>
@@ -299,7 +343,7 @@ public class ReportSpecification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorrespondent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportSpecification2, List<BICIdentification1>> mmCorrespondent = new MMMessageAssociationEnd<ReportSpecification2, List<BICIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -309,11 +353,21 @@ public class ReportSpecification2 {
 			definition = "Financial institution that is the counterparty to the trade transaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public List<BICIdentification1> getValue(ReportSpecification2 obj) {
+			return obj.getCorrespondent();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<BICIdentification1> value) {
+			obj.setCorrespondent(value);
 		}
 	};
 	@XmlElement(name = "Buyr")
-	protected List<com.tools20022.repository.msg.PartyIdentification5> buyer;
+	protected List<PartyIdentification5> buyer;
 	/**
 	 * 
 	 <p>
@@ -341,7 +395,7 @@ public class ReportSpecification2 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportSpecification2, List<PartyIdentification5>> mmBuyer = new MMMessageAssociationEnd<ReportSpecification2, List<PartyIdentification5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -351,11 +405,21 @@ public class ReportSpecification2 {
 			definition = "Party that buys goods or services, or a financial instrument.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification5.mmObject();
+			type_lazy = () -> PartyIdentification5.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification5> getValue(ReportSpecification2 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<PartyIdentification5> value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "Sellr")
-	protected List<com.tools20022.repository.msg.PartyIdentification5> seller;
+	protected List<PartyIdentification5> seller;
 	/**
 	 * 
 	 <p>
@@ -383,7 +447,7 @@ public class ReportSpecification2 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportSpecification2, List<PartyIdentification5>> mmSeller = new MMMessageAssociationEnd<ReportSpecification2, List<PartyIdentification5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -393,7 +457,17 @@ public class ReportSpecification2 {
 			definition = "Party that sells goods or services, or a financial instrument.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification5.mmObject();
+			type_lazy = () -> PartyIdentification5.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification5> getValue(ReportSpecification2 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<PartyIdentification5> value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "BuyrCtry")
@@ -425,7 +499,7 @@ public class ReportSpecification2 {
 	 * definition} = "Country of the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuyerCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportSpecification2, List<CountryCode>> mmBuyerCountry = new MMMessageAttribute<ReportSpecification2, List<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -435,6 +509,16 @@ public class ReportSpecification2 {
 			definition = "Country of the buyer.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public List<CountryCode> getValue(ReportSpecification2 obj) {
+			return obj.getBuyerCountry();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<CountryCode> value) {
+			obj.setBuyerCountry(value);
 		}
 	};
 	@XmlElement(name = "SellrCtry")
@@ -466,7 +550,7 @@ public class ReportSpecification2 {
 	 * definition} = "Country of the seller."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSellerCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportSpecification2, List<CountryCode>> mmSellerCountry = new MMMessageAttribute<ReportSpecification2, List<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -476,6 +560,16 @@ public class ReportSpecification2 {
 			definition = "Country of the seller.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public List<CountryCode> getValue(ReportSpecification2 obj) {
+			return obj.getSellerCountry();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<CountryCode> value) {
+			obj.setSellerCountry(value);
 		}
 	};
 	@XmlElement(name = "CrspdtCtry")
@@ -513,7 +607,7 @@ public class ReportSpecification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorrespondentCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportSpecification2, List<CountryCode>> mmCorrespondentCountry = new MMMessageAttribute<ReportSpecification2, List<CountryCode>>() {
 		{
 			businessComponentTrace_lazy = () -> Country.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
@@ -525,9 +619,19 @@ public class ReportSpecification2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
+
+		@Override
+		public List<CountryCode> getValue(ReportSpecification2 obj) {
+			return obj.getCorrespondentCountry();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<CountryCode> value) {
+			obj.setCorrespondentCountry(value);
+		}
 	};
 	@XmlElement(name = "PdgReqForActn")
-	protected List<com.tools20022.repository.msg.PendingActivity1> pendingRequestForAction;
+	protected List<PendingActivity1> pendingRequestForAction;
 	/**
 	 * 
 	 <p>
@@ -556,7 +660,7 @@ public class ReportSpecification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingRequestForAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportSpecification2, List<PendingActivity1>> mmPendingRequestForAction = new MMMessageAssociationEnd<ReportSpecification2, List<PendingActivity1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportSpecification2.mmObject();
 			isDerived = false;
@@ -566,7 +670,17 @@ public class ReportSpecification2 {
 			definition = "Specifies a pending request for action for which the TSU must generate a report.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PendingActivity1.mmObject();
+			type_lazy = () -> PendingActivity1.mmObject();
+		}
+
+		@Override
+		public List<PendingActivity1> getValue(ReportSpecification2 obj) {
+			return obj.getPendingRequestForAction();
+		}
+
+		@Override
+		public void setValue(ReportSpecification2 obj, List<PendingActivity1> value) {
+			obj.setPendingRequestForAction(value);
 		}
 	};
 
@@ -600,7 +714,7 @@ public class ReportSpecification2 {
 		return transactionStatus == null ? transactionStatus = new ArrayList<>() : transactionStatus;
 	}
 
-	public ReportSpecification2 setTransactionStatus(List<com.tools20022.repository.msg.TransactionStatus1> transactionStatus) {
+	public ReportSpecification2 setTransactionStatus(List<TransactionStatus1> transactionStatus) {
 		this.transactionStatus = Objects.requireNonNull(transactionStatus);
 		return this;
 	}
@@ -618,7 +732,7 @@ public class ReportSpecification2 {
 		return entitiesToBeReported == null ? entitiesToBeReported = new ArrayList<>() : entitiesToBeReported;
 	}
 
-	public ReportSpecification2 setEntitiesToBeReported(List<com.tools20022.repository.msg.BICIdentification1> entitiesToBeReported) {
+	public ReportSpecification2 setEntitiesToBeReported(List<BICIdentification1> entitiesToBeReported) {
 		this.entitiesToBeReported = Objects.requireNonNull(entitiesToBeReported);
 		return this;
 	}
@@ -627,7 +741,7 @@ public class ReportSpecification2 {
 		return correspondent == null ? correspondent = new ArrayList<>() : correspondent;
 	}
 
-	public ReportSpecification2 setCorrespondent(List<com.tools20022.repository.msg.BICIdentification1> correspondent) {
+	public ReportSpecification2 setCorrespondent(List<BICIdentification1> correspondent) {
 		this.correspondent = Objects.requireNonNull(correspondent);
 		return this;
 	}
@@ -636,7 +750,7 @@ public class ReportSpecification2 {
 		return buyer == null ? buyer = new ArrayList<>() : buyer;
 	}
 
-	public ReportSpecification2 setBuyer(List<com.tools20022.repository.msg.PartyIdentification5> buyer) {
+	public ReportSpecification2 setBuyer(List<PartyIdentification5> buyer) {
 		this.buyer = Objects.requireNonNull(buyer);
 		return this;
 	}
@@ -645,7 +759,7 @@ public class ReportSpecification2 {
 		return seller == null ? seller = new ArrayList<>() : seller;
 	}
 
-	public ReportSpecification2 setSeller(List<com.tools20022.repository.msg.PartyIdentification5> seller) {
+	public ReportSpecification2 setSeller(List<PartyIdentification5> seller) {
 		this.seller = Objects.requireNonNull(seller);
 		return this;
 	}
@@ -681,7 +795,7 @@ public class ReportSpecification2 {
 		return pendingRequestForAction == null ? pendingRequestForAction = new ArrayList<>() : pendingRequestForAction;
 	}
 
-	public ReportSpecification2 setPendingRequestForAction(List<com.tools20022.repository.msg.PendingActivity1> pendingRequestForAction) {
+	public ReportSpecification2 setPendingRequestForAction(List<PendingActivity1> pendingRequestForAction) {
 		this.pendingRequestForAction = Objects.requireNonNull(pendingRequestForAction);
 		return this;
 	}

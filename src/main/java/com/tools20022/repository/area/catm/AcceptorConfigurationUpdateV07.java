@@ -17,7 +17,6 @@
 
 package com.tools20022.repository.area.catm;
 
-import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
@@ -27,7 +26,7 @@ import com.tools20022.repository.msg.AcceptorConfiguration7;
 import com.tools20022.repository.msg.ContentInformationType18;
 import com.tools20022.repository.msg.Header27;
 import com.tools20022.repository.msgset.CAPEMaintenance20172018;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -58,6 +57,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
+ * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.CAPEMaintenance20172018
  * CAPEMaintenance20172018}</li>
  * </ul>
@@ -74,12 +76,9 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.003.001.07}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
- * semanticMarkup} = type=prefix, prefix=DRAFT1</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorConfigurationUpdateV07"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -128,7 +127,7 @@ public class AcceptorConfigurationUpdateV07 {
 	 * AcceptorConfigurationUpdateV06.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorConfigurationUpdateV07, Header27> mmHeader = new MMMessageBuildingBlock<AcceptorConfigurationUpdateV07, Header27>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,12 +139,14 @@ public class AcceptorConfigurationUpdateV07 {
 			complexType_lazy = () -> Header27.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorConfigurationUpdateV07.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header27 getValue(AcceptorConfigurationUpdateV07 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationUpdateV07 obj, Header27 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "AccptrCfgtn", required = true)
@@ -180,7 +181,7 @@ public class AcceptorConfigurationUpdateV07 {
 	 * AcceptorConfigurationUpdateV06.mmAcceptorConfiguration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAcceptorConfiguration = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorConfigurationUpdateV07, AcceptorConfiguration7> mmAcceptorConfiguration = new MMMessageBuildingBlock<AcceptorConfigurationUpdateV07, AcceptorConfiguration7>() {
 		{
 			xmlTag = "AccptrCfgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,12 +193,14 @@ public class AcceptorConfigurationUpdateV07 {
 			complexType_lazy = () -> AcceptorConfiguration7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorConfigurationUpdateV07.class.getMethod("getAcceptorConfiguration", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorConfiguration7 getValue(AcceptorConfigurationUpdateV07 obj) {
+			return obj.getAcceptorConfiguration();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationUpdateV07 obj, AcceptorConfiguration7 value) {
+			obj.setAcceptorConfiguration(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -231,7 +234,7 @@ public class AcceptorConfigurationUpdateV07 {
 	 * AcceptorConfigurationUpdateV06.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorConfigurationUpdateV07, Optional<ContentInformationType18>> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorConfigurationUpdateV07, Optional<ContentInformationType18>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,24 +246,25 @@ public class AcceptorConfigurationUpdateV07 {
 			complexType_lazy = () -> ContentInformationType18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorConfigurationUpdateV07.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType18> getValue(AcceptorConfigurationUpdateV07 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationUpdateV07 obj, Optional<ContentInformationType18> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT1"}));
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfigurationUpdateV07";
 				definition = "Update of the acceptor configuration to be downloaded by the terminal management system.";
 				previousVersion_lazy = () -> AcceptorConfigurationUpdateV06.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEMaintenance20172018.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPEMaintenance20172018.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCfgtnUpd";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

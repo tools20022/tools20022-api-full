@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesLatestVersion;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msg.UndertakingDemandWithdrawal1;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +113,7 @@ public class DemandWithdrawalNotificationV01 {
 	 * definition} = "Details of the demand withdrawal notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDemandWithdrawalNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DemandWithdrawalNotificationV01, UndertakingDemandWithdrawal1> mmDemandWithdrawalNotificationDetails = new MMMessageBuildingBlock<DemandWithdrawalNotificationV01, UndertakingDemandWithdrawal1>() {
 		{
 			xmlTag = "DmndWdrwlNtfctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +124,14 @@ public class DemandWithdrawalNotificationV01 {
 			complexType_lazy = () -> UndertakingDemandWithdrawal1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DemandWithdrawalNotificationV01.class.getMethod("getDemandWithdrawalNotificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UndertakingDemandWithdrawal1 getValue(DemandWithdrawalNotificationV01 obj) {
+			return obj.getDemandWithdrawalNotificationDetails();
+		}
+
+		@Override
+		public void setValue(DemandWithdrawalNotificationV01 obj, UndertakingDemandWithdrawal1 value) {
+			obj.setDemandWithdrawalNotificationDetails(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -158,7 +159,7 @@ public class DemandWithdrawalNotificationV01 {
 	 * definition} = "Digital signature of the notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DemandWithdrawalNotificationV01, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageBuildingBlock<DemandWithdrawalNotificationV01, Optional<PartyAndSignature2>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,12 +170,14 @@ public class DemandWithdrawalNotificationV01 {
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DemandWithdrawalNotificationV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyAndSignature2> getValue(DemandWithdrawalNotificationV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(DemandWithdrawalNotificationV01 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 

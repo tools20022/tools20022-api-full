@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -94,7 +96,7 @@ public class AccountOwnerAndIdentification1 {
 	 * definition} = "Account identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOwnerAndIdentification1, CashAccount24> mmAccount = new MMMessageAssociationEnd<AccountOwnerAndIdentification1, CashAccount24>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountOwnerAndIdentification1.mmObject();
 			isDerived = false;
@@ -105,7 +107,17 @@ public class AccountOwnerAndIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public CashAccount24 getValue(AccountOwnerAndIdentification1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountOwnerAndIdentification1 obj, CashAccount24 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr", required = true)
@@ -137,7 +149,7 @@ public class AccountOwnerAndIdentification1 {
 	 * definition} = "Account owner identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOwnerAndIdentification1, FinancialInstitutionIdentification9> mmAccountOwner = new MMMessageAssociationEnd<AccountOwnerAndIdentification1, FinancialInstitutionIdentification9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountOwnerAndIdentification1.mmObject();
 			isDerived = false;
@@ -148,7 +160,17 @@ public class AccountOwnerAndIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification9 getValue(AccountOwnerAndIdentification1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(AccountOwnerAndIdentification1 obj, FinancialInstitutionIdentification9 value) {
+			obj.setAccountOwner(value);
 		}
 	};
 
@@ -169,7 +191,7 @@ public class AccountOwnerAndIdentification1 {
 		return account;
 	}
 
-	public AccountOwnerAndIdentification1 setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+	public AccountOwnerAndIdentification1 setAccount(CashAccount24 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -178,7 +200,7 @@ public class AccountOwnerAndIdentification1 {
 		return accountOwner;
 	}
 
-	public AccountOwnerAndIdentification1 setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 accountOwner) {
+	public AccountOwnerAndIdentification1 setAccountOwner(FinancialInstitutionIdentification9 accountOwner) {
 		this.accountOwner = Objects.requireNonNull(accountOwner);
 		return this;
 	}

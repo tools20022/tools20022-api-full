@@ -134,7 +134,7 @@ public class Cancellation3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationByTransferInstructionDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation3Choice, ISATransfer9> mmCancellationByTransferInstructionDetails = new MMMessageAttribute<Cancellation3Choice, ISATransfer9>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTransferOperation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation3Choice.mmObject();
@@ -147,6 +147,16 @@ public class Cancellation3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ISATransfer9.mmObject();
+		}
+
+		@Override
+		public ISATransfer9 getValue(Cancellation3Choice obj) {
+			return obj.getCancellationByTransferInstructionDetails();
+		}
+
+		@Override
+		public void setValue(Cancellation3Choice obj, ISATransfer9 value) {
+			obj.setCancellationByTransferInstructionDetails(value);
 		}
 	};
 	@XmlElement(name = "CxlByRef", required = true)
@@ -192,7 +202,7 @@ public class Cancellation3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationByReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation3Choice, TransferReference3> mmCancellationByReference = new MMMessageAttribute<Cancellation3Choice, TransferReference3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation3Choice.mmObject();
@@ -205,6 +215,16 @@ public class Cancellation3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferReference3.mmObject();
+		}
+
+		@Override
+		public TransferReference3 getValue(Cancellation3Choice obj) {
+			return obj.getCancellationByReference();
+		}
+
+		@Override
+		public void setValue(Cancellation3Choice obj, TransferReference3 value) {
+			obj.setCancellationByReference(value);
 		}
 	};
 

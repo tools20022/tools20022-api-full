@@ -32,6 +32,10 @@ import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument5;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
+import com.tools20022.repository.msg.UnitPrice6;
+import com.tools20022.repository.msg.ValuationStatistics2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -158,7 +162,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValuation2, Max35Text> mmIdentification = new MMMessageAttribute<PriceValuation2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
 			isDerived = false;
@@ -169,6 +173,16 @@ public class PriceValuation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PriceValuation2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ValtnDtTm")
@@ -208,7 +222,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValuation2, Optional<DateAndDateTimeChoice>> mmValuationDateTime = new MMMessageAttribute<PriceValuation2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -220,6 +234,16 @@ public class PriceValuation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PriceValuation2 obj) {
+			return obj.getValuationDateTime();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setValuationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDtTm", required = true)
@@ -259,7 +283,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValuation2, DateAndDateTimeChoice> mmTradeDateTime = new MMMessageAttribute<PriceValuation2, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -271,6 +295,16 @@ public class PriceValuation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(PriceValuation2 obj) {
+			return obj.getTradeDateTime();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, DateAndDateTimeChoice value) {
+			obj.setTradeDateTime(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls", required = true)
@@ -307,7 +341,7 @@ public class PriceValuation2 {
 	 * "Investment fund class for which the net asset value is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceValuation2, FinancialInstrument5> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<PriceValuation2, FinancialInstrument5>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFund.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -319,7 +353,17 @@ public class PriceValuation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument5.mmObject();
+			type_lazy = () -> FinancialInstrument5.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument5 getValue(PriceValuation2 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, FinancialInstrument5 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "TtlNAV")
@@ -359,7 +403,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNAV = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValuation2, List<ActiveOrHistoricCurrencyAndAmount>> mmTotalNAV = new MMMessageAttribute<PriceValuation2, List<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -370,6 +414,16 @@ public class PriceValuation2 {
 			definition = "Value of all the holdings, less the fund's liabilities, attributable to a specific investment fund class.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyAndAmount> getValue(PriceValuation2 obj) {
+			return obj.getTotalNAV();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, List<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setTotalNAV(value);
 		}
 	};
 	@XmlElement(name = "TtlUnitsNb")
@@ -408,7 +462,7 @@ public class PriceValuation2 {
 	 * "Total number of investment fund class units that have been issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValuation2, Optional<FinancialInstrumentQuantity1>> mmTotalUnitsNumber = new MMMessageAttribute<PriceValuation2, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmRelatedFund;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -419,7 +473,17 @@ public class PriceValuation2 {
 			definition = "Total number of investment fund class units that have been issued.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(PriceValuation2 obj) {
+			return obj.getTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setTotalUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtValtnDtTm")
@@ -459,7 +523,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextValuationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValuation2, Optional<DateAndDateTimeChoice>> mmNextValuationDateTime = new MMMessageAttribute<PriceValuation2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -471,6 +535,16 @@ public class PriceValuation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PriceValuation2 obj) {
+			return obj.getNextValuationDateTime();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setNextValuationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsValtnDtTm")
@@ -510,7 +584,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousValuationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValuation2, Optional<DateAndDateTimeChoice>> mmPreviousValuationDateTime = new MMMessageAttribute<PriceValuation2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -522,6 +596,16 @@ public class PriceValuation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PriceValuation2 obj) {
+			return obj.getPreviousValuationDateTime();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setPreviousValuationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValtnCycl", required = true)
@@ -561,7 +645,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationCycle = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValuation2, ValuationTiming1Code> mmValuationCycle = new MMMessageAttribute<PriceValuation2, ValuationTiming1Code>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -573,6 +657,16 @@ public class PriceValuation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ValuationTiming1Code.mmObject();
+		}
+
+		@Override
+		public ValuationTiming1Code getValue(PriceValuation2 obj) {
+			return obj.getValuationCycle();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, ValuationTiming1Code value) {
+			obj.setValuationCycle(value);
 		}
 	};
 	@XmlElement(name = "SspdInd", required = true)
@@ -612,7 +706,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSuspendedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValuation2, YesNoIndicator> mmSuspendedIndicator = new MMMessageAttribute<PriceValuation2, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmSuspendedIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -625,9 +719,19 @@ public class PriceValuation2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(PriceValuation2 obj) {
+			return obj.getSuspendedIndicator();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, YesNoIndicator value) {
+			obj.setSuspendedIndicator(value);
+		}
 	};
 	@XmlElement(name = "PricDtls")
-	protected List<com.tools20022.repository.msg.UnitPrice6> priceDetails;
+	protected List<UnitPrice6> priceDetails;
 	/**
 	 * 
 	 <p>
@@ -659,7 +763,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceValuation2, List<UnitPrice6>> mmPriceDetails = new MMMessageAssociationEnd<PriceValuation2, List<UnitPrice6>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
@@ -670,11 +774,21 @@ public class PriceValuation2 {
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnitPrice6.mmObject();
+			type_lazy = () -> UnitPrice6.mmObject();
+		}
+
+		@Override
+		public List<UnitPrice6> getValue(PriceValuation2 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, List<UnitPrice6> value) {
+			obj.setPriceDetails(value);
 		}
 	};
 	@XmlElement(name = "ValtnSttstcs")
-	protected List<com.tools20022.repository.msg.ValuationStatistics2> valuationStatistics;
+	protected List<ValuationStatistics2> valuationStatistics;
 	/**
 	 * 
 	 <p>
@@ -703,7 +817,7 @@ public class PriceValuation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuationStatistics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceValuation2, List<ValuationStatistics2>> mmValuationStatistics = new MMMessageAssociationEnd<PriceValuation2, List<ValuationStatistics2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValuation2.mmObject();
 			isDerived = false;
@@ -713,7 +827,17 @@ public class PriceValuation2 {
 			definition = "Information related to the price variations of an investment fund class.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
+			type_lazy = () -> ValuationStatistics2.mmObject();
+		}
+
+		@Override
+		public List<ValuationStatistics2> getValue(PriceValuation2 obj) {
+			return obj.getValuationStatistics();
+		}
+
+		@Override
+		public void setValue(PriceValuation2 obj, List<ValuationStatistics2> value) {
+			obj.setValuationStatistics(value);
 		}
 	};
 
@@ -768,7 +892,7 @@ public class PriceValuation2 {
 		return financialInstrumentDetails;
 	}
 
-	public PriceValuation2 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument5 financialInstrumentDetails) {
+	public PriceValuation2 setFinancialInstrumentDetails(FinancialInstrument5 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}
@@ -786,7 +910,7 @@ public class PriceValuation2 {
 		return totalUnitsNumber == null ? Optional.empty() : Optional.of(totalUnitsNumber);
 	}
 
-	public PriceValuation2 setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+	public PriceValuation2 setTotalUnitsNumber(FinancialInstrumentQuantity1 totalUnitsNumber) {
 		this.totalUnitsNumber = totalUnitsNumber;
 		return this;
 	}
@@ -831,7 +955,7 @@ public class PriceValuation2 {
 		return priceDetails == null ? priceDetails = new ArrayList<>() : priceDetails;
 	}
 
-	public PriceValuation2 setPriceDetails(List<com.tools20022.repository.msg.UnitPrice6> priceDetails) {
+	public PriceValuation2 setPriceDetails(List<UnitPrice6> priceDetails) {
 		this.priceDetails = Objects.requireNonNull(priceDetails);
 		return this;
 	}
@@ -840,7 +964,7 @@ public class PriceValuation2 {
 		return valuationStatistics == null ? valuationStatistics = new ArrayList<>() : valuationStatistics;
 	}
 
-	public PriceValuation2 setValuationStatistics(List<com.tools20022.repository.msg.ValuationStatistics2> valuationStatistics) {
+	public PriceValuation2 setValuationStatistics(List<ValuationStatistics2> valuationStatistics) {
 		this.valuationStatistics = Objects.requireNonNull(valuationStatistics);
 		return this;
 	}

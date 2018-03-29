@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AccountManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,7 +133,7 @@ public class AccountRequestRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountRequestRejectionV01, References6> mmReferences = new MMMessageBuildingBlock<AccountRequestRejectionV01, References6>() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +144,14 @@ public class AccountRequestRejectionV01 {
 			complexType_lazy = () -> References6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountRequestRejectionV01.class.getMethod("getReferences", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public References6 getValue(AccountRequestRejectionV01 obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(AccountRequestRejectionV01 obj, References6 value) {
+			obj.setReferences(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrId", required = true)
@@ -180,7 +181,7 @@ public class AccountRequestRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountRequestRejectionV01, BranchAndFinancialInstitutionIdentification4> mmAccountServicerIdentification = new MMMessageBuildingBlock<AccountRequestRejectionV01, BranchAndFinancialInstitutionIdentification4>() {
 		{
 			xmlTag = "AcctSvcrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,12 +192,14 @@ public class AccountRequestRejectionV01 {
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountRequestRejectionV01.class.getMethod("getAccountServicerIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BranchAndFinancialInstitutionIdentification4 getValue(AccountRequestRejectionV01 obj) {
+			return obj.getAccountServicerIdentification();
+		}
+
+		@Override
+		public void setValue(AccountRequestRejectionV01 obj, BranchAndFinancialInstitutionIdentification4 value) {
+			obj.setAccountServicerIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -226,7 +229,7 @@ public class AccountRequestRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountRequestRejectionV01, List<AccountForAction1>> mmAccountIdentification = new MMMessageBuildingBlock<AccountRequestRejectionV01, List<AccountForAction1>>() {
 		{
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,12 +239,14 @@ public class AccountRequestRejectionV01 {
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountRequestRejectionV01.class.getMethod("getAccountIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountForAction1> getValue(AccountRequestRejectionV01 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountRequestRejectionV01 obj, List<AccountForAction1> value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgId", required = true)
@@ -269,7 +274,7 @@ public class AccountRequestRejectionV01 {
 	 * definition} = "Identifier for an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOrganisationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountRequestRejectionV01, List<OrganisationIdentification6>> mmOrganisationIdentification = new MMMessageBuildingBlock<AccountRequestRejectionV01, List<OrganisationIdentification6>>() {
 		{
 			xmlTag = "OrgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,12 +284,14 @@ public class AccountRequestRejectionV01 {
 			complexType_lazy = () -> OrganisationIdentification6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountRequestRejectionV01.class.getMethod("getOrganisationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<OrganisationIdentification6> getValue(AccountRequestRejectionV01 obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountRequestRejectionV01 obj, List<OrganisationIdentification6> value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -314,7 +321,7 @@ public class AccountRequestRejectionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountRequestRejectionV01, List<PartyAndSignature1>> mmDigitalSignature = new MMMessageBuildingBlock<AccountRequestRejectionV01, List<PartyAndSignature1>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,12 +331,14 @@ public class AccountRequestRejectionV01 {
 			complexType_lazy = () -> PartyAndSignature1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountRequestRejectionV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PartyAndSignature1> getValue(AccountRequestRejectionV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(AccountRequestRejectionV01 obj, List<PartyAndSignature1> value) {
+			obj.setDigitalSignature(value);
 		}
 	};
 

@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.AcknowledgedAcceptedStatus5Choice;
+import com.tools20022.repository.choice.DeniedStatus3Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.GeneratedRepository;
@@ -115,7 +117,7 @@ public class RepoCallRequestStatus4Choice {
 	 * "Instruction has been acknowledged by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepoCallRequestStatus4Choice, AcknowledgedAcceptedStatus5Choice> mmAcknowledgedAccepted = new MMMessageAssociationEnd<RepoCallRequestStatus4Choice, AcknowledgedAcceptedStatus5Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus4Choice.mmObject();
@@ -128,7 +130,17 @@ public class RepoCallRequestStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus5Choice.mmObject();
+			type_lazy = () -> AcknowledgedAcceptedStatus5Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgedAcceptedStatus5Choice getValue(RepoCallRequestStatus4Choice obj) {
+			return obj.getAcknowledgedAccepted();
+		}
+
+		@Override
+		public void setValue(RepoCallRequestStatus4Choice obj, AcknowledgedAcceptedStatus5Choice value) {
+			obj.setAcknowledgedAccepted(value);
 		}
 	};
 	@XmlElement(name = "Dnd", required = true)
@@ -167,7 +179,7 @@ public class RepoCallRequestStatus4Choice {
 	 * definition} = "Instruction/Request will not be executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDenied = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepoCallRequestStatus4Choice, DeniedStatus3Choice> mmDenied = new MMMessageAssociationEnd<RepoCallRequestStatus4Choice, DeniedStatus3Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus4Choice.mmObject();
@@ -180,7 +192,17 @@ public class RepoCallRequestStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DeniedStatus3Choice.mmObject();
+			type_lazy = () -> DeniedStatus3Choice.mmObject();
+		}
+
+		@Override
+		public DeniedStatus3Choice getValue(RepoCallRequestStatus4Choice obj) {
+			return obj.getDenied();
+		}
+
+		@Override
+		public void setValue(RepoCallRequestStatus4Choice obj, DeniedStatus3Choice value) {
+			obj.setDenied(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -220,7 +242,7 @@ public class RepoCallRequestStatus4Choice {
 	 * definition} = "Proprietary status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepoCallRequestStatus4Choice, ProprietaryStatusAndReason2> mmProprietary = new MMMessageAssociationEnd<RepoCallRequestStatus4Choice, ProprietaryStatusAndReason2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus4Choice.mmObject();
@@ -234,6 +256,16 @@ public class RepoCallRequestStatus4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason2.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason2 getValue(RepoCallRequestStatus4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RepoCallRequestStatus4Choice obj, ProprietaryStatusAndReason2 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -256,7 +288,7 @@ public class RepoCallRequestStatus4Choice {
 		return acknowledgedAccepted;
 	}
 
-	public RepoCallRequestStatus4Choice setAcknowledgedAccepted(com.tools20022.repository.choice.AcknowledgedAcceptedStatus5Choice acknowledgedAccepted) {
+	public RepoCallRequestStatus4Choice setAcknowledgedAccepted(AcknowledgedAcceptedStatus5Choice acknowledgedAccepted) {
 		this.acknowledgedAccepted = Objects.requireNonNull(acknowledgedAccepted);
 		return this;
 	}
@@ -265,7 +297,7 @@ public class RepoCallRequestStatus4Choice {
 		return denied;
 	}
 
-	public RepoCallRequestStatus4Choice setDenied(com.tools20022.repository.choice.DeniedStatus3Choice denied) {
+	public RepoCallRequestStatus4Choice setDenied(DeniedStatus3Choice denied) {
 		this.denied = Objects.requireNonNull(denied);
 		return this;
 	}

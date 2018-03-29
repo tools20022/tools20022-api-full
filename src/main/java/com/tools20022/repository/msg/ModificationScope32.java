@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestorProfile1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public class ModificationScope32 {
 	 * ModificationScope26.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope32, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope32, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope32.mmObject();
 			isDerived = false;
@@ -121,6 +122,16 @@ public class ModificationScope32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope32 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope32 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "InvstrPrfl", required = true)
@@ -153,7 +164,7 @@ public class ModificationScope32 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestorProfile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope32, InvestorProfile1> mmInvestorProfile = new MMMessageAssociationEnd<ModificationScope32, InvestorProfile1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope32.mmObject();
 			isDerived = false;
@@ -164,7 +175,17 @@ public class ModificationScope32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestorProfile1.mmObject();
+			type_lazy = () -> InvestorProfile1.mmObject();
+		}
+
+		@Override
+		public InvestorProfile1 getValue(ModificationScope32 obj) {
+			return obj.getInvestorProfile();
+		}
+
+		@Override
+		public void setValue(ModificationScope32 obj, InvestorProfile1 value) {
+			obj.setInvestorProfile(value);
 		}
 	};
 
@@ -195,7 +216,7 @@ public class ModificationScope32 {
 		return investorProfile;
 	}
 
-	public ModificationScope32 setInvestorProfile(com.tools20022.repository.msg.InvestorProfile1 investorProfile) {
+	public ModificationScope32 setInvestorProfile(InvestorProfile1 investorProfile) {
 		this.investorProfile = Objects.requireNonNull(investorProfile);
 		return this;
 	}

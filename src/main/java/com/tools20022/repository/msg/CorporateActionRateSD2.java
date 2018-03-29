@@ -105,7 +105,7 @@ public class CorporateActionRateSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceiptBaseQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD2, Optional<DecimalNumber>> mmReceiptBaseQuantity = new MMMessageAttribute<CorporateActionRateSD2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD2.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class CorporateActionRateSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionRateSD2 obj) {
+			return obj.getReceiptBaseQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD2 obj, Optional<DecimalNumber> value) {
+			obj.setReceiptBaseQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdnryShr")
@@ -154,7 +164,7 @@ public class CorporateActionRateSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrdinaryShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD2, Optional<DecimalNumber>> mmOrdinaryShare = new MMMessageAttribute<CorporateActionRateSD2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD2.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class CorporateActionRateSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionRateSD2 obj) {
+			return obj.getOrdinaryShare();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD2 obj, Optional<DecimalNumber> value) {
+			obj.setOrdinaryShare(value.orElse(null));
 		}
 	};
 

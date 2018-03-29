@@ -116,7 +116,7 @@ public class TransferReason1Choice {
 	 * TransferReason1.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReason1Choice, TransferReason1Code> mmCode = new MMMessageAttribute<TransferReason1Choice, TransferReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferReason1Choice.mmObject();
@@ -129,6 +129,16 @@ public class TransferReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferReason1Code.mmObject();
+		}
+
+		@Override
+		public TransferReason1Code getValue(TransferReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TransferReason1Choice obj, TransferReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -171,7 +181,7 @@ public class TransferReason1Choice {
 	 * TransferReason1.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReason1Choice, GenericIdentification27> mmProprietary = new MMMessageAttribute<TransferReason1Choice, GenericIdentification27>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransferReason1Choice.mmObject();
@@ -184,6 +194,16 @@ public class TransferReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification27.mmObject();
+		}
+
+		@Override
+		public GenericIdentification27 getValue(TransferReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TransferReason1Choice obj, GenericIdentification27 value) {
+			obj.setProprietary(value);
 		}
 	};
 

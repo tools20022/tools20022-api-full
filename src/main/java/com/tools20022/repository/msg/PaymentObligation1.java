@@ -27,6 +27,9 @@ import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BICIdentification1;
+import com.tools20022.repository.msg.PaymentTerms2;
+import com.tools20022.repository.msg.SettlementTerms2;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -158,7 +161,7 @@ public class PaymentObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmObligorBank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentObligation1, BICIdentification1> mmObligorBank = new MMMessageAssociationEnd<PaymentObligation1, BICIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -171,7 +174,17 @@ public class PaymentObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public BICIdentification1 getValue(PaymentObligation1 obj) {
+			return obj.getObligorBank();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, BICIdentification1 value) {
+			obj.setObligorBank(value);
 		}
 	};
 	@XmlElement(name = "RcptBk", required = true)
@@ -215,7 +228,7 @@ public class PaymentObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientBank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentObligation1, BICIdentification1> mmRecipientBank = new MMMessageAssociationEnd<PaymentObligation1, BICIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -228,7 +241,17 @@ public class PaymentObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public BICIdentification1 getValue(PaymentObligation1 obj) {
+			return obj.getRecipientBank();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, BICIdentification1 value) {
+			obj.setRecipientBank(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -266,7 +289,7 @@ public class PaymentObligation1 {
 	 * definition} = "Maximum amount that will be paid under the obligation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentObligation1, CurrencyAndAmount> mmAmount = new MMMessageAttribute<PaymentObligation1, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmMaximumAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -278,6 +301,16 @@ public class PaymentObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(PaymentObligation1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Pctg", required = true)
@@ -317,7 +350,7 @@ public class PaymentObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentObligation1, PercentageRate> mmPercentage = new MMMessageAttribute<PaymentObligation1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -329,6 +362,16 @@ public class PaymentObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PaymentObligation1 obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 	@XmlElement(name = "ChrgsAmt")
@@ -366,7 +409,7 @@ public class PaymentObligation1 {
 	 * definition} = "Amount of the charges taken by the obligor bank."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargesAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentObligation1, Optional<CurrencyAndAmount>> mmChargesAmount = new MMMessageAttribute<PaymentObligation1, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -378,6 +421,16 @@ public class PaymentObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(PaymentObligation1 obj) {
+			return obj.getChargesAmount();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, Optional<CurrencyAndAmount> value) {
+			obj.setChargesAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgsPctg")
@@ -417,7 +470,7 @@ public class PaymentObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargesPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentObligation1, Optional<PercentageRate>> mmChargesPercentage = new MMMessageAttribute<PaymentObligation1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -429,6 +482,16 @@ public class PaymentObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(PaymentObligation1 obj) {
+			return obj.getChargesPercentage();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, Optional<PercentageRate> value) {
+			obj.setChargesPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt", required = true)
@@ -473,7 +536,7 @@ public class PaymentObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentObligation1, ISODate> mmExpiryDate = new MMMessageAttribute<PaymentObligation1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -486,6 +549,16 @@ public class PaymentObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PaymentObligation1 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, ISODate value) {
+			obj.setExpiryDate(value);
 		}
 	};
 	@XmlElement(name = "AplblLaw")
@@ -531,7 +604,7 @@ public class PaymentObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicableLaw = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentObligation1, Optional<CountryCode>> mmApplicableLaw = new MMMessageAttribute<PaymentObligation1, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmApplicableLaw;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -545,9 +618,19 @@ public class PaymentObligation1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
+
+		@Override
+		public Optional<CountryCode> getValue(PaymentObligation1 obj) {
+			return obj.getApplicableLaw();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, Optional<CountryCode> value) {
+			obj.setApplicableLaw(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "PmtTerms")
-	protected List<com.tools20022.repository.msg.PaymentTerms2> paymentTerms;
+	protected List<PaymentTerms2> paymentTerms;
 	/**
 	 * 
 	 <p>
@@ -589,7 +672,7 @@ public class PaymentObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentObligation1, List<PaymentTerms2>> mmPaymentTerms = new MMMessageAssociationEnd<PaymentObligation1, List<PaymentTerms2>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentObligation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -601,7 +684,17 @@ public class PaymentObligation1 {
 			nextVersions_lazy = () -> Arrays.asList(PaymentObligation2.mmPaymentTerms);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTerms2.mmObject();
+			type_lazy = () -> PaymentTerms2.mmObject();
+		}
+
+		@Override
+		public List<PaymentTerms2> getValue(PaymentObligation1 obj) {
+			return obj.getPaymentTerms();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, List<PaymentTerms2> value) {
+			obj.setPaymentTerms(value);
 		}
 	};
 	@XmlElement(name = "SttlmTerms")
@@ -647,7 +740,7 @@ public class PaymentObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentObligation1, Optional<SettlementTerms2>> mmSettlementTerms = new MMMessageAssociationEnd<PaymentObligation1, Optional<SettlementTerms2>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
@@ -660,7 +753,17 @@ public class PaymentObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementTerms2.mmObject();
+			type_lazy = () -> SettlementTerms2.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementTerms2> getValue(PaymentObligation1 obj) {
+			return obj.getSettlementTerms();
+		}
+
+		@Override
+		public void setValue(PaymentObligation1 obj, Optional<SettlementTerms2> value) {
+			obj.setSettlementTerms(value.orElse(null));
 		}
 	};
 	/**
@@ -730,7 +833,7 @@ public class PaymentObligation1 {
 		return obligorBank;
 	}
 
-	public PaymentObligation1 setObligorBank(com.tools20022.repository.msg.BICIdentification1 obligorBank) {
+	public PaymentObligation1 setObligorBank(BICIdentification1 obligorBank) {
 		this.obligorBank = Objects.requireNonNull(obligorBank);
 		return this;
 	}
@@ -739,7 +842,7 @@ public class PaymentObligation1 {
 		return recipientBank;
 	}
 
-	public PaymentObligation1 setRecipientBank(com.tools20022.repository.msg.BICIdentification1 recipientBank) {
+	public PaymentObligation1 setRecipientBank(BICIdentification1 recipientBank) {
 		this.recipientBank = Objects.requireNonNull(recipientBank);
 		return this;
 	}
@@ -802,7 +905,7 @@ public class PaymentObligation1 {
 		return paymentTerms == null ? paymentTerms = new ArrayList<>() : paymentTerms;
 	}
 
-	public PaymentObligation1 setPaymentTerms(List<com.tools20022.repository.msg.PaymentTerms2> paymentTerms) {
+	public PaymentObligation1 setPaymentTerms(List<PaymentTerms2> paymentTerms) {
 		this.paymentTerms = Objects.requireNonNull(paymentTerms);
 		return this;
 	}
@@ -811,7 +914,7 @@ public class PaymentObligation1 {
 		return settlementTerms == null ? Optional.empty() : Optional.of(settlementTerms);
 	}
 
-	public PaymentObligation1 setSettlementTerms(com.tools20022.repository.msg.SettlementTerms2 settlementTerms) {
+	public PaymentObligation1 setSettlementTerms(SettlementTerms2 settlementTerms) {
 		this.settlementTerms = settlementTerms;
 		return this;
 	}

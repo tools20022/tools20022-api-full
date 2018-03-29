@@ -56,12 +56,16 @@ public class ConstraintProposalRejectionRule {
 	 */
 	public static final MMConstraint<CollateralProposalResponseType1> forCollateralProposalResponseType1 = new MMConstraint<CollateralProposalResponseType1>() {
 		{
-			validator = ConstraintProposalRejectionRule::checkCollateralProposalResponseType1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalRejectionRule";
 			definition = "If Status is rejected then RejectionReason or RejectionInformation must be present or both.";
 			owner_lazy = () -> CollateralProposalResponseType1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RejectionReason</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/RejectionInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ResponseType</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CollateralProposalResponseType1 obj) throws Exception {
+			checkCollateralProposalResponseType1(obj);
 		}
 	};
 	/**
@@ -104,7 +108,6 @@ public class ConstraintProposalRejectionRule {
 	 */
 	public static final MMConstraint<OtherCollateralResponse1> forOtherCollateralResponse1 = new MMConstraint<OtherCollateralResponse1>() {
 		{
-			validator = ConstraintProposalRejectionRule::checkOtherCollateralResponse1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalRejectionRule";
 			definition = "If Status is rejected then RejectionReason or RejectionInformation must be present or both.";
@@ -112,6 +115,11 @@ public class ConstraintProposalRejectionRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintProposalRejectionRule.forCashCollateralResponse1;
 			owner_lazy = () -> OtherCollateralResponse1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RejectionReason</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ResponseType</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OtherCollateralResponse1 obj) throws Exception {
+			checkOtherCollateralResponse1(obj);
 		}
 	};
 	/**
@@ -155,7 +163,6 @@ public class ConstraintProposalRejectionRule {
 	 */
 	public static final MMConstraint<CashCollateralResponse1> forCashCollateralResponse1 = new MMConstraint<CashCollateralResponse1>() {
 		{
-			validator = ConstraintProposalRejectionRule::checkCashCollateralResponse1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalRejectionRule";
 			definition = "If Status is rejected then RejectionReason or RejectionInformation must be present or both.";
@@ -163,6 +170,11 @@ public class ConstraintProposalRejectionRule {
 					com.tools20022.repository.constraints.ConstraintProposalRejectionRule.forSecuritiesCollateralResponse1, com.tools20022.repository.constraints.ConstraintProposalRejectionRule.forCashCollateralResponse2);
 			owner_lazy = () -> CashCollateralResponse1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RejectionReason</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ResponseType</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashCollateralResponse1 obj) throws Exception {
+			checkCashCollateralResponse1(obj);
 		}
 	};
 	/**
@@ -197,13 +209,17 @@ public class ConstraintProposalRejectionRule {
 	 */
 	public static final MMConstraint<SecuritiesCollateralResponse1> forSecuritiesCollateralResponse1 = new MMConstraint<SecuritiesCollateralResponse1>() {
 		{
-			validator = ConstraintProposalRejectionRule::checkSecuritiesCollateralResponse1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalRejectionRule";
 			definition = "If ResponseType equals \"Rejected\" then RejectionReason must be present or RejectionInformation must be present. Both RejectionReason and RejectionInformation may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintProposalRejectionRule.forCashCollateralResponse1;
 			owner_lazy = () -> SecuritiesCollateralResponse1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RejectionReason</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/RejectionInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ResponseType</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCollateralResponse1 obj) throws Exception {
+			checkSecuritiesCollateralResponse1(obj);
 		}
 	};
 	/**
@@ -238,13 +254,17 @@ public class ConstraintProposalRejectionRule {
 	 */
 	public static final MMConstraint<OtherCollateralResponse2> forOtherCollateralResponse2 = new MMConstraint<OtherCollateralResponse2>() {
 		{
-			validator = ConstraintProposalRejectionRule::checkOtherCollateralResponse2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalRejectionRule";
 			definition = "If ResponseType equals \"Rejected\" then RejectionReason must be present or RejectionInformation must be present. Both RejectionReason and RejectionInformation may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintProposalRejectionRule.forOtherCollateralResponse1;
 			owner_lazy = () -> OtherCollateralResponse2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RejectionReason</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ResponseType</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(OtherCollateralResponse2 obj) throws Exception {
+			checkOtherCollateralResponse2(obj);
 		}
 	};
 	/**
@@ -279,13 +299,17 @@ public class ConstraintProposalRejectionRule {
 	 */
 	public static final MMConstraint<CashCollateralResponse2> forCashCollateralResponse2 = new MMConstraint<CashCollateralResponse2>() {
 		{
-			validator = ConstraintProposalRejectionRule::checkCashCollateralResponse2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposalRejectionRule";
 			definition = "If ResponseType equals \"Rejected\" then RejectionReason must be present or RejectionInformation must be present. Both RejectionReason and RejectionInformation may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintProposalRejectionRule.forCashCollateralResponse1;
 			owner_lazy = () -> CashCollateralResponse2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RejectionReason</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ResponseType</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashCollateralResponse2 obj) throws Exception {
+			checkCashCollateralResponse2(obj);
 		}
 	};
 

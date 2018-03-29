@@ -106,7 +106,7 @@ public class BusinessDay6 {
 	 * BusinessDay5.mmSystemIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDay6, List<SystemIdentification2Choice>> mmSystemIdentification = new MMMessageAssociationEnd<BusinessDay6, List<SystemIdentification2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDay6.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class BusinessDay6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public List<SystemIdentification2Choice> getValue(BusinessDay6 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(BusinessDay6 obj, List<SystemIdentification2Choice> value) {
+			obj.setSystemIdentification(value);
 		}
 	};
 	@XmlElement(name = "BizDayOrErr", required = true)
@@ -155,7 +165,7 @@ public class BusinessDay6 {
 	 * BusinessDay5.mmBusinessDayOrError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessDayOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDay6, BusinessDayReportOrError8Choice> mmBusinessDayOrError = new MMMessageAssociationEnd<BusinessDay6, BusinessDayReportOrError8Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDay6.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class BusinessDay6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessDayReportOrError8Choice.mmObject();
+		}
+
+		@Override
+		public BusinessDayReportOrError8Choice getValue(BusinessDay6 obj) {
+			return obj.getBusinessDayOrError();
+		}
+
+		@Override
+		public void setValue(BusinessDay6 obj, BusinessDayReportOrError8Choice value) {
+			obj.setBusinessDayOrError(value);
 		}
 	};
 

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.BalanceQuantity12Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -111,7 +112,7 @@ public class OpeningBalance5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirst = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningBalance5Choice, BalanceQuantity12Choice> mmFirst = new MMMessageAttribute<OpeningBalance5Choice, BalanceQuantity12Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningBalance5Choice.mmObject();
@@ -123,7 +124,17 @@ public class OpeningBalance5Choice {
 			definition = "Opening balance for the statement period. It always equals the closing balance of the previous statement.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.BalanceQuantity12Choice.mmObject();
+			complexType_lazy = () -> BalanceQuantity12Choice.mmObject();
+		}
+
+		@Override
+		public BalanceQuantity12Choice getValue(OpeningBalance5Choice obj) {
+			return obj.getFirst();
+		}
+
+		@Override
+		public void setValue(OpeningBalance5Choice obj, BalanceQuantity12Choice value) {
+			obj.setFirst(value);
 		}
 	};
 	@XmlElement(name = "Intrmy", required = true)
@@ -166,7 +177,7 @@ public class OpeningBalance5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningBalance5Choice, BalanceQuantity12Choice> mmIntermediary = new MMMessageAttribute<OpeningBalance5Choice, BalanceQuantity12Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningBalance5Choice.mmObject();
@@ -178,7 +189,17 @@ public class OpeningBalance5Choice {
 			definition = "Opening balance of this page only. This balance must be the intermediary closing balance of the previous page of the same statement.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.BalanceQuantity12Choice.mmObject();
+			complexType_lazy = () -> BalanceQuantity12Choice.mmObject();
+		}
+
+		@Override
+		public BalanceQuantity12Choice getValue(OpeningBalance5Choice obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(OpeningBalance5Choice obj, BalanceQuantity12Choice value) {
+			obj.setIntermediary(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class OpeningBalance5Choice {
 		return first;
 	}
 
-	public OpeningBalance5Choice setFirst(com.tools20022.repository.choice.BalanceQuantity12Choice first) {
+	public OpeningBalance5Choice setFirst(BalanceQuantity12Choice first) {
 		this.first = Objects.requireNonNull(first);
 		return this;
 	}
@@ -209,7 +230,7 @@ public class OpeningBalance5Choice {
 		return intermediary;
 	}
 
-	public OpeningBalance5Choice setIntermediary(com.tools20022.repository.choice.BalanceQuantity12Choice intermediary) {
+	public OpeningBalance5Choice setIntermediary(BalanceQuantity12Choice intermediary) {
 		this.intermediary = Objects.requireNonNull(intermediary);
 		return this;
 	}

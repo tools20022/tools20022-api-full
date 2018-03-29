@@ -20,7 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Liquidity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -47,6 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * InvestmentInstrumentAmount1.mmNonHighlyLiquidAmount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.Liquidity Liquidity}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -80,6 +84,11 @@ public class InvestmentInstrumentAmount1 {
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection6
 	 * AmountAndDirection6}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#mmValue
+	 * Liquidity.mmValue}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.InvestmentInstrumentAmount1
@@ -99,8 +108,9 @@ public class InvestmentInstrumentAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHighlyLiquidAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentInstrumentAmount1, AmountAndDirection6> mmHighlyLiquidAmount = new MMMessageAssociationEnd<InvestmentInstrumentAmount1, AmountAndDirection6>() {
 		{
+			businessElementTrace_lazy = () -> Liquidity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentInstrumentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "HghlyLqdAmt";
@@ -110,7 +120,17 @@ public class InvestmentInstrumentAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(InvestmentInstrumentAmount1 obj) {
+			return obj.getHighlyLiquidAmount();
+		}
+
+		@Override
+		public void setValue(InvestmentInstrumentAmount1 obj, AmountAndDirection6 value) {
+			obj.setHighlyLiquidAmount(value);
 		}
 	};
 	@XmlElement(name = "NonHghlyLqdAmt", required = true)
@@ -123,6 +143,11 @@ public class InvestmentInstrumentAmount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection6
 	 * AmountAndDirection6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Liquidity#mmValue
+	 * Liquidity.mmValue}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -143,8 +168,9 @@ public class InvestmentInstrumentAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonHighlyLiquidAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentInstrumentAmount1, AmountAndDirection6> mmNonHighlyLiquidAmount = new MMMessageAssociationEnd<InvestmentInstrumentAmount1, AmountAndDirection6>() {
 		{
+			businessElementTrace_lazy = () -> Liquidity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentInstrumentAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "NonHghlyLqdAmt";
@@ -154,7 +180,17 @@ public class InvestmentInstrumentAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(InvestmentInstrumentAmount1 obj) {
+			return obj.getNonHighlyLiquidAmount();
+		}
+
+		@Override
+		public void setValue(InvestmentInstrumentAmount1 obj, AmountAndDirection6 value) {
+			obj.setNonHighlyLiquidAmount(value);
 		}
 	};
 
@@ -162,6 +198,7 @@ public class InvestmentInstrumentAmount1 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentInstrumentAmount1.mmHighlyLiquidAmount, com.tools20022.repository.msg.InvestmentInstrumentAmount1.mmNonHighlyLiquidAmount);
+				trace_lazy = () -> Liquidity.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentInstrumentAmount1";
@@ -175,7 +212,7 @@ public class InvestmentInstrumentAmount1 {
 		return highlyLiquidAmount;
 	}
 
-	public InvestmentInstrumentAmount1 setHighlyLiquidAmount(com.tools20022.repository.msg.AmountAndDirection6 highlyLiquidAmount) {
+	public InvestmentInstrumentAmount1 setHighlyLiquidAmount(AmountAndDirection6 highlyLiquidAmount) {
 		this.highlyLiquidAmount = Objects.requireNonNull(highlyLiquidAmount);
 		return this;
 	}
@@ -184,7 +221,7 @@ public class InvestmentInstrumentAmount1 {
 		return nonHighlyLiquidAmount;
 	}
 
-	public InvestmentInstrumentAmount1 setNonHighlyLiquidAmount(com.tools20022.repository.msg.AmountAndDirection6 nonHighlyLiquidAmount) {
+	public InvestmentInstrumentAmount1 setNonHighlyLiquidAmount(AmountAndDirection6 nonHighlyLiquidAmount) {
 		this.nonHighlyLiquidAmount = Objects.requireNonNull(nonHighlyLiquidAmount);
 		return this;
 	}

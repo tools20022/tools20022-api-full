@@ -63,13 +63,17 @@ public class ConstraintDateStatus1Rule {
 	 */
 	public static final MMConstraint<Meeting3> forMeeting3 = new MMConstraint<Meeting3>() {
 		{
-			validator = ConstraintDateStatus1Rule::checkMeeting3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateStatus1Rule";
 			definition = "If DateAndTime/DateCode is \"UKWN\", then DateStatus must not be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDateStatus1Rule.forMeeting4);
 			owner_lazy = () -> Meeting3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DateStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DateAndTime/DateCode</leftOperand><rightOperand>Unknown</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(Meeting3 obj) throws Exception {
+			checkMeeting3(obj);
 		}
 	};
 	/**
@@ -103,13 +107,17 @@ public class ConstraintDateStatus1Rule {
 	 */
 	public static final MMConstraint<Meeting4> forMeeting4 = new MMConstraint<Meeting4>() {
 		{
-			validator = ConstraintDateStatus1Rule::checkMeeting4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateStatus1Rule";
 			definition = "If DateAndTime/DateCode is \"UKWN\", then DateStatus must not be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDateStatus1Rule.forMeeting3;
 			owner_lazy = () -> Meeting4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DateStatus</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DateAndTime/DateCode</leftOperand><rightOperand>Unknown</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(Meeting4 obj) throws Exception {
+			checkMeeting4(obj);
 		}
 	};
 

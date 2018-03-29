@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.RateValueType2FormatChoice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.GeneratedRepository;
@@ -105,7 +106,7 @@ public class GrossDividendRate1Choice {
 	 * "The value of the rate is not specified, eg, the rate is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRate1Choice, RateValueType2FormatChoice> mmNotSpecifiedRate = new MMMessageAttribute<GrossDividendRate1Choice, RateValueType2FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRate1Choice.mmObject();
 			isDerived = false;
@@ -115,7 +116,17 @@ public class GrossDividendRate1Choice {
 			definition = "The value of the rate is not specified, eg, the rate is unknown.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.RateValueType2FormatChoice.mmObject();
+			complexType_lazy = () -> RateValueType2FormatChoice.mmObject();
+		}
+
+		@Override
+		public RateValueType2FormatChoice getValue(GrossDividendRate1Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(GrossDividendRate1Choice obj, RateValueType2FormatChoice value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -153,7 +164,7 @@ public class GrossDividendRate1Choice {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRate1Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<GrossDividendRate1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmFinalDividend;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRate1Choice.mmObject();
@@ -165,6 +176,16 @@ public class GrossDividendRate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(GrossDividendRate1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(GrossDividendRate1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAmt", required = true)
@@ -203,7 +224,7 @@ public class GrossDividendRate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateTypeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRate1Choice, GrossDividendRate2> mmRateTypeAmount = new MMMessageAttribute<GrossDividendRate1Choice, GrossDividendRate2>() {
 		{
 			businessComponentTrace_lazy = () -> Dividend.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRate1Choice.mmObject();
@@ -215,6 +236,16 @@ public class GrossDividendRate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GrossDividendRate2.mmObject();
+		}
+
+		@Override
+		public GrossDividendRate2 getValue(GrossDividendRate1Choice obj) {
+			return obj.getRateTypeAmount();
+		}
+
+		@Override
+		public void setValue(GrossDividendRate1Choice obj, GrossDividendRate2 value) {
+			obj.setRateTypeAmount(value);
 		}
 	};
 
@@ -237,7 +268,7 @@ public class GrossDividendRate1Choice {
 		return notSpecifiedRate;
 	}
 
-	public GrossDividendRate1Choice setNotSpecifiedRate(com.tools20022.repository.choice.RateValueType2FormatChoice notSpecifiedRate) {
+	public GrossDividendRate1Choice setNotSpecifiedRate(RateValueType2FormatChoice notSpecifiedRate) {
 		this.notSpecifiedRate = Objects.requireNonNull(notSpecifiedRate);
 		return this;
 	}

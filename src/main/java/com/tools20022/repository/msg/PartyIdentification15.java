@@ -112,7 +112,7 @@ public class PartyIdentification15 {
 	 * definition} = "Country in which the organisation is registered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification15, Optional<CountryCode>> mmCountry = new MMMessageAttribute<PartyIdentification15, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification15.mmObject();
@@ -124,6 +124,16 @@ public class PartyIdentification15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(PartyIdentification15 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PartyIdentification15 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -160,7 +170,7 @@ public class PartyIdentification15 {
 	 * definition} = "Description of an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification15, Max35Text> mmIdentification = new MMMessageAttribute<PartyIdentification15, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification15.mmObject();
@@ -172,6 +182,16 @@ public class PartyIdentification15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PartyIdentification15 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification15 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

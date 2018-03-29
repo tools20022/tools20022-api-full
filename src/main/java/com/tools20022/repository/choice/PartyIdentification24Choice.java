@@ -132,7 +132,7 @@ public class PartyIdentification24Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification24Choice, AnyBICIdentifier> mmBICOrBEI = new MMMessageAttribute<PartyIdentification24Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification24Choice.mmObject();
@@ -144,6 +144,16 @@ public class PartyIdentification24Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification24Choice obj) {
+			return obj.getBICOrBEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification24Choice obj, AnyBICIdentifier value) {
+			obj.setBICOrBEI(value);
 		}
 	};
 	@XmlElement(name = "MIC", required = true)
@@ -183,7 +193,7 @@ public class PartyIdentification24Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification24Choice, MICIdentifier> mmMIC = new MMMessageAttribute<PartyIdentification24Choice, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification24Choice.mmObject();
@@ -195,6 +205,16 @@ public class PartyIdentification24Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(PartyIdentification24Choice obj) {
+			return obj.getMIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification24Choice obj, MICIdentifier value) {
+			obj.setMIC(value);
 		}
 	};
 

@@ -100,7 +100,7 @@ public class CardTransactionCondition1 {
 	 * definition} = "Identification of the specific condition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProgram = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionCondition1, Max35Text> mmProgram = new MMMessageAttribute<CardTransactionCondition1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionCondition1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class CardTransactionCondition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CardTransactionCondition1 obj) {
+			return obj.getProgram();
+		}
+
+		@Override
+		public void setValue(CardTransactionCondition1 obj, Max35Text value) {
+			obj.setProgram(value);
 		}
 	};
 	@XmlElement(name = "Val")
@@ -142,7 +152,7 @@ public class CardTransactionCondition1 {
 	 * definition} = "Level of the condition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardTransactionCondition1, Optional<Max35Text>> mmValue = new MMMessageAttribute<CardTransactionCondition1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionCondition1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class CardTransactionCondition1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CardTransactionCondition1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(CardTransactionCondition1 obj, Optional<Max35Text> value) {
+			obj.setValue(value.orElse(null));
 		}
 	};
 

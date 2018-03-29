@@ -124,7 +124,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderMassStatusRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference15, Optional<Max35Text>> mmOrderMassStatusRequestIdentification = new MMMessageAttribute<Reference15, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference15.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class Reference15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference15 obj) {
+			return obj.getOrderMassStatusRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Reference15 obj, Optional<Max35Text> value) {
+			obj.setOrderMassStatusRequestIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrStsReqId")
@@ -171,7 +181,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderStatusRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference15, Optional<Max35Text>> mmOrderStatusRequestIdentification = new MMMessageAttribute<Reference15, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference15.mmObject();
 			isDerived = false;
@@ -183,6 +193,16 @@ public class Reference15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference15 obj) {
+			return obj.getOrderStatusRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Reference15 obj, Optional<Max35Text> value) {
+			obj.setOrderStatusRequestIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrId", required = true)
@@ -216,7 +236,7 @@ public class Reference15 {
 	 * definition} = "Unique identifier for Order as assigned by sell-side."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference15, Max35Text> mmOrderIdentification = new MMMessageAttribute<Reference15, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference15.mmObject();
 			isDerived = false;
@@ -228,6 +248,16 @@ public class Reference15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference15 obj) {
+			return obj.getOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference15 obj, Max35Text value) {
+			obj.setOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "HstCrossId")
@@ -263,7 +293,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostCrossIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference15, Optional<Max35Text>> mmHostCrossIdentification = new MMMessageAttribute<Reference15, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference15.mmObject();
 			isDerived = false;
@@ -275,6 +305,16 @@ public class Reference15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference15 obj) {
+			return obj.getHostCrossIdentification();
+		}
+
+		@Override
+		public void setValue(Reference15 obj, Optional<Max35Text> value) {
+			obj.setHostCrossIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrossOrdrId")
@@ -310,7 +350,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCrossOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference15, Optional<Max35Text>> mmCrossOrderIdentification = new MMMessageAttribute<Reference15, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference15.mmObject();
 			isDerived = false;
@@ -322,6 +362,16 @@ public class Reference15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference15 obj) {
+			return obj.getCrossOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference15 obj, Optional<Max35Text> value) {
+			obj.setCrossOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCrossOrdrId")
@@ -357,7 +407,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCrossOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference15, Optional<Max35Text>> mmOriginalCrossOrderIdentification = new MMMessageAttribute<Reference15, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference15.mmObject();
 			isDerived = false;
@@ -369,6 +419,16 @@ public class Reference15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference15 obj) {
+			return obj.getOriginalCrossOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference15 obj, Optional<Max35Text> value) {
+			obj.setOriginalCrossOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntOrdrId")
@@ -402,7 +462,7 @@ public class Reference15 {
 	 * definition} = "Unique identifier for Order as assigned by the buy-side."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference15, Optional<Max35Text>> mmClientOrderIdentification = new MMMessageAttribute<Reference15, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference15.mmObject();
 			isDerived = false;
@@ -414,6 +474,16 @@ public class Reference15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference15 obj) {
+			return obj.getClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference15 obj, Optional<Max35Text> value) {
+			obj.setClientOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryOrdrId")
@@ -448,7 +518,7 @@ public class Reference15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondaryOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference15, Optional<Max35Text>> mmSecondaryOrderIdentification = new MMMessageAttribute<Reference15, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference15.mmObject();
 			isDerived = false;
@@ -460,6 +530,16 @@ public class Reference15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference15 obj) {
+			return obj.getSecondaryOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference15 obj, Optional<Max35Text> value) {
+			obj.setSecondaryOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryClntOrdrId")
@@ -494,7 +574,7 @@ public class Reference15 {
 	 * "Identifier assigned by the party which originates the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference15, Optional<Max35Text>> mmSecondaryClientOrderIdentification = new MMMessageAttribute<Reference15, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference15.mmObject();
 			isDerived = false;
@@ -506,6 +586,16 @@ public class Reference15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference15 obj) {
+			return obj.getSecondaryClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference15 obj, Optional<Max35Text> value) {
+			obj.setSecondaryClientOrderIdentification(value.orElse(null));
 		}
 	};
 

@@ -104,7 +104,7 @@ public class ElementIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElementPath = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ElementIdentification3, Max350Text> mmElementPath = new MMMessageAttribute<ElementIdentification3, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ElementIdentification3.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class ElementIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(ElementIdentification3 obj) {
+			return obj.getElementPath();
+		}
+
+		@Override
+		public void setValue(ElementIdentification3 obj, Max350Text value) {
+			obj.setElementPath(value);
 		}
 	};
 	@XmlElement(name = "ElmtNm", required = true)
@@ -146,7 +156,7 @@ public class ElementIdentification3 {
 	 * definition} = "Name of the element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElementName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ElementIdentification3, Max35Text> mmElementName = new MMMessageAttribute<ElementIdentification3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ElementIdentification3.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class ElementIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ElementIdentification3 obj) {
+			return obj.getElementName();
+		}
+
+		@Override
+		public void setValue(ElementIdentification3 obj, Max35Text value) {
+			obj.setElementName(value);
 		}
 	};
 	@XmlElement(name = "ElmtVal")
@@ -188,7 +208,7 @@ public class ElementIdentification3 {
 	 * definition} = "Contents of the element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElementValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ElementIdentification3, Optional<Max140Text>> mmElementValue = new MMMessageAttribute<ElementIdentification3, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ElementIdentification3.mmObject();
 			isDerived = false;
@@ -199,6 +219,16 @@ public class ElementIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(ElementIdentification3 obj) {
+			return obj.getElementValue();
+		}
+
+		@Override
+		public void setValue(ElementIdentification3 obj, Optional<Max140Text> value) {
+			obj.setElementValue(value.orElse(null));
 		}
 	};
 

@@ -131,7 +131,7 @@ public class PriceRateOrAmountOrUnknownChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateOrAmountOrUnknownChoice, PercentageRate> mmRate = new MMMessageAttribute<PriceRateOrAmountOrUnknownChoice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice.mmObject();
@@ -144,6 +144,16 @@ public class PriceRateOrAmountOrUnknownChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PriceRateOrAmountOrUnknownChoice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PriceRateOrAmountOrUnknownChoice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -189,7 +199,7 @@ public class PriceRateOrAmountOrUnknownChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateOrAmountOrUnknownChoice, ActiveOrHistoricCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<PriceRateOrAmountOrUnknownChoice, ActiveOrHistoricCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice.mmObject();
@@ -202,6 +212,16 @@ public class PriceRateOrAmountOrUnknownChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAnd13DecimalAmount getValue(PriceRateOrAmountOrUnknownChoice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PriceRateOrAmountOrUnknownChoice obj, ActiveOrHistoricCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "UknwnInd", required = true)
@@ -242,7 +262,7 @@ public class PriceRateOrAmountOrUnknownChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnknownIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateOrAmountOrUnknownChoice, YesNoIndicator> mmUnknownIndicator = new MMMessageAttribute<PriceRateOrAmountOrUnknownChoice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmountOrUnknownChoice.mmObject();
 			isDerived = false;
@@ -254,6 +274,16 @@ public class PriceRateOrAmountOrUnknownChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PriceRateOrAmountOrUnknownChoice obj) {
+			return obj.getUnknownIndicator();
+		}
+
+		@Override
+		public void setValue(PriceRateOrAmountOrUnknownChoice obj, YesNoIndicator value) {
+			obj.setUnknownIndicator(value);
 		}
 	};
 

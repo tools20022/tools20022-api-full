@@ -104,7 +104,7 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	 * definition} = "Number of customers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerCount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignCurrencyPaymentAccountQuantity1, Number> mmCustomerCount = new MMMessageAttribute<ForeignCurrencyPaymentAccountQuantity1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ForeignCurrencyPaymentAccountQuantity1 obj) {
+			return obj.getCustomerCount();
+		}
+
+		@Override
+		public void setValue(ForeignCurrencyPaymentAccountQuantity1 obj, Number value) {
+			obj.setCustomerCount(value);
 		}
 	};
 	@XmlElement(name = "AcctQty", required = true)
@@ -151,7 +161,7 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 	 * definition} = "Quantity to be paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignCurrencyPaymentAccountQuantity1, FinancialInstrumentQuantity15Choice> mmAccountQuantity = new MMMessageAttribute<ForeignCurrencyPaymentAccountQuantity1, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignCurrencyPaymentAccountQuantity1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class ForeignCurrencyPaymentAccountQuantity1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(ForeignCurrencyPaymentAccountQuantity1 obj) {
+			return obj.getAccountQuantity();
+		}
+
+		@Override
+		public void setValue(ForeignCurrencyPaymentAccountQuantity1 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setAccountQuantity(value);
 		}
 	};
 

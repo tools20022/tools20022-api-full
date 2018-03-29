@@ -112,7 +112,7 @@ public class LimitDetails4 {
 	 * definition} = "Date and time at which the limit becomes effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitDetails4, Optional<DateAndDateTimeChoice>> mmStartDateTime = new MMMessageAttribute<LimitDetails4, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails4.mmObject();
@@ -124,6 +124,16 @@ public class LimitDetails4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(LimitDetails4 obj) {
+			return obj.getStartDateTime();
+		}
+
+		@Override
+		public void setValue(LimitDetails4 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setStartDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -160,7 +170,7 @@ public class LimitDetails4 {
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitDetails4, AmountChoice> mmAmount = new MMMessageAttribute<LimitDetails4, AmountChoice>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails4.mmObject();
@@ -172,6 +182,16 @@ public class LimitDetails4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountChoice.mmObject();
+		}
+
+		@Override
+		public AmountChoice getValue(LimitDetails4 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(LimitDetails4 obj, AmountChoice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -208,7 +228,7 @@ public class LimitDetails4 {
 	 * definition} = "Specifies if a limit is a debit limit or a credit limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitDetails4, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<LimitDetails4, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails4.mmObject();
@@ -220,6 +240,16 @@ public class LimitDetails4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(LimitDetails4 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(LimitDetails4 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 

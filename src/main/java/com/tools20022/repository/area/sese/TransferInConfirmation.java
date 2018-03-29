@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -144,7 +143,7 @@ public class TransferInConfirmation {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInConfirmation, AdditionalReference2> mmRelatedReference = new MMMessageBuildingBlock<TransferInConfirmation, AdditionalReference2>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,12 +154,14 @@ public class TransferInConfirmation {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInConfirmation.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference2 getValue(TransferInConfirmation obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(TransferInConfirmation obj, AdditionalReference2 value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -188,7 +189,7 @@ public class TransferInConfirmation {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInConfirmation, Optional<AdditionalReference2>> mmPoolReference = new MMMessageBuildingBlock<TransferInConfirmation, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,12 +200,14 @@ public class TransferInConfirmation {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInConfirmation.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(TransferInConfirmation obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(TransferInConfirmation obj, Optional<AdditionalReference2> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -232,7 +235,7 @@ public class TransferInConfirmation {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInConfirmation, Optional<AdditionalReference2>> mmPreviousReference = new MMMessageBuildingBlock<TransferInConfirmation, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,12 +246,14 @@ public class TransferInConfirmation {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInConfirmation.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(TransferInConfirmation obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(TransferInConfirmation obj, Optional<AdditionalReference2> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfDtls", required = true)
@@ -276,7 +281,7 @@ public class TransferInConfirmation {
 	 * "General information related to the transfer of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInConfirmation, Transfer4> mmTransferDetails = new MMMessageBuildingBlock<TransferInConfirmation, Transfer4>() {
 		{
 			xmlTag = "TrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,12 +292,14 @@ public class TransferInConfirmation {
 			complexType_lazy = () -> Transfer4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInConfirmation.class.getMethod("getTransferDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Transfer4 getValue(TransferInConfirmation obj) {
+			return obj.getTransferDetails();
+		}
+
+		@Override
+		public void setValue(TransferInConfirmation obj, Transfer4 value) {
+			obj.setTransferDetails(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls", required = true)
@@ -321,7 +328,7 @@ public class TransferInConfirmation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancialInstrumentDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInConfirmation, FinancialInstrument3> mmFinancialInstrumentDetails = new MMMessageBuildingBlock<TransferInConfirmation, FinancialInstrument3>() {
 		{
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,12 +339,14 @@ public class TransferInConfirmation {
 			complexType_lazy = () -> FinancialInstrument3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInConfirmation.class.getMethod("getFinancialInstrumentDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FinancialInstrument3 getValue(TransferInConfirmation obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(TransferInConfirmation obj, FinancialInstrument3 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
@@ -367,7 +376,7 @@ public class TransferInConfirmation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInConfirmation, InvestmentAccount10> mmAccountDetails = new MMMessageBuildingBlock<TransferInConfirmation, InvestmentAccount10>() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,12 +387,14 @@ public class TransferInConfirmation {
 			complexType_lazy = () -> InvestmentAccount10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInConfirmation.class.getMethod("getAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvestmentAccount10 getValue(TransferInConfirmation obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(TransferInConfirmation obj, InvestmentAccount10 value) {
+			obj.setAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "SttlmDtls", required = true)
@@ -412,7 +423,7 @@ public class TransferInConfirmation {
 	 * "Information related to the delivering side of the transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInConfirmation, DeliverInformation2> mmSettlementDetails = new MMMessageBuildingBlock<TransferInConfirmation, DeliverInformation2>() {
 		{
 			xmlTag = "SttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -423,12 +434,14 @@ public class TransferInConfirmation {
 			complexType_lazy = () -> DeliverInformation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInConfirmation.class.getMethod("getSettlementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DeliverInformation2 getValue(TransferInConfirmation obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(TransferInConfirmation obj, DeliverInformation2 value) {
+			obj.setSettlementDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -457,7 +470,7 @@ public class TransferInConfirmation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInConfirmation, List<Extension1>> mmExtension = new MMMessageBuildingBlock<TransferInConfirmation, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -467,12 +480,14 @@ public class TransferInConfirmation {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInConfirmation.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(TransferInConfirmation obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(TransferInConfirmation obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

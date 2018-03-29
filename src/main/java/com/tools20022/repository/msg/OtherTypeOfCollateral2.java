@@ -115,7 +115,7 @@ public class OtherTypeOfCollateral2 {
 	 * OtherTypeOfCollateral1.mmDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherTypeOfCollateral2, Max140Text> mmDescription = new MMMessageAttribute<OtherTypeOfCollateral2, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherTypeOfCollateral2.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class OtherTypeOfCollateral2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(OtherTypeOfCollateral2 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(OtherTypeOfCollateral2 obj, Max140Text value) {
+			obj.setDescription(value);
 		}
 	};
 	@XmlElement(name = "Qty")
@@ -163,7 +173,7 @@ public class OtherTypeOfCollateral2 {
 	 * definition} = "Quantity of other collateral."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherTypeOfCollateral2, Optional<FinancialInstrumentQuantity1Choice>> mmQuantity = new MMMessageAssociationEnd<OtherTypeOfCollateral2, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherTypeOfCollateral2.mmObject();
@@ -176,6 +186,16 @@ public class OtherTypeOfCollateral2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(OtherTypeOfCollateral2 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(OtherTypeOfCollateral2 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setQuantity(value.orElse(null));
 		}
 	};
 

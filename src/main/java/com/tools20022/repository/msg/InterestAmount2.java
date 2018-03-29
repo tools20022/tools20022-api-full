@@ -39,6 +39,8 @@ import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.entity.Settlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CollateralBalance1;
+import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -176,7 +178,7 @@ public class InterestAmount2 {
 	 * definition} = "Amount of money representing an interest payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, ActiveCurrencyAndAmount> mmAccruedInterestAmount = new MMMessageAttribute<InterestAmount2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -188,6 +190,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InterestAmount2 obj) {
+			return obj.getAccruedInterestAmount();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, ActiveCurrencyAndAmount value) {
+			obj.setAccruedInterestAmount(value);
 		}
 	};
 	@XmlElement(name = "ValDt", required = true)
@@ -225,7 +237,7 @@ public class InterestAmount2 {
 	 * definition} = "Agreed date for the interest payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, DateAndDateTimeChoice> mmValueDate = new MMMessageAttribute<InterestAmount2, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmPaymentDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -237,6 +249,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(InterestAmount2 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, DateAndDateTimeChoice value) {
+			obj.setValueDate(value);
 		}
 	};
 	@XmlElement(name = "IntrstMtd", required = true)
@@ -276,7 +298,7 @@ public class InterestAmount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, InterestMethod1Code> mmInterestMethod = new MMMessageAttribute<InterestAmount2, InterestMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -288,6 +310,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestMethod1Code.mmObject();
+		}
+
+		@Override
+		public InterestMethod1Code getValue(InterestAmount2 obj) {
+			return obj.getInterestMethod();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, InterestMethod1Code value) {
+			obj.setInterestMethod(value);
 		}
 	};
 	@XmlElement(name = "IntrstPrd", required = true)
@@ -325,7 +357,7 @@ public class InterestAmount2 {
 	 * definition} = "Period for which the calculation has been performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, DatePeriodDetails> mmInterestPeriod = new MMMessageAttribute<InterestAmount2, DatePeriodDetails>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -336,7 +368,17 @@ public class InterestAmount2 {
 			definition = "Period for which the calculation has been performed.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
+			complexType_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public DatePeriodDetails getValue(InterestAmount2 obj) {
+			return obj.getInterestPeriod();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, DatePeriodDetails value) {
+			obj.setInterestPeriod(value);
 		}
 	};
 	@XmlElement(name = "IntrstRate")
@@ -376,7 +418,7 @@ public class InterestAmount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, Optional<InterestRate1Choice>> mmInterestRate = new MMMessageAttribute<InterestAmount2, Optional<InterestRate1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -388,6 +430,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InterestRate1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRate1Choice> getValue(InterestAmount2 obj) {
+			return obj.getInterestRate();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, Optional<InterestRate1Choice> value) {
+			obj.setInterestRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DayCntBsis")
@@ -427,7 +479,7 @@ public class InterestAmount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDayCountBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, Optional<InterestComputationMethod2Code>> mmDayCountBasis = new MMMessageAttribute<InterestAmount2, Optional<InterestComputationMethod2Code>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -439,6 +491,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> InterestComputationMethod2Code.mmObject();
+		}
+
+		@Override
+		public Optional<InterestComputationMethod2Code> getValue(InterestAmount2 obj) {
+			return obj.getDayCountBasis();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, Optional<InterestComputationMethod2Code> value) {
+			obj.setDayCountBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ApldWhldgTax")
@@ -478,7 +540,7 @@ public class InterestAmount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAppliedWithholdingTax = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, Optional<YesNoIndicator>> mmAppliedWithholdingTax = new MMMessageAttribute<InterestAmount2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -490,6 +552,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(InterestAmount2 obj) {
+			return obj.getAppliedWithholdingTax();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, Optional<YesNoIndicator> value) {
+			obj.setAppliedWithholdingTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClctnMtd")
@@ -527,7 +599,7 @@ public class InterestAmount2 {
 	 * definition} = "Specifies whether the interest is simple or compounded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, Optional<CalculationMethod1Code>> mmCalculationMethod = new MMMessageAttribute<InterestAmount2, Optional<CalculationMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmCalculationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -539,6 +611,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CalculationMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CalculationMethod1Code> getValue(InterestAmount2 obj) {
+			return obj.getCalculationMethod();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, Optional<CalculationMethod1Code> value) {
+			obj.setCalculationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClctnFrqcy")
@@ -577,7 +659,7 @@ public class InterestAmount2 {
 	 * "Specifies the periodicity of the calculation of the interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, Optional<Frequency1Code>> mmCalculationFrequency = new MMMessageAttribute<InterestAmount2, Optional<Frequency1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmCalculationFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -589,6 +671,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency1Code> getValue(InterestAmount2 obj) {
+			return obj.getCalculationFrequency();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, Optional<Frequency1Code> value) {
+			obj.setCalculationFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollPurp", required = true)
@@ -628,7 +720,7 @@ public class InterestAmount2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, CollateralPurpose1Choice> mmCollateralPurpose = new MMMessageAttribute<InterestAmount2, CollateralPurpose1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -640,6 +732,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CollateralPurpose1Choice.mmObject();
+		}
+
+		@Override
+		public CollateralPurpose1Choice getValue(InterestAmount2 obj) {
+			return obj.getCollateralPurpose();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, CollateralPurpose1Choice value) {
+			obj.setCollateralPurpose(value);
 		}
 	};
 	@XmlElement(name = "OpngCollBal")
@@ -675,7 +777,7 @@ public class InterestAmount2 {
 	 * definition} = "Provides details about the opening collateral balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOpeningCollateralBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestAmount2, Optional<CollateralBalance1>> mmOpeningCollateralBalance = new MMMessageAssociationEnd<InterestAmount2, Optional<CollateralBalance1>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -687,7 +789,17 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralBalance1.mmObject();
+			type_lazy = () -> CollateralBalance1.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralBalance1> getValue(InterestAmount2 obj) {
+			return obj.getOpeningCollateralBalance();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, Optional<CollateralBalance1> value) {
+			obj.setOpeningCollateralBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgCollBal", required = true)
@@ -723,7 +835,7 @@ public class InterestAmount2 {
 	 * definition} = "Provides details about the closing collateral balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosingCollateralBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestAmount2, CollateralBalance1> mmClosingCollateralBalance = new MMMessageAssociationEnd<InterestAmount2, CollateralBalance1>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -735,7 +847,17 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralBalance1.mmObject();
+			type_lazy = () -> CollateralBalance1.mmObject();
+		}
+
+		@Override
+		public CollateralBalance1 getValue(InterestAmount2 obj) {
+			return obj.getClosingCollateralBalance();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, CollateralBalance1 value) {
+			obj.setClosingCollateralBalance(value);
 		}
 	};
 	@XmlElement(name = "StdSttlmInstrs")
@@ -772,7 +894,7 @@ public class InterestAmount2 {
 	 * definition} = "Identifies the standard settlement instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandardSettlementInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, Optional<Max140Text>> mmStandardSettlementInstructions = new MMMessageAttribute<InterestAmount2, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> Settlement.mmStandingSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
@@ -784,6 +906,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(InterestAmount2 obj) {
+			return obj.getStandardSettlementInstructions();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, Optional<Max140Text> value) {
+			obj.setStandardSettlementInstructions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -815,7 +947,7 @@ public class InterestAmount2 {
 	 * definition} = "Additionnal information related to interest request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestAmount2, Optional<Max210Text>> mmAdditionalInformation = new MMMessageAttribute<InterestAmount2, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InterestAmount2.mmObject();
 			isDerived = false;
@@ -826,6 +958,16 @@ public class InterestAmount2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(InterestAmount2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(InterestAmount2 obj, Optional<Max210Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 
@@ -881,7 +1023,7 @@ public class InterestAmount2 {
 		return interestPeriod;
 	}
 
-	public InterestAmount2 setInterestPeriod(com.tools20022.repository.msg.DatePeriodDetails interestPeriod) {
+	public InterestAmount2 setInterestPeriod(DatePeriodDetails interestPeriod) {
 		this.interestPeriod = Objects.requireNonNull(interestPeriod);
 		return this;
 	}
@@ -944,7 +1086,7 @@ public class InterestAmount2 {
 		return openingCollateralBalance == null ? Optional.empty() : Optional.of(openingCollateralBalance);
 	}
 
-	public InterestAmount2 setOpeningCollateralBalance(com.tools20022.repository.msg.CollateralBalance1 openingCollateralBalance) {
+	public InterestAmount2 setOpeningCollateralBalance(CollateralBalance1 openingCollateralBalance) {
 		this.openingCollateralBalance = openingCollateralBalance;
 		return this;
 	}
@@ -953,7 +1095,7 @@ public class InterestAmount2 {
 		return closingCollateralBalance;
 	}
 
-	public InterestAmount2 setClosingCollateralBalance(com.tools20022.repository.msg.CollateralBalance1 closingCollateralBalance) {
+	public InterestAmount2 setClosingCollateralBalance(CollateralBalance1 closingCollateralBalance) {
 		this.closingCollateralBalance = Objects.requireNonNull(closingCollateralBalance);
 		return this;
 	}

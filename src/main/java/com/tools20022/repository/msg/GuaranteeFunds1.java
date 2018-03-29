@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GuaranteeFundInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -98,7 +99,7 @@ public class GuaranteeFunds1 {
 	 * definition} = "Type for the guarantee funds used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGuaranteeFundsUsageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GuaranteeFunds1, Max35Text> mmGuaranteeFundsUsageType = new MMMessageAttribute<GuaranteeFunds1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeFunds1.mmObject();
 			isDerived = false;
@@ -109,6 +110,16 @@ public class GuaranteeFunds1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GuaranteeFunds1 obj) {
+			return obj.getGuaranteeFundsUsageType();
+		}
+
+		@Override
+		public void setValue(GuaranteeFunds1 obj, Max35Text value) {
+			obj.setGuaranteeFundsUsageType(value);
 		}
 	};
 	@XmlElement(name = "GrntFndInf")
@@ -140,7 +151,7 @@ public class GuaranteeFunds1 {
 	 * definition} = "Owner and account number of the guarantee fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGuaranteeFundInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GuaranteeFunds1, Optional<GuaranteeFundInformation1>> mmGuaranteeFundInformation = new MMMessageAssociationEnd<GuaranteeFunds1, Optional<GuaranteeFundInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeFunds1.mmObject();
 			isDerived = false;
@@ -151,7 +162,17 @@ public class GuaranteeFunds1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GuaranteeFundInformation1.mmObject();
+			type_lazy = () -> GuaranteeFundInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<GuaranteeFundInformation1> getValue(GuaranteeFunds1 obj) {
+			return obj.getGuaranteeFundInformation();
+		}
+
+		@Override
+		public void setValue(GuaranteeFunds1 obj, Optional<GuaranteeFundInformation1> value) {
+			obj.setGuaranteeFundInformation(value.orElse(null));
 		}
 	};
 
@@ -181,7 +202,7 @@ public class GuaranteeFunds1 {
 		return guaranteeFundInformation == null ? Optional.empty() : Optional.of(guaranteeFundInformation);
 	}
 
-	public GuaranteeFunds1 setGuaranteeFundInformation(com.tools20022.repository.msg.GuaranteeFundInformation1 guaranteeFundInformation) {
+	public GuaranteeFunds1 setGuaranteeFundInformation(GuaranteeFundInformation1 guaranteeFundInformation) {
 		this.guaranteeFundInformation = guaranteeFundInformation;
 		return this;
 	}

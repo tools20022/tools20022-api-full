@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AccountOwnerTypeCode"</li>
  * </ul>
@@ -254,7 +254,7 @@ public class AccountOwnerTypeCode extends MMCode {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOwnerTypeCode";
 				derivation_lazy = () -> Arrays.asList(AccountOwnerType1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOwnerTypeCode.PrimaryOwner, com.tools20022.repository.codeset.AccountOwnerTypeCode.Trustee,

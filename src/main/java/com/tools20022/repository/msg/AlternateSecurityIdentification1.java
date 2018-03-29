@@ -144,7 +144,7 @@ public class AlternateSecurityIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateSecurityIdentification1, Max35Text> mmIdentification = new MMMessageAttribute<AlternateSecurityIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification1.mmObject();
@@ -157,6 +157,16 @@ public class AlternateSecurityIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AlternateSecurityIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AlternateSecurityIdentification1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "DmstIdSrc", required = true)
@@ -193,7 +203,7 @@ public class AlternateSecurityIdentification1 {
 	 * definition} = "Country of the proprietary identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomesticIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateSecurityIdentification1, CountryCode> mmDomesticIdentificationSource = new MMMessageAttribute<AlternateSecurityIdentification1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification1.mmObject();
@@ -205,6 +215,16 @@ public class AlternateSecurityIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(AlternateSecurityIdentification1 obj) {
+			return obj.getDomesticIdentificationSource();
+		}
+
+		@Override
+		public void setValue(AlternateSecurityIdentification1 obj, CountryCode value) {
+			obj.setDomesticIdentificationSource(value);
 		}
 	};
 	@XmlElement(name = "PrtryIdSrc", required = true)
@@ -241,7 +261,7 @@ public class AlternateSecurityIdentification1 {
 	 * definition} = "Entity that issues the proprietary identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlternateSecurityIdentification1, Max35Text> mmProprietaryIdentificationSource = new MMMessageAttribute<AlternateSecurityIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmEntityName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification1.mmObject();
@@ -253,6 +273,16 @@ public class AlternateSecurityIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AlternateSecurityIdentification1 obj) {
+			return obj.getProprietaryIdentificationSource();
+		}
+
+		@Override
+		public void setValue(AlternateSecurityIdentification1 obj, Max35Text value) {
+			obj.setProprietaryIdentificationSource(value);
 		}
 	};
 	/**

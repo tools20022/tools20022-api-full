@@ -120,7 +120,7 @@ public class BalanceType9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceType9Choice, SystemBalanceType2Code> mmCode = new MMMessageAttribute<BalanceType9Choice, SystemBalanceType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceType9Choice.mmObject();
@@ -133,6 +133,16 @@ public class BalanceType9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemBalanceType2Code.mmObject();
+		}
+
+		@Override
+		public SystemBalanceType2Code getValue(BalanceType9Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BalanceType9Choice obj, SystemBalanceType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -178,7 +188,7 @@ public class BalanceType9Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceType9Choice, Max35Text> mmProprietary = new MMMessageAttribute<BalanceType9Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceType9Choice.mmObject();
@@ -191,6 +201,16 @@ public class BalanceType9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BalanceType9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BalanceType9Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MemberReport;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -66,7 +67,7 @@ public class MemberInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "MmbRpt", required = true)
-	protected List<com.tools20022.repository.msg.MemberReport> memberReport;
+	protected List<MemberReport> memberReport;
 	/**
 	 * 
 	 <p>
@@ -93,7 +94,7 @@ public class MemberInformation {
 	 * definition} = "Reports either member information or a business error."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMemberReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberInformation, List<MemberReport>> mmMemberReport = new MMMessageAssociationEnd<MemberInformation, List<MemberReport>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberInformation.mmObject();
 			isDerived = false;
@@ -103,7 +104,17 @@ public class MemberInformation {
 			definition = "Reports either member information or a business error.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MemberReport.mmObject();
+			type_lazy = () -> MemberReport.mmObject();
+		}
+
+		@Override
+		public List<MemberReport> getValue(MemberInformation obj) {
+			return obj.getMemberReport();
+		}
+
+		@Override
+		public void setValue(MemberInformation obj, List<MemberReport> value) {
+			obj.setMemberReport(value);
 		}
 	};
 
@@ -131,7 +142,7 @@ public class MemberInformation {
 		return memberReport == null ? memberReport = new ArrayList<>() : memberReport;
 	}
 
-	public MemberInformation setMemberReport(List<com.tools20022.repository.msg.MemberReport> memberReport) {
+	public MemberInformation setMemberReport(List<MemberReport> memberReport) {
 		this.memberReport = Objects.requireNonNull(memberReport);
 		return this;
 	}

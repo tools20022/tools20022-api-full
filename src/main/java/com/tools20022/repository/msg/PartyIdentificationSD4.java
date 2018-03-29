@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactIdentification1;
+import com.tools20022.repository.msg.PartyIdentificationSD3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -105,7 +107,7 @@ public class PartyIdentificationSD4 {
 	 * "Identifies a contact person by a name, a given name and an address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationSD4, Optional<ContactIdentification1>> mmContactPerson = new MMMessageAssociationEnd<PartyIdentificationSD4, Optional<ContactIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD4.mmObject();
 			isDerived = false;
@@ -117,7 +119,17 @@ public class PartyIdentificationSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
+			type_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification1> getValue(PartyIdentificationSD4 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD4 obj, Optional<ContactIdentification1> value) {
+			obj.setContactPerson(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EmplngPty")
@@ -153,7 +165,7 @@ public class PartyIdentificationSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationSD4, Optional<PartyIdentificationSD3>> mmEmployingParty = new MMMessageAssociationEnd<PartyIdentificationSD4, Optional<PartyIdentificationSD3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD4.mmObject();
 			isDerived = false;
@@ -165,7 +177,17 @@ public class PartyIdentificationSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD3.mmObject();
+			type_lazy = () -> PartyIdentificationSD3.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationSD3> getValue(PartyIdentificationSD4 obj) {
+			return obj.getEmployingParty();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationSD4 obj, Optional<PartyIdentificationSD3> value) {
+			obj.setEmployingParty(value.orElse(null));
 		}
 	};
 
@@ -187,7 +209,7 @@ public class PartyIdentificationSD4 {
 		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public PartyIdentificationSD4 setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
+	public PartyIdentificationSD4 setContactPerson(ContactIdentification1 contactPerson) {
 		this.contactPerson = contactPerson;
 		return this;
 	}
@@ -196,7 +218,7 @@ public class PartyIdentificationSD4 {
 		return employingParty == null ? Optional.empty() : Optional.of(employingParty);
 	}
 
-	public PartyIdentificationSD4 setEmployingParty(com.tools20022.repository.msg.PartyIdentificationSD3 employingParty) {
+	public PartyIdentificationSD4 setEmployingParty(PartyIdentificationSD3 employingParty) {
 		this.employingParty = employingParty;
 		return this;
 	}

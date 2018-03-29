@@ -107,7 +107,7 @@ public class SecuritiesBalanceType10FormatChoice {
 	 * definition} = "Standard code to specify the type of securities balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType10FormatChoice, SecuritiesBalanceType10Code> mmCode = new MMMessageAttribute<SecuritiesBalanceType10FormatChoice, SecuritiesBalanceType10Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType10FormatChoice.mmObject();
@@ -119,6 +119,16 @@ public class SecuritiesBalanceType10FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType10Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType10Code getValue(SecuritiesBalanceType10FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType10FormatChoice obj, SecuritiesBalanceType10Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class SecuritiesBalanceType10FormatChoice {
 	 * "Proprietary code to express the type of securities balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType10FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<SecuritiesBalanceType10FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType10FormatChoice.mmObject();
@@ -169,6 +179,16 @@ public class SecuritiesBalanceType10FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(SecuritiesBalanceType10FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType10FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

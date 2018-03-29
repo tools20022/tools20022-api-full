@@ -110,7 +110,7 @@ public class RoundingParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingModulus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RoundingParameters1, Optional<DecimalNumber>> mmRoundingModulus = new MMMessageAttribute<RoundingParameters1, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingModulus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RoundingParameters1.mmObject();
@@ -122,6 +122,16 @@ public class RoundingParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(RoundingParameters1 obj) {
+			return obj.getRoundingModulus();
+		}
+
+		@Override
+		public void setValue(RoundingParameters1 obj, Optional<DecimalNumber> value) {
+			obj.setRoundingModulus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RndgDrctn", required = true)
@@ -160,7 +170,7 @@ public class RoundingParameters1 {
 	 * "Rounding direction applied to fractional numbers, eg, round up."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RoundingParameters1, RoundingDirection1Code> mmRoundingDirection = new MMMessageAttribute<RoundingParameters1, RoundingDirection1Code>() {
 		{
 			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RoundingParameters1.mmObject();
@@ -172,6 +182,16 @@ public class RoundingParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RoundingDirection1Code.mmObject();
+		}
+
+		@Override
+		public RoundingDirection1Code getValue(RoundingParameters1 obj) {
+			return obj.getRoundingDirection();
+		}
+
+		@Override
+		public void setValue(RoundingParameters1 obj, RoundingDirection1Code value) {
+			obj.setRoundingDirection(value);
 		}
 	};
 

@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.DocumentIdentification11;
 import com.tools20022.repository.msg.Extension2;
 import com.tools20022.repository.msg.TransactionDetails12;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -183,7 +182,7 @@ public class SecuritiesMessageCancellationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, DocumentIdentification11> mmIdentification = new MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, DocumentIdentification11>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +193,14 @@ public class SecuritiesMessageCancellationAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageCancellationAdviceV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification11 getValue(SecuritiesMessageCancellationAdviceV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageCancellationAdviceV01 obj, DocumentIdentification11 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Dtls", required = true)
@@ -227,7 +228,7 @@ public class SecuritiesMessageCancellationAdviceV01 {
 	 * definition} = "Details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, TransactionDetails12> mmDetails = new MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, TransactionDetails12>() {
 		{
 			xmlTag = "Dtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,12 +239,14 @@ public class SecuritiesMessageCancellationAdviceV01 {
 			complexType_lazy = () -> TransactionDetails12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageCancellationAdviceV01.class.getMethod("getDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionDetails12 getValue(SecuritiesMessageCancellationAdviceV01 obj) {
+			return obj.getDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageCancellationAdviceV01 obj, TransactionDetails12 value) {
+			obj.setDetails(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -272,7 +275,7 @@ public class SecuritiesMessageCancellationAdviceV01 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, Optional<PartyIdentification10Choice>> mmMessageOriginator = new MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,12 +286,14 @@ public class SecuritiesMessageCancellationAdviceV01 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageCancellationAdviceV01.class.getMethod("getMessageOriginator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(SecuritiesMessageCancellationAdviceV01 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageCancellationAdviceV01 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -318,7 +323,7 @@ public class SecuritiesMessageCancellationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, Optional<PartyIdentification10Choice>> mmMessageRecipient = new MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,12 +334,14 @@ public class SecuritiesMessageCancellationAdviceV01 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageCancellationAdviceV01.class.getMethod("getMessageRecipient", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(SecuritiesMessageCancellationAdviceV01 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageCancellationAdviceV01 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -363,7 +370,7 @@ public class SecuritiesMessageCancellationAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, List<Extension2>> mmExtension = new MMMessageBuildingBlock<SecuritiesMessageCancellationAdviceV01, List<Extension2>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -373,12 +380,14 @@ public class SecuritiesMessageCancellationAdviceV01 {
 			complexType_lazy = () -> Extension2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageCancellationAdviceV01.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension2> getValue(SecuritiesMessageCancellationAdviceV01 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageCancellationAdviceV01 obj, List<Extension2> value) {
+			obj.setExtension(value);
 		}
 	};
 

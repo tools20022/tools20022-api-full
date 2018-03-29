@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.entity.AssetClassification;
 import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.GeneratedRepository;
@@ -94,6 +95,11 @@ public class DerivativeClassification1 {
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Asset#mmAssetClassification
+	 * Asset.mmAssetClassification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.DerivativeClassification1
@@ -111,8 +117,9 @@ public class DerivativeClassification1 {
 	 * definition} = "Highest level classification of a derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeClassification1, Max35Text> mmAssetClass = new MMMessageAttribute<DerivativeClassification1, Max35Text>() {
 		{
+			businessElementTrace_lazy = () -> Asset.mmAssetClassification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeClassification1.mmObject();
 			isDerived = false;
 			xmlTag = "AsstClss";
@@ -122,6 +129,16 @@ public class DerivativeClassification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DerivativeClassification1 obj) {
+			return obj.getAssetClass();
+		}
+
+		@Override
+		public void setValue(DerivativeClassification1 obj, Max35Text value) {
+			obj.setAssetClass(value);
 		}
 	};
 	@XmlElement(name = "BasePdct")
@@ -158,7 +175,7 @@ public class DerivativeClassification1 {
 	 * definition} = "Second level classification of a derivative.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeClassification1, Optional<Max35Text>> mmBaseProduct = new MMMessageAttribute<DerivativeClassification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeClassification1.mmObject();
@@ -170,6 +187,16 @@ public class DerivativeClassification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DerivativeClassification1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(DerivativeClassification1 obj, Optional<Max35Text> value) {
+			obj.setBaseProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubPdct")
@@ -206,7 +233,7 @@ public class DerivativeClassification1 {
 	 * definition} = "Third level classification of a derivative.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeClassification1, Optional<Max35Text>> mmSubProduct = new MMMessageAttribute<DerivativeClassification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeClassification1.mmObject();
@@ -218,6 +245,16 @@ public class DerivativeClassification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DerivativeClassification1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(DerivativeClassification1 obj, Optional<Max35Text> value) {
+			obj.setSubProduct(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubCmmdty")
@@ -254,7 +291,7 @@ public class DerivativeClassification1 {
 	 * definition} = "Low level classification of commodity derivatives.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubCommodity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeClassification1, Optional<Max35Text>> mmSubCommodity = new MMMessageAttribute<DerivativeClassification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmDetailedSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeClassification1.mmObject();
@@ -266,6 +303,16 @@ public class DerivativeClassification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DerivativeClassification1 obj) {
+			return obj.getSubCommodity();
+		}
+
+		@Override
+		public void setValue(DerivativeClassification1 obj, Optional<Max35Text> value) {
+			obj.setSubCommodity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxTp")
@@ -302,7 +349,7 @@ public class DerivativeClassification1 {
 	 * definition} = "Low level classification of a derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeClassification1, Optional<Max35Text>> mmTransactionType = new MMMessageAttribute<DerivativeClassification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeClassification1.mmObject();
@@ -314,6 +361,16 @@ public class DerivativeClassification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DerivativeClassification1 obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(DerivativeClassification1 obj, Optional<Max35Text> value) {
+			obj.setTransactionType(value.orElse(null));
 		}
 	};
 

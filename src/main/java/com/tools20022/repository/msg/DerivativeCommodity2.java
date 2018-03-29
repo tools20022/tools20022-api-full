@@ -112,7 +112,7 @@ public class DerivativeCommodity2 {
 	 * definition} = "Commodity product attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DerivativeCommodity2, AssetClassCommodity3Choice> mmProduct = new MMMessageAssociationEnd<DerivativeCommodity2, AssetClassCommodity3Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeCommodity2.mmObject();
@@ -125,6 +125,16 @@ public class DerivativeCommodity2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AssetClassCommodity3Choice.mmObject();
+		}
+
+		@Override
+		public AssetClassCommodity3Choice getValue(DerivativeCommodity2 obj) {
+			return obj.getProduct();
+		}
+
+		@Override
+		public void setValue(DerivativeCommodity2 obj, AssetClassCommodity3Choice value) {
+			obj.setProduct(value);
 		}
 	};
 	@XmlElement(name = "TxTp")
@@ -162,7 +172,7 @@ public class DerivativeCommodity2 {
 	 * definition} = "Transaction type as specified by the trading venue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeCommodity2, Optional<AssetClassTransactionType1Code>> mmTransactionType = new MMMessageAttribute<DerivativeCommodity2, Optional<AssetClassTransactionType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeCommodity2.mmObject();
@@ -174,6 +184,16 @@ public class DerivativeCommodity2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassTransactionType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClassTransactionType1Code> getValue(DerivativeCommodity2 obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(DerivativeCommodity2 obj, Optional<AssetClassTransactionType1Code> value) {
+			obj.setTransactionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlPricTp")
@@ -211,7 +231,7 @@ public class DerivativeCommodity2 {
 	 * definition} = "Final price type as specified by the trading venue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DerivativeCommodity2, Optional<AssetPriceType1Code>> mmFinalPriceType = new MMMessageAttribute<DerivativeCommodity2, Optional<AssetPriceType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeCommodity2.mmObject();
@@ -223,6 +243,16 @@ public class DerivativeCommodity2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetPriceType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetPriceType1Code> getValue(DerivativeCommodity2 obj) {
+			return obj.getFinalPriceType();
+		}
+
+		@Override
+		public void setValue(DerivativeCommodity2 obj, Optional<AssetPriceType1Code> value) {
+			obj.setFinalPriceType(value.orElse(null));
 		}
 	};
 

@@ -62,12 +62,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification4> forMarketIdentification4 = new MMConstraint<MarketIdentification4>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification78);
 			owner_lazy = () -> MarketIdentification4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification4 obj) throws Exception {
+			checkMarketIdentification4(obj);
 		}
 	};
 	/**
@@ -93,11 +97,15 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification5> forMarketIdentification5 = new MMConstraint<MarketIdentification5>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present.";
 			owner_lazy = () -> MarketIdentification5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification5 obj) throws Exception {
+			checkMarketIdentification5(obj);
 		}
 	};
 	/**
@@ -123,11 +131,15 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification8> forMarketIdentification8 = new MMConstraint<MarketIdentification8>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present.";
 			owner_lazy = () -> MarketIdentification8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification8 obj) throws Exception {
+			checkMarketIdentification8(obj);
 		}
 	};
 	/**
@@ -153,11 +165,15 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification9> forMarketIdentification9 = new MMConstraint<MarketIdentification9>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present.";
 			owner_lazy = () -> MarketIdentification9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification9 obj) throws Exception {
+			checkMarketIdentification9(obj);
 		}
 	};
 	/**
@@ -191,12 +207,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification77> forMarketIdentification77 = new MMConstraint<MarketIdentification77>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification77;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification79);
 			owner_lazy = () -> MarketIdentification77.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification77 obj) throws Exception {
+			checkMarketIdentification77(obj);
 		}
 	};
 	/**
@@ -230,12 +250,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification13> forMarketIdentification13 = new MMConstraint<MarketIdentification13>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification80);
 			owner_lazy = () -> MarketIdentification13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification13 obj) throws Exception {
+			checkMarketIdentification13(obj);
 		}
 	};
 	/**
@@ -269,12 +293,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification20> forMarketIdentification20 = new MMConstraint<MarketIdentification20>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If MarketType is OverTheCounter (OTCO), then Identification/Description must specify a system. If MarketType is Exchange (EXCH), then Identification/MarketIdentificationCode must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification84);
 			owner_lazy = () -> MarketIdentification20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification20 obj) throws Exception {
+			checkMarketIdentification20(obj);
 		}
 	};
 	/**
@@ -308,12 +336,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification21> forMarketIdentification21 = new MMConstraint<MarketIdentification21>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If MarketType is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf MarketType is Exchange (EXCH), then Identification/MarketIdentificationCode must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification85);
 			owner_lazy = () -> MarketIdentification21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification21 obj) throws Exception {
+			checkMarketIdentification21(obj);
 		}
 	};
 	/**
@@ -344,12 +376,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification78> forMarketIdentification78 = new MMConstraint<MarketIdentification78>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification4;
 			owner_lazy = () -> MarketIdentification78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification78 obj) throws Exception {
+			checkMarketIdentification78(obj);
 		}
 	};
 	/**
@@ -380,12 +416,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification79> forMarketIdentification79 = new MMConstraint<MarketIdentification79>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification77;
 			owner_lazy = () -> MarketIdentification79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification79 obj) throws Exception {
+			checkMarketIdentification79(obj);
 		}
 	};
 	/**
@@ -416,12 +456,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification80> forMarketIdentification80 = new MMConstraint<MarketIdentification80>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification80;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification13;
 			owner_lazy = () -> MarketIdentification80.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification80 obj) throws Exception {
+			checkMarketIdentification80(obj);
 		}
 	};
 	/**
@@ -447,11 +491,15 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification82> forMarketIdentification82 = new MMConstraint<MarketIdentification82>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification82;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present.";
 			owner_lazy = () -> MarketIdentification82.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification82 obj) throws Exception {
+			checkMarketIdentification82(obj);
 		}
 	};
 	/**
@@ -482,12 +530,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification84> forMarketIdentification84 = new MMConstraint<MarketIdentification84>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification84;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification20;
 			owner_lazy = () -> MarketIdentification84.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification84 obj) throws Exception {
+			checkMarketIdentification84(obj);
 		}
 	};
 	/**
@@ -518,12 +570,16 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification85> forMarketIdentification85 = new MMConstraint<MarketIdentification85>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification85;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification21;
 			owner_lazy = () -> MarketIdentification85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification85 obj) throws Exception {
+			checkMarketIdentification85(obj);
 		}
 	};
 	/**
@@ -549,11 +605,15 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification88> forMarketIdentification88 = new MMConstraint<MarketIdentification88>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Market Type is OverTheCounter (OTCO), then Identification/Description must specify a system.\r\nIf Market Type is Exchange (EXCH), then Identification/MarketIdentificationCode must be present.";
 			owner_lazy = () -> MarketIdentification88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification88 obj) throws Exception {
+			checkMarketIdentification88(obj);
 		}
 	};
 	/**
@@ -579,11 +639,15 @@ public class ConstraintMarketTypeAndIdentificationRule {
 	 */
 	public static final MMConstraint<MarketIdentification90> forMarketIdentification90 = new MMConstraint<MarketIdentification90>() {
 		{
-			validator = ConstraintMarketTypeAndIdentificationRule::checkMarketIdentification90;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTypeAndIdentificationRule";
 			definition = "If Type/Code is OverTheCounter (OTCO) and if Identification is present, then Identification/Description must specify a system.\r\nIf Type/Code is Exchange (EXCH) and if Identification is present, then Identification/MarketIdentifierCode must be present.";
 			owner_lazy = () -> MarketIdentification90.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification90 obj) throws Exception {
+			checkMarketIdentification90(obj);
 		}
 	};
 

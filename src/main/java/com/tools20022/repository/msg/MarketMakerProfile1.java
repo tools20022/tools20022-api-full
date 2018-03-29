@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriodDetails1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -102,7 +103,7 @@ public class MarketMakerProfile1 {
 	 * definition} = "Period of the contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContractPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketMakerProfile1, Optional<DateTimePeriodDetails1>> mmContractPeriod = new MMMessageAssociationEnd<MarketMakerProfile1, Optional<DateTimePeriodDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketMakerProfile1.mmObject();
 			isDerived = false;
@@ -113,7 +114,17 @@ public class MarketMakerProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
+			type_lazy = () -> DateTimePeriodDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodDetails1> getValue(MarketMakerProfile1 obj) {
+			return obj.getContractPeriod();
+		}
+
+		@Override
+		public void setValue(MarketMakerProfile1 obj, Optional<DateTimePeriodDetails1> value) {
+			obj.setContractPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cmplc")
@@ -148,7 +159,7 @@ public class MarketMakerProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompliance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketMakerProfile1, Optional<YesNoIndicator>> mmCompliance = new MMMessageAttribute<MarketMakerProfile1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketMakerProfile1.mmObject();
 			isDerived = false;
@@ -159,6 +170,16 @@ public class MarketMakerProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(MarketMakerProfile1 obj) {
+			return obj.getCompliance();
+		}
+
+		@Override
+		public void setValue(MarketMakerProfile1 obj, Optional<YesNoIndicator> value) {
+			obj.setCompliance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxSprd")
@@ -193,7 +214,7 @@ public class MarketMakerProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketMakerProfile1, Optional<PercentageRate>> mmMaximumSpread = new MMMessageAttribute<MarketMakerProfile1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketMakerProfile1.mmObject();
 			isDerived = false;
@@ -204,6 +225,16 @@ public class MarketMakerProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(MarketMakerProfile1 obj) {
+			return obj.getMaximumSpread();
+		}
+
+		@Override
+		public void setValue(MarketMakerProfile1 obj, Optional<PercentageRate> value) {
+			obj.setMaximumSpread(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dscnt")
@@ -236,7 +267,7 @@ public class MarketMakerProfile1 {
 	 * definition} = "Rate of discount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDiscount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketMakerProfile1, Optional<PercentageRate>> mmDiscount = new MMMessageAttribute<MarketMakerProfile1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketMakerProfile1.mmObject();
 			isDerived = false;
@@ -247,6 +278,16 @@ public class MarketMakerProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(MarketMakerProfile1 obj) {
+			return obj.getDiscount();
+		}
+
+		@Override
+		public void setValue(MarketMakerProfile1 obj, Optional<PercentageRate> value) {
+			obj.setDiscount(value.orElse(null));
 		}
 	};
 
@@ -268,7 +309,7 @@ public class MarketMakerProfile1 {
 		return contractPeriod == null ? Optional.empty() : Optional.of(contractPeriod);
 	}
 
-	public MarketMakerProfile1 setContractPeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 contractPeriod) {
+	public MarketMakerProfile1 setContractPeriod(DateTimePeriodDetails1 contractPeriod) {
 		this.contractPeriod = contractPeriod;
 		return this;
 	}

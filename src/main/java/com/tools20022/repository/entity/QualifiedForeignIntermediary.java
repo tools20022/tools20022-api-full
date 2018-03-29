@@ -23,7 +23,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -97,7 +96,7 @@ public class QualifiedForeignIntermediary extends TradePartyRole {
 	 * "Specifies the country in which the intermediary is qualified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCountry = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<QualifiedForeignIntermediary, CountryCode> mmCountry = new MMBusinessAttribute<QualifiedForeignIntermediary, CountryCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QualifiedForeignIntermediary.mmObject();
@@ -109,12 +108,14 @@ public class QualifiedForeignIntermediary extends TradePartyRole {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return QualifiedForeignIntermediary.class.getMethod("getCountry", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CountryCode getValue(QualifiedForeignIntermediary obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(QualifiedForeignIntermediary obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

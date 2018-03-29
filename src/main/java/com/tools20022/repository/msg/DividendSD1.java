@@ -106,7 +106,7 @@ public class DividendSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendSD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<DividendSD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DividendSD1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class DividendSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(DividendSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(DividendSD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlAnlDvddRate")
@@ -154,7 +164,7 @@ public class DividendSD1 {
 	 * "Provides the total annual dividend rate as announced by the Issuer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAnnualDividendRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendSD1, Optional<RateAndAmountFormat16Choice>> mmTotalAnnualDividendRate = new MMMessageAttribute<DividendSD1, Optional<RateAndAmountFormat16Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DividendSD1.mmObject();
@@ -166,6 +176,16 @@ public class DividendSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat16Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat16Choice> getValue(DividendSD1 obj) {
+			return obj.getTotalAnnualDividendRate();
+		}
+
+		@Override
+		public void setValue(DividendSD1 obj, Optional<RateAndAmountFormat16Choice> value) {
+			obj.setTotalAnnualDividendRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAnlTtlDvddRate")
@@ -204,7 +224,7 @@ public class DividendSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAnnualTotalDividendRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendSD1, Optional<RateAndAmountFormat16Choice>> mmMaximumAnnualTotalDividendRate = new MMMessageAttribute<DividendSD1, Optional<RateAndAmountFormat16Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DividendSD1.mmObject();
@@ -216,6 +236,16 @@ public class DividendSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat16Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat16Choice> getValue(DividendSD1 obj) {
+			return obj.getMaximumAnnualTotalDividendRate();
+		}
+
+		@Override
+		public void setValue(DividendSD1 obj, Optional<RateAndAmountFormat16Choice> value) {
+			obj.setMaximumAnnualTotalDividendRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinAnlTtlDvddRate")
@@ -254,7 +284,7 @@ public class DividendSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumAnnualTotalDividendRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendSD1, Optional<RateAndAmountFormat16Choice>> mmMinimumAnnualTotalDividendRate = new MMMessageAttribute<DividendSD1, Optional<RateAndAmountFormat16Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DividendSD1.mmObject();
@@ -266,6 +296,16 @@ public class DividendSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat16Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateAndAmountFormat16Choice> getValue(DividendSD1 obj) {
+			return obj.getMinimumAnnualTotalDividendRate();
+		}
+
+		@Override
+		public void setValue(DividendSD1 obj, Optional<RateAndAmountFormat16Choice> value) {
+			obj.setMinimumAnnualTotalDividendRate(value.orElse(null));
 		}
 	};
 

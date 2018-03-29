@@ -54,12 +54,16 @@ public class ConstraintCounterUndertakingNoRule {
 	 */
 	public static final MMConstraint<Undertaking1> forUndertaking1 = new MMConstraint<Undertaking1>() {
 		{
-			validator = ConstraintCounterUndertakingNoRule::checkUndertaking1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterUndertakingNoRule";
 			definition = " If CounterUndertakingIndicator is \"false\" or \"0\" (No), then CounterUndertakingDetails must not be present.";
 			owner_lazy = () -> Undertaking1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CounterUndertaking</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CounterUndertakingIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Undertaking1 obj) throws Exception {
+			checkUndertaking1(obj);
 		}
 	};
 

@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MandateRelatedInformation13"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -127,7 +127,7 @@ public class MandateRelatedInformation13 {
 	 * MandateRelatedInformation11.mmMandateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation13, Max35Text> mmMandateIdentification = new MMMessageAttribute<MandateRelatedInformation13, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation13.mmObject();
@@ -140,6 +140,16 @@ public class MandateRelatedInformation13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MandateRelatedInformation13 obj) {
+			return obj.getMandateIdentification();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation13 obj, Max35Text value) {
+			obj.setMandateIdentification(value);
 		}
 	};
 	@XmlElement(name = "DtOfSgntr")
@@ -182,7 +192,7 @@ public class MandateRelatedInformation13 {
 	 * MandateRelatedInformation11.mmDateOfSignature}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateOfSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation13, Optional<ISODate>> mmDateOfSignature = new MMMessageAttribute<MandateRelatedInformation13, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation13.mmObject();
@@ -195,6 +205,16 @@ public class MandateRelatedInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MandateRelatedInformation13 obj) {
+			return obj.getDateOfSignature();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation13 obj, Optional<ISODate> value) {
+			obj.setDateOfSignature(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MndtImg")
@@ -227,7 +247,7 @@ public class MandateRelatedInformation13 {
 	 * definition} = "Image of scanned signed mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateImage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation13, Optional<Max2MBBinary>> mmMandateImage = new MMMessageAttribute<MandateRelatedInformation13, Optional<Max2MBBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation13.mmObject();
 			isDerived = false;
@@ -239,6 +259,16 @@ public class MandateRelatedInformation13 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2MBBinary.mmObject();
 		}
+
+		@Override
+		public Optional<Max2MBBinary> getValue(MandateRelatedInformation13 obj) {
+			return obj.getMandateImage();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation13 obj, Optional<Max2MBBinary> value) {
+			obj.setMandateImage(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -248,7 +278,7 @@ public class MandateRelatedInformation13 {
 						com.tools20022.repository.msg.MandateRelatedInformation13.mmMandateImage);
 				trace_lazy = () -> DirectDebitMandate.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateRelatedInformation13";
 				definition = "Provides further details related to a direct debit mandate signed between the creditor and the debtor.";
 				previousVersion_lazy = () -> MandateRelatedInformation11.mmObject();

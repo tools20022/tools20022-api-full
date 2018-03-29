@@ -101,7 +101,7 @@ public class BusinessDayInformationSearchCriteria {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationSearchCriteria, List<SystemIdentificationChoice>> mmSystemIdentification = new MMMessageAttribute<BusinessDayInformationSearchCriteria, List<SystemIdentificationChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class BusinessDayInformationSearchCriteria {
 			definition = "Identification of a particular cash clearing system.";
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public List<SystemIdentificationChoice> getValue(BusinessDayInformationSearchCriteria obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationSearchCriteria obj, List<SystemIdentificationChoice> value) {
+			obj.setSystemIdentification(value);
 		}
 	};
 	@XmlElement(name = "SysCcy")
@@ -144,7 +154,7 @@ public class BusinessDayInformationSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationSearchCriteria, List<CurrencyCode>> mmSystemCurrency = new MMMessageAttribute<BusinessDayInformationSearchCriteria, List<CurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class BusinessDayInformationSearchCriteria {
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<CurrencyCode> getValue(BusinessDayInformationSearchCriteria obj) {
+			return obj.getSystemCurrency();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationSearchCriteria obj, List<CurrencyCode> value) {
+			obj.setSystemCurrency(value);
 		}
 	};
 

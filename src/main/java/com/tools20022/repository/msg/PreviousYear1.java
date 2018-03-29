@@ -130,7 +130,7 @@ public class PreviousYear1 {
 	 * definition} = "Selection ot the entirety of the investment plans."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreviousYear1, PreviousAll> mmAllPreviousYears = new MMMessageAttribute<PreviousYear1, PreviousAll>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PreviousYear1.mmObject();
@@ -142,6 +142,16 @@ public class PreviousYear1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreviousAll.mmObject();
+		}
+
+		@Override
+		public PreviousAll getValue(PreviousYear1 obj) {
+			return obj.getAllPreviousYears();
+		}
+
+		@Override
+		public void setValue(PreviousYear1 obj, PreviousAll value) {
+			obj.setAllPreviousYears(value);
 		}
 	};
 	@XmlElement(name = "SpcfcPrvsYrs", required = true)
@@ -178,7 +188,7 @@ public class PreviousYear1 {
 	 * "Selection of investment plans issued during previous years."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpecificPreviousYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreviousYear1, List<ISOYear>> mmSpecificPreviousYears = new MMMessageAttribute<PreviousYear1, List<ISOYear>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredYear;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PreviousYear1.mmObject();
@@ -189,6 +199,16 @@ public class PreviousYear1 {
 			definition = "Selection of investment plans issued during previous years.";
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYear.mmObject();
+		}
+
+		@Override
+		public List<ISOYear> getValue(PreviousYear1 obj) {
+			return obj.getSpecificPreviousYears();
+		}
+
+		@Override
+		public void setValue(PreviousYear1 obj, List<ISOYear> value) {
+			obj.setSpecificPreviousYears(value);
 		}
 	};
 	@XmlElement(name = "CshCmpntInd", required = true)
@@ -227,7 +247,7 @@ public class PreviousYear1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashComponentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreviousYear1, YesNoIndicator> mmCashComponentIndicator = new MMMessageAttribute<PreviousYear1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCashComponentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PreviousYear1.mmObject();
@@ -239,6 +259,16 @@ public class PreviousYear1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PreviousYear1 obj) {
+			return obj.getCashComponentIndicator();
+		}
+
+		@Override
+		public void setValue(PreviousYear1 obj, YesNoIndicator value) {
+			obj.setCashComponentIndicator(value);
 		}
 	};
 	/**

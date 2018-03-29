@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification32;
+import com.tools20022.repository.msg.Traceability1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -140,7 +142,7 @@ public class Header9 {
 	 * Header5.mmMessageFunction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header9, MessageFunction4Code> mmMessageFunction = new MMMessageAttribute<Header9, MessageFunction4Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header9.mmObject();
 			isDerived = false;
@@ -153,6 +155,16 @@ public class Header9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction4Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction4Code getValue(Header9 obj) {
+			return obj.getMessageFunction();
+		}
+
+		@Override
+		public void setValue(Header9 obj, MessageFunction4Code value) {
+			obj.setMessageFunction(value);
 		}
 	};
 	@XmlElement(name = "PrtcolVrsn", required = true)
@@ -195,7 +207,7 @@ public class Header9 {
 	 * Header5.mmProtocolVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtocolVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header9, Max6Text> mmProtocolVersion = new MMMessageAttribute<Header9, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header9.mmObject();
 			isDerived = false;
@@ -208,6 +220,16 @@ public class Header9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(Header9 obj) {
+			return obj.getProtocolVersion();
+		}
+
+		@Override
+		public void setValue(Header9 obj, Max6Text value) {
+			obj.setProtocolVersion(value);
 		}
 	};
 	@XmlElement(name = "XchgId")
@@ -252,7 +274,7 @@ public class Header9 {
 	 * Header5.mmExchangeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header9, Optional<Max3NumericText>> mmExchangeIdentification = new MMMessageAttribute<Header9, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header9.mmObject();
 			isDerived = false;
@@ -265,6 +287,16 @@ public class Header9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(Header9 obj) {
+			return obj.getExchangeIdentification();
+		}
+
+		@Override
+		public void setValue(Header9 obj, Optional<Max3NumericText> value) {
+			obj.setExchangeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -308,7 +340,7 @@ public class Header9 {
 	 * Header5.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header9, ISODateTime> mmCreationDateTime = new MMMessageAttribute<Header9, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header9.mmObject();
 			isDerived = false;
@@ -321,6 +353,16 @@ public class Header9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Header9 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Header9 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "InitgPty")
@@ -364,7 +406,7 @@ public class Header9 {
 	 * Header5.mmInitiatingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header9, Optional<GenericIdentification32>> mmInitiatingParty = new MMMessageAssociationEnd<Header9, Optional<GenericIdentification32>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header9.mmObject();
 			isDerived = false;
@@ -377,7 +419,17 @@ public class Header9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(Header9 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(Header9 obj, Optional<GenericIdentification32> value) {
+			obj.setInitiatingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptPty")
@@ -422,7 +474,7 @@ public class Header9 {
 	 * Header5.mmRecipientParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Header9, Optional<GenericIdentification32>> mmRecipientParty = new MMMessageAssociationEnd<Header9, Optional<GenericIdentification32>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header9.mmObject();
 			isDerived = false;
@@ -435,11 +487,21 @@ public class Header9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(Header9 obj) {
+			return obj.getRecipientParty();
+		}
+
+		@Override
+		public void setValue(Header9 obj, Optional<GenericIdentification32> value) {
+			obj.setRecipientParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tracblt")
-	protected List<com.tools20022.repository.msg.Traceability1> traceability;
+	protected List<Traceability1> traceability;
 	/**
 	 * 
 	 <p>
@@ -480,7 +542,7 @@ public class Header9 {
 	 * Header5.mmTraceability}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTraceability = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header9, List<Traceability1>> mmTraceability = new MMMessageAttribute<Header9, List<Traceability1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header9.mmObject();
 			isDerived = false;
@@ -491,7 +553,17 @@ public class Header9 {
 			nextVersions_lazy = () -> Arrays.asList(Header13.mmTraceability);
 			previousVersion_lazy = () -> Header5.mmTraceability;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Traceability1.mmObject();
+			complexType_lazy = () -> Traceability1.mmObject();
+		}
+
+		@Override
+		public List<Traceability1> getValue(Header9 obj) {
+			return obj.getTraceability();
+		}
+
+		@Override
+		public void setValue(Header9 obj, List<Traceability1> value) {
+			obj.setTraceability(value);
 		}
 	};
 
@@ -553,7 +625,7 @@ public class Header9 {
 		return initiatingParty == null ? Optional.empty() : Optional.of(initiatingParty);
 	}
 
-	public Header9 setInitiatingParty(com.tools20022.repository.msg.GenericIdentification32 initiatingParty) {
+	public Header9 setInitiatingParty(GenericIdentification32 initiatingParty) {
 		this.initiatingParty = initiatingParty;
 		return this;
 	}
@@ -562,7 +634,7 @@ public class Header9 {
 		return recipientParty == null ? Optional.empty() : Optional.of(recipientParty);
 	}
 
-	public Header9 setRecipientParty(com.tools20022.repository.msg.GenericIdentification32 recipientParty) {
+	public Header9 setRecipientParty(GenericIdentification32 recipientParty) {
 		this.recipientParty = recipientParty;
 		return this;
 	}
@@ -571,7 +643,7 @@ public class Header9 {
 		return traceability == null ? traceability = new ArrayList<>() : traceability;
 	}
 
-	public Header9 setTraceability(List<com.tools20022.repository.msg.Traceability1> traceability) {
+	public Header9 setTraceability(List<Traceability1> traceability) {
 		this.traceability = Objects.requireNonNull(traceability);
 		return this;
 	}

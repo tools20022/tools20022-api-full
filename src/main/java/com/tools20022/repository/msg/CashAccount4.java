@@ -23,6 +23,8 @@ import com.tools20022.repository.codeset.FundCashAccount2Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentificationAndName3;
+import com.tools20022.repository.msg.BranchData;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,7 +136,7 @@ public class CashAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount4, AccountIdentificationAndName3> mmIdentification = new MMMessageAttribute<CashAccount4, AccountIdentificationAndName3>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
@@ -145,7 +147,17 @@ public class CashAccount4 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
+			complexType_lazy = () -> AccountIdentificationAndName3.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationAndName3 getValue(CashAccount4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount4 obj, AccountIdentificationAndName3 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -181,7 +193,7 @@ public class CashAccount4 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount4, Optional<PartyIdentification2Choice>> mmAccountOwner = new MMMessageAssociationEnd<CashAccount4, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
@@ -194,6 +206,16 @@ public class CashAccount4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CashAccount4 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(CashAccount4 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -231,7 +253,7 @@ public class CashAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount4, Optional<PartyIdentification2Choice>> mmAccountServicer = new MMMessageAssociationEnd<CashAccount4, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
@@ -244,6 +266,16 @@ public class CashAccount4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(CashAccount4 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount4 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrBrnch")
@@ -281,7 +313,7 @@ public class CashAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount4, Optional<BranchData>> mmAccountServicerBranch = new MMMessageAttribute<CashAccount4, Optional<BranchData>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmBranch;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
@@ -292,7 +324,17 @@ public class CashAccount4 {
 			definition = "Information identifying a specific branch of a financial institution.\n\nUsage: this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
+			complexType_lazy = () -> BranchData.mmObject();
+		}
+
+		@Override
+		public Optional<BranchData> getValue(CashAccount4 obj) {
+			return obj.getAccountServicerBranch();
+		}
+
+		@Override
+		public void setValue(CashAccount4 obj, Optional<BranchData> value) {
+			obj.setAccountServicerBranch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctTp")
@@ -331,7 +373,7 @@ public class CashAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestmentAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount4, Optional<FundCashAccount2Code>> mmInvestmentAccountType = new MMMessageAttribute<CashAccount4, Optional<FundCashAccount2Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
@@ -343,6 +385,16 @@ public class CashAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FundCashAccount2Code.mmObject();
+		}
+
+		@Override
+		public Optional<FundCashAccount2Code> getValue(CashAccount4 obj) {
+			return obj.getInvestmentAccountType();
+		}
+
+		@Override
+		public void setValue(CashAccount4 obj, Optional<FundCashAccount2Code> value) {
+			obj.setInvestmentAccountType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedInvstmtAcctTp")
@@ -381,7 +433,7 @@ public class CashAccount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedInvestmentAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount4, Optional<Extended350Code>> mmExtendedInvestmentAccountType = new MMMessageAttribute<CashAccount4, Optional<Extended350Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
@@ -393,6 +445,16 @@ public class CashAccount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(CashAccount4 obj) {
+			return obj.getExtendedInvestmentAccountType();
+		}
+
+		@Override
+		public void setValue(CashAccount4 obj, Optional<Extended350Code> value) {
+			obj.setExtendedInvestmentAccountType(value.orElse(null));
 		}
 	};
 	/**
@@ -466,7 +528,7 @@ public class CashAccount4 {
 		return identification;
 	}
 
-	public CashAccount4 setIdentification(com.tools20022.repository.msg.AccountIdentificationAndName3 identification) {
+	public CashAccount4 setIdentification(AccountIdentificationAndName3 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -493,7 +555,7 @@ public class CashAccount4 {
 		return accountServicerBranch == null ? Optional.empty() : Optional.of(accountServicerBranch);
 	}
 
-	public CashAccount4 setAccountServicerBranch(com.tools20022.repository.msg.BranchData accountServicerBranch) {
+	public CashAccount4 setAccountServicerBranch(BranchData accountServicerBranch) {
 		this.accountServicerBranch = accountServicerBranch;
 		return this;
 	}

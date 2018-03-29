@@ -117,7 +117,7 @@ public class AccountUsageType2Choice {
 	 * AccountUsageType1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountUsageType2Choice, AccountUsageType2Code> mmCode = new MMMessageAttribute<AccountUsageType2Choice, AccountUsageType2Code>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountUsageType2Choice.mmObject();
@@ -130,6 +130,16 @@ public class AccountUsageType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountUsageType2Code.mmObject();
+		}
+
+		@Override
+		public AccountUsageType2Code getValue(AccountUsageType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AccountUsageType2Choice obj, AccountUsageType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class AccountUsageType2Choice {
 	 * AccountUsageType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountUsageType2Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<AccountUsageType2Choice, GenericIdentification47>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountUsageType2Choice.mmObject();
@@ -185,6 +195,16 @@ public class AccountUsageType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(AccountUsageType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AccountUsageType2Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

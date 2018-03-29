@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V06;
 import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08;
 import com.tools20022.repository.codeset.PartialSettlement2Code;
 import com.tools20022.repository.codeset.PreConfirmation1Code;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
@@ -72,6 +73,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07#mmAdditionalParameters
  * SecuritiesFinancingConfirmation002V07.mmAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08#mmAdditionalParameters
+ * SecuritiesFinancingConfirmation002V08.mmAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
@@ -141,7 +145,7 @@ public class AdditionalParameters26 {
 	 * definition} = "Specifies whether there exists a pre-confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters26, Optional<PreConfirmation1Code>> mmPreConfirmation = new MMMessageAttribute<AdditionalParameters26, Optional<PreConfirmation1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPreConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters26.mmObject();
@@ -154,6 +158,16 @@ public class AdditionalParameters26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PreConfirmation1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PreConfirmation1Code> getValue(AdditionalParameters26 obj) {
+			return obj.getPreConfirmation();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters26 obj, Optional<PreConfirmation1Code> value) {
+			obj.setPreConfirmation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtlSttlm")
@@ -194,7 +208,7 @@ public class AdditionalParameters26 {
 	 * definition} = "Specifies partial settlement information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialSettlement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters26, Optional<PartialSettlement2Code>> mmPartialSettlement = new MMMessageAttribute<AdditionalParameters26, Optional<PartialSettlement2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPartialSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters26.mmObject();
@@ -207,6 +221,16 @@ public class AdditionalParameters26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PartialSettlement2Code.mmObject();
+		}
+
+		@Override
+		public Optional<PartialSettlement2Code> getValue(AdditionalParameters26 obj) {
+			return obj.getPartialSettlement();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters26 obj, Optional<PartialSettlement2Code> value) {
+			obj.setPartialSettlement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsPrtlConfId")
@@ -249,7 +273,7 @@ public class AdditionalParameters26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousPartialConfirmationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters26, Optional<RestrictedFINXMax16Text>> mmPreviousPartialConfirmationIdentification = new MMMessageAttribute<AdditionalParameters26, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters26.mmObject();
@@ -263,6 +287,16 @@ public class AdditionalParameters26 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(AdditionalParameters26 obj) {
+			return obj.getPreviousPartialConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters26 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setPreviousPartialConfirmationIdentification(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -270,7 +304,8 @@ public class AdditionalParameters26 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters26.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters26.mmPartialSettlement,
 						com.tools20022.repository.msg.AdditionalParameters26.mmPreviousPartialConfirmationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmation002V06.mmAdditionalParameters, SecuritiesFinancingConfirmation002V07.mmAdditionalParameters);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmation002V06.mmAdditionalParameters, SecuritiesFinancingConfirmation002V07.mmAdditionalParameters,
+						SecuritiesFinancingConfirmation002V08.mmAdditionalParameters);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forAdditionalParameters26);

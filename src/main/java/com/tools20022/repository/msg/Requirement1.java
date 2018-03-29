@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ExposureCalculation;
 import com.tools20022.repository.entity.MarginAmountRequirement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarginRequirement1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class Requirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVariationMarginRequirement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Requirement1, MarginRequirement1> mmVariationMarginRequirement = new MMMessageAssociationEnd<Requirement1, MarginRequirement1>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmVariationMarginAmountRequirement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Requirement1.mmObject();
@@ -122,7 +123,17 @@ public class Requirement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarginRequirement1.mmObject();
+			type_lazy = () -> MarginRequirement1.mmObject();
+		}
+
+		@Override
+		public MarginRequirement1 getValue(Requirement1 obj) {
+			return obj.getVariationMarginRequirement();
+		}
+
+		@Override
+		public void setValue(Requirement1 obj, MarginRequirement1 value) {
+			obj.setVariationMarginRequirement(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmtRqrmnt")
@@ -159,7 +170,7 @@ public class Requirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmountRequirement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Requirement1, Optional<MarginRequirement1>> mmSegregatedIndependentAmountRequirement = new MMMessageAssociationEnd<Requirement1, Optional<MarginRequirement1>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmSegregatedAmountRequirement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Requirement1.mmObject();
@@ -171,7 +182,17 @@ public class Requirement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarginRequirement1.mmObject();
+			type_lazy = () -> MarginRequirement1.mmObject();
+		}
+
+		@Override
+		public Optional<MarginRequirement1> getValue(Requirement1 obj) {
+			return obj.getSegregatedIndependentAmountRequirement();
+		}
+
+		@Override
+		public void setValue(Requirement1 obj, Optional<MarginRequirement1> value) {
+			obj.setSegregatedIndependentAmountRequirement(value.orElse(null));
 		}
 	};
 
@@ -193,7 +214,7 @@ public class Requirement1 {
 		return variationMarginRequirement;
 	}
 
-	public Requirement1 setVariationMarginRequirement(com.tools20022.repository.msg.MarginRequirement1 variationMarginRequirement) {
+	public Requirement1 setVariationMarginRequirement(MarginRequirement1 variationMarginRequirement) {
 		this.variationMarginRequirement = Objects.requireNonNull(variationMarginRequirement);
 		return this;
 	}
@@ -202,7 +223,7 @@ public class Requirement1 {
 		return segregatedIndependentAmountRequirement == null ? Optional.empty() : Optional.of(segregatedIndependentAmountRequirement);
 	}
 
-	public Requirement1 setSegregatedIndependentAmountRequirement(com.tools20022.repository.msg.MarginRequirement1 segregatedIndependentAmountRequirement) {
+	public Requirement1 setSegregatedIndependentAmountRequirement(MarginRequirement1 segregatedIndependentAmountRequirement) {
 		this.segregatedIndependentAmountRequirement = segregatedIndependentAmountRequirement;
 		return this;
 	}

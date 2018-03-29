@@ -98,7 +98,7 @@ public class ProcessingStatus1FormatChoice {
 	 * definition} = "Standard code to specify the processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessingStatus1FormatChoice, ProcessingStatus1Code> mmCode = new MMMessageAttribute<ProcessingStatus1FormatChoice, ProcessingStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus1FormatChoice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class ProcessingStatus1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProcessingStatus1Code.mmObject();
+		}
+
+		@Override
+		public ProcessingStatus1Code getValue(ProcessingStatus1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus1FormatChoice obj, ProcessingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class ProcessingStatus1FormatChoice {
 	 * definition} = "Proprietary code to express the processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessingStatus1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<ProcessingStatus1FormatChoice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus1FormatChoice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class ProcessingStatus1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(ProcessingStatus1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

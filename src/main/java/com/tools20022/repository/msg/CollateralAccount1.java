@@ -127,7 +127,7 @@ public class CollateralAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAccount1, Max35Text> mmIdentification = new MMMessageAttribute<CollateralAccount1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAccount1.mmObject();
@@ -140,6 +140,16 @@ public class CollateralAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CollateralAccount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralAccount1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -184,7 +194,7 @@ public class CollateralAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAccount1, Optional<CollateralAccountIdentificationType1Choice>> mmType = new MMMessageAttribute<CollateralAccount1, Optional<CollateralAccountIdentificationType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmCollateralAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAccount1.mmObject();
@@ -197,6 +207,16 @@ public class CollateralAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CollateralAccountIdentificationType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralAccountIdentificationType1Choice> getValue(CollateralAccount1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CollateralAccount1 obj, Optional<CollateralAccountIdentificationType1Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -240,7 +260,7 @@ public class CollateralAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAccount1, Optional<Max70Text>> mmName = new MMMessageAttribute<CollateralAccount1, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAccount1.mmObject();
@@ -253,6 +273,16 @@ public class CollateralAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CollateralAccount1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CollateralAccount1 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 

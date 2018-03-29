@@ -17,7 +17,6 @@
 
 package com.tools20022.repository.area.caaa;
 
-import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
@@ -27,7 +26,7 @@ import com.tools20022.repository.msg.AcceptorCancellationAdviceResponse7;
 import com.tools20022.repository.msg.ContentInformationType16;
 import com.tools20022.repository.msg.Header36;
 import com.tools20022.repository.msgset.CAPEMaintenance20172018;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -59,6 +58,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion
+ * CardPaymentsExchangesAcceptortoAcquirerISOLatestversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.CAPEMaintenance20172018
  * CAPEMaintenance20172018}</li>
  * </ul>
@@ -75,12 +77,9 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.008.001.07}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
- * semanticMarkup} = type=prefix, prefix=DRAFT1</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorCancellationAdviceResponseV07"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -128,7 +127,7 @@ public class AcceptorCancellationAdviceResponseV07 {
 	 * AcceptorCancellationAdviceResponseV06.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV07, Header36> mmHeader = new MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV07, Header36>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,12 +139,14 @@ public class AcceptorCancellationAdviceResponseV07 {
 			complexType_lazy = () -> Header36.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCancellationAdviceResponseV07.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header36 getValue(AcceptorCancellationAdviceResponseV07 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdviceResponseV07 obj, Header36 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "CxlAdvcRspn", required = true)
@@ -178,7 +179,7 @@ public class AcceptorCancellationAdviceResponseV07 {
 	 * AcceptorCancellationAdviceResponseV06.mmCancellationAdviceResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationAdviceResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV07, AcceptorCancellationAdviceResponse7> mmCancellationAdviceResponse = new MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV07, AcceptorCancellationAdviceResponse7>() {
 		{
 			xmlTag = "CxlAdvcRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class AcceptorCancellationAdviceResponseV07 {
 			complexType_lazy = () -> AcceptorCancellationAdviceResponse7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCancellationAdviceResponseV07.class.getMethod("getCancellationAdviceResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorCancellationAdviceResponse7 getValue(AcceptorCancellationAdviceResponseV07 obj) {
+			return obj.getCancellationAdviceResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdviceResponseV07 obj, AcceptorCancellationAdviceResponse7 value) {
+			obj.setCancellationAdviceResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -228,7 +231,7 @@ public class AcceptorCancellationAdviceResponseV07 {
 	 * AcceptorCancellationAdviceResponseV06.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV07, Optional<ContentInformationType16>> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorCancellationAdviceResponseV07, Optional<ContentInformationType16>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,24 +243,25 @@ public class AcceptorCancellationAdviceResponseV07 {
 			complexType_lazy = () -> ContentInformationType16.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCancellationAdviceResponseV07.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType16> getValue(AcceptorCancellationAdviceResponseV07 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdviceResponseV07 obj, Optional<ContentInformationType16> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT1"}));
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationAdviceResponseV07";
 				definition = "The AcceptorCancellationAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) about the notification of the payment cancellation.";
 				previousVersion_lazy = () -> AcceptorCancellationAdviceResponseV06.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEMaintenance20172018.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOLatestversion.mmObject(), CAPEMaintenance20172018.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCxlAdvcRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();

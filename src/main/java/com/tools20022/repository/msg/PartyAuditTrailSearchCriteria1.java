@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -112,7 +113,7 @@ public class PartyAuditTrailSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAuditTrailSearchCriteria1, Optional<SystemPartyIdentification3>> mmPartyIdentification = new MMMessageAssociationEnd<PartyAuditTrailSearchCriteria1, Optional<SystemPartyIdentification3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -124,7 +125,17 @@ public class PartyAuditTrailSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
+			type_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification3> getValue(PartyAuditTrailSearchCriteria1 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailSearchCriteria1 obj, Optional<SystemPartyIdentification3> value) {
+			obj.setPartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -165,7 +176,7 @@ public class PartyAuditTrailSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyAuditTrailSearchCriteria1, Optional<DateSearchChoice>> mmDatePeriod = new MMMessageAttribute<PartyAuditTrailSearchCriteria1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailSearchCriteria1.mmObject();
 			isDerived = false;
@@ -177,6 +188,16 @@ public class PartyAuditTrailSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(PartyAuditTrailSearchCriteria1 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(PartyAuditTrailSearchCriteria1 obj, Optional<DateSearchChoice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 
@@ -198,7 +219,7 @@ public class PartyAuditTrailSearchCriteria1 {
 		return partyIdentification == null ? Optional.empty() : Optional.of(partyIdentification);
 	}
 
-	public PartyAuditTrailSearchCriteria1 setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+	public PartyAuditTrailSearchCriteria1 setPartyIdentification(SystemPartyIdentification3 partyIdentification) {
 		this.partyIdentification = partyIdentification;
 		return this;
 	}

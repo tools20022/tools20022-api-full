@@ -51,11 +51,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<TradingVenueIdentification1Choice> forTradingVenueIdentification1Choice = new MMConstraint<TradingVenueIdentification1Choice>() {
 		{
-			validator = ConstraintValidMICRule::checkTradingVenueIdentification1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Market Identification code must be an active market at the time of reporting.";
 			owner_lazy = () -> TradingVenueIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TradingVenueIdentification1Choice obj) throws Exception {
+			checkTradingVenueIdentification1Choice(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<TradingVenueAttributes1> forTradingVenueAttributes1 = new MMConstraint<TradingVenueAttributes1>() {
 		{
-			validator = ConstraintValidMICRule::checkTradingVenueAttributes1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Market Identification code must be an active market at the time of reporting.";
 			owner_lazy = () -> TradingVenueAttributes1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TradingVenueAttributes1 obj) throws Exception {
+			checkTradingVenueAttributes1(obj);
 		}
 	};
 	/**
@@ -111,11 +119,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<VolumeCapReport1> forVolumeCapReport1 = new MMConstraint<VolumeCapReport1>() {
 		{
-			validator = ConstraintValidMICRule::checkVolumeCapReport1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Where populated, the market identification code must be an active market at the time of reporting.";
 			owner_lazy = () -> VolumeCapReport1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(VolumeCapReport1 obj) throws Exception {
+			checkVolumeCapReport1(obj);
 		}
 	};
 	/**
@@ -141,11 +153,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport11> forTransparencyDataReport11 = new MMConstraint<TransparencyDataReport11>() {
 		{
-			validator = ConstraintValidMICRule::checkTransparencyDataReport11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Where reported, Market Identification code must be an active market for that reporting period.";
 			owner_lazy = () -> TransparencyDataReport11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport11 obj) throws Exception {
+			checkTransparencyDataReport11(obj);
 		}
 	};
 	/**
@@ -171,11 +187,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport13> forTransparencyDataReport13 = new MMConstraint<TransparencyDataReport13>() {
 		{
-			validator = ConstraintValidMICRule::checkTransparencyDataReport13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Market Identification code must be an active market at the time of reporting.";
 			owner_lazy = () -> TransparencyDataReport13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport13 obj) throws Exception {
+			checkTransparencyDataReport13(obj);
 		}
 	};
 	/**
@@ -201,11 +221,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport12> forTransparencyDataReport12 = new MMConstraint<TransparencyDataReport12>() {
 		{
-			validator = ConstraintValidMICRule::checkTransparencyDataReport12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Where reported, market Identification code must be an active market for that reporting period.";
 			owner_lazy = () -> TransparencyDataReport12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport12 obj) throws Exception {
+			checkTransparencyDataReport12(obj);
 		}
 	};
 	/**
@@ -231,11 +255,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport15> forTransparencyDataReport15 = new MMConstraint<TransparencyDataReport15>() {
 		{
-			validator = ConstraintValidMICRule::checkTransparencyDataReport15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Market Identification code must be an active market at the time of reporting.";
 			owner_lazy = () -> TransparencyDataReport15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport15 obj) throws Exception {
+			checkTransparencyDataReport15(obj);
 		}
 	};
 	/**
@@ -261,11 +289,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport10> forTransparencyDataReport10 = new MMConstraint<TransparencyDataReport10>() {
 		{
-			validator = ConstraintValidMICRule::checkTransparencyDataReport10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Where reported, Market Identification code must be an active market for that reporting period.";
 			owner_lazy = () -> TransparencyDataReport10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport10 obj) throws Exception {
+			checkTransparencyDataReport10(obj);
 		}
 	};
 	/**
@@ -291,11 +323,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<TransparencyDataReport14> forTransparencyDataReport14 = new MMConstraint<TransparencyDataReport14>() {
 		{
-			validator = ConstraintValidMICRule::checkTransparencyDataReport14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Where reported, market Identification code must be an active market for that reporting period.";
 			owner_lazy = () -> TransparencyDataReport14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransparencyDataReport14 obj) throws Exception {
+			checkTransparencyDataReport14(obj);
 		}
 	};
 	/**
@@ -320,11 +356,15 @@ public class ConstraintValidMICRule {
 	 */
 	public static final MMConstraint<MarketDetail2> forMarketDetail2 = new MMConstraint<MarketDetail2>() {
 		{
-			validator = ConstraintValidMICRule::checkMarketDetail2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidMICRule";
 			definition = "Market Identification code must be an active market at the time of reporting.";
 			owner_lazy = () -> MarketDetail2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketDetail2 obj) throws Exception {
+			checkMarketDetail2(obj);
 		}
 	};
 

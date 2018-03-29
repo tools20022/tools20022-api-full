@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.CSDOrNCB1Choice;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BillingIdentification1;
+import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -132,7 +134,7 @@ public class BillingSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingSearchCriteria1, Optional<BillingIdentification1>> mmBillingIdentification = new MMMessageAttribute<BillingSearchCriteria1, Optional<BillingIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingSearchCriteria1.mmObject();
@@ -144,7 +146,17 @@ public class BillingSearchCriteria1 {
 			nextVersions_lazy = () -> Arrays.asList(BillingSearchCriteria2.mmBillingIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BillingIdentification1.mmObject();
+			complexType_lazy = () -> BillingIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<BillingIdentification1> getValue(BillingSearchCriteria1 obj) {
+			return obj.getBillingIdentification();
+		}
+
+		@Override
+		public void setValue(BillingSearchCriteria1 obj, Optional<BillingIdentification1> value) {
+			obj.setBillingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BllgPrd")
@@ -190,7 +202,7 @@ public class BillingSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBillingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingSearchCriteria1, Optional<DatePeriodDetails>> mmBillingPeriod = new MMMessageAssociationEnd<BillingSearchCriteria1, Optional<DatePeriodDetails>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmPeriodCovered;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingSearchCriteria1.mmObject();
@@ -203,7 +215,17 @@ public class BillingSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
+			type_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodDetails> getValue(BillingSearchCriteria1 obj) {
+			return obj.getBillingPeriod();
+		}
+
+		@Override
+		public void setValue(BillingSearchCriteria1 obj, Optional<DatePeriodDetails> value) {
+			obj.setBillingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CSDOrNCB")
@@ -249,7 +271,7 @@ public class BillingSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingSearchCriteria1, Optional<CSDOrNCB1Choice>> mmCSDOrNCB = new MMMessageAssociationEnd<BillingSearchCriteria1, Optional<CSDOrNCB1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingSearchCriteria1.mmObject();
@@ -263,6 +285,16 @@ public class BillingSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CSDOrNCB1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CSDOrNCB1Choice> getValue(BillingSearchCriteria1 obj) {
+			return obj.getCSDOrNCB();
+		}
+
+		@Override
+		public void setValue(BillingSearchCriteria1 obj, Optional<CSDOrNCB1Choice> value) {
+			obj.setCSDOrNCB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlldCstmrId")
@@ -310,7 +342,7 @@ public class BillingSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBilledCustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BillingSearchCriteria1, Optional<BICFIIdentifier>> mmBilledCustomerIdentification = new MMMessageAttribute<BillingSearchCriteria1, Optional<BICFIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingSearchCriteria1.mmObject();
@@ -323,6 +355,16 @@ public class BillingSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICFIIdentifier> getValue(BillingSearchCriteria1 obj) {
+			return obj.getBilledCustomerIdentification();
+		}
+
+		@Override
+		public void setValue(BillingSearchCriteria1 obj, Optional<BICFIIdentifier> value) {
+			obj.setBilledCustomerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -368,7 +410,7 @@ public class BillingSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingSearchCriteria1, Optional<AccountIdentification20Choice>> mmAccountIdentification = new MMMessageAssociationEnd<BillingSearchCriteria1, Optional<AccountIdentification20Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BillingSearchCriteria1.mmObject();
@@ -382,6 +424,16 @@ public class BillingSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification20Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification20Choice> getValue(BillingSearchCriteria1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(BillingSearchCriteria1 obj, Optional<AccountIdentification20Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -406,7 +458,7 @@ public class BillingSearchCriteria1 {
 		return billingIdentification == null ? Optional.empty() : Optional.of(billingIdentification);
 	}
 
-	public BillingSearchCriteria1 setBillingIdentification(com.tools20022.repository.msg.BillingIdentification1 billingIdentification) {
+	public BillingSearchCriteria1 setBillingIdentification(BillingIdentification1 billingIdentification) {
 		this.billingIdentification = billingIdentification;
 		return this;
 	}
@@ -415,7 +467,7 @@ public class BillingSearchCriteria1 {
 		return billingPeriod == null ? Optional.empty() : Optional.of(billingPeriod);
 	}
 
-	public BillingSearchCriteria1 setBillingPeriod(com.tools20022.repository.msg.DatePeriodDetails billingPeriod) {
+	public BillingSearchCriteria1 setBillingPeriod(DatePeriodDetails billingPeriod) {
 		this.billingPeriod = billingPeriod;
 		return this;
 	}

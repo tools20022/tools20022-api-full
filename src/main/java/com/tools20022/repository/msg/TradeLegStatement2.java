@@ -25,6 +25,9 @@ import com.tools20022.repository.entity.ClearingMemberRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount31;
+import com.tools20022.repository.msg.SecuritiesAccount18;
+import com.tools20022.repository.msg.TradeLeg6;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -128,7 +131,7 @@ public class TradeLegStatement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeLegStatement2, Optional<SecuritiesAccount18>> mmClearingAccount = new MMMessageAssociationEnd<TradeLegStatement2, Optional<SecuritiesAccount18>>() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.mmObject();
@@ -141,7 +144,17 @@ public class TradeLegStatement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount18.mmObject();
+			type_lazy = () -> SecuritiesAccount18.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount18> getValue(TradeLegStatement2 obj) {
+			return obj.getClearingAccount();
+		}
+
+		@Override
+		public void setValue(TradeLegStatement2 obj, Optional<SecuritiesAccount18> value) {
+			obj.setClearingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrSgmt")
@@ -188,7 +201,7 @@ public class TradeLegStatement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingSegment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeLegStatement2, Optional<PartyIdentification35Choice>> mmClearingSegment = new MMMessageAssociationEnd<TradeLegStatement2, Optional<PartyIdentification35Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.mmObject();
@@ -202,6 +215,16 @@ public class TradeLegStatement2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification35Choice> getValue(TradeLegStatement2 obj) {
+			return obj.getClearingSegment();
+		}
+
+		@Override
+		public void setValue(TradeLegStatement2 obj, Optional<PartyIdentification35Choice> value) {
+			obj.setClearingSegment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonClrMmb")
@@ -246,7 +269,7 @@ public class TradeLegStatement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeLegStatement2, Optional<PartyIdentificationAndAccount31>> mmNonClearingMember = new MMMessageAssociationEnd<TradeLegStatement2, Optional<PartyIdentificationAndAccount31>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.mmObject();
@@ -259,11 +282,21 @@ public class TradeLegStatement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount31> getValue(TradeLegStatement2 obj) {
+			return obj.getNonClearingMember();
+		}
+
+		@Override
+		public void setValue(TradeLegStatement2 obj, Optional<PartyIdentificationAndAccount31> value) {
+			obj.setNonClearingMember(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradLegsDtls", required = true)
-	protected List<com.tools20022.repository.msg.TradeLeg6> tradeLegsDetails;
+	protected List<TradeLeg6> tradeLegsDetails;
 	/**
 	 * 
 	 <p>
@@ -304,7 +337,7 @@ public class TradeLegStatement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeLegsDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeLegStatement2, List<TradeLeg6>> mmTradeLegsDetails = new MMMessageAssociationEnd<TradeLegStatement2, List<TradeLeg6>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTrade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeLegStatement2.mmObject();
@@ -316,7 +349,17 @@ public class TradeLegStatement2 {
 			nextVersions_lazy = () -> Arrays.asList(TradeLegStatement3.mmTradeLegsDetails);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeLeg6.mmObject();
+			type_lazy = () -> TradeLeg6.mmObject();
+		}
+
+		@Override
+		public List<TradeLeg6> getValue(TradeLegStatement2 obj) {
+			return obj.getTradeLegsDetails();
+		}
+
+		@Override
+		public void setValue(TradeLegStatement2 obj, List<TradeLeg6> value) {
+			obj.setTradeLegsDetails(value);
 		}
 	};
 
@@ -340,7 +383,7 @@ public class TradeLegStatement2 {
 		return clearingAccount == null ? Optional.empty() : Optional.of(clearingAccount);
 	}
 
-	public TradeLegStatement2 setClearingAccount(com.tools20022.repository.msg.SecuritiesAccount18 clearingAccount) {
+	public TradeLegStatement2 setClearingAccount(SecuritiesAccount18 clearingAccount) {
 		this.clearingAccount = clearingAccount;
 		return this;
 	}
@@ -358,7 +401,7 @@ public class TradeLegStatement2 {
 		return nonClearingMember == null ? Optional.empty() : Optional.of(nonClearingMember);
 	}
 
-	public TradeLegStatement2 setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
+	public TradeLegStatement2 setNonClearingMember(PartyIdentificationAndAccount31 nonClearingMember) {
 		this.nonClearingMember = nonClearingMember;
 		return this;
 	}
@@ -367,7 +410,7 @@ public class TradeLegStatement2 {
 		return tradeLegsDetails == null ? tradeLegsDetails = new ArrayList<>() : tradeLegsDetails;
 	}
 
-	public TradeLegStatement2 setTradeLegsDetails(List<com.tools20022.repository.msg.TradeLeg6> tradeLegsDetails) {
+	public TradeLegStatement2 setTradeLegsDetails(List<TradeLeg6> tradeLegsDetails) {
 		this.tradeLegsDetails = Objects.requireNonNull(tradeLegsDetails);
 		return this;
 	}

@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MessageHeader7;
 import com.tools20022.repository.msg.ReceiptAcknowledgementReport2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._T2S_Administration_Function_ForRegistration;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,7 +125,7 @@ public class ReceiptAcknowledgementV01 {
 	 * "Set of elements to identify the ReceiptAcknowledgement message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReceiptAcknowledgementV01, MessageHeader7> mmMessageIdentification = new MMMessageBuildingBlock<ReceiptAcknowledgementV01, MessageHeader7>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class ReceiptAcknowledgementV01 {
 			complexType_lazy = () -> MessageHeader7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReceiptAcknowledgementV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader7 getValue(ReceiptAcknowledgementV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(ReceiptAcknowledgementV01 obj, MessageHeader7 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "Rpt", required = true)
@@ -170,7 +171,7 @@ public class ReceiptAcknowledgementV01 {
 	 * definition} = "Provides report details on the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReceiptAcknowledgementV01, List<ReceiptAcknowledgementReport2>> mmReport = new MMMessageBuildingBlock<ReceiptAcknowledgementV01, List<ReceiptAcknowledgementReport2>>() {
 		{
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,12 +181,14 @@ public class ReceiptAcknowledgementV01 {
 			complexType_lazy = () -> ReceiptAcknowledgementReport2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReceiptAcknowledgementV01.class.getMethod("getReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ReceiptAcknowledgementReport2> getValue(ReceiptAcknowledgementV01 obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(ReceiptAcknowledgementV01 obj, List<ReceiptAcknowledgementReport2> value) {
+			obj.setReport(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -215,7 +218,7 @@ public class ReceiptAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReceiptAcknowledgementV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ReceiptAcknowledgementV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +228,14 @@ public class ReceiptAcknowledgementV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReceiptAcknowledgementV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ReceiptAcknowledgementV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ReceiptAcknowledgementV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

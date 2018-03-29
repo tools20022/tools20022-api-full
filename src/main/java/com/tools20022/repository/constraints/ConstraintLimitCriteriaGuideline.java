@@ -54,11 +54,15 @@ public class ConstraintLimitCriteriaGuideline {
 	 */
 	public static final MMConstraint<LimitCriteria1> forLimitCriteria1 = new MMConstraint<LimitCriteria1>() {
 		{
-			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteriaGuideline";
 			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
 			owner_lazy = () -> LimitCriteria1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria1 obj) throws Exception {
+			checkLimitCriteria1(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintLimitCriteriaGuideline {
 	 */
 	public static final MMConstraint<LimitCriteria2> forLimitCriteria2 = new MMConstraint<LimitCriteria2>() {
 		{
-			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteriaGuideline";
 			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
 			owner_lazy = () -> LimitCriteria2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria2 obj) throws Exception {
+			checkLimitCriteria2(obj);
 		}
 	};
 	/**
@@ -120,12 +128,16 @@ public class ConstraintLimitCriteriaGuideline {
 	 */
 	public static final MMConstraint<LimitCriteria3> forLimitCriteria3 = new MMConstraint<LimitCriteria3>() {
 		{
-			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteriaGuideline";
 			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline.forLimitCriteria4);
 			owner_lazy = () -> LimitCriteria3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria3 obj) throws Exception {
+			checkLimitCriteria3(obj);
 		}
 	};
 	/**
@@ -163,13 +175,17 @@ public class ConstraintLimitCriteriaGuideline {
 	 */
 	public static final MMConstraint<LimitCriteria4> forLimitCriteria4 = new MMConstraint<LimitCriteria4>() {
 		{
-			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteriaGuideline";
 			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline.forLimitCriteria5);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline.forLimitCriteria3;
 			owner_lazy = () -> LimitCriteria4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria4 obj) throws Exception {
+			checkLimitCriteria4(obj);
 		}
 	};
 	/**
@@ -199,12 +215,16 @@ public class ConstraintLimitCriteriaGuideline {
 	 */
 	public static final MMConstraint<LimitCriteria5> forLimitCriteria5 = new MMConstraint<LimitCriteria5>() {
 		{
-			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteriaGuideline";
 			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline.forLimitCriteria4;
 			owner_lazy = () -> LimitCriteria5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LimitCriteria5 obj) throws Exception {
+			checkLimitCriteria5(obj);
 		}
 	};
 

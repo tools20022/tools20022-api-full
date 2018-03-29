@@ -51,11 +51,15 @@ public class ConstraintRejectionReason {
 	 */
 	public static final MMConstraint<OrderStatusAndReason5> forOrderStatusAndReason5 = new MMConstraint<OrderStatusAndReason5>() {
 		{
-			validator = ConstraintRejectionReason::checkOrderStatusAndReason5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "RejectionReason must be present if Status equals \"Rejected\".";
 			owner_lazy = () -> OrderStatusAndReason5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderStatusAndReason5 obj) throws Exception {
+			checkOrderStatusAndReason5(obj);
 		}
 	};
 	/**
@@ -80,11 +84,15 @@ public class ConstraintRejectionReason {
 	 */
 	public static final MMConstraint<OrderStatus2> forOrderStatus2 = new MMConstraint<OrderStatus2>() {
 		{
-			validator = ConstraintRejectionReason::checkOrderStatus2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "RejectionReason must be present if ListOrderStatus equals \"Rejected\".";
 			owner_lazy = () -> OrderStatus2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderStatus2 obj) throws Exception {
+			checkOrderStatus2(obj);
 		}
 	};
 	/**
@@ -108,11 +116,15 @@ public class ConstraintRejectionReason {
 	 */
 	public static final MMConstraint<QuoteStatus1> forQuoteStatus1 = new MMConstraint<QuoteStatus1>() {
 		{
-			validator = ConstraintRejectionReason::checkQuoteStatus1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
 			definition = "RejectionReason is only present if QuoteStatus is Rejected.";
 			owner_lazy = () -> QuoteStatus1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QuoteStatus1 obj) throws Exception {
+			checkQuoteStatus1(obj);
 		}
 	};
 

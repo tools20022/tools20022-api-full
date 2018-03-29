@@ -21,9 +21,9 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.POIComponentAssessmentCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.Document;
+import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PointOfInteractionComponentAssessment1;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,7 +123,7 @@ public class Assessment extends Document {
 	 * definition} = "Type of assessment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAssessmentType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Assessment, POIComponentAssessmentCode> mmAssessmentType = new MMBusinessAttribute<Assessment, POIComponentAssessmentCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponentAssessment1.mmType);
 			isDerived = false;
@@ -136,12 +136,14 @@ public class Assessment extends Document {
 			simpleType_lazy = () -> POIComponentAssessmentCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Assessment.class.getMethod("getAssessmentType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public POIComponentAssessmentCode getValue(Assessment obj) {
+			return obj.getAssessmentType();
+		}
+
+		@Override
+		public void setValue(Assessment obj, POIComponentAssessmentCode value) {
+			obj.setAssessmentType(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.System> system;
@@ -176,7 +178,7 @@ public class Assessment extends Document {
 	 * definition} = "System for which an assessment is produced."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Assessment, List<System>> mmSystem = new MMBusinessAssociationEnd<Assessment, List<System>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Assessment.mmObject();
@@ -187,6 +189,16 @@ public class Assessment extends Document {
 			opposite_lazy = () -> com.tools20022.repository.entity.System.mmAssessment;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
+		}
+
+		@Override
+		public List<System> getValue(Assessment obj) {
+			return obj.getSystem();
+		}
+
+		@Override
+		public void setValue(Assessment obj, List<System> value) {
+			obj.setSystem(value);
 		}
 	};
 	protected ISODateTime expiryDate;
@@ -222,7 +234,7 @@ public class Assessment extends Document {
 	 * definition} = "Date when the assessment expires."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmExpiryDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Assessment, ISODateTime> mmExpiryDate = new MMBusinessAttribute<Assessment, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponentAssessment1.mmExpirationDate);
 			isDerived = false;
@@ -235,12 +247,14 @@ public class Assessment extends Document {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Assessment.class.getMethod("getExpiryDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Assessment obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(Assessment obj, ISODateTime value) {
+			obj.setExpiryDate(value);
 		}
 	};
 	protected ISODateTime deliveryDate;
@@ -276,7 +290,7 @@ public class Assessment extends Document {
 	 * definition} = "Date when the assessment document was delivered."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDeliveryDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Assessment, ISODateTime> mmDeliveryDate = new MMBusinessAttribute<Assessment, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponentAssessment1.mmDeliveryDate);
 			isDerived = false;
@@ -289,12 +303,14 @@ public class Assessment extends Document {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Assessment.class.getMethod("getDeliveryDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Assessment obj) {
+			return obj.getDeliveryDate();
+		}
+
+		@Override
+		public void setValue(Assessment obj, ISODateTime value) {
+			obj.setDeliveryDate(value);
 		}
 	};
 

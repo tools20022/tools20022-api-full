@@ -118,7 +118,7 @@ public class InvestorRestrictionType3Choice {
 	 * InvestorRestrictionType2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestorRestrictionType3Choice, InvestorRestrictionType1Code> mmCode = new MMMessageAttribute<InvestorRestrictionType3Choice, InvestorRestrictionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRestriction.mmInvestorStatusRestrictionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestorRestrictionType3Choice.mmObject();
@@ -131,6 +131,16 @@ public class InvestorRestrictionType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestorRestrictionType1Code.mmObject();
+		}
+
+		@Override
+		public InvestorRestrictionType1Code getValue(InvestorRestrictionType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InvestorRestrictionType3Choice obj, InvestorRestrictionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class InvestorRestrictionType3Choice {
 	 * InvestorRestrictionType2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestorRestrictionType3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<InvestorRestrictionType3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRestriction.mmInvestorStatusRestrictionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestorRestrictionType3Choice.mmObject();
@@ -187,6 +197,16 @@ public class InvestorRestrictionType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(InvestorRestrictionType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InvestorRestrictionType3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -59,7 +59,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Recipient6Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -109,7 +109,7 @@ public class Recipient6Choice {
 	 * Recipient4Choice.mmKeyTransport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyTransport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient6Choice, KeyTransport5> mmKeyTransport = new MMMessageAssociationEnd<Recipient6Choice, KeyTransport5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient6Choice.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class Recipient6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> KeyTransport5.mmObject();
+		}
+
+		@Override
+		public KeyTransport5 getValue(Recipient6Choice obj) {
+			return obj.getKeyTransport();
+		}
+
+		@Override
+		public void setValue(Recipient6Choice obj, KeyTransport5 value) {
+			obj.setKeyTransport(value);
 		}
 	};
 	@XmlElement(name = "KEK", required = true)
@@ -157,7 +167,7 @@ public class Recipient6Choice {
 	 * Recipient4Choice.mmKEK}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKEK = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient6Choice, KEK5> mmKEK = new MMMessageAssociationEnd<Recipient6Choice, KEK5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient6Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class Recipient6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> KEK5.mmObject();
+		}
+
+		@Override
+		public KEK5 getValue(Recipient6Choice obj) {
+			return obj.getKEK();
+		}
+
+		@Override
+		public void setValue(Recipient6Choice obj, KEK5 value) {
+			obj.setKEK(value);
 		}
 	};
 	@XmlElement(name = "KeyIdr", required = true)
@@ -207,7 +227,7 @@ public class Recipient6Choice {
 	 * Recipient4Choice.mmKeyIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyIdentifier = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Recipient6Choice, KEKIdentifier2> mmKeyIdentifier = new MMMessageAssociationEnd<Recipient6Choice, KEKIdentifier2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient6Choice.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class Recipient6Choice {
 			isComposite = true;
 			type_lazy = () -> KEKIdentifier2.mmObject();
 		}
+
+		@Override
+		public KEKIdentifier2 getValue(Recipient6Choice obj) {
+			return obj.getKeyIdentifier();
+		}
+
+		@Override
+		public void setValue(Recipient6Choice obj, KEKIdentifier2 value) {
+			obj.setKeyIdentifier(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -229,7 +259,7 @@ public class Recipient6Choice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient6Choice.mmKeyTransport, com.tools20022.repository.choice.Recipient6Choice.mmKEK,
 						com.tools20022.repository.choice.Recipient6Choice.mmKeyIdentifier);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Recipient6Choice";
 				definition = "Transport key or key encryption key (KEK) for the recipient.";
 				previousVersion_lazy = () -> Recipient4Choice.mmObject();

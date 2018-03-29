@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.reda.FundProcessingPassportReportV02;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -145,7 +146,7 @@ public class FundProcessingPassport1 {
 	 * definition} = "Date of last revision."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdatedDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, UpdatedDate> mmUpdatedDate = new MMMessageAssociationEnd<FundProcessingPassport1, UpdatedDate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
 			isDerived = false;
@@ -156,7 +157,17 @@ public class FundProcessingPassport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedDate.mmObject();
+			type_lazy = () -> UpdatedDate.mmObject();
+		}
+
+		@Override
+		public UpdatedDate getValue(FundProcessingPassport1 obj) {
+			return obj.getUpdatedDate();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, UpdatedDate value) {
+			obj.setUpdatedDate(value);
 		}
 	};
 	@XmlElement(name = "SctyId", required = true)
@@ -195,7 +206,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, SecurityIdentification1> mmSecurityIdentification = new MMMessageAssociationEnd<FundProcessingPassport1, SecurityIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -207,7 +218,17 @@ public class FundProcessingPassport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification1.mmObject();
+			type_lazy = () -> SecurityIdentification1.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification1 getValue(FundProcessingPassport1 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, SecurityIdentification1 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "MainFndOrdrDsk", required = true)
@@ -245,7 +266,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMainFundOrderDesk = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, ContactAttributes1> mmMainFundOrderDesk = new MMMessageAssociationEnd<FundProcessingPassport1, ContactAttributes1>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmOrderDesk;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -257,7 +278,17 @@ public class FundProcessingPassport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactAttributes1.mmObject();
+			type_lazy = () -> ContactAttributes1.mmObject();
+		}
+
+		@Override
+		public ContactAttributes1 getValue(FundProcessingPassport1 obj) {
+			return obj.getMainFundOrderDesk();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, ContactAttributes1 value) {
+			obj.setMainFundOrderDesk(value);
 		}
 	};
 	@XmlElement(name = "FndMgmtCpny", required = true)
@@ -295,7 +326,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundManagementCompany = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, ContactAttributes1> mmFundManagementCompany = new MMMessageAssociationEnd<FundProcessingPassport1, ContactAttributes1>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -307,7 +338,17 @@ public class FundProcessingPassport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactAttributes1.mmObject();
+			type_lazy = () -> ContactAttributes1.mmObject();
+		}
+
+		@Override
+		public ContactAttributes1 getValue(FundProcessingPassport1 obj) {
+			return obj.getFundManagementCompany();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, ContactAttributes1 value) {
+			obj.setFundManagementCompany(value);
 		}
 	};
 	@XmlElement(name = "FndDtls", required = true)
@@ -345,7 +386,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFundDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, FinancialInstrument20> mmFundDetails = new MMMessageAssociationEnd<FundProcessingPassport1, FinancialInstrument20>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -357,7 +398,17 @@ public class FundProcessingPassport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
+			type_lazy = () -> FinancialInstrument20.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument20 getValue(FundProcessingPassport1 obj) {
+			return obj.getFundDetails();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, FinancialInstrument20 value) {
+			obj.setFundDetails(value);
 		}
 	};
 	@XmlElement(name = "ValtnDealgChrtcs", required = true)
@@ -396,7 +447,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuationDealingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, ValuationDealingProcessingCharacteristics2> mmValuationDealingCharacteristics = new MMMessageAssociationEnd<FundProcessingPassport1, ValuationDealingProcessingCharacteristics2>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -408,7 +459,17 @@ public class FundProcessingPassport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2.mmObject();
+			type_lazy = () -> ValuationDealingProcessingCharacteristics2.mmObject();
+		}
+
+		@Override
+		public ValuationDealingProcessingCharacteristics2 getValue(FundProcessingPassport1 obj) {
+			return obj.getValuationDealingCharacteristics();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, ValuationDealingProcessingCharacteristics2 value) {
+			obj.setValuationDealingCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "InvstmtRstrctns", required = true)
@@ -447,7 +508,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentRestrictions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, InvestmentRestrictions2> mmInvestmentRestrictions = new MMMessageAssociationEnd<FundProcessingPassport1, InvestmentRestrictions2>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -459,7 +520,17 @@ public class FundProcessingPassport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
+			type_lazy = () -> InvestmentRestrictions2.mmObject();
+		}
+
+		@Override
+		public InvestmentRestrictions2 getValue(FundProcessingPassport1 obj) {
+			return obj.getInvestmentRestrictions();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, InvestmentRestrictions2 value) {
+			obj.setInvestmentRestrictions(value);
 		}
 	};
 	@XmlElement(name = "SbcptPrcgChrtcs", required = true)
@@ -498,7 +569,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, ProcessingCharacteristics2> mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd<FundProcessingPassport1, ProcessingCharacteristics2>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -510,7 +581,17 @@ public class FundProcessingPassport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics2.mmObject();
+			type_lazy = () -> ProcessingCharacteristics2.mmObject();
+		}
+
+		@Override
+		public ProcessingCharacteristics2 getValue(FundProcessingPassport1 obj) {
+			return obj.getSubscriptionProcessingCharacteristics();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, ProcessingCharacteristics2 value) {
+			obj.setSubscriptionProcessingCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "RedPrcgChrtcs", required = true)
@@ -549,7 +630,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, ProcessingCharacteristics3> mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd<FundProcessingPassport1, ProcessingCharacteristics3>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmProcessingCharacteristics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -561,11 +642,21 @@ public class FundProcessingPassport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
+			type_lazy = () -> ProcessingCharacteristics3.mmObject();
+		}
+
+		@Override
+		public ProcessingCharacteristics3 getValue(FundProcessingPassport1 obj) {
+			return obj.getRedemptionProcessingCharacteristics();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, ProcessingCharacteristics3 value) {
+			obj.setRedemptionProcessingCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "SttlmDtls", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount22> settlementDetails;
+	protected List<CashAccount22> settlementDetails;
 	/**
 	 * 
 	 <p>
@@ -597,7 +688,7 @@ public class FundProcessingPassport1 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, List<CashAccount22>> mmSettlementDetails = new MMMessageAssociationEnd<FundProcessingPassport1, List<CashAccount22>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmSettlementAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -608,11 +699,21 @@ public class FundProcessingPassport1 {
 			definition = "Account to or from which a cash entry is made.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
+			type_lazy = () -> CashAccount22.mmObject();
+		}
+
+		@Override
+		public List<CashAccount22> getValue(FundProcessingPassport1 obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, List<CashAccount22> value) {
+			obj.setSettlementDetails(value);
 		}
 	};
 	@XmlElement(name = "LclMktAnx")
-	protected List<com.tools20022.repository.msg.LocalMarketAnnex2> localMarketAnnex;
+	protected List<LocalMarketAnnex2> localMarketAnnex;
 	/**
 	 * 
 	 <p>
@@ -646,7 +747,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalMarketAnnex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, List<LocalMarketAnnex2>> mmLocalMarketAnnex = new MMMessageAssociationEnd<FundProcessingPassport1, List<LocalMarketAnnex2>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTradingMarket;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
@@ -657,11 +758,21 @@ public class FundProcessingPassport1 {
 			definition = "Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LocalMarketAnnex2.mmObject();
+			type_lazy = () -> LocalMarketAnnex2.mmObject();
+		}
+
+		@Override
+		public List<LocalMarketAnnex2> getValue(FundProcessingPassport1 obj) {
+			return obj.getLocalMarketAnnex();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, List<LocalMarketAnnex2> value) {
+			obj.setLocalMarketAnnex(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -689,7 +800,7 @@ public class FundProcessingPassport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundProcessingPassport1, List<Extension1>> mmExtension = new MMMessageAssociationEnd<FundProcessingPassport1, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundProcessingPassport1.mmObject();
 			isDerived = false;
@@ -699,7 +810,17 @@ public class FundProcessingPassport1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(FundProcessingPassport1 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(FundProcessingPassport1 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -727,7 +848,7 @@ public class FundProcessingPassport1 {
 		return updatedDate;
 	}
 
-	public FundProcessingPassport1 setUpdatedDate(com.tools20022.repository.msg.UpdatedDate updatedDate) {
+	public FundProcessingPassport1 setUpdatedDate(UpdatedDate updatedDate) {
 		this.updatedDate = Objects.requireNonNull(updatedDate);
 		return this;
 	}
@@ -736,7 +857,7 @@ public class FundProcessingPassport1 {
 		return securityIdentification;
 	}
 
-	public FundProcessingPassport1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification1 securityIdentification) {
+	public FundProcessingPassport1 setSecurityIdentification(SecurityIdentification1 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}
@@ -745,7 +866,7 @@ public class FundProcessingPassport1 {
 		return mainFundOrderDesk;
 	}
 
-	public FundProcessingPassport1 setMainFundOrderDesk(com.tools20022.repository.msg.ContactAttributes1 mainFundOrderDesk) {
+	public FundProcessingPassport1 setMainFundOrderDesk(ContactAttributes1 mainFundOrderDesk) {
 		this.mainFundOrderDesk = Objects.requireNonNull(mainFundOrderDesk);
 		return this;
 	}
@@ -754,7 +875,7 @@ public class FundProcessingPassport1 {
 		return fundManagementCompany;
 	}
 
-	public FundProcessingPassport1 setFundManagementCompany(com.tools20022.repository.msg.ContactAttributes1 fundManagementCompany) {
+	public FundProcessingPassport1 setFundManagementCompany(ContactAttributes1 fundManagementCompany) {
 		this.fundManagementCompany = Objects.requireNonNull(fundManagementCompany);
 		return this;
 	}
@@ -763,7 +884,7 @@ public class FundProcessingPassport1 {
 		return fundDetails;
 	}
 
-	public FundProcessingPassport1 setFundDetails(com.tools20022.repository.msg.FinancialInstrument20 fundDetails) {
+	public FundProcessingPassport1 setFundDetails(FinancialInstrument20 fundDetails) {
 		this.fundDetails = Objects.requireNonNull(fundDetails);
 		return this;
 	}
@@ -772,7 +893,7 @@ public class FundProcessingPassport1 {
 		return valuationDealingCharacteristics;
 	}
 
-	public FundProcessingPassport1 setValuationDealingCharacteristics(com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics2 valuationDealingCharacteristics) {
+	public FundProcessingPassport1 setValuationDealingCharacteristics(ValuationDealingProcessingCharacteristics2 valuationDealingCharacteristics) {
 		this.valuationDealingCharacteristics = Objects.requireNonNull(valuationDealingCharacteristics);
 		return this;
 	}
@@ -781,7 +902,7 @@ public class FundProcessingPassport1 {
 		return investmentRestrictions;
 	}
 
-	public FundProcessingPassport1 setInvestmentRestrictions(com.tools20022.repository.msg.InvestmentRestrictions2 investmentRestrictions) {
+	public FundProcessingPassport1 setInvestmentRestrictions(InvestmentRestrictions2 investmentRestrictions) {
 		this.investmentRestrictions = Objects.requireNonNull(investmentRestrictions);
 		return this;
 	}
@@ -790,7 +911,7 @@ public class FundProcessingPassport1 {
 		return subscriptionProcessingCharacteristics;
 	}
 
-	public FundProcessingPassport1 setSubscriptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics2 subscriptionProcessingCharacteristics) {
+	public FundProcessingPassport1 setSubscriptionProcessingCharacteristics(ProcessingCharacteristics2 subscriptionProcessingCharacteristics) {
 		this.subscriptionProcessingCharacteristics = Objects.requireNonNull(subscriptionProcessingCharacteristics);
 		return this;
 	}
@@ -799,7 +920,7 @@ public class FundProcessingPassport1 {
 		return redemptionProcessingCharacteristics;
 	}
 
-	public FundProcessingPassport1 setRedemptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics3 redemptionProcessingCharacteristics) {
+	public FundProcessingPassport1 setRedemptionProcessingCharacteristics(ProcessingCharacteristics3 redemptionProcessingCharacteristics) {
 		this.redemptionProcessingCharacteristics = Objects.requireNonNull(redemptionProcessingCharacteristics);
 		return this;
 	}
@@ -808,7 +929,7 @@ public class FundProcessingPassport1 {
 		return settlementDetails == null ? settlementDetails = new ArrayList<>() : settlementDetails;
 	}
 
-	public FundProcessingPassport1 setSettlementDetails(List<com.tools20022.repository.msg.CashAccount22> settlementDetails) {
+	public FundProcessingPassport1 setSettlementDetails(List<CashAccount22> settlementDetails) {
 		this.settlementDetails = Objects.requireNonNull(settlementDetails);
 		return this;
 	}
@@ -817,7 +938,7 @@ public class FundProcessingPassport1 {
 		return localMarketAnnex == null ? localMarketAnnex = new ArrayList<>() : localMarketAnnex;
 	}
 
-	public FundProcessingPassport1 setLocalMarketAnnex(List<com.tools20022.repository.msg.LocalMarketAnnex2> localMarketAnnex) {
+	public FundProcessingPassport1 setLocalMarketAnnex(List<LocalMarketAnnex2> localMarketAnnex) {
 		this.localMarketAnnex = Objects.requireNonNull(localMarketAnnex);
 		return this;
 	}
@@ -826,7 +947,7 @@ public class FundProcessingPassport1 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public FundProcessingPassport1 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public FundProcessingPassport1 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

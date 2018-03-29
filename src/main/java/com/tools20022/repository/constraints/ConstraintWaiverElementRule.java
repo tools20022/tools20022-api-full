@@ -50,11 +50,15 @@ public class ConstraintWaiverElementRule {
 	 */
 	public static final MMConstraint<OrderWaiver1> forOrderWaiver1 = new MMConstraint<OrderWaiver1>() {
 		{
-			validator = ConstraintWaiverElementRule::checkOrderWaiver1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaiverElementRule";
 			definition = "Either OrderWaiverReason or InformationValue must be present. Both may be present.";
 			owner_lazy = () -> OrderWaiver1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderWaiver1 obj) throws Exception {
+			checkOrderWaiver1(obj);
 		}
 	};
 

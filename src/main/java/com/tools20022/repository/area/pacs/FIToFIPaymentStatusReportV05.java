@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.OriginalGroupHeader1;
 import com.tools20022.repository.msg.PaymentTransaction43;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -176,7 +175,7 @@ public class FIToFIPaymentStatusReportV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusReportV05, GroupHeader53> mmGroupHeader = new MMMessageBuildingBlock<FIToFIPaymentStatusReportV05, GroupHeader53>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,12 +187,14 @@ public class FIToFIPaymentStatusReportV05 {
 			complexType_lazy = () -> GroupHeader53.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusReportV05.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader53 getValue(FIToFIPaymentStatusReportV05 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusReportV05 obj, GroupHeader53 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
@@ -231,7 +232,7 @@ public class FIToFIPaymentStatusReportV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusReportV05, OriginalGroupHeader1> mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock<FIToFIPaymentStatusReportV05, OriginalGroupHeader1>() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,12 +244,14 @@ public class FIToFIPaymentStatusReportV05 {
 			complexType_lazy = () -> OriginalGroupHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusReportV05.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalGroupHeader1 getValue(FIToFIPaymentStatusReportV05 obj) {
+			return obj.getOriginalGroupInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusReportV05 obj, OriginalGroupHeader1 value) {
+			obj.setOriginalGroupInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "TxInfAndSts")
@@ -286,7 +289,7 @@ public class FIToFIPaymentStatusReportV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusReportV05, List<PaymentTransaction43>> mmTransactionInformationAndStatus = new MMMessageBuildingBlock<FIToFIPaymentStatusReportV05, List<PaymentTransaction43>>() {
 		{
 			xmlTag = "TxInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,12 +300,14 @@ public class FIToFIPaymentStatusReportV05 {
 			complexType_lazy = () -> PaymentTransaction43.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusReportV05.class.getMethod("getTransactionInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentTransaction43> getValue(FIToFIPaymentStatusReportV05 obj) {
+			return obj.getTransactionInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusReportV05 obj, List<PaymentTransaction43> value) {
+			obj.setTransactionInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -340,7 +345,7 @@ public class FIToFIPaymentStatusReportV05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentStatusReportV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FIToFIPaymentStatusReportV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,12 +356,14 @@ public class FIToFIPaymentStatusReportV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentStatusReportV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FIToFIPaymentStatusReportV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentStatusReportV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

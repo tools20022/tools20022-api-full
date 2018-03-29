@@ -131,7 +131,7 @@ public class ReportItemStatus1Choice {
 	 * ProcessingStatus18Choice.mmAcknowledgedAccepted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccepted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportItemStatus1Choice, NoReasonCode> mmAccepted = new MMMessageAttribute<ReportItemStatus1Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportItemStatus1Choice.mmObject();
@@ -144,6 +144,16 @@ public class ReportItemStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ReportItemStatus1Choice obj) {
+			return obj.getAccepted();
+		}
+
+		@Override
+		public void setValue(ReportItemStatus1Choice obj, NoReasonCode value) {
+			obj.setAccepted(value);
 		}
 	};
 	@XmlElement(name = "AccptdWthXcptn", required = true)
@@ -179,7 +189,7 @@ public class ReportItemStatus1Choice {
 	 * definition} = "Statement is accepted with an exception/s."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcceptedWithException = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportItemStatus1Choice, List<ReportItemStatus1>> mmAcceptedWithException = new MMMessageAssociationEnd<ReportItemStatus1Choice, List<ReportItemStatus1>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportItemStatus1Choice.mmObject();
@@ -191,6 +201,16 @@ public class ReportItemStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReportItemStatus1.mmObject();
+		}
+
+		@Override
+		public List<ReportItemStatus1> getValue(ReportItemStatus1Choice obj) {
+			return obj.getAcceptedWithException();
+		}
+
+		@Override
+		public void setValue(ReportItemStatus1Choice obj, List<ReportItemStatus1> value) {
+			obj.setAcceptedWithException(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -231,7 +251,7 @@ public class ReportItemStatus1Choice {
 	 * ProcessingStatus18Choice.mmRejected}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportItemStatus1Choice, ReportItemStatus1> mmRejected = new MMMessageAssociationEnd<ReportItemStatus1Choice, ReportItemStatus1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportItemStatus1Choice.mmObject();
@@ -245,6 +265,16 @@ public class ReportItemStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReportItemStatus1.mmObject();
+		}
+
+		@Override
+		public ReportItemStatus1 getValue(ReportItemStatus1Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(ReportItemStatus1Choice obj, ReportItemStatus1 value) {
+			obj.setRejected(value);
 		}
 	};
 

@@ -31,6 +31,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BankTransactionCodeStructure4;
+import com.tools20022.repository.msg.PartyAndCertificate1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -150,7 +152,7 @@ public class OperationMandate1 {
 	 * definition} = "Unique and unambiguous identification of the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OperationMandate1, Max35Text> mmIdentification = new MMMessageAttribute<OperationMandate1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OperationMandate1.mmObject();
@@ -162,6 +164,16 @@ public class OperationMandate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OperationMandate1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(OperationMandate1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqrdSgntrNb", required = true)
@@ -200,7 +212,7 @@ public class OperationMandate1 {
 	 * "Number of required and necessary signatures by the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequiredSignatureNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OperationMandate1, Max15PlusSignedNumericText> mmRequiredSignatureNumber = new MMMessageAttribute<OperationMandate1, Max15PlusSignedNumericText>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmSignatureConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OperationMandate1.mmObject();
@@ -212,6 +224,16 @@ public class OperationMandate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
+		}
+
+		@Override
+		public Max15PlusSignedNumericText getValue(OperationMandate1 obj) {
+			return obj.getRequiredSignatureNumber();
+		}
+
+		@Override
+		public void setValue(OperationMandate1 obj, Max15PlusSignedNumericText value) {
+			obj.setRequiredSignatureNumber(value);
 		}
 	};
 	@XmlElement(name = "SgntrOrdrInd", required = true)
@@ -251,7 +273,7 @@ public class OperationMandate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignatureOrderIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OperationMandate1, YesNoIndicator> mmSignatureOrderIndicator = new MMMessageAttribute<OperationMandate1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SignatureCondition.mmSignatureOrderIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OperationMandate1.mmObject();
@@ -264,9 +286,19 @@ public class OperationMandate1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(OperationMandate1 obj) {
+			return obj.getSignatureOrderIndicator();
+		}
+
+		@Override
+		public void setValue(OperationMandate1 obj, YesNoIndicator value) {
+			obj.setSignatureOrderIndicator(value);
+		}
 	};
 	@XmlElement(name = "MndtHldr")
-	protected List<com.tools20022.repository.msg.PartyAndCertificate1> mandateHolder;
+	protected List<PartyAndCertificate1> mandateHolder;
 	/**
 	 * 
 	 <p>
@@ -297,7 +329,7 @@ public class OperationMandate1 {
 	 * definition} = "Holder of the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMandateHolder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OperationMandate1, List<PartyAndCertificate1>> mmMandateHolder = new MMMessageAssociationEnd<OperationMandate1, List<PartyAndCertificate1>>() {
 		{
 			businessComponentTrace_lazy = () -> Party.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OperationMandate1.mmObject();
@@ -308,11 +340,21 @@ public class OperationMandate1 {
 			definition = "Holder of the mandate.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyAndCertificate1.mmObject();
+			type_lazy = () -> PartyAndCertificate1.mmObject();
+		}
+
+		@Override
+		public List<PartyAndCertificate1> getValue(OperationMandate1 obj) {
+			return obj.getMandateHolder();
+		}
+
+		@Override
+		public void setValue(OperationMandate1 obj, List<PartyAndCertificate1> value) {
+			obj.setMandateHolder(value);
 		}
 	};
 	@XmlElement(name = "BkOpr", required = true)
-	protected List<com.tools20022.repository.msg.BankTransactionCodeStructure4> bankOperation;
+	protected List<BankTransactionCodeStructure4> bankOperation;
 	/**
 	 * 
 	 <p>
@@ -345,7 +387,7 @@ public class OperationMandate1 {
 	 * definition} = "Bank operation allowed by a mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBankOperation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OperationMandate1, List<BankTransactionCodeStructure4>> mmBankOperation = new MMMessageAssociationEnd<OperationMandate1, List<BankTransactionCodeStructure4>>() {
 		{
 			businessComponentTrace_lazy = () -> BankOperation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OperationMandate1.mmObject();
@@ -356,7 +398,17 @@ public class OperationMandate1 {
 			definition = "Bank operation allowed by a mandate.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure4.mmObject();
+			type_lazy = () -> BankTransactionCodeStructure4.mmObject();
+		}
+
+		@Override
+		public List<BankTransactionCodeStructure4> getValue(OperationMandate1 obj) {
+			return obj.getBankOperation();
+		}
+
+		@Override
+		public void setValue(OperationMandate1 obj, List<BankTransactionCodeStructure4> value) {
+			obj.setBankOperation(value);
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -393,7 +445,7 @@ public class OperationMandate1 {
 	 * definition} = "Is the date when the mandate becomes valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OperationMandate1, Optional<ISODate>> mmStartDate = new MMMessageAttribute<OperationMandate1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OperationMandate1.mmObject();
@@ -405,6 +457,16 @@ public class OperationMandate1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(OperationMandate1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(OperationMandate1 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt")
@@ -441,7 +503,7 @@ public class OperationMandate1 {
 	 * definition} = "Is the date when the mandate stops to be valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OperationMandate1, Optional<ISODate>> mmEndDate = new MMMessageAttribute<OperationMandate1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OperationMandate1.mmObject();
@@ -453,6 +515,16 @@ public class OperationMandate1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(OperationMandate1 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(OperationMandate1 obj, Optional<ISODate> value) {
+			obj.setEndDate(value.orElse(null));
 		}
 	};
 
@@ -506,7 +578,7 @@ public class OperationMandate1 {
 		return mandateHolder == null ? mandateHolder = new ArrayList<>() : mandateHolder;
 	}
 
-	public OperationMandate1 setMandateHolder(List<com.tools20022.repository.msg.PartyAndCertificate1> mandateHolder) {
+	public OperationMandate1 setMandateHolder(List<PartyAndCertificate1> mandateHolder) {
 		this.mandateHolder = Objects.requireNonNull(mandateHolder);
 		return this;
 	}
@@ -515,7 +587,7 @@ public class OperationMandate1 {
 		return bankOperation == null ? bankOperation = new ArrayList<>() : bankOperation;
 	}
 
-	public OperationMandate1 setBankOperation(List<com.tools20022.repository.msg.BankTransactionCodeStructure4> bankOperation) {
+	public OperationMandate1 setBankOperation(List<BankTransactionCodeStructure4> bankOperation) {
 		this.bankOperation = Objects.requireNonNull(bankOperation);
 		return this;
 	}

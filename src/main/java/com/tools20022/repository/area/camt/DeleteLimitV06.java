@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.LimitStructure1Choice;
 import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -94,7 +93,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DeleteLimitV06"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -132,7 +131,7 @@ public class DeleteLimitV06 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeleteLimitV06, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<DeleteLimitV06, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +142,14 @@ public class DeleteLimitV06 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeleteLimitV06.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(DeleteLimitV06 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(DeleteLimitV06 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "LmtDtls", required = true)
@@ -178,7 +179,7 @@ public class DeleteLimitV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmLimitDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeleteLimitV06, LimitStructure1Choice> mmLimitDetails = new MMMessageBuildingBlock<DeleteLimitV06, LimitStructure1Choice>() {
 		{
 			xmlTag = "LmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +190,14 @@ public class DeleteLimitV06 {
 			complexType_lazy = () -> LimitStructure1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeleteLimitV06.class.getMethod("getLimitDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public LimitStructure1Choice getValue(DeleteLimitV06 obj) {
+			return obj.getLimitDetails();
+		}
+
+		@Override
+		public void setValue(DeleteLimitV06 obj, LimitStructure1Choice value) {
+			obj.setLimitDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -224,7 +227,7 @@ public class DeleteLimitV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeleteLimitV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<DeleteLimitV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,19 +237,21 @@ public class DeleteLimitV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeleteLimitV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(DeleteLimitV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(DeleteLimitV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeleteLimitV06";
 				definition = "Scope\r\nThe DeleteLimit message is sent by a member to the transaction administrator.\r\nIt is used to request the deletion of one particular, several or all limits set by the member and managed by the transaction administrator.\r\nThe DeleteLimit message may delete several types of current limits (risk or liquidity management limit), based on a multiple requests.\r\nUsage\r\nThe member will submit a DeleteLimit message identifying which limit(s) it wants to delete (current limit risk/liquidity limit concepts have been merged) based on following criteria:\r\n- type of limit(s) (current/default)\r\n- value of the limit(s) (default and/or current limit(s))\r\n- identification of the counterparty (bilateral limit)\r\nBased on the criteria received within the DeleteLimit message, the transaction administrator will execute or reject the requested modifications.\r\nThe transaction administrator may send a Receipt message as a reply to the DeleteLimit request.\r\nTo verify the outcome of the request, the member may submit a GetLimit message with the appropriate search criteria.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

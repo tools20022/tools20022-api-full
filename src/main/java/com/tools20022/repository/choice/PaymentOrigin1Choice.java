@@ -113,7 +113,7 @@ public class PaymentOrigin1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFINMessageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentOrigin1Choice, Max3NumericText> mmFINMessageType = new MMMessageAttribute<PaymentOrigin1Choice, Max3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentOrigin1Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class PaymentOrigin1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Max3NumericText getValue(PaymentOrigin1Choice obj) {
+			return obj.getFINMessageType();
+		}
+
+		@Override
+		public void setValue(PaymentOrigin1Choice obj, Max3NumericText value) {
+			obj.setFINMessageType(value);
 		}
 	};
 	@XmlElement(name = "XMLMsgNm", required = true)
@@ -156,7 +166,7 @@ public class PaymentOrigin1Choice {
 	 * "Specifies that the payment was included in a SWIFT XML message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmXMLMessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentOrigin1Choice, Max35Text> mmXMLMessageName = new MMMessageAttribute<PaymentOrigin1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentOrigin1Choice.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class PaymentOrigin1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentOrigin1Choice obj) {
+			return obj.getXMLMessageName();
+		}
+
+		@Override
+		public void setValue(PaymentOrigin1Choice obj, Max35Text value) {
+			obj.setXMLMessageName(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -200,7 +220,7 @@ public class PaymentOrigin1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentOrigin1Choice, Max35Text> mmProprietary = new MMMessageAttribute<PaymentOrigin1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentOrigin1Choice.mmObject();
 			isDerived = false;
@@ -211,6 +231,16 @@ public class PaymentOrigin1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PaymentOrigin1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PaymentOrigin1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "Instrm", required = true)
@@ -250,7 +280,7 @@ public class PaymentOrigin1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentOrigin1Choice, PaymentInstrument1Code> mmInstrument = new MMMessageAttribute<PaymentOrigin1Choice, PaymentInstrument1Code>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentInstrument;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentOrigin1Choice.mmObject();
@@ -262,6 +292,16 @@ public class PaymentOrigin1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentInstrument1Code.mmObject();
+		}
+
+		@Override
+		public PaymentInstrument1Code getValue(PaymentOrigin1Choice obj) {
+			return obj.getInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentOrigin1Choice obj, PaymentInstrument1Code value) {
+			obj.setInstrument(value);
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -110,7 +111,7 @@ public class CorporateActionNotificationSD10 {
 	 * CorporateActionNotificationSD1.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD10, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionNotificationSD10, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD10.mmObject();
 			isDerived = false;
@@ -122,6 +123,16 @@ public class CorporateActionNotificationSD10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNotificationSD10 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD10 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrIntlSctyId")
@@ -163,7 +174,7 @@ public class CorporateActionNotificationSD10 {
 	 * CorporateActionNotificationSD1.mmCustomerInternalSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerInternalSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD10, Optional<Max16Text>> mmCustomerInternalSecurityIdentification = new MMMessageAttribute<CorporateActionNotificationSD10, Optional<Max16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD10.mmObject();
 			isDerived = false;
@@ -176,6 +187,16 @@ public class CorporateActionNotificationSD10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(CorporateActionNotificationSD10 obj) {
+			return obj.getCustomerInternalSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD10 obj, Optional<Max16Text> value) {
+			obj.setCustomerInternalSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyOfIntrstMtchgScty")
@@ -219,7 +240,7 @@ public class CorporateActionNotificationSD10 {
 	 * CorporateActionNotificationSD1.mmSecurityOfInterestMatchingSecurity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD10, Optional<SecurityIdentification20>> mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute<CorporateActionNotificationSD10, Optional<SecurityIdentification20>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD10.mmObject();
 			isDerived = false;
@@ -231,7 +252,17 @@ public class CorporateActionNotificationSD10 {
 			previousVersion_lazy = () -> CorporateActionNotificationSD1.mmSecurityOfInterestMatchingSecurity;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification20.mmObject();
+			complexType_lazy = () -> SecurityIdentification20.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification20> getValue(CorporateActionNotificationSD10 obj) {
+			return obj.getSecurityOfInterestMatchingSecurity();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD10 obj, Optional<SecurityIdentification20> value) {
+			obj.setSecurityOfInterestMatchingSecurity(value.orElse(null));
 		}
 	};
 
@@ -272,7 +303,7 @@ public class CorporateActionNotificationSD10 {
 		return securityOfInterestMatchingSecurity == null ? Optional.empty() : Optional.of(securityOfInterestMatchingSecurity);
 	}
 
-	public CorporateActionNotificationSD10 setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification20 securityOfInterestMatchingSecurity) {
+	public CorporateActionNotificationSD10 setSecurityOfInterestMatchingSecurity(SecurityIdentification20 securityOfInterestMatchingSecurity) {
 		this.securityOfInterestMatchingSecurity = securityOfInterestMatchingSecurity;
 		return this;
 	}

@@ -141,7 +141,7 @@ public class CancellationReason13 {
 	 * CancellationReason12.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationReason13, CancellationReason19Choice> mmCode = new MMMessageAssociationEnd<CancellationReason13, CancellationReason19Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationReason13.mmObject();
@@ -157,6 +157,16 @@ public class CancellationReason13 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationReason19Choice.mmObject();
+		}
+
+		@Override
+		public CancellationReason19Choice getValue(CancellationReason13 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationReason13 obj, CancellationReason19Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -211,7 +221,7 @@ public class CancellationReason13 {
 	 * CancellationReason12.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason13, Optional<Max35Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<CancellationReason13, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationReason13.mmObject();
@@ -226,6 +236,16 @@ public class CancellationReason13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CancellationReason13 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(CancellationReason13 obj, Optional<Max35Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 

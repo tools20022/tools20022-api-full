@@ -125,7 +125,7 @@ public class PendingStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatusAndReason1, List<ProcessingStatus34Choice>> mmProcessingStatus = new MMMessageAssociationEnd<PendingStatusAndReason1, List<ProcessingStatus34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason1.mmObject();
@@ -138,6 +138,16 @@ public class PendingStatusAndReason1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus34Choice.mmObject();
+		}
+
+		@Override
+		public List<ProcessingStatus34Choice> getValue(PendingStatusAndReason1 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(PendingStatusAndReason1 obj, List<ProcessingStatus34Choice> value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -182,7 +192,7 @@ public class PendingStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatusAndReason1, List<SettlementStatus9Choice>> mmSettlementStatus = new MMMessageAssociationEnd<PendingStatusAndReason1, List<SettlementStatus9Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason1.mmObject();
@@ -195,6 +205,16 @@ public class PendingStatusAndReason1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus9Choice.mmObject();
+		}
+
+		@Override
+		public List<SettlementStatus9Choice> getValue(PendingStatusAndReason1 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(PendingStatusAndReason1 obj, List<SettlementStatus9Choice> value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 

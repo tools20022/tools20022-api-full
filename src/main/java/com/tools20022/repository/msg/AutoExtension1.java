@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.AutoExtend1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.UndertakingExtension;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NonExtension1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -108,7 +109,7 @@ public class AutoExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AutoExtension1, Optional<AutoExtend1Choice>> mmPeriod = new MMMessageAssociationEnd<AutoExtension1, Optional<AutoExtend1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingExtension.mmAutoExtensionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutoExtension1.mmObject();
@@ -121,6 +122,16 @@ public class AutoExtension1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AutoExtend1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AutoExtend1Choice> getValue(AutoExtension1 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(AutoExtension1 obj, Optional<AutoExtend1Choice> value) {
+			obj.setPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlXpryDt")
@@ -158,7 +169,7 @@ public class AutoExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutoExtension1, Optional<ISODate>> mmFinalExpiryDate = new MMMessageAttribute<AutoExtension1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingExtension.mmAutoExtensionFinalExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutoExtension1.mmObject();
@@ -171,9 +182,19 @@ public class AutoExtension1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public Optional<ISODate> getValue(AutoExtension1 obj) {
+			return obj.getFinalExpiryDate();
+		}
+
+		@Override
+		public void setValue(AutoExtension1 obj, Optional<ISODate> value) {
+			obj.setFinalExpiryDate(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "NonXtnsnNtfctn")
-	protected List<com.tools20022.repository.msg.NonExtension1> nonExtensionNotification;
+	protected List<NonExtension1> nonExtensionNotification;
 	/**
 	 * 
 	 <p>
@@ -201,7 +222,7 @@ public class AutoExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonExtensionNotification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AutoExtension1, List<NonExtension1>> mmNonExtensionNotification = new MMMessageAssociationEnd<AutoExtension1, List<NonExtension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AutoExtension1.mmObject();
 			isDerived = false;
@@ -211,7 +232,17 @@ public class AutoExtension1 {
 			definition = "Details related to the notification of the end of the period for notification of non-extension of the expiry date.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NonExtension1.mmObject();
+			type_lazy = () -> NonExtension1.mmObject();
+		}
+
+		@Override
+		public List<NonExtension1> getValue(AutoExtension1 obj) {
+			return obj.getNonExtensionNotification();
+		}
+
+		@Override
+		public void setValue(AutoExtension1 obj, List<NonExtension1> value) {
+			obj.setNonExtensionNotification(value);
 		}
 	};
 
@@ -252,7 +283,7 @@ public class AutoExtension1 {
 		return nonExtensionNotification == null ? nonExtensionNotification = new ArrayList<>() : nonExtensionNotification;
 	}
 
-	public AutoExtension1 setNonExtensionNotification(List<com.tools20022.repository.msg.NonExtension1> nonExtensionNotification) {
+	public AutoExtension1 setNonExtensionNotification(List<NonExtension1> nonExtensionNotification) {
 		this.nonExtensionNotification = Objects.requireNonNull(nonExtensionNotification);
 		return this;
 	}

@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
@@ -150,7 +151,7 @@ public class Reason17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepoCallAcknowledgementReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<AcknowledgementReason18Choice>> mmRepoCallAcknowledgementReason = new MMMessageAssociationEnd<Reason17Choice, Optional<AcknowledgementReason18Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -162,7 +163,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason18Choice.mmObject();
+			type_lazy = () -> AcknowledgementReason18Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AcknowledgementReason18Choice> getValue(Reason17Choice obj) {
+			return obj.getRepoCallAcknowledgementReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<AcknowledgementReason18Choice> value) {
+			obj.setRepoCallAcknowledgementReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRsn")
@@ -201,7 +212,7 @@ public class Reason17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<CancellationReason30Choice>> mmCancellationReason = new MMMessageAssociationEnd<Reason17Choice, Optional<CancellationReason30Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -213,7 +224,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CancellationReason30Choice.mmObject();
+			type_lazy = () -> CancellationReason30Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CancellationReason30Choice> getValue(Reason17Choice obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<CancellationReason30Choice> value) {
+			obj.setCancellationReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdgCxlRsn")
@@ -251,7 +272,7 @@ public class Reason17Choice {
 	 * "Specifies the reason why the cancellation request is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingCancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<PendingCancellationReasons5Choice>> mmPendingCancellationReason = new MMMessageAssociationEnd<Reason17Choice, Optional<PendingCancellationReasons5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -263,7 +284,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingCancellationReasons5Choice.mmObject();
+			type_lazy = () -> PendingCancellationReasons5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PendingCancellationReasons5Choice> getValue(Reason17Choice obj) {
+			return obj.getPendingCancellationReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<PendingCancellationReasons5Choice> value) {
+			obj.setPendingCancellationReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GnrtdRsn")
@@ -300,7 +331,7 @@ public class Reason17Choice {
 	 * definition} = "Specifies the reason why the transaction was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneratedReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<GeneratedReasons6Choice>> mmGeneratedReason = new MMMessageAssociationEnd<Reason17Choice, Optional<GeneratedReasons6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmGeneratedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -312,7 +343,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.GeneratedReasons6Choice.mmObject();
+			type_lazy = () -> GeneratedReasons6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<GeneratedReasons6Choice> getValue(Reason17Choice obj) {
+			return obj.getGeneratedReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<GeneratedReasons6Choice> value) {
+			obj.setGeneratedReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DndRsn")
@@ -349,7 +390,7 @@ public class Reason17Choice {
 	 * definition} = "Specifies the reason why the request was denied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeniedReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<DeniedReason23Choice>> mmDeniedReason = new MMMessageAssociationEnd<Reason17Choice, Optional<DeniedReason23Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -361,7 +402,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DeniedReason23Choice.mmObject();
+			type_lazy = () -> DeniedReason23Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DeniedReason23Choice> getValue(Reason17Choice obj) {
+			return obj.getDeniedReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<DeniedReason23Choice> value) {
+			obj.setDeniedReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AckdAccptdRsn")
@@ -399,7 +450,7 @@ public class Reason17Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcknowledgedAcceptedReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<AcknowledgementReason16Choice>> mmAcknowledgedAcceptedReason = new MMMessageAssociationEnd<Reason17Choice, Optional<AcknowledgementReason16Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -411,7 +462,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason16Choice.mmObject();
+			type_lazy = () -> AcknowledgementReason16Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AcknowledgementReason16Choice> getValue(Reason17Choice obj) {
+			return obj.getAcknowledgedAcceptedReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<AcknowledgementReason16Choice> value) {
+			obj.setAcknowledgedAcceptedReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdgRsn")
@@ -449,7 +510,7 @@ public class Reason17Choice {
 	 * "Specifies the reason why the instruction has a pending status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<PendingReason47Choice>> mmPendingReason = new MMMessageAssociationEnd<Reason17Choice, Optional<PendingReason47Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -461,7 +522,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingReason47Choice.mmObject();
+			type_lazy = () -> PendingReason47Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PendingReason47Choice> getValue(Reason17Choice obj) {
+			return obj.getPendingReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<PendingReason47Choice> value) {
+			obj.setPendingReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FlngRsn")
@@ -500,7 +571,7 @@ public class Reason17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFailingReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<FailingReason15Choice>> mmFailingReason = new MMMessageAssociationEnd<Reason17Choice, Optional<FailingReason15Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmFailingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -512,7 +583,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FailingReason15Choice.mmObject();
+			type_lazy = () -> FailingReason15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FailingReason15Choice> getValue(Reason17Choice obj) {
+			return obj.getFailingReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<FailingReason15Choice> value) {
+			obj.setFailingReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdgPrcgRsn")
@@ -551,7 +632,7 @@ public class Reason17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingProcessingReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<PendingProcessingReason13Choice>> mmPendingProcessingReason = new MMMessageAssociationEnd<Reason17Choice, Optional<PendingProcessingReason13Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -563,7 +644,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingProcessingReason13Choice.mmObject();
+			type_lazy = () -> PendingProcessingReason13Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PendingProcessingReason13Choice> getValue(Reason17Choice obj) {
+			return obj.getPendingProcessingReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<PendingProcessingReason13Choice> value) {
+			obj.setPendingProcessingReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -602,7 +693,7 @@ public class Reason17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectionReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<RejectionReason34Choice>> mmRejectionReason = new MMMessageAssociationEnd<Reason17Choice, Optional<RejectionReason34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -614,7 +705,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectionReason34Choice.mmObject();
+			type_lazy = () -> RejectionReason34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RejectionReason34Choice> getValue(Reason17Choice obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<RejectionReason34Choice> value) {
+			obj.setRejectionReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RprRsn")
@@ -651,7 +752,7 @@ public class Reason17Choice {
 	 * definition} = "Specifies the reason why the instruction is in repair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepairReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<RepairReason18Choice>> mmRepairReason = new MMMessageAssociationEnd<Reason17Choice, Optional<RepairReason18Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -663,7 +764,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RepairReason18Choice.mmObject();
+			type_lazy = () -> RepairReason18Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RepairReason18Choice> getValue(Reason17Choice obj) {
+			return obj.getRepairReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<RepairReason18Choice> value) {
+			obj.setRepairReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdgModRsn")
@@ -701,7 +812,7 @@ public class Reason17Choice {
 	 * "Specifies the reason why the modification request is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingModificationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<PendingReason37Choice>> mmPendingModificationReason = new MMMessageAssociationEnd<Reason17Choice, Optional<PendingReason37Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -713,7 +824,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingReason37Choice.mmObject();
+			type_lazy = () -> PendingReason37Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PendingReason37Choice> getValue(Reason17Choice obj) {
+			return obj.getPendingModificationReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<PendingReason37Choice> value) {
+			obj.setPendingModificationReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UmtchdRsn")
@@ -751,7 +872,7 @@ public class Reason17Choice {
 	 * "Specifies the reason why the instruction has an unmatched status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatchedReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason17Choice, Optional<UnmatchedReason29Choice>> mmUnmatchedReason = new MMMessageAssociationEnd<Reason17Choice, Optional<UnmatchedReason29Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmUnmatchedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason17Choice.mmObject();
@@ -763,7 +884,17 @@ public class Reason17Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.UnmatchedReason29Choice.mmObject();
+			type_lazy = () -> UnmatchedReason29Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UnmatchedReason29Choice> getValue(Reason17Choice obj) {
+			return obj.getUnmatchedReason();
+		}
+
+		@Override
+		public void setValue(Reason17Choice obj, Optional<UnmatchedReason29Choice> value) {
+			obj.setUnmatchedReason(value.orElse(null));
 		}
 	};
 
@@ -790,7 +921,7 @@ public class Reason17Choice {
 		return repoCallAcknowledgementReason == null ? Optional.empty() : Optional.of(repoCallAcknowledgementReason);
 	}
 
-	public Reason17Choice setRepoCallAcknowledgementReason(com.tools20022.repository.choice.AcknowledgementReason18Choice repoCallAcknowledgementReason) {
+	public Reason17Choice setRepoCallAcknowledgementReason(AcknowledgementReason18Choice repoCallAcknowledgementReason) {
 		this.repoCallAcknowledgementReason = repoCallAcknowledgementReason;
 		return this;
 	}
@@ -799,7 +930,7 @@ public class Reason17Choice {
 		return cancellationReason == null ? Optional.empty() : Optional.of(cancellationReason);
 	}
 
-	public Reason17Choice setCancellationReason(com.tools20022.repository.choice.CancellationReason30Choice cancellationReason) {
+	public Reason17Choice setCancellationReason(CancellationReason30Choice cancellationReason) {
 		this.cancellationReason = cancellationReason;
 		return this;
 	}
@@ -808,7 +939,7 @@ public class Reason17Choice {
 		return pendingCancellationReason == null ? Optional.empty() : Optional.of(pendingCancellationReason);
 	}
 
-	public Reason17Choice setPendingCancellationReason(com.tools20022.repository.choice.PendingCancellationReasons5Choice pendingCancellationReason) {
+	public Reason17Choice setPendingCancellationReason(PendingCancellationReasons5Choice pendingCancellationReason) {
 		this.pendingCancellationReason = pendingCancellationReason;
 		return this;
 	}
@@ -817,7 +948,7 @@ public class Reason17Choice {
 		return generatedReason == null ? Optional.empty() : Optional.of(generatedReason);
 	}
 
-	public Reason17Choice setGeneratedReason(com.tools20022.repository.choice.GeneratedReasons6Choice generatedReason) {
+	public Reason17Choice setGeneratedReason(GeneratedReasons6Choice generatedReason) {
 		this.generatedReason = generatedReason;
 		return this;
 	}
@@ -826,7 +957,7 @@ public class Reason17Choice {
 		return deniedReason == null ? Optional.empty() : Optional.of(deniedReason);
 	}
 
-	public Reason17Choice setDeniedReason(com.tools20022.repository.choice.DeniedReason23Choice deniedReason) {
+	public Reason17Choice setDeniedReason(DeniedReason23Choice deniedReason) {
 		this.deniedReason = deniedReason;
 		return this;
 	}
@@ -835,7 +966,7 @@ public class Reason17Choice {
 		return acknowledgedAcceptedReason == null ? Optional.empty() : Optional.of(acknowledgedAcceptedReason);
 	}
 
-	public Reason17Choice setAcknowledgedAcceptedReason(com.tools20022.repository.choice.AcknowledgementReason16Choice acknowledgedAcceptedReason) {
+	public Reason17Choice setAcknowledgedAcceptedReason(AcknowledgementReason16Choice acknowledgedAcceptedReason) {
 		this.acknowledgedAcceptedReason = acknowledgedAcceptedReason;
 		return this;
 	}
@@ -844,7 +975,7 @@ public class Reason17Choice {
 		return pendingReason == null ? Optional.empty() : Optional.of(pendingReason);
 	}
 
-	public Reason17Choice setPendingReason(com.tools20022.repository.choice.PendingReason47Choice pendingReason) {
+	public Reason17Choice setPendingReason(PendingReason47Choice pendingReason) {
 		this.pendingReason = pendingReason;
 		return this;
 	}
@@ -853,7 +984,7 @@ public class Reason17Choice {
 		return failingReason == null ? Optional.empty() : Optional.of(failingReason);
 	}
 
-	public Reason17Choice setFailingReason(com.tools20022.repository.choice.FailingReason15Choice failingReason) {
+	public Reason17Choice setFailingReason(FailingReason15Choice failingReason) {
 		this.failingReason = failingReason;
 		return this;
 	}
@@ -862,7 +993,7 @@ public class Reason17Choice {
 		return pendingProcessingReason == null ? Optional.empty() : Optional.of(pendingProcessingReason);
 	}
 
-	public Reason17Choice setPendingProcessingReason(com.tools20022.repository.choice.PendingProcessingReason13Choice pendingProcessingReason) {
+	public Reason17Choice setPendingProcessingReason(PendingProcessingReason13Choice pendingProcessingReason) {
 		this.pendingProcessingReason = pendingProcessingReason;
 		return this;
 	}
@@ -871,7 +1002,7 @@ public class Reason17Choice {
 		return rejectionReason == null ? Optional.empty() : Optional.of(rejectionReason);
 	}
 
-	public Reason17Choice setRejectionReason(com.tools20022.repository.choice.RejectionReason34Choice rejectionReason) {
+	public Reason17Choice setRejectionReason(RejectionReason34Choice rejectionReason) {
 		this.rejectionReason = rejectionReason;
 		return this;
 	}
@@ -880,7 +1011,7 @@ public class Reason17Choice {
 		return repairReason == null ? Optional.empty() : Optional.of(repairReason);
 	}
 
-	public Reason17Choice setRepairReason(com.tools20022.repository.choice.RepairReason18Choice repairReason) {
+	public Reason17Choice setRepairReason(RepairReason18Choice repairReason) {
 		this.repairReason = repairReason;
 		return this;
 	}
@@ -889,7 +1020,7 @@ public class Reason17Choice {
 		return pendingModificationReason == null ? Optional.empty() : Optional.of(pendingModificationReason);
 	}
 
-	public Reason17Choice setPendingModificationReason(com.tools20022.repository.choice.PendingReason37Choice pendingModificationReason) {
+	public Reason17Choice setPendingModificationReason(PendingReason37Choice pendingModificationReason) {
 		this.pendingModificationReason = pendingModificationReason;
 		return this;
 	}
@@ -898,7 +1029,7 @@ public class Reason17Choice {
 		return unmatchedReason == null ? Optional.empty() : Optional.of(unmatchedReason);
 	}
 
-	public Reason17Choice setUnmatchedReason(com.tools20022.repository.choice.UnmatchedReason29Choice unmatchedReason) {
+	public Reason17Choice setUnmatchedReason(UnmatchedReason29Choice unmatchedReason) {
 		this.unmatchedReason = unmatchedReason;
 		return this;
 	}

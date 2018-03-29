@@ -123,7 +123,7 @@ public class CreditorReferenceType1 {
 	 * definition} = "Coded creditor reference type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditorReferenceType1, DocumentType3Code> mmCode = new MMMessageAttribute<CreditorReferenceType1, DocumentType3Code>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditorReferenceType1.mmObject();
@@ -135,6 +135,16 @@ public class CreditorReferenceType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DocumentType3Code.mmObject();
+		}
+
+		@Override
+		public DocumentType3Code getValue(CreditorReferenceType1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CreditorReferenceType1 obj, DocumentType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -171,7 +181,7 @@ public class CreditorReferenceType1 {
 	 * definition} = "Creditor reference type not avilable in a coded format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditorReferenceType1, Max35Text> mmProprietary = new MMMessageAttribute<CreditorReferenceType1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditorReferenceType1.mmObject();
@@ -183,6 +193,16 @@ public class CreditorReferenceType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CreditorReferenceType1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CreditorReferenceType1 obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -220,7 +240,7 @@ public class CreditorReferenceType1 {
 	 * "Identification of the issuer of the credit reference type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditorReferenceType1, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<CreditorReferenceType1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> DocumentIssuer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditorReferenceType1.mmObject();
@@ -232,6 +252,16 @@ public class CreditorReferenceType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CreditorReferenceType1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(CreditorReferenceType1 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	/**

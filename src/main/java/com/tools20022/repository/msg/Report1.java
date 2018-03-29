@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.NonClearingMemberRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount31;
+import com.tools20022.repository.msg.SettlementObligation2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -69,7 +71,7 @@ public class Report1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "NonClrMmb")
-	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember;
+	protected List<PartyIdentificationAndAccount31> nonClearingMember;
 	/**
 	 * 
 	 <p>
@@ -103,7 +105,7 @@ public class Report1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Report1, List<PartyIdentificationAndAccount31>> mmNonClearingMember = new MMMessageAssociationEnd<Report1, List<PartyIdentificationAndAccount31>>() {
 		{
 			businessComponentTrace_lazy = () -> NonClearingMemberRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report1.mmObject();
@@ -114,11 +116,21 @@ public class Report1 {
 			definition = "Provides the identification for the non-clearing member. This is mandatory if the clearing member identification equals a general clearing member.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentificationAndAccount31> getValue(Report1 obj) {
+			return obj.getNonClearingMember();
+		}
+
+		@Override
+		public void setValue(Report1 obj, List<PartyIdentificationAndAccount31> value) {
+			obj.setNonClearingMember(value);
 		}
 	};
 	@XmlElement(name = "SttlmOblgtnDtls", required = true)
-	protected List<com.tools20022.repository.msg.SettlementObligation2> settlementObligationDetails;
+	protected List<SettlementObligation2> settlementObligationDetails;
 	/**
 	 * 
 	 <p>
@@ -145,7 +157,7 @@ public class Report1 {
 	 * "Provides information about the settlement obligation details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementObligationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Report1, List<SettlementObligation2>> mmSettlementObligationDetails = new MMMessageAssociationEnd<Report1, List<SettlementObligation2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report1.mmObject();
 			isDerived = false;
@@ -155,7 +167,17 @@ public class Report1 {
 			definition = "Provides information about the settlement obligation details.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementObligation2.mmObject();
+			type_lazy = () -> SettlementObligation2.mmObject();
+		}
+
+		@Override
+		public List<SettlementObligation2> getValue(Report1 obj) {
+			return obj.getSettlementObligationDetails();
+		}
+
+		@Override
+		public void setValue(Report1 obj, List<SettlementObligation2> value) {
+			obj.setSettlementObligationDetails(value);
 		}
 	};
 
@@ -176,7 +198,7 @@ public class Report1 {
 		return nonClearingMember == null ? nonClearingMember = new ArrayList<>() : nonClearingMember;
 	}
 
-	public Report1 setNonClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount31> nonClearingMember) {
+	public Report1 setNonClearingMember(List<PartyIdentificationAndAccount31> nonClearingMember) {
 		this.nonClearingMember = Objects.requireNonNull(nonClearingMember);
 		return this;
 	}
@@ -185,7 +207,7 @@ public class Report1 {
 		return settlementObligationDetails == null ? settlementObligationDetails = new ArrayList<>() : settlementObligationDetails;
 	}
 
-	public Report1 setSettlementObligationDetails(List<com.tools20022.repository.msg.SettlementObligation2> settlementObligationDetails) {
+	public Report1 setSettlementObligationDetails(List<SettlementObligation2> settlementObligationDetails) {
 		this.settlementObligationDetails = Objects.requireNonNull(settlementObligationDetails);
 		return this;
 	}

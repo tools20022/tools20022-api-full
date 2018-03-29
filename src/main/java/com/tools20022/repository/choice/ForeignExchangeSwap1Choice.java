@@ -121,7 +121,7 @@ public class ForeignExchangeSwap1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeSwap1Choice, ReportPeriodActivity1Code> mmDataSetAction = new MMMessageAttribute<ForeignExchangeSwap1Choice, ReportPeriodActivity1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap1Choice.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class ForeignExchangeSwap1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity1Code.mmObject();
+		}
+
+		@Override
+		public ReportPeriodActivity1Code getValue(ForeignExchangeSwap1Choice obj) {
+			return obj.getDataSetAction();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeSwap1Choice obj, ReportPeriodActivity1Code value) {
+			obj.setDataSetAction(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -174,7 +184,7 @@ public class ForeignExchangeSwap1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ForeignExchangeSwap1Choice, List<ForeignExchangeSwapTransaction1>> mmTransaction = new MMMessageAssociationEnd<ForeignExchangeSwap1Choice, List<ForeignExchangeSwapTransaction1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap1Choice.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class ForeignExchangeSwap1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ForeignExchangeSwapTransaction1.mmObject();
+		}
+
+		@Override
+		public List<ForeignExchangeSwapTransaction1> getValue(ForeignExchangeSwap1Choice obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeSwap1Choice obj, List<ForeignExchangeSwapTransaction1> value) {
+			obj.setTransaction(value);
 		}
 	};
 

@@ -112,7 +112,7 @@ public class MemberCriteriaDefinition1Choice {
 	 * MemberCriteriaDefinitionChoice.mmQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberCriteriaDefinition1Choice, Max35Text> mmQueryName = new MMMessageAttribute<MemberCriteriaDefinition1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class MemberCriteriaDefinition1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MemberCriteriaDefinition1Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(MemberCriteriaDefinition1Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -160,7 +170,7 @@ public class MemberCriteriaDefinition1Choice {
 	 * MemberCriteriaDefinitionChoice.mmNewCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberCriteriaDefinition1Choice, MemberCriteria3> mmNewCriteria = new MMMessageAssociationEnd<MemberCriteriaDefinition1Choice, MemberCriteria3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MemberCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class MemberCriteriaDefinition1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MemberCriteria3.mmObject();
+		}
+
+		@Override
+		public MemberCriteria3 getValue(MemberCriteriaDefinition1Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(MemberCriteriaDefinition1Choice obj, MemberCriteria3 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

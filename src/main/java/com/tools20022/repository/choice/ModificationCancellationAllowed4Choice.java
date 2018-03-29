@@ -114,7 +114,7 @@ public class ModificationCancellationAllowed4Choice {
 	 * ModificationCancellationAllowed1Choice.mmIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationCancellationAllowed4Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<ModificationCancellationAllowed4Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class ModificationCancellationAllowed4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(ModificationCancellationAllowed4Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(ModificationCancellationAllowed4Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class ModificationCancellationAllowed4Choice {
 	 * ModificationCancellationAllowed1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationCancellationAllowed4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<ModificationCancellationAllowed4Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationCancellationAllowed4Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class ModificationCancellationAllowed4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ModificationCancellationAllowed4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ModificationCancellationAllowed4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

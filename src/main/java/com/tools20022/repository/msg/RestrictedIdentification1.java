@@ -108,7 +108,7 @@ public class RestrictedIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RestrictedIdentification1, RestrictedSMNDACodeText> mmIdentification = new MMMessageAttribute<RestrictedIdentification1, RestrictedSMNDACodeText>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RestrictedIdentification1.mmObject();
@@ -120,6 +120,16 @@ public class RestrictedIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedSMNDACodeText.mmObject();
+		}
+
+		@Override
+		public RestrictedSMNDACodeText getValue(RestrictedIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(RestrictedIdentification1 obj, RestrictedSMNDACodeText value) {
+			obj.setIdentification(value);
 		}
 	};
 

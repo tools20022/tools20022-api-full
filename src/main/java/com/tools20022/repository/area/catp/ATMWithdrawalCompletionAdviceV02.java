@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header32;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +125,7 @@ public class ATMWithdrawalCompletionAdviceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalCompletionAdviceV02, Header32> mmHeader = new MMMessageBuildingBlock<ATMWithdrawalCompletionAdviceV02, Header32>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class ATMWithdrawalCompletionAdviceV02 {
 			complexType_lazy = () -> Header32.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalCompletionAdviceV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header32 getValue(ATMWithdrawalCompletionAdviceV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAdviceV02 obj, Header32 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "PrtctdATMWdrwlCmpltnAdvc")
@@ -170,7 +171,7 @@ public class ATMWithdrawalCompletionAdviceV02 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProtectedATMWithdrawalCompletionAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalCompletionAdviceV02, Optional<ContentInformationType10>> mmProtectedATMWithdrawalCompletionAdvice = new MMMessageBuildingBlock<ATMWithdrawalCompletionAdviceV02, Optional<ContentInformationType10>>() {
 		{
 			xmlTag = "PrtctdATMWdrwlCmpltnAdvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +182,14 @@ public class ATMWithdrawalCompletionAdviceV02 {
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalCompletionAdviceV02.class.getMethod("getProtectedATMWithdrawalCompletionAdvice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMWithdrawalCompletionAdviceV02 obj) {
+			return obj.getProtectedATMWithdrawalCompletionAdvice();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAdviceV02 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedATMWithdrawalCompletionAdvice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMWdrwlCmpltnAdvc")
@@ -216,7 +219,7 @@ public class ATMWithdrawalCompletionAdviceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMWithdrawalCompletionAdvice = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalCompletionAdviceV02, Optional<ATMWithdrawalCompletionAdvice2>> mmATMWithdrawalCompletionAdvice = new MMMessageBuildingBlock<ATMWithdrawalCompletionAdviceV02, Optional<ATMWithdrawalCompletionAdvice2>>() {
 		{
 			xmlTag = "ATMWdrwlCmpltnAdvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +230,14 @@ public class ATMWithdrawalCompletionAdviceV02 {
 			complexType_lazy = () -> ATMWithdrawalCompletionAdvice2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalCompletionAdviceV02.class.getMethod("getATMWithdrawalCompletionAdvice", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ATMWithdrawalCompletionAdvice2> getValue(ATMWithdrawalCompletionAdviceV02 obj) {
+			return obj.getATMWithdrawalCompletionAdvice();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAdviceV02 obj, Optional<ATMWithdrawalCompletionAdvice2> value) {
+			obj.setATMWithdrawalCompletionAdvice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -260,7 +265,7 @@ public class ATMWithdrawalCompletionAdviceV02 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalCompletionAdviceV02, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<ATMWithdrawalCompletionAdviceV02, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,12 +276,14 @@ public class ATMWithdrawalCompletionAdviceV02 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalCompletionAdviceV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(ATMWithdrawalCompletionAdviceV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAdviceV02 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

@@ -106,7 +106,7 @@ public class DateOrBlankQuery2Choice {
 	 * definition} = "Indicates the date range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateOrBlankQuery2Choice, DatePeriod1> mmRange = new MMMessageAssociationEnd<DateOrBlankQuery2Choice, DatePeriod1>() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateOrBlankQuery2Choice.mmObject();
@@ -119,6 +119,16 @@ public class DateOrBlankQuery2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DatePeriod1.mmObject();
+		}
+
+		@Override
+		public DatePeriod1 getValue(DateOrBlankQuery2Choice obj) {
+			return obj.getRange();
+		}
+
+		@Override
+		public void setValue(DateOrBlankQuery2Choice obj, DatePeriod1 value) {
+			obj.setRange(value);
 		}
 	};
 	@XmlElement(name = "NotRptd", required = true)
@@ -151,7 +161,7 @@ public class DateOrBlankQuery2Choice {
 	 * definition} = "Field may be queried for not reported value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotReported = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateOrBlankQuery2Choice, NotReported1Code> mmNotReported = new MMMessageAttribute<DateOrBlankQuery2Choice, NotReported1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateOrBlankQuery2Choice.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class DateOrBlankQuery2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NotReported1Code.mmObject();
+		}
+
+		@Override
+		public NotReported1Code getValue(DateOrBlankQuery2Choice obj) {
+			return obj.getNotReported();
+		}
+
+		@Override
+		public void setValue(DateOrBlankQuery2Choice obj, NotReported1Code value) {
+			obj.setNotReported(value);
 		}
 	};
 

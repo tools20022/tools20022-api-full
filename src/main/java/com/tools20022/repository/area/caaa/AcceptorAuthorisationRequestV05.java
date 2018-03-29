@@ -21,12 +21,11 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion;
+import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.AcceptorAuthorisationRequest5;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header30;
-import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -60,9 +59,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion
- * CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -71,8 +68,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AccptrAuthstnReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion
- * AcceptortoAcquirerCardTransactionPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
+ * AcceptortoAcquirerCardTransactionArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.001.001.05}</li>
@@ -142,7 +139,7 @@ public class AcceptorAuthorisationRequestV05 {
 	 * AcceptorAuthorisationRequestV04.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationRequestV05, Header30> mmHeader = new MMMessageBuildingBlock<AcceptorAuthorisationRequestV05, Header30>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,12 +152,14 @@ public class AcceptorAuthorisationRequestV05 {
 			complexType_lazy = () -> Header30.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationRequestV05.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header30 getValue(AcceptorAuthorisationRequestV05 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequestV05 obj, Header30 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "AuthstnReq", required = true)
@@ -201,7 +200,7 @@ public class AcceptorAuthorisationRequestV05 {
 	 * AcceptorAuthorisationRequestV04.mmAuthorisationRequest}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAuthorisationRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationRequestV05, AcceptorAuthorisationRequest5> mmAuthorisationRequest = new MMMessageBuildingBlock<AcceptorAuthorisationRequestV05, AcceptorAuthorisationRequest5>() {
 		{
 			xmlTag = "AuthstnReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,12 +213,14 @@ public class AcceptorAuthorisationRequestV05 {
 			complexType_lazy = () -> AcceptorAuthorisationRequest5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationRequestV05.class.getMethod("getAuthorisationRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorAuthorisationRequest5 getValue(AcceptorAuthorisationRequestV05 obj) {
+			return obj.getAuthorisationRequest();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequestV05 obj, AcceptorAuthorisationRequest5 value) {
+			obj.setAuthorisationRequest(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -260,7 +261,7 @@ public class AcceptorAuthorisationRequestV05 {
 	 * AcceptorAuthorisationRequestV04.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationRequestV05, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorAuthorisationRequestV05, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,12 +274,14 @@ public class AcceptorAuthorisationRequestV05 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationRequestV05.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(AcceptorAuthorisationRequestV05 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationRequestV05 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
@@ -290,10 +293,10 @@ public class AcceptorAuthorisationRequestV05 {
 				definition = "The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequestV06.mmObject());
 				previousVersion_lazy = () -> AcceptorAuthorisationRequestV04.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrAuthstnReq";
-				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
+				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05.mmAuthorisationRequest,
 						com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV05.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

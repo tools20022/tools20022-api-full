@@ -143,7 +143,7 @@ public class DetailedAmount6 {
 	 * DetailedAmount4.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount6, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<DetailedAmount6, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
@@ -157,6 +157,16 @@ public class DetailedAmount6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(DetailedAmount6 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(DetailedAmount6 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "DtTm", required = true)
@@ -201,7 +211,7 @@ public class DetailedAmount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount6, ISODateTime> mmDateTime = new MMMessageAttribute<DetailedAmount6, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
@@ -214,6 +224,16 @@ public class DetailedAmount6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DetailedAmount6 obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(DetailedAmount6 obj, ISODateTime value) {
+			obj.setDateTime(value);
 		}
 	};
 	@XmlElement(name = "CardDataNtryMd")
@@ -254,7 +274,7 @@ public class DetailedAmount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount6, Optional<CardDataReading1Code>> mmCardDataEntryMode = new MMMessageAttribute<DetailedAmount6, Optional<CardDataReading1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
 			isDerived = false;
@@ -266,6 +286,16 @@ public class DetailedAmount6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardDataReading1Code> getValue(DetailedAmount6 obj) {
+			return obj.getCardDataEntryMode();
+		}
+
+		@Override
+		public void setValue(DetailedAmount6 obj, Optional<CardDataReading1Code> value) {
+			obj.setCardDataEntryMode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ICCRltdData")
@@ -313,7 +343,7 @@ public class DetailedAmount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount6, Optional<Max10000Binary>> mmICCRelatedData = new MMMessageAttribute<DetailedAmount6, Optional<Max10000Binary>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmICCRelatedData;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
@@ -326,6 +356,16 @@ public class DetailedAmount6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max10000Binary> getValue(DetailedAmount6 obj) {
+			return obj.getICCRelatedData();
+		}
+
+		@Override
+		public void setValue(DetailedAmount6 obj, Optional<Max10000Binary> value) {
+			obj.setICCRelatedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Labl")
@@ -369,7 +409,7 @@ public class DetailedAmount6 {
 	 * DetailedAmount4.mmLabel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount6, Optional<Max140Text>> mmLabel = new MMMessageAttribute<DetailedAmount6, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount6.mmObject();
 			isDerived = false;
@@ -382,6 +422,16 @@ public class DetailedAmount6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(DetailedAmount6 obj) {
+			return obj.getLabel();
+		}
+
+		@Override
+		public void setValue(DetailedAmount6 obj, Optional<Max140Text> value) {
+			obj.setLabel(value.orElse(null));
 		}
 	};
 

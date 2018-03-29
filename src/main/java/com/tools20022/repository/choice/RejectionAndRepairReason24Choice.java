@@ -125,7 +125,7 @@ public class RejectionAndRepairReason24Choice {
 	 * RejectionAndRepairReason18Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionAndRepairReason24Choice, RejectionReason32Code> mmCode = new MMMessageAttribute<RejectionAndRepairReason24Choice, RejectionReason32Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason24Choice.mmObject();
@@ -139,6 +139,16 @@ public class RejectionAndRepairReason24Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason32Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason32Code getValue(RejectionAndRepairReason24Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason24Choice obj, RejectionReason32Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +195,7 @@ public class RejectionAndRepairReason24Choice {
 	 * RejectionAndRepairReason18Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionAndRepairReason24Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<RejectionAndRepairReason24Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason24Choice.mmObject();
@@ -200,6 +210,16 @@ public class RejectionAndRepairReason24Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(RejectionAndRepairReason24Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason24Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

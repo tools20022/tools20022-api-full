@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AccountManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.BankAccountManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -143,7 +142,7 @@ public class AccountClosingAdditionalInformationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, References3> mmReferences = new MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, References3>() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			complexType_lazy = () -> References3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountClosingAdditionalInformationRequestV01.class.getMethod("getReferences", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public References3 getValue(AccountClosingAdditionalInformationRequestV01 obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(AccountClosingAdditionalInformationRequestV01 obj, References3 value) {
+			obj.setReferences(value);
 		}
 	};
 	@XmlElement(name = "OrgId", required = true)
@@ -187,7 +188,7 @@ public class AccountClosingAdditionalInformationRequestV01 {
 	 * definition} = "Identifier for an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOrganisationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, List<OrganisationIdentification6>> mmOrganisationIdentification = new MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, List<OrganisationIdentification6>>() {
 		{
 			xmlTag = "OrgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,12 +198,14 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			complexType_lazy = () -> OrganisationIdentification6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountClosingAdditionalInformationRequestV01.class.getMethod("getOrganisationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<OrganisationIdentification6> getValue(AccountClosingAdditionalInformationRequestV01 obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountClosingAdditionalInformationRequestV01 obj, List<OrganisationIdentification6> value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId", required = true)
@@ -232,7 +235,7 @@ public class AccountClosingAdditionalInformationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, AccountForAction1> mmAccountIdentification = new MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, AccountForAction1>() {
 		{
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,12 +246,14 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountClosingAdditionalInformationRequestV01.class.getMethod("getAccountIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountForAction1 getValue(AccountClosingAdditionalInformationRequestV01 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountClosingAdditionalInformationRequestV01 obj, AccountForAction1 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrId", required = true)
@@ -278,7 +283,7 @@ public class AccountClosingAdditionalInformationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, BranchAndFinancialInstitutionIdentification4> mmAccountServicerIdentification = new MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, BranchAndFinancialInstitutionIdentification4>() {
 		{
 			xmlTag = "AcctSvcrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,12 +294,14 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountClosingAdditionalInformationRequestV01.class.getMethod("getAccountServicerIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BranchAndFinancialInstitutionIdentification4 getValue(AccountClosingAdditionalInformationRequestV01 obj) {
+			return obj.getAccountServicerIdentification();
+		}
+
+		@Override
+		public void setValue(AccountClosingAdditionalInformationRequestV01 obj, BranchAndFinancialInstitutionIdentification4 value) {
+			obj.setAccountServicerIdentification(value);
 		}
 	};
 	@XmlElement(name = "BalTrfAcct")
@@ -324,7 +331,7 @@ public class AccountClosingAdditionalInformationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBalanceTransferAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, Optional<AccountForAction1>> mmBalanceTransferAccount = new MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, Optional<AccountForAction1>>() {
 		{
 			xmlTag = "BalTrfAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,12 +342,14 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			complexType_lazy = () -> AccountForAction1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountClosingAdditionalInformationRequestV01.class.getMethod("getBalanceTransferAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AccountForAction1> getValue(AccountClosingAdditionalInformationRequestV01 obj) {
+			return obj.getBalanceTransferAccount();
+		}
+
+		@Override
+		public void setValue(AccountClosingAdditionalInformationRequestV01 obj, Optional<AccountForAction1> value) {
+			obj.setBalanceTransferAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfAcctSvcrId")
@@ -370,7 +379,7 @@ public class AccountClosingAdditionalInformationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferAccountServicerIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, Optional<BranchAndFinancialInstitutionIdentification4>> mmTransferAccountServicerIdentification = new MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, Optional<BranchAndFinancialInstitutionIdentification4>>() {
 		{
 			xmlTag = "TrfAcctSvcrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,12 +390,14 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountClosingAdditionalInformationRequestV01.class.getMethod("getTransferAccountServicerIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification4> getValue(AccountClosingAdditionalInformationRequestV01 obj) {
+			return obj.getTransferAccountServicerIdentification();
+		}
+
+		@Override
+		public void setValue(AccountClosingAdditionalInformationRequestV01 obj, Optional<BranchAndFinancialInstitutionIdentification4> value) {
+			obj.setTransferAccountServicerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -416,7 +427,7 @@ public class AccountClosingAdditionalInformationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, List<PartyAndSignature1>> mmDigitalSignature = new MMMessageBuildingBlock<AccountClosingAdditionalInformationRequestV01, List<PartyAndSignature1>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -426,12 +437,14 @@ public class AccountClosingAdditionalInformationRequestV01 {
 			complexType_lazy = () -> PartyAndSignature1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountClosingAdditionalInformationRequestV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PartyAndSignature1> getValue(AccountClosingAdditionalInformationRequestV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(AccountClosingAdditionalInformationRequestV01 obj, List<PartyAndSignature1> value) {
+			obj.setDigitalSignature(value);
 		}
 	};
 

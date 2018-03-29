@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateCode22Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -100,7 +101,7 @@ public class DateFormat41Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat41Choice, ISODate> mmDate = new MMMessageAttribute<DateFormat41Choice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat41Choice.mmObject();
 			isDerived = false;
@@ -112,6 +113,16 @@ public class DateFormat41Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DateFormat41Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat41Choice obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -145,7 +156,7 @@ public class DateFormat41Choice {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat41Choice, DateCode22Choice> mmDateCode = new MMMessageAssociationEnd<DateFormat41Choice, DateCode22Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat41Choice.mmObject();
 			isDerived = false;
@@ -157,7 +168,17 @@ public class DateFormat41Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateCode22Choice.mmObject();
+			type_lazy = () -> DateCode22Choice.mmObject();
+		}
+
+		@Override
+		public DateCode22Choice getValue(DateFormat41Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat41Choice obj, DateCode22Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -187,7 +208,7 @@ public class DateFormat41Choice {
 		return dateCode;
 	}
 
-	public DateFormat41Choice setDateCode(com.tools20022.repository.choice.DateCode22Choice dateCode) {
+	public DateFormat41Choice setDateCode(DateCode22Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

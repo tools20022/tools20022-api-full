@@ -27,6 +27,8 @@ import com.tools20022.repository.choice.ModificationProcessingStatus9Choice;
 import com.tools20022.repository.codeset.InstructionQueryType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount19;
+import com.tools20022.repository.msg.SystemPartyIdentification6;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -127,7 +129,7 @@ public class IntraPositionQueryCriteria4 {
 	 * IntraPositionQueryCriteria3.mmModificationRequestIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionQueryCriteria4, List<Max35Text>> mmModificationRequestIdentification = new MMMessageAttribute<IntraPositionQueryCriteria4, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryCriteria4.mmObject();
 			isDerived = false;
@@ -139,6 +141,16 @@ public class IntraPositionQueryCriteria4 {
 			previousVersion_lazy = () -> IntraPositionQueryCriteria3.mmModificationRequestIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(IntraPositionQueryCriteria4 obj) {
+			return obj.getModificationRequestIdentification();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryCriteria4 obj, List<Max35Text> value) {
+			obj.setModificationRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "InstrQryTp", required = true)
@@ -178,7 +190,7 @@ public class IntraPositionQueryCriteria4 {
 	 * IntraPositionQueryCriteria3.mmInstructionQueryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionQueryCriteria4, InstructionQueryType1Code> mmInstructionQueryType = new MMMessageAttribute<IntraPositionQueryCriteria4, InstructionQueryType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryCriteria4.mmObject();
 			isDerived = false;
@@ -190,6 +202,16 @@ public class IntraPositionQueryCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionQueryType1Code.mmObject();
+		}
+
+		@Override
+		public InstructionQueryType1Code getValue(IntraPositionQueryCriteria4 obj) {
+			return obj.getInstructionQueryType();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryCriteria4 obj, InstructionQueryType1Code value) {
+			obj.setInstructionQueryType(value);
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -226,7 +248,7 @@ public class IntraPositionQueryCriteria4 {
 	 * IntraPositionQueryCriteria3.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionQueryCriteria4, List<ModificationProcessingStatus9Choice>> mmProcessingStatus = new MMMessageAssociationEnd<IntraPositionQueryCriteria4, List<ModificationProcessingStatus9Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryCriteria4.mmObject();
 			isDerived = false;
@@ -239,9 +261,19 @@ public class IntraPositionQueryCriteria4 {
 			isComposite = true;
 			type_lazy = () -> ModificationProcessingStatus9Choice.mmObject();
 		}
+
+		@Override
+		public List<ModificationProcessingStatus9Choice> getValue(IntraPositionQueryCriteria4 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryCriteria4 obj, List<ModificationProcessingStatus9Choice> value) {
+			obj.setProcessingStatus(value);
+		}
 	};
 	@XmlElement(name = "SfkpgAcct")
-	protected List<com.tools20022.repository.msg.SecuritiesAccount19> safekeepingAccount;
+	protected List<SecuritiesAccount19> safekeepingAccount;
 	/**
 	 * 
 	 <p>
@@ -273,7 +305,7 @@ public class IntraPositionQueryCriteria4 {
 	 * IntraPositionQueryCriteria3.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionQueryCriteria4, List<SecuritiesAccount19>> mmSafekeepingAccount = new MMMessageAssociationEnd<IntraPositionQueryCriteria4, List<SecuritiesAccount19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryCriteria4.mmObject();
 			isDerived = false;
@@ -284,11 +316,21 @@ public class IntraPositionQueryCriteria4 {
 			previousVersion_lazy = () -> IntraPositionQueryCriteria3.mmSafekeepingAccount;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount19> getValue(IntraPositionQueryCriteria4 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryCriteria4 obj, List<SecuritiesAccount19> value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
-	protected List<com.tools20022.repository.msg.SystemPartyIdentification6> accountOwner;
+	protected List<SystemPartyIdentification6> accountOwner;
 	/**
 	 * 
 	 <p>
@@ -321,7 +363,7 @@ public class IntraPositionQueryCriteria4 {
 	 * IntraPositionQueryCriteria3.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionQueryCriteria4, List<SystemPartyIdentification6>> mmAccountOwner = new MMMessageAssociationEnd<IntraPositionQueryCriteria4, List<SystemPartyIdentification6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryCriteria4.mmObject();
 			isDerived = false;
@@ -332,11 +374,21 @@ public class IntraPositionQueryCriteria4 {
 			previousVersion_lazy = () -> IntraPositionQueryCriteria3.mmAccountOwner;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
+			type_lazy = () -> SystemPartyIdentification6.mmObject();
+		}
+
+		@Override
+		public List<SystemPartyIdentification6> getValue(IntraPositionQueryCriteria4 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryCriteria4 obj, List<SystemPartyIdentification6> value) {
+			obj.setAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
-	protected List<com.tools20022.repository.msg.SystemPartyIdentification6> messageOriginator;
+	protected List<SystemPartyIdentification6> messageOriginator;
 	/**
 	 * 
 	 <p>
@@ -370,7 +422,7 @@ public class IntraPositionQueryCriteria4 {
 	 * IntraPositionQueryCriteria3.mmMessageOriginator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionQueryCriteria4, List<SystemPartyIdentification6>> mmMessageOriginator = new MMMessageAssociationEnd<IntraPositionQueryCriteria4, List<SystemPartyIdentification6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryCriteria4.mmObject();
 			isDerived = false;
@@ -381,7 +433,17 @@ public class IntraPositionQueryCriteria4 {
 			previousVersion_lazy = () -> IntraPositionQueryCriteria3.mmMessageOriginator;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
+			type_lazy = () -> SystemPartyIdentification6.mmObject();
+		}
+
+		@Override
+		public List<SystemPartyIdentification6> getValue(IntraPositionQueryCriteria4 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryCriteria4 obj, List<SystemPartyIdentification6> value) {
+			obj.setMessageOriginator(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -423,7 +485,7 @@ public class IntraPositionQueryCriteria4 {
 	 * IntraPositionQueryCriteria3.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionQueryCriteria4, Optional<DateAndDateTimeSearch2Choice>> mmCreationDateTime = new MMMessageAttribute<IntraPositionQueryCriteria4, Optional<DateAndDateTimeSearch2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryCriteria4.mmObject();
 			isDerived = false;
@@ -436,6 +498,16 @@ public class IntraPositionQueryCriteria4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeSearch2Choice> getValue(IntraPositionQueryCriteria4 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryCriteria4 obj, Optional<DateAndDateTimeSearch2Choice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 
@@ -487,7 +559,7 @@ public class IntraPositionQueryCriteria4 {
 		return safekeepingAccount == null ? safekeepingAccount = new ArrayList<>() : safekeepingAccount;
 	}
 
-	public IntraPositionQueryCriteria4 setSafekeepingAccount(List<com.tools20022.repository.msg.SecuritiesAccount19> safekeepingAccount) {
+	public IntraPositionQueryCriteria4 setSafekeepingAccount(List<SecuritiesAccount19> safekeepingAccount) {
 		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
 		return this;
 	}
@@ -496,7 +568,7 @@ public class IntraPositionQueryCriteria4 {
 		return accountOwner == null ? accountOwner = new ArrayList<>() : accountOwner;
 	}
 
-	public IntraPositionQueryCriteria4 setAccountOwner(List<com.tools20022.repository.msg.SystemPartyIdentification6> accountOwner) {
+	public IntraPositionQueryCriteria4 setAccountOwner(List<SystemPartyIdentification6> accountOwner) {
 		this.accountOwner = Objects.requireNonNull(accountOwner);
 		return this;
 	}
@@ -505,7 +577,7 @@ public class IntraPositionQueryCriteria4 {
 		return messageOriginator == null ? messageOriginator = new ArrayList<>() : messageOriginator;
 	}
 
-	public IntraPositionQueryCriteria4 setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification6> messageOriginator) {
+	public IntraPositionQueryCriteria4 setMessageOriginator(List<SystemPartyIdentification6> messageOriginator) {
 		this.messageOriginator = Objects.requireNonNull(messageOriginator);
 		return this;
 	}

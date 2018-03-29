@@ -19,11 +19,12 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.InvestmentAccountService;
+import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Reinvestment1;
 import com.tools20022.repository.msg.Reinvestment2;
 import com.tools20022.repository.msg.Reinvestment3;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class Reinvestment {
 	 * "Investment account services which include reinvestment information."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedinvestmentAccountService = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Reinvestment, InvestmentAccountService> mmRelatedinvestmentAccountService = new MMBusinessAssociationEnd<Reinvestment, InvestmentAccountService>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
@@ -133,9 +134,19 @@ public class Reinvestment {
 			definition = "Investment account services which include reinvestment information.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmReinvestment;
+			opposite_lazy = () -> InvestmentAccountService.mmReinvestment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
+			type_lazy = () -> InvestmentAccountService.mmObject();
+		}
+
+		@Override
+		public InvestmentAccountService getValue(Reinvestment obj) {
+			return obj.getRelatedinvestmentAccountService();
+		}
+
+		@Override
+		public void setValue(Reinvestment obj, InvestmentAccountService value) {
+			obj.setRelatedinvestmentAccountService(value);
 		}
 	};
 	protected InvestmentFundClass investmentFundClass;
@@ -187,7 +198,7 @@ public class Reinvestment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestmentFundClass = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Reinvestment, InvestmentFundClass> mmInvestmentFundClass = new MMBusinessAssociationEnd<Reinvestment, InvestmentFundClass>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Reinvestment1.mmFundDetails, Reinvestment2.mmFinancialInstrumentDetails, Reinvestment3.mmFinancialInstrumentDetails);
 			isDerived = false;
@@ -197,9 +208,19 @@ public class Reinvestment {
 			definition = "Investment fund class which is the fund in which the income must be reinvested.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmReinvestment;
+			opposite_lazy = () -> InvestmentFundClass.mmReinvestment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
+			type_lazy = () -> InvestmentFundClass.mmObject();
+		}
+
+		@Override
+		public InvestmentFundClass getValue(Reinvestment obj) {
+			return obj.getInvestmentFundClass();
+		}
+
+		@Override
+		public void setValue(Reinvestment obj, InvestmentFundClass value) {
+			obj.setInvestmentFundClass(value);
 		}
 	};
 	protected PercentageRate percentage;
@@ -242,7 +263,7 @@ public class Reinvestment {
 	 * definition} = "Percentage on the income on the fund to be reinvested."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Reinvestment, PercentageRate> mmPercentage = new MMBusinessAttribute<Reinvestment, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Reinvestment1.mmReinvestmentPercentage, Reinvestment2.mmReinvestmentPercentage, Reinvestment3.mmReinvestmentPercentage);
 			isDerived = false;
@@ -255,12 +276,14 @@ public class Reinvestment {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Reinvestment.class.getMethod("getPercentage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Reinvestment obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(Reinvestment obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 
@@ -271,7 +294,7 @@ public class Reinvestment {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reinvestment";
 				definition = "Parameters of the reinvestment of the income on the fund.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmReinvestment, com.tools20022.repository.entity.InvestmentAccountService.mmReinvestment);
+				associationDomain_lazy = () -> Arrays.asList(InvestmentFundClass.mmReinvestment, InvestmentAccountService.mmReinvestment);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reinvestment.mmRelatedinvestmentAccountService, com.tools20022.repository.entity.Reinvestment.mmInvestmentFundClass,
 						com.tools20022.repository.entity.Reinvestment.mmPercentage);
 				derivationComponent_lazy = () -> Arrays.asList(Reinvestment1.mmObject(), Reinvestment2.mmObject(), Reinvestment3.mmObject());
@@ -289,7 +312,7 @@ public class Reinvestment {
 		return relatedinvestmentAccountService;
 	}
 
-	public Reinvestment setRelatedinvestmentAccountService(com.tools20022.repository.entity.InvestmentAccountService relatedinvestmentAccountService) {
+	public Reinvestment setRelatedinvestmentAccountService(InvestmentAccountService relatedinvestmentAccountService) {
 		this.relatedinvestmentAccountService = Objects.requireNonNull(relatedinvestmentAccountService);
 		return this;
 	}
@@ -298,7 +321,7 @@ public class Reinvestment {
 		return investmentFundClass;
 	}
 
-	public Reinvestment setInvestmentFundClass(com.tools20022.repository.entity.InvestmentFundClass investmentFundClass) {
+	public Reinvestment setInvestmentFundClass(InvestmentFundClass investmentFundClass) {
 		this.investmentFundClass = Objects.requireNonNull(investmentFundClass);
 		return this;
 	}

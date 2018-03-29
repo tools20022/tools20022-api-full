@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification14;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +122,7 @@ public class ReturnReasonInformation3 {
 	 * definition} = "Party issuing the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnReasonInformation3, PartyIdentification14> mmReturnOriginator = new MMMessageAssociationEnd<ReturnReasonInformation3, PartyIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation3.mmObject();
@@ -133,7 +134,17 @@ public class ReturnReasonInformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
+			type_lazy = () -> PartyIdentification14.mmObject();
+		}
+
+		@Override
+		public PartyIdentification14 getValue(ReturnReasonInformation3 obj) {
+			return obj.getReturnOriginator();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation3 obj, PartyIdentification14 value) {
+			obj.setReturnOriginator(value);
 		}
 	};
 	@XmlElement(name = "RtrRsn", required = true)
@@ -169,7 +180,7 @@ public class ReturnReasonInformation3 {
 	 * definition} = "Specifies the reason for the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnReasonInformation3, ReturnReason1Choice> mmReturnReason = new MMMessageAssociationEnd<ReturnReasonInformation3, ReturnReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation3.mmObject();
@@ -182,6 +193,16 @@ public class ReturnReasonInformation3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReturnReason1Choice.mmObject();
+		}
+
+		@Override
+		public ReturnReason1Choice getValue(ReturnReasonInformation3 obj) {
+			return obj.getReturnReason();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation3 obj, ReturnReason1Choice value) {
+			obj.setReturnReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRtrRsnInf")
@@ -213,7 +234,7 @@ public class ReturnReasonInformation3 {
 	 * definition} = "Further details on the return reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReturnReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnReasonInformation3, List<Max105Text>> mmAdditionalReturnReasonInformation = new MMMessageAttribute<ReturnReasonInformation3, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation3.mmObject();
 			isDerived = false;
@@ -223,6 +244,16 @@ public class ReturnReasonInformation3 {
 			definition = "Further details on the return reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(ReturnReasonInformation3 obj) {
+			return obj.getAdditionalReturnReasonInformation();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation3 obj, List<Max105Text> value) {
+			obj.setAdditionalReturnReasonInformation(value);
 		}
 	};
 
@@ -246,7 +277,7 @@ public class ReturnReasonInformation3 {
 		return returnOriginator;
 	}
 
-	public ReturnReasonInformation3 setReturnOriginator(com.tools20022.repository.msg.PartyIdentification14 returnOriginator) {
+	public ReturnReasonInformation3 setReturnOriginator(PartyIdentification14 returnOriginator) {
 		this.returnOriginator = Objects.requireNonNull(returnOriginator);
 		return this;
 	}

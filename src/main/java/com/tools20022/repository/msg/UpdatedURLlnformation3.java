@@ -105,7 +105,7 @@ public class UpdatedURLlnformation3 {
 	 * "Specifies the amendments made to the narrative since the last message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedURLlnformation3, Optional<RestrictedFINXMax140Text>> mmUpdateDescription = new MMMessageAttribute<UpdatedURLlnformation3, Optional<RestrictedFINXMax140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedURLlnformation3.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class UpdatedURLlnformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax140Text> getValue(UpdatedURLlnformation3 obj) {
+			return obj.getUpdateDescription();
+		}
+
+		@Override
+		public void setValue(UpdatedURLlnformation3 obj, Optional<RestrictedFINXMax140Text> value) {
+			obj.setUpdateDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdDt")
@@ -148,7 +158,7 @@ public class UpdatedURLlnformation3 {
 	 * "Specifies the date at which the narrative has been updated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedURLlnformation3, Optional<ISODate>> mmUpdateDate = new MMMessageAttribute<UpdatedURLlnformation3, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedURLlnformation3.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class UpdatedURLlnformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(UpdatedURLlnformation3 obj) {
+			return obj.getUpdateDate();
+		}
+
+		@Override
+		public void setValue(UpdatedURLlnformation3 obj, Optional<ISODate> value) {
+			obj.setUpdateDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "URLAdr", required = true)
@@ -196,7 +216,7 @@ public class UpdatedURLlnformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedURLlnformation3, RestrictedFINZMax256Text> mmURLAddress = new MMMessageAttribute<UpdatedURLlnformation3, RestrictedFINZMax256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedURLlnformation3.mmObject();
 			isDerived = false;
@@ -208,6 +228,16 @@ public class UpdatedURLlnformation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINZMax256Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINZMax256Text getValue(UpdatedURLlnformation3 obj) {
+			return obj.getURLAddress();
+		}
+
+		@Override
+		public void setValue(UpdatedURLlnformation3 obj, RestrictedFINZMax256Text value) {
+			obj.setURLAddress(value);
 		}
 	};
 

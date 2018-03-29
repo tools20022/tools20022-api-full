@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.DateCode2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DateCodeAndTimeFormat1;
 import java.util.Arrays;
@@ -107,7 +109,7 @@ public class DateFormat7Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat7Choice, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<DateFormat7Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat7Choice.mmObject();
 			isDerived = false;
@@ -118,7 +120,17 @@ public class DateFormat7Choice {
 			definition = "Date expressed as a calendar date.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat7Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat7Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCdAndTm", required = true)
@@ -149,7 +161,7 @@ public class DateFormat7Choice {
 	 * definition} = "Specifies a date code and a time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCodeAndTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat7Choice, DateCodeAndTimeFormat1> mmDateCodeAndTime = new MMMessageAssociationEnd<DateFormat7Choice, DateCodeAndTimeFormat1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat7Choice.mmObject();
 			isDerived = false;
@@ -161,6 +173,16 @@ public class DateFormat7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateCodeAndTimeFormat1.mmObject();
+		}
+
+		@Override
+		public DateCodeAndTimeFormat1 getValue(DateFormat7Choice obj) {
+			return obj.getDateCodeAndTime();
+		}
+
+		@Override
+		public void setValue(DateFormat7Choice obj, DateCodeAndTimeFormat1 value) {
+			obj.setDateCodeAndTime(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -194,7 +216,7 @@ public class DateFormat7Choice {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat7Choice, DateCode2Choice> mmDateCode = new MMMessageAssociationEnd<DateFormat7Choice, DateCode2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat7Choice.mmObject();
 			isDerived = false;
@@ -206,7 +228,17 @@ public class DateFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateCode2Choice.mmObject();
+			type_lazy = () -> DateCode2Choice.mmObject();
+		}
+
+		@Override
+		public DateCode2Choice getValue(DateFormat7Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat7Choice obj, DateCode2Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -228,7 +260,7 @@ public class DateFormat7Choice {
 		return date;
 	}
 
-	public DateFormat7Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat7Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -246,7 +278,7 @@ public class DateFormat7Choice {
 		return dateCode;
 	}
 
-	public DateFormat7Choice setDateCode(com.tools20022.repository.choice.DateCode2Choice dateCode) {
+	public DateFormat7Choice setDateCode(DateCode2Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

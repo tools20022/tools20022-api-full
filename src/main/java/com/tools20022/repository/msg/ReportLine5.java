@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.LineItem;
 import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Adjustment6;
+import com.tools20022.repository.msg.DocumentIdentification7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +122,7 @@ public class ReportLine5 {
 	 * ReportLine3.mmPurchaseOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine5, DocumentIdentification7> mmPurchaseOrderReference = new MMMessageAttribute<ReportLine5, DocumentIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine5.mmObject();
@@ -132,11 +134,21 @@ public class ReportLine5 {
 			previousVersion_lazy = () -> ReportLine3.mmPurchaseOrderReference;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
+			complexType_lazy = () -> DocumentIdentification7.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification7 getValue(ReportLine5 obj) {
+			return obj.getPurchaseOrderReference();
+		}
+
+		@Override
+		public void setValue(ReportLine5 obj, DocumentIdentification7 value) {
+			obj.setPurchaseOrderReference(value);
 		}
 	};
 	@XmlElement(name = "Adjstmnt")
-	protected List<com.tools20022.repository.msg.Adjustment6> adjustment;
+	protected List<Adjustment6> adjustment;
 	/**
 	 * 
 	 <p>
@@ -173,7 +185,7 @@ public class ReportLine5 {
 	 * ReportLine3.mmAdjustment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportLine5, List<Adjustment6>> mmAdjustment = new MMMessageAssociationEnd<ReportLine5, List<Adjustment6>>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmPriceAdjustment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine5.mmObject();
@@ -185,7 +197,17 @@ public class ReportLine5 {
 			previousVersion_lazy = () -> ReportLine3.mmAdjustment;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmObject();
+			type_lazy = () -> Adjustment6.mmObject();
+		}
+
+		@Override
+		public List<Adjustment6> getValue(ReportLine5 obj) {
+			return obj.getAdjustment();
+		}
+
+		@Override
+		public void setValue(ReportLine5 obj, List<Adjustment6> value) {
+			obj.setAdjustment(value);
 		}
 	};
 	@XmlElement(name = "NetAmt", required = true)
@@ -227,7 +249,7 @@ public class ReportLine5 {
 	 * ReportLine3.mmNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine5, CurrencyAndAmount> mmNetAmount = new MMMessageAttribute<ReportLine5, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmNetAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine5.mmObject();
@@ -240,6 +262,16 @@ public class ReportLine5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReportLine5 obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(ReportLine5 obj, CurrencyAndAmount value) {
+			obj.setNetAmount(value);
 		}
 	};
 
@@ -262,7 +294,7 @@ public class ReportLine5 {
 		return purchaseOrderReference;
 	}
 
-	public ReportLine5 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+	public ReportLine5 setPurchaseOrderReference(DocumentIdentification7 purchaseOrderReference) {
 		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
 		return this;
 	}
@@ -271,7 +303,7 @@ public class ReportLine5 {
 		return adjustment == null ? adjustment = new ArrayList<>() : adjustment;
 	}
 
-	public ReportLine5 setAdjustment(List<com.tools20022.repository.msg.Adjustment6> adjustment) {
+	public ReportLine5 setAdjustment(List<Adjustment6> adjustment) {
 		this.adjustment = Objects.requireNonNull(adjustment);
 		return this;
 	}

@@ -147,7 +147,7 @@ public class PendingStatusReason10 {
 	 * PendingStatusReason7.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatusReason10, PendingReason33Choice> mmReasonCode = new MMMessageAssociationEnd<PendingStatusReason10, PendingReason33Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusReason10.mmObject();
@@ -163,6 +163,16 @@ public class PendingStatusReason10 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingReason33Choice.mmObject();
+		}
+
+		@Override
+		public PendingReason33Choice getValue(PendingStatusReason10 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(PendingStatusReason10 obj, PendingReason33Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -216,7 +226,7 @@ public class PendingStatusReason10 {
 	 * PendingStatusReason7.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingStatusReason10, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<PendingStatusReason10, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusReason10.mmObject();
@@ -231,6 +241,16 @@ public class PendingStatusReason10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(PendingStatusReason10 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(PendingStatusReason10 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

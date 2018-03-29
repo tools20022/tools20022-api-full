@@ -102,7 +102,7 @@ public class CorporateActionRateSD4 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD4, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionRateSD4, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD4.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class CorporateActionRateSD4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionRateSD4 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD4 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "CSDSctyRate")
@@ -150,7 +160,7 @@ public class CorporateActionRateSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCSDSecurityRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionRateSD4, Optional<RatioFormat13Choice>> mmCSDSecurityRate = new MMMessageAttribute<CorporateActionRateSD4, Optional<RatioFormat13Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD4.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class CorporateActionRateSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RatioFormat13Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RatioFormat13Choice> getValue(CorporateActionRateSD4 obj) {
+			return obj.getCSDSecurityRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionRateSD4 obj, Optional<RatioFormat13Choice> value) {
+			obj.setCSDSecurityRate(value.orElse(null));
 		}
 	};
 

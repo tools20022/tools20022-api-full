@@ -26,11 +26,9 @@ import com.tools20022.repository.msg.Case3;
 import com.tools20022.repository.msg.CaseAssignment3;
 import com.tools20022.repository.msg.ProprietaryData4;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -81,9 +79,6 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion
  * ExceptionsandInvestigationsISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
- * ExceptionsandInvestigationsISOLatestversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017
@@ -164,7 +159,7 @@ public class ProprietaryFormatInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ProprietaryFormatInvestigationV03, CaseAssignment3> mmAssignment = new MMMessageBuildingBlock<ProprietaryFormatInvestigationV03, CaseAssignment3>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +171,14 @@ public class ProprietaryFormatInvestigationV03 {
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProprietaryFormatInvestigationV03.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment3 getValue(ProprietaryFormatInvestigationV03 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(ProprietaryFormatInvestigationV03 obj, CaseAssignment3 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -215,7 +212,7 @@ public class ProprietaryFormatInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ProprietaryFormatInvestigationV03, Case3> mmCase = new MMMessageBuildingBlock<ProprietaryFormatInvestigationV03, Case3>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +224,14 @@ public class ProprietaryFormatInvestigationV03 {
 			complexType_lazy = () -> Case3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProprietaryFormatInvestigationV03.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case3 getValue(ProprietaryFormatInvestigationV03 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(ProprietaryFormatInvestigationV03 obj, Case3 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "PrtryData", required = true)
@@ -268,7 +267,7 @@ public class ProprietaryFormatInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProprietaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ProprietaryFormatInvestigationV03, ProprietaryData4> mmProprietaryData = new MMMessageBuildingBlock<ProprietaryFormatInvestigationV03, ProprietaryData4>() {
 		{
 			xmlTag = "PrtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,12 +279,14 @@ public class ProprietaryFormatInvestigationV03 {
 			complexType_lazy = () -> ProprietaryData4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProprietaryFormatInvestigationV03.class.getMethod("getProprietaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ProprietaryData4 getValue(ProprietaryFormatInvestigationV03 obj) {
+			return obj.getProprietaryData();
+		}
+
+		@Override
+		public void setValue(ProprietaryFormatInvestigationV03 obj, ProprietaryData4 value) {
+			obj.setProprietaryData(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -323,7 +324,7 @@ public class ProprietaryFormatInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ProprietaryFormatInvestigationV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ProprietaryFormatInvestigationV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,12 +335,14 @@ public class ProprietaryFormatInvestigationV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProprietaryFormatInvestigationV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ProprietaryFormatInvestigationV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ProprietaryFormatInvestigationV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -351,8 +354,7 @@ public class ProprietaryFormatInvestigationV03 {
 				definition = "Scope\r\nThe Proprietary Format Investigation message type is used by financial institutions, with their own offices, and/or with other financial institutions with which they have established bilateral agreements.\r\nUsage\r\nThe user should ensure that an existing standard message cannot be used before using the proprietary message.\r\nAs defined in the scope, this ProprietaryFormatInvestigation message may only be used when bilaterally agreed.\r\nIt is used as an envelope for a non standard message and provides means to manage an exception or investigation which falls outside the scope or capability of any other formatted message.\r\nThe ProprietaryData element must contain a well formed XML document. This means XML special characters such as '<' must be used in a way that is consistent with XML well-formedness criteria.\r.";
 				nextVersions_lazy = () -> Arrays.asList(ProprietaryFormatInvestigationV04.mmObject());
 				previousVersion_lazy = () -> ProprietaryFormatInvestigationV02.mmObject();
-				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOPreviousversion.mmObject(), ExceptionsandInvestigationsISOLatestversion.mmObject(), ISOArchive.mmObject(),
-						ExceptionsandInvestigationsMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOPreviousversion.mmObject(), ISOArchive.mmObject(), ExceptionsandInvestigationsMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "PrtryFrmtInvstgtn";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();

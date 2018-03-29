@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.InvestorProfileStatus1Choice;
 import com.tools20022.repository.choice.ProfileType1Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.HighFrequencyTradingProfile1;
+import com.tools20022.repository.msg.MarketMakerProfile1;
+import com.tools20022.repository.msg.TreasuryProfile1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -101,7 +104,7 @@ public class InvestorProfile1 {
 	 * definition} = "Type of profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestorProfile1, Optional<ProfileType1Choice>> mmType = new MMMessageAssociationEnd<InvestorProfile1, Optional<ProfileType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestorProfile1.mmObject();
 			isDerived = false;
@@ -113,6 +116,16 @@ public class InvestorProfile1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProfileType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProfileType1Choice> getValue(InvestorProfile1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InvestorProfile1 obj, Optional<ProfileType1Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -144,7 +157,7 @@ public class InvestorProfile1 {
 	 * definition} = "Status of the profile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestorProfile1, Optional<InvestorProfileStatus1Choice>> mmStatus = new MMMessageAssociationEnd<InvestorProfile1, Optional<InvestorProfileStatus1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestorProfile1.mmObject();
 			isDerived = false;
@@ -156,6 +169,16 @@ public class InvestorProfile1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InvestorProfileStatus1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InvestorProfileStatus1Choice> getValue(InvestorProfile1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(InvestorProfile1 obj, Optional<InvestorProfileStatus1Choice> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trsr")
@@ -186,7 +209,7 @@ public class InvestorProfile1 {
 	 * definition} = "Information about the profile for treasury trading."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTreasury = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestorProfile1, Optional<TreasuryProfile1>> mmTreasury = new MMMessageAssociationEnd<InvestorProfile1, Optional<TreasuryProfile1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestorProfile1.mmObject();
 			isDerived = false;
@@ -197,7 +220,17 @@ public class InvestorProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TreasuryProfile1.mmObject();
+			type_lazy = () -> TreasuryProfile1.mmObject();
+		}
+
+		@Override
+		public Optional<TreasuryProfile1> getValue(InvestorProfile1 obj) {
+			return obj.getTreasury();
+		}
+
+		@Override
+		public void setValue(InvestorProfile1 obj, Optional<TreasuryProfile1> value) {
+			obj.setTreasury(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HghFrqcyTradg")
@@ -230,7 +263,7 @@ public class InvestorProfile1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHighFrequencyTrading = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestorProfile1, Optional<HighFrequencyTradingProfile1>> mmHighFrequencyTrading = new MMMessageAssociationEnd<InvestorProfile1, Optional<HighFrequencyTradingProfile1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestorProfile1.mmObject();
 			isDerived = false;
@@ -241,7 +274,17 @@ public class InvestorProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.HighFrequencyTradingProfile1.mmObject();
+			type_lazy = () -> HighFrequencyTradingProfile1.mmObject();
+		}
+
+		@Override
+		public Optional<HighFrequencyTradingProfile1> getValue(InvestorProfile1 obj) {
+			return obj.getHighFrequencyTrading();
+		}
+
+		@Override
+		public void setValue(InvestorProfile1 obj, Optional<HighFrequencyTradingProfile1> value) {
+			obj.setHighFrequencyTrading(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktMakr")
@@ -272,7 +315,7 @@ public class InvestorProfile1 {
 	 * definition} = "Information about the profile for a market marker."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketMaker = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestorProfile1, Optional<MarketMakerProfile1>> mmMarketMaker = new MMMessageAssociationEnd<InvestorProfile1, Optional<MarketMakerProfile1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestorProfile1.mmObject();
 			isDerived = false;
@@ -283,7 +326,17 @@ public class InvestorProfile1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarketMakerProfile1.mmObject();
+			type_lazy = () -> MarketMakerProfile1.mmObject();
+		}
+
+		@Override
+		public Optional<MarketMakerProfile1> getValue(InvestorProfile1 obj) {
+			return obj.getMarketMaker();
+		}
+
+		@Override
+		public void setValue(InvestorProfile1 obj, Optional<MarketMakerProfile1> value) {
+			obj.setMarketMaker(value.orElse(null));
 		}
 	};
 
@@ -323,7 +376,7 @@ public class InvestorProfile1 {
 		return treasury == null ? Optional.empty() : Optional.of(treasury);
 	}
 
-	public InvestorProfile1 setTreasury(com.tools20022.repository.msg.TreasuryProfile1 treasury) {
+	public InvestorProfile1 setTreasury(TreasuryProfile1 treasury) {
 		this.treasury = treasury;
 		return this;
 	}
@@ -332,7 +385,7 @@ public class InvestorProfile1 {
 		return highFrequencyTrading == null ? Optional.empty() : Optional.of(highFrequencyTrading);
 	}
 
-	public InvestorProfile1 setHighFrequencyTrading(com.tools20022.repository.msg.HighFrequencyTradingProfile1 highFrequencyTrading) {
+	public InvestorProfile1 setHighFrequencyTrading(HighFrequencyTradingProfile1 highFrequencyTrading) {
 		this.highFrequencyTrading = highFrequencyTrading;
 		return this;
 	}
@@ -341,7 +394,7 @@ public class InvestorProfile1 {
 		return marketMaker == null ? Optional.empty() : Optional.of(marketMaker);
 	}
 
-	public InvestorProfile1 setMarketMaker(com.tools20022.repository.msg.MarketMakerProfile1 marketMaker) {
+	public InvestorProfile1 setMarketMaker(MarketMakerProfile1 marketMaker) {
 		this.marketMaker = marketMaker;
 		return this;
 	}

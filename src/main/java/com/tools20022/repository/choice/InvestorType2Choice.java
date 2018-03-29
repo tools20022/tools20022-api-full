@@ -122,7 +122,7 @@ public class InvestorType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestorType2Choice, InvestorType1Code> mmCode = new MMMessageAttribute<InvestorType2Choice, InvestorType1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestorRole.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestorType2Choice.mmObject();
@@ -135,6 +135,16 @@ public class InvestorType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestorType1Code.mmObject();
+		}
+
+		@Override
+		public InvestorType1Code getValue(InvestorType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InvestorType2Choice obj, InvestorType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class InvestorType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestorType2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<InvestorType2Choice, GenericIdentification40>() {
 		{
 			businessElementTrace_lazy = () -> InvestorRole.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestorType2Choice.mmObject();
@@ -193,6 +203,16 @@ public class InvestorType2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(InvestorType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InvestorType2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

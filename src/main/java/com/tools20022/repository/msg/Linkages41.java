@@ -133,7 +133,7 @@ public class Linkages41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages41, Optional<ProcessingPosition9Choice>> mmProcessingPosition = new MMMessageAssociationEnd<Linkages41, Optional<ProcessingPosition9Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages41.mmObject();
 			isDerived = false;
@@ -146,6 +146,16 @@ public class Linkages41 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition9Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition9Choice> getValue(Linkages41 obj) {
+			return obj.getProcessingPosition();
+		}
+
+		@Override
+		public void setValue(Linkages41 obj, Optional<ProcessingPosition9Choice> value) {
+			obj.setProcessingPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesSttlmTxId", required = true)
@@ -186,7 +196,7 @@ public class Linkages41 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesSettlementTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Linkages41, Max35Text> mmSecuritiesSettlementTransactionIdentification = new MMMessageAttribute<Linkages41, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages41.mmObject();
 			isDerived = false;
@@ -198,6 +208,16 @@ public class Linkages41 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Linkages41 obj) {
+			return obj.getSecuritiesSettlementTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Linkages41 obj, Max35Text value) {
+			obj.setSecuritiesSettlementTransactionIdentification(value);
 		}
 	};
 

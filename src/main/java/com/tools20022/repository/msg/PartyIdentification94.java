@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Party1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -101,7 +102,7 @@ public class PartyIdentification94 {
 	 * definition} = "Unique and unambiguous identification of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification94, Optional<Party1>> mmIdentification = new MMMessageAssociationEnd<PartyIdentification94, Optional<Party1>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification94.mmObject();
@@ -113,7 +114,17 @@ public class PartyIdentification94 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Party1.mmObject();
+			type_lazy = () -> Party1.mmObject();
+		}
+
+		@Override
+		public Optional<Party1> getValue(PartyIdentification94 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification94 obj, Optional<Party1> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 
@@ -135,7 +146,7 @@ public class PartyIdentification94 {
 		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public PartyIdentification94 setIdentification(com.tools20022.repository.msg.Party1 identification) {
+	public PartyIdentification94 setIdentification(Party1 identification) {
 		this.identification = identification;
 		return this;
 	}

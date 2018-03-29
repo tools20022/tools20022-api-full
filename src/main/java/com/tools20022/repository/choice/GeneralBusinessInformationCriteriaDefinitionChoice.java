@@ -123,7 +123,7 @@ public class GeneralBusinessInformationCriteriaDefinitionChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessInformationCriteriaDefinitionChoice, Max35Text> mmQueryName = new MMMessageAttribute<GeneralBusinessInformationCriteriaDefinitionChoice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessInformationCriteriaDefinitionChoice.mmObject();
 			isDerived = false;
@@ -135,6 +135,16 @@ public class GeneralBusinessInformationCriteriaDefinitionChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GeneralBusinessInformationCriteriaDefinitionChoice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationCriteriaDefinitionChoice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -175,7 +185,7 @@ public class GeneralBusinessInformationCriteriaDefinitionChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessInformationCriteriaDefinitionChoice, BusinessInformationCriteria> mmNewCriteria = new MMMessageAssociationEnd<GeneralBusinessInformationCriteriaDefinitionChoice, BusinessInformationCriteria>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessInformationCriteriaDefinitionChoice.mmObject();
 			isDerived = false;
@@ -188,6 +198,16 @@ public class GeneralBusinessInformationCriteriaDefinitionChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessInformationCriteria.mmObject();
+		}
+
+		@Override
+		public BusinessInformationCriteria getValue(GeneralBusinessInformationCriteriaDefinitionChoice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessInformationCriteriaDefinitionChoice obj, BusinessInformationCriteria value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

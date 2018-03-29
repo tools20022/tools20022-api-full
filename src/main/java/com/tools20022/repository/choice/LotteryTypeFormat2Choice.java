@@ -110,7 +110,7 @@ public class LotteryTypeFormat2Choice {
 	 * definition} = "Standard code to specify the type of lottery announced."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LotteryTypeFormat2Choice, LotteryType1Code> mmCode = new MMMessageAttribute<LotteryTypeFormat2Choice, LotteryType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LotteryTypeFormat2Choice.mmObject();
@@ -122,6 +122,16 @@ public class LotteryTypeFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LotteryType1Code.mmObject();
+		}
+
+		@Override
+		public LotteryType1Code getValue(LotteryTypeFormat2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LotteryTypeFormat2Choice obj, LotteryType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class LotteryTypeFormat2Choice {
 	 * "Proprietary identification of the type of lottery announced."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LotteryTypeFormat2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<LotteryTypeFormat2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LotteryTypeFormat2Choice.mmObject();
@@ -172,6 +182,16 @@ public class LotteryTypeFormat2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(LotteryTypeFormat2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LotteryTypeFormat2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

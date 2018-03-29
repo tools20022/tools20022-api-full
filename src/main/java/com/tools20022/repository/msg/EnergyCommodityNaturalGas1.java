@@ -116,7 +116,7 @@ public class EnergyCommodityNaturalGas1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyCommodityNaturalGas1, AssetClassProductType2Code> mmBaseProduct = new MMMessageAttribute<EnergyCommodityNaturalGas1, AssetClassProductType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityNaturalGas1.mmObject();
@@ -128,6 +128,16 @@ public class EnergyCommodityNaturalGas1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType2Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType2Code getValue(EnergyCommodityNaturalGas1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(EnergyCommodityNaturalGas1 obj, AssetClassProductType2Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -165,7 +175,7 @@ public class EnergyCommodityNaturalGas1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyCommodityNaturalGas1, AssetClassSubProductType7Code> mmSubProduct = new MMMessageAttribute<EnergyCommodityNaturalGas1, AssetClassSubProductType7Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityNaturalGas1.mmObject();
@@ -177,6 +187,16 @@ public class EnergyCommodityNaturalGas1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType7Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType7Code getValue(EnergyCommodityNaturalGas1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(EnergyCommodityNaturalGas1 obj, AssetClassSubProductType7Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 	@XmlElement(name = "AddtlSubPdct")
@@ -211,7 +231,7 @@ public class EnergyCommodityNaturalGas1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnergyCommodityNaturalGas1, Optional<AssetClassDetailedSubProductType6Code>> mmAdditionalSubProduct = new MMMessageAttribute<EnergyCommodityNaturalGas1, Optional<AssetClassDetailedSubProductType6Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityNaturalGas1.mmObject();
 			isDerived = false;
@@ -222,6 +242,16 @@ public class EnergyCommodityNaturalGas1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassDetailedSubProductType6Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClassDetailedSubProductType6Code> getValue(EnergyCommodityNaturalGas1 obj) {
+			return obj.getAdditionalSubProduct();
+		}
+
+		@Override
+		public void setValue(EnergyCommodityNaturalGas1 obj, Optional<AssetClassDetailedSubProductType6Code> value) {
+			obj.setAdditionalSubProduct(value.orElse(null));
 		}
 	};
 

@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AggregateBalanceInformation21;
+import com.tools20022.repository.msg.SecuritiesAccount14;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -166,7 +168,7 @@ public class SubAccountIdentification28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubAccountIdentification28, Optional<PartyIdentification36Choice>> mmAccountOwner = new MMMessageAssociationEnd<SubAccountIdentification28, Optional<PartyIdentification36Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification28.mmObject();
@@ -181,6 +183,16 @@ public class SubAccountIdentification28 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification36Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification36Choice> getValue(SubAccountIdentification28 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification28 obj, Optional<PartyIdentification36Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -227,7 +239,7 @@ public class SubAccountIdentification28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubAccountIdentification28, SecuritiesAccount14> mmSafekeepingAccount = new MMMessageAssociationEnd<SubAccountIdentification28, SecuritiesAccount14>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification28.mmObject();
@@ -241,7 +253,17 @@ public class SubAccountIdentification28 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount14.mmObject();
+			type_lazy = () -> SecuritiesAccount14.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount14 getValue(SubAccountIdentification28 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification28 obj, SecuritiesAccount14 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -287,7 +309,7 @@ public class SubAccountIdentification28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccountIdentification28, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<SubAccountIdentification28, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification28.mmObject();
 			isDerived = false;
@@ -301,9 +323,19 @@ public class SubAccountIdentification28 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(SubAccountIdentification28 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification28 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
+		}
 	};
 	@XmlElement(name = "BalForSubAcct")
-	protected List<com.tools20022.repository.msg.AggregateBalanceInformation21> balanceForSubAccount;
+	protected List<AggregateBalanceInformation21> balanceForSubAccount;
 	/**
 	 * 
 	 <p>
@@ -349,7 +381,7 @@ public class SubAccountIdentification28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceForSubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubAccountIdentification28, List<AggregateBalanceInformation21>> mmBalanceForSubAccount = new MMMessageAssociationEnd<SubAccountIdentification28, List<AggregateBalanceInformation21>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification28.mmObject();
@@ -362,7 +394,17 @@ public class SubAccountIdentification28 {
 			nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification37.mmBalanceForSubAccount);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation21.mmObject();
+			type_lazy = () -> AggregateBalanceInformation21.mmObject();
+		}
+
+		@Override
+		public List<AggregateBalanceInformation21> getValue(SubAccountIdentification28 obj) {
+			return obj.getBalanceForSubAccount();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification28 obj, List<AggregateBalanceInformation21> value) {
+			obj.setBalanceForSubAccount(value);
 		}
 	};
 
@@ -400,7 +442,7 @@ public class SubAccountIdentification28 {
 		return safekeepingAccount;
 	}
 
-	public SubAccountIdentification28 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount14 safekeepingAccount) {
+	public SubAccountIdentification28 setSafekeepingAccount(SecuritiesAccount14 safekeepingAccount) {
 		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
 		return this;
 	}
@@ -418,7 +460,7 @@ public class SubAccountIdentification28 {
 		return balanceForSubAccount == null ? balanceForSubAccount = new ArrayList<>() : balanceForSubAccount;
 	}
 
-	public SubAccountIdentification28 setBalanceForSubAccount(List<com.tools20022.repository.msg.AggregateBalanceInformation21> balanceForSubAccount) {
+	public SubAccountIdentification28 setBalanceForSubAccount(List<AggregateBalanceInformation21> balanceForSubAccount) {
 		this.balanceForSubAccount = Objects.requireNonNull(balanceForSubAccount);
 		return this;
 	}

@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -154,7 +153,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmReportIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, MessageIdentification1> mmReportIdentification = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, MessageIdentification1>() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,12 +165,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, MessageIdentification1 value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdTxRefs", required = true)
@@ -206,7 +207,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmRelatedTransactionReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedTransactionReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, List<DataSetSubmissionReferences4>> mmRelatedTransactionReferences = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, List<DataSetSubmissionReferences4>>() {
 		{
 			xmlTag = "RltdTxRefs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,12 +218,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> DataSetSubmissionReferences4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getRelatedTransactionReferences", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DataSetSubmissionReferences4> getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getRelatedTransactionReferences();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, List<DataSetSubmissionReferences4> value) {
+			obj.setRelatedTransactionReferences(value);
 		}
 	};
 	@XmlElement(name = "CmonSubmissnRef", required = true)
@@ -257,7 +260,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmCommonSubmissionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCommonSubmissionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, SimpleIdentificationInformation> mmCommonSubmissionReference = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "CmonSubmissnRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +272,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getCommonSubmissionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getCommonSubmissionReference();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, SimpleIdentificationInformation value) {
+			obj.setCommonSubmissionReference(value);
 		}
 	};
 	@XmlElement(name = "Submitr", required = true)
@@ -309,7 +314,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmSubmitter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubmitter = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, BICIdentification1> mmSubmitter = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, BICIdentification1>() {
 		{
 			xmlTag = "Submitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +326,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getSubmitter", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getSubmitter();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, BICIdentification1 value) {
+			obj.setSubmitter(value);
 		}
 	};
 	@XmlElement(name = "BuyrBk", required = true)
@@ -361,7 +368,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmBuyerBank}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, BICIdentification1> mmBuyerBank = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, BICIdentification1>() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -373,12 +380,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getBuyerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getBuyerBank();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, BICIdentification1 value) {
+			obj.setBuyerBank(value);
 		}
 	};
 	@XmlElement(name = "SellrBk", required = true)
@@ -413,7 +422,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmSellerBank}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, BICIdentification1> mmSellerBank = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, BICIdentification1>() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -425,12 +434,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getSellerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getSellerBank();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, BICIdentification1 value) {
+			obj.setSellerBank(value);
 		}
 	};
 	@XmlElement(name = "ComrclDataSet")
@@ -465,7 +476,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmCommercialDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCommercialDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, Optional<CommercialDataSet5>> mmCommercialDataSet = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, Optional<CommercialDataSet5>>() {
 		{
 			xmlTag = "ComrclDataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -477,12 +488,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> CommercialDataSet5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getCommercialDataSet", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CommercialDataSet5> getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getCommercialDataSet();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, Optional<CommercialDataSet5> value) {
+			obj.setCommercialDataSet(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrnsprtDataSet")
@@ -517,7 +530,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmTransportDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransportDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, Optional<TransportDataSet5>> mmTransportDataSet = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, Optional<TransportDataSet5>>() {
 		{
 			xmlTag = "TrnsprtDataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -529,12 +542,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> TransportDataSet5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getTransportDataSet", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransportDataSet5> getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getTransportDataSet();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, Optional<TransportDataSet5> value) {
+			obj.setTransportDataSet(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InsrncDataSet")
@@ -569,7 +584,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmInsuranceDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInsuranceDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, Optional<InsuranceDataSet1>> mmInsuranceDataSet = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, Optional<InsuranceDataSet1>>() {
 		{
 			xmlTag = "InsrncDataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -581,12 +596,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> InsuranceDataSet1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getInsuranceDataSet", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<InsuranceDataSet1> getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getInsuranceDataSet();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, Optional<InsuranceDataSet1> value) {
+			obj.setInsuranceDataSet(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertDataSet")
@@ -621,7 +638,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmCertificateDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCertificateDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, List<CertificateDataSet2>> mmCertificateDataSet = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, List<CertificateDataSet2>>() {
 		{
 			xmlTag = "CertDataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -632,12 +649,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> CertificateDataSet2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getCertificateDataSet", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CertificateDataSet2> getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getCertificateDataSet();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, List<CertificateDataSet2> value) {
+			obj.setCertificateDataSet(value);
 		}
 	};
 	@XmlElement(name = "OthrCertDataSet")
@@ -672,7 +691,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmOtherCertificateDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherCertificateDataSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, List<OtherCertificateDataSet2>> mmOtherCertificateDataSet = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, List<OtherCertificateDataSet2>>() {
 		{
 			xmlTag = "OthrCertDataSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -683,12 +702,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> OtherCertificateDataSet2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getOtherCertificateDataSet", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<OtherCertificateDataSet2> getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getOtherCertificateDataSet();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, List<OtherCertificateDataSet2> value) {
+			obj.setOtherCertificateDataSet(value);
 		}
 	};
 	@XmlElement(name = "ReqForActn")
@@ -721,7 +742,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * ForwardDataSetSubmissionReportV04.mmRequestForAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<ForwardDataSetSubmissionReportV05, Optional<PendingActivity2>>() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -733,12 +754,14 @@ public class ForwardDataSetSubmissionReportV05 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForwardDataSetSubmissionReportV05.class.getMethod("getRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PendingActivity2> getValue(ForwardDataSetSubmissionReportV05 obj) {
+			return obj.getRequestForAction();
+		}
+
+		@Override
+		public void setValue(ForwardDataSetSubmissionReportV05 obj, Optional<PendingActivity2> value) {
+			obj.setRequestForAction(value.orElse(null));
 		}
 	};
 

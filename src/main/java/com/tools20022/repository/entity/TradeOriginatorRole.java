@@ -28,7 +28,6 @@ import com.tools20022.repository.codeset.OriginatorRoleCode;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -305,7 +304,7 @@ public class TradeOriginatorRole extends TradePartyRole {
 	 * "Specifies the role of the trading party in the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOriginatorRole = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TradeOriginatorRole, OriginatorRoleCode> mmOriginatorRole = new MMBusinessAttribute<TradeOriginatorRole, OriginatorRoleCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeOriginator1Choice.mmCode, TradeOriginator1Choice.mmProprietary, TradeOriginator2Choice.mmCode, TradeOriginator2Choice.mmProprietary, TradeOriginator3Choice.mmCode,
 					TradeOriginator3Choice.mmProprietary, TradeOriginator4Choice.mmCode, TradeOriginator4Choice.mmProprietary);
@@ -319,12 +318,14 @@ public class TradeOriginatorRole extends TradePartyRole {
 			simpleType_lazy = () -> OriginatorRoleCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeOriginatorRole.class.getMethod("getOriginatorRole", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginatorRoleCode getValue(TradeOriginatorRole obj) {
+			return obj.getOriginatorRole();
+		}
+
+		@Override
+		public void setValue(TradeOriginatorRole obj, OriginatorRoleCode value) {
+			obj.setOriginatorRole(value);
 		}
 	};
 

@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.CaseForwardingNotification;
 import com.tools20022.repository.msg.ReportHeader;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -143,7 +142,7 @@ public class NotificationOfCaseAssignment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationOfCaseAssignment, ReportHeader> mmHeader = new MMMessageBuildingBlock<NotificationOfCaseAssignment, ReportHeader>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class NotificationOfCaseAssignment {
 			complexType_lazy = () -> ReportHeader.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationOfCaseAssignment.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportHeader getValue(NotificationOfCaseAssignment obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(NotificationOfCaseAssignment obj, ReportHeader value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -185,7 +186,7 @@ public class NotificationOfCaseAssignment {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationOfCaseAssignment, Case> mmCase = new MMMessageBuildingBlock<NotificationOfCaseAssignment, Case>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,12 +197,14 @@ public class NotificationOfCaseAssignment {
 			complexType_lazy = () -> Case.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationOfCaseAssignment.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case getValue(NotificationOfCaseAssignment obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(NotificationOfCaseAssignment obj, Case value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Assgnmt", required = true)
@@ -230,7 +233,7 @@ public class NotificationOfCaseAssignment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationOfCaseAssignment, CaseAssignment> mmAssignment = new MMMessageBuildingBlock<NotificationOfCaseAssignment, CaseAssignment>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,12 +244,14 @@ public class NotificationOfCaseAssignment {
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationOfCaseAssignment.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment getValue(NotificationOfCaseAssignment obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(NotificationOfCaseAssignment obj, CaseAssignment value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Ntfctn", required = true)
@@ -274,7 +279,7 @@ public class NotificationOfCaseAssignment {
 	 * definition} = "Information about the type of action taken."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationOfCaseAssignment, CaseForwardingNotification> mmNotification = new MMMessageBuildingBlock<NotificationOfCaseAssignment, CaseForwardingNotification>() {
 		{
 			xmlTag = "Ntfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,12 +290,14 @@ public class NotificationOfCaseAssignment {
 			complexType_lazy = () -> CaseForwardingNotification.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationOfCaseAssignment.class.getMethod("getNotification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseForwardingNotification getValue(NotificationOfCaseAssignment obj) {
+			return obj.getNotification();
+		}
+
+		@Override
+		public void setValue(NotificationOfCaseAssignment obj, CaseForwardingNotification value) {
+			obj.setNotification(value);
 		}
 	};
 

@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -157,7 +156,7 @@ public class AgentCAElectionAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAElectionAdviceV01, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<AgentCAElectionAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,12 +167,14 @@ public class AgentCAElectionAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAElectionAdviceV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCAElectionAdviceV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCAElectionAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ElctnAdvcTpAndLkg", required = true)
@@ -203,7 +204,7 @@ public class AgentCAElectionAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmElectionAdviceTypeAndLinkage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAElectionAdviceV01, ElectionAdviceFunction1> mmElectionAdviceTypeAndLinkage = new MMMessageBuildingBlock<AgentCAElectionAdviceV01, ElectionAdviceFunction1>() {
 		{
 			xmlTag = "ElctnAdvcTpAndLkg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,12 +215,14 @@ public class AgentCAElectionAdviceV01 {
 			complexType_lazy = () -> ElectionAdviceFunction1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAElectionAdviceV01.class.getMethod("getElectionAdviceTypeAndLinkage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ElectionAdviceFunction1 getValue(AgentCAElectionAdviceV01 obj) {
+			return obj.getElectionAdviceTypeAndLinkage();
+		}
+
+		@Override
+		public void setValue(AgentCAElectionAdviceV01 obj, ElectionAdviceFunction1 value) {
+			obj.setElectionAdviceTypeAndLinkage(value);
 		}
 	};
 	@XmlElement(name = "CorpActnGnlInf", required = true)
@@ -247,7 +250,7 @@ public class AgentCAElectionAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAElectionAdviceV01, CorporateActionInformation1> mmCorporateActionGeneralInformation = new MMMessageBuildingBlock<AgentCAElectionAdviceV01, CorporateActionInformation1>() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,12 +261,14 @@ public class AgentCAElectionAdviceV01 {
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAElectionAdviceV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInformation1 getValue(AgentCAElectionAdviceV01 obj) {
+			return obj.getCorporateActionGeneralInformation();
+		}
+
+		@Override
+		public void setValue(AgentCAElectionAdviceV01 obj, CorporateActionInformation1 value) {
+			obj.setCorporateActionGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "ElctnDtls", required = true)
@@ -291,7 +296,7 @@ public class AgentCAElectionAdviceV01 {
 	 * definition} = "Provides information about the election(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmElectionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAElectionAdviceV01, CorporateActionElection3> mmElectionDetails = new MMMessageBuildingBlock<AgentCAElectionAdviceV01, CorporateActionElection3>() {
 		{
 			xmlTag = "ElctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,12 +307,14 @@ public class AgentCAElectionAdviceV01 {
 			complexType_lazy = () -> CorporateActionElection3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAElectionAdviceV01.class.getMethod("getElectionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionElection3 getValue(AgentCAElectionAdviceV01 obj) {
+			return obj.getElectionDetails();
+		}
+
+		@Override
+		public void setValue(AgentCAElectionAdviceV01 obj, CorporateActionElection3 value) {
+			obj.setElectionDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -337,7 +344,7 @@ public class AgentCAElectionAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAElectionAdviceV01, Optional<CorporateActionAdditionalInformation1>> mmAdditionalInformation = new MMMessageBuildingBlock<AgentCAElectionAdviceV01, Optional<CorporateActionAdditionalInformation1>>() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -348,12 +355,14 @@ public class AgentCAElectionAdviceV01 {
 			complexType_lazy = () -> CorporateActionAdditionalInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAElectionAdviceV01.class.getMethod("getAdditionalInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CorporateActionAdditionalInformation1> getValue(AgentCAElectionAdviceV01 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AgentCAElectionAdviceV01 obj, Optional<CorporateActionAdditionalInformation1> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctDtls")
@@ -381,7 +390,7 @@ public class AgentCAElectionAdviceV01 {
 	 * "Contact responsible for the transaction identified in the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmContactDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCAElectionAdviceV01, Optional<ContactPerson1>> mmContactDetails = new MMMessageBuildingBlock<AgentCAElectionAdviceV01, Optional<ContactPerson1>>() {
 		{
 			xmlTag = "CtctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,12 +401,14 @@ public class AgentCAElectionAdviceV01 {
 			complexType_lazy = () -> ContactPerson1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCAElectionAdviceV01.class.getMethod("getContactDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContactPerson1> getValue(AgentCAElectionAdviceV01 obj) {
+			return obj.getContactDetails();
+		}
+
+		@Override
+		public void setValue(AgentCAElectionAdviceV01 obj, Optional<ContactPerson1> value) {
+			obj.setContactDetails(value.orElse(null));
 		}
 	};
 

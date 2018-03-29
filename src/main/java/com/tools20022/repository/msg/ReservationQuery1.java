@@ -115,7 +115,7 @@ public class ReservationQuery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationQuery1, Optional<QueryType2Code>> mmQueryType = new MMMessageAttribute<ReservationQuery1, Optional<QueryType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationQuery1.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class ReservationQuery1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<QueryType2Code> getValue(ReservationQuery1 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(ReservationQuery1 obj, Optional<QueryType2Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsvatnCrit")
@@ -166,7 +176,7 @@ public class ReservationQuery1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReservationCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationQuery1, Optional<ReservationCriteria1Choice>> mmReservationCriteria = new MMMessageAssociationEnd<ReservationQuery1, Optional<ReservationCriteria1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationQuery1.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class ReservationQuery1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReservationCriteria1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReservationCriteria1Choice> getValue(ReservationQuery1 obj) {
+			return obj.getReservationCriteria();
+		}
+
+		@Override
+		public void setValue(ReservationQuery1 obj, Optional<ReservationCriteria1Choice> value) {
+			obj.setReservationCriteria(value.orElse(null));
 		}
 	};
 

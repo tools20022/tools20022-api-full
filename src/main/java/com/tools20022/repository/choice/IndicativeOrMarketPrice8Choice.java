@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PriceFormat50Choice;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -113,7 +114,7 @@ public class IndicativeOrMarketPrice8Choice {
 	 * IndicativeOrMarketPrice2Choice.mmIndicativePrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicativePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicativeOrMarketPrice8Choice, PriceFormat50Choice> mmIndicativePrice = new MMMessageAttribute<IndicativeOrMarketPrice8Choice, PriceFormat50Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IndicativeOrMarketPrice8Choice.mmObject();
 			isDerived = false;
@@ -125,7 +126,17 @@ public class IndicativeOrMarketPrice8Choice {
 			previousVersion_lazy = () -> IndicativeOrMarketPrice2Choice.mmIndicativePrice;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.PriceFormat50Choice.mmObject();
+			complexType_lazy = () -> PriceFormat50Choice.mmObject();
+		}
+
+		@Override
+		public PriceFormat50Choice getValue(IndicativeOrMarketPrice8Choice obj) {
+			return obj.getIndicativePrice();
+		}
+
+		@Override
+		public void setValue(IndicativeOrMarketPrice8Choice obj, PriceFormat50Choice value) {
+			obj.setIndicativePrice(value);
 		}
 	};
 	@XmlElement(name = "MktPric", required = true)
@@ -167,7 +178,7 @@ public class IndicativeOrMarketPrice8Choice {
 	 * IndicativeOrMarketPrice2Choice.mmMarketPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndicativeOrMarketPrice8Choice, PriceFormat50Choice> mmMarketPrice = new MMMessageAttribute<IndicativeOrMarketPrice8Choice, PriceFormat50Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IndicativeOrMarketPrice8Choice.mmObject();
 			isDerived = false;
@@ -179,7 +190,17 @@ public class IndicativeOrMarketPrice8Choice {
 			previousVersion_lazy = () -> IndicativeOrMarketPrice2Choice.mmMarketPrice;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.PriceFormat50Choice.mmObject();
+			complexType_lazy = () -> PriceFormat50Choice.mmObject();
+		}
+
+		@Override
+		public PriceFormat50Choice getValue(IndicativeOrMarketPrice8Choice obj) {
+			return obj.getMarketPrice();
+		}
+
+		@Override
+		public void setValue(IndicativeOrMarketPrice8Choice obj, PriceFormat50Choice value) {
+			obj.setMarketPrice(value);
 		}
 	};
 
@@ -202,7 +223,7 @@ public class IndicativeOrMarketPrice8Choice {
 		return indicativePrice;
 	}
 
-	public IndicativeOrMarketPrice8Choice setIndicativePrice(com.tools20022.repository.choice.PriceFormat50Choice indicativePrice) {
+	public IndicativeOrMarketPrice8Choice setIndicativePrice(PriceFormat50Choice indicativePrice) {
 		this.indicativePrice = Objects.requireNonNull(indicativePrice);
 		return this;
 	}
@@ -211,7 +232,7 @@ public class IndicativeOrMarketPrice8Choice {
 		return marketPrice;
 	}
 
-	public IndicativeOrMarketPrice8Choice setMarketPrice(com.tools20022.repository.choice.PriceFormat50Choice marketPrice) {
+	public IndicativeOrMarketPrice8Choice setMarketPrice(PriceFormat50Choice marketPrice) {
 		this.marketPrice = Objects.requireNonNull(marketPrice);
 		return this;
 	}

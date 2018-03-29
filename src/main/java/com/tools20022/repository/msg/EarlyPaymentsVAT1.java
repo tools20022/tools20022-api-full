@@ -106,7 +106,7 @@ public class EarlyPaymentsVAT1 {
 	 * definition} = "Tax rate to be applied for early payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EarlyPaymentsVAT1, PercentageRate> mmTaxRate = new MMMessageAttribute<EarlyPaymentsVAT1, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class EarlyPaymentsVAT1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(EarlyPaymentsVAT1 obj) {
+			return obj.getTaxRate();
+		}
+
+		@Override
+		public void setValue(EarlyPaymentsVAT1 obj, PercentageRate value) {
+			obj.setTaxRate(value);
 		}
 	};
 	@XmlElement(name = "DscntTaxTp", required = true)
@@ -157,7 +167,7 @@ public class EarlyPaymentsVAT1 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDiscountTaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EarlyPaymentsVAT1, Max4Text> mmDiscountTaxType = new MMMessageAttribute<EarlyPaymentsVAT1, Max4Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class EarlyPaymentsVAT1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Max4Text getValue(EarlyPaymentsVAT1 obj) {
+			return obj.getDiscountTaxType();
+		}
+
+		@Override
+		public void setValue(EarlyPaymentsVAT1 obj, Max4Text value) {
+			obj.setDiscountTaxType(value);
 		}
 	};
 	@XmlElement(name = "DscntTaxAmt", required = true)
@@ -202,7 +222,7 @@ public class EarlyPaymentsVAT1 {
 	 * "Early payment discount tax amount calculated using defined tax rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDiscountTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EarlyPaymentsVAT1, CurrencyAndAmount> mmDiscountTaxAmount = new MMMessageAttribute<EarlyPaymentsVAT1, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EarlyPaymentsVAT1.mmObject();
 			isDerived = false;
@@ -213,6 +233,16 @@ public class EarlyPaymentsVAT1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(EarlyPaymentsVAT1 obj) {
+			return obj.getDiscountTaxAmount();
+		}
+
+		@Override
+		public void setValue(EarlyPaymentsVAT1 obj, CurrencyAndAmount value) {
+			obj.setDiscountTaxAmount(value);
 		}
 	};
 

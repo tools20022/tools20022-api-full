@@ -52,11 +52,15 @@ public class ConstraintDetailedReportParameterRule {
 	 */
 	public static final MMConstraint<FundCashForecastParameters2> forFundCashForecastParameters2 = new MMConstraint<FundCashForecastParameters2>() {
 		{
-			validator = ConstraintDetailedReportParameterRule::checkFundCashForecastParameters2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DetailedReportParameterRule";
 			definition = "If CashForecastType contains CF01 or CF03, then DetailedReportParameter is not allowed. If CashForecastType contains CF02 or CF04, then DetailedReportParameter may be present.";
 			owner_lazy = () -> FundCashForecastParameters2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundCashForecastParameters2 obj) throws Exception {
+			checkFundCashForecastParameters2(obj);
 		}
 	};
 

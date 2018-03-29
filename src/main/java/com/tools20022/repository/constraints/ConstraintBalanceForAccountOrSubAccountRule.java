@@ -60,12 +60,16 @@ public class ConstraintBalanceForAccountOrSubAccountRule {
 	 */
 	public static final MMConstraint<Balance3> forBalance3 = new MMConstraint<Balance3>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountRule::checkBalance3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountRule";
 			definition = "BalanceForAccount must be present or SubAccountDetails must be present, both may be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountRule.forBalance14);
 			owner_lazy = () -> Balance3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Balance3 obj) throws Exception {
+			checkBalance3(obj);
 		}
 	};
 	/**
@@ -95,12 +99,16 @@ public class ConstraintBalanceForAccountOrSubAccountRule {
 	 */
 	public static final MMConstraint<Balance14> forBalance14 = new MMConstraint<Balance14>() {
 		{
-			validator = ConstraintBalanceForAccountOrSubAccountRule::checkBalance14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccountOrSubAccountRule";
 			definition = "BalanceForAccount must be present or SubAccountDetails must be present, both may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceForAccountOrSubAccountRule.forBalance3;
 			owner_lazy = () -> Balance14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Balance14 obj) throws Exception {
+			checkBalance14(obj);
 		}
 	};
 

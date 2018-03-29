@@ -125,7 +125,7 @@ public class PostalAddress10 {
 	 * definition} = "Name of a street or thoroughfare."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStreetName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress10, Max70Text> mmStreetName = new MMMessageAttribute<PostalAddress10, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress10.mmObject();
@@ -137,6 +137,16 @@ public class PostalAddress10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PostalAddress10 obj) {
+			return obj.getStreetName();
+		}
+
+		@Override
+		public void setValue(PostalAddress10 obj, Max70Text value) {
+			obj.setStreetName(value);
 		}
 	};
 	@XmlElement(name = "BldgNb", required = true)
@@ -174,7 +184,7 @@ public class PostalAddress10 {
 	 * "Number that identifies the position of a building on a street."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuildingNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress10, Max16Text> mmBuildingNumber = new MMMessageAttribute<PostalAddress10, Max16Text>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetBuildingIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress10.mmObject();
@@ -186,6 +196,16 @@ public class PostalAddress10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(PostalAddress10 obj) {
+			return obj.getBuildingNumber();
+		}
+
+		@Override
+		public void setValue(PostalAddress10 obj, Max16Text value) {
+			obj.setBuildingNumber(value);
 		}
 	};
 	@XmlElement(name = "PstCd", required = true)
@@ -224,7 +244,7 @@ public class PostalAddress10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress10, Max16Text> mmPostCode = new MMMessageAttribute<PostalAddress10, Max16Text>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostCodeIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress10.mmObject();
@@ -236,6 +256,16 @@ public class PostalAddress10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(PostalAddress10 obj) {
+			return obj.getPostCode();
+		}
+
+		@Override
+		public void setValue(PostalAddress10 obj, Max16Text value) {
+			obj.setPostCode(value);
 		}
 	};
 	@XmlElement(name = "TwnNm", required = true)
@@ -274,7 +304,7 @@ public class PostalAddress10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTownName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress10, Max35Text> mmTownName = new MMMessageAttribute<PostalAddress10, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress10.mmObject();
@@ -286,6 +316,16 @@ public class PostalAddress10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PostalAddress10 obj) {
+			return obj.getTownName();
+		}
+
+		@Override
+		public void setValue(PostalAddress10 obj, Max35Text value) {
+			obj.setTownName(value);
 		}
 	};
 	@XmlElement(name = "CtrySubDvsn")
@@ -324,7 +364,7 @@ public class PostalAddress10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress10, Optional<Max35Text>> mmCountrySubDivision = new MMMessageAttribute<PostalAddress10, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmState;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress10.mmObject();
@@ -336,6 +376,16 @@ public class PostalAddress10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PostalAddress10 obj) {
+			return obj.getCountrySubDivision();
+		}
+
+		@Override
+		public void setValue(PostalAddress10 obj, Optional<Max35Text> value) {
+			obj.setCountrySubDivision(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -372,7 +422,7 @@ public class PostalAddress10 {
 	 * definition} = "Nation with its own government."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress10, CountryCode> mmCountry = new MMMessageAttribute<PostalAddress10, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress10.mmObject();
@@ -384,6 +434,16 @@ public class PostalAddress10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PostalAddress10 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PostalAddress10 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "VldFr", required = true)
@@ -420,7 +480,7 @@ public class PostalAddress10 {
 	 * definition} = "Starting date from which the address is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PostalAddress10, ISODate> mmValidFrom = new MMMessageAttribute<PostalAddress10, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress10.mmObject();
@@ -432,6 +492,16 @@ public class PostalAddress10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PostalAddress10 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(PostalAddress10 obj, ISODate value) {
+			obj.setValidFrom(value);
 		}
 	};
 

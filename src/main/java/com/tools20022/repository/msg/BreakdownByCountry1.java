@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashInForecast3;
+import com.tools20022.repository.msg.CashOutForecast3;
+import com.tools20022.repository.msg.NetCashForecast2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +122,7 @@ public class BreakdownByCountry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByCountry1, CountryCode> mmCountry = new MMMessageAttribute<BreakdownByCountry1, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmObject();
 			isDerived = false;
@@ -132,9 +135,19 @@ public class BreakdownByCountry1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
+
+		@Override
+		public CountryCode getValue(BreakdownByCountry1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(BreakdownByCountry1 obj, CountryCode value) {
+			obj.setCountry(value);
+		}
 	};
 	@XmlElement(name = "CshInFcst")
-	protected List<com.tools20022.repository.msg.CashInForecast3> cashInForecast;
+	protected List<CashInForecast3> cashInForecast;
 	/**
 	 * 
 	 <p>
@@ -171,7 +184,7 @@ public class BreakdownByCountry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByCountry1, List<CashInForecast3>> mmCashInForecast = new MMMessageAssociationEnd<BreakdownByCountry1, List<CashInForecast3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmObject();
 			isDerived = false;
@@ -182,11 +195,21 @@ public class BreakdownByCountry1 {
 			nextVersions_lazy = () -> Arrays.asList(BreakdownByCountry2.mmCashInForecast);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
+			type_lazy = () -> CashInForecast3.mmObject();
+		}
+
+		@Override
+		public List<CashInForecast3> getValue(BreakdownByCountry1 obj) {
+			return obj.getCashInForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByCountry1 obj, List<CashInForecast3> value) {
+			obj.setCashInForecast(value);
 		}
 	};
 	@XmlElement(name = "CshOutFcst")
-	protected List<com.tools20022.repository.msg.CashOutForecast3> cashOutForecast;
+	protected List<CashOutForecast3> cashOutForecast;
 	/**
 	 * 
 	 <p>
@@ -223,7 +246,7 @@ public class BreakdownByCountry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByCountry1, List<CashOutForecast3>> mmCashOutForecast = new MMMessageAssociationEnd<BreakdownByCountry1, List<CashOutForecast3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmObject();
 			isDerived = false;
@@ -234,11 +257,21 @@ public class BreakdownByCountry1 {
 			nextVersions_lazy = () -> Arrays.asList(BreakdownByCountry2.mmCashOutForecast);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast3.mmObject();
+			type_lazy = () -> CashOutForecast3.mmObject();
+		}
+
+		@Override
+		public List<CashOutForecast3> getValue(BreakdownByCountry1 obj) {
+			return obj.getCashOutForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByCountry1 obj, List<CashOutForecast3> value) {
+			obj.setCashOutForecast(value);
 		}
 	};
 	@XmlElement(name = "NetCshFcst")
-	protected List<com.tools20022.repository.msg.NetCashForecast2> netCashForecast;
+	protected List<NetCashForecast2> netCashForecast;
 	/**
 	 * 
 	 <p>
@@ -275,7 +308,7 @@ public class BreakdownByCountry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByCountry1, List<NetCashForecast2>> mmNetCashForecast = new MMMessageAssociationEnd<BreakdownByCountry1, List<NetCashForecast2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmObject();
 			isDerived = false;
@@ -286,7 +319,17 @@ public class BreakdownByCountry1 {
 			nextVersions_lazy = () -> Arrays.asList(BreakdownByCountry2.mmNetCashForecast);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast2.mmObject();
+			type_lazy = () -> NetCashForecast2.mmObject();
+		}
+
+		@Override
+		public List<NetCashForecast2> getValue(BreakdownByCountry1 obj) {
+			return obj.getNetCashForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByCountry1 obj, List<NetCashForecast2> value) {
+			obj.setNetCashForecast(value);
 		}
 	};
 
@@ -318,7 +361,7 @@ public class BreakdownByCountry1 {
 		return cashInForecast == null ? cashInForecast = new ArrayList<>() : cashInForecast;
 	}
 
-	public BreakdownByCountry1 setCashInForecast(List<com.tools20022.repository.msg.CashInForecast3> cashInForecast) {
+	public BreakdownByCountry1 setCashInForecast(List<CashInForecast3> cashInForecast) {
 		this.cashInForecast = Objects.requireNonNull(cashInForecast);
 		return this;
 	}
@@ -327,7 +370,7 @@ public class BreakdownByCountry1 {
 		return cashOutForecast == null ? cashOutForecast = new ArrayList<>() : cashOutForecast;
 	}
 
-	public BreakdownByCountry1 setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast3> cashOutForecast) {
+	public BreakdownByCountry1 setCashOutForecast(List<CashOutForecast3> cashOutForecast) {
 		this.cashOutForecast = Objects.requireNonNull(cashOutForecast);
 		return this;
 	}
@@ -336,7 +379,7 @@ public class BreakdownByCountry1 {
 		return netCashForecast == null ? netCashForecast = new ArrayList<>() : netCashForecast;
 	}
 
-	public BreakdownByCountry1 setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast2> netCashForecast) {
+	public BreakdownByCountry1 setNetCashForecast(List<NetCashForecast2> netCashForecast) {
 		this.netCashForecast = Objects.requireNonNull(netCashForecast);
 		return this;
 	}

@@ -126,7 +126,7 @@ public class StatusAndReason6 {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason6, Optional<ProcessingStatus12Choice>> mmProcessingStatus = new MMMessageAssociationEnd<StatusAndReason6, Optional<ProcessingStatus12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason6.mmObject();
@@ -140,6 +140,16 @@ public class StatusAndReason6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingStatus12Choice> getValue(StatusAndReason6 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason6 obj, Optional<ProcessingStatus12Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts")
@@ -181,7 +191,7 @@ public class StatusAndReason6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason6, Optional<MatchingStatus6Choice>> mmInferredMatchingStatus = new MMMessageAssociationEnd<StatusAndReason6, Optional<MatchingStatus6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason6.mmObject();
@@ -195,6 +205,16 @@ public class StatusAndReason6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus6Choice> getValue(StatusAndReason6 obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason6 obj, Optional<MatchingStatus6Choice> value) {
+			obj.setInferredMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSts")
@@ -234,7 +254,7 @@ public class StatusAndReason6 {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason6, Optional<MatchingStatus6Choice>> mmMatchingStatus = new MMMessageAssociationEnd<StatusAndReason6, Optional<MatchingStatus6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason6.mmObject();
@@ -248,6 +268,16 @@ public class StatusAndReason6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus6Choice> getValue(StatusAndReason6 obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason6 obj, Optional<MatchingStatus6Choice> value) {
+			obj.setMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -287,7 +317,7 @@ public class StatusAndReason6 {
 	 * definition} = "Provides the status of settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason6, Optional<SettlementStatus4Choice>> mmSettlementStatus = new MMMessageAssociationEnd<StatusAndReason6, Optional<SettlementStatus4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason6.mmObject();
@@ -301,6 +331,16 @@ public class StatusAndReason6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementStatus4Choice> getValue(StatusAndReason6 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason6 obj, Optional<SettlementStatus4Choice> value) {
+			obj.setSettlementStatus(value.orElse(null));
 		}
 	};
 

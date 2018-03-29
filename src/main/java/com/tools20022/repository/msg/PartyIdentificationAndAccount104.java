@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.RestrictedFINXMax350Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternatePartyIdentification3;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -137,7 +138,7 @@ public class PartyIdentificationAndAccount104 {
 	 * definition} = "Identification of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount104, PartyIdentification88Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount104, PartyIdentification88Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount104.mmObject();
@@ -150,6 +151,16 @@ public class PartyIdentificationAndAccount104 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification88Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification88Choice getValue(PartyIdentificationAndAccount104 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount104 obj, PartyIdentification88Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -186,7 +197,7 @@ public class PartyIdentificationAndAccount104 {
 	 * definition} = "Account in which cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount104, Optional<CashAccountIdentification6Choice>> mmCashAccount = new MMMessageAssociationEnd<PartyIdentificationAndAccount104, Optional<CashAccountIdentification6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount104.mmObject();
@@ -199,6 +210,16 @@ public class PartyIdentificationAndAccount104 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountIdentification6Choice> getValue(PartyIdentificationAndAccount104 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount104 obj, Optional<CashAccountIdentification6Choice> value) {
+			obj.setCashAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -231,7 +252,7 @@ public class PartyIdentificationAndAccount104 {
 	 * definition} = "Reference meaningful to the party identified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount104, Optional<RestrictedFINXMax16Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentificationAndAccount104, Optional<RestrictedFINXMax16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount104.mmObject();
 			isDerived = false;
@@ -242,6 +263,16 @@ public class PartyIdentificationAndAccount104 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(PartyIdentificationAndAccount104 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount104 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -276,7 +307,7 @@ public class PartyIdentificationAndAccount104 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount104, Optional<RestrictedFINXMax350Text>> mmAdditionalInformation = new MMMessageAttribute<PartyIdentificationAndAccount104, Optional<RestrictedFINXMax350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount104.mmObject();
 			isDerived = false;
@@ -287,6 +318,16 @@ public class PartyIdentificationAndAccount104 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax350Text> getValue(PartyIdentificationAndAccount104 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount104 obj, Optional<RestrictedFINXMax350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AltrnId")
@@ -323,7 +364,7 @@ public class PartyIdentificationAndAccount104 {
 	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount104, Optional<AlternatePartyIdentification3>> mmAlternateIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount104, Optional<AlternatePartyIdentification3>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount104.mmObject();
@@ -335,7 +376,17 @@ public class PartyIdentificationAndAccount104 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification3.mmObject();
+			type_lazy = () -> AlternatePartyIdentification3.mmObject();
+		}
+
+		@Override
+		public Optional<AlternatePartyIdentification3> getValue(PartyIdentificationAndAccount104 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount104 obj, Optional<AlternatePartyIdentification3> value) {
+			obj.setAlternateIdentification(value.orElse(null));
 		}
 	};
 
@@ -404,7 +455,7 @@ public class PartyIdentificationAndAccount104 {
 		return alternateIdentification == null ? Optional.empty() : Optional.of(alternateIdentification);
 	}
 
-	public PartyIdentificationAndAccount104 setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification3 alternateIdentification) {
+	public PartyIdentificationAndAccount104 setAlternateIdentification(AlternatePartyIdentification3 alternateIdentification) {
 		this.alternateIdentification = alternateIdentification;
 		return this;
 	}

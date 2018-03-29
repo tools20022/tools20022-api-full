@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Min3Max4Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentContext18;
+import com.tools20022.repository.msg.CardPaymentEnvironment51;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -144,7 +146,7 @@ public class CommonData5 {
 	 * CommonData4.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommonData5, Optional<CardPaymentEnvironment51>> mmEnvironment = new MMMessageAssociationEnd<CommonData5, Optional<CardPaymentEnvironment51>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonData5.mmObject();
@@ -158,7 +160,17 @@ public class CommonData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment51.mmObject();
+			type_lazy = () -> CardPaymentEnvironment51.mmObject();
+		}
+
+		@Override
+		public Optional<CardPaymentEnvironment51> getValue(CommonData5 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(CommonData5 obj, Optional<CardPaymentEnvironment51> value) {
+			obj.setEnvironment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cntxt")
@@ -207,7 +219,7 @@ public class CommonData5 {
 	 * CommonData4.mmContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommonData5, Optional<CardPaymentContext18>> mmContext = new MMMessageAssociationEnd<CommonData5, Optional<CardPaymentContext18>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonData5.mmObject();
@@ -221,7 +233,17 @@ public class CommonData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentContext18.mmObject();
+			type_lazy = () -> CardPaymentContext18.mmObject();
+		}
+
+		@Override
+		public Optional<CardPaymentContext18> getValue(CommonData5 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(CommonData5 obj, Optional<CardPaymentContext18> value) {
+			obj.setContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxTp")
@@ -273,7 +295,7 @@ public class CommonData5 {
 	 * CommonData4.mmTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommonData5, Optional<CardPaymentServiceType5Code>> mmTransactionType = new MMMessageAttribute<CommonData5, Optional<CardPaymentServiceType5Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonData5.mmObject();
@@ -287,6 +309,16 @@ public class CommonData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType5Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardPaymentServiceType5Code> getValue(CommonData5 obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(CommonData5 obj, Optional<CardPaymentServiceType5Code> value) {
+			obj.setTransactionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlSvc")
@@ -336,7 +368,7 @@ public class CommonData5 {
 	 * CommonData4.mmAdditionalService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommonData5, List<CardPaymentServiceType9Code>> mmAdditionalService = new MMMessageAttribute<CommonData5, List<CardPaymentServiceType9Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonData5.mmObject();
@@ -349,6 +381,16 @@ public class CommonData5 {
 			previousVersion_lazy = () -> CommonData4.mmAdditionalService;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType9Code.mmObject();
+		}
+
+		@Override
+		public List<CardPaymentServiceType9Code> getValue(CommonData5 obj) {
+			return obj.getAdditionalService();
+		}
+
+		@Override
+		public void setValue(CommonData5 obj, List<CardPaymentServiceType9Code> value) {
+			obj.setAdditionalService(value);
 		}
 	};
 	@XmlElement(name = "SvcAttr")
@@ -398,7 +440,7 @@ public class CommonData5 {
 	 * CommonData4.mmServiceAttribute}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceAttribute = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommonData5, Optional<CardPaymentServiceType3Code>> mmServiceAttribute = new MMMessageAttribute<CommonData5, Optional<CardPaymentServiceType3Code>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonData5.mmObject();
@@ -412,6 +454,16 @@ public class CommonData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType3Code.mmObject();
+		}
+
+		@Override
+		public Optional<CardPaymentServiceType3Code> getValue(CommonData5 obj) {
+			return obj.getServiceAttribute();
+		}
+
+		@Override
+		public void setValue(CommonData5 obj, Optional<CardPaymentServiceType3Code> value) {
+			obj.setServiceAttribute(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrchntCtgyCd")
@@ -463,7 +515,7 @@ public class CommonData5 {
 	 * CommonData4.mmMerchantCategoryCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMerchantCategoryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommonData5, Optional<Min3Max4Text>> mmMerchantCategoryCode = new MMMessageAttribute<CommonData5, Optional<Min3Max4Text>>() {
 		{
 			businessElementTrace_lazy = () -> MerchantRole.mmMerchantCategoryCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonData5.mmObject();
@@ -477,6 +529,16 @@ public class CommonData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min3Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Min3Max4Text> getValue(CommonData5 obj) {
+			return obj.getMerchantCategoryCode();
+		}
+
+		@Override
+		public void setValue(CommonData5 obj, Optional<Min3Max4Text> value) {
+			obj.setMerchantCategoryCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcncltnId")
@@ -527,7 +589,7 @@ public class CommonData5 {
 	 * CommonData4.mmReconciliationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommonData5, Optional<Max35Text>> mmReconciliationIdentification = new MMMessageAttribute<CommonData5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmReconciliationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonData5.mmObject();
@@ -541,6 +603,16 @@ public class CommonData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CommonData5 obj) {
+			return obj.getReconciliationIdentification();
+		}
+
+		@Override
+		public void setValue(CommonData5 obj, Optional<Max35Text> value) {
+			obj.setReconciliationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -588,7 +660,7 @@ public class CommonData5 {
 	 * CommonData4.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommonData5, Optional<CurrencyCode>> mmCurrency = new MMMessageAttribute<CommonData5, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonData5.mmObject();
@@ -602,6 +674,16 @@ public class CommonData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(CommonData5 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CommonData5 obj, Optional<CurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 
@@ -627,7 +709,7 @@ public class CommonData5 {
 		return environment == null ? Optional.empty() : Optional.of(environment);
 	}
 
-	public CommonData5 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment51 environment) {
+	public CommonData5 setEnvironment(CardPaymentEnvironment51 environment) {
 		this.environment = environment;
 		return this;
 	}
@@ -636,7 +718,7 @@ public class CommonData5 {
 		return context == null ? Optional.empty() : Optional.of(context);
 	}
 
-	public CommonData5 setContext(com.tools20022.repository.msg.CardPaymentContext18 context) {
+	public CommonData5 setContext(CardPaymentContext18 context) {
 		this.context = context;
 		return this;
 	}

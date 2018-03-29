@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -101,7 +102,7 @@ public class FinancialInstrumentAttributesSD5 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD5, Max350Text> mmPlaceAndName = new MMMessageAttribute<FinancialInstrumentAttributesSD5, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmObject();
 			isDerived = false;
@@ -112,6 +113,16 @@ public class FinancialInstrumentAttributesSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(FinancialInstrumentAttributesSD5 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD5 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "SctyOfIntrstMtchgScty")
@@ -150,7 +161,7 @@ public class FinancialInstrumentAttributesSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributesSD5, Optional<SecurityIdentification15>> mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute<FinancialInstrumentAttributesSD5, Optional<SecurityIdentification15>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmObject();
 			isDerived = false;
@@ -161,7 +172,17 @@ public class FinancialInstrumentAttributesSD5 {
 			definition = "Matching security identifier for the disbursed security that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
+			complexType_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification15> getValue(FinancialInstrumentAttributesSD5 obj) {
+			return obj.getSecurityOfInterestMatchingSecurity();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributesSD5 obj, Optional<SecurityIdentification15> value) {
+			obj.setSecurityOfInterestMatchingSecurity(value.orElse(null));
 		}
 	};
 
@@ -191,7 +212,7 @@ public class FinancialInstrumentAttributesSD5 {
 		return securityOfInterestMatchingSecurity == null ? Optional.empty() : Optional.of(securityOfInterestMatchingSecurity);
 	}
 
-	public FinancialInstrumentAttributesSD5 setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification15 securityOfInterestMatchingSecurity) {
+	public FinancialInstrumentAttributesSD5 setSecurityOfInterestMatchingSecurity(SecurityIdentification15 securityOfInterestMatchingSecurity) {
 		this.securityOfInterestMatchingSecurity = securityOfInterestMatchingSecurity;
 		return this;
 	}

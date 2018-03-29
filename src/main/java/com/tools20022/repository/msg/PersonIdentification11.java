@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateAndPlaceOfBirth;
+import com.tools20022.repository.msg.GenericIdentification4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -178,7 +180,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmDriversLicenseNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDriverLicenseNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmDriverLicenseNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmDriversLicenseNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -192,6 +194,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getDriverLicenseNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setDriverLicenseNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrvrLicLctn")
@@ -232,7 +244,7 @@ public class PersonIdentification11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDriverLicenseLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmDriverLicenseLocation = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
 			isDerived = false;
@@ -244,6 +256,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getDriverLicenseLocation();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setDriverLicenseLocation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrvrLicNm")
@@ -283,7 +305,7 @@ public class PersonIdentification11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDriverLicenseName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmDriverLicenseName = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
 			isDerived = false;
@@ -295,6 +317,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getDriverLicenseName();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setDriverLicenseName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrvrId")
@@ -334,7 +366,7 @@ public class PersonIdentification11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDriverIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmDriverIdentification = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
 			isDerived = false;
@@ -346,6 +378,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getDriverIdentification();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setDriverIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrNb")
@@ -390,7 +432,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmCustomerNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmCustomerNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
 			isDerived = false;
@@ -403,6 +445,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getCustomerNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setCustomerNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SclSctyNb")
@@ -452,7 +504,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmSocialSecurityNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSocialSecurityNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmSocialSecurityNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmSocialSecurityNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -466,6 +518,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getSocialSecurityNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setSocialSecurityNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AlnRegnNb")
@@ -516,7 +578,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmAlienRegistrationNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlienRegistrationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmAlienRegistrationNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmAlienRegistrationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -530,6 +592,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getAlienRegistrationNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setAlienRegistrationNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PsptNb")
@@ -579,7 +651,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmPassportNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPassportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmPassportNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmPassportNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -593,6 +665,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getPassportNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setPassportNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxIdNb")
@@ -642,7 +724,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmTaxIdentificationNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmTaxIdentificationNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -656,6 +738,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getTaxIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setTaxIdentificationNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IdntyCardNb")
@@ -706,7 +798,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmIdentityCardNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentityCardNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmIdentityCardNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmIdentityCardNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -720,6 +812,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getIdentityCardNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setIdentityCardNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MplyrIdNb")
@@ -770,7 +872,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmEmployerIdentificationNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmployerIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmEmployerIdentificationNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmEmployerIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -784,6 +886,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getEmployerIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setEmployerIdentificationNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MplyeeIdNb")
@@ -828,7 +940,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmEmployeeIdentificationNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmployeeIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmEmployeeIdentificationNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
 			isDerived = false;
@@ -841,6 +953,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getEmployeeIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setEmployeeIdentificationNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "JobNb")
@@ -880,7 +1002,7 @@ public class PersonIdentification11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmJobNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmJobNumber = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
 			isDerived = false;
@@ -892,6 +1014,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getJobNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setJobNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dept")
@@ -931,7 +1063,7 @@ public class PersonIdentification11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDepartment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max35Text>> mmDepartment = new MMMessageAttribute<PersonIdentification11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
 			isDerived = false;
@@ -943,6 +1075,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification11 obj) {
+			return obj.getDepartment();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max35Text> value) {
+			obj.setDepartment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EmailAdr")
@@ -992,7 +1134,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmEmailAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification11, Optional<Max256Text>> mmEmailAddress = new MMMessageAttribute<PersonIdentification11, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -1006,6 +1148,16 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(PersonIdentification11 obj) {
+			return obj.getEmailAddress();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<Max256Text> value) {
+			obj.setEmailAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtAndPlcOfBirth")
@@ -1054,7 +1206,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmDateAndPlaceOfBirth}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateAndPlaceOfBirth = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PersonIdentification11, Optional<DateAndPlaceOfBirth>> mmDateAndPlaceOfBirth = new MMMessageAssociationEnd<PersonIdentification11, Optional<DateAndPlaceOfBirth>>() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmPerson;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -1068,11 +1220,21 @@ public class PersonIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateAndPlaceOfBirth.mmObject();
+			type_lazy = () -> DateAndPlaceOfBirth.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndPlaceOfBirth> getValue(PersonIdentification11 obj) {
+			return obj.getDateAndPlaceOfBirth();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, Optional<DateAndPlaceOfBirth> value) {
+			obj.setDateAndPlaceOfBirth(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Othr")
-	protected List<com.tools20022.repository.msg.GenericIdentification4> other;
+	protected List<GenericIdentification4> other;
 	/**
 	 * 
 	 <p>
@@ -1119,7 +1281,7 @@ public class PersonIdentification11 {
 	 * PersonIdentification7.mmOther}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PersonIdentification11, List<GenericIdentification4>> mmOther = new MMMessageAssociationEnd<PersonIdentification11, List<GenericIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification11.mmObject();
@@ -1132,7 +1294,17 @@ public class PersonIdentification11 {
 			previousVersion_lazy = () -> PersonIdentification7.mmOther;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
+			type_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification4> getValue(PersonIdentification11 obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(PersonIdentification11 obj, List<GenericIdentification4> value) {
+			obj.setOther(value);
 		}
 	};
 
@@ -1298,7 +1470,7 @@ public class PersonIdentification11 {
 		return dateAndPlaceOfBirth == null ? Optional.empty() : Optional.of(dateAndPlaceOfBirth);
 	}
 
-	public PersonIdentification11 setDateAndPlaceOfBirth(com.tools20022.repository.msg.DateAndPlaceOfBirth dateAndPlaceOfBirth) {
+	public PersonIdentification11 setDateAndPlaceOfBirth(DateAndPlaceOfBirth dateAndPlaceOfBirth) {
 		this.dateAndPlaceOfBirth = dateAndPlaceOfBirth;
 		return this;
 	}
@@ -1307,7 +1479,7 @@ public class PersonIdentification11 {
 		return other == null ? other = new ArrayList<>() : other;
 	}
 
-	public PersonIdentification11 setOther(List<com.tools20022.repository.msg.GenericIdentification4> other) {
+	public PersonIdentification11 setOther(List<GenericIdentification4> other) {
 		this.other = Objects.requireNonNull(other);
 		return this;
 	}

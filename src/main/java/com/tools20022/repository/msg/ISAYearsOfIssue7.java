@@ -123,7 +123,7 @@ public class ISAYearsOfIssue7 {
 	 * ISAYearsOfIssue6.mmCurrentYear}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentYear = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ISAYearsOfIssue7, Optional<CurrentYearType2Choice>> mmCurrentYear = new MMMessageAttribute<ISAYearsOfIssue7, Optional<CurrentYearType2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue7.mmObject();
@@ -136,6 +136,16 @@ public class ISAYearsOfIssue7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CurrentYearType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CurrentYearType2Choice> getValue(ISAYearsOfIssue7 obj) {
+			return obj.getCurrentYear();
+		}
+
+		@Override
+		public void setValue(ISAYearsOfIssue7 obj, Optional<CurrentYearType2Choice> value) {
+			obj.setCurrentYear(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsYrs")
@@ -177,7 +187,7 @@ public class ISAYearsOfIssue7 {
 	 * ISAYearsOfIssue6.mmPreviousYears}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousYears = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ISAYearsOfIssue7, Optional<PreviousYear2Choice>> mmPreviousYears = new MMMessageAssociationEnd<ISAYearsOfIssue7, Optional<PreviousYear2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue7.mmObject();
@@ -191,6 +201,16 @@ public class ISAYearsOfIssue7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PreviousYear2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PreviousYear2Choice> getValue(ISAYearsOfIssue7 obj) {
+			return obj.getPreviousYears();
+		}
+
+		@Override
+		public void setValue(ISAYearsOfIssue7 obj, Optional<PreviousYear2Choice> value) {
+			obj.setPreviousYears(value.orElse(null));
 		}
 	};
 

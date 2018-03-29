@@ -51,11 +51,15 @@ public class ConstraintReferenceElementRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference10> forMessageAndBusinessReference10 = new MMConstraint<MessageAndBusinessReference10>() {
 		{
-			validator = ConstraintReferenceElementRule::checkMessageAndBusinessReference10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceElementRule";
 			definition = "One of the elements (Reference, RelatedReference, OrderReference) must be present.";
 			owner_lazy = () -> MessageAndBusinessReference10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference10 obj) throws Exception {
+			checkMessageAndBusinessReference10(obj);
 		}
 	};
 

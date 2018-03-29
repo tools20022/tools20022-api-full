@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -131,7 +132,7 @@ public class ConditionallyAcceptedStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionallyAcceptedStatus2, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ConditionallyAcceptedStatus2, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmObject();
@@ -145,9 +146,19 @@ public class ConditionallyAcceptedStatus2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
+
+		@Override
+		public NoReasonCode getValue(ConditionallyAcceptedStatus2 obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatus2 obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
+		}
 	};
 	@XmlElement(name = "RsnDtls", required = true)
-	protected List<com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2> reasonDetails;
+	protected List<ConditionallyAcceptedStatusReason2> reasonDetails;
 	/**
 	 * 
 	 <p>
@@ -188,7 +199,7 @@ public class ConditionallyAcceptedStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConditionallyAcceptedStatus2, List<ConditionallyAcceptedStatusReason2>> mmReasonDetails = new MMMessageAssociationEnd<ConditionallyAcceptedStatus2, List<ConditionallyAcceptedStatusReason2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatus2.mmObject();
@@ -201,7 +212,17 @@ public class ConditionallyAcceptedStatus2 {
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2.mmObject();
+			type_lazy = () -> ConditionallyAcceptedStatusReason2.mmObject();
+		}
+
+		@Override
+		public List<ConditionallyAcceptedStatusReason2> getValue(ConditionallyAcceptedStatus2 obj) {
+			return obj.getReasonDetails();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatus2 obj, List<ConditionallyAcceptedStatusReason2> value) {
+			obj.setReasonDetails(value);
 		}
 	};
 	/**
@@ -283,7 +304,7 @@ public class ConditionallyAcceptedStatus2 {
 		return reasonDetails == null ? reasonDetails = new ArrayList<>() : reasonDetails;
 	}
 
-	public ConditionallyAcceptedStatus2 setReasonDetails(List<com.tools20022.repository.msg.ConditionallyAcceptedStatusReason2> reasonDetails) {
+	public ConditionallyAcceptedStatus2 setReasonDetails(List<ConditionallyAcceptedStatusReason2> reasonDetails) {
 		this.reasonDetails = Objects.requireNonNull(reasonDetails);
 		return this;
 	}

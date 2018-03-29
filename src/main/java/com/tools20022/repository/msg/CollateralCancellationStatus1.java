@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CollateralStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RejectionStatus2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -139,7 +140,7 @@ public class CollateralCancellationStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralStatusCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralCancellationStatus1, Status4Code> mmCollateralStatusCode = new MMMessageAttribute<CollateralCancellationStatus1, Status4Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralCancellationStatus1.mmObject();
@@ -151,6 +152,16 @@ public class CollateralCancellationStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
+		}
+
+		@Override
+		public Status4Code getValue(CollateralCancellationStatus1 obj) {
+			return obj.getCollateralStatusCode();
+		}
+
+		@Override
+		public void setValue(CollateralCancellationStatus1 obj, Status4Code value) {
+			obj.setCollateralStatusCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -189,7 +200,7 @@ public class CollateralCancellationStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralCancellationStatus1, Optional<Max35Text>> mmAdditionalInformation = new MMMessageAttribute<CollateralCancellationStatus1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralCancellationStatus1.mmObject();
@@ -201,6 +212,16 @@ public class CollateralCancellationStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CollateralCancellationStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CollateralCancellationStatus1 obj, Optional<Max35Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctnDtls")
@@ -237,7 +258,7 @@ public class CollateralCancellationStatus1 {
 	 * "Provides rejection reason and optionaly additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralCancellationStatus1, Optional<RejectionStatus2>> mmRejectionDetails = new MMMessageAssociationEnd<CollateralCancellationStatus1, Optional<RejectionStatus2>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmCollateralManagementCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralCancellationStatus1.mmObject();
@@ -249,7 +270,17 @@ public class CollateralCancellationStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RejectionStatus2.mmObject();
+			type_lazy = () -> RejectionStatus2.mmObject();
+		}
+
+		@Override
+		public Optional<RejectionStatus2> getValue(CollateralCancellationStatus1 obj) {
+			return obj.getRejectionDetails();
+		}
+
+		@Override
+		public void setValue(CollateralCancellationStatus1 obj, Optional<RejectionStatus2> value) {
+			obj.setRejectionDetails(value.orElse(null));
 		}
 	};
 
@@ -292,7 +323,7 @@ public class CollateralCancellationStatus1 {
 		return rejectionDetails == null ? Optional.empty() : Optional.of(rejectionDetails);
 	}
 
-	public CollateralCancellationStatus1 setRejectionDetails(com.tools20022.repository.msg.RejectionStatus2 rejectionDetails) {
+	public CollateralCancellationStatus1 setRejectionDetails(RejectionStatus2 rejectionDetails) {
 		this.rejectionDetails = rejectionDetails;
 		return this;
 	}

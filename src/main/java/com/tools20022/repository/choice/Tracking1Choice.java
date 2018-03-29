@@ -116,7 +116,7 @@ public class Tracking1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tracking1Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<Tracking1Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Tracking1Choice.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class Tracking1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Tracking1Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(Tracking1Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class Tracking1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tracking1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<Tracking1Choice, GenericIdentification20>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Tracking1Choice.mmObject();
 			isDerived = false;
@@ -185,6 +195,16 @@ public class Tracking1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(Tracking1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Tracking1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

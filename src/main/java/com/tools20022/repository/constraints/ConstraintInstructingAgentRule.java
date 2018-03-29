@@ -63,13 +63,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV07> forFIToFICustomerDirectDebitV07 = new MMConstraint<FIToFICustomerDirectDebitV07>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerDirectDebitV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then DirectDebitTransactionInformation/InstructingAgent is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerDirectDebitV06;
 			owner_lazy = () -> FIToFICustomerDirectDebitV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV07 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV07(obj);
 		}
 	};
 	/**
@@ -104,13 +108,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV07> forFIToFICustomerCreditTransferV07 = new MMConstraint<FIToFICustomerCreditTransferV07>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerCreditTransferV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerCreditTransferV06;
 			owner_lazy = () -> FIToFICustomerCreditTransferV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV07 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV07(obj);
 		}
 	};
 	/**
@@ -145,13 +153,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV07> forFinancialInstitutionCreditTransferV07 = new MMConstraint<FinancialInstitutionCreditTransferV07>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFinancialInstitutionCreditTransferV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV06;
 			owner_lazy = () -> FinancialInstitutionCreditTransferV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV07 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV07(obj);
 		}
 	};
 	/**
@@ -186,13 +198,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV08> forFIToFIPaymentReversalV08 = new MMConstraint<FIToFIPaymentReversalV08>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFIPaymentReversalV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFIPaymentReversalV07;
 			owner_lazy = () -> FIToFIPaymentReversalV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV08 obj) throws Exception {
+			checkFIToFIPaymentReversalV08(obj);
 		}
 	};
 	/**
@@ -227,13 +243,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV08> forPaymentReturnV08 = new MMConstraint<PaymentReturnV08>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentReturnV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentReturnV07;
 			owner_lazy = () -> PaymentReturnV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV08 obj) throws Exception {
+			checkPaymentReturnV08(obj);
 		}
 	};
 	/**
@@ -276,7 +296,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV06> forFIToFICustomerDirectDebitV06 = new MMConstraint<FIToFICustomerDirectDebitV06>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerDirectDebitV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then DirectDebitTransactionInformation/InstructingAgent is not allowed.";
@@ -284,6 +303,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerDirectDebitV05;
 			owner_lazy = () -> FIToFICustomerDirectDebitV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV06 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV06(obj);
 		}
 	};
 	/**
@@ -326,7 +350,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV06> forFinancialInstitutionCreditTransferV06 = new MMConstraint<FinancialInstitutionCreditTransferV06>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFinancialInstitutionCreditTransferV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
@@ -334,6 +357,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV05;
 			owner_lazy = () -> FinancialInstitutionCreditTransferV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV06 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV06(obj);
 		}
 	};
 	/**
@@ -376,7 +404,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV06> forFIToFICustomerCreditTransferV06 = new MMConstraint<FIToFICustomerCreditTransferV06>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerCreditTransferV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
@@ -384,6 +411,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerCreditTransferV05;
 			owner_lazy = () -> FIToFICustomerCreditTransferV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV06 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV06(obj);
 		}
 	};
 	/**
@@ -426,7 +458,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV07> forPaymentReturnV07 = new MMConstraint<PaymentReturnV07>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentReturnV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
@@ -434,6 +465,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentReturnV06;
 			owner_lazy = () -> PaymentReturnV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV07 obj) throws Exception {
+			checkPaymentReturnV07(obj);
 		}
 	};
 	/**
@@ -476,7 +512,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV07> forFIToFIPaymentReversalV07 = new MMConstraint<FIToFIPaymentReversalV07>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFIPaymentReversalV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
@@ -484,6 +519,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFIPaymentReversalV06;
 			owner_lazy = () -> FIToFIPaymentReversalV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV07 obj) throws Exception {
+			checkFIToFIPaymentReversalV07(obj);
 		}
 	};
 	/**
@@ -507,11 +547,15 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pain.PaymentCancellationRequestV01>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "GroupHeader/InstructingAgent is not allowed.";
 			owner_lazy = () -> com.tools20022.repository.area.pain.PaymentCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(com.tools20022.repository.area.pain.PaymentCancellationRequestV01 obj) throws Exception {
+			checkPaymentCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -535,11 +579,15 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pain.PaymentStatusReportV02>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "GroupHeader/InstructingAgent is not allowed.";
 			owner_lazy = () -> com.tools20022.repository.area.pain.PaymentStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(com.tools20022.repository.area.pain.PaymentStatusReportV02 obj) throws Exception {
+			checkPaymentStatusReportV02(obj);
 		}
 	};
 	/**
@@ -565,11 +613,15 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV01> forFIToFICustomerCreditTransferV01 = new MMConstraint<FIToFICustomerCreditTransferV01>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV01 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV01(obj);
 		}
 	};
 	/**
@@ -599,12 +651,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV02> forFIToFICustomerCreditTransferV02 = new MMConstraint<FIToFICustomerCreditTransferV02>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerCreditTransferV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV02 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV02(obj);
 		}
 	};
 	/**
@@ -634,12 +690,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV03> forFIToFICustomerCreditTransferV03 = new MMConstraint<FIToFICustomerCreditTransferV03>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerCreditTransferV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV03 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV03(obj);
 		}
 	};
 	/**
@@ -677,13 +737,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV04> forFIToFICustomerCreditTransferV04 = new MMConstraint<FIToFICustomerCreditTransferV04>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerCreditTransferV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerCreditTransferV05);
 			owner_lazy = () -> FIToFICustomerCreditTransferV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV04 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV04(obj);
 		}
 	};
 	/**
@@ -709,11 +773,15 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV01> forFIToFICustomerDirectDebitV01 = new MMConstraint<FIToFICustomerDirectDebitV01>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerDirectDebitV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then DirectDebitTransactionInformation/InstructingAgent is not allowed.\n\n.";
 			owner_lazy = () -> FIToFICustomerDirectDebitV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV01 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV01(obj);
 		}
 	};
 	/**
@@ -743,12 +811,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV02> forFIToFICustomerDirectDebitV02 = new MMConstraint<FIToFICustomerDirectDebitV02>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerDirectDebitV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then DirectDebitTransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> FIToFICustomerDirectDebitV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV02 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV02(obj);
 		}
 	};
 	/**
@@ -778,12 +850,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV03> forFIToFICustomerDirectDebitV03 = new MMConstraint<FIToFICustomerDirectDebitV03>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerDirectDebitV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then DirectDebitTransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> FIToFICustomerDirectDebitV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV03 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV03(obj);
 		}
 	};
 	/**
@@ -821,13 +897,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV04> forFIToFICustomerDirectDebitV04 = new MMConstraint<FIToFICustomerDirectDebitV04>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerDirectDebitV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then DirectDebitTransactionInformation/InstructingAgent is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerDirectDebitV05);
 			owner_lazy = () -> FIToFICustomerDirectDebitV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV04 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV04(obj);
 		}
 	};
 	/**
@@ -853,11 +933,15 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentCancellationRequestV01>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.\n\n.";
 			owner_lazy = () -> com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(com.tools20022.repository.area.pacs.PaymentCancellationRequestV01 obj) throws Exception {
+			checkPaymentCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -883,11 +967,15 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV01> forFIToFIPaymentReversalV01 = new MMConstraint<FIToFIPaymentReversalV01>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFIPaymentReversalV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.\n\n.";
 			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV01 obj) throws Exception {
+			checkFIToFIPaymentReversalV01(obj);
 		}
 	};
 	/**
@@ -917,12 +1005,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV02> forFIToFIPaymentReversalV02 = new MMConstraint<FIToFIPaymentReversalV02>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFIPaymentReversalV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> FIToFIPaymentReversalV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV02 obj) throws Exception {
+			checkFIToFIPaymentReversalV02(obj);
 		}
 	};
 	/**
@@ -952,12 +1044,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV03> forFIToFIPaymentReversalV03 = new MMConstraint<FIToFIPaymentReversalV03>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFIPaymentReversalV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> FIToFIPaymentReversalV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV03 obj) throws Exception {
+			checkFIToFIPaymentReversalV03(obj);
 		}
 	};
 	/**
@@ -995,13 +1091,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV04> forFIToFIPaymentReversalV04 = new MMConstraint<FIToFIPaymentReversalV04>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFIPaymentReversalV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFIPaymentReversalV05);
 			owner_lazy = () -> FIToFIPaymentReversalV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV04 obj) throws Exception {
+			checkFIToFIPaymentReversalV04(obj);
 		}
 	};
 	/**
@@ -1027,11 +1127,15 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<com.tools20022.repository.area.pacs.PaymentStatusReportV02>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformationAndStatus/InstructingAgent is not allowed.\n\n.";
 			owner_lazy = () -> com.tools20022.repository.area.pacs.PaymentStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(com.tools20022.repository.area.pacs.PaymentStatusReportV02 obj) throws Exception {
+			checkPaymentStatusReportV02(obj);
 		}
 	};
 	/**
@@ -1057,11 +1161,15 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV01> forFinancialInstitutionCreditTransferV01 = new MMConstraint<FinancialInstitutionCreditTransferV01>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFinancialInstitutionCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.\n.";
 			owner_lazy = () -> FinancialInstitutionCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV01 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV01(obj);
 		}
 	};
 	/**
@@ -1091,12 +1199,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV02> forFinancialInstitutionCreditTransferV02 = new MMConstraint<FinancialInstitutionCreditTransferV02>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFinancialInstitutionCreditTransferV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> FinancialInstitutionCreditTransferV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV02 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV02(obj);
 		}
 	};
 	/**
@@ -1126,12 +1238,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV03> forFinancialInstitutionCreditTransferV03 = new MMConstraint<FinancialInstitutionCreditTransferV03>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFinancialInstitutionCreditTransferV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> FinancialInstitutionCreditTransferV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV03 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV03(obj);
 		}
 	};
 	/**
@@ -1169,13 +1285,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV04> forFinancialInstitutionCreditTransferV04 = new MMConstraint<FinancialInstitutionCreditTransferV04>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFinancialInstitutionCreditTransferV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV05);
 			owner_lazy = () -> FinancialInstitutionCreditTransferV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV04 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV04(obj);
 		}
 	};
 	/**
@@ -1201,11 +1321,15 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV01> forPaymentReturnV01 = new MMConstraint<PaymentReturnV01>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentReturnV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> PaymentReturnV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV01 obj) throws Exception {
+			checkPaymentReturnV01(obj);
 		}
 	};
 	/**
@@ -1235,12 +1359,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV02> forPaymentReturnV02 = new MMConstraint<PaymentReturnV02>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentReturnV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> PaymentReturnV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV02 obj) throws Exception {
+			checkPaymentReturnV02(obj);
 		}
 	};
 	/**
@@ -1270,12 +1398,16 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV03> forPaymentReturnV03 = new MMConstraint<PaymentReturnV03>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentReturnV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
 			owner_lazy = () -> PaymentReturnV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV03 obj) throws Exception {
+			checkPaymentReturnV03(obj);
 		}
 	};
 	/**
@@ -1313,13 +1445,17 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV04> forPaymentReturnV04 = new MMConstraint<PaymentReturnV04>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentReturnV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentReturnV05);
 			owner_lazy = () -> PaymentReturnV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV04 obj) throws Exception {
+			checkPaymentReturnV04(obj);
 		}
 	};
 	/**
@@ -1362,7 +1498,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV05> forFinancialInstitutionCreditTransferV05 = new MMConstraint<FinancialInstitutionCreditTransferV05>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFinancialInstitutionCreditTransferV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
@@ -1370,6 +1505,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV04;
 			owner_lazy = () -> FinancialInstitutionCreditTransferV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV05 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV05(obj);
 		}
 	};
 	/**
@@ -1412,7 +1552,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV05> forFIToFICustomerDirectDebitV05 = new MMConstraint<FIToFICustomerDirectDebitV05>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerDirectDebitV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then DirectDebitTransactionInformation/InstructingAgent is not allowed.";
@@ -1420,6 +1559,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerDirectDebitV04;
 			owner_lazy = () -> FIToFICustomerDirectDebitV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV05 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV05(obj);
 		}
 	};
 	/**
@@ -1462,7 +1606,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV05> forFIToFIPaymentReversalV05 = new MMConstraint<FIToFIPaymentReversalV05>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFIPaymentReversalV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
@@ -1470,6 +1613,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFIPaymentReversalV04;
 			owner_lazy = () -> FIToFIPaymentReversalV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV05 obj) throws Exception {
+			checkFIToFIPaymentReversalV05(obj);
 		}
 	};
 	/**
@@ -1512,7 +1660,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV05> forPaymentReturnV05 = new MMConstraint<PaymentReturnV05>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentReturnV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
@@ -1520,6 +1667,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentReturnV04;
 			owner_lazy = () -> PaymentReturnV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV05 obj) throws Exception {
+			checkPaymentReturnV05(obj);
 		}
 	};
 	/**
@@ -1562,7 +1714,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV05> forFIToFICustomerCreditTransferV05 = new MMConstraint<FIToFICustomerCreditTransferV05>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFICustomerCreditTransferV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then CreditTransferTransactionInformation/InstructingAgent is not allowed.";
@@ -1570,6 +1721,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFICustomerCreditTransferV04;
 			owner_lazy = () -> FIToFICustomerCreditTransferV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV05 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV05(obj);
 		}
 	};
 	/**
@@ -1612,7 +1768,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<FIToFIPaymentReversalV06> forFIToFIPaymentReversalV06 = new MMConstraint<FIToFIPaymentReversalV06>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkFIToFIPaymentReversalV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
@@ -1620,6 +1775,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFIPaymentReversalV05;
 			owner_lazy = () -> FIToFIPaymentReversalV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFIPaymentReversalV06 obj) throws Exception {
+			checkFIToFIPaymentReversalV06(obj);
 		}
 	};
 	/**
@@ -1662,7 +1822,6 @@ public class ConstraintInstructingAgentRule {
 	 */
 	public static final MMConstraint<PaymentReturnV06> forPaymentReturnV06 = new MMConstraint<PaymentReturnV06>() {
 		{
-			validator = ConstraintInstructingAgentRule::checkPaymentReturnV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgentRule";
 			definition = "If GroupHeader/InstructingAgent is present, then TransactionInformation/InstructingAgent is not allowed.";
@@ -1670,6 +1829,11 @@ public class ConstraintInstructingAgentRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentReturnV05;
 			owner_lazy = () -> PaymentReturnV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionInformation[*]/InstructingAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/InstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentReturnV06 obj) throws Exception {
+			checkPaymentReturnV06(obj);
 		}
 	};
 

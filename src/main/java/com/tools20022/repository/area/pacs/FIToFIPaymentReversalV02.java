@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader41;
 import com.tools20022.repository.msg.OriginalGroupInformation22;
 import com.tools20022.repository.msg.PaymentTransactionInformation29;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -184,7 +183,7 @@ public class FIToFIPaymentReversalV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentReversalV02, GroupHeader41> mmGroupHeader = new MMMessageBuildingBlock<FIToFIPaymentReversalV02, GroupHeader41>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,12 +194,14 @@ public class FIToFIPaymentReversalV02 {
 			complexType_lazy = () -> GroupHeader41.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentReversalV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader41 getValue(FIToFIPaymentReversalV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentReversalV02 obj, GroupHeader41 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInf", required = true)
@@ -230,7 +231,7 @@ public class FIToFIPaymentReversalV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentReversalV02, OriginalGroupInformation22> mmOriginalGroupInformation = new MMMessageBuildingBlock<FIToFIPaymentReversalV02, OriginalGroupInformation22>() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,12 +242,14 @@ public class FIToFIPaymentReversalV02 {
 			complexType_lazy = () -> OriginalGroupInformation22.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentReversalV02.class.getMethod("getOriginalGroupInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalGroupInformation22 getValue(FIToFIPaymentReversalV02 obj) {
+			return obj.getOriginalGroupInformation();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentReversalV02 obj, OriginalGroupInformation22 value) {
+			obj.setOriginalGroupInformation(value);
 		}
 	};
 	@XmlElement(name = "TxInf")
@@ -276,7 +279,7 @@ public class FIToFIPaymentReversalV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentReversalV02, List<PaymentTransactionInformation29>> mmTransactionInformation = new MMMessageBuildingBlock<FIToFIPaymentReversalV02, List<PaymentTransactionInformation29>>() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,12 +289,14 @@ public class FIToFIPaymentReversalV02 {
 			complexType_lazy = () -> PaymentTransactionInformation29.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentReversalV02.class.getMethod("getTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentTransactionInformation29> getValue(FIToFIPaymentReversalV02 obj) {
+			return obj.getTransactionInformation();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentReversalV02 obj, List<PaymentTransactionInformation29> value) {
+			obj.setTransactionInformation(value);
 		}
 	};
 

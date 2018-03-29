@@ -113,7 +113,7 @@ public class FinancialInstrumentQuantity10Choice {
 	 * definition} = "Total quantity of units to be redeemed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity10Choice, FinancialInstrumentQuantity1> mmUnitsNumber = new MMMessageAttribute<FinancialInstrumentQuantity10Choice, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmObject();
@@ -125,6 +125,16 @@ public class FinancialInstrumentQuantity10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(FinancialInstrumentQuantity10Choice obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity10Choice obj, FinancialInstrumentQuantity1 value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "OrdrdAmt", required = true)
@@ -162,7 +172,7 @@ public class FinancialInstrumentQuantity10Choice {
 	 * definition} = "Amount of money instructed for the redemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity10Choice, ActiveCurrencyAndAmount> mmOrderedAmount = new MMMessageAttribute<FinancialInstrumentQuantity10Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmObject();
@@ -174,6 +184,16 @@ public class FinancialInstrumentQuantity10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(FinancialInstrumentQuantity10Choice obj) {
+			return obj.getOrderedAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity10Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setOrderedAmount(value);
 		}
 	};
 	@XmlElement(name = "HldgsRate", required = true)
@@ -211,7 +231,7 @@ public class FinancialInstrumentQuantity10Choice {
 	 * definition} = "Percentage of the holding to be redeemed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity10Choice, PercentageRate> mmHoldingsRate = new MMMessageAttribute<FinancialInstrumentQuantity10Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity10Choice.mmObject();
@@ -223,6 +243,16 @@ public class FinancialInstrumentQuantity10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(FinancialInstrumentQuantity10Choice obj) {
+			return obj.getHoldingsRate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity10Choice obj, PercentageRate value) {
+			obj.setHoldingsRate(value);
 		}
 	};
 

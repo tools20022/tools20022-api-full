@@ -109,7 +109,7 @@ public class ProductCharacteristics1Choice {
 	 * definition} = "Specifies the type of product characteristic."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStructuredProductCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProductCharacteristics1Choice, ProductCharacteristics1> mmStructuredProductCharacteristics = new MMMessageAssociationEnd<ProductCharacteristics1Choice, ProductCharacteristics1>() {
 		{
 			businessComponentTrace_lazy = () -> ProductCharacteristics.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProductCharacteristics1Choice.mmObject();
@@ -122,6 +122,16 @@ public class ProductCharacteristics1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProductCharacteristics1.mmObject();
+		}
+
+		@Override
+		public ProductCharacteristics1 getValue(ProductCharacteristics1Choice obj) {
+			return obj.getStructuredProductCharacteristics();
+		}
+
+		@Override
+		public void setValue(ProductCharacteristics1Choice obj, ProductCharacteristics1 value) {
+			obj.setStructuredProductCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "OthrPdctChrtcs", required = true)
@@ -159,7 +169,7 @@ public class ProductCharacteristics1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherProductCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProductCharacteristics1Choice, GenericIdentification4> mmOtherProductCharacteristics = new MMMessageAssociationEnd<ProductCharacteristics1Choice, GenericIdentification4>() {
 		{
 			businessComponentTrace_lazy = () -> ProductCharacteristics.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProductCharacteristics1Choice.mmObject();
@@ -172,6 +182,16 @@ public class ProductCharacteristics1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public GenericIdentification4 getValue(ProductCharacteristics1Choice obj) {
+			return obj.getOtherProductCharacteristics();
+		}
+
+		@Override
+		public void setValue(ProductCharacteristics1Choice obj, GenericIdentification4 value) {
+			obj.setOtherProductCharacteristics(value);
 		}
 	};
 

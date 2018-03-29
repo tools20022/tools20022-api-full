@@ -111,7 +111,7 @@ public class OptionFeaturesFormat8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionFeaturesFormat8SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<OptionFeaturesFormat8SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionFeaturesFormat8SD1.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class OptionFeaturesFormat8SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(OptionFeaturesFormat8SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(OptionFeaturesFormat8SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrRatnTp", required = true)
@@ -156,7 +166,7 @@ public class OptionFeaturesFormat8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProRationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionFeaturesFormat8SD1, ProrationType1Code> mmProRationType = new MMMessageAttribute<OptionFeaturesFormat8SD1, ProrationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionFeaturesFormat8SD1.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class OptionFeaturesFormat8SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProrationType1Code.mmObject();
+		}
+
+		@Override
+		public ProrationType1Code getValue(OptionFeaturesFormat8SD1 obj) {
+			return obj.getProRationType();
+		}
+
+		@Override
+		public void setValue(OptionFeaturesFormat8SD1 obj, ProrationType1Code value) {
+			obj.setProRationType(value);
 		}
 	};
 

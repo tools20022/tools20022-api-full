@@ -120,7 +120,7 @@ public class ConditionallyAcceptedStatusReason1Choice {
 	 * definition} = "Reason for the conditionally accepted status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionallyAcceptedStatusReason1Choice, ConditionallyAcceptedStatusReason3Code> mmReason = new MMMessageAttribute<ConditionallyAcceptedStatusReason1Choice, ConditionallyAcceptedStatusReason3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice.mmObject();
@@ -132,6 +132,16 @@ public class ConditionallyAcceptedStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConditionallyAcceptedStatusReason3Code.mmObject();
+		}
+
+		@Override
+		public ConditionallyAcceptedStatusReason3Code getValue(ConditionallyAcceptedStatusReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatusReason1Choice obj, ConditionallyAcceptedStatusReason3Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class ConditionallyAcceptedStatusReason1Choice {
 	 * definition} = "Reason for the conditionally accepted status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionallyAcceptedStatusReason1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<ConditionallyAcceptedStatusReason1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice.mmObject();
@@ -181,6 +191,16 @@ public class ConditionallyAcceptedStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(ConditionallyAcceptedStatusReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatusReason1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -218,7 +238,7 @@ public class ConditionallyAcceptedStatusReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionallyAcceptedStatusReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ConditionallyAcceptedStatusReason1Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason1Choice.mmObject();
@@ -230,6 +250,16 @@ public class ConditionallyAcceptedStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ConditionallyAcceptedStatusReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatusReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

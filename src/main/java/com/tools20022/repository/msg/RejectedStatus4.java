@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
+import com.tools20022.repository.msg.RejectedStatusReason4;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +117,7 @@ public class RejectedStatus4 {
 	 * definition} = "Reason for a rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus4, RejectedStatusReason4> mmReason = new MMMessageAssociationEnd<RejectedStatus4, RejectedStatusReason4>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus4.mmObject();
@@ -127,7 +129,17 @@ public class RejectedStatus4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason4.mmObject();
+			type_lazy = () -> RejectedStatusReason4.mmObject();
+		}
+
+		@Override
+		public RejectedStatusReason4 getValue(RejectedStatus4 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus4 obj, RejectedStatusReason4 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -165,7 +177,7 @@ public class RejectedStatus4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus4, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<RejectedStatus4, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatus4.mmObject();
@@ -177,7 +189,17 @@ public class RejectedStatus4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(RejectedStatus4 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(RejectedStatus4 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	/**
@@ -247,7 +269,7 @@ public class RejectedStatus4 {
 		return reason;
 	}
 
-	public RejectedStatus4 setReason(com.tools20022.repository.msg.RejectedStatusReason4 reason) {
+	public RejectedStatus4 setReason(RejectedStatusReason4 reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}
@@ -256,7 +278,7 @@ public class RejectedStatus4 {
 		return dataSourceScheme;
 	}
 
-	public RejectedStatus4 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public RejectedStatus4 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

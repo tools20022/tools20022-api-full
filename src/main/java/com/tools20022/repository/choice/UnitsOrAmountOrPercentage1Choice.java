@@ -102,7 +102,7 @@ public class UnitsOrAmountOrPercentage1Choice {
 	 * definition} = "Cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitsOrAmountOrPercentage1Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<UnitsOrAmountOrPercentage1Choice, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class UnitsOrAmountOrPercentage1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(UnitsOrAmountOrPercentage1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(UnitsOrAmountOrPercentage1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Unit", required = true)
@@ -145,7 +155,7 @@ public class UnitsOrAmountOrPercentage1Choice {
 	 * definition} = "Number of units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitsOrAmountOrPercentage1Choice, DecimalNumber> mmUnit = new MMMessageAttribute<UnitsOrAmountOrPercentage1Choice, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class UnitsOrAmountOrPercentage1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(UnitsOrAmountOrPercentage1Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(UnitsOrAmountOrPercentage1Choice obj, DecimalNumber value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "Pctg", required = true)
@@ -188,7 +208,7 @@ public class UnitsOrAmountOrPercentage1Choice {
 	 * definition} = "Percentage of cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitsOrAmountOrPercentage1Choice, PercentageRate> mmPercentage = new MMMessageAttribute<UnitsOrAmountOrPercentage1Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitsOrAmountOrPercentage1Choice.mmObject();
 			isDerived = false;
@@ -199,6 +219,16 @@ public class UnitsOrAmountOrPercentage1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(UnitsOrAmountOrPercentage1Choice obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(UnitsOrAmountOrPercentage1Choice obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 

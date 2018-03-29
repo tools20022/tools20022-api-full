@@ -128,7 +128,7 @@ public class PaymentInstrument21Choice {
 	 * PaymentInstrument11Choice.mmCreditTransferDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument21Choice, CreditTransfer8> mmCreditTransferDetails = new MMMessageAssociationEnd<PaymentInstrument21Choice, CreditTransfer8>() {
 		{
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument21Choice.mmObject();
@@ -142,6 +142,16 @@ public class PaymentInstrument21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CreditTransfer8.mmObject();
+		}
+
+		@Override
+		public CreditTransfer8 getValue(PaymentInstrument21Choice obj) {
+			return obj.getCreditTransferDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument21Choice obj, CreditTransfer8 value) {
+			obj.setCreditTransferDetails(value);
 		}
 	};
 	@XmlElement(name = "ChqDtls", required = true)
@@ -182,7 +192,7 @@ public class PaymentInstrument21Choice {
 	 * PaymentInstrument11Choice.mmChequeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument21Choice, Cheque9> mmChequeDetails = new MMMessageAssociationEnd<PaymentInstrument21Choice, Cheque9>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument21Choice.mmObject();
@@ -196,6 +206,16 @@ public class PaymentInstrument21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Cheque9.mmObject();
+		}
+
+		@Override
+		public Cheque9 getValue(PaymentInstrument21Choice obj) {
+			return obj.getChequeDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument21Choice obj, Cheque9 value) {
+			obj.setChequeDetails(value);
 		}
 	};
 	@XmlElement(name = "BkrsDrftDtls", required = true)
@@ -236,7 +256,7 @@ public class PaymentInstrument21Choice {
 	 * PaymentInstrument11Choice.mmBankersDraftDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBankersDraftDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument21Choice, Cheque9> mmBankersDraftDetails = new MMMessageAssociationEnd<PaymentInstrument21Choice, Cheque9>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument21Choice.mmObject();
@@ -250,6 +270,16 @@ public class PaymentInstrument21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Cheque9.mmObject();
+		}
+
+		@Override
+		public Cheque9 getValue(PaymentInstrument21Choice obj) {
+			return obj.getBankersDraftDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument21Choice obj, Cheque9 value) {
+			obj.setBankersDraftDetails(value);
 		}
 	};
 	@XmlElement(name = "CshAcctDtls", required = true)
@@ -291,7 +321,7 @@ public class PaymentInstrument21Choice {
 	 * PaymentInstrument11Choice.mmCashAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument21Choice, InvestmentAccount60> mmCashAccountDetails = new MMMessageAssociationEnd<PaymentInstrument21Choice, InvestmentAccount60>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument21Choice.mmObject();
@@ -305,6 +335,16 @@ public class PaymentInstrument21Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccount60.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount60 getValue(PaymentInstrument21Choice obj) {
+			return obj.getCashAccountDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument21Choice obj, InvestmentAccount60 value) {
+			obj.setCashAccountDetails(value);
 		}
 	};
 

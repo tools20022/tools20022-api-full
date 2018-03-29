@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ForeignExchangeTerms23;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -142,7 +143,7 @@ public class AmountAndDirection89 {
 	 * AmountAndDirection45.mmAccruedInterestIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection89, Optional<YesNoIndicator>> mmAccruedInterestIndicator = new MMMessageAttribute<AmountAndDirection89, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAccruedInterestIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection89.mmObject();
@@ -155,6 +156,16 @@ public class AmountAndDirection89 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(AmountAndDirection89 obj) {
+			return obj.getAccruedInterestIndicator();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection89 obj, Optional<YesNoIndicator> value) {
+			obj.setAccruedInterestIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmpDtyInd")
@@ -197,7 +208,7 @@ public class AmountAndDirection89 {
 	 * AmountAndDirection45.mmStampDutyIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStampDutyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection89, Optional<YesNoIndicator>> mmStampDutyIndicator = new MMMessageAttribute<AmountAndDirection89, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmStampDutyIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection89.mmObject();
@@ -210,6 +221,16 @@ public class AmountAndDirection89 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(AmountAndDirection89 obj) {
+			return obj.getStampDutyIndicator();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection89 obj, Optional<YesNoIndicator> value) {
+			obj.setStampDutyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrkrgAmtInd")
@@ -249,7 +270,7 @@ public class AmountAndDirection89 {
 	 * AmountAndDirection45.mmBrokerageAmountIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBrokerageAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection89, Optional<YesNoIndicator>> mmBrokerageAmountIndicator = new MMMessageAttribute<AmountAndDirection89, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection89.mmObject();
 			isDerived = false;
@@ -261,6 +282,16 @@ public class AmountAndDirection89 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(AmountAndDirection89 obj) {
+			return obj.getBrokerageAmountIndicator();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection89 obj, Optional<YesNoIndicator> value) {
+			obj.setBrokerageAmountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -303,7 +334,7 @@ public class AmountAndDirection89 {
 	 * AmountAndDirection45.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection89, Optional<ActiveCurrencyAndAmount>> mmAmount = new MMMessageAttribute<AmountAndDirection89, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection89.mmObject();
@@ -316,6 +347,16 @@ public class AmountAndDirection89 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(AmountAndDirection89 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection89 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -358,7 +399,7 @@ public class AmountAndDirection89 {
 	 * AmountAndDirection45.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection89, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<AmountAndDirection89, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection89.mmObject();
@@ -371,6 +412,16 @@ public class AmountAndDirection89 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(AmountAndDirection89 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection89 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
@@ -415,7 +466,7 @@ public class AmountAndDirection89 {
 	 * AmountAndDirection45.mmOriginalCurrencyAndOrderedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection89, Optional<ActiveOrHistoricCurrencyAndAmount>> mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute<AmountAndDirection89, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection89.mmObject();
@@ -428,6 +479,16 @@ public class AmountAndDirection89 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(AmountAndDirection89 obj) {
+			return obj.getOriginalCurrencyAndOrderedAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection89 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setOriginalCurrencyAndOrderedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FXDtls")
@@ -469,7 +530,7 @@ public class AmountAndDirection89 {
 	 * AmountAndDirection45.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountAndDirection89, Optional<ForeignExchangeTerms23>> mmForeignExchangeDetails = new MMMessageAssociationEnd<AmountAndDirection89, Optional<ForeignExchangeTerms23>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection89.mmObject();
@@ -482,7 +543,17 @@ public class AmountAndDirection89 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms23.mmObject();
+			type_lazy = () -> ForeignExchangeTerms23.mmObject();
+		}
+
+		@Override
+		public Optional<ForeignExchangeTerms23> getValue(AmountAndDirection89 obj) {
+			return obj.getForeignExchangeDetails();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection89 obj, Optional<ForeignExchangeTerms23> value) {
+			obj.setForeignExchangeDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -527,7 +598,7 @@ public class AmountAndDirection89 {
 	 * AmountAndDirection45.mmValueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection89, Optional<DateAndDateTime2Choice>> mmValueDate = new MMMessageAttribute<AmountAndDirection89, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection89.mmObject();
@@ -540,6 +611,16 @@ public class AmountAndDirection89 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(AmountAndDirection89 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection89 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 
@@ -619,7 +700,7 @@ public class AmountAndDirection89 {
 		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public AmountAndDirection89 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms23 foreignExchangeDetails) {
+	public AmountAndDirection89 setForeignExchangeDetails(ForeignExchangeTerms23 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 		return this;
 	}

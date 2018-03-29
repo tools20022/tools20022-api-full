@@ -111,7 +111,7 @@ public class DividendTypeFormat10Choice {
 	 * "Standard code to specify the frequency of the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendTypeFormat10Choice, CorporateActionFrequencyType5Code> mmCode = new MMMessageAttribute<DividendTypeFormat10Choice, CorporateActionFrequencyType5Code>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat10Choice.mmObject();
@@ -123,6 +123,16 @@ public class DividendTypeFormat10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionFrequencyType5Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionFrequencyType5Code getValue(DividendTypeFormat10Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat10Choice obj, CorporateActionFrequencyType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class DividendTypeFormat10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DividendTypeFormat10Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<DividendTypeFormat10Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat10Choice.mmObject();
@@ -174,6 +184,16 @@ public class DividendTypeFormat10Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(DividendTypeFormat10Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat10Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

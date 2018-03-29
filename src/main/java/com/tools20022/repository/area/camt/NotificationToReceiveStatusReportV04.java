@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.OriginalNotification7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.NotificationtoReceiveISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -153,7 +152,7 @@ public class NotificationToReceiveStatusReportV04 {
 	 * NotificationToReceiveStatusReportV03.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveStatusReportV04, GroupHeader60> mmGroupHeader = new MMMessageBuildingBlock<NotificationToReceiveStatusReportV04, GroupHeader60>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,12 +165,14 @@ public class NotificationToReceiveStatusReportV04 {
 			complexType_lazy = () -> GroupHeader60.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveStatusReportV04.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader60 getValue(NotificationToReceiveStatusReportV04 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveStatusReportV04 obj, GroupHeader60 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlNtfctnAndSts", required = true)
@@ -214,7 +215,7 @@ public class NotificationToReceiveStatusReportV04 {
 	 * NotificationToReceiveStatusReportV03.mmOriginalNotificationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalNotificationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveStatusReportV04, OriginalNotification7> mmOriginalNotificationAndStatus = new MMMessageBuildingBlock<NotificationToReceiveStatusReportV04, OriginalNotification7>() {
 		{
 			xmlTag = "OrgnlNtfctnAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +228,14 @@ public class NotificationToReceiveStatusReportV04 {
 			complexType_lazy = () -> OriginalNotification7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveStatusReportV04.class.getMethod("getOriginalNotificationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalNotification7 getValue(NotificationToReceiveStatusReportV04 obj) {
+			return obj.getOriginalNotificationAndStatus();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveStatusReportV04 obj, OriginalNotification7 value) {
+			obj.setOriginalNotificationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -275,7 +278,7 @@ public class NotificationToReceiveStatusReportV04 {
 	 * NotificationToReceiveStatusReportV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NotificationToReceiveStatusReportV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<NotificationToReceiveStatusReportV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,12 +290,14 @@ public class NotificationToReceiveStatusReportV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NotificationToReceiveStatusReportV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(NotificationToReceiveStatusReportV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(NotificationToReceiveStatusReportV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

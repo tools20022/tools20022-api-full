@@ -65,13 +65,17 @@ public class ConstraintCollateralResponsePresenceRule {
 	 */
 	public static final MMConstraint<CollateralResponse1> forCollateralResponse1 = new MMConstraint<CollateralResponse1>() {
 		{
-			validator = ConstraintCollateralResponsePresenceRule::checkCollateralResponse1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralResponsePresenceRule";
 			definition = "CashCollateralResponse or SecuritiesCollateralResponse or OtherCollateralResponse must be present at least once.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCollateralResponsePresenceRule.forCollateralResponse2);
 			owner_lazy = () -> CollateralResponse1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CashCollateralResponse[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecuritiesCollateralResponse[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherCollateralResponse[*]</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CollateralResponse1 obj) throws Exception {
+			checkCollateralResponse1(obj);
 		}
 	};
 	/**
@@ -106,13 +110,17 @@ public class ConstraintCollateralResponsePresenceRule {
 	 */
 	public static final MMConstraint<CollateralResponse2> forCollateralResponse2 = new MMConstraint<CollateralResponse2>() {
 		{
-			validator = ConstraintCollateralResponsePresenceRule::checkCollateralResponse2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralResponsePresenceRule";
 			definition = "CashCollateralResponse or SecuritiesCollateralResponse or OtherCollateralResponse must be present at least once.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCollateralResponsePresenceRule.forCollateralResponse1;
 			owner_lazy = () -> CollateralResponse2.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CashCollateralResponse[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecuritiesCollateralResponse[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/OtherCollateralResponse[*]</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CollateralResponse2 obj) throws Exception {
+			checkCollateralResponse2(obj);
 		}
 	};
 

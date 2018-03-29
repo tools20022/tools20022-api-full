@@ -23,6 +23,8 @@ import com.tools20022.repository.area.sese.RequestForTransferStatusReportV03;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference3;
+import com.tools20022.repository.msg.InvestmentAccount22;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -165,7 +167,7 @@ public class MessageAndBusinessReference6 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference6, Optional<AdditionalReference3>> mmPreviousReference = new MMMessageAssociationEnd<MessageAndBusinessReference6, Optional<AdditionalReference3>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference6.mmObject();
@@ -177,7 +179,17 @@ public class MessageAndBusinessReference6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference3> getValue(MessageAndBusinessReference6 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference6 obj, Optional<AdditionalReference3> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrRef")
@@ -215,7 +227,7 @@ public class MessageAndBusinessReference6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference6, Optional<AdditionalReference3>> mmOtherReference = new MMMessageAssociationEnd<MessageAndBusinessReference6, Optional<AdditionalReference3>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference6.mmObject();
@@ -227,7 +239,17 @@ public class MessageAndBusinessReference6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference3> getValue(MessageAndBusinessReference6 obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference6 obj, Optional<AdditionalReference3> value) {
+			obj.setOtherReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MstrRef")
@@ -274,7 +296,7 @@ public class MessageAndBusinessReference6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageAndBusinessReference6, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<MessageAndBusinessReference6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference6.mmObject();
@@ -287,6 +309,16 @@ public class MessageAndBusinessReference6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MessageAndBusinessReference6 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference6 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfRef", required = true)
@@ -333,7 +365,7 @@ public class MessageAndBusinessReference6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageAndBusinessReference6, Max35Text> mmTransferReference = new MMMessageAttribute<MessageAndBusinessReference6, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference6.mmObject();
@@ -346,6 +378,16 @@ public class MessageAndBusinessReference6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MessageAndBusinessReference6 obj) {
+			return obj.getTransferReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference6 obj, Max35Text value) {
+			obj.setTransferReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -392,7 +434,7 @@ public class MessageAndBusinessReference6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageAndBusinessReference6, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<MessageAndBusinessReference6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference6.mmObject();
@@ -405,6 +447,16 @@ public class MessageAndBusinessReference6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MessageAndBusinessReference6 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference6 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -451,7 +503,7 @@ public class MessageAndBusinessReference6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageAndBusinessReference6, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<MessageAndBusinessReference6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference6.mmObject();
@@ -464,6 +516,16 @@ public class MessageAndBusinessReference6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MessageAndBusinessReference6 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference6 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls")
@@ -509,7 +571,7 @@ public class MessageAndBusinessReference6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageAndBusinessReference6, Optional<InvestmentAccount22>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<MessageAndBusinessReference6, Optional<InvestmentAccount22>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageAndBusinessReference6.mmObject();
@@ -522,7 +584,17 @@ public class MessageAndBusinessReference6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount22.mmObject();
+			type_lazy = () -> InvestmentAccount22.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount22> getValue(MessageAndBusinessReference6 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(MessageAndBusinessReference6 obj, Optional<InvestmentAccount22> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	/**
@@ -601,7 +673,7 @@ public class MessageAndBusinessReference6 {
 		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public MessageAndBusinessReference6 setPreviousReference(com.tools20022.repository.msg.AdditionalReference3 previousReference) {
+	public MessageAndBusinessReference6 setPreviousReference(AdditionalReference3 previousReference) {
 		this.previousReference = previousReference;
 		return this;
 	}
@@ -610,7 +682,7 @@ public class MessageAndBusinessReference6 {
 		return otherReference == null ? Optional.empty() : Optional.of(otherReference);
 	}
 
-	public MessageAndBusinessReference6 setOtherReference(com.tools20022.repository.msg.AdditionalReference3 otherReference) {
+	public MessageAndBusinessReference6 setOtherReference(AdditionalReference3 otherReference) {
 		this.otherReference = otherReference;
 		return this;
 	}
@@ -655,7 +727,7 @@ public class MessageAndBusinessReference6 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public MessageAndBusinessReference6 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount22 investmentAccountDetails) {
+	public MessageAndBusinessReference6 setInvestmentAccountDetails(InvestmentAccount22 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}

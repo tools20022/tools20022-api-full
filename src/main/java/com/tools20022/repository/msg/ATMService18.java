@@ -102,7 +102,7 @@ public class ATMService18 {
 	 * ATMService16.mmServiceReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService18, Max35Text> mmIdentification = new MMMessageAttribute<ATMService18, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService18.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class ATMService18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ATMService18 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ATMService18 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Labl")
@@ -149,7 +159,7 @@ public class ATMService18 {
 	 * ATMService16.mmATMServiceCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService18, Optional<Max35Text>> mmLabel = new MMMessageAttribute<ATMService18, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService18.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class ATMService18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMService18 obj) {
+			return obj.getLabel();
+		}
+
+		@Override
+		public void setValue(ATMService18 obj, Optional<Max35Text> value) {
+			obj.setLabel(value.orElse(null));
 		}
 	};
 

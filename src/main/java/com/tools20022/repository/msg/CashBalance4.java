@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.BalanceCounterparty1Code;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -137,7 +138,7 @@ public class CashBalance4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashBalance4, List<BalanceType8Choice>> mmType = new MMMessageAssociationEnd<CashBalance4, List<BalanceType8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
@@ -150,6 +151,16 @@ public class CashBalance4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BalanceType8Choice.mmObject();
+		}
+
+		@Override
+		public List<BalanceType8Choice> getValue(CashBalance4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashBalance4 obj, List<BalanceType8Choice> value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyTp", required = true)
@@ -196,7 +207,7 @@ public class CashBalance4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance4, BalanceCounterparty1Code> mmCounterpartyType = new MMMessageAttribute<CashBalance4, BalanceCounterparty1Code>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCalculationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
@@ -210,9 +221,19 @@ public class CashBalance4 {
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceCounterparty1Code.mmObject();
 		}
+
+		@Override
+		public BalanceCounterparty1Code getValue(CashBalance4 obj) {
+			return obj.getCounterpartyType();
+		}
+
+		@Override
+		public void setValue(CashBalance4 obj, BalanceCounterparty1Code value) {
+			obj.setCounterpartyType(value);
+		}
 	};
 	@XmlElement(name = "CtrPtyId")
-	protected List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> counterpartyIdentification;
+	protected List<BranchAndFinancialInstitutionIdentification5> counterpartyIdentification;
 	/**
 	 * 
 	 <p>
@@ -253,7 +274,7 @@ public class CashBalance4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashBalance4, List<BranchAndFinancialInstitutionIdentification5>> mmCounterpartyIdentification = new MMMessageAssociationEnd<CashBalance4, List<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCounterparty;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
@@ -265,7 +286,17 @@ public class CashBalance4 {
 			nextVersions_lazy = () -> Arrays.asList(CashBalance9.mmCounterpartyIdentification);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public List<BranchAndFinancialInstitutionIdentification5> getValue(CashBalance4 obj) {
+			return obj.getCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(CashBalance4 obj, List<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setCounterpartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -310,7 +341,7 @@ public class CashBalance4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance4, List<DateAndDateTimeSearchChoice>> mmValueDate = new MMMessageAttribute<CashBalance4, List<DateAndDateTimeSearchChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
@@ -322,6 +353,16 @@ public class CashBalance4 {
 			nextVersions_lazy = () -> Arrays.asList(CashBalance9.mmValueDate);
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
+		}
+
+		@Override
+		public List<DateAndDateTimeSearchChoice> getValue(CashBalance4 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(CashBalance4 obj, List<DateAndDateTimeSearchChoice> value) {
+			obj.setValueDate(value);
 		}
 	};
 
@@ -365,7 +406,7 @@ public class CashBalance4 {
 		return counterpartyIdentification == null ? counterpartyIdentification = new ArrayList<>() : counterpartyIdentification;
 	}
 
-	public CashBalance4 setCounterpartyIdentification(List<com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5> counterpartyIdentification) {
+	public CashBalance4 setCounterpartyIdentification(List<BranchAndFinancialInstitutionIdentification5> counterpartyIdentification) {
 		this.counterpartyIdentification = Objects.requireNonNull(counterpartyIdentification);
 		return this;
 	}

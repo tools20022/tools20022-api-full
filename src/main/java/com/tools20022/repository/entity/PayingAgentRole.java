@@ -22,7 +22,6 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -92,7 +91,7 @@ public class PayingAgentRole {
 	 * definition} = "Amount of paying/sub-paying agent commission."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCommissionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PayingAgentRole, CurrencyAndAmount> mmCommissionAmount = new MMBusinessAttribute<PayingAgentRole, CurrencyAndAmount>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PayingAgentRole.mmObject();
@@ -104,12 +103,14 @@ public class PayingAgentRole {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayingAgentRole.class.getMethod("getCommissionAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(PayingAgentRole obj) {
+			return obj.getCommissionAmount();
+		}
+
+		@Override
+		public void setValue(PayingAgentRole obj, CurrencyAndAmount value) {
+			obj.setCommissionAmount(value);
 		}
 	};
 

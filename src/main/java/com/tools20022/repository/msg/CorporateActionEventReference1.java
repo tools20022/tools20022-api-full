@@ -218,7 +218,7 @@ public class CorporateActionEventReference1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventReference1, CorporateActionEventReference1Choice> mmEventIdentification = new MMMessageAssociationEnd<CorporateActionEventReference1, CorporateActionEventReference1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReference1.mmObject();
@@ -233,6 +233,16 @@ public class CorporateActionEventReference1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventReference1Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventReference1Choice getValue(CorporateActionEventReference1 obj) {
+			return obj.getEventIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference1 obj, CorporateActionEventReference1Choice value) {
+			obj.setEventIdentification(value);
 		}
 	};
 	@XmlElement(name = "LkgTp")
@@ -277,7 +287,7 @@ public class CorporateActionEventReference1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventReference1, Optional<ProcessingPosition1Choice>> mmLinkageType = new MMMessageAssociationEnd<CorporateActionEventReference1, Optional<ProcessingPosition1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionEventReference1.mmObject();
 			isDerived = false;
@@ -291,6 +301,16 @@ public class CorporateActionEventReference1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition1Choice> getValue(CorporateActionEventReference1 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventReference1 obj, Optional<ProcessingPosition1Choice> value) {
+			obj.setLinkageType(value.orElse(null));
 		}
 	};
 

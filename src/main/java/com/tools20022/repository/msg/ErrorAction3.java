@@ -130,7 +130,7 @@ public class ErrorAction3 {
 	 * ErrorAction2.mmActionResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorAction3, List<TerminalManagementActionResult3Code>> mmActionResult = new MMMessageAttribute<ErrorAction3, List<TerminalManagementActionResult3Code>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction3.mmObject();
@@ -143,6 +143,16 @@ public class ErrorAction3 {
 			previousVersion_lazy = () -> ErrorAction2.mmActionResult;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult3Code.mmObject();
+		}
+
+		@Override
+		public List<TerminalManagementActionResult3Code> getValue(ErrorAction3 obj) {
+			return obj.getActionResult();
+		}
+
+		@Override
+		public void setValue(ErrorAction3 obj, List<TerminalManagementActionResult3Code> value) {
+			obj.setActionResult(value);
 		}
 	};
 	@XmlElement(name = "ActnToPrc", required = true)
@@ -192,7 +202,7 @@ public class ErrorAction3 {
 	 * ErrorAction2.mmActionToProcess}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionToProcess = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorAction3, TerminalManagementErrorAction2Code> mmActionToProcess = new MMMessageAttribute<ErrorAction3, TerminalManagementErrorAction2Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionToProcess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction3.mmObject();
@@ -206,6 +216,16 @@ public class ErrorAction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementErrorAction2Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementErrorAction2Code getValue(ErrorAction3 obj) {
+			return obj.getActionToProcess();
+		}
+
+		@Override
+		public void setValue(ErrorAction3 obj, TerminalManagementErrorAction2Code value) {
+			obj.setActionToProcess(value);
 		}
 	};
 

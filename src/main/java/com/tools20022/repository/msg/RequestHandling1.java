@@ -99,7 +99,7 @@ public class RequestHandling1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestHandling1, Max4AlphaNumericText> mmStatusCode = new MMMessageAttribute<RequestHandling1, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestHandling1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class RequestHandling1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(RequestHandling1 obj) {
+			return obj.getStatusCode();
+		}
+
+		@Override
+		public void setValue(RequestHandling1 obj, Max4AlphaNumericText value) {
+			obj.setStatusCode(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -141,7 +151,7 @@ public class RequestHandling1 {
 	 * definition} = "Description of the status, in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestHandling1, Optional<Max140Text>> mmDescription = new MMMessageAttribute<RequestHandling1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestHandling1.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class RequestHandling1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(RequestHandling1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(RequestHandling1 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

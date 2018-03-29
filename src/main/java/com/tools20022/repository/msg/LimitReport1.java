@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.metamodel.MMXor;
 import com.tools20022.repository.entity.RiskManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ErrorHandling2;
+import com.tools20022.repository.msg.LimitDetails3;
+import com.tools20022.repository.msg.LimitIdentificationDetails1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +117,7 @@ public class LimitReport1 {
 	 * "Identification of the limit on which information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitReport1, LimitIdentificationDetails1> mmLimitIdentification = new MMMessageAssociationEnd<LimitReport1, LimitIdentificationDetails1>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport1.mmObject();
@@ -126,7 +129,17 @@ public class LimitReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails1.mmObject();
+			type_lazy = () -> LimitIdentificationDetails1.mmObject();
+		}
+
+		@Override
+		public LimitIdentificationDetails1 getValue(LimitReport1 obj) {
+			return obj.getLimitIdentification();
+		}
+
+		@Override
+		public void setValue(LimitReport1 obj, LimitIdentificationDetails1 value) {
+			obj.setLimitIdentification(value);
 		}
 	};
 	@XmlElement(name = "Lmt", required = true)
@@ -161,7 +174,7 @@ public class LimitReport1 {
 	 * definition} = "Requested information on the limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitReport1, LimitDetails3> mmLimit = new MMMessageAssociationEnd<LimitReport1, LimitDetails3>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport1.mmObject();
@@ -173,7 +186,17 @@ public class LimitReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitDetails3.mmObject();
+			type_lazy = () -> LimitDetails3.mmObject();
+		}
+
+		@Override
+		public LimitDetails3 getValue(LimitReport1 obj) {
+			return obj.getLimit();
+		}
+
+		@Override
+		public void setValue(LimitReport1 obj, LimitDetails3 value) {
+			obj.setLimit(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -203,7 +226,7 @@ public class LimitReport1 {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitReport1, ErrorHandling2> mmBusinessError = new MMMessageAssociationEnd<LimitReport1, ErrorHandling2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReport1.mmObject();
 			isDerived = false;
@@ -214,7 +237,17 @@ public class LimitReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
+			type_lazy = () -> ErrorHandling2.mmObject();
+		}
+
+		@Override
+		public ErrorHandling2 getValue(LimitReport1 obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(LimitReport1 obj, ErrorHandling2 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	/**
@@ -276,7 +309,7 @@ public class LimitReport1 {
 		return limitIdentification;
 	}
 
-	public LimitReport1 setLimitIdentification(com.tools20022.repository.msg.LimitIdentificationDetails1 limitIdentification) {
+	public LimitReport1 setLimitIdentification(LimitIdentificationDetails1 limitIdentification) {
 		this.limitIdentification = Objects.requireNonNull(limitIdentification);
 		return this;
 	}
@@ -285,7 +318,7 @@ public class LimitReport1 {
 		return limit;
 	}
 
-	public LimitReport1 setLimit(com.tools20022.repository.msg.LimitDetails3 limit) {
+	public LimitReport1 setLimit(LimitDetails3 limit) {
 		this.limit = Objects.requireNonNull(limit);
 		return this;
 	}
@@ -294,7 +327,7 @@ public class LimitReport1 {
 		return businessError;
 	}
 
-	public LimitReport1 setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+	public LimitReport1 setBusinessError(ErrorHandling2 businessError) {
 		this.businessError = Objects.requireNonNull(businessError);
 		return this;
 	}

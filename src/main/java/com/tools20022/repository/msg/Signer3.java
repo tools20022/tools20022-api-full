@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.Recipient5Choice;
 import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification16;
+import com.tools20022.repository.msg.AlgorithmIdentification17;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +127,7 @@ public class Signer3 {
 	 * Signer2.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Signer3, Optional<Number>> mmVersion = new MMMessageAttribute<Signer3, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Signer3.mmObject();
 			isDerived = false;
@@ -138,6 +140,16 @@ public class Signer3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Signer3 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(Signer3 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SgnrId")
@@ -180,7 +192,7 @@ public class Signer3 {
 	 * Signer2.mmSignerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Signer3, Optional<Recipient5Choice>> mmSignerIdentification = new MMMessageAssociationEnd<Signer3, Optional<Recipient5Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Signer3.mmObject();
 			isDerived = false;
@@ -194,6 +206,16 @@ public class Signer3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Recipient5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Recipient5Choice> getValue(Signer3 obj) {
+			return obj.getSignerIdentification();
+		}
+
+		@Override
+		public void setValue(Signer3 obj, Optional<Recipient5Choice> value) {
+			obj.setSignerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgstAlgo", required = true)
@@ -237,7 +259,7 @@ public class Signer3 {
 	 * Signer2.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Signer3, AlgorithmIdentification16> mmDigestAlgorithm = new MMMessageAssociationEnd<Signer3, AlgorithmIdentification16>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Signer3.mmObject();
 			isDerived = false;
@@ -250,7 +272,17 @@ public class Signer3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification16.mmObject();
+			type_lazy = () -> AlgorithmIdentification16.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification16 getValue(Signer3 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(Signer3 obj, AlgorithmIdentification16 value) {
+			obj.setDigestAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "SgntrAlgo", required = true)
@@ -294,7 +326,7 @@ public class Signer3 {
 	 * Signer2.mmSignatureAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignatureAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Signer3, AlgorithmIdentification17> mmSignatureAlgorithm = new MMMessageAssociationEnd<Signer3, AlgorithmIdentification17>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Signer3.mmObject();
 			isDerived = false;
@@ -307,7 +339,17 @@ public class Signer3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification17.mmObject();
+			type_lazy = () -> AlgorithmIdentification17.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification17 getValue(Signer3 obj) {
+			return obj.getSignatureAlgorithm();
+		}
+
+		@Override
+		public void setValue(Signer3 obj, AlgorithmIdentification17 value) {
+			obj.setSignatureAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "Sgntr", required = true)
@@ -351,7 +393,7 @@ public class Signer3 {
 	 * Signer2.mmSignature}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Signer3, Max3000Binary> mmSignature = new MMMessageAttribute<Signer3, Max3000Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Signer3.mmObject();
 			isDerived = false;
@@ -364,6 +406,16 @@ public class Signer3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
+		}
+
+		@Override
+		public Max3000Binary getValue(Signer3 obj) {
+			return obj.getSignature();
+		}
+
+		@Override
+		public void setValue(Signer3 obj, Max3000Binary value) {
+			obj.setSignature(value);
 		}
 	};
 
@@ -405,7 +457,7 @@ public class Signer3 {
 		return digestAlgorithm;
 	}
 
-	public Signer3 setDigestAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification16 digestAlgorithm) {
+	public Signer3 setDigestAlgorithm(AlgorithmIdentification16 digestAlgorithm) {
 		this.digestAlgorithm = Objects.requireNonNull(digestAlgorithm);
 		return this;
 	}
@@ -414,7 +466,7 @@ public class Signer3 {
 		return signatureAlgorithm;
 	}
 
-	public Signer3 setSignatureAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification17 signatureAlgorithm) {
+	public Signer3 setSignatureAlgorithm(AlgorithmIdentification17 signatureAlgorithm) {
 		this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
 		return this;
 	}

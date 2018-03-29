@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.NetworkAccess;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NetworkParameters4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -97,7 +98,7 @@ public class NetworkParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Adr", required = true)
-	protected List<com.tools20022.repository.msg.NetworkParameters4> address;
+	protected List<NetworkParameters4> address;
 	/**
 	 * 
 	 <p>
@@ -132,7 +133,7 @@ public class NetworkParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetworkParameters3, List<NetworkParameters4>> mmAddress = new MMMessageAssociationEnd<NetworkParameters3, List<NetworkParameters4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
 			isDerived = false;
@@ -143,7 +144,17 @@ public class NetworkParameters3 {
 			nextVersions_lazy = () -> Arrays.asList(NetworkParameters5.mmAddress);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters4.mmObject();
+			type_lazy = () -> NetworkParameters4.mmObject();
+		}
+
+		@Override
+		public List<NetworkParameters4> getValue(NetworkParameters3 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(NetworkParameters3 obj, List<NetworkParameters4> value) {
+			obj.setAddress(value);
 		}
 	};
 	@XmlElement(name = "UsrNm")
@@ -193,7 +204,7 @@ public class NetworkParameters3 {
 	 * NetworkParameters1.mmUserName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters3, Optional<Max35Text>> mmUserName = new MMMessageAttribute<NetworkParameters3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmUserName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
@@ -207,6 +218,16 @@ public class NetworkParameters3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(NetworkParameters3 obj) {
+			return obj.getUserName();
+		}
+
+		@Override
+		public void setValue(NetworkParameters3 obj, Optional<Max35Text> value) {
+			obj.setUserName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AccsCd")
@@ -259,7 +280,7 @@ public class NetworkParameters3 {
 	 * NetworkParameters1.mmAccessCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccessCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters3, Optional<Max35Binary>> mmAccessCode = new MMMessageAttribute<NetworkParameters3, Optional<Max35Binary>>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmAccessCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
@@ -273,6 +294,16 @@ public class NetworkParameters3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Binary> getValue(NetworkParameters3 obj) {
+			return obj.getAccessCode();
+		}
+
+		@Override
+		public void setValue(NetworkParameters3 obj, Optional<Max35Binary> value) {
+			obj.setAccessCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvrCert")
@@ -313,7 +344,7 @@ public class NetworkParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServerCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters3, List<Max3000Binary>> mmServerCertificate = new MMMessageAttribute<NetworkParameters3, List<Max3000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
 			isDerived = false;
@@ -324,6 +355,16 @@ public class NetworkParameters3 {
 			nextVersions_lazy = () -> Arrays.asList(NetworkParameters5.mmServerCertificate);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
+		}
+
+		@Override
+		public List<Max3000Binary> getValue(NetworkParameters3 obj) {
+			return obj.getServerCertificate();
+		}
+
+		@Override
+		public void setValue(NetworkParameters3 obj, List<Max3000Binary> value) {
+			obj.setServerCertificate(value);
 		}
 	};
 	@XmlElement(name = "SvrCertIdr")
@@ -366,7 +407,7 @@ public class NetworkParameters3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServerCertificateIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters3, List<Max140Binary>> mmServerCertificateIdentifier = new MMMessageAttribute<NetworkParameters3, List<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
 			isDerived = false;
@@ -377,6 +418,16 @@ public class NetworkParameters3 {
 			nextVersions_lazy = () -> Arrays.asList(NetworkParameters5.mmServerCertificateIdentifier);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public List<Max140Binary> getValue(NetworkParameters3 obj) {
+			return obj.getServerCertificateIdentifier();
+		}
+
+		@Override
+		public void setValue(NetworkParameters3 obj, List<Max140Binary> value) {
+			obj.setServerCertificateIdentifier(value);
 		}
 	};
 
@@ -390,7 +441,7 @@ public class NetworkParameters3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkParameters3";
 				definition = "Parameters to communicate with a host.";
-				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetworkParameters4.mmObject(), NetworkParameters5.mmObject(), NetworkParameters6.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(NetworkParameters4.mmObject(), NetworkParameters5.mmObject(), NetworkParameters6.mmObject());
 				previousVersion_lazy = () -> NetworkParameters1.mmObject();
 			}
 		});
@@ -401,7 +452,7 @@ public class NetworkParameters3 {
 		return address == null ? address = new ArrayList<>() : address;
 	}
 
-	public NetworkParameters3 setAddress(List<com.tools20022.repository.msg.NetworkParameters4> address) {
+	public NetworkParameters3 setAddress(List<NetworkParameters4> address) {
 		this.address = Objects.requireNonNull(address);
 		return this;
 	}

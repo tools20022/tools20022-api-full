@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InstructionIdentification;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -97,7 +98,7 @@ public class AmendInformation {
 	 * definition} = "Identifies the meeting notification to be modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmendInformation, InstructionIdentification> mmPreviousReference = new MMMessageAssociationEnd<AmendInformation, InstructionIdentification>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendInformation.mmObject();
 			isDerived = false;
@@ -108,7 +109,17 @@ public class AmendInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InstructionIdentification.mmObject();
+			type_lazy = () -> InstructionIdentification.mmObject();
+		}
+
+		@Override
+		public InstructionIdentification getValue(AmendInformation obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(AmendInformation obj, InstructionIdentification value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "RcnfrmInstrs", required = true)
@@ -143,7 +154,7 @@ public class AmendInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconfirmInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmendInformation, YesNoIndicator> mmReconfirmInstructions = new MMMessageAttribute<AmendInformation, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendInformation.mmObject();
 			isDerived = false;
@@ -154,6 +165,16 @@ public class AmendInformation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(AmendInformation obj) {
+			return obj.getReconfirmInstructions();
+		}
+
+		@Override
+		public void setValue(AmendInformation obj, YesNoIndicator value) {
+			obj.setReconfirmInstructions(value);
 		}
 	};
 
@@ -174,7 +195,7 @@ public class AmendInformation {
 		return previousReference;
 	}
 
-	public AmendInformation setPreviousReference(com.tools20022.repository.msg.InstructionIdentification previousReference) {
+	public AmendInformation setPreviousReference(InstructionIdentification previousReference) {
 		this.previousReference = Objects.requireNonNull(previousReference);
 		return this;
 	}

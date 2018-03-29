@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Operation3Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TradePartyIdentificationQuery4;
+import com.tools20022.repository.msg.TradePartyIdentificationQuery6;
+import com.tools20022.repository.msg.TradePartyIdentificationQuery7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +124,7 @@ public class TradePartyQueryCriteria2 {
 	 * definition} = "Specifies the AND/OR operators as query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyQueryCriteria2, Operation3Code> mmOperator = new MMMessageAttribute<TradePartyQueryCriteria2, Operation3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyQueryCriteria2.mmObject();
 			isDerived = false;
@@ -132,6 +135,16 @@ public class TradePartyQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Operation3Code.mmObject();
+		}
+
+		@Override
+		public Operation3Code getValue(TradePartyQueryCriteria2 obj) {
+			return obj.getOperator();
+		}
+
+		@Override
+		public void setValue(TradePartyQueryCriteria2 obj, Operation3Code value) {
+			obj.setOperator(value);
 		}
 	};
 	@XmlElement(name = "RptgCtrPty")
@@ -163,7 +176,7 @@ public class TradePartyQueryCriteria2 {
 	 * definition} = "Identifies the reporting counterparty of the contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery4>> mmReportingCounterparty = new MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyQueryCriteria2.mmObject();
 			isDerived = false;
@@ -174,7 +187,17 @@ public class TradePartyQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery4.mmObject();
+			type_lazy = () -> TradePartyIdentificationQuery4.mmObject();
+		}
+
+		@Override
+		public Optional<TradePartyIdentificationQuery4> getValue(TradePartyQueryCriteria2 obj) {
+			return obj.getReportingCounterparty();
+		}
+
+		@Override
+		public void setValue(TradePartyQueryCriteria2 obj, Optional<TradePartyIdentificationQuery4> value) {
+			obj.setReportingCounterparty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrCtrPty")
@@ -206,7 +229,7 @@ public class TradePartyQueryCriteria2 {
 	 * definition} = "Identifies the other counterparty of the contract.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery4>> mmOtherCounterparty = new MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyQueryCriteria2.mmObject();
 			isDerived = false;
@@ -217,7 +240,17 @@ public class TradePartyQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery4.mmObject();
+			type_lazy = () -> TradePartyIdentificationQuery4.mmObject();
+		}
+
+		@Override
+		public Optional<TradePartyIdentificationQuery4> getValue(TradePartyQueryCriteria2 obj) {
+			return obj.getOtherCounterparty();
+		}
+
+		@Override
+		public void setValue(TradePartyQueryCriteria2 obj, Optional<TradePartyIdentificationQuery4> value) {
+			obj.setOtherCounterparty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bnfcry")
@@ -251,7 +284,7 @@ public class TradePartyQueryCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficiary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery4>> mmBeneficiary = new MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyQueryCriteria2.mmObject();
 			isDerived = false;
@@ -262,7 +295,17 @@ public class TradePartyQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery4.mmObject();
+			type_lazy = () -> TradePartyIdentificationQuery4.mmObject();
+		}
+
+		@Override
+		public Optional<TradePartyIdentificationQuery4> getValue(TradePartyQueryCriteria2 obj) {
+			return obj.getBeneficiary();
+		}
+
+		@Override
+		public void setValue(TradePartyQueryCriteria2 obj, Optional<TradePartyIdentificationQuery4> value) {
+			obj.setBeneficiary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubmitgAgt")
@@ -296,7 +339,7 @@ public class TradePartyQueryCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmittingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery6>> mmSubmittingAgent = new MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyQueryCriteria2.mmObject();
 			isDerived = false;
@@ -307,7 +350,17 @@ public class TradePartyQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery6.mmObject();
+			type_lazy = () -> TradePartyIdentificationQuery6.mmObject();
+		}
+
+		@Override
+		public Optional<TradePartyIdentificationQuery6> getValue(TradePartyQueryCriteria2 obj) {
+			return obj.getSubmittingAgent();
+		}
+
+		@Override
+		public void setValue(TradePartyQueryCriteria2 obj, Optional<TradePartyIdentificationQuery6> value) {
+			obj.setSubmittingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Brkr")
@@ -341,7 +394,7 @@ public class TradePartyQueryCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBroker = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery6>> mmBroker = new MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyQueryCriteria2.mmObject();
 			isDerived = false;
@@ -352,7 +405,17 @@ public class TradePartyQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery6.mmObject();
+			type_lazy = () -> TradePartyIdentificationQuery6.mmObject();
+		}
+
+		@Override
+		public Optional<TradePartyIdentificationQuery6> getValue(TradePartyQueryCriteria2 obj) {
+			return obj.getBroker();
+		}
+
+		@Override
+		public void setValue(TradePartyQueryCriteria2 obj, Optional<TradePartyIdentificationQuery6> value) {
+			obj.setBroker(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CCP")
@@ -385,7 +448,7 @@ public class TradePartyQueryCriteria2 {
 	 * "The unique code for the CCP that has cleared the contract.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCCP = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery7>> mmCCP = new MMMessageAssociationEnd<TradePartyQueryCriteria2, Optional<TradePartyIdentificationQuery7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyQueryCriteria2.mmObject();
 			isDerived = false;
@@ -396,7 +459,17 @@ public class TradePartyQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery7.mmObject();
+			type_lazy = () -> TradePartyIdentificationQuery7.mmObject();
+		}
+
+		@Override
+		public Optional<TradePartyIdentificationQuery7> getValue(TradePartyQueryCriteria2 obj) {
+			return obj.getCCP();
+		}
+
+		@Override
+		public void setValue(TradePartyQueryCriteria2 obj, Optional<TradePartyIdentificationQuery7> value) {
+			obj.setCCP(value.orElse(null));
 		}
 	};
 
@@ -429,7 +502,7 @@ public class TradePartyQueryCriteria2 {
 		return reportingCounterparty == null ? Optional.empty() : Optional.of(reportingCounterparty);
 	}
 
-	public TradePartyQueryCriteria2 setReportingCounterparty(com.tools20022.repository.msg.TradePartyIdentificationQuery4 reportingCounterparty) {
+	public TradePartyQueryCriteria2 setReportingCounterparty(TradePartyIdentificationQuery4 reportingCounterparty) {
 		this.reportingCounterparty = reportingCounterparty;
 		return this;
 	}
@@ -438,7 +511,7 @@ public class TradePartyQueryCriteria2 {
 		return otherCounterparty == null ? Optional.empty() : Optional.of(otherCounterparty);
 	}
 
-	public TradePartyQueryCriteria2 setOtherCounterparty(com.tools20022.repository.msg.TradePartyIdentificationQuery4 otherCounterparty) {
+	public TradePartyQueryCriteria2 setOtherCounterparty(TradePartyIdentificationQuery4 otherCounterparty) {
 		this.otherCounterparty = otherCounterparty;
 		return this;
 	}
@@ -447,7 +520,7 @@ public class TradePartyQueryCriteria2 {
 		return beneficiary == null ? Optional.empty() : Optional.of(beneficiary);
 	}
 
-	public TradePartyQueryCriteria2 setBeneficiary(com.tools20022.repository.msg.TradePartyIdentificationQuery4 beneficiary) {
+	public TradePartyQueryCriteria2 setBeneficiary(TradePartyIdentificationQuery4 beneficiary) {
 		this.beneficiary = beneficiary;
 		return this;
 	}
@@ -456,7 +529,7 @@ public class TradePartyQueryCriteria2 {
 		return submittingAgent == null ? Optional.empty() : Optional.of(submittingAgent);
 	}
 
-	public TradePartyQueryCriteria2 setSubmittingAgent(com.tools20022.repository.msg.TradePartyIdentificationQuery6 submittingAgent) {
+	public TradePartyQueryCriteria2 setSubmittingAgent(TradePartyIdentificationQuery6 submittingAgent) {
 		this.submittingAgent = submittingAgent;
 		return this;
 	}
@@ -465,7 +538,7 @@ public class TradePartyQueryCriteria2 {
 		return broker == null ? Optional.empty() : Optional.of(broker);
 	}
 
-	public TradePartyQueryCriteria2 setBroker(com.tools20022.repository.msg.TradePartyIdentificationQuery6 broker) {
+	public TradePartyQueryCriteria2 setBroker(TradePartyIdentificationQuery6 broker) {
 		this.broker = broker;
 		return this;
 	}
@@ -474,7 +547,7 @@ public class TradePartyQueryCriteria2 {
 		return cCP == null ? Optional.empty() : Optional.of(cCP);
 	}
 
-	public TradePartyQueryCriteria2 setCCP(com.tools20022.repository.msg.TradePartyIdentificationQuery7 cCP) {
+	public TradePartyQueryCriteria2 setCCP(TradePartyIdentificationQuery7 cCP) {
 		this.cCP = cCP;
 		return this;
 	}

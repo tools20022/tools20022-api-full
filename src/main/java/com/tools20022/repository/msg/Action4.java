@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActionType5Code;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ActionMessage2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class Action4 {
 	 * Action3.mmActionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Action4, ActionType5Code> mmActionType = new MMMessageAttribute<Action4, ActionType5Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Action4.mmObject();
@@ -140,6 +141,16 @@ public class Action4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActionType5Code.mmObject();
+		}
+
+		@Override
+		public ActionType5Code getValue(Action4 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(Action4 obj, ActionType5Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "MsgToPres")
@@ -187,7 +198,7 @@ public class Action4 {
 	 * Action3.mmMessageToPresent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageToPresent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Action4, Optional<ActionMessage2>> mmMessageToPresent = new MMMessageAssociationEnd<Action4, Optional<ActionMessage2>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Action4.mmObject();
@@ -201,7 +212,17 @@ public class Action4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ActionMessage2.mmObject();
+			type_lazy = () -> ActionMessage2.mmObject();
+		}
+
+		@Override
+		public Optional<ActionMessage2> getValue(Action4 obj) {
+			return obj.getMessageToPresent();
+		}
+
+		@Override
+		public void setValue(Action4 obj, Optional<ActionMessage2> value) {
+			obj.setMessageToPresent(value.orElse(null));
 		}
 	};
 
@@ -234,7 +255,7 @@ public class Action4 {
 		return messageToPresent == null ? Optional.empty() : Optional.of(messageToPresent);
 	}
 
-	public Action4 setMessageToPresent(com.tools20022.repository.msg.ActionMessage2 messageToPresent) {
+	public Action4 setMessageToPresent(ActionMessage2 messageToPresent) {
 		this.messageToPresent = messageToPresent;
 		return this;
 	}

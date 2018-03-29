@@ -130,7 +130,7 @@ public class MarginRequirement1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginRequirement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginRequirement1Choice, Requirement1> mmMarginRequirement = new MMMessageAssociationEnd<MarginRequirement1Choice, Requirement1>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmVariationMarginAmountRequirement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginRequirement1Choice.mmObject();
@@ -143,6 +143,16 @@ public class MarginRequirement1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Requirement1.mmObject();
+		}
+
+		@Override
+		public Requirement1 getValue(MarginRequirement1Choice obj) {
+			return obj.getMarginRequirement();
+		}
+
+		@Override
+		public void setValue(MarginRequirement1Choice obj, Requirement1 value) {
+			obj.setMarginRequirement(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmtRqrmnt", required = true)
@@ -180,7 +190,7 @@ public class MarginRequirement1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmountRequirement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginRequirement1Choice, MarginRequirement1> mmSegregatedIndependentAmountRequirement = new MMMessageAssociationEnd<MarginRequirement1Choice, MarginRequirement1>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmSegregatedAmountRequirement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginRequirement1Choice.mmObject();
@@ -193,6 +203,16 @@ public class MarginRequirement1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarginRequirement1.mmObject();
+		}
+
+		@Override
+		public MarginRequirement1 getValue(MarginRequirement1Choice obj) {
+			return obj.getSegregatedIndependentAmountRequirement();
+		}
+
+		@Override
+		public void setValue(MarginRequirement1Choice obj, MarginRequirement1 value) {
+			obj.setSegregatedIndependentAmountRequirement(value);
 		}
 	};
 

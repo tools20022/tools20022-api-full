@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification29;
+import com.tools20022.repository.msg.NameAndAddress13;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +123,7 @@ public class PartyIdentification54 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification54, AnyBICIdentifier> mmBIC = new MMMessageAttribute<PartyIdentification54, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification54.mmObject();
@@ -133,6 +135,16 @@ public class PartyIdentification54 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification54 obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification54 obj, AnyBICIdentifier value) {
+			obj.setBIC(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -172,7 +184,7 @@ public class PartyIdentification54 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification54, GenericIdentification29> mmProprietaryIdentification = new MMMessageAttribute<PartyIdentification54, GenericIdentification29>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification54.mmObject();
@@ -183,7 +195,17 @@ public class PartyIdentification54 {
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification29.mmObject();
+			complexType_lazy = () -> GenericIdentification29.mmObject();
+		}
+
+		@Override
+		public GenericIdentification29 getValue(PartyIdentification54 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification54 obj, GenericIdentification29 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr")
@@ -222,7 +244,7 @@ public class PartyIdentification54 {
 	 * "Identification of a party with its name and address in free text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameAndAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification54, Optional<NameAndAddress13>> mmNameAndAddress = new MMMessageAttribute<PartyIdentification54, Optional<NameAndAddress13>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification54.mmObject();
@@ -233,7 +255,17 @@ public class PartyIdentification54 {
 			definition = "Identification of a party with its name and address in free text.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress13.mmObject();
+			complexType_lazy = () -> NameAndAddress13.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress13> getValue(PartyIdentification54 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification54 obj, Optional<NameAndAddress13> value) {
+			obj.setNameAndAddress(value.orElse(null));
 		}
 	};
 
@@ -272,7 +304,7 @@ public class PartyIdentification54 {
 		return proprietaryIdentification;
 	}
 
-	public PartyIdentification54 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification29 proprietaryIdentification) {
+	public PartyIdentification54 setProprietaryIdentification(GenericIdentification29 proprietaryIdentification) {
 		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
 		return this;
 	}
@@ -281,7 +313,7 @@ public class PartyIdentification54 {
 		return nameAndAddress == null ? Optional.empty() : Optional.of(nameAndAddress);
 	}
 
-	public PartyIdentification54 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress13 nameAndAddress) {
+	public PartyIdentification54 setNameAndAddress(NameAndAddress13 nameAndAddress) {
 		this.nameAndAddress = nameAndAddress;
 		return this;
 	}

@@ -104,7 +104,7 @@ public class CollateralSubstitutionResponse1 {
 	 * "Reference to the collateral substitution request identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralSubstitutionResponse1, Max35Text> mmCollateralSubstitutionRequestIdentification = new MMMessageAttribute<CollateralSubstitutionResponse1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse1.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class CollateralSubstitutionResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CollateralSubstitutionResponse1 obj) {
+			return obj.getCollateralSubstitutionRequestIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionResponse1 obj, Max35Text value) {
+			obj.setCollateralSubstitutionRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "AccptdAmt")
@@ -152,7 +162,7 @@ public class CollateralSubstitutionResponse1 {
 	 * definition} = "Provides the accepted collateral substitution amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralSubstitutionResponse1, Optional<ActiveCurrencyAndAmount>> mmAcceptedAmount = new MMMessageAttribute<CollateralSubstitutionResponse1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralSubstitution.mmAcceptedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralSubstitutionResponse1.mmObject();
@@ -164,6 +174,16 @@ public class CollateralSubstitutionResponse1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CollateralSubstitutionResponse1 obj) {
+			return obj.getAcceptedAmount();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionResponse1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAcceptedAmount(value.orElse(null));
 		}
 	};
 

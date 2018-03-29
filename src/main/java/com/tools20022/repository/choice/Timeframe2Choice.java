@@ -113,7 +113,7 @@ public class Timeframe2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradePlus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Timeframe2Choice, Number> mmTradePlus = new MMMessageAttribute<Timeframe2Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmTradePlus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Timeframe2Choice.mmObject();
@@ -125,6 +125,16 @@ public class Timeframe2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Timeframe2Choice obj) {
+			return obj.getTradePlus();
+		}
+
+		@Override
+		public void setValue(Timeframe2Choice obj, Number value) {
+			obj.setTradePlus(value);
 		}
 	};
 	@XmlElement(name = "RPlus", required = true)
@@ -163,7 +173,7 @@ public class Timeframe2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRenunciationPlus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Timeframe2Choice, Number> mmRenunciationPlus = new MMMessageAttribute<Timeframe2Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmRenunciationPlus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Timeframe2Choice.mmObject();
@@ -175,6 +185,16 @@ public class Timeframe2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Timeframe2Choice obj) {
+			return obj.getRenunciationPlus();
+		}
+
+		@Override
+		public void setValue(Timeframe2Choice obj, Number value) {
+			obj.setRenunciationPlus(value);
 		}
 	};
 	@XmlElement(name = "Prepmt", required = true)
@@ -212,7 +232,7 @@ public class Timeframe2Choice {
 	 * definition} = "Indicates whether pre-payment is necessary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrepayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Timeframe2Choice, YesNoIndicator> mmPrepayment = new MMMessageAttribute<Timeframe2Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmPrepayment;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Timeframe2Choice.mmObject();
@@ -224,6 +244,16 @@ public class Timeframe2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Timeframe2Choice obj) {
+			return obj.getPrepayment();
+		}
+
+		@Override
+		public void setValue(Timeframe2Choice obj, YesNoIndicator value) {
+			obj.setPrepayment(value);
 		}
 	};
 

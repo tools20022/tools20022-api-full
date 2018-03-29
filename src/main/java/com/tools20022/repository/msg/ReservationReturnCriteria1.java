@@ -107,7 +107,7 @@ public class ReservationReturnCriteria1 {
 	 * ReservationReturnCriteria.mmStartDateTimeIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDateTimeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationReturnCriteria1, Optional<RequestedIndicator>> mmStartDateTimeIndicator = new MMMessageAttribute<ReservationReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReturnCriteria1.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class ReservationReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(ReservationReturnCriteria1 obj) {
+			return obj.getStartDateTimeIndicator();
+		}
+
+		@Override
+		public void setValue(ReservationReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setStartDateTimeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsInd")
@@ -156,7 +166,7 @@ public class ReservationReturnCriteria1 {
 	 * ReservationReturnCriteria.mmStatusIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationReturnCriteria1, Optional<RequestedIndicator>> mmStatusIndicator = new MMMessageAttribute<ReservationReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReturnCriteria1.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class ReservationReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(ReservationReturnCriteria1 obj) {
+			return obj.getStatusIndicator();
+		}
+
+		@Override
+		public void setValue(ReservationReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setStatusIndicator(value.orElse(null));
 		}
 	};
 

@@ -80,7 +80,7 @@ public class EligibilityTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
-	 * Eligiblity applies at securities level.
+	 * Eligibility applies at securities level.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -97,14 +97,14 @@ public class EligibilityTypeCode extends MMCode {
 	 * name} = "Securities"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Eligiblity applies at securities level."</li>
+	 * definition} = "Eligibility applies at securities level."</li>
 	 * </ul>
 	 */
 	public static final EligibilityTypeCode Securities = new EligibilityTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
-			definition = "Eligiblity applies at securities level.";
+			definition = "Eligibility applies at securities level.";
 			owner_lazy = () -> com.tools20022.repository.codeset.EligibilityTypeCode.mmObject();
 			codeName = "SECU";
 		}

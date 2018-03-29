@@ -24,8 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementPreviousversionsubsetvariant;
 import com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06;
 import com.tools20022.repository.msg.*;
-import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -78,9 +77,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion
- * SettlementAndReconciliationISO15022VariantsISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -158,7 +155,7 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, Pagination> mmPagination = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,12 +166,14 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAllegementReport002V05.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(SecuritiesSettlementTransactionAllegementReport002V05 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAllegementReport002V05 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -201,7 +200,7 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 	 * definition} = "General information related to report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, Statement53> mmStatementGeneralDetails = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, Statement53>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +211,14 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 			complexType_lazy = () -> Statement53.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAllegementReport002V05.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement53 getValue(SecuritiesSettlementTransactionAllegementReport002V05 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAllegementReport002V05 obj, Statement53 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -245,7 +246,7 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, Optional<PartyIdentification109>> mmAccountOwner = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, Optional<PartyIdentification109>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,12 +257,14 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 			complexType_lazy = () -> PartyIdentification109.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAllegementReport002V05.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification109> getValue(SecuritiesSettlementTransactionAllegementReport002V05 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAllegementReport002V05 obj, Optional<PartyIdentification109> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -289,7 +292,7 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, SecuritiesAccount27> mmSafekeepingAccount = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, SecuritiesAccount27>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,12 +303,14 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 			complexType_lazy = () -> SecuritiesAccount27.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAllegementReport002V05.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount27 getValue(SecuritiesSettlementTransactionAllegementReport002V05 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAllegementReport002V05 obj, SecuritiesAccount27 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "AllgmtDtls")
@@ -333,7 +338,7 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 	 * definition} = "Details of the allegement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAllegementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, List<SecuritiesTradeDetails61>> mmAllegementDetails = new MMMessageBuildingBlock<SecuritiesSettlementTransactionAllegementReport002V05, List<SecuritiesTradeDetails61>>() {
 		{
 			xmlTag = "AllgmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,12 +348,14 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 			complexType_lazy = () -> SecuritiesTradeDetails61.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionAllegementReport002V05.class.getMethod("getAllegementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecuritiesTradeDetails61> getValue(SecuritiesSettlementTransactionAllegementReport002V05 obj) {
+			return obj.getAllegementDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionAllegementReport002V05 obj, List<SecuritiesTradeDetails61> value) {
+			obj.setAllegementDetails(value);
 		}
 	};
 
@@ -361,7 +368,7 @@ public class SecuritiesSettlementTransactionAllegementReport002V05 {
 				name = "SecuritiesSettlementTransactionAllegementReport002V05";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesSettlementTransactionAllegementReport to an account owner to provide, at a specified time, the status and details of pending settlement allegements, for all or selected securities in a specified safekeeping account.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementReport002V06.mmObject());
-				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISO15022VariantsISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxAllgmtRpt";
 				businessArea_lazy = () -> SecuritiesManagementPreviousversionsubsetvariant.mmObject();

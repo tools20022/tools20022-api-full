@@ -119,7 +119,7 @@ public class AmountAndDirection5 {
 	 * definition} = "Amount of money that is debited or credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection5, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection5, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
@@ -131,6 +131,16 @@ public class AmountAndDirection5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AmountAndDirection5 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection5 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbt")
@@ -168,7 +178,7 @@ public class AmountAndDirection5 {
 	 * definition} = "Indicates if the amount is a debited or a credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection5, Optional<CreditDebitCode>> mmCreditDebit = new MMMessageAttribute<AmountAndDirection5, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection5.mmObject();
@@ -180,6 +190,16 @@ public class AmountAndDirection5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(AmountAndDirection5 obj) {
+			return obj.getCreditDebit();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection5 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebit(value.orElse(null));
 		}
 	};
 

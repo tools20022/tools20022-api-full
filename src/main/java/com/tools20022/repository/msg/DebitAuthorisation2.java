@@ -138,7 +138,7 @@ public class DebitAuthorisation2 {
 	 * DebitAuthorisation1.mmCancellationReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DebitAuthorisation2, CancellationReason33Choice> mmCancellationReason = new MMMessageAssociationEnd<DebitAuthorisation2, CancellationReason33Choice>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation2.mmObject();
@@ -152,6 +152,16 @@ public class DebitAuthorisation2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationReason33Choice.mmObject();
+		}
+
+		@Override
+		public CancellationReason33Choice getValue(DebitAuthorisation2 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisation2 obj, CancellationReason33Choice value) {
+			obj.setCancellationReason(value);
 		}
 	};
 	@XmlElement(name = "AmtToDbt")
@@ -194,7 +204,7 @@ public class DebitAuthorisation2 {
 	 * DebitAuthorisation1.mmAmountToDebit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountToDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisation2, Optional<ActiveOrHistoricCurrencyAndAmount>> mmAmountToDebit = new MMMessageAttribute<DebitAuthorisation2, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmAmountToDebit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation2.mmObject();
@@ -207,6 +217,16 @@ public class DebitAuthorisation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(DebitAuthorisation2 obj) {
+			return obj.getAmountToDebit();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisation2 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setAmountToDebit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDtToDbt")
@@ -248,7 +268,7 @@ public class DebitAuthorisation2 {
 	 * DebitAuthorisation1.mmValueDateToDebit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDateToDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisation2, Optional<ISODate>> mmValueDateToDebit = new MMMessageAttribute<DebitAuthorisation2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmValueDateToDebit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation2.mmObject();
@@ -261,6 +281,16 @@ public class DebitAuthorisation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DebitAuthorisation2 obj) {
+			return obj.getValueDateToDebit();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisation2 obj, Optional<ISODate> value) {
+			obj.setValueDateToDebit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlCxlRsnInf")
@@ -297,7 +327,7 @@ public class DebitAuthorisation2 {
 	 * DebitAuthorisation1.mmAdditionalCancellationReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalCancellationReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisation2, List<Max105Text>> mmAdditionalCancellationReasonInformation = new MMMessageAttribute<DebitAuthorisation2, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisation2.mmObject();
 			isDerived = false;
@@ -308,6 +338,16 @@ public class DebitAuthorisation2 {
 			previousVersion_lazy = () -> DebitAuthorisation1.mmAdditionalCancellationReasonInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(DebitAuthorisation2 obj) {
+			return obj.getAdditionalCancellationReasonInformation();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisation2 obj, List<Max105Text> value) {
+			obj.setAdditionalCancellationReasonInformation(value);
 		}
 	};
 

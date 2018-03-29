@@ -25,6 +25,7 @@ import com.tools20022.repository.area.sese.SecuritiesTransactionStatusQuery002V0
 import com.tools20022.repository.choice.DocumentNumber6Choice;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Identification24;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +122,7 @@ public class DocumentNumber15 {
 	 * definition} = "Number used to identify a message or document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentNumber15, DocumentNumber6Choice> mmNumber = new MMMessageAssociationEnd<DocumentNumber15, DocumentNumber6Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentNumber15.mmObject();
 			isDerived = false;
@@ -135,9 +136,19 @@ public class DocumentNumber15 {
 			isComposite = true;
 			type_lazy = () -> DocumentNumber6Choice.mmObject();
 		}
+
+		@Override
+		public DocumentNumber6Choice getValue(DocumentNumber15 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber15 obj, DocumentNumber6Choice value) {
+			obj.setNumber(value);
+		}
 	};
 	@XmlElement(name = "Refs", required = true)
-	protected List<com.tools20022.repository.msg.Identification24> references;
+	protected List<Identification24> references;
 	/**
 	 * 
 	 <p>
@@ -168,7 +179,7 @@ public class DocumentNumber15 {
 	 * "References of transaction for which the status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentNumber15, List<Identification24>> mmReferences = new MMMessageAssociationEnd<DocumentNumber15, List<Identification24>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentNumber15.mmObject();
 			isDerived = false;
@@ -179,7 +190,17 @@ public class DocumentNumber15 {
 			definition = "References of transaction for which the status is requested.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Identification24.mmObject();
+			type_lazy = () -> Identification24.mmObject();
+		}
+
+		@Override
+		public List<Identification24> getValue(DocumentNumber15 obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(DocumentNumber15 obj, List<Identification24> value) {
+			obj.setReferences(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class DocumentNumber15 {
 		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public DocumentNumber15 setReferences(List<com.tools20022.repository.msg.Identification24> references) {
+	public DocumentNumber15 setReferences(List<Identification24> references) {
 		this.references = Objects.requireNonNull(references);
 		return this;
 	}

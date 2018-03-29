@@ -106,7 +106,7 @@ public class SecurityDate8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityDate8SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<SecurityDate8SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate8SD1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class SecurityDate8SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SecurityDate8SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(SecurityDate8SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDtOfNewScty")
@@ -151,7 +161,7 @@ public class SecurityDate8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDateOfNewSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityDate8SD1, Optional<DateFormat22Choice>> mmSettlementDateOfNewSecurity = new MMMessageAttribute<SecurityDate8SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate8SD1.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class SecurityDate8SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(SecurityDate8SD1 obj) {
+			return obj.getSettlementDateOfNewSecurity();
+		}
+
+		@Override
+		public void setValue(SecurityDate8SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setSettlementDateOfNewSecurity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgSspdDt")
@@ -194,7 +214,7 @@ public class SecurityDate8SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingSuspendedDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityDate8SD1, Optional<DateFormat22Choice>> mmTradingSuspendedDate = new MMMessageAssociationEnd<SecurityDate8SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityDate8SD1.mmObject();
 			isDerived = false;
@@ -206,6 +226,16 @@ public class SecurityDate8SD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(SecurityDate8SD1 obj) {
+			return obj.getTradingSuspendedDate();
+		}
+
+		@Override
+		public void setValue(SecurityDate8SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setTradingSuspendedDate(value.orElse(null));
 		}
 	};
 

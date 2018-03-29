@@ -134,7 +134,7 @@ public class Resolution1 {
 	 * "Numbering of the resolution as specified by the issuer or its agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, Max35Text> mmIssuerLabel = new MMMessageAttribute<Resolution1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmIssuerLabel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
@@ -146,6 +146,16 @@ public class Resolution1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Resolution1 obj) {
+			return obj.getIssuerLabel();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, Max35Text value) {
+			obj.setIssuerLabel(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -181,7 +191,7 @@ public class Resolution1 {
 	 * definition} = "Free text description of the resolution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, Optional<Max1025Text>> mmDescription = new MMMessageAttribute<Resolution1, Optional<Max1025Text>>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
@@ -193,6 +203,16 @@ public class Resolution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max1025Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max1025Text> getValue(Resolution1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, Optional<Max1025Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Titl")
@@ -228,7 +248,7 @@ public class Resolution1 {
 	 * definition} = "Abbreviated description of the resolution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTitle = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, Optional<Max350Text>> mmTitle = new MMMessageAttribute<Resolution1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmTitle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
@@ -240,6 +260,16 @@ public class Resolution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(Resolution1 obj) {
+			return obj.getTitle();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, Optional<Max350Text> value) {
+			obj.setTitle(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -277,7 +307,7 @@ public class Resolution1 {
 	 * "Indicates whether a resolution is ordinary, extraordinary or special."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, ResolutionType1Code> mmType = new MMMessageAttribute<Resolution1, ResolutionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
@@ -289,6 +319,16 @@ public class Resolution1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResolutionType1Code.mmObject();
+		}
+
+		@Override
+		public ResolutionType1Code getValue(Resolution1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, ResolutionType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "ForInfOnly")
@@ -327,7 +367,7 @@ public class Resolution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForInformationOnly = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, Optional<YesNoIndicator>> mmForInformationOnly = new MMMessageAttribute<Resolution1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmForInformationOnly;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
@@ -339,6 +379,16 @@ public class Resolution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Resolution1 obj) {
+			return obj.getForInformationOnly();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, Optional<YesNoIndicator> value) {
+			obj.setForInformationOnly(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -375,7 +425,7 @@ public class Resolution1 {
 	 * definition} = "Indicates whether the resolution is active or withdrawn."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, ResolutionStatus1Code> mmStatus = new MMMessageAttribute<Resolution1, ResolutionStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmMeetingResolutionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
@@ -387,6 +437,16 @@ public class Resolution1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResolutionStatus1Code.mmObject();
+		}
+
+		@Override
+		public ResolutionStatus1Code getValue(Resolution1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, ResolutionStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "SubmittdBySctyHldr")
@@ -425,7 +485,7 @@ public class Resolution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmittedBySecurityHolder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, Optional<YesNoIndicator>> mmSubmittedBySecurityHolder = new MMMessageAttribute<Resolution1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmSubmittedBySecurityHolder;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
@@ -437,6 +497,16 @@ public class Resolution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Resolution1 obj) {
+			return obj.getSubmittedBySecurityHolder();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, Optional<YesNoIndicator> value) {
+			obj.setSubmittedBySecurityHolder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VoteInstrTp")
@@ -470,7 +540,7 @@ public class Resolution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVoteInstructionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, List<VoteInstruction2Code>> mmVoteInstructionType = new MMMessageAttribute<Resolution1, List<VoteInstruction2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
 			isDerived = false;
@@ -481,6 +551,16 @@ public class Resolution1 {
 			maxOccurs = 7;
 			minOccurs = 0;
 			simpleType_lazy = () -> VoteInstruction2Code.mmObject();
+		}
+
+		@Override
+		public List<VoteInstruction2Code> getValue(Resolution1 obj) {
+			return obj.getVoteInstructionType();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, List<VoteInstruction2Code> value) {
+			obj.setVoteInstructionType(value);
 		}
 	};
 	@XmlElement(name = "MgmtRcmmndtn")
@@ -519,7 +599,7 @@ public class Resolution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmManagementRecommendation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, Optional<VoteInstruction1Code>> mmManagementRecommendation = new MMMessageAttribute<Resolution1, Optional<VoteInstruction1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmManagementRecommendation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
@@ -531,6 +611,16 @@ public class Resolution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> VoteInstruction1Code.mmObject();
+		}
+
+		@Override
+		public Optional<VoteInstruction1Code> getValue(Resolution1 obj) {
+			return obj.getManagementRecommendation();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, Optional<VoteInstruction1Code> value) {
+			obj.setManagementRecommendation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtifngPtyRcmmndtn")
@@ -569,7 +659,7 @@ public class Resolution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotifyingPartyRecommendation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Resolution1, Optional<VoteInstruction1Code>> mmNotifyingPartyRecommendation = new MMMessageAttribute<Resolution1, Optional<VoteInstruction1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmNotifyingPartyRecommendation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Resolution1.mmObject();
@@ -581,6 +671,16 @@ public class Resolution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> VoteInstruction1Code.mmObject();
+		}
+
+		@Override
+		public Optional<VoteInstruction1Code> getValue(Resolution1 obj) {
+			return obj.getNotifyingPartyRecommendation();
+		}
+
+		@Override
+		public void setValue(Resolution1 obj, Optional<VoteInstruction1Code> value) {
+			obj.setNotifyingPartyRecommendation(value.orElse(null));
 		}
 	};
 

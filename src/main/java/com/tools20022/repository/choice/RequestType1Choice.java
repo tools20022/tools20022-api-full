@@ -99,7 +99,7 @@ public class RequestType1Choice {
 	 * "Request type is a control command on a set of transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentControl = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType1Choice, RequestType1Code> mmPaymentControl = new MMMessageAttribute<RequestType1Choice, RequestType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType1Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class RequestType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestType1Code.mmObject();
+		}
+
+		@Override
+		public RequestType1Code getValue(RequestType1Choice obj) {
+			return obj.getPaymentControl();
+		}
+
+		@Override
+		public void setValue(RequestType1Choice obj, RequestType1Code value) {
+			obj.setPaymentControl(value);
 		}
 	};
 	@XmlElement(name = "Enqry", required = true)
@@ -143,7 +153,7 @@ public class RequestType1Choice {
 	 * "Request type is an enquiry on the a position or a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEnquiry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType1Choice, RequestType2Code> mmEnquiry = new MMMessageAttribute<RequestType1Choice, RequestType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType1Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class RequestType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestType2Code.mmObject();
+		}
+
+		@Override
+		public RequestType2Code getValue(RequestType1Choice obj) {
+			return obj.getEnquiry();
+		}
+
+		@Override
+		public void setValue(RequestType1Choice obj, RequestType2Code value) {
+			obj.setEnquiry(value);
 		}
 	};
 

@@ -109,7 +109,7 @@ public class TaxCalculationBasisType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationBasisType1Choice, TaxationBasis2Code> mmBasis = new MMMessageAttribute<TaxCalculationBasisType1Choice, TaxationBasis2Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCalculationBasisType1Choice.mmObject();
@@ -121,6 +121,16 @@ public class TaxCalculationBasisType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxationBasis2Code.mmObject();
+		}
+
+		@Override
+		public TaxationBasis2Code getValue(TaxCalculationBasisType1Choice obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(TaxCalculationBasisType1Choice obj, TaxationBasis2Code value) {
+			obj.setBasis(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class TaxCalculationBasisType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationBasisType1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<TaxCalculationBasisType1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCalculationBasisType1Choice.mmObject();
@@ -171,6 +181,16 @@ public class TaxCalculationBasisType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(TaxCalculationBasisType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TaxCalculationBasisType1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

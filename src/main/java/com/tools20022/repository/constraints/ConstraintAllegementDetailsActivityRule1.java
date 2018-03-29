@@ -57,12 +57,16 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReport002V06> forSecuritiesSettlementTransactionAllegementReport002V06 = new MMConstraint<SecuritiesSettlementTransactionAllegementReport002V06>() {
 		{
-			validator = ConstraintAllegementDetailsActivityRule1::checkSecuritiesSettlementTransactionAllegementReport002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementDetailsActivityRule1";
 			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReport002V06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReport002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReport002V06(obj);
 		}
 	};
 	/**
@@ -98,13 +102,56 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV07> forSecuritiesSettlementTransactionAllegementReportV07 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV07>() {
 		{
-			validator = ConstraintAllegementDetailsActivityRule1::checkSecuritiesSettlementTransactionAllegementReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementDetailsActivityRule1";
 			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.forSecuritiesSettlementTransactionAllegementReportV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV07(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V07
+	 * SecuritiesSettlementTransactionAllegementReport002V07}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/AllegementDetails[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/StatementGeneralDetails/ActivityIndicator&lt;/leftOperand&gt;&lt;rightOperand&gt;false&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllegementDetailsActivityRule1"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReport002V07> forSecuritiesSettlementTransactionAllegementReport002V07 = new MMConstraint<SecuritiesSettlementTransactionAllegementReport002V07>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AllegementDetailsActivityRule1";
+			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
+			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReport002V07.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReport002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReport002V07(obj);
 		}
 	};
 	/**
@@ -149,7 +196,6 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV06> forSecuritiesSettlementTransactionAllegementReportV06 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV06>() {
 		{
-			validator = ConstraintAllegementDetailsActivityRule1::checkSecuritiesSettlementTransactionAllegementReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementDetailsActivityRule1";
 			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
@@ -157,6 +203,11 @@ public class ConstraintAllegementDetailsActivityRule1 {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.forSecuritiesSettlementTransactionAllegementReportV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV06(obj);
 		}
 	};
 	/**
@@ -186,12 +237,16 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReport002V05> forSecuritiesSettlementTransactionAllegementReport002V05 = new MMConstraint<SecuritiesSettlementTransactionAllegementReport002V05>() {
 		{
-			validator = ConstraintAllegementDetailsActivityRule1::checkSecuritiesSettlementTransactionAllegementReport002V05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementDetailsActivityRule1";
 			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReport002V05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReport002V05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReport002V05(obj);
 		}
 	};
 	/**
@@ -221,12 +276,16 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV01> forSecuritiesSettlementTransactionAllegementReportV01 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV01>() {
 		{
-			validator = ConstraintAllegementDetailsActivityRule1::checkSecuritiesSettlementTransactionAllegementReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementDetailsActivityRule1";
 			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV01(obj);
 		}
 	};
 	/**
@@ -256,12 +315,16 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV02> forSecuritiesSettlementTransactionAllegementReportV02 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV02>() {
 		{
-			validator = ConstraintAllegementDetailsActivityRule1::checkSecuritiesSettlementTransactionAllegementReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementDetailsActivityRule1";
 			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV02.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV02(obj);
 		}
 	};
 	/**
@@ -300,13 +363,17 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV03> forSecuritiesSettlementTransactionAllegementReportV03 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV03>() {
 		{
-			validator = ConstraintAllegementDetailsActivityRule1::checkSecuritiesSettlementTransactionAllegementReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementDetailsActivityRule1";
 			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.forSecuritiesSettlementTransactionAllegementReportV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV03(obj);
 		}
 	};
 	/**
@@ -351,7 +418,6 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV04> forSecuritiesSettlementTransactionAllegementReportV04 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV04>() {
 		{
-			validator = ConstraintAllegementDetailsActivityRule1::checkSecuritiesSettlementTransactionAllegementReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementDetailsActivityRule1";
 			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
@@ -359,6 +425,11 @@ public class ConstraintAllegementDetailsActivityRule1 {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.forSecuritiesSettlementTransactionAllegementReportV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV04(obj);
 		}
 	};
 	/**
@@ -403,7 +474,6 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV05> forSecuritiesSettlementTransactionAllegementReportV05 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV05>() {
 		{
-			validator = ConstraintAllegementDetailsActivityRule1::checkSecuritiesSettlementTransactionAllegementReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllegementDetailsActivityRule1";
 			definition = "If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then AllegementDetails is not allowed.";
@@ -411,6 +481,11 @@ public class ConstraintAllegementDetailsActivityRule1 {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAllegementDetailsActivityRule1.forSecuritiesSettlementTransactionAllegementReportV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AllegementDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatementGeneralDetails/ActivityIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV05(obj);
 		}
 	};
 
@@ -427,6 +502,14 @@ public class ConstraintAllegementDetailsActivityRule1 {
 	 * AllegementDetails is not allowed.
 	 */
 	public static void checkSecuritiesSettlementTransactionAllegementReportV07(SecuritiesSettlementTransactionAllegementReportV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If StatementGeneralDetails/ActivityIndicator is FALSE (NO), then
+	 * AllegementDetails is not allowed.
+	 */
+	public static void checkSecuritiesSettlementTransactionAllegementReport002V07(SecuritiesSettlementTransactionAllegementReport002V07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

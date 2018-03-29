@@ -124,7 +124,7 @@ public class InterestRateUsedForPaymentFormat7Choice {
 	 * InterestRateUsedForPaymentFormat2Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateUsedForPaymentFormat7Choice, PercentageRate> mmRate = new MMMessageAttribute<InterestRateUsedForPaymentFormat7Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice.mmObject();
@@ -138,6 +138,16 @@ public class InterestRateUsedForPaymentFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(InterestRateUsedForPaymentFormat7Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat7Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -183,7 +193,7 @@ public class InterestRateUsedForPaymentFormat7Choice {
 	 * InterestRateUsedForPaymentFormat2Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateUsedForPaymentFormat7Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<InterestRateUsedForPaymentFormat7Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice.mmObject();
@@ -197,6 +207,16 @@ public class InterestRateUsedForPaymentFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(InterestRateUsedForPaymentFormat7Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat7Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -242,7 +262,7 @@ public class InterestRateUsedForPaymentFormat7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateUsedForPaymentFormat7Choice, RateTypeAndAmountAndStatus24> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<InterestRateUsedForPaymentFormat7Choice, RateTypeAndAmountAndStatus24>() {
 		{
 			businessComponentTrace_lazy = () -> Interest.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat7Choice.mmObject();
@@ -257,6 +277,16 @@ public class InterestRateUsedForPaymentFormat7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus24.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus24 getValue(InterestRateUsedForPaymentFormat7Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat7Choice obj, RateTypeAndAmountAndStatus24 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

@@ -121,7 +121,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CAPE Maintenance 2017-2018"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -136,7 +136,7 @@ public class CAPEMaintenance20172018 {
 		mmObject_lazy.compareAndSet(null, new MMMessageSet() {
 			{
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CAPE Maintenance 2017-2018";
 				definition = "Contains all messages modified for 2018 release of the MDR.";
 				messageDefinition_lazy = () -> Arrays.asList(AcceptorRejectionV05.mmObject(), TerminalManagementRejectionV04.mmObject(), AcceptorCompletionAdviceResponseV07.mmObject(), AcceptorCurrencyConversionRequestV05.mmObject(),

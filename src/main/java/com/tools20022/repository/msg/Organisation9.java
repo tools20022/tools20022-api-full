@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class Organisation9 {
 	 * definition} = "Identification of the merchant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation9, GenericIdentification32> mmIdentification = new MMMessageAssociationEnd<Organisation9, GenericIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation9.mmObject();
@@ -131,7 +132,17 @@ public class Organisation9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public GenericIdentification32 getValue(Organisation9 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Organisation9 obj, GenericIdentification32 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonNm")
@@ -167,7 +178,7 @@ public class Organisation9 {
 	 * definition} = "Name of the merchant as appearing on the receipt."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation9, Optional<Max70Text>> mmCommonName = new MMMessageAttribute<Organisation9, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation9.mmObject();
@@ -179,6 +190,16 @@ public class Organisation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(Organisation9 obj) {
+			return obj.getCommonName();
+		}
+
+		@Override
+		public void setValue(Organisation9 obj, Optional<Max70Text> value) {
+			obj.setCommonName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LctnCtgy")
@@ -212,7 +233,7 @@ public class Organisation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation9, Optional<LocationCategory1Code>> mmLocationCategory = new MMMessageAttribute<Organisation9, Optional<LocationCategory1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation9.mmObject();
 			isDerived = false;
@@ -223,6 +244,16 @@ public class Organisation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LocationCategory1Code.mmObject();
+		}
+
+		@Override
+		public Optional<LocationCategory1Code> getValue(Organisation9 obj) {
+			return obj.getLocationCategory();
+		}
+
+		@Override
+		public void setValue(Organisation9 obj, Optional<LocationCategory1Code> value) {
+			obj.setLocationCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -260,7 +291,7 @@ public class Organisation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation9, Optional<Max140Text>> mmAddress = new MMMessageAttribute<Organisation9, Optional<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation9.mmObject();
@@ -272,6 +303,16 @@ public class Organisation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Organisation9 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(Organisation9 obj, Optional<Max140Text> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryCd")
@@ -309,7 +350,7 @@ public class Organisation9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation9, Optional<ISO3NumericCountryCode>> mmCountryCode = new MMMessageAttribute<Organisation9, Optional<ISO3NumericCountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation9.mmObject();
@@ -321,6 +362,16 @@ public class Organisation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISO3NumericCountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<ISO3NumericCountryCode> getValue(Organisation9 obj) {
+			return obj.getCountryCode();
+		}
+
+		@Override
+		public void setValue(Organisation9 obj, Optional<ISO3NumericCountryCode> value) {
+			obj.setCountryCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchmeData")
@@ -351,7 +402,7 @@ public class Organisation9 {
 	 * definition} = "Additional merchant data required by a card scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation9, Optional<Max140Text>> mmSchemeData = new MMMessageAttribute<Organisation9, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation9.mmObject();
 			isDerived = false;
@@ -362,6 +413,16 @@ public class Organisation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Organisation9 obj) {
+			return obj.getSchemeData();
+		}
+
+		@Override
+		public void setValue(Organisation9 obj, Optional<Max140Text> value) {
+			obj.setSchemeData(value.orElse(null));
 		}
 	};
 
@@ -386,7 +447,7 @@ public class Organisation9 {
 		return identification;
 	}
 
-	public Organisation9 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public Organisation9 setIdentification(GenericIdentification32 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

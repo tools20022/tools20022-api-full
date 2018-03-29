@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress2;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,7 +126,7 @@ public class PartyIdentification9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification9, Max70Text> mmName = new MMMessageAttribute<PartyIdentification9, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
@@ -137,6 +138,16 @@ public class PartyIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PartyIdentification9 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification9 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "BEI", required = true)
@@ -174,7 +185,7 @@ public class PartyIdentification9 {
 	 * definition} = "Identification of a non-financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification9, BEIIdentifier> mmBEI = new MMMessageAttribute<PartyIdentification9, BEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICNonFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
@@ -186,6 +197,16 @@ public class PartyIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BEIIdentifier.mmObject();
+		}
+
+		@Override
+		public BEIIdentifier getValue(PartyIdentification9 obj) {
+			return obj.getBEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification9 obj, BEIIdentifier value) {
+			obj.setBEI(value);
 		}
 	};
 	@XmlElement(name = "OthrSchme", required = true)
@@ -218,7 +239,7 @@ public class PartyIdentification9 {
 	 * "An identification of a corporate in another scheme than name or BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification9, Max70Text> mmOtherScheme = new MMMessageAttribute<PartyIdentification9, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 			isDerived = false;
@@ -229,6 +250,16 @@ public class PartyIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PartyIdentification9 obj) {
+			return obj.getOtherScheme();
+		}
+
+		@Override
+		public void setValue(PartyIdentification9 obj, Max70Text value) {
+			obj.setOtherScheme(value);
 		}
 	};
 	@XmlElement(name = "PstlAdr", required = true)
@@ -266,7 +297,7 @@ public class PartyIdentification9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification9, PostalAddress2> mmPostalAddress = new MMMessageAssociationEnd<PartyIdentification9, PostalAddress2>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
@@ -278,7 +309,17 @@ public class PartyIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress2.mmObject();
+			type_lazy = () -> PostalAddress2.mmObject();
+		}
+
+		@Override
+		public PostalAddress2 getValue(PartyIdentification9 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification9 obj, PostalAddress2 value) {
+			obj.setPostalAddress(value);
 		}
 	};
 	/**
@@ -381,7 +422,7 @@ public class PartyIdentification9 {
 		return postalAddress;
 	}
 
-	public PartyIdentification9 setPostalAddress(com.tools20022.repository.msg.PostalAddress2 postalAddress) {
+	public PartyIdentification9 setPostalAddress(PostalAddress2 postalAddress) {
 		this.postalAddress = Objects.requireNonNull(postalAddress);
 		return this;
 	}

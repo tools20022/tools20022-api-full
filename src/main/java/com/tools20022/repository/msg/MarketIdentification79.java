@@ -137,7 +137,7 @@ public class MarketIdentification79 {
 	 * MarketIdentification77.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification79, Optional<MarketIdentification3Choice>> mmIdentification = new MMMessageAssociationEnd<MarketIdentification79, Optional<MarketIdentification3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification79.mmObject();
@@ -152,6 +152,16 @@ public class MarketIdentification79 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification3Choice> getValue(MarketIdentification79 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MarketIdentification79 obj, Optional<MarketIdentification3Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -195,7 +205,7 @@ public class MarketIdentification79 {
 	 * MarketIdentification77.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification79, Optional<MarketType11Choice>> mmType = new MMMessageAssociationEnd<MarketIdentification79, Optional<MarketType11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification79.mmObject();
@@ -210,6 +220,16 @@ public class MarketIdentification79 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketType11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketType11Choice> getValue(MarketIdentification79 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MarketIdentification79 obj, Optional<MarketType11Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 

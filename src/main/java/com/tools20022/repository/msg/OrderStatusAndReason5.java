@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.RejectionReason3Choice;
 import com.tools20022.repository.codeset.OrderStatus1Code;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -143,7 +144,7 @@ public class OrderStatusAndReason5 {
 	 * definition} = "Status of an instructed order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatusAndReason5, OrderStatus1Code> mmStatus = new MMMessageAttribute<OrderStatusAndReason5, OrderStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmOrderStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -156,6 +157,16 @@ public class OrderStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderStatus1Code.mmObject();
+		}
+
+		@Override
+		public OrderStatus1Code getValue(OrderStatusAndReason5 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, OrderStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -196,7 +207,7 @@ public class OrderStatusAndReason5 {
 	 * definition} = "Reason for which an order is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatusAndReason5, Optional<RejectionReason3Choice>> mmRejectionReason = new MMMessageAttribute<OrderStatusAndReason5, Optional<RejectionReason3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -209,6 +220,16 @@ public class OrderStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RejectionReason3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RejectionReason3Choice> getValue(OrderStatusAndReason5 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, Optional<RejectionReason3Choice> value) {
+			obj.setRejectionReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrStsDtls")
@@ -244,7 +265,7 @@ public class OrderStatusAndReason5 {
 	 * definition} = "Provides additional details related to the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderStatusDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason5, Optional<OrderStatus1>> mmOrderStatusDetails = new MMMessageAssociationEnd<OrderStatusAndReason5, Optional<OrderStatus1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -256,7 +277,17 @@ public class OrderStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OrderStatus1.mmObject();
+			type_lazy = () -> OrderStatus1.mmObject();
+		}
+
+		@Override
+		public Optional<OrderStatus1> getValue(OrderStatusAndReason5 obj) {
+			return obj.getOrderStatusDetails();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, Optional<OrderStatus1> value) {
+			obj.setOrderStatusDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrm", required = true)
@@ -293,7 +324,7 @@ public class OrderStatusAndReason5 {
 	 * definition} = "Provides details related to the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason5, SecurityIdentification7> mmFinancialInstrument = new MMMessageAssociationEnd<OrderStatusAndReason5, SecurityIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -305,11 +336,21 @@ public class OrderStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(OrderStatusAndReason5 obj) {
+			return obj.getFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, SecurityIdentification7 value) {
+			obj.setFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "UndrlygFinInstrm")
-	protected List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument;
+	protected List<SecurityIdentification7> underlyingFinancialInstrument;
 	/**
 	 * 
 	 <p>
@@ -343,7 +384,7 @@ public class OrderStatusAndReason5 {
 	 * "Provides details related to the underlying financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason5, List<SecurityIdentification7>> mmUnderlyingFinancialInstrument = new MMMessageAssociationEnd<OrderStatusAndReason5, List<SecurityIdentification7>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -354,7 +395,17 @@ public class OrderStatusAndReason5 {
 			definition = "Provides details related to the underlying financial instrument.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification7> getValue(OrderStatusAndReason5 obj) {
+			return obj.getUnderlyingFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, List<SecurityIdentification7> value) {
+			obj.setUnderlyingFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "TradgPties")
@@ -390,7 +441,7 @@ public class OrderStatusAndReason5 {
 	 * definition} = "Trading parties involved in the specific transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason5, Optional<Intermediary14>> mmTradingParties = new MMMessageAssociationEnd<OrderStatusAndReason5, Optional<Intermediary14>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -402,7 +453,17 @@ public class OrderStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
+			type_lazy = () -> Intermediary14.mmObject();
+		}
+
+		@Override
+		public Optional<Intermediary14> getValue(OrderStatusAndReason5 obj) {
+			return obj.getTradingParties();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, Optional<Intermediary14> value) {
+			obj.setTradingParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshPties")
@@ -438,7 +499,7 @@ public class OrderStatusAndReason5 {
 	 * definition} = "Cash parties involved in the specific transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason5, Optional<CashParties1>> mmCashParties = new MMMessageAssociationEnd<OrderStatusAndReason5, Optional<CashParties1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -450,7 +511,17 @@ public class OrderStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashParties1.mmObject();
+			type_lazy = () -> CashParties1.mmObject();
+		}
+
+		@Override
+		public Optional<CashParties1> getValue(OrderStatusAndReason5 obj) {
+			return obj.getCashParties();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, Optional<CashParties1> value) {
+			obj.setCashParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvgSttlmPties")
@@ -486,7 +557,7 @@ public class OrderStatusAndReason5 {
 	 * definition} = "Receiving parties involved in the specific transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason5, Optional<SettlementParties3>> mmReceivingSettlementParties = new MMMessageAssociationEnd<OrderStatusAndReason5, Optional<SettlementParties3>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -498,7 +569,17 @@ public class OrderStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
+			type_lazy = () -> SettlementParties3.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties3> getValue(OrderStatusAndReason5 obj) {
+			return obj.getReceivingSettlementParties();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, Optional<SettlementParties3> value) {
+			obj.setReceivingSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvrgSttlmPties")
@@ -534,7 +615,7 @@ public class OrderStatusAndReason5 {
 	 * definition} = "Delivering parties involved in the specific transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason5, Optional<SettlementParties3>> mmDeliveringSettlementParties = new MMMessageAssociationEnd<OrderStatusAndReason5, Optional<SettlementParties3>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -546,7 +627,17 @@ public class OrderStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
+			type_lazy = () -> SettlementParties3.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties3> getValue(OrderStatusAndReason5 obj) {
+			return obj.getDeliveringSettlementParties();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, Optional<SettlementParties3> value) {
+			obj.setDeliveringSettlementParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrBizPties")
@@ -582,7 +673,7 @@ public class OrderStatusAndReason5 {
 	 * definition} = "Other parties involved in the specific transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason5, Optional<OtherParties1>> mmOtherBusinessParties = new MMMessageAssociationEnd<OrderStatusAndReason5, Optional<OtherParties1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason5.mmObject();
@@ -594,7 +685,17 @@ public class OrderStatusAndReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherParties1.mmObject();
+			type_lazy = () -> OtherParties1.mmObject();
+		}
+
+		@Override
+		public Optional<OtherParties1> getValue(OrderStatusAndReason5 obj) {
+			return obj.getOtherBusinessParties();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason5 obj, Optional<OtherParties1> value) {
+			obj.setOtherBusinessParties(value.orElse(null));
 		}
 	};
 
@@ -639,7 +740,7 @@ public class OrderStatusAndReason5 {
 		return orderStatusDetails == null ? Optional.empty() : Optional.of(orderStatusDetails);
 	}
 
-	public OrderStatusAndReason5 setOrderStatusDetails(com.tools20022.repository.msg.OrderStatus1 orderStatusDetails) {
+	public OrderStatusAndReason5 setOrderStatusDetails(OrderStatus1 orderStatusDetails) {
 		this.orderStatusDetails = orderStatusDetails;
 		return this;
 	}
@@ -648,7 +749,7 @@ public class OrderStatusAndReason5 {
 		return financialInstrument;
 	}
 
-	public OrderStatusAndReason5 setFinancialInstrument(com.tools20022.repository.msg.SecurityIdentification7 financialInstrument) {
+	public OrderStatusAndReason5 setFinancialInstrument(SecurityIdentification7 financialInstrument) {
 		this.financialInstrument = Objects.requireNonNull(financialInstrument);
 		return this;
 	}
@@ -657,7 +758,7 @@ public class OrderStatusAndReason5 {
 		return underlyingFinancialInstrument == null ? underlyingFinancialInstrument = new ArrayList<>() : underlyingFinancialInstrument;
 	}
 
-	public OrderStatusAndReason5 setUnderlyingFinancialInstrument(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument) {
+	public OrderStatusAndReason5 setUnderlyingFinancialInstrument(List<SecurityIdentification7> underlyingFinancialInstrument) {
 		this.underlyingFinancialInstrument = Objects.requireNonNull(underlyingFinancialInstrument);
 		return this;
 	}
@@ -666,7 +767,7 @@ public class OrderStatusAndReason5 {
 		return tradingParties == null ? Optional.empty() : Optional.of(tradingParties);
 	}
 
-	public OrderStatusAndReason5 setTradingParties(com.tools20022.repository.msg.Intermediary14 tradingParties) {
+	public OrderStatusAndReason5 setTradingParties(Intermediary14 tradingParties) {
 		this.tradingParties = tradingParties;
 		return this;
 	}
@@ -675,7 +776,7 @@ public class OrderStatusAndReason5 {
 		return cashParties == null ? Optional.empty() : Optional.of(cashParties);
 	}
 
-	public OrderStatusAndReason5 setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
+	public OrderStatusAndReason5 setCashParties(CashParties1 cashParties) {
 		this.cashParties = cashParties;
 		return this;
 	}
@@ -684,7 +785,7 @@ public class OrderStatusAndReason5 {
 		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public OrderStatusAndReason5 setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
+	public OrderStatusAndReason5 setReceivingSettlementParties(SettlementParties3 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
 		return this;
 	}
@@ -693,7 +794,7 @@ public class OrderStatusAndReason5 {
 		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public OrderStatusAndReason5 setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
+	public OrderStatusAndReason5 setDeliveringSettlementParties(SettlementParties3 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
 		return this;
 	}
@@ -702,7 +803,7 @@ public class OrderStatusAndReason5 {
 		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public OrderStatusAndReason5 setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
+	public OrderStatusAndReason5 setOtherBusinessParties(OtherParties1 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
 		return this;
 	}

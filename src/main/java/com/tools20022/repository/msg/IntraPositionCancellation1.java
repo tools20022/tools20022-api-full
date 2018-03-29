@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.IntraPositionTransfer;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraPositionCancellation2;
+import com.tools20022.repository.msg.SecuritiesAccount13;
+import com.tools20022.repository.msg.SystemPartyIdentification5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -143,7 +146,7 @@ public class IntraPositionCancellation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionCancellation1, Optional<SystemPartyIdentification5>> mmAccountOwner = new MMMessageAttribute<IntraPositionCancellation1, Optional<SystemPartyIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionCancellation1.mmObject();
@@ -155,7 +158,17 @@ public class IntraPositionCancellation1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraPositionCancellation3.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
+			complexType_lazy = () -> SystemPartyIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification5> getValue(IntraPositionCancellation1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraPositionCancellation1 obj, Optional<SystemPartyIdentification5> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -201,7 +214,7 @@ public class IntraPositionCancellation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionCancellation1, Optional<SecuritiesAccount13>> mmSafekeepingAccount = new MMMessageAttribute<IntraPositionCancellation1, Optional<SecuritiesAccount13>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionCancellation1.mmObject();
@@ -213,7 +226,17 @@ public class IntraPositionCancellation1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraPositionCancellation3.mmSafekeepingAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			complexType_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount13> getValue(IntraPositionCancellation1 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(IntraPositionCancellation1 obj, Optional<SecuritiesAccount13> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -258,7 +281,7 @@ public class IntraPositionCancellation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionCancellation1, Optional<ProcessingStatus32Choice>> mmProcessingStatus = new MMMessageAssociationEnd<IntraPositionCancellation1, Optional<ProcessingStatus32Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionCancellation1.mmObject();
@@ -273,9 +296,19 @@ public class IntraPositionCancellation1 {
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus32Choice.mmObject();
 		}
+
+		@Override
+		public Optional<ProcessingStatus32Choice> getValue(IntraPositionCancellation1 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraPositionCancellation1 obj, Optional<ProcessingStatus32Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Cxl", required = true)
-	protected List<com.tools20022.repository.msg.IntraPositionCancellation2> cancellation;
+	protected List<IntraPositionCancellation2> cancellation;
 	/**
 	 * 
 	 <p>
@@ -316,7 +349,7 @@ public class IntraPositionCancellation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionCancellation1, List<IntraPositionCancellation2>> mmCancellation = new MMMessageAssociationEnd<IntraPositionCancellation1, List<IntraPositionCancellation2>>() {
 		{
 			businessComponentTrace_lazy = () -> IntraPositionTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionCancellation1.mmObject();
@@ -328,7 +361,17 @@ public class IntraPositionCancellation1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraPositionCancellation3.mmCancellation);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraPositionCancellation2.mmObject();
+			type_lazy = () -> IntraPositionCancellation2.mmObject();
+		}
+
+		@Override
+		public List<IntraPositionCancellation2> getValue(IntraPositionCancellation1 obj) {
+			return obj.getCancellation();
+		}
+
+		@Override
+		public void setValue(IntraPositionCancellation1 obj, List<IntraPositionCancellation2> value) {
+			obj.setCancellation(value);
 		}
 	};
 
@@ -354,7 +397,7 @@ public class IntraPositionCancellation1 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public IntraPositionCancellation1 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+	public IntraPositionCancellation1 setAccountOwner(SystemPartyIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -363,7 +406,7 @@ public class IntraPositionCancellation1 {
 		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public IntraPositionCancellation1 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+	public IntraPositionCancellation1 setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
 		return this;
 	}
@@ -381,7 +424,7 @@ public class IntraPositionCancellation1 {
 		return cancellation == null ? cancellation = new ArrayList<>() : cancellation;
 	}
 
-	public IntraPositionCancellation1 setCancellation(List<com.tools20022.repository.msg.IntraPositionCancellation2> cancellation) {
+	public IntraPositionCancellation1 setCancellation(List<IntraPositionCancellation2> cancellation) {
 		this.cancellation = Objects.requireNonNull(cancellation);
 		return this;
 	}

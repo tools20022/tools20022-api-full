@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateOrBlankQuery2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -112,7 +113,7 @@ public class TradeDateTimeQueryCriteria2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDateTimeQueryCriteria2, Optional<DateTimePeriodDetails>> mmReportingDateTime = new MMMessageAssociationEnd<TradeDateTimeQueryCriteria2, Optional<DateTimePeriodDetails>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDateTimeQueryCriteria2.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class TradeDateTimeQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
+			type_lazy = () -> DateTimePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodDetails> getValue(TradeDateTimeQueryCriteria2 obj) {
+			return obj.getReportingDateTime();
+		}
+
+		@Override
+		public void setValue(TradeDateTimeQueryCriteria2 obj, Optional<DateTimePeriodDetails> value) {
+			obj.setReportingDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctnDtTm")
@@ -154,7 +165,7 @@ public class TradeDateTimeQueryCriteria2 {
 	 * definition} = "Indicates the date and full hour the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExecutionDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDateTimeQueryCriteria2, Optional<DateTimePeriodDetails>> mmExecutionDateTime = new MMMessageAssociationEnd<TradeDateTimeQueryCriteria2, Optional<DateTimePeriodDetails>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDateTimeQueryCriteria2.mmObject();
 			isDerived = false;
@@ -165,7 +176,17 @@ public class TradeDateTimeQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
+			type_lazy = () -> DateTimePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodDetails> getValue(TradeDateTimeQueryCriteria2 obj) {
+			return obj.getExecutionDateTime();
+		}
+
+		@Override
+		public void setValue(TradeDateTimeQueryCriteria2 obj, Optional<DateTimePeriodDetails> value) {
+			obj.setExecutionDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -198,7 +219,7 @@ public class TradeDateTimeQueryCriteria2 {
 	 * definition} = "Indicates the date when the trade was matured."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDateTimeQueryCriteria2, Optional<DateOrBlankQuery2Choice>> mmMaturityDate = new MMMessageAttribute<TradeDateTimeQueryCriteria2, Optional<DateOrBlankQuery2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDateTimeQueryCriteria2.mmObject();
 			isDerived = false;
@@ -209,6 +230,16 @@ public class TradeDateTimeQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateOrBlankQuery2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateOrBlankQuery2Choice> getValue(TradeDateTimeQueryCriteria2 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(TradeDateTimeQueryCriteria2 obj, Optional<DateOrBlankQuery2Choice> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TermntnDt")
@@ -240,7 +271,7 @@ public class TradeDateTimeQueryCriteria2 {
 	 * definition} = "Indicates the date when the trade was terminated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDateTimeQueryCriteria2, Optional<DateOrBlankQuery2Choice>> mmTerminationDate = new MMMessageAssociationEnd<TradeDateTimeQueryCriteria2, Optional<DateOrBlankQuery2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeDateTimeQueryCriteria2.mmObject();
 			isDerived = false;
@@ -252,6 +283,16 @@ public class TradeDateTimeQueryCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateOrBlankQuery2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateOrBlankQuery2Choice> getValue(TradeDateTimeQueryCriteria2 obj) {
+			return obj.getTerminationDate();
+		}
+
+		@Override
+		public void setValue(TradeDateTimeQueryCriteria2 obj, Optional<DateOrBlankQuery2Choice> value) {
+			obj.setTerminationDate(value.orElse(null));
 		}
 	};
 
@@ -274,7 +315,7 @@ public class TradeDateTimeQueryCriteria2 {
 		return reportingDateTime == null ? Optional.empty() : Optional.of(reportingDateTime);
 	}
 
-	public TradeDateTimeQueryCriteria2 setReportingDateTime(com.tools20022.repository.msg.DateTimePeriodDetails reportingDateTime) {
+	public TradeDateTimeQueryCriteria2 setReportingDateTime(DateTimePeriodDetails reportingDateTime) {
 		this.reportingDateTime = reportingDateTime;
 		return this;
 	}
@@ -283,7 +324,7 @@ public class TradeDateTimeQueryCriteria2 {
 		return executionDateTime == null ? Optional.empty() : Optional.of(executionDateTime);
 	}
 
-	public TradeDateTimeQueryCriteria2 setExecutionDateTime(com.tools20022.repository.msg.DateTimePeriodDetails executionDateTime) {
+	public TradeDateTimeQueryCriteria2 setExecutionDateTime(DateTimePeriodDetails executionDateTime) {
 		this.executionDateTime = executionDateTime;
 		return this;
 	}

@@ -109,7 +109,7 @@ public class CollateralValueCriteriaDefinition2Choice {
 	 * CollateralValueCriteriaDefinition1Choice.mmQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValueCriteriaDefinition2Choice, Max35Text> mmQueryName = new MMMessageAttribute<CollateralValueCriteriaDefinition2Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueCriteriaDefinition2Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class CollateralValueCriteriaDefinition2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CollateralValueCriteriaDefinition2Choice obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(CollateralValueCriteriaDefinition2Choice obj, Max35Text value) {
+			obj.setQueryName(value);
 		}
 	};
 	@XmlElement(name = "NewCrit", required = true)
@@ -157,7 +167,7 @@ public class CollateralValueCriteriaDefinition2Choice {
 	 * CollateralValueCriteriaDefinition1Choice.mmNewCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueCriteriaDefinition2Choice, CollateralValueCriteria2> mmNewCriteria = new MMMessageAssociationEnd<CollateralValueCriteriaDefinition2Choice, CollateralValueCriteria2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueCriteriaDefinition2Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class CollateralValueCriteriaDefinition2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValueCriteria2.mmObject();
+		}
+
+		@Override
+		public CollateralValueCriteria2 getValue(CollateralValueCriteriaDefinition2Choice obj) {
+			return obj.getNewCriteria();
+		}
+
+		@Override
+		public void setValue(CollateralValueCriteriaDefinition2Choice obj, CollateralValueCriteria2 value) {
+			obj.setNewCriteria(value);
 		}
 	};
 

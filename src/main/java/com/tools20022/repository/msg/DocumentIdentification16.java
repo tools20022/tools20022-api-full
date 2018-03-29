@@ -115,7 +115,7 @@ public class DocumentIdentification16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification16, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<DocumentIdentification16, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification16.mmObject();
@@ -127,6 +127,16 @@ public class DocumentIdentification16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(DocumentIdentification16 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification16 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -165,7 +175,7 @@ public class DocumentIdentification16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreationDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification16, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAssociationEnd<DocumentIdentification16, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification16.mmObject();
@@ -178,6 +188,16 @@ public class DocumentIdentification16 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(DocumentIdentification16 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification16 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDplct")
@@ -217,7 +237,7 @@ public class DocumentIdentification16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification16, Optional<CopyDuplicate1Code>> mmCopyDuplicate = new MMMessageAttribute<DocumentIdentification16, Optional<CopyDuplicate1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmCopyDuplicate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification16.mmObject();
@@ -229,6 +249,16 @@ public class DocumentIdentification16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(DocumentIdentification16 obj) {
+			return obj.getCopyDuplicate();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification16 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyDuplicate(value.orElse(null));
 		}
 	};
 

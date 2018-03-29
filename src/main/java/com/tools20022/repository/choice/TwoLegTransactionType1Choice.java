@@ -109,7 +109,7 @@ public class TwoLegTransactionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFutureOrOptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TwoLegTransactionType1Choice, FutureOrOptionDetails1> mmFutureOrOptionDetails = new MMMessageAssociationEnd<TwoLegTransactionType1Choice, FutureOrOptionDetails1>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmObject();
@@ -122,6 +122,16 @@ public class TwoLegTransactionType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FutureOrOptionDetails1.mmObject();
+		}
+
+		@Override
+		public FutureOrOptionDetails1 getValue(TwoLegTransactionType1Choice obj) {
+			return obj.getFutureOrOptionDetails();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionType1Choice obj, FutureOrOptionDetails1 value) {
+			obj.setFutureOrOptionDetails(value);
 		}
 	};
 	@XmlElement(name = "SctiesFincgDtls", required = true)
@@ -157,7 +167,7 @@ public class TwoLegTransactionType1Choice {
 	 * definition} = "Provides details about the two leg transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesFinancingDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TwoLegTransactionType1Choice, SecuritiesFinancing10> mmSecuritiesFinancingDetails = new MMMessageAssociationEnd<TwoLegTransactionType1Choice, SecuritiesFinancing10>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesFinancing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmObject();
@@ -170,6 +180,16 @@ public class TwoLegTransactionType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesFinancing10.mmObject();
+		}
+
+		@Override
+		public SecuritiesFinancing10 getValue(TwoLegTransactionType1Choice obj) {
+			return obj.getSecuritiesFinancingDetails();
+		}
+
+		@Override
+		public void setValue(TwoLegTransactionType1Choice obj, SecuritiesFinancing10 value) {
+			obj.setSecuritiesFinancingDetails(value);
 		}
 	};
 

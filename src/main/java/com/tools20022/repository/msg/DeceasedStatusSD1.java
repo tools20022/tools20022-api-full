@@ -111,7 +111,7 @@ public class DeceasedStatusSD1 {
 	 * definition} = "Name by which the beneficial owner is known."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficialOwnerName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeceasedStatusSD1, Max35Text> mmBeneficialOwnerName = new MMMessageAttribute<DeceasedStatusSD1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedStatusSD1.mmObject();
@@ -123,6 +123,16 @@ public class DeceasedStatusSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DeceasedStatusSD1 obj) {
+			return obj.getBeneficialOwnerName();
+		}
+
+		@Override
+		public void setValue(DeceasedStatusSD1 obj, Max35Text value) {
+			obj.setBeneficialOwnerName(value);
 		}
 	};
 	@XmlElement(name = "DthDt")
@@ -157,7 +167,7 @@ public class DeceasedStatusSD1 {
 	 * definition} = "Date of death of the beneficial owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeathDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeceasedStatusSD1, Optional<ISODate>> mmDeathDate = new MMMessageAttribute<DeceasedStatusSD1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedStatusSD1.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class DeceasedStatusSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DeceasedStatusSD1 obj) {
+			return obj.getDeathDate();
+		}
+
+		@Override
+		public void setValue(DeceasedStatusSD1 obj, Optional<ISODate> value) {
+			obj.setDeathDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DthCertSrlNb")
@@ -203,7 +223,7 @@ public class DeceasedStatusSD1 {
 	 * definition} = "Death certificate number of the beneficial owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeathCertificateSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeceasedStatusSD1, Optional<Max30Text>> mmDeathCertificateSerialNumber = new MMMessageAttribute<DeceasedStatusSD1, Optional<Max30Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedStatusSD1.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class DeceasedStatusSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max30Text> getValue(DeceasedStatusSD1 obj) {
+			return obj.getDeathCertificateSerialNumber();
+		}
+
+		@Override
+		public void setValue(DeceasedStatusSD1 obj, Optional<Max30Text> value) {
+			obj.setDeathCertificateSerialNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssgJursdctn")
@@ -250,7 +280,7 @@ public class DeceasedStatusSD1 {
 	 * "Jurisdiction by which the certificate of deposit was issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuingJurisdiction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeceasedStatusSD1, Optional<Max35Text>> mmIssuingJurisdiction = new MMMessageAttribute<DeceasedStatusSD1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedStatusSD1.mmObject();
 			isDerived = false;
@@ -262,6 +292,16 @@ public class DeceasedStatusSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DeceasedStatusSD1 obj) {
+			return obj.getIssuingJurisdiction();
+		}
+
+		@Override
+		public void setValue(DeceasedStatusSD1 obj, Optional<Max35Text> value) {
+			obj.setIssuingJurisdiction(value.orElse(null));
 		}
 	};
 

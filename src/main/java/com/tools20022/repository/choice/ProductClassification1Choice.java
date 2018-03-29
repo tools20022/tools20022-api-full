@@ -108,7 +108,7 @@ public class ProductClassification1Choice {
 	 * definition} = "ISO 10962 classification of financial instrument (CFI)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductClassification1Choice, CFIOct2015Identifier> mmClassificationFinancialInstrument = new MMMessageAttribute<ProductClassification1Choice, CFIOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProductClassification1Choice.mmObject();
@@ -120,6 +120,16 @@ public class ProductClassification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public CFIOct2015Identifier getValue(ProductClassification1Choice obj) {
+			return obj.getClassificationFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ProductClassification1Choice obj, CFIOct2015Identifier value) {
+			obj.setClassificationFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "UnqPdctIdr", required = true)
@@ -156,7 +166,7 @@ public class ProductClassification1Choice {
 	 * definition} = "Unique and unambiguous identification of the product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueProductIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProductClassification1Choice, Max52Text> mmUniqueProductIdentifier = new MMMessageAttribute<ProductClassification1Choice, Max52Text>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmProductIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProductClassification1Choice.mmObject();
@@ -168,6 +178,16 @@ public class ProductClassification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(ProductClassification1Choice obj) {
+			return obj.getUniqueProductIdentifier();
+		}
+
+		@Override
+		public void setValue(ProductClassification1Choice obj, Max52Text value) {
+			obj.setUniqueProductIdentifier(value);
 		}
 	};
 

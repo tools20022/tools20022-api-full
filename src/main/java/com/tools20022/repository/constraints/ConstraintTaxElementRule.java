@@ -51,11 +51,15 @@ public class ConstraintTaxElementRule {
 	 */
 	public static final MMConstraint<InformativeTax1> forInformativeTax1 = new MMConstraint<InformativeTax1>() {
 		{
-			validator = ConstraintTaxElementRule::checkInformativeTax1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxElementRule";
 			definition = "One of the elements (TaxableIncomePerDividend, EUCapitalGain, EUDividendStatus, PercentageOfDebtClaim, IndividualTax) must be present.";
 			owner_lazy = () -> InformativeTax1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InformativeTax1 obj) throws Exception {
+			checkInformativeTax1(obj);
 		}
 	};
 

@@ -117,7 +117,7 @@ public class CurrencyExchangeSearchCriteria1 {
 	 * CurrencyExchangeSearchCriteria.mmSourceCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchangeSearchCriteria1, ActiveOrHistoricCurrencyCode> mmSourceCurrency = new MMMessageAttribute<CurrencyExchangeSearchCriteria1, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeSearchCriteria1.mmObject();
@@ -130,6 +130,16 @@ public class CurrencyExchangeSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CurrencyExchangeSearchCriteria1 obj) {
+			return obj.getSourceCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeSearchCriteria1 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setSourceCurrency(value);
 		}
 	};
 	@XmlElement(name = "TrgtCcy", required = true)
@@ -174,7 +184,7 @@ public class CurrencyExchangeSearchCriteria1 {
 	 * CurrencyExchangeSearchCriteria.mmTargetCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchangeSearchCriteria1, ActiveOrHistoricCurrencyCode> mmTargetCurrency = new MMMessageAttribute<CurrencyExchangeSearchCriteria1, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeSearchCriteria1.mmObject();
@@ -187,6 +197,16 @@ public class CurrencyExchangeSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CurrencyExchangeSearchCriteria1 obj) {
+			return obj.getTargetCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeSearchCriteria1 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setTargetCurrency(value);
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxType;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -113,7 +114,7 @@ public class TaxDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxDetails, Optional<Max35Text>> mmCertificateIdentification = new MMMessageAttribute<TaxDetails, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmCertificateIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxDetails.mmObject();
@@ -125,6 +126,16 @@ public class TaxDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TaxDetails obj) {
+			return obj.getCertificateIdentification();
+		}
+
+		@Override
+		public void setValue(TaxDetails obj, Optional<Max35Text> value) {
+			obj.setCertificateIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxTp")
@@ -157,7 +168,7 @@ public class TaxDetails {
 	 * definition} = "Information on the type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxDetails, Optional<TaxType>> mmTaxType = new MMMessageAssociationEnd<TaxDetails, Optional<TaxType>>() {
 		{
 			businessComponentTrace_lazy = () -> Tax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxDetails.mmObject();
@@ -169,7 +180,17 @@ public class TaxDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxType.mmObject();
+			type_lazy = () -> TaxType.mmObject();
+		}
+
+		@Override
+		public Optional<TaxType> getValue(TaxDetails obj) {
+			return obj.getTaxType();
+		}
+
+		@Override
+		public void setValue(TaxDetails obj, Optional<TaxType> value) {
+			obj.setTaxType(value.orElse(null));
 		}
 	};
 
@@ -201,7 +222,7 @@ public class TaxDetails {
 		return taxType == null ? Optional.empty() : Optional.of(taxType);
 	}
 
-	public TaxDetails setTaxType(com.tools20022.repository.msg.TaxType taxType) {
+	public TaxDetails setTaxType(TaxType taxType) {
 		this.taxType = taxType;
 		return this;
 	}

@@ -29,6 +29,7 @@ import com.tools20022.repository.choice.LotteryTypeFormat4Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionDate59;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -138,7 +139,7 @@ public class CorporateAction44 {
 	 * CorporateAction33.mmDateDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction44, Optional<CorporateActionDate59>> mmDateDetails = new MMMessageAssociationEnd<CorporateAction44, Optional<CorporateActionDate59>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction44.mmObject();
@@ -151,7 +152,17 @@ public class CorporateAction44 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate59.mmObject();
+			type_lazy = () -> CorporateActionDate59.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionDate59> getValue(CorporateAction44 obj) {
+			return obj.getDateDetails();
+		}
+
+		@Override
+		public void setValue(CorporateAction44 obj, Optional<CorporateActionDate59> value) {
+			obj.setDateDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtStag")
@@ -193,7 +204,7 @@ public class CorporateAction44 {
 	 * CorporateAction33.mmEventStage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction44, Optional<CorporateActionEventStageFormat14Choice>> mmEventStage = new MMMessageAssociationEnd<CorporateAction44, Optional<CorporateActionEventStageFormat14Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction44.mmObject();
@@ -207,6 +218,16 @@ public class CorporateAction44 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventStageFormat14Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionEventStageFormat14Choice> getValue(CorporateAction44 obj) {
+			return obj.getEventStage();
+		}
+
+		@Override
+		public void setValue(CorporateAction44 obj, Optional<CorporateActionEventStageFormat14Choice> value) {
+			obj.setEventStage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlBizPrcInd")
@@ -253,7 +274,7 @@ public class CorporateAction44 {
 	 * CorporateAction33.mmAdditionalBusinessProcessIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalBusinessProcessIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction44, Optional<AdditionalBusinessProcessFormat11Choice>> mmAdditionalBusinessProcessIndicator = new MMMessageAssociationEnd<CorporateAction44, Optional<AdditionalBusinessProcessFormat11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAdditionalBusinessProcess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction44.mmObject();
@@ -268,6 +289,16 @@ public class CorporateAction44 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AdditionalBusinessProcessFormat11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalBusinessProcessFormat11Choice> getValue(CorporateAction44 obj) {
+			return obj.getAdditionalBusinessProcessIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateAction44 obj, Optional<AdditionalBusinessProcessFormat11Choice> value) {
+			obj.setAdditionalBusinessProcessIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtryTp")
@@ -312,7 +343,7 @@ public class CorporateAction44 {
 	 * CorporateAction33.mmLotteryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction44, Optional<LotteryTypeFormat4Choice>> mmLotteryType = new MMMessageAssociationEnd<CorporateAction44, Optional<LotteryTypeFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction44.mmObject();
@@ -327,6 +358,16 @@ public class CorporateAction44 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LotteryTypeFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LotteryTypeFormat4Choice> getValue(CorporateAction44 obj) {
+			return obj.getLotteryType();
+		}
+
+		@Override
+		public void setValue(CorporateAction44 obj, Optional<LotteryTypeFormat4Choice> value) {
+			obj.setLotteryType(value.orElse(null));
 		}
 	};
 
@@ -351,7 +392,7 @@ public class CorporateAction44 {
 		return dateDetails == null ? Optional.empty() : Optional.of(dateDetails);
 	}
 
-	public CorporateAction44 setDateDetails(com.tools20022.repository.msg.CorporateActionDate59 dateDetails) {
+	public CorporateAction44 setDateDetails(CorporateActionDate59 dateDetails) {
 		this.dateDetails = dateDetails;
 		return this;
 	}

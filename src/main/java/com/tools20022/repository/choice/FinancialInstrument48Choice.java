@@ -114,7 +114,7 @@ public class FinancialInstrument48Choice {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument48Choice, ISINOct2015Identifier> mmISIN = new MMMessageAttribute<FinancialInstrument48Choice, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrument48Choice.mmObject();
@@ -126,6 +126,16 @@ public class FinancialInstrument48Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(FinancialInstrument48Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument48Choice obj, ISINOct2015Identifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "LEI", required = true)
@@ -165,7 +175,7 @@ public class FinancialInstrument48Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument48Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<FinancialInstrument48Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrument48Choice.mmObject();
@@ -177,6 +187,16 @@ public class FinancialInstrument48Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(FinancialInstrument48Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument48Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "Indx", required = true)
@@ -212,7 +232,7 @@ public class FinancialInstrument48Choice {
 	 * definition} = "Index on which the financial instrument is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrument48Choice, FinancialInstrument58> mmIndex = new MMMessageAssociationEnd<FinancialInstrument48Choice, FinancialInstrument58>() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmIndex;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrument48Choice.mmObject();
@@ -225,6 +245,16 @@ public class FinancialInstrument48Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrument58.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument58 getValue(FinancialInstrument48Choice obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument48Choice obj, FinancialInstrument58 value) {
+			obj.setIndex(value);
 		}
 	};
 

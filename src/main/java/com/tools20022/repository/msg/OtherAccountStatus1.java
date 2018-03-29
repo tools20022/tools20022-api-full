@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +105,7 @@ public class OtherAccountStatus1 {
 	 * definition} = "Status of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherAccountStatus1, GenericIdentification36> mmStatus = new MMMessageAssociationEnd<OtherAccountStatus1, GenericIdentification36>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAccountStatus1.mmObject();
@@ -116,7 +117,17 @@ public class OtherAccountStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
+			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(OtherAccountStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(OtherAccountStatus1 obj, GenericIdentification36 value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -153,7 +164,7 @@ public class OtherAccountStatus1 {
 	 * definition} = "Reason for the status of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherAccountStatus1, Optional<GenericIdentification36>> mmReason = new MMMessageAssociationEnd<OtherAccountStatus1, Optional<GenericIdentification36>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherAccountStatus1.mmObject();
@@ -165,7 +176,17 @@ public class OtherAccountStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification36.mmObject();
+			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification36> getValue(OtherAccountStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(OtherAccountStatus1 obj, Optional<GenericIdentification36> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 
@@ -187,7 +208,7 @@ public class OtherAccountStatus1 {
 		return status;
 	}
 
-	public OtherAccountStatus1 setStatus(com.tools20022.repository.msg.GenericIdentification36 status) {
+	public OtherAccountStatus1 setStatus(GenericIdentification36 status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}
@@ -196,7 +217,7 @@ public class OtherAccountStatus1 {
 		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public OtherAccountStatus1 setReason(com.tools20022.repository.msg.GenericIdentification36 reason) {
+	public OtherAccountStatus1 setReason(GenericIdentification36 reason) {
 		this.reason = reason;
 		return this;
 	}

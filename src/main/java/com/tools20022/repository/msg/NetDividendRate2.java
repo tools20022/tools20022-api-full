@@ -109,7 +109,7 @@ public class NetDividendRate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRate2, NetDividendRateType1FormatChoice> mmRateType = new MMMessageAttribute<NetDividendRate2, NetDividendRateType1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetDividendRate2.mmObject();
@@ -121,6 +121,16 @@ public class NetDividendRate2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NetDividendRateType1FormatChoice.mmObject();
+		}
+
+		@Override
+		public NetDividendRateType1FormatChoice getValue(NetDividendRate2 obj) {
+			return obj.getRateType();
+		}
+
+		@Override
+		public void setValue(NetDividendRate2 obj, NetDividendRateType1FormatChoice value) {
+			obj.setRateType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -158,7 +168,7 @@ public class NetDividendRate2 {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRate2, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<NetDividendRate2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetDividendRate2.mmObject();
@@ -170,6 +180,16 @@ public class NetDividendRate2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(NetDividendRate2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(NetDividendRate2 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

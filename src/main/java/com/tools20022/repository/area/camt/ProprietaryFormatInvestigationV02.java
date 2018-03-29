@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.Case2;
 import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msg.ProprietaryData4;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +130,7 @@ public class ProprietaryFormatInvestigationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ProprietaryFormatInvestigationV02, CaseAssignment2> mmAssignment = new MMMessageBuildingBlock<ProprietaryFormatInvestigationV02, CaseAssignment2>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +141,14 @@ public class ProprietaryFormatInvestigationV02 {
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProprietaryFormatInvestigationV02.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment2 getValue(ProprietaryFormatInvestigationV02 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(ProprietaryFormatInvestigationV02 obj, CaseAssignment2 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -173,7 +174,7 @@ public class ProprietaryFormatInvestigationV02 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ProprietaryFormatInvestigationV02, Case2> mmCase = new MMMessageBuildingBlock<ProprietaryFormatInvestigationV02, Case2>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class ProprietaryFormatInvestigationV02 {
 			complexType_lazy = () -> Case2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProprietaryFormatInvestigationV02.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case2 getValue(ProprietaryFormatInvestigationV02 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(ProprietaryFormatInvestigationV02 obj, Case2 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "PrtryData", required = true)
@@ -217,7 +220,7 @@ public class ProprietaryFormatInvestigationV02 {
 	 * definition} = "Proprietary information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProprietaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ProprietaryFormatInvestigationV02, ProprietaryData4> mmProprietaryData = new MMMessageBuildingBlock<ProprietaryFormatInvestigationV02, ProprietaryData4>() {
 		{
 			xmlTag = "PrtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,12 +231,14 @@ public class ProprietaryFormatInvestigationV02 {
 			complexType_lazy = () -> ProprietaryData4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ProprietaryFormatInvestigationV02.class.getMethod("getProprietaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ProprietaryData4 getValue(ProprietaryFormatInvestigationV02 obj) {
+			return obj.getProprietaryData();
+		}
+
+		@Override
+		public void setValue(ProprietaryFormatInvestigationV02 obj, ProprietaryData4 value) {
+			obj.setProprietaryData(value);
 		}
 	};
 

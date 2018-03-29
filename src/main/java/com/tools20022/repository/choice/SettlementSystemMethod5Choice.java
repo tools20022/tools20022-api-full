@@ -108,7 +108,7 @@ public class SettlementSystemMethod5Choice {
 	 * definition} = "Settlement system expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSystemMethod5Choice, SettlementSystemMethod1Code> mmCode = new MMMessageAttribute<SettlementSystemMethod5Choice, SettlementSystemMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementSystemMethod5Choice.mmObject();
@@ -121,6 +121,16 @@ public class SettlementSystemMethod5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementSystemMethod1Code.mmObject();
+		}
+
+		@Override
+		public SettlementSystemMethod1Code getValue(SettlementSystemMethod5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementSystemMethod5Choice obj, SettlementSystemMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class SettlementSystemMethod5Choice {
 	 * definition} = "Settlement system expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSystemMethod5Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<SettlementSystemMethod5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementSystemMethod5Choice.mmObject();
@@ -174,6 +184,16 @@ public class SettlementSystemMethod5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(SettlementSystemMethod5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementSystemMethod5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

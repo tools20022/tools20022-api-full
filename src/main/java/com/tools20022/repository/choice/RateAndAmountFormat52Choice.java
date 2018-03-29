@@ -114,7 +114,7 @@ public class RateAndAmountFormat52Choice {
 	 * definition} = "Value expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat52Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat52Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat52Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class RateAndAmountFormat52Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat52Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat52Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -161,7 +171,7 @@ public class RateAndAmountFormat52Choice {
 	 * definition} = "Value is expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat52Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat52Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat52Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class RateAndAmountFormat52Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat52Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat52Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -204,7 +224,7 @@ public class RateAndAmountFormat52Choice {
 	 * definition} = "Value is expressed as a rate type and an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateAndAmountFormat52Choice, RateTypeAndAmountAndStatus37> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<RateAndAmountFormat52Choice, RateTypeAndAmountAndStatus37>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat52Choice.mmObject();
 			isDerived = false;
@@ -216,6 +236,16 @@ public class RateAndAmountFormat52Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus37.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus37 getValue(RateAndAmountFormat52Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat52Choice obj, RateTypeAndAmountAndStatus37 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndRate", required = true)
@@ -247,7 +277,7 @@ public class RateAndAmountFormat52Choice {
 	 * definition} = "Value is expressed as a rate type and a percentage rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateAndAmountFormat52Choice, RateTypeAndPercentageRate10> mmRateTypeAndRate = new MMMessageAssociationEnd<RateAndAmountFormat52Choice, RateTypeAndPercentageRate10>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat52Choice.mmObject();
 			isDerived = false;
@@ -259,6 +289,16 @@ public class RateAndAmountFormat52Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndPercentageRate10.mmObject();
+		}
+
+		@Override
+		public RateTypeAndPercentageRate10 getValue(RateAndAmountFormat52Choice obj) {
+			return obj.getRateTypeAndRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat52Choice obj, RateTypeAndPercentageRate10 value) {
+			obj.setRateTypeAndRate(value);
 		}
 	};
 

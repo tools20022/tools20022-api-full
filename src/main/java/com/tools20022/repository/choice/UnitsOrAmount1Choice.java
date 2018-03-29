@@ -97,7 +97,7 @@ public class UnitsOrAmount1Choice {
 	 * definition} = "Currency and amount of the periodical payments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitsOrAmount1Choice, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<UnitsOrAmount1Choice, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitsOrAmount1Choice.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class UnitsOrAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(UnitsOrAmount1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(UnitsOrAmount1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Unit", required = true)
@@ -140,7 +150,7 @@ public class UnitsOrAmount1Choice {
 	 * definition} = "Number of units to be subscribed or withdrawn."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitsOrAmount1Choice, DecimalNumber> mmUnit = new MMMessageAttribute<UnitsOrAmount1Choice, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitsOrAmount1Choice.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class UnitsOrAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(UnitsOrAmount1Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(UnitsOrAmount1Choice obj, DecimalNumber value) {
+			obj.setUnit(value);
 		}
 	};
 

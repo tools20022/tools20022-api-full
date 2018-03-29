@@ -132,7 +132,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD7, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionDateSD7, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class CorporateActionDateSD7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionDateSD7 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD7 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "ActlEarlyXprtnDt")
@@ -184,7 +194,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualEarlyExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>> mmActualEarlyExpirationDate = new MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -196,6 +206,16 @@ public class CorporateActionDateSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionDateSD7 obj) {
+			return obj.getActualEarlyExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD7 obj, Optional<ISODateTime> value) {
+			obj.setActualEarlyExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlPrtctXprtnDt")
@@ -236,7 +256,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>> mmActualProtectExpirationDate = new MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -248,6 +268,16 @@ public class CorporateActionDateSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionDateSD7 obj) {
+			return obj.getActualProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD7 obj, Optional<ISODateTime> value) {
+			obj.setActualProtectExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlEarlyPrtctXprtnDt")
@@ -289,7 +319,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualEarlyProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>> mmActualEarlyProtectExpirationDate = new MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -301,6 +331,16 @@ public class CorporateActionDateSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionDateSD7 obj) {
+			return obj.getActualEarlyProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD7 obj, Optional<ISODateTime> value) {
+			obj.setActualEarlyProtectExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCEarlyPrtctXprtnDt")
@@ -342,7 +382,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCEarlyProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>> mmDTCEarlyProtectExpirationDate = new MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -354,6 +394,16 @@ public class CorporateActionDateSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionDateSD7 obj) {
+			return obj.getDTCEarlyProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD7 obj, Optional<ISODateTime> value) {
+			obj.setDTCEarlyProtectExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlEarlyCoverPrtctXprtnDt")
@@ -395,7 +445,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualEarlyCoverProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>> mmActualEarlyCoverProtectExpirationDate = new MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -407,6 +457,16 @@ public class CorporateActionDateSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionDateSD7 obj) {
+			return obj.getActualEarlyCoverProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD7 obj, Optional<ISODateTime> value) {
+			obj.setActualEarlyCoverProtectExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCEarlyCoverPrtctXprtnDt")
@@ -447,7 +507,7 @@ public class CorporateActionDateSD7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCEarlyCoverProtectExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>> mmDTCEarlyCoverProtectExpirationDate = new MMMessageAttribute<CorporateActionDateSD7, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD7.mmObject();
 			isDerived = false;
@@ -459,6 +519,16 @@ public class CorporateActionDateSD7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionDateSD7 obj) {
+			return obj.getDTCEarlyCoverProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD7 obj, Optional<ISODateTime> value) {
+			obj.setDTCEarlyCoverProtectExpirationDate(value.orElse(null));
 		}
 	};
 

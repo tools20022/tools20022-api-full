@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Pagination;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +134,7 @@ public class NettingCutOffReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingCutOffReportData1, Max35Text> mmMessageIdentification = new MMMessageAttribute<NettingCutOffReportData1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -144,6 +145,16 @@ public class NettingCutOffReportData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(NettingCutOffReportData1 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReportData1 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -175,7 +186,7 @@ public class NettingCutOffReportData1 {
 	 * definition} = "Date and time at which the net report was generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingCutOffReportData1, ISODateTime> mmCreationDateTime = new MMMessageAttribute<NettingCutOffReportData1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -186,6 +197,16 @@ public class NettingCutOffReportData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(NettingCutOffReportData1 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReportData1 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "RptTp", required = true)
@@ -219,7 +240,7 @@ public class NettingCutOffReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingCutOffReportData1, Max4Text> mmReportType = new MMMessageAttribute<NettingCutOffReportData1, Max4Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -230,6 +251,16 @@ public class NettingCutOffReportData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Max4Text getValue(NettingCutOffReportData1 obj) {
+			return obj.getReportType();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReportData1 obj, Max4Text value) {
+			obj.setReportType(value);
 		}
 	};
 	@XmlElement(name = "ActvtnDt", required = true)
@@ -262,7 +293,7 @@ public class NettingCutOffReportData1 {
 	 * "Date on which the proposed netting cut off will become active."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingCutOffReportData1, ISODate> mmActivationDate = new MMMessageAttribute<NettingCutOffReportData1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -273,6 +304,16 @@ public class NettingCutOffReportData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(NettingCutOffReportData1 obj) {
+			return obj.getActivationDate();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReportData1 obj, ISODate value) {
+			obj.setActivationDate(value);
 		}
 	};
 	@XmlElement(name = "NetSvcPtcptId")
@@ -304,7 +345,7 @@ public class NettingCutOffReportData1 {
 	 * definition} = "Describes the participant receiving the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetServiceParticipantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NettingCutOffReportData1, Optional<PartyIdentification73Choice>> mmNetServiceParticipantIdentification = new MMMessageAssociationEnd<NettingCutOffReportData1, Optional<PartyIdentification73Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -316,6 +357,16 @@ public class NettingCutOffReportData1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(NettingCutOffReportData1 obj) {
+			return obj.getNetServiceParticipantIdentification();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReportData1 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setNetServiceParticipantIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptSvcr")
@@ -349,7 +400,7 @@ public class NettingCutOffReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NettingCutOffReportData1, Optional<PartyIdentification73Choice>> mmReportServicer = new MMMessageAssociationEnd<NettingCutOffReportData1, Optional<PartyIdentification73Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -361,6 +412,16 @@ public class NettingCutOffReportData1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(NettingCutOffReportData1 obj) {
+			return obj.getReportServicer();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReportData1 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setReportServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetSvcTp")
@@ -393,7 +454,7 @@ public class NettingCutOffReportData1 {
 	 * "Describes the type of netting service supporting the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingCutOffReportData1, Optional<Max35Text>> mmNetServiceType = new MMMessageAttribute<NettingCutOffReportData1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -404,6 +465,16 @@ public class NettingCutOffReportData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(NettingCutOffReportData1 obj) {
+			return obj.getNetServiceType();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReportData1 obj, Optional<Max35Text> value) {
+			obj.setNetServiceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgPgntn")
@@ -435,7 +506,7 @@ public class NettingCutOffReportData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NettingCutOffReportData1, Optional<Pagination>> mmMessagePagination = new MMMessageAssociationEnd<NettingCutOffReportData1, Optional<Pagination>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NettingCutOffReportData1.mmObject();
 			isDerived = false;
@@ -446,7 +517,17 @@ public class NettingCutOffReportData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			type_lazy = () -> Pagination.mmObject();
+		}
+
+		@Override
+		public Optional<Pagination> getValue(NettingCutOffReportData1 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReportData1 obj, Optional<Pagination> value) {
+			obj.setMessagePagination(value.orElse(null));
 		}
 	};
 
@@ -534,7 +615,7 @@ public class NettingCutOffReportData1 {
 		return messagePagination == null ? Optional.empty() : Optional.of(messagePagination);
 	}
 
-	public NettingCutOffReportData1 setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+	public NettingCutOffReportData1 setMessagePagination(Pagination messagePagination) {
 		this.messagePagination = messagePagination;
 		return this;
 	}

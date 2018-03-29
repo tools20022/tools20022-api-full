@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.OrganisationName;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress21;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +122,7 @@ public class Organisation23 {
 	 * Organisation24.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation23, Max350Text> mmName = new MMMessageAttribute<Organisation23, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation23.mmObject();
@@ -134,6 +135,16 @@ public class Organisation23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(Organisation23 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(Organisation23 obj, Max350Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "ShrtNm")
@@ -174,7 +185,7 @@ public class Organisation23 {
 	 * Organisation24.mmShortName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation23, Optional<Max35Text>> mmShortName = new MMMessageAttribute<Organisation23, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationName.mmShortName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation23.mmObject();
@@ -188,9 +199,19 @@ public class Organisation23 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(Organisation23 obj) {
+			return obj.getShortName();
+		}
+
+		@Override
+		public void setValue(Organisation23 obj, Optional<Max35Text> value) {
+			obj.setShortName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "PstlAdr", required = true)
-	protected List<com.tools20022.repository.msg.PostalAddress21> postalAddress;
+	protected List<PostalAddress21> postalAddress;
 	/**
 	 * 
 	 <p>
@@ -228,7 +249,7 @@ public class Organisation23 {
 	 * Organisation24.mmPostalAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation23, List<PostalAddress21>> mmPostalAddress = new MMMessageAssociationEnd<Organisation23, List<PostalAddress21>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation23.mmObject();
@@ -241,7 +262,17 @@ public class Organisation23 {
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress21.mmObject();
+			type_lazy = () -> PostalAddress21.mmObject();
+		}
+
+		@Override
+		public List<PostalAddress21> getValue(Organisation23 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(Organisation23 obj, List<PostalAddress21> value) {
+			obj.setPostalAddress(value);
 		}
 	};
 
@@ -282,7 +313,7 @@ public class Organisation23 {
 		return postalAddress == null ? postalAddress = new ArrayList<>() : postalAddress;
 	}
 
-	public Organisation23 setPostalAddress(List<com.tools20022.repository.msg.PostalAddress21> postalAddress) {
+	public Organisation23 setPostalAddress(List<PostalAddress21> postalAddress) {
 		this.postalAddress = Objects.requireNonNull(postalAddress);
 		return this;
 	}

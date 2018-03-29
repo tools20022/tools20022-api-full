@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcquirerFinancialInitiation1;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header17;
 import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +113,7 @@ public class AcquirerFinancialInitiation {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcquirerFinancialInitiation, Header17> mmHeader = new MMMessageBuildingBlock<AcquirerFinancialInitiation, Header17>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +124,14 @@ public class AcquirerFinancialInitiation {
 			complexType_lazy = () -> Header17.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcquirerFinancialInitiation.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header17 getValue(AcquirerFinancialInitiation obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcquirerFinancialInitiation obj, Header17 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "FinInitn", required = true)
@@ -158,7 +159,7 @@ public class AcquirerFinancialInitiation {
 	 * definition} = "Information related to financial authorisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancialInitiation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcquirerFinancialInitiation, AcquirerFinancialInitiation1> mmFinancialInitiation = new MMMessageBuildingBlock<AcquirerFinancialInitiation, AcquirerFinancialInitiation1>() {
 		{
 			xmlTag = "FinInitn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,12 +170,14 @@ public class AcquirerFinancialInitiation {
 			complexType_lazy = () -> AcquirerFinancialInitiation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcquirerFinancialInitiation.class.getMethod("getFinancialInitiation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcquirerFinancialInitiation1 getValue(AcquirerFinancialInitiation obj) {
+			return obj.getFinancialInitiation();
+		}
+
+		@Override
+		public void setValue(AcquirerFinancialInitiation obj, AcquirerFinancialInitiation1 value) {
+			obj.setFinancialInitiation(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -202,7 +205,7 @@ public class AcquirerFinancialInitiation {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcquirerFinancialInitiation, ContentInformationType15> mmSecurityTrailer = new MMMessageBuildingBlock<AcquirerFinancialInitiation, ContentInformationType15>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,12 +216,14 @@ public class AcquirerFinancialInitiation {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcquirerFinancialInitiation.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType15 getValue(AcquirerFinancialInitiation obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcquirerFinancialInitiation obj, ContentInformationType15 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

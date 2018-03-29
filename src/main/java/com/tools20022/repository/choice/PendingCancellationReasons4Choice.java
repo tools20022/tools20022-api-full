@@ -123,7 +123,7 @@ public class PendingCancellationReasons4Choice {
 	 * PendingCancellationReasons2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationReasons4Choice, PendingReason7Code> mmCode = new MMMessageAttribute<PendingCancellationReasons4Choice, PendingReason7Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReasons4Choice.mmObject();
@@ -137,6 +137,16 @@ public class PendingCancellationReasons4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingReason7Code.mmObject();
+		}
+
+		@Override
+		public PendingReason7Code getValue(PendingCancellationReasons4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReasons4Choice obj, PendingReason7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -183,7 +193,7 @@ public class PendingCancellationReasons4Choice {
 	 * PendingCancellationReasons2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationReasons4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<PendingCancellationReasons4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReasons4Choice.mmObject();
@@ -197,6 +207,16 @@ public class PendingCancellationReasons4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(PendingCancellationReasons4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReasons4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.AcquirerRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class Acquirer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Acquirer1, Optional<GenericIdentification32>> mmIdentification = new MMMessageAssociationEnd<Acquirer1, Optional<GenericIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer1.mmObject();
@@ -125,7 +126,17 @@ public class Acquirer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(Acquirer1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Acquirer1 obj, Optional<GenericIdentification32> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ParamsVrsn", required = true)
@@ -156,7 +167,7 @@ public class Acquirer1 {
 	 * definition} = "Version of the payment acquirer parameters of the POI."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParametersVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer1, ISODateTime> mmParametersVersion = new MMMessageAttribute<Acquirer1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer1.mmObject();
 			isDerived = false;
@@ -167,6 +178,16 @@ public class Acquirer1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Acquirer1 obj) {
+			return obj.getParametersVersion();
+		}
+
+		@Override
+		public void setValue(Acquirer1 obj, ISODateTime value) {
+			obj.setParametersVersion(value);
 		}
 	};
 
@@ -189,7 +210,7 @@ public class Acquirer1 {
 		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public Acquirer1 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public Acquirer1 setIdentification(GenericIdentification32 identification) {
 		this.identification = identification;
 		return this;
 	}

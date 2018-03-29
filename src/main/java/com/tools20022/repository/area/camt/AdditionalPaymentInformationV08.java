@@ -28,7 +28,7 @@ import com.tools20022.repository.msg.CaseAssignment4;
 import com.tools20022.repository.msg.PaymentComplementaryInformation7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -106,6 +106,9 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
+ * ExceptionsandInvestigationsISOLatestversion}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance
  * _SR2018_MX_Payments_Maintenance}</li>
  * </ul>
@@ -173,7 +176,7 @@ public class AdditionalPaymentInformationV08 {
 	 * AdditionalPaymentInformationV07.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV08, CaseAssignment4> mmAssignment = new MMMessageBuildingBlock<AdditionalPaymentInformationV08, CaseAssignment4>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,12 +188,14 @@ public class AdditionalPaymentInformationV08 {
 			complexType_lazy = () -> CaseAssignment4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV08.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment4 getValue(AdditionalPaymentInformationV08 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV08 obj, CaseAssignment4 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case")
@@ -221,7 +226,7 @@ public class AdditionalPaymentInformationV08 {
 	 * AdditionalPaymentInformationV07.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV08, Optional<Case4>> mmCase = new MMMessageBuildingBlock<AdditionalPaymentInformationV08, Optional<Case4>>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,12 +238,14 @@ public class AdditionalPaymentInformationV08 {
 			complexType_lazy = () -> Case4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV08.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Case4> getValue(AdditionalPaymentInformationV08 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV08 obj, Optional<Case4> value) {
+			obj.setCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -271,7 +278,7 @@ public class AdditionalPaymentInformationV08 {
 	 * AdditionalPaymentInformationV07.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV08, UnderlyingTransaction4Choice> mmUnderlying = new MMMessageBuildingBlock<AdditionalPaymentInformationV08, UnderlyingTransaction4Choice>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,12 +290,14 @@ public class AdditionalPaymentInformationV08 {
 			complexType_lazy = () -> UnderlyingTransaction4Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV08.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnderlyingTransaction4Choice getValue(AdditionalPaymentInformationV08 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV08 obj, UnderlyingTransaction4Choice value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Inf", required = true)
@@ -322,7 +331,7 @@ public class AdditionalPaymentInformationV08 {
 	 * AdditionalPaymentInformationV07.mmInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV08, PaymentComplementaryInformation7> mmInformation = new MMMessageBuildingBlock<AdditionalPaymentInformationV08, PaymentComplementaryInformation7>() {
 		{
 			xmlTag = "Inf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,12 +343,14 @@ public class AdditionalPaymentInformationV08 {
 			complexType_lazy = () -> PaymentComplementaryInformation7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV08.class.getMethod("getInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentComplementaryInformation7 getValue(AdditionalPaymentInformationV08 obj) {
+			return obj.getInformation();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV08 obj, PaymentComplementaryInformation7 value) {
+			obj.setInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -374,7 +385,7 @@ public class AdditionalPaymentInformationV08 {
 	 * AdditionalPaymentInformationV07.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV08, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<AdditionalPaymentInformationV08, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -385,12 +396,14 @@ public class AdditionalPaymentInformationV08 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV08.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(AdditionalPaymentInformationV08 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV08 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -401,7 +414,7 @@ public class AdditionalPaymentInformationV08 {
 				name = "AdditionalPaymentInformationV08";
 				definition = "Scope\r\nThe AdditionalPaymentInformation message is sent by an account servicing institution to an account owner.\r\nThis message is used to provide additional or corrected information on a payment instruction or statement entry, in order to allow reconciliation.\r\nUsage\r\nThe AdditionalPaymentInformation message provides elements which are usually not reported in a statement or advice (for example full remittance information or identification of parties other than the account servicing institution and the account owner). It complements information about a payment instruction that has already been received, in the form of one or several entries of the original payment instruction.\r\nThe AdditionalPaymentInformation message covers one and only one original payment instruction. If several payment instructions need further details, multiple AdditionalPaymentInformation messages must be used, one for each of the payment instructions.\r\nThe AdditionalPaymentInformation message may be used as a result of two investigation processes and in a way outlined below.\r\n- A ClaimNonReceipt workflow raised by the creditor or recipient of the payment: This means that the payment instruction has reached the creditor or beneficiary. The account owner needs further details or correct information for its reconciliation processes. The AdditionalPaymentInformation can be used to provide the missing information.\r\n- A RequestToModifyPayment workflow raised by the debtor or one of the intermediate agents upstream: When the payment instruction has reached its intended recipient and the modification does not affect the accounting at the account servicing institution, this AdditionalPaymentInformation message allows the account owner to receive further particulars or correct information about a payment instruction or an entry passed to its account.\r\nThe AdditionalPayment Information message cannot be used to trigger a request for modification of a payment instruction activity. A RequestToModifyPayment message must be used. In other words, if a debtor or one of intermediate agent (excluding the account servicing institution of the creditor) realises the some information was missing in the original payment instruction, he should not use an AdditionalPaymentInformation but instead a RequestToModifyPayment message.\r\nIt is assumed that when an account servicing institution sends out an AdditionalPaymentInformation message, the institution is fairly confident that this will resolve the case. Therefore it does not need to wait for a Resolution Of Investigation message. Neither does the account owner, or whoever receives the additional information, need to send back a ResolutionOfInvestigation message. Positive resolution in this case is implicit. Both parties are expected to close the case. In the event that the problem does not go away, a party can re-open the case.";
 				previousVersion_lazy = () -> AdditionalPaymentInformationV07.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_Payments_Maintenance.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOLatestversion.mmObject(), _SR2018_MX_Payments_Maintenance.mmObject());
 				rootElement = "Document";
 				xmlTag = "AddtlPmtInf";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();

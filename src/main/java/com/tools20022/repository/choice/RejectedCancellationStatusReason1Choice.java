@@ -108,7 +108,7 @@ public class RejectedCancellationStatusReason1Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedCancellationStatusReason1Choice, RejectedCancellationStatusReason1Code> mmReason = new MMMessageAttribute<RejectedCancellationStatusReason1Choice, RejectedCancellationStatusReason1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class RejectedCancellationStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedCancellationStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public RejectedCancellationStatusReason1Code getValue(RejectedCancellationStatusReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedCancellationStatusReason1Choice obj, RejectedCancellationStatusReason1Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -151,7 +161,7 @@ public class RejectedCancellationStatusReason1Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedCancellationStatusReason1Choice, Extended350Code> mmExtendedReason = new MMMessageAttribute<RejectedCancellationStatusReason1Choice, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class RejectedCancellationStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(RejectedCancellationStatusReason1Choice obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(RejectedCancellationStatusReason1Choice obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -198,7 +218,7 @@ public class RejectedCancellationStatusReason1Choice {
 	 * "Proprietary identification of the reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedCancellationStatusReason1Choice, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<RejectedCancellationStatusReason1Choice, GenericIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedCancellationStatusReason1Choice.mmObject();
@@ -211,6 +231,16 @@ public class RejectedCancellationStatusReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(RejectedCancellationStatusReason1Choice obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(RejectedCancellationStatusReason1Choice obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 

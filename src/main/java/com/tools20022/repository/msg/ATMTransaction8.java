@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMMediaMix2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -120,7 +121,7 @@ public class ATMTransaction8 {
 	 * definition} = "Amount to dispense."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction8, Optional<ImpliedCurrencyAndAmount>> mmAmount = new MMMessageAttribute<ATMTransaction8, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
@@ -132,6 +133,16 @@ public class ATMTransaction8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTransaction8 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ATMTransaction8 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -169,7 +180,7 @@ public class ATMTransaction8 {
 	 * definition} = "Currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction8, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<ATMTransaction8, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
@@ -181,6 +192,16 @@ public class ATMTransaction8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(ATMTransaction8 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ATMTransaction8 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RctFlg")
@@ -219,7 +240,7 @@ public class ATMTransaction8 {
 	 * ATMTransaction1.mmRequestedReceipt}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReceiptFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction8, Optional<TrueFalseIndicator>> mmReceiptFlag = new MMMessageAttribute<ATMTransaction8, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
@@ -231,6 +252,16 @@ public class ATMTransaction8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMTransaction8 obj) {
+			return obj.getReceiptFlag();
+		}
+
+		@Override
+		public void setValue(ATMTransaction8 obj, Optional<TrueFalseIndicator> value) {
+			obj.setReceiptFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalPrtFlg")
@@ -265,7 +296,7 @@ public class ATMTransaction8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalancePrintFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction8, Optional<TrueFalseIndicator>> mmBalancePrintFlag = new MMMessageAttribute<ATMTransaction8, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
@@ -276,6 +307,16 @@ public class ATMTransaction8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMTransaction8 obj) {
+			return obj.getBalancePrintFlag();
+		}
+
+		@Override
+		public void setValue(ATMTransaction8 obj, Optional<TrueFalseIndicator> value) {
+			obj.setBalancePrintFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MixTp")
@@ -314,7 +355,7 @@ public class ATMTransaction8 {
 	 * ATMTransaction1.mmSelectedMixType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMixType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction8, Optional<Max35Text>> mmMixType = new MMMessageAttribute<ATMTransaction8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
@@ -327,9 +368,19 @@ public class ATMTransaction8 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMTransaction8 obj) {
+			return obj.getMixType();
+		}
+
+		@Override
+		public void setValue(ATMTransaction8 obj, Optional<Max35Text> value) {
+			obj.setMixType(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Mix")
-	protected List<com.tools20022.repository.msg.ATMMediaMix2> mix;
+	protected List<ATMMediaMix2> mix;
 	/**
 	 * 
 	 <p>
@@ -361,7 +412,7 @@ public class ATMTransaction8 {
 	 * ATMTransaction1.mmSelectedMix}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMix = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction8, List<ATMMediaMix2>> mmMix = new MMMessageAssociationEnd<ATMTransaction8, List<ATMMediaMix2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
 			isDerived = false;
@@ -372,7 +423,17 @@ public class ATMTransaction8 {
 			previousVersion_lazy = () -> ATMTransaction1.mmSelectedMix;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMMediaMix2.mmObject();
+			type_lazy = () -> ATMMediaMix2.mmObject();
+		}
+
+		@Override
+		public List<ATMMediaMix2> getValue(ATMTransaction8 obj) {
+			return obj.getMix();
+		}
+
+		@Override
+		public void setValue(ATMTransaction8 obj, List<ATMMediaMix2> value) {
+			obj.setMix(value);
 		}
 	};
 
@@ -441,7 +502,7 @@ public class ATMTransaction8 {
 		return mix == null ? mix = new ArrayList<>() : mix;
 	}
 
-	public ATMTransaction8 setMix(List<com.tools20022.repository.msg.ATMMediaMix2> mix) {
+	public ATMTransaction8 setMix(List<ATMMediaMix2> mix) {
 		this.mix = Objects.requireNonNull(mix);
 		return this;
 	}

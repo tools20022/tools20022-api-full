@@ -26,6 +26,8 @@ import com.tools20022.repository.codeset.ScenarioType1Code;
 import com.tools20022.repository.codeset.StrategyStressType1Code;
 import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification166;
+import com.tools20022.repository.msg.StressItem1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +123,7 @@ public class ScenarioDefinition1 {
 	 * definition} = "Identification of the stress scenario."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ScenarioDefinition1, GenericIdentification166> mmIdentification = new MMMessageAssociationEnd<ScenarioDefinition1, GenericIdentification166>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScenarioDefinition1.mmObject();
 			isDerived = false;
@@ -132,7 +134,17 @@ public class ScenarioDefinition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification166.mmObject();
+			type_lazy = () -> GenericIdentification166.mmObject();
+		}
+
+		@Override
+		public GenericIdentification166 getValue(ScenarioDefinition1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ScenarioDefinition1 obj, GenericIdentification166 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ScnroTp", required = true)
@@ -167,7 +179,7 @@ public class ScenarioDefinition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScenarioType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScenarioDefinition1, ScenarioType1Code> mmScenarioType = new MMMessageAttribute<ScenarioDefinition1, ScenarioType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScenarioDefinition1.mmObject();
 			isDerived = false;
@@ -178,6 +190,16 @@ public class ScenarioDefinition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ScenarioType1Code.mmObject();
+		}
+
+		@Override
+		public ScenarioType1Code getValue(ScenarioDefinition1 obj) {
+			return obj.getScenarioType();
+		}
+
+		@Override
+		public void setValue(ScenarioDefinition1 obj, ScenarioType1Code value) {
+			obj.setScenarioType(value);
 		}
 	};
 	@XmlElement(name = "StrtgyStrssTp", required = true)
@@ -210,7 +232,7 @@ public class ScenarioDefinition1 {
 	 * definition} = "Indicates how the scenario stresses the curve."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrategyStressType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScenarioDefinition1, StrategyStressType1Code> mmStrategyStressType = new MMMessageAttribute<ScenarioDefinition1, StrategyStressType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScenarioDefinition1.mmObject();
 			isDerived = false;
@@ -222,9 +244,19 @@ public class ScenarioDefinition1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> StrategyStressType1Code.mmObject();
 		}
+
+		@Override
+		public StrategyStressType1Code getValue(ScenarioDefinition1 obj) {
+			return obj.getStrategyStressType();
+		}
+
+		@Override
+		public void setValue(ScenarioDefinition1 obj, StrategyStressType1Code value) {
+			obj.setStrategyStressType(value);
+		}
 	};
 	@XmlElement(name = "StrssItm", required = true)
-	protected List<com.tools20022.repository.msg.StressItem1> stressItem;
+	protected List<StressItem1> stressItem;
 	/**
 	 * 
 	 <p>
@@ -252,7 +284,7 @@ public class ScenarioDefinition1 {
 	 * "Information relating to the one / two major representative product(s)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStressItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ScenarioDefinition1, List<StressItem1>> mmStressItem = new MMMessageAssociationEnd<ScenarioDefinition1, List<StressItem1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScenarioDefinition1.mmObject();
 			isDerived = false;
@@ -263,7 +295,17 @@ public class ScenarioDefinition1 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StressItem1.mmObject();
+			type_lazy = () -> StressItem1.mmObject();
+		}
+
+		@Override
+		public List<StressItem1> getValue(ScenarioDefinition1 obj) {
+			return obj.getStressItem();
+		}
+
+		@Override
+		public void setValue(ScenarioDefinition1 obj, List<StressItem1> value) {
+			obj.setStressItem(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -295,7 +337,7 @@ public class ScenarioDefinition1 {
 	 * definition} = "Long description of the scenario."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScenarioDefinition1, Optional<Max2000Text>> mmDescription = new MMMessageAttribute<ScenarioDefinition1, Optional<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScenarioDefinition1.mmObject();
 			isDerived = false;
@@ -306,6 +348,16 @@ public class ScenarioDefinition1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max2000Text> getValue(ScenarioDefinition1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(ScenarioDefinition1 obj, Optional<Max2000Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 
@@ -328,7 +380,7 @@ public class ScenarioDefinition1 {
 		return identification;
 	}
 
-	public ScenarioDefinition1 setIdentification(com.tools20022.repository.msg.GenericIdentification166 identification) {
+	public ScenarioDefinition1 setIdentification(GenericIdentification166 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -355,7 +407,7 @@ public class ScenarioDefinition1 {
 		return stressItem == null ? stressItem = new ArrayList<>() : stressItem;
 	}
 
-	public ScenarioDefinition1 setStressItem(List<com.tools20022.repository.msg.StressItem1> stressItem) {
+	public ScenarioDefinition1 setStressItem(List<StressItem1> stressItem) {
 		this.stressItem = Objects.requireNonNull(stressItem);
 		return this;
 	}

@@ -107,7 +107,7 @@ public class ReversalReason1Choice {
 	 * definition} = "Reason for the reversal in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReversalReason1Choice, TransactionReversalReason1Code> mmCode = new MMMessageAttribute<ReversalReason1Choice, TransactionReversalReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReversalReason1Choice.mmObject();
@@ -119,6 +119,16 @@ public class ReversalReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionReversalReason1Code.mmObject();
+		}
+
+		@Override
+		public TransactionReversalReason1Code getValue(ReversalReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ReversalReason1Choice obj, TransactionReversalReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class ReversalReason1Choice {
 	 * "Reason for the reversal not catered for by the available codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReversalReason1Choice, Max35Text> mmProprietary = new MMMessageAttribute<ReversalReason1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReversalReason1Choice.mmObject();
@@ -168,6 +178,16 @@ public class ReversalReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReversalReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ReversalReason1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

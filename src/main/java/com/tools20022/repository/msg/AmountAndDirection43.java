@@ -109,7 +109,7 @@ public class AmountAndDirection43 {
 	 * AmountAndDirection41.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection43, CurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection43, CurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection43.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class AmountAndDirection43 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(AmountAndDirection43 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection43 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Sgn")
@@ -158,7 +168,7 @@ public class AmountAndDirection43 {
 	 * AmountAndDirection41.mmSign}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection43, Optional<PlusOrMinusIndicator>> mmSign = new MMMessageAttribute<AmountAndDirection43, Optional<PlusOrMinusIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection43.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class AmountAndDirection43 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<PlusOrMinusIndicator> getValue(AmountAndDirection43 obj) {
+			return obj.getSign();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection43 obj, Optional<PlusOrMinusIndicator> value) {
+			obj.setSign(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -201,7 +221,7 @@ public class AmountAndDirection43 {
 	 * definition} = "Date of the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection43, Optional<ISODate>> mmDate = new MMMessageAttribute<AmountAndDirection43, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection43.mmObject();
 			isDerived = false;
@@ -212,6 +232,16 @@ public class AmountAndDirection43 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AmountAndDirection43 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection43 obj, Optional<ISODate> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 

@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.Max10NumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SettlementParties29;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -152,7 +153,7 @@ public class NetObligation1 {
 	 * definition} = "Unique identification for the obligation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmObligationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetObligation1, Max35Text> mmObligationIdentification = new MMMessageAttribute<NetObligation1, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> Obligation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetObligation1.mmObject();
@@ -164,6 +165,16 @@ public class NetObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(NetObligation1 obj) {
+			return obj.getObligationIdentification();
+		}
+
+		@Override
+		public void setValue(NetObligation1 obj, Max35Text value) {
+			obj.setObligationIdentification(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -200,7 +211,7 @@ public class NetObligation1 {
 	 * definition} = "Amount and currency of the obligation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetObligation1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<NetObligation1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetObligation1.mmObject();
@@ -212,6 +223,16 @@ public class NetObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(NetObligation1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(NetObligation1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "PtcptNetgId", required = true)
@@ -244,7 +265,7 @@ public class NetObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipantNettingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetObligation1, NettingIdentification1Choice> mmParticipantNettingIdentification = new MMMessageAssociationEnd<NetObligation1, NettingIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetObligation1.mmObject();
 			isDerived = false;
@@ -256,6 +277,16 @@ public class NetObligation1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NettingIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public NettingIdentification1Choice getValue(NetObligation1 obj) {
+			return obj.getParticipantNettingIdentification();
+		}
+
+		@Override
+		public void setValue(NetObligation1 obj, NettingIdentification1Choice value) {
+			obj.setParticipantNettingIdentification(value);
 		}
 	};
 	@XmlElement(name = "OblgtnDrctn", required = true)
@@ -292,7 +323,7 @@ public class NetObligation1 {
 	 * definition} = "Specifies the direction of the obligation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmObligationDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetObligation1, PaymentReceipt1Code> mmObligationDirection = new MMMessageAttribute<NetObligation1, PaymentReceipt1Code>() {
 		{
 			businessElementTrace_lazy = () -> Netting.mmAmountDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetObligation1.mmObject();
@@ -304,6 +335,16 @@ public class NetObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentReceipt1Code.mmObject();
+		}
+
+		@Override
+		public PaymentReceipt1Code getValue(NetObligation1 obj) {
+			return obj.getObligationDirection();
+		}
+
+		@Override
+		public void setValue(NetObligation1 obj, PaymentReceipt1Code value) {
+			obj.setObligationDirection(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyNetgId", required = true)
@@ -341,7 +382,7 @@ public class NetObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterpartyNettingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetObligation1, NettingIdentification1Choice> mmCounterpartyNettingIdentification = new MMMessageAssociationEnd<NetObligation1, NettingIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetObligation1.mmObject();
@@ -354,6 +395,16 @@ public class NetObligation1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NettingIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public NettingIdentification1Choice getValue(NetObligation1 obj) {
+			return obj.getCounterpartyNettingIdentification();
+		}
+
+		@Override
+		public void setValue(NetObligation1 obj, NettingIdentification1Choice value) {
+			obj.setCounterpartyNettingIdentification(value);
 		}
 	};
 	@XmlElement(name = "NetSvcCtrPtyId")
@@ -390,7 +441,7 @@ public class NetObligation1 {
 	 * "Describes the counterparty participant involved in the obligation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetServiceCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetObligation1, Optional<PartyIdentification73Choice>> mmNetServiceCounterpartyIdentification = new MMMessageAssociationEnd<NetObligation1, Optional<PartyIdentification73Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> ClearingMemberRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetObligation1.mmObject();
@@ -403,6 +454,16 @@ public class NetObligation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification73Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(NetObligation1 obj) {
+			return obj.getNetServiceCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(NetObligation1 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setNetServiceCounterpartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtySttlmInstrs")
@@ -439,7 +500,7 @@ public class NetObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterpartySettlementInstructions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NetObligation1, Optional<SettlementParties29>> mmCounterpartySettlementInstructions = new MMMessageAssociationEnd<NetObligation1, Optional<SettlementParties29>>() {
 		{
 			businessElementTrace_lazy = () -> Settlement.mmSettlementPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetObligation1.mmObject();
@@ -451,7 +512,17 @@ public class NetObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties29.mmObject();
+			type_lazy = () -> SettlementParties29.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementParties29> getValue(NetObligation1 obj) {
+			return obj.getCounterpartySettlementInstructions();
+		}
+
+		@Override
+		public void setValue(NetObligation1 obj, Optional<SettlementParties29> value) {
+			obj.setCounterpartySettlementInstructions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxsNb")
@@ -485,7 +556,7 @@ public class NetObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetObligation1, Optional<Max10NumericText>> mmTransactionsNumber = new MMMessageAttribute<NetObligation1, Optional<Max10NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetObligation1.mmObject();
 			isDerived = false;
@@ -496,6 +567,16 @@ public class NetObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max10NumericText> getValue(NetObligation1 obj) {
+			return obj.getTransactionsNumber();
+		}
+
+		@Override
+		public void setValue(NetObligation1 obj, Optional<Max10NumericText> value) {
+			obj.setTransactionsNumber(value.orElse(null));
 		}
 	};
 
@@ -577,7 +658,7 @@ public class NetObligation1 {
 		return counterpartySettlementInstructions == null ? Optional.empty() : Optional.of(counterpartySettlementInstructions);
 	}
 
-	public NetObligation1 setCounterpartySettlementInstructions(com.tools20022.repository.msg.SettlementParties29 counterpartySettlementInstructions) {
+	public NetObligation1 setCounterpartySettlementInstructions(SettlementParties29 counterpartySettlementInstructions) {
 		this.counterpartySettlementInstructions = counterpartySettlementInstructions;
 		return this;
 	}

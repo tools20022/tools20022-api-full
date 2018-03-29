@@ -117,7 +117,7 @@ public class WaivingInstruction2Choice {
 	 * WaivingInstruction1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WaivingInstruction2Choice, WaivingInstruction1Code> mmCode = new MMMessageAttribute<WaivingInstruction2Choice, WaivingInstruction1Code>() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.WaivingInstruction2Choice.mmObject();
@@ -130,6 +130,16 @@ public class WaivingInstruction2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WaivingInstruction1Code.mmObject();
+		}
+
+		@Override
+		public WaivingInstruction1Code getValue(WaivingInstruction2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(WaivingInstruction2Choice obj, WaivingInstruction1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class WaivingInstruction2Choice {
 	 * WaivingInstruction1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<WaivingInstruction2Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<WaivingInstruction2Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.WaivingInstruction2Choice.mmObject();
@@ -186,6 +196,16 @@ public class WaivingInstruction2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(WaivingInstruction2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(WaivingInstruction2Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

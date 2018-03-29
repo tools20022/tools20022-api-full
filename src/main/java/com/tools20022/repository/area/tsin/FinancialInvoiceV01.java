@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TradeServicesInitiationLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.FinancialInvoiceISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -143,7 +142,7 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvoiceHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInvoiceV01, InvoiceHeader1> mmInvoiceHeader = new MMMessageBuildingBlock<FinancialInvoiceV01, InvoiceHeader1>() {
 		{
 			xmlTag = "InvcHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class FinancialInvoiceV01 {
 			complexType_lazy = () -> InvoiceHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInvoiceV01.class.getMethod("getInvoiceHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvoiceHeader1 getValue(FinancialInvoiceV01 obj) {
+			return obj.getInvoiceHeader();
+		}
+
+		@Override
+		public void setValue(FinancialInvoiceV01 obj, InvoiceHeader1 value) {
+			obj.setInvoiceHeader(value);
 		}
 	};
 	@XmlElement(name = "TradAgrmt", required = true)
@@ -188,7 +189,7 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeAgreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInvoiceV01, TradeAgreement6> mmTradeAgreement = new MMMessageBuildingBlock<FinancialInvoiceV01, TradeAgreement6>() {
 		{
 			xmlTag = "TradAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,12 +200,14 @@ public class FinancialInvoiceV01 {
 			complexType_lazy = () -> TradeAgreement6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInvoiceV01.class.getMethod("getTradeAgreement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeAgreement6 getValue(FinancialInvoiceV01 obj) {
+			return obj.getTradeAgreement();
+		}
+
+		@Override
+		public void setValue(FinancialInvoiceV01 obj, TradeAgreement6 value) {
+			obj.setTradeAgreement(value);
 		}
 	};
 	@XmlElement(name = "TradDlvry", required = true)
@@ -233,7 +236,7 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeDelivery = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInvoiceV01, TradeDelivery1> mmTradeDelivery = new MMMessageBuildingBlock<FinancialInvoiceV01, TradeDelivery1>() {
 		{
 			xmlTag = "TradDlvry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,12 +247,14 @@ public class FinancialInvoiceV01 {
 			complexType_lazy = () -> TradeDelivery1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInvoiceV01.class.getMethod("getTradeDelivery", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeDelivery1 getValue(FinancialInvoiceV01 obj) {
+			return obj.getTradeDelivery();
+		}
+
+		@Override
+		public void setValue(FinancialInvoiceV01 obj, TradeDelivery1 value) {
+			obj.setTradeDelivery(value);
 		}
 	};
 	@XmlElement(name = "TradSttlm", required = true)
@@ -279,7 +284,7 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeSettlement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInvoiceV01, TradeSettlement1> mmTradeSettlement = new MMMessageBuildingBlock<FinancialInvoiceV01, TradeSettlement1>() {
 		{
 			xmlTag = "TradSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,12 +295,14 @@ public class FinancialInvoiceV01 {
 			complexType_lazy = () -> TradeSettlement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInvoiceV01.class.getMethod("getTradeSettlement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeSettlement1 getValue(FinancialInvoiceV01 obj) {
+			return obj.getTradeSettlement();
+		}
+
+		@Override
+		public void setValue(FinancialInvoiceV01 obj, TradeSettlement1 value) {
+			obj.setTradeSettlement(value);
 		}
 	};
 	@XmlElement(name = "LineItm")
@@ -324,7 +331,7 @@ public class FinancialInvoiceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmLineItem = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInvoiceV01, List<LineItem10>> mmLineItem = new MMMessageBuildingBlock<FinancialInvoiceV01, List<LineItem10>>() {
 		{
 			xmlTag = "LineItm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,12 +341,14 @@ public class FinancialInvoiceV01 {
 			complexType_lazy = () -> LineItem10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInvoiceV01.class.getMethod("getLineItem", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<LineItem10> getValue(FinancialInvoiceV01 obj) {
+			return obj.getLineItem();
+		}
+
+		@Override
+		public void setValue(FinancialInvoiceV01 obj, List<LineItem10> value) {
+			obj.setLineItem(value);
 		}
 	};
 

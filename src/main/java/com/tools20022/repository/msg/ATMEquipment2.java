@@ -129,7 +129,7 @@ public class ATMEquipment2 {
 	 * ATMEquipment1.mmManufacturer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmManufacturer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment2, Optional<Max35Text>> mmManufacturer = new MMMessageAttribute<ATMEquipment2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
@@ -142,6 +142,16 @@ public class ATMEquipment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment2 obj) {
+			return obj.getManufacturer();
+		}
+
+		@Override
+		public void setValue(ATMEquipment2 obj, Optional<Max35Text> value) {
+			obj.setManufacturer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mdl")
@@ -184,7 +194,7 @@ public class ATMEquipment2 {
 	 * ATMEquipment1.mmModel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment2, Optional<Max35Text>> mmModel = new MMMessageAttribute<ATMEquipment2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class ATMEquipment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment2 obj) {
+			return obj.getModel();
+		}
+
+		@Override
+		public void setValue(ATMEquipment2 obj, Optional<Max35Text> value) {
+			obj.setModel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -234,7 +254,7 @@ public class ATMEquipment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment2, Optional<Max35Text>> mmVersion = new MMMessageAttribute<ATMEquipment2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
@@ -246,6 +266,16 @@ public class ATMEquipment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(ATMEquipment2 obj, Optional<Max35Text> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SrlNb")
@@ -289,7 +319,7 @@ public class ATMEquipment2 {
 	 * ATMEquipment1.mmSerialNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment2, Optional<Max35Text>> mmSerialNumber = new MMMessageAttribute<ATMEquipment2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
@@ -302,6 +332,16 @@ public class ATMEquipment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment2 obj) {
+			return obj.getSerialNumber();
+		}
+
+		@Override
+		public void setValue(ATMEquipment2 obj, Optional<Max35Text> value) {
+			obj.setSerialNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrmwrPrvdr")
@@ -345,7 +385,7 @@ public class ATMEquipment2 {
 	 * ATMEquipment1.mmApplicationProvider}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirmwareProvider = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment2, Optional<Max35Text>> mmFirmwareProvider = new MMMessageAttribute<ATMEquipment2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
@@ -358,6 +398,16 @@ public class ATMEquipment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment2 obj) {
+			return obj.getFirmwareProvider();
+		}
+
+		@Override
+		public void setValue(ATMEquipment2 obj, Optional<Max35Text> value) {
+			obj.setFirmwareProvider(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrmwrId")
@@ -401,7 +451,7 @@ public class ATMEquipment2 {
 	 * ATMEquipment1.mmApplicationVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirmwareIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment2, Optional<Max35Text>> mmFirmwareIdentification = new MMMessageAttribute<ATMEquipment2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
@@ -414,6 +464,16 @@ public class ATMEquipment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment2 obj) {
+			return obj.getFirmwareIdentification();
+		}
+
+		@Override
+		public void setValue(ATMEquipment2 obj, Optional<Max35Text> value) {
+			obj.setFirmwareIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrmwrVrsn")
@@ -457,7 +517,7 @@ public class ATMEquipment2 {
 	 * ATMEquipment1.mmApprovalNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirmwareVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment2, Optional<Max35Text>> mmFirmwareVersion = new MMMessageAttribute<ATMEquipment2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
@@ -470,6 +530,16 @@ public class ATMEquipment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment2 obj) {
+			return obj.getFirmwareVersion();
+		}
+
+		@Override
+		public void setValue(ATMEquipment2 obj, Optional<Max35Text> value) {
+			obj.setFirmwareVersion(value.orElse(null));
 		}
 	};
 

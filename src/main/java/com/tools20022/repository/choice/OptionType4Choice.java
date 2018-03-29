@@ -109,7 +109,7 @@ public class OptionType4Choice {
 	 * definition} = "Option type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionType4Choice, OptionType1Code> mmCode = new MMMessageAttribute<OptionType4Choice, OptionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionType4Choice.mmObject();
@@ -122,6 +122,16 @@ public class OptionType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionType1Code.mmObject();
+		}
+
+		@Override
+		public OptionType1Code getValue(OptionType4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionType4Choice obj, OptionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -162,7 +172,7 @@ public class OptionType4Choice {
 	 * definition} = "Option type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionType4Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<OptionType4Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionType4Choice.mmObject();
@@ -175,6 +185,16 @@ public class OptionType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(OptionType4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionType4Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

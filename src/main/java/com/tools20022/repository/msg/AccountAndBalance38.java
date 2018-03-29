@@ -22,7 +22,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08;
+import com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V07;
+import com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V09;
 import com.tools20022.repository.choice.PartyIdentification103Choice;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
@@ -30,6 +31,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionBalanceDetails35;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -69,8 +71,11 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08#mmAccountDetails
- * CorporateActionMovementConfirmation002V08.mmAccountDetails}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V07#mmAccountDetails
+ * CorporateActionMovementConfirmation002V07.mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V09#mmAccountDetails
+ * CorporateActionMovementConfirmation002V09.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,7 +144,7 @@ public class AccountAndBalance38 {
 	 * definition} = "Account where financial instruments are maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountAndBalance38, RestrictedFINXMax35Text> mmSafekeepingAccount = new MMMessageAttribute<AccountAndBalance38, RestrictedFINXMax35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance38.mmObject();
@@ -152,6 +157,16 @@ public class AccountAndBalance38 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(AccountAndBalance38 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance38 obj, RestrictedFINXMax35Text value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -191,7 +206,7 @@ public class AccountAndBalance38 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountAndBalance38, Optional<PartyIdentification103Choice>> mmAccountOwner = new MMMessageAssociationEnd<AccountAndBalance38, Optional<PartyIdentification103Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance38.mmObject();
@@ -205,6 +220,16 @@ public class AccountAndBalance38 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification103Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification103Choice> getValue(AccountAndBalance38 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance38 obj, Optional<PartyIdentification103Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -245,7 +270,7 @@ public class AccountAndBalance38 {
 	 * "Location where the financial instruments are/will be safekept."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountAndBalance38, Optional<SafekeepingPlaceFormat11Choice>> mmSafekeepingPlace = new MMMessageAssociationEnd<AccountAndBalance38, Optional<SafekeepingPlaceFormat11Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance38.mmObject();
@@ -259,6 +284,16 @@ public class AccountAndBalance38 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SafekeepingPlaceFormat11Choice> getValue(AccountAndBalance38 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance38 obj, Optional<SafekeepingPlaceFormat11Choice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bal", required = true)
@@ -299,7 +334,7 @@ public class AccountAndBalance38 {
 	 * "Provides information about balance related to a corporate action."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountAndBalance38, CorporateActionBalanceDetails35> mmBalance = new MMMessageAssociationEnd<AccountAndBalance38, CorporateActionBalanceDetails35>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance38.mmObject();
@@ -312,7 +347,17 @@ public class AccountAndBalance38 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionBalanceDetails35.mmObject();
+			type_lazy = () -> CorporateActionBalanceDetails35.mmObject();
+		}
+
+		@Override
+		public CorporateActionBalanceDetails35 getValue(AccountAndBalance38 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance38 obj, CorporateActionBalanceDetails35 value) {
+			obj.setBalance(value);
 		}
 	};
 
@@ -321,7 +366,7 @@ public class AccountAndBalance38 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance38.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance38.mmAccountOwner,
 						com.tools20022.repository.msg.AccountAndBalance38.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance38.mmBalance);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementConfirmation002V08.mmAccountDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementConfirmation002V07.mmAccountDetails, CorporateActionMovementConfirmation002V09.mmAccountDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance38);
@@ -364,7 +409,7 @@ public class AccountAndBalance38 {
 		return balance;
 	}
 
-	public AccountAndBalance38 setBalance(com.tools20022.repository.msg.CorporateActionBalanceDetails35 balance) {
+	public AccountAndBalance38 setBalance(CorporateActionBalanceDetails35 balance) {
 		this.balance = Objects.requireNonNull(balance);
 		return this;
 	}

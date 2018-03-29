@@ -108,7 +108,7 @@ public class CorporateActionOption2 {
 	 * "Specifies the corporate action options available to the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption2, CorporateActionOption1FormatChoice> mmOptionType = new MMMessageAttribute<CorporateActionOption2, CorporateActionOption1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption2.mmObject();
@@ -120,6 +120,16 @@ public class CorporateActionOption2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CorporateActionOption1FormatChoice.mmObject();
+		}
+
+		@Override
+		public CorporateActionOption1FormatChoice getValue(CorporateActionOption2 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption2 obj, CorporateActionOption1FormatChoice value) {
+			obj.setOptionType(value);
 		}
 	};
 	@XmlElement(name = "OptnNb", required = true)
@@ -158,7 +168,7 @@ public class CorporateActionOption2 {
 	 * "Number identifying the available corporate action options."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption2, Exact3NumericText> mmOptionNumber = new MMMessageAttribute<CorporateActionOption2, Exact3NumericText>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption2.mmObject();
@@ -170,6 +180,16 @@ public class CorporateActionOption2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CorporateActionOption2 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption2 obj, Exact3NumericText value) {
+			obj.setOptionNumber(value);
 		}
 	};
 

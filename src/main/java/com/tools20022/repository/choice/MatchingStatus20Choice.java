@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV04;
 import com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05;
+import com.tools20022.repository.choice.UnmatchedStatus13Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason1;
@@ -152,7 +153,7 @@ public class MatchingStatus20Choice {
 	 * MatchingStatus12Choice.mmMatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus20Choice, ProprietaryReason1> mmMatched = new MMMessageAssociationEnd<MatchingStatus20Choice, ProprietaryReason1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus20Choice.mmObject();
@@ -167,6 +168,16 @@ public class MatchingStatus20Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason1 getValue(MatchingStatus20Choice obj) {
+			return obj.getMatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus20Choice obj, ProprietaryReason1 value) {
+			obj.setMatched(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -216,7 +227,7 @@ public class MatchingStatus20Choice {
 	 * MatchingStatus12Choice.mmUnmatched}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus20Choice, UnmatchedStatus13Choice> mmUnmatched = new MMMessageAssociationEnd<MatchingStatus20Choice, UnmatchedStatus13Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus20Choice.mmObject();
@@ -230,7 +241,17 @@ public class MatchingStatus20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus13Choice.mmObject();
+			type_lazy = () -> UnmatchedStatus13Choice.mmObject();
+		}
+
+		@Override
+		public UnmatchedStatus13Choice getValue(MatchingStatus20Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus20Choice obj, UnmatchedStatus13Choice value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -280,7 +301,7 @@ public class MatchingStatus20Choice {
 	 * MatchingStatus12Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus20Choice, ProprietaryStatusAndReason1> mmProprietary = new MMMessageAssociationEnd<MatchingStatus20Choice, ProprietaryStatusAndReason1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus20Choice.mmObject();
@@ -295,6 +316,16 @@ public class MatchingStatus20Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason1 getValue(MatchingStatus20Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus20Choice obj, ProprietaryStatusAndReason1 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -330,7 +361,7 @@ public class MatchingStatus20Choice {
 		return unmatched;
 	}
 
-	public MatchingStatus20Choice setUnmatched(com.tools20022.repository.choice.UnmatchedStatus13Choice unmatched) {
+	public MatchingStatus20Choice setUnmatched(UnmatchedStatus13Choice unmatched) {
 		this.unmatched = Objects.requireNonNull(unmatched);
 		return this;
 	}

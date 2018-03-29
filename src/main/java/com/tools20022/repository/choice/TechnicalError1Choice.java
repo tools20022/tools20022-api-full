@@ -109,7 +109,7 @@ public class TechnicalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TechnicalError1Choice, ExternalTechnicalError1Code> mmCode = new MMMessageAttribute<TechnicalError1Choice, ExternalTechnicalError1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TechnicalError1Choice.mmObject();
@@ -121,6 +121,16 @@ public class TechnicalError1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalTechnicalError1Code.mmObject();
+		}
+
+		@Override
+		public ExternalTechnicalError1Code getValue(TechnicalError1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TechnicalError1Choice obj, ExternalTechnicalError1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class TechnicalError1Choice {
 	 * definition} = "Reason for the technical error, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TechnicalError1Choice, Max35Text> mmProprietary = new MMMessageAttribute<TechnicalError1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TechnicalError1Choice.mmObject();
@@ -169,6 +179,16 @@ public class TechnicalError1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TechnicalError1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TechnicalError1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

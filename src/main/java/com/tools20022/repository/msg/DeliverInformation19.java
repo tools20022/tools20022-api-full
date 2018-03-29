@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -173,7 +174,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmTransferor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation19, Optional<PartyIdentification113>> mmTransferor = new MMMessageAssociationEnd<DeliverInformation19, Optional<PartyIdentification113>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
 			isDerived = false;
@@ -185,7 +186,17 @@ public class DeliverInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			type_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(DeliverInformation19 obj) {
+			return obj.getTransferor();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<PartyIdentification113> value) {
+			obj.setTransferor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfrRegdAcct")
@@ -220,7 +231,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmTransferorRegisteredAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferorRegisteredAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation19, Optional<Account24>> mmTransferorRegisteredAccount = new MMMessageAssociationEnd<DeliverInformation19, Optional<Account24>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
 			isDerived = false;
@@ -232,11 +243,21 @@ public class DeliverInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account24.mmObject();
+			type_lazy = () -> Account24.mmObject();
+		}
+
+		@Override
+		public Optional<Account24> getValue(DeliverInformation19 obj) {
+			return obj.getTransferorRegisteredAccount();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<Account24> value) {
+			obj.setTransferorRegisteredAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrmyInf")
-	protected List<com.tools20022.repository.msg.Intermediary41> intermediaryInformation;
+	protected List<Intermediary41> intermediaryInformation;
 	/**
 	 * 
 	 <p>
@@ -273,7 +294,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmIntermediaryInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation19, List<Intermediary41>> mmIntermediaryInformation = new MMMessageAssociationEnd<DeliverInformation19, List<Intermediary41>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -285,7 +306,17 @@ public class DeliverInformation19 {
 			previousVersion_lazy = () -> DeliverInformation16.mmIntermediaryInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary41.mmObject();
+			type_lazy = () -> Intermediary41.mmObject();
+		}
+
+		@Override
+		public List<Intermediary41> getValue(DeliverInformation19 obj) {
+			return obj.getIntermediaryInformation();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, List<Intermediary41> value) {
+			obj.setIntermediaryInformation(value);
 		}
 	};
 	@XmlElement(name = "ReqdSttlmDt")
@@ -329,7 +360,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmRequestedSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliverInformation19, Optional<ISODate>> mmRequestedSettlementDate = new MMMessageAttribute<DeliverInformation19, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -342,6 +373,16 @@ public class DeliverInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DeliverInformation19 obj) {
+			return obj.getRequestedSettlementDate();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<ISODate> value) {
+			obj.setRequestedSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmAmt")
@@ -386,7 +427,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliverInformation19, Optional<ActiveCurrencyAndAmount>> mmSettlementAmount = new MMMessageAttribute<DeliverInformation19, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -399,6 +440,16 @@ public class DeliverInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(DeliverInformation19 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmpDty")
@@ -442,7 +493,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmStampDuty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStampDuty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliverInformation19, Optional<StampDutyType2Code>> mmStampDuty = new MMMessageAttribute<DeliverInformation19, Optional<StampDutyType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmStampDutyType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -455,6 +506,16 @@ public class DeliverInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> StampDutyType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<StampDutyType2Code> getValue(DeliverInformation19 obj) {
+			return obj.getStampDuty();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<StampDutyType2Code> value) {
+			obj.setStampDuty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetAmt")
@@ -497,7 +558,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliverInformation19, Optional<ActiveCurrencyAndAmount>> mmNetAmount = new MMMessageAttribute<DeliverInformation19, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -511,9 +572,19 @@ public class DeliverInformation19 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(DeliverInformation19 obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNetAmount(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Fees")
-	protected List<com.tools20022.repository.msg.Fees1> fees;
+	protected List<Fees1> fees;
 	/**
 	 * 
 	 <p>
@@ -544,7 +615,7 @@ public class DeliverInformation19 {
 	 * definition} = "Fee related to the transfer of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation19, List<Fees1>> mmFees = new MMMessageAssociationEnd<DeliverInformation19, List<Fees1>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmFees;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -555,11 +626,21 @@ public class DeliverInformation19 {
 			definition = "Fee related to the transfer of the financial instrument.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Fees1.mmObject();
+			type_lazy = () -> Fees1.mmObject();
+		}
+
+		@Override
+		public List<Fees1> getValue(DeliverInformation19 obj) {
+			return obj.getFees();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, List<Fees1> value) {
+			obj.setFees(value);
 		}
 	};
 	@XmlElement(name = "IndvTax")
-	protected List<com.tools20022.repository.msg.Tax34> individualTax;
+	protected List<Tax34> individualTax;
 	/**
 	 * 
 	 <p>
@@ -590,7 +671,7 @@ public class DeliverInformation19 {
 	 * definition} = "Tax related to the transfer of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation19, List<Tax34>> mmIndividualTax = new MMMessageAssociationEnd<DeliverInformation19, List<Tax34>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -601,11 +682,21 @@ public class DeliverInformation19 {
 			definition = "Tax related to the transfer of the financial instrument.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Tax34.mmObject();
+			type_lazy = () -> Tax34.mmObject();
+		}
+
+		@Override
+		public List<Tax34> getValue(DeliverInformation19 obj) {
+			return obj.getIndividualTax();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, List<Tax34> value) {
+			obj.setIndividualTax(value);
 		}
 	};
 	@XmlElement(name = "FXDtls")
-	protected List<com.tools20022.repository.msg.ForeignExchangeTerms33> foreignExchangeDetails;
+	protected List<ForeignExchangeTerms33> foreignExchangeDetails;
 	/**
 	 * 
 	 <p>
@@ -644,7 +735,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation19, List<ForeignExchangeTerms33>> mmForeignExchangeDetails = new MMMessageAssociationEnd<DeliverInformation19, List<ForeignExchangeTerms33>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -656,7 +747,17 @@ public class DeliverInformation19 {
 			previousVersion_lazy = () -> DeliverInformation16.mmForeignExchangeDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms33.mmObject();
+			type_lazy = () -> ForeignExchangeTerms33.mmObject();
+		}
+
+		@Override
+		public List<ForeignExchangeTerms33> getValue(DeliverInformation19 obj) {
+			return obj.getForeignExchangeDetails();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, List<ForeignExchangeTerms33> value) {
+			obj.setForeignExchangeDetails(value);
 		}
 	};
 	@XmlElement(name = "SttlmPtiesDtls")
@@ -699,7 +800,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmSettlementPartiesDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation19, Optional<DeliveringPartiesAndAccount17>> mmSettlementPartiesDetails = new MMMessageAssociationEnd<DeliverInformation19, Optional<DeliveringPartiesAndAccount17>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -712,7 +813,17 @@ public class DeliverInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount17.mmObject();
+			type_lazy = () -> DeliveringPartiesAndAccount17.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveringPartiesAndAccount17> getValue(DeliverInformation19 obj) {
+			return obj.getSettlementPartiesDetails();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<DeliveringPartiesAndAccount17> value) {
+			obj.setSettlementPartiesDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PhysTrf")
@@ -757,7 +868,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmPhysicalTransfer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhysicalTransfer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliverInformation19, Optional<PhysicalTransferType1Code>> mmPhysicalTransfer = new MMMessageAttribute<DeliverInformation19, Optional<PhysicalTransferType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PhysicalDelivery.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -770,6 +881,16 @@ public class DeliverInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhysicalTransferType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PhysicalTransferType1Code> getValue(DeliverInformation19 obj) {
+			return obj.getPhysicalTransfer();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<PhysicalTransferType1Code> value) {
+			obj.setPhysicalTransfer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PhysTrfDtls")
@@ -810,7 +931,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmPhysicalTransferDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation19, Optional<DeliveryParameters4>> mmPhysicalTransferDetails = new MMMessageAssociationEnd<DeliverInformation19, Optional<DeliveryParameters4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -823,7 +944,17 @@ public class DeliverInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters4.mmObject();
+			type_lazy = () -> DeliveryParameters4.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveryParameters4> getValue(DeliverInformation19 obj) {
+			return obj.getPhysicalTransferDetails();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<DeliveryParameters4> value) {
+			obj.setPhysicalTransferDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -866,7 +997,7 @@ public class DeliverInformation19 {
 	 * DeliverInformation16.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClientReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeliverInformation19, Optional<AdditionalReference8>> mmClientReference = new MMMessageAssociationEnd<DeliverInformation19, Optional<AdditionalReference8>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeliverInformation19.mmObject();
@@ -879,7 +1010,17 @@ public class DeliverInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference8.mmObject();
+			type_lazy = () -> AdditionalReference8.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference8> getValue(DeliverInformation19 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(DeliverInformation19 obj, Optional<AdditionalReference8> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 
@@ -910,7 +1051,7 @@ public class DeliverInformation19 {
 		return transferor == null ? Optional.empty() : Optional.of(transferor);
 	}
 
-	public DeliverInformation19 setTransferor(com.tools20022.repository.msg.PartyIdentification113 transferor) {
+	public DeliverInformation19 setTransferor(PartyIdentification113 transferor) {
 		this.transferor = transferor;
 		return this;
 	}
@@ -919,7 +1060,7 @@ public class DeliverInformation19 {
 		return transferorRegisteredAccount == null ? Optional.empty() : Optional.of(transferorRegisteredAccount);
 	}
 
-	public DeliverInformation19 setTransferorRegisteredAccount(com.tools20022.repository.msg.Account24 transferorRegisteredAccount) {
+	public DeliverInformation19 setTransferorRegisteredAccount(Account24 transferorRegisteredAccount) {
 		this.transferorRegisteredAccount = transferorRegisteredAccount;
 		return this;
 	}
@@ -928,7 +1069,7 @@ public class DeliverInformation19 {
 		return intermediaryInformation == null ? intermediaryInformation = new ArrayList<>() : intermediaryInformation;
 	}
 
-	public DeliverInformation19 setIntermediaryInformation(List<com.tools20022.repository.msg.Intermediary41> intermediaryInformation) {
+	public DeliverInformation19 setIntermediaryInformation(List<Intermediary41> intermediaryInformation) {
 		this.intermediaryInformation = Objects.requireNonNull(intermediaryInformation);
 		return this;
 	}
@@ -973,7 +1114,7 @@ public class DeliverInformation19 {
 		return fees == null ? fees = new ArrayList<>() : fees;
 	}
 
-	public DeliverInformation19 setFees(List<com.tools20022.repository.msg.Fees1> fees) {
+	public DeliverInformation19 setFees(List<Fees1> fees) {
 		this.fees = Objects.requireNonNull(fees);
 		return this;
 	}
@@ -982,7 +1123,7 @@ public class DeliverInformation19 {
 		return individualTax == null ? individualTax = new ArrayList<>() : individualTax;
 	}
 
-	public DeliverInformation19 setIndividualTax(List<com.tools20022.repository.msg.Tax34> individualTax) {
+	public DeliverInformation19 setIndividualTax(List<Tax34> individualTax) {
 		this.individualTax = Objects.requireNonNull(individualTax);
 		return this;
 	}
@@ -991,7 +1132,7 @@ public class DeliverInformation19 {
 		return foreignExchangeDetails == null ? foreignExchangeDetails = new ArrayList<>() : foreignExchangeDetails;
 	}
 
-	public DeliverInformation19 setForeignExchangeDetails(List<com.tools20022.repository.msg.ForeignExchangeTerms33> foreignExchangeDetails) {
+	public DeliverInformation19 setForeignExchangeDetails(List<ForeignExchangeTerms33> foreignExchangeDetails) {
 		this.foreignExchangeDetails = Objects.requireNonNull(foreignExchangeDetails);
 		return this;
 	}
@@ -1000,7 +1141,7 @@ public class DeliverInformation19 {
 		return settlementPartiesDetails == null ? Optional.empty() : Optional.of(settlementPartiesDetails);
 	}
 
-	public DeliverInformation19 setSettlementPartiesDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount17 settlementPartiesDetails) {
+	public DeliverInformation19 setSettlementPartiesDetails(DeliveringPartiesAndAccount17 settlementPartiesDetails) {
 		this.settlementPartiesDetails = settlementPartiesDetails;
 		return this;
 	}
@@ -1018,7 +1159,7 @@ public class DeliverInformation19 {
 		return physicalTransferDetails == null ? Optional.empty() : Optional.of(physicalTransferDetails);
 	}
 
-	public DeliverInformation19 setPhysicalTransferDetails(com.tools20022.repository.msg.DeliveryParameters4 physicalTransferDetails) {
+	public DeliverInformation19 setPhysicalTransferDetails(DeliveryParameters4 physicalTransferDetails) {
 		this.physicalTransferDetails = physicalTransferDetails;
 		return this;
 	}
@@ -1027,7 +1168,7 @@ public class DeliverInformation19 {
 		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public DeliverInformation19 setClientReference(com.tools20022.repository.msg.AdditionalReference8 clientReference) {
+	public DeliverInformation19 setClientReference(AdditionalReference8 clientReference) {
 		this.clientReference = clientReference;
 		return this;
 	}

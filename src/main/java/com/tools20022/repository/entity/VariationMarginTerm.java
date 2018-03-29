@@ -21,14 +21,13 @@ import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ThresholdTypeCode;
-import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.ExposureTerm;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Margin1;
 import com.tools20022.repository.msg.MarginCall1;
 import com.tools20022.repository.msg.SummaryAmounts1;
 import com.tools20022.repository.msg.VariationMargin1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -82,7 +81,7 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "VariationMarginTerm"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -93,7 +92,7 @@ import java.util.Objects;
 public class VariationMarginTerm extends ExposureTerm {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
-	protected ActiveCurrencyAndAmount thresholdAmount;
+	protected CurrencyAndAmount thresholdAmount;
 	/**
 	 * 
 	 <p>
@@ -102,8 +101,8 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} =
-	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
-	 * ActiveCurrencyAndAmount}</li>
+	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
+	 * CurrencyAndAmount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -133,7 +132,7 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmThresholdAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<VariationMarginTerm, CurrencyAndAmount> mmThresholdAmount = new MMBusinessAttribute<VariationMarginTerm, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(VariationMargin1.mmThresholdAmount, SummaryAmounts1.mmThresholdAmount);
 			isDerived = false;
@@ -143,15 +142,17 @@ public class VariationMarginTerm extends ExposureTerm {
 			definition = "Amount of unsecured exposure a counterparty will accept before issuing a margin call in the base currency.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return VariationMarginTerm.class.getMethod("getThresholdAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(VariationMarginTerm obj) {
+			return obj.getThresholdAmount();
+		}
+
+		@Override
+		public void setValue(VariationMarginTerm obj, CurrencyAndAmount value) {
+			obj.setThresholdAmount(value);
 		}
 	};
 	protected ThresholdTypeCode thresholdType;
@@ -194,7 +195,7 @@ public class VariationMarginTerm extends ExposureTerm {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmThresholdType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<VariationMarginTerm, ThresholdTypeCode> mmThresholdType = new MMBusinessAttribute<VariationMarginTerm, ThresholdTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(VariationMargin1.mmThresholdType, SummaryAmounts1.mmThresholdType);
 			isDerived = false;
@@ -207,12 +208,14 @@ public class VariationMarginTerm extends ExposureTerm {
 			simpleType_lazy = () -> ThresholdTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return VariationMarginTerm.class.getMethod("getThresholdType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ThresholdTypeCode getValue(VariationMarginTerm obj) {
+			return obj.getThresholdType();
+		}
+
+		@Override
+		public void setValue(VariationMarginTerm obj, ThresholdTypeCode value) {
+			obj.setThresholdType(value);
 		}
 	};
 
@@ -220,7 +223,7 @@ public class VariationMarginTerm extends ExposureTerm {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VariationMarginTerm";
 				definition = "Defines the specific terms used to calculate a variation margin.";
 				derivationElement_lazy = () -> Arrays.asList(Margin1.mmVariationMargin, MarginCall1.mmMarginTerms);
@@ -237,11 +240,11 @@ public class VariationMarginTerm extends ExposureTerm {
 		return mmObject_lazy.get();
 	}
 
-	public ActiveCurrencyAndAmount getThresholdAmount() {
+	public CurrencyAndAmount getThresholdAmount() {
 		return thresholdAmount;
 	}
 
-	public VariationMarginTerm setThresholdAmount(ActiveCurrencyAndAmount thresholdAmount) {
+	public VariationMarginTerm setThresholdAmount(CurrencyAndAmount thresholdAmount) {
 		this.thresholdAmount = Objects.requireNonNull(thresholdAmount);
 		return this;
 	}

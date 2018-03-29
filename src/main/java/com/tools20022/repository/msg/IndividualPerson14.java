@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PersonIdentification2;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +121,7 @@ public class IndividualPerson14 {
 	 * definition} = "Name received at birth, eg, maiden name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBirthName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson14, Max35Text> mmBirthName = new MMMessageAttribute<IndividualPerson14, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson14.mmObject();
@@ -131,6 +133,16 @@ public class IndividualPerson14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IndividualPerson14 obj) {
+			return obj.getBirthName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson14 obj, Max35Text value) {
+			obj.setBirthName(value);
 		}
 	};
 	@XmlElement(name = "GvnNm")
@@ -167,7 +179,7 @@ public class IndividualPerson14 {
 	 * definition} = "First name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson14, Optional<Max35Text>> mmGivenName = new MMMessageAttribute<IndividualPerson14, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson14.mmObject();
@@ -179,6 +191,16 @@ public class IndividualPerson14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPerson14 obj) {
+			return obj.getGivenName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson14 obj, Optional<Max35Text> value) {
+			obj.setGivenName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -215,7 +237,7 @@ public class IndividualPerson14 {
 	 * "Unique and unambiguous identification of a person, eg passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson14, Optional<PersonIdentification2>> mmIdentification = new MMMessageAssociationEnd<IndividualPerson14, Optional<PersonIdentification2>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson14.mmObject();
@@ -227,7 +249,17 @@ public class IndividualPerson14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
+			type_lazy = () -> PersonIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<PersonIdentification2> getValue(IndividualPerson14 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(IndividualPerson14 obj, Optional<PersonIdentification2> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -263,7 +295,7 @@ public class IndividualPerson14 {
 	 * definition} = "Postal address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson14, Optional<PostalAddress1>> mmAddress = new MMMessageAssociationEnd<IndividualPerson14, Optional<PostalAddress1>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson14.mmObject();
@@ -275,7 +307,17 @@ public class IndividualPerson14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress1> getValue(IndividualPerson14 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(IndividualPerson14 obj, Optional<PostalAddress1> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EmplngPty")
@@ -313,7 +355,7 @@ public class IndividualPerson14 {
 	 * "Organisation represented by a person, or for which a person works."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPerson14, Optional<PartyIdentification9Choice>> mmEmployingParty = new MMMessageAssociationEnd<IndividualPerson14, Optional<PartyIdentification9Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> EmployingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson14.mmObject();
@@ -326,6 +368,16 @@ public class IndividualPerson14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification9Choice> getValue(IndividualPerson14 obj) {
+			return obj.getEmployingParty();
+		}
+
+		@Override
+		public void setValue(IndividualPerson14 obj, Optional<PartyIdentification9Choice> value) {
+			obj.setEmployingParty(value.orElse(null));
 		}
 	};
 
@@ -366,7 +418,7 @@ public class IndividualPerson14 {
 		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public IndividualPerson14 setIdentification(com.tools20022.repository.msg.PersonIdentification2 identification) {
+	public IndividualPerson14 setIdentification(PersonIdentification2 identification) {
 		this.identification = identification;
 		return this;
 	}
@@ -375,7 +427,7 @@ public class IndividualPerson14 {
 		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public IndividualPerson14 setAddress(com.tools20022.repository.msg.PostalAddress1 address) {
+	public IndividualPerson14 setAddress(PostalAddress1 address) {
 		this.address = address;
 		return this;
 	}

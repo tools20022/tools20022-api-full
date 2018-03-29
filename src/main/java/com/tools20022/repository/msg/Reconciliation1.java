@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max4NumericText;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BankToCustomerAccountReportCopy1;
+import com.tools20022.repository.msg.Pagination;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -108,7 +110,7 @@ public class Reconciliation1 {
 	 * definition} = "Unique Identifier of partitions aggregate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reconciliation1, Max35Text> mmReportIdentification = new MMMessageAttribute<Reconciliation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
@@ -119,6 +121,16 @@ public class Reconciliation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reconciliation1 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(Reconciliation1 obj, Max35Text value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptPgntn")
@@ -150,7 +162,7 @@ public class Reconciliation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportPagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reconciliation1, Optional<Pagination>> mmReportPagination = new MMMessageAssociationEnd<Reconciliation1, Optional<Pagination>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
@@ -161,7 +173,17 @@ public class Reconciliation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			type_lazy = () -> Pagination.mmObject();
+		}
+
+		@Override
+		public Optional<Pagination> getValue(Reconciliation1 obj) {
+			return obj.getReportPagination();
+		}
+
+		@Override
+		public void setValue(Reconciliation1 obj, Optional<Pagination> value) {
+			obj.setReportPagination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BkToCstmrAcctRptCpy", required = true)
@@ -195,7 +217,7 @@ public class Reconciliation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBankToCustomerAccountReportCopy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reconciliation1, BankToCustomerAccountReportCopy1> mmBankToCustomerAccountReportCopy = new MMMessageAssociationEnd<Reconciliation1, BankToCustomerAccountReportCopy1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
@@ -206,7 +228,17 @@ public class Reconciliation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BankToCustomerAccountReportCopy1.mmObject();
+			type_lazy = () -> BankToCustomerAccountReportCopy1.mmObject();
+		}
+
+		@Override
+		public BankToCustomerAccountReportCopy1 getValue(Reconciliation1 obj) {
+			return obj.getBankToCustomerAccountReportCopy();
+		}
+
+		@Override
+		public void setValue(Reconciliation1 obj, BankToCustomerAccountReportCopy1 value) {
+			obj.setBankToCustomerAccountReportCopy(value);
 		}
 	};
 	@XmlElement(name = "InitlMsgId")
@@ -238,7 +270,7 @@ public class Reconciliation1 {
 	 * definition} = "Business identification of the initial message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reconciliation1, Optional<Max35Text>> mmInitialMessageIdentification = new MMMessageAttribute<Reconciliation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
@@ -249,6 +281,16 @@ public class Reconciliation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reconciliation1 obj) {
+			return obj.getInitialMessageIdentification();
+		}
+
+		@Override
+		public void setValue(Reconciliation1 obj, Optional<Max35Text> value) {
+			obj.setInitialMessageIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrlCd")
@@ -281,7 +323,7 @@ public class Reconciliation1 {
 	 * definition} = "Electronic message control code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmControlCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reconciliation1, List<Max4NumericText>> mmControlCode = new MMMessageAttribute<Reconciliation1, List<Max4NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reconciliation1.mmObject();
 			isDerived = false;
@@ -291,6 +333,16 @@ public class Reconciliation1 {
 			definition = "Electronic message control code.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4NumericText.mmObject();
+		}
+
+		@Override
+		public List<Max4NumericText> getValue(Reconciliation1 obj) {
+			return obj.getControlCode();
+		}
+
+		@Override
+		public void setValue(Reconciliation1 obj, List<Max4NumericText> value) {
+			obj.setControlCode(value);
 		}
 	};
 
@@ -322,7 +374,7 @@ public class Reconciliation1 {
 		return reportPagination == null ? Optional.empty() : Optional.of(reportPagination);
 	}
 
-	public Reconciliation1 setReportPagination(com.tools20022.repository.msg.Pagination reportPagination) {
+	public Reconciliation1 setReportPagination(Pagination reportPagination) {
 		this.reportPagination = reportPagination;
 		return this;
 	}
@@ -331,7 +383,7 @@ public class Reconciliation1 {
 		return bankToCustomerAccountReportCopy;
 	}
 
-	public Reconciliation1 setBankToCustomerAccountReportCopy(com.tools20022.repository.msg.BankToCustomerAccountReportCopy1 bankToCustomerAccountReportCopy) {
+	public Reconciliation1 setBankToCustomerAccountReportCopy(BankToCustomerAccountReportCopy1 bankToCustomerAccountReportCopy) {
 		this.bankToCustomerAccountReportCopy = Objects.requireNonNull(bankToCustomerAccountReportCopy);
 		return this;
 	}

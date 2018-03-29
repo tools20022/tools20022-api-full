@@ -105,7 +105,7 @@ public class Period1Choice {
 	 * "Time span defined by a start date and time, and an end date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Period1Choice, Period3> mmPeriod = new MMMessageAssociationEnd<Period1Choice, Period3>() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Period1Choice.mmObject();
@@ -118,6 +118,16 @@ public class Period1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Period3.mmObject();
+		}
+
+		@Override
+		public Period3 getValue(Period1Choice obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(Period1Choice obj, Period3 value) {
+			obj.setPeriod(value);
 		}
 	};
 	@XmlElement(name = "PrdCd", required = true)
@@ -153,7 +163,7 @@ public class Period1Choice {
 	 * definition} = "Standard code to specify the type of period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriodCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Period1Choice, DateType6Code> mmPeriodCode = new MMMessageAttribute<Period1Choice, DateType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Period1Choice.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class Period1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType6Code.mmObject();
+		}
+
+		@Override
+		public DateType6Code getValue(Period1Choice obj) {
+			return obj.getPeriodCode();
+		}
+
+		@Override
+		public void setValue(Period1Choice obj, DateType6Code value) {
+			obj.setPeriodCode(value);
 		}
 	};
 

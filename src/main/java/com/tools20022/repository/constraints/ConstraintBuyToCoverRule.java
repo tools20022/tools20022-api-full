@@ -59,12 +59,50 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV08> forSecuritiesSettlementTransactionInstructionV08 = new MMConstraint<SecuritiesSettlementTransactionInstructionV08>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is present then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV07;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08
+	 * SecuritiesSettlementTransactionInstruction002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BuyToCoverRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V08> forSecuritiesSettlementTransactionInstruction002V08 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BuyToCoverRule";
+			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
+			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstruction002V08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstruction002V08(obj);
 		}
 	};
 	/**
@@ -105,13 +143,17 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV07> forSecuritiesSettlementTransactionInstructionV07 = new MMConstraint<SecuritiesSettlementTransactionInstructionV07>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is present then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV07(obj);
 		}
 	};
 	/**
@@ -137,11 +179,15 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V07> forSecuritiesSettlementTransactionInstruction002V07 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V07>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstruction002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstruction002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstruction002V07(obj);
 		}
 	};
 	/**
@@ -167,11 +213,15 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV01> forSecuritiesSettlementTransactionInstructionV01 = new MMConstraint<SecuritiesSettlementTransactionInstructionV01>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV01(obj);
 		}
 	};
 	/**
@@ -197,11 +247,15 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV02> forSecuritiesSettlementTransactionInstructionV02 = new MMConstraint<SecuritiesSettlementTransactionInstructionV02>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV02(obj);
 		}
 	};
 	/**
@@ -227,11 +281,15 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV03> forSecuritiesSettlementTransactionInstructionV03 = new MMConstraint<SecuritiesSettlementTransactionInstructionV03>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV03(obj);
 		}
 	};
 	/**
@@ -266,12 +324,16 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV04> forSecuritiesSettlementTransactionInstructionV04 = new MMConstraint<SecuritiesSettlementTransactionInstructionV04>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV04(obj);
 		}
 	};
 	/**
@@ -312,13 +374,17 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV05> forSecuritiesSettlementTransactionInstructionV05 = new MMConstraint<SecuritiesSettlementTransactionInstructionV05>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV05(obj);
 		}
 	};
 	/**
@@ -359,13 +425,17 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBuyToCoverRule.forSecuritiesSettlementTransactionInstructionV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV06(obj);
 		}
 	};
 	/**
@@ -391,11 +461,15 @@ public class ConstraintBuyToCoverRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
 		{
-			validator = ConstraintBuyToCoverRule::checkSecuritiesSettlementTransactionInstruction002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyToCoverRule";
 			definition = "If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC) is used, then at least one Linkage must be present with the reference of the sell instruction (may be more than one) to be covered by the concerned buy.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstruction002V06(obj);
 		}
 	};
 
@@ -406,6 +480,16 @@ public class ConstraintBuyToCoverRule {
 	 * concerned buy.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV08(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementParameters/SettlementTransactionCondition BuyToCover (BUTC)
+	 * is used, then at least one Linkage must be present with the reference of
+	 * the sell instruction (may be more than one) to be covered by the
+	 * concerned buy.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstruction002V08(SecuritiesSettlementTransactionInstruction002V08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

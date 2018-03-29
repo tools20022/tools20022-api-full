@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +140,7 @@ public class CardPaymentTransaction24 {
 	 * CardPaymentTransaction18.mmAuthorisationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction24, AuthorisationResult1> mmAuthorisationResult = new MMMessageAssociationEnd<CardPaymentTransaction24, AuthorisationResult1>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmValidation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
@@ -153,7 +154,17 @@ public class CardPaymentTransaction24 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmObject();
+			type_lazy = () -> AuthorisationResult1.mmObject();
+		}
+
+		@Override
+		public AuthorisationResult1 getValue(CardPaymentTransaction24 obj) {
+			return obj.getAuthorisationResult();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction24 obj, AuthorisationResult1 value) {
+			obj.setAuthorisationResult(value);
 		}
 	};
 	@XmlElement(name = "TxVrfctnRslt")
@@ -200,7 +211,7 @@ public class CardPaymentTransaction24 {
 	 * CardPaymentTransaction18.mmTransactionVerificationResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionVerificationResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction24, Optional<TransactionVerificationResult2>> mmTransactionVerificationResult = new MMMessageAssociationEnd<CardPaymentTransaction24, Optional<TransactionVerificationResult2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
 			isDerived = false;
@@ -213,7 +224,17 @@ public class CardPaymentTransaction24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
+			type_lazy = () -> TransactionVerificationResult2.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionVerificationResult2> getValue(CardPaymentTransaction24 obj) {
+			return obj.getTransactionVerificationResult();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction24 obj, Optional<TransactionVerificationResult2> value) {
+			obj.setTransactionVerificationResult(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bal")
@@ -264,7 +285,7 @@ public class CardPaymentTransaction24 {
 	 * CardPaymentTransaction18.mmBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransaction24, Optional<AmountAndDirection41>> mmBalance = new MMMessageAttribute<CardPaymentTransaction24, Optional<AmountAndDirection41>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
@@ -277,11 +298,21 @@ public class CardPaymentTransaction24 {
 			previousVersion_lazy = () -> CardPaymentTransaction18.mmBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
+			complexType_lazy = () -> AmountAndDirection41.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection41> getValue(CardPaymentTransaction24 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction24 obj, Optional<AmountAndDirection41> value) {
+			obj.setBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Actn")
-	protected List<com.tools20022.repository.msg.Action3> action;
+	protected List<Action3> action;
 	/**
 	 * 
 	 <p>
@@ -322,7 +353,7 @@ public class CardPaymentTransaction24 {
 	 * CardPaymentTransaction18.mmAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction24, List<Action3>> mmAction = new MMMessageAssociationEnd<CardPaymentTransaction24, List<Action3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
 			isDerived = false;
@@ -334,7 +365,17 @@ public class CardPaymentTransaction24 {
 			previousVersion_lazy = () -> CardPaymentTransaction18.mmAction;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Action3.mmObject();
+			type_lazy = () -> Action3.mmObject();
+		}
+
+		@Override
+		public List<Action3> getValue(CardPaymentTransaction24 obj) {
+			return obj.getAction();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction24 obj, List<Action3> value) {
+			obj.setAction(value);
 		}
 	};
 	@XmlElement(name = "CcyConvs")
@@ -380,7 +421,7 @@ public class CardPaymentTransaction24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyConversion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction24, Optional<CurrencyConversion1>> mmCurrencyConversion = new MMMessageAssociationEnd<CardPaymentTransaction24, Optional<CurrencyConversion1>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction24.mmObject();
@@ -393,7 +434,17 @@ public class CardPaymentTransaction24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
+			type_lazy = () -> CurrencyConversion1.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyConversion1> getValue(CardPaymentTransaction24 obj) {
+			return obj.getCurrencyConversion();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction24 obj, Optional<CurrencyConversion1> value) {
+			obj.setCurrencyConversion(value.orElse(null));
 		}
 	};
 
@@ -418,7 +469,7 @@ public class CardPaymentTransaction24 {
 		return authorisationResult;
 	}
 
-	public CardPaymentTransaction24 setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult1 authorisationResult) {
+	public CardPaymentTransaction24 setAuthorisationResult(AuthorisationResult1 authorisationResult) {
 		this.authorisationResult = Objects.requireNonNull(authorisationResult);
 		return this;
 	}
@@ -427,7 +478,7 @@ public class CardPaymentTransaction24 {
 		return transactionVerificationResult == null ? Optional.empty() : Optional.of(transactionVerificationResult);
 	}
 
-	public CardPaymentTransaction24 setTransactionVerificationResult(com.tools20022.repository.msg.TransactionVerificationResult2 transactionVerificationResult) {
+	public CardPaymentTransaction24 setTransactionVerificationResult(TransactionVerificationResult2 transactionVerificationResult) {
 		this.transactionVerificationResult = transactionVerificationResult;
 		return this;
 	}
@@ -436,7 +487,7 @@ public class CardPaymentTransaction24 {
 		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public CardPaymentTransaction24 setBalance(com.tools20022.repository.msg.AmountAndDirection41 balance) {
+	public CardPaymentTransaction24 setBalance(AmountAndDirection41 balance) {
 		this.balance = balance;
 		return this;
 	}
@@ -445,7 +496,7 @@ public class CardPaymentTransaction24 {
 		return action == null ? action = new ArrayList<>() : action;
 	}
 
-	public CardPaymentTransaction24 setAction(List<com.tools20022.repository.msg.Action3> action) {
+	public CardPaymentTransaction24 setAction(List<Action3> action) {
 		this.action = Objects.requireNonNull(action);
 		return this;
 	}
@@ -454,7 +505,7 @@ public class CardPaymentTransaction24 {
 		return currencyConversion == null ? Optional.empty() : Optional.of(currencyConversion);
 	}
 
-	public CardPaymentTransaction24 setCurrencyConversion(com.tools20022.repository.msg.CurrencyConversion1 currencyConversion) {
+	public CardPaymentTransaction24 setCurrencyConversion(CurrencyConversion1 currencyConversion) {
 		this.currencyConversion = currencyConversion;
 		return this;
 	}

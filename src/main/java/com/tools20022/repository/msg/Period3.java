@@ -118,7 +118,7 @@ public class Period3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Period3, DateFormat12Choice> mmStartDate = new MMMessageAttribute<Period3, DateFormat12Choice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
@@ -131,6 +131,16 @@ public class Period3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat12Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat12Choice getValue(Period3 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(Period3 obj, DateFormat12Choice value) {
+			obj.setStartDate(value);
 		}
 	};
 	@XmlElement(name = "EndDt", required = true)
@@ -177,7 +187,7 @@ public class Period3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Period3, DateFormat12Choice> mmEndDate = new MMMessageAttribute<Period3, DateFormat12Choice>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
@@ -191,6 +201,16 @@ public class Period3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat12Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat12Choice getValue(Period3 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(Period3 obj, DateFormat12Choice value) {
+			obj.setEndDate(value);
 		}
 	};
 

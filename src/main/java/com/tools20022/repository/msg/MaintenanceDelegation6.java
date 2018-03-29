@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType19;
+import com.tools20022.repository.msg.MaintenanceIdentificationAssociation1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -85,7 +87,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MaintenanceDelegation6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -139,7 +141,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmMaintenanceService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaintenanceService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceDelegation6, List<DataSetCategory11Code>> mmMaintenanceService = new MMMessageAttribute<MaintenanceDelegation6, List<DataSetCategory11Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -150,6 +152,16 @@ public class MaintenanceDelegation6 {
 			previousVersion_lazy = () -> MaintenanceDelegation4.mmMaintenanceService;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory11Code.mmObject();
+		}
+
+		@Override
+		public List<DataSetCategory11Code> getValue(MaintenanceDelegation6 obj) {
+			return obj.getMaintenanceService();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, List<DataSetCategory11Code> value) {
+			obj.setMaintenanceService(value);
 		}
 	};
 	@XmlElement(name = "Rspn", required = true)
@@ -188,7 +200,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceDelegation6, Response2Code> mmResponse = new MMMessageAttribute<MaintenanceDelegation6, Response2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -200,6 +212,16 @@ public class MaintenanceDelegation6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Response2Code.mmObject();
+		}
+
+		@Override
+		public Response2Code getValue(MaintenanceDelegation6 obj) {
+			return obj.getResponse();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, Response2Code value) {
+			obj.setResponse(value);
 		}
 	};
 	@XmlElement(name = "RspnRsn")
@@ -236,7 +258,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmResponseReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceDelegation6, Optional<Max35Text>> mmResponseReason = new MMMessageAttribute<MaintenanceDelegation6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -248,6 +270,16 @@ public class MaintenanceDelegation6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MaintenanceDelegation6 obj) {
+			return obj.getResponseReason();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, Optional<Max35Text> value) {
+			obj.setResponseReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlgtnTp", required = true)
@@ -285,7 +317,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmDelegationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelegationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceDelegation6, TerminalManagementAction3Code> mmDelegationType = new MMMessageAttribute<MaintenanceDelegation6, TerminalManagementAction3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -297,6 +329,16 @@ public class MaintenanceDelegation6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction3Code getValue(MaintenanceDelegation6 obj) {
+			return obj.getDelegationType();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, TerminalManagementAction3Code value) {
+			obj.setDelegationType(value);
 		}
 	};
 	@XmlElement(name = "POISubset")
@@ -335,7 +377,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmPOISubset}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOISubset = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceDelegation6, List<Max35Text>> mmPOISubset = new MMMessageAttribute<MaintenanceDelegation6, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -346,6 +388,16 @@ public class MaintenanceDelegation6 {
 			previousVersion_lazy = () -> MaintenanceDelegation4.mmPOISubset;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(MaintenanceDelegation6 obj) {
+			return obj.getPOISubset();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, List<Max35Text> value) {
+			obj.setPOISubset(value);
 		}
 	};
 	@XmlElement(name = "DlgtnScpId")
@@ -383,7 +435,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmDelegationScopeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelegationScopeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceDelegation6, Optional<Max35Text>> mmDelegationScopeIdentification = new MMMessageAttribute<MaintenanceDelegation6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -395,6 +447,16 @@ public class MaintenanceDelegation6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MaintenanceDelegation6 obj) {
+			return obj.getDelegationScopeIdentification();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, Optional<Max35Text> value) {
+			obj.setDelegationScopeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlgtnScpDef")
@@ -434,7 +496,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmDelegationScopeDefinition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelegationScopeDefinition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceDelegation6, Optional<Max3000Binary>> mmDelegationScopeDefinition = new MMMessageAttribute<MaintenanceDelegation6, Optional<Max3000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -446,6 +508,16 @@ public class MaintenanceDelegation6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max3000Binary> getValue(MaintenanceDelegation6 obj) {
+			return obj.getDelegationScopeDefinition();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, Optional<Max3000Binary> value) {
+			obj.setDelegationScopeDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlgtnProof")
@@ -485,7 +557,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmDelegationProof}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelegationProof = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaintenanceDelegation6, Optional<Max5000Binary>> mmDelegationProof = new MMMessageAttribute<MaintenanceDelegation6, Optional<Max5000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -497,6 +569,16 @@ public class MaintenanceDelegation6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max5000Binary> getValue(MaintenanceDelegation6 obj) {
+			return obj.getDelegationProof();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, Optional<Max5000Binary> value) {
+			obj.setDelegationProof(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctdDlgtnProof")
@@ -533,7 +615,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmProtectedDelegationProof}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectedDelegationProof = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MaintenanceDelegation6, Optional<ContentInformationType19>> mmProtectedDelegationProof = new MMMessageAssociationEnd<MaintenanceDelegation6, Optional<ContentInformationType19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -545,11 +627,21 @@ public class MaintenanceDelegation6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType19.mmObject();
+			type_lazy = () -> ContentInformationType19.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType19> getValue(MaintenanceDelegation6 obj) {
+			return obj.getProtectedDelegationProof();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, Optional<ContentInformationType19> value) {
+			obj.setProtectedDelegationProof(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POIIdAssoctn")
-	protected List<com.tools20022.repository.msg.MaintenanceIdentificationAssociation1> pOIIdentificationAssociation;
+	protected List<MaintenanceIdentificationAssociation1> pOIIdentificationAssociation;
 	/**
 	 * 
 	 <p>
@@ -583,7 +675,7 @@ public class MaintenanceDelegation6 {
 	 * MaintenanceDelegation4.mmPOIIdentificationAssociation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOIIdentificationAssociation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MaintenanceDelegation6, List<MaintenanceIdentificationAssociation1>> mmPOIIdentificationAssociation = new MMMessageAssociationEnd<MaintenanceDelegation6, List<MaintenanceIdentificationAssociation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MaintenanceDelegation6.mmObject();
 			isDerived = false;
@@ -594,7 +686,17 @@ public class MaintenanceDelegation6 {
 			previousVersion_lazy = () -> MaintenanceDelegation4.mmPOIIdentificationAssociation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MaintenanceIdentificationAssociation1.mmObject();
+			type_lazy = () -> MaintenanceIdentificationAssociation1.mmObject();
+		}
+
+		@Override
+		public List<MaintenanceIdentificationAssociation1> getValue(MaintenanceDelegation6 obj) {
+			return obj.getPOIIdentificationAssociation();
+		}
+
+		@Override
+		public void setValue(MaintenanceDelegation6 obj, List<MaintenanceIdentificationAssociation1> value) {
+			obj.setPOIIdentificationAssociation(value);
 		}
 	};
 
@@ -607,7 +709,7 @@ public class MaintenanceDelegation6 {
 						com.tools20022.repository.msg.MaintenanceDelegation6.mmDelegationProof, com.tools20022.repository.msg.MaintenanceDelegation6.mmProtectedDelegationProof,
 						com.tools20022.repository.msg.MaintenanceDelegation6.mmPOIIdentificationAssociation);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegation6";
 				definition = "Information on the delegation of a maintenance action or maintenance function.";
 				previousVersion_lazy = () -> MaintenanceDelegation4.mmObject();
@@ -692,7 +794,7 @@ public class MaintenanceDelegation6 {
 		return protectedDelegationProof == null ? Optional.empty() : Optional.of(protectedDelegationProof);
 	}
 
-	public MaintenanceDelegation6 setProtectedDelegationProof(com.tools20022.repository.msg.ContentInformationType19 protectedDelegationProof) {
+	public MaintenanceDelegation6 setProtectedDelegationProof(ContentInformationType19 protectedDelegationProof) {
 		this.protectedDelegationProof = protectedDelegationProof;
 		return this;
 	}
@@ -701,7 +803,7 @@ public class MaintenanceDelegation6 {
 		return pOIIdentificationAssociation == null ? pOIIdentificationAssociation = new ArrayList<>() : pOIIdentificationAssociation;
 	}
 
-	public MaintenanceDelegation6 setPOIIdentificationAssociation(List<com.tools20022.repository.msg.MaintenanceIdentificationAssociation1> pOIIdentificationAssociation) {
+	public MaintenanceDelegation6 setPOIIdentificationAssociation(List<MaintenanceIdentificationAssociation1> pOIIdentificationAssociation) {
 		this.pOIIdentificationAssociation = Objects.requireNonNull(pOIIdentificationAssociation);
 		return this;
 	}

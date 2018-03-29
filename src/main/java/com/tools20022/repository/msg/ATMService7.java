@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceType4Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMTransaction8;
+import com.tools20022.repository.msg.ATMTransactionAmounts3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -106,7 +108,7 @@ public class ATMService7 {
 	 * ATMService5.mmServiceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMService7, ATMServiceType4Code> mmServiceType = new MMMessageAttribute<ATMService7, ATMServiceType4Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService7.mmObject();
 			isDerived = false;
@@ -119,9 +121,19 @@ public class ATMService7 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMServiceType4Code.mmObject();
 		}
+
+		@Override
+		public ATMServiceType4Code getValue(ATMService7 obj) {
+			return obj.getServiceType();
+		}
+
+		@Override
+		public void setValue(ATMService7 obj, ATMServiceType4Code value) {
+			obj.setServiceType(value);
+		}
 	};
 	@XmlElement(name = "Lmts")
-	protected List<com.tools20022.repository.msg.ATMTransactionAmounts3> limits;
+	protected List<ATMTransactionAmounts3> limits;
 	/**
 	 * 
 	 <p>
@@ -147,7 +159,7 @@ public class ATMService7 {
 	 * definition} = "Limits of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimits = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMService7, List<ATMTransactionAmounts3>> mmLimits = new MMMessageAssociationEnd<ATMService7, List<ATMTransactionAmounts3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService7.mmObject();
 			isDerived = false;
@@ -157,7 +169,17 @@ public class ATMService7 {
 			definition = "Limits of amounts.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts3.mmObject();
+			type_lazy = () -> ATMTransactionAmounts3.mmObject();
+		}
+
+		@Override
+		public List<ATMTransactionAmounts3> getValue(ATMService7 obj) {
+			return obj.getLimits();
+		}
+
+		@Override
+		public void setValue(ATMService7 obj, List<ATMTransactionAmounts3> value) {
+			obj.setLimits(value);
 		}
 	};
 	@XmlElement(name = "PrefrdWdrwl")
@@ -187,7 +209,7 @@ public class ATMService7 {
 	 * definition} = "Preferred withdrawal transaction chosen by the customer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreferredWithdrawal = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMService7, Optional<ATMTransaction8>> mmPreferredWithdrawal = new MMMessageAssociationEnd<ATMService7, Optional<ATMTransaction8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService7.mmObject();
 			isDerived = false;
@@ -198,7 +220,17 @@ public class ATMService7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction8.mmObject();
+			type_lazy = () -> ATMTransaction8.mmObject();
+		}
+
+		@Override
+		public Optional<ATMTransaction8> getValue(ATMService7 obj) {
+			return obj.getPreferredWithdrawal();
+		}
+
+		@Override
+		public void setValue(ATMService7 obj, Optional<ATMTransaction8> value) {
+			obj.setPreferredWithdrawal(value.orElse(null));
 		}
 	};
 
@@ -229,7 +261,7 @@ public class ATMService7 {
 		return limits == null ? limits = new ArrayList<>() : limits;
 	}
 
-	public ATMService7 setLimits(List<com.tools20022.repository.msg.ATMTransactionAmounts3> limits) {
+	public ATMService7 setLimits(List<ATMTransactionAmounts3> limits) {
 		this.limits = Objects.requireNonNull(limits);
 		return this;
 	}
@@ -238,7 +270,7 @@ public class ATMService7 {
 		return preferredWithdrawal == null ? Optional.empty() : Optional.of(preferredWithdrawal);
 	}
 
-	public ATMService7 setPreferredWithdrawal(com.tools20022.repository.msg.ATMTransaction8 preferredWithdrawal) {
+	public ATMService7 setPreferredWithdrawal(ATMTransaction8 preferredWithdrawal) {
 		this.preferredWithdrawal = preferredWithdrawal;
 		return this;
 	}

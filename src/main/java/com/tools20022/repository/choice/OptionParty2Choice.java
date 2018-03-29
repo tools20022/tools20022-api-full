@@ -118,7 +118,7 @@ public class OptionParty2Choice {
 	 * OptionParty1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionParty2Choice, List<OptionParty1Code>> mmCode = new MMMessageAttribute<OptionParty2Choice, List<OptionParty1Code>>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmBuyerOrSeller;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionParty2Choice.mmObject();
@@ -130,6 +130,16 @@ public class OptionParty2Choice {
 			previousVersion_lazy = () -> OptionParty1Choice.mmCode;
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionParty1Code.mmObject();
+		}
+
+		@Override
+		public List<OptionParty1Code> getValue(OptionParty2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionParty2Choice obj, List<OptionParty1Code> value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -171,7 +181,7 @@ public class OptionParty2Choice {
 	 * OptionParty1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionParty2Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<OptionParty2Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmBuyerOrSeller;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionParty2Choice.mmObject();
@@ -185,6 +195,16 @@ public class OptionParty2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(OptionParty2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionParty2Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

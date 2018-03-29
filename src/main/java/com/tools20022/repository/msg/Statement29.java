@@ -115,7 +115,7 @@ public class Statement29 {
 	 * definition} = "Date or period of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementDateOrPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement29, Optional<DateAndPeriod1Choice>> mmStatementDateOrPeriod = new MMMessageAssociationEnd<Statement29, Optional<DateAndPeriod1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class Statement29 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndPeriod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndPeriod1Choice> getValue(Statement29 obj) {
+			return obj.getStatementDateOrPeriod();
+		}
+
+		@Override
+		public void setValue(Statement29 obj, Optional<DateAndPeriod1Choice> value) {
+			obj.setStatementDateOrPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -160,7 +170,7 @@ public class Statement29 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrequency = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement29, Optional<Frequency6Choice>> mmFrequency = new MMMessageAssociationEnd<Statement29, Optional<Frequency6Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class Statement29 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Frequency6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency6Choice> getValue(Statement29 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Statement29 obj, Optional<Frequency6Choice> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdTp")
@@ -206,7 +226,7 @@ public class Statement29 {
 	 * "Indicates whether the statement is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement29, Optional<UpdateType3Choice>> mmUpdateType = new MMMessageAssociationEnd<Statement29, Optional<UpdateType3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
@@ -219,6 +239,16 @@ public class Statement29 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> UpdateType3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<UpdateType3Choice> getValue(Statement29 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Statement29 obj, Optional<UpdateType3Choice> value) {
+			obj.setUpdateType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtBsis")
@@ -252,7 +282,7 @@ public class Statement29 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement29, Optional<StatementBasis4Choice>> mmStatementBasis = new MMMessageAssociationEnd<Statement29, Optional<StatementBasis4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
@@ -265,6 +295,16 @@ public class Statement29 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> StatementBasis4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementBasis4Choice> getValue(Statement29 obj) {
+			return obj.getStatementBasis();
+		}
+
+		@Override
+		public void setValue(Statement29 obj, Optional<StatementBasis4Choice> value) {
+			obj.setStatementBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtTp")
@@ -298,7 +338,7 @@ public class Statement29 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement29, Optional<StatementType3Choice>> mmStatementType = new MMMessageAssociationEnd<Statement29, Optional<StatementType3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement29.mmObject();
 			isDerived = false;
@@ -311,6 +351,16 @@ public class Statement29 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> StatementType3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementType3Choice> getValue(Statement29 obj) {
+			return obj.getStatementType();
+		}
+
+		@Override
+		public void setValue(Statement29 obj, Optional<StatementType3Choice> value) {
+			obj.setStatementType(value.orElse(null));
 		}
 	};
 

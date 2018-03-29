@@ -142,7 +142,7 @@ public class Meeting4 {
 	 * Meeting3.mmDateAndTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Meeting4, DateFormat29Choice> mmDateAndTime = new MMMessageAttribute<Meeting4, DateFormat29Choice>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDateAndTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting4.mmObject();
@@ -155,6 +155,16 @@ public class Meeting4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat29Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat29Choice getValue(Meeting4 obj) {
+			return obj.getDateAndTime();
+		}
+
+		@Override
+		public void setValue(Meeting4 obj, DateFormat29Choice value) {
+			obj.setDateAndTime(value);
 		}
 	};
 	@XmlElement(name = "DtSts")
@@ -196,7 +206,7 @@ public class Meeting4 {
 	 * Meeting3.mmDateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Meeting4, Optional<MeetingDateStatus1Code>> mmDateStatus = new MMMessageAttribute<Meeting4, Optional<MeetingDateStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmDateStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting4.mmObject();
@@ -209,6 +219,16 @@ public class Meeting4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MeetingDateStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<MeetingDateStatus1Code> getValue(Meeting4 obj) {
+			return obj.getDateStatus();
+		}
+
+		@Override
+		public void setValue(Meeting4 obj, Optional<MeetingDateStatus1Code> value) {
+			obj.setDateStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QrmReqrd", required = true)
@@ -252,7 +272,7 @@ public class Meeting4 {
 	 * Meeting3.mmQuorumRequired}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuorumRequired = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Meeting4, YesNoIndicator> mmQuorumRequired = new MMMessageAttribute<Meeting4, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuorumRequired;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting4.mmObject();
@@ -265,6 +285,16 @@ public class Meeting4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Meeting4 obj) {
+			return obj.getQuorumRequired();
+		}
+
+		@Override
+		public void setValue(Meeting4 obj, YesNoIndicator value) {
+			obj.setQuorumRequired(value);
 		}
 	};
 	@XmlElement(name = "Lctn", required = true)
@@ -305,7 +335,7 @@ public class Meeting4 {
 	 * Meeting3.mmLocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Meeting4, List<LocationFormat1Choice>> mmLocation = new MMMessageAssociationEnd<Meeting4, List<LocationFormat1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Meeting.mmMeetingLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting4.mmObject();
@@ -319,6 +349,16 @@ public class Meeting4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LocationFormat1Choice.mmObject();
+		}
+
+		@Override
+		public List<LocationFormat1Choice> getValue(Meeting4 obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(Meeting4 obj, List<LocationFormat1Choice> value) {
+			obj.setLocation(value);
 		}
 	};
 	@XmlElement(name = "QrmQty")
@@ -361,7 +401,7 @@ public class Meeting4 {
 	 * Meeting3.mmQuorumQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuorumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Meeting4, Optional<QuorumQuantity1Choice>> mmQuorumQuantity = new MMMessageAttribute<Meeting4, Optional<QuorumQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Quorum.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Meeting4.mmObject();
@@ -374,6 +414,16 @@ public class Meeting4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> QuorumQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<QuorumQuantity1Choice> getValue(Meeting4 obj) {
+			return obj.getQuorumQuantity();
+		}
+
+		@Override
+		public void setValue(Meeting4 obj, Optional<QuorumQuantity1Choice> value) {
+			obj.setQuorumQuantity(value.orElse(null));
 		}
 	};
 

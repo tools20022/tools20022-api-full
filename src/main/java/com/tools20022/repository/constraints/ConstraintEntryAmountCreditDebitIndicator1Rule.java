@@ -58,11 +58,15 @@ public class ConstraintEntryAmountCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<AccountCashEntrySearch2> forAccountCashEntrySearch2 = new MMConstraint<AccountCashEntrySearch2>() {
 		{
-			validator = ConstraintEntryAmountCreditDebitIndicator1Rule::checkAccountCashEntrySearch2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmountCreditDebitIndicator1Rule";
 			definition = "If at least one occurrence of EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator is present, then CreditDebitIndicator is not allowed.\nIf EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator is not present, then CreditDebitIndicator is optional.";
 			owner_lazy = () -> AccountCashEntrySearch2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountCashEntrySearch2 obj) throws Exception {
+			checkAccountCashEntrySearch2(obj);
 		}
 	};
 	/**
@@ -101,13 +105,17 @@ public class ConstraintEntryAmountCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<CashAccountEntrySearch3> forCashAccountEntrySearch3 = new MMConstraint<CashAccountEntrySearch3>() {
 		{
-			validator = ConstraintEntryAmountCreditDebitIndicator1Rule::checkCashAccountEntrySearch3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmountCreditDebitIndicator1Rule";
 			definition = "If at least one occurrence of EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator is present, then CreditDebitIndicator is not allowed.\r\nIf EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator is not present, then CreditDebitIndicator is optional.\r\n\r\nIf CreditDebitIndicator is present then \r\nall occurrences of EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator must be absent and\r\nall occurrences of EntryAmount/ImpliedCurrencyAndAmountRange/CreditDebitIndicator must be absent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEntryAmountCreditDebitIndicator1Rule.forCashAccountEntrySearch4);
 			owner_lazy = () -> CashAccountEntrySearch3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditDebitIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/EntryAmount[*]/CurrencyAndAmountRange/CreditDebitIndicator</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashAccountEntrySearch3 obj) throws Exception {
+			checkCashAccountEntrySearch3(obj);
 		}
 	};
 	/**
@@ -152,7 +160,6 @@ public class ConstraintEntryAmountCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<CashAccountEntrySearch4> forCashAccountEntrySearch4 = new MMConstraint<CashAccountEntrySearch4>() {
 		{
-			validator = ConstraintEntryAmountCreditDebitIndicator1Rule::checkCashAccountEntrySearch4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmountCreditDebitIndicator1Rule";
 			definition = "If at least one occurrence of EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator is present, then CreditDebitIndicator is not allowed.\r\nIf EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator is not present, then CreditDebitIndicator is optional.\r\n\r\nIf CreditDebitIndicator is present then \r\nall occurrences of EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator must be absent and\r\nall occurrences of EntryAmount/ImpliedCurrencyAndAmountRange/CreditDebitIndicator must be absent.";
@@ -160,6 +167,11 @@ public class ConstraintEntryAmountCreditDebitIndicator1Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEntryAmountCreditDebitIndicator1Rule.forCashAccountEntrySearch3;
 			owner_lazy = () -> CashAccountEntrySearch4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditDebitIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/EntryAmount[*]/CurrencyAndAmountRange/CreditDebitIndicator</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashAccountEntrySearch4 obj) throws Exception {
+			checkCashAccountEntrySearch4(obj);
 		}
 	};
 	/**
@@ -195,13 +207,17 @@ public class ConstraintEntryAmountCreditDebitIndicator1Rule {
 	 */
 	public static final MMConstraint<CashAccountEntrySearch5> forCashAccountEntrySearch5 = new MMConstraint<CashAccountEntrySearch5>() {
 		{
-			validator = ConstraintEntryAmountCreditDebitIndicator1Rule::checkCashAccountEntrySearch5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmountCreditDebitIndicator1Rule";
 			definition = "If at least one occurrence of EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator is present, then CreditDebitIndicator is not allowed.\r\nIf EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator is not present, then CreditDebitIndicator is optional.\r\n\r\nIf CreditDebitIndicator is present then \r\nall occurrences of EntryAmount/CurrencyAndAmountRange/CreditDebitIndicator must be absent and\r\nall occurrences of EntryAmount/ImpliedCurrencyAndAmountRange/CreditDebitIndicator must be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEntryAmountCreditDebitIndicator1Rule.forCashAccountEntrySearch4;
 			owner_lazy = () -> CashAccountEntrySearch5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditDebitIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/EntryAmount[*]/CurrencyAndAmountRange/CreditDebitIndicator</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashAccountEntrySearch5 obj) throws Exception {
+			checkCashAccountEntrySearch5(obj);
 		}
 	};
 

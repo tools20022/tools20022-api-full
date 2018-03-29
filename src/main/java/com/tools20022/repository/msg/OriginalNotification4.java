@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalNotificationReference1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +127,7 @@ public class OriginalNotification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalNotification4, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalNotification4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotification4.mmObject();
 			isDerived = false;
@@ -137,6 +138,16 @@ public class OriginalNotification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalNotification4 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalNotification4 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCreDtTm")
@@ -173,7 +184,7 @@ public class OriginalNotification4 {
 	 * definition} = "Date and time at which the original message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalNotification4, Optional<ISODateTime>> mmOriginalCreationDateTime = new MMMessageAttribute<OriginalNotification4, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotification4.mmObject();
@@ -185,6 +196,16 @@ public class OriginalNotification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(OriginalNotification4 obj) {
+			return obj.getOriginalCreationDateTime();
+		}
+
+		@Override
+		public void setValue(OriginalNotification4 obj, Optional<ISODateTime> value) {
+			obj.setOriginalCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlNtfctnId", required = true)
@@ -216,7 +237,7 @@ public class OriginalNotification4 {
 	 * definition} = "Identification of the original notification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalNotification4, Max35Text> mmOriginalNotificationIdentification = new MMMessageAttribute<OriginalNotification4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotification4.mmObject();
 			isDerived = false;
@@ -227,6 +248,16 @@ public class OriginalNotification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalNotification4 obj) {
+			return obj.getOriginalNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalNotification4 obj, Max35Text value) {
+			obj.setOriginalNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "NtfctnCxl")
@@ -261,7 +292,7 @@ public class OriginalNotification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationCancellation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalNotification4, Optional<GroupCancellationIndicator>> mmNotificationCancellation = new MMMessageAttribute<OriginalNotification4, Optional<GroupCancellationIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotification4.mmObject();
 			isDerived = false;
@@ -273,9 +304,19 @@ public class OriginalNotification4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> GroupCancellationIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<GroupCancellationIndicator> getValue(OriginalNotification4 obj) {
+			return obj.getNotificationCancellation();
+		}
+
+		@Override
+		public void setValue(OriginalNotification4 obj, Optional<GroupCancellationIndicator> value) {
+			obj.setNotificationCancellation(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "OrgnlNtfctnRef")
-	protected List<com.tools20022.repository.msg.OriginalNotificationReference1> originalNotificationReference;
+	protected List<OriginalNotificationReference1> originalNotificationReference;
 	/**
 	 * 
 	 <p>
@@ -310,7 +351,7 @@ public class OriginalNotification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalNotificationReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalNotification4, List<OriginalNotificationReference1>> mmOriginalNotificationReference = new MMMessageAssociationEnd<OriginalNotification4, List<OriginalNotificationReference1>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalNotification4.mmObject();
@@ -321,7 +362,17 @@ public class OriginalNotification4 {
 			definition = "Identifies the original notification item, to which the cancellation advice refers.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalNotificationReference1.mmObject();
+			type_lazy = () -> OriginalNotificationReference1.mmObject();
+		}
+
+		@Override
+		public List<OriginalNotificationReference1> getValue(OriginalNotification4 obj) {
+			return obj.getOriginalNotificationReference();
+		}
+
+		@Override
+		public void setValue(OriginalNotification4 obj, List<OriginalNotificationReference1> value) {
+			obj.setOriginalNotificationReference(value);
 		}
 	};
 
@@ -382,7 +433,7 @@ public class OriginalNotification4 {
 		return originalNotificationReference == null ? originalNotificationReference = new ArrayList<>() : originalNotificationReference;
 	}
 
-	public OriginalNotification4 setOriginalNotificationReference(List<com.tools20022.repository.msg.OriginalNotificationReference1> originalNotificationReference) {
+	public OriginalNotification4 setOriginalNotificationReference(List<OriginalNotificationReference1> originalNotificationReference) {
 		this.originalNotificationReference = Objects.requireNonNull(originalNotificationReference);
 		return this;
 	}

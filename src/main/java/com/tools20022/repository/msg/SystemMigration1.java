@@ -107,7 +107,7 @@ public class SystemMigration1 {
 	 * "Indicates whether the participant is a member of a new payment system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNPSParticipantIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemMigration1, Optional<YesNoIndicator>> mmNPSParticipantIndicator = new MMMessageAttribute<SystemMigration1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class SystemMigration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SystemMigration1 obj) {
+			return obj.getNPSParticipantIndicator();
+		}
+
+		@Override
+		public void setValue(SystemMigration1 obj, Optional<YesNoIndicator> value) {
+			obj.setNPSParticipantIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlandMgrtnDt")
@@ -149,7 +159,7 @@ public class SystemMigration1 {
 	 * definition} = "Planned migration date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlannedMigrationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemMigration1, Optional<ISODateTime>> mmPlannedMigrationDate = new MMMessageAttribute<SystemMigration1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class SystemMigration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(SystemMigration1 obj) {
+			return obj.getPlannedMigrationDate();
+		}
+
+		@Override
+		public void setValue(SystemMigration1 obj, Optional<ISODateTime> value) {
+			obj.setPlannedMigrationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalRcvdInd")
@@ -192,7 +212,7 @@ public class SystemMigration1 {
 	 * definition} = "Indicates whether the balance was received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceReceivedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemMigration1, Optional<YesNoIndicator>> mmBalanceReceivedIndicator = new MMMessageAttribute<SystemMigration1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
@@ -203,6 +223,16 @@ public class SystemMigration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SystemMigration1 obj) {
+			return obj.getBalanceReceivedIndicator();
+		}
+
+		@Override
+		public void setValue(SystemMigration1 obj, Optional<YesNoIndicator> value) {
+			obj.setBalanceReceivedIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mgrtd")
@@ -235,7 +265,7 @@ public class SystemMigration1 {
 	 * definition} = "Indicates whether the participant was migrated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMigrated = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemMigration1, Optional<YesNoIndicator>> mmMigrated = new MMMessageAttribute<SystemMigration1, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
@@ -246,6 +276,16 @@ public class SystemMigration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SystemMigration1 obj) {
+			return obj.getMigrated();
+		}
+
+		@Override
+		public void setValue(SystemMigration1 obj, Optional<YesNoIndicator> value) {
+			obj.setMigrated(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LastDt")
@@ -277,7 +317,7 @@ public class SystemMigration1 {
 	 * definition} = "Date of the latest RABIS service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemMigration1, Optional<ISODateTime>> mmLastDate = new MMMessageAttribute<SystemMigration1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMigration1.mmObject();
 			isDerived = false;
@@ -288,6 +328,16 @@ public class SystemMigration1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(SystemMigration1 obj) {
+			return obj.getLastDate();
+		}
+
+		@Override
+		public void setValue(SystemMigration1 obj, Optional<ISODateTime> value) {
+			obj.setLastDate(value.orElse(null));
 		}
 	};
 

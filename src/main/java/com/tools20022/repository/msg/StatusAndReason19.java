@@ -154,7 +154,7 @@ public class StatusAndReason19 {
 	 * StatusAndReason12.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason19, Optional<ProcessingStatus23Choice>> mmProcessingStatus = new MMMessageAssociationEnd<StatusAndReason19, Optional<ProcessingStatus23Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason19.mmObject();
@@ -169,6 +169,16 @@ public class StatusAndReason19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus23Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingStatus23Choice> getValue(StatusAndReason19 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason19 obj, Optional<ProcessingStatus23Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts")
@@ -220,7 +230,7 @@ public class StatusAndReason19 {
 	 * StatusAndReason12.mmInferredMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason19, Optional<MatchingStatus19Choice>> mmInferredMatchingStatus = new MMMessageAssociationEnd<StatusAndReason19, Optional<MatchingStatus19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason19.mmObject();
@@ -235,6 +245,16 @@ public class StatusAndReason19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus19Choice> getValue(StatusAndReason19 obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason19 obj, Optional<MatchingStatus19Choice> value) {
+			obj.setInferredMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSts")
@@ -284,7 +304,7 @@ public class StatusAndReason19 {
 	 * StatusAndReason12.mmMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason19, Optional<MatchingStatus19Choice>> mmMatchingStatus = new MMMessageAssociationEnd<StatusAndReason19, Optional<MatchingStatus19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason19.mmObject();
@@ -299,6 +319,16 @@ public class StatusAndReason19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus19Choice> getValue(StatusAndReason19 obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason19 obj, Optional<MatchingStatus19Choice> value) {
+			obj.setMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -348,7 +378,7 @@ public class StatusAndReason19 {
 	 * StatusAndReason12.mmSettlementStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason19, Optional<SettlementStatus7Choice>> mmSettlementStatus = new MMMessageAssociationEnd<StatusAndReason19, Optional<SettlementStatus7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason19.mmObject();
@@ -363,6 +393,16 @@ public class StatusAndReason19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementStatus7Choice> getValue(StatusAndReason19 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason19 obj, Optional<SettlementStatus7Choice> value) {
+			obj.setSettlementStatus(value.orElse(null));
 		}
 	};
 

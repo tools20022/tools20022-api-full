@@ -120,7 +120,7 @@ public class TransactionOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionOrError1Choice, Transaction24> mmTransaction = new MMMessageAssociationEnd<TransactionOrError1Choice, Transaction24>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionOrError1Choice.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class TransactionOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Transaction24.mmObject();
+		}
+
+		@Override
+		public Transaction24 getValue(TransactionOrError1Choice obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(TransactionOrError1Choice obj, Transaction24 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -172,7 +182,7 @@ public class TransactionOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionOrError1Choice, List<ErrorHandling3>> mmBusinessError = new MMMessageAssociationEnd<TransactionOrError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionOrError1Choice.mmObject();
 			isDerived = false;
@@ -184,6 +194,16 @@ public class TransactionOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(TransactionOrError1Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(TransactionOrError1Choice obj, List<ErrorHandling3> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

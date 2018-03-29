@@ -114,7 +114,7 @@ public class RevaluationIndicator2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RevaluationIndicator2Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<RevaluationIndicator2Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RevaluationIndicator2Choice.mmObject();
@@ -127,6 +127,16 @@ public class RevaluationIndicator2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(RevaluationIndicator2Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(RevaluationIndicator2Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class RevaluationIndicator2Choice {
 	 * definition} = "Revaluation information provided as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RevaluationIndicator2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<RevaluationIndicator2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RevaluationIndicator2Choice.mmObject();
@@ -180,6 +190,16 @@ public class RevaluationIndicator2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(RevaluationIndicator2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RevaluationIndicator2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

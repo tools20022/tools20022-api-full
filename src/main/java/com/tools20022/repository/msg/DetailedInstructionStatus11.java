@@ -130,7 +130,7 @@ public class DetailedInstructionStatus11 {
 	 * DetailedInstructionStatus8.mmInstructionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus11, Max35Text> mmInstructionIdentification = new MMMessageAttribute<DetailedInstructionStatus11, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus11.mmObject();
 			isDerived = false;
@@ -142,6 +142,16 @@ public class DetailedInstructionStatus11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DetailedInstructionStatus11 obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus11 obj, Max35Text value) {
+			obj.setInstructionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -183,7 +193,7 @@ public class DetailedInstructionStatus11 {
 	 * DetailedInstructionStatus8.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus11, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<DetailedInstructionStatus11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus11.mmObject();
@@ -196,6 +206,16 @@ public class DetailedInstructionStatus11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DetailedInstructionStatus11 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus11 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubAcctId")
@@ -237,7 +257,7 @@ public class DetailedInstructionStatus11 {
 	 * DetailedInstructionStatus8.mmSubAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedInstructionStatus11, Optional<Max35Text>> mmSubAccountIdentification = new MMMessageAttribute<DetailedInstructionStatus11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus11.mmObject();
@@ -250,6 +270,16 @@ public class DetailedInstructionStatus11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DetailedInstructionStatus11 obj) {
+			return obj.getSubAccountIdentification();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus11 obj, Optional<Max35Text> value) {
+			obj.setSubAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrSts", required = true)
@@ -292,7 +322,7 @@ public class DetailedInstructionStatus11 {
 	 * DetailedInstructionStatus8.mmInstructionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedInstructionStatus11, InstructionStatus6Choice> mmInstructionStatus = new MMMessageAssociationEnd<DetailedInstructionStatus11, InstructionStatus6Choice>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedInstructionStatus11.mmObject();
@@ -306,6 +336,16 @@ public class DetailedInstructionStatus11 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InstructionStatus6Choice.mmObject();
+		}
+
+		@Override
+		public InstructionStatus6Choice getValue(DetailedInstructionStatus11 obj) {
+			return obj.getInstructionStatus();
+		}
+
+		@Override
+		public void setValue(DetailedInstructionStatus11 obj, InstructionStatus6Choice value) {
+			obj.setInstructionStatus(value);
 		}
 	};
 

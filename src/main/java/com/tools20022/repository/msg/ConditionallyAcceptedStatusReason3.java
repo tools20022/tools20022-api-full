@@ -128,7 +128,7 @@ public class ConditionallyAcceptedStatusReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConditionallyAcceptedStatusReason3, ConditionallyAcceptedStatusReason3Choice> mmReason = new MMMessageAssociationEnd<ConditionallyAcceptedStatusReason3, ConditionallyAcceptedStatusReason3Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3.mmObject();
@@ -142,6 +142,16 @@ public class ConditionallyAcceptedStatusReason3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ConditionallyAcceptedStatusReason3Choice.mmObject();
+		}
+
+		@Override
+		public ConditionallyAcceptedStatusReason3Choice getValue(ConditionallyAcceptedStatusReason3 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatusReason3 obj, ConditionallyAcceptedStatusReason3Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -185,7 +195,7 @@ public class ConditionallyAcceptedStatusReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionallyAcceptedStatusReason3, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<ConditionallyAcceptedStatusReason3, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3.mmObject();
 			isDerived = false;
@@ -197,6 +207,16 @@ public class ConditionallyAcceptedStatusReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ConditionallyAcceptedStatusReason3 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatusReason3 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

@@ -112,7 +112,7 @@ public class BenchmarkCurveName5Choice {
 	 * BenchmarkCurveName4Choice.mmIndex}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BenchmarkCurveName5Choice, BenchmarkCurveName2Code> mmIndex = new MMMessageAttribute<BenchmarkCurveName5Choice, BenchmarkCurveName2Code>() {
 		{
 			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BenchmarkCurveName5Choice.mmObject();
@@ -125,6 +125,16 @@ public class BenchmarkCurveName5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BenchmarkCurveName2Code.mmObject();
+		}
+
+		@Override
+		public BenchmarkCurveName2Code getValue(BenchmarkCurveName5Choice obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurveName5Choice obj, BenchmarkCurveName2Code value) {
+			obj.setIndex(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -167,7 +177,7 @@ public class BenchmarkCurveName5Choice {
 	 * BenchmarkCurveName4Choice.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BenchmarkCurveName5Choice, Max25Text> mmName = new MMMessageAttribute<BenchmarkCurveName5Choice, Max25Text>() {
 		{
 			businessElementTrace_lazy = () -> Curve.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BenchmarkCurveName5Choice.mmObject();
@@ -180,6 +190,16 @@ public class BenchmarkCurveName5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
+		}
+
+		@Override
+		public Max25Text getValue(BenchmarkCurveName5Choice obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(BenchmarkCurveName5Choice obj, Max25Text value) {
+			obj.setName(value);
 		}
 	};
 

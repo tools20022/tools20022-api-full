@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.PartyIdentification34Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection27;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class Settlement1 {
 	 * definition} = "Total amount to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Settlement1, AmountAndDirection27> mmSettlementAmount = new MMMessageAssociationEnd<Settlement1, AmountAndDirection27>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Settlement1.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class Settlement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection27.mmObject();
+			type_lazy = () -> AmountAndDirection27.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection27 getValue(Settlement1 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(Settlement1 obj, AmountAndDirection27 value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "Dpstry")
@@ -159,7 +170,7 @@ public class Settlement1 {
 	 * definition} = "Place where settlement of the securities takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Settlement1, Optional<PartyIdentification34Choice>> mmDepository = new MMMessageAssociationEnd<Settlement1, Optional<PartyIdentification34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Settlement1.mmObject();
@@ -172,6 +183,16 @@ public class Settlement1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification34Choice> getValue(Settlement1 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(Settlement1 obj, Optional<PartyIdentification34Choice> value) {
+			obj.setDepository(value.orElse(null));
 		}
 	};
 
@@ -194,7 +215,7 @@ public class Settlement1 {
 		return settlementAmount;
 	}
 
-	public Settlement1 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection27 settlementAmount) {
+	public Settlement1 setSettlementAmount(AmountAndDirection27 settlementAmount) {
 		this.settlementAmount = Objects.requireNonNull(settlementAmount);
 		return this;
 	}

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccountType2;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +120,7 @@ public class CashAccount7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount7, AccountIdentification3Choice> mmIdentification = new MMMessageAttribute<CashAccount7, AccountIdentification3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
@@ -131,6 +132,16 @@ public class CashAccount7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification3Choice getValue(CashAccount7 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount7 obj, AccountIdentification3Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -165,7 +176,7 @@ public class CashAccount7 {
 	 * definition} = "Nature, or use, of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount7, Optional<CashAccountType2>> mmType = new MMMessageAssociationEnd<CashAccount7, Optional<CashAccountType2>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
@@ -177,7 +188,17 @@ public class CashAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccountType2.mmObject();
+			type_lazy = () -> CashAccountType2.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountType2> getValue(CashAccount7 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashAccount7 obj, Optional<CashAccountType2> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -215,7 +236,7 @@ public class CashAccount7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount7, Optional<CurrencyCode>> mmCurrency = new MMMessageAttribute<CashAccount7, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
@@ -227,6 +248,16 @@ public class CashAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(CashAccount7 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccount7 obj, Optional<CurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -264,7 +295,7 @@ public class CashAccount7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount7, Optional<Max70Text>> mmName = new MMMessageAttribute<CashAccount7, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
@@ -276,6 +307,16 @@ public class CashAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CashAccount7 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CashAccount7 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 
@@ -314,7 +355,7 @@ public class CashAccount7 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public CashAccount7 setType(com.tools20022.repository.msg.CashAccountType2 type) {
+	public CashAccount7 setType(CashAccountType2 type) {
 		this.type = type;
 		return this;
 	}

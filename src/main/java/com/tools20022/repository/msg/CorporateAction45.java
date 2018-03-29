@@ -27,6 +27,7 @@ import com.tools20022.repository.choice.LotteryTypeFormat4Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Lottery;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionDate59;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -131,7 +132,7 @@ public class CorporateAction45 {
 	 * CorporateAction34.mmDateDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction45, Optional<CorporateActionDate59>> mmDateDetails = new MMMessageAssociationEnd<CorporateAction45, Optional<CorporateActionDate59>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionEvent.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction45.mmObject();
@@ -144,7 +145,17 @@ public class CorporateAction45 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate59.mmObject();
+			type_lazy = () -> CorporateActionDate59.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionDate59> getValue(CorporateAction45 obj) {
+			return obj.getDateDetails();
+		}
+
+		@Override
+		public void setValue(CorporateAction45 obj, Optional<CorporateActionDate59> value) {
+			obj.setDateDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtStag")
@@ -186,7 +197,7 @@ public class CorporateAction45 {
 	 * CorporateAction34.mmEventStage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction45, Optional<CorporateActionEventStageFormat14Choice>> mmEventStage = new MMMessageAssociationEnd<CorporateAction45, Optional<CorporateActionEventStageFormat14Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventStage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction45.mmObject();
@@ -200,6 +211,16 @@ public class CorporateAction45 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventStageFormat14Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionEventStageFormat14Choice> getValue(CorporateAction45 obj) {
+			return obj.getEventStage();
+		}
+
+		@Override
+		public void setValue(CorporateAction45 obj, Optional<CorporateActionEventStageFormat14Choice> value) {
+			obj.setEventStage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtryTp")
@@ -244,7 +265,7 @@ public class CorporateAction45 {
 	 * CorporateAction34.mmLotteryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateAction45, Optional<LotteryTypeFormat4Choice>> mmLotteryType = new MMMessageAssociationEnd<CorporateAction45, Optional<LotteryTypeFormat4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction45.mmObject();
@@ -259,6 +280,16 @@ public class CorporateAction45 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LotteryTypeFormat4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LotteryTypeFormat4Choice> getValue(CorporateAction45 obj) {
+			return obj.getLotteryType();
+		}
+
+		@Override
+		public void setValue(CorporateAction45 obj, Optional<LotteryTypeFormat4Choice> value) {
+			obj.setLotteryType(value.orElse(null));
 		}
 	};
 
@@ -283,7 +314,7 @@ public class CorporateAction45 {
 		return dateDetails == null ? Optional.empty() : Optional.of(dateDetails);
 	}
 
-	public CorporateAction45 setDateDetails(com.tools20022.repository.msg.CorporateActionDate59 dateDetails) {
+	public CorporateAction45 setDateDetails(CorporateActionDate59 dateDetails) {
 		this.dateDetails = dateDetails;
 		return this;
 	}

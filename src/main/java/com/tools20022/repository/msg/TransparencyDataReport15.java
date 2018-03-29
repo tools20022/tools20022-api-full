@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionsBin2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -144,7 +145,7 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport15, Optional<Max35Text>> mmTechnicalRecordIdentification = new MMMessageAttribute<TransparencyDataReport15, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
@@ -155,6 +156,16 @@ public class TransparencyDataReport15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransparencyDataReport15 obj) {
+			return obj.getTechnicalRecordIdentification();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport15 obj, Optional<Max35Text> value) {
+			obj.setTechnicalRecordIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -192,7 +203,7 @@ public class TransparencyDataReport15 {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport15, ISINOct2015Identifier> mmIdentification = new MMMessageAttribute<TransparencyDataReport15, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
@@ -204,6 +215,16 @@ public class TransparencyDataReport15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(TransparencyDataReport15 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport15 obj, ISINOct2015Identifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptgDt")
@@ -240,7 +261,7 @@ public class TransparencyDataReport15 {
 	 * definition} = "Date to which the quantitative data fields below relate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport15, Optional<ISODate>> mmReportingDate = new MMMessageAttribute<TransparencyDataReport15, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
@@ -252,6 +273,16 @@ public class TransparencyDataReport15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransparencyDataReport15 obj) {
+			return obj.getReportingDate();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport15 obj, Optional<ISODate> value) {
+			obj.setReportingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgVn")
@@ -291,7 +322,7 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport15, Optional<MICIdentifier>> mmTradingVenue = new MMMessageAttribute<TransparencyDataReport15, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
@@ -303,6 +334,16 @@ public class TransparencyDataReport15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(TransparencyDataReport15 obj) {
+			return obj.getTradingVenue();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport15 obj, Optional<MICIdentifier> value) {
+			obj.setTradingVenue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sspnsn", required = true)
@@ -337,7 +378,7 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSuspension = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport15, TrueFalseIndicator> mmSuspension = new MMMessageAttribute<TransparencyDataReport15, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
@@ -348,6 +389,16 @@ public class TransparencyDataReport15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(TransparencyDataReport15 obj) {
+			return obj.getSuspension();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport15 obj, TrueFalseIndicator value) {
+			obj.setSuspension(value);
 		}
 	};
 	@XmlElement(name = "NbTxs")
@@ -381,7 +432,7 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport15, Optional<Number>> mmNumberTransactions = new MMMessageAttribute<TransparencyDataReport15, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
@@ -393,9 +444,19 @@ public class TransparencyDataReport15 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Optional<Number> getValue(TransparencyDataReport15 obj) {
+			return obj.getNumberTransactions();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport15 obj, Optional<Number> value) {
+			obj.setNumberTransactions(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AggtdQttvData")
-	protected List<com.tools20022.repository.msg.TransactionsBin2> aggregatedQuantitativeData;
+	protected List<TransactionsBin2> aggregatedQuantitativeData;
 	/**
 	 * 
 	 <p>
@@ -424,7 +485,7 @@ public class TransparencyDataReport15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAggregatedQuantitativeData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransparencyDataReport15, List<TransactionsBin2>> mmAggregatedQuantitativeData = new MMMessageAssociationEnd<TransparencyDataReport15, List<TransactionsBin2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
@@ -434,7 +495,17 @@ public class TransparencyDataReport15 {
 			definition = "Aggregated quantitative data on the non-equity instrument being reported. Details aggregated against the specific range that is defined. Transactions that have been cancelled should be excluded from the reported figure.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionsBin2.mmObject();
+			type_lazy = () -> TransactionsBin2.mmObject();
+		}
+
+		@Override
+		public List<TransactionsBin2> getValue(TransparencyDataReport15 obj) {
+			return obj.getAggregatedQuantitativeData();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport15 obj, List<TransactionsBin2> value) {
+			obj.setAggregatedQuantitativeData(value);
 		}
 	};
 
@@ -514,7 +585,7 @@ public class TransparencyDataReport15 {
 		return aggregatedQuantitativeData == null ? aggregatedQuantitativeData = new ArrayList<>() : aggregatedQuantitativeData;
 	}
 
-	public TransparencyDataReport15 setAggregatedQuantitativeData(List<com.tools20022.repository.msg.TransactionsBin2> aggregatedQuantitativeData) {
+	public TransparencyDataReport15 setAggregatedQuantitativeData(List<TransactionsBin2> aggregatedQuantitativeData) {
 		this.aggregatedQuantitativeData = Objects.requireNonNull(aggregatedQuantitativeData);
 		return this;
 	}

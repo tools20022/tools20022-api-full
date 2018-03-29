@@ -65,13 +65,17 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV07> forFIToFICustomerDirectDebitV07 = new MMConstraint<FIToFICustomerDirectDebitV07>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerDirectDebitV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFIToFICustomerDirectDebitV06;
 			owner_lazy = () -> FIToFICustomerDirectDebitV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/DirectDebitTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV07 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV07(obj);
 		}
 	};
 	/**
@@ -107,13 +111,17 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV07> forFIToFICustomerCreditTransferV07 = new MMConstraint<FIToFICustomerCreditTransferV07>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerCreditTransferV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFIToFICustomerCreditTransferV06;
 			owner_lazy = () -> FIToFICustomerCreditTransferV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV07 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV07(obj);
 		}
 	};
 	/**
@@ -149,13 +157,17 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV07> forFinancialInstitutionCreditTransferV07 = new MMConstraint<FinancialInstitutionCreditTransferV07>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFinancialInstitutionCreditTransferV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFinancialInstitutionCreditTransferV06;
 			owner_lazy = () -> FinancialInstitutionCreditTransferV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV07 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV07(obj);
 		}
 	};
 	/**
@@ -200,7 +212,6 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV06> forFIToFICustomerDirectDebitV06 = new MMConstraint<FIToFICustomerDirectDebitV06>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerDirectDebitV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
@@ -208,6 +219,11 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFIToFICustomerDirectDebitV05;
 			owner_lazy = () -> FIToFICustomerDirectDebitV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/DirectDebitTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV06 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV06(obj);
 		}
 	};
 	/**
@@ -252,7 +268,6 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV06> forFinancialInstitutionCreditTransferV06 = new MMConstraint<FinancialInstitutionCreditTransferV06>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFinancialInstitutionCreditTransferV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
@@ -260,6 +275,11 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFinancialInstitutionCreditTransferV05;
 			owner_lazy = () -> FinancialInstitutionCreditTransferV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV06 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV06(obj);
 		}
 	};
 	/**
@@ -304,7 +324,6 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV06> forFIToFICustomerCreditTransferV06 = new MMConstraint<FIToFICustomerCreditTransferV06>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerCreditTransferV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
@@ -312,6 +331,11 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFIToFICustomerCreditTransferV05;
 			owner_lazy = () -> FIToFICustomerCreditTransferV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV06 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV06(obj);
 		}
 	};
 	/**
@@ -341,12 +365,16 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV02> forFIToFICustomerCreditTransferV02 = new MMConstraint<FIToFICustomerCreditTransferV02>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerCreditTransferV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV02 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV02(obj);
 		}
 	};
 	/**
@@ -376,12 +404,16 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV03> forFIToFICustomerCreditTransferV03 = new MMConstraint<FIToFICustomerCreditTransferV03>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerCreditTransferV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV03 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV03(obj);
 		}
 	};
 	/**
@@ -420,13 +452,17 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV04> forFIToFICustomerCreditTransferV04 = new MMConstraint<FIToFICustomerCreditTransferV04>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerCreditTransferV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFIToFICustomerCreditTransferV05);
 			owner_lazy = () -> FIToFICustomerCreditTransferV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV04 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV04(obj);
 		}
 	};
 	/**
@@ -456,12 +492,16 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV02> forFIToFICustomerDirectDebitV02 = new MMConstraint<FIToFICustomerDirectDebitV02>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerDirectDebitV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerDirectDebitV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/DirectDebitTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV02 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV02(obj);
 		}
 	};
 	/**
@@ -491,12 +531,16 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV03> forFIToFICustomerDirectDebitV03 = new MMConstraint<FIToFICustomerDirectDebitV03>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerDirectDebitV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerDirectDebitV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/DirectDebitTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV03 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV03(obj);
 		}
 	};
 	/**
@@ -535,13 +579,17 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV04> forFIToFICustomerDirectDebitV04 = new MMConstraint<FIToFICustomerDirectDebitV04>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerDirectDebitV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFIToFICustomerDirectDebitV05);
 			owner_lazy = () -> FIToFICustomerDirectDebitV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/DirectDebitTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV04 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV04(obj);
 		}
 	};
 	/**
@@ -571,12 +619,16 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV02> forFinancialInstitutionCreditTransferV02 = new MMConstraint<FinancialInstitutionCreditTransferV02>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFinancialInstitutionCreditTransferV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FinancialInstitutionCreditTransferV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV02 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV02(obj);
 		}
 	};
 	/**
@@ -606,12 +658,16 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV03> forFinancialInstitutionCreditTransferV03 = new MMConstraint<FinancialInstitutionCreditTransferV03>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFinancialInstitutionCreditTransferV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FinancialInstitutionCreditTransferV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV03 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV03(obj);
 		}
 	};
 	/**
@@ -650,13 +706,17 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV04> forFinancialInstitutionCreditTransferV04 = new MMConstraint<FinancialInstitutionCreditTransferV04>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFinancialInstitutionCreditTransferV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFinancialInstitutionCreditTransferV05);
 			owner_lazy = () -> FinancialInstitutionCreditTransferV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV04 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV04(obj);
 		}
 	};
 	/**
@@ -701,7 +761,6 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV05> forFinancialInstitutionCreditTransferV05 = new MMConstraint<FinancialInstitutionCreditTransferV05>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFinancialInstitutionCreditTransferV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
@@ -709,6 +768,11 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFinancialInstitutionCreditTransferV04;
 			owner_lazy = () -> FinancialInstitutionCreditTransferV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV05 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV05(obj);
 		}
 	};
 	/**
@@ -753,7 +817,6 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV05> forFIToFICustomerDirectDebitV05 = new MMConstraint<FIToFICustomerDirectDebitV05>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerDirectDebitV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
@@ -761,6 +824,11 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFIToFICustomerDirectDebitV04;
 			owner_lazy = () -> FIToFICustomerDirectDebitV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/DirectDebitTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV05 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV05(obj);
 		}
 	};
 	/**
@@ -805,7 +873,6 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV05> forFIToFICustomerCreditTransferV05 = new MMConstraint<FIToFICustomerCreditTransferV05>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkFIToFICustomerCreditTransferV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
@@ -813,6 +880,11 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFIToFICustomerCreditTransferV04;
 			owner_lazy = () -> FIToFICustomerCreditTransferV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/CreditTransferTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/GroupHeader/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupHeader/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV05 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV05(obj);
 		}
 	};
 	/**
@@ -842,12 +914,16 @@ public class ConstraintTotalInterbankSettlementAmountRule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction9> forCreditTransferTransaction9 = new MMConstraint<CreditTransferTransaction9>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountRule::checkCreditTransferTransaction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountRule";
 			definition = "If CreditInformation/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of CreditInformation/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> CreditTransferTransaction9.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToNode\"><leftOperand>/DirectDebitTransactionInformation[*]/InterbankSettlementAmount/@Currency</leftOperand><rightOperand>/TotalInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction9 obj) throws Exception {
+			checkCreditTransferTransaction9(obj);
 		}
 	};
 

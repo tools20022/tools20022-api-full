@@ -116,7 +116,7 @@ public class TemporaryFinancialInstrumentIndicator2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTemporaryIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TemporaryFinancialInstrumentIndicator2Choice, YesNoIndicator> mmTemporaryIndicator = new MMMessageAttribute<TemporaryFinancialInstrumentIndicator2Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator2Choice.mmObject();
@@ -129,6 +129,16 @@ public class TemporaryFinancialInstrumentIndicator2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(TemporaryFinancialInstrumentIndicator2Choice obj) {
+			return obj.getTemporaryIndicator();
+		}
+
+		@Override
+		public void setValue(TemporaryFinancialInstrumentIndicator2Choice obj, YesNoIndicator value) {
+			obj.setTemporaryIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class TemporaryFinancialInstrumentIndicator2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TemporaryFinancialInstrumentIndicator2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<TemporaryFinancialInstrumentIndicator2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator2Choice.mmObject();
@@ -180,6 +190,16 @@ public class TemporaryFinancialInstrumentIndicator2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(TemporaryFinancialInstrumentIndicator2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TemporaryFinancialInstrumentIndicator2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

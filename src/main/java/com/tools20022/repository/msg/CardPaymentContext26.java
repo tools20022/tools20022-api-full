@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardDirectDebit1;
+import com.tools20022.repository.msg.PaymentContext24;
+import com.tools20022.repository.msg.SaleContext2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -62,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CardPaymentContext26"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -117,7 +120,7 @@ public class CardPaymentContext26 {
 	 * CardPaymentContext24.mmPaymentContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentContext26, Optional<PaymentContext24>> mmPaymentContext = new MMMessageAssociationEnd<CardPaymentContext26, Optional<PaymentContext24>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentContext26.mmObject();
@@ -130,7 +133,17 @@ public class CardPaymentContext26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentContext24.mmObject();
+			type_lazy = () -> PaymentContext24.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentContext24> getValue(CardPaymentContext26 obj) {
+			return obj.getPaymentContext();
+		}
+
+		@Override
+		public void setValue(CardPaymentContext26 obj, Optional<PaymentContext24> value) {
+			obj.setPaymentContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SaleCntxt")
@@ -172,7 +185,7 @@ public class CardPaymentContext26 {
 	 * CardPaymentContext24.mmSaleContext}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSaleContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentContext26, Optional<SaleContext2>> mmSaleContext = new MMMessageAssociationEnd<CardPaymentContext26, Optional<SaleContext2>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentContext26.mmObject();
@@ -185,7 +198,17 @@ public class CardPaymentContext26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SaleContext2.mmObject();
+			type_lazy = () -> SaleContext2.mmObject();
+		}
+
+		@Override
+		public Optional<SaleContext2> getValue(CardPaymentContext26 obj) {
+			return obj.getSaleContext();
+		}
+
+		@Override
+		public void setValue(CardPaymentContext26 obj, Optional<SaleContext2> value) {
+			obj.setSaleContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrctDbtCntxt")
@@ -221,7 +244,7 @@ public class CardPaymentContext26 {
 	 * definition} = "Context of the direct debit transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDirectDebitContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentContext26, Optional<CardDirectDebit1>> mmDirectDebitContext = new MMMessageAssociationEnd<CardPaymentContext26, Optional<CardDirectDebit1>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentContext26.mmObject();
@@ -233,7 +256,17 @@ public class CardPaymentContext26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardDirectDebit1.mmObject();
+			type_lazy = () -> CardDirectDebit1.mmObject();
+		}
+
+		@Override
+		public Optional<CardDirectDebit1> getValue(CardPaymentContext26 obj) {
+			return obj.getDirectDebitContext();
+		}
+
+		@Override
+		public void setValue(CardPaymentContext26 obj, Optional<CardDirectDebit1> value) {
+			obj.setDirectDebitContext(value.orElse(null));
 		}
 	};
 
@@ -244,7 +277,7 @@ public class CardPaymentContext26 {
 						com.tools20022.repository.msg.CardPaymentContext26.mmDirectDebitContext);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentContext26";
 				definition = "Context in which the transaction is performed (payment and sale).";
 				previousVersion_lazy = () -> CardPaymentContext24.mmObject();
@@ -257,7 +290,7 @@ public class CardPaymentContext26 {
 		return paymentContext == null ? Optional.empty() : Optional.of(paymentContext);
 	}
 
-	public CardPaymentContext26 setPaymentContext(com.tools20022.repository.msg.PaymentContext24 paymentContext) {
+	public CardPaymentContext26 setPaymentContext(PaymentContext24 paymentContext) {
 		this.paymentContext = paymentContext;
 		return this;
 	}
@@ -266,7 +299,7 @@ public class CardPaymentContext26 {
 		return saleContext == null ? Optional.empty() : Optional.of(saleContext);
 	}
 
-	public CardPaymentContext26 setSaleContext(com.tools20022.repository.msg.SaleContext2 saleContext) {
+	public CardPaymentContext26 setSaleContext(SaleContext2 saleContext) {
 		this.saleContext = saleContext;
 		return this;
 	}
@@ -275,7 +308,7 @@ public class CardPaymentContext26 {
 		return directDebitContext == null ? Optional.empty() : Optional.of(directDebitContext);
 	}
 
-	public CardPaymentContext26 setDirectDebitContext(com.tools20022.repository.msg.CardDirectDebit1 directDebitContext) {
+	public CardPaymentContext26 setDirectDebitContext(CardDirectDebit1 directDebitContext) {
 		this.directDebitContext = directDebitContext;
 		return this;
 	}

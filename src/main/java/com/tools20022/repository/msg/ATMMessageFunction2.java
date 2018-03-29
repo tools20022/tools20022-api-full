@@ -101,7 +101,7 @@ public class ATMMessageFunction2 {
 	 * definition} = "Type of requested function."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMMessageFunction2, MessageFunction11Code> mmFunction = new MMMessageAttribute<ATMMessageFunction2, MessageFunction11Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMessageFunction2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class ATMMessageFunction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageFunction11Code.mmObject();
+		}
+
+		@Override
+		public MessageFunction11Code getValue(ATMMessageFunction2 obj) {
+			return obj.getFunction();
+		}
+
+		@Override
+		public void setValue(ATMMessageFunction2 obj, MessageFunction11Code value) {
+			obj.setFunction(value);
 		}
 	};
 	@XmlElement(name = "ATMSvcCd")
@@ -143,7 +153,7 @@ public class ATMMessageFunction2 {
 	 * definition} = "Codification of the type of service for the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMMessageFunction2, Optional<Max35Text>> mmATMServiceCode = new MMMessageAttribute<ATMMessageFunction2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMessageFunction2.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class ATMMessageFunction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMMessageFunction2 obj) {
+			return obj.getATMServiceCode();
+		}
+
+		@Override
+		public void setValue(ATMMessageFunction2 obj, Optional<Max35Text> value) {
+			obj.setATMServiceCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HstSvcCd")
@@ -186,7 +206,7 @@ public class ATMMessageFunction2 {
 	 * "Codification of the type of service for the ATM manager host."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMMessageFunction2, Optional<Max35Text>> mmHostServiceCode = new MMMessageAttribute<ATMMessageFunction2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMessageFunction2.mmObject();
 			isDerived = false;
@@ -197,6 +217,16 @@ public class ATMMessageFunction2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMMessageFunction2 obj) {
+			return obj.getHostServiceCode();
+		}
+
+		@Override
+		public void setValue(ATMMessageFunction2 obj, Optional<Max35Text> value) {
+			obj.setHostServiceCode(value.orElse(null));
 		}
 	};
 

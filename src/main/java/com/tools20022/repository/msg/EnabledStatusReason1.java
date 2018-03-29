@@ -132,7 +132,7 @@ public class EnabledStatusReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnabledStatusReason1, EnabledStatusReason2Choice> mmCode = new MMMessageAssociationEnd<EnabledStatusReason1, EnabledStatusReason2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnabledStatusReason1.mmObject();
@@ -146,6 +146,16 @@ public class EnabledStatusReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EnabledStatusReason2Choice.mmObject();
+		}
+
+		@Override
+		public EnabledStatusReason2Choice getValue(EnabledStatusReason1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(EnabledStatusReason1 obj, EnabledStatusReason2Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -193,7 +203,7 @@ public class EnabledStatusReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnabledStatusReason1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<EnabledStatusReason1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnabledStatusReason1.mmObject();
 			isDerived = false;
@@ -205,6 +215,16 @@ public class EnabledStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(EnabledStatusReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(EnabledStatusReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

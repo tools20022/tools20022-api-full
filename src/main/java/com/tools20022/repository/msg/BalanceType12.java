@@ -120,7 +120,7 @@ public class BalanceType12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCodeOrProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceType12, BalanceType5Choice> mmCodeOrProprietary = new MMMessageAssociationEnd<BalanceType12, BalanceType5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceType12.mmObject();
@@ -134,6 +134,16 @@ public class BalanceType12 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BalanceType5Choice.mmObject();
+		}
+
+		@Override
+		public BalanceType5Choice getValue(BalanceType12 obj) {
+			return obj.getCodeOrProprietary();
+		}
+
+		@Override
+		public void setValue(BalanceType12 obj, BalanceType5Choice value) {
+			obj.setCodeOrProprietary(value);
 		}
 	};
 	@XmlElement(name = "SubTp")
@@ -176,7 +186,7 @@ public class BalanceType12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceType12, Optional<BalanceSubType1Choice>> mmSubType = new MMMessageAssociationEnd<BalanceType12, Optional<BalanceSubType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceType12.mmObject();
@@ -190,6 +200,16 @@ public class BalanceType12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BalanceSubType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceSubType1Choice> getValue(BalanceType12 obj) {
+			return obj.getSubType();
+		}
+
+		@Override
+		public void setValue(BalanceType12 obj, Optional<BalanceSubType1Choice> value) {
+			obj.setSubType(value.orElse(null));
 		}
 	};
 

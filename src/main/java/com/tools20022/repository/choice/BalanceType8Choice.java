@@ -103,7 +103,7 @@ public class BalanceType8Choice {
 	 * definition} = "Specifies the nature of a balance, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceType8Choice, SystemBalanceType1Code> mmCode = new MMMessageAttribute<BalanceType8Choice, SystemBalanceType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceType8Choice.mmObject();
@@ -115,6 +115,16 @@ public class BalanceType8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemBalanceType1Code.mmObject();
+		}
+
+		@Override
+		public SystemBalanceType1Code getValue(BalanceType8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BalanceType8Choice obj, SystemBalanceType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -152,7 +162,7 @@ public class BalanceType8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceType8Choice, Max35Text> mmProprietary = new MMMessageAttribute<BalanceType8Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceType8Choice.mmObject();
@@ -164,6 +174,16 @@ public class BalanceType8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BalanceType8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BalanceType8Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

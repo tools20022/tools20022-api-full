@@ -107,7 +107,7 @@ public class ReportParameters4 {
 	 * definition} = "Unique identification of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters4, Max35Text> mmReportIdentification = new MMMessageAttribute<ReportParameters4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters4.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class ReportParameters4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportParameters4 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(ReportParameters4 obj, Max35Text value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptDtAndTm", required = true)
@@ -150,7 +160,7 @@ public class ReportParameters4 {
 	 * definition} = "Date and time of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters4, DateAndDateTimeChoice> mmReportDateAndTime = new MMMessageAttribute<ReportParameters4, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters4.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class ReportParameters4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(ReportParameters4 obj) {
+			return obj.getReportDateAndTime();
+		}
+
+		@Override
+		public void setValue(ReportParameters4 obj, DateAndDateTimeChoice value) {
+			obj.setReportDateAndTime(value);
 		}
 	};
 

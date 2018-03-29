@@ -26,8 +26,7 @@ import com.tools20022.repository.msg.GroupHeader56;
 import com.tools20022.repository.msg.OriginalGroupHeader3;
 import com.tools20022.repository.msg.OriginalPaymentInstruction16;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.PaymentsInitiationISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -74,9 +73,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsInitiationISOPreviousversion
- * PaymentsInitiationISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -181,7 +178,7 @@ public class CustomerPaymentReversalV06 {
 	 * CustomerPaymentReversalV05.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentReversalV06, GroupHeader56> mmGroupHeader = new MMMessageBuildingBlock<CustomerPaymentReversalV06, GroupHeader56>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,12 +191,14 @@ public class CustomerPaymentReversalV06 {
 			complexType_lazy = () -> GroupHeader56.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentReversalV06.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader56 getValue(CustomerPaymentReversalV06 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentReversalV06 obj, GroupHeader56 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInf", required = true)
@@ -242,7 +241,7 @@ public class CustomerPaymentReversalV06 {
 	 * CustomerPaymentReversalV05.mmOriginalGroupInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentReversalV06, OriginalGroupHeader3> mmOriginalGroupInformation = new MMMessageBuildingBlock<CustomerPaymentReversalV06, OriginalGroupHeader3>() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,12 +254,14 @@ public class CustomerPaymentReversalV06 {
 			complexType_lazy = () -> OriginalGroupHeader3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentReversalV06.class.getMethod("getOriginalGroupInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalGroupHeader3 getValue(CustomerPaymentReversalV06 obj) {
+			return obj.getOriginalGroupInformation();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentReversalV06 obj, OriginalGroupHeader3 value) {
+			obj.setOriginalGroupInformation(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInfAndRvsl")
@@ -303,7 +304,7 @@ public class CustomerPaymentReversalV06 {
 	 * CustomerPaymentReversalV05.mmOriginalPaymentInformationAndReversal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalPaymentInformationAndReversal = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentReversalV06, List<OriginalPaymentInstruction16>> mmOriginalPaymentInformationAndReversal = new MMMessageBuildingBlock<CustomerPaymentReversalV06, List<OriginalPaymentInstruction16>>() {
 		{
 			xmlTag = "OrgnlPmtInfAndRvsl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,12 +316,14 @@ public class CustomerPaymentReversalV06 {
 			complexType_lazy = () -> OriginalPaymentInstruction16.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentReversalV06.class.getMethod("getOriginalPaymentInformationAndReversal", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<OriginalPaymentInstruction16> getValue(CustomerPaymentReversalV06 obj) {
+			return obj.getOriginalPaymentInformationAndReversal();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentReversalV06 obj, List<OriginalPaymentInstruction16> value) {
+			obj.setOriginalPaymentInformationAndReversal(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -363,7 +366,7 @@ public class CustomerPaymentReversalV06 {
 	 * CustomerPaymentReversalV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentReversalV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CustomerPaymentReversalV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,12 +378,14 @@ public class CustomerPaymentReversalV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentReversalV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CustomerPaymentReversalV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentReversalV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -397,7 +402,7 @@ public class CustomerPaymentReversalV06 {
 				definition = "Scope\r\nThe CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.\r\nThe CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentReversal message can be used in domestic and cross-border scenarios.";
 				nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV07.mmObject());
 				previousVersion_lazy = () -> CustomerPaymentReversalV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(PaymentsInitiationISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "CstmrPmtRvsl";
 				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();

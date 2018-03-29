@@ -54,11 +54,15 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties2> forAccountParties2 = new MMConstraint<AccountParties2>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			owner_lazy = () -> AccountParties2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties2 obj) throws Exception {
+			checkAccountParties2(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties5> forAccountParties5 = new MMConstraint<AccountParties5>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			owner_lazy = () -> AccountParties5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties5 obj) throws Exception {
+			checkAccountParties5(obj);
 		}
 	};
 	/**
@@ -122,12 +130,16 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties6> forAccountParties6 = new MMConstraint<AccountParties6>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator2Rule.forAccountParties9);
 			owner_lazy = () -> AccountParties6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties6 obj) throws Exception {
+			checkAccountParties6(obj);
 		}
 	};
 	/**
@@ -153,11 +165,15 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties3> forAccountParties3 = new MMConstraint<AccountParties3>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			owner_lazy = () -> AccountParties3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties3 obj) throws Exception {
+			checkAccountParties3(obj);
 		}
 	};
 	/**
@@ -183,11 +199,15 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties4> forAccountParties4 = new MMConstraint<AccountParties4>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			owner_lazy = () -> AccountParties4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties4 obj) throws Exception {
+			checkAccountParties4(obj);
 		}
 	};
 	/**
@@ -221,12 +241,16 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties7> forAccountParties7 = new MMConstraint<AccountParties7>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Organisation/ModifiedAddress/Address/RegistrationAddressIndicator or of SecondaryOwner/IndividualPerson/ModifiedAddress/Address/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator2Rule.forAccountParties8);
 			owner_lazy = () -> AccountParties7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties7 obj) throws Exception {
+			checkAccountParties7(obj);
 		}
 	};
 	/**
@@ -268,7 +292,6 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties9> forAccountParties9 = new MMConstraint<AccountParties9>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No), or, all occurrences of SecondaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
@@ -276,6 +299,11 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 					com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator2Rule.forAccountParties10);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator2Rule.forAccountParties6;
 			owner_lazy = () -> AccountParties9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties9 obj) throws Exception {
+			checkAccountParties9(obj);
 		}
 	};
 	/**
@@ -314,13 +342,17 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties8> forAccountParties8 = new MMConstraint<AccountParties8>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/ ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator or of SecondaryOwner/Party/IndividualPerson/ ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator2Rule.forAccountParties11);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator2Rule.forAccountParties7;
 			owner_lazy = () -> AccountParties8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties8 obj) throws Exception {
+			checkAccountParties8(obj);
 		}
 	};
 	/**
@@ -351,12 +383,16 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties11> forAccountParties11 = new MMConstraint<AccountParties11>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/ ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator or of SecondaryOwner/Party/IndividualPerson/ ModifiedPostalAddress/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator2Rule.forAccountParties8;
 			owner_lazy = () -> AccountParties11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties11 obj) throws Exception {
+			checkAccountParties11(obj);
 		}
 	};
 	/**
@@ -387,12 +423,16 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties10> forAccountParties10 = new MMConstraint<AccountParties10>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No), or, all occurrences of SecondaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator2Rule.forAccountParties9;
 			owner_lazy = () -> AccountParties10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties10 obj) throws Exception {
+			checkAccountParties10(obj);
 		}
 	};
 	/**
@@ -423,12 +463,16 @@ public class ConstraintRegistrationAddressIndicator2Rule {
 	 */
 	public static final MMConstraint<AccountParties12> forAccountParties12 = new MMConstraint<AccountParties12>() {
 		{
-			validator = ConstraintRegistrationAddressIndicator2Rule::checkAccountParties12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationAddressIndicator2Rule";
 			definition = "If SecondaryOwner is present, then all occurrences of SecondaryOwner/Party/Organisation/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No), or, all occurrences of SecondaryOwner/Party/IndividualPerson/PostalAddress/RegistrationAddressIndicator must be \"false\" or \"0\" (No).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationAddressIndicator2Rule.forAccountParties9;
 			owner_lazy = () -> AccountParties12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountParties12 obj) throws Exception {
+			checkAccountParties12(obj);
 		}
 	};
 

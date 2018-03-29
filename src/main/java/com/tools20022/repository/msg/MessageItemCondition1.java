@@ -102,7 +102,7 @@ public class MessageItemCondition1 {
 	 * "Unique identification of the message and the message item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageItemCondition1, Max140Text> mmItemIdentification = new MMMessageAttribute<MessageItemCondition1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageItemCondition1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class MessageItemCondition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(MessageItemCondition1 obj) {
+			return obj.getItemIdentification();
+		}
+
+		@Override
+		public void setValue(MessageItemCondition1 obj, Max140Text value) {
+			obj.setItemIdentification(value);
 		}
 	};
 	@XmlElement(name = "Cond", required = true)
@@ -145,7 +155,7 @@ public class MessageItemCondition1 {
 	 * definition} = "Condition of presence of the message item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCondition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageItemCondition1, MessageItemCondition1Code> mmCondition = new MMMessageAttribute<MessageItemCondition1, MessageItemCondition1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageItemCondition1.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class MessageItemCondition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageItemCondition1Code.mmObject();
+		}
+
+		@Override
+		public MessageItemCondition1Code getValue(MessageItemCondition1 obj) {
+			return obj.getCondition();
+		}
+
+		@Override
+		public void setValue(MessageItemCondition1 obj, MessageItemCondition1Code value) {
+			obj.setCondition(value);
 		}
 	};
 	@XmlElement(name = "Val")
@@ -187,7 +207,7 @@ public class MessageItemCondition1 {
 	 * definition} = "Value to be used for the message item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageItemCondition1, List<Max140Text>> mmValue = new MMMessageAttribute<MessageItemCondition1, List<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageItemCondition1.mmObject();
 			isDerived = false;
@@ -197,6 +217,16 @@ public class MessageItemCondition1 {
 			definition = "Value to be used for the message item.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public List<Max140Text> getValue(MessageItemCondition1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(MessageItemCondition1 obj, List<Max140Text> value) {
+			obj.setValue(value);
 		}
 	};
 

@@ -27,7 +27,6 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -177,7 +176,7 @@ public class TransportBySea extends Transport {
 	 * definition} = "Name of a vessel."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmVesselName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TransportBySea, Max35Text> mmVesselName = new MMBusinessAttribute<TransportBySea, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransportBySea2.mmVesselName, MultimodalTransport2.mmVesselName, TransportBySea4.mmVesselName, TransportBySea5.mmVesselName, TransportBySea6.mmVesselName);
 			isDerived = false;
@@ -190,12 +189,14 @@ public class TransportBySea extends Transport {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransportBySea.class.getMethod("getVesselName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TransportBySea obj) {
+			return obj.getVesselName();
+		}
+
+		@Override
+		public void setValue(TransportBySea obj, Max35Text value) {
+			obj.setVesselName(value);
 		}
 	};
 	protected Max35Text voyageNumber;
@@ -232,7 +233,7 @@ public class TransportBySea extends Transport {
 	 * definition} = "Identifies the voyage."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmVoyageNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TransportBySea, Max35Text> mmVoyageNumber = new MMBusinessAttribute<TransportBySea, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransportBySea5.mmVoyageNumber);
 			isDerived = false;
@@ -245,12 +246,14 @@ public class TransportBySea extends Transport {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransportBySea.class.getMethod("getVoyageNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TransportBySea obj) {
+			return obj.getVoyageNumber();
+		}
+
+		@Override
+		public void setValue(TransportBySea obj, Max35Text value) {
+			obj.setVoyageNumber(value);
 		}
 	};
 	protected Max70Text chartererName;
@@ -289,7 +292,7 @@ public class TransportBySea extends Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmChartererName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TransportBySea, Max70Text> mmChartererName = new MMBusinessAttribute<TransportBySea, Max70Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransportBySea5.mmChartererName);
 			isDerived = false;
@@ -302,12 +305,14 @@ public class TransportBySea extends Transport {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransportBySea.class.getMethod("getChartererName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max70Text getValue(TransportBySea obj) {
+			return obj.getChartererName();
+		}
+
+		@Override
+		public void setValue(TransportBySea obj, Max70Text value) {
+			obj.setChartererName(value);
 		}
 	};
 	protected Max70Text masterName;
@@ -344,7 +349,7 @@ public class TransportBySea extends Transport {
 	 * definition} = "Name of the master or captain of a vessel."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMasterName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TransportBySea, Max70Text> mmMasterName = new MMBusinessAttribute<TransportBySea, Max70Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransportBySea5.mmMasterName);
 			isDerived = false;
@@ -357,12 +362,14 @@ public class TransportBySea extends Transport {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransportBySea.class.getMethod("getMasterName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max70Text getValue(TransportBySea obj) {
+			return obj.getMasterName();
+		}
+
+		@Override
+		public void setValue(TransportBySea obj, Max70Text value) {
+			obj.setMasterName(value);
 		}
 	};
 	protected Max70Text ownerName;
@@ -400,7 +407,7 @@ public class TransportBySea extends Transport {
 	 * "Name of the company or individual that acts in the capacity of owner."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOwnerName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TransportBySea, Max70Text> mmOwnerName = new MMBusinessAttribute<TransportBySea, Max70Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransportBySea5.mmOwnerName);
 			isDerived = false;
@@ -413,12 +420,14 @@ public class TransportBySea extends Transport {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransportBySea.class.getMethod("getOwnerName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max70Text getValue(TransportBySea obj) {
+			return obj.getOwnerName();
+		}
+
+		@Override
+		public void setValue(TransportBySea obj, Max70Text value) {
+			obj.setOwnerName(value);
 		}
 	};
 	protected Exact7NumericText iMONumber;
@@ -458,7 +467,7 @@ public class TransportBySea extends Transport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIMONumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TransportBySea, Exact7NumericText> mmIMONumber = new MMBusinessAttribute<TransportBySea, Exact7NumericText>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransportBySea5.mmIMONumber);
 			isDerived = false;
@@ -471,12 +480,14 @@ public class TransportBySea extends Transport {
 			simpleType_lazy = () -> Exact7NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransportBySea.class.getMethod("getIMONumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Exact7NumericText getValue(TransportBySea obj) {
+			return obj.getIMONumber();
+		}
+
+		@Override
+		public void setValue(TransportBySea obj, Exact7NumericText value) {
+			obj.setIMONumber(value);
 		}
 	};
 

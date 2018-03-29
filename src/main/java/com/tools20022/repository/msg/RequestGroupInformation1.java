@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.FirstAgentRole;
 import com.tools20022.repository.entity.IntermediaryAgentRole;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalInformation1;
+import com.tools20022.repository.msg.AgreementClauses1;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification6;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount6;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -154,7 +158,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestGroupInformation1, Max35Text> mmGroupIdentification = new MMMessageAttribute<RequestGroupInformation1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -165,6 +169,16 @@ public class RequestGroupInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RequestGroupInformation1 obj) {
+			return obj.getGroupIdentification();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, Max35Text value) {
+			obj.setGroupIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -197,7 +211,7 @@ public class RequestGroupInformation1 {
 	 * "Date and time on which the invoice financing request was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestGroupInformation1, ISODateTime> mmCreationDateTime = new MMMessageAttribute<RequestGroupInformation1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -208,6 +222,16 @@ public class RequestGroupInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(RequestGroupInformation1 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "Authstn")
@@ -246,7 +270,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestGroupInformation1, List<Max128Text>> mmAuthorisation = new MMMessageAttribute<RequestGroupInformation1, List<Max128Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmAuthorisation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
@@ -258,6 +282,16 @@ public class RequestGroupInformation1 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max128Text.mmObject();
+		}
+
+		@Override
+		public List<Max128Text> getValue(RequestGroupInformation1 obj) {
+			return obj.getAuthorisation();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, List<Max128Text> value) {
+			obj.setAuthorisation(value);
 		}
 	};
 	@XmlElement(name = "NbOfInvcReqs")
@@ -292,7 +326,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfInvoiceRequests = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestGroupInformation1, Optional<Max15NumericText>> mmNumberOfInvoiceRequests = new MMMessageAttribute<RequestGroupInformation1, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -303,6 +337,16 @@ public class RequestGroupInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(RequestGroupInformation1 obj) {
+			return obj.getNumberOfInvoiceRequests();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, Optional<Max15NumericText> value) {
+			obj.setNumberOfInvoiceRequests(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlBlkInvcAmt")
@@ -337,7 +381,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalBulkInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestGroupInformation1, Optional<ActiveCurrencyAndAmount>> mmTotalBulkInvoiceAmount = new MMMessageAttribute<RequestGroupInformation1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -348,6 +392,16 @@ public class RequestGroupInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(RequestGroupInformation1 obj) {
+			return obj.getTotalBulkInvoiceAmount();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalBulkInvoiceAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -379,7 +433,7 @@ public class RequestGroupInformation1 {
 	 * definition} = "Reference currency of the invoice financing request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestGroupInformation1, CurrencyCode> mmCurrency = new MMMessageAttribute<RequestGroupInformation1, CurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -390,6 +444,16 @@ public class RequestGroupInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(RequestGroupInformation1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, CurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "FincgAgrmt")
@@ -428,7 +492,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancingAgreement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestGroupInformation1, Optional<Max350Text>> mmFinancingAgreement = new MMMessageAttribute<RequestGroupInformation1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmFinancingMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
@@ -440,6 +504,16 @@ public class RequestGroupInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(RequestGroupInformation1 obj) {
+			return obj.getFinancingAgreement();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, Optional<Max350Text> value) {
+			obj.setFinancingAgreement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FincgRqstr", required = true)
@@ -477,7 +551,7 @@ public class RequestGroupInformation1 {
 	 * "Party that requests the invoice financing, on behalf of a creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancingRequestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestGroupInformation1, PartyIdentificationAndAccount6> mmFinancingRequestor = new MMMessageAssociationEnd<RequestGroupInformation1, PartyIdentificationAndAccount6>() {
 		{
 			businessComponentTrace_lazy = () -> FinancingRequestorRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
@@ -489,7 +563,17 @@ public class RequestGroupInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount6.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount6 getValue(RequestGroupInformation1 obj) {
+			return obj.getFinancingRequestor();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, PartyIdentificationAndAccount6 value) {
+			obj.setFinancingRequestor(value);
 		}
 	};
 	@XmlElement(name = "IntrmyAgt")
@@ -528,7 +612,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestGroupInformation1, Optional<FinancialInstitutionIdentification6>> mmIntermediaryAgent = new MMMessageAssociationEnd<RequestGroupInformation1, Optional<FinancialInstitutionIdentification6>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryAgentRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
@@ -540,7 +624,17 @@ public class RequestGroupInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification6.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification6> getValue(RequestGroupInformation1 obj) {
+			return obj.getIntermediaryAgent();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, Optional<FinancialInstitutionIdentification6> value) {
+			obj.setIntermediaryAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstAgt", required = true)
@@ -579,7 +673,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFirstAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestGroupInformation1, FinancialInstitutionIdentification6> mmFirstAgent = new MMMessageAssociationEnd<RequestGroupInformation1, FinancialInstitutionIdentification6>() {
 		{
 			businessComponentTrace_lazy = () -> FirstAgentRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
@@ -591,11 +685,21 @@ public class RequestGroupInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification6.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification6 getValue(RequestGroupInformation1 obj) {
+			return obj.getFirstAgent();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, FinancialInstitutionIdentification6 value) {
+			obj.setFirstAgent(value);
 		}
 	};
 	@XmlElement(name = "AgrmtClauses")
-	protected List<com.tools20022.repository.msg.AgreementClauses1> agreementClauses;
+	protected List<AgreementClauses1> agreementClauses;
 	/**
 	 * 
 	 <p>
@@ -624,7 +728,7 @@ public class RequestGroupInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgreementClauses = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestGroupInformation1, List<AgreementClauses1>> mmAgreementClauses = new MMMessageAssociationEnd<RequestGroupInformation1, List<AgreementClauses1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -634,11 +738,21 @@ public class RequestGroupInformation1 {
 			definition = "Agreements between financing requestor and his bank concerning conditions about the service of invoice financing, based on specific contractual schemes.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AgreementClauses1.mmObject();
+			type_lazy = () -> AgreementClauses1.mmObject();
+		}
+
+		@Override
+		public List<AgreementClauses1> getValue(RequestGroupInformation1 obj) {
+			return obj.getAgreementClauses();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, List<AgreementClauses1> value) {
+			obj.setAgreementClauses(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
-	protected List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation;
+	protected List<AdditionalInformation1> additionalInformation;
 	/**
 	 * 
 	 <p>
@@ -665,7 +779,7 @@ public class RequestGroupInformation1 {
 	 * definition} = "Additional information about the financing request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RequestGroupInformation1, List<AdditionalInformation1>> mmAdditionalInformation = new MMMessageAssociationEnd<RequestGroupInformation1, List<AdditionalInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestGroupInformation1.mmObject();
 			isDerived = false;
@@ -675,7 +789,17 @@ public class RequestGroupInformation1 {
 			definition = "Additional information about the financing request.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
+			type_lazy = () -> AdditionalInformation1.mmObject();
+		}
+
+		@Override
+		public List<AdditionalInformation1> getValue(RequestGroupInformation1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(RequestGroupInformation1 obj, List<AdditionalInformation1> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -773,7 +897,7 @@ public class RequestGroupInformation1 {
 		return financingRequestor;
 	}
 
-	public RequestGroupInformation1 setFinancingRequestor(com.tools20022.repository.msg.PartyIdentificationAndAccount6 financingRequestor) {
+	public RequestGroupInformation1 setFinancingRequestor(PartyIdentificationAndAccount6 financingRequestor) {
 		this.financingRequestor = Objects.requireNonNull(financingRequestor);
 		return this;
 	}
@@ -782,7 +906,7 @@ public class RequestGroupInformation1 {
 		return intermediaryAgent == null ? Optional.empty() : Optional.of(intermediaryAgent);
 	}
 
-	public RequestGroupInformation1 setIntermediaryAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 intermediaryAgent) {
+	public RequestGroupInformation1 setIntermediaryAgent(FinancialInstitutionIdentification6 intermediaryAgent) {
 		this.intermediaryAgent = intermediaryAgent;
 		return this;
 	}
@@ -791,7 +915,7 @@ public class RequestGroupInformation1 {
 		return firstAgent;
 	}
 
-	public RequestGroupInformation1 setFirstAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 firstAgent) {
+	public RequestGroupInformation1 setFirstAgent(FinancialInstitutionIdentification6 firstAgent) {
 		this.firstAgent = Objects.requireNonNull(firstAgent);
 		return this;
 	}
@@ -800,7 +924,7 @@ public class RequestGroupInformation1 {
 		return agreementClauses == null ? agreementClauses = new ArrayList<>() : agreementClauses;
 	}
 
-	public RequestGroupInformation1 setAgreementClauses(List<com.tools20022.repository.msg.AgreementClauses1> agreementClauses) {
+	public RequestGroupInformation1 setAgreementClauses(List<AgreementClauses1> agreementClauses) {
 		this.agreementClauses = Objects.requireNonNull(agreementClauses);
 		return this;
 	}
@@ -809,7 +933,7 @@ public class RequestGroupInformation1 {
 		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public RequestGroupInformation1 setAdditionalInformation(List<com.tools20022.repository.msg.AdditionalInformation1> additionalInformation) {
+	public RequestGroupInformation1 setAdditionalInformation(List<AdditionalInformation1> additionalInformation) {
 		this.additionalInformation = Objects.requireNonNull(additionalInformation);
 		return this;
 	}

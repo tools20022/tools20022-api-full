@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.UpdatedAdditionalInformation6;
+import com.tools20022.repository.msg.UpdatedURLlnformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -124,7 +126,7 @@ public class CorporateActionNarrative18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOfferor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative18, Optional<UpdatedAdditionalInformation6>> mmOfferor = new MMMessageAssociationEnd<CorporateActionNarrative18, Optional<UpdatedAdditionalInformation6>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative18.mmObject();
@@ -137,7 +139,17 @@ public class CorporateActionNarrative18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation6.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation6> getValue(CorporateActionNarrative18 obj) {
+			return obj.getOfferor();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative18 obj, Optional<UpdatedAdditionalInformation6> value) {
+			obj.setOfferor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewCpnyNm")
@@ -173,7 +185,7 @@ public class CorporateActionNarrative18 {
 	 * "Provides the new name of a company following a name change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCompanyName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative18, Optional<UpdatedAdditionalInformation6>> mmNewCompanyName = new MMMessageAssociationEnd<CorporateActionNarrative18, Optional<UpdatedAdditionalInformation6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative18.mmObject();
 			isDerived = false;
@@ -185,7 +197,17 @@ public class CorporateActionNarrative18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation6.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation6> getValue(CorporateActionNarrative18 obj) {
+			return obj.getNewCompanyName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative18 obj, Optional<UpdatedAdditionalInformation6> value) {
+			obj.setNewCompanyName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "URLAdr")
@@ -226,7 +248,7 @@ public class CorporateActionNarrative18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmURLAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative18, Optional<UpdatedURLlnformation1>> mmURLAddress = new MMMessageAssociationEnd<CorporateActionNarrative18, Optional<UpdatedURLlnformation1>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative18.mmObject();
@@ -239,7 +261,17 @@ public class CorporateActionNarrative18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedURLlnformation1.mmObject();
+			type_lazy = () -> UpdatedURLlnformation1.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedURLlnformation1> getValue(CorporateActionNarrative18 obj) {
+			return obj.getURLAddress();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative18 obj, Optional<UpdatedURLlnformation1> value) {
+			obj.setURLAddress(value.orElse(null));
 		}
 	};
 
@@ -263,7 +295,7 @@ public class CorporateActionNarrative18 {
 		return offeror == null ? Optional.empty() : Optional.of(offeror);
 	}
 
-	public CorporateActionNarrative18 setOfferor(com.tools20022.repository.msg.UpdatedAdditionalInformation6 offeror) {
+	public CorporateActionNarrative18 setOfferor(UpdatedAdditionalInformation6 offeror) {
 		this.offeror = offeror;
 		return this;
 	}
@@ -272,7 +304,7 @@ public class CorporateActionNarrative18 {
 		return newCompanyName == null ? Optional.empty() : Optional.of(newCompanyName);
 	}
 
-	public CorporateActionNarrative18 setNewCompanyName(com.tools20022.repository.msg.UpdatedAdditionalInformation6 newCompanyName) {
+	public CorporateActionNarrative18 setNewCompanyName(UpdatedAdditionalInformation6 newCompanyName) {
 		this.newCompanyName = newCompanyName;
 		return this;
 	}
@@ -281,7 +313,7 @@ public class CorporateActionNarrative18 {
 		return uRLAddress == null ? Optional.empty() : Optional.of(uRLAddress);
 	}
 
-	public CorporateActionNarrative18 setURLAddress(com.tools20022.repository.msg.UpdatedURLlnformation1 uRLAddress) {
+	public CorporateActionNarrative18 setURLAddress(UpdatedURLlnformation1 uRLAddress) {
 		this.uRLAddress = uRLAddress;
 		return this;
 	}

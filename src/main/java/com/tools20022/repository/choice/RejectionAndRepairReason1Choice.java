@@ -119,7 +119,7 @@ public class RejectionAndRepairReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionAndRepairReason1Choice, RejectionReason21Code> mmCode = new MMMessageAttribute<RejectionAndRepairReason1Choice, RejectionReason21Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason1Choice.mmObject();
@@ -132,6 +132,16 @@ public class RejectionAndRepairReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason21Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason21Code getValue(RejectionAndRepairReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason1Choice obj, RejectionReason21Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -174,7 +184,7 @@ public class RejectionAndRepairReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionAndRepairReason1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<RejectionAndRepairReason1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason1Choice.mmObject();
@@ -187,6 +197,16 @@ public class RejectionAndRepairReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(RejectionAndRepairReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

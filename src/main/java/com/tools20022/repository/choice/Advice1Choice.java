@@ -101,7 +101,7 @@ public class Advice1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderConfirmationAdviceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Advice1Choice, List<InvestmentFundOrderExecution3>> mmOrderConfirmationAdviceDetails = new MMMessageAssociationEnd<Advice1Choice, List<InvestmentFundOrderExecution3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Advice1Choice.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class Advice1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentFundOrderExecution3.mmObject();
+		}
+
+		@Override
+		public List<InvestmentFundOrderExecution3> getValue(Advice1Choice obj) {
+			return obj.getOrderConfirmationAdviceDetails();
+		}
+
+		@Override
+		public void setValue(Advice1Choice obj, List<InvestmentFundOrderExecution3> value) {
+			obj.setOrderConfirmationAdviceDetails(value);
 		}
 	};
 	@XmlElement(name = "StmtAdvcDtls", required = true)
@@ -143,7 +153,7 @@ public class Advice1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementAdviceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Advice1Choice, Statement9> mmStatementAdviceDetails = new MMMessageAssociationEnd<Advice1Choice, Statement9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Advice1Choice.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class Advice1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Statement9.mmObject();
+		}
+
+		@Override
+		public Statement9 getValue(Advice1Choice obj) {
+			return obj.getStatementAdviceDetails();
+		}
+
+		@Override
+		public void setValue(Advice1Choice obj, Statement9 value) {
+			obj.setStatementAdviceDetails(value);
 		}
 	};
 

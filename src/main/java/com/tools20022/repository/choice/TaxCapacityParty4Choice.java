@@ -121,7 +121,7 @@ public class TaxCapacityParty4Choice {
 	 * TaxCapacityParty1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCapacityParty4Choice, TaxLiability1Code> mmCode = new MMMessageAttribute<TaxCapacityParty4Choice, TaxLiability1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlementPartyRole.mmTaxCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCapacityParty4Choice.mmObject();
@@ -135,6 +135,16 @@ public class TaxCapacityParty4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxLiability1Code.mmObject();
+		}
+
+		@Override
+		public TaxLiability1Code getValue(TaxCapacityParty4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TaxCapacityParty4Choice obj, TaxLiability1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -180,7 +190,7 @@ public class TaxCapacityParty4Choice {
 	 * TaxCapacityParty1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCapacityParty4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<TaxCapacityParty4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlementPartyRole.mmTaxCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCapacityParty4Choice.mmObject();
@@ -194,6 +204,16 @@ public class TaxCapacityParty4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(TaxCapacityParty4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TaxCapacityParty4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

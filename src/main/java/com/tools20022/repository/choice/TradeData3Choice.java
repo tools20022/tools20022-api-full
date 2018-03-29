@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.other.DerivativesTradeReportV01;
+import com.tools20022.repository.choice.TradeReport3Choice;
 import com.tools20022.repository.codeset.ReportPeriodActivity1Code;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TradeStateReport3;
@@ -114,7 +115,7 @@ public class TradeData3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeData3Choice, ReportPeriodActivity1Code> mmDataSetAction = new MMMessageAttribute<TradeData3Choice, ReportPeriodActivity1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeData3Choice.mmObject();
 			isDerived = false;
@@ -126,9 +127,19 @@ public class TradeData3Choice {
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity1Code.mmObject();
 		}
+
+		@Override
+		public ReportPeriodActivity1Code getValue(TradeData3Choice obj) {
+			return obj.getDataSetAction();
+		}
+
+		@Override
+		public void setValue(TradeData3Choice obj, ReportPeriodActivity1Code value) {
+			obj.setDataSetAction(value);
+		}
 	};
 	@XmlElement(name = "Rpt", required = true)
-	protected List<com.tools20022.repository.choice.TradeReport3Choice> report;
+	protected List<TradeReport3Choice> report;
 	/**
 	 * 
 	 <p>
@@ -157,7 +168,7 @@ public class TradeData3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeData3Choice, List<TradeReport3Choice>> mmReport = new MMMessageAssociationEnd<TradeData3Choice, List<TradeReport3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeData3Choice.mmObject();
 			isDerived = false;
@@ -167,7 +178,17 @@ public class TradeData3Choice {
 			definition = "Reporting of position or transaction for trade lifecycle events, under EMIR regulation.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.TradeReport3Choice.mmObject();
+			type_lazy = () -> TradeReport3Choice.mmObject();
+		}
+
+		@Override
+		public List<TradeReport3Choice> getValue(TradeData3Choice obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(TradeData3Choice obj, List<TradeReport3Choice> value) {
+			obj.setReport(value);
 		}
 	};
 	@XmlElement(name = "Stat", required = true)
@@ -198,7 +219,7 @@ public class TradeData3Choice {
 	 * definition} = "Information related to trade state reporting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmState = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeData3Choice, List<TradeStateReport3>> mmState = new MMMessageAssociationEnd<TradeData3Choice, List<TradeStateReport3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeData3Choice.mmObject();
 			isDerived = false;
@@ -209,6 +230,16 @@ public class TradeData3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradeStateReport3.mmObject();
+		}
+
+		@Override
+		public List<TradeStateReport3> getValue(TradeData3Choice obj) {
+			return obj.getState();
+		}
+
+		@Override
+		public void setValue(TradeData3Choice obj, List<TradeStateReport3> value) {
+			obj.setState(value);
 		}
 	};
 
@@ -240,7 +271,7 @@ public class TradeData3Choice {
 		return report == null ? report = new ArrayList<>() : report;
 	}
 
-	public TradeData3Choice setReport(List<com.tools20022.repository.choice.TradeReport3Choice> report) {
+	public TradeData3Choice setReport(List<TradeReport3Choice> report) {
 		this.report = Objects.requireNonNull(report);
 		return this;
 	}

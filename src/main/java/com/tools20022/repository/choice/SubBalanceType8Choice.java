@@ -114,7 +114,7 @@ public class SubBalanceType8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceType8Choice, SecuritiesBalanceType7Code> mmCode = new MMMessageAttribute<SubBalanceType8Choice, SecuritiesBalanceType7Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceType8Choice.mmObject();
@@ -127,6 +127,16 @@ public class SubBalanceType8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType7Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType7Code getValue(SubBalanceType8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SubBalanceType8Choice obj, SecuritiesBalanceType7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class SubBalanceType8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubBalanceType8Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<SubBalanceType8Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceType8Choice.mmObject();
@@ -178,6 +188,16 @@ public class SubBalanceType8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(SubBalanceType8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SubBalanceType8Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

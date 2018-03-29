@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.NetReportData1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -132,7 +131,7 @@ public class NetReportV01 {
 	 * definition} = "Specifies the meta data associated with the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNetReportData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetReportV01, NetReportData1> mmNetReportData = new MMMessageBuildingBlock<NetReportV01, NetReportData1>() {
 		{
 			xmlTag = "NetRptData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +142,14 @@ public class NetReportV01 {
 			complexType_lazy = () -> NetReportData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetReportV01.class.getMethod("getNetReportData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public NetReportData1 getValue(NetReportV01 obj) {
+			return obj.getNetReportData();
+		}
+
+		@Override
+		public void setValue(NetReportV01 obj, NetReportData1 value) {
+			obj.setNetReportData(value);
 		}
 	};
 	@XmlElement(name = "NetSvcPtcptId", required = true)
@@ -176,7 +177,7 @@ public class NetReportV01 {
 	 * definition} = "Describes the participant receiving the net report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNetServiceParticipantIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetReportV01, PartyIdentification73Choice> mmNetServiceParticipantIdentification = new MMMessageBuildingBlock<NetReportV01, PartyIdentification73Choice>() {
 		{
 			xmlTag = "NetSvcPtcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,12 +188,14 @@ public class NetReportV01 {
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetReportV01.class.getMethod("getNetServiceParticipantIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification73Choice getValue(NetReportV01 obj) {
+			return obj.getNetServiceParticipantIdentification();
+		}
+
+		@Override
+		public void setValue(NetReportV01 obj, PartyIdentification73Choice value) {
+			obj.setNetServiceParticipantIdentification(value);
 		}
 	};
 	@XmlElement(name = "NetSvcCtrPtyId")
@@ -222,7 +225,7 @@ public class NetReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNetServiceCounterpartyIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetReportV01, Optional<PartyIdentification73Choice>> mmNetServiceCounterpartyIdentification = new MMMessageBuildingBlock<NetReportV01, Optional<PartyIdentification73Choice>>() {
 		{
 			xmlTag = "NetSvcCtrPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,12 +236,14 @@ public class NetReportV01 {
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetReportV01.class.getMethod("getNetServiceCounterpartyIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification73Choice> getValue(NetReportV01 obj) {
+			return obj.getNetServiceCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(NetReportV01 obj, Optional<PartyIdentification73Choice> value) {
+			obj.setNetServiceCounterpartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetOblgtn", required = true)
@@ -267,7 +272,7 @@ public class NetReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNetObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetReportV01, List<NetObligation1>> mmNetObligation = new MMMessageBuildingBlock<NetReportV01, List<NetObligation1>>() {
 		{
 			xmlTag = "NetOblgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,12 +282,14 @@ public class NetReportV01 {
 			complexType_lazy = () -> NetObligation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetReportV01.class.getMethod("getNetObligation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<NetObligation1> getValue(NetReportV01 obj) {
+			return obj.getNetObligation();
+		}
+
+		@Override
+		public void setValue(NetReportV01 obj, List<NetObligation1> value) {
+			obj.setNetObligation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -312,7 +319,7 @@ public class NetReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<NetReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,12 +329,14 @@ public class NetReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(NetReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(NetReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

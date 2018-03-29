@@ -32,6 +32,9 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternatePartyIdentification5;
+import com.tools20022.repository.msg.PartyTextInformation5;
+import com.tools20022.repository.msg.SecuritiesAccount3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -139,7 +142,7 @@ public class ConfirmationPartyDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationPartyDetails3, PartyIdentification32Choice> mmIdentification = new MMMessageAttribute<ConfirmationPartyDetails3, PartyIdentification32Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
@@ -152,6 +155,16 @@ public class ConfirmationPartyDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification32Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification32Choice getValue(ConfirmationPartyDetails3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ConfirmationPartyDetails3 obj, PartyIdentification32Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -187,7 +200,7 @@ public class ConfirmationPartyDetails3 {
 	 * definition} = "Account to or from which a securities entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConfirmationPartyDetails3, Optional<SecuritiesAccount3>> mmSafekeepingAccount = new MMMessageAssociationEnd<ConfirmationPartyDetails3, Optional<SecuritiesAccount3>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
@@ -199,7 +212,17 @@ public class ConfirmationPartyDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount3.mmObject();
+			type_lazy = () -> SecuritiesAccount3.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount3> getValue(ConfirmationPartyDetails3 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(ConfirmationPartyDetails3 obj, Optional<SecuritiesAccount3> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshDtls")
@@ -238,7 +261,7 @@ public class ConfirmationPartyDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConfirmationPartyDetails3, Optional<AccountIdentification3Choice>> mmCashDetails = new MMMessageAssociationEnd<ConfirmationPartyDetails3, Optional<AccountIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
@@ -251,6 +274,16 @@ public class ConfirmationPartyDetails3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification3Choice> getValue(ConfirmationPartyDetails3 obj) {
+			return obj.getCashDetails();
+		}
+
+		@Override
+		public void setValue(ConfirmationPartyDetails3 obj, Optional<AccountIdentification3Choice> value) {
+			obj.setCashDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AltrnId")
@@ -288,7 +321,7 @@ public class ConfirmationPartyDetails3 {
 	 * definition} = "Alternate identification for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationPartyDetails3, Optional<AlternatePartyIdentification5>> mmAlternateIdentification = new MMMessageAttribute<ConfirmationPartyDetails3, Optional<AlternatePartyIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
@@ -299,7 +332,17 @@ public class ConfirmationPartyDetails3 {
 			definition = "Alternate identification for a party.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification5.mmObject();
+			complexType_lazy = () -> AlternatePartyIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<AlternatePartyIdentification5> getValue(ConfirmationPartyDetails3 obj) {
+			return obj.getAlternateIdentification();
+		}
+
+		@Override
+		public void setValue(ConfirmationPartyDetails3 obj, Optional<AlternatePartyIdentification5> value) {
+			obj.setAlternateIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -336,7 +379,7 @@ public class ConfirmationPartyDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationPartyDetails3, Optional<Max35Text>> mmProcessingIdentification = new MMMessageAttribute<ConfirmationPartyDetails3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
 			isDerived = false;
@@ -348,6 +391,16 @@ public class ConfirmationPartyDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ConfirmationPartyDetails3 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(ConfirmationPartyDetails3 obj, Optional<Max35Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -386,7 +439,7 @@ public class ConfirmationPartyDetails3 {
 	 * "Provides additional information to a party identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationPartyDetails3, Optional<PartyTextInformation5>> mmAdditionalInformation = new MMMessageAttribute<ConfirmationPartyDetails3, Optional<PartyTextInformation5>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
@@ -397,7 +450,17 @@ public class ConfirmationPartyDetails3 {
 			definition = "Provides additional information to a party identification.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyTextInformation5.mmObject();
+			complexType_lazy = () -> PartyTextInformation5.mmObject();
+		}
+
+		@Override
+		public Optional<PartyTextInformation5> getValue(ConfirmationPartyDetails3 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ConfirmationPartyDetails3 obj, Optional<PartyTextInformation5> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyCpcty")
@@ -440,7 +503,7 @@ public class ConfirmationPartyDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationPartyDetails3, Optional<TradingPartyCapacity2Choice>> mmPartyCapacity = new MMMessageAttribute<ConfirmationPartyDetails3, Optional<TradingPartyCapacity2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
@@ -453,6 +516,16 @@ public class ConfirmationPartyDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TradingPartyCapacity2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TradingPartyCapacity2Choice> getValue(ConfirmationPartyDetails3 obj) {
+			return obj.getPartyCapacity();
+		}
+
+		@Override
+		public void setValue(ConfirmationPartyDetails3 obj, Optional<TradingPartyCapacity2Choice> value) {
+			obj.setPartyCapacity(value.orElse(null));
 		}
 	};
 
@@ -486,7 +559,7 @@ public class ConfirmationPartyDetails3 {
 		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public ConfirmationPartyDetails3 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount3 safekeepingAccount) {
+	public ConfirmationPartyDetails3 setSafekeepingAccount(SecuritiesAccount3 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
 		return this;
 	}
@@ -504,7 +577,7 @@ public class ConfirmationPartyDetails3 {
 		return alternateIdentification == null ? Optional.empty() : Optional.of(alternateIdentification);
 	}
 
-	public ConfirmationPartyDetails3 setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification5 alternateIdentification) {
+	public ConfirmationPartyDetails3 setAlternateIdentification(AlternatePartyIdentification5 alternateIdentification) {
 		this.alternateIdentification = alternateIdentification;
 		return this;
 	}
@@ -522,7 +595,7 @@ public class ConfirmationPartyDetails3 {
 		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public ConfirmationPartyDetails3 setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation5 additionalInformation) {
+	public ConfirmationPartyDetails3 setAdditionalInformation(PartyTextInformation5 additionalInformation) {
 		this.additionalInformation = additionalInformation;
 		return this;
 	}

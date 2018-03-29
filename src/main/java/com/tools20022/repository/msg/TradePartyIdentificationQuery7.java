@@ -103,7 +103,7 @@ public class TradePartyIdentificationQuery7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentificationQuery7, List<LEIIdentifier>> mmLEI = new MMMessageAttribute<TradePartyIdentificationQuery7, List<LEIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery7.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class TradePartyIdentificationQuery7 {
 			definition = "Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction.";
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public List<LEIIdentifier> getValue(TradePartyIdentificationQuery7 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentificationQuery7 obj, List<LEIIdentifier> value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "AnyBIC")
@@ -146,7 +156,7 @@ public class TradePartyIdentificationQuery7 {
 	 * "Business identifier code used to identify the trade party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentificationQuery7, List<AnyBICIdentifier>> mmAnyBIC = new MMMessageAttribute<TradePartyIdentificationQuery7, List<AnyBICIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery7.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class TradePartyIdentificationQuery7 {
 			definition = "Business identifier code used to identify the trade party.";
 			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public List<AnyBICIdentifier> getValue(TradePartyIdentificationQuery7 obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentificationQuery7 obj, List<AnyBICIdentifier> value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "NotRptd")
@@ -188,7 +208,7 @@ public class TradePartyIdentificationQuery7 {
 	 * definition} = "Field can be queried for not reported value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotReported = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradePartyIdentificationQuery7, Optional<NotReported1Code>> mmNotReported = new MMMessageAttribute<TradePartyIdentificationQuery7, Optional<NotReported1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradePartyIdentificationQuery7.mmObject();
 			isDerived = false;
@@ -199,6 +219,16 @@ public class TradePartyIdentificationQuery7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NotReported1Code.mmObject();
+		}
+
+		@Override
+		public Optional<NotReported1Code> getValue(TradePartyIdentificationQuery7 obj) {
+			return obj.getNotReported();
+		}
+
+		@Override
+		public void setValue(TradePartyIdentificationQuery7 obj, Optional<NotReported1Code> value) {
+			obj.setNotReported(value.orElse(null));
 		}
 	};
 

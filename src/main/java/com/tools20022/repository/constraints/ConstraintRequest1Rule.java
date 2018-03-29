@@ -54,11 +54,15 @@ public class ConstraintRequest1Rule {
 	 */
 	public static final MMConstraint<InvoiceFinancingRequestStatusV01> forInvoiceFinancingRequestStatusV01 = new MMConstraint<InvoiceFinancingRequestStatusV01>() {
 		{
-			validator = ConstraintRequest1Rule::checkInvoiceFinancingRequestStatusV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Request1Rule";
 			definition = "If the status message refers to the technical validation result\nrelated to a financing request, then only Status Identification and\nOriginal Request Information blocks must be present.\nIf the status message refers to the business status related to a financing request, then the FinancingInformationAndStatus block is mandatory.";
 			owner_lazy = () -> InvoiceFinancingRequestStatusV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvoiceFinancingRequestStatusV01 obj) throws Exception {
+			checkInvoiceFinancingRequestStatusV01(obj);
 		}
 	};
 

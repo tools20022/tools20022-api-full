@@ -54,11 +54,15 @@ public class ConstraintSidePocketOrderRule {
 	 */
 	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {
 		{
-			validator = ConstraintSidePocketOrderRule::checkRedemptionExecution10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketOrderRule";
 			definition = "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed.";
 			owner_lazy = () -> RedemptionExecution10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution10 obj) throws Exception {
+			checkRedemptionExecution10(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintSidePocketOrderRule {
 	 */
 	public static final MMConstraint<RedemptionOrder9> forRedemptionOrder9 = new MMConstraint<RedemptionOrder9>() {
 		{
-			validator = ConstraintSidePocketOrderRule::checkRedemptionOrder9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketOrderRule";
 			definition = "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed.";
 			owner_lazy = () -> RedemptionOrder9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder9 obj) throws Exception {
+			checkRedemptionOrder9(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintSidePocketOrderRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution7> forSubscriptionExecution7 = new MMConstraint<SubscriptionExecution7>() {
 		{
-			validator = ConstraintSidePocketOrderRule::checkSubscriptionExecution7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketOrderRule";
 			definition = "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed.";
 			owner_lazy = () -> SubscriptionExecution7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution7 obj) throws Exception {
+			checkSubscriptionExecution7(obj);
 		}
 	};
 	/**
@@ -144,11 +156,15 @@ public class ConstraintSidePocketOrderRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder9> forSubscriptionOrder9 = new MMConstraint<SubscriptionOrder9>() {
 		{
-			validator = ConstraintSidePocketOrderRule::checkSubscriptionOrder9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketOrderRule";
 			definition = "If HedgeFundOrderType is SPOR in any occurrence of HedgeFundOrderType, then SidePocketDetails is not allowed.";
 			owner_lazy = () -> SubscriptionOrder9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder9 obj) throws Exception {
+			checkSubscriptionOrder9(obj);
 		}
 	};
 

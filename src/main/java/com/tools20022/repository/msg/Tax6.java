@@ -25,6 +25,9 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxCalculationInformation1;
+import com.tools20022.repository.msg.TaxExemptionReason1;
+import com.tools20022.repository.msg.TaxType1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +123,7 @@ public class Tax6 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax6, TaxType1> mmType = new MMMessageAttribute<Tax6, TaxType1>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax6.mmObject();
@@ -131,7 +134,17 @@ public class Tax6 {
 			definition = "Type of tax applied.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxType1.mmObject();
+			complexType_lazy = () -> TaxType1.mmObject();
+		}
+
+		@Override
+		public TaxType1 getValue(Tax6 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Tax6 obj, TaxType1 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -167,7 +180,7 @@ public class Tax6 {
 	 * "Amount of money resulting from the calculation of the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax6, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Tax6, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax6.mmObject();
@@ -179,6 +192,16 @@ public class Tax6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(Tax6 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Tax6 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -213,7 +236,7 @@ public class Tax6 {
 	 * definition} = "Rate used to calculate the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax6, PercentageRate> mmRate = new MMMessageAttribute<Tax6, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax6.mmObject();
@@ -225,6 +248,16 @@ public class Tax6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Tax6 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Tax6 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -257,7 +290,7 @@ public class Tax6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax6, Optional<PartyIdentification2Choice>> mmRecipientIdentification = new MMMessageAttribute<Tax6, Optional<PartyIdentification2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax6.mmObject();
 			isDerived = false;
@@ -268,6 +301,16 @@ public class Tax6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Tax6 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Tax6 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XmptnInd", required = true)
@@ -303,7 +346,7 @@ public class Tax6 {
 	 * definition} = "Indicates whether a tax exemption applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax6, YesNoIndicator> mmExemptionIndicator = new MMMessageAttribute<Tax6, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmExemptionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax6.mmObject();
@@ -315,6 +358,16 @@ public class Tax6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Tax6 obj) {
+			return obj.getExemptionIndicator();
+		}
+
+		@Override
+		public void setValue(Tax6 obj, YesNoIndicator value) {
+			obj.setExemptionIndicator(value);
 		}
 	};
 	@XmlElement(name = "XmptnRsn")
@@ -350,7 +403,7 @@ public class Tax6 {
 	 * definition} = "Reason for a tax exemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax6, Optional<TaxExemptionReason1>> mmExemptionReason = new MMMessageAttribute<Tax6, Optional<TaxExemptionReason1>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax6.mmObject();
@@ -361,7 +414,17 @@ public class Tax6 {
 			definition = "Reason for a tax exemption.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxExemptionReason1.mmObject();
+			complexType_lazy = () -> TaxExemptionReason1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxExemptionReason1> getValue(Tax6 obj) {
+			return obj.getExemptionReason();
+		}
+
+		@Override
+		public void setValue(Tax6 obj, Optional<TaxExemptionReason1> value) {
+			obj.setExemptionReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxClctnDtls")
@@ -396,7 +459,7 @@ public class Tax6 {
 	 * definition} = "Information used to calculate the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxCalculationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax6, Optional<TaxCalculationInformation1>> mmTaxCalculationDetails = new MMMessageAssociationEnd<Tax6, Optional<TaxCalculationInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax6.mmObject();
@@ -408,7 +471,17 @@ public class Tax6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation1.mmObject();
+			type_lazy = () -> TaxCalculationInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxCalculationInformation1> getValue(Tax6 obj) {
+			return obj.getTaxCalculationDetails();
+		}
+
+		@Override
+		public void setValue(Tax6 obj, Optional<TaxCalculationInformation1> value) {
+			obj.setTaxCalculationDetails(value.orElse(null));
 		}
 	};
 	/**
@@ -475,7 +548,7 @@ public class Tax6 {
 		return type;
 	}
 
-	public Tax6 setType(com.tools20022.repository.msg.TaxType1 type) {
+	public Tax6 setType(TaxType1 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}
@@ -520,7 +593,7 @@ public class Tax6 {
 		return exemptionReason == null ? Optional.empty() : Optional.of(exemptionReason);
 	}
 
-	public Tax6 setExemptionReason(com.tools20022.repository.msg.TaxExemptionReason1 exemptionReason) {
+	public Tax6 setExemptionReason(TaxExemptionReason1 exemptionReason) {
 		this.exemptionReason = exemptionReason;
 		return this;
 	}
@@ -529,7 +602,7 @@ public class Tax6 {
 		return taxCalculationDetails == null ? Optional.empty() : Optional.of(taxCalculationDetails);
 	}
 
-	public Tax6 setTaxCalculationDetails(com.tools20022.repository.msg.TaxCalculationInformation1 taxCalculationDetails) {
+	public Tax6 setTaxCalculationDetails(TaxCalculationInformation1 taxCalculationDetails) {
 		this.taxCalculationDetails = taxCalculationDetails;
 		return this;
 	}

@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msg.PaymentInstructionExtract;
 import com.tools20022.repository.msg.RequestedModification;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -194,7 +193,7 @@ public class RequestToModifyPayment {
 	 * definition} = "Identifies the assignment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToModifyPayment, CaseAssignment> mmAssignment = new MMMessageBuildingBlock<RequestToModifyPayment, CaseAssignment>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,12 +204,14 @@ public class RequestToModifyPayment {
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToModifyPayment.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment getValue(RequestToModifyPayment obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPayment obj, CaseAssignment value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -236,7 +237,7 @@ public class RequestToModifyPayment {
 	 * definition} = "Identifies the case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToModifyPayment, Case> mmCase = new MMMessageBuildingBlock<RequestToModifyPayment, Case>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,12 +248,14 @@ public class RequestToModifyPayment {
 			complexType_lazy = () -> Case.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToModifyPayment.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case getValue(RequestToModifyPayment obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPayment obj, Case value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -280,7 +283,7 @@ public class RequestToModifyPayment {
 	 * definition} = "Identifies the Payment Transaction to modify."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToModifyPayment, PaymentInstructionExtract> mmUnderlying = new MMMessageBuildingBlock<RequestToModifyPayment, PaymentInstructionExtract>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,12 +294,14 @@ public class RequestToModifyPayment {
 			complexType_lazy = () -> PaymentInstructionExtract.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToModifyPayment.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentInstructionExtract getValue(RequestToModifyPayment obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPayment obj, PaymentInstructionExtract value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
@@ -321,7 +326,7 @@ public class RequestToModifyPayment {
 	 * name} = "Modification"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmModification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToModifyPayment, RequestedModification> mmModification = new MMMessageBuildingBlock<RequestToModifyPayment, RequestedModification>() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -331,12 +336,14 @@ public class RequestToModifyPayment {
 			complexType_lazy = () -> RequestedModification.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToModifyPayment.class.getMethod("getModification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RequestedModification getValue(RequestToModifyPayment obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPayment obj, RequestedModification value) {
+			obj.setModification(value);
 		}
 	};
 

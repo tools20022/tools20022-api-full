@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -115,7 +116,7 @@ public class BreakdownByParty3 {
 	 * BreakdownByParty1.mmParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByParty3, InvestmentAccount42> mmParty = new MMMessageAttribute<BreakdownByParty3, InvestmentAccount42>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -126,7 +127,17 @@ public class BreakdownByParty3 {
 			previousVersion_lazy = () -> BreakdownByParty1.mmParty;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.InvestmentAccount42.mmObject();
+			complexType_lazy = () -> InvestmentAccount42.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount42 getValue(BreakdownByParty3 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(BreakdownByParty3 obj, InvestmentAccount42 value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "AddtlParams")
@@ -163,7 +174,7 @@ public class BreakdownByParty3 {
 	 * BreakdownByParty1.mmAdditionalParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByParty3, Optional<AdditionalParameters1>> mmAdditionalParameters = new MMMessageAssociationEnd<BreakdownByParty3, Optional<AdditionalParameters1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -175,11 +186,21 @@ public class BreakdownByParty3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
+			type_lazy = () -> AdditionalParameters1.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalParameters1> getValue(BreakdownByParty3 obj) {
+			return obj.getAdditionalParameters();
+		}
+
+		@Override
+		public void setValue(BreakdownByParty3 obj, Optional<AdditionalParameters1> value) {
+			obj.setAdditionalParameters(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshInFcst")
-	protected List<com.tools20022.repository.msg.CashInForecast5> cashInForecast;
+	protected List<CashInForecast5> cashInForecast;
 	/**
 	 * 
 	 <p>
@@ -213,7 +234,7 @@ public class BreakdownByParty3 {
 	 * BreakdownByParty1.mmCashInForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByParty3, List<CashInForecast5>> mmCashInForecast = new MMMessageAssociationEnd<BreakdownByParty3, List<CashInForecast5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -224,11 +245,21 @@ public class BreakdownByParty3 {
 			previousVersion_lazy = () -> BreakdownByParty1.mmCashInForecast;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
+			type_lazy = () -> CashInForecast5.mmObject();
+		}
+
+		@Override
+		public List<CashInForecast5> getValue(BreakdownByParty3 obj) {
+			return obj.getCashInForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByParty3 obj, List<CashInForecast5> value) {
+			obj.setCashInForecast(value);
 		}
 	};
 	@XmlElement(name = "CshOutFcst")
-	protected List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast;
+	protected List<CashOutForecast5> cashOutForecast;
 	/**
 	 * 
 	 <p>
@@ -262,7 +293,7 @@ public class BreakdownByParty3 {
 	 * BreakdownByParty1.mmCashOutForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByParty3, List<CashOutForecast5>> mmCashOutForecast = new MMMessageAssociationEnd<BreakdownByParty3, List<CashOutForecast5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -273,11 +304,21 @@ public class BreakdownByParty3 {
 			previousVersion_lazy = () -> BreakdownByParty1.mmCashOutForecast;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast5.mmObject();
+			type_lazy = () -> CashOutForecast5.mmObject();
+		}
+
+		@Override
+		public List<CashOutForecast5> getValue(BreakdownByParty3 obj) {
+			return obj.getCashOutForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByParty3 obj, List<CashOutForecast5> value) {
+			obj.setCashOutForecast(value);
 		}
 	};
 	@XmlElement(name = "NetCshFcst")
-	protected List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast;
+	protected List<NetCashForecast4> netCashForecast;
 	/**
 	 * 
 	 <p>
@@ -311,7 +352,7 @@ public class BreakdownByParty3 {
 	 * BreakdownByParty1.mmNetCashForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByParty3, List<NetCashForecast4>> mmNetCashForecast = new MMMessageAssociationEnd<BreakdownByParty3, List<NetCashForecast4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
@@ -322,7 +363,17 @@ public class BreakdownByParty3 {
 			previousVersion_lazy = () -> BreakdownByParty1.mmNetCashForecast;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmObject();
+			type_lazy = () -> NetCashForecast4.mmObject();
+		}
+
+		@Override
+		public List<NetCashForecast4> getValue(BreakdownByParty3 obj) {
+			return obj.getNetCashForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByParty3 obj, List<NetCashForecast4> value) {
+			obj.setNetCashForecast(value);
 		}
 	};
 
@@ -345,7 +396,7 @@ public class BreakdownByParty3 {
 		return party;
 	}
 
-	public BreakdownByParty3 setParty(com.tools20022.repository.msg.InvestmentAccount42 party) {
+	public BreakdownByParty3 setParty(InvestmentAccount42 party) {
 		this.party = Objects.requireNonNull(party);
 		return this;
 	}
@@ -354,7 +405,7 @@ public class BreakdownByParty3 {
 		return additionalParameters == null ? Optional.empty() : Optional.of(additionalParameters);
 	}
 
-	public BreakdownByParty3 setAdditionalParameters(com.tools20022.repository.msg.AdditionalParameters1 additionalParameters) {
+	public BreakdownByParty3 setAdditionalParameters(AdditionalParameters1 additionalParameters) {
 		this.additionalParameters = additionalParameters;
 		return this;
 	}
@@ -363,7 +414,7 @@ public class BreakdownByParty3 {
 		return cashInForecast == null ? cashInForecast = new ArrayList<>() : cashInForecast;
 	}
 
-	public BreakdownByParty3 setCashInForecast(List<com.tools20022.repository.msg.CashInForecast5> cashInForecast) {
+	public BreakdownByParty3 setCashInForecast(List<CashInForecast5> cashInForecast) {
 		this.cashInForecast = Objects.requireNonNull(cashInForecast);
 		return this;
 	}
@@ -372,7 +423,7 @@ public class BreakdownByParty3 {
 		return cashOutForecast == null ? cashOutForecast = new ArrayList<>() : cashOutForecast;
 	}
 
-	public BreakdownByParty3 setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast) {
+	public BreakdownByParty3 setCashOutForecast(List<CashOutForecast5> cashOutForecast) {
 		this.cashOutForecast = Objects.requireNonNull(cashOutForecast);
 		return this;
 	}
@@ -381,7 +432,7 @@ public class BreakdownByParty3 {
 		return netCashForecast == null ? netCashForecast = new ArrayList<>() : netCashForecast;
 	}
 
-	public BreakdownByParty3 setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast) {
+	public BreakdownByParty3 setNetCashForecast(List<NetCashForecast4> netCashForecast) {
 		this.netCashForecast = Objects.requireNonNull(netCashForecast);
 		return this;
 	}

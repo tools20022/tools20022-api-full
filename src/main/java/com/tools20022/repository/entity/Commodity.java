@@ -27,7 +27,6 @@ import com.tools20022.repository.codeset.AssetClassSubProductTypeCode;
 import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -425,10 +424,10 @@ public class Commodity extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Basic category of the commodity, such as agricultural or metal."</li>
+	 * "Basic category of the commodity, such as agricultural or metal.  "</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBaseProduct = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Commodity, AssetClassProductTypeCode> mmBaseProduct = new MMBusinessAttribute<Commodity, AssetClassProductTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(MetalCommodityPrecious1.mmBaseProduct, AgriculturalCommodityOliveOil1.mmBaseProduct, MetalCommodityNonPrecious1.mmBaseProduct, AgriculturalCommodityGrain1.mmBaseProduct,
 					EnergyCommodityOil1.mmBaseProduct, AssetClassCommodityEnergy1Choice.mmNaturalGas, EnergyCommodityNaturalGas1.mmBaseProduct, EnergyCommodityElectricity1.mmBaseProduct, AgriculturalCommoditySoft1.mmBaseProduct,
@@ -447,18 +446,20 @@ public class Commodity extends Asset {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BaseProduct";
-			definition = "Basic category of the commodity, such as agricultural or metal.";
+			definition = "Basic category of the commodity, such as agricultural or metal.  ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Commodity.class.getMethod("getBaseProduct", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AssetClassProductTypeCode getValue(Commodity obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(Commodity obj, AssetClassProductTypeCode value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	protected AssetClassDetailedSubProductTypeCode detailedSubProduct;
@@ -496,29 +497,31 @@ public class Commodity extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Further detailed description of the basic resources, such as aluminium, iron ore or wheat."
+	 * "Further detailed description of the basic resources, such as aluminium,  iron ore or wheat"
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDetailedSubProduct = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Commodity, Optional<AssetClassDetailedSubProductTypeCode>> mmDetailedSubProduct = new MMBusinessAttribute<Commodity, Optional<AssetClassDetailedSubProductTypeCode>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AgriculturalCommoditySoft1.mmAdditionalSubProduct, DerivativeClassification1.mmSubCommodity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DetailedSubProduct";
-			definition = "Further detailed description of the basic resources, such as aluminium, iron ore or wheat.";
+			definition = "Further detailed description of the basic resources, such as aluminium,  iron ore or wheat";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Commodity.class.getMethod("getDetailedSubProduct", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AssetClassDetailedSubProductTypeCode> getValue(Commodity obj) {
+			return obj.getDetailedSubProduct();
+		}
+
+		@Override
+		public void setValue(Commodity obj, Optional<AssetClassDetailedSubProductTypeCode> value) {
+			obj.setDetailedSubProduct(value.orElse(null));
 		}
 	};
 	protected AssetClassSubProductTypeCode subProduct;
@@ -781,7 +784,7 @@ public class Commodity extends Asset {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSubProduct = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Commodity, Optional<AssetClassSubProductTypeCode>> mmSubProduct = new MMBusinessAttribute<Commodity, Optional<AssetClassSubProductTypeCode>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AssetClassCommodityEnvironmental1Choice.mmEmissions, AssetClassCommodityEnvironmental1Choice.mmWeather, AssetClassCommodityEnvironmental1Choice.mmCarbonRelated,
 					MetalCommodityPrecious1.mmSubProduct, AgriculturalCommodityOliveOil1.mmSubProduct, AssetClassCommodityMetal1Choice.mmNonPrecious, AssetClassCommodityMetal1Choice.mmPrecious, MetalCommodityNonPrecious1.mmSubProduct,
@@ -811,12 +814,14 @@ public class Commodity extends Asset {
 			simpleType_lazy = () -> AssetClassSubProductTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Commodity.class.getMethod("getSubProduct", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AssetClassSubProductTypeCode> getValue(Commodity obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(Commodity obj, Optional<AssetClassSubProductTypeCode> value) {
+			obj.setSubProduct(value.orElse(null));
 		}
 	};
 

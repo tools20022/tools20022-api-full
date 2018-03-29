@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -147,7 +148,7 @@ public class CardPaymentEnvironment40 {
 	 * CardPaymentEnvironment27.mmAcquirer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcquirer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<Acquirer4>> mmAcquirer = new MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<Acquirer4>>() {
 		{
 			businessComponentTrace_lazy = () -> AcquirerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment40.mmObject();
@@ -161,7 +162,17 @@ public class CardPaymentEnvironment40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Acquirer4.mmObject();
+			type_lazy = () -> Acquirer4.mmObject();
+		}
+
+		@Override
+		public Optional<Acquirer4> getValue(CardPaymentEnvironment40 obj) {
+			return obj.getAcquirer();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment40 obj, Optional<Acquirer4> value) {
+			obj.setAcquirer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mrchnt")
@@ -211,7 +222,7 @@ public class CardPaymentEnvironment40 {
 	 * CardPaymentEnvironment27.mmMerchant}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMerchant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<Organisation8>> mmMerchant = new MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<Organisation8>>() {
 		{
 			businessComponentTrace_lazy = () -> MerchantRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment40.mmObject();
@@ -225,7 +236,17 @@ public class CardPaymentEnvironment40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Organisation8.mmObject();
+			type_lazy = () -> Organisation8.mmObject();
+		}
+
+		@Override
+		public Optional<Organisation8> getValue(CardPaymentEnvironment40 obj) {
+			return obj.getMerchant();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment40 obj, Optional<Organisation8> value) {
+			obj.setMerchant(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POI")
@@ -276,7 +297,7 @@ public class CardPaymentEnvironment40 {
 	 * CardPaymentEnvironment27.mmPOI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentEnvironment40, Optional<PointOfInteraction4>> mmPOI = new MMMessageAttribute<CardPaymentEnvironment40, Optional<PointOfInteraction4>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment40.mmObject();
@@ -289,7 +310,17 @@ public class CardPaymentEnvironment40 {
 			previousVersion_lazy = () -> CardPaymentEnvironment27.mmPOI;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteraction4.mmObject();
+			complexType_lazy = () -> PointOfInteraction4.mmObject();
+		}
+
+		@Override
+		public Optional<PointOfInteraction4> getValue(CardPaymentEnvironment40 obj) {
+			return obj.getPOI();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment40 obj, Optional<PointOfInteraction4> value) {
+			obj.setPOI(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Card", required = true)
@@ -339,7 +370,7 @@ public class CardPaymentEnvironment40 {
 	 * CardPaymentEnvironment27.mmCard}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCard = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentEnvironment40, PaymentCard11> mmCard = new MMMessageAttribute<CardPaymentEnvironment40, PaymentCard11>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment40.mmObject();
@@ -352,7 +383,17 @@ public class CardPaymentEnvironment40 {
 			previousVersion_lazy = () -> CardPaymentEnvironment27.mmCard;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PaymentCard11.mmObject();
+			complexType_lazy = () -> PaymentCard11.mmObject();
+		}
+
+		@Override
+		public PaymentCard11 getValue(CardPaymentEnvironment40 obj) {
+			return obj.getCard();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment40 obj, PaymentCard11 value) {
+			obj.setCard(value);
 		}
 	};
 	@XmlElement(name = "CstmrDvc")
@@ -391,7 +432,7 @@ public class CardPaymentEnvironment40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCustomerDevice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<CustomerDevice1>> mmCustomerDevice = new MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<CustomerDevice1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment40.mmObject();
 			isDerived = false;
@@ -403,7 +444,17 @@ public class CardPaymentEnvironment40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CustomerDevice1.mmObject();
+			type_lazy = () -> CustomerDevice1.mmObject();
+		}
+
+		@Override
+		public Optional<CustomerDevice1> getValue(CardPaymentEnvironment40 obj) {
+			return obj.getCustomerDevice();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment40 obj, Optional<CustomerDevice1> value) {
+			obj.setCustomerDevice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Wllt")
@@ -443,7 +494,7 @@ public class CardPaymentEnvironment40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWallet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<CustomerDevice1>> mmWallet = new MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<CustomerDevice1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment40.mmObject();
 			isDerived = false;
@@ -455,7 +506,17 @@ public class CardPaymentEnvironment40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CustomerDevice1.mmObject();
+			type_lazy = () -> CustomerDevice1.mmObject();
+		}
+
+		@Override
+		public Optional<CustomerDevice1> getValue(CardPaymentEnvironment40 obj) {
+			return obj.getWallet();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment40 obj, Optional<CustomerDevice1> value) {
+			obj.setWallet(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtTkn")
@@ -494,7 +555,7 @@ public class CardPaymentEnvironment40 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentToken = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<CardPaymentToken3>> mmPaymentToken = new MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<CardPaymentToken3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment40.mmObject();
 			isDerived = false;
@@ -506,7 +567,17 @@ public class CardPaymentEnvironment40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentToken3.mmObject();
+			type_lazy = () -> CardPaymentToken3.mmObject();
+		}
+
+		@Override
+		public Optional<CardPaymentToken3> getValue(CardPaymentEnvironment40 obj) {
+			return obj.getPaymentToken();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment40 obj, Optional<CardPaymentToken3> value) {
+			obj.setPaymentToken(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Crdhldr")
@@ -555,7 +626,7 @@ public class CardPaymentEnvironment40 {
 	 * CardPaymentEnvironment27.mmCardholder}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCardholder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<Cardholder8>> mmCardholder = new MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<Cardholder8>>() {
 		{
 			businessComponentTrace_lazy = () -> CardholderRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment40.mmObject();
@@ -569,7 +640,17 @@ public class CardPaymentEnvironment40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Cardholder8.mmObject();
+			type_lazy = () -> Cardholder8.mmObject();
+		}
+
+		@Override
+		public Optional<Cardholder8> getValue(CardPaymentEnvironment40 obj) {
+			return obj.getCardholder();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment40 obj, Optional<Cardholder8> value) {
+			obj.setCardholder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctdCrdhldrData")
@@ -616,7 +697,7 @@ public class CardPaymentEnvironment40 {
 	 * CardPaymentEnvironment27.mmProtectedCardholderData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectedCardholderData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<ContentInformationType10>> mmProtectedCardholderData = new MMMessageAssociationEnd<CardPaymentEnvironment40, Optional<ContentInformationType10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment40.mmObject();
 			isDerived = false;
@@ -629,7 +710,17 @@ public class CardPaymentEnvironment40 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
+			type_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType10> getValue(CardPaymentEnvironment40 obj) {
+			return obj.getProtectedCardholderData();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment40 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedCardholderData(value.orElse(null));
 		}
 	};
 
@@ -656,7 +747,7 @@ public class CardPaymentEnvironment40 {
 		return acquirer == null ? Optional.empty() : Optional.of(acquirer);
 	}
 
-	public CardPaymentEnvironment40 setAcquirer(com.tools20022.repository.msg.Acquirer4 acquirer) {
+	public CardPaymentEnvironment40 setAcquirer(Acquirer4 acquirer) {
 		this.acquirer = acquirer;
 		return this;
 	}
@@ -665,7 +756,7 @@ public class CardPaymentEnvironment40 {
 		return merchant == null ? Optional.empty() : Optional.of(merchant);
 	}
 
-	public CardPaymentEnvironment40 setMerchant(com.tools20022.repository.msg.Organisation8 merchant) {
+	public CardPaymentEnvironment40 setMerchant(Organisation8 merchant) {
 		this.merchant = merchant;
 		return this;
 	}
@@ -674,7 +765,7 @@ public class CardPaymentEnvironment40 {
 		return pOI == null ? Optional.empty() : Optional.of(pOI);
 	}
 
-	public CardPaymentEnvironment40 setPOI(com.tools20022.repository.msg.PointOfInteraction4 pOI) {
+	public CardPaymentEnvironment40 setPOI(PointOfInteraction4 pOI) {
 		this.pOI = pOI;
 		return this;
 	}
@@ -683,7 +774,7 @@ public class CardPaymentEnvironment40 {
 		return card;
 	}
 
-	public CardPaymentEnvironment40 setCard(com.tools20022.repository.msg.PaymentCard11 card) {
+	public CardPaymentEnvironment40 setCard(PaymentCard11 card) {
 		this.card = Objects.requireNonNull(card);
 		return this;
 	}
@@ -692,7 +783,7 @@ public class CardPaymentEnvironment40 {
 		return customerDevice == null ? Optional.empty() : Optional.of(customerDevice);
 	}
 
-	public CardPaymentEnvironment40 setCustomerDevice(com.tools20022.repository.msg.CustomerDevice1 customerDevice) {
+	public CardPaymentEnvironment40 setCustomerDevice(CustomerDevice1 customerDevice) {
 		this.customerDevice = customerDevice;
 		return this;
 	}
@@ -701,7 +792,7 @@ public class CardPaymentEnvironment40 {
 		return wallet == null ? Optional.empty() : Optional.of(wallet);
 	}
 
-	public CardPaymentEnvironment40 setWallet(com.tools20022.repository.msg.CustomerDevice1 wallet) {
+	public CardPaymentEnvironment40 setWallet(CustomerDevice1 wallet) {
 		this.wallet = wallet;
 		return this;
 	}
@@ -710,7 +801,7 @@ public class CardPaymentEnvironment40 {
 		return paymentToken == null ? Optional.empty() : Optional.of(paymentToken);
 	}
 
-	public CardPaymentEnvironment40 setPaymentToken(com.tools20022.repository.msg.CardPaymentToken3 paymentToken) {
+	public CardPaymentEnvironment40 setPaymentToken(CardPaymentToken3 paymentToken) {
 		this.paymentToken = paymentToken;
 		return this;
 	}
@@ -719,7 +810,7 @@ public class CardPaymentEnvironment40 {
 		return cardholder == null ? Optional.empty() : Optional.of(cardholder);
 	}
 
-	public CardPaymentEnvironment40 setCardholder(com.tools20022.repository.msg.Cardholder8 cardholder) {
+	public CardPaymentEnvironment40 setCardholder(Cardholder8 cardholder) {
 		this.cardholder = cardholder;
 		return this;
 	}
@@ -728,7 +819,7 @@ public class CardPaymentEnvironment40 {
 		return protectedCardholderData == null ? Optional.empty() : Optional.of(protectedCardholderData);
 	}
 
-	public CardPaymentEnvironment40 setProtectedCardholderData(com.tools20022.repository.msg.ContentInformationType10 protectedCardholderData) {
+	public CardPaymentEnvironment40 setProtectedCardholderData(ContentInformationType10 protectedCardholderData) {
 		this.protectedCardholderData = protectedCardholderData;
 		return this;
 	}

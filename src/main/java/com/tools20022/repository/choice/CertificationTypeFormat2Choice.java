@@ -118,7 +118,7 @@ public class CertificationTypeFormat2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CertificationTypeFormat2Choice, CertificationFormatType1Code> mmCode = new MMMessageAttribute<CertificationTypeFormat2Choice, CertificationFormatType1Code>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationFormat;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertificationTypeFormat2Choice.mmObject();
@@ -131,6 +131,16 @@ public class CertificationTypeFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CertificationFormatType1Code.mmObject();
+		}
+
+		@Override
+		public CertificationFormatType1Code getValue(CertificationTypeFormat2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CertificationTypeFormat2Choice obj, CertificationFormatType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -170,7 +180,7 @@ public class CertificationTypeFormat2Choice {
 	 * definition} = "Proprietary identification of the certification format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CertificationTypeFormat2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<CertificationTypeFormat2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationFormat;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CertificationTypeFormat2Choice.mmObject();
@@ -184,6 +194,16 @@ public class CertificationTypeFormat2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(CertificationTypeFormat2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CertificationTypeFormat2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

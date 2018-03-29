@@ -25,6 +25,7 @@ import com.tools20022.repository.area.tsmt.BaselineMatchReportV03;
 import com.tools20022.repository.area.tsmt.DataSetMatchReportV03;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ValidationResult5;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +119,7 @@ public class MisMatchReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfMisMatches = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MisMatchReport3, Number> mmNumberOfMisMatches = new MMMessageAttribute<MisMatchReport3, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MisMatchReport3.mmObject();
 			isDerived = false;
@@ -130,9 +131,19 @@ public class MisMatchReport3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Number getValue(MisMatchReport3 obj) {
+			return obj.getNumberOfMisMatches();
+		}
+
+		@Override
+		public void setValue(MisMatchReport3 obj, Number value) {
+			obj.setNumberOfMisMatches(value);
+		}
 	};
 	@XmlElement(name = "MisMtchInf")
-	protected List<com.tools20022.repository.msg.ValidationResult5> misMatchInformation;
+	protected List<ValidationResult5> misMatchInformation;
 	/**
 	 * 
 	 <p>
@@ -159,7 +170,7 @@ public class MisMatchReport3 {
 	 * definition} = "Details of each mismatch occurrence."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMisMatchInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MisMatchReport3, List<ValidationResult5>> mmMisMatchInformation = new MMMessageAssociationEnd<MisMatchReport3, List<ValidationResult5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MisMatchReport3.mmObject();
 			isDerived = false;
@@ -169,7 +180,17 @@ public class MisMatchReport3 {
 			definition = "Details of each mismatch occurrence.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ValidationResult5.mmObject();
+			type_lazy = () -> ValidationResult5.mmObject();
+		}
+
+		@Override
+		public List<ValidationResult5> getValue(MisMatchReport3 obj) {
+			return obj.getMisMatchInformation();
+		}
+
+		@Override
+		public void setValue(MisMatchReport3 obj, List<ValidationResult5> value) {
+			obj.setMisMatchInformation(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class MisMatchReport3 {
 		return misMatchInformation == null ? misMatchInformation = new ArrayList<>() : misMatchInformation;
 	}
 
-	public MisMatchReport3 setMisMatchInformation(List<com.tools20022.repository.msg.ValidationResult5> misMatchInformation) {
+	public MisMatchReport3 setMisMatchInformation(List<ValidationResult5> misMatchInformation) {
 		this.misMatchInformation = Objects.requireNonNull(misMatchInformation);
 		return this;
 	}

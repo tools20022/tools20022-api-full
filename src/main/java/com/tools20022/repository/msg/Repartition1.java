@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class Repartition1 {
 	 * definition} = "Percentage of amount invested in a funds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Repartition1, PercentageRate> mmPercentage = new MMMessageAttribute<Repartition1, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition1.mmObject();
 			isDerived = false;
@@ -116,6 +117,16 @@ public class Repartition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Repartition1 obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(Repartition1 obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 	@XmlElement(name = "FinInstrm", required = true)
@@ -152,7 +163,7 @@ public class Repartition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Repartition1, FinancialInstrument10> mmFinancialInstrument = new MMMessageAssociationEnd<Repartition1, FinancialInstrument10>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition1.mmObject();
@@ -164,7 +175,17 @@ public class Repartition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument10.mmObject();
+			type_lazy = () -> FinancialInstrument10.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument10 getValue(Repartition1 obj) {
+			return obj.getFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(Repartition1 obj, FinancialInstrument10 value) {
+			obj.setFinancialInstrument(value);
 		}
 	};
 
@@ -195,7 +216,7 @@ public class Repartition1 {
 		return financialInstrument;
 	}
 
-	public Repartition1 setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument10 financialInstrument) {
+	public Repartition1 setFinancialInstrument(FinancialInstrument10 financialInstrument) {
 		this.financialInstrument = Objects.requireNonNull(financialInstrument);
 		return this;
 	}

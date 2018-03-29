@@ -108,7 +108,7 @@ public class ChargePaymentMethod1Choice {
 	 * definition} = "Charge payment method expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargePaymentMethod1Choice, ChargePaymentMethod1Code> mmCode = new MMMessageAttribute<ChargePaymentMethod1Choice, ChargePaymentMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargePaymentMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargePaymentMethod1Choice.mmObject();
@@ -120,6 +120,16 @@ public class ChargePaymentMethod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargePaymentMethod1Code.mmObject();
+		}
+
+		@Override
+		public ChargePaymentMethod1Code getValue(ChargePaymentMethod1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ChargePaymentMethod1Choice obj, ChargePaymentMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class ChargePaymentMethod1Choice {
 	 * definition} = "Charge payment method expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ChargePaymentMethod1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<ChargePaymentMethod1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargePaymentMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargePaymentMethod1Choice.mmObject();
@@ -169,6 +179,16 @@ public class ChargePaymentMethod1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(ChargePaymentMethod1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ChargePaymentMethod1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

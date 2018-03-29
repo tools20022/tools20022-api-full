@@ -115,7 +115,7 @@ public class InterestRateUsedForPaymentFormat9Choice {
 	 * definition} = "Value is expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateUsedForPaymentFormat9Choice, PercentageRate> mmRate = new MMMessageAttribute<InterestRateUsedForPaymentFormat9Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat9Choice.mmObject();
@@ -128,6 +128,16 @@ public class InterestRateUsedForPaymentFormat9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(InterestRateUsedForPaymentFormat9Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat9Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -168,7 +178,7 @@ public class InterestRateUsedForPaymentFormat9Choice {
 	 * definition} = "Number of monetary units specified in a currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateUsedForPaymentFormat9Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<InterestRateUsedForPaymentFormat9Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat9Choice.mmObject();
@@ -181,6 +191,16 @@ public class InterestRateUsedForPaymentFormat9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(InterestRateUsedForPaymentFormat9Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat9Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -220,7 +240,7 @@ public class InterestRateUsedForPaymentFormat9Choice {
 	 * "Specifies different formats for interest rate used for payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateUsedForPaymentFormat9Choice, RateTypeAndAmountAndStatus32> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<InterestRateUsedForPaymentFormat9Choice, RateTypeAndAmountAndStatus32>() {
 		{
 			businessComponentTrace_lazy = () -> Interest.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateUsedForPaymentFormat9Choice.mmObject();
@@ -234,6 +254,16 @@ public class InterestRateUsedForPaymentFormat9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus32.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus32 getValue(InterestRateUsedForPaymentFormat9Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(InterestRateUsedForPaymentFormat9Choice obj, RateTypeAndAmountAndStatus32 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

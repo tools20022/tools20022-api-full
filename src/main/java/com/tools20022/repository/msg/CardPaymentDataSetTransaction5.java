@@ -24,6 +24,10 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max9NumericText;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment16;
+import com.tools20022.repository.msg.CardPaymentTransaction12;
+import com.tools20022.repository.msg.CardPaymentTransaction18;
+import com.tools20022.repository.msg.Traceability1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -133,7 +137,7 @@ public class CardPaymentDataSetTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionSequenceCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction5, Max9NumericText> mmTransactionSequenceCounter = new MMMessageAttribute<CardPaymentDataSetTransaction5, Max9NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction5.mmObject();
 			isDerived = false;
@@ -146,9 +150,19 @@ public class CardPaymentDataSetTransaction5 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
+
+		@Override
+		public Max9NumericText getValue(CardPaymentDataSetTransaction5 obj) {
+			return obj.getTransactionSequenceCounter();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction5 obj, Max9NumericText value) {
+			obj.setTransactionSequenceCounter(value);
+		}
 	};
 	@XmlElement(name = "Tracblt")
-	protected List<com.tools20022.repository.msg.Traceability1> traceability;
+	protected List<Traceability1> traceability;
 	/**
 	 * 
 	 <p>
@@ -185,7 +199,7 @@ public class CardPaymentDataSetTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTraceability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSetTransaction5, List<Traceability1>> mmTraceability = new MMMessageAssociationEnd<CardPaymentDataSetTransaction5, List<Traceability1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction5.mmObject();
 			isDerived = false;
@@ -196,7 +210,17 @@ public class CardPaymentDataSetTransaction5 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction9.mmTraceability);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Traceability1.mmObject();
+			type_lazy = () -> Traceability1.mmObject();
+		}
+
+		@Override
+		public List<Traceability1> getValue(CardPaymentDataSetTransaction5 obj) {
+			return obj.getTraceability();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction5 obj, List<Traceability1> value) {
+			obj.setTraceability(value);
 		}
 	};
 	@XmlElement(name = "Envt", required = true)
@@ -241,7 +265,7 @@ public class CardPaymentDataSetTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSetTransaction5, CardPaymentEnvironment16> mmEnvironment = new MMMessageAssociationEnd<CardPaymentDataSetTransaction5, CardPaymentEnvironment16>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction5.mmObject();
@@ -254,7 +278,17 @@ public class CardPaymentDataSetTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment16.mmObject();
+			type_lazy = () -> CardPaymentEnvironment16.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment16 getValue(CardPaymentDataSetTransaction5 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction5 obj, CardPaymentEnvironment16 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -298,7 +332,7 @@ public class CardPaymentDataSetTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentDataSetTransaction5, CardPaymentTransaction12> mmTransaction = new MMMessageAssociationEnd<CardPaymentDataSetTransaction5, CardPaymentTransaction12>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction5.mmObject();
@@ -311,7 +345,17 @@ public class CardPaymentDataSetTransaction5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction12.mmObject();
+			type_lazy = () -> CardPaymentTransaction12.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction12 getValue(CardPaymentDataSetTransaction5 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction5 obj, CardPaymentTransaction12 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -356,7 +400,7 @@ public class CardPaymentDataSetTransaction5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentDataSetTransaction5, CardPaymentTransaction18> mmTransactionResponse = new MMMessageAttribute<CardPaymentDataSetTransaction5, CardPaymentTransaction18>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSetTransaction5.mmObject();
@@ -368,7 +412,17 @@ public class CardPaymentDataSetTransaction5 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction9.mmTransactionResponse);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmObject();
+			complexType_lazy = () -> CardPaymentTransaction18.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction18 getValue(CardPaymentDataSetTransaction5 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(CardPaymentDataSetTransaction5 obj, CardPaymentTransaction18 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 
@@ -403,7 +457,7 @@ public class CardPaymentDataSetTransaction5 {
 		return traceability == null ? traceability = new ArrayList<>() : traceability;
 	}
 
-	public CardPaymentDataSetTransaction5 setTraceability(List<com.tools20022.repository.msg.Traceability1> traceability) {
+	public CardPaymentDataSetTransaction5 setTraceability(List<Traceability1> traceability) {
 		this.traceability = Objects.requireNonNull(traceability);
 		return this;
 	}
@@ -412,7 +466,7 @@ public class CardPaymentDataSetTransaction5 {
 		return environment;
 	}
 
-	public CardPaymentDataSetTransaction5 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment16 environment) {
+	public CardPaymentDataSetTransaction5 setEnvironment(CardPaymentEnvironment16 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -421,7 +475,7 @@ public class CardPaymentDataSetTransaction5 {
 		return transaction;
 	}
 
-	public CardPaymentDataSetTransaction5 setTransaction(com.tools20022.repository.msg.CardPaymentTransaction12 transaction) {
+	public CardPaymentDataSetTransaction5 setTransaction(CardPaymentTransaction12 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
@@ -430,7 +484,7 @@ public class CardPaymentDataSetTransaction5 {
 		return transactionResponse;
 	}
 
-	public CardPaymentDataSetTransaction5 setTransactionResponse(com.tools20022.repository.msg.CardPaymentTransaction18 transactionResponse) {
+	public CardPaymentDataSetTransaction5 setTransactionResponse(CardPaymentTransaction18 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}

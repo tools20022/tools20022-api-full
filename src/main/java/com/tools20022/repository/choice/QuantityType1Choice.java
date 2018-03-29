@@ -103,7 +103,7 @@ public class QuantityType1Choice {
 	 * definition} = "Quantity type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityType1Choice, OrderQuantityType2Code> mmCode = new MMMessageAttribute<QuantityType1Choice, OrderQuantityType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityType1Choice.mmObject();
@@ -115,6 +115,16 @@ public class QuantityType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderQuantityType2Code.mmObject();
+		}
+
+		@Override
+		public OrderQuantityType2Code getValue(QuantityType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(QuantityType1Choice obj, OrderQuantityType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -152,7 +162,7 @@ public class QuantityType1Choice {
 	 * definition} = "Quantity type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityType1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<QuantityType1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityType1Choice.mmObject();
@@ -164,6 +174,16 @@ public class QuantityType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(QuantityType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(QuantityType1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

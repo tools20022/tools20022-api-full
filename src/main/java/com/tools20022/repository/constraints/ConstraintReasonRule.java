@@ -52,11 +52,15 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason1Choice> forReason1Choice = new MMConstraint<Reason1Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			owner_lazy = () -> Reason1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason1Choice obj) throws Exception {
+			checkReason1Choice(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason6Choice> forReason6Choice = new MMConstraint<Reason6Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			owner_lazy = () -> Reason6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason6Choice obj) throws Exception {
+			checkReason6Choice(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason2Choice> forReason2Choice = new MMConstraint<Reason2Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			owner_lazy = () -> Reason2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason2Choice obj) throws Exception {
+			checkReason2Choice(obj);
 		}
 	};
 	/**
@@ -142,11 +154,15 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason10Choice> forReason10Choice = new MMConstraint<Reason10Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			owner_lazy = () -> Reason10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason10Choice obj) throws Exception {
+			checkReason10Choice(obj);
 		}
 	};
 	/**
@@ -180,12 +196,16 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason7Choice> forReason7Choice = new MMConstraint<Reason7Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReasonRule.forReason12Choice);
 			owner_lazy = () -> Reason7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason7Choice obj) throws Exception {
+			checkReason7Choice(obj);
 		}
 	};
 	/**
@@ -211,11 +231,15 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason11Choice> forReason11Choice = new MMConstraint<Reason11Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason11Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			owner_lazy = () -> Reason11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason11Choice obj) throws Exception {
+			checkReason11Choice(obj);
 		}
 	};
 	/**
@@ -254,13 +278,17 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason12Choice> forReason12Choice = new MMConstraint<Reason12Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason12Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReasonRule.forReason14Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReasonRule.forReason7Choice;
 			owner_lazy = () -> Reason12Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason12Choice obj) throws Exception {
+			checkReason12Choice(obj);
 		}
 	};
 	/**
@@ -286,11 +314,15 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason13Choice> forReason13Choice = new MMConstraint<Reason13Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			owner_lazy = () -> Reason13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason13Choice obj) throws Exception {
+			checkReason13Choice(obj);
 		}
 	};
 	/**
@@ -329,13 +361,17 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason14Choice> forReason14Choice = new MMConstraint<Reason14Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReasonRule.forReason16Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReasonRule.forReason12Choice;
 			owner_lazy = () -> Reason14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason14Choice obj) throws Exception {
+			checkReason14Choice(obj);
 		}
 	};
 	/**
@@ -361,11 +397,15 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason15Choice> forReason15Choice = new MMConstraint<Reason15Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			owner_lazy = () -> Reason15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason15Choice obj) throws Exception {
+			checkReason15Choice(obj);
 		}
 	};
 	/**
@@ -396,12 +436,16 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason16Choice> forReason16Choice = new MMConstraint<Reason16Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReasonRule.forReason14Choice;
 			owner_lazy = () -> Reason16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason16Choice obj) throws Exception {
+			checkReason16Choice(obj);
 		}
 	};
 	/**
@@ -427,11 +471,15 @@ public class ConstraintReasonRule {
 	 */
 	public static final MMConstraint<Reason17Choice> forReason17Choice = new MMConstraint<Reason17Choice>() {
 		{
-			validator = ConstraintReasonRule::checkReason17Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonRule";
 			definition = "If the reason is requested, then it must be in line with the reasons available for the message type requested.";
 			owner_lazy = () -> Reason17Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Reason17Choice obj) throws Exception {
+			checkReason17Choice(obj);
 		}
 	};
 

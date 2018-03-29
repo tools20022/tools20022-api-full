@@ -51,11 +51,15 @@ public class ConstraintForeignExchangeTradeProductRule {
 	 */
 	public static final MMConstraint<Trade2> forTrade2 = new MMConstraint<Trade2>() {
 		{
-			validator = ConstraintForeignExchangeTradeProductRule::checkTrade2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeTradeProductRule";
 			definition = "If Foreign Exchange Trade Product is equal to 'FORW'or'NDFO'or'SPOT', then ForeignExchangeDetails must be present.";
 			owner_lazy = () -> Trade2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Trade2 obj) throws Exception {
+			checkTrade2(obj);
 		}
 	};
 	/**
@@ -80,11 +84,15 @@ public class ConstraintForeignExchangeTradeProductRule {
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {
 		{
-			validator = ConstraintForeignExchangeTradeProductRule::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeTradeProductRule";
 			definition = "If ForeignExchangeTradeProduct is present, then TradingCurrency SettlementCurrency TradingMode and PlaceOfConfirmation must be present.";
 			owner_lazy = () -> Trade1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Trade1 obj) throws Exception {
+			checkTrade1(obj);
 		}
 	};
 

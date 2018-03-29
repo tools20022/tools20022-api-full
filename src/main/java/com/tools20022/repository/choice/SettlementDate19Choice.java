@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTime2Choice;
+import com.tools20022.repository.choice.SettlementDateCode8Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +112,7 @@ public class SettlementDate19Choice {
 	 * SettlementDate10Choice.mmDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDate19Choice, DateAndDateTime2Choice> mmDate = new MMMessageAttribute<SettlementDate19Choice, DateAndDateTime2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDate19Choice.mmObject();
 			isDerived = false;
@@ -122,7 +124,17 @@ public class SettlementDate19Choice {
 			previousVersion_lazy = () -> SettlementDate10Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTime2Choice.mmObject();
+			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTime2Choice getValue(SettlementDate19Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(SettlementDate19Choice obj, DateAndDateTime2Choice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -164,7 +176,7 @@ public class SettlementDate19Choice {
 	 * SettlementDate10Choice.mmDateCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDate19Choice, SettlementDateCode8Choice> mmDateCode = new MMMessageAttribute<SettlementDate19Choice, SettlementDateCode8Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDate19Choice.mmObject();
 			isDerived = false;
@@ -176,7 +188,17 @@ public class SettlementDate19Choice {
 			previousVersion_lazy = () -> SettlementDate10Choice.mmDateCode;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.SettlementDateCode8Choice.mmObject();
+			complexType_lazy = () -> SettlementDateCode8Choice.mmObject();
+		}
+
+		@Override
+		public SettlementDateCode8Choice getValue(SettlementDate19Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(SettlementDate19Choice obj, SettlementDateCode8Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -198,7 +220,7 @@ public class SettlementDate19Choice {
 		return date;
 	}
 
-	public SettlementDate19Choice setDate(com.tools20022.repository.choice.DateAndDateTime2Choice date) {
+	public SettlementDate19Choice setDate(DateAndDateTime2Choice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -207,7 +229,7 @@ public class SettlementDate19Choice {
 		return dateCode;
 	}
 
-	public SettlementDate19Choice setDateCode(com.tools20022.repository.choice.SettlementDateCode8Choice dateCode) {
+	public SettlementDate19Choice setDateCode(SettlementDateCode8Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

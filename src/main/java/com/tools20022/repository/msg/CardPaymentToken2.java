@@ -107,7 +107,7 @@ public class CardPaymentToken2 {
 	 * definition} = "Additional token payment information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTokenCharacteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentToken2, List<Max35Text>> mmTokenCharacteristic = new MMMessageAttribute<CardPaymentToken2, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken2.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class CardPaymentToken2 {
 			definition = "Additional token payment information.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(CardPaymentToken2 obj) {
+			return obj.getTokenCharacteristic();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken2 obj, List<Max35Text> value) {
+			obj.setTokenCharacteristic(value);
 		}
 	};
 	@XmlElement(name = "TknAssrncLvl")
@@ -158,7 +168,7 @@ public class CardPaymentToken2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTokenAssuranceLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentToken2, Optional<Number>> mmTokenAssuranceLevel = new MMMessageAttribute<CardPaymentToken2, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken2.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class CardPaymentToken2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CardPaymentToken2 obj) {
+			return obj.getTokenAssuranceLevel();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken2 obj, Optional<Number> value) {
+			obj.setTokenAssuranceLevel(value.orElse(null));
 		}
 	};
 

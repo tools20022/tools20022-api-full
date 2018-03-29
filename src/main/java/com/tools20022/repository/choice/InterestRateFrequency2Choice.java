@@ -101,7 +101,7 @@ public class InterestRateFrequency2Choice {
 	 * definition} = "Frequency expressed in tenor notation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRateFrequency2Choice, InterestRateContractTerm3> mmTerm = new MMMessageAssociationEnd<InterestRateFrequency2Choice, InterestRateContractTerm3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateFrequency2Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class InterestRateFrequency2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InterestRateContractTerm3.mmObject();
+		}
+
+		@Override
+		public InterestRateContractTerm3 getValue(InterestRateFrequency2Choice obj) {
+			return obj.getTerm();
+		}
+
+		@Override
+		public void setValue(InterestRateFrequency2Choice obj, InterestRateContractTerm3 value) {
+			obj.setTerm(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -144,7 +154,7 @@ public class InterestRateFrequency2Choice {
 	 * definition} = "Frequency expressed in a proprietary notation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRateFrequency2Choice, Max52Text> mmProprietary = new MMMessageAttribute<InterestRateFrequency2Choice, Max52Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRateFrequency2Choice.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class InterestRateFrequency2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(InterestRateFrequency2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InterestRateFrequency2Choice obj, Max52Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

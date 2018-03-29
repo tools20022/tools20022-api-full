@@ -60,12 +60,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV08> forPortfolioTransferInstructionV08 = new MMConstraint<PortfolioTransferInstructionV08>() {
 		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV07;
 			owner_lazy = () -> PortfolioTransferInstructionV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV08 obj) throws Exception {
+			checkPortfolioTransferInstructionV08(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferConfirmationV08> forPortfolioTransferConfirmationV08 = new MMConstraint<PortfolioTransferConfirmationV08>() {
 		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferConfirmationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV07;
 			owner_lazy = () -> PortfolioTransferConfirmationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferConfirmationV08 obj) throws Exception {
+			checkPortfolioTransferConfirmationV08(obj);
 		}
 	};
 	/**
@@ -132,12 +140,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationV06> forAccountHoldingInformationV06 = new MMConstraint<AccountHoldingInformationV06>() {
 		{
-			validator = ConstraintDesignationRule::checkAccountHoldingInformationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationV05;
 			owner_lazy = () -> AccountHoldingInformationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationV06 obj) throws Exception {
+			checkAccountHoldingInformationV06(obj);
 		}
 	};
 	/**
@@ -168,12 +180,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationRequestV05> forAccountHoldingInformationRequestV05 = new MMConstraint<AccountHoldingInformationRequestV05>() {
 		{
-			validator = ConstraintDesignationRule::checkAccountHoldingInformationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationRequestV04;
 			owner_lazy = () -> AccountHoldingInformationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationRequestV05 obj) throws Exception {
+			checkAccountHoldingInformationRequestV05(obj);
 		}
 	};
 	/**
@@ -212,13 +228,17 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV07> forPortfolioTransferInstructionV07 = new MMConstraint<PortfolioTransferInstructionV07>() {
 		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV06;
 			owner_lazy = () -> PortfolioTransferInstructionV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV07 obj) throws Exception {
+			checkPortfolioTransferInstructionV07(obj);
 		}
 	};
 	/**
@@ -257,13 +277,17 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationV05> forAccountHoldingInformationV05 = new MMConstraint<AccountHoldingInformationV05>() {
 		{
-			validator = ConstraintDesignationRule::checkAccountHoldingInformationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationV04;
 			owner_lazy = () -> AccountHoldingInformationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationV05 obj) throws Exception {
+			checkAccountHoldingInformationV05(obj);
 		}
 	};
 	/**
@@ -302,13 +326,17 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferConfirmationV07> forPortfolioTransferConfirmationV07 = new MMConstraint<PortfolioTransferConfirmationV07>() {
 		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV06;
 			owner_lazy = () -> PortfolioTransferConfirmationV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferConfirmationV07 obj) throws Exception {
+			checkPortfolioTransferConfirmationV07(obj);
 		}
 	};
 	/**
@@ -347,13 +375,17 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationRequestV04> forAccountHoldingInformationRequestV04 = new MMConstraint<AccountHoldingInformationRequestV04>() {
 		{
-			validator = ConstraintDesignationRule::checkAccountHoldingInformationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationRequestV03;
 			owner_lazy = () -> AccountHoldingInformationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationRequestV04 obj) throws Exception {
+			checkAccountHoldingInformationRequestV04(obj);
 		}
 	};
 	/**
@@ -379,11 +411,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioInformationV01> forPEPOrISAOrPortfolioInformationV01 = new MMConstraint<PEPOrISAOrPortfolioInformationV01>() {
 		{
-			validator = ConstraintDesignationRule::checkPEPOrISAOrPortfolioInformationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
 			owner_lazy = () -> PEPOrISAOrPortfolioInformationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPOrISAOrPortfolioInformationV01 obj) throws Exception {
+			checkPEPOrISAOrPortfolioInformationV01(obj);
 		}
 	};
 	/**
@@ -409,11 +445,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02> forPEPOrISAOrPortfolioTransferConfirmationV02 = new MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02>() {
 		{
-			validator = ConstraintDesignationRule::checkPEPOrISAOrPortfolioTransferConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
 			owner_lazy = () -> PEPOrISAOrPortfolioTransferConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPOrISAOrPortfolioTransferConfirmationV02 obj) throws Exception {
+			checkPEPOrISAOrPortfolioTransferConfirmationV02(obj);
 		}
 	};
 	/**
@@ -439,11 +479,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02> forPEPOrISAOrPortfolioTransferInstructionV02 = new MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02>() {
 		{
-			validator = ConstraintDesignationRule::checkPEPOrISAOrPortfolioTransferInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
 			owner_lazy = () -> PEPOrISAOrPortfolioTransferInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPOrISAOrPortfolioTransferInstructionV02 obj) throws Exception {
+			checkPEPOrISAOrPortfolioTransferInstructionV02(obj);
 		}
 	};
 	/**
@@ -469,11 +513,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01> forRequestForPEPOrISAOrPortfolioInformationV01 = new MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01>() {
 		{
-			validator = ConstraintDesignationRule::checkRequestForPEPOrISAOrPortfolioInformationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
 			owner_lazy = () -> RequestForPEPOrISAOrPortfolioInformationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestForPEPOrISAOrPortfolioInformationV01 obj) throws Exception {
+			checkRequestForPEPOrISAOrPortfolioInformationV01(obj);
 		}
 	};
 	/**
@@ -507,12 +555,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationRequestV03> forAccountHoldingInformationRequestV03 = new MMConstraint<AccountHoldingInformationRequestV03>() {
 		{
-			validator = ConstraintDesignationRule::checkAccountHoldingInformationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationRequestV04);
 			owner_lazy = () -> AccountHoldingInformationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationRequestV03 obj) throws Exception {
+			checkAccountHoldingInformationRequestV03(obj);
 		}
 	};
 	/**
@@ -546,12 +598,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<AccountHoldingInformationV04> forAccountHoldingInformationV04 = new MMConstraint<AccountHoldingInformationV04>() {
 		{
-			validator = ConstraintDesignationRule::checkAccountHoldingInformationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationV05);
 			owner_lazy = () -> AccountHoldingInformationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountHoldingInformationV04 obj) throws Exception {
+			checkAccountHoldingInformationV04(obj);
 		}
 	};
 	/**
@@ -585,12 +641,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV05> forPortfolioTransferInstructionV05 = new MMConstraint<PortfolioTransferInstructionV05>() {
 		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV06);
 			owner_lazy = () -> PortfolioTransferInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV05 obj) throws Exception {
+			checkPortfolioTransferInstructionV05(obj);
 		}
 	};
 	/**
@@ -624,12 +684,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferConfirmationV05> forPortfolioTransferConfirmationV05 = new MMConstraint<PortfolioTransferConfirmationV05>() {
 		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV06);
 			owner_lazy = () -> PortfolioTransferConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferConfirmationV05 obj) throws Exception {
+			checkPortfolioTransferConfirmationV05(obj);
 		}
 	};
 	/**
@@ -668,13 +732,17 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferConfirmationV06> forPortfolioTransferConfirmationV06 = new MMConstraint<PortfolioTransferConfirmationV06>() {
 		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV05;
 			owner_lazy = () -> PortfolioTransferConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferConfirmationV06 obj) throws Exception {
+			checkPortfolioTransferConfirmationV06(obj);
 		}
 	};
 	/**
@@ -713,13 +781,17 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferInstructionV06> forPortfolioTransferInstructionV06 = new MMConstraint<PortfolioTransferInstructionV06>() {
 		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV05;
 			owner_lazy = () -> PortfolioTransferInstructionV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferInstructionV06 obj) throws Exception {
+			checkPortfolioTransferInstructionV06(obj);
 		}
 	};
 	/**
@@ -744,11 +816,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer4> forISATransfer4 = new MMConstraint<ISATransfer4>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed.";
 			owner_lazy = () -> ISATransfer4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer4 obj) throws Exception {
+			checkISATransfer4(obj);
 		}
 	};
 	/**
@@ -773,11 +849,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer6> forISATransfer6 = new MMConstraint<ISATransfer6>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed.";
 			owner_lazy = () -> ISATransfer6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer6 obj) throws Exception {
+			checkISATransfer6(obj);
 		}
 	};
 	/**
@@ -803,11 +883,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PEPISATransfer7> forPEPISATransfer7 = new MMConstraint<PEPISATransfer7>() {
 		{
-			validator = ConstraintDesignationRule::checkPEPISATransfer7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
 			owner_lazy = () -> PEPISATransfer7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPISATransfer7 obj) throws Exception {
+			checkPEPISATransfer7(obj);
 		}
 	};
 	/**
@@ -833,11 +917,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<PEPISATransfer11> forPEPISATransfer11 = new MMConstraint<PEPISATransfer11>() {
 		{
-			validator = ConstraintDesignationRule::checkPEPISATransfer11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed.";
 			owner_lazy = () -> PEPISATransfer11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PEPISATransfer11 obj) throws Exception {
+			checkPEPISATransfer11(obj);
 		}
 	};
 	/**
@@ -870,12 +958,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer9> forISATransfer9 = new MMConstraint<ISATransfer9>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forISATransfer12);
 			owner_lazy = () -> ISATransfer9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer9 obj) throws Exception {
+			checkISATransfer9(obj);
 		}
 	};
 	/**
@@ -900,11 +992,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer2> forISATransfer2 = new MMConstraint<ISATransfer2>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed.";
 			owner_lazy = () -> ISATransfer2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer2 obj) throws Exception {
+			checkISATransfer2(obj);
 		}
 	};
 	/**
@@ -929,11 +1025,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer10> forISATransfer10 = new MMConstraint<ISATransfer10>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed.";
 			owner_lazy = () -> ISATransfer10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer10 obj) throws Exception {
+			checkISATransfer10(obj);
 		}
 	};
 	/**
@@ -958,11 +1058,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer1> forISATransfer1 = new MMConstraint<ISATransfer1>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed.";
 			owner_lazy = () -> ISATransfer1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer1 obj) throws Exception {
+			checkISATransfer1(obj);
 		}
 	};
 	/**
@@ -987,11 +1091,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer7> forISATransfer7 = new MMConstraint<ISATransfer7>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed.";
 			owner_lazy = () -> ISATransfer7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer7 obj) throws Exception {
+			checkISATransfer7(obj);
 		}
 	};
 	/**
@@ -1016,11 +1124,15 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer5> forISATransfer5 = new MMConstraint<ISATransfer5>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer\\Portfolio\\ISA is present, then TransferorAccount\\Designation is not allowed.\r\n\r\nIf ProductTransfer\\Portfolio\\Portfolio is present, then TransferorAccount\\Designation is allowed.";
 			owner_lazy = () -> ISATransfer5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer5 obj) throws Exception {
+			checkISATransfer5(obj);
 		}
 	};
 	/**
@@ -1058,13 +1170,17 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer12> forISATransfer12 = new MMConstraint<ISATransfer12>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forISATransfer19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forISATransfer9;
 			owner_lazy = () -> ISATransfer12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer12 obj) throws Exception {
+			checkISATransfer12(obj);
 		}
 	};
 	/**
@@ -1102,13 +1218,17 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer19> forISATransfer19 = new MMConstraint<ISATransfer19>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\nIf any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forISATransfer24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forISATransfer12;
 			owner_lazy = () -> ISATransfer19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer19 obj) throws Exception {
+			checkISATransfer19(obj);
 		}
 	};
 	/**
@@ -1138,12 +1258,16 @@ public class ConstraintDesignationRule {
 	 */
 	public static final MMConstraint<ISATransfer24> forISATransfer24 = new MMConstraint<ISATransfer24>() {
 		{
-			validator = ConstraintDesignationRule::checkISATransfer24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\nIf any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forISATransfer19;
 			owner_lazy = () -> ISATransfer24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ISATransfer24 obj) throws Exception {
+			checkISATransfer24(obj);
 		}
 	};
 

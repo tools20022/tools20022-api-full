@@ -107,7 +107,7 @@ public class CorporateActionCancellationSD4 {
 	 * CorporateActionCancellationSD2.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellationSD4, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionCancellationSD4, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD4.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class CorporateActionCancellationSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionCancellationSD4 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellationSD4 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtrnlCmnts")
@@ -156,7 +166,7 @@ public class CorporateActionCancellationSD4 {
 	 * CorporateActionCancellationSD2.mmExternalComments}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExternalComments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionCancellationSD4, Optional<Max8000Text>> mmExternalComments = new MMMessageAttribute<CorporateActionCancellationSD4, Optional<Max8000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD4.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class CorporateActionCancellationSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8000Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8000Text> getValue(CorporateActionCancellationSD4 obj) {
+			return obj.getExternalComments();
+		}
+
+		@Override
+		public void setValue(CorporateActionCancellationSD4 obj, Optional<Max8000Text> value) {
+			obj.setExternalComments(value.orElse(null));
 		}
 	};
 

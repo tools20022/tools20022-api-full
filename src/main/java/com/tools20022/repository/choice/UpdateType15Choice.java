@@ -107,7 +107,7 @@ public class UpdateType15Choice {
 	 * UpdateType2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdateType15Choice, StatementUpdateType1Code> mmCode = new MMMessageAttribute<UpdateType15Choice, StatementUpdateType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType15Choice.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class UpdateType15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
+		}
+
+		@Override
+		public StatementUpdateType1Code getValue(UpdateType15Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UpdateType15Choice obj, StatementUpdateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class UpdateType15Choice {
 	 * UpdateType2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdateType15Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<UpdateType15Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType15Choice.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class UpdateType15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(UpdateType15Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UpdateType15Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

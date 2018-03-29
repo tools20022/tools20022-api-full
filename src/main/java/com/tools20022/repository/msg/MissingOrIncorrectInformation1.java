@@ -103,7 +103,7 @@ public class MissingOrIncorrectInformation1 {
 	 * definition} = "Indicates the missing information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMissingInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MissingOrIncorrectInformation1, List<UnableToApplyMissingInfo1Code>> mmMissingInformation = new MMMessageAttribute<MissingOrIncorrectInformation1, List<UnableToApplyMissingInfo1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MissingOrIncorrectInformation1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class MissingOrIncorrectInformation1 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
+		}
+
+		@Override
+		public List<UnableToApplyMissingInfo1Code> getValue(MissingOrIncorrectInformation1 obj) {
+			return obj.getMissingInformation();
+		}
+
+		@Override
+		public void setValue(MissingOrIncorrectInformation1 obj, List<UnableToApplyMissingInfo1Code> value) {
+			obj.setMissingInformation(value);
 		}
 	};
 	@XmlElement(name = "IncrrctInf")
@@ -146,7 +156,7 @@ public class MissingOrIncorrectInformation1 {
 	 * definition} = "Indicates the incorrect information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncorrectInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MissingOrIncorrectInformation1, List<UnableToApplyIncorrectInfo2Code>> mmIncorrectInformation = new MMMessageAttribute<MissingOrIncorrectInformation1, List<UnableToApplyIncorrectInfo2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MissingOrIncorrectInformation1.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class MissingOrIncorrectInformation1 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			simpleType_lazy = () -> UnableToApplyIncorrectInfo2Code.mmObject();
+		}
+
+		@Override
+		public List<UnableToApplyIncorrectInfo2Code> getValue(MissingOrIncorrectInformation1 obj) {
+			return obj.getIncorrectInformation();
+		}
+
+		@Override
+		public void setValue(MissingOrIncorrectInformation1 obj, List<UnableToApplyIncorrectInfo2Code> value) {
+			obj.setIncorrectInformation(value);
 		}
 	};
 

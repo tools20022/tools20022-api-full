@@ -104,7 +104,7 @@ public class PriceSource {
 	 * definition} = "Source of the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceSource, PriceSource1Code> mmPriceSource = new MMMessageAttribute<PriceSource, PriceSource1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceSource.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class PriceSource {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceSource1Code.mmObject();
+		}
+
+		@Override
+		public PriceSource1Code getValue(PriceSource obj) {
+			return obj.getPriceSource();
+		}
+
+		@Override
+		public void setValue(PriceSource obj, PriceSource1Code value) {
+			obj.setPriceSource(value);
 		}
 	};
 	@XmlElement(name = "Nrrtv")
@@ -146,7 +156,7 @@ public class PriceSource {
 	 * definition} = "Additional information about the source of a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceSource, Optional<Max35Text>> mmNarrative = new MMMessageAttribute<PriceSource, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceSource.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class PriceSource {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PriceSource obj) {
+			return obj.getNarrative();
+		}
+
+		@Override
+		public void setValue(PriceSource obj, Optional<Max35Text> value) {
+			obj.setNarrative(value.orElse(null));
 		}
 	};
 

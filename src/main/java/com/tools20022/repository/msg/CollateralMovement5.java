@@ -138,7 +138,7 @@ public class CollateralMovement5 {
 	 * CollateralMovement4.mmAgreedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralMovement5, ActiveCurrencyAndAmount> mmAgreedAmount = new MMMessageAttribute<CollateralMovement5, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement5.mmObject();
@@ -152,6 +152,16 @@ public class CollateralMovement5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralMovement5 obj) {
+			return obj.getAgreedAmount();
+		}
+
+		@Override
+		public void setValue(CollateralMovement5 obj, ActiveCurrencyAndAmount value) {
+			obj.setAgreedAmount(value);
 		}
 	};
 	@XmlElement(name = "MvmntDrctn")
@@ -203,7 +213,7 @@ public class CollateralMovement5 {
 	 * CollateralMovement4.mmMovementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovementDirection = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement5, List<CollateralMovement3Choice>> mmMovementDirection = new MMMessageAssociationEnd<CollateralMovement5, List<CollateralMovement3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement5.mmObject();
@@ -217,6 +227,16 @@ public class CollateralMovement5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CollateralMovement3Choice.mmObject();
+		}
+
+		@Override
+		public List<CollateralMovement3Choice> getValue(CollateralMovement5 obj) {
+			return obj.getMovementDirection();
+		}
+
+		@Override
+		public void setValue(CollateralMovement5 obj, List<CollateralMovement3Choice> value) {
+			obj.setMovementDirection(value);
 		}
 	};
 

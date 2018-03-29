@@ -56,11 +56,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01> forRedemptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionBulkOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionBulkOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -86,11 +90,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationAmendmentV01> forRedemptionOrderConfirmationAmendmentV01 = new MMConstraint<RedemptionOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkRedemptionOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -116,11 +124,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01> forSubscriptionBulkOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionBulkOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -146,11 +158,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationAmendmentV01> forSubscriptionOrderConfirmationAmendmentV01 = new MMConstraint<SubscriptionOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkSubscriptionOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -176,11 +192,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> forSwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSwitchOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SwitchOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkSwitchOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -212,12 +232,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationV04> forSubscriptionBulkOrderConfirmationV04 = new MMConstraint<SubscriptionBulkOrderConfirmationV04>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderConfirmationV03;
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationV04 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -248,12 +272,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderV04> forRedemptionBulkOrderV04 = new MMConstraint<RedemptionBulkOrderV04>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionBulkOrderV03;
 			owner_lazy = () -> RedemptionBulkOrderV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderV04 obj) throws Exception {
+			checkRedemptionBulkOrderV04(obj);
 		}
 	};
 	/**
@@ -284,12 +312,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionOrderV04> forRedemptionOrderV04 = new MMConstraint<RedemptionOrderV04>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionOrderV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionOrderV03;
 			owner_lazy = () -> RedemptionOrderV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderV04 obj) throws Exception {
+			checkRedemptionOrderV04(obj);
 		}
 	};
 	/**
@@ -321,12 +353,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationV04> forRedemptionBulkOrderConfirmationV04 = new MMConstraint<RedemptionBulkOrderConfirmationV04>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionBulkOrderConfirmationV03;
 			owner_lazy = () -> RedemptionBulkOrderConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationV04 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -357,12 +393,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationV04> forSubscriptionOrderConfirmationV04 = new MMConstraint<SubscriptionOrderConfirmationV04>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionOrderConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionOrderConfirmationV03;
 			owner_lazy = () -> SubscriptionOrderConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmationV04 obj) throws Exception {
+			checkSubscriptionOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -393,12 +433,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationV04> forRedemptionOrderConfirmationV04 = new MMConstraint<RedemptionOrderConfirmationV04>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionOrderConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionOrderConfirmationV03;
 			owner_lazy = () -> RedemptionOrderConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmationV04 obj) throws Exception {
+			checkRedemptionOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -429,12 +473,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderV04> forSubscriptionBulkOrderV04 = new MMConstraint<SubscriptionBulkOrderV04>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderV03;
 			owner_lazy = () -> SubscriptionBulkOrderV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderV04 obj) throws Exception {
+			checkSubscriptionBulkOrderV04(obj);
 		}
 	};
 	/**
@@ -465,12 +513,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderV04> forSubscriptionOrderV04 = new MMConstraint<SubscriptionOrderV04>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionOrderV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionOrderV03;
 			owner_lazy = () -> SubscriptionOrderV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderV04 obj) throws Exception {
+			checkSubscriptionOrderV04(obj);
 		}
 	};
 	/**
@@ -496,11 +548,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderCancellationRequestV03> forRedemptionBulkOrderCancellationRequestV03 = new MMConstraint<RedemptionBulkOrderCancellationRequestV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionBulkOrderCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderCancellationRequestV03 obj) throws Exception {
+			checkRedemptionBulkOrderCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -526,11 +582,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationCancellationInstructionV01> forRedemptionBulkOrderConfirmationCancellationInstructionV01 = new MMConstraint<RedemptionBulkOrderConfirmationCancellationInstructionV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderConfirmationCancellationInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present.";
 			owner_lazy = () -> RedemptionBulkOrderConfirmationCancellationInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationCancellationInstructionV01 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationCancellationInstructionV01(obj);
 		}
 	};
 	/**
@@ -565,12 +625,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationV03> forRedemptionBulkOrderConfirmationV03 = new MMConstraint<RedemptionBulkOrderConfirmationV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionBulkOrderConfirmationV04);
 			owner_lazy = () -> RedemptionBulkOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationV03 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -604,12 +668,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderV03> forRedemptionBulkOrderV03 = new MMConstraint<RedemptionBulkOrderV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionBulkOrderV04);
 			owner_lazy = () -> RedemptionBulkOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderV03 obj) throws Exception {
+			checkRedemptionBulkOrderV03(obj);
 		}
 	};
 	/**
@@ -635,11 +703,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionOrderCancellationRequestV03> forRedemptionOrderCancellationRequestV03 = new MMConstraint<RedemptionOrderCancellationRequestV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionOrderCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionOrderCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderCancellationRequestV03 obj) throws Exception {
+			checkRedemptionOrderCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -665,11 +737,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationCancellationInstructionV01> forRedemptionOrderConfirmationCancellationInstructionV01 = new MMConstraint<RedemptionOrderConfirmationCancellationInstructionV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionOrderConfirmationCancellationInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present.";
 			owner_lazy = () -> RedemptionOrderConfirmationCancellationInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmationCancellationInstructionV01 obj) throws Exception {
+			checkRedemptionOrderConfirmationCancellationInstructionV01(obj);
 		}
 	};
 	/**
@@ -703,12 +779,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionOrderConfirmationV03> forRedemptionOrderConfirmationV03 = new MMConstraint<RedemptionOrderConfirmationV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionOrderConfirmationV04);
 			owner_lazy = () -> RedemptionOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderConfirmationV03 obj) throws Exception {
+			checkRedemptionOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -742,12 +822,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionOrderV03> forRedemptionOrderV03 = new MMConstraint<RedemptionOrderV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forRedemptionOrderV04);
 			owner_lazy = () -> RedemptionOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrderV03 obj) throws Exception {
+			checkRedemptionOrderV03(obj);
 		}
 	};
 	/**
@@ -773,11 +857,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderCancellationRequestV03> forSubscriptionBulkOrderCancellationRequestV03 = new MMConstraint<SubscriptionBulkOrderCancellationRequestV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionBulkOrderCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderCancellationRequestV03 obj) throws Exception {
+			checkSubscriptionBulkOrderCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -803,11 +891,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationCancellationInstructionV01> forSubscriptionBulkOrderConfirmationCancellationInstructionV01 = new MMConstraint<SubscriptionBulkOrderConfirmationCancellationInstructionV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderConfirmationCancellationInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present.";
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationCancellationInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationCancellationInstructionV01 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationCancellationInstructionV01(obj);
 		}
 	};
 	/**
@@ -842,12 +934,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationV03> forSubscriptionBulkOrderConfirmationV03 = new MMConstraint<SubscriptionBulkOrderConfirmationV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderConfirmationV04);
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationV03 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -881,12 +977,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderV03> forSubscriptionBulkOrderV03 = new MMConstraint<SubscriptionBulkOrderV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionBulkOrderV04);
 			owner_lazy = () -> SubscriptionBulkOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderV03 obj) throws Exception {
+			checkSubscriptionBulkOrderV03(obj);
 		}
 	};
 	/**
@@ -912,11 +1012,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderCancellationRequestV03> forSubscriptionOrderCancellationRequestV03 = new MMConstraint<SubscriptionOrderCancellationRequestV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionOrderCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderDetails/MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionOrderCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderCancellationRequestV03 obj) throws Exception {
+			checkSubscriptionOrderCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -942,11 +1046,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationCancellationInstructionV01> forSubscriptionOrderConfirmationCancellationInstructionV01 = new MMConstraint<SubscriptionOrderConfirmationCancellationInstructionV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionOrderConfirmationCancellationInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present.";
 			owner_lazy = () -> SubscriptionOrderConfirmationCancellationInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmationCancellationInstructionV01 obj) throws Exception {
+			checkSubscriptionOrderConfirmationCancellationInstructionV01(obj);
 		}
 	};
 	/**
@@ -980,12 +1088,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderConfirmationV03> forSubscriptionOrderConfirmationV03 = new MMConstraint<SubscriptionOrderConfirmationV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionOrderConfirmationV04);
 			owner_lazy = () -> SubscriptionOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderConfirmationV03 obj) throws Exception {
+			checkSubscriptionOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -1019,12 +1131,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionOrderV03> forSubscriptionOrderV03 = new MMConstraint<SubscriptionOrderV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forSubscriptionOrderV04);
 			owner_lazy = () -> SubscriptionOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrderV03 obj) throws Exception {
+			checkSubscriptionOrderV03(obj);
 		}
 	};
 	/**
@@ -1050,11 +1166,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SwitchOrderCancellationRequestV03> forSwitchOrderCancellationRequestV03 = new MMConstraint<SwitchOrderCancellationRequestV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSwitchOrderCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderDetails/SwitchOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SwitchOrderCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderCancellationRequestV03 obj) throws Exception {
+			checkSwitchOrderCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -1080,11 +1200,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationCancellationInstructionV01> forSwitchOrderConfirmationCancellationInstructionV01 = new MMConstraint<SwitchOrderConfirmationCancellationInstructionV01>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSwitchOrderConfirmationCancellationInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If the confirmation message was linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in CancellationByOrderConfirmationDetails/SwitchExecutionDetails/InvestmentAccountDetails must be UNKNOWN if present.";
 			owner_lazy = () -> SwitchOrderConfirmationCancellationInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationCancellationInstructionV01 obj) throws Exception {
+			checkSwitchOrderConfirmationCancellationInstructionV01(obj);
 		}
 	};
 	/**
@@ -1110,11 +1234,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationV03> forSwitchOrderConfirmationV03 = new MMConstraint<SwitchOrderConfirmationV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSwitchOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SwitchOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationV03 obj) throws Exception {
+			checkSwitchOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -1140,11 +1268,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SwitchOrderV03> forSwitchOrderV03 = new MMConstraint<SwitchOrderV03>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSwitchOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SwitchOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderV03 obj) throws Exception {
+			checkSwitchOrderV03(obj);
 		}
 	};
 	/**
@@ -1170,11 +1302,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderCancellationInstructionV02> forRedemptionBulkOrderCancellationInstructionV02 = new MMConstraint<RedemptionBulkOrderCancellationInstructionV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderCancellationInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionBulkOrderCancellationInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderCancellationInstructionV02 obj) throws Exception {
+			checkRedemptionBulkOrderCancellationInstructionV02(obj);
 		}
 	};
 	/**
@@ -1200,11 +1336,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderConfirmationV02> forRedemptionBulkOrderConfirmationV02 = new MMConstraint<RedemptionBulkOrderConfirmationV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionBulkOrderConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderConfirmationV02 obj) throws Exception {
+			checkRedemptionBulkOrderConfirmationV02(obj);
 		}
 	};
 	/**
@@ -1230,11 +1370,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionBulkOrderV02> forRedemptionBulkOrderV02 = new MMConstraint<RedemptionBulkOrderV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionBulkOrderV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionBulkOrderV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionBulkOrderV02 obj) throws Exception {
+			checkRedemptionBulkOrderV02(obj);
 		}
 	};
 	/**
@@ -1260,11 +1404,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrderCancellationInstructionV02> forRedemptionMultipleOrderCancellationInstructionV02 = new MMConstraint<RedemptionMultipleOrderCancellationInstructionV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionMultipleOrderCancellationInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionMultipleOrderCancellationInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrderCancellationInstructionV02 obj) throws Exception {
+			checkRedemptionMultipleOrderCancellationInstructionV02(obj);
 		}
 	};
 	/**
@@ -1290,11 +1438,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrderConfirmationV02> forRedemptionMultipleOrderConfirmationV02 = new MMConstraint<RedemptionMultipleOrderConfirmationV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionMultipleOrderConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionMultipleOrderConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrderConfirmationV02 obj) throws Exception {
+			checkRedemptionMultipleOrderConfirmationV02(obj);
 		}
 	};
 	/**
@@ -1320,11 +1472,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<RedemptionMultipleOrderV02> forRedemptionMultipleOrderV02 = new MMConstraint<RedemptionMultipleOrderV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkRedemptionMultipleOrderV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> RedemptionMultipleOrderV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionMultipleOrderV02 obj) throws Exception {
+			checkRedemptionMultipleOrderV02(obj);
 		}
 	};
 	/**
@@ -1350,11 +1506,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderCancellationInstructionV02> forSubscriptionBulkOrderCancellationInstructionV02 = new MMConstraint<SubscriptionBulkOrderCancellationInstructionV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderCancellationInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionBulkOrderCancellationInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderCancellationInstructionV02 obj) throws Exception {
+			checkSubscriptionBulkOrderCancellationInstructionV02(obj);
 		}
 	};
 	/**
@@ -1380,11 +1540,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderConfirmationV02> forSubscriptionBulkOrderConfirmationV02 = new MMConstraint<SubscriptionBulkOrderConfirmationV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkExecutionDetails/IndividualExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionBulkOrderConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderConfirmationV02 obj) throws Exception {
+			checkSubscriptionBulkOrderConfirmationV02(obj);
 		}
 	};
 	/**
@@ -1410,11 +1574,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionBulkOrderV02> forSubscriptionBulkOrderV02 = new MMConstraint<SubscriptionBulkOrderV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionBulkOrderV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in BulkOrderDetails/IndividualOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionBulkOrderV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionBulkOrderV02 obj) throws Exception {
+			checkSubscriptionBulkOrderV02(obj);
 		}
 	};
 	/**
@@ -1440,11 +1608,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrderCancellationInstructionV02> forSubscriptionMultipleOrderCancellationInstructionV02 = new MMConstraint<SubscriptionMultipleOrderCancellationInstructionV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionMultipleOrderCancellationInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionMultipleOrderCancellationInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrderCancellationInstructionV02 obj) throws Exception {
+			checkSubscriptionMultipleOrderCancellationInstructionV02(obj);
 		}
 	};
 	/**
@@ -1470,11 +1642,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrderConfirmationV02> forSubscriptionMultipleOrderConfirmationV02 = new MMConstraint<SubscriptionMultipleOrderConfirmationV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionMultipleOrderConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionMultipleOrderConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrderConfirmationV02 obj) throws Exception {
+			checkSubscriptionMultipleOrderConfirmationV02(obj);
 		}
 	};
 	/**
@@ -1500,11 +1676,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SubscriptionMultipleOrderV02> forSubscriptionMultipleOrderV02 = new MMConstraint<SubscriptionMultipleOrderV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSubscriptionMultipleOrderV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in MultipleOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SubscriptionMultipleOrderV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionMultipleOrderV02 obj) throws Exception {
+			checkSubscriptionMultipleOrderV02(obj);
 		}
 	};
 	/**
@@ -1530,11 +1710,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SwitchOrderCancellationInstructionV02> forSwitchOrderCancellationInstructionV02 = new MMConstraint<SwitchOrderCancellationInstructionV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSwitchOrderCancellationInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in OrderToBeCancelled/SwitchOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SwitchOrderCancellationInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderCancellationInstructionV02 obj) throws Exception {
+			checkSwitchOrderCancellationInstructionV02(obj);
 		}
 	};
 	/**
@@ -1560,11 +1744,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationV02> forSwitchOrderConfirmationV02 = new MMConstraint<SwitchOrderConfirmationV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSwitchOrderConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchExecutionDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SwitchOrderConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationV02 obj) throws Exception {
+			checkSwitchOrderConfirmationV02(obj);
 		}
 	};
 	/**
@@ -1590,11 +1778,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<SwitchOrderV02> forSwitchOrderV02 = new MMConstraint<SwitchOrderV02>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkSwitchOrderV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If this message is linked to an account opening request and the account identification is not yet known then the value of the AccountIdentification element in SwitchOrderDetails/InvestmentAccountDetails must be UNKNOWN.";
 			owner_lazy = () -> SwitchOrderV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderV02 obj) throws Exception {
+			checkSwitchOrderV02(obj);
 		}
 	};
 	/**
@@ -1628,12 +1820,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentAccount24> forInvestmentAccount24 = new MMConstraint<InvestmentAccount24>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkInvestmentAccount24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount41);
 			owner_lazy = () -> InvestmentAccount24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount24 obj) throws Exception {
+			checkInvestmentAccount24(obj);
 		}
 	};
 	/**
@@ -1659,11 +1855,15 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<EligiblePosition> forEligiblePosition = new MMConstraint<EligiblePosition>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkEligiblePosition;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "If AccountIdentification is empty, then HoldingBalance represents the total balance (for all the accounts).";
 			owner_lazy = () -> EligiblePosition.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EligiblePosition obj) throws Exception {
+			checkEligiblePosition(obj);
 		}
 	};
 	/**
@@ -1702,13 +1902,17 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentAccount41> forInvestmentAccount41 = new MMConstraint<InvestmentAccount41>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkInvestmentAccount41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount55);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount24;
 			owner_lazy = () -> InvestmentAccount41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount41 obj) throws Exception {
+			checkInvestmentAccount41(obj);
 		}
 	};
 	/**
@@ -1750,7 +1954,6 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentAccount55> forInvestmentAccount55 = new MMConstraint<InvestmentAccount55>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkInvestmentAccount55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
@@ -1758,6 +1961,11 @@ public class ConstraintAccountIdentificationRule {
 					com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount41;
 			owner_lazy = () -> InvestmentAccount55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount55 obj) throws Exception {
+			checkInvestmentAccount55(obj);
 		}
 	};
 	/**
@@ -1796,13 +2004,17 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentAccount57> forInvestmentAccount57 = new MMConstraint<InvestmentAccount57>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkInvestmentAccount57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount55;
 			owner_lazy = () -> InvestmentAccount57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount57 obj) throws Exception {
+			checkInvestmentAccount57(obj);
 		}
 	};
 	/**
@@ -1833,12 +2045,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentAccount65> forInvestmentAccount65 = new MMConstraint<InvestmentAccount65>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkInvestmentAccount65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount55;
 			owner_lazy = () -> InvestmentAccount65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount65 obj) throws Exception {
+			checkInvestmentAccount65(obj);
 		}
 	};
 	/**
@@ -1869,12 +2085,16 @@ public class ConstraintAccountIdentificationRule {
 	 */
 	public static final MMConstraint<InvestmentAccount68> forInvestmentAccount68 = new MMConstraint<InvestmentAccount68>() {
 		{
-			validator = ConstraintAccountIdentificationRule::checkInvestmentAccount68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount57;
 			owner_lazy = () -> InvestmentAccount68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount68 obj) throws Exception {
+			checkInvestmentAccount68(obj);
 		}
 	};
 

@@ -29,7 +29,6 @@ import com.tools20022.repository.msg.PartyDataReturnCriteria1;
 import com.tools20022.repository.msg.PartyDataSearchCriteria2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._T2S_Party_Reference_Data_ForRegistration;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -132,7 +131,7 @@ public class PartyQueryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyQueryV01, MessageHeader2> mmMessageIdentification = new MMMessageBuildingBlock<PartyQueryV01, MessageHeader2>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +142,14 @@ public class PartyQueryV01 {
 			complexType_lazy = () -> MessageHeader2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyQueryV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader2 getValue(PartyQueryV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(PartyQueryV01 obj, MessageHeader2 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -177,7 +178,7 @@ public class PartyQueryV01 {
 	 * "Party that originated the query message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyQueryV01, Optional<PartyIdentification71Choice>> mmMessageOriginator = new MMMessageBuildingBlock<PartyQueryV01, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,12 +189,14 @@ public class PartyQueryV01 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyQueryV01.class.getMethod("getMessageOriginator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(PartyQueryV01 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(PartyQueryV01 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -223,7 +226,7 @@ public class PartyQueryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyQueryV01, Optional<PartyIdentification71Choice>> mmMessageRecipient = new MMMessageBuildingBlock<PartyQueryV01, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +237,14 @@ public class PartyQueryV01 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyQueryV01.class.getMethod("getMessageRecipient", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(PartyQueryV01 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(PartyQueryV01 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchCrit", required = true)
@@ -269,7 +274,7 @@ public class PartyQueryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSearchCriteria = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyQueryV01, PartyDataSearchCriteria2> mmSearchCriteria = new MMMessageBuildingBlock<PartyQueryV01, PartyDataSearchCriteria2>() {
 		{
 			xmlTag = "SchCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,12 +285,14 @@ public class PartyQueryV01 {
 			complexType_lazy = () -> PartyDataSearchCriteria2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyQueryV01.class.getMethod("getSearchCriteria", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyDataSearchCriteria2 getValue(PartyQueryV01 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(PartyQueryV01 obj, PartyDataSearchCriteria2 value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -314,7 +321,7 @@ public class PartyQueryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReturnCriteria = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyQueryV01, Optional<PartyDataReturnCriteria1>> mmReturnCriteria = new MMMessageBuildingBlock<PartyQueryV01, Optional<PartyDataReturnCriteria1>>() {
 		{
 			xmlTag = "RtrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,12 +332,14 @@ public class PartyQueryV01 {
 			complexType_lazy = () -> PartyDataReturnCriteria1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyQueryV01.class.getMethod("getReturnCriteria", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyDataReturnCriteria1> getValue(PartyQueryV01 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(PartyQueryV01 obj, Optional<PartyDataReturnCriteria1> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -360,7 +369,7 @@ public class PartyQueryV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PartyQueryV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<PartyQueryV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -370,12 +379,14 @@ public class PartyQueryV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PartyQueryV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(PartyQueryV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(PartyQueryV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

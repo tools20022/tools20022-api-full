@@ -104,7 +104,7 @@ public class CorporateActionBeneficialOwnerDetailsExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionBeneficialOwnerDetailsExtension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionBeneficialOwnerDetailsExtension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class CorporateActionBeneficialOwnerDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionBeneficialOwnerDetailsExtension1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionBeneficialOwnerDetailsExtension1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "BnfclOwnrXmptnRsn")
@@ -149,7 +159,7 @@ public class CorporateActionBeneficialOwnerDetailsExtension1 {
 	 * definition} = "Exemption reason for the beneficial owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficialOwnerExemptionReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionBeneficialOwnerDetailsExtension1, Optional<BeneficialOwnerExemptionStatus1Choice>> mmBeneficialOwnerExemptionReason = new MMMessageAssociationEnd<CorporateActionBeneficialOwnerDetailsExtension1, Optional<BeneficialOwnerExemptionStatus1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionBeneficialOwnerDetailsExtension1.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class CorporateActionBeneficialOwnerDetailsExtension1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BeneficialOwnerExemptionStatus1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BeneficialOwnerExemptionStatus1Choice> getValue(CorporateActionBeneficialOwnerDetailsExtension1 obj) {
+			return obj.getBeneficialOwnerExemptionReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionBeneficialOwnerDetailsExtension1 obj, Optional<BeneficialOwnerExemptionStatus1Choice> value) {
+			obj.setBeneficialOwnerExemptionReason(value.orElse(null));
 		}
 	};
 

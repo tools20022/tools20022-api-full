@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraPositionPending4;
+import com.tools20022.repository.msg.PendingStatusAndReason2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -126,7 +128,7 @@ public class IntraPositionPending3 {
 	 * IntraPositionPending1.mmStatusAndReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionPending3, Optional<PendingStatusAndReason2>> mmStatusAndReason = new MMMessageAssociationEnd<IntraPositionPending3, Optional<PendingStatusAndReason2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionPending3.mmObject();
 			isDerived = false;
@@ -139,11 +141,21 @@ public class IntraPositionPending3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason2.mmObject();
+			type_lazy = () -> PendingStatusAndReason2.mmObject();
+		}
+
+		@Override
+		public Optional<PendingStatusAndReason2> getValue(IntraPositionPending3 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(IntraPositionPending3 obj, Optional<PendingStatusAndReason2> value) {
+			obj.setStatusAndReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mvmnt", required = true)
-	protected List<com.tools20022.repository.msg.IntraPositionPending4> movement;
+	protected List<IntraPositionPending4> movement;
 	/**
 	 * 
 	 <p>
@@ -183,7 +195,7 @@ public class IntraPositionPending3 {
 	 * IntraPositionPending1.mmMovement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionPending3, List<IntraPositionPending4>> mmMovement = new MMMessageAssociationEnd<IntraPositionPending3, List<IntraPositionPending4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionPending3.mmObject();
 			isDerived = false;
@@ -195,7 +207,17 @@ public class IntraPositionPending3 {
 			previousVersion_lazy = () -> IntraPositionPending1.mmMovement;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraPositionPending4.mmObject();
+			type_lazy = () -> IntraPositionPending4.mmObject();
+		}
+
+		@Override
+		public List<IntraPositionPending4> getValue(IntraPositionPending3 obj) {
+			return obj.getMovement();
+		}
+
+		@Override
+		public void setValue(IntraPositionPending3 obj, List<IntraPositionPending4> value) {
+			obj.setMovement(value);
 		}
 	};
 
@@ -219,7 +241,7 @@ public class IntraPositionPending3 {
 		return statusAndReason == null ? Optional.empty() : Optional.of(statusAndReason);
 	}
 
-	public IntraPositionPending3 setStatusAndReason(com.tools20022.repository.msg.PendingStatusAndReason2 statusAndReason) {
+	public IntraPositionPending3 setStatusAndReason(PendingStatusAndReason2 statusAndReason) {
 		this.statusAndReason = statusAndReason;
 		return this;
 	}
@@ -228,7 +250,7 @@ public class IntraPositionPending3 {
 		return movement == null ? movement = new ArrayList<>() : movement;
 	}
 
-	public IntraPositionPending3 setMovement(List<com.tools20022.repository.msg.IntraPositionPending4> movement) {
+	public IntraPositionPending3 setMovement(List<IntraPositionPending4> movement) {
 		this.movement = Objects.requireNonNull(movement);
 		return this;
 	}

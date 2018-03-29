@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BalanceRestrictionType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +139,7 @@ public class CashBalance5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance5, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<CashBalance5, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance5.mmObject();
@@ -151,6 +152,16 @@ public class CashBalance5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(CashBalance5 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CashBalance5 obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -197,7 +208,7 @@ public class CashBalance5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance5, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CashBalance5, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance5.mmObject();
@@ -210,6 +221,16 @@ public class CashBalance5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CashBalance5 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalance5 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -251,7 +272,7 @@ public class CashBalance5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashBalance5, Optional<BalanceType8Choice>> mmType = new MMMessageAssociationEnd<CashBalance5, Optional<BalanceType8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance5.mmObject();
@@ -265,6 +286,16 @@ public class CashBalance5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BalanceType8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceType8Choice> getValue(CashBalance5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashBalance5 obj, Optional<BalanceType8Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -308,7 +339,7 @@ public class CashBalance5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance5, Optional<BalanceStatus1Code>> mmStatus = new MMMessageAttribute<CashBalance5, Optional<BalanceStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmBalanceStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance5.mmObject();
@@ -321,6 +352,16 @@ public class CashBalance5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BalanceStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceStatus1Code> getValue(CashBalance5 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CashBalance5 obj, Optional<BalanceStatus1Code> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -365,7 +406,7 @@ public class CashBalance5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance5, Optional<DateAndDateTimeChoice>> mmValueDate = new MMMessageAttribute<CashBalance5, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance5.mmObject();
@@ -378,6 +419,16 @@ public class CashBalance5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(CashBalance5 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(CashBalance5 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfPmts")
@@ -418,7 +469,7 @@ public class CashBalance5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfPayments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalance5, Optional<Number>> mmNumberOfPayments = new MMMessageAttribute<CashBalance5, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance5.mmObject();
 			isDerived = false;
@@ -430,6 +481,16 @@ public class CashBalance5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CashBalance5 obj) {
+			return obj.getNumberOfPayments();
+		}
+
+		@Override
+		public void setValue(CashBalance5 obj, Optional<Number> value) {
+			obj.setNumberOfPayments(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RstrctnTp")
@@ -474,7 +535,7 @@ public class CashBalance5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRestrictionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashBalance5, Optional<BalanceRestrictionType1>> mmRestrictionType = new MMMessageAssociationEnd<CashBalance5, Optional<BalanceRestrictionType1>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmAccountRestriction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalance5.mmObject();
@@ -487,7 +548,17 @@ public class CashBalance5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BalanceRestrictionType1.mmObject();
+			type_lazy = () -> BalanceRestrictionType1.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceRestrictionType1> getValue(CashBalance5 obj) {
+			return obj.getRestrictionType();
+		}
+
+		@Override
+		public void setValue(CashBalance5 obj, Optional<BalanceRestrictionType1> value) {
+			obj.setRestrictionType(value.orElse(null));
 		}
 	};
 
@@ -566,7 +637,7 @@ public class CashBalance5 {
 		return restrictionType == null ? Optional.empty() : Optional.of(restrictionType);
 	}
 
-	public CashBalance5 setRestrictionType(com.tools20022.repository.msg.BalanceRestrictionType1 restrictionType) {
+	public CashBalance5 setRestrictionType(BalanceRestrictionType1 restrictionType) {
 		this.restrictionType = restrictionType;
 		return this;
 	}

@@ -133,7 +133,7 @@ public class AcceptedStatusReason9 {
 	 * AcceptedStatusReason3.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptedStatusReason9, AcceptedReason10Choice> mmReasonCode = new MMMessageAssociationEnd<AcceptedStatusReason9, AcceptedReason10Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason9.mmObject();
@@ -148,6 +148,16 @@ public class AcceptedStatusReason9 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcceptedReason10Choice.mmObject();
+		}
+
+		@Override
+		public AcceptedReason10Choice getValue(AcceptedStatusReason9 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason9 obj, AcceptedReason10Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -193,7 +203,7 @@ public class AcceptedStatusReason9 {
 	 * AcceptedStatusReason3.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptedStatusReason9, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AcceptedStatusReason9, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason9.mmObject();
@@ -207,6 +217,16 @@ public class AcceptedStatusReason9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(AcceptedStatusReason9 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason9 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

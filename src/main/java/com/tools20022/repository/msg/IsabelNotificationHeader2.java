@@ -111,7 +111,7 @@ public class IsabelNotificationHeader2 {
 	 * definition} = "Unique identification of the actual sender of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelNotificationHeader2, Max13AlphaNumericText> mmActualSenderIdentification = new MMMessageAttribute<IsabelNotificationHeader2, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelNotificationHeader2.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class IsabelNotificationHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelNotificationHeader2 obj) {
+			return obj.getActualSenderIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelNotificationHeader2 obj, Max13AlphaNumericText value) {
+			obj.setActualSenderIdentification(value);
 		}
 	};
 	@XmlElement(name = "PyldCreDt", required = true)
@@ -154,7 +164,7 @@ public class IsabelNotificationHeader2 {
 	 * "Date and time at which the file in the payload was actually created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelNotificationHeader2, DateAndDateTimeChoice> mmPayloadCreationDate = new MMMessageAssociationEnd<IsabelNotificationHeader2, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelNotificationHeader2.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class IsabelNotificationHeader2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IsabelNotificationHeader2 obj) {
+			return obj.getPayloadCreationDate();
+		}
+
+		@Override
+		public void setValue(IsabelNotificationHeader2 obj, DateAndDateTimeChoice value) {
+			obj.setPayloadCreationDate(value);
 		}
 	};
 	@XmlElement(name = "RfrdMsg", required = true)
@@ -199,7 +219,7 @@ public class IsabelNotificationHeader2 {
 	 * "Unique identification of the message to which the notification refers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferredMessage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelNotificationHeader2, Max14AlphaNumericText> mmReferredMessage = new MMMessageAttribute<IsabelNotificationHeader2, Max14AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelNotificationHeader2.mmObject();
 			isDerived = false;
@@ -210,6 +230,16 @@ public class IsabelNotificationHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max14AlphaNumericText getValue(IsabelNotificationHeader2 obj) {
+			return obj.getReferredMessage();
+		}
+
+		@Override
+		public void setValue(IsabelNotificationHeader2 obj, Max14AlphaNumericText value) {
+			obj.setReferredMessage(value);
 		}
 	};
 	@XmlElement(name = "RfrdSndTmStmp", required = true)
@@ -242,7 +272,7 @@ public class IsabelNotificationHeader2 {
 	 * "Send time stamp of the message to which the notification refers."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferredSendTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelNotificationHeader2, ISODateTime> mmReferredSendTimeStamp = new MMMessageAttribute<IsabelNotificationHeader2, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelNotificationHeader2.mmObject();
 			isDerived = false;
@@ -253,6 +283,16 @@ public class IsabelNotificationHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(IsabelNotificationHeader2 obj) {
+			return obj.getReferredSendTimeStamp();
+		}
+
+		@Override
+		public void setValue(IsabelNotificationHeader2 obj, ISODateTime value) {
+			obj.setReferredSendTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)
@@ -286,7 +326,7 @@ public class IsabelNotificationHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelNotificationHeader2, Max14Text> mmMessageIdentification = new MMMessageAttribute<IsabelNotificationHeader2, Max14Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelNotificationHeader2.mmObject();
 			isDerived = false;
@@ -297,6 +337,16 @@ public class IsabelNotificationHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max14Text.mmObject();
+		}
+
+		@Override
+		public Max14Text getValue(IsabelNotificationHeader2 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelNotificationHeader2 obj, Max14Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 

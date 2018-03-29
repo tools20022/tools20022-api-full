@@ -128,7 +128,7 @@ public class RecordTechnicalData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInconsistencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecordTechnicalData3, Optional<TrueFalseIndicator>> mmInconsistencyIndicator = new MMMessageAttribute<RecordTechnicalData3, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class RecordTechnicalData3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(RecordTechnicalData3 obj) {
+			return obj.getInconsistencyIndicator();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData3 obj, Optional<TrueFalseIndicator> value) {
+			obj.setInconsistencyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LastUpd")
@@ -171,7 +181,7 @@ public class RecordTechnicalData3 {
 	 * "Last date for which data was received for this instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastUpdate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecordTechnicalData3, Optional<ISODateTime>> mmLastUpdate = new MMMessageAttribute<RecordTechnicalData3, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class RecordTechnicalData3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(RecordTechnicalData3 obj) {
+			return obj.getLastUpdate();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData3 obj, Optional<ISODateTime> value) {
+			obj.setLastUpdate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubmissnDtTm")
@@ -215,7 +235,7 @@ public class RecordTechnicalData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubmissionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecordTechnicalData3, Optional<ISODateTime>> mmSubmissionDateTime = new MMMessageAttribute<RecordTechnicalData3, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -226,6 +246,16 @@ public class RecordTechnicalData3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(RecordTechnicalData3 obj) {
+			return obj.getSubmissionDateTime();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData3 obj, Optional<ISODateTime> value) {
+			obj.setSubmissionDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RlvntCmptntAuthrty")
@@ -258,7 +288,7 @@ public class RecordTechnicalData3 {
 	 * "Country code of the relevant competent authority of the instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelevantCompetentAuthority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecordTechnicalData3, Optional<CountryCode>> mmRelevantCompetentAuthority = new MMMessageAttribute<RecordTechnicalData3, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -269,6 +299,16 @@ public class RecordTechnicalData3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(RecordTechnicalData3 obj) {
+			return obj.getRelevantCompetentAuthority();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData3 obj, Optional<CountryCode> value) {
+			obj.setRelevantCompetentAuthority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PblctnPrd")
@@ -301,7 +341,7 @@ public class RecordTechnicalData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPublicationPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RecordTechnicalData3, Optional<Period4Choice>> mmPublicationPeriod = new MMMessageAssociationEnd<RecordTechnicalData3, Optional<Period4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -313,6 +353,16 @@ public class RecordTechnicalData3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period4Choice> getValue(RecordTechnicalData3 obj) {
+			return obj.getPublicationPeriod();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData3 obj, Optional<Period4Choice> value) {
+			obj.setPublicationPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NvrPblshd")
@@ -345,7 +395,7 @@ public class RecordTechnicalData3 {
 	 * definition} = "Flag to say if the record has ever been published."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNeverPublished = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecordTechnicalData3, Optional<TrueFalseIndicator>> mmNeverPublished = new MMMessageAttribute<RecordTechnicalData3, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
@@ -356,6 +406,16 @@ public class RecordTechnicalData3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(RecordTechnicalData3 obj) {
+			return obj.getNeverPublished();
+		}
+
+		@Override
+		public void setValue(RecordTechnicalData3 obj, Optional<TrueFalseIndicator> value) {
+			obj.setNeverPublished(value.orElse(null));
 		}
 	};
 

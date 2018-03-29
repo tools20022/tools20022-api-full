@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.ClearingAccountType3Code;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CollateralAccount5;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -110,7 +111,7 @@ public class ClearingAccount1 {
 	 * definition} = "Indicates the type of clearing account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingAccount1, ClearingAccountType3Code> mmAccountType = new MMMessageAttribute<ClearingAccount1, ClearingAccountType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingAccount1.mmObject();
 			isDerived = false;
@@ -122,9 +123,19 @@ public class ClearingAccount1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ClearingAccountType3Code.mmObject();
 		}
+
+		@Override
+		public ClearingAccountType3Code getValue(ClearingAccount1 obj) {
+			return obj.getAccountType();
+		}
+
+		@Override
+		public void setValue(ClearingAccount1 obj, ClearingAccountType3Code value) {
+			obj.setAccountType(value);
+		}
 	};
 	@XmlElement(name = "CollAcctOwnr", required = true)
-	protected List<com.tools20022.repository.msg.CollateralAccount5> collateralAccountOwner;
+	protected List<CollateralAccount5> collateralAccountOwner;
 	/**
 	 * 
 	 <p>
@@ -158,7 +169,7 @@ public class ClearingAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClearingAccount1, List<CollateralAccount5>> mmCollateralAccountOwner = new MMMessageAssociationEnd<ClearingAccount1, List<CollateralAccount5>>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ClearingAccount1.mmObject();
@@ -169,7 +180,17 @@ public class ClearingAccount1 {
 			definition = "Operational construct used by a central counterparty to record ownership of assets posted as collateral by clearing members to meet their obligations at the central countparty.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralAccount5.mmObject();
+			type_lazy = () -> CollateralAccount5.mmObject();
+		}
+
+		@Override
+		public List<CollateralAccount5> getValue(ClearingAccount1 obj) {
+			return obj.getCollateralAccountOwner();
+		}
+
+		@Override
+		public void setValue(ClearingAccount1 obj, List<CollateralAccount5> value) {
+			obj.setCollateralAccountOwner(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class ClearingAccount1 {
 		return collateralAccountOwner == null ? collateralAccountOwner = new ArrayList<>() : collateralAccountOwner;
 	}
 
-	public ClearingAccount1 setCollateralAccountOwner(List<com.tools20022.repository.msg.CollateralAccount5> collateralAccountOwner) {
+	public ClearingAccount1 setCollateralAccountOwner(List<CollateralAccount5> collateralAccountOwner) {
 		this.collateralAccountOwner = Objects.requireNonNull(collateralAccountOwner);
 		return this;
 	}

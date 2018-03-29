@@ -28,6 +28,10 @@ import com.tools20022.repository.entity.Guarantee;
 import com.tools20022.repository.entity.GuarantorRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndPeriod1;
+import com.tools20022.repository.msg.PercentageAndPeriod1;
+import com.tools20022.repository.msg.QualifiedDocumentInformation1;
+import com.tools20022.repository.msg.QualifiedPartyIdentification1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -123,7 +127,7 @@ public class GuaranteeDetails1 {
 	 * definition} = "Party issuing the guarantee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GuaranteeDetails1, Optional<QualifiedPartyIdentification1>> mmIssuer = new MMMessageAssociationEnd<GuaranteeDetails1, Optional<QualifiedPartyIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeDetails1.mmObject();
@@ -135,7 +139,17 @@ public class GuaranteeDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<QualifiedPartyIdentification1> getValue(GuaranteeDetails1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GuaranteeDetails1 obj, Optional<QualifiedPartyIdentification1> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pos")
@@ -175,7 +189,7 @@ public class GuaranteeDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GuaranteeDetails1, Optional<positiveInteger>> mmPosition = new MMMessageAttribute<GuaranteeDetails1, Optional<positiveInteger>>() {
 		{
 			businessElementTrace_lazy = () -> GuarantorRole.mmPosition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeDetails1.mmObject();
@@ -187,6 +201,16 @@ public class GuaranteeDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> positiveInteger.mmObject();
+		}
+
+		@Override
+		public Optional<positiveInteger> getValue(GuaranteeDetails1 obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(GuaranteeDetails1 obj, Optional<positiveInteger> value) {
+			obj.setPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -218,7 +242,7 @@ public class GuaranteeDetails1 {
 	 * definition} = "Textual description of guarantee details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GuaranteeDetails1, Optional<Max2000Text>> mmDescription = new MMMessageAttribute<GuaranteeDetails1, Optional<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeDetails1.mmObject();
 			isDerived = false;
@@ -230,9 +254,19 @@ public class GuaranteeDetails1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max2000Text> getValue(GuaranteeDetails1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(GuaranteeDetails1 obj, Optional<Max2000Text> value) {
+			obj.setDescription(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "GrntedAmt")
-	protected List<com.tools20022.repository.msg.AmountAndPeriod1> guaranteedAmount;
+	protected List<AmountAndPeriod1> guaranteedAmount;
 	/**
 	 * 
 	 <p>
@@ -265,7 +299,7 @@ public class GuaranteeDetails1 {
 	 * "Amount by time periods, maximum value applies at any given date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGuaranteedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GuaranteeDetails1, List<AmountAndPeriod1>> mmGuaranteedAmount = new MMMessageAssociationEnd<GuaranteeDetails1, List<AmountAndPeriod1>>() {
 		{
 			businessElementTrace_lazy = () -> Guarantee.mmCoveredAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeDetails1.mmObject();
@@ -276,11 +310,21 @@ public class GuaranteeDetails1 {
 			definition = "Amount by time periods, maximum value applies at any given date.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndPeriod1.mmObject();
+			type_lazy = () -> AmountAndPeriod1.mmObject();
+		}
+
+		@Override
+		public List<AmountAndPeriod1> getValue(GuaranteeDetails1 obj) {
+			return obj.getGuaranteedAmount();
+		}
+
+		@Override
+		public void setValue(GuaranteeDetails1 obj, List<AmountAndPeriod1> value) {
+			obj.setGuaranteedAmount(value);
 		}
 	};
 	@XmlElement(name = "Xcss")
-	protected List<com.tools20022.repository.msg.AmountAndPeriod1> excess;
+	protected List<AmountAndPeriod1> excess;
 	/**
 	 * 
 	 <p>
@@ -314,7 +358,7 @@ public class GuaranteeDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExcess = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GuaranteeDetails1, List<AmountAndPeriod1>> mmExcess = new MMMessageAssociationEnd<GuaranteeDetails1, List<AmountAndPeriod1>>() {
 		{
 			businessElementTrace_lazy = () -> Guarantee.mmExcessAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeDetails1.mmObject();
@@ -325,11 +369,21 @@ public class GuaranteeDetails1 {
 			definition = "Amount not covered by the guarantee. Maximum value applies at any given date.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndPeriod1.mmObject();
+			type_lazy = () -> AmountAndPeriod1.mmObject();
+		}
+
+		@Override
+		public List<AmountAndPeriod1> getValue(GuaranteeDetails1 obj) {
+			return obj.getExcess();
+		}
+
+		@Override
+		public void setValue(GuaranteeDetails1 obj, List<AmountAndPeriod1> value) {
+			obj.setExcess(value);
 		}
 	};
 	@XmlElement(name = "CvrdPctg")
-	protected List<com.tools20022.repository.msg.PercentageAndPeriod1> coveredPercentage;
+	protected List<PercentageAndPeriod1> coveredPercentage;
 	/**
 	 * 
 	 <p>
@@ -362,7 +416,7 @@ public class GuaranteeDetails1 {
 	 * "Covered percentage, the maximum value applies at any given date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCoveredPercentage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GuaranteeDetails1, List<PercentageAndPeriod1>> mmCoveredPercentage = new MMMessageAssociationEnd<GuaranteeDetails1, List<PercentageAndPeriod1>>() {
 		{
 			businessElementTrace_lazy = () -> Guarantee.mmCoveredPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeDetails1.mmObject();
@@ -373,11 +427,21 @@ public class GuaranteeDetails1 {
 			definition = "Covered percentage, the maximum value applies at any given date.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PercentageAndPeriod1.mmObject();
+			type_lazy = () -> PercentageAndPeriod1.mmObject();
+		}
+
+		@Override
+		public List<PercentageAndPeriod1> getValue(GuaranteeDetails1 obj) {
+			return obj.getCoveredPercentage();
+		}
+
+		@Override
+		public void setValue(GuaranteeDetails1 obj, List<PercentageAndPeriod1> value) {
+			obj.setCoveredPercentage(value);
 		}
 	};
 	@XmlElement(name = "AssoctdDoc")
-	protected List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument;
+	protected List<QualifiedDocumentInformation1> associatedDocument;
 	/**
 	 * 
 	 <p>
@@ -409,7 +473,7 @@ public class GuaranteeDetails1 {
 	 * definition} = "Associated free form document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssociatedDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GuaranteeDetails1, List<QualifiedDocumentInformation1>> mmAssociatedDocument = new MMMessageAssociationEnd<GuaranteeDetails1, List<QualifiedDocumentInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeDetails1.mmObject();
@@ -420,7 +484,17 @@ public class GuaranteeDetails1 {
 			definition = "Associated free form document.";
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedDocumentInformation1.mmObject();
+			type_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public List<QualifiedDocumentInformation1> getValue(GuaranteeDetails1 obj) {
+			return obj.getAssociatedDocument();
+		}
+
+		@Override
+		public void setValue(GuaranteeDetails1 obj, List<QualifiedDocumentInformation1> value) {
+			obj.setAssociatedDocument(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -452,7 +526,7 @@ public class GuaranteeDetails1 {
 	 * definition} = "Additional information related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GuaranteeDetails1, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<GuaranteeDetails1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeDetails1.mmObject();
 			isDerived = false;
@@ -463,6 +537,16 @@ public class GuaranteeDetails1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(GuaranteeDetails1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(GuaranteeDetails1 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -486,7 +570,7 @@ public class GuaranteeDetails1 {
 		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public GuaranteeDetails1 setIssuer(com.tools20022.repository.msg.QualifiedPartyIdentification1 issuer) {
+	public GuaranteeDetails1 setIssuer(QualifiedPartyIdentification1 issuer) {
 		this.issuer = issuer;
 		return this;
 	}
@@ -513,7 +597,7 @@ public class GuaranteeDetails1 {
 		return guaranteedAmount == null ? guaranteedAmount = new ArrayList<>() : guaranteedAmount;
 	}
 
-	public GuaranteeDetails1 setGuaranteedAmount(List<com.tools20022.repository.msg.AmountAndPeriod1> guaranteedAmount) {
+	public GuaranteeDetails1 setGuaranteedAmount(List<AmountAndPeriod1> guaranteedAmount) {
 		this.guaranteedAmount = Objects.requireNonNull(guaranteedAmount);
 		return this;
 	}
@@ -522,7 +606,7 @@ public class GuaranteeDetails1 {
 		return excess == null ? excess = new ArrayList<>() : excess;
 	}
 
-	public GuaranteeDetails1 setExcess(List<com.tools20022.repository.msg.AmountAndPeriod1> excess) {
+	public GuaranteeDetails1 setExcess(List<AmountAndPeriod1> excess) {
 		this.excess = Objects.requireNonNull(excess);
 		return this;
 	}
@@ -531,7 +615,7 @@ public class GuaranteeDetails1 {
 		return coveredPercentage == null ? coveredPercentage = new ArrayList<>() : coveredPercentage;
 	}
 
-	public GuaranteeDetails1 setCoveredPercentage(List<com.tools20022.repository.msg.PercentageAndPeriod1> coveredPercentage) {
+	public GuaranteeDetails1 setCoveredPercentage(List<PercentageAndPeriod1> coveredPercentage) {
 		this.coveredPercentage = Objects.requireNonNull(coveredPercentage);
 		return this;
 	}
@@ -540,7 +624,7 @@ public class GuaranteeDetails1 {
 		return associatedDocument == null ? associatedDocument = new ArrayList<>() : associatedDocument;
 	}
 
-	public GuaranteeDetails1 setAssociatedDocument(List<com.tools20022.repository.msg.QualifiedDocumentInformation1> associatedDocument) {
+	public GuaranteeDetails1 setAssociatedDocument(List<QualifiedDocumentInformation1> associatedDocument) {
 		this.associatedDocument = Objects.requireNonNull(associatedDocument);
 		return this;
 	}

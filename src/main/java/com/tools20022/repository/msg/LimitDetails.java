@@ -107,7 +107,7 @@ public class LimitDetails {
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitDetails, AmountChoice> mmAmount = new MMMessageAttribute<LimitDetails, AmountChoice>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails.mmObject();
@@ -119,6 +119,16 @@ public class LimitDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountChoice.mmObject();
+		}
+
+		@Override
+		public AmountChoice getValue(LimitDetails obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(LimitDetails obj, AmountChoice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -155,7 +165,7 @@ public class LimitDetails {
 	 * definition} = "Specifies if a limit is a debit limit or a credit limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitDetails, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<LimitDetails, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitDetails.mmObject();
@@ -167,6 +177,16 @@ public class LimitDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(LimitDetails obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(LimitDetails obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 

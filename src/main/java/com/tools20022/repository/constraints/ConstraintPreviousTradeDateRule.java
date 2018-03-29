@@ -56,12 +56,16 @@ public class ConstraintPreviousTradeDateRule {
 	 */
 	public static final MMConstraint<FundConfirmedCashForecastReportV04> forFundConfirmedCashForecastReportV04 = new MMConstraint<FundConfirmedCashForecastReportV04>() {
 		{
-			validator = ConstraintPreviousTradeDateRule::checkFundConfirmedCashForecastReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTradeDateRule";
 			definition = "If any occurrence of FundCashForecastDetails is present, then any occurrence of FundOrSubFundDetails/PreviousTradeDateTime is not allowed.";
 			owner_lazy = () -> FundConfirmedCashForecastReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FundOrSubFundDetails[*]/PreviousTradeDateTime</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundCashForecastDetails[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundConfirmedCashForecastReportV04 obj) throws Exception {
+			checkFundConfirmedCashForecastReportV04(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintPreviousTradeDateRule {
 	 */
 	public static final MMConstraint<FundEstimatedCashForecastReportV04> forFundEstimatedCashForecastReportV04 = new MMConstraint<FundEstimatedCashForecastReportV04>() {
 		{
-			validator = ConstraintPreviousTradeDateRule::checkFundEstimatedCashForecastReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTradeDateRule";
 			definition = "If any occurrence of EstimatedFundCashForecastDetails is present, then any occurrence of FundOrSubFundDetails/PreviousDateTime is not allowed.";
 			owner_lazy = () -> FundEstimatedCashForecastReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FundOrSubFundDetails[*]/PreviousTradeDateTime</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/EstimatedFundCashForecastDetails[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundEstimatedCashForecastReportV04 obj) throws Exception {
+			checkFundEstimatedCashForecastReportV04(obj);
 		}
 	};
 

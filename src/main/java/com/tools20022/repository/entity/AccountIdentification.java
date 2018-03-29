@@ -21,9 +21,10 @@ import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -628,7 +629,7 @@ public class AccountIdentification {
 	 * definition} = "Account for which an identification is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountIdentification, Optional<Account>> mmAccount = new MMBusinessAssociationEnd<AccountIdentification, Optional<Account>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
@@ -637,9 +638,19 @@ public class AccountIdentification {
 			definition = "Account for which an identification is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmIdentification;
+			opposite_lazy = () -> Account.mmIdentification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
+			type_lazy = () -> Account.mmObject();
+		}
+
+		@Override
+		public Optional<Account> getValue(AccountIdentification obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountIdentification obj, Optional<Account> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	protected IBAN2007Identifier iBAN;
@@ -718,7 +729,7 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIBAN = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountIdentification, IBAN2007Identifier> mmIBAN = new MMBusinessAttribute<AccountIdentification, IBAN2007Identifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmIBAN, AccountIdentification5Choice.mmIBAN, CashAccountIdentification1Choice.mmIBAN, AccountIdentification3Choice.mmIBAN, AccountIdentification4Choice.mmIBAN,
 					AccountIdentification4Choice.mmOther, CashAccountIdentification5Choice.mmIBAN, CashAccountIdentification2Choice.mmIBAN, CashAccountIdentification6Choice.mmIBAN, AccountIdentification2.mmIBAN,
@@ -733,12 +744,14 @@ public class AccountIdentification {
 			simpleType_lazy = () -> IBAN2007Identifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountIdentification.class.getMethod("getIBAN", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public IBAN2007Identifier getValue(AccountIdentification obj) {
+			return obj.getIBAN();
+		}
+
+		@Override
+		public void setValue(AccountIdentification obj, IBAN2007Identifier value) {
+			obj.setIBAN(value);
 		}
 	};
 	protected BBANIdentifier bBAN;
@@ -799,7 +812,7 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBBAN = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountIdentification, BBANIdentifier> mmBBAN = new MMBusinessAttribute<AccountIdentification, BBANIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmBBAN, AccountIdentification5Choice.mmBBAN, CashAccountIdentification1Choice.mmBBAN, AccountIdentification3Choice.mmBBAN, AccountIdentification30Choice.mmBBAN,
 					AccountIdentification31Choice.mmBBAN, AccountIdentification39Choice.mmBBAN, CashAccountIdentification7Choice.mmBBAN);
@@ -813,12 +826,14 @@ public class AccountIdentification {
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountIdentification.class.getMethod("getBBAN", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BBANIdentifier getValue(AccountIdentification obj) {
+			return obj.getBBAN();
+		}
+
+		@Override
+		public void setValue(AccountIdentification obj, BBANIdentifier value) {
+			obj.setBBAN(value);
 		}
 	};
 	protected UPICIdentifier uPIC;
@@ -876,7 +891,7 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUPIC = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountIdentification, UPICIdentifier> mmUPIC = new MMBusinessAttribute<AccountIdentification, UPICIdentifier>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmUPIC, CashAccountIdentification1Choice.mmUPIC, AccountIdentification3Choice.mmUPIC, AccountIdentification30Choice.mmUPIC,
 					AccountIdentification31Choice.mmUPIC, AccountIdentification39Choice.mmUPIC, CashAccountIdentification7Choice.mmUPIC);
@@ -890,12 +905,14 @@ public class AccountIdentification {
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountIdentification.class.getMethod("getUPIC", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UPICIdentifier getValue(AccountIdentification obj) {
+			return obj.getUPIC();
+		}
+
+		@Override
+		public void setValue(AccountIdentification obj, UPICIdentifier value) {
+			obj.setUPIC(value);
 		}
 	};
 	protected GenericIdentification proprietaryIdentification;
@@ -1004,7 +1021,7 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmProprietaryIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountIdentification, GenericIdentification> mmProprietaryIdentification = new MMBusinessAssociationEnd<AccountIdentification, GenericIdentification>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmDomesticAccount, AccountIdentification5Choice.mmDomesticAccount, AccountIdentification5Choice.mmDepositoryAccount, AccountIdentification1.mmProprietary,
 					CashAccountIdentification1Choice.mmDomesticAccount, AccountIdentification3Choice.mmProprietaryAccount, CashAccountIdentification5Choice.mmProprietary, CashAccountIdentification2Choice.mmProprietary,
@@ -1025,9 +1042,19 @@ public class AccountIdentification {
 			definition = "Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccount;
+			opposite_lazy = () -> GenericIdentification.mmIdentificationForAccount;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
+			type_lazy = () -> GenericIdentification.mmObject();
+		}
+
+		@Override
+		public GenericIdentification getValue(AccountIdentification obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentification obj, GenericIdentification value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 	protected Max70Text name;
@@ -1350,7 +1377,7 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountIdentification, Max70Text> mmName = new MMBusinessAttribute<AccountIdentification, Max70Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccount5.mmName, SecuritiesAccount1.mmName, InvestmentAccount17.mmName, AccountIdentificationAndName3.mmName, CashAccount12.mmName, SecuritiesAccount4.mmName,
 					InvestmentAccount27.mmName, InvestmentAccount35.mmName, InvestmentAccount19.mmName, InvestmentAccount18.mmName, InvestmentAccount29.mmName, InvestmentAccount28.mmName, InvestmentAccount36.mmName,
@@ -1380,12 +1407,14 @@ public class AccountIdentification {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountIdentification.class.getMethod("getName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max70Text getValue(AccountIdentification obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(AccountIdentification obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	protected GenericIdentification costReferencePattern;
@@ -1433,7 +1462,7 @@ public class AccountIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCostReferencePattern = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountIdentification, GenericIdentification> mmCostReferencePattern = new MMBusinessAssociationEnd<AccountIdentification, GenericIdentification>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountingAccount1.mmCostReferencePattern);
 			isDerived = false;
@@ -1443,9 +1472,19 @@ public class AccountIdentification {
 			definition = "Template describing the mask of the structure for the format of the accounting account identifier; for example \"AABBBBCC\" where AA represents the country, BBBB the service classification, CC the sales area.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccountCostReferencePattern;
+			opposite_lazy = () -> GenericIdentification.mmIdentificationForAccountCostReferencePattern;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
+			type_lazy = () -> GenericIdentification.mmObject();
+		}
+
+		@Override
+		public GenericIdentification getValue(AccountIdentification obj) {
+			return obj.getCostReferencePattern();
+		}
+
+		@Override
+		public void setValue(AccountIdentification obj, GenericIdentification value) {
+			obj.setCostReferencePattern(value);
 		}
 	};
 	protected Max35Text number;
@@ -1495,7 +1534,7 @@ public class AccountIdentification {
 	 * "String of characters (mainly numbers) used to identify an account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountIdentification, Max35Text> mmNumber = new MMBusinessAttribute<AccountIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DetailedInstructionStatus8.mmAccountIdentification, DetailedInstructionStatus8.mmSubAccountIdentification, Entitlement1.mmAccountIdentification,
 					DetailedInstructionStatus11.mmAccountIdentification, DetailedInstructionStatus11.mmSubAccountIdentification);
@@ -1509,12 +1548,14 @@ public class AccountIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountIdentification.class.getMethod("getNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(AccountIdentification obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(AccountIdentification obj, Max35Text value) {
+			obj.setNumber(value);
 		}
 	};
 
@@ -1525,8 +1566,7 @@ public class AccountIdentification {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification";
 				definition = "Unique identifier of an account, as assigned by the account servicer.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccount,
-						com.tools20022.repository.entity.GenericIdentification.mmIdentificationForAccountCostReferencePattern, com.tools20022.repository.entity.Account.mmIdentification);
+				associationDomain_lazy = () -> Arrays.asList(GenericIdentification.mmIdentificationForAccount, GenericIdentification.mmIdentificationForAccountCostReferencePattern, Account.mmIdentification);
 				derivationElement_lazy = () -> Arrays.asList(AccountIdentificationAndPurpose.mmIdentification, AccountIdentification3.mmIdentification, AccountIdentificationFormatChoice.mmSimpleIdentification,
 						AccountIdentificationFormatChoice.mmIdentificationAndPurpose, AccountIdentificationFormatChoice.mmIdentificationAsDSS, AccountIdentificationAndName3.mmIdentification, AccountIdentificationDetails.mmIdentification,
 						AccountIdentification10.mmIdentificationCode, AccountIdentification6Choice.mmForAllAccounts, AccountIdentification6Choice.mmAccountsList, AccountIdentification11Choice.mmForAllAccounts,
@@ -1586,7 +1626,7 @@ public class AccountIdentification {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public AccountIdentification setAccount(com.tools20022.repository.entity.Account account) {
+	public AccountIdentification setAccount(Account account) {
 		this.account = account;
 		return this;
 	}
@@ -1622,7 +1662,7 @@ public class AccountIdentification {
 		return proprietaryIdentification;
 	}
 
-	public AccountIdentification setProprietaryIdentification(com.tools20022.repository.entity.GenericIdentification proprietaryIdentification) {
+	public AccountIdentification setProprietaryIdentification(GenericIdentification proprietaryIdentification) {
 		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
 		return this;
 	}
@@ -1640,7 +1680,7 @@ public class AccountIdentification {
 		return costReferencePattern;
 	}
 
-	public AccountIdentification setCostReferencePattern(com.tools20022.repository.entity.GenericIdentification costReferencePattern) {
+	public AccountIdentification setCostReferencePattern(GenericIdentification costReferencePattern) {
 		this.costReferencePattern = Objects.requireNonNull(costReferencePattern);
 		return this;
 	}

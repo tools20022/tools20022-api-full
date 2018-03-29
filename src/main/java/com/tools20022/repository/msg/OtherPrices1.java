@@ -26,6 +26,8 @@ import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationV02;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price4;
+import com.tools20022.repository.msg.PriceInformation9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -156,7 +158,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMaximum = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherPrices1, Optional<Price4>> mmMaximum = new MMMessageAssociationEnd<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -169,7 +171,17 @@ public class OtherPrices1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			type_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getMaximum();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setMaximum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tx")
@@ -209,7 +221,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherPrices1, Optional<Price4>> mmTransaction = new MMMessageAssociationEnd<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -222,7 +234,17 @@ public class OtherPrices1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			type_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setTransaction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktBrkrComssn")
@@ -266,7 +288,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketBrokerCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmMarketBrokerCommission = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -278,7 +300,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmMarketBrokerCommission);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getMarketBrokerCommission();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setMarketBrokerCommission(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrkdUp")
@@ -320,7 +352,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarkedUp = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherPrices1, Optional<Price4>> mmMarkedUp = new MMMessageAssociationEnd<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -333,7 +365,17 @@ public class OtherPrices1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			type_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getMarkedUp();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setMarkedUp(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrkdDwn")
@@ -375,7 +417,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarkedDown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherPrices1, Optional<Price4>> mmMarkedDown = new MMMessageAssociationEnd<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -388,7 +430,17 @@ public class OtherPrices1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			type_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getMarkedDown();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setMarkedDown(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetDscld")
@@ -430,7 +482,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetDisclosed = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmNetDisclosed = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -442,7 +494,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmNetDisclosed);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getNetDisclosed();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setNetDisclosed(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetUdscld")
@@ -485,7 +547,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetUndisclosed = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmNetUndisclosed = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -497,7 +559,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmNetUndisclosed);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getNetUndisclosed();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setNetUndisclosed(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtnlGrss")
@@ -539,7 +611,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalGross = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmNotionalGross = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -551,7 +623,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmNotionalGross);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getNotionalGross();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setNotionalGross(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BchmkWghtdAvrg")
@@ -595,7 +677,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBenchmarkWeightedAverage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmBenchmarkWeightedAverage = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -607,7 +689,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmBenchmarkWeightedAverage);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getBenchmarkWeightedAverage();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setBenchmarkWeightedAverage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AllMktsWghtdAvrg")
@@ -651,7 +743,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllMarketsWeightedAverage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmAllMarketsWeightedAverage = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -663,7 +755,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmAllMarketsWeightedAverage);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getAllMarketsWeightedAverage();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setAllMarketsWeightedAverage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bchmk")
@@ -706,7 +808,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBenchmark = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmBenchmark = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -718,7 +820,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmBenchmark);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getBenchmark();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setBenchmark(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrPric")
@@ -759,7 +871,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmOtherPrice = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -771,7 +883,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmOtherPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getOtherPrice();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setOtherPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndxPric")
@@ -814,7 +936,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmIndexPrice = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -826,7 +948,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmIndexPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getIndexPrice();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setIndexPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptdPric")
@@ -870,7 +1002,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<Price4>> mmReportedPrice = new MMMessageAttribute<OtherPrices1, Optional<Price4>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -882,7 +1014,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmReportedPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(OtherPrices1 obj) {
+			return obj.getReportedPrice();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<Price4> value) {
+			obj.setReportedPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefPric")
@@ -927,7 +1069,7 @@ public class OtherPrices1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferencePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherPrices1, Optional<PriceInformation9>> mmReferencePrice = new MMMessageAttribute<OtherPrices1, Optional<PriceInformation9>>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherPrices1.mmObject();
@@ -939,7 +1081,17 @@ public class OtherPrices1 {
 			nextVersions_lazy = () -> Arrays.asList(OtherPrices2.mmReferencePrice);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceInformation9.mmObject();
+			complexType_lazy = () -> PriceInformation9.mmObject();
+		}
+
+		@Override
+		public Optional<PriceInformation9> getValue(OtherPrices1 obj) {
+			return obj.getReferencePrice();
+		}
+
+		@Override
+		public void setValue(OtherPrices1 obj, Optional<PriceInformation9> value) {
+			obj.setReferencePrice(value.orElse(null));
 		}
 	};
 
@@ -967,7 +1119,7 @@ public class OtherPrices1 {
 		return maximum == null ? Optional.empty() : Optional.of(maximum);
 	}
 
-	public OtherPrices1 setMaximum(com.tools20022.repository.msg.Price4 maximum) {
+	public OtherPrices1 setMaximum(Price4 maximum) {
 		this.maximum = maximum;
 		return this;
 	}
@@ -976,7 +1128,7 @@ public class OtherPrices1 {
 		return transaction == null ? Optional.empty() : Optional.of(transaction);
 	}
 
-	public OtherPrices1 setTransaction(com.tools20022.repository.msg.Price4 transaction) {
+	public OtherPrices1 setTransaction(Price4 transaction) {
 		this.transaction = transaction;
 		return this;
 	}
@@ -985,7 +1137,7 @@ public class OtherPrices1 {
 		return marketBrokerCommission == null ? Optional.empty() : Optional.of(marketBrokerCommission);
 	}
 
-	public OtherPrices1 setMarketBrokerCommission(com.tools20022.repository.msg.Price4 marketBrokerCommission) {
+	public OtherPrices1 setMarketBrokerCommission(Price4 marketBrokerCommission) {
 		this.marketBrokerCommission = marketBrokerCommission;
 		return this;
 	}
@@ -994,7 +1146,7 @@ public class OtherPrices1 {
 		return markedUp == null ? Optional.empty() : Optional.of(markedUp);
 	}
 
-	public OtherPrices1 setMarkedUp(com.tools20022.repository.msg.Price4 markedUp) {
+	public OtherPrices1 setMarkedUp(Price4 markedUp) {
 		this.markedUp = markedUp;
 		return this;
 	}
@@ -1003,7 +1155,7 @@ public class OtherPrices1 {
 		return markedDown == null ? Optional.empty() : Optional.of(markedDown);
 	}
 
-	public OtherPrices1 setMarkedDown(com.tools20022.repository.msg.Price4 markedDown) {
+	public OtherPrices1 setMarkedDown(Price4 markedDown) {
 		this.markedDown = markedDown;
 		return this;
 	}
@@ -1012,7 +1164,7 @@ public class OtherPrices1 {
 		return netDisclosed == null ? Optional.empty() : Optional.of(netDisclosed);
 	}
 
-	public OtherPrices1 setNetDisclosed(com.tools20022.repository.msg.Price4 netDisclosed) {
+	public OtherPrices1 setNetDisclosed(Price4 netDisclosed) {
 		this.netDisclosed = netDisclosed;
 		return this;
 	}
@@ -1021,7 +1173,7 @@ public class OtherPrices1 {
 		return netUndisclosed == null ? Optional.empty() : Optional.of(netUndisclosed);
 	}
 
-	public OtherPrices1 setNetUndisclosed(com.tools20022.repository.msg.Price4 netUndisclosed) {
+	public OtherPrices1 setNetUndisclosed(Price4 netUndisclosed) {
 		this.netUndisclosed = netUndisclosed;
 		return this;
 	}
@@ -1030,7 +1182,7 @@ public class OtherPrices1 {
 		return notionalGross == null ? Optional.empty() : Optional.of(notionalGross);
 	}
 
-	public OtherPrices1 setNotionalGross(com.tools20022.repository.msg.Price4 notionalGross) {
+	public OtherPrices1 setNotionalGross(Price4 notionalGross) {
 		this.notionalGross = notionalGross;
 		return this;
 	}
@@ -1039,7 +1191,7 @@ public class OtherPrices1 {
 		return benchmarkWeightedAverage == null ? Optional.empty() : Optional.of(benchmarkWeightedAverage);
 	}
 
-	public OtherPrices1 setBenchmarkWeightedAverage(com.tools20022.repository.msg.Price4 benchmarkWeightedAverage) {
+	public OtherPrices1 setBenchmarkWeightedAverage(Price4 benchmarkWeightedAverage) {
 		this.benchmarkWeightedAverage = benchmarkWeightedAverage;
 		return this;
 	}
@@ -1048,7 +1200,7 @@ public class OtherPrices1 {
 		return allMarketsWeightedAverage == null ? Optional.empty() : Optional.of(allMarketsWeightedAverage);
 	}
 
-	public OtherPrices1 setAllMarketsWeightedAverage(com.tools20022.repository.msg.Price4 allMarketsWeightedAverage) {
+	public OtherPrices1 setAllMarketsWeightedAverage(Price4 allMarketsWeightedAverage) {
 		this.allMarketsWeightedAverage = allMarketsWeightedAverage;
 		return this;
 	}
@@ -1057,7 +1209,7 @@ public class OtherPrices1 {
 		return benchmark == null ? Optional.empty() : Optional.of(benchmark);
 	}
 
-	public OtherPrices1 setBenchmark(com.tools20022.repository.msg.Price4 benchmark) {
+	public OtherPrices1 setBenchmark(Price4 benchmark) {
 		this.benchmark = benchmark;
 		return this;
 	}
@@ -1066,7 +1218,7 @@ public class OtherPrices1 {
 		return otherPrice == null ? Optional.empty() : Optional.of(otherPrice);
 	}
 
-	public OtherPrices1 setOtherPrice(com.tools20022.repository.msg.Price4 otherPrice) {
+	public OtherPrices1 setOtherPrice(Price4 otherPrice) {
 		this.otherPrice = otherPrice;
 		return this;
 	}
@@ -1075,7 +1227,7 @@ public class OtherPrices1 {
 		return indexPrice == null ? Optional.empty() : Optional.of(indexPrice);
 	}
 
-	public OtherPrices1 setIndexPrice(com.tools20022.repository.msg.Price4 indexPrice) {
+	public OtherPrices1 setIndexPrice(Price4 indexPrice) {
 		this.indexPrice = indexPrice;
 		return this;
 	}
@@ -1084,7 +1236,7 @@ public class OtherPrices1 {
 		return reportedPrice == null ? Optional.empty() : Optional.of(reportedPrice);
 	}
 
-	public OtherPrices1 setReportedPrice(com.tools20022.repository.msg.Price4 reportedPrice) {
+	public OtherPrices1 setReportedPrice(Price4 reportedPrice) {
 		this.reportedPrice = reportedPrice;
 		return this;
 	}
@@ -1093,7 +1245,7 @@ public class OtherPrices1 {
 		return referencePrice == null ? Optional.empty() : Optional.of(referencePrice);
 	}
 
-	public OtherPrices1 setReferencePrice(com.tools20022.repository.msg.PriceInformation9 referencePrice) {
+	public OtherPrices1 setReferencePrice(PriceInformation9 referencePrice) {
 		this.referencePrice = referencePrice;
 		return this;
 	}

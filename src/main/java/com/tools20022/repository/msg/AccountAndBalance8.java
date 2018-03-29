@@ -112,7 +112,7 @@ public class AccountAndBalance8 {
 	 * definition} = "Account where financial instruments are maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountAndBalance8, RestrictedFINXMax35Text> mmSafekeepingAccount = new MMMessageAttribute<AccountAndBalance8, RestrictedFINXMax35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance8.mmObject();
@@ -125,6 +125,16 @@ public class AccountAndBalance8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(AccountAndBalance8 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance8 obj, RestrictedFINXMax35Text value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "ConfdBal", required = true)
@@ -166,7 +176,7 @@ public class AccountAndBalance8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConfirmedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountAndBalance8, BalanceFormat2Choice> mmConfirmedBalance = new MMMessageAssociationEnd<AccountAndBalance8, BalanceFormat2Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndBalance8.mmObject();
@@ -180,6 +190,16 @@ public class AccountAndBalance8 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BalanceFormat2Choice.mmObject();
+		}
+
+		@Override
+		public BalanceFormat2Choice getValue(AccountAndBalance8 obj) {
+			return obj.getConfirmedBalance();
+		}
+
+		@Override
+		public void setValue(AccountAndBalance8 obj, BalanceFormat2Choice value) {
+			obj.setConfirmedBalance(value);
 		}
 	};
 

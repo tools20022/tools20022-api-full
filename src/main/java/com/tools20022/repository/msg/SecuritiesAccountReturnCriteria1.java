@@ -131,7 +131,7 @@ public class SecuritiesAccountReturnCriteria1 {
 	 * SecuritiesAccountReturnCriteria.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>> mmAccountIdentification = new MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class SecuritiesAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SecuritiesAccountReturnCriteria1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyId")
@@ -182,7 +192,7 @@ public class SecuritiesAccountReturnCriteria1 {
 	 * SecuritiesAccountReturnCriteria.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>> mmPartyIdentification = new MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -194,6 +204,16 @@ public class SecuritiesAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SecuritiesAccountReturnCriteria1 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setPartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyTp")
@@ -233,7 +253,7 @@ public class SecuritiesAccountReturnCriteria1 {
 	 * SecuritiesAccountReturnCriteria.mmPartyType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>> mmPartyType = new MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -245,6 +265,16 @@ public class SecuritiesAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SecuritiesAccountReturnCriteria1 obj) {
+			return obj.getPartyType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setPartyType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -282,7 +312,7 @@ public class SecuritiesAccountReturnCriteria1 {
 	 * SecuritiesAccountReturnCriteria.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>> mmAccountServicer = new MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -294,6 +324,16 @@ public class SecuritiesAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SecuritiesAccountReturnCriteria1 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctTp")
@@ -331,7 +371,7 @@ public class SecuritiesAccountReturnCriteria1 {
 	 * SecuritiesAccountReturnCriteria.mmAccountType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>> mmAccountType = new MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -343,6 +383,16 @@ public class SecuritiesAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SecuritiesAccountReturnCriteria1 obj) {
+			return obj.getAccountType();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setAccountType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OpngDt")
@@ -381,7 +431,7 @@ public class SecuritiesAccountReturnCriteria1 {
 	 * SecuritiesAccountReturnCriteria.mmOpeningDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>> mmOpeningDate = new MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -393,6 +443,16 @@ public class SecuritiesAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SecuritiesAccountReturnCriteria1 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setOpeningDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -431,7 +491,7 @@ public class SecuritiesAccountReturnCriteria1 {
 	 * SecuritiesAccountReturnCriteria.mmClosingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>> mmClosingDate = new MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -443,6 +503,16 @@ public class SecuritiesAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SecuritiesAccountReturnCriteria1 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndInvstrFlg")
@@ -482,7 +552,7 @@ public class SecuritiesAccountReturnCriteria1 {
 	 * SecuritiesAccountReturnCriteria.mmEndInvestorFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>> mmEndInvestorFlag = new MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -494,6 +564,16 @@ public class SecuritiesAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SecuritiesAccountReturnCriteria1 obj) {
+			return obj.getEndInvestorFlag();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setEndInvestorFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricgSchme")
@@ -532,7 +612,7 @@ public class SecuritiesAccountReturnCriteria1 {
 	 * SecuritiesAccountReturnCriteria.mmPricingScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>> mmPricingScheme = new MMMessageAttribute<SecuritiesAccountReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -544,6 +624,16 @@ public class SecuritiesAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(SecuritiesAccountReturnCriteria1 obj) {
+			return obj.getPricingScheme();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setPricingScheme(value.orElse(null));
 		}
 	};
 

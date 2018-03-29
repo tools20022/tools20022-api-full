@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.entity.LiquidityManagementLimit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AgreedRate2;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,7 +124,7 @@ public class CurrencyFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyFactors1, CurrencyCode> mmCurrency = new MMMessageAttribute<CurrencyFactors1, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
@@ -135,6 +136,16 @@ public class CurrencyFactors1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CurrencyFactors1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyFactors1 obj, CurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "ShrtPosLmt", required = true)
@@ -173,7 +184,7 @@ public class CurrencyFactors1 {
 	 * "Maximum allowed short position in the currency during settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortPositionLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyFactors1, ImpliedCurrencyAndAmount> mmShortPositionLimit = new MMMessageAttribute<CurrencyFactors1, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
@@ -185,6 +196,16 @@ public class CurrencyFactors1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(CurrencyFactors1 obj) {
+			return obj.getShortPositionLimit();
+		}
+
+		@Override
+		public void setValue(CurrencyFactors1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setShortPositionLimit(value);
 		}
 	};
 	@XmlElement(name = "MinPayInAmt", required = true)
@@ -219,7 +240,7 @@ public class CurrencyFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumPayInAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyFactors1, ImpliedCurrencyAndAmount> mmMinimumPayInAmount = new MMMessageAttribute<CurrencyFactors1, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
 			isDerived = false;
@@ -230,6 +251,16 @@ public class CurrencyFactors1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(CurrencyFactors1 obj) {
+			return obj.getMinimumPayInAmount();
+		}
+
+		@Override
+		public void setValue(CurrencyFactors1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setMinimumPayInAmount(value);
 		}
 	};
 	@XmlElement(name = "VoltlyMrgn", required = true)
@@ -269,7 +300,7 @@ public class CurrencyFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVolatilityMargin = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyFactors1, PercentageRate> mmVolatilityMargin = new MMMessageAttribute<CurrencyFactors1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> LiquidityManagementLimit.mmVolatilityMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
@@ -281,6 +312,16 @@ public class CurrencyFactors1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(CurrencyFactors1 obj) {
+			return obj.getVolatilityMargin();
+		}
+
+		@Override
+		public void setValue(CurrencyFactors1 obj, PercentageRate value) {
+			obj.setVolatilityMargin(value);
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -318,7 +359,7 @@ public class CurrencyFactors1 {
 	 * "Exchange rate used in the calculation of the pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyFactors1, Optional<AgreedRate2>> mmRate = new MMMessageAttribute<CurrencyFactors1, Optional<AgreedRate2>>() {
 		{
 			businessElementTrace_lazy = () -> LiquidityManagementLimit.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
@@ -329,7 +370,17 @@ public class CurrencyFactors1 {
 			definition = "Exchange rate used in the calculation of the pay-in schedule.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AgreedRate2.mmObject();
+			complexType_lazy = () -> AgreedRate2.mmObject();
+		}
+
+		@Override
+		public Optional<AgreedRate2> getValue(CurrencyFactors1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(CurrencyFactors1 obj, Optional<AgreedRate2> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 
@@ -395,7 +446,7 @@ public class CurrencyFactors1 {
 		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public CurrencyFactors1 setRate(com.tools20022.repository.msg.AgreedRate2 rate) {
+	public CurrencyFactors1 setRate(AgreedRate2 rate) {
 		this.rate = rate;
 		return this;
 	}

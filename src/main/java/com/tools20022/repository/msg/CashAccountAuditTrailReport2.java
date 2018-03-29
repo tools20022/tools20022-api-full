@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AuditTrailOrBusinessError2Choice;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class CashAccountAuditTrailReport2 {
 	 * CashAccountAuditTrailReport1.mmCashAccountAuditTrailOrError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountAuditTrailReport2, AuditTrailOrBusinessError2Choice> mmCashAccountAuditTrailOrError = new MMMessageAssociationEnd<CashAccountAuditTrailReport2, AuditTrailOrBusinessError2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailReport2.mmObject();
 			isDerived = false;
@@ -126,6 +127,16 @@ public class CashAccountAuditTrailReport2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AuditTrailOrBusinessError2Choice.mmObject();
+		}
+
+		@Override
+		public AuditTrailOrBusinessError2Choice getValue(CashAccountAuditTrailReport2 obj) {
+			return obj.getCashAccountAuditTrailOrError();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailReport2 obj, AuditTrailOrBusinessError2Choice value) {
+			obj.setCashAccountAuditTrailOrError(value);
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -163,7 +174,7 @@ public class CashAccountAuditTrailReport2 {
 	 * CashAccountAuditTrailReport1.mmDatePeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountAuditTrailReport2, Optional<DateSearchChoice>> mmDatePeriod = new MMMessageAttribute<CashAccountAuditTrailReport2, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailReport2.mmObject();
 			isDerived = false;
@@ -175,6 +186,16 @@ public class CashAccountAuditTrailReport2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(CashAccountAuditTrailReport2 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailReport2 obj, Optional<DateSearchChoice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcctId", required = true)
@@ -212,7 +233,7 @@ public class CashAccountAuditTrailReport2 {
 	 * CashAccountAuditTrailReport1.mmCashAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountAuditTrailReport2, CashAccount24> mmCashAccountIdentification = new MMMessageAttribute<CashAccountAuditTrailReport2, CashAccount24>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailReport2.mmObject();
 			isDerived = false;
@@ -223,7 +244,17 @@ public class CashAccountAuditTrailReport2 {
 			previousVersion_lazy = () -> CashAccountAuditTrailReport1.mmCashAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			complexType_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public CashAccount24 getValue(CashAccountAuditTrailReport2 obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailReport2 obj, CashAccount24 value) {
+			obj.setCashAccountIdentification(value);
 		}
 	};
 
@@ -264,7 +295,7 @@ public class CashAccountAuditTrailReport2 {
 		return cashAccountIdentification;
 	}
 
-	public CashAccountAuditTrailReport2 setCashAccountIdentification(com.tools20022.repository.msg.CashAccount24 cashAccountIdentification) {
+	public CashAccountAuditTrailReport2 setCashAccountIdentification(CashAccount24 cashAccountIdentification) {
 		this.cashAccountIdentification = Objects.requireNonNull(cashAccountIdentification);
 		return this;
 	}

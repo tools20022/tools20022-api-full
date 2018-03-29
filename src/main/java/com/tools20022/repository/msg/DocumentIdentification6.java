@@ -128,7 +128,7 @@ public class DocumentIdentification6 {
 	 * definition} = "Identification of a set of data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification6, Max35Text> mmIdentification = new MMMessageAttribute<DocumentIdentification6, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification6.mmObject();
@@ -140,6 +140,16 @@ public class DocumentIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification6 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification6 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -178,7 +188,7 @@ public class DocumentIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification6, Number> mmVersion = new MMMessageAttribute<DocumentIdentification6, Number>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmDocumentVersion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification6.mmObject();
@@ -190,6 +200,16 @@ public class DocumentIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(DocumentIdentification6 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification6 obj, Number value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "AmdmntSeqNb")
@@ -224,7 +244,7 @@ public class DocumentIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendmentSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification6, Optional<Max3NumericText>> mmAmendmentSequenceNumber = new MMMessageAttribute<DocumentIdentification6, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification6.mmObject();
 			isDerived = false;
@@ -235,6 +255,16 @@ public class DocumentIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(DocumentIdentification6 obj) {
+			return obj.getAmendmentSequenceNumber();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification6 obj, Optional<Max3NumericText> value) {
+			obj.setAmendmentSequenceNumber(value.orElse(null));
 		}
 	};
 

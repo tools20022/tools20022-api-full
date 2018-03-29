@@ -100,7 +100,7 @@ public class DataFormat1Choice {
 	 * definition} = "Specification of data in structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataFormat1Choice, GenericIdentification2> mmStructured = new MMMessageAttribute<DataFormat1Choice, GenericIdentification2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DataFormat1Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class DataFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification2.mmObject();
+		}
+
+		@Override
+		public GenericIdentification2 getValue(DataFormat1Choice obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(DataFormat1Choice obj, GenericIdentification2 value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "Ustrd", required = true)
@@ -142,7 +152,7 @@ public class DataFormat1Choice {
 	 * definition} = "Specification of data in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DataFormat1Choice, Max140Text> mmUnstructured = new MMMessageAttribute<DataFormat1Choice, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DataFormat1Choice.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class DataFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(DataFormat1Choice obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(DataFormat1Choice obj, Max140Text value) {
+			obj.setUnstructured(value);
 		}
 	};
 

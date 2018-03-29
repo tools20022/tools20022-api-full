@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorCancellationResponse4;
 import com.tools20022.repository.msg.ContentInformationType11;
 import com.tools20022.repository.msg.Header10;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +137,7 @@ public class AcceptorCancellationResponseV04 {
 	 * AcceptorCancellationResponseV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCancellationResponseV04, Header10> mmHeader = new MMMessageBuildingBlock<AcceptorCancellationResponseV04, Header10>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,12 +150,14 @@ public class AcceptorCancellationResponseV04 {
 			complexType_lazy = () -> Header10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCancellationResponseV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header10 getValue(AcceptorCancellationResponseV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationResponseV04 obj, Header10 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "CxlRspn", required = true)
@@ -197,7 +198,7 @@ public class AcceptorCancellationResponseV04 {
 	 * AcceptorCancellationResponseV03.mmCancellationResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCancellationResponseV04, AcceptorCancellationResponse4> mmCancellationResponse = new MMMessageBuildingBlock<AcceptorCancellationResponseV04, AcceptorCancellationResponse4>() {
 		{
 			xmlTag = "CxlRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +211,14 @@ public class AcceptorCancellationResponseV04 {
 			complexType_lazy = () -> AcceptorCancellationResponse4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCancellationResponseV04.class.getMethod("getCancellationResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorCancellationResponse4 getValue(AcceptorCancellationResponseV04 obj) {
+			return obj.getCancellationResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationResponseV04 obj, AcceptorCancellationResponse4 value) {
+			obj.setCancellationResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -256,7 +259,7 @@ public class AcceptorCancellationResponseV04 {
 	 * AcceptorCancellationResponseV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorCancellationResponseV04, ContentInformationType11> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorCancellationResponseV04, ContentInformationType11>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +272,14 @@ public class AcceptorCancellationResponseV04 {
 			complexType_lazy = () -> ContentInformationType11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorCancellationResponseV04.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType11 getValue(AcceptorCancellationResponseV04 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationResponseV04 obj, ContentInformationType11 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

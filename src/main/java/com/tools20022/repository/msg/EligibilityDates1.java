@@ -127,7 +127,7 @@ public class EligibilityDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitlementFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibilityDates1, ISODate> mmEntitlementFixingDate = new MMMessageAttribute<EligibilityDates1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementFixingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibilityDates1.mmObject();
@@ -139,6 +139,16 @@ public class EligibilityDates1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(EligibilityDates1 obj) {
+			return obj.getEntitlementFixingDate();
+		}
+
+		@Override
+		public void setValue(EligibilityDates1 obj, ISODate value) {
+			obj.setEntitlementFixingDate(value);
 		}
 	};
 

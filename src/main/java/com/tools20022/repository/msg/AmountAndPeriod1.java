@@ -109,7 +109,7 @@ public class AmountAndPeriod1 {
 	 * definition} = "Amount of this period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndPeriod1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndPeriod1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndPeriod.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndPeriod1.mmObject();
@@ -121,6 +121,16 @@ public class AmountAndPeriod1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AmountAndPeriod1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndPeriod1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -157,7 +167,7 @@ public class AmountAndPeriod1 {
 	 * definition} = "Start of period or immediate if not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndPeriod1, Optional<ISODate>> mmStartDate = new MMMessageAttribute<AmountAndPeriod1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndPeriod1.mmObject();
@@ -169,6 +179,16 @@ public class AmountAndPeriod1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AmountAndPeriod1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(AmountAndPeriod1 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt")
@@ -205,7 +225,7 @@ public class AmountAndPeriod1 {
 	 * definition} = "End of period or indefinite if not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndPeriod1, Optional<ISODate>> mmEndDate = new MMMessageAttribute<AmountAndPeriod1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndPeriod1.mmObject();
@@ -217,6 +237,16 @@ public class AmountAndPeriod1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AmountAndPeriod1 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(AmountAndPeriod1 obj, Optional<ISODate> value) {
+			obj.setEndDate(value.orElse(null));
 		}
 	};
 

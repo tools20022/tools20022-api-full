@@ -118,7 +118,6 @@ class ListBuilderForGeneratedRepository_27 {
 		list.add((T) TaxRecordDetails2.mmObject());
 		list.add((T) RemittanceInformation14.mmObject());
 		list.add((T) CashAccount36.mmObject());
-		list.add((T) PartyIdentification126.mmObject());
 		list.add((T) PreviousYear2Choice.mmObject());
 		list.add((T) ISAPortfolio4Choice.mmObject());
 		list.add((T) ISAYearsOfIssue7.mmObject());
@@ -525,6 +524,7 @@ class ListBuilderForGeneratedRepository_27 {
 		list.add((T) SettlementDate20Choice.mmObject());
 		list.add((T) FinancialInstrumentAttributes97.mmObject());
 		list.add((T) Quantity15.mmObject());
+		list.add((T) QuantityBreakdown48.mmObject());
 		ListBuilderForGeneratedRepository_28.addElems(list);
 		return list;
 	}

@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.PartyIdentification26Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DeliveringPartiesAndAccount6;
+import com.tools20022.repository.msg.ReceivingPartiesAndAccount5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +116,7 @@ public class FundSettlementParameters5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundSettlementParameters5, PartyIdentification26Choice> mmSettlementPlace = new MMMessageAttribute<FundSettlementParameters5, PartyIdentification26Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters5.mmObject();
@@ -126,6 +128,16 @@ public class FundSettlementParameters5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification26Choice getValue(FundSettlementParameters5 obj) {
+			return obj.getSettlementPlace();
+		}
+
+		@Override
+		public void setValue(FundSettlementParameters5 obj, PartyIdentification26Choice value) {
+			obj.setSettlementPlace(value);
 		}
 	};
 	@XmlElement(name = "RcvgSdDtls")
@@ -164,7 +176,7 @@ public class FundSettlementParameters5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingSideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundSettlementParameters5, Optional<ReceivingPartiesAndAccount5>> mmReceivingSideDetails = new MMMessageAssociationEnd<FundSettlementParameters5, Optional<ReceivingPartiesAndAccount5>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters5.mmObject();
@@ -176,7 +188,17 @@ public class FundSettlementParameters5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount5.mmObject();
+			type_lazy = () -> ReceivingPartiesAndAccount5.mmObject();
+		}
+
+		@Override
+		public Optional<ReceivingPartiesAndAccount5> getValue(FundSettlementParameters5 obj) {
+			return obj.getReceivingSideDetails();
+		}
+
+		@Override
+		public void setValue(FundSettlementParameters5 obj, Optional<ReceivingPartiesAndAccount5> value) {
+			obj.setReceivingSideDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvrgSdDtls", required = true)
@@ -215,7 +237,7 @@ public class FundSettlementParameters5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveringSideDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundSettlementParameters5, DeliveringPartiesAndAccount6> mmDeliveringSideDetails = new MMMessageAssociationEnd<FundSettlementParameters5, DeliveringPartiesAndAccount6>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters5.mmObject();
@@ -227,7 +249,17 @@ public class FundSettlementParameters5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount6.mmObject();
+			type_lazy = () -> DeliveringPartiesAndAccount6.mmObject();
+		}
+
+		@Override
+		public DeliveringPartiesAndAccount6 getValue(FundSettlementParameters5 obj) {
+			return obj.getDeliveringSideDetails();
+		}
+
+		@Override
+		public void setValue(FundSettlementParameters5 obj, DeliveringPartiesAndAccount6 value) {
+			obj.setDeliveringSideDetails(value);
 		}
 	};
 
@@ -259,7 +291,7 @@ public class FundSettlementParameters5 {
 		return receivingSideDetails == null ? Optional.empty() : Optional.of(receivingSideDetails);
 	}
 
-	public FundSettlementParameters5 setReceivingSideDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount5 receivingSideDetails) {
+	public FundSettlementParameters5 setReceivingSideDetails(ReceivingPartiesAndAccount5 receivingSideDetails) {
 		this.receivingSideDetails = receivingSideDetails;
 		return this;
 	}
@@ -268,7 +300,7 @@ public class FundSettlementParameters5 {
 		return deliveringSideDetails;
 	}
 
-	public FundSettlementParameters5 setDeliveringSideDetails(com.tools20022.repository.msg.DeliveringPartiesAndAccount6 deliveringSideDetails) {
+	public FundSettlementParameters5 setDeliveringSideDetails(DeliveringPartiesAndAccount6 deliveringSideDetails) {
 		this.deliveringSideDetails = Objects.requireNonNull(deliveringSideDetails);
 		return this;
 	}

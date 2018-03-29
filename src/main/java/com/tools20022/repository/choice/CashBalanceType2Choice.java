@@ -119,7 +119,7 @@ public class CashBalanceType2Choice {
 	 * CashBalanceType1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceType2Choice, BalanceType12Code> mmCode = new MMMessageAttribute<CashBalanceType2Choice, BalanceType12Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashBalanceType2Choice.mmObject();
@@ -133,6 +133,16 @@ public class CashBalanceType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceType12Code.mmObject();
+		}
+
+		@Override
+		public BalanceType12Code getValue(CashBalanceType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CashBalanceType2Choice obj, BalanceType12Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -178,7 +188,7 @@ public class CashBalanceType2Choice {
 	 * CashBalanceType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceType2Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<CashBalanceType2Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashBalanceType2Choice.mmObject();
@@ -192,6 +202,16 @@ public class CashBalanceType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CashBalanceType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CashBalanceType2Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

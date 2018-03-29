@@ -27,6 +27,10 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.PhoneNumber;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount14;
+import com.tools20022.repository.msg.Forms;
+import com.tools20022.repository.msg.PostalAddress1;
+import com.tools20022.repository.msg.ProcessingCharacteristics1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -144,7 +148,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderDeskContactDetails, Max350Text> mmName = new MMMessageAttribute<OrderDeskContactDetails, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -156,6 +160,16 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(OrderDeskContactDetails obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, Max350Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PstlAdr", required = true)
@@ -193,7 +207,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderDeskContactDetails, PostalAddress1> mmPostalAddress = new MMMessageAssociationEnd<OrderDeskContactDetails, PostalAddress1>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -205,7 +219,17 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public PostalAddress1 getValue(OrderDeskContactDetails obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, PostalAddress1 value) {
+			obj.setPostalAddress(value);
 		}
 	};
 	@XmlElement(name = "PhneNb", required = true)
@@ -244,7 +268,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderDeskContactDetails, PhoneNumber> mmPhoneNumber = new MMMessageAttribute<OrderDeskContactDetails, PhoneNumber>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmPhoneNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -256,6 +280,16 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public PhoneNumber getValue(OrderDeskContactDetails obj) {
+			return obj.getPhoneNumber();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, PhoneNumber value) {
+			obj.setPhoneNumber(value);
 		}
 	};
 	@XmlElement(name = "FaxNb", required = true)
@@ -294,7 +328,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderDeskContactDetails, PhoneNumber> mmFaxNumber = new MMMessageAttribute<OrderDeskContactDetails, PhoneNumber>() {
 		{
 			businessElementTrace_lazy = () -> PhoneAddress.mmFaxNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -306,6 +340,16 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
+		}
+
+		@Override
+		public PhoneNumber getValue(OrderDeskContactDetails obj) {
+			return obj.getFaxNumber();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, PhoneNumber value) {
+			obj.setFaxNumber(value);
 		}
 	};
 	@XmlElement(name = "EmailAdr")
@@ -342,7 +386,7 @@ public class OrderDeskContactDetails {
 	 * definition} = "Address for electronic mail (e-mail)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderDeskContactDetails, Optional<Max256Text>> mmEmailAddress = new MMMessageAttribute<OrderDeskContactDetails, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -354,6 +398,16 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(OrderDeskContactDetails obj) {
+			return obj.getEmailAddress();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, Optional<Max256Text> value) {
+			obj.setEmailAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -393,7 +447,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderDeskContactDetails, BICIdentifier> mmIdentification = new MMMessageAttribute<OrderDeskContactDetails, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -405,6 +459,16 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(OrderDeskContactDetails obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, BICIdentifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ApplFrms", required = true)
@@ -440,7 +504,7 @@ public class OrderDeskContactDetails {
 	 * "Application forms or original signature required by fund order desk."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmApplicationForms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderDeskContactDetails, Forms> mmApplicationForms = new MMMessageAssociationEnd<OrderDeskContactDetails, Forms>() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -452,7 +516,17 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
+			type_lazy = () -> Forms.mmObject();
+		}
+
+		@Override
+		public Forms getValue(OrderDeskContactDetails obj) {
+			return obj.getApplicationForms();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, Forms value) {
+			obj.setApplicationForms(value);
 		}
 	};
 	@XmlElement(name = "SgntrReqrdInitlSbcpt", required = true)
@@ -489,7 +563,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignatureRequiredInitialSubscription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderDeskContactDetails, Forms> mmSignatureRequiredInitialSubscription = new MMMessageAssociationEnd<OrderDeskContactDetails, Forms>() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -501,7 +575,17 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
+			type_lazy = () -> Forms.mmObject();
+		}
+
+		@Override
+		public Forms getValue(OrderDeskContactDetails obj) {
+			return obj.getSignatureRequiredInitialSubscription();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, Forms value) {
+			obj.setSignatureRequiredInitialSubscription(value);
 		}
 	};
 	@XmlElement(name = "SgntrReqrdSbsqntSbcpt", required = true)
@@ -538,7 +622,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignatureRequiredSubsequentSubscription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderDeskContactDetails, Forms> mmSignatureRequiredSubsequentSubscription = new MMMessageAssociationEnd<OrderDeskContactDetails, Forms>() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -550,7 +634,17 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
+			type_lazy = () -> Forms.mmObject();
+		}
+
+		@Override
+		public Forms getValue(OrderDeskContactDetails obj) {
+			return obj.getSignatureRequiredSubsequentSubscription();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, Forms value) {
+			obj.setSignatureRequiredSubsequentSubscription(value);
 		}
 	};
 	@XmlElement(name = "SgntrReqrdRed", required = true)
@@ -586,7 +680,7 @@ public class OrderDeskContactDetails {
 	 * "An original signature is required when completing redemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignatureRequiredRedemption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderDeskContactDetails, Forms> mmSignatureRequiredRedemption = new MMMessageAssociationEnd<OrderDeskContactDetails, Forms>() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -598,7 +692,17 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
+			type_lazy = () -> Forms.mmObject();
+		}
+
+		@Override
+		public Forms getValue(OrderDeskContactDetails obj) {
+			return obj.getSignatureRequiredRedemption();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, Forms value) {
+			obj.setSignatureRequiredRedemption(value);
 		}
 	};
 	@XmlElement(name = "SbcptPrcgChrtcs", required = true)
@@ -637,7 +741,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderDeskContactDetails, ProcessingCharacteristics1> mmSubscriptionProcessingCharacteristics = new MMMessageAssociationEnd<OrderDeskContactDetails, ProcessingCharacteristics1>() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -649,7 +753,17 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics1.mmObject();
+			type_lazy = () -> ProcessingCharacteristics1.mmObject();
+		}
+
+		@Override
+		public ProcessingCharacteristics1 getValue(OrderDeskContactDetails obj) {
+			return obj.getSubscriptionProcessingCharacteristics();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, ProcessingCharacteristics1 value) {
+			obj.setSubscriptionProcessingCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "RedPrcgChrtcs", required = true)
@@ -688,7 +802,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderDeskContactDetails, ProcessingCharacteristics1> mmRedemptionProcessingCharacteristics = new MMMessageAssociationEnd<OrderDeskContactDetails, ProcessingCharacteristics1>() {
 		{
 			businessElementTrace_lazy = () -> ContactPoint.mmInvestmentFundClassProcessing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -700,11 +814,21 @@ public class OrderDeskContactDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics1.mmObject();
+			type_lazy = () -> ProcessingCharacteristics1.mmObject();
+		}
+
+		@Override
+		public ProcessingCharacteristics1 getValue(OrderDeskContactDetails obj) {
+			return obj.getRedemptionProcessingCharacteristics();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, ProcessingCharacteristics1 value) {
+			obj.setRedemptionProcessingCharacteristics(value);
 		}
 	};
 	@XmlElement(name = "SttlmDtls", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount14> settlementDetails;
+	protected List<CashAccount14> settlementDetails;
 	/**
 	 * 
 	 <p>
@@ -736,7 +860,7 @@ public class OrderDeskContactDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderDeskContactDetails, List<CashAccount14>> mmSettlementDetails = new MMMessageAssociationEnd<OrderDeskContactDetails, List<CashAccount14>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderDeskContactDetails.mmObject();
@@ -748,7 +872,17 @@ public class OrderDeskContactDetails {
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount14.mmObject();
+			type_lazy = () -> CashAccount14.mmObject();
+		}
+
+		@Override
+		public List<CashAccount14> getValue(OrderDeskContactDetails obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(OrderDeskContactDetails obj, List<CashAccount14> value) {
+			obj.setSettlementDetails(value);
 		}
 	};
 
@@ -784,7 +918,7 @@ public class OrderDeskContactDetails {
 		return postalAddress;
 	}
 
-	public OrderDeskContactDetails setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
+	public OrderDeskContactDetails setPostalAddress(PostalAddress1 postalAddress) {
 		this.postalAddress = Objects.requireNonNull(postalAddress);
 		return this;
 	}
@@ -829,7 +963,7 @@ public class OrderDeskContactDetails {
 		return applicationForms;
 	}
 
-	public OrderDeskContactDetails setApplicationForms(com.tools20022.repository.msg.Forms applicationForms) {
+	public OrderDeskContactDetails setApplicationForms(Forms applicationForms) {
 		this.applicationForms = Objects.requireNonNull(applicationForms);
 		return this;
 	}
@@ -838,7 +972,7 @@ public class OrderDeskContactDetails {
 		return signatureRequiredInitialSubscription;
 	}
 
-	public OrderDeskContactDetails setSignatureRequiredInitialSubscription(com.tools20022.repository.msg.Forms signatureRequiredInitialSubscription) {
+	public OrderDeskContactDetails setSignatureRequiredInitialSubscription(Forms signatureRequiredInitialSubscription) {
 		this.signatureRequiredInitialSubscription = Objects.requireNonNull(signatureRequiredInitialSubscription);
 		return this;
 	}
@@ -847,7 +981,7 @@ public class OrderDeskContactDetails {
 		return signatureRequiredSubsequentSubscription;
 	}
 
-	public OrderDeskContactDetails setSignatureRequiredSubsequentSubscription(com.tools20022.repository.msg.Forms signatureRequiredSubsequentSubscription) {
+	public OrderDeskContactDetails setSignatureRequiredSubsequentSubscription(Forms signatureRequiredSubsequentSubscription) {
 		this.signatureRequiredSubsequentSubscription = Objects.requireNonNull(signatureRequiredSubsequentSubscription);
 		return this;
 	}
@@ -856,7 +990,7 @@ public class OrderDeskContactDetails {
 		return signatureRequiredRedemption;
 	}
 
-	public OrderDeskContactDetails setSignatureRequiredRedemption(com.tools20022.repository.msg.Forms signatureRequiredRedemption) {
+	public OrderDeskContactDetails setSignatureRequiredRedemption(Forms signatureRequiredRedemption) {
 		this.signatureRequiredRedemption = Objects.requireNonNull(signatureRequiredRedemption);
 		return this;
 	}
@@ -865,7 +999,7 @@ public class OrderDeskContactDetails {
 		return subscriptionProcessingCharacteristics;
 	}
 
-	public OrderDeskContactDetails setSubscriptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics1 subscriptionProcessingCharacteristics) {
+	public OrderDeskContactDetails setSubscriptionProcessingCharacteristics(ProcessingCharacteristics1 subscriptionProcessingCharacteristics) {
 		this.subscriptionProcessingCharacteristics = Objects.requireNonNull(subscriptionProcessingCharacteristics);
 		return this;
 	}
@@ -874,7 +1008,7 @@ public class OrderDeskContactDetails {
 		return redemptionProcessingCharacteristics;
 	}
 
-	public OrderDeskContactDetails setRedemptionProcessingCharacteristics(com.tools20022.repository.msg.ProcessingCharacteristics1 redemptionProcessingCharacteristics) {
+	public OrderDeskContactDetails setRedemptionProcessingCharacteristics(ProcessingCharacteristics1 redemptionProcessingCharacteristics) {
 		this.redemptionProcessingCharacteristics = Objects.requireNonNull(redemptionProcessingCharacteristics);
 		return this;
 	}
@@ -883,7 +1017,7 @@ public class OrderDeskContactDetails {
 		return settlementDetails == null ? settlementDetails = new ArrayList<>() : settlementDetails;
 	}
 
-	public OrderDeskContactDetails setSettlementDetails(List<com.tools20022.repository.msg.CashAccount14> settlementDetails) {
+	public OrderDeskContactDetails setSettlementDetails(List<CashAccount14> settlementDetails) {
 		this.settlementDetails = Objects.requireNonNull(settlementDetails);
 		return this;
 	}

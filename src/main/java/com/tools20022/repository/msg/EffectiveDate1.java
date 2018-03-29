@@ -120,7 +120,7 @@ public class EffectiveDate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EffectiveDate1, ISODate> mmEffectiveDate = new MMMessageAttribute<EffectiveDate1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EffectiveDate1.mmObject();
 			isDerived = false;
@@ -131,6 +131,16 @@ public class EffectiveDate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(EffectiveDate1 obj) {
+			return obj.getEffectiveDate();
+		}
+
+		@Override
+		public void setValue(EffectiveDate1 obj, ISODate value) {
+			obj.setEffectiveDate(value);
 		}
 	};
 	@XmlElement(name = "FctvDtParam")
@@ -163,7 +173,7 @@ public class EffectiveDate1 {
 	 * "Specifies how the SSI update effective date is to be applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveDateParameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EffectiveDate1, Optional<ExternalEffectiveDateParameter1Code>> mmEffectiveDateParameter = new MMMessageAttribute<EffectiveDate1, Optional<ExternalEffectiveDateParameter1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EffectiveDate1.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class EffectiveDate1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalEffectiveDateParameter1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExternalEffectiveDateParameter1Code> getValue(EffectiveDate1 obj) {
+			return obj.getEffectiveDateParameter();
+		}
+
+		@Override
+		public void setValue(EffectiveDate1 obj, Optional<ExternalEffectiveDateParameter1Code> value) {
+			obj.setEffectiveDateParameter(value.orElse(null));
 		}
 	};
 

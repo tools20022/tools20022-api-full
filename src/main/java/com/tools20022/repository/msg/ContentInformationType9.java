@@ -28,6 +28,10 @@ import com.tools20022.repository.area.catm.ManagementPlanReplacementV03;
 import com.tools20022.repository.area.catm.StatusReportV03;
 import com.tools20022.repository.codeset.ContentType1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AuthenticatedData3;
+import com.tools20022.repository.msg.DigestedData3;
+import com.tools20022.repository.msg.EnvelopedData3;
+import com.tools20022.repository.msg.SignedData3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -159,7 +163,7 @@ public class ContentInformationType9 {
 	 * ContentInformationType4.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContentInformationType9, ContentType1Code> mmContentType = new MMMessageAttribute<ContentInformationType9, ContentType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmObject();
 			isDerived = false;
@@ -172,6 +176,16 @@ public class ContentInformationType9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
+		}
+
+		@Override
+		public ContentType1Code getValue(ContentInformationType9 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(ContentInformationType9 obj, ContentType1Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "EnvlpdData")
@@ -215,7 +229,7 @@ public class ContentInformationType9 {
 	 * ContentInformationType4.mmEnvelopedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType9, Optional<EnvelopedData3>> mmEnvelopedData = new MMMessageAssociationEnd<ContentInformationType9, Optional<EnvelopedData3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmObject();
 			isDerived = false;
@@ -228,7 +242,17 @@ public class ContentInformationType9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EnvelopedData3.mmObject();
+			type_lazy = () -> EnvelopedData3.mmObject();
+		}
+
+		@Override
+		public Optional<EnvelopedData3> getValue(ContentInformationType9 obj) {
+			return obj.getEnvelopedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType9 obj, Optional<EnvelopedData3> value) {
+			obj.setEnvelopedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthntcdData")
@@ -272,7 +296,7 @@ public class ContentInformationType9 {
 	 * ContentInformationType4.mmAuthenticatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType9, Optional<AuthenticatedData3>> mmAuthenticatedData = new MMMessageAssociationEnd<ContentInformationType9, Optional<AuthenticatedData3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmObject();
 			isDerived = false;
@@ -285,7 +309,17 @@ public class ContentInformationType9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData3.mmObject();
+			type_lazy = () -> AuthenticatedData3.mmObject();
+		}
+
+		@Override
+		public Optional<AuthenticatedData3> getValue(ContentInformationType9 obj) {
+			return obj.getAuthenticatedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType9 obj, Optional<AuthenticatedData3> value) {
+			obj.setAuthenticatedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SgndData")
@@ -329,7 +363,7 @@ public class ContentInformationType9 {
 	 * ContentInformationType4.mmSignedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType9, Optional<SignedData3>> mmSignedData = new MMMessageAssociationEnd<ContentInformationType9, Optional<SignedData3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmObject();
 			isDerived = false;
@@ -342,7 +376,17 @@ public class ContentInformationType9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SignedData3.mmObject();
+			type_lazy = () -> SignedData3.mmObject();
+		}
+
+		@Override
+		public Optional<SignedData3> getValue(ContentInformationType9 obj) {
+			return obj.getSignedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType9 obj, Optional<SignedData3> value) {
+			obj.setSignedData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgstdData")
@@ -386,7 +430,7 @@ public class ContentInformationType9 {
 	 * ContentInformationType4.mmDigestedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigestedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType9, Optional<DigestedData3>> mmDigestedData = new MMMessageAssociationEnd<ContentInformationType9, Optional<DigestedData3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType9.mmObject();
 			isDerived = false;
@@ -399,7 +443,17 @@ public class ContentInformationType9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DigestedData3.mmObject();
+			type_lazy = () -> DigestedData3.mmObject();
+		}
+
+		@Override
+		public Optional<DigestedData3> getValue(ContentInformationType9 obj) {
+			return obj.getDigestedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType9 obj, Optional<DigestedData3> value) {
+			obj.setDigestedData(value.orElse(null));
 		}
 	};
 
@@ -434,7 +488,7 @@ public class ContentInformationType9 {
 		return envelopedData == null ? Optional.empty() : Optional.of(envelopedData);
 	}
 
-	public ContentInformationType9 setEnvelopedData(com.tools20022.repository.msg.EnvelopedData3 envelopedData) {
+	public ContentInformationType9 setEnvelopedData(EnvelopedData3 envelopedData) {
 		this.envelopedData = envelopedData;
 		return this;
 	}
@@ -443,7 +497,7 @@ public class ContentInformationType9 {
 		return authenticatedData == null ? Optional.empty() : Optional.of(authenticatedData);
 	}
 
-	public ContentInformationType9 setAuthenticatedData(com.tools20022.repository.msg.AuthenticatedData3 authenticatedData) {
+	public ContentInformationType9 setAuthenticatedData(AuthenticatedData3 authenticatedData) {
 		this.authenticatedData = authenticatedData;
 		return this;
 	}
@@ -452,7 +506,7 @@ public class ContentInformationType9 {
 		return signedData == null ? Optional.empty() : Optional.of(signedData);
 	}
 
-	public ContentInformationType9 setSignedData(com.tools20022.repository.msg.SignedData3 signedData) {
+	public ContentInformationType9 setSignedData(SignedData3 signedData) {
 		this.signedData = signedData;
 		return this;
 	}
@@ -461,7 +515,7 @@ public class ContentInformationType9 {
 		return digestedData == null ? Optional.empty() : Optional.of(digestedData);
 	}
 
-	public ContentInformationType9 setDigestedData(com.tools20022.repository.msg.DigestedData3 digestedData) {
+	public ContentInformationType9 setDigestedData(DigestedData3 digestedData) {
 		this.digestedData = digestedData;
 		return this;
 	}

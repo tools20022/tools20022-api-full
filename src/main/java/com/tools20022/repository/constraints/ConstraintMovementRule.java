@@ -51,11 +51,15 @@ public class ConstraintMovementRule {
 	 */
 	public static final MMConstraint<GlobalDistributionRequest1> forGlobalDistributionRequest1 = new MMConstraint<GlobalDistributionRequest1>() {
 		{
-			validator = ConstraintMovementRule::checkGlobalDistributionRequest1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementRule";
 			definition = "At least one occurrence of either CashMovement or SecuritiesMovement must be present. Both may be present.";
 			owner_lazy = () -> GlobalDistributionRequest1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GlobalDistributionRequest1 obj) throws Exception {
+			checkGlobalDistributionRequest1(obj);
 		}
 	};
 

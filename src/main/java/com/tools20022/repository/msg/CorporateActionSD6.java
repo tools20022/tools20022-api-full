@@ -98,7 +98,7 @@ public class CorporateActionSD6 {
 	 * definition} = "Status of the fields of lottery record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotteryRecordStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD6, WorkflowStatus1Code> mmLotteryRecordStatus = new MMMessageAttribute<CorporateActionSD6, WorkflowStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD6.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class CorporateActionSD6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WorkflowStatus1Code.mmObject();
+		}
+
+		@Override
+		public WorkflowStatus1Code getValue(CorporateActionSD6 obj) {
+			return obj.getLotteryRecordStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD6 obj, WorkflowStatus1Code value) {
+			obj.setLotteryRecordStatus(value);
 		}
 	};
 

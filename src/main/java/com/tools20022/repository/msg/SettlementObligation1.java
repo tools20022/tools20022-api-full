@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -148,7 +149,7 @@ public class SettlementObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCSDTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementObligation1, Optional<Max35Text>> mmCSDTransactionIdentification = new MMMessageAttribute<SettlementObligation1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
 			isDerived = false;
@@ -159,6 +160,16 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SettlementObligation1 obj) {
+			return obj.getCSDTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<Max35Text> value) {
+			obj.setCSDTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CntrlCtrPtyTxId")
@@ -198,7 +209,7 @@ public class SettlementObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCentralCounterpartyTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementObligation1, Optional<Max35Text>> mmCentralCounterpartyTransactionIdentification = new MMMessageAttribute<SettlementObligation1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmCentralCounterpartyTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -210,6 +221,16 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SettlementObligation1 obj) {
+			return obj.getCentralCounterpartyTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<Max35Text> value) {
+			obj.setCentralCounterpartyTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvryAcct")
@@ -247,7 +268,7 @@ public class SettlementObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveryAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, Optional<SecuritiesAccount19>> mmDeliveryAccount = new MMMessageAssociationEnd<SettlementObligation1, Optional<SecuritiesAccount19>>() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmDeliveryAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -259,7 +280,17 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount19> getValue(SettlementObligation1 obj) {
+			return obj.getDeliveryAccount();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<SecuritiesAccount19> value) {
+			obj.setDeliveryAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct")
@@ -296,7 +327,7 @@ public class SettlementObligation1 {
 	 * "Clearing member account at the central securities depository."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, Optional<SecuritiesAccount19>> mmSafekeepingAccount = new MMMessageAssociationEnd<SettlementObligation1, Optional<SecuritiesAccount19>>() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -308,7 +339,17 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount19> getValue(SettlementObligation1 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<SecuritiesAccount19> value) {
+			obj.setSafekeepingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrSgmt")
@@ -347,7 +388,7 @@ public class SettlementObligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClearingSegment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, Optional<PartyIdentification35Choice>> mmClearingSegment = new MMMessageAssociationEnd<SettlementObligation1, Optional<PartyIdentification35Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -360,6 +401,16 @@ public class SettlementObligation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification35Choice> getValue(SettlementObligation1 obj) {
+			return obj.getClearingSegment();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<PartyIdentification35Choice> value) {
+			obj.setClearingSegment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonClrMmb")
@@ -397,7 +448,7 @@ public class SettlementObligation1 {
 	 * "Provides the identification for the non-clearing member and account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, Optional<PartyIdentificationAndAccount31>> mmNonClearingMember = new MMMessageAssociationEnd<SettlementObligation1, Optional<PartyIdentificationAndAccount31>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -409,7 +460,17 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount31.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount31> getValue(SettlementObligation1 obj) {
+			return obj.getNonClearingMember();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<PartyIdentificationAndAccount31> value) {
+			obj.setNonClearingMember(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntnddSttlmDt")
@@ -446,7 +507,7 @@ public class SettlementObligation1 {
 	 * definition} = "Provides the intended settlement date of the position."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementObligation1, Optional<ISODate>> mmIntendedSettlementDate = new MMMessageAttribute<SettlementObligation1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -458,6 +519,16 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SettlementObligation1 obj) {
+			return obj.getIntendedSettlementDate();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<ISODate> value) {
+			obj.setIntendedSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmId", required = true)
@@ -494,7 +565,7 @@ public class SettlementObligation1 {
 	 * definition} = "Provides details about the security identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, SecurityIdentification14> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<SettlementObligation1, SecurityIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -506,7 +577,17 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification14 getValue(SettlementObligation1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, SecurityIdentification14 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -543,7 +624,7 @@ public class SettlementObligation1 {
 	 * definition} = "Provides the trade date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementObligation1, Optional<ISODate>> mmTradeDate = new MMMessageAttribute<SettlementObligation1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -555,6 +636,16 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SettlementObligation1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<ISODate> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealPric")
@@ -589,7 +680,7 @@ public class SettlementObligation1 {
 	 * definition} = "Provides the price of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDealPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, Optional<Price4>> mmDealPrice = new MMMessageAssociationEnd<SettlementObligation1, Optional<Price4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmDealPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -601,7 +692,17 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			type_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Optional<Price4> getValue(SettlementObligation1 obj) {
+			return obj.getDealPrice();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<Price4> value) {
+			obj.setDealPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -638,7 +739,7 @@ public class SettlementObligation1 {
 	 * definition} = "Provides the quantity of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, FinancialInstrumentQuantity1Choice> mmQuantity = new MMMessageAssociationEnd<SettlementObligation1, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -651,6 +752,16 @@ public class SettlementObligation1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(SettlementObligation1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "Dpstry")
@@ -687,7 +798,7 @@ public class SettlementObligation1 {
 	 * definition} = "Place where settlement of the securities takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, Optional<PartyIdentification34Choice>> mmDepository = new MMMessageAssociationEnd<SettlementObligation1, Optional<PartyIdentification34Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -700,6 +811,16 @@ public class SettlementObligation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification34Choice> getValue(SettlementObligation1 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<PartyIdentification34Choice> value) {
+			obj.setDepository(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmngQtyToBeSttld")
@@ -736,7 +857,7 @@ public class SettlementObligation1 {
 	 * definition} = "Provides the remaining quantity to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRemainingQuantityToBeSettled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, Optional<FinancialInstrumentQuantity1Choice>> mmRemainingQuantityToBeSettled = new MMMessageAssociationEnd<SettlementObligation1, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -749,6 +870,16 @@ public class SettlementObligation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(SettlementObligation1 obj) {
+			return obj.getRemainingQuantityToBeSettled();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setRemainingQuantityToBeSettled(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmAmt", required = true)
@@ -784,7 +915,7 @@ public class SettlementObligation1 {
 	 * definition} = "Provides the amount to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, AmountAndDirection20> mmSettlementAmount = new MMMessageAssociationEnd<SettlementObligation1, AmountAndDirection20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -796,7 +927,17 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
+			type_lazy = () -> AmountAndDirection20.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection20 getValue(SettlementObligation1 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, AmountAndDirection20 value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "RmngAmtToBeSttld")
@@ -832,7 +973,7 @@ public class SettlementObligation1 {
 	 * definition} = "Provides the remaining amount to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRemainingAmountToBeSettled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementObligation1, Optional<AmountAndDirection20>> mmRemainingAmountToBeSettled = new MMMessageAssociationEnd<SettlementObligation1, Optional<AmountAndDirection20>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementObligation1.mmObject();
@@ -844,7 +985,17 @@ public class SettlementObligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
+			type_lazy = () -> AmountAndDirection20.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection20> getValue(SettlementObligation1 obj) {
+			return obj.getRemainingAmountToBeSettled();
+		}
+
+		@Override
+		public void setValue(SettlementObligation1 obj, Optional<AmountAndDirection20> value) {
+			obj.setRemainingAmountToBeSettled(value.orElse(null));
 		}
 	};
 
@@ -891,7 +1042,7 @@ public class SettlementObligation1 {
 		return deliveryAccount == null ? Optional.empty() : Optional.of(deliveryAccount);
 	}
 
-	public SettlementObligation1 setDeliveryAccount(com.tools20022.repository.msg.SecuritiesAccount19 deliveryAccount) {
+	public SettlementObligation1 setDeliveryAccount(SecuritiesAccount19 deliveryAccount) {
 		this.deliveryAccount = deliveryAccount;
 		return this;
 	}
@@ -900,7 +1051,7 @@ public class SettlementObligation1 {
 		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public SettlementObligation1 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount19 safekeepingAccount) {
+	public SettlementObligation1 setSafekeepingAccount(SecuritiesAccount19 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
 		return this;
 	}
@@ -918,7 +1069,7 @@ public class SettlementObligation1 {
 		return nonClearingMember == null ? Optional.empty() : Optional.of(nonClearingMember);
 	}
 
-	public SettlementObligation1 setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
+	public SettlementObligation1 setNonClearingMember(PartyIdentificationAndAccount31 nonClearingMember) {
 		this.nonClearingMember = nonClearingMember;
 		return this;
 	}
@@ -936,7 +1087,7 @@ public class SettlementObligation1 {
 		return financialInstrumentIdentification;
 	}
 
-	public SettlementObligation1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public SettlementObligation1 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -954,7 +1105,7 @@ public class SettlementObligation1 {
 		return dealPrice == null ? Optional.empty() : Optional.of(dealPrice);
 	}
 
-	public SettlementObligation1 setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
+	public SettlementObligation1 setDealPrice(Price4 dealPrice) {
 		this.dealPrice = dealPrice;
 		return this;
 	}
@@ -990,7 +1141,7 @@ public class SettlementObligation1 {
 		return settlementAmount;
 	}
 
-	public SettlementObligation1 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+	public SettlementObligation1 setSettlementAmount(AmountAndDirection20 settlementAmount) {
 		this.settlementAmount = Objects.requireNonNull(settlementAmount);
 		return this;
 	}
@@ -999,7 +1150,7 @@ public class SettlementObligation1 {
 		return remainingAmountToBeSettled == null ? Optional.empty() : Optional.of(remainingAmountToBeSettled);
 	}
 
-	public SettlementObligation1 setRemainingAmountToBeSettled(com.tools20022.repository.msg.AmountAndDirection20 remainingAmountToBeSettled) {
+	public SettlementObligation1 setRemainingAmountToBeSettled(AmountAndDirection20 remainingAmountToBeSettled) {
 		this.remainingAmountToBeSettled = remainingAmountToBeSettled;
 		return this;
 	}

@@ -53,11 +53,15 @@ public class ConstraintActiveOrHistoricCurrency {
 	 */
 	public static final MMConstraint<ActiveOrHistoricCurrencyCode> forActiveOrHistoricCurrencyCode = new MMConstraint<ActiveOrHistoricCurrencyCode>() {
 		{
-			validator = ConstraintActiveOrHistoricCurrency::checkActiveOrHistoricCurrencyCode;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveOrHistoricCurrency";
 			definition = "The Currency Code must be registered, or have already been registered. Valid active or historic currency codes are registered with the ISO 4217 Maintenance Agency, consist of three (3) contiguous letters, and may be or not be withdrawn on the day the message containing the Currency is exchanged.";
 			owner_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ActiveOrHistoricCurrencyCode obj) throws Exception {
+			checkActiveOrHistoricCurrencyCode(obj);
 		}
 	};
 

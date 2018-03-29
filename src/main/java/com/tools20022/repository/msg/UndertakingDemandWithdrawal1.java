@@ -25,6 +25,8 @@ import com.tools20022.repository.area.tsrv.DemandWithdrawalNotificationV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Demand;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Demand3;
+import com.tools20022.repository.msg.Undertaking6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +124,7 @@ public class UndertakingDemandWithdrawal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingDemandWithdrawal1, Undertaking6> mmUndertakingIdentification = new MMMessageAssociationEnd<UndertakingDemandWithdrawal1, Undertaking6>() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmUndertaking;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmObject();
@@ -134,7 +136,17 @@ public class UndertakingDemandWithdrawal1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Undertaking6.mmObject();
+			type_lazy = () -> Undertaking6.mmObject();
+		}
+
+		@Override
+		public Undertaking6 getValue(UndertakingDemandWithdrawal1 obj) {
+			return obj.getUndertakingIdentification();
+		}
+
+		@Override
+		public void setValue(UndertakingDemandWithdrawal1 obj, Undertaking6 value) {
+			obj.setUndertakingIdentification(value);
 		}
 	};
 	@XmlElement(name = "AdvsgPtyRefNb")
@@ -168,7 +180,7 @@ public class UndertakingDemandWithdrawal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdvisingPartyReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingDemandWithdrawal1, Optional<Max35Text>> mmAdvisingPartyReferenceNumber = new MMMessageAttribute<UndertakingDemandWithdrawal1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
@@ -179,6 +191,16 @@ public class UndertakingDemandWithdrawal1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UndertakingDemandWithdrawal1 obj) {
+			return obj.getAdvisingPartyReferenceNumber();
+		}
+
+		@Override
+		public void setValue(UndertakingDemandWithdrawal1 obj, Optional<Max35Text> value) {
+			obj.setAdvisingPartyReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DmndDtls", required = true)
@@ -212,7 +234,7 @@ public class UndertakingDemandWithdrawal1 {
 	 * definition} = "Details related to the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDemandDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingDemandWithdrawal1, Demand3> mmDemandDetails = new MMMessageAssociationEnd<UndertakingDemandWithdrawal1, Demand3>() {
 		{
 			businessComponentTrace_lazy = () -> Demand.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmObject();
@@ -224,7 +246,17 @@ public class UndertakingDemandWithdrawal1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Demand3.mmObject();
+			type_lazy = () -> Demand3.mmObject();
+		}
+
+		@Override
+		public Demand3 getValue(UndertakingDemandWithdrawal1 obj) {
+			return obj.getDemandDetails();
+		}
+
+		@Override
+		public void setValue(UndertakingDemandWithdrawal1 obj, Demand3 value) {
+			obj.setDemandDetails(value);
 		}
 	};
 	@XmlElement(name = "CnfrmrRefNb")
@@ -258,7 +290,7 @@ public class UndertakingDemandWithdrawal1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmerReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingDemandWithdrawal1, Optional<Max35Text>> mmConfirmerReferenceNumber = new MMMessageAttribute<UndertakingDemandWithdrawal1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingDemandWithdrawal1.mmObject();
 			isDerived = false;
@@ -269,6 +301,16 @@ public class UndertakingDemandWithdrawal1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UndertakingDemandWithdrawal1 obj) {
+			return obj.getConfirmerReferenceNumber();
+		}
+
+		@Override
+		public void setValue(UndertakingDemandWithdrawal1 obj, Optional<Max35Text> value) {
+			obj.setConfirmerReferenceNumber(value.orElse(null));
 		}
 	};
 
@@ -292,7 +334,7 @@ public class UndertakingDemandWithdrawal1 {
 		return undertakingIdentification;
 	}
 
-	public UndertakingDemandWithdrawal1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking6 undertakingIdentification) {
+	public UndertakingDemandWithdrawal1 setUndertakingIdentification(Undertaking6 undertakingIdentification) {
 		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
 		return this;
 	}
@@ -310,7 +352,7 @@ public class UndertakingDemandWithdrawal1 {
 		return demandDetails;
 	}
 
-	public UndertakingDemandWithdrawal1 setDemandDetails(com.tools20022.repository.msg.Demand3 demandDetails) {
+	public UndertakingDemandWithdrawal1 setDemandDetails(Demand3 demandDetails) {
 		this.demandDetails = Objects.requireNonNull(demandDetails);
 		return this;
 	}

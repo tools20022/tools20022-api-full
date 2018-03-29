@@ -98,7 +98,7 @@ public class SecurityIdentification18 {
 	 * definition} = "Security identification source of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentificationSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification18, IdentificationType2Code> mmSecurityIdentificationSource = new MMMessageAttribute<SecurityIdentification18, IdentificationType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification18.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class SecurityIdentification18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IdentificationType2Code.mmObject();
+		}
+
+		@Override
+		public IdentificationType2Code getValue(SecurityIdentification18 obj) {
+			return obj.getSecurityIdentificationSource();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification18 obj, IdentificationType2Code value) {
+			obj.setSecurityIdentificationSource(value);
 		}
 	};
 	@XmlElement(name = "SctyId", required = true)
@@ -140,7 +150,7 @@ public class SecurityIdentification18 {
 	 * definition} = "Security identification of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification18, Max35Text> mmSecurityIdentification = new MMMessageAttribute<SecurityIdentification18, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification18.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class SecurityIdentification18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SecurityIdentification18 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification18 obj, Max35Text value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 

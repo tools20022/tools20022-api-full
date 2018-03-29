@@ -151,7 +151,7 @@ public class StructuredLongPostalAddress1 {
 	 * definition} = "Name of the building or house."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuildingName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>> mmBuildingName = new MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmBuildingName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -163,6 +163,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getBuildingName();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Optional<Max35Text> value) {
+			obj.setBuildingName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrtNm")
@@ -199,7 +209,7 @@ public class StructuredLongPostalAddress1 {
 	 * definition} = "Name of a street or thoroughfare."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStreetName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>> mmStreetName = new MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -211,6 +221,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getStreetName();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Optional<Max35Text> value) {
+			obj.setStreetName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrtBldgId")
@@ -248,7 +268,7 @@ public class StructuredLongPostalAddress1 {
 	 * "Number that identifies the position of a building on a street."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStreetBuildingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>> mmStreetBuildingIdentification = new MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetBuildingIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -260,6 +280,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getStreetBuildingIdentification();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Optional<Max35Text> value) {
+			obj.setStreetBuildingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Flr")
@@ -296,7 +326,7 @@ public class StructuredLongPostalAddress1 {
 	 * definition} = "Floor or storey within a building."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFloor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max16Text>> mmFloor = new MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max16Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmFloor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -308,6 +338,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getFloor();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Optional<Max16Text> value) {
+			obj.setFloor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TwnNm", required = true)
@@ -346,7 +386,7 @@ public class StructuredLongPostalAddress1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTownName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Max35Text> mmTownName = new MMMessageAttribute<StructuredLongPostalAddress1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -358,6 +398,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getTownName();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Max35Text value) {
+			obj.setTownName(value);
 		}
 	};
 	@XmlElement(name = "DstrctNm")
@@ -394,7 +444,7 @@ public class StructuredLongPostalAddress1 {
 	 * definition} = "Name of a district, ie, a part of a town or region."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDistrictName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>> mmDistrictName = new MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmDistrictName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -406,6 +456,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getDistrictName();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Optional<Max35Text> value) {
+			obj.setDistrictName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RgnId")
@@ -444,7 +504,7 @@ public class StructuredLongPostalAddress1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>> mmRegionIdentification = new MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmRegionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -456,6 +516,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getRegionIdentification();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Optional<Max35Text> value) {
+			obj.setRegionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Stat")
@@ -493,7 +563,7 @@ public class StructuredLongPostalAddress1 {
 	 * "Organised political community or area forming a part of a federation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmState = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>> mmState = new MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmState;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -505,6 +575,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getState();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Optional<Max35Text> value) {
+			obj.setState(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtyId")
@@ -541,7 +621,7 @@ public class StructuredLongPostalAddress1 {
 	 * definition} = "Identifier of a county."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>> mmCountyIdentification = new MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountyIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -553,6 +633,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getCountyIdentification();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Optional<Max35Text> value) {
+			obj.setCountyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -589,7 +679,7 @@ public class StructuredLongPostalAddress1 {
 	 * definition} = "Nation with its own government."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, CountryCode> mmCountry = new MMMessageAttribute<StructuredLongPostalAddress1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -601,6 +691,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "PstCdId", required = true)
@@ -639,7 +739,7 @@ public class StructuredLongPostalAddress1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostCodeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Max16Text> mmPostCodeIdentification = new MMMessageAttribute<StructuredLongPostalAddress1, Max16Text>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostCodeIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -651,6 +751,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getPostCodeIdentification();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Max16Text value) {
+			obj.setPostCodeIdentification(value);
 		}
 	};
 	@XmlElement(name = "POB")
@@ -689,7 +799,7 @@ public class StructuredLongPostalAddress1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostOfficeBox = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max16Text>> mmPostOfficeBox = new MMMessageAttribute<StructuredLongPostalAddress1, Optional<Max16Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostOfficeBox;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StructuredLongPostalAddress1.mmObject();
@@ -701,6 +811,16 @@ public class StructuredLongPostalAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(StructuredLongPostalAddress1 obj) {
+			return obj.getPostOfficeBox();
+		}
+
+		@Override
+		public void setValue(StructuredLongPostalAddress1 obj, Optional<Max16Text> value) {
+			obj.setPostOfficeBox(value.orElse(null));
 		}
 	};
 

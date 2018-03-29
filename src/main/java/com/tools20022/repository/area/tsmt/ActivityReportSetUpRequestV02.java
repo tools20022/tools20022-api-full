@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.UTCOffset1;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +122,7 @@ public class ActivityReportSetUpRequestV02 {
 	 * definition} = "Identifies the request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActivityReportSetUpRequestV02, MessageIdentification1> mmRequestIdentification = new MMMessageBuildingBlock<ActivityReportSetUpRequestV02, MessageIdentification1>() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class ActivityReportSetUpRequestV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActivityReportSetUpRequestV02.class.getMethod("getRequestIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ActivityReportSetUpRequestV02 obj) {
+			return obj.getRequestIdentification();
+		}
+
+		@Override
+		public void setValue(ActivityReportSetUpRequestV02 obj, MessageIdentification1 value) {
+			obj.setRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "UTCOffset", required = true)
@@ -167,7 +168,7 @@ public class ActivityReportSetUpRequestV02 {
 	 * "Specifies the parameters to calculate the local reporting time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUTCOffset = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActivityReportSetUpRequestV02, UTCOffset1> mmUTCOffset = new MMMessageBuildingBlock<ActivityReportSetUpRequestV02, UTCOffset1>() {
 		{
 			xmlTag = "UTCOffset";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +179,14 @@ public class ActivityReportSetUpRequestV02 {
 			complexType_lazy = () -> UTCOffset1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActivityReportSetUpRequestV02.class.getMethod("getUTCOffset", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UTCOffset1 getValue(ActivityReportSetUpRequestV02 obj) {
+			return obj.getUTCOffset();
+		}
+
+		@Override
+		public void setValue(ActivityReportSetUpRequestV02 obj, UTCOffset1 value) {
+			obj.setUTCOffset(value);
 		}
 	};
 

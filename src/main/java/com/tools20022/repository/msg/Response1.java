@@ -111,7 +111,7 @@ public class Response1 {
 	 * definition} = "Provides details about the response type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponseTypeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Response1, List<ResponseType1Choice>> mmResponseTypeDetails = new MMMessageAssociationEnd<Response1, List<ResponseType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Response1.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class Response1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ResponseType1Choice.mmObject();
+		}
+
+		@Override
+		public List<ResponseType1Choice> getValue(Response1 obj) {
+			return obj.getResponseTypeDetails();
+		}
+
+		@Override
+		public void setValue(Response1 obj, List<ResponseType1Choice> value) {
+			obj.setResponseTypeDetails(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -153,7 +163,7 @@ public class Response1 {
 	 * "Provides additional details related to the margin call response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Response1, Optional<Max140Text>> mmDescription = new MMMessageAttribute<Response1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Response1.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class Response1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Response1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(Response1 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

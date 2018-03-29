@@ -98,7 +98,7 @@ public class PointOfInteraction6 {
 	 * definition} = "Identifier of the terminal manufacturer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmManufacturerIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteraction6, Max35Text> mmManufacturerIdentifier = new MMMessageAttribute<PointOfInteraction6, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction6.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class PointOfInteraction6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PointOfInteraction6 obj) {
+			return obj.getManufacturerIdentifier();
+		}
+
+		@Override
+		public void setValue(PointOfInteraction6 obj, Max35Text value) {
+			obj.setManufacturerIdentifier(value);
 		}
 	};
 	@XmlElement(name = "Mdl", required = true)
@@ -140,7 +150,7 @@ public class PointOfInteraction6 {
 	 * definition} = "Identifier of the terminal model."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteraction6, Max35Text> mmModel = new MMMessageAttribute<PointOfInteraction6, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction6.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class PointOfInteraction6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PointOfInteraction6 obj) {
+			return obj.getModel();
+		}
+
+		@Override
+		public void setValue(PointOfInteraction6 obj, Max35Text value) {
+			obj.setModel(value);
 		}
 	};
 	@XmlElement(name = "SrlNb", required = true)
@@ -182,7 +202,7 @@ public class PointOfInteraction6 {
 	 * definition} = "Serial number of the terminal manufacturer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteraction6, Max35Text> mmSerialNumber = new MMMessageAttribute<PointOfInteraction6, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction6.mmObject();
 			isDerived = false;
@@ -193,6 +213,16 @@ public class PointOfInteraction6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PointOfInteraction6 obj) {
+			return obj.getSerialNumber();
+		}
+
+		@Override
+		public void setValue(PointOfInteraction6 obj, Max35Text value) {
+			obj.setSerialNumber(value);
 		}
 	};
 

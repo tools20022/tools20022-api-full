@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.OptionEventType1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Option;
+import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -47,6 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * OptionEvent2.mmDescription}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.Option Option}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -79,6 +83,11 @@ public class OptionEvent2 {
 	 * {@linkplain com.tools20022.repository.choice.OptionEventType1Choice
 	 * OptionEventType1Choice}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Option#mmOptionType
+	 * Option.mmOptionType}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.OptionEvent2 OptionEvent2}</li>
@@ -95,8 +104,9 @@ public class OptionEvent2 {
 	 * definition} = "Type of event in the life of the option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionEvent2, OptionEventType1Choice> mmType = new MMMessageAssociationEnd<OptionEvent2, OptionEventType1Choice>() {
 		{
+			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionEvent2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
@@ -107,6 +117,16 @@ public class OptionEvent2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OptionEventType1Choice.mmObject();
+		}
+
+		@Override
+		public OptionEventType1Choice getValue(OptionEvent2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(OptionEvent2 obj, OptionEventType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -120,6 +140,11 @@ public class OptionEvent2 {
 	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
 	 * Max35Text}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -137,8 +162,9 @@ public class OptionEvent2 {
 	 * definition} = "Description of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionEvent2, Max35Text> mmDescription = new MMMessageAttribute<OptionEvent2, Max35Text>() {
 		{
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionEvent2.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
@@ -149,12 +175,23 @@ public class OptionEvent2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Max35Text getValue(OptionEvent2 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(OptionEvent2 obj, Max35Text value) {
+			obj.setDescription(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionEvent2.mmType, com.tools20022.repository.msg.OptionEvent2.mmDescription);
+				trace_lazy = () -> Option.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionEvent2";

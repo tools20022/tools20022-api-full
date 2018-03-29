@@ -26,6 +26,9 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.KEKIdentifier5;
+import com.tools20022.repository.msg.NetworkParameters3;
+import com.tools20022.repository.msg.NetworkParameters5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -132,7 +135,7 @@ public class HostCommunicationParameter4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HostCommunicationParameter4, TerminalManagementAction3Code> mmActionType = new MMMessageAttribute<HostCommunicationParameter4, TerminalManagementAction3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter4.mmObject();
 			isDerived = false;
@@ -144,6 +147,16 @@ public class HostCommunicationParameter4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction3Code getValue(HostCommunicationParameter4 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(HostCommunicationParameter4 obj, TerminalManagementAction3Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "HstId", required = true)
@@ -193,7 +206,7 @@ public class HostCommunicationParameter4 {
 	 * HostCommunicationParameter3.mmHostIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HostCommunicationParameter4, Max35Text> mmHostIdentification = new MMMessageAttribute<HostCommunicationParameter4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter4.mmObject();
@@ -207,6 +220,16 @@ public class HostCommunicationParameter4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(HostCommunicationParameter4 obj) {
+			return obj.getHostIdentification();
+		}
+
+		@Override
+		public void setValue(HostCommunicationParameter4 obj, Max35Text value) {
+			obj.setHostIdentification(value);
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -255,7 +278,7 @@ public class HostCommunicationParameter4 {
 	 * HostCommunicationParameter3.mmAddress}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HostCommunicationParameter4, Optional<NetworkParameters3>> mmAddress = new MMMessageAssociationEnd<HostCommunicationParameter4, Optional<NetworkParameters3>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementSystem.mmNetworkAccess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter4.mmObject();
@@ -269,11 +292,21 @@ public class HostCommunicationParameter4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters3.mmObject();
+			type_lazy = () -> NetworkParameters3.mmObject();
+		}
+
+		@Override
+		public Optional<NetworkParameters3> getValue(HostCommunicationParameter4 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(HostCommunicationParameter4 obj, Optional<NetworkParameters3> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Key")
-	protected List<com.tools20022.repository.msg.KEKIdentifier5> key;
+	protected List<KEKIdentifier5> key;
 	/**
 	 * 
 	 <p>
@@ -313,7 +346,7 @@ public class HostCommunicationParameter4 {
 	 * HostCommunicationParameter3.mmKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HostCommunicationParameter4, List<KEKIdentifier5>> mmKey = new MMMessageAssociationEnd<HostCommunicationParameter4, List<KEKIdentifier5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter4.mmObject();
 			isDerived = false;
@@ -325,7 +358,17 @@ public class HostCommunicationParameter4 {
 			previousVersion_lazy = () -> HostCommunicationParameter3.mmKey;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier5.mmObject();
+			type_lazy = () -> KEKIdentifier5.mmObject();
+		}
+
+		@Override
+		public List<KEKIdentifier5> getValue(HostCommunicationParameter4 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(HostCommunicationParameter4 obj, List<KEKIdentifier5> value) {
+			obj.setKey(value);
 		}
 	};
 	@XmlElement(name = "NtwkSvcPrvdr")
@@ -365,7 +408,7 @@ public class HostCommunicationParameter4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetworkServiceProvider = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HostCommunicationParameter4, Optional<NetworkParameters5>> mmNetworkServiceProvider = new MMMessageAssociationEnd<HostCommunicationParameter4, Optional<NetworkParameters5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter4.mmObject();
 			isDerived = false;
@@ -377,7 +420,17 @@ public class HostCommunicationParameter4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters5.mmObject();
+			type_lazy = () -> NetworkParameters5.mmObject();
+		}
+
+		@Override
+		public Optional<NetworkParameters5> getValue(HostCommunicationParameter4 obj) {
+			return obj.getNetworkServiceProvider();
+		}
+
+		@Override
+		public void setValue(HostCommunicationParameter4 obj, Optional<NetworkParameters5> value) {
+			obj.setNetworkServiceProvider(value.orElse(null));
 		}
 	};
 
@@ -421,7 +474,7 @@ public class HostCommunicationParameter4 {
 		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public HostCommunicationParameter4 setAddress(com.tools20022.repository.msg.NetworkParameters3 address) {
+	public HostCommunicationParameter4 setAddress(NetworkParameters3 address) {
 		this.address = address;
 		return this;
 	}
@@ -430,7 +483,7 @@ public class HostCommunicationParameter4 {
 		return key == null ? key = new ArrayList<>() : key;
 	}
 
-	public HostCommunicationParameter4 setKey(List<com.tools20022.repository.msg.KEKIdentifier5> key) {
+	public HostCommunicationParameter4 setKey(List<KEKIdentifier5> key) {
 		this.key = Objects.requireNonNull(key);
 		return this;
 	}
@@ -439,7 +492,7 @@ public class HostCommunicationParameter4 {
 		return networkServiceProvider == null ? Optional.empty() : Optional.of(networkServiceProvider);
 	}
 
-	public HostCommunicationParameter4 setNetworkServiceProvider(com.tools20022.repository.msg.NetworkParameters5 networkServiceProvider) {
+	public HostCommunicationParameter4 setNetworkServiceProvider(NetworkParameters5 networkServiceProvider) {
 		this.networkServiceProvider = networkServiceProvider;
 		return this;
 	}

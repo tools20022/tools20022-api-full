@@ -22,6 +22,10 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMReconciliationAdviceV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCommand5;
+import com.tools20022.repository.msg.ATMCommand6;
+import com.tools20022.repository.msg.ATMEnvironment10;
+import com.tools20022.repository.msg.ATMTransaction11;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -109,7 +113,7 @@ public class ATMReconciliationAdvice1 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMReconciliationAdvice1, ATMEnvironment10> mmEnvironment = new MMMessageAssociationEnd<ATMReconciliationAdvice1, ATMEnvironment10>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReconciliationAdvice1.mmObject();
 			isDerived = false;
@@ -120,11 +124,21 @@ public class ATMReconciliationAdvice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment10.mmObject();
+			type_lazy = () -> ATMEnvironment10.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment10 getValue(ATMReconciliationAdvice1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAdvice1 obj, ATMEnvironment10 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "CmdRslt")
-	protected List<com.tools20022.repository.msg.ATMCommand5> commandResult;
+	protected List<ATMCommand5> commandResult;
 	/**
 	 * 
 	 <p>
@@ -152,7 +166,7 @@ public class ATMReconciliationAdvice1 {
 	 * "Command result for reinitialisation of the transaction counters."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommandResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMReconciliationAdvice1, List<ATMCommand5>> mmCommandResult = new MMMessageAssociationEnd<ATMReconciliationAdvice1, List<ATMCommand5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReconciliationAdvice1.mmObject();
 			isDerived = false;
@@ -162,7 +176,17 @@ public class ATMReconciliationAdvice1 {
 			definition = "Command result for reinitialisation of the transaction counters.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand5.mmObject();
+			type_lazy = () -> ATMCommand5.mmObject();
+		}
+
+		@Override
+		public List<ATMCommand5> getValue(ATMReconciliationAdvice1 obj) {
+			return obj.getCommandResult();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAdvice1 obj, List<ATMCommand5> value) {
+			obj.setCommandResult(value);
 		}
 	};
 	@XmlElement(name = "CmdCntxt")
@@ -193,7 +217,7 @@ public class ATMReconciliationAdvice1 {
 	 * definition} = "Party which has requested the reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommandContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMReconciliationAdvice1, Optional<ATMCommand6>> mmCommandContext = new MMMessageAssociationEnd<ATMReconciliationAdvice1, Optional<ATMCommand6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReconciliationAdvice1.mmObject();
 			isDerived = false;
@@ -204,7 +228,17 @@ public class ATMReconciliationAdvice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand6.mmObject();
+			type_lazy = () -> ATMCommand6.mmObject();
+		}
+
+		@Override
+		public Optional<ATMCommand6> getValue(ATMReconciliationAdvice1 obj) {
+			return obj.getCommandContext();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAdvice1 obj, Optional<ATMCommand6> value) {
+			obj.setCommandContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -235,7 +269,7 @@ public class ATMReconciliationAdvice1 {
 	 * definition} = "Information about the reconciliation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMReconciliationAdvice1, ATMTransaction11> mmTransaction = new MMMessageAssociationEnd<ATMReconciliationAdvice1, ATMTransaction11>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReconciliationAdvice1.mmObject();
 			isDerived = false;
@@ -246,7 +280,17 @@ public class ATMReconciliationAdvice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction11.mmObject();
+			type_lazy = () -> ATMTransaction11.mmObject();
+		}
+
+		@Override
+		public ATMTransaction11 getValue(ATMReconciliationAdvice1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ATMReconciliationAdvice1 obj, ATMTransaction11 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -269,7 +313,7 @@ public class ATMReconciliationAdvice1 {
 		return environment;
 	}
 
-	public ATMReconciliationAdvice1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment10 environment) {
+	public ATMReconciliationAdvice1 setEnvironment(ATMEnvironment10 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -278,7 +322,7 @@ public class ATMReconciliationAdvice1 {
 		return commandResult == null ? commandResult = new ArrayList<>() : commandResult;
 	}
 
-	public ATMReconciliationAdvice1 setCommandResult(List<com.tools20022.repository.msg.ATMCommand5> commandResult) {
+	public ATMReconciliationAdvice1 setCommandResult(List<ATMCommand5> commandResult) {
 		this.commandResult = Objects.requireNonNull(commandResult);
 		return this;
 	}
@@ -287,7 +331,7 @@ public class ATMReconciliationAdvice1 {
 		return commandContext == null ? Optional.empty() : Optional.of(commandContext);
 	}
 
-	public ATMReconciliationAdvice1 setCommandContext(com.tools20022.repository.msg.ATMCommand6 commandContext) {
+	public ATMReconciliationAdvice1 setCommandContext(ATMCommand6 commandContext) {
 		this.commandContext = commandContext;
 		return this;
 	}
@@ -296,7 +340,7 @@ public class ATMReconciliationAdvice1 {
 		return transaction;
 	}
 
-	public ATMReconciliationAdvice1 setTransaction(com.tools20022.repository.msg.ATMTransaction11 transaction) {
+	public ATMReconciliationAdvice1 setTransaction(ATMTransaction11 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

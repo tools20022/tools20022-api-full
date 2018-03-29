@@ -118,7 +118,7 @@ public class DateTimePeriod1Choice {
 	 * DateTimePeriodChoice.mmFromDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateTimePeriod1Choice, ISODateTime> mmFromDateTime = new MMMessageAttribute<DateTimePeriod1Choice, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimePeriod1Choice.mmObject();
@@ -131,6 +131,16 @@ public class DateTimePeriod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateTimePeriod1Choice obj) {
+			return obj.getFromDateTime();
+		}
+
+		@Override
+		public void setValue(DateTimePeriod1Choice obj, ISODateTime value) {
+			obj.setFromDateTime(value);
 		}
 	};
 	@XmlElement(name = "ToDtTm", required = true)
@@ -172,7 +182,7 @@ public class DateTimePeriod1Choice {
 	 * DateTimePeriodChoice.mmToDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateTimePeriod1Choice, ISODateTime> mmToDateTime = new MMMessageAttribute<DateTimePeriod1Choice, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimePeriod1Choice.mmObject();
@@ -185,6 +195,16 @@ public class DateTimePeriod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateTimePeriod1Choice obj) {
+			return obj.getToDateTime();
+		}
+
+		@Override
+		public void setValue(DateTimePeriod1Choice obj, ISODateTime value) {
+			obj.setToDateTime(value);
 		}
 	};
 	@XmlElement(name = "DtTmRg", required = true)
@@ -227,7 +247,7 @@ public class DateTimePeriod1Choice {
 	 * DateTimePeriodChoice.mmDateTimeRange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTimeRange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateTimePeriod1Choice, DateTimePeriod1> mmDateTimeRange = new MMMessageAttribute<DateTimePeriod1Choice, DateTimePeriod1>() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateTimePeriod1Choice.mmObject();
@@ -240,6 +260,16 @@ public class DateTimePeriod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateTimePeriod1.mmObject();
+		}
+
+		@Override
+		public DateTimePeriod1 getValue(DateTimePeriod1Choice obj) {
+			return obj.getDateTimeRange();
+		}
+
+		@Override
+		public void setValue(DateTimePeriod1Choice obj, DateTimePeriod1 value) {
+			obj.setDateTimeRange(value);
 		}
 	};
 

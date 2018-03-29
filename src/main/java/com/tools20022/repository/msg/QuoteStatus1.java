@@ -109,7 +109,7 @@ public class QuoteStatus1 {
 	 * definition} = "Provides information related to the status of a quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteStatus1, QuoteStatus1Code> mmQuoteStatus = new MMMessageAttribute<QuoteStatus1, QuoteStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteStatus1.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class QuoteStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> QuoteStatus1Code.mmObject();
+		}
+
+		@Override
+		public QuoteStatus1Code getValue(QuoteStatus1 obj) {
+			return obj.getQuoteStatus();
+		}
+
+		@Override
+		public void setValue(QuoteStatus1 obj, QuoteStatus1Code value) {
+			obj.setQuoteStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -153,7 +163,7 @@ public class QuoteStatus1 {
 	 * "Provides information related to the rejection of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteStatus1, Optional<RejectionReason3Code>> mmRejectionReason = new MMMessageAttribute<QuoteStatus1, Optional<RejectionReason3Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteStatus1.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class QuoteStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReason3Code.mmObject();
+		}
+
+		@Override
+		public Optional<RejectionReason3Code> getValue(QuoteStatus1 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(QuoteStatus1 obj, Optional<RejectionReason3Code> value) {
+			obj.setRejectionReason(value.orElse(null));
 		}
 	};
 

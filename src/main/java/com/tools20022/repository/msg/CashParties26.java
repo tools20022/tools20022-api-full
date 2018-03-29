@@ -27,6 +27,8 @@ import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount111;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount112;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -178,7 +180,7 @@ public class CashParties26 {
 	 * CashParties17.mmDebtor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties26, Optional<PartyIdentificationAndAccount111>> mmDebtor = new MMMessageAssociationEnd<CashParties26, Optional<PartyIdentificationAndAccount111>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
@@ -192,7 +194,17 @@ public class CashParties26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount111.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount111.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount111> getValue(CashParties26 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(CashParties26 obj, Optional<PartyIdentificationAndAccount111> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt")
@@ -238,7 +250,7 @@ public class CashParties26 {
 	 * CashParties17.mmDebtorAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties26, Optional<PartyIdentificationAndAccount112>> mmDebtorAgent = new MMMessageAssociationEnd<CashParties26, Optional<PartyIdentificationAndAccount112>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
@@ -252,7 +264,17 @@ public class CashParties26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount112.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount112> getValue(CashParties26 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties26 obj, Optional<PartyIdentificationAndAccount112> value) {
+			obj.setDebtorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr")
@@ -297,7 +319,7 @@ public class CashParties26 {
 	 * CashParties17.mmCreditor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties26, Optional<PartyIdentificationAndAccount111>> mmCreditor = new MMMessageAssociationEnd<CashParties26, Optional<PartyIdentificationAndAccount111>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
@@ -311,7 +333,17 @@ public class CashParties26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount111.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount111.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount111> getValue(CashParties26 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(CashParties26 obj, Optional<PartyIdentificationAndAccount111> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -357,7 +389,7 @@ public class CashParties26 {
 	 * CashParties17.mmCreditorAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties26, Optional<PartyIdentificationAndAccount112>> mmCreditorAgent = new MMMessageAssociationEnd<CashParties26, Optional<PartyIdentificationAndAccount112>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
@@ -371,7 +403,17 @@ public class CashParties26 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount112.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount112> getValue(CashParties26 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties26 obj, Optional<PartyIdentificationAndAccount112> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Intrmy")
@@ -415,7 +457,7 @@ public class CashParties26 {
 	 * CashParties17.mmIntermediary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashParties26, Optional<PartyIdentificationAndAccount112>> mmIntermediary = new MMMessageAttribute<CashParties26, Optional<PartyIdentificationAndAccount112>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties26.mmObject();
@@ -427,7 +469,17 @@ public class CashParties26 {
 			previousVersion_lazy = () -> CashParties17.mmIntermediary;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount112.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount112.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount112> getValue(CashParties26 obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(CashParties26 obj, Optional<PartyIdentificationAndAccount112> value) {
+			obj.setIntermediary(value.orElse(null));
 		}
 	};
 
@@ -456,7 +508,7 @@ public class CashParties26 {
 		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public CashParties26 setDebtor(com.tools20022.repository.msg.PartyIdentificationAndAccount111 debtor) {
+	public CashParties26 setDebtor(PartyIdentificationAndAccount111 debtor) {
 		this.debtor = debtor;
 		return this;
 	}
@@ -465,7 +517,7 @@ public class CashParties26 {
 		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public CashParties26 setDebtorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount112 debtorAgent) {
+	public CashParties26 setDebtorAgent(PartyIdentificationAndAccount112 debtorAgent) {
 		this.debtorAgent = debtorAgent;
 		return this;
 	}
@@ -474,7 +526,7 @@ public class CashParties26 {
 		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public CashParties26 setCreditor(com.tools20022.repository.msg.PartyIdentificationAndAccount111 creditor) {
+	public CashParties26 setCreditor(PartyIdentificationAndAccount111 creditor) {
 		this.creditor = creditor;
 		return this;
 	}
@@ -483,7 +535,7 @@ public class CashParties26 {
 		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public CashParties26 setCreditorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount112 creditorAgent) {
+	public CashParties26 setCreditorAgent(PartyIdentificationAndAccount112 creditorAgent) {
 		this.creditorAgent = creditorAgent;
 		return this;
 	}
@@ -492,7 +544,7 @@ public class CashParties26 {
 		return intermediary == null ? Optional.empty() : Optional.of(intermediary);
 	}
 
-	public CashParties26 setIntermediary(com.tools20022.repository.msg.PartyIdentificationAndAccount112 intermediary) {
+	public CashParties26 setIntermediary(PartyIdentificationAndAccount112 intermediary) {
 		this.intermediary = intermediary;
 		return this;
 	}

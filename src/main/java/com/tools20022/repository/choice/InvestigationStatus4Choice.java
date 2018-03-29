@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.ResolutionOfInvestigationV08;
+import com.tools20022.repository.choice.ModificationStatusReason1Choice;
 import com.tools20022.repository.codeset.ExternalInvestigationExecutionConfirmation1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.PaymentInvestigationCaseRejection;
@@ -139,7 +140,7 @@ public class InvestigationStatus4Choice {
 	 * InvestigationStatus3Choice.mmConfirmation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus4Choice, ExternalInvestigationExecutionConfirmation1Code> mmConfirmation = new MMMessageAttribute<InvestigationStatus4Choice, ExternalInvestigationExecutionConfirmation1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus4Choice.mmObject();
@@ -153,9 +154,19 @@ public class InvestigationStatus4Choice {
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalInvestigationExecutionConfirmation1Code.mmObject();
 		}
+
+		@Override
+		public ExternalInvestigationExecutionConfirmation1Code getValue(InvestigationStatus4Choice obj) {
+			return obj.getConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus4Choice obj, ExternalInvestigationExecutionConfirmation1Code value) {
+			obj.setConfirmation(value);
+		}
 	};
 	@XmlElement(name = "RjctdMod", required = true)
-	protected List<com.tools20022.repository.choice.ModificationStatusReason1Choice> rejectedModification;
+	protected List<ModificationStatusReason1Choice> rejectedModification;
 	/**
 	 * 
 	 <p>
@@ -195,7 +206,7 @@ public class InvestigationStatus4Choice {
 	 * InvestigationStatus3Choice.mmRejectedModification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedModification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus4Choice, List<ModificationStatusReason1Choice>> mmRejectedModification = new MMMessageAttribute<InvestigationStatus4Choice, List<ModificationStatusReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedModification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus4Choice.mmObject();
@@ -206,7 +217,17 @@ public class InvestigationStatus4Choice {
 			definition = "Reason for the rejection of a modification request, in a coded form.";
 			previousVersion_lazy = () -> InvestigationStatus3Choice.mmRejectedModification;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.ModificationStatusReason1Choice.mmObject();
+			complexType_lazy = () -> ModificationStatusReason1Choice.mmObject();
+		}
+
+		@Override
+		public List<ModificationStatusReason1Choice> getValue(InvestigationStatus4Choice obj) {
+			return obj.getRejectedModification();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus4Choice obj, List<ModificationStatusReason1Choice> value) {
+			obj.setRejectedModification(value);
 		}
 	};
 	@XmlElement(name = "DplctOf", required = true)
@@ -248,7 +269,7 @@ public class InvestigationStatus4Choice {
 	 * InvestigationStatus3Choice.mmDuplicateOf}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDuplicateOf = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestigationStatus4Choice, Case4> mmDuplicateOf = new MMMessageAssociationEnd<InvestigationStatus4Choice, Case4>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmDuplicateCase;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus4Choice.mmObject();
@@ -262,6 +283,16 @@ public class InvestigationStatus4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Case4.mmObject();
+		}
+
+		@Override
+		public Case4 getValue(InvestigationStatus4Choice obj) {
+			return obj.getDuplicateOf();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus4Choice obj, Case4 value) {
+			obj.setDuplicateOf(value);
 		}
 	};
 	@XmlElement(name = "AssgnmtCxlConf", required = true)
@@ -306,7 +337,7 @@ public class InvestigationStatus4Choice {
 	 * InvestigationStatus3Choice.mmAssignmentCancellationConfirmation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssignmentCancellationConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatus4Choice, YesNoIndicator> mmAssignmentCancellationConfirmation = new MMMessageAttribute<InvestigationStatus4Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatus4Choice.mmObject();
@@ -319,6 +350,16 @@ public class InvestigationStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestigationStatus4Choice obj) {
+			return obj.getAssignmentCancellationConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatus4Choice obj, YesNoIndicator value) {
+			obj.setAssignmentCancellationConfirmation(value);
 		}
 	};
 
@@ -352,7 +393,7 @@ public class InvestigationStatus4Choice {
 		return rejectedModification == null ? rejectedModification = new ArrayList<>() : rejectedModification;
 	}
 
-	public InvestigationStatus4Choice setRejectedModification(List<com.tools20022.repository.choice.ModificationStatusReason1Choice> rejectedModification) {
+	public InvestigationStatus4Choice setRejectedModification(List<ModificationStatusReason1Choice> rejectedModification) {
 		this.rejectedModification = Objects.requireNonNull(rejectedModification);
 		return this;
 	}

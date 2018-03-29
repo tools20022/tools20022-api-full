@@ -142,7 +142,7 @@ public class PlainCardData11 {
 	 * PlainCardData10.mmPAN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData11, Min8Max28NumericText> mmPAN = new MMMessageAttribute<PlainCardData11, Min8Max28NumericText>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData11.mmObject();
@@ -156,6 +156,16 @@ public class PlainCardData11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Min8Max28NumericText.mmObject();
+		}
+
+		@Override
+		public Min8Max28NumericText getValue(PlainCardData11 obj) {
+			return obj.getPAN();
+		}
+
+		@Override
+		public void setValue(PlainCardData11 obj, Min8Max28NumericText value) {
+			obj.setPAN(value);
 		}
 	};
 	@XmlElement(name = "CardSeqNb")
@@ -208,7 +218,7 @@ public class PlainCardData11 {
 	 * PlainCardData10.mmCardSequenceNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData11, Optional<Min2Max3NumericText>> mmCardSequenceNumber = new MMMessageAttribute<PlainCardData11, Optional<Min2Max3NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmSequenceNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData11.mmObject();
@@ -222,6 +232,16 @@ public class PlainCardData11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Min2Max3NumericText> getValue(PlainCardData11 obj) {
+			return obj.getCardSequenceNumber();
+		}
+
+		@Override
+		public void setValue(PlainCardData11 obj, Optional<Min2Max3NumericText> value) {
+			obj.setCardSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FctvDt")
@@ -264,7 +284,7 @@ public class PlainCardData11 {
 	 * PlainCardData10.mmEffectiveDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData11, Optional<Max10Text>> mmEffectiveDate = new MMMessageAttribute<PlainCardData11, Optional<Max10Text>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentCard.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData11.mmObject();
@@ -277,6 +297,16 @@ public class PlainCardData11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max10Text> getValue(PlainCardData11 obj) {
+			return obj.getEffectiveDate();
+		}
+
+		@Override
+		public void setValue(PlainCardData11 obj, Optional<Max10Text> value) {
+			obj.setEffectiveDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt")
@@ -327,7 +357,7 @@ public class PlainCardData11 {
 	 * PlainCardData10.mmExpiryDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData11, Optional<Max10Text>> mmExpiryDate = new MMMessageAttribute<PlainCardData11, Optional<Max10Text>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentCard.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData11.mmObject();
@@ -341,6 +371,16 @@ public class PlainCardData11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max10Text> getValue(PlainCardData11 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(PlainCardData11 obj, Optional<Max10Text> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcCd")
@@ -383,7 +423,7 @@ public class PlainCardData11 {
 	 * PlainCardData10.mmServiceCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlainCardData11, Optional<Exact3NumericText>> mmServiceCode = new MMMessageAttribute<PlainCardData11, Optional<Exact3NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmServiceCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PlainCardData11.mmObject();
@@ -396,6 +436,16 @@ public class PlainCardData11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact3NumericText> getValue(PlainCardData11 obj) {
+			return obj.getServiceCode();
+		}
+
+		@Override
+		public void setValue(PlainCardData11 obj, Optional<Exact3NumericText> value) {
+			obj.setServiceCode(value.orElse(null));
 		}
 	};
 

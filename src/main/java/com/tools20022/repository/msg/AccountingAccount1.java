@@ -111,7 +111,7 @@ public class AccountingAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountingAccount1, Max35Text> mmIdentification = new MMMessageAttribute<AccountingAccount1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountingAccount1.mmObject();
@@ -123,6 +123,16 @@ public class AccountingAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountingAccount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountingAccount1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CostRefPttrn")
@@ -161,7 +171,7 @@ public class AccountingAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCostReferencePattern = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountingAccount1, Optional<Max35Text>> mmCostReferencePattern = new MMMessageAttribute<AccountingAccount1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmCostReferencePattern;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountingAccount1.mmObject();
@@ -173,6 +183,16 @@ public class AccountingAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountingAccount1 obj) {
+			return obj.getCostReferencePattern();
+		}
+
+		@Override
+		public void setValue(AccountingAccount1 obj, Optional<Max35Text> value) {
+			obj.setCostReferencePattern(value.orElse(null));
 		}
 	};
 

@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Allocation;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount2;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,7 +126,7 @@ public class PreAllocation1 {
 	 * "Used to assign an identifier to the block of preallocations."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllocationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreAllocation1, Optional<Max35Text>> mmAllocationIdentification = new MMMessageAttribute<PreAllocation1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
@@ -138,6 +139,16 @@ public class PreAllocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PreAllocation1 obj) {
+			return obj.getAllocationIdentification();
+		}
+
+		@Override
+		public void setValue(PreAllocation1 obj, Optional<Max35Text> value) {
+			obj.setAllocationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndvAllcnId")
@@ -176,7 +187,7 @@ public class PreAllocation1 {
 	 * definition} = "A unique identification for each allocation instance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndividualAllocationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreAllocation1, Optional<Max35Text>> mmIndividualAllocationIdentification = new MMMessageAttribute<PreAllocation1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
@@ -189,6 +200,16 @@ public class PreAllocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PreAllocation1 obj) {
+			return obj.getIndividualAllocationIdentification();
+		}
+
+		@Override
+		public void setValue(PreAllocation1 obj, Optional<Max35Text> value) {
+			obj.setIndividualAllocationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AllctdQty")
@@ -230,7 +251,7 @@ public class PreAllocation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllocatedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreAllocation1, Optional<FinancialInstrumentQuantityChoice>> mmAllocatedQuantity = new MMMessageAttribute<PreAllocation1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Allocation.mmAllocatedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
@@ -243,6 +264,16 @@ public class PreAllocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(PreAllocation1 obj) {
+			return obj.getAllocatedQuantity();
+		}
+
+		@Override
+		public void setValue(PreAllocation1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setAllocatedQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AllctdSttlmCcy")
@@ -282,7 +313,7 @@ public class PreAllocation1 {
 	 * "Currency to be used for settlement of the settlement amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllocatedSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreAllocation1, Optional<CurrencyCode>> mmAllocatedSettlementCurrency = new MMMessageAttribute<PreAllocation1, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Allocation.mmSettlementCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
@@ -295,6 +326,16 @@ public class PreAllocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(PreAllocation1 obj) {
+			return obj.getAllocatedSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(PreAllocation1 obj, Optional<CurrencyCode> value) {
+			obj.setAllocatedSettlementCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AllcnAcctDtls")
@@ -332,7 +373,7 @@ public class PreAllocation1 {
 	 * definition} = "Account to or from which an allocation must be made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAllocationAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PreAllocation1, Optional<SecuritiesAccount2>> mmAllocationAccountDetails = new MMMessageAssociationEnd<PreAllocation1, Optional<SecuritiesAccount2>>() {
 		{
 			businessElementTrace_lazy = () -> Allocation.mmAllocationAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PreAllocation1.mmObject();
@@ -345,7 +386,17 @@ public class PreAllocation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
+			type_lazy = () -> SecuritiesAccount2.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesAccount2> getValue(PreAllocation1 obj) {
+			return obj.getAllocationAccountDetails();
+		}
+
+		@Override
+		public void setValue(PreAllocation1 obj, Optional<SecuritiesAccount2> value) {
+			obj.setAllocationAccountDetails(value.orElse(null));
 		}
 	};
 
@@ -411,7 +462,7 @@ public class PreAllocation1 {
 		return allocationAccountDetails == null ? Optional.empty() : Optional.of(allocationAccountDetails);
 	}
 
-	public PreAllocation1 setAllocationAccountDetails(com.tools20022.repository.msg.SecuritiesAccount2 allocationAccountDetails) {
+	public PreAllocation1 setAllocationAccountDetails(SecuritiesAccount2 allocationAccountDetails) {
 		this.allocationAccountDetails = allocationAccountDetails;
 		return this;
 	}

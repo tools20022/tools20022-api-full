@@ -105,7 +105,7 @@ public class PriorityCodeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriorityCodeChoice, Priority1Code> mmCode = new MMMessageAttribute<PriorityCodeChoice, Priority1Code>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriorityCodeChoice.mmObject();
@@ -117,6 +117,16 @@ public class PriorityCodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Priority1Code.mmObject();
+		}
+
+		@Override
+		public Priority1Code getValue(PriorityCodeChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PriorityCodeChoice obj, Priority1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "PrtryCd", required = true)
@@ -149,7 +159,7 @@ public class PriorityCodeChoice {
 	 * definition} = "Priority code bilaterally defined between parties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriorityCodeChoice, Max4AlphaNumericText> mmProprietaryCode = new MMMessageAttribute<PriorityCodeChoice, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriorityCodeChoice.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class PriorityCodeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(PriorityCodeChoice obj) {
+			return obj.getProprietaryCode();
+		}
+
+		@Override
+		public void setValue(PriorityCodeChoice obj, Max4AlphaNumericText value) {
+			obj.setProprietaryCode(value);
 		}
 	};
 

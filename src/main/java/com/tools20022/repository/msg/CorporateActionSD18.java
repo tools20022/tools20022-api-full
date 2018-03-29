@@ -107,7 +107,7 @@ public class CorporateActionSD18 {
 	 * CorporateActionSD8.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD18, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionSD18, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD18.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class CorporateActionSD18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionSD18 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD18 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LtrySeqNb")
@@ -158,7 +168,7 @@ public class CorporateActionSD18 {
 	 * CorporateActionSD8.mmLotterySequenceNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotterySequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD18, Optional<Max3NumericText>> mmLotterySequenceNumber = new MMMessageAttribute<CorporateActionSD18, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD18.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class CorporateActionSD18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(CorporateActionSD18 obj) {
+			return obj.getLotterySequenceNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD18 obj, Optional<Max3NumericText> value) {
+			obj.setLotterySequenceNumber(value.orElse(null));
 		}
 	};
 

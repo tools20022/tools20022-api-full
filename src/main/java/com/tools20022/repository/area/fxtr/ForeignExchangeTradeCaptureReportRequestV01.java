@@ -31,7 +31,6 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.Period4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FXPostTradeTradeCapture;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -160,7 +159,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * definition} = "Identifies the capture request message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, MessageIdentification1> mmQueryRequestIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, MessageIdentification1>() {
 		{
 			xmlTag = "QryReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,12 +170,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryRequestIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryRequestIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, MessageIdentification1 value) {
+			obj.setQueryRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "QryOrdrSts", required = true)
@@ -204,7 +205,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * definition} = "Range of the trade for the inquire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryOrderStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, QueryOrderStatus1Code> mmQueryOrderStatus = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, QueryOrderStatus1Code>() {
 		{
 			xmlTag = "QryOrdrSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,12 +216,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			simpleType_lazy = () -> QueryOrderStatus1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryOrderStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public QueryOrderStatus1Code getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryOrderStatus();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, QueryOrderStatus1Code value) {
+			obj.setQueryOrderStatus(value);
 		}
 	};
 	@XmlElement(name = "QryTp")
@@ -248,7 +251,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * definition} = "Specifies the inquiry type of the data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<QueryDataType1Code>> mmQueryType = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<QueryDataType1Code>>() {
 		{
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,12 +262,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			simpleType_lazy = () -> QueryDataType1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<QueryDataType1Code> getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, Optional<QueryDataType1Code> value) {
+			obj.setQueryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryStartNb", required = true)
@@ -292,7 +297,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * definition} = "Start number in request result."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryStartNumber = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Max35NumericText> mmQueryStartNumber = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Max35NumericText>() {
 		{
 			xmlTag = "QryStartNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,12 +308,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryStartNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35NumericText getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryStartNumber();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, Max35NumericText value) {
+			obj.setQueryStartNumber(value);
 		}
 	};
 	@XmlElement(name = "QryByPrd", required = true)
@@ -337,7 +344,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * "Indicates whether the request is query trade for a period of time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryByPeriod = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, YesNoIndicator> mmQueryByPeriod = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, YesNoIndicator>() {
 		{
 			xmlTag = "QryByPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -348,12 +355,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryByPeriod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryByPeriod();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, YesNoIndicator value) {
+			obj.setQueryByPeriod(value);
 		}
 	};
 	@XmlElement(name = "QryPrd")
@@ -380,7 +389,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * definition} = "Period of the inquiry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryPeriod = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Period4>> mmQueryPeriod = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Period4>>() {
 		{
 			xmlTag = "QryPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,12 +400,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			complexType_lazy = () -> Period4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryPeriod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Period4> getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryPeriod();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, Optional<Period4> value) {
+			obj.setQueryPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryTradId")
@@ -425,7 +436,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryTradeIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Max35Text>> mmQueryTradeIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Max35Text>>() {
 		{
 			xmlTag = "QryTradId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -436,12 +447,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryTradeIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryTradeIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, Optional<Max35Text> value) {
+			obj.setQueryTradeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryEndId")
@@ -468,7 +481,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * definition} = "Identifies the end of the request result."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryEndIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Max35Text>> mmQueryEndIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Max35Text>>() {
 		{
 			xmlTag = "QryEndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -479,12 +492,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryEndIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryEndIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, Optional<Max35Text> value) {
+			obj.setQueryEndIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -514,7 +529,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -524,12 +539,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 	@XmlElement(name = "QryPgSz")
@@ -557,7 +574,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * definition} = "Largest number of request result."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryPageSize = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Max35NumericText>> mmQueryPageSize = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Max35NumericText>>() {
 		{
 			xmlTag = "QryPgSz";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -568,12 +585,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			simpleType_lazy = () -> Max35NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryPageSize", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35NumericText> getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryPageSize();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, Optional<Max35NumericText> value) {
+			obj.setQueryPageSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryParamVal")
@@ -600,7 +619,7 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 	 * definition} = "Specifies the inquiry value of the parameter."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmQueryParameterValue = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Max35Text>> mmQueryParameterValue = new MMMessageBuildingBlock<ForeignExchangeTradeCaptureReportRequestV01, Optional<Max35Text>>() {
 		{
 			xmlTag = "QryParamVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -611,12 +630,14 @@ public class ForeignExchangeTradeCaptureReportRequestV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeCaptureReportRequestV01.class.getMethod("getQueryParameterValue", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(ForeignExchangeTradeCaptureReportRequestV01 obj) {
+			return obj.getQueryParameterValue();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeCaptureReportRequestV01 obj, Optional<Max35Text> value) {
+			obj.setQueryParameterValue(value.orElse(null));
 		}
 	};
 

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.ResolutionOfInvestigationV08;
+import com.tools20022.repository.choice.ClaimNonReceiptRejectReason1Choice;
 import com.tools20022.repository.entity.InvestigationCase;
 import com.tools20022.repository.entity.InvestigationCaseStatus;
 import com.tools20022.repository.GeneratedRepository;
@@ -117,7 +118,7 @@ public class ClaimNonReceipt1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClaimNonReceipt1Choice, ClaimNonReceipt1> mmAccepted = new MMMessageAssociationEnd<ClaimNonReceipt1Choice, ClaimNonReceipt1>() {
 		{
 			businessComponentTrace_lazy = () -> InvestigationCaseStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClaimNonReceipt1Choice.mmObject();
@@ -130,6 +131,16 @@ public class ClaimNonReceipt1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ClaimNonReceipt1.mmObject();
+		}
+
+		@Override
+		public ClaimNonReceipt1 getValue(ClaimNonReceipt1Choice obj) {
+			return obj.getAccepted();
+		}
+
+		@Override
+		public void setValue(ClaimNonReceipt1Choice obj, ClaimNonReceipt1 value) {
+			obj.setAccepted(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -168,7 +179,7 @@ public class ClaimNonReceipt1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClaimNonReceipt1Choice, ClaimNonReceiptRejectReason1Choice> mmRejected = new MMMessageAssociationEnd<ClaimNonReceipt1Choice, ClaimNonReceiptRejectReason1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> InvestigationCaseStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClaimNonReceipt1Choice.mmObject();
@@ -180,7 +191,17 @@ public class ClaimNonReceipt1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.ClaimNonReceiptRejectReason1Choice.mmObject();
+			type_lazy = () -> ClaimNonReceiptRejectReason1Choice.mmObject();
+		}
+
+		@Override
+		public ClaimNonReceiptRejectReason1Choice getValue(ClaimNonReceipt1Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(ClaimNonReceipt1Choice obj, ClaimNonReceiptRejectReason1Choice value) {
+			obj.setRejected(value);
 		}
 	};
 
@@ -212,7 +233,7 @@ public class ClaimNonReceipt1Choice {
 		return rejected;
 	}
 
-	public ClaimNonReceipt1Choice setRejected(com.tools20022.repository.choice.ClaimNonReceiptRejectReason1Choice rejected) {
+	public ClaimNonReceipt1Choice setRejected(ClaimNonReceiptRejectReason1Choice rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}

@@ -115,7 +115,7 @@ public class Quantity12Choice {
 	 * definition} = "Quantity of assets to be transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity12Choice, Optional<DecimalNumber>> mmUnit = new MMMessageAttribute<Quantity12Choice, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity12Choice.mmObject();
@@ -127,6 +127,16 @@ public class Quantity12Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Quantity12Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(Quantity12Choice obj, Optional<DecimalNumber> value) {
+			obj.setUnit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgRate")
@@ -159,7 +169,7 @@ public class Quantity12Choice {
 	 * definition} = "Percentage rate of assets to be transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity12Choice, Optional<PercentageRate>> mmPercentageRate = new MMMessageAttribute<Quantity12Choice, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity12Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class Quantity12Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Quantity12Choice obj) {
+			return obj.getPercentageRate();
+		}
+
+		@Override
+		public void setValue(Quantity12Choice obj, Optional<PercentageRate> value) {
+			obj.setPercentageRate(value.orElse(null));
 		}
 	};
 

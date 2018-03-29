@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification42;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -156,7 +157,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmIdentification = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -167,6 +168,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -199,7 +210,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmName = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -210,6 +221,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -242,7 +263,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmStatus = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -253,6 +274,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -285,7 +316,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmType = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -296,6 +327,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -328,7 +369,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmCurrency = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -339,6 +380,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "MnthlyPmtVal", required = true)
@@ -371,7 +422,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMonthlyPaymentValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmMonthlyPaymentValue = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -382,6 +433,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getMonthlyPaymentValue();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setMonthlyPaymentValue(value);
 		}
 	};
 	@XmlElement(name = "MnthlyRcvdVal", required = true)
@@ -414,7 +475,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMonthlyReceivedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmMonthlyReceivedValue = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -425,6 +486,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getMonthlyReceivedValue();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setMonthlyReceivedValue(value);
 		}
 	};
 	@XmlElement(name = "MnthlyTxNb", required = true)
@@ -457,7 +528,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMonthlyTransactionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmMonthlyTransactionNumber = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -468,6 +539,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getMonthlyTransactionNumber();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setMonthlyTransactionNumber(value);
 		}
 	};
 	@XmlElement(name = "AvrgBal", required = true)
@@ -500,7 +581,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAverageBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmAverageBalance = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -511,6 +592,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getAverageBalance();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setAverageBalance(value);
 		}
 	};
 	@XmlElement(name = "AcctPurp", required = true)
@@ -543,7 +634,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmAccountPurpose = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -554,6 +645,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getAccountPurpose();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setAccountPurpose(value);
 		}
 	};
 	@XmlElement(name = "FlrNtfctnAmt", required = true)
@@ -586,7 +687,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFloorNotificationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmFloorNotificationAmount = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -597,6 +698,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getFloorNotificationAmount();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setFloorNotificationAmount(value);
 		}
 	};
 	@XmlElement(name = "ClngNtfctnAmt", required = true)
@@ -629,7 +740,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCeilingNotificationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmCeilingNotificationAmount = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -640,6 +751,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getCeilingNotificationAmount();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setCeilingNotificationAmount(value);
 		}
 	};
 	@XmlElement(name = "StmtCycl", required = true)
@@ -672,7 +793,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementCycle = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmStatementCycle = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -683,6 +804,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getStatementCycle();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setStatementCycle(value);
 		}
 	};
 	@XmlElement(name = "ClsgDt", required = true)
@@ -715,7 +846,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmClosingDate = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -726,6 +857,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setClosingDate(value);
 		}
 	};
 	@XmlElement(name = "Rstrctn", required = true)
@@ -758,7 +899,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestriction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmRestriction = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -769,6 +910,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getRestriction();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setRestriction(value);
 		}
 	};
 	@XmlElement(name = "OpngDt", required = true)
@@ -801,7 +952,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmOpeningDate = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -812,6 +963,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setOpeningDate(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr", required = true)
@@ -844,7 +1005,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmAccountOwner = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -855,6 +1016,16 @@ public class CustomerAccountReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "RefAcct", required = true)
@@ -887,7 +1058,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator> mmReferenceAccount = new MMMessageAttribute<CustomerAccountReturnCriteria1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -899,9 +1070,19 @@ public class CustomerAccountReturnCriteria1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getReferenceAccount();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, YesNoIndicator value) {
+			obj.setReferenceAccount(value);
+		}
 	};
 	@XmlElement(name = "Prtry")
-	protected List<com.tools20022.repository.msg.GenericIdentification42> proprietary;
+	protected List<GenericIdentification42> proprietary;
 	/**
 	 * 
 	 <p>
@@ -929,7 +1110,7 @@ public class CustomerAccountReturnCriteria1 {
 	 * definition} = "Indicates if this field must be present in the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CustomerAccountReturnCriteria1, List<GenericIdentification42>> mmProprietary = new MMMessageAssociationEnd<CustomerAccountReturnCriteria1, List<GenericIdentification42>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CustomerAccountReturnCriteria1.mmObject();
 			isDerived = false;
@@ -939,7 +1120,17 @@ public class CustomerAccountReturnCriteria1 {
 			definition = "Indicates if this field must be present in the response.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification42.mmObject();
+			type_lazy = () -> GenericIdentification42.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification42> getValue(CustomerAccountReturnCriteria1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CustomerAccountReturnCriteria1 obj, List<GenericIdentification42> value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -1131,7 +1322,7 @@ public class CustomerAccountReturnCriteria1 {
 		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public CustomerAccountReturnCriteria1 setProprietary(List<com.tools20022.repository.msg.GenericIdentification42> proprietary) {
+	public CustomerAccountReturnCriteria1 setProprietary(List<GenericIdentification42> proprietary) {
 		this.proprietary = Objects.requireNonNull(proprietary);
 		return this;
 	}

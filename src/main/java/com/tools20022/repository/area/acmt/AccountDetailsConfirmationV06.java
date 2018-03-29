@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementPreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -204,7 +203,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,12 +216,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrdrRef")
@@ -263,7 +264,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmOrderReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOrderReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<InvestmentFundOrder4>> mmOrderReference = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<InvestmentFundOrder4>>() {
 		{
 			xmlTag = "OrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,12 +277,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> InvestmentFundOrder4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getOrderReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<InvestmentFundOrder4> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, Optional<InvestmentFundOrder4> value) {
+			obj.setOrderReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -323,7 +326,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<AdditionalReference6>> mmRelatedReference = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<AdditionalReference6>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,12 +339,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> AdditionalReference6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference6> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, Optional<AdditionalReference6> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConfDtls", required = true)
@@ -384,7 +389,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmConfirmationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmConfirmationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, AccountManagementConfirmation3> mmConfirmationDetails = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, AccountManagementConfirmation3>() {
 		{
 			xmlTag = "ConfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,12 +402,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> AccountManagementConfirmation3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getConfirmationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountManagementConfirmation3 getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getConfirmationDetails();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, AccountManagementConfirmation3 value) {
+			obj.setConfirmationDetails(value);
 		}
 	};
 	@XmlElement(name = "InvstmtAcct")
@@ -444,7 +451,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmInvestmentAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvestmentAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<InvestmentAccount50>> mmInvestmentAccount = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<InvestmentAccount50>>() {
 		{
 			xmlTag = "InvstmtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -457,12 +464,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> InvestmentAccount50.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getInvestmentAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<InvestmentAccount50> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getInvestmentAccount();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, Optional<InvestmentAccount50> value) {
+			obj.setInvestmentAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctPties")
@@ -505,7 +514,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmAccountParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountParties = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<AccountParties13>> mmAccountParties = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<AccountParties13>>() {
 		{
 			xmlTag = "AcctPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -518,12 +527,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> AccountParties13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getAccountParties", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AccountParties13> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getAccountParties();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, Optional<AccountParties13> value) {
+			obj.setAccountParties(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Intrmies")
@@ -565,7 +576,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmIntermediaries}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIntermediaries = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<Intermediary36>> mmIntermediaries = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<Intermediary36>>() {
 		{
 			xmlTag = "Intrmies";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -578,12 +589,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> Intermediary36.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getIntermediaries", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Intermediary36> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getIntermediaries();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, List<Intermediary36> value) {
+			obj.setIntermediaries(value);
 		}
 	};
 	@XmlElement(name = "Plcmnt")
@@ -623,7 +636,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmPlacement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPlacement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<ReferredAgent2>> mmPlacement = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<ReferredAgent2>>() {
 		{
 			xmlTag = "Plcmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -636,12 +649,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> ReferredAgent2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getPlacement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ReferredAgent2> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getPlacement();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, Optional<ReferredAgent2> value) {
+			obj.setPlacement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewIsseAllcn")
@@ -684,7 +699,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmNewIssueAllocation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNewIssueAllocation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<NewIssueAllocation2>> mmNewIssueAllocation = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<NewIssueAllocation2>>() {
 		{
 			xmlTag = "NewIsseAllcn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -697,12 +712,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> NewIssueAllocation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getNewIssueAllocation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<NewIssueAllocation2> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getNewIssueAllocation();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, Optional<NewIssueAllocation2> value) {
+			obj.setNewIssueAllocation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvgsInvstmtPlan")
@@ -745,7 +762,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmSavingsInvestmentPlan}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSavingsInvestmentPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<InvestmentPlan12>> mmSavingsInvestmentPlan = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<InvestmentPlan12>>() {
 		{
 			xmlTag = "SvgsInvstmtPlan";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -758,12 +775,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> InvestmentPlan12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getSavingsInvestmentPlan", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<InvestmentPlan12> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getSavingsInvestmentPlan();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, List<InvestmentPlan12> value) {
+			obj.setSavingsInvestmentPlan(value);
 		}
 	};
 	@XmlElement(name = "WdrwlInvstmtPlan")
@@ -806,7 +825,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmWithdrawalInvestmentPlan}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmWithdrawalInvestmentPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<InvestmentPlan12>> mmWithdrawalInvestmentPlan = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<InvestmentPlan12>>() {
 		{
 			xmlTag = "WdrwlInvstmtPlan";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -819,12 +838,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> InvestmentPlan12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getWithdrawalInvestmentPlan", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<InvestmentPlan12> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getWithdrawalInvestmentPlan();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, List<InvestmentPlan12> value) {
+			obj.setWithdrawalInvestmentPlan(value);
 		}
 	};
 	@XmlElement(name = "CshSttlm")
@@ -866,7 +887,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmCashSettlement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCashSettlement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<CashSettlement1>> mmCashSettlement = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<CashSettlement1>>() {
 		{
 			xmlTag = "CshSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -879,12 +900,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> CashSettlement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getCashSettlement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CashSettlement1> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getCashSettlement();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, List<CashSettlement1> value) {
+			obj.setCashSettlement(value);
 		}
 	};
 	@XmlElement(name = "SvcLvlAgrmt")
@@ -925,7 +948,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmServiceLevelAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmServiceLevelAgreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<DocumentToSend3>> mmServiceLevelAgreement = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<DocumentToSend3>>() {
 		{
 			xmlTag = "SvcLvlAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -938,12 +961,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> DocumentToSend3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getServiceLevelAgreement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentToSend3> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getServiceLevelAgreement();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, List<DocumentToSend3> value) {
+			obj.setServiceLevelAgreement(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -981,7 +1006,7 @@ public class AccountDetailsConfirmationV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<AccountRestrictions1>> mmAdditionalInformation = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<AccountRestrictions1>>() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -992,12 +1017,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> AccountRestrictions1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getAdditionalInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountRestrictions1> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, List<AccountRestrictions1> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 	@XmlElement(name = "MktPrctcVrsn")
@@ -1039,7 +1066,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmMarketPracticeVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarketPracticeVersion = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<MarketPracticeVersion1>> mmMarketPracticeVersion = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, Optional<MarketPracticeVersion1>>() {
 		{
 			xmlTag = "MktPrctcVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1052,12 +1079,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> MarketPracticeVersion1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getMarketPracticeVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MarketPracticeVersion1> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getMarketPracticeVersion();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, Optional<MarketPracticeVersion1> value) {
+			obj.setMarketPracticeVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -1099,7 +1128,7 @@ public class AccountDetailsConfirmationV06 {
 	 * AccountDetailsConfirmationV05.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<Extension1>> mmExtension = new MMMessageBuildingBlock<AccountDetailsConfirmationV06, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1111,12 +1140,14 @@ public class AccountDetailsConfirmationV06 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountDetailsConfirmationV06.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(AccountDetailsConfirmationV06 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(AccountDetailsConfirmationV06 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

@@ -116,7 +116,7 @@ public class RejectionAndRepairReason29Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionAndRepairReason29Choice, RejectionReason32Code> mmCode = new MMMessageAttribute<RejectionAndRepairReason29Choice, RejectionReason32Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason29Choice.mmObject();
@@ -129,6 +129,16 @@ public class RejectionAndRepairReason29Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason32Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason32Code getValue(RejectionAndRepairReason29Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason29Choice obj, RejectionReason32Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -170,7 +180,7 @@ public class RejectionAndRepairReason29Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionAndRepairReason29Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<RejectionAndRepairReason29Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason29Choice.mmObject();
@@ -184,6 +194,16 @@ public class RejectionAndRepairReason29Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(RejectionAndRepairReason29Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason29Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

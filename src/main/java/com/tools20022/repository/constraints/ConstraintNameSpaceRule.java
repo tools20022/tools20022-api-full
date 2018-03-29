@@ -55,13 +55,17 @@ public class ConstraintNameSpaceRule {
 	 */
 	public static final MMConstraint<EncapsulatedBusinessMessage1> forEncapsulatedBusinessMessage1 = new MMConstraint<EncapsulatedBusinessMessage1>() {
 		{
-			validator = ConstraintNameSpaceRule::checkEncapsulatedBusinessMessage1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameSpaceRule";
 			definition = "The name space of the Msg MUST be one of the registered ISO 20022 messages.";
 			owner_lazy = () -> EncapsulatedBusinessMessage1.mmObject();
 			expression = " ";
 			expressionLanguage = " ";
+		}
+
+		@Override
+		public void executeValidator(EncapsulatedBusinessMessage1 obj) throws Exception {
+			checkEncapsulatedBusinessMessage1(obj);
 		}
 	};
 

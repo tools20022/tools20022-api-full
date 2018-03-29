@@ -25,7 +25,6 @@ import com.tools20022.repository.area.ReferenceDataArchive;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.PriceReport1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +133,7 @@ public class PriceReportCancellationV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV02, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<PriceReportCancellationV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +144,14 @@ public class PriceReportCancellationV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV02.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PriceReportCancellationV02 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV02 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef", required = true)
@@ -178,7 +179,7 @@ public class PriceReportCancellationV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV02, AdditionalReference3> mmPreviousReference = new MMMessageBuildingBlock<PriceReportCancellationV02, AdditionalReference3>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +190,14 @@ public class PriceReportCancellationV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference3 getValue(PriceReportCancellationV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV02 obj, AdditionalReference3 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "PricRptToBeCanc")
@@ -222,7 +225,7 @@ public class PriceReportCancellationV02 {
 	 * "Common information related to all the price reports to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPriceReportToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV02, Optional<PriceReport1>> mmPriceReportToBeCancelled = new MMMessageBuildingBlock<PriceReportCancellationV02, Optional<PriceReport1>>() {
 		{
 			xmlTag = "PricRptToBeCanc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,12 +236,14 @@ public class PriceReportCancellationV02 {
 			complexType_lazy = () -> PriceReport1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV02.class.getMethod("getPriceReportToBeCancelled", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PriceReport1> getValue(PriceReportCancellationV02 obj) {
+			return obj.getPriceReportToBeCancelled();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV02 obj, Optional<PriceReport1> value) {
+			obj.setPriceReportToBeCancelled(value.orElse(null));
 		}
 	};
 

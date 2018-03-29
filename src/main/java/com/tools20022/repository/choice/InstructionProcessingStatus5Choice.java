@@ -113,7 +113,7 @@ public class InstructionProcessingStatus5Choice {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus5Choice, InstructionProcessingStatus1Code> mmCode = new MMMessageAttribute<InstructionProcessingStatus5Choice, InstructionProcessingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus5Choice.mmObject();
@@ -126,6 +126,16 @@ public class InstructionProcessingStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionProcessingStatus1Code.mmObject();
+		}
+
+		@Override
+		public InstructionProcessingStatus1Code getValue(InstructionProcessingStatus5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus5Choice obj, InstructionProcessingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class InstructionProcessingStatus5Choice {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionProcessingStatus5Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<InstructionProcessingStatus5Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus5Choice.mmObject();
@@ -179,6 +189,16 @@ public class InstructionProcessingStatus5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(InstructionProcessingStatus5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus5Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

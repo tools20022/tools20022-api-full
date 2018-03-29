@@ -100,7 +100,7 @@ public class RestrictedProprietaryChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RestrictedProprietaryChoice, Max35Text> mmProprietary = new MMMessageAttribute<RestrictedProprietaryChoice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RestrictedProprietaryChoice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class RestrictedProprietaryChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RestrictedProprietaryChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RestrictedProprietaryChoice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

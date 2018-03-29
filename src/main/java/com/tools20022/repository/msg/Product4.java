@@ -112,7 +112,7 @@ public class Product4 {
 	 * Product3.mmProductCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProductCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Product4, Max70Text> mmProductCode = new MMMessageAttribute<Product4, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> ProductIdentification.mmIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Product4.mmObject();
@@ -125,6 +125,16 @@ public class Product4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(Product4 obj) {
+			return obj.getProductCode();
+		}
+
+		@Override
+		public void setValue(Product4 obj, Max70Text value) {
+			obj.setProductCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlPdctCd")
@@ -160,7 +170,7 @@ public class Product4 {
 	 * Product3.mmAdditionalProductCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalProductCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Product4, Optional<Max70Text>> mmAdditionalProductCode = new MMMessageAttribute<Product4, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Product4.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class Product4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(Product4 obj) {
+			return obj.getAdditionalProductCode();
+		}
+
+		@Override
+		public void setValue(Product4 obj, Optional<Max70Text> value) {
+			obj.setAdditionalProductCode(value.orElse(null));
 		}
 	};
 

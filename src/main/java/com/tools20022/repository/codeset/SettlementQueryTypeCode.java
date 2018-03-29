@@ -81,7 +81,7 @@ public class SettlementQueryTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
-	 * Queries settlement instructions based on criteria exluding statuses.
+	 * Queries settlement instructions based on criteria excluding statuses.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -99,14 +99,14 @@ public class SettlementQueryTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Queries settlement instructions based on criteria exluding statuses."</li>
+	 * "Queries settlement instructions based on criteria excluding statuses."</li>
 	 * </ul>
 	 */
 	public static final SettlementQueryTypeCode Instruction = new SettlementQueryTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
-			definition = "Queries settlement instructions based on criteria exluding statuses.";
+			definition = "Queries settlement instructions based on criteria excluding statuses.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementQueryTypeCode.mmObject();
 			codeName = "INST";
 		}

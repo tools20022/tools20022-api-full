@@ -108,7 +108,7 @@ public class NumberOfTransactionsPerStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDetailedNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberOfTransactionsPerStatus2, Max15NumericText> mmDetailedNumberOfTransactions = new MMMessageAttribute<NumberOfTransactionsPerStatus2, Max15NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus2.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class NumberOfTransactionsPerStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Max15NumericText getValue(NumberOfTransactionsPerStatus2 obj) {
+			return obj.getDetailedNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(NumberOfTransactionsPerStatus2 obj, Max15NumericText value) {
+			obj.setDetailedNumberOfTransactions(value);
 		}
 	};
 	@XmlElement(name = "DtldSts", required = true)
@@ -153,7 +163,7 @@ public class NumberOfTransactionsPerStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDetailedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberOfTransactionsPerStatus2, TransactionIndividualStatus2Code> mmDetailedStatus = new MMMessageAttribute<NumberOfTransactionsPerStatus2, TransactionIndividualStatus2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus2.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class NumberOfTransactionsPerStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionIndividualStatus2Code.mmObject();
+		}
+
+		@Override
+		public TransactionIndividualStatus2Code getValue(NumberOfTransactionsPerStatus2 obj) {
+			return obj.getDetailedStatus();
+		}
+
+		@Override
+		public void setValue(NumberOfTransactionsPerStatus2 obj, TransactionIndividualStatus2Code value) {
+			obj.setDetailedStatus(value);
 		}
 	};
 	@XmlElement(name = "DtldCtrlSum")
@@ -198,7 +218,7 @@ public class NumberOfTransactionsPerStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDetailedControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberOfTransactionsPerStatus2, Optional<DecimalNumber>> mmDetailedControlSum = new MMMessageAttribute<NumberOfTransactionsPerStatus2, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus2.mmObject();
 			isDerived = false;
@@ -209,6 +229,16 @@ public class NumberOfTransactionsPerStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(NumberOfTransactionsPerStatus2 obj) {
+			return obj.getDetailedControlSum();
+		}
+
+		@Override
+		public void setValue(NumberOfTransactionsPerStatus2 obj, Optional<DecimalNumber> value) {
+			obj.setDetailedControlSum(value.orElse(null));
 		}
 	};
 

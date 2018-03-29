@@ -22,9 +22,11 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CorporateActionChangeTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.CorporateActionEvent;
+import com.tools20022.repository.entity.Organisation;
+import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -310,7 +312,7 @@ public class SecuritiesModification {
 	 * definition} = "Type of changes affecting the security form."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmChangeType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesModification, CorporateActionChangeTypeCode> mmChangeType = new MMBusinessAttribute<SecuritiesModification, CorporateActionChangeTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionChangeTypeFormat2Choice.mmCode, CorporateActionChangeTypeFormat2Choice.mmProprietary, CorporateActionOption5.mmChangeType, CorporateActionChangeTypeFormat4Choice.mmCode,
 					CorporateActionChangeTypeFormat4Choice.mmProprietary, CorporateActionOption13.mmChangeType, CorporateActionOption25.mmChangeType, CorporateActionOption30.mmChangeType, CorporateActionOption38.mmChangeType,
@@ -332,12 +334,14 @@ public class SecuritiesModification {
 			simpleType_lazy = () -> CorporateActionChangeTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesModification.class.getMethod("getChangeType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionChangeTypeCode getValue(SecuritiesModification obj) {
+			return obj.getChangeType();
+		}
+
+		@Override
+		public void setValue(SecuritiesModification obj, CorporateActionChangeTypeCode value) {
+			obj.setChangeType(value);
 		}
 	};
 	protected Organisation newOrganisationInformation;
@@ -424,7 +428,7 @@ public class SecuritiesModification {
 	 * definition} = "New name of a company following a name change."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNewOrganisationInformation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesModification, Organisation> mmNewOrganisationInformation = new MMBusinessAssociationEnd<SecuritiesModification, Organisation>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmNewPlaceOfIncorporation, CorporateAction4.mmNewPlaceOfIncorporation, CorporateAction5.mmNewPlaceOfIncorporation, CorporateAction6.mmNewPlaceOfIncorporation,
 					CorporateAction7.mmNewPlaceOfIncorporation, CorporateAction8.mmNewPlaceOfIncorporation, CorporateAction10.mmNewPlaceOfIncorporation, CorporateAction11.mmNewPlaceOfIncorporation,
@@ -437,9 +441,19 @@ public class SecuritiesModification {
 			definition = "New name of a company following a name change.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Organisation.mmSecuritiesModification;
+			opposite_lazy = () -> Organisation.mmSecuritiesModification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
+			type_lazy = () -> Organisation.mmObject();
+		}
+
+		@Override
+		public Organisation getValue(SecuritiesModification obj) {
+			return obj.getNewOrganisationInformation();
+		}
+
+		@Override
+		public void setValue(SecuritiesModification obj, Organisation value) {
+			obj.setNewOrganisationInformation(value);
 		}
 	};
 	protected CorporateActionEvent relatedCorporateEvent;
@@ -479,7 +493,7 @@ public class SecuritiesModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedCorporateEvent = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesModification, CorporateActionEvent> mmRelatedCorporateEvent = new MMBusinessAssociationEnd<SecuritiesModification, CorporateActionEvent>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
@@ -488,9 +502,19 @@ public class SecuritiesModification {
 			definition = "Specifies the parameters of the event related to the modification of the securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesModification;
+			opposite_lazy = () -> CorporateActionEvent.mmSecuritiesModification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
+			type_lazy = () -> CorporateActionEvent.mmObject();
+		}
+
+		@Override
+		public CorporateActionEvent getValue(SecuritiesModification obj) {
+			return obj.getRelatedCorporateEvent();
+		}
+
+		@Override
+		public void setValue(SecuritiesModification obj, CorporateActionEvent value) {
+			obj.setRelatedCorporateEvent(value);
 		}
 	};
 	protected Security newSecurityReferenceData;
@@ -526,7 +550,7 @@ public class SecuritiesModification {
 	 * definition} = "Specifies the updated information of the new security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNewSecurityReferenceData = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesModification, Optional<Security>> mmNewSecurityReferenceData = new MMBusinessAssociationEnd<SecuritiesModification, Optional<Security>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
@@ -535,9 +559,19 @@ public class SecuritiesModification {
 			definition = "Specifies the updated information of the new security.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmModification;
+			opposite_lazy = () -> Security.mmModification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
+			type_lazy = () -> Security.mmObject();
+		}
+
+		@Override
+		public Optional<Security> getValue(SecuritiesModification obj) {
+			return obj.getNewSecurityReferenceData();
+		}
+
+		@Override
+		public void setValue(SecuritiesModification obj, Optional<Security> value) {
+			obj.setNewSecurityReferenceData(value.orElse(null));
 		}
 	};
 	protected Number numberOfSharesIssued;
@@ -564,27 +598,29 @@ public class SecuritiesModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The number of shares the issuer is creating as part of the event."</li>
+	 * "The number of shares the issuer is creating as part of the event"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNumberOfSharesIssued = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesModification, Number> mmNumberOfSharesIssued = new MMBusinessAttribute<SecuritiesModification, Number>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfSharesIssued";
-			definition = "The number of shares the issuer is creating as part of the event.";
+			definition = "The number of shares the issuer is creating as part of the event";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesModification.class.getMethod("getNumberOfSharesIssued", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(SecuritiesModification obj) {
+			return obj.getNumberOfSharesIssued();
+		}
+
+		@Override
+		public void setValue(SecuritiesModification obj, Number value) {
+			obj.setNumberOfSharesIssued(value);
 		}
 	};
 	protected ISODateTime lastTradingDate;
@@ -615,7 +651,7 @@ public class SecuritiesModification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmLastTradingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesModification, ISODateTime> mmLastTradingDate = new MMBusinessAttribute<SecuritiesModification, ISODateTime>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
@@ -627,12 +663,14 @@ public class SecuritiesModification {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesModification.class.getMethod("getLastTradingDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(SecuritiesModification obj) {
+			return obj.getLastTradingDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesModification obj, ISODateTime value) {
+			obj.setLastTradingDate(value);
 		}
 	};
 
@@ -643,8 +681,7 @@ public class SecuritiesModification {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesModification";
 				definition = "Modification of the reference data of a security or of the organisation that issued it.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmModification, com.tools20022.repository.entity.Organisation.mmSecuritiesModification,
-						com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesModification);
+				associationDomain_lazy = () -> Arrays.asList(Security.mmModification, Organisation.mmSecuritiesModification, CorporateActionEvent.mmSecuritiesModification);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesModification.mmChangeType, com.tools20022.repository.entity.SecuritiesModification.mmNewOrganisationInformation,
 						com.tools20022.repository.entity.SecuritiesModification.mmRelatedCorporateEvent, com.tools20022.repository.entity.SecuritiesModification.mmNewSecurityReferenceData,
 						com.tools20022.repository.entity.SecuritiesModification.mmNumberOfSharesIssued, com.tools20022.repository.entity.SecuritiesModification.mmLastTradingDate);
@@ -674,7 +711,7 @@ public class SecuritiesModification {
 		return newOrganisationInformation;
 	}
 
-	public SecuritiesModification setNewOrganisationInformation(com.tools20022.repository.entity.Organisation newOrganisationInformation) {
+	public SecuritiesModification setNewOrganisationInformation(Organisation newOrganisationInformation) {
 		this.newOrganisationInformation = Objects.requireNonNull(newOrganisationInformation);
 		return this;
 	}
@@ -683,7 +720,7 @@ public class SecuritiesModification {
 		return relatedCorporateEvent;
 	}
 
-	public SecuritiesModification setRelatedCorporateEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateEvent) {
+	public SecuritiesModification setRelatedCorporateEvent(CorporateActionEvent relatedCorporateEvent) {
 		this.relatedCorporateEvent = Objects.requireNonNull(relatedCorporateEvent);
 		return this;
 	}
@@ -692,7 +729,7 @@ public class SecuritiesModification {
 		return newSecurityReferenceData == null ? Optional.empty() : Optional.of(newSecurityReferenceData);
 	}
 
-	public SecuritiesModification setNewSecurityReferenceData(com.tools20022.repository.entity.Security newSecurityReferenceData) {
+	public SecuritiesModification setNewSecurityReferenceData(Security newSecurityReferenceData) {
 		this.newSecurityReferenceData = newSecurityReferenceData;
 		return this;
 	}

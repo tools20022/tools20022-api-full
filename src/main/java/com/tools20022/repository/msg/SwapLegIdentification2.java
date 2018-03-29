@@ -113,7 +113,7 @@ public class SwapLegIdentification2 {
 	 * definition} = "Instrument received by the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSwapIn = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwapLegIdentification2, Optional<FinancialInstrumentIdentification7Choice>> mmSwapIn = new MMMessageAssociationEnd<SwapLegIdentification2, Optional<FinancialInstrumentIdentification7Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwapLegIdentification2.mmObject();
@@ -126,6 +126,16 @@ public class SwapLegIdentification2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentIdentification7Choice> getValue(SwapLegIdentification2 obj) {
+			return obj.getSwapIn();
+		}
+
+		@Override
+		public void setValue(SwapLegIdentification2 obj, Optional<FinancialInstrumentIdentification7Choice> value) {
+			obj.setSwapIn(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SwpOut")
@@ -162,7 +172,7 @@ public class SwapLegIdentification2 {
 	 * definition} = "Instrument paid by the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSwapOut = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwapLegIdentification2, Optional<FinancialInstrumentIdentification7Choice>> mmSwapOut = new MMMessageAssociationEnd<SwapLegIdentification2, Optional<FinancialInstrumentIdentification7Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwapLegIdentification2.mmObject();
@@ -175,6 +185,16 @@ public class SwapLegIdentification2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentIdentification7Choice> getValue(SwapLegIdentification2 obj) {
+			return obj.getSwapOut();
+		}
+
+		@Override
+		public void setValue(SwapLegIdentification2 obj, Optional<FinancialInstrumentIdentification7Choice> value) {
+			obj.setSwapOut(value.orElse(null));
 		}
 	};
 

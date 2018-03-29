@@ -98,7 +98,7 @@ public class CardSequenceNumberRange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardSequenceNumberRange1, Optional<Max35Text>> mmFirstTransaction = new MMMessageAttribute<CardSequenceNumberRange1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardSequenceNumberRange1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class CardSequenceNumberRange1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CardSequenceNumberRange1 obj) {
+			return obj.getFirstTransaction();
+		}
+
+		@Override
+		public void setValue(CardSequenceNumberRange1 obj, Optional<Max35Text> value) {
+			obj.setFirstTransaction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LastTx")
@@ -142,7 +152,7 @@ public class CardSequenceNumberRange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastTransaction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardSequenceNumberRange1, Optional<Max35Text>> mmLastTransaction = new MMMessageAttribute<CardSequenceNumberRange1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardSequenceNumberRange1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class CardSequenceNumberRange1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CardSequenceNumberRange1 obj) {
+			return obj.getLastTransaction();
+		}
+
+		@Override
+		public void setValue(CardSequenceNumberRange1 obj, Optional<Max35Text> value) {
+			obj.setLastTransaction(value.orElse(null));
 		}
 	};
 

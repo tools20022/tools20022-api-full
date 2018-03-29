@@ -108,7 +108,7 @@ public class SystemEventType3Choice {
 	 * "Type of system event, as published in an external code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemEventType3Choice, ExternalSystemEvent1Code> mmCode = new MMMessageAttribute<SystemEventType3Choice, ExternalSystemEvent1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemEventType3Choice.mmObject();
@@ -120,6 +120,16 @@ public class SystemEventType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalSystemEvent1Code.mmObject();
+		}
+
+		@Override
+		public ExternalSystemEvent1Code getValue(SystemEventType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SystemEventType3Choice obj, ExternalSystemEvent1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class SystemEventType3Choice {
 	 * definition} = "Type of system event, in a proprietary form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemEventType3Choice, Max35Text> mmProprietary = new MMMessageAttribute<SystemEventType3Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemEventType3Choice.mmObject();
@@ -168,6 +178,16 @@ public class SystemEventType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SystemEventType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SystemEventType3Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

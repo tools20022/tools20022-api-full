@@ -112,7 +112,7 @@ public class CoverTwoDefaulters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCover1Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CoverTwoDefaulters1, LEIIdentifier> mmCover1Identification = new MMMessageAttribute<CoverTwoDefaulters1, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CoverTwoDefaulters1.mmObject();
@@ -124,6 +124,16 @@ public class CoverTwoDefaulters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(CoverTwoDefaulters1 obj) {
+			return obj.getCover1Identification();
+		}
+
+		@Override
+		public void setValue(CoverTwoDefaulters1 obj, LEIIdentifier value) {
+			obj.setCover1Identification(value);
 		}
 	};
 	@XmlElement(name = "Cover2Id", required = true)
@@ -163,7 +173,7 @@ public class CoverTwoDefaulters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCover2Identification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CoverTwoDefaulters1, LEIIdentifier> mmCover2Identification = new MMMessageAttribute<CoverTwoDefaulters1, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CoverTwoDefaulters1.mmObject();
@@ -175,6 +185,16 @@ public class CoverTwoDefaulters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(CoverTwoDefaulters1 obj) {
+			return obj.getCover2Identification();
+		}
+
+		@Override
+		public void setValue(CoverTwoDefaulters1 obj, LEIIdentifier value) {
+			obj.setCover2Identification(value);
 		}
 	};
 

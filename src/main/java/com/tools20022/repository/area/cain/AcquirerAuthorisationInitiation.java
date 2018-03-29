@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcquirerAuthorisationInitiation1;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header17;
 import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +114,7 @@ public class AcquirerAuthorisationInitiation {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcquirerAuthorisationInitiation, Header17> mmHeader = new MMMessageBuildingBlock<AcquirerAuthorisationInitiation, Header17>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,12 +125,14 @@ public class AcquirerAuthorisationInitiation {
 			complexType_lazy = () -> Header17.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcquirerAuthorisationInitiation.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header17 getValue(AcquirerAuthorisationInitiation obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcquirerAuthorisationInitiation obj, Header17 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "AuthstnInitn", required = true)
@@ -159,7 +160,7 @@ public class AcquirerAuthorisationInitiation {
 	 * definition} = "Information related to the authorisation initiation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAuthorisationInitiation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcquirerAuthorisationInitiation, AcquirerAuthorisationInitiation1> mmAuthorisationInitiation = new MMMessageBuildingBlock<AcquirerAuthorisationInitiation, AcquirerAuthorisationInitiation1>() {
 		{
 			xmlTag = "AuthstnInitn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,12 +171,14 @@ public class AcquirerAuthorisationInitiation {
 			complexType_lazy = () -> AcquirerAuthorisationInitiation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcquirerAuthorisationInitiation.class.getMethod("getAuthorisationInitiation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcquirerAuthorisationInitiation1 getValue(AcquirerAuthorisationInitiation obj) {
+			return obj.getAuthorisationInitiation();
+		}
+
+		@Override
+		public void setValue(AcquirerAuthorisationInitiation obj, AcquirerAuthorisationInitiation1 value) {
+			obj.setAuthorisationInitiation(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -205,7 +208,7 @@ public class AcquirerAuthorisationInitiation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcquirerAuthorisationInitiation, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<AcquirerAuthorisationInitiation, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,12 +219,14 @@ public class AcquirerAuthorisationInitiation {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcquirerAuthorisationInitiation.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(AcquirerAuthorisationInitiation obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcquirerAuthorisationInitiation obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

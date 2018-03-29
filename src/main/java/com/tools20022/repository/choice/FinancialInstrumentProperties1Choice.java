@@ -115,7 +115,7 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEquity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Equity1> mmEquity = new MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Equity1>() {
 		{
 			businessComponentTrace_lazy = () -> Equity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmObject();
@@ -128,6 +128,16 @@ public class FinancialInstrumentProperties1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Equity1.mmObject();
+		}
+
+		@Override
+		public Equity1 getValue(FinancialInstrumentProperties1Choice obj) {
+			return obj.getEquity();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentProperties1Choice obj, Equity1 value) {
+			obj.setEquity(value);
 		}
 	};
 	@XmlElement(name = "Debt", required = true)
@@ -163,7 +173,7 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebt = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Debt1> mmDebt = new MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Debt1>() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmObject();
@@ -176,6 +186,16 @@ public class FinancialInstrumentProperties1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Debt1.mmObject();
+		}
+
+		@Override
+		public Debt1 getValue(FinancialInstrumentProperties1Choice obj) {
+			return obj.getDebt();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentProperties1Choice obj, Debt1 value) {
+			obj.setDebt(value);
 		}
 	};
 	@XmlElement(name = "Optn", required = true)
@@ -211,7 +231,7 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Option1> mmOption = new MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Option1>() {
 		{
 			businessComponentTrace_lazy = () -> Option.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmObject();
@@ -224,6 +244,16 @@ public class FinancialInstrumentProperties1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Option1.mmObject();
+		}
+
+		@Override
+		public Option1 getValue(FinancialInstrumentProperties1Choice obj) {
+			return obj.getOption();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentProperties1Choice obj, Option1 value) {
+			obj.setOption(value);
 		}
 	};
 	@XmlElement(name = "Warrt", required = true)
@@ -259,7 +289,7 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWarrant = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Warrant1> mmWarrant = new MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Warrant1>() {
 		{
 			businessComponentTrace_lazy = () -> Warrant.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmObject();
@@ -272,6 +302,16 @@ public class FinancialInstrumentProperties1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Warrant1.mmObject();
+		}
+
+		@Override
+		public Warrant1 getValue(FinancialInstrumentProperties1Choice obj) {
+			return obj.getWarrant();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentProperties1Choice obj, Warrant1 value) {
+			obj.setWarrant(value);
 		}
 	};
 	@XmlElement(name = "Futr", required = true)
@@ -307,7 +347,7 @@ public class FinancialInstrumentProperties1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFuture = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Future1> mmFuture = new MMMessageAssociationEnd<FinancialInstrumentProperties1Choice, Future1>() {
 		{
 			businessComponentTrace_lazy = () -> Future.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentProperties1Choice.mmObject();
@@ -320,6 +360,16 @@ public class FinancialInstrumentProperties1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Future1.mmObject();
+		}
+
+		@Override
+		public Future1 getValue(FinancialInstrumentProperties1Choice obj) {
+			return obj.getFuture();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentProperties1Choice obj, Future1 value) {
+			obj.setFuture(value);
 		}
 	};
 

@@ -98,7 +98,7 @@ public class EventType1Choice {
 	 * "Type of the event, in a coded form as published in an external list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventType1Choice, ExternalSystemEventType1Code> mmCode = new MMMessageAttribute<EventType1Choice, ExternalSystemEventType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EventType1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class EventType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalSystemEventType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalSystemEventType1Code getValue(EventType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(EventType1Choice obj, ExternalSystemEventType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -140,7 +150,7 @@ public class EventType1Choice {
 	 * definition} = "Type of the event, in a free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventType1Choice, Max35Text> mmProprietary = new MMMessageAttribute<EventType1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EventType1Choice.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class EventType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(EventType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(EventType1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

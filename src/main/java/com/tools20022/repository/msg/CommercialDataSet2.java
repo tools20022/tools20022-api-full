@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Goods;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -116,7 +117,7 @@ public class CommercialDataSet2 {
 	 * definition} = "Identifies the commercial data set."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommercialDataSet2, DocumentIdentification1> mmDataSetIdentification = new MMMessageAssociationEnd<CommercialDataSet2, DocumentIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet2.mmObject();
 			isDerived = false;
@@ -127,11 +128,21 @@ public class CommercialDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
+			type_lazy = () -> DocumentIdentification1.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification1 getValue(CommercialDataSet2 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(CommercialDataSet2 obj, DocumentIdentification1 value) {
+			obj.setDataSetIdentification(value);
 		}
 	};
 	@XmlElement(name = "ComrclDocRef", required = true)
-	protected List<com.tools20022.repository.msg.DocumentIdentification7> commercialDocumentReference;
+	protected List<DocumentIdentification7> commercialDocumentReference;
 	/**
 	 * 
 	 <p>
@@ -160,7 +171,7 @@ public class CommercialDataSet2 {
 	 * "Reference to the identification of the underlying commercial document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommercialDocumentReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommercialDataSet2, List<DocumentIdentification7>> mmCommercialDocumentReference = new MMMessageAssociationEnd<CommercialDataSet2, List<DocumentIdentification7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet2.mmObject();
 			isDerived = false;
@@ -170,7 +181,17 @@ public class CommercialDataSet2 {
 			definition = "Reference to the identification of the underlying commercial document.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
+			type_lazy = () -> DocumentIdentification7.mmObject();
+		}
+
+		@Override
+		public List<DocumentIdentification7> getValue(CommercialDataSet2 obj) {
+			return obj.getCommercialDocumentReference();
+		}
+
+		@Override
+		public void setValue(CommercialDataSet2 obj, List<DocumentIdentification7> value) {
+			obj.setCommercialDocumentReference(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -207,7 +228,7 @@ public class CommercialDataSet2 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommercialDataSet2, PartyIdentification9> mmBuyer = new MMMessageAssociationEnd<CommercialDataSet2, PartyIdentification9>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet2.mmObject();
@@ -219,7 +240,17 @@ public class CommercialDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
+			type_lazy = () -> PartyIdentification9.mmObject();
+		}
+
+		@Override
+		public PartyIdentification9 getValue(CommercialDataSet2 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(CommercialDataSet2 obj, PartyIdentification9 value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "Sellr", required = true)
@@ -256,7 +287,7 @@ public class CommercialDataSet2 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommercialDataSet2, PartyIdentification9> mmSeller = new MMMessageAssociationEnd<CommercialDataSet2, PartyIdentification9>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet2.mmObject();
@@ -268,7 +299,17 @@ public class CommercialDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
+			type_lazy = () -> PartyIdentification9.mmObject();
+		}
+
+		@Override
+		public PartyIdentification9 getValue(CommercialDataSet2 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(CommercialDataSet2 obj, PartyIdentification9 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "BllTo")
@@ -304,7 +345,7 @@ public class CommercialDataSet2 {
 	 * definition} = "Party to be invoiced for the purchase."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBillTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommercialDataSet2, Optional<PartyIdentification9>> mmBillTo = new MMMessageAssociationEnd<CommercialDataSet2, Optional<PartyIdentification9>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet2.mmObject();
@@ -316,11 +357,21 @@ public class CommercialDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
+			type_lazy = () -> PartyIdentification9.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification9> getValue(CommercialDataSet2 obj) {
+			return obj.getBillTo();
+		}
+
+		@Override
+		public void setValue(CommercialDataSet2 obj, Optional<PartyIdentification9> value) {
+			obj.setBillTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Goods", required = true)
-	protected List<com.tools20022.repository.msg.LineItem4> goods;
+	protected List<LineItem4> goods;
 	/**
 	 * 
 	 <p>
@@ -352,7 +403,7 @@ public class CommercialDataSet2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGoods = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommercialDataSet2, List<LineItem4>> mmGoods = new MMMessageAssociationEnd<CommercialDataSet2, List<LineItem4>>() {
 		{
 			businessComponentTrace_lazy = () -> Goods.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet2.mmObject();
@@ -363,11 +414,21 @@ public class CommercialDataSet2 {
 			definition = "Information about the goods and/or services of the underlying transaction.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LineItem4.mmObject();
+			type_lazy = () -> LineItem4.mmObject();
+		}
+
+		@Override
+		public List<LineItem4> getValue(CommercialDataSet2 obj) {
+			return obj.getGoods();
+		}
+
+		@Override
+		public void setValue(CommercialDataSet2 obj, List<LineItem4> value) {
+			obj.setGoods(value);
 		}
 	};
 	@XmlElement(name = "PmtTerms", required = true)
-	protected List<com.tools20022.repository.msg.PaymentTerms1> paymentTerms;
+	protected List<PaymentTerms1> paymentTerms;
 	/**
 	 * 
 	 <p>
@@ -400,7 +461,7 @@ public class CommercialDataSet2 {
 	 * "Specifies the payment terms by means of a code and a limit in time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommercialDataSet2, List<PaymentTerms1>> mmPaymentTerms = new MMMessageAssociationEnd<CommercialDataSet2, List<PaymentTerms1>>() {
 		{
 			businessElementTrace_lazy = () -> CommercialTrade.mmPaymentObligation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet2.mmObject();
@@ -411,7 +472,17 @@ public class CommercialDataSet2 {
 			definition = "Specifies the payment terms by means of a code and a limit in time.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTerms1.mmObject();
+			type_lazy = () -> PaymentTerms1.mmObject();
+		}
+
+		@Override
+		public List<PaymentTerms1> getValue(CommercialDataSet2 obj) {
+			return obj.getPaymentTerms();
+		}
+
+		@Override
+		public void setValue(CommercialDataSet2 obj, List<PaymentTerms1> value) {
+			obj.setPaymentTerms(value);
 		}
 	};
 	@XmlElement(name = "SttlmTerms", required = true)
@@ -447,7 +518,7 @@ public class CommercialDataSet2 {
 	 * definition} = "Specifies how the transaction should be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommercialDataSet2, SettlementTerms1> mmSettlementTerms = new MMMessageAssociationEnd<CommercialDataSet2, SettlementTerms1>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommercialDataSet2.mmObject();
@@ -459,7 +530,17 @@ public class CommercialDataSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementTerms1.mmObject();
+			type_lazy = () -> SettlementTerms1.mmObject();
+		}
+
+		@Override
+		public SettlementTerms1 getValue(CommercialDataSet2 obj) {
+			return obj.getSettlementTerms();
+		}
+
+		@Override
+		public void setValue(CommercialDataSet2 obj, SettlementTerms1 value) {
+			obj.setSettlementTerms(value);
 		}
 	};
 
@@ -483,7 +564,7 @@ public class CommercialDataSet2 {
 		return dataSetIdentification;
 	}
 
-	public CommercialDataSet2 setDataSetIdentification(com.tools20022.repository.msg.DocumentIdentification1 dataSetIdentification) {
+	public CommercialDataSet2 setDataSetIdentification(DocumentIdentification1 dataSetIdentification) {
 		this.dataSetIdentification = Objects.requireNonNull(dataSetIdentification);
 		return this;
 	}
@@ -492,7 +573,7 @@ public class CommercialDataSet2 {
 		return commercialDocumentReference == null ? commercialDocumentReference = new ArrayList<>() : commercialDocumentReference;
 	}
 
-	public CommercialDataSet2 setCommercialDocumentReference(List<com.tools20022.repository.msg.DocumentIdentification7> commercialDocumentReference) {
+	public CommercialDataSet2 setCommercialDocumentReference(List<DocumentIdentification7> commercialDocumentReference) {
 		this.commercialDocumentReference = Objects.requireNonNull(commercialDocumentReference);
 		return this;
 	}
@@ -501,7 +582,7 @@ public class CommercialDataSet2 {
 		return buyer;
 	}
 
-	public CommercialDataSet2 setBuyer(com.tools20022.repository.msg.PartyIdentification9 buyer) {
+	public CommercialDataSet2 setBuyer(PartyIdentification9 buyer) {
 		this.buyer = Objects.requireNonNull(buyer);
 		return this;
 	}
@@ -510,7 +591,7 @@ public class CommercialDataSet2 {
 		return seller;
 	}
 
-	public CommercialDataSet2 setSeller(com.tools20022.repository.msg.PartyIdentification9 seller) {
+	public CommercialDataSet2 setSeller(PartyIdentification9 seller) {
 		this.seller = Objects.requireNonNull(seller);
 		return this;
 	}
@@ -519,7 +600,7 @@ public class CommercialDataSet2 {
 		return billTo == null ? Optional.empty() : Optional.of(billTo);
 	}
 
-	public CommercialDataSet2 setBillTo(com.tools20022.repository.msg.PartyIdentification9 billTo) {
+	public CommercialDataSet2 setBillTo(PartyIdentification9 billTo) {
 		this.billTo = billTo;
 		return this;
 	}
@@ -528,7 +609,7 @@ public class CommercialDataSet2 {
 		return goods == null ? goods = new ArrayList<>() : goods;
 	}
 
-	public CommercialDataSet2 setGoods(List<com.tools20022.repository.msg.LineItem4> goods) {
+	public CommercialDataSet2 setGoods(List<LineItem4> goods) {
 		this.goods = Objects.requireNonNull(goods);
 		return this;
 	}
@@ -537,7 +618,7 @@ public class CommercialDataSet2 {
 		return paymentTerms == null ? paymentTerms = new ArrayList<>() : paymentTerms;
 	}
 
-	public CommercialDataSet2 setPaymentTerms(List<com.tools20022.repository.msg.PaymentTerms1> paymentTerms) {
+	public CommercialDataSet2 setPaymentTerms(List<PaymentTerms1> paymentTerms) {
 		this.paymentTerms = Objects.requireNonNull(paymentTerms);
 		return this;
 	}
@@ -546,7 +627,7 @@ public class CommercialDataSet2 {
 		return settlementTerms;
 	}
 
-	public CommercialDataSet2 setSettlementTerms(com.tools20022.repository.msg.SettlementTerms1 settlementTerms) {
+	public CommercialDataSet2 setSettlementTerms(SettlementTerms1 settlementTerms) {
 		this.settlementTerms = Objects.requireNonNull(settlementTerms);
 		return this;
 	}

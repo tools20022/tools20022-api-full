@@ -115,7 +115,7 @@ public class AgriculturalCommoditySoft1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgriculturalCommoditySoft1, AssetClassProductType1Code> mmBaseProduct = new MMMessageAttribute<AgriculturalCommoditySoft1, AssetClassProductType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgriculturalCommoditySoft1.mmObject();
@@ -127,6 +127,16 @@ public class AgriculturalCommoditySoft1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType1Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType1Code getValue(AgriculturalCommoditySoft1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(AgriculturalCommoditySoft1 obj, AssetClassProductType1Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -164,7 +174,7 @@ public class AgriculturalCommoditySoft1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgriculturalCommoditySoft1, AssetClassSubProductType2Code> mmSubProduct = new MMMessageAttribute<AgriculturalCommoditySoft1, AssetClassSubProductType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgriculturalCommoditySoft1.mmObject();
@@ -176,6 +186,16 @@ public class AgriculturalCommoditySoft1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType2Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType2Code getValue(AgriculturalCommoditySoft1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(AgriculturalCommoditySoft1 obj, AssetClassSubProductType2Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 	@XmlElement(name = "AddtlSubPdct", required = true)
@@ -215,7 +235,7 @@ public class AgriculturalCommoditySoft1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgriculturalCommoditySoft1, AssetClassDetailedSubProductType2Code> mmAdditionalSubProduct = new MMMessageAttribute<AgriculturalCommoditySoft1, AssetClassDetailedSubProductType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmDetailedSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgriculturalCommoditySoft1.mmObject();
@@ -227,6 +247,16 @@ public class AgriculturalCommoditySoft1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassDetailedSubProductType2Code.mmObject();
+		}
+
+		@Override
+		public AssetClassDetailedSubProductType2Code getValue(AgriculturalCommoditySoft1 obj) {
+			return obj.getAdditionalSubProduct();
+		}
+
+		@Override
+		public void setValue(AgriculturalCommoditySoft1 obj, AssetClassDetailedSubProductType2Code value) {
+			obj.setAdditionalSubProduct(value);
 		}
 	};
 

@@ -49,11 +49,15 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount19> forPartyIdentificationAndAccount19 = new MMConstraint<PartyIdentificationAndAccount19>() {
 		{
-			validator = ConstraintIdentificationCountryOfResidenceRule::checkPartyIdentificationAndAccount19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCountryOfResidenceRule";
 			definition = "Identification and/or CountryOfResidence must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount19 obj) throws Exception {
+			checkPartyIdentificationAndAccount19(obj);
 		}
 	};
 	/**
@@ -78,11 +82,15 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount40> forPartyIdentificationAndAccount40 = new MMConstraint<PartyIdentificationAndAccount40>() {
 		{
-			validator = ConstraintIdentificationCountryOfResidenceRule::checkPartyIdentificationAndAccount40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCountryOfResidenceRule";
 			definition = "Identification and/or CountryOfResidence must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount40 obj) throws Exception {
+			checkPartyIdentificationAndAccount40(obj);
 		}
 	};
 	/**
@@ -107,11 +115,15 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount28> forPartyIdentificationAndAccount28 = new MMConstraint<PartyIdentificationAndAccount28>() {
 		{
-			validator = ConstraintIdentificationCountryOfResidenceRule::checkPartyIdentificationAndAccount28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCountryOfResidenceRule";
 			definition = "Identification and/or CountryOfResidence must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount28 obj) throws Exception {
+			checkPartyIdentificationAndAccount28(obj);
 		}
 	};
 	/**
@@ -136,11 +148,15 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount36> forPartyIdentificationAndAccount36 = new MMConstraint<PartyIdentificationAndAccount36>() {
 		{
-			validator = ConstraintIdentificationCountryOfResidenceRule::checkPartyIdentificationAndAccount36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCountryOfResidenceRule";
 			definition = "Identification and/or CountryOfResidence must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount36 obj) throws Exception {
+			checkPartyIdentificationAndAccount36(obj);
 		}
 	};
 	/**
@@ -165,11 +181,15 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount61> forPartyIdentificationAndAccount61 = new MMConstraint<PartyIdentificationAndAccount61>() {
 		{
-			validator = ConstraintIdentificationCountryOfResidenceRule::checkPartyIdentificationAndAccount61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCountryOfResidenceRule";
 			definition = "Identification and/or CountryOfResidence must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount61 obj) throws Exception {
+			checkPartyIdentificationAndAccount61(obj);
 		}
 	};
 	/**
@@ -194,11 +214,15 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount65> forPartyIdentificationAndAccount65 = new MMConstraint<PartyIdentificationAndAccount65>() {
 		{
-			validator = ConstraintIdentificationCountryOfResidenceRule::checkPartyIdentificationAndAccount65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCountryOfResidenceRule";
 			definition = "Identification and/or CountryOfResidence must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount65 obj) throws Exception {
+			checkPartyIdentificationAndAccount65(obj);
 		}
 	};
 	/**
@@ -223,11 +247,15 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount46> forPartyIdentificationAndAccount46 = new MMConstraint<PartyIdentificationAndAccount46>() {
 		{
-			validator = ConstraintIdentificationCountryOfResidenceRule::checkPartyIdentificationAndAccount46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCountryOfResidenceRule";
 			definition = "Identification and/or CountryOfResidence must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount46 obj) throws Exception {
+			checkPartyIdentificationAndAccount46(obj);
 		}
 	};
 	/**
@@ -252,11 +280,15 @@ public class ConstraintIdentificationCountryOfResidenceRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount73> forPartyIdentificationAndAccount73 = new MMConstraint<PartyIdentificationAndAccount73>() {
 		{
-			validator = ConstraintIdentificationCountryOfResidenceRule::checkPartyIdentificationAndAccount73;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationCountryOfResidenceRule";
 			definition = "Identification and/or CountryOfResidence must be present.";
 			owner_lazy = () -> PartyIdentificationAndAccount73.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount73 obj) throws Exception {
+			checkPartyIdentificationAndAccount73(obj);
 		}
 	};
 

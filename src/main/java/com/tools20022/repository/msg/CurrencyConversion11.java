@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.CurrencyConversionResponse3Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyConversion12;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -131,7 +132,7 @@ public class CurrencyConversion11 {
 	 * CurrencyConversion7.mmResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion11, CurrencyConversionResponse3Code> mmResult = new MMMessageAttribute<CurrencyConversion11, CurrencyConversionResponse3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion11.mmObject();
 			isDerived = false;
@@ -144,6 +145,16 @@ public class CurrencyConversion11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyConversionResponse3Code.mmObject();
+		}
+
+		@Override
+		public CurrencyConversionResponse3Code getValue(CurrencyConversion11 obj) {
+			return obj.getResult();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion11 obj, CurrencyConversionResponse3Code value) {
+			obj.setResult(value);
 		}
 	};
 	@XmlElement(name = "RsltRsn")
@@ -189,7 +200,7 @@ public class CurrencyConversion11 {
 	 * CurrencyConversion7.mmResultReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResultReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyConversion11, Optional<Max35Text>> mmResultReason = new MMMessageAttribute<CurrencyConversion11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion11.mmObject();
 			isDerived = false;
@@ -203,9 +214,19 @@ public class CurrencyConversion11 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(CurrencyConversion11 obj) {
+			return obj.getResultReason();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion11 obj, Optional<Max35Text> value) {
+			obj.setResultReason(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ConvsDtls")
-	protected List<com.tools20022.repository.msg.CurrencyConversion12> conversionDetails;
+	protected List<CurrencyConversion12> conversionDetails;
 	/**
 	 * 
 	 <p>
@@ -245,7 +266,7 @@ public class CurrencyConversion11 {
 	 * CurrencyConversion7.mmConversionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConversionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyConversion11, List<CurrencyConversion12>> mmConversionDetails = new MMMessageAssociationEnd<CurrencyConversion11, List<CurrencyConversion12>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyConversion11.mmObject();
 			isDerived = false;
@@ -257,7 +278,17 @@ public class CurrencyConversion11 {
 			previousVersion_lazy = () -> CurrencyConversion7.mmConversionDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion12.mmObject();
+			type_lazy = () -> CurrencyConversion12.mmObject();
+		}
+
+		@Override
+		public List<CurrencyConversion12> getValue(CurrencyConversion11 obj) {
+			return obj.getConversionDetails();
+		}
+
+		@Override
+		public void setValue(CurrencyConversion11 obj, List<CurrencyConversion12> value) {
+			obj.setConversionDetails(value);
 		}
 	};
 
@@ -300,7 +331,7 @@ public class CurrencyConversion11 {
 		return conversionDetails == null ? conversionDetails = new ArrayList<>() : conversionDetails;
 	}
 
-	public CurrencyConversion11 setConversionDetails(List<com.tools20022.repository.msg.CurrencyConversion12> conversionDetails) {
+	public CurrencyConversion11 setConversionDetails(List<CurrencyConversion12> conversionDetails) {
 		this.conversionDetails = Objects.requireNonNull(conversionDetails);
 		return this;
 	}

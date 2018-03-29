@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.TaxRecordPeriod1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.TaxPeriod;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DatePeriod2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -112,7 +113,7 @@ public class TaxPeriod2 {
 	 * TaxPeriod1.mmYear}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYear = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxPeriod2, Optional<ISODate>> mmYear = new MMMessageAttribute<TaxPeriod2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> TaxPeriod.mmYear;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxPeriod2.mmObject();
@@ -125,6 +126,16 @@ public class TaxPeriod2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TaxPeriod2 obj) {
+			return obj.getYear();
+		}
+
+		@Override
+		public void setValue(TaxPeriod2 obj, Optional<ISODate> value) {
+			obj.setYear(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -166,7 +177,7 @@ public class TaxPeriod2 {
 	 * TaxPeriod1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxPeriod2, Optional<TaxRecordPeriod1Code>> mmType = new MMMessageAttribute<TaxPeriod2, Optional<TaxRecordPeriod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> TaxPeriod.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxPeriod2.mmObject();
@@ -179,6 +190,16 @@ public class TaxPeriod2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TaxRecordPeriod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TaxRecordPeriod1Code> getValue(TaxPeriod2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TaxPeriod2 obj, Optional<TaxRecordPeriod1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrToDt")
@@ -221,7 +242,7 @@ public class TaxPeriod2 {
 	 * TaxPeriod1.mmFromToDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxPeriod2, Optional<DatePeriod2>> mmFromToDate = new MMMessageAttribute<TaxPeriod2, Optional<DatePeriod2>>() {
 		{
 			businessElementTrace_lazy = () -> TaxPeriod.mmFromToDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxPeriod2.mmObject();
@@ -233,7 +254,17 @@ public class TaxPeriod2 {
 			previousVersion_lazy = () -> TaxPeriod1.mmFromToDate;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriod2.mmObject();
+			complexType_lazy = () -> DatePeriod2.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriod2> getValue(TaxPeriod2 obj) {
+			return obj.getFromToDate();
+		}
+
+		@Override
+		public void setValue(TaxPeriod2 obj, Optional<DatePeriod2> value) {
+			obj.setFromToDate(value.orElse(null));
 		}
 	};
 
@@ -274,7 +305,7 @@ public class TaxPeriod2 {
 		return fromToDate == null ? Optional.empty() : Optional.of(fromToDate);
 	}
 
-	public TaxPeriod2 setFromToDate(com.tools20022.repository.msg.DatePeriod2 fromToDate) {
+	public TaxPeriod2 setFromToDate(DatePeriod2 fromToDate) {
 		this.fromToDate = fromToDate;
 		return this;
 	}

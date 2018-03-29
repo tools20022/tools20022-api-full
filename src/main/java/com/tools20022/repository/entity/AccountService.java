@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.entity.FinancialService;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BillingServiceParameters2;
 import java.util.*;
@@ -138,7 +138,7 @@ public class AccountService extends FinancialService {
 	 * "Account contract which specifies the services linked to an account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccountContract = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountService, List<AccountContract>> mmAccountContract = new MMBusinessAssociationEnd<AccountService, List<AccountContract>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
@@ -149,6 +149,16 @@ public class AccountService extends FinancialService {
 			opposite_lazy = () -> com.tools20022.repository.entity.AccountContract.mmAccountService;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
+		}
+
+		@Override
+		public List<AccountContract> getValue(AccountService obj) {
+			return obj.getAccountContract();
+		}
+
+		@Override
+		public void setValue(AccountService obj, List<AccountContract> value) {
+			obj.setAccountContract(value);
 		}
 	};
 	protected Reservation reservation;
@@ -187,7 +197,7 @@ public class AccountService extends FinancialService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmReservation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountService, com.tools20022.repository.entity.Reservation> mmReservation = new MMBusinessAssociationEnd<AccountService, com.tools20022.repository.entity.Reservation>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
@@ -199,6 +209,16 @@ public class AccountService extends FinancialService {
 			opposite_lazy = () -> com.tools20022.repository.entity.Reservation.mmAccountService;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Reservation getValue(AccountService obj) {
+			return obj.getReservation();
+		}
+
+		@Override
+		public void setValue(AccountService obj, com.tools20022.repository.entity.Reservation value) {
+			obj.setReservation(value);
 		}
 	};
 	protected Account account;
@@ -234,7 +254,7 @@ public class AccountService extends FinancialService {
 	 * definition} = "Account for which services are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountService, com.tools20022.repository.entity.Account> mmAccount = new MMBusinessAssociationEnd<AccountService, com.tools20022.repository.entity.Account>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountService.mmObject();
@@ -246,6 +266,16 @@ public class AccountService extends FinancialService {
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmAccountService;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Account getValue(AccountService obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountService obj, com.tools20022.repository.entity.Account value) {
+			obj.setAccount(value);
 		}
 	};
 	protected Charges accountAdministrationCharge;
@@ -289,7 +319,7 @@ public class AccountService extends FinancialService {
 	 * definition} = "Charge applied for the administration of an account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccountAdministrationCharge = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountService, Optional<Charges>> mmAccountAdministrationCharge = new MMBusinessAssociationEnd<AccountService, Optional<Charges>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingServiceParameters2.mmServiceChargeAmount);
 			isDerived = false;
@@ -299,9 +329,19 @@ public class AccountService extends FinancialService {
 			definition = "Charge applied for the administration of an account.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Charges.mmServices;
+			opposite_lazy = () -> Charges.mmServices;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
+			type_lazy = () -> Charges.mmObject();
+		}
+
+		@Override
+		public Optional<Charges> getValue(AccountService obj) {
+			return obj.getAccountAdministrationCharge();
+		}
+
+		@Override
+		public void setValue(AccountService obj, Optional<Charges> value) {
+			obj.setAccountAdministrationCharge(value.orElse(null));
 		}
 	};
 
@@ -313,7 +353,7 @@ public class AccountService extends FinancialService {
 				name = "AccountService";
 				definition = "Services linked to an account which are available to the account owner or to the holder of a mandate.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmAccountService, com.tools20022.repository.entity.AccountContract.mmAccountService,
-						com.tools20022.repository.entity.Reservation.mmAccountService, com.tools20022.repository.entity.Charges.mmServices);
+						com.tools20022.repository.entity.Reservation.mmAccountService, Charges.mmServices);
 				subType_lazy = () -> Arrays.asList(ReportingService.mmObject(), CashAccountService.mmObject(), InvestmentAccountService.mmObject());
 				superType_lazy = () -> FinancialService.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountService.mmAccountContract, com.tools20022.repository.entity.AccountService.mmReservation, com.tools20022.repository.entity.AccountService.mmAccount,
@@ -359,7 +399,7 @@ public class AccountService extends FinancialService {
 		return accountAdministrationCharge == null ? Optional.empty() : Optional.of(accountAdministrationCharge);
 	}
 
-	public AccountService setAccountAdministrationCharge(com.tools20022.repository.entity.Charges accountAdministrationCharge) {
+	public AccountService setAccountAdministrationCharge(Charges accountAdministrationCharge) {
 		this.accountAdministrationCharge = accountAdministrationCharge;
 		return this;
 	}

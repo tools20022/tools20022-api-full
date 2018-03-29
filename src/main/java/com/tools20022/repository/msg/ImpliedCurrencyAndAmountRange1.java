@@ -119,7 +119,7 @@ public class ImpliedCurrencyAndAmountRange1 {
 	 * ImpliedCurrencyAndAmountRange.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ImpliedCurrencyAndAmountRange1, ImpliedCurrencyAmountRange1Choice> mmAmount = new MMMessageAttribute<ImpliedCurrencyAndAmountRange1, ImpliedCurrencyAmountRange1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange1.mmObject();
@@ -132,6 +132,16 @@ public class ImpliedCurrencyAndAmountRange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRange1Choice.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAmountRange1Choice getValue(ImpliedCurrencyAndAmountRange1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ImpliedCurrencyAndAmountRange1 obj, ImpliedCurrencyAmountRange1Choice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -175,7 +185,7 @@ public class ImpliedCurrencyAndAmountRange1 {
 	 * ImpliedCurrencyAndAmountRange.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ImpliedCurrencyAndAmountRange1, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<ImpliedCurrencyAndAmountRange1, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange1.mmObject();
@@ -188,6 +198,16 @@ public class ImpliedCurrencyAndAmountRange1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(ImpliedCurrencyAndAmountRange1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(ImpliedCurrencyAndAmountRange1 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 

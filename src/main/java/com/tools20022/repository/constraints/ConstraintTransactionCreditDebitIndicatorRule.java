@@ -55,11 +55,15 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 */
 	public static final MMConstraint<Transaction3> forTransaction3 = new MMConstraint<Transaction3>() {
 		{
-			validator = ConstraintTransactionCreditDebitIndicatorRule::checkTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCreditDebitIndicatorRule";
 			definition = "If CreditDebitIndicator is present, then at least one or more Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) must be present.\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.\n.";
 			owner_lazy = () -> Transaction3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction3 obj) throws Exception {
+			checkTransaction3(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 */
 	public static final MMConstraint<Transaction4> forTransaction4 = new MMConstraint<Transaction4>() {
 		{
-			validator = ConstraintTransactionCreditDebitIndicatorRule::checkTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCreditDebitIndicatorRule";
 			definition = "If CreditDebitIndicator is present, then at least one or more Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) must be present.\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.";
 			owner_lazy = () -> Transaction4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction4 obj) throws Exception {
+			checkTransaction4(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 */
 	public static final MMConstraint<Transaction5> forTransaction5 = new MMConstraint<Transaction5>() {
 		{
-			validator = ConstraintTransactionCreditDebitIndicatorRule::checkTransaction5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCreditDebitIndicatorRule";
 			definition = "If CreditDebitIndicator is present, then at least one or more Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) must be present.\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/EntryAmount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.";
 			owner_lazy = () -> Transaction5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction5 obj) throws Exception {
+			checkTransaction5(obj);
 		}
 	};
 	/**
@@ -154,13 +166,17 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 */
 	public static final MMConstraint<Transaction24> forTransaction24 = new MMConstraint<Transaction24>() {
 		{
-			validator = ConstraintTransactionCreditDebitIndicatorRule::checkTransaction24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCreditDebitIndicatorRule";
 			definition = "If CreditDebitIndicator is present, then AccountEntry/Entry/Amount or Payment/InstructedAmount or Payment/InterbankSettlementAmount must be present.\r\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/Entry/Amount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionCreditDebitIndicatorRule.forTransaction33);
 			owner_lazy = () -> Transaction24.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountEntry/Entry/Amount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Payment/InstructedAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Payment/InterbankSettlementAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditDebitIndicator</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Transaction24 obj) throws Exception {
+			checkTransaction24(obj);
 		}
 	};
 	/**
@@ -202,7 +218,6 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 */
 	public static final MMConstraint<Transaction33> forTransaction33 = new MMConstraint<Transaction33>() {
 		{
-			validator = ConstraintTransactionCreditDebitIndicatorRule::checkTransaction33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCreditDebitIndicatorRule";
 			definition = "If CreditDebitIndicator is present, then AccountEntry/Entry/Amount or Payment/InstructedAmount or Payment/InterbankSettlementAmount must be present.\r\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/Entry/Amount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.\r\n";
@@ -210,6 +225,11 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionCreditDebitIndicatorRule.forTransaction24;
 			owner_lazy = () -> Transaction33.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountEntry/Entry/Amount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Payment/InstructedAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Payment/InterbankSettlementAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditDebitIndicator</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Transaction33 obj) throws Exception {
+			checkTransaction33(obj);
 		}
 	};
 	/**
@@ -243,13 +263,17 @@ public class ConstraintTransactionCreditDebitIndicatorRule {
 	 */
 	public static final MMConstraint<Transaction59> forTransaction59 = new MMConstraint<Transaction59>() {
 		{
-			validator = ConstraintTransactionCreditDebitIndicatorRule::checkTransaction59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCreditDebitIndicatorRule";
 			definition = "If CreditDebitIndicator is present, then AccountEntry/Entry/Amount or Payment/InstructedAmount or Payment/InterbankSettlementAmount must be present.\r\nIf CreditDebitIndicator is not present, then any Message Elements in the list (AccountEntry/Entry/Amount, Payment/InstructedAmount, Payment/InterbankSettlementAmount) is optional.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionCreditDebitIndicatorRule.forTransaction33;
 			owner_lazy = () -> Transaction59.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountEntry/Entry/Amount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Payment/InstructedAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Payment/InterbankSettlementAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditDebitIndicator</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Transaction59 obj) throws Exception {
+			checkTransaction59(obj);
 		}
 	};
 

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification113;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +128,7 @@ public class OrderStatusAndReason9 {
 	 * OrderStatusAndReason8.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatusAndReason9, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<OrderStatusAndReason9, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason9.mmObject();
@@ -140,6 +141,16 @@ public class OrderStatusAndReason9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OrderStatusAndReason9 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason9 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlSts", required = true)
@@ -171,7 +182,7 @@ public class OrderStatusAndReason9 {
 	 * definition} = "Cancellation status of the order cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason9, CancellationStatus22Choice> mmCancellationStatus = new MMMessageAssociationEnd<OrderStatusAndReason9, CancellationStatus22Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason9.mmObject();
 			isDerived = false;
@@ -183,6 +194,16 @@ public class OrderStatusAndReason9 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CancellationStatus22Choice.mmObject();
+		}
+
+		@Override
+		public CancellationStatus22Choice getValue(OrderStatusAndReason9 obj) {
+			return obj.getCancellationStatus();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason9 obj, CancellationStatus22Choice value) {
+			obj.setCancellationStatus(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -224,7 +245,7 @@ public class OrderStatusAndReason9 {
 	 * OrderStatusAndReason8.mmStatusInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason9, Optional<PartyIdentification113>> mmStatusInitiator = new MMMessageAssociationEnd<OrderStatusAndReason9, Optional<PartyIdentification113>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason9.mmObject();
@@ -237,7 +258,17 @@ public class OrderStatusAndReason9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			type_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(OrderStatusAndReason9 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason9 obj, Optional<PartyIdentification113> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 
@@ -279,7 +310,7 @@ public class OrderStatusAndReason9 {
 		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public OrderStatusAndReason9 setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+	public OrderStatusAndReason9 setStatusInitiator(PartyIdentification113 statusInitiator) {
 		this.statusInitiator = statusInitiator;
 		return this;
 	}

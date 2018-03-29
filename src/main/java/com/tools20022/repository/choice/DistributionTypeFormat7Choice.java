@@ -123,7 +123,7 @@ public class DistributionTypeFormat7Choice {
 	 * DistributionTypeFormat4Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DistributionTypeFormat7Choice, DistributionType3Code> mmCode = new MMMessageAttribute<DistributionTypeFormat7Choice, DistributionType3Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionTypeFormat7Choice.mmObject();
@@ -136,6 +136,16 @@ public class DistributionTypeFormat7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionType3Code.mmObject();
+		}
+
+		@Override
+		public DistributionType3Code getValue(DistributionTypeFormat7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DistributionTypeFormat7Choice obj, DistributionType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -177,7 +187,7 @@ public class DistributionTypeFormat7Choice {
 	 * DistributionTypeFormat4Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DistributionTypeFormat7Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<DistributionTypeFormat7Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DistributionTypeFormat7Choice.mmObject();
@@ -191,6 +201,16 @@ public class DistributionTypeFormat7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(DistributionTypeFormat7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DistributionTypeFormat7Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

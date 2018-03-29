@@ -50,11 +50,15 @@ public class ConstraintClientRule {
 	 */
 	public static final MMConstraint<TransactionDetails1> forTransactionDetails1 = new MMConstraint<TransactionDetails1>() {
 		{
-			validator = ConstraintClientRule::checkTransactionDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientRule";
 			definition = "If Capacity is Agent (AGEN), then Client must be present.";
 			owner_lazy = () -> TransactionDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails1 obj) throws Exception {
+			checkTransactionDetails1(obj);
 		}
 	};
 	/**
@@ -79,11 +83,15 @@ public class ConstraintClientRule {
 	 */
 	public static final MMConstraint<TransactionDetails3> forTransactionDetails3 = new MMConstraint<TransactionDetails3>() {
 		{
-			validator = ConstraintClientRule::checkTransactionDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientRule";
 			definition = "If Capacity is Agent (AGEN), then Client must be present.";
 			owner_lazy = () -> TransactionDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails3 obj) throws Exception {
+			checkTransactionDetails3(obj);
 		}
 	};
 

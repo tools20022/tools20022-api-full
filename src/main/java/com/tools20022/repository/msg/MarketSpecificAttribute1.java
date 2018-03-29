@@ -97,7 +97,7 @@ public class MarketSpecificAttribute1 {
 	 * definition} = "Specifies the name of the market-specific attribute."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketSpecificAttribute1, Max35Text> mmName = new MMMessageAttribute<MarketSpecificAttribute1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketSpecificAttribute1.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class MarketSpecificAttribute1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MarketSpecificAttribute1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(MarketSpecificAttribute1 obj, Max35Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -139,7 +149,7 @@ public class MarketSpecificAttribute1 {
 	 * definition} = "Specifies the value of the market-specific attribute."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketSpecificAttribute1, Max350Text> mmValue = new MMMessageAttribute<MarketSpecificAttribute1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketSpecificAttribute1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class MarketSpecificAttribute1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(MarketSpecificAttribute1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(MarketSpecificAttribute1 obj, Max350Text value) {
+			obj.setValue(value);
 		}
 	};
 

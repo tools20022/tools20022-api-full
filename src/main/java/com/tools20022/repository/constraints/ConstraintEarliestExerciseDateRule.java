@@ -49,11 +49,15 @@ public class ConstraintEarliestExerciseDateRule {
 	 */
 	public static final MMConstraint<Option2> forOption2 = new MMConstraint<Option2>() {
 		{
-			validator = ConstraintEarliestExerciseDateRule::checkOption2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDateRule";
 			definition = "If ExerciseStyle is AMER, then EarliestExerciseDate must be present.";
 			owner_lazy = () -> Option2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Option2 obj) throws Exception {
+			checkOption2(obj);
 		}
 	};
 	/**
@@ -85,12 +89,16 @@ public class ConstraintEarliestExerciseDateRule {
 	 */
 	public static final MMConstraint<Option3> forOption3 = new MMConstraint<Option3>() {
 		{
-			validator = ConstraintEarliestExerciseDateRule::checkOption3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDateRule";
 			definition = "If ExerciseStyle is AMER, then EarliestExerciseDate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEarliestExerciseDateRule.forOption10);
 			owner_lazy = () -> Option3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Option3 obj) throws Exception {
+			checkOption3(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintEarliestExerciseDateRule {
 	 */
 	public static final MMConstraint<Option4> forOption4 = new MMConstraint<Option4>() {
 		{
-			validator = ConstraintEarliestExerciseDateRule::checkOption4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDateRule";
 			definition = "If ExerciseStyle is AMER, then EarliestExerciseDate must be present.";
 			owner_lazy = () -> Option4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Option4 obj) throws Exception {
+			checkOption4(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintEarliestExerciseDateRule {
 	 */
 	public static final MMConstraint<Option5> forOption5 = new MMConstraint<Option5>() {
 		{
-			validator = ConstraintEarliestExerciseDateRule::checkOption5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDateRule";
 			definition = "If Opttion/ExerciseStyle is AMER, then Option/EarliestExerciseDate must be present.";
 			owner_lazy = () -> Option5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Option5 obj) throws Exception {
+			checkOption5(obj);
 		}
 	};
 	/**
@@ -172,11 +188,15 @@ public class ConstraintEarliestExerciseDateRule {
 	 */
 	public static final MMConstraint<Option6> forOption6 = new MMConstraint<Option6>() {
 		{
-			validator = ConstraintEarliestExerciseDateRule::checkOption6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDateRule";
 			definition = "If Option/ExerciseStyle is AMER, then Option/EarliestExerciseDate must be present.";
 			owner_lazy = () -> Option6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Option6 obj) throws Exception {
+			checkOption6(obj);
 		}
 	};
 	/**
@@ -205,12 +225,16 @@ public class ConstraintEarliestExerciseDateRule {
 	 */
 	public static final MMConstraint<Option10> forOption10 = new MMConstraint<Option10>() {
 		{
-			validator = ConstraintEarliestExerciseDateRule::checkOption10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDateRule";
 			definition = "If ExerciseStyle is AMER, then EarliestExerciseDate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEarliestExerciseDateRule.forOption3;
 			owner_lazy = () -> Option10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Option10 obj) throws Exception {
+			checkOption10(obj);
 		}
 	};
 

@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.CommercialTradeSettlement;
 import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvoiceHeader3;
+import com.tools20022.repository.msg.LineItem17;
+import com.tools20022.repository.msg.TradeAgreement16;
+import com.tools20022.repository.msg.TradeDelivery3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -68,7 +72,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CardPaymentInvoice3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -119,7 +123,7 @@ public class CardPaymentInvoice3 {
 	 * CardPaymentInvoice2.mmInvoiceHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvoiceHeader = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentInvoice3, InvoiceHeader3> mmInvoiceHeader = new MMMessageAssociationEnd<CardPaymentInvoice3, InvoiceHeader3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice3.mmObject();
 			isDerived = false;
@@ -131,7 +135,17 @@ public class CardPaymentInvoice3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvoiceHeader3.mmObject();
+			type_lazy = () -> InvoiceHeader3.mmObject();
+		}
+
+		@Override
+		public InvoiceHeader3 getValue(CardPaymentInvoice3 obj) {
+			return obj.getInvoiceHeader();
+		}
+
+		@Override
+		public void setValue(CardPaymentInvoice3 obj, InvoiceHeader3 value) {
+			obj.setInvoiceHeader(value);
 		}
 	};
 	@XmlElement(name = "TradAgrmt", required = true)
@@ -173,7 +187,7 @@ public class CardPaymentInvoice3 {
 	 * CardPaymentInvoice2.mmTradeAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeAgreement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentInvoice3, TradeAgreement16> mmTradeAgreement = new MMMessageAssociationEnd<CardPaymentInvoice3, TradeAgreement16>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmGoverningDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice3.mmObject();
@@ -186,7 +200,17 @@ public class CardPaymentInvoice3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeAgreement16.mmObject();
+			type_lazy = () -> TradeAgreement16.mmObject();
+		}
+
+		@Override
+		public TradeAgreement16 getValue(CardPaymentInvoice3 obj) {
+			return obj.getTradeAgreement();
+		}
+
+		@Override
+		public void setValue(CardPaymentInvoice3 obj, TradeAgreement16 value) {
+			obj.setTradeAgreement(value);
 		}
 	};
 	@XmlElement(name = "TradDlvry", required = true)
@@ -229,7 +253,7 @@ public class CardPaymentInvoice3 {
 	 * CardPaymentInvoice2.mmTradeDelivery}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeDelivery = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentInvoice3, TradeDelivery3> mmTradeDelivery = new MMMessageAssociationEnd<CardPaymentInvoice3, TradeDelivery3>() {
 		{
 			businessElementTrace_lazy = () -> CommercialTradeSettlement.mmProductDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice3.mmObject();
@@ -242,11 +266,21 @@ public class CardPaymentInvoice3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeDelivery3.mmObject();
+			type_lazy = () -> TradeDelivery3.mmObject();
+		}
+
+		@Override
+		public TradeDelivery3 getValue(CardPaymentInvoice3 obj) {
+			return obj.getTradeDelivery();
+		}
+
+		@Override
+		public void setValue(CardPaymentInvoice3 obj, TradeDelivery3 value) {
+			obj.setTradeDelivery(value);
 		}
 	};
 	@XmlElement(name = "LineItm")
-	protected List<com.tools20022.repository.msg.LineItem17> lineItem;
+	protected List<LineItem17> lineItem;
 	/**
 	 * 
 	 <p>
@@ -284,7 +318,7 @@ public class CardPaymentInvoice3 {
 	 * CardPaymentInvoice2.mmLineItem}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLineItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentInvoice3, List<LineItem17>> mmLineItem = new MMMessageAssociationEnd<CardPaymentInvoice3, List<LineItem17>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmLineItem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice3.mmObject();
@@ -296,7 +330,17 @@ public class CardPaymentInvoice3 {
 			previousVersion_lazy = () -> CardPaymentInvoice2.mmLineItem;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LineItem17.mmObject();
+			type_lazy = () -> LineItem17.mmObject();
+		}
+
+		@Override
+		public List<LineItem17> getValue(CardPaymentInvoice3 obj) {
+			return obj.getLineItem();
+		}
+
+		@Override
+		public void setValue(CardPaymentInvoice3 obj, List<LineItem17> value) {
+			obj.setLineItem(value);
 		}
 	};
 
@@ -307,7 +351,7 @@ public class CardPaymentInvoice3 {
 						com.tools20022.repository.msg.CardPaymentInvoice3.mmTradeDelivery, com.tools20022.repository.msg.CardPaymentInvoice3.mmLineItem);
 				trace_lazy = () -> CommercialTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentInvoice3";
 				definition = "Detailed invoice data.";
 				previousVersion_lazy = () -> CardPaymentInvoice2.mmObject();
@@ -320,7 +364,7 @@ public class CardPaymentInvoice3 {
 		return invoiceHeader;
 	}
 
-	public CardPaymentInvoice3 setInvoiceHeader(com.tools20022.repository.msg.InvoiceHeader3 invoiceHeader) {
+	public CardPaymentInvoice3 setInvoiceHeader(InvoiceHeader3 invoiceHeader) {
 		this.invoiceHeader = Objects.requireNonNull(invoiceHeader);
 		return this;
 	}
@@ -329,7 +373,7 @@ public class CardPaymentInvoice3 {
 		return tradeAgreement;
 	}
 
-	public CardPaymentInvoice3 setTradeAgreement(com.tools20022.repository.msg.TradeAgreement16 tradeAgreement) {
+	public CardPaymentInvoice3 setTradeAgreement(TradeAgreement16 tradeAgreement) {
 		this.tradeAgreement = Objects.requireNonNull(tradeAgreement);
 		return this;
 	}
@@ -338,7 +382,7 @@ public class CardPaymentInvoice3 {
 		return tradeDelivery;
 	}
 
-	public CardPaymentInvoice3 setTradeDelivery(com.tools20022.repository.msg.TradeDelivery3 tradeDelivery) {
+	public CardPaymentInvoice3 setTradeDelivery(TradeDelivery3 tradeDelivery) {
 		this.tradeDelivery = Objects.requireNonNull(tradeDelivery);
 		return this;
 	}
@@ -347,7 +391,7 @@ public class CardPaymentInvoice3 {
 		return lineItem == null ? lineItem = new ArrayList<>() : lineItem;
 	}
 
-	public CardPaymentInvoice3 setLineItem(List<com.tools20022.repository.msg.LineItem17> lineItem) {
+	public CardPaymentInvoice3 setLineItem(List<LineItem17> lineItem) {
 		this.lineItem = Objects.requireNonNull(lineItem);
 		return this;
 	}

@@ -100,7 +100,7 @@ public class InstructionIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionIdentification2, Max35Text> mmInstructionIdentification = new MMMessageAttribute<InstructionIdentification2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionIdentification2.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class InstructionIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InstructionIdentification2 obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(InstructionIdentification2 obj, Max35Text value) {
+			obj.setInstructionIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -142,7 +152,7 @@ public class InstructionIdentification2 {
 	 * definition} = "Date and time at which the instruction was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionIdentification2, Optional<ISODateTime>> mmCreationDateTime = new MMMessageAttribute<InstructionIdentification2, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionIdentification2.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class InstructionIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(InstructionIdentification2 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(InstructionIdentification2 obj, Optional<ISODateTime> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 

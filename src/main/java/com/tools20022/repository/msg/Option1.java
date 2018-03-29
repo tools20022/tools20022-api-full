@@ -32,6 +32,7 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -151,7 +152,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConversionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<ISODateTime>> mmConversionDate = new MMMessageAttribute<Option1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -163,6 +164,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Option1 obj) {
+			return obj.getConversionDate();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<ISODateTime> value) {
+			obj.setConversionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrkPric")
@@ -202,7 +213,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<Price1>> mmStrikePrice = new MMMessageAttribute<Option1, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmSecuritiesPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -214,7 +225,17 @@ public class Option1 {
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(Option1 obj) {
+			return obj.getStrikePrice();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<Price1> value) {
+			obj.setStrikePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt")
@@ -250,7 +271,7 @@ public class Option1 {
 	 * definition} = "Date on which a privilege expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<ISODateTime>> mmExpiryDate = new MMMessageAttribute<Option1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -262,6 +283,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Option1 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<ISODateTime> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinExrcblMltplQty")
@@ -299,7 +330,7 @@ public class Option1 {
 	 * "Minimum multiple quantity of securities that must be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumExercisableMultipleQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<FinancialInstrumentQuantityChoice>> mmMinimumExercisableMultipleQuantity = new MMMessageAttribute<Option1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableMultipleQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -311,6 +342,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(Option1 obj) {
+			return obj.getMinimumExercisableMultipleQuantity();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setMinimumExercisableMultipleQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinExrcblQty")
@@ -347,7 +388,7 @@ public class Option1 {
 	 * definition} = "Minimum quantity of securities that must be exercised."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumExercisableQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<FinancialInstrumentQuantityChoice>> mmMinimumExercisableQuantity = new MMMessageAttribute<Option1, Optional<FinancialInstrumentQuantityChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmMinimumExercisableQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -359,6 +400,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantityChoice> getValue(Option1 obj) {
+			return obj.getMinimumExercisableQuantity();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<FinancialInstrumentQuantityChoice> value) {
+			obj.setMinimumExercisableQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConvsPrd")
@@ -396,7 +447,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConversionPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Option1, Optional<DateTimePeriodChoice>> mmConversionPeriod = new MMMessageAssociationEnd<Option1, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -409,6 +460,16 @@ public class Option1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(Option1 obj) {
+			return obj.getConversionPeriod();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setConversionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnStyle")
@@ -445,7 +506,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionStyle = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Option1, Optional<OptionStyle1Choice>> mmOptionStyle = new MMMessageAssociationEnd<Option1, Optional<OptionStyle1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -458,6 +519,16 @@ public class Option1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> OptionStyle1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<OptionStyle1Choice> getValue(Option1 obj) {
+			return obj.getOptionStyle();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<OptionStyle1Choice> value) {
+			obj.setOptionStyle(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OptnTp")
@@ -496,7 +567,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<OptionType1Code>> mmOptionType = new MMMessageAttribute<Option1, Optional<OptionType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -508,6 +579,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OptionType1Code> getValue(Option1 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<OptionType1Code> value) {
+			obj.setOptionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrkVal")
@@ -548,7 +629,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikeValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<Number>> mmStrikeValue = new MMMessageAttribute<Option1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmStrikeValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -561,6 +642,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Option1 obj) {
+			return obj.getStrikeValue();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<Number> value) {
+			obj.setStrikeValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StrkMltplr")
@@ -601,7 +692,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikeMultiplier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<Number>> mmStrikeMultiplier = new MMMessageAttribute<Option1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmStrikeMultiplier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -614,6 +705,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Option1 obj) {
+			return obj.getStrikeMultiplier();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<Number> value) {
+			obj.setStrikeMultiplier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrmAssgnmtMtd")
@@ -653,7 +754,7 @@ public class Option1 {
 	 * definition} = "Method under which assignment was conducted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstrumentAssignmentMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<AssignmentMethod1Code>> mmInstrumentAssignmentMethod = new MMMessageAttribute<Option1, Optional<AssignmentMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmInstrumentAssignmentMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -666,6 +767,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssignmentMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssignmentMethod1Code> getValue(Option1 obj) {
+			return obj.getInstrumentAssignmentMethod();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<AssignmentMethod1Code> value) {
+			obj.setInstrumentAssignmentMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VrsnNb")
@@ -706,7 +817,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<Number>> mmVersionNumber = new MMMessageAttribute<Option1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmVersionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -719,6 +830,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Option1 obj) {
+			return obj.getVersionNumber();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<Number> value) {
+			obj.setVersionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlStyle")
@@ -757,7 +878,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettleStyle = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<SettleStyle1Code>> mmSettleStyle = new MMMessageAttribute<Option1, Optional<SettleStyle1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmSettleStyle;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -769,6 +890,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SettleStyle1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SettleStyle1Code> getValue(Option1 obj) {
+			return obj.getSettleStyle();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<SettleStyle1Code> value) {
+			obj.setSettleStyle(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryLctn")
@@ -805,7 +936,7 @@ public class Option1 {
 	 * definition} = "Financial center where option expires."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpiryLocation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<Max4AlphaNumericText>> mmExpiryLocation = new MMMessageAttribute<Option1, Optional<Max4AlphaNumericText>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmExpiryLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -817,6 +948,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(Option1 obj) {
+			return obj.getExpiryLocation();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setExpiryLocation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Stdstn")
@@ -855,7 +996,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandardisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, Optional<StandardisationCode>> mmStandardisation = new MMMessageAttribute<Option1, Optional<StandardisationCode>>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmStandardisation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -867,6 +1008,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> StandardisationCode.mmObject();
+		}
+
+		@Override
+		public Optional<StandardisationCode> getValue(Option1 obj) {
+			return obj.getStandardisation();
+		}
+
+		@Override
+		public void setValue(Option1 obj, Optional<StandardisationCode> value) {
+			obj.setStandardisation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgPtyRole", required = true)
@@ -903,7 +1054,7 @@ public class Option1 {
 	 * definition} = "Specifies the party which is the buyer or the seller."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingPartyRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, OptionParty1Code> mmTradingPartyRole = new MMMessageAttribute<Option1, OptionParty1Code>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmBuyerOrSeller;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -915,6 +1066,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionParty1Code.mmObject();
+		}
+
+		@Override
+		public OptionParty1Code getValue(Option1 obj) {
+			return obj.getTradingPartyRole();
+		}
+
+		@Override
+		public void setValue(Option1 obj, OptionParty1Code value) {
+			obj.setTradingPartyRole(value);
 		}
 	};
 	@XmlElement(name = "CtrctSz", required = true)
@@ -952,7 +1113,7 @@ public class Option1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Option1, BaseOneRate> mmContractSize = new MMMessageAttribute<Option1, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmContractSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Option1.mmObject();
@@ -964,6 +1125,16 @@ public class Option1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(Option1 obj) {
+			return obj.getContractSize();
+		}
+
+		@Override
+		public void setValue(Option1 obj, BaseOneRate value) {
+			obj.setContractSize(value);
 		}
 	};
 
@@ -999,7 +1170,7 @@ public class Option1 {
 		return strikePrice == null ? Optional.empty() : Optional.of(strikePrice);
 	}
 
-	public Option1 setStrikePrice(com.tools20022.repository.msg.Price1 strikePrice) {
+	public Option1 setStrikePrice(Price1 strikePrice) {
 		this.strikePrice = strikePrice;
 		return this;
 	}

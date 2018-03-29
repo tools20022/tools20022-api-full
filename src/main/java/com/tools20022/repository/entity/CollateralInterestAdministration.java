@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.CollateralBalance;
+import com.tools20022.repository.entity.CollateralManagement;
 import com.tools20022.repository.entity.InterestManagement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.InterestResult1;
@@ -124,7 +126,7 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCollateralManagement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralInterestAdministration, com.tools20022.repository.entity.CollateralManagement> mmCollateralManagement = new MMBusinessAssociationEnd<CollateralInterestAdministration, com.tools20022.repository.entity.CollateralManagement>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralInterestAdministration.mmObject();
@@ -136,6 +138,16 @@ public class CollateralInterestAdministration extends InterestManagement {
 			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmInterestManagement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.CollateralManagement getValue(CollateralInterestAdministration obj) {
+			return obj.getCollateralManagement();
+		}
+
+		@Override
+		public void setValue(CollateralInterestAdministration obj, com.tools20022.repository.entity.CollateralManagement value) {
+			obj.setCollateralManagement(value);
 		}
 	};
 	protected CollateralBalance closingCollateralBalance;
@@ -182,7 +194,7 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmClosingCollateralBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralInterestAdministration, CollateralBalance> mmClosingCollateralBalance = new MMBusinessAssociationEnd<CollateralInterestAdministration, CollateralBalance>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestResult1.mmClosingCollateralBalance);
 			isDerived = false;
@@ -192,9 +204,19 @@ public class CollateralInterestAdministration extends InterestManagement {
 			definition = "Specifies the opening collateral balance for the calculation of interest.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmCollateralInterestManagement;
+			opposite_lazy = () -> CollateralBalance.mmCollateralInterestManagement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmObject();
+			type_lazy = () -> CollateralBalance.mmObject();
+		}
+
+		@Override
+		public CollateralBalance getValue(CollateralInterestAdministration obj) {
+			return obj.getClosingCollateralBalance();
+		}
+
+		@Override
+		public void setValue(CollateralInterestAdministration obj, CollateralBalance value) {
+			obj.setClosingCollateralBalance(value);
 		}
 	};
 	protected CollateralBalance openingCollateralBalance;
@@ -241,7 +263,7 @@ public class CollateralInterestAdministration extends InterestManagement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOpeningCollateralBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralInterestAdministration, CollateralBalance> mmOpeningCollateralBalance = new MMBusinessAssociationEnd<CollateralInterestAdministration, CollateralBalance>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InterestResult1.mmOpeningCollateralBalance);
 			isDerived = false;
@@ -251,9 +273,19 @@ public class CollateralInterestAdministration extends InterestManagement {
 			definition = "Specifies the opening collateral balance for the calculation of interest.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmRelatedCollateralInterestManagement;
+			opposite_lazy = () -> CollateralBalance.mmRelatedCollateralInterestManagement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmObject();
+			type_lazy = () -> CollateralBalance.mmObject();
+		}
+
+		@Override
+		public CollateralBalance getValue(CollateralInterestAdministration obj) {
+			return obj.getOpeningCollateralBalance();
+		}
+
+		@Override
+		public void setValue(CollateralInterestAdministration obj, CollateralBalance value) {
+			obj.setOpeningCollateralBalance(value);
 		}
 	};
 
@@ -264,8 +296,8 @@ public class CollateralInterestAdministration extends InterestManagement {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralInterestAdministration";
 				definition = "Calculation and request of interest linked to collateral.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralManagement.mmInterestManagement, com.tools20022.repository.entity.CollateralBalance.mmRelatedCollateralInterestManagement,
-						com.tools20022.repository.entity.CollateralBalance.mmCollateralInterestManagement);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralManagement.mmInterestManagement, CollateralBalance.mmRelatedCollateralInterestManagement,
+						CollateralBalance.mmCollateralInterestManagement);
 				superType_lazy = () -> InterestManagement.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralInterestAdministration.mmCollateralManagement, com.tools20022.repository.entity.CollateralInterestAdministration.mmClosingCollateralBalance,
 						com.tools20022.repository.entity.CollateralInterestAdministration.mmOpeningCollateralBalance);
@@ -292,7 +324,7 @@ public class CollateralInterestAdministration extends InterestManagement {
 		return closingCollateralBalance;
 	}
 
-	public CollateralInterestAdministration setClosingCollateralBalance(com.tools20022.repository.entity.CollateralBalance closingCollateralBalance) {
+	public CollateralInterestAdministration setClosingCollateralBalance(CollateralBalance closingCollateralBalance) {
 		this.closingCollateralBalance = Objects.requireNonNull(closingCollateralBalance);
 		return this;
 	}
@@ -301,7 +333,7 @@ public class CollateralInterestAdministration extends InterestManagement {
 		return openingCollateralBalance;
 	}
 
-	public CollateralInterestAdministration setOpeningCollateralBalance(com.tools20022.repository.entity.CollateralBalance openingCollateralBalance) {
+	public CollateralInterestAdministration setOpeningCollateralBalance(CollateralBalance openingCollateralBalance) {
 		this.openingCollateralBalance = Objects.requireNonNull(openingCollateralBalance);
 		return this;
 	}

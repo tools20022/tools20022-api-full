@@ -122,7 +122,7 @@ public class CorporateActionPrice22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice22, List<PriceFormat13Choice>> mmGenericCashPriceReceivedPerProduct = new MMMessageAssociationEnd<CorporateActionPrice22, List<PriceFormat13Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmGenericCashPriceReceivedPerProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice22.mmObject();
@@ -135,6 +135,16 @@ public class CorporateActionPrice22 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat13Choice.mmObject();
+		}
+
+		@Override
+		public List<PriceFormat13Choice> getValue(CorporateActionPrice22 obj) {
+			return obj.getGenericCashPriceReceivedPerProduct();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice22 obj, List<PriceFormat13Choice> value) {
+			obj.setGenericCashPriceReceivedPerProduct(value);
 		}
 	};
 	@XmlElement(name = "CshInLieuOfShrPric")
@@ -175,7 +185,7 @@ public class CorporateActionPrice22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInLieuOfSharePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice22, Optional<PriceFormat17Choice>> mmCashInLieuOfSharePrice = new MMMessageAssociationEnd<CorporateActionPrice22, Optional<PriceFormat17Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice22.mmObject();
@@ -189,6 +199,16 @@ public class CorporateActionPrice22 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat17Choice> getValue(CorporateActionPrice22 obj) {
+			return obj.getCashInLieuOfSharePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice22 obj, Optional<PriceFormat17Choice> value) {
+			obj.setCashInLieuOfSharePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OverSbcptDpstPric")
@@ -229,7 +249,7 @@ public class CorporateActionPrice22 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice22, Optional<PriceFormat17Choice>> mmOverSubscriptionDepositPrice = new MMMessageAssociationEnd<CorporateActionPrice22, Optional<PriceFormat17Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmOverSubscriptionDepositPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice22.mmObject();
@@ -243,6 +263,16 @@ public class CorporateActionPrice22 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat17Choice> getValue(CorporateActionPrice22 obj) {
+			return obj.getOverSubscriptionDepositPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice22 obj, Optional<PriceFormat17Choice> value) {
+			obj.setOverSubscriptionDepositPrice(value.orElse(null));
 		}
 	};
 

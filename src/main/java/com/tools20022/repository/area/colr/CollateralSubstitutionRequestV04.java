@@ -26,7 +26,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -149,7 +148,7 @@ public class CollateralSubstitutionRequestV04 {
 	 * CollateralSubstitutionRequestV03.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralSubstitutionRequestV04, Max35Text> mmTransactionIdentification = new MMMessageBuildingBlock<CollateralSubstitutionRequestV04, Max35Text>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,12 +160,14 @@ public class CollateralSubstitutionRequestV04 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralSubstitutionRequestV04.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(CollateralSubstitutionRequestV04 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionRequestV04 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "Oblgtn", required = true)
@@ -200,7 +201,7 @@ public class CollateralSubstitutionRequestV04 {
 	 * CollateralSubstitutionRequestV03.mmObligation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmObligation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralSubstitutionRequestV04, Obligation4> mmObligation = new MMMessageBuildingBlock<CollateralSubstitutionRequestV04, Obligation4>() {
 		{
 			xmlTag = "Oblgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +213,14 @@ public class CollateralSubstitutionRequestV04 {
 			complexType_lazy = () -> Obligation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralSubstitutionRequestV04.class.getMethod("getObligation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Obligation4 getValue(CollateralSubstitutionRequestV04 obj) {
+			return obj.getObligation();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionRequestV04 obj, Obligation4 value) {
+			obj.setObligation(value);
 		}
 	};
 	@XmlElement(name = "Agrmt")
@@ -249,7 +252,7 @@ public class CollateralSubstitutionRequestV04 {
 	 * CollateralSubstitutionRequestV03.mmAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgreement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralSubstitutionRequestV04, Optional<Agreement4>> mmAgreement = new MMMessageBuildingBlock<CollateralSubstitutionRequestV04, Optional<Agreement4>>() {
 		{
 			xmlTag = "Agrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,12 +264,14 @@ public class CollateralSubstitutionRequestV04 {
 			complexType_lazy = () -> Agreement4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralSubstitutionRequestV04.class.getMethod("getAgreement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Agreement4> getValue(CollateralSubstitutionRequestV04 obj) {
+			return obj.getAgreement();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionRequestV04 obj, Optional<Agreement4> value) {
+			obj.setAgreement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollSbstitnRtr", required = true)
@@ -300,7 +305,7 @@ public class CollateralSubstitutionRequestV04 {
 	 * CollateralSubstitutionRequestV03.mmCollateralSubstitutionReturn}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCollateralSubstitutionReturn = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralSubstitutionRequestV04, CollateralSubstitution5> mmCollateralSubstitutionReturn = new MMMessageBuildingBlock<CollateralSubstitutionRequestV04, CollateralSubstitution5>() {
 		{
 			xmlTag = "CollSbstitnRtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,12 +317,14 @@ public class CollateralSubstitutionRequestV04 {
 			complexType_lazy = () -> CollateralSubstitution5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralSubstitutionRequestV04.class.getMethod("getCollateralSubstitutionReturn", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CollateralSubstitution5 getValue(CollateralSubstitutionRequestV04 obj) {
+			return obj.getCollateralSubstitutionReturn();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionRequestV04 obj, CollateralSubstitution5 value) {
+			obj.setCollateralSubstitutionReturn(value);
 		}
 	};
 	@XmlElement(name = "CollSbstitnDlvr")
@@ -351,7 +358,7 @@ public class CollateralSubstitutionRequestV04 {
 	 * CollateralSubstitutionRequestV03.mmCollateralSubstitutionDeliver}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCollateralSubstitutionDeliver = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralSubstitutionRequestV04, Optional<CollateralSubstitution4>> mmCollateralSubstitutionDeliver = new MMMessageBuildingBlock<CollateralSubstitutionRequestV04, Optional<CollateralSubstitution4>>() {
 		{
 			xmlTag = "CollSbstitnDlvr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -363,12 +370,14 @@ public class CollateralSubstitutionRequestV04 {
 			complexType_lazy = () -> CollateralSubstitution4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralSubstitutionRequestV04.class.getMethod("getCollateralSubstitutionDeliver", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CollateralSubstitution4> getValue(CollateralSubstitutionRequestV04 obj) {
+			return obj.getCollateralSubstitutionDeliver();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionRequestV04 obj, Optional<CollateralSubstitution4> value) {
+			obj.setCollateralSubstitutionDeliver(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -403,7 +412,7 @@ public class CollateralSubstitutionRequestV04 {
 	 * CollateralSubstitutionRequestV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CollateralSubstitutionRequestV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CollateralSubstitutionRequestV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -414,12 +423,14 @@ public class CollateralSubstitutionRequestV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralSubstitutionRequestV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CollateralSubstitutionRequestV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitutionRequestV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

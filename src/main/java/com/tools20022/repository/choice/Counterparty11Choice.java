@@ -118,7 +118,7 @@ public class Counterparty11Choice {
 	 * Counterparty9Choice.mmSeller}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty11Choice, PartyIdentificationAndAccount159> mmSeller = new MMMessageAssociationEnd<Counterparty11Choice, PartyIdentificationAndAccount159>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty11Choice.mmObject();
@@ -133,6 +133,16 @@ public class Counterparty11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount159.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount159 getValue(Counterparty11Choice obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(Counterparty11Choice obj, PartyIdentificationAndAccount159 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -178,7 +188,7 @@ public class Counterparty11Choice {
 	 * Counterparty9Choice.mmBuyer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty11Choice, PartyIdentificationAndAccount159> mmBuyer = new MMMessageAssociationEnd<Counterparty11Choice, PartyIdentificationAndAccount159>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty11Choice.mmObject();
@@ -193,6 +203,16 @@ public class Counterparty11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount159.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount159 getValue(Counterparty11Choice obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(Counterparty11Choice obj, PartyIdentificationAndAccount159 value) {
+			obj.setBuyer(value);
 		}
 	};
 

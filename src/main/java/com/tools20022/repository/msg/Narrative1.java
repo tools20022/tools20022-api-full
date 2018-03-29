@@ -94,7 +94,7 @@ public class Narrative1 {
 	 * definition} = "Type of term or condition."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Narrative1, Optional<NarrativeType1Choice>> mmType = new MMMessageAttribute<Narrative1, Optional<NarrativeType1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Narrative1.mmObject();
 			isDerived = false;
@@ -105,6 +105,16 @@ public class Narrative1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> NarrativeType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<NarrativeType1Choice> getValue(Narrative1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Narrative1 obj, Optional<NarrativeType1Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Txt", required = true)
@@ -136,7 +146,7 @@ public class Narrative1 {
 	 * definition} = "Narrative text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Narrative1, List<Max20000Text>> mmText = new MMMessageAttribute<Narrative1, List<Max20000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Narrative1.mmObject();
 			isDerived = false;
@@ -147,6 +157,16 @@ public class Narrative1 {
 			maxOccurs = 5;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max20000Text.mmObject();
+		}
+
+		@Override
+		public List<Max20000Text> getValue(Narrative1 obj) {
+			return obj.getText();
+		}
+
+		@Override
+		public void setValue(Narrative1 obj, List<Max20000Text> value) {
+			obj.setText(value);
 		}
 	};
 

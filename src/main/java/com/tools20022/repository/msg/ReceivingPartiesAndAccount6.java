@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class ReceivingPartiesAndAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceivingPartiesAndAccount6, PartyIdentificationAndAccount32> mmReceivingAgent = new MMMessageAssociationEnd<ReceivingPartiesAndAccount6, PartyIdentificationAndAccount32>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount6.mmObject();
@@ -133,7 +134,17 @@ public class ReceivingPartiesAndAccount6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount32.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount32.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount32 getValue(ReceivingPartiesAndAccount6 obj) {
+			return obj.getReceivingAgent();
+		}
+
+		@Override
+		public void setValue(ReceivingPartiesAndAccount6 obj, PartyIdentificationAndAccount32 value) {
+			obj.setReceivingAgent(value);
 		}
 	};
 	@XmlElement(name = "Dpstry", required = true)
@@ -170,7 +181,7 @@ public class ReceivingPartiesAndAccount6 {
 	 * definition} = "Place where settlement of the securities takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceivingPartiesAndAccount6, PartyIdentification34Choice> mmDepository = new MMMessageAssociationEnd<ReceivingPartiesAndAccount6, PartyIdentification34Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount6.mmObject();
@@ -183,6 +194,16 @@ public class ReceivingPartiesAndAccount6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification34Choice getValue(ReceivingPartiesAndAccount6 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(ReceivingPartiesAndAccount6 obj, PartyIdentification34Choice value) {
+			obj.setDepository(value);
 		}
 	};
 	@XmlElement(name = "SctiesSttlmSys")
@@ -219,7 +240,7 @@ public class ReceivingPartiesAndAccount6 {
 	 * definition} = "Identifies the securities settlement system to be used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesSettlementSystem = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReceivingPartiesAndAccount6, Optional<Max35Text>> mmSecuritiesSettlementSystem = new MMMessageAttribute<ReceivingPartiesAndAccount6, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementSystem.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount6.mmObject();
@@ -231,6 +252,16 @@ public class ReceivingPartiesAndAccount6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReceivingPartiesAndAccount6 obj) {
+			return obj.getSecuritiesSettlementSystem();
+		}
+
+		@Override
+		public void setValue(ReceivingPartiesAndAccount6 obj, Optional<Max35Text> value) {
+			obj.setSecuritiesSettlementSystem(value.orElse(null));
 		}
 	};
 
@@ -253,7 +284,7 @@ public class ReceivingPartiesAndAccount6 {
 		return receivingAgent;
 	}
 
-	public ReceivingPartiesAndAccount6 setReceivingAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount32 receivingAgent) {
+	public ReceivingPartiesAndAccount6 setReceivingAgent(PartyIdentificationAndAccount32 receivingAgent) {
 		this.receivingAgent = Objects.requireNonNull(receivingAgent);
 		return this;
 	}

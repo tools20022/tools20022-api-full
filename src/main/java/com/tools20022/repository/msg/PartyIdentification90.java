@@ -101,7 +101,7 @@ public class PartyIdentification90 {
 	 * definition} = "Specifies a type of party identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification90, PartyIdentificationType1Code> mmIdentificationType = new MMMessageAttribute<PartyIdentification90, PartyIdentificationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification90.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class PartyIdentification90 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartyIdentificationType1Code.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationType1Code getValue(PartyIdentification90 obj) {
+			return obj.getIdentificationType();
+		}
+
+		@Override
+		public void setValue(PartyIdentification90 obj, PartyIdentificationType1Code value) {
+			obj.setIdentificationType(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -143,7 +153,7 @@ public class PartyIdentification90 {
 	 * definition} = "Identification of a party related information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification90, Max35Text> mmIdentification = new MMMessageAttribute<PartyIdentification90, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification90.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class PartyIdentification90 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PartyIdentification90 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification90 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

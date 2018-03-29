@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.datatype.Max34Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification44;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -134,7 +135,7 @@ public class PartyIdentification59 {
 	 * "Identification of the party expressed as the party's name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification59, Optional<Max34Text>> mmPartyName = new MMMessageAttribute<PartyIdentification59, Optional<Max34Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
@@ -146,6 +147,16 @@ public class PartyIdentification59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max34Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max34Text> getValue(PartyIdentification59 obj) {
+			return obj.getPartyName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification59 obj, Optional<Max34Text> value) {
+			obj.setPartyName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AnyBIC")
@@ -183,7 +194,7 @@ public class PartyIdentification59 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAnyBIC = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification59, Optional<PartyIdentification44>> mmAnyBIC = new MMMessageAssociationEnd<PartyIdentification59, Optional<PartyIdentification44>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
@@ -195,7 +206,17 @@ public class PartyIdentification59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification44.mmObject();
+			type_lazy = () -> PartyIdentification44.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification44> getValue(PartyIdentification59 obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification59 obj, Optional<PartyIdentification44> value) {
+			obj.setAnyBIC(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctNb")
@@ -232,7 +253,7 @@ public class PartyIdentification59 {
 	 * definition} = "Identification of the party's account number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification59, Optional<Max34Text>> mmAccountNumber = new MMMessageAttribute<PartyIdentification59, Optional<Max34Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
@@ -244,6 +265,16 @@ public class PartyIdentification59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max34Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max34Text> getValue(PartyIdentification59 obj) {
+			return obj.getAccountNumber();
+		}
+
+		@Override
+		public void setValue(PartyIdentification59 obj, Optional<Max34Text> value) {
+			obj.setAccountNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -280,7 +311,7 @@ public class PartyIdentification59 {
 	 * definition} = "Identification of the party's address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification59, Optional<Max105Text>> mmAddress = new MMMessageAttribute<PartyIdentification59, Optional<Max105Text>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
@@ -292,6 +323,16 @@ public class PartyIdentification59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(PartyIdentification59 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification59 obj, Optional<Max105Text> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrSysId")
@@ -329,7 +370,7 @@ public class PartyIdentification59 {
 	 * definition} = "Choice of a clearing system identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification59, Optional<ClearingSystemIdentification2Choice>> mmClearingSystemIdentification = new MMMessageAttribute<PartyIdentification59, Optional<ClearingSystemIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmClearingSystemMemberIdentificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
@@ -341,6 +382,16 @@ public class PartyIdentification59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ClearingSystemIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ClearingSystemIdentification2Choice> getValue(PartyIdentification59 obj) {
+			return obj.getClearingSystemIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification59 obj, Optional<ClearingSystemIdentification2Choice> value) {
+			obj.setClearingSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LglNttyIdr")
@@ -380,7 +431,7 @@ public class PartyIdentification59 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalEntityIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification59, Optional<LEIIdentifier>> mmLegalEntityIdentifier = new MMMessageAttribute<PartyIdentification59, Optional<LEIIdentifier>>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification59.mmObject();
@@ -392,6 +443,16 @@ public class PartyIdentification59 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(PartyIdentification59 obj) {
+			return obj.getLegalEntityIdentifier();
+		}
+
+		@Override
+		public void setValue(PartyIdentification59 obj, Optional<LEIIdentifier> value) {
+			obj.setLegalEntityIdentifier(value.orElse(null));
 		}
 	};
 
@@ -425,7 +486,7 @@ public class PartyIdentification59 {
 		return anyBIC == null ? Optional.empty() : Optional.of(anyBIC);
 	}
 
-	public PartyIdentification59 setAnyBIC(com.tools20022.repository.msg.PartyIdentification44 anyBIC) {
+	public PartyIdentification59 setAnyBIC(PartyIdentification44 anyBIC) {
 		this.anyBIC = anyBIC;
 		return this;
 	}

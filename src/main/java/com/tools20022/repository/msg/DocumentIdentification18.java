@@ -135,7 +135,7 @@ public class DocumentIdentification18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification18, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<DocumentIdentification18, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification18.mmObject();
@@ -148,6 +148,16 @@ public class DocumentIdentification18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(DocumentIdentification18 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification18 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -189,7 +199,7 @@ public class DocumentIdentification18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreationDateTime = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification18, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAssociationEnd<DocumentIdentification18, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification18.mmObject();
@@ -203,6 +213,16 @@ public class DocumentIdentification18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(DocumentIdentification18 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification18 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDplct")
@@ -245,7 +265,7 @@ public class DocumentIdentification18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification18, Optional<CopyDuplicate1Code>> mmCopyDuplicate = new MMMessageAttribute<DocumentIdentification18, Optional<CopyDuplicate1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmCopyDuplicate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification18.mmObject();
@@ -258,6 +278,16 @@ public class DocumentIdentification18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(DocumentIdentification18 obj) {
+			return obj.getCopyDuplicate();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification18 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyDuplicate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChngInstrInd")
@@ -292,7 +322,7 @@ public class DocumentIdentification18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChangeInstructionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification18, Optional<YesNoIndicator>> mmChangeInstructionIndicator = new MMMessageAttribute<DocumentIdentification18, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification18.mmObject();
 			isDerived = false;
@@ -303,6 +333,16 @@ public class DocumentIdentification18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(DocumentIdentification18 obj) {
+			return obj.getChangeInstructionIndicator();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification18 obj, Optional<YesNoIndicator> value) {
+			obj.setChangeInstructionIndicator(value.orElse(null));
 		}
 	};
 

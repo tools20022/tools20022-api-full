@@ -51,11 +51,15 @@ public class ConstraintNotificationAdviceStatusRule {
 	 */
 	public static final MMConstraint<AgentCANotificationStatusAdviceV01> forAgentCANotificationStatusAdviceV01 = new MMConstraint<AgentCANotificationStatusAdviceV01>() {
 		{
-			validator = ConstraintNotificationAdviceStatusRule::checkAgentCANotificationStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationAdviceStatusRule";
 			definition = "If AgentCANotificationAdviceIdentification is present then NotificationAdviceStatus must be present.";
 			owner_lazy = () -> AgentCANotificationStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCANotificationStatusAdviceV01 obj) throws Exception {
+			checkAgentCANotificationStatusAdviceV01(obj);
 		}
 	};
 

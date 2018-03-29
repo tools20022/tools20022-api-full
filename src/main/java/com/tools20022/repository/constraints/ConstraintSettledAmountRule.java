@@ -61,13 +61,17 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV08> forSecuritiesSettlementTransactionConfirmationV08 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV08>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionConfirmationV07;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV08.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV08(obj);
 		}
 	};
 	/**
@@ -102,13 +106,17 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV08> forSecuritiesFinancingConfirmationV08 = new MMConstraint<SecuritiesFinancingConfirmationV08>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesFinancingConfirmationV07;
 			owner_lazy = () -> SecuritiesFinancingConfirmationV08.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV08 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV08(obj);
 		}
 	};
 	/**
@@ -144,13 +152,134 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV07> forSecuritiesSettlementTransactionReversalAdviceV07 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV07>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionReversalAdviceV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV07(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08
+	 * SecuritiesFinancingConfirmation002V08}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SettledAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/TransactionIdentificationDetails/Payment&lt;/leftOperand&gt;&lt;rightOperand&gt;AgainstPaymentSettlement&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettledAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the instruction is against payment, then SettledAmount must be present.\n."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingConfirmation002V08> forSecuritiesFinancingConfirmation002V08 = new MMConstraint<SecuritiesFinancingConfirmation002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettledAmountRule";
+			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
+			owner_lazy = () -> SecuritiesFinancingConfirmation002V08.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmation002V08 obj) throws Exception {
+			checkSecuritiesFinancingConfirmation002V08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V08
+	 * SecuritiesSettlementTransactionConfirmation002V08}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SettledAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/TransactionIdentificationDetails/Payment&lt;/leftOperand&gt;&lt;rightOperand&gt;AgainstPaymentSettlement&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettledAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the instruction is against payment, then SettledAmount must be present.\n."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V08> forSecuritiesSettlementTransactionConfirmation002V08 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettledAmountRule";
+			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
+			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V08.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmation002V08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmation002V08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V07
+	 * SecuritiesSettlementTransactionReversalAdvice002V07}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/SettledAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/TransactionIdentificationDetails/Payment&lt;/leftOperand&gt;&lt;rightOperand&gt;AgainstPaymentSettlement&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettledAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the instruction is against payment, then SettledAmount must be present.\n."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdvice002V07> forSecuritiesSettlementTransactionReversalAdvice002V07 = new MMConstraint<SecuritiesSettlementTransactionReversalAdvice002V07>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettledAmountRule";
+			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
+			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdvice002V07.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdvice002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdvice002V07(obj);
 		}
 	};
 	/**
@@ -195,7 +324,6 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV07> forSecuritiesSettlementTransactionConfirmationV07 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV07>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
@@ -203,6 +331,11 @@ public class ConstraintSettledAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionConfirmationV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV07(obj);
 		}
 	};
 	/**
@@ -247,7 +380,6 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV06> forSecuritiesSettlementTransactionReversalAdviceV06 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV06>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
@@ -255,6 +387,11 @@ public class ConstraintSettledAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionReversalAdviceV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV06(obj);
 		}
 	};
 	/**
@@ -297,7 +434,6 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV07> forSecuritiesFinancingConfirmationV07 = new MMConstraint<SecuritiesFinancingConfirmationV07>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
@@ -305,6 +441,11 @@ public class ConstraintSettledAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesFinancingConfirmationV06;
 			owner_lazy = () -> SecuritiesFinancingConfirmationV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV07 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV07(obj);
 		}
 	};
 	/**
@@ -334,12 +475,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmation002V07> forSecuritiesFinancingConfirmation002V07 = new MMConstraint<SecuritiesFinancingConfirmation002V07>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmation002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesFinancingConfirmation002V07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmation002V07 obj) throws Exception {
+			checkSecuritiesFinancingConfirmation002V07(obj);
 		}
 	};
 	/**
@@ -369,12 +514,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V07> forSecuritiesSettlementTransactionConfirmation002V07 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V07>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmation002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmation002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmation002V07(obj);
 		}
 	};
 	/**
@@ -404,12 +553,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdvice002V06> forSecuritiesSettlementTransactionReversalAdvice002V06 = new MMConstraint<SecuritiesSettlementTransactionReversalAdvice002V06>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionReversalAdvice002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdvice002V06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdvice002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdvice002V06(obj);
 		}
 	};
 	/**
@@ -439,12 +592,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV01> forSecuritiesFinancingConfirmationV01 = new MMConstraint<SecuritiesFinancingConfirmationV01>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV01 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV01(obj);
 		}
 	};
 	/**
@@ -474,12 +631,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV02> forSecuritiesFinancingConfirmationV02 = new MMConstraint<SecuritiesFinancingConfirmationV02>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV02.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV02 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV02(obj);
 		}
 	};
 	/**
@@ -509,12 +670,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV03> forSecuritiesFinancingConfirmationV03 = new MMConstraint<SecuritiesFinancingConfirmationV03>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV03 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV03(obj);
 		}
 	};
 	/**
@@ -552,13 +717,17 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV04> forSecuritiesFinancingConfirmationV04 = new MMConstraint<SecuritiesFinancingConfirmationV04>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesFinancingConfirmationV05);
 			owner_lazy = () -> SecuritiesFinancingConfirmationV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV04 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV04(obj);
 		}
 	};
 	/**
@@ -588,12 +757,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV01> forSecuritiesSettlementTransactionConfirmationV01 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV01>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV01(obj);
 		}
 	};
 	/**
@@ -623,12 +796,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV02> forSecuritiesSettlementTransactionConfirmationV02 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV02>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV02.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV02(obj);
 		}
 	};
 	/**
@@ -658,12 +835,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV03> forSecuritiesSettlementTransactionConfirmationV03 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV03>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV03(obj);
 		}
 	};
 	/**
@@ -702,13 +883,17 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV04> forSecuritiesSettlementTransactionConfirmationV04 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV04>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionConfirmationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV04(obj);
 		}
 	};
 	/**
@@ -738,12 +923,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV01> forSecuritiesSettlementTransactionReversalAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV01>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV01(obj);
 		}
 	};
 	/**
@@ -773,12 +962,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV02> forSecuritiesSettlementTransactionReversalAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV02>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV02.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV02(obj);
 		}
 	};
 	/**
@@ -817,13 +1010,17 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV03> forSecuritiesSettlementTransactionReversalAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV03>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionReversalAdviceV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV03(obj);
 		}
 	};
 	/**
@@ -866,7 +1063,6 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV05> forSecuritiesFinancingConfirmationV05 = new MMConstraint<SecuritiesFinancingConfirmationV05>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
@@ -874,6 +1070,11 @@ public class ConstraintSettledAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesFinancingConfirmationV04;
 			owner_lazy = () -> SecuritiesFinancingConfirmationV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV05 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV05(obj);
 		}
 	};
 	/**
@@ -918,7 +1119,6 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV04> forSecuritiesSettlementTransactionReversalAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV04>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
@@ -926,6 +1126,11 @@ public class ConstraintSettledAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionReversalAdviceV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV04(obj);
 		}
 	};
 	/**
@@ -970,7 +1175,6 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV05> forSecuritiesSettlementTransactionConfirmationV05 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV05>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
@@ -978,6 +1182,11 @@ public class ConstraintSettledAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionConfirmationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV05(obj);
 		}
 	};
 	/**
@@ -1022,7 +1231,6 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV06> forSecuritiesSettlementTransactionConfirmationV06 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV06>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
@@ -1030,6 +1238,11 @@ public class ConstraintSettledAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionConfirmationV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV06(obj);
 		}
 	};
 	/**
@@ -1074,7 +1287,6 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV05> forSecuritiesSettlementTransactionReversalAdviceV05 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV05>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionReversalAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
@@ -1082,6 +1294,11 @@ public class ConstraintSettledAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesSettlementTransactionReversalAdviceV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV05(obj);
 		}
 	};
 	/**
@@ -1124,7 +1341,6 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV06> forSecuritiesFinancingConfirmationV06 = new MMConstraint<SecuritiesFinancingConfirmationV06>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
@@ -1132,6 +1348,11 @@ public class ConstraintSettledAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettledAmountRule.forSecuritiesFinancingConfirmationV05;
 			owner_lazy = () -> SecuritiesFinancingConfirmationV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV06 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV06(obj);
 		}
 	};
 	/**
@@ -1161,12 +1382,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdvice002V05> forSecuritiesSettlementTransactionReversalAdvice002V05 = new MMConstraint<SecuritiesSettlementTransactionReversalAdvice002V05>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionReversalAdvice002V05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdvice002V05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdvice002V05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdvice002V05(obj);
 		}
 	};
 	/**
@@ -1196,12 +1421,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V06> forSecuritiesSettlementTransactionConfirmation002V06 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V06>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesSettlementTransactionConfirmation002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmation002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmation002V06(obj);
 		}
 	};
 	/**
@@ -1231,12 +1460,16 @@ public class ConstraintSettledAmountRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmation002V06> forSecuritiesFinancingConfirmation002V06 = new MMConstraint<SecuritiesFinancingConfirmation002V06>() {
 		{
-			validator = ConstraintSettledAmountRule::checkSecuritiesFinancingConfirmation002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmountRule";
 			definition = "If the instruction is against payment, then SettledAmount must be present.\n.";
 			owner_lazy = () -> SecuritiesFinancingConfirmation002V06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SettledAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/Payment</leftOperand><rightOperand>AgainstPaymentSettlement</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmation002V06 obj) throws Exception {
+			checkSecuritiesFinancingConfirmation002V06(obj);
 		}
 	};
 
@@ -1261,6 +1494,30 @@ public class ConstraintSettledAmountRule {
 	 * present. .
 	 */
 	public static void checkSecuritiesSettlementTransactionReversalAdviceV07(SecuritiesSettlementTransactionReversalAdviceV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the instruction is against payment, then SettledAmount must be
+	 * present. .
+	 */
+	public static void checkSecuritiesFinancingConfirmation002V08(SecuritiesFinancingConfirmation002V08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the instruction is against payment, then SettledAmount must be
+	 * present. .
+	 */
+	public static void checkSecuritiesSettlementTransactionConfirmation002V08(SecuritiesSettlementTransactionConfirmation002V08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the instruction is against payment, then SettledAmount must be
+	 * present. .
+	 */
+	public static void checkSecuritiesSettlementTransactionReversalAdvice002V07(SecuritiesSettlementTransactionReversalAdvice002V07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

@@ -120,7 +120,7 @@ public class InvestmentFundsOrderBreakdown2 {
 	 * InvestmentFundsOrderBreakdown1.mmOrderBreakdownType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderBreakdownType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundsOrderBreakdown2, OrderBreakdownType1Choice> mmOrderBreakdownType = new MMMessageAttribute<InvestmentFundsOrderBreakdown2, OrderBreakdownType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundsOrderBreakdown2.mmObject();
@@ -133,6 +133,16 @@ public class InvestmentFundsOrderBreakdown2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OrderBreakdownType1Choice.mmObject();
+		}
+
+		@Override
+		public OrderBreakdownType1Choice getValue(InvestmentFundsOrderBreakdown2 obj) {
+			return obj.getOrderBreakdownType();
+		}
+
+		@Override
+		public void setValue(InvestmentFundsOrderBreakdown2 obj, OrderBreakdownType1Choice value) {
+			obj.setOrderBreakdownType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -176,7 +186,7 @@ public class InvestmentFundsOrderBreakdown2 {
 	 * InvestmentFundsOrderBreakdown1.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundsOrderBreakdown2, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<InvestmentFundsOrderBreakdown2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundsOrderBreakdown2.mmObject();
@@ -189,6 +199,16 @@ public class InvestmentFundsOrderBreakdown2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InvestmentFundsOrderBreakdown2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(InvestmentFundsOrderBreakdown2 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

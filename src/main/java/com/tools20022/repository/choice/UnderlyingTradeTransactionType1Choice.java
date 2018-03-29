@@ -108,7 +108,7 @@ public class UnderlyingTradeTransactionType1Choice {
 	 * definition} = "Type of commercial contract.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingTradeTransactionType1Choice, ExternalUnderlyingTradeTransactionType1Code> mmCode = new MMMessageAttribute<UnderlyingTradeTransactionType1Choice, ExternalUnderlyingTradeTransactionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice.mmObject();
@@ -120,6 +120,16 @@ public class UnderlyingTradeTransactionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUnderlyingTradeTransactionType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalUnderlyingTradeTransactionType1Code getValue(UnderlyingTradeTransactionType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnderlyingTradeTransactionType1Choice obj, ExternalUnderlyingTradeTransactionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class UnderlyingTradeTransactionType1Choice {
 	 * "Type of commercial contract expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTradeTransactionType1Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<UnderlyingTradeTransactionType1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnderlyingTradeTransactionType1Choice.mmObject();
@@ -169,6 +179,16 @@ public class UnderlyingTradeTransactionType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(UnderlyingTradeTransactionType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnderlyingTradeTransactionType1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

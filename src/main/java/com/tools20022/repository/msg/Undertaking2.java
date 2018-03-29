@@ -29,6 +29,10 @@ import com.tools20022.repository.entity.ModelForm;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.entity.UndertakingBeneficiary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExpiryDetails2;
+import com.tools20022.repository.msg.GovernanceRules1;
+import com.tools20022.repository.msg.PartyIdentification43;
+import com.tools20022.repository.msg.UndertakingAmount1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +133,7 @@ public class Undertaking2 {
 	 * definition} = "Undertaking name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking2, Optional<UndertakingName1Code>> mmName = new MMMessageAttribute<Undertaking2, Optional<UndertakingName1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmUndertakingName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking2.mmObject();
@@ -141,6 +145,16 @@ public class Undertaking2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UndertakingName1Code.mmObject();
+		}
+
+		@Override
+		public Optional<UndertakingName1Code> getValue(Undertaking2 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(Undertaking2 obj, Optional<UndertakingName1Code> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Bnfcry")
@@ -175,7 +189,7 @@ public class Undertaking2 {
 	 * definition} = "Party in whose favour the counter-undertaking is issued."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficiary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Undertaking2, Optional<PartyIdentification43>> mmBeneficiary = new MMMessageAssociationEnd<Undertaking2, Optional<PartyIdentification43>>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingBeneficiary.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking2.mmObject();
@@ -187,7 +201,17 @@ public class Undertaking2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(Undertaking2 obj) {
+			return obj.getBeneficiary();
+		}
+
+		@Override
+		public void setValue(Undertaking2 obj, Optional<PartyIdentification43> value) {
+			obj.setBeneficiary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDtls")
@@ -223,7 +247,7 @@ public class Undertaking2 {
 	 * "Details related to the expiry terms of the counter-undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExpiryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Undertaking2, Optional<ExpiryDetails2>> mmExpiryDetails = new MMMessageAssociationEnd<Undertaking2, Optional<ExpiryDetails2>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmExpiry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking2.mmObject();
@@ -235,7 +259,17 @@ public class Undertaking2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExpiryDetails2.mmObject();
+			type_lazy = () -> ExpiryDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<ExpiryDetails2> getValue(Undertaking2 obj) {
+			return obj.getExpiryDetails();
+		}
+
+		@Override
+		public void setValue(Undertaking2 obj, Optional<ExpiryDetails2> value) {
+			obj.setExpiryDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CntrUdrtkgAmt")
@@ -271,7 +305,7 @@ public class Undertaking2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterUndertakingAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Undertaking2, Optional<UndertakingAmount1>> mmCounterUndertakingAmount = new MMMessageAssociationEnd<Undertaking2, Optional<UndertakingAmount1>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmUndertakingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking2.mmObject();
@@ -283,7 +317,17 @@ public class Undertaking2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmount1.mmObject();
+			type_lazy = () -> UndertakingAmount1.mmObject();
+		}
+
+		@Override
+		public Optional<UndertakingAmount1> getValue(Undertaking2 obj) {
+			return obj.getCounterUndertakingAmount();
+		}
+
+		@Override
+		public void setValue(Undertaking2 obj, Optional<UndertakingAmount1> value) {
+			obj.setCounterUndertakingAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConfChrgsPyblBy")
@@ -322,7 +366,7 @@ public class Undertaking2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmationChargesPayableBy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking2, Optional<ExternalTypeOfParty1Code>> mmConfirmationChargesPayableBy = new MMMessageAttribute<Undertaking2, Optional<ExternalTypeOfParty1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmRelatedChargesPayableBy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking2.mmObject();
@@ -334,6 +378,16 @@ public class Undertaking2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalTypeOfParty1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExternalTypeOfParty1Code> getValue(Undertaking2 obj) {
+			return obj.getConfirmationChargesPayableBy();
+		}
+
+		@Override
+		public void setValue(Undertaking2 obj, Optional<ExternalTypeOfParty1Code> value) {
+			obj.setConfirmationChargesPayableBy(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GovncRulesAndLaw")
@@ -368,7 +422,7 @@ public class Undertaking2 {
 	 * definition} = "Rules and laws governing the counter-undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGovernanceRulesAndLaw = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Undertaking2, Optional<GovernanceRules1>> mmGovernanceRulesAndLaw = new MMMessageAssociationEnd<Undertaking2, Optional<GovernanceRules1>>() {
 		{
 			businessElementTrace_lazy = () -> ModelForm.mmGovernanceRules;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking2.mmObject();
@@ -380,7 +434,17 @@ public class Undertaking2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GovernanceRules1.mmObject();
+			type_lazy = () -> GovernanceRules1.mmObject();
+		}
+
+		@Override
+		public Optional<GovernanceRules1> getValue(Undertaking2 obj) {
+			return obj.getGovernanceRulesAndLaw();
+		}
+
+		@Override
+		public void setValue(Undertaking2 obj, Optional<GovernanceRules1> value) {
+			obj.setGovernanceRulesAndLaw(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StdClmDocInd")
@@ -419,7 +483,7 @@ public class Undertaking2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandardClaimDocumentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking2, Optional<YesNoIndicator>> mmStandardClaimDocumentIndicator = new MMMessageAttribute<Undertaking2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmStandardClaimDocumentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking2.mmObject();
@@ -431,6 +495,16 @@ public class Undertaking2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Undertaking2 obj) {
+			return obj.getStandardClaimDocumentIndicator();
+		}
+
+		@Override
+		public void setValue(Undertaking2 obj, Optional<YesNoIndicator> value) {
+			obj.setStandardClaimDocumentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -462,7 +536,7 @@ public class Undertaking2 {
 	 * "Additional information related to the counter-undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Undertaking2, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<Undertaking2, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking2.mmObject();
 			isDerived = false;
@@ -473,6 +547,16 @@ public class Undertaking2 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(Undertaking2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(Undertaking2 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -505,7 +589,7 @@ public class Undertaking2 {
 		return beneficiary == null ? Optional.empty() : Optional.of(beneficiary);
 	}
 
-	public Undertaking2 setBeneficiary(com.tools20022.repository.msg.PartyIdentification43 beneficiary) {
+	public Undertaking2 setBeneficiary(PartyIdentification43 beneficiary) {
 		this.beneficiary = beneficiary;
 		return this;
 	}
@@ -514,7 +598,7 @@ public class Undertaking2 {
 		return expiryDetails == null ? Optional.empty() : Optional.of(expiryDetails);
 	}
 
-	public Undertaking2 setExpiryDetails(com.tools20022.repository.msg.ExpiryDetails2 expiryDetails) {
+	public Undertaking2 setExpiryDetails(ExpiryDetails2 expiryDetails) {
 		this.expiryDetails = expiryDetails;
 		return this;
 	}
@@ -523,7 +607,7 @@ public class Undertaking2 {
 		return counterUndertakingAmount == null ? Optional.empty() : Optional.of(counterUndertakingAmount);
 	}
 
-	public Undertaking2 setCounterUndertakingAmount(com.tools20022.repository.msg.UndertakingAmount1 counterUndertakingAmount) {
+	public Undertaking2 setCounterUndertakingAmount(UndertakingAmount1 counterUndertakingAmount) {
 		this.counterUndertakingAmount = counterUndertakingAmount;
 		return this;
 	}
@@ -541,7 +625,7 @@ public class Undertaking2 {
 		return governanceRulesAndLaw == null ? Optional.empty() : Optional.of(governanceRulesAndLaw);
 	}
 
-	public Undertaking2 setGovernanceRulesAndLaw(com.tools20022.repository.msg.GovernanceRules1 governanceRulesAndLaw) {
+	public Undertaking2 setGovernanceRulesAndLaw(GovernanceRules1 governanceRulesAndLaw) {
 		this.governanceRulesAndLaw = governanceRulesAndLaw;
 		return this;
 	}

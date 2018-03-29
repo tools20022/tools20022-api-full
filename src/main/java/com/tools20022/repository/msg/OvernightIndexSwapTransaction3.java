@@ -31,6 +31,8 @@ import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Rate2;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -161,7 +163,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportedTransactionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwapTransaction3, TransactionOperationType1Code> mmReportedTransactionStatus = new MMMessageAttribute<OvernightIndexSwapTransaction3, TransactionOperationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
 			isDerived = false;
@@ -173,6 +175,16 @@ public class OvernightIndexSwapTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionOperationType1Code.mmObject();
+		}
+
+		@Override
+		public TransactionOperationType1Code getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getReportedTransactionStatus();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, TransactionOperationType1Code value) {
+			obj.setReportedTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "BrnchId")
@@ -220,7 +232,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBranchIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwapTransaction3, Optional<LEIIdentifier>> mmBranchIdentification = new MMMessageAttribute<OvernightIndexSwapTransaction3, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -233,6 +245,16 @@ public class OvernightIndexSwapTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getBranchIdentification();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, Optional<LEIIdentifier> value) {
+			obj.setBranchIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnqTxIdr")
@@ -279,7 +301,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwapTransaction3, Optional<Max105Text>> mmUniqueTransactionIdentifier = new MMMessageAttribute<OvernightIndexSwapTransaction3, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -292,6 +314,16 @@ public class OvernightIndexSwapTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, Optional<Max105Text> value) {
+			obj.setUniqueTransactionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryTxId", required = true)
@@ -338,7 +370,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwapTransaction3, Max105Text> mmProprietaryTransactionIdentification = new MMMessageAttribute<OvernightIndexSwapTransaction3, Max105Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -351,6 +383,16 @@ public class OvernightIndexSwapTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Max105Text getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getProprietaryTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, Max105Text value) {
+			obj.setProprietaryTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyPrtryTxId")
@@ -398,7 +440,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwapTransaction3, Optional<Max105Text>> mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute<OvernightIndexSwapTransaction3, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -411,6 +453,16 @@ public class OvernightIndexSwapTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getCounterpartyProprietaryTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, Optional<Max105Text> value) {
+			obj.setCounterpartyProprietaryTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyId", required = true)
@@ -457,7 +509,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OvernightIndexSwapTransaction3, CounterpartyIdentification2Choice> mmCounterpartyIdentification = new MMMessageAssociationEnd<OvernightIndexSwapTransaction3, CounterpartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> CounterpartyRisk.mmParty;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -471,6 +523,16 @@ public class OvernightIndexSwapTransaction3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CounterpartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public CounterpartyIdentification2Choice getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, CounterpartyIdentification2Choice value) {
+			obj.setCounterpartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradDt", required = true)
@@ -517,7 +579,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OvernightIndexSwapTransaction3, DateAndDateTimeChoice> mmTradeDate = new MMMessageAssociationEnd<OvernightIndexSwapTransaction3, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -531,6 +593,16 @@ public class OvernightIndexSwapTransaction3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, DateAndDateTimeChoice value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "StartDt", required = true)
@@ -577,7 +649,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwapTransaction3, ISODate> mmStartDate = new MMMessageAttribute<OvernightIndexSwapTransaction3, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmStartDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -590,6 +662,16 @@ public class OvernightIndexSwapTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, ISODate value) {
+			obj.setStartDate(value);
 		}
 	};
 	@XmlElement(name = "MtrtyDt", required = true)
@@ -636,7 +718,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwapTransaction3, ISODate> mmMaturityDate = new MMMessageAttribute<OvernightIndexSwapTransaction3, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -649,6 +731,16 @@ public class OvernightIndexSwapTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, ISODate value) {
+			obj.setMaturityDate(value);
 		}
 	};
 	@XmlElement(name = "FxdIntrstRate", required = true)
@@ -693,7 +785,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFixedInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OvernightIndexSwapTransaction3, Rate2> mmFixedInterestRate = new MMMessageAssociationEnd<OvernightIndexSwapTransaction3, Rate2>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -706,7 +798,17 @@ public class OvernightIndexSwapTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
+			type_lazy = () -> Rate2.mmObject();
+		}
+
+		@Override
+		public Rate2 getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getFixedInterestRate();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, Rate2 value) {
+			obj.setFixedInterestRate(value);
 		}
 	};
 	@XmlElement(name = "TxTp", required = true)
@@ -754,7 +856,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwapTransaction3, OvernightIndexSwapType1Code> mmTransactionType = new MMMessageAttribute<OvernightIndexSwapTransaction3, OvernightIndexSwapType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -767,6 +869,16 @@ public class OvernightIndexSwapTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OvernightIndexSwapType1Code.mmObject();
+		}
+
+		@Override
+		public OvernightIndexSwapType1Code getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, OvernightIndexSwapType1Code value) {
+			obj.setTransactionType(value);
 		}
 	};
 	@XmlElement(name = "TxNmnlAmt", required = true)
@@ -812,7 +924,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionNominalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OvernightIndexSwapTransaction3, ActiveCurrencyAndAmount> mmTransactionNominalAmount = new MMMessageAttribute<OvernightIndexSwapTransaction3, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
@@ -826,9 +938,19 @@ public class OvernightIndexSwapTransaction3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getTransactionNominalAmount();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, ActiveCurrencyAndAmount value) {
+			obj.setTransactionNominalAmount(value);
+		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -865,7 +987,7 @@ public class OvernightIndexSwapTransaction3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OvernightIndexSwapTransaction3, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<OvernightIndexSwapTransaction3, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OvernightIndexSwapTransaction3.mmObject();
 			isDerived = false;
@@ -876,7 +998,17 @@ public class OvernightIndexSwapTransaction3 {
 			nextVersions_lazy = () -> Arrays.asList(OvernightIndexSwapTransaction4.mmSupplementaryData);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(OvernightIndexSwapTransaction3 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(OvernightIndexSwapTransaction3 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -986,7 +1118,7 @@ public class OvernightIndexSwapTransaction3 {
 		return fixedInterestRate;
 	}
 
-	public OvernightIndexSwapTransaction3 setFixedInterestRate(com.tools20022.repository.msg.Rate2 fixedInterestRate) {
+	public OvernightIndexSwapTransaction3 setFixedInterestRate(Rate2 fixedInterestRate) {
 		this.fixedInterestRate = Objects.requireNonNull(fixedInterestRate);
 		return this;
 	}
@@ -1013,7 +1145,7 @@ public class OvernightIndexSwapTransaction3 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public OvernightIndexSwapTransaction3 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public OvernightIndexSwapTransaction3 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

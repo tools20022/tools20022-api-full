@@ -144,7 +144,7 @@ public class CancellationReason19Choice {
 	 * CancellationReason12Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason19Choice, CancelledStatusReason13Code> mmCode = new MMMessageAttribute<CancellationReason19Choice, CancelledStatusReason13Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason19Choice.mmObject();
@@ -159,6 +159,16 @@ public class CancellationReason19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason13Code.mmObject();
+		}
+
+		@Override
+		public CancelledStatusReason13Code getValue(CancellationReason19Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationReason19Choice obj, CancelledStatusReason13Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -217,7 +227,7 @@ public class CancellationReason19Choice {
 	 * CancellationReason12Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason19Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<CancellationReason19Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason19Choice.mmObject();
@@ -232,6 +242,16 @@ public class CancellationReason19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CancellationReason19Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CancellationReason19Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

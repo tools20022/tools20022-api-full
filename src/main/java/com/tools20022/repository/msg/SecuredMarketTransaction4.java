@@ -27,6 +27,9 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Collateral18;
+import com.tools20022.repository.msg.FloatingRateNote2;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -184,7 +187,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmReportedTransactionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportedTransactionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, TransactionOperationType1Code> mmReportedTransactionStatus = new MMMessageAttribute<SecuredMarketTransaction4, TransactionOperationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
 			isDerived = false;
@@ -196,6 +199,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionOperationType1Code.mmObject();
+		}
+
+		@Override
+		public TransactionOperationType1Code getValue(SecuredMarketTransaction4 obj) {
+			return obj.getReportedTransactionStatus();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, TransactionOperationType1Code value) {
+			obj.setReportedTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "NvtnSts")
@@ -233,7 +246,7 @@ public class SecuredMarketTransaction4 {
 	 * definition} = "Provides the novation status for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNovationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, Optional<NovationStatus1Code>> mmNovationStatus = new MMMessageAttribute<SecuredMarketTransaction4, Optional<NovationStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Novation.mmNovationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -245,6 +258,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NovationStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<NovationStatus1Code> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getNovationStatus();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Optional<NovationStatus1Code> value) {
+			obj.setNovationStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrnchId")
@@ -289,7 +312,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmBranchIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBranchIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, Optional<LEIIdentifier>> mmBranchIdentification = new MMMessageAttribute<SecuredMarketTransaction4, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -302,6 +325,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getBranchIdentification();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Optional<LEIIdentifier> value) {
+			obj.setBranchIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnqTxIdr")
@@ -345,7 +378,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, Optional<Max105Text>> mmUniqueTransactionIdentifier = new MMMessageAttribute<SecuredMarketTransaction4, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -358,6 +391,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Optional<Max105Text> value) {
+			obj.setUniqueTransactionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryTxId", required = true)
@@ -401,7 +444,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmProprietaryTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, Max105Text> mmProprietaryTransactionIdentification = new MMMessageAttribute<SecuredMarketTransaction4, Max105Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -414,6 +457,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Max105Text getValue(SecuredMarketTransaction4 obj) {
+			return obj.getProprietaryTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Max105Text value) {
+			obj.setProprietaryTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdPrtryTxId")
@@ -452,7 +505,7 @@ public class SecuredMarketTransaction4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, Optional<Max105Text>> mmRelatedProprietaryTransactionIdentification = new MMMessageAttribute<SecuredMarketTransaction4, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -464,6 +517,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getRelatedProprietaryTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Optional<Max105Text> value) {
+			obj.setRelatedProprietaryTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyPrtryTxId")
@@ -508,7 +571,7 @@ public class SecuredMarketTransaction4 {
 	 * mmCounterpartyProprietaryTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, Optional<Max105Text>> mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute<SecuredMarketTransaction4, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -521,6 +584,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getCounterpartyProprietaryTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Optional<Max105Text> value) {
+			obj.setCounterpartyProprietaryTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyId", required = true)
@@ -559,7 +632,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmCounterpartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredMarketTransaction4, CounterpartyIdentification3Choice> mmCounterpartyIdentification = new MMMessageAssociationEnd<SecuredMarketTransaction4, CounterpartyIdentification3Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
 			isDerived = false;
@@ -572,6 +645,16 @@ public class SecuredMarketTransaction4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CounterpartyIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public CounterpartyIdentification3Choice getValue(SecuredMarketTransaction4 obj) {
+			return obj.getCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, CounterpartyIdentification3Choice value) {
+			obj.setCounterpartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "TrptyAgtId")
@@ -616,7 +699,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmTripartyAgentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTripartyAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, Optional<LEIIdentifier>> mmTripartyAgentIdentification = new MMMessageAttribute<SecuredMarketTransaction4, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -629,6 +712,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getTripartyAgentIdentification();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Optional<LEIIdentifier> value) {
+			obj.setTripartyAgentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDt", required = true)
@@ -672,7 +765,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredMarketTransaction4, DateAndDateTimeChoice> mmTradeDate = new MMMessageAssociationEnd<SecuredMarketTransaction4, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -686,6 +779,16 @@ public class SecuredMarketTransaction4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(SecuredMarketTransaction4 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, DateAndDateTimeChoice value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -729,7 +832,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, ISODate> mmSettlementDate = new MMMessageAttribute<SecuredMarketTransaction4, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -742,6 +845,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SecuredMarketTransaction4 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, ISODate value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "MtrtyDt", required = true)
@@ -785,7 +898,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmMaturityDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, ISODate> mmMaturityDate = new MMMessageAttribute<SecuredMarketTransaction4, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -798,6 +911,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SecuredMarketTransaction4 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, ISODate value) {
+			obj.setMaturityDate(value);
 		}
 	};
 	@XmlElement(name = "TxTp", required = true)
@@ -842,7 +965,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, MoneyMarketTransactionType1Code> mmTransactionType = new MMMessageAttribute<SecuredMarketTransaction4, MoneyMarketTransactionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -855,6 +978,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MoneyMarketTransactionType1Code.mmObject();
+		}
+
+		@Override
+		public MoneyMarketTransactionType1Code getValue(SecuredMarketTransaction4 obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, MoneyMarketTransactionType1Code value) {
+			obj.setTransactionType(value);
 		}
 	};
 	@XmlElement(name = "TxNmnlAmt", required = true)
@@ -899,7 +1032,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmTransactionNominalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionNominalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, ActiveCurrencyAndAmount> mmTransactionNominalAmount = new MMMessageAttribute<SecuredMarketTransaction4, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -912,6 +1045,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(SecuredMarketTransaction4 obj) {
+			return obj.getTransactionNominalAmount();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, ActiveCurrencyAndAmount value) {
+			obj.setTransactionNominalAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTp", required = true)
@@ -956,7 +1099,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmRateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, InterestRateType1Code> mmRateType = new MMMessageAttribute<SecuredMarketTransaction4, InterestRateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmTypeOfInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -969,6 +1112,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestRateType1Code.mmObject();
+		}
+
+		@Override
+		public InterestRateType1Code getValue(SecuredMarketTransaction4 obj) {
+			return obj.getRateType();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, InterestRateType1Code value) {
+			obj.setRateType(value);
 		}
 	};
 	@XmlElement(name = "DealRate")
@@ -1013,7 +1166,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmDealRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, Optional<PercentageRate>> mmDealRate = new MMMessageAttribute<SecuredMarketTransaction4, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -1026,6 +1179,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getDealRate();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Optional<PercentageRate> value) {
+			obj.setDealRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FltgRateRpAgrmt")
@@ -1068,7 +1231,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmFloatingRateRepurchaseAgreement}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFloatingRateRepurchaseAgreement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredMarketTransaction4, Optional<FloatingRateNote2>> mmFloatingRateRepurchaseAgreement = new MMMessageAssociationEnd<SecuredMarketTransaction4, Optional<FloatingRateNote2>>() {
 		{
 			businessComponentTrace_lazy = () -> RepurchaseAgreement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -1081,7 +1244,17 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FloatingRateNote2.mmObject();
+			type_lazy = () -> FloatingRateNote2.mmObject();
+		}
+
+		@Override
+		public Optional<FloatingRateNote2> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getFloatingRateRepurchaseAgreement();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Optional<FloatingRateNote2> value) {
+			obj.setFloatingRateRepurchaseAgreement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrkrdDeal")
@@ -1121,7 +1294,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmBrokeredDeal}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBrokeredDeal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuredMarketTransaction4, Optional<BrokeredDeal1Code>> mmBrokeredDeal = new MMMessageAttribute<SecuredMarketTransaction4, Optional<BrokeredDeal1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
 			isDerived = false;
@@ -1133,6 +1306,16 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BrokeredDeal1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BrokeredDeal1Code> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getBrokeredDeal();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Optional<BrokeredDeal1Code> value) {
+			obj.setBrokeredDeal(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Coll", required = true)
@@ -1173,7 +1356,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredMarketTransaction4, Collateral18> mmCollateral = new MMMessageAssociationEnd<SecuredMarketTransaction4, Collateral18>() {
 		{
 			businessElementTrace_lazy = () -> CollateralManagement.mmCollateral;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
@@ -1186,11 +1369,21 @@ public class SecuredMarketTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Collateral18.mmObject();
+			type_lazy = () -> Collateral18.mmObject();
+		}
+
+		@Override
+		public Collateral18 getValue(SecuredMarketTransaction4 obj) {
+			return obj.getCollateral();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, Collateral18 value) {
+			obj.setCollateral(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -1224,7 +1417,7 @@ public class SecuredMarketTransaction4 {
 	 * SecuredMarketTransaction3.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuredMarketTransaction4, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<SecuredMarketTransaction4, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuredMarketTransaction4.mmObject();
 			isDerived = false;
@@ -1235,7 +1428,17 @@ public class SecuredMarketTransaction4 {
 			previousVersion_lazy = () -> SecuredMarketTransaction3.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(SecuredMarketTransaction4 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuredMarketTransaction4 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -1413,7 +1616,7 @@ public class SecuredMarketTransaction4 {
 		return floatingRateRepurchaseAgreement == null ? Optional.empty() : Optional.of(floatingRateRepurchaseAgreement);
 	}
 
-	public SecuredMarketTransaction4 setFloatingRateRepurchaseAgreement(com.tools20022.repository.msg.FloatingRateNote2 floatingRateRepurchaseAgreement) {
+	public SecuredMarketTransaction4 setFloatingRateRepurchaseAgreement(FloatingRateNote2 floatingRateRepurchaseAgreement) {
 		this.floatingRateRepurchaseAgreement = floatingRateRepurchaseAgreement;
 		return this;
 	}
@@ -1431,7 +1634,7 @@ public class SecuredMarketTransaction4 {
 		return collateral;
 	}
 
-	public SecuredMarketTransaction4 setCollateral(com.tools20022.repository.msg.Collateral18 collateral) {
+	public SecuredMarketTransaction4 setCollateral(Collateral18 collateral) {
 		this.collateral = Objects.requireNonNull(collateral);
 		return this;
 	}
@@ -1440,7 +1643,7 @@ public class SecuredMarketTransaction4 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public SecuredMarketTransaction4 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public SecuredMarketTransaction4 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

@@ -22,7 +22,9 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InitialMarginExposure1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -51,6 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * InitialMarginRequirement1.mmCredit}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.MarginCall MarginCall}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -74,7 +78,7 @@ public class InitialMarginRequirement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "InitlMrgnXpsr", required = true)
-	protected List<com.tools20022.repository.msg.InitialMarginExposure1> initialMarginExposure;
+	protected List<InitialMarginExposure1> initialMarginExposure;
 	/**
 	 * 
 	 <p>
@@ -83,6 +87,10 @@ public class InitialMarginRequirement1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.InitialMarginExposure1
 	 * InitialMarginExposure1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.MarginCall MarginCall}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -103,8 +111,9 @@ public class InitialMarginRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitialMarginExposure = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InitialMarginRequirement1, List<InitialMarginExposure1>> mmInitialMarginExposure = new MMMessageAssociationEnd<InitialMarginRequirement1, List<InitialMarginExposure1>>() {
 		{
+			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InitialMarginRequirement1.mmObject();
 			isDerived = false;
 			xmlTag = "InitlMrgnXpsr";
@@ -113,7 +122,17 @@ public class InitialMarginRequirement1 {
 			definition = "Liability a clearing member has to a central counterparty with respect to potential future exposures.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InitialMarginExposure1.mmObject();
+			type_lazy = () -> InitialMarginExposure1.mmObject();
+		}
+
+		@Override
+		public List<InitialMarginExposure1> getValue(InitialMarginRequirement1 obj) {
+			return obj.getInitialMarginExposure();
+		}
+
+		@Override
+		public void setValue(InitialMarginRequirement1 obj, List<InitialMarginExposure1> value) {
+			obj.setInitialMarginExposure(value);
 		}
 	};
 	@XmlElement(name = "Cdt", required = true)
@@ -128,6 +147,11 @@ public class InitialMarginRequirement1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.MarginCall#mmTotalMarginAmount
+	 * MarginCall.mmTotalMarginAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -148,8 +172,9 @@ public class InitialMarginRequirement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCredit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InitialMarginRequirement1, ActiveCurrencyAndAmount> mmCredit = new MMMessageAttribute<InitialMarginRequirement1, ActiveCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> MarginCall.mmTotalMarginAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InitialMarginRequirement1.mmObject();
 			isDerived = false;
 			xmlTag = "Cdt";
@@ -160,12 +185,23 @@ public class InitialMarginRequirement1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InitialMarginRequirement1 obj) {
+			return obj.getCredit();
+		}
+
+		@Override
+		public void setValue(InitialMarginRequirement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCredit(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InitialMarginRequirement1.mmInitialMarginExposure, com.tools20022.repository.msg.InitialMarginRequirement1.mmCredit);
+				trace_lazy = () -> MarginCall.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InitialMarginRequirement1";
@@ -179,7 +215,7 @@ public class InitialMarginRequirement1 {
 		return initialMarginExposure == null ? initialMarginExposure = new ArrayList<>() : initialMarginExposure;
 	}
 
-	public InitialMarginRequirement1 setInitialMarginExposure(List<com.tools20022.repository.msg.InitialMarginExposure1> initialMarginExposure) {
+	public InitialMarginRequirement1 setInitialMarginExposure(List<InitialMarginExposure1> initialMarginExposure) {
 		this.initialMarginExposure = Objects.requireNonNull(initialMarginExposure);
 		return this;
 	}

@@ -98,7 +98,7 @@ public class CompanyLink1Choice {
 	 * definition} = "Company link expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CompanyLink1Choice, CompanyLink1Code> mmCode = new MMMessageAttribute<CompanyLink1Choice, CompanyLink1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CompanyLink1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class CompanyLink1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CompanyLink1Code.mmObject();
+		}
+
+		@Override
+		public CompanyLink1Code getValue(CompanyLink1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CompanyLink1Choice obj, CompanyLink1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -140,7 +150,7 @@ public class CompanyLink1Choice {
 	 * definition} = "Company link expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CompanyLink1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<CompanyLink1Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CompanyLink1Choice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class CompanyLink1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CompanyLink1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CompanyLink1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

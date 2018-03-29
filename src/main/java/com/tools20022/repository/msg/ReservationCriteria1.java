@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReservationReturnCriteria;
+import com.tools20022.repository.msg.ReservationSearchCriteria1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -115,7 +117,7 @@ public class ReservationCriteria1 {
 	 * "Name of the query defined by the search criteria and return criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationCriteria1, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<ReservationCriteria1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationCriteria1.mmObject();
 			isDerived = false;
@@ -127,9 +129,19 @@ public class ReservationCriteria1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReservationCriteria1 obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(ReservationCriteria1 obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.ReservationSearchCriteria1> searchCriteria;
+	protected List<ReservationSearchCriteria1> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -162,7 +174,7 @@ public class ReservationCriteria1 {
 	 * "Defines the criteria to extract the reservation information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationCriteria1, List<ReservationSearchCriteria1>> mmSearchCriteria = new MMMessageAssociationEnd<ReservationCriteria1, List<ReservationSearchCriteria1>>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationCriteria1.mmObject();
@@ -173,7 +185,17 @@ public class ReservationCriteria1 {
 			definition = "Defines the criteria to extract the reservation information.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria1.mmObject();
+			type_lazy = () -> ReservationSearchCriteria1.mmObject();
+		}
+
+		@Override
+		public List<ReservationSearchCriteria1> getValue(ReservationCriteria1 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(ReservationCriteria1 obj, List<ReservationSearchCriteria1> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -205,7 +227,7 @@ public class ReservationCriteria1 {
 	 * definition} = "Defines the expected reservation report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationCriteria1, Optional<ReservationReturnCriteria>> mmReturnCriteria = new MMMessageAssociationEnd<ReservationCriteria1, Optional<ReservationReturnCriteria>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationCriteria1.mmObject();
 			isDerived = false;
@@ -216,7 +238,17 @@ public class ReservationCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReservationReturnCriteria.mmObject();
+			type_lazy = () -> ReservationReturnCriteria.mmObject();
+		}
+
+		@Override
+		public Optional<ReservationReturnCriteria> getValue(ReservationCriteria1 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(ReservationCriteria1 obj, Optional<ReservationReturnCriteria> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -249,7 +281,7 @@ public class ReservationCriteria1 {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public ReservationCriteria1 setSearchCriteria(List<com.tools20022.repository.msg.ReservationSearchCriteria1> searchCriteria) {
+	public ReservationCriteria1 setSearchCriteria(List<ReservationSearchCriteria1> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -258,7 +290,7 @@ public class ReservationCriteria1 {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public ReservationCriteria1 setReturnCriteria(com.tools20022.repository.msg.ReservationReturnCriteria returnCriteria) {
+	public ReservationCriteria1 setReturnCriteria(ReservationReturnCriteria returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

@@ -24,7 +24,6 @@ import com.tools20022.repository.msg.CorporateActionDeactivationInstructionStatu
 import com.tools20022.repository.msg.CorporateActionInformation1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -254,7 +253,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,12 +264,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCADeactivationStatusAdviceV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCADeactivationStatusAdviceV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCADeactivationStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AgtCADeactvtnInstrId", required = true)
@@ -300,7 +301,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgentCADeactivationInstructionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, DocumentIdentification8> mmAgentCADeactivationInstructionIdentification = new MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "AgtCADeactvtnInstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -311,12 +312,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCADeactivationStatusAdviceV01.class.getMethod("getAgentCADeactivationInstructionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCADeactivationStatusAdviceV01 obj) {
+			return obj.getAgentCADeactivationInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCADeactivationStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setAgentCADeactivationInstructionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AgtCADeactvtnCxlReqId", required = true)
@@ -346,7 +349,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgentCADeactivationCancellationRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, DocumentIdentification8> mmAgentCADeactivationCancellationRequestIdentification = new MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, DocumentIdentification8>() {
 		{
 			xmlTag = "AgtCADeactvtnCxlReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -357,12 +360,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCADeactivationStatusAdviceV01.class.getMethod("getAgentCADeactivationCancellationRequestIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCADeactivationStatusAdviceV01 obj) {
+			return obj.getAgentCADeactivationCancellationRequestIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCADeactivationStatusAdviceV01 obj, DocumentIdentification8 value) {
+			obj.setAgentCADeactivationCancellationRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "CorpActnGnlInf", required = true)
@@ -390,7 +395,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, CorporateActionInformation1> mmCorporateActionGeneralInformation = new MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, CorporateActionInformation1>() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,12 +406,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			complexType_lazy = () -> CorporateActionInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCADeactivationStatusAdviceV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInformation1 getValue(AgentCADeactivationStatusAdviceV01 obj) {
+			return obj.getCorporateActionGeneralInformation();
+		}
+
+		@Override
+		public void setValue(AgentCADeactivationStatusAdviceV01 obj, CorporateActionInformation1 value) {
+			obj.setCorporateActionGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "DeactvtnInstrSts", required = true)
@@ -435,7 +442,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * "Status of the deactivation instruction sent by the issuer (agent)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDeactivationInstructionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, List<CorporateActionDeactivationInstructionStatus1>> mmDeactivationInstructionStatus = new MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, List<CorporateActionDeactivationInstructionStatus1>>() {
 		{
 			xmlTag = "DeactvtnInstrSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -445,12 +452,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			complexType_lazy = () -> CorporateActionDeactivationInstructionStatus1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCADeactivationStatusAdviceV01.class.getMethod("getDeactivationInstructionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CorporateActionDeactivationInstructionStatus1> getValue(AgentCADeactivationStatusAdviceV01 obj) {
+			return obj.getDeactivationInstructionStatus();
+		}
+
+		@Override
+		public void setValue(AgentCADeactivationStatusAdviceV01 obj, List<CorporateActionDeactivationInstructionStatus1> value) {
+			obj.setDeactivationInstructionStatus(value);
 		}
 	};
 	@XmlElement(name = "DeactvtnCxlReqSts", required = true)
@@ -480,7 +489,7 @@ public class AgentCADeactivationStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDeactivationCancellationRequestStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, CorporateActionDeactivationCancellationStatus1Choice> mmDeactivationCancellationRequestStatus = new MMMessageBuildingBlock<AgentCADeactivationStatusAdviceV01, CorporateActionDeactivationCancellationStatus1Choice>() {
 		{
 			xmlTag = "DeactvtnCxlReqSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,12 +500,14 @@ public class AgentCADeactivationStatusAdviceV01 {
 			complexType_lazy = () -> CorporateActionDeactivationCancellationStatus1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCADeactivationStatusAdviceV01.class.getMethod("getDeactivationCancellationRequestStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionDeactivationCancellationStatus1Choice getValue(AgentCADeactivationStatusAdviceV01 obj) {
+			return obj.getDeactivationCancellationRequestStatus();
+		}
+
+		@Override
+		public void setValue(AgentCADeactivationStatusAdviceV01 obj, CorporateActionDeactivationCancellationStatus1Choice value) {
+			obj.setDeactivationCancellationRequestStatus(value);
 		}
 	};
 

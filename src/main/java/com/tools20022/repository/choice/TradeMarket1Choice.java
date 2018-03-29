@@ -107,7 +107,7 @@ public class TradeMarket1Choice {
 	 * definition} = "Standard trade market code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeMarket1Choice, ExternalTradeMarket1Code> mmCode = new MMMessageAttribute<TradeMarket1Choice, ExternalTradeMarket1Code>() {
 		{
 			businessElementTrace_lazy = () -> Market.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeMarket1Choice.mmObject();
@@ -119,6 +119,16 @@ public class TradeMarket1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalTradeMarket1Code.mmObject();
+		}
+
+		@Override
+		public ExternalTradeMarket1Code getValue(TradeMarket1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TradeMarket1Choice obj, ExternalTradeMarket1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class TradeMarket1Choice {
 	 * definition} = "Trade market expressed as proprietary identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeMarket1Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<TradeMarket1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Market.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeMarket1Choice.mmObject();
@@ -168,6 +178,16 @@ public class TradeMarket1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(TradeMarket1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TradeMarket1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

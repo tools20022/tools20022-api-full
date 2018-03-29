@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AccountReport12;
 import com.tools20022.repository.msg.GroupHeader58;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -150,7 +149,7 @@ public class BankToCustomerAccountReportV03 {
 	 * definition} = "Common information for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerAccountReportV03, GroupHeader58> mmGroupHeader = new MMMessageBuildingBlock<BankToCustomerAccountReportV03, GroupHeader58>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,12 +160,14 @@ public class BankToCustomerAccountReportV03 {
 			complexType_lazy = () -> GroupHeader58.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerAccountReportV03.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader58 getValue(BankToCustomerAccountReportV03 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(BankToCustomerAccountReportV03 obj, GroupHeader58 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "Rpt", required = true)
@@ -193,7 +194,7 @@ public class BankToCustomerAccountReportV03 {
 	 * definition} = "Reports on a cash account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerAccountReportV03, List<AccountReport12>> mmReport = new MMMessageBuildingBlock<BankToCustomerAccountReportV03, List<AccountReport12>>() {
 		{
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,12 +204,14 @@ public class BankToCustomerAccountReportV03 {
 			complexType_lazy = () -> AccountReport12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerAccountReportV03.class.getMethod("getReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AccountReport12> getValue(BankToCustomerAccountReportV03 obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(BankToCustomerAccountReportV03 obj, List<AccountReport12> value) {
+			obj.setReport(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -238,7 +241,7 @@ public class BankToCustomerAccountReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BankToCustomerAccountReportV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<BankToCustomerAccountReportV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,12 +251,14 @@ public class BankToCustomerAccountReportV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BankToCustomerAccountReportV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(BankToCustomerAccountReportV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(BankToCustomerAccountReportV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

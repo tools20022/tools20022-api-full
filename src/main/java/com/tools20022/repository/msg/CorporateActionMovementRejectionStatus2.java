@@ -110,7 +110,7 @@ public class CorporateActionMovementRejectionStatus2 {
 	 * definition} = "The rejection reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementRejectionStatus2, List<RejectionReason14FormatChoice>> mmReason = new MMMessageAttribute<CorporateActionMovementRejectionStatus2, List<RejectionReason14FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementRejectionStatus2.mmObject();
@@ -121,6 +121,16 @@ public class CorporateActionMovementRejectionStatus2 {
 			definition = "The rejection reason.";
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason14FormatChoice.mmObject();
+		}
+
+		@Override
+		public List<RejectionReason14FormatChoice> getValue(CorporateActionMovementRejectionStatus2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementRejectionStatus2 obj, List<RejectionReason14FormatChoice> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -157,7 +167,7 @@ public class CorporateActionMovementRejectionStatus2 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMovementRejectionStatus2, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<CorporateActionMovementRejectionStatus2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionMovementRejectionStatus2.mmObject();
@@ -169,6 +179,16 @@ public class CorporateActionMovementRejectionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionMovementRejectionStatus2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementRejectionStatus2 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.entity.Service;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection34;
+import com.tools20022.repository.msg.BillingServicesAmount3;
+import com.tools20022.repository.msg.BillingServicesTax3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +122,7 @@ public class TaxCalculation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculation1, ActiveOrHistoricCurrencyCode> mmHostCurrency = new MMMessageAttribute<TaxCalculation1, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculation1.mmObject();
@@ -132,9 +135,19 @@ public class TaxCalculation1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(TaxCalculation1 obj) {
+			return obj.getHostCurrency();
+		}
+
+		@Override
+		public void setValue(TaxCalculation1 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setHostCurrency(value);
+		}
 	};
 	@XmlElement(name = "TaxblSvcChrgConvs", required = true)
-	protected List<com.tools20022.repository.msg.BillingServicesAmount3> taxableServiceChargeConversion;
+	protected List<BillingServicesAmount3> taxableServiceChargeConversion;
 	/**
 	 * 
 	 <p>
@@ -170,7 +183,7 @@ public class TaxCalculation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableServiceChargeConversion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculation1, List<BillingServicesAmount3>> mmTaxableServiceChargeConversion = new MMMessageAttribute<TaxCalculation1, List<BillingServicesAmount3>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculation1.mmObject();
@@ -180,7 +193,17 @@ public class TaxCalculation1 {
 			name = "TaxableServiceChargeConversion";
 			definition = "Taxable service charge amount conversions to host currency. \n\nUsage: One occurrence must be present for each different service pricing currency in the statement.";
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.BillingServicesAmount3.mmObject();
+			complexType_lazy = () -> BillingServicesAmount3.mmObject();
+		}
+
+		@Override
+		public List<BillingServicesAmount3> getValue(TaxCalculation1 obj) {
+			return obj.getTaxableServiceChargeConversion();
+		}
+
+		@Override
+		public void setValue(TaxCalculation1 obj, List<BillingServicesAmount3> value) {
+			obj.setTaxableServiceChargeConversion(value);
 		}
 	};
 	@XmlElement(name = "TtlTaxblSvcChrgHstAmt", required = true)
@@ -218,7 +241,7 @@ public class TaxCalculation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalTaxableServiceChargeHostAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxCalculation1, AmountAndDirection34> mmTotalTaxableServiceChargeHostAmount = new MMMessageAssociationEnd<TaxCalculation1, AmountAndDirection34>() {
 		{
 			businessElementTrace_lazy = () -> Service.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculation1.mmObject();
@@ -230,11 +253,21 @@ public class TaxCalculation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection34.mmObject();
+			type_lazy = () -> AmountAndDirection34.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection34 getValue(TaxCalculation1 obj) {
+			return obj.getTotalTaxableServiceChargeHostAmount();
+		}
+
+		@Override
+		public void setValue(TaxCalculation1 obj, AmountAndDirection34 value) {
+			obj.setTotalTaxableServiceChargeHostAmount(value);
 		}
 	};
 	@XmlElement(name = "TaxId", required = true)
-	protected List<com.tools20022.repository.msg.BillingServicesTax3> taxIdentification;
+	protected List<BillingServicesTax3> taxIdentification;
 	/**
 	 * 
 	 <p>
@@ -269,7 +302,7 @@ public class TaxCalculation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculation1, List<BillingServicesTax3>> mmTaxIdentification = new MMMessageAttribute<TaxCalculation1, List<BillingServicesTax3>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRecord;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculation1.mmObject();
@@ -280,7 +313,17 @@ public class TaxCalculation1 {
 			definition = "Provides for the specific tax identification within the same tax region. \n\nUsage: A maximum of three specific tax identifications may be provided. These elements use the total host currency taxable amount as the basis of the calculation. \nThis element is only valid for method C.";
 			maxOccurs = 3;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.BillingServicesTax3.mmObject();
+			complexType_lazy = () -> BillingServicesTax3.mmObject();
+		}
+
+		@Override
+		public List<BillingServicesTax3> getValue(TaxCalculation1 obj) {
+			return obj.getTaxIdentification();
+		}
+
+		@Override
+		public void setValue(TaxCalculation1 obj, List<BillingServicesTax3> value) {
+			obj.setTaxIdentification(value);
 		}
 	};
 	@XmlElement(name = "TtlTax", required = true)
@@ -317,7 +360,7 @@ public class TaxCalculation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxCalculation1, AmountAndDirection34> mmTotalTax = new MMMessageAssociationEnd<TaxCalculation1, AmountAndDirection34>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculation1.mmObject();
@@ -329,7 +372,17 @@ public class TaxCalculation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection34.mmObject();
+			type_lazy = () -> AmountAndDirection34.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection34 getValue(TaxCalculation1 obj) {
+			return obj.getTotalTax();
+		}
+
+		@Override
+		public void setValue(TaxCalculation1 obj, AmountAndDirection34 value) {
+			obj.setTotalTax(value);
 		}
 	};
 
@@ -361,7 +414,7 @@ public class TaxCalculation1 {
 		return taxableServiceChargeConversion == null ? taxableServiceChargeConversion = new ArrayList<>() : taxableServiceChargeConversion;
 	}
 
-	public TaxCalculation1 setTaxableServiceChargeConversion(List<com.tools20022.repository.msg.BillingServicesAmount3> taxableServiceChargeConversion) {
+	public TaxCalculation1 setTaxableServiceChargeConversion(List<BillingServicesAmount3> taxableServiceChargeConversion) {
 		this.taxableServiceChargeConversion = Objects.requireNonNull(taxableServiceChargeConversion);
 		return this;
 	}
@@ -370,7 +423,7 @@ public class TaxCalculation1 {
 		return totalTaxableServiceChargeHostAmount;
 	}
 
-	public TaxCalculation1 setTotalTaxableServiceChargeHostAmount(com.tools20022.repository.msg.AmountAndDirection34 totalTaxableServiceChargeHostAmount) {
+	public TaxCalculation1 setTotalTaxableServiceChargeHostAmount(AmountAndDirection34 totalTaxableServiceChargeHostAmount) {
 		this.totalTaxableServiceChargeHostAmount = Objects.requireNonNull(totalTaxableServiceChargeHostAmount);
 		return this;
 	}
@@ -379,7 +432,7 @@ public class TaxCalculation1 {
 		return taxIdentification == null ? taxIdentification = new ArrayList<>() : taxIdentification;
 	}
 
-	public TaxCalculation1 setTaxIdentification(List<com.tools20022.repository.msg.BillingServicesTax3> taxIdentification) {
+	public TaxCalculation1 setTaxIdentification(List<BillingServicesTax3> taxIdentification) {
 		this.taxIdentification = Objects.requireNonNull(taxIdentification);
 		return this;
 	}
@@ -388,7 +441,7 @@ public class TaxCalculation1 {
 		return totalTax;
 	}
 
-	public TaxCalculation1 setTotalTax(com.tools20022.repository.msg.AmountAndDirection34 totalTax) {
+	public TaxCalculation1 setTotalTax(AmountAndDirection34 totalTax) {
 		this.totalTax = Objects.requireNonNull(totalTax);
 		return this;
 	}

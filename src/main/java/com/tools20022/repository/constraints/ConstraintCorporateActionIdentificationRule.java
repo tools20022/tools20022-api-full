@@ -52,11 +52,15 @@ public class ConstraintCorporateActionIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInformation1> forCorporateActionInformation1 = new MMConstraint<CorporateActionInformation1>() {
 		{
-			validator = ConstraintCorporateActionIdentificationRule::checkCorporateActionInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionIdentificationRule";
 			definition = "At least one element in the list (IssuerCorporateActionReference, OfficialCorporateActionReference, CorporateActionProcessingIdentifier) must be present. They may all be may be present.";
 			owner_lazy = () -> CorporateActionInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInformation1 obj) throws Exception {
+			checkCorporateActionInformation1(obj);
 		}
 	};
 

@@ -117,7 +117,7 @@ public class TaxExemptQuantitySD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxExemptQuantitySD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<TaxExemptQuantitySD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxExemptQuantitySD1.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class TaxExemptQuantitySD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(TaxExemptQuantitySD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(TaxExemptQuantitySD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "CtrlId", required = true)
@@ -171,7 +181,7 @@ public class TaxExemptQuantitySD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmControlIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxExemptQuantitySD1, Max6Text> mmControlIdentification = new MMMessageAttribute<TaxExemptQuantitySD1, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxExemptQuantitySD1.mmObject();
 			isDerived = false;
@@ -184,6 +194,16 @@ public class TaxExemptQuantitySD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(TaxExemptQuantitySD1 obj) {
+			return obj.getControlIdentification();
+		}
+
+		@Override
+		public void setValue(TaxExemptQuantitySD1 obj, Max6Text value) {
+			obj.setControlIdentification(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -227,7 +247,7 @@ public class TaxExemptQuantitySD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxExemptQuantitySD1, FinancialInstrumentQuantity15Choice> mmQuantity = new MMMessageAttribute<TaxExemptQuantitySD1, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxExemptQuantitySD1.mmObject();
 			isDerived = false;
@@ -240,6 +260,16 @@ public class TaxExemptQuantitySD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(TaxExemptQuantitySD1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(TaxExemptQuantitySD1 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 

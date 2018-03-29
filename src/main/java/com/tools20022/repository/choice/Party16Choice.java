@@ -130,7 +130,7 @@ public class Party16Choice {
 	 * Party14Choice.mmOrganisation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party16Choice, Organisation13> mmOrganisation = new MMMessageAssociationEnd<Party16Choice, Organisation13>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party16Choice.mmObject();
@@ -145,6 +145,16 @@ public class Party16Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Organisation13.mmObject();
+		}
+
+		@Override
+		public Organisation13 getValue(Party16Choice obj) {
+			return obj.getOrganisation();
+		}
+
+		@Override
+		public void setValue(Party16Choice obj, Organisation13 value) {
+			obj.setOrganisation(value);
 		}
 	};
 	@XmlElement(name = "IndvPrsn", required = true)
@@ -194,7 +204,7 @@ public class Party16Choice {
 	 * Party14Choice.mmIndividualPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party16Choice, IndividualPerson22> mmIndividualPerson = new MMMessageAssociationEnd<Party16Choice, IndividualPerson22>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party16Choice.mmObject();
@@ -209,6 +219,16 @@ public class Party16Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IndividualPerson22.mmObject();
+		}
+
+		@Override
+		public IndividualPerson22 getValue(Party16Choice obj) {
+			return obj.getIndividualPerson();
+		}
+
+		@Override
+		public void setValue(Party16Choice obj, IndividualPerson22 value) {
+			obj.setIndividualPerson(value);
 		}
 	};
 

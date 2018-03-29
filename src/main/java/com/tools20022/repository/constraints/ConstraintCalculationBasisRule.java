@@ -52,11 +52,15 @@ public class ConstraintCalculationBasisRule {
 	 */
 	public static final MMConstraint<UnitPrice6> forUnitPrice6 = new MMConstraint<UnitPrice6>() {
 		{
-			validator = ConstraintCalculationBasisRule::checkUnitPrice6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationBasisRule";
 			definition = "If Type/Structured is not NonAdjustedUnpublished, then CalculationBasis is not allowed. If Type/Structured is NonAdjustedUnpublished, then CalculationBasis may be present.";
 			owner_lazy = () -> UnitPrice6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UnitPrice6 obj) throws Exception {
+			checkUnitPrice6(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintCalculationBasisRule {
 	 */
 	public static final MMConstraint<UnitPrice15> forUnitPrice15 = new MMConstraint<UnitPrice15>() {
 		{
-			validator = ConstraintCalculationBasisRule::checkUnitPrice15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationBasisRule";
 			definition = "If Type is not NonAdjustedUnpublished, then CalculationBasis is not allowed. If Type is NonAdjustedUnpublished, then CalculationBasis may be present.";
 			owner_lazy = () -> UnitPrice15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(UnitPrice15 obj) throws Exception {
+			checkUnitPrice15(obj);
 		}
 	};
 

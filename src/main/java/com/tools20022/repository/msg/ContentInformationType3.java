@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.*;
 import com.tools20022.repository.codeset.ContentType1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AuthenticatedData1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -151,7 +152,7 @@ public class ContentInformationType3 {
 	 * definition} = "Type of data protection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContentInformationType3, ContentType1Code> mmContentType = new MMMessageAttribute<ContentInformationType3, ContentType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType3.mmObject();
 			isDerived = false;
@@ -163,9 +164,19 @@ public class ContentInformationType3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType1Code.mmObject();
 		}
+
+		@Override
+		public ContentType1Code getValue(ContentInformationType3 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(ContentInformationType3 obj, ContentType1Code value) {
+			obj.setContentType(value);
+		}
 	};
 	@XmlElement(name = "AuthntcdData")
-	protected List<com.tools20022.repository.msg.AuthenticatedData1> authenticatedData;
+	protected List<AuthenticatedData1> authenticatedData;
 	/**
 	 * 
 	 <p>
@@ -192,7 +203,7 @@ public class ContentInformationType3 {
 	 * definition} = "Data protection by a message authentication code (MAC)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType3, List<AuthenticatedData1>> mmAuthenticatedData = new MMMessageAssociationEnd<ContentInformationType3, List<AuthenticatedData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType3.mmObject();
 			isDerived = false;
@@ -202,7 +213,17 @@ public class ContentInformationType3 {
 			definition = "Data protection by a message authentication code (MAC).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData1.mmObject();
+			type_lazy = () -> AuthenticatedData1.mmObject();
+		}
+
+		@Override
+		public List<AuthenticatedData1> getValue(ContentInformationType3 obj) {
+			return obj.getAuthenticatedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType3 obj, List<AuthenticatedData1> value) {
+			obj.setAuthenticatedData(value);
 		}
 	};
 
@@ -237,7 +258,7 @@ public class ContentInformationType3 {
 		return authenticatedData == null ? authenticatedData = new ArrayList<>() : authenticatedData;
 	}
 
-	public ContentInformationType3 setAuthenticatedData(List<com.tools20022.repository.msg.AuthenticatedData1> authenticatedData) {
+	public ContentInformationType3 setAuthenticatedData(List<AuthenticatedData1> authenticatedData) {
 		this.authenticatedData = Objects.requireNonNull(authenticatedData);
 		return this;
 	}

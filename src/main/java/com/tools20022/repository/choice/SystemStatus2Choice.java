@@ -119,7 +119,7 @@ public class SystemStatus2Choice {
 	 * SystemStatus1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemStatus2Choice, SystemStatus2Code> mmCode = new MMMessageAttribute<SystemStatus2Choice, SystemStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemStatus2Choice.mmObject();
@@ -132,6 +132,16 @@ public class SystemStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemStatus2Code.mmObject();
+		}
+
+		@Override
+		public SystemStatus2Code getValue(SystemStatus2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SystemStatus2Choice obj, SystemStatus2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class SystemStatus2Choice {
 	 * SystemStatus1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemStatus2Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<SystemStatus2Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemStatus2Choice.mmObject();
@@ -186,6 +196,16 @@ public class SystemStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(SystemStatus2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SystemStatus2Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

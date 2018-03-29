@@ -54,11 +54,15 @@ public class ConstraintPreviousInstructingAgent1Guideline {
 	 */
 	public static final MMConstraint<PaymentComplementaryInformation7> forPaymentComplementaryInformation7 = new MMConstraint<PaymentComplementaryInformation7>() {
 		{
-			validator = ConstraintPreviousInstructingAgent1Guideline::checkPaymentComplementaryInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgent1Guideline";
 			definition = "It is recommended that, when present, PreviousInstructingAgent1 is the closest to the DebtorAgent in the payment chain.";
 			owner_lazy = () -> PaymentComplementaryInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentComplementaryInformation7 obj) throws Exception {
+			checkPaymentComplementaryInformation7(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintPreviousInstructingAgent1Guideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction31> forCreditTransferTransaction31 = new MMConstraint<CreditTransferTransaction31>() {
 		{
-			validator = ConstraintPreviousInstructingAgent1Guideline::checkCreditTransferTransaction31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgent1Guideline";
 			definition = "It is recommended that, when present, PreviousInstructingAgent1 is the closest to the DebtorAgent in the payment chain.";
 			owner_lazy = () -> CreditTransferTransaction31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction31 obj) throws Exception {
+			checkCreditTransferTransaction31(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintPreviousInstructingAgent1Guideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction32> forCreditTransferTransaction32 = new MMConstraint<CreditTransferTransaction32>() {
 		{
-			validator = ConstraintPreviousInstructingAgent1Guideline::checkCreditTransferTransaction32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgent1Guideline";
 			definition = "It is recommended that, when present, PreviousInstructingAgent1 is the closest to the DebtorAgent in the payment chain.";
 			owner_lazy = () -> CreditTransferTransaction32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction32 obj) throws Exception {
+			checkCreditTransferTransaction32(obj);
 		}
 	};
 	/**
@@ -144,11 +156,15 @@ public class ConstraintPreviousInstructingAgent1Guideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction30> forCreditTransferTransaction30 = new MMConstraint<CreditTransferTransaction30>() {
 		{
-			validator = ConstraintPreviousInstructingAgent1Guideline::checkCreditTransferTransaction30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgent1Guideline";
 			definition = "It is recommended that, when present, PreviousInstructingAgent1 is the closest to the DebtorAgent in the payment chain.";
 			owner_lazy = () -> CreditTransferTransaction30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction30 obj) throws Exception {
+			checkCreditTransferTransaction30(obj);
 		}
 	};
 

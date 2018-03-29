@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.Option3;
 import com.tools20022.repository.msg.TradeAgreement1;
 import com.tools20022.repository.msg.TradePartyIdentification4;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +123,7 @@ public class CreateForeignExchangeOptionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreateForeignExchangeOptionV02, TradeAgreement1> mmTradeInformation = new MMMessageBuildingBlock<CreateForeignExchangeOptionV02, TradeAgreement1>() {
 		{
 			xmlTag = "TradInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,12 +134,14 @@ public class CreateForeignExchangeOptionV02 {
 			complexType_lazy = () -> TradeAgreement1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreateForeignExchangeOptionV02.class.getMethod("getTradeInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeAgreement1 getValue(CreateForeignExchangeOptionV02 obj) {
+			return obj.getTradeInformation();
+		}
+
+		@Override
+		public void setValue(CreateForeignExchangeOptionV02 obj, TradeAgreement1 value) {
+			obj.setTradeInformation(value);
 		}
 	};
 	@XmlElement(name = "TradgSdId", required = true)
@@ -170,7 +171,7 @@ public class CreateForeignExchangeOptionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreateForeignExchangeOptionV02, TradePartyIdentification4> mmTradingSideIdentification = new MMMessageBuildingBlock<CreateForeignExchangeOptionV02, TradePartyIdentification4>() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,12 +182,14 @@ public class CreateForeignExchangeOptionV02 {
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreateForeignExchangeOptionV02.class.getMethod("getTradingSideIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradePartyIdentification4 getValue(CreateForeignExchangeOptionV02 obj) {
+			return obj.getTradingSideIdentification();
+		}
+
+		@Override
+		public void setValue(CreateForeignExchangeOptionV02 obj, TradePartyIdentification4 value) {
+			obj.setTradingSideIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtrPtySdId", required = true)
@@ -216,7 +219,7 @@ public class CreateForeignExchangeOptionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreateForeignExchangeOptionV02, TradePartyIdentification4> mmCounterpartySideIdentification = new MMMessageBuildingBlock<CreateForeignExchangeOptionV02, TradePartyIdentification4>() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +230,14 @@ public class CreateForeignExchangeOptionV02 {
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreateForeignExchangeOptionV02.class.getMethod("getCounterpartySideIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradePartyIdentification4 getValue(CreateForeignExchangeOptionV02 obj) {
+			return obj.getCounterpartySideIdentification();
+		}
+
+		@Override
+		public void setValue(CreateForeignExchangeOptionV02 obj, TradePartyIdentification4 value) {
+			obj.setCounterpartySideIdentification(value);
 		}
 	};
 	@XmlElement(name = "Optn", required = true)
@@ -261,7 +266,7 @@ public class CreateForeignExchangeOptionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOption = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreateForeignExchangeOptionV02, Option3> mmOption = new MMMessageBuildingBlock<CreateForeignExchangeOptionV02, Option3>() {
 		{
 			xmlTag = "Optn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +277,14 @@ public class CreateForeignExchangeOptionV02 {
 			complexType_lazy = () -> Option3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreateForeignExchangeOptionV02.class.getMethod("getOption", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Option3 getValue(CreateForeignExchangeOptionV02 obj) {
+			return obj.getOption();
+		}
+
+		@Override
+		public void setValue(CreateForeignExchangeOptionV02 obj, Option3 value) {
+			obj.setOption(value);
 		}
 	};
 

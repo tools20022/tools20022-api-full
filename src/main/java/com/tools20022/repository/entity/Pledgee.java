@@ -23,12 +23,12 @@ import com.tools20022.repository.choice.PledgeeFormat2Choice;
 import com.tools20022.repository.choice.PledgeeFormat3Choice;
 import com.tools20022.repository.choice.PledgeeFormat4Choice;
 import com.tools20022.repository.codeset.PledgeeTypeCode;
+import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.SecuritiesPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PledgeeTypeAndAnyBICIdentifier1;
 import com.tools20022.repository.msg.PledgeeTypeAndText1;
 import com.tools20022.repository.msg.PledgeeTypeAndText2;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -182,7 +182,7 @@ public class Pledgee extends SecuritiesPartyRole {
 	 * definition} = "Specifies the type of pledgee."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPledgeeType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Pledgee, PledgeeTypeCode> mmPledgeeType = new MMBusinessAttribute<Pledgee, PledgeeTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PledgeeTypeAndText1.mmPledgeeType, PledgeeTypeAndAnyBICIdentifier1.mmPledgeeType, PledgeeTypeAndText2.mmPledgeeType);
 			isDerived = false;
@@ -195,12 +195,14 @@ public class Pledgee extends SecuritiesPartyRole {
 			simpleType_lazy = () -> PledgeeTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Pledgee.class.getMethod("getPledgeeType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PledgeeTypeCode getValue(Pledgee obj) {
+			return obj.getPledgeeType();
+		}
+
+		@Override
+		public void setValue(Pledgee obj, PledgeeTypeCode value) {
+			obj.setPledgeeType(value);
 		}
 	};
 	protected SecuritiesBalance securitiesBalance;
@@ -236,7 +238,7 @@ public class Pledgee extends SecuritiesPartyRole {
 	 * definition} = "Balance which is held by a pledgee."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Pledgee, Optional<SecuritiesBalance>> mmSecuritiesBalance = new MMBusinessAssociationEnd<Pledgee, Optional<SecuritiesBalance>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Pledgee.mmObject();
@@ -248,6 +250,16 @@ public class Pledgee extends SecuritiesPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmPledgee;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesBalance> getValue(Pledgee obj) {
+			return obj.getSecuritiesBalance();
+		}
+
+		@Override
+		public void setValue(Pledgee obj, Optional<SecuritiesBalance> value) {
+			obj.setSecuritiesBalance(value.orElse(null));
 		}
 	};
 

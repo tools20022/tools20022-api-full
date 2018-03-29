@@ -111,7 +111,7 @@ public class InstructionProcessingReason2Choice {
 	 * definition} = "Specifies the reason of the InRepairStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionProcessingReason2Choice, List<RepairReason5>> mmReason = new MMMessageAssociationEnd<InstructionProcessingReason2Choice, List<RepairReason5>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepairReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingReason2Choice.mmObject();
@@ -123,6 +123,16 @@ public class InstructionProcessingReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RepairReason5.mmObject();
+		}
+
+		@Override
+		public List<RepairReason5> getValue(InstructionProcessingReason2Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingReason2Choice obj, List<RepairReason5> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -163,7 +173,7 @@ public class InstructionProcessingReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingReason2Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<InstructionProcessingReason2Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingReason2Choice.mmObject();
@@ -176,6 +186,16 @@ public class InstructionProcessingReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(InstructionProcessingReason2Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingReason2Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

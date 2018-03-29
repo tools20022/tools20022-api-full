@@ -93,7 +93,7 @@ public class Replacement2 {
 	 * definition} = "Content of the current element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Replacement2, Max350Text> mmCurrentValue = new MMMessageAttribute<Replacement2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Replacement2.mmObject();
 			isDerived = false;
@@ -104,6 +104,16 @@ public class Replacement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(Replacement2 obj) {
+			return obj.getCurrentValue();
+		}
+
+		@Override
+		public void setValue(Replacement2 obj, Max350Text value) {
+			obj.setCurrentValue(value);
 		}
 	};
 	@XmlElement(name = "PropsdVal", required = true)
@@ -134,7 +144,7 @@ public class Replacement2 {
 	 * definition} = "Content of the new element."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProposedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Replacement2, Max350Text> mmProposedValue = new MMMessageAttribute<Replacement2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Replacement2.mmObject();
 			isDerived = false;
@@ -145,6 +155,16 @@ public class Replacement2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(Replacement2 obj) {
+			return obj.getProposedValue();
+		}
+
+		@Override
+		public void setValue(Replacement2 obj, Max350Text value) {
+			obj.setProposedValue(value);
 		}
 	};
 

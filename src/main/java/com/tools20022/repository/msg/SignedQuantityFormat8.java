@@ -108,7 +108,7 @@ public class SignedQuantityFormat8 {
 	 * definition} = "Sign of the quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SignedQuantityFormat8, ShortLong1Code> mmShortLongPosition = new MMMessageAttribute<SignedQuantityFormat8, ShortLong1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat8.mmObject();
@@ -120,6 +120,16 @@ public class SignedQuantityFormat8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public ShortLong1Code getValue(SignedQuantityFormat8 obj) {
+			return obj.getShortLongPosition();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat8 obj, ShortLong1Code value) {
+			obj.setShortLongPosition(value);
 		}
 	};
 	@XmlElement(name = "QtyChc", required = true)
@@ -155,7 +165,7 @@ public class SignedQuantityFormat8 {
 	 * definition} = "Choice between different quantity of security formats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SignedQuantityFormat8, Quantity21Choice> mmQuantityChoice = new MMMessageAssociationEnd<SignedQuantityFormat8, Quantity21Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat8.mmObject();
@@ -168,6 +178,16 @@ public class SignedQuantityFormat8 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Quantity21Choice.mmObject();
+		}
+
+		@Override
+		public Quantity21Choice getValue(SignedQuantityFormat8 obj) {
+			return obj.getQuantityChoice();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat8 obj, Quantity21Choice value) {
+			obj.setQuantityChoice(value);
 		}
 	};
 

@@ -58,12 +58,50 @@ public class ConstraintNewMaturityDateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV08> forCorporateActionNotificationV08 = new MMConstraint<CorporateActionNotificationV08>() {
 		{
-			validator = ConstraintNewMaturityDateRule::checkCorporateActionNotificationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewMaturityDateRule";
 			definition = "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code must be EXTM (Maturity Extension).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNewMaturityDateRule.forCorporateActionNotificationV07;
 			owner_lazy = () -> CorporateActionNotificationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV08 obj) throws Exception {
+			checkCorporateActionNotificationV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V08
+	 * CorporateActionNotification002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewMaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code must be EXTM (Maturity Extension)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotification002V08> forCorporateActionNotification002V08 = new MMConstraint<CorporateActionNotification002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NewMaturityDateRule";
+			definition = "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code must be EXTM (Maturity Extension).";
+			owner_lazy = () -> CorporateActionNotification002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotification002V08 obj) throws Exception {
+			checkCorporateActionNotification002V08(obj);
 		}
 	};
 	/**
@@ -102,7 +140,6 @@ public class ConstraintNewMaturityDateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV07> forCorporateActionNotificationV07 = new MMConstraint<CorporateActionNotificationV07>() {
 		{
-			validator = ConstraintNewMaturityDateRule::checkCorporateActionNotificationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewMaturityDateRule";
 			definition = "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
@@ -110,35 +147,10 @@ public class ConstraintNewMaturityDateRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNewMaturityDateRule.forCorporateActionNotificationV06;
 			owner_lazy = () -> CorporateActionNotificationV07.mmObject();
 		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07
-	 * CorporateActionNotification002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NewMaturityDateRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotification002V07> forCorporateActionNotification002V07 = new MMConstraint<CorporateActionNotification002V07>() {
-		{
-			validator = ConstraintNewMaturityDateRule::checkCorporateActionNotification002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NewMaturityDateRule";
-			definition = "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
-			owner_lazy = () -> CorporateActionNotification002V07.mmObject();
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV07 obj) throws Exception {
+			checkCorporateActionNotificationV07(obj);
 		}
 	};
 	/**
@@ -177,13 +189,17 @@ public class ConstraintNewMaturityDateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV05> forCorporateActionNotificationV05 = new MMConstraint<CorporateActionNotificationV05>() {
 		{
-			validator = ConstraintNewMaturityDateRule::checkCorporateActionNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewMaturityDateRule";
 			definition = "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNewMaturityDateRule.forCorporateActionNotificationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaturityDateRule.forCorporateActionNotificationV04;
 			owner_lazy = () -> CorporateActionNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV05 obj) throws Exception {
+			checkCorporateActionNotificationV05(obj);
 		}
 	};
 	/**
@@ -222,13 +238,51 @@ public class ConstraintNewMaturityDateRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV06> forCorporateActionNotificationV06 = new MMConstraint<CorporateActionNotificationV06>() {
 		{
-			validator = ConstraintNewMaturityDateRule::checkCorporateActionNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewMaturityDateRule";
 			definition = "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNewMaturityDateRule.forCorporateActionNotificationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNewMaturityDateRule.forCorporateActionNotificationV05;
 			owner_lazy = () -> CorporateActionNotificationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV06 obj) throws Exception {
+			checkCorporateActionNotificationV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V06
+	 * CorporateActionNotification002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NewMaturityDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotification002V06> forCorporateActionNotification002V06 = new MMConstraint<CorporateActionNotification002V06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NewMaturityDateRule";
+			definition = "If CorporateActionDetails/DateDetails/NewMaturityDate is present, then CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity Extension).";
+			owner_lazy = () -> CorporateActionNotification002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotification002V06 obj) throws Exception {
+			checkCorporateActionNotification002V06(obj);
 		}
 	};
 
@@ -243,10 +297,10 @@ public class ConstraintNewMaturityDateRule {
 
 	/**
 	 * If CorporateActionDetails/DateDetails/NewMaturityDate is present, then
-	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
+	 * CorporateActionGeneralInformation/EventType/Code must be EXTM (Maturity
 	 * Extension).
 	 */
-	public static void checkCorporateActionNotificationV07(CorporateActionNotificationV07 obj) throws Exception {
+	public static void checkCorporateActionNotification002V08(CorporateActionNotification002V08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -255,7 +309,7 @@ public class ConstraintNewMaturityDateRule {
 	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
 	 * Extension).
 	 */
-	public static void checkCorporateActionNotification002V07(CorporateActionNotification002V07 obj) throws Exception {
+	public static void checkCorporateActionNotificationV07(CorporateActionNotificationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -274,6 +328,15 @@ public class ConstraintNewMaturityDateRule {
 	 * Extension).
 	 */
 	public static void checkCorporateActionNotificationV06(CorporateActionNotificationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionDetails/DateDetails/NewMaturityDate is present, then
+	 * CorporateActionGeneralInformation/EventType/Code is EXTM (Maturity
+	 * Extension).
+	 */
+	public static void checkCorporateActionNotification002V06(CorporateActionNotification002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

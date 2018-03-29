@@ -33,6 +33,8 @@ import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NumberOfTransactionsPerStatus5;
+import com.tools20022.repository.msg.StatusReasonInformation11;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -168,7 +170,7 @@ public class OriginalGroupHeader13 {
 	 * OriginalGroupHeader7.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader13, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalGroupHeader13, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader13.mmObject();
@@ -181,6 +183,16 @@ public class OriginalGroupHeader13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupHeader13 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader13 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -219,7 +231,7 @@ public class OriginalGroupHeader13 {
 	 * OriginalGroupHeader7.mmOriginalMessageNameIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader13, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalGroupHeader13, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader13.mmObject();
 			isDerived = false;
@@ -231,6 +243,16 @@ public class OriginalGroupHeader13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupHeader13 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader13 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCreDtTm")
@@ -272,7 +294,7 @@ public class OriginalGroupHeader13 {
 	 * OriginalGroupHeader7.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader13, Optional<ISODateTime>> mmOriginalCreationDateTime = new MMMessageAttribute<OriginalGroupHeader13, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader13.mmObject();
@@ -285,6 +307,16 @@ public class OriginalGroupHeader13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(OriginalGroupHeader13 obj) {
+			return obj.getOriginalCreationDateTime();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader13 obj, Optional<ISODateTime> value) {
+			obj.setOriginalCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlNbOfTxs")
@@ -323,7 +355,7 @@ public class OriginalGroupHeader13 {
 	 * OriginalGroupHeader7.mmOriginalNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader13, Optional<Max15NumericText>> mmOriginalNumberOfTransactions = new MMMessageAttribute<OriginalGroupHeader13, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader13.mmObject();
 			isDerived = false;
@@ -335,6 +367,16 @@ public class OriginalGroupHeader13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(OriginalGroupHeader13 obj) {
+			return obj.getOriginalNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader13 obj, Optional<Max15NumericText> value) {
+			obj.setOriginalNumberOfTransactions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCtrlSum")
@@ -374,7 +416,7 @@ public class OriginalGroupHeader13 {
 	 * OriginalGroupHeader7.mmOriginalControlSum}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader13, Optional<DecimalNumber>> mmOriginalControlSum = new MMMessageAttribute<OriginalGroupHeader13, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader13.mmObject();
 			isDerived = false;
@@ -386,6 +428,16 @@ public class OriginalGroupHeader13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(OriginalGroupHeader13 obj) {
+			return obj.getOriginalControlSum();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader13 obj, Optional<DecimalNumber> value) {
+			obj.setOriginalControlSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrpSts")
@@ -428,7 +480,7 @@ public class OriginalGroupHeader13 {
 	 * OriginalGroupHeader7.mmGroupStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader13, Optional<ExternalPaymentGroupStatus1Code>> mmGroupStatus = new MMMessageAttribute<OriginalGroupHeader13, Optional<ExternalPaymentGroupStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader13.mmObject();
@@ -442,9 +494,19 @@ public class OriginalGroupHeader13 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalPaymentGroupStatus1Code.mmObject();
 		}
+
+		@Override
+		public Optional<ExternalPaymentGroupStatus1Code> getValue(OriginalGroupHeader13 obj) {
+			return obj.getGroupStatus();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader13 obj, Optional<ExternalPaymentGroupStatus1Code> value) {
+			obj.setGroupStatus(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "StsRsnInf")
-	protected List<com.tools20022.repository.msg.StatusReasonInformation11> statusReasonInformation;
+	protected List<StatusReasonInformation11> statusReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -482,7 +544,7 @@ public class OriginalGroupHeader13 {
 	 * OriginalGroupHeader7.mmStatusReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupHeader13, List<StatusReasonInformation11>> mmStatusReasonInformation = new MMMessageAssociationEnd<OriginalGroupHeader13, List<StatusReasonInformation11>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader13.mmObject();
@@ -494,11 +556,21 @@ public class OriginalGroupHeader13 {
 			previousVersion_lazy = () -> OriginalGroupHeader7.mmStatusReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation11.mmObject();
+			type_lazy = () -> StatusReasonInformation11.mmObject();
+		}
+
+		@Override
+		public List<StatusReasonInformation11> getValue(OriginalGroupHeader13 obj) {
+			return obj.getStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader13 obj, List<StatusReasonInformation11> value) {
+			obj.setStatusReasonInformation(value);
 		}
 	};
 	@XmlElement(name = "NbOfTxsPerSts")
-	protected List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus;
+	protected List<NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus;
 	/**
 	 * 
 	 <p>
@@ -533,7 +605,7 @@ public class OriginalGroupHeader13 {
 	 * OriginalGroupHeader7.mmNumberOfTransactionsPerStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNumberOfTransactionsPerStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupHeader13, List<NumberOfTransactionsPerStatus5>> mmNumberOfTransactionsPerStatus = new MMMessageAssociationEnd<OriginalGroupHeader13, List<NumberOfTransactionsPerStatus5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader13.mmObject();
 			isDerived = false;
@@ -544,7 +616,17 @@ public class OriginalGroupHeader13 {
 			previousVersion_lazy = () -> OriginalGroupHeader7.mmNumberOfTransactionsPerStatus;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.mmObject();
+			type_lazy = () -> NumberOfTransactionsPerStatus5.mmObject();
+		}
+
+		@Override
+		public List<NumberOfTransactionsPerStatus5> getValue(OriginalGroupHeader13 obj) {
+			return obj.getNumberOfTransactionsPerStatus();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader13 obj, List<NumberOfTransactionsPerStatus5> value) {
+			obj.setNumberOfTransactionsPerStatus(value);
 		}
 	};
 
@@ -627,7 +709,7 @@ public class OriginalGroupHeader13 {
 		return statusReasonInformation == null ? statusReasonInformation = new ArrayList<>() : statusReasonInformation;
 	}
 
-	public OriginalGroupHeader13 setStatusReasonInformation(List<com.tools20022.repository.msg.StatusReasonInformation11> statusReasonInformation) {
+	public OriginalGroupHeader13 setStatusReasonInformation(List<StatusReasonInformation11> statusReasonInformation) {
 		this.statusReasonInformation = Objects.requireNonNull(statusReasonInformation);
 		return this;
 	}
@@ -636,7 +718,7 @@ public class OriginalGroupHeader13 {
 		return numberOfTransactionsPerStatus == null ? numberOfTransactionsPerStatus = new ArrayList<>() : numberOfTransactionsPerStatus;
 	}
 
-	public OriginalGroupHeader13 setNumberOfTransactionsPerStatus(List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus) {
+	public OriginalGroupHeader13 setNumberOfTransactionsPerStatus(List<NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus) {
 		this.numberOfTransactionsPerStatus = Objects.requireNonNull(numberOfTransactionsPerStatus);
 		return this;
 	}

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.GroupHeader45;
 import com.tools20022.repository.msg.PaymentInstruction17;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -149,7 +148,7 @@ public class CreditorPaymentActivationRequestV04 {
 	 * CreditorPaymentActivationRequestV03.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestV04, GroupHeader45> mmGroupHeader = new MMMessageBuildingBlock<CreditorPaymentActivationRequestV04, GroupHeader45>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,12 +161,14 @@ public class CreditorPaymentActivationRequestV04 {
 			complexType_lazy = () -> GroupHeader45.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestV04.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader45 getValue(CreditorPaymentActivationRequestV04 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestV04 obj, GroupHeader45 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "PmtInf", required = true)
@@ -210,7 +211,7 @@ public class CreditorPaymentActivationRequestV04 {
 	 * CreditorPaymentActivationRequestV03.mmPaymentInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPaymentInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestV04, List<PaymentInstruction17>> mmPaymentInformation = new MMMessageBuildingBlock<CreditorPaymentActivationRequestV04, List<PaymentInstruction17>>() {
 		{
 			xmlTag = "PmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,12 +223,14 @@ public class CreditorPaymentActivationRequestV04 {
 			complexType_lazy = () -> PaymentInstruction17.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestV04.class.getMethod("getPaymentInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentInstruction17> getValue(CreditorPaymentActivationRequestV04 obj) {
+			return obj.getPaymentInformation();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestV04 obj, List<PaymentInstruction17> value) {
+			obj.setPaymentInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -270,7 +273,7 @@ public class CreditorPaymentActivationRequestV04 {
 	 * CreditorPaymentActivationRequestV03.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CreditorPaymentActivationRequestV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,12 +285,14 @@ public class CreditorPaymentActivationRequestV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CreditorPaymentActivationRequestV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

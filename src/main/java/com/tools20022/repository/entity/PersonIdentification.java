@@ -22,9 +22,10 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
+import com.tools20022.repository.entity.Person;
+import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -331,7 +332,7 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * definition} = "Number assigned by a social security agency."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSocialSecurityNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PersonIdentification, Max35Text> mmSocialSecurityNumber = new MMBusinessAttribute<PersonIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPerson3.mmSocialSecurityNumber, IndividualPerson8.mmSocialSecurityNumber, PersonIdentification3.mmSocialSecurityNumber, PersonIdentification2.mmSocialSecurityNumber,
 					PersonIdentificationType1Choice.mmSocialSecurityNumber, PersonIdentification7.mmSocialSecurityNumber, IndividualPerson19.mmSocialSecurityNumber, PersonIdentification11.mmSocialSecurityNumber,
@@ -347,12 +348,14 @@ public class PersonIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PersonIdentification.class.getMethod("getSocialSecurityNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PersonIdentification obj) {
+			return obj.getSocialSecurityNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification obj, Max35Text value) {
+			obj.setSocialSecurityNumber(value);
 		}
 	};
 	protected Person person;
@@ -414,7 +417,7 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * definition} = "Person for which an identification is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPerson = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PersonIdentification, Optional<Person>> mmPerson = new MMBusinessAssociationEnd<PersonIdentification, Optional<Person>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmDateAndPlaceOfBirth, PersonIdentification5.mmDateAndPlaceOfBirth, PersonIdentification7.mmDateAndPlaceOfBirth, PersonIdentification11.mmDateAndPlaceOfBirth,
 					PersonIdentification13.mmDateAndPlaceOfBirth, PersonIdentification14.mmDateAndPlaceOfBirth, PersonIdentification15.mmDateAndPlaceOfBirth);
@@ -428,6 +431,16 @@ public class PersonIdentification extends PartyIdentificationInformation {
 			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmPersonIdentification;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
+		}
+
+		@Override
+		public Optional<Person> getValue(PersonIdentification obj) {
+			return obj.getPerson();
+		}
+
+		@Override
+		public void setValue(PersonIdentification obj, Optional<Person> value) {
+			obj.setPerson(value.orElse(null));
 		}
 	};
 	protected List<com.tools20022.repository.entity.PersonName> personName;
@@ -486,7 +499,7 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPersonName = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PersonIdentification, List<PersonName>> mmPersonName = new MMBusinessAssociationEnd<PersonIdentification, List<PersonName>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPersonIdentificationChoice.mmPersonName, Organisation20.mmTreasuryManager, IndividualPersonIdentification1Choice.mmPersonName, IndividualPersonIdentification2Choice.mmPersonName,
 					IndividualPersonIdentification3Choice.mmPersonName);
@@ -499,6 +512,16 @@ public class PersonIdentification extends PartyIdentificationInformation {
 			opposite_lazy = () -> com.tools20022.repository.entity.PersonName.mmIdentification;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
+		}
+
+		@Override
+		public List<PersonName> getValue(PersonIdentification obj) {
+			return obj.getPersonName();
+		}
+
+		@Override
+		public void setValue(PersonIdentification obj, List<PersonName> value) {
+			obj.setPersonName(value);
 		}
 	};
 	protected Max35Text driversLicenseNumber;
@@ -554,7 +577,7 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * "Number assigned by a license authority to a driver's license."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDriversLicenseNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PersonIdentification, Max35Text> mmDriversLicenseNumber = new MMBusinessAttribute<PersonIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmDriversLicenseNumber, PersonIdentification2.mmDriversLicenseNumber, PersonIdentificationType1Choice.mmDriversLicenseNumber,
 					PersonIdentification7.mmDriversLicenseNumber, PersonIdentification11.mmDriverLicenseNumber, PersonIdentification15.mmDriverLicenseNumber);
@@ -569,12 +592,14 @@ public class PersonIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PersonIdentification.class.getMethod("getDriversLicenseNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PersonIdentification obj) {
+			return obj.getDriversLicenseNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification obj, Max35Text value) {
+			obj.setDriversLicenseNumber(value);
 		}
 	};
 	protected Max35Text alienRegistrationNumber;
@@ -630,7 +655,7 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * "Number assigned by a government agency to identify foreign nationals."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAlienRegistrationNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PersonIdentification, Max35Text> mmAlienRegistrationNumber = new MMBusinessAttribute<PersonIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmAlienRegistrationNumber, PersonIdentification2.mmAlienRegistrationNumber, PersonIdentificationType1Choice.mmAlienRegistrationNumber,
 					PersonIdentification7.mmAlienRegistrationNumber, PersonIdentification11.mmAlienRegistrationNumber, PersonIdentification15.mmAlienRegistrationNumber);
@@ -645,12 +670,14 @@ public class PersonIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PersonIdentification.class.getMethod("getAlienRegistrationNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PersonIdentification obj) {
+			return obj.getAlienRegistrationNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification obj, Max35Text value) {
+			obj.setAlienRegistrationNumber(value);
 		}
 	};
 	protected Max35Text passportNumber;
@@ -705,7 +732,7 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * definition} = "Number assigned by a passport authority to a passport."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPassportNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PersonIdentification, Max35Text> mmPassportNumber = new MMBusinessAttribute<PersonIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmPassportNumber, PersonIdentification2.mmPassportNumber, PersonIdentificationType1Choice.mmPassportNumber, PersonIdentification7.mmPassportNumber,
 					PersonIdentification11.mmPassportNumber, PersonIdentification15.mmPassportNumber);
@@ -720,12 +747,14 @@ public class PersonIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PersonIdentification.class.getMethod("getPassportNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PersonIdentification obj) {
+			return obj.getPassportNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification obj, Max35Text value) {
+			obj.setPassportNumber(value);
 		}
 	};
 	protected Max35Text identityCardNumber;
@@ -778,7 +807,7 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * "Number assigned by a national authority to an identity card."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentityCardNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PersonIdentification, Max35Text> mmIdentityCardNumber = new MMBusinessAttribute<PersonIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmIdentityCardNumber, PersonIdentification2.mmIdentityCardNumber, PersonIdentificationType1Choice.mmIdentityCardNumber, PersonIdentification7.mmIdentityCardNumber,
 					PersonIdentification11.mmIdentityCardNumber, PersonIdentification15.mmIdentityCardNumber);
@@ -792,12 +821,14 @@ public class PersonIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PersonIdentification.class.getMethod("getIdentityCardNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PersonIdentification obj) {
+			return obj.getIdentityCardNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification obj, Max35Text value) {
+			obj.setIdentityCardNumber(value);
 		}
 	};
 	protected Max35Text employerIdentificationNumber;
@@ -853,7 +884,7 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * "Number assigned to an employer by a registration authority."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEmployerIdentificationNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PersonIdentification, Max35Text> mmEmployerIdentificationNumber = new MMBusinessAttribute<PersonIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmEmployerIdentificationNumber, PersonIdentification2.mmEmployerIdentificationNumber, PersonIdentificationType1Choice.mmEmployerIdentificationNumber,
 					PersonIdentification7.mmEmployerIdentificationNumber, PersonIdentification11.mmEmployerIdentificationNumber, PersonIdentification15.mmEmployerIdentificationNumber);
@@ -868,12 +899,14 @@ public class PersonIdentification extends PartyIdentificationInformation {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PersonIdentification.class.getMethod("getEmployerIdentificationNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PersonIdentification obj) {
+			return obj.getEmployerIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(PersonIdentification obj, Max35Text value) {
+			obj.setEmployerIdentificationNumber(value);
 		}
 	};
 

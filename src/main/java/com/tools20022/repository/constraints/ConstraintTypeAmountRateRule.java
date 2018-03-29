@@ -52,11 +52,15 @@ public class ConstraintTypeAmountRateRule {
 	 */
 	public static final MMConstraint<Commission11> forCommission11 = new MMConstraint<Commission11>() {
 		{
-			validator = ConstraintTypeAmountRateRule::checkCommission11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAmountRateRule";
 			definition = "If Type or ExtendedType is present, then either Amount or Rate must be present. If Amount or Rate is present, then either Type or Extended Type must be present.";
 			owner_lazy = () -> Commission11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Commission11 obj) throws Exception {
+			checkCommission11(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintTypeAmountRateRule {
 	 */
 	public static final MMConstraint<Commission14> forCommission14 = new MMConstraint<Commission14>() {
 		{
-			validator = ConstraintTypeAmountRateRule::checkCommission14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAmountRateRule";
 			definition = "If Type is present, then either Amount or Rate must be present. If Amount or Rate is present, then Type must be present.";
 			owner_lazy = () -> Commission14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Commission14 obj) throws Exception {
+			checkCommission14(obj);
 		}
 	};
 

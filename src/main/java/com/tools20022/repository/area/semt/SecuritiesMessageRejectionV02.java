@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.RejectionReason3;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -156,7 +155,7 @@ public class SecuritiesMessageRejectionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageRejectionV02, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<SecuritiesMessageRejectionV02, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,12 +167,14 @@ public class SecuritiesMessageRejectionV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageRejectionV02.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(SecuritiesMessageRejectionV02 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageRejectionV02 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)
@@ -210,7 +211,7 @@ public class SecuritiesMessageRejectionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageRejectionV02, AdditionalReference3> mmRelatedReference = new MMMessageBuildingBlock<SecuritiesMessageRejectionV02, AdditionalReference3>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,12 +223,14 @@ public class SecuritiesMessageRejectionV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageRejectionV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference3 getValue(SecuritiesMessageRejectionV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageRejectionV02 obj, AdditionalReference3 value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -263,7 +266,7 @@ public class SecuritiesMessageRejectionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesMessageRejectionV02, RejectionReason3> mmReason = new MMMessageBuildingBlock<SecuritiesMessageRejectionV02, RejectionReason3>() {
 		{
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,12 +278,14 @@ public class SecuritiesMessageRejectionV02 {
 			complexType_lazy = () -> RejectionReason3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesMessageRejectionV02.class.getMethod("getReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RejectionReason3 getValue(SecuritiesMessageRejectionV02 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SecuritiesMessageRejectionV02 obj, RejectionReason3 value) {
+			obj.setReason(value);
 		}
 	};
 

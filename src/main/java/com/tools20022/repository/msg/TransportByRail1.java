@@ -110,7 +110,7 @@ public class TransportByRail1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRail1, List<Max35Text>> mmPlaceOfReceipt = new MMMessageAttribute<TransportByRail1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRail1.mmObject();
@@ -121,6 +121,16 @@ public class TransportByRail1 {
 			definition = "Identifies the location where the goods are received for transportation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(TransportByRail1 obj) {
+			return obj.getPlaceOfReceipt();
+		}
+
+		@Override
+		public void setValue(TransportByRail1 obj, List<Max35Text> value) {
+			obj.setPlaceOfReceipt(value);
 		}
 	};
 	@XmlElement(name = "PlcOfDlvry", required = true)
@@ -157,7 +167,7 @@ public class TransportByRail1 {
 	 * definition} = "Identifies the location of delivery of the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRail1, List<Max35Text>> mmPlaceOfDelivery = new MMMessageAttribute<TransportByRail1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRail1.mmObject();
@@ -168,6 +178,16 @@ public class TransportByRail1 {
 			definition = "Identifies the location of delivery of the goods.";
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(TransportByRail1 obj) {
+			return obj.getPlaceOfDelivery();
+		}
+
+		@Override
+		public void setValue(TransportByRail1 obj, List<Max35Text> value) {
+			obj.setPlaceOfDelivery(value);
 		}
 	};
 

@@ -106,7 +106,7 @@ public class QuantityToQuantityRatio1 {
 	 * definition} = "Numerator of the quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityToQuantityRatio1, DecimalNumber> mmQuantity1 = new MMMessageAttribute<QuantityToQuantityRatio1, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity1;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio1.mmObject();
@@ -118,6 +118,16 @@ public class QuantityToQuantityRatio1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(QuantityToQuantityRatio1 obj) {
+			return obj.getQuantity1();
+		}
+
+		@Override
+		public void setValue(QuantityToQuantityRatio1 obj, DecimalNumber value) {
+			obj.setQuantity1(value);
 		}
 	};
 	@XmlElement(name = "Qty2", required = true)
@@ -155,7 +165,7 @@ public class QuantityToQuantityRatio1 {
 	 * definition} = "Denominator of the quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityToQuantityRatio1, DecimalNumber> mmQuantity2 = new MMMessageAttribute<QuantityToQuantityRatio1, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity2;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio1.mmObject();
@@ -167,6 +177,16 @@ public class QuantityToQuantityRatio1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(QuantityToQuantityRatio1 obj) {
+			return obj.getQuantity2();
+		}
+
+		@Override
+		public void setValue(QuantityToQuantityRatio1 obj, DecimalNumber value) {
+			obj.setQuantity2(value);
 		}
 	};
 

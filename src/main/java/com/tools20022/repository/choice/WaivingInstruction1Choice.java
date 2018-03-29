@@ -123,7 +123,7 @@ public class WaivingInstruction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<WaivingInstruction1Choice, WaivingInstruction1Code> mmCode = new MMMessageAttribute<WaivingInstruction1Choice, WaivingInstruction1Code>() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.WaivingInstruction1Choice.mmObject();
@@ -136,6 +136,16 @@ public class WaivingInstruction1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WaivingInstruction1Code.mmObject();
+		}
+
+		@Override
+		public WaivingInstruction1Code getValue(WaivingInstruction1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(WaivingInstruction1Choice obj, WaivingInstruction1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -181,7 +191,7 @@ public class WaivingInstruction1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<WaivingInstruction1Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<WaivingInstruction1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.WaivingInstruction1Choice.mmObject();
@@ -195,6 +205,16 @@ public class WaivingInstruction1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(WaivingInstruction1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(WaivingInstruction1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

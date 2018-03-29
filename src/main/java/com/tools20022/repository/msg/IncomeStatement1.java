@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.CCPIncomeStatementAndCapitalAdequacyReportV01;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class IncomeStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingFees = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmClearingFees = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncomeStatement1.mmObject();
 			isDerived = false;
@@ -143,6 +144,16 @@ public class IncomeStatement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IncomeStatement1 obj) {
+			return obj.getClearingFees();
+		}
+
+		@Override
+		public void setValue(IncomeStatement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setClearingFees(value);
 		}
 	};
 	@XmlElement(name = "OthrOprgRvn", required = true)
@@ -177,7 +188,7 @@ public class IncomeStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherOperatingRevenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmOtherOperatingRevenue = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncomeStatement1.mmObject();
 			isDerived = false;
@@ -188,6 +199,16 @@ public class IncomeStatement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IncomeStatement1 obj) {
+			return obj.getOtherOperatingRevenue();
+		}
+
+		@Override
+		public void setValue(IncomeStatement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setOtherOperatingRevenue(value);
 		}
 	};
 	@XmlElement(name = "OprgExpnss", required = true)
@@ -222,7 +243,7 @@ public class IncomeStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperatingExpenses = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmOperatingExpenses = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncomeStatement1.mmObject();
 			isDerived = false;
@@ -233,6 +254,16 @@ public class IncomeStatement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IncomeStatement1 obj) {
+			return obj.getOperatingExpenses();
+		}
+
+		@Override
+		public void setValue(IncomeStatement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setOperatingExpenses(value);
 		}
 	};
 	@XmlElement(name = "OprgPrftOrLoss", required = true)
@@ -265,7 +296,7 @@ public class IncomeStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperatingProfitOrLoss = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6> mmOperatingProfitOrLoss = new MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncomeStatement1.mmObject();
 			isDerived = false;
@@ -276,7 +307,17 @@ public class IncomeStatement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(IncomeStatement1 obj) {
+			return obj.getOperatingProfitOrLoss();
+		}
+
+		@Override
+		public void setValue(IncomeStatement1 obj, AmountAndDirection6 value) {
+			obj.setOperatingProfitOrLoss(value);
 		}
 	};
 	@XmlElement(name = "NetIntrstIncm", required = true)
@@ -311,7 +352,7 @@ public class IncomeStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetInterestIncome = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmNetInterestIncome = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncomeStatement1.mmObject();
 			isDerived = false;
@@ -322,6 +363,16 @@ public class IncomeStatement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IncomeStatement1 obj) {
+			return obj.getNetInterestIncome();
+		}
+
+		@Override
+		public void setValue(IncomeStatement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setNetInterestIncome(value);
 		}
 	};
 	@XmlElement(name = "OthrNonOprgRvn", required = true)
@@ -356,7 +407,7 @@ public class IncomeStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherNonOperatingRevenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmOtherNonOperatingRevenue = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncomeStatement1.mmObject();
 			isDerived = false;
@@ -367,6 +418,16 @@ public class IncomeStatement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IncomeStatement1 obj) {
+			return obj.getOtherNonOperatingRevenue();
+		}
+
+		@Override
+		public void setValue(IncomeStatement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setOtherNonOperatingRevenue(value);
 		}
 	};
 	@XmlElement(name = "NonOprgExpnss", required = true)
@@ -401,7 +462,7 @@ public class IncomeStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonOperatingExpenses = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount> mmNonOperatingExpenses = new MMMessageAttribute<IncomeStatement1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncomeStatement1.mmObject();
 			isDerived = false;
@@ -412,6 +473,16 @@ public class IncomeStatement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(IncomeStatement1 obj) {
+			return obj.getNonOperatingExpenses();
+		}
+
+		@Override
+		public void setValue(IncomeStatement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setNonOperatingExpenses(value);
 		}
 	};
 	@XmlElement(name = "PreTaxPrftOrLoss", required = true)
@@ -444,7 +515,7 @@ public class IncomeStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreTaxProfitOrLoss = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6> mmPreTaxProfitOrLoss = new MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncomeStatement1.mmObject();
 			isDerived = false;
@@ -455,7 +526,17 @@ public class IncomeStatement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(IncomeStatement1 obj) {
+			return obj.getPreTaxProfitOrLoss();
+		}
+
+		@Override
+		public void setValue(IncomeStatement1 obj, AmountAndDirection6 value) {
+			obj.setPreTaxProfitOrLoss(value);
 		}
 	};
 	@XmlElement(name = "PstTaxPrftOrLoss", required = true)
@@ -488,7 +569,7 @@ public class IncomeStatement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostTaxProfitOrLoss = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6> mmPostTaxProfitOrLoss = new MMMessageAssociationEnd<IncomeStatement1, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IncomeStatement1.mmObject();
 			isDerived = false;
@@ -499,7 +580,17 @@ public class IncomeStatement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(IncomeStatement1 obj) {
+			return obj.getPostTaxProfitOrLoss();
+		}
+
+		@Override
+		public void setValue(IncomeStatement1 obj, AmountAndDirection6 value) {
+			obj.setPostTaxProfitOrLoss(value);
 		}
 	};
 
@@ -551,7 +642,7 @@ public class IncomeStatement1 {
 		return operatingProfitOrLoss;
 	}
 
-	public IncomeStatement1 setOperatingProfitOrLoss(com.tools20022.repository.msg.AmountAndDirection6 operatingProfitOrLoss) {
+	public IncomeStatement1 setOperatingProfitOrLoss(AmountAndDirection6 operatingProfitOrLoss) {
 		this.operatingProfitOrLoss = Objects.requireNonNull(operatingProfitOrLoss);
 		return this;
 	}
@@ -587,7 +678,7 @@ public class IncomeStatement1 {
 		return preTaxProfitOrLoss;
 	}
 
-	public IncomeStatement1 setPreTaxProfitOrLoss(com.tools20022.repository.msg.AmountAndDirection6 preTaxProfitOrLoss) {
+	public IncomeStatement1 setPreTaxProfitOrLoss(AmountAndDirection6 preTaxProfitOrLoss) {
 		this.preTaxProfitOrLoss = Objects.requireNonNull(preTaxProfitOrLoss);
 		return this;
 	}
@@ -596,7 +687,7 @@ public class IncomeStatement1 {
 		return postTaxProfitOrLoss;
 	}
 
-	public IncomeStatement1 setPostTaxProfitOrLoss(com.tools20022.repository.msg.AmountAndDirection6 postTaxProfitOrLoss) {
+	public IncomeStatement1 setPostTaxProfitOrLoss(AmountAndDirection6 postTaxProfitOrLoss) {
 		this.postTaxProfitOrLoss = Objects.requireNonNull(postTaxProfitOrLoss);
 		return this;
 	}

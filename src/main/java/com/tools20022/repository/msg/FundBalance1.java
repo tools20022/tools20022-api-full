@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.FundsCashFlow;
 import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -113,7 +114,7 @@ public class FundBalance1 {
 	 * definition} = "Total number of units from orders placed in units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalUnitsFromUnitOrders = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundBalance1, Optional<FinancialInstrumentQuantity1>> mmTotalUnitsFromUnitOrders = new MMMessageAssociationEnd<FundBalance1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundBalance1.mmObject();
@@ -125,7 +126,17 @@ public class FundBalance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(FundBalance1 obj) {
+			return obj.getTotalUnitsFromUnitOrders();
+		}
+
+		@Override
+		public void setValue(FundBalance1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setTotalUnitsFromUnitOrders(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlUnitsFrCshOrdrs")
@@ -161,7 +172,7 @@ public class FundBalance1 {
 	 * definition} = "Number of units derived from orders placed in cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalUnitsFromCashOrders = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundBalance1, Optional<FinancialInstrumentQuantity1>> mmTotalUnitsFromCashOrders = new MMMessageAssociationEnd<FundBalance1, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundBalance1.mmObject();
@@ -173,7 +184,17 @@ public class FundBalance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(FundBalance1 obj) {
+			return obj.getTotalUnitsFromCashOrders();
+		}
+
+		@Override
+		public void setValue(FundBalance1 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setTotalUnitsFromCashOrders(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlCshFrUnitOrdrs")
@@ -211,7 +232,7 @@ public class FundBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalCashFromUnitOrders = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundBalance1, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTotalCashFromUnitOrders = new MMMessageAttribute<FundBalance1, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundBalance1.mmObject();
@@ -223,6 +244,16 @@ public class FundBalance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(FundBalance1 obj) {
+			return obj.getTotalCashFromUnitOrders();
+		}
+
+		@Override
+		public void setValue(FundBalance1 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setTotalCashFromUnitOrders(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlCshFrCshOrdrs")
@@ -259,7 +290,7 @@ public class FundBalance1 {
 	 * definition} = "Total amount of cash from orders placed in cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalCashFromCashOrders = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundBalance1, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTotalCashFromCashOrders = new MMMessageAttribute<FundBalance1, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundBalance1.mmObject();
@@ -271,6 +302,16 @@ public class FundBalance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(FundBalance1 obj) {
+			return obj.getTotalCashFromCashOrders();
+		}
+
+		@Override
+		public void setValue(FundBalance1 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setTotalCashFromCashOrders(value.orElse(null));
 		}
 	};
 
@@ -293,7 +334,7 @@ public class FundBalance1 {
 		return totalUnitsFromUnitOrders == null ? Optional.empty() : Optional.of(totalUnitsFromUnitOrders);
 	}
 
-	public FundBalance1 setTotalUnitsFromUnitOrders(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsFromUnitOrders) {
+	public FundBalance1 setTotalUnitsFromUnitOrders(FinancialInstrumentQuantity1 totalUnitsFromUnitOrders) {
 		this.totalUnitsFromUnitOrders = totalUnitsFromUnitOrders;
 		return this;
 	}
@@ -302,7 +343,7 @@ public class FundBalance1 {
 		return totalUnitsFromCashOrders == null ? Optional.empty() : Optional.of(totalUnitsFromCashOrders);
 	}
 
-	public FundBalance1 setTotalUnitsFromCashOrders(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsFromCashOrders) {
+	public FundBalance1 setTotalUnitsFromCashOrders(FinancialInstrumentQuantity1 totalUnitsFromCashOrders) {
 		this.totalUnitsFromCashOrders = totalUnitsFromCashOrders;
 		return this;
 	}

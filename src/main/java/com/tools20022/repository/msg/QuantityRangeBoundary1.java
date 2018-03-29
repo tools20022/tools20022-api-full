@@ -98,7 +98,7 @@ public class QuantityRangeBoundary1 {
 	 * definition} = "Quantity value of the range limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBoundary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityRangeBoundary1, DecimalNumber> mmBoundary = new MMMessageAttribute<QuantityRangeBoundary1, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityRangeBoundary1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class QuantityRangeBoundary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(QuantityRangeBoundary1 obj) {
+			return obj.getBoundary();
+		}
+
+		@Override
+		public void setValue(QuantityRangeBoundary1 obj, DecimalNumber value) {
+			obj.setBoundary(value);
 		}
 	};
 	@XmlElement(name = "Incl", required = true)
@@ -143,7 +153,7 @@ public class QuantityRangeBoundary1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityRangeBoundary1, YesNoIndicator> mmIncluded = new MMMessageAttribute<QuantityRangeBoundary1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityRangeBoundary1.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class QuantityRangeBoundary1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(QuantityRangeBoundary1 obj) {
+			return obj.getIncluded();
+		}
+
+		@Override
+		public void setValue(QuantityRangeBoundary1 obj, YesNoIndicator value) {
+			obj.setIncluded(value);
 		}
 	};
 

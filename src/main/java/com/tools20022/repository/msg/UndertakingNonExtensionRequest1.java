@@ -24,6 +24,8 @@ import com.tools20022.repository.area.tsrv.UndertakingNonExtensionRequestV01;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
+import com.tools20022.repository.msg.Undertaking9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +116,7 @@ public class UndertakingNonExtensionRequest1 {
 	 * definition} = "Details related to the requesting party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingNonExtensionRequest1, PartyIdentification43> mmRequestingParty = new MMMessageAssociationEnd<UndertakingNonExtensionRequest1, PartyIdentification43>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingNonExtensionRequest1.mmObject();
@@ -126,7 +128,17 @@ public class UndertakingNonExtensionRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public PartyIdentification43 getValue(UndertakingNonExtensionRequest1 obj) {
+			return obj.getRequestingParty();
+		}
+
+		@Override
+		public void setValue(UndertakingNonExtensionRequest1 obj, PartyIdentification43 value) {
+			obj.setRequestingParty(value);
 		}
 	};
 	@XmlElement(name = "UdrtkgId", required = true)
@@ -162,7 +174,7 @@ public class UndertakingNonExtensionRequest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UndertakingNonExtensionRequest1, Undertaking9> mmUndertakingIdentification = new MMMessageAssociationEnd<UndertakingNonExtensionRequest1, Undertaking9>() {
 		{
 			businessComponentTrace_lazy = () -> Undertaking.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingNonExtensionRequest1.mmObject();
@@ -174,7 +186,17 @@ public class UndertakingNonExtensionRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Undertaking9.mmObject();
+			type_lazy = () -> Undertaking9.mmObject();
+		}
+
+		@Override
+		public Undertaking9 getValue(UndertakingNonExtensionRequest1 obj) {
+			return obj.getUndertakingIdentification();
+		}
+
+		@Override
+		public void setValue(UndertakingNonExtensionRequest1 obj, Undertaking9 value) {
+			obj.setUndertakingIdentification(value);
 		}
 	};
 
@@ -197,7 +219,7 @@ public class UndertakingNonExtensionRequest1 {
 		return requestingParty;
 	}
 
-	public UndertakingNonExtensionRequest1 setRequestingParty(com.tools20022.repository.msg.PartyIdentification43 requestingParty) {
+	public UndertakingNonExtensionRequest1 setRequestingParty(PartyIdentification43 requestingParty) {
 		this.requestingParty = Objects.requireNonNull(requestingParty);
 		return this;
 	}
@@ -206,7 +228,7 @@ public class UndertakingNonExtensionRequest1 {
 		return undertakingIdentification;
 	}
 
-	public UndertakingNonExtensionRequest1 setUndertakingIdentification(com.tools20022.repository.msg.Undertaking9 undertakingIdentification) {
+	public UndertakingNonExtensionRequest1 setUndertakingIdentification(Undertaking9 undertakingIdentification) {
 		this.undertakingIdentification = Objects.requireNonNull(undertakingIdentification);
 		return this;
 	}

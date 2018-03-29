@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarketSpecificAttribute1;
+import com.tools20022.repository.msg.SystemPartyIdentification3;
+import com.tools20022.repository.msg.SystemRestriction1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -134,7 +137,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemSecuritiesAccount1, SystemPartyIdentification3> mmAccountOwner = new MMMessageAssociationEnd<SystemSecuritiesAccount1, SystemPartyIdentification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -145,7 +148,17 @@ public class SystemSecuritiesAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
+			type_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification3 getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, SystemPartyIdentification3 value) {
+			obj.setAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -179,7 +192,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount1, Max35Text> mmIdentification = new MMMessageAttribute<SystemSecuritiesAccount1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -190,6 +203,16 @@ public class SystemSecuritiesAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -222,7 +245,7 @@ public class SystemSecuritiesAccount1 {
 	 * definition} = "Specifies the type of the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount1, SystemSecuritiesAccountType1Code> mmType = new MMMessageAttribute<SystemSecuritiesAccount1, SystemSecuritiesAccountType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -233,6 +256,16 @@ public class SystemSecuritiesAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
+		}
+
+		@Override
+		public SystemSecuritiesAccountType1Code getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, SystemSecuritiesAccountType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "OpngDt", required = true)
@@ -264,7 +297,7 @@ public class SystemSecuritiesAccount1 {
 	 * definition} = "Legal opening date for the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount1, ISODate> mmOpeningDate = new MMMessageAttribute<SystemSecuritiesAccount1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -275,6 +308,16 @@ public class SystemSecuritiesAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, ISODate value) {
+			obj.setOpeningDate(value);
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -306,7 +349,7 @@ public class SystemSecuritiesAccount1 {
 	 * definition} = "Legal closing date for the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount1, Optional<ISODate>> mmClosingDate = new MMMessageAttribute<SystemSecuritiesAccount1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -317,6 +360,16 @@ public class SystemSecuritiesAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, Optional<ISODate> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldInd", required = true)
@@ -351,7 +404,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount1, TrueFalseIndicator> mmHoldIndicator = new MMMessageAttribute<SystemSecuritiesAccount1, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -362,6 +415,16 @@ public class SystemSecuritiesAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getHoldIndicator();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, TrueFalseIndicator value) {
+			obj.setHoldIndicator(value);
 		}
 	};
 	@XmlElement(name = "NegPos", required = true)
@@ -396,7 +459,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNegativePosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount1, YesNoIndicator> mmNegativePosition = new MMMessageAttribute<SystemSecuritiesAccount1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -408,9 +471,19 @@ public class SystemSecuritiesAccount1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getNegativePosition();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, YesNoIndicator value) {
+			obj.setNegativePosition(value);
+		}
 	};
 	@XmlElement(name = "MktSpcfcAttr")
-	protected List<com.tools20022.repository.msg.MarketSpecificAttribute1> marketSpecificAttribute;
+	protected List<MarketSpecificAttribute1> marketSpecificAttribute;
 	/**
 	 * 
 	 <p>
@@ -440,7 +513,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketSpecificAttribute = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemSecuritiesAccount1, List<MarketSpecificAttribute1>> mmMarketSpecificAttribute = new MMMessageAssociationEnd<SystemSecuritiesAccount1, List<MarketSpecificAttribute1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -450,11 +523,21 @@ public class SystemSecuritiesAccount1 {
 			definition = "Additional attributes defined by a central security depositary for a party.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarketSpecificAttribute1.mmObject();
+			type_lazy = () -> MarketSpecificAttribute1.mmObject();
+		}
+
+		@Override
+		public List<MarketSpecificAttribute1> getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getMarketSpecificAttribute();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, List<MarketSpecificAttribute1> value) {
+			obj.setMarketSpecificAttribute(value);
 		}
 	};
 	@XmlElement(name = "Rstrctn")
-	protected List<com.tools20022.repository.msg.SystemRestriction1> restriction;
+	protected List<SystemRestriction1> restriction;
 	/**
 	 * 
 	 <p>
@@ -483,7 +566,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRestriction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemSecuritiesAccount1, List<SystemRestriction1>> mmRestriction = new MMMessageAssociationEnd<SystemSecuritiesAccount1, List<SystemRestriction1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -493,7 +576,17 @@ public class SystemSecuritiesAccount1 {
 			definition = "Defines the specific processing characteristics for a securities account to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemRestriction1.mmObject();
+			type_lazy = () -> SystemRestriction1.mmObject();
+		}
+
+		@Override
+		public List<SystemRestriction1> getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getRestriction();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, List<SystemRestriction1> value) {
+			obj.setRestriction(value);
 		}
 	};
 	@XmlElement(name = "EndInvstrFlg", required = true)
@@ -528,7 +621,7 @@ public class SystemSecuritiesAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount1, Exact4AlphaNumericText> mmEndInvestorFlag = new MMMessageAttribute<SystemSecuritiesAccount1, Exact4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -539,6 +632,16 @@ public class SystemSecuritiesAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getEndInvestorFlag();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, Exact4AlphaNumericText value) {
+			obj.setEndInvestorFlag(value);
 		}
 	};
 	@XmlElement(name = "PricgSchme", required = true)
@@ -572,7 +675,7 @@ public class SystemSecuritiesAccount1 {
 	 * "Defines how the price is applied to the securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemSecuritiesAccount1, Exact4AlphaNumericText> mmPricingScheme = new MMMessageAttribute<SystemSecuritiesAccount1, Exact4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount1.mmObject();
 			isDerived = false;
@@ -583,6 +686,16 @@ public class SystemSecuritiesAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(SystemSecuritiesAccount1 obj) {
+			return obj.getPricingScheme();
+		}
+
+		@Override
+		public void setValue(SystemSecuritiesAccount1 obj, Exact4AlphaNumericText value) {
+			obj.setPricingScheme(value);
 		}
 	};
 
@@ -607,7 +720,7 @@ public class SystemSecuritiesAccount1 {
 		return accountOwner;
 	}
 
-	public SystemSecuritiesAccount1 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification3 accountOwner) {
+	public SystemSecuritiesAccount1 setAccountOwner(SystemPartyIdentification3 accountOwner) {
 		this.accountOwner = Objects.requireNonNull(accountOwner);
 		return this;
 	}
@@ -670,7 +783,7 @@ public class SystemSecuritiesAccount1 {
 		return marketSpecificAttribute == null ? marketSpecificAttribute = new ArrayList<>() : marketSpecificAttribute;
 	}
 
-	public SystemSecuritiesAccount1 setMarketSpecificAttribute(List<com.tools20022.repository.msg.MarketSpecificAttribute1> marketSpecificAttribute) {
+	public SystemSecuritiesAccount1 setMarketSpecificAttribute(List<MarketSpecificAttribute1> marketSpecificAttribute) {
 		this.marketSpecificAttribute = Objects.requireNonNull(marketSpecificAttribute);
 		return this;
 	}
@@ -679,7 +792,7 @@ public class SystemSecuritiesAccount1 {
 		return restriction == null ? restriction = new ArrayList<>() : restriction;
 	}
 
-	public SystemSecuritiesAccount1 setRestriction(List<com.tools20022.repository.msg.SystemRestriction1> restriction) {
+	public SystemSecuritiesAccount1 setRestriction(List<SystemRestriction1> restriction) {
 		this.restriction = Objects.requireNonNull(restriction);
 		return this;
 	}

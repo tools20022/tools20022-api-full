@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Packaging;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Quantity3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -118,7 +119,7 @@ public class Consignment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Consignment1, Optional<Quantity3>> mmTotalQuantity = new MMMessageAttribute<Consignment1, Optional<Quantity3>>() {
 		{
 			businessElementTrace_lazy = () -> Packaging.mmTotalConsignmentQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment1.mmObject();
@@ -130,7 +131,17 @@ public class Consignment1 {
 			nextVersions_lazy = () -> Arrays.asList(Consignment3.mmTotalQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
+			complexType_lazy = () -> Quantity3.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity3> getValue(Consignment1 obj) {
+			return obj.getTotalQuantity();
+		}
+
+		@Override
+		public void setValue(Consignment1 obj, Optional<Quantity3> value) {
+			obj.setTotalQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlVol")
@@ -174,7 +185,7 @@ public class Consignment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalVolume = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Consignment1, Optional<Quantity3>> mmTotalVolume = new MMMessageAttribute<Consignment1, Optional<Quantity3>>() {
 		{
 			businessElementTrace_lazy = () -> Packaging.mmTotalVolume;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment1.mmObject();
@@ -186,7 +197,17 @@ public class Consignment1 {
 			nextVersions_lazy = () -> Arrays.asList(Consignment3.mmTotalVolume);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
+			complexType_lazy = () -> Quantity3.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity3> getValue(Consignment1 obj) {
+			return obj.getTotalVolume();
+		}
+
+		@Override
+		public void setValue(Consignment1 obj, Optional<Quantity3> value) {
+			obj.setTotalVolume(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlWght")
@@ -229,7 +250,7 @@ public class Consignment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalWeight = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Consignment1, Optional<Quantity3>> mmTotalWeight = new MMMessageAttribute<Consignment1, Optional<Quantity3>>() {
 		{
 			businessElementTrace_lazy = () -> Packaging.mmTotalWeight;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment1.mmObject();
@@ -241,7 +262,17 @@ public class Consignment1 {
 			nextVersions_lazy = () -> Arrays.asList(Consignment3.mmTotalWeight);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Quantity3.mmObject();
+			complexType_lazy = () -> Quantity3.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity3> getValue(Consignment1 obj) {
+			return obj.getTotalWeight();
+		}
+
+		@Override
+		public void setValue(Consignment1 obj, Optional<Quantity3> value) {
+			obj.setTotalWeight(value.orElse(null));
 		}
 	};
 
@@ -264,7 +295,7 @@ public class Consignment1 {
 		return totalQuantity == null ? Optional.empty() : Optional.of(totalQuantity);
 	}
 
-	public Consignment1 setTotalQuantity(com.tools20022.repository.msg.Quantity3 totalQuantity) {
+	public Consignment1 setTotalQuantity(Quantity3 totalQuantity) {
 		this.totalQuantity = totalQuantity;
 		return this;
 	}
@@ -273,7 +304,7 @@ public class Consignment1 {
 		return totalVolume == null ? Optional.empty() : Optional.of(totalVolume);
 	}
 
-	public Consignment1 setTotalVolume(com.tools20022.repository.msg.Quantity3 totalVolume) {
+	public Consignment1 setTotalVolume(Quantity3 totalVolume) {
 		this.totalVolume = totalVolume;
 		return this;
 	}
@@ -282,7 +313,7 @@ public class Consignment1 {
 		return totalWeight == null ? Optional.empty() : Optional.of(totalWeight);
 	}
 
-	public Consignment1 setTotalWeight(com.tools20022.repository.msg.Quantity3 totalWeight) {
+	public Consignment1 setTotalWeight(Quantity3 totalWeight) {
 		this.totalWeight = totalWeight;
 		return this;
 	}

@@ -24,6 +24,8 @@ import com.tools20022.repository.codeset.AccountLevel1Code;
 import com.tools20022.repository.entity.AccountServicerRole;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.CashAccount16;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +126,7 @@ public class ParentCashAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParentCashAccount1, Optional<AccountLevel1Code>> mmLevel = new MMMessageAttribute<ParentCashAccount1, Optional<AccountLevel1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParentCashAccount1.mmObject();
@@ -137,6 +139,16 @@ public class ParentCashAccount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AccountLevel1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AccountLevel1Code> getValue(ParentCashAccount1 obj) {
+			return obj.getLevel();
+		}
+
+		@Override
+		public void setValue(ParentCashAccount1 obj, Optional<AccountLevel1Code> value) {
+			obj.setLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -182,7 +194,7 @@ public class ParentCashAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParentCashAccount1, CashAccount16> mmIdentification = new MMMessageAttribute<ParentCashAccount1, CashAccount16>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParentCashAccount1.mmObject();
@@ -194,7 +206,17 @@ public class ParentCashAccount1 {
 			nextVersions_lazy = () -> Arrays.asList(ParentCashAccount2.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			complexType_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public CashAccount16 getValue(ParentCashAccount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ParentCashAccount1 obj, CashAccount16 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Svcr")
@@ -241,7 +263,7 @@ public class ParentCashAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ParentCashAccount1, Optional<BranchAndFinancialInstitutionIdentification5>> mmServicer = new MMMessageAttribute<ParentCashAccount1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ParentCashAccount1.mmObject();
@@ -253,7 +275,17 @@ public class ParentCashAccount1 {
 			nextVersions_lazy = () -> Arrays.asList(ParentCashAccount2.mmServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(ParentCashAccount1 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(ParentCashAccount1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setServicer(value.orElse(null));
 		}
 	};
 
@@ -286,7 +318,7 @@ public class ParentCashAccount1 {
 		return identification;
 	}
 
-	public ParentCashAccount1 setIdentification(com.tools20022.repository.msg.CashAccount16 identification) {
+	public ParentCashAccount1 setIdentification(CashAccount16 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -295,7 +327,7 @@ public class ParentCashAccount1 {
 		return servicer == null ? Optional.empty() : Optional.of(servicer);
 	}
 
-	public ParentCashAccount1 setServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 servicer) {
+	public ParentCashAccount1 setServicer(BranchAndFinancialInstitutionIdentification5 servicer) {
 		this.servicer = servicer;
 		return this;
 	}

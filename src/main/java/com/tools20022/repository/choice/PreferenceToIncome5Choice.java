@@ -108,7 +108,7 @@ public class PreferenceToIncome5Choice {
 	 * PreferenceToIncome4Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PreferenceToIncome5Choice, PreferenceToIncome1Code> mmCode = new MMMessageAttribute<PreferenceToIncome5Choice, PreferenceToIncome1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreferenceToIncome5Choice.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class PreferenceToIncome5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncome1Code.mmObject();
+		}
+
+		@Override
+		public PreferenceToIncome1Code getValue(PreferenceToIncome5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PreferenceToIncome5Choice obj, PreferenceToIncome1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class PreferenceToIncome5Choice {
 	 * PreferenceToIncome4Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PreferenceToIncome5Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<PreferenceToIncome5Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PreferenceToIncome5Choice.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class PreferenceToIncome5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(PreferenceToIncome5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PreferenceToIncome5Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

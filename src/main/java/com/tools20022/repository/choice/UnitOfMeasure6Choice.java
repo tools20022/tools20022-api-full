@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "UnitOfMeasure6Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -118,7 +118,7 @@ public class UnitOfMeasure6Choice {
 	 * UnitOfMeasure3Choice.mmUnitOfMeasureCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitOfMeasureCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOfMeasure6Choice, UnitOfMeasure9Code> mmUnitOfMeasureCode = new MMMessageAttribute<UnitOfMeasure6Choice, UnitOfMeasure9Code>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure6Choice.mmObject();
@@ -131,6 +131,16 @@ public class UnitOfMeasure6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasure9Code.mmObject();
+		}
+
+		@Override
+		public UnitOfMeasure9Code getValue(UnitOfMeasure6Choice obj) {
+			return obj.getUnitOfMeasureCode();
+		}
+
+		@Override
+		public void setValue(UnitOfMeasure6Choice obj, UnitOfMeasure9Code value) {
+			obj.setUnitOfMeasureCode(value);
 		}
 	};
 	@XmlElement(name = "OthrUnitOfMeasr", required = true)
@@ -173,7 +183,7 @@ public class UnitOfMeasure6Choice {
 	 * UnitOfMeasure3Choice.mmOtherUnitOfMeasure}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherUnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitOfMeasure6Choice, Max35Text> mmOtherUnitOfMeasure = new MMMessageAttribute<UnitOfMeasure6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOfMeasure6Choice.mmObject();
@@ -187,6 +197,16 @@ public class UnitOfMeasure6Choice {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Max35Text getValue(UnitOfMeasure6Choice obj) {
+			return obj.getOtherUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(UnitOfMeasure6Choice obj, Max35Text value) {
+			obj.setOtherUnitOfMeasure(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -195,7 +215,7 @@ public class UnitOfMeasure6Choice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitOfMeasure6Choice.mmUnitOfMeasureCode, com.tools20022.repository.choice.UnitOfMeasure6Choice.mmOtherUnitOfMeasure);
 				trace_lazy = () -> ProductQuantity.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitOfMeasure6Choice";
 				definition = "Specifies a unit of measure with a code or free text.";
 				previousVersion_lazy = () -> UnitOfMeasure3Choice.mmObject();

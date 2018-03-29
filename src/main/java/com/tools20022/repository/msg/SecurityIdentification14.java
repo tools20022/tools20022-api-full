@@ -31,6 +31,7 @@ import com.tools20022.repository.datatype.ISINIdentifier;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherIdentification1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -308,7 +309,7 @@ public class SecurityIdentification14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification14, Optional<ISINIdentifier>> mmISIN = new MMMessageAttribute<SecurityIdentification14, Optional<ISINIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
@@ -322,9 +323,19 @@ public class SecurityIdentification14 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
+
+		@Override
+		public Optional<ISINIdentifier> getValue(SecurityIdentification14 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification14 obj, Optional<ISINIdentifier> value) {
+			obj.setISIN(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "OthrId")
-	protected List<com.tools20022.repository.msg.OtherIdentification1> otherIdentification;
+	protected List<OtherIdentification1> otherIdentification;
 	/**
 	 * 
 	 <p>
@@ -366,7 +377,7 @@ public class SecurityIdentification14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification14, List<OtherIdentification1>> mmOtherIdentification = new MMMessageAssociationEnd<SecurityIdentification14, List<OtherIdentification1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
@@ -378,7 +389,17 @@ public class SecurityIdentification14 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityIdentification19.mmOtherIdentification);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherIdentification1.mmObject();
+			type_lazy = () -> OtherIdentification1.mmObject();
+		}
+
+		@Override
+		public List<OtherIdentification1> getValue(SecurityIdentification14 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification14 obj, List<OtherIdentification1> value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -423,7 +444,7 @@ public class SecurityIdentification14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification14, Optional<Max140Text>> mmDescription = new MMMessageAttribute<SecurityIdentification14, Optional<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
@@ -436,6 +457,16 @@ public class SecurityIdentification14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(SecurityIdentification14 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification14 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 
@@ -491,7 +522,7 @@ public class SecurityIdentification14 {
 		return otherIdentification == null ? otherIdentification = new ArrayList<>() : otherIdentification;
 	}
 
-	public SecurityIdentification14 setOtherIdentification(List<com.tools20022.repository.msg.OtherIdentification1> otherIdentification) {
+	public SecurityIdentification14 setOtherIdentification(List<OtherIdentification1> otherIdentification) {
 		this.otherIdentification = Objects.requireNonNull(otherIdentification);
 		return this;
 	}

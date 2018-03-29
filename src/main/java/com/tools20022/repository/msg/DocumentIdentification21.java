@@ -113,7 +113,7 @@ public class DocumentIdentification21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification21, DocumentIdentification2Choice> mmIdentification = new MMMessageAssociationEnd<DocumentIdentification21, DocumentIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification21.mmObject();
@@ -127,6 +127,16 @@ public class DocumentIdentification21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification2Choice getValue(DocumentIdentification21 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification21 obj, DocumentIdentification2Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "DocNb")
@@ -161,7 +171,7 @@ public class DocumentIdentification21 {
 	 * definition} = "Identification of the type of document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocumentNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification21, Optional<DocumentNumber2Choice>> mmDocumentNumber = new MMMessageAssociationEnd<DocumentIdentification21, Optional<DocumentNumber2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification21.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class DocumentIdentification21 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber2Choice> getValue(DocumentIdentification21 obj) {
+			return obj.getDocumentNumber();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification21 obj, Optional<DocumentNumber2Choice> value) {
+			obj.setDocumentNumber(value.orElse(null));
 		}
 	};
 

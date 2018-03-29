@@ -112,7 +112,7 @@ public class SpecificInstructionRequest1 {
 	 * definition} = "Request to register for participation to the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParticipationRegistration = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SpecificInstructionRequest1, Optional<YesNoIndicator>> mmParticipationRegistration = new MMMessageAttribute<SpecificInstructionRequest1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmParticipationRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SpecificInstructionRequest1.mmObject();
@@ -124,6 +124,16 @@ public class SpecificInstructionRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SpecificInstructionRequest1 obj) {
+			return obj.getParticipationRegistration();
+		}
+
+		@Override
+		public void setValue(SpecificInstructionRequest1 obj, Optional<YesNoIndicator> value) {
+			obj.setParticipationRegistration(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlckgScties")
@@ -161,7 +171,7 @@ public class SpecificInstructionRequest1 {
 	 * definition} = "Request to block the securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBlockingSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SpecificInstructionRequest1, Optional<YesNoIndicator>> mmBlockingSecurities = new MMMessageAttribute<SpecificInstructionRequest1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmBlockingSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SpecificInstructionRequest1.mmObject();
@@ -173,6 +183,16 @@ public class SpecificInstructionRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SpecificInstructionRequest1 obj) {
+			return obj.getBlockingSecurities();
+		}
+
+		@Override
+		public void setValue(SpecificInstructionRequest1 obj, Optional<YesNoIndicator> value) {
+			obj.setBlockingSecurities(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesRegn")
@@ -210,7 +230,7 @@ public class SpecificInstructionRequest1 {
 	 * definition} = "Request to register the securities for the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesRegistration = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SpecificInstructionRequest1, Optional<YesNoIndicator>> mmSecuritiesRegistration = new MMMessageAttribute<SpecificInstructionRequest1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmSecuritiesRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SpecificInstructionRequest1.mmObject();
@@ -222,6 +242,16 @@ public class SpecificInstructionRequest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SpecificInstructionRequest1 obj) {
+			return obj.getSecuritiesRegistration();
+		}
+
+		@Override
+		public void setValue(SpecificInstructionRequest1 obj, Optional<YesNoIndicator> value) {
+			obj.setSecuritiesRegistration(value.orElse(null));
 		}
 	};
 

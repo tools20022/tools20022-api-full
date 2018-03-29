@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.TradeDateCode3Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,7 +124,7 @@ public class TradeDate5Choice {
 	 * TradeDate1Choice.mmDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDate5Choice, DateAndDateTimeChoice> mmDate = new MMMessageAttribute<TradeDate5Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDate5Choice.mmObject();
 			isDerived = false;
@@ -135,7 +137,17 @@ public class TradeDate5Choice {
 			previousVersion_lazy = () -> TradeDate1Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(TradeDate5Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(TradeDate5Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -184,7 +196,7 @@ public class TradeDate5Choice {
 	 * TradeDate1Choice.mmDateCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDate5Choice, TradeDateCode3Choice> mmDateCode = new MMMessageAttribute<TradeDate5Choice, TradeDateCode3Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDate5Choice.mmObject();
 			isDerived = false;
@@ -197,7 +209,17 @@ public class TradeDate5Choice {
 			previousVersion_lazy = () -> TradeDate1Choice.mmDateCode;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.TradeDateCode3Choice.mmObject();
+			complexType_lazy = () -> TradeDateCode3Choice.mmObject();
+		}
+
+		@Override
+		public TradeDateCode3Choice getValue(TradeDate5Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(TradeDate5Choice obj, TradeDateCode3Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -220,7 +242,7 @@ public class TradeDate5Choice {
 		return date;
 	}
 
-	public TradeDate5Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public TradeDate5Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -229,7 +251,7 @@ public class TradeDate5Choice {
 		return dateCode;
 	}
 
-	public TradeDate5Choice setDateCode(com.tools20022.repository.choice.TradeDateCode3Choice dateCode) {
+	public TradeDate5Choice setDateCode(TradeDateCode3Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

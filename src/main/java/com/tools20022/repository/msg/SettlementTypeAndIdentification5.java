@@ -133,7 +133,7 @@ public class SettlementTypeAndIdentification5 {
 	 * definition} = "Specifies how the transaction is to be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTypeAndIdentification5, DeliveryReceiptType2Code> mmPayment = new MMMessageAttribute<SettlementTypeAndIdentification5, DeliveryReceiptType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification5.mmObject();
@@ -146,6 +146,16 @@ public class SettlementTypeAndIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
+		}
+
+		@Override
+		public DeliveryReceiptType2Code getValue(SettlementTypeAndIdentification5 obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(SettlementTypeAndIdentification5 obj, DeliveryReceiptType2Code value) {
+			obj.setPayment(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -183,7 +193,7 @@ public class SettlementTypeAndIdentification5 {
 	 * definition} = "Reference of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementTypeAndIdentification5, RestrictedFINXMax16Text> mmTransactionIdentification = new MMMessageAttribute<SettlementTypeAndIdentification5, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification5.mmObject();
@@ -195,6 +205,16 @@ public class SettlementTypeAndIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(SettlementTypeAndIdentification5 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementTypeAndIdentification5 obj, RestrictedFINXMax16Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SttlmDt")
@@ -234,7 +254,7 @@ public class SettlementTypeAndIdentification5 {
 	 * definition} = "Identifies the intended settlement date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementTypeAndIdentification5, Optional<DateAndDateTimeChoice>> mmSettlementDate = new MMMessageAssociationEnd<SettlementTypeAndIdentification5, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTypeAndIdentification5.mmObject();
@@ -248,6 +268,16 @@ public class SettlementTypeAndIdentification5 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(SettlementTypeAndIdentification5 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(SettlementTypeAndIdentification5 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setSettlementDate(value.orElse(null));
 		}
 	};
 

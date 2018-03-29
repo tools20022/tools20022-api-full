@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.CashProceedsDefinition;
 import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashOption59;
+import com.tools20022.repository.msg.SecuritiesOption66;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -140,7 +142,7 @@ public class CorporateActionOption143 {
 	 * CorporateActionOption119.mmOptionNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption143, OptionNumber1Choice> mmOptionNumber = new MMMessageAssociationEnd<CorporateActionOption143, OptionNumber1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption143.mmObject();
@@ -155,6 +157,16 @@ public class CorporateActionOption143 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OptionNumber1Choice.mmObject();
+		}
+
+		@Override
+		public OptionNumber1Choice getValue(CorporateActionOption143 obj) {
+			return obj.getOptionNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption143 obj, OptionNumber1Choice value) {
+			obj.setOptionNumber(value);
 		}
 	};
 	@XmlElement(name = "OptnTp", required = true)
@@ -200,7 +212,7 @@ public class CorporateActionOption143 {
 	 * CorporateActionOption119.mmOptionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption143, CorporateActionOption19Choice> mmOptionType = new MMMessageAssociationEnd<CorporateActionOption143, CorporateActionOption19Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption143.mmObject();
@@ -216,9 +228,19 @@ public class CorporateActionOption143 {
 			isComposite = true;
 			type_lazy = () -> CorporateActionOption19Choice.mmObject();
 		}
+
+		@Override
+		public CorporateActionOption19Choice getValue(CorporateActionOption143 obj) {
+			return obj.getOptionType();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption143 obj, CorporateActionOption19Choice value) {
+			obj.setOptionType(value);
+		}
 	};
 	@XmlElement(name = "SctiesMvmntDtls")
-	protected List<com.tools20022.repository.msg.SecuritiesOption66> securitiesMovementDetails;
+	protected List<SecuritiesOption66> securitiesMovementDetails;
 	/**
 	 * 
 	 <p>
@@ -260,7 +282,7 @@ public class CorporateActionOption143 {
 	 * CorporateActionOption119.mmSecuritiesMovementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption143, List<SecuritiesOption66>> mmSecuritiesMovementDetails = new MMMessageAssociationEnd<CorporateActionOption143, List<SecuritiesOption66>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption143.mmObject();
@@ -273,11 +295,21 @@ public class CorporateActionOption143 {
 			previousVersion_lazy = () -> CorporateActionOption119.mmSecuritiesMovementDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesOption66.mmObject();
+			type_lazy = () -> SecuritiesOption66.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesOption66> getValue(CorporateActionOption143 obj) {
+			return obj.getSecuritiesMovementDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption143 obj, List<SecuritiesOption66> value) {
+			obj.setSecuritiesMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "CshMvmntDtls")
-	protected List<com.tools20022.repository.msg.CashOption59> cashMovementDetails;
+	protected List<CashOption59> cashMovementDetails;
 	/**
 	 * 
 	 <p>
@@ -319,7 +351,7 @@ public class CorporateActionOption143 {
 	 * CorporateActionOption119.mmCashMovementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionOption143, List<CashOption59>> mmCashMovementDetails = new MMMessageAssociationEnd<CorporateActionOption143, List<CashOption59>>() {
 		{
 			businessComponentTrace_lazy = () -> CashProceedsDefinition.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption143.mmObject();
@@ -332,7 +364,17 @@ public class CorporateActionOption143 {
 			previousVersion_lazy = () -> CorporateActionOption119.mmCashMovementDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashOption59.mmObject();
+			type_lazy = () -> CashOption59.mmObject();
+		}
+
+		@Override
+		public List<CashOption59> getValue(CorporateActionOption143 obj) {
+			return obj.getCashMovementDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption143 obj, List<CashOption59> value) {
+			obj.setCashMovementDetails(value);
 		}
 	};
 
@@ -375,7 +417,7 @@ public class CorporateActionOption143 {
 		return securitiesMovementDetails == null ? securitiesMovementDetails = new ArrayList<>() : securitiesMovementDetails;
 	}
 
-	public CorporateActionOption143 setSecuritiesMovementDetails(List<com.tools20022.repository.msg.SecuritiesOption66> securitiesMovementDetails) {
+	public CorporateActionOption143 setSecuritiesMovementDetails(List<SecuritiesOption66> securitiesMovementDetails) {
 		this.securitiesMovementDetails = Objects.requireNonNull(securitiesMovementDetails);
 		return this;
 	}
@@ -384,7 +426,7 @@ public class CorporateActionOption143 {
 		return cashMovementDetails == null ? cashMovementDetails = new ArrayList<>() : cashMovementDetails;
 	}
 
-	public CorporateActionOption143 setCashMovementDetails(List<com.tools20022.repository.msg.CashOption59> cashMovementDetails) {
+	public CorporateActionOption143 setCashMovementDetails(List<CashOption59> cashMovementDetails) {
 		this.cashMovementDetails = Objects.requireNonNull(cashMovementDetails);
 		return this;
 	}

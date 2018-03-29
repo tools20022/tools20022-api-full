@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TMSActionIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +130,7 @@ public class TMSEvent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent2, ISODateTime> mmTimeStamp = new MMMessageAttribute<TMSEvent2, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent2.mmObject();
 			isDerived = false;
@@ -141,6 +142,16 @@ public class TMSEvent2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(TMSEvent2 obj) {
+			return obj.getTimeStamp();
+		}
+
+		@Override
+		public void setValue(TMSEvent2 obj, ISODateTime value) {
+			obj.setTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "Rslt", required = true)
@@ -185,7 +196,7 @@ public class TMSEvent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent2, TerminalManagementActionResult1Code> mmResult = new MMMessageAttribute<TMSEvent2, TerminalManagementActionResult1Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent2.mmObject();
@@ -198,6 +209,16 @@ public class TMSEvent2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult1Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementActionResult1Code getValue(TMSEvent2 obj) {
+			return obj.getResult();
+		}
+
+		@Override
+		public void setValue(TMSEvent2 obj, TerminalManagementActionResult1Code value) {
+			obj.setResult(value);
 		}
 	};
 	@XmlElement(name = "ActnId", required = true)
@@ -238,7 +259,7 @@ public class TMSEvent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSEvent2, TMSActionIdentification2> mmActionIdentification = new MMMessageAssociationEnd<TMSEvent2, TMSActionIdentification2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent2.mmObject();
 			isDerived = false;
@@ -250,7 +271,17 @@ public class TMSEvent2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification2.mmObject();
+			type_lazy = () -> TMSActionIdentification2.mmObject();
+		}
+
+		@Override
+		public TMSActionIdentification2 getValue(TMSEvent2 obj) {
+			return obj.getActionIdentification();
+		}
+
+		@Override
+		public void setValue(TMSEvent2 obj, TMSActionIdentification2 value) {
+			obj.setActionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlErrInf")
@@ -289,7 +320,7 @@ public class TMSEvent2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalErrorInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSEvent2, Optional<Max70Text>> mmAdditionalErrorInformation = new MMMessageAttribute<TMSEvent2, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSEvent2.mmObject();
 			isDerived = false;
@@ -301,6 +332,16 @@ public class TMSEvent2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TMSEvent2 obj) {
+			return obj.getAdditionalErrorInformation();
+		}
+
+		@Override
+		public void setValue(TMSEvent2 obj, Optional<Max70Text> value) {
+			obj.setAdditionalErrorInformation(value.orElse(null));
 		}
 	};
 
@@ -343,7 +384,7 @@ public class TMSEvent2 {
 		return actionIdentification;
 	}
 
-	public TMSEvent2 setActionIdentification(com.tools20022.repository.msg.TMSActionIdentification2 actionIdentification) {
+	public TMSEvent2 setActionIdentification(TMSActionIdentification2 actionIdentification) {
 		this.actionIdentification = Objects.requireNonNull(actionIdentification);
 		return this;
 	}

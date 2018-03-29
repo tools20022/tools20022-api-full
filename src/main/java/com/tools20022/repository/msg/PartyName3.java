@@ -100,7 +100,7 @@ public class PartyName3 {
 	 * definition} = "Specifies the date from which the party name is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyName3, Optional<ISODate>> mmValidFrom = new MMMessageAttribute<PartyName3, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyName3.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class PartyName3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PartyName3 obj) {
+			return obj.getValidFrom();
+		}
+
+		@Override
+		public void setValue(PartyName3 obj, Optional<ISODate> value) {
+			obj.setValidFrom(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -143,7 +153,7 @@ public class PartyName3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyName3, Optional<Max350Text>> mmName = new MMMessageAttribute<PartyName3, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyName3.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class PartyName3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PartyName3 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyName3 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShrtNm")
@@ -184,7 +204,7 @@ public class PartyName3 {
 	 * definition} = "Specifies the short name of the organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyName3, Optional<Max35Text>> mmShortName = new MMMessageAttribute<PartyName3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyName3.mmObject();
 			isDerived = false;
@@ -195,6 +215,16 @@ public class PartyName3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyName3 obj) {
+			return obj.getShortName();
+		}
+
+		@Override
+		public void setValue(PartyName3 obj, Optional<Max35Text> value) {
+			obj.setShortName(value.orElse(null));
 		}
 	};
 

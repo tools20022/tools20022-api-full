@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.AuditTrailOrBusinessError1Choice;
 import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount16;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class CashAccountAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountAuditTrailOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountAuditTrailReport1, AuditTrailOrBusinessError1Choice> mmCashAccountAuditTrailOrError = new MMMessageAssociationEnd<CashAccountAuditTrailReport1, AuditTrailOrBusinessError1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -132,6 +133,16 @@ public class CashAccountAuditTrailReport1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
+		}
+
+		@Override
+		public AuditTrailOrBusinessError1Choice getValue(CashAccountAuditTrailReport1 obj) {
+			return obj.getCashAccountAuditTrailOrError();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailReport1 obj, AuditTrailOrBusinessError1Choice value) {
+			obj.setCashAccountAuditTrailOrError(value);
 		}
 	};
 	@XmlElement(name = "DtPrd")
@@ -172,7 +183,7 @@ public class CashAccountAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountAuditTrailReport1, Optional<DateSearchChoice>> mmDatePeriod = new MMMessageAttribute<CashAccountAuditTrailReport1, Optional<DateSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -184,6 +195,16 @@ public class CashAccountAuditTrailReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateSearchChoice> getValue(CashAccountAuditTrailReport1 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailReport1 obj, Optional<DateSearchChoice> value) {
+			obj.setDatePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcctId", required = true)
@@ -224,7 +245,7 @@ public class CashAccountAuditTrailReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountAuditTrailReport1, CashAccount16> mmCashAccountIdentification = new MMMessageAttribute<CashAccountAuditTrailReport1, CashAccount16>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountAuditTrailReport1.mmObject();
 			isDerived = false;
@@ -235,7 +256,17 @@ public class CashAccountAuditTrailReport1 {
 			nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailReport2.mmCashAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			complexType_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public CashAccount16 getValue(CashAccountAuditTrailReport1 obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccountAuditTrailReport1 obj, CashAccount16 value) {
+			obj.setCashAccountIdentification(value);
 		}
 	};
 
@@ -276,7 +307,7 @@ public class CashAccountAuditTrailReport1 {
 		return cashAccountIdentification;
 	}
 
-	public CashAccountAuditTrailReport1 setCashAccountIdentification(com.tools20022.repository.msg.CashAccount16 cashAccountIdentification) {
+	public CashAccountAuditTrailReport1 setCashAccountIdentification(CashAccount16 cashAccountIdentification) {
 		this.cashAccountIdentification = Objects.requireNonNull(cashAccountIdentification);
 		return this;
 	}

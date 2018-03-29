@@ -115,7 +115,7 @@ public class InstructionStatusSearch2 {
 	 * definition} = "Status of a transfer.\n."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstructionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionStatusSearch2, PaymentStatusCodeSearchChoice> mmPaymentInstructionStatus = new MMMessageAttribute<InstructionStatusSearch2, PaymentStatusCodeSearchChoice>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusSearch2.mmObject();
@@ -127,6 +127,16 @@ public class InstructionStatusSearch2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentStatusCodeSearchChoice.mmObject();
+		}
+
+		@Override
+		public PaymentStatusCodeSearchChoice getValue(InstructionStatusSearch2 obj) {
+			return obj.getPaymentInstructionStatus();
+		}
+
+		@Override
+		public void setValue(InstructionStatusSearch2 obj, PaymentStatusCodeSearchChoice value) {
+			obj.setPaymentInstructionStatus(value);
 		}
 	};
 	@XmlElement(name = "PmtInstrStsDtTm")
@@ -165,7 +175,7 @@ public class InstructionStatusSearch2 {
 	 * "Date and time at which the status was assigned to the transfer.\n."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstructionStatusDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionStatusSearch2, Optional<DateTimePeriodChoice>> mmPaymentInstructionStatusDateTime = new MMMessageAttribute<InstructionStatusSearch2, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusSearch2.mmObject();
@@ -177,6 +187,16 @@ public class InstructionStatusSearch2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(InstructionStatusSearch2 obj) {
+			return obj.getPaymentInstructionStatusDateTime();
+		}
+
+		@Override
+		public void setValue(InstructionStatusSearch2 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setPaymentInstructionStatusDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryStsRsn")
@@ -211,7 +231,7 @@ public class InstructionStatusSearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionStatusSearch2, Optional<Max4AlphaNumericText>> mmProprietaryStatusReason = new MMMessageAttribute<InstructionStatusSearch2, Optional<Max4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionStatusSearch2.mmObject();
 			isDerived = false;
@@ -222,6 +242,16 @@ public class InstructionStatusSearch2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(InstructionStatusSearch2 obj) {
+			return obj.getProprietaryStatusReason();
+		}
+
+		@Override
+		public void setValue(InstructionStatusSearch2 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setProprietaryStatusReason(value.orElse(null));
 		}
 	};
 

@@ -123,7 +123,7 @@ public class InstructionProcessingStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus1, Status3Code> mmStatus = new MMMessageAttribute<InstructionProcessingStatus1, Status3Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus1.mmObject();
@@ -136,6 +136,16 @@ public class InstructionProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status3Code.mmObject();
+		}
+
+		@Override
+		public Status3Code getValue(InstructionProcessingStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus1 obj, Status3Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -175,7 +185,7 @@ public class InstructionProcessingStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<InstructionProcessingStatus1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus1.mmObject();
 			isDerived = false;
@@ -187,6 +197,16 @@ public class InstructionProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(InstructionProcessingStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

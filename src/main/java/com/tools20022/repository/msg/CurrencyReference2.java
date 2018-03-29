@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExchangeRateInformation1;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,7 +128,7 @@ public class CurrencyReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyReference2, CurrencyCode> mmTargetCurrency = new MMMessageAttribute<CurrencyReference2, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyReference2.mmObject();
@@ -140,6 +141,16 @@ public class CurrencyReference2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CurrencyReference2 obj) {
+			return obj.getTargetCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyReference2 obj, CurrencyCode value) {
+			obj.setTargetCurrency(value);
 		}
 	};
 	@XmlElement(name = "SrcCcy", required = true)
@@ -185,7 +196,7 @@ public class CurrencyReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyReference2, CurrencyCode> mmSourceCurrency = new MMMessageAttribute<CurrencyReference2, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyReference2.mmObject();
@@ -199,9 +210,19 @@ public class CurrencyReference2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
+
+		@Override
+		public CurrencyCode getValue(CurrencyReference2 obj) {
+			return obj.getSourceCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyReference2 obj, CurrencyCode value) {
+			obj.setSourceCurrency(value);
+		}
 	};
 	@XmlElement(name = "XchgRateInf")
-	protected List<com.tools20022.repository.msg.ExchangeRateInformation1> exchangeRateInformation;
+	protected List<ExchangeRateInformation1> exchangeRateInformation;
 	/**
 	 * 
 	 <p>
@@ -245,7 +266,7 @@ public class CurrencyReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRateInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyReference2, List<ExchangeRateInformation1>> mmExchangeRateInformation = new MMMessageAttribute<CurrencyReference2, List<ExchangeRateInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyReference2.mmObject();
@@ -256,7 +277,17 @@ public class CurrencyReference2 {
 			definition = "The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
 			nextVersions_lazy = () -> Arrays.asList(CurrencyReference3.mmExchangeRateInformation);
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ExchangeRateInformation1.mmObject();
+			complexType_lazy = () -> ExchangeRateInformation1.mmObject();
+		}
+
+		@Override
+		public List<ExchangeRateInformation1> getValue(CurrencyReference2 obj) {
+			return obj.getExchangeRateInformation();
+		}
+
+		@Override
+		public void setValue(CurrencyReference2 obj, List<ExchangeRateInformation1> value) {
+			obj.setExchangeRateInformation(value);
 		}
 	};
 
@@ -305,7 +336,7 @@ public class CurrencyReference2 {
 		return exchangeRateInformation == null ? exchangeRateInformation = new ArrayList<>() : exchangeRateInformation;
 	}
 
-	public CurrencyReference2 setExchangeRateInformation(List<com.tools20022.repository.msg.ExchangeRateInformation1> exchangeRateInformation) {
+	public CurrencyReference2 setExchangeRateInformation(List<ExchangeRateInformation1> exchangeRateInformation) {
 		this.exchangeRateInformation = Objects.requireNonNull(exchangeRateInformation);
 		return this;
 	}

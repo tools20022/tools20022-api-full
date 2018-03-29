@@ -104,7 +104,7 @@ public class DateAndAmount1 {
 	 * definition} = "Date on which the amount is declared or registered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmount1, ISODate> mmDate = new MMMessageAttribute<DateAndAmount1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmount1.mmObject();
@@ -116,6 +116,16 @@ public class DateAndAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DateAndAmount1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateAndAmount1 obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -152,7 +162,7 @@ public class DateAndAmount1 {
 	 * definition} = "Amount of money."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndAmount1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<DateAndAmount1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndPeriod.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateAndAmount1.mmObject();
@@ -164,6 +174,16 @@ public class DateAndAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(DateAndAmount1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(DateAndAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

@@ -110,7 +110,7 @@ public class ATMCommandIdentification1 {
 	 * definition} = "Identification of the entity issuing the command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrigin = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandIdentification1, Optional<Max35Text>> mmOrigin = new MMMessageAttribute<ATMCommandIdentification1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> PointOfInteraction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
@@ -122,6 +122,16 @@ public class ATMCommandIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMCommandIdentification1 obj) {
+			return obj.getOrigin();
+		}
+
+		@Override
+		public void setValue(ATMCommandIdentification1 obj, Optional<Max35Text> value) {
+			obj.setOrigin(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ref")
@@ -154,7 +164,7 @@ public class ATMCommandIdentification1 {
 	 * "Unique identification of the command for the issuer of the command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandIdentification1, Optional<Max35Text>> mmReference = new MMMessageAttribute<ATMCommandIdentification1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class ATMCommandIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMCommandIdentification1 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(ATMCommandIdentification1 obj, Optional<Max35Text> value) {
+			obj.setReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prcr")
@@ -202,7 +222,7 @@ public class ATMCommandIdentification1 {
 	 * "Identification or address of the host performing the command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommandIdentification1, Optional<Max140Text>> mmProcessor = new MMMessageAttribute<ATMCommandIdentification1, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
@@ -214,6 +234,16 @@ public class ATMCommandIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(ATMCommandIdentification1 obj) {
+			return obj.getProcessor();
+		}
+
+		@Override
+		public void setValue(ATMCommandIdentification1 obj, Optional<Max140Text> value) {
+			obj.setProcessor(value.orElse(null));
 		}
 	};
 

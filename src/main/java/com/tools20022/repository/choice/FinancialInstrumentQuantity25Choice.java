@@ -112,7 +112,7 @@ public class FinancialInstrumentQuantity25Choice {
 	 * "Quantity expressed as a number, such as a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity25Choice, DecimalNumber> mmUnit = new MMMessageAttribute<FinancialInstrumentQuantity25Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.mmObject();
@@ -124,6 +124,16 @@ public class FinancialInstrumentQuantity25Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(FinancialInstrumentQuantity25Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity25Choice obj, DecimalNumber value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "NmnlVal", required = true)
@@ -161,7 +171,7 @@ public class FinancialInstrumentQuantity25Choice {
 	 * definition} = "TBC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNominalValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity25Choice, ActiveOrHistoricCurrencyAndAmount> mmNominalValue = new MMMessageAttribute<FinancialInstrumentQuantity25Choice, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.mmObject();
@@ -173,6 +183,16 @@ public class FinancialInstrumentQuantity25Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(FinancialInstrumentQuantity25Choice obj) {
+			return obj.getNominalValue();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity25Choice obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setNominalValue(value);
 		}
 	};
 	@XmlElement(name = "MntryVal", required = true)
@@ -210,7 +230,7 @@ public class FinancialInstrumentQuantity25Choice {
 	 * definition} = "TBC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMonetaryValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity25Choice, ActiveOrHistoricCurrencyAndAmount> mmMonetaryValue = new MMMessageAttribute<FinancialInstrumentQuantity25Choice, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice.mmObject();
@@ -222,6 +242,16 @@ public class FinancialInstrumentQuantity25Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(FinancialInstrumentQuantity25Choice obj) {
+			return obj.getMonetaryValue();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity25Choice obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setMonetaryValue(value);
 		}
 	};
 

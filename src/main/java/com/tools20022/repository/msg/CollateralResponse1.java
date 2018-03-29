@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.CollateralProposal;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashCollateralResponse1;
+import com.tools20022.repository.msg.OtherCollateralResponse1;
+import com.tools20022.repository.msg.SecuritiesCollateralResponse1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -95,7 +98,7 @@ public class CollateralResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "SctiesCollRspn")
-	protected List<com.tools20022.repository.msg.SecuritiesCollateralResponse1> securitiesCollateralResponse;
+	protected List<SecuritiesCollateralResponse1> securitiesCollateralResponse;
 	/**
 	 * 
 	 <p>
@@ -136,7 +139,7 @@ public class CollateralResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesCollateralResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralResponse1, List<SecuritiesCollateralResponse1>> mmSecuritiesCollateralResponse = new MMMessageAssociationEnd<CollateralResponse1, List<SecuritiesCollateralResponse1>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralResponse1.mmObject();
@@ -148,11 +151,21 @@ public class CollateralResponse1 {
 			nextVersions_lazy = () -> Arrays.asList(CollateralResponse2.mmSecuritiesCollateralResponse);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateralResponse1.mmObject();
+			type_lazy = () -> SecuritiesCollateralResponse1.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesCollateralResponse1> getValue(CollateralResponse1 obj) {
+			return obj.getSecuritiesCollateralResponse();
+		}
+
+		@Override
+		public void setValue(CollateralResponse1 obj, List<SecuritiesCollateralResponse1> value) {
+			obj.setSecuritiesCollateralResponse(value);
 		}
 	};
 	@XmlElement(name = "CshCollRspn")
-	protected List<com.tools20022.repository.msg.CashCollateralResponse1> cashCollateralResponse;
+	protected List<CashCollateralResponse1> cashCollateralResponse;
 	/**
 	 * 
 	 <p>
@@ -193,7 +206,7 @@ public class CollateralResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashCollateralResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralResponse1, List<CashCollateralResponse1>> mmCashCollateralResponse = new MMMessageAssociationEnd<CollateralResponse1, List<CashCollateralResponse1>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralResponse1.mmObject();
@@ -205,11 +218,21 @@ public class CollateralResponse1 {
 			nextVersions_lazy = () -> Arrays.asList(CollateralResponse2.mmCashCollateralResponse);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse1.mmObject();
+			type_lazy = () -> CashCollateralResponse1.mmObject();
+		}
+
+		@Override
+		public List<CashCollateralResponse1> getValue(CollateralResponse1 obj) {
+			return obj.getCashCollateralResponse();
+		}
+
+		@Override
+		public void setValue(CollateralResponse1 obj, List<CashCollateralResponse1> value) {
+			obj.setCashCollateralResponse(value);
 		}
 	};
 	@XmlElement(name = "OthrCollRspn")
-	protected List<com.tools20022.repository.msg.OtherCollateralResponse1> otherCollateralResponse;
+	protected List<OtherCollateralResponse1> otherCollateralResponse;
 	/**
 	 * 
 	 <p>
@@ -250,7 +273,7 @@ public class CollateralResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCollateralResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralResponse1, List<OtherCollateralResponse1>> mmOtherCollateralResponse = new MMMessageAssociationEnd<CollateralResponse1, List<OtherCollateralResponse1>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralResponse1.mmObject();
@@ -262,7 +285,17 @@ public class CollateralResponse1 {
 			nextVersions_lazy = () -> Arrays.asList(CollateralResponse2.mmOtherCollateralResponse);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherCollateralResponse1.mmObject();
+			type_lazy = () -> OtherCollateralResponse1.mmObject();
+		}
+
+		@Override
+		public List<OtherCollateralResponse1> getValue(CollateralResponse1 obj) {
+			return obj.getOtherCollateralResponse();
+		}
+
+		@Override
+		public void setValue(CollateralResponse1 obj, List<OtherCollateralResponse1> value) {
+			obj.setOtherCollateralResponse(value);
 		}
 	};
 
@@ -287,7 +320,7 @@ public class CollateralResponse1 {
 		return securitiesCollateralResponse == null ? securitiesCollateralResponse = new ArrayList<>() : securitiesCollateralResponse;
 	}
 
-	public CollateralResponse1 setSecuritiesCollateralResponse(List<com.tools20022.repository.msg.SecuritiesCollateralResponse1> securitiesCollateralResponse) {
+	public CollateralResponse1 setSecuritiesCollateralResponse(List<SecuritiesCollateralResponse1> securitiesCollateralResponse) {
 		this.securitiesCollateralResponse = Objects.requireNonNull(securitiesCollateralResponse);
 		return this;
 	}
@@ -296,7 +329,7 @@ public class CollateralResponse1 {
 		return cashCollateralResponse == null ? cashCollateralResponse = new ArrayList<>() : cashCollateralResponse;
 	}
 
-	public CollateralResponse1 setCashCollateralResponse(List<com.tools20022.repository.msg.CashCollateralResponse1> cashCollateralResponse) {
+	public CollateralResponse1 setCashCollateralResponse(List<CashCollateralResponse1> cashCollateralResponse) {
 		this.cashCollateralResponse = Objects.requireNonNull(cashCollateralResponse);
 		return this;
 	}
@@ -305,7 +338,7 @@ public class CollateralResponse1 {
 		return otherCollateralResponse == null ? otherCollateralResponse = new ArrayList<>() : otherCollateralResponse;
 	}
 
-	public CollateralResponse1 setOtherCollateralResponse(List<com.tools20022.repository.msg.OtherCollateralResponse1> otherCollateralResponse) {
+	public CollateralResponse1 setOtherCollateralResponse(List<OtherCollateralResponse1> otherCollateralResponse) {
 		this.otherCollateralResponse = Objects.requireNonNull(otherCollateralResponse);
 		return this;
 	}

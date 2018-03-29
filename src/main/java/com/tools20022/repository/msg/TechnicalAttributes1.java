@@ -94,7 +94,7 @@ public class TechnicalAttributes1 {
 	 * definition} = "List of possible values for TRs reconciliation purposes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TechnicalAttributes1, Optional<Reconciliation1Code>> mmReconciliationFlag = new MMMessageAttribute<TechnicalAttributes1, Optional<Reconciliation1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TechnicalAttributes1.mmObject();
 			isDerived = false;
@@ -105,6 +105,16 @@ public class TechnicalAttributes1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Reconciliation1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Reconciliation1Code> getValue(TechnicalAttributes1 obj) {
+			return obj.getReconciliationFlag();
+		}
+
+		@Override
+		public void setValue(TechnicalAttributes1 obj, Optional<Reconciliation1Code> value) {
+			obj.setReconciliationFlag(value.orElse(null));
 		}
 	};
 

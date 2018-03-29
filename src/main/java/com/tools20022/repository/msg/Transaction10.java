@@ -25,6 +25,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StatusAndReason5;
+import com.tools20022.repository.msg.TransactionDetails17;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -153,7 +155,7 @@ public class Transaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction10, RestrictedFINXMax16Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<Transaction10, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -166,6 +168,16 @@ public class Transaction10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(Transaction10 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, RestrictedFINXMax16Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -207,7 +219,7 @@ public class Transaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -220,6 +232,16 @@ public class Transaction10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Transaction10 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId")
@@ -262,7 +284,7 @@ public class Transaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -275,6 +297,16 @@ public class Transaction10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Transaction10 obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setMarketInfrastructureTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradId")
@@ -316,7 +348,7 @@ public class Transaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction10, List<RestrictedFINXMax16Text>> mmTradeIdentification = new MMMessageAttribute<Transaction10, List<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -328,6 +360,16 @@ public class Transaction10 {
 			definition = "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax16Text> getValue(Transaction10 obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, List<RestrictedFINXMax16Text> value) {
+			obj.setTradeIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolId")
@@ -367,7 +409,7 @@ public class Transaction10 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>> mmPoolIdentification = new MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -380,6 +422,16 @@ public class Transaction10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Transaction10 obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setPoolIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmonId")
@@ -421,7 +473,7 @@ public class Transaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>> mmCommonIdentification = new MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -434,6 +486,16 @@ public class Transaction10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Transaction10 obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCommonIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -475,7 +537,7 @@ public class Transaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -488,6 +550,16 @@ public class Transaction10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Transaction10 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrptyAgtCollTxId")
@@ -530,7 +602,7 @@ public class Transaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTripartyAgentCollateralTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>> mmTripartyAgentCollateralTransactionIdentification = new MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmTripartyAgentCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -543,6 +615,16 @@ public class Transaction10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Transaction10 obj) {
+			return obj.getTripartyAgentCollateralTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setTripartyAgentCollateralTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntTrptyCollTxId")
@@ -585,7 +667,7 @@ public class Transaction10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>> mmClientTripartyCollateralTransactionIdentification = new MMMessageAttribute<Transaction10, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmClientTripartyCollateralTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -598,6 +680,16 @@ public class Transaction10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Transaction10 obj) {
+			return obj.getClientTripartyCollateralTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setClientTripartyCollateralTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDtls")
@@ -635,7 +727,7 @@ public class Transaction10 {
 	 * definition} = "Identifies the details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transaction10, Optional<TransactionDetails17>> mmTransactionDetails = new MMMessageAssociationEnd<Transaction10, Optional<TransactionDetails17>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTrade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -648,11 +740,21 @@ public class Transaction10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionDetails17.mmObject();
+			type_lazy = () -> TransactionDetails17.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionDetails17> getValue(Transaction10 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, Optional<TransactionDetails17> value) {
+			obj.setTransactionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsAndRsn")
-	protected List<com.tools20022.repository.msg.StatusAndReason5> statusAndReason;
+	protected List<StatusAndReason5> statusAndReason;
 	/**
 	 * 
 	 <p>
@@ -686,7 +788,7 @@ public class Transaction10 {
 	 * definition} = "Status and reason for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Transaction10, List<StatusAndReason5>> mmStatusAndReason = new MMMessageAssociationEnd<Transaction10, List<StatusAndReason5>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Transaction10.mmObject();
@@ -698,7 +800,17 @@ public class Transaction10 {
 			definition = "Status and reason for the transaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusAndReason5.mmObject();
+			type_lazy = () -> StatusAndReason5.mmObject();
+		}
+
+		@Override
+		public List<StatusAndReason5> getValue(Transaction10 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(Transaction10 obj, List<StatusAndReason5> value) {
+			obj.setStatusAndReason(value);
 		}
 	};
 
@@ -814,7 +926,7 @@ public class Transaction10 {
 		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public Transaction10 setTransactionDetails(com.tools20022.repository.msg.TransactionDetails17 transactionDetails) {
+	public Transaction10 setTransactionDetails(TransactionDetails17 transactionDetails) {
 		this.transactionDetails = transactionDetails;
 		return this;
 	}
@@ -823,7 +935,7 @@ public class Transaction10 {
 		return statusAndReason == null ? statusAndReason = new ArrayList<>() : statusAndReason;
 	}
 
-	public Transaction10 setStatusAndReason(List<com.tools20022.repository.msg.StatusAndReason5> statusAndReason) {
+	public Transaction10 setStatusAndReason(List<StatusAndReason5> statusAndReason) {
 		this.statusAndReason = Objects.requireNonNull(statusAndReason);
 		return this;
 	}

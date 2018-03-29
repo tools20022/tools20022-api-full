@@ -109,7 +109,7 @@ public class DocumentNumber14 {
 	 * definition} = "Number used to identify a message or document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentNumber14, DocumentNumber6Choice> mmNumber = new MMMessageAssociationEnd<DocumentNumber14, DocumentNumber6Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentNumber14.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class DocumentNumber14 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber6Choice.mmObject();
+		}
+
+		@Override
+		public DocumentNumber6Choice getValue(DocumentNumber14 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(DocumentNumber14 obj, DocumentNumber6Choice value) {
+			obj.setNumber(value);
 		}
 	};
 

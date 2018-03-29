@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.ContactPersonRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactIdentification2;
+import com.tools20022.repository.msg.SubAccount5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +136,7 @@ public class PartyIdentificationAndAccount126 {
 	 * PartyIdentificationAndAccount102.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount126, PartyIdentification100Choice> mmPartyIdentification = new MMMessageAttribute<PartyIdentificationAndAccount126, PartyIdentification100Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount126.mmObject();
@@ -147,6 +149,16 @@ public class PartyIdentificationAndAccount126 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification100Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100Choice getValue(PartyIdentificationAndAccount126 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount126 obj, PartyIdentification100Choice value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -188,7 +200,7 @@ public class PartyIdentificationAndAccount126 {
 	 * PartyIdentificationAndAccount102.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount126, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<PartyIdentificationAndAccount126, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount126.mmObject();
@@ -201,6 +213,16 @@ public class PartyIdentificationAndAccount126 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentificationAndAccount126 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount126 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgId")
@@ -239,7 +261,7 @@ public class PartyIdentificationAndAccount126 {
 	 * PartyIdentificationAndAccount102.mmProcessingIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount126, Optional<Max35Text>> mmProcessingIdentification = new MMMessageAttribute<PartyIdentificationAndAccount126, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount126.mmObject();
 			isDerived = false;
@@ -251,6 +273,16 @@ public class PartyIdentificationAndAccount126 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PartyIdentificationAndAccount126 obj) {
+			return obj.getProcessingIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount126 obj, Optional<Max35Text> value) {
+			obj.setProcessingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgDt")
@@ -290,7 +322,7 @@ public class PartyIdentificationAndAccount126 {
 	 * PartyIdentificationAndAccount102.mmProcessingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentificationAndAccount126, Optional<DateAndDateTimeChoice>> mmProcessingDate = new MMMessageAttribute<PartyIdentificationAndAccount126, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount126.mmObject();
 			isDerived = false;
@@ -302,6 +334,16 @@ public class PartyIdentificationAndAccount126 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(PartyIdentificationAndAccount126 obj) {
+			return obj.getProcessingDate();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount126 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setProcessingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubAcct")
@@ -344,7 +386,7 @@ public class PartyIdentificationAndAccount126 {
 	 * PartyIdentificationAndAccount102.mmSubAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount126, Optional<SubAccount5>> mmSubAccount = new MMMessageAssociationEnd<PartyIdentificationAndAccount126, Optional<SubAccount5>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount126.mmObject();
@@ -357,7 +399,17 @@ public class PartyIdentificationAndAccount126 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmObject();
+			type_lazy = () -> SubAccount5.mmObject();
+		}
+
+		@Override
+		public Optional<SubAccount5> getValue(PartyIdentificationAndAccount126 obj) {
+			return obj.getSubAccount();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount126 obj, Optional<SubAccount5> value) {
+			obj.setSubAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctPrsn")
@@ -398,7 +450,7 @@ public class PartyIdentificationAndAccount126 {
 	 * PartyIdentificationAndAccount102.mmContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount126, Optional<ContactIdentification2>> mmContactPerson = new MMMessageAssociationEnd<PartyIdentificationAndAccount126, Optional<ContactIdentification2>>() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount126.mmObject();
@@ -411,7 +463,17 @@ public class PartyIdentificationAndAccount126 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification2.mmObject();
+			type_lazy = () -> ContactIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification2> getValue(PartyIdentificationAndAccount126 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount126 obj, Optional<ContactIdentification2> value) {
+			obj.setContactPerson(value.orElse(null));
 		}
 	};
 
@@ -472,7 +534,7 @@ public class PartyIdentificationAndAccount126 {
 		return subAccount == null ? Optional.empty() : Optional.of(subAccount);
 	}
 
-	public PartyIdentificationAndAccount126 setSubAccount(com.tools20022.repository.msg.SubAccount5 subAccount) {
+	public PartyIdentificationAndAccount126 setSubAccount(SubAccount5 subAccount) {
 		this.subAccount = subAccount;
 		return this;
 	}
@@ -481,7 +543,7 @@ public class PartyIdentificationAndAccount126 {
 		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public PartyIdentificationAndAccount126 setContactPerson(com.tools20022.repository.msg.ContactIdentification2 contactPerson) {
+	public PartyIdentificationAndAccount126 setContactPerson(ContactIdentification2 contactPerson) {
 		this.contactPerson = contactPerson;
 		return this;
 	}

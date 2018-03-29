@@ -24,7 +24,6 @@ import com.tools20022.repository.datatype.positiveInteger;
 import com.tools20022.repository.entity.GuaranteePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GuaranteeDetails1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +103,7 @@ public class GuarantorRole extends GuaranteePartyRole {
 	 * definition} = "Rank of this guarantor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPosition = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<GuarantorRole, positiveInteger> mmPosition = new MMBusinessAttribute<GuarantorRole, positiveInteger>() {
 		{
 			derivation_lazy = () -> Arrays.asList(GuaranteeDetails1.mmPosition);
 			isDerived = false;
@@ -117,12 +116,14 @@ public class GuarantorRole extends GuaranteePartyRole {
 			simpleType_lazy = () -> positiveInteger.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GuarantorRole.class.getMethod("getPosition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public positiveInteger getValue(GuarantorRole obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(GuarantorRole obj, positiveInteger value) {
+			obj.setPosition(value);
 		}
 	};
 

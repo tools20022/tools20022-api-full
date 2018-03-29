@@ -126,7 +126,7 @@ public class DateAndDateTimeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndDateTimeChoice, ISODate> mmDate = new MMMessageAttribute<DateAndDateTimeChoice, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class DateAndDateTimeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DateAndDateTimeChoice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateAndDateTimeChoice obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtTm", required = true)
@@ -177,7 +187,7 @@ public class DateAndDateTimeChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndDateTimeChoice, ISODateTime> mmDateTime = new MMMessageAttribute<DateAndDateTimeChoice, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class DateAndDateTimeChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(DateAndDateTimeChoice obj) {
+			return obj.getDateTime();
+		}
+
+		@Override
+		public void setValue(DateAndDateTimeChoice obj, ISODateTime value) {
+			obj.setDateTime(value);
 		}
 	};
 

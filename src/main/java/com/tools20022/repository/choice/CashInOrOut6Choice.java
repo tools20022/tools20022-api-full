@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PaymentInstrument11Choice;
+import com.tools20022.repository.choice.PaymentInstrument12Choice;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
@@ -107,7 +109,7 @@ public class CashInOrOut6Choice {
 	 * definition} = "Payment instrument for the cash-in flow."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashInOrOut6Choice, PaymentInstrument12Choice> mmCashInPaymentInstrument = new MMMessageAssociationEnd<CashInOrOut6Choice, PaymentInstrument12Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashInOrOut6Choice.mmObject();
@@ -119,7 +121,17 @@ public class CashInOrOut6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PaymentInstrument12Choice.mmObject();
+			type_lazy = () -> PaymentInstrument12Choice.mmObject();
+		}
+
+		@Override
+		public PaymentInstrument12Choice getValue(CashInOrOut6Choice obj) {
+			return obj.getCashInPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(CashInOrOut6Choice obj, PaymentInstrument12Choice value) {
+			obj.setCashInPaymentInstrument(value);
 		}
 	};
 	@XmlElement(name = "CshOutPmtInstrm", required = true)
@@ -155,7 +167,7 @@ public class CashInOrOut6Choice {
 	 * definition} = "Payment instrument for the cash-out flow."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashOutPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashInOrOut6Choice, PaymentInstrument11Choice> mmCashOutPaymentInstrument = new MMMessageAssociationEnd<CashInOrOut6Choice, PaymentInstrument11Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashInOrOut6Choice.mmObject();
@@ -167,7 +179,17 @@ public class CashInOrOut6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PaymentInstrument11Choice.mmObject();
+			type_lazy = () -> PaymentInstrument11Choice.mmObject();
+		}
+
+		@Override
+		public PaymentInstrument11Choice getValue(CashInOrOut6Choice obj) {
+			return obj.getCashOutPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(CashInOrOut6Choice obj, PaymentInstrument11Choice value) {
+			obj.setCashOutPaymentInstrument(value);
 		}
 	};
 
@@ -196,7 +218,7 @@ public class CashInOrOut6Choice {
 		return cashInPaymentInstrument;
 	}
 
-	public CashInOrOut6Choice setCashInPaymentInstrument(com.tools20022.repository.choice.PaymentInstrument12Choice cashInPaymentInstrument) {
+	public CashInOrOut6Choice setCashInPaymentInstrument(PaymentInstrument12Choice cashInPaymentInstrument) {
 		this.cashInPaymentInstrument = Objects.requireNonNull(cashInPaymentInstrument);
 		return this;
 	}
@@ -205,7 +227,7 @@ public class CashInOrOut6Choice {
 		return cashOutPaymentInstrument;
 	}
 
-	public CashInOrOut6Choice setCashOutPaymentInstrument(com.tools20022.repository.choice.PaymentInstrument11Choice cashOutPaymentInstrument) {
+	public CashInOrOut6Choice setCashOutPaymentInstrument(PaymentInstrument11Choice cashOutPaymentInstrument) {
 		this.cashOutPaymentInstrument = Objects.requireNonNull(cashOutPaymentInstrument);
 		return this;
 	}

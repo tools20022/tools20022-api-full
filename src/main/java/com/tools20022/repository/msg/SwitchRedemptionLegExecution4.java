@@ -30,6 +30,7 @@ import com.tools20022.repository.codeset.UKTaxGroupUnit1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -203,7 +204,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmLegIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<Max35Text>> mmLegIdentification = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
 			isDerived = false;
@@ -215,6 +216,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getLegIdentification();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<Max35Text> value) {
+			obj.setLegIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LegExctnId")
@@ -253,7 +264,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmLegExecutionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegExecutionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<Max35Text>> mmLegExecutionIdentification = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
 			isDerived = false;
@@ -265,6 +276,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getLegExecutionIdentification();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<Max35Text> value) {
+			obj.setLegExecutionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls", required = true)
@@ -307,7 +328,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, FinancialInstrument57> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, FinancialInstrument57>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInvestmentFundTransaction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -320,7 +341,17 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument57.mmObject();
+			type_lazy = () -> FinancialInstrument57.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument57 getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, FinancialInstrument57 value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "UnitsNb", required = true)
@@ -363,7 +394,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmUnitsNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, DecimalNumber> mmUnitsNumber = new MMMessageAttribute<SwitchRedemptionLegExecution4, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -376,6 +407,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, DecimalNumber value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "HldgsRedRate")
@@ -418,7 +459,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmHoldingsRedemptionRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingsRedemptionRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<PercentageRate>> mmHoldingsRedemptionRate = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> RedemptionOrder.mmHoldingsRedemptionRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -431,6 +472,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getHoldingsRedemptionRate();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<PercentageRate> value) {
+			obj.setHoldingsRedemptionRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetAmt")
@@ -475,7 +526,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ActiveCurrencyAndAmount>> mmNetAmount = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> RedemptionExecution.mmRedeemedNetAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -488,6 +539,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setNetAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrssAmt")
@@ -532,7 +593,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmGrossAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ActiveCurrencyAndAmount>> mmGrossAmount = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -545,6 +606,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getGrossAmount();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setGrossAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls")
@@ -585,7 +656,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmInvestmentAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<InvestmentAccount58>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<InvestmentAccount58>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -598,7 +669,17 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount58.mmObject();
+			type_lazy = () -> InvestmentAccount58.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount58> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<InvestmentAccount58> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDtTm", required = true)
@@ -643,7 +724,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmTradeDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, DateAndDateTimeChoice> mmTradeDateTime = new MMMessageAttribute<SwitchRedemptionLegExecution4, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -656,6 +737,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getTradeDateTime();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, DateAndDateTimeChoice value) {
+			obj.setTradeDateTime(value);
 		}
 	};
 	@XmlElement(name = "PricDtls", required = true)
@@ -696,7 +787,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmPriceDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, UnitPrice22> mmPriceDetails = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, UnitPrice22>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedTradePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -709,11 +800,21 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnitPrice22.mmObject();
+			type_lazy = () -> UnitPrice22.mmObject();
+		}
+
+		@Override
+		public UnitPrice22 getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, UnitPrice22 value) {
+			obj.setPriceDetails(value);
 		}
 	};
 	@XmlElement(name = "InftvPricDtls")
-	protected List<com.tools20022.repository.msg.UnitPrice22> informativePriceDetails;
+	protected List<UnitPrice22> informativePriceDetails;
 	/**
 	 * 
 	 <p>
@@ -746,7 +847,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * "Other quoted price than the one at which the order was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInformativePriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, List<UnitPrice22>> mmInformativePriceDetails = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, List<UnitPrice22>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInformativePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -758,7 +859,17 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UnitPrice22.mmObject();
+			type_lazy = () -> UnitPrice22.mmObject();
+		}
+
+		@Override
+		public List<UnitPrice22> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getInformativePriceDetails();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, List<UnitPrice22> value) {
+			obj.setInformativePriceDetails(value);
 		}
 	};
 	@XmlElement(name = "CumDvddInd", required = true)
@@ -803,7 +914,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmCumDividendIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCumDividendIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, YesNoIndicator> mmCumDividendIndicator = new MMMessageAttribute<SwitchRedemptionLegExecution4, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmCumDividendIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -816,6 +927,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getCumDividendIndicator();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, YesNoIndicator value) {
+			obj.setCumDividendIndicator(value);
 		}
 	};
 	@XmlElement(name = "IntrmPrftAmt")
@@ -860,7 +981,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmInterimProfitAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterimProfitAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ProfitAndLoss2Choice>> mmInterimProfitAmount = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ProfitAndLoss2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInterimProfitAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -873,6 +994,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ProfitAndLoss2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProfitAndLoss2Choice> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getInterimProfitAmount();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<ProfitAndLoss2Choice> value) {
+			obj.setInterimProfitAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmPref")
@@ -917,7 +1048,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmIncomePreference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<IncomePreference1Code>> mmIncomePreference = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<IncomePreference1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -930,6 +1061,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
+		}
+
+		@Override
+		public Optional<IncomePreference1Code> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getIncomePreference();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<IncomePreference1Code> value) {
+			obj.setIncomePreference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Grp1Or2Units")
@@ -974,7 +1115,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmGroup1Or2Units}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<UKTaxGroupUnit1Code>> mmGroup1Or2Units = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<UKTaxGroupUnit1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -987,6 +1128,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> UKTaxGroupUnit1Code.mmObject();
+		}
+
+		@Override
+		public Optional<UKTaxGroupUnit1Code> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getGroup1Or2Units();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<UKTaxGroupUnit1Code> value) {
+			obj.setGroup1Or2Units(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdSttlmCcy")
@@ -1029,7 +1180,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmRequestedSettlementCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ActiveCurrencyCode>> mmRequestedSettlementCurrency = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRequestedSettlementCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -1042,6 +1193,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getRequestedSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setRequestedSettlementCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdNAVCcy")
@@ -1086,7 +1247,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmRequestedNAVCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedNAVCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ActiveOrHistoricCurrencyCode>> mmRequestedNAVCurrency = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -1099,6 +1260,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getRequestedNAVCurrency();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setRequestedNAVCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxOvrhd")
@@ -1136,7 +1307,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionOverhead = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<TotalFeesAndTaxes40>> mmTransactionOverhead = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<TotalFeesAndTaxes40>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -1148,7 +1319,17 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TotalFeesAndTaxes40.mmObject();
+			type_lazy = () -> TotalFeesAndTaxes40.mmObject();
+		}
+
+		@Override
+		public Optional<TotalFeesAndTaxes40> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getTransactionOverhead();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<TotalFeesAndTaxes40> value) {
+			obj.setTransactionOverhead(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InftvTaxDtls")
@@ -1186,7 +1367,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInformativeTaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<InformativeTax1>> mmInformativeTaxDetails = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<InformativeTax1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -1198,7 +1379,17 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InformativeTax1.mmObject();
+			type_lazy = () -> InformativeTax1.mmObject();
+		}
+
+		@Override
+		public Optional<InformativeTax1> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getInformativeTaxDetails();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<InformativeTax1> value) {
+			obj.setInformativeTaxDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmAndCtdyDtls")
@@ -1241,7 +1432,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmSettlementAndCustodyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAndCustodyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<FundSettlementParameters11>> mmSettlementAndCustodyDetails = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<FundSettlementParameters11>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -1254,7 +1445,17 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundSettlementParameters11.mmObject();
+			type_lazy = () -> FundSettlementParameters11.mmObject();
+		}
+
+		@Override
+		public Optional<FundSettlementParameters11> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getSettlementAndCustodyDetails();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<FundSettlementParameters11> value) {
+			obj.setSettlementAndCustodyDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PhysDlvryInd", required = true)
@@ -1294,7 +1495,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmPhysicalDeliveryIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhysicalDeliveryIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, YesNoIndicator> mmPhysicalDeliveryIndicator = new MMMessageAttribute<SwitchRedemptionLegExecution4, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
 			isDerived = false;
@@ -1306,6 +1507,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getPhysicalDeliveryIndicator();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, YesNoIndicator value) {
+			obj.setPhysicalDeliveryIndicator(value);
 		}
 	};
 	@XmlElement(name = "PhysDlvryDtls")
@@ -1347,7 +1558,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmPhysicalDeliveryDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPhysicalDeliveryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<DeliveryParameters3>> mmPhysicalDeliveryDetails = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<DeliveryParameters3>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -1360,7 +1571,17 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters3.mmObject();
+			type_lazy = () -> DeliveryParameters3.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveryParameters3> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getPhysicalDeliveryDetails();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<DeliveryParameters3> value) {
+			obj.setPhysicalDeliveryDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonStdSttlmInf")
@@ -1404,7 +1625,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmNonStandardSettlementInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonStandardSettlementInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<Max350Text>> mmNonStandardSettlementInformation = new MMMessageAttribute<SwitchRedemptionLegExecution4, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmNonStandardSettlementInformation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -1417,6 +1638,16 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getNonStandardSettlementInformation();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<Max350Text> value) {
+			obj.setNonStandardSettlementInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Equlstn")
@@ -1459,7 +1690,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * SwitchRedemptionLegExecution3.mmEqualisation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEqualisation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<Equalisation1>> mmEqualisation = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<Equalisation1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmEqualisation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -1472,7 +1703,17 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Equalisation1.mmObject();
+			type_lazy = () -> Equalisation1.mmObject();
+		}
+
+		@Override
+		public Optional<Equalisation1> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getEqualisation();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<Equalisation1> value) {
+			obj.setEqualisation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GtgOrHldBckDtls")
@@ -1509,7 +1750,7 @@ public class SwitchRedemptionLegExecution4 {
 	 * "Information about gating and hold back of redemption proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGatingOrHoldBackDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<HoldBackInformation2>> mmGatingOrHoldBackDetails = new MMMessageAssociationEnd<SwitchRedemptionLegExecution4, Optional<HoldBackInformation2>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegExecution4.mmObject();
@@ -1521,7 +1762,17 @@ public class SwitchRedemptionLegExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.HoldBackInformation2.mmObject();
+			type_lazy = () -> HoldBackInformation2.mmObject();
+		}
+
+		@Override
+		public Optional<HoldBackInformation2> getValue(SwitchRedemptionLegExecution4 obj) {
+			return obj.getGatingOrHoldBackDetails();
+		}
+
+		@Override
+		public void setValue(SwitchRedemptionLegExecution4 obj, Optional<HoldBackInformation2> value) {
+			obj.setGatingOrHoldBackDetails(value.orElse(null));
 		}
 	};
 
@@ -1576,7 +1827,7 @@ public class SwitchRedemptionLegExecution4 {
 		return financialInstrumentDetails;
 	}
 
-	public SwitchRedemptionLegExecution4 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument57 financialInstrumentDetails) {
+	public SwitchRedemptionLegExecution4 setFinancialInstrumentDetails(FinancialInstrument57 financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}
@@ -1621,7 +1872,7 @@ public class SwitchRedemptionLegExecution4 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public SwitchRedemptionLegExecution4 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount58 investmentAccountDetails) {
+	public SwitchRedemptionLegExecution4 setInvestmentAccountDetails(InvestmentAccount58 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -1639,7 +1890,7 @@ public class SwitchRedemptionLegExecution4 {
 		return priceDetails;
 	}
 
-	public SwitchRedemptionLegExecution4 setPriceDetails(com.tools20022.repository.msg.UnitPrice22 priceDetails) {
+	public SwitchRedemptionLegExecution4 setPriceDetails(UnitPrice22 priceDetails) {
 		this.priceDetails = Objects.requireNonNull(priceDetails);
 		return this;
 	}
@@ -1648,7 +1899,7 @@ public class SwitchRedemptionLegExecution4 {
 		return informativePriceDetails == null ? informativePriceDetails = new ArrayList<>() : informativePriceDetails;
 	}
 
-	public SwitchRedemptionLegExecution4 setInformativePriceDetails(List<com.tools20022.repository.msg.UnitPrice22> informativePriceDetails) {
+	public SwitchRedemptionLegExecution4 setInformativePriceDetails(List<UnitPrice22> informativePriceDetails) {
 		this.informativePriceDetails = Objects.requireNonNull(informativePriceDetails);
 		return this;
 	}
@@ -1711,7 +1962,7 @@ public class SwitchRedemptionLegExecution4 {
 		return transactionOverhead == null ? Optional.empty() : Optional.of(transactionOverhead);
 	}
 
-	public SwitchRedemptionLegExecution4 setTransactionOverhead(com.tools20022.repository.msg.TotalFeesAndTaxes40 transactionOverhead) {
+	public SwitchRedemptionLegExecution4 setTransactionOverhead(TotalFeesAndTaxes40 transactionOverhead) {
 		this.transactionOverhead = transactionOverhead;
 		return this;
 	}
@@ -1720,7 +1971,7 @@ public class SwitchRedemptionLegExecution4 {
 		return informativeTaxDetails == null ? Optional.empty() : Optional.of(informativeTaxDetails);
 	}
 
-	public SwitchRedemptionLegExecution4 setInformativeTaxDetails(com.tools20022.repository.msg.InformativeTax1 informativeTaxDetails) {
+	public SwitchRedemptionLegExecution4 setInformativeTaxDetails(InformativeTax1 informativeTaxDetails) {
 		this.informativeTaxDetails = informativeTaxDetails;
 		return this;
 	}
@@ -1729,7 +1980,7 @@ public class SwitchRedemptionLegExecution4 {
 		return settlementAndCustodyDetails == null ? Optional.empty() : Optional.of(settlementAndCustodyDetails);
 	}
 
-	public SwitchRedemptionLegExecution4 setSettlementAndCustodyDetails(com.tools20022.repository.msg.FundSettlementParameters11 settlementAndCustodyDetails) {
+	public SwitchRedemptionLegExecution4 setSettlementAndCustodyDetails(FundSettlementParameters11 settlementAndCustodyDetails) {
 		this.settlementAndCustodyDetails = settlementAndCustodyDetails;
 		return this;
 	}
@@ -1747,7 +1998,7 @@ public class SwitchRedemptionLegExecution4 {
 		return physicalDeliveryDetails == null ? Optional.empty() : Optional.of(physicalDeliveryDetails);
 	}
 
-	public SwitchRedemptionLegExecution4 setPhysicalDeliveryDetails(com.tools20022.repository.msg.DeliveryParameters3 physicalDeliveryDetails) {
+	public SwitchRedemptionLegExecution4 setPhysicalDeliveryDetails(DeliveryParameters3 physicalDeliveryDetails) {
 		this.physicalDeliveryDetails = physicalDeliveryDetails;
 		return this;
 	}
@@ -1765,7 +2016,7 @@ public class SwitchRedemptionLegExecution4 {
 		return equalisation == null ? Optional.empty() : Optional.of(equalisation);
 	}
 
-	public SwitchRedemptionLegExecution4 setEqualisation(com.tools20022.repository.msg.Equalisation1 equalisation) {
+	public SwitchRedemptionLegExecution4 setEqualisation(Equalisation1 equalisation) {
 		this.equalisation = equalisation;
 		return this;
 	}
@@ -1774,7 +2025,7 @@ public class SwitchRedemptionLegExecution4 {
 		return gatingOrHoldBackDetails == null ? Optional.empty() : Optional.of(gatingOrHoldBackDetails);
 	}
 
-	public SwitchRedemptionLegExecution4 setGatingOrHoldBackDetails(com.tools20022.repository.msg.HoldBackInformation2 gatingOrHoldBackDetails) {
+	public SwitchRedemptionLegExecution4 setGatingOrHoldBackDetails(HoldBackInformation2 gatingOrHoldBackDetails) {
 		this.gatingOrHoldBackDetails = gatingOrHoldBackDetails;
 		return this;
 	}

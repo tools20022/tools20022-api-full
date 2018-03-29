@@ -118,7 +118,7 @@ public class StatusAndSubStatus2 {
 	 * StatusAndSubStatus1.mmStatusCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusAndSubStatus2, Status27Choice> mmStatusCode = new MMMessageAttribute<StatusAndSubStatus2, Status27Choice>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus2.mmObject();
@@ -131,6 +131,16 @@ public class StatusAndSubStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Status27Choice.mmObject();
+		}
+
+		@Override
+		public Status27Choice getValue(StatusAndSubStatus2 obj) {
+			return obj.getStatusCode();
+		}
+
+		@Override
+		public void setValue(StatusAndSubStatus2 obj, Status27Choice value) {
+			obj.setStatusCode(value);
 		}
 	};
 	@XmlElement(name = "SubStsCd")
@@ -173,7 +183,7 @@ public class StatusAndSubStatus2 {
 	 * StatusAndSubStatus1.mmSubStatusCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubStatusCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusAndSubStatus2, Optional<Exact4AlphaNumericText>> mmSubStatusCode = new MMMessageAttribute<StatusAndSubStatus2, Optional<Exact4AlphaNumericText>>() {
 		{
 			businessElementTrace_lazy = () -> TreasuryTradeSettlementStatus.mmTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndSubStatus2.mmObject();
@@ -186,6 +196,16 @@ public class StatusAndSubStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(StatusAndSubStatus2 obj) {
+			return obj.getSubStatusCode();
+		}
+
+		@Override
+		public void setValue(StatusAndSubStatus2 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setSubStatusCode(value.orElse(null));
 		}
 	};
 

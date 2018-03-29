@@ -111,7 +111,7 @@ public class PercentageRange1Choice {
 	 * definition} = "Lower boundary of a range of percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PercentageRange1Choice, PercentageRangeBoundary1> mmFrom = new MMMessageAssociationEnd<PercentageRange1Choice, PercentageRangeBoundary1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class PercentageRange1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PercentageRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public PercentageRangeBoundary1 getValue(PercentageRange1Choice obj) {
+			return obj.getFrom();
+		}
+
+		@Override
+		public void setValue(PercentageRange1Choice obj, PercentageRangeBoundary1 value) {
+			obj.setFrom(value);
 		}
 	};
 	@XmlElement(name = "To", required = true)
@@ -154,7 +164,7 @@ public class PercentageRange1Choice {
 	 * definition} = "Upper boundary of a range of percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PercentageRange1Choice, PercentageRangeBoundary1> mmTo = new MMMessageAssociationEnd<PercentageRange1Choice, PercentageRangeBoundary1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class PercentageRange1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PercentageRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public PercentageRangeBoundary1 getValue(PercentageRange1Choice obj) {
+			return obj.getTo();
+		}
+
+		@Override
+		public void setValue(PercentageRange1Choice obj, PercentageRangeBoundary1 value) {
+			obj.setTo(value);
 		}
 	};
 	@XmlElement(name = "FrTo", required = true)
@@ -196,7 +216,7 @@ public class PercentageRange1Choice {
 	 * definition} = "Range of valid percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PercentageRange1Choice, FromToPercentageRange1> mmFromTo = new MMMessageAssociationEnd<PercentageRange1Choice, FromToPercentageRange1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -208,6 +228,16 @@ public class PercentageRange1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FromToPercentageRange1.mmObject();
+		}
+
+		@Override
+		public FromToPercentageRange1 getValue(PercentageRange1Choice obj) {
+			return obj.getFromTo();
+		}
+
+		@Override
+		public void setValue(PercentageRange1Choice obj, FromToPercentageRange1 value) {
+			obj.setFromTo(value);
 		}
 	};
 	@XmlElement(name = "EQ", required = true)
@@ -240,7 +270,7 @@ public class PercentageRange1Choice {
 	 * definition} = "Exact percentage rate must match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentageRange1Choice, PercentageRate> mmEqual = new MMMessageAttribute<PercentageRange1Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -251,6 +281,16 @@ public class PercentageRange1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PercentageRange1Choice obj) {
+			return obj.getEqual();
+		}
+
+		@Override
+		public void setValue(PercentageRange1Choice obj, PercentageRate value) {
+			obj.setEqual(value);
 		}
 	};
 	@XmlElement(name = "NEQ", required = true)
@@ -284,7 +324,7 @@ public class PercentageRange1Choice {
 	 * "Value that percentage rate must not match to be considered valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotEqual = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PercentageRange1Choice, PercentageRate> mmNotEqual = new MMMessageAttribute<PercentageRange1Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
@@ -295,6 +335,16 @@ public class PercentageRange1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PercentageRange1Choice obj) {
+			return obj.getNotEqual();
+		}
+
+		@Override
+		public void setValue(PercentageRange1Choice obj, PercentageRate value) {
+			obj.setNotEqual(value);
 		}
 	};
 

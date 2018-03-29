@@ -26,9 +26,9 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Status;
+import com.tools20022.repository.entity.TreasuryTrade;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -340,7 +340,7 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * "Status of a treasury trade in a central matching/settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTradeStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, TradeStatusCode> mmTradeStatus = new MMBusinessAttribute<TreasuryTradeSettlementStatus, TradeStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeData1.mmCurrentStatus, TradeData1.mmExtendedCurrentStatus, TradeData1.mmCurrentStatusSubType, TradeData1.mmPreviousStatus, TradeData1.mmExtendedPreviousStatus,
 					TradeData1.mmPreviousStatusSubType, Status5Choice.mmCode, Status5Choice.mmProprietary, TradeData4.mmCurrentStatus, TradeData4.mmCurrentStatusSubType, Status13Choice.mmCode, Status13Choice.mmProprietary,
@@ -358,12 +358,14 @@ public class TreasuryTradeSettlementStatus extends Status {
 			simpleType_lazy = () -> TradeStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TreasuryTradeSettlementStatus.class.getMethod("getTradeStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeStatusCode getValue(TreasuryTradeSettlementStatus obj) {
+			return obj.getTradeStatus();
+		}
+
+		@Override
+		public void setValue(TreasuryTradeSettlementStatus obj, TradeStatusCode value) {
+			obj.setTradeStatus(value);
 		}
 	};
 	protected YesNoIndicator allegedTrade;
@@ -407,7 +409,7 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAllegedTrade = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator> mmAllegedTrade = new MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeData9.mmAllegedTrade, TradeStatus1.mmAllegedTrade, TradeData14.mmAllegedTrade);
 			isDerived = false;
@@ -420,12 +422,14 @@ public class TreasuryTradeSettlementStatus extends Status {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TreasuryTradeSettlementStatus.class.getMethod("getAllegedTrade", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(TreasuryTradeSettlementStatus obj) {
+			return obj.getAllegedTrade();
+		}
+
+		@Override
+		public void setValue(TreasuryTradeSettlementStatus obj, YesNoIndicator value) {
+			obj.setAllegedTrade(value);
 		}
 	};
 	protected TreasuryTrade treasuryTrade;
@@ -463,7 +467,7 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTreasuryTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TreasuryTradeSettlementStatus, Optional<TreasuryTrade>> mmTreasuryTrade = new MMBusinessAssociationEnd<TreasuryTradeSettlementStatus, Optional<TreasuryTrade>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmObject();
@@ -475,6 +479,16 @@ public class TreasuryTradeSettlementStatus extends Status {
 			opposite_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmTreasuryTradeSettlementStatus;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.TreasuryTrade.mmObject();
+		}
+
+		@Override
+		public Optional<TreasuryTrade> getValue(TreasuryTradeSettlementStatus obj) {
+			return obj.getTreasuryTrade();
+		}
+
+		@Override
+		public void setValue(TreasuryTradeSettlementStatus obj, Optional<TreasuryTrade> value) {
+			obj.setTreasuryTrade(value.orElse(null));
 		}
 	};
 	protected SettlementStatusCode settlement;
@@ -517,7 +531,7 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlement = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, SettlementStatusCode> mmSettlement = new MMBusinessAttribute<TreasuryTradeSettlementStatus, SettlementStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementData1.mmSettlementStatus, SettlementData2.mmSettlementStatus);
 			isDerived = false;
@@ -530,12 +544,14 @@ public class TreasuryTradeSettlementStatus extends Status {
 			simpleType_lazy = () -> SettlementStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TreasuryTradeSettlementStatus.class.getMethod("getSettlement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SettlementStatusCode getValue(TreasuryTradeSettlementStatus obj) {
+			return obj.getSettlement();
+		}
+
+		@Override
+		public void setValue(TreasuryTradeSettlementStatus obj, SettlementStatusCode value) {
+			obj.setSettlement(value);
 		}
 	};
 	protected ActiveOrHistoricCurrencyAndAmount rejectedAmount;
@@ -577,7 +593,7 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * "Amount that cannot be settled for instance by a settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRejectedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, ActiveOrHistoricCurrencyAndAmount> mmRejectedAmount = new MMBusinessAttribute<TreasuryTradeSettlementStatus, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementData1.mmRejectedAmount, SettlementData2.mmRejectedAmount);
 			isDerived = false;
@@ -590,12 +606,14 @@ public class TreasuryTradeSettlementStatus extends Status {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TreasuryTradeSettlementStatus.class.getMethod("getRejectedAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(TreasuryTradeSettlementStatus obj) {
+			return obj.getRejectedAmount();
+		}
+
+		@Override
+		public void setValue(TreasuryTradeSettlementStatus obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setRejectedAmount(value);
 		}
 	};
 	protected YesNoIndicator settlementSuspended;
@@ -636,7 +654,7 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} = "Cash settlement is suspended."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementSuspended = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator> mmSettlementSuspended = new MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementData1.mmSuspended, SettlementData2.mmSuspended);
 			isDerived = false;
@@ -649,12 +667,14 @@ public class TreasuryTradeSettlementStatus extends Status {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TreasuryTradeSettlementStatus.class.getMethod("getSettlementSuspended", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(TreasuryTradeSettlementStatus obj) {
+			return obj.getSettlementSuspended();
+		}
+
+		@Override
+		public void setValue(TreasuryTradeSettlementStatus obj, YesNoIndicator value) {
+			obj.setSettlementSuspended(value);
 		}
 	};
 	protected YesNoIndicator pendingSettlement;
@@ -693,7 +713,7 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} = "Cash settlement is pending."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPendingSettlement = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator> mmPendingSettlement = new MMBusinessAttribute<TreasuryTradeSettlementStatus, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementData1.mmPending, SettlementData2.mmPending);
 			isDerived = false;
@@ -706,12 +726,14 @@ public class TreasuryTradeSettlementStatus extends Status {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TreasuryTradeSettlementStatus.class.getMethod("getPendingSettlement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(TreasuryTradeSettlementStatus obj) {
+			return obj.getPendingSettlement();
+		}
+
+		@Override
+		public void setValue(TreasuryTradeSettlementStatus obj, YesNoIndicator value) {
+			obj.setPendingSettlement(value);
 		}
 	};
 	protected ISODateTime settlementDate;
@@ -749,7 +771,7 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} = "Date on which the trade is actually settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, ISODateTime> mmSettlementDate = new MMBusinessAttribute<TreasuryTradeSettlementStatus, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Trade3.mmSettlementDate, Trade3.mmFixingDate);
 			isDerived = false;
@@ -762,12 +784,14 @@ public class TreasuryTradeSettlementStatus extends Status {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TreasuryTradeSettlementStatus.class.getMethod("getSettlementDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(TreasuryTradeSettlementStatus obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(TreasuryTradeSettlementStatus obj, ISODateTime value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	protected Max35Text withdrawalReason;
@@ -796,7 +820,7 @@ public class TreasuryTradeSettlementStatus extends Status {
 	 * definition} = "Reason that an alleged trade is withdrawn."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmWithdrawalReason = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TreasuryTradeSettlementStatus, Max35Text> mmWithdrawalReason = new MMBusinessAttribute<TreasuryTradeSettlementStatus, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TreasuryTradeSettlementStatus.mmObject();
@@ -808,12 +832,14 @@ public class TreasuryTradeSettlementStatus extends Status {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TreasuryTradeSettlementStatus.class.getMethod("getWithdrawalReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TreasuryTradeSettlementStatus obj) {
+			return obj.getWithdrawalReason();
+		}
+
+		@Override
+		public void setValue(TreasuryTradeSettlementStatus obj, Max35Text value) {
+			obj.setWithdrawalReason(value);
 		}
 	};
 

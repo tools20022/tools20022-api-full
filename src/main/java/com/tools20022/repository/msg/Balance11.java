@@ -114,7 +114,7 @@ public class Balance11 {
 	 * definition} = "Indication that the position is short or long."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Balance11, Optional<ShortLong1Code>> mmShortLongIndicator = new MMMessageAttribute<Balance11, Optional<ShortLong1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Balance11.mmObject();
@@ -127,6 +127,16 @@ public class Balance11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ShortLong1Code> getValue(Balance11 obj) {
+			return obj.getShortLongIndicator();
+		}
+
+		@Override
+		public void setValue(Balance11 obj, Optional<ShortLong1Code> value) {
+			obj.setShortLongIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -166,7 +176,7 @@ public class Balance11 {
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Balance11, BalanceQuantity10Choice> mmQuantity = new MMMessageAttribute<Balance11, BalanceQuantity10Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Balance11.mmObject();
@@ -179,6 +189,16 @@ public class Balance11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceQuantity10Choice.mmObject();
+		}
+
+		@Override
+		public BalanceQuantity10Choice getValue(Balance11 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Balance11 obj, BalanceQuantity10Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 

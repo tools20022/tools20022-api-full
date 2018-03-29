@@ -114,7 +114,7 @@ public class ErrorAction1 {
 	 * definition} = "List of error action result codes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorAction1, List<TerminalManagementActionResult1Code>> mmActionResult = new MMMessageAttribute<ErrorAction1, List<TerminalManagementActionResult1Code>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction1.mmObject();
@@ -125,6 +125,16 @@ public class ErrorAction1 {
 			definition = "List of error action result codes.";
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult1Code.mmObject();
+		}
+
+		@Override
+		public List<TerminalManagementActionResult1Code> getValue(ErrorAction1 obj) {
+			return obj.getActionResult();
+		}
+
+		@Override
+		public void setValue(ErrorAction1 obj, List<TerminalManagementActionResult1Code> value) {
+			obj.setActionResult(value);
 		}
 	};
 	@XmlElement(name = "ActnToPrc", required = true)
@@ -161,7 +171,7 @@ public class ErrorAction1 {
 	 * definition} = "Action to be processed for the related errors."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionToProcess = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ErrorAction1, TerminalManagementErrorAction1Code> mmActionToProcess = new MMMessageAttribute<ErrorAction1, TerminalManagementErrorAction1Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionToProcess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction1.mmObject();
@@ -173,6 +183,16 @@ public class ErrorAction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementErrorAction1Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementErrorAction1Code getValue(ErrorAction1 obj) {
+			return obj.getActionToProcess();
+		}
+
+		@Override
+		public void setValue(ErrorAction1 obj, TerminalManagementErrorAction1Code value) {
+			obj.setActionToProcess(value);
 		}
 	};
 

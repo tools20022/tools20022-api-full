@@ -23,12 +23,12 @@ import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.CRSSourceStatusCode;
 import com.tools20022.repository.codeset.CRSStatusCode;
 import com.tools20022.repository.datatype.ISODate;
+import com.tools20022.repository.entity.InvestmentAccountPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountManagementStatusAndReason5;
 import com.tools20022.repository.msg.CRSStatus4;
 import com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14;
 import com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +133,7 @@ public class CRSStatus {
 	 * definition} = "Common Reporting Standard (CRS) status of the investor."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCRSStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CRSStatus, CRSStatusCode> mmCRSStatus = new MMBusinessAttribute<CRSStatus, CRSStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CRSStatus4.mmType, CRSStatus3Choice.mmCode);
 			isDerived = false;
@@ -146,12 +146,14 @@ public class CRSStatus {
 			simpleType_lazy = () -> CRSStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CRSStatus.class.getMethod("getCRSStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CRSStatusCode getValue(CRSStatus obj) {
+			return obj.getCRSStatus();
+		}
+
+		@Override
+		public void setValue(CRSStatus obj, CRSStatusCode value) {
+			obj.setCRSStatus(value);
 		}
 	};
 	protected CountryCode exceptionalReportingCountry;
@@ -189,7 +191,7 @@ public class CRSStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmExceptionalReportingCountry = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CRSStatus, CountryCode> mmExceptionalReportingCountry = new MMBusinessAttribute<CRSStatus, CountryCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CRSStatus4.mmExceptionalReportingCountry);
 			isDerived = false;
@@ -202,12 +204,14 @@ public class CRSStatus {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CRSStatus.class.getMethod("getExceptionalReportingCountry", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CountryCode getValue(CRSStatus obj) {
+			return obj.getExceptionalReportingCountry();
+		}
+
+		@Override
+		public void setValue(CRSStatus obj, CountryCode value) {
+			obj.setExceptionalReportingCountry(value);
 		}
 	};
 	protected CRSSourceStatusCode cRSSourceStatus;
@@ -245,7 +249,7 @@ public class CRSStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCRSSourceStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CRSStatus, CRSSourceStatusCode> mmCRSSourceStatus = new MMBusinessAttribute<CRSStatus, CRSSourceStatusCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CRSStatus4.mmSource);
 			isDerived = false;
@@ -258,12 +262,14 @@ public class CRSStatus {
 			simpleType_lazy = () -> CRSSourceStatusCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CRSStatus.class.getMethod("getCRSSourceStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CRSSourceStatusCode getValue(CRSStatus obj) {
+			return obj.getCRSSourceStatus();
+		}
+
+		@Override
+		public void setValue(CRSStatus obj, CRSSourceStatusCode value) {
+			obj.setCRSSourceStatus(value);
 		}
 	};
 	protected ISODate cRSReportingDate;
@@ -307,7 +313,7 @@ public class CRSStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCRSReportingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CRSStatus, ISODate> mmCRSReportingDate = new MMBusinessAttribute<CRSStatus, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountManagementStatusAndReason5.mmCRSReportingDate, InvestmentAccountOwnershipInformation15.mmCRSReportingDate, InvestmentAccountOwnershipInformation14.mmCRSReportingDate);
 			isDerived = false;
@@ -320,12 +326,14 @@ public class CRSStatus {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CRSStatus.class.getMethod("getCRSReportingDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(CRSStatus obj) {
+			return obj.getCRSReportingDate();
+		}
+
+		@Override
+		public void setValue(CRSStatus obj, ISODate value) {
+			obj.setCRSReportingDate(value);
 		}
 	};
 	protected InvestmentAccountPartyRole investmentAccountParty;
@@ -364,7 +372,7 @@ public class CRSStatus {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvestmentAccountParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CRSStatus, InvestmentAccountPartyRole> mmInvestmentAccountParty = new MMBusinessAssociationEnd<CRSStatus, InvestmentAccountPartyRole>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CRSStatus.mmObject();
@@ -373,9 +381,19 @@ public class CRSStatus {
 			definition = "Common Reporting Standard (CRS) status linked to an investment account and played by a party in that context.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmCRSStatus;
+			opposite_lazy = () -> InvestmentAccountPartyRole.mmCRSStatus;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
+			type_lazy = () -> InvestmentAccountPartyRole.mmObject();
+		}
+
+		@Override
+		public InvestmentAccountPartyRole getValue(CRSStatus obj) {
+			return obj.getInvestmentAccountParty();
+		}
+
+		@Override
+		public void setValue(CRSStatus obj, InvestmentAccountPartyRole value) {
+			obj.setInvestmentAccountParty(value);
 		}
 	};
 
@@ -386,7 +404,7 @@ public class CRSStatus {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CRSStatus";
 				definition = "Common Reporting Standard (CRS) status and the status source of the investor.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccountPartyRole.mmCRSStatus);
+				associationDomain_lazy = () -> Arrays.asList(InvestmentAccountPartyRole.mmCRSStatus);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CRSStatus.mmCRSStatus, com.tools20022.repository.entity.CRSStatus.mmExceptionalReportingCountry,
 						com.tools20022.repository.entity.CRSStatus.mmCRSSourceStatus, com.tools20022.repository.entity.CRSStatus.mmCRSReportingDate, com.tools20022.repository.entity.CRSStatus.mmInvestmentAccountParty);
 				derivationComponent_lazy = () -> Arrays.asList(CRSStatus4.mmObject(), CRSStatus3Choice.mmObject());
@@ -440,7 +458,7 @@ public class CRSStatus {
 		return investmentAccountParty;
 	}
 
-	public CRSStatus setInvestmentAccountParty(com.tools20022.repository.entity.InvestmentAccountPartyRole investmentAccountParty) {
+	public CRSStatus setInvestmentAccountParty(InvestmentAccountPartyRole investmentAccountParty) {
 		this.investmentAccountParty = Objects.requireNonNull(investmentAccountParty);
 		return this;
 	}

@@ -51,12 +51,16 @@ public class ConstraintType1Rule {
 	 */
 	public static final MMConstraint<Undertaking3> forUndertaking3 = new MMConstraint<Undertaking3>() {
 		{
-			validator = ConstraintType1Rule::checkUndertaking3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type1Rule";
 			definition = "Type must present if IssuanceType is ISSU, ISAD, ISCO.";
 			owner_lazy = () -> Undertaking3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Type</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IssuanceType</leftOperand><rightOperand>ISSU</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IssuanceType</leftOperand><rightOperand>ISAD</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IssuanceType</leftOperand><rightOperand>ISCO</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Undertaking3 obj) throws Exception {
+			checkUndertaking3(obj);
 		}
 	};
 

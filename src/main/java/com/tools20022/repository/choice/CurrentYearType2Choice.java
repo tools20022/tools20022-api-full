@@ -111,7 +111,7 @@ public class CurrentYearType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentYearType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrentYearType2Choice, ISAType2Code> mmCurrentYearType = new MMMessageAttribute<CurrentYearType2Choice, ISAType2Code>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentYearType2Choice.mmObject();
@@ -123,6 +123,16 @@ public class CurrentYearType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISAType2Code.mmObject();
+		}
+
+		@Override
+		public ISAType2Code getValue(CurrentYearType2Choice obj) {
+			return obj.getCurrentYearType();
+		}
+
+		@Override
+		public void setValue(CurrentYearType2Choice obj, ISAType2Code value) {
+			obj.setCurrentYearType(value);
 		}
 	};
 	@XmlElement(name = "XtndedCurYrTp", required = true)
@@ -162,7 +172,7 @@ public class CurrentYearType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedCurrentYearType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrentYearType2Choice, Extended350Code> mmExtendedCurrentYearType = new MMMessageAttribute<CurrentYearType2Choice, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentYearType2Choice.mmObject();
@@ -174,6 +184,16 @@ public class CurrentYearType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(CurrentYearType2Choice obj) {
+			return obj.getExtendedCurrentYearType();
+		}
+
+		@Override
+		public void setValue(CurrentYearType2Choice obj, Extended350Code value) {
+			obj.setExtendedCurrentYearType(value);
 		}
 	};
 

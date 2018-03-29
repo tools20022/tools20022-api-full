@@ -126,7 +126,7 @@ public class AccountSelection2Choice {
 	 * AccountSelection1Choice.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSelection2Choice, Max35Text> mmAccountIdentification = new MMMessageAttribute<AccountSelection2Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountSelection2Choice.mmObject();
@@ -139,6 +139,16 @@ public class AccountSelection2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountSelection2Choice obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountSelection2Choice obj, Max35Text value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "OthrAcctSelctnData", required = true)
@@ -181,7 +191,7 @@ public class AccountSelection2Choice {
 	 * AccountSelection1Choice.mmOtherAccountSelectionData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherAccountSelectionData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSelection2Choice, InvestmentAccount64> mmOtherAccountSelectionData = new MMMessageAssociationEnd<AccountSelection2Choice, InvestmentAccount64>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountSelection2Choice.mmObject();
@@ -195,6 +205,16 @@ public class AccountSelection2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccount64.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount64 getValue(AccountSelection2Choice obj) {
+			return obj.getOtherAccountSelectionData();
+		}
+
+		@Override
+		public void setValue(AccountSelection2Choice obj, InvestmentAccount64 value) {
+			obj.setOtherAccountSelectionData(value);
 		}
 	};
 

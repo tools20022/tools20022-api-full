@@ -120,7 +120,7 @@ public class PaymentCodeOrOther2Choice {
 	 * PaymentCodeOrOther1Choice.mmPaymentCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCodeOrOther2Choice, PaymentPeriod4> mmPaymentCode = new MMMessageAssociationEnd<PaymentCodeOrOther2Choice, PaymentPeriod4>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentTerms.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmObject();
@@ -134,6 +134,16 @@ public class PaymentCodeOrOther2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaymentPeriod4.mmObject();
+		}
+
+		@Override
+		public PaymentPeriod4 getValue(PaymentCodeOrOther2Choice obj) {
+			return obj.getPaymentCode();
+		}
+
+		@Override
+		public void setValue(PaymentCodeOrOther2Choice obj, PaymentPeriod4 value) {
+			obj.setPaymentCode(value);
 		}
 	};
 	@XmlElement(name = "PmtDueDt", required = true)
@@ -175,7 +185,7 @@ public class PaymentCodeOrOther2Choice {
 	 * PaymentCodeOrOther1Choice.mmPaymentDueDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCodeOrOther2Choice, ISODate> mmPaymentDueDate = new MMMessageAttribute<PaymentCodeOrOther2Choice, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmObject();
@@ -188,6 +198,16 @@ public class PaymentCodeOrOther2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(PaymentCodeOrOther2Choice obj) {
+			return obj.getPaymentDueDate();
+		}
+
+		@Override
+		public void setValue(PaymentCodeOrOther2Choice obj, ISODate value) {
+			obj.setPaymentDueDate(value);
 		}
 	};
 	@XmlElement(name = "OthrPmtTerms", required = true)
@@ -224,7 +244,7 @@ public class PaymentCodeOrOther2Choice {
 	 * PaymentCodeOrOther1Choice.mmOtherPaymentTerms}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherPaymentTerms = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCodeOrOther2Choice, Max140Text> mmOtherPaymentTerms = new MMMessageAttribute<PaymentCodeOrOther2Choice, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentCodeOrOther2Choice.mmObject();
 			isDerived = false;
@@ -236,6 +256,16 @@ public class PaymentCodeOrOther2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(PaymentCodeOrOther2Choice obj) {
+			return obj.getOtherPaymentTerms();
+		}
+
+		@Override
+		public void setValue(PaymentCodeOrOther2Choice obj, Max140Text value) {
+			obj.setOtherPaymentTerms(value);
 		}
 	};
 

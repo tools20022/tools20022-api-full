@@ -22,9 +22,9 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -192,7 +192,7 @@ public class Product {
 	 * definition} = "Card payment for which a product was specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCardPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, CardPayment> mmCardPayment = new MMBusinessAssociationEnd<Product, CardPayment>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
@@ -201,12 +201,22 @@ public class Product {
 			definition = "Card payment for which a product was specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CardPayment.mmProduct;
+			opposite_lazy = () -> CardPayment.mmProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
+			type_lazy = () -> CardPayment.mmObject();
+		}
+
+		@Override
+		public CardPayment getValue(Product obj) {
+			return obj.getCardPayment();
+		}
+
+		@Override
+		public void setValue(Product obj, CardPayment value) {
+			obj.setCardPayment(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Price> unitPrice;
+	protected List<Price> unitPrice;
 	/**
 	 * 
 	 <p>
@@ -301,7 +311,7 @@ public class Product {
 	 * definition} = "Price per unit of product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUnitPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, List<Price>> mmUnitPrice = new MMBusinessAssociationEnd<Product, List<Price>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Product2.mmUnitPrice, Product1.mmUnitPrice, LineItemDetails4.mmUnitPrice, LineItemDetails7.mmUnitPrice, LineItemDetails6.mmUnitPrice, LineItemDetails9.mmUnitPrice,
 					BillingServicesAmount1.mmPricingAmount, BillingServicesAmount2.mmPricingAmount, BillingService1.mmPrice, BillingService1.mmOriginalChargePrice, BillingServiceParameters2.mmUnitPrice,
@@ -313,12 +323,22 @@ public class Product {
 			name = "UnitPrice";
 			definition = "Price per unit of product.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Price.mmUnitPriceProduct;
+			opposite_lazy = () -> Price.mmUnitPriceProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
+			type_lazy = () -> Price.mmObject();
+		}
+
+		@Override
+		public List<Price> getValue(Product obj) {
+			return obj.getUnitPrice();
+		}
+
+		@Override
+		public void setValue(Product obj, List<Price> value) {
+			obj.setUnitPrice(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.ProductCategory> productCategory;
+	protected List<ProductCategory> productCategory;
 	/**
 	 * 
 	 <p>
@@ -407,7 +427,7 @@ public class Product {
 	 * definition} = "Category of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmProductCategory = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, List<ProductCategory>> mmProductCategory = new MMBusinessAssociationEnd<Product, List<ProductCategory>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeData4.mmProductType, TradeData5.mmProductType, TradeData6.mmProductType, TradeProduct1.mmProductCategory, LineItemDetails4.mmProductCategory, LineItemDetails7.mmProductCategory,
 					LineItemDetails5.mmProductCategory, LineItemDetails8.mmProductCategory, LineItemDetails6.mmProductCategory, LineItemDetails9.mmProductCategory, LineItemDetails10.mmProductCategory, LineItemDetails11.mmProductCategory,
@@ -419,9 +439,19 @@ public class Product {
 			name = "ProductCategory";
 			definition = "Category of the product.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmProduct;
+			opposite_lazy = () -> ProductCategory.mmProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ProductCategory.mmObject();
+			type_lazy = () -> ProductCategory.mmObject();
+		}
+
+		@Override
+		public List<ProductCategory> getValue(Product obj) {
+			return obj.getProductCategory();
+		}
+
+		@Override
+		public void setValue(Product obj, List<ProductCategory> value) {
+			obj.setProductCategory(value);
 		}
 	};
 	protected LineItem lineItem;
@@ -457,7 +487,7 @@ public class Product {
 	 * "Specifies the line item in which the product is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmLineItem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, Optional<LineItem>> mmLineItem = new MMBusinessAssociationEnd<Product, Optional<LineItem>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
@@ -466,12 +496,22 @@ public class Product {
 			definition = "Specifies the line item in which the product is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmInvoicedProduct;
+			opposite_lazy = () -> LineItem.mmInvoicedProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LineItem.mmObject();
+			type_lazy = () -> LineItem.mmObject();
+		}
+
+		@Override
+		public Optional<LineItem> getValue(Product obj) {
+			return obj.getLineItem();
+		}
+
+		@Override
+		public void setValue(Product obj, Optional<LineItem> value) {
+			obj.setLineItem(value.orElse(null));
 		}
 	};
-	protected List<com.tools20022.repository.entity.ProductIdentification> productIdentification;
+	protected List<ProductIdentification> productIdentification;
 	/**
 	 * 
 	 <p>
@@ -564,7 +604,7 @@ public class Product {
 	 * definition} = "Identification of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmProductIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, List<ProductIdentification>> mmProductIdentification = new MMBusinessAssociationEnd<Product, List<ProductIdentification>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmIdentification, LineItemDetails4.mmProductIdentifier, LineItemDetails7.mmProductIdentifier, LineItemDetails5.mmProductIdentifier, LineItemDetails8.mmProductIdentifier,
 					LineItemDetails6.mmProductIdentifier, LineItemDetails9.mmProductIdentifier, LineItemDetails10.mmProductIdentifier, LineItemDetails11.mmProductIdentifier, LineItemDetails13.mmProductIdentifier,
@@ -576,9 +616,19 @@ public class Product {
 			name = "ProductIdentification";
 			definition = "Identification of the product.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmProduct;
+			opposite_lazy = () -> ProductIdentification.mmProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmObject();
+			type_lazy = () -> ProductIdentification.mmObject();
+		}
+
+		@Override
+		public List<ProductIdentification> getValue(Product obj) {
+			return obj.getProductIdentification();
+		}
+
+		@Override
+		public void setValue(Product obj, List<ProductIdentification> value) {
+			obj.setProductIdentification(value);
 		}
 	};
 	protected Max35Text name;
@@ -656,7 +706,7 @@ public class Product {
 	 * definition} = "Name of a product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Product, Max35Text> mmName = new MMBusinessAttribute<Product, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmName, LineItemDetails4.mmProductName, LineItemDetails7.mmProductName, LineItemDetails5.mmProductName, LineItemDetails8.mmProductName, LineItemDetails6.mmProductName,
 					LineItemDetails9.mmProductName, BillingServiceIdentification1.mmIdentification, LineItemDetails10.mmProductName, LineItemDetails11.mmProductName, LineItemDetails13.mmProductName, LineItemDetails12.mmProductName,
@@ -671,12 +721,14 @@ public class Product {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Product.class.getMethod("getName", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Product obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(Product obj, Max35Text value) {
+			obj.setName(value);
 		}
 	};
 	protected Max140Text description;
@@ -743,7 +795,7 @@ public class Product {
 	 * "Information about the goods and/or services of a trade transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDescription = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Product, Max140Text> mmDescription = new MMBusinessAttribute<Product, Max140Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmDescription, LineItem5.mmGoodsDescription, LineItem7.mmGoodsDescription, TransportedGoods1.mmGoodsDescription, InsuranceDataSet1.mmInsuredGoodsDescription,
 					CertificateDataSet1.mmGoodsDescription, LineItem11.mmGoodsDescription, CertificateDataSet2.mmGoodsDescription, LineItem13.mmGoodsAndOrServicesDescription, TradeProduct2.mmDescription, TradeProduct3.mmDescription);
@@ -757,12 +809,14 @@ public class Product {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Product.class.getMethod("getDescription", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max140Text getValue(Product obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(Product obj, Max140Text value) {
+			obj.setDescription(value);
 		}
 	};
 	protected Country origin;
@@ -817,7 +871,7 @@ public class Product {
 	 * definition} = "Country from which the product originates."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrigin = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, Country> mmOrigin = new MMBusinessAssociationEnd<Product, Country>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmCountryOfOrigin, CertifiedCharacteristics1Choice.mmOrigin, CertifiedCharacteristics2Choice.mmOrigin, TradeProduct2.mmCountryOfOrigin, TradeProduct3.mmCountryOfOrigin);
 			isDerived = false;
@@ -827,12 +881,22 @@ public class Product {
 			definition = "Country from which the product originates.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Country.mmProducedProducts;
+			opposite_lazy = () -> Country.mmProducedProducts;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
+			type_lazy = () -> Country.mmObject();
+		}
+
+		@Override
+		public Country getValue(Product obj) {
+			return obj.getOrigin();
+		}
+
+		@Override
+		public void setValue(Product obj, Country value) {
+			obj.setOrigin(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.ProductCharacteristics> characteristics;
+	protected List<ProductCharacteristics> characteristics;
 	/**
 	 * 
 	 <p>
@@ -913,7 +977,7 @@ public class Product {
 	 * definition} = "Characteristics of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCharacteristics = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, List<ProductCharacteristics>> mmCharacteristics = new MMBusinessAssociationEnd<Product, List<ProductCharacteristics>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmProductCharacteristics, LineItemDetails4.mmProductCharacteristics, LineItemDetails7.mmProductCharacteristics, LineItemDetails5.mmProductCharacteristics,
 					LineItemDetails8.mmProductCharacteristics, LineItemDetails6.mmProductCharacteristics, LineItemDetails9.mmProductCharacteristics, LineItemDetails10.mmProductCharacteristics, LineItemDetails11.mmProductCharacteristics,
@@ -924,9 +988,19 @@ public class Product {
 			name = "Characteristics";
 			definition = "Characteristics of the product.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmProduct;
+			opposite_lazy = () -> ProductCharacteristics.mmProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ProductCharacteristics.mmObject();
+			type_lazy = () -> ProductCharacteristics.mmObject();
+		}
+
+		@Override
+		public List<ProductCharacteristics> getValue(Product obj) {
+			return obj.getCharacteristics();
+		}
+
+		@Override
+		public void setValue(Product obj, List<ProductCharacteristics> value) {
+			obj.setCharacteristics(value);
 		}
 	};
 	protected Price netPrice;
@@ -978,7 +1052,7 @@ public class Product {
 	 * definition} = "Net price of the goods and/or service."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNetPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, Optional<Price>> mmNetPrice = new MMBusinessAssociationEnd<Product, Optional<Price>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmNetPrice, LineItem16.mmNetPrice, SecuritiesTransactionPrice9Choice.mmMonetaryValue, SecuritiesTransactionPrice8Choice.mmMonetaryValue, LineItem17.mmNetPrice);
 			isDerived = false;
@@ -988,12 +1062,22 @@ public class Product {
 			definition = "Net price of the goods and/or service.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Price.mmNetPriceProduct;
+			opposite_lazy = () -> Price.mmNetPriceProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
+			type_lazy = () -> Price.mmObject();
+		}
+
+		@Override
+		public Optional<Price> getValue(Product obj) {
+			return obj.getNetPrice();
+		}
+
+		@Override
+		public void setValue(Product obj, Optional<Price> value) {
+			obj.setNetPrice(value.orElse(null));
 		}
 	};
-	protected List<com.tools20022.repository.entity.ProductQuantity> quantity;
+	protected List<ProductQuantity> quantity;
 	/**
 	 * 
 	 <p>
@@ -1097,7 +1181,7 @@ public class Product {
 	 * definition} = "Specifies the quantity of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, List<ProductQuantity>> mmQuantity = new MMBusinessAssociationEnd<Product, List<ProductQuantity>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmNetPriceQuantity, LineItem10.mmGrossPriceQuantity, LineItem10.mmGrossWeight, LineItemDetails7.mmQuantity, LineItemDetails5.mmOrderedQuantity,
 					LineItemDetails8.mmOrderedQuantity, LineItemDetails6.mmQuantity, LineItemDetails9.mmQuantity, CertifiedCharacteristics1Choice.mmWeight, CertifiedCharacteristics1Choice.mmQuantity, LineItemDetails10.mmQuantity,
@@ -1109,9 +1193,19 @@ public class Product {
 			name = "Quantity";
 			definition = "Specifies the quantity of the product.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmProduct;
+			opposite_lazy = () -> ProductQuantity.mmProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmObject();
+			type_lazy = () -> ProductQuantity.mmObject();
+		}
+
+		@Override
+		public List<ProductQuantity> getValue(Product obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Product obj, List<ProductQuantity> value) {
+			obj.setQuantity(value);
 		}
 	};
 	protected Price grossPrice;
@@ -1157,7 +1251,7 @@ public class Product {
 	 * definition} = "Gross price of the goods and/or service."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmGrossPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, Optional<Price>> mmGrossPrice = new MMBusinessAssociationEnd<Product, Optional<Price>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmGrossPrice, LineItem16.mmGrossPrice, LineItem17.mmGrossPrice);
 			isDerived = false;
@@ -1167,9 +1261,19 @@ public class Product {
 			definition = "Gross price of the goods and/or service.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Price.mmGrossPriceProduct;
+			opposite_lazy = () -> Price.mmGrossPriceProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
+			type_lazy = () -> Price.mmObject();
+		}
+
+		@Override
+		public Optional<Price> getValue(Product obj) {
+			return obj.getGrossPrice();
+		}
+
+		@Override
+		public void setValue(Product obj, Optional<Price> value) {
+			obj.setGrossPrice(value.orElse(null));
 		}
 	};
 	protected Max70Text quality;
@@ -1208,7 +1312,7 @@ public class Product {
 	 * definition} = "Quality of the product."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmQuality = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Product, Max70Text> mmQuality = new MMBusinessAttribute<Product, Max70Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmQuality, CertifiedCharacteristics2Choice.mmQuality);
 			isDerived = false;
@@ -1221,12 +1325,14 @@ public class Product {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Product.class.getMethod("getQuality", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max70Text getValue(Product obj) {
+			return obj.getQuality();
+		}
+
+		@Override
+		public void setValue(Product obj, Max70Text value) {
+			obj.setQuality(value);
 		}
 	};
 	protected ProductDelivery delivery;
@@ -1259,24 +1365,34 @@ public class Product {
 	 * name} = "Delivery"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Delivery process of a product."</li>
+	 * definition} = "Delivery process of a product"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDelivery = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, ProductDelivery> mmDelivery = new MMBusinessAssociationEnd<Product, ProductDelivery>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Delivery";
-			definition = "Delivery process of a product.";
+			definition = "Delivery process of a product";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmProduct;
+			opposite_lazy = () -> ProductDelivery.mmProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
+			type_lazy = () -> ProductDelivery.mmObject();
+		}
+
+		@Override
+		public ProductDelivery getValue(Product obj) {
+			return obj.getDelivery();
+		}
+
+		@Override
+		public void setValue(Product obj, ProductDelivery value) {
+			obj.setDelivery(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.PurchaseOrder> purchaseOrder;
+	protected List<PurchaseOrder> purchaseOrder;
 	/**
 	 * 
 	 <p>
@@ -1310,7 +1426,7 @@ public class Product {
 	 * "Specifies the purchase order in which a specific product is ordered."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPurchaseOrder = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, List<PurchaseOrder>> mmPurchaseOrder = new MMBusinessAssociationEnd<Product, List<PurchaseOrder>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
@@ -1318,12 +1434,22 @@ public class Product {
 			name = "PurchaseOrder";
 			definition = "Specifies the purchase order in which a specific product is ordered.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmProduct;
+			opposite_lazy = () -> PurchaseOrder.mmProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PurchaseOrder.mmObject();
+			type_lazy = () -> PurchaseOrder.mmObject();
+		}
+
+		@Override
+		public List<PurchaseOrder> getValue(Product obj) {
+			return obj.getPurchaseOrder();
+		}
+
+		@Override
+		public void setValue(Product obj, List<PurchaseOrder> value) {
+			obj.setPurchaseOrder(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Tax> tax;
+	protected List<Tax> tax;
 	/**
 	 * 
 	 <p>
@@ -1410,7 +1536,7 @@ public class Product {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Product, List<Tax>> mmTax = new MMBusinessAssociationEnd<Product, List<Tax>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmTax, TradeSettlement1.mmSubTotalCalculatedTax, LineItem10.mmTax, LineItemDetails4.mmTax, LineItem5.mmTax, LineItemDetails7.mmTax, LineItem7.mmTax, LineItemDetails6.mmTax,
 					LineItem4.mmTax, LineItemDetails9.mmTax, LineItem9.mmTax, BillingService1.mmTaxCalculation, LineItem11.mmTax, LineItemDetails10.mmTax, LineItem12.mmTax, LineItemDetails11.mmTax, LineItemDetails13.mmTax,
@@ -1421,9 +1547,19 @@ public class Product {
 			name = "Tax";
 			definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters linked to the value of the goods and services in a trade transaction.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmProduct;
+			opposite_lazy = () -> Tax.mmProduct;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
+			type_lazy = () -> Tax.mmObject();
+		}
+
+		@Override
+		public List<Tax> getValue(Product obj) {
+			return obj.getTax();
+		}
+
+		@Override
+		public void setValue(Product obj, List<Tax> value) {
+			obj.setTax(value);
 		}
 	};
 
@@ -1434,11 +1570,8 @@ public class Product {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Product";
 				definition = "Item that is offered for sale. Products can be services or goods.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmProducedProducts, com.tools20022.repository.entity.Tax.mmProduct, com.tools20022.repository.entity.CardPayment.mmProduct,
-						com.tools20022.repository.entity.Price.mmUnitPriceProduct, com.tools20022.repository.entity.Price.mmNetPriceProduct, com.tools20022.repository.entity.Price.mmGrossPriceProduct,
-						com.tools20022.repository.entity.ProductIdentification.mmProduct, com.tools20022.repository.entity.ProductQuantity.mmProduct, com.tools20022.repository.entity.ProductCategory.mmProduct,
-						com.tools20022.repository.entity.LineItem.mmInvoicedProduct, com.tools20022.repository.entity.ProductDelivery.mmProduct, com.tools20022.repository.entity.ProductCharacteristics.mmProduct,
-						com.tools20022.repository.entity.PurchaseOrder.mmProduct);
+				associationDomain_lazy = () -> Arrays.asList(Country.mmProducedProducts, Tax.mmProduct, CardPayment.mmProduct, Price.mmUnitPriceProduct, Price.mmNetPriceProduct, Price.mmGrossPriceProduct, ProductIdentification.mmProduct,
+						ProductQuantity.mmProduct, ProductCategory.mmProduct, LineItem.mmInvoicedProduct, ProductDelivery.mmProduct, ProductCharacteristics.mmProduct, PurchaseOrder.mmProduct);
 				subType_lazy = () -> Arrays.asList(Service.mmObject(), Goods.mmObject(), FinancialProduct.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Product.mmCardPayment, com.tools20022.repository.entity.Product.mmUnitPrice, com.tools20022.repository.entity.Product.mmProductCategory,
 						com.tools20022.repository.entity.Product.mmLineItem, com.tools20022.repository.entity.Product.mmProductIdentification, com.tools20022.repository.entity.Product.mmName,
@@ -1461,7 +1594,7 @@ public class Product {
 		return cardPayment;
 	}
 
-	public Product setCardPayment(com.tools20022.repository.entity.CardPayment cardPayment) {
+	public Product setCardPayment(CardPayment cardPayment) {
 		this.cardPayment = Objects.requireNonNull(cardPayment);
 		return this;
 	}
@@ -1470,7 +1603,7 @@ public class Product {
 		return unitPrice == null ? unitPrice = new ArrayList<>() : unitPrice;
 	}
 
-	public Product setUnitPrice(List<com.tools20022.repository.entity.Price> unitPrice) {
+	public Product setUnitPrice(List<Price> unitPrice) {
 		this.unitPrice = Objects.requireNonNull(unitPrice);
 		return this;
 	}
@@ -1479,7 +1612,7 @@ public class Product {
 		return productCategory == null ? productCategory = new ArrayList<>() : productCategory;
 	}
 
-	public Product setProductCategory(List<com.tools20022.repository.entity.ProductCategory> productCategory) {
+	public Product setProductCategory(List<ProductCategory> productCategory) {
 		this.productCategory = Objects.requireNonNull(productCategory);
 		return this;
 	}
@@ -1488,7 +1621,7 @@ public class Product {
 		return lineItem == null ? Optional.empty() : Optional.of(lineItem);
 	}
 
-	public Product setLineItem(com.tools20022.repository.entity.LineItem lineItem) {
+	public Product setLineItem(LineItem lineItem) {
 		this.lineItem = lineItem;
 		return this;
 	}
@@ -1497,7 +1630,7 @@ public class Product {
 		return productIdentification == null ? productIdentification = new ArrayList<>() : productIdentification;
 	}
 
-	public Product setProductIdentification(List<com.tools20022.repository.entity.ProductIdentification> productIdentification) {
+	public Product setProductIdentification(List<ProductIdentification> productIdentification) {
 		this.productIdentification = Objects.requireNonNull(productIdentification);
 		return this;
 	}
@@ -1524,7 +1657,7 @@ public class Product {
 		return origin;
 	}
 
-	public Product setOrigin(com.tools20022.repository.entity.Country origin) {
+	public Product setOrigin(Country origin) {
 		this.origin = Objects.requireNonNull(origin);
 		return this;
 	}
@@ -1533,7 +1666,7 @@ public class Product {
 		return characteristics == null ? characteristics = new ArrayList<>() : characteristics;
 	}
 
-	public Product setCharacteristics(List<com.tools20022.repository.entity.ProductCharacteristics> characteristics) {
+	public Product setCharacteristics(List<ProductCharacteristics> characteristics) {
 		this.characteristics = Objects.requireNonNull(characteristics);
 		return this;
 	}
@@ -1542,7 +1675,7 @@ public class Product {
 		return netPrice == null ? Optional.empty() : Optional.of(netPrice);
 	}
 
-	public Product setNetPrice(com.tools20022.repository.entity.Price netPrice) {
+	public Product setNetPrice(Price netPrice) {
 		this.netPrice = netPrice;
 		return this;
 	}
@@ -1551,7 +1684,7 @@ public class Product {
 		return quantity == null ? quantity = new ArrayList<>() : quantity;
 	}
 
-	public Product setQuantity(List<com.tools20022.repository.entity.ProductQuantity> quantity) {
+	public Product setQuantity(List<ProductQuantity> quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}
@@ -1560,7 +1693,7 @@ public class Product {
 		return grossPrice == null ? Optional.empty() : Optional.of(grossPrice);
 	}
 
-	public Product setGrossPrice(com.tools20022.repository.entity.Price grossPrice) {
+	public Product setGrossPrice(Price grossPrice) {
 		this.grossPrice = grossPrice;
 		return this;
 	}
@@ -1578,7 +1711,7 @@ public class Product {
 		return delivery;
 	}
 
-	public Product setDelivery(com.tools20022.repository.entity.ProductDelivery delivery) {
+	public Product setDelivery(ProductDelivery delivery) {
 		this.delivery = Objects.requireNonNull(delivery);
 		return this;
 	}
@@ -1587,7 +1720,7 @@ public class Product {
 		return purchaseOrder == null ? purchaseOrder = new ArrayList<>() : purchaseOrder;
 	}
 
-	public Product setPurchaseOrder(List<com.tools20022.repository.entity.PurchaseOrder> purchaseOrder) {
+	public Product setPurchaseOrder(List<PurchaseOrder> purchaseOrder) {
 		this.purchaseOrder = Objects.requireNonNull(purchaseOrder);
 		return this;
 	}
@@ -1596,7 +1729,7 @@ public class Product {
 		return tax == null ? tax = new ArrayList<>() : tax;
 	}
 
-	public Product setTax(List<com.tools20022.repository.entity.Tax> tax) {
+	public Product setTax(List<Tax> tax) {
 		this.tax = Objects.requireNonNull(tax);
 		return this;
 	}

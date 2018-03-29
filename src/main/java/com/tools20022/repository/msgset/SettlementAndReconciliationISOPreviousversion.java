@@ -52,9 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementInstructionV03
  * IntraPositionMovementInstructionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03
- * PortfolioTransferNotificationV03}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionCounterpartyResponseV01
  * SecuritiesSettlementTransactionCounterpartyResponseV01}</li>
  * <li>
@@ -82,59 +79,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAuditTrailReportV02
  * SecuritiesSettlementTransactionAuditTrailReportV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
- * SecuritiesSettlementTransactionInstructionV06}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV06
  * SecuritiesFinancingStatusAdviceV06}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06
  * SecuritiesSettlementConditionsModificationRequestV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06
- * SecuritiesSettlementTransactionConfirmationV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06
- * SecuritiesFinancingInstructionV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07
- * SecuritiesSettlementTransactionStatusAdviceV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06
- * SecuritiesTransactionPostingReportV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05
- * IntraPositionMovementPostingReportV05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06
- * SecuritiesSettlementTransactionGenerationNotificationV06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05
- * SecuritiesSettlementTransactionReversalAdviceV05}</li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04
+ * PortfolioTransferNotificationV04}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV04
  * IntraPositionMovementStatusAdviceV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06
- * SecuritiesFinancingConfirmationV06}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstructionV05
  * SecuritiesFinancingModificationInstructionV05}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04
- * SecuritiesSettlementTransactionModificationRequestV04}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07
+ * SecuritiesFinancingInstructionV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05
- * IntraPositionMovementConfirmationV05}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06
+ * SecuritiesSettlementTransactionAllegementNotificationV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05
- * SecuritiesSettlementTransactionAllegementReportV05}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06
+ * IntraPositionMovementPostingReportV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05
- * SecuritiesSettlementTransactionAllegementNotificationV05}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07
+ * SecuritiesSettlementTransactionGenerationNotificationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07
- * SecuritiesTransactionPendingReportV07}</li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05
+ * SecuritiesSettlementTransactionModificationRequestV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07
+ * SecuritiesSettlementTransactionConfirmationV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06
+ * SecuritiesSettlementTransactionAllegementReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08
+ * SecuritiesTransactionPendingReportV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06
+ * IntraPositionMovementConfirmationV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06
+ * SecuritiesSettlementTransactionReversalAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07
+ * SecuritiesTransactionPostingReportV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07
+ * SecuritiesFinancingConfirmationV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08
+ * SecuritiesSettlementTransactionStatusAdviceV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07
+ * SecuritiesSettlementTransactionInstructionV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -166,16 +166,15 @@ public class SettlementAndReconciliationISOPreviousversion {
 				name = "Settlement And Reconciliation - ISO - Previous version";
 				definition = "Set of messages used for settlement and reconciliation activities and used by intermediaries involved in the settlement and reconciliation processing chain such as the broker, the investment manager, the global custodian, the stock exchange, the market insfrastructure, etc. \r\n";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesMessageCancellationAdviceV04.mmObject(), SecuritiesSettlementAllegementRemovalAdviceV03.mmObject(), SecuritiesStatusOrStatementQueryStatusAdviceV03.mmObject(),
-						SecuritiesTransactionStatusQueryV03.mmObject(), IntraPositionMovementInstructionV03.mmObject(), PortfolioTransferNotificationV03.mmObject(), SecuritiesSettlementTransactionCounterpartyResponseV01.mmObject(),
+						SecuritiesTransactionStatusQueryV03.mmObject(), IntraPositionMovementInstructionV03.mmObject(), SecuritiesSettlementTransactionCounterpartyResponseV01.mmObject(),
 						SecuritiesTransactionCancellationRequestV04.mmObject(), SecuritiesBalanceCustodyReportV08.mmObject(), SecuritiesStatementQueryV05.mmObject(), SecuritiesBalanceAccountingReportV08.mmObject(),
 						SecuritiesTransactionCancellationRequestStatusAdviceV04.mmObject(), SecuritiesSettlementConditionModificationStatusAdviceV06.mmObject(), SecuritiesSettlementTransactionModificationRequestStatusAdviceV03.mmObject(),
-						SecuritiesSettlementTransactionAuditTrailReportV02.mmObject(), SecuritiesSettlementTransactionInstructionV06.mmObject(), SecuritiesFinancingStatusAdviceV06.mmObject(),
-						SecuritiesSettlementConditionsModificationRequestV06.mmObject(), SecuritiesSettlementTransactionConfirmationV06.mmObject(), SecuritiesFinancingInstructionV06.mmObject(),
-						SecuritiesSettlementTransactionStatusAdviceV07.mmObject(), SecuritiesTransactionPostingReportV06.mmObject(), IntraPositionMovementPostingReportV05.mmObject(),
-						SecuritiesSettlementTransactionGenerationNotificationV06.mmObject(), SecuritiesSettlementTransactionReversalAdviceV05.mmObject(), IntraPositionMovementStatusAdviceV04.mmObject(),
-						SecuritiesFinancingConfirmationV06.mmObject(), SecuritiesFinancingModificationInstructionV05.mmObject(), SecuritiesSettlementTransactionModificationRequestV04.mmObject(),
-						IntraPositionMovementConfirmationV05.mmObject(), SecuritiesSettlementTransactionAllegementReportV05.mmObject(), SecuritiesSettlementTransactionAllegementNotificationV05.mmObject(),
-						SecuritiesTransactionPendingReportV07.mmObject());
+						SecuritiesSettlementTransactionAuditTrailReportV02.mmObject(), SecuritiesFinancingStatusAdviceV06.mmObject(), SecuritiesSettlementConditionsModificationRequestV06.mmObject(),
+						PortfolioTransferNotificationV04.mmObject(), IntraPositionMovementStatusAdviceV04.mmObject(), SecuritiesFinancingModificationInstructionV05.mmObject(), SecuritiesFinancingInstructionV07.mmObject(),
+						SecuritiesSettlementTransactionAllegementNotificationV06.mmObject(), IntraPositionMovementPostingReportV06.mmObject(), SecuritiesSettlementTransactionGenerationNotificationV07.mmObject(),
+						SecuritiesSettlementTransactionModificationRequestV05.mmObject(), SecuritiesSettlementTransactionConfirmationV07.mmObject(), SecuritiesSettlementTransactionAllegementReportV06.mmObject(),
+						SecuritiesTransactionPendingReportV08.mmObject(), IntraPositionMovementConfirmationV06.mmObject(), SecuritiesSettlementTransactionReversalAdviceV06.mmObject(), SecuritiesTransactionPostingReportV07.mmObject(),
+						SecuritiesFinancingConfirmationV07.mmObject(), SecuritiesSettlementTransactionStatusAdviceV08.mmObject(), SecuritiesSettlementTransactionInstructionV07.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

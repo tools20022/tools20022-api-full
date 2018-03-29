@@ -50,11 +50,15 @@ public class ConstraintMessagePaginationRule {
 	 */
 	public static final MMConstraint<ReportHeader3> forReportHeader3 = new MMConstraint<ReportHeader3>() {
 		{
-			validator = ConstraintMessagePaginationRule::checkReportHeader3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePaginationRule";
 			definition = "If MessagePagination is present, then ReportIdentification must be identical for all pages.";
 			owner_lazy = () -> ReportHeader3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportHeader3 obj) throws Exception {
+			checkReportHeader3(obj);
 		}
 	};
 

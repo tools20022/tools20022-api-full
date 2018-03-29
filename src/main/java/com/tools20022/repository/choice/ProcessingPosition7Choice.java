@@ -119,7 +119,7 @@ public class ProcessingPosition7Choice {
 	 * ProcessingPosition1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessingPosition7Choice, ProcessingPosition3Code> mmCode = new MMMessageAttribute<ProcessingPosition7Choice, ProcessingPosition3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingPosition7Choice.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class ProcessingPosition7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProcessingPosition3Code.mmObject();
+		}
+
+		@Override
+		public ProcessingPosition3Code getValue(ProcessingPosition7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ProcessingPosition7Choice obj, ProcessingPosition3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class ProcessingPosition7Choice {
 	 * ProcessingPosition1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessingPosition7Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<ProcessingPosition7Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingPosition7Choice.mmObject();
 			isDerived = false;
@@ -185,6 +195,16 @@ public class ProcessingPosition7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ProcessingPosition7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ProcessingPosition7Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

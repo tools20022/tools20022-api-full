@@ -23,10 +23,9 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
-import com.tools20022.repository.entity.Order;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -376,7 +375,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Date/time on which the order is effective."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOrderEffectiveDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, ISODateTime> mmOrderEffectiveDate = new MMBusinessAttribute<SecuritiesOrder, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmEffectiveDateAndTime);
 			isDerived = false;
@@ -390,12 +389,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getOrderEffectiveDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(SecuritiesOrder obj) {
+			return obj.getOrderEffectiveDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, ISODateTime value) {
+			obj.setOrderEffectiveDate(value);
 		}
 	};
 	protected ISODateTime orderExpiryDate;
@@ -437,7 +438,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Date/time on which the order is to expire."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOrderExpiryDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, ISODateTime> mmOrderExpiryDate = new MMBusinessAttribute<SecuritiesOrder, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order1.mmExpiryDateTime, OrderParameters1.mmExpiryDateAndTime);
 			isDerived = false;
@@ -451,12 +452,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getOrderExpiryDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(SecuritiesOrder obj) {
+			return obj.getOrderExpiryDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, ISODateTime value) {
+			obj.setOrderExpiryDate(value);
 		}
 	};
 	protected Max35Text identification;
@@ -773,7 +776,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, Max35Text> mmIdentification = new MMBusinessAttribute<SecuritiesOrder, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentFundOrder4.mmOrderReference, IdentificationReference8Choice.mmClientOrderLinkIdentification, IdentificationReference11Choice.mmClientOrderLinkIdentification,
 					Order3.mmSecondaryClientOrderIdentification, Order16.mmOrderIdentification, Order14.mmOrderIdentification, IndividualOrderStatusAndReason4.mmOrderReference, IndividualOrderConfirmationStatusAndReason1.mmOrderReference,
@@ -805,12 +808,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SecuritiesOrder obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	protected CashMarginOrderCode cashMargin;
@@ -864,7 +869,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCashMargin = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, CashMarginOrderCode> mmCashMargin = new MMBusinessAttribute<SecuritiesOrder, CashMarginOrderCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmCashMargin, Order16.mmCashMargin, Order14.mmCashMargin, Order9.mmCashMargin, Order6.mmCashMargin, Order17.mmCashMargin, Order18.mmCashMargin);
 			isDerived = false;
@@ -878,12 +883,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> CashMarginOrderCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getCashMargin", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CashMarginOrderCode getValue(SecuritiesOrder obj) {
+			return obj.getCashMargin();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, CashMarginOrderCode value) {
+			obj.setCashMargin(value);
 		}
 	};
 	protected SideCode side;
@@ -995,7 +1002,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Coded list to specify the side of the order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSide = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, SideCode> mmSide = new MMBusinessAttribute<SecuritiesOrder, SideCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LegDetails1.mmSide, Order3.mmSide, Order16.mmSide, Order14.mmSide, TransactionDetails1.mmSide, TransactionDetails3.mmSide, SettlementObligation3.mmBuySellIndicator,
 					TradeLeg2.mmBuySellIndicator, TradeLeg5.mmBuySellIndicator, TradeLeg1.mmBuySellIndicator, TradeLeg3.mmBuySellIndicator, TradeLeg6.mmBuySellIndicator, TradeLeg4.mmBuySellIndicator, TradeLeg7.mmBuySellIndicator,
@@ -1011,12 +1018,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> SideCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getSide", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SideCode getValue(SecuritiesOrder obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SideCode value) {
+			obj.setSide(value);
 		}
 	};
 	protected YesNoIndicator solicitedOrder;
@@ -1063,7 +1072,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSolicitedOrder = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, YesNoIndicator> mmSolicitedOrder = new MMBusinessAttribute<SecuritiesOrder, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmSolicitedOrderIndicator, Order9.mmSolicitedOrder, Order6.mmSolicitedOrder);
 			isDerived = false;
@@ -1077,12 +1086,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getSolicitedOrder", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesOrder obj) {
+			return obj.getSolicitedOrder();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, YesNoIndicator value) {
+			obj.setSolicitedOrder(value);
 		}
 	};
 	protected CustomerOrderCapacityCode customerCapacity;
@@ -1137,7 +1148,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCustomerCapacity = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, CustomerOrderCapacityCode> mmCustomerCapacity = new MMBusinessAttribute<SecuritiesOrder, CustomerOrderCapacityCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmTradingCapacity, Order3.mmCustomerCapacity, Order9.mmCustomerCapacity, Order1.mmTradingCapacity, Order1.mmCustomerCapacity, Order2.mmTradingCapacity, Order2.mmCustomerCapacity,
 					Order6.mmTradingCapacity, Order6.mmCustomerCapacity);
@@ -1151,12 +1162,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> CustomerOrderCapacityCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getCustomerCapacity", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CustomerOrderCapacityCode getValue(SecuritiesOrder obj) {
+			return obj.getCustomerCapacity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, CustomerOrderCapacityCode value) {
+			obj.setCustomerCapacity(value);
 		}
 	};
 	protected PositionEffectCode positionEffect;
@@ -1227,11 +1240,11 @@ public class SecuritiesOrder extends Order {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together."
+	 * "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPositionEffect = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, PositionEffectCode> mmPositionEffect = new MMBusinessAttribute<SecuritiesOrder, PositionEffectCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmPositionEffect, Order16.mmPositionEffect, Order14.mmPositionEffect, Order9.mmPositionEffect, InstrumentLeg3.mmLegPositionEffect, Order6.mmPositionEffect, Order17.mmPositionEffect,
 					Order18.mmPositionEffect, InvestmentAccount49.mmProcessingOrder, InvestmentAccount51.mmProcessingOrder, InvestmentAccount50.mmProcessingOrder, InvestmentAccount61.mmProcessingOrder,
@@ -1241,18 +1254,20 @@ public class SecuritiesOrder extends Order {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "77"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PositionEffect";
-			definition = "Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
+			definition = "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PositionEffectCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getPositionEffect", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PositionEffectCode getValue(SecuritiesOrder obj) {
+			return obj.getPositionEffect();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, PositionEffectCode value) {
+			obj.setPositionEffect(value);
 		}
 	};
 	protected YesNoIndicator foreignExchangeExecutionRequested;
@@ -1304,7 +1319,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmForeignExchangeExecutionRequested = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, YesNoIndicator> mmForeignExchangeExecutionRequested = new MMBusinessAttribute<SecuritiesOrder, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmForeignExchangeExecutionRequestedIndicator, Order9.mmForeignExchangeExecutionRequested, Bid1.mmForeignExchangeExecutionRequestedIndicator,
 					Order6.mmForeignExchangeExecutionRequestedIndicator);
@@ -1319,12 +1334,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getForeignExchangeExecutionRequested", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(SecuritiesOrder obj) {
+			return obj.getForeignExchangeExecutionRequested();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, YesNoIndicator value) {
+			obj.setForeignExchangeExecutionRequested(value);
 		}
 	};
 	protected CurrencyCode settlementCurrency;
@@ -1379,7 +1396,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Currency to be used for settlement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, CurrencyCode> mmSettlementCurrency = new MMBusinessAttribute<SecuritiesOrder, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmSettlementCurrency, SecuritiesSettlement1.mmCurrency, Order9.mmSettlementCurrency, Order6.mmSettlementCurrency, FundCashOutBreakdown3.mmSettlementCurrency,
 					FundCashInBreakdown3.mmSettlementCurrency, InstrumentLeg6.mmLegSettlementCurrency);
@@ -1393,12 +1410,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getSettlementCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(SecuritiesOrder obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, CurrencyCode value) {
+			obj.setSettlementCurrency(value);
 		}
 	};
 	protected EligibilityCode orderOriginatorEligibility;
@@ -1462,7 +1481,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOrderOriginatorEligibility = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, EligibilityCode> mmOrderOriginatorEligibility = new MMBusinessAttribute<SecuritiesOrder, EligibilityCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmOrderOriginatorEligibility, Order16.mmOrderOriginatorEligibility, Order14.mmOrderOriginatorEligibility, InvestmentAccount21.mmOrderOriginatorEligibility,
 					Order9.mmOrderOriginatorEligibility, Order6.mmOrderOriginatorEligibility, Order17.mmOrderOriginatorEligibility, Order18.mmOrderOriginatorEligibility, InvestmentAccount58.mmOrderOriginatorEligibility);
@@ -1476,12 +1495,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> EligibilityCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getOrderOriginatorEligibility", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public EligibilityCode getValue(SecuritiesOrder obj) {
+			return obj.getOrderOriginatorEligibility();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, EligibilityCode value) {
+			obj.setOrderOriginatorEligibility(value);
 		}
 	};
 	protected SecuritiesQuantity orderedQuantity;
@@ -1606,7 +1627,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Quantity of financial instrument to be ordered."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrderedQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesQuantity> mmOrderedQuantity = new MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesQuantity>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderQuantity1.mmQuantity, Order3.mmQuantityDetails, PartialFill1.mmConfirmationQuantity, PartialFill1.mmOriginalOrderedQuantity, PartialFill1.mmPreviouslyExecutedQuantity,
 					Order16.mmConfirmationQuantity, Order14.mmConfirmationQuantity, OrderStatus1.mmOrderQuantityDetails, Order9.mmSideOrderQuantityDetails, TriggeringInstructions.mmNewQuantity, InstrumentLeg2.mmLegOrderQuantity,
@@ -1621,9 +1642,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Quantity of financial instrument to be ordered.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedOrder;
+			opposite_lazy = () -> SecuritiesQuantity.mmRelatedOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
+			type_lazy = () -> SecuritiesQuantity.mmObject();
+		}
+
+		@Override
+		public SecuritiesQuantity getValue(SecuritiesOrder obj) {
+			return obj.getOrderedQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SecuritiesQuantity value) {
+			obj.setOrderedQuantity(value);
 		}
 	};
 	protected BusinessProcessTypeCode businessProcessType;
@@ -1665,7 +1696,7 @@ public class SecuritiesOrder extends Order {
 	 * "Type of business process model used to carry out the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBusinessProcessType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, BusinessProcessTypeCode> mmBusinessProcessType = new MMBusinessAttribute<SecuritiesOrder, BusinessProcessTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BusinessProcessType1Choice.mmCode, BusinessProcessType1Choice.mmProprietary);
 			isDerived = false;
@@ -1678,12 +1709,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> BusinessProcessTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getBusinessProcessType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BusinessProcessTypeCode getValue(SecuritiesOrder obj) {
+			return obj.getBusinessProcessType();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, BusinessProcessTypeCode value) {
+			obj.setBusinessProcessType(value);
 		}
 	};
 	protected TradingMarket placeOfTrade;
@@ -1748,7 +1781,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Market at which the order is to be traded."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPlaceOfTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, TradingMarket> mmPlaceOfTrade = new MMBusinessAssociationEnd<SecuritiesOrder, TradingMarket>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmPlaceOfExecution, Order16.mmPlaceOfTrade, Order14.mmPlaceOfTrade, Order9.mmPlaceOfExecution, Order1.mmPlaceOfExecution, Order2.mmPlaceOfExecution, Order6.mmPlaceOfExecution,
 					Order11.mmPlaceOfExecution, Order17.mmPlaceOfTrade, Order18.mmPlaceOfTrade);
@@ -1760,9 +1793,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Market at which the order is to be traded.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmRelatedOrder;
+			opposite_lazy = () -> TradingMarket.mmRelatedOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
+			type_lazy = () -> TradingMarket.mmObject();
+		}
+
+		@Override
+		public TradingMarket getValue(SecuritiesOrder obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, TradingMarket value) {
+			obj.setPlaceOfTrade(value);
 		}
 	};
 	protected CurrencyAndAmount orderedAmount;
@@ -1858,7 +1901,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOrderedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, CurrencyAndAmount> mmOrderedAmount = new MMBusinessAttribute<SecuritiesOrder, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order16.mmGrossTradeAmount, Order14.mmGrossTradeAmount, InvestmentFundsOrderBreakdown1.mmAmount, FinancialInstrumentQuantity11Choice.mmOrderedAmount,
 					SidePocketQuantityAndAmount1.mmOrderedAmount, RedemptionExecution10.mmOrderedAmount, FinancialInstrumentQuantity10Choice.mmOrderedAmount, SidePocketUnitsOrAmountOrRate1Choice.mmOrderedAmount,
@@ -1876,12 +1919,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getOrderedAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SecuritiesOrder obj) {
+			return obj.getOrderedAmount();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, CurrencyAndAmount value) {
+			obj.setOrderedAmount(value);
 		}
 	};
 	protected Max3Number giveUpNumberOfDays;
@@ -1929,7 +1974,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmGiveUpNumberOfDays = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, Max3Number> mmGiveUpNumberOfDays = new MMBusinessAttribute<SecuritiesOrder, Max3Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order16.mmGiveUpNumberOfDays, Order14.mmGiveUpNumberOfDays, Order17.mmGiveUpNumberOfDays, Order18.mmGiveUpNumberOfDays);
 			isDerived = false;
@@ -1942,12 +1987,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> Max3Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getGiveUpNumberOfDays", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max3Number getValue(SecuritiesOrder obj) {
+			return obj.getGiveUpNumberOfDays();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, Max3Number value) {
+			obj.setGiveUpNumberOfDays(value);
 		}
 	};
 	protected TradeRegulatoryConditionsCode tradeRegulatoryConditionsType;
@@ -1994,7 +2041,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Specifies the regulatory conditions type of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTradeRegulatoryConditionsType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, Optional<TradeRegulatoryConditionsCode>> mmTradeRegulatoryConditionsType = new MMBusinessAttribute<SecuritiesOrder, Optional<TradeRegulatoryConditionsCode>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order16.mmTradeRegulatoryConditionsType, Order14.mmTradeRegulatoryConditionsType, Order17.mmTradeRegulatoryConditionsType, Order18.mmTradeRegulatoryConditionsType);
 			isDerived = false;
@@ -2007,12 +2054,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> TradeRegulatoryConditionsCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getTradeRegulatoryConditionsType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TradeRegulatoryConditionsCode> getValue(SecuritiesOrder obj) {
+			return obj.getTradeRegulatoryConditionsType();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, Optional<TradeRegulatoryConditionsCode> value) {
+			obj.setTradeRegulatoryConditionsType(value.orElse(null));
 		}
 	};
 	protected SecuritiesQuantity dayOrderQuantity;
@@ -2054,7 +2103,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDayOrderQuantity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesQuantity> mmDayOrderQuantity = new MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesQuantity>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -2064,9 +2113,19 @@ public class SecuritiesOrder extends Order {
 			definition = "For good till orders, the order quantity less all quantity (adjusted for stock splits) that traded on previous days.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmPreviousDayOrder;
+			opposite_lazy = () -> SecuritiesQuantity.mmPreviousDayOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
+			type_lazy = () -> SecuritiesQuantity.mmObject();
+		}
+
+		@Override
+		public SecuritiesQuantity getValue(SecuritiesOrder obj) {
+			return obj.getDayOrderQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SecuritiesQuantity value) {
+			obj.setDayOrderQuantity(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesOrderPartyRole> securitiesOrderPartyRole;
@@ -2123,7 +2182,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesOrderPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, List<SecuritiesOrderPartyRole>> mmSecuritiesOrderPartyRole = new MMBusinessAssociationEnd<SecuritiesOrder, List<SecuritiesOrderPartyRole>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmOtherBusinessParties, Order9.mmOtherBusinessParties, Order6.mmOtherBusinessParties, Order11.mmOtherBusinessParties);
 			isDerived = false;
@@ -2136,8 +2195,18 @@ public class SecuritiesOrder extends Order {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderPartyRole.mmObject();
 		}
+
+		@Override
+		public List<SecuritiesOrderPartyRole> getValue(SecuritiesOrder obj) {
+			return obj.getSecuritiesOrderPartyRole();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, List<SecuritiesOrderPartyRole> value) {
+			obj.setSecuritiesOrderPartyRole(value);
+		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesOrderStatus> status;
+	protected List<SecuritiesOrderStatus> status;
 	/**
 	 * 
 	 <p>
@@ -2181,7 +2250,7 @@ public class SecuritiesOrder extends Order {
 	 * "Indicates the status of an order at a specific point in time."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, List<SecuritiesOrderStatus>> mmStatus = new MMBusinessAssociationEnd<SecuritiesOrder, List<SecuritiesOrderStatus>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualOrderConfirmationStatusAndReason2.mmConfirmation);
 			isDerived = false;
@@ -2190,9 +2259,19 @@ public class SecuritiesOrder extends Order {
 			name = "Status";
 			definition = "Indicates the status of an order at a specific point in time.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmSecuritiesOrder;
+			opposite_lazy = () -> SecuritiesOrderStatus.mmSecuritiesOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
+			type_lazy = () -> SecuritiesOrderStatus.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesOrderStatus> getValue(SecuritiesOrder obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, List<SecuritiesOrderStatus> value) {
+			obj.setStatus(value);
 		}
 	};
 	protected Negotiation relatedNegotiation;
@@ -2229,7 +2308,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Negotiation which resulted in an order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedNegotiation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, Negotiation> mmRelatedNegotiation = new MMBusinessAssociationEnd<SecuritiesOrder, Negotiation>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -2238,12 +2317,22 @@ public class SecuritiesOrder extends Order {
 			definition = "Negotiation which resulted in an order.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Negotiation.mmSecuritiesOrder;
+			opposite_lazy = () -> Negotiation.mmSecuritiesOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Negotiation.mmObject();
+			type_lazy = () -> Negotiation.mmObject();
+		}
+
+		@Override
+		public Negotiation getValue(SecuritiesOrder obj) {
+			return obj.getRelatedNegotiation();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, Negotiation value) {
+			obj.setRelatedNegotiation(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Adjustment> adjustments;
+	protected List<Adjustment> adjustments;
 	/**
 	 * 
 	 <p>
@@ -2278,7 +2367,7 @@ public class SecuritiesOrder extends Order {
 	 * "Charges and commissions associated with a securities order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAdjustments = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, List<Adjustment>> mmAdjustments = new MMBusinessAssociationEnd<SecuritiesOrder, List<Adjustment>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -2286,9 +2375,19 @@ public class SecuritiesOrder extends Order {
 			name = "Adjustments";
 			definition = "Charges and commissions associated with a securities order.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.mmSecuritiesOrder;
+			opposite_lazy = () -> Adjustment.mmSecuritiesOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
+			type_lazy = () -> Adjustment.mmObject();
+		}
+
+		@Override
+		public List<Adjustment> getValue(SecuritiesOrder obj) {
+			return obj.getAdjustments();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, List<Adjustment> value) {
+			obj.setAdjustments(value);
 		}
 	};
 	protected SecuritiesRegulatoryDetails legalParameters;
@@ -2328,7 +2427,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmLegalParameters = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesRegulatoryDetails> mmLegalParameters = new MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesRegulatoryDetails>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -2337,9 +2436,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Legal parameters required in a securities order for regulatory purposes.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmRelatedOrder;
+			opposite_lazy = () -> SecuritiesRegulatoryDetails.mmRelatedOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmObject();
+			type_lazy = () -> SecuritiesRegulatoryDetails.mmObject();
+		}
+
+		@Override
+		public SecuritiesRegulatoryDetails getValue(SecuritiesOrder obj) {
+			return obj.getLegalParameters();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SecuritiesRegulatoryDetails value) {
+			obj.setLegalParameters(value);
 		}
 	};
 	protected SecuritiesPricing orderPrice;
@@ -2403,7 +2512,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrderPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesPricing> mmOrderPrice = new MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesPricing>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderQuantity1.mmPrice, PartialFill1.mmDealPrice, OrderStatus3.mmAveragePrice, OrderQuantity3.mmPrice, Order6.mmPreviousClosingPrice, ListStrikePriceDetails1.mmStrikePrice,
 					PartialFill2.mmDealPrice);
@@ -2415,9 +2524,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Indicates the requested price for the order. This can be a \"stop\" price a \"limit\" price or a \"deal\" price.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmOrder;
+			opposite_lazy = () -> SecuritiesPricing.mmOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			type_lazy = () -> SecuritiesPricing.mmObject();
+		}
+
+		@Override
+		public SecuritiesPricing getValue(SecuritiesOrder obj) {
+			return obj.getOrderPrice();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SecuritiesPricing value) {
+			obj.setOrderPrice(value);
 		}
 	};
 	protected SecuritiesPricing stopPrice;
@@ -2467,7 +2586,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmStopPrice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesPricing> mmStopPrice = new MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesPricing>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderParameters1.mmStopPrice);
 			isDerived = false;
@@ -2478,12 +2597,22 @@ public class SecuritiesOrder extends Order {
 			definition = "Indicates the stop price in case of a stop order or a stop limit order.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmStopPriceOrder;
+			opposite_lazy = () -> SecuritiesPricing.mmStopPriceOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			type_lazy = () -> SecuritiesPricing.mmObject();
+		}
+
+		@Override
+		public SecuritiesPricing getValue(SecuritiesOrder obj) {
+			return obj.getStopPrice();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SecuritiesPricing value) {
+			obj.setStopPrice(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Allocation> securitiesOrderAllocation;
+	protected List<Allocation> securitiesOrderAllocation;
 	/**
 	 * 
 	 <p>
@@ -2536,7 +2665,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Information about the pre-allocation of an order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesOrderAllocation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, List<Allocation>> mmSecuritiesOrderAllocation = new MMBusinessAssociationEnd<SecuritiesOrder, List<Allocation>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmPreAllocationDetails, Order9.mmPreAllocationDetails, InstrumentLeg3.mmLegPreAllocationDetails, Bid1.mmTotalNumberTickets, Order6.mmPreAllocationDetails);
 			isDerived = false;
@@ -2545,9 +2674,19 @@ public class SecuritiesOrder extends Order {
 			name = "SecuritiesOrderAllocation";
 			definition = "Information about the pre-allocation of an order.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Allocation.mmSecuritiesOrder;
+			opposite_lazy = () -> Allocation.mmSecuritiesOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
+			type_lazy = () -> Allocation.mmObject();
+		}
+
+		@Override
+		public List<Allocation> getValue(SecuritiesOrder obj) {
+			return obj.getSecuritiesOrderAllocation();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, List<Allocation> value) {
+			obj.setSecuritiesOrderAllocation(value);
 		}
 	};
 	protected SecuritiesOrderParameters orderExecutionParameters;
@@ -2595,7 +2734,7 @@ public class SecuritiesOrder extends Order {
 	 * "Conditions under which a securities order must be executed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrderExecutionParameters = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesOrderParameters> mmOrderExecutionParameters = new MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesOrderParameters>() {
 		{
 			derivation_lazy = () -> Arrays.asList(QuoteEntry1.mmOrderType, Order6.mmOrderParameters);
 			isDerived = false;
@@ -2605,9 +2744,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Conditions under which a securities order must be executed.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmRelatedSecuritiesOrder;
+			opposite_lazy = () -> SecuritiesOrderParameters.mmRelatedSecuritiesOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderParameters.mmObject();
+			type_lazy = () -> SecuritiesOrderParameters.mmObject();
+		}
+
+		@Override
+		public SecuritiesOrderParameters getValue(SecuritiesOrder obj) {
+			return obj.getOrderExecutionParameters();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SecuritiesOrderParameters value) {
+			obj.setOrderExecutionParameters(value);
 		}
 	};
 	protected SecuritiesTrade orderExecution;
@@ -2657,7 +2806,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Result of a securities order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrderExecution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesTrade> mmOrderExecution = new MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesTrade>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmAmountsDetails, Order9.mmAmountsDetails, Order6.mmAmountDetails, Order11.mmAmountsDetails);
 			isDerived = false;
@@ -2667,12 +2816,22 @@ public class SecuritiesOrder extends Order {
 			definition = "Result of a securities order.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmRelatedOrder;
+			opposite_lazy = () -> SecuritiesTrade.mmRelatedOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
+			type_lazy = () -> SecuritiesTrade.mmObject();
+		}
+
+		@Override
+		public SecuritiesTrade getValue(SecuritiesOrder obj) {
+			return obj.getOrderExecution();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SecuritiesTrade value) {
+			obj.setOrderExecution(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesAccount> orderingAccount;
+	protected List<SecuritiesAccount> orderingAccount;
 	/**
 	 * 
 	 <p>
@@ -2714,7 +2873,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Account impacted by a security transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrderingAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, List<SecuritiesAccount>> mmOrderingAccount = new MMBusinessAssociationEnd<SecuritiesOrder, List<SecuritiesAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DisclosedBid1.mmBiddingAccount);
 			isDerived = false;
@@ -2723,9 +2882,19 @@ public class SecuritiesOrder extends Order {
 			name = "OrderingAccount";
 			definition = "Account impacted by a security transaction.";
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmRelatedOrder;
+			opposite_lazy = () -> SecuritiesAccount.mmRelatedOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
+			type_lazy = () -> SecuritiesAccount.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount> getValue(SecuritiesOrder obj) {
+			return obj.getOrderingAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, List<SecuritiesAccount> value) {
+			obj.setOrderingAccount(value);
 		}
 	};
 	protected SecuritiesQuoteVariable quote;
@@ -2763,7 +2932,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Quote for which the order conditions are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmQuote = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, Optional<SecuritiesQuoteVariable>> mmQuote = new MMBusinessAssociationEnd<SecuritiesOrder, Optional<SecuritiesQuoteVariable>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -2772,9 +2941,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Quote for which the order conditions are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmSecuritiesOrder;
+			opposite_lazy = () -> SecuritiesQuoteVariable.mmSecuritiesOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesQuoteVariable.mmObject();
+			type_lazy = () -> SecuritiesQuoteVariable.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesQuoteVariable> getValue(SecuritiesOrder obj) {
+			return obj.getQuote();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, Optional<SecuritiesQuoteVariable> value) {
+			obj.setQuote(value.orElse(null));
 		}
 	};
 	protected TransactionType1Code fundTransactionDirectionIndicator;
@@ -2807,7 +2986,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Indicates the type of investment funds transaction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFundTransactionDirectionIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, TransactionType1Code> mmFundTransactionDirectionIndicator = new MMBusinessAttribute<SecuritiesOrder, TransactionType1Code>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -2820,12 +2999,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> TransactionType1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getFundTransactionDirectionIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionType1Code getValue(SecuritiesOrder obj) {
+			return obj.getFundTransactionDirectionIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, TransactionType1Code value) {
+			obj.setFundTransactionDirectionIndicator(value);
 		}
 	};
 	protected ISODateTime orderDate;
@@ -2874,7 +3055,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmOrderDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, ISODateTime> mmOrderDate = new MMBusinessAttribute<SecuritiesOrder, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order16.mmOrderBookingDate, Order14.mmOrderBookingDate, Order17.mmOrderBookingDate, Order18.mmOrderBookingDate, Unit8.mmOrderDate);
 			isDerived = false;
@@ -2888,12 +3069,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getOrderDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(SecuritiesOrder obj) {
+			return obj.getOrderDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, ISODateTime value) {
+			obj.setOrderDate(value);
 		}
 	};
 	protected CurrencyAndAmount pegDifference;
@@ -2926,7 +3109,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Price difference for a pegged order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPegDifference = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, CurrencyAndAmount> mmPegDifference = new MMBusinessAttribute<SecuritiesOrder, CurrencyAndAmount>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -2939,12 +3122,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getPegDifference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SecuritiesOrder obj) {
+			return obj.getPegDifference();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, CurrencyAndAmount value) {
+			obj.setPegDifference(value);
 		}
 	};
 	protected TradingSession securitiesOrderTradingSession;
@@ -2983,7 +3168,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesOrderTradingSession = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, TradingSession> mmSecuritiesOrderTradingSession = new MMBusinessAssociationEnd<SecuritiesOrder, TradingSession>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -2992,9 +3177,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Details of a specific trading session associated with a securities order.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.TradingSession.mmSecuritiesOrder;
+			opposite_lazy = () -> TradingSession.mmSecuritiesOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
+			type_lazy = () -> TradingSession.mmObject();
+		}
+
+		@Override
+		public TradingSession getValue(SecuritiesOrder obj) {
+			return obj.getSecuritiesOrderTradingSession();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, TradingSession value) {
+			obj.setSecuritiesOrderTradingSession(value);
 		}
 	};
 	protected OrderBook relatedOrderBook;
@@ -3031,7 +3226,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Order book whichgenerates an order."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedOrderBook = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, Optional<OrderBook>> mmRelatedOrderBook = new MMBusinessAssociationEnd<SecuritiesOrder, Optional<OrderBook>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -3040,9 +3235,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Order book whichgenerates an order.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.OrderBook.mmOrder;
+			opposite_lazy = () -> OrderBook.mmOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.OrderBook.mmObject();
+			type_lazy = () -> OrderBook.mmObject();
+		}
+
+		@Override
+		public Optional<OrderBook> getValue(SecuritiesOrder obj) {
+			return obj.getRelatedOrderBook();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, Optional<OrderBook> value) {
+			obj.setRelatedOrderBook(value.orElse(null));
 		}
 	};
 	protected ListTrading listTrading;
@@ -3079,7 +3284,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "List trading information containing a serie of orders."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmListTrading = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, Optional<ListTrading>> mmListTrading = new MMBusinessAssociationEnd<SecuritiesOrder, Optional<ListTrading>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -3091,6 +3296,16 @@ public class SecuritiesOrder extends Order {
 			opposite_lazy = () -> com.tools20022.repository.entity.ListTrading.mmSecuritiesListOrder;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ListTrading.mmObject();
+		}
+
+		@Override
+		public Optional<ListTrading> getValue(SecuritiesOrder obj) {
+			return obj.getListTrading();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, Optional<ListTrading> value) {
+			obj.setListTrading(value.orElse(null));
 		}
 	};
 	protected CrossTrade buySideRelatedCrossTrade;
@@ -3128,7 +3343,7 @@ public class SecuritiesOrder extends Order {
 	 * "Cross trade for which the buy side information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmBuySideRelatedCrossTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, CrossTrade> mmBuySideRelatedCrossTrade = new MMBusinessAssociationEnd<SecuritiesOrder, CrossTrade>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -3137,9 +3352,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Cross trade for which the buy side information is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CrossTrade.mmBuySideOrder;
+			opposite_lazy = () -> CrossTrade.mmBuySideOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CrossTrade.mmObject();
+			type_lazy = () -> CrossTrade.mmObject();
+		}
+
+		@Override
+		public CrossTrade getValue(SecuritiesOrder obj) {
+			return obj.getBuySideRelatedCrossTrade();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, CrossTrade value) {
+			obj.setBuySideRelatedCrossTrade(value);
 		}
 	};
 	protected CrossTrade sellSideRelatedCrossTrade;
@@ -3177,7 +3402,7 @@ public class SecuritiesOrder extends Order {
 	 * "Cross trade for which the sell side information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSellSideRelatedCrossTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, CrossTrade> mmSellSideRelatedCrossTrade = new MMBusinessAssociationEnd<SecuritiesOrder, CrossTrade>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
@@ -3186,12 +3411,22 @@ public class SecuritiesOrder extends Order {
 			definition = "Cross trade for which the sell side information is provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CrossTrade.mmSellSideOrder;
+			opposite_lazy = () -> CrossTrade.mmSellSideOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CrossTrade.mmObject();
+			type_lazy = () -> CrossTrade.mmObject();
+		}
+
+		@Override
+		public CrossTrade getValue(SecuritiesOrder obj) {
+			return obj.getSellSideRelatedCrossTrade();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, CrossTrade value) {
+			obj.setSellSideRelatedCrossTrade(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Security> orderedSecurity;
+	protected List<Security> orderedSecurity;
 	/**
 	 * 
 	 <p>
@@ -3292,7 +3527,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Security for which an order is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOrderedSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, List<Security>> mmOrderedSecurity = new MMBusinessAssociationEnd<SecuritiesOrder, List<Security>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmFinancialInstrumentAttributes, Order3.mmStipulations, Order3.mmUnderlyingFinancialInstrumentAttributes, Order3.mmUnderlyingStipulations,
 					OrderStatusAndReason5.mmUnderlyingFinancialInstrument, IndicationOfInterest1.mmFinancialInstrumentAttributes, IndicationOfInterest1.mmStipulations, IndicationOfInterest1.mmUnderlyingFinancialInstrumentDetails,
@@ -3306,9 +3541,19 @@ public class SecuritiesOrder extends Order {
 			name = "OrderedSecurity";
 			definition = "Security for which an order is specified.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmSecuritiesOrder;
+			opposite_lazy = () -> Security.mmSecuritiesOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
+			type_lazy = () -> Security.mmObject();
+		}
+
+		@Override
+		public List<Security> getValue(SecuritiesOrder obj) {
+			return obj.getOrderedSecurity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, List<Security> value) {
+			obj.setOrderedSecurity(value);
 		}
 	};
 	protected SecuritiesPostTradeBooking bookingInstructions;
@@ -3357,7 +3602,7 @@ public class SecuritiesOrder extends Order {
 	 * definition} = "Information about the booking of executions."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmBookingInstructions = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesPostTradeBooking> mmBookingInstructions = new MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesPostTradeBooking>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmBookingDetails, Order9.mmBookingDetails, Order6.mmBookingDetails);
 			isDerived = false;
@@ -3367,9 +3612,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Information about the booking of executions.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmRelatedOrder;
+			opposite_lazy = () -> SecuritiesPostTradeBooking.mmRelatedOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmObject();
+			type_lazy = () -> SecuritiesPostTradeBooking.mmObject();
+		}
+
+		@Override
+		public SecuritiesPostTradeBooking getValue(SecuritiesOrder obj) {
+			return obj.getBookingInstructions();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SecuritiesPostTradeBooking value) {
+			obj.setBookingInstructions(value);
 		}
 	};
 	protected ExchangeForPhysicalTrade exchangeForPhysicalTrade;
@@ -3420,7 +3675,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmExchangeForPhysicalTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, com.tools20022.repository.entity.ExchangeForPhysicalTrade> mmExchangeForPhysicalTrade = new MMBusinessAssociationEnd<SecuritiesOrder, com.tools20022.repository.entity.ExchangeForPhysicalTrade>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Bid1.mmExchangeForPhysicalIndicator, NonDisclosedBid1.mmExchangeForPhysicalTrade);
 			isDerived = false;
@@ -3433,6 +3688,16 @@ public class SecuritiesOrder extends Order {
 			opposite_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmSecuritiesOrder;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.ExchangeForPhysicalTrade getValue(SecuritiesOrder obj) {
+			return obj.getExchangeForPhysicalTrade();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, com.tools20022.repository.entity.ExchangeForPhysicalTrade value) {
+			obj.setExchangeForPhysicalTrade(value);
 		}
 	};
 	protected OrderQuantityTypeCode quantityType;
@@ -3505,7 +3770,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmQuantityType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, OrderQuantityTypeCode> mmQuantityType = new MMBusinessAttribute<SecuritiesOrder, OrderQuantityTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrderQuantity1.mmQuantityType, OriginalOrderQuantityType1.mmStructured, FundCashInBreakdown1.mmOriginalOrderQuantityDetails, FundCashOutBreakdown1.mmOriginalOrderQuantityDetails,
 					FundCashInBreakdown2.mmOriginalOrderQuantityType, FundCashInBreakdown2.mmExtendedOriginalOrderQuantityType, FundCashOutBreakdown2.mmOriginalOrderQuantityType, FundCashOutBreakdown2.mmExtendedOriginalOrderQuantityType,
@@ -3520,12 +3785,14 @@ public class SecuritiesOrder extends Order {
 			simpleType_lazy = () -> OrderQuantityTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getQuantityType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OrderQuantityTypeCode getValue(SecuritiesOrder obj) {
+			return obj.getQuantityType();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, OrderQuantityTypeCode value) {
+			obj.setQuantityType(value);
 		}
 	};
 	protected Max35Text clientOrderIdentification;
@@ -3683,11 +3950,11 @@ public class SecuritiesOrder extends Order {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element."
+	 * "Unique identifier for the order as assigned by the buy-side.  Uniqueness must be guaranteed within a single trading day.  Firms, particularly those  that  electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClientOrderIdentification element."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmClientOrderIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, Max35Text> mmClientOrderIdentification = new MMBusinessAttribute<SecuritiesOrder, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransferReference2.mmClientReference, TransferReference1.mmClientReference, Order3.mmClientOrderIdentification, Order16.mmClientOrderIdentification,
 					Order16.mmSecondaryClientOrderIdentification, Order14.mmClientOrderIdentification, Order14.mmSecondaryClientOrderIdentification, IndividualOrderStatusAndReason4.mmClientReference,
@@ -3703,18 +3970,20 @@ public class SecuritiesOrder extends Order {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientOrderIdentification";
-			definition = "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
+			definition = "Unique identifier for the order as assigned by the buy-side.  Uniqueness must be guaranteed within a single trading day.  Firms, particularly those  that  electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getClientOrderIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SecuritiesOrder obj) {
+			return obj.getClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, Max35Text value) {
+			obj.setClientOrderIdentification(value);
 		}
 	};
 	protected SecuritiesOrderExecutionInstruction executionInstructions;
@@ -3765,7 +4034,7 @@ public class SecuritiesOrder extends Order {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmExecutionInstructions = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesOrderExecutionInstruction> mmExecutionInstructions = new MMBusinessAssociationEnd<SecuritiesOrder, SecuritiesOrderExecutionInstruction>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order3.mmExecutionInstructionsDetails, Order6.mmExecutionInstructionsDetails);
 			isDerived = false;
@@ -3775,9 +4044,19 @@ public class SecuritiesOrder extends Order {
 			definition = "Execution instructions in which securities order parameters are defined.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction.mmRelatedOrder;
+			opposite_lazy = () -> SecuritiesOrderExecutionInstruction.mmRelatedOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction.mmObject();
+			type_lazy = () -> SecuritiesOrderExecutionInstruction.mmObject();
+		}
+
+		@Override
+		public SecuritiesOrderExecutionInstruction getValue(SecuritiesOrder obj) {
+			return obj.getExecutionInstructions();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, SecuritiesOrderExecutionInstruction value) {
+			obj.setExecutionInstructions(value);
 		}
 	};
 	protected OrderTypeCode type;
@@ -3824,11 +4103,11 @@ public class SecuritiesOrder extends Order {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument."
+	 * "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesOrder, OrderTypeCode> mmType = new MMBusinessAttribute<SecuritiesOrder, OrderTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TriggeringInstructions.mmOrderType, QuoteEntry2.mmOrderType, Order1.mmType, Order2.mmType, OrderParameters1.mmType);
 			isDerived = false;
@@ -3836,18 +4115,20 @@ public class SecuritiesOrder extends Order {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::TOOR"), new FIXSynonym(this, "80"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
-			definition = "Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument.";
+			definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesOrder.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OrderTypeCode getValue(SecuritiesOrder obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SecuritiesOrder obj, OrderTypeCode value) {
+			obj.setType(value);
 		}
 	};
 
@@ -3858,20 +4139,16 @@ public class SecuritiesOrder extends Order {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOrder";
 				definition = "Intention to transfer an ownership of a financial instrument.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmSecuritiesOrder, com.tools20022.repository.entity.SecuritiesPricing.mmOrder,
-						com.tools20022.repository.entity.SecuritiesPricing.mmStopPriceOrder, com.tools20022.repository.entity.TradingMarket.mmRelatedOrder, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedOrder,
-						com.tools20022.repository.entity.Adjustment.mmSecuritiesOrder, com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedOrder, com.tools20022.repository.entity.SecuritiesQuantity.mmPreviousDayOrder,
-						com.tools20022.repository.entity.SecuritiesTrade.mmRelatedOrder, com.tools20022.repository.entity.ListTrading.mmSecuritiesListOrder, com.tools20022.repository.entity.TradingSession.mmSecuritiesOrder,
-						com.tools20022.repository.entity.Allocation.mmSecuritiesOrder, com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction.mmRelatedOrder,
-						com.tools20022.repository.entity.SecuritiesPostTradeBooking.mmRelatedOrder, com.tools20022.repository.entity.SecuritiesOrderPartyRole.mmSecuritiesOrder,
-						com.tools20022.repository.entity.Negotiation.mmSecuritiesOrder, com.tools20022.repository.entity.SecuritiesOrderStatus.mmSecuritiesOrder,
-						com.tools20022.repository.entity.SecuritiesOrderParameters.mmRelatedSecuritiesOrder, com.tools20022.repository.entity.SecuritiesRegulatoryDetails.mmRelatedOrder,
-						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmSecuritiesOrder, com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmSecuritiesOrder, com.tools20022.repository.entity.OrderBook.mmOrder,
-						com.tools20022.repository.entity.CrossTrade.mmBuySideOrder, com.tools20022.repository.entity.CrossTrade.mmSellSideOrder);
+				associationDomain_lazy = () -> Arrays.asList(Security.mmSecuritiesOrder, SecuritiesPricing.mmOrder, SecuritiesPricing.mmStopPriceOrder, TradingMarket.mmRelatedOrder, SecuritiesAccount.mmRelatedOrder,
+						Adjustment.mmSecuritiesOrder, SecuritiesQuantity.mmRelatedOrder, SecuritiesQuantity.mmPreviousDayOrder, SecuritiesTrade.mmRelatedOrder, com.tools20022.repository.entity.ListTrading.mmSecuritiesListOrder,
+						TradingSession.mmSecuritiesOrder, Allocation.mmSecuritiesOrder, SecuritiesOrderExecutionInstruction.mmRelatedOrder, SecuritiesPostTradeBooking.mmRelatedOrder,
+						com.tools20022.repository.entity.SecuritiesOrderPartyRole.mmSecuritiesOrder, Negotiation.mmSecuritiesOrder, SecuritiesOrderStatus.mmSecuritiesOrder, SecuritiesOrderParameters.mmRelatedSecuritiesOrder,
+						SecuritiesRegulatoryDetails.mmRelatedOrder, SecuritiesQuoteVariable.mmSecuritiesOrder, com.tools20022.repository.entity.ExchangeForPhysicalTrade.mmSecuritiesOrder, OrderBook.mmOrder, CrossTrade.mmBuySideOrder,
+						CrossTrade.mmSellSideOrder);
 				derivationElement_lazy = () -> Arrays.asList(Order16.mmBusinessProcessType, Order16.mmPartialFillDetails, Order14.mmBusinessProcessType, Order14.mmPartialFillDetails, SingleQuote1.mmOrderDetails,
 						SingleOrder1.mmOrderDetails, MultiLegOrder1.mmOrderDetails, SingleOrMultiLegOrderChoice.mmSingleOrderDetails, SingleOrMultiLegOrderChoice.mmMultilegOrderDetails, Order17.mmBusinessProcessType,
 						Order17.mmPartialFillDetails, Order18.mmBusinessProcessType, Order18.mmPartialFillDetails);
-				subType_lazy = () -> Arrays.asList(InvestmentFundOrder.mmObject(), com.tools20022.repository.entity.CrossTrade.mmObject());
+				subType_lazy = () -> Arrays.asList(InvestmentFundOrder.mmObject(), CrossTrade.mmObject());
 				superType_lazy = () -> Order.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesOrder.mmOrderEffectiveDate, com.tools20022.repository.entity.SecuritiesOrder.mmOrderExpiryDate,
 						com.tools20022.repository.entity.SecuritiesOrder.mmIdentification, com.tools20022.repository.entity.SecuritiesOrder.mmCashMargin, com.tools20022.repository.entity.SecuritiesOrder.mmSide,
@@ -4006,7 +4283,7 @@ public class SecuritiesOrder extends Order {
 		return orderedQuantity;
 	}
 
-	public SecuritiesOrder setOrderedQuantity(com.tools20022.repository.entity.SecuritiesQuantity orderedQuantity) {
+	public SecuritiesOrder setOrderedQuantity(SecuritiesQuantity orderedQuantity) {
 		this.orderedQuantity = Objects.requireNonNull(orderedQuantity);
 		return this;
 	}
@@ -4024,7 +4301,7 @@ public class SecuritiesOrder extends Order {
 		return placeOfTrade;
 	}
 
-	public SecuritiesOrder setPlaceOfTrade(com.tools20022.repository.entity.TradingMarket placeOfTrade) {
+	public SecuritiesOrder setPlaceOfTrade(TradingMarket placeOfTrade) {
 		this.placeOfTrade = Objects.requireNonNull(placeOfTrade);
 		return this;
 	}
@@ -4060,7 +4337,7 @@ public class SecuritiesOrder extends Order {
 		return dayOrderQuantity;
 	}
 
-	public SecuritiesOrder setDayOrderQuantity(com.tools20022.repository.entity.SecuritiesQuantity dayOrderQuantity) {
+	public SecuritiesOrder setDayOrderQuantity(SecuritiesQuantity dayOrderQuantity) {
 		this.dayOrderQuantity = Objects.requireNonNull(dayOrderQuantity);
 		return this;
 	}
@@ -4078,7 +4355,7 @@ public class SecuritiesOrder extends Order {
 		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public SecuritiesOrder setStatus(List<com.tools20022.repository.entity.SecuritiesOrderStatus> status) {
+	public SecuritiesOrder setStatus(List<SecuritiesOrderStatus> status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}
@@ -4087,7 +4364,7 @@ public class SecuritiesOrder extends Order {
 		return relatedNegotiation;
 	}
 
-	public SecuritiesOrder setRelatedNegotiation(com.tools20022.repository.entity.Negotiation relatedNegotiation) {
+	public SecuritiesOrder setRelatedNegotiation(Negotiation relatedNegotiation) {
 		this.relatedNegotiation = Objects.requireNonNull(relatedNegotiation);
 		return this;
 	}
@@ -4096,7 +4373,7 @@ public class SecuritiesOrder extends Order {
 		return adjustments == null ? adjustments = new ArrayList<>() : adjustments;
 	}
 
-	public SecuritiesOrder setAdjustments(List<com.tools20022.repository.entity.Adjustment> adjustments) {
+	public SecuritiesOrder setAdjustments(List<Adjustment> adjustments) {
 		this.adjustments = Objects.requireNonNull(adjustments);
 		return this;
 	}
@@ -4105,7 +4382,7 @@ public class SecuritiesOrder extends Order {
 		return legalParameters;
 	}
 
-	public SecuritiesOrder setLegalParameters(com.tools20022.repository.entity.SecuritiesRegulatoryDetails legalParameters) {
+	public SecuritiesOrder setLegalParameters(SecuritiesRegulatoryDetails legalParameters) {
 		this.legalParameters = Objects.requireNonNull(legalParameters);
 		return this;
 	}
@@ -4114,7 +4391,7 @@ public class SecuritiesOrder extends Order {
 		return orderPrice;
 	}
 
-	public SecuritiesOrder setOrderPrice(com.tools20022.repository.entity.SecuritiesPricing orderPrice) {
+	public SecuritiesOrder setOrderPrice(SecuritiesPricing orderPrice) {
 		this.orderPrice = Objects.requireNonNull(orderPrice);
 		return this;
 	}
@@ -4123,7 +4400,7 @@ public class SecuritiesOrder extends Order {
 		return stopPrice;
 	}
 
-	public SecuritiesOrder setStopPrice(com.tools20022.repository.entity.SecuritiesPricing stopPrice) {
+	public SecuritiesOrder setStopPrice(SecuritiesPricing stopPrice) {
 		this.stopPrice = Objects.requireNonNull(stopPrice);
 		return this;
 	}
@@ -4132,7 +4409,7 @@ public class SecuritiesOrder extends Order {
 		return securitiesOrderAllocation == null ? securitiesOrderAllocation = new ArrayList<>() : securitiesOrderAllocation;
 	}
 
-	public SecuritiesOrder setSecuritiesOrderAllocation(List<com.tools20022.repository.entity.Allocation> securitiesOrderAllocation) {
+	public SecuritiesOrder setSecuritiesOrderAllocation(List<Allocation> securitiesOrderAllocation) {
 		this.securitiesOrderAllocation = Objects.requireNonNull(securitiesOrderAllocation);
 		return this;
 	}
@@ -4141,7 +4418,7 @@ public class SecuritiesOrder extends Order {
 		return orderExecutionParameters;
 	}
 
-	public SecuritiesOrder setOrderExecutionParameters(com.tools20022.repository.entity.SecuritiesOrderParameters orderExecutionParameters) {
+	public SecuritiesOrder setOrderExecutionParameters(SecuritiesOrderParameters orderExecutionParameters) {
 		this.orderExecutionParameters = Objects.requireNonNull(orderExecutionParameters);
 		return this;
 	}
@@ -4150,7 +4427,7 @@ public class SecuritiesOrder extends Order {
 		return orderExecution;
 	}
 
-	public SecuritiesOrder setOrderExecution(com.tools20022.repository.entity.SecuritiesTrade orderExecution) {
+	public SecuritiesOrder setOrderExecution(SecuritiesTrade orderExecution) {
 		this.orderExecution = Objects.requireNonNull(orderExecution);
 		return this;
 	}
@@ -4159,7 +4436,7 @@ public class SecuritiesOrder extends Order {
 		return orderingAccount == null ? orderingAccount = new ArrayList<>() : orderingAccount;
 	}
 
-	public SecuritiesOrder setOrderingAccount(List<com.tools20022.repository.entity.SecuritiesAccount> orderingAccount) {
+	public SecuritiesOrder setOrderingAccount(List<SecuritiesAccount> orderingAccount) {
 		this.orderingAccount = Objects.requireNonNull(orderingAccount);
 		return this;
 	}
@@ -4168,7 +4445,7 @@ public class SecuritiesOrder extends Order {
 		return quote == null ? Optional.empty() : Optional.of(quote);
 	}
 
-	public SecuritiesOrder setQuote(com.tools20022.repository.entity.SecuritiesQuoteVariable quote) {
+	public SecuritiesOrder setQuote(SecuritiesQuoteVariable quote) {
 		this.quote = quote;
 		return this;
 	}
@@ -4204,7 +4481,7 @@ public class SecuritiesOrder extends Order {
 		return securitiesOrderTradingSession;
 	}
 
-	public SecuritiesOrder setSecuritiesOrderTradingSession(com.tools20022.repository.entity.TradingSession securitiesOrderTradingSession) {
+	public SecuritiesOrder setSecuritiesOrderTradingSession(TradingSession securitiesOrderTradingSession) {
 		this.securitiesOrderTradingSession = Objects.requireNonNull(securitiesOrderTradingSession);
 		return this;
 	}
@@ -4213,7 +4490,7 @@ public class SecuritiesOrder extends Order {
 		return relatedOrderBook == null ? Optional.empty() : Optional.of(relatedOrderBook);
 	}
 
-	public SecuritiesOrder setRelatedOrderBook(com.tools20022.repository.entity.OrderBook relatedOrderBook) {
+	public SecuritiesOrder setRelatedOrderBook(OrderBook relatedOrderBook) {
 		this.relatedOrderBook = relatedOrderBook;
 		return this;
 	}
@@ -4231,7 +4508,7 @@ public class SecuritiesOrder extends Order {
 		return buySideRelatedCrossTrade;
 	}
 
-	public SecuritiesOrder setBuySideRelatedCrossTrade(com.tools20022.repository.entity.CrossTrade buySideRelatedCrossTrade) {
+	public SecuritiesOrder setBuySideRelatedCrossTrade(CrossTrade buySideRelatedCrossTrade) {
 		this.buySideRelatedCrossTrade = Objects.requireNonNull(buySideRelatedCrossTrade);
 		return this;
 	}
@@ -4240,7 +4517,7 @@ public class SecuritiesOrder extends Order {
 		return sellSideRelatedCrossTrade;
 	}
 
-	public SecuritiesOrder setSellSideRelatedCrossTrade(com.tools20022.repository.entity.CrossTrade sellSideRelatedCrossTrade) {
+	public SecuritiesOrder setSellSideRelatedCrossTrade(CrossTrade sellSideRelatedCrossTrade) {
 		this.sellSideRelatedCrossTrade = Objects.requireNonNull(sellSideRelatedCrossTrade);
 		return this;
 	}
@@ -4249,7 +4526,7 @@ public class SecuritiesOrder extends Order {
 		return orderedSecurity == null ? orderedSecurity = new ArrayList<>() : orderedSecurity;
 	}
 
-	public SecuritiesOrder setOrderedSecurity(List<com.tools20022.repository.entity.Security> orderedSecurity) {
+	public SecuritiesOrder setOrderedSecurity(List<Security> orderedSecurity) {
 		this.orderedSecurity = Objects.requireNonNull(orderedSecurity);
 		return this;
 	}
@@ -4258,7 +4535,7 @@ public class SecuritiesOrder extends Order {
 		return bookingInstructions;
 	}
 
-	public SecuritiesOrder setBookingInstructions(com.tools20022.repository.entity.SecuritiesPostTradeBooking bookingInstructions) {
+	public SecuritiesOrder setBookingInstructions(SecuritiesPostTradeBooking bookingInstructions) {
 		this.bookingInstructions = Objects.requireNonNull(bookingInstructions);
 		return this;
 	}
@@ -4294,7 +4571,7 @@ public class SecuritiesOrder extends Order {
 		return executionInstructions;
 	}
 
-	public SecuritiesOrder setExecutionInstructions(com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction executionInstructions) {
+	public SecuritiesOrder setExecutionInstructions(SecuritiesOrderExecutionInstruction executionInstructions) {
 		this.executionInstructions = Objects.requireNonNull(executionInstructions);
 		return this;
 	}

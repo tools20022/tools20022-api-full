@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -161,7 +160,7 @@ public class DeltaReportV03 {
 	 * definition} = "Identifies the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, MessageIdentification1> mmReportIdentification = new MMMessageBuildingBlock<DeltaReportV03, MessageIdentification1>() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,12 +171,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(DeltaReportV03 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, MessageIdentification1 value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -207,7 +208,7 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<DeltaReportV03, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,12 +219,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(DeltaReportV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId", required = true)
@@ -253,7 +256,7 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, DocumentIdentification3> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<DeltaReportV03, DocumentIdentification3>() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,12 +267,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification3 getValue(DeltaReportV03 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, DocumentIdentification3 value) {
+			obj.setEstablishedBaselineIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -298,7 +303,7 @@ public class DeltaReportV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, TransactionStatus4> mmTransactionStatus = new MMMessageBuildingBlock<DeltaReportV03, TransactionStatus4>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,12 +314,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus4 getValue(DeltaReportV03 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, TransactionStatus4 value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "AmdmntNb", required = true)
@@ -340,7 +347,7 @@ public class DeltaReportV03 {
 	 * definition} = "Sequence number of the proposed baseline amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAmendmentNumber = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, Count1> mmAmendmentNumber = new MMMessageBuildingBlock<DeltaReportV03, Count1>() {
 		{
 			xmlTag = "AmdmntNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,12 +358,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> Count1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getAmendmentNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Count1 getValue(DeltaReportV03 obj) {
+			return obj.getAmendmentNumber();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, Count1 value) {
+			obj.setAmendmentNumber(value);
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
@@ -386,7 +395,7 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<DeltaReportV03, List<DocumentIdentification5>>() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,12 +406,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getUserTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification5> getValue(DeltaReportV03 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, List<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -431,7 +442,7 @@ public class DeltaReportV03 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, PartyIdentification26> mmBuyer = new MMMessageBuildingBlock<DeltaReportV03, PartyIdentification26>() {
 		{
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -442,12 +453,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getBuyer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification26 getValue(DeltaReportV03 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, PartyIdentification26 value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "Sellr", required = true)
@@ -476,7 +489,7 @@ public class DeltaReportV03 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSeller = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, PartyIdentification26> mmSeller = new MMMessageBuildingBlock<DeltaReportV03, PartyIdentification26>() {
 		{
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -487,12 +500,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> PartyIdentification26.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getSeller", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification26 getValue(DeltaReportV03 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, PartyIdentification26 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "BuyrBk", required = true)
@@ -522,7 +537,7 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, BICIdentification1> mmBuyerBank = new MMMessageBuildingBlock<DeltaReportV03, BICIdentification1>() {
 		{
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -533,12 +548,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getBuyerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(DeltaReportV03 obj) {
+			return obj.getBuyerBank();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, BICIdentification1 value) {
+			obj.setBuyerBank(value);
 		}
 	};
 	@XmlElement(name = "SellrBk", required = true)
@@ -568,7 +585,7 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSellerBank = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, BICIdentification1> mmSellerBank = new MMMessageBuildingBlock<DeltaReportV03, BICIdentification1>() {
 		{
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -579,12 +596,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getSellerBank", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BICIdentification1 getValue(DeltaReportV03 obj) {
+			return obj.getSellerBank();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, BICIdentification1 value) {
+			obj.setSellerBank(value);
 		}
 	};
 	@XmlElement(name = "SubmitrPropsdBaselnRef", required = true)
@@ -614,7 +633,7 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubmitterProposedBaselineReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, DocumentIdentification1> mmSubmitterProposedBaselineReference = new MMMessageBuildingBlock<DeltaReportV03, DocumentIdentification1>() {
 		{
 			xmlTag = "SubmitrPropsdBaselnRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -625,12 +644,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> DocumentIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getSubmitterProposedBaselineReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification1 getValue(DeltaReportV03 obj) {
+			return obj.getSubmitterProposedBaselineReference();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, DocumentIdentification1 value) {
+			obj.setSubmitterProposedBaselineReference(value);
 		}
 	};
 	@XmlElement(name = "UpdtdElmt", required = true)
@@ -660,7 +681,7 @@ public class DeltaReportV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUpdatedElement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, List<ComparisonResult2>> mmUpdatedElement = new MMMessageBuildingBlock<DeltaReportV03, List<ComparisonResult2>>() {
 		{
 			xmlTag = "UpdtdElmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -670,12 +691,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> ComparisonResult2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getUpdatedElement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ComparisonResult2> getValue(DeltaReportV03 obj) {
+			return obj.getUpdatedElement();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, List<ComparisonResult2> value) {
+			obj.setUpdatedElement(value);
 		}
 	};
 	@XmlElement(name = "ReqForActn")
@@ -703,7 +726,7 @@ public class DeltaReportV03 {
 	 * definition} = "Information on the next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeltaReportV03, Optional<PendingActivity2>> mmRequestForAction = new MMMessageBuildingBlock<DeltaReportV03, Optional<PendingActivity2>>() {
 		{
 			xmlTag = "ReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -714,12 +737,14 @@ public class DeltaReportV03 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeltaReportV03.class.getMethod("getRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PendingActivity2> getValue(DeltaReportV03 obj) {
+			return obj.getRequestForAction();
+		}
+
+		@Override
+		public void setValue(DeltaReportV03 obj, Optional<PendingActivity2> value) {
+			obj.setRequestForAction(value.orElse(null));
 		}
 	};
 

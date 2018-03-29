@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.EventType1Code;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -104,7 +105,7 @@ public class EventGroup1 {
 	 * definition} = "Represents the type of event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventGroup1, Optional<EventType1Code>> mmType = new MMMessageAttribute<EventGroup1, Optional<EventType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventGroup1.mmObject();
 			isDerived = false;
@@ -115,6 +116,16 @@ public class EventGroup1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EventType1Code> getValue(EventGroup1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(EventGroup1 obj, Optional<EventType1Code> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -145,7 +156,7 @@ public class EventGroup1 {
 	 * definition} = "Date of event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventGroup1, Optional<ISODateTime>> mmDate = new MMMessageAttribute<EventGroup1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventGroup1.mmObject();
 			isDerived = false;
@@ -156,6 +167,16 @@ public class EventGroup1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(EventGroup1 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(EventGroup1 obj, Optional<ISODateTime> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -185,7 +206,7 @@ public class EventGroup1 {
 	 * definition} = "Predetermined price of issue at event, if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventGroup1, Optional<Price1>> mmPrice = new MMMessageAttribute<EventGroup1, Optional<Price1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventGroup1.mmObject();
 			isDerived = false;
@@ -195,7 +216,17 @@ public class EventGroup1 {
 			definition = "Predetermined price of issue at event, if applicable.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(EventGroup1 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(EventGroup1 obj, Optional<Price1> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -226,7 +257,7 @@ public class EventGroup1 {
 	 * definition} = "Comments related to the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EventGroup1, Optional<Max350Text>> mmDescription = new MMMessageAttribute<EventGroup1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EventGroup1.mmObject();
 			isDerived = false;
@@ -237,6 +268,16 @@ public class EventGroup1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(EventGroup1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(EventGroup1 obj, Optional<Max350Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 
@@ -276,7 +317,7 @@ public class EventGroup1 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public EventGroup1 setPrice(com.tools20022.repository.msg.Price1 price) {
+	public EventGroup1 setPrice(Price1 price) {
 		this.price = price;
 		return this;
 	}

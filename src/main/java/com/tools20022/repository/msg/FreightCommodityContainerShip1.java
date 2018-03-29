@@ -111,7 +111,7 @@ public class FreightCommodityContainerShip1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FreightCommodityContainerShip1, AssetClassProductType4Code> mmBaseProduct = new MMMessageAttribute<FreightCommodityContainerShip1, AssetClassProductType4Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FreightCommodityContainerShip1.mmObject();
@@ -123,6 +123,16 @@ public class FreightCommodityContainerShip1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductType4Code.mmObject();
+		}
+
+		@Override
+		public AssetClassProductType4Code getValue(FreightCommodityContainerShip1 obj) {
+			return obj.getBaseProduct();
+		}
+
+		@Override
+		public void setValue(FreightCommodityContainerShip1 obj, AssetClassProductType4Code value) {
+			obj.setBaseProduct(value);
 		}
 	};
 	@XmlElement(name = "SubPdct", required = true)
@@ -160,7 +170,7 @@ public class FreightCommodityContainerShip1 {
 	 * definition} = "Sub-product for the underlying asset class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FreightCommodityContainerShip1, AssetClassSubProductType46Code> mmSubProduct = new MMMessageAttribute<FreightCommodityContainerShip1, AssetClassSubProductType46Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FreightCommodityContainerShip1.mmObject();
@@ -172,6 +182,16 @@ public class FreightCommodityContainerShip1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType46Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType46Code getValue(FreightCommodityContainerShip1 obj) {
+			return obj.getSubProduct();
+		}
+
+		@Override
+		public void setValue(FreightCommodityContainerShip1 obj, AssetClassSubProductType46Code value) {
+			obj.setSubProduct(value);
 		}
 	};
 

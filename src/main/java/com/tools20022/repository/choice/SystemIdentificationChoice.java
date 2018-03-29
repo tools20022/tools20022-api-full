@@ -112,7 +112,7 @@ public class SystemIdentificationChoice {
 	 * definition} = "Clearing service selected for a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemIdentificationChoice, CashClearingSystem1Code> mmClearingSystemIdentification = new MMMessageAttribute<SystemIdentificationChoice, CashClearingSystem1Code>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystem.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemIdentificationChoice.mmObject();
@@ -124,6 +124,16 @@ public class SystemIdentificationChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashClearingSystem1Code.mmObject();
+		}
+
+		@Override
+		public CashClearingSystem1Code getValue(SystemIdentificationChoice obj) {
+			return obj.getClearingSystemIdentification();
+		}
+
+		@Override
+		public void setValue(SystemIdentificationChoice obj, CashClearingSystem1Code value) {
+			obj.setClearingSystemIdentification(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -160,7 +170,7 @@ public class SystemIdentificationChoice {
 	 * definition} = "Country in which the system is located."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemIdentificationChoice, CountryCode> mmCountry = new MMMessageAttribute<SystemIdentificationChoice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemIdentificationChoice.mmObject();
@@ -172,6 +182,16 @@ public class SystemIdentificationChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(SystemIdentificationChoice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(SystemIdentificationChoice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

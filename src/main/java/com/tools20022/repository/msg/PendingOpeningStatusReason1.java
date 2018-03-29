@@ -117,7 +117,7 @@ public class PendingOpeningStatusReason1 {
 	 * PendingStatusReason14.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingOpeningStatusReason1, PendingOpeningStatusReason2Choice> mmCode = new MMMessageAssociationEnd<PendingOpeningStatusReason1, PendingOpeningStatusReason2Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingOpeningStatusReason1.mmObject();
@@ -131,6 +131,16 @@ public class PendingOpeningStatusReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingOpeningStatusReason2Choice.mmObject();
+		}
+
+		@Override
+		public PendingOpeningStatusReason2Choice getValue(PendingOpeningStatusReason1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingOpeningStatusReason1 obj, PendingOpeningStatusReason2Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -169,7 +179,7 @@ public class PendingOpeningStatusReason1 {
 	 * PendingStatusReason14.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingOpeningStatusReason1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<PendingOpeningStatusReason1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingOpeningStatusReason1.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class PendingOpeningStatusReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PendingOpeningStatusReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PendingOpeningStatusReason1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

@@ -108,7 +108,7 @@ public class Number22Choice {
 	 * Number2Choice.mmShort}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShort = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Number22Choice, Exact3NumericText> mmShort = new MMMessageAttribute<Number22Choice, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Number22Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class Number22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(Number22Choice obj) {
+			return obj.getShort();
+		}
+
+		@Override
+		public void setValue(Number22Choice obj, Exact3NumericText value) {
+			obj.setShort(value);
 		}
 	};
 	@XmlElement(name = "Lng", required = true)
@@ -163,7 +173,7 @@ public class Number22Choice {
 	 * Number2Choice.mmLong}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLong = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Number22Choice, GenericIdentification1> mmLong = new MMMessageAttribute<Number22Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Number22Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class Number22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(Number22Choice obj) {
+			return obj.getLong();
+		}
+
+		@Override
+		public void setValue(Number22Choice obj, GenericIdentification1 value) {
+			obj.setLong(value);
 		}
 	};
 

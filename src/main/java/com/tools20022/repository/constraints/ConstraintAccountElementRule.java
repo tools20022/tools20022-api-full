@@ -61,11 +61,15 @@ public class ConstraintAccountElementRule {
 	 */
 	public static final MMConstraint<InvestmentAccount63> forInvestmentAccount63 = new MMConstraint<InvestmentAccount63>() {
 		{
-			validator = ConstraintAccountElementRule::checkInvestmentAccount63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountElementRule";
 			definition = "One of the elements (AccountStatusUpdateInstruction, Name, Designation, Type, OwnershipType, TaxExemption, StatementFrequency, ReferenceCurrency, Language, IncomePreference, ReinvestmentDetails, TaxWithholdingMethod, TaxReporting, LetterIntentDetails, AccumulationRightReference, RequiredSignatoriesNumber, FundFamilyName, ModifiedFinancialInstrumentDetails, RoundingDetails, Account Servicer, BlockedStatus, AccountUsageType, ForeignStatusCertification, AccountSignatureDateTime, TransactionChannelType, InvestmentAccountCategory, Pledging, Collateral, ThirdPartyRights, PowerOfAttorneyLevelOfControl, AccountingStatus, OpeningDate, ClosingDate, NegativeIndicator, ProcessingOrder, Liability, ModifiedInvestorProfile, FiscalYear) must be present.";
 			owner_lazy = () -> InvestmentAccount63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount63 obj) throws Exception {
+			checkInvestmentAccount63(obj);
 		}
 	};
 	/**
@@ -91,11 +95,15 @@ public class ConstraintAccountElementRule {
 	 */
 	public static final MMConstraint<InvestmentAccount60> forInvestmentAccount60 = new MMConstraint<InvestmentAccount60>() {
 		{
-			validator = ConstraintAccountElementRule::checkInvestmentAccount60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountElementRule";
 			definition = "Either AccountIdentification or Type must be present. Both may be present.";
 			owner_lazy = () -> InvestmentAccount60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount60 obj) throws Exception {
+			checkInvestmentAccount60(obj);
 		}
 	};
 

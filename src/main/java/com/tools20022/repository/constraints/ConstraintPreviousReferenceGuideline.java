@@ -58,11 +58,15 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<RequestForOrderStatusReportV04> forRequestForOrderStatusReportV04 = new MMConstraint<RequestForOrderStatusReportV04>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkRequestForOrderStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If RequestDetails/Reference/PreviousReference/MessageName is present, it must contain 502 or must start with setr.001, setr.002, setr.004, setr.005, setr.007, setr.008, setr.010, setr.011, setr.013 or setr.014 and RequestDetails/Reference/PreviousReference/Reference must contain the reference of a message in this list.";
 			owner_lazy = () -> RequestForOrderStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestForOrderStatusReportV04 obj) throws Exception {
+			checkRequestForOrderStatusReportV04(obj);
 		}
 	};
 	/**
@@ -88,11 +92,15 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<RequestForOrderConfirmationStatusReportV02> forRequestForOrderConfirmationStatusReportV02 = new MMConstraint<RequestForOrderConfirmationStatusReportV02>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkRequestForOrderConfirmationStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If RequestDetails/Reference/PreviousReference/MessageName is present, it must contain 502 or must start with setr.047, setr.049, setr.051, setr.053, or setr.055 and RequestDetails/Reference/PreviousReference/Reference must contain the reference of a message in this list.";
 			owner_lazy = () -> RequestForOrderConfirmationStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RequestForOrderConfirmationStatusReportV02 obj) throws Exception {
+			checkRequestForOrderConfirmationStatusReportV02(obj);
 		}
 	};
 	/**
@@ -118,11 +126,15 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference> forAccountManagementMessageReference = new MMConstraint<AccountManagementMessageReference>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkAccountManagementMessageReference;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and Reference must contain the business reference of a message in this list.";
 			owner_lazy = () -> AccountManagementMessageReference.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference obj) throws Exception {
+			checkAccountManagementMessageReference(obj);
 		}
 	};
 	/**
@@ -157,12 +169,16 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference1> forAccountManagementMessageReference1 = new MMConstraint<AccountManagementMessageReference1>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkAccountManagementMessageReference1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and Reference must contain the business reference of a message in this list.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forAccountManagementMessageReference2);
 			owner_lazy = () -> AccountManagementMessageReference1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference1 obj) throws Exception {
+			checkAccountManagementMessageReference1(obj);
 		}
 	};
 	/**
@@ -188,11 +204,15 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference5> forMessageAndBusinessReference5 = new MMConstraint<MessageAndBusinessReference5>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkMessageAndBusinessReference5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If PreviousReference/MessageName is present, it must contain 515 or must start with setr.003, setr.006, setr.009, setr.012, setr.015, setr.047, setr.048, setr.049, setr.050, setr.051, setr.052, setr.053, setr.054, setr.055 or setr.056 and PreviousReference/Reference must contain the reference of a message in this list.";
 			owner_lazy = () -> MessageAndBusinessReference5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference5 obj) throws Exception {
+			checkMessageAndBusinessReference5(obj);
 		}
 	};
 	/**
@@ -218,11 +238,15 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference2> forMessageAndBusinessReference2 = new MMConstraint<MessageAndBusinessReference2>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkMessageAndBusinessReference2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If PreviousReference/MessageName is present, it must contain 502 or must start with setr.001 or setr.002 or setr.004 or setr.005 or setr.007 or setr.008 or setr.010 or setr.011 or setr.013 or setr.014 and Reference must contain the business reference of a message in this list.";
 			owner_lazy = () -> MessageAndBusinessReference2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference2 obj) throws Exception {
+			checkMessageAndBusinessReference2(obj);
 		}
 	};
 	/**
@@ -248,11 +272,15 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference4> forMessageAndBusinessReference4 = new MMConstraint<MessageAndBusinessReference4>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkMessageAndBusinessReference4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If PreviousReference/MessageName is present, it must contain 502 or must start with setr.001, setr.002, setr.004, setr.005, setr.007, setr.008, setr.010, setr.011, setr.013 or setr.014 and PreviousReference/Reference must contain the reference of a message in this list.";
 			owner_lazy = () -> MessageAndBusinessReference4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference4 obj) throws Exception {
+			checkMessageAndBusinessReference4(obj);
 		}
 	};
 	/**
@@ -293,13 +321,17 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference2> forAccountManagementMessageReference2 = new MMConstraint<AccountManagementMessageReference2>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkAccountManagementMessageReference2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If LinkedReference/PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and Reference must contain the business reference of a message in this list.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forAccountManagementMessageReference3);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forAccountManagementMessageReference1;
 			owner_lazy = () -> AccountManagementMessageReference2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference2 obj) throws Exception {
+			checkAccountManagementMessageReference2(obj);
 		}
 	};
 	/**
@@ -331,12 +363,16 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<AccountManagementMessageReference3> forAccountManagementMessageReference3 = new MMConstraint<AccountManagementMessageReference3>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkAccountManagementMessageReference3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If LinkedReference/PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and Reference must contain the business reference of a message in this list.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forAccountManagementMessageReference2;
 			owner_lazy = () -> AccountManagementMessageReference3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountManagementMessageReference3 obj) throws Exception {
+			checkAccountManagementMessageReference3(obj);
 		}
 	};
 	/**
@@ -362,11 +398,15 @@ public class ConstraintPreviousReferenceGuideline {
 	 */
 	public static final MMConstraint<LinkedMessage4Choice> forLinkedMessage4Choice = new MMConstraint<LinkedMessage4Choice>() {
 		{
-			validator = ConstraintPreviousReferenceGuideline::checkLinkedMessage4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReferenceGuideline";
 			definition = "If PreviousReference/MessageName is present, it must start with acmt.001 or acmt.003 and PreviousReference/Reference must contain the business reference of a message.";
 			owner_lazy = () -> LinkedMessage4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LinkedMessage4Choice obj) throws Exception {
+			checkLinkedMessage4Choice(obj);
 		}
 	};
 

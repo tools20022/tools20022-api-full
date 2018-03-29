@@ -117,7 +117,7 @@ public class StandingOrderOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderOrError1Choice, List<StandingOrder3>> mmReport = new MMMessageAssociationEnd<StandingOrderOrError1Choice, List<StandingOrder3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderOrError1Choice.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class StandingOrderOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StandingOrder3.mmObject();
+		}
+
+		@Override
+		public List<StandingOrder3> getValue(StandingOrderOrError1Choice obj) {
+			return obj.getReport();
+		}
+
+		@Override
+		public void setValue(StandingOrderOrError1Choice obj, List<StandingOrder3> value) {
+			obj.setReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -169,7 +179,7 @@ public class StandingOrderOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderOrError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<StandingOrderOrError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StandingOrderOrError1Choice.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class StandingOrderOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(StandingOrderOrError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(StandingOrderOrError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

@@ -53,11 +53,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails9> forSettlementDetails9 = new MMConstraint<SettlementDetails9>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails9 obj) throws Exception {
+			checkSettlementDetails9(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails17> forSettlementDetails17 = new MMConstraint<SettlementDetails17>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails17 obj) throws Exception {
+			checkSettlementDetails17(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails30> forSettlementDetails30 = new MMConstraint<SettlementDetails30>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails30 obj) throws Exception {
+			checkSettlementDetails30(obj);
 		}
 	};
 	/**
@@ -143,11 +155,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails32> forSettlementDetails32 = new MMConstraint<SettlementDetails32>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails32 obj) throws Exception {
+			checkSettlementDetails32(obj);
 		}
 	};
 	/**
@@ -181,12 +197,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails60> forSettlementDetails60 = new MMConstraint<SettlementDetails60>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails71);
 			owner_lazy = () -> SettlementDetails60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails60 obj) throws Exception {
+			checkSettlementDetails60(obj);
 		}
 	};
 	/**
@@ -212,11 +232,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails64> forSettlementDetails64 = new MMConstraint<SettlementDetails64>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails64 obj) throws Exception {
+			checkSettlementDetails64(obj);
 		}
 	};
 	/**
@@ -242,11 +266,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails3> forSettlementDetails3 = new MMConstraint<SettlementDetails3>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails3 obj) throws Exception {
+			checkSettlementDetails3(obj);
 		}
 	};
 	/**
@@ -272,11 +300,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails16> forSettlementDetails16 = new MMConstraint<SettlementDetails16>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails16 obj) throws Exception {
+			checkSettlementDetails16(obj);
 		}
 	};
 	/**
@@ -302,11 +334,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails31> forSettlementDetails31 = new MMConstraint<SettlementDetails31>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails31 obj) throws Exception {
+			checkSettlementDetails31(obj);
 		}
 	};
 	/**
@@ -332,11 +368,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails40> forSettlementDetails40 = new MMConstraint<SettlementDetails40>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails40 obj) throws Exception {
+			checkSettlementDetails40(obj);
 		}
 	};
 	/**
@@ -370,12 +410,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails62> forSettlementDetails62 = new MMConstraint<SettlementDetails62>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails72);
 			owner_lazy = () -> SettlementDetails62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails62 obj) throws Exception {
+			checkSettlementDetails62(obj);
 		}
 	};
 	/**
@@ -401,11 +445,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails63> forSettlementDetails63 = new MMConstraint<SettlementDetails63>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails63 obj) throws Exception {
+			checkSettlementDetails63(obj);
 		}
 	};
 	/**
@@ -431,11 +479,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails6> forSettlementDetails6 = new MMConstraint<SettlementDetails6>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails6 obj) throws Exception {
+			checkSettlementDetails6(obj);
 		}
 	};
 	/**
@@ -461,11 +513,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails20> forSettlementDetails20 = new MMConstraint<SettlementDetails20>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails20 obj) throws Exception {
+			checkSettlementDetails20(obj);
 		}
 	};
 	/**
@@ -491,11 +547,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails24> forSettlementDetails24 = new MMConstraint<SettlementDetails24>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails24 obj) throws Exception {
+			checkSettlementDetails24(obj);
 		}
 	};
 	/**
@@ -521,11 +581,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails33> forSettlementDetails33 = new MMConstraint<SettlementDetails33>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails33 obj) throws Exception {
+			checkSettlementDetails33(obj);
 		}
 	};
 	/**
@@ -559,12 +623,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails45> forSettlementDetails45 = new MMConstraint<SettlementDetails45>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails70);
 			owner_lazy = () -> SettlementDetails45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails45 obj) throws Exception {
+			checkSettlementDetails45(obj);
 		}
 	};
 	/**
@@ -590,11 +658,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails54> forSettlementDetails54 = new MMConstraint<SettlementDetails54>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails54 obj) throws Exception {
+			checkSettlementDetails54(obj);
 		}
 	};
 	/**
@@ -620,11 +692,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails1> forSettlementDetails1 = new MMConstraint<SettlementDetails1>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails1 obj) throws Exception {
+			checkSettlementDetails1(obj);
 		}
 	};
 	/**
@@ -650,11 +726,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails19> forSettlementDetails19 = new MMConstraint<SettlementDetails19>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails19 obj) throws Exception {
+			checkSettlementDetails19(obj);
 		}
 	};
 	/**
@@ -680,11 +760,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails22> forSettlementDetails22 = new MMConstraint<SettlementDetails22>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails22 obj) throws Exception {
+			checkSettlementDetails22(obj);
 		}
 	};
 	/**
@@ -710,11 +794,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails35> forSettlementDetails35 = new MMConstraint<SettlementDetails35>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails35 obj) throws Exception {
+			checkSettlementDetails35(obj);
 		}
 	};
 	/**
@@ -748,12 +836,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails42> forSettlementDetails42 = new MMConstraint<SettlementDetails42>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails67);
 			owner_lazy = () -> SettlementDetails42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails42 obj) throws Exception {
+			checkSettlementDetails42(obj);
 		}
 	};
 	/**
@@ -779,11 +871,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails52> forSettlementDetails52 = new MMConstraint<SettlementDetails52>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails52 obj) throws Exception {
+			checkSettlementDetails52(obj);
 		}
 	};
 	/**
@@ -809,11 +905,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails8> forSettlementDetails8 = new MMConstraint<SettlementDetails8>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails8 obj) throws Exception {
+			checkSettlementDetails8(obj);
 		}
 	};
 	/**
@@ -839,11 +939,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails11> forSettlementDetails11 = new MMConstraint<SettlementDetails11>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails11 obj) throws Exception {
+			checkSettlementDetails11(obj);
 		}
 	};
 	/**
@@ -869,11 +973,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails23> forSettlementDetails23 = new MMConstraint<SettlementDetails23>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails23 obj) throws Exception {
+			checkSettlementDetails23(obj);
 		}
 	};
 	/**
@@ -899,11 +1007,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails37> forSettlementDetails37 = new MMConstraint<SettlementDetails37>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails37 obj) throws Exception {
+			checkSettlementDetails37(obj);
 		}
 	};
 	/**
@@ -937,12 +1049,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails44> forSettlementDetails44 = new MMConstraint<SettlementDetails44>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails69);
 			owner_lazy = () -> SettlementDetails44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails44 obj) throws Exception {
+			checkSettlementDetails44(obj);
 		}
 	};
 	/**
@@ -968,11 +1084,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails53> forSettlementDetails53 = new MMConstraint<SettlementDetails53>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails53 obj) throws Exception {
+			checkSettlementDetails53(obj);
 		}
 	};
 	/**
@@ -998,11 +1118,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails7> forSettlementDetails7 = new MMConstraint<SettlementDetails7>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails7 obj) throws Exception {
+			checkSettlementDetails7(obj);
 		}
 	};
 	/**
@@ -1028,11 +1152,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails12> forSettlementDetails12 = new MMConstraint<SettlementDetails12>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails12 obj) throws Exception {
+			checkSettlementDetails12(obj);
 		}
 	};
 	/**
@@ -1058,11 +1186,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails28> forSettlementDetails28 = new MMConstraint<SettlementDetails28>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails28 obj) throws Exception {
+			checkSettlementDetails28(obj);
 		}
 	};
 	/**
@@ -1088,11 +1220,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails38> forSettlementDetails38 = new MMConstraint<SettlementDetails38>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails38 obj) throws Exception {
+			checkSettlementDetails38(obj);
 		}
 	};
 	/**
@@ -1126,12 +1262,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails47> forSettlementDetails47 = new MMConstraint<SettlementDetails47>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails74);
 			owner_lazy = () -> SettlementDetails47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails47 obj) throws Exception {
+			checkSettlementDetails47(obj);
 		}
 	};
 	/**
@@ -1157,11 +1297,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails56> forSettlementDetails56 = new MMConstraint<SettlementDetails56>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails56 obj) throws Exception {
+			checkSettlementDetails56(obj);
 		}
 	};
 	/**
@@ -1187,11 +1331,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails2> forSettlementDetails2 = new MMConstraint<SettlementDetails2>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails2 obj) throws Exception {
+			checkSettlementDetails2(obj);
 		}
 	};
 	/**
@@ -1217,11 +1365,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails13> forSettlementDetails13 = new MMConstraint<SettlementDetails13>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails13 obj) throws Exception {
+			checkSettlementDetails13(obj);
 		}
 	};
 	/**
@@ -1247,11 +1399,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails27> forSettlementDetails27 = new MMConstraint<SettlementDetails27>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails27 obj) throws Exception {
+			checkSettlementDetails27(obj);
 		}
 	};
 	/**
@@ -1277,11 +1433,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails39> forSettlementDetails39 = new MMConstraint<SettlementDetails39>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails39 obj) throws Exception {
+			checkSettlementDetails39(obj);
 		}
 	};
 	/**
@@ -1315,12 +1475,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails48> forSettlementDetails48 = new MMConstraint<SettlementDetails48>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails75);
 			owner_lazy = () -> SettlementDetails48.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails48 obj) throws Exception {
+			checkSettlementDetails48(obj);
 		}
 	};
 	/**
@@ -1346,11 +1510,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails57> forSettlementDetails57 = new MMConstraint<SettlementDetails57>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails57 obj) throws Exception {
+			checkSettlementDetails57(obj);
 		}
 	};
 	/**
@@ -1376,11 +1544,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails43> forSettlementDetails43 = new MMConstraint<SettlementDetails43>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashClearingSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails43 obj) throws Exception {
+			checkSettlementDetails43(obj);
 		}
 	};
 	/**
@@ -1406,11 +1578,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails10> forSettlementDetails10 = new MMConstraint<SettlementDetails10>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails10 obj) throws Exception {
+			checkSettlementDetails10(obj);
 		}
 	};
 	/**
@@ -1436,11 +1612,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails29> forSettlementDetails29 = new MMConstraint<SettlementDetails29>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails29 obj) throws Exception {
+			checkSettlementDetails29(obj);
 		}
 	};
 	/**
@@ -1466,11 +1646,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails5> forSettlementDetails5 = new MMConstraint<SettlementDetails5>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails5 obj) throws Exception {
+			checkSettlementDetails5(obj);
 		}
 	};
 	/**
@@ -1496,11 +1680,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails25> forSettlementDetails25 = new MMConstraint<SettlementDetails25>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails25 obj) throws Exception {
+			checkSettlementDetails25(obj);
 		}
 	};
 	/**
@@ -1526,11 +1714,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails26> forSettlementDetails26 = new MMConstraint<SettlementDetails26>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails26 obj) throws Exception {
+			checkSettlementDetails26(obj);
 		}
 	};
 	/**
@@ -1556,11 +1748,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails65> forSettlementDetails65 = new MMConstraint<SettlementDetails65>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails65 obj) throws Exception {
+			checkSettlementDetails65(obj);
 		}
 	};
 	/**
@@ -1586,11 +1782,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails14> forSettlementDetails14 = new MMConstraint<SettlementDetails14>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails14 obj) throws Exception {
+			checkSettlementDetails14(obj);
 		}
 	};
 	/**
@@ -1616,11 +1816,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails41> forSettlementDetails41 = new MMConstraint<SettlementDetails41>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails41 obj) throws Exception {
+			checkSettlementDetails41(obj);
 		}
 	};
 	/**
@@ -1654,12 +1858,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails61> forSettlementDetails61 = new MMConstraint<SettlementDetails61>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails73);
 			owner_lazy = () -> SettlementDetails61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails61 obj) throws Exception {
+			checkSettlementDetails61(obj);
 		}
 	};
 	/**
@@ -1685,11 +1893,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails59> forSettlementDetails59 = new MMConstraint<SettlementDetails59>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails59.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails59 obj) throws Exception {
+			checkSettlementDetails59(obj);
 		}
 	};
 	/**
@@ -1715,11 +1927,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails15> forSettlementDetails15 = new MMConstraint<SettlementDetails15>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails15 obj) throws Exception {
+			checkSettlementDetails15(obj);
 		}
 	};
 	/**
@@ -1745,11 +1961,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails34> forSettlementDetails34 = new MMConstraint<SettlementDetails34>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails34 obj) throws Exception {
+			checkSettlementDetails34(obj);
 		}
 	};
 	/**
@@ -1783,12 +2003,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails49> forSettlementDetails49 = new MMConstraint<SettlementDetails49>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails99);
 			owner_lazy = () -> SettlementDetails49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails49 obj) throws Exception {
+			checkSettlementDetails49(obj);
 		}
 	};
 	/**
@@ -1814,11 +2038,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails58> forSettlementDetails58 = new MMConstraint<SettlementDetails58>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails58 obj) throws Exception {
+			checkSettlementDetails58(obj);
 		}
 	};
 	/**
@@ -1844,11 +2072,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails36> forSettlementDetails36 = new MMConstraint<SettlementDetails36>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails36 obj) throws Exception {
+			checkSettlementDetails36(obj);
 		}
 	};
 	/**
@@ -1874,11 +2106,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails66> forSettlementDetails66 = new MMConstraint<SettlementDetails66>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails66 obj) throws Exception {
+			checkSettlementDetails66(obj);
 		}
 	};
 	/**
@@ -1917,13 +2153,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails67> forSettlementDetails67 = new MMConstraint<SettlementDetails67>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails93);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails42;
 			owner_lazy = () -> SettlementDetails67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails67 obj) throws Exception {
+			checkSettlementDetails67(obj);
 		}
 	};
 	/**
@@ -1962,13 +2202,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails70> forSettlementDetails70 = new MMConstraint<SettlementDetails70>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails90);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails45;
 			owner_lazy = () -> SettlementDetails70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails70 obj) throws Exception {
+			checkSettlementDetails70(obj);
 		}
 	};
 	/**
@@ -2007,13 +2251,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails69> forSettlementDetails69 = new MMConstraint<SettlementDetails69>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails95);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails44;
 			owner_lazy = () -> SettlementDetails69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails69 obj) throws Exception {
+			checkSettlementDetails69(obj);
 		}
 	};
 	/**
@@ -2052,13 +2300,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails71> forSettlementDetails71 = new MMConstraint<SettlementDetails71>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails96);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails60;
 			owner_lazy = () -> SettlementDetails71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails71 obj) throws Exception {
+			checkSettlementDetails71(obj);
 		}
 	};
 	/**
@@ -2097,13 +2349,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails72> forSettlementDetails72 = new MMConstraint<SettlementDetails72>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails97);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails62;
 			owner_lazy = () -> SettlementDetails72.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails72 obj) throws Exception {
+			checkSettlementDetails72(obj);
 		}
 	};
 	/**
@@ -2142,13 +2398,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails75> forSettlementDetails75 = new MMConstraint<SettlementDetails75>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails91);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails48;
 			owner_lazy = () -> SettlementDetails75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails75 obj) throws Exception {
+			checkSettlementDetails75(obj);
 		}
 	};
 	/**
@@ -2187,13 +2447,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails73> forSettlementDetails73 = new MMConstraint<SettlementDetails73>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails73;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails98);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails61;
 			owner_lazy = () -> SettlementDetails73.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails73 obj) throws Exception {
+			checkSettlementDetails73(obj);
 		}
 	};
 	/**
@@ -2232,13 +2496,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails74> forSettlementDetails74 = new MMConstraint<SettlementDetails74>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails74;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails92);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails47;
 			owner_lazy = () -> SettlementDetails74.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails74 obj) throws Exception {
+			checkSettlementDetails74(obj);
 		}
 	};
 	/**
@@ -2264,11 +2532,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails81> forSettlementDetails81 = new MMConstraint<SettlementDetails81>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails81;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails81.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails81 obj) throws Exception {
+			checkSettlementDetails81(obj);
 		}
 	};
 	/**
@@ -2294,11 +2566,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails76> forSettlementDetails76 = new MMConstraint<SettlementDetails76>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails76;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails76.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails76 obj) throws Exception {
+			checkSettlementDetails76(obj);
 		}
 	};
 	/**
@@ -2324,11 +2600,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails80> forSettlementDetails80 = new MMConstraint<SettlementDetails80>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails80;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails80.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails80 obj) throws Exception {
+			checkSettlementDetails80(obj);
 		}
 	};
 	/**
@@ -2354,11 +2634,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails78> forSettlementDetails78 = new MMConstraint<SettlementDetails78>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails78 obj) throws Exception {
+			checkSettlementDetails78(obj);
 		}
 	};
 	/**
@@ -2384,11 +2668,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails77> forSettlementDetails77 = new MMConstraint<SettlementDetails77>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails77;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails77.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails77 obj) throws Exception {
+			checkSettlementDetails77(obj);
 		}
 	};
 	/**
@@ -2414,11 +2702,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails79> forSettlementDetails79 = new MMConstraint<SettlementDetails79>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails79 obj) throws Exception {
+			checkSettlementDetails79(obj);
 		}
 	};
 	/**
@@ -2444,11 +2736,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails87> forSettlementDetails87 = new MMConstraint<SettlementDetails87>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails87;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails87.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails87 obj) throws Exception {
+			checkSettlementDetails87(obj);
 		}
 	};
 	/**
@@ -2474,11 +2770,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails86> forSettlementDetails86 = new MMConstraint<SettlementDetails86>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails86;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails86.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails86 obj) throws Exception {
+			checkSettlementDetails86(obj);
 		}
 	};
 	/**
@@ -2504,11 +2804,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails85> forSettlementDetails85 = new MMConstraint<SettlementDetails85>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails85;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails85.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails85 obj) throws Exception {
+			checkSettlementDetails85(obj);
 		}
 	};
 	/**
@@ -2553,7 +2857,6 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails93> forSettlementDetails93 = new MMConstraint<SettlementDetails93>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails93;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
@@ -2561,6 +2864,11 @@ public class ConstraintCashClearingSystemRule {
 					com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails119, com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails140);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails67;
 			owner_lazy = () -> SettlementDetails93.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails93 obj) throws Exception {
+			checkSettlementDetails93(obj);
 		}
 	};
 	/**
@@ -2599,13 +2907,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails90> forSettlementDetails90 = new MMConstraint<SettlementDetails90>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails90;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails128);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails70;
 			owner_lazy = () -> SettlementDetails90.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails90 obj) throws Exception {
+			checkSettlementDetails90(obj);
 		}
 	};
 	/**
@@ -2644,13 +2956,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails96> forSettlementDetails96 = new MMConstraint<SettlementDetails96>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails96;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails147);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails71;
 			owner_lazy = () -> SettlementDetails96.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails96 obj) throws Exception {
+			checkSettlementDetails96(obj);
 		}
 	};
 	/**
@@ -2689,13 +3005,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails97> forSettlementDetails97 = new MMConstraint<SettlementDetails97>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails97;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails148);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails72;
 			owner_lazy = () -> SettlementDetails97.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails97 obj) throws Exception {
+			checkSettlementDetails97(obj);
 		}
 	};
 	/**
@@ -2734,13 +3054,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails99> forSettlementDetails99 = new MMConstraint<SettlementDetails99>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails99;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails125);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails49;
 			owner_lazy = () -> SettlementDetails99.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails99 obj) throws Exception {
+			checkSettlementDetails99(obj);
 		}
 	};
 	/**
@@ -2779,13 +3103,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails95> forSettlementDetails95 = new MMConstraint<SettlementDetails95>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails95;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails121);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails69;
 			owner_lazy = () -> SettlementDetails95.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails95 obj) throws Exception {
+			checkSettlementDetails95(obj);
 		}
 	};
 	/**
@@ -2824,13 +3152,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails91> forSettlementDetails91 = new MMConstraint<SettlementDetails91>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails91;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails126);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails75;
 			owner_lazy = () -> SettlementDetails91.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails91 obj) throws Exception {
+			checkSettlementDetails91(obj);
 		}
 	};
 	/**
@@ -2869,13 +3201,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails92> forSettlementDetails92 = new MMConstraint<SettlementDetails92>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails92;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails127);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails74;
 			owner_lazy = () -> SettlementDetails92.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails92 obj) throws Exception {
+			checkSettlementDetails92(obj);
 		}
 	};
 	/**
@@ -2906,12 +3242,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails98> forSettlementDetails98 = new MMConstraint<SettlementDetails98>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails98;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails73;
 			owner_lazy = () -> SettlementDetails98.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails98 obj) throws Exception {
+			checkSettlementDetails98(obj);
 		}
 	};
 	/**
@@ -2950,13 +3290,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails101> forSettlementDetails101 = new MMConstraint<SettlementDetails101>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails120);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails93;
 			owner_lazy = () -> SettlementDetails101.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails101 obj) throws Exception {
+			checkSettlementDetails101(obj);
 		}
 	};
 	/**
@@ -2982,11 +3326,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails105> forSettlementDetails105 = new MMConstraint<SettlementDetails105>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails105;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails105.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails105 obj) throws Exception {
+			checkSettlementDetails105(obj);
 		}
 	};
 	/**
@@ -3012,11 +3360,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails106> forSettlementDetails106 = new MMConstraint<SettlementDetails106>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails106;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails106.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails106 obj) throws Exception {
+			checkSettlementDetails106(obj);
 		}
 	};
 	/**
@@ -3042,11 +3394,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails104> forSettlementDetails104 = new MMConstraint<SettlementDetails104>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails104;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails104.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails104 obj) throws Exception {
+			checkSettlementDetails104(obj);
 		}
 	};
 	/**
@@ -3072,11 +3428,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails111> forSettlementDetails111 = new MMConstraint<SettlementDetails111>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails111;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails111.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails111 obj) throws Exception {
+			checkSettlementDetails111(obj);
 		}
 	};
 	/**
@@ -3102,11 +3462,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails112> forSettlementDetails112 = new MMConstraint<SettlementDetails112>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails112;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails112.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails112 obj) throws Exception {
+			checkSettlementDetails112(obj);
 		}
 	};
 	/**
@@ -3132,11 +3496,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails110> forSettlementDetails110 = new MMConstraint<SettlementDetails110>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails110;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails110.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails110 obj) throws Exception {
+			checkSettlementDetails110(obj);
 		}
 	};
 	/**
@@ -3162,11 +3530,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails108> forSettlementDetails108 = new MMConstraint<SettlementDetails108>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails108;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails108.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails108 obj) throws Exception {
+			checkSettlementDetails108(obj);
 		}
 	};
 	/**
@@ -3192,11 +3564,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails107> forSettlementDetails107 = new MMConstraint<SettlementDetails107>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails107;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails107.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails107 obj) throws Exception {
+			checkSettlementDetails107(obj);
 		}
 	};
 	/**
@@ -3222,11 +3598,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails115> forSettlementDetails115 = new MMConstraint<SettlementDetails115>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails115;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails115.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails115 obj) throws Exception {
+			checkSettlementDetails115(obj);
 		}
 	};
 	/**
@@ -3252,11 +3632,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails117> forSettlementDetails117 = new MMConstraint<SettlementDetails117>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails117;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails117.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails117 obj) throws Exception {
+			checkSettlementDetails117(obj);
 		}
 	};
 	/**
@@ -3282,11 +3666,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails116> forSettlementDetails116 = new MMConstraint<SettlementDetails116>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails116;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails116.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails116 obj) throws Exception {
+			checkSettlementDetails116(obj);
 		}
 	};
 	/**
@@ -3325,13 +3713,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails128> forSettlementDetails128 = new MMConstraint<SettlementDetails128>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails128;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails144);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails90;
 			owner_lazy = () -> SettlementDetails128.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails128 obj) throws Exception {
+			checkSettlementDetails128(obj);
 		}
 	};
 	/**
@@ -3370,13 +3762,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails120> forSettlementDetails120 = new MMConstraint<SettlementDetails120>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails120;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails145);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails101;
 			owner_lazy = () -> SettlementDetails120.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails120 obj) throws Exception {
+			checkSettlementDetails120(obj);
 		}
 	};
 	/**
@@ -3415,13 +3811,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails119> forSettlementDetails119 = new MMConstraint<SettlementDetails119>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails119;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails142);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails93;
 			owner_lazy = () -> SettlementDetails119.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails119 obj) throws Exception {
+			checkSettlementDetails119(obj);
 		}
 	};
 	/**
@@ -3460,13 +3860,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails125> forSettlementDetails125 = new MMConstraint<SettlementDetails125>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails125;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashClearingSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails141);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails99;
 			owner_lazy = () -> SettlementDetails125.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails125 obj) throws Exception {
+			checkSettlementDetails125(obj);
 		}
 	};
 	/**
@@ -3505,13 +3909,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails126> forSettlementDetails126 = new MMConstraint<SettlementDetails126>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails126;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails150);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails91;
 			owner_lazy = () -> SettlementDetails126.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails126 obj) throws Exception {
+			checkSettlementDetails126(obj);
 		}
 	};
 	/**
@@ -3550,13 +3958,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails127> forSettlementDetails127 = new MMConstraint<SettlementDetails127>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails127;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails149);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails92;
 			owner_lazy = () -> SettlementDetails127.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails127 obj) throws Exception {
+			checkSettlementDetails127(obj);
 		}
 	};
 	/**
@@ -3595,13 +4007,17 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails121> forSettlementDetails121 = new MMConstraint<SettlementDetails121>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails121;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails143);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails95;
 			owner_lazy = () -> SettlementDetails121.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails121 obj) throws Exception {
+			checkSettlementDetails121(obj);
 		}
 	};
 	/**
@@ -3627,11 +4043,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails134> forSettlementDetails134 = new MMConstraint<SettlementDetails134>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails134;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails134.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails134 obj) throws Exception {
+			checkSettlementDetails134(obj);
 		}
 	};
 	/**
@@ -3657,11 +4077,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails137> forSettlementDetails137 = new MMConstraint<SettlementDetails137>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails137;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails137.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails137 obj) throws Exception {
+			checkSettlementDetails137(obj);
 		}
 	};
 	/**
@@ -3687,11 +4111,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails132> forSettlementDetails132 = new MMConstraint<SettlementDetails132>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails132;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails132.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails132 obj) throws Exception {
+			checkSettlementDetails132(obj);
 		}
 	};
 	/**
@@ -3717,11 +4145,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails130> forSettlementDetails130 = new MMConstraint<SettlementDetails130>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails130;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails130.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails130 obj) throws Exception {
+			checkSettlementDetails130(obj);
 		}
 	};
 	/**
@@ -3747,11 +4179,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails131> forSettlementDetails131 = new MMConstraint<SettlementDetails131>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails131;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails131.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails131 obj) throws Exception {
+			checkSettlementDetails131(obj);
 		}
 	};
 	/**
@@ -3777,11 +4213,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails133> forSettlementDetails133 = new MMConstraint<SettlementDetails133>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails133;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails133.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails133 obj) throws Exception {
+			checkSettlementDetails133(obj);
 		}
 	};
 	/**
@@ -3807,11 +4247,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails139> forSettlementDetails139 = new MMConstraint<SettlementDetails139>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails139;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails139.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails139 obj) throws Exception {
+			checkSettlementDetails139(obj);
 		}
 	};
 	/**
@@ -3842,12 +4286,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails140> forSettlementDetails140 = new MMConstraint<SettlementDetails140>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails140;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails93;
 			owner_lazy = () -> SettlementDetails140.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails140 obj) throws Exception {
+			checkSettlementDetails140(obj);
 		}
 	};
 	/**
@@ -3878,12 +4326,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails147> forSettlementDetails147 = new MMConstraint<SettlementDetails147>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails147;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails96;
 			owner_lazy = () -> SettlementDetails147.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails147 obj) throws Exception {
+			checkSettlementDetails147(obj);
 		}
 	};
 	/**
@@ -3914,12 +4366,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails142> forSettlementDetails142 = new MMConstraint<SettlementDetails142>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails142;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails119;
 			owner_lazy = () -> SettlementDetails142.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails142 obj) throws Exception {
+			checkSettlementDetails142(obj);
 		}
 	};
 	/**
@@ -3950,12 +4406,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails144> forSettlementDetails144 = new MMConstraint<SettlementDetails144>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails144;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails128;
 			owner_lazy = () -> SettlementDetails144.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails144 obj) throws Exception {
+			checkSettlementDetails144(obj);
 		}
 	};
 	/**
@@ -3986,12 +4446,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails148> forSettlementDetails148 = new MMConstraint<SettlementDetails148>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails148;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails97;
 			owner_lazy = () -> SettlementDetails148.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails148 obj) throws Exception {
+			checkSettlementDetails148(obj);
 		}
 	};
 	/**
@@ -4022,12 +4486,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails141> forSettlementDetails141 = new MMConstraint<SettlementDetails141>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails141;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashClearingSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails125;
 			owner_lazy = () -> SettlementDetails141.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails141 obj) throws Exception {
+			checkSettlementDetails141(obj);
 		}
 	};
 	/**
@@ -4058,12 +4526,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails145> forSettlementDetails145 = new MMConstraint<SettlementDetails145>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails145;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails120;
 			owner_lazy = () -> SettlementDetails145.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails145 obj) throws Exception {
+			checkSettlementDetails145(obj);
 		}
 	};
 	/**
@@ -4094,12 +4566,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails143> forSettlementDetails143 = new MMConstraint<SettlementDetails143>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails143;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails121;
 			owner_lazy = () -> SettlementDetails143.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails143 obj) throws Exception {
+			checkSettlementDetails143(obj);
 		}
 	};
 	/**
@@ -4130,12 +4606,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails149> forSettlementDetails149 = new MMConstraint<SettlementDetails149>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails149;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails127;
 			owner_lazy = () -> SettlementDetails149.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails149 obj) throws Exception {
+			checkSettlementDetails149(obj);
 		}
 	};
 	/**
@@ -4166,12 +4646,16 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails150> forSettlementDetails150 = new MMConstraint<SettlementDetails150>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails150;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails126;
 			owner_lazy = () -> SettlementDetails150.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails150 obj) throws Exception {
+			checkSettlementDetails150(obj);
 		}
 	};
 	/**
@@ -4197,11 +4681,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails151> forSettlementDetails151 = new MMConstraint<SettlementDetails151>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails151;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails151.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails151 obj) throws Exception {
+			checkSettlementDetails151(obj);
 		}
 	};
 	/**
@@ -4227,11 +4715,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails152> forSettlementDetails152 = new MMConstraint<SettlementDetails152>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails152;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails152.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails152 obj) throws Exception {
+			checkSettlementDetails152(obj);
 		}
 	};
 	/**
@@ -4257,11 +4749,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails153> forSettlementDetails153 = new MMConstraint<SettlementDetails153>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails153;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails153.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails153 obj) throws Exception {
+			checkSettlementDetails153(obj);
 		}
 	};
 	/**
@@ -4287,11 +4783,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails155> forSettlementDetails155 = new MMConstraint<SettlementDetails155>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails155;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails155.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails155 obj) throws Exception {
+			checkSettlementDetails155(obj);
 		}
 	};
 	/**
@@ -4317,11 +4817,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails156> forSettlementDetails156 = new MMConstraint<SettlementDetails156>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails156;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails156.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails156 obj) throws Exception {
+			checkSettlementDetails156(obj);
 		}
 	};
 	/**
@@ -4347,11 +4851,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails157> forSettlementDetails157 = new MMConstraint<SettlementDetails157>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails157;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails157.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails157 obj) throws Exception {
+			checkSettlementDetails157(obj);
 		}
 	};
 	/**
@@ -4377,11 +4885,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails160> forSettlementDetails160 = new MMConstraint<SettlementDetails160>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails160;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails160.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails160 obj) throws Exception {
+			checkSettlementDetails160(obj);
 		}
 	};
 	/**
@@ -4407,11 +4919,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails161> forSettlementDetails161 = new MMConstraint<SettlementDetails161>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails161;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails161.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails161 obj) throws Exception {
+			checkSettlementDetails161(obj);
 		}
 	};
 	/**
@@ -4437,11 +4953,15 @@ public class ConstraintCashClearingSystemRule {
 	 */
 	public static final MMConstraint<SettlementDetails162> forSettlementDetails162 = new MMConstraint<SettlementDetails162>() {
 		{
-			validator = ConstraintCashClearingSystemRule::checkSettlementDetails162;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystemRule";
 			definition = "The CashSettlementSystem codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails162.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementDetails162 obj) throws Exception {
+			checkSettlementDetails162(obj);
 		}
 	};
 

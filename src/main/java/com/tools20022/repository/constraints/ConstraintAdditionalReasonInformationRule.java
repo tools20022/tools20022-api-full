@@ -52,11 +52,15 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<ProprietaryReason3> forProprietaryReason3 = new MMConstraint<ProprietaryReason3>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkProprietaryReason3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> ProprietaryReason3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProprietaryReason3 obj) throws Exception {
+			checkProprietaryReason3(obj);
 		}
 	};
 	/**
@@ -95,13 +99,17 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<AcceptedStatusReason4> forAcceptedStatusReason4 = new MMConstraint<AcceptedStatusReason4>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkAcceptedStatusReason4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalReasonInformationRule.forAcceptedStatusReason8);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule.forAcceptedStatusReason1;
 			owner_lazy = () -> AcceptedStatusReason4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AcceptedStatusReason4 obj) throws Exception {
+			checkAcceptedStatusReason4(obj);
 		}
 	};
 	/**
@@ -127,11 +135,15 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<AcceptedStatusReason6> forAcceptedStatusReason6 = new MMConstraint<AcceptedStatusReason6>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkAcceptedStatusReason6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> AcceptedStatusReason6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AcceptedStatusReason6 obj) throws Exception {
+			checkAcceptedStatusReason6(obj);
 		}
 	};
 	/**
@@ -157,11 +169,15 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<ProprietaryStatusAndReason5> forProprietaryStatusAndReason5 = new MMConstraint<ProprietaryStatusAndReason5>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkProprietaryStatusAndReason5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> ProprietaryStatusAndReason5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ProprietaryStatusAndReason5 obj) throws Exception {
+			checkProprietaryStatusAndReason5(obj);
 		}
 	};
 	/**
@@ -187,11 +203,15 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<ReceivedStatusReason1> forReceivedStatusReason1 = new MMConstraint<ReceivedStatusReason1>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkReceivedStatusReason1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> ReceivedStatusReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReceivedStatusReason1 obj) throws Exception {
+			checkReceivedStatusReason1(obj);
 		}
 	};
 	/**
@@ -217,11 +237,15 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<PendingProcessingStatusReason1> forPendingProcessingStatusReason1 = new MMConstraint<PendingProcessingStatusReason1>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkPendingProcessingStatusReason1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> PendingProcessingStatusReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PendingProcessingStatusReason1 obj) throws Exception {
+			checkPendingProcessingStatusReason1(obj);
 		}
 	};
 	/**
@@ -247,11 +271,15 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<AcceptedStatusReason7> forAcceptedStatusReason7 = new MMConstraint<AcceptedStatusReason7>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkAcceptedStatusReason7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> AcceptedStatusReason7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AcceptedStatusReason7 obj) throws Exception {
+			checkAcceptedStatusReason7(obj);
 		}
 	};
 	/**
@@ -277,11 +305,15 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<RejectedStatusReason12> forRejectedStatusReason12 = new MMConstraint<RejectedStatusReason12>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkRejectedStatusReason12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> RejectedStatusReason12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectedStatusReason12 obj) throws Exception {
+			checkRejectedStatusReason12(obj);
 		}
 	};
 	/**
@@ -312,12 +344,16 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<AcceptedStatusReason8> forAcceptedStatusReason8 = new MMConstraint<AcceptedStatusReason8>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkAcceptedStatusReason8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalReasonInformationRule.forAcceptedStatusReason4;
 			owner_lazy = () -> AcceptedStatusReason8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AcceptedStatusReason8 obj) throws Exception {
+			checkAcceptedStatusReason8(obj);
 		}
 	};
 	/**
@@ -343,11 +379,15 @@ public class ConstraintAdditionalReasonInformationRule {
 	 */
 	public static final MMConstraint<AcceptedStatusReason11> forAcceptedStatusReason11 = new MMConstraint<AcceptedStatusReason11>() {
 		{
-			validator = ConstraintAdditionalReasonInformationRule::checkAcceptedStatusReason11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformationRule";
 			definition = "The AdditionalReasonInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
 			owner_lazy = () -> AcceptedStatusReason11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AcceptedStatusReason11 obj) throws Exception {
+			checkAcceptedStatusReason11(obj);
 		}
 	};
 

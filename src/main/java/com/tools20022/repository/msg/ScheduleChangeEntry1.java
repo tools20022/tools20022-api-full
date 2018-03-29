@@ -120,7 +120,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Type of the scheduled event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmScheduleEventType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ScheduleChangeEntry1, SystemEventType2Choice> mmScheduleEventType = new MMMessageAssociationEnd<ScheduleChangeEntry1, SystemEventType2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class ScheduleChangeEntry1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemEventType2Choice.mmObject();
+		}
+
+		@Override
+		public SystemEventType2Choice getValue(ScheduleChangeEntry1 obj) {
+			return obj.getScheduleEventType();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeEntry1 obj, SystemEventType2Choice value) {
+			obj.setScheduleEventType(value);
 		}
 	};
 	@XmlElement(name = "SchdlEvtId")
@@ -164,7 +174,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Identificaiton of the scheduled event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScheduleEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScheduleChangeEntry1, Optional<Exact1NumericText>> mmScheduleEventIdentification = new MMMessageAttribute<ScheduleChangeEntry1, Optional<Exact1NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class ScheduleChangeEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact1NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact1NumericText> getValue(ScheduleChangeEntry1 obj) {
+			return obj.getScheduleEventIdentification();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeEntry1 obj, Optional<Exact1NumericText> value) {
+			obj.setScheduleEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtFrqcy")
@@ -206,7 +226,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "New frequency of the scheduled event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScheduleChangeEntry1, Optional<Max4Text>> mmEventFrequency = new MMMessageAttribute<ScheduleChangeEntry1, Optional<Max4Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class ScheduleChangeEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(ScheduleChangeEntry1 obj) {
+			return obj.getEventFrequency();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeEntry1 obj, Optional<Max4Text> value) {
+			obj.setEventFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtPrvsFrqcy")
@@ -248,7 +278,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Frequency of the scheduled event before change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventPreviousFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScheduleChangeEntry1, Optional<Max4Text>> mmEventPreviousFrequency = new MMMessageAttribute<ScheduleChangeEntry1, Optional<Max4Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -259,6 +289,16 @@ public class ScheduleChangeEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(ScheduleChangeEntry1 obj) {
+			return obj.getEventPreviousFrequency();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeEntry1 obj, Optional<Max4Text> value) {
+			obj.setEventPreviousFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTm")
@@ -290,7 +330,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "New scheduled time of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScheduleChangeEntry1, Optional<ISOTime>> mmEventTime = new MMMessageAttribute<ScheduleChangeEntry1, Optional<ISOTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -301,6 +341,16 @@ public class ScheduleChangeEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISOTime> getValue(ScheduleChangeEntry1 obj) {
+			return obj.getEventTime();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeEntry1 obj, Optional<ISOTime> value) {
+			obj.setEventTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtPrvsTm")
@@ -332,7 +382,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Scheduled time of the event before change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventPreviousTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScheduleChangeEntry1, Optional<ISOTime>> mmEventPreviousTime = new MMMessageAttribute<ScheduleChangeEntry1, Optional<ISOTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -343,6 +393,16 @@ public class ScheduleChangeEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISOTime> getValue(ScheduleChangeEntry1 obj) {
+			return obj.getEventPreviousTime();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeEntry1 obj, Optional<ISOTime> value) {
+			obj.setEventPreviousTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtDrtn")
@@ -375,7 +435,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Minimum duration of event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventDuration = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScheduleChangeEntry1, Optional<Max3NumericText>> mmEventDuration = new MMMessageAttribute<ScheduleChangeEntry1, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -386,6 +446,16 @@ public class ScheduleChangeEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(ScheduleChangeEntry1 obj) {
+			return obj.getEventDuration();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeEntry1 obj, Optional<Max3NumericText> value) {
+			obj.setEventDuration(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtPrvsDrtn")
@@ -418,7 +488,7 @@ public class ScheduleChangeEntry1 {
 	 * definition} = "Set earlier duration of event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventPreviousDuration = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScheduleChangeEntry1, Optional<Max3NumericText>> mmEventPreviousDuration = new MMMessageAttribute<ScheduleChangeEntry1, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -429,6 +499,16 @@ public class ScheduleChangeEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(ScheduleChangeEntry1 obj) {
+			return obj.getEventPreviousDuration();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeEntry1 obj, Optional<Max3NumericText> value) {
+			obj.setEventPreviousDuration(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChngTp", required = true)
@@ -461,7 +541,7 @@ public class ScheduleChangeEntry1 {
 	 * "Type of schedule modification (i.e. event cancelled, new event)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChangeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScheduleChangeEntry1, Max35Text> mmChangeType = new MMMessageAttribute<ScheduleChangeEntry1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
 			isDerived = false;
@@ -472,6 +552,16 @@ public class ScheduleChangeEntry1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ScheduleChangeEntry1 obj) {
+			return obj.getChangeType();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeEntry1 obj, Max35Text value) {
+			obj.setChangeType(value);
 		}
 	};
 

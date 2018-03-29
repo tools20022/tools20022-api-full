@@ -124,7 +124,7 @@ public class RejectionAndRepairReason33Choice {
 	 * RejectionAndRepairReason22Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionAndRepairReason33Choice, RejectionReason34Code> mmCode = new MMMessageAttribute<RejectionAndRepairReason33Choice, RejectionReason34Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason33Choice.mmObject();
@@ -138,6 +138,16 @@ public class RejectionAndRepairReason33Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason34Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason34Code getValue(RejectionAndRepairReason33Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason33Choice obj, RejectionReason34Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +195,7 @@ public class RejectionAndRepairReason33Choice {
 	 * RejectionAndRepairReason22Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionAndRepairReason33Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<RejectionAndRepairReason33Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason33Choice.mmObject();
@@ -199,6 +209,16 @@ public class RejectionAndRepairReason33Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(RejectionAndRepairReason33Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason33Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

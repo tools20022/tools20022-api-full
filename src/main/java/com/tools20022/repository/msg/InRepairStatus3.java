@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -134,7 +135,7 @@ public class InRepairStatus3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatus3, Max350Text> mmReason = new MMMessageAttribute<InRepairStatus3, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus3.mmObject();
@@ -147,6 +148,16 @@ public class InRepairStatus3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(InRepairStatus3 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatus3 obj, Max350Text value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -191,7 +202,7 @@ public class InRepairStatus3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InRepairStatus3, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<InRepairStatus3, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus3.mmObject();
@@ -204,7 +215,17 @@ public class InRepairStatus3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(InRepairStatus3 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(InRepairStatus3 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -250,7 +271,7 @@ public class InRepairStatus3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatus3, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<InRepairStatus3, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus3.mmObject();
@@ -263,6 +284,16 @@ public class InRepairStatus3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(InRepairStatus3 obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatus3 obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	/**
@@ -349,7 +380,7 @@ public class InRepairStatus3 {
 		return dataSourceScheme;
 	}
 
-	public InRepairStatus3 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public InRepairStatus3 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

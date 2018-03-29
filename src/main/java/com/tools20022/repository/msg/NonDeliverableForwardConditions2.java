@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.fxtr.ForeignExchangeTradeStatusAndDetailsNotificationV04;
 import com.tools20022.repository.entity.FixingCondition;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FixingConditions1;
+import com.tools20022.repository.msg.OpeningConditions1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +125,7 @@ public class NonDeliverableForwardConditions2 {
 	 * "Provides the opening information associated with an NDF trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOpeningConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonDeliverableForwardConditions2, OpeningConditions1> mmOpeningConditions = new MMMessageAssociationEnd<NonDeliverableForwardConditions2, OpeningConditions1>() {
 		{
 			businessComponentTrace_lazy = () -> FixingCondition.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardConditions2.mmObject();
@@ -135,7 +137,17 @@ public class NonDeliverableForwardConditions2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OpeningConditions1.mmObject();
+			type_lazy = () -> OpeningConditions1.mmObject();
+		}
+
+		@Override
+		public OpeningConditions1 getValue(NonDeliverableForwardConditions2 obj) {
+			return obj.getOpeningConditions();
+		}
+
+		@Override
+		public void setValue(NonDeliverableForwardConditions2 obj, OpeningConditions1 value) {
+			obj.setOpeningConditions(value);
 		}
 	};
 	@XmlElement(name = "FxgConds")
@@ -173,7 +185,7 @@ public class NonDeliverableForwardConditions2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFixingConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonDeliverableForwardConditions2, Optional<FixingConditions1>> mmFixingConditions = new MMMessageAssociationEnd<NonDeliverableForwardConditions2, Optional<FixingConditions1>>() {
 		{
 			businessComponentTrace_lazy = () -> FixingCondition.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardConditions2.mmObject();
@@ -185,7 +197,17 @@ public class NonDeliverableForwardConditions2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FixingConditions1.mmObject();
+			type_lazy = () -> FixingConditions1.mmObject();
+		}
+
+		@Override
+		public Optional<FixingConditions1> getValue(NonDeliverableForwardConditions2 obj) {
+			return obj.getFixingConditions();
+		}
+
+		@Override
+		public void setValue(NonDeliverableForwardConditions2 obj, Optional<FixingConditions1> value) {
+			obj.setFixingConditions(value.orElse(null));
 		}
 	};
 
@@ -209,7 +231,7 @@ public class NonDeliverableForwardConditions2 {
 		return openingConditions;
 	}
 
-	public NonDeliverableForwardConditions2 setOpeningConditions(com.tools20022.repository.msg.OpeningConditions1 openingConditions) {
+	public NonDeliverableForwardConditions2 setOpeningConditions(OpeningConditions1 openingConditions) {
 		this.openingConditions = Objects.requireNonNull(openingConditions);
 		return this;
 	}
@@ -218,7 +240,7 @@ public class NonDeliverableForwardConditions2 {
 		return fixingConditions == null ? Optional.empty() : Optional.of(fixingConditions);
 	}
 
-	public NonDeliverableForwardConditions2 setFixingConditions(com.tools20022.repository.msg.FixingConditions1 fixingConditions) {
+	public NonDeliverableForwardConditions2 setFixingConditions(FixingConditions1 fixingConditions) {
 		this.fixingConditions = fixingConditions;
 		return this;
 	}

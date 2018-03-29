@@ -106,7 +106,7 @@ public class Rating1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRatingScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Rating1, Max35Text> mmRatingScheme = new MMMessageAttribute<Rating1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Rating.mmRatingScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Rating1.mmObject();
@@ -118,6 +118,16 @@ public class Rating1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Rating1 obj) {
+			return obj.getRatingScheme();
+		}
+
+		@Override
+		public void setValue(Rating1 obj, Max35Text value) {
+			obj.setRatingScheme(value);
 		}
 	};
 	@XmlElement(name = "ValDt", required = true)
@@ -153,7 +163,7 @@ public class Rating1 {
 	 * definition} = "Date/time as from which the rating is valid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Rating1, ISODateTime> mmValueDate = new MMMessageAttribute<Rating1, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Rating.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Rating1.mmObject();
@@ -165,6 +175,16 @@ public class Rating1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Rating1 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(Rating1 obj, ISODateTime value) {
+			obj.setValueDate(value);
 		}
 	};
 	@XmlElement(name = "ValId", required = true)
@@ -203,7 +223,7 @@ public class Rating1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Rating1, RatingValueIdentifier> mmValueIdentification = new MMMessageAttribute<Rating1, RatingValueIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> Rating.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Rating1.mmObject();
@@ -215,6 +235,16 @@ public class Rating1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RatingValueIdentifier.mmObject();
+		}
+
+		@Override
+		public RatingValueIdentifier getValue(Rating1 obj) {
+			return obj.getValueIdentification();
+		}
+
+		@Override
+		public void setValue(Rating1 obj, RatingValueIdentifier value) {
+			obj.setValueIdentification(value);
 		}
 	};
 

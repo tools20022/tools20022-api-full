@@ -113,7 +113,7 @@ public class CommissionWaiver4 {
 	 * definition} = "Form of the rebate, for example, cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommissionWaiver4, WaivingInstruction1Choice> mmInstructionBasis = new MMMessageAssociationEnd<CommissionWaiver4, WaivingInstruction1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionWaiver4.mmObject();
@@ -126,6 +126,16 @@ public class CommissionWaiver4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> WaivingInstruction1Choice.mmObject();
+		}
+
+		@Override
+		public WaivingInstruction1Choice getValue(CommissionWaiver4 obj) {
+			return obj.getInstructionBasis();
+		}
+
+		@Override
+		public void setValue(CommissionWaiver4 obj, WaivingInstruction1Choice value) {
+			obj.setInstructionBasis(value);
 		}
 	};
 	@XmlElement(name = "WvdRate", required = true)
@@ -170,7 +180,7 @@ public class CommissionWaiver4 {
 	 * CommissionWaiver3.mmWaivedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWaivedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommissionWaiver4, PercentageRate> mmWaivedRate = new MMMessageAttribute<CommissionWaiver4, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmWaivedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionWaiver4.mmObject();
@@ -183,6 +193,16 @@ public class CommissionWaiver4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(CommissionWaiver4 obj) {
+			return obj.getWaivedRate();
+		}
+
+		@Override
+		public void setValue(CommissionWaiver4 obj, PercentageRate value) {
+			obj.setWaivedRate(value);
 		}
 	};
 

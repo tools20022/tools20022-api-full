@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -164,7 +165,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, SafekeepingPlaceFormat1Choice> mmSafekeepingPlace = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, SafekeepingPlaceFormat1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -177,6 +178,16 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat1Choice.mmObject();
+		}
+
+		@Override
+		public SafekeepingPlaceFormat1Choice getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, SafekeepingPlaceFormat1Choice value) {
+			obj.setSafekeepingPlace(value);
 		}
 	};
 	@XmlElement(name = "PlcOfListg")
@@ -212,7 +223,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * definition} = "Market(s) on which the security is listed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlaceOfListing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, Optional<MarketIdentification3>> mmPlaceOfListing = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, Optional<MarketIdentification3>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -224,7 +235,17 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarketIdentification3.mmObject();
+			type_lazy = () -> MarketIdentification3.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification3> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getPlaceOfListing();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, Optional<MarketIdentification3> value) {
+			obj.setPlaceOfListing(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShrtLng")
@@ -262,7 +283,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * definition} = "Indication that the position is short or long."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLong = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AggregateBalancePerSafekeepingPlace6, Optional<ShortLong1Code>> mmShortLong = new MMMessageAttribute<AggregateBalancePerSafekeepingPlace6, Optional<ShortLong1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -275,9 +296,19 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
+
+		@Override
+		public Optional<ShortLong1Code> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getShortLong();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, Optional<ShortLong1Code> value) {
+			obj.setShortLong(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "QtyBrkdwn")
-	protected List<com.tools20022.repository.msg.QuantityBreakDown2> quantityBreakdown;
+	protected List<QuantityBreakDown2> quantityBreakdown;
 	/**
 	 * 
 	 <p>
@@ -311,7 +342,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<QuantityBreakDown2>> mmQuantityBreakdown = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<QuantityBreakDown2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -322,7 +353,17 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			definition = "Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakDown2.mmObject();
+			type_lazy = () -> QuantityBreakDown2.mmObject();
+		}
+
+		@Override
+		public List<QuantityBreakDown2> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getQuantityBreakdown();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, List<QuantityBreakDown2> value) {
+			obj.setQuantityBreakdown(value);
 		}
 	};
 	@XmlElement(name = "AggtQty", required = true)
@@ -361,7 +402,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * "Total quantity of financial instrument for the referenced holding."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAggregateQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AggregateBalancePerSafekeepingPlace6, BalanceQuantity2Choice> mmAggregateQuantity = new MMMessageAttribute<AggregateBalancePerSafekeepingPlace6, BalanceQuantity2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -374,9 +415,19 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceQuantity2Choice.mmObject();
 		}
+
+		@Override
+		public BalanceQuantity2Choice getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getAggregateQuantity();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, BalanceQuantity2Choice value) {
+			obj.setAggregateQuantity(value);
+		}
 	};
 	@XmlElement(name = "PricDtls", required = true)
-	protected List<com.tools20022.repository.msg.PriceInformation4> priceDetails;
+	protected List<PriceInformation4> priceDetails;
 	/**
 	 * 
 	 <p>
@@ -409,7 +460,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * "Price of the financial instrument in one or more currencies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<PriceInformation4>> mmPriceDetails = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<PriceInformation4>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -420,11 +471,21 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			definition = "Price of the financial instrument in one or more currencies.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PriceInformation4.mmObject();
+			type_lazy = () -> PriceInformation4.mmObject();
+		}
+
+		@Override
+		public List<PriceInformation4> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, List<PriceInformation4> value) {
+			obj.setPriceDetails(value);
 		}
 	};
 	@XmlElement(name = "FXDtls")
-	protected List<com.tools20022.repository.msg.ForeignExchangeTerms6> foreignExchangeDetails;
+	protected List<ForeignExchangeTerms6> foreignExchangeDetails;
 	/**
 	 * 
 	 <p>
@@ -456,7 +517,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * definition} = "Currency exchange related to a securities order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<ForeignExchangeTerms6>> mmForeignExchangeDetails = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<ForeignExchangeTerms6>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -467,7 +528,17 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			definition = "Currency exchange related to a securities order.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms6.mmObject();
+			type_lazy = () -> ForeignExchangeTerms6.mmObject();
+		}
+
+		@Override
+		public List<ForeignExchangeTerms6> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getForeignExchangeDetails();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, List<ForeignExchangeTerms6> value) {
+			obj.setForeignExchangeDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctBaseCcyAmts", required = true)
@@ -504,7 +575,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * "Valuation amounts provided in the base currency of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountBaseCurrencyAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, BalanceAmounts1> mmAccountBaseCurrencyAmounts = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, BalanceAmounts1>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmAssetHolding;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -516,7 +587,17 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts1.mmObject();
+			type_lazy = () -> BalanceAmounts1.mmObject();
+		}
+
+		@Override
+		public BalanceAmounts1 getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getAccountBaseCurrencyAmounts();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, BalanceAmounts1 value) {
+			obj.setAccountBaseCurrencyAmounts(value);
 		}
 	};
 	@XmlElement(name = "InstrmCcyAmts")
@@ -554,7 +635,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstrumentCurrencyAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, Optional<BalanceAmounts1>> mmInstrumentCurrencyAmounts = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, Optional<BalanceAmounts1>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmAssetHolding;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -566,7 +647,17 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts1.mmObject();
+			type_lazy = () -> BalanceAmounts1.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceAmounts1> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getInstrumentCurrencyAmounts();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, Optional<BalanceAmounts1> value) {
+			obj.setInstrumentCurrencyAmounts(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AltrnRptgCcyAmts")
@@ -604,7 +695,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAlternateReportingCurrencyAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, Optional<BalanceAmounts1>> mmAlternateReportingCurrencyAmounts = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, Optional<BalanceAmounts1>>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmAssetHolding;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -616,7 +707,17 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BalanceAmounts1.mmObject();
+			type_lazy = () -> BalanceAmounts1.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceAmounts1> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getAlternateReportingCurrencyAmounts();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, Optional<BalanceAmounts1> value) {
+			obj.setAlternateReportingCurrencyAmounts(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DaysAcrd")
@@ -655,7 +756,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AggregateBalancePerSafekeepingPlace6, Optional<Number>> mmDaysAccrued = new MMMessageAttribute<AggregateBalancePerSafekeepingPlace6, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -668,9 +769,19 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Optional<Number> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getDaysAccrued();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, Optional<Number> value) {
+			obj.setDaysAccrued(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "BalBrkdwnDtls")
-	protected List<com.tools20022.repository.msg.SubBalanceInformation4> balanceBreakdownDetails;
+	protected List<SubBalanceInformation4> balanceBreakdownDetails;
 	/**
 	 * 
 	 <p>
@@ -704,7 +815,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceBreakdownDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<SubBalanceInformation4>> mmBalanceBreakdownDetails = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<SubBalanceInformation4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -715,11 +826,21 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			definition = "Net position of a segregated holding of a single security within the overall position held in a securities account, eg, sub-balance per status.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation4.mmObject();
+			type_lazy = () -> SubBalanceInformation4.mmObject();
+		}
+
+		@Override
+		public List<SubBalanceInformation4> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getBalanceBreakdownDetails();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, List<SubBalanceInformation4> value) {
+			obj.setBalanceBreakdownDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlBalBrkdwnDtls")
-	protected List<com.tools20022.repository.msg.AdditionalBalanceInformation4> additionalBalanceBreakdownDetails;
+	protected List<AdditionalBalanceInformation4> additionalBalanceBreakdownDetails;
 	/**
 	 * 
 	 <p>
@@ -754,7 +875,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalBalanceBreakdownDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<AdditionalBalanceInformation4>> mmAdditionalBalanceBreakdownDetails = new MMMessageAssociationEnd<AggregateBalancePerSafekeepingPlace6, List<AdditionalBalanceInformation4>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
@@ -765,7 +886,17 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			definition = "Net position of a segregated holding of a single security within the overall position held in a securities account, eg, sub-balance per status.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation4.mmObject();
+			type_lazy = () -> AdditionalBalanceInformation4.mmObject();
+		}
+
+		@Override
+		public List<AdditionalBalanceInformation4> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getAdditionalBalanceBreakdownDetails();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, List<AdditionalBalanceInformation4> value) {
+			obj.setAdditionalBalanceBreakdownDetails(value);
 		}
 	};
 	@XmlElement(name = "HldgAddtlDtls")
@@ -797,7 +928,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 	 * definition} = "Provides additional information on the holding."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AggregateBalancePerSafekeepingPlace6, Optional<Max350Text>> mmHoldingAdditionalDetails = new MMMessageAttribute<AggregateBalancePerSafekeepingPlace6, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace6.mmObject();
 			isDerived = false;
@@ -808,6 +939,16 @@ public class AggregateBalancePerSafekeepingPlace6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(AggregateBalancePerSafekeepingPlace6 obj) {
+			return obj.getHoldingAdditionalDetails();
+		}
+
+		@Override
+		public void setValue(AggregateBalancePerSafekeepingPlace6 obj, Optional<Max350Text> value) {
+			obj.setHoldingAdditionalDetails(value.orElse(null));
 		}
 	};
 
@@ -846,7 +987,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 		return placeOfListing == null ? Optional.empty() : Optional.of(placeOfListing);
 	}
 
-	public AggregateBalancePerSafekeepingPlace6 setPlaceOfListing(com.tools20022.repository.msg.MarketIdentification3 placeOfListing) {
+	public AggregateBalancePerSafekeepingPlace6 setPlaceOfListing(MarketIdentification3 placeOfListing) {
 		this.placeOfListing = placeOfListing;
 		return this;
 	}
@@ -864,7 +1005,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public AggregateBalancePerSafekeepingPlace6 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakDown2> quantityBreakdown) {
+	public AggregateBalancePerSafekeepingPlace6 setQuantityBreakdown(List<QuantityBreakDown2> quantityBreakdown) {
 		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
 		return this;
 	}
@@ -882,7 +1023,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 		return priceDetails == null ? priceDetails = new ArrayList<>() : priceDetails;
 	}
 
-	public AggregateBalancePerSafekeepingPlace6 setPriceDetails(List<com.tools20022.repository.msg.PriceInformation4> priceDetails) {
+	public AggregateBalancePerSafekeepingPlace6 setPriceDetails(List<PriceInformation4> priceDetails) {
 		this.priceDetails = Objects.requireNonNull(priceDetails);
 		return this;
 	}
@@ -891,7 +1032,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 		return foreignExchangeDetails == null ? foreignExchangeDetails = new ArrayList<>() : foreignExchangeDetails;
 	}
 
-	public AggregateBalancePerSafekeepingPlace6 setForeignExchangeDetails(List<com.tools20022.repository.msg.ForeignExchangeTerms6> foreignExchangeDetails) {
+	public AggregateBalancePerSafekeepingPlace6 setForeignExchangeDetails(List<ForeignExchangeTerms6> foreignExchangeDetails) {
 		this.foreignExchangeDetails = Objects.requireNonNull(foreignExchangeDetails);
 		return this;
 	}
@@ -900,7 +1041,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 		return accountBaseCurrencyAmounts;
 	}
 
-	public AggregateBalancePerSafekeepingPlace6 setAccountBaseCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts1 accountBaseCurrencyAmounts) {
+	public AggregateBalancePerSafekeepingPlace6 setAccountBaseCurrencyAmounts(BalanceAmounts1 accountBaseCurrencyAmounts) {
 		this.accountBaseCurrencyAmounts = Objects.requireNonNull(accountBaseCurrencyAmounts);
 		return this;
 	}
@@ -909,7 +1050,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 		return instrumentCurrencyAmounts == null ? Optional.empty() : Optional.of(instrumentCurrencyAmounts);
 	}
 
-	public AggregateBalancePerSafekeepingPlace6 setInstrumentCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts1 instrumentCurrencyAmounts) {
+	public AggregateBalancePerSafekeepingPlace6 setInstrumentCurrencyAmounts(BalanceAmounts1 instrumentCurrencyAmounts) {
 		this.instrumentCurrencyAmounts = instrumentCurrencyAmounts;
 		return this;
 	}
@@ -918,7 +1059,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 		return alternateReportingCurrencyAmounts == null ? Optional.empty() : Optional.of(alternateReportingCurrencyAmounts);
 	}
 
-	public AggregateBalancePerSafekeepingPlace6 setAlternateReportingCurrencyAmounts(com.tools20022.repository.msg.BalanceAmounts1 alternateReportingCurrencyAmounts) {
+	public AggregateBalancePerSafekeepingPlace6 setAlternateReportingCurrencyAmounts(BalanceAmounts1 alternateReportingCurrencyAmounts) {
 		this.alternateReportingCurrencyAmounts = alternateReportingCurrencyAmounts;
 		return this;
 	}
@@ -936,7 +1077,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 		return balanceBreakdownDetails == null ? balanceBreakdownDetails = new ArrayList<>() : balanceBreakdownDetails;
 	}
 
-	public AggregateBalancePerSafekeepingPlace6 setBalanceBreakdownDetails(List<com.tools20022.repository.msg.SubBalanceInformation4> balanceBreakdownDetails) {
+	public AggregateBalancePerSafekeepingPlace6 setBalanceBreakdownDetails(List<SubBalanceInformation4> balanceBreakdownDetails) {
 		this.balanceBreakdownDetails = Objects.requireNonNull(balanceBreakdownDetails);
 		return this;
 	}
@@ -945,7 +1086,7 @@ public class AggregateBalancePerSafekeepingPlace6 {
 		return additionalBalanceBreakdownDetails == null ? additionalBalanceBreakdownDetails = new ArrayList<>() : additionalBalanceBreakdownDetails;
 	}
 
-	public AggregateBalancePerSafekeepingPlace6 setAdditionalBalanceBreakdownDetails(List<com.tools20022.repository.msg.AdditionalBalanceInformation4> additionalBalanceBreakdownDetails) {
+	public AggregateBalancePerSafekeepingPlace6 setAdditionalBalanceBreakdownDetails(List<AdditionalBalanceInformation4> additionalBalanceBreakdownDetails) {
 		this.additionalBalanceBreakdownDetails = Objects.requireNonNull(additionalBalanceBreakdownDetails);
 		return this;
 	}

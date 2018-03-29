@@ -152,7 +152,7 @@ public class PowerOfAttorneyRequirements2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLegalRequirement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PowerOfAttorneyRequirements2, List<PowerOfAttorneyLegalisation1Code>> mmLegalRequirement = new MMMessageAttribute<PowerOfAttorneyRequirements2, List<PowerOfAttorneyLegalisation1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmLegalRequirement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements2.mmObject();
@@ -165,6 +165,16 @@ public class PowerOfAttorneyRequirements2 {
 			maxOccurs = 4;
 			minOccurs = 0;
 			simpleType_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
+		}
+
+		@Override
+		public List<PowerOfAttorneyLegalisation1Code> getValue(PowerOfAttorneyRequirements2 obj) {
+			return obj.getLegalRequirement();
+		}
+
+		@Override
+		public void setValue(PowerOfAttorneyRequirements2 obj, List<PowerOfAttorneyLegalisation1Code> value) {
+			obj.setLegalRequirement(value);
 		}
 	};
 	@XmlElement(name = "OthrDcmnttn")
@@ -210,7 +220,7 @@ public class PowerOfAttorneyRequirements2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherDocumentation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PowerOfAttorneyRequirements2, Optional<Max350Text>> mmOtherDocumentation = new MMMessageAttribute<PowerOfAttorneyRequirements2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PowerOfAttorneyRequirements.mmOtherDocumentation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PowerOfAttorneyRequirements2.mmObject();
@@ -223,6 +233,16 @@ public class PowerOfAttorneyRequirements2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PowerOfAttorneyRequirements2 obj) {
+			return obj.getOtherDocumentation();
+		}
+
+		@Override
+		public void setValue(PowerOfAttorneyRequirements2 obj, Optional<Max350Text> value) {
+			obj.setOtherDocumentation(value.orElse(null));
 		}
 	};
 

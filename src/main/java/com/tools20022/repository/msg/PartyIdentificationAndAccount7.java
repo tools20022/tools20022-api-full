@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount7;
+import com.tools20022.repository.msg.PartyIdentification8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +109,7 @@ public class PartyIdentificationAndAccount7 {
 	 * "Identification of the party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount7, PartyIdentification8> mmPartyIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount7, PartyIdentification8>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount7.mmObject();
@@ -119,7 +121,17 @@ public class PartyIdentificationAndAccount7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public PartyIdentification8 getValue(PartyIdentificationAndAccount7 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount7 obj, PartyIdentification8 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -155,7 +167,7 @@ public class PartyIdentificationAndAccount7 {
 	 * definition} = "Identification of the account owned by the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentificationAndAccount7, Optional<CashAccount7>> mmAccountIdentification = new MMMessageAssociationEnd<PartyIdentificationAndAccount7, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount7.mmObject();
@@ -167,7 +179,17 @@ public class PartyIdentificationAndAccount7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(PartyIdentificationAndAccount7 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentificationAndAccount7 obj, Optional<CashAccount7> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -189,7 +211,7 @@ public class PartyIdentificationAndAccount7 {
 		return partyIdentification;
 	}
 
-	public PartyIdentificationAndAccount7 setPartyIdentification(com.tools20022.repository.msg.PartyIdentification8 partyIdentification) {
+	public PartyIdentificationAndAccount7 setPartyIdentification(PartyIdentification8 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}
@@ -198,7 +220,7 @@ public class PartyIdentificationAndAccount7 {
 		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public PartyIdentificationAndAccount7 setAccountIdentification(com.tools20022.repository.msg.CashAccount7 accountIdentification) {
+	public PartyIdentificationAndAccount7 setAccountIdentification(CashAccount7 accountIdentification) {
 		this.accountIdentification = accountIdentification;
 		return this;
 	}

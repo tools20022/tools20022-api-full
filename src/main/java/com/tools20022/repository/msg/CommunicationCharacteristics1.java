@@ -120,7 +120,7 @@ public class CommunicationCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommunicationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationCharacteristics1, POICommunicationType1Code> mmCommunicationType = new MMMessageAttribute<CommunicationCharacteristics1, POICommunicationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class CommunicationCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> POICommunicationType1Code.mmObject();
+		}
+
+		@Override
+		public POICommunicationType1Code getValue(CommunicationCharacteristics1 obj) {
+			return obj.getCommunicationType();
+		}
+
+		@Override
+		public void setValue(CommunicationCharacteristics1 obj, POICommunicationType1Code value) {
+			obj.setCommunicationType(value);
 		}
 	};
 	@XmlElement(name = "RmotPty", required = true)
@@ -174,7 +184,7 @@ public class CommunicationCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemoteParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationCharacteristics1, PartyType7Code> mmRemoteParty = new MMMessageAttribute<CommunicationCharacteristics1, PartyType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class CommunicationCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartyType7Code.mmObject();
+		}
+
+		@Override
+		public PartyType7Code getValue(CommunicationCharacteristics1 obj) {
+			return obj.getRemoteParty();
+		}
+
+		@Override
+		public void setValue(CommunicationCharacteristics1 obj, PartyType7Code value) {
+			obj.setRemoteParty(value);
 		}
 	};
 	@XmlElement(name = "Actv", required = true)
@@ -226,7 +246,7 @@ public class CommunicationCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActive = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationCharacteristics1, TrueFalseIndicator> mmActive = new MMMessageAttribute<CommunicationCharacteristics1, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics1.mmObject();
 			isDerived = false;
@@ -238,6 +258,16 @@ public class CommunicationCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(CommunicationCharacteristics1 obj) {
+			return obj.getActive();
+		}
+
+		@Override
+		public void setValue(CommunicationCharacteristics1 obj, TrueFalseIndicator value) {
+			obj.setActive(value);
 		}
 	};
 

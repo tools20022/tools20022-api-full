@@ -116,7 +116,7 @@ public class CancellationReason11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReason11Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<CancellationReason11Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason11Choice.mmObject();
@@ -129,6 +129,16 @@ public class CancellationReason11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CancellationReason11Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(CancellationReason11Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -165,7 +175,7 @@ public class CancellationReason11Choice {
 	 * definition} = "Specifies the reason of the CancellationPending Status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationReason11Choice, List<AwaitingCancellationReason1>> mmReason = new MMMessageAssociationEnd<CancellationReason11Choice, List<AwaitingCancellationReason1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationReason11Choice.mmObject();
@@ -177,6 +187,16 @@ public class CancellationReason11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AwaitingCancellationReason1.mmObject();
+		}
+
+		@Override
+		public List<AwaitingCancellationReason1> getValue(CancellationReason11Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancellationReason11Choice obj, List<AwaitingCancellationReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

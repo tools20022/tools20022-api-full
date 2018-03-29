@@ -127,7 +127,7 @@ public class SafeKeepingPlace1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlaceFormat = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SafeKeepingPlace1, Optional<SafekeepingPlaceFormat10Choice>> mmSafekeepingPlaceFormat = new MMMessageAssociationEnd<SafeKeepingPlace1, Optional<SafekeepingPlaceFormat10Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmObject();
@@ -141,6 +141,16 @@ public class SafeKeepingPlace1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SafekeepingPlaceFormat10Choice> getValue(SafeKeepingPlace1 obj) {
+			return obj.getSafekeepingPlaceFormat();
+		}
+
+		@Override
+		public void setValue(SafeKeepingPlace1 obj, Optional<SafekeepingPlaceFormat10Choice> value) {
+			obj.setSafekeepingPlaceFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -182,7 +192,7 @@ public class SafeKeepingPlace1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SafeKeepingPlace1, Optional<LEIIdentifier>> mmLEI = new MMMessageAttribute<SafeKeepingPlace1, Optional<LEIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace1.mmObject();
 			isDerived = false;
@@ -194,6 +204,16 @@ public class SafeKeepingPlace1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(SafeKeepingPlace1 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(SafeKeepingPlace1 obj, Optional<LEIIdentifier> value) {
+			obj.setLEI(value.orElse(null));
 		}
 	};
 

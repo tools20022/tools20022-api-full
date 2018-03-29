@@ -25,6 +25,9 @@ import com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentAttributes63;
+import com.tools20022.repository.msg.IntraPositionDetails32;
+import com.tools20022.repository.msg.SecurityIdentification19;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -146,7 +149,7 @@ public class FinancialInstrumentDetails21 {
 	 * FinancialInstrumentDetails14.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentDetails21, SecurityIdentification19> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<FinancialInstrumentDetails21, SecurityIdentification19>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails21.mmObject();
@@ -161,7 +164,17 @@ public class FinancialInstrumentDetails21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification19 getValue(FinancialInstrumentDetails21 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDetails21 obj, SecurityIdentification19 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmAttrbts")
@@ -213,7 +226,7 @@ public class FinancialInstrumentDetails21 {
 	 * FinancialInstrumentDetails14.mmFinancialInstrumentAttributes}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentDetails21, Optional<FinancialInstrumentAttributes63>> mmFinancialInstrumentAttributes = new MMMessageAssociationEnd<FinancialInstrumentDetails21, Optional<FinancialInstrumentAttributes63>>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails21.mmObject();
@@ -228,11 +241,21 @@ public class FinancialInstrumentDetails21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes63.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes63.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentAttributes63> getValue(FinancialInstrumentDetails21 obj) {
+			return obj.getFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDetails21 obj, Optional<FinancialInstrumentAttributes63> value) {
+			obj.setFinancialInstrumentAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubBal", required = true)
-	protected List<com.tools20022.repository.msg.IntraPositionDetails32> subBalance;
+	protected List<IntraPositionDetails32> subBalance;
 	/**
 	 * 
 	 <p>
@@ -280,7 +303,7 @@ public class FinancialInstrumentDetails21 {
 	 * FinancialInstrumentDetails14.mmSubBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentDetails21, List<IntraPositionDetails32>> mmSubBalance = new MMMessageAssociationEnd<FinancialInstrumentDetails21, List<IntraPositionDetails32>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmRelatedSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails21.mmObject();
@@ -294,7 +317,17 @@ public class FinancialInstrumentDetails21 {
 			previousVersion_lazy = () -> FinancialInstrumentDetails14.mmSubBalance;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraPositionDetails32.mmObject();
+			type_lazy = () -> IntraPositionDetails32.mmObject();
+		}
+
+		@Override
+		public List<IntraPositionDetails32> getValue(FinancialInstrumentDetails21 obj) {
+			return obj.getSubBalance();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDetails21 obj, List<IntraPositionDetails32> value) {
+			obj.setSubBalance(value);
 		}
 	};
 
@@ -320,7 +353,7 @@ public class FinancialInstrumentDetails21 {
 		return financialInstrumentIdentification;
 	}
 
-	public FinancialInstrumentDetails21 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+	public FinancialInstrumentDetails21 setFinancialInstrumentIdentification(SecurityIdentification19 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -329,7 +362,7 @@ public class FinancialInstrumentDetails21 {
 		return financialInstrumentAttributes == null ? Optional.empty() : Optional.of(financialInstrumentAttributes);
 	}
 
-	public FinancialInstrumentDetails21 setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes63 financialInstrumentAttributes) {
+	public FinancialInstrumentDetails21 setFinancialInstrumentAttributes(FinancialInstrumentAttributes63 financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 		return this;
 	}
@@ -338,7 +371,7 @@ public class FinancialInstrumentDetails21 {
 		return subBalance == null ? subBalance = new ArrayList<>() : subBalance;
 	}
 
-	public FinancialInstrumentDetails21 setSubBalance(List<com.tools20022.repository.msg.IntraPositionDetails32> subBalance) {
+	public FinancialInstrumentDetails21 setSubBalance(List<IntraPositionDetails32> subBalance) {
 		this.subBalance = Objects.requireNonNull(subBalance);
 		return this;
 	}

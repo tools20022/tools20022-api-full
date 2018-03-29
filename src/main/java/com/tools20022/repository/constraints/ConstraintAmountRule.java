@@ -63,13 +63,17 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan6> forInvestmentPlan6 = new MMConstraint<InvestmentPlan6>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If Quantity\\Amount is not present, then GrossAmountIndicator is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan9);
 			owner_lazy = () -> InvestmentPlan6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan6 obj) throws Exception {
+			checkInvestmentPlan6(obj);
 		}
 	};
 	/**
@@ -107,13 +111,17 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan7> forInvestmentPlan7 = new MMConstraint<InvestmentPlan7>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If AmountOrUnit\\Amount is not present, then GrossAmountIndicator is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan8);
 			owner_lazy = () -> InvestmentPlan7.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan7 obj) throws Exception {
+			checkInvestmentPlan7(obj);
 		}
 	};
 	/**
@@ -156,7 +164,6 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan9> forInvestmentPlan9 = new MMConstraint<InvestmentPlan9>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If Quantity/Amount is not present, then GrossAmountIndicator is not allowed.";
@@ -164,6 +171,11 @@ public class ConstraintAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan6;
 			owner_lazy = () -> InvestmentPlan9.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan9 obj) throws Exception {
+			checkInvestmentPlan9(obj);
 		}
 	};
 	/**
@@ -206,7 +218,6 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan8> forInvestmentPlan8 = new MMConstraint<InvestmentPlan8>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If Quantity/Amount is not present, then GrossAmountIndicator is not allowed.";
@@ -214,6 +225,11 @@ public class ConstraintAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan7;
 			owner_lazy = () -> InvestmentPlan8.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan8 obj) throws Exception {
+			checkInvestmentPlan8(obj);
 		}
 	};
 	/**
@@ -256,7 +272,6 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan10> forInvestmentPlan10 = new MMConstraint<InvestmentPlan10>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If Quantity/Amount is not present, then GrossAmountIndicator is not allowed.";
@@ -264,6 +279,11 @@ public class ConstraintAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan9;
 			owner_lazy = () -> InvestmentPlan10.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan10 obj) throws Exception {
+			checkInvestmentPlan10(obj);
 		}
 	};
 	/**
@@ -306,7 +326,6 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan11> forInvestmentPlan11 = new MMConstraint<InvestmentPlan11>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If Quantity/Amount is not present, then GrossAmountIndicator is not allowed.";
@@ -314,6 +333,11 @@ public class ConstraintAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan8;
 			owner_lazy = () -> InvestmentPlan11.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan11 obj) throws Exception {
+			checkInvestmentPlan11(obj);
 		}
 	};
 	/**
@@ -356,7 +380,6 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan12> forInvestmentPlan12 = new MMConstraint<InvestmentPlan12>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If Quantity/Amount is not present, then GrossAmountIndicator is not allowed.";
@@ -364,6 +387,11 @@ public class ConstraintAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan10;
 			owner_lazy = () -> InvestmentPlan12.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan12 obj) throws Exception {
+			checkInvestmentPlan12(obj);
 		}
 	};
 	/**
@@ -406,7 +434,6 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan13> forInvestmentPlan13 = new MMConstraint<InvestmentPlan13>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If Quantity/Amount is not present, then GrossAmountIndicator is not allowed.";
@@ -414,6 +441,11 @@ public class ConstraintAmountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan11;
 			owner_lazy = () -> InvestmentPlan13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan13 obj) throws Exception {
+			checkInvestmentPlan13(obj);
 		}
 	};
 	/**
@@ -448,13 +480,17 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan14> forInvestmentPlan14 = new MMConstraint<InvestmentPlan14>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If Quantity/Amount is not present, then GrossAmountIndicator is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan12;
 			owner_lazy = () -> InvestmentPlan14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan14 obj) throws Exception {
+			checkInvestmentPlan14(obj);
 		}
 	};
 	/**
@@ -489,13 +525,17 @@ public class ConstraintAmountRule {
 	 */
 	public static final MMConstraint<InvestmentPlan15> forInvestmentPlan15 = new MMConstraint<InvestmentPlan15>() {
 		{
-			validator = ConstraintAmountRule::checkInvestmentPlan15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountRule";
 			definition = "If Quantity/Amount is not present, then GrossAmountIndicator is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAmountRule.forInvestmentPlan13;
 			owner_lazy = () -> InvestmentPlan15.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/GrossAmountIndicator</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InvestmentPlan15 obj) throws Exception {
+			checkInvestmentPlan15(obj);
 		}
 	};
 

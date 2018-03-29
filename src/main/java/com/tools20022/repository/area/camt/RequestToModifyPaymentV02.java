@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.CaseAssignment3;
 import com.tools20022.repository.msg.RequestedModification4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -225,7 +224,7 @@ public class RequestToModifyPaymentV02 {
 	 * RequestToModifyPaymentV01.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV02, CaseAssignment3> mmAssignment = new MMMessageBuildingBlock<RequestToModifyPaymentV02, CaseAssignment3>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,12 +237,14 @@ public class RequestToModifyPaymentV02 {
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToModifyPaymentV02.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment3 getValue(RequestToModifyPaymentV02 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPaymentV02 obj, CaseAssignment3 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -282,7 +283,7 @@ public class RequestToModifyPaymentV02 {
 	 * RequestToModifyPaymentV01.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV02, Case3> mmCase = new MMMessageBuildingBlock<RequestToModifyPaymentV02, Case3>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,12 +296,14 @@ public class RequestToModifyPaymentV02 {
 			complexType_lazy = () -> Case3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToModifyPaymentV02.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case3 getValue(RequestToModifyPaymentV02 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPaymentV02 obj, Case3 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -341,7 +344,7 @@ public class RequestToModifyPaymentV02 {
 	 * RequestToModifyPaymentV01.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV02, UnderlyingTransaction2Choice> mmUnderlying = new MMMessageBuildingBlock<RequestToModifyPaymentV02, UnderlyingTransaction2Choice>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,12 +357,14 @@ public class RequestToModifyPaymentV02 {
 			complexType_lazy = () -> UnderlyingTransaction2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToModifyPaymentV02.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnderlyingTransaction2Choice getValue(RequestToModifyPaymentV02 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPaymentV02 obj, UnderlyingTransaction2Choice value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
@@ -400,7 +405,7 @@ public class RequestToModifyPaymentV02 {
 	 * RequestToModifyPaymentV01.mmModification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmModification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV02, RequestedModification4> mmModification = new MMMessageBuildingBlock<RequestToModifyPaymentV02, RequestedModification4>() {
 		{
 			xmlTag = "Mod";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -413,12 +418,14 @@ public class RequestToModifyPaymentV02 {
 			complexType_lazy = () -> RequestedModification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToModifyPaymentV02.class.getMethod("getModification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RequestedModification4 getValue(RequestToModifyPaymentV02 obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPaymentV02 obj, RequestedModification4 value) {
+			obj.setModification(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -461,7 +468,7 @@ public class RequestToModifyPaymentV02 {
 	 * RequestToModifyPaymentV01.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestToModifyPaymentV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<RequestToModifyPaymentV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -473,12 +480,14 @@ public class RequestToModifyPaymentV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestToModifyPaymentV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(RequestToModifyPaymentV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(RequestToModifyPaymentV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

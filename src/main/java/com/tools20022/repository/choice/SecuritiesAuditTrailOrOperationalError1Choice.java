@@ -118,7 +118,7 @@ public class SecuritiesAuditTrailOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAuditTrailReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAuditTrailOrOperationalError1Choice, List<SecuritiesAuditTrailReport1>> mmSecuritiesAuditTrailReport = new MMMessageAssociationEnd<SecuritiesAuditTrailOrOperationalError1Choice, List<SecuritiesAuditTrailReport1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class SecuritiesAuditTrailOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAuditTrailReport1.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAuditTrailReport1> getValue(SecuritiesAuditTrailOrOperationalError1Choice obj) {
+			return obj.getSecuritiesAuditTrailReport();
+		}
+
+		@Override
+		public void setValue(SecuritiesAuditTrailOrOperationalError1Choice obj, List<SecuritiesAuditTrailReport1> value) {
+			obj.setSecuritiesAuditTrailReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -168,7 +178,7 @@ public class SecuritiesAuditTrailOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAuditTrailOrOperationalError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<SecuritiesAuditTrailOrOperationalError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAuditTrailOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class SecuritiesAuditTrailOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(SecuritiesAuditTrailOrOperationalError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAuditTrailOrOperationalError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

@@ -148,7 +148,7 @@ public class PaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssignerInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract, Optional<Max35Text>> mmAssignerInstructionIdentification = new MMMessageAttribute<PaymentInstructionExtract, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract.mmObject();
@@ -160,6 +160,16 @@ public class PaymentInstructionExtract {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentInstructionExtract obj) {
+			return obj.getAssignerInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract obj, Optional<Max35Text> value) {
+			obj.setAssignerInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AssgneInstrId")
@@ -198,7 +208,7 @@ public class PaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssigneeInstructionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract, Optional<Max35Text>> mmAssigneeInstructionIdentification = new MMMessageAttribute<PaymentInstructionExtract, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract.mmObject();
@@ -210,6 +220,16 @@ public class PaymentInstructionExtract {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentInstructionExtract obj) {
+			return obj.getAssigneeInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract obj, Optional<Max35Text> value) {
+			obj.setAssigneeInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyAmt")
@@ -249,7 +269,7 @@ public class PaymentInstructionExtract {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract, Optional<CurrencyAndAmount>> mmCurrencyAmount = new MMMessageAttribute<PaymentInstructionExtract, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract.mmObject();
@@ -261,6 +281,16 @@ public class PaymentInstructionExtract {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(PaymentInstructionExtract obj) {
+			return obj.getCurrencyAmount();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract obj, Optional<CurrencyAndAmount> value) {
+			obj.setCurrencyAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -297,7 +327,7 @@ public class PaymentInstructionExtract {
 	 * definition} = "Value date of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstructionExtract, Optional<ISODateTime>> mmValueDate = new MMMessageAttribute<PaymentInstructionExtract, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionExtract.mmObject();
@@ -309,6 +339,16 @@ public class PaymentInstructionExtract {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(PaymentInstructionExtract obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(PaymentInstructionExtract obj, Optional<ISODateTime> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 

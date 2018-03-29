@@ -116,7 +116,7 @@ public class PointOfInteractionComponentAssessment1 {
 	 * definition} = "Type of assessment of the component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentAssessment1, POIComponentAssessment1Code> mmType = new MMMessageAttribute<PointOfInteractionComponentAssessment1, POIComponentAssessment1Code>() {
 		{
 			businessElementTrace_lazy = () -> Assessment.mmAssessmentType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
@@ -128,6 +128,16 @@ public class PointOfInteractionComponentAssessment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> POIComponentAssessment1Code.mmObject();
+		}
+
+		@Override
+		public POIComponentAssessment1Code getValue(PointOfInteractionComponentAssessment1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentAssessment1 obj, POIComponentAssessment1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Assgnr", required = true)
@@ -164,7 +174,7 @@ public class PointOfInteractionComponentAssessment1 {
 	 * definition} = "Body which has delivered the assessment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssigner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentAssessment1, List<Max35Text>> mmAssigner = new MMMessageAttribute<PointOfInteractionComponentAssessment1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
@@ -175,6 +185,16 @@ public class PointOfInteractionComponentAssessment1 {
 			definition = "Body which has delivered the assessment.";
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(PointOfInteractionComponentAssessment1 obj) {
+			return obj.getAssigner();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentAssessment1 obj, List<Max35Text> value) {
+			obj.setAssigner(value);
 		}
 	};
 	@XmlElement(name = "DlvryDt")
@@ -211,7 +231,7 @@ public class PointOfInteractionComponentAssessment1 {
 	 * definition} = "Date when the assessment has been delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentAssessment1, Optional<ISODateTime>> mmDeliveryDate = new MMMessageAttribute<PointOfInteractionComponentAssessment1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Assessment.mmDeliveryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
@@ -223,6 +243,16 @@ public class PointOfInteractionComponentAssessment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(PointOfInteractionComponentAssessment1 obj) {
+			return obj.getDeliveryDate();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentAssessment1 obj, Optional<ISODateTime> value) {
+			obj.setDeliveryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XprtnDt")
@@ -259,7 +289,7 @@ public class PointOfInteractionComponentAssessment1 {
 	 * definition} = "Date when the assessment will expire."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentAssessment1, Optional<ISODateTime>> mmExpirationDate = new MMMessageAttribute<PointOfInteractionComponentAssessment1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Assessment.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
@@ -271,6 +301,16 @@ public class PointOfInteractionComponentAssessment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(PointOfInteractionComponentAssessment1 obj) {
+			return obj.getExpirationDate();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentAssessment1 obj, Optional<ISODateTime> value) {
+			obj.setExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nb", required = true)
@@ -302,7 +342,7 @@ public class PointOfInteractionComponentAssessment1 {
 	 * definition} = "Unique assessment number for the component."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentAssessment1, Max35Text> mmNumber = new MMMessageAttribute<PointOfInteractionComponentAssessment1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
 			isDerived = false;
@@ -313,6 +353,16 @@ public class PointOfInteractionComponentAssessment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PointOfInteractionComponentAssessment1 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentAssessment1 obj, Max35Text value) {
+			obj.setNumber(value);
 		}
 	};
 

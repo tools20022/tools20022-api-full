@@ -26,8 +26,7 @@ import com.tools20022.repository.msg.GroupHeader71;
 import com.tools20022.repository.msg.OriginalGroupHeader3;
 import com.tools20022.repository.msg.PaymentTransaction60;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -73,9 +72,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion
- * PaymentsClearingandSettlementISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -207,7 +204,7 @@ public class FIToFIPaymentReversalV06 {
 	 * FIToFIPaymentReversalV05.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentReversalV06, GroupHeader71> mmGroupHeader = new MMMessageBuildingBlock<FIToFIPaymentReversalV06, GroupHeader71>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,12 +217,14 @@ public class FIToFIPaymentReversalV06 {
 			complexType_lazy = () -> GroupHeader71.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentReversalV06.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader71 getValue(FIToFIPaymentReversalV06 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentReversalV06 obj, GroupHeader71 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInf")
@@ -268,7 +267,7 @@ public class FIToFIPaymentReversalV06 {
 	 * FIToFIPaymentReversalV05.mmOriginalGroupInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentReversalV06, Optional<OriginalGroupHeader3>> mmOriginalGroupInformation = new MMMessageBuildingBlock<FIToFIPaymentReversalV06, Optional<OriginalGroupHeader3>>() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,12 +280,14 @@ public class FIToFIPaymentReversalV06 {
 			complexType_lazy = () -> OriginalGroupHeader3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentReversalV06.class.getMethod("getOriginalGroupInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<OriginalGroupHeader3> getValue(FIToFIPaymentReversalV06 obj) {
+			return obj.getOriginalGroupInformation();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentReversalV06 obj, Optional<OriginalGroupHeader3> value) {
+			obj.setOriginalGroupInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxInf")
@@ -329,7 +330,7 @@ public class FIToFIPaymentReversalV06 {
 	 * FIToFIPaymentReversalV05.mmTransactionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentReversalV06, List<PaymentTransaction60>> mmTransactionInformation = new MMMessageBuildingBlock<FIToFIPaymentReversalV06, List<PaymentTransaction60>>() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,12 +342,14 @@ public class FIToFIPaymentReversalV06 {
 			complexType_lazy = () -> PaymentTransaction60.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentReversalV06.class.getMethod("getTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentTransaction60> getValue(FIToFIPaymentReversalV06 obj) {
+			return obj.getTransactionInformation();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentReversalV06 obj, List<PaymentTransaction60> value) {
+			obj.setTransactionInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -389,7 +392,7 @@ public class FIToFIPaymentReversalV06 {
 	 * FIToFIPaymentReversalV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FIToFIPaymentReversalV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FIToFIPaymentReversalV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,12 +404,14 @@ public class FIToFIPaymentReversalV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FIToFIPaymentReversalV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FIToFIPaymentReversalV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FIToFIPaymentReversalV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -428,7 +433,7 @@ public class FIToFIPaymentReversalV06 {
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe FIToFIPaymentReversal message is exchanged between agents to reverse a payment message that has been settled. The result will be a credit on the debtor account (when the reversed payment was a Direct Debit) or a debit on the creditor account (when the reversed payment was a Credit Transfer).\r\nThe FIToFIPaymentReversal message may or may not be the follow-up of a payment message.\r\nThe FIToFIPaymentReversal message refers to the original payment message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentReversal message can be used in domestic and cross-border scenarios.";
 				nextVersions_lazy = () -> Arrays.asList(FIToFIPaymentReversalV07.mmObject());
 				previousVersion_lazy = () -> FIToFIPaymentReversalV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "FIToFIPmtRvsl";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();

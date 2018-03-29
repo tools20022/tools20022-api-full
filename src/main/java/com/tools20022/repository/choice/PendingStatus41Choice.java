@@ -127,7 +127,7 @@ public class PendingStatus41Choice {
 	 * PendingStatus2Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingStatus41Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<PendingStatus41Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingStatus41Choice.mmObject();
@@ -141,6 +141,16 @@ public class PendingStatus41Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(PendingStatus41Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(PendingStatus41Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -184,7 +194,7 @@ public class PendingStatus41Choice {
 	 * PendingStatus2Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatus41Choice, List<PendingStatusReason9>> mmReason = new MMMessageAssociationEnd<PendingStatus41Choice, List<PendingStatusReason9>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingStatus41Choice.mmObject();
@@ -198,6 +208,16 @@ public class PendingStatus41Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingStatusReason9.mmObject();
+		}
+
+		@Override
+		public List<PendingStatusReason9> getValue(PendingStatus41Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PendingStatus41Choice obj, List<PendingStatusReason9> value) {
+			obj.setReason(value);
 		}
 	};
 

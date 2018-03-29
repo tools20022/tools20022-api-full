@@ -103,7 +103,7 @@ public class ATMSecurityConfiguration5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPINFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration5, List<PINFormat4Code>> mmPINFormat = new MMMessageAttribute<ATMSecurityConfiguration5, List<PINFormat4Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration5.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class ATMSecurityConfiguration5 {
 			definition = "PIN block format the security module is able to manage for online verification of the PIN.";
 			minOccurs = 0;
 			simpleType_lazy = () -> PINFormat4Code.mmObject();
+		}
+
+		@Override
+		public List<PINFormat4Code> getValue(ATMSecurityConfiguration5 obj) {
+			return obj.getPINFormat();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration5 obj, List<PINFormat4Code> value) {
+			obj.setPINFormat(value);
 		}
 	};
 	@XmlElement(name = "PINLngthCpblties")
@@ -146,7 +156,7 @@ public class ATMSecurityConfiguration5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPINLengthCapabilities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration5, Optional<Number>> mmPINLengthCapabilities = new MMMessageAttribute<ATMSecurityConfiguration5, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration5.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class ATMSecurityConfiguration5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMSecurityConfiguration5 obj) {
+			return obj.getPINLengthCapabilities();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration5 obj, Optional<Number> value) {
+			obj.setPINLengthCapabilities(value.orElse(null));
 		}
 	};
 

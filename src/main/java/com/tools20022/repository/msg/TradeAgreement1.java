@@ -130,7 +130,7 @@ public class TradeAgreement1 {
 	 * "Date at which the trading parties agree on a treasury trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement1, ISODate> mmTradeDate = new MMMessageAttribute<TradeAgreement1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement1.mmObject();
@@ -142,6 +142,16 @@ public class TradeAgreement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(TradeAgreement1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(TradeAgreement1 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "NtfctnId", required = true)
@@ -175,7 +185,7 @@ public class TradeAgreement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement1, Max35Text> mmNotificationIdentification = new MMMessageAttribute<TradeAgreement1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement1.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class TradeAgreement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TradeAgreement1 obj) {
+			return obj.getNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(TradeAgreement1 obj, Max35Text value) {
+			obj.setNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonRef")
@@ -222,7 +242,7 @@ public class TradeAgreement1 {
 	 * definition} = "Reference common to the parties of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement1, Optional<Max35Text>> mmCommonReference = new MMMessageAttribute<TradeAgreement1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement1.mmObject();
@@ -234,6 +254,16 @@ public class TradeAgreement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeAgreement1 obj) {
+			return obj.getCommonReference();
+		}
+
+		@Override
+		public void setValue(TradeAgreement1 obj, Optional<Max35Text> value) {
+			obj.setCommonReference(value.orElse(null));
 		}
 	};
 

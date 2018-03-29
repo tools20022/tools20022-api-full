@@ -106,7 +106,7 @@ public class Reference9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference9, Max35Text> mmOriginalClientOrderIdentification = new MMMessageAttribute<Reference9, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference9.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class Reference9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference9 obj) {
+			return obj.getOriginalClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference9 obj, Max35Text value) {
+			obj.setOriginalClientOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrdrId")
@@ -153,7 +163,7 @@ public class Reference9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference9, Optional<Max35Text>> mmOrderIdentification = new MMMessageAttribute<Reference9, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference9.mmObject();
 			isDerived = false;
@@ -165,6 +175,16 @@ public class Reference9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference9 obj) {
+			return obj.getOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference9 obj, Optional<Max35Text> value) {
+			obj.setOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlOrdrModTm")
@@ -197,7 +217,7 @@ public class Reference9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalOrderModificationTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference9, Optional<ISODateTime>> mmOriginalOrderModificationTime = new MMMessageAttribute<Reference9, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference9.mmObject();
 			isDerived = false;
@@ -208,6 +228,16 @@ public class Reference9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Reference9 obj) {
+			return obj.getOriginalOrderModificationTime();
+		}
+
+		@Override
+		public void setValue(Reference9 obj, Optional<ISODateTime> value) {
+			obj.setOriginalOrderModificationTime(value.orElse(null));
 		}
 	};
 

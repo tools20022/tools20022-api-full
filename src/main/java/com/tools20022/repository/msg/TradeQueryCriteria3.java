@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TradeAdditionalQueryCriteria3;
+import com.tools20022.repository.msg.TradeDateTimeQueryCriteria2;
+import com.tools20022.repository.msg.TradePartyQueryCriteria2;
+import com.tools20022.repository.msg.TradeSecurityIdentificationQueryCriteria2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +125,7 @@ public class TradeQueryCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeLifeCycleHistory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeQueryCriteria3, TrueFalseIndicator> mmTradeLifeCycleHistory = new MMMessageAttribute<TradeQueryCriteria3, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryCriteria3.mmObject();
 			isDerived = false;
@@ -132,6 +136,16 @@ public class TradeQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(TradeQueryCriteria3 obj) {
+			return obj.getTradeLifeCycleHistory();
+		}
+
+		@Override
+		public void setValue(TradeQueryCriteria3 obj, TrueFalseIndicator value) {
+			obj.setTradeLifeCycleHistory(value);
 		}
 	};
 	@XmlElement(name = "OutsdngTradInd", required = true)
@@ -166,7 +180,7 @@ public class TradeQueryCriteria3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOutstandingTradeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeQueryCriteria3, TrueFalseIndicator> mmOutstandingTradeIndicator = new MMMessageAttribute<TradeQueryCriteria3, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryCriteria3.mmObject();
 			isDerived = false;
@@ -177,6 +191,16 @@ public class TradeQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(TradeQueryCriteria3 obj) {
+			return obj.getOutstandingTradeIndicator();
+		}
+
+		@Override
+		public void setValue(TradeQueryCriteria3 obj, TrueFalseIndicator value) {
+			obj.setOutstandingTradeIndicator(value);
 		}
 	};
 	@XmlElement(name = "TradPtyCrit")
@@ -208,7 +232,7 @@ public class TradeQueryCriteria3 {
 	 * definition} = "Query criteria related to counterparties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradePartyCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeQueryCriteria3, Optional<TradePartyQueryCriteria2>> mmTradePartyCriteria = new MMMessageAssociationEnd<TradeQueryCriteria3, Optional<TradePartyQueryCriteria2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryCriteria3.mmObject();
 			isDerived = false;
@@ -219,7 +243,17 @@ public class TradeQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradePartyQueryCriteria2.mmObject();
+			type_lazy = () -> TradePartyQueryCriteria2.mmObject();
+		}
+
+		@Override
+		public Optional<TradePartyQueryCriteria2> getValue(TradeQueryCriteria3 obj) {
+			return obj.getTradePartyCriteria();
+		}
+
+		@Override
+		public void setValue(TradeQueryCriteria3 obj, Optional<TradePartyQueryCriteria2> value) {
+			obj.setTradePartyCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmCrit")
@@ -252,7 +286,7 @@ public class TradeQueryCriteria3 {
 	 * "Indicates the query criteria related to financial instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeQueryCriteria3, Optional<TradeSecurityIdentificationQueryCriteria2>> mmFinancialInstrumentCriteria = new MMMessageAssociationEnd<TradeQueryCriteria3, Optional<TradeSecurityIdentificationQueryCriteria2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryCriteria3.mmObject();
 			isDerived = false;
@@ -263,7 +297,17 @@ public class TradeQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeSecurityIdentificationQueryCriteria2.mmObject();
+			type_lazy = () -> TradeSecurityIdentificationQueryCriteria2.mmObject();
+		}
+
+		@Override
+		public Optional<TradeSecurityIdentificationQueryCriteria2> getValue(TradeQueryCriteria3 obj) {
+			return obj.getFinancialInstrumentCriteria();
+		}
+
+		@Override
+		public void setValue(TradeQueryCriteria3 obj, Optional<TradeSecurityIdentificationQueryCriteria2> value) {
+			obj.setFinancialInstrumentCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmCrit")
@@ -295,7 +339,7 @@ public class TradeQueryCriteria3 {
 	 * definition} = "Query criteria related to time values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTimeCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeQueryCriteria3, Optional<TradeDateTimeQueryCriteria2>> mmTimeCriteria = new MMMessageAssociationEnd<TradeQueryCriteria3, Optional<TradeDateTimeQueryCriteria2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryCriteria3.mmObject();
 			isDerived = false;
@@ -306,7 +350,17 @@ public class TradeQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeDateTimeQueryCriteria2.mmObject();
+			type_lazy = () -> TradeDateTimeQueryCriteria2.mmObject();
+		}
+
+		@Override
+		public Optional<TradeDateTimeQueryCriteria2> getValue(TradeQueryCriteria3 obj) {
+			return obj.getTimeCriteria();
+		}
+
+		@Override
+		public void setValue(TradeQueryCriteria3 obj, Optional<TradeDateTimeQueryCriteria2> value) {
+			obj.setTimeCriteria(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrCrit")
@@ -338,7 +392,7 @@ public class TradeQueryCriteria3 {
 	 * definition} = "Query criteria related to other fields."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeQueryCriteria3, Optional<TradeAdditionalQueryCriteria3>> mmOtherCriteria = new MMMessageAssociationEnd<TradeQueryCriteria3, Optional<TradeAdditionalQueryCriteria3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeQueryCriteria3.mmObject();
 			isDerived = false;
@@ -349,7 +403,17 @@ public class TradeQueryCriteria3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeAdditionalQueryCriteria3.mmObject();
+			type_lazy = () -> TradeAdditionalQueryCriteria3.mmObject();
+		}
+
+		@Override
+		public Optional<TradeAdditionalQueryCriteria3> getValue(TradeQueryCriteria3 obj) {
+			return obj.getOtherCriteria();
+		}
+
+		@Override
+		public void setValue(TradeQueryCriteria3 obj, Optional<TradeAdditionalQueryCriteria3> value) {
+			obj.setOtherCriteria(value.orElse(null));
 		}
 	};
 
@@ -391,7 +455,7 @@ public class TradeQueryCriteria3 {
 		return tradePartyCriteria == null ? Optional.empty() : Optional.of(tradePartyCriteria);
 	}
 
-	public TradeQueryCriteria3 setTradePartyCriteria(com.tools20022.repository.msg.TradePartyQueryCriteria2 tradePartyCriteria) {
+	public TradeQueryCriteria3 setTradePartyCriteria(TradePartyQueryCriteria2 tradePartyCriteria) {
 		this.tradePartyCriteria = tradePartyCriteria;
 		return this;
 	}
@@ -400,7 +464,7 @@ public class TradeQueryCriteria3 {
 		return financialInstrumentCriteria == null ? Optional.empty() : Optional.of(financialInstrumentCriteria);
 	}
 
-	public TradeQueryCriteria3 setFinancialInstrumentCriteria(com.tools20022.repository.msg.TradeSecurityIdentificationQueryCriteria2 financialInstrumentCriteria) {
+	public TradeQueryCriteria3 setFinancialInstrumentCriteria(TradeSecurityIdentificationQueryCriteria2 financialInstrumentCriteria) {
 		this.financialInstrumentCriteria = financialInstrumentCriteria;
 		return this;
 	}
@@ -409,7 +473,7 @@ public class TradeQueryCriteria3 {
 		return timeCriteria == null ? Optional.empty() : Optional.of(timeCriteria);
 	}
 
-	public TradeQueryCriteria3 setTimeCriteria(com.tools20022.repository.msg.TradeDateTimeQueryCriteria2 timeCriteria) {
+	public TradeQueryCriteria3 setTimeCriteria(TradeDateTimeQueryCriteria2 timeCriteria) {
 		this.timeCriteria = timeCriteria;
 		return this;
 	}
@@ -418,7 +482,7 @@ public class TradeQueryCriteria3 {
 		return otherCriteria == null ? Optional.empty() : Optional.of(otherCriteria);
 	}
 
-	public TradeQueryCriteria3 setOtherCriteria(com.tools20022.repository.msg.TradeAdditionalQueryCriteria3 otherCriteria) {
+	public TradeQueryCriteria3 setOtherCriteria(TradeAdditionalQueryCriteria3 otherCriteria) {
 		this.otherCriteria = otherCriteria;
 		return this;
 	}

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancingResult1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public class InstalmentFinancingInformation1 {
 	 * "Progressive number of the single instalment related to an invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstalmentSequenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstalmentFinancingInformation1, Max70Text> mmInstalmentSequenceIdentification = new MMMessageAttribute<InstalmentFinancingInformation1, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstalmentFinancingInformation1.mmObject();
 			isDerived = false;
@@ -120,6 +121,16 @@ public class InstalmentFinancingInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(InstalmentFinancingInformation1 obj) {
+			return obj.getInstalmentSequenceIdentification();
+		}
+
+		@Override
+		public void setValue(InstalmentFinancingInformation1 obj, Max70Text value) {
+			obj.setInstalmentSequenceIdentification(value);
 		}
 	};
 	@XmlElement(name = "InstlmtTtlAmt", required = true)
@@ -159,7 +170,7 @@ public class InstalmentFinancingInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstalmentTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstalmentFinancingInformation1, ActiveCurrencyAndAmount> mmInstalmentTotalAmount = new MMMessageAttribute<InstalmentFinancingInformation1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstalmentFinancingInformation1.mmObject();
@@ -171,6 +182,16 @@ public class InstalmentFinancingInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InstalmentFinancingInformation1 obj) {
+			return obj.getInstalmentTotalAmount();
+		}
+
+		@Override
+		public void setValue(InstalmentFinancingInformation1 obj, ActiveCurrencyAndAmount value) {
+			obj.setInstalmentTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "InstlmtFincgRslt", required = true)
@@ -207,7 +228,7 @@ public class InstalmentFinancingInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstalmentFinancingResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstalmentFinancingInformation1, FinancingResult1> mmInstalmentFinancingResult = new MMMessageAssociationEnd<InstalmentFinancingInformation1, FinancingResult1>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstalmentFinancingInformation1.mmObject();
@@ -219,7 +240,17 @@ public class InstalmentFinancingInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
+			type_lazy = () -> FinancingResult1.mmObject();
+		}
+
+		@Override
+		public FinancingResult1 getValue(InstalmentFinancingInformation1 obj) {
+			return obj.getInstalmentFinancingResult();
+		}
+
+		@Override
+		public void setValue(InstalmentFinancingInformation1 obj, FinancingResult1 value) {
+			obj.setInstalmentFinancingResult(value);
 		}
 	};
 
@@ -260,7 +291,7 @@ public class InstalmentFinancingInformation1 {
 		return instalmentFinancingResult;
 	}
 
-	public InstalmentFinancingInformation1 setInstalmentFinancingResult(com.tools20022.repository.msg.FinancingResult1 instalmentFinancingResult) {
+	public InstalmentFinancingInformation1 setInstalmentFinancingResult(FinancingResult1 instalmentFinancingResult) {
 		this.instalmentFinancingResult = Objects.requireNonNull(instalmentFinancingResult);
 		return this;
 	}

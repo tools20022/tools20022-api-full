@@ -98,7 +98,7 @@ public class CommunicationChannel1Choice {
 	 * definition} = "CBRF communication channel mode."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChannelMode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationChannel1Choice, Exact1NumericText> mmChannelMode = new MMMessageAttribute<CommunicationChannel1Choice, Exact1NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommunicationChannel1Choice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class CommunicationChannel1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact1NumericText.mmObject();
+		}
+
+		@Override
+		public Exact1NumericText getValue(CommunicationChannel1Choice obj) {
+			return obj.getChannelMode();
+		}
+
+		@Override
+		public void setValue(CommunicationChannel1Choice obj, Exact1NumericText value) {
+			obj.setChannelMode(value);
 		}
 	};
 	@XmlElement(name = "TermnlId", required = true)
@@ -140,7 +150,7 @@ public class CommunicationChannel1Choice {
 	 * definition} = "CBRF identification of the terminal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTerminalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationChannel1Choice, Max35Text> mmTerminalIdentification = new MMMessageAttribute<CommunicationChannel1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommunicationChannel1Choice.mmObject();
 			isDerived = false;
@@ -151,6 +161,16 @@ public class CommunicationChannel1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CommunicationChannel1Choice obj) {
+			return obj.getTerminalIdentification();
+		}
+
+		@Override
+		public void setValue(CommunicationChannel1Choice obj, Max35Text value) {
+			obj.setTerminalIdentification(value);
 		}
 	};
 

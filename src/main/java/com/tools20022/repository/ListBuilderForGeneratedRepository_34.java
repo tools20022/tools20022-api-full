@@ -345,7 +345,7 @@ class ListBuilderForGeneratedRepository_34 {
 		list.add((T) ATMSecurityScheme3Code.mmObject());
 		list.add((T) ATMSecurityScheme4Code.mmObject());
 		list.add((T) TR34Command1Code.mmObject());
-		list.add((T) rATMCommand6Code.mmObject());
+		list.add((T) ATMCommand6Code.mmObject());
 		list.add((T) TR34CommandCode.mmObject());
 		list.add((T) OrganisationLegalStatusCode.mmObject());
 		list.add((T) SwitchStatusCode.mmObject());

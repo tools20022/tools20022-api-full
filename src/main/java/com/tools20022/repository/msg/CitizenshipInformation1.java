@@ -119,7 +119,7 @@ public class CitizenshipInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNationality = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CitizenshipInformation1, NationalityCode> mmNationality = new MMMessageAttribute<CitizenshipInformation1, NationalityCode>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmNationality;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation1.mmObject();
@@ -131,6 +131,16 @@ public class CitizenshipInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NationalityCode.mmObject();
+		}
+
+		@Override
+		public NationalityCode getValue(CitizenshipInformation1 obj) {
+			return obj.getNationality();
+		}
+
+		@Override
+		public void setValue(CitizenshipInformation1 obj, NationalityCode value) {
+			obj.setNationality(value);
 		}
 	};
 	@XmlElement(name = "MnrInd")
@@ -170,7 +180,7 @@ public class CitizenshipInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinorIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CitizenshipInformation1, Optional<YesNoIndicator>> mmMinorIndicator = new MMMessageAttribute<CitizenshipInformation1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmMinorIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation1.mmObject();
@@ -182,6 +192,16 @@ public class CitizenshipInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CitizenshipInformation1 obj) {
+			return obj.getMinorIndicator();
+		}
+
+		@Override
+		public void setValue(CitizenshipInformation1 obj, Optional<YesNoIndicator> value) {
+			obj.setMinorIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -218,7 +238,7 @@ public class CitizenshipInformation1 {
 	 * definition} = "Date of the commencement of citizenship."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CitizenshipInformation1, Optional<ISODate>> mmStartDate = new MMMessageAttribute<CitizenshipInformation1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmCitizenshipStartDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation1.mmObject();
@@ -230,6 +250,16 @@ public class CitizenshipInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CitizenshipInformation1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(CitizenshipInformation1 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt")
@@ -266,7 +296,7 @@ public class CitizenshipInformation1 {
 	 * definition} = "Date of the end of citizenship."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CitizenshipInformation1, Optional<ISODate>> mmEndDate = new MMMessageAttribute<CitizenshipInformation1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmCitizenshipEndDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CitizenshipInformation1.mmObject();
@@ -278,6 +308,16 @@ public class CitizenshipInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CitizenshipInformation1 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(CitizenshipInformation1 obj, Optional<ISODate> value) {
+			obj.setEndDate(value.orElse(null));
 		}
 	};
 

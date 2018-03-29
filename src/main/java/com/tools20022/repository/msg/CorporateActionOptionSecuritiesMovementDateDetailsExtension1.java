@@ -107,7 +107,7 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementDateDetailsExtension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementDateDetailsExtension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionOptionSecuritiesMovementDateDetailsExtension1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementDateDetailsExtension1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCAllcnDtAndTm")
@@ -154,7 +164,7 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAllocationDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementDateDetailsExtension1, Optional<ISODateTime>> mmDTCAllocationDateAndTime = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementDateDetailsExtension1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionOptionSecuritiesMovementDateDetailsExtension1 obj) {
+			return obj.getDTCAllocationDateAndTime();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementDateDetailsExtension1 obj, Optional<ISODateTime> value) {
+			obj.setDTCAllocationDateAndTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCCILAllcnDtAndTm")
@@ -202,7 +222,7 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCCILAllocationDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementDateDetailsExtension1, Optional<ISODateTime>> mmDTCCILAllocationDateAndTime = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementDateDetailsExtension1, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
 			isDerived = false;
@@ -214,6 +234,16 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionOptionSecuritiesMovementDateDetailsExtension1 obj) {
+			return obj.getDTCCILAllocationDateAndTime();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementDateDetailsExtension1 obj, Optional<ISODateTime> value) {
+			obj.setDTCCILAllocationDateAndTime(value.orElse(null));
 		}
 	};
 

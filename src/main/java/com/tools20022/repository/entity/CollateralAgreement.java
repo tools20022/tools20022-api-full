@@ -21,10 +21,9 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.ExposureConventionTypeCode;
 import com.tools20022.repository.codeset.FrequencyCode;
-import com.tools20022.repository.entity.Agreement;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -159,7 +158,7 @@ public class CollateralAgreement extends Agreement {
 	 * definition} = "Denomination currency."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBaseCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CollateralAgreement, CurrencyCode> mmBaseCurrency = new MMBusinessAttribute<CollateralAgreement, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement2.mmBaseCurrency, Agreement4.mmBaseCurrency);
 			isDerived = false;
@@ -172,15 +171,17 @@ public class CollateralAgreement extends Agreement {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralAgreement.class.getMethod("getBaseCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(CollateralAgreement obj) {
+			return obj.getBaseCurrency();
+		}
+
+		@Override
+		public void setValue(CollateralAgreement obj, CurrencyCode value) {
+			obj.setBaseCurrency(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.MasterAgreement> associatedMasterAgreement;
+	protected List<MasterAgreement> associatedMasterAgreement;
 	/**
 	 * 
 	 <p>
@@ -227,7 +228,7 @@ public class CollateralAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAssociatedMasterAgreement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralAgreement, List<MasterAgreement>> mmAssociatedMasterAgreement = new MMBusinessAssociationEnd<CollateralAgreement, List<MasterAgreement>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement2.mmAgreementFramework, Agreement4.mmAgreementFramework);
 			isDerived = false;
@@ -236,12 +237,22 @@ public class CollateralAgreement extends Agreement {
 			name = "AssociatedMasterAgreement";
 			definition = "Agreement in which the parties agree to most of the terms that will govern collateral transactions.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmCollateralAgreement;
+			opposite_lazy = () -> MasterAgreement.mmCollateralAgreement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmObject();
+			type_lazy = () -> MasterAgreement.mmObject();
+		}
+
+		@Override
+		public List<MasterAgreement> getValue(CollateralAgreement obj) {
+			return obj.getAssociatedMasterAgreement();
+		}
+
+		@Override
+		public void setValue(CollateralAgreement obj, List<MasterAgreement> value) {
+			obj.setAssociatedMasterAgreement(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.StandingSettlementInstruction> standingSettlementInstructions;
+	protected List<StandingSettlementInstruction> standingSettlementInstructions;
 	/**
 	 * 
 	 <p>
@@ -322,7 +333,7 @@ public class CollateralAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmStandingSettlementInstructions = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralAgreement, List<StandingSettlementInstruction>> mmStandingSettlementInstructions = new MMBusinessAssociationEnd<CollateralAgreement, List<StandingSettlementInstruction>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Collateral2.mmStandardSettlementInstructions, Collateral4.mmStandardSettlementInstructions, CollateralSubstitution1.mmStandardSettlementInstructions,
 					CollateralSubstitution2.mmStandardSettlementInstructions, Collateral7.mmStandardSettlementInstructions, Collateral8.mmStandardSettlementInstructions, CollateralSubstitution3.mmStandardSettlementInstructions,
@@ -334,9 +345,19 @@ public class CollateralAgreement extends Agreement {
 			name = "StandingSettlementInstructions";
 			definition = "Settlement instructions which must be used for the settlement of collateral unless otherwise specified.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmRelatedCollateralAgreement;
+			opposite_lazy = () -> StandingSettlementInstruction.mmRelatedCollateralAgreement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.StandingSettlementInstruction.mmObject();
+			type_lazy = () -> StandingSettlementInstruction.mmObject();
+		}
+
+		@Override
+		public List<StandingSettlementInstruction> getValue(CollateralAgreement obj) {
+			return obj.getStandingSettlementInstructions();
+		}
+
+		@Override
+		public void setValue(CollateralAgreement obj, List<StandingSettlementInstruction> value) {
+			obj.setStandingSettlementInstructions(value);
 		}
 	};
 	protected ExposureConventionTypeCode marginConvention;
@@ -376,7 +397,7 @@ public class CollateralAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMarginConvention = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CollateralAgreement, ExposureConventionTypeCode> mmMarginConvention = new MMBusinessAttribute<CollateralAgreement, ExposureConventionTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(MarginCall1.mmExposureConvention);
 			isDerived = false;
@@ -389,12 +410,14 @@ public class CollateralAgreement extends Agreement {
 			simpleType_lazy = () -> ExposureConventionTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralAgreement.class.getMethod("getMarginConvention", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ExposureConventionTypeCode getValue(CollateralAgreement obj) {
+			return obj.getMarginConvention();
+		}
+
+		@Override
+		public void setValue(CollateralAgreement obj, ExposureConventionTypeCode value) {
+			obj.setMarginConvention(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.ExposureTerm> exposureTerm;
@@ -433,7 +456,7 @@ public class CollateralAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmExposureTerm = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralAgreement, List<ExposureTerm>> mmExposureTerm = new MMBusinessAssociationEnd<CollateralAgreement, List<ExposureTerm>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
@@ -444,6 +467,16 @@ public class CollateralAgreement extends Agreement {
 			opposite_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmRelatedCollateralAgreement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmObject();
+		}
+
+		@Override
+		public List<ExposureTerm> getValue(CollateralAgreement obj) {
+			return obj.getExposureTerm();
+		}
+
+		@Override
+		public void setValue(CollateralAgreement obj, List<ExposureTerm> value) {
+			obj.setExposureTerm(value);
 		}
 	};
 	protected FrequencyCode callFrequency;
@@ -475,7 +508,7 @@ public class CollateralAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCallFrequency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CollateralAgreement, FrequencyCode> mmCallFrequency = new MMBusinessAttribute<CollateralAgreement, FrequencyCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
@@ -487,12 +520,14 @@ public class CollateralAgreement extends Agreement {
 			simpleType_lazy = () -> FrequencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralAgreement.class.getMethod("getCallFrequency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public FrequencyCode getValue(CollateralAgreement obj) {
+			return obj.getCallFrequency();
+		}
+
+		@Override
+		public void setValue(CollateralAgreement obj, FrequencyCode value) {
+			obj.setCallFrequency(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Collateral> collateral;
@@ -537,7 +572,7 @@ public class CollateralAgreement extends Agreement {
 	 * "Specifies the collateral which is the subject of the agreement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCollateral = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralAgreement, List<Collateral>> mmCollateral = new MMBusinessAssociationEnd<CollateralAgreement, List<Collateral>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LoanContract1.mmCollateral);
 			isDerived = false;
@@ -549,6 +584,16 @@ public class CollateralAgreement extends Agreement {
 			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralAgreement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
+		}
+
+		@Override
+		public List<Collateral> getValue(CollateralAgreement obj) {
+			return obj.getCollateral();
+		}
+
+		@Override
+		public void setValue(CollateralAgreement obj, List<Collateral> value) {
+			obj.setCollateral(value);
 		}
 	};
 	protected CollateralManagement riskCoverage;
@@ -588,7 +633,7 @@ public class CollateralAgreement extends Agreement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRiskCoverage = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralAgreement, Optional<CollateralManagement>> mmRiskCoverage = new MMBusinessAssociationEnd<CollateralAgreement, Optional<CollateralManagement>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralAgreement.mmObject();
@@ -597,9 +642,19 @@ public class CollateralAgreement extends Agreement {
 			definition = "Collateral management process which applies the terms agreed in the collateral agreement.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmAgreedTerms;
+			opposite_lazy = () -> CollateralManagement.mmAgreedTerms;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
+			type_lazy = () -> CollateralManagement.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralManagement> getValue(CollateralAgreement obj) {
+			return obj.getRiskCoverage();
+		}
+
+		@Override
+		public void setValue(CollateralAgreement obj, Optional<CollateralManagement> value) {
+			obj.setRiskCoverage(value.orElse(null));
 		}
 	};
 
@@ -610,8 +665,8 @@ public class CollateralAgreement extends Agreement {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralAgreement";
 				definition = "Agreement between two trading parties that contains information about their relative duties and rights regarding collateral processes.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureTerm.mmRelatedCollateralAgreement, com.tools20022.repository.entity.StandingSettlementInstruction.mmRelatedCollateralAgreement,
-						com.tools20022.repository.entity.Collateral.mmCollateralAgreement, com.tools20022.repository.entity.MasterAgreement.mmCollateralAgreement, com.tools20022.repository.entity.CollateralManagement.mmAgreedTerms);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureTerm.mmRelatedCollateralAgreement, StandingSettlementInstruction.mmRelatedCollateralAgreement,
+						com.tools20022.repository.entity.Collateral.mmCollateralAgreement, MasterAgreement.mmCollateralAgreement, CollateralManagement.mmAgreedTerms);
 				superType_lazy = () -> Agreement.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralAgreement.mmBaseCurrency, com.tools20022.repository.entity.CollateralAgreement.mmAssociatedMasterAgreement,
 						com.tools20022.repository.entity.CollateralAgreement.mmStandingSettlementInstructions, com.tools20022.repository.entity.CollateralAgreement.mmMarginConvention,
@@ -641,7 +696,7 @@ public class CollateralAgreement extends Agreement {
 		return associatedMasterAgreement == null ? associatedMasterAgreement = new ArrayList<>() : associatedMasterAgreement;
 	}
 
-	public CollateralAgreement setAssociatedMasterAgreement(List<com.tools20022.repository.entity.MasterAgreement> associatedMasterAgreement) {
+	public CollateralAgreement setAssociatedMasterAgreement(List<MasterAgreement> associatedMasterAgreement) {
 		this.associatedMasterAgreement = Objects.requireNonNull(associatedMasterAgreement);
 		return this;
 	}
@@ -650,7 +705,7 @@ public class CollateralAgreement extends Agreement {
 		return standingSettlementInstructions == null ? standingSettlementInstructions = new ArrayList<>() : standingSettlementInstructions;
 	}
 
-	public CollateralAgreement setStandingSettlementInstructions(List<com.tools20022.repository.entity.StandingSettlementInstruction> standingSettlementInstructions) {
+	public CollateralAgreement setStandingSettlementInstructions(List<StandingSettlementInstruction> standingSettlementInstructions) {
 		this.standingSettlementInstructions = Objects.requireNonNull(standingSettlementInstructions);
 		return this;
 	}
@@ -695,7 +750,7 @@ public class CollateralAgreement extends Agreement {
 		return riskCoverage == null ? Optional.empty() : Optional.of(riskCoverage);
 	}
 
-	public CollateralAgreement setRiskCoverage(com.tools20022.repository.entity.CollateralManagement riskCoverage) {
+	public CollateralAgreement setRiskCoverage(CollateralManagement riskCoverage) {
 		this.riskCoverage = riskCoverage;
 		return this;
 	}

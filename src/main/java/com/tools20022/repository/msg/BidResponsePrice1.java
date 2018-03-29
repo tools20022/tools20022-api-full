@@ -28,6 +28,10 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Commission2;
+import com.tools20022.repository.msg.Price1;
+import com.tools20022.repository.msg.SecuritiesSettlement2;
+import com.tools20022.repository.msg.TradingSession1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +129,7 @@ public class BidResponsePrice1 {
 	 * definition} = "Price of the instrument, applicable to the bid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice1, Optional<Price1>> mmPrice = new MMMessageAttribute<BidResponsePrice1, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
@@ -137,7 +141,17 @@ public class BidResponsePrice1 {
 			definition = "Price of the instrument, applicable to the bid.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(BidResponsePrice1 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice1 obj, Optional<Price1> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Comssn", required = true)
@@ -178,7 +192,7 @@ public class BidResponsePrice1 {
 	 * "Amount of money due to a party as compensation for a service."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice1, Commission2> mmCommission = new MMMessageAttribute<BidResponsePrice1, Commission2>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmCommission;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
@@ -190,7 +204,17 @@ public class BidResponsePrice1 {
 			definition = "Amount of money due to a party as compensation for a service.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Commission2.mmObject();
+			complexType_lazy = () -> Commission2.mmObject();
+		}
+
+		@Override
+		public Commission2 getValue(BidResponsePrice1 obj) {
+			return obj.getCommission();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice1 obj, Commission2 value) {
+			obj.setCommission(value);
 		}
 	};
 	@XmlElement(name = "GrssInd", required = true)
@@ -231,7 +255,7 @@ public class BidResponsePrice1 {
 	 * definition} = "Indicates whether the bid response price is gross."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice1, TrueFalseIndicator> mmGrossIndicator = new MMMessageAttribute<BidResponsePrice1, TrueFalseIndicator>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmGrossAmountIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
@@ -244,6 +268,16 @@ public class BidResponsePrice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(BidResponsePrice1 obj) {
+			return obj.getGrossIndicator();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice1 obj, TrueFalseIndicator value) {
+			obj.setGrossIndicator(value);
 		}
 	};
 	@XmlElement(name = "Sd", required = true)
@@ -285,7 +319,7 @@ public class BidResponsePrice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice1, Side1Code> mmSide = new MMMessageAttribute<BidResponsePrice1, Side1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
@@ -298,6 +332,16 @@ public class BidResponsePrice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Side1Code.mmObject();
+		}
+
+		@Override
+		public Side1Code getValue(BidResponsePrice1 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice1 obj, Side1Code value) {
+			obj.setSide(value);
 		}
 	};
 	@XmlElement(name = "FairVal")
@@ -340,7 +384,7 @@ public class BidResponsePrice1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFairValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice1, Optional<ActiveCurrencyAndAmount>> mmFairValue = new MMMessageAttribute<BidResponsePrice1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmFairValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
@@ -353,6 +397,16 @@ public class BidResponsePrice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(BidResponsePrice1 obj) {
+			return obj.getFairValue();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setFairValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -392,7 +446,7 @@ public class BidResponsePrice1 {
 	 * definition} = "Country to which the residential status is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BidResponsePrice1, Optional<CountryCode>> mmCountry = new MMMessageAttribute<BidResponsePrice1, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
@@ -405,6 +459,16 @@ public class BidResponsePrice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(BidResponsePrice1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice1 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgSsn")
@@ -440,7 +504,7 @@ public class BidResponsePrice1 {
 	 * definition} = "Established constraints under which a market operates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingSession = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BidResponsePrice1, Optional<TradingSession1>> mmTradingSession = new MMMessageAssociationEnd<BidResponsePrice1, Optional<TradingSession1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmQuoteTradingSession;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
@@ -452,7 +516,17 @@ public class BidResponsePrice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
+			type_lazy = () -> TradingSession1.mmObject();
+		}
+
+		@Override
+		public Optional<TradingSession1> getValue(BidResponsePrice1 obj) {
+			return obj.getTradingSession();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice1 obj, Optional<TradingSession1> value) {
+			obj.setTradingSession(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDtls")
@@ -489,7 +563,7 @@ public class BidResponsePrice1 {
 	 * "Parameters applied to the settlement of a security transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BidResponsePrice1, Optional<SecuritiesSettlement2>> mmSettlementDetails = new MMMessageAssociationEnd<BidResponsePrice1, Optional<SecuritiesSettlement2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BidResponsePrice1.mmObject();
@@ -501,7 +575,17 @@ public class BidResponsePrice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSettlement2.mmObject();
+			type_lazy = () -> SecuritiesSettlement2.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesSettlement2> getValue(BidResponsePrice1 obj) {
+			return obj.getSettlementDetails();
+		}
+
+		@Override
+		public void setValue(BidResponsePrice1 obj, Optional<SecuritiesSettlement2> value) {
+			obj.setSettlementDetails(value.orElse(null));
 		}
 	};
 
@@ -525,7 +609,7 @@ public class BidResponsePrice1 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public BidResponsePrice1 setPrice(com.tools20022.repository.msg.Price1 price) {
+	public BidResponsePrice1 setPrice(Price1 price) {
 		this.price = price;
 		return this;
 	}
@@ -534,7 +618,7 @@ public class BidResponsePrice1 {
 		return commission;
 	}
 
-	public BidResponsePrice1 setCommission(com.tools20022.repository.msg.Commission2 commission) {
+	public BidResponsePrice1 setCommission(Commission2 commission) {
 		this.commission = Objects.requireNonNull(commission);
 		return this;
 	}
@@ -579,7 +663,7 @@ public class BidResponsePrice1 {
 		return tradingSession == null ? Optional.empty() : Optional.of(tradingSession);
 	}
 
-	public BidResponsePrice1 setTradingSession(com.tools20022.repository.msg.TradingSession1 tradingSession) {
+	public BidResponsePrice1 setTradingSession(TradingSession1 tradingSession) {
 		this.tradingSession = tradingSession;
 		return this;
 	}
@@ -588,7 +672,7 @@ public class BidResponsePrice1 {
 		return settlementDetails == null ? Optional.empty() : Optional.of(settlementDetails);
 	}
 
-	public BidResponsePrice1 setSettlementDetails(com.tools20022.repository.msg.SecuritiesSettlement2 settlementDetails) {
+	public BidResponsePrice1 setSettlementDetails(SecuritiesSettlement2 settlementDetails) {
 		this.settlementDetails = settlementDetails;
 		return this;
 	}

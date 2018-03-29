@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ExchangeRateReportOrError2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencySourceTarget1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -97,7 +98,7 @@ public class CurrencyExchangeReport3 {
 	 * "Source and target currencies for which information is request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyExchangeReport3, CurrencySourceTarget1> mmCurrencyReference = new MMMessageAssociationEnd<CurrencyExchangeReport3, CurrencySourceTarget1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeReport3.mmObject();
 			isDerived = false;
@@ -108,7 +109,17 @@ public class CurrencyExchangeReport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencySourceTarget1.mmObject();
+			type_lazy = () -> CurrencySourceTarget1.mmObject();
+		}
+
+		@Override
+		public CurrencySourceTarget1 getValue(CurrencyExchangeReport3 obj) {
+			return obj.getCurrencyReference();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeReport3 obj, CurrencySourceTarget1 value) {
+			obj.setCurrencyReference(value);
 		}
 	};
 	@XmlElement(name = "CcyXchgOrErr", required = true)
@@ -142,7 +153,7 @@ public class CurrencyExchangeReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyExchangeOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyExchangeReport3, ExchangeRateReportOrError2Choice> mmCurrencyExchangeOrError = new MMMessageAssociationEnd<CurrencyExchangeReport3, ExchangeRateReportOrError2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeReport3.mmObject();
 			isDerived = false;
@@ -154,6 +165,16 @@ public class CurrencyExchangeReport3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ExchangeRateReportOrError2Choice.mmObject();
+		}
+
+		@Override
+		public ExchangeRateReportOrError2Choice getValue(CurrencyExchangeReport3 obj) {
+			return obj.getCurrencyExchangeOrError();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeReport3 obj, ExchangeRateReportOrError2Choice value) {
+			obj.setCurrencyExchangeOrError(value);
 		}
 	};
 
@@ -174,7 +195,7 @@ public class CurrencyExchangeReport3 {
 		return currencyReference;
 	}
 
-	public CurrencyExchangeReport3 setCurrencyReference(com.tools20022.repository.msg.CurrencySourceTarget1 currencyReference) {
+	public CurrencyExchangeReport3 setCurrencyReference(CurrencySourceTarget1 currencyReference) {
 		this.currencyReference = Objects.requireNonNull(currencyReference);
 		return this;
 	}

@@ -53,11 +53,15 @@ public class ConstraintLinkedMessageReferenceRule {
 	 */
 	public static final MMConstraint<RejectionReason1> forRejectionReason1 = new MMConstraint<RejectionReason1>() {
 		{
-			validator = ConstraintLinkedMessageReferenceRule::checkRejectionReason1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedMessageReferenceRule";
 			definition = "If Reason is InvalidOrUnrecognisedReference, then LinkedMessageReference is mandatory. If Reason is not InvalidOrUnrecognisedReference, then LinkedMessageReference is optional.";
 			owner_lazy = () -> RejectionReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectionReason1 obj) throws Exception {
+			checkRejectionReason1(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintLinkedMessageReferenceRule {
 	 */
 	public static final MMConstraint<RejectionReason3> forRejectionReason3 = new MMConstraint<RejectionReason3>() {
 		{
-			validator = ConstraintLinkedMessageReferenceRule::checkRejectionReason3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedMessageReferenceRule";
 			definition = "If Reason is InvalidOrUnrecognisedReference, then LinkedMessageReference is mandatory. If Reason is not InvalidOrUnrecognisedReference, then LinkedMessageReference is optional.";
 			owner_lazy = () -> RejectionReason3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectionReason3 obj) throws Exception {
+			checkRejectionReason3(obj);
 		}
 	};
 

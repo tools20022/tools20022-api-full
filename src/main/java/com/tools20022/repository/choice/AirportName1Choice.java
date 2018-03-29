@@ -112,7 +112,7 @@ public class AirportName1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAirportCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AirportName1Choice, Max6Text> mmAirportCode = new MMMessageAttribute<AirportName1Choice, Max6Text>() {
 		{
 			businessElementTrace_lazy = () -> TransportByAir.mmAirportName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AirportName1Choice.mmObject();
@@ -124,6 +124,16 @@ public class AirportName1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(AirportName1Choice obj) {
+			return obj.getAirportCode();
+		}
+
+		@Override
+		public void setValue(AirportName1Choice obj, Max6Text value) {
+			obj.setAirportCode(value);
 		}
 	};
 	@XmlElement(name = "OthrAirprtDesc", required = true)
@@ -159,7 +169,7 @@ public class AirportName1Choice {
 	 * definition} = "Identifies an airport by its location and by its name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherAirportDescription = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AirportName1Choice, AirportDescription1> mmOtherAirportDescription = new MMMessageAssociationEnd<AirportName1Choice, AirportDescription1>() {
 		{
 			businessElementTrace_lazy = () -> TransportByAir.mmAirportName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AirportName1Choice.mmObject();
@@ -172,6 +182,16 @@ public class AirportName1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AirportDescription1.mmObject();
+		}
+
+		@Override
+		public AirportDescription1 getValue(AirportName1Choice obj) {
+			return obj.getOtherAirportDescription();
+		}
+
+		@Override
+		public void setValue(AirportName1Choice obj, AirportDescription1 value) {
+			obj.setOtherAirportDescription(value);
 		}
 	};
 

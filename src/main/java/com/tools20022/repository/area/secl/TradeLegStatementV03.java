@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesClearingLatestVersion;
 import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -132,7 +131,7 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementParameters = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegStatementV03, Statement31> mmStatementParameters = new MMMessageBuildingBlock<TradeLegStatementV03, Statement31>() {
 		{
 			xmlTag = "StmtParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +142,14 @@ public class TradeLegStatementV03 {
 			complexType_lazy = () -> Statement31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegStatementV03.class.getMethod("getStatementParameters", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement31 getValue(TradeLegStatementV03 obj) {
+			return obj.getStatementParameters();
+		}
+
+		@Override
+		public void setValue(TradeLegStatementV03 obj, Statement31 value) {
+			obj.setStatementParameters(value);
 		}
 	};
 	@XmlElement(name = "Pgntn", required = true)
@@ -177,7 +178,7 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegStatementV03, Pagination> mmPagination = new MMMessageBuildingBlock<TradeLegStatementV03, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,12 +189,14 @@ public class TradeLegStatementV03 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegStatementV03.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(TradeLegStatementV03 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(TradeLegStatementV03 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "ClrMmb", required = true)
@@ -223,7 +226,7 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingMember = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegStatementV03, PartyIdentification35Choice> mmClearingMember = new MMMessageBuildingBlock<TradeLegStatementV03, PartyIdentification35Choice>() {
 		{
 			xmlTag = "ClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +237,14 @@ public class TradeLegStatementV03 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegStatementV03.class.getMethod("getClearingMember", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification35Choice getValue(TradeLegStatementV03 obj) {
+			return obj.getClearingMember();
+		}
+
+		@Override
+		public void setValue(TradeLegStatementV03 obj, PartyIdentification35Choice value) {
+			obj.setClearingMember(value);
 		}
 	};
 	@XmlElement(name = "ClrAcct")
@@ -269,7 +274,7 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmClearingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegStatementV03, Optional<SecuritiesAccount18>> mmClearingAccount = new MMMessageBuildingBlock<TradeLegStatementV03, Optional<SecuritiesAccount18>>() {
 		{
 			xmlTag = "ClrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,12 +285,14 @@ public class TradeLegStatementV03 {
 			complexType_lazy = () -> SecuritiesAccount18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegStatementV03.class.getMethod("getClearingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SecuritiesAccount18> getValue(TradeLegStatementV03 obj) {
+			return obj.getClearingAccount();
+		}
+
+		@Override
+		public void setValue(TradeLegStatementV03 obj, Optional<SecuritiesAccount18> value) {
+			obj.setClearingAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtDtls", required = true)
@@ -313,7 +320,7 @@ public class TradeLegStatementV03 {
 	 * definition} = "Provides the statement details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegStatementV03, List<TradeLegStatement3>> mmStatementDetails = new MMMessageBuildingBlock<TradeLegStatementV03, List<TradeLegStatement3>>() {
 		{
 			xmlTag = "StmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,12 +330,14 @@ public class TradeLegStatementV03 {
 			complexType_lazy = () -> TradeLegStatement3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegStatementV03.class.getMethod("getStatementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<TradeLegStatement3> getValue(TradeLegStatementV03 obj) {
+			return obj.getStatementDetails();
+		}
+
+		@Override
+		public void setValue(TradeLegStatementV03 obj, List<TradeLegStatement3> value) {
+			obj.setStatementDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -358,7 +367,7 @@ public class TradeLegStatementV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeLegStatementV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<TradeLegStatementV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,12 +377,14 @@ public class TradeLegStatementV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeLegStatementV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(TradeLegStatementV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(TradeLegStatementV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

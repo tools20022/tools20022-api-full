@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class BalanceAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceAmounts1, AmountAndDirection6> mmHoldingValue = new MMMessageAttribute<BalanceAmounts1, AmountAndDirection6>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts1.mmObject();
@@ -130,7 +131,17 @@ public class BalanceAmounts1 {
 			definition = "Value of an individual financial instrument holding within a safekeeping account.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			complexType_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(BalanceAmounts1 obj) {
+			return obj.getHoldingValue();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts1 obj, AmountAndDirection6 value) {
+			obj.setHoldingValue(value);
 		}
 	};
 	@XmlElement(name = "PrvsHldgVal")
@@ -170,7 +181,7 @@ public class BalanceAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousHoldingValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceAmounts1, Optional<AmountAndDirection6>> mmPreviousHoldingValue = new MMMessageAttribute<BalanceAmounts1, Optional<AmountAndDirection6>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts1.mmObject();
@@ -181,7 +192,17 @@ public class BalanceAmounts1 {
 			definition = "Previous value of an individual financial instrument holding within a safekeeping account.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			complexType_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection6> getValue(BalanceAmounts1 obj) {
+			return obj.getPreviousHoldingValue();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts1 obj, Optional<AmountAndDirection6> value) {
+			obj.setPreviousHoldingValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BookVal")
@@ -221,7 +242,7 @@ public class BalanceAmounts1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBookValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceAmounts1, Optional<AmountAndDirection6>> mmBookValue = new MMMessageAttribute<BalanceAmounts1, Optional<AmountAndDirection6>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts1.mmObject();
@@ -232,7 +253,17 @@ public class BalanceAmounts1 {
 			definition = "Value of a financial instrument, as booked/acquired in an account. It may be used to establish capital gain tax liability.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			complexType_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection6> getValue(BalanceAmounts1 obj) {
+			return obj.getBookValue();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts1 obj, Optional<AmountAndDirection6> value) {
+			obj.setBookValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UrlsdGnLoss")
@@ -270,7 +301,7 @@ public class BalanceAmounts1 {
 	 * definition} = "Difference between holding value and the book value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnrealisedGainLoss = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceAmounts1, Optional<AmountAndDirection6>> mmUnrealisedGainLoss = new MMMessageAttribute<BalanceAmounts1, Optional<AmountAndDirection6>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmUnrealisedGainOrLoss;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts1.mmObject();
@@ -281,7 +312,17 @@ public class BalanceAmounts1 {
 			definition = "Difference between holding value and the book value.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			complexType_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection6> getValue(BalanceAmounts1 obj) {
+			return obj.getUnrealisedGainLoss();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts1 obj, Optional<AmountAndDirection6> value) {
+			obj.setUnrealisedGainLoss(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstAmt")
@@ -320,7 +361,7 @@ public class BalanceAmounts1 {
 	 * "Interest amount that has accrued in between coupon payment periods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceAmounts1, Optional<AmountAndDirection6>> mmAccruedInterestAmount = new MMMessageAttribute<BalanceAmounts1, Optional<AmountAndDirection6>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceAmounts1.mmObject();
@@ -331,7 +372,17 @@ public class BalanceAmounts1 {
 			definition = "Interest amount that has accrued in between coupon payment periods.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			complexType_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection6> getValue(BalanceAmounts1 obj) {
+			return obj.getAccruedInterestAmount();
+		}
+
+		@Override
+		public void setValue(BalanceAmounts1 obj, Optional<AmountAndDirection6> value) {
+			obj.setAccruedInterestAmount(value.orElse(null));
 		}
 	};
 
@@ -354,7 +405,7 @@ public class BalanceAmounts1 {
 		return holdingValue;
 	}
 
-	public BalanceAmounts1 setHoldingValue(com.tools20022.repository.msg.AmountAndDirection6 holdingValue) {
+	public BalanceAmounts1 setHoldingValue(AmountAndDirection6 holdingValue) {
 		this.holdingValue = Objects.requireNonNull(holdingValue);
 		return this;
 	}
@@ -363,7 +414,7 @@ public class BalanceAmounts1 {
 		return previousHoldingValue == null ? Optional.empty() : Optional.of(previousHoldingValue);
 	}
 
-	public BalanceAmounts1 setPreviousHoldingValue(com.tools20022.repository.msg.AmountAndDirection6 previousHoldingValue) {
+	public BalanceAmounts1 setPreviousHoldingValue(AmountAndDirection6 previousHoldingValue) {
 		this.previousHoldingValue = previousHoldingValue;
 		return this;
 	}
@@ -372,7 +423,7 @@ public class BalanceAmounts1 {
 		return bookValue == null ? Optional.empty() : Optional.of(bookValue);
 	}
 
-	public BalanceAmounts1 setBookValue(com.tools20022.repository.msg.AmountAndDirection6 bookValue) {
+	public BalanceAmounts1 setBookValue(AmountAndDirection6 bookValue) {
 		this.bookValue = bookValue;
 		return this;
 	}
@@ -381,7 +432,7 @@ public class BalanceAmounts1 {
 		return unrealisedGainLoss == null ? Optional.empty() : Optional.of(unrealisedGainLoss);
 	}
 
-	public BalanceAmounts1 setUnrealisedGainLoss(com.tools20022.repository.msg.AmountAndDirection6 unrealisedGainLoss) {
+	public BalanceAmounts1 setUnrealisedGainLoss(AmountAndDirection6 unrealisedGainLoss) {
 		this.unrealisedGainLoss = unrealisedGainLoss;
 		return this;
 	}
@@ -390,7 +441,7 @@ public class BalanceAmounts1 {
 		return accruedInterestAmount == null ? Optional.empty() : Optional.of(accruedInterestAmount);
 	}
 
-	public BalanceAmounts1 setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection6 accruedInterestAmount) {
+	public BalanceAmounts1 setAccruedInterestAmount(AmountAndDirection6 accruedInterestAmount) {
 		this.accruedInterestAmount = accruedInterestAmount;
 		return this;
 	}

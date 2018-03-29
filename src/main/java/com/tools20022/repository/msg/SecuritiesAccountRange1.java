@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +109,7 @@ public class SecuritiesAccountRange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountRange1, SecuritiesAccount13> mmFrom = new MMMessageAssociationEnd<SecuritiesAccountRange1, SecuritiesAccount13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountRange1.mmObject();
 			isDerived = false;
@@ -120,7 +121,17 @@ public class SecuritiesAccountRange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			type_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount13 getValue(SecuritiesAccountRange1 obj) {
+			return obj.getFrom();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountRange1 obj, SecuritiesAccount13 value) {
+			obj.setFrom(value);
 		}
 	};
 	@XmlElement(name = "To", required = true)
@@ -160,7 +171,7 @@ public class SecuritiesAccountRange1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountRange1, SecuritiesAccount13> mmTo = new MMMessageAssociationEnd<SecuritiesAccountRange1, SecuritiesAccount13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountRange1.mmObject();
 			isDerived = false;
@@ -172,7 +183,17 @@ public class SecuritiesAccountRange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
+			type_lazy = () -> SecuritiesAccount13.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount13 getValue(SecuritiesAccountRange1 obj) {
+			return obj.getTo();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountRange1 obj, SecuritiesAccount13 value) {
+			obj.setTo(value);
 		}
 	};
 
@@ -194,7 +215,7 @@ public class SecuritiesAccountRange1 {
 		return from;
 	}
 
-	public SecuritiesAccountRange1 setFrom(com.tools20022.repository.msg.SecuritiesAccount13 from) {
+	public SecuritiesAccountRange1 setFrom(SecuritiesAccount13 from) {
 		this.from = Objects.requireNonNull(from);
 		return this;
 	}
@@ -203,7 +224,7 @@ public class SecuritiesAccountRange1 {
 		return to;
 	}
 
-	public SecuritiesAccountRange1 setTo(com.tools20022.repository.msg.SecuritiesAccount13 to) {
+	public SecuritiesAccountRange1 setTo(SecuritiesAccount13 to) {
 		this.to = Objects.requireNonNull(to);
 		return this;
 	}

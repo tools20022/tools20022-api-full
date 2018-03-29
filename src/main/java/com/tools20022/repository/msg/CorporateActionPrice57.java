@@ -120,7 +120,7 @@ public class CorporateActionPrice57 {
 	 * CorporateActionPrice42.mmMaximumPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMaximumPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice57, Optional<PriceFormat44Choice>> mmMaximumPrice = new MMMessageAssociationEnd<CorporateActionPrice57, Optional<PriceFormat44Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMaximumPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice57.mmObject();
@@ -135,6 +135,16 @@ public class CorporateActionPrice57 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat44Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat44Choice> getValue(CorporateActionPrice57 obj) {
+			return obj.getMaximumPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice57 obj, Optional<PriceFormat44Choice> value) {
+			obj.setMaximumPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinPric")
@@ -180,7 +190,7 @@ public class CorporateActionPrice57 {
 	 * CorporateActionPrice42.mmMinimumPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMinimumPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice57, Optional<PriceFormat44Choice>> mmMinimumPrice = new MMMessageAssociationEnd<CorporateActionPrice57, Optional<PriceFormat44Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMinimumPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice57.mmObject();
@@ -195,6 +205,16 @@ public class CorporateActionPrice57 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PriceFormat44Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat44Choice> getValue(CorporateActionPrice57 obj) {
+			return obj.getMinimumPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice57 obj, Optional<PriceFormat44Choice> value) {
+			obj.setMinimumPrice(value.orElse(null));
 		}
 	};
 

@@ -106,7 +106,7 @@ public class OrganisationIdentification5 {
 	 * definition} = "Name of the register of legal entities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification5, Max35Text> mmRegistrationNumber = new MMMessageAttribute<OrganisationIdentification5, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification5.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class OrganisationIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OrganisationIdentification5 obj) {
+			return obj.getRegistrationNumber();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification5 obj, Max35Text value) {
+			obj.setRegistrationNumber(value);
 		}
 	};
 	@XmlElement(name = "RegrNm")
@@ -154,7 +164,7 @@ public class OrganisationIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegisterName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification5, Optional<Max35Text>> mmRegisterName = new MMMessageAttribute<OrganisationIdentification5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> RegistrarRole.mmRegisterName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification5.mmObject();
@@ -166,6 +176,16 @@ public class OrganisationIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OrganisationIdentification5 obj) {
+			return obj.getRegisterName();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification5 obj, Optional<Max35Text> value) {
+			obj.setRegisterName(value.orElse(null));
 		}
 	};
 

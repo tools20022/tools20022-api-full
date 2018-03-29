@@ -111,7 +111,7 @@ public class UnaffirmedReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnaffirmedReason2Choice, UnaffirmedReason1Code> mmCode = new MMMessageAttribute<UnaffirmedReason2Choice, UnaffirmedReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnaffirmedReason2Choice.mmObject();
@@ -123,6 +123,16 @@ public class UnaffirmedReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnaffirmedReason1Code.mmObject();
+		}
+
+		@Override
+		public UnaffirmedReason1Code getValue(UnaffirmedReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnaffirmedReason2Choice obj, UnaffirmedReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -162,7 +172,7 @@ public class UnaffirmedReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnaffirmedReason2Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<UnaffirmedReason2Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnaffirmedReason2Choice.mmObject();
@@ -174,6 +184,16 @@ public class UnaffirmedReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(UnaffirmedReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnaffirmedReason2Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

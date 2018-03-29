@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CreditorReferenceType1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -104,7 +105,7 @@ public class CreditorReferenceInformation1 {
 	 * definition} = "Provides the type of the creditor reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorReferenceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditorReferenceInformation1, Optional<CreditorReferenceType1>> mmCreditorReferenceType = new MMMessageAssociationEnd<CreditorReferenceInformation1, Optional<CreditorReferenceType1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditorReferenceInformation1.mmObject();
 			isDerived = false;
@@ -115,7 +116,17 @@ public class CreditorReferenceInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CreditorReferenceType1.mmObject();
+			type_lazy = () -> CreditorReferenceType1.mmObject();
+		}
+
+		@Override
+		public Optional<CreditorReferenceType1> getValue(CreditorReferenceInformation1 obj) {
+			return obj.getCreditorReferenceType();
+		}
+
+		@Override
+		public void setValue(CreditorReferenceInformation1 obj, Optional<CreditorReferenceType1> value) {
+			obj.setCreditorReferenceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrRef")
@@ -154,7 +165,7 @@ public class CreditorReferenceInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditorReferenceInformation1, Optional<Max35Text>> mmCreditorReference = new MMMessageAttribute<CreditorReferenceInformation1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmCreditorReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditorReferenceInformation1.mmObject();
@@ -166,6 +177,16 @@ public class CreditorReferenceInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CreditorReferenceInformation1 obj) {
+			return obj.getCreditorReference();
+		}
+
+		@Override
+		public void setValue(CreditorReferenceInformation1 obj, Optional<Max35Text> value) {
+			obj.setCreditorReference(value.orElse(null));
 		}
 	};
 
@@ -187,7 +208,7 @@ public class CreditorReferenceInformation1 {
 		return creditorReferenceType == null ? Optional.empty() : Optional.of(creditorReferenceType);
 	}
 
-	public CreditorReferenceInformation1 setCreditorReferenceType(com.tools20022.repository.msg.CreditorReferenceType1 creditorReferenceType) {
+	public CreditorReferenceInformation1 setCreditorReferenceType(CreditorReferenceType1 creditorReferenceType) {
 		this.creditorReferenceType = creditorReferenceType;
 		return this;
 	}

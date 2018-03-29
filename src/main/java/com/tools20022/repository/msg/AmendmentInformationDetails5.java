@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -136,7 +137,7 @@ public class AmendmentInformationDetails5 {
 	 * definition} = "Original mandate identification that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmendmentInformationDetails5, Optional<Max35Text>> mmOriginalMandateIdentification = new MMMessageAttribute<AmendmentInformationDetails5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -148,6 +149,16 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalMandateIdentification();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<Max35Text> value) {
+			obj.setOriginalMandateIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCdtrSchmeId")
@@ -184,7 +195,7 @@ public class AmendmentInformationDetails5 {
 	 * "Original creditor scheme identification that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalCreditorSchemeIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<PartyIdentification18>> mmOriginalCreditorSchemeIdentification = new MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<PartyIdentification18>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -196,7 +207,17 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification18.mmObject();
+			type_lazy = () -> PartyIdentification18.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification18> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalCreditorSchemeIdentification();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<PartyIdentification18> value) {
+			obj.setOriginalCreditorSchemeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCdtrAgt")
@@ -232,7 +253,7 @@ public class AmendmentInformationDetails5 {
 	 * definition} = "Original creditor agent that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<FinancialInstitution2>> mmOriginalCreditorAgent = new MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<FinancialInstitution2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -244,7 +265,17 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution2.mmObject();
+			type_lazy = () -> FinancialInstitution2.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution2> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalCreditorAgent();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<FinancialInstitution2> value) {
+			obj.setOriginalCreditorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCdtrAgtAcct")
@@ -280,7 +311,7 @@ public class AmendmentInformationDetails5 {
 	 * definition} = "Original creditor agent acount that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalCreditorAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<CashAccount7>> mmOriginalCreditorAgentAccount = new MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -292,7 +323,17 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalCreditorAgentAccount();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<CashAccount7> value) {
+			obj.setOriginalCreditorAgentAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlDbtr")
@@ -328,7 +369,7 @@ public class AmendmentInformationDetails5 {
 	 * definition} = "Original debtor that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<PartyIdentification20>> mmOriginalDebtor = new MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<PartyIdentification20>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -340,7 +381,17 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification20.mmObject();
+			type_lazy = () -> PartyIdentification20.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification20> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalDebtor();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<PartyIdentification20> value) {
+			obj.setOriginalDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlDbtrAcct")
@@ -376,7 +427,7 @@ public class AmendmentInformationDetails5 {
 	 * definition} = "Original debtor account that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalDebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<CashAccount8>> mmOriginalDebtorAccount = new MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<CashAccount8>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -388,7 +439,17 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount8.mmObject();
+			type_lazy = () -> CashAccount8.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount8> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalDebtorAccount();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<CashAccount8> value) {
+			obj.setOriginalDebtorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlDbtrAgt")
@@ -424,7 +485,7 @@ public class AmendmentInformationDetails5 {
 	 * definition} = "Original debtor's agent that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<FinancialInstitution3>> mmOriginalDebtorAgent = new MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<FinancialInstitution3>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -436,7 +497,17 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitution3.mmObject();
+			type_lazy = () -> FinancialInstitution3.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitution3> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalDebtorAgent();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<FinancialInstitution3> value) {
+			obj.setOriginalDebtorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlDbtrAgtAcct")
@@ -472,7 +543,7 @@ public class AmendmentInformationDetails5 {
 	 * definition} = "Original debtor agent account that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalDebtorAgentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<CashAccount7>> mmOriginalDebtorAgentAccount = new MMMessageAssociationEnd<AmendmentInformationDetails5, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -484,7 +555,17 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalDebtorAgentAccount();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<CashAccount7> value) {
+			obj.setOriginalDebtorAgentAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlFnlColltnDt")
@@ -521,7 +602,7 @@ public class AmendmentInformationDetails5 {
 	 * definition} = "Original final collection date that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalFinalCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmendmentInformationDetails5, Optional<ISODate>> mmOriginalFinalCollectionDate = new MMMessageAttribute<AmendmentInformationDetails5, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmFinalCollectionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -533,6 +614,16 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalFinalCollectionDate();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<ISODate> value) {
+			obj.setOriginalFinalCollectionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlFrqcy")
@@ -570,7 +661,7 @@ public class AmendmentInformationDetails5 {
 	 * definition} = "Original frequency that has been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmendmentInformationDetails5, Optional<Frequency1Code>> mmOriginalFrequency = new MMMessageAttribute<AmendmentInformationDetails5, Optional<Frequency1Code>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
@@ -582,6 +673,16 @@ public class AmendmentInformationDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency1Code> getValue(AmendmentInformationDetails5 obj) {
+			return obj.getOriginalFrequency();
+		}
+
+		@Override
+		public void setValue(AmendmentInformationDetails5 obj, Optional<Frequency1Code> value) {
+			obj.setOriginalFrequency(value.orElse(null));
 		}
 	};
 
@@ -617,7 +718,7 @@ public class AmendmentInformationDetails5 {
 		return originalCreditorSchemeIdentification == null ? Optional.empty() : Optional.of(originalCreditorSchemeIdentification);
 	}
 
-	public AmendmentInformationDetails5 setOriginalCreditorSchemeIdentification(com.tools20022.repository.msg.PartyIdentification18 originalCreditorSchemeIdentification) {
+	public AmendmentInformationDetails5 setOriginalCreditorSchemeIdentification(PartyIdentification18 originalCreditorSchemeIdentification) {
 		this.originalCreditorSchemeIdentification = originalCreditorSchemeIdentification;
 		return this;
 	}
@@ -626,7 +727,7 @@ public class AmendmentInformationDetails5 {
 		return originalCreditorAgent == null ? Optional.empty() : Optional.of(originalCreditorAgent);
 	}
 
-	public AmendmentInformationDetails5 setOriginalCreditorAgent(com.tools20022.repository.msg.FinancialInstitution2 originalCreditorAgent) {
+	public AmendmentInformationDetails5 setOriginalCreditorAgent(FinancialInstitution2 originalCreditorAgent) {
 		this.originalCreditorAgent = originalCreditorAgent;
 		return this;
 	}
@@ -635,7 +736,7 @@ public class AmendmentInformationDetails5 {
 		return originalCreditorAgentAccount == null ? Optional.empty() : Optional.of(originalCreditorAgentAccount);
 	}
 
-	public AmendmentInformationDetails5 setOriginalCreditorAgentAccount(com.tools20022.repository.msg.CashAccount7 originalCreditorAgentAccount) {
+	public AmendmentInformationDetails5 setOriginalCreditorAgentAccount(CashAccount7 originalCreditorAgentAccount) {
 		this.originalCreditorAgentAccount = originalCreditorAgentAccount;
 		return this;
 	}
@@ -644,7 +745,7 @@ public class AmendmentInformationDetails5 {
 		return originalDebtor == null ? Optional.empty() : Optional.of(originalDebtor);
 	}
 
-	public AmendmentInformationDetails5 setOriginalDebtor(com.tools20022.repository.msg.PartyIdentification20 originalDebtor) {
+	public AmendmentInformationDetails5 setOriginalDebtor(PartyIdentification20 originalDebtor) {
 		this.originalDebtor = originalDebtor;
 		return this;
 	}
@@ -653,7 +754,7 @@ public class AmendmentInformationDetails5 {
 		return originalDebtorAccount == null ? Optional.empty() : Optional.of(originalDebtorAccount);
 	}
 
-	public AmendmentInformationDetails5 setOriginalDebtorAccount(com.tools20022.repository.msg.CashAccount8 originalDebtorAccount) {
+	public AmendmentInformationDetails5 setOriginalDebtorAccount(CashAccount8 originalDebtorAccount) {
 		this.originalDebtorAccount = originalDebtorAccount;
 		return this;
 	}
@@ -662,7 +763,7 @@ public class AmendmentInformationDetails5 {
 		return originalDebtorAgent == null ? Optional.empty() : Optional.of(originalDebtorAgent);
 	}
 
-	public AmendmentInformationDetails5 setOriginalDebtorAgent(com.tools20022.repository.msg.FinancialInstitution3 originalDebtorAgent) {
+	public AmendmentInformationDetails5 setOriginalDebtorAgent(FinancialInstitution3 originalDebtorAgent) {
 		this.originalDebtorAgent = originalDebtorAgent;
 		return this;
 	}
@@ -671,7 +772,7 @@ public class AmendmentInformationDetails5 {
 		return originalDebtorAgentAccount == null ? Optional.empty() : Optional.of(originalDebtorAgentAccount);
 	}
 
-	public AmendmentInformationDetails5 setOriginalDebtorAgentAccount(com.tools20022.repository.msg.CashAccount7 originalDebtorAgentAccount) {
+	public AmendmentInformationDetails5 setOriginalDebtorAgentAccount(CashAccount7 originalDebtorAgentAccount) {
 		this.originalDebtorAgentAccount = originalDebtorAgentAccount;
 		return this;
 	}

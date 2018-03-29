@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price6;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +118,7 @@ public class FinancialInstrumentAggregateBalance1 {
 	 * definition} = "Date of the line of holding in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItemDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAggregateBalance1, ISODate> mmItemDate = new MMMessageAttribute<FinancialInstrumentAggregateBalance1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmObject();
@@ -129,6 +130,16 @@ public class FinancialInstrumentAggregateBalance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(FinancialInstrumentAggregateBalance1 obj) {
+			return obj.getItemDate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAggregateBalance1 obj, ISODate value) {
+			obj.setItemDate(value);
 		}
 	};
 	@XmlElement(name = "Hldgs", required = true)
@@ -164,7 +175,7 @@ public class FinancialInstrumentAggregateBalance1 {
 	 * definition} = "Balances and sub-balances attributed to the holding."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHoldings = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAggregateBalance1, FinancialInstrumentAggregateBalance1Choice> mmHoldings = new MMMessageAssociationEnd<FinancialInstrumentAggregateBalance1, FinancialInstrumentAggregateBalance1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AssetHolding.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmObject();
@@ -178,9 +189,19 @@ public class FinancialInstrumentAggregateBalance1 {
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentAggregateBalance1Choice.mmObject();
 		}
+
+		@Override
+		public FinancialInstrumentAggregateBalance1Choice getValue(FinancialInstrumentAggregateBalance1 obj) {
+			return obj.getHoldings();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAggregateBalance1 obj, FinancialInstrumentAggregateBalance1Choice value) {
+			obj.setHoldings(value);
+		}
 	};
 	@XmlElement(name = "Pric")
-	protected List<com.tools20022.repository.msg.Price6> price;
+	protected List<Price6> price;
 	/**
 	 * 
 	 <p>
@@ -211,7 +232,7 @@ public class FinancialInstrumentAggregateBalance1 {
 	 * definition} = "Details on the price value, type and source."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAggregateBalance1, List<Price6>> mmPrice = new MMMessageAssociationEnd<FinancialInstrumentAggregateBalance1, List<Price6>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmObject();
@@ -222,7 +243,17 @@ public class FinancialInstrumentAggregateBalance1 {
 			definition = "Details on the price value, type and source.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price6.mmObject();
+			type_lazy = () -> Price6.mmObject();
+		}
+
+		@Override
+		public List<Price6> getValue(FinancialInstrumentAggregateBalance1 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAggregateBalance1 obj, List<Price6> value) {
+			obj.setPrice(value);
 		}
 	};
 
@@ -263,7 +294,7 @@ public class FinancialInstrumentAggregateBalance1 {
 		return price == null ? price = new ArrayList<>() : price;
 	}
 
-	public FinancialInstrumentAggregateBalance1 setPrice(List<com.tools20022.repository.msg.Price6> price) {
+	public FinancialInstrumentAggregateBalance1 setPrice(List<Price6> price) {
 		this.price = Objects.requireNonNull(price);
 		return this;
 	}

@@ -122,7 +122,7 @@ public class RateFormat20Choice {
 	 * RateFormat8Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateFormat20Choice, PercentageRate> mmRate = new MMMessageAttribute<RateFormat20Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat20Choice.mmObject();
@@ -136,6 +136,16 @@ public class RateFormat20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateFormat20Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateFormat20Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -178,7 +188,7 @@ public class RateFormat20Choice {
 	 * RateFormat8Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateFormat20Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateFormat20Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat20Choice.mmObject();
@@ -191,6 +201,16 @@ public class RateFormat20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateFormat20Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateFormat20Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -231,7 +251,7 @@ public class RateFormat20Choice {
 	 * RateFormat8Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateFormat20Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<RateFormat20Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat20Choice.mmObject();
 			isDerived = false;
@@ -244,6 +264,16 @@ public class RateFormat20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(RateFormat20Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RateFormat20Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 

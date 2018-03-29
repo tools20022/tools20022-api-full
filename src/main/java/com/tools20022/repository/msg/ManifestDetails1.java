@@ -102,7 +102,7 @@ public class ManifestDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ManifestDetails1, Max35Text> mmDocumentType = new MMMessageAttribute<ManifestDetails1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ManifestDetails1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class ManifestDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ManifestDetails1 obj) {
+			return obj.getDocumentType();
+		}
+
+		@Override
+		public void setValue(ManifestDetails1 obj, Max35Text value) {
+			obj.setDocumentType(value);
 		}
 	};
 	@XmlElement(name = "NbOfDocs", required = true)
@@ -145,7 +155,7 @@ public class ManifestDetails1 {
 	 * "Gives the number of instances (messages) for each declared type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDocuments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ManifestDetails1, Number> mmNumberOfDocuments = new MMMessageAttribute<ManifestDetails1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ManifestDetails1.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class ManifestDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ManifestDetails1 obj) {
+			return obj.getNumberOfDocuments();
+		}
+
+		@Override
+		public void setValue(ManifestDetails1 obj, Number value) {
+			obj.setNumberOfDocuments(value);
 		}
 	};
 

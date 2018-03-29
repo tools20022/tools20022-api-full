@@ -107,7 +107,7 @@ public class CorporateActionOption1FormatChoice {
 	 * definition} = "Option type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption1FormatChoice, CorporateActionOptionType1Code> mmCode = new MMMessageAttribute<CorporateActionOption1FormatChoice, CorporateActionOptionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionOption1FormatChoice.mmObject();
@@ -119,6 +119,16 @@ public class CorporateActionOption1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionOptionType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionOptionType1Code getValue(CorporateActionOption1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption1FormatChoice obj, CorporateActionOptionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class CorporateActionOption1FormatChoice {
 	 * definition} = "Option type expressed as a prorprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOption1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<CorporateActionOption1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionOption1FormatChoice.mmObject();
@@ -168,6 +178,16 @@ public class CorporateActionOption1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CorporateActionOption1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionOption1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

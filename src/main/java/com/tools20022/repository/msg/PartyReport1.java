@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PartyOrBusinessError1Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemPartyIdentification3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class PartyReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyReport1, SystemPartyIdentification3> mmPartyIdentification = new MMMessageAttribute<PartyReport1, SystemPartyIdentification3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyReport1.mmObject();
 			isDerived = false;
@@ -123,7 +124,17 @@ public class PartyReport1 {
 			nextVersions_lazy = () -> Arrays.asList(PartyReport2.mmPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
+			complexType_lazy = () -> SystemPartyIdentification3.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification3 getValue(PartyReport1 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyReport1 obj, SystemPartyIdentification3 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "PtyOrErr", required = true)
@@ -163,7 +174,7 @@ public class PartyReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyReport1, PartyOrBusinessError1Choice> mmPartyOrError = new MMMessageAssociationEnd<PartyReport1, PartyOrBusinessError1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyReport1.mmObject();
 			isDerived = false;
@@ -176,6 +187,16 @@ public class PartyReport1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyOrBusinessError1Choice.mmObject();
+		}
+
+		@Override
+		public PartyOrBusinessError1Choice getValue(PartyReport1 obj) {
+			return obj.getPartyOrError();
+		}
+
+		@Override
+		public void setValue(PartyReport1 obj, PartyOrBusinessError1Choice value) {
+			obj.setPartyOrError(value);
 		}
 	};
 
@@ -197,7 +218,7 @@ public class PartyReport1 {
 		return partyIdentification;
 	}
 
-	public PartyReport1 setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+	public PartyReport1 setPartyIdentification(SystemPartyIdentification3 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}

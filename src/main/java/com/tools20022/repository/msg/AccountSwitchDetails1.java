@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AccountSwitching;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ResponseDetails1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -168,11 +169,11 @@ public class AccountSwitchDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique number that provides unique and unambiguous identification of the account switch."
+	 * "Unique number that provides unique and unambiguous identification of the account switch. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSwitchDetails1, Max35Text> mmUniqueReferenceNumber = new MMMessageAttribute<AccountSwitchDetails1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AccountSwitching.mmUniqueReferenceNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSwitchDetails1.mmObject();
@@ -180,10 +181,20 @@ public class AccountSwitchDetails1 {
 			xmlTag = "UnqRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UniqueReferenceNumber";
-			definition = "Unique number that provides unique and unambiguous identification of the account switch.";
+			definition = "Unique number that provides unique and unambiguous identification of the account switch. ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountSwitchDetails1 obj) {
+			return obj.getUniqueReferenceNumber();
+		}
+
+		@Override
+		public void setValue(AccountSwitchDetails1 obj, Max35Text value) {
+			obj.setUniqueReferenceNumber(value);
 		}
 	};
 	@XmlElement(name = "RtgUnqRefNb", required = true)
@@ -222,7 +233,7 @@ public class AccountSwitchDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoutingUniqueReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSwitchDetails1, Max35Text> mmRoutingUniqueReferenceNumber = new MMMessageAttribute<AccountSwitchDetails1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AccountSwitching.mmUniqueReferenceNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSwitchDetails1.mmObject();
@@ -234,6 +245,16 @@ public class AccountSwitchDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountSwitchDetails1 obj) {
+			return obj.getRoutingUniqueReferenceNumber();
+		}
+
+		@Override
+		public void setValue(AccountSwitchDetails1 obj, Max35Text value) {
+			obj.setRoutingUniqueReferenceNumber(value);
 		}
 	};
 	@XmlElement(name = "SwtchRcvdDtTm")
@@ -272,7 +293,7 @@ public class AccountSwitchDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSwitchReceivedDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSwitchDetails1, Optional<ISODateTime>> mmSwitchReceivedDateTime = new MMMessageAttribute<AccountSwitchDetails1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> AccountSwitching.mmSwitchReceivedDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSwitchDetails1.mmObject();
@@ -284,6 +305,16 @@ public class AccountSwitchDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(AccountSwitchDetails1 obj) {
+			return obj.getSwitchReceivedDateTime();
+		}
+
+		@Override
+		public void setValue(AccountSwitchDetails1 obj, Optional<ISODateTime> value) {
+			obj.setSwitchReceivedDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SwtchDt")
@@ -322,7 +353,7 @@ public class AccountSwitchDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSwitchDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSwitchDetails1, Optional<ISODate>> mmSwitchDate = new MMMessageAttribute<AccountSwitchDetails1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> AccountSwitching.mmSwitchDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSwitchDetails1.mmObject();
@@ -334,6 +365,16 @@ public class AccountSwitchDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(AccountSwitchDetails1 obj) {
+			return obj.getSwitchDate();
+		}
+
+		@Override
+		public void setValue(AccountSwitchDetails1 obj, Optional<ISODate> value) {
+			obj.setSwitchDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SwtchTp", required = true)
@@ -369,11 +410,11 @@ public class AccountSwitchDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the account switch is a full switch or a partial switch."
+	 * "Indicates whether the account switch is a full switch or a partial switch.\r\n\r\nUsage: A full switch indicates the transfer of the full balance of the account and associated payment mandates. A partial switch indicates the transfer of certain payment mandates to a new account."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSwitchType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSwitchDetails1, SwitchType1Code> mmSwitchType = new MMMessageAttribute<AccountSwitchDetails1, SwitchType1Code>() {
 		{
 			businessElementTrace_lazy = () -> AccountSwitching.mmSwitchType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSwitchDetails1.mmObject();
@@ -381,10 +422,20 @@ public class AccountSwitchDetails1 {
 			xmlTag = "SwtchTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchType";
-			definition = "Indicates whether the account switch is a full switch or a partial switch.";
+			definition = "Indicates whether the account switch is a full switch or a partial switch.\r\n\r\nUsage: A full switch indicates the transfer of the full balance of the account and associated payment mandates. A partial switch indicates the transfer of certain payment mandates to a new account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SwitchType1Code.mmObject();
+		}
+
+		@Override
+		public SwitchType1Code getValue(AccountSwitchDetails1 obj) {
+			return obj.getSwitchType();
+		}
+
+		@Override
+		public void setValue(AccountSwitchDetails1 obj, SwitchType1Code value) {
+			obj.setSwitchType(value);
 		}
 	};
 	@XmlElement(name = "SwtchSts")
@@ -423,7 +474,7 @@ public class AccountSwitchDetails1 {
 	 * "State of the account switch at the time the message is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSwitchStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSwitchDetails1, Optional<SwitchStatus1Code>> mmSwitchStatus = new MMMessageAttribute<AccountSwitchDetails1, Optional<SwitchStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AccountSwitching.mmSwitchStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSwitchDetails1.mmObject();
@@ -435,6 +486,16 @@ public class AccountSwitchDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SwitchStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SwitchStatus1Code> getValue(AccountSwitchDetails1 obj) {
+			return obj.getSwitchStatus();
+		}
+
+		@Override
+		public void setValue(AccountSwitchDetails1 obj, Optional<SwitchStatus1Code> value) {
+			obj.setSwitchStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalTrfWndw")
@@ -474,7 +535,7 @@ public class AccountSwitchDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceTransferWindow = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountSwitchDetails1, Optional<BalanceTransferWindow1Code>> mmBalanceTransferWindow = new MMMessageAttribute<AccountSwitchDetails1, Optional<BalanceTransferWindow1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AccountSwitching.mmBalanceTransferWindow;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSwitchDetails1.mmObject();
@@ -487,9 +548,19 @@ public class AccountSwitchDetails1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> BalanceTransferWindow1Code.mmObject();
 		}
+
+		@Override
+		public Optional<BalanceTransferWindow1Code> getValue(AccountSwitchDetails1 obj) {
+			return obj.getBalanceTransferWindow();
+		}
+
+		@Override
+		public void setValue(AccountSwitchDetails1 obj, Optional<BalanceTransferWindow1Code> value) {
+			obj.setBalanceTransferWindow(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Rspn")
-	protected List<com.tools20022.repository.msg.ResponseDetails1> response;
+	protected List<ResponseDetails1> response;
 	/**
 	 * 
 	 <p>
@@ -516,7 +587,7 @@ public class AccountSwitchDetails1 {
 	 * definition} = "Response code and additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountSwitchDetails1, List<ResponseDetails1>> mmResponse = new MMMessageAssociationEnd<AccountSwitchDetails1, List<ResponseDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountSwitchDetails1.mmObject();
 			isDerived = false;
@@ -526,7 +597,17 @@ public class AccountSwitchDetails1 {
 			definition = "Response code and additional information.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseDetails1.mmObject();
+			type_lazy = () -> ResponseDetails1.mmObject();
+		}
+
+		@Override
+		public List<ResponseDetails1> getValue(AccountSwitchDetails1 obj) {
+			return obj.getResponse();
+		}
+
+		@Override
+		public void setValue(AccountSwitchDetails1 obj, List<ResponseDetails1> value) {
+			obj.setResponse(value);
 		}
 	};
 
@@ -617,7 +698,7 @@ public class AccountSwitchDetails1 {
 		return response == null ? response = new ArrayList<>() : response;
 	}
 
-	public AccountSwitchDetails1 setResponse(List<com.tools20022.repository.msg.ResponseDetails1> response) {
+	public AccountSwitchDetails1 setResponse(List<ResponseDetails1> response) {
 		this.response = Objects.requireNonNull(response);
 		return this;
 	}

@@ -50,11 +50,15 @@ public class ConstraintNetAmountGrossAmountRule {
 	 */
 	public static final MMConstraint<RedemptionOrder4> forRedemptionOrder4 = new MMConstraint<RedemptionOrder4>() {
 		{
-			validator = ConstraintNetAmountGrossAmountRule::checkRedemptionOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmountGrossAmountRule";
 			definition = "If NetAmount or GrossAmount is present, then Rounding is not allowed.";
 			owner_lazy = () -> RedemptionOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder4 obj) throws Exception {
+			checkRedemptionOrder4(obj);
 		}
 	};
 	/**
@@ -79,11 +83,15 @@ public class ConstraintNetAmountGrossAmountRule {
 	 */
 	public static final MMConstraint<SubscriptionOrder4> forSubscriptionOrder4 = new MMConstraint<SubscriptionOrder4>() {
 		{
-			validator = ConstraintNetAmountGrossAmountRule::checkSubscriptionOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmountGrossAmountRule";
 			definition = "If NetAmount or GrossAmount is present, then Rounding is not allowed.";
 			owner_lazy = () -> SubscriptionOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder4 obj) throws Exception {
+			checkSubscriptionOrder4(obj);
 		}
 	};
 

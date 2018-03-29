@@ -169,6 +169,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08#mmNumberCounts
  * SecuritiesSettlementTransactionInstructionV08.mmNumberCounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V08#mmNumberCounts
+ * SecuritiesFinancingInstruction002V08.mmNumberCounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08#mmNumberCounts
+ * SecuritiesSettlementTransactionGenerationNotification002V08.mmNumberCounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08#mmNumberCounts
+ * SecuritiesSettlementTransactionInstruction002V08.mmNumberCounts}</li>
  * </ul>
  * </li>
  * <li>
@@ -234,7 +243,7 @@ public class NumberCount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentInstructionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NumberCount1Choice, Exact3NumericText> mmCurrentInstructionNumber = new MMMessageAttribute<NumberCount1Choice, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NumberCount1Choice.mmObject();
 			isDerived = false;
@@ -246,6 +255,16 @@ public class NumberCount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(NumberCount1Choice obj) {
+			return obj.getCurrentInstructionNumber();
+		}
+
+		@Override
+		public void setValue(NumberCount1Choice obj, Exact3NumericText value) {
+			obj.setCurrentInstructionNumber(value);
 		}
 	};
 	@XmlElement(name = "TtlNb", required = true)
@@ -281,7 +300,7 @@ public class NumberCount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NumberCount1Choice, TotalNumber1> mmTotalNumber = new MMMessageAssociationEnd<NumberCount1Choice, TotalNumber1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NumberCount1Choice.mmObject();
 			isDerived = false;
@@ -294,6 +313,16 @@ public class NumberCount1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TotalNumber1.mmObject();
+		}
+
+		@Override
+		public TotalNumber1 getValue(NumberCount1Choice obj) {
+			return obj.getTotalNumber();
+		}
+
+		@Override
+		public void setValue(NumberCount1Choice obj, TotalNumber1 value) {
+			obj.setTotalNumber(value);
 		}
 	};
 
@@ -312,7 +341,8 @@ public class NumberCount1Choice {
 						SecuritiesSettlementTransactionInstruction002V06.mmNumberCounts, SecuritiesFinancingInstruction002V06.mmNumberCounts, SecuritiesFinancingInstructionV07.mmNumberCounts,
 						SecuritiesSettlementTransactionGenerationNotificationV07.mmNumberCounts, SecuritiesSettlementTransactionInstructionV07.mmNumberCounts, SecuritiesSettlementTransactionInstruction002V07.mmNumberCounts,
 						SecuritiesFinancingInstruction002V07.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotification002V07.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotificationV08.mmNumberCounts,
-						SecuritiesFinancingInstructionV08.mmNumberCounts, SecuritiesSettlementTransactionInstructionV08.mmNumberCounts);
+						SecuritiesFinancingInstructionV08.mmNumberCounts, SecuritiesSettlementTransactionInstructionV08.mmNumberCounts, SecuritiesFinancingInstruction002V08.mmNumberCounts,
+						SecuritiesSettlementTransactionGenerationNotification002V08.mmNumberCounts, SecuritiesSettlementTransactionInstruction002V08.mmNumberCounts);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrentInstructionNumberRule.forNumberCount1Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;

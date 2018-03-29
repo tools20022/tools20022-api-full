@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -146,7 +147,7 @@ public class AccountManagementConfirmation3 {
 	 * AccountManagementConfirmation2.mmConfirmationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementConfirmation3, AccountManagementType2Code> mmConfirmationType = new MMMessageAttribute<AccountManagementConfirmation3, AccountManagementType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmObject();
 			isDerived = false;
@@ -159,6 +160,16 @@ public class AccountManagementConfirmation3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType2Code.mmObject();
+		}
+
+		@Override
+		public AccountManagementType2Code getValue(AccountManagementConfirmation3 obj) {
+			return obj.getConfirmationType();
+		}
+
+		@Override
+		public void setValue(AccountManagementConfirmation3 obj, AccountManagementType2Code value) {
+			obj.setConfirmationType(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -205,7 +216,7 @@ public class AccountManagementConfirmation3 {
 	 * AccountManagementConfirmation2.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementConfirmation3, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<AccountManagementConfirmation3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmObject();
 			isDerived = false;
@@ -218,6 +229,16 @@ public class AccountManagementConfirmation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementConfirmation3 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementConfirmation3 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -269,7 +290,7 @@ public class AccountManagementConfirmation3 {
 	 * AccountManagementConfirmation2.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementConfirmation3, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<AccountManagementConfirmation3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmObject();
@@ -283,6 +304,16 @@ public class AccountManagementConfirmation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementConfirmation3 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(AccountManagementConfirmation3 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyRef")
@@ -335,7 +366,7 @@ public class AccountManagementConfirmation3 {
 	 * AccountManagementConfirmation2.mmCounterpartyReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementConfirmation3, Optional<AdditionalReference6>> mmCounterpartyReference = new MMMessageAttribute<AccountManagementConfirmation3, Optional<AdditionalReference6>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmObject();
@@ -348,7 +379,17 @@ public class AccountManagementConfirmation3 {
 			previousVersion_lazy = () -> AccountManagementConfirmation2.mmCounterpartyReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
+			complexType_lazy = () -> AdditionalReference6.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference6> getValue(AccountManagementConfirmation3 obj) {
+			return obj.getCounterpartyReference();
+		}
+
+		@Override
+		public void setValue(AccountManagementConfirmation3 obj, Optional<AdditionalReference6> value) {
+			obj.setCounterpartyReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExstgAcctId")
@@ -388,7 +429,7 @@ public class AccountManagementConfirmation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExistingAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementConfirmation3, Optional<Max35Text>> mmExistingAccountIdentification = new MMMessageAttribute<AccountManagementConfirmation3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation3.mmObject();
 			isDerived = false;
@@ -400,6 +441,16 @@ public class AccountManagementConfirmation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementConfirmation3 obj) {
+			return obj.getExistingAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementConfirmation3 obj, Optional<Max35Text> value) {
+			obj.setExistingAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -452,7 +503,7 @@ public class AccountManagementConfirmation3 {
 		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public AccountManagementConfirmation3 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference6 counterpartyReference) {
+	public AccountManagementConfirmation3 setCounterpartyReference(AdditionalReference6 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
 		return this;
 	}

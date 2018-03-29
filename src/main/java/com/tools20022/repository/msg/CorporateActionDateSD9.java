@@ -129,7 +129,7 @@ public class CorporateActionDateSD9 {
 	 * CorporateActionDateSD7.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionDateSD9, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionDateSD9, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD9.mmObject();
 			isDerived = false;
@@ -141,6 +141,16 @@ public class CorporateActionDateSD9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionDateSD9 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD9 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlEarlyXprtnDt")
@@ -177,7 +187,7 @@ public class CorporateActionDateSD9 {
 	 * CorporateActionDateSD7.mmActualEarlyExpirationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActualEarlyExpirationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>> mmActualEarlyExpirationDate = new MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD9.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class CorporateActionDateSD9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat49Choice> getValue(CorporateActionDateSD9 obj) {
+			return obj.getActualEarlyExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD9 obj, Optional<DateFormat49Choice> value) {
+			obj.setActualEarlyExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlPrtctXprtnDt")
@@ -226,7 +246,7 @@ public class CorporateActionDateSD9 {
 	 * CorporateActionDateSD7.mmActualProtectExpirationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActualProtectExpirationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>> mmActualProtectExpirationDate = new MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD9.mmObject();
 			isDerived = false;
@@ -239,6 +259,16 @@ public class CorporateActionDateSD9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat49Choice> getValue(CorporateActionDateSD9 obj) {
+			return obj.getActualProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD9 obj, Optional<DateFormat49Choice> value) {
+			obj.setActualProtectExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlEarlyPrtctXprtnDt")
@@ -276,7 +306,7 @@ public class CorporateActionDateSD9 {
 	 * CorporateActionDateSD7.mmActualEarlyProtectExpirationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActualEarlyProtectExpirationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>> mmActualEarlyProtectExpirationDate = new MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD9.mmObject();
 			isDerived = false;
@@ -289,6 +319,16 @@ public class CorporateActionDateSD9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat49Choice> getValue(CorporateActionDateSD9 obj) {
+			return obj.getActualEarlyProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD9 obj, Optional<DateFormat49Choice> value) {
+			obj.setActualEarlyProtectExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCEarlyPrtctXprtnDt")
@@ -326,7 +366,7 @@ public class CorporateActionDateSD9 {
 	 * CorporateActionDateSD7.mmDTCEarlyProtectExpirationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDTCEarlyProtectExpirationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>> mmDTCEarlyProtectExpirationDate = new MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD9.mmObject();
 			isDerived = false;
@@ -339,6 +379,16 @@ public class CorporateActionDateSD9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat49Choice> getValue(CorporateActionDateSD9 obj) {
+			return obj.getDTCEarlyProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD9 obj, Optional<DateFormat49Choice> value) {
+			obj.setDTCEarlyProtectExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlEarlyCoverPrtctXprtnDt")
@@ -376,7 +426,7 @@ public class CorporateActionDateSD9 {
 	 * CorporateActionDateSD7.mmActualEarlyCoverProtectExpirationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmActualEarlyCoverProtectExpirationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>> mmActualEarlyCoverProtectExpirationDate = new MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD9.mmObject();
 			isDerived = false;
@@ -389,6 +439,16 @@ public class CorporateActionDateSD9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat49Choice> getValue(CorporateActionDateSD9 obj) {
+			return obj.getActualEarlyCoverProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD9 obj, Optional<DateFormat49Choice> value) {
+			obj.setActualEarlyCoverProtectExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCEarlyCoverPrtctXprtnDt")
@@ -425,7 +485,7 @@ public class CorporateActionDateSD9 {
 	 * CorporateActionDateSD7.mmDTCEarlyCoverProtectExpirationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDTCEarlyCoverProtectExpirationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>> mmDTCEarlyCoverProtectExpirationDate = new MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD9.mmObject();
 			isDerived = false;
@@ -438,6 +498,16 @@ public class CorporateActionDateSD9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat49Choice> getValue(CorporateActionDateSD9 obj) {
+			return obj.getDTCEarlyCoverProtectExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD9 obj, Optional<DateFormat49Choice> value) {
+			obj.setDTCEarlyCoverProtectExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcToDt")
@@ -470,7 +540,7 @@ public class CorporateActionDateSD9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>> mmProcessToDate = new MMMessageAssociationEnd<CorporateActionDateSD9, Optional<DateFormat49Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDateSD9.mmObject();
 			isDerived = false;
@@ -482,6 +552,16 @@ public class CorporateActionDateSD9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat49Choice> getValue(CorporateActionDateSD9 obj) {
+			return obj.getProcessToDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDateSD9 obj, Optional<DateFormat49Choice> value) {
+			obj.setProcessToDate(value.orElse(null));
 		}
 	};
 

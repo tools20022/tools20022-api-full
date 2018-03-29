@@ -55,11 +55,15 @@ public class ConstraintTotalRedemptionAmountRule {
 	 */
 	public static final MMConstraint<SwitchOrder2> forSwitchOrder2 = new MMConstraint<SwitchOrder2>() {
 		{
-			validator = ConstraintTotalRedemptionAmountRule::checkSwitchOrder2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRedemptionAmountRule";
 			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional.";
 			owner_lazy = () -> SwitchOrder2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder2 obj) throws Exception {
+			checkSwitchOrder2(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintTotalRedemptionAmountRule {
 	 */
 	public static final MMConstraint<SwitchOrder3> forSwitchOrder3 = new MMConstraint<SwitchOrder3>() {
 		{
-			validator = ConstraintTotalRedemptionAmountRule::checkSwitchOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRedemptionAmountRule";
 			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional.";
 			owner_lazy = () -> SwitchOrder3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder3 obj) throws Exception {
+			checkSwitchOrder3(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintTotalRedemptionAmountRule {
 	 */
 	public static final MMConstraint<SwitchOrder4> forSwitchOrder4 = new MMConstraint<SwitchOrder4>() {
 		{
-			validator = ConstraintTotalRedemptionAmountRule::checkSwitchOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRedemptionAmountRule";
 			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional.";
 			owner_lazy = () -> SwitchOrder4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrder4 obj) throws Exception {
+			checkSwitchOrder4(obj);
 		}
 	};
 

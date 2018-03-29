@@ -139,7 +139,7 @@ public class BlockedHoldingDetails2 {
 	 * BlockedHoldingDetails1.mmBlockedHolding}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBlockedHolding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockedHoldingDetails2, Holding1Code> mmBlockedHolding = new MMMessageAttribute<BlockedHoldingDetails2, Holding1Code>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedHoldingDetails2.mmObject();
@@ -152,6 +152,16 @@ public class BlockedHoldingDetails2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Holding1Code.mmObject();
+		}
+
+		@Override
+		public Holding1Code getValue(BlockedHoldingDetails2 obj) {
+			return obj.getBlockedHolding();
+		}
+
+		@Override
+		public void setValue(BlockedHoldingDetails2 obj, Holding1Code value) {
+			obj.setBlockedHolding(value);
 		}
 	};
 	@XmlElement(name = "PrtlHldgUnits")
@@ -196,7 +206,7 @@ public class BlockedHoldingDetails2 {
 	 * BlockedHoldingDetails1.mmPartialHoldingUnits}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialHoldingUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockedHoldingDetails2, Optional<DecimalNumber>> mmPartialHoldingUnits = new MMMessageAttribute<BlockedHoldingDetails2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedHoldingDetails2.mmObject();
@@ -209,6 +219,16 @@ public class BlockedHoldingDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(BlockedHoldingDetails2 obj) {
+			return obj.getPartialHoldingUnits();
+		}
+
+		@Override
+		public void setValue(BlockedHoldingDetails2 obj, Optional<DecimalNumber> value) {
+			obj.setPartialHoldingUnits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldgCertNb")
@@ -252,7 +272,7 @@ public class BlockedHoldingDetails2 {
 	 * BlockedHoldingDetails1.mmHoldingCertificateNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingCertificateNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockedHoldingDetails2, Optional<Max35Text>> mmHoldingCertificateNumber = new MMMessageAttribute<BlockedHoldingDetails2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BlockedHoldingDetails2.mmObject();
@@ -265,6 +285,16 @@ public class BlockedHoldingDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(BlockedHoldingDetails2 obj) {
+			return obj.getHoldingCertificateNumber();
+		}
+
+		@Override
+		public void setValue(BlockedHoldingDetails2 obj, Optional<Max35Text> value) {
+			obj.setHoldingCertificateNumber(value.orElse(null));
 		}
 	};
 

@@ -114,7 +114,7 @@ public class CorporateActionGeneralInformationExtension7 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationExtension7, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionGeneralInformationExtension7, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension7.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class CorporateActionGeneralInformationExtension7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionGeneralInformationExtension7 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationExtension7 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "EvtTp")
@@ -162,7 +172,7 @@ public class CorporateActionGeneralInformationExtension7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationExtension7, Optional<ExtendedEventType1Code>> mmEventType = new MMMessageAttribute<CorporateActionGeneralInformationExtension7, Optional<ExtendedEventType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension7.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class CorporateActionGeneralInformationExtension7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExtendedEventType1Code> getValue(CorporateActionGeneralInformationExtension7 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationExtension7 obj, Optional<ExtendedEventType1Code> value) {
+			obj.setEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubEvtTp")
@@ -211,7 +231,7 @@ public class CorporateActionGeneralInformationExtension7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationExtension7, Optional<DTCCSubEventType1Code>> mmSubEventType = new MMMessageAttribute<CorporateActionGeneralInformationExtension7, Optional<DTCCSubEventType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension7.mmObject();
 			isDerived = false;
@@ -223,6 +243,16 @@ public class CorporateActionGeneralInformationExtension7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCCSubEventType1Code> getValue(CorporateActionGeneralInformationExtension7 obj) {
+			return obj.getSubEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationExtension7 obj, Optional<DTCCSubEventType1Code> value) {
+			obj.setSubEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtScty")
@@ -259,7 +289,7 @@ public class CorporateActionGeneralInformationExtension7 {
 	 * definition} = "Event (underlying) security identification and type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationExtension7, Optional<SecurityIdentification12Choice>> mmEventSecurity = new MMMessageAttribute<CorporateActionGeneralInformationExtension7, Optional<SecurityIdentification12Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension7.mmObject();
 			isDerived = false;
@@ -271,6 +301,16 @@ public class CorporateActionGeneralInformationExtension7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityIdentification12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification12Choice> getValue(CorporateActionGeneralInformationExtension7 obj) {
+			return obj.getEventSecurity();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationExtension7 obj, Optional<SecurityIdentification12Choice> value) {
+			obj.setEventSecurity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtcptNm")
@@ -304,7 +344,7 @@ public class CorporateActionGeneralInformationExtension7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParticipantName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationExtension7, Optional<Max10Text>> mmParticipantName = new MMMessageAttribute<CorporateActionGeneralInformationExtension7, Optional<Max10Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationExtension7.mmObject();
 			isDerived = false;
@@ -315,6 +355,16 @@ public class CorporateActionGeneralInformationExtension7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max10Text> getValue(CorporateActionGeneralInformationExtension7 obj) {
+			return obj.getParticipantName();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationExtension7 obj, Optional<Max10Text> value) {
+			obj.setParticipantName(value.orElse(null));
 		}
 	};
 

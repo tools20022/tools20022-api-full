@@ -57,12 +57,16 @@ public class ConstraintTradeDate2Rule {
 	 */
 	public static final MMConstraint<FundConfirmedCashForecastReportV04> forFundConfirmedCashForecastReportV04 = new MMConstraint<FundConfirmedCashForecastReportV04>() {
 		{
-			validator = ConstraintTradeDate2Rule::checkFundConfirmedCashForecastReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate2Rule";
 			definition = "If FundCashForecastDetails is not present, then at least one occurrence of FundOrSubFundDetails/TradeDateTime must be present.";
 			owner_lazy = () -> FundConfirmedCashForecastReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundOrSubFundDetails[*]/TradeDateTime</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FundCashForecastDetails[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundConfirmedCashForecastReportV04 obj) throws Exception {
+			checkFundConfirmedCashForecastReportV04(obj);
 		}
 	};
 	/**
@@ -92,12 +96,16 @@ public class ConstraintTradeDate2Rule {
 	 */
 	public static final MMConstraint<FundEstimatedCashForecastReportV04> forFundEstimatedCashForecastReportV04 = new MMConstraint<FundEstimatedCashForecastReportV04>() {
 		{
-			validator = ConstraintTradeDate2Rule::checkFundEstimatedCashForecastReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate2Rule";
 			definition = "If EstimatedFundCashForecastDetails is not present, then at least one occurrence of FundOrSubFundDetails/TradeDateTime must be present.";
 			owner_lazy = () -> FundEstimatedCashForecastReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundOrSubFundDetails[*]/TradeDateTime</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/EstimatedFundCashForecastDetails[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundEstimatedCashForecastReportV04 obj) throws Exception {
+			checkFundEstimatedCashForecastReportV04(obj);
 		}
 	};
 	/**
@@ -127,12 +135,16 @@ public class ConstraintTradeDate2Rule {
 	 */
 	public static final MMConstraint<FundConfirmedCashForecastReport3> forFundConfirmedCashForecastReport3 = new MMConstraint<FundConfirmedCashForecastReport3>() {
 		{
-			validator = ConstraintTradeDate2Rule::checkFundConfirmedCashForecastReport3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate2Rule";
 			definition = "If FundCashForecastDetails is not present, then at least one occurrence of FundOrSubFundDetails/TradeDateTime must be present.";
 			owner_lazy = () -> FundConfirmedCashForecastReport3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundOrSubFundDetails[*]/TradeDateTime</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/FundCashForecastDetails[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(FundConfirmedCashForecastReport3 obj) throws Exception {
+			checkFundConfirmedCashForecastReport3(obj);
 		}
 	};
 

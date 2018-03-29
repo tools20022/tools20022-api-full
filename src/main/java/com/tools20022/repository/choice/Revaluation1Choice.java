@@ -111,7 +111,7 @@ public class Revaluation1Choice {
 	 * definition} = "Revaluation is determined using a yes/no indicator."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Revaluation1Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<Revaluation1Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Revaluation1Choice.mmObject();
@@ -123,6 +123,16 @@ public class Revaluation1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Revaluation1Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(Revaluation1Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class Revaluation1Choice {
 	 * definition} = "Reevaluation is determined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Revaluation1Choice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<Revaluation1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRevaluationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Revaluation1Choice.mmObject();
@@ -172,6 +182,16 @@ public class Revaluation1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(Revaluation1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Revaluation1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

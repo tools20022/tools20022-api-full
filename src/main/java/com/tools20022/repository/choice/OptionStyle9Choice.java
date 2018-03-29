@@ -109,7 +109,7 @@ public class OptionStyle9Choice {
 	 * definition} = "Option style expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionStyle9Choice, OptionStyle2Code> mmCode = new MMMessageAttribute<OptionStyle9Choice, OptionStyle2Code>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionStyle9Choice.mmObject();
@@ -122,6 +122,16 @@ public class OptionStyle9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyle2Code.mmObject();
+		}
+
+		@Override
+		public OptionStyle2Code getValue(OptionStyle9Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionStyle9Choice obj, OptionStyle2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -162,7 +172,7 @@ public class OptionStyle9Choice {
 	 * definition} = "Option style expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionStyle9Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<OptionStyle9Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionStyle9Choice.mmObject();
@@ -175,6 +185,16 @@ public class OptionStyle9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(OptionStyle9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionStyle9Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.entity.UndertakingDeliveryToParty;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -128,7 +129,7 @@ public class CommunicationChannel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationChannel1, ExternalChannel1Code> mmMethod = new MMMessageAttribute<CommunicationChannel1, ExternalChannel1Code>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
@@ -140,6 +141,16 @@ public class CommunicationChannel1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalChannel1Code.mmObject();
+		}
+
+		@Override
+		public ExternalChannel1Code getValue(CommunicationChannel1 obj) {
+			return obj.getMethod();
+		}
+
+		@Override
+		public void setValue(CommunicationChannel1 obj, ExternalChannel1Code value) {
+			obj.setMethod(value);
 		}
 	};
 	@XmlElement(name = "DlvrToPtyTp", required = true)
@@ -179,7 +190,7 @@ public class CommunicationChannel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliverToPartyType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationChannel1, PartyType1Choice> mmDeliverToPartyType = new MMMessageAttribute<CommunicationChannel1, PartyType1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingDeliveryToParty.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
@@ -191,6 +202,16 @@ public class CommunicationChannel1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyType1Choice.mmObject();
+		}
+
+		@Override
+		public PartyType1Choice getValue(CommunicationChannel1 obj) {
+			return obj.getDeliverToPartyType();
+		}
+
+		@Override
+		public void setValue(CommunicationChannel1 obj, PartyType1Choice value) {
+			obj.setDeliverToPartyType(value);
 		}
 	};
 	@XmlElement(name = "DlvrToNm")
@@ -229,7 +250,7 @@ public class CommunicationChannel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliverToName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommunicationChannel1, Optional<Max140Text>> mmDeliverToName = new MMMessageAttribute<CommunicationChannel1, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
@@ -241,6 +262,16 @@ public class CommunicationChannel1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(CommunicationChannel1 obj) {
+			return obj.getDeliverToName();
+		}
+
+		@Override
+		public void setValue(CommunicationChannel1 obj, Optional<Max140Text> value) {
+			obj.setDeliverToName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DlvrToAdr")
@@ -278,7 +309,7 @@ public class CommunicationChannel1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliverToAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommunicationChannel1, Optional<PostalAddress6>> mmDeliverToAddress = new MMMessageAssociationEnd<CommunicationChannel1, Optional<PostalAddress6>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
@@ -290,7 +321,17 @@ public class CommunicationChannel1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress6.mmObject();
+			type_lazy = () -> PostalAddress6.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress6> getValue(CommunicationChannel1 obj) {
+			return obj.getDeliverToAddress();
+		}
+
+		@Override
+		public void setValue(CommunicationChannel1 obj, Optional<PostalAddress6> value) {
+			obj.setDeliverToAddress(value.orElse(null));
 		}
 	};
 
@@ -341,7 +382,7 @@ public class CommunicationChannel1 {
 		return deliverToAddress == null ? Optional.empty() : Optional.of(deliverToAddress);
 	}
 
-	public CommunicationChannel1 setDeliverToAddress(com.tools20022.repository.msg.PostalAddress6 deliverToAddress) {
+	public CommunicationChannel1 setDeliverToAddress(PostalAddress6 deliverToAddress) {
 		this.deliverToAddress = deliverToAddress;
 		return this;
 	}

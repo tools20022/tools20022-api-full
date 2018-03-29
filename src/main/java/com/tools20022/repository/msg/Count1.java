@@ -116,7 +116,7 @@ public class Count1 {
 	 * definition} = "Sequence or total number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Count1, Number> mmNumber = new MMMessageAttribute<Count1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Count1.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class Count1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Count1 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(Count1 obj, Number value) {
+			obj.setNumber(value);
 		}
 	};
 

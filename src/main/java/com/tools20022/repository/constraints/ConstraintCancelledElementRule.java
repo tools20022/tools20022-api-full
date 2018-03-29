@@ -50,11 +50,15 @@ public class ConstraintCancelledElementRule {
 	 */
 	public static final MMConstraint<CancelledStatusReason16> forCancelledStatusReason16 = new MMConstraint<CancelledStatusReason16>() {
 		{
-			validator = ConstraintCancelledElementRule::checkCancelledStatusReason16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelledElementRule";
 			definition = "Either Reason or AdditionalInformation must be present. Both may be present.";
 			owner_lazy = () -> CancelledStatusReason16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CancelledStatusReason16 obj) throws Exception {
+			checkCancelledStatusReason16(obj);
 		}
 	};
 

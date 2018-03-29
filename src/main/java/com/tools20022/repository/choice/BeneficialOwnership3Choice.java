@@ -112,7 +112,7 @@ public class BeneficialOwnership3Choice {
 	 * "Specifies whether there is change of beneficial ownership."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwnership3Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<BeneficialOwnership3Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBeneficialOwnershipIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnership3Choice.mmObject();
@@ -125,6 +125,16 @@ public class BeneficialOwnership3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(BeneficialOwnership3Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(BeneficialOwnership3Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class BeneficialOwnership3Choice {
 	 * "Beneficial ownership information expressed a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwnership3Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<BeneficialOwnership3Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBeneficialOwnershipIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnership3Choice.mmObject();
@@ -179,6 +189,16 @@ public class BeneficialOwnership3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(BeneficialOwnership3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BeneficialOwnership3Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

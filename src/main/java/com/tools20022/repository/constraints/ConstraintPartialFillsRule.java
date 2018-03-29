@@ -61,12 +61,16 @@ public class ConstraintPartialFillsRule {
 	 */
 	public static final MMConstraint<PartialFill1> forPartialFill1 = new MMConstraint<PartialFill1>() {
 		{
-			validator = ConstraintPartialFillsRule::checkPartialFill1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialFillsRule";
 			definition = "A SecuritiesTradeConfirmation should not be used as a TradeExecution report. PartialFills aims at providing a for information summary of the different executions that the confirmation consisted of.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialFillsRule.forPartialFill2);
 			owner_lazy = () -> PartialFill1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartialFill1 obj) throws Exception {
+			checkPartialFill1(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintPartialFillsRule {
 	 */
 	public static final MMConstraint<PartialFill2> forPartialFill2 = new MMConstraint<PartialFill2>() {
 		{
-			validator = ConstraintPartialFillsRule::checkPartialFill2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialFillsRule";
 			definition = "A SecuritiesTradeConfirmation should not be used as a TradeExecution report. PartialFills aims at providing a for information summary of the different executions that the confirmation consisted of.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialFillsRule.forPartialFill1;
 			owner_lazy = () -> PartialFill2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartialFill2 obj) throws Exception {
+			checkPartialFill2(obj);
 		}
 	};
 

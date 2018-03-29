@@ -21,12 +21,11 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion;
+import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive;
 import com.tools20022.repository.msg.CardPaymentBatchTransferResponse4;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header25;
-import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -58,9 +57,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion
- * CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -69,8 +66,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AccptrBtchTrfRspn"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionPreviousVersion
- * AcceptortoAcquirerCardTransactionPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionArchive
+ * AcceptortoAcquirerCardTransactionArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.012.001.05}</li>
@@ -140,7 +137,7 @@ public class AcceptorBatchTransferResponseV05 {
 	 * AcceptorBatchTransferResponseV04.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferResponseV05, Header25> mmHeader = new MMMessageBuildingBlock<AcceptorBatchTransferResponseV05, Header25>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,12 +150,14 @@ public class AcceptorBatchTransferResponseV05 {
 			complexType_lazy = () -> Header25.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferResponseV05.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header25 getValue(AcceptorBatchTransferResponseV05 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferResponseV05 obj, Header25 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "BtchTrfRspn", required = true)
@@ -200,7 +199,7 @@ public class AcceptorBatchTransferResponseV05 {
 	 * AcceptorBatchTransferResponseV04.mmBatchTransferResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBatchTransferResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferResponseV05, CardPaymentBatchTransferResponse4> mmBatchTransferResponse = new MMMessageBuildingBlock<AcceptorBatchTransferResponseV05, CardPaymentBatchTransferResponse4>() {
 		{
 			xmlTag = "BtchTrfRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,12 +212,14 @@ public class AcceptorBatchTransferResponseV05 {
 			complexType_lazy = () -> CardPaymentBatchTransferResponse4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferResponseV05.class.getMethod("getBatchTransferResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CardPaymentBatchTransferResponse4 getValue(AcceptorBatchTransferResponseV05 obj) {
+			return obj.getBatchTransferResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferResponseV05 obj, CardPaymentBatchTransferResponse4 value) {
+			obj.setBatchTransferResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -260,7 +261,7 @@ public class AcceptorBatchTransferResponseV05 {
 	 * AcceptorBatchTransferResponseV04.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferResponseV05, Optional<ContentInformationType12>> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorBatchTransferResponseV05, Optional<ContentInformationType12>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,12 +274,14 @@ public class AcceptorBatchTransferResponseV05 {
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferResponseV05.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType12> getValue(AcceptorBatchTransferResponseV05 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferResponseV05 obj, Optional<ContentInformationType12> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
@@ -290,10 +293,10 @@ public class AcceptorBatchTransferResponseV05 {
 				definition = "The AcceptorBatchTransferResponse is sent by the acquirer (or its agent) to inform the acceptor (or its agent) of the transfer in a previous AcceptorBatchTransfer of a collection of transactions.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorBatchTransferResponseV06.mmObject());
 				previousVersion_lazy = () -> AcceptorBatchTransferResponseV04.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrBtchTrfRspn";
-				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionPreviousVersion.mmObject();
+				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.mmHeader, com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.mmBatchTransferResponse,
 						com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV05.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

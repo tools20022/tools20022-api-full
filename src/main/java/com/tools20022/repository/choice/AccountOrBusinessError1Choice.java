@@ -125,7 +125,7 @@ public class AccountOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOrBusinessError1Choice, CashAccount23> mmAccount = new MMMessageAssociationEnd<AccountOrBusinessError1Choice, CashAccount23>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmObject();
@@ -139,6 +139,16 @@ public class AccountOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CashAccount23.mmObject();
+		}
+
+		@Override
+		public CashAccount23 getValue(AccountOrBusinessError1Choice obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountOrBusinessError1Choice obj, CashAccount23 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -177,7 +187,7 @@ public class AccountOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountOrBusinessError1Choice, List<ErrorHandling3>> mmBusinessError = new MMMessageAssociationEnd<AccountOrBusinessError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class AccountOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(AccountOrBusinessError1Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(AccountOrBusinessError1Choice obj, List<ErrorHandling3> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

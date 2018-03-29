@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ChargeOrCommissionDiscount2;
+import com.tools20022.repository.msg.PartyIdentification113;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +121,7 @@ public class Fee4 {
 	 * Fee1.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee4, ChargeType6Choice> mmType = new MMMessageAttribute<Fee4, ChargeType6Choice>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee4.mmObject();
@@ -132,6 +134,16 @@ public class Fee4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ChargeType6Choice.mmObject();
+		}
+
+		@Override
+		public ChargeType6Choice getValue(Fee4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Fee4 obj, ChargeType6Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Bsis")
@@ -171,7 +183,7 @@ public class Fee4 {
 	 * {@linkplain com.tools20022.repository.msg.Fee1#mmBasis Fee1.mmBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee4, Optional<ChargeBasis2Choice>> mmBasis = new MMMessageAttribute<Fee4, Optional<ChargeBasis2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee4.mmObject();
@@ -184,6 +196,16 @@ public class Fee4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ChargeBasis2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeBasis2Choice> getValue(Fee4 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(Fee4 obj, Optional<ChargeBasis2Choice> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -224,7 +246,7 @@ public class Fee4 {
 	 * Fee1.mmStandardAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee4, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Fee4, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee4.mmObject();
@@ -237,6 +259,16 @@ public class Fee4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Fee4 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Fee4 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "DscntDtls")
@@ -275,7 +307,7 @@ public class Fee4 {
 	 * Fee1.mmDiscountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDiscountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Fee4, Optional<ChargeOrCommissionDiscount2>> mmDiscountDetails = new MMMessageAssociationEnd<Fee4, Optional<ChargeOrCommissionDiscount2>>() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee4.mmObject();
@@ -288,7 +320,17 @@ public class Fee4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ChargeOrCommissionDiscount2.mmObject();
+			type_lazy = () -> ChargeOrCommissionDiscount2.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeOrCommissionDiscount2> getValue(Fee4 obj) {
+			return obj.getDiscountDetails();
+		}
+
+		@Override
+		public void setValue(Fee4 obj, Optional<ChargeOrCommissionDiscount2> value) {
+			obj.setDiscountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgBr")
@@ -324,7 +366,7 @@ public class Fee4 {
 	 * definition} = "Party that bears the fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee4, Optional<ChargeBearer1Code>> mmChargeBearer = new MMMessageAttribute<Fee4, Optional<ChargeBearer1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee4.mmObject();
@@ -336,6 +378,16 @@ public class Fee4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearer1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeBearer1Code> getValue(Fee4 obj) {
+			return obj.getChargeBearer();
+		}
+
+		@Override
+		public void setValue(Fee4 obj, Optional<ChargeBearer1Code> value) {
+			obj.setChargeBearer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -377,7 +429,7 @@ public class Fee4 {
 	 * Fee1.mmRecipientIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee4, Optional<PartyIdentification113>> mmRecipientIdentification = new MMMessageAttribute<Fee4, Optional<PartyIdentification113>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee4.mmObject();
@@ -389,7 +441,17 @@ public class Fee4 {
 			previousVersion_lazy = () -> Fee1.mmRecipientIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
+			complexType_lazy = () -> PartyIdentification113.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification113> getValue(Fee4 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Fee4 obj, Optional<PartyIdentification113> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 
@@ -440,7 +502,7 @@ public class Fee4 {
 		return discountDetails == null ? Optional.empty() : Optional.of(discountDetails);
 	}
 
-	public Fee4 setDiscountDetails(com.tools20022.repository.msg.ChargeOrCommissionDiscount2 discountDetails) {
+	public Fee4 setDiscountDetails(ChargeOrCommissionDiscount2 discountDetails) {
 		this.discountDetails = discountDetails;
 		return this;
 	}
@@ -458,7 +520,7 @@ public class Fee4 {
 		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public Fee4 setRecipientIdentification(com.tools20022.repository.msg.PartyIdentification113 recipientIdentification) {
+	public Fee4 setRecipientIdentification(PartyIdentification113 recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
 		return this;
 	}

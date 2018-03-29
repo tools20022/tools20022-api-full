@@ -125,7 +125,7 @@ public class TransactionStatus3 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionStatus3, BaselineStatus2Code> mmStatus = new MMMessageAttribute<TransactionStatus3, BaselineStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> BaselineStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionStatus3.mmObject();
@@ -137,6 +137,16 @@ public class TransactionStatus3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaselineStatus2Code.mmObject();
+		}
+
+		@Override
+		public BaselineStatus2Code getValue(TransactionStatus3 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransactionStatus3 obj, BaselineStatus2Code value) {
+			obj.setStatus(value);
 		}
 	};
 

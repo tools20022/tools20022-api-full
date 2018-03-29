@@ -104,7 +104,7 @@ public class ActionMessage5 {
 	 * definition} = "Format of the content."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActionMessage5, Optional<OutputFormat1Code>> mmFormat = new MMMessageAttribute<ActionMessage5, Optional<OutputFormat1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage5.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class ActionMessage5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OutputFormat1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OutputFormat1Code> getValue(ActionMessage5 obj) {
+			return obj.getFormat();
+		}
+
+		@Override
+		public void setValue(ActionMessage5 obj, Optional<OutputFormat1Code> value) {
+			obj.setFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgCntt", required = true)
@@ -158,7 +168,7 @@ public class ActionMessage5 {
 	 * ActionMessage1.mmMessageContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageContent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActionMessage5, Max20000Text> mmMessageContent = new MMMessageAttribute<ActionMessage5, Max20000Text>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage5.mmObject();
@@ -171,6 +181,16 @@ public class ActionMessage5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max20000Text.mmObject();
+		}
+
+		@Override
+		public Max20000Text getValue(ActionMessage5 obj) {
+			return obj.getMessageContent();
+		}
+
+		@Override
+		public void setValue(ActionMessage5 obj, Max20000Text value) {
+			obj.setMessageContent(value);
 		}
 	};
 

@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorAuthorisationResponseV01;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment3;
+import com.tools20022.repository.msg.CardPaymentTransaction2;
+import com.tools20022.repository.msg.CardPaymentTransaction9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +126,7 @@ public class AcceptorAuthorisationResponse1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationResponse1, CardPaymentEnvironment3> mmEnvironment = new MMMessageAssociationEnd<AcceptorAuthorisationResponse1, CardPaymentEnvironment3>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse1.mmObject();
@@ -135,7 +138,17 @@ public class AcceptorAuthorisationResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment3.mmObject();
+			type_lazy = () -> CardPaymentEnvironment3.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment3 getValue(AcceptorAuthorisationResponse1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponse1 obj, CardPaymentEnvironment3 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -173,7 +186,7 @@ public class AcceptorAuthorisationResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationResponse1, CardPaymentTransaction2> mmTransaction = new MMMessageAssociationEnd<AcceptorAuthorisationResponse1, CardPaymentTransaction2>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse1.mmObject();
@@ -185,7 +198,17 @@ public class AcceptorAuthorisationResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction2.mmObject();
+			type_lazy = () -> CardPaymentTransaction2.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction2 getValue(AcceptorAuthorisationResponse1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponse1 obj, CardPaymentTransaction2 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -223,7 +246,7 @@ public class AcceptorAuthorisationResponse1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorAuthorisationResponse1, CardPaymentTransaction9> mmTransactionResponse = new MMMessageAssociationEnd<AcceptorAuthorisationResponse1, CardPaymentTransaction9>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorAuthorisationResponse1.mmObject();
@@ -235,7 +258,17 @@ public class AcceptorAuthorisationResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction9.mmObject();
+			type_lazy = () -> CardPaymentTransaction9.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction9 getValue(AcceptorAuthorisationResponse1 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponse1 obj, CardPaymentTransaction9 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 
@@ -260,7 +293,7 @@ public class AcceptorAuthorisationResponse1 {
 		return environment;
 	}
 
-	public AcceptorAuthorisationResponse1 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment3 environment) {
+	public AcceptorAuthorisationResponse1 setEnvironment(CardPaymentEnvironment3 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -269,7 +302,7 @@ public class AcceptorAuthorisationResponse1 {
 		return transaction;
 	}
 
-	public AcceptorAuthorisationResponse1 setTransaction(com.tools20022.repository.msg.CardPaymentTransaction2 transaction) {
+	public AcceptorAuthorisationResponse1 setTransaction(CardPaymentTransaction2 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
@@ -278,7 +311,7 @@ public class AcceptorAuthorisationResponse1 {
 		return transactionResponse;
 	}
 
-	public AcceptorAuthorisationResponse1 setTransactionResponse(com.tools20022.repository.msg.CardPaymentTransaction9 transactionResponse) {
+	public AcceptorAuthorisationResponse1 setTransactionResponse(CardPaymentTransaction9 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -131,7 +132,7 @@ public class IntraPositionType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionType1, Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1>> mmBalanceFrom = new MMMessageAssociationEnd<IntraPositionType1, Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionType1.mmObject();
@@ -145,7 +146,17 @@ public class IntraPositionType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			type_lazy = () -> SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1> getValue(IntraPositionType1 obj) {
+			return obj.getBalanceFrom();
+		}
+
+		@Override
+		public void setValue(IntraPositionType1 obj, Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1> value) {
+			obj.setBalanceFrom(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalTo")
@@ -193,7 +204,7 @@ public class IntraPositionType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionType1, Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1>> mmBalanceTo = new MMMessageAssociationEnd<IntraPositionType1, Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionType1.mmObject();
@@ -207,7 +218,17 @@ public class IntraPositionType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			type_lazy = () -> SecuritiesSubBalanceTypeAndQuantityBreakdown1.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1> getValue(IntraPositionType1 obj) {
+			return obj.getBalanceTo();
+		}
+
+		@Override
+		public void setValue(IntraPositionType1 obj, Optional<SecuritiesSubBalanceTypeAndQuantityBreakdown1> value) {
+			obj.setBalanceTo(value.orElse(null));
 		}
 	};
 
@@ -231,7 +252,7 @@ public class IntraPositionType1 {
 		return balanceFrom == null ? Optional.empty() : Optional.of(balanceFrom);
 	}
 
-	public IntraPositionType1 setBalanceFrom(com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
+	public IntraPositionType1 setBalanceFrom(SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
 		this.balanceFrom = balanceFrom;
 		return this;
 	}
@@ -240,7 +261,7 @@ public class IntraPositionType1 {
 		return balanceTo == null ? Optional.empty() : Optional.of(balanceTo);
 	}
 
-	public IntraPositionType1 setBalanceTo(com.tools20022.repository.msg.SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceTo) {
+	public IntraPositionType1 setBalanceTo(SecuritiesSubBalanceTypeAndQuantityBreakdown1 balanceTo) {
 		this.balanceTo = balanceTo;
 		return this;
 	}

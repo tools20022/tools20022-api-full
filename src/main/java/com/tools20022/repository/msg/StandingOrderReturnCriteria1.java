@@ -145,7 +145,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Defines the criteria used to report on a multilateral balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandingOrderIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmStandingOrderIdentificationIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -156,6 +156,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getStandingOrderIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setStandingOrderIdentificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpInd")
@@ -188,7 +198,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the standing order type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmTypeIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -199,6 +209,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getTypeIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setTypeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SysMmbInd")
@@ -232,7 +252,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the system member identification is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemMemberIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmSystemMemberIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -243,6 +263,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getSystemMemberIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setSystemMemberIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RspnsblPtyInd")
@@ -276,7 +306,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the responsible party identification is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponsiblePartyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmResponsiblePartyIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -287,6 +317,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getResponsiblePartyIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setResponsiblePartyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyInd")
@@ -319,7 +359,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the account currency is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmCurrencyIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -330,6 +370,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getCurrencyIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setCurrencyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAcctInd")
@@ -362,7 +412,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the account type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtorAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmDebtorAccountIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -373,6 +423,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getDebtorAccountIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setDebtorAccountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAcctInd")
@@ -405,7 +465,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the multilateral limit is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditorAccountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmCreditorAccountIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -416,6 +476,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getCreditorAccountIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setCreditorAccountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AssoctdPoolAcct")
@@ -449,7 +519,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the associated pool account is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssociatedPoolAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmAssociatedPoolAccount = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -460,6 +530,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getAssociatedPoolAccount();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setAssociatedPoolAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrqcyInd")
@@ -492,7 +572,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the frequency is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequencyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmFrequencyIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -503,6 +583,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getFrequencyIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setFrequencyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctnTpInd")
@@ -535,7 +625,7 @@ public class StandingOrderReturnCriteria1 {
 	 * definition} = "Indicates whether the execution type is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutionTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmExecutionTypeIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -546,6 +636,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getExecutionTypeIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setExecutionTypeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtyFrInd")
@@ -579,7 +679,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the account standing order is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidityFromIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmValidityFromIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -590,6 +690,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getValidityFromIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setValidityFromIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldToInd")
@@ -623,7 +733,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the account owner information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidToIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmValidToIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -634,6 +744,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getValidToIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setValidToIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkSetIdInd")
@@ -667,7 +787,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the link set identification is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkSetIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmLinkSetIdentificationIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -678,6 +798,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getLinkSetIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setLinkSetIdentificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkSetOrdrIdInd")
@@ -712,7 +842,7 @@ public class StandingOrderReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkSetOrderIdentificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmLinkSetOrderIdentificationIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -723,6 +853,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getLinkSetOrderIdentificationIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setLinkSetOrderIdentificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkSetOrdrSeqInd")
@@ -757,7 +897,7 @@ public class StandingOrderReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkSetOrderSequenceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmLinkSetOrderSequenceIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -768,6 +908,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getLinkSetOrderSequenceIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setLinkSetOrderSequenceIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlAmtInd")
@@ -802,7 +952,7 @@ public class StandingOrderReturnCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmountIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmTotalAmountIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -813,6 +963,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getTotalAmountIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setTotalAmountIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ZeroSweepInd")
@@ -846,7 +1006,7 @@ public class StandingOrderReturnCriteria1 {
 	 * "Indicates whether the zero sweeping indicator is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmZeroSweepIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>> mmZeroSweepIndicator = new MMMessageAttribute<StandingOrderReturnCriteria1, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
@@ -857,6 +1017,16 @@ public class StandingOrderReturnCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(StandingOrderReturnCriteria1 obj) {
+			return obj.getZeroSweepIndicator();
+		}
+
+		@Override
+		public void setValue(StandingOrderReturnCriteria1 obj, Optional<RequestedIndicator> value) {
+			obj.setZeroSweepIndicator(value.orElse(null));
 		}
 	};
 

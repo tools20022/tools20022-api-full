@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Acquirer7;
+import com.tools20022.repository.msg.AutomatedTellerMachine6;
+import com.tools20022.repository.msg.TerminalHosting1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +127,7 @@ public class ATMEnvironment8 {
 	 * ATMEnvironment7.mmAcquirer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcquirer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMEnvironment8, Optional<Acquirer7>> mmAcquirer = new MMMessageAssociationEnd<ATMEnvironment8, Optional<Acquirer7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment8.mmObject();
 			isDerived = false;
@@ -137,7 +140,17 @@ public class ATMEnvironment8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Acquirer7.mmObject();
+			type_lazy = () -> Acquirer7.mmObject();
+		}
+
+		@Override
+		public Optional<Acquirer7> getValue(ATMEnvironment8 obj) {
+			return obj.getAcquirer();
+		}
+
+		@Override
+		public void setValue(ATMEnvironment8 obj, Optional<Acquirer7> value) {
+			obj.setAcquirer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMMgrId")
@@ -182,7 +195,7 @@ public class ATMEnvironment8 {
 	 * ATMEnvironment7.mmATMManager}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMManagerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEnvironment8, Optional<Max35Text>> mmATMManagerIdentification = new MMMessageAttribute<ATMEnvironment8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment8.mmObject();
 			isDerived = false;
@@ -195,6 +208,16 @@ public class ATMEnvironment8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEnvironment8 obj) {
+			return obj.getATMManagerIdentification();
+		}
+
+		@Override
+		public void setValue(ATMEnvironment8 obj, Optional<Max35Text> value) {
+			obj.setATMManagerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HstgNtty")
@@ -230,7 +253,7 @@ public class ATMEnvironment8 {
 	 * ATMEnvironment7.mmHostingEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmHostingEntity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMEnvironment8, Optional<TerminalHosting1>> mmHostingEntity = new MMMessageAssociationEnd<ATMEnvironment8, Optional<TerminalHosting1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment8.mmObject();
 			isDerived = false;
@@ -242,7 +265,17 @@ public class ATMEnvironment8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TerminalHosting1.mmObject();
+			type_lazy = () -> TerminalHosting1.mmObject();
+		}
+
+		@Override
+		public Optional<TerminalHosting1> getValue(ATMEnvironment8 obj) {
+			return obj.getHostingEntity();
+		}
+
+		@Override
+		public void setValue(ATMEnvironment8 obj, Optional<TerminalHosting1> value) {
+			obj.setHostingEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATM", required = true)
@@ -286,7 +319,7 @@ public class ATMEnvironment8 {
 	 * ATMEnvironment7.mmATM}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMEnvironment8, AutomatedTellerMachine6> mmATM = new MMMessageAssociationEnd<ATMEnvironment8, AutomatedTellerMachine6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEnvironment8.mmObject();
 			isDerived = false;
@@ -299,7 +332,17 @@ public class ATMEnvironment8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine6.mmObject();
+			type_lazy = () -> AutomatedTellerMachine6.mmObject();
+		}
+
+		@Override
+		public AutomatedTellerMachine6 getValue(ATMEnvironment8 obj) {
+			return obj.getATM();
+		}
+
+		@Override
+		public void setValue(ATMEnvironment8 obj, AutomatedTellerMachine6 value) {
+			obj.setATM(value);
 		}
 	};
 
@@ -323,7 +366,7 @@ public class ATMEnvironment8 {
 		return acquirer == null ? Optional.empty() : Optional.of(acquirer);
 	}
 
-	public ATMEnvironment8 setAcquirer(com.tools20022.repository.msg.Acquirer7 acquirer) {
+	public ATMEnvironment8 setAcquirer(Acquirer7 acquirer) {
 		this.acquirer = acquirer;
 		return this;
 	}
@@ -341,7 +384,7 @@ public class ATMEnvironment8 {
 		return hostingEntity == null ? Optional.empty() : Optional.of(hostingEntity);
 	}
 
-	public ATMEnvironment8 setHostingEntity(com.tools20022.repository.msg.TerminalHosting1 hostingEntity) {
+	public ATMEnvironment8 setHostingEntity(TerminalHosting1 hostingEntity) {
 		this.hostingEntity = hostingEntity;
 		return this;
 	}
@@ -350,7 +393,7 @@ public class ATMEnvironment8 {
 		return aTM;
 	}
 
-	public ATMEnvironment8 setATM(com.tools20022.repository.msg.AutomatedTellerMachine6 aTM) {
+	public ATMEnvironment8 setATM(AutomatedTellerMachine6 aTM) {
 		this.aTM = Objects.requireNonNull(aTM);
 		return this;
 	}

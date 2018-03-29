@@ -119,7 +119,7 @@ public class AcceptedStatusReason11 {
 	 * "Specifies the reason why the instruction has been accepted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptedStatusReason11, AcceptedReason12Choice> mmReasonCode = new MMMessageAssociationEnd<AcceptedStatusReason11, AcceptedReason12Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason11.mmObject();
@@ -132,6 +132,16 @@ public class AcceptedStatusReason11 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcceptedReason12Choice.mmObject();
+		}
+
+		@Override
+		public AcceptedReason12Choice getValue(AcceptedStatusReason11 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason11 obj, AcceptedReason12Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -170,7 +180,7 @@ public class AcceptedStatusReason11 {
 	 * "Provides additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptedStatusReason11, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AcceptedStatusReason11, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason11.mmObject();
@@ -182,6 +192,16 @@ public class AcceptedStatusReason11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(AcceptedStatusReason11 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason11 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

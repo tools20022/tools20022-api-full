@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catp.ATMInquiryRequestV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMContext5;
+import com.tools20022.repository.msg.ATMEnvironment4;
+import com.tools20022.repository.msg.ATMTransaction6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +110,7 @@ public class ATMInquiryRequest1 {
 	 * definition} = "Environment in which the inquiry is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMInquiryRequest1, ATMEnvironment4> mmEnvironment = new MMMessageAssociationEnd<ATMInquiryRequest1, ATMEnvironment4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMInquiryRequest1.mmObject();
 			isDerived = false;
@@ -118,7 +121,17 @@ public class ATMInquiryRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment4.mmObject();
+			type_lazy = () -> ATMEnvironment4.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment4 getValue(ATMInquiryRequest1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMInquiryRequest1 obj, ATMEnvironment4 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Cntxt", required = true)
@@ -149,7 +162,7 @@ public class ATMInquiryRequest1 {
 	 * definition} = "Context in which the inquiry is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMInquiryRequest1, ATMContext5> mmContext = new MMMessageAssociationEnd<ATMInquiryRequest1, ATMContext5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMInquiryRequest1.mmObject();
 			isDerived = false;
@@ -160,7 +173,17 @@ public class ATMInquiryRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMContext5.mmObject();
+			type_lazy = () -> ATMContext5.mmObject();
+		}
+
+		@Override
+		public ATMContext5 getValue(ATMInquiryRequest1 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(ATMInquiryRequest1 obj, ATMContext5 value) {
+			obj.setContext(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -191,7 +214,7 @@ public class ATMInquiryRequest1 {
 	 * definition} = "Inquiry information for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMInquiryRequest1, ATMTransaction6> mmTransaction = new MMMessageAssociationEnd<ATMInquiryRequest1, ATMTransaction6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMInquiryRequest1.mmObject();
 			isDerived = false;
@@ -202,7 +225,17 @@ public class ATMInquiryRequest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction6.mmObject();
+			type_lazy = () -> ATMTransaction6.mmObject();
+		}
+
+		@Override
+		public ATMTransaction6 getValue(ATMInquiryRequest1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ATMInquiryRequest1 obj, ATMTransaction6 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -225,7 +258,7 @@ public class ATMInquiryRequest1 {
 		return environment;
 	}
 
-	public ATMInquiryRequest1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment4 environment) {
+	public ATMInquiryRequest1 setEnvironment(ATMEnvironment4 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -234,7 +267,7 @@ public class ATMInquiryRequest1 {
 		return context;
 	}
 
-	public ATMInquiryRequest1 setContext(com.tools20022.repository.msg.ATMContext5 context) {
+	public ATMInquiryRequest1 setContext(ATMContext5 context) {
 		this.context = Objects.requireNonNull(context);
 		return this;
 	}
@@ -243,7 +276,7 @@ public class ATMInquiryRequest1 {
 		return transaction;
 	}
 
-	public ATMInquiryRequest1 setTransaction(com.tools20022.repository.msg.ATMTransaction6 transaction) {
+	public ATMInquiryRequest1 setTransaction(ATMTransaction6 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

@@ -122,7 +122,7 @@ public class CorporateActionGeneralInformationSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD4, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionGeneralInformationSD4, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD4.mmObject();
 			isDerived = false;
@@ -134,6 +134,16 @@ public class CorporateActionGeneralInformationSD4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionGeneralInformationSD4 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD4 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "EvtTp")
@@ -179,7 +189,7 @@ public class CorporateActionGeneralInformationSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD4, Optional<ExtendedEventType1Code>> mmEventType = new MMMessageAttribute<CorporateActionGeneralInformationSD4, Optional<ExtendedEventType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD4.mmObject();
 			isDerived = false;
@@ -192,6 +202,16 @@ public class CorporateActionGeneralInformationSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExtendedEventType1Code> getValue(CorporateActionGeneralInformationSD4 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD4 obj, Optional<ExtendedEventType1Code> value) {
+			obj.setEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubEvtTp")
@@ -237,7 +257,7 @@ public class CorporateActionGeneralInformationSD4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD4, Optional<DTCCSubEventType2Code>> mmSubEventType = new MMMessageAttribute<CorporateActionGeneralInformationSD4, Optional<DTCCSubEventType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD4.mmObject();
 			isDerived = false;
@@ -250,6 +270,16 @@ public class CorporateActionGeneralInformationSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCCSubEventType2Code> getValue(CorporateActionGeneralInformationSD4 obj) {
+			return obj.getSubEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD4 obj, Optional<DTCCSubEventType2Code> value) {
+			obj.setSubEventType(value.orElse(null));
 		}
 	};
 

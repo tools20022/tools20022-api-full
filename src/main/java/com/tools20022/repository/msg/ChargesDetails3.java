@@ -106,7 +106,7 @@ public class ChargesDetails3 {
 	 * definition} = "Specifies the type of charges as a code or free text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ChargesDetails3, ChargesType1Choice> mmType = new MMMessageAssociationEnd<ChargesDetails3, ChargesType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesDetails3.mmObject();
@@ -119,6 +119,16 @@ public class ChargesDetails3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ChargesType1Choice.mmObject();
+		}
+
+		@Override
+		public ChargesType1Choice getValue(ChargesDetails3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ChargesDetails3 obj, ChargesType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AmtOrPctg", required = true)
@@ -150,7 +160,7 @@ public class ChargesDetails3 {
 	 * definition} = "Specifies if it is a fixed amount or a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountOrPercentage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ChargesDetails3, AmountOrPercentage2Choice> mmAmountOrPercentage = new MMMessageAssociationEnd<ChargesDetails3, AmountOrPercentage2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesDetails3.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class ChargesDetails3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountOrPercentage2Choice.mmObject();
+		}
+
+		@Override
+		public AmountOrPercentage2Choice getValue(ChargesDetails3 obj) {
+			return obj.getAmountOrPercentage();
+		}
+
+		@Override
+		public void setValue(ChargesDetails3 obj, AmountOrPercentage2Choice value) {
+			obj.setAmountOrPercentage(value);
 		}
 	};
 

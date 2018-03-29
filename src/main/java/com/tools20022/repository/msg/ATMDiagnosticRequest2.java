@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMDiagnosticRequestV02;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMEnvironment9;
+import com.tools20022.repository.msg.ATMStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +107,7 @@ public class ATMDiagnosticRequest2 {
 	 * definition} = "Environment of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDiagnosticRequest2, ATMEnvironment9> mmEnvironment = new MMMessageAssociationEnd<ATMDiagnosticRequest2, ATMEnvironment9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDiagnosticRequest2.mmObject();
 			isDerived = false;
@@ -116,7 +118,17 @@ public class ATMDiagnosticRequest2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment9.mmObject();
+			type_lazy = () -> ATMEnvironment9.mmObject();
+		}
+
+		@Override
+		public ATMEnvironment9 getValue(ATMDiagnosticRequest2 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMDiagnosticRequest2 obj, ATMEnvironment9 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "ATMGblSts", required = true)
@@ -146,7 +158,7 @@ public class ATMDiagnosticRequest2 {
 	 * definition} = "Global status of the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATMGlobalStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMDiagnosticRequest2, ATMStatus1> mmATMGlobalStatus = new MMMessageAssociationEnd<ATMDiagnosticRequest2, ATMStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMDiagnosticRequest2.mmObject();
 			isDerived = false;
@@ -157,7 +169,17 @@ public class ATMDiagnosticRequest2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMStatus1.mmObject();
+			type_lazy = () -> ATMStatus1.mmObject();
+		}
+
+		@Override
+		public ATMStatus1 getValue(ATMDiagnosticRequest2 obj) {
+			return obj.getATMGlobalStatus();
+		}
+
+		@Override
+		public void setValue(ATMDiagnosticRequest2 obj, ATMStatus1 value) {
+			obj.setATMGlobalStatus(value);
 		}
 	};
 
@@ -179,7 +201,7 @@ public class ATMDiagnosticRequest2 {
 		return environment;
 	}
 
-	public ATMDiagnosticRequest2 setEnvironment(com.tools20022.repository.msg.ATMEnvironment9 environment) {
+	public ATMDiagnosticRequest2 setEnvironment(ATMEnvironment9 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -188,7 +210,7 @@ public class ATMDiagnosticRequest2 {
 		return aTMGlobalStatus;
 	}
 
-	public ATMDiagnosticRequest2 setATMGlobalStatus(com.tools20022.repository.msg.ATMStatus1 aTMGlobalStatus) {
+	public ATMDiagnosticRequest2 setATMGlobalStatus(ATMStatus1 aTMGlobalStatus) {
 		this.aTMGlobalStatus = Objects.requireNonNull(aTMGlobalStatus);
 		return this;
 	}

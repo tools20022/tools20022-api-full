@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PreviousYearChoice;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ISAYearsOfIssue;
@@ -104,7 +105,7 @@ public class PEPOrISAChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PEPOrISAChoice, ISAYearsOfIssue> mmISA = new MMMessageAssociationEnd<PEPOrISAChoice, ISAYearsOfIssue>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PEPOrISAChoice.mmObject();
@@ -117,6 +118,16 @@ public class PEPOrISAChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ISAYearsOfIssue.mmObject();
+		}
+
+		@Override
+		public ISAYearsOfIssue getValue(PEPOrISAChoice obj) {
+			return obj.getISA();
+		}
+
+		@Override
+		public void setValue(PEPOrISAChoice obj, ISAYearsOfIssue value) {
+			obj.setISA(value);
 		}
 	};
 	@XmlElement(name = "PEP", required = true)
@@ -154,7 +165,7 @@ public class PEPOrISAChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPEP = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PEPOrISAChoice, PreviousYearChoice> mmPEP = new MMMessageAssociationEnd<PEPOrISAChoice, PreviousYearChoice>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PEPOrISAChoice.mmObject();
@@ -166,7 +177,17 @@ public class PEPOrISAChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PreviousYearChoice.mmObject();
+			type_lazy = () -> PreviousYearChoice.mmObject();
+		}
+
+		@Override
+		public PreviousYearChoice getValue(PEPOrISAChoice obj) {
+			return obj.getPEP();
+		}
+
+		@Override
+		public void setValue(PEPOrISAChoice obj, PreviousYearChoice value) {
+			obj.setPEP(value);
 		}
 	};
 
@@ -197,7 +218,7 @@ public class PEPOrISAChoice {
 		return pEP;
 	}
 
-	public PEPOrISAChoice setPEP(com.tools20022.repository.choice.PreviousYearChoice pEP) {
+	public PEPOrISAChoice setPEP(PreviousYearChoice pEP) {
 		this.pEP = Objects.requireNonNull(pEP);
 		return this;
 	}

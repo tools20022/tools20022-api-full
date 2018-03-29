@@ -126,7 +126,7 @@ public class FixingConditions1 {
 	 * definition} = "The date on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FixingConditions1, ISODate> mmTradeDate = new MMMessageAttribute<FixingConditions1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FixingConditions1.mmObject();
@@ -138,6 +138,16 @@ public class FixingConditions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(FixingConditions1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(FixingConditions1 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "OrgtrRef", required = true)
@@ -176,7 +186,7 @@ public class FixingConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginatorReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FixingConditions1, Max35Text> mmOriginatorReference = new MMMessageAttribute<FixingConditions1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FixingConditions1.mmObject();
@@ -188,6 +198,16 @@ public class FixingConditions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(FixingConditions1 obj) {
+			return obj.getOriginatorReference();
+		}
+
+		@Override
+		public void setValue(FixingConditions1 obj, Max35Text value) {
+			obj.setOriginatorReference(value);
 		}
 	};
 	@XmlElement(name = "CmonRef")
@@ -224,7 +244,7 @@ public class FixingConditions1 {
 	 * definition} = "Reference common to both parties of the trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FixingConditions1, Optional<Max35Text>> mmCommonReference = new MMMessageAttribute<FixingConditions1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FixingConditions1.mmObject();
@@ -236,6 +256,16 @@ public class FixingConditions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FixingConditions1 obj) {
+			return obj.getCommonReference();
+		}
+
+		@Override
+		public void setValue(FixingConditions1 obj, Optional<Max35Text> value) {
+			obj.setCommonReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -274,7 +304,7 @@ public class FixingConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FixingConditions1, Optional<Max35Text>> mmRelatedReference = new MMMessageAttribute<FixingConditions1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FixingConditions1.mmObject();
@@ -286,6 +316,16 @@ public class FixingConditions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FixingConditions1 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(FixingConditions1 obj, Optional<Max35Text> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgSdBuyAmt", required = true)
@@ -323,7 +363,7 @@ public class FixingConditions1 {
 	 * definition} = "Currency and amount bought in a foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingSideBuyAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FixingConditions1, ActiveOrHistoricCurrencyAndAmount> mmTradingSideBuyAmount = new MMMessageAttribute<FixingConditions1, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmBuyAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FixingConditions1.mmObject();
@@ -335,6 +375,16 @@ public class FixingConditions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(FixingConditions1 obj) {
+			return obj.getTradingSideBuyAmount();
+		}
+
+		@Override
+		public void setValue(FixingConditions1 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setTradingSideBuyAmount(value);
 		}
 	};
 	@XmlElement(name = "TradgSdSellAmt", required = true)
@@ -372,7 +422,7 @@ public class FixingConditions1 {
 	 * definition} = "Currency and amount sold in a foreign exchange trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingSideSellAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FixingConditions1, ActiveOrHistoricCurrencyAndAmount> mmTradingSideSellAmount = new MMMessageAttribute<FixingConditions1, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmSellAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FixingConditions1.mmObject();
@@ -384,6 +434,16 @@ public class FixingConditions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(FixingConditions1 obj) {
+			return obj.getTradingSideSellAmount();
+		}
+
+		@Override
+		public void setValue(FixingConditions1 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setTradingSideSellAmount(value);
 		}
 	};
 	@XmlElement(name = "XchgRate", required = true)
@@ -422,7 +482,7 @@ public class FixingConditions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FixingConditions1, BaseOneRate> mmExchangeRate = new MMMessageAttribute<FixingConditions1, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FixingConditions1.mmObject();
@@ -434,6 +494,16 @@ public class FixingConditions1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(FixingConditions1 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(FixingConditions1 obj, BaseOneRate value) {
+			obj.setExchangeRate(value);
 		}
 	};
 

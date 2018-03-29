@@ -103,7 +103,7 @@ public class ChargeBasis2Choice {
 	 * definition} = "Fee (charge/commission) basis expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeBasis2Choice, TaxationBasis5Code> mmCode = new MMMessageAttribute<ChargeBasis2Choice, TaxationBasis5Code>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeBasis2Choice.mmObject();
@@ -115,6 +115,16 @@ public class ChargeBasis2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxationBasis5Code.mmObject();
+		}
+
+		@Override
+		public TaxationBasis5Code getValue(ChargeBasis2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ChargeBasis2Choice obj, TaxationBasis5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -153,7 +163,7 @@ public class ChargeBasis2Choice {
 	 * "Fee (charge/commission) basis expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeBasis2Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<ChargeBasis2Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeBasis2Choice.mmObject();
@@ -165,6 +175,16 @@ public class ChargeBasis2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(ChargeBasis2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ChargeBasis2Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

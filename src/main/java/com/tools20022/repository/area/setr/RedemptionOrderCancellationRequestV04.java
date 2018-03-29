@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesTradeLatestVersion;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -149,7 +148,7 @@ public class RedemptionOrderCancellationRequestV04 {
 	 * RedemptionOrderCancellationRequestV03.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,12 +160,14 @@ public class RedemptionOrderCancellationRequestV04 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionOrderCancellationRequestV04.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(RedemptionOrderCancellationRequestV04 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(RedemptionOrderCancellationRequestV04 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -199,7 +200,7 @@ public class RedemptionOrderCancellationRequestV04 {
 	 * RedemptionOrderCancellationRequestV03.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, Optional<AdditionalReference9>> mmPoolReference = new MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, Optional<AdditionalReference9>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,12 +212,14 @@ public class RedemptionOrderCancellationRequestV04 {
 			complexType_lazy = () -> AdditionalReference9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionOrderCancellationRequestV04.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference9> getValue(RedemptionOrderCancellationRequestV04 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(RedemptionOrderCancellationRequestV04 obj, Optional<AdditionalReference9> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -249,7 +252,7 @@ public class RedemptionOrderCancellationRequestV04 {
 	 * RedemptionOrderCancellationRequestV03.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, Optional<AdditionalReference8>> mmPreviousReference = new MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, Optional<AdditionalReference8>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,12 +264,14 @@ public class RedemptionOrderCancellationRequestV04 {
 			complexType_lazy = () -> AdditionalReference8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionOrderCancellationRequestV04.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference8> getValue(RedemptionOrderCancellationRequestV04 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(RedemptionOrderCancellationRequestV04 obj, Optional<AdditionalReference8> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MstrRef")
@@ -295,7 +300,7 @@ public class RedemptionOrderCancellationRequestV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, Optional<Max35Text>> mmMasterReference = new MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, Optional<Max35Text>>() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -306,12 +311,14 @@ public class RedemptionOrderCancellationRequestV04 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionOrderCancellationRequestV04.class.getMethod("getMasterReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(RedemptionOrderCancellationRequestV04 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(RedemptionOrderCancellationRequestV04 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRefs", required = true)
@@ -339,7 +346,7 @@ public class RedemptionOrderCancellationRequestV04 {
 	 * definition} = "Identification of the individual order to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOrderReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, List<InvestmentFundOrder9>> mmOrderReferences = new MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, List<InvestmentFundOrder9>>() {
 		{
 			xmlTag = "OrdrRefs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,12 +356,14 @@ public class RedemptionOrderCancellationRequestV04 {
 			complexType_lazy = () -> InvestmentFundOrder9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionOrderCancellationRequestV04.class.getMethod("getOrderReferences", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<InvestmentFundOrder9> getValue(RedemptionOrderCancellationRequestV04 obj) {
+			return obj.getOrderReferences();
+		}
+
+		@Override
+		public void setValue(RedemptionOrderCancellationRequestV04 obj, List<InvestmentFundOrder9> value) {
+			obj.setOrderReferences(value);
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -388,7 +397,7 @@ public class RedemptionOrderCancellationRequestV04 {
 	 * RedemptionOrderCancellationRequestV03.mmCopyDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, Optional<CopyInformation4>> mmCopyDetails = new MMMessageBuildingBlock<RedemptionOrderCancellationRequestV04, Optional<CopyInformation4>>() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -400,12 +409,14 @@ public class RedemptionOrderCancellationRequestV04 {
 			complexType_lazy = () -> CopyInformation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionOrderCancellationRequestV04.class.getMethod("getCopyDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyInformation4> getValue(RedemptionOrderCancellationRequestV04 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionOrderCancellationRequestV04 obj, Optional<CopyInformation4> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 

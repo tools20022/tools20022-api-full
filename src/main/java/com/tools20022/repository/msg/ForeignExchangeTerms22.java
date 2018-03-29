@@ -134,7 +134,7 @@ public class ForeignExchangeTerms22 {
 	 * ForeignExchangeTerms14.mmUnitCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms22, ActiveOrHistoricCurrencyCode> mmUnitCurrency = new MMMessageAttribute<ForeignExchangeTerms22, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms22.mmObject();
@@ -147,6 +147,16 @@ public class ForeignExchangeTerms22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(ForeignExchangeTerms22 obj) {
+			return obj.getUnitCurrency();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms22 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setUnitCurrency(value);
 		}
 	};
 	@XmlElement(name = "QtdCcy", required = true)
@@ -191,7 +201,7 @@ public class ForeignExchangeTerms22 {
 	 * ForeignExchangeTerms14.mmQuotedCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms22, ActiveOrHistoricCurrencyCode> mmQuotedCurrency = new MMMessageAttribute<ForeignExchangeTerms22, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms22.mmObject();
@@ -204,6 +214,16 @@ public class ForeignExchangeTerms22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(ForeignExchangeTerms22 obj) {
+			return obj.getQuotedCurrency();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms22 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setQuotedCurrency(value);
 		}
 	};
 	@XmlElement(name = "XchgRate", required = true)
@@ -250,7 +270,7 @@ public class ForeignExchangeTerms22 {
 	 * ForeignExchangeTerms14.mmExchangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms22, BaseOneRate> mmExchangeRate = new MMMessageAttribute<ForeignExchangeTerms22, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms22.mmObject();
@@ -264,6 +284,16 @@ public class ForeignExchangeTerms22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(ForeignExchangeTerms22 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms22 obj, BaseOneRate value) {
+			obj.setExchangeRate(value);
 		}
 	};
 	@XmlElement(name = "QtnDt")
@@ -308,7 +338,7 @@ public class ForeignExchangeTerms22 {
 	 * ForeignExchangeTerms14.mmQuotationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms22, Optional<ISODateTime>> mmQuotationDate = new MMMessageAttribute<ForeignExchangeTerms22, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms22.mmObject();
@@ -322,6 +352,16 @@ public class ForeignExchangeTerms22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(ForeignExchangeTerms22 obj) {
+			return obj.getQuotationDate();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms22 obj, Optional<ISODateTime> value) {
+			obj.setQuotationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtgInstn")
@@ -363,7 +403,7 @@ public class ForeignExchangeTerms22 {
 	 * ForeignExchangeTerms14.mmQuotingInstitution}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuotingInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ForeignExchangeTerms22, Optional<PartyIdentification71Choice>> mmQuotingInstitution = new MMMessageAssociationEnd<ForeignExchangeTerms22, Optional<PartyIdentification71Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms22.mmObject();
@@ -377,6 +417,16 @@ public class ForeignExchangeTerms22 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(ForeignExchangeTerms22 obj) {
+			return obj.getQuotingInstitution();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms22 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setQuotingInstitution(value.orElse(null));
 		}
 	};
 

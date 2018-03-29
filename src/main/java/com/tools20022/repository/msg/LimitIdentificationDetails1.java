@@ -141,7 +141,7 @@ public class LimitIdentificationDetails1 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentificationDetails1, Optional<SystemIdentificationChoice>> mmSystemIdentification = new MMMessageAttribute<LimitIdentificationDetails1, Optional<SystemIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails1.mmObject();
@@ -153,6 +153,16 @@ public class LimitIdentificationDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentificationChoice> getValue(LimitIdentificationDetails1 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentificationDetails1 obj, Optional<SystemIdentificationChoice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BilLmtCtrPtyId")
@@ -192,7 +202,7 @@ public class LimitIdentificationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentificationDetails1, Optional<MemberIdentificationChoice>> mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute<LimitIdentificationDetails1, Optional<MemberIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails1.mmObject();
@@ -204,6 +214,16 @@ public class LimitIdentificationDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<MemberIdentificationChoice> getValue(LimitIdentificationDetails1 obj) {
+			return obj.getBilateralLimitCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentificationDetails1 obj, Optional<MemberIdentificationChoice> value) {
+			obj.setBilateralLimitCounterpartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -240,7 +260,7 @@ public class LimitIdentificationDetails1 {
 	 * definition} = "Nature of the risk management limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentificationDetails1, LimitType1Code> mmType = new MMMessageAttribute<LimitIdentificationDetails1, LimitType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails1.mmObject();
@@ -252,6 +272,16 @@ public class LimitIdentificationDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LimitType1Code.mmObject();
+		}
+
+		@Override
+		public LimitType1Code getValue(LimitIdentificationDetails1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(LimitIdentificationDetails1 obj, LimitType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -289,7 +319,7 @@ public class LimitIdentificationDetails1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentificationDetails1, Optional<BICIdentifier>> mmAccountOwner = new MMMessageAttribute<LimitIdentificationDetails1, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails1.mmObject();
@@ -301,6 +331,16 @@ public class LimitIdentificationDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(LimitIdentificationDetails1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(LimitIdentificationDetails1 obj, Optional<BICIdentifier> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -339,7 +379,7 @@ public class LimitIdentificationDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentificationDetails1, Optional<AccountIdentification1Choice>> mmAccountIdentification = new MMMessageAssociationEnd<LimitIdentificationDetails1, Optional<AccountIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails1.mmObject();
@@ -352,6 +392,16 @@ public class LimitIdentificationDetails1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1Choice> getValue(LimitIdentificationDetails1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentificationDetails1 obj, Optional<AccountIdentification1Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 

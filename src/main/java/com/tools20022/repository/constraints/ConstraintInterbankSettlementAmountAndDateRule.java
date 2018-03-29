@@ -53,11 +53,15 @@ public class ConstraintInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<PaymentInstructionExtract2> forPaymentInstructionExtract2 = new MMConstraint<PaymentInstructionExtract2>() {
 		{
-			validator = ConstraintInterbankSettlementAmountAndDateRule::checkPaymentInstructionExtract2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmountAndDateRule";
 			definition = "If InterbankSettlementAmount is present, then InterbankSettlementDate is mandatory.\nIf InterbankSettlementAmount is not present, then InterbankSettlementDate is not allowed.";
 			owner_lazy = () -> PaymentInstructionExtract2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionExtract2 obj) throws Exception {
+			checkPaymentInstructionExtract2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintInterbankSettlementAmountAndDateRule {
 	 */
 	public static final MMConstraint<CorrectivePaymentInstructionExtract> forCorrectivePaymentInstructionExtract = new MMConstraint<CorrectivePaymentInstructionExtract>() {
 		{
-			validator = ConstraintInterbankSettlementAmountAndDateRule::checkCorrectivePaymentInstructionExtract;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmountAndDateRule";
 			definition = "If InterbankSettlementAmount is present, then InterbankSettlementDate is mandatory.\nIf InterbankSettlementAmount is not present, then InterbankSettlementDate is not allowed.";
 			owner_lazy = () -> CorrectivePaymentInstructionExtract.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorrectivePaymentInstructionExtract obj) throws Exception {
+			checkCorrectivePaymentInstructionExtract(obj);
 		}
 	};
 

@@ -99,7 +99,7 @@ public class Reference19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeLegNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference19, List<Max35Text>> mmTradeLegNotificationIdentification = new MMMessageAttribute<Reference19, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference19.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class Reference19 {
 			definition = "Reference allocated by the central counterparty - central counterpatry trade leg reference identification that uniquely identifies the trade.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(Reference19 obj) {
+			return obj.getTradeLegNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(Reference19 obj, List<Max35Text> value) {
+			obj.setTradeLegNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "NetPosId")
@@ -141,7 +151,7 @@ public class Reference19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetPositionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference19, Optional<Max35Text>> mmNetPositionIdentification = new MMMessageAttribute<Reference19, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference19.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class Reference19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference19 obj) {
+			return obj.getNetPositionIdentification();
+		}
+
+		@Override
+		public void setValue(Reference19 obj, Optional<Max35Text> value) {
+			obj.setNetPositionIdentification(value.orElse(null));
 		}
 	};
 

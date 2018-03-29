@@ -113,7 +113,7 @@ public class SettlementConditionModificationStatus4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementConditionModificationStatus4Choice, SettlementConditionModificationStatus1Code> mmCode = new MMMessageAttribute<SettlementConditionModificationStatus4Choice, SettlementConditionModificationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmSettlementConditionModificationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice.mmObject();
@@ -126,6 +126,16 @@ public class SettlementConditionModificationStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementConditionModificationStatus1Code.mmObject();
+		}
+
+		@Override
+		public SettlementConditionModificationStatus1Code getValue(SettlementConditionModificationStatus4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementConditionModificationStatus4Choice obj, SettlementConditionModificationStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class SettlementConditionModificationStatus4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementConditionModificationStatus4Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<SettlementConditionModificationStatus4Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementConditionModificationStatus4Choice.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class SettlementConditionModificationStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(SettlementConditionModificationStatus4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementConditionModificationStatus4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

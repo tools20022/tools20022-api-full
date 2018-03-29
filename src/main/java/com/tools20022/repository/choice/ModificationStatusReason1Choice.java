@@ -119,7 +119,7 @@ public class ModificationStatusReason1Choice {
 	 * CancellationStatusReason2Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationStatusReason1Choice, ExternalPaymentModificationRejection1Code> mmCode = new MMMessageAttribute<ModificationStatusReason1Choice, ExternalPaymentModificationRejection1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationStatusReason1Choice.mmObject();
@@ -132,6 +132,16 @@ public class ModificationStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalPaymentModificationRejection1Code.mmObject();
+		}
+
+		@Override
+		public ExternalPaymentModificationRejection1Code getValue(ModificationStatusReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ModificationStatusReason1Choice obj, ExternalPaymentModificationRejection1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class ModificationStatusReason1Choice {
 	 * CancellationStatusReason2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationStatusReason1Choice, Max35Text> mmProprietary = new MMMessageAttribute<ModificationStatusReason1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationStatusReason1Choice.mmObject();
@@ -186,6 +196,16 @@ public class ModificationStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ModificationStatusReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ModificationStatusReason1Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.ReportLine1;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -125,7 +124,7 @@ public class IntentToPayReportV01 {
 	 * definition} = "Identifies the report message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntentToPayReportV01, MessageIdentification1> mmReportIdentification = new MMMessageBuildingBlock<IntentToPayReportV01, MessageIdentification1>() {
 		{
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,12 +135,14 @@ public class IntentToPayReportV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntentToPayReportV01.class.getMethod("getReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(IntentToPayReportV01 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(IntentToPayReportV01 obj, MessageIdentification1 value) {
+			obj.setReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptdItms")
@@ -168,7 +169,7 @@ public class IntentToPayReportV01 {
 	 * definition} = "Reports on the intention to pay per purchase order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportedItems = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<IntentToPayReportV01, List<ReportLine1>> mmReportedItems = new MMMessageBuildingBlock<IntentToPayReportV01, List<ReportLine1>>() {
 		{
 			xmlTag = "RptdItms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +179,14 @@ public class IntentToPayReportV01 {
 			complexType_lazy = () -> ReportLine1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntentToPayReportV01.class.getMethod("getReportedItems", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ReportLine1> getValue(IntentToPayReportV01 obj) {
+			return obj.getReportedItems();
+		}
+
+		@Override
+		public void setValue(IntentToPayReportV01 obj, List<ReportLine1> value) {
+			obj.setReportedItems(value);
 		}
 	};
 

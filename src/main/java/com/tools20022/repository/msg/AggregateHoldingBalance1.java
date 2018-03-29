@@ -25,6 +25,9 @@ import com.tools20022.repository.codeset.FormOfSecurity1Code;
 import com.tools20022.repository.codeset.PhysicalTransferType1Code;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1;
+import com.tools20022.repository.msg.SecurityIdentification19;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -127,7 +130,7 @@ public class AggregateHoldingBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateHoldingBalance1, SecurityIdentification19> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<AggregateHoldingBalance1, SecurityIdentification19>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
@@ -139,7 +142,17 @@ public class AggregateHoldingBalance1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification19 getValue(AggregateHoldingBalance1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(AggregateHoldingBalance1 obj, SecurityIdentification19 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "HldgForm")
@@ -177,7 +190,7 @@ public class AggregateHoldingBalance1 {
 	 * definition} = "Form of ownership of the holding."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingForm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AggregateHoldingBalance1, Optional<FormOfSecurity1Code>> mmHoldingForm = new MMMessageAttribute<AggregateHoldingBalance1, Optional<FormOfSecurity1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
@@ -189,6 +202,16 @@ public class AggregateHoldingBalance1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<FormOfSecurity1Code> getValue(AggregateHoldingBalance1 obj) {
+			return obj.getHoldingForm();
+		}
+
+		@Override
+		public void setValue(AggregateHoldingBalance1 obj, Optional<FormOfSecurity1Code> value) {
+			obj.setHoldingForm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldgPhysTp")
@@ -228,7 +251,7 @@ public class AggregateHoldingBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingPhysicalType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AggregateHoldingBalance1, Optional<PhysicalTransferType1Code>> mmHoldingPhysicalType = new MMMessageAttribute<AggregateHoldingBalance1, Optional<PhysicalTransferType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PhysicalDelivery.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
@@ -241,9 +264,19 @@ public class AggregateHoldingBalance1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> PhysicalTransferType1Code.mmObject();
 		}
+
+		@Override
+		public Optional<PhysicalTransferType1Code> getValue(AggregateHoldingBalance1 obj) {
+			return obj.getHoldingPhysicalType();
+		}
+
+		@Override
+		public void setValue(AggregateHoldingBalance1 obj, Optional<PhysicalTransferType1Code> value) {
+			obj.setHoldingPhysicalType(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "BalForFinInstrm", required = true)
-	protected List<com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1> balanceForFinancialInstrument;
+	protected List<FinancialInstrumentAggregateBalance1> balanceForFinancialInstrument;
 	/**
 	 * 
 	 <p>
@@ -276,7 +309,7 @@ public class AggregateHoldingBalance1 {
 	 * "Balance breakdown on the net position of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceForFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateHoldingBalance1, List<FinancialInstrumentAggregateBalance1>> mmBalanceForFinancialInstrument = new MMMessageAssociationEnd<AggregateHoldingBalance1, List<FinancialInstrumentAggregateBalance1>>() {
 		{
 			businessComponentTrace_lazy = () -> AssetHolding.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
@@ -287,11 +320,21 @@ public class AggregateHoldingBalance1 {
 			definition = "Balance breakdown on the net position of the financial instrument.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1.mmObject();
+			type_lazy = () -> FinancialInstrumentAggregateBalance1.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentAggregateBalance1> getValue(AggregateHoldingBalance1 obj) {
+			return obj.getBalanceForFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(AggregateHoldingBalance1 obj, List<FinancialInstrumentAggregateBalance1> value) {
+			obj.setBalanceForFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -320,7 +363,7 @@ public class AggregateHoldingBalance1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AggregateHoldingBalance1, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<AggregateHoldingBalance1, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();
 			isDerived = false;
@@ -330,7 +373,17 @@ public class AggregateHoldingBalance1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(AggregateHoldingBalance1 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AggregateHoldingBalance1 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -355,7 +408,7 @@ public class AggregateHoldingBalance1 {
 		return financialInstrumentIdentification;
 	}
 
-	public AggregateHoldingBalance1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+	public AggregateHoldingBalance1 setFinancialInstrumentIdentification(SecurityIdentification19 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -382,7 +435,7 @@ public class AggregateHoldingBalance1 {
 		return balanceForFinancialInstrument == null ? balanceForFinancialInstrument = new ArrayList<>() : balanceForFinancialInstrument;
 	}
 
-	public AggregateHoldingBalance1 setBalanceForFinancialInstrument(List<com.tools20022.repository.msg.FinancialInstrumentAggregateBalance1> balanceForFinancialInstrument) {
+	public AggregateHoldingBalance1 setBalanceForFinancialInstrument(List<FinancialInstrumentAggregateBalance1> balanceForFinancialInstrument) {
 		this.balanceForFinancialInstrument = Objects.requireNonNull(balanceForFinancialInstrument);
 		return this;
 	}
@@ -391,7 +444,7 @@ public class AggregateHoldingBalance1 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public AggregateHoldingBalance1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public AggregateHoldingBalance1 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

@@ -51,11 +51,15 @@ public class ConstraintNotificationCancellationRequestStatusRule {
 	 */
 	public static final MMConstraint<AgentCANotificationStatusAdviceV01> forAgentCANotificationStatusAdviceV01 = new MMConstraint<AgentCANotificationStatusAdviceV01>() {
 		{
-			validator = ConstraintNotificationCancellationRequestStatusRule::checkAgentCANotificationStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellationRequestStatusRule";
 			definition = "If AgentCANotificationCancellationRequestIdentification is present then NotificationCancellationRequestStatus must be present.";
 			owner_lazy = () -> AgentCANotificationStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCANotificationStatusAdviceV01 obj) throws Exception {
+			checkAgentCANotificationStatusAdviceV01(obj);
 		}
 	};
 

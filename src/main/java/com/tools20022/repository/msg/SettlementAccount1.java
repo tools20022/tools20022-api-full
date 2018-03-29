@@ -23,7 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.CCPMemberObligationsReportV01;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection86;
+import com.tools20022.repository.msg.GenericIdentification165;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -67,6 +71,9 @@ import javax.xml.bind.annotation.XmlType;
  * SettlementAccount1.mmCurrency}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.CashAccount
+ * CashAccount}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -111,6 +118,11 @@ public class SettlementAccount1 {
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification165
 	 * GenericIdentification165}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Account#mmIdentification
+	 * Account.mmIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.SettlementAccount1
@@ -128,8 +140,9 @@ public class SettlementAccount1 {
 	 * definition} = "Identification of the settlement account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementAccount1, GenericIdentification165> mmIdentification = new MMMessageAssociationEnd<SettlementAccount1, GenericIdentification165>() {
 		{
+			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
@@ -139,7 +152,17 @@ public class SettlementAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification165.mmObject();
+			type_lazy = () -> GenericIdentification165.mmObject();
+		}
+
+		@Override
+		public GenericIdentification165 getValue(SettlementAccount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementAccount1 obj, GenericIdentification165 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "EndOfDayInitlMrgnClld", required = true)
@@ -152,6 +175,11 @@ public class SettlementAccount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection86
 	 * AmountAndDirection86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashBalance
+	 * CashAccount.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -172,8 +200,9 @@ public class SettlementAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndOfDayInitialMarginCalled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayInitialMarginCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
 		{
+			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "EndOfDayInitlMrgnClld";
@@ -183,7 +212,17 @@ public class SettlementAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection86.mmObject();
+			type_lazy = () -> AmountAndDirection86.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection86 getValue(SettlementAccount1 obj) {
+			return obj.getEndOfDayInitialMarginCalled();
+		}
+
+		@Override
+		public void setValue(SettlementAccount1 obj, AmountAndDirection86 value) {
+			obj.setEndOfDayInitialMarginCalled(value);
 		}
 	};
 	@XmlElement(name = "EndOfDayVartnMrgnClld", required = true)
@@ -196,6 +235,11 @@ public class SettlementAccount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection86
 	 * AmountAndDirection86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashBalance
+	 * CashAccount.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -216,8 +260,9 @@ public class SettlementAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndOfDayVariationMarginCalled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayVariationMarginCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
 		{
+			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "EndOfDayVartnMrgnClld";
@@ -227,7 +272,17 @@ public class SettlementAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection86.mmObject();
+			type_lazy = () -> AmountAndDirection86.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection86 getValue(SettlementAccount1 obj) {
+			return obj.getEndOfDayVariationMarginCalled();
+		}
+
+		@Override
+		public void setValue(SettlementAccount1 obj, AmountAndDirection86 value) {
+			obj.setEndOfDayVariationMarginCalled(value);
 		}
 	};
 	@XmlElement(name = "EndOfDayDfltFndClld", required = true)
@@ -240,6 +295,11 @@ public class SettlementAccount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection86
 	 * AmountAndDirection86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashBalance
+	 * CashAccount.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -260,8 +320,9 @@ public class SettlementAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndOfDayDefaultFundCalled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayDefaultFundCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
 		{
+			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "EndOfDayDfltFndClld";
@@ -271,7 +332,17 @@ public class SettlementAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection86.mmObject();
+			type_lazy = () -> AmountAndDirection86.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection86 getValue(SettlementAccount1 obj) {
+			return obj.getEndOfDayDefaultFundCalled();
+		}
+
+		@Override
+		public void setValue(SettlementAccount1 obj, AmountAndDirection86 value) {
+			obj.setEndOfDayDefaultFundCalled(value);
 		}
 	};
 	@XmlElement(name = "EndOfDaySttlmClld", required = true)
@@ -284,6 +355,11 @@ public class SettlementAccount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection86
 	 * AmountAndDirection86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashBalance
+	 * CashAccount.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -304,8 +380,9 @@ public class SettlementAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndOfDaySettlementCalled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDaySettlementCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
 		{
+			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "EndOfDaySttlmClld";
@@ -315,7 +392,17 @@ public class SettlementAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection86.mmObject();
+			type_lazy = () -> AmountAndDirection86.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection86 getValue(SettlementAccount1 obj) {
+			return obj.getEndOfDaySettlementCalled();
+		}
+
+		@Override
+		public void setValue(SettlementAccount1 obj, AmountAndDirection86 value) {
+			obj.setEndOfDaySettlementCalled(value);
 		}
 	};
 	@XmlElement(name = "EndOfDayOthrClld", required = true)
@@ -328,6 +415,11 @@ public class SettlementAccount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection86
 	 * AmountAndDirection86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashBalance
+	 * CashAccount.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -348,8 +440,9 @@ public class SettlementAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndOfDayOtherCalled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayOtherCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
 		{
+			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "EndOfDayOthrClld";
@@ -359,7 +452,17 @@ public class SettlementAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection86.mmObject();
+			type_lazy = () -> AmountAndDirection86.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection86 getValue(SettlementAccount1 obj) {
+			return obj.getEndOfDayOtherCalled();
+		}
+
+		@Override
+		public void setValue(SettlementAccount1 obj, AmountAndDirection86 value) {
+			obj.setEndOfDayOtherCalled(value);
 		}
 	};
 	@XmlElement(name = "EndOfDayLqdtyClld", required = true)
@@ -372,6 +475,11 @@ public class SettlementAccount1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.AmountAndDirection86
 	 * AmountAndDirection86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CashAccount#mmCashBalance
+	 * CashAccount.mmCashBalance}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -392,8 +500,9 @@ public class SettlementAccount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEndOfDayLiquidityCalled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86> mmEndOfDayLiquidityCalled = new MMMessageAssociationEnd<SettlementAccount1, AmountAndDirection86>() {
 		{
+			businessElementTrace_lazy = () -> CashAccount.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "EndOfDayLqdtyClld";
@@ -403,7 +512,17 @@ public class SettlementAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection86.mmObject();
+			type_lazy = () -> AmountAndDirection86.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection86 getValue(SettlementAccount1 obj) {
+			return obj.getEndOfDayLiquidityCalled();
+		}
+
+		@Override
+		public void setValue(SettlementAccount1 obj, AmountAndDirection86 value) {
+			obj.setEndOfDayLiquidityCalled(value);
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -418,6 +537,11 @@ public class SettlementAccount1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ActiveCurrencyCode
 	 * ActiveCurrencyCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Account#mmBaseCurrency
+	 * Account.mmBaseCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -436,8 +560,9 @@ public class SettlementAccount1 {
 	 * definition} = "Currency of the settlement account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementAccount1, ActiveCurrencyCode> mmCurrency = new MMMessageAttribute<SettlementAccount1, ActiveCurrencyCode>() {
 		{
+			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
@@ -447,6 +572,16 @@ public class SettlementAccount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(SettlementAccount1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(SettlementAccount1 obj, ActiveCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 
@@ -458,6 +593,7 @@ public class SettlementAccount1 {
 						com.tools20022.repository.msg.SettlementAccount1.mmEndOfDaySettlementCalled, com.tools20022.repository.msg.SettlementAccount1.mmEndOfDayOtherCalled,
 						com.tools20022.repository.msg.SettlementAccount1.mmEndOfDayLiquidityCalled, com.tools20022.repository.msg.SettlementAccount1.mmCurrency);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CCPMemberObligationsReportV01.mmSettlementAccount);
+				trace_lazy = () -> CashAccount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementAccount1";
@@ -471,7 +607,7 @@ public class SettlementAccount1 {
 		return identification;
 	}
 
-	public SettlementAccount1 setIdentification(com.tools20022.repository.msg.GenericIdentification165 identification) {
+	public SettlementAccount1 setIdentification(GenericIdentification165 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -480,7 +616,7 @@ public class SettlementAccount1 {
 		return endOfDayInitialMarginCalled;
 	}
 
-	public SettlementAccount1 setEndOfDayInitialMarginCalled(com.tools20022.repository.msg.AmountAndDirection86 endOfDayInitialMarginCalled) {
+	public SettlementAccount1 setEndOfDayInitialMarginCalled(AmountAndDirection86 endOfDayInitialMarginCalled) {
 		this.endOfDayInitialMarginCalled = Objects.requireNonNull(endOfDayInitialMarginCalled);
 		return this;
 	}
@@ -489,7 +625,7 @@ public class SettlementAccount1 {
 		return endOfDayVariationMarginCalled;
 	}
 
-	public SettlementAccount1 setEndOfDayVariationMarginCalled(com.tools20022.repository.msg.AmountAndDirection86 endOfDayVariationMarginCalled) {
+	public SettlementAccount1 setEndOfDayVariationMarginCalled(AmountAndDirection86 endOfDayVariationMarginCalled) {
 		this.endOfDayVariationMarginCalled = Objects.requireNonNull(endOfDayVariationMarginCalled);
 		return this;
 	}
@@ -498,7 +634,7 @@ public class SettlementAccount1 {
 		return endOfDayDefaultFundCalled;
 	}
 
-	public SettlementAccount1 setEndOfDayDefaultFundCalled(com.tools20022.repository.msg.AmountAndDirection86 endOfDayDefaultFundCalled) {
+	public SettlementAccount1 setEndOfDayDefaultFundCalled(AmountAndDirection86 endOfDayDefaultFundCalled) {
 		this.endOfDayDefaultFundCalled = Objects.requireNonNull(endOfDayDefaultFundCalled);
 		return this;
 	}
@@ -507,7 +643,7 @@ public class SettlementAccount1 {
 		return endOfDaySettlementCalled;
 	}
 
-	public SettlementAccount1 setEndOfDaySettlementCalled(com.tools20022.repository.msg.AmountAndDirection86 endOfDaySettlementCalled) {
+	public SettlementAccount1 setEndOfDaySettlementCalled(AmountAndDirection86 endOfDaySettlementCalled) {
 		this.endOfDaySettlementCalled = Objects.requireNonNull(endOfDaySettlementCalled);
 		return this;
 	}
@@ -516,7 +652,7 @@ public class SettlementAccount1 {
 		return endOfDayOtherCalled;
 	}
 
-	public SettlementAccount1 setEndOfDayOtherCalled(com.tools20022.repository.msg.AmountAndDirection86 endOfDayOtherCalled) {
+	public SettlementAccount1 setEndOfDayOtherCalled(AmountAndDirection86 endOfDayOtherCalled) {
 		this.endOfDayOtherCalled = Objects.requireNonNull(endOfDayOtherCalled);
 		return this;
 	}
@@ -525,7 +661,7 @@ public class SettlementAccount1 {
 		return endOfDayLiquidityCalled;
 	}
 
-	public SettlementAccount1 setEndOfDayLiquidityCalled(com.tools20022.repository.msg.AmountAndDirection86 endOfDayLiquidityCalled) {
+	public SettlementAccount1 setEndOfDayLiquidityCalled(AmountAndDirection86 endOfDayLiquidityCalled) {
 		this.endOfDayLiquidityCalled = Objects.requireNonNull(endOfDayLiquidityCalled);
 		return this;
 	}

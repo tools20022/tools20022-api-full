@@ -27,9 +27,8 @@ import com.tools20022.repository.msg.OriginalGroupHeader7;
 import com.tools20022.repository.msg.OriginalPaymentInstruction23;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
-import com.tools20022.repository.msgset.PaymentsInitiationISOLatestversion;
+import com.tools20022.repository.msgset.PaymentsInitiationISOPreviousversion;
 import com.tools20022.repository.msgset.PaymentsInitiationMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -87,8 +86,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsInitiationISOLatestversion
- * PaymentsInitiationISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.PaymentsInitiationISOPreviousversion
+ * PaymentsInitiationISOPreviousversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017
  * MX_Payment_Maintenance_2016_2017}</li>
@@ -196,7 +195,7 @@ public class CustomerPaymentStatusReportV08 {
 	 * CustomerPaymentStatusReportV07.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentStatusReportV08, GroupHeader52> mmGroupHeader = new MMMessageBuildingBlock<CustomerPaymentStatusReportV08, GroupHeader52>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,12 +208,14 @@ public class CustomerPaymentStatusReportV08 {
 			complexType_lazy = () -> GroupHeader52.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentStatusReportV08.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader52 getValue(CustomerPaymentStatusReportV08 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentStatusReportV08 obj, GroupHeader52 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
@@ -257,7 +258,7 @@ public class CustomerPaymentStatusReportV08 {
 	 * CustomerPaymentStatusReportV07.mmOriginalGroupInformationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentStatusReportV08, OriginalGroupHeader7> mmOriginalGroupInformationAndStatus = new MMMessageBuildingBlock<CustomerPaymentStatusReportV08, OriginalGroupHeader7>() {
 		{
 			xmlTag = "OrgnlGrpInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +271,14 @@ public class CustomerPaymentStatusReportV08 {
 			complexType_lazy = () -> OriginalGroupHeader7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentStatusReportV08.class.getMethod("getOriginalGroupInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OriginalGroupHeader7 getValue(CustomerPaymentStatusReportV08 obj) {
+			return obj.getOriginalGroupInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentStatusReportV08 obj, OriginalGroupHeader7 value) {
+			obj.setOriginalGroupInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInfAndSts")
@@ -318,7 +321,7 @@ public class CustomerPaymentStatusReportV08 {
 	 * CustomerPaymentStatusReportV07.mmOriginalPaymentInformationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalPaymentInformationAndStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentStatusReportV08, List<OriginalPaymentInstruction23>> mmOriginalPaymentInformationAndStatus = new MMMessageBuildingBlock<CustomerPaymentStatusReportV08, List<OriginalPaymentInstruction23>>() {
 		{
 			xmlTag = "OrgnlPmtInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,12 +333,14 @@ public class CustomerPaymentStatusReportV08 {
 			complexType_lazy = () -> OriginalPaymentInstruction23.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentStatusReportV08.class.getMethod("getOriginalPaymentInformationAndStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<OriginalPaymentInstruction23> getValue(CustomerPaymentStatusReportV08 obj) {
+			return obj.getOriginalPaymentInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentStatusReportV08 obj, List<OriginalPaymentInstruction23> value) {
+			obj.setOriginalPaymentInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -378,7 +383,7 @@ public class CustomerPaymentStatusReportV08 {
 	 * CustomerPaymentStatusReportV07.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CustomerPaymentStatusReportV08, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CustomerPaymentStatusReportV08, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -390,12 +395,14 @@ public class CustomerPaymentStatusReportV08 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CustomerPaymentStatusReportV08.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CustomerPaymentStatusReportV08 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CustomerPaymentStatusReportV08 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -410,7 +417,7 @@ public class CustomerPaymentStatusReportV08 {
 				definition = "Scope\r\nThe CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.\r\nThe CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.\r\nThe CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.\r\nThe CustomerPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (e.g. either the beneficiary is credited, or the transaction is rejected).";
 				nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV09.mmObject());
 				previousVersion_lazy = () -> CustomerPaymentStatusReportV07.mmObject();
-				messageSet_lazy = () -> Arrays.asList(PaymentsInitiationISOLatestversion.mmObject(), MX_Payment_Maintenance_2016_2017.mmObject(), PaymentsInitiationMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(PaymentsInitiationISOPreviousversion.mmObject(), MX_Payment_Maintenance_2016_2017.mmObject(), PaymentsInitiationMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "CstmrPmtStsRpt";
 				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();

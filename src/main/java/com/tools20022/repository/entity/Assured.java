@@ -23,7 +23,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.AssuredTypeCode;
 import com.tools20022.repository.entity.InsurancePartyRole;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -91,7 +90,7 @@ public class Assured extends InsurancePartyRole {
 	 * definition} = "Specifies the type of assured party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAssuredType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Assured, AssuredTypeCode> mmAssuredType = new MMBusinessAttribute<Assured, AssuredTypeCode>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Assured.mmObject();
@@ -103,12 +102,14 @@ public class Assured extends InsurancePartyRole {
 			simpleType_lazy = () -> AssuredTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Assured.class.getMethod("getAssuredType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AssuredTypeCode getValue(Assured obj) {
+			return obj.getAssuredType();
+		}
+
+		@Override
+		public void setValue(Assured obj, AssuredTypeCode value) {
+			obj.setAssuredType(value);
 		}
 	};
 

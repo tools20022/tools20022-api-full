@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.SecurityIdentification18Choice;
+import com.tools20022.repository.choice.SecurityIdentification20Choice;
 import com.tools20022.repository.codeset.UnderlyingIdentification1Code;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.datatype.Max52Text;
@@ -148,7 +150,7 @@ public class SecurityIdentification19Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification19Choice, ISINOct2015Identifier> mmISIN = new MMMessageAttribute<SecurityIdentification19Choice, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification19Choice.mmObject();
@@ -157,10 +159,20 @@ public class SecurityIdentification19Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
 			definition = "International Securities Identification Number (ISIN). A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification20Choice.mmISIN);
+			nextVersions_lazy = () -> Arrays.asList(SecurityIdentification20Choice.mmISIN);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(SecurityIdentification19Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification19Choice obj, ISINOct2015Identifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "AltrntvInstrmId", required = true)
@@ -199,7 +211,7 @@ public class SecurityIdentification19Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternativeInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification19Choice, Max52Text> mmAlternativeInstrumentIdentification = new MMMessageAttribute<SecurityIdentification19Choice, Max52Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification19Choice.mmObject();
@@ -211,6 +223,16 @@ public class SecurityIdentification19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(SecurityIdentification19Choice obj) {
+			return obj.getAlternativeInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification19Choice obj, Max52Text value) {
+			obj.setAlternativeInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "UnqPdctIdr", required = true)
@@ -247,7 +269,7 @@ public class SecurityIdentification19Choice {
 	 * definition} = "Identification through a Unique Product Identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueProductIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification19Choice, Max52Text> mmUniqueProductIdentifier = new MMMessageAttribute<SecurityIdentification19Choice, Max52Text>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmProductIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification19Choice.mmObject();
@@ -260,9 +282,19 @@ public class SecurityIdentification19Choice {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
 		}
+
+		@Override
+		public Max52Text getValue(SecurityIdentification19Choice obj) {
+			return obj.getUniqueProductIdentifier();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification19Choice obj, Max52Text value) {
+			obj.setUniqueProductIdentifier(value);
+		}
 	};
 	@XmlElement(name = "BsktCnsttnts", required = true)
-	protected List<com.tools20022.repository.choice.SecurityIdentification18Choice> basketConstituents;
+	protected List<SecurityIdentification18Choice> basketConstituents;
 	/**
 	 * 
 	 <p>
@@ -295,7 +327,7 @@ public class SecurityIdentification19Choice {
 	 * definition} = "Identification of constituents for basket of indexes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBasketConstituents = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification19Choice, List<SecurityIdentification18Choice>> mmBasketConstituents = new MMMessageAssociationEnd<SecurityIdentification19Choice, List<SecurityIdentification18Choice>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmRelatedSecuritiesIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification19Choice.mmObject();
@@ -306,7 +338,17 @@ public class SecurityIdentification19Choice {
 			definition = "Identification of constituents for basket of indexes.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SecurityIdentification18Choice.mmObject();
+			type_lazy = () -> SecurityIdentification18Choice.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification18Choice> getValue(SecurityIdentification19Choice obj) {
+			return obj.getBasketConstituents();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification19Choice obj, List<SecurityIdentification18Choice> value) {
+			obj.setBasketConstituents(value);
 		}
 	};
 	@XmlElement(name = "Indx", required = true)
@@ -352,7 +394,7 @@ public class SecurityIdentification19Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification19Choice, SecurityIdentification20Choice> mmIndex = new MMMessageAssociationEnd<SecurityIdentification19Choice, SecurityIdentification20Choice>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRelatedIndex;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification19Choice.mmObject();
@@ -361,11 +403,21 @@ public class SecurityIdentification19Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Index";
 			definition = "Indicates the index upon which the financial instrument is based.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification20Choice.mmName);
+			nextVersions_lazy = () -> Arrays.asList(SecurityIdentification20Choice.mmName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SecurityIdentification20Choice.mmObject();
+			type_lazy = () -> SecurityIdentification20Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification20Choice getValue(SecurityIdentification19Choice obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification19Choice obj, SecurityIdentification20Choice value) {
+			obj.setIndex(value);
 		}
 	};
 	@XmlElement(name = "IdNotAvlbl", required = true)
@@ -399,7 +451,7 @@ public class SecurityIdentification19Choice {
 	 * "Indicates that underlying identification is not available."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationNotAvailable = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification19Choice, UnderlyingIdentification1Code> mmIdentificationNotAvailable = new MMMessageAttribute<SecurityIdentification19Choice, UnderlyingIdentification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification19Choice.mmObject();
 			isDerived = false;
@@ -410,6 +462,16 @@ public class SecurityIdentification19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnderlyingIdentification1Code.mmObject();
+		}
+
+		@Override
+		public UnderlyingIdentification1Code getValue(SecurityIdentification19Choice obj) {
+			return obj.getIdentificationNotAvailable();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification19Choice obj, UnderlyingIdentification1Code value) {
+			obj.setIdentificationNotAvailable(value);
 		}
 	};
 
@@ -424,7 +486,7 @@ public class SecurityIdentification19Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityIdentification19Choice";
 				definition = "Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.";
-				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification20Choice.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(SecurityIdentification20Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
@@ -461,7 +523,7 @@ public class SecurityIdentification19Choice {
 		return basketConstituents == null ? basketConstituents = new ArrayList<>() : basketConstituents;
 	}
 
-	public SecurityIdentification19Choice setBasketConstituents(List<com.tools20022.repository.choice.SecurityIdentification18Choice> basketConstituents) {
+	public SecurityIdentification19Choice setBasketConstituents(List<SecurityIdentification18Choice> basketConstituents) {
 		this.basketConstituents = Objects.requireNonNull(basketConstituents);
 		return this;
 	}
@@ -470,7 +532,7 @@ public class SecurityIdentification19Choice {
 		return index;
 	}
 
-	public SecurityIdentification19Choice setIndex(com.tools20022.repository.choice.SecurityIdentification20Choice index) {
+	public SecurityIdentification19Choice setIndex(SecurityIdentification20Choice index) {
 		this.index = Objects.requireNonNull(index);
 		return this;
 	}

@@ -56,12 +56,16 @@ public class ConstraintStatusQuantityOrStatusCashAmount1Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption141> forCorporateActionOption141 = new MMConstraint<CorporateActionOption141>() {
 		{
-			validator = ConstraintStatusQuantityOrStatusCashAmount1Rule::checkCorporateActionOption141;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusQuantityOrStatusCashAmount1Rule";
 			definition = "If StatusQuantity is present, then StatusCashAmount is not allowed. (MT 567 C5).";
 			owner_lazy = () -> CorporateActionOption141.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/StatusCashAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusQuantity</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption141 obj) throws Exception {
+			checkCorporateActionOption141(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintStatusQuantityOrStatusCashAmount1Rule {
 	 */
 	public static final MMConstraint<CorporateActionOption144> forCorporateActionOption144 = new MMConstraint<CorporateActionOption144>() {
 		{
-			validator = ConstraintStatusQuantityOrStatusCashAmount1Rule::checkCorporateActionOption144;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusQuantityOrStatusCashAmount1Rule";
 			definition = "If StatusQuantity is present, then StatusCashAmount is not allowed. (MT 567 C5).";
 			owner_lazy = () -> CorporateActionOption144.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/StatusCashAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusQuantity</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption144 obj) throws Exception {
+			checkCorporateActionOption144(obj);
 		}
 	};
 

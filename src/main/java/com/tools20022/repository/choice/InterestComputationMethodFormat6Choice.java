@@ -119,7 +119,7 @@ public class InterestComputationMethodFormat6Choice {
 	 * InterestComputationMethodFormat3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestComputationMethodFormat6Choice, InterestComputationMethod1Code> mmCode = new MMMessageAttribute<InterestComputationMethodFormat6Choice, InterestComputationMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestComputationMethodFormat6Choice.mmObject();
@@ -132,6 +132,16 @@ public class InterestComputationMethodFormat6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestComputationMethod1Code.mmObject();
+		}
+
+		@Override
+		public InterestComputationMethod1Code getValue(InterestComputationMethodFormat6Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InterestComputationMethodFormat6Choice obj, InterestComputationMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -175,7 +185,7 @@ public class InterestComputationMethodFormat6Choice {
 	 * InterestComputationMethodFormat3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestComputationMethodFormat6Choice, Max35Text> mmProprietary = new MMMessageAttribute<InterestComputationMethodFormat6Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestComputationMethodFormat6Choice.mmObject();
@@ -188,6 +198,16 @@ public class InterestComputationMethodFormat6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InterestComputationMethodFormat6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InterestComputationMethodFormat6Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

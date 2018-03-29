@@ -51,11 +51,15 @@ public class ConstraintProxyAppointment1Rule {
 	 */
 	public static final MMConstraint<Proxy2> forProxy2 = new MMConstraint<Proxy2>() {
 		{
-			validator = ConstraintProxyAppointment1Rule::checkProxy2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyAppointment1Rule";
 			definition = "If ProxyType is DISC or HLDR, then PersonDetails must be present.";
 			owner_lazy = () -> Proxy2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Proxy2 obj) throws Exception {
+			checkProxy2(obj);
 		}
 	};
 	/**
@@ -92,13 +96,17 @@ public class ConstraintProxyAppointment1Rule {
 	 */
 	public static final MMConstraint<Proxy4> forProxy4 = new MMConstraint<Proxy4>() {
 		{
-			validator = ConstraintProxyAppointment1Rule::checkProxy4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyAppointment1Rule";
 			definition = "If ProxyType is Discretionary \"DISC\" or SecurityHolder \"HLDR\", then PersonDetails must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintProxyAppointment1Rule.forProxy6);
 			owner_lazy = () -> Proxy4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PersonDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ProxyType</leftOperand><rightOperand>Discretionary</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ProxyType</leftOperand><rightOperand>SecurityHolder</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(Proxy4 obj) throws Exception {
+			checkProxy4(obj);
 		}
 	};
 	/**
@@ -132,13 +140,17 @@ public class ConstraintProxyAppointment1Rule {
 	 */
 	public static final MMConstraint<Proxy6> forProxy6 = new MMConstraint<Proxy6>() {
 		{
-			validator = ConstraintProxyAppointment1Rule::checkProxy6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyAppointment1Rule";
 			definition = "If ProxyType is Discretionary \"DISC\" or SecurityHolder \"HLDR\", then PersonDetails must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintProxyAppointment1Rule.forProxy4;
 			owner_lazy = () -> Proxy6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PersonDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ProxyType</leftOperand><rightOperand>Discretionary</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ProxyType</leftOperand><rightOperand>SecurityHolder</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(Proxy6 obj) throws Exception {
+			checkProxy6(obj);
 		}
 	};
 

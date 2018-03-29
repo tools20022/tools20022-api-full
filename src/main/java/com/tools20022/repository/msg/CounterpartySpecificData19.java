@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContractValuationData4;
+import com.tools20022.repository.msg.TradeCollateralReport3;
+import com.tools20022.repository.msg.TradeCounterpartyReport5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +108,7 @@ public class CounterpartySpecificData19 {
 	 * "Data specific to counterparties of the reported transaction/position."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartySpecificData19, TradeCounterpartyReport5> mmCounterparty = new MMMessageAssociationEnd<CounterpartySpecificData19, TradeCounterpartyReport5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySpecificData19.mmObject();
 			isDerived = false;
@@ -116,7 +119,17 @@ public class CounterpartySpecificData19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeCounterpartyReport5.mmObject();
+			type_lazy = () -> TradeCounterpartyReport5.mmObject();
+		}
+
+		@Override
+		public TradeCounterpartyReport5 getValue(CounterpartySpecificData19 obj) {
+			return obj.getCounterparty();
+		}
+
+		@Override
+		public void setValue(CounterpartySpecificData19 obj, TradeCounterpartyReport5 value) {
+			obj.setCounterparty(value);
 		}
 	};
 	@XmlElement(name = "Valtn")
@@ -147,7 +160,7 @@ public class CounterpartySpecificData19 {
 	 * definition} = "Data specific to the valuation of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartySpecificData19, Optional<ContractValuationData4>> mmValuation = new MMMessageAssociationEnd<CounterpartySpecificData19, Optional<ContractValuationData4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySpecificData19.mmObject();
 			isDerived = false;
@@ -158,7 +171,17 @@ public class CounterpartySpecificData19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContractValuationData4.mmObject();
+			type_lazy = () -> ContractValuationData4.mmObject();
+		}
+
+		@Override
+		public Optional<ContractValuationData4> getValue(CounterpartySpecificData19 obj) {
+			return obj.getValuation();
+		}
+
+		@Override
+		public void setValue(CounterpartySpecificData19 obj, Optional<ContractValuationData4> value) {
+			obj.setValuation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Coll")
@@ -191,7 +214,7 @@ public class CounterpartySpecificData19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CounterpartySpecificData19, Optional<TradeCollateralReport3>> mmCollateral = new MMMessageAssociationEnd<CounterpartySpecificData19, Optional<TradeCollateralReport3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySpecificData19.mmObject();
 			isDerived = false;
@@ -202,7 +225,17 @@ public class CounterpartySpecificData19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeCollateralReport3.mmObject();
+			type_lazy = () -> TradeCollateralReport3.mmObject();
+		}
+
+		@Override
+		public Optional<TradeCollateralReport3> getValue(CounterpartySpecificData19 obj) {
+			return obj.getCollateral();
+		}
+
+		@Override
+		public void setValue(CounterpartySpecificData19 obj, Optional<TradeCollateralReport3> value) {
+			obj.setCollateral(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgDtTm", required = true)
@@ -236,7 +269,7 @@ public class CounterpartySpecificData19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CounterpartySpecificData19, ISODateTime> mmReportingDateTime = new MMMessageAttribute<CounterpartySpecificData19, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CounterpartySpecificData19.mmObject();
 			isDerived = false;
@@ -247,6 +280,16 @@ public class CounterpartySpecificData19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CounterpartySpecificData19 obj) {
+			return obj.getReportingDateTime();
+		}
+
+		@Override
+		public void setValue(CounterpartySpecificData19 obj, ISODateTime value) {
+			obj.setReportingDateTime(value);
 		}
 	};
 
@@ -268,7 +311,7 @@ public class CounterpartySpecificData19 {
 		return counterparty;
 	}
 
-	public CounterpartySpecificData19 setCounterparty(com.tools20022.repository.msg.TradeCounterpartyReport5 counterparty) {
+	public CounterpartySpecificData19 setCounterparty(TradeCounterpartyReport5 counterparty) {
 		this.counterparty = Objects.requireNonNull(counterparty);
 		return this;
 	}
@@ -277,7 +320,7 @@ public class CounterpartySpecificData19 {
 		return valuation == null ? Optional.empty() : Optional.of(valuation);
 	}
 
-	public CounterpartySpecificData19 setValuation(com.tools20022.repository.msg.ContractValuationData4 valuation) {
+	public CounterpartySpecificData19 setValuation(ContractValuationData4 valuation) {
 		this.valuation = valuation;
 		return this;
 	}
@@ -286,7 +329,7 @@ public class CounterpartySpecificData19 {
 		return collateral == null ? Optional.empty() : Optional.of(collateral);
 	}
 
-	public CounterpartySpecificData19 setCollateral(com.tools20022.repository.msg.TradeCollateralReport3 collateral) {
+	public CounterpartySpecificData19 setCollateral(TradeCollateralReport3 collateral) {
 		this.collateral = collateral;
 		return this;
 	}

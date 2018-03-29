@@ -111,7 +111,7 @@ public class LetterOfGuarantee2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LetterOfGuarantee2Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<LetterOfGuarantee2Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmLetterOfGuarantee;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LetterOfGuarantee2Choice.mmObject();
@@ -124,6 +124,16 @@ public class LetterOfGuarantee2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(LetterOfGuarantee2Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(LetterOfGuarantee2Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class LetterOfGuarantee2Choice {
 	 * "Letter of guarantee information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LetterOfGuarantee2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<LetterOfGuarantee2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmLetterOfGuarantee;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LetterOfGuarantee2Choice.mmObject();
@@ -178,6 +188,16 @@ public class LetterOfGuarantee2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(LetterOfGuarantee2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LetterOfGuarantee2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

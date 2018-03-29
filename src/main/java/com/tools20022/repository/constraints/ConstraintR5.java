@@ -49,11 +49,15 @@ public class ConstraintR5 {
 	 */
 	public static final MMConstraint<LanguageCode> forLanguageCode = new MMConstraint<LanguageCode>() {
 		{
-			validator = ConstraintR5::checkGroupHeader69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "R5";
 			definition = "according to ISO 639-1.";
 			owner_lazy = () -> GroupHeader69.mmLanguageCode;
+		}
+
+		@Override
+		public void executeValidator(LanguageCode obj) throws Exception {
+			checkGroupHeader69(obj);
 		}
 	};
 

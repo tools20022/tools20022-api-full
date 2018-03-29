@@ -25,6 +25,10 @@ import com.tools20022.repository.entity.MeetingAttendeeRole;
 import com.tools20022.repository.entity.ProxyAgent;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EligiblePosition;
+import com.tools20022.repository.msg.RequestInformation;
+import com.tools20022.repository.msg.VoteInstruction;
+import com.tools20022.repository.msg.VotingPartyAndInstruction;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +125,7 @@ public class SecurityPosition2 {
 	 * definition} = "Amount of securities that are eligible for the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition2, Optional<EligiblePosition>> mmPosition = new MMMessageAssociationEnd<SecurityPosition2, Optional<EligiblePosition>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition2.mmObject();
@@ -133,11 +137,21 @@ public class SecurityPosition2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition.mmObject();
+			type_lazy = () -> EligiblePosition.mmObject();
+		}
+
+		@Override
+		public Optional<EligiblePosition> getValue(SecurityPosition2 obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(SecurityPosition2 obj, Optional<EligiblePosition> value) {
+			obj.setPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtgAttndee")
-	protected List<com.tools20022.repository.msg.VotingPartyAndInstruction> meetingAttendee;
+	protected List<VotingPartyAndInstruction> meetingAttendee;
 	/**
 	 * 
 	 <p>
@@ -170,7 +184,7 @@ public class SecurityPosition2 {
 	 * definition} = "Specifies a person who will attend the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMeetingAttendee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition2, List<VotingPartyAndInstruction>> mmMeetingAttendee = new MMMessageAssociationEnd<SecurityPosition2, List<VotingPartyAndInstruction>>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingAttendeeRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition2.mmObject();
@@ -181,11 +195,21 @@ public class SecurityPosition2 {
 			definition = "Specifies a person who will attend the meeting.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
+			type_lazy = () -> VotingPartyAndInstruction.mmObject();
+		}
+
+		@Override
+		public List<VotingPartyAndInstruction> getValue(SecurityPosition2 obj) {
+			return obj.getMeetingAttendee();
+		}
+
+		@Override
+		public void setValue(SecurityPosition2 obj, List<VotingPartyAndInstruction> value) {
+			obj.setMeetingAttendee(value);
 		}
 	};
 	@XmlElement(name = "Prxy")
-	protected List<com.tools20022.repository.msg.VotingPartyAndInstruction> proxy;
+	protected List<VotingPartyAndInstruction> proxy;
 	/**
 	 * 
 	 <p>
@@ -218,7 +242,7 @@ public class SecurityPosition2 {
 	 * "Identification of the proxy appointed by the security holder."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition2, List<VotingPartyAndInstruction>> mmProxy = new MMMessageAssociationEnd<SecurityPosition2, List<VotingPartyAndInstruction>>() {
 		{
 			businessComponentTrace_lazy = () -> ProxyAgent.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition2.mmObject();
@@ -229,11 +253,21 @@ public class SecurityPosition2 {
 			definition = "Identification of the proxy appointed by the security holder.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.VotingPartyAndInstruction.mmObject();
+			type_lazy = () -> VotingPartyAndInstruction.mmObject();
+		}
+
+		@Override
+		public List<VotingPartyAndInstruction> getValue(SecurityPosition2 obj) {
+			return obj.getProxy();
+		}
+
+		@Override
+		public void setValue(SecurityPosition2 obj, List<VotingPartyAndInstruction> value) {
+			obj.setProxy(value);
 		}
 	};
 	@XmlElement(name = "VoteDtls")
-	protected List<com.tools20022.repository.msg.VoteInstruction> voteDetails;
+	protected List<VoteInstruction> voteDetails;
 	/**
 	 * 
 	 <p>
@@ -265,7 +299,7 @@ public class SecurityPosition2 {
 	 * definition} = "Specifies detailed voting instructions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVoteDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition2, List<VoteInstruction>> mmVoteDetails = new MMMessageAssociationEnd<SecurityPosition2, List<VoteInstruction>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmVoteInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition2.mmObject();
@@ -276,11 +310,21 @@ public class SecurityPosition2 {
 			definition = "Specifies detailed voting instructions.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
+			type_lazy = () -> VoteInstruction.mmObject();
+		}
+
+		@Override
+		public List<VoteInstruction> getValue(SecurityPosition2 obj) {
+			return obj.getVoteDetails();
+		}
+
+		@Override
+		public void setValue(SecurityPosition2 obj, List<VoteInstruction> value) {
+			obj.setVoteDetails(value);
 		}
 	};
 	@XmlElement(name = "PrtcptnRegnReq")
-	protected List<com.tools20022.repository.msg.RequestInformation> participationRegistrationRequest;
+	protected List<RequestInformation> participationRegistrationRequest;
 	/**
 	 * 
 	 <p>
@@ -312,7 +356,7 @@ public class SecurityPosition2 {
 	 * definition} = "Request to register for participation to the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParticipationRegistrationRequest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition2, List<RequestInformation>> mmParticipationRegistrationRequest = new MMMessageAssociationEnd<SecurityPosition2, List<RequestInformation>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmParticipationRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition2.mmObject();
@@ -323,11 +367,21 @@ public class SecurityPosition2 {
 			definition = "Request to register for participation to the meeting.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequestInformation.mmObject();
+			type_lazy = () -> RequestInformation.mmObject();
+		}
+
+		@Override
+		public List<RequestInformation> getValue(SecurityPosition2 obj) {
+			return obj.getParticipationRegistrationRequest();
+		}
+
+		@Override
+		public void setValue(SecurityPosition2 obj, List<RequestInformation> value) {
+			obj.setParticipationRegistrationRequest(value);
 		}
 	};
 	@XmlElement(name = "BlckgReq")
-	protected List<com.tools20022.repository.msg.RequestInformation> blockingRequest;
+	protected List<RequestInformation> blockingRequest;
 	/**
 	 * 
 	 <p>
@@ -359,7 +413,7 @@ public class SecurityPosition2 {
 	 * definition} = "Request to block the securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBlockingRequest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition2, List<RequestInformation>> mmBlockingRequest = new MMMessageAssociationEnd<SecurityPosition2, List<RequestInformation>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmBlockingSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition2.mmObject();
@@ -370,11 +424,21 @@ public class SecurityPosition2 {
 			definition = "Request to block the securities.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequestInformation.mmObject();
+			type_lazy = () -> RequestInformation.mmObject();
+		}
+
+		@Override
+		public List<RequestInformation> getValue(SecurityPosition2 obj) {
+			return obj.getBlockingRequest();
+		}
+
+		@Override
+		public void setValue(SecurityPosition2 obj, List<RequestInformation> value) {
+			obj.setBlockingRequest(value);
 		}
 	};
 	@XmlElement(name = "SctiesRegnReq")
-	protected List<com.tools20022.repository.msg.RequestInformation> securitiesRegistrationRequest;
+	protected List<RequestInformation> securitiesRegistrationRequest;
 	/**
 	 * 
 	 <p>
@@ -406,7 +470,7 @@ public class SecurityPosition2 {
 	 * definition} = "Request to register the securities for the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesRegistrationRequest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition2, List<RequestInformation>> mmSecuritiesRegistrationRequest = new MMMessageAssociationEnd<SecurityPosition2, List<RequestInformation>>() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmSecuritiesRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition2.mmObject();
@@ -417,7 +481,17 @@ public class SecurityPosition2 {
 			definition = "Request to register the securities for the meeting.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequestInformation.mmObject();
+			type_lazy = () -> RequestInformation.mmObject();
+		}
+
+		@Override
+		public List<RequestInformation> getValue(SecurityPosition2 obj) {
+			return obj.getSecuritiesRegistrationRequest();
+		}
+
+		@Override
+		public void setValue(SecurityPosition2 obj, List<RequestInformation> value) {
+			obj.setSecuritiesRegistrationRequest(value);
 		}
 	};
 
@@ -441,7 +515,7 @@ public class SecurityPosition2 {
 		return position == null ? Optional.empty() : Optional.of(position);
 	}
 
-	public SecurityPosition2 setPosition(com.tools20022.repository.msg.EligiblePosition position) {
+	public SecurityPosition2 setPosition(EligiblePosition position) {
 		this.position = position;
 		return this;
 	}
@@ -450,7 +524,7 @@ public class SecurityPosition2 {
 		return meetingAttendee == null ? meetingAttendee = new ArrayList<>() : meetingAttendee;
 	}
 
-	public SecurityPosition2 setMeetingAttendee(List<com.tools20022.repository.msg.VotingPartyAndInstruction> meetingAttendee) {
+	public SecurityPosition2 setMeetingAttendee(List<VotingPartyAndInstruction> meetingAttendee) {
 		this.meetingAttendee = Objects.requireNonNull(meetingAttendee);
 		return this;
 	}
@@ -459,7 +533,7 @@ public class SecurityPosition2 {
 		return proxy == null ? proxy = new ArrayList<>() : proxy;
 	}
 
-	public SecurityPosition2 setProxy(List<com.tools20022.repository.msg.VotingPartyAndInstruction> proxy) {
+	public SecurityPosition2 setProxy(List<VotingPartyAndInstruction> proxy) {
 		this.proxy = Objects.requireNonNull(proxy);
 		return this;
 	}
@@ -468,7 +542,7 @@ public class SecurityPosition2 {
 		return voteDetails == null ? voteDetails = new ArrayList<>() : voteDetails;
 	}
 
-	public SecurityPosition2 setVoteDetails(List<com.tools20022.repository.msg.VoteInstruction> voteDetails) {
+	public SecurityPosition2 setVoteDetails(List<VoteInstruction> voteDetails) {
 		this.voteDetails = Objects.requireNonNull(voteDetails);
 		return this;
 	}
@@ -477,7 +551,7 @@ public class SecurityPosition2 {
 		return participationRegistrationRequest == null ? participationRegistrationRequest = new ArrayList<>() : participationRegistrationRequest;
 	}
 
-	public SecurityPosition2 setParticipationRegistrationRequest(List<com.tools20022.repository.msg.RequestInformation> participationRegistrationRequest) {
+	public SecurityPosition2 setParticipationRegistrationRequest(List<RequestInformation> participationRegistrationRequest) {
 		this.participationRegistrationRequest = Objects.requireNonNull(participationRegistrationRequest);
 		return this;
 	}
@@ -486,7 +560,7 @@ public class SecurityPosition2 {
 		return blockingRequest == null ? blockingRequest = new ArrayList<>() : blockingRequest;
 	}
 
-	public SecurityPosition2 setBlockingRequest(List<com.tools20022.repository.msg.RequestInformation> blockingRequest) {
+	public SecurityPosition2 setBlockingRequest(List<RequestInformation> blockingRequest) {
 		this.blockingRequest = Objects.requireNonNull(blockingRequest);
 		return this;
 	}
@@ -495,7 +569,7 @@ public class SecurityPosition2 {
 		return securitiesRegistrationRequest == null ? securitiesRegistrationRequest = new ArrayList<>() : securitiesRegistrationRequest;
 	}
 
-	public SecurityPosition2 setSecuritiesRegistrationRequest(List<com.tools20022.repository.msg.RequestInformation> securitiesRegistrationRequest) {
+	public SecurityPosition2 setSecuritiesRegistrationRequest(List<RequestInformation> securitiesRegistrationRequest) {
 		this.securitiesRegistrationRequest = Objects.requireNonNull(securitiesRegistrationRequest);
 		return this;
 	}

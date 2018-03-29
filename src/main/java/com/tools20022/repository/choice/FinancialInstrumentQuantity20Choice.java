@@ -124,7 +124,7 @@ public class FinancialInstrumentQuantity20Choice {
 	 * "Quantity expressed as a number, for example, a number of shares."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity20Choice, DecimalNumber> mmUnit = new MMMessageAttribute<FinancialInstrumentQuantity20Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.mmObject();
@@ -137,6 +137,16 @@ public class FinancialInstrumentQuantity20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(FinancialInstrumentQuantity20Choice obj) {
+			return obj.getUnit();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity20Choice obj, DecimalNumber value) {
+			obj.setUnit(value);
 		}
 	};
 	@XmlElement(name = "FaceAmt", required = true)
@@ -179,7 +189,7 @@ public class FinancialInstrumentQuantity20Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity20Choice, ImpliedCurrencyAndAmount> mmFaceAmount = new MMMessageAttribute<FinancialInstrumentQuantity20Choice, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.mmObject();
@@ -192,6 +202,16 @@ public class FinancialInstrumentQuantity20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(FinancialInstrumentQuantity20Choice obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity20Choice obj, ImpliedCurrencyAndAmount value) {
+			obj.setFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtsdVal", required = true)
@@ -234,7 +254,7 @@ public class FinancialInstrumentQuantity20Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmortisedValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity20Choice, ImpliedCurrencyAndAmount> mmAmortisedValue = new MMMessageAttribute<FinancialInstrumentQuantity20Choice, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmAmortisedFaceValue;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.mmObject();
@@ -247,6 +267,16 @@ public class FinancialInstrumentQuantity20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(FinancialInstrumentQuantity20Choice obj) {
+			return obj.getAmortisedValue();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity20Choice obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmortisedValue(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -287,7 +317,7 @@ public class FinancialInstrumentQuantity20Choice {
 	 * definition} = "Quantity expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity20Choice, Quantity5Code> mmCode = new MMMessageAttribute<FinancialInstrumentQuantity20Choice, Quantity5Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity20Choice.mmObject();
@@ -300,6 +330,16 @@ public class FinancialInstrumentQuantity20Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Quantity5Code.mmObject();
+		}
+
+		@Override
+		public Quantity5Code getValue(FinancialInstrumentQuantity20Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity20Choice obj, Quantity5Code value) {
+			obj.setCode(value);
 		}
 	};
 

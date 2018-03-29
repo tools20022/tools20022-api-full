@@ -127,7 +127,7 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 	 * AmountPricePerFinancialInstrumentQuantity3.mmAmountPriceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity6, AmountPriceType1Code> mmAmountPriceType = new MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity6, AmountPriceType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6.mmObject();
@@ -141,6 +141,16 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AmountPriceType1Code.mmObject();
+		}
+
+		@Override
+		public AmountPriceType1Code getValue(AmountPricePerFinancialInstrumentQuantity6 obj) {
+			return obj.getAmountPriceType();
+		}
+
+		@Override
+		public void setValue(AmountPricePerFinancialInstrumentQuantity6 obj, AmountPriceType1Code value) {
+			obj.setAmountPriceType(value);
 		}
 	};
 	@XmlElement(name = "PricVal", required = true)
@@ -186,7 +196,7 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 	 * AmountPricePerFinancialInstrumentQuantity3.mmPriceValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity6, ActiveCurrencyAnd13DecimalAmount> mmPriceValue = new MMMessageAttribute<AmountPricePerFinancialInstrumentQuantity6, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6.mmObject();
@@ -200,6 +210,16 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(AmountPricePerFinancialInstrumentQuantity6 obj) {
+			return obj.getPriceValue();
+		}
+
+		@Override
+		public void setValue(AmountPricePerFinancialInstrumentQuantity6 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setPriceValue(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmQty", required = true)
@@ -245,7 +265,7 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountPricePerFinancialInstrumentQuantity6, FinancialInstrumentQuantity1Choice> mmFinancialInstrumentQuantity = new MMMessageAssociationEnd<AmountPricePerFinancialInstrumentQuantity6, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity6.mmObject();
@@ -260,6 +280,16 @@ public class AmountPricePerFinancialInstrumentQuantity6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(AmountPricePerFinancialInstrumentQuantity6 obj) {
+			return obj.getFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(AmountPricePerFinancialInstrumentQuantity6 obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setFinancialInstrumentQuantity(value);
 		}
 	};
 

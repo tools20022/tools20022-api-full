@@ -100,7 +100,7 @@ public class CorporateAction1 {
 	 * "Specifies the code of corporate action event, in free-text format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateAction1, Optional<Max35Text>> mmCode = new MMMessageAttribute<CorporateAction1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class CorporateAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateAction1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateAction1 obj, Optional<Max35Text> value) {
+			obj.setCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nb")
@@ -144,7 +154,7 @@ public class CorporateAction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateAction1, Optional<Max35Text>> mmNumber = new MMMessageAttribute<CorporateAction1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction1.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class CorporateAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateAction1 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(CorporateAction1 obj, Optional<Max35Text> value) {
+			obj.setNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -186,7 +206,7 @@ public class CorporateAction1 {
 	 * definition} = "Proprietary corporate action event information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateAction1, Optional<Max35Text>> mmProprietary = new MMMessageAttribute<CorporateAction1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateAction1.mmObject();
 			isDerived = false;
@@ -197,6 +217,16 @@ public class CorporateAction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateAction1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateAction1 obj, Optional<Max35Text> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 

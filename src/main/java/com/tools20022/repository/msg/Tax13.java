@@ -126,7 +126,7 @@ public class Tax13 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax13, TaxType9Code> mmType = new MMMessageAttribute<Tax13, TaxType9Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax13.mmObject();
@@ -138,6 +138,16 @@ public class Tax13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxType9Code.mmObject();
+		}
+
+		@Override
+		public TaxType9Code getValue(Tax13 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Tax13 obj, TaxType9Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "OthrTaxTp", required = true)
@@ -172,7 +182,7 @@ public class Tax13 {
 	 * definition} = "Specifies types of tax not present in a code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherTaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax13, Max35Text> mmOtherTaxType = new MMMessageAttribute<Tax13, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax13.mmObject();
@@ -184,6 +194,16 @@ public class Tax13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Tax13 obj) {
+			return obj.getOtherTaxType();
+		}
+
+		@Override
+		public void setValue(Tax13 obj, Max35Text value) {
+			obj.setOtherTaxType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -220,7 +240,7 @@ public class Tax13 {
 	 * "Amount of money resulting from the calculation of the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax13, CurrencyAndAmount> mmAmount = new MMMessageAttribute<Tax13, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax13.mmObject();
@@ -232,6 +252,16 @@ public class Tax13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(Tax13 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Tax13 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -267,7 +297,7 @@ public class Tax13 {
 	 * definition} = "Rate used to calculate the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax13, PercentageRate> mmRate = new MMMessageAttribute<Tax13, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax13.mmObject();
@@ -279,6 +309,16 @@ public class Tax13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Tax13 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Tax13 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	/**

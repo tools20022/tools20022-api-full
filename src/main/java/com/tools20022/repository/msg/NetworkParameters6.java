@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.NetworkType2Code;
 import com.tools20022.repository.entity.NetworkAccess;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NetworkParameters5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -103,7 +104,7 @@ public class NetworkParameters6 {
 	 * definition} = "Type of proxy."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters6, NetworkType2Code> mmType = new MMMessageAttribute<NetworkParameters6, NetworkType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters6.mmObject();
 			isDerived = false;
@@ -114,6 +115,16 @@ public class NetworkParameters6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NetworkType2Code.mmObject();
+		}
+
+		@Override
+		public NetworkType2Code getValue(NetworkParameters6 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(NetworkParameters6 obj, NetworkType2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Accs", required = true)
@@ -156,7 +167,7 @@ public class NetworkParameters6 {
 	 * NetworkParameters3.mmAccessCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccess = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetworkParameters6, NetworkParameters5> mmAccess = new MMMessageAttribute<NetworkParameters6, NetworkParameters5>() {
 		{
 			businessElementTrace_lazy = () -> NetworkAccess.mmAccessCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NetworkParameters6.mmObject();
@@ -168,7 +179,17 @@ public class NetworkParameters6 {
 			previousVersion_lazy = () -> NetworkParameters3.mmAccessCode;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.NetworkParameters5.mmObject();
+			complexType_lazy = () -> NetworkParameters5.mmObject();
+		}
+
+		@Override
+		public NetworkParameters5 getValue(NetworkParameters6 obj) {
+			return obj.getAccess();
+		}
+
+		@Override
+		public void setValue(NetworkParameters6 obj, NetworkParameters5 value) {
+			obj.setAccess(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class NetworkParameters6 {
 		return access;
 	}
 
-	public NetworkParameters6 setAccess(com.tools20022.repository.msg.NetworkParameters5 access) {
+	public NetworkParameters6 setAccess(NetworkParameters5 access) {
 		this.access = Objects.requireNonNull(access);
 		return this;
 	}

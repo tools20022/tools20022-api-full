@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.Case2;
 import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msg.DebitAuthorisationDetails3;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -147,7 +146,7 @@ public class DebitAuthorisationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationRequestV03, CaseAssignment2> mmAssignment = new MMMessageBuildingBlock<DebitAuthorisationRequestV03, CaseAssignment2>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,12 +157,14 @@ public class DebitAuthorisationRequestV03 {
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationRequestV03.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment2 getValue(DebitAuthorisationRequestV03 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationRequestV03 obj, CaseAssignment2 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -189,7 +190,7 @@ public class DebitAuthorisationRequestV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationRequestV03, Case2> mmCase = new MMMessageBuildingBlock<DebitAuthorisationRequestV03, Case2>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,12 +201,14 @@ public class DebitAuthorisationRequestV03 {
 			complexType_lazy = () -> Case2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationRequestV03.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case2 getValue(DebitAuthorisationRequestV03 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationRequestV03 obj, Case2 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -233,7 +236,7 @@ public class DebitAuthorisationRequestV03 {
 	 * definition} = "Identifies the underlying payment instructrion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationRequestV03, UnderlyingTransaction1Choice> mmUnderlying = new MMMessageBuildingBlock<DebitAuthorisationRequestV03, UnderlyingTransaction1Choice>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,12 +247,14 @@ public class DebitAuthorisationRequestV03 {
 			complexType_lazy = () -> UnderlyingTransaction1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationRequestV03.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnderlyingTransaction1Choice getValue(DebitAuthorisationRequestV03 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationRequestV03 obj, UnderlyingTransaction1Choice value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Dtl", required = true)
@@ -277,7 +282,7 @@ public class DebitAuthorisationRequestV03 {
 	 * definition} = "Detailed information about the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDetail = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DebitAuthorisationRequestV03, DebitAuthorisationDetails3> mmDetail = new MMMessageBuildingBlock<DebitAuthorisationRequestV03, DebitAuthorisationDetails3>() {
 		{
 			xmlTag = "Dtl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,12 +293,14 @@ public class DebitAuthorisationRequestV03 {
 			complexType_lazy = () -> DebitAuthorisationDetails3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DebitAuthorisationRequestV03.class.getMethod("getDetail", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DebitAuthorisationDetails3 getValue(DebitAuthorisationRequestV03 obj) {
+			return obj.getDetail();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationRequestV03 obj, DebitAuthorisationDetails3 value) {
+			obj.setDetail(value);
 		}
 	};
 

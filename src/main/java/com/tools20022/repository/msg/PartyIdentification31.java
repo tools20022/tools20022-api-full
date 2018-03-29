@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -122,7 +123,7 @@ public class PartyIdentification31 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification31, Optional<Max70Text>> mmName = new MMMessageAttribute<PartyIdentification31, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification31.mmObject();
@@ -134,6 +135,16 @@ public class PartyIdentification31 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(PartyIdentification31 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification31 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -171,7 +182,7 @@ public class PartyIdentification31 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification31, Optional<PostalAddress4>> mmPostalAddress = new MMMessageAssociationEnd<PartyIdentification31, Optional<PostalAddress4>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification31.mmObject();
@@ -183,7 +194,17 @@ public class PartyIdentification31 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress4.mmObject();
+			type_lazy = () -> PostalAddress4.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress4> getValue(PartyIdentification31 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification31 obj, Optional<PostalAddress4> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id")
@@ -221,7 +242,7 @@ public class PartyIdentification31 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification31, Optional<Party5Choice>> mmIdentification = new MMMessageAssociationEnd<PartyIdentification31, Optional<Party5Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification31.mmObject();
@@ -234,6 +255,16 @@ public class PartyIdentification31 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Party5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Party5Choice> getValue(PartyIdentification31 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification31 obj, Optional<Party5Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfRes")
@@ -272,7 +303,7 @@ public class PartyIdentification31 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfResidence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification31, Optional<CountryCode>> mmCountryOfResidence = new MMMessageAttribute<PartyIdentification31, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification31.mmObject();
@@ -284,6 +315,16 @@ public class PartyIdentification31 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(PartyIdentification31 obj) {
+			return obj.getCountryOfResidence();
+		}
+
+		@Override
+		public void setValue(PartyIdentification31 obj, Optional<CountryCode> value) {
+			obj.setCountryOfResidence(value.orElse(null));
 		}
 	};
 
@@ -315,7 +356,7 @@ public class PartyIdentification31 {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public PartyIdentification31 setPostalAddress(com.tools20022.repository.msg.PostalAddress4 postalAddress) {
+	public PartyIdentification31 setPostalAddress(PostalAddress4 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}

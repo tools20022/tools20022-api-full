@@ -128,7 +128,7 @@ public class PendingProcessingReason9 {
 	 * PendingProcessingReason1.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingProcessingReason9, PendingProcessingReason11Choice> mmCode = new MMMessageAssociationEnd<PendingProcessingReason9, PendingProcessingReason11Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingProcessingReason9.mmObject();
@@ -143,6 +143,16 @@ public class PendingProcessingReason9 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingProcessingReason11Choice.mmObject();
+		}
+
+		@Override
+		public PendingProcessingReason11Choice getValue(PendingProcessingReason9 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason9 obj, PendingProcessingReason11Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -189,7 +199,7 @@ public class PendingProcessingReason9 {
 	 * PendingProcessingReason1.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingProcessingReason9, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<PendingProcessingReason9, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingProcessingReason9.mmObject();
@@ -203,6 +213,16 @@ public class PendingProcessingReason9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(PendingProcessingReason9 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(PendingProcessingReason9 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

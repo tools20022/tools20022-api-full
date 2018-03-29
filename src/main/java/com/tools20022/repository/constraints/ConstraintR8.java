@@ -49,11 +49,15 @@ public class ConstraintR8 {
 	 */
 	public static final MMConstraint<DiscountTaxType> forDiscountTaxType = new MMConstraint<DiscountTaxType>() {
 		{
-			validator = ConstraintR8::checkEarlyPaymentsVAT1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "R8";
 			definition = "Value according to external codelist.";
 			owner_lazy = () -> EarlyPaymentsVAT1.mmDiscountTaxType;
+		}
+
+		@Override
+		public void executeValidator(DiscountTaxType obj) throws Exception {
+			checkEarlyPaymentsVAT1(obj);
 		}
 	};
 

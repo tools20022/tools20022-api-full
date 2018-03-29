@@ -51,7 +51,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Parameter9"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -101,7 +101,7 @@ public class Parameter9 {
 	 * Parameter5.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter9, Optional<Algorithm16Code>> mmDigestAlgorithm = new MMMessageAttribute<Parameter9, Optional<Algorithm16Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter9.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class Parameter9 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm16Code.mmObject();
 		}
+
+		@Override
+		public Optional<Algorithm16Code> getValue(Parameter9 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter9 obj, Optional<Algorithm16Code> value) {
+			obj.setDigestAlgorithm(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -121,7 +131,7 @@ public class Parameter9 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter9.mmDigestAlgorithm);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter9";
 				definition = "Parameters associated to a mask generator cryptographic function.";
 				previousVersion_lazy = () -> Parameter5.mmObject();

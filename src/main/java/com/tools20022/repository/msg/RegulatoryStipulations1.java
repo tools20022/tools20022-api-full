@@ -125,7 +125,7 @@ public class RegulatoryStipulations1 {
 	 * "Nation with its own government, occupying a particular territory."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryStipulations1, CountryCode> mmCountry = new MMMessageAttribute<RegulatoryStipulations1, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryStipulations1.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class RegulatoryStipulations1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(RegulatoryStipulations1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(RegulatoryStipulations1 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "Stiptns", required = true)
@@ -169,7 +179,7 @@ public class RegulatoryStipulations1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStipulations = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegulatoryStipulations1, List<Max350Text>> mmStipulations = new MMMessageAttribute<RegulatoryStipulations1, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegulatoryStipulations1.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class RegulatoryStipulations1 {
 			definition = "Specifies regulatory stipulations that financial institutions must be compliant with in the country, region, and/or where they conduct business.";
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(RegulatoryStipulations1 obj) {
+			return obj.getStipulations();
+		}
+
+		@Override
+		public void setValue(RegulatoryStipulations1 obj, List<Max350Text> value) {
+			obj.setStipulations(value);
 		}
 	};
 

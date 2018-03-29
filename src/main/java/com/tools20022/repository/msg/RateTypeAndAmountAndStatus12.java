@@ -123,7 +123,7 @@ public class RateTypeAndAmountAndStatus12 {
 	 * definition} = "Value expressed as a rate type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateTypeAndAmountAndStatus12, RateType18Choice> mmRateType = new MMMessageAssociationEnd<RateTypeAndAmountAndStatus12, RateType18Choice>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus12.mmObject();
@@ -136,6 +136,16 @@ public class RateTypeAndAmountAndStatus12 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateType18Choice.mmObject();
+		}
+
+		@Override
+		public RateType18Choice getValue(RateTypeAndAmountAndStatus12 obj) {
+			return obj.getRateType();
+		}
+
+		@Override
+		public void setValue(RateTypeAndAmountAndStatus12 obj, RateType18Choice value) {
+			obj.setRateType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -173,7 +183,7 @@ public class RateTypeAndAmountAndStatus12 {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateTypeAndAmountAndStatus12, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateTypeAndAmountAndStatus12, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus12.mmObject();
@@ -185,6 +195,16 @@ public class RateTypeAndAmountAndStatus12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(RateTypeAndAmountAndStatus12 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateTypeAndAmountAndStatus12 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateSts")
@@ -220,7 +240,7 @@ public class RateTypeAndAmountAndStatus12 {
 	 * definition} = "Value expressed as a rate status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateTypeAndAmountAndStatus12, Optional<RateStatus2Choice>> mmRateStatus = new MMMessageAssociationEnd<RateTypeAndAmountAndStatus12, Optional<RateStatus2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmRateStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus12.mmObject();
@@ -233,6 +253,16 @@ public class RateTypeAndAmountAndStatus12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RateStatus2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RateStatus2Choice> getValue(RateTypeAndAmountAndStatus12 obj) {
+			return obj.getRateStatus();
+		}
+
+		@Override
+		public void setValue(RateTypeAndAmountAndStatus12 obj, Optional<RateStatus2Choice> value) {
+			obj.setRateStatus(value.orElse(null));
 		}
 	};
 

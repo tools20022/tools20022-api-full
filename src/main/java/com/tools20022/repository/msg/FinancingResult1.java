@@ -119,7 +119,7 @@ public class FinancingResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancingRequestStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingResult1, RequestStatus1Code> mmFinancingRequestStatus = new MMMessageAttribute<FinancingResult1, RequestStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmFinancingTransactionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
@@ -131,6 +131,16 @@ public class FinancingResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestStatus1Code.mmObject();
+		}
+
+		@Override
+		public RequestStatus1Code getValue(FinancingResult1 obj) {
+			return obj.getFinancingRequestStatus();
+		}
+
+		@Override
+		public void setValue(FinancingResult1 obj, RequestStatus1Code value) {
+			obj.setFinancingRequestStatus(value);
 		}
 	};
 	@XmlElement(name = "StsRsn")
@@ -168,7 +178,7 @@ public class FinancingResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancingResult1, Optional<StatusReason4Choice>> mmStatusReason = new MMMessageAssociationEnd<FinancingResult1, Optional<StatusReason4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmFinancingStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
@@ -181,6 +191,16 @@ public class FinancingResult1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> StatusReason4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatusReason4Choice> getValue(FinancingResult1 obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(FinancingResult1 obj, Optional<StatusReason4Choice> value) {
+			obj.setStatusReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlStsRsnInf")
@@ -217,7 +237,7 @@ public class FinancingResult1 {
 	 * definition} = "Further details on the status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingResult1, List<Max105Text>> mmAdditionalStatusReasonInformation = new MMMessageAttribute<FinancingResult1, List<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
@@ -228,6 +248,16 @@ public class FinancingResult1 {
 			definition = "Further details on the status reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(FinancingResult1 obj) {
+			return obj.getAdditionalStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(FinancingResult1 obj, List<Max105Text> value) {
+			obj.setAdditionalStatusReasonInformation(value);
 		}
 	};
 	@XmlElement(name = "FincdAmt")
@@ -265,7 +295,7 @@ public class FinancingResult1 {
 	 * definition} = "Indicates amount financed related to the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancingResult1, Optional<FinancingRateOrAmountChoice>> mmFinancedAmount = new MMMessageAttribute<FinancingResult1, Optional<FinancingRateOrAmountChoice>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmRequestedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingResult1.mmObject();
@@ -277,6 +307,16 @@ public class FinancingResult1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancingRateOrAmountChoice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancingRateOrAmountChoice> getValue(FinancingResult1 obj) {
+			return obj.getFinancedAmount();
+		}
+
+		@Override
+		public void setValue(FinancingResult1 obj, Optional<FinancingRateOrAmountChoice> value) {
+			obj.setFinancedAmount(value.orElse(null));
 		}
 	};
 

@@ -24,6 +24,8 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContractType5;
+import com.tools20022.repository.msg.TradeTransaction17;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -111,7 +113,7 @@ public class CommonTradeDataReport24 {
 	 * definition} = "Data specifically related to contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContractData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommonTradeDataReport24, Optional<ContractType5>> mmContractData = new MMMessageAssociationEnd<CommonTradeDataReport24, Optional<ContractType5>>() {
 		{
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonTradeDataReport24.mmObject();
@@ -123,7 +125,17 @@ public class CommonTradeDataReport24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContractType5.mmObject();
+			type_lazy = () -> ContractType5.mmObject();
+		}
+
+		@Override
+		public Optional<ContractType5> getValue(CommonTradeDataReport24 obj) {
+			return obj.getContractData();
+		}
+
+		@Override
+		public void setValue(CommonTradeDataReport24 obj, Optional<ContractType5> value) {
+			obj.setContractData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxData")
@@ -159,7 +171,7 @@ public class CommonTradeDataReport24 {
 	 * definition} = "Data related specifically to the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommonTradeDataReport24, Optional<TradeTransaction17>> mmTransactionData = new MMMessageAssociationEnd<CommonTradeDataReport24, Optional<TradeTransaction17>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTrade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommonTradeDataReport24.mmObject();
@@ -171,7 +183,17 @@ public class CommonTradeDataReport24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeTransaction17.mmObject();
+			type_lazy = () -> TradeTransaction17.mmObject();
+		}
+
+		@Override
+		public Optional<TradeTransaction17> getValue(CommonTradeDataReport24 obj) {
+			return obj.getTransactionData();
+		}
+
+		@Override
+		public void setValue(CommonTradeDataReport24 obj, Optional<TradeTransaction17> value) {
+			obj.setTransactionData(value.orElse(null));
 		}
 	};
 
@@ -194,7 +216,7 @@ public class CommonTradeDataReport24 {
 		return contractData == null ? Optional.empty() : Optional.of(contractData);
 	}
 
-	public CommonTradeDataReport24 setContractData(com.tools20022.repository.msg.ContractType5 contractData) {
+	public CommonTradeDataReport24 setContractData(ContractType5 contractData) {
 		this.contractData = contractData;
 		return this;
 	}
@@ -203,7 +225,7 @@ public class CommonTradeDataReport24 {
 		return transactionData == null ? Optional.empty() : Optional.of(transactionData);
 	}
 
-	public CommonTradeDataReport24 setTransactionData(com.tools20022.repository.msg.TradeTransaction17 transactionData) {
+	public CommonTradeDataReport24 setTransactionData(TradeTransaction17 transactionData) {
 		this.transactionData = transactionData;
 		return this;
 	}

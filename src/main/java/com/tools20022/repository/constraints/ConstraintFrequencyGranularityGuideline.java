@@ -60,12 +60,16 @@ public class ConstraintFrequencyGranularityGuideline {
 	 */
 	public static final MMConstraint<Statement37> forStatement37 = new MMConstraint<Statement37>() {
 		{
-			validator = ConstraintFrequencyGranularityGuideline::checkStatement37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrequencyGranularityGuideline";
 			definition = "FrequencyGranularity should be within the limits of the Frequency, such as Frequency equals Monthly and FrequencyGranularity equals Daily.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFrequencyGranularityGuideline.forStatement59);
 			owner_lazy = () -> Statement37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement37 obj) throws Exception {
+			checkStatement37(obj);
 		}
 	};
 	/**
@@ -95,12 +99,16 @@ public class ConstraintFrequencyGranularityGuideline {
 	 */
 	public static final MMConstraint<Statement59> forStatement59 = new MMConstraint<Statement59>() {
 		{
-			validator = ConstraintFrequencyGranularityGuideline::checkStatement59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrequencyGranularityGuideline";
 			definition = "FrequencyGranularity should be within the limits of the Frequency, such as Frequency equals Monthly and FrequencyGranularity equals Daily.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFrequencyGranularityGuideline.forStatement37;
 			owner_lazy = () -> Statement59.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement59 obj) throws Exception {
+			checkStatement59(obj);
 		}
 	};
 

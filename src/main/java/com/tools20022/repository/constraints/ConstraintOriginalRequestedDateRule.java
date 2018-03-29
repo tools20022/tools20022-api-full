@@ -58,12 +58,16 @@ public class ConstraintOriginalRequestedDateRule {
 	 */
 	public static final MMConstraint<UnderlyingPaymentInstruction1> forUnderlyingPaymentInstruction1 = new MMConstraint<UnderlyingPaymentInstruction1>() {
 		{
-			validator = ConstraintOriginalRequestedDateRule::checkUnderlyingPaymentInstruction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestedDateRule";
 			definition = "Either RequestedExecutionDate or RequestedCollectionDate must be present.";
 			owner_lazy = () -> UnderlyingPaymentInstruction1.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedExecutionDate</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedCollectionDate</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingPaymentInstruction1 obj) throws Exception {
+			checkUnderlyingPaymentInstruction1(obj);
 		}
 	};
 	/**
@@ -101,13 +105,17 @@ public class ConstraintOriginalRequestedDateRule {
 	 */
 	public static final MMConstraint<UnderlyingPaymentInstruction2> forUnderlyingPaymentInstruction2 = new MMConstraint<UnderlyingPaymentInstruction2>() {
 		{
-			validator = ConstraintOriginalRequestedDateRule::checkUnderlyingPaymentInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestedDateRule";
 			definition = "Either RequestedExecutionDate or RequestedCollectionDate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOriginalRequestedDateRule.forUnderlyingPaymentInstruction3);
 			owner_lazy = () -> UnderlyingPaymentInstruction2.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedExecutionDate</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedCollectionDate</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingPaymentInstruction2 obj) throws Exception {
+			checkUnderlyingPaymentInstruction2(obj);
 		}
 	};
 	/**
@@ -150,7 +158,6 @@ public class ConstraintOriginalRequestedDateRule {
 	 */
 	public static final MMConstraint<UnderlyingPaymentInstruction3> forUnderlyingPaymentInstruction3 = new MMConstraint<UnderlyingPaymentInstruction3>() {
 		{
-			validator = ConstraintOriginalRequestedDateRule::checkUnderlyingPaymentInstruction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestedDateRule";
 			definition = "Either RequestedExecutionDate or RequestedCollectionDate must be present.";
@@ -158,6 +165,11 @@ public class ConstraintOriginalRequestedDateRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOriginalRequestedDateRule.forUnderlyingPaymentInstruction2;
 			owner_lazy = () -> UnderlyingPaymentInstruction3.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedExecutionDate</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedCollectionDate</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingPaymentInstruction3 obj) throws Exception {
+			checkUnderlyingPaymentInstruction3(obj);
 		}
 	};
 	/**
@@ -192,13 +204,17 @@ public class ConstraintOriginalRequestedDateRule {
 	 */
 	public static final MMConstraint<UnderlyingPaymentInstruction4> forUnderlyingPaymentInstruction4 = new MMConstraint<UnderlyingPaymentInstruction4>() {
 		{
-			validator = ConstraintOriginalRequestedDateRule::checkUnderlyingPaymentInstruction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestedDateRule";
 			definition = "Either RequestedExecutionDate or RequestedCollectionDate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOriginalRequestedDateRule.forUnderlyingPaymentInstruction3;
 			owner_lazy = () -> UnderlyingPaymentInstruction4.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedExecutionDate</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedCollectionDate</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnderlyingPaymentInstruction4 obj) throws Exception {
+			checkUnderlyingPaymentInstruction4(obj);
 		}
 	};
 

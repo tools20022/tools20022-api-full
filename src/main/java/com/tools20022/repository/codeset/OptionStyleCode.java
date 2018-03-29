@@ -232,7 +232,7 @@ public class OptionStyleCode extends MMCode {
 	};
 	/**
 	 * Option whose exercise style lies somewhere between European options and
-	 * Bermudan options. The holder can exercise the option at quaterly dates,
+	 * Bermudan options. The holder can exercise the option at quarterly dates,
 	 * but not before a set time period (typically one year) has elapsed.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -251,7 +251,7 @@ public class OptionStyleCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Option whose exercise style lies somewhere between European options and Bermudan options. The holder can exercise the option at quaterly dates, but not before a set time period (typically one year) has elapsed."
+	 * "Option whose exercise style lies somewhere between European options and Bermudan options. The holder can exercise the option at quarterly dates, but not before a set time period (typically one year) has elapsed."
 	 * </li>
 	 * </ul>
 	 */
@@ -259,7 +259,7 @@ public class OptionStyleCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Canary";
-			definition = "Option whose exercise style lies somewhere between European options and Bermudan options. The holder can exercise the option at quaterly dates, but not before a set time period (typically one year) has elapsed.";
+			definition = "Option whose exercise style lies somewhere between European options and Bermudan options. The holder can exercise the option at quarterly dates, but not before a set time period (typically one year) has elapsed.";
 			owner_lazy = () -> com.tools20022.repository.codeset.OptionStyleCode.mmObject();
 			codeName = "CANA";
 		}

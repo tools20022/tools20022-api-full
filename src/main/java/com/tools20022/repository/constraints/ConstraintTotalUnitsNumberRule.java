@@ -51,11 +51,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer4> forTransfer4 = new MMConstraint<Transfer4>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer4 obj) throws Exception {
+			checkTransfer4(obj);
 		}
 	};
 	/**
@@ -80,11 +84,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer7> forTransfer7 = new MMConstraint<Transfer7>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer7 obj) throws Exception {
+			checkTransfer7(obj);
 		}
 	};
 	/**
@@ -109,11 +117,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer17> forTransfer17 = new MMConstraint<Transfer17>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer17 obj) throws Exception {
+			checkTransfer17(obj);
 		}
 	};
 	/**
@@ -138,11 +150,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer2> forTransfer2 = new MMConstraint<Transfer2>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer2 obj) throws Exception {
+			checkTransfer2(obj);
 		}
 	};
 	/**
@@ -167,11 +183,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer10> forTransfer10 = new MMConstraint<Transfer10>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer10 obj) throws Exception {
+			checkTransfer10(obj);
 		}
 	};
 	/**
@@ -196,11 +216,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer14> forTransfer14 = new MMConstraint<Transfer14>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber else PortfolioTransferOutRate must be present.";
 			owner_lazy = () -> Transfer14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer14 obj) throws Exception {
+			checkTransfer14(obj);
 		}
 	};
 	/**
@@ -225,11 +249,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer24> forTransfer24 = new MMConstraint<Transfer24>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber else PortfolioTransferOutRate must be present.";
 			owner_lazy = () -> Transfer24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer24 obj) throws Exception {
+			checkTransfer24(obj);
 		}
 	};
 	/**
@@ -254,11 +282,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer25> forTransfer25 = new MMConstraint<Transfer25>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer25 obj) throws Exception {
+			checkTransfer25(obj);
 		}
 	};
 	/**
@@ -283,11 +315,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer1> forTransfer1 = new MMConstraint<Transfer1>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer1 obj) throws Exception {
+			checkTransfer1(obj);
 		}
 	};
 	/**
@@ -312,11 +348,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer9> forTransfer9 = new MMConstraint<Transfer9>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer9 obj) throws Exception {
+			checkTransfer9(obj);
 		}
 	};
 	/**
@@ -341,11 +381,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer12> forTransfer12 = new MMConstraint<Transfer12>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber else PortfolioTransferOutRate must be present.";
 			owner_lazy = () -> Transfer12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer12 obj) throws Exception {
+			checkTransfer12(obj);
 		}
 	};
 	/**
@@ -370,11 +414,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer20> forTransfer20 = new MMConstraint<Transfer20>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber else PortfolioTransferOutRate must be present.";
 			owner_lazy = () -> Transfer20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer20 obj) throws Exception {
+			checkTransfer20(obj);
 		}
 	};
 	/**
@@ -399,11 +447,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer18> forTransfer18 = new MMConstraint<Transfer18>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer18 obj) throws Exception {
+			checkTransfer18(obj);
 		}
 	};
 	/**
@@ -436,12 +488,16 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer26> forTransfer26 = new MMConstraint<Transfer26>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer29);
 			owner_lazy = () -> Transfer26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer26 obj) throws Exception {
+			checkTransfer26(obj);
 		}
 	};
 	/**
@@ -466,11 +522,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer13> forTransfer13 = new MMConstraint<Transfer13>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber else PortfolioTransferOutRate must be present.";
 			owner_lazy = () -> Transfer13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer13 obj) throws Exception {
+			checkTransfer13(obj);
 		}
 	};
 	/**
@@ -503,12 +563,16 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer23> forTransfer23 = new MMConstraint<Transfer23>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber else PortfolioTransferOutRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer28);
 			owner_lazy = () -> Transfer23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer23 obj) throws Exception {
+			checkTransfer23(obj);
 		}
 	};
 	/**
@@ -533,11 +597,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer8> forTransfer8 = new MMConstraint<Transfer8>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer8 obj) throws Exception {
+			checkTransfer8(obj);
 		}
 	};
 	/**
@@ -562,11 +630,15 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer11> forTransfer11 = new MMConstraint<Transfer11>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber else PortfolioTransferOutRate must be present.";
 			owner_lazy = () -> Transfer11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer11 obj) throws Exception {
+			checkTransfer11(obj);
 		}
 	};
 	/**
@@ -599,12 +671,16 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer19> forTransfer19 = new MMConstraint<Transfer19>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber else PortfolioTransferOutRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer27);
 			owner_lazy = () -> Transfer19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer19 obj) throws Exception {
+			checkTransfer19(obj);
 		}
 	};
 	/**
@@ -642,13 +718,17 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer27> forTransfer27 = new MMConstraint<Transfer27>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "Quantity/TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer30);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer19;
 			owner_lazy = () -> Transfer27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer27 obj) throws Exception {
+			checkTransfer27(obj);
 		}
 	};
 	/**
@@ -686,13 +766,17 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer28> forTransfer28 = new MMConstraint<Transfer28>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer23;
 			owner_lazy = () -> Transfer28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer28 obj) throws Exception {
+			checkTransfer28(obj);
 		}
 	};
 	/**
@@ -730,13 +814,17 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer29> forTransfer29 = new MMConstraint<Transfer29>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer33);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer26;
 			owner_lazy = () -> Transfer29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer29 obj) throws Exception {
+			checkTransfer29(obj);
 		}
 	};
 	/**
@@ -774,13 +862,17 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer31> forTransfer31 = new MMConstraint<Transfer31>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer35);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer28;
 			owner_lazy = () -> Transfer31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer31 obj) throws Exception {
+			checkTransfer31(obj);
 		}
 	};
 	/**
@@ -818,13 +910,17 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer30> forTransfer30 = new MMConstraint<Transfer30>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "Quantity/TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer34);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer27;
 			owner_lazy = () -> Transfer30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer30 obj) throws Exception {
+			checkTransfer30(obj);
 		}
 	};
 	/**
@@ -854,12 +950,16 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer33> forTransfer33 = new MMConstraint<Transfer33>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer29;
 			owner_lazy = () -> Transfer33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer33 obj) throws Exception {
+			checkTransfer33(obj);
 		}
 	};
 	/**
@@ -889,12 +989,16 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer35> forTransfer35 = new MMConstraint<Transfer35>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer31;
 			owner_lazy = () -> Transfer35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer35 obj) throws Exception {
+			checkTransfer35(obj);
 		}
 	};
 	/**
@@ -924,12 +1028,16 @@ public class ConstraintTotalUnitsNumberRule {
 	 */
 	public static final MMConstraint<Transfer34> forTransfer34 = new MMConstraint<Transfer34>() {
 		{
-			validator = ConstraintTotalUnitsNumberRule::checkTransfer34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "Quantity/TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer30;
 			owner_lazy = () -> Transfer34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer34 obj) throws Exception {
+			checkTransfer34(obj);
 		}
 	};
 

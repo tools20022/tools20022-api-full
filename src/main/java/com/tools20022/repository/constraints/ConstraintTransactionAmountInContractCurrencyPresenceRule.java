@@ -55,12 +55,16 @@ public class ConstraintTransactionAmountInContractCurrencyPresenceRule {
 	 */
 	public static final MMConstraint<TransactionCertificateContract1> forTransactionCertificateContract1 = new MMConstraint<TransactionCertificateContract1>() {
 		{
-			validator = ConstraintTransactionAmountInContractCurrencyPresenceRule::checkTransactionCertificateContract1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAmountInContractCurrencyPresenceRule";
 			definition = "If ContractReference/RegisteredContractIdentification is absent then TransactionAmountInContractCurrency must be absent.";
 			owner_lazy = () -> TransactionCertificateContract1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TransactionAmountInContractCurrency</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ContractReference/RegisteredContractIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransactionCertificateContract1 obj) throws Exception {
+			checkTransactionCertificateContract1(obj);
 		}
 	};
 

@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SubscriptionOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument18;
+import com.tools20022.repository.msg.InvestmentAccount30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -111,7 +113,7 @@ public class SubscriptionOrder10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionOrder10, Optional<InvestmentAccount30>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SubscriptionOrder10, Optional<InvestmentAccount30>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionOrder10.mmObject();
@@ -123,7 +125,17 @@ public class SubscriptionOrder10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
+			type_lazy = () -> InvestmentAccount30.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount30> getValue(SubscriptionOrder10 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrder10 obj, Optional<InvestmentAccount30> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
@@ -161,7 +173,7 @@ public class SubscriptionOrder10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionOrder10, Optional<FinancialInstrument18>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<SubscriptionOrder10, Optional<FinancialInstrument18>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionOrder10.mmObject();
@@ -173,7 +185,17 @@ public class SubscriptionOrder10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument18.mmObject();
+			type_lazy = () -> FinancialInstrument18.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrument18> getValue(SubscriptionOrder10 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrder10 obj, Optional<FinancialInstrument18> value) {
+			obj.setFinancialInstrumentDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmQty")
@@ -212,7 +234,7 @@ public class SubscriptionOrder10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionOrder10, Optional<FinancialInstrumentQuantity7Choice>> mmFinancialInstrumentQuantity = new MMMessageAssociationEnd<SubscriptionOrder10, Optional<FinancialInstrumentQuantity7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionOrder10.mmObject();
@@ -225,6 +247,16 @@ public class SubscriptionOrder10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity7Choice> getValue(SubscriptionOrder10 obj) {
+			return obj.getFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrder10 obj, Optional<FinancialInstrumentQuantity7Choice> value) {
+			obj.setFinancialInstrumentQuantity(value.orElse(null));
 		}
 	};
 
@@ -247,7 +279,7 @@ public class SubscriptionOrder10 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public SubscriptionOrder10 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public SubscriptionOrder10 setInvestmentAccountDetails(InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -256,7 +288,7 @@ public class SubscriptionOrder10 {
 		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public SubscriptionOrder10 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument18 financialInstrumentDetails) {
+	public SubscriptionOrder10 setFinancialInstrumentDetails(FinancialInstrument18 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 		return this;
 	}

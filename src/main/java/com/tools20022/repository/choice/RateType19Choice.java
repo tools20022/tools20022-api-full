@@ -108,7 +108,7 @@ public class RateType19Choice {
 	 * definition} = "Rate is defined using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType19Choice, RateType1Code> mmCode = new MMMessageAttribute<RateType19Choice, RateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType19Choice.mmObject();
@@ -120,6 +120,16 @@ public class RateType19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType1Code.mmObject();
+		}
+
+		@Override
+		public RateType1Code getValue(RateType19Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateType19Choice obj, RateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class RateType19Choice {
 	 * definition} = "Rate is determined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateType19Choice, GenericIdentification38> mmProprietary = new MMMessageAssociationEnd<RateType19Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType19Choice.mmObject();
@@ -169,6 +179,16 @@ public class RateType19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(RateType19Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateType19Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

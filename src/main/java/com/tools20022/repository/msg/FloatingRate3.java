@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FloatingRateIdentification1;
+import com.tools20022.repository.msg.InterestRateContractTerm3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -114,7 +116,7 @@ public class FloatingRate3 {
 	 * definition} = "Indication of the floating rate used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FloatingRate3, Optional<FloatingRateIdentification1>> mmRate = new MMMessageAssociationEnd<FloatingRate3, Optional<FloatingRateIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingRate3.mmObject();
@@ -126,7 +128,17 @@ public class FloatingRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FloatingRateIdentification1.mmObject();
+			type_lazy = () -> FloatingRateIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<FloatingRateIdentification1> getValue(FloatingRate3 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(FloatingRate3 obj, Optional<FloatingRateIdentification1> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefPrd")
@@ -162,7 +174,7 @@ public class FloatingRate3 {
 	 * definition} = "Information related to reference period."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferencePeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FloatingRate3, Optional<InterestRateContractTerm3>> mmReferencePeriod = new MMMessageAssociationEnd<FloatingRate3, Optional<InterestRateContractTerm3>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingRate3.mmObject();
@@ -174,7 +186,17 @@ public class FloatingRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm3.mmObject();
+			type_lazy = () -> InterestRateContractTerm3.mmObject();
+		}
+
+		@Override
+		public Optional<InterestRateContractTerm3> getValue(FloatingRate3 obj) {
+			return obj.getReferencePeriod();
+		}
+
+		@Override
+		public void setValue(FloatingRate3 obj, Optional<InterestRateContractTerm3> value) {
+			obj.setReferencePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sprd")
@@ -211,7 +233,7 @@ public class FloatingRate3 {
 	 * definition} = "Spread expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FloatingRate3, Optional<PercentageRate>> mmSpread = new MMMessageAttribute<FloatingRate3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmSpread;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingRate3.mmObject();
@@ -223,6 +245,16 @@ public class FloatingRate3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(FloatingRate3 obj) {
+			return obj.getSpread();
+		}
+
+		@Override
+		public void setValue(FloatingRate3 obj, Optional<PercentageRate> value) {
+			obj.setSpread(value.orElse(null));
 		}
 	};
 
@@ -245,7 +277,7 @@ public class FloatingRate3 {
 		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public FloatingRate3 setRate(com.tools20022.repository.msg.FloatingRateIdentification1 rate) {
+	public FloatingRate3 setRate(FloatingRateIdentification1 rate) {
 		this.rate = rate;
 		return this;
 	}
@@ -254,7 +286,7 @@ public class FloatingRate3 {
 		return referencePeriod == null ? Optional.empty() : Optional.of(referencePeriod);
 	}
 
-	public FloatingRate3 setReferencePeriod(com.tools20022.repository.msg.InterestRateContractTerm3 referencePeriod) {
+	public FloatingRate3 setReferencePeriod(InterestRateContractTerm3 referencePeriod) {
 		this.referencePeriod = referencePeriod;
 		return this;
 	}

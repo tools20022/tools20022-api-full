@@ -143,7 +143,7 @@ public class InvestmentFundsOrderBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderBreakdownType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundsOrderBreakdown1, FundOrderType5Code> mmOrderBreakdownType = new MMMessageAttribute<InvestmentFundsOrderBreakdown1, FundOrderType5Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1.mmObject();
@@ -156,6 +156,16 @@ public class InvestmentFundsOrderBreakdown1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType5Code.mmObject();
+		}
+
+		@Override
+		public FundOrderType5Code getValue(InvestmentFundsOrderBreakdown1 obj) {
+			return obj.getOrderBreakdownType();
+		}
+
+		@Override
+		public void setValue(InvestmentFundsOrderBreakdown1 obj, FundOrderType5Code value) {
+			obj.setOrderBreakdownType(value);
 		}
 	};
 	@XmlElement(name = "XtndedOrdrBrkdwnTp", required = true)
@@ -193,7 +203,7 @@ public class InvestmentFundsOrderBreakdown1 {
 	 * definition} = "Type of order breakdown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedOrderBreakdownType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundsOrderBreakdown1, Extended350Code> mmExtendedOrderBreakdownType = new MMMessageAttribute<InvestmentFundsOrderBreakdown1, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1.mmObject();
@@ -205,6 +215,16 @@ public class InvestmentFundsOrderBreakdown1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(InvestmentFundsOrderBreakdown1 obj) {
+			return obj.getExtendedOrderBreakdownType();
+		}
+
+		@Override
+		public void setValue(InvestmentFundsOrderBreakdown1 obj, Extended350Code value) {
+			obj.setExtendedOrderBreakdownType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -251,7 +271,7 @@ public class InvestmentFundsOrderBreakdown1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundsOrderBreakdown1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<InvestmentFundsOrderBreakdown1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundsOrderBreakdown1.mmObject();
@@ -264,6 +284,16 @@ public class InvestmentFundsOrderBreakdown1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InvestmentFundsOrderBreakdown1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(InvestmentFundsOrderBreakdown1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	/**

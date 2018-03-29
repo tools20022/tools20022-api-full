@@ -26,7 +26,6 @@ import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.PartyIdentification10Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -210,7 +209,7 @@ public class CorporateActionInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, DocumentIdentification12> mmIdentification = new MMMessageBuildingBlock<CorporateActionInstructionV01, DocumentIdentification12>() {
 		{
 			xmlTag = "Id";
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::SEME"));
@@ -222,12 +221,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> DocumentIdentification12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification12 getValue(CorporateActionInstructionV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, DocumentIdentification12 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CancInstrId")
@@ -256,7 +257,7 @@ public class CorporateActionInstructionV01 {
 	 * "Identification of a previously sent cancelled instruction document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancelledInstructionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<DocumentIdentification15>> mmCancelledInstructionIdentification = new MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<DocumentIdentification15>>() {
 		{
 			xmlTag = "CancInstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,12 +268,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> DocumentIdentification15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getCancelledInstructionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification15> getValue(CorporateActionInstructionV01 obj) {
+			return obj.getCancelledInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, Optional<DocumentIdentification15> value) {
+			obj.setCancelledInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrCxlReqId")
@@ -302,7 +305,7 @@ public class CorporateActionInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstructionCancellationRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<DocumentIdentification15>> mmInstructionCancellationRequestIdentification = new MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<DocumentIdentification15>>() {
 		{
 			xmlTag = "InstrCxlReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -313,12 +316,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> DocumentIdentification15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getInstructionCancellationRequestIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification15> getValue(CorporateActionInstructionV01 obj) {
+			return obj.getInstructionCancellationRequestIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, Optional<DocumentIdentification15> value) {
+			obj.setInstructionCancellationRequestIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrDocId")
@@ -347,7 +352,7 @@ public class CorporateActionInstructionV01 {
 	 * "Identification of other documents as well as the document number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherDocumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, List<DocumentIdentification13>> mmOtherDocumentIdentification = new MMMessageBuildingBlock<CorporateActionInstructionV01, List<DocumentIdentification13>>() {
 		{
 			xmlTag = "OthrDocId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -357,12 +362,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> DocumentIdentification13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getOtherDocumentIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification13> getValue(CorporateActionInstructionV01 obj) {
+			return obj.getOtherDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, List<DocumentIdentification13> value) {
+			obj.setOtherDocumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "EvtsLkg")
@@ -392,7 +399,7 @@ public class CorporateActionInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEventsLinkage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, List<CorporateActionEventReference1>> mmEventsLinkage = new MMMessageBuildingBlock<CorporateActionInstructionV01, List<CorporateActionEventReference1>>() {
 		{
 			xmlTag = "EvtsLkg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -402,12 +409,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> CorporateActionEventReference1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getEventsLinkage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CorporateActionEventReference1> getValue(CorporateActionInstructionV01 obj) {
+			return obj.getEventsLinkage();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, List<CorporateActionEventReference1> value) {
+			obj.setEventsLinkage(value);
 		}
 	};
 	@XmlElement(name = "CorpActnGnlInf", required = true)
@@ -435,7 +444,7 @@ public class CorporateActionInstructionV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, CorporateActionGeneralInformation6> mmCorporateActionGeneralInformation = new MMMessageBuildingBlock<CorporateActionInstructionV01, CorporateActionGeneralInformation6>() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,12 +455,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> CorporateActionGeneralInformation6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionGeneralInformation6 getValue(CorporateActionInstructionV01 obj) {
+			return obj.getCorporateActionGeneralInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, CorporateActionGeneralInformation6 value) {
+			obj.setCorporateActionGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
@@ -481,7 +492,7 @@ public class CorporateActionInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, AccountAndBalance2> mmAccountDetails = new MMMessageBuildingBlock<CorporateActionInstructionV01, AccountAndBalance2>() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -492,12 +503,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> AccountAndBalance2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountAndBalance2 getValue(CorporateActionInstructionV01 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, AccountAndBalance2 value) {
+			obj.setAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "BnfclOwnrDtls")
@@ -526,7 +539,7 @@ public class CorporateActionInstructionV01 {
 	 * "Provides information about the beneficial owner of the securities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBeneficialOwnerDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, List<PartyIdentification33>> mmBeneficialOwnerDetails = new MMMessageBuildingBlock<CorporateActionInstructionV01, List<PartyIdentification33>>() {
 		{
 			xmlTag = "BnfclOwnrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -536,12 +549,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> PartyIdentification33.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getBeneficialOwnerDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PartyIdentification33> getValue(CorporateActionInstructionV01 obj) {
+			return obj.getBeneficialOwnerDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, List<PartyIdentification33> value) {
+			obj.setBeneficialOwnerDetails(value);
 		}
 	};
 	@XmlElement(name = "CorpActnInstr", required = true)
@@ -569,7 +584,7 @@ public class CorporateActionInstructionV01 {
 	 * definition} = "Information about the corporate action instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, CorporateActionOption5> mmCorporateActionInstruction = new MMMessageBuildingBlock<CorporateActionInstructionV01, CorporateActionOption5>() {
 		{
 			xmlTag = "CorpActnInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -580,12 +595,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> CorporateActionOption5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getCorporateActionInstruction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionOption5 getValue(CorporateActionInstructionV01 obj) {
+			return obj.getCorporateActionInstruction();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, CorporateActionOption5 value) {
+			obj.setCorporateActionInstruction(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -616,7 +633,7 @@ public class CorporateActionInstructionV01 {
 	 * definition} = "Provides additional information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<CorporateActionNarrative7>> mmAdditionalInformation = new MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<CorporateActionNarrative7>>() {
 		{
 			xmlTag = "AddtlInf";
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E:ADTX"));
@@ -628,12 +645,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> CorporateActionNarrative7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getAdditionalInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CorporateActionNarrative7> getValue(CorporateActionInstructionV01 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, Optional<CorporateActionNarrative7> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -665,7 +684,7 @@ public class CorporateActionInstructionV01 {
 	 * "Party that originated the message, if other than the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageOriginator = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<PartyIdentification10Choice>> mmMessageOriginator = new MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgOrgtr";
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::MEOR"));
@@ -677,12 +696,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getMessageOriginator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(CorporateActionInstructionV01 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -715,7 +736,7 @@ public class CorporateActionInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRecipient = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<PartyIdentification10Choice>> mmMessageRecipient = new MMMessageBuildingBlock<CorporateActionInstructionV01, Optional<PartyIdentification10Choice>>() {
 		{
 			xmlTag = "MsgRcpt";
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::MERE"));
@@ -727,12 +748,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getMessageRecipient", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(CorporateActionInstructionV01 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -761,7 +784,7 @@ public class CorporateActionInstructionV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionInstructionV01, List<Extension2>> mmExtension = new MMMessageBuildingBlock<CorporateActionInstructionV01, List<Extension2>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -771,12 +794,14 @@ public class CorporateActionInstructionV01 {
 			complexType_lazy = () -> Extension2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionInstructionV01.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension2> getValue(CorporateActionInstructionV01 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(CorporateActionInstructionV01 obj, List<Extension2> value) {
+			obj.setExtension(value);
 		}
 	};
 

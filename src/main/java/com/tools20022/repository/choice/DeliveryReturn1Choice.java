@@ -125,7 +125,7 @@ public class DeliveryReturn1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryReturn1Choice, DeliveryReturn1Code> mmCode = new MMMessageAttribute<DeliveryReturn1Choice, DeliveryReturn1Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeliveryReturn1Choice.mmObject();
@@ -139,6 +139,16 @@ public class DeliveryReturn1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReturn1Code.mmObject();
+		}
+
+		@Override
+		public DeliveryReturn1Code getValue(DeliveryReturn1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DeliveryReturn1Choice obj, DeliveryReturn1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -187,7 +197,7 @@ public class DeliveryReturn1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeliveryReturn1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<DeliveryReturn1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeliveryReturn1Choice.mmObject();
@@ -201,6 +211,16 @@ public class DeliveryReturn1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(DeliveryReturn1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DeliveryReturn1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -113,7 +113,7 @@ public class AcknowledgementReason18Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason18Choice, RepoCallAcknowledgementReason2Code> mmCode = new MMMessageAttribute<AcknowledgementReason18Choice, RepoCallAcknowledgementReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason18Choice.mmObject();
@@ -126,6 +126,16 @@ public class AcknowledgementReason18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RepoCallAcknowledgementReason2Code.mmObject();
+		}
+
+		@Override
+		public RepoCallAcknowledgementReason2Code getValue(AcknowledgementReason18Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason18Choice obj, RepoCallAcknowledgementReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class AcknowledgementReason18Choice {
 	 * "Specifies additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason18Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<AcknowledgementReason18Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmRepoCallAcknowledgementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementReason18Choice.mmObject();
@@ -180,6 +190,16 @@ public class AcknowledgementReason18Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(AcknowledgementReason18Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason18Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

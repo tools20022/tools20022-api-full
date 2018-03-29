@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcquirerNetworkManagementResponse1;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header17;
 import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +113,7 @@ public class NetworkManagementResponse {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetworkManagementResponse, Header17> mmHeader = new MMMessageBuildingBlock<NetworkManagementResponse, Header17>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +124,14 @@ public class NetworkManagementResponse {
 			complexType_lazy = () -> Header17.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetworkManagementResponse.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header17 getValue(NetworkManagementResponse obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(NetworkManagementResponse obj, Header17 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "NtwkMgmtRspn", required = true)
@@ -159,7 +160,7 @@ public class NetworkManagementResponse {
 	 * "Information related to the response to the network management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNetworkManagementResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetworkManagementResponse, AcquirerNetworkManagementResponse1> mmNetworkManagementResponse = new MMMessageBuildingBlock<NetworkManagementResponse, AcquirerNetworkManagementResponse1>() {
 		{
 			xmlTag = "NtwkMgmtRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,12 +171,14 @@ public class NetworkManagementResponse {
 			complexType_lazy = () -> AcquirerNetworkManagementResponse1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetworkManagementResponse.class.getMethod("getNetworkManagementResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcquirerNetworkManagementResponse1 getValue(NetworkManagementResponse obj) {
+			return obj.getNetworkManagementResponse();
+		}
+
+		@Override
+		public void setValue(NetworkManagementResponse obj, AcquirerNetworkManagementResponse1 value) {
+			obj.setNetworkManagementResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -203,7 +206,7 @@ public class NetworkManagementResponse {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NetworkManagementResponse, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<NetworkManagementResponse, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,12 +217,14 @@ public class NetworkManagementResponse {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NetworkManagementResponse.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(NetworkManagementResponse obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(NetworkManagementResponse obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

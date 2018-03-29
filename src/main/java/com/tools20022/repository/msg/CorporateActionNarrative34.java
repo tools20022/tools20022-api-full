@@ -21,7 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionInstruction002V07;
+import com.tools20022.repository.area.seev.CorporateActionInstruction002V06;
+import com.tools20022.repository.area.seev.CorporateActionInstruction002V08;
 import com.tools20022.repository.datatype.RestrictedFINXMax350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Role;
@@ -64,8 +65,11 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07#mmAdditionalInformation
- * CorporateActionInstruction002V07.mmAdditionalInformation}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V06#mmAdditionalInformation
+ * CorporateActionInstruction002V06.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V08#mmAdditionalInformation
+ * CorporateActionInstruction002V08.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -127,7 +131,7 @@ public class CorporateActionNarrative34 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative34, List<RestrictedFINXMax350Text>> mmRegistrationDetails = new MMMessageAttribute<CorporateActionNarrative34, List<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative34.mmObject();
@@ -139,6 +143,16 @@ public class CorporateActionNarrative34 {
 			definition = "Provides information required for the registration.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative34 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative34 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setRegistrationDetails(value);
 		}
 	};
 	@XmlElement(name = "PtyCtctNrrtv")
@@ -181,7 +195,7 @@ public class CorporateActionNarrative34 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative34, List<RestrictedFINXMax350Text>> mmPartyContactNarrative = new MMMessageAttribute<CorporateActionNarrative34, List<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative34.mmObject();
@@ -193,6 +207,16 @@ public class CorporateActionNarrative34 {
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative34 obj) {
+			return obj.getPartyContactNarrative();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative34 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setPartyContactNarrative(value);
 		}
 	};
 	@XmlElement(name = "CertfctnBrkdwn")
@@ -226,7 +250,7 @@ public class CorporateActionNarrative34 {
 	 * "Provides information required for the certification/breakdown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationBreakdown = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative34, List<RestrictedFINXMax350Text>> mmCertificationBreakdown = new MMMessageAttribute<CorporateActionNarrative34, List<RestrictedFINXMax350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative34.mmObject();
 			isDerived = false;
@@ -237,6 +261,16 @@ public class CorporateActionNarrative34 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
 		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative34 obj) {
+			return obj.getCertificationBreakdown();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative34 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setCertificationBreakdown(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -244,7 +278,7 @@ public class CorporateActionNarrative34 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative34.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative34.mmPartyContactNarrative,
 						com.tools20022.repository.msg.CorporateActionNarrative34.mmCertificationBreakdown);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstruction002V07.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstruction002V06.mmAdditionalInformation, CorporateActionInstruction002V08.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

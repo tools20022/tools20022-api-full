@@ -186,7 +186,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * ClearingSystemMemberIdentificationChoice.mmCHIPSUniversalIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCHIPSUniversalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, CHIPSUniversalIdentifier> mmCHIPSUniversalIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, CHIPSUniversalIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmCHIPSUniversalIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -199,6 +199,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CHIPSUniversalIdentifier.mmObject();
+		}
+
+		@Override
+		public CHIPSUniversalIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getCHIPSUniversalIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, CHIPSUniversalIdentifier value) {
+			obj.setCHIPSUniversalIdentification(value);
 		}
 	};
 	@XmlElement(name = "NZNCC", required = true)
@@ -243,7 +253,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * ClearingSystemMemberIdentificationChoice.mmNewZealandNCCIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewZealandNCCIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, NewZealandNCCIdentifier> mmNewZealandNCCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, NewZealandNCCIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmNewZealandNCC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -256,6 +266,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NewZealandNCCIdentifier.mmObject();
+		}
+
+		@Override
+		public NewZealandNCCIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getNewZealandNCCIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, NewZealandNCCIdentifier value) {
+			obj.setNewZealandNCCIdentification(value);
 		}
 	};
 	@XmlElement(name = "IENSC", required = true)
@@ -300,7 +320,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * ClearingSystemMemberIdentificationChoice.mmIrishNSCIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIrishNSCIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, IrishNSCIdentifier> mmIrishNSCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, IrishNSCIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmIrishNSC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -313,6 +333,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IrishNSCIdentifier.mmObject();
+		}
+
+		@Override
+		public IrishNSCIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getIrishNSCIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, IrishNSCIdentifier value) {
+			obj.setIrishNSCIdentification(value);
 		}
 	};
 	@XmlElement(name = "GBSC", required = true)
@@ -357,7 +387,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * ClearingSystemMemberIdentificationChoice.mmUKDomesticSortCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUKDomesticSortCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, UKDomesticSortCodeIdentifier> mmUKDomesticSortCode = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, UKDomesticSortCodeIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmUKSortCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -370,6 +400,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UKDomesticSortCodeIdentifier.mmObject();
+		}
+
+		@Override
+		public UKDomesticSortCodeIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getUKDomesticSortCode();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, UKDomesticSortCodeIdentifier value) {
+			obj.setUKDomesticSortCode(value);
 		}
 	};
 	@XmlElement(name = "USCH", required = true)
@@ -415,7 +455,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCHIPSParticipantIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, CHIPSParticipantIdentifier> mmCHIPSParticipantIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, CHIPSParticipantIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmCHIPSParticipantIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -428,6 +468,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CHIPSParticipantIdentifier.mmObject();
+		}
+
+		@Override
+		public CHIPSParticipantIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getCHIPSParticipantIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, CHIPSParticipantIdentifier value) {
+			obj.setCHIPSParticipantIdentification(value);
 		}
 	};
 	@XmlElement(name = "CHBC", required = true)
@@ -472,7 +522,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * ClearingSystemMemberIdentificationChoice.mmSwissBCIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSwissBCIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SwissBCIdentifier> mmSwissBCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SwissBCIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmSwissBC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -485,6 +535,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SwissBCIdentifier.mmObject();
+		}
+
+		@Override
+		public SwissBCIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getSwissBCIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, SwissBCIdentifier value) {
+			obj.setSwissBCIdentification(value);
 		}
 	};
 	@XmlElement(name = "USFW", required = true)
@@ -530,7 +590,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * mmFedwireRoutingNumberIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFedwireRoutingNumberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, FedwireRoutingNumberIdentifier> mmFedwireRoutingNumberIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, FedwireRoutingNumberIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmFedwireRoutingNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -543,6 +603,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FedwireRoutingNumberIdentifier.mmObject();
+		}
+
+		@Override
+		public FedwireRoutingNumberIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getFedwireRoutingNumberIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, FedwireRoutingNumberIdentifier value) {
+			obj.setFedwireRoutingNumberIdentification(value);
 		}
 	};
 	@XmlElement(name = "PTNCC", required = true)
@@ -587,7 +657,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * ClearingSystemMemberIdentificationChoice.mmPortugueseNCCIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortugueseNCCIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, PortugueseNCCIdentifier> mmPortugueseNCCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, PortugueseNCCIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmPortugueseNCC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -600,6 +670,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PortugueseNCCIdentifier.mmObject();
+		}
+
+		@Override
+		public PortugueseNCCIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getPortugueseNCCIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, PortugueseNCCIdentifier value) {
+			obj.setPortugueseNCCIdentification(value);
 		}
 	};
 	@XmlElement(name = "RUCB", required = true)
@@ -645,7 +725,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * mmRussianCentralBankIdentificationCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRussianCentralBankIdentificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, RussianCentralBankIdentificationCodeIdentifier> mmRussianCentralBankIdentificationCode = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, RussianCentralBankIdentificationCodeIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmRussianCentralBankIdentificationCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -658,6 +738,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RussianCentralBankIdentificationCodeIdentifier.mmObject();
+		}
+
+		@Override
+		public RussianCentralBankIdentificationCodeIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getRussianCentralBankIdentificationCode();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, RussianCentralBankIdentificationCodeIdentifier value) {
+			obj.setRussianCentralBankIdentificationCode(value);
 		}
 	};
 	@XmlElement(name = "ITNCC", required = true)
@@ -703,7 +793,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * mmItalianDomesticIdentificationCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItalianDomesticIdentificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, ItalianDomesticIdentifier> mmItalianDomesticIdentificationCode = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, ItalianDomesticIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmItalianDomesticIdentificationCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -716,6 +806,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ItalianDomesticIdentifier.mmObject();
+		}
+
+		@Override
+		public ItalianDomesticIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getItalianDomesticIdentificationCode();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, ItalianDomesticIdentifier value) {
+			obj.setItalianDomesticIdentificationCode(value);
 		}
 	};
 	@XmlElement(name = "ATBLZ", required = true)
@@ -761,7 +861,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * mmAustrianBankleitzahlIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAustrianBankleitzahlIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, AustrianBankleitzahlIdentifier> mmAustrianBankleitzahlIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, AustrianBankleitzahlIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmAustrianBankleitzahl;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -774,6 +874,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AustrianBankleitzahlIdentifier.mmObject();
+		}
+
+		@Override
+		public AustrianBankleitzahlIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getAustrianBankleitzahlIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, AustrianBankleitzahlIdentifier value) {
+			obj.setAustrianBankleitzahlIdentification(value);
 		}
 	};
 	@XmlElement(name = "CACPA", required = true)
@@ -819,7 +929,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * mmCanadianPaymentsAssociationRoutingNumberIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCanadianPaymentsAssociationRoutingNumberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, CanadianPaymentsARNIdentifier> mmCanadianPaymentsAssociationRoutingNumberIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, CanadianPaymentsARNIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmCanadianPaymentsAssociationRoutingNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -832,6 +942,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CanadianPaymentsARNIdentifier.mmObject();
+		}
+
+		@Override
+		public CanadianPaymentsARNIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getCanadianPaymentsAssociationRoutingNumberIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, CanadianPaymentsARNIdentifier value) {
+			obj.setCanadianPaymentsAssociationRoutingNumberIdentification(value);
 		}
 	};
 	@XmlElement(name = "CHSIC", required = true)
@@ -876,7 +996,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * ClearingSystemMemberIdentificationChoice.mmSwissSICIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSwissSICIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SwissSICIdentifier> mmSwissSICIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SwissSICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmSwissSIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -889,6 +1009,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SwissSICIdentifier.mmObject();
+		}
+
+		@Override
+		public SwissSICIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getSwissSICIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, SwissSICIdentifier value) {
+			obj.setSwissSICIdentification(value);
 		}
 	};
 	@XmlElement(name = "DEBLZ", required = true)
@@ -934,7 +1064,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * mmGermanBankleitzahlIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGermanBankleitzahlIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, GermanBankleitzahlIdentifier> mmGermanBankleitzahlIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, GermanBankleitzahlIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmGermanBankleitzahl;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -947,6 +1077,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GermanBankleitzahlIdentifier.mmObject();
+		}
+
+		@Override
+		public GermanBankleitzahlIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getGermanBankleitzahlIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, GermanBankleitzahlIdentifier value) {
+			obj.setGermanBankleitzahlIdentification(value);
 		}
 	};
 	@XmlElement(name = "ESNCC", required = true)
@@ -992,7 +1132,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * mmSpanishDomesticInterbankingIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpanishDomesticInterbankingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SpanishDomesticInterbankingIdentifier> mmSpanishDomesticInterbankingIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SpanishDomesticInterbankingIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmSpanishDomesticInterbankingCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -1005,6 +1145,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SpanishDomesticInterbankingIdentifier.mmObject();
+		}
+
+		@Override
+		public SpanishDomesticInterbankingIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getSpanishDomesticInterbankingIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, SpanishDomesticInterbankingIdentifier value) {
+			obj.setSpanishDomesticInterbankingIdentification(value);
 		}
 	};
 	@XmlElement(name = "ZANCC", required = true)
@@ -1050,7 +1200,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSouthAfricanNCCIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SouthAfricanNCCIdentifier> mmSouthAfricanNCCIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SouthAfricanNCCIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmSouthAfricanNCC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -1063,6 +1213,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SouthAfricanNCCIdentifier.mmObject();
+		}
+
+		@Override
+		public SouthAfricanNCCIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getSouthAfricanNCCIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, SouthAfricanNCCIdentifier value) {
+			obj.setSouthAfricanNCCIdentification(value);
 		}
 	};
 	@XmlElement(name = "HKNCC", required = true)
@@ -1107,7 +1267,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * ClearingSystemMemberIdentificationChoice.mmHongKongBankCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHongKongBankCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, HongKongBankIdentifier> mmHongKongBankCode = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, HongKongBankIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystemMember.mmHongKongBankCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -1120,6 +1280,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> HongKongBankIdentifier.mmObject();
+		}
+
+		@Override
+		public HongKongBankIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getHongKongBankCode();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, HongKongBankIdentifier value) {
+			obj.setHongKongBankCode(value);
 		}
 	};
 	@XmlElement(name = "AUBSBx", required = true)
@@ -1165,7 +1335,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * mmAustralianExtensiveBranchNetworkIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAustralianExtensiveBranchNetworkIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, ExtensiveBranchNetworkIdentifier> mmAustralianExtensiveBranchNetworkIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, ExtensiveBranchNetworkIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AustralianBSBIdentification.mmExtensiveBranchNetworkIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -1178,6 +1348,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExtensiveBranchNetworkIdentifier.mmObject();
+		}
+
+		@Override
+		public ExtensiveBranchNetworkIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getAustralianExtensiveBranchNetworkIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, ExtensiveBranchNetworkIdentifier value) {
+			obj.setAustralianExtensiveBranchNetworkIdentification(value);
 		}
 	};
 	@XmlElement(name = "AUBSBs", required = true)
@@ -1223,7 +1403,7 @@ public class ClearingSystemMemberIdentification4Choice {
 	 * mmAustralianSmallNetworkIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAustralianSmallNetworkIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SmallNetworkIdentifier> mmAustralianSmallNetworkIdentification = new MMMessageAttribute<ClearingSystemMemberIdentification4Choice, SmallNetworkIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AustralianBSBIdentification.mmSmallNetworkIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice.mmObject();
@@ -1236,6 +1416,16 @@ public class ClearingSystemMemberIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SmallNetworkIdentifier.mmObject();
+		}
+
+		@Override
+		public SmallNetworkIdentifier getValue(ClearingSystemMemberIdentification4Choice obj) {
+			return obj.getAustralianSmallNetworkIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingSystemMemberIdentification4Choice obj, SmallNetworkIdentifier value) {
+			obj.setAustralianSmallNetworkIdentification(value);
 		}
 	};
 

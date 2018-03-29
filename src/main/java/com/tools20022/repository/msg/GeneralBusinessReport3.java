@@ -126,7 +126,7 @@ public class GeneralBusinessReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessInformationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessReport3, Max35Text> mmBusinessInformationReference = new MMMessageAttribute<GeneralBusinessReport3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport3.mmObject();
@@ -139,6 +139,16 @@ public class GeneralBusinessReport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GeneralBusinessReport3 obj) {
+			return obj.getBusinessInformationReference();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessReport3 obj, Max35Text value) {
+			obj.setBusinessInformationReference(value);
 		}
 	};
 	@XmlElement(name = "GnlBizOrErr", required = true)
@@ -183,7 +193,7 @@ public class GeneralBusinessReport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralBusinessOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessReport3, GeneralBusinessOrError2Choice> mmGeneralBusinessOrError = new MMMessageAssociationEnd<GeneralBusinessReport3, GeneralBusinessOrError2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SystemBusinessInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport3.mmObject();
@@ -197,6 +207,16 @@ public class GeneralBusinessReport3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneralBusinessOrError2Choice.mmObject();
+		}
+
+		@Override
+		public GeneralBusinessOrError2Choice getValue(GeneralBusinessReport3 obj) {
+			return obj.getGeneralBusinessOrError();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessReport3 obj, GeneralBusinessOrError2Choice value) {
+			obj.setGeneralBusinessOrError(value);
 		}
 	};
 

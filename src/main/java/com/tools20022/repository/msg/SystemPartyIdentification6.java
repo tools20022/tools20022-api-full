@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification12;
+import com.tools20022.repository.msg.PartyIdentification91;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +119,7 @@ public class SystemPartyIdentification6 {
 	 * SystemPartyIdentification5.mmRelatedPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemPartyIdentification6, PartyIdentification91> mmRelatedPartyIdentification = new MMMessageAssociationEnd<SystemPartyIdentification6, PartyIdentification91>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
@@ -130,7 +132,17 @@ public class SystemPartyIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification91.mmObject();
+			type_lazy = () -> PartyIdentification91.mmObject();
+		}
+
+		@Override
+		public PartyIdentification91 getValue(SystemPartyIdentification6 obj) {
+			return obj.getRelatedPartyIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification6 obj, PartyIdentification91 value) {
+			obj.setRelatedPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "RspnsblPtyId")
@@ -175,7 +187,7 @@ public class SystemPartyIdentification6 {
 	 * SystemPartyIdentification5.mmResponsiblePartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification6, Optional<FinancialInstitutionIdentification12>> mmResponsiblePartyIdentification = new MMMessageAttribute<SystemPartyIdentification6, Optional<FinancialInstitutionIdentification12>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
@@ -187,7 +199,17 @@ public class SystemPartyIdentification6 {
 			previousVersion_lazy = () -> SystemPartyIdentification5.mmResponsiblePartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification12.mmObject();
+			complexType_lazy = () -> FinancialInstitutionIdentification12.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification12> getValue(SystemPartyIdentification6 obj) {
+			return obj.getResponsiblePartyIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification6 obj, Optional<FinancialInstitutionIdentification12> value) {
+			obj.setResponsiblePartyIdentification(value.orElse(null));
 		}
 	};
 
@@ -210,7 +232,7 @@ public class SystemPartyIdentification6 {
 		return relatedPartyIdentification;
 	}
 
-	public SystemPartyIdentification6 setRelatedPartyIdentification(com.tools20022.repository.msg.PartyIdentification91 relatedPartyIdentification) {
+	public SystemPartyIdentification6 setRelatedPartyIdentification(PartyIdentification91 relatedPartyIdentification) {
 		this.relatedPartyIdentification = Objects.requireNonNull(relatedPartyIdentification);
 		return this;
 	}
@@ -219,7 +241,7 @@ public class SystemPartyIdentification6 {
 		return responsiblePartyIdentification == null ? Optional.empty() : Optional.of(responsiblePartyIdentification);
 	}
 
-	public SystemPartyIdentification6 setResponsiblePartyIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification12 responsiblePartyIdentification) {
+	public SystemPartyIdentification6 setResponsiblePartyIdentification(FinancialInstitutionIdentification12 responsiblePartyIdentification) {
 		this.responsiblePartyIdentification = responsiblePartyIdentification;
 		return this;
 	}

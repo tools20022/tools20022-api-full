@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max10000Binary;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NetworkParameters6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +132,7 @@ public class MerchantConfigurationParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MerchantConfigurationParameters2, TerminalManagementAction3Code> mmActionType = new MMMessageAttribute<MerchantConfigurationParameters2, TerminalManagementAction3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -143,6 +144,16 @@ public class MerchantConfigurationParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction3Code getValue(MerchantConfigurationParameters2 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(MerchantConfigurationParameters2 obj, TerminalManagementAction3Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "MrchntId")
@@ -189,7 +200,7 @@ public class MerchantConfigurationParameters2 {
 	 * MerchantConfigurationParameters1.mmMerchantIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMerchantIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MerchantConfigurationParameters2, Optional<Max35Text>> mmMerchantIdentification = new MMMessageAttribute<MerchantConfigurationParameters2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -202,6 +213,16 @@ public class MerchantConfigurationParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MerchantConfigurationParameters2 obj) {
+			return obj.getMerchantIdentification();
+		}
+
+		@Override
+		public void setValue(MerchantConfigurationParameters2 obj, Optional<Max35Text> value) {
+			obj.setMerchantIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -246,7 +267,7 @@ public class MerchantConfigurationParameters2 {
 	 * MerchantConfigurationParameters1.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MerchantConfigurationParameters2, Max256Text> mmVersion = new MMMessageAttribute<MerchantConfigurationParameters2, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -259,6 +280,16 @@ public class MerchantConfigurationParameters2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(MerchantConfigurationParameters2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(MerchantConfigurationParameters2 obj, Max256Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "Prxy")
@@ -297,7 +328,7 @@ public class MerchantConfigurationParameters2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MerchantConfigurationParameters2, Optional<NetworkParameters6>> mmProxy = new MMMessageAssociationEnd<MerchantConfigurationParameters2, Optional<NetworkParameters6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -309,7 +340,17 @@ public class MerchantConfigurationParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters6.mmObject();
+			type_lazy = () -> NetworkParameters6.mmObject();
+		}
+
+		@Override
+		public Optional<NetworkParameters6> getValue(MerchantConfigurationParameters2 obj) {
+			return obj.getProxy();
+		}
+
+		@Override
+		public void setValue(MerchantConfigurationParameters2 obj, Optional<NetworkParameters6> value) {
+			obj.setProxy(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrParams")
@@ -355,7 +396,7 @@ public class MerchantConfigurationParameters2 {
 	 * MerchantConfigurationParameters1.mmParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MerchantConfigurationParameters2, Optional<Max10000Binary>> mmOtherParameters = new MMMessageAttribute<MerchantConfigurationParameters2, Optional<Max10000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters2.mmObject();
 			isDerived = false;
@@ -368,6 +409,16 @@ public class MerchantConfigurationParameters2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max10000Binary> getValue(MerchantConfigurationParameters2 obj) {
+			return obj.getOtherParameters();
+		}
+
+		@Override
+		public void setValue(MerchantConfigurationParameters2 obj, Optional<Max10000Binary> value) {
+			obj.setOtherParameters(value.orElse(null));
 		}
 	};
 
@@ -419,7 +470,7 @@ public class MerchantConfigurationParameters2 {
 		return proxy == null ? Optional.empty() : Optional.of(proxy);
 	}
 
-	public MerchantConfigurationParameters2 setProxy(com.tools20022.repository.msg.NetworkParameters6 proxy) {
+	public MerchantConfigurationParameters2 setProxy(NetworkParameters6 proxy) {
 		this.proxy = proxy;
 		return this;
 	}

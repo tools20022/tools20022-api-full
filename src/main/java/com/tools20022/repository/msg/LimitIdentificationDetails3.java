@@ -137,7 +137,7 @@ public class LimitIdentificationDetails3 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentificationDetails3, Optional<SystemIdentificationChoice>> mmSystemIdentification = new MMMessageAttribute<LimitIdentificationDetails3, Optional<SystemIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails3.mmObject();
@@ -149,6 +149,16 @@ public class LimitIdentificationDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentificationChoice> getValue(LimitIdentificationDetails3 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentificationDetails3 obj, Optional<SystemIdentificationChoice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -185,7 +195,7 @@ public class LimitIdentificationDetails3 {
 	 * definition} = "Nature of the risk management limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentificationDetails3, LimitType2Code> mmType = new MMMessageAttribute<LimitIdentificationDetails3, LimitType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails3.mmObject();
@@ -197,6 +207,16 @@ public class LimitIdentificationDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LimitType2Code.mmObject();
+		}
+
+		@Override
+		public LimitType2Code getValue(LimitIdentificationDetails3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(LimitIdentificationDetails3 obj, LimitType2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -234,7 +254,7 @@ public class LimitIdentificationDetails3 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentificationDetails3, Optional<BICIdentifier>> mmAccountOwner = new MMMessageAttribute<LimitIdentificationDetails3, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails3.mmObject();
@@ -246,6 +266,16 @@ public class LimitIdentificationDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(LimitIdentificationDetails3 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(LimitIdentificationDetails3 obj, Optional<BICIdentifier> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -284,7 +314,7 @@ public class LimitIdentificationDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentificationDetails3, Optional<AccountIdentification1Choice>> mmAccountIdentification = new MMMessageAssociationEnd<LimitIdentificationDetails3, Optional<AccountIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentificationDetails3.mmObject();
@@ -297,6 +327,16 @@ public class LimitIdentificationDetails3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1Choice> getValue(LimitIdentificationDetails3 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentificationDetails3 obj, Optional<AccountIdentification1Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 

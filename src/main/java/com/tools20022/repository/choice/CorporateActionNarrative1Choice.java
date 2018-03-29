@@ -123,7 +123,7 @@ public class CorporateActionNarrative1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative1Choice, CorporateActionNarrative1Code> mmCode = new MMMessageAttribute<CorporateActionNarrative1Choice, CorporateActionNarrative1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative1Choice.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class CorporateActionNarrative1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNarrative1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionNarrative1Code getValue(CorporateActionNarrative1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative1Choice obj, CorporateActionNarrative1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -176,7 +186,7 @@ public class CorporateActionNarrative1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative1Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<CorporateActionNarrative1Choice, GenericIdentification20>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionNarrative1Choice.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class CorporateActionNarrative1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CorporateActionNarrative1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -144,7 +144,7 @@ public class EntitlementAssessment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesBlockingDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>> mmSecuritiesBlockingDeadline = new MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
@@ -156,6 +156,16 @@ public class EntitlementAssessment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(EntitlementAssessment obj) {
+			return obj.getSecuritiesBlockingDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<ISODateTime> value) {
+			obj.setSecuritiesBlockingDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesBlckgMktDdln")
@@ -194,7 +204,7 @@ public class EntitlementAssessment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesBlockingMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>> mmSecuritiesBlockingMarketDeadline = new MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
@@ -206,6 +216,16 @@ public class EntitlementAssessment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(EntitlementAssessment obj) {
+			return obj.getSecuritiesBlockingMarketDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<ISODateTime> value) {
+			obj.setSecuritiesBlockingMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesBlckgPrdEndDt")
@@ -243,7 +263,7 @@ public class EntitlementAssessment {
 	 * "Date by which the blocking period for the securities should end."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesBlockingPeriodEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>> mmSecuritiesBlockingPeriodEndDate = new MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
@@ -255,6 +275,16 @@ public class EntitlementAssessment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(EntitlementAssessment obj) {
+			return obj.getSecuritiesBlockingPeriodEndDate();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<ISODateTime> value) {
+			obj.setSecuritiesBlockingPeriodEndDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesRregnDdln")
@@ -293,7 +323,7 @@ public class EntitlementAssessment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesReregistrationDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>> mmSecuritiesReregistrationDeadline = new MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
@@ -305,6 +335,16 @@ public class EntitlementAssessment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(EntitlementAssessment obj) {
+			return obj.getSecuritiesReregistrationDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<ISODateTime> value) {
+			obj.setSecuritiesReregistrationDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesRregnMktDdln")
@@ -343,7 +383,7 @@ public class EntitlementAssessment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesReregistrationMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>> mmSecuritiesReregistrationMarketDeadline = new MMMessageAttribute<EntitlementAssessment, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
@@ -355,6 +395,16 @@ public class EntitlementAssessment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(EntitlementAssessment obj) {
+			return obj.getSecuritiesReregistrationMarketDeadline();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<ISODateTime> value) {
+			obj.setSecuritiesReregistrationMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesRegnDt")
@@ -393,7 +443,7 @@ public class EntitlementAssessment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesRegistrationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment, Optional<ISODate>> mmSecuritiesRegistrationDate = new MMMessageAttribute<EntitlementAssessment, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRegistrationDeadline.mmRegistrationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
@@ -405,6 +455,16 @@ public class EntitlementAssessment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(EntitlementAssessment obj) {
+			return obj.getSecuritiesRegistrationDate();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<ISODate> value) {
+			obj.setSecuritiesRegistrationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RegnBnfcry")
@@ -441,7 +501,7 @@ public class EntitlementAssessment {
 	 * definition} = "Party in which name the securities are registered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegistrationBeneficiary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EntitlementAssessment, Optional<PartyIdentification7Choice>> mmRegistrationBeneficiary = new MMMessageAssociationEnd<EntitlementAssessment, Optional<PartyIdentification7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
@@ -454,6 +514,16 @@ public class EntitlementAssessment {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification7Choice> getValue(EntitlementAssessment obj) {
+			return obj.getRegistrationBeneficiary();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<PartyIdentification7Choice> value) {
+			obj.setRegistrationBeneficiary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcrdDt")
@@ -492,7 +562,7 @@ public class EntitlementAssessment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment, Optional<ISODate>> mmRecordDate = new MMMessageAttribute<EntitlementAssessment, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
@@ -504,6 +574,16 @@ public class EntitlementAssessment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(EntitlementAssessment obj) {
+			return obj.getRecordDate();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<ISODate> value) {
+			obj.setRecordDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitlmntDesc")
@@ -537,7 +617,7 @@ public class EntitlementAssessment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitlementDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment, Optional<Max350Text>> mmEntitlementDescription = new MMMessageAttribute<EntitlementAssessment, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
 			isDerived = false;
@@ -548,6 +628,16 @@ public class EntitlementAssessment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(EntitlementAssessment obj) {
+			return obj.getEntitlementDescription();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<Max350Text> value) {
+			obj.setEntitlementDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitlmntRatio")
@@ -585,7 +675,7 @@ public class EntitlementAssessment {
 	 * definition} = "Number of votes assigned to one security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitlementRatio = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EntitlementAssessment, Optional<DecimalNumber>> mmEntitlementRatio = new MMMessageAttribute<EntitlementAssessment, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementRatio;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntitlementAssessment.mmObject();
@@ -597,6 +687,16 @@ public class EntitlementAssessment {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(EntitlementAssessment obj) {
+			return obj.getEntitlementRatio();
+		}
+
+		@Override
+		public void setValue(EntitlementAssessment obj, Optional<DecimalNumber> value) {
+			obj.setEntitlementRatio(value.orElse(null));
 		}
 	};
 	/**

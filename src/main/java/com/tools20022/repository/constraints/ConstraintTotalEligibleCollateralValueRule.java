@@ -52,11 +52,15 @@ public class ConstraintTotalEligibleCollateralValueRule {
 	 */
 	public static final MMConstraint<TotalValueInPageAndStatement1> forTotalValueInPageAndStatement1 = new MMConstraint<TotalValueInPageAndStatement1>() {
 		{
-			validator = ConstraintTotalEligibleCollateralValueRule::checkTotalValueInPageAndStatement1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleCollateralValueRule";
 			definition = "Total eligible collateral value is only to be used in (I)CSD-participant communication or if bilaterally agreed between the sender and receiver.";
 			owner_lazy = () -> TotalValueInPageAndStatement1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TotalValueInPageAndStatement1 obj) throws Exception {
+			checkTotalValueInPageAndStatement1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintTotalEligibleCollateralValueRule {
 	 */
 	public static final MMConstraint<TotalValueInPageAndStatement3> forTotalValueInPageAndStatement3 = new MMConstraint<TotalValueInPageAndStatement3>() {
 		{
-			validator = ConstraintTotalEligibleCollateralValueRule::checkTotalValueInPageAndStatement3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleCollateralValueRule";
 			definition = "Total eligible collateral value is only to be used in (I)CSD-participant communication or if bilaterally agreed between the sender and receiver.";
 			owner_lazy = () -> TotalValueInPageAndStatement3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TotalValueInPageAndStatement3 obj) throws Exception {
+			checkTotalValueInPageAndStatement3(obj);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.Recipient5Choice;
 import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -64,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "KeyTransport5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -114,7 +115,7 @@ public class KeyTransport5 {
 	 * KeyTransport4.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KeyTransport5, Optional<Number>> mmVersion = new MMMessageAttribute<KeyTransport5, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport5.mmObject();
 			isDerived = false;
@@ -126,6 +127,16 @@ public class KeyTransport5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(KeyTransport5 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(KeyTransport5 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptId", required = true)
@@ -161,7 +172,7 @@ public class KeyTransport5 {
 	 * KeyTransport4.mmRecipientIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipientIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KeyTransport5, Recipient5Choice> mmRecipientIdentification = new MMMessageAssociationEnd<KeyTransport5, Recipient5Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport5.mmObject();
 			isDerived = false;
@@ -174,6 +185,16 @@ public class KeyTransport5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Recipient5Choice.mmObject();
+		}
+
+		@Override
+		public Recipient5Choice getValue(KeyTransport5 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(KeyTransport5 obj, Recipient5Choice value) {
+			obj.setRecipientIdentification(value);
 		}
 	};
 	@XmlElement(name = "KeyNcrptnAlgo", required = true)
@@ -209,7 +230,7 @@ public class KeyTransport5 {
 	 * KeyTransport4.mmKeyEncryptionAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKeyEncryptionAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KeyTransport5, AlgorithmIdentification19> mmKeyEncryptionAlgorithm = new MMMessageAssociationEnd<KeyTransport5, AlgorithmIdentification19>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport5.mmObject();
 			isDerived = false;
@@ -221,7 +242,17 @@ public class KeyTransport5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification19.mmObject();
+			type_lazy = () -> AlgorithmIdentification19.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification19 getValue(KeyTransport5 obj) {
+			return obj.getKeyEncryptionAlgorithm();
+		}
+
+		@Override
+		public void setValue(KeyTransport5 obj, AlgorithmIdentification19 value) {
+			obj.setKeyEncryptionAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcrptdKey", required = true)
@@ -258,7 +289,7 @@ public class KeyTransport5 {
 	 * KeyTransport4.mmEncryptedKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptedKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<KeyTransport5, Max5000Binary> mmEncryptedKey = new MMMessageAttribute<KeyTransport5, Max5000Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.KeyTransport5.mmObject();
 			isDerived = false;
@@ -271,6 +302,16 @@ public class KeyTransport5 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
 		}
+
+		@Override
+		public Max5000Binary getValue(KeyTransport5 obj) {
+			return obj.getEncryptedKey();
+		}
+
+		@Override
+		public void setValue(KeyTransport5 obj, Max5000Binary value) {
+			obj.setEncryptedKey(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -279,7 +320,7 @@ public class KeyTransport5 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.KeyTransport5.mmVersion, com.tools20022.repository.msg.KeyTransport5.mmRecipientIdentification,
 						com.tools20022.repository.msg.KeyTransport5.mmKeyEncryptionAlgorithm, com.tools20022.repository.msg.KeyTransport5.mmEncryptedKey);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KeyTransport5";
 				definition = "Key encryption key (KEK), encrypted with a previously distributed asymmetric public key.";
 				previousVersion_lazy = () -> KeyTransport4.mmObject();
@@ -310,7 +351,7 @@ public class KeyTransport5 {
 		return keyEncryptionAlgorithm;
 	}
 
-	public KeyTransport5 setKeyEncryptionAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification19 keyEncryptionAlgorithm) {
+	public KeyTransport5 setKeyEncryptionAlgorithm(AlgorithmIdentification19 keyEncryptionAlgorithm) {
 		this.keyEncryptionAlgorithm = Objects.requireNonNull(keyEncryptionAlgorithm);
 		return this;
 	}

@@ -128,7 +128,7 @@ public class SystemStatus2 {
 	 * SystemStatus1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemStatus2, SystemStatus2Choice> mmStatus = new MMMessageAssociationEnd<SystemStatus2, SystemStatus2Choice>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatus2.mmObject();
@@ -143,6 +143,16 @@ public class SystemStatus2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemStatus2Choice.mmObject();
+		}
+
+		@Override
+		public SystemStatus2Choice getValue(SystemStatus2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(SystemStatus2 obj, SystemStatus2Choice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "VldtyTm")
@@ -193,7 +203,7 @@ public class SystemStatus2 {
 	 * SystemStatus1.mmValidityTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemStatus2, Optional<DateTimePeriodChoice>> mmValidityTime = new MMMessageAttribute<SystemStatus2, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmValidityTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatus2.mmObject();
@@ -207,6 +217,16 @@ public class SystemStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(SystemStatus2 obj) {
+			return obj.getValidityTime();
+		}
+
+		@Override
+		public void setValue(SystemStatus2 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setValidityTime(value.orElse(null));
 		}
 	};
 

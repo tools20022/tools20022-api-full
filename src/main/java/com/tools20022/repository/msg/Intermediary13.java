@@ -24,6 +24,9 @@ import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account2;
+import com.tools20022.repository.msg.CommunicationAddress3;
+import com.tools20022.repository.msg.NameAndAddress4;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -152,7 +155,7 @@ public class Intermediary13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary13, PartyIdentification4Choice> mmIdentification = new MMMessageAttribute<Intermediary13, PartyIdentification4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmObject();
@@ -165,6 +168,16 @@ public class Intermediary13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification4Choice getValue(Intermediary13 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary13 obj, PartyIdentification4Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -209,7 +222,7 @@ public class Intermediary13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary13, Optional<Account2>> mmAccount = new MMMessageAttribute<Intermediary13, Optional<Account2>>() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmObject();
@@ -221,7 +234,17 @@ public class Intermediary13 {
 			nextVersions_lazy = () -> Arrays.asList(Intermediary24.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Account2.mmObject();
+			complexType_lazy = () -> Account2.mmObject();
+		}
+
+		@Override
+		public Optional<Account2> getValue(Intermediary13 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Intermediary13 obj, Optional<Account2> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WvdTrlrComssnInd")
@@ -268,7 +291,7 @@ public class Intermediary13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWaivedTrailerCommissionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary13, Optional<YesNoIndicator>> mmWaivedTrailerCommissionIndicator = new MMMessageAttribute<Intermediary13, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionWaiving;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmObject();
@@ -281,6 +304,16 @@ public class Intermediary13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Intermediary13 obj) {
+			return obj.getWaivedTrailerCommissionIndicator();
+		}
+
+		@Override
+		public void setValue(Intermediary13 obj, Optional<YesNoIndicator> value) {
+			obj.setWaivedTrailerCommissionIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Role")
@@ -318,7 +351,7 @@ public class Intermediary13 {
 	 * "Role or function performed by an intermediary in a given situation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary13, Optional<InvestmentFundRole3Code>> mmRole = new MMMessageAttribute<Intermediary13, Optional<InvestmentFundRole3Code>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmObject();
@@ -330,6 +363,16 @@ public class Intermediary13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> InvestmentFundRole3Code.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentFundRole3Code> getValue(Intermediary13 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(Intermediary13 obj, Optional<InvestmentFundRole3Code> value) {
+			obj.setRole(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedRole")
@@ -367,7 +410,7 @@ public class Intermediary13 {
 	 * "Role or function performed by an intermediary in a given situation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary13, Optional<Extended350Code>> mmExtendedRole = new MMMessageAttribute<Intermediary13, Optional<Extended350Code>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmObject();
@@ -379,6 +422,16 @@ public class Intermediary13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(Intermediary13 obj) {
+			return obj.getExtendedRole();
+		}
+
+		@Override
+		public void setValue(Intermediary13 obj, Optional<Extended350Code> value) {
+			obj.setExtendedRole(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmryComAdr")
@@ -423,7 +476,7 @@ public class Intermediary13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrimaryCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary13, Optional<CommunicationAddress3>> mmPrimaryCommunicationAddress = new MMMessageAssociationEnd<Intermediary13, Optional<CommunicationAddress3>>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmObject();
@@ -436,7 +489,17 @@ public class Intermediary13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress3.mmObject();
+			type_lazy = () -> CommunicationAddress3.mmObject();
+		}
+
+		@Override
+		public Optional<CommunicationAddress3> getValue(Intermediary13 obj) {
+			return obj.getPrimaryCommunicationAddress();
+		}
+
+		@Override
+		public void setValue(Intermediary13 obj, Optional<CommunicationAddress3> value) {
+			obj.setPrimaryCommunicationAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ScndryComAdr")
@@ -481,7 +544,7 @@ public class Intermediary13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecondaryCommunicationAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary13, Optional<CommunicationAddress3>> mmSecondaryCommunicationAddress = new MMMessageAssociationEnd<Intermediary13, Optional<CommunicationAddress3>>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmObject();
@@ -494,7 +557,17 @@ public class Intermediary13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress3.mmObject();
+			type_lazy = () -> CommunicationAddress3.mmObject();
+		}
+
+		@Override
+		public Optional<CommunicationAddress3> getValue(Intermediary13 obj) {
+			return obj.getSecondaryCommunicationAddress();
+		}
+
+		@Override
+		public void setValue(Intermediary13 obj, Optional<CommunicationAddress3> value) {
+			obj.setSecondaryCommunicationAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NmAndAdr")
@@ -539,7 +612,7 @@ public class Intermediary13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary13, Optional<NameAndAddress4>> mmNameAndAddress = new MMMessageAssociationEnd<Intermediary13, Optional<NameAndAddress4>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary13.mmObject();
@@ -552,7 +625,17 @@ public class Intermediary13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress4.mmObject();
+			type_lazy = () -> NameAndAddress4.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress4> getValue(Intermediary13 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(Intermediary13 obj, Optional<NameAndAddress4> value) {
+			obj.setNameAndAddress(value.orElse(null));
 		}
 	};
 	/**
@@ -634,7 +717,7 @@ public class Intermediary13 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public Intermediary13 setAccount(com.tools20022.repository.msg.Account2 account) {
+	public Intermediary13 setAccount(Account2 account) {
 		this.account = account;
 		return this;
 	}
@@ -670,7 +753,7 @@ public class Intermediary13 {
 		return primaryCommunicationAddress == null ? Optional.empty() : Optional.of(primaryCommunicationAddress);
 	}
 
-	public Intermediary13 setPrimaryCommunicationAddress(com.tools20022.repository.msg.CommunicationAddress3 primaryCommunicationAddress) {
+	public Intermediary13 setPrimaryCommunicationAddress(CommunicationAddress3 primaryCommunicationAddress) {
 		this.primaryCommunicationAddress = primaryCommunicationAddress;
 		return this;
 	}
@@ -679,7 +762,7 @@ public class Intermediary13 {
 		return secondaryCommunicationAddress == null ? Optional.empty() : Optional.of(secondaryCommunicationAddress);
 	}
 
-	public Intermediary13 setSecondaryCommunicationAddress(com.tools20022.repository.msg.CommunicationAddress3 secondaryCommunicationAddress) {
+	public Intermediary13 setSecondaryCommunicationAddress(CommunicationAddress3 secondaryCommunicationAddress) {
 		this.secondaryCommunicationAddress = secondaryCommunicationAddress;
 		return this;
 	}
@@ -688,7 +771,7 @@ public class Intermediary13 {
 		return nameAndAddress == null ? Optional.empty() : Optional.of(nameAndAddress);
 	}
 
-	public Intermediary13 setNameAndAddress(com.tools20022.repository.msg.NameAndAddress4 nameAndAddress) {
+	public Intermediary13 setNameAndAddress(NameAndAddress4 nameAndAddress) {
 		this.nameAndAddress = nameAndAddress;
 		return this;
 	}

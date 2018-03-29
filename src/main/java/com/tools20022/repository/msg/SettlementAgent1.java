@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentAccount1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,7 +125,7 @@ public class SettlementAgent1 {
 	 * definition} = "Identifies the settlement agent.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementAgent1, LEIIdentifier> mmIdentification = new MMMessageAttribute<SettlementAgent1, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAgent1.mmObject();
@@ -137,9 +138,19 @@ public class SettlementAgent1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
+
+		@Override
+		public LEIIdentifier getValue(SettlementAgent1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementAgent1 obj, LEIIdentifier value) {
+			obj.setIdentification(value);
+		}
 	};
 	@XmlElement(name = "Acct", required = true)
-	protected List<com.tools20022.repository.msg.PaymentAccount1> account;
+	protected List<PaymentAccount1> account;
 	/**
 	 * 
 	 <p>
@@ -171,7 +182,7 @@ public class SettlementAgent1 {
 	 * definition} = "CCP’s account at the settlement agent.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementAgent1, List<PaymentAccount1>> mmAccount = new MMMessageAssociationEnd<SettlementAgent1, List<PaymentAccount1>>() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementAgent1.mmObject();
@@ -182,7 +193,17 @@ public class SettlementAgent1 {
 			definition = "CCP’s account at the settlement agent.\r\n";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentAccount1.mmObject();
+			type_lazy = () -> PaymentAccount1.mmObject();
+		}
+
+		@Override
+		public List<PaymentAccount1> getValue(SettlementAgent1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(SettlementAgent1 obj, List<PaymentAccount1> value) {
+			obj.setAccount(value);
 		}
 	};
 
@@ -214,7 +235,7 @@ public class SettlementAgent1 {
 		return account == null ? account = new ArrayList<>() : account;
 	}
 
-	public SettlementAgent1 setAccount(List<com.tools20022.repository.msg.PaymentAccount1> account) {
+	public SettlementAgent1 setAccount(List<PaymentAccount1> account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}

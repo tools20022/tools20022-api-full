@@ -120,7 +120,7 @@ public class GeneralBusinessReport5 {
 	 * GeneralBusinessReport4.mmBusinessInformationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessInformationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessReport5, Max35Text> mmBusinessInformationReference = new MMMessageAttribute<GeneralBusinessReport5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport5.mmObject();
@@ -133,6 +133,16 @@ public class GeneralBusinessReport5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GeneralBusinessReport5 obj) {
+			return obj.getBusinessInformationReference();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessReport5 obj, Max35Text value) {
+			obj.setBusinessInformationReference(value);
 		}
 	};
 	@XmlElement(name = "GnlBizOrErr", required = true)
@@ -174,7 +184,7 @@ public class GeneralBusinessReport5 {
 	 * GeneralBusinessReport4.mmGeneralBusinessOrError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralBusinessOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessReport5, GeneralBusinessOrError6Choice> mmGeneralBusinessOrError = new MMMessageAssociationEnd<GeneralBusinessReport5, GeneralBusinessOrError6Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SystemBusinessInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport5.mmObject();
@@ -188,6 +198,16 @@ public class GeneralBusinessReport5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneralBusinessOrError6Choice.mmObject();
+		}
+
+		@Override
+		public GeneralBusinessOrError6Choice getValue(GeneralBusinessReport5 obj) {
+			return obj.getGeneralBusinessOrError();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessReport5 obj, GeneralBusinessOrError6Choice value) {
+			obj.setGeneralBusinessOrError(value);
 		}
 	};
 

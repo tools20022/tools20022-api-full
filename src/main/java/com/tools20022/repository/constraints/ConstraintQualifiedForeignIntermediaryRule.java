@@ -51,11 +51,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties2> forOtherParties2 = new MMConstraint<OtherParties2>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties2 obj) throws Exception {
+			checkOtherParties2(obj);
 		}
 	};
 	/**
@@ -80,11 +84,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties8> forOtherParties8 = new MMConstraint<OtherParties8>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties8 obj) throws Exception {
+			checkOtherParties8(obj);
 		}
 	};
 	/**
@@ -117,12 +125,16 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties19> forOtherParties19 = new MMConstraint<OtherParties19>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintQualifiedForeignIntermediaryRule.forOtherParties27);
 			owner_lazy = () -> OtherParties19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties19 obj) throws Exception {
+			checkOtherParties19(obj);
 		}
 	};
 	/**
@@ -147,11 +159,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties24> forOtherParties24 = new MMConstraint<OtherParties24>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties24 obj) throws Exception {
+			checkOtherParties24(obj);
 		}
 	};
 	/**
@@ -176,11 +192,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties7> forOtherParties7 = new MMConstraint<OtherParties7>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties7 obj) throws Exception {
+			checkOtherParties7(obj);
 		}
 	};
 	/**
@@ -205,11 +225,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties9> forOtherParties9 = new MMConstraint<OtherParties9>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties9 obj) throws Exception {
+			checkOtherParties9(obj);
 		}
 	};
 	/**
@@ -234,11 +258,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties14> forOtherParties14 = new MMConstraint<OtherParties14>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties14 obj) throws Exception {
+			checkOtherParties14(obj);
 		}
 	};
 	/**
@@ -263,11 +291,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties15> forOtherParties15 = new MMConstraint<OtherParties15>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties15 obj) throws Exception {
+			checkOtherParties15(obj);
 		}
 	};
 	/**
@@ -292,11 +324,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties18> forOtherParties18 = new MMConstraint<OtherParties18>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties18 obj) throws Exception {
+			checkOtherParties18(obj);
 		}
 	};
 	/**
@@ -321,11 +357,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties12> forOtherParties12 = new MMConstraint<OtherParties12>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties12 obj) throws Exception {
+			checkOtherParties12(obj);
 		}
 	};
 	/**
@@ -350,11 +390,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties17> forOtherParties17 = new MMConstraint<OtherParties17>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties17 obj) throws Exception {
+			checkOtherParties17(obj);
 		}
 	};
 	/**
@@ -384,12 +428,16 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties27> forOtherParties27 = new MMConstraint<OtherParties27>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintQualifiedForeignIntermediaryRule.forOtherParties19;
 			owner_lazy = () -> OtherParties27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties27 obj) throws Exception {
+			checkOtherParties27(obj);
 		}
 	};
 	/**
@@ -414,11 +462,15 @@ public class ConstraintQualifiedForeignIntermediaryRule {
 	 */
 	public static final MMConstraint<OtherParties29> forOtherParties29 = new MMConstraint<OtherParties29>() {
 		{
-			validator = ConstraintQualifiedForeignIntermediaryRule::checkOtherParties29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedForeignIntermediaryRule";
 			definition = "If Qualified Foreign Intermediary is used, then the instruction must be a delivery.";
 			owner_lazy = () -> OtherParties29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OtherParties29 obj) throws Exception {
+			checkOtherParties29(obj);
 		}
 	};
 

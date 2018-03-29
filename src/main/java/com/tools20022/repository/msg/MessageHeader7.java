@@ -29,6 +29,7 @@ import com.tools20022.repository.choice.RequestType4Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalBusinessQuery1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -159,7 +160,7 @@ public class MessageHeader7 {
 	 * MessageHeader3.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageHeader7, Max35Text> mmMessageIdentification = new MMMessageAttribute<MessageHeader7, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader7.mmObject();
 			isDerived = false;
@@ -171,6 +172,16 @@ public class MessageHeader7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MessageHeader7 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(MessageHeader7 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -206,7 +217,7 @@ public class MessageHeader7 {
 	 * MessageHeader3.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageHeader7, Optional<ISODateTime>> mmCreationDateTime = new MMMessageAttribute<MessageHeader7, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader7.mmObject();
 			isDerived = false;
@@ -218,6 +229,16 @@ public class MessageHeader7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(MessageHeader7 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(MessageHeader7 obj, Optional<ISODateTime> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqTp")
@@ -254,7 +275,7 @@ public class MessageHeader7 {
 	 * MessageHeader3.mmRequestType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageHeader7, Optional<RequestType4Choice>> mmRequestType = new MMMessageAttribute<MessageHeader7, Optional<RequestType4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader7.mmObject();
 			isDerived = false;
@@ -266,6 +287,16 @@ public class MessageHeader7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RequestType4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RequestType4Choice> getValue(MessageHeader7 obj) {
+			return obj.getRequestType();
+		}
+
+		@Override
+		public void setValue(MessageHeader7 obj, Optional<RequestType4Choice> value) {
+			obj.setRequestType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlBizQry")
@@ -300,7 +331,7 @@ public class MessageHeader7 {
 	 * MessageHeader3.mmOriginalBusinessQuery}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalBusinessQuery = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MessageHeader7, Optional<OriginalBusinessQuery1>> mmOriginalBusinessQuery = new MMMessageAssociationEnd<MessageHeader7, Optional<OriginalBusinessQuery1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader7.mmObject();
 			isDerived = false;
@@ -312,7 +343,17 @@ public class MessageHeader7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalBusinessQuery1.mmObject();
+			type_lazy = () -> OriginalBusinessQuery1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalBusinessQuery1> getValue(MessageHeader7 obj) {
+			return obj.getOriginalBusinessQuery();
+		}
+
+		@Override
+		public void setValue(MessageHeader7 obj, Optional<OriginalBusinessQuery1> value) {
+			obj.setOriginalBusinessQuery(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryNm")
@@ -350,7 +391,7 @@ public class MessageHeader7 {
 	 * MessageHeader3.mmQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageHeader7, Optional<Max35Text>> mmQueryName = new MMMessageAttribute<MessageHeader7, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageHeader7.mmObject();
 			isDerived = false;
@@ -362,6 +403,16 @@ public class MessageHeader7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MessageHeader7 obj) {
+			return obj.getQueryName();
+		}
+
+		@Override
+		public void setValue(MessageHeader7 obj, Optional<Max35Text> value) {
+			obj.setQueryName(value.orElse(null));
 		}
 	};
 
@@ -414,7 +465,7 @@ public class MessageHeader7 {
 		return originalBusinessQuery == null ? Optional.empty() : Optional.of(originalBusinessQuery);
 	}
 
-	public MessageHeader7 setOriginalBusinessQuery(com.tools20022.repository.msg.OriginalBusinessQuery1 originalBusinessQuery) {
+	public MessageHeader7 setOriginalBusinessQuery(OriginalBusinessQuery1 originalBusinessQuery) {
 		this.originalBusinessQuery = originalBusinessQuery;
 		return this;
 	}

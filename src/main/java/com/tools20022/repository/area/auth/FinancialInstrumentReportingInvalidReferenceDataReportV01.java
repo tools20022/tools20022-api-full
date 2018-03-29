@@ -27,7 +27,6 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.msg.SecuritiesInvalidReferenceDataReport3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -124,7 +123,7 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDatePeriod = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingInvalidReferenceDataReportV01, Period4Choice> mmDatePeriod = new MMMessageBuildingBlock<FinancialInstrumentReportingInvalidReferenceDataReportV01, Period4Choice>() {
 		{
 			xmlTag = "DtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,12 +134,14 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			complexType_lazy = () -> Period4Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingInvalidReferenceDataReportV01.class.getMethod("getDatePeriod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Period4Choice getValue(FinancialInstrumentReportingInvalidReferenceDataReportV01 obj) {
+			return obj.getDatePeriod();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingInvalidReferenceDataReportV01 obj, Period4Choice value) {
+			obj.setDatePeriod(value);
 		}
 	};
 	@XmlElement(name = "NbOfRcrds")
@@ -167,7 +168,7 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 	 * definition} = "Number of invalid records in this message.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNumberOfRecords = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingInvalidReferenceDataReportV01, Optional<Number>> mmNumberOfRecords = new MMMessageBuildingBlock<FinancialInstrumentReportingInvalidReferenceDataReportV01, Optional<Number>>() {
 		{
 			xmlTag = "NbOfRcrds";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +179,14 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingInvalidReferenceDataReportV01.class.getMethod("getNumberOfRecords", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Number> getValue(FinancialInstrumentReportingInvalidReferenceDataReportV01 obj) {
+			return obj.getNumberOfRecords();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingInvalidReferenceDataReportV01 obj, Optional<Number> value) {
+			obj.setNumberOfRecords(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrms", required = true)
@@ -211,7 +214,7 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 	 * definition} = "Provides the details of the financial instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFinancialInstruments = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingInvalidReferenceDataReportV01, List<SecuritiesInvalidReferenceDataReport3>> mmFinancialInstruments = new MMMessageBuildingBlock<FinancialInstrumentReportingInvalidReferenceDataReportV01, List<SecuritiesInvalidReferenceDataReport3>>() {
 		{
 			xmlTag = "FinInstrms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,12 +224,14 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			complexType_lazy = () -> SecuritiesInvalidReferenceDataReport3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingInvalidReferenceDataReportV01.class.getMethod("getFinancialInstruments", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecuritiesInvalidReferenceDataReport3> getValue(FinancialInstrumentReportingInvalidReferenceDataReportV01 obj) {
+			return obj.getFinancialInstruments();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingInvalidReferenceDataReportV01 obj, List<SecuritiesInvalidReferenceDataReport3> value) {
+			obj.setFinancialInstruments(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -256,7 +261,7 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingInvalidReferenceDataReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FinancialInstrumentReportingInvalidReferenceDataReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,12 +271,14 @@ public class FinancialInstrumentReportingInvalidReferenceDataReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingInvalidReferenceDataReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FinancialInstrumentReportingInvalidReferenceDataReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingInvalidReferenceDataReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.MessageHeader9;
 import com.tools20022.repository.msg.Receipt2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -93,7 +92,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReceiptV04"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -131,7 +130,7 @@ public class ReceiptV04 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReceiptV04, MessageHeader9> mmMessageHeader = new MMMessageBuildingBlock<ReceiptV04, MessageHeader9>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +141,14 @@ public class ReceiptV04 {
 			complexType_lazy = () -> MessageHeader9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReceiptV04.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader9 getValue(ReceiptV04 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ReceiptV04 obj, MessageHeader9 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "RctDtls", required = true)
@@ -174,7 +175,7 @@ public class ReceiptV04 {
 	 * definition} = "Details of the receipt."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReceiptDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReceiptV04, List<Receipt2>> mmReceiptDetails = new MMMessageBuildingBlock<ReceiptV04, List<Receipt2>>() {
 		{
 			xmlTag = "RctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class ReceiptV04 {
 			complexType_lazy = () -> Receipt2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReceiptV04.class.getMethod("getReceiptDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Receipt2> getValue(ReceiptV04 obj) {
+			return obj.getReceiptDetails();
+		}
+
+		@Override
+		public void setValue(ReceiptV04 obj, List<Receipt2> value) {
+			obj.setReceiptDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -219,7 +222,7 @@ public class ReceiptV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReceiptV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ReceiptV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,19 +232,21 @@ public class ReceiptV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReceiptV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ReceiptV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ReceiptV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReceiptV04";
 				definition = "Scope\r\nThe Receipt message is sent by the transaction administrator to a member of the system. It is sent to acknowledge the receipt of one or multiple messages sent previously.\r\nThe Receipt message is an application receipt acknowledgement and conveys information about the processing of the original message(s).\r\nUsage\r\nThe Receipt message is used when the exchange of messages takes place in an asynchronous manner.\r\nThis may happen, for instance, when an action is requested from the transaction administrator (a deletion, modification or cancellation). The transaction administrator will first acknowledge the request (with a Receipt message) and then execute it.\r\nThe message can contain information based on the following elements: reference of the message(s) it acknowledges, the status code (optional) and further explanation:\r\n- reference of the message it acknowledges\r\n- potentially, a status code and an explanation.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

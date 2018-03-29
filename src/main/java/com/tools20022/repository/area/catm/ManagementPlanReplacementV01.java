@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.ContentInformationType1;
 import com.tools20022.repository.msg.Header4;
 import com.tools20022.repository.msg.ManagementPlan1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +125,7 @@ public class ManagementPlanReplacementV01 {
 	 * "Set of characteristics related to the transfer of the management plan."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ManagementPlanReplacementV01, Header4> mmHeader = new MMMessageBuildingBlock<ManagementPlanReplacementV01, Header4>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class ManagementPlanReplacementV01 {
 			complexType_lazy = () -> Header4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ManagementPlanReplacementV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header4 getValue(ManagementPlanReplacementV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ManagementPlanReplacementV01 obj, Header4 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "MgmtPlan", required = true)
@@ -171,7 +172,7 @@ public class ManagementPlanReplacementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmManagementPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ManagementPlanReplacementV01, ManagementPlan1> mmManagementPlan = new MMMessageBuildingBlock<ManagementPlanReplacementV01, ManagementPlan1>() {
 		{
 			xmlTag = "MgmtPlan";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,12 +183,14 @@ public class ManagementPlanReplacementV01 {
 			complexType_lazy = () -> ManagementPlan1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ManagementPlanReplacementV01.class.getMethod("getManagementPlan", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ManagementPlan1 getValue(ManagementPlanReplacementV01 obj) {
+			return obj.getManagementPlan();
+		}
+
+		@Override
+		public void setValue(ManagementPlanReplacementV01 obj, ManagementPlan1 value) {
+			obj.setManagementPlan(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -216,7 +219,7 @@ public class ManagementPlanReplacementV01 {
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ManagementPlanReplacementV01, ContentInformationType1> mmSecurityTrailer = new MMMessageBuildingBlock<ManagementPlanReplacementV01, ContentInformationType1>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,12 +230,14 @@ public class ManagementPlanReplacementV01 {
 			complexType_lazy = () -> ContentInformationType1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ManagementPlanReplacementV01.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType1 getValue(ManagementPlanReplacementV01 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ManagementPlanReplacementV01 obj, ContentInformationType1 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

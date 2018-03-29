@@ -48,41 +48,41 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionNarrative002V04
  * CorporateActionNarrative002V04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07
- * CorporateActionInstruction002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08
- * CorporateActionMovementPreliminaryAdvice002V08}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdvice002V07
- * CorporateActionCancellationAdvice002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V08
- * CorporateActionMovementReversalAdvice002V08}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequest002V07
  * CorporateActionInstructionCancellationRequest002V07}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdvice002V06
  * CorporateActionEventProcessingStatusAdvice002V06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V07
- * CorporateActionInstructionCancellationRequestStatusAdvice002V07}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdvice002V08
+ * CorporateActionCancellationAdvice002V08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07
- * CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdvice002V08
+ * CorporateActionInstructionCancellationRequestStatusAdvice002V08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07
- * CorporateActionNotification002V07}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V07
+ * CorporateActionInstructionStatementReport002V07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06
- * CorporateActionInstructionStatementReport002V06}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V09
+ * CorporateActionInstructionStatusAdvice002V09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V08
- * CorporateActionInstructionStatusAdvice002V08}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V08
+ * CorporateActionInstruction002V08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08
- * CorporateActionMovementConfirmation002V08}</li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V09
+ * CorporateActionMovementConfirmation002V09}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V08
+ * CorporateActionMovementPreliminaryAdviceCancellationAdvice002V08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V09
+ * CorporateActionMovementPreliminaryAdvice002V09}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdvice002V09
+ * CorporateActionMovementReversalAdvice002V09}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V08
+ * CorporateActionNotification002V08}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,10 +113,11 @@ public class CorporateActionsISO15022VariantsISOLatestversion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Corporate Actions - ISO 15022 Variants - ISO - Latest version";
 				definition = "This Message Definition Report provides the description of the ISO15022 Variants of the current version of the Corporate Actions message definitions. These variants have been developed by SWIFT to help ISO 20022 users who need to be interoperable with the ISO 15022 Corporate Actions message types. This has been done by restricting the ISO 20022 message components wherever necessary to ensure compatibility with the equivalent fields in ISO 15022. For more information, please refer to the ISO 15022 Variants Business Justification that is available at http://www.iso20022.org/documents/BJ/BJ096/ISO20022BJ_15022_variants_v3_with_comments.doc\r\n\r\nThese variants are maintained by SWIFT. Requests for changes to these variants should be addressed directly to SWIFT.";
-				messageDefinition_lazy = () -> Arrays.asList(CorporateActionNarrative002V04.mmObject(), CorporateActionInstruction002V07.mmObject(), CorporateActionMovementPreliminaryAdvice002V08.mmObject(),
-						CorporateActionCancellationAdvice002V07.mmObject(), CorporateActionMovementReversalAdvice002V08.mmObject(), CorporateActionInstructionCancellationRequest002V07.mmObject(),
-						CorporateActionEventProcessingStatusAdvice002V06.mmObject(), CorporateActionInstructionCancellationRequestStatusAdvice002V07.mmObject(), CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07.mmObject(),
-						CorporateActionNotification002V07.mmObject(), CorporateActionInstructionStatementReport002V06.mmObject(), CorporateActionInstructionStatusAdvice002V08.mmObject(), CorporateActionMovementConfirmation002V08.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(CorporateActionNarrative002V04.mmObject(), CorporateActionInstructionCancellationRequest002V07.mmObject(), CorporateActionEventProcessingStatusAdvice002V06.mmObject(),
+						CorporateActionCancellationAdvice002V08.mmObject(), CorporateActionInstructionCancellationRequestStatusAdvice002V08.mmObject(), CorporateActionInstructionStatementReport002V07.mmObject(),
+						CorporateActionInstructionStatusAdvice002V09.mmObject(), CorporateActionInstruction002V08.mmObject(), CorporateActionMovementConfirmation002V09.mmObject(),
+						CorporateActionMovementPreliminaryAdviceCancellationAdvice002V08.mmObject(), CorporateActionMovementPreliminaryAdvice002V09.mmObject(), CorporateActionMovementReversalAdvice002V09.mmObject(),
+						CorporateActionNotification002V08.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

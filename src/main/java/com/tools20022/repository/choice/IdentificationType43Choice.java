@@ -121,7 +121,7 @@ public class IdentificationType43Choice {
 	 * IdentificationType40Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationType43Choice, TypeOfIdentification2Code> mmCode = new MMMessageAttribute<IdentificationType43Choice, TypeOfIdentification2Code>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationType43Choice.mmObject();
@@ -134,6 +134,16 @@ public class IdentificationType43Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfIdentification2Code.mmObject();
+		}
+
+		@Override
+		public TypeOfIdentification2Code getValue(IdentificationType43Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(IdentificationType43Choice obj, TypeOfIdentification2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -176,7 +186,7 @@ public class IdentificationType43Choice {
 	 * IdentificationType40Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationType43Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<IdentificationType43Choice, GenericIdentification36>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTypeOfIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationType43Choice.mmObject();
@@ -190,6 +200,16 @@ public class IdentificationType43Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(IdentificationType43Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IdentificationType43Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

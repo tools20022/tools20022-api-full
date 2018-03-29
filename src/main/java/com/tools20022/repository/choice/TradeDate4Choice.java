@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTime1Choice;
+import com.tools20022.repository.choice.TradingDateCode1Choice;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -101,7 +103,7 @@ public class TradeDate4Choice {
 	 * definition} = "Date and time at which the securities are to be traded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDate4Choice, DateAndDateTime1Choice> mmDate = new MMMessageAttribute<TradeDate4Choice, DateAndDateTime1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Trade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDate4Choice.mmObject();
@@ -112,7 +114,17 @@ public class TradeDate4Choice {
 			definition = "Date and time at which the securities are to be traded.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTime1Choice.mmObject();
+			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTime1Choice getValue(TradeDate4Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(TradeDate4Choice obj, DateAndDateTime1Choice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -151,7 +163,7 @@ public class TradeDate4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDate4Choice, TradingDateCode1Choice> mmValue = new MMMessageAttribute<TradeDate4Choice, TradingDateCode1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Trade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDate4Choice.mmObject();
@@ -162,7 +174,17 @@ public class TradeDate4Choice {
 			definition = "Date and time at which the securities are to be traded expressed as a ISO20022 code.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.TradingDateCode1Choice.mmObject();
+			complexType_lazy = () -> TradingDateCode1Choice.mmObject();
+		}
+
+		@Override
+		public TradingDateCode1Choice getValue(TradeDate4Choice obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(TradeDate4Choice obj, TradingDateCode1Choice value) {
+			obj.setValue(value);
 		}
 	};
 
@@ -184,7 +206,7 @@ public class TradeDate4Choice {
 		return date;
 	}
 
-	public TradeDate4Choice setDate(com.tools20022.repository.choice.DateAndDateTime1Choice date) {
+	public TradeDate4Choice setDate(DateAndDateTime1Choice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -193,7 +215,7 @@ public class TradeDate4Choice {
 		return value;
 	}
 
-	public TradeDate4Choice setValue(com.tools20022.repository.choice.TradingDateCode1Choice value) {
+	public TradeDate4Choice setValue(TradingDateCode1Choice value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}

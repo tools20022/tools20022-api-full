@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification46;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class SystemPartyIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemPartyIdentification5, PartyIdentification46> mmRelatedPartyIdentification = new MMMessageAssociationEnd<SystemPartyIdentification5, PartyIdentification46>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
@@ -137,7 +138,17 @@ public class SystemPartyIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification46.mmObject();
+			type_lazy = () -> PartyIdentification46.mmObject();
+		}
+
+		@Override
+		public PartyIdentification46 getValue(SystemPartyIdentification5 obj) {
+			return obj.getRelatedPartyIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification5 obj, PartyIdentification46 value) {
+			obj.setRelatedPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "RspnsblPtyId")
@@ -185,7 +196,7 @@ public class SystemPartyIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyIdentification5, Optional<BICFIIdentifier>> mmResponsiblePartyIdentification = new MMMessageAttribute<SystemPartyIdentification5, Optional<BICFIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
@@ -198,6 +209,16 @@ public class SystemPartyIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICFIIdentifier> getValue(SystemPartyIdentification5 obj) {
+			return obj.getResponsiblePartyIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyIdentification5 obj, Optional<BICFIIdentifier> value) {
+			obj.setResponsiblePartyIdentification(value.orElse(null));
 		}
 	};
 
@@ -220,7 +241,7 @@ public class SystemPartyIdentification5 {
 		return relatedPartyIdentification;
 	}
 
-	public SystemPartyIdentification5 setRelatedPartyIdentification(com.tools20022.repository.msg.PartyIdentification46 relatedPartyIdentification) {
+	public SystemPartyIdentification5 setRelatedPartyIdentification(PartyIdentification46 relatedPartyIdentification) {
 		this.relatedPartyIdentification = Objects.requireNonNull(relatedPartyIdentification);
 		return this;
 	}

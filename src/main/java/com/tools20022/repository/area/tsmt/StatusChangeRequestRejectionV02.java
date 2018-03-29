@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.SimpleIdentificationInformation;
 import com.tools20022.repository.msg.TransactionStatus3;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +137,7 @@ public class StatusChangeRequestRejectionV02 {
 	 * definition} = "Identifies the rejection message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRejectionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusChangeRequestRejectionV02, MessageIdentification1> mmRejectionIdentification = new MMMessageBuildingBlock<StatusChangeRequestRejectionV02, MessageIdentification1>() {
 		{
 			xmlTag = "RjctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +148,14 @@ public class StatusChangeRequestRejectionV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusChangeRequestRejectionV02.class.getMethod("getRejectionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(StatusChangeRequestRejectionV02 obj) {
+			return obj.getRejectionIdentification();
+		}
+
+		@Override
+		public void setValue(StatusChangeRequestRejectionV02 obj, MessageIdentification1 value) {
+			obj.setRejectionIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -184,7 +185,7 @@ public class StatusChangeRequestRejectionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusChangeRequestRejectionV02, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<StatusChangeRequestRejectionV02, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,12 +196,14 @@ public class StatusChangeRequestRejectionV02 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusChangeRequestRejectionV02.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(StatusChangeRequestRejectionV02 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(StatusChangeRequestRejectionV02 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubmitrTxRef")
@@ -229,7 +232,7 @@ public class StatusChangeRequestRejectionV02 {
 	 * "Reference to the transaction for the requesting financial institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusChangeRequestRejectionV02, Optional<SimpleIdentificationInformation>> mmSubmitterTransactionReference = new MMMessageBuildingBlock<StatusChangeRequestRejectionV02, Optional<SimpleIdentificationInformation>>() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +243,14 @@ public class StatusChangeRequestRejectionV02 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusChangeRequestRejectionV02.class.getMethod("getSubmitterTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SimpleIdentificationInformation> getValue(StatusChangeRequestRejectionV02 obj) {
+			return obj.getSubmitterTransactionReference();
+		}
+
+		@Override
+		public void setValue(StatusChangeRequestRejectionV02 obj, Optional<SimpleIdentificationInformation> value) {
+			obj.setSubmitterTransactionReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctdStsChng", required = true)
@@ -273,7 +278,7 @@ public class StatusChangeRequestRejectionV02 {
 	 * definition} = "Specifies the status rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRejectedStatusChange = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusChangeRequestRejectionV02, TransactionStatus3> mmRejectedStatusChange = new MMMessageBuildingBlock<StatusChangeRequestRejectionV02, TransactionStatus3>() {
 		{
 			xmlTag = "RjctdStsChng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,12 +289,14 @@ public class StatusChangeRequestRejectionV02 {
 			complexType_lazy = () -> TransactionStatus3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusChangeRequestRejectionV02.class.getMethod("getRejectedStatusChange", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus3 getValue(StatusChangeRequestRejectionV02 obj) {
+			return obj.getRejectedStatusChange();
+		}
+
+		@Override
+		public void setValue(StatusChangeRequestRejectionV02 obj, TransactionStatus3 value) {
+			obj.setRejectedStatusChange(value);
 		}
 	};
 	@XmlElement(name = "RjctnRsn", required = true)
@@ -316,7 +323,7 @@ public class StatusChangeRequestRejectionV02 {
 	 * definition} = "Reason why the user cannot accept the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusChangeRequestRejectionV02, Reason2> mmRejectionReason = new MMMessageBuildingBlock<StatusChangeRequestRejectionV02, Reason2>() {
 		{
 			xmlTag = "RjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,12 +334,14 @@ public class StatusChangeRequestRejectionV02 {
 			complexType_lazy = () -> Reason2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusChangeRequestRejectionV02.class.getMethod("getRejectionReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Reason2 getValue(StatusChangeRequestRejectionV02 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(StatusChangeRequestRejectionV02 obj, Reason2 value) {
+			obj.setRejectionReason(value);
 		}
 	};
 

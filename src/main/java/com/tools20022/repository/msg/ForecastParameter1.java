@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.ReportParameter2Choice;
 import com.tools20022.repository.entity.FundsCashFlow;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashInForecast1;
+import com.tools20022.repository.msg.CashOutForecast1;
+import com.tools20022.repository.msg.NetCashForecast1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +118,7 @@ public class ForecastParameter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportParameter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForecastParameter1, ReportParameter2Choice> mmReportParameter = new MMMessageAttribute<ForecastParameter1, ReportParameter2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForecastParameter1.mmObject();
 			isDerived = false;
@@ -127,9 +130,19 @@ public class ForecastParameter1 {
 			minOccurs = 1;
 			complexType_lazy = () -> ReportParameter2Choice.mmObject();
 		}
+
+		@Override
+		public ReportParameter2Choice getValue(ForecastParameter1 obj) {
+			return obj.getReportParameter();
+		}
+
+		@Override
+		public void setValue(ForecastParameter1 obj, ReportParameter2Choice value) {
+			obj.setReportParameter(value);
+		}
 	};
 	@XmlElement(name = "EstmtdCshInFcstDtls")
-	protected List<com.tools20022.repository.msg.CashInForecast1> estimatedCashInForecastDetails;
+	protected List<CashInForecast1> estimatedCashInForecastDetails;
 	/**
 	 * 
 	 <p>
@@ -163,7 +176,7 @@ public class ForecastParameter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEstimatedCashInForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ForecastParameter1, List<CashInForecast1>> mmEstimatedCashInForecastDetails = new MMMessageAssociationEnd<ForecastParameter1, List<CashInForecast1>>() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForecastParameter1.mmObject();
@@ -174,11 +187,21 @@ public class ForecastParameter1 {
 			definition = "Cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashInForecast1.mmObject();
+			type_lazy = () -> CashInForecast1.mmObject();
+		}
+
+		@Override
+		public List<CashInForecast1> getValue(ForecastParameter1 obj) {
+			return obj.getEstimatedCashInForecastDetails();
+		}
+
+		@Override
+		public void setValue(ForecastParameter1 obj, List<CashInForecast1> value) {
+			obj.setEstimatedCashInForecastDetails(value);
 		}
 	};
 	@XmlElement(name = "EstmtdCshOutFcstDtls")
-	protected List<com.tools20022.repository.msg.CashOutForecast1> estimatedCashOutForecastDetails;
+	protected List<CashOutForecast1> estimatedCashOutForecastDetails;
 	/**
 	 * 
 	 <p>
@@ -212,7 +235,7 @@ public class ForecastParameter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEstimatedCashOutForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ForecastParameter1, List<CashOutForecast1>> mmEstimatedCashOutForecastDetails = new MMMessageAssociationEnd<ForecastParameter1, List<CashOutForecast1>>() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForecastParameter1.mmObject();
@@ -223,11 +246,21 @@ public class ForecastParameter1 {
 			definition = "Cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast1.mmObject();
+			type_lazy = () -> CashOutForecast1.mmObject();
+		}
+
+		@Override
+		public List<CashOutForecast1> getValue(ForecastParameter1 obj) {
+			return obj.getEstimatedCashOutForecastDetails();
+		}
+
+		@Override
+		public void setValue(ForecastParameter1 obj, List<CashOutForecast1> value) {
+			obj.setEstimatedCashOutForecastDetails(value);
 		}
 	};
 	@XmlElement(name = "EstmtdNetCshFcstDtls")
-	protected List<com.tools20022.repository.msg.NetCashForecast1> estimatedNetCashForecastDetails;
+	protected List<NetCashForecast1> estimatedNetCashForecastDetails;
 	/**
 	 * 
 	 <p>
@@ -261,7 +294,7 @@ public class ForecastParameter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEstimatedNetCashForecastDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ForecastParameter1, List<NetCashForecast1>> mmEstimatedNetCashForecastDetails = new MMMessageAssociationEnd<ForecastParameter1, List<NetCashForecast1>>() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForecastParameter1.mmObject();
@@ -272,7 +305,17 @@ public class ForecastParameter1 {
 			definition = "Net cash movements to a fund as a result of investment funds transactions.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast1.mmObject();
+			type_lazy = () -> NetCashForecast1.mmObject();
+		}
+
+		@Override
+		public List<NetCashForecast1> getValue(ForecastParameter1 obj) {
+			return obj.getEstimatedNetCashForecastDetails();
+		}
+
+		@Override
+		public void setValue(ForecastParameter1 obj, List<NetCashForecast1> value) {
+			obj.setEstimatedNetCashForecastDetails(value);
 		}
 	};
 
@@ -304,7 +347,7 @@ public class ForecastParameter1 {
 		return estimatedCashInForecastDetails == null ? estimatedCashInForecastDetails = new ArrayList<>() : estimatedCashInForecastDetails;
 	}
 
-	public ForecastParameter1 setEstimatedCashInForecastDetails(List<com.tools20022.repository.msg.CashInForecast1> estimatedCashInForecastDetails) {
+	public ForecastParameter1 setEstimatedCashInForecastDetails(List<CashInForecast1> estimatedCashInForecastDetails) {
 		this.estimatedCashInForecastDetails = Objects.requireNonNull(estimatedCashInForecastDetails);
 		return this;
 	}
@@ -313,7 +356,7 @@ public class ForecastParameter1 {
 		return estimatedCashOutForecastDetails == null ? estimatedCashOutForecastDetails = new ArrayList<>() : estimatedCashOutForecastDetails;
 	}
 
-	public ForecastParameter1 setEstimatedCashOutForecastDetails(List<com.tools20022.repository.msg.CashOutForecast1> estimatedCashOutForecastDetails) {
+	public ForecastParameter1 setEstimatedCashOutForecastDetails(List<CashOutForecast1> estimatedCashOutForecastDetails) {
 		this.estimatedCashOutForecastDetails = Objects.requireNonNull(estimatedCashOutForecastDetails);
 		return this;
 	}
@@ -322,7 +365,7 @@ public class ForecastParameter1 {
 		return estimatedNetCashForecastDetails == null ? estimatedNetCashForecastDetails = new ArrayList<>() : estimatedNetCashForecastDetails;
 	}
 
-	public ForecastParameter1 setEstimatedNetCashForecastDetails(List<com.tools20022.repository.msg.NetCashForecast1> estimatedNetCashForecastDetails) {
+	public ForecastParameter1 setEstimatedNetCashForecastDetails(List<NetCashForecast1> estimatedNetCashForecastDetails) {
 		this.estimatedNetCashForecastDetails = Objects.requireNonNull(estimatedNetCashForecastDetails);
 		return this;
 	}

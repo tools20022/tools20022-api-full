@@ -124,7 +124,7 @@ public class FundIdentification3 {
 	 * definition} = "Identification of the investment fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFundIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundIdentification3, Max35Text> mmFundIdentification = new MMMessageAttribute<FundIdentification3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundIdentification3.mmObject();
@@ -136,6 +136,16 @@ public class FundIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(FundIdentification3 obj) {
+			return obj.getFundIdentification();
+		}
+
+		@Override
+		public void setValue(FundIdentification3 obj, Max35Text value) {
+			obj.setFundIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctIdWthCtdn")
@@ -173,7 +183,7 @@ public class FundIdentification3 {
 	 * "Identifies the account of the fund held with the custodian."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentificationWithCustodian = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FundIdentification3, Optional<Max35Text>> mmAccountIdentificationWithCustodian = new MMMessageAttribute<FundIdentification3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundIdentification3.mmObject();
@@ -185,6 +195,16 @@ public class FundIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(FundIdentification3 obj) {
+			return obj.getAccountIdentificationWithCustodian();
+		}
+
+		@Override
+		public void setValue(FundIdentification3 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentificationWithCustodian(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtdnId")
@@ -223,7 +243,7 @@ public class FundIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCustodianIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FundIdentification3, Optional<PartyIdentification19Choice>> mmCustodianIdentification = new MMMessageAssociationEnd<FundIdentification3, Optional<PartyIdentification19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FundIdentification3.mmObject();
@@ -236,6 +256,16 @@ public class FundIdentification3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification19Choice> getValue(FundIdentification3 obj) {
+			return obj.getCustodianIdentification();
+		}
+
+		@Override
+		public void setValue(FundIdentification3 obj, Optional<PartyIdentification19Choice> value) {
+			obj.setCustodianIdentification(value.orElse(null));
 		}
 	};
 

@@ -24,8 +24,11 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification4;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -58,8 +61,9 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = March 3, 2019</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PartyPrivate1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -107,7 +111,7 @@ public class PartyPrivate1 {
 	 * "Unique and unambiguous identification of a person, eg, passport."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyPrivate1, PersonIdentification4> mmPrivateIdentification = new MMMessageAssociationEnd<PartyPrivate1, PersonIdentification4>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyPrivate1.mmObject();
@@ -121,6 +125,16 @@ public class PartyPrivate1 {
 			isComposite = true;
 			type_lazy = () -> PersonIdentification4.mmObject();
 		}
+
+		@Override
+		public PersonIdentification4 getValue(PartyPrivate1 obj) {
+			return obj.getPrivateIdentification();
+		}
+
+		@Override
+		public void setValue(PartyPrivate1 obj, PersonIdentification4 value) {
+			obj.setPrivateIdentification(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -129,7 +143,14 @@ public class PartyPrivate1 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyPrivate1.mmPrivateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("March 3, 2019");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "PartyPrivate1";
 				definition = "Choice between the identification of a person and the identification of a non-financial institution.";
 			}

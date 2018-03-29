@@ -112,7 +112,7 @@ public class InstructionProcessingStatus26Choice {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus26Choice, InstructionProcessingStatus1Code> mmCode = new MMMessageAttribute<InstructionProcessingStatus26Choice, InstructionProcessingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus26Choice.mmObject();
@@ -125,6 +125,16 @@ public class InstructionProcessingStatus26Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionProcessingStatus1Code.mmObject();
+		}
+
+		@Override
+		public InstructionProcessingStatus1Code getValue(InstructionProcessingStatus26Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus26Choice obj, InstructionProcessingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class InstructionProcessingStatus26Choice {
 	 * definition} = "Provides the status of an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionProcessingStatus26Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<InstructionProcessingStatus26Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus26Choice.mmObject();
@@ -178,6 +188,16 @@ public class InstructionProcessingStatus26Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(InstructionProcessingStatus26Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InstructionProcessingStatus26Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

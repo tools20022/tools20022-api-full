@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.entity.ProceedsDefinition;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class SecuritiesOption58 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption58, SecurityIdentification20> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<SecuritiesOption58, SecurityIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption58.mmObject();
@@ -139,7 +140,17 @@ public class SecuritiesOption58 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification20.mmObject();
+			type_lazy = () -> SecurityIdentification20.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification20 getValue(SecuritiesOption58 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption58 obj, SecurityIdentification20 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -180,7 +191,7 @@ public class SecuritiesOption58 {
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOption58, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<SecuritiesOption58, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption58.mmObject();
@@ -193,6 +204,16 @@ public class SecuritiesOption58 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(SecuritiesOption58 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption58 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "PstngQty", required = true)
@@ -233,7 +254,7 @@ public class SecuritiesOption58 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostingQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption58, Quantity10Choice> mmPostingQuantity = new MMMessageAssociationEnd<SecuritiesOption58, Quantity10Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption58.mmObject();
@@ -247,6 +268,16 @@ public class SecuritiesOption58 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Quantity10Choice.mmObject();
+		}
+
+		@Override
+		public Quantity10Choice getValue(SecuritiesOption58 obj) {
+			return obj.getPostingQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption58 obj, Quantity10Choice value) {
+			obj.setPostingQuantity(value);
 		}
 	};
 	@XmlElement(name = "PstngDt", required = true)
@@ -286,7 +317,7 @@ public class SecuritiesOption58 {
 	 * definition} = "Date of the posting (credit or debit) to the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption58, DateAndDateTimeChoice> mmPostingDate = new MMMessageAssociationEnd<SecuritiesOption58, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption58.mmObject();
@@ -300,6 +331,16 @@ public class SecuritiesOption58 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(SecuritiesOption58 obj) {
+			return obj.getPostingDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption58 obj, DateAndDateTimeChoice value) {
+			obj.setPostingDate(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPstngDt")
@@ -338,7 +379,7 @@ public class SecuritiesOption58 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalPostingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesOption58, Optional<DateAndDateTimeChoice>> mmOriginalPostingDate = new MMMessageAssociationEnd<SecuritiesOption58, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption58.mmObject();
@@ -351,6 +392,16 @@ public class SecuritiesOption58 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(SecuritiesOption58 obj) {
+			return obj.getOriginalPostingDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesOption58 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setOriginalPostingDate(value.orElse(null));
 		}
 	};
 
@@ -373,7 +424,7 @@ public class SecuritiesOption58 {
 		return financialInstrumentIdentification;
 	}
 
-	public SecuritiesOption58 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification20 financialInstrumentIdentification) {
+	public SecuritiesOption58 setFinancialInstrumentIdentification(SecurityIdentification20 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}

@@ -25,7 +25,6 @@ import com.tools20022.repository.codeset.PrePaymentSpeedCode;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PrePaymentSpeed1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +115,7 @@ public class PrePaymentSpeed {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PrePaymentSpeed, PrePaymentSpeedCode> mmType = new MMBusinessAttribute<PrePaymentSpeed, PrePaymentSpeedCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PrePaymentSpeed1.mmType);
 			isDerived = false;
@@ -130,12 +129,14 @@ public class PrePaymentSpeed {
 			simpleType_lazy = () -> PrePaymentSpeedCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PrePaymentSpeed.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PrePaymentSpeedCode getValue(PrePaymentSpeed obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PrePaymentSpeed obj, PrePaymentSpeedCode value) {
+			obj.setType(value);
 		}
 	};
 	protected PercentageRate rate;
@@ -172,7 +173,7 @@ public class PrePaymentSpeed {
 	 * definition} = "Rate of prepayment speed of the fixed income instrument."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PrePaymentSpeed, PercentageRate> mmRate = new MMBusinessAttribute<PrePaymentSpeed, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PrePaymentSpeed1.mmRate);
 			isDerived = false;
@@ -185,12 +186,14 @@ public class PrePaymentSpeed {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PrePaymentSpeed.class.getMethod("getRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(PrePaymentSpeed obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PrePaymentSpeed obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 

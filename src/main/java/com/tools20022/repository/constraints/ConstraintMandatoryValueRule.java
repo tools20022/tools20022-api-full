@@ -52,11 +52,15 @@ public class ConstraintMandatoryValueRule {
 	 */
 	public static final MMConstraint<ModifyMemberV03> forModifyMemberV03 = new MMConstraint<ModifyMemberV03>() {
 		{
-			validator = ConstraintMandatoryValueRule::checkModifyMemberV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryValueRule";
 			definition = "The NewMemberValueSet consists of a MemberReturnAddress, a CommunicationAddress or a ContactReference. At a minimum, one of these elements must be present.";
 			owner_lazy = () -> ModifyMemberV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ModifyMemberV03 obj) throws Exception {
+			checkModifyMemberV03(obj);
 		}
 	};
 

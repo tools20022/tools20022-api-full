@@ -117,7 +117,7 @@ public class ConfirmationRejectedReason1Choice {
 	 * ConfirmationRejectedStatus2.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationRejectedReason1Choice, RejectedConfirmationStatusReason1Code> mmCode = new MMMessageAttribute<ConfirmationRejectedReason1Choice, RejectedConfirmationStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationRejectedReason1Choice.mmObject();
@@ -130,6 +130,16 @@ public class ConfirmationRejectedReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedConfirmationStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public RejectedConfirmationStatusReason1Code getValue(ConfirmationRejectedReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ConfirmationRejectedReason1Choice obj, RejectedConfirmationStatusReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -162,7 +172,7 @@ public class ConfirmationRejectedReason1Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationRejectedReason1Choice, GenericIdentification1> mmProprietary = new MMMessageAttribute<ConfirmationRejectedReason1Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationRejectedReason1Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class ConfirmationRejectedReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(ConfirmationRejectedReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ConfirmationRejectedReason1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -33,6 +33,10 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FloatingRateNote1;
+import com.tools20022.repository.msg.Option12;
+import com.tools20022.repository.msg.Rate2;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -187,7 +191,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportedTransactionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, TransactionOperationType1Code> mmReportedTransactionStatus = new MMMessageAttribute<UnsecuredMarketTransaction1, TransactionOperationType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
 			isDerived = false;
@@ -199,6 +203,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionOperationType1Code.mmObject();
+		}
+
+		@Override
+		public TransactionOperationType1Code getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getReportedTransactionStatus();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, TransactionOperationType1Code value) {
+			obj.setReportedTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "UnqTxIdr")
@@ -245,7 +259,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, Optional<Max105Text>> mmUniqueTransactionIdentifier = new MMMessageAttribute<UnsecuredMarketTransaction1, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -258,6 +272,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, Optional<Max105Text> value) {
+			obj.setUniqueTransactionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryTxId", required = true)
@@ -304,7 +328,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, Max105Text> mmProprietaryTransactionIdentification = new MMMessageAttribute<UnsecuredMarketTransaction1, Max105Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -317,6 +341,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Max105Text getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getProprietaryTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, Max105Text value) {
+			obj.setProprietaryTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtrPtyPrtryTxId")
@@ -364,7 +398,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, Optional<Max105Text>> mmCounterpartyProprietaryTransactionIdentification = new MMMessageAttribute<UnsecuredMarketTransaction1, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -377,6 +411,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getCounterpartyProprietaryTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, Optional<Max105Text> value) {
+			obj.setCounterpartyProprietaryTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrPtyId", required = true)
@@ -423,7 +467,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnsecuredMarketTransaction1, CounterpartyIdentification1Choice> mmCounterpartyIdentification = new MMMessageAssociationEnd<UnsecuredMarketTransaction1, CounterpartyIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CounterpartyRisk.mmParty;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -437,6 +481,16 @@ public class UnsecuredMarketTransaction1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CounterpartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public CounterpartyIdentification1Choice getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, CounterpartyIdentification1Choice value) {
+			obj.setCounterpartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradDt", required = true)
@@ -483,7 +537,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnsecuredMarketTransaction1, DateAndDateTimeChoice> mmTradeDate = new MMMessageAssociationEnd<UnsecuredMarketTransaction1, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -497,6 +551,16 @@ public class UnsecuredMarketTransaction1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, DateAndDateTimeChoice value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -543,7 +607,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, ISODate> mmSettlementDate = new MMMessageAttribute<UnsecuredMarketTransaction1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -556,6 +620,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, ISODate value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "MtrtyDt", required = true)
@@ -602,7 +676,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, ISODate> mmMaturityDate = new MMMessageAttribute<UnsecuredMarketTransaction1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -615,6 +689,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, ISODate value) {
+			obj.setMaturityDate(value);
 		}
 	};
 	@XmlElement(name = "TxTp", required = true)
@@ -662,7 +746,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, MoneyMarketTransactionType1Code> mmTransactionType = new MMMessageAttribute<UnsecuredMarketTransaction1, MoneyMarketTransactionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -675,6 +759,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MoneyMarketTransactionType1Code.mmObject();
+		}
+
+		@Override
+		public MoneyMarketTransactionType1Code getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, MoneyMarketTransactionType1Code value) {
+			obj.setTransactionType(value);
 		}
 	};
 	@XmlElement(name = "InstrmTp", required = true)
@@ -722,7 +816,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstrumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, FinancialInstrumentProductType1Code> mmInstrumentType = new MMMessageAttribute<UnsecuredMarketTransaction1, FinancialInstrumentProductType1Code>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -735,6 +829,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialInstrumentProductType1Code.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentProductType1Code getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getInstrumentType();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, FinancialInstrumentProductType1Code value) {
+			obj.setInstrumentType(value);
 		}
 	};
 	@XmlElement(name = "TxNmnlAmt", required = true)
@@ -782,7 +886,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionNominalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, ActiveCurrencyAndAmount> mmTransactionNominalAmount = new MMMessageAttribute<UnsecuredMarketTransaction1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -795,6 +899,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getTransactionNominalAmount();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTransactionNominalAmount(value);
 		}
 	};
 	@XmlElement(name = "DealPric", required = true)
@@ -842,7 +956,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, PercentageRate> mmDealPrice = new MMMessageAttribute<UnsecuredMarketTransaction1, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmDealPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -855,6 +969,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getDealPrice();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, PercentageRate value) {
+			obj.setDealPrice(value);
 		}
 	};
 	@XmlElement(name = "RateTp", required = true)
@@ -902,7 +1026,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnsecuredMarketTransaction1, InterestRateType1Code> mmRateType = new MMMessageAttribute<UnsecuredMarketTransaction1, InterestRateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmTypeOfInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -915,6 +1039,16 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestRateType1Code.mmObject();
+		}
+
+		@Override
+		public InterestRateType1Code getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getRateType();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, InterestRateType1Code value) {
+			obj.setRateType(value);
 		}
 	};
 	@XmlElement(name = "DealRate")
@@ -959,7 +1093,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDealRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnsecuredMarketTransaction1, Optional<Rate2>> mmDealRate = new MMMessageAssociationEnd<UnsecuredMarketTransaction1, Optional<Rate2>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -972,7 +1106,17 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
+			type_lazy = () -> Rate2.mmObject();
+		}
+
+		@Override
+		public Optional<Rate2> getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getDealRate();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, Optional<Rate2> value) {
+			obj.setDealRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FltgRateNote")
@@ -1017,7 +1161,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFloatingRateNote = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnsecuredMarketTransaction1, Optional<FloatingRateNote1>> mmFloatingRateNote = new MMMessageAssociationEnd<UnsecuredMarketTransaction1, Optional<FloatingRateNote1>>() {
 		{
 			businessComponentTrace_lazy = () -> Future.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -1030,11 +1174,21 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FloatingRateNote1.mmObject();
+			type_lazy = () -> FloatingRateNote1.mmObject();
+		}
+
+		@Override
+		public Optional<FloatingRateNote1> getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getFloatingRateNote();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, Optional<FloatingRateNote1> value) {
+			obj.setFloatingRateNote(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CallPutOptn")
-	protected List<com.tools20022.repository.msg.Option12> callPutOption;
+	protected List<Option12> callPutOption;
 	/**
 	 * 
 	 <p>
@@ -1074,7 +1228,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCallPutOption = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnsecuredMarketTransaction1, List<Option12>> mmCallPutOption = new MMMessageAssociationEnd<UnsecuredMarketTransaction1, List<Option12>>() {
 		{
 			businessComponentTrace_lazy = () -> Option.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
@@ -1087,11 +1241,21 @@ public class UnsecuredMarketTransaction1 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Option12.mmObject();
+			type_lazy = () -> Option12.mmObject();
+		}
+
+		@Override
+		public List<Option12> getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getCallPutOption();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, List<Option12> value) {
+			obj.setCallPutOption(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -1128,7 +1292,7 @@ public class UnsecuredMarketTransaction1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnsecuredMarketTransaction1, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<UnsecuredMarketTransaction1, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredMarketTransaction1.mmObject();
 			isDerived = false;
@@ -1139,7 +1303,17 @@ public class UnsecuredMarketTransaction1 {
 			nextVersions_lazy = () -> Arrays.asList(UnsecuredMarketTransaction2.mmSupplementaryData);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(UnsecuredMarketTransaction1 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(UnsecuredMarketTransaction1 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -1289,7 +1463,7 @@ public class UnsecuredMarketTransaction1 {
 		return dealRate == null ? Optional.empty() : Optional.of(dealRate);
 	}
 
-	public UnsecuredMarketTransaction1 setDealRate(com.tools20022.repository.msg.Rate2 dealRate) {
+	public UnsecuredMarketTransaction1 setDealRate(Rate2 dealRate) {
 		this.dealRate = dealRate;
 		return this;
 	}
@@ -1298,7 +1472,7 @@ public class UnsecuredMarketTransaction1 {
 		return floatingRateNote == null ? Optional.empty() : Optional.of(floatingRateNote);
 	}
 
-	public UnsecuredMarketTransaction1 setFloatingRateNote(com.tools20022.repository.msg.FloatingRateNote1 floatingRateNote) {
+	public UnsecuredMarketTransaction1 setFloatingRateNote(FloatingRateNote1 floatingRateNote) {
 		this.floatingRateNote = floatingRateNote;
 		return this;
 	}
@@ -1307,7 +1481,7 @@ public class UnsecuredMarketTransaction1 {
 		return callPutOption == null ? callPutOption = new ArrayList<>() : callPutOption;
 	}
 
-	public UnsecuredMarketTransaction1 setCallPutOption(List<com.tools20022.repository.msg.Option12> callPutOption) {
+	public UnsecuredMarketTransaction1 setCallPutOption(List<Option12> callPutOption) {
 		this.callPutOption = Objects.requireNonNull(callPutOption);
 		return this;
 	}
@@ -1316,7 +1490,7 @@ public class UnsecuredMarketTransaction1 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public UnsecuredMarketTransaction1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public UnsecuredMarketTransaction1 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

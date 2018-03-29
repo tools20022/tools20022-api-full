@@ -112,7 +112,7 @@ public class AmountRange2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountRange2Choice, ImpliedCurrencyAndAmountRange> mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd<AmountRange2Choice, ImpliedCurrencyAndAmountRange>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountRange2Choice.mmObject();
@@ -125,6 +125,16 @@ public class AmountRange2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ImpliedCurrencyAndAmountRange.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmountRange getValue(AmountRange2Choice obj) {
+			return obj.getImpliedCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(AmountRange2Choice obj, ImpliedCurrencyAndAmountRange value) {
+			obj.setImpliedCurrencyAndAmountRange(value);
 		}
 	};
 	@XmlElement(name = "CcyAndAmtRg", required = true)
@@ -162,7 +172,7 @@ public class AmountRange2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountRange2Choice, CurrencyAndAmountRange2> mmCurrencyAndAmountRange = new MMMessageAssociationEnd<AmountRange2Choice, CurrencyAndAmountRange2>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountRange2Choice.mmObject();
@@ -175,6 +185,16 @@ public class AmountRange2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CurrencyAndAmountRange2.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmountRange2 getValue(AmountRange2Choice obj) {
+			return obj.getCurrencyAndAmountRange();
+		}
+
+		@Override
+		public void setValue(AmountRange2Choice obj, CurrencyAndAmountRange2 value) {
+			obj.setCurrencyAndAmountRange(value);
 		}
 	};
 

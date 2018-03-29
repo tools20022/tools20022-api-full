@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdvice002V06;
+import com.tools20022.repository.choice.PendingStatus43Choice;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
@@ -130,7 +131,7 @@ public class EventProcessingStatus4Choice {
 	 * "Specifies that a corporate action event processing has been completed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmComplete = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventProcessingStatus4Choice, NoSpecifiedReason1> mmComplete = new MMMessageAssociationEnd<EventProcessingStatus4Choice, NoSpecifiedReason1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.EventProcessingStatus4Choice.mmObject();
@@ -144,6 +145,16 @@ public class EventProcessingStatus4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NoSpecifiedReason1.mmObject();
+		}
+
+		@Override
+		public NoSpecifiedReason1 getValue(EventProcessingStatus4Choice obj) {
+			return obj.getComplete();
+		}
+
+		@Override
+		public void setValue(EventProcessingStatus4Choice obj, NoSpecifiedReason1 value) {
+			obj.setComplete(value);
 		}
 	};
 	@XmlElement(name = "Rcncld", required = true)
@@ -184,7 +195,7 @@ public class EventProcessingStatus4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReconciled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventProcessingStatus4Choice, NoSpecifiedReason1> mmReconciled = new MMMessageAssociationEnd<EventProcessingStatus4Choice, NoSpecifiedReason1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.EventProcessingStatus4Choice.mmObject();
@@ -198,6 +209,16 @@ public class EventProcessingStatus4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NoSpecifiedReason1.mmObject();
+		}
+
+		@Override
+		public NoSpecifiedReason1 getValue(EventProcessingStatus4Choice obj) {
+			return obj.getReconciled();
+		}
+
+		@Override
+		public void setValue(EventProcessingStatus4Choice obj, NoSpecifiedReason1 value) {
+			obj.setReconciled(value);
 		}
 	};
 	@XmlElement(name = "Pdg", required = true)
@@ -239,7 +260,7 @@ public class EventProcessingStatus4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventProcessingStatus4Choice, PendingStatus43Choice> mmPending = new MMMessageAssociationEnd<EventProcessingStatus4Choice, PendingStatus43Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.EventProcessingStatus4Choice.mmObject();
@@ -252,7 +273,17 @@ public class EventProcessingStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingStatus43Choice.mmObject();
+			type_lazy = () -> PendingStatus43Choice.mmObject();
+		}
+
+		@Override
+		public PendingStatus43Choice getValue(EventProcessingStatus4Choice obj) {
+			return obj.getPending();
+		}
+
+		@Override
+		public void setValue(EventProcessingStatus4Choice obj, PendingStatus43Choice value) {
+			obj.setPending(value);
 		}
 	};
 	@XmlElement(name = "PrtrySts", required = true)
@@ -287,7 +318,7 @@ public class EventProcessingStatus4Choice {
 	 * definition} = "Proprietary status related to the event processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EventProcessingStatus4Choice, ProprietaryStatusAndReason7> mmProprietaryStatus = new MMMessageAssociationEnd<EventProcessingStatus4Choice, ProprietaryStatusAndReason7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.EventProcessingStatus4Choice.mmObject();
 			isDerived = false;
@@ -300,6 +331,16 @@ public class EventProcessingStatus4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason7.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason7 getValue(EventProcessingStatus4Choice obj) {
+			return obj.getProprietaryStatus();
+		}
+
+		@Override
+		public void setValue(EventProcessingStatus4Choice obj, ProprietaryStatusAndReason7 value) {
+			obj.setProprietaryStatus(value);
 		}
 	};
 
@@ -341,7 +382,7 @@ public class EventProcessingStatus4Choice {
 		return pending;
 	}
 
-	public EventProcessingStatus4Choice setPending(com.tools20022.repository.choice.PendingStatus43Choice pending) {
+	public EventProcessingStatus4Choice setPending(PendingStatus43Choice pending) {
 		this.pending = Objects.requireNonNull(pending);
 		return this;
 	}

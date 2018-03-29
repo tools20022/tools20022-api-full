@@ -108,7 +108,7 @@ public class BusinessDayInformationReturnCriteria {
 	 * definition} = "Indicates whether the system status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationReturnCriteria, Optional<RequestedIndicator>> mmSystemStatusIndicator = new MMMessageAttribute<BusinessDayInformationReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class BusinessDayInformationReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayInformationReturnCriteria obj) {
+			return obj.getSystemStatusIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setSystemStatusIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtInd")
@@ -151,7 +161,7 @@ public class BusinessDayInformationReturnCriteria {
 	 * definition} = "Indicates whether the events are requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationReturnCriteria, Optional<RequestedIndicator>> mmEventIndicator = new MMMessageAttribute<BusinessDayInformationReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class BusinessDayInformationReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayInformationReturnCriteria obj) {
+			return obj.getEventIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setEventIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SsnPrdInd")
@@ -194,7 +214,7 @@ public class BusinessDayInformationReturnCriteria {
 	 * definition} = "Indicates whether the session period is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSessionPeriodIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationReturnCriteria, Optional<RequestedIndicator>> mmSessionPeriodIndicator = new MMMessageAttribute<BusinessDayInformationReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -205,6 +225,16 @@ public class BusinessDayInformationReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayInformationReturnCriteria obj) {
+			return obj.getSessionPeriodIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setSessionPeriodIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsrInfInd")
@@ -237,7 +267,7 @@ public class BusinessDayInformationReturnCriteria {
 	 * definition} = "Indicates whether the closure information is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosureInformationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessDayInformationReturnCriteria, Optional<RequestedIndicator>> mmClosureInformationIndicator = new MMMessageAttribute<BusinessDayInformationReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationReturnCriteria.mmObject();
 			isDerived = false;
@@ -248,6 +278,16 @@ public class BusinessDayInformationReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(BusinessDayInformationReturnCriteria obj) {
+			return obj.getClosureInformationIndicator();
+		}
+
+		@Override
+		public void setValue(BusinessDayInformationReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setClosureInformationIndicator(value.orElse(null));
 		}
 	};
 

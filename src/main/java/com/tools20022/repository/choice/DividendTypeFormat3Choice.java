@@ -126,7 +126,7 @@ public class DividendTypeFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendTypeFormat3Choice, CorporateActionFrequencyType2Code> mmCode = new MMMessageAttribute<DividendTypeFormat3Choice, CorporateActionFrequencyType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat3Choice.mmObject();
@@ -139,6 +139,16 @@ public class DividendTypeFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionFrequencyType2Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionFrequencyType2Code getValue(DividendTypeFormat3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat3Choice obj, CorporateActionFrequencyType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +195,7 @@ public class DividendTypeFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DividendTypeFormat3Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<DividendTypeFormat3Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat3Choice.mmObject();
@@ -199,6 +209,16 @@ public class DividendTypeFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(DividendTypeFormat3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat3Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalPaymentInformation6;
+import com.tools20022.repository.msg.StructuredRemittanceInformation10;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -148,7 +150,7 @@ public class RemittanceInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemittanceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceInformation8, Optional<Max35Text>> mmRemittanceIdentification = new MMMessageAttribute<RemittanceInformation8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation8.mmObject();
@@ -161,6 +163,16 @@ public class RemittanceInformation8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RemittanceInformation8 obj) {
+			return obj.getRemittanceIdentification();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation8 obj, Optional<Max35Text> value) {
+			obj.setRemittanceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ustrd")
@@ -207,7 +219,7 @@ public class RemittanceInformation8 {
 	 * RemittanceInformation7.mmUnstructured}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceInformation8, List<Max140Text>> mmUnstructured = new MMMessageAttribute<RemittanceInformation8, List<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation8.mmObject();
 			isDerived = false;
@@ -220,9 +232,19 @@ public class RemittanceInformation8 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
+
+		@Override
+		public List<Max140Text> getValue(RemittanceInformation8 obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation8 obj, List<Max140Text> value) {
+			obj.setUnstructured(value);
+		}
 	};
 	@XmlElement(name = "Strd")
-	protected List<com.tools20022.repository.msg.StructuredRemittanceInformation10> structured;
+	protected List<StructuredRemittanceInformation10> structured;
 	/**
 	 * 
 	 <p>
@@ -269,7 +291,7 @@ public class RemittanceInformation8 {
 	 * RemittanceInformation7.mmStructured}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStructured = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RemittanceInformation8, List<StructuredRemittanceInformation10>> mmStructured = new MMMessageAssociationEnd<RemittanceInformation8, List<StructuredRemittanceInformation10>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation8.mmObject();
@@ -282,7 +304,17 @@ public class RemittanceInformation8 {
 			previousVersion_lazy = () -> RemittanceInformation7.mmStructured;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation10.mmObject();
+			type_lazy = () -> StructuredRemittanceInformation10.mmObject();
+		}
+
+		@Override
+		public List<StructuredRemittanceInformation10> getValue(RemittanceInformation8 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation8 obj, List<StructuredRemittanceInformation10> value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInf", required = true)
@@ -329,7 +361,7 @@ public class RemittanceInformation8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalPaymentInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RemittanceInformation8, OriginalPaymentInformation6> mmOriginalPaymentInformation = new MMMessageAssociationEnd<RemittanceInformation8, OriginalPaymentInformation6>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation8.mmObject();
@@ -342,7 +374,17 @@ public class RemittanceInformation8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInformation6.mmObject();
+			type_lazy = () -> OriginalPaymentInformation6.mmObject();
+		}
+
+		@Override
+		public OriginalPaymentInformation6 getValue(RemittanceInformation8 obj) {
+			return obj.getOriginalPaymentInformation();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation8 obj, OriginalPaymentInformation6 value) {
+			obj.setOriginalPaymentInformation(value);
 		}
 	};
 
@@ -386,7 +428,7 @@ public class RemittanceInformation8 {
 		return structured == null ? structured = new ArrayList<>() : structured;
 	}
 
-	public RemittanceInformation8 setStructured(List<com.tools20022.repository.msg.StructuredRemittanceInformation10> structured) {
+	public RemittanceInformation8 setStructured(List<StructuredRemittanceInformation10> structured) {
 		this.structured = Objects.requireNonNull(structured);
 		return this;
 	}
@@ -395,7 +437,7 @@ public class RemittanceInformation8 {
 		return originalPaymentInformation;
 	}
 
-	public RemittanceInformation8 setOriginalPaymentInformation(com.tools20022.repository.msg.OriginalPaymentInformation6 originalPaymentInformation) {
+	public RemittanceInformation8 setOriginalPaymentInformation(OriginalPaymentInformation6 originalPaymentInformation) {
 		this.originalPaymentInformation = Objects.requireNonNull(originalPaymentInformation);
 		return this;
 	}

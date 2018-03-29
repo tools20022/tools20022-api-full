@@ -128,7 +128,7 @@ public class TransportByRoad2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRoad2, Max35Text> mmPlaceOfReceipt = new MMMessageAttribute<TransportByRoad2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRoad2.mmObject();
@@ -141,6 +141,16 @@ public class TransportByRoad2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransportByRoad2 obj) {
+			return obj.getPlaceOfReceipt();
+		}
+
+		@Override
+		public void setValue(TransportByRoad2 obj, Max35Text value) {
+			obj.setPlaceOfReceipt(value);
 		}
 	};
 	@XmlElement(name = "PlcOfDlvry", required = true)
@@ -185,7 +195,7 @@ public class TransportByRoad2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRoad2, Max35Text> mmPlaceOfDelivery = new MMMessageAttribute<TransportByRoad2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRoad2.mmObject();
@@ -198,6 +208,16 @@ public class TransportByRoad2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransportByRoad2 obj) {
+			return obj.getPlaceOfDelivery();
+		}
+
+		@Override
+		public void setValue(TransportByRoad2 obj, Max35Text value) {
+			obj.setPlaceOfDelivery(value);
 		}
 	};
 	@XmlElement(name = "RoadCrrierNm")
@@ -244,7 +264,7 @@ public class TransportByRoad2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoadCarrierName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRoad2, Optional<Max35Text>> mmRoadCarrierName = new MMMessageAttribute<TransportByRoad2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRoad2.mmObject();
@@ -257,6 +277,16 @@ public class TransportByRoad2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransportByRoad2 obj) {
+			return obj.getRoadCarrierName();
+		}
+
+		@Override
+		public void setValue(TransportByRoad2 obj, Optional<Max35Text> value) {
+			obj.setRoadCarrierName(value.orElse(null));
 		}
 	};
 

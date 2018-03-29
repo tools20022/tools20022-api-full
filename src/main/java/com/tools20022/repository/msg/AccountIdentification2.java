@@ -105,7 +105,7 @@ public class AccountIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification2, IBANIdentifier> mmIBAN = new MMMessageAttribute<AccountIdentification2, IBANIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification2.mmObject();
@@ -117,6 +117,16 @@ public class AccountIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
+		}
+
+		@Override
+		public IBANIdentifier getValue(AccountIdentification2 obj) {
+			return obj.getIBAN();
+		}
+
+		@Override
+		public void setValue(AccountIdentification2 obj, IBANIdentifier value) {
+			obj.setIBAN(value);
 		}
 	};
 

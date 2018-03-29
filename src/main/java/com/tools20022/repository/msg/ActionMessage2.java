@@ -136,7 +136,7 @@ public class ActionMessage2 {
 	 * ActionMessage1.mmMessageDestination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageDestination = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActionMessage2, UserInterface4Code> mmMessageDestination = new MMMessageAttribute<ActionMessage2, UserInterface4Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage2.mmObject();
@@ -150,6 +150,16 @@ public class ActionMessage2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UserInterface4Code.mmObject();
+		}
+
+		@Override
+		public UserInterface4Code getValue(ActionMessage2 obj) {
+			return obj.getMessageDestination();
+		}
+
+		@Override
+		public void setValue(ActionMessage2 obj, UserInterface4Code value) {
+			obj.setMessageDestination(value);
 		}
 	};
 	@XmlElement(name = "Frmt")
@@ -188,7 +198,7 @@ public class ActionMessage2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActionMessage2, Optional<OutputFormat1Code>> mmFormat = new MMMessageAttribute<ActionMessage2, Optional<OutputFormat1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage2.mmObject();
 			isDerived = false;
@@ -200,6 +210,16 @@ public class ActionMessage2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OutputFormat1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OutputFormat1Code> getValue(ActionMessage2 obj) {
+			return obj.getFormat();
+		}
+
+		@Override
+		public void setValue(ActionMessage2 obj, Optional<OutputFormat1Code> value) {
+			obj.setFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgCntt", required = true)
@@ -248,7 +268,7 @@ public class ActionMessage2 {
 	 * ActionMessage1.mmMessageContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageContent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActionMessage2, Max20000Text> mmMessageContent = new MMMessageAttribute<ActionMessage2, Max20000Text>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage2.mmObject();
@@ -262,6 +282,16 @@ public class ActionMessage2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max20000Text.mmObject();
+		}
+
+		@Override
+		public Max20000Text getValue(ActionMessage2 obj) {
+			return obj.getMessageContent();
+		}
+
+		@Override
+		public void setValue(ActionMessage2 obj, Max20000Text value) {
+			obj.setMessageContent(value);
 		}
 	};
 	@XmlElement(name = "MsgCnttSgntr")
@@ -298,7 +328,7 @@ public class ActionMessage2 {
 	 * ActionMessage1.mmMessageContentSignature}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageContentSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActionMessage2, Optional<Max140Binary>> mmMessageContentSignature = new MMMessageAttribute<ActionMessage2, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage2.mmObject();
 			isDerived = false;
@@ -310,6 +340,16 @@ public class ActionMessage2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(ActionMessage2 obj) {
+			return obj.getMessageContentSignature();
+		}
+
+		@Override
+		public void setValue(ActionMessage2 obj, Optional<Max140Binary> value) {
+			obj.setMessageContentSignature(value.orElse(null));
 		}
 	};
 

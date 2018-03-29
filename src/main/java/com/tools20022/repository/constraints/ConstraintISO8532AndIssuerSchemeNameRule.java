@@ -60,12 +60,16 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<SecuritiesCertificate1> forSecuritiesCertificate1 = new MMConstraint<SecuritiesCertificate1>() {
 		{
-			validator = ConstraintISO8532AndIssuerSchemeNameRule::checkSecuritiesCertificate1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO8532AndIssuerSchemeNameRule";
 			definition = "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISO8532AndIssuerSchemeNameRule.forSecuritiesCertificate4);
 			owner_lazy = () -> SecuritiesCertificate1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCertificate1 obj) throws Exception {
+			checkSecuritiesCertificate1(obj);
 		}
 	};
 	/**
@@ -91,11 +95,15 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<SecuritiesCertificate2> forSecuritiesCertificate2 = new MMConstraint<SecuritiesCertificate2>() {
 		{
-			validator = ConstraintISO8532AndIssuerSchemeNameRule::checkSecuritiesCertificate2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO8532AndIssuerSchemeNameRule";
 			definition = "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used.";
 			owner_lazy = () -> SecuritiesCertificate2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCertificate2 obj) throws Exception {
+			checkSecuritiesCertificate2(obj);
 		}
 	};
 	/**
@@ -121,11 +129,15 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<SecuritiesCertificate3> forSecuritiesCertificate3 = new MMConstraint<SecuritiesCertificate3>() {
 		{
-			validator = ConstraintISO8532AndIssuerSchemeNameRule::checkSecuritiesCertificate3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO8532AndIssuerSchemeNameRule";
 			definition = "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used.";
 			owner_lazy = () -> SecuritiesCertificate3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCertificate3 obj) throws Exception {
+			checkSecuritiesCertificate3(obj);
 		}
 	};
 	/**
@@ -156,12 +168,16 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<SecuritiesCertificate4> forSecuritiesCertificate4 = new MMConstraint<SecuritiesCertificate4>() {
 		{
-			validator = ConstraintISO8532AndIssuerSchemeNameRule::checkSecuritiesCertificate4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO8532AndIssuerSchemeNameRule";
 			definition = "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintISO8532AndIssuerSchemeNameRule.forSecuritiesCertificate1;
 			owner_lazy = () -> SecuritiesCertificate4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCertificate4 obj) throws Exception {
+			checkSecuritiesCertificate4(obj);
 		}
 	};
 	/**
@@ -187,11 +203,15 @@ public class ConstraintISO8532AndIssuerSchemeNameRule {
 	 */
 	public static final MMConstraint<SecuritiesCertificate5> forSecuritiesCertificate5 = new MMConstraint<SecuritiesCertificate5>() {
 		{
-			validator = ConstraintISO8532AndIssuerSchemeNameRule::checkSecuritiesCertificate5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO8532AndIssuerSchemeNameRule";
 			definition = "If Number is ISO 8532 (Format for transmission of certificate numbers), then Issuer and SchemeName must not be used.";
 			owner_lazy = () -> SecuritiesCertificate5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCertificate5 obj) throws Exception {
+			checkSecuritiesCertificate5(obj);
 		}
 	};
 

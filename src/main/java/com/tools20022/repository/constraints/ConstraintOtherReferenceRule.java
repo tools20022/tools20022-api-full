@@ -60,12 +60,16 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV06> forTransferCancellationStatusReportV06 = new MMConstraint<TransferCancellationStatusReportV06>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferCancellationStatusReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "Reference/OtherReference should be used to reference a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, References/OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferCancellationStatusReportV05;
 			owner_lazy = () -> TransferCancellationStatusReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV06 obj) throws Exception {
+			checkTransferCancellationStatusReportV06(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV06> forTransferInstructionStatusReportV06 = new MMConstraint<TransferInstructionStatusReportV06>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferInstructionStatusReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "Reference/OtherReference should be used to reference a transfer instruction or a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferInstructionStatusReportV05;
 			owner_lazy = () -> TransferInstructionStatusReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV06 obj) throws Exception {
+			checkTransferInstructionStatusReportV06(obj);
 		}
 	};
 	/**
@@ -140,13 +148,17 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV05> forTransferInstructionStatusReportV05 = new MMConstraint<TransferInstructionStatusReportV05>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferInstructionStatusReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "Reference/OtherReference should be used to reference a transfer instruction or a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferInstructionStatusReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferInstructionStatusReportV04;
 			owner_lazy = () -> TransferInstructionStatusReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV05 obj) throws Exception {
+			checkTransferInstructionStatusReportV05(obj);
 		}
 	};
 	/**
@@ -185,13 +197,17 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV05> forTransferCancellationStatusReportV05 = new MMConstraint<TransferCancellationStatusReportV05>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferCancellationStatusReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "Reference/OtherReference should be used to reference a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, References/OtherReference/MessageName must contain, for example, 'fax' or 'phone' or 'email'.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferCancellationStatusReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferCancellationStatusReportV04;
 			owner_lazy = () -> TransferCancellationStatusReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV05 obj) throws Exception {
+			checkTransferCancellationStatusReportV05(obj);
 		}
 	};
 	/**
@@ -217,11 +233,15 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV02> forTransferCancellationStatusReportV02 = new MMConstraint<TransferCancellationStatusReportV02>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferCancellationStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "OtherReference should be used to reference a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> TransferCancellationStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV02 obj) throws Exception {
+			checkTransferCancellationStatusReportV02(obj);
 		}
 	};
 	/**
@@ -255,12 +275,16 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV03> forTransferCancellationStatusReportV03 = new MMConstraint<TransferCancellationStatusReportV03>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferCancellationStatusReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "OtherReference should be used to reference a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferCancellationStatusReportV04);
 			owner_lazy = () -> TransferCancellationStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV03 obj) throws Exception {
+			checkTransferCancellationStatusReportV03(obj);
 		}
 	};
 	/**
@@ -286,11 +310,15 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV02> forTransferInstructionStatusReportV02 = new MMConstraint<TransferInstructionStatusReportV02>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferInstructionStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "OtherReference should be used to reference a transfer instruction or a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> TransferInstructionStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV02 obj) throws Exception {
+			checkTransferInstructionStatusReportV02(obj);
 		}
 	};
 	/**
@@ -324,12 +352,16 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV03> forTransferInstructionStatusReportV03 = new MMConstraint<TransferInstructionStatusReportV03>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferInstructionStatusReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "OtherReference should be used to reference a transfer instruction or a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferInstructionStatusReportV04);
 			owner_lazy = () -> TransferInstructionStatusReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV03 obj) throws Exception {
+			checkTransferInstructionStatusReportV03(obj);
 		}
 	};
 	/**
@@ -368,13 +400,17 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferInstructionStatusReportV04> forTransferInstructionStatusReportV04 = new MMConstraint<TransferInstructionStatusReportV04>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferInstructionStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "Reference/OtherReference should be used to reference a transfer instruction or a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferInstructionStatusReportV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferInstructionStatusReportV03;
 			owner_lazy = () -> TransferInstructionStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferInstructionStatusReportV04 obj) throws Exception {
+			checkTransferInstructionStatusReportV04(obj);
 		}
 	};
 	/**
@@ -413,13 +449,17 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<TransferCancellationStatusReportV04> forTransferCancellationStatusReportV04 = new MMConstraint<TransferCancellationStatusReportV04>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkTransferCancellationStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "Reference/OtherReference should be used to reference a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, References/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferCancellationStatusReportV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forTransferCancellationStatusReportV03;
 			owner_lazy = () -> TransferCancellationStatusReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransferCancellationStatusReportV04 obj) throws Exception {
+			checkTransferCancellationStatusReportV04(obj);
 		}
 	};
 	/**
@@ -445,11 +485,15 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference1> forMessageAndBusinessReference1 = new MMConstraint<MessageAndBusinessReference1>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkMessageAndBusinessReference1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "OtherReference should be used for transfers sent by proprietary way or for system references. \nIf OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', for example.";
 			owner_lazy = () -> MessageAndBusinessReference1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference1 obj) throws Exception {
+			checkMessageAndBusinessReference1(obj);
 		}
 	};
 	/**
@@ -483,12 +527,16 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference6> forMessageAndBusinessReference6 = new MMConstraint<MessageAndBusinessReference6>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkMessageAndBusinessReference6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "OtherReference should be used to reference a transfer instruction or a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forMessageAndBusinessReference7);
 			owner_lazy = () -> MessageAndBusinessReference6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference6 obj) throws Exception {
+			checkMessageAndBusinessReference6(obj);
 		}
 	};
 	/**
@@ -527,13 +575,17 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference7> forMessageAndBusinessReference7 = new MMConstraint<MessageAndBusinessReference7>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkMessageAndBusinessReference7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "Reference/OtherReference should be used to reference a transfer instruction or a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forMessageAndBusinessReference8);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forMessageAndBusinessReference6;
 			owner_lazy = () -> MessageAndBusinessReference7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference7 obj) throws Exception {
+			checkMessageAndBusinessReference7(obj);
 		}
 	};
 	/**
@@ -572,13 +624,17 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference8> forMessageAndBusinessReference8 = new MMConstraint<MessageAndBusinessReference8>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkMessageAndBusinessReference8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "Reference/OtherReference should be used to reference a transfer instruction or a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forMessageAndBusinessReference11);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forMessageAndBusinessReference7;
 			owner_lazy = () -> MessageAndBusinessReference8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference8 obj) throws Exception {
+			checkMessageAndBusinessReference8(obj);
 		}
 	};
 	/**
@@ -609,12 +665,16 @@ public class ConstraintOtherReferenceRule {
 	 */
 	public static final MMConstraint<MessageAndBusinessReference11> forMessageAndBusinessReference11 = new MMConstraint<MessageAndBusinessReference11>() {
 		{
-			validator = ConstraintOtherReferenceRule::checkMessageAndBusinessReference11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceRule";
 			definition = "Reference/OtherReference should be used to reference a transfer instruction or a transfer cancellation request 'message' sent in a proprietary way or used for a system reference. If Reference/OtherReference is present, Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherReferenceRule.forMessageAndBusinessReference8;
 			owner_lazy = () -> MessageAndBusinessReference11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MessageAndBusinessReference11 obj) throws Exception {
+			checkMessageAndBusinessReference11(obj);
 		}
 	};
 

@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.DateCode12Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,7 +101,7 @@ public class DateFormat22Choice {
 	 * definition} = "Date expressed as a calendar date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat22Choice, DateAndDateTimeChoice> mmDate = new MMMessageAssociationEnd<DateFormat22Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat22Choice.mmObject();
 			isDerived = false;
@@ -111,7 +113,17 @@ public class DateFormat22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat22Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat22Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -145,7 +157,7 @@ public class DateFormat22Choice {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat22Choice, DateCode12Choice> mmDateCode = new MMMessageAssociationEnd<DateFormat22Choice, DateCode12Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat22Choice.mmObject();
 			isDerived = false;
@@ -157,7 +169,17 @@ public class DateFormat22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateCode12Choice.mmObject();
+			type_lazy = () -> DateCode12Choice.mmObject();
+		}
+
+		@Override
+		public DateCode12Choice getValue(DateFormat22Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat22Choice obj, DateCode12Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -178,7 +200,7 @@ public class DateFormat22Choice {
 		return date;
 	}
 
-	public DateFormat22Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat22Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -187,7 +209,7 @@ public class DateFormat22Choice {
 		return dateCode;
 	}
 
-	public DateFormat22Choice setDateCode(com.tools20022.repository.choice.DateCode12Choice dateCode) {
+	public DateFormat22Choice setDateCode(DateCode12Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

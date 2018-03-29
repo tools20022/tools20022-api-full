@@ -120,7 +120,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountOrBusinessError1Choice, SystemSecuritiesAccount3> mmSecuritiesAccount = new MMMessageAssociationEnd<SecuritiesAccountOrBusinessError1Choice, SystemSecuritiesAccount3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class SecuritiesAccountOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SystemSecuritiesAccount3.mmObject();
+		}
+
+		@Override
+		public SystemSecuritiesAccount3 getValue(SecuritiesAccountOrBusinessError1Choice obj) {
+			return obj.getSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountOrBusinessError1Choice obj, SystemSecuritiesAccount3 value) {
+			obj.setSecuritiesAccount(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -171,7 +181,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountOrBusinessError1Choice, List<ErrorHandling3>> mmBusinessError = new MMMessageAssociationEnd<SecuritiesAccountOrBusinessError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrBusinessError1Choice.mmObject();
 			isDerived = false;
@@ -183,6 +193,16 @@ public class SecuritiesAccountOrBusinessError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(SecuritiesAccountOrBusinessError1Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountOrBusinessError1Choice obj, List<ErrorHandling3> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

@@ -101,7 +101,7 @@ public class MovementProcessingStatus1 {
 	 * definition} = "The processing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MovementProcessingStatus1, ProcessedStatus3FormatChoice> mmStatus = new MMMessageAttribute<MovementProcessingStatus1, ProcessedStatus3FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementProcessingStatus1.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class MovementProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ProcessedStatus3FormatChoice.mmObject();
+		}
+
+		@Override
+		public ProcessedStatus3FormatChoice getValue(MovementProcessingStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(MovementProcessingStatus1 obj, ProcessedStatus3FormatChoice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -143,7 +153,7 @@ public class MovementProcessingStatus1 {
 	 * definition} = "Additional information about the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MovementProcessingStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<MovementProcessingStatus1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementProcessingStatus1.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class MovementProcessingStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(MovementProcessingStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(MovementProcessingStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

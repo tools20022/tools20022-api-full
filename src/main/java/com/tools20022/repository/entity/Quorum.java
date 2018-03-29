@@ -22,12 +22,12 @@ import com.tools20022.repository.choice.QuorumQuantity1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.YesNoIndicator;
+import com.tools20022.repository.entity.Meeting;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Meeting1;
 import com.tools20022.repository.msg.Meeting2;
 import com.tools20022.repository.msg.Meeting3;
 import com.tools20022.repository.msg.Meeting4;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +134,7 @@ public class Quorum {
 	 * "Minimum quantity of securities required to hold a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmQuantity = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Quorum, Max35Text> mmQuantity = new MMBusinessAttribute<Quorum, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Meeting1.mmQuorumQuantity, Meeting2.mmQuorumQuantity, QuorumQuantity1Choice.mmQuorumQuantity, Meeting3.mmQuorumQuantity, Meeting4.mmQuorumQuantity);
 			isDerived = false;
@@ -147,12 +147,14 @@ public class Quorum {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Quorum.class.getMethod("getQuantity", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Quorum obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Quorum obj, Max35Text value) {
+			obj.setQuantity(value);
 		}
 	};
 	protected PercentageRate percentage;
@@ -197,7 +199,7 @@ public class Quorum {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Quorum, PercentageRate> mmPercentage = new MMBusinessAttribute<Quorum, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Meeting1.mmQuorumQuantityPercentage, Meeting2.mmQuorumQuantityPercentage, QuorumQuantity1Choice.mmQuorumQuantityPercentage);
 			isDerived = false;
@@ -210,12 +212,14 @@ public class Quorum {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Quorum.class.getMethod("getPercentage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(Quorum obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(Quorum obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 	protected YesNoIndicator quorumRequired;
@@ -259,7 +263,7 @@ public class Quorum {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmQuorumRequired = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Quorum, YesNoIndicator> mmQuorumRequired = new MMBusinessAttribute<Quorum, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Meeting1.mmQuorumRequired, Meeting2.mmQuorumRequired, Meeting3.mmQuorumRequired, Meeting4.mmQuorumRequired);
 			isDerived = false;
@@ -272,12 +276,14 @@ public class Quorum {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Quorum.class.getMethod("getQuorumRequired", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Quorum obj) {
+			return obj.getQuorumRequired();
+		}
+
+		@Override
+		public void setValue(Quorum obj, YesNoIndicator value) {
+			obj.setQuorumRequired(value);
 		}
 	};
 	protected Meeting meeting;
@@ -312,7 +318,7 @@ public class Quorum {
 	 * definition} = "Meeting for which a quorum is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Quorum, Optional<Meeting>> mmMeeting = new MMBusinessAssociationEnd<Quorum, Optional<Meeting>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Quorum.mmObject();
@@ -321,9 +327,19 @@ public class Quorum {
 			definition = "Meeting for which a quorum is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmQuorum;
+			opposite_lazy = () -> Meeting.mmQuorum;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
+			type_lazy = () -> Meeting.mmObject();
+		}
+
+		@Override
+		public Optional<Meeting> getValue(Quorum obj) {
+			return obj.getMeeting();
+		}
+
+		@Override
+		public void setValue(Quorum obj, Optional<Meeting> value) {
+			obj.setMeeting(value.orElse(null));
 		}
 	};
 
@@ -334,7 +350,7 @@ public class Quorum {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quorum";
 				definition = "Specifies whether a quorum is required or not together with the quorum parameters.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Meeting.mmQuorum);
+				associationDomain_lazy = () -> Arrays.asList(Meeting.mmQuorum);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Quorum.mmQuantity, com.tools20022.repository.entity.Quorum.mmPercentage, com.tools20022.repository.entity.Quorum.mmQuorumRequired,
 						com.tools20022.repository.entity.Quorum.mmMeeting);
 				derivationComponent_lazy = () -> Arrays.asList(QuorumQuantity1Choice.mmObject());
@@ -379,7 +395,7 @@ public class Quorum {
 		return meeting == null ? Optional.empty() : Optional.of(meeting);
 	}
 
-	public Quorum setMeeting(com.tools20022.repository.entity.Meeting meeting) {
+	public Quorum setMeeting(Meeting meeting) {
 		this.meeting = meeting;
 		return this;
 	}

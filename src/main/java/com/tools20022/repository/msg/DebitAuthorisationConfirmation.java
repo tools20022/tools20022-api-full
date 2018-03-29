@@ -125,7 +125,7 @@ public class DebitAuthorisationConfirmation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebitAuthorisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisationConfirmation, YesNoIndicator> mmDebitAuthorisation = new MMMessageAttribute<DebitAuthorisationConfirmation, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmDebitAuthorisationDecision;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmObject();
@@ -137,6 +137,16 @@ public class DebitAuthorisationConfirmation {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DebitAuthorisationConfirmation obj) {
+			return obj.getDebitAuthorisation();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationConfirmation obj, YesNoIndicator value) {
+			obj.setDebitAuthorisation(value);
 		}
 	};
 	@XmlElement(name = "AmtToDbt")
@@ -176,7 +186,7 @@ public class DebitAuthorisationConfirmation {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountToDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisationConfirmation, Optional<CurrencyAndAmount>> mmAmountToDebit = new MMMessageAttribute<DebitAuthorisationConfirmation, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmAmountToDebit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmObject();
@@ -188,6 +198,16 @@ public class DebitAuthorisationConfirmation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(DebitAuthorisationConfirmation obj) {
+			return obj.getAmountToDebit();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationConfirmation obj, Optional<CurrencyAndAmount> value) {
+			obj.setAmountToDebit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDtToDbt")
@@ -224,7 +244,7 @@ public class DebitAuthorisationConfirmation {
 	 * definition} = "Value date for debiting the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDateToDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisationConfirmation, Optional<ISODate>> mmValueDateToDebit = new MMMessageAttribute<DebitAuthorisationConfirmation, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmValueDateToDebit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmObject();
@@ -236,6 +256,16 @@ public class DebitAuthorisationConfirmation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DebitAuthorisationConfirmation obj) {
+			return obj.getValueDateToDebit();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationConfirmation obj, Optional<ISODate> value) {
+			obj.setValueDateToDebit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -272,7 +302,7 @@ public class DebitAuthorisationConfirmation {
 	 * definition} = "Justification of the (partial) debit authorisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisationConfirmation, Optional<Max140Text>> mmReason = new MMMessageAttribute<DebitAuthorisationConfirmation, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationConfirmation.mmObject();
@@ -284,6 +314,16 @@ public class DebitAuthorisationConfirmation {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(DebitAuthorisationConfirmation obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationConfirmation obj, Optional<Max140Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

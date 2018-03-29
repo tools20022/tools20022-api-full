@@ -24,10 +24,9 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
-import com.tools20022.repository.entity.ObligationFulfilment;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -1641,11 +1640,11 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Specifies the obligation which created the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<PaymentObligation>> mmPaymentObligation = new MMBusinessAssociationEnd<Payment, List<PaymentObligation>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmPaymentTerms);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentObligation";
 			definition = "Specifies the obligation which created the payment.";
@@ -1653,6 +1652,16 @@ public class Payment extends ObligationFulfilment {
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
+		}
+
+		@Override
+		public List<PaymentObligation> getValue(Payment obj) {
+			return obj.getPaymentObligation();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<PaymentObligation> value) {
+			obj.setPaymentObligation(value);
 		}
 	};
 	protected CurrencyCode currencyOfTransfer;
@@ -1878,7 +1887,7 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCurrencyOfTransfer = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, CurrencyCode> mmCurrencyOfTransfer = new MMBusinessAttribute<Payment, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstrument7.mmSettlementCurrency, PaymentInstrument6.mmSettlementCurrency, PaymentInstrument8.mmSettlementCurrency, PaymentInstrument9.mmSettlementCurrency,
 					PaymentInstrument11.mmSettlementCurrency, PaymentInstrument10.mmSettlementCurrency, com.tools20022.repository.msg.EquivalentAmount.mmCurrencyOfTransfer, EquivalentAmount2.mmCurrencyOfTransfer, CommonData1.mmCurrency,
@@ -1895,7 +1904,7 @@ public class Payment extends ObligationFulfilment {
 					CardPaymentTransactionDetails42.mmCurrency, CardPaymentTransactionDetails43.mmCurrency, CommonData7.mmCurrency, AmountAndDirection93.mmCurrency, CardPaymentTransactionDetails44.mmCurrency,
 					CardPaymentTransactionDetails45.mmCurrency, CardPaymentTransactionDetails46.mmCurrency);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyOfTransfer";
 			definition = "Specifies the currency of the amount to be transferred which may be different from the currency of the debtor's account.";
@@ -1904,15 +1913,17 @@ public class Payment extends ObligationFulfilment {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getCurrencyOfTransfer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(Payment obj) {
+			return obj.getCurrencyOfTransfer();
+		}
+
+		@Override
+		public void setValue(Payment obj, CurrencyCode value) {
+			obj.setCurrencyOfTransfer(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.CreditInstrument> creditMethod;
+	protected List<CreditInstrument> creditMethod;
 	/**
 	 * 
 	 <p>
@@ -1977,20 +1988,30 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Specifies the transfer method to be used for the credit."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCreditMethod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<CreditInstrument>> mmCreditMethod = new MMBusinessAssociationEnd<Payment, List<CreditInstrument>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstrument11.mmPaymentInstrument, PaymentInstrument10.mmPaymentInstrument, PaymentSearch2.mmPaymentMethod, PaymentSearch3.mmPaymentMethod,
 					OriginalTransactionReference19.mmPaymentMethod, PaymentInstrument12.mmPaymentInstrument, OriginalTransactionReference21.mmPaymentMethod, OriginalTransactionReference23.mmPaymentMethod,
 					OriginalTransactionReference26.mmPaymentMethod);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditMethod";
 			definition = "Specifies the transfer method to be used for the credit.";
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmRelatedPayment;
+			opposite_lazy = () -> CreditInstrument.mmRelatedPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
+			type_lazy = () -> CreditInstrument.mmObject();
+		}
+
+		@Override
+		public List<CreditInstrument> getValue(Payment obj) {
+			return obj.getCreditMethod();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<CreditInstrument> value) {
+			obj.setCreditMethod(value);
 		}
 	};
 	protected PaymentTypeCode type;
@@ -2094,7 +2115,7 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Type, or nature, of the payment, eg, express payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, PaymentTypeCode> mmType = new MMBusinessAttribute<Payment, PaymentTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays
 					.asList(PaymentType2Choice.mmPaymentType, PaymentType2Choice.mmProprietaryPaymentType, PaymentType3Choice.mmCode, PaymentType3Choice.mmProprietary, PaymentInstruction3.mmPaymentType, PaymentDetails2.mmPaymentType,
@@ -2103,7 +2124,7 @@ public class Payment extends ObligationFulfilment {
 							PaymentType4Choice.mmProprietary, PaymentInstruction14.mmType, CardIndividualTransaction2.mmTransactionCategory, FinancingAgreementItem1.mmPaymentInstrument, PaymentInstruction27.mmType,
 							CardAggregated2.mmTransactionCategory, PaymentInstruction26.mmType);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type, or nature, of the payment, eg, express payment.";
@@ -2112,12 +2133,14 @@ public class Payment extends ObligationFulfilment {
 			simpleType_lazy = () -> PaymentTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentTypeCode getValue(Payment obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Payment obj, PaymentTypeCode value) {
+			obj.setType(value);
 		}
 	};
 	protected CurrencyAndAmount instructedAmount;
@@ -2879,7 +2902,7 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInstructedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, CurrencyAndAmount> mmInstructedAmount = new MMBusinessAttribute<Payment, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentSearch2.mmInstructedAmount, PaymentSearch3.mmInstructedAmount, PaymentSearch4.mmInstructedAmount, PaymentDetails5.mmInstructedAmount, PaymentDetails6.mmInstructedAmount,
 					PaymentDetails7.mmInstructedAmount, PaymentInstruction1.mmInstructedAmount, AmountAndCurrencyExchange2.mmInstructedAmount, AmountAndCurrencyExchange3.mmInstructedAmount, AmountType1Choice.mmInstructedAmount,
@@ -2941,7 +2964,7 @@ public class Payment extends ObligationFulfilment {
 					PaymentTransaction93.mmOriginalInstructedAmount, PaymentTransaction93.mmReversedInstructedAmount, CardPaymentTransactionDetails44.mmTotalAmount, CardPaymentTransactionDetails45.mmTotalAmount,
 					CardPaymentTransactionDetails46.mmTotalAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructedAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
@@ -2950,12 +2973,14 @@ public class Payment extends ObligationFulfilment {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getInstructedAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Payment obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(Payment obj, CurrencyAndAmount value) {
+			obj.setInstructedAmount(value);
 		}
 	};
 	protected PriorityCode priority;
@@ -3044,32 +3069,34 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Urgency or order of importance that the originator would like the recipient of the payment to apply to its processing."
+	 * "Urgency or order of importance that the originator would like the recipient of the payment  to apply to its processing."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPriority = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, PriorityCode> mmPriority = new MMBusinessAttribute<Payment, PriorityCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriorityCodeChoice.mmCode, PaymentSearch2.mmPriority, PaymentSearch3.mmPriority, PriorityCode2Choice.mmCode, PriorityCode2Choice.mmProprietary, PaymentSearch4.mmPriority,
 					PaymentInstruction2.mmPriority, PaymentInstruction1.mmPriority, Cheque5.mmInstructionPriority, Cheque6.mmInstructionPriority, Cheque7.mmInstructionPriority, IntraBalance1.mmPriority, PaymentInstruction12.mmPriority,
 					PaymentSearch5.mmPriority, PriorityCode3Choice.mmCode, PriorityCode3Choice.mmProprietary, PaymentInstruction14.mmPriority, IntraBalance3.mmPriority, PaymentSearch6.mmPriority, PaymentInstruction27.mmPriority,
 					PaymentSearch7.mmPriority, PaymentInstruction26.mmPriority);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Priority";
-			definition = "Urgency or order of importance that the originator would like the recipient of the payment to apply to its processing.";
+			definition = "Urgency or order of importance that the originator would like the recipient of the payment  to apply to its processing.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriorityCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getPriority", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PriorityCode getValue(Payment obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(Payment obj, PriorityCode value) {
+			obj.setPriority(value);
 		}
 	};
 	protected ISODate valueDate;
@@ -3611,10 +3638,10 @@ public class Payment extends ObligationFulfilment {
 	 * name} = "ValueDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date on which a payment must be executed."</li>
+	 * definition} = "Date on which a payment must be executed"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, ISODate> mmValueDate = new MMBusinessAttribute<Payment, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentDetails5.mmTransferValueDate, AmountAndDirection32.mmValueDate, AmountAndDirection33.mmValueDate, AmountAndDirection2.mmValueDate, AmountAndDirection16.mmValueDate,
 					TransactionDetails5.mmExpectedValueDate, TransactionDetails9.mmExpectedValueDate, TransactionDetails22.mmExpectedValueDate, TransactionDetails23.mmExpectedValueDate, TransactionDetails36.mmExpectedValueDate,
@@ -3654,21 +3681,23 @@ public class Payment extends ObligationFulfilment {
 					TransactionDetails104.mmExpectedValueDate, AmountAndDirection87.mmValueDate, AmountAndDirection88.mmValueDate, AmountAndDirection89.mmValueDate, AmountAndDirection90.mmValueDate, AmountAndDirection92.mmValueDate,
 					AmountAndDirection91.mmValueDate, TransactionDetails110.mmExpectedValueDate, TransactionDetails111.mmExpectedValueDate);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
-			definition = "Date on which a payment must be executed.";
+			definition = "Date on which a payment must be executed";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getValueDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(Payment obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(Payment obj, ISODate value) {
+			obj.setValueDate(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.PaymentStatus> paymentStatus;
@@ -3931,7 +3960,7 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Specifies the status of a payment at a specified time."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPaymentStatus = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<PaymentStatus>> mmPaymentStatus = new MMBusinessAssociationEnd<Payment, List<PaymentStatus>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCommonDetails2.mmPaymentInstructionStatus, PaymentDetails5.mmInstructionStatus, PaymentCommonDetails3.mmPaymentInstructionStatus, PaymentDetails6.mmInstructionStatus,
 					PaymentCommonDetails4.mmCommonInstructionStatus, PaymentDetails7.mmInstructionStatus, PaymentCommon1.mmCommonStatus, PaymentInstruction1.mmStatus, ReturnReasonInformation5.mmReturnReason,
@@ -3952,7 +3981,7 @@ public class Payment extends ObligationFulfilment {
 					PaymentTransaction91.mmTransactionStatus, EntryTransaction9.mmReturnInformation, PaymentCommon3.mmCommonStatus, PaymentTransaction85.mmTransactionCancellationStatus, PaymentTransaction84.mmTransactionCancellationStatus,
 					PaymentInstruction26.mmStatus, PaymentTransaction92.mmTransactionStatus, OriginalGroupHeader11.mmReversalReasonInformation);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentStatus";
 			definition = "Specifies the status of a payment at a specified time.";
@@ -3961,8 +3990,18 @@ public class Payment extends ObligationFulfilment {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentStatus.mmObject();
 		}
+
+		@Override
+		public List<PaymentStatus> getValue(Payment obj) {
+			return obj.getPaymentStatus();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<PaymentStatus> value) {
+			obj.setPaymentStatus(value);
+		}
 	};
-	protected List<com.tools20022.repository.entity.PaymentPartyRole> partyRole;
+	protected List<PaymentPartyRole> partyRole;
 	/**
 	 * 
 	 <p>
@@ -4222,7 +4261,7 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<PaymentPartyRole>> mmPartyRole = new MMBusinessAssociationEnd<Payment, List<PaymentPartyRole>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentDetails5.mmPaymentTransactionParty, PaymentDetails6.mmPaymentTransactionParty, PaymentDetails7.mmPaymentTransactionParty, PaymentInstruction1.mmParties,
 					SecuritiesSettlementTransactionDetails3.mmCashParties, SecuritiesSettlementTransactionDetails4.mmCashParties, SecuritiesSettlementTransactionDetails2.mmCashParties, SecuritiesSettlementTransactionDetails5.mmCashParties,
@@ -4243,17 +4282,27 @@ public class Payment extends ObligationFulfilment {
 					SecuritiesSettlementTransactionDetails32.mmCashParties, CashOption58.mmCashParties, CashOption60.mmCashParties, SecuritiesSettlementTransactionDetails35.mmCashParties,
 					SecuritiesSettlementTransactionDetails36.mmCashParties, SecuritiesSettlementTransactionDetails37.mmCashParties);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Specifies each role linked to a payment and played by a party at that step in a payment flow.";
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmPayment;
+			opposite_lazy = () -> PaymentPartyRole.mmPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmObject();
+			type_lazy = () -> PaymentPartyRole.mmObject();
+		}
+
+		@Override
+		public List<PaymentPartyRole> getValue(Payment obj) {
+			return obj.getPartyRole();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<PaymentPartyRole> value) {
+			obj.setPartyRole(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Tax> taxOnPayment;
+	protected List<Tax> taxOnPayment;
 	/**
 	 * 
 	 <p>
@@ -4391,7 +4440,7 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Payment levy tax."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTaxOnPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<Tax>> mmTaxOnPayment = new MMBusinessAssociationEnd<Payment, List<Tax>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(EntryTransaction1.mmTax, EntryTransaction2.mmTax, EntryTransaction3.mmTax, EntryTransaction4.mmTax, CreditTransferTransactionInformation1.mmTax,
 					CreditTransferTransactionInformation10.mmTax, CreditTransferTransaction1.mmTax, CreditTransferTransaction6.mmTax, DirectDebitTransactionInformation1.mmTax, DirectDebitTransactionInformation9.mmTax,
@@ -4401,14 +4450,24 @@ public class Payment extends ObligationFulfilment {
 					StructuredRemittanceInformation13.mmTaxRemittance, DirectDebitTransactionInformation19.mmTax, CreditTransferTransaction22.mmTax, EntryTransaction8.mmTax, DirectDebitTransactionInformation22.mmTax,
 					CreditTransferTransaction27.mmTax, EntryTransaction9.mmTax, CreditTransferTransaction32.mmTax, CreditTransferTransaction30.mmTax, StructuredRemittanceInformation15.mmTaxRemittance);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxOnPayment";
 			definition = "Payment levy tax.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmRelatedPaymentSettlement;
+			opposite_lazy = () -> Tax.mmRelatedPaymentSettlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
+			type_lazy = () -> Tax.mmObject();
+		}
+
+		@Override
+		public List<Tax> getValue(Payment obj) {
+			return obj.getTaxOnPayment();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<Tax> value) {
+			obj.setTaxOnPayment(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.PaymentExecution> paymentExecution;
@@ -4635,7 +4694,7 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Describes the processes necessary to execute a payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPaymentExecution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<PaymentExecution>> mmPaymentExecution = new MMBusinessAssociationEnd<Payment, List<PaymentExecution>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(EntryTransaction1.mmRelatedDates, EntryTransaction2.mmRelatedDates, EntryTransaction3.mmRelatedDates, EntryTransaction4.mmRelatedDates,
 					DirectDebitTransactionInformation1.mmPaymentTypeInformation, DirectDebitTransactionInformation9.mmPaymentTypeInformation, DirectDebitTransactionInformation11.mmPaymentTypeInformation,
@@ -4656,7 +4715,7 @@ public class Payment extends ObligationFulfilment {
 					PaymentTransaction88.mmOriginalGroupInformation, CorrectiveTransaction3Choice.mmInitiation, PaymentTransaction90.mmOriginalGroupInformation, EntryTransaction9.mmRelatedDates,
 					PaymentTransaction85.mmOriginalGroupInformation, PaymentTransaction89.mmOriginalGroupInformation);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentExecution";
 			definition = "Describes the processes necessary to execute a payment.";
@@ -4664,6 +4723,16 @@ public class Payment extends ObligationFulfilment {
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmPayment;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentExecution.mmObject();
+		}
+
+		@Override
+		public List<PaymentExecution> getValue(Payment obj) {
+			return obj.getPaymentExecution();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<PaymentExecution> value) {
+			obj.setPaymentExecution(value);
 		}
 	};
 	protected ISODate poolingAdjustmentDate;
@@ -4749,7 +4818,7 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPoolingAdjustmentDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, ISODate> mmPoolingAdjustmentDate = new MMBusinessAttribute<Payment, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstructionInformation1.mmPoolingAdjustmentDate, PaymentInstructionInformation3.mmPoolingAdjustmentDate, PaymentInstruction6.mmPoolingAdjustmentDate,
 					PaymentInstruction9.mmPoolingAdjustmentDate, CreditTransferTransactionInformation2.mmPoolingAdjustmentDate, CreditTransferTransactionInformation11.mmPoolingAdjustmentDate,
@@ -4757,7 +4826,7 @@ public class Payment extends ObligationFulfilment {
 					CreditTransferTransactionInformation9.mmPoolingAdjustmentDate, PaymentInstruction16.mmPoolingAdjustmentDate, CreditTransferTransaction19.mmPoolingAdjustmentDate, CreditTransferTransaction25.mmPoolingAdjustmentDate,
 					PaymentInstruction20.mmPoolingAdjustmentDate, PaymentInstruction22.mmPoolingAdjustmentDate, PaymentInstruction24.mmPoolingAdjustmentDate, CreditTransferTransaction30.mmPoolingAdjustmentDate);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoolingAdjustmentDate";
 			definition = "Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.";
@@ -4766,12 +4835,14 @@ public class Payment extends ObligationFulfilment {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getPoolingAdjustmentDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(Payment obj) {
+			return obj.getPoolingAdjustmentDate();
+		}
+
+		@Override
+		public void setValue(Payment obj, ISODate value) {
+			obj.setPoolingAdjustmentDate(value);
 		}
 	};
 	protected ImpliedCurrencyAndAmount equivalentAmount;
@@ -4823,12 +4894,12 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEquivalentAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, ImpliedCurrencyAndAmount> mmEquivalentAmount = new MMBusinessAttribute<Payment, ImpliedCurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EquivalentAmount.mmAmount, AmountType1Choice.mmEquivalentAmount, AmountType2Choice.mmEquivalentAmount, EquivalentAmount2.mmAmount,
 					AmountType3Choice.mmEquivalentAmount, AmountType4Choice.mmEquivalentAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EquivalentAmount";
 			definition = "Amount of money to be transferred between debtor and creditor, before deduction of charges, expressed in the currency of the debtor's account, and to be transferred in a different currency.";
@@ -4837,12 +4908,14 @@ public class Payment extends ObligationFulfilment {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getEquivalentAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ImpliedCurrencyAndAmount getValue(Payment obj) {
+			return obj.getEquivalentAmount();
+		}
+
+		@Override
+		public void setValue(Payment obj, ImpliedCurrencyAndAmount value) {
+			obj.setEquivalentAmount(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
@@ -5078,10 +5151,10 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information on the exchange rate and amounts used in the payment."</li>
+	 * "Information on the exchange rate and amounts used in the payment"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<CurrencyExchange>> mmCurrencyExchange = new MMBusinessAssociationEnd<Payment, List<CurrencyExchange>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditTransferTransactionInformation1.mmExchangeRateInformation, CreditTransferTransactionInformation10.mmExchangeRateInformation, CreditTransferTransaction1.mmExchangeRateInformation,
 					CreditTransferTransaction6.mmExchangeRateInformation, CreditTransferTransactionInformation2.mmExchangeRate, CreditTransferTransactionInformation11.mmExchangeRate, CreditTransferTransaction7.mmExchangeRate,
@@ -5101,14 +5174,24 @@ public class Payment extends ObligationFulfilment {
 					AcceptorCurrencyConversionResponse5.mmCurrencyConversionResult, AcceptorCurrencyConversionAdvice2.mmCurrencyConversionResult, CardPaymentTransaction84.mmCurrencyConversionEligibility,
 					CardPaymentTransactionDetails44.mmCurrencyConversionResult, CardPaymentTransaction86.mmCurrencyConversion);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
-			definition = "Information on the exchange rate and amounts used in the payment.";
+			definition = "Information on the exchange rate and amounts used in the payment";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmRelatedPayment;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
+		}
+
+		@Override
+		public List<CurrencyExchange> getValue(Payment obj) {
+			return obj.getCurrencyExchange();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<CurrencyExchange> value) {
+			obj.setCurrencyExchange(value);
 		}
 	};
 	protected InstructionCode instructionForCreditorAgent;
@@ -5312,7 +5395,7 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInstructionForCreditorAgent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, InstructionCode> mmInstructionForCreditorAgent = new MMBusinessAttribute<Payment, InstructionCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstructionForCreditorAgent1.mmCode, CreditTransferTransactionInformation1.mmInstructionForCreditorAgent, CreditTransferTransactionInformation10.mmInstructionForCreditorAgent,
 					CreditTransferTransaction1.mmInstructionForCreditorAgent, CreditTransferTransaction6.mmInstructionForCreditorAgent, DirectDebitTransactionInformation1.mmInstructionForCreditorAgent,
@@ -5333,7 +5416,7 @@ public class Payment extends ObligationFulfilment {
 					CreditTransferTransaction27.mmInstructionForCreditorAgent, PaymentComplementaryInformation7.mmInstructionForCreditorAgent, CreditTransferTransaction31.mmInstructionForCreditorAgent,
 					RequestedModification7.mmInstructionForCreditorAgent, CreditTransferTransaction32.mmInstructionForCreditorAgent, CreditTransferTransaction30.mmInstructionForCreditorAgent);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionForCreditorAgent";
 			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the creditor agent. \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the creditor's agent, or can be information required by the creditor's agent to process the instruction.";
@@ -5342,12 +5425,14 @@ public class Payment extends ObligationFulfilment {
 			simpleType_lazy = () -> InstructionCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getInstructionForCreditorAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InstructionCode getValue(Payment obj) {
+			return obj.getInstructionForCreditorAgent();
+		}
+
+		@Override
+		public void setValue(Payment obj, InstructionCode value) {
+			obj.setInstructionForCreditorAgent(value);
 		}
 	};
 	protected InstructionCode instructionForDebtorAgent;
@@ -5454,11 +5539,11 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Further information related to the processing of the payment instruction that may need to be acted upon by the debtor's agent. \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor's agent, or can be information required by the debtor's agent to process the instruction."
+	 * "Further information related to the processing of the payment instruction that may need to be acted upon by the debtor's agent.  \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor's agent, or can be information required by the debtor's agent to process the instruction."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInstructionForDebtorAgent = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, InstructionCode> mmInstructionForDebtorAgent = new MMBusinessAttribute<Payment, InstructionCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditTransferTransactionInformation1.mmInstructionForDebtorAgent, CreditTransferTransactionInformation10.mmInstructionForDebtorAgent,
 					CreditTransferTransaction1.mmInstructionForDebtorAgent, PaymentInstruction6.mmInstructionForDebtorAgent, CreditTransferTransaction6.mmInstructionForDebtorAgent, PaymentInstruction9.mmInstructionForDebtorAgent,
@@ -5470,24 +5555,26 @@ public class Payment extends ObligationFulfilment {
 					PaymentComplementaryInformation6.mmInstructionForDebtorAgent, PaymentInstruction24.mmInstructionForDebtorAgent, PaymentComplementaryInformation7.mmInstructionForDebtorAgent,
 					RequestedModification7.mmInstructionForDebtorAgent);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionForDebtorAgent";
-			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the debtor's agent. \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor's agent, or can be information required by the debtor's agent to process the instruction.";
+			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the debtor's agent.  \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor's agent, or can be information required by the debtor's agent to process the instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getInstructionForDebtorAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InstructionCode getValue(Payment obj) {
+			return obj.getInstructionForDebtorAgent();
+		}
+
+		@Override
+		public void setValue(Payment obj, InstructionCode value) {
+			obj.setInstructionForDebtorAgent(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.PaymentIdentification> paymentRelatedIdentifications;
+	protected List<PaymentIdentification> paymentRelatedIdentifications;
 	/**
 	 * 
 	 <p>
@@ -5696,7 +5783,7 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPaymentRelatedIdentifications = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<PaymentIdentification>> mmPaymentRelatedIdentifications = new MMBusinessAssociationEnd<Payment, List<PaymentIdentification>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionReportDetails3.mmInstructionReference, TransactionReportDetails4.mmInstructionReference, TransactionReportDetails5.mmInstructionReference,
 					CreditTransferTransactionInformation1.mmPaymentIdentification, CreditTransferTransactionInformation10.mmPaymentIdentification, CreditTransferTransaction1.mmPaymentIdentification,
@@ -5716,14 +5803,24 @@ public class Payment extends ObligationFulfilment {
 					DirectDebitTransactionInformation19.mmPaymentIdentification, CreditTransferTransaction22.mmPaymentIdentification, DirectDebitTransactionInformation21.mmPaymentIdentification, OriginalPaymentInformation7.mmReferences,
 					DirectDebitTransactionInformation22.mmPaymentIdentification, CreditTransferTransaction27.mmPaymentIdentification, CreditTransferTransaction31.mmPaymentIdentification, CreditTransferTransaction30.mmPaymentIdentification);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentRelatedIdentifications";
 			definition = "Identifications provided to identify a payment at different processing levels.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmPayment;
+			opposite_lazy = () -> PaymentIdentification.mmPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
+			type_lazy = () -> PaymentIdentification.mmObject();
+		}
+
+		@Override
+		public List<PaymentIdentification> getValue(Payment obj) {
+			return obj.getPaymentRelatedIdentifications();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<PaymentIdentification> value) {
+			obj.setPaymentRelatedIdentifications(value);
 		}
 	};
 	protected PaymentInvestigationCase relatedInvestigationCase;
@@ -5852,7 +5949,7 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Investigation case assigned to the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedInvestigationCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, Optional<PaymentInvestigationCase>> mmRelatedInvestigationCase = new MMBusinessAssociationEnd<Payment, Optional<PaymentInvestigationCase>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTransactionInformation30.mmCase, OriginalPaymentInformation4.mmCase, PaymentTransaction37.mmCase, PaymentTransaction47.mmCase, PaymentTransactionInformation31.mmCase,
 					PaymentTransaction38.mmCase, PaymentTransaction48.mmCase, PaymentTransactionInformation32.mmResolvedCase, OriginalPaymentInformation3.mmResolvedCase, PaymentTransactionInformation33.mmResolvedCase,
@@ -5861,15 +5958,25 @@ public class Payment extends ObligationFulfilment {
 					PaymentTransaction75.mmCase, PaymentTransaction79.mmResolvedCase, PaymentTransaction90.mmResolvedCase, PaymentTransaction85.mmResolvedCase, PaymentTransaction89.mmCase, PaymentTransaction84.mmResolvedCase,
 					PaymentTransaction95.mmCase);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCase";
 			definition = "Investigation case assigned to the payment.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmUnderlyingPayment;
+			opposite_lazy = () -> PaymentInvestigationCase.mmUnderlyingPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmObject();
+			type_lazy = () -> PaymentInvestigationCase.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentInvestigationCase> getValue(Payment obj) {
+			return obj.getRelatedInvestigationCase();
+		}
+
+		@Override
+		public void setValue(Payment obj, Optional<PaymentInvestigationCase> value) {
+			obj.setRelatedInvestigationCase(value.orElse(null));
 		}
 	};
 	protected SettlementTimeRequest settlementTimeRequest;
@@ -5963,7 +6070,7 @@ public class Payment extends ObligationFulfilment {
 	 * "Information on the requested settlement time of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSettlementTimeRequest = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, Optional<SettlementTimeRequest>> mmSettlementTimeRequest = new MMBusinessAssociationEnd<Payment, Optional<SettlementTimeRequest>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditTransferTransactionInformation2.mmSettlementTimeRequest, CreditTransferTransactionInformation11.mmSettlementTimeRequest, CreditTransferTransaction2.mmSettlementTimeRequest,
 					CreditTransferTransaction7.mmSettlementTimeRequest, CreditTransferTransactionInformation3.mmSettlementTimeRequest, CreditTransferTransactionInformation13.mmSettlementTimeRequest,
@@ -5972,7 +6079,7 @@ public class Payment extends ObligationFulfilment {
 					CreditTransferTransaction19.mmSettlementTimeRequest, CreditTransferTransaction23.mmSettlementTimeRequest, CreditTransferTransaction25.mmSettlementTimeRequest, CreditTransferTransaction31.mmSettlementTimeRequest,
 					CreditTransferTransaction30.mmSettlementTimeRequest);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementTimeRequest";
 			definition = "Information on the requested settlement time of the instruction.";
@@ -5981,6 +6088,16 @@ public class Payment extends ObligationFulfilment {
 			opposite_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmPayment;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SettlementTimeRequest.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementTimeRequest> getValue(Payment obj) {
+			return obj.getSettlementTimeRequest();
+		}
+
+		@Override
+		public void setValue(Payment obj, Optional<SettlementTimeRequest> value) {
+			obj.setSettlementTimeRequest(value.orElse(null));
 		}
 	};
 	protected CurrencyAndAmount amount;
@@ -6209,7 +6326,7 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Amount of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, CurrencyAndAmount> mmAmount = new MMBusinessAttribute<Payment, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardAmountAndCurrencyExchange1.mmAmount, OriginalTransactionReference19.mmAmount, CashMovement1.mmAmount, CashMovement2.mmAmount, CashProceeds1.mmPostingAmount,
 					CashMovement3.mmPostingAmount, NotificationItem3.mmAmount, OriginalItem1.mmAmount, OriginalItem2.mmAmount, OriginalItemAndStatus1.mmAmount, OriginalItemAndStatus2.mmAmount, NotificationItem4.mmAmount,
@@ -6225,7 +6342,7 @@ public class Payment extends ObligationFulfilment {
 					ATMTransaction15.mmTotalAmount, ATMTransaction15.mmDetailedRequestedAmount, ATMTransaction24.mmDetailedRequestedAmount, DetailedAmount17.mmAmountToTransfer, ATMTransaction23.mmDetailedRequestedAmount,
 					ATMTransaction29.mmTotalRequestedAmount, ATMTransaction29.mmDetailedRequestedAmount, OriginalTransactionReference26.mmAmount, AmountAndCurrency2.mmAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of the payment.";
@@ -6234,15 +6351,17 @@ public class Payment extends ObligationFulfilment {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Payment obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Payment obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement;
+	protected List<CommercialTradeSettlement> tradeSettlement;
 	/**
 	 * 
 	 <p>
@@ -6285,18 +6404,28 @@ public class Payment extends ObligationFulfilment {
 	 * "Specifies the settlement operation which originates the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTradeSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<CommercialTradeSettlement>> mmTradeSettlement = new MMBusinessAssociationEnd<Payment, List<CommercialTradeSettlement>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(EarlyPayment1.mmEarlyPaymentTaxSpecification);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeSettlement";
 			definition = "Specifies the settlement operation which originates the payment.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmPayment;
+			opposite_lazy = () -> CommercialTradeSettlement.mmPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
+			type_lazy = () -> CommercialTradeSettlement.mmObject();
+		}
+
+		@Override
+		public List<CommercialTradeSettlement> getValue(Payment obj) {
+			return obj.getTradeSettlement();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<CommercialTradeSettlement> value) {
+			obj.setTradeSettlement(value);
 		}
 	};
 	protected Max140Text standardSettlementInstructions;
@@ -6324,10 +6453,10 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Identifies the standard settlement instructions."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStandardSettlementInstructions = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, Max140Text> mmStandardSettlementInstructions = new MMBusinessAttribute<Payment, Max140Text>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StandardSettlementInstructions";
 			definition = "Identifies the standard settlement instructions.";
@@ -6336,12 +6465,14 @@ public class Payment extends ObligationFulfilment {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getStandardSettlementInstructions", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max140Text getValue(Payment obj) {
+			return obj.getStandardSettlementInstructions();
+		}
+
+		@Override
+		public void setValue(Payment obj, Max140Text value) {
+			obj.setStandardSettlementInstructions(value);
 		}
 	};
 	protected DebitAuthorisation relatedDebitAuthorisation;
@@ -6374,21 +6505,31 @@ public class Payment extends ObligationFulfilment {
 	 * name} = "RelatedDebitAuthorisation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Payment which is the result of the debit authorisation."</li>
+	 * definition} = "Payment which is the result of the debit authorisation"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedDebitAuthorisation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, Optional<DebitAuthorisation>> mmRelatedDebitAuthorisation = new MMBusinessAssociationEnd<Payment, Optional<DebitAuthorisation>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDebitAuthorisation";
-			definition = "Payment which is the result of the debit authorisation.";
+			definition = "Payment which is the result of the debit authorisation";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmAuthorisedReturn;
+			opposite_lazy = () -> DebitAuthorisation.mmAuthorisedReturn;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmObject();
+			type_lazy = () -> DebitAuthorisation.mmObject();
+		}
+
+		@Override
+		public Optional<DebitAuthorisation> getValue(Payment obj) {
+			return obj.getRelatedDebitAuthorisation();
+		}
+
+		@Override
+		public void setValue(Payment obj, Optional<DebitAuthorisation> value) {
+			obj.setRelatedDebitAuthorisation(value.orElse(null));
 		}
 	};
 	protected PaymentInvestigationCaseResolution relatedInvestigationCaseResolution;
@@ -6425,18 +6566,28 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Case resolution related to a specific payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedInvestigationCaseResolution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, Optional<PaymentInvestigationCaseResolution>> mmRelatedInvestigationCaseResolution = new MMBusinessAssociationEnd<Payment, Optional<PaymentInvestigationCaseResolution>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestigationCaseResolution";
 			definition = "Case resolution related to a specific payment.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmPaymentCorrection;
+			opposite_lazy = () -> PaymentInvestigationCaseResolution.mmPaymentCorrection;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
+			type_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentInvestigationCaseResolution> getValue(Payment obj) {
+			return obj.getRelatedInvestigationCaseResolution();
+		}
+
+		@Override
+		public void setValue(Payment obj, Optional<PaymentInvestigationCaseResolution> value) {
+			obj.setRelatedInvestigationCaseResolution(value.orElse(null));
 		}
 	};
 	protected Payment originalPayment;
@@ -6471,21 +6622,31 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Original payment which is returned."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOriginalPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, Payment> mmOriginalPayment = new MMBusinessAssociationEnd<Payment, Payment>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginalPayment";
 			definition = "Original payment which is returned.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmReturnPayment;
+			opposite_lazy = () -> Payment.mmReturnPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			type_lazy = () -> Payment.mmObject();
+		}
+
+		@Override
+		public Payment getValue(Payment obj) {
+			return obj.getOriginalPayment();
+		}
+
+		@Override
+		public void setValue(Payment obj, Payment value) {
+			obj.setOriginalPayment(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Payment> returnPayment;
+	protected List<Payment> returnPayment;
 	/**
 	 * 
 	 <p>
@@ -6517,17 +6678,27 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Payment which offsets an original payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmReturnPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<Payment>> mmReturnPayment = new MMBusinessAssociationEnd<Payment, List<Payment>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReturnPayment";
 			definition = "Payment which offsets an original payment.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmOriginalPayment;
+			opposite_lazy = () -> Payment.mmOriginalPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			type_lazy = () -> Payment.mmObject();
+		}
+
+		@Override
+		public List<Payment> getValue(Payment obj) {
+			return obj.getReturnPayment();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<Payment> value) {
+			obj.setReturnPayment(value);
 		}
 	};
 	protected SecuritiesSettlement relatedSecuritiesSettlement;
@@ -6573,22 +6744,32 @@ public class Payment extends ObligationFulfilment {
 	 * "Securities settlement process which is the source of the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedSecuritiesSettlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, SecuritiesSettlement> mmRelatedSecuritiesSettlement = new MMBusinessAssociationEnd<Payment, SecuritiesSettlement>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Transaction59.mmSecuritiesTransactionReferences);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecuritiesSettlement";
 			definition = "Securities settlement process which is the source of the payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmPayment;
+			opposite_lazy = () -> SecuritiesSettlement.mmPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
+			type_lazy = () -> SecuritiesSettlement.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlement getValue(Payment obj) {
+			return obj.getRelatedSecuritiesSettlement();
+		}
+
+		@Override
+		public void setValue(Payment obj, SecuritiesSettlement value) {
+			obj.setRelatedSecuritiesSettlement(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Invoice> invoiceReconciliation;
+	protected List<Invoice> invoiceReconciliation;
 	/**
 	 * 
 	 <p>
@@ -6622,17 +6803,27 @@ public class Payment extends ObligationFulfilment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvoiceReconciliation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, List<Invoice>> mmInvoiceReconciliation = new MMBusinessAssociationEnd<Payment, List<Invoice>>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceReconciliation";
 			definition = "Reconciliation of the amounts of an invoice with the amounts included in one or more payments.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmPayment;
+			opposite_lazy = () -> Invoice.mmPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+			type_lazy = () -> Invoice.mmObject();
+		}
+
+		@Override
+		public List<Invoice> getValue(Payment obj) {
+			return obj.getInvoiceReconciliation();
+		}
+
+		@Override
+		public void setValue(Payment obj, List<Invoice> value) {
+			obj.setInvoiceReconciliation(value);
 		}
 	};
 	protected PaymentInstrumentCode paymentInstrument;
@@ -6682,12 +6873,12 @@ public class Payment extends ObligationFulfilment {
 	 * "Payment type at the origin of the cash entry eg, a cheque."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPaymentInstrument = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Payment, PaymentInstrumentCode> mmPaymentInstrument = new MMBusinessAttribute<Payment, PaymentInstrumentCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentOrigin1Choice.mmInstrument, PaymentInstructionReferenceDetails3.mmPaymentMethod, PaymentInstructionReferenceDetails4.mmPaymentMethod, TransactionCertificate2.mmTransactionType,
 					TransactionCertificate2.mmLocalInstrument);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentInstrument";
 			definition = "Payment type at the origin of the cash entry eg, a cheque.";
@@ -6696,12 +6887,14 @@ public class Payment extends ObligationFulfilment {
 			simpleType_lazy = () -> PaymentInstrumentCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Payment.class.getMethod("getPaymentInstrument", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentInstrumentCode getValue(Payment obj) {
+			return obj.getPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(Payment obj, PaymentInstrumentCode value) {
+			obj.setPaymentInstrument(value);
 		}
 	};
 	protected CashAccount account;
@@ -6811,22 +7004,32 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Account debited for the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, CashAccount> mmAccount = new MMBusinessAssociationEnd<Payment, CashAccount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ATMTransaction1.mmAccountData, ATMTransaction2.mmAccountData, ATMTransaction7.mmAccountInformation, ATMTransaction3.mmAccountData, ATMTransaction6.mmAccountData,
 					CardTransactionDetail1.mmAccountFrom, CardTransactionDetail1.mmAccountTo, CardTransactionDetail3.mmAccountFrom, CardTransactionDetail3.mmAccountTo, ATMTransaction14.mmAccountData, ATMTransaction17.mmAccountData,
 					ATMTransaction13.mmAccountData, ATMTransaction16.mmAccountData, ATMTransaction19.mmAccountData, ATMTransaction15.mmAccountData, ATMTransaction21.mmAccountInformation, ATMTransaction24.mmAccountFrom,
 					ATMTransaction23.mmAccountFrom, ATMTransaction29.mmAccountData, CardPaymentTransaction81.mmAccountFrom, CardPaymentTransaction81.mmAccountTo, CardPaymentTransaction80.mmAccountFrom, CardPaymentTransaction80.mmAccountTo);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Account debited for the payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmPayment;
+			opposite_lazy = () -> CashAccount.mmPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
+			type_lazy = () -> CashAccount.mmObject();
+		}
+
+		@Override
+		public CashAccount getValue(Payment obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Payment obj, CashAccount value) {
+			obj.setAccount(value);
 		}
 	};
 	protected Adjustment adjustments;
@@ -6877,19 +7080,29 @@ public class Payment extends ObligationFulfilment {
 	 * "Specifies the charges or the allowance related to a payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAdjustments = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, Adjustment> mmAdjustments = new MMBusinessAssociationEnd<Payment, Adjustment>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RemittanceAmount1.mmAdjustmentAmountAndReason, RemittanceAmount2.mmAdjustmentAmountAndReason, PaymentTransaction36.mmCompensationAmount);
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustments";
 			definition = "Specifies the charges or the allowance related to a payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.mmPayment;
+			opposite_lazy = () -> Adjustment.mmPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
+			type_lazy = () -> Adjustment.mmObject();
+		}
+
+		@Override
+		public Adjustment getValue(Payment obj) {
+			return obj.getAdjustments();
+		}
+
+		@Override
+		public void setValue(Payment obj, Adjustment value) {
+			obj.setAdjustments(value);
 		}
 	};
 	protected RegisteredContract contractRegistration;
@@ -6925,18 +7138,28 @@ public class Payment extends ObligationFulfilment {
 	 * definition} = "Provides the payment of the registered contract."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmContractRegistration = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Payment, RegisteredContract> mmContractRegistration = new MMBusinessAssociationEnd<Payment, RegisteredContract>() {
 		{
 			isDerived = false;
-			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+			elementContext_lazy = () -> Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContractRegistration";
 			definition = "Provides the payment of the registered contract.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmRelatedPayment;
+			opposite_lazy = () -> RegisteredContract.mmRelatedPayment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmObject();
+			type_lazy = () -> RegisteredContract.mmObject();
+		}
+
+		@Override
+		public RegisteredContract getValue(Payment obj) {
+			return obj.getContractRegistration();
+		}
+
+		@Override
+		public void setValue(Payment obj, RegisteredContract value) {
+			obj.setContractRegistration(value);
 		}
 	};
 
@@ -6947,14 +7170,11 @@ public class Payment extends ObligationFulfilment {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Payment";
 				definition = "Payment information and processes required to transfer cash end to end from the debtor to the creditor.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmPayment, com.tools20022.repository.entity.Tax.mmRelatedPaymentSettlement, com.tools20022.repository.entity.Adjustment.mmPayment,
-						com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset, com.tools20022.repository.entity.Payment.mmOriginalPayment, com.tools20022.repository.entity.Payment.mmReturnPayment,
-						com.tools20022.repository.entity.CreditInstrument.mmRelatedPayment, com.tools20022.repository.entity.PaymentExecution.mmPayment, com.tools20022.repository.entity.PaymentIdentification.mmPayment,
-						com.tools20022.repository.entity.PaymentPartyRole.mmPayment, com.tools20022.repository.entity.PaymentStatus.mmPayment, com.tools20022.repository.entity.SecuritiesSettlement.mmPayment,
-						com.tools20022.repository.entity.CurrencyExchange.mmRelatedPayment, com.tools20022.repository.entity.Invoice.mmPayment, com.tools20022.repository.entity.PaymentInvestigationCase.mmUnderlyingPayment,
-						com.tools20022.repository.entity.SettlementTimeRequest.mmPayment, com.tools20022.repository.entity.DebitAuthorisation.mmAuthorisedReturn,
-						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmPaymentCorrection, com.tools20022.repository.entity.CommercialTradeSettlement.mmPayment,
-						com.tools20022.repository.entity.RegisteredContract.mmRelatedPayment);
+				associationDomain_lazy = () -> Arrays.asList(CashAccount.mmPayment, Tax.mmRelatedPaymentSettlement, Adjustment.mmPayment, com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset, Payment.mmOriginalPayment,
+						Payment.mmReturnPayment, CreditInstrument.mmRelatedPayment, com.tools20022.repository.entity.PaymentExecution.mmPayment, PaymentIdentification.mmPayment, PaymentPartyRole.mmPayment,
+						com.tools20022.repository.entity.PaymentStatus.mmPayment, SecuritiesSettlement.mmPayment, com.tools20022.repository.entity.CurrencyExchange.mmRelatedPayment, Invoice.mmPayment,
+						PaymentInvestigationCase.mmUnderlyingPayment, com.tools20022.repository.entity.SettlementTimeRequest.mmPayment, DebitAuthorisation.mmAuthorisedReturn, PaymentInvestigationCaseResolution.mmPaymentCorrection,
+						CommercialTradeSettlement.mmPayment, RegisteredContract.mmRelatedPayment);
 				derivationElement_lazy = () -> Arrays.asList(InvestmentFundCashSettlementInformation1.mmSubscriptionPaymentInstrument, InvestmentFundCashSettlementInformation1.mmRedemptionPaymentInstrument,
 						InvestmentFundCashSettlementInformation1.mmDividendPaymentInstrument, InvestmentFundCashSettlementInformation1.mmSavingsPlanPaymentInstrument,
 						InvestmentFundCashSettlementInformation3.mmSubscriptionPaymentInstrument, InvestmentFundCashSettlementInformation3.mmRedemptionPaymentInstrument, InvestmentFundCashSettlementInformation3.mmDividendPaymentInstrument,
@@ -7026,17 +7246,11 @@ public class Payment extends ObligationFulfilment {
 						OriginalPaymentInstruction29.mmTransactionInformation, PaymentTransaction92.mmOriginalTransactionReference, PaymentTransaction95.mmOriginalTransactionReference, PaymentTransaction93.mmOriginalTransactionReference);
 				subType_lazy = () -> Arrays.asList(IndividualPayment.mmObject(), BulkPayment.mmObject());
 				superType_lazy = () -> ObligationFulfilment.mmObject();
-				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmPaymentObligation, com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer, com.tools20022.repository.entity.Payment.mmCreditMethod,
-						com.tools20022.repository.entity.Payment.mmType, com.tools20022.repository.entity.Payment.mmInstructedAmount, com.tools20022.repository.entity.Payment.mmPriority,
-						com.tools20022.repository.entity.Payment.mmValueDate, com.tools20022.repository.entity.Payment.mmPaymentStatus, com.tools20022.repository.entity.Payment.mmPartyRole,
-						com.tools20022.repository.entity.Payment.mmTaxOnPayment, com.tools20022.repository.entity.Payment.mmPaymentExecution, com.tools20022.repository.entity.Payment.mmPoolingAdjustmentDate,
-						com.tools20022.repository.entity.Payment.mmEquivalentAmount, com.tools20022.repository.entity.Payment.mmCurrencyExchange, com.tools20022.repository.entity.Payment.mmInstructionForCreditorAgent,
-						com.tools20022.repository.entity.Payment.mmInstructionForDebtorAgent, com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications, com.tools20022.repository.entity.Payment.mmRelatedInvestigationCase,
-						com.tools20022.repository.entity.Payment.mmSettlementTimeRequest, com.tools20022.repository.entity.Payment.mmAmount, com.tools20022.repository.entity.Payment.mmTradeSettlement,
-						com.tools20022.repository.entity.Payment.mmStandardSettlementInstructions, com.tools20022.repository.entity.Payment.mmRelatedDebitAuthorisation,
-						com.tools20022.repository.entity.Payment.mmRelatedInvestigationCaseResolution, com.tools20022.repository.entity.Payment.mmOriginalPayment, com.tools20022.repository.entity.Payment.mmReturnPayment,
-						com.tools20022.repository.entity.Payment.mmRelatedSecuritiesSettlement, com.tools20022.repository.entity.Payment.mmInvoiceReconciliation, com.tools20022.repository.entity.Payment.mmPaymentInstrument,
-						com.tools20022.repository.entity.Payment.mmAccount, com.tools20022.repository.entity.Payment.mmAdjustments, com.tools20022.repository.entity.Payment.mmContractRegistration);
+				element_lazy = () -> Arrays.asList(Payment.mmPaymentObligation, Payment.mmCurrencyOfTransfer, Payment.mmCreditMethod, Payment.mmType, Payment.mmInstructedAmount, Payment.mmPriority, Payment.mmValueDate,
+						Payment.mmPaymentStatus, Payment.mmPartyRole, Payment.mmTaxOnPayment, Payment.mmPaymentExecution, Payment.mmPoolingAdjustmentDate, Payment.mmEquivalentAmount, Payment.mmCurrencyExchange,
+						Payment.mmInstructionForCreditorAgent, Payment.mmInstructionForDebtorAgent, Payment.mmPaymentRelatedIdentifications, Payment.mmRelatedInvestigationCase, Payment.mmSettlementTimeRequest, Payment.mmAmount,
+						Payment.mmTradeSettlement, Payment.mmStandardSettlementInstructions, Payment.mmRelatedDebitAuthorisation, Payment.mmRelatedInvestigationCaseResolution, Payment.mmOriginalPayment, Payment.mmReturnPayment,
+						Payment.mmRelatedSecuritiesSettlement, Payment.mmInvoiceReconciliation, Payment.mmPaymentInstrument, Payment.mmAccount, Payment.mmAdjustments, Payment.mmContractRegistration);
 				derivationComponent_lazy = () -> Arrays.asList(PaymentInstrument7.mmObject(), PaymentInstrument6.mmObject(), InvestmentFundCashSettlementInformation1.mmObject(), PaymentInstrument8.mmObject(), PaymentInstrument9.mmObject(),
 						InvestmentFundCashSettlementInformation3.mmObject(), PaymentInstrument17Choice.mmObject(), PaymentInstrument11.mmObject(), PaymentInstrument16Choice.mmObject(), PaymentInstrument10.mmObject(),
 						InvestmentFundCashSettlementInformation5.mmObject(), InvestmentFundCashSettlementInformation2.mmObject(), InvestmentFundCashSettlementInformation4.mmObject(), InvestmentFundCashSettlementInformation6.mmObject(),
@@ -7133,7 +7347,7 @@ public class Payment extends ObligationFulfilment {
 		return creditMethod == null ? creditMethod = new ArrayList<>() : creditMethod;
 	}
 
-	public Payment setCreditMethod(List<com.tools20022.repository.entity.CreditInstrument> creditMethod) {
+	public Payment setCreditMethod(List<CreditInstrument> creditMethod) {
 		this.creditMethod = Objects.requireNonNull(creditMethod);
 		return this;
 	}
@@ -7187,7 +7401,7 @@ public class Payment extends ObligationFulfilment {
 		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public Payment setPartyRole(List<com.tools20022.repository.entity.PaymentPartyRole> partyRole) {
+	public Payment setPartyRole(List<PaymentPartyRole> partyRole) {
 		this.partyRole = Objects.requireNonNull(partyRole);
 		return this;
 	}
@@ -7196,7 +7410,7 @@ public class Payment extends ObligationFulfilment {
 		return taxOnPayment == null ? taxOnPayment = new ArrayList<>() : taxOnPayment;
 	}
 
-	public Payment setTaxOnPayment(List<com.tools20022.repository.entity.Tax> taxOnPayment) {
+	public Payment setTaxOnPayment(List<Tax> taxOnPayment) {
 		this.taxOnPayment = Objects.requireNonNull(taxOnPayment);
 		return this;
 	}
@@ -7259,7 +7473,7 @@ public class Payment extends ObligationFulfilment {
 		return paymentRelatedIdentifications == null ? paymentRelatedIdentifications = new ArrayList<>() : paymentRelatedIdentifications;
 	}
 
-	public Payment setPaymentRelatedIdentifications(List<com.tools20022.repository.entity.PaymentIdentification> paymentRelatedIdentifications) {
+	public Payment setPaymentRelatedIdentifications(List<PaymentIdentification> paymentRelatedIdentifications) {
 		this.paymentRelatedIdentifications = Objects.requireNonNull(paymentRelatedIdentifications);
 		return this;
 	}
@@ -7268,7 +7482,7 @@ public class Payment extends ObligationFulfilment {
 		return relatedInvestigationCase == null ? Optional.empty() : Optional.of(relatedInvestigationCase);
 	}
 
-	public Payment setRelatedInvestigationCase(com.tools20022.repository.entity.PaymentInvestigationCase relatedInvestigationCase) {
+	public Payment setRelatedInvestigationCase(PaymentInvestigationCase relatedInvestigationCase) {
 		this.relatedInvestigationCase = relatedInvestigationCase;
 		return this;
 	}
@@ -7295,7 +7509,7 @@ public class Payment extends ObligationFulfilment {
 		return tradeSettlement == null ? tradeSettlement = new ArrayList<>() : tradeSettlement;
 	}
 
-	public Payment setTradeSettlement(List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement) {
+	public Payment setTradeSettlement(List<CommercialTradeSettlement> tradeSettlement) {
 		this.tradeSettlement = Objects.requireNonNull(tradeSettlement);
 		return this;
 	}
@@ -7313,7 +7527,7 @@ public class Payment extends ObligationFulfilment {
 		return relatedDebitAuthorisation == null ? Optional.empty() : Optional.of(relatedDebitAuthorisation);
 	}
 
-	public Payment setRelatedDebitAuthorisation(com.tools20022.repository.entity.DebitAuthorisation relatedDebitAuthorisation) {
+	public Payment setRelatedDebitAuthorisation(DebitAuthorisation relatedDebitAuthorisation) {
 		this.relatedDebitAuthorisation = relatedDebitAuthorisation;
 		return this;
 	}
@@ -7322,7 +7536,7 @@ public class Payment extends ObligationFulfilment {
 		return relatedInvestigationCaseResolution == null ? Optional.empty() : Optional.of(relatedInvestigationCaseResolution);
 	}
 
-	public Payment setRelatedInvestigationCaseResolution(com.tools20022.repository.entity.PaymentInvestigationCaseResolution relatedInvestigationCaseResolution) {
+	public Payment setRelatedInvestigationCaseResolution(PaymentInvestigationCaseResolution relatedInvestigationCaseResolution) {
 		this.relatedInvestigationCaseResolution = relatedInvestigationCaseResolution;
 		return this;
 	}
@@ -7331,7 +7545,7 @@ public class Payment extends ObligationFulfilment {
 		return originalPayment;
 	}
 
-	public Payment setOriginalPayment(com.tools20022.repository.entity.Payment originalPayment) {
+	public Payment setOriginalPayment(Payment originalPayment) {
 		this.originalPayment = Objects.requireNonNull(originalPayment);
 		return this;
 	}
@@ -7340,7 +7554,7 @@ public class Payment extends ObligationFulfilment {
 		return returnPayment == null ? returnPayment = new ArrayList<>() : returnPayment;
 	}
 
-	public Payment setReturnPayment(List<com.tools20022.repository.entity.Payment> returnPayment) {
+	public Payment setReturnPayment(List<Payment> returnPayment) {
 		this.returnPayment = Objects.requireNonNull(returnPayment);
 		return this;
 	}
@@ -7349,7 +7563,7 @@ public class Payment extends ObligationFulfilment {
 		return relatedSecuritiesSettlement;
 	}
 
-	public Payment setRelatedSecuritiesSettlement(com.tools20022.repository.entity.SecuritiesSettlement relatedSecuritiesSettlement) {
+	public Payment setRelatedSecuritiesSettlement(SecuritiesSettlement relatedSecuritiesSettlement) {
 		this.relatedSecuritiesSettlement = Objects.requireNonNull(relatedSecuritiesSettlement);
 		return this;
 	}
@@ -7358,7 +7572,7 @@ public class Payment extends ObligationFulfilment {
 		return invoiceReconciliation == null ? invoiceReconciliation = new ArrayList<>() : invoiceReconciliation;
 	}
 
-	public Payment setInvoiceReconciliation(List<com.tools20022.repository.entity.Invoice> invoiceReconciliation) {
+	public Payment setInvoiceReconciliation(List<Invoice> invoiceReconciliation) {
 		this.invoiceReconciliation = Objects.requireNonNull(invoiceReconciliation);
 		return this;
 	}
@@ -7376,7 +7590,7 @@ public class Payment extends ObligationFulfilment {
 		return account;
 	}
 
-	public Payment setAccount(com.tools20022.repository.entity.CashAccount account) {
+	public Payment setAccount(CashAccount account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -7385,7 +7599,7 @@ public class Payment extends ObligationFulfilment {
 		return adjustments;
 	}
 
-	public Payment setAdjustments(com.tools20022.repository.entity.Adjustment adjustments) {
+	public Payment setAdjustments(Adjustment adjustments) {
 		this.adjustments = Objects.requireNonNull(adjustments);
 		return this;
 	}
@@ -7394,7 +7608,7 @@ public class Payment extends ObligationFulfilment {
 		return contractRegistration;
 	}
 
-	public Payment setContractRegistration(com.tools20022.repository.entity.RegisteredContract contractRegistration) {
+	public Payment setContractRegistration(RegisteredContract contractRegistration) {
 		this.contractRegistration = Objects.requireNonNull(contractRegistration);
 		return this;
 	}

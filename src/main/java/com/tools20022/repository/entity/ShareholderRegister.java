@@ -23,7 +23,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -92,7 +91,7 @@ public class ShareholderRegister {
 	 * definition} = "Uniquely identifies the shareholder registry."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ShareholderRegister, Max35Text> mmIdentification = new MMBusinessAttribute<ShareholderRegister, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ShareholderRegister.mmObject();
@@ -104,12 +103,14 @@ public class ShareholderRegister {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ShareholderRegister.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ShareholderRegister obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ShareholderRegister obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	protected DecimalNumber entry;
@@ -141,7 +142,7 @@ public class ShareholderRegister {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEntry = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ShareholderRegister, DecimalNumber> mmEntry = new MMBusinessAttribute<ShareholderRegister, DecimalNumber>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ShareholderRegister.mmObject();
@@ -153,12 +154,14 @@ public class ShareholderRegister {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ShareholderRegister.class.getMethod("getEntry", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DecimalNumber getValue(ShareholderRegister obj) {
+			return obj.getEntry();
+		}
+
+		@Override
+		public void setValue(ShareholderRegister obj, DecimalNumber value) {
+			obj.setEntry(value);
 		}
 	};
 

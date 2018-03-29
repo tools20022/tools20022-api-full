@@ -108,7 +108,7 @@ public class CorporateActionOptionSD5 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSD5, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionOptionSD5, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD5.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class CorporateActionOptionSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionOptionSD5 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSD5 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "OptnSts")
@@ -156,7 +166,7 @@ public class CorporateActionOptionSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOptionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSD5, Optional<WorkflowStatus1Code>> mmOptionStatus = new MMMessageAttribute<CorporateActionOptionSD5, Optional<WorkflowStatus1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD5.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class CorporateActionOptionSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> WorkflowStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<WorkflowStatus1Code> getValue(CorporateActionOptionSD5 obj) {
+			return obj.getOptionStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSD5 obj, Optional<WorkflowStatus1Code> value) {
+			obj.setOptionStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RandLotPrefFlg")
@@ -205,7 +225,7 @@ public class CorporateActionOptionSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRandomLotPreferenceFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSD5, Optional<YesNoIndicator>> mmRandomLotPreferenceFlag = new MMMessageAttribute<CorporateActionOptionSD5, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD5.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class CorporateActionOptionSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionOptionSD5 obj) {
+			return obj.getRandomLotPreferenceFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSD5 obj, Optional<YesNoIndicator> value) {
+			obj.setRandomLotPreferenceFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewShrDsptchdDt")
@@ -253,7 +283,7 @@ public class CorporateActionOptionSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewShareDispatchedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSD5, Optional<ISODate>> mmNewShareDispatchedDate = new MMMessageAttribute<CorporateActionOptionSD5, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD5.mmObject();
 			isDerived = false;
@@ -265,6 +295,16 @@ public class CorporateActionOptionSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionOptionSD5 obj) {
+			return obj.getNewShareDispatchedDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSD5 obj, Optional<ISODate> value) {
+			obj.setNewShareDispatchedDate(value.orElse(null));
 		}
 	};
 

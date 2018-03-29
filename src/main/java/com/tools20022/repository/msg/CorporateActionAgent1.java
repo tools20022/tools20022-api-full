@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.entity.CorporateActionAgent;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NameAndAddress5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class CorporateActionAgent1 {
 	 * definition} = "Identification of the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAgent1, PartyIdentification2Choice> mmAgentIdentification = new MMMessageAttribute<CorporateActionAgent1, PartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAgent1.mmObject();
@@ -124,6 +125,16 @@ public class CorporateActionAgent1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(CorporateActionAgent1 obj) {
+			return obj.getAgentIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionAgent1 obj, PartyIdentification2Choice value) {
+			obj.setAgentIdentification(value);
 		}
 	};
 	@XmlElement(name = "AgtRole", required = true)
@@ -161,7 +172,7 @@ public class CorporateActionAgent1 {
 	 * definition} = "Role played by the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgentRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAgent1, AgentRole1FormatChoice> mmAgentRole = new MMMessageAttribute<CorporateActionAgent1, AgentRole1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionAgent.mmAgentRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAgent1.mmObject();
@@ -173,6 +184,16 @@ public class CorporateActionAgent1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AgentRole1FormatChoice.mmObject();
+		}
+
+		@Override
+		public AgentRole1FormatChoice getValue(CorporateActionAgent1 obj) {
+			return obj.getAgentRole();
+		}
+
+		@Override
+		public void setValue(CorporateActionAgent1 obj, AgentRole1FormatChoice value) {
+			obj.setAgentRole(value);
 		}
 	};
 	@XmlElement(name = "CtctPrsn")
@@ -209,7 +230,7 @@ public class CorporateActionAgent1 {
 	 * definition} = "Contact person at the agent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContactPerson = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionAgent1, Optional<NameAndAddress5>> mmContactPerson = new MMMessageAttribute<CorporateActionAgent1, Optional<NameAndAddress5>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAgent1.mmObject();
@@ -220,7 +241,17 @@ public class CorporateActionAgent1 {
 			definition = "Contact person at the agent.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
+			complexType_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public Optional<NameAndAddress5> getValue(CorporateActionAgent1 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(CorporateActionAgent1 obj, Optional<NameAndAddress5> value) {
+			obj.setContactPerson(value.orElse(null));
 		}
 	};
 
@@ -261,7 +292,7 @@ public class CorporateActionAgent1 {
 		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public CorporateActionAgent1 setContactPerson(com.tools20022.repository.msg.NameAndAddress5 contactPerson) {
+	public CorporateActionAgent1 setContactPerson(NameAndAddress5 contactPerson) {
 		this.contactPerson = contactPerson;
 		return this;
 	}

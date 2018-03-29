@@ -65,12 +65,16 @@ public class ConstraintNonInterbankReportingRule {
 	 */
 	public static final MMConstraint<CounterpartyIdentification1Choice> forCounterpartyIdentification1Choice = new MMConstraint<CounterpartyIdentification1Choice>() {
 		{
-			validator = ConstraintNonInterbankReportingRule::checkCounterpartyIdentification1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonInterbankReportingRule";
 			definition = "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, the counterparty must not be identified with the LEI.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification2Choice);
 			owner_lazy = () -> CounterpartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CounterpartyIdentification1Choice obj) throws Exception {
+			checkCounterpartyIdentification1Choice(obj);
 		}
 	};
 	/**
@@ -111,13 +115,17 @@ public class ConstraintNonInterbankReportingRule {
 	 */
 	public static final MMConstraint<CounterpartyIdentification2Choice> forCounterpartyIdentification2Choice = new MMConstraint<CounterpartyIdentification2Choice>() {
 		{
-			validator = ConstraintNonInterbankReportingRule::checkCounterpartyIdentification2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonInterbankReportingRule";
 			definition = "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification3Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification1Choice;
 			owner_lazy = () -> CounterpartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CounterpartyIdentification2Choice obj) throws Exception {
+			checkCounterpartyIdentification2Choice(obj);
 		}
 	};
 	/**
@@ -149,12 +157,16 @@ public class ConstraintNonInterbankReportingRule {
 	 */
 	public static final MMConstraint<CounterpartyIdentification3Choice> forCounterpartyIdentification3Choice = new MMConstraint<CounterpartyIdentification3Choice>() {
 		{
-			validator = ConstraintNonInterbankReportingRule::checkCounterpartyIdentification3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonInterbankReportingRule";
 			definition = "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification2Choice;
 			owner_lazy = () -> CounterpartyIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CounterpartyIdentification3Choice obj) throws Exception {
+			checkCounterpartyIdentification3Choice(obj);
 		}
 	};
 

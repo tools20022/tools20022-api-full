@@ -225,7 +225,7 @@ public class DocumentIdentification13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification13, DocumentIdentification1Choice> mmIdentification = new MMMessageAssociationEnd<DocumentIdentification13, DocumentIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification13.mmObject();
@@ -240,6 +240,16 @@ public class DocumentIdentification13 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification1Choice getValue(DocumentIdentification13 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification13 obj, DocumentIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "DocNb")
@@ -282,7 +292,7 @@ public class DocumentIdentification13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocumentNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification13, Optional<DocumentNumber1Choice>> mmDocumentNumber = new MMMessageAssociationEnd<DocumentIdentification13, Optional<DocumentNumber1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification13.mmObject();
 			isDerived = false;
@@ -296,6 +306,16 @@ public class DocumentIdentification13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber1Choice> getValue(DocumentIdentification13 obj) {
+			return obj.getDocumentNumber();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification13 obj, Optional<DocumentNumber1Choice> value) {
+			obj.setDocumentNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkgTp")
@@ -340,7 +360,7 @@ public class DocumentIdentification13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification13, Optional<ProcessingPosition1Choice>> mmLinkageType = new MMMessageAssociationEnd<DocumentIdentification13, Optional<ProcessingPosition1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification13.mmObject();
 			isDerived = false;
@@ -354,6 +374,16 @@ public class DocumentIdentification13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition1Choice> getValue(DocumentIdentification13 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification13 obj, Optional<ProcessingPosition1Choice> value) {
+			obj.setLinkageType(value.orElse(null));
 		}
 	};
 

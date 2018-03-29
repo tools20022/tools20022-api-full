@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class CorporateActionNotificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionNotificationSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD1.mmObject();
 			isDerived = false;
@@ -130,6 +131,16 @@ public class CorporateActionNotificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionNotificationSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "CstmrIntlSctyId")
@@ -175,7 +186,7 @@ public class CorporateActionNotificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerInternalSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD1, Optional<Max16Text>> mmCustomerInternalSecurityIdentification = new MMMessageAttribute<CorporateActionNotificationSD1, Optional<Max16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD1.mmObject();
 			isDerived = false;
@@ -188,6 +199,16 @@ public class CorporateActionNotificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(CorporateActionNotificationSD1 obj) {
+			return obj.getCustomerInternalSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD1 obj, Optional<Max16Text> value) {
+			obj.setCustomerInternalSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyOfIntrstMtchgScty")
@@ -234,7 +255,7 @@ public class CorporateActionNotificationSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD1, Optional<SecurityIdentification15>> mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute<CorporateActionNotificationSD1, Optional<SecurityIdentification15>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD1.mmObject();
 			isDerived = false;
@@ -246,7 +267,17 @@ public class CorporateActionNotificationSD1 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotificationSD10.mmSecurityOfInterestMatchingSecurity);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
+			complexType_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification15> getValue(CorporateActionNotificationSD1 obj) {
+			return obj.getSecurityOfInterestMatchingSecurity();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD1 obj, Optional<SecurityIdentification15> value) {
+			obj.setSecurityOfInterestMatchingSecurity(value.orElse(null));
 		}
 	};
 
@@ -287,7 +318,7 @@ public class CorporateActionNotificationSD1 {
 		return securityOfInterestMatchingSecurity == null ? Optional.empty() : Optional.of(securityOfInterestMatchingSecurity);
 	}
 
-	public CorporateActionNotificationSD1 setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification15 securityOfInterestMatchingSecurity) {
+	public CorporateActionNotificationSD1 setSecurityOfInterestMatchingSecurity(SecurityIdentification15 securityOfInterestMatchingSecurity) {
 		this.securityOfInterestMatchingSecurity = securityOfInterestMatchingSecurity;
 		return this;
 	}

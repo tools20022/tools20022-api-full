@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.entity.IntermediaryRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account18;
+import com.tools20022.repository.msg.PartyIdentification100;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +135,7 @@ public class Intermediary32 {
 	 * Intermediary23.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary32, PartyIdentification100> mmIdentification = new MMMessageAssociationEnd<Intermediary32, PartyIdentification100>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary32.mmObject();
@@ -146,7 +148,17 @@ public class Intermediary32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			type_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100 getValue(Intermediary32 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary32 obj, PartyIdentification100 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Role")
@@ -187,7 +199,7 @@ public class Intermediary32 {
 	 * Intermediary23.mmRole}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRole = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary32, Optional<Role6Choice>> mmRole = new MMMessageAssociationEnd<Intermediary32, Optional<Role6Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> IntermediaryRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary32.mmObject();
@@ -201,6 +213,16 @@ public class Intermediary32 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Role6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Role6Choice> getValue(Intermediary32 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(Intermediary32 obj, Optional<Role6Choice> value) {
+			obj.setRole(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -244,7 +266,7 @@ public class Intermediary32 {
 	 * Intermediary23.mmAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary32, Optional<Account18>> mmAccount = new MMMessageAssociationEnd<Intermediary32, Optional<Account18>>() {
 		{
 			businessElementTrace_lazy = () -> AccountPartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary32.mmObject();
@@ -258,7 +280,17 @@ public class Intermediary32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account18.mmObject();
+			type_lazy = () -> Account18.mmObject();
+		}
+
+		@Override
+		public Optional<Account18> getValue(Intermediary32 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Intermediary32 obj, Optional<Account18> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 
@@ -282,7 +314,7 @@ public class Intermediary32 {
 		return identification;
 	}
 
-	public Intermediary32 setIdentification(com.tools20022.repository.msg.PartyIdentification100 identification) {
+	public Intermediary32 setIdentification(PartyIdentification100 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -300,7 +332,7 @@ public class Intermediary32 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public Intermediary32 setAccount(com.tools20022.repository.msg.Account18 account) {
+	public Intermediary32 setAccount(Account18 account) {
 		this.account = account;
 		return this;
 	}

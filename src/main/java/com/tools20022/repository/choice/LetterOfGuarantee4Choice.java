@@ -119,7 +119,7 @@ public class LetterOfGuarantee4Choice {
 	 * LetterOfGuarantee1Choice.mmIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LetterOfGuarantee4Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<LetterOfGuarantee4Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmLetterOfGuarantee;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LetterOfGuarantee4Choice.mmObject();
@@ -133,6 +133,16 @@ public class LetterOfGuarantee4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(LetterOfGuarantee4Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(LetterOfGuarantee4Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class LetterOfGuarantee4Choice {
 	 * LetterOfGuarantee1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LetterOfGuarantee4Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<LetterOfGuarantee4Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmLetterOfGuarantee;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LetterOfGuarantee4Choice.mmObject();
@@ -193,6 +203,16 @@ public class LetterOfGuarantee4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(LetterOfGuarantee4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LetterOfGuarantee4Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

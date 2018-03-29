@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.CashAccountContract;
 import com.tools20022.repository.entity.CreditTransfer;
 import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BalanceTransferFundingLimit1;
+import com.tools20022.repository.msg.BalanceTransferReference1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -37,8 +39,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Information that enables the receiving bank to reconcile the payment with the
- * request.
+ * Information that enables any payments made in connection with the fulfilment
+ * of an account switch to be reconciled by the relevant account servicer with
+ * the associated request.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -88,7 +91,7 @@ import javax.xml.bind.annotation.XmlType;
  * "BalanceTransfer1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Information that enables the receiving bank to reconcile the payment with the request."
+ * "Information that enables any payments made in connection with the fulfilment of an account switch to be reconciled by the relevant account servicer with the associated request."
  * </li>
  * </ul>
  */
@@ -129,11 +132,11 @@ public class BalanceTransfer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference that enables the receiving account servicer to reconcile the payment with the request."
+	 * "Reference that enables the creditor to reconcile a payment received through a different payment channel with the payment request."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTransferReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceTransfer1, Optional<BalanceTransferReference1>> mmBalanceTransferReference = new MMMessageAssociationEnd<BalanceTransfer1, Optional<BalanceTransferReference1>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountContract.mmBalanceTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceTransfer1.mmObject();
@@ -141,11 +144,21 @@ public class BalanceTransfer1 {
 			xmlTag = "BalTrfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTransferReference";
-			definition = "Reference that enables the receiving account servicer to reconcile the payment with the request.";
+			definition = "Reference that enables the creditor to reconcile a payment received through a different payment channel with the payment request.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BalanceTransferReference1.mmObject();
+			type_lazy = () -> BalanceTransferReference1.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceTransferReference1> getValue(BalanceTransfer1 obj) {
+			return obj.getBalanceTransferReference();
+		}
+
+		@Override
+		public void setValue(BalanceTransfer1 obj, Optional<BalanceTransferReference1> value) {
+			obj.setBalanceTransferReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalTrfMtd")
@@ -180,11 +193,11 @@ public class BalanceTransfer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Payment account details for positive or negative closing balance transfer."
+	 * "Contains details of the clearance and settlement method chosen to make the appropriate payment from account servicer to account servicer in order to transfer the positive or negative closing balance of the old account to the new account."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTransferMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceTransfer1, Optional<SettlementMethod1Choice>> mmBalanceTransferMethod = new MMMessageAssociationEnd<BalanceTransfer1, Optional<SettlementMethod1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceTransfer1.mmObject();
@@ -192,11 +205,21 @@ public class BalanceTransfer1 {
 			xmlTag = "BalTrfMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTransferMethod";
-			definition = "Payment account details for positive or negative closing balance transfer.";
+			definition = "Contains details of the clearance and settlement method chosen to make the appropriate payment from account servicer to account servicer in order to transfer the positive or negative closing balance of the old account to the new account.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementMethod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementMethod1Choice> getValue(BalanceTransfer1 obj) {
+			return obj.getBalanceTransferMethod();
+		}
+
+		@Override
+		public void setValue(BalanceTransfer1 obj, Optional<SettlementMethod1Choice> value) {
+			obj.setBalanceTransferMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalTrfFndgLmt")
@@ -235,7 +258,7 @@ public class BalanceTransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTransferFundingLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceTransfer1, Optional<BalanceTransferFundingLimit1>> mmBalanceTransferFundingLimit = new MMMessageAssociationEnd<BalanceTransfer1, Optional<BalanceTransferFundingLimit1>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceTransfer1.mmObject();
@@ -247,7 +270,17 @@ public class BalanceTransfer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BalanceTransferFundingLimit1.mmObject();
+			type_lazy = () -> BalanceTransferFundingLimit1.mmObject();
+		}
+
+		@Override
+		public Optional<BalanceTransferFundingLimit1> getValue(BalanceTransfer1 obj) {
+			return obj.getBalanceTransferFundingLimit();
+		}
+
+		@Override
+		public void setValue(BalanceTransfer1 obj, Optional<BalanceTransferFundingLimit1> value) {
+			obj.setBalanceTransferFundingLimit(value.orElse(null));
 		}
 	};
 
@@ -262,7 +295,7 @@ public class BalanceTransfer1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BalanceTransfer1";
-				definition = "Information that enables the receiving bank to reconcile the payment with the request.";
+				definition = "Information that enables any payments made in connection with the fulfilment of an account switch to be reconciled by the relevant account servicer with the associated request.";
 			}
 		});
 		return mmObject_lazy.get();
@@ -272,7 +305,7 @@ public class BalanceTransfer1 {
 		return balanceTransferReference == null ? Optional.empty() : Optional.of(balanceTransferReference);
 	}
 
-	public BalanceTransfer1 setBalanceTransferReference(com.tools20022.repository.msg.BalanceTransferReference1 balanceTransferReference) {
+	public BalanceTransfer1 setBalanceTransferReference(BalanceTransferReference1 balanceTransferReference) {
 		this.balanceTransferReference = balanceTransferReference;
 		return this;
 	}
@@ -290,7 +323,7 @@ public class BalanceTransfer1 {
 		return balanceTransferFundingLimit == null ? Optional.empty() : Optional.of(balanceTransferFundingLimit);
 	}
 
-	public BalanceTransfer1 setBalanceTransferFundingLimit(com.tools20022.repository.msg.BalanceTransferFundingLimit1 balanceTransferFundingLimit) {
+	public BalanceTransfer1 setBalanceTransferFundingLimit(BalanceTransferFundingLimit1 balanceTransferFundingLimit) {
 		this.balanceTransferFundingLimit = balanceTransferFundingLimit;
 		return this;
 	}

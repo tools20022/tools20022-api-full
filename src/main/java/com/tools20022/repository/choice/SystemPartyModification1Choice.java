@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.TechnicalIdentification1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
@@ -115,7 +116,7 @@ public class SystemPartyModification1Choice {
 	 * "Specifies the party reference data, as assigned by the system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyModification1Choice, SystemParty2> mmSystemParty = new MMMessageAttribute<SystemPartyModification1Choice, SystemParty2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
@@ -126,6 +127,16 @@ public class SystemPartyModification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemParty2.mmObject();
+		}
+
+		@Override
+		public SystemParty2 getValue(SystemPartyModification1Choice obj) {
+			return obj.getSystemParty();
+		}
+
+		@Override
+		public void setValue(SystemPartyModification1Choice obj, SystemParty2 value) {
+			obj.setSystemParty(value);
 		}
 	};
 	@XmlElement(name = "PtyId", required = true)
@@ -160,7 +171,7 @@ public class SystemPartyModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyModification1Choice, SystemPartyIdentification2> mmPartyIdentification = new MMMessageAttribute<SystemPartyModification1Choice, SystemPartyIdentification2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
@@ -171,6 +182,16 @@ public class SystemPartyModification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemPartyIdentification2.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification2 getValue(SystemPartyModification1Choice obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(SystemPartyModification1Choice obj, SystemPartyIdentification2 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "PtyNm", required = true)
@@ -204,7 +225,7 @@ public class SystemPartyModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyModification1Choice, PartyName2> mmPartyName = new MMMessageAttribute<SystemPartyModification1Choice, PartyName2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
@@ -215,6 +236,16 @@ public class SystemPartyModification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyName2.mmObject();
+		}
+
+		@Override
+		public PartyName2 getValue(SystemPartyModification1Choice obj) {
+			return obj.getPartyName();
+		}
+
+		@Override
+		public void setValue(SystemPartyModification1Choice obj, PartyName2 value) {
+			obj.setPartyName(value);
 		}
 	};
 	@XmlElement(name = "TechAdr", required = true)
@@ -249,7 +280,7 @@ public class SystemPartyModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyModification1Choice, TechnicalIdentification1Choice> mmTechnicalAddress = new MMMessageAttribute<SystemPartyModification1Choice, TechnicalIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
@@ -259,7 +290,17 @@ public class SystemPartyModification1Choice {
 			definition = "Unique technical address to unambiguously identify a party for receiving messages from the executing system.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.TechnicalIdentification1Choice.mmObject();
+			complexType_lazy = () -> TechnicalIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public TechnicalIdentification1Choice getValue(SystemPartyModification1Choice obj) {
+			return obj.getTechnicalAddress();
+		}
+
+		@Override
+		public void setValue(SystemPartyModification1Choice obj, TechnicalIdentification1Choice value) {
+			obj.setTechnicalAddress(value);
 		}
 	};
 	@XmlElement(name = "PtyAdr", required = true)
@@ -293,7 +334,7 @@ public class SystemPartyModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyModification1Choice, PostalAddress9> mmPartyAddress = new MMMessageAttribute<SystemPartyModification1Choice, PostalAddress9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
@@ -304,6 +345,16 @@ public class SystemPartyModification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PostalAddress9.mmObject();
+		}
+
+		@Override
+		public PostalAddress9 getValue(SystemPartyModification1Choice obj) {
+			return obj.getPartyAddress();
+		}
+
+		@Override
+		public void setValue(SystemPartyModification1Choice obj, PostalAddress9 value) {
+			obj.setPartyAddress(value);
 		}
 	};
 	@XmlElement(name = "SysRstrctn", required = true)
@@ -338,7 +389,7 @@ public class SystemPartyModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemRestriction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyModification1Choice, SystemRestriction1> mmSystemRestriction = new MMMessageAttribute<SystemPartyModification1Choice, SystemRestriction1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
@@ -349,6 +400,16 @@ public class SystemPartyModification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemRestriction1.mmObject();
+		}
+
+		@Override
+		public SystemRestriction1 getValue(SystemPartyModification1Choice obj) {
+			return obj.getSystemRestriction();
+		}
+
+		@Override
+		public void setValue(SystemPartyModification1Choice obj, SystemRestriction1 value) {
+			obj.setSystemRestriction(value);
 		}
 	};
 	@XmlElement(name = "MktSpcfcAttr", required = true)
@@ -383,7 +444,7 @@ public class SystemPartyModification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketSpecificAttribute = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemPartyModification1Choice, MarketSpecificAttribute1> mmMarketSpecificAttribute = new MMMessageAttribute<SystemPartyModification1Choice, MarketSpecificAttribute1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemPartyModification1Choice.mmObject();
 			isDerived = false;
@@ -394,6 +455,16 @@ public class SystemPartyModification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MarketSpecificAttribute1.mmObject();
+		}
+
+		@Override
+		public MarketSpecificAttribute1 getValue(SystemPartyModification1Choice obj) {
+			return obj.getMarketSpecificAttribute();
+		}
+
+		@Override
+		public void setValue(SystemPartyModification1Choice obj, MarketSpecificAttribute1 value) {
+			obj.setMarketSpecificAttribute(value);
 		}
 	};
 
@@ -444,7 +515,7 @@ public class SystemPartyModification1Choice {
 		return technicalAddress;
 	}
 
-	public SystemPartyModification1Choice setTechnicalAddress(com.tools20022.repository.choice.TechnicalIdentification1Choice technicalAddress) {
+	public SystemPartyModification1Choice setTechnicalAddress(TechnicalIdentification1Choice technicalAddress) {
 		this.technicalAddress = Objects.requireNonNull(technicalAddress);
 		return this;
 	}

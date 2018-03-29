@@ -112,7 +112,7 @@ public class Unit10 {
 	 * Unit5.mmUnitsNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit10, DecimalNumber> mmUnitsNumber = new MMMessageAttribute<Unit10, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit10.mmObject();
@@ -125,6 +125,16 @@ public class Unit10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(Unit10 obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(Unit10 obj, DecimalNumber value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "Grp1Or2Units", required = true)
@@ -168,7 +178,7 @@ public class Unit10 {
 	 * Unit5.mmGroup1Or2Units}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Unit10, UKTaxGroupUnit1Code> mmGroup1Or2Units = new MMMessageAttribute<Unit10, UKTaxGroupUnit1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Unit10.mmObject();
@@ -181,6 +191,16 @@ public class Unit10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UKTaxGroupUnit1Code.mmObject();
+		}
+
+		@Override
+		public UKTaxGroupUnit1Code getValue(Unit10 obj) {
+			return obj.getGroup1Or2Units();
+		}
+
+		@Override
+		public void setValue(Unit10 obj, UKTaxGroupUnit1Code value) {
+			obj.setGroup1Or2Units(value);
 		}
 	};
 

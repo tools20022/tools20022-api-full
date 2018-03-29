@@ -102,7 +102,7 @@ public class Dispute1 {
 	 * definition} = "Unique identification for the margin call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarginCallRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Dispute1, Max35Text> mmMarginCallRequestIdentification = new MMMessageAttribute<Dispute1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class Dispute1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Dispute1 obj) {
+			return obj.getMarginCallRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Dispute1 obj, Max35Text value) {
+			obj.setMarginCallRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "DsptdAmt", required = true)
@@ -149,7 +159,7 @@ public class Dispute1 {
 	 * definition} = "Disputed amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisputedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Dispute1, ActiveCurrencyAndAmount> mmDisputedAmount = new MMMessageAttribute<Dispute1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> DisputeManagement.mmDisputedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
@@ -161,6 +171,16 @@ public class Dispute1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Dispute1 obj) {
+			return obj.getDisputedAmount();
+		}
+
+		@Override
+		public void setValue(Dispute1 obj, ActiveCurrencyAndAmount value) {
+			obj.setDisputedAmount(value);
 		}
 	};
 	@XmlElement(name = "DsptDt", required = true)
@@ -196,7 +216,7 @@ public class Dispute1 {
 	 * definition} = "Date of dispute."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisputeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Dispute1, ISODate> mmDisputeDate = new MMMessageAttribute<Dispute1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> DisputeManagement.mmDisputeDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Dispute1.mmObject();
@@ -208,6 +228,16 @@ public class Dispute1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(Dispute1 obj) {
+			return obj.getDisputeDate();
+		}
+
+		@Override
+		public void setValue(Dispute1 obj, ISODate value) {
+			obj.setDisputeDate(value);
 		}
 	};
 

@@ -113,7 +113,7 @@ public class AutomaticBorrowing3Choice {
 	 * "Condition for automatic borrowing expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticBorrowing3Choice, AutoBorrowing2Code> mmCode = new MMMessageAttribute<AutomaticBorrowing3Choice, AutoBorrowing2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing3Choice.mmObject();
@@ -126,6 +126,16 @@ public class AutomaticBorrowing3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AutoBorrowing2Code.mmObject();
+		}
+
+		@Override
+		public AutoBorrowing2Code getValue(AutomaticBorrowing3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AutomaticBorrowing3Choice obj, AutoBorrowing2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class AutomaticBorrowing3Choice {
 	 * "Condition for automatic borrowing expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AutomaticBorrowing3Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<AutomaticBorrowing3Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing3Choice.mmObject();
@@ -180,6 +190,16 @@ public class AutomaticBorrowing3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(AutomaticBorrowing3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AutomaticBorrowing3Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -145,7 +145,7 @@ public class AccountCashEntrySearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntrySearch2, List<AccountIdentificationSearchCriteriaChoice>> mmAccountIdentification = new MMMessageAttribute<AccountCashEntrySearch2, List<AccountIdentificationSearchCriteriaChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
@@ -156,6 +156,16 @@ public class AccountCashEntrySearch2 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentificationSearchCriteriaChoice.mmObject();
+		}
+
+		@Override
+		public List<AccountIdentificationSearchCriteriaChoice> getValue(AccountCashEntrySearch2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountCashEntrySearch2 obj, List<AccountIdentificationSearchCriteriaChoice> value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "NtryAmt")
@@ -194,7 +204,7 @@ public class AccountCashEntrySearch2 {
 	 * "Specifies the entry amount(s) on which the query is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntrySearch2, List<AmountRangeChoice>> mmEntryAmount = new MMMessageAttribute<AccountCashEntrySearch2, List<AmountRangeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
@@ -205,6 +215,16 @@ public class AccountCashEntrySearch2 {
 			definition = "Specifies the entry amount(s) on which the query is performed.";
 			minOccurs = 0;
 			complexType_lazy = () -> AmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public List<AmountRangeChoice> getValue(AccountCashEntrySearch2 obj) {
+			return obj.getEntryAmount();
+		}
+
+		@Override
+		public void setValue(AccountCashEntrySearch2 obj, List<AmountRangeChoice> value) {
+			obj.setEntryAmount(value);
 		}
 	};
 	@XmlElement(name = "NtryAmtCcy")
@@ -236,7 +256,7 @@ public class AccountCashEntrySearch2 {
 	 * definition} = "Currency of the entry amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryAmountCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntrySearch2, List<CurrencyCode>> mmEntryAmountCurrency = new MMMessageAttribute<AccountCashEntrySearch2, List<CurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
 			isDerived = false;
@@ -246,6 +266,16 @@ public class AccountCashEntrySearch2 {
 			definition = "Currency of the entry amount.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<CurrencyCode> getValue(AccountCashEntrySearch2 obj) {
+			return obj.getEntryAmountCurrency();
+		}
+
+		@Override
+		public void setValue(AccountCashEntrySearch2 obj, List<CurrencyCode> value) {
+			obj.setEntryAmountCurrency(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -283,7 +313,7 @@ public class AccountCashEntrySearch2 {
 	 * definition} = "Indicates whether an entry is a credit or a debit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntrySearch2, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<AccountCashEntrySearch2, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
@@ -295,6 +325,16 @@ public class AccountCashEntrySearch2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(AccountCashEntrySearch2 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(AccountCashEntrySearch2 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtrySts")
@@ -332,7 +372,7 @@ public class AccountCashEntrySearch2 {
 	 * definition} = "Status of an entry on the books of the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntrySearch2, List<EntryStatus1Code>> mmEntryStatus = new MMMessageAttribute<AccountCashEntrySearch2, List<EntryStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
@@ -343,6 +383,16 @@ public class AccountCashEntrySearch2 {
 			definition = "Status of an entry on the books of the account servicer.";
 			minOccurs = 0;
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
+		}
+
+		@Override
+		public List<EntryStatus1Code> getValue(AccountCashEntrySearch2 obj) {
+			return obj.getEntryStatus();
+		}
+
+		@Override
+		public void setValue(AccountCashEntrySearch2 obj, List<EntryStatus1Code> value) {
+			obj.setEntryStatus(value);
 		}
 	};
 	@XmlElement(name = "NtryDt")
@@ -382,7 +432,7 @@ public class AccountCashEntrySearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntrySearch2, List<DateAndDateTimeSearchChoice>> mmEntryDate = new MMMessageAttribute<AccountCashEntrySearch2, List<DateAndDateTimeSearchChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
@@ -393,6 +443,16 @@ public class AccountCashEntrySearch2 {
 			definition = "Date and time at which an entry is posted to an account on the account servicer's books.";
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
+		}
+
+		@Override
+		public List<DateAndDateTimeSearchChoice> getValue(AccountCashEntrySearch2 obj) {
+			return obj.getEntryDate();
+		}
+
+		@Override
+		public void setValue(AccountCashEntrySearch2 obj, List<DateAndDateTimeSearchChoice> value) {
+			obj.setEntryDate(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -430,7 +490,7 @@ public class AccountCashEntrySearch2 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntrySearch2, Optional<AnyBICIdentifier>> mmAccountOwner = new MMMessageAttribute<AccountCashEntrySearch2, Optional<AnyBICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
@@ -442,6 +502,16 @@ public class AccountCashEntrySearch2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<AnyBICIdentifier> getValue(AccountCashEntrySearch2 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(AccountCashEntrySearch2 obj, Optional<AnyBICIdentifier> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -481,7 +551,7 @@ public class AccountCashEntrySearch2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountCashEntrySearch2, Optional<BICIdentifier>> mmAccountServicer = new MMMessageAttribute<AccountCashEntrySearch2, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntrySearch2.mmObject();
@@ -493,6 +563,16 @@ public class AccountCashEntrySearch2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(AccountCashEntrySearch2 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(AccountCashEntrySearch2 obj, Optional<BICIdentifier> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 

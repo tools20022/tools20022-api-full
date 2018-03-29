@@ -122,7 +122,7 @@ public class ReferredDocumentAmount1Choice {
 	 * "Amount specified is the exact amount due and payable to the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDuePayableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount> mmDuePayableAmount = new MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
@@ -134,6 +134,16 @@ public class ReferredDocumentAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReferredDocumentAmount1Choice obj) {
+			return obj.getDuePayableAmount();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentAmount1Choice obj, CurrencyAndAmount value) {
+			obj.setDuePayableAmount(value);
 		}
 	};
 	@XmlElement(name = "DscntApldAmt", required = true)
@@ -173,7 +183,7 @@ public class ReferredDocumentAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDiscountAppliedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount> mmDiscountAppliedAmount = new MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
@@ -185,6 +195,16 @@ public class ReferredDocumentAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReferredDocumentAmount1Choice obj) {
+			return obj.getDiscountAppliedAmount();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentAmount1Choice obj, CurrencyAndAmount value) {
+			obj.setDiscountAppliedAmount(value);
 		}
 	};
 	@XmlElement(name = "RmtdAmt", required = true)
@@ -222,7 +242,7 @@ public class ReferredDocumentAmount1Choice {
 	 * definition} = "Amount of money remitted for the referred document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemittedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount> mmRemittedAmount = new MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmRemittedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
@@ -234,6 +254,16 @@ public class ReferredDocumentAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReferredDocumentAmount1Choice obj) {
+			return obj.getRemittedAmount();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentAmount1Choice obj, CurrencyAndAmount value) {
+			obj.setRemittedAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtNoteAmt", required = true)
@@ -273,7 +303,7 @@ public class ReferredDocumentAmount1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditNoteAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount> mmCreditNoteAmount = new MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
@@ -285,6 +315,16 @@ public class ReferredDocumentAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReferredDocumentAmount1Choice obj) {
+			return obj.getCreditNoteAmount();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentAmount1Choice obj, CurrencyAndAmount value) {
+			obj.setCreditNoteAmount(value);
 		}
 	};
 	@XmlElement(name = "TaxAmt", required = true)
@@ -322,7 +362,7 @@ public class ReferredDocumentAmount1Choice {
 	 * "Quantity of cash resulting from the calculation of the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount> mmTaxAmount = new MMMessageAttribute<ReferredDocumentAmount1Choice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReferredDocumentAmount1Choice.mmObject();
@@ -334,6 +374,16 @@ public class ReferredDocumentAmount1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReferredDocumentAmount1Choice obj) {
+			return obj.getTaxAmount();
+		}
+
+		@Override
+		public void setValue(ReferredDocumentAmount1Choice obj, CurrencyAndAmount value) {
+			obj.setTaxAmount(value);
 		}
 	};
 

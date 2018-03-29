@@ -114,7 +114,7 @@ public class EligibleSecurity2 {
 	 * EligibleSecurity1.mmSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibleSecurity2, ISINOct2015Identifier> mmSecurityIdentification = new MMMessageAttribute<EligibleSecurity2, ISINOct2015Identifier>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleSecurity2.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class EligibleSecurity2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(EligibleSecurity2 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(EligibleSecurity2 obj, ISINOct2015Identifier value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "CollstnCcy", required = true)
@@ -165,7 +175,7 @@ public class EligibleSecurity2 {
 	 * EligibleSecurity1.mmCollateralisationCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralisationCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibleSecurity2, ActiveOrHistoricCurrencyCode> mmCollateralisationCurrency = new MMMessageAttribute<EligibleSecurity2, ActiveOrHistoricCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleSecurity2.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class EligibleSecurity2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(EligibleSecurity2 obj) {
+			return obj.getCollateralisationCurrency();
+		}
+
+		@Override
+		public void setValue(EligibleSecurity2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setCollateralisationCurrency(value);
 		}
 	};
 	@XmlElement(name = "PtyId", required = true)
@@ -215,7 +235,7 @@ public class EligibleSecurity2 {
 	 * EligibleSecurity1.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibleSecurity2, NCBOrPaymentBank1Choice> mmPartyIdentification = new MMMessageAttribute<EligibleSecurity2, NCBOrPaymentBank1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibleSecurity2.mmObject();
 			isDerived = false;
@@ -227,6 +247,16 @@ public class EligibleSecurity2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NCBOrPaymentBank1Choice.mmObject();
+		}
+
+		@Override
+		public NCBOrPaymentBank1Choice getValue(EligibleSecurity2 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(EligibleSecurity2 obj, NCBOrPaymentBank1Choice value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 

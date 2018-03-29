@@ -32,7 +32,6 @@ import com.tools20022.repository.msg.MarketIdentification88;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FXPostTradeConfirmation;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -158,7 +157,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * definition} = "Identification of the advice acknowledgement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdviceAcknowledgementIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, Optional<MessageIdentification1>> mmAdviceAcknowledgementIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, Optional<MessageIdentification1>>() {
 		{
 			xmlTag = "AdvcAckId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,12 +168,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getAdviceAcknowledgementIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MessageIdentification1> getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getAdviceAcknowledgementIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, Optional<MessageIdentification1> value) {
+			obj.setAdviceAcknowledgementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqId", required = true)
@@ -202,7 +203,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * definition} = "Identification of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, MessageIdentification1> mmRequestIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, MessageIdentification1>() {
 		{
 			xmlTag = "ReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,12 +214,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getRequestIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getRequestIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, MessageIdentification1 value) {
+			obj.setRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradDt", required = true)
@@ -245,7 +248,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * definition} = "Specifies the date on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeDate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, ISODate> mmTradeDate = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, ISODate>() {
 		{
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,12 +259,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getTradeDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "TradId", required = true)
@@ -290,7 +295,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, Max35Text> mmTradeIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, Max35Text>() {
 		{
 			xmlTag = "TradId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,12 +306,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getTradeIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, Max35Text value) {
+			obj.setTradeIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradgMd", required = true)
@@ -334,7 +341,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * definition} = "Identifies the type of the trade mode."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradingMode = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, TradingModeType1Code> mmTradingMode = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, TradingModeType1Code>() {
 		{
 			xmlTag = "TradgMd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -345,12 +352,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			simpleType_lazy = () -> TradingModeType1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getTradingMode", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradingModeType1Code getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getTradingMode();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, TradingModeType1Code value) {
+			obj.setTradingMode(value);
 		}
 	};
 	@XmlElement(name = "AffirmSts", required = true)
@@ -379,7 +388,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * "Identifies the status of the confirmation acknowledgement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAffirmationStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, AffirmStatus1Code> mmAffirmationStatus = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, AffirmStatus1Code>() {
 		{
 			xmlTag = "AffirmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -390,12 +399,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			simpleType_lazy = () -> AffirmStatus1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getAffirmationStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AffirmStatus1Code getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getAffirmationStatus();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, AffirmStatus1Code value) {
+			obj.setAffirmationStatus(value);
 		}
 	};
 	@XmlElement(name = "ConfSts", required = true)
@@ -423,7 +434,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * definition} = "Identifies the status of the confirmation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmConfirmationStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, TradeConfirmationStatus1Code> mmConfirmationStatus = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, TradeConfirmationStatus1Code>() {
 		{
 			xmlTag = "ConfSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -434,12 +445,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			simpleType_lazy = () -> TradeConfirmationStatus1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getConfirmationStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeConfirmationStatus1Code getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getConfirmationStatus();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, TradeConfirmationStatus1Code value) {
+			obj.setConfirmationStatus(value);
 		}
 	};
 	@XmlElement(name = "MktId", required = true)
@@ -467,7 +480,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * definition} = "Market in which a trade transaction has been executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMarketIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, MarketIdentification88> mmMarketIdentification = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, MarketIdentification88>() {
 		{
 			xmlTag = "MktId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -478,12 +491,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			complexType_lazy = () -> MarketIdentification88.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getMarketIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MarketIdentification88 getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getMarketIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, MarketIdentification88 value) {
+			obj.setMarketIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -511,7 +526,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * definition} = "Free format text string."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, Optional<AdditionalInformation5>> mmAdditionalInformation = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, Optional<AdditionalInformation5>>() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -522,12 +537,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			complexType_lazy = () -> AdditionalInformation5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getAdditionalInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalInformation5> getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, Optional<AdditionalInformation5> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -557,7 +574,7 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -567,12 +584,14 @@ public class ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

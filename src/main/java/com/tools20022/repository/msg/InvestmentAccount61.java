@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -253,7 +254,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<InvestmentAccount61, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -266,6 +267,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount61 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -309,7 +320,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<Max35Text>> mmName = new MMMessageAttribute<InvestmentAccount61, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -322,6 +333,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount61 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dsgnt")
@@ -365,7 +386,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmDesignation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<Max35Text>> mmDesignation = new MMMessageAttribute<InvestmentAccount61, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -378,6 +399,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount61 obj) {
+			return obj.getDesignation();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Max35Text> value) {
+			obj.setDesignation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -420,7 +451,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<AccountType2Choice>> mmType = new MMMessageAttribute<InvestmentAccount61, Optional<AccountType2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -433,6 +464,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountType2Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<AccountType2Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OwnrshTp", required = true)
@@ -476,7 +517,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmOwnershipType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOwnershipType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, OwnershipType2Choice> mmOwnershipType = new MMMessageAttribute<InvestmentAccount61, OwnershipType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmOwnershipType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -489,6 +530,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OwnershipType2Choice.mmObject();
+		}
+
+		@Override
+		public OwnershipType2Choice getValue(InvestmentAccount61 obj) {
+			return obj.getOwnershipType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, OwnershipType2Choice value) {
+			obj.setOwnershipType(value);
 		}
 	};
 	@XmlElement(name = "TaxXmptn")
@@ -531,7 +582,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmTaxExemption}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxExemption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<TaxExemptionReason2Choice>> mmTaxExemption = new MMMessageAttribute<InvestmentAccount61, Optional<TaxExemptionReason2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -544,6 +595,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TaxExemptionReason2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxExemptionReason2Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getTaxExemption();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<TaxExemptionReason2Choice> value) {
+			obj.setTaxExemption(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtFrqcy")
@@ -586,7 +647,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmStatementFrequency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<StatementFrequencyReason2Choice>> mmStatementFrequency = new MMMessageAttribute<InvestmentAccount61, Optional<StatementFrequencyReason2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -599,6 +660,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementFrequencyReason2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementFrequencyReason2Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getStatementFrequency();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<StatementFrequencyReason2Choice> value) {
+			obj.setStatementFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefCcy")
@@ -643,7 +714,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmReferenceCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<ActiveCurrencyCode>> mmReferenceCurrency = new MMMessageAttribute<InvestmentAccount61, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmReferenceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -656,6 +727,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(InvestmentAccount61 obj) {
+			return obj.getReferenceCurrency();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setReferenceCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lang")
@@ -697,7 +778,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmLanguage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLanguage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<LanguageCode>> mmLanguage = new MMMessageAttribute<InvestmentAccount61, Optional<LanguageCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmLanguage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -710,6 +791,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LanguageCode.mmObject();
+		}
+
+		@Override
+		public Optional<LanguageCode> getValue(InvestmentAccount61 obj) {
+			return obj.getLanguage();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<LanguageCode> value) {
+			obj.setLanguage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmPref")
@@ -754,7 +845,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmIncomePreference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<IncomePreference2Code>> mmIncomePreference = new MMMessageAttribute<InvestmentAccount61, Optional<IncomePreference2Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -768,9 +859,19 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			simpleType_lazy = () -> IncomePreference2Code.mmObject();
 		}
+
+		@Override
+		public Optional<IncomePreference2Code> getValue(InvestmentAccount61 obj) {
+			return obj.getIncomePreference();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<IncomePreference2Code> value) {
+			obj.setIncomePreference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "RinvstmtDtls")
-	protected List<com.tools20022.repository.msg.Reinvestment3> reinvestmentDetails;
+	protected List<Reinvestment3> reinvestmentDetails;
 	/**
 	 * 
 	 <p>
@@ -809,7 +910,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmReinvestmentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReinvestmentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, List<Reinvestment3>> mmReinvestmentDetails = new MMMessageAssociationEnd<InvestmentAccount61, List<Reinvestment3>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmReinvestment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -821,7 +922,17 @@ public class InvestmentAccount61 {
 			previousVersion_lazy = () -> InvestmentAccount49.mmReinvestmentDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Reinvestment3.mmObject();
+			type_lazy = () -> Reinvestment3.mmObject();
+		}
+
+		@Override
+		public List<Reinvestment3> getValue(InvestmentAccount61 obj) {
+			return obj.getReinvestmentDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, List<Reinvestment3> value) {
+			obj.setReinvestmentDetails(value);
 		}
 	};
 	@XmlElement(name = "TaxWhldgMtd")
@@ -866,7 +977,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmTaxWithholdingMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxWithholdingMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<TaxWithholdingMethod3Code>> mmTaxWithholdingMethod = new MMMessageAttribute<InvestmentAccount61, Optional<TaxWithholdingMethod3Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmTaxWithholdingMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -880,9 +991,19 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			simpleType_lazy = () -> TaxWithholdingMethod3Code.mmObject();
 		}
+
+		@Override
+		public Optional<TaxWithholdingMethod3Code> getValue(InvestmentAccount61 obj) {
+			return obj.getTaxWithholdingMethod();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<TaxWithholdingMethod3Code> value) {
+			obj.setTaxWithholdingMethod(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TaxRptg")
-	protected List<com.tools20022.repository.msg.TaxReporting2> taxReporting;
+	protected List<TaxReporting2> taxReporting;
 	/**
 	 * 
 	 <p>
@@ -921,7 +1042,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmTaxReporting}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxReporting = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, List<TaxReporting2>> mmTaxReporting = new MMMessageAssociationEnd<InvestmentAccount61, List<TaxReporting2>>() {
 		{
 			businessElementTrace_lazy = () -> TaxPartyRole.mmTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -933,7 +1054,17 @@ public class InvestmentAccount61 {
 			previousVersion_lazy = () -> InvestmentAccount49.mmTaxReporting;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxReporting2.mmObject();
+			type_lazy = () -> TaxReporting2.mmObject();
+		}
+
+		@Override
+		public List<TaxReporting2> getValue(InvestmentAccount61 obj) {
+			return obj.getTaxReporting();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, List<TaxReporting2> value) {
+			obj.setTaxReporting(value);
 		}
 	};
 	@XmlElement(name = "LttrInttDtls")
@@ -975,7 +1106,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmLetterIntentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLetterIntentDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<LetterIntent1>> mmLetterIntentDetails = new MMMessageAttribute<InvestmentAccount61, Optional<LetterIntent1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountContract.mmLetterIntentReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -987,7 +1118,17 @@ public class InvestmentAccount61 {
 			previousVersion_lazy = () -> InvestmentAccount49.mmLetterIntentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.LetterIntent1.mmObject();
+			complexType_lazy = () -> LetterIntent1.mmObject();
+		}
+
+		@Override
+		public Optional<LetterIntent1> getValue(InvestmentAccount61 obj) {
+			return obj.getLetterIntentDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<LetterIntent1> value) {
+			obj.setLetterIntentDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcmltnRghtRef")
@@ -1031,7 +1172,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmAccumulationRightReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccumulationRightReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<Max35Text>> mmAccumulationRightReference = new MMMessageAttribute<InvestmentAccount61, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountContract.mmAccumulationRightReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1044,6 +1185,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount61 obj) {
+			return obj.getAccumulationRightReference();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Max35Text> value) {
+			obj.setAccumulationRightReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqrdSgntriesNb")
@@ -1087,7 +1238,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmRequiredSignatoriesNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequiredSignatoriesNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<Number>> mmRequiredSignatoriesNumber = new MMMessageAttribute<InvestmentAccount61, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> SignatureCondition.mmRequiredSignatureNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1100,6 +1251,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(InvestmentAccount61 obj) {
+			return obj.getRequiredSignatoriesNumber();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Number> value) {
+			obj.setRequiredSignatoriesNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FndFmlyNm")
@@ -1141,7 +1302,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmFundFamilyName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFundFamilyName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<Max350Text>> mmFundFamilyName = new MMMessageAttribute<InvestmentAccount61, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundFamily.mmFundFamilyName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1155,9 +1316,19 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max350Text> getValue(InvestmentAccount61 obj) {
+			return obj.getFundFamilyName();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Max350Text> value) {
+			obj.setFundFamilyName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
-	protected List<com.tools20022.repository.msg.FinancialInstrument56> financialInstrumentDetails;
+	protected List<FinancialInstrument56> financialInstrumentDetails;
 	/**
 	 * 
 	 <p>
@@ -1196,7 +1367,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, List<FinancialInstrument56>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<InvestmentAccount61, List<FinancialInstrument56>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1208,7 +1379,17 @@ public class InvestmentAccount61 {
 			previousVersion_lazy = () -> InvestmentAccount49.mmFinancialInstrumentDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument56.mmObject();
+			type_lazy = () -> FinancialInstrument56.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrument56> getValue(InvestmentAccount61 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, List<FinancialInstrument56> value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 	@XmlElement(name = "RndgDtls")
@@ -1251,7 +1432,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmRoundingDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRoundingDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<RoundingParameters1>> mmRoundingDetails = new MMMessageAssociationEnd<InvestmentAccount61, Optional<RoundingParameters1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmRoundingMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1264,7 +1445,17 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RoundingParameters1.mmObject();
+			type_lazy = () -> RoundingParameters1.mmObject();
+		}
+
+		@Override
+		public Optional<RoundingParameters1> getValue(InvestmentAccount61 obj) {
+			return obj.getRoundingDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<RoundingParameters1> value) {
+			obj.setRoundingDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -1308,7 +1499,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<PartyIdentification70Choice>> mmAccountServicer = new MMMessageAssociationEnd<InvestmentAccount61, Optional<PartyIdentification70Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1322,6 +1513,16 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlckdSts")
@@ -1366,7 +1567,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmBlockedStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBlockedStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<BlockedStatusReason2Choice>> mmBlockedStatus = new MMMessageAttribute<InvestmentAccount61, Optional<BlockedStatusReason2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1379,6 +1580,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BlockedStatusReason2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BlockedStatusReason2Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getBlockedStatus();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<BlockedStatusReason2Choice> value) {
+			obj.setBlockedStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctUsgTp")
@@ -1421,7 +1632,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmAccountUsageType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountUsageType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<AccountUsageType2Choice>> mmAccountUsageType = new MMMessageAttribute<InvestmentAccount61, Optional<AccountUsageType2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1434,6 +1645,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountUsageType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountUsageType2Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getAccountUsageType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<AccountUsageType2Choice> value) {
+			obj.setAccountUsageType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrgnStsCertfctn")
@@ -1473,7 +1694,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmForeignStatusCertification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignStatusCertification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<Provided1Code>> mmForeignStatusCertification = new MMMessageAttribute<InvestmentAccount61, Optional<Provided1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
 			isDerived = false;
@@ -1485,6 +1706,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Provided1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Provided1Code> getValue(InvestmentAccount61 obj) {
+			return obj.getForeignStatusCertification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Provided1Code> value) {
+			obj.setForeignStatusCertification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSgntrDtTm")
@@ -1528,7 +1759,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmAccountSignatureDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountSignatureDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<DateAndDateTimeChoice>> mmAccountSignatureDateTime = new MMMessageAttribute<InvestmentAccount61, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1541,6 +1772,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(InvestmentAccount61 obj) {
+			return obj.getAccountSignatureDateTime();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setAccountSignatureDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxChanlTp")
@@ -1584,7 +1825,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmTransactionChannelType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionChannelType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<TransactionChannelType1Choice>> mmTransactionChannelType = new MMMessageAssociationEnd<InvestmentAccount61, Optional<TransactionChannelType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> AccountContract.mmTransactionChannel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1598,6 +1839,16 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TransactionChannelType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionChannelType1Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getTransactionChannelType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<TransactionChannelType1Choice> value) {
+			obj.setTransactionChannelType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctCtgy")
@@ -1639,7 +1890,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmInvestmentAccountCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountCategory = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<InvestmentAccountCategory1Choice>> mmInvestmentAccountCategory = new MMMessageAssociationEnd<InvestmentAccount61, Optional<InvestmentAccountCategory1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmCategory;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1653,6 +1904,16 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InvestmentAccountCategory1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccountCategory1Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getInvestmentAccountCategory();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<InvestmentAccountCategory1Choice> value) {
+			obj.setInvestmentAccountCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pldgg")
@@ -1692,7 +1953,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmPledging}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPledging = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<Eligible1Code>> mmPledging = new MMMessageAttribute<InvestmentAccount61, Optional<Eligible1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
 			isDerived = false;
@@ -1704,6 +1965,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Eligible1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Eligible1Code> getValue(InvestmentAccount61 obj) {
+			return obj.getPledging();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Eligible1Code> value) {
+			obj.setPledging(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Coll")
@@ -1742,7 +2013,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmCollateral}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<Collateral1Code>> mmCollateral = new MMMessageAttribute<InvestmentAccount61, Optional<Collateral1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
 			isDerived = false;
@@ -1754,6 +2025,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Collateral1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Collateral1Code> getValue(InvestmentAccount61 obj) {
+			return obj.getCollateral();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Collateral1Code> value) {
+			obj.setCollateral(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ThrdPtyRghts")
@@ -1789,7 +2070,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmThirdPartyRights}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmThirdPartyRights = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<ThirdPartyRights1>> mmThirdPartyRights = new MMMessageAssociationEnd<InvestmentAccount61, Optional<ThirdPartyRights1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
 			isDerived = false;
@@ -1801,7 +2082,17 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ThirdPartyRights1.mmObject();
+			type_lazy = () -> ThirdPartyRights1.mmObject();
+		}
+
+		@Override
+		public Optional<ThirdPartyRights1> getValue(InvestmentAccount61 obj) {
+			return obj.getThirdPartyRights();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<ThirdPartyRights1> value) {
+			obj.setThirdPartyRights(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PwrOfAttnyLvlOfCtrl")
@@ -1840,7 +2131,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmPowerOfAttorneyLevelOfControl}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPowerOfAttorneyLevelOfControl = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<LevelOfControl1Choice>> mmPowerOfAttorneyLevelOfControl = new MMMessageAssociationEnd<InvestmentAccount61, Optional<LevelOfControl1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
 			isDerived = false;
@@ -1853,6 +2144,16 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LevelOfControl1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LevelOfControl1Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getPowerOfAttorneyLevelOfControl();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<LevelOfControl1Choice> value) {
+			obj.setPowerOfAttorneyLevelOfControl(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctgSts")
@@ -1891,7 +2192,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmAccountingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<AccountingStatus1Choice>> mmAccountingStatus = new MMMessageAssociationEnd<InvestmentAccount61, Optional<AccountingStatus1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
 			isDerived = false;
@@ -1904,6 +2205,16 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountingStatus1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountingStatus1Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getAccountingStatus();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<AccountingStatus1Choice> value) {
+			obj.setAccountingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OpngDt")
@@ -1945,7 +2256,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmOpeningDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOpeningDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<DateAndDateTimeChoice>> mmOpeningDate = new MMMessageAssociationEnd<InvestmentAccount61, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmOpeningDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -1959,6 +2270,16 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(InvestmentAccount61 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setOpeningDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -2000,7 +2321,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmClosingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmClosingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<DateAndDateTimeChoice>> mmClosingDate = new MMMessageAssociationEnd<InvestmentAccount61, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmClosingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -2014,6 +2335,16 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(InvestmentAccount61 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NegInd")
@@ -2053,7 +2384,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmNegativeIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNegativeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<YesNoIndicator>> mmNegativeIndicator = new MMMessageAttribute<InvestmentAccount61, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
 			isDerived = false;
@@ -2065,6 +2396,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(InvestmentAccount61 obj) {
+			return obj.getNegativeIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<YesNoIndicator> value) {
+			obj.setNegativeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgOrdr")
@@ -2107,7 +2448,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmProcessingOrder}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount61, Optional<PositionEffect3Code>> mmProcessingOrder = new MMMessageAttribute<InvestmentAccount61, Optional<PositionEffect3Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmPositionEffect;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -2120,6 +2461,16 @@ public class InvestmentAccount61 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PositionEffect3Code.mmObject();
+		}
+
+		@Override
+		public Optional<PositionEffect3Code> getValue(InvestmentAccount61 obj) {
+			return obj.getProcessingOrder();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<PositionEffect3Code> value) {
+			obj.setProcessingOrder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lblty")
@@ -2157,7 +2508,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmLiability}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLiability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<Liability1Choice>> mmLiability = new MMMessageAssociationEnd<InvestmentAccount61, Optional<Liability1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
 			isDerived = false;
@@ -2171,9 +2522,19 @@ public class InvestmentAccount61 {
 			isComposite = true;
 			type_lazy = () -> Liability1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<Liability1Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getLiability();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<Liability1Choice> value) {
+			obj.setLiability(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "InvstrPrfl")
-	protected List<com.tools20022.repository.msg.InvestorProfile1> investorProfile;
+	protected List<InvestorProfile1> investorProfile;
 	/**
 	 * 
 	 <p>
@@ -2207,7 +2568,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmInvestorProfile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestorProfile = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, List<InvestorProfile1>> mmInvestorProfile = new MMMessageAssociationEnd<InvestmentAccount61, List<InvestorProfile1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
 			isDerived = false;
@@ -2218,7 +2579,17 @@ public class InvestmentAccount61 {
 			previousVersion_lazy = () -> InvestmentAccount49.mmInvestorProfile;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestorProfile1.mmObject();
+			type_lazy = () -> InvestorProfile1.mmObject();
+		}
+
+		@Override
+		public List<InvestorProfile1> getValue(InvestmentAccount61 obj) {
+			return obj.getInvestorProfile();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, List<InvestorProfile1> value) {
+			obj.setInvestorProfile(value);
 		}
 	};
 	@XmlElement(name = "FsclYr")
@@ -2259,7 +2630,7 @@ public class InvestmentAccount61 {
 	 * InvestmentAccount49.mmFiscalYear}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFiscalYear = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentAccount61, Optional<FiscalYear1Choice>> mmFiscalYear = new MMMessageAssociationEnd<InvestmentAccount61, Optional<FiscalYear1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount61.mmObject();
@@ -2273,6 +2644,16 @@ public class InvestmentAccount61 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FiscalYear1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FiscalYear1Choice> getValue(InvestmentAccount61 obj) {
+			return obj.getFiscalYear();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount61 obj, Optional<FiscalYear1Choice> value) {
+			obj.setFiscalYear(value.orElse(null));
 		}
 	};
 
@@ -2402,7 +2783,7 @@ public class InvestmentAccount61 {
 		return reinvestmentDetails == null ? reinvestmentDetails = new ArrayList<>() : reinvestmentDetails;
 	}
 
-	public InvestmentAccount61 setReinvestmentDetails(List<com.tools20022.repository.msg.Reinvestment3> reinvestmentDetails) {
+	public InvestmentAccount61 setReinvestmentDetails(List<Reinvestment3> reinvestmentDetails) {
 		this.reinvestmentDetails = Objects.requireNonNull(reinvestmentDetails);
 		return this;
 	}
@@ -2420,7 +2801,7 @@ public class InvestmentAccount61 {
 		return taxReporting == null ? taxReporting = new ArrayList<>() : taxReporting;
 	}
 
-	public InvestmentAccount61 setTaxReporting(List<com.tools20022.repository.msg.TaxReporting2> taxReporting) {
+	public InvestmentAccount61 setTaxReporting(List<TaxReporting2> taxReporting) {
 		this.taxReporting = Objects.requireNonNull(taxReporting);
 		return this;
 	}
@@ -2429,7 +2810,7 @@ public class InvestmentAccount61 {
 		return letterIntentDetails == null ? Optional.empty() : Optional.of(letterIntentDetails);
 	}
 
-	public InvestmentAccount61 setLetterIntentDetails(com.tools20022.repository.msg.LetterIntent1 letterIntentDetails) {
+	public InvestmentAccount61 setLetterIntentDetails(LetterIntent1 letterIntentDetails) {
 		this.letterIntentDetails = letterIntentDetails;
 		return this;
 	}
@@ -2465,7 +2846,7 @@ public class InvestmentAccount61 {
 		return financialInstrumentDetails == null ? financialInstrumentDetails = new ArrayList<>() : financialInstrumentDetails;
 	}
 
-	public InvestmentAccount61 setFinancialInstrumentDetails(List<com.tools20022.repository.msg.FinancialInstrument56> financialInstrumentDetails) {
+	public InvestmentAccount61 setFinancialInstrumentDetails(List<FinancialInstrument56> financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}
@@ -2474,7 +2855,7 @@ public class InvestmentAccount61 {
 		return roundingDetails == null ? Optional.empty() : Optional.of(roundingDetails);
 	}
 
-	public InvestmentAccount61 setRoundingDetails(com.tools20022.repository.msg.RoundingParameters1 roundingDetails) {
+	public InvestmentAccount61 setRoundingDetails(RoundingParameters1 roundingDetails) {
 		this.roundingDetails = roundingDetails;
 		return this;
 	}
@@ -2564,7 +2945,7 @@ public class InvestmentAccount61 {
 		return thirdPartyRights == null ? Optional.empty() : Optional.of(thirdPartyRights);
 	}
 
-	public InvestmentAccount61 setThirdPartyRights(com.tools20022.repository.msg.ThirdPartyRights1 thirdPartyRights) {
+	public InvestmentAccount61 setThirdPartyRights(ThirdPartyRights1 thirdPartyRights) {
 		this.thirdPartyRights = thirdPartyRights;
 		return this;
 	}
@@ -2636,7 +3017,7 @@ public class InvestmentAccount61 {
 		return investorProfile == null ? investorProfile = new ArrayList<>() : investorProfile;
 	}
 
-	public InvestmentAccount61 setInvestorProfile(List<com.tools20022.repository.msg.InvestorProfile1> investorProfile) {
+	public InvestmentAccount61 setInvestorProfile(List<InvestorProfile1> investorProfile) {
 		this.investorProfile = Objects.requireNonNull(investorProfile);
 		return this;
 	}

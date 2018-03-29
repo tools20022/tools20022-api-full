@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SubBalanceBreakdown1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -111,7 +112,7 @@ public class FinancialInstrumentAggregateBalance2 {
 	 * definition} = "Balance of settled transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettledBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAggregateBalance2, Optional<FinancialInstrumentQuantity1Choice>> mmSettledBalance = new MMMessageAssociationEnd<FinancialInstrumentAggregateBalance2, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.mmObject();
@@ -124,6 +125,16 @@ public class FinancialInstrumentAggregateBalance2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(FinancialInstrumentAggregateBalance2 obj) {
+			return obj.getSettledBalance();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAggregateBalance2 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setSettledBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TraddBal")
@@ -161,7 +172,7 @@ public class FinancialInstrumentAggregateBalance2 {
 	 * "Balance of settled transactions and transactions pending settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAggregateBalance2, Optional<FinancialInstrumentQuantity1Choice>> mmTradedBalance = new MMMessageAssociationEnd<FinancialInstrumentAggregateBalance2, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.mmObject();
@@ -175,9 +186,19 @@ public class FinancialInstrumentAggregateBalance2 {
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(FinancialInstrumentAggregateBalance2 obj) {
+			return obj.getTradedBalance();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAggregateBalance2 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setTradedBalance(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "BalBrkdwn")
-	protected List<com.tools20022.repository.msg.SubBalanceBreakdown1> balanceBreakdown;
+	protected List<SubBalanceBreakdown1> balanceBreakdown;
 	/**
 	 * 
 	 <p>
@@ -209,7 +230,7 @@ public class FinancialInstrumentAggregateBalance2 {
 	 * definition} = "Breakdown of the balances of holdings into sub-balances."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAggregateBalance2, List<SubBalanceBreakdown1>> mmBalanceBreakdown = new MMMessageAssociationEnd<FinancialInstrumentAggregateBalance2, List<SubBalanceBreakdown1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAggregateBalance2.mmObject();
@@ -220,7 +241,17 @@ public class FinancialInstrumentAggregateBalance2 {
 			definition = "Breakdown of the balances of holdings into sub-balances.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubBalanceBreakdown1.mmObject();
+			type_lazy = () -> SubBalanceBreakdown1.mmObject();
+		}
+
+		@Override
+		public List<SubBalanceBreakdown1> getValue(FinancialInstrumentAggregateBalance2 obj) {
+			return obj.getBalanceBreakdown();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAggregateBalance2 obj, List<SubBalanceBreakdown1> value) {
+			obj.setBalanceBreakdown(value);
 		}
 	};
 
@@ -261,7 +292,7 @@ public class FinancialInstrumentAggregateBalance2 {
 		return balanceBreakdown == null ? balanceBreakdown = new ArrayList<>() : balanceBreakdown;
 	}
 
-	public FinancialInstrumentAggregateBalance2 setBalanceBreakdown(List<com.tools20022.repository.msg.SubBalanceBreakdown1> balanceBreakdown) {
+	public FinancialInstrumentAggregateBalance2 setBalanceBreakdown(List<SubBalanceBreakdown1> balanceBreakdown) {
 		this.balanceBreakdown = Objects.requireNonNull(balanceBreakdown);
 		return this;
 	}

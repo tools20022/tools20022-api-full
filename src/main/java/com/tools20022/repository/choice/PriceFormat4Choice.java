@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PriceValueType5FormatChoice;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.entity.Index;
 import com.tools20022.repository.entity.Price;
@@ -113,7 +114,7 @@ public class PriceFormat4Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat4Choice, AmountPrice1> mmAmount = new MMMessageAttribute<PriceFormat4Choice, AmountPrice1>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat4Choice.mmObject();
@@ -125,6 +126,16 @@ public class PriceFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountPrice1.mmObject();
+		}
+
+		@Override
+		public AmountPrice1 getValue(PriceFormat4Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PriceFormat4Choice obj, AmountPrice1 value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -161,7 +172,7 @@ public class PriceFormat4Choice {
 	 * definition} = "Price expressed as a rate, ie, percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat4Choice, PriceRate1> mmRate = new MMMessageAttribute<PriceFormat4Choice, PriceRate1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat4Choice.mmObject();
@@ -173,6 +184,16 @@ public class PriceFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PriceRate1.mmObject();
+		}
+
+		@Override
+		public PriceRate1 getValue(PriceFormat4Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PriceFormat4Choice obj, PriceRate1 value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfd", required = true)
@@ -205,7 +226,7 @@ public class PriceFormat4Choice {
 	 * definition} = "The value of the price is not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecified = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat4Choice, PriceValueType5FormatChoice> mmNotSpecified = new MMMessageAttribute<PriceFormat4Choice, PriceValueType5FormatChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat4Choice.mmObject();
 			isDerived = false;
@@ -215,7 +236,17 @@ public class PriceFormat4Choice {
 			definition = "The value of the price is not specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.PriceValueType5FormatChoice.mmObject();
+			complexType_lazy = () -> PriceValueType5FormatChoice.mmObject();
+		}
+
+		@Override
+		public PriceValueType5FormatChoice getValue(PriceFormat4Choice obj) {
+			return obj.getNotSpecified();
+		}
+
+		@Override
+		public void setValue(PriceFormat4Choice obj, PriceValueType5FormatChoice value) {
+			obj.setNotSpecified(value);
 		}
 	};
 	@XmlElement(name = "IndxPts", required = true)
@@ -253,7 +284,7 @@ public class PriceFormat4Choice {
 	 * definition} = "Price expressed as index points."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexPoints = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat4Choice, DecimalNumber> mmIndexPoints = new MMMessageAttribute<PriceFormat4Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexPoints;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat4Choice.mmObject();
@@ -265,6 +296,16 @@ public class PriceFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(PriceFormat4Choice obj) {
+			return obj.getIndexPoints();
+		}
+
+		@Override
+		public void setValue(PriceFormat4Choice obj, DecimalNumber value) {
+			obj.setIndexPoints(value);
 		}
 	};
 
@@ -305,7 +346,7 @@ public class PriceFormat4Choice {
 		return notSpecified;
 	}
 
-	public PriceFormat4Choice setNotSpecified(com.tools20022.repository.choice.PriceValueType5FormatChoice notSpecified) {
+	public PriceFormat4Choice setNotSpecified(PriceValueType5FormatChoice notSpecified) {
 		this.notSpecified = Objects.requireNonNull(notSpecified);
 		return this;
 	}

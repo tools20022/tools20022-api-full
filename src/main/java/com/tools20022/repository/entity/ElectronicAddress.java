@@ -22,9 +22,9 @@ import com.tools20022.repository.choice.TechnicalIdentification1Choice;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ContactPoint;
+import com.tools20022.repository.entity.Presentation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -356,7 +356,7 @@ public class ElectronicAddress extends ContactPoint {
 	 * definition} = "Address for electronic mail (e-mail)."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEmailAddress = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ElectronicAddress, Max256Text> mmEmailAddress = new MMBusinessAttribute<ElectronicAddress, Max256Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmEmailAddress, OrderDeskContactDetails.mmEmailAddress, ContactAttributes1.mmEmailAddress, CommunicationAddress3.mmEmail, ContactDetails2.mmEmailAddress,
 					ContactIdentification2.mmEmailAddress, ContactIdentification1.mmEmailAddress, Contacts3.mmEmailAddress, ContactInformation1.mmEmailAddress, CommunicationAddress4.mmEmailAddress, ContactIdentification4.mmEmailAddress,
@@ -372,12 +372,14 @@ public class ElectronicAddress extends ContactPoint {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ElectronicAddress.class.getMethod("getEmailAddress", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max256Text getValue(ElectronicAddress obj) {
+			return obj.getEmailAddress();
+		}
+
+		@Override
+		public void setValue(ElectronicAddress obj, Max256Text value) {
+			obj.setEmailAddress(value);
 		}
 	};
 	protected Max256Text uRLAddress;
@@ -482,7 +484,7 @@ public class ElectronicAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmURLAddress = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ElectronicAddress, Max256Text> mmURLAddress = new MMBusinessAttribute<ElectronicAddress, Max256Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmURLAddress, ContactAttributes1.mmURLAddress, CommunicationAddress3.mmURLAddress, CorporateActionNarrative3.mmURLAddress, CorporateActionNarrative18.mmURLAddress,
 					MeetingNotice1.mmAdditionalDocumentationURLAddress, CommunicationAddress4.mmURLAddress, MeetingNotice2.mmAdditionalDocumentationURLAddress, AdditionalRights1.mmAdditionalRightInformationURLAddress,
@@ -499,12 +501,14 @@ public class ElectronicAddress extends ContactPoint {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ElectronicAddress.class.getMethod("getURLAddress", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max256Text getValue(ElectronicAddress obj) {
+			return obj.getURLAddress();
+		}
+
+		@Override
+		public void setValue(ElectronicAddress obj, Max256Text value) {
+			obj.setURLAddress(value);
 		}
 	};
 	protected Max35Text telexAddress;
@@ -544,7 +548,7 @@ public class ElectronicAddress extends ContactPoint {
 	 * definition} = "Address for a telex machine."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTelexAddress = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ElectronicAddress, Max35Text> mmTelexAddress = new MMBusinessAttribute<ElectronicAddress, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommunicationAddress3.mmTelexAddress, CommunicationAddress6.mmTelexAddress);
 			isDerived = false;
@@ -557,12 +561,14 @@ public class ElectronicAddress extends ContactPoint {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ElectronicAddress.class.getMethod("getTelexAddress", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ElectronicAddress obj) {
+			return obj.getTelexAddress();
+		}
+
+		@Override
+		public void setValue(ElectronicAddress obj, Max35Text value) {
+			obj.setTelexAddress(value);
 		}
 	};
 	protected Presentation relatedPresentation;
@@ -601,7 +607,7 @@ public class ElectronicAddress extends ContactPoint {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedPresentation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ElectronicAddress, Presentation> mmRelatedPresentation = new MMBusinessAssociationEnd<ElectronicAddress, Presentation>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
@@ -610,9 +616,19 @@ public class ElectronicAddress extends ContactPoint {
 			definition = "Presentation process for which an electronic presentation address is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Presentation.mmElectronicPresentationAddress;
+			opposite_lazy = () -> Presentation.mmElectronicPresentationAddress;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Presentation.mmObject();
+			type_lazy = () -> Presentation.mmObject();
+		}
+
+		@Override
+		public Presentation getValue(ElectronicAddress obj) {
+			return obj.getRelatedPresentation();
+		}
+
+		@Override
+		public void setValue(ElectronicAddress obj, Presentation value) {
+			obj.setRelatedPresentation(value);
 		}
 	};
 	protected Max35Text teletextAddress;
@@ -641,7 +657,7 @@ public class ElectronicAddress extends ContactPoint {
 	 * definition} = "Address for a teletext."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTeletextAddress = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ElectronicAddress, Max35Text> mmTeletextAddress = new MMBusinessAttribute<ElectronicAddress, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
@@ -653,12 +669,14 @@ public class ElectronicAddress extends ContactPoint {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ElectronicAddress.class.getMethod("getTeletextAddress", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ElectronicAddress obj) {
+			return obj.getTeletextAddress();
+		}
+
+		@Override
+		public void setValue(ElectronicAddress obj, Max35Text value) {
+			obj.setTeletextAddress(value);
 		}
 	};
 	protected Max35Text iSDNAddress;
@@ -687,7 +705,7 @@ public class ElectronicAddress extends ContactPoint {
 	 * definition} = "Address for an Integrated Services Digital Network."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmISDNAddress = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ElectronicAddress, Max35Text> mmISDNAddress = new MMBusinessAttribute<ElectronicAddress, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
@@ -699,12 +717,14 @@ public class ElectronicAddress extends ContactPoint {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ElectronicAddress.class.getMethod("getISDNAddress", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ElectronicAddress obj) {
+			return obj.getISDNAddress();
+		}
+
+		@Override
+		public void setValue(ElectronicAddress obj, Max35Text value) {
+			obj.setISDNAddress(value);
 		}
 	};
 
@@ -715,7 +735,7 @@ public class ElectronicAddress extends ContactPoint {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectronicAddress";
 				definition = "Address which is accessed by electronic means.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Presentation.mmElectronicPresentationAddress);
+				associationDomain_lazy = () -> Arrays.asList(Presentation.mmElectronicPresentationAddress);
 				derivationElement_lazy = () -> Arrays
 						.asList(IndividualPerson5.mmPrimaryCommunicationAddress, IndividualPerson5.mmSecondaryCommunicationAddress, IndividualPerson10.mmPrimaryCommunicationAddress, IndividualPerson10.mmSecondaryCommunicationAddress,
 								Intermediary5.mmPrimaryCommunicationAddress, Intermediary5.mmSecondaryCommunicationAddress, Intermediary12.mmPrimaryCommunicationAddress, Intermediary12.mmSecondaryCommunicationAddress,
@@ -778,7 +798,7 @@ public class ElectronicAddress extends ContactPoint {
 		return relatedPresentation;
 	}
 
-	public ElectronicAddress setRelatedPresentation(com.tools20022.repository.entity.Presentation relatedPresentation) {
+	public ElectronicAddress setRelatedPresentation(Presentation relatedPresentation) {
 		this.relatedPresentation = Objects.requireNonNull(relatedPresentation);
 		return this;
 	}

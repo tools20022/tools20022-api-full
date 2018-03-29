@@ -52,11 +52,15 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption36> forCorporateActionOption36 = new MMConstraint<CorporateActionOption36>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			owner_lazy = () -> CorporateActionOption36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption36 obj) throws Exception {
+			checkCorporateActionOption36(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption45> forCorporateActionOption45 = new MMConstraint<CorporateActionOption45>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			owner_lazy = () -> CorporateActionOption45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption45 obj) throws Exception {
+			checkCorporateActionOption45(obj);
 		}
 	};
 	/**
@@ -121,12 +129,16 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption51> forCorporateActionOption51 = new MMConstraint<CorporateActionOption51>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption101);
 			owner_lazy = () -> CorporateActionOption51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption51 obj) throws Exception {
+			checkCorporateActionOption51(obj);
 		}
 	};
 	/**
@@ -152,11 +164,15 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption56> forCorporateActionOption56 = new MMConstraint<CorporateActionOption56>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			owner_lazy = () -> CorporateActionOption56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption56 obj) throws Exception {
+			checkCorporateActionOption56(obj);
 		}
 	};
 	/**
@@ -196,13 +212,17 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption101> forCorporateActionOption101 = new MMConstraint<CorporateActionOption101>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption114);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption51;
 			owner_lazy = () -> CorporateActionOption101.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption101 obj) throws Exception {
+			checkCorporateActionOption101(obj);
 		}
 	};
 	/**
@@ -228,11 +248,15 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption106> forCorporateActionOption106 = new MMConstraint<CorporateActionOption106>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption106;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			owner_lazy = () -> CorporateActionOption106.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption106 obj) throws Exception {
+			checkCorporateActionOption106(obj);
 		}
 	};
 	/**
@@ -273,13 +297,17 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption114> forCorporateActionOption114 = new MMConstraint<CorporateActionOption114>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption114;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption130);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption101;
 			owner_lazy = () -> CorporateActionOption114.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption114 obj) throws Exception {
+			checkCorporateActionOption114(obj);
 		}
 	};
 	/**
@@ -305,11 +333,15 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption127> forCorporateActionOption127 = new MMConstraint<CorporateActionOption127>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption127;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			owner_lazy = () -> CorporateActionOption127.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption127 obj) throws Exception {
+			checkCorporateActionOption127(obj);
 		}
 	};
 	/**
@@ -350,13 +382,17 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption130> forCorporateActionOption130 = new MMConstraint<CorporateActionOption130>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption130;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption138);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption114;
 			owner_lazy = () -> CorporateActionOption130.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption130 obj) throws Exception {
+			checkCorporateActionOption130(obj);
 		}
 	};
 	/**
@@ -382,11 +418,15 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption133> forCorporateActionOption133 = new MMConstraint<CorporateActionOption133>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption133;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			owner_lazy = () -> CorporateActionOption133.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption133 obj) throws Exception {
+			checkCorporateActionOption133(obj);
 		}
 	};
 	/**
@@ -418,12 +458,16 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption138> forCorporateActionOption138 = new MMConstraint<CorporateActionOption138>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption138;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code PRUN (Unknown Proceeds) should be maintained throughout the full lifecycle of the event.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption130;
 			owner_lazy = () -> CorporateActionOption138.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption138 obj) throws Exception {
+			checkCorporateActionOption138(obj);
 		}
 	};
 	/**
@@ -449,11 +493,15 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 */
 	public static final MMConstraint<CorporateActionOption150> forCorporateActionOption150 = new MMConstraint<CorporateActionOption150>() {
 		{
-			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption150;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code PRUN (Unknown Proceeds) should be maintained throughout the full lifecycle of the event.";
 			owner_lazy = () -> CorporateActionOption150.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionOption150 obj) throws Exception {
+			checkCorporateActionOption150(obj);
 		}
 	};
 

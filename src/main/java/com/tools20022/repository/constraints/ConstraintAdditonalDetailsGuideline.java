@@ -54,11 +54,15 @@ public class ConstraintAdditonalDetailsGuideline {
 	 */
 	public static final MMConstraint<PartyTextInformation1> forPartyTextInformation1 = new MMConstraint<PartyTextInformation1>() {
 		{
-			validator = ConstraintAdditonalDetailsGuideline::checkPartyTextInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditonalDetailsGuideline";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails, RegistrationDetails and PartyContactDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyTextInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyTextInformation1 obj) throws Exception {
+			checkPartyTextInformation1(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintAdditonalDetailsGuideline {
 	 */
 	public static final MMConstraint<PartyTextInformation3> forPartyTextInformation3 = new MMConstraint<PartyTextInformation3>() {
 		{
-			validator = ConstraintAdditonalDetailsGuideline::checkPartyTextInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditonalDetailsGuideline";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails, RegistrationDetails and PartyContactDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyTextInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyTextInformation3 obj) throws Exception {
+			checkPartyTextInformation3(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintAdditonalDetailsGuideline {
 	 */
 	public static final MMConstraint<PartyTextInformation5> forPartyTextInformation5 = new MMConstraint<PartyTextInformation5>() {
 		{
-			validator = ConstraintAdditonalDetailsGuideline::checkPartyTextInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditonalDetailsGuideline";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, DeclarationlDetails and PartyContactDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyTextInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyTextInformation5 obj) throws Exception {
+			checkPartyTextInformation5(obj);
 		}
 	};
 

@@ -118,7 +118,7 @@ public class PartyOrCurrency1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDepository = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyOrCurrency1Choice, PartyIdentification63> mmDepository = new MMMessageAttribute<PartyOrCurrency1Choice, PartyIdentification63>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrCurrency1Choice.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class PartyOrCurrency1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification63.mmObject();
+		}
+
+		@Override
+		public PartyIdentification63 getValue(PartyOrCurrency1Choice obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(PartyOrCurrency1Choice obj, PartyIdentification63 value) {
+			obj.setDepository(value);
 		}
 	};
 	@XmlElement(name = "SttlmCcy", required = true)
@@ -161,7 +171,7 @@ public class PartyOrCurrency1Choice {
 	 * definition} = "Currency for the settlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyOrCurrency1Choice, ActiveCurrencyCode> mmSettlementCurrency = new MMMessageAttribute<PartyOrCurrency1Choice, ActiveCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrCurrency1Choice.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class PartyOrCurrency1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(PartyOrCurrency1Choice obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(PartyOrCurrency1Choice obj, ActiveCurrencyCode value) {
+			obj.setSettlementCurrency(value);
 		}
 	};
 

@@ -110,7 +110,7 @@ public class CollateralMovement9 {
 	 * definition} = "Specifies the type of collateral."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralMovement9, CollateralType1Code> mmCollateralType = new MMMessageAttribute<CollateralMovement9, CollateralType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement9.mmObject();
@@ -122,6 +122,16 @@ public class CollateralMovement9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralType1Code.mmObject();
+		}
+
+		@Override
+		public CollateralType1Code getValue(CollateralMovement9 obj) {
+			return obj.getCollateralType();
+		}
+
+		@Override
+		public void setValue(CollateralMovement9 obj, CollateralType1Code value) {
+			obj.setCollateralType(value);
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -158,7 +168,7 @@ public class CollateralMovement9 {
 	 * definition} = "Date by which the collateral movement must be executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralMovement9, Optional<ISODate>> mmDate = new MMMessageAttribute<CollateralMovement9, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement9.mmObject();
@@ -170,6 +180,16 @@ public class CollateralMovement9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CollateralMovement9 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(CollateralMovement9 obj, Optional<ISODate> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 

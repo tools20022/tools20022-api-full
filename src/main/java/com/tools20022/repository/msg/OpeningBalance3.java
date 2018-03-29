@@ -130,7 +130,7 @@ public class OpeningBalance3 {
 	 * OpeningBalance1.mmShortLongIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningBalance3, ShortLong1Code> mmShortLongIndicator = new MMMessageAttribute<OpeningBalance3, ShortLong1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningBalance3.mmObject();
@@ -144,6 +144,16 @@ public class OpeningBalance3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public ShortLong1Code getValue(OpeningBalance3 obj) {
+			return obj.getShortLongIndicator();
+		}
+
+		@Override
+		public void setValue(OpeningBalance3 obj, ShortLong1Code value) {
+			obj.setShortLongIndicator(value);
 		}
 	};
 	@XmlElement(name = "OpngBal", required = true)
@@ -191,7 +201,7 @@ public class OpeningBalance3 {
 	 * OpeningBalance1.mmOpeningBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningBalance3, OpeningBalance4Choice> mmOpeningBalance = new MMMessageAttribute<OpeningBalance3, OpeningBalance4Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningBalance3.mmObject();
@@ -205,6 +215,16 @@ public class OpeningBalance3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OpeningBalance4Choice.mmObject();
+		}
+
+		@Override
+		public OpeningBalance4Choice getValue(OpeningBalance3 obj) {
+			return obj.getOpeningBalance();
+		}
+
+		@Override
+		public void setValue(OpeningBalance3 obj, OpeningBalance4Choice value) {
+			obj.setOpeningBalance(value);
 		}
 	};
 

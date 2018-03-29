@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BorrowerLendingDeadline1;
@@ -152,7 +154,7 @@ public class CorporateActionPartyRole extends Role {
 	 * definition} = "Specifies the event for which a party plays a role."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionEvent = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionPartyRole, List<CorporateActionEvent>> mmCorporateActionEvent = new MMBusinessAssociationEnd<CorporateActionPartyRole, List<CorporateActionEvent>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPartyRole.mmObject();
@@ -163,6 +165,16 @@ public class CorporateActionPartyRole extends Role {
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionEvent> getValue(CorporateActionPartyRole obj) {
+			return obj.getCorporateActionEvent();
+		}
+
+		@Override
+		public void setValue(CorporateActionPartyRole obj, List<CorporateActionEvent> value) {
+			obj.setCorporateActionEvent(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Account> account;
@@ -200,7 +212,7 @@ public class CorporateActionPartyRole extends Role {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionPartyRole, List<Account>> mmAccount = new MMBusinessAssociationEnd<CorporateActionPartyRole, List<Account>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionPartyRole.mmObject();
@@ -211,6 +223,16 @@ public class CorporateActionPartyRole extends Role {
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmRelatedCorporateActionPartyRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
+		}
+
+		@Override
+		public List<Account> getValue(CorporateActionPartyRole obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(CorporateActionPartyRole obj, List<Account> value) {
+			obj.setAccount(value);
 		}
 	};
 

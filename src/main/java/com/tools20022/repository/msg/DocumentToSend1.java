@@ -157,7 +157,7 @@ public class DocumentToSend1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentToSend1, Max140Text> mmType = new MMMessageAttribute<DocumentToSend1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
 			isDerived = false;
@@ -169,6 +169,16 @@ public class DocumentToSend1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(DocumentToSend1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(DocumentToSend1 obj, Max140Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -209,7 +219,7 @@ public class DocumentToSend1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipient = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentToSend1, PartyIdentification2Choice> mmRecipient = new MMMessageAttribute<DocumentToSend1, PartyIdentification2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
 			isDerived = false;
@@ -221,6 +231,16 @@ public class DocumentToSend1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(DocumentToSend1 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(DocumentToSend1 obj, PartyIdentification2Choice value) {
+			obj.setRecipient(value);
 		}
 	};
 	@XmlElement(name = "MtdOfTrnsmssn", required = true)
@@ -253,7 +273,7 @@ public class DocumentToSend1 {
 	 * definition} = "Communication method to be used."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMethodOfTransmission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentToSend1, CommunicationMethod1Code> mmMethodOfTransmission = new MMMessageAttribute<DocumentToSend1, CommunicationMethod1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
 			isDerived = false;
@@ -264,6 +284,16 @@ public class DocumentToSend1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CommunicationMethod1Code.mmObject();
+		}
+
+		@Override
+		public CommunicationMethod1Code getValue(DocumentToSend1 obj) {
+			return obj.getMethodOfTransmission();
+		}
+
+		@Override
+		public void setValue(DocumentToSend1 obj, CommunicationMethod1Code value) {
+			obj.setMethodOfTransmission(value);
 		}
 	};
 	@XmlElement(name = "XtndedMtdOfTrnsmssn", required = true)
@@ -296,7 +326,7 @@ public class DocumentToSend1 {
 	 * definition} = "Communication means used to send information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedMethodOfTransmission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentToSend1, Extended350Code> mmExtendedMethodOfTransmission = new MMMessageAttribute<DocumentToSend1, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
 			isDerived = false;
@@ -307,6 +337,16 @@ public class DocumentToSend1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(DocumentToSend1 obj) {
+			return obj.getExtendedMethodOfTransmission();
+		}
+
+		@Override
+		public void setValue(DocumentToSend1 obj, Extended350Code value) {
+			obj.setExtendedMethodOfTransmission(value);
 		}
 	};
 	/**

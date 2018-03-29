@@ -29,6 +29,7 @@ import com.tools20022.repository.codeset.IssuerTaxability1Code;
 import com.tools20022.repository.codeset.Payment1Code;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -154,7 +155,7 @@ public class CashOption28 {
 	 * definition} = "Indicates whether the value is a debit or a credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOption28, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CashOption28, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -167,6 +168,16 @@ public class CashOption28 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CashOption28 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "CtrctlPmtInd")
@@ -207,7 +218,7 @@ public class CashOption28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractualPaymentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOption28, Optional<Payment1Code>> mmContractualPaymentIndicator = new MMMessageAttribute<CashOption28, Optional<Payment1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmContractualPaymentIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -220,6 +231,16 @@ public class CashOption28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Payment1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Payment1Code> getValue(CashOption28 obj) {
+			return obj.getContractualPaymentIndicator();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, Optional<Payment1Code> value) {
+			obj.setContractualPaymentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonElgblPrcdsInd")
@@ -260,7 +281,7 @@ public class CashOption28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonEligibleProceedsIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashOption28, Optional<NonEligibleProceedsIndicator2Choice>> mmNonEligibleProceedsIndicator = new MMMessageAssociationEnd<CashOption28, Optional<NonEligibleProceedsIndicator2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmNonEligibleProceedsIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -274,6 +295,16 @@ public class CashOption28 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> NonEligibleProceedsIndicator2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<NonEligibleProceedsIndicator2Choice> getValue(CashOption28 obj) {
+			return obj.getNonEligibleProceedsIndicator();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, Optional<NonEligibleProceedsIndicator2Choice> value) {
+			obj.setNonEligibleProceedsIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrOfferrTaxbltyInd")
@@ -312,7 +343,7 @@ public class CashOption28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerOfferorTaxabilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashOption28, Optional<IssuerTaxability1Code>> mmIssuerOfferorTaxabilityIndicator = new MMMessageAttribute<CashOption28, Optional<IssuerTaxability1Code>>() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmIssuerOfferorTaxabilityIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -324,6 +355,16 @@ public class CashOption28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IssuerTaxability1Code.mmObject();
+		}
+
+		@Override
+		public Optional<IssuerTaxability1Code> getValue(CashOption28 obj) {
+			return obj.getIssuerOfferorTaxabilityIndicator();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, Optional<IssuerTaxability1Code> value) {
+			obj.setIssuerOfferorTaxabilityIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IncmTp")
@@ -364,7 +405,7 @@ public class CashOption28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIncomeType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashOption28, Optional<GenericIdentification25>> mmIncomeType = new MMMessageAssociationEnd<CashOption28, Optional<GenericIdentification25>>() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmIncomeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -377,7 +418,17 @@ public class CashOption28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification25.mmObject();
+			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification25> getValue(CashOption28 obj) {
+			return obj.getIncomeType();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, Optional<GenericIdentification25> value) {
+			obj.setIncomeType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcctId")
@@ -417,7 +468,7 @@ public class CashOption28 {
 	 * "Identification of the account in which cash is maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashOption28, Optional<CashAccountIdentification6Choice>> mmCashAccountIdentification = new MMMessageAssociationEnd<CashOption28, Optional<CashAccountIdentification6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -431,6 +482,16 @@ public class CashOption28 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CashAccountIdentification6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountIdentification6Choice> getValue(CashOption28 obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, Optional<CashAccountIdentification6Choice> value) {
+			obj.setCashAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmtDtls")
@@ -470,7 +531,7 @@ public class CashOption28 {
 	 * "Provides information about the amounts related to a cash movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashOption28, Optional<CorporateActionAmounts25>> mmAmountDetails = new MMMessageAssociationEnd<CashOption28, Optional<CorporateActionAmounts25>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -483,7 +544,17 @@ public class CashOption28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts25.mmObject();
+			type_lazy = () -> CorporateActionAmounts25.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionAmounts25> getValue(CashOption28 obj) {
+			return obj.getAmountDetails();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, Optional<CorporateActionAmounts25> value) {
+			obj.setAmountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtDtls", required = true)
@@ -522,7 +593,7 @@ public class CashOption28 {
 	 * "Provides information about the dates related to a cash movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashOption28, CorporateActionDate26> mmDateDetails = new MMMessageAssociationEnd<CashOption28, CorporateActionDate26>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -535,7 +606,17 @@ public class CashOption28 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate26.mmObject();
+			type_lazy = () -> CorporateActionDate26.mmObject();
+		}
+
+		@Override
+		public CorporateActionDate26 getValue(CashOption28 obj) {
+			return obj.getDateDetails();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, CorporateActionDate26 value) {
+			obj.setDateDetails(value);
 		}
 	};
 	@XmlElement(name = "FXDtls")
@@ -574,7 +655,7 @@ public class CashOption28 {
 	 * "Exchange rate between the amount and the resulting amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashOption28, Optional<ForeignExchangeTerms15>> mmForeignExchangeDetails = new MMMessageAssociationEnd<CashOption28, Optional<ForeignExchangeTerms15>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -587,7 +668,17 @@ public class CashOption28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms15.mmObject();
+			type_lazy = () -> ForeignExchangeTerms15.mmObject();
+		}
+
+		@Override
+		public Optional<ForeignExchangeTerms15> getValue(CashOption28 obj) {
+			return obj.getForeignExchangeDetails();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, Optional<ForeignExchangeTerms15> value) {
+			obj.setForeignExchangeDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RateAndAmtDtls")
@@ -622,7 +713,7 @@ public class CashOption28 {
 	 * definition} = "Provides information about the corporate action option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateAndAmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashOption28, Optional<RateDetails13>> mmRateAndAmountDetails = new MMMessageAssociationEnd<CashOption28, Optional<RateDetails13>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -634,7 +725,17 @@ public class CashOption28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RateDetails13.mmObject();
+			type_lazy = () -> RateDetails13.mmObject();
+		}
+
+		@Override
+		public Optional<RateDetails13> getValue(CashOption28 obj) {
+			return obj.getRateAndAmountDetails();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, Optional<RateDetails13> value) {
+			obj.setRateAndAmountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricDtls")
@@ -671,7 +772,7 @@ public class CashOption28 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashOption28, Optional<PriceDetails13>> mmPriceDetails = new MMMessageAssociationEnd<CashOption28, Optional<PriceDetails13>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption28.mmObject();
@@ -683,7 +784,17 @@ public class CashOption28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PriceDetails13.mmObject();
+			type_lazy = () -> PriceDetails13.mmObject();
+		}
+
+		@Override
+		public Optional<PriceDetails13> getValue(CashOption28 obj) {
+			return obj.getPriceDetails();
+		}
+
+		@Override
+		public void setValue(CashOption28 obj, Optional<PriceDetails13> value) {
+			obj.setPriceDetails(value.orElse(null));
 		}
 	};
 
@@ -753,7 +864,7 @@ public class CashOption28 {
 		return incomeType == null ? Optional.empty() : Optional.of(incomeType);
 	}
 
-	public CashOption28 setIncomeType(com.tools20022.repository.msg.GenericIdentification25 incomeType) {
+	public CashOption28 setIncomeType(GenericIdentification25 incomeType) {
 		this.incomeType = incomeType;
 		return this;
 	}
@@ -771,7 +882,7 @@ public class CashOption28 {
 		return amountDetails == null ? Optional.empty() : Optional.of(amountDetails);
 	}
 
-	public CashOption28 setAmountDetails(com.tools20022.repository.msg.CorporateActionAmounts25 amountDetails) {
+	public CashOption28 setAmountDetails(CorporateActionAmounts25 amountDetails) {
 		this.amountDetails = amountDetails;
 		return this;
 	}
@@ -780,7 +891,7 @@ public class CashOption28 {
 		return dateDetails;
 	}
 
-	public CashOption28 setDateDetails(com.tools20022.repository.msg.CorporateActionDate26 dateDetails) {
+	public CashOption28 setDateDetails(CorporateActionDate26 dateDetails) {
 		this.dateDetails = Objects.requireNonNull(dateDetails);
 		return this;
 	}
@@ -789,7 +900,7 @@ public class CashOption28 {
 		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public CashOption28 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms15 foreignExchangeDetails) {
+	public CashOption28 setForeignExchangeDetails(ForeignExchangeTerms15 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 		return this;
 	}
@@ -798,7 +909,7 @@ public class CashOption28 {
 		return rateAndAmountDetails == null ? Optional.empty() : Optional.of(rateAndAmountDetails);
 	}
 
-	public CashOption28 setRateAndAmountDetails(com.tools20022.repository.msg.RateDetails13 rateAndAmountDetails) {
+	public CashOption28 setRateAndAmountDetails(RateDetails13 rateAndAmountDetails) {
 		this.rateAndAmountDetails = rateAndAmountDetails;
 		return this;
 	}
@@ -807,7 +918,7 @@ public class CashOption28 {
 		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public CashOption28 setPriceDetails(com.tools20022.repository.msg.PriceDetails13 priceDetails) {
+	public CashOption28 setPriceDetails(PriceDetails13 priceDetails) {
 		this.priceDetails = priceDetails;
 		return this;
 	}

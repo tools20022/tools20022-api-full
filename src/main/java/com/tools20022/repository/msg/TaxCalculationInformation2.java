@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EUCapitalGain1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -111,7 +112,7 @@ public class TaxCalculationInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation2, Optional<EUCapitalGain1>> mmEUCapitalGain = new MMMessageAttribute<TaxCalculationInformation2, Optional<EUCapitalGain1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation2.mmObject();
@@ -122,7 +123,17 @@ public class TaxCalculationInformation2 {
 			definition = "Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.EUCapitalGain1.mmObject();
+			complexType_lazy = () -> EUCapitalGain1.mmObject();
+		}
+
+		@Override
+		public Optional<EUCapitalGain1> getValue(TaxCalculationInformation2 obj) {
+			return obj.getEUCapitalGain();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation2 obj, Optional<EUCapitalGain1> value) {
+			obj.setEUCapitalGain(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgOfDebtClm")
@@ -162,7 +173,7 @@ public class TaxCalculationInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation2, Optional<PercentageRate>> mmPercentageOfDebtClaim = new MMMessageAttribute<TaxCalculationInformation2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageOfDebtClaim;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation2.mmObject();
@@ -174,6 +185,16 @@ public class TaxCalculationInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxCalculationInformation2 obj) {
+			return obj.getPercentageOfDebtClaim();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation2 obj, Optional<PercentageRate> value) {
+			obj.setPercentageOfDebtClaim(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PctgGrdfthdDebt")
@@ -211,7 +232,7 @@ public class TaxCalculationInformation2 {
 	 * definition} = "Percentage of grandfathered debt claim."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentageGrandfatheredDebt = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation2, Optional<PercentageRate>> mmPercentageGrandfatheredDebt = new MMMessageAttribute<TaxCalculationInformation2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageGrandfatheredDebt;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation2.mmObject();
@@ -223,6 +244,16 @@ public class TaxCalculationInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(TaxCalculationInformation2 obj) {
+			return obj.getPercentageGrandfatheredDebt();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation2 obj, Optional<PercentageRate> value) {
+			obj.setPercentageGrandfatheredDebt(value.orElse(null));
 		}
 	};
 
@@ -245,7 +276,7 @@ public class TaxCalculationInformation2 {
 		return eUCapitalGain == null ? Optional.empty() : Optional.of(eUCapitalGain);
 	}
 
-	public TaxCalculationInformation2 setEUCapitalGain(com.tools20022.repository.msg.EUCapitalGain1 eUCapitalGain) {
+	public TaxCalculationInformation2 setEUCapitalGain(EUCapitalGain1 eUCapitalGain) {
 		this.eUCapitalGain = eUCapitalGain;
 		return this;
 	}

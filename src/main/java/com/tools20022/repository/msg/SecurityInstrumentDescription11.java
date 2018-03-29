@@ -129,7 +129,7 @@ public class SecurityInstrumentDescription11 {
 	 * SecurityInstrumentDescription9.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription11, Optional<ISINOct2015Identifier>> mmIdentification = new MMMessageAttribute<SecurityInstrumentDescription11, Optional<ISINOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription11.mmObject();
@@ -142,6 +142,16 @@ public class SecurityInstrumentDescription11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public Optional<ISINOct2015Identifier> getValue(SecurityInstrumentDescription11 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription11 obj, Optional<ISINOct2015Identifier> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FullNm", required = true)
@@ -183,7 +193,7 @@ public class SecurityInstrumentDescription11 {
 	 * SecurityInstrumentDescription9.mmFullName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription11, Max350Text> mmFullName = new MMMessageAttribute<SecurityInstrumentDescription11, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription11.mmObject();
@@ -196,6 +206,16 @@ public class SecurityInstrumentDescription11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecurityInstrumentDescription11 obj) {
+			return obj.getFullName();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription11 obj, Max350Text value) {
+			obj.setFullName(value);
 		}
 	};
 	@XmlElement(name = "ClssfctnTp", required = true)
@@ -240,7 +260,7 @@ public class SecurityInstrumentDescription11 {
 	 * SecurityInstrumentDescription9.mmClassificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription11, CFIOct2015Identifier> mmClassificationType = new MMMessageAttribute<SecurityInstrumentDescription11, CFIOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription11.mmObject();
@@ -253,6 +273,16 @@ public class SecurityInstrumentDescription11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public CFIOct2015Identifier getValue(SecurityInstrumentDescription11 obj) {
+			return obj.getClassificationType();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription11 obj, CFIOct2015Identifier value) {
+			obj.setClassificationType(value);
 		}
 	};
 	@XmlElement(name = "NtnlCcy")
@@ -295,7 +325,7 @@ public class SecurityInstrumentDescription11 {
 	 * SecurityInstrumentDescription9.mmNotionalCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityInstrumentDescription11, Optional<ActiveOrHistoricCurrencyCode>> mmNotionalCurrency = new MMMessageAttribute<SecurityInstrumentDescription11, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription11.mmObject();
@@ -308,6 +338,16 @@ public class SecurityInstrumentDescription11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(SecurityInstrumentDescription11 obj) {
+			return obj.getNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(SecurityInstrumentDescription11 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setNotionalCurrency(value.orElse(null));
 		}
 	};
 

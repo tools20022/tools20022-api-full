@@ -55,11 +55,15 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace4> forAggregateBalancePerSafekeepingPlace4 = new MMConstraint<AggregateBalancePerSafekeepingPlace4>() {
 		{
-			validator = ConstraintAccruedInterestAmountSignRule::checkAggregateBalancePerSafekeepingPlace4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmountSignRule";
 			definition = "If AccruedInterestAmount is present, then AccruedInterestAmountSign must be present. If AccruedInterestAmount is not present, then AccruedInterestAmountSign may not be present.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace4 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace4(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation3> forAggregateBalanceInformation3 = new MMConstraint<AggregateBalanceInformation3>() {
 		{
-			validator = ConstraintAccruedInterestAmountSignRule::checkAggregateBalanceInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmountSignRule";
 			definition = "If AccruedInterestAmount is present, then AccruedInterestAmountSign must be present. If AccruedInterestAmount is not present, then AccruedInterestAmountSign may not be present.";
 			owner_lazy = () -> AggregateBalanceInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation3 obj) throws Exception {
+			checkAggregateBalanceInformation3(obj);
 		}
 	};
 	/**
@@ -115,11 +123,15 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 */
 	public static final MMConstraint<AggregateBalancePerSafekeepingPlace3> forAggregateBalancePerSafekeepingPlace3 = new MMConstraint<AggregateBalancePerSafekeepingPlace3>() {
 		{
-			validator = ConstraintAccruedInterestAmountSignRule::checkAggregateBalancePerSafekeepingPlace3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmountSignRule";
 			definition = "If AccruedInterestAmount is present, then AccruedInterestAmountSign must be present. If AccruedInterestAmount is not present, then AccruedInterestAmountSign may not be present.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalancePerSafekeepingPlace3 obj) throws Exception {
+			checkAggregateBalancePerSafekeepingPlace3(obj);
 		}
 	};
 	/**
@@ -145,11 +157,15 @@ public class ConstraintAccruedInterestAmountSignRule {
 	 */
 	public static final MMConstraint<AggregateBalanceInformation4> forAggregateBalanceInformation4 = new MMConstraint<AggregateBalanceInformation4>() {
 		{
-			validator = ConstraintAccruedInterestAmountSignRule::checkAggregateBalanceInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmountSignRule";
 			definition = "if AccruedInterestAmount is present, then AccruedInterestAmountSign must be present. If AccruedInterestAmount is not present, then AccruedInterestAmountSign may not be present.";
 			owner_lazy = () -> AggregateBalanceInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AggregateBalanceInformation4 obj) throws Exception {
+			checkAggregateBalanceInformation4(obj);
 		}
 	};
 

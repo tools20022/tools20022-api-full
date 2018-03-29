@@ -132,7 +132,7 @@ public class IndividualPersonNameLong1 {
 	 * definition} = "Prefix, as a title before a person's name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNamePrefix = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualPersonNameLong1, Optional<NamePrefix2Choice>> mmNamePrefix = new MMMessageAssociationEnd<IndividualPersonNameLong1, Optional<NamePrefix2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNamePrefix;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPersonNameLong1.mmObject();
@@ -145,6 +145,16 @@ public class IndividualPersonNameLong1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> NamePrefix2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<NamePrefix2Choice> getValue(IndividualPersonNameLong1 obj) {
+			return obj.getNamePrefix();
+		}
+
+		@Override
+		public void setValue(IndividualPersonNameLong1 obj, Optional<NamePrefix2Choice> value) {
+			obj.setNamePrefix(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Srnm", required = true)
@@ -183,7 +193,7 @@ public class IndividualPersonNameLong1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSurname = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPersonNameLong1, Max35Text> mmSurname = new MMMessageAttribute<IndividualPersonNameLong1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPersonNameLong1.mmObject();
@@ -195,6 +205,16 @@ public class IndividualPersonNameLong1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IndividualPersonNameLong1 obj) {
+			return obj.getSurname();
+		}
+
+		@Override
+		public void setValue(IndividualPersonNameLong1 obj, Max35Text value) {
+			obj.setSurname(value);
 		}
 	};
 	@XmlElement(name = "GvnNm")
@@ -231,7 +251,7 @@ public class IndividualPersonNameLong1 {
 	 * definition} = "Name given at birth."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPersonNameLong1, Optional<Max35Text>> mmGivenName = new MMMessageAttribute<IndividualPersonNameLong1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPersonNameLong1.mmObject();
@@ -243,6 +263,16 @@ public class IndividualPersonNameLong1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPersonNameLong1 obj) {
+			return obj.getGivenName();
+		}
+
+		@Override
+		public void setValue(IndividualPersonNameLong1 obj, Optional<Max35Text> value) {
+			obj.setGivenName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MddlNm")
@@ -279,7 +309,7 @@ public class IndividualPersonNameLong1 {
 	 * definition} = "Second name of a person."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMiddleName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPersonNameLong1, Optional<Max35Text>> mmMiddleName = new MMMessageAttribute<IndividualPersonNameLong1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPersonNameLong1.mmObject();
@@ -291,6 +321,16 @@ public class IndividualPersonNameLong1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPersonNameLong1 obj) {
+			return obj.getMiddleName();
+		}
+
+		@Override
+		public void setValue(IndividualPersonNameLong1 obj, Optional<Max35Text> value) {
+			obj.setMiddleName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Initls")
@@ -326,7 +366,7 @@ public class IndividualPersonNameLong1 {
 	 * definition} = "Initial prefix for name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitials = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPersonNameLong1, Optional<Max6Text>> mmInitials = new MMMessageAttribute<IndividualPersonNameLong1, Optional<Max6Text>>() {
 		{
 			businessComponentTrace_lazy = () -> PersonName.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPersonNameLong1.mmObject();
@@ -338,6 +378,16 @@ public class IndividualPersonNameLong1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max6Text> getValue(IndividualPersonNameLong1 obj) {
+			return obj.getInitials();
+		}
+
+		@Override
+		public void setValue(IndividualPersonNameLong1 obj, Optional<Max6Text> value) {
+			obj.setInitials(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NmSfx")
@@ -374,7 +424,7 @@ public class IndividualPersonNameLong1 {
 	 * definition} = "Suffix for name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNameSuffix = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPersonNameLong1, Optional<Max350Text>> mmNameSuffix = new MMMessageAttribute<IndividualPersonNameLong1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmNameSuffix;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPersonNameLong1.mmObject();
@@ -386,6 +436,16 @@ public class IndividualPersonNameLong1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(IndividualPersonNameLong1 obj) {
+			return obj.getNameSuffix();
+		}
+
+		@Override
+		public void setValue(IndividualPersonNameLong1 obj, Optional<Max350Text> value) {
+			obj.setNameSuffix(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -422,7 +482,7 @@ public class IndividualPersonNameLong1 {
 	 * definition} = "Full legal name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPersonNameLong1, Optional<Max350Text>> mmName = new MMMessageAttribute<IndividualPersonNameLong1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPersonNameLong1.mmObject();
@@ -434,6 +494,16 @@ public class IndividualPersonNameLong1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(IndividualPersonNameLong1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(IndividualPersonNameLong1 obj, Optional<Max350Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -470,7 +540,7 @@ public class IndividualPersonNameLong1 {
 	 * definition} = "Date that the name was assigned."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPersonNameLong1, Optional<ISODate>> mmStartDate = new MMMessageAttribute<IndividualPersonNameLong1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPersonNameLong1.mmObject();
@@ -482,6 +552,16 @@ public class IndividualPersonNameLong1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(IndividualPersonNameLong1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(IndividualPersonNameLong1 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt")
@@ -518,7 +598,7 @@ public class IndividualPersonNameLong1 {
 	 * definition} = "Date that name changed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPersonNameLong1, Optional<ISODate>> mmEndDate = new MMMessageAttribute<IndividualPersonNameLong1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPersonNameLong1.mmObject();
@@ -530,6 +610,16 @@ public class IndividualPersonNameLong1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(IndividualPersonNameLong1 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(IndividualPersonNameLong1 obj, Optional<ISODate> value) {
+			obj.setEndDate(value.orElse(null));
 		}
 	};
 

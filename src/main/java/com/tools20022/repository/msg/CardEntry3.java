@@ -24,6 +24,10 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardAggregated2;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.PaymentCard4;
+import com.tools20022.repository.msg.PointOfInteraction1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -116,7 +120,7 @@ public class CardEntry3 {
 	 * CardEntry2.mmCard}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCard = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardEntry3, Optional<PaymentCard4>> mmCard = new MMMessageAssociationEnd<CardEntry3, Optional<PaymentCard4>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry3.mmObject();
@@ -129,7 +133,17 @@ public class CardEntry3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCard4.mmObject();
+			type_lazy = () -> PaymentCard4.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCard4> getValue(CardEntry3 obj) {
+			return obj.getCard();
+		}
+
+		@Override
+		public void setValue(CardEntry3 obj, Optional<PaymentCard4> value) {
+			obj.setCard(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POI")
@@ -171,7 +185,7 @@ public class CardEntry3 {
 	 * CardEntry2.mmPOI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOI = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardEntry3, Optional<PointOfInteraction1>> mmPOI = new MMMessageAssociationEnd<CardEntry3, Optional<PointOfInteraction1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry3.mmObject();
@@ -184,7 +198,17 @@ public class CardEntry3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PointOfInteraction1.mmObject();
+			type_lazy = () -> PointOfInteraction1.mmObject();
+		}
+
+		@Override
+		public Optional<PointOfInteraction1> getValue(CardEntry3 obj) {
+			return obj.getPOI();
+		}
+
+		@Override
+		public void setValue(CardEntry3 obj, Optional<PointOfInteraction1> value) {
+			obj.setPOI(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AggtdNtry")
@@ -225,7 +249,7 @@ public class CardEntry3 {
 	 * CardEntry2.mmAggregatedEntry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAggregatedEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardEntry3, Optional<CardAggregated2>> mmAggregatedEntry = new MMMessageAssociationEnd<CardEntry3, Optional<CardAggregated2>>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry3.mmObject();
@@ -238,7 +262,17 @@ public class CardEntry3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardAggregated2.mmObject();
+			type_lazy = () -> CardAggregated2.mmObject();
+		}
+
+		@Override
+		public Optional<CardAggregated2> getValue(CardEntry3 obj) {
+			return obj.getAggregatedEntry();
+		}
+
+		@Override
+		public void setValue(CardEntry3 obj, Optional<CardAggregated2> value) {
+			obj.setAggregatedEntry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrePdAcct")
@@ -279,7 +313,7 @@ public class CardEntry3 {
 	 * CardEntry2.mmPrePaidAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrePaidAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardEntry3, Optional<CashAccount24>> mmPrePaidAccount = new MMMessageAssociationEnd<CardEntry3, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmRelatedAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardEntry3.mmObject();
@@ -292,7 +326,17 @@ public class CardEntry3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(CardEntry3 obj) {
+			return obj.getPrePaidAccount();
+		}
+
+		@Override
+		public void setValue(CardEntry3 obj, Optional<CashAccount24> value) {
+			obj.setPrePaidAccount(value.orElse(null));
 		}
 	};
 
@@ -316,7 +360,7 @@ public class CardEntry3 {
 		return card == null ? Optional.empty() : Optional.of(card);
 	}
 
-	public CardEntry3 setCard(com.tools20022.repository.msg.PaymentCard4 card) {
+	public CardEntry3 setCard(PaymentCard4 card) {
 		this.card = card;
 		return this;
 	}
@@ -325,7 +369,7 @@ public class CardEntry3 {
 		return pOI == null ? Optional.empty() : Optional.of(pOI);
 	}
 
-	public CardEntry3 setPOI(com.tools20022.repository.msg.PointOfInteraction1 pOI) {
+	public CardEntry3 setPOI(PointOfInteraction1 pOI) {
 		this.pOI = pOI;
 		return this;
 	}
@@ -334,7 +378,7 @@ public class CardEntry3 {
 		return aggregatedEntry == null ? Optional.empty() : Optional.of(aggregatedEntry);
 	}
 
-	public CardEntry3 setAggregatedEntry(com.tools20022.repository.msg.CardAggregated2 aggregatedEntry) {
+	public CardEntry3 setAggregatedEntry(CardAggregated2 aggregatedEntry) {
 		this.aggregatedEntry = aggregatedEntry;
 		return this;
 	}
@@ -343,7 +387,7 @@ public class CardEntry3 {
 		return prePaidAccount == null ? Optional.empty() : Optional.of(prePaidAccount);
 	}
 
-	public CardEntry3 setPrePaidAccount(com.tools20022.repository.msg.CashAccount24 prePaidAccount) {
+	public CardEntry3 setPrePaidAccount(CashAccount24 prePaidAccount) {
 		this.prePaidAccount = prePaidAccount;
 		return this;
 	}

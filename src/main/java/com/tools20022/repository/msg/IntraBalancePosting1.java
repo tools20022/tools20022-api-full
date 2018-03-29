@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1;
+import com.tools20022.repository.msg.IntraBalancePosting2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +121,7 @@ public class IntraBalancePosting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePosting1, CashSubBalanceTypeAndQuantityBreakdown1> mmBalanceFrom = new MMMessageAssociationEnd<IntraBalancePosting1, CashSubBalanceTypeAndQuantityBreakdown1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePosting1.mmObject();
 			isDerived = false;
@@ -132,11 +134,21 @@ public class IntraBalancePosting1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
+			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
+		}
+
+		@Override
+		public CashSubBalanceTypeAndQuantityBreakdown1 getValue(IntraBalancePosting1 obj) {
+			return obj.getBalanceFrom();
+		}
+
+		@Override
+		public void setValue(IntraBalancePosting1 obj, CashSubBalanceTypeAndQuantityBreakdown1 value) {
+			obj.setBalanceFrom(value);
 		}
 	};
 	@XmlElement(name = "Mvmnt", required = true)
-	protected List<com.tools20022.repository.msg.IntraBalancePosting2> movement;
+	protected List<IntraBalancePosting2> movement;
 	/**
 	 * 
 	 <p>
@@ -171,7 +183,7 @@ public class IntraBalancePosting1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePosting1, List<IntraBalancePosting2>> mmMovement = new MMMessageAssociationEnd<IntraBalancePosting1, List<IntraBalancePosting2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePosting1.mmObject();
 			isDerived = false;
@@ -182,7 +194,17 @@ public class IntraBalancePosting1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalancePosting3.mmMovement);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraBalancePosting2.mmObject();
+			type_lazy = () -> IntraBalancePosting2.mmObject();
+		}
+
+		@Override
+		public List<IntraBalancePosting2> getValue(IntraBalancePosting1 obj) {
+			return obj.getMovement();
+		}
+
+		@Override
+		public void setValue(IntraBalancePosting1 obj, List<IntraBalancePosting2> value) {
+			obj.setMovement(value);
 		}
 	};
 
@@ -205,7 +227,7 @@ public class IntraBalancePosting1 {
 		return balanceFrom;
 	}
 
-	public IntraBalancePosting1 setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
+	public IntraBalancePosting1 setBalanceFrom(CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
 		this.balanceFrom = Objects.requireNonNull(balanceFrom);
 		return this;
 	}
@@ -214,7 +236,7 @@ public class IntraBalancePosting1 {
 		return movement == null ? movement = new ArrayList<>() : movement;
 	}
 
-	public IntraBalancePosting1 setMovement(List<com.tools20022.repository.msg.IntraBalancePosting2> movement) {
+	public IntraBalancePosting1 setMovement(List<IntraBalancePosting2> movement) {
 		this.movement = Objects.requireNonNull(movement);
 		return this;
 	}

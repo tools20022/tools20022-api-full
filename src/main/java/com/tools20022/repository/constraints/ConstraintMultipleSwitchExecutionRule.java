@@ -56,11 +56,15 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> forSwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintMultipleSwitchExecutionRule::checkSwitchOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchExecutionRule";
 			definition = "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once.";
 			owner_lazy = () -> SwitchOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkSwitchOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationV04> forSwitchOrderConfirmationV04 = new MMConstraint<SwitchOrderConfirmationV04>() {
 		{
-			validator = ConstraintMultipleSwitchExecutionRule::checkSwitchOrderConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchExecutionRule";
 			definition = "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails must only be present once.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationV03;
 			owner_lazy = () -> SwitchOrderConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationV04 obj) throws Exception {
+			checkSwitchOrderConfirmationV04(obj);
 		}
 	};
 	/**
@@ -130,12 +138,16 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationV03> forSwitchOrderConfirmationV03 = new MMConstraint<SwitchOrderConfirmationV03>() {
 		{
-			validator = ConstraintMultipleSwitchExecutionRule::checkSwitchOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchExecutionRule";
 			definition = "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultipleSwitchExecutionRule.forSwitchOrderConfirmationV04);
 			owner_lazy = () -> SwitchOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationV03 obj) throws Exception {
+			checkSwitchOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -161,11 +173,15 @@ public class ConstraintMultipleSwitchExecutionRule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmation1> forSwitchOrderConfirmation1 = new MMConstraint<SwitchOrderConfirmation1>() {
 		{
-			validator = ConstraintMultipleSwitchExecutionRule::checkSwitchOrderConfirmation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultipleSwitchExecutionRule";
 			definition = "If SwitchExecutionDetails is present more than once, then SwitchExecutionDetails/RedemptionLegDetails and SwitchExecutionDetails/SubscriptionLegDetails may only be present once.";
 			owner_lazy = () -> SwitchOrderConfirmation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmation1 obj) throws Exception {
+			checkSwitchOrderConfirmation1(obj);
 		}
 	};
 

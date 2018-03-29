@@ -20,12 +20,12 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.RedemptionExecution;
+import com.tools20022.repository.entity.SwitchExecution;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SwitchExecutionRedemptionLeg4;
 import com.tools20022.repository.msg.SwitchRedemptionLegExecution2;
 import com.tools20022.repository.msg.SwitchRedemptionLegExecution3;
 import com.tools20022.repository.msg.SwitchRedemptionLegExecution4;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +135,7 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	 * "Switch execution process for which a redemption leg is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedSwitchExecution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SwitchExecutionRedemptionLeg, Optional<SwitchExecution>> mmRelatedSwitchExecution = new MMBusinessAssociationEnd<SwitchExecutionRedemptionLeg, Optional<SwitchExecution>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecutionRedemptionLeg.mmObject();
@@ -144,9 +144,19 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 			definition = "Switch execution process for which a redemption leg is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmRedemptionLeg;
+			opposite_lazy = () -> SwitchExecution.mmRedemptionLeg;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SwitchExecution.mmObject();
+			type_lazy = () -> SwitchExecution.mmObject();
+		}
+
+		@Override
+		public Optional<SwitchExecution> getValue(SwitchExecutionRedemptionLeg obj) {
+			return obj.getRelatedSwitchExecution();
+		}
+
+		@Override
+		public void setValue(SwitchExecutionRedemptionLeg obj, Optional<SwitchExecution> value) {
+			obj.setRelatedSwitchExecution(value.orElse(null));
 		}
 	};
 	protected PercentageRate percentageOfTotalSubscriptionAmount;
@@ -178,7 +188,7 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPercentageOfTotalSubscriptionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SwitchExecutionRedemptionLeg, PercentageRate> mmPercentageOfTotalSubscriptionAmount = new MMBusinessAttribute<SwitchExecutionRedemptionLeg, PercentageRate>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SwitchExecutionRedemptionLeg.mmObject();
@@ -190,12 +200,14 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchExecutionRedemptionLeg.class.getMethod("getPercentageOfTotalSubscriptionAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(SwitchExecutionRedemptionLeg obj) {
+			return obj.getPercentageOfTotalSubscriptionAmount();
+		}
+
+		@Override
+		public void setValue(SwitchExecutionRedemptionLeg obj, PercentageRate value) {
+			obj.setPercentageOfTotalSubscriptionAmount(value);
 		}
 	};
 
@@ -206,7 +218,7 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchExecutionRedemptionLeg";
 				definition = "Execution of the redemption part, in a switch between investment funds or investment fund classes.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchExecution.mmRedemptionLeg);
+				associationDomain_lazy = () -> Arrays.asList(SwitchExecution.mmRedemptionLeg);
 				superType_lazy = () -> RedemptionExecution.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchExecutionRedemptionLeg.mmRelatedSwitchExecution, com.tools20022.repository.entity.SwitchExecutionRedemptionLeg.mmPercentageOfTotalSubscriptionAmount);
 				derivationComponent_lazy = () -> Arrays.asList(SwitchRedemptionLegExecution2.mmObject(), SwitchRedemptionLegExecution3.mmObject(), SwitchExecutionRedemptionLeg4.mmObject(), SwitchRedemptionLegExecution4.mmObject());
@@ -224,7 +236,7 @@ public class SwitchExecutionRedemptionLeg extends RedemptionExecution {
 		return relatedSwitchExecution == null ? Optional.empty() : Optional.of(relatedSwitchExecution);
 	}
 
-	public SwitchExecutionRedemptionLeg setRelatedSwitchExecution(com.tools20022.repository.entity.SwitchExecution relatedSwitchExecution) {
+	public SwitchExecutionRedemptionLeg setRelatedSwitchExecution(SwitchExecution relatedSwitchExecution) {
 		this.relatedSwitchExecution = relatedSwitchExecution;
 		return this;
 	}

@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.EligiblePosition;
+import com.tools20022.repository.msg.SecurityIdentification3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -112,7 +114,7 @@ public class SecurityPosition {
 	 * "Security held in an account on which the balance is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityPosition, SecurityIdentification3> mmIdentification = new MMMessageAttribute<SecurityPosition, SecurityIdentification3>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition.mmObject();
@@ -123,11 +125,21 @@ public class SecurityPosition {
 			definition = "Security held in an account on which the balance is calculated.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
+			complexType_lazy = () -> SecurityIdentification3.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification3 getValue(SecurityPosition obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityPosition obj, SecurityIdentification3 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Pos")
-	protected List<com.tools20022.repository.msg.EligiblePosition> position;
+	protected List<EligiblePosition> position;
 	/**
 	 * 
 	 <p>
@@ -159,7 +171,7 @@ public class SecurityPosition {
 	 * definition} = "Amount of securities that are eligible for the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityPosition, List<EligiblePosition>> mmPosition = new MMMessageAssociationEnd<SecurityPosition, List<EligiblePosition>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition.mmObject();
@@ -171,7 +183,17 @@ public class SecurityPosition {
 			maxOccurs = 1000;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition.mmObject();
+			type_lazy = () -> EligiblePosition.mmObject();
+		}
+
+		@Override
+		public List<EligiblePosition> getValue(SecurityPosition obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(SecurityPosition obj, List<EligiblePosition> value) {
+			obj.setPosition(value);
 		}
 	};
 
@@ -193,7 +215,7 @@ public class SecurityPosition {
 		return identification;
 	}
 
-	public SecurityPosition setIdentification(com.tools20022.repository.msg.SecurityIdentification3 identification) {
+	public SecurityPosition setIdentification(SecurityIdentification3 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -202,7 +224,7 @@ public class SecurityPosition {
 		return position == null ? position = new ArrayList<>() : position;
 	}
 
-	public SecurityPosition setPosition(List<com.tools20022.repository.msg.EligiblePosition> position) {
+	public SecurityPosition setPosition(List<EligiblePosition> position) {
 		this.position = Objects.requireNonNull(position);
 		return this;
 	}

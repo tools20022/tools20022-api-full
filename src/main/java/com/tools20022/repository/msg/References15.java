@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -159,7 +160,7 @@ public class References15 {
 	 * References11.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References15, Optional<AdditionalReference2>> mmPoolReference = new MMMessageAttribute<References15, Optional<AdditionalReference2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References15.mmObject();
 			isDerived = false;
@@ -171,7 +172,17 @@ public class References15 {
 			previousVersion_lazy = () -> References11.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
+			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference2> getValue(References15 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(References15 obj, Optional<AdditionalReference2> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -217,7 +228,7 @@ public class References15 {
 	 * References11.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References15, Optional<AdditionalReference2>> mmPreviousReference = new MMMessageAttribute<References15, Optional<AdditionalReference2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References15.mmObject();
 			isDerived = false;
@@ -229,7 +240,17 @@ public class References15 {
 			previousVersion_lazy = () -> References11.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
+			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference2> getValue(References15 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(References15 obj, Optional<AdditionalReference2> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -275,7 +296,7 @@ public class References15 {
 	 * References11.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References15, Optional<AdditionalReference2>> mmRelatedReference = new MMMessageAttribute<References15, Optional<AdditionalReference2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References15.mmObject();
 			isDerived = false;
@@ -287,7 +308,17 @@ public class References15 {
 			previousVersion_lazy = () -> References11.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
+			complexType_lazy = () -> AdditionalReference2.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference2> getValue(References15 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(References15 obj, Optional<AdditionalReference2> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 
@@ -315,7 +346,7 @@ public class References15 {
 		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public References15 setPoolReference(com.tools20022.repository.msg.AdditionalReference2 poolReference) {
+	public References15 setPoolReference(AdditionalReference2 poolReference) {
 		this.poolReference = poolReference;
 		return this;
 	}
@@ -324,7 +355,7 @@ public class References15 {
 		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public References15 setPreviousReference(com.tools20022.repository.msg.AdditionalReference2 previousReference) {
+	public References15 setPreviousReference(AdditionalReference2 previousReference) {
 		this.previousReference = previousReference;
 		return this;
 	}
@@ -333,7 +364,7 @@ public class References15 {
 		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public References15 setRelatedReference(com.tools20022.repository.msg.AdditionalReference2 relatedReference) {
+	public References15 setRelatedReference(AdditionalReference2 relatedReference) {
 		this.relatedReference = relatedReference;
 		return this;
 	}

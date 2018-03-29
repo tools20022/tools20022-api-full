@@ -121,7 +121,7 @@ public class StatisticsTransparency3 {
 	 * definition} = "Average Daily Turnover for the instrument in Euros."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAverageDailyTurnover = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency3, Optional<ActiveCurrencyAndAmount>> mmAverageDailyTurnover = new MMMessageAttribute<StatisticsTransparency3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class StatisticsTransparency3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(StatisticsTransparency3 obj) {
+			return obj.getAverageDailyTurnover();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAverageDailyTurnover(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AvrgTxVal")
@@ -165,7 +175,7 @@ public class StatisticsTransparency3 {
 	 * "Average value of the transactions for the instrument in Euro."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAverageTransactionValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency3, Optional<ActiveCurrencyAndAmount>> mmAverageTransactionValue = new MMMessageAttribute<StatisticsTransparency3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class StatisticsTransparency3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(StatisticsTransparency3 obj) {
+			return obj.getAverageTransactionValue();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAverageTransactionValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LrgInScale")
@@ -210,7 +230,7 @@ public class StatisticsTransparency3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLargeInScale = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>> mmLargeInScale = new MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class StatisticsTransparency3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(StatisticsTransparency3 obj) {
+			return obj.getLargeInScale();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency3 obj, Optional<DecimalNumber> value) {
+			obj.setLargeInScale(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StdMktSz")
@@ -255,7 +285,7 @@ public class StatisticsTransparency3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandardMarketSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>> mmStandardMarketSize = new MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -266,6 +296,16 @@ public class StatisticsTransparency3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(StatisticsTransparency3 obj) {
+			return obj.getStandardMarketSize();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency3 obj, Optional<DecimalNumber> value) {
+			obj.setStandardMarketSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AvrgDalyNbOfTxs")
@@ -300,7 +340,7 @@ public class StatisticsTransparency3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAverageDailyNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>> mmAverageDailyNumberOfTransactions = new MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -311,6 +351,16 @@ public class StatisticsTransparency3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(StatisticsTransparency3 obj) {
+			return obj.getAverageDailyNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency3 obj, Optional<DecimalNumber> value) {
+			obj.setAverageDailyNumberOfTransactions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfTxsExctd")
@@ -344,7 +394,7 @@ public class StatisticsTransparency3 {
 	 * "Total number of transactions that have been performed on this market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfTransactionsExecuted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>> mmTotalNumberOfTransactionsExecuted = new MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -355,6 +405,16 @@ public class StatisticsTransparency3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(StatisticsTransparency3 obj) {
+			return obj.getTotalNumberOfTransactionsExecuted();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency3 obj, Optional<DecimalNumber> value) {
+			obj.setTotalNumberOfTransactionsExecuted(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlVolOfTxsExctd")
@@ -388,7 +448,7 @@ public class StatisticsTransparency3 {
 	 * "Total volume of transactions that have been performed on this market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalVolumeOfTransactionsExecuted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>> mmTotalVolumeOfTransactionsExecuted = new MMMessageAttribute<StatisticsTransparency3, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -399,6 +459,16 @@ public class StatisticsTransparency3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(StatisticsTransparency3 obj) {
+			return obj.getTotalVolumeOfTransactionsExecuted();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency3 obj, Optional<DecimalNumber> value) {
+			obj.setTotalVolumeOfTransactionsExecuted(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlNbOfTradgDays")
@@ -431,7 +501,7 @@ public class StatisticsTransparency3 {
 	 * "The total number of trading days for which the data is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfTradingDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency3, Optional<Number>> mmTotalNumberOfTradingDays = new MMMessageAttribute<StatisticsTransparency3, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 			isDerived = false;
@@ -442,6 +512,16 @@ public class StatisticsTransparency3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(StatisticsTransparency3 obj) {
+			return obj.getTotalNumberOfTradingDays();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency3 obj, Optional<Number> value) {
+			obj.setTotalNumberOfTradingDays(value.orElse(null));
 		}
 	};
 

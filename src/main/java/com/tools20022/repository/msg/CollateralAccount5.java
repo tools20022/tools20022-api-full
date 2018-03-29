@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarginAccount1;
+import com.tools20022.repository.msg.PartyIdentification122;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -123,7 +125,7 @@ public class CollateralAccount5 {
 	 * CollateralAccount4.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralAccount5, PartyIdentification122> mmIdentification = new MMMessageAssociationEnd<CollateralAccount5, PartyIdentification122>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAccount5.mmObject();
@@ -136,11 +138,21 @@ public class CollateralAccount5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification122.mmObject();
+			type_lazy = () -> PartyIdentification122.mmObject();
+		}
+
+		@Override
+		public PartyIdentification122 getValue(CollateralAccount5 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralAccount5 obj, PartyIdentification122 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "RltdMrgnAcct", required = true)
-	protected List<com.tools20022.repository.msg.MarginAccount1> relatedMarginAccount;
+	protected List<MarginAccount1> relatedMarginAccount;
 	/**
 	 * 
 	 <p>
@@ -149,6 +161,11 @@ public class CollateralAccount5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.msg.MarginAccount1
 	 * MarginAccount1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmCollateralAccount
+	 * Collateral.mmCollateralAccount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -169,8 +186,9 @@ public class CollateralAccount5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedMarginAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralAccount5, List<MarginAccount1>> mmRelatedMarginAccount = new MMMessageAssociationEnd<CollateralAccount5, List<MarginAccount1>>() {
 		{
+			businessElementTrace_lazy = () -> Collateral.mmCollateralAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAccount5.mmObject();
 			isDerived = false;
 			xmlTag = "RltdMrgnAcct";
@@ -179,7 +197,17 @@ public class CollateralAccount5 {
 			definition = "Operational construct used to record the set of positions whose margin requirements is calculated on a gross basis.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarginAccount1.mmObject();
+			type_lazy = () -> MarginAccount1.mmObject();
+		}
+
+		@Override
+		public List<MarginAccount1> getValue(CollateralAccount5 obj) {
+			return obj.getRelatedMarginAccount();
+		}
+
+		@Override
+		public void setValue(CollateralAccount5 obj, List<MarginAccount1> value) {
+			obj.setRelatedMarginAccount(value);
 		}
 	};
 	@XmlElement(name = "TitlTrfCollArrgmnt")
@@ -214,7 +242,7 @@ public class CollateralAccount5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTitleTransferCollateralArrangement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAccount5, Optional<YesNoIndicator>> mmTitleTransferCollateralArrangement = new MMMessageAttribute<CollateralAccount5, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAccount5.mmObject();
 			isDerived = false;
@@ -225,6 +253,16 @@ public class CollateralAccount5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CollateralAccount5 obj) {
+			return obj.getTitleTransferCollateralArrangement();
+		}
+
+		@Override
+		public void setValue(CollateralAccount5 obj, Optional<YesNoIndicator> value) {
+			obj.setTitleTransferCollateralArrangement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollSgrtnByVal")
@@ -259,7 +297,7 @@ public class CollateralAccount5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralSegregationByValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAccount5, Optional<YesNoIndicator>> mmCollateralSegregationByValue = new MMMessageAttribute<CollateralAccount5, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAccount5.mmObject();
 			isDerived = false;
@@ -270,6 +308,16 @@ public class CollateralAccount5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CollateralAccount5 obj) {
+			return obj.getCollateralSegregationByValue();
+		}
+
+		@Override
+		public void setValue(CollateralAccount5 obj, Optional<YesNoIndicator> value) {
+			obj.setCollateralSegregationByValue(value.orElse(null));
 		}
 	};
 
@@ -293,7 +341,7 @@ public class CollateralAccount5 {
 		return identification;
 	}
 
-	public CollateralAccount5 setIdentification(com.tools20022.repository.msg.PartyIdentification122 identification) {
+	public CollateralAccount5 setIdentification(PartyIdentification122 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -302,7 +350,7 @@ public class CollateralAccount5 {
 		return relatedMarginAccount == null ? relatedMarginAccount = new ArrayList<>() : relatedMarginAccount;
 	}
 
-	public CollateralAccount5 setRelatedMarginAccount(List<com.tools20022.repository.msg.MarginAccount1> relatedMarginAccount) {
+	public CollateralAccount5 setRelatedMarginAccount(List<MarginAccount1> relatedMarginAccount) {
 		this.relatedMarginAccount = Objects.requireNonNull(relatedMarginAccount);
 		return this;
 	}

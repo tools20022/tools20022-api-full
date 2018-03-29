@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ScheduleChangeEntry1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -99,7 +100,7 @@ public class ScheduleChangeDetails1 {
 	 * definition} = "Date on which the schedule changes became effective."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScheduleChangeEffectiveDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ScheduleChangeDetails1, ISODate> mmScheduleChangeEffectiveDate = new MMMessageAttribute<ScheduleChangeDetails1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeDetails1.mmObject();
 			isDerived = false;
@@ -111,9 +112,19 @@ public class ScheduleChangeDetails1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
+
+		@Override
+		public ISODate getValue(ScheduleChangeDetails1 obj) {
+			return obj.getScheduleChangeEffectiveDate();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeDetails1 obj, ISODate value) {
+			obj.setScheduleChangeEffectiveDate(value);
+		}
 	};
 	@XmlElement(name = "SchdlNtry", required = true)
-	protected List<com.tools20022.repository.msg.ScheduleChangeEntry1> scheduleEntry;
+	protected List<ScheduleChangeEntry1> scheduleEntry;
 	/**
 	 * 
 	 <p>
@@ -140,7 +151,7 @@ public class ScheduleChangeDetails1 {
 	 * definition} = "Information about schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmScheduleEntry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ScheduleChangeDetails1, List<ScheduleChangeEntry1>> mmScheduleEntry = new MMMessageAssociationEnd<ScheduleChangeDetails1, List<ScheduleChangeEntry1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ScheduleChangeDetails1.mmObject();
 			isDerived = false;
@@ -150,7 +161,17 @@ public class ScheduleChangeDetails1 {
 			definition = "Information about schedule.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ScheduleChangeEntry1.mmObject();
+			type_lazy = () -> ScheduleChangeEntry1.mmObject();
+		}
+
+		@Override
+		public List<ScheduleChangeEntry1> getValue(ScheduleChangeDetails1 obj) {
+			return obj.getScheduleEntry();
+		}
+
+		@Override
+		public void setValue(ScheduleChangeDetails1 obj, List<ScheduleChangeEntry1> value) {
+			obj.setScheduleEntry(value);
 		}
 	};
 
@@ -180,7 +201,7 @@ public class ScheduleChangeDetails1 {
 		return scheduleEntry == null ? scheduleEntry = new ArrayList<>() : scheduleEntry;
 	}
 
-	public ScheduleChangeDetails1 setScheduleEntry(List<com.tools20022.repository.msg.ScheduleChangeEntry1> scheduleEntry) {
+	public ScheduleChangeDetails1 setScheduleEntry(List<ScheduleChangeEntry1> scheduleEntry) {
 		this.scheduleEntry = Objects.requireNonNull(scheduleEntry);
 		return this;
 	}

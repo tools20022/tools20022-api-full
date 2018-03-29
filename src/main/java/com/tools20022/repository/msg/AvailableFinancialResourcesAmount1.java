@@ -132,7 +132,7 @@ public class AvailableFinancialResourcesAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalInitialMargin = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmTotalInitialMargin = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmInitialMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AvailableFinancialResourcesAmount1.mmObject();
@@ -144,6 +144,16 @@ public class AvailableFinancialResourcesAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AvailableFinancialResourcesAmount1 obj) {
+			return obj.getTotalInitialMargin();
+		}
+
+		@Override
+		public void setValue(AvailableFinancialResourcesAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalInitialMargin(value);
 		}
 	};
 	@XmlElement(name = "TtlPrfnddDfltFnd", required = true)
@@ -178,7 +188,7 @@ public class AvailableFinancialResourcesAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalPrefundedDefaultFund = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmTotalPrefundedDefaultFund = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AvailableFinancialResourcesAmount1.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class AvailableFinancialResourcesAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AvailableFinancialResourcesAmount1 obj) {
+			return obj.getTotalPrefundedDefaultFund();
+		}
+
+		@Override
+		public void setValue(AvailableFinancialResourcesAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalPrefundedDefaultFund(value);
 		}
 	};
 	@XmlElement(name = "CCPSkinInTheGame", required = true)
@@ -223,7 +243,7 @@ public class AvailableFinancialResourcesAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCCPSkinInTheGame = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmCCPSkinInTheGame = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AvailableFinancialResourcesAmount1.mmObject();
 			isDerived = false;
@@ -234,6 +254,16 @@ public class AvailableFinancialResourcesAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AvailableFinancialResourcesAmount1 obj) {
+			return obj.getCCPSkinInTheGame();
+		}
+
+		@Override
+		public void setValue(AvailableFinancialResourcesAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCCPSkinInTheGame(value);
 		}
 	};
 	@XmlElement(name = "OthrDfltFndCntrbtn", required = true)
@@ -268,7 +298,7 @@ public class AvailableFinancialResourcesAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherDefaultFundContribution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmOtherDefaultFundContribution = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AvailableFinancialResourcesAmount1.mmObject();
 			isDerived = false;
@@ -279,6 +309,16 @@ public class AvailableFinancialResourcesAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AvailableFinancialResourcesAmount1 obj) {
+			return obj.getOtherDefaultFundContribution();
+		}
+
+		@Override
+		public void setValue(AvailableFinancialResourcesAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setOtherDefaultFundContribution(value);
 		}
 	};
 	@XmlElement(name = "UfnddMmbCmmtmnt", required = true)
@@ -313,7 +353,7 @@ public class AvailableFinancialResourcesAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnfundedMemberCommitment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmUnfundedMemberCommitment = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AvailableFinancialResourcesAmount1.mmObject();
 			isDerived = false;
@@ -324,6 +364,16 @@ public class AvailableFinancialResourcesAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AvailableFinancialResourcesAmount1 obj) {
+			return obj.getUnfundedMemberCommitment();
+		}
+
+		@Override
+		public void setValue(AvailableFinancialResourcesAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setUnfundedMemberCommitment(value);
 		}
 	};
 	@XmlElement(name = "UfnddThrdPtyCmmtmnt", required = true)
@@ -358,7 +408,7 @@ public class AvailableFinancialResourcesAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnfundedThirdPartyCommitment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount> mmUnfundedThirdPartyCommitment = new MMMessageAttribute<AvailableFinancialResourcesAmount1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AvailableFinancialResourcesAmount1.mmObject();
 			isDerived = false;
@@ -369,6 +419,16 @@ public class AvailableFinancialResourcesAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(AvailableFinancialResourcesAmount1 obj) {
+			return obj.getUnfundedThirdPartyCommitment();
+		}
+
+		@Override
+		public void setValue(AvailableFinancialResourcesAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setUnfundedThirdPartyCommitment(value);
 		}
 	};
 

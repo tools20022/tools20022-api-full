@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.Event1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -126,7 +125,7 @@ public class SystemEventAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SystemEventAcknowledgementV01, Max35Text> mmMessageIdentification = new MMMessageBuildingBlock<SystemEventAcknowledgementV01, Max35Text>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,12 +136,14 @@ public class SystemEventAcknowledgementV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemEventAcknowledgementV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SystemEventAcknowledgementV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(SystemEventAcknowledgementV01 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgtrRef")
@@ -171,7 +172,7 @@ public class SystemEventAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginatorReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SystemEventAcknowledgementV01, Optional<Max35Text>> mmOriginatorReference = new MMMessageBuildingBlock<SystemEventAcknowledgementV01, Optional<Max35Text>>() {
 		{
 			xmlTag = "OrgtrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,12 +183,14 @@ public class SystemEventAcknowledgementV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemEventAcknowledgementV01.class.getMethod("getOriginatorReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(SystemEventAcknowledgementV01 obj) {
+			return obj.getOriginatorReference();
+		}
+
+		@Override
+		public void setValue(SystemEventAcknowledgementV01 obj, Optional<Max35Text> value) {
+			obj.setOriginatorReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSsnIdr")
@@ -217,7 +220,7 @@ public class SystemEventAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SystemEventAcknowledgementV01, Optional<Exact4AlphaNumericText>> mmSettlementSessionIdentifier = new MMMessageBuildingBlock<SystemEventAcknowledgementV01, Optional<Exact4AlphaNumericText>>() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,12 +231,14 @@ public class SystemEventAcknowledgementV01 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemEventAcknowledgementV01.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(SystemEventAcknowledgementV01 obj) {
+			return obj.getSettlementSessionIdentifier();
+		}
+
+		@Override
+		public void setValue(SystemEventAcknowledgementV01 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setSettlementSessionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AckDtls")
@@ -259,7 +264,7 @@ public class SystemEventAcknowledgementV01 {
 	 * definition} = "Details of the system event being acknowledged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAcknowledgementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SystemEventAcknowledgementV01, Optional<Event1>> mmAcknowledgementDetails = new MMMessageBuildingBlock<SystemEventAcknowledgementV01, Optional<Event1>>() {
 		{
 			xmlTag = "AckDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +275,14 @@ public class SystemEventAcknowledgementV01 {
 			complexType_lazy = () -> Event1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemEventAcknowledgementV01.class.getMethod("getAcknowledgementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Event1> getValue(SystemEventAcknowledgementV01 obj) {
+			return obj.getAcknowledgementDetails();
+		}
+
+		@Override
+		public void setValue(SystemEventAcknowledgementV01 obj, Optional<Event1> value) {
+			obj.setAcknowledgementDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -305,7 +312,7 @@ public class SystemEventAcknowledgementV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SystemEventAcknowledgementV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<SystemEventAcknowledgementV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,12 +322,14 @@ public class SystemEventAcknowledgementV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemEventAcknowledgementV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(SystemEventAcknowledgementV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SystemEventAcknowledgementV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

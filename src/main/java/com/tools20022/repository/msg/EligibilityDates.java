@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.MeetingNotice;
 import com.tools20022.repository.entity.SecuritiesBlockingDeadline;
 import com.tools20022.repository.entity.SecuritiesRegistrationDeadline;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriodDetails1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -117,7 +118,7 @@ public class EligibilityDates {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibilityDates, Optional<ISODate>> mmRecordDate = new MMMessageAttribute<EligibilityDates, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRecordDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibilityDates.mmObject();
@@ -129,6 +130,16 @@ public class EligibilityDates {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(EligibilityDates obj) {
+			return obj.getRecordDate();
+		}
+
+		@Override
+		public void setValue(EligibilityDates obj, Optional<ISODate> value) {
+			obj.setRecordDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesRegnDt")
@@ -167,7 +178,7 @@ public class EligibilityDates {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesRegistrationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EligibilityDates, Optional<ISODate>> mmSecuritiesRegistrationDate = new MMMessageAttribute<EligibilityDates, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRegistrationDeadline.mmRegistrationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibilityDates.mmObject();
@@ -179,6 +190,16 @@ public class EligibilityDates {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(EligibilityDates obj) {
+			return obj.getSecuritiesRegistrationDate();
+		}
+
+		@Override
+		public void setValue(EligibilityDates obj, Optional<ISODate> value) {
+			obj.setSecuritiesRegistrationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlckgPrd")
@@ -214,7 +235,7 @@ public class EligibilityDates {
 	 * definition} = "Period during which the securities are blocked."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBlockingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EligibilityDates, Optional<DateTimePeriodDetails1>> mmBlockingPeriod = new MMMessageAssociationEnd<EligibilityDates, Optional<DateTimePeriodDetails1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBlockingDeadline.mmBlockingPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.EligibilityDates.mmObject();
@@ -226,7 +247,17 @@ public class EligibilityDates {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
+			type_lazy = () -> DateTimePeriodDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodDetails1> getValue(EligibilityDates obj) {
+			return obj.getBlockingPeriod();
+		}
+
+		@Override
+		public void setValue(EligibilityDates obj, Optional<DateTimePeriodDetails1> value) {
+			obj.setBlockingPeriod(value.orElse(null));
 		}
 	};
 	/**
@@ -311,7 +342,7 @@ public class EligibilityDates {
 		return blockingPeriod == null ? Optional.empty() : Optional.of(blockingPeriod);
 	}
 
-	public EligibilityDates setBlockingPeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 blockingPeriod) {
+	public EligibilityDates setBlockingPeriod(DateTimePeriodDetails1 blockingPeriod) {
 		this.blockingPeriod = blockingPeriod;
 		return this;
 	}

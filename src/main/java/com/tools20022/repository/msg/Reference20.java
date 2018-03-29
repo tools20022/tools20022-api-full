@@ -100,7 +100,7 @@ public class Reference20 {
 	 * definition} = "Provides the reference to the interest payment request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestPaymentRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference20, Max35Text> mmInterestPaymentRequestIdentification = new MMMessageAttribute<Reference20, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference20.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class Reference20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference20 obj) {
+			return obj.getInterestPaymentRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Reference20 obj, Max35Text value) {
+			obj.setInterestPaymentRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntrstPmtRspnId")
@@ -141,7 +151,7 @@ public class Reference20 {
 	 * definition} = "Provides the reference to the interest payment response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestPaymentResponseIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference20, Optional<Max35Text>> mmInterestPaymentResponseIdentification = new MMMessageAttribute<Reference20, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference20.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class Reference20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference20 obj) {
+			return obj.getInterestPaymentResponseIdentification();
+		}
+
+		@Override
+		public void setValue(Reference20 obj, Optional<Max35Text> value) {
+			obj.setInterestPaymentResponseIdentification(value.orElse(null));
 		}
 	};
 

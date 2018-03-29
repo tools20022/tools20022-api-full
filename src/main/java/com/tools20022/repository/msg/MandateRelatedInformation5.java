@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.ElectronicSignature;
 import com.tools20022.repository.entity.Mandate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmendmentInformationDetails5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -148,7 +149,7 @@ public class MandateRelatedInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation5, Max35Text> mmMandateIdentification = new MMMessageAttribute<MandateRelatedInformation5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation5.mmObject();
@@ -160,6 +161,16 @@ public class MandateRelatedInformation5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MandateRelatedInformation5 obj) {
+			return obj.getMandateIdentification();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation5 obj, Max35Text value) {
+			obj.setMandateIdentification(value);
 		}
 	};
 	@XmlElement(name = "DtOfSgntr", required = true)
@@ -197,7 +208,7 @@ public class MandateRelatedInformation5 {
 	 * "Date on which the direct debit mandate has been signed by the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateOfSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation5, ISODate> mmDateOfSignature = new MMMessageAttribute<MandateRelatedInformation5, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDateSigned;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation5.mmObject();
@@ -209,6 +220,16 @@ public class MandateRelatedInformation5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(MandateRelatedInformation5 obj) {
+			return obj.getDateOfSignature();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation5 obj, ISODate value) {
+			obj.setDateOfSignature(value);
 		}
 	};
 	@XmlElement(name = "AmdmntInd")
@@ -247,7 +268,7 @@ public class MandateRelatedInformation5 {
 	 * "Indicator notifying whether the underlying mandate is amended or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation5, Optional<TrueFalseIndicator>> mmAmendmentIndicator = new MMMessageAttribute<MandateRelatedInformation5, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmAmendment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation5.mmObject();
@@ -259,6 +280,16 @@ public class MandateRelatedInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(MandateRelatedInformation5 obj) {
+			return obj.getAmendmentIndicator();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation5 obj, Optional<TrueFalseIndicator> value) {
+			obj.setAmendmentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmdmntInfDtls")
@@ -296,7 +327,7 @@ public class MandateRelatedInformation5 {
 	 * "List of direct debit mandate elements that have been modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmendmentInformationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateRelatedInformation5, Optional<AmendmentInformationDetails5>> mmAmendmentInformationDetails = new MMMessageAssociationEnd<MandateRelatedInformation5, Optional<AmendmentInformationDetails5>>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation5.mmObject();
@@ -308,7 +339,17 @@ public class MandateRelatedInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmendmentInformationDetails5.mmObject();
+			type_lazy = () -> AmendmentInformationDetails5.mmObject();
+		}
+
+		@Override
+		public Optional<AmendmentInformationDetails5> getValue(MandateRelatedInformation5 obj) {
+			return obj.getAmendmentInformationDetails();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation5 obj, Optional<AmendmentInformationDetails5> value) {
+			obj.setAmendmentInformationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ElctrncSgntr")
@@ -347,7 +388,7 @@ public class MandateRelatedInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectronicSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation5, Optional<Max1025Text>> mmElectronicSignature = new MMMessageAttribute<MandateRelatedInformation5, Optional<Max1025Text>>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicSignature.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation5.mmObject();
@@ -359,6 +400,16 @@ public class MandateRelatedInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max1025Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max1025Text> getValue(MandateRelatedInformation5 obj) {
+			return obj.getElectronicSignature();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation5 obj, Optional<Max1025Text> value) {
+			obj.setElectronicSignature(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstColltnDt")
@@ -396,7 +447,7 @@ public class MandateRelatedInformation5 {
 	 * "Date of the first collection of a direct debit as per the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation5, Optional<ISODate>> mmFirstCollectionDate = new MMMessageAttribute<MandateRelatedInformation5, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmFirstCollectionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation5.mmObject();
@@ -408,6 +459,16 @@ public class MandateRelatedInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MandateRelatedInformation5 obj) {
+			return obj.getFirstCollectionDate();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation5 obj, Optional<ISODate> value) {
+			obj.setFirstCollectionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlColltnDt")
@@ -445,7 +506,7 @@ public class MandateRelatedInformation5 {
 	 * "Date of the final collection of a direct debit as per the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation5, Optional<ISODate>> mmFinalCollectionDate = new MMMessageAttribute<MandateRelatedInformation5, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmFinalCollectionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation5.mmObject();
@@ -457,6 +518,16 @@ public class MandateRelatedInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MandateRelatedInformation5 obj) {
+			return obj.getFinalCollectionDate();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation5 obj, Optional<ISODate> value) {
+			obj.setFinalCollectionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -496,7 +567,7 @@ public class MandateRelatedInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateRelatedInformation5, Optional<Frequency1Code>> mmFrequency = new MMMessageAttribute<MandateRelatedInformation5, Optional<Frequency1Code>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateRelatedInformation5.mmObject();
@@ -508,6 +579,16 @@ public class MandateRelatedInformation5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency1Code> getValue(MandateRelatedInformation5 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(MandateRelatedInformation5 obj, Optional<Frequency1Code> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 
@@ -561,7 +642,7 @@ public class MandateRelatedInformation5 {
 		return amendmentInformationDetails == null ? Optional.empty() : Optional.of(amendmentInformationDetails);
 	}
 
-	public MandateRelatedInformation5 setAmendmentInformationDetails(com.tools20022.repository.msg.AmendmentInformationDetails5 amendmentInformationDetails) {
+	public MandateRelatedInformation5 setAmendmentInformationDetails(AmendmentInformationDetails5 amendmentInformationDetails) {
 		this.amendmentInformationDetails = amendmentInformationDetails;
 		return this;
 	}

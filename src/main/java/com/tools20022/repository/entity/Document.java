@@ -25,9 +25,9 @@ import com.tools20022.repository.codeset.DocumentTypeCode;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -854,7 +854,7 @@ public class Document {
 	 * definition} = "Issue date of the document."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIssueDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, ISODateTime> mmIssueDate = new MMBusinessAttribute<Document, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification11.mmCreationDateTime, DocumentIdentification16.mmCreationDateTime, DocumentIdentification12.mmCreationDateTime, DocumentIdentification18.mmCreationDateTime,
 					StructuredRemittanceInformation6.mmReferredDocumentRelatedDate, ReferredDocumentInformation3.mmRelatedDate, Undertaking4.mmDateOfIssuance, Undertaking3.mmDateOfIssuance,
@@ -876,12 +876,14 @@ public class Document {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getIssueDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(Document obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(Document obj, ISODateTime value) {
+			obj.setIssueDate(value);
 		}
 	};
 	protected CopyDuplicateCode copyDuplicate;
@@ -935,7 +937,7 @@ public class Document {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCopyDuplicate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, CopyDuplicateCode> mmCopyDuplicate = new MMBusinessAttribute<Document, CopyDuplicateCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification11.mmCopyDuplicate, DocumentIdentification16.mmCopyDuplicate, DocumentIdentification12.mmCopyDuplicate, DocumentIdentification18.mmCopyDuplicate,
 					DocumentIdentification27.mmCopyDuplicate, DocumentIdentification50.mmCopyDuplicate);
@@ -949,15 +951,17 @@ public class Document {
 			simpleType_lazy = () -> CopyDuplicateCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getCopyDuplicate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CopyDuplicateCode getValue(Document obj) {
+			return obj.getCopyDuplicate();
+		}
+
+		@Override
+		public void setValue(Document obj, CopyDuplicateCode value) {
+			obj.setCopyDuplicate(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.ContactPoint> placeOfStorage;
+	protected List<ContactPoint> placeOfStorage;
 	/**
 	 * 
 	 <p>
@@ -1088,7 +1092,7 @@ public class Document {
 	 * definition} = "Specifies where the document is stored."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPlaceOfStorage = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, List<ContactPoint>> mmPlaceOfStorage = new MMBusinessAssociationEnd<Document, List<ContactPoint>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(EntryTransaction1.mmRelatedRemittanceInformation, EntryTransaction2.mmRelatedRemittanceInformation, EntryTransaction3.mmRelatedRemittanceInformation,
 					EntryTransaction4.mmRelatedRemittanceInformation, DirectDebitTransactionInformation1.mmRelatedRemittanceInformation, DirectDebitTransactionInformation9.mmRelatedRemittanceInformation,
@@ -1106,9 +1110,19 @@ public class Document {
 			name = "PlaceOfStorage";
 			definition = "Specifies where the document is stored.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmStoredDocument;
+			opposite_lazy = () -> ContactPoint.mmStoredDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
+			type_lazy = () -> ContactPoint.mmObject();
+		}
+
+		@Override
+		public List<ContactPoint> getValue(Document obj) {
+			return obj.getPlaceOfStorage();
+		}
+
+		@Override
+		public void setValue(Document obj, List<ContactPoint> value) {
+			obj.setPlaceOfStorage(value);
 		}
 	};
 	protected PaymentObligation paymentObligation;
@@ -1152,7 +1166,7 @@ public class Document {
 	 * definition} = "Document which is referred to in a payment obligation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, Optional<PaymentObligation>> mmPaymentObligation = new MMBusinessAssociationEnd<Document, Optional<PaymentObligation>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReconciliationList1.mmPaymentTerms);
 			isDerived = false;
@@ -1162,9 +1176,19 @@ public class Document {
 			definition = "Document which is referred to in a payment obligation.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmAssociatedDocument;
+			opposite_lazy = () -> PaymentObligation.mmAssociatedDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
+			type_lazy = () -> PaymentObligation.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentObligation> getValue(Document obj) {
+			return obj.getPaymentObligation();
+		}
+
+		@Override
+		public void setValue(Document obj, Optional<PaymentObligation> value) {
+			obj.setPaymentObligation(value.orElse(null));
 		}
 	};
 	protected DocumentTypeCode type;
@@ -1295,7 +1319,7 @@ public class Document {
 	 * "Specifies the type of the document, for example commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, DocumentTypeCode> mmType = new MMBusinessAttribute<Document, DocumentTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReferredDocumentType1.mmCode, ReferredDocumentType1.mmProprietary, ReferredDocumentInformation1.mmReferredDocumentType, CreditorReferenceType1.mmCode, CreditorReferenceType1.mmProprietary,
 					ReferredDocumentType1Choice.mmCode, ReferredDocumentType1Choice.mmProprietary, ReferredDocumentInformation3.mmType, CreditorReferenceType1Choice.mmCode, CreditorReferenceType1Choice.mmProprietary,
@@ -1314,12 +1338,14 @@ public class Document {
 			simpleType_lazy = () -> DocumentTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentTypeCode getValue(Document obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Document obj, DocumentTypeCode value) {
+			obj.setType(value);
 		}
 	};
 	protected ActiveCurrencyAndAmount amount;
@@ -1418,7 +1444,7 @@ public class Document {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, ActiveCurrencyAndAmount> mmAmount = new MMBusinessAttribute<Document, ActiveCurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReferredDocumentAmount1Choice.mmCreditNoteAmount, StructuredRemittanceInformation6.mmReferredDocumentAmount, StructuredRemittanceInformation7.mmReferredDocumentAmount,
 					StructuredRemittanceInformation9.mmReferredDocumentAmount, StructuredRemittanceInformation8.mmReferredDocumentAmount, StructuredRemittanceInformation2.mmReferredDocumentAmount, InvoiceTotals1.mmTotalInvoiceAmount,
@@ -1436,15 +1462,17 @@ public class Document {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveCurrencyAndAmount getValue(Document obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Document obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Agreement> agreement;
+	protected List<Agreement> agreement;
 	/**
 	 * 
 	 <p>
@@ -1488,21 +1516,31 @@ public class Document {
 	 * name} = "Agreement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Agreement which is materialised by a document."</li>
+	 * definition} = "Agreement which is materialised by a document"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAgreement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, List<Agreement>> mmAgreement = new MMBusinessAssociationEnd<Document, List<Agreement>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BusinessLetter1.mmGoverningContract, EventDescription1.mmGoverningContract, FinancialItemParameters1.mmGoverningContract);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Agreement";
-			definition = "Agreement which is materialised by a document.";
+			definition = "Agreement which is materialised by a document";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Agreement.mmDocument;
+			opposite_lazy = () -> Agreement.mmDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
+			type_lazy = () -> Agreement.mmObject();
+		}
+
+		@Override
+		public List<Agreement> getValue(Document obj) {
+			return obj.getAgreement();
+		}
+
+		@Override
+		public void setValue(Document obj, List<Agreement> value) {
+			obj.setAgreement(value);
 		}
 	};
 	protected Location placeOfIssue;
@@ -1551,7 +1589,7 @@ public class Document {
 	 * definition} = "Place where the document was issued."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPlaceOfIssue = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, Optional<Location>> mmPlaceOfIssue = new MMBusinessAssociationEnd<Document, Optional<Location>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Undertaking3.mmPlaceOfIssue, CertificateDataSet1.mmPlaceOfIssue, CertificateDataSet2.mmPlaceOfIssue);
 			isDerived = false;
@@ -1561,9 +1599,19 @@ public class Document {
 			definition = "Place where the document was issued.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmIssuedDocument;
+			opposite_lazy = () -> Location.mmIssuedDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
+			type_lazy = () -> Location.mmObject();
+		}
+
+		@Override
+		public Optional<Location> getValue(Document obj) {
+			return obj.getPlaceOfIssue();
+		}
+
+		@Override
+		public void setValue(Document obj, Optional<Location> value) {
+			obj.setPlaceOfIssue(value.orElse(null));
 		}
 	};
 	protected Number documentVersion;
@@ -1614,7 +1662,7 @@ public class Document {
 	 * definition} = "Unambiguous identification of the version of a document."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDocumentVersion = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, Number> mmDocumentVersion = new MMBusinessAttribute<Document, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification3.mmVersion, DocumentIdentification1.mmVersion, DocumentIdentification4.mmVersion, DocumentIdentification6.mmVersion, DocumentIdentification2.mmVersion,
 					DocumentIdentification10.mmVersion);
@@ -1628,12 +1676,14 @@ public class Document {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getDocumentVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(Document obj) {
+			return obj.getDocumentVersion();
+		}
+
+		@Override
+		public void setValue(Document obj, Number value) {
+			obj.setDocumentVersion(value);
 		}
 	};
 	protected Max140Text status;
@@ -1670,31 +1720,33 @@ public class Document {
 	 * name} = "Status"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of the document (eg delivered, paid, etc.)."</li>
+	 * definition} = "Status of the document (eg delivered, paid, etc.)"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, Max140Text> mmStatus = new MMBusinessAttribute<Document, Max140Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingStatement1.mmStatus, ContractRegistrationStatement1.mmRegulatoryRuleValidation, BillingStatement2.mmStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
-			definition = "Status of the document (eg delivered, paid, etc.).";
+			definition = "Status of the document (eg delivered, paid, etc.)";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max140Text getValue(Document obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(Document obj, Max140Text value) {
+			obj.setStatus(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Reconciliation> reconciliation;
+	protected List<Reconciliation> reconciliation;
 	/**
 	 * 
 	 <p>
@@ -1728,7 +1780,7 @@ public class Document {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmReconciliation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, List<Reconciliation>> mmReconciliation = new MMBusinessAssociationEnd<Document, List<Reconciliation>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
@@ -1736,9 +1788,19 @@ public class Document {
 			name = "Reconciliation";
 			definition = "Reconciliation process for which a document is specified.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Reconciliation.mmDocument;
+			opposite_lazy = () -> Reconciliation.mmDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Reconciliation.mmObject();
+			type_lazy = () -> Reconciliation.mmObject();
+		}
+
+		@Override
+		public List<Reconciliation> getValue(Document obj) {
+			return obj.getReconciliation();
+		}
+
+		@Override
+		public void setValue(Document obj, List<Reconciliation> value) {
+			obj.setReconciliation(value);
 		}
 	};
 	protected LetterOfCredit letterOfCredit;
@@ -1775,7 +1837,7 @@ public class Document {
 	 * "Written undertaking by a bank to honour a demand for payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmLetterOfCredit = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, LetterOfCredit> mmLetterOfCredit = new MMBusinessAssociationEnd<Document, LetterOfCredit>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
@@ -1784,12 +1846,22 @@ public class Document {
 			definition = "Written undertaking by a bank to honour a demand for payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.LetterOfCredit.mmDocument;
+			opposite_lazy = () -> LetterOfCredit.mmDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.LetterOfCredit.mmObject();
+			type_lazy = () -> LetterOfCredit.mmObject();
+		}
+
+		@Override
+		public LetterOfCredit getValue(Document obj) {
+			return obj.getLetterOfCredit();
+		}
+
+		@Override
+		public void setValue(Document obj, LetterOfCredit value) {
+			obj.setLetterOfCredit(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.DocumentPartyRole> partyRole;
+	protected List<DocumentPartyRole> partyRole;
 	/**
 	 * 
 	 <p>
@@ -1835,7 +1907,7 @@ public class Document {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, List<DocumentPartyRole>> mmPartyRole = new MMBusinessAssociationEnd<Document, List<DocumentPartyRole>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancingAgreementList1.mmNotificationInformation, FinancingItemList1.mmNotificationInformation);
 			isDerived = false;
@@ -1844,9 +1916,19 @@ public class Document {
 			name = "PartyRole";
 			definition = "Role played by a party in the context of a document or in the context of the business linked to the document.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.DocumentPartyRole.mmDocument;
+			opposite_lazy = () -> DocumentPartyRole.mmDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DocumentPartyRole.mmObject();
+			type_lazy = () -> DocumentPartyRole.mmObject();
+		}
+
+		@Override
+		public List<DocumentPartyRole> getValue(Document obj) {
+			return obj.getPartyRole();
+		}
+
+		@Override
+		public void setValue(Document obj, List<DocumentPartyRole> value) {
+			obj.setPartyRole(value);
 		}
 	};
 	protected DataSetTypeCode dataSetType;
@@ -1884,7 +1966,7 @@ public class Document {
 	 * "Specifies the type of data set in which the document is included."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDataSetType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, DataSetTypeCode> mmDataSetType = new MMBusinessAttribute<Document, DataSetTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentIdentification2.mmType);
 			isDerived = false;
@@ -1897,12 +1979,14 @@ public class Document {
 			simpleType_lazy = () -> DataSetTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getDataSetType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DataSetTypeCode getValue(Document obj) {
+			return obj.getDataSetType();
+		}
+
+		@Override
+		public void setValue(Document obj, DataSetTypeCode value) {
+			obj.setDataSetType(value);
 		}
 	};
 	protected Transport transport;
@@ -1953,7 +2037,7 @@ public class Document {
 	 * "Transport process for which related documents are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, Transport> mmTransport = new MMBusinessAssociationEnd<Document, Transport>() {
 		{
 			derivation_lazy = () -> Arrays.asList(RequiredSubmission3.mmMatchTransport, InsuranceDataSet1.mmTransport, CertificateDataSet2.mmTransport);
 			isDerived = false;
@@ -1963,9 +2047,19 @@ public class Document {
 			definition = "Transport process for which related documents are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Transport.mmTransportDocuments;
+			opposite_lazy = () -> Transport.mmTransportDocuments;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
+			type_lazy = () -> Transport.mmObject();
+		}
+
+		@Override
+		public Transport getValue(Document obj) {
+			return obj.getTransport();
+		}
+
+		@Override
+		public void setValue(Document obj, Transport value) {
+			obj.setTransport(value);
 		}
 	};
 	protected YesNoIndicator signedIndicator;
@@ -1994,7 +2088,7 @@ public class Document {
 	 * definition} = "Indication whether the document must be signed or not."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSignedIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, YesNoIndicator> mmSignedIndicator = new MMBusinessAttribute<Document, YesNoIndicator>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
@@ -2006,12 +2100,14 @@ public class Document {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getSignedIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Document obj) {
+			return obj.getSignedIndicator();
+		}
+
+		@Override
+		public void setValue(Document obj, YesNoIndicator value) {
+			obj.setSignedIndicator(value);
 		}
 	};
 	protected CurrencyAndAmount remittedAmount;
@@ -2063,7 +2159,7 @@ public class Document {
 	 * definition} = "Amount of money remitted for the referred document."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRemittedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, CurrencyAndAmount> mmRemittedAmount = new MMBusinessAttribute<Document, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReferredDocumentAmount1Choice.mmRemittedAmount, RemittanceAmount1.mmRemittedAmount, RemittanceAmount2.mmRemittedAmount, StructuredRemittanceInformation10.mmReferredDocumentAmount,
 					Garnishment1.mmRemittedAmount, Garnishment2.mmRemittedAmount);
@@ -2077,15 +2173,17 @@ public class Document {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getRemittedAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Document obj) {
+			return obj.getRemittedAmount();
+		}
+
+		@Override
+		public void setValue(Document obj, CurrencyAndAmount value) {
+			obj.setRemittedAmount(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Guarantee> guarantee;
+	protected List<Guarantee> guarantee;
 	/**
 	 * 
 	 <p>
@@ -2118,7 +2216,7 @@ public class Document {
 	 * definition} = "Guarantee that is described in a document."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmGuarantee = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, List<Guarantee>> mmGuarantee = new MMBusinessAssociationEnd<Document, List<Guarantee>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
@@ -2126,9 +2224,19 @@ public class Document {
 			name = "Guarantee";
 			definition = "Guarantee that is described in a document.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Guarantee.mmDocument;
+			opposite_lazy = () -> Guarantee.mmDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
+			type_lazy = () -> Guarantee.mmObject();
+		}
+
+		@Override
+		public List<Guarantee> getValue(Document obj) {
+			return obj.getGuarantee();
+		}
+
+		@Override
+		public void setValue(Document obj, List<Guarantee> value) {
+			obj.setGuarantee(value);
 		}
 	};
 	protected LanguageCode language;
@@ -2176,7 +2284,7 @@ public class Document {
 	 * definition} = "Language used for textual information in the document."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmLanguage = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, LanguageCode> mmLanguage = new MMBusinessAttribute<Document, LanguageCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvoiceHeader1.mmLanguageCode, EventDescription1.mmLanguageCode, FinancialItemParameters1.mmLanguageCode, InvoiceHeader2.mmLanguageCode, InvoiceHeader3.mmLanguageCode);
 			isDerived = false;
@@ -2189,12 +2297,14 @@ public class Document {
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getLanguage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public LanguageCode getValue(Document obj) {
+			return obj.getLanguage();
+		}
+
+		@Override
+		public void setValue(Document obj, LanguageCode value) {
+			obj.setLanguage(value);
 		}
 	};
 	protected Max35Text purpose;
@@ -2242,7 +2352,7 @@ public class Document {
 	 * definition} = "Specifies the function of the document."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPurpose = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Document, Max35Text> mmPurpose = new MMBusinessAttribute<Document, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvoiceHeader1.mmDocumentPurpose, FinancialItemParameters1.mmDocumentPurpose, SupportingDocumentRequestOrLetter1.mmSubject, InvoiceHeader2.mmDocumentPurpose,
 					InvoiceHeader3.mmDocumentPurpose);
@@ -2256,12 +2366,14 @@ public class Document {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Document.class.getMethod("getPurpose", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(Document obj) {
+			return obj.getPurpose();
+		}
+
+		@Override
+		public void setValue(Document obj, Max35Text value) {
+			obj.setPurpose(value);
 		}
 	};
 	protected GenericIdentification documentIdentification;
@@ -2362,7 +2474,7 @@ public class Document {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDocumentIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, GenericIdentification> mmDocumentIdentification = new MMBusinessAssociationEnd<Document, GenericIdentification>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvoiceHeader1.mmName, OtherCollateral2.mmLetterOfCreditIdentification, OtherCollateral4.mmLetterOfCreditIdentification, SupportingDocumentRequestOrLetter1.mmRequestOrLetterIdentification,
 					SupportingDocumentRequestOrLetter1.mmOriginalReferences, TransactionCertificate1.mmCertificate, SupportingDocumentEntry1.mmOriginalDocument, CertificateReference1.mmIdentification,
@@ -2376,12 +2488,22 @@ public class Document {
 			definition = "Identification of a document for instance unique identification of the purchase order, assigned by the buyer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmIdentifiedDocument;
+			opposite_lazy = () -> GenericIdentification.mmIdentifiedDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
+			type_lazy = () -> GenericIdentification.mmObject();
+		}
+
+		@Override
+		public GenericIdentification getValue(Document obj) {
+			return obj.getDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(Document obj, GenericIdentification value) {
+			obj.setDocumentIdentification(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.Evidence> evidence;
+	protected List<Evidence> evidence;
 	/**
 	 * 
 	 <p>
@@ -2413,7 +2535,7 @@ public class Document {
 	 * definition} = "Proof of evidence which uses a document."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmEvidence = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, List<Evidence>> mmEvidence = new MMBusinessAssociationEnd<Document, List<Evidence>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
@@ -2421,12 +2543,22 @@ public class Document {
 			name = "Evidence";
 			definition = "Proof of evidence which uses a document.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Evidence.mmRelatedDocument;
+			opposite_lazy = () -> Evidence.mmRelatedDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Evidence.mmObject();
+			type_lazy = () -> Evidence.mmObject();
+		}
+
+		@Override
+		public List<Evidence> getValue(Document obj) {
+			return obj.getEvidence();
+		}
+
+		@Override
+		public void setValue(Document obj, List<Evidence> value) {
+			obj.setEvidence(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.CommercialTrade> commercialTrade;
+	protected List<CommercialTrade> commercialTrade;
 	/**
 	 * 
 	 <p>
@@ -2459,7 +2591,7 @@ public class Document {
 	 * definition} = "Trade for which a certificare is issued."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, List<CommercialTrade>> mmCommercialTrade = new MMBusinessAssociationEnd<Document, List<CommercialTrade>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
@@ -2467,9 +2599,19 @@ public class Document {
 			name = "CommercialTrade";
 			definition = "Trade for which a certificare is issued.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmDocuments;
+			opposite_lazy = () -> CommercialTrade.mmDocuments;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
+			type_lazy = () -> CommercialTrade.mmObject();
+		}
+
+		@Override
+		public List<CommercialTrade> getValue(Document obj) {
+			return obj.getCommercialTrade();
+		}
+
+		@Override
+		public void setValue(Document obj, List<CommercialTrade> value) {
+			obj.setCommercialTrade(value);
 		}
 	};
 	protected Presentation presentation;
@@ -2516,7 +2658,7 @@ public class Document {
 	 * definition} = "Presentation of documents and statements."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPresentation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, Optional<Presentation>> mmPresentation = new MMBusinessAssociationEnd<Document, Optional<Presentation>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Document11.mmElectronicDetails, Document8.mmElectronicDetails);
 			isDerived = false;
@@ -2526,9 +2668,19 @@ public class Document {
 			definition = "Presentation of documents and statements.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Presentation.mmPresentedDocument;
+			opposite_lazy = () -> Presentation.mmPresentedDocument;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Presentation.mmObject();
+			type_lazy = () -> Presentation.mmObject();
+		}
+
+		@Override
+		public Optional<Presentation> getValue(Document obj) {
+			return obj.getPresentation();
+		}
+
+		@Override
+		public void setValue(Document obj, Optional<Presentation> value) {
+			obj.setPresentation(value.orElse(null));
 		}
 	};
 	protected RegisteredContract relatedContract;
@@ -2564,7 +2716,7 @@ public class Document {
 	 * definition} = "Related document which materialises the agreement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedContract = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Document, RegisteredContract> mmRelatedContract = new MMBusinessAssociationEnd<Document, RegisteredContract>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Document.mmObject();
@@ -2573,9 +2725,19 @@ public class Document {
 			definition = "Related document which materialises the agreement.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmAttachment;
+			opposite_lazy = () -> RegisteredContract.mmAttachment;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmObject();
+			type_lazy = () -> RegisteredContract.mmObject();
+		}
+
+		@Override
+		public RegisteredContract getValue(Document obj) {
+			return obj.getRelatedContract();
+		}
+
+		@Override
+		public void setValue(Document obj, RegisteredContract value) {
+			obj.setRelatedContract(value);
 		}
 	};
 
@@ -2586,11 +2748,9 @@ public class Document {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Document";
 				definition = "General information that unambiguously identifies a document, such as identification number and issue date time.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentifiedDocument, com.tools20022.repository.entity.ContactPoint.mmStoredDocument,
-						com.tools20022.repository.entity.Location.mmIssuedDocument, com.tools20022.repository.entity.Agreement.mmDocument, com.tools20022.repository.entity.DocumentPartyRole.mmDocument,
-						com.tools20022.repository.entity.PaymentObligation.mmAssociatedDocument, com.tools20022.repository.entity.Presentation.mmPresentedDocument, com.tools20022.repository.entity.CommercialTrade.mmDocuments,
-						com.tools20022.repository.entity.Transport.mmTransportDocuments, com.tools20022.repository.entity.LetterOfCredit.mmDocument, com.tools20022.repository.entity.Guarantee.mmDocument,
-						com.tools20022.repository.entity.Reconciliation.mmDocument, com.tools20022.repository.entity.Evidence.mmRelatedDocument, com.tools20022.repository.entity.RegisteredContract.mmAttachment);
+				associationDomain_lazy = () -> Arrays.asList(GenericIdentification.mmIdentifiedDocument, ContactPoint.mmStoredDocument, Location.mmIssuedDocument, Agreement.mmDocument, DocumentPartyRole.mmDocument,
+						PaymentObligation.mmAssociatedDocument, Presentation.mmPresentedDocument, CommercialTrade.mmDocuments, Transport.mmTransportDocuments, LetterOfCredit.mmDocument, Guarantee.mmDocument, Reconciliation.mmDocument,
+						Evidence.mmRelatedDocument, RegisteredContract.mmAttachment);
 				derivationElement_lazy = () -> Arrays.asList(StructuredRemittanceInformation6.mmReferredDocumentInformation, StructuredRemittanceInformation6.mmAdditionalRemittanceInformation, RemittanceInformation1.mmUnstructured,
 						RemittanceInformation1.mmStructured, ReferredDocumentType2.mmCodeOrProprietary, CreditorReferenceType2.mmCodeOrProprietary, StructuredRemittanceInformation7.mmReferredDocumentInformation,
 						StructuredRemittanceInformation7.mmAdditionalRemittanceInformation, RemittanceInformation5.mmUnstructured, RemittanceInformation5.mmStructured, StructuredRemittanceInformation9.mmReferredDocumentInformation,
@@ -2676,7 +2836,7 @@ public class Document {
 		return placeOfStorage == null ? placeOfStorage = new ArrayList<>() : placeOfStorage;
 	}
 
-	public Document setPlaceOfStorage(List<com.tools20022.repository.entity.ContactPoint> placeOfStorage) {
+	public Document setPlaceOfStorage(List<ContactPoint> placeOfStorage) {
 		this.placeOfStorage = Objects.requireNonNull(placeOfStorage);
 		return this;
 	}
@@ -2685,7 +2845,7 @@ public class Document {
 		return paymentObligation == null ? Optional.empty() : Optional.of(paymentObligation);
 	}
 
-	public Document setPaymentObligation(com.tools20022.repository.entity.PaymentObligation paymentObligation) {
+	public Document setPaymentObligation(PaymentObligation paymentObligation) {
 		this.paymentObligation = paymentObligation;
 		return this;
 	}
@@ -2712,7 +2872,7 @@ public class Document {
 		return agreement == null ? agreement = new ArrayList<>() : agreement;
 	}
 
-	public Document setAgreement(List<com.tools20022.repository.entity.Agreement> agreement) {
+	public Document setAgreement(List<Agreement> agreement) {
 		this.agreement = Objects.requireNonNull(agreement);
 		return this;
 	}
@@ -2721,7 +2881,7 @@ public class Document {
 		return placeOfIssue == null ? Optional.empty() : Optional.of(placeOfIssue);
 	}
 
-	public Document setPlaceOfIssue(com.tools20022.repository.entity.Location placeOfIssue) {
+	public Document setPlaceOfIssue(Location placeOfIssue) {
 		this.placeOfIssue = placeOfIssue;
 		return this;
 	}
@@ -2748,7 +2908,7 @@ public class Document {
 		return reconciliation == null ? reconciliation = new ArrayList<>() : reconciliation;
 	}
 
-	public Document setReconciliation(List<com.tools20022.repository.entity.Reconciliation> reconciliation) {
+	public Document setReconciliation(List<Reconciliation> reconciliation) {
 		this.reconciliation = Objects.requireNonNull(reconciliation);
 		return this;
 	}
@@ -2757,7 +2917,7 @@ public class Document {
 		return letterOfCredit;
 	}
 
-	public Document setLetterOfCredit(com.tools20022.repository.entity.LetterOfCredit letterOfCredit) {
+	public Document setLetterOfCredit(LetterOfCredit letterOfCredit) {
 		this.letterOfCredit = Objects.requireNonNull(letterOfCredit);
 		return this;
 	}
@@ -2766,7 +2926,7 @@ public class Document {
 		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public Document setPartyRole(List<com.tools20022.repository.entity.DocumentPartyRole> partyRole) {
+	public Document setPartyRole(List<DocumentPartyRole> partyRole) {
 		this.partyRole = Objects.requireNonNull(partyRole);
 		return this;
 	}
@@ -2784,7 +2944,7 @@ public class Document {
 		return transport;
 	}
 
-	public Document setTransport(com.tools20022.repository.entity.Transport transport) {
+	public Document setTransport(Transport transport) {
 		this.transport = Objects.requireNonNull(transport);
 		return this;
 	}
@@ -2811,7 +2971,7 @@ public class Document {
 		return guarantee == null ? guarantee = new ArrayList<>() : guarantee;
 	}
 
-	public Document setGuarantee(List<com.tools20022.repository.entity.Guarantee> guarantee) {
+	public Document setGuarantee(List<Guarantee> guarantee) {
 		this.guarantee = Objects.requireNonNull(guarantee);
 		return this;
 	}
@@ -2838,7 +2998,7 @@ public class Document {
 		return documentIdentification;
 	}
 
-	public Document setDocumentIdentification(com.tools20022.repository.entity.GenericIdentification documentIdentification) {
+	public Document setDocumentIdentification(GenericIdentification documentIdentification) {
 		this.documentIdentification = Objects.requireNonNull(documentIdentification);
 		return this;
 	}
@@ -2847,7 +3007,7 @@ public class Document {
 		return evidence == null ? evidence = new ArrayList<>() : evidence;
 	}
 
-	public Document setEvidence(List<com.tools20022.repository.entity.Evidence> evidence) {
+	public Document setEvidence(List<Evidence> evidence) {
 		this.evidence = Objects.requireNonNull(evidence);
 		return this;
 	}
@@ -2856,7 +3016,7 @@ public class Document {
 		return commercialTrade == null ? commercialTrade = new ArrayList<>() : commercialTrade;
 	}
 
-	public Document setCommercialTrade(List<com.tools20022.repository.entity.CommercialTrade> commercialTrade) {
+	public Document setCommercialTrade(List<CommercialTrade> commercialTrade) {
 		this.commercialTrade = Objects.requireNonNull(commercialTrade);
 		return this;
 	}
@@ -2865,7 +3025,7 @@ public class Document {
 		return presentation == null ? Optional.empty() : Optional.of(presentation);
 	}
 
-	public Document setPresentation(com.tools20022.repository.entity.Presentation presentation) {
+	public Document setPresentation(Presentation presentation) {
 		this.presentation = presentation;
 		return this;
 	}
@@ -2874,7 +3034,7 @@ public class Document {
 		return relatedContract;
 	}
 
-	public Document setRelatedContract(com.tools20022.repository.entity.RegisteredContract relatedContract) {
+	public Document setRelatedContract(RegisteredContract relatedContract) {
 		this.relatedContract = Objects.requireNonNull(relatedContract);
 		return this;
 	}

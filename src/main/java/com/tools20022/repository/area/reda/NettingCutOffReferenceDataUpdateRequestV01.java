@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.RequestData1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +120,7 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	 * "Specifies the meta data for the netting cut off update request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NettingCutOffReferenceDataUpdateRequestV01, RequestData1> mmRequestData = new MMMessageBuildingBlock<NettingCutOffReferenceDataUpdateRequestV01, RequestData1>() {
 		{
 			xmlTag = "ReqData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +131,14 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 			complexType_lazy = () -> RequestData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NettingCutOffReferenceDataUpdateRequestV01.class.getMethod("getRequestData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RequestData1 getValue(NettingCutOffReferenceDataUpdateRequestV01 obj) {
+			return obj.getRequestData();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReferenceDataUpdateRequestV01 obj, RequestData1 value) {
+			obj.setRequestData(value);
 		}
 	};
 	@XmlElement(name = "NetgCutOffReq", required = true)
@@ -166,7 +167,7 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNettingCutOffRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NettingCutOffReferenceDataUpdateRequestV01, List<NettingCutOff1>> mmNettingCutOffRequest = new MMMessageBuildingBlock<NettingCutOffReferenceDataUpdateRequestV01, List<NettingCutOff1>>() {
 		{
 			xmlTag = "NetgCutOffReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +177,14 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 			complexType_lazy = () -> NettingCutOff1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NettingCutOffReferenceDataUpdateRequestV01.class.getMethod("getNettingCutOffRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<NettingCutOff1> getValue(NettingCutOffReferenceDataUpdateRequestV01 obj) {
+			return obj.getNettingCutOffRequest();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReferenceDataUpdateRequestV01 obj, List<NettingCutOff1> value) {
+			obj.setNettingCutOffRequest(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -211,7 +214,7 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<NettingCutOffReferenceDataUpdateRequestV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<NettingCutOffReferenceDataUpdateRequestV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,12 +224,14 @@ public class NettingCutOffReferenceDataUpdateRequestV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return NettingCutOffReferenceDataUpdateRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(NettingCutOffReferenceDataUpdateRequestV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(NettingCutOffReferenceDataUpdateRequestV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

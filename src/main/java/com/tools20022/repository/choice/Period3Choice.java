@@ -119,7 +119,7 @@ public class Period3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Period3Choice, Period4> mmPeriod = new MMMessageAssociationEnd<Period3Choice, Period4>() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Period3Choice.mmObject();
@@ -133,6 +133,16 @@ public class Period3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Period4.mmObject();
+		}
+
+		@Override
+		public Period4 getValue(Period3Choice obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(Period3Choice obj, Period4 value) {
+			obj.setPeriod(value);
 		}
 	};
 	@XmlElement(name = "PrdCd", required = true)
@@ -176,7 +186,7 @@ public class Period3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriodCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Period3Choice, DateType8Code> mmPeriodCode = new MMMessageAttribute<Period3Choice, DateType8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Period3Choice.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class Period3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType8Code.mmObject();
+		}
+
+		@Override
+		public DateType8Code getValue(Period3Choice obj) {
+			return obj.getPeriodCode();
+		}
+
+		@Override
+		public void setValue(Period3Choice obj, DateType8Code value) {
+			obj.setPeriodCode(value);
 		}
 	};
 

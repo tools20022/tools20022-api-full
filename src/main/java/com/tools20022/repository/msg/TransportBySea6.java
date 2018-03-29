@@ -132,7 +132,7 @@ public class TransportBySea6 {
 	 * TransportBySea5.mmPortOfLoading}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportBySea6, List<Max35Text>> mmPortOfLoading = new MMMessageAttribute<TransportBySea6, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea6.mmObject();
@@ -144,6 +144,16 @@ public class TransportBySea6 {
 			previousVersion_lazy = () -> TransportBySea5.mmPortOfLoading;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(TransportBySea6 obj) {
+			return obj.getPortOfLoading();
+		}
+
+		@Override
+		public void setValue(TransportBySea6 obj, List<Max35Text> value) {
+			obj.setPortOfLoading(value);
 		}
 	};
 	@XmlElement(name = "PortOfDschrge", required = true)
@@ -185,7 +195,7 @@ public class TransportBySea6 {
 	 * TransportBySea5.mmPortOfDischarge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportBySea6, List<Max35Text>> mmPortOfDischarge = new MMMessageAttribute<TransportBySea6, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea6.mmObject();
@@ -197,6 +207,16 @@ public class TransportBySea6 {
 			previousVersion_lazy = () -> TransportBySea5.mmPortOfDischarge;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(TransportBySea6 obj) {
+			return obj.getPortOfDischarge();
+		}
+
+		@Override
+		public void setValue(TransportBySea6 obj, List<Max35Text> value) {
+			obj.setPortOfDischarge(value);
 		}
 	};
 	@XmlElement(name = "VsslNm")
@@ -233,7 +253,7 @@ public class TransportBySea6 {
 	 * definition} = "Name of a vessel."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVesselName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportBySea6, Optional<Max70Text>> mmVesselName = new MMMessageAttribute<TransportBySea6, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> TransportBySea.mmVesselName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea6.mmObject();
@@ -245,6 +265,16 @@ public class TransportBySea6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TransportBySea6 obj) {
+			return obj.getVesselName();
+		}
+
+		@Override
+		public void setValue(TransportBySea6 obj, Optional<Max70Text> value) {
+			obj.setVesselName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeaCrrierNm")
@@ -288,7 +318,7 @@ public class TransportBySea6 {
 	 * TransportBySea5.mmSeaCarrierName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSeaCarrierName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportBySea6, Optional<Max70Text>> mmSeaCarrierName = new MMMessageAttribute<TransportBySea6, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea6.mmObject();
@@ -301,6 +331,16 @@ public class TransportBySea6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TransportBySea6 obj) {
+			return obj.getSeaCarrierName();
+		}
+
+		@Override
+		public void setValue(TransportBySea6 obj, Optional<Max70Text> value) {
+			obj.setSeaCarrierName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeaCrrierCtry")
@@ -344,7 +384,7 @@ public class TransportBySea6 {
 	 * TransportBySea5.mmSeaCarrierCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSeaCarrierCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportBySea6, Optional<CountryCode>> mmSeaCarrierCountry = new MMMessageAttribute<TransportBySea6, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea6.mmObject();
@@ -357,6 +397,16 @@ public class TransportBySea6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(TransportBySea6 obj) {
+			return obj.getSeaCarrierCountry();
+		}
+
+		@Override
+		public void setValue(TransportBySea6 obj, Optional<CountryCode> value) {
+			obj.setSeaCarrierCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrrierAgtNm")
@@ -400,7 +450,7 @@ public class TransportBySea6 {
 	 * TransportBySea5.mmCarrierAgentName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCarrierAgentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportBySea6, Optional<Max70Text>> mmCarrierAgentName = new MMMessageAttribute<TransportBySea6, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea6.mmObject();
@@ -413,6 +463,16 @@ public class TransportBySea6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TransportBySea6 obj) {
+			return obj.getCarrierAgentName();
+		}
+
+		@Override
+		public void setValue(TransportBySea6 obj, Optional<Max70Text> value) {
+			obj.setCarrierAgentName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrrierAgtCtry")
@@ -456,7 +516,7 @@ public class TransportBySea6 {
 	 * TransportBySea5.mmCarrierAgentCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCarrierAgentCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportBySea6, Optional<CountryCode>> mmCarrierAgentCountry = new MMMessageAttribute<TransportBySea6, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea6.mmObject();
@@ -469,6 +529,16 @@ public class TransportBySea6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(TransportBySea6 obj) {
+			return obj.getCarrierAgentCountry();
+		}
+
+		@Override
+		public void setValue(TransportBySea6 obj, Optional<CountryCode> value) {
+			obj.setCarrierAgentCountry(value.orElse(null));
 		}
 	};
 

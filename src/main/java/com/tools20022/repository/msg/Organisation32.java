@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommunicationAddress9;
+import com.tools20022.repository.msg.GenericIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -71,7 +73,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Organisation32"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -124,7 +126,7 @@ public class Organisation32 {
 	 * Organisation25.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation32, Optional<GenericIdentification32>> mmIdentification = new MMMessageAssociationEnd<Organisation32, Optional<GenericIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation32.mmObject();
@@ -137,7 +139,17 @@ public class Organisation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(Organisation32 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Organisation32 obj, Optional<GenericIdentification32> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmonNm")
@@ -178,7 +190,7 @@ public class Organisation32 {
 	 * Organisation25.mmCommonName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation32, Optional<Max70Text>> mmCommonName = new MMMessageAttribute<Organisation32, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation32.mmObject();
@@ -191,6 +203,16 @@ public class Organisation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(Organisation32 obj) {
+			return obj.getCommonName();
+		}
+
+		@Override
+		public void setValue(Organisation32 obj, Optional<Max70Text> value) {
+			obj.setCommonName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LctnCtgy")
@@ -229,7 +251,7 @@ public class Organisation32 {
 	 * Organisation25.mmLocationCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation32, Optional<LocationCategory1Code>> mmLocationCategory = new MMMessageAttribute<Organisation32, Optional<LocationCategory1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation32.mmObject();
 			isDerived = false;
@@ -241,6 +263,16 @@ public class Organisation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LocationCategory1Code.mmObject();
+		}
+
+		@Override
+		public Optional<LocationCategory1Code> getValue(Organisation32 obj) {
+			return obj.getLocationCategory();
+		}
+
+		@Override
+		public void setValue(Organisation32 obj, Optional<LocationCategory1Code> value) {
+			obj.setLocationCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LctnAndCtct")
@@ -277,7 +309,7 @@ public class Organisation32 {
 	 * Organisation25.mmLocationAndContact}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocationAndContact = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Organisation32, Optional<CommunicationAddress9>> mmLocationAndContact = new MMMessageAssociationEnd<Organisation32, Optional<CommunicationAddress9>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation32.mmObject();
 			isDerived = false;
@@ -289,7 +321,17 @@ public class Organisation32 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress9.mmObject();
+			type_lazy = () -> CommunicationAddress9.mmObject();
+		}
+
+		@Override
+		public Optional<CommunicationAddress9> getValue(Organisation32 obj) {
+			return obj.getLocationAndContact();
+		}
+
+		@Override
+		public void setValue(Organisation32 obj, Optional<CommunicationAddress9> value) {
+			obj.setLocationAndContact(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SchmeData")
@@ -325,7 +367,7 @@ public class Organisation32 {
 	 * Organisation25.mmSchemeData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Organisation32, Optional<Max140Text>> mmSchemeData = new MMMessageAttribute<Organisation32, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation32.mmObject();
 			isDerived = false;
@@ -338,6 +380,16 @@ public class Organisation32 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max140Text> getValue(Organisation32 obj) {
+			return obj.getSchemeData();
+		}
+
+		@Override
+		public void setValue(Organisation32 obj, Optional<Max140Text> value) {
+			obj.setSchemeData(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -347,7 +399,7 @@ public class Organisation32 {
 						com.tools20022.repository.msg.Organisation32.mmLocationCategory, com.tools20022.repository.msg.Organisation32.mmLocationAndContact, com.tools20022.repository.msg.Organisation32.mmSchemeData);
 				trace_lazy = () -> Organisation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation32";
 				definition = "Merchant performing the transaction.";
 				previousVersion_lazy = () -> Organisation25.mmObject();
@@ -360,7 +412,7 @@ public class Organisation32 {
 		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public Organisation32 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+	public Organisation32 setIdentification(GenericIdentification32 identification) {
 		this.identification = identification;
 		return this;
 	}
@@ -387,7 +439,7 @@ public class Organisation32 {
 		return locationAndContact == null ? Optional.empty() : Optional.of(locationAndContact);
 	}
 
-	public Organisation32 setLocationAndContact(com.tools20022.repository.msg.CommunicationAddress9 locationAndContact) {
+	public Organisation32 setLocationAndContact(CommunicationAddress9 locationAndContact) {
 		this.locationAndContact = locationAndContact;
 		return this;
 	}

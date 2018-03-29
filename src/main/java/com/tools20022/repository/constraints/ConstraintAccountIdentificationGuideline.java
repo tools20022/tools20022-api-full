@@ -59,12 +59,16 @@ public class ConstraintAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<InvestmentAccount24> forInvestmentAccount24 = new MMConstraint<InvestmentAccount24>() {
 		{
-			validator = ConstraintAccountIdentificationGuideline::checkInvestmentAccount24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationGuideline";
 			definition = "It is recommended that AccountIdentification be used to identify an account.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount41);
 			owner_lazy = () -> InvestmentAccount24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount24 obj) throws Exception {
+			checkInvestmentAccount24(obj);
 		}
 	};
 	/**
@@ -103,13 +107,17 @@ public class ConstraintAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<InvestmentAccount41> forInvestmentAccount41 = new MMConstraint<InvestmentAccount41>() {
 		{
-			validator = ConstraintAccountIdentificationGuideline::checkInvestmentAccount41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationGuideline";
 			definition = "It is recommended that AccountIdentification be used to identify an account.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount55);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount24;
 			owner_lazy = () -> InvestmentAccount41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount41 obj) throws Exception {
+			checkInvestmentAccount41(obj);
 		}
 	};
 	/**
@@ -151,7 +159,6 @@ public class ConstraintAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<InvestmentAccount55> forInvestmentAccount55 = new MMConstraint<InvestmentAccount55>() {
 		{
-			validator = ConstraintAccountIdentificationGuideline::checkInvestmentAccount55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationGuideline";
 			definition = "It is recommended that AccountIdentification be used to identify an account.";
@@ -159,6 +166,11 @@ public class ConstraintAccountIdentificationGuideline {
 					com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount41;
 			owner_lazy = () -> InvestmentAccount55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount55 obj) throws Exception {
+			checkInvestmentAccount55(obj);
 		}
 	};
 	/**
@@ -197,13 +209,17 @@ public class ConstraintAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<InvestmentAccount57> forInvestmentAccount57 = new MMConstraint<InvestmentAccount57>() {
 		{
-			validator = ConstraintAccountIdentificationGuideline::checkInvestmentAccount57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationGuideline";
 			definition = "It is recommended that AccountIdentification be used to identify an account.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount55;
 			owner_lazy = () -> InvestmentAccount57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount57 obj) throws Exception {
+			checkInvestmentAccount57(obj);
 		}
 	};
 	/**
@@ -234,12 +250,16 @@ public class ConstraintAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<InvestmentAccount65> forInvestmentAccount65 = new MMConstraint<InvestmentAccount65>() {
 		{
-			validator = ConstraintAccountIdentificationGuideline::checkInvestmentAccount65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationGuideline";
 			definition = "It is recommended that AccountIdentification be used to identify an account.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount55;
 			owner_lazy = () -> InvestmentAccount65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount65 obj) throws Exception {
+			checkInvestmentAccount65(obj);
 		}
 	};
 	/**
@@ -270,12 +290,16 @@ public class ConstraintAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<InvestmentAccount68> forInvestmentAccount68 = new MMConstraint<InvestmentAccount68>() {
 		{
-			validator = ConstraintAccountIdentificationGuideline::checkInvestmentAccount68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationGuideline";
 			definition = "It is recommended that AccountIdentification be used to identify an account.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount57;
 			owner_lazy = () -> InvestmentAccount68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(InvestmentAccount68 obj) throws Exception {
+			checkInvestmentAccount68(obj);
 		}
 	};
 

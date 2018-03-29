@@ -142,7 +142,7 @@ public class RateAndAmountFormat53Choice {
 	 * RateAndAmountFormat51Choice.mmRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat53Choice, PercentageRate> mmRate = new MMMessageAttribute<RateAndAmountFormat53Choice, PercentageRate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat53Choice.mmObject();
 			isDerived = false;
@@ -156,6 +156,16 @@ public class RateAndAmountFormat53Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateAndAmountFormat53Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat53Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -204,7 +214,7 @@ public class RateAndAmountFormat53Choice {
 	 * RateAndAmountFormat51Choice.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat53Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<RateAndAmountFormat53Choice, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat53Choice.mmObject();
 			isDerived = false;
@@ -218,6 +228,16 @@ public class RateAndAmountFormat53Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(RateAndAmountFormat53Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat53Choice obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -258,7 +278,7 @@ public class RateAndAmountFormat53Choice {
 	 * RateAndAmountFormat51Choice.mmNotSpecifiedRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateAndAmountFormat53Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<RateAndAmountFormat53Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat53Choice.mmObject();
 			isDerived = false;
@@ -271,6 +291,16 @@ public class RateAndAmountFormat53Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(RateAndAmountFormat53Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat53Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -315,7 +345,7 @@ public class RateAndAmountFormat53Choice {
 	 * RateAndAmountFormat51Choice.mmRateTypeAndAmountAndRateStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateAndAmountFormat53Choice, RateTypeAndAmountAndStatus54> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<RateAndAmountFormat53Choice, RateTypeAndAmountAndStatus54>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat53Choice.mmObject();
 			isDerived = false;
@@ -329,6 +359,16 @@ public class RateAndAmountFormat53Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus54.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus54 getValue(RateAndAmountFormat53Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat53Choice obj, RateTypeAndAmountAndStatus54 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndRate", required = true)
@@ -373,7 +413,7 @@ public class RateAndAmountFormat53Choice {
 	 * RateAndAmountFormat51Choice.mmRateTypeAndRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateAndAmountFormat53Choice, RateTypeAndPercentageRate11> mmRateTypeAndRate = new MMMessageAssociationEnd<RateAndAmountFormat53Choice, RateTypeAndPercentageRate11>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateAndAmountFormat53Choice.mmObject();
 			isDerived = false;
@@ -387,6 +427,16 @@ public class RateAndAmountFormat53Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndPercentageRate11.mmObject();
+		}
+
+		@Override
+		public RateTypeAndPercentageRate11 getValue(RateAndAmountFormat53Choice obj) {
+			return obj.getRateTypeAndRate();
+		}
+
+		@Override
+		public void setValue(RateAndAmountFormat53Choice obj, RateTypeAndPercentageRate11 value) {
+			obj.setRateTypeAndRate(value);
 		}
 	};
 

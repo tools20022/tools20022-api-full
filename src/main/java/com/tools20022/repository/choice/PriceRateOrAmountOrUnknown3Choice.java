@@ -111,7 +111,7 @@ public class PriceRateOrAmountOrUnknown3Choice {
 	 * definition} = "Price expressed as a rate, ie, percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateOrAmountOrUnknown3Choice, PercentageRate> mmRate = new MMMessageAttribute<PriceRateOrAmountOrUnknown3Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmountOrUnknown3Choice.mmObject();
@@ -123,6 +123,16 @@ public class PriceRateOrAmountOrUnknown3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(PriceRateOrAmountOrUnknown3Choice obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PriceRateOrAmountOrUnknown3Choice obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -160,7 +170,7 @@ public class PriceRateOrAmountOrUnknown3Choice {
 	 * definition} = "Price expressed as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateOrAmountOrUnknown3Choice, RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<PriceRateOrAmountOrUnknown3Choice, RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmountOrUnknown3Choice.mmObject();
@@ -172,6 +182,16 @@ public class PriceRateOrAmountOrUnknown3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount getValue(PriceRateOrAmountOrUnknown3Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(PriceRateOrAmountOrUnknown3Choice obj, RestrictedFINActiveOrHistoricCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "UknwnInd", required = true)
@@ -204,7 +224,7 @@ public class PriceRateOrAmountOrUnknown3Choice {
 	 * definition} = "Indicates whether the market price is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnknownIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateOrAmountOrUnknown3Choice, YesNoIndicator> mmUnknownIndicator = new MMMessageAttribute<PriceRateOrAmountOrUnknown3Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateOrAmountOrUnknown3Choice.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class PriceRateOrAmountOrUnknown3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PriceRateOrAmountOrUnknown3Choice obj) {
+			return obj.getUnknownIndicator();
+		}
+
+		@Override
+		public void setValue(PriceRateOrAmountOrUnknown3Choice obj, YesNoIndicator value) {
+			obj.setUnknownIndicator(value);
 		}
 	};
 

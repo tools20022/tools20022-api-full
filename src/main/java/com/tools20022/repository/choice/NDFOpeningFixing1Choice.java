@@ -101,7 +101,7 @@ public class NDFOpeningFixing1Choice {
 	 * "Used to provide the opening information associated with an NDF trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOpeningConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NDFOpeningFixing1Choice, OpeningConditions1> mmOpeningConditions = new MMMessageAssociationEnd<NDFOpeningFixing1Choice, OpeningConditions1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NDFOpeningFixing1Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class NDFOpeningFixing1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OpeningConditions1.mmObject();
+		}
+
+		@Override
+		public OpeningConditions1 getValue(NDFOpeningFixing1Choice obj) {
+			return obj.getOpeningConditions();
+		}
+
+		@Override
+		public void setValue(NDFOpeningFixing1Choice obj, OpeningConditions1 value) {
+			obj.setOpeningConditions(value);
 		}
 	};
 	@XmlElement(name = "OpngConfRef", required = true)
@@ -146,7 +156,7 @@ public class NDFOpeningFixing1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningConfirmationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NDFOpeningFixing1Choice, Max35Text> mmOpeningConfirmationReference = new MMMessageAttribute<NDFOpeningFixing1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NDFOpeningFixing1Choice.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class NDFOpeningFixing1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(NDFOpeningFixing1Choice obj) {
+			return obj.getOpeningConfirmationReference();
+		}
+
+		@Override
+		public void setValue(NDFOpeningFixing1Choice obj, Max35Text value) {
+			obj.setOpeningConfirmationReference(value);
 		}
 	};
 

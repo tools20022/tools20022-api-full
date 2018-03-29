@@ -124,7 +124,7 @@ public class SettlementSystemMethod1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSystemMethod1Choice, SettlementSystemMethod1Code> mmCode = new MMMessageAttribute<SettlementSystemMethod1Choice, SettlementSystemMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementSystemMethod1Choice.mmObject();
@@ -138,6 +138,16 @@ public class SettlementSystemMethod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementSystemMethod1Code.mmObject();
+		}
+
+		@Override
+		public SettlementSystemMethod1Code getValue(SettlementSystemMethod1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SettlementSystemMethod1Choice obj, SettlementSystemMethod1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -186,7 +196,7 @@ public class SettlementSystemMethod1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementSystemMethod1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<SettlementSystemMethod1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementSystemMethod1Choice.mmObject();
@@ -200,6 +210,16 @@ public class SettlementSystemMethod1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(SettlementSystemMethod1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SettlementSystemMethod1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -56,12 +56,16 @@ public class ConstraintSEPAOriginalCreditorSchemeIdentificationRule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation7> forDirectDebitTransactionInformation7 = new MMConstraint<DirectDebitTransactionInformation7>() {
 		{
-			validator = ConstraintSEPAOriginalCreditorSchemeIdentificationRule::checkDirectDebitTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalCreditorSchemeIdentificationRule";
 			definition = "SEPA TVS 3.x rule\nOriginalCreditorSchemeIdentification is mandatory if changes occur in Creditor Scheme Identification, otherwise not to be used.";
 			owner_lazy = () -> DirectDebitTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalCreditorSchemeIdentification/Identification/PrivateIdentification/OtherIdentification/Identification</leftOperand><rightOperand>/DirectDebitTransaction/CreditorSchemeIdentification/Identification/PrivateIdentification/OtherIdentification/Identification</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalCreditorSchemeIdentification/Identification</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation7 obj) throws Exception {
+			checkDirectDebitTransactionInformation7(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintSEPAOriginalCreditorSchemeIdentificationRule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation8> forDirectDebitTransactionInformation8 = new MMConstraint<DirectDebitTransactionInformation8>() {
 		{
-			validator = ConstraintSEPAOriginalCreditorSchemeIdentificationRule::checkDirectDebitTransactionInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalCreditorSchemeIdentificationRule";
 			definition = "SEPA TVS 3.x rule\nOriginalCreditorSchemeIdentification is mandatory if changes occur in Creditor Scheme Identification, otherwise not to be used.";
 			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalCreditorSchemeIdentification/Identification/PrivateIdentification/OtherIdentification/Identification</leftOperand><rightOperand>/DirectDebitTransaction/CreditorSchemeIdentification/Identification/PrivateIdentification/OtherIdentification/Identification</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalCreditorSchemeIdentification/Identification</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation8 obj) throws Exception {
+			checkDirectDebitTransactionInformation8(obj);
 		}
 	};
 

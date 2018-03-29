@@ -108,7 +108,7 @@ public class SecurityIdentification14SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification14SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<SecurityIdentification14SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14SD1.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class SecurityIdentification14SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SecurityIdentification14SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification14SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
@@ -152,7 +162,7 @@ public class SecurityIdentification14SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification14SD1, Max240Text> mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute<SecurityIdentification14SD1, Max240Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14SD1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class SecurityIdentification14SD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();
+		}
+
+		@Override
+		public Max240Text getValue(SecurityIdentification14SD1 obj) {
+			return obj.getAbbreviatedLocalLanguageSecurityName();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification14SD1 obj, Max240Text value) {
+			obj.setAbbreviatedLocalLanguageSecurityName(value);
 		}
 	};
 

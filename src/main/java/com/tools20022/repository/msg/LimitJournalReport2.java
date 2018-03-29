@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.LimitJournalReportOrError4Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.LimitIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class LimitJournalReport2 {
 	 * LimitJournalReport1.mmLimitIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitJournalReport2, LimitIdentification4> mmLimitIdentification = new MMMessageAssociationEnd<LimitJournalReport2, LimitIdentification4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalReport2.mmObject();
 			isDerived = false;
@@ -118,7 +119,17 @@ public class LimitJournalReport2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LimitIdentification4.mmObject();
+			type_lazy = () -> LimitIdentification4.mmObject();
+		}
+
+		@Override
+		public LimitIdentification4 getValue(LimitJournalReport2 obj) {
+			return obj.getLimitIdentification();
+		}
+
+		@Override
+		public void setValue(LimitJournalReport2 obj, LimitIdentification4 value) {
+			obj.setLimitIdentification(value);
 		}
 	};
 	@XmlElement(name = "LmtRpt", required = true)
@@ -157,7 +168,7 @@ public class LimitJournalReport2 {
 	 * LimitJournalReport1.mmLimitReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimitReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitJournalReport2, LimitJournalReportOrError4Choice> mmLimitReport = new MMMessageAssociationEnd<LimitJournalReport2, LimitJournalReportOrError4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalReport2.mmObject();
 			isDerived = false;
@@ -170,6 +181,16 @@ public class LimitJournalReport2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitJournalReportOrError4Choice.mmObject();
+		}
+
+		@Override
+		public LimitJournalReportOrError4Choice getValue(LimitJournalReport2 obj) {
+			return obj.getLimitReport();
+		}
+
+		@Override
+		public void setValue(LimitJournalReport2 obj, LimitJournalReportOrError4Choice value) {
+			obj.setLimitReport(value);
 		}
 	};
 
@@ -191,7 +212,7 @@ public class LimitJournalReport2 {
 		return limitIdentification;
 	}
 
-	public LimitJournalReport2 setLimitIdentification(com.tools20022.repository.msg.LimitIdentification4 limitIdentification) {
+	public LimitJournalReport2 setLimitIdentification(LimitIdentification4 limitIdentification) {
 		this.limitIdentification = Objects.requireNonNull(limitIdentification);
 		return this;
 	}

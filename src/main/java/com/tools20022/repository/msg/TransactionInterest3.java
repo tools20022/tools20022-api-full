@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InterestRecord1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +120,7 @@ public class TransactionInterest3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalInterestAndTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionInterest3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmTotalInterestAndTaxAmount = new MMMessageAttribute<TransactionInterest3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest3.mmObject();
 			isDerived = false;
@@ -132,9 +133,19 @@ public class TransactionInterest3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(TransactionInterest3 obj) {
+			return obj.getTotalInterestAndTaxAmount();
+		}
+
+		@Override
+		public void setValue(TransactionInterest3 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setTotalInterestAndTaxAmount(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Rcrd")
-	protected List<com.tools20022.repository.msg.InterestRecord1> record;
+	protected List<InterestRecord1> record;
 	/**
 	 * 
 	 <p>
@@ -174,7 +185,7 @@ public class TransactionInterest3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecord = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionInterest3, List<InterestRecord1>> mmRecord = new MMMessageAssociationEnd<TransactionInterest3, List<InterestRecord1>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest3.mmObject();
@@ -186,7 +197,17 @@ public class TransactionInterest3 {
 			nextVersions_lazy = () -> Arrays.asList(TransactionInterest4.mmRecord);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InterestRecord1.mmObject();
+			type_lazy = () -> InterestRecord1.mmObject();
+		}
+
+		@Override
+		public List<InterestRecord1> getValue(TransactionInterest3 obj) {
+			return obj.getRecord();
+		}
+
+		@Override
+		public void setValue(TransactionInterest3 obj, List<InterestRecord1> value) {
+			obj.setRecord(value);
 		}
 	};
 
@@ -218,7 +239,7 @@ public class TransactionInterest3 {
 		return record == null ? record = new ArrayList<>() : record;
 	}
 
-	public TransactionInterest3 setRecord(List<com.tools20022.repository.msg.InterestRecord1> record) {
+	public TransactionInterest3 setRecord(List<InterestRecord1> record) {
 		this.record = Objects.requireNonNull(record);
 		return this;
 	}

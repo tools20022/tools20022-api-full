@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm16Code;
 import com.tools20022.repository.codeset.EncryptionFormat2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -57,7 +58,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Parameter10"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -108,7 +109,7 @@ public class Parameter10 {
 	 * Parameter4.mmEncryptionFormat}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptionFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter10, Optional<EncryptionFormat2Code>> mmEncryptionFormat = new MMMessageAttribute<Parameter10, Optional<EncryptionFormat2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter10.mmObject();
 			isDerived = false;
@@ -120,6 +121,16 @@ public class Parameter10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EncryptionFormat2Code.mmObject();
+		}
+
+		@Override
+		public Optional<EncryptionFormat2Code> getValue(Parameter10 obj) {
+			return obj.getEncryptionFormat();
+		}
+
+		@Override
+		public void setValue(Parameter10 obj, Optional<EncryptionFormat2Code> value) {
+			obj.setEncryptionFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgstAlgo")
@@ -156,7 +167,7 @@ public class Parameter10 {
 	 * Parameter4.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter10, Optional<Algorithm16Code>> mmDigestAlgorithm = new MMMessageAttribute<Parameter10, Optional<Algorithm16Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter10.mmObject();
 			isDerived = false;
@@ -168,6 +179,16 @@ public class Parameter10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm16Code.mmObject();
+		}
+
+		@Override
+		public Optional<Algorithm16Code> getValue(Parameter10 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter10 obj, Optional<Algorithm16Code> value) {
+			obj.setDigestAlgorithm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MskGnrtrAlgo")
@@ -205,7 +226,7 @@ public class Parameter10 {
 	 * Parameter4.mmMaskGeneratorAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter10, Optional<AlgorithmIdentification18>> mmMaskGeneratorAlgorithm = new MMMessageAttribute<Parameter10, Optional<AlgorithmIdentification18>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter10.mmObject();
 			isDerived = false;
@@ -216,7 +237,17 @@ public class Parameter10 {
 			previousVersion_lazy = () -> Parameter4.mmMaskGeneratorAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification18.mmObject();
+			complexType_lazy = () -> AlgorithmIdentification18.mmObject();
+		}
+
+		@Override
+		public Optional<AlgorithmIdentification18> getValue(Parameter10 obj) {
+			return obj.getMaskGeneratorAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter10 obj, Optional<AlgorithmIdentification18> value) {
+			obj.setMaskGeneratorAlgorithm(value.orElse(null));
 		}
 	};
 
@@ -226,7 +257,7 @@ public class Parameter10 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter10.mmEncryptionFormat, com.tools20022.repository.msg.Parameter10.mmDigestAlgorithm,
 						com.tools20022.repository.msg.Parameter10.mmMaskGeneratorAlgorithm);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter10";
 				definition = "Parameters of the asymmetric encryption algorithm.";
 				previousVersion_lazy = () -> Parameter4.mmObject();
@@ -257,7 +288,7 @@ public class Parameter10 {
 		return maskGeneratorAlgorithm == null ? Optional.empty() : Optional.of(maskGeneratorAlgorithm);
 	}
 
-	public Parameter10 setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification18 maskGeneratorAlgorithm) {
+	public Parameter10 setMaskGeneratorAlgorithm(AlgorithmIdentification18 maskGeneratorAlgorithm) {
 		this.maskGeneratorAlgorithm = maskGeneratorAlgorithm;
 		return this;
 	}

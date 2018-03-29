@@ -130,7 +130,7 @@ public class ProcessingStatus43Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceived = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus43Choice, ReceivedStatusReason1> mmReceived = new MMMessageAssociationEnd<ProcessingStatus43Choice, ReceivedStatusReason1>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmCorporateActionInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus43Choice.mmObject();
@@ -143,6 +143,16 @@ public class ProcessingStatus43Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReceivedStatusReason1.mmObject();
+		}
+
+		@Override
+		public ReceivedStatusReason1 getValue(ProcessingStatus43Choice obj) {
+			return obj.getReceived();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus43Choice obj, ReceivedStatusReason1 value) {
+			obj.setReceived(value);
 		}
 	};
 	@XmlElement(name = "Accptd", required = true)
@@ -180,7 +190,7 @@ public class ProcessingStatus43Choice {
 	 * ProcessingStatus36Choice.mmAcknowledgedAccepted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus43Choice, AcceptedStatusReason7> mmAccepted = new MMMessageAssociationEnd<ProcessingStatus43Choice, AcceptedStatusReason7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus43Choice.mmObject();
 			isDerived = false;
@@ -193,6 +203,16 @@ public class ProcessingStatus43Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcceptedStatusReason7.mmObject();
+		}
+
+		@Override
+		public AcceptedStatusReason7 getValue(ProcessingStatus43Choice obj) {
+			return obj.getAccepted();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus43Choice obj, AcceptedStatusReason7 value) {
+			obj.setAccepted(value);
 		}
 	};
 	@XmlElement(name = "PdgPrcg", required = true)
@@ -231,7 +251,7 @@ public class ProcessingStatus43Choice {
 	 * ProcessingStatus36Choice.mmPendingProcessing}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingProcessing = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus43Choice, PendingProcessingStatusReason1> mmPendingProcessing = new MMMessageAssociationEnd<ProcessingStatus43Choice, PendingProcessingStatusReason1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus43Choice.mmObject();
 			isDerived = false;
@@ -244,6 +264,16 @@ public class ProcessingStatus43Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingProcessingStatusReason1.mmObject();
+		}
+
+		@Override
+		public PendingProcessingStatusReason1 getValue(ProcessingStatus43Choice obj) {
+			return obj.getPendingProcessing();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus43Choice obj, PendingProcessingStatusReason1 value) {
+			obj.setPendingProcessing(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -281,7 +311,7 @@ public class ProcessingStatus43Choice {
 	 * ProcessingStatus36Choice.mmRejected}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus43Choice, RejectedStatusReason12> mmRejected = new MMMessageAssociationEnd<ProcessingStatus43Choice, RejectedStatusReason12>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus43Choice.mmObject();
 			isDerived = false;
@@ -294,6 +324,16 @@ public class ProcessingStatus43Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedStatusReason12.mmObject();
+		}
+
+		@Override
+		public RejectedStatusReason12 getValue(ProcessingStatus43Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus43Choice obj, RejectedStatusReason12 value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "PrtrySts", required = true)
@@ -332,7 +372,7 @@ public class ProcessingStatus43Choice {
 	 * ProcessingStatus36Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus43Choice, ProprietaryStatusAndReason5> mmProprietaryStatus = new MMMessageAssociationEnd<ProcessingStatus43Choice, ProprietaryStatusAndReason5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus43Choice.mmObject();
 			isDerived = false;
@@ -345,6 +385,16 @@ public class ProcessingStatus43Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason5.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason5 getValue(ProcessingStatus43Choice obj) {
+			return obj.getProprietaryStatus();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus43Choice obj, ProprietaryStatusAndReason5 value) {
+			obj.setProprietaryStatus(value);
 		}
 	};
 

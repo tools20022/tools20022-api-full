@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.InterestCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriodDetails;
+import com.tools20022.repository.msg.Rate1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -122,7 +124,7 @@ public class TransactionInterest1 {
 	 * "Identifies the amount of interest included in the entry amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionInterest1, CurrencyAndAmount> mmAmount = new MMMessageAttribute<TransactionInterest1, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest1.mmObject();
@@ -134,6 +136,16 @@ public class TransactionInterest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(TransactionInterest1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TransactionInterest1 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -173,7 +185,7 @@ public class TransactionInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionInterest1, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<TransactionInterest1, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest1.mmObject();
@@ -185,6 +197,16 @@ public class TransactionInterest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(TransactionInterest1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(TransactionInterest1 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -220,7 +242,7 @@ public class TransactionInterest1 {
 	 * definition} = "Specifies the type of interest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionInterest1, Optional<InterestType1Choice>> mmType = new MMMessageAssociationEnd<TransactionInterest1, Optional<InterestType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest1.mmObject();
@@ -234,9 +256,19 @@ public class TransactionInterest1 {
 			isComposite = true;
 			type_lazy = () -> InterestType1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<InterestType1Choice> getValue(TransactionInterest1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TransactionInterest1 obj, Optional<InterestType1Choice> value) {
+			obj.setType(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Rate")
-	protected List<com.tools20022.repository.msg.Rate1> rate;
+	protected List<Rate1> rate;
 	/**
 	 * 
 	 <p>
@@ -267,7 +299,7 @@ public class TransactionInterest1 {
 	 * definition} = "Set of elements qualifying the interest rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionInterest1, List<Rate1>> mmRate = new MMMessageAssociationEnd<TransactionInterest1, List<Rate1>>() {
 		{
 			businessComponentTrace_lazy = () -> InterestCalculation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest1.mmObject();
@@ -278,7 +310,17 @@ public class TransactionInterest1 {
 			definition = "Set of elements qualifying the interest rate.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Rate1.mmObject();
+			type_lazy = () -> Rate1.mmObject();
+		}
+
+		@Override
+		public List<Rate1> getValue(TransactionInterest1 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(TransactionInterest1 obj, List<Rate1> value) {
+			obj.setRate(value);
 		}
 	};
 	@XmlElement(name = "FrToDt")
@@ -314,7 +356,7 @@ public class TransactionInterest1 {
 	 * definition} = "Range of time between a start date and an end date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionInterest1, Optional<DateTimePeriodDetails>> mmFromToDate = new MMMessageAssociationEnd<TransactionInterest1, Optional<DateTimePeriodDetails>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest1.mmObject();
@@ -326,7 +368,17 @@ public class TransactionInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails.mmObject();
+			type_lazy = () -> DateTimePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodDetails> getValue(TransactionInterest1 obj) {
+			return obj.getFromToDate();
+		}
+
+		@Override
+		public void setValue(TransactionInterest1 obj, Optional<DateTimePeriodDetails> value) {
+			obj.setFromToDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -360,7 +412,7 @@ public class TransactionInterest1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionInterest1, Optional<Max35Text>> mmReason = new MMMessageAttribute<TransactionInterest1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionInterest1.mmObject();
 			isDerived = false;
@@ -371,6 +423,16 @@ public class TransactionInterest1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionInterest1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(TransactionInterest1 obj, Optional<Max35Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 
@@ -421,7 +483,7 @@ public class TransactionInterest1 {
 		return rate == null ? rate = new ArrayList<>() : rate;
 	}
 
-	public TransactionInterest1 setRate(List<com.tools20022.repository.msg.Rate1> rate) {
+	public TransactionInterest1 setRate(List<Rate1> rate) {
 		this.rate = Objects.requireNonNull(rate);
 		return this;
 	}
@@ -430,7 +492,7 @@ public class TransactionInterest1 {
 		return fromToDate == null ? Optional.empty() : Optional.of(fromToDate);
 	}
 
-	public TransactionInterest1 setFromToDate(com.tools20022.repository.msg.DateTimePeriodDetails fromToDate) {
+	public TransactionInterest1 setFromToDate(DateTimePeriodDetails fromToDate) {
 		this.fromToDate = fromToDate;
 		return this;
 	}

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransferInstructionStatus;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -144,7 +145,7 @@ public class TransferStatusAndReason {
 	 * definition} = "Business reference of the transfer instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferStatusAndReason, Max35Text> mmTransferReference = new MMMessageAttribute<TransferStatusAndReason, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason.mmObject();
@@ -156,6 +157,16 @@ public class TransferStatusAndReason {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransferStatusAndReason obj) {
+			return obj.getTransferReference();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason obj, Max35Text value) {
+			obj.setTransferReference(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -192,7 +203,7 @@ public class TransferStatusAndReason {
 	 * definition} = "Instruction status and the reason for the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason, TransferInstructionStatus> mmStatus = new MMMessageAssociationEnd<TransferStatusAndReason, TransferInstructionStatus>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason.mmObject();
@@ -204,7 +215,17 @@ public class TransferStatusAndReason {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus.mmObject();
+			type_lazy = () -> TransferInstructionStatus.mmObject();
+		}
+
+		@Override
+		public TransferInstructionStatus getValue(TransferStatusAndReason obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason obj, TransferInstructionStatus value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "PdgSttlm", required = true)
@@ -242,7 +263,7 @@ public class TransferStatusAndReason {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingSettlement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason, PendingSettlementStatusChoice> mmPendingSettlement = new MMMessageAssociationEnd<TransferStatusAndReason, PendingSettlementStatusChoice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason.mmObject();
@@ -255,6 +276,16 @@ public class TransferStatusAndReason {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingSettlementStatusChoice.mmObject();
+		}
+
+		@Override
+		public PendingSettlementStatusChoice getValue(TransferStatusAndReason obj) {
+			return obj.getPendingSettlement();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason obj, PendingSettlementStatusChoice value) {
+			obj.setPendingSettlement(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -291,7 +322,7 @@ public class TransferStatusAndReason {
 	 * definition} = "Status of the transfer instruction is unmatched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason, TransferUnmatchedStatus> mmUnmatched = new MMMessageAssociationEnd<TransferStatusAndReason, TransferUnmatchedStatus>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason.mmObject();
@@ -304,6 +335,16 @@ public class TransferStatusAndReason {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferUnmatchedStatus.mmObject();
+		}
+
+		@Override
+		public TransferUnmatchedStatus getValue(TransferStatusAndReason obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason obj, TransferUnmatchedStatus value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "InRpr", required = true)
@@ -340,7 +381,7 @@ public class TransferStatusAndReason {
 	 * definition} = "Status is in repair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason, InRepairStatus2Choice> mmInRepair = new MMMessageAssociationEnd<TransferStatusAndReason, InRepairStatus2Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason.mmObject();
@@ -353,6 +394,16 @@ public class TransferStatusAndReason {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InRepairStatus2Choice.mmObject();
+		}
+
+		@Override
+		public InRepairStatus2Choice getValue(TransferStatusAndReason obj) {
+			return obj.getInRepair();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason obj, InRepairStatus2Choice value) {
+			obj.setInRepair(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -389,7 +440,7 @@ public class TransferStatusAndReason {
 	 * definition} = "Status of the transfer instructed is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason, RejectedStatus3Choice> mmRejected = new MMMessageAssociationEnd<TransferStatusAndReason, RejectedStatus3Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason.mmObject();
@@ -402,6 +453,16 @@ public class TransferStatusAndReason {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedStatus3Choice.mmObject();
+		}
+
+		@Override
+		public RejectedStatus3Choice getValue(TransferStatusAndReason obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason obj, RejectedStatus3Choice value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -438,7 +499,7 @@ public class TransferStatusAndReason {
 	 * definition} = "Party that initiates the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferStatusAndReason, Optional<PartyIdentification1Choice>> mmStatusInitiator = new MMMessageAssociationEnd<TransferStatusAndReason, Optional<PartyIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason.mmObject();
@@ -451,6 +512,16 @@ public class TransferStatusAndReason {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification1Choice> getValue(TransferStatusAndReason obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(TransferStatusAndReason obj, Optional<PartyIdentification1Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 	/**
@@ -545,7 +616,7 @@ public class TransferStatusAndReason {
 		return status;
 	}
 
-	public TransferStatusAndReason setStatus(com.tools20022.repository.msg.TransferInstructionStatus status) {
+	public TransferStatusAndReason setStatus(TransferInstructionStatus status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}

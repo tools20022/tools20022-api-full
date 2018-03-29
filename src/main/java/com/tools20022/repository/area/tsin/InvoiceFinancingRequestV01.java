@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesInitiationLatestVersion;
 import com.tools20022.repository.msg.InvoiceRequestInformation1;
 import com.tools20022.repository.msg.RequestGroupInformation1;
 import com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -163,7 +162,7 @@ public class InvoiceFinancingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceFinancingRequestV01, RequestGroupInformation1> mmRequestGroupInformation = new MMMessageBuildingBlock<InvoiceFinancingRequestV01, RequestGroupInformation1>() {
 		{
 			xmlTag = "ReqGrpInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,12 +173,14 @@ public class InvoiceFinancingRequestV01 {
 			complexType_lazy = () -> RequestGroupInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceFinancingRequestV01.class.getMethod("getRequestGroupInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RequestGroupInformation1 getValue(InvoiceFinancingRequestV01 obj) {
+			return obj.getRequestGroupInformation();
+		}
+
+		@Override
+		public void setValue(InvoiceFinancingRequestV01 obj, RequestGroupInformation1 value) {
+			obj.setRequestGroupInformation(value);
 		}
 	};
 	@XmlElement(name = "InvcReqInf", required = true)
@@ -209,7 +210,7 @@ public class InvoiceFinancingRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInvoiceRequestInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvoiceFinancingRequestV01, List<InvoiceRequestInformation1>> mmInvoiceRequestInformation = new MMMessageBuildingBlock<InvoiceFinancingRequestV01, List<InvoiceRequestInformation1>>() {
 		{
 			xmlTag = "InvcReqInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,12 +220,14 @@ public class InvoiceFinancingRequestV01 {
 			complexType_lazy = () -> InvoiceRequestInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvoiceFinancingRequestV01.class.getMethod("getInvoiceRequestInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<InvoiceRequestInformation1> getValue(InvoiceFinancingRequestV01 obj) {
+			return obj.getInvoiceRequestInformation();
+		}
+
+		@Override
+		public void setValue(InvoiceFinancingRequestV01 obj, List<InvoiceRequestInformation1> value) {
+			obj.setInvoiceRequestInformation(value);
 		}
 	};
 

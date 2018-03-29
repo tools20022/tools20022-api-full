@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class QueueTransaction1 {
 	 * definition} = "Account owner identification such as BIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QueueTransaction1, FinancialInstitutionIdentification8> mmAccountOwner = new MMMessageAssociationEnd<QueueTransaction1, FinancialInstitutionIdentification8>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransaction1.mmObject();
 			isDerived = false;
@@ -116,7 +117,17 @@ public class QueueTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification8.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification8 getValue(QueueTransaction1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(QueueTransaction1 obj, FinancialInstitutionIdentification8 value) {
+			obj.setAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "Acct", required = true)
@@ -149,7 +160,7 @@ public class QueueTransaction1 {
 	 * "Identification of the account such as IBAN or local identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QueueTransaction1, AccountIdentification4Choice> mmAccount = new MMMessageAssociationEnd<QueueTransaction1, AccountIdentification4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransaction1.mmObject();
 			isDerived = false;
@@ -161,6 +172,16 @@ public class QueueTransaction1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification4Choice getValue(QueueTransaction1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(QueueTransaction1 obj, AccountIdentification4Choice value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "NbOfTxs")
@@ -192,7 +213,7 @@ public class QueueTransaction1 {
 	 * definition} = "Number of transaction per counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QueueTransaction1, Optional<Number>> mmNumberOfTransactions = new MMMessageAttribute<QueueTransaction1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransaction1.mmObject();
 			isDerived = false;
@@ -203,6 +224,16 @@ public class QueueTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(QueueTransaction1 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(QueueTransaction1 obj, Optional<Number> value) {
+			obj.setNumberOfTransactions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlAmt", required = true)
@@ -235,7 +266,7 @@ public class QueueTransaction1 {
 	 * definition} = "Aggregated amount of the transactions per counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QueueTransaction1, ActiveCurrencyAndAmount> mmTotalAmount = new MMMessageAttribute<QueueTransaction1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransaction1.mmObject();
 			isDerived = false;
@@ -246,6 +277,16 @@ public class QueueTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(QueueTransaction1 obj) {
+			return obj.getTotalAmount();
+		}
+
+		@Override
+		public void setValue(QueueTransaction1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalAmount(value);
 		}
 	};
 
@@ -267,7 +308,7 @@ public class QueueTransaction1 {
 		return accountOwner;
 	}
 
-	public QueueTransaction1 setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification8 accountOwner) {
+	public QueueTransaction1 setAccountOwner(FinancialInstitutionIdentification8 accountOwner) {
 		this.accountOwner = Objects.requireNonNull(accountOwner);
 		return this;
 	}

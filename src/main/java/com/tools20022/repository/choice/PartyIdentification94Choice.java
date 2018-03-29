@@ -117,7 +117,7 @@ public class PartyIdentification94Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification94Choice, BICFIIdentifier> mmBICFI = new MMMessageAttribute<PartyIdentification94Choice, BICFIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification94Choice.mmObject();
@@ -129,6 +129,16 @@ public class PartyIdentification94Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(PartyIdentification94Choice obj) {
+			return obj.getBICFI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification94Choice obj, BICFIIdentifier value) {
+			obj.setBICFI(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -169,7 +179,7 @@ public class PartyIdentification94Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification94Choice, NameAndAddress5> mmNameAndAddress = new MMMessageAssociationEnd<PartyIdentification94Choice, NameAndAddress5>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification94Choice.mmObject();
@@ -183,6 +193,16 @@ public class PartyIdentification94Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NameAndAddress5.mmObject();
+		}
+
+		@Override
+		public NameAndAddress5 getValue(PartyIdentification94Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification94Choice obj, NameAndAddress5 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -224,7 +244,7 @@ public class PartyIdentification94Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification94Choice, GenericIdentification36> mmProprietaryIdentification = new MMMessageAssociationEnd<PartyIdentification94Choice, GenericIdentification36>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification94Choice.mmObject();
@@ -238,6 +258,16 @@ public class PartyIdentification94Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(PartyIdentification94Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification94Choice obj, GenericIdentification36 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

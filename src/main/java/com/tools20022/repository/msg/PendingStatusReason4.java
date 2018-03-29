@@ -123,7 +123,7 @@ public class PendingStatusReason4 {
 	 * "Specifies the reason why the instruction's processing is pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingStatusReason4, PendingReason7Choice> mmReasonCode = new MMMessageAssociationEnd<PendingStatusReason4, PendingReason7Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusReason4.mmObject();
@@ -137,6 +137,16 @@ public class PendingStatusReason4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingReason7Choice.mmObject();
+		}
+
+		@Override
+		public PendingReason7Choice getValue(PendingStatusReason4 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(PendingStatusReason4 obj, PendingReason7Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -178,7 +188,7 @@ public class PendingStatusReason4 {
 	 * "Provides additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingStatusReason4, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<PendingStatusReason4, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingStatusReason4.mmObject();
@@ -191,6 +201,16 @@ public class PendingStatusReason4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(PendingStatusReason4 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(PendingStatusReason4 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

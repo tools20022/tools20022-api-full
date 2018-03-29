@@ -103,7 +103,7 @@ public class ArrestedFunds1 {
 	 * "Identification of the arrest order assigned by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmArrestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ArrestedFunds1, Optional<Max10Text>> mmArrestIdentification = new MMMessageAttribute<ArrestedFunds1, Optional<Max10Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class ArrestedFunds1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max10Text> getValue(ArrestedFunds1 obj) {
+			return obj.getArrestIdentification();
+		}
+
+		@Override
+		public void setValue(ArrestedFunds1 obj, Optional<Max10Text> value) {
+			obj.setArrestIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlAmt")
@@ -145,7 +155,7 @@ public class ArrestedFunds1 {
 	 * definition} = "Total amount owed subject to arrest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ArrestedFunds1, Optional<ActiveCurrencyAndAmount>> mmTotalAmount = new MMMessageAttribute<ArrestedFunds1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class ArrestedFunds1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ArrestedFunds1 obj) {
+			return obj.getTotalAmount();
+		}
+
+		@Override
+		public void setValue(ArrestedFunds1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmngUnpdAmt", required = true)
@@ -188,7 +208,7 @@ public class ArrestedFunds1 {
 	 * "Remaining unpaid amount out of total amount owed subject to arrest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemainingUnpaidAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ArrestedFunds1, ActiveCurrencyAndAmount> mmRemainingUnpaidAmount = new MMMessageAttribute<ArrestedFunds1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 			isDerived = false;
@@ -199,6 +219,16 @@ public class ArrestedFunds1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ArrestedFunds1 obj) {
+			return obj.getRemainingUnpaidAmount();
+		}
+
+		@Override
+		public void setValue(ArrestedFunds1 obj, ActiveCurrencyAndAmount value) {
+			obj.setRemainingUnpaidAmount(value);
 		}
 	};
 	@XmlElement(name = "ArrstdAmt")
@@ -230,7 +260,7 @@ public class ArrestedFunds1 {
 	 * definition} = "Funds blocked for settlement of the arrest order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmArrestedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ArrestedFunds1, Optional<ActiveCurrencyAndAmount>> mmArrestedAmount = new MMMessageAttribute<ArrestedFunds1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 			isDerived = false;
@@ -241,6 +271,16 @@ public class ArrestedFunds1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ArrestedFunds1 obj) {
+			return obj.getArrestedAmount();
+		}
+
+		@Override
+		public void setValue(ArrestedFunds1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setArrestedAmount(value.orElse(null));
 		}
 	};
 

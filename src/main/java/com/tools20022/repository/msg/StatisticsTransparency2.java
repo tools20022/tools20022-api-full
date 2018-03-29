@@ -101,7 +101,7 @@ public class StatisticsTransparency2 {
 	 * "Total number of transactions that have been performed on this market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNumberOfTransactionsExecuted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency2, Number> mmTotalNumberOfTransactionsExecuted = new MMMessageAttribute<StatisticsTransparency2, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class StatisticsTransparency2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(StatisticsTransparency2 obj) {
+			return obj.getTotalNumberOfTransactionsExecuted();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency2 obj, Number value) {
+			obj.setTotalNumberOfTransactionsExecuted(value);
 		}
 	};
 	@XmlElement(name = "TtlVolOfTxsExctd", required = true)
@@ -145,7 +155,7 @@ public class StatisticsTransparency2 {
 	 * "Total volume of transactions that have been performed on this market."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalVolumeOfTransactionsExecuted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatisticsTransparency2, DecimalNumber> mmTotalVolumeOfTransactionsExecuted = new MMMessageAttribute<StatisticsTransparency2, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency2.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class StatisticsTransparency2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(StatisticsTransparency2 obj) {
+			return obj.getTotalVolumeOfTransactionsExecuted();
+		}
+
+		@Override
+		public void setValue(StatisticsTransparency2 obj, DecimalNumber value) {
+			obj.setTotalVolumeOfTransactionsExecuted(value);
 		}
 	};
 

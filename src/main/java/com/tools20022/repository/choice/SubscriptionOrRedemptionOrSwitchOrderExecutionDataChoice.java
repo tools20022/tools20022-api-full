@@ -118,7 +118,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	 * definition} = "Subscription order confirmation data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice, SubscriptionExecution8> mmSubscriptionDetails = new MMMessageAssociationEnd<SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice, SubscriptionExecution8>() {
 		{
 			businessComponentTrace_lazy = () -> SubscriptionExecution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
@@ -131,6 +131,16 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SubscriptionExecution8.mmObject();
+		}
+
+		@Override
+		public SubscriptionExecution8 getValue(SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice obj) {
+			return obj.getSubscriptionDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice obj, SubscriptionExecution8 value) {
+			obj.setSubscriptionDetails(value);
 		}
 	};
 	@XmlElement(name = "RedDtls", required = true)
@@ -166,7 +176,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	 * definition} = "Redemption order confirmation data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRedemptionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice, RedemptionExecution11> mmRedemptionDetails = new MMMessageAssociationEnd<SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice, RedemptionExecution11>() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionExecution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
@@ -179,6 +189,16 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RedemptionExecution11.mmObject();
+		}
+
+		@Override
+		public RedemptionExecution11 getValue(SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice obj) {
+			return obj.getRedemptionDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice obj, RedemptionExecution11 value) {
+			obj.setRedemptionDetails(value);
 		}
 	};
 	@XmlElement(name = "SwtchDtls", required = true)
@@ -214,7 +234,7 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 	 * definition} = "Switch order confirmation data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSwitchDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice, SwitchExecution5> mmSwitchDetails = new MMMessageAssociationEnd<SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice, SwitchExecution5>() {
 		{
 			businessComponentTrace_lazy = () -> SwitchExecution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice.mmObject();
@@ -227,6 +247,16 @@ public class SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SwitchExecution5.mmObject();
+		}
+
+		@Override
+		public SwitchExecution5 getValue(SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice obj) {
+			return obj.getSwitchDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice obj, SwitchExecution5 value) {
+			obj.setSwitchDetails(value);
 		}
 	};
 

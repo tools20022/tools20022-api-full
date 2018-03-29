@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxCalculationInformation2;
+import com.tools20022.repository.msg.TaxType3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +118,7 @@ public class Tax8 {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax8, TaxType3> mmType = new MMMessageAttribute<Tax8, TaxType3>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax8.mmObject();
@@ -127,7 +129,17 @@ public class Tax8 {
 			definition = "Type of tax applied.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxType3.mmObject();
+			complexType_lazy = () -> TaxType3.mmObject();
+		}
+
+		@Override
+		public TaxType3 getValue(Tax8 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Tax8 obj, TaxType3 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt")
@@ -163,7 +175,7 @@ public class Tax8 {
 	 * "Amount of money resulting from the calculation of the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax8, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>> mmAmount = new MMMessageAttribute<Tax8, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax8.mmObject();
@@ -175,6 +187,16 @@ public class Tax8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getValue(Tax8 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Tax8 obj, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -209,7 +231,7 @@ public class Tax8 {
 	 * definition} = "Rate used to calculate the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax8, Optional<PercentageRate>> mmRate = new MMMessageAttribute<Tax8, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax8.mmObject();
@@ -221,6 +243,16 @@ public class Tax8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Tax8 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Tax8 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -255,7 +287,7 @@ public class Tax8 {
 	 * definition} = "Country where the tax is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax8, CountryCode> mmCountry = new MMMessageAttribute<Tax8, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmTaxationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax8.mmObject();
@@ -267,6 +299,16 @@ public class Tax8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(Tax8 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(Tax8 obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "TaxClctnDtls")
@@ -301,7 +343,7 @@ public class Tax8 {
 	 * definition} = "Information used to calculate the tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxCalculationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax8, Optional<TaxCalculationInformation2>> mmTaxCalculationDetails = new MMMessageAssociationEnd<Tax8, Optional<TaxCalculationInformation2>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax8.mmObject();
@@ -313,7 +355,17 @@ public class Tax8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation2.mmObject();
+			type_lazy = () -> TaxCalculationInformation2.mmObject();
+		}
+
+		@Override
+		public Optional<TaxCalculationInformation2> getValue(Tax8 obj) {
+			return obj.getTaxCalculationDetails();
+		}
+
+		@Override
+		public void setValue(Tax8 obj, Optional<TaxCalculationInformation2> value) {
+			obj.setTaxCalculationDetails(value.orElse(null));
 		}
 	};
 
@@ -337,7 +389,7 @@ public class Tax8 {
 		return type;
 	}
 
-	public Tax8 setType(com.tools20022.repository.msg.TaxType3 type) {
+	public Tax8 setType(TaxType3 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}
@@ -373,7 +425,7 @@ public class Tax8 {
 		return taxCalculationDetails == null ? Optional.empty() : Optional.of(taxCalculationDetails);
 	}
 
-	public Tax8 setTaxCalculationDetails(com.tools20022.repository.msg.TaxCalculationInformation2 taxCalculationDetails) {
+	public Tax8 setTaxCalculationDetails(TaxCalculationInformation2 taxCalculationDetails) {
 		this.taxCalculationDetails = taxCalculationDetails;
 		return this;
 	}

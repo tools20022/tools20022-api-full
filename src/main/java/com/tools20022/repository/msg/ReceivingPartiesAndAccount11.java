@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesSettlementPartyRole;
 import com.tools20022.repository.entity.SecuritiesSettlementSystem;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount102;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -141,7 +142,7 @@ public class ReceivingPartiesAndAccount11 {
 	 * ReceivingPartiesAndAccount7.mmDepository}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceivingPartiesAndAccount11, PartyIdentification34Choice> mmDepository = new MMMessageAssociationEnd<ReceivingPartiesAndAccount11, PartyIdentification34Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount11.mmObject();
@@ -155,6 +156,16 @@ public class ReceivingPartiesAndAccount11 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification34Choice getValue(ReceivingPartiesAndAccount11 obj) {
+			return obj.getDepository();
+		}
+
+		@Override
+		public void setValue(ReceivingPartiesAndAccount11 obj, PartyIdentification34Choice value) {
+			obj.setDepository(value);
 		}
 	};
 	@XmlElement(name = "Pty1", required = true)
@@ -197,7 +208,7 @@ public class ReceivingPartiesAndAccount11 {
 	 * ReceivingPartiesAndAccount7.mmParty1}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty1 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceivingPartiesAndAccount11, PartyIdentificationAndAccount102> mmParty1 = new MMMessageAssociationEnd<ReceivingPartiesAndAccount11, PartyIdentificationAndAccount102>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount11.mmObject();
@@ -210,7 +221,17 @@ public class ReceivingPartiesAndAccount11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount102.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount102.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount102 getValue(ReceivingPartiesAndAccount11 obj) {
+			return obj.getParty1();
+		}
+
+		@Override
+		public void setValue(ReceivingPartiesAndAccount11 obj, PartyIdentificationAndAccount102 value) {
+			obj.setParty1(value);
 		}
 	};
 	@XmlElement(name = "Pty2")
@@ -253,7 +274,7 @@ public class ReceivingPartiesAndAccount11 {
 	 * ReceivingPartiesAndAccount7.mmParty2}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty2 = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceivingPartiesAndAccount11, Optional<PartyIdentificationAndAccount102>> mmParty2 = new MMMessageAssociationEnd<ReceivingPartiesAndAccount11, Optional<PartyIdentificationAndAccount102>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount11.mmObject();
@@ -266,7 +287,17 @@ public class ReceivingPartiesAndAccount11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount102.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount102.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount102> getValue(ReceivingPartiesAndAccount11 obj) {
+			return obj.getParty2();
+		}
+
+		@Override
+		public void setValue(ReceivingPartiesAndAccount11 obj, Optional<PartyIdentificationAndAccount102> value) {
+			obj.setParty2(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesSttlmSys")
@@ -308,7 +339,7 @@ public class ReceivingPartiesAndAccount11 {
 	 * ReceivingPartiesAndAccount7.mmSecuritiesSettlementSystem}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesSettlementSystem = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReceivingPartiesAndAccount11, Optional<Max35Text>> mmSecuritiesSettlementSystem = new MMMessageAttribute<ReceivingPartiesAndAccount11, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlementSystem.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount11.mmObject();
@@ -321,6 +352,16 @@ public class ReceivingPartiesAndAccount11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReceivingPartiesAndAccount11 obj) {
+			return obj.getSecuritiesSettlementSystem();
+		}
+
+		@Override
+		public void setValue(ReceivingPartiesAndAccount11 obj, Optional<Max35Text> value) {
+			obj.setSecuritiesSettlementSystem(value.orElse(null));
 		}
 	};
 
@@ -354,7 +395,7 @@ public class ReceivingPartiesAndAccount11 {
 		return party1;
 	}
 
-	public ReceivingPartiesAndAccount11 setParty1(com.tools20022.repository.msg.PartyIdentificationAndAccount102 party1) {
+	public ReceivingPartiesAndAccount11 setParty1(PartyIdentificationAndAccount102 party1) {
 		this.party1 = Objects.requireNonNull(party1);
 		return this;
 	}
@@ -363,7 +404,7 @@ public class ReceivingPartiesAndAccount11 {
 		return party2 == null ? Optional.empty() : Optional.of(party2);
 	}
 
-	public ReceivingPartiesAndAccount11 setParty2(com.tools20022.repository.msg.PartyIdentificationAndAccount102 party2) {
+	public ReceivingPartiesAndAccount11 setParty2(PartyIdentificationAndAccount102 party2) {
 		this.party2 = party2;
 		return this;
 	}

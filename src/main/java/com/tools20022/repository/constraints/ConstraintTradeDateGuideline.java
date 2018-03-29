@@ -62,12 +62,16 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails25> forSecuritiesTradeDetails25 = new MMConstraint<SecuritiesTradeDetails25>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails32);
 			owner_lazy = () -> SecuritiesTradeDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails25 obj) throws Exception {
+			checkSecuritiesTradeDetails25(obj);
 		}
 	};
 	/**
@@ -101,12 +105,16 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails26> forSecuritiesTradeDetails26 = new MMConstraint<SecuritiesTradeDetails26>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails34);
 			owner_lazy = () -> SecuritiesTradeDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails26 obj) throws Exception {
+			checkSecuritiesTradeDetails26(obj);
 		}
 	};
 	/**
@@ -132,11 +140,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails27> forSecuritiesTradeDetails27 = new MMConstraint<SecuritiesTradeDetails27>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails27 obj) throws Exception {
+			checkSecuritiesTradeDetails27(obj);
 		}
 	};
 	/**
@@ -162,11 +174,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails28> forSecuritiesTradeDetails28 = new MMConstraint<SecuritiesTradeDetails28>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails28 obj) throws Exception {
+			checkSecuritiesTradeDetails28(obj);
 		}
 	};
 	/**
@@ -200,12 +216,16 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails2> forSecuritiesTradeDetails2 = new MMConstraint<SecuritiesTradeDetails2>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails31);
 			owner_lazy = () -> SecuritiesTradeDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails2 obj) throws Exception {
+			checkSecuritiesTradeDetails2(obj);
 		}
 	};
 	/**
@@ -231,11 +251,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails16> forSecuritiesTradeDetails16 = new MMConstraint<SecuritiesTradeDetails16>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails16 obj) throws Exception {
+			checkSecuritiesTradeDetails16(obj);
 		}
 	};
 	/**
@@ -269,12 +293,16 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails1> forSecuritiesTradeDetails1 = new MMConstraint<SecuritiesTradeDetails1>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails33);
 			owner_lazy = () -> SecuritiesTradeDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails1 obj) throws Exception {
+			checkSecuritiesTradeDetails1(obj);
 		}
 	};
 	/**
@@ -300,11 +328,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails15> forSecuritiesTradeDetails15 = new MMConstraint<SecuritiesTradeDetails15>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails15 obj) throws Exception {
+			checkSecuritiesTradeDetails15(obj);
 		}
 	};
 	/**
@@ -343,13 +375,17 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails31> forSecuritiesTradeDetails31 = new MMConstraint<SecuritiesTradeDetails31>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails53);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails2;
 			owner_lazy = () -> SecuritiesTradeDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails31 obj) throws Exception {
+			checkSecuritiesTradeDetails31(obj);
 		}
 	};
 	/**
@@ -388,13 +424,17 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails33> forSecuritiesTradeDetails33 = new MMConstraint<SecuritiesTradeDetails33>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails51);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails1;
 			owner_lazy = () -> SecuritiesTradeDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails33 obj) throws Exception {
+			checkSecuritiesTradeDetails33(obj);
 		}
 	};
 	/**
@@ -433,13 +473,17 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails34> forSecuritiesTradeDetails34 = new MMConstraint<SecuritiesTradeDetails34>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails52);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails26;
 			owner_lazy = () -> SecuritiesTradeDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails34 obj) throws Exception {
+			checkSecuritiesTradeDetails34(obj);
 		}
 	};
 	/**
@@ -478,13 +522,17 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails32> forSecuritiesTradeDetails32 = new MMConstraint<SecuritiesTradeDetails32>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails50);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails25;
 			owner_lazy = () -> SecuritiesTradeDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails32 obj) throws Exception {
+			checkSecuritiesTradeDetails32(obj);
 		}
 	};
 	/**
@@ -510,11 +558,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails44> forSecuritiesTradeDetails44 = new MMConstraint<SecuritiesTradeDetails44>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails44 obj) throws Exception {
+			checkSecuritiesTradeDetails44(obj);
 		}
 	};
 	/**
@@ -540,11 +592,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails43> forSecuritiesTradeDetails43 = new MMConstraint<SecuritiesTradeDetails43>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails43 obj) throws Exception {
+			checkSecuritiesTradeDetails43(obj);
 		}
 	};
 	/**
@@ -570,11 +626,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails46> forSecuritiesTradeDetails46 = new MMConstraint<SecuritiesTradeDetails46>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails46 obj) throws Exception {
+			checkSecuritiesTradeDetails46(obj);
 		}
 	};
 	/**
@@ -600,11 +660,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails47> forSecuritiesTradeDetails47 = new MMConstraint<SecuritiesTradeDetails47>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails47 obj) throws Exception {
+			checkSecuritiesTradeDetails47(obj);
 		}
 	};
 	/**
@@ -646,7 +710,6 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails51> forSecuritiesTradeDetails51 = new MMConstraint<SecuritiesTradeDetails51>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
@@ -654,6 +717,11 @@ public class ConstraintTradeDateGuideline {
 					com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails73);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails33;
 			owner_lazy = () -> SecuritiesTradeDetails51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails51 obj) throws Exception {
+			checkSecuritiesTradeDetails51(obj);
 		}
 	};
 	/**
@@ -692,13 +760,17 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails53> forSecuritiesTradeDetails53 = new MMConstraint<SecuritiesTradeDetails53>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails76);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails31;
 			owner_lazy = () -> SecuritiesTradeDetails53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails53 obj) throws Exception {
+			checkSecuritiesTradeDetails53(obj);
 		}
 	};
 	/**
@@ -737,13 +809,17 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails52> forSecuritiesTradeDetails52 = new MMConstraint<SecuritiesTradeDetails52>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails79);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails34;
 			owner_lazy = () -> SecuritiesTradeDetails52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails52 obj) throws Exception {
+			checkSecuritiesTradeDetails52(obj);
 		}
 	};
 	/**
@@ -782,13 +858,17 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails50> forSecuritiesTradeDetails50 = new MMConstraint<SecuritiesTradeDetails50>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails78);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails32;
 			owner_lazy = () -> SecuritiesTradeDetails50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails50 obj) throws Exception {
+			checkSecuritiesTradeDetails50(obj);
 		}
 	};
 	/**
@@ -814,11 +894,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails63> forSecuritiesTradeDetails63 = new MMConstraint<SecuritiesTradeDetails63>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails63 obj) throws Exception {
+			checkSecuritiesTradeDetails63(obj);
 		}
 	};
 	/**
@@ -844,11 +928,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails62> forSecuritiesTradeDetails62 = new MMConstraint<SecuritiesTradeDetails62>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails62 obj) throws Exception {
+			checkSecuritiesTradeDetails62(obj);
 		}
 	};
 	/**
@@ -874,11 +962,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails65> forSecuritiesTradeDetails65 = new MMConstraint<SecuritiesTradeDetails65>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails65 obj) throws Exception {
+			checkSecuritiesTradeDetails65(obj);
 		}
 	};
 	/**
@@ -904,11 +996,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails66> forSecuritiesTradeDetails66 = new MMConstraint<SecuritiesTradeDetails66>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails66 obj) throws Exception {
+			checkSecuritiesTradeDetails66(obj);
 		}
 	};
 	/**
@@ -947,13 +1043,17 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails67> forSecuritiesTradeDetails67 = new MMConstraint<SecuritiesTradeDetails67>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails75);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails51;
 			owner_lazy = () -> SecuritiesTradeDetails67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails67 obj) throws Exception {
+			checkSecuritiesTradeDetails67(obj);
 		}
 	};
 	/**
@@ -979,11 +1079,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails70> forSecuritiesTradeDetails70 = new MMConstraint<SecuritiesTradeDetails70>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails70 obj) throws Exception {
+			checkSecuritiesTradeDetails70(obj);
 		}
 	};
 	/**
@@ -1014,12 +1118,16 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails73> forSecuritiesTradeDetails73 = new MMConstraint<SecuritiesTradeDetails73>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails73;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails51;
 			owner_lazy = () -> SecuritiesTradeDetails73.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails73 obj) throws Exception {
+			checkSecuritiesTradeDetails73(obj);
 		}
 	};
 	/**
@@ -1050,12 +1158,16 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails75> forSecuritiesTradeDetails75 = new MMConstraint<SecuritiesTradeDetails75>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails67;
 			owner_lazy = () -> SecuritiesTradeDetails75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails75 obj) throws Exception {
+			checkSecuritiesTradeDetails75(obj);
 		}
 	};
 	/**
@@ -1086,12 +1198,16 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails76> forSecuritiesTradeDetails76 = new MMConstraint<SecuritiesTradeDetails76>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails76;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails53;
 			owner_lazy = () -> SecuritiesTradeDetails76.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails76 obj) throws Exception {
+			checkSecuritiesTradeDetails76(obj);
 		}
 	};
 	/**
@@ -1122,12 +1238,16 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails78> forSecuritiesTradeDetails78 = new MMConstraint<SecuritiesTradeDetails78>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails50;
 			owner_lazy = () -> SecuritiesTradeDetails78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails78 obj) throws Exception {
+			checkSecuritiesTradeDetails78(obj);
 		}
 	};
 	/**
@@ -1158,12 +1278,16 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails79> forSecuritiesTradeDetails79 = new MMConstraint<SecuritiesTradeDetails79>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateGuideline.forSecuritiesTradeDetails52;
 			owner_lazy = () -> SecuritiesTradeDetails79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails79 obj) throws Exception {
+			checkSecuritiesTradeDetails79(obj);
 		}
 	};
 	/**
@@ -1189,11 +1313,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails86> forSecuritiesTradeDetails86 = new MMConstraint<SecuritiesTradeDetails86>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails86;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails86.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails86 obj) throws Exception {
+			checkSecuritiesTradeDetails86(obj);
 		}
 	};
 	/**
@@ -1219,11 +1347,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails87> forSecuritiesTradeDetails87 = new MMConstraint<SecuritiesTradeDetails87>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails87;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails87.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails87 obj) throws Exception {
+			checkSecuritiesTradeDetails87(obj);
 		}
 	};
 	/**
@@ -1249,11 +1381,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails88> forSecuritiesTradeDetails88 = new MMConstraint<SecuritiesTradeDetails88>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails88 obj) throws Exception {
+			checkSecuritiesTradeDetails88(obj);
 		}
 	};
 	/**
@@ -1279,11 +1415,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails89> forSecuritiesTradeDetails89 = new MMConstraint<SecuritiesTradeDetails89>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails89;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails89.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails89 obj) throws Exception {
+			checkSecuritiesTradeDetails89(obj);
 		}
 	};
 	/**
@@ -1309,11 +1449,15 @@ public class ConstraintTradeDateGuideline {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails90> forSecuritiesTradeDetails90 = new MMConstraint<SecuritiesTradeDetails90>() {
 		{
-			validator = ConstraintTradeDateGuideline::checkSecuritiesTradeDetails90;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateGuideline";
 			definition = "In addition to the settlement date (ISO 20022 mandatory), trade date is one of the 10 common elements recommended by SMPG for equities and fixed income settlement instructions.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SecuritiesTradeDetails90.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails90 obj) throws Exception {
+			checkSecuritiesTradeDetails90(obj);
 		}
 	};
 

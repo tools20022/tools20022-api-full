@@ -111,7 +111,7 @@ public class PartyRole1Choice {
 	 * definition} = "Role of the party in the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyRole1Choice, PartyType1Code> mmCode = new MMMessageAttribute<PartyRole1Choice, PartyType1Code>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyRole1Choice.mmObject();
@@ -123,6 +123,16 @@ public class PartyRole1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PartyType1Code.mmObject();
+		}
+
+		@Override
+		public PartyType1Code getValue(PartyRole1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PartyRole1Choice obj, PartyType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class PartyRole1Choice {
 	 * definition} = "Role of the party in the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyRole1Choice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<PartyRole1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyRole1Choice.mmObject();
@@ -172,6 +182,16 @@ public class PartyRole1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(PartyRole1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PartyRole1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

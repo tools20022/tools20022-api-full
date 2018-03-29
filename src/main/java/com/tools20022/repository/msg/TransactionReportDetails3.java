@@ -21,6 +21,8 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.PaymentIdentification2Choice;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ErrorHandling2;
+import com.tools20022.repository.msg.Transaction3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +118,7 @@ public class TransactionReportDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionReportDetails3, PaymentIdentification2Choice> mmInstructionReference = new MMMessageAttribute<TransactionReportDetails3, PaymentIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportDetails3.mmObject();
@@ -128,6 +130,16 @@ public class TransactionReportDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PaymentIdentification2Choice getValue(TransactionReportDetails3 obj) {
+			return obj.getInstructionReference();
+		}
+
+		@Override
+		public void setValue(TransactionReportDetails3 obj, PaymentIdentification2Choice value) {
+			obj.setInstructionReference(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -162,7 +174,7 @@ public class TransactionReportDetails3 {
 	 * definition} = "Requested information on the payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReportDetails3, Transaction3> mmTransaction = new MMMessageAssociationEnd<TransactionReportDetails3, Transaction3>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportDetails3.mmObject();
@@ -174,7 +186,17 @@ public class TransactionReportDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Transaction3.mmObject();
+			type_lazy = () -> Transaction3.mmObject();
+		}
+
+		@Override
+		public Transaction3 getValue(TransactionReportDetails3 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(TransactionReportDetails3 obj, Transaction3 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -206,7 +228,7 @@ public class TransactionReportDetails3 {
 	 * "Reason why the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionReportDetails3, ErrorHandling2> mmBusinessError = new MMMessageAssociationEnd<TransactionReportDetails3, ErrorHandling2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionReportDetails3.mmObject();
 			isDerived = false;
@@ -217,7 +239,17 @@ public class TransactionReportDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
+			type_lazy = () -> ErrorHandling2.mmObject();
+		}
+
+		@Override
+		public ErrorHandling2 getValue(TransactionReportDetails3 obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(TransactionReportDetails3 obj, ErrorHandling2 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	/**
@@ -291,7 +323,7 @@ public class TransactionReportDetails3 {
 		return transaction;
 	}
 
-	public TransactionReportDetails3 setTransaction(com.tools20022.repository.msg.Transaction3 transaction) {
+	public TransactionReportDetails3 setTransaction(Transaction3 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
@@ -300,7 +332,7 @@ public class TransactionReportDetails3 {
 		return businessError;
 	}
 
-	public TransactionReportDetails3 setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+	public TransactionReportDetails3 setBusinessError(ErrorHandling2 businessError) {
 		this.businessError = Objects.requireNonNull(businessError);
 		return this;
 	}

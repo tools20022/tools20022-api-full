@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCommand1;
+import com.tools20022.repository.msg.TransactionIdentifier1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -123,7 +125,7 @@ public class ATMTransaction4 {
 	 * ATMTransaction2.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction4, TransactionIdentifier1> mmTransactionIdentification = new MMMessageAssociationEnd<ATMTransaction4, TransactionIdentifier1>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction4.mmObject();
@@ -136,7 +138,17 @@ public class ATMTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(ATMTransaction4 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ATMTransaction4 obj, TransactionIdentifier1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "Rspn", required = true)
@@ -174,7 +186,7 @@ public class ATMTransaction4 {
 	 * definition} = "Response to the withdrawal advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction4, Response4Code> mmResponse = new MMMessageAttribute<ATMTransaction4, Response4Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction4.mmObject();
@@ -186,6 +198,16 @@ public class ATMTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Response4Code.mmObject();
+		}
+
+		@Override
+		public Response4Code getValue(ATMTransaction4 obj) {
+			return obj.getResponse();
+		}
+
+		@Override
+		public void setValue(ATMTransaction4 obj, Response4Code value) {
+			obj.setResponse(value);
 		}
 	};
 	@XmlElement(name = "RspnRsn")
@@ -223,7 +245,7 @@ public class ATMTransaction4 {
 	 * definition} = "Detail of the response."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction4, Optional<ResultDetail2Code>> mmResponseReason = new MMMessageAttribute<ATMTransaction4, Optional<ResultDetail2Code>>() {
 		{
 			businessElementTrace_lazy = () -> Response.mmResponseReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction4.mmObject();
@@ -235,6 +257,16 @@ public class ATMTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ResultDetail2Code.mmObject();
+		}
+
+		@Override
+		public Optional<ResultDetail2Code> getValue(ATMTransaction4 obj) {
+			return obj.getResponseReason();
+		}
+
+		@Override
+		public void setValue(ATMTransaction4 obj, Optional<ResultDetail2Code> value) {
+			obj.setResponseReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ICCRltdData")
@@ -274,7 +306,7 @@ public class ATMTransaction4 {
 	 * ATMTransaction2.mmICCRelatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTransaction4, Optional<Max10000Binary>> mmICCRelatedData = new MMMessageAttribute<ATMTransaction4, Optional<Max10000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction4.mmObject();
 			isDerived = false;
@@ -287,9 +319,19 @@ public class ATMTransaction4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10000Binary.mmObject();
 		}
+
+		@Override
+		public Optional<Max10000Binary> getValue(ATMTransaction4 obj) {
+			return obj.getICCRelatedData();
+		}
+
+		@Override
+		public void setValue(ATMTransaction4 obj, Optional<Max10000Binary> value) {
+			obj.setICCRelatedData(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Cmd")
-	protected List<com.tools20022.repository.msg.ATMCommand1> command;
+	protected List<ATMCommand1> command;
 	/**
 	 * 
 	 <p>
@@ -321,7 +363,7 @@ public class ATMTransaction4 {
 	 * ATMTransaction2.mmCommand}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMTransaction4, List<ATMCommand1>> mmCommand = new MMMessageAssociationEnd<ATMTransaction4, List<ATMCommand1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction4.mmObject();
 			isDerived = false;
@@ -332,7 +374,17 @@ public class ATMTransaction4 {
 			previousVersion_lazy = () -> ATMTransaction2.mmCommand;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommand1.mmObject();
+			type_lazy = () -> ATMCommand1.mmObject();
+		}
+
+		@Override
+		public List<ATMCommand1> getValue(ATMTransaction4 obj) {
+			return obj.getCommand();
+		}
+
+		@Override
+		public void setValue(ATMTransaction4 obj, List<ATMCommand1> value) {
+			obj.setCommand(value);
 		}
 	};
 
@@ -356,7 +408,7 @@ public class ATMTransaction4 {
 		return transactionIdentification;
 	}
 
-	public ATMTransaction4 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public ATMTransaction4 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
 		return this;
 	}
@@ -392,7 +444,7 @@ public class ATMTransaction4 {
 		return command == null ? command = new ArrayList<>() : command;
 	}
 
-	public ATMTransaction4 setCommand(List<com.tools20022.repository.msg.ATMCommand1> command) {
+	public ATMTransaction4 setCommand(List<ATMCommand1> command) {
 		this.command = Objects.requireNonNull(command);
 		return this;
 	}

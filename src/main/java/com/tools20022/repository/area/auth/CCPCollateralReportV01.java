@@ -26,7 +26,6 @@ import com.tools20022.repository.area.AuthoritiesLatestVersion;
 import com.tools20022.repository.msg.CollateralAccount4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -119,7 +118,7 @@ public class CCPCollateralReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCollateralAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPCollateralReportV01, List<CollateralAccount4>> mmCollateralAccountOwner = new MMMessageBuildingBlock<CCPCollateralReportV01, List<CollateralAccount4>>() {
 		{
 			xmlTag = "CollAcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,12 +128,14 @@ public class CCPCollateralReportV01 {
 			complexType_lazy = () -> CollateralAccount4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPCollateralReportV01.class.getMethod("getCollateralAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CollateralAccount4> getValue(CCPCollateralReportV01 obj) {
+			return obj.getCollateralAccountOwner();
+		}
+
+		@Override
+		public void setValue(CCPCollateralReportV01 obj, List<CollateralAccount4> value) {
+			obj.setCollateralAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -164,7 +165,7 @@ public class CCPCollateralReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPCollateralReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPCollateralReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,12 +175,14 @@ public class CCPCollateralReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPCollateralReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CCPCollateralReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CCPCollateralReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

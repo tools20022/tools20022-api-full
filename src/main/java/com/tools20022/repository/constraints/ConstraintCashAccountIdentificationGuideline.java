@@ -53,11 +53,15 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<CashAccountSearchCriteria2> forCashAccountSearchCriteria2 = new MMConstraint<CashAccountSearchCriteria2>() {
 		{
-			validator = ConstraintCashAccountIdentificationGuideline::checkCashAccountSearchCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentificationGuideline";
 			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
 			owner_lazy = () -> CashAccountSearchCriteria2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountSearchCriteria2 obj) throws Exception {
+			checkCashAccountSearchCriteria2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<CashAccountSearchCriteria3> forCashAccountSearchCriteria3 = new MMConstraint<CashAccountSearchCriteria3>() {
 		{
-			validator = ConstraintCashAccountIdentificationGuideline::checkCashAccountSearchCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentificationGuideline";
 			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
 			owner_lazy = () -> CashAccountSearchCriteria3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountSearchCriteria3 obj) throws Exception {
+			checkCashAccountSearchCriteria3(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<CashAccountSearchCriteria4> forCashAccountSearchCriteria4 = new MMConstraint<CashAccountSearchCriteria4>() {
 		{
-			validator = ConstraintCashAccountIdentificationGuideline::checkCashAccountSearchCriteria4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentificationGuideline";
 			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
 			owner_lazy = () -> CashAccountSearchCriteria4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountSearchCriteria4 obj) throws Exception {
+			checkCashAccountSearchCriteria4(obj);
 		}
 	};
 	/**
@@ -152,12 +164,16 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<CashAccountSearchCriteria5> forCashAccountSearchCriteria5 = new MMConstraint<CashAccountSearchCriteria5>() {
 		{
-			validator = ConstraintCashAccountIdentificationGuideline::checkCashAccountSearchCriteria5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentificationGuideline";
 			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountIdentificationGuideline.forCashAccountSearchCriteria6);
 			owner_lazy = () -> CashAccountSearchCriteria5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountSearchCriteria5 obj) throws Exception {
+			checkCashAccountSearchCriteria5(obj);
 		}
 	};
 	/**
@@ -192,12 +208,16 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<CollateralValueSearchCriteria1> forCollateralValueSearchCriteria1 = new MMConstraint<CollateralValueSearchCriteria1>() {
 		{
-			validator = ConstraintCashAccountIdentificationGuideline::checkCollateralValueSearchCriteria1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentificationGuideline";
 			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountIdentificationGuideline.forCollateralValueSearchCriteria2);
 			owner_lazy = () -> CollateralValueSearchCriteria1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CollateralValueSearchCriteria1 obj) throws Exception {
+			checkCollateralValueSearchCriteria1(obj);
 		}
 	};
 	/**
@@ -229,12 +249,16 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<CollateralValueSearchCriteria2> forCollateralValueSearchCriteria2 = new MMConstraint<CollateralValueSearchCriteria2>() {
 		{
-			validator = ConstraintCashAccountIdentificationGuideline::checkCollateralValueSearchCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentificationGuideline";
 			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashAccountIdentificationGuideline.forCollateralValueSearchCriteria1;
 			owner_lazy = () -> CollateralValueSearchCriteria2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CollateralValueSearchCriteria2 obj) throws Exception {
+			checkCollateralValueSearchCriteria2(obj);
 		}
 	};
 	/**
@@ -266,12 +290,16 @@ public class ConstraintCashAccountIdentificationGuideline {
 	 */
 	public static final MMConstraint<CashAccountSearchCriteria6> forCashAccountSearchCriteria6 = new MMConstraint<CashAccountSearchCriteria6>() {
 		{
-			validator = ConstraintCashAccountIdentificationGuideline::checkCashAccountSearchCriteria6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentificationGuideline";
 			definition = "If the account identification identifies a group of accounts with different types or in different currencies, the currency and/or the account type can be used as additional search criteria.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashAccountIdentificationGuideline.forCashAccountSearchCriteria5;
 			owner_lazy = () -> CashAccountSearchCriteria6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountSearchCriteria6 obj) throws Exception {
+			checkCashAccountSearchCriteria6(obj);
 		}
 	};
 

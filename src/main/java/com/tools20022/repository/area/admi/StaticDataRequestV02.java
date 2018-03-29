@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.RequestDetails3;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -122,7 +121,7 @@ public class StaticDataRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StaticDataRequestV02, Max35Text> mmMessageIdentification = new MMMessageBuildingBlock<StaticDataRequestV02, Max35Text>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,12 +132,14 @@ public class StaticDataRequestV02 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StaticDataRequestV02.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(StaticDataRequestV02 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(StaticDataRequestV02 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "SttlmSsnIdr")
@@ -168,7 +169,7 @@ public class StaticDataRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementSessionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StaticDataRequestV02, Optional<Exact4AlphaNumericText>> mmSettlementSessionIdentifier = new MMMessageBuildingBlock<StaticDataRequestV02, Optional<Exact4AlphaNumericText>>() {
 		{
 			xmlTag = "SttlmSsnIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,12 +180,14 @@ public class StaticDataRequestV02 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StaticDataRequestV02.class.getMethod("getSettlementSessionIdentifier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(StaticDataRequestV02 obj) {
+			return obj.getSettlementSessionIdentifier();
+		}
+
+		@Override
+		public void setValue(StaticDataRequestV02 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setSettlementSessionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DataReqDtls", required = true)
@@ -211,7 +214,7 @@ public class StaticDataRequestV02 {
 	 * definition} = "Details of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDataRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StaticDataRequestV02, RequestDetails3> mmDataRequestDetails = new MMMessageBuildingBlock<StaticDataRequestV02, RequestDetails3>() {
 		{
 			xmlTag = "DataReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,12 +225,14 @@ public class StaticDataRequestV02 {
 			complexType_lazy = () -> RequestDetails3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StaticDataRequestV02.class.getMethod("getDataRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public RequestDetails3 getValue(StaticDataRequestV02 obj) {
+			return obj.getDataRequestDetails();
+		}
+
+		@Override
+		public void setValue(StaticDataRequestV02 obj, RequestDetails3 value) {
+			obj.setDataRequestDetails(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -257,7 +262,7 @@ public class StaticDataRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StaticDataRequestV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<StaticDataRequestV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,12 +272,14 @@ public class StaticDataRequestV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StaticDataRequestV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(StaticDataRequestV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(StaticDataRequestV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

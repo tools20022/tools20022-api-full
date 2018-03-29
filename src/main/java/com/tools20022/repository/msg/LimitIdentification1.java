@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.LimitType1Choice;
 import com.tools20022.repository.choice.SystemIdentification2Choice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -132,7 +133,7 @@ public class LimitIdentification1 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitIdentification1, Optional<SystemIdentification2Choice>> mmSystemIdentification = new MMMessageAttribute<LimitIdentification1, Optional<SystemIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification1.mmObject();
@@ -144,6 +145,16 @@ public class LimitIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentification2Choice> getValue(LimitIdentification1 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentification1 obj, Optional<SystemIdentification2Choice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BilLmtCtrPtyId")
@@ -182,7 +193,7 @@ public class LimitIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification1, Optional<BranchAndFinancialInstitutionIdentification5>> mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd<LimitIdentification1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification1.mmObject();
@@ -194,7 +205,17 @@ public class LimitIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(LimitIdentification1 obj) {
+			return obj.getBilateralLimitCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentification1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setBilateralLimitCounterpartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -229,7 +250,7 @@ public class LimitIdentification1 {
 	 * definition} = "Nature of the risk management limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification1, LimitType1Choice> mmType = new MMMessageAssociationEnd<LimitIdentification1, LimitType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification1.mmObject();
@@ -242,6 +263,16 @@ public class LimitIdentification1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitType1Choice.mmObject();
+		}
+
+		@Override
+		public LimitType1Choice getValue(LimitIdentification1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(LimitIdentification1 obj, LimitType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -278,7 +309,7 @@ public class LimitIdentification1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification1, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountOwner = new MMMessageAssociationEnd<LimitIdentification1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification1.mmObject();
@@ -290,7 +321,17 @@ public class LimitIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(LimitIdentification1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(LimitIdentification1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -329,7 +370,7 @@ public class LimitIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitIdentification1, Optional<AccountIdentification4Choice>> mmAccountIdentification = new MMMessageAssociationEnd<LimitIdentification1, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitIdentification1.mmObject();
@@ -342,6 +383,16 @@ public class LimitIdentification1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(LimitIdentification1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(LimitIdentification1 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -375,7 +426,7 @@ public class LimitIdentification1 {
 		return bilateralLimitCounterpartyIdentification == null ? Optional.empty() : Optional.of(bilateralLimitCounterpartyIdentification);
 	}
 
-	public LimitIdentification1 setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification) {
+	public LimitIdentification1 setBilateralLimitCounterpartyIdentification(BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification) {
 		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
 		return this;
 	}
@@ -393,7 +444,7 @@ public class LimitIdentification1 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public LimitIdentification1 setAccountOwner(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountOwner) {
+	public LimitIdentification1 setAccountOwner(BranchAndFinancialInstitutionIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}

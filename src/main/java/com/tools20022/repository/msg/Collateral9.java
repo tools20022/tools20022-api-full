@@ -24,6 +24,9 @@ import com.tools20022.repository.area.colr.CollateralAndExposureReportV02;
 import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.entity.CollateralManagement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CollateralAccount1;
+import com.tools20022.repository.msg.CollateralValuation2;
+import com.tools20022.repository.msg.Summary1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -143,7 +146,7 @@ public class Collateral9 {
 	 * Collateral5.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Collateral9, CollateralAccount1> mmAccountIdentification = new MMMessageAssociationEnd<Collateral9, CollateralAccount1>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral9.mmObject();
@@ -157,7 +160,17 @@ public class Collateral9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralAccount1.mmObject();
+			type_lazy = () -> CollateralAccount1.mmObject();
+		}
+
+		@Override
+		public CollateralAccount1 getValue(Collateral9 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(Collateral9 obj, CollateralAccount1 value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptSummry", required = true)
@@ -199,7 +212,7 @@ public class Collateral9 {
 	 * Collateral5.mmReportSummary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportSummary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Collateral9, Summary1> mmReportSummary = new MMMessageAssociationEnd<Collateral9, Summary1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral9.mmObject();
 			isDerived = false;
@@ -212,11 +225,21 @@ public class Collateral9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Summary1.mmObject();
+			type_lazy = () -> Summary1.mmObject();
+		}
+
+		@Override
+		public Summary1 getValue(Collateral9 obj) {
+			return obj.getReportSummary();
+		}
+
+		@Override
+		public void setValue(Collateral9 obj, Summary1 value) {
+			obj.setReportSummary(value);
 		}
 	};
 	@XmlElement(name = "CollValtn")
-	protected List<com.tools20022.repository.msg.CollateralValuation2> collateralValuation;
+	protected List<CollateralValuation2> collateralValuation;
 	/**
 	 * 
 	 <p>
@@ -262,7 +285,7 @@ public class Collateral9 {
 	 * Collateral5.mmCollateralValuationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralValuation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Collateral9, List<CollateralValuation2>> mmCollateralValuation = new MMMessageAssociationEnd<Collateral9, List<CollateralValuation2>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralManagement.mmCollateralValuation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral9.mmObject();
@@ -275,7 +298,17 @@ public class Collateral9 {
 			previousVersion_lazy = () -> Collateral5.mmCollateralValuationDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralValuation2.mmObject();
+			type_lazy = () -> CollateralValuation2.mmObject();
+		}
+
+		@Override
+		public List<CollateralValuation2> getValue(Collateral9 obj) {
+			return obj.getCollateralValuation();
+		}
+
+		@Override
+		public void setValue(Collateral9 obj, List<CollateralValuation2> value) {
+			obj.setCollateralValuation(value);
 		}
 	};
 
@@ -301,7 +334,7 @@ public class Collateral9 {
 		return accountIdentification;
 	}
 
-	public Collateral9 setAccountIdentification(com.tools20022.repository.msg.CollateralAccount1 accountIdentification) {
+	public Collateral9 setAccountIdentification(CollateralAccount1 accountIdentification) {
 		this.accountIdentification = Objects.requireNonNull(accountIdentification);
 		return this;
 	}
@@ -310,7 +343,7 @@ public class Collateral9 {
 		return reportSummary;
 	}
 
-	public Collateral9 setReportSummary(com.tools20022.repository.msg.Summary1 reportSummary) {
+	public Collateral9 setReportSummary(Summary1 reportSummary) {
 		this.reportSummary = Objects.requireNonNull(reportSummary);
 		return this;
 	}
@@ -319,7 +352,7 @@ public class Collateral9 {
 		return collateralValuation == null ? collateralValuation = new ArrayList<>() : collateralValuation;
 	}
 
-	public Collateral9 setCollateralValuation(List<com.tools20022.repository.msg.CollateralValuation2> collateralValuation) {
+	public Collateral9 setCollateralValuation(List<CollateralValuation2> collateralValuation) {
 		this.collateralValuation = Objects.requireNonNull(collateralValuation);
 		return this;
 	}

@@ -50,11 +50,15 @@ public class ConstraintIdentificationUsageRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount9> forPartyIdentificationAndAccount9 = new MMConstraint<PartyIdentificationAndAccount9>() {
 		{
-			validator = ConstraintIdentificationUsageRule::checkPartyIdentificationAndAccount9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationUsageRule";
 			definition = "The presence of Identification and/or CountryOfResidence is mandatory.";
 			owner_lazy = () -> PartyIdentificationAndAccount9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount9 obj) throws Exception {
+			checkPartyIdentificationAndAccount9(obj);
 		}
 	};
 	/**
@@ -79,11 +83,15 @@ public class ConstraintIdentificationUsageRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount79> forPartyIdentificationAndAccount79 = new MMConstraint<PartyIdentificationAndAccount79>() {
 		{
-			validator = ConstraintIdentificationUsageRule::checkPartyIdentificationAndAccount79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationUsageRule";
 			definition = "The presence of Identification and/or CountryOfResidence is mandatory.";
 			owner_lazy = () -> PartyIdentificationAndAccount79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount79 obj) throws Exception {
+			checkPartyIdentificationAndAccount79(obj);
 		}
 	};
 

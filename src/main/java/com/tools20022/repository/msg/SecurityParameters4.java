@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5000Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType14;
+import com.tools20022.repository.msg.CryptographicKey8;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -135,7 +137,7 @@ public class SecurityParameters4 {
 	 * SecurityParameters3.mmSymmetricKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters4, Optional<CryptographicKey8>> mmKey = new MMMessageAttribute<SecurityParameters4, Optional<CryptographicKey8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
@@ -147,7 +149,17 @@ public class SecurityParameters4 {
 			previousVersion_lazy = () -> SecurityParameters3.mmSymmetricKey;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey8.mmObject();
+			complexType_lazy = () -> CryptographicKey8.mmObject();
+		}
+
+		@Override
+		public Optional<CryptographicKey8> getValue(SecurityParameters4 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(SecurityParameters4 obj, Optional<CryptographicKey8> value) {
+			obj.setKey(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -189,7 +201,7 @@ public class SecurityParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityParameters4, Optional<ContentInformationType14>> mmDigitalSignature = new MMMessageAssociationEnd<SecurityParameters4, Optional<ContentInformationType14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
@@ -201,7 +213,17 @@ public class SecurityParameters4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType14.mmObject();
+			type_lazy = () -> ContentInformationType14.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType14> getValue(SecurityParameters4 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(SecurityParameters4 obj, Optional<ContentInformationType14> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cert")
@@ -244,7 +266,7 @@ public class SecurityParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters4, List<Max5000Binary>> mmCertificate = new MMMessageAttribute<SecurityParameters4, List<Max5000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
@@ -255,6 +277,16 @@ public class SecurityParameters4 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityParameters7.mmCertificate);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
+		}
+
+		@Override
+		public List<Max5000Binary> getValue(SecurityParameters4 obj) {
+			return obj.getCertificate();
+		}
+
+		@Override
+		public void setValue(SecurityParameters4 obj, List<Max5000Binary> value) {
+			obj.setCertificate(value);
 		}
 	};
 	@XmlElement(name = "ATMChllng")
@@ -303,7 +335,7 @@ public class SecurityParameters4 {
 	 * SecurityParameters3.mmPOIChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters4, Optional<Max140Binary>> mmATMChallenge = new MMMessageAttribute<SecurityParameters4, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
@@ -316,6 +348,16 @@ public class SecurityParameters4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(SecurityParameters4 obj) {
+			return obj.getATMChallenge();
+		}
+
+		@Override
+		public void setValue(SecurityParameters4 obj, Optional<Max140Binary> value) {
+			obj.setATMChallenge(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ReqdKey")
@@ -357,7 +399,7 @@ public class SecurityParameters4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters4, Optional<Max35Text>> mmRequestedKey = new MMMessageAttribute<SecurityParameters4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters4.mmObject();
 			isDerived = false;
@@ -369,6 +411,16 @@ public class SecurityParameters4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecurityParameters4 obj) {
+			return obj.getRequestedKey();
+		}
+
+		@Override
+		public void setValue(SecurityParameters4 obj, Optional<Max35Text> value) {
+			obj.setRequestedKey(value.orElse(null));
 		}
 	};
 
@@ -392,7 +444,7 @@ public class SecurityParameters4 {
 		return key == null ? Optional.empty() : Optional.of(key);
 	}
 
-	public SecurityParameters4 setKey(com.tools20022.repository.msg.CryptographicKey8 key) {
+	public SecurityParameters4 setKey(CryptographicKey8 key) {
 		this.key = key;
 		return this;
 	}
@@ -401,7 +453,7 @@ public class SecurityParameters4 {
 		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public SecurityParameters4 setDigitalSignature(com.tools20022.repository.msg.ContentInformationType14 digitalSignature) {
+	public SecurityParameters4 setDigitalSignature(ContentInformationType14 digitalSignature) {
 		this.digitalSignature = digitalSignature;
 		return this;
 	}

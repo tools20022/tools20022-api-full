@@ -608,7 +608,7 @@ public class Extension1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Extension1, Max350Text> mmPlaceAndName = new MMMessageAttribute<Extension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 			isDerived = false;
@@ -619,6 +619,16 @@ public class Extension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(Extension1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(Extension1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "Txt", required = true)
@@ -649,7 +659,7 @@ public class Extension1 {
 	 * definition} = "Text of the extension."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Extension1, Max350Text> mmText = new MMMessageAttribute<Extension1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 			isDerived = false;
@@ -660,6 +670,16 @@ public class Extension1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(Extension1 obj) {
+			return obj.getText();
+		}
+
+		@Override
+		public void setValue(Extension1 obj, Max350Text value) {
+			obj.setText(value);
 		}
 	};
 

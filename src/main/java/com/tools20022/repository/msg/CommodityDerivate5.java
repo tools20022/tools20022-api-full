@@ -98,7 +98,7 @@ public class CommodityDerivate5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommodityDerivate5, Max25Text> mmSize = new MMMessageAttribute<CommodityDerivate5, Max25Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommodityDerivate5.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class CommodityDerivate5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
+		}
+
+		@Override
+		public Max25Text getValue(CommodityDerivate5 obj) {
+			return obj.getSize();
+		}
+
+		@Override
+		public void setValue(CommodityDerivate5 obj, Max25Text value) {
+			obj.setSize(value);
 		}
 	};
 	@XmlElement(name = "AvrgTmChrtr", required = true)
@@ -142,7 +152,7 @@ public class CommodityDerivate5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAverageTimeCharter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommodityDerivate5, Max25Text> mmAverageTimeCharter = new MMMessageAttribute<CommodityDerivate5, Max25Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CommodityDerivate5.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class CommodityDerivate5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();
+		}
+
+		@Override
+		public Max25Text getValue(CommodityDerivate5 obj) {
+			return obj.getAverageTimeCharter();
+		}
+
+		@Override
+		public void setValue(CommodityDerivate5 obj, Max25Text value) {
+			obj.setAverageTimeCharter(value);
 		}
 	};
 

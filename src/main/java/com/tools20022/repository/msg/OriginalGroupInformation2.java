@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReturnReasonInformation1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +130,7 @@ public class OriginalGroupInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation2, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalGroupInformation2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation2.mmObject();
@@ -141,6 +142,16 @@ public class OriginalGroupInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation2 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation2 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -174,7 +185,7 @@ public class OriginalGroupInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation2, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalGroupInformation2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation2.mmObject();
 			isDerived = false;
@@ -185,6 +196,16 @@ public class OriginalGroupInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation2 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation2 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCreDtTm")
@@ -221,7 +242,7 @@ public class OriginalGroupInformation2 {
 	 * definition} = "Date and time at which the original message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation2, Optional<ISODateTime>> mmOriginalCreationDateTime = new MMMessageAttribute<OriginalGroupInformation2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation2.mmObject();
@@ -234,9 +255,19 @@ public class OriginalGroupInformation2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		@Override
+		public Optional<ISODateTime> getValue(OriginalGroupInformation2 obj) {
+			return obj.getOriginalCreationDateTime();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation2 obj, Optional<ISODateTime> value) {
+			obj.setOriginalCreationDateTime(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "RtrRsnInf")
-	protected List<com.tools20022.repository.msg.ReturnReasonInformation1> returnReasonInformation;
+	protected List<ReturnReasonInformation1> returnReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -269,7 +300,7 @@ public class OriginalGroupInformation2 {
 	 * definition} = "Detailed information on the return reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupInformation2, List<ReturnReasonInformation1>> mmReturnReasonInformation = new MMMessageAssociationEnd<OriginalGroupInformation2, List<ReturnReasonInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation2.mmObject();
@@ -280,7 +311,17 @@ public class OriginalGroupInformation2 {
 			definition = "Detailed information on the return reason.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation1.mmObject();
+			type_lazy = () -> ReturnReasonInformation1.mmObject();
+		}
+
+		@Override
+		public List<ReturnReasonInformation1> getValue(OriginalGroupInformation2 obj) {
+			return obj.getReturnReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation2 obj, List<ReturnReasonInformation1> value) {
+			obj.setReturnReasonInformation(value);
 		}
 	};
 
@@ -331,7 +372,7 @@ public class OriginalGroupInformation2 {
 		return returnReasonInformation == null ? returnReasonInformation = new ArrayList<>() : returnReasonInformation;
 	}
 
-	public OriginalGroupInformation2 setReturnReasonInformation(List<com.tools20022.repository.msg.ReturnReasonInformation1> returnReasonInformation) {
+	public OriginalGroupInformation2 setReturnReasonInformation(List<ReturnReasonInformation1> returnReasonInformation) {
 		this.returnReasonInformation = Objects.requireNonNull(returnReasonInformation);
 		return this;
 	}

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification73;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +130,7 @@ public class CardTransactionEnvironment5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSendingInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionEnvironment5, GenericIdentification73> mmSendingInstitution = new MMMessageAssociationEnd<CardTransactionEnvironment5, GenericIdentification73>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment5.mmObject();
@@ -142,7 +143,17 @@ public class CardTransactionEnvironment5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification73.mmObject();
+			type_lazy = () -> GenericIdentification73.mmObject();
+		}
+
+		@Override
+		public GenericIdentification73 getValue(CardTransactionEnvironment5 obj) {
+			return obj.getSendingInstitution();
+		}
+
+		@Override
+		public void setValue(CardTransactionEnvironment5 obj, GenericIdentification73 value) {
+			obj.setSendingInstitution(value);
 		}
 	};
 	@XmlElement(name = "RcvgInstn", required = true)
@@ -189,7 +200,7 @@ public class CardTransactionEnvironment5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionEnvironment5, GenericIdentification73> mmReceivingInstitution = new MMMessageAssociationEnd<CardTransactionEnvironment5, GenericIdentification73>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment5.mmObject();
@@ -202,7 +213,17 @@ public class CardTransactionEnvironment5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification73.mmObject();
+			type_lazy = () -> GenericIdentification73.mmObject();
+		}
+
+		@Override
+		public GenericIdentification73 getValue(CardTransactionEnvironment5 obj) {
+			return obj.getReceivingInstitution();
+		}
+
+		@Override
+		public void setValue(CardTransactionEnvironment5 obj, GenericIdentification73 value) {
+			obj.setReceivingInstitution(value);
 		}
 	};
 	@XmlElement(name = "SttlmInstn", required = true)
@@ -240,7 +261,7 @@ public class CardTransactionEnvironment5 {
 	 * "Institution in charge of the settlement of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionEnvironment5, GenericIdentification73> mmSettlementInstitution = new MMMessageAssociationEnd<CardTransactionEnvironment5, GenericIdentification73>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment5.mmObject();
@@ -252,7 +273,17 @@ public class CardTransactionEnvironment5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification73.mmObject();
+			type_lazy = () -> GenericIdentification73.mmObject();
+		}
+
+		@Override
+		public GenericIdentification73 getValue(CardTransactionEnvironment5 obj) {
+			return obj.getSettlementInstitution();
+		}
+
+		@Override
+		public void setValue(CardTransactionEnvironment5 obj, GenericIdentification73 value) {
+			obj.setSettlementInstitution(value);
 		}
 	};
 
@@ -277,7 +308,7 @@ public class CardTransactionEnvironment5 {
 		return sendingInstitution;
 	}
 
-	public CardTransactionEnvironment5 setSendingInstitution(com.tools20022.repository.msg.GenericIdentification73 sendingInstitution) {
+	public CardTransactionEnvironment5 setSendingInstitution(GenericIdentification73 sendingInstitution) {
 		this.sendingInstitution = Objects.requireNonNull(sendingInstitution);
 		return this;
 	}
@@ -286,7 +317,7 @@ public class CardTransactionEnvironment5 {
 		return receivingInstitution;
 	}
 
-	public CardTransactionEnvironment5 setReceivingInstitution(com.tools20022.repository.msg.GenericIdentification73 receivingInstitution) {
+	public CardTransactionEnvironment5 setReceivingInstitution(GenericIdentification73 receivingInstitution) {
 		this.receivingInstitution = Objects.requireNonNull(receivingInstitution);
 		return this;
 	}
@@ -295,7 +326,7 @@ public class CardTransactionEnvironment5 {
 		return settlementInstitution;
 	}
 
-	public CardTransactionEnvironment5 setSettlementInstitution(com.tools20022.repository.msg.GenericIdentification73 settlementInstitution) {
+	public CardTransactionEnvironment5 setSettlementInstitution(GenericIdentification73 settlementInstitution) {
 		this.settlementInstitution = Objects.requireNonNull(settlementInstitution);
 		return this;
 	}

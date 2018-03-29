@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.entity.CollateralMovement;
+import com.tools20022.repository.entity.ExposureCalculation;
 import com.tools20022.repository.entity.MarginAmountRequirement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -95,6 +97,11 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.MarginAmountRequirement#mmDeliverMarginAmount
+	 * MarginAmountRequirement.mmDeliverMarginAmount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1
@@ -114,8 +121,9 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperationalOutflowAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount> mmOperationalOutflowAmount = new MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> MarginAmountRequirement.mmDeliverMarginAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "OprlOutflwAmt";
@@ -125,6 +133,16 @@ public class StressLiquidResourceRequirementAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(StressLiquidResourceRequirementAmount1 obj) {
+			return obj.getOperationalOutflowAmount();
+		}
+
+		@Override
+		public void setValue(StressLiquidResourceRequirementAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setOperationalOutflowAmount(value);
 		}
 	};
 	@XmlElement(name = "VartnMrgnPmtOblgtnAmt", required = true)
@@ -139,6 +157,11 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.ExposureCalculation#mmCurrentVariationMargin
+	 * ExposureCalculation.mmCurrentVariationMargin}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -159,8 +182,9 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVariationMarginPaymentObligationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount> mmVariationMarginPaymentObligationAmount = new MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> ExposureCalculation.mmCurrentVariationMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "VartnMrgnPmtOblgtnAmt";
@@ -170,6 +194,16 @@ public class StressLiquidResourceRequirementAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(StressLiquidResourceRequirementAmount1 obj) {
+			return obj.getVariationMarginPaymentObligationAmount();
+		}
+
+		@Override
+		public void setValue(StressLiquidResourceRequirementAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setVariationMarginPaymentObligationAmount(value);
 		}
 	};
 	@XmlElement(name = "SttlmOrDlvryAmt", required = true)
@@ -184,6 +218,11 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CollateralMovement#mmSegregatedIndependentAmount
+	 * CollateralMovement.mmSegregatedIndependentAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -204,8 +243,9 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementOrDeliveryAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount> mmSettlementOrDeliveryAmount = new MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> CollateralMovement.mmSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmOrDlvryAmt";
@@ -215,6 +255,16 @@ public class StressLiquidResourceRequirementAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(StressLiquidResourceRequirementAmount1 obj) {
+			return obj.getSettlementOrDeliveryAmount();
+		}
+
+		@Override
+		public void setValue(StressLiquidResourceRequirementAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setSettlementOrDeliveryAmount(value);
 		}
 	};
 	@XmlElement(name = "OthrAmt", required = true)
@@ -249,7 +299,7 @@ public class StressLiquidResourceRequirementAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount> mmOtherAmount = new MMMessageAttribute<StressLiquidResourceRequirementAmount1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1.mmObject();
 			isDerived = false;
@@ -260,6 +310,16 @@ public class StressLiquidResourceRequirementAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(StressLiquidResourceRequirementAmount1 obj) {
+			return obj.getOtherAmount();
+		}
+
+		@Override
+		public void setValue(StressLiquidResourceRequirementAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setOtherAmount(value);
 		}
 	};
 

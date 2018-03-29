@@ -114,7 +114,7 @@ public class RepoCallRequestStatus3Choice {
 	 * "Provides the status of the repurchase agreement call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RepoCallRequestStatus3Choice, RepoCallRequestStatus1Code> mmCode = new MMMessageAttribute<RepoCallRequestStatus3Choice, RepoCallRequestStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus3Choice.mmObject();
@@ -127,6 +127,16 @@ public class RepoCallRequestStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RepoCallRequestStatus1Code.mmObject();
+		}
+
+		@Override
+		public RepoCallRequestStatus1Code getValue(RepoCallRequestStatus3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RepoCallRequestStatus3Choice obj, RepoCallRequestStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class RepoCallRequestStatus3Choice {
 	 * "Provides the status of the repurchase agreement call request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RepoCallRequestStatus3Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<RepoCallRequestStatus3Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmRepoCallRequestStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RepoCallRequestStatus3Choice.mmObject();
@@ -181,6 +191,16 @@ public class RepoCallRequestStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(RepoCallRequestStatus3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RepoCallRequestStatus3Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -32,6 +32,7 @@ import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.entity.SecuritiesPegOrderInstruction;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -139,7 +140,7 @@ public class PegOrderInstructions1 {
 	 * definition} = "Amount added to the peg for a pegged order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOffset = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PegOrderInstructions1, Optional<ActiveCurrencyAndAmount>> mmOffset = new MMMessageAttribute<PegOrderInstructions1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmOffset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PegOrderInstructions1.mmObject();
@@ -152,6 +153,16 @@ public class PegOrderInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(PegOrderInstructions1 obj) {
+			return obj.getOffset();
+		}
+
+		@Override
+		public void setValue(PegOrderInstructions1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setOffset(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdPricTp")
@@ -191,7 +202,7 @@ public class PegOrderInstructions1 {
 	 * definition} = "Defines the type of peg."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedPriceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PegOrderInstructions1, Optional<PegType1Code>> mmRelatedPriceType = new MMMessageAttribute<PegOrderInstructions1, Optional<PegType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PegOrderInstructions1.mmObject();
@@ -204,6 +215,16 @@ public class PegOrderInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PegType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PegType1Code> getValue(PegOrderInstructions1 obj) {
+			return obj.getRelatedPriceType();
+		}
+
+		@Override
+		public void setValue(PegOrderInstructions1 obj, Optional<PegType1Code> value) {
+			obj.setRelatedPriceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MvTp")
@@ -244,7 +265,7 @@ public class PegOrderInstructions1 {
 	 * definition} = "Describes whether peg is static/fixed or floats."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMoveType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PegOrderInstructions1, Optional<MoveType1Code>> mmMoveType = new MMMessageAttribute<PegOrderInstructions1, Optional<MoveType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmMoveType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PegOrderInstructions1.mmObject();
@@ -257,6 +278,16 @@ public class PegOrderInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MoveType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<MoveType1Code> getValue(PegOrderInstructions1 obj) {
+			return obj.getMoveType();
+		}
+
+		@Override
+		public void setValue(PegOrderInstructions1 obj, Optional<MoveType1Code> value) {
+			obj.setMoveType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OffsetTp")
@@ -297,7 +328,7 @@ public class PegOrderInstructions1 {
 	 * definition} = "Type of Peg Offset."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOffsetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PegOrderInstructions1, Optional<OffsetType1Code>> mmOffsetType = new MMMessageAttribute<PegOrderInstructions1, Optional<OffsetType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmOffsetType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PegOrderInstructions1.mmObject();
@@ -310,6 +341,16 @@ public class PegOrderInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OffsetType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OffsetType1Code> getValue(PegOrderInstructions1 obj) {
+			return obj.getOffsetType();
+		}
+
+		@Override
+		public void setValue(PegOrderInstructions1 obj, Optional<OffsetType1Code> value) {
+			obj.setOffsetType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LmtTp")
@@ -351,7 +392,7 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PegOrderInstructions1, Optional<Max35Text>> mmLimitType = new MMMessageAttribute<PegOrderInstructions1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmLimitType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PegOrderInstructions1.mmObject();
@@ -364,6 +405,16 @@ public class PegOrderInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PegOrderInstructions1 obj) {
+			return obj.getLimitType();
+		}
+
+		@Override
+		public void setValue(PegOrderInstructions1 obj, Optional<Max35Text> value) {
+			obj.setLimitType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RndDrctn")
@@ -405,7 +456,7 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PegOrderInstructions1, Optional<Max35Text>> mmRoundDirection = new MMMessageAttribute<PegOrderInstructions1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmRoundDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PegOrderInstructions1.mmObject();
@@ -418,6 +469,16 @@ public class PegOrderInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PegOrderInstructions1 obj) {
+			return obj.getRoundDirection();
+		}
+
+		@Override
+		public void setValue(PegOrderInstructions1 obj, Optional<Max35Text> value) {
+			obj.setRoundDirection(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Scp")
@@ -460,7 +521,7 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScope = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PegOrderInstructions1, Optional<PriceProtectionScope2Code>> mmScope = new MMMessageAttribute<PegOrderInstructions1, Optional<PriceProtectionScope2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmScope;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PegOrderInstructions1.mmObject();
@@ -473,6 +534,16 @@ public class PegOrderInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceProtectionScope2Code.mmObject();
+		}
+
+		@Override
+		public Optional<PriceProtectionScope2Code> getValue(PegOrderInstructions1 obj) {
+			return obj.getScope();
+		}
+
+		@Override
+		public void setValue(PegOrderInstructions1 obj, Optional<PriceProtectionScope2Code> value) {
+			obj.setScope(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OffsetSgn")
@@ -512,7 +583,7 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOffsetSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PegOrderInstructions1, Optional<PlusOrMinusIndicator>> mmOffsetSign = new MMMessageAttribute<PegOrderInstructions1, Optional<PlusOrMinusIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPegOrderInstruction.mmOffsetSign;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PegOrderInstructions1.mmObject();
@@ -524,6 +595,16 @@ public class PegOrderInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<PlusOrMinusIndicator> getValue(PegOrderInstructions1 obj) {
+			return obj.getOffsetSign();
+		}
+
+		@Override
+		public void setValue(PegOrderInstructions1 obj, Optional<PlusOrMinusIndicator> value) {
+			obj.setOffsetSign(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PegSctyDtls")
@@ -562,7 +643,7 @@ public class PegOrderInstructions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPegSecurityDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PegOrderInstructions1, Optional<SecurityIdentification7>> mmPegSecurityDetails = new MMMessageAssociationEnd<PegOrderInstructions1, Optional<SecurityIdentification7>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PegOrderInstructions1.mmObject();
@@ -574,7 +655,17 @@ public class PegOrderInstructions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification7> getValue(PegOrderInstructions1 obj) {
+			return obj.getPegSecurityDetails();
+		}
+
+		@Override
+		public void setValue(PegOrderInstructions1 obj, Optional<SecurityIdentification7> value) {
+			obj.setPegSecurityDetails(value.orElse(null));
 		}
 	};
 
@@ -671,7 +762,7 @@ public class PegOrderInstructions1 {
 		return pegSecurityDetails == null ? Optional.empty() : Optional.of(pegSecurityDetails);
 	}
 
-	public PegOrderInstructions1 setPegSecurityDetails(com.tools20022.repository.msg.SecurityIdentification7 pegSecurityDetails) {
+	public PegOrderInstructions1 setPegSecurityDetails(SecurityIdentification7 pegSecurityDetails) {
 		this.pegSecurityDetails = pegSecurityDetails;
 		return this;
 	}

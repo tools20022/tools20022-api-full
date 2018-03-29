@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.setr.SwitchOrderCancellationRequestV03;
 import com.tools20022.repository.entity.SwitchOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.SwitchOrder3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -94,7 +96,7 @@ public class SwitchOrderInstruction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "SwtchOrdrDtls", required = true)
-	protected List<com.tools20022.repository.msg.SwitchOrder3> switchOrderDetails;
+	protected List<SwitchOrder3> switchOrderDetails;
 	/**
 	 * 
 	 <p>
@@ -125,7 +127,7 @@ public class SwitchOrderInstruction2 {
 	 * definition} = "Information related to the switch order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSwitchOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrderInstruction2, List<SwitchOrder3>> mmSwitchOrderDetails = new MMMessageAssociationEnd<SwitchOrderInstruction2, List<SwitchOrder3>>() {
 		{
 			businessComponentTrace_lazy = () -> SwitchOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderInstruction2.mmObject();
@@ -136,11 +138,21 @@ public class SwitchOrderInstruction2 {
 			definition = "Information related to the switch order.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SwitchOrder3.mmObject();
+			type_lazy = () -> SwitchOrder3.mmObject();
+		}
+
+		@Override
+		public List<SwitchOrder3> getValue(SwitchOrderInstruction2 obj) {
+			return obj.getSwitchOrderDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrderInstruction2 obj, List<SwitchOrder3> value) {
+			obj.setSwitchOrderDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -168,7 +180,7 @@ public class SwitchOrderInstruction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrderInstruction2, List<Extension1>> mmExtension = new MMMessageAssociationEnd<SwitchOrderInstruction2, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrderInstruction2.mmObject();
 			isDerived = false;
@@ -178,7 +190,17 @@ public class SwitchOrderInstruction2 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(SwitchOrderInstruction2 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(SwitchOrderInstruction2 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -203,7 +225,7 @@ public class SwitchOrderInstruction2 {
 		return switchOrderDetails == null ? switchOrderDetails = new ArrayList<>() : switchOrderDetails;
 	}
 
-	public SwitchOrderInstruction2 setSwitchOrderDetails(List<com.tools20022.repository.msg.SwitchOrder3> switchOrderDetails) {
+	public SwitchOrderInstruction2 setSwitchOrderDetails(List<SwitchOrder3> switchOrderDetails) {
 		this.switchOrderDetails = Objects.requireNonNull(switchOrderDetails);
 		return this;
 	}
@@ -212,7 +234,7 @@ public class SwitchOrderInstruction2 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public SwitchOrderInstruction2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public SwitchOrderInstruction2 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

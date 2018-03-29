@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.TypeOfPrice10Code;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValue1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -129,7 +130,7 @@ public class UnitPrice11 {
 	 * definition} = "Type and information about a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice11, TypeOfPrice10Code> mmType = new MMMessageAttribute<UnitPrice11, TypeOfPrice10Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmObject();
@@ -141,6 +142,16 @@ public class UnitPrice11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPrice10Code.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice10Code getValue(UnitPrice11 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(UnitPrice11 obj, TypeOfPrice10Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "XtndedTp", required = true)
@@ -177,7 +188,7 @@ public class UnitPrice11 {
 	 * definition} = "Type and information about a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice11, Extended350Code> mmExtendedType = new MMMessageAttribute<UnitPrice11, Extended350Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmObject();
@@ -189,6 +200,16 @@ public class UnitPrice11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(UnitPrice11 obj) {
+			return obj.getExtendedType();
+		}
+
+		@Override
+		public void setValue(UnitPrice11 obj, Extended350Code value) {
+			obj.setExtendedType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -231,7 +252,7 @@ public class UnitPrice11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice11, PriceValue1> mmValue = new MMMessageAttribute<UnitPrice11, PriceValue1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmObject();
@@ -243,7 +264,17 @@ public class UnitPrice11 {
 			nextVersions_lazy = () -> Arrays.asList(UnitPrice20.mmValue);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public PriceValue1 getValue(UnitPrice11 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(UnitPrice11 obj, PriceValue1 value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "PricMtd")
@@ -287,7 +318,7 @@ public class UnitPrice11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice11, Optional<PriceMethod1Code>> mmPriceMethod = new MMMessageAttribute<UnitPrice11, Optional<PriceMethod1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice11.mmObject();
@@ -300,6 +331,16 @@ public class UnitPrice11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PriceMethod1Code> getValue(UnitPrice11 obj) {
+			return obj.getPriceMethod();
+		}
+
+		@Override
+		public void setValue(UnitPrice11 obj, Optional<PriceMethod1Code> value) {
+			obj.setPriceMethod(value.orElse(null));
 		}
 	};
 	/**
@@ -387,7 +428,7 @@ public class UnitPrice11 {
 		return value;
 	}
 
-	public UnitPrice11 setValue(com.tools20022.repository.msg.PriceValue1 value) {
+	public UnitPrice11 setValue(PriceValue1 value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}

@@ -119,7 +119,7 @@ public class DocumentIdentification20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification20, DocumentIdentification2Choice> mmIdentification = new MMMessageAssociationEnd<DocumentIdentification20, DocumentIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification20.mmObject();
@@ -133,6 +133,16 @@ public class DocumentIdentification20 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification2Choice getValue(DocumentIdentification20 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification20 obj, DocumentIdentification2Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "DocNb")
@@ -167,7 +177,7 @@ public class DocumentIdentification20 {
 	 * definition} = "Identification of the type of document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocumentNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification20, Optional<DocumentNumber2Choice>> mmDocumentNumber = new MMMessageAssociationEnd<DocumentIdentification20, Optional<DocumentNumber2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification20.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class DocumentIdentification20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber2Choice> getValue(DocumentIdentification20 obj) {
+			return obj.getDocumentNumber();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification20 obj, Optional<DocumentNumber2Choice> value) {
+			obj.setDocumentNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkgTp")
@@ -216,7 +236,7 @@ public class DocumentIdentification20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkageType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification20, Optional<ProcessingPosition3Choice>> mmLinkageType = new MMMessageAssociationEnd<DocumentIdentification20, Optional<ProcessingPosition3Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification20.mmObject();
 			isDerived = false;
@@ -229,6 +249,16 @@ public class DocumentIdentification20 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingPosition3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingPosition3Choice> getValue(DocumentIdentification20 obj) {
+			return obj.getLinkageType();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification20 obj, Optional<ProcessingPosition3Choice> value) {
+			obj.setLinkageType(value.orElse(null));
 		}
 	};
 

@@ -129,7 +129,7 @@ public class InvestmentAccount60 {
 	 * InvestmentAccount20.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount60, Optional<Max35Text>> mmAccountIdentification = new MMMessageAttribute<InvestmentAccount60, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount60.mmObject();
@@ -142,6 +142,16 @@ public class InvestmentAccount60 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccount60 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount60 obj, Optional<Max35Text> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -184,7 +194,7 @@ public class InvestmentAccount60 {
 	 * InvestmentAccount20.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccount60, Optional<InvestmentAccountType1Choice>> mmType = new MMMessageAttribute<InvestmentAccount60, Optional<InvestmentAccountType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccount60.mmObject();
@@ -197,6 +207,16 @@ public class InvestmentAccount60 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccountType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccountType1Choice> getValue(InvestmentAccount60 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccount60 obj, Optional<InvestmentAccountType1Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 

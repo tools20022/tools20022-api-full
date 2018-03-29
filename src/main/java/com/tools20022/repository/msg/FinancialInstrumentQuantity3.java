@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class FinancialInstrumentQuantity3 {
 	 * definition} = "Quantity of investment fund units redeemed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity3, FinancialInstrumentQuantity1> mmUnitsNumber = new MMMessageAttribute<FinancialInstrumentQuantity3, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmObject();
@@ -135,7 +136,17 @@ public class FinancialInstrumentQuantity3 {
 			definition = "Quantity of investment fund units redeemed.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(FinancialInstrumentQuantity3 obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity3 obj, FinancialInstrumentQuantity1 value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "OrdrdAmt")
@@ -173,7 +184,7 @@ public class FinancialInstrumentQuantity3 {
 	 * definition} = "Amount of money to be invested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmOrderedAmount = new MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmObject();
@@ -185,6 +196,16 @@ public class FinancialInstrumentQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(FinancialInstrumentQuantity3 obj) {
+			return obj.getOrderedAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity3 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setOrderedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NetAmt")
@@ -224,7 +245,7 @@ public class FinancialInstrumentQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmNetAmount = new MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmNetAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmObject();
@@ -236,6 +257,16 @@ public class FinancialInstrumentQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(FinancialInstrumentQuantity3 obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity3 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setNetAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrssAmt")
@@ -275,7 +306,7 @@ public class FinancialInstrumentQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmGrossAmount = new MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmObject();
@@ -287,6 +318,16 @@ public class FinancialInstrumentQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(FinancialInstrumentQuantity3 obj) {
+			return obj.getGrossAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity3 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setGrossAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctdAmt")
@@ -324,7 +365,7 @@ public class FinancialInstrumentQuantity3 {
 	 * definition} = "Amount of money as a result of the redemption."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveCurrencyAndAmount>> mmExecutedAmount = new MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmExecutedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmObject();
@@ -336,6 +377,16 @@ public class FinancialInstrumentQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(FinancialInstrumentQuantity3 obj) {
+			return obj.getExecutedAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setExecutedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldgsRedRate")
@@ -375,7 +426,7 @@ public class FinancialInstrumentQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingsRedemptionRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity3, Optional<PercentageRate>> mmHoldingsRedemptionRate = new MMMessageAttribute<FinancialInstrumentQuantity3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> RedemptionOrder.mmHoldingsRedemptionRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmObject();
@@ -387,6 +438,16 @@ public class FinancialInstrumentQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(FinancialInstrumentQuantity3 obj) {
+			return obj.getHoldingsRedemptionRate();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity3 obj, Optional<PercentageRate> value) {
+			obj.setHoldingsRedemptionRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmAmt")
@@ -426,7 +487,7 @@ public class FinancialInstrumentQuantity3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveCurrencyAndAmount>> mmSettlementAmount = new MMMessageAttribute<FinancialInstrumentQuantity3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity3.mmObject();
@@ -438,6 +499,16 @@ public class FinancialInstrumentQuantity3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(FinancialInstrumentQuantity3 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentQuantity3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSettlementAmount(value.orElse(null));
 		}
 	};
 
@@ -462,7 +533,7 @@ public class FinancialInstrumentQuantity3 {
 		return unitsNumber;
 	}
 
-	public FinancialInstrumentQuantity3 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+	public FinancialInstrumentQuantity3 setUnitsNumber(FinancialInstrumentQuantity1 unitsNumber) {
 		this.unitsNumber = Objects.requireNonNull(unitsNumber);
 		return this;
 	}

@@ -103,7 +103,7 @@ public class ATMMediaMix1 {
 	 * definition} = "Logical unit number of the cash dispenser."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashUnitNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMMediaMix1, Optional<Number>> mmCashUnitNumber = new MMMessageAttribute<ATMMediaMix1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class ATMMediaMix1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMMediaMix1 obj) {
+			return obj.getCashUnitNumber();
+		}
+
+		@Override
+		public void setValue(ATMMediaMix1 obj, Optional<Number> value) {
+			obj.setCashUnitNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nb", required = true)
@@ -151,7 +161,7 @@ public class ATMMediaMix1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMMediaMix1, Number> mmNumber = new MMMessageAttribute<ATMMediaMix1, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class ATMMediaMix1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ATMMediaMix1 obj) {
+			return obj.getNumber();
+		}
+
+		@Override
+		public void setValue(ATMMediaMix1 obj, Number value) {
+			obj.setNumber(value);
 		}
 	};
 	@XmlElement(name = "UnitVal", required = true)
@@ -201,7 +221,7 @@ public class ATMMediaMix1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMMediaMix1, ImpliedCurrencyAndAmount> mmUnitValue = new MMMessageAttribute<ATMMediaMix1, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMMediaMix1.mmObject();
 			isDerived = false;
@@ -213,6 +233,16 @@ public class ATMMediaMix1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(ATMMediaMix1 obj) {
+			return obj.getUnitValue();
+		}
+
+		@Override
+		public void setValue(ATMMediaMix1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setUnitValue(value);
 		}
 	};
 

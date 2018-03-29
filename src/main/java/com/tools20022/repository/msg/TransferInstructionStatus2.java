@@ -126,7 +126,7 @@ public class TransferInstructionStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstructionStatus2, TransferStatus2Code> mmStatus = new MMMessageAttribute<TransferInstructionStatus2, TransferStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmTransferStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus2.mmObject();
@@ -139,6 +139,16 @@ public class TransferInstructionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferStatus2Code.mmObject();
+		}
+
+		@Override
+		public TransferStatus2Code getValue(TransferInstructionStatus2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransferInstructionStatus2 obj, TransferStatus2Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -183,7 +193,7 @@ public class TransferInstructionStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferInstructionStatus2, Optional<Max350Text>> mmReason = new MMMessageAttribute<TransferInstructionStatus2, Optional<Max350Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus2.mmObject();
@@ -196,6 +206,16 @@ public class TransferInstructionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransferInstructionStatus2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(TransferInstructionStatus2 obj, Optional<Max350Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

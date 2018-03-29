@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.ChargeTypeFormat3Choice;
+import com.tools20022.repository.choice.DiscountTypeFormat1Choice;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Discount;
@@ -105,7 +107,7 @@ public class DiscountOrChargeType1Choice {
 	 * definition} = "Type of charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DiscountOrChargeType1Choice, ChargeTypeFormat3Choice> mmChargeType = new MMMessageAssociationEnd<DiscountOrChargeType1Choice, ChargeTypeFormat3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmObject();
@@ -117,7 +119,17 @@ public class DiscountOrChargeType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.ChargeTypeFormat3Choice.mmObject();
+			type_lazy = () -> ChargeTypeFormat3Choice.mmObject();
+		}
+
+		@Override
+		public ChargeTypeFormat3Choice getValue(DiscountOrChargeType1Choice obj) {
+			return obj.getChargeType();
+		}
+
+		@Override
+		public void setValue(DiscountOrChargeType1Choice obj, ChargeTypeFormat3Choice value) {
+			obj.setChargeType(value);
 		}
 	};
 	@XmlElement(name = "DscntTp", required = true)
@@ -154,7 +166,7 @@ public class DiscountOrChargeType1Choice {
 	 * definition} = "Type of discount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDiscountType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DiscountOrChargeType1Choice, DiscountTypeFormat1Choice> mmDiscountType = new MMMessageAssociationEnd<DiscountOrChargeType1Choice, DiscountTypeFormat1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DiscountOrChargeType1Choice.mmObject();
@@ -166,7 +178,17 @@ public class DiscountOrChargeType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DiscountTypeFormat1Choice.mmObject();
+			type_lazy = () -> DiscountTypeFormat1Choice.mmObject();
+		}
+
+		@Override
+		public DiscountTypeFormat1Choice getValue(DiscountOrChargeType1Choice obj) {
+			return obj.getDiscountType();
+		}
+
+		@Override
+		public void setValue(DiscountOrChargeType1Choice obj, DiscountTypeFormat1Choice value) {
+			obj.setDiscountType(value);
 		}
 	};
 
@@ -188,7 +210,7 @@ public class DiscountOrChargeType1Choice {
 		return chargeType;
 	}
 
-	public DiscountOrChargeType1Choice setChargeType(com.tools20022.repository.choice.ChargeTypeFormat3Choice chargeType) {
+	public DiscountOrChargeType1Choice setChargeType(ChargeTypeFormat3Choice chargeType) {
 		this.chargeType = Objects.requireNonNull(chargeType);
 		return this;
 	}
@@ -197,7 +219,7 @@ public class DiscountOrChargeType1Choice {
 		return discountType;
 	}
 
-	public DiscountOrChargeType1Choice setDiscountType(com.tools20022.repository.choice.DiscountTypeFormat1Choice discountType) {
+	public DiscountOrChargeType1Choice setDiscountType(DiscountTypeFormat1Choice discountType) {
 		this.discountType = Objects.requireNonNull(discountType);
 		return this;
 	}

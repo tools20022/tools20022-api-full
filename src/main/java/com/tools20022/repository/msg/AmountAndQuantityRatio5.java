@@ -111,7 +111,7 @@ public class AmountAndQuantityRatio5 {
 	 * definition} = "Cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndQuantityRatio5, RestrictedFINActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<AmountAndQuantityRatio5, RestrictedFINActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndQuantityRatio5.mmObject();
@@ -124,6 +124,16 @@ public class AmountAndQuantityRatio5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAnd13DecimalAmount getValue(AmountAndQuantityRatio5 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndQuantityRatio5 obj, RestrictedFINActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -164,7 +174,7 @@ public class AmountAndQuantityRatio5 {
 	 * definition} = "Quantity expressed as number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndQuantityRatio5, RestrictedFINDecimalNumber> mmQuantity = new MMMessageAttribute<AmountAndQuantityRatio5, RestrictedFINDecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndQuantity.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndQuantityRatio5.mmObject();
@@ -177,6 +187,16 @@ public class AmountAndQuantityRatio5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
+		}
+
+		@Override
+		public RestrictedFINDecimalNumber getValue(AmountAndQuantityRatio5 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(AmountAndQuantityRatio5 obj, RestrictedFINDecimalNumber value) {
+			obj.setQuantity(value);
 		}
 	};
 

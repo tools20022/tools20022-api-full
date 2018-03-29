@@ -124,7 +124,7 @@ public class SettlementParties9 {
 	 * "Financial institution from which cash will be transferred."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveryAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties9, Optional<PartyIdentification19Choice>> mmDeliveryAgent = new MMMessageAssociationEnd<SettlementParties9, Optional<PartyIdentification19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties9.mmObject();
@@ -137,6 +137,16 @@ public class SettlementParties9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification19Choice> getValue(SettlementParties9 obj) {
+			return obj.getDeliveryAgent();
+		}
+
+		@Override
+		public void setValue(SettlementParties9 obj, Optional<PartyIdentification19Choice> value) {
+			obj.setDeliveryAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Intrmy")
@@ -175,7 +185,7 @@ public class SettlementParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties9, Optional<PartyIdentification19Choice>> mmIntermediary = new MMMessageAssociationEnd<SettlementParties9, Optional<PartyIdentification19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties9.mmObject();
@@ -188,6 +198,16 @@ public class SettlementParties9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification19Choice> getValue(SettlementParties9 obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(SettlementParties9 obj, Optional<PartyIdentification19Choice> value) {
+			obj.setIntermediary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcvgAgt", required = true)
@@ -225,7 +245,7 @@ public class SettlementParties9 {
 	 * "Financial institution where the payee will receive the funds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties9, PartyIdentification19Choice> mmReceivingAgent = new MMMessageAssociationEnd<SettlementParties9, PartyIdentification19Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties9.mmObject();
@@ -238,6 +258,16 @@ public class SettlementParties9 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification19Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification19Choice getValue(SettlementParties9 obj) {
+			return obj.getReceivingAgent();
+		}
+
+		@Override
+		public void setValue(SettlementParties9 obj, PartyIdentification19Choice value) {
+			obj.setReceivingAgent(value);
 		}
 	};
 	@XmlElement(name = "BnfcryInstn")
@@ -276,7 +306,7 @@ public class SettlementParties9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBeneficiaryInstitution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementParties9, Optional<PartyIdentification19Choice>> mmBeneficiaryInstitution = new MMMessageAssociationEnd<SettlementParties9, Optional<PartyIdentification19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementParties9.mmObject();
@@ -289,6 +319,16 @@ public class SettlementParties9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification19Choice> getValue(SettlementParties9 obj) {
+			return obj.getBeneficiaryInstitution();
+		}
+
+		@Override
+		public void setValue(SettlementParties9 obj, Optional<PartyIdentification19Choice> value) {
+			obj.setBeneficiaryInstitution(value.orElse(null));
 		}
 	};
 

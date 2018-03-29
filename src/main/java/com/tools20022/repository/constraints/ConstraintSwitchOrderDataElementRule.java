@@ -50,11 +50,15 @@ public class ConstraintSwitchOrderDataElementRule {
 	 */
 	public static final MMConstraint<FundOrderData6> forFundOrderData6 = new MMConstraint<FundOrderData6>() {
 		{
-			validator = ConstraintSwitchOrderDataElementRule::checkFundOrderData6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOrderDataElementRule";
 			definition = "One of the elements (SettlementAmount, SettlementMethod, AdditionalAmount, UnitCurrency, QuotedCurrency) must be present.";
 			owner_lazy = () -> FundOrderData6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FundOrderData6 obj) throws Exception {
+			checkFundOrderData6(obj);
 		}
 	};
 

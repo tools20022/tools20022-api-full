@@ -116,7 +116,7 @@ public class RejectionAndRepairReason8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionAndRepairReason8Choice, RejectionReason22Code> mmCode = new MMMessageAttribute<RejectionAndRepairReason8Choice, RejectionReason22Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason8Choice.mmObject();
@@ -129,6 +129,16 @@ public class RejectionAndRepairReason8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason22Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason22Code getValue(RejectionAndRepairReason8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason8Choice obj, RejectionReason22Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -170,7 +180,7 @@ public class RejectionAndRepairReason8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionAndRepairReason8Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<RejectionAndRepairReason8Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionAndRepairReason8Choice.mmObject();
@@ -184,6 +194,16 @@ public class RejectionAndRepairReason8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(RejectionAndRepairReason8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionAndRepairReason8Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -55,7 +55,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GenericInformation1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -96,7 +96,7 @@ public class GenericInformation1 {
 	 * definition} = "Name of the generic information to exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericInformation1, Max70Text> mmName = new MMMessageAttribute<GenericInformation1, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericInformation1.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class GenericInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(GenericInformation1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(GenericInformation1 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Val")
@@ -138,7 +148,7 @@ public class GenericInformation1 {
 	 * definition} = "Value of the generic information to exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericInformation1, Optional<Max140Text>> mmValue = new MMMessageAttribute<GenericInformation1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericInformation1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class GenericInformation1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max140Text> getValue(GenericInformation1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(GenericInformation1 obj, Optional<Max140Text> value) {
+			obj.setValue(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -157,7 +177,7 @@ public class GenericInformation1 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericInformation1.mmName, com.tools20022.repository.msg.GenericInformation1.mmValue);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericInformation1";
 				definition = "GenericInformation exchanged with a name and value.";
 			}

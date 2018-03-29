@@ -106,7 +106,7 @@ public class NetDividendRateType1FormatChoice {
 	 * definition} = "Standard code to specify the type of net dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateType1FormatChoice, NetDividendRateType1Code> mmCode = new MMMessageAttribute<NetDividendRateType1FormatChoice, NetDividendRateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateType1FormatChoice.mmObject();
@@ -118,6 +118,16 @@ public class NetDividendRateType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NetDividendRateType1Code.mmObject();
+		}
+
+		@Override
+		public NetDividendRateType1Code getValue(NetDividendRateType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(NetDividendRateType1FormatChoice obj, NetDividendRateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class NetDividendRateType1FormatChoice {
 	 * "Proprietary code to express the type of net dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NetDividendRateType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<NetDividendRateType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NetDividendRateType1FormatChoice.mmObject();
@@ -168,6 +178,16 @@ public class NetDividendRateType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(NetDividendRateType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(NetDividendRateType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -31,7 +31,6 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.BusinessApplicationHeader1;
 import com.tools20022.repository.other.SignatureEnvelope;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -173,7 +172,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCharacterSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<UnicodeChartsCode>> mmCharacterSet = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<UnicodeChartsCode>>() {
 		{
 			xmlTag = "CharSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +183,14 @@ public class BusinessApplicationHeaderV01 {
 			simpleType_lazy = () -> UnicodeChartsCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getCharacterSet", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<UnicodeChartsCode> getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getCharacterSet();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Optional<UnicodeChartsCode> value) {
+			obj.setCharacterSet(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Fr", required = true)
@@ -218,7 +219,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFrom = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Party9Choice> mmFrom = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Party9Choice>() {
 		{
 			xmlTag = "Fr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,12 +230,14 @@ public class BusinessApplicationHeaderV01 {
 			complexType_lazy = () -> Party9Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getFrom", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Party9Choice getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getFrom();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Party9Choice value) {
+			obj.setFrom(value);
 		}
 	};
 	@XmlElement(name = "To", required = true)
@@ -263,7 +266,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTo = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Party9Choice> mmTo = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Party9Choice>() {
 		{
 			xmlTag = "To";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,12 +277,14 @@ public class BusinessApplicationHeaderV01 {
 			complexType_lazy = () -> Party9Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getTo", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Party9Choice getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getTo();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Party9Choice value) {
+			obj.setTo(value);
 		}
 	};
 	@XmlElement(name = "BizMsgIdr", required = true)
@@ -308,7 +313,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBusinessMessageIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Max35Text> mmBusinessMessageIdentifier = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Max35Text>() {
 		{
 			xmlTag = "BizMsgIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,12 +324,14 @@ public class BusinessApplicationHeaderV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getBusinessMessageIdentifier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getBusinessMessageIdentifier();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Max35Text value) {
+			obj.setBusinessMessageIdentifier(value);
 		}
 	};
 	@XmlElement(name = "MsgDefIdr", required = true)
@@ -353,7 +360,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageDefinitionIdentifier = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Max35Text> mmMessageDefinitionIdentifier = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Max35Text>() {
 		{
 			xmlTag = "MsgDefIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,12 +371,14 @@ public class BusinessApplicationHeaderV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getMessageDefinitionIdentifier", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getMessageDefinitionIdentifier();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Max35Text value) {
+			obj.setMessageDefinitionIdentifier(value);
 		}
 	};
 	@XmlElement(name = "BizSvc")
@@ -398,7 +407,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBusinessService = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<Max35Text>> mmBusinessService = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<Max35Text>>() {
 		{
 			xmlTag = "BizSvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -409,12 +418,14 @@ public class BusinessApplicationHeaderV01 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getBusinessService", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max35Text> getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getBusinessService();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Optional<Max35Text> value) {
+			obj.setBusinessService(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDt", required = true)
@@ -444,7 +455,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCreationDate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, ISONormalisedDateTime> mmCreationDate = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, ISONormalisedDateTime>() {
 		{
 			xmlTag = "CreDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -455,12 +466,14 @@ public class BusinessApplicationHeaderV01 {
 			simpleType_lazy = () -> ISONormalisedDateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getCreationDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISONormalisedDateTime getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getCreationDate();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, ISONormalisedDateTime value) {
+			obj.setCreationDate(value);
 		}
 	};
 	@XmlElement(name = "CpyDplct")
@@ -490,7 +503,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDuplicate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<CopyDuplicate1Code>> mmCopyDuplicate = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<CopyDuplicate1Code>>() {
 		{
 			xmlTag = "CpyDplct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -501,12 +514,14 @@ public class BusinessApplicationHeaderV01 {
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getCopyDuplicate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getCopyDuplicate();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyDuplicate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PssblDplct")
@@ -536,7 +551,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPossibleDuplicate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<YesNoIndicator>> mmPossibleDuplicate = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<YesNoIndicator>>() {
 		{
 			xmlTag = "PssblDplct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -547,12 +562,14 @@ public class BusinessApplicationHeaderV01 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getPossibleDuplicate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<YesNoIndicator> getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getPossibleDuplicate();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Optional<YesNoIndicator> value) {
+			obj.setPossibleDuplicate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -582,7 +599,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPriority = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<BusinessMessagePriorityCode>> mmPriority = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<BusinessMessagePriorityCode>>() {
 		{
 			xmlTag = "Prty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -593,12 +610,14 @@ public class BusinessApplicationHeaderV01 {
 			simpleType_lazy = () -> BusinessMessagePriorityCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getPriority", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<BusinessMessagePriorityCode> getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Optional<BusinessMessagePriorityCode> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sgntr")
@@ -628,7 +647,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<SignatureEnvelope>> mmSignature = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<SignatureEnvelope>>() {
 		{
 			xmlTag = "Sgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -639,12 +658,14 @@ public class BusinessApplicationHeaderV01 {
 			complexType_lazy = () -> SignatureEnvelope.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SignatureEnvelope> getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getSignature();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Optional<SignatureEnvelope> value) {
+			obj.setSignature(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rltd")
@@ -674,7 +695,7 @@ public class BusinessApplicationHeaderV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelated = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<BusinessApplicationHeader1>> mmRelated = new MMMessageBuildingBlock<BusinessApplicationHeaderV01, Optional<BusinessApplicationHeader1>>() {
 		{
 			xmlTag = "Rltd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -685,12 +706,14 @@ public class BusinessApplicationHeaderV01 {
 			complexType_lazy = () -> BusinessApplicationHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BusinessApplicationHeaderV01.class.getMethod("getRelated", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<BusinessApplicationHeader1> getValue(BusinessApplicationHeaderV01 obj) {
+			return obj.getRelated();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeaderV01 obj, Optional<BusinessApplicationHeader1> value) {
+			obj.setRelated(value.orElse(null));
 		}
 	};
 

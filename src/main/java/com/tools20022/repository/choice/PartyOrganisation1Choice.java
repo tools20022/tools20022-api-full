@@ -108,7 +108,7 @@ public class PartyOrganisation1Choice {
 	 * "Unique and unambiguous way of identifying an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyOrganisation1Choice, OrganisationIdentification3> mmOrganisationIdentification = new MMMessageAssociationEnd<PartyOrganisation1Choice, OrganisationIdentification3>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrganisation1Choice.mmObject();
@@ -121,6 +121,16 @@ public class PartyOrganisation1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification3.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification3 getValue(PartyOrganisation1Choice obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(PartyOrganisation1Choice obj, OrganisationIdentification3 value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 

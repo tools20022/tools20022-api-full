@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
@@ -121,7 +122,7 @@ public class AccountIdentification38Choice {
 	 * AccountIdentification20Choice.mmSecuritiesAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification38Choice, SecuritiesAccount19> mmSecuritiesAccountIdentification = new MMMessageAttribute<AccountIdentification38Choice, SecuritiesAccount19>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification38Choice.mmObject();
@@ -134,6 +135,16 @@ public class AccountIdentification38Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount19 getValue(AccountIdentification38Choice obj) {
+			return obj.getSecuritiesAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentification38Choice obj, SecuritiesAccount19 value) {
+			obj.setSecuritiesAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "CshAcctId", required = true)
@@ -178,7 +189,7 @@ public class AccountIdentification38Choice {
 	 * AccountIdentification20Choice.mmCashAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification38Choice, AccountIdentification4Choice> mmCashAccountIdentification = new MMMessageAttribute<AccountIdentification38Choice, AccountIdentification4Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification38Choice.mmObject();
@@ -190,7 +201,17 @@ public class AccountIdentification38Choice {
 			previousVersion_lazy = () -> AccountIdentification20Choice.mmCashAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.AccountIdentification4Choice.mmObject();
+			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification4Choice getValue(AccountIdentification38Choice obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentification38Choice obj, AccountIdentification4Choice value) {
+			obj.setCashAccountIdentification(value);
 		}
 	};
 
@@ -223,7 +244,7 @@ public class AccountIdentification38Choice {
 		return cashAccountIdentification;
 	}
 
-	public AccountIdentification38Choice setCashAccountIdentification(com.tools20022.repository.choice.AccountIdentification4Choice cashAccountIdentification) {
+	public AccountIdentification38Choice setCashAccountIdentification(AccountIdentification4Choice cashAccountIdentification) {
 		this.cashAccountIdentification = Objects.requireNonNull(cashAccountIdentification);
 		return this;
 	}

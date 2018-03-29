@@ -61,13 +61,17 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV08> forSecuritiesSettlementTransactionGenerationNotificationV08 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV08>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotificationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencyToSell is present, then the transaction must be a receive.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionGenerationNotificationV07;
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV08.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV08(obj);
 		}
 	};
 	/**
@@ -103,13 +107,93 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV08> forSecuritiesSettlementTransactionInstructionV08 = new MMConstraint<SecuritiesSettlementTransactionInstructionV08>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is present then the instruction must be a receive.\r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionInstructionV07;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV08.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V08
+	 * SecuritiesSettlementTransactionGenerationNotification002V08}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/TransactionIdentificationDetails/SecuritiesMovementType&lt;/leftOperand&gt;&lt;rightOperand&gt;Delivery&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrencyToSellRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CurrencytoSell is used, then the instruction must be a receive.\n."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V08> forSecuritiesSettlementTransactionGenerationNotification002V08 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrencyToSellRule";
+			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
+			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotification002V08.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotification002V08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotification002V08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V08
+	 * SecuritiesSettlementTransactionInstruction002V08}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/SettlementTypeAndAdditionalParameters/SecuritiesMovementType&lt;/leftOperand&gt;&lt;rightOperand&gt;Delivery&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrencyToSellRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CurrencytoSell is used, then the instruction must be a receive.\n."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V08> forSecuritiesSettlementTransactionInstruction002V08 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrencyToSellRule";
+			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
+			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V08.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstruction002V08 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstruction002V08(obj);
 		}
 	};
 	/**
@@ -154,7 +238,6 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV07> forSecuritiesSettlementTransactionGenerationNotificationV07 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV07>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotificationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencyToSell is present, then the transaction must be a receive.\r\n";
@@ -162,6 +245,11 @@ public class ConstraintCurrencyToSellRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionGenerationNotificationV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV07(obj);
 		}
 	};
 	/**
@@ -206,7 +294,6 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV07> forSecuritiesSettlementTransactionInstructionV07 = new MMConstraint<SecuritiesSettlementTransactionInstructionV07>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is present then the instruction must be a receive.\r\n";
@@ -214,6 +301,11 @@ public class ConstraintCurrencyToSellRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionInstructionV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV07(obj);
 		}
 	};
 	/**
@@ -242,12 +334,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V07> forSecuritiesSettlementTransactionInstruction002V07 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V07>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstruction002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V07.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstruction002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstruction002V07(obj);
 		}
 	};
 	/**
@@ -276,12 +372,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V07> forSecuritiesSettlementTransactionGenerationNotification002V07 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V07>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotification002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotification002V07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotification002V07 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotification002V07(obj);
 		}
 	};
 	/**
@@ -310,12 +410,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV01> forSecuritiesSettlementTransactionGenerationNotificationV01 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV01>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV01(obj);
 		}
 	};
 	/**
@@ -344,12 +448,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV02> forSecuritiesSettlementTransactionGenerationNotificationV02 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV02>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV02.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV02(obj);
 		}
 	};
 	/**
@@ -378,12 +486,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV03> forSecuritiesSettlementTransactionGenerationNotificationV03 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV03>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV03(obj);
 		}
 	};
 	/**
@@ -421,13 +533,17 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV04> forSecuritiesSettlementTransactionGenerationNotificationV04 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV04>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionGenerationNotificationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV04(obj);
 		}
 	};
 	/**
@@ -456,12 +572,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV01> forSecuritiesSettlementTransactionInstructionV01 = new MMConstraint<SecuritiesSettlementTransactionInstructionV01>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV01.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV01(obj);
 		}
 	};
 	/**
@@ -490,12 +610,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV02> forSecuritiesSettlementTransactionInstructionV02 = new MMConstraint<SecuritiesSettlementTransactionInstructionV02>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV02.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV02(obj);
 		}
 	};
 	/**
@@ -524,12 +648,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV03> forSecuritiesSettlementTransactionInstructionV03 = new MMConstraint<SecuritiesSettlementTransactionInstructionV03>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV03.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV03(obj);
 		}
 	};
 	/**
@@ -567,13 +695,17 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV04> forSecuritiesSettlementTransactionInstructionV04 = new MMConstraint<SecuritiesSettlementTransactionInstructionV04>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionInstructionV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV04.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV04(obj);
 		}
 	};
 	/**
@@ -617,7 +749,6 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV05> forSecuritiesSettlementTransactionGenerationNotificationV05 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV05>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
@@ -625,6 +756,11 @@ public class ConstraintCurrencyToSellRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionGenerationNotificationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV05.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV05(obj);
 		}
 	};
 	/**
@@ -668,7 +804,6 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV05> forSecuritiesSettlementTransactionInstructionV05 = new MMConstraint<SecuritiesSettlementTransactionInstructionV05>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
@@ -676,6 +811,11 @@ public class ConstraintCurrencyToSellRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionInstructionV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV05(obj);
 		}
 	};
 	/**
@@ -719,7 +859,6 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstructionV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
@@ -727,6 +866,11 @@ public class ConstraintCurrencyToSellRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionInstructionV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV06(obj);
 		}
 	};
 	/**
@@ -770,7 +914,6 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV06> forSecuritiesSettlementTransactionGenerationNotificationV06 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV06>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
@@ -778,6 +921,11 @@ public class ConstraintCurrencyToSellRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCurrencyToSellRule.forSecuritiesSettlementTransactionGenerationNotificationV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV06(obj);
 		}
 	};
 	/**
@@ -806,12 +954,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V06> forSecuritiesSettlementTransactionGenerationNotification002V06 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V06>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionGenerationNotification002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotification002V06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/TransactionIdentificationDetails/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotification002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotification002V06(obj);
 		}
 	};
 	/**
@@ -840,12 +992,16 @@ public class ConstraintCurrencyToSellRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
 		{
-			validator = ConstraintCurrencyToSellRule::checkSecuritiesSettlementTransactionInstruction002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyToSellRule";
 			definition = "If CurrencytoSell is used, then the instruction must be a receive.\n.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/TradeDetails/CurrencyToBuyOrSell/CurrencyToSell</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementTypeAndAdditionalParameters/SecuritiesMovementType</leftOperand><rightOperand>Delivery</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstruction002V06(obj);
 		}
 	};
 
@@ -860,6 +1016,20 @@ public class ConstraintCurrencyToSellRule {
 	 * If CurrencytoSell is present then the instruction must be a receive.<br>
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV08(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CurrencytoSell is used, then the instruction must be a receive. .
+	 */
+	public static void checkSecuritiesSettlementTransactionGenerationNotification002V08(SecuritiesSettlementTransactionGenerationNotification002V08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CurrencytoSell is used, then the instruction must be a receive. .
+	 */
+	public static void checkSecuritiesSettlementTransactionInstruction002V08(SecuritiesSettlementTransactionInstruction002V08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

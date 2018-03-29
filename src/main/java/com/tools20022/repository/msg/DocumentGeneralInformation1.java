@@ -125,7 +125,7 @@ public class DocumentGeneralInformation1 {
 	 * "Specifies the type of the document, for example commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation1, DocumentType4Code> mmDocumentType = new MMMessageAttribute<DocumentGeneralInformation1, DocumentType4Code>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation1.mmObject();
@@ -137,6 +137,16 @@ public class DocumentGeneralInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DocumentType4Code.mmObject();
+		}
+
+		@Override
+		public DocumentType4Code getValue(DocumentGeneralInformation1 obj) {
+			return obj.getDocumentType();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation1 obj, DocumentType4Code value) {
+			obj.setDocumentType(value);
 		}
 	};
 	@XmlElement(name = "DocNb", required = true)
@@ -173,7 +183,7 @@ public class DocumentGeneralInformation1 {
 	 * definition} = "Unique identifier of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation1, Max35Text> mmDocumentNumber = new MMMessageAttribute<DocumentGeneralInformation1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation1.mmObject();
@@ -185,6 +195,16 @@ public class DocumentGeneralInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentGeneralInformation1 obj) {
+			return obj.getDocumentNumber();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation1 obj, Max35Text value) {
+			obj.setDocumentNumber(value);
 		}
 	};
 	@XmlElement(name = "SndrRcvrSeqId")
@@ -218,7 +238,7 @@ public class DocumentGeneralInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSenderReceiverSequenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation1, Optional<Max140Text>> mmSenderReceiverSequenceIdentification = new MMMessageAttribute<DocumentGeneralInformation1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation1.mmObject();
 			isDerived = false;
@@ -229,6 +249,16 @@ public class DocumentGeneralInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(DocumentGeneralInformation1 obj) {
+			return obj.getSenderReceiverSequenceIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation1 obj, Optional<Max140Text> value) {
+			obj.setSenderReceiverSequenceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseDt", required = true)
@@ -265,7 +295,7 @@ public class DocumentGeneralInformation1 {
 	 * definition} = "Issue date of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation1, ISODate> mmIssueDate = new MMMessageAttribute<DocumentGeneralInformation1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation1.mmObject();
@@ -277,6 +307,16 @@ public class DocumentGeneralInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(DocumentGeneralInformation1 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation1 obj, ISODate value) {
+			obj.setIssueDate(value);
 		}
 	};
 	@XmlElement(name = "URL")
@@ -313,7 +353,7 @@ public class DocumentGeneralInformation1 {
 	 * definition} = "URL (Uniform Resource Locator) related to the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmURL = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentGeneralInformation1, Optional<Max256Text>> mmURL = new MMMessageAttribute<DocumentGeneralInformation1, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation1.mmObject();
@@ -325,6 +365,16 @@ public class DocumentGeneralInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(DocumentGeneralInformation1 obj) {
+			return obj.getURL();
+		}
+
+		@Override
+		public void setValue(DocumentGeneralInformation1 obj, Optional<Max256Text> value) {
+			obj.setURL(value.orElse(null));
 		}
 	};
 

@@ -162,7 +162,7 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhysicalBearerSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, YesNoIndicator> mmPhysicalBearerSecurities = new MMMessageAttribute<FinancialInstrument20, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmPhysicalBearerSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -174,6 +174,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FinancialInstrument20 obj) {
+			return obj.getPhysicalBearerSecurities();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, YesNoIndicator value) {
+			obj.setPhysicalBearerSecurities(value);
 		}
 	};
 	@XmlElement(name = "DmtrlsdBrScties", required = true)
@@ -213,7 +223,7 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDematerialisedBearerSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, YesNoIndicator> mmDematerialisedBearerSecurities = new MMMessageAttribute<FinancialInstrument20, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDematerialisedBearerSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -225,6 +235,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FinancialInstrument20 obj) {
+			return obj.getDematerialisedBearerSecurities();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, YesNoIndicator value) {
+			obj.setDematerialisedBearerSecurities(value);
 		}
 	};
 	@XmlElement(name = "PhysRegdScties", required = true)
@@ -264,7 +284,7 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhysicalRegisteredSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, YesNoIndicator> mmPhysicalRegisteredSecurities = new MMMessageAttribute<FinancialInstrument20, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmPhysicalRegisteredSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -276,6 +296,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FinancialInstrument20 obj) {
+			return obj.getPhysicalRegisteredSecurities();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, YesNoIndicator value) {
+			obj.setPhysicalRegisteredSecurities(value);
 		}
 	};
 	@XmlElement(name = "DmtrlsdRegdScties", required = true)
@@ -315,7 +345,7 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDematerialisedRegisteredSecurities = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, YesNoIndicator> mmDematerialisedRegisteredSecurities = new MMMessageAttribute<FinancialInstrument20, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDematerialisedRegisteredSecurities;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -327,6 +357,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FinancialInstrument20 obj) {
+			return obj.getDematerialisedRegisteredSecurities();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, YesNoIndicator value) {
+			obj.setDematerialisedRegisteredSecurities(value);
 		}
 	};
 	@XmlElement(name = "DstrbtnPlcy", required = true)
@@ -366,7 +406,7 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDistributionPolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, DistributionPolicy1Code> mmDistributionPolicy = new MMMessageAttribute<FinancialInstrument20, DistributionPolicy1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDistributionPolicy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -378,6 +418,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionPolicy1Code.mmObject();
+		}
+
+		@Override
+		public DistributionPolicy1Code getValue(FinancialInstrument20 obj) {
+			return obj.getDistributionPolicy();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, DistributionPolicy1Code value) {
+			obj.setDistributionPolicy(value);
 		}
 	};
 	@XmlElement(name = "DvddPlcy")
@@ -415,7 +465,7 @@ public class FinancialInstrument20 {
 	 * definition} = "Dividend policy of the fund, eg, cash, units."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDividendPolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, Optional<DividendPolicy1Code>> mmDividendPolicy = new MMMessageAttribute<FinancialInstrument20, Optional<DividendPolicy1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDividendPolicy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -427,6 +477,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DividendPolicy1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DividendPolicy1Code> getValue(FinancialInstrument20 obj) {
+			return obj.getDividendPolicy();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, Optional<DividendPolicy1Code> value) {
+			obj.setDividendPolicy(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DvddFrqcy")
@@ -465,7 +525,7 @@ public class FinancialInstrument20 {
 	 * "Frequency with which the income is allocated to investors."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDividendFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, Optional<EventFrequency5Code>> mmDividendFrequency = new MMMessageAttribute<FinancialInstrument20, Optional<EventFrequency5Code>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmDividendFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -477,6 +537,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventFrequency5Code.mmObject();
+		}
+
+		@Override
+		public Optional<EventFrequency5Code> getValue(FinancialInstrument20 obj) {
+			return obj.getDividendFrequency();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, Optional<EventFrequency5Code> value) {
+			obj.setDividendFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinvstmtFrqcy")
@@ -516,7 +586,7 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinvestmentFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, Optional<EventFrequency5Code>> mmReinvestmentFrequency = new MMMessageAttribute<FinancialInstrument20, Optional<EventFrequency5Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmReinvestmentFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -528,6 +598,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventFrequency5Code.mmObject();
+		}
+
+		@Override
+		public Optional<EventFrequency5Code> getValue(FinancialInstrument20 obj) {
+			return obj.getReinvestmentFrequency();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, Optional<EventFrequency5Code> value) {
+			obj.setReinvestmentFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrntEndLd", required = true)
@@ -566,7 +646,7 @@ public class FinancialInstrument20 {
 	 * "Front end charge on subscription orders for this class can be applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrontEndLoad = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, YesNoIndicator> mmFrontEndLoad = new MMMessageAttribute<FinancialInstrument20, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmFrontEndLoadIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -578,6 +658,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FinancialInstrument20 obj) {
+			return obj.getFrontEndLoad();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, YesNoIndicator value) {
+			obj.setFrontEndLoad(value);
 		}
 	};
 	@XmlElement(name = "BckEndLd", required = true)
@@ -617,7 +707,7 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBackEndLoad = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, YesNoIndicator> mmBackEndLoad = new MMMessageAttribute<FinancialInstrument20, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmBackEndLoadIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -629,6 +719,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FinancialInstrument20 obj) {
+			return obj.getBackEndLoad();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, YesNoIndicator value) {
+			obj.setBackEndLoad(value);
 		}
 	};
 	@XmlElement(name = "SwtchFee", required = true)
@@ -668,7 +768,7 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSwitchFee = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, YesNoIndicator> mmSwitchFee = new MMMessageAttribute<FinancialInstrument20, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmSwitchingFeeIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -680,6 +780,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(FinancialInstrument20 obj) {
+			return obj.getSwitchFee();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, YesNoIndicator value) {
+			obj.setSwitchFee(value);
 		}
 	};
 	@XmlElement(name = "EUSvgsDrctv", required = true)
@@ -719,7 +829,7 @@ public class FinancialInstrument20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEUSavingsDirective = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrument20, EUSavingsDirective1Code> mmEUSavingsDirective = new MMMessageAttribute<FinancialInstrument20, EUSavingsDirective1Code>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmEUSavingsDirective;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument20.mmObject();
@@ -731,6 +841,16 @@ public class FinancialInstrument20 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EUSavingsDirective1Code.mmObject();
+		}
+
+		@Override
+		public EUSavingsDirective1Code getValue(FinancialInstrument20 obj) {
+			return obj.getEUSavingsDirective();
+		}
+
+		@Override
+		public void setValue(FinancialInstrument20 obj, EUSavingsDirective1Code value) {
+			obj.setEUSavingsDirective(value);
 		}
 	};
 

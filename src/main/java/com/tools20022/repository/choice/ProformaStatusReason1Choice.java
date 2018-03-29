@@ -126,7 +126,7 @@ public class ProformaStatusReason1Choice {
 	 * EnabledStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProformaStatusReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ProformaStatusReason1Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProformaStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class ProformaStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ProformaStatusReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ProformaStatusReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -182,7 +192,7 @@ public class ProformaStatusReason1Choice {
 	 * EnabledStatusReason1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProformaStatusReason1Choice, List<ProformaStatusReason1>> mmReason = new MMMessageAssociationEnd<ProformaStatusReason1Choice, List<ProformaStatusReason1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProformaStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class ProformaStatusReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProformaStatusReason1.mmObject();
+		}
+
+		@Override
+		public List<ProformaStatusReason1> getValue(ProformaStatusReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ProformaStatusReason1Choice obj, List<ProformaStatusReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

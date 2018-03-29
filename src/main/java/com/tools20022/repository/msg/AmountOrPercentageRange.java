@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Operation1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Term1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -96,7 +97,7 @@ public class AmountOrPercentageRange {
 	 * definition} = "Indication of the relationship between two variables."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountOrPercentageRange, Optional<Operation1Code>> mmOperation = new MMMessageAttribute<AmountOrPercentageRange, Optional<Operation1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountOrPercentageRange.mmObject();
 			isDerived = false;
@@ -108,9 +109,19 @@ public class AmountOrPercentageRange {
 			minOccurs = 0;
 			simpleType_lazy = () -> Operation1Code.mmObject();
 		}
+
+		@Override
+		public Optional<Operation1Code> getValue(AmountOrPercentageRange obj) {
+			return obj.getOperation();
+		}
+
+		@Override
+		public void setValue(AmountOrPercentageRange obj, Optional<Operation1Code> value) {
+			obj.setOperation(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Term")
-	protected List<com.tools20022.repository.msg.Term1> term;
+	protected List<Term1> term;
 	/**
 	 * 
 	 <p>
@@ -137,7 +148,7 @@ public class AmountOrPercentageRange {
 	 * "Indicates one of the constraints of a range of business values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountOrPercentageRange, List<Term1>> mmTerm = new MMMessageAssociationEnd<AmountOrPercentageRange, List<Term1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountOrPercentageRange.mmObject();
 			isDerived = false;
@@ -148,7 +159,17 @@ public class AmountOrPercentageRange {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Term1.mmObject();
+			type_lazy = () -> Term1.mmObject();
+		}
+
+		@Override
+		public List<Term1> getValue(AmountOrPercentageRange obj) {
+			return obj.getTerm();
+		}
+
+		@Override
+		public void setValue(AmountOrPercentageRange obj, List<Term1> value) {
+			obj.setTerm(value);
 		}
 	};
 
@@ -178,7 +199,7 @@ public class AmountOrPercentageRange {
 		return term == null ? term = new ArrayList<>() : term;
 	}
 
-	public AmountOrPercentageRange setTerm(List<com.tools20022.repository.msg.Term1> term) {
+	public AmountOrPercentageRange setTerm(List<Term1> term) {
 		this.term = Objects.requireNonNull(term);
 		return this;
 	}

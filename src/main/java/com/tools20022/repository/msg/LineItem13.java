@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -160,7 +161,7 @@ public class LineItem13 {
 	 * LineItem11.mmGoodsDescription}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGoodsAndOrServicesDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem13, Optional<Max70Text>> mmGoodsAndOrServicesDescription = new MMMessageAttribute<LineItem13, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmDescription;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -173,6 +174,16 @@ public class LineItem13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(LineItem13 obj) {
+			return obj.getGoodsAndOrServicesDescription();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, Optional<Max70Text> value) {
+			obj.setGoodsAndOrServicesDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtlShipmnt", required = true)
@@ -214,7 +225,7 @@ public class LineItem13 {
 	 * LineItem11.mmPartialShipment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialShipment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem13, YesNoIndicator> mmPartialShipment = new MMMessageAttribute<LineItem13, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPartialShipment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -227,6 +238,16 @@ public class LineItem13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(LineItem13 obj) {
+			return obj.getPartialShipment();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, YesNoIndicator value) {
+			obj.setPartialShipment(value);
 		}
 	};
 	@XmlElement(name = "TrnsShipmnt")
@@ -269,7 +290,7 @@ public class LineItem13 {
 	 * LineItem11.mmTransShipment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransShipment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem13, Optional<YesNoIndicator>> mmTransShipment = new MMMessageAttribute<LineItem13, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmTransShipment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -282,6 +303,16 @@ public class LineItem13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(LineItem13 obj) {
+			return obj.getTransShipment();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, Optional<YesNoIndicator> value) {
+			obj.setTransShipment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShipmntDtRg")
@@ -322,7 +353,7 @@ public class LineItem13 {
 	 * LineItem11.mmShipmentDateRange}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShipmentDateRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem13, Optional<ShipmentDateRange1>> mmShipmentDateRange = new MMMessageAssociationEnd<LineItem13, Optional<ShipmentDateRange1>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmShipmentDates;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -335,11 +366,21 @@ public class LineItem13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ShipmentDateRange1.mmObject();
+			type_lazy = () -> ShipmentDateRange1.mmObject();
+		}
+
+		@Override
+		public Optional<ShipmentDateRange1> getValue(LineItem13 obj) {
+			return obj.getShipmentDateRange();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, Optional<ShipmentDateRange1> value) {
+			obj.setShipmentDateRange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LineItmDtls", required = true)
-	protected List<com.tools20022.repository.msg.LineItemDetails13> lineItemDetails;
+	protected List<LineItemDetails13> lineItemDetails;
 	/**
 	 * 
 	 <p>
@@ -375,7 +416,7 @@ public class LineItem13 {
 	 * LineItem11.mmLineItemDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLineItemDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem13, List<LineItemDetails13>> mmLineItemDetails = new MMMessageAssociationEnd<LineItem13, List<LineItemDetails13>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmLineItem;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -387,7 +428,17 @@ public class LineItem13 {
 			previousVersion_lazy = () -> LineItem11.mmLineItemDetails;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LineItemDetails13.mmObject();
+			type_lazy = () -> LineItemDetails13.mmObject();
+		}
+
+		@Override
+		public List<LineItemDetails13> getValue(LineItem13 obj) {
+			return obj.getLineItemDetails();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, List<LineItemDetails13> value) {
+			obj.setLineItemDetails(value);
 		}
 	};
 	@XmlElement(name = "LineItmsTtlAmt", required = true)
@@ -431,7 +482,7 @@ public class LineItem13 {
 	 * LineItem11.mmLineItemsTotalAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLineItemsTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem13, CurrencyAndAmount> mmLineItemsTotalAmount = new MMMessageAttribute<LineItem13, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -444,6 +495,16 @@ public class LineItem13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem13 obj) {
+			return obj.getLineItemsTotalAmount();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, CurrencyAndAmount value) {
+			obj.setLineItemsTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "RtgSummry")
@@ -483,7 +544,7 @@ public class LineItem13 {
 	 * LineItem11.mmRoutingSummary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRoutingSummary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem13, Optional<TransportMeans5>> mmRoutingSummary = new MMMessageAssociationEnd<LineItem13, Optional<TransportMeans5>>() {
 		{
 			businessElementTrace_lazy = () -> ProductDelivery.mmRouting;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -496,7 +557,17 @@ public class LineItem13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransportMeans5.mmObject();
+			type_lazy = () -> TransportMeans5.mmObject();
+		}
+
+		@Override
+		public Optional<TransportMeans5> getValue(LineItem13 obj) {
+			return obj.getRoutingSummary();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, Optional<TransportMeans5> value) {
+			obj.setRoutingSummary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Incotrms")
@@ -537,7 +608,7 @@ public class LineItem13 {
 	 * LineItem11.mmIncoterms}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIncoterms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem13, Optional<Incoterms4>> mmIncoterms = new MMMessageAssociationEnd<LineItem13, Optional<Incoterms4>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmIncoterms;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -550,11 +621,21 @@ public class LineItem13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Incoterms4.mmObject();
+			type_lazy = () -> Incoterms4.mmObject();
+		}
+
+		@Override
+		public Optional<Incoterms4> getValue(LineItem13 obj) {
+			return obj.getIncoterms();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, Optional<Incoterms4> value) {
+			obj.setIncoterms(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Adjstmnt")
-	protected List<com.tools20022.repository.msg.Adjustment7> adjustment;
+	protected List<Adjustment7> adjustment;
 	/**
 	 * 
 	 <p>
@@ -590,7 +671,7 @@ public class LineItem13 {
 	 * LineItem11.mmAdjustment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem13, List<Adjustment7>> mmAdjustment = new MMMessageAssociationEnd<LineItem13, List<Adjustment7>>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmPriceAdjustment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -602,7 +683,17 @@ public class LineItem13 {
 			previousVersion_lazy = () -> LineItem11.mmAdjustment;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Adjustment7.mmObject();
+			type_lazy = () -> Adjustment7.mmObject();
+		}
+
+		@Override
+		public List<Adjustment7> getValue(LineItem13 obj) {
+			return obj.getAdjustment();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, List<Adjustment7> value) {
+			obj.setAdjustment(value);
 		}
 	};
 	@XmlElement(name = "FrghtChrgs")
@@ -641,7 +732,7 @@ public class LineItem13 {
 	 * LineItem11.mmFreightCharges}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFreightCharges = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem13, Optional<Charge24>> mmFreightCharges = new MMMessageAssociationEnd<LineItem13, Optional<Charge24>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmTransportCharges;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -654,11 +745,21 @@ public class LineItem13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Charge24.mmObject();
+			type_lazy = () -> Charge24.mmObject();
+		}
+
+		@Override
+		public Optional<Charge24> getValue(LineItem13 obj) {
+			return obj.getFreightCharges();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, Optional<Charge24> value) {
+			obj.setFreightCharges(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tax")
-	protected List<com.tools20022.repository.msg.Tax23> tax;
+	protected List<Tax23> tax;
 	/**
 	 * 
 	 <p>
@@ -695,7 +796,7 @@ public class LineItem13 {
 	 * LineItem11.mmTax}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem13, List<Tax23>> mmTax = new MMMessageAssociationEnd<LineItem13, List<Tax23>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -707,7 +808,17 @@ public class LineItem13 {
 			previousVersion_lazy = () -> LineItem11.mmTax;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Tax23.mmObject();
+			type_lazy = () -> Tax23.mmObject();
+		}
+
+		@Override
+		public List<Tax23> getValue(LineItem13 obj) {
+			return obj.getTax();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, List<Tax23> value) {
+			obj.setTax(value);
 		}
 	};
 	@XmlElement(name = "TtlNetAmt", required = true)
@@ -751,7 +862,7 @@ public class LineItem13 {
 	 * LineItem11.mmTotalNetAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItem13, CurrencyAndAmount> mmTotalNetAmount = new MMMessageAttribute<LineItem13, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
@@ -765,9 +876,19 @@ public class LineItem13 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public CurrencyAndAmount getValue(LineItem13 obj) {
+			return obj.getTotalNetAmount();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, CurrencyAndAmount value) {
+			obj.setTotalNetAmount(value);
+		}
 	};
 	@XmlElement(name = "BuyrDfndInf")
-	protected List<com.tools20022.repository.msg.UserDefinedInformation1> buyerDefinedInformation;
+	protected List<UserDefinedInformation1> buyerDefinedInformation;
 	/**
 	 * 
 	 <p>
@@ -801,7 +922,7 @@ public class LineItem13 {
 	 * LineItem11.mmBuyerDefinedInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyerDefinedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem13, List<UserDefinedInformation1>> mmBuyerDefinedInformation = new MMMessageAssociationEnd<LineItem13, List<UserDefinedInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
 			isDerived = false;
@@ -812,11 +933,21 @@ public class LineItem13 {
 			previousVersion_lazy = () -> LineItem11.mmBuyerDefinedInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
+			type_lazy = () -> UserDefinedInformation1.mmObject();
+		}
+
+		@Override
+		public List<UserDefinedInformation1> getValue(LineItem13 obj) {
+			return obj.getBuyerDefinedInformation();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, List<UserDefinedInformation1> value) {
+			obj.setBuyerDefinedInformation(value);
 		}
 	};
 	@XmlElement(name = "SellrDfndInf")
-	protected List<com.tools20022.repository.msg.UserDefinedInformation1> sellerDefinedInformation;
+	protected List<UserDefinedInformation1> sellerDefinedInformation;
 	/**
 	 * 
 	 <p>
@@ -850,7 +981,7 @@ public class LineItem13 {
 	 * LineItem11.mmSellerDefinedInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSellerDefinedInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LineItem13, List<UserDefinedInformation1>> mmSellerDefinedInformation = new MMMessageAssociationEnd<LineItem13, List<UserDefinedInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItem13.mmObject();
 			isDerived = false;
@@ -861,7 +992,17 @@ public class LineItem13 {
 			previousVersion_lazy = () -> LineItem11.mmSellerDefinedInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
+			type_lazy = () -> UserDefinedInformation1.mmObject();
+		}
+
+		@Override
+		public List<UserDefinedInformation1> getValue(LineItem13 obj) {
+			return obj.getSellerDefinedInformation();
+		}
+
+		@Override
+		public void setValue(LineItem13 obj, List<UserDefinedInformation1> value) {
+			obj.setSellerDefinedInformation(value);
 		}
 	};
 
@@ -917,7 +1058,7 @@ public class LineItem13 {
 		return shipmentDateRange == null ? Optional.empty() : Optional.of(shipmentDateRange);
 	}
 
-	public LineItem13 setShipmentDateRange(com.tools20022.repository.msg.ShipmentDateRange1 shipmentDateRange) {
+	public LineItem13 setShipmentDateRange(ShipmentDateRange1 shipmentDateRange) {
 		this.shipmentDateRange = shipmentDateRange;
 		return this;
 	}
@@ -926,7 +1067,7 @@ public class LineItem13 {
 		return lineItemDetails == null ? lineItemDetails = new ArrayList<>() : lineItemDetails;
 	}
 
-	public LineItem13 setLineItemDetails(List<com.tools20022.repository.msg.LineItemDetails13> lineItemDetails) {
+	public LineItem13 setLineItemDetails(List<LineItemDetails13> lineItemDetails) {
 		this.lineItemDetails = Objects.requireNonNull(lineItemDetails);
 		return this;
 	}
@@ -944,7 +1085,7 @@ public class LineItem13 {
 		return routingSummary == null ? Optional.empty() : Optional.of(routingSummary);
 	}
 
-	public LineItem13 setRoutingSummary(com.tools20022.repository.msg.TransportMeans5 routingSummary) {
+	public LineItem13 setRoutingSummary(TransportMeans5 routingSummary) {
 		this.routingSummary = routingSummary;
 		return this;
 	}
@@ -953,7 +1094,7 @@ public class LineItem13 {
 		return incoterms == null ? Optional.empty() : Optional.of(incoterms);
 	}
 
-	public LineItem13 setIncoterms(com.tools20022.repository.msg.Incoterms4 incoterms) {
+	public LineItem13 setIncoterms(Incoterms4 incoterms) {
 		this.incoterms = incoterms;
 		return this;
 	}
@@ -962,7 +1103,7 @@ public class LineItem13 {
 		return adjustment == null ? adjustment = new ArrayList<>() : adjustment;
 	}
 
-	public LineItem13 setAdjustment(List<com.tools20022.repository.msg.Adjustment7> adjustment) {
+	public LineItem13 setAdjustment(List<Adjustment7> adjustment) {
 		this.adjustment = Objects.requireNonNull(adjustment);
 		return this;
 	}
@@ -971,7 +1112,7 @@ public class LineItem13 {
 		return freightCharges == null ? Optional.empty() : Optional.of(freightCharges);
 	}
 
-	public LineItem13 setFreightCharges(com.tools20022.repository.msg.Charge24 freightCharges) {
+	public LineItem13 setFreightCharges(Charge24 freightCharges) {
 		this.freightCharges = freightCharges;
 		return this;
 	}
@@ -980,7 +1121,7 @@ public class LineItem13 {
 		return tax == null ? tax = new ArrayList<>() : tax;
 	}
 
-	public LineItem13 setTax(List<com.tools20022.repository.msg.Tax23> tax) {
+	public LineItem13 setTax(List<Tax23> tax) {
 		this.tax = Objects.requireNonNull(tax);
 		return this;
 	}
@@ -998,7 +1139,7 @@ public class LineItem13 {
 		return buyerDefinedInformation == null ? buyerDefinedInformation = new ArrayList<>() : buyerDefinedInformation;
 	}
 
-	public LineItem13 setBuyerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> buyerDefinedInformation) {
+	public LineItem13 setBuyerDefinedInformation(List<UserDefinedInformation1> buyerDefinedInformation) {
 		this.buyerDefinedInformation = Objects.requireNonNull(buyerDefinedInformation);
 		return this;
 	}
@@ -1007,7 +1148,7 @@ public class LineItem13 {
 		return sellerDefinedInformation == null ? sellerDefinedInformation = new ArrayList<>() : sellerDefinedInformation;
 	}
 
-	public LineItem13 setSellerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> sellerDefinedInformation) {
+	public LineItem13 setSellerDefinedInformation(List<UserDefinedInformation1> sellerDefinedInformation) {
 		this.sellerDefinedInformation = Objects.requireNonNull(sellerDefinedInformation);
 		return this;
 	}

@@ -132,7 +132,7 @@ public class ReportParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetPositionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters1, Max35Text> mmNetPositionIdentification = new MMMessageAttribute<ReportParameters1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters1.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class ReportParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportParameters1 obj) {
+			return obj.getNetPositionIdentification();
+		}
+
+		@Override
+		public void setValue(ReportParameters1 obj, Max35Text value) {
+			obj.setNetPositionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptDtAndTm", required = true)
@@ -175,7 +185,7 @@ public class ReportParameters1 {
 	 * definition} = "Date and time of the net position report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters1, DateAndDateTimeChoice> mmReportDateAndTime = new MMMessageAttribute<ReportParameters1, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters1.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class ReportParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(ReportParameters1 obj) {
+			return obj.getReportDateAndTime();
+		}
+
+		@Override
+		public void setValue(ReportParameters1 obj, DateAndDateTimeChoice value) {
+			obj.setReportDateAndTime(value);
 		}
 	};
 	@XmlElement(name = "UpdTp", required = true)
@@ -219,7 +239,7 @@ public class ReportParameters1 {
 	 * "Indicates whether the statement is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters1, StatementUpdateType1Code> mmUpdateType = new MMMessageAttribute<ReportParameters1, StatementUpdateType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters1.mmObject();
 			isDerived = false;
@@ -230,6 +250,16 @@ public class ReportParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateType1Code.mmObject();
+		}
+
+		@Override
+		public StatementUpdateType1Code getValue(ReportParameters1 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(ReportParameters1 obj, StatementUpdateType1Code value) {
+			obj.setUpdateType(value);
 		}
 	};
 	@XmlElement(name = "Frqcy", required = true)
@@ -262,7 +292,7 @@ public class ReportParameters1 {
 	 * definition} = "Frequency of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters1, EventFrequency6Code> mmFrequency = new MMMessageAttribute<ReportParameters1, EventFrequency6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters1.mmObject();
 			isDerived = false;
@@ -273,6 +303,16 @@ public class ReportParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency6Code.mmObject();
+		}
+
+		@Override
+		public EventFrequency6Code getValue(ReportParameters1 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(ReportParameters1 obj, EventFrequency6Code value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "RptNb")
@@ -305,7 +345,7 @@ public class ReportParameters1 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters1, Optional<Exact5NumericText>> mmReportNumber = new MMMessageAttribute<ReportParameters1, Optional<Exact5NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters1.mmObject();
 			isDerived = false;
@@ -316,6 +356,16 @@ public class ReportParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact5NumericText> getValue(ReportParameters1 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(ReportParameters1 obj, Optional<Exact5NumericText> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -350,7 +400,7 @@ public class ReportParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameters1, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<ReportParameters1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportParameters1.mmObject();
 			isDerived = false;
@@ -361,6 +411,16 @@ public class ReportParameters1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(ReportParameters1 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(ReportParameters1 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 

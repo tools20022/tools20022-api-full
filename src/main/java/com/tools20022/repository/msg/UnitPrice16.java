@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValue1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +128,7 @@ public class UnitPrice16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnitPriceType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnitPrice16, UnitPriceType1Choice> mmUnitPriceType = new MMMessageAssociationEnd<UnitPrice16, UnitPriceType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmObject();
@@ -141,6 +142,16 @@ public class UnitPrice16 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UnitPriceType1Choice.mmObject();
+		}
+
+		@Override
+		public UnitPriceType1Choice getValue(UnitPrice16 obj) {
+			return obj.getUnitPriceType();
+		}
+
+		@Override
+		public void setValue(UnitPrice16 obj, UnitPriceType1Choice value) {
+			obj.setUnitPriceType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -183,7 +194,7 @@ public class UnitPrice16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice16, PriceValue1> mmValue = new MMMessageAttribute<UnitPrice16, PriceValue1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmObject();
@@ -195,7 +206,17 @@ public class UnitPrice16 {
 			nextVersions_lazy = () -> Arrays.asList(UnitPrice19.mmValue);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
+			complexType_lazy = () -> PriceValue1.mmObject();
+		}
+
+		@Override
+		public PriceValue1 getValue(UnitPrice16 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(UnitPrice16 obj, PriceValue1 value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "TaxblIncmPerShr")
@@ -234,7 +255,7 @@ public class UnitPrice16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableIncomePerShare = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPrice16, Optional<ActiveCurrencyAnd13DecimalAmount>> mmTaxableIncomePerShare = new MMMessageAttribute<UnitPrice16, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShare;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmObject();
@@ -246,6 +267,16 @@ public class UnitPrice16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(UnitPrice16 obj) {
+			return obj.getTaxableIncomePerShare();
+		}
+
+		@Override
+		public void setValue(UnitPrice16 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setTaxableIncomePerShare(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblIncmPerShrClctd")
@@ -281,7 +312,7 @@ public class UnitPrice16 {
 	 * definition} = "Taxable income per share calculated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxableIncomePerShareCalculated = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnitPrice16, Optional<TaxableIncomePerShareCalculatedType1Choice>> mmTaxableIncomePerShareCalculated = new MMMessageAssociationEnd<UnitPrice16, Optional<TaxableIncomePerShareCalculatedType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnitPrice16.mmObject();
@@ -294,6 +325,16 @@ public class UnitPrice16 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TaxableIncomePerShareCalculatedType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxableIncomePerShareCalculatedType1Choice> getValue(UnitPrice16 obj) {
+			return obj.getTaxableIncomePerShareCalculated();
+		}
+
+		@Override
+		public void setValue(UnitPrice16 obj, Optional<TaxableIncomePerShareCalculatedType1Choice> value) {
+			obj.setTaxableIncomePerShareCalculated(value.orElse(null));
 		}
 	};
 
@@ -326,7 +367,7 @@ public class UnitPrice16 {
 		return value;
 	}
 
-	public UnitPrice16 setValue(com.tools20022.repository.msg.PriceValue1 value) {
+	public UnitPrice16 setValue(PriceValue1 value) {
 		this.value = Objects.requireNonNull(value);
 		return this;
 	}

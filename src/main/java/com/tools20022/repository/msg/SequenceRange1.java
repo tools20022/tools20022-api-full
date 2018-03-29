@@ -94,7 +94,7 @@ public class SequenceRange1 {
 	 * definition} = "Start sequence of the range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromSequence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SequenceRange1, Max35Text> mmFromSequence = new MMMessageAttribute<SequenceRange1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SequenceRange1.mmObject();
 			isDerived = false;
@@ -105,6 +105,16 @@ public class SequenceRange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SequenceRange1 obj) {
+			return obj.getFromSequence();
+		}
+
+		@Override
+		public void setValue(SequenceRange1 obj, Max35Text value) {
+			obj.setFromSequence(value);
 		}
 	};
 	@XmlElement(name = "ToSeq", required = true)
@@ -135,7 +145,7 @@ public class SequenceRange1 {
 	 * definition} = "End sequence of the range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToSequence = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SequenceRange1, Max35Text> mmToSequence = new MMMessageAttribute<SequenceRange1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SequenceRange1.mmObject();
 			isDerived = false;
@@ -146,6 +156,16 @@ public class SequenceRange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SequenceRange1 obj) {
+			return obj.getToSequence();
+		}
+
+		@Override
+		public void setValue(SequenceRange1 obj, Max35Text value) {
+			obj.setToSequence(value);
 		}
 	};
 

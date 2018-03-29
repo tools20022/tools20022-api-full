@@ -118,7 +118,7 @@ public class SecuritiesPaymentStatus7Choice {
 	 * SecuritiesPaymentStatus4Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesPaymentStatus7Choice, SecuritiesPaymentStatus1Code> mmCode = new MMMessageAttribute<SecuritiesPaymentStatus7Choice, SecuritiesPaymentStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesPaymentStatus7Choice.mmObject();
@@ -131,6 +131,16 @@ public class SecuritiesPaymentStatus7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesPaymentStatus1Code getValue(SecuritiesPaymentStatus7Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesPaymentStatus7Choice obj, SecuritiesPaymentStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class SecuritiesPaymentStatus7Choice {
 	 * SecuritiesPaymentStatus4Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesPaymentStatus7Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<SecuritiesPaymentStatus7Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesStatus.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesPaymentStatus7Choice.mmObject();
@@ -187,6 +197,16 @@ public class SecuritiesPaymentStatus7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(SecuritiesPaymentStatus7Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesPaymentStatus7Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

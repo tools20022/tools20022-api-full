@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.entity.SwitchOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentAccount30;
+import com.tools20022.repository.msg.SwitchRedemptionLegOrder4;
+import com.tools20022.repository.msg.SwitchSubscriptionLegOrder4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -105,7 +108,7 @@ public class SwitchOrder5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrder5, Optional<InvestmentAccount30>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<SwitchOrder5, Optional<InvestmentAccount30>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder5.mmObject();
@@ -117,11 +120,21 @@ public class SwitchOrder5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
+			type_lazy = () -> InvestmentAccount30.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount30> getValue(SwitchOrder5 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(SwitchOrder5 obj, Optional<InvestmentAccount30> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedLeg", required = true)
-	protected List<com.tools20022.repository.msg.SwitchRedemptionLegOrder4> redemptionLeg;
+	protected List<SwitchRedemptionLegOrder4> redemptionLeg;
 	/**
 	 * 
 	 <p>
@@ -155,7 +168,7 @@ public class SwitchOrder5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRedemptionLeg = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrder5, List<SwitchRedemptionLegOrder4>> mmRedemptionLeg = new MMMessageAssociationEnd<SwitchOrder5, List<SwitchRedemptionLegOrder4>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmRedemptionLeg;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder5.mmObject();
@@ -166,11 +179,21 @@ public class SwitchOrder5 {
 			definition = "Redemption leg information of the order instruction which the cancellation is requested.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SwitchRedemptionLegOrder4.mmObject();
+			type_lazy = () -> SwitchRedemptionLegOrder4.mmObject();
+		}
+
+		@Override
+		public List<SwitchRedemptionLegOrder4> getValue(SwitchOrder5 obj) {
+			return obj.getRedemptionLeg();
+		}
+
+		@Override
+		public void setValue(SwitchOrder5 obj, List<SwitchRedemptionLegOrder4> value) {
+			obj.setRedemptionLeg(value);
 		}
 	};
 	@XmlElement(name = "SbcptLeg", required = true)
-	protected List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder4> subscriptionLeg;
+	protected List<SwitchSubscriptionLegOrder4> subscriptionLeg;
 	/**
 	 * 
 	 <p>
@@ -204,7 +227,7 @@ public class SwitchOrder5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionLeg = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SwitchOrder5, List<SwitchSubscriptionLegOrder4>> mmSubscriptionLeg = new MMMessageAssociationEnd<SwitchOrder5, List<SwitchSubscriptionLegOrder4>>() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmSubscriptionLeg;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SwitchOrder5.mmObject();
@@ -215,7 +238,17 @@ public class SwitchOrder5 {
 			definition = "Subscription leg information of the order instruction which the cancellation is requested.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SwitchSubscriptionLegOrder4.mmObject();
+			type_lazy = () -> SwitchSubscriptionLegOrder4.mmObject();
+		}
+
+		@Override
+		public List<SwitchSubscriptionLegOrder4> getValue(SwitchOrder5 obj) {
+			return obj.getSubscriptionLeg();
+		}
+
+		@Override
+		public void setValue(SwitchOrder5 obj, List<SwitchSubscriptionLegOrder4> value) {
+			obj.setSubscriptionLeg(value);
 		}
 	};
 
@@ -238,7 +271,7 @@ public class SwitchOrder5 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public SwitchOrder5 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public SwitchOrder5 setInvestmentAccountDetails(InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -247,7 +280,7 @@ public class SwitchOrder5 {
 		return redemptionLeg == null ? redemptionLeg = new ArrayList<>() : redemptionLeg;
 	}
 
-	public SwitchOrder5 setRedemptionLeg(List<com.tools20022.repository.msg.SwitchRedemptionLegOrder4> redemptionLeg) {
+	public SwitchOrder5 setRedemptionLeg(List<SwitchRedemptionLegOrder4> redemptionLeg) {
 		this.redemptionLeg = Objects.requireNonNull(redemptionLeg);
 		return this;
 	}
@@ -256,7 +289,7 @@ public class SwitchOrder5 {
 		return subscriptionLeg == null ? subscriptionLeg = new ArrayList<>() : subscriptionLeg;
 	}
 
-	public SwitchOrder5 setSubscriptionLeg(List<com.tools20022.repository.msg.SwitchSubscriptionLegOrder4> subscriptionLeg) {
+	public SwitchOrder5 setSubscriptionLeg(List<SwitchSubscriptionLegOrder4> subscriptionLeg) {
 		this.subscriptionLeg = Objects.requireNonNull(subscriptionLeg);
 		return this;
 	}

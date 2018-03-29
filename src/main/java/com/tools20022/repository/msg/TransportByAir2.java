@@ -127,7 +127,7 @@ public class TransportByAir2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportByAir2, AirportName1Choice> mmDepartureAirport = new MMMessageAssociationEnd<TransportByAir2, AirportName1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir2.mmObject();
@@ -141,6 +141,16 @@ public class TransportByAir2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AirportName1Choice.mmObject();
+		}
+
+		@Override
+		public AirportName1Choice getValue(TransportByAir2 obj) {
+			return obj.getDepartureAirport();
+		}
+
+		@Override
+		public void setValue(TransportByAir2 obj, AirportName1Choice value) {
+			obj.setDepartureAirport(value);
 		}
 	};
 	@XmlElement(name = "DstnAirprt", required = true)
@@ -184,7 +194,7 @@ public class TransportByAir2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransportByAir2, AirportName1Choice> mmDestinationAirport = new MMMessageAssociationEnd<TransportByAir2, AirportName1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir2.mmObject();
@@ -198,6 +208,16 @@ public class TransportByAir2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AirportName1Choice.mmObject();
+		}
+
+		@Override
+		public AirportName1Choice getValue(TransportByAir2 obj) {
+			return obj.getDestinationAirport();
+		}
+
+		@Override
+		public void setValue(TransportByAir2 obj, AirportName1Choice value) {
+			obj.setDestinationAirport(value);
 		}
 	};
 	@XmlElement(name = "AirCrrierNm")
@@ -244,7 +264,7 @@ public class TransportByAir2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAirCarrierName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByAir2, Optional<Max35Text>> mmAirCarrierName = new MMMessageAttribute<TransportByAir2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByAir2.mmObject();
@@ -257,6 +277,16 @@ public class TransportByAir2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransportByAir2 obj) {
+			return obj.getAirCarrierName();
+		}
+
+		@Override
+		public void setValue(TransportByAir2 obj, Optional<Max35Text> value) {
+			obj.setAirCarrierName(value.orElse(null));
 		}
 	};
 

@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV01;
 import com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV02;
+import com.tools20022.repository.choice.AcknowledgedAcceptedStatus3Choice;
+import com.tools20022.repository.choice.CancellationStatus4Choice;
+import com.tools20022.repository.choice.RejectionOrRepairStatus2Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
@@ -143,7 +146,7 @@ public class IntraPositionProcessingStatus1Choice {
 	 * "Instruction/Request has been rejected for further processing."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, RejectionOrRepairStatus2Choice> mmRejected = new MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, RejectionOrRepairStatus2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmObject();
@@ -156,7 +159,17 @@ public class IntraPositionProcessingStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus2Choice.mmObject();
+			type_lazy = () -> RejectionOrRepairStatus2Choice.mmObject();
+		}
+
+		@Override
+		public RejectionOrRepairStatus2Choice getValue(IntraPositionProcessingStatus1Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(IntraPositionProcessingStatus1Choice obj, RejectionOrRepairStatus2Choice value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "Rpr", required = true)
@@ -196,7 +209,7 @@ public class IntraPositionProcessingStatus1Choice {
 	 * definition} = "Instruction/Request is accepted but in repair."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRepair = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, RejectionOrRepairStatus2Choice> mmRepair = new MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, RejectionOrRepairStatus2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmObject();
@@ -209,7 +222,17 @@ public class IntraPositionProcessingStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus2Choice.mmObject();
+			type_lazy = () -> RejectionOrRepairStatus2Choice.mmObject();
+		}
+
+		@Override
+		public RejectionOrRepairStatus2Choice getValue(IntraPositionProcessingStatus1Choice obj) {
+			return obj.getRepair();
+		}
+
+		@Override
+		public void setValue(IntraPositionProcessingStatus1Choice obj, RejectionOrRepairStatus2Choice value) {
+			obj.setRepair(value);
 		}
 	};
 	@XmlElement(name = "Canc", required = true)
@@ -251,7 +274,7 @@ public class IntraPositionProcessingStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, CancellationStatus4Choice> mmCancelled = new MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, CancellationStatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmObject();
@@ -264,7 +287,17 @@ public class IntraPositionProcessingStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CancellationStatus4Choice.mmObject();
+			type_lazy = () -> CancellationStatus4Choice.mmObject();
+		}
+
+		@Override
+		public CancellationStatus4Choice getValue(IntraPositionProcessingStatus1Choice obj) {
+			return obj.getCancelled();
+		}
+
+		@Override
+		public void setValue(IntraPositionProcessingStatus1Choice obj, CancellationStatus4Choice value) {
+			obj.setCancelled(value);
 		}
 	};
 	@XmlElement(name = "AckdAccptd", required = true)
@@ -305,7 +338,7 @@ public class IntraPositionProcessingStatus1Choice {
 	 * "Instruction has been acknowledged by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, AcknowledgedAcceptedStatus3Choice> mmAcknowledgedAccepted = new MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, AcknowledgedAcceptedStatus3Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmObject();
@@ -318,7 +351,17 @@ public class IntraPositionProcessingStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus3Choice.mmObject();
+			type_lazy = () -> AcknowledgedAcceptedStatus3Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgedAcceptedStatus3Choice getValue(IntraPositionProcessingStatus1Choice obj) {
+			return obj.getAcknowledgedAccepted();
+		}
+
+		@Override
+		public void setValue(IntraPositionProcessingStatus1Choice obj, AcknowledgedAcceptedStatus3Choice value) {
+			obj.setAcknowledgedAccepted(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -360,7 +403,7 @@ public class IntraPositionProcessingStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, ProprietaryStatusAndReason1> mmProprietary = new MMMessageAssociationEnd<IntraPositionProcessingStatus1Choice, ProprietaryStatusAndReason1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntraPositionProcessingStatus1Choice.mmObject();
@@ -374,6 +417,16 @@ public class IntraPositionProcessingStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason1 getValue(IntraPositionProcessingStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(IntraPositionProcessingStatus1Choice obj, ProprietaryStatusAndReason1 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -399,7 +452,7 @@ public class IntraPositionProcessingStatus1Choice {
 		return rejected;
 	}
 
-	public IntraPositionProcessingStatus1Choice setRejected(com.tools20022.repository.choice.RejectionOrRepairStatus2Choice rejected) {
+	public IntraPositionProcessingStatus1Choice setRejected(RejectionOrRepairStatus2Choice rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}
@@ -408,7 +461,7 @@ public class IntraPositionProcessingStatus1Choice {
 		return repair;
 	}
 
-	public IntraPositionProcessingStatus1Choice setRepair(com.tools20022.repository.choice.RejectionOrRepairStatus2Choice repair) {
+	public IntraPositionProcessingStatus1Choice setRepair(RejectionOrRepairStatus2Choice repair) {
 		this.repair = Objects.requireNonNull(repair);
 		return this;
 	}
@@ -417,7 +470,7 @@ public class IntraPositionProcessingStatus1Choice {
 		return cancelled;
 	}
 
-	public IntraPositionProcessingStatus1Choice setCancelled(com.tools20022.repository.choice.CancellationStatus4Choice cancelled) {
+	public IntraPositionProcessingStatus1Choice setCancelled(CancellationStatus4Choice cancelled) {
 		this.cancelled = Objects.requireNonNull(cancelled);
 		return this;
 	}
@@ -426,7 +479,7 @@ public class IntraPositionProcessingStatus1Choice {
 		return acknowledgedAccepted;
 	}
 
-	public IntraPositionProcessingStatus1Choice setAcknowledgedAccepted(com.tools20022.repository.choice.AcknowledgedAcceptedStatus3Choice acknowledgedAccepted) {
+	public IntraPositionProcessingStatus1Choice setAcknowledgedAccepted(AcknowledgedAcceptedStatus3Choice acknowledgedAccepted) {
 		this.acknowledgedAccepted = Objects.requireNonNull(acknowledgedAccepted);
 		return this;
 	}

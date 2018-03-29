@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ServiceItemTotals1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -133,7 +134,7 @@ public class ServiceCategoryTotals2 {
 	 * ServiceCategoryTotals1.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ServiceCategoryTotals2, Optional<AccountIdentification38Choice>> mmAccountIdentification = new MMMessageAssociationEnd<ServiceCategoryTotals2, Optional<AccountIdentification38Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals2.mmObject();
@@ -147,6 +148,16 @@ public class ServiceCategoryTotals2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification38Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification38Choice> getValue(ServiceCategoryTotals2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(ServiceCategoryTotals2 obj, Optional<AccountIdentification38Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BlldCstmrId")
@@ -189,7 +200,7 @@ public class ServiceCategoryTotals2 {
 	 * ServiceCategoryTotals1.mmBilledCustomerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBilledCustomerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceCategoryTotals2, Optional<BICFIIdentifier>> mmBilledCustomerIdentification = new MMMessageAttribute<ServiceCategoryTotals2, Optional<BICFIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals2.mmObject();
@@ -202,6 +213,16 @@ public class ServiceCategoryTotals2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICFIIdentifier> getValue(ServiceCategoryTotals2 obj) {
+			return obj.getBilledCustomerIdentification();
+		}
+
+		@Override
+		public void setValue(ServiceCategoryTotals2 obj, Optional<BICFIIdentifier> value) {
+			obj.setBilledCustomerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlTaxblAmt")
@@ -244,7 +265,7 @@ public class ServiceCategoryTotals2 {
 	 * ServiceCategoryTotals1.mmTotalTaxableAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceCategoryTotals2, Optional<ActiveCurrencyAndAmount>> mmTotalTaxableAmount = new MMMessageAttribute<ServiceCategoryTotals2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals2.mmObject();
@@ -257,6 +278,16 @@ public class ServiceCategoryTotals2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ServiceCategoryTotals2 obj) {
+			return obj.getTotalTaxableAmount();
+		}
+
+		@Override
+		public void setValue(ServiceCategoryTotals2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalTaxableAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlTaxAmt")
@@ -298,7 +329,7 @@ public class ServiceCategoryTotals2 {
 	 * ServiceCategoryTotals1.mmTotalTaxAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceCategoryTotals2, Optional<ActiveCurrencyAndAmount>> mmTotalTaxAmount = new MMMessageAttribute<ServiceCategoryTotals2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals2.mmObject();
@@ -311,6 +342,16 @@ public class ServiceCategoryTotals2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ServiceCategoryTotals2 obj) {
+			return obj.getTotalTaxAmount();
+		}
+
+		@Override
+		public void setValue(ServiceCategoryTotals2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlInvcAmt", required = true)
@@ -355,7 +396,7 @@ public class ServiceCategoryTotals2 {
 	 * ServiceCategoryTotals1.mmTotalInvoiceAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceCategoryTotals2, ActiveCurrencyAndAmount> mmTotalInvoiceAmount = new MMMessageAttribute<ServiceCategoryTotals2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals2.mmObject();
@@ -368,6 +409,16 @@ public class ServiceCategoryTotals2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ServiceCategoryTotals2 obj) {
+			return obj.getTotalInvoiceAmount();
+		}
+
+		@Override
+		public void setValue(ServiceCategoryTotals2 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalInvoiceAmount(value);
 		}
 	};
 	@XmlElement(name = "SvcCtgy", required = true)
@@ -407,7 +458,7 @@ public class ServiceCategoryTotals2 {
 	 * ServiceCategoryTotals1.mmServiceCategory}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceCategoryTotals2, Max4AlphaNumericText> mmServiceCategory = new MMMessageAttribute<ServiceCategoryTotals2, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals2.mmObject();
 			isDerived = false;
@@ -420,9 +471,19 @@ public class ServiceCategoryTotals2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
+
+		@Override
+		public Max4AlphaNumericText getValue(ServiceCategoryTotals2 obj) {
+			return obj.getServiceCategory();
+		}
+
+		@Override
+		public void setValue(ServiceCategoryTotals2 obj, Max4AlphaNumericText value) {
+			obj.setServiceCategory(value);
+		}
 	};
 	@XmlElement(name = "SvcItmTtls")
-	protected List<com.tools20022.repository.msg.ServiceItemTotals1> serviceItemTotals;
+	protected List<ServiceItemTotals1> serviceItemTotals;
 	/**
 	 * 
 	 <p>
@@ -459,7 +520,7 @@ public class ServiceCategoryTotals2 {
 	 * ServiceCategoryTotals1.mmServiceItemTotals}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceItemTotals = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ServiceCategoryTotals2, List<ServiceItemTotals1>> mmServiceItemTotals = new MMMessageAssociationEnd<ServiceCategoryTotals2, List<ServiceItemTotals1>>() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmInvoicedProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals2.mmObject();
@@ -471,7 +532,17 @@ public class ServiceCategoryTotals2 {
 			previousVersion_lazy = () -> ServiceCategoryTotals1.mmServiceItemTotals;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ServiceItemTotals1.mmObject();
+			type_lazy = () -> ServiceItemTotals1.mmObject();
+		}
+
+		@Override
+		public List<ServiceItemTotals1> getValue(ServiceCategoryTotals2 obj) {
+			return obj.getServiceItemTotals();
+		}
+
+		@Override
+		public void setValue(ServiceCategoryTotals2 obj, List<ServiceItemTotals1> value) {
+			obj.setServiceItemTotals(value);
 		}
 	};
 
@@ -551,7 +622,7 @@ public class ServiceCategoryTotals2 {
 		return serviceItemTotals == null ? serviceItemTotals = new ArrayList<>() : serviceItemTotals;
 	}
 
-	public ServiceCategoryTotals2 setServiceItemTotals(List<com.tools20022.repository.msg.ServiceItemTotals1> serviceItemTotals) {
+	public ServiceCategoryTotals2 setServiceItemTotals(List<ServiceItemTotals1> serviceItemTotals) {
 		this.serviceItemTotals = Objects.requireNonNull(serviceItemTotals);
 		return this;
 	}

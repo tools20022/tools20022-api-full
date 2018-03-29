@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.choice.UpdateType25Choice;
 import com.tools20022.repository.msg.TransactionDetails76;
-import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
+import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -77,8 +76,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion
- * SettlementAndReconciliationISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion
+ * SettlementAndReconciliationISOPreviousversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017
  * SettlementandReconciliationMaintenance20162017}</li>
@@ -182,7 +181,7 @@ public class SecuritiesSettlementTransactionModificationRequestV05 {
 	 * mmModifiedTransactionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmModifiedTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionModificationRequestV05, TransactionDetails76> mmModifiedTransactionDetails = new MMMessageBuildingBlock<SecuritiesSettlementTransactionModificationRequestV05, TransactionDetails76>() {
 		{
 			xmlTag = "ModfdTxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,12 +194,14 @@ public class SecuritiesSettlementTransactionModificationRequestV05 {
 			complexType_lazy = () -> TransactionDetails76.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionModificationRequestV05.class.getMethod("getModifiedTransactionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionDetails76 getValue(SecuritiesSettlementTransactionModificationRequestV05 obj) {
+			return obj.getModifiedTransactionDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionModificationRequestV05 obj, TransactionDetails76 value) {
+			obj.setModifiedTransactionDetails(value);
 		}
 	};
 	@XmlElement(name = "UpdTp", required = true)
@@ -241,7 +242,7 @@ public class SecuritiesSettlementTransactionModificationRequestV05 {
 	 * SecuritiesSettlementTransactionModificationRequestV04.mmUpdateType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUpdateType = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionModificationRequestV05, List<UpdateType25Choice>> mmUpdateType = new MMMessageBuildingBlock<SecuritiesSettlementTransactionModificationRequestV05, List<UpdateType25Choice>>() {
 		{
 			xmlTag = "UpdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,12 +255,14 @@ public class SecuritiesSettlementTransactionModificationRequestV05 {
 			complexType_lazy = () -> UpdateType25Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionModificationRequestV05.class.getMethod("getUpdateType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<UpdateType25Choice> getValue(SecuritiesSettlementTransactionModificationRequestV05 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionModificationRequestV05 obj, List<UpdateType25Choice> value) {
+			obj.setUpdateType(value);
 		}
 	};
 
@@ -274,7 +277,7 @@ public class SecuritiesSettlementTransactionModificationRequestV05 {
 				definition = "Scope\r\nThis message is sent by an account owner to an account servicer. \r\n\r\nThe account owner will generally be:\r\n- a central securities depository participant which has an account with a central securities depository or a market infrastructure\r\n- an investment manager which has an account with a custodian acting as accounting and/or settlement agent.\r\n\r\nIt is used to request the modification of non core business data (matching or non-matching) information in a pending or settled instruction. It can also be used for the enrichment of an incomplete transaction.\r\n\r\nUsage\r\nThe modification must only contain the data to be modified.\r\nThe message may also be used to:\r\n- re-send a message sent by the account owner to the account servicer,\r\n- provide a third party with a copy of a message being sent by the account owner for information,\r\n- re-send to a third party a copy of a message being sent by the account owner for information\r\nusing the relevant elements in the Business Application Header.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestV06.mmObject());
 				previousVersion_lazy = () -> SecuritiesSettlementTransactionModificationRequestV04.mmObject();
-				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOLatestversion.mmObject(), SettlementandReconciliationMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOPreviousversion.mmObject(), SettlementandReconciliationMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxModReq";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();

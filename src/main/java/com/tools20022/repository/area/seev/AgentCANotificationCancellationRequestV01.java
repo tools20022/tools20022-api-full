@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.CorporateActionNotificationAdvice1;
 import com.tools20022.repository.msg.DocumentIdentification8;
 import com.tools20022.repository.msg.NotificationCancellation1;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +132,7 @@ public class AgentCANotificationCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationCancellationRequestV01, DocumentIdentification8> mmIdentification = new MMMessageBuildingBlock<AgentCANotificationCancellationRequestV01, DocumentIdentification8>() {
 		{
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,12 +143,14 @@ public class AgentCANotificationCancellationRequestV01 {
 			complexType_lazy = () -> DocumentIdentification8.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationCancellationRequestV01.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DocumentIdentification8 getValue(AgentCANotificationCancellationRequestV01 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationCancellationRequestV01 obj, DocumentIdentification8 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "NtfctnCxlTpAndLkg", required = true)
@@ -179,7 +180,7 @@ public class AgentCANotificationCancellationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationCancellationTypeAndLinkage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationCancellationRequestV01, NotificationCancellation1> mmNotificationCancellationTypeAndLinkage = new MMMessageBuildingBlock<AgentCANotificationCancellationRequestV01, NotificationCancellation1>() {
 		{
 			xmlTag = "NtfctnCxlTpAndLkg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,12 +191,14 @@ public class AgentCANotificationCancellationRequestV01 {
 			complexType_lazy = () -> NotificationCancellation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationCancellationRequestV01.class.getMethod("getNotificationCancellationTypeAndLinkage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public NotificationCancellation1 getValue(AgentCANotificationCancellationRequestV01 obj) {
+			return obj.getNotificationCancellationTypeAndLinkage();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationCancellationRequestV01 obj, NotificationCancellation1 value) {
+			obj.setNotificationCancellationTypeAndLinkage(value);
 		}
 	};
 	@XmlElement(name = "CorpActnGnlInf", required = true)
@@ -223,7 +226,7 @@ public class AgentCANotificationCancellationRequestV01 {
 	 * definition} = "General information about the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationCancellationRequestV01, CorporateActionInformation2> mmCorporateActionGeneralInformation = new MMMessageBuildingBlock<AgentCANotificationCancellationRequestV01, CorporateActionInformation2>() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +237,14 @@ public class AgentCANotificationCancellationRequestV01 {
 			complexType_lazy = () -> CorporateActionInformation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationCancellationRequestV01.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionInformation2 getValue(AgentCANotificationCancellationRequestV01 obj) {
+			return obj.getCorporateActionGeneralInformation();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationCancellationRequestV01 obj, CorporateActionInformation2 value) {
+			obj.setCorporateActionGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "CorpActnNtfctnDtls")
@@ -268,7 +273,7 @@ public class AgentCANotificationCancellationRequestV01 {
 	 * "Detailed information of the notification advice to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AgentCANotificationCancellationRequestV01, Optional<CorporateActionNotificationAdvice1>> mmCorporateActionNotificationDetails = new MMMessageBuildingBlock<AgentCANotificationCancellationRequestV01, Optional<CorporateActionNotificationAdvice1>>() {
 		{
 			xmlTag = "CorpActnNtfctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,12 +284,14 @@ public class AgentCANotificationCancellationRequestV01 {
 			complexType_lazy = () -> CorporateActionNotificationAdvice1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AgentCANotificationCancellationRequestV01.class.getMethod("getCorporateActionNotificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CorporateActionNotificationAdvice1> getValue(AgentCANotificationCancellationRequestV01 obj) {
+			return obj.getCorporateActionNotificationDetails();
+		}
+
+		@Override
+		public void setValue(AgentCANotificationCancellationRequestV01 obj, Optional<CorporateActionNotificationAdvice1> value) {
+			obj.setCorporateActionNotificationDetails(value.orElse(null));
 		}
 	};
 

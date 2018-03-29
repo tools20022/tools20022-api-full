@@ -52,12 +52,16 @@ public class ConstraintAdvisingPartyRule {
 	 */
 	public static final MMConstraint<Undertaking3> forUndertaking3 = new MMConstraint<Undertaking3>() {
 		{
-			validator = ConstraintAdvisingPartyRule::checkUndertaking3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisingPartyRule";
 			definition = "If IssuanceType is \"ISAD\" then AdvisingParty must be present.";
 			owner_lazy = () -> Undertaking3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdvisingParty</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IssuanceType</leftOperand><rightOperand>ISAD</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Undertaking3 obj) throws Exception {
+			checkUndertaking3(obj);
 		}
 	};
 

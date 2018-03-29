@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementAction2Code;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DataSetIdentification6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +139,7 @@ public class TMSActionIdentification4 {
 	 * TMSActionIdentification3.mmActionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSActionIdentification4, TerminalManagementAction2Code> mmActionType = new MMMessageAttribute<TMSActionIdentification4, TerminalManagementAction2Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification4.mmObject();
@@ -152,6 +153,16 @@ public class TMSActionIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction2Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction2Code getValue(TMSActionIdentification4 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(TMSActionIdentification4 obj, TerminalManagementAction2Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "DataSetId")
@@ -195,7 +206,7 @@ public class TMSActionIdentification4 {
 	 * TMSActionIdentification3.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSActionIdentification4, Optional<DataSetIdentification6>> mmDataSetIdentification = new MMMessageAssociationEnd<TMSActionIdentification4, Optional<DataSetIdentification6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification4.mmObject();
 			isDerived = false;
@@ -208,7 +219,17 @@ public class TMSActionIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification6.mmObject();
+			type_lazy = () -> DataSetIdentification6.mmObject();
+		}
+
+		@Override
+		public Optional<DataSetIdentification6> getValue(TMSActionIdentification4 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(TMSActionIdentification4 obj, Optional<DataSetIdentification6> value) {
+			obj.setDataSetIdentification(value.orElse(null));
 		}
 	};
 
@@ -241,7 +262,7 @@ public class TMSActionIdentification4 {
 		return dataSetIdentification == null ? Optional.empty() : Optional.of(dataSetIdentification);
 	}
 
-	public TMSActionIdentification4 setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification6 dataSetIdentification) {
+	public TMSActionIdentification4 setDataSetIdentification(DataSetIdentification6 dataSetIdentification) {
 		this.dataSetIdentification = dataSetIdentification;
 		return this;
 	}

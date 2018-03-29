@@ -21,7 +21,6 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -185,7 +184,7 @@ public class TransferInCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV03, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<TransferInCancellationRequestV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,12 +195,14 @@ public class TransferInCancellationRequestV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV03.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(TransferInCancellationRequestV03 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV03 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "Refs", required = true)
@@ -230,7 +231,7 @@ public class TransferInCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReferences = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV03, List<References11>> mmReferences = new MMMessageBuildingBlock<TransferInCancellationRequestV03, List<References11>>() {
 		{
 			xmlTag = "Refs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +241,14 @@ public class TransferInCancellationRequestV03 {
 			complexType_lazy = () -> References11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV03.class.getMethod("getReferences", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<References11> getValue(TransferInCancellationRequestV03 obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV03 obj, List<References11> value) {
+			obj.setReferences(value);
 		}
 	};
 	@XmlElement(name = "CxlByRef")
@@ -273,7 +276,7 @@ public class TransferInCancellationRequestV03 {
 	 * definition} = "Reference of the transfer to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationByReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV03, Optional<TransferReference1>> mmCancellationByReference = new MMMessageBuildingBlock<TransferInCancellationRequestV03, Optional<TransferReference1>>() {
 		{
 			xmlTag = "CxlByRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,12 +287,14 @@ public class TransferInCancellationRequestV03 {
 			complexType_lazy = () -> TransferReference1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV03.class.getMethod("getCancellationByReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransferReference1> getValue(TransferInCancellationRequestV03 obj) {
+			return obj.getCancellationByReference();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV03 obj, Optional<TransferReference1> value) {
+			obj.setCancellationByReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlByTrfInDtls")
@@ -316,7 +321,7 @@ public class TransferInCancellationRequestV03 {
 	 * definition} = "The transfer in request message to cancel."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationByTransferInDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV03, Optional<TransferIn5>> mmCancellationByTransferInDetails = new MMMessageBuildingBlock<TransferInCancellationRequestV03, Optional<TransferIn5>>() {
 		{
 			xmlTag = "CxlByTrfInDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,12 +332,14 @@ public class TransferInCancellationRequestV03 {
 			complexType_lazy = () -> TransferIn5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV03.class.getMethod("getCancellationByTransferInDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransferIn5> getValue(TransferInCancellationRequestV03 obj) {
+			return obj.getCancellationByTransferInDetails();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV03 obj, Optional<TransferIn5> value) {
+			obj.setCancellationByTransferInDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -361,7 +368,7 @@ public class TransferInCancellationRequestV03 {
 	 * "Information provided when the message is a copy of a previous message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV03, Optional<CopyInformation2>> mmCopyDetails = new MMMessageBuildingBlock<TransferInCancellationRequestV03, Optional<CopyInformation2>>() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -372,12 +379,14 @@ public class TransferInCancellationRequestV03 {
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV03.class.getMethod("getCopyDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyInformation2> getValue(TransferInCancellationRequestV03 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV03 obj, Optional<CopyInformation2> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 

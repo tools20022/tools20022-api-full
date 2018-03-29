@@ -24,6 +24,9 @@ import com.tools20022.repository.area.camt.ResolutionOfInvestigationV04;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalGroupHeader5;
+import com.tools20022.repository.msg.OriginalPaymentInstruction3;
+import com.tools20022.repository.msg.PaymentTransaction40;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -153,7 +156,7 @@ public class UnderlyingTransaction4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalGroupInformationAndStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction4, Optional<OriginalGroupHeader5>> mmOriginalGroupInformationAndStatus = new MMMessageAssociationEnd<UnderlyingTransaction4, Optional<OriginalGroupHeader5>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction4.mmObject();
@@ -166,11 +169,21 @@ public class UnderlyingTransaction4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader5.mmObject();
+			type_lazy = () -> OriginalGroupHeader5.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalGroupHeader5> getValue(UnderlyingTransaction4 obj) {
+			return obj.getOriginalGroupInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction4 obj, Optional<OriginalGroupHeader5> value) {
+			obj.setOriginalGroupInformationAndStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInfAndSts")
-	protected List<com.tools20022.repository.msg.OriginalPaymentInstruction3> originalPaymentInformationAndStatus;
+	protected List<OriginalPaymentInstruction3> originalPaymentInformationAndStatus;
 	/**
 	 * 
 	 <p>
@@ -213,7 +226,7 @@ public class UnderlyingTransaction4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalPaymentInformationAndStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction4, List<OriginalPaymentInstruction3>> mmOriginalPaymentInformationAndStatus = new MMMessageAssociationEnd<UnderlyingTransaction4, List<OriginalPaymentInstruction3>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction4.mmObject();
@@ -225,11 +238,21 @@ public class UnderlyingTransaction4 {
 			nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction9.mmOriginalPaymentInformationAndStatus);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction3.mmObject();
+			type_lazy = () -> OriginalPaymentInstruction3.mmObject();
+		}
+
+		@Override
+		public List<OriginalPaymentInstruction3> getValue(UnderlyingTransaction4 obj) {
+			return obj.getOriginalPaymentInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction4 obj, List<OriginalPaymentInstruction3> value) {
+			obj.setOriginalPaymentInformationAndStatus(value);
 		}
 	};
 	@XmlElement(name = "TxInfAndSts")
-	protected List<com.tools20022.repository.msg.PaymentTransaction40> transactionInformationAndStatus;
+	protected List<PaymentTransaction40> transactionInformationAndStatus;
 	/**
 	 * 
 	 <p>
@@ -271,7 +294,7 @@ public class UnderlyingTransaction4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionInformationAndStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction4, List<PaymentTransaction40>> mmTransactionInformationAndStatus = new MMMessageAssociationEnd<UnderlyingTransaction4, List<PaymentTransaction40>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction4.mmObject();
@@ -283,7 +306,17 @@ public class UnderlyingTransaction4 {
 			nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction9.mmTransactionInformationAndStatus);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction40.mmObject();
+			type_lazy = () -> PaymentTransaction40.mmObject();
+		}
+
+		@Override
+		public List<PaymentTransaction40> getValue(UnderlyingTransaction4 obj) {
+			return obj.getTransactionInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction4 obj, List<PaymentTransaction40> value) {
+			obj.setTransactionInformationAndStatus(value);
 		}
 	};
 
@@ -311,7 +344,7 @@ public class UnderlyingTransaction4 {
 		return originalGroupInformationAndStatus == null ? Optional.empty() : Optional.of(originalGroupInformationAndStatus);
 	}
 
-	public UnderlyingTransaction4 setOriginalGroupInformationAndStatus(com.tools20022.repository.msg.OriginalGroupHeader5 originalGroupInformationAndStatus) {
+	public UnderlyingTransaction4 setOriginalGroupInformationAndStatus(OriginalGroupHeader5 originalGroupInformationAndStatus) {
 		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
 		return this;
 	}
@@ -320,7 +353,7 @@ public class UnderlyingTransaction4 {
 		return originalPaymentInformationAndStatus == null ? originalPaymentInformationAndStatus = new ArrayList<>() : originalPaymentInformationAndStatus;
 	}
 
-	public UnderlyingTransaction4 setOriginalPaymentInformationAndStatus(List<com.tools20022.repository.msg.OriginalPaymentInstruction3> originalPaymentInformationAndStatus) {
+	public UnderlyingTransaction4 setOriginalPaymentInformationAndStatus(List<OriginalPaymentInstruction3> originalPaymentInformationAndStatus) {
 		this.originalPaymentInformationAndStatus = Objects.requireNonNull(originalPaymentInformationAndStatus);
 		return this;
 	}
@@ -329,7 +362,7 @@ public class UnderlyingTransaction4 {
 		return transactionInformationAndStatus == null ? transactionInformationAndStatus = new ArrayList<>() : transactionInformationAndStatus;
 	}
 
-	public UnderlyingTransaction4 setTransactionInformationAndStatus(List<com.tools20022.repository.msg.PaymentTransaction40> transactionInformationAndStatus) {
+	public UnderlyingTransaction4 setTransactionInformationAndStatus(List<PaymentTransaction40> transactionInformationAndStatus) {
 		this.transactionInformationAndStatus = Objects.requireNonNull(transactionInformationAndStatus);
 		return this;
 	}

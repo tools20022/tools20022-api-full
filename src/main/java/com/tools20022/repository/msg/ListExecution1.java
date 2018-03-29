@@ -115,7 +115,7 @@ public class ListExecution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ListExecution1, Max35Text> mmListIdentification = new MMMessageAttribute<ListExecution1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListExecution1.mmObject();
@@ -127,6 +127,16 @@ public class ListExecution1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ListExecution1 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(ListExecution1 obj, Max35Text value) {
+			obj.setListIdentification(value);
 		}
 	};
 	@XmlElement(name = "ClntBidId")
@@ -166,7 +176,7 @@ public class ListExecution1 {
 	 * "Identifies a bid made by a client, to which the list is associated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ListExecution1, Optional<Max35Text>> mmClientBidIdentification = new MMMessageAttribute<ListExecution1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Negotiation.mmNegotiationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListExecution1.mmObject();
@@ -179,6 +189,16 @@ public class ListExecution1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ListExecution1 obj) {
+			return obj.getClientBidIdentification();
+		}
+
+		@Override
+		public void setValue(ListExecution1 obj, Optional<Max35Text> value) {
+			obj.setClientBidIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BidId", required = true)
@@ -214,7 +234,7 @@ public class ListExecution1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ListExecution1, Max35Text> mmBidIdentification = new MMMessageAttribute<ListExecution1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListExecution1.mmObject();
 			isDerived = false;
@@ -226,6 +246,16 @@ public class ListExecution1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ListExecution1 obj) {
+			return obj.getBidIdentification();
+		}
+
+		@Override
+		public void setValue(ListExecution1 obj, Max35Text value) {
+			obj.setBidIdentification(value);
 		}
 	};
 

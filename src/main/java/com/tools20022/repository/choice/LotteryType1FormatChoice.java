@@ -106,7 +106,7 @@ public class LotteryType1FormatChoice {
 	 * definition} = "Standard code to specify the lottery type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LotteryType1FormatChoice, LotteryType1Code> mmCode = new MMMessageAttribute<LotteryType1FormatChoice, LotteryType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LotteryType1FormatChoice.mmObject();
@@ -118,6 +118,16 @@ public class LotteryType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LotteryType1Code.mmObject();
+		}
+
+		@Override
+		public LotteryType1Code getValue(LotteryType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LotteryType1FormatChoice obj, LotteryType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class LotteryType1FormatChoice {
 	 * definition} = "Proprietary code to express the lottery type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LotteryType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<LotteryType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Lottery.mmLotteryType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.LotteryType1FormatChoice.mmObject();
@@ -167,6 +177,16 @@ public class LotteryType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(LotteryType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LotteryType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

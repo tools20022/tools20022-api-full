@@ -109,7 +109,7 @@ public class ProcessedStatus5FormatChoice {
 	 * "Standard code to specify the processing status of a request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessedStatus5FormatChoice, ProcessedStatus5Code> mmCode = new MMMessageAttribute<ProcessedStatus5FormatChoice, ProcessedStatus5Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmRelatedInstructionProcessedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessedStatus5FormatChoice.mmObject();
@@ -121,6 +121,16 @@ public class ProcessedStatus5FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProcessedStatus5Code.mmObject();
+		}
+
+		@Override
+		public ProcessedStatus5Code getValue(ProcessedStatus5FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ProcessedStatus5FormatChoice obj, ProcessedStatus5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class ProcessedStatus5FormatChoice {
 	 * "Proprietary code to express the processing status of a request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessedStatus5FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<ProcessedStatus5FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmRelatedInstructionProcessedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessedStatus5FormatChoice.mmObject();
@@ -171,6 +181,16 @@ public class ProcessedStatus5FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(ProcessedStatus5FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ProcessedStatus5FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

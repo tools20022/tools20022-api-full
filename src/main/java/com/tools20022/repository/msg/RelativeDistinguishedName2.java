@@ -110,7 +110,7 @@ public class RelativeDistinguishedName2 {
 	 * RelativeDistinguishedName1.mmAttributeType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttributeType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelativeDistinguishedName2, AttributeType2Code> mmAttributeType = new MMMessageAttribute<RelativeDistinguishedName2, AttributeType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelativeDistinguishedName2.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class RelativeDistinguishedName2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AttributeType2Code.mmObject();
+		}
+
+		@Override
+		public AttributeType2Code getValue(RelativeDistinguishedName2 obj) {
+			return obj.getAttributeType();
+		}
+
+		@Override
+		public void setValue(RelativeDistinguishedName2 obj, AttributeType2Code value) {
+			obj.setAttributeType(value);
 		}
 	};
 	@XmlElement(name = "AttrVal", required = true)
@@ -159,7 +169,7 @@ public class RelativeDistinguishedName2 {
 	 * RelativeDistinguishedName1.mmAttributeValue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAttributeValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelativeDistinguishedName2, Max140Text> mmAttributeValue = new MMMessageAttribute<RelativeDistinguishedName2, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelativeDistinguishedName2.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class RelativeDistinguishedName2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(RelativeDistinguishedName2 obj) {
+			return obj.getAttributeValue();
+		}
+
+		@Override
+		public void setValue(RelativeDistinguishedName2 obj, Max140Text value) {
+			obj.setAttributeValue(value);
 		}
 	};
 

@@ -63,11 +63,15 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 */
 	public static final MMConstraint<TransactionCriteria2> forTransactionCriteria2 = new MMConstraint<TransactionCriteria2>() {
 		{
-			validator = ConstraintSearchAndReturnCriteriaAndStatementReportRule::checkTransactionCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchAndReturnCriteriaAndStatementReportRule";
 			definition = "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or\na combination of Search criteria and a Statement Report.\nRule rationale: \n- If ReturnCriteria are present, they define the expected report.\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member.";
 			owner_lazy = () -> TransactionCriteria2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionCriteria2 obj) throws Exception {
+			checkTransactionCriteria2(obj);
 		}
 	};
 	/**
@@ -93,11 +97,15 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 */
 	public static final MMConstraint<TransactionCriteria3> forTransactionCriteria3 = new MMConstraint<TransactionCriteria3>() {
 		{
-			validator = ConstraintSearchAndReturnCriteriaAndStatementReportRule::checkTransactionCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchAndReturnCriteriaAndStatementReportRule";
 			definition = "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or\na combination of Search criteria and a Statement Report.\nRule rationale: \n- If ReturnCriteria are present, they define the expected report.\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member.";
 			owner_lazy = () -> TransactionCriteria3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionCriteria3 obj) throws Exception {
+			checkTransactionCriteria3(obj);
 		}
 	};
 	/**
@@ -136,13 +144,17 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 */
 	public static final MMConstraint<TransactionCriteria4> forTransactionCriteria4 = new MMConstraint<TransactionCriteria4>() {
 		{
-			validator = ConstraintSearchAndReturnCriteriaAndStatementReportRule::checkTransactionCriteria4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchAndReturnCriteriaAndStatementReportRule";
 			definition = "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or a combination of Search criteria and a Statement Report.\r\nRule rationale: \r\n- If ReturnCriteria are present, they define the expected report.\r\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\r\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSearchAndReturnCriteriaAndStatementReportRule.forTransactionCriteria5);
 			owner_lazy = () -> TransactionCriteria4.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatementReport</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransactionCriteria4 obj) throws Exception {
+			checkTransactionCriteria4(obj);
 		}
 	};
 	/**
@@ -187,7 +199,6 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 */
 	public static final MMConstraint<TransactionCriteria5> forTransactionCriteria5 = new MMConstraint<TransactionCriteria5>() {
 		{
-			validator = ConstraintSearchAndReturnCriteriaAndStatementReportRule::checkTransactionCriteria5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchAndReturnCriteriaAndStatementReportRule";
 			definition = "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or a combination of Search criteria and a Statement Report.\r\nRule rationale: \r\n- If ReturnCriteria are present, they define the expected report.\r\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\r\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member.";
@@ -195,6 +206,11 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSearchAndReturnCriteriaAndStatementReportRule.forTransactionCriteria4;
 			owner_lazy = () -> TransactionCriteria5.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatementReport</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransactionCriteria5 obj) throws Exception {
+			checkTransactionCriteria5(obj);
 		}
 	};
 	/**
@@ -239,7 +255,6 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 */
 	public static final MMConstraint<TransactionCriteria6> forTransactionCriteria6 = new MMConstraint<TransactionCriteria6>() {
 		{
-			validator = ConstraintSearchAndReturnCriteriaAndStatementReportRule::checkTransactionCriteria6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchAndReturnCriteriaAndStatementReportRule";
 			definition = "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or a combination of Search criteria and a Statement Report.\r\nRule rationale: \r\n- If ReturnCriteria are present, they define the expected report.\r\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\r\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member.";
@@ -247,6 +262,11 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSearchAndReturnCriteriaAndStatementReportRule.forTransactionCriteria5;
 			owner_lazy = () -> TransactionCriteria6.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatementReport</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransactionCriteria6 obj) throws Exception {
+			checkTransactionCriteria6(obj);
 		}
 	};
 	/**
@@ -282,13 +302,17 @@ public class ConstraintSearchAndReturnCriteriaAndStatementReportRule {
 	 */
 	public static final MMConstraint<TransactionCriteria7> forTransactionCriteria7 = new MMConstraint<TransactionCriteria7>() {
 		{
-			validator = ConstraintSearchAndReturnCriteriaAndStatementReportRule::checkTransactionCriteria7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchAndReturnCriteriaAndStatementReportRule";
 			definition = "The following combinations are allowed: only Search Criteria, or only Return Criteria, or only a Statement Report, or a combination of Search and Return criteria, or a combination of Search criteria and a Statement Report.\r\nRule rationale: \r\n- If ReturnCriteria are present, they define the expected report.\r\n- If StatementReport is present, it indicates that a statement-type report needs to be returned. In this case, the return message will contain information equivalent to that present in field 61 (Statement Line) of FIN standards, eg, value date, entry date, debit/credit indicator, amount, transaction type identification code, reference for the account owner, reference of the account servicing institution and supplementary details.\r\n- If the StatementReportIndicator equals \"false\" or \"0\" (No), this means that the report type is pre-defined between the transaction administrator and the member.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSearchAndReturnCriteriaAndStatementReportRule.forTransactionCriteria6;
 			owner_lazy = () -> TransactionCriteria7.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SearchCriteria[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatementReport</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReturnCriteria</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransactionCriteria7 obj) throws Exception {
+			checkTransactionCriteria7(obj);
 		}
 	};
 

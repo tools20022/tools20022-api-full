@@ -118,7 +118,7 @@ public class IsabelAdminHeader2 {
 	 * definition} = "Unique identification of the actual sender of the file."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelAdminHeader2, Max13AlphaNumericText> mmActualSenderIdentification = new MMMessageAttribute<IsabelAdminHeader2, Max13AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class IsabelAdminHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max13AlphaNumericText getValue(IsabelAdminHeader2 obj) {
+			return obj.getActualSenderIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelAdminHeader2 obj, Max13AlphaNumericText value) {
+			obj.setActualSenderIdentification(value);
 		}
 	};
 	@XmlElement(name = "PyldCreDt", required = true)
@@ -161,7 +171,7 @@ public class IsabelAdminHeader2 {
 	 * "Date and time at which the file in the payload was actually created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IsabelAdminHeader2, DateAndDateTimeChoice> mmPayloadCreationDate = new MMMessageAssociationEnd<IsabelAdminHeader2, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class IsabelAdminHeader2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IsabelAdminHeader2 obj) {
+			return obj.getPayloadCreationDate();
+		}
+
+		@Override
+		public void setValue(IsabelAdminHeader2 obj, DateAndDateTimeChoice value) {
+			obj.setPayloadCreationDate(value);
 		}
 	};
 	@XmlElement(name = "MsgReqTp", required = true)
@@ -206,7 +226,7 @@ public class IsabelAdminHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelAdminHeader2, Max6Text> mmMessageRequestType = new MMMessageAttribute<IsabelAdminHeader2, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class IsabelAdminHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(IsabelAdminHeader2 obj) {
+			return obj.getMessageRequestType();
+		}
+
+		@Override
+		public void setValue(IsabelAdminHeader2 obj, Max6Text value) {
+			obj.setMessageRequestType(value);
 		}
 	};
 	@XmlElement(name = "MsgId", required = true)
@@ -250,7 +280,7 @@ public class IsabelAdminHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelAdminHeader2, Max14Text> mmMessageIdentification = new MMMessageAttribute<IsabelAdminHeader2, Max14Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -261,6 +291,16 @@ public class IsabelAdminHeader2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max14Text.mmObject();
+		}
+
+		@Override
+		public Max14Text getValue(IsabelAdminHeader2 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelAdminHeader2 obj, Max14Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "DstnMailBxId")
@@ -293,7 +333,7 @@ public class IsabelAdminHeader2 {
 	 * definition} = "Unique identification of the destination mailbox."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDestinationMailBoxIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelAdminHeader2, Optional<Max13AlphaNumericText>> mmDestinationMailBoxIdentification = new MMMessageAttribute<IsabelAdminHeader2, Optional<Max13AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -304,6 +344,16 @@ public class IsabelAdminHeader2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max13AlphaNumericText> getValue(IsabelAdminHeader2 obj) {
+			return obj.getDestinationMailBoxIdentification();
+		}
+
+		@Override
+		public void setValue(IsabelAdminHeader2 obj, Optional<Max13AlphaNumericText> value) {
+			obj.setDestinationMailBoxIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RfrdMsg")
@@ -337,7 +387,7 @@ public class IsabelAdminHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferredMessage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelAdminHeader2, Optional<Max14Text>> mmReferredMessage = new MMMessageAttribute<IsabelAdminHeader2, Optional<Max14Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -348,6 +398,16 @@ public class IsabelAdminHeader2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max14Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max14Text> getValue(IsabelAdminHeader2 obj) {
+			return obj.getReferredMessage();
+		}
+
+		@Override
+		public void setValue(IsabelAdminHeader2 obj, Optional<Max14Text> value) {
+			obj.setReferredMessage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RfrdSndTmStmp")
@@ -381,7 +441,7 @@ public class IsabelAdminHeader2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferredSendTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IsabelAdminHeader2, Optional<ISODateTime>> mmReferredSendTimeStamp = new MMMessageAttribute<IsabelAdminHeader2, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelAdminHeader2.mmObject();
 			isDerived = false;
@@ -392,6 +452,16 @@ public class IsabelAdminHeader2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(IsabelAdminHeader2 obj) {
+			return obj.getReferredSendTimeStamp();
+		}
+
+		@Override
+		public void setValue(IsabelAdminHeader2 obj, Optional<ISODateTime> value) {
+			obj.setReferredSendTimeStamp(value.orElse(null));
 		}
 	};
 

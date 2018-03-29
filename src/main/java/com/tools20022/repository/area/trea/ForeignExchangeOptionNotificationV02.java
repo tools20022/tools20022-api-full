@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.SettlementData2;
 import com.tools20022.repository.msg.TradePartyIdentification4;
 import com.tools20022.repository.msg.TradeStatus1;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +128,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, TradePartyIdentification4> mmTradingSideIdentification = new MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, TradePartyIdentification4>() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,12 +139,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeOptionNotificationV02.class.getMethod("getTradingSideIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradePartyIdentification4 getValue(ForeignExchangeOptionNotificationV02 obj) {
+			return obj.getTradingSideIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeOptionNotificationV02 obj, TradePartyIdentification4 value) {
+			obj.setTradingSideIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtrPtySdId", required = true)
@@ -175,7 +176,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, TradePartyIdentification4> mmCounterpartySideIdentification = new MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, TradePartyIdentification4>() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,12 +187,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			complexType_lazy = () -> TradePartyIdentification4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeOptionNotificationV02.class.getMethod("getCounterpartySideIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradePartyIdentification4 getValue(ForeignExchangeOptionNotificationV02 obj) {
+			return obj.getCounterpartySideIdentification();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeOptionNotificationV02 obj, TradePartyIdentification4 value) {
+			obj.setCounterpartySideIdentification(value);
 		}
 	};
 	@XmlElement(name = "OptnData", required = true)
@@ -218,7 +221,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * definition} = "Provides information on the conditions of the option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOptionData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, OptionData2> mmOptionData = new MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, OptionData2>() {
 		{
 			xmlTag = "OptnData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,12 +232,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			complexType_lazy = () -> OptionData2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeOptionNotificationV02.class.getMethod("getOptionData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OptionData2 getValue(ForeignExchangeOptionNotificationV02 obj) {
+			return obj.getOptionData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeOptionNotificationV02 obj, OptionData2 value) {
+			obj.setOptionData(value);
 		}
 	};
 	@XmlElement(name = "TradSts", required = true)
@@ -262,7 +267,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * "Provides information on the status of a trade in a settlement system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, TradeStatus1> mmTradeStatus = new MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, TradeStatus1>() {
 		{
 			xmlTag = "TradSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,12 +278,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			complexType_lazy = () -> TradeStatus1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeOptionNotificationV02.class.getMethod("getTradeStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeStatus1 getValue(ForeignExchangeOptionNotificationV02 obj) {
+			return obj.getTradeStatus();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeOptionNotificationV02 obj, TradeStatus1 value) {
+			obj.setTradeStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmData")
@@ -305,7 +312,7 @@ public class ForeignExchangeOptionNotificationV02 {
 	 * definition} = "Provides information on the settlement of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, Optional<SettlementData2>> mmSettlementData = new MMMessageBuildingBlock<ForeignExchangeOptionNotificationV02, Optional<SettlementData2>>() {
 		{
 			xmlTag = "SttlmData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,12 +323,14 @@ public class ForeignExchangeOptionNotificationV02 {
 			complexType_lazy = () -> SettlementData2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeOptionNotificationV02.class.getMethod("getSettlementData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SettlementData2> getValue(ForeignExchangeOptionNotificationV02 obj) {
+			return obj.getSettlementData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeOptionNotificationV02 obj, Optional<SettlementData2> value) {
+			obj.setSettlementData(value.orElse(null));
 		}
 	};
 

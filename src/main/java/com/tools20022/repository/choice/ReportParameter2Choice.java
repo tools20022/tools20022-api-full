@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DataFormat2Choice;
+import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
@@ -105,7 +107,7 @@ public class ReportParameter2Choice {
 	 * "Party for which the estimated cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameter2Choice, PartyIdentification2Choice> mmParty = new MMMessageAttribute<ReportParameter2Choice, PartyIdentification2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportParameter2Choice.mmObject();
 			isDerived = false;
@@ -115,7 +117,17 @@ public class ReportParameter2Choice {
 			definition = "Party for which the estimated cash flow is being reported.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.PartyIdentification2Choice.mmObject();
+			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(ReportParameter2Choice obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(ReportParameter2Choice obj, PartyIdentification2Choice value) {
+			obj.setParty(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -148,7 +160,7 @@ public class ReportParameter2Choice {
 	 * "Country for which the estimated cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameter2Choice, CountryCode> mmCountry = new MMMessageAttribute<ReportParameter2Choice, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportParameter2Choice.mmObject();
 			isDerived = false;
@@ -159,6 +171,16 @@ public class ReportParameter2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(ReportParameter2Choice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(ReportParameter2Choice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -192,7 +214,7 @@ public class ReportParameter2Choice {
 	 * "Currency for which the estimated cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameter2Choice, ActiveOrHistoricCurrencyCode> mmCurrency = new MMMessageAttribute<ReportParameter2Choice, ActiveOrHistoricCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportParameter2Choice.mmObject();
 			isDerived = false;
@@ -203,6 +225,16 @@ public class ReportParameter2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(ReportParameter2Choice obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ReportParameter2Choice obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "UsrDfnd", required = true)
@@ -236,7 +268,7 @@ public class ReportParameter2Choice {
 	 * "Parameter for which the estimated cash flow is being reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportParameter2Choice, DataFormat2Choice> mmUserDefined = new MMMessageAttribute<ReportParameter2Choice, DataFormat2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportParameter2Choice.mmObject();
 			isDerived = false;
@@ -246,7 +278,17 @@ public class ReportParameter2Choice {
 			definition = "Parameter for which the estimated cash flow is being reported.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DataFormat2Choice.mmObject();
+			complexType_lazy = () -> DataFormat2Choice.mmObject();
+		}
+
+		@Override
+		public DataFormat2Choice getValue(ReportParameter2Choice obj) {
+			return obj.getUserDefined();
+		}
+
+		@Override
+		public void setValue(ReportParameter2Choice obj, DataFormat2Choice value) {
+			obj.setUserDefined(value);
 		}
 	};
 
@@ -268,7 +310,7 @@ public class ReportParameter2Choice {
 		return party;
 	}
 
-	public ReportParameter2Choice setParty(com.tools20022.repository.choice.PartyIdentification2Choice party) {
+	public ReportParameter2Choice setParty(PartyIdentification2Choice party) {
 		this.party = Objects.requireNonNull(party);
 		return this;
 	}
@@ -295,7 +337,7 @@ public class ReportParameter2Choice {
 		return userDefined;
 	}
 
-	public ReportParameter2Choice setUserDefined(com.tools20022.repository.choice.DataFormat2Choice userDefined) {
+	public ReportParameter2Choice setUserDefined(DataFormat2Choice userDefined) {
 		this.userDefined = Objects.requireNonNull(userDefined);
 		return this;
 	}

@@ -127,7 +127,7 @@ public class SecuritiesBalanceType3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType3Choice, SecuritiesBalanceType11Code> mmCode = new MMMessageAttribute<SecuritiesBalanceType3Choice, SecuritiesBalanceType11Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType3Choice.mmObject();
@@ -141,6 +141,16 @@ public class SecuritiesBalanceType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType11Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType11Code getValue(SecuritiesBalanceType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType3Choice obj, SecuritiesBalanceType11Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -189,7 +199,7 @@ public class SecuritiesBalanceType3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType3Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<SecuritiesBalanceType3Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType3Choice.mmObject();
@@ -203,6 +213,16 @@ public class SecuritiesBalanceType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(SecuritiesBalanceType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType3Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PostalAddress1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -114,7 +115,7 @@ public class BranchData {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BranchData, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<BranchData, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
@@ -126,6 +127,16 @@ public class BranchData {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(BranchData obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(BranchData obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -163,7 +174,7 @@ public class BranchData {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BranchData, Optional<Max35Text>> mmName = new MMMessageAttribute<BranchData, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
@@ -175,6 +186,16 @@ public class BranchData {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(BranchData obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(BranchData obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -211,7 +232,7 @@ public class BranchData {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BranchData, Optional<PostalAddress1>> mmPostalAddress = new MMMessageAssociationEnd<BranchData, Optional<PostalAddress1>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BranchData.mmObject();
@@ -223,7 +244,17 @@ public class BranchData {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress1> getValue(BranchData obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(BranchData obj, Optional<PostalAddress1> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 
@@ -263,7 +294,7 @@ public class BranchData {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public BranchData setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
+	public BranchData setPostalAddress(PostalAddress1 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}

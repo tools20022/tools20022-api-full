@@ -124,7 +124,7 @@ public class LegalOrganisation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegalOrganisation1, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<LegalOrganisation1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LegalOrganisation1.mmObject();
@@ -137,6 +137,16 @@ public class LegalOrganisation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LegalOrganisation1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(LegalOrganisation1 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -180,7 +190,7 @@ public class LegalOrganisation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegalOrganisation1, Optional<Max140Text>> mmName = new MMMessageAttribute<LegalOrganisation1, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LegalOrganisation1.mmObject();
@@ -193,6 +203,16 @@ public class LegalOrganisation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(LegalOrganisation1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(LegalOrganisation1 obj, Optional<Max140Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 

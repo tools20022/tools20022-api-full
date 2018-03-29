@@ -53,11 +53,15 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 */
 	public static final MMConstraint<GroupHeader2> forGroupHeader2 = new MMConstraint<GroupHeader2>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateRule::checkGroupHeader2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader2 obj) throws Exception {
+			checkGroupHeader2(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 */
 	public static final MMConstraint<GroupHeader3> forGroupHeader3 = new MMConstraint<GroupHeader3>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateRule::checkGroupHeader3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader3 obj) throws Exception {
+			checkGroupHeader3(obj);
 		}
 	};
 	/**
@@ -111,11 +119,15 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 */
 	public static final MMConstraint<GroupHeader4> forGroupHeader4 = new MMConstraint<GroupHeader4>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateRule::checkGroupHeader4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule";
 			definition = "If TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader4 obj) throws Exception {
+			checkGroupHeader4(obj);
 		}
 	};
 	/**
@@ -144,12 +156,16 @@ public class ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateR
 	 */
 	public static final MMConstraint<GroupHeader15> forGroupHeader15 = new MMConstraint<GroupHeader15>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmountAndInterbankSettlementDateRule::checkGroupHeader15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmountAndInterbankSettlementDateRule";
 			definition = "ISO20022 Rule: (not injected)\nIf TotalInterbankSettlementAmount is present, then InterbankSettlementDate must be present.";
 			owner_lazy = () -> GroupHeader15.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InterbankSettlementDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TotalInterbankSettlementAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(GroupHeader15 obj) throws Exception {
+			checkGroupHeader15(obj);
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdvi
 import com.tools20022.repository.area.setr.SecuritiesTradeConfirmationStatusAdviceV02;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +120,7 @@ public class ConfirmationParties4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Invstr")
-	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount79> investor;
+	protected List<PartyIdentificationAndAccount79> investor;
 	/**
 	 * 
 	 <p>
@@ -156,7 +157,7 @@ public class ConfirmationParties4 {
 	 * definition} = "Party that identifies the underlying investor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvestor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, List<PartyIdentificationAndAccount79>> mmInvestor = new MMMessageAttribute<ConfirmationParties4, List<PartyIdentificationAndAccount79>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -167,7 +168,17 @@ public class ConfirmationParties4 {
 			name = "Investor";
 			definition = "Party that identifies the underlying investor.";
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount79.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount79.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentificationAndAccount79> getValue(ConfirmationParties4 obj) {
+			return obj.getInvestor();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, List<PartyIdentificationAndAccount79> value) {
+			obj.setInvestor(value);
 		}
 	};
 	@XmlElement(name = "Buyr")
@@ -205,7 +216,7 @@ public class ConfirmationParties4 {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBuyer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails2>> mmBuyer = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails2>>() {
 		{
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -216,7 +227,17 @@ public class ConfirmationParties4 {
 			definition = "Party that buys goods or services, or a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails2> getValue(ConfirmationParties4 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails2> value) {
+			obj.setBuyer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Brrwr")
@@ -255,7 +276,7 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBorrower = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails2>> mmBorrower = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails2>>() {
 		{
 			businessComponentTrace_lazy = () -> Borrower.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -266,7 +287,17 @@ public class ConfirmationParties4 {
 			definition = "Party that has applied, met specific requirements, and received a monetary or securities loan from a lender. The party initiating the request signs a promissory note agreeing to pay the lien holder back during a specified timeframe for the entire loan amount plus any additional fees. The borrower is legally responsible for repayment of the loan and is subject to any penalties for not repaying the loan back based on the lending terms agreed upon.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails2> getValue(ConfirmationParties4 obj) {
+			return obj.getBorrower();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails2> value) {
+			obj.setBorrower(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sellr")
@@ -304,7 +335,7 @@ public class ConfirmationParties4 {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSeller = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails2>> mmSeller = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails2>>() {
 		{
 			businessComponentTrace_lazy = () -> SellerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -315,7 +346,17 @@ public class ConfirmationParties4 {
 			definition = "Party that sells goods or services, or a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails2> getValue(ConfirmationParties4 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails2> value) {
+			obj.setSeller(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lndr")
@@ -354,7 +395,7 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLender = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails2>> mmLender = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails2>>() {
 		{
 			businessComponentTrace_lazy = () -> Lender.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -365,7 +406,17 @@ public class ConfirmationParties4 {
 			definition = "A private, public or institutional entity which makes funds available to others to borrow.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails2.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails2.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails2> getValue(ConfirmationParties4 obj) {
+			return obj.getLender();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails2> value) {
+			obj.setLender(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BrkrOfCdt")
@@ -404,7 +455,7 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBrokerOfCredit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails3>> mmBrokerOfCredit = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails3>>() {
 		{
 			businessComponentTrace_lazy = () -> Broker.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -415,7 +466,17 @@ public class ConfirmationParties4 {
 			definition = "Brokerage firm which is the commissioned broker in a multi-broker trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails3.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails3> getValue(ConfirmationParties4 obj) {
+			return obj.getBrokerOfCredit();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails3> value) {
+			obj.setBrokerOfCredit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrdcgFirm")
@@ -455,7 +516,7 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntroducingFirm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails3>> mmIntroducingFirm = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails3>>() {
 		{
 			businessComponentTrace_lazy = () -> IntroducingFirm.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -466,7 +527,17 @@ public class ConfirmationParties4 {
 			definition = "Broker or other intermediary with the closest association with the investor.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails3.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails3> getValue(ConfirmationParties4 obj) {
+			return obj.getIntroducingFirm();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails3> value) {
+			obj.setIntroducingFirm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StepInFirm")
@@ -505,7 +576,7 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStepInFirm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails1>> mmStepInFirm = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails1>>() {
 		{
 			businessComponentTrace_lazy = () -> StepInBroker.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -516,7 +587,17 @@ public class ConfirmationParties4 {
 			definition = "Brokerage firm assigned to take credit on the trade from the step-out brokerage firm.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails1.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails1> getValue(ConfirmationParties4 obj) {
+			return obj.getStepInFirm();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails1> value) {
+			obj.setStepInFirm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StepOutFirm")
@@ -556,7 +637,7 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStepOutFirm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails1>> mmStepOutFirm = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails1>>() {
 		{
 			businessComponentTrace_lazy = () -> StepOutBroker.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -567,7 +648,17 @@ public class ConfirmationParties4 {
 			definition = "Brokerage firm that executes an order, but gives other firms credit and some of the commission for the trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails1.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails1> getValue(ConfirmationParties4 obj) {
+			return obj.getStepOutFirm();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails1> value) {
+			obj.setStepOutFirm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClrFirm")
@@ -607,7 +698,7 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingFirm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails6>> mmClearingFirm = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails6>>() {
 		{
 			businessComponentTrace_lazy = () -> ClearingBroker.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -618,7 +709,17 @@ public class ConfirmationParties4 {
 			definition = "Party, also know as take up broker, that settles security transactions from another broker for a fee.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails6.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails6.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails6> getValue(ConfirmationParties4 obj) {
+			return obj.getClearingFirm();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails6> value) {
+			obj.setClearingFirm(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ExctgBrkr")
@@ -658,7 +759,7 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExecutingBroker = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails6>> mmExecutingBroker = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails6>>() {
 		{
 			businessComponentTrace_lazy = () -> ExecutingBrokerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -669,7 +770,17 @@ public class ConfirmationParties4 {
 			definition = "Party responsible for executing an order (for example, an executing or give-up broker). Usually a commission is charged to the client for executing an order.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails6.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails6.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails6> getValue(ConfirmationParties4 obj) {
+			return obj.getExecutingBroker();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails6> value) {
+			obj.setExecutingBroker(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AffrmgPty")
@@ -709,7 +820,7 @@ public class ConfirmationParties4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAffirmingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails3>> mmAffirmingParty = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails3>>() {
 		{
 			businessComponentTrace_lazy = () -> AffirmingPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -720,7 +831,17 @@ public class ConfirmationParties4 {
 			definition = "Party (buyer or seller) that positively affirms the details of a previously agreed security trade confirmation.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails3.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails3> getValue(ConfirmationParties4 obj) {
+			return obj.getAffirmingParty();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails3> value) {
+			obj.setAffirmingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradBnfcryPty")
@@ -759,7 +880,7 @@ public class ConfirmationParties4 {
 	 * "Party involved in a legal proceeding, agreement, or other transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeBeneficiaryParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails3>> mmTradeBeneficiaryParty = new MMMessageAttribute<ConfirmationParties4, Optional<ConfirmationPartyDetails3>>() {
 		{
 			businessComponentTrace_lazy = () -> BeneficialOwner.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationParties4.mmObject();
@@ -770,7 +891,17 @@ public class ConfirmationParties4 {
 			definition = "Party involved in a legal proceeding, agreement, or other transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();
+			complexType_lazy = () -> ConfirmationPartyDetails3.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationPartyDetails3> getValue(ConfirmationParties4 obj) {
+			return obj.getTradeBeneficiaryParty();
+		}
+
+		@Override
+		public void setValue(ConfirmationParties4 obj, Optional<ConfirmationPartyDetails3> value) {
+			obj.setTradeBeneficiaryParty(value.orElse(null));
 		}
 	};
 
@@ -797,7 +928,7 @@ public class ConfirmationParties4 {
 		return investor == null ? investor = new ArrayList<>() : investor;
 	}
 
-	public ConfirmationParties4 setInvestor(List<com.tools20022.repository.msg.PartyIdentificationAndAccount79> investor) {
+	public ConfirmationParties4 setInvestor(List<PartyIdentificationAndAccount79> investor) {
 		this.investor = Objects.requireNonNull(investor);
 		return this;
 	}
@@ -806,7 +937,7 @@ public class ConfirmationParties4 {
 		return buyer == null ? Optional.empty() : Optional.of(buyer);
 	}
 
-	public ConfirmationParties4 setBuyer(com.tools20022.repository.msg.ConfirmationPartyDetails2 buyer) {
+	public ConfirmationParties4 setBuyer(ConfirmationPartyDetails2 buyer) {
 		this.buyer = buyer;
 		return this;
 	}
@@ -815,7 +946,7 @@ public class ConfirmationParties4 {
 		return borrower == null ? Optional.empty() : Optional.of(borrower);
 	}
 
-	public ConfirmationParties4 setBorrower(com.tools20022.repository.msg.ConfirmationPartyDetails2 borrower) {
+	public ConfirmationParties4 setBorrower(ConfirmationPartyDetails2 borrower) {
 		this.borrower = borrower;
 		return this;
 	}
@@ -824,7 +955,7 @@ public class ConfirmationParties4 {
 		return seller == null ? Optional.empty() : Optional.of(seller);
 	}
 
-	public ConfirmationParties4 setSeller(com.tools20022.repository.msg.ConfirmationPartyDetails2 seller) {
+	public ConfirmationParties4 setSeller(ConfirmationPartyDetails2 seller) {
 		this.seller = seller;
 		return this;
 	}
@@ -833,7 +964,7 @@ public class ConfirmationParties4 {
 		return lender == null ? Optional.empty() : Optional.of(lender);
 	}
 
-	public ConfirmationParties4 setLender(com.tools20022.repository.msg.ConfirmationPartyDetails2 lender) {
+	public ConfirmationParties4 setLender(ConfirmationPartyDetails2 lender) {
 		this.lender = lender;
 		return this;
 	}
@@ -842,7 +973,7 @@ public class ConfirmationParties4 {
 		return brokerOfCredit == null ? Optional.empty() : Optional.of(brokerOfCredit);
 	}
 
-	public ConfirmationParties4 setBrokerOfCredit(com.tools20022.repository.msg.ConfirmationPartyDetails3 brokerOfCredit) {
+	public ConfirmationParties4 setBrokerOfCredit(ConfirmationPartyDetails3 brokerOfCredit) {
 		this.brokerOfCredit = brokerOfCredit;
 		return this;
 	}
@@ -851,7 +982,7 @@ public class ConfirmationParties4 {
 		return introducingFirm == null ? Optional.empty() : Optional.of(introducingFirm);
 	}
 
-	public ConfirmationParties4 setIntroducingFirm(com.tools20022.repository.msg.ConfirmationPartyDetails3 introducingFirm) {
+	public ConfirmationParties4 setIntroducingFirm(ConfirmationPartyDetails3 introducingFirm) {
 		this.introducingFirm = introducingFirm;
 		return this;
 	}
@@ -860,7 +991,7 @@ public class ConfirmationParties4 {
 		return stepInFirm == null ? Optional.empty() : Optional.of(stepInFirm);
 	}
 
-	public ConfirmationParties4 setStepInFirm(com.tools20022.repository.msg.ConfirmationPartyDetails1 stepInFirm) {
+	public ConfirmationParties4 setStepInFirm(ConfirmationPartyDetails1 stepInFirm) {
 		this.stepInFirm = stepInFirm;
 		return this;
 	}
@@ -869,7 +1000,7 @@ public class ConfirmationParties4 {
 		return stepOutFirm == null ? Optional.empty() : Optional.of(stepOutFirm);
 	}
 
-	public ConfirmationParties4 setStepOutFirm(com.tools20022.repository.msg.ConfirmationPartyDetails1 stepOutFirm) {
+	public ConfirmationParties4 setStepOutFirm(ConfirmationPartyDetails1 stepOutFirm) {
 		this.stepOutFirm = stepOutFirm;
 		return this;
 	}
@@ -878,7 +1009,7 @@ public class ConfirmationParties4 {
 		return clearingFirm == null ? Optional.empty() : Optional.of(clearingFirm);
 	}
 
-	public ConfirmationParties4 setClearingFirm(com.tools20022.repository.msg.ConfirmationPartyDetails6 clearingFirm) {
+	public ConfirmationParties4 setClearingFirm(ConfirmationPartyDetails6 clearingFirm) {
 		this.clearingFirm = clearingFirm;
 		return this;
 	}
@@ -887,7 +1018,7 @@ public class ConfirmationParties4 {
 		return executingBroker == null ? Optional.empty() : Optional.of(executingBroker);
 	}
 
-	public ConfirmationParties4 setExecutingBroker(com.tools20022.repository.msg.ConfirmationPartyDetails6 executingBroker) {
+	public ConfirmationParties4 setExecutingBroker(ConfirmationPartyDetails6 executingBroker) {
 		this.executingBroker = executingBroker;
 		return this;
 	}
@@ -896,7 +1027,7 @@ public class ConfirmationParties4 {
 		return affirmingParty == null ? Optional.empty() : Optional.of(affirmingParty);
 	}
 
-	public ConfirmationParties4 setAffirmingParty(com.tools20022.repository.msg.ConfirmationPartyDetails3 affirmingParty) {
+	public ConfirmationParties4 setAffirmingParty(ConfirmationPartyDetails3 affirmingParty) {
 		this.affirmingParty = affirmingParty;
 		return this;
 	}
@@ -905,7 +1036,7 @@ public class ConfirmationParties4 {
 		return tradeBeneficiaryParty == null ? Optional.empty() : Optional.of(tradeBeneficiaryParty);
 	}
 
-	public ConfirmationParties4 setTradeBeneficiaryParty(com.tools20022.repository.msg.ConfirmationPartyDetails3 tradeBeneficiaryParty) {
+	public ConfirmationParties4 setTradeBeneficiaryParty(ConfirmationPartyDetails3 tradeBeneficiaryParty) {
 		this.tradeBeneficiaryParty = tradeBeneficiaryParty;
 		return this;
 	}

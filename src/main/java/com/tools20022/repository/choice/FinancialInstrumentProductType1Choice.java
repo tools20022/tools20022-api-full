@@ -111,7 +111,7 @@ public class FinancialInstrumentProductType1Choice {
 	 * definition} = "Identifies the FI product type using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentProductType1Choice, ProductType1Code> mmCode = new MMMessageAttribute<FinancialInstrumentProductType1Choice, ProductType1Code>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentProductType1Choice.mmObject();
@@ -123,6 +123,16 @@ public class FinancialInstrumentProductType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProductType1Code.mmObject();
+		}
+
+		@Override
+		public ProductType1Code getValue(FinancialInstrumentProductType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentProductType1Choice obj, ProductType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -160,7 +170,7 @@ public class FinancialInstrumentProductType1Choice {
 	 * "Identifies the FI product type using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentProductType1Choice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<FinancialInstrumentProductType1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentProductType1Choice.mmObject();
@@ -173,6 +183,16 @@ public class FinancialInstrumentProductType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(FinancialInstrumentProductType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentProductType1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -52,11 +52,15 @@ public class ConstraintOrganisationElementRule {
 	 */
 	public static final MMConstraint<Organisation30> forOrganisation30 = new MMConstraint<Organisation30>() {
 		{
-			validator = ConstraintOrganisationElementRule::checkOrganisation30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationElementRule";
 			definition = "One of the elements (Name, ShortName, Identification, LegalEntityIdentifier, Purpose, RegistrationCountry, RegistrationDate, PostalAddress, TypeOfOrganisation, PlaceOfListing) must be present.";
 			owner_lazy = () -> Organisation30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Organisation30 obj) throws Exception {
+			checkOrganisation30(obj);
 		}
 	};
 	/**
@@ -81,11 +85,15 @@ public class ConstraintOrganisationElementRule {
 	 */
 	public static final MMConstraint<Organisation29> forOrganisation29 = new MMConstraint<Organisation29>() {
 		{
-			validator = ConstraintOrganisationElementRule::checkOrganisation29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationElementRule";
 			definition = "One of the elements (Name, ShortName, Identification, LegalEntityIdentifier, Purpose, RegistrationCountry, RegistrationDate, ModifiedPostalAddress, TypeOfOrganisation, PlaceOfListing) must be present.";
 			owner_lazy = () -> Organisation29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Organisation29 obj) throws Exception {
+			checkOrganisation29(obj);
 		}
 	};
 

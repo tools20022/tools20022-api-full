@@ -25,10 +25,9 @@ import com.tools20022.repository.codeset.SettlementMethodCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
-import com.tools20022.repository.entity.Settlement;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -802,7 +801,7 @@ public class CashSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInterbankSettlementAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CashSettlement, CurrencyAndAmount> mmInterbankSettlementAmount = new MMBusinessAttribute<CashSettlement, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstructionReference1Details.mmInterbankSettlementAmount, PaymentInstructionReference2Details.mmInterbankSettlementAmount,
 					PaymentInstructionReferenceDetails3.mmInterbankSettlementAmount, PaymentInstructionReferenceDetails4.mmInterbankSettlementAmount, LongPaymentIdentification1.mmInterBankSettlementAmount,
@@ -873,12 +872,14 @@ public class CashSettlement extends Settlement {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CashSettlement.class.getMethod("getInterbankSettlementAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(CashSettlement obj) {
+			return obj.getInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, CurrencyAndAmount value) {
+			obj.setInterbankSettlementAmount(value);
 		}
 	};
 	protected ISODateTime interbankSettlementDate;
@@ -1403,7 +1404,7 @@ public class CashSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInterbankSettlementDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CashSettlement, ISODateTime> mmInterbankSettlementDate = new MMBusinessAttribute<CashSettlement, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstructionReference1Details.mmInterbankValueDate, PaymentInstructionReference2Details.mmInterbankValueDate, PaymentInstructionReferenceDetails3.mmInterbankValueDate,
 					PaymentInstructionReferenceDetails4.mmInterbankValueDate, LongPaymentIdentification1.mmInterBankSettlementDate, ShortPaymentIdentification1.mmInterBankSettlementDate, PaymentSearch4.mmInterbankSettlementDate,
@@ -1457,12 +1458,14 @@ public class CashSettlement extends Settlement {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CashSettlement.class.getMethod("getInterbankSettlementDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(CashSettlement obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, ISODateTime value) {
+			obj.setInterbankSettlementDate(value);
 		}
 	};
 	protected Max4AlphaNumericText rTGS;
@@ -1503,7 +1506,7 @@ public class CashSettlement extends Settlement {
 	 * definition} = "Qualifies the RTGS status."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRTGS = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CashSettlement, Max4AlphaNumericText> mmRTGS = new MMBusinessAttribute<CashSettlement, Max4AlphaNumericText>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentStatusCode5Choice.mmRTGS, PaymentStatusCode6Choice.mmRTGS);
 			isDerived = false;
@@ -1516,12 +1519,14 @@ public class CashSettlement extends Settlement {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CashSettlement.class.getMethod("getRTGS", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max4AlphaNumericText getValue(CashSettlement obj) {
+			return obj.getRTGS();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, Max4AlphaNumericText value) {
+			obj.setRTGS(value);
 		}
 	};
 	protected ISODateTime creditDateTime;
@@ -1563,7 +1568,7 @@ public class CashSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCreditDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CashSettlement, ISODateTime> mmCreditDateTime = new MMBusinessAttribute<CashSettlement, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDateTimeIndication1.mmCreditDateTime, PaymentTransactionInformation31.mmOriginalInterbankSettlementDate);
 			isDerived = false;
@@ -1576,12 +1581,14 @@ public class CashSettlement extends Settlement {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CashSettlement.class.getMethod("getCreditDateTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(CashSettlement obj) {
+			return obj.getCreditDateTime();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, ISODateTime value) {
+			obj.setCreditDateTime(value);
 		}
 	};
 	protected PaymentInstruction relatedPaymentInstruction;
@@ -1619,7 +1626,7 @@ public class CashSettlement extends Settlement {
 	 * "PaymentInstruction which is the source of the settlement instruction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedPaymentInstruction = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashSettlement, PaymentInstruction> mmRelatedPaymentInstruction = new MMBusinessAssociationEnd<CashSettlement, PaymentInstruction>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
@@ -1628,9 +1635,19 @@ public class CashSettlement extends Settlement {
 			definition = "PaymentInstruction which is the source of the settlement instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction;
+			opposite_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentInstruction.mmObject();
+			type_lazy = () -> PaymentInstruction.mmObject();
+		}
+
+		@Override
+		public PaymentInstruction getValue(CashSettlement obj) {
+			return obj.getRelatedPaymentInstruction();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, PaymentInstruction value) {
+			obj.setRelatedPaymentInstruction(value);
 		}
 	};
 	protected SettlementMethodCode settlementMethod;
@@ -1711,7 +1728,7 @@ public class CashSettlement extends Settlement {
 	 * "Method used to settle the (batch of) payment instructions."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSettlementMethod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CashSettlement, SettlementMethodCode> mmSettlementMethod = new MMBusinessAttribute<CashSettlement, SettlementMethodCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementInformation3.mmSettlementMethod, SettlementInformation1.mmSettlementMethod, SettlementInformation13.mmSettlementMethod, SettlementInstruction4.mmSettlementMethod,
 					SettlementInstruction1.mmSettlementMethod, SettlementInformation2.mmSettlementMethod, SettlementInformation14.mmSettlementMethod, SettlementInstruction2.mmSettlementMethod, SettlementInformation16.mmSettlementMethod,
@@ -1727,12 +1744,14 @@ public class CashSettlement extends Settlement {
 			simpleType_lazy = () -> SettlementMethodCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CashSettlement.class.getMethod("getSettlementMethod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SettlementMethodCode getValue(CashSettlement obj) {
+			return obj.getSettlementMethod();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, SettlementMethodCode value) {
+			obj.setSettlementMethod(value);
 		}
 	};
 	protected CashAccount settlementAccount;
@@ -1833,7 +1852,7 @@ public class CashSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSettlementAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashSettlement, Optional<CashAccount>> mmSettlementAccount = new MMBusinessAssociationEnd<CashSettlement, Optional<CashAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LocalMarketAnnex2.mmSettlementDetails, SettlementInformation3.mmSettlementAccount, SettlementInformation1.mmSettlementAccount, SettlementInformation13.mmSettlementAccount,
 					SettlementInstruction4.mmSettlementAccount, SettlementInstruction1.mmSettlementAccount, SettlementInformation2.mmSettlementAccount, SettlementInformation14.mmSettlementAccount,
@@ -1847,9 +1866,19 @@ public class CashSettlement extends Settlement {
 			definition = "A specific purpose account used to post debit and credit entries as a result of the transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmRelatedSettlementInstruction;
+			opposite_lazy = () -> CashAccount.mmRelatedSettlementInstruction;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
+			type_lazy = () -> CashAccount.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount> getValue(CashSettlement obj) {
+			return obj.getSettlementAccount();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, Optional<CashAccount> value) {
+			obj.setSettlementAccount(value.orElse(null));
 		}
 	};
 	protected ISODateTime debitDateTime;
@@ -1888,7 +1917,7 @@ public class CashSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmDebitDateTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CashSettlement, ISODateTime> mmDebitDateTime = new MMBusinessAttribute<CashSettlement, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDateTimeIndication1.mmDebitDateTime);
 			isDerived = false;
@@ -1901,15 +1930,17 @@ public class CashSettlement extends Settlement {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CashSettlement.class.getMethod("getDebitDateTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(CashSettlement obj) {
+			return obj.getDebitDateTime();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, ISODateTime value) {
+			obj.setDebitDateTime(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.CashSettlementInstructionPartyRole> partyRole;
+	protected List<CashSettlementInstructionPartyRole> partyRole;
 	/**
 	 * 
 	 <p>
@@ -1961,7 +1992,7 @@ public class CashSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashSettlement, List<CashSettlementInstructionPartyRole>> mmPartyRole = new MMBusinessAssociationEnd<CashSettlement, List<CashSettlementInstructionPartyRole>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingReport1.mmCSDOrNCB, BillingSearchCriteria1.mmCSDOrNCB, BillingSearchCriteria2.mmCSDOrNCB, BillingReport2.mmCSDOrNCB);
 			isDerived = false;
@@ -1970,12 +2001,22 @@ public class CashSettlement extends Settlement {
 			name = "PartyRole";
 			definition = "Specifies each role linked to the settlement of a payment and played by a party at that step in a payment flow.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmSettlementInstruction;
+			opposite_lazy = () -> CashSettlementInstructionPartyRole.mmSettlementInstruction;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmObject();
+			type_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
+		}
+
+		@Override
+		public List<CashSettlementInstructionPartyRole> getValue(CashSettlement obj) {
+			return obj.getPartyRole();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, List<CashSettlementInstructionPartyRole> value) {
+			obj.setPartyRole(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.TransactionAdministrator> relatedTransactionAdministrator;
+	protected List<TransactionAdministrator> relatedTransactionAdministrator;
 	/**
 	 * 
 	 <p>
@@ -2012,7 +2053,7 @@ public class CashSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedTransactionAdministrator = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashSettlement, List<TransactionAdministrator>> mmRelatedTransactionAdministrator = new MMBusinessAssociationEnd<CashSettlement, List<TransactionAdministrator>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
@@ -2020,9 +2061,19 @@ public class CashSettlement extends Settlement {
 			name = "RelatedTransactionAdministrator";
 			definition = "Transaction administrator which manages the related settlement instructions.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmSettlementInstruction;
+			opposite_lazy = () -> TransactionAdministrator.mmSettlementInstruction;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmObject();
+			type_lazy = () -> TransactionAdministrator.mmObject();
+		}
+
+		@Override
+		public List<TransactionAdministrator> getValue(CashSettlement obj) {
+			return obj.getRelatedTransactionAdministrator();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, List<TransactionAdministrator> value) {
+			obj.setRelatedTransactionAdministrator(value);
 		}
 	};
 	protected BookEntry bookEntry;
@@ -2061,7 +2112,7 @@ public class CashSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmBookEntry = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashSettlement, Optional<BookEntry>> mmBookEntry = new MMBusinessAssociationEnd<CashSettlement, Optional<BookEntry>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
@@ -2073,6 +2124,16 @@ public class CashSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.BookEntry.mmRelatedSettlementInstruction;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
+		}
+
+		@Override
+		public Optional<BookEntry> getValue(CashSettlement obj) {
+			return obj.getBookEntry();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, Optional<BookEntry> value) {
+			obj.setBookEntry(value.orElse(null));
 		}
 	};
 	protected PaymentInvestigationCaseResolution relatedInvestigationCase;
@@ -2112,7 +2173,7 @@ public class CashSettlement extends Settlement {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedInvestigationCase = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashSettlement, Optional<PaymentInvestigationCaseResolution>> mmRelatedInvestigationCase = new MMBusinessAssociationEnd<CashSettlement, Optional<PaymentInvestigationCaseResolution>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
@@ -2121,9 +2182,19 @@ public class CashSettlement extends Settlement {
 			definition = "Case resolution which is the source of the correction of a settlement instruction.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmCoverCorrection;
+			opposite_lazy = () -> PaymentInvestigationCaseResolution.mmCoverCorrection;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
+			type_lazy = () -> PaymentInvestigationCaseResolution.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentInvestigationCaseResolution> getValue(CashSettlement obj) {
+			return obj.getRelatedInvestigationCase();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, Optional<PaymentInvestigationCaseResolution> value) {
+			obj.setRelatedInvestigationCase(value.orElse(null));
 		}
 	};
 	protected Reservation reservation;
@@ -2160,7 +2231,7 @@ public class CashSettlement extends Settlement {
 	 * definition} = "Liquidity set aside by the payer for specific purposes."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmReservation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CashSettlement, Optional<Reservation>> mmReservation = new MMBusinessAssociationEnd<CashSettlement, Optional<Reservation>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
@@ -2173,6 +2244,16 @@ public class CashSettlement extends Settlement {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Reservation.mmObject();
 		}
+
+		@Override
+		public Optional<Reservation> getValue(CashSettlement obj) {
+			return obj.getReservation();
+		}
+
+		@Override
+		public void setValue(CashSettlement obj, Optional<Reservation> value) {
+			obj.setReservation(value.orElse(null));
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -2182,10 +2263,9 @@ public class CashSettlement extends Settlement {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSettlement";
 				definition = "Instruction between two financial institutions stipulating the cash transfer characteristics between the two parties.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmRelatedSettlementInstruction, com.tools20022.repository.entity.PaymentInstruction.mmSettlementInstruction,
-						com.tools20022.repository.entity.TransactionAdministrator.mmSettlementInstruction, com.tools20022.repository.entity.Reservation.mmSettlementInstruction,
-						com.tools20022.repository.entity.BookEntry.mmRelatedSettlementInstruction, com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmSettlementInstruction,
-						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmCoverCorrection);
+				associationDomain_lazy = () -> Arrays.asList(CashAccount.mmRelatedSettlementInstruction, PaymentInstruction.mmSettlementInstruction, TransactionAdministrator.mmSettlementInstruction,
+						com.tools20022.repository.entity.Reservation.mmSettlementInstruction, com.tools20022.repository.entity.BookEntry.mmRelatedSettlementInstruction, CashSettlementInstructionPartyRole.mmSettlementInstruction,
+						PaymentInvestigationCaseResolution.mmCoverCorrection);
 				derivationElement_lazy = () -> Arrays.asList(RequestedModification3.mmSettlementInformation, RequestedModification4.mmSettlementInformation, RequestedModification5.mmSettlementInformation,
 						RequestedModification6.mmSettlementInformation, RequestedModification7.mmSettlementInformation);
 				superType_lazy = () -> Settlement.mmObject();
@@ -2249,7 +2329,7 @@ public class CashSettlement extends Settlement {
 		return relatedPaymentInstruction;
 	}
 
-	public CashSettlement setRelatedPaymentInstruction(com.tools20022.repository.entity.PaymentInstruction relatedPaymentInstruction) {
+	public CashSettlement setRelatedPaymentInstruction(PaymentInstruction relatedPaymentInstruction) {
 		this.relatedPaymentInstruction = Objects.requireNonNull(relatedPaymentInstruction);
 		return this;
 	}
@@ -2267,7 +2347,7 @@ public class CashSettlement extends Settlement {
 		return settlementAccount == null ? Optional.empty() : Optional.of(settlementAccount);
 	}
 
-	public CashSettlement setSettlementAccount(com.tools20022.repository.entity.CashAccount settlementAccount) {
+	public CashSettlement setSettlementAccount(CashAccount settlementAccount) {
 		this.settlementAccount = settlementAccount;
 		return this;
 	}
@@ -2285,7 +2365,7 @@ public class CashSettlement extends Settlement {
 		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public CashSettlement setPartyRole(List<com.tools20022.repository.entity.CashSettlementInstructionPartyRole> partyRole) {
+	public CashSettlement setPartyRole(List<CashSettlementInstructionPartyRole> partyRole) {
 		this.partyRole = Objects.requireNonNull(partyRole);
 		return this;
 	}
@@ -2294,7 +2374,7 @@ public class CashSettlement extends Settlement {
 		return relatedTransactionAdministrator == null ? relatedTransactionAdministrator = new ArrayList<>() : relatedTransactionAdministrator;
 	}
 
-	public CashSettlement setRelatedTransactionAdministrator(List<com.tools20022.repository.entity.TransactionAdministrator> relatedTransactionAdministrator) {
+	public CashSettlement setRelatedTransactionAdministrator(List<TransactionAdministrator> relatedTransactionAdministrator) {
 		this.relatedTransactionAdministrator = Objects.requireNonNull(relatedTransactionAdministrator);
 		return this;
 	}
@@ -2312,7 +2392,7 @@ public class CashSettlement extends Settlement {
 		return relatedInvestigationCase == null ? Optional.empty() : Optional.of(relatedInvestigationCase);
 	}
 
-	public CashSettlement setRelatedInvestigationCase(com.tools20022.repository.entity.PaymentInvestigationCaseResolution relatedInvestigationCase) {
+	public CashSettlement setRelatedInvestigationCase(PaymentInvestigationCaseResolution relatedInvestigationCase) {
 		this.relatedInvestigationCase = relatedInvestigationCase;
 		return this;
 	}

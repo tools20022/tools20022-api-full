@@ -139,7 +139,7 @@ public class AccountIdentification32 {
 	 * AccountIdentification18.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification32, Max35Text> mmSafekeepingAccount = new MMMessageAttribute<AccountIdentification32, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification32.mmObject();
@@ -153,6 +153,16 @@ public class AccountIdentification32 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AccountIdentification32 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(AccountIdentification32 obj, Max35Text value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -197,7 +207,7 @@ public class AccountIdentification32 {
 	 * AccountIdentification18.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification32, Optional<PartyIdentification92Choice>> mmAccountOwner = new MMMessageAssociationEnd<AccountIdentification32, Optional<PartyIdentification92Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification32.mmObject();
@@ -212,6 +222,16 @@ public class AccountIdentification32 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification92Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification92Choice> getValue(AccountIdentification32 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(AccountIdentification32 obj, Optional<PartyIdentification92Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -257,7 +277,7 @@ public class AccountIdentification32 {
 	 * AccountIdentification18.mmSafekeepingPlace}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification32, Optional<SafekeepingPlaceFormat8Choice>> mmSafekeepingPlace = new MMMessageAssociationEnd<AccountIdentification32, Optional<SafekeepingPlaceFormat8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSafekeepingPlace;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification32.mmObject();
@@ -272,6 +292,16 @@ public class AccountIdentification32 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SafekeepingPlaceFormat8Choice> getValue(AccountIdentification32 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(AccountIdentification32 obj, Optional<SafekeepingPlaceFormat8Choice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConfdBal", required = true)
@@ -318,7 +348,7 @@ public class AccountIdentification32 {
 	 * AccountIdentification18.mmConfirmedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConfirmedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification32, BalanceFormat5Choice> mmConfirmedBalance = new MMMessageAssociationEnd<AccountIdentification32, BalanceFormat5Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification32.mmObject();
@@ -333,6 +363,16 @@ public class AccountIdentification32 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BalanceFormat5Choice.mmObject();
+		}
+
+		@Override
+		public BalanceFormat5Choice getValue(AccountIdentification32 obj) {
+			return obj.getConfirmedBalance();
+		}
+
+		@Override
+		public void setValue(AccountIdentification32 obj, BalanceFormat5Choice value) {
+			obj.setConfirmedBalance(value);
 		}
 	};
 

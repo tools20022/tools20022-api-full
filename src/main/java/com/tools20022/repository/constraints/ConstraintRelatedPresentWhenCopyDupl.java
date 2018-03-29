@@ -57,12 +57,16 @@ public class ConstraintRelatedPresentWhenCopyDupl {
 	 */
 	public static final MMConstraint<BusinessApplicationHeaderV01> forBusinessApplicationHeaderV01 = new MMConstraint<BusinessApplicationHeaderV01>() {
 		{
-			validator = ConstraintRelatedPresentWhenCopyDupl::checkBusinessApplicationHeaderV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPresentWhenCopyDupl";
 			definition = "Related MUST contain the relevant BusinessMessageHeader elements of the BusinessMessage to which this BusinessMessage relates.\r\n\r\nIf CopyDuplicate is present, then Related MUST be present.";
 			owner_lazy = () -> BusinessApplicationHeaderV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Related</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CopyDuplicate</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BusinessApplicationHeaderV01 obj) throws Exception {
+			checkBusinessApplicationHeaderV01(obj);
 		}
 	};
 

@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.PaymentInstruction13;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.SystemMember2;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -118,7 +117,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "BackupPaymentV06"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -156,7 +155,7 @@ public class BackupPaymentV06 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BackupPaymentV06, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<BackupPaymentV06, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,12 +166,14 @@ public class BackupPaymentV06 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BackupPaymentV06.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(BackupPaymentV06 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(BackupPaymentV06 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgId")
@@ -201,7 +202,7 @@ public class BackupPaymentV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BackupPaymentV06, Optional<MessageHeader1>> mmOriginalMessageIdentification = new MMMessageBuildingBlock<BackupPaymentV06, Optional<MessageHeader1>>() {
 		{
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +213,14 @@ public class BackupPaymentV06 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BackupPaymentV06.class.getMethod("getOriginalMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<MessageHeader1> getValue(BackupPaymentV06 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(BackupPaymentV06 obj, Optional<MessageHeader1> value) {
+			obj.setOriginalMessageIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrInf")
@@ -247,7 +250,7 @@ public class BackupPaymentV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstructionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BackupPaymentV06, Optional<PaymentInstruction13>> mmInstructionInformation = new MMMessageBuildingBlock<BackupPaymentV06, Optional<PaymentInstruction13>>() {
 		{
 			xmlTag = "InstrInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,12 +261,14 @@ public class BackupPaymentV06 {
 			complexType_lazy = () -> PaymentInstruction13.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BackupPaymentV06.class.getMethod("getInstructionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PaymentInstruction13> getValue(BackupPaymentV06 obj) {
+			return obj.getInstructionInformation();
+		}
+
+		@Override
+		public void setValue(BackupPaymentV06 obj, Optional<PaymentInstruction13> value) {
+			obj.setInstructionInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfdAmt", required = true)
@@ -293,7 +298,7 @@ public class BackupPaymentV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferredAmount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BackupPaymentV06, Amount2Choice> mmTransferredAmount = new MMMessageBuildingBlock<BackupPaymentV06, Amount2Choice>() {
 		{
 			xmlTag = "TrfdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,12 +309,14 @@ public class BackupPaymentV06 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BackupPaymentV06.class.getMethod("getTransferredAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Amount2Choice getValue(BackupPaymentV06 obj) {
+			return obj.getTransferredAmount();
+		}
+
+		@Override
+		public void setValue(BackupPaymentV06 obj, Amount2Choice value) {
+			obj.setTransferredAmount(value);
 		}
 	};
 	@XmlElement(name = "Cdtr", required = true)
@@ -336,7 +343,7 @@ public class BackupPaymentV06 {
 	 * definition} = "Party that receives an amount of money from the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCreditor = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BackupPaymentV06, SystemMember2> mmCreditor = new MMMessageBuildingBlock<BackupPaymentV06, SystemMember2>() {
 		{
 			xmlTag = "Cdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -347,12 +354,14 @@ public class BackupPaymentV06 {
 			complexType_lazy = () -> SystemMember2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BackupPaymentV06.class.getMethod("getCreditor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SystemMember2 getValue(BackupPaymentV06 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(BackupPaymentV06 obj, SystemMember2 value) {
+			obj.setCreditor(value);
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -381,7 +390,7 @@ public class BackupPaymentV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCreditorAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BackupPaymentV06, Optional<SystemMember2>> mmCreditorAgent = new MMMessageBuildingBlock<BackupPaymentV06, Optional<SystemMember2>>() {
 		{
 			xmlTag = "CdtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,12 +401,14 @@ public class BackupPaymentV06 {
 			complexType_lazy = () -> SystemMember2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BackupPaymentV06.class.getMethod("getCreditorAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SystemMember2> getValue(BackupPaymentV06 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(BackupPaymentV06 obj, Optional<SystemMember2> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt")
@@ -426,7 +437,7 @@ public class BackupPaymentV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDebtorAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BackupPaymentV06, Optional<SystemMember2>> mmDebtorAgent = new MMMessageBuildingBlock<BackupPaymentV06, Optional<SystemMember2>>() {
 		{
 			xmlTag = "DbtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,12 +448,14 @@ public class BackupPaymentV06 {
 			complexType_lazy = () -> SystemMember2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BackupPaymentV06.class.getMethod("getDebtorAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SystemMember2> getValue(BackupPaymentV06 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(BackupPaymentV06 obj, Optional<SystemMember2> value) {
+			obj.setDebtorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -472,7 +485,7 @@ public class BackupPaymentV06 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<BackupPaymentV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<BackupPaymentV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -482,19 +495,21 @@ public class BackupPaymentV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return BackupPaymentV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(BackupPaymentV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(BackupPaymentV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BackupPaymentV06";
 				definition = "Scope\r\nThe BackupPayment message is sent by a member to the transaction administrator.\r\nIt is used to request a liquidity transfer from the member to another participant in the system when the user is in recovery mode.\r\nUsage\r\nUnder very specific circumstances, the transaction administrator can accept direct input of transactions as part of its cash management functionalities. This possibility is available only when a declared incident has been reported to the transaction administrator This could be the case, for example, when the internal systems of the member are having problems sending out payments or when the continuity of the whole system is put at risk.\r\nThe purpose of the BackupPayment message is to prevent the consequences of a specific failure affecting not only the member experiencing problems but also its counterparties. Members can therefore input transactions directly in order to ensure the stability of the system and smooth exchanges.\r\nAt any time during the operating hours of the system, and under the agreed circumstances, the member can request a backup payment to be effected.\r\nThe member can request the transfer by identifying the following elements:\r\n- party (account owner) that will receive the funds\r\n- the financial institution that will receive the funds on behalf of the account owner\r\nBased on the criteria received within the BackupPayment message, the transaction administrator will execute or reject the requested funds transfer.\r\nThe transaction administrator may send a Receipt message as a reply to the BackupPayment request.\r\nTo verify the outcome of the request, the member may submit a GetTransaction or GetAccount message with the appropriate search criteria.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

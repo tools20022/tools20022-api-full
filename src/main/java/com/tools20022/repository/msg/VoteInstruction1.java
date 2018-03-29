@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.entity.VotingCondition;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Vote1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -110,7 +111,7 @@ public class VoteInstruction1 {
 	 * definition} = "Identifies the voting instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VoteInstruction1, Max35Text> mmIdentification = new MMMessageAttribute<VoteInstruction1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction1.mmObject();
 			isDerived = false;
@@ -122,9 +123,19 @@ public class VoteInstruction1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Max35Text getValue(VoteInstruction1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(VoteInstruction1 obj, Max35Text value) {
+			obj.setIdentification(value);
+		}
 	};
 	@XmlElement(name = "VotePerRsltn", required = true)
-	protected List<com.tools20022.repository.msg.Vote1> votePerResolution;
+	protected List<Vote1> votePerResolution;
 	/**
 	 * 
 	 <p>
@@ -155,7 +166,7 @@ public class VoteInstruction1 {
 	 * definition} = "Details of the vote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVotePerResolution = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteInstruction1, List<Vote1>> mmVotePerResolution = new MMMessageAssociationEnd<VoteInstruction1, List<Vote1>>() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction1.mmObject();
@@ -167,7 +178,17 @@ public class VoteInstruction1 {
 			maxOccurs = 200;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Vote1.mmObject();
+			type_lazy = () -> Vote1.mmObject();
+		}
+
+		@Override
+		public List<Vote1> getValue(VoteInstruction1 obj) {
+			return obj.getVotePerResolution();
+		}
+
+		@Override
+		public void setValue(VoteInstruction1 obj, List<Vote1> value) {
+			obj.setVotePerResolution(value);
 		}
 	};
 	@XmlElement(name = "IdntyOfHldr")
@@ -204,7 +225,7 @@ public class VoteInstruction1 {
 	 * definition} = "Owner of the voting rights."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentityOfHolder = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<VoteInstruction1, Optional<PartyIdentification7Choice>> mmIdentityOfHolder = new MMMessageAssociationEnd<VoteInstruction1, Optional<PartyIdentification7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction1.mmObject();
@@ -217,6 +238,16 @@ public class VoteInstruction1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification7Choice> getValue(VoteInstruction1 obj) {
+			return obj.getIdentityOfHolder();
+		}
+
+		@Override
+		public void setValue(VoteInstruction1 obj, Optional<PartyIdentification7Choice> value) {
+			obj.setIdentityOfHolder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StgInstr")
@@ -255,7 +286,7 @@ public class VoteInstruction1 {
 	 * "Specifies whether standing instructions have been applied or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStandingInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<VoteInstruction1, Optional<YesNoIndicator>> mmStandingInstruction = new MMMessageAttribute<VoteInstruction1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmStandingVotingInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction1.mmObject();
@@ -267,6 +298,16 @@ public class VoteInstruction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(VoteInstruction1 obj) {
+			return obj.getStandingInstruction();
+		}
+
+		@Override
+		public void setValue(VoteInstruction1 obj, Optional<YesNoIndicator> value) {
+			obj.setStandingInstruction(value.orElse(null));
 		}
 	};
 
@@ -298,7 +339,7 @@ public class VoteInstruction1 {
 		return votePerResolution == null ? votePerResolution = new ArrayList<>() : votePerResolution;
 	}
 
-	public VoteInstruction1 setVotePerResolution(List<com.tools20022.repository.msg.Vote1> votePerResolution) {
+	public VoteInstruction1 setVotePerResolution(List<Vote1> votePerResolution) {
 		this.votePerResolution = Objects.requireNonNull(votePerResolution);
 		return this;
 	}

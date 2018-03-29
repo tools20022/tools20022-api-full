@@ -51,11 +51,15 @@ public class ConstraintMessageNameRule {
 	 */
 	public static final MMConstraint<OrderInstructionStatusReportV02> forOrderInstructionStatusReportV02 = new MMConstraint<OrderInstructionStatusReportV02>() {
 		{
-			validator = ConstraintMessageNameRule::checkOrderInstructionStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNameRule";
 			definition = "If MasterReference is present, then MasterReference/MessageName is not allowed.";
 			owner_lazy = () -> OrderInstructionStatusReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OrderInstructionStatusReportV02 obj) throws Exception {
+			checkOrderInstructionStatusReportV02(obj);
 		}
 	};
 

@@ -117,7 +117,7 @@ public class TaxIdentification1 {
 	 * definition} = "Contains the tax identification number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxIdentification1, Max35Text> mmTaxIdentificationNumber = new MMMessageAttribute<TaxIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxIdentification1.mmObject();
@@ -129,6 +129,16 @@ public class TaxIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TaxIdentification1 obj) {
+			return obj.getTaxIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(TaxIdentification1 obj, Max35Text value) {
+			obj.setTaxIdentificationNumber(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -161,7 +171,7 @@ public class TaxIdentification1 {
 	 * "Description of Tax identification number (eg VAT identifier)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxIdentification1, Max35Text> mmDescription = new MMMessageAttribute<TaxIdentification1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxIdentification1.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class TaxIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TaxIdentification1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(TaxIdentification1 obj, Max35Text value) {
+			obj.setDescription(value);
 		}
 	};
 	@XmlElement(name = "TaxtnCtry", required = true)
@@ -217,7 +237,7 @@ public class TaxIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxationCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxIdentification1, CountryCode> mmTaxationCountry = new MMMessageAttribute<TaxIdentification1, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmTaxationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxIdentification1.mmObject();
@@ -230,6 +250,16 @@ public class TaxIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(TaxIdentification1 obj) {
+			return obj.getTaxationCountry();
+		}
+
+		@Override
+		public void setValue(TaxIdentification1 obj, CountryCode value) {
+			obj.setTaxationCountry(value);
 		}
 	};
 

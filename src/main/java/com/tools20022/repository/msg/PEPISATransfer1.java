@@ -23,6 +23,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument7;
+import com.tools20022.repository.msg.ISAYearsOfIssue;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,7 +116,7 @@ public class PEPISATransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PEPISATransfer1, Max35Text> mmTransferIdentification = new MMMessageAttribute<PEPISATransfer1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer1.mmObject();
 			isDerived = false;
@@ -125,6 +127,16 @@ public class PEPISATransfer1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PEPISATransfer1 obj) {
+			return obj.getTransferIdentification();
+		}
+
+		@Override
+		public void setValue(PEPISATransfer1 obj, Max35Text value) {
+			obj.setTransferIdentification(value);
 		}
 	};
 	@XmlElement(name = "ISA", required = true)
@@ -162,7 +174,7 @@ public class PEPISATransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PEPISATransfer1, ISAYearsOfIssue> mmISA = new MMMessageAssociationEnd<PEPISATransfer1, ISAYearsOfIssue>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer1.mmObject();
@@ -174,7 +186,17 @@ public class PEPISATransfer1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue.mmObject();
+			type_lazy = () -> ISAYearsOfIssue.mmObject();
+		}
+
+		@Override
+		public ISAYearsOfIssue getValue(PEPISATransfer1 obj) {
+			return obj.getISA();
+		}
+
+		@Override
+		public void setValue(PEPISATransfer1 obj, ISAYearsOfIssue value) {
+			obj.setISA(value);
 		}
 	};
 	@XmlElement(name = "PEP", required = true)
@@ -212,7 +234,7 @@ public class PEPISATransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPEP = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PEPISATransfer1, PreviousYearChoice> mmPEP = new MMMessageAssociationEnd<PEPISATransfer1, PreviousYearChoice>() {
 		{
 			businessComponentTrace_lazy = () -> PortfolioTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer1.mmObject();
@@ -226,9 +248,19 @@ public class PEPISATransfer1 {
 			isComposite = true;
 			type_lazy = () -> PreviousYearChoice.mmObject();
 		}
+
+		@Override
+		public PreviousYearChoice getValue(PEPISATransfer1 obj) {
+			return obj.getPEP();
+		}
+
+		@Override
+		public void setValue(PEPISATransfer1 obj, PreviousYearChoice value) {
+			obj.setPEP(value);
+		}
 	};
 	@XmlElement(name = "Assts")
-	protected List<com.tools20022.repository.msg.FinancialInstrument7> assets;
+	protected List<FinancialInstrument7> assets;
 	/**
 	 * 
 	 <p>
@@ -260,7 +292,7 @@ public class PEPISATransfer1 {
 	 * definition} = "Specifies the underlying assets for the PEP or ISA."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAssets = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PEPISATransfer1, List<FinancialInstrument7>> mmAssets = new MMMessageAssociationEnd<PEPISATransfer1, List<FinancialInstrument7>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISATransfer1.mmObject();
@@ -271,7 +303,17 @@ public class PEPISATransfer1 {
 			definition = "Specifies the underlying assets for the PEP or ISA.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument7.mmObject();
+			type_lazy = () -> FinancialInstrument7.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrument7> getValue(PEPISATransfer1 obj) {
+			return obj.getAssets();
+		}
+
+		@Override
+		public void setValue(PEPISATransfer1 obj, List<FinancialInstrument7> value) {
+			obj.setAssets(value);
 		}
 	};
 	/**
@@ -338,7 +380,7 @@ public class PEPISATransfer1 {
 		return iSA;
 	}
 
-	public PEPISATransfer1 setISA(com.tools20022.repository.msg.ISAYearsOfIssue iSA) {
+	public PEPISATransfer1 setISA(ISAYearsOfIssue iSA) {
 		this.iSA = Objects.requireNonNull(iSA);
 		return this;
 	}
@@ -356,7 +398,7 @@ public class PEPISATransfer1 {
 		return assets == null ? assets = new ArrayList<>() : assets;
 	}
 
-	public PEPISATransfer1 setAssets(List<com.tools20022.repository.msg.FinancialInstrument7> assets) {
+	public PEPISATransfer1 setAssets(List<FinancialInstrument7> assets) {
 		this.assets = Objects.requireNonNull(assets);
 		return this;
 	}

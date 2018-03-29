@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -151,7 +150,7 @@ public class ActionReminderV03 {
 	 * definition} = "Identifies the reminder message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReminderIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActionReminderV03, MessageIdentification1> mmReminderIdentification = new MMMessageBuildingBlock<ActionReminderV03, MessageIdentification1>() {
 		{
 			xmlTag = "RmndrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,12 +161,14 @@ public class ActionReminderV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActionReminderV03.class.getMethod("getReminderIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ActionReminderV03 obj) {
+			return obj.getReminderIdentification();
+		}
+
+		@Override
+		public void setValue(ActionReminderV03 obj, MessageIdentification1 value) {
+			obj.setReminderIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -197,7 +198,7 @@ public class ActionReminderV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActionReminderV03, SimpleIdentificationInformation> mmTransactionIdentification = new MMMessageBuildingBlock<ActionReminderV03, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,12 +209,14 @@ public class ActionReminderV03 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActionReminderV03.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(ActionReminderV03 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(ActionReminderV03 obj, SimpleIdentificationInformation value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "EstblishdBaselnId")
@@ -243,7 +246,7 @@ public class ActionReminderV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEstablishedBaselineIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActionReminderV03, Optional<DocumentIdentification3>> mmEstablishedBaselineIdentification = new MMMessageBuildingBlock<ActionReminderV03, Optional<DocumentIdentification3>>() {
 		{
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,12 +257,14 @@ public class ActionReminderV03 {
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActionReminderV03.class.getMethod("getEstablishedBaselineIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification3> getValue(ActionReminderV03 obj) {
+			return obj.getEstablishedBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(ActionReminderV03 obj, Optional<DocumentIdentification3> value) {
+			obj.setEstablishedBaselineIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxSts", required = true)
@@ -288,7 +293,7 @@ public class ActionReminderV03 {
 	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActionReminderV03, TransactionStatus4> mmTransactionStatus = new MMMessageBuildingBlock<ActionReminderV03, TransactionStatus4>() {
 		{
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,12 +304,14 @@ public class ActionReminderV03 {
 			complexType_lazy = () -> TransactionStatus4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActionReminderV03.class.getMethod("getTransactionStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionStatus4 getValue(ActionReminderV03 obj) {
+			return obj.getTransactionStatus();
+		}
+
+		@Override
+		public void setValue(ActionReminderV03 obj, TransactionStatus4 value) {
+			obj.setTransactionStatus(value);
 		}
 	};
 	@XmlElement(name = "UsrTxRef")
@@ -334,7 +341,7 @@ public class ActionReminderV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUserTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActionReminderV03, List<DocumentIdentification5>> mmUserTransactionReference = new MMMessageBuildingBlock<ActionReminderV03, List<DocumentIdentification5>>() {
 		{
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -345,12 +352,14 @@ public class ActionReminderV03 {
 			complexType_lazy = () -> DocumentIdentification5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActionReminderV03.class.getMethod("getUserTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification5> getValue(ActionReminderV03 obj) {
+			return obj.getUserTransactionReference();
+		}
+
+		@Override
+		public void setValue(ActionReminderV03 obj, List<DocumentIdentification5> value) {
+			obj.setUserTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "MsgReqrngActn", required = true)
@@ -378,7 +387,7 @@ public class ActionReminderV03 {
 	 * definition} = "Identifies the message for which an action is required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageRequiringAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActionReminderV03, MessageIdentification1> mmMessageRequiringAction = new MMMessageBuildingBlock<ActionReminderV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgReqrngActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -389,12 +398,14 @@ public class ActionReminderV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActionReminderV03.class.getMethod("getMessageRequiringAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(ActionReminderV03 obj) {
+			return obj.getMessageRequiringAction();
+		}
+
+		@Override
+		public void setValue(ActionReminderV03 obj, MessageIdentification1 value) {
+			obj.setMessageRequiringAction(value);
 		}
 	};
 	@XmlElement(name = "PdgReqForActn", required = true)
@@ -422,7 +433,7 @@ public class ActionReminderV03 {
 	 * definition} = "Next processing step required."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPendingRequestForAction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ActionReminderV03, PendingActivity2> mmPendingRequestForAction = new MMMessageBuildingBlock<ActionReminderV03, PendingActivity2>() {
 		{
 			xmlTag = "PdgReqForActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -433,12 +444,14 @@ public class ActionReminderV03 {
 			complexType_lazy = () -> PendingActivity2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ActionReminderV03.class.getMethod("getPendingRequestForAction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PendingActivity2 getValue(ActionReminderV03 obj) {
+			return obj.getPendingRequestForAction();
+		}
+
+		@Override
+		public void setValue(ActionReminderV03 obj, PendingActivity2 value) {
+			obj.setPendingRequestForAction(value);
 		}
 	};
 

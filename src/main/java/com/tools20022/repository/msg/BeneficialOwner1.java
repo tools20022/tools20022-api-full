@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification16;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -154,7 +156,7 @@ public class BeneficialOwner1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficialOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, PartyIdentification2Choice> mmBeneficialOwnerIdentification = new MMMessageAttribute<BeneficialOwner1, PartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -167,6 +169,16 @@ public class BeneficialOwner1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(BeneficialOwner1 obj) {
+			return obj.getBeneficialOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, PartyIdentification2Choice value) {
+			obj.setBeneficialOwnerIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlId")
@@ -214,7 +226,7 @@ public class BeneficialOwner1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, Optional<GenericIdentification16>> mmAdditionalIdentification = new MMMessageAttribute<BeneficialOwner1, Optional<GenericIdentification16>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -226,7 +238,17 @@ public class BeneficialOwner1 {
 			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmAdditionalIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification16.mmObject();
+			complexType_lazy = () -> GenericIdentification16.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification16> getValue(BeneficialOwner1 obj) {
+			return obj.getAdditionalIdentification();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, Optional<GenericIdentification16> value) {
+			obj.setAdditionalIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ntlty")
@@ -271,7 +293,7 @@ public class BeneficialOwner1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNationality = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, Optional<CountryCode>> mmNationality = new MMMessageAttribute<BeneficialOwner1, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -284,6 +306,16 @@ public class BeneficialOwner1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(BeneficialOwner1 obj) {
+			return obj.getNationality();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, Optional<CountryCode> value) {
+			obj.setNationality(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DmclCtry")
@@ -330,7 +362,7 @@ public class BeneficialOwner1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomicileCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, Optional<CountryCode>> mmDomicileCountry = new MMMessageAttribute<BeneficialOwner1, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmDomicile;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -343,6 +375,16 @@ public class BeneficialOwner1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(BeneficialOwner1 obj) {
+			return obj.getDomicileCountry();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, Optional<CountryCode> value) {
+			obj.setDomicileCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonDmclCtry")
@@ -389,7 +431,7 @@ public class BeneficialOwner1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNonDomicileCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, Optional<CountryCode>> mmNonDomicileCountry = new MMMessageAttribute<BeneficialOwner1, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmNonDomicileCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -402,6 +444,16 @@ public class BeneficialOwner1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(BeneficialOwner1 obj) {
+			return obj.getNonDomicileCountry();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, Optional<CountryCode> value) {
+			obj.setNonDomicileCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertfctnInd")
@@ -449,7 +501,7 @@ public class BeneficialOwner1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, Optional<YesNoIndicator>> mmCertificationIndicator = new MMMessageAttribute<BeneficialOwner1, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -462,6 +514,16 @@ public class BeneficialOwner1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(BeneficialOwner1 obj) {
+			return obj.getCertificationIndicator();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, Optional<YesNoIndicator> value) {
+			obj.setCertificationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertfctnTp")
@@ -507,7 +569,7 @@ public class BeneficialOwner1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, Optional<BeneficiaryCertificationType1FormatChoice>> mmCertificationType = new MMMessageAttribute<BeneficialOwner1, Optional<BeneficiaryCertificationType1FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -520,6 +582,16 @@ public class BeneficialOwner1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BeneficiaryCertificationType1FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<BeneficiaryCertificationType1FormatChoice> getValue(BeneficialOwner1 obj) {
+			return obj.getCertificationType();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, Optional<BeneficiaryCertificationType1FormatChoice> value) {
+			obj.setCertificationType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrtnDtls")
@@ -566,7 +638,7 @@ public class BeneficialOwner1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, Optional<Max350Text>> mmDeclarationDetails = new MMMessageAttribute<BeneficialOwner1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmDeclarationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -579,6 +651,16 @@ public class BeneficialOwner1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(BeneficialOwner1 obj) {
+			return obj.getDeclarationDetails();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, Optional<Max350Text> value) {
+			obj.setDeclarationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyId")
@@ -616,7 +698,7 @@ public class BeneficialOwner1 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, Optional<SecurityIdentification7>> mmSecurityIdentification = new MMMessageAttribute<BeneficialOwner1, Optional<SecurityIdentification7>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -627,7 +709,17 @@ public class BeneficialOwner1 {
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification7> getValue(BeneficialOwner1 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, Optional<SecurityIdentification7> value) {
+			obj.setSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ElctdSctiesQty", required = true)
@@ -666,7 +758,7 @@ public class BeneficialOwner1 {
 	 * "Quantity of securities elected by to the beneficial owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectedSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BeneficialOwner1, UnitOrFaceAmount1Choice> mmElectedSecuritiesQuantity = new MMMessageAttribute<BeneficialOwner1, UnitOrFaceAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficialOwner1.mmObject();
@@ -678,6 +770,16 @@ public class BeneficialOwner1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
+		}
+
+		@Override
+		public UnitOrFaceAmount1Choice getValue(BeneficialOwner1 obj) {
+			return obj.getElectedSecuritiesQuantity();
+		}
+
+		@Override
+		public void setValue(BeneficialOwner1 obj, UnitOrFaceAmount1Choice value) {
+			obj.setElectedSecuritiesQuantity(value);
 		}
 	};
 
@@ -712,7 +814,7 @@ public class BeneficialOwner1 {
 		return additionalIdentification == null ? Optional.empty() : Optional.of(additionalIdentification);
 	}
 
-	public BeneficialOwner1 setAdditionalIdentification(com.tools20022.repository.msg.GenericIdentification16 additionalIdentification) {
+	public BeneficialOwner1 setAdditionalIdentification(GenericIdentification16 additionalIdentification) {
 		this.additionalIdentification = additionalIdentification;
 		return this;
 	}
@@ -775,7 +877,7 @@ public class BeneficialOwner1 {
 		return securityIdentification == null ? Optional.empty() : Optional.of(securityIdentification);
 	}
 
-	public BeneficialOwner1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+	public BeneficialOwner1 setSecurityIdentification(SecurityIdentification7 securityIdentification) {
 		this.securityIdentification = securityIdentification;
 		return this;
 	}

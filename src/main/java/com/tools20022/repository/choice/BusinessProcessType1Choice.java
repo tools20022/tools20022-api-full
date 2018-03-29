@@ -111,7 +111,7 @@ public class BusinessProcessType1Choice {
 	 * definition} = "Business process type is identified using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessProcessType1Choice, BusinessProcessType1Code> mmCode = new MMMessageAttribute<BusinessProcessType1Choice, BusinessProcessType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmBusinessProcessType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessProcessType1Choice.mmObject();
@@ -123,6 +123,16 @@ public class BusinessProcessType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BusinessProcessType1Code.mmObject();
+		}
+
+		@Override
+		public BusinessProcessType1Code getValue(BusinessProcessType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BusinessProcessType1Choice obj, BusinessProcessType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class BusinessProcessType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessProcessType1Choice, GenericIdentification38> mmProprietary = new MMMessageAttribute<BusinessProcessType1Choice, GenericIdentification38>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmBusinessProcessType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessProcessType1Choice.mmObject();
@@ -177,6 +187,16 @@ public class BusinessProcessType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification38.mmObject();
+		}
+
+		@Override
+		public GenericIdentification38 getValue(BusinessProcessType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BusinessProcessType1Choice obj, GenericIdentification38 value) {
+			obj.setProprietary(value);
 		}
 	};
 

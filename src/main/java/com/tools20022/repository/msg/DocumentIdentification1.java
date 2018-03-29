@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.FinancialInstitution;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BICIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class DocumentIdentification1 {
 	 * definition} = "Identification of a set of data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification1, Max35Text> mmIdentification = new MMMessageAttribute<DocumentIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
@@ -136,6 +137,16 @@ public class DocumentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -174,7 +185,7 @@ public class DocumentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification1, Number> mmVersion = new MMMessageAttribute<DocumentIdentification1, Number>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmDocumentVersion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
@@ -186,6 +197,16 @@ public class DocumentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(DocumentIdentification1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification1 obj, Number value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "Submitr", required = true)
@@ -223,7 +244,7 @@ public class DocumentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification1, BICIdentification1> mmSubmitter = new MMMessageAssociationEnd<DocumentIdentification1, BICIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
@@ -235,7 +256,17 @@ public class DocumentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public BICIdentification1 getValue(DocumentIdentification1 obj) {
+			return obj.getSubmitter();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification1 obj, BICIdentification1 value) {
+			obj.setSubmitter(value);
 		}
 	};
 
@@ -277,7 +308,7 @@ public class DocumentIdentification1 {
 		return submitter;
 	}
 
-	public DocumentIdentification1 setSubmitter(com.tools20022.repository.msg.BICIdentification1 submitter) {
+	public DocumentIdentification1 setSubmitter(BICIdentification1 submitter) {
 		this.submitter = Objects.requireNonNull(submitter);
 		return this;
 	}

@@ -29,7 +29,6 @@ class ListBuilderForGeneratedRepository_28 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
-		list.add((T) QuantityBreakdown48.mmObject());
 		list.add((T) SettlementParties64.mmObject());
 		list.add((T) PartyIdentification128.mmObject());
 		list.add((T) PartyIdentificationAndAccount160.mmObject());
@@ -268,6 +267,7 @@ class ListBuilderForGeneratedRepository_28 {
 		list.add((T) CardPaymentTransaction85.mmObject());
 		list.add((T) CurrencyConversion16.mmObject());
 		list.add((T) CardPaymentTransaction86.mmObject());
+		list.add((T) MessageReference2.mmObject());
 		list.add((T) SupplementaryDataContents1.mmObject());
 		list.add((T) ExtensionContents1.mmObject());
 		list.add((T) SkipProcessing.mmObject());

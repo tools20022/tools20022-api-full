@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header31;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -120,7 +119,7 @@ public class ATMDepositResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMDepositResponseV01, Header31> mmHeader = new MMMessageBuildingBlock<ATMDepositResponseV01, Header31>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,12 +130,14 @@ public class ATMDepositResponseV01 {
 			complexType_lazy = () -> Header31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMDepositResponseV01.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header31 getValue(ATMDepositResponseV01 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMDepositResponseV01 obj, Header31 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "PrtctdATMDpstRspn")
@@ -164,7 +165,7 @@ public class ATMDepositResponseV01 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProtectedATMDepositResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMDepositResponseV01, Optional<ContentInformationType10>> mmProtectedATMDepositResponse = new MMMessageBuildingBlock<ATMDepositResponseV01, Optional<ContentInformationType10>>() {
 		{
 			xmlTag = "PrtctdATMDpstRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +176,14 @@ public class ATMDepositResponseV01 {
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMDepositResponseV01.class.getMethod("getProtectedATMDepositResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMDepositResponseV01 obj) {
+			return obj.getProtectedATMDepositResponse();
+		}
+
+		@Override
+		public void setValue(ATMDepositResponseV01 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedATMDepositResponse(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMDpstRspn")
@@ -208,7 +211,7 @@ public class ATMDepositResponseV01 {
 	 * definition} = "Response to a deposit request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMDepositResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMDepositResponseV01, Optional<ATMDepositResponse1>> mmATMDepositResponse = new MMMessageBuildingBlock<ATMDepositResponseV01, Optional<ATMDepositResponse1>>() {
 		{
 			xmlTag = "ATMDpstRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,12 +222,14 @@ public class ATMDepositResponseV01 {
 			complexType_lazy = () -> ATMDepositResponse1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMDepositResponseV01.class.getMethod("getATMDepositResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ATMDepositResponse1> getValue(ATMDepositResponseV01 obj) {
+			return obj.getATMDepositResponse();
+		}
+
+		@Override
+		public void setValue(ATMDepositResponseV01 obj, Optional<ATMDepositResponse1> value) {
+			obj.setATMDepositResponse(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -252,7 +257,7 @@ public class ATMDepositResponseV01 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMDepositResponseV01, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<ATMDepositResponseV01, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,12 +268,14 @@ public class ATMDepositResponseV01 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMDepositResponseV01.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(ATMDepositResponseV01 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ATMDepositResponseV01 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

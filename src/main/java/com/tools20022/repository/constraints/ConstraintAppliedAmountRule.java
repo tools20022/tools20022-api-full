@@ -54,12 +54,16 @@ public class ConstraintAppliedAmountRule {
 	 */
 	public static final MMConstraint<Fee2> forFee2 = new MMConstraint<Fee2>() {
 		{
-			validator = ConstraintAppliedAmountRule::checkFee2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedAmountRule";
 			definition = "If InformativeIndicator is \"false\" or \"0\" (No), then AppliedAmount must be present.";
 			owner_lazy = () -> Fee2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AppliedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InformativeIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InformativeIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Fee2 obj) throws Exception {
+			checkFee2(obj);
 		}
 	};
 

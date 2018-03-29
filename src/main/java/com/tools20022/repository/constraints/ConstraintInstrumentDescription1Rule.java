@@ -56,11 +56,15 @@ public class ConstraintInstrumentDescription1Rule {
 	 */
 	public static final MMConstraint<FinancialInstrument14> forFinancialInstrument14 = new MMConstraint<FinancialInstrument14>() {
 		{
-			validator = ConstraintInstrumentDescription1Rule::checkFinancialInstrument14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentDescription1Rule";
 			definition = "InstrumentDescription may be present if either Identification/ISIN or Identification/OtherIdentification or UnderlyingInstrumentIdentification/ISIN or UnderlyingInstrumentIdentification/OtherIdentification is present. InstrumentDescription may not be present if Identification/InstrumentDescription or UnderlyingInstrumentIdentification/InstrumentDescription is present.";
 			owner_lazy = () -> FinancialInstrument14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument14 obj) throws Exception {
+			checkFinancialInstrument14(obj);
 		}
 	};
 	/**
@@ -86,11 +90,15 @@ public class ConstraintInstrumentDescription1Rule {
 	 */
 	public static final MMConstraint<FinancialInstrument15> forFinancialInstrument15 = new MMConstraint<FinancialInstrument15>() {
 		{
-			validator = ConstraintInstrumentDescription1Rule::checkFinancialInstrument15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentDescription1Rule";
 			definition = "InstrumentDescription may be present if either Identification/ISIN or Identification/OtherIdentification or UnderlyingInstrumentIdentification/ISIN or UnderlyingInstrumentIdentification/OtherIdentification is present. InstrumentDescription may not be present if Identification/InstrumentDescription or UnderlyingInstrumentIdentification/InstrumentDescription is present.";
 			owner_lazy = () -> FinancialInstrument15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument15 obj) throws Exception {
+			checkFinancialInstrument15(obj);
 		}
 	};
 

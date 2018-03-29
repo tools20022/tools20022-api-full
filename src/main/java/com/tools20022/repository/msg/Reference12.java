@@ -111,7 +111,7 @@ public class Reference12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference12, Optional<Max35Text>> mmBidIdentification = new MMMessageAttribute<Reference12, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class Reference12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference12 obj) {
+			return obj.getBidIdentification();
+		}
+
+		@Override
+		public void setValue(Reference12 obj, Optional<Max35Text> value) {
+			obj.setBidIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClntBidId")
@@ -157,7 +167,7 @@ public class Reference12 {
 	 * "Unique identifier for a bid request as assigned by institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference12, Optional<Max35Text>> mmClientBidIdentification = new MMMessageAttribute<Reference12, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class Reference12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference12 obj) {
+			return obj.getClientBidIdentification();
+		}
+
+		@Override
+		public void setValue(Reference12 obj, Optional<Max35Text> value) {
+			obj.setClientBidIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IOIId", required = true)
@@ -204,7 +224,7 @@ public class Reference12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIOIIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference12, Max35Text> mmIOIIdentification = new MMMessageAttribute<Reference12, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
@@ -216,6 +236,16 @@ public class Reference12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference12 obj) {
+			return obj.getIOIIdentification();
+		}
+
+		@Override
+		public void setValue(Reference12 obj, Max35Text value) {
+			obj.setIOIIdentification(value);
 		}
 	};
 	@XmlElement(name = "QtId", required = true)
@@ -250,7 +280,7 @@ public class Reference12 {
 	 * "Unique identifier for quote. Required for previously quoted orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference12, Max35Text> mmQuoteIdentification = new MMMessageAttribute<Reference12, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
@@ -262,6 +292,16 @@ public class Reference12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference12 obj) {
+			return obj.getQuoteIdentification();
+		}
+
+		@Override
+		public void setValue(Reference12 obj, Max35Text value) {
+			obj.setQuoteIdentification(value);
 		}
 	};
 	@XmlElement(name = "RefOrdrId", required = true)
@@ -295,7 +335,7 @@ public class Reference12 {
 	 * definition} = "Unique identifier of the order being hit or taken."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference12, Max35Text> mmReferenceOrderIdentification = new MMMessageAttribute<Reference12, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference12.mmObject();
 			isDerived = false;
@@ -307,6 +347,16 @@ public class Reference12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference12 obj) {
+			return obj.getReferenceOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Reference12 obj, Max35Text value) {
+			obj.setReferenceOrderIdentification(value);
 		}
 	};
 

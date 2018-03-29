@@ -53,11 +53,15 @@ public class ConstraintRequestResponderRule {
 	 */
 	public static final MMConstraint<ForeignExchangeTradeCaptureReportV01> forForeignExchangeTradeCaptureReportV01 = new MMConstraint<ForeignExchangeTradeCaptureReportV01>() {
 		{
-			validator = ConstraintRequestResponderRule::checkForeignExchangeTradeCaptureReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestResponderRule";
 			definition = "If RequestResponder is \"true\" or \"1\" (Yes), then Reference and Request Rejected must be present.\r\nIf RequestResponder is \"false\" or \"0\" (No), then TradeDetail and TradingSideIdentification and CounterpartySideIdentification must be present.";
 			owner_lazy = () -> ForeignExchangeTradeCaptureReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTradeCaptureReportV01 obj) throws Exception {
+			checkForeignExchangeTradeCaptureReportV01(obj);
 		}
 	};
 

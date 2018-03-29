@@ -24,6 +24,7 @@ import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.area.setr.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BICIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -314,7 +315,7 @@ public class CopyInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CopyInformation2, YesNoIndicator> mmCopyIndicator = new MMMessageAttribute<CopyInformation2, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CopyInformation2.mmObject();
 			isDerived = false;
@@ -326,6 +327,16 @@ public class CopyInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CopyInformation2 obj) {
+			return obj.getCopyIndicator();
+		}
+
+		@Override
+		public void setValue(CopyInformation2 obj, YesNoIndicator value) {
+			obj.setCopyIndicator(value);
 		}
 	};
 	@XmlElement(name = "OrgnlRcvr")
@@ -367,7 +378,7 @@ public class CopyInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalReceiver = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CopyInformation2, Optional<BICIdentification1>> mmOriginalReceiver = new MMMessageAttribute<CopyInformation2, Optional<BICIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CopyInformation2.mmObject();
 			isDerived = false;
@@ -378,7 +389,17 @@ public class CopyInformation2 {
 			nextVersions_lazy = () -> Arrays.asList(CopyInformation4.mmOriginalReceiver);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			complexType_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentification1> getValue(CopyInformation2 obj) {
+			return obj.getOriginalReceiver();
+		}
+
+		@Override
+		public void setValue(CopyInformation2 obj, Optional<BICIdentification1> value) {
+			obj.setOriginalReceiver(value.orElse(null));
 		}
 	};
 
@@ -426,7 +447,7 @@ public class CopyInformation2 {
 		return originalReceiver == null ? Optional.empty() : Optional.of(originalReceiver);
 	}
 
-	public CopyInformation2 setOriginalReceiver(com.tools20022.repository.msg.BICIdentification1 originalReceiver) {
+	public CopyInformation2 setOriginalReceiver(BICIdentification1 originalReceiver) {
 		this.originalReceiver = originalReceiver;
 		return this;
 	}

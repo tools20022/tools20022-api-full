@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header32;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +126,7 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalCompletionAcknowledgementV02, Header32> mmHeader = new MMMessageBuildingBlock<ATMWithdrawalCompletionAcknowledgementV02, Header32>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 			complexType_lazy = () -> Header32.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalCompletionAcknowledgementV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header32 getValue(ATMWithdrawalCompletionAcknowledgementV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAcknowledgementV02 obj, Header32 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "PrtctdATMWdrwlCmpltnAck")
@@ -171,7 +172,7 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProtectedATMWithdrawalCompletionAcknowledgement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalCompletionAcknowledgementV02, Optional<ContentInformationType10>> mmProtectedATMWithdrawalCompletionAcknowledgement = new MMMessageBuildingBlock<ATMWithdrawalCompletionAcknowledgementV02, Optional<ContentInformationType10>>() {
 		{
 			xmlTag = "PrtctdATMWdrwlCmpltnAck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,12 +183,14 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalCompletionAcknowledgementV02.class.getMethod("getProtectedATMWithdrawalCompletionAcknowledgement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMWithdrawalCompletionAcknowledgementV02 obj) {
+			return obj.getProtectedATMWithdrawalCompletionAcknowledgement();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAcknowledgementV02 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedATMWithdrawalCompletionAcknowledgement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMWdrwlCmpltnAck")
@@ -217,7 +220,7 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMWithdrawalCompletionAcknowledgement = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalCompletionAcknowledgementV02, Optional<ATMWithdrawalCompletionAcknowledgement2>> mmATMWithdrawalCompletionAcknowledgement = new MMMessageBuildingBlock<ATMWithdrawalCompletionAcknowledgementV02, Optional<ATMWithdrawalCompletionAcknowledgement2>>() {
 		{
 			xmlTag = "ATMWdrwlCmpltnAck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,12 +231,14 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 			complexType_lazy = () -> ATMWithdrawalCompletionAcknowledgement2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalCompletionAcknowledgementV02.class.getMethod("getATMWithdrawalCompletionAcknowledgement", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ATMWithdrawalCompletionAcknowledgement2> getValue(ATMWithdrawalCompletionAcknowledgementV02 obj) {
+			return obj.getATMWithdrawalCompletionAcknowledgement();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAcknowledgementV02 obj, Optional<ATMWithdrawalCompletionAcknowledgement2> value) {
+			obj.setATMWithdrawalCompletionAcknowledgement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -261,7 +266,7 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalCompletionAcknowledgementV02, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<ATMWithdrawalCompletionAcknowledgementV02, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +277,14 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalCompletionAcknowledgementV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(ATMWithdrawalCompletionAcknowledgementV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalCompletionAcknowledgementV02 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

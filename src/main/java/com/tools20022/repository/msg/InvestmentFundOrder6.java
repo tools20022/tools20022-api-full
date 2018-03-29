@@ -130,7 +130,7 @@ public class InvestmentFundOrder6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder6, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<InvestmentFundOrder6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder6.mmObject();
@@ -142,6 +142,16 @@ public class InvestmentFundOrder6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundOrder6 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder6 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRef", required = true)
@@ -180,7 +190,7 @@ public class InvestmentFundOrder6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder6, Max35Text> mmOrderReference = new MMMessageAttribute<InvestmentFundOrder6, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder6.mmObject();
@@ -192,6 +202,16 @@ public class InvestmentFundOrder6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InvestmentFundOrder6 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder6 obj, Max35Text value) {
+			obj.setOrderReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -230,7 +250,7 @@ public class InvestmentFundOrder6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder6, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<InvestmentFundOrder6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder6.mmObject();
@@ -242,6 +262,16 @@ public class InvestmentFundOrder6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundOrder6 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder6 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -280,7 +310,7 @@ public class InvestmentFundOrder6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder6, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<InvestmentFundOrder6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmCancellationRequestIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder6.mmObject();
@@ -292,6 +322,16 @@ public class InvestmentFundOrder6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFundOrder6 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder6 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrTp", required = true)
@@ -330,7 +370,7 @@ public class InvestmentFundOrder6 {
 	 * "Specifies the kind of order for which the cancellation is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder6, FundOrderType1Code> mmOrderType = new MMMessageAttribute<InvestmentFundOrder6, FundOrderType1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder6.mmObject();
@@ -342,6 +382,16 @@ public class InvestmentFundOrder6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType1Code.mmObject();
+		}
+
+		@Override
+		public FundOrderType1Code getValue(InvestmentFundOrder6 obj) {
+			return obj.getOrderType();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder6 obj, FundOrderType1Code value) {
+			obj.setOrderType(value);
 		}
 	};
 	@XmlElement(name = "AmdmntInd")
@@ -376,7 +426,7 @@ public class InvestmentFundOrder6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundOrder6, Optional<YesNoIndicator>> mmAmendmentIndicator = new MMMessageAttribute<InvestmentFundOrder6, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder6.mmObject();
 			isDerived = false;
@@ -387,6 +437,16 @@ public class InvestmentFundOrder6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(InvestmentFundOrder6 obj) {
+			return obj.getAmendmentIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder6 obj, Optional<YesNoIndicator> value) {
+			obj.setAmendmentIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrDtls")
@@ -424,7 +484,7 @@ public class InvestmentFundOrder6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFundOrder6, Optional<SubscriptionOrRedemptionOrSwitchOrderDataChoice>> mmOrderDetails = new MMMessageAssociationEnd<InvestmentFundOrder6, Optional<SubscriptionOrRedemptionOrSwitchOrderDataChoice>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmRelatedTransaction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrder6.mmObject();
@@ -437,6 +497,16 @@ public class InvestmentFundOrder6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SubscriptionOrRedemptionOrSwitchOrderDataChoice> getValue(InvestmentFundOrder6 obj) {
+			return obj.getOrderDetails();
+		}
+
+		@Override
+		public void setValue(InvestmentFundOrder6 obj, Optional<SubscriptionOrRedemptionOrSwitchOrderDataChoice> value) {
+			obj.setOrderDetails(value.orElse(null));
 		}
 	};
 

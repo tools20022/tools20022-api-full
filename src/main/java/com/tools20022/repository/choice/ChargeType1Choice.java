@@ -105,7 +105,7 @@ public class ChargeType1Choice {
 	 * definition} = "Type of service for which a charge is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType1Choice, ChargeType13Code> mmType = new MMMessageAttribute<ChargeType1Choice, ChargeType13Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeType1Choice.mmObject();
@@ -117,6 +117,16 @@ public class ChargeType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType13Code.mmObject();
+		}
+
+		@Override
+		public ChargeType13Code getValue(ChargeType1Choice obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ChargeType1Choice obj, ChargeType13Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -154,7 +164,7 @@ public class ChargeType1Choice {
 	 * definition} = "Type of service for which a charge is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeType1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<ChargeType1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeType1Choice.mmObject();
@@ -166,6 +176,16 @@ public class ChargeType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(ChargeType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ChargeType1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

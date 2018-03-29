@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -157,7 +158,7 @@ public class TotalValueInPageAndStatement2 {
 	 * definition} = "Total value of positions reported in this message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalHoldingsValueOfPage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalValueInPageAndStatement2, Optional<AmountAndDirection6>> mmTotalHoldingsValueOfPage = new MMMessageAttribute<TotalValueInPageAndStatement2, Optional<AmountAndDirection6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement2.mmObject();
 			isDerived = false;
@@ -167,7 +168,17 @@ public class TotalValueInPageAndStatement2 {
 			definition = "Total value of positions reported in this message.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			complexType_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection6> getValue(TotalValueInPageAndStatement2 obj) {
+			return obj.getTotalHoldingsValueOfPage();
+		}
+
+		@Override
+		public void setValue(TotalValueInPageAndStatement2 obj, Optional<AmountAndDirection6> value) {
+			obj.setTotalHoldingsValueOfPage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlHldgsValOfStmt", required = true)
@@ -202,7 +213,7 @@ public class TotalValueInPageAndStatement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalHoldingsValueOfStatement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalValueInPageAndStatement2, AmountAndDirection6> mmTotalHoldingsValueOfStatement = new MMMessageAttribute<TotalValueInPageAndStatement2, AmountAndDirection6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement2.mmObject();
 			isDerived = false;
@@ -212,7 +223,17 @@ public class TotalValueInPageAndStatement2 {
 			definition = "Total value of positions reported in this statement (a statement may comprise one or more messages).";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			complexType_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(TotalValueInPageAndStatement2 obj) {
+			return obj.getTotalHoldingsValueOfStatement();
+		}
+
+		@Override
+		public void setValue(TotalValueInPageAndStatement2 obj, AmountAndDirection6 value) {
+			obj.setTotalHoldingsValueOfStatement(value);
 		}
 	};
 	@XmlElement(name = "TtlBookValOfStmt")
@@ -247,7 +268,7 @@ public class TotalValueInPageAndStatement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalBookValueOfStatement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalValueInPageAndStatement2, Optional<AmountAndDirection6>> mmTotalBookValueOfStatement = new MMMessageAttribute<TotalValueInPageAndStatement2, Optional<AmountAndDirection6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement2.mmObject();
 			isDerived = false;
@@ -257,7 +278,17 @@ public class TotalValueInPageAndStatement2 {
 			definition = "Total book value of positions reported in this statement (a statement may comprise one or more messages).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			complexType_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection6> getValue(TotalValueInPageAndStatement2 obj) {
+			return obj.getTotalBookValueOfStatement();
+		}
+
+		@Override
+		public void setValue(TotalValueInPageAndStatement2 obj, Optional<AmountAndDirection6> value) {
+			obj.setTotalBookValueOfStatement(value.orElse(null));
 		}
 	};
 
@@ -286,7 +317,7 @@ public class TotalValueInPageAndStatement2 {
 		return totalHoldingsValueOfPage == null ? Optional.empty() : Optional.of(totalHoldingsValueOfPage);
 	}
 
-	public TotalValueInPageAndStatement2 setTotalHoldingsValueOfPage(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfPage) {
+	public TotalValueInPageAndStatement2 setTotalHoldingsValueOfPage(AmountAndDirection6 totalHoldingsValueOfPage) {
 		this.totalHoldingsValueOfPage = totalHoldingsValueOfPage;
 		return this;
 	}
@@ -295,7 +326,7 @@ public class TotalValueInPageAndStatement2 {
 		return totalHoldingsValueOfStatement;
 	}
 
-	public TotalValueInPageAndStatement2 setTotalHoldingsValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalHoldingsValueOfStatement) {
+	public TotalValueInPageAndStatement2 setTotalHoldingsValueOfStatement(AmountAndDirection6 totalHoldingsValueOfStatement) {
 		this.totalHoldingsValueOfStatement = Objects.requireNonNull(totalHoldingsValueOfStatement);
 		return this;
 	}
@@ -304,7 +335,7 @@ public class TotalValueInPageAndStatement2 {
 		return totalBookValueOfStatement == null ? Optional.empty() : Optional.of(totalBookValueOfStatement);
 	}
 
-	public TotalValueInPageAndStatement2 setTotalBookValueOfStatement(com.tools20022.repository.msg.AmountAndDirection6 totalBookValueOfStatement) {
+	public TotalValueInPageAndStatement2 setTotalBookValueOfStatement(AmountAndDirection6 totalBookValueOfStatement) {
 		this.totalBookValueOfStatement = totalBookValueOfStatement;
 		return this;
 	}

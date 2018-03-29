@@ -104,7 +104,7 @@ public class StressItem1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProduct = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StressItem1Choice, StressedProduct1> mmProduct = new MMMessageAssociationEnd<StressItem1Choice, StressedProduct1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StressItem1Choice.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class StressItem1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StressedProduct1.mmObject();
+		}
+
+		@Override
+		public StressedProduct1 getValue(StressItem1Choice obj) {
+			return obj.getProduct();
+		}
+
+		@Override
+		public void setValue(StressItem1Choice obj, StressedProduct1 value) {
+			obj.setProduct(value);
 		}
 	};
 	@XmlElement(name = "Strtgy", required = true)
@@ -147,7 +157,7 @@ public class StressItem1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStrategy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StressItem1Choice, Strategy1> mmStrategy = new MMMessageAssociationEnd<StressItem1Choice, Strategy1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StressItem1Choice.mmObject();
 			isDerived = false;
@@ -159,6 +169,16 @@ public class StressItem1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Strategy1.mmObject();
+		}
+
+		@Override
+		public Strategy1 getValue(StressItem1Choice obj) {
+			return obj.getStrategy();
+		}
+
+		@Override
+		public void setValue(StressItem1Choice obj, Strategy1 value) {
+			obj.setStrategy(value);
 		}
 	};
 	@XmlElement(name = "RskFctr", required = true)
@@ -191,7 +211,7 @@ public class StressItem1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRiskFactor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StressItem1Choice, RiskFactor1> mmRiskFactor = new MMMessageAssociationEnd<StressItem1Choice, RiskFactor1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StressItem1Choice.mmObject();
 			isDerived = false;
@@ -203,6 +223,16 @@ public class StressItem1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RiskFactor1.mmObject();
+		}
+
+		@Override
+		public RiskFactor1 getValue(StressItem1Choice obj) {
+			return obj.getRiskFactor();
+		}
+
+		@Override
+		public void setValue(StressItem1Choice obj, RiskFactor1 value) {
+			obj.setRiskFactor(value);
 		}
 	};
 

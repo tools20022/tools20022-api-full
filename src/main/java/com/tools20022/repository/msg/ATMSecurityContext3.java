@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMSecurityScheme3Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMEquipment3;
+import com.tools20022.repository.msg.ATMSecurityConfiguration1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +115,7 @@ public class ATMSecurityContext3 {
 	 * ATMSecurityContext2.mmCurrentSecurityScheme}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentSecurityScheme = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityContext3, ATMSecurityScheme3Code> mmCurrentSecurityScheme = new MMMessageAttribute<ATMSecurityContext3, ATMSecurityScheme3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext3.mmObject();
 			isDerived = false;
@@ -125,6 +127,16 @@ public class ATMSecurityContext3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMSecurityScheme3Code.mmObject();
+		}
+
+		@Override
+		public ATMSecurityScheme3Code getValue(ATMSecurityContext3 obj) {
+			return obj.getCurrentSecurityScheme();
+		}
+
+		@Override
+		public void setValue(ATMSecurityContext3 obj, ATMSecurityScheme3Code value) {
+			obj.setCurrentSecurityScheme(value);
 		}
 	};
 	@XmlElement(name = "DvcPrprty")
@@ -162,7 +174,7 @@ public class ATMSecurityContext3 {
 	 * ATMSecurityContext2.mmDeviceProperty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeviceProperty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityContext3, Optional<ATMEquipment3>> mmDeviceProperty = new MMMessageAssociationEnd<ATMSecurityContext3, Optional<ATMEquipment3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext3.mmObject();
 			isDerived = false;
@@ -174,7 +186,17 @@ public class ATMSecurityContext3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
+			type_lazy = () -> ATMEquipment3.mmObject();
+		}
+
+		@Override
+		public Optional<ATMEquipment3> getValue(ATMSecurityContext3 obj) {
+			return obj.getDeviceProperty();
+		}
+
+		@Override
+		public void setValue(ATMSecurityContext3 obj, Optional<ATMEquipment3> value) {
+			obj.setDeviceProperty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CurCfgtn")
@@ -211,7 +233,7 @@ public class ATMSecurityContext3 {
 	 * ATMSecurityContext2.mmCurrentConfiguration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentConfiguration = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMSecurityContext3, Optional<ATMSecurityConfiguration1>> mmCurrentConfiguration = new MMMessageAssociationEnd<ATMSecurityContext3, Optional<ATMSecurityConfiguration1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext3.mmObject();
 			isDerived = false;
@@ -223,7 +245,17 @@ public class ATMSecurityContext3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration1.mmObject();
+			type_lazy = () -> ATMSecurityConfiguration1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMSecurityConfiguration1> getValue(ATMSecurityContext3 obj) {
+			return obj.getCurrentConfiguration();
+		}
+
+		@Override
+		public void setValue(ATMSecurityContext3 obj, Optional<ATMSecurityConfiguration1> value) {
+			obj.setCurrentConfiguration(value.orElse(null));
 		}
 	};
 
@@ -255,7 +287,7 @@ public class ATMSecurityContext3 {
 		return deviceProperty == null ? Optional.empty() : Optional.of(deviceProperty);
 	}
 
-	public ATMSecurityContext3 setDeviceProperty(com.tools20022.repository.msg.ATMEquipment3 deviceProperty) {
+	public ATMSecurityContext3 setDeviceProperty(ATMEquipment3 deviceProperty) {
 		this.deviceProperty = deviceProperty;
 		return this;
 	}
@@ -264,7 +296,7 @@ public class ATMSecurityContext3 {
 		return currentConfiguration == null ? Optional.empty() : Optional.of(currentConfiguration);
 	}
 
-	public ATMSecurityContext3 setCurrentConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 currentConfiguration) {
+	public ATMSecurityContext3 setCurrentConfiguration(ATMSecurityConfiguration1 currentConfiguration) {
 		this.currentConfiguration = currentConfiguration;
 		return this;
 	}

@@ -108,7 +108,7 @@ public class OriginalMessageAndIssuer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessageAndIssuer1, Max35Text> mmMessageIdentification = new MMMessageAttribute<OriginalMessageAndIssuer1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class OriginalMessageAndIssuer1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalMessageAndIssuer1 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalMessageAndIssuer1 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "MsgNmId")
@@ -152,7 +162,7 @@ public class OriginalMessageAndIssuer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessageAndIssuer1, Optional<Max35Text>> mmMessageNameIdentification = new MMMessageAttribute<OriginalMessageAndIssuer1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class OriginalMessageAndIssuer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OriginalMessageAndIssuer1 obj) {
+			return obj.getMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalMessageAndIssuer1 obj, Optional<Max35Text> value) {
+			obj.setMessageNameIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgtrNm")
@@ -196,7 +216,7 @@ public class OriginalMessageAndIssuer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginatorName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalMessageAndIssuer1, Optional<Max70Text>> mmOriginatorName = new MMMessageAttribute<OriginalMessageAndIssuer1, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmObject();
 			isDerived = false;
@@ -207,6 +227,16 @@ public class OriginalMessageAndIssuer1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(OriginalMessageAndIssuer1 obj) {
+			return obj.getOriginatorName();
+		}
+
+		@Override
+		public void setValue(OriginalMessageAndIssuer1 obj, Optional<Max70Text> value) {
+			obj.setOriginatorName(value.orElse(null));
 		}
 	};
 

@@ -111,7 +111,7 @@ public class PaymentInstrument19Choice {
 	 * PaymentInstrument16Choice.mmChequeDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument19Choice, Cheque4> mmChequeDetails = new MMMessageAssociationEnd<PaymentInstrument19Choice, Cheque4>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument19Choice.mmObject();
@@ -125,6 +125,16 @@ public class PaymentInstrument19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Cheque4.mmObject();
+		}
+
+		@Override
+		public Cheque4 getValue(PaymentInstrument19Choice obj) {
+			return obj.getChequeDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument19Choice obj, Cheque4 value) {
+			obj.setChequeDetails(value);
 		}
 	};
 	@XmlElement(name = "BkrsDrftDtls", required = true)
@@ -163,7 +173,7 @@ public class PaymentInstrument19Choice {
 	 * PaymentInstrument16Choice.mmBankersDraftDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBankersDraftDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument19Choice, Cheque4> mmBankersDraftDetails = new MMMessageAssociationEnd<PaymentInstrument19Choice, Cheque4>() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument19Choice.mmObject();
@@ -177,6 +187,16 @@ public class PaymentInstrument19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Cheque4.mmObject();
+		}
+
+		@Override
+		public Cheque4 getValue(PaymentInstrument19Choice obj) {
+			return obj.getBankersDraftDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument19Choice obj, Cheque4 value) {
+			obj.setBankersDraftDetails(value);
 		}
 	};
 

@@ -53,11 +53,15 @@ public class ConstraintIncrementalReportNumberRule {
 	 */
 	public static final MMConstraint<Statement13> forStatement13 = new MMConstraint<Statement13>() {
 		{
-			validator = ConstraintIncrementalReportNumberRule::checkStatement13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncrementalReportNumberRule";
 			definition = "Two statements of the same type sent one after the other to the same Receiver in relation to the same Safekeeping Account must have different incremental ReportNumbers. Eg, a daily statement sent on day 1 would have report number 1, on day 2, report number 2, etc.";
 			owner_lazy = () -> Statement13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement13 obj) throws Exception {
+			checkStatement13(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintIncrementalReportNumberRule {
 	 */
 	public static final MMConstraint<Statement18> forStatement18 = new MMConstraint<Statement18>() {
 		{
-			validator = ConstraintIncrementalReportNumberRule::checkStatement18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncrementalReportNumberRule";
 			definition = "Two statements of the same type sent one after the other to the same Receiver in relation to the same Safekeeping Account must have different incremental ReportNumbers. Eg, a daily statement sent on day 1 would have report number 1, on day 2, report number 2, etc.";
 			owner_lazy = () -> Statement18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement18 obj) throws Exception {
+			checkStatement18(obj);
 		}
 	};
 

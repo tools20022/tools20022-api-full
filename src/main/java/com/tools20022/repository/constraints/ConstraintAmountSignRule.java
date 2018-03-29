@@ -51,11 +51,15 @@ public class ConstraintAmountSignRule {
 	 */
 	public static final MMConstraint<PriceValueChange1> forPriceValueChange1 = new MMConstraint<PriceValueChange1>() {
 		{
-			validator = ConstraintAmountSignRule::checkPriceValueChange1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountSignRule";
 			definition = "If Amount is present, then AmountSign is optional. If Amount is not present, then AmountSign is not allowed.";
 			owner_lazy = () -> PriceValueChange1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceValueChange1 obj) throws Exception {
+			checkPriceValueChange1(obj);
 		}
 	};
 

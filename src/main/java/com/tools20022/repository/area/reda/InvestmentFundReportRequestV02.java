@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -137,7 +136,7 @@ public class InvestmentFundReportRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvestmentFundReportRequestV02, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<InvestmentFundReportRequestV02, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,12 +147,14 @@ public class InvestmentFundReportRequestV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFundReportRequestV02.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(InvestmentFundReportRequestV02 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentFundReportRequestV02 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -181,7 +182,7 @@ public class InvestmentFundReportRequestV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvestmentFundReportRequestV02, Optional<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<InvestmentFundReportRequestV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,12 +193,14 @@ public class InvestmentFundReportRequestV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFundReportRequestV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(InvestmentFundReportRequestV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundReportRequestV02 obj, Optional<AdditionalReference3> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -226,7 +229,7 @@ public class InvestmentFundReportRequestV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvestmentFundReportRequestV02, Optional<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<InvestmentFundReportRequestV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,12 +240,14 @@ public class InvestmentFundReportRequestV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFundReportRequestV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(InvestmentFundReportRequestV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(InvestmentFundReportRequestV02 obj, Optional<AdditionalReference3> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FPPRpt", required = true)
@@ -271,7 +276,7 @@ public class InvestmentFundReportRequestV02 {
 	 * "Parameters for which the fund processing passport report is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmFundProcessingPassportReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InvestmentFundReportRequestV02, List<FundParameters3Choice>> mmFundProcessingPassportReport = new MMMessageBuildingBlock<InvestmentFundReportRequestV02, List<FundParameters3Choice>>() {
 		{
 			xmlTag = "FPPRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,12 +286,14 @@ public class InvestmentFundReportRequestV02 {
 			complexType_lazy = () -> FundParameters3Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InvestmentFundReportRequestV02.class.getMethod("getFundProcessingPassportReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<FundParameters3Choice> getValue(InvestmentFundReportRequestV02 obj) {
+			return obj.getFundProcessingPassportReport();
+		}
+
+		@Override
+		public void setValue(InvestmentFundReportRequestV02 obj, List<FundParameters3Choice> value) {
+			obj.setFundProcessingPassportReport(value);
 		}
 	};
 

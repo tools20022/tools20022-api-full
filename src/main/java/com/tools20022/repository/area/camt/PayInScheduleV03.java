@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.PartyIdentification73Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -128,7 +127,7 @@ public class PayInScheduleV03 {
 	 * definition} = "Party for which the pay-in schedule is generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPartyIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInScheduleV03, PartyIdentification73Choice> mmPartyIdentification = new MMMessageBuildingBlock<PayInScheduleV03, PartyIdentification73Choice>() {
 		{
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +138,14 @@ public class PayInScheduleV03 {
 			complexType_lazy = () -> PartyIdentification73Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInScheduleV03.class.getMethod("getPartyIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PartyIdentification73Choice getValue(PayInScheduleV03 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PayInScheduleV03 obj, PartyIdentification73Choice value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "RptData", required = true)
@@ -171,7 +172,7 @@ public class PayInScheduleV03 {
 	 * definition} = "General information applicable to the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInScheduleV03, ReportData4> mmReportData = new MMMessageBuildingBlock<PayInScheduleV03, ReportData4>() {
 		{
 			xmlTag = "RptData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,12 +183,14 @@ public class PayInScheduleV03 {
 			complexType_lazy = () -> ReportData4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInScheduleV03.class.getMethod("getReportData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ReportData4 getValue(PayInScheduleV03 obj) {
+			return obj.getReportData();
+		}
+
+		@Override
+		public void setValue(PayInScheduleV03 obj, ReportData4 value) {
+			obj.setReportData(value);
 		}
 	};
 	@XmlElement(name = "PayInSchdlLngBal")
@@ -216,7 +219,7 @@ public class PayInScheduleV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPayInScheduleLongBalance = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInScheduleV03, List<BalanceStatus2>> mmPayInScheduleLongBalance = new MMMessageBuildingBlock<PayInScheduleV03, List<BalanceStatus2>>() {
 		{
 			xmlTag = "PayInSchdlLngBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,12 +229,14 @@ public class PayInScheduleV03 {
 			complexType_lazy = () -> BalanceStatus2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInScheduleV03.class.getMethod("getPayInScheduleLongBalance", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<BalanceStatus2> getValue(PayInScheduleV03 obj) {
+			return obj.getPayInScheduleLongBalance();
+		}
+
+		@Override
+		public void setValue(PayInScheduleV03 obj, List<BalanceStatus2> value) {
+			obj.setPayInScheduleLongBalance(value);
 		}
 	};
 	@XmlElement(name = "PayInSchdlItm")
@@ -260,7 +265,7 @@ public class PayInScheduleV03 {
 	 * "Currency and total amount to be paid in by the corresponding deadline."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPayInScheduleItem = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInScheduleV03, List<PayInScheduleItems1>> mmPayInScheduleItem = new MMMessageBuildingBlock<PayInScheduleV03, List<PayInScheduleItems1>>() {
 		{
 			xmlTag = "PayInSchdlItm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +275,14 @@ public class PayInScheduleV03 {
 			complexType_lazy = () -> PayInScheduleItems1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInScheduleV03.class.getMethod("getPayInScheduleItem", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PayInScheduleItems1> getValue(PayInScheduleV03 obj) {
+			return obj.getPayInScheduleItem();
+		}
+
+		@Override
+		public void setValue(PayInScheduleV03 obj, List<PayInScheduleItems1> value) {
+			obj.setPayInScheduleItem(value);
 		}
 	};
 	@XmlElement(name = "PayInFctrs")
@@ -302,7 +309,7 @@ public class PayInScheduleV03 {
 	 * definition} = "Factors used in the calculation of the pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPayInFactors = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInScheduleV03, Optional<PayInFactors1>> mmPayInFactors = new MMMessageBuildingBlock<PayInScheduleV03, Optional<PayInFactors1>>() {
 		{
 			xmlTag = "PayInFctrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -313,12 +320,14 @@ public class PayInScheduleV03 {
 			complexType_lazy = () -> PayInFactors1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInScheduleV03.class.getMethod("getPayInFactors", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PayInFactors1> getValue(PayInScheduleV03 obj) {
+			return obj.getPayInFactors();
+		}
+
+		@Override
+		public void setValue(PayInScheduleV03 obj, Optional<PayInFactors1> value) {
+			obj.setPayInFactors(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -348,7 +357,7 @@ public class PayInScheduleV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PayInScheduleV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<PayInScheduleV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -358,12 +367,14 @@ public class PayInScheduleV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PayInScheduleV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(PayInScheduleV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(PayInScheduleV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

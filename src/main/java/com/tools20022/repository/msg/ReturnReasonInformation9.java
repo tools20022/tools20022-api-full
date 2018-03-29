@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification32;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +122,7 @@ public class ReturnReasonInformation9 {
 	 * definition} = "Party that issues the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnReasonInformation9, Optional<PartyIdentification32>> mmOriginator = new MMMessageAssociationEnd<ReturnReasonInformation9, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation9.mmObject();
@@ -133,7 +134,17 @@ public class ReturnReasonInformation9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(ReturnReasonInformation9 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation9 obj, Optional<PartyIdentification32> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -169,7 +180,7 @@ public class ReturnReasonInformation9 {
 	 * definition} = "Specifies the reason for the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnReasonInformation9, Optional<ReturnReason5Choice>> mmReason = new MMMessageAssociationEnd<ReturnReasonInformation9, Optional<ReturnReason5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation9.mmObject();
@@ -182,6 +193,16 @@ public class ReturnReasonInformation9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReturnReason5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReturnReason5Choice> getValue(ReturnReasonInformation9 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation9 obj, Optional<ReturnReason5Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -213,7 +234,7 @@ public class ReturnReasonInformation9 {
 	 * definition} = "Further details on the return reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnReasonInformation9, List<Max105Text>> mmAdditionalInformation = new MMMessageAttribute<ReturnReasonInformation9, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation9.mmObject();
 			isDerived = false;
@@ -223,6 +244,16 @@ public class ReturnReasonInformation9 {
 			definition = "Further details on the return reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(ReturnReasonInformation9 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation9 obj, List<Max105Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -246,7 +277,7 @@ public class ReturnReasonInformation9 {
 		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public ReturnReasonInformation9 setOriginator(com.tools20022.repository.msg.PartyIdentification32 originator) {
+	public ReturnReasonInformation9 setOriginator(PartyIdentification32 originator) {
 		this.originator = originator;
 		return this;
 	}

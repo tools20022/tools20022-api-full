@@ -21,12 +21,10 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.entity.SecuritiesFinancing;
 import com.tools20022.repository.GeneratedRepository;
-import com.tools20022.repository.msg.SecuredMarketTransaction1;
-import com.tools20022.repository.msg.SecuredMarketTransaction2;
-import com.tools20022.repository.msg.SecuredMarketTransaction3;
-import com.tools20022.repository.msg.SecuredMarketTransaction4;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -95,6 +93,10 @@ import java.util.Objects;
  * SecuredMarketTransaction3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SecuredMarketTransaction4
  * SecuredMarketTransaction4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RepurchaseAgreement2
+ * RepurchaseAgreement2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.RepurchaseAgreement3
+ * RepurchaseAgreement3}</li>
  * </ul>
  * </li>
  * <li>
@@ -110,7 +112,7 @@ import java.util.Objects;
  * "RepurchaseAgreement"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement."
+ * "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement. "
  * </li>
  * </ul>
  */
@@ -151,7 +153,7 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 	 * definition} = "Obligation covered by a repurchase agreement."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPaymentObligation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<RepurchaseAgreement, com.tools20022.repository.entity.PaymentObligation> mmPaymentObligation = new MMBusinessAssociationEnd<RepurchaseAgreement, com.tools20022.repository.entity.PaymentObligation>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.RepurchaseAgreement.mmObject();
@@ -164,6 +166,16 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 		}
+
+		@Override
+		public com.tools20022.repository.entity.PaymentObligation getValue(RepurchaseAgreement obj) {
+			return obj.getPaymentObligation();
+		}
+
+		@Override
+		public void setValue(RepurchaseAgreement obj, com.tools20022.repository.entity.PaymentObligation value) {
+			obj.setPaymentObligation(value);
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -172,13 +184,14 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseAgreement";
-				definition = "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement.";
+				definition = "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement. ";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmRepurchaseAgreement);
 				derivationElement_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmFloatingRateRepurchaseAgreement, SecuredMarketTransaction2.mmFloatingRateRepurchaseAgreement,
 						SecuredMarketTransaction3.mmFloatingRateRepurchaseAgreement, SecuredMarketTransaction4.mmFloatingRateRepurchaseAgreement);
 				superType_lazy = () -> SecuritiesFinancing.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RepurchaseAgreement.mmPaymentObligation);
-				derivationComponent_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmObject(), SecuredMarketTransaction2.mmObject(), SecuredMarketTransaction3.mmObject(), SecuredMarketTransaction4.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmObject(), SecuredMarketTransaction2.mmObject(), SecuredMarketTransaction3.mmObject(), SecuredMarketTransaction4.mmObject(),
+						RepurchaseAgreement2.mmObject(), RepurchaseAgreement3.mmObject());
 			}
 
 			@Override

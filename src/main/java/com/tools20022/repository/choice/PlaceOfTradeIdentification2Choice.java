@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.OffMarket1Choice;
 import com.tools20022.repository.datatype.MICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.SecuritiesTrade;
@@ -111,7 +112,7 @@ public class PlaceOfTradeIdentification2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlaceOfTradeIdentification2Choice, MICIdentifier> mmMarketIdentification = new MMMessageAttribute<PlaceOfTradeIdentification2Choice, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.mmObject();
@@ -123,6 +124,16 @@ public class PlaceOfTradeIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(PlaceOfTradeIdentification2Choice obj) {
+			return obj.getMarketIdentification();
+		}
+
+		@Override
+		public void setValue(PlaceOfTradeIdentification2Choice obj, MICIdentifier value) {
+			obj.setMarketIdentification(value);
 		}
 	};
 	@XmlElement(name = "OffMkt", required = true)
@@ -158,7 +169,7 @@ public class PlaceOfTradeIdentification2Choice {
 	 * definition} = "Indicates that the trade was executed off -exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOffMarket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PlaceOfTradeIdentification2Choice, OffMarket1Choice> mmOffMarket = new MMMessageAssociationEnd<PlaceOfTradeIdentification2Choice, OffMarket1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradingExecution;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOfTradeIdentification2Choice.mmObject();
@@ -170,7 +181,17 @@ public class PlaceOfTradeIdentification2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.OffMarket1Choice.mmObject();
+			type_lazy = () -> OffMarket1Choice.mmObject();
+		}
+
+		@Override
+		public OffMarket1Choice getValue(PlaceOfTradeIdentification2Choice obj) {
+			return obj.getOffMarket();
+		}
+
+		@Override
+		public void setValue(PlaceOfTradeIdentification2Choice obj, OffMarket1Choice value) {
+			obj.setOffMarket(value);
 		}
 	};
 
@@ -201,7 +222,7 @@ public class PlaceOfTradeIdentification2Choice {
 		return offMarket;
 	}
 
-	public PlaceOfTradeIdentification2Choice setOffMarket(com.tools20022.repository.choice.OffMarket1Choice offMarket) {
+	public PlaceOfTradeIdentification2Choice setOffMarket(OffMarket1Choice offMarket) {
 		this.offMarket = Objects.requireNonNull(offMarket);
 		return this;
 	}

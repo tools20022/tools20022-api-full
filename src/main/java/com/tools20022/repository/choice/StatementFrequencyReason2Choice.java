@@ -112,7 +112,7 @@ public class StatementFrequencyReason2Choice {
 	 * StatementFrequencyReason1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementFrequencyReason2Choice, EventFrequency9Code> mmCode = new MMMessageAttribute<StatementFrequencyReason2Choice, EventFrequency9Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementFrequencyReason2Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class StatementFrequencyReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequency9Code.mmObject();
+		}
+
+		@Override
+		public EventFrequency9Code getValue(StatementFrequencyReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(StatementFrequencyReason2Choice obj, EventFrequency9Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class StatementFrequencyReason2Choice {
 	 * StatementFrequencyReason1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatementFrequencyReason2Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<StatementFrequencyReason2Choice, GenericIdentification47>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatementFrequencyReason2Choice.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class StatementFrequencyReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(StatementFrequencyReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(StatementFrequencyReason2Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

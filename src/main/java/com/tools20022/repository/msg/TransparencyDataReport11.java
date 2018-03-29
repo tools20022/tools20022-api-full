@@ -154,7 +154,7 @@ public class TransparencyDataReport11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, Optional<Max35Text>> mmTechnicalRecordIdentification = new MMMessageAttribute<TransparencyDataReport11, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
@@ -165,6 +165,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransparencyDataReport11 obj) {
+			return obj.getTechnicalRecordIdentification();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, Optional<Max35Text> value) {
+			obj.setTechnicalRecordIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -202,7 +212,7 @@ public class TransparencyDataReport11 {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, ISINOct2015Identifier> mmIdentification = new MMMessageAttribute<TransparencyDataReport11, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
@@ -214,6 +224,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(TransparencyDataReport11 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, ISINOct2015Identifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "FullNm")
@@ -250,7 +270,7 @@ public class TransparencyDataReport11 {
 	 * definition} = "Full name or description of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, Optional<Max350Text>> mmFullName = new MMMessageAttribute<TransparencyDataReport11, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
@@ -262,6 +282,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransparencyDataReport11 obj) {
+			return obj.getFullName();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, Optional<Max350Text> value) {
+			obj.setFullName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgVn")
@@ -301,7 +331,7 @@ public class TransparencyDataReport11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, Optional<MICIdentifier>> mmTradingVenue = new MMMessageAttribute<TransparencyDataReport11, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
@@ -313,6 +343,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(TransparencyDataReport11 obj) {
+			return obj.getTradingVenue();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, Optional<MICIdentifier> value) {
+			obj.setTradingVenue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgDt")
@@ -349,7 +389,7 @@ public class TransparencyDataReport11 {
 	 * definition} = "Date for which the data is provided."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, Optional<ISODate>> mmReportingDate = new MMMessageAttribute<TransparencyDataReport11, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
@@ -361,6 +401,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransparencyDataReport11 obj) {
+			return obj.getReportingDate();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, Optional<ISODate> value) {
+			obj.setReportingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmClssfctn", required = true)
@@ -402,7 +452,7 @@ public class TransparencyDataReport11 {
 	 * definition} = "Specifies the classification of the equity instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinancialInstrumentClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, EquityInstrumentReportingClassification1Code> mmFinancialInstrumentClassification = new MMMessageAttribute<TransparencyDataReport11, EquityInstrumentReportingClassification1Code>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
@@ -415,6 +465,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EquityInstrumentReportingClassification1Code.mmObject();
+		}
+
+		@Override
+		public EquityInstrumentReportingClassification1Code getValue(TransparencyDataReport11 obj) {
+			return obj.getFinancialInstrumentClassification();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, EquityInstrumentReportingClassification1Code value) {
+			obj.setFinancialInstrumentClassification(value);
 		}
 	};
 	@XmlElement(name = "NbOutsdngInstrms")
@@ -449,7 +509,7 @@ public class TransparencyDataReport11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOutstandingInstruments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, Optional<DecimalNumberFraction5>> mmNumberOutstandingInstruments = new MMMessageAttribute<TransparencyDataReport11, Optional<DecimalNumberFraction5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
 			isDerived = false;
@@ -460,6 +520,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumberFraction5.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumberFraction5> getValue(TransparencyDataReport11 obj) {
+			return obj.getNumberOutstandingInstruments();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, Optional<DecimalNumberFraction5> value) {
+			obj.setNumberOutstandingInstruments(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldgsExcdgTtlVtngRghtThrshld")
@@ -499,7 +569,7 @@ public class TransparencyDataReport11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingsExceedingTotalVotingRightThreshold = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, Optional<DecimalNumberFraction5>> mmHoldingsExceedingTotalVotingRightThreshold = new MMMessageAttribute<TransparencyDataReport11, Optional<DecimalNumberFraction5>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueSize;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
@@ -511,6 +581,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumberFraction5.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumberFraction5> getValue(TransparencyDataReport11 obj) {
+			return obj.getHoldingsExceedingTotalVotingRightThreshold();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, Optional<DecimalNumberFraction5> value) {
+			obj.setHoldingsExceedingTotalVotingRightThreshold(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssncSz")
@@ -548,7 +628,7 @@ public class TransparencyDataReport11 {
 	 * definition} = "Issuance size of the certificate expressed in Euros."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuanceSize = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, Optional<ActiveCurrencyAndAmount>> mmIssuanceSize = new MMMessageAttribute<TransparencyDataReport11, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
@@ -560,6 +640,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(TransparencyDataReport11 obj) {
+			return obj.getIssuanceSize();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setIssuanceSize(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrmPric")
@@ -599,7 +689,7 @@ public class TransparencyDataReport11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstrumentPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport11, Optional<ActiveCurrencyAnd13DecimalAmount>> mmInstrumentPrice = new MMMessageAttribute<TransparencyDataReport11, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport11.mmObject();
@@ -611,6 +701,16 @@ public class TransparencyDataReport11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(TransparencyDataReport11 obj) {
+			return obj.getInstrumentPrice();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport11 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setInstrumentPrice(value.orElse(null));
 		}
 	};
 

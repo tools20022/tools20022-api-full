@@ -121,7 +121,7 @@ public class CreditDefaultSwapIndex2 {
 	 * "Series number of the composition of the index if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSeries = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDefaultSwapIndex2, Optional<Number>> mmSeries = new MMMessageAttribute<CreditDefaultSwapIndex2, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> CreditDefaultSwap.mmSeries;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmObject();
@@ -133,6 +133,16 @@ public class CreditDefaultSwapIndex2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CreditDefaultSwapIndex2 obj) {
+			return obj.getSeries();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapIndex2 obj, Optional<Number> value) {
+			obj.setSeries(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -171,7 +181,7 @@ public class CreditDefaultSwapIndex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDefaultSwapIndex2, Optional<Number>> mmVersion = new MMMessageAttribute<CreditDefaultSwapIndex2, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmVersionNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmObject();
@@ -183,6 +193,16 @@ public class CreditDefaultSwapIndex2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CreditDefaultSwapIndex2 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapIndex2 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RollMnth")
@@ -217,7 +237,7 @@ public class CreditDefaultSwapIndex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRollMonth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDefaultSwapIndex2, List<RestrictedMonthExact2Number>> mmRollMonth = new MMMessageAttribute<CreditDefaultSwapIndex2, List<RestrictedMonthExact2Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmObject();
 			isDerived = false;
@@ -228,6 +248,16 @@ public class CreditDefaultSwapIndex2 {
 			maxOccurs = 12;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedMonthExact2Number.mmObject();
+		}
+
+		@Override
+		public List<RestrictedMonthExact2Number> getValue(CreditDefaultSwapIndex2 obj) {
+			return obj.getRollMonth();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapIndex2 obj, List<RestrictedMonthExact2Number> value) {
+			obj.setRollMonth(value);
 		}
 	};
 	@XmlElement(name = "NxtRollDt")
@@ -266,7 +296,7 @@ public class CreditDefaultSwapIndex2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextRollDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDefaultSwapIndex2, Optional<ISODate>> mmNextRollDate = new MMMessageAttribute<CreditDefaultSwapIndex2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CreditDefaultSwap.mmRollDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmObject();
@@ -278,6 +308,16 @@ public class CreditDefaultSwapIndex2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CreditDefaultSwapIndex2 obj) {
+			return obj.getNextRollDate();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapIndex2 obj, Optional<ISODate> value) {
+			obj.setNextRollDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtnlCcy", required = true)
@@ -315,7 +355,7 @@ public class CreditDefaultSwapIndex2 {
 	 * definition} = "Currency in which the notional is denominated.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDefaultSwapIndex2, ActiveOrHistoricCurrencyCode> mmNotionalCurrency = new MMMessageAttribute<CreditDefaultSwapIndex2, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDefaultSwapIndex2.mmObject();
@@ -327,6 +367,16 @@ public class CreditDefaultSwapIndex2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CreditDefaultSwapIndex2 obj) {
+			return obj.getNotionalCurrency();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwapIndex2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setNotionalCurrency(value);
 		}
 	};
 

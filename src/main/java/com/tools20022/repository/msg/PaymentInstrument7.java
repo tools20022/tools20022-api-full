@@ -22,6 +22,9 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount4;
+import com.tools20022.repository.msg.DirectDebitMandate3;
+import com.tools20022.repository.msg.PaymentCard2;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,7 +126,7 @@ public class PaymentInstrument7 {
 	 * definition} = "Currency associated with the payment instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument7, CurrencyCode> mmSettlementCurrency = new MMMessageAttribute<PaymentInstrument7, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument7.mmObject();
@@ -136,9 +139,19 @@ public class PaymentInstrument7 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
+
+		@Override
+		public CurrencyCode getValue(PaymentInstrument7 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument7 obj, CurrencyCode value) {
+			obj.setSettlementCurrency(value);
+		}
 	};
 	@XmlElement(name = "CshAcct", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount4> cashAccount;
+	protected List<CashAccount4> cashAccount;
 	/**
 	 * 
 	 <p>
@@ -172,7 +185,7 @@ public class PaymentInstrument7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument7, List<CashAccount4>> mmCashAccount = new MMMessageAssociationEnd<PaymentInstrument7, List<CashAccount4>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument7.mmObject();
@@ -184,7 +197,17 @@ public class PaymentInstrument7 {
 			maxOccurs = 3;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
+			type_lazy = () -> CashAccount4.mmObject();
+		}
+
+		@Override
+		public List<CashAccount4> getValue(PaymentInstrument7 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument7 obj, List<CashAccount4> value) {
+			obj.setCashAccount(value);
 		}
 	};
 	@XmlElement(name = "Chq", required = true)
@@ -222,7 +245,7 @@ public class PaymentInstrument7 {
 	 * definition} = "Indicates whether the payment is done via cheque."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCheque = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument7, YesNoIndicator> mmCheque = new MMMessageAttribute<PaymentInstrument7, YesNoIndicator>() {
 		{
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument7.mmObject();
@@ -234,6 +257,16 @@ public class PaymentInstrument7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PaymentInstrument7 obj) {
+			return obj.getCheque();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument7 obj, YesNoIndicator value) {
+			obj.setCheque(value);
 		}
 	};
 	@XmlElement(name = "PmtCard", required = true)
@@ -269,7 +302,7 @@ public class PaymentInstrument7 {
 	 * definition} = "Settlement instructions for a payment by card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentCard = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument7, PaymentCard2> mmPaymentCard = new MMMessageAssociationEnd<PaymentInstrument7, PaymentCard2>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument7.mmObject();
@@ -281,7 +314,17 @@ public class PaymentInstrument7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
+			type_lazy = () -> PaymentCard2.mmObject();
+		}
+
+		@Override
+		public PaymentCard2 getValue(PaymentInstrument7 obj) {
+			return obj.getPaymentCard();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument7 obj, PaymentCard2 value) {
+			obj.setPaymentCard(value);
 		}
 	};
 	@XmlElement(name = "DrctDbt", required = true)
@@ -316,7 +359,7 @@ public class PaymentInstrument7 {
 	 * definition} = "Settlement instructions for a payment by direct debit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDirectDebit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument7, DirectDebitMandate3> mmDirectDebit = new MMMessageAssociationEnd<PaymentInstrument7, DirectDebitMandate3>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument7.mmObject();
@@ -328,7 +371,17 @@ public class PaymentInstrument7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate3.mmObject();
+			type_lazy = () -> DirectDebitMandate3.mmObject();
+		}
+
+		@Override
+		public DirectDebitMandate3 getValue(PaymentInstrument7 obj) {
+			return obj.getDirectDebit();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument7 obj, DirectDebitMandate3 value) {
+			obj.setDirectDebit(value);
 		}
 	};
 	/**
@@ -419,7 +472,7 @@ public class PaymentInstrument7 {
 		return cashAccount == null ? cashAccount = new ArrayList<>() : cashAccount;
 	}
 
-	public PaymentInstrument7 setCashAccount(List<com.tools20022.repository.msg.CashAccount4> cashAccount) {
+	public PaymentInstrument7 setCashAccount(List<CashAccount4> cashAccount) {
 		this.cashAccount = Objects.requireNonNull(cashAccount);
 		return this;
 	}
@@ -437,7 +490,7 @@ public class PaymentInstrument7 {
 		return paymentCard;
 	}
 
-	public PaymentInstrument7 setPaymentCard(com.tools20022.repository.msg.PaymentCard2 paymentCard) {
+	public PaymentInstrument7 setPaymentCard(PaymentCard2 paymentCard) {
 		this.paymentCard = Objects.requireNonNull(paymentCard);
 		return this;
 	}
@@ -446,7 +499,7 @@ public class PaymentInstrument7 {
 		return directDebit;
 	}
 
-	public PaymentInstrument7 setDirectDebit(com.tools20022.repository.msg.DirectDebitMandate3 directDebit) {
+	public PaymentInstrument7 setDirectDebit(DirectDebitMandate3 directDebit) {
 		this.directDebit = Objects.requireNonNull(directDebit);
 		return this;
 	}

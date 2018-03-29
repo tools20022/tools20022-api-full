@@ -25,6 +25,8 @@ import com.tools20022.repository.choice.Recipient6Choice;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification22;
+import com.tools20022.repository.msg.EncapsulatedContent3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -64,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AuthenticatedData5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -116,7 +118,7 @@ public class AuthenticatedData5 {
 	 * AuthenticatedData4.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthenticatedData5, Optional<Number>> mmVersion = new MMMessageAttribute<AuthenticatedData5, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData5.mmObject();
 			isDerived = false;
@@ -128,6 +130,16 @@ public class AuthenticatedData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(AuthenticatedData5 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData5 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -164,7 +176,7 @@ public class AuthenticatedData5 {
 	 * AuthenticatedData4.mmRecipient}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthenticatedData5, List<Recipient6Choice>> mmRecipient = new MMMessageAssociationEnd<AuthenticatedData5, List<Recipient6Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData5.mmObject();
 			isDerived = false;
@@ -176,6 +188,16 @@ public class AuthenticatedData5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Recipient6Choice.mmObject();
+		}
+
+		@Override
+		public List<Recipient6Choice> getValue(AuthenticatedData5 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData5 obj, List<Recipient6Choice> value) {
+			obj.setRecipient(value);
 		}
 	};
 	@XmlElement(name = "MACAlgo", required = true)
@@ -212,7 +234,7 @@ public class AuthenticatedData5 {
 	 * AuthenticatedData4.mmMACAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMACAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthenticatedData5, AlgorithmIdentification22> mmMACAlgorithm = new MMMessageAssociationEnd<AuthenticatedData5, AlgorithmIdentification22>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData5.mmObject();
 			isDerived = false;
@@ -224,7 +246,17 @@ public class AuthenticatedData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification22.mmObject();
+			type_lazy = () -> AlgorithmIdentification22.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification22 getValue(AuthenticatedData5 obj) {
+			return obj.getMACAlgorithm();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData5 obj, AlgorithmIdentification22 value) {
+			obj.setMACAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcpsltdCntt", required = true)
@@ -260,7 +292,7 @@ public class AuthenticatedData5 {
 	 * AuthenticatedData4.mmEncapsulatedContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AuthenticatedData5, EncapsulatedContent3> mmEncapsulatedContent = new MMMessageAssociationEnd<AuthenticatedData5, EncapsulatedContent3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData5.mmObject();
 			isDerived = false;
@@ -272,7 +304,17 @@ public class AuthenticatedData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent3.mmObject();
+			type_lazy = () -> EncapsulatedContent3.mmObject();
+		}
+
+		@Override
+		public EncapsulatedContent3 getValue(AuthenticatedData5 obj) {
+			return obj.getEncapsulatedContent();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData5 obj, EncapsulatedContent3 value) {
+			obj.setEncapsulatedContent(value);
 		}
 	};
 	@XmlElement(name = "MAC", required = true)
@@ -310,7 +352,7 @@ public class AuthenticatedData5 {
 	 * AuthenticatedData4.mmMAC}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMAC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AuthenticatedData5, Max140Binary> mmMAC = new MMMessageAttribute<AuthenticatedData5, Max140Binary>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData5.mmObject();
 			isDerived = false;
@@ -323,6 +365,16 @@ public class AuthenticatedData5 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
+
+		@Override
+		public Max140Binary getValue(AuthenticatedData5 obj) {
+			return obj.getMAC();
+		}
+
+		@Override
+		public void setValue(AuthenticatedData5 obj, Max140Binary value) {
+			obj.setMAC(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -331,7 +383,7 @@ public class AuthenticatedData5 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData5.mmVersion, com.tools20022.repository.msg.AuthenticatedData5.mmRecipient,
 						com.tools20022.repository.msg.AuthenticatedData5.mmMACAlgorithm, com.tools20022.repository.msg.AuthenticatedData5.mmEncapsulatedContent, com.tools20022.repository.msg.AuthenticatedData5.mmMAC);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthenticatedData5";
 				definition = "Message authentication code (MAC), computed on the data to protect with an encryption key.";
 				previousVersion_lazy = () -> AuthenticatedData4.mmObject();
@@ -362,7 +414,7 @@ public class AuthenticatedData5 {
 		return mACAlgorithm;
 	}
 
-	public AuthenticatedData5 setMACAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification22 mACAlgorithm) {
+	public AuthenticatedData5 setMACAlgorithm(AlgorithmIdentification22 mACAlgorithm) {
 		this.mACAlgorithm = Objects.requireNonNull(mACAlgorithm);
 		return this;
 	}
@@ -371,7 +423,7 @@ public class AuthenticatedData5 {
 		return encapsulatedContent;
 	}
 
-	public AuthenticatedData5 setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent3 encapsulatedContent) {
+	public AuthenticatedData5 setEncapsulatedContent(EncapsulatedContent3 encapsulatedContent) {
 		this.encapsulatedContent = Objects.requireNonNull(encapsulatedContent);
 		return this;
 	}

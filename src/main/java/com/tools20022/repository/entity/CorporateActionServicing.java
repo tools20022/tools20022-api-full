@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.entity.FinancialService;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
@@ -214,7 +214,7 @@ public class CorporateActionServicing extends FinancialService {
 	 * definition} = "Account on which the entitlement is calculated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionServicing, List<SecuritiesAccount>> mmSecuritiesAccount = new MMBusinessAssociationEnd<CorporateActionServicing, List<SecuritiesAccount>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionOption9.mmSafekeepingAccount, CorporateActionOption18.mmSafekeepingAccount, CorporateActionOption22.mmSafekeepingAccount, CorporateActionOption27.mmSafekeepingAccount,
 					CorporateActionOption26.mmSafekeepingAccount, CorporateActionOption41.mmSafekeepingAccount, CorporateActionOption50.mmSafekeepingAccount, CorporateActionOption29.mmSafekeepingAccount, Instruction1.mmAccountDetails,
@@ -230,8 +230,18 @@ public class CorporateActionServicing extends FinancialService {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 		}
+
+		@Override
+		public List<SecuritiesAccount> getValue(CorporateActionServicing obj) {
+			return obj.getSecuritiesAccount();
+		}
+
+		@Override
+		public void setValue(CorporateActionServicing obj, List<SecuritiesAccount> value) {
+			obj.setSecuritiesAccount(value);
+		}
 	};
-	protected List<com.tools20022.repository.entity.CorporateActionNotification> corporateActionEventNotification;
+	protected List<CorporateActionNotification> corporateActionEventNotification;
 	/**
 	 * 
 	 <p>
@@ -309,7 +319,7 @@ public class CorporateActionServicing extends FinancialService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionEventNotification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionNotification>> mmCorporateActionEventNotification = new MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionNotification>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(EventInformation1.mmLastNotificationIdentification, EventInformation2.mmLastNotificationIdentification, EventInformation3.mmLastNotificationIdentification,
 					EventInformation4.mmLastNotificationIdentification, EventInformation5.mmLastNotificationIdentification, EventInformation6.mmLastNotificationIdentification, EventInformation7.mmLastNotificationIdentification,
@@ -321,9 +331,19 @@ public class CorporateActionServicing extends FinancialService {
 			name = "CorporateActionEventNotification";
 			definition = "Service which consists in notifying the investor or its agent of a corporate event.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmRelatedServicing;
+			opposite_lazy = () -> CorporateActionNotification.mmRelatedServicing;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmObject();
+			type_lazy = () -> CorporateActionNotification.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionNotification> getValue(CorporateActionServicing obj) {
+			return obj.getCorporateActionEventNotification();
+		}
+
+		@Override
+		public void setValue(CorporateActionServicing obj, List<CorporateActionNotification> value) {
+			obj.setCorporateActionEventNotification(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionDistribution> corporateActionDistribution;
@@ -413,7 +433,7 @@ public class CorporateActionServicing extends FinancialService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionDistribution = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionDistribution>> mmCorporateActionDistribution = new MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionDistribution>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmDistributionType, CorporateAction4.mmDistributionType, CorporateAction5.mmDistributionType, CorporateAction6.mmDistributionType, CorporateAction7.mmPaymentOccurrenceType,
 					CorporateAction8.mmPaymentOccurrenceType, CorporateAction10.mmPaymentOccurrenceType, CorporateAction11.mmPaymentOccurrenceType, CorporateAction2.mmDistributionType, CorporateAction12.mmOccurrenceType,
@@ -427,6 +447,16 @@ public class CorporateActionServicing extends FinancialService {
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmRelatedServicing;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionDistribution> getValue(CorporateActionServicing obj) {
+			return obj.getCorporateActionDistribution();
+		}
+
+		@Override
+		public void setValue(CorporateActionServicing obj, List<CorporateActionDistribution> value) {
+			obj.setCorporateActionDistribution(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionOptionServicing> corporateActionOptionServicing;
@@ -466,7 +496,7 @@ public class CorporateActionServicing extends FinancialService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionOptionServicing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionOptionServicing>> mmCorporateActionOptionServicing = new MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionOptionServicing>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
@@ -478,8 +508,18 @@ public class CorporateActionServicing extends FinancialService {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmObject();
 		}
+
+		@Override
+		public List<CorporateActionOptionServicing> getValue(CorporateActionServicing obj) {
+			return obj.getCorporateActionOptionServicing();
+		}
+
+		@Override
+		public void setValue(CorporateActionServicing obj, List<CorporateActionOptionServicing> value) {
+			obj.setCorporateActionOptionServicing(value);
+		}
 	};
-	protected List<com.tools20022.repository.entity.CorporateActionEvent> event;
+	protected List<CorporateActionEvent> event;
 	/**
 	 * 
 	 <p>
@@ -523,7 +563,7 @@ public class CorporateActionServicing extends FinancialService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmEvent = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionEvent>> mmEvent = new MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionEvent>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionNotificationAdvice1.mmCorporateActionDetails);
 			isDerived = false;
@@ -532,9 +572,19 @@ public class CorporateActionServicing extends FinancialService {
 			name = "Event";
 			definition = "Specifies the event which is at the origin of the action.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmServices;
+			opposite_lazy = () -> CorporateActionEvent.mmServices;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
+			type_lazy = () -> CorporateActionEvent.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionEvent> getValue(CorporateActionServicing obj) {
+			return obj.getEvent();
+		}
+
+		@Override
+		public void setValue(CorporateActionServicing obj, List<CorporateActionEvent> value) {
+			obj.setEvent(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionElection> corporateActionElection;
@@ -574,7 +624,7 @@ public class CorporateActionServicing extends FinancialService {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionElection = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionElection>> mmCorporateActionElection = new MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionElection>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
@@ -585,6 +635,16 @@ public class CorporateActionServicing extends FinancialService {
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmRelatedServicing;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionElection> getValue(CorporateActionServicing obj) {
+			return obj.getCorporateActionElection();
+		}
+
+		@Override
+		public void setValue(CorporateActionServicing obj, List<CorporateActionElection> value) {
+			obj.setCorporateActionElection(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionEntitlement> corporateActionEntitlement;
@@ -623,7 +683,7 @@ public class CorporateActionServicing extends FinancialService {
 	 * "Calculation of the proceeds based on the balance in the account."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCorporateActionEntitlement = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionEntitlement>> mmCorporateActionEntitlement = new MMBusinessAssociationEnd<CorporateActionServicing, List<CorporateActionEntitlement>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
@@ -635,6 +695,16 @@ public class CorporateActionServicing extends FinancialService {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CorporateActionEntitlement.mmObject();
 		}
+
+		@Override
+		public List<CorporateActionEntitlement> getValue(CorporateActionServicing obj) {
+			return obj.getCorporateActionEntitlement();
+		}
+
+		@Override
+		public void setValue(CorporateActionServicing obj, List<CorporateActionEntitlement> value) {
+			obj.setCorporateActionEntitlement(value);
+		}
 	};
 
 	static public MMBusinessComponent mmObject() {
@@ -644,10 +714,9 @@ public class CorporateActionServicing extends FinancialService {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionServicing";
 				definition = "Services which consists in notifying the investor or its agent of a corporate event and calculating its proceeds based on its holdings.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesAccount.mmCorporateActionServicing, com.tools20022.repository.entity.CorporateActionNotification.mmRelatedServicing,
-						com.tools20022.repository.entity.CorporateActionEvent.mmServices, com.tools20022.repository.entity.CorporateActionEntitlement.mmRelatedServicing,
-						com.tools20022.repository.entity.CorporateActionElection.mmRelatedServicing, com.tools20022.repository.entity.CorporateActionDistribution.mmRelatedServicing,
-						com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedServicing);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesAccount.mmCorporateActionServicing, CorporateActionNotification.mmRelatedServicing, CorporateActionEvent.mmServices,
+						com.tools20022.repository.entity.CorporateActionEntitlement.mmRelatedServicing, com.tools20022.repository.entity.CorporateActionElection.mmRelatedServicing,
+						com.tools20022.repository.entity.CorporateActionDistribution.mmRelatedServicing, com.tools20022.repository.entity.CorporateActionOptionServicing.mmRelatedServicing);
 				subType_lazy = () -> Arrays.asList(MeetingServicing.mmObject());
 				superType_lazy = () -> FinancialService.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionServicing.mmSecuritiesAccount, com.tools20022.repository.entity.CorporateActionServicing.mmCorporateActionEventNotification,
@@ -677,7 +746,7 @@ public class CorporateActionServicing extends FinancialService {
 		return corporateActionEventNotification == null ? corporateActionEventNotification = new ArrayList<>() : corporateActionEventNotification;
 	}
 
-	public CorporateActionServicing setCorporateActionEventNotification(List<com.tools20022.repository.entity.CorporateActionNotification> corporateActionEventNotification) {
+	public CorporateActionServicing setCorporateActionEventNotification(List<CorporateActionNotification> corporateActionEventNotification) {
 		this.corporateActionEventNotification = Objects.requireNonNull(corporateActionEventNotification);
 		return this;
 	}
@@ -704,7 +773,7 @@ public class CorporateActionServicing extends FinancialService {
 		return event == null ? event = new ArrayList<>() : event;
 	}
 
-	public CorporateActionServicing setEvent(List<com.tools20022.repository.entity.CorporateActionEvent> event) {
+	public CorporateActionServicing setEvent(List<CorporateActionEvent> event) {
 		this.event = Objects.requireNonNull(event);
 		return this;
 	}

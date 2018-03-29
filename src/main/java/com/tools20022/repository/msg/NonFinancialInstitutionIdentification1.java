@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.NonFinancialInstitution;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification3;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -132,7 +133,7 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<BEIIdentifier>> mmBEI = new MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<BEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICNonFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmObject();
@@ -144,6 +145,16 @@ public class NonFinancialInstitutionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BEIIdentifier> getValue(NonFinancialInstitutionIdentification1 obj) {
+			return obj.getBEI();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionIdentification1 obj, Optional<BEIIdentifier> value) {
+			obj.setBEI(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EANGLN")
@@ -183,7 +194,7 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEANGLN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<EANGLNIdentifier>> mmEANGLN = new MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<EANGLNIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmEANGLN;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmObject();
@@ -195,6 +206,16 @@ public class NonFinancialInstitutionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EANGLNIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<EANGLNIdentifier> getValue(NonFinancialInstitutionIdentification1 obj) {
+			return obj.getEANGLN();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionIdentification1 obj, Optional<EANGLNIdentifier> value) {
+			obj.setEANGLN(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "USCHU")
@@ -234,7 +255,7 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCHIPSUniversalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<CHIPSUniversalIdentifier>> mmCHIPSUniversalIdentification = new MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<CHIPSUniversalIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmCHIPSUniversalIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmObject();
@@ -246,6 +267,16 @@ public class NonFinancialInstitutionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CHIPSUniversalIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<CHIPSUniversalIdentifier> getValue(NonFinancialInstitutionIdentification1 obj) {
+			return obj.getCHIPSUniversalIdentification();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionIdentification1 obj, Optional<CHIPSUniversalIdentifier> value) {
+			obj.setCHIPSUniversalIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DUNS")
@@ -285,7 +316,7 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDUNS = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<DunsIdentifier>> mmDUNS = new MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<DunsIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmDUNS;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmObject();
@@ -297,6 +328,16 @@ public class NonFinancialInstitutionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DunsIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<DunsIdentifier> getValue(NonFinancialInstitutionIdentification1 obj) {
+			return obj.getDUNS();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionIdentification1 obj, Optional<DunsIdentifier> value) {
+			obj.setDUNS(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BkPtyId")
@@ -335,7 +376,7 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<Max35Text>> mmBankPartyIdentification = new MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBankPartyIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmObject();
@@ -347,6 +388,16 @@ public class NonFinancialInstitutionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(NonFinancialInstitutionIdentification1 obj) {
+			return obj.getBankPartyIdentification();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionIdentification1 obj, Optional<Max35Text> value) {
+			obj.setBankPartyIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxIdNb")
@@ -383,7 +434,7 @@ public class NonFinancialInstitutionIdentification1 {
 	 * definition} = "Number assigned by a tax authority to an entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<Max35Text>> mmTaxIdentificationNumber = new MMMessageAttribute<NonFinancialInstitutionIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmObject();
@@ -395,6 +446,16 @@ public class NonFinancialInstitutionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(NonFinancialInstitutionIdentification1 obj) {
+			return obj.getTaxIdentificationNumber();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionIdentification1 obj, Optional<Max35Text> value) {
+			obj.setTaxIdentificationNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryId")
@@ -432,7 +493,7 @@ public class NonFinancialInstitutionIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NonFinancialInstitutionIdentification1, Optional<GenericIdentification3>> mmProprietaryIdentification = new MMMessageAssociationEnd<NonFinancialInstitutionIdentification1, Optional<GenericIdentification3>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonFinancialInstitutionIdentification1.mmObject();
@@ -444,7 +505,17 @@ public class NonFinancialInstitutionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification3.mmObject();
+			type_lazy = () -> GenericIdentification3.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification3> getValue(NonFinancialInstitutionIdentification1 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(NonFinancialInstitutionIdentification1 obj, Optional<GenericIdentification3> value) {
+			obj.setProprietaryIdentification(value.orElse(null));
 		}
 	};
 
@@ -530,7 +601,7 @@ public class NonFinancialInstitutionIdentification1 {
 		return proprietaryIdentification == null ? Optional.empty() : Optional.of(proprietaryIdentification);
 	}
 
-	public NonFinancialInstitutionIdentification1 setProprietaryIdentification(com.tools20022.repository.msg.GenericIdentification3 proprietaryIdentification) {
+	public NonFinancialInstitutionIdentification1 setProprietaryIdentification(GenericIdentification3 proprietaryIdentification) {
 		this.proprietaryIdentification = proprietaryIdentification;
 		return this;
 	}

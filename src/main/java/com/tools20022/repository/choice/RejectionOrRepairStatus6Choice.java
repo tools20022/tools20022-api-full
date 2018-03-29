@@ -117,7 +117,7 @@ public class RejectionOrRepairStatus6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionOrRepairStatus6Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RejectionOrRepairStatus6Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus6Choice.mmObject();
@@ -130,6 +130,16 @@ public class RejectionOrRepairStatus6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(RejectionOrRepairStatus6Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus6Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -169,7 +179,7 @@ public class RejectionOrRepairStatus6Choice {
 	 * definition} = "Specifies the reason of the RejectionOrRepairStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionOrRepairStatus6Choice, List<RejectionOrRepairReason1>> mmReason = new MMMessageAssociationEnd<RejectionOrRepairStatus6Choice, List<RejectionOrRepairReason1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionOrRepairStatus6Choice.mmObject();
@@ -182,6 +192,16 @@ public class RejectionOrRepairStatus6Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RejectionOrRepairReason1.mmObject();
+		}
+
+		@Override
+		public List<RejectionOrRepairReason1> getValue(RejectionOrRepairStatus6Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectionOrRepairStatus6Choice obj, List<RejectionOrRepairReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

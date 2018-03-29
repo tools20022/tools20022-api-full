@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.codeset.Quantity1Code;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
@@ -126,7 +127,7 @@ public class Quantity11Choice {
 	 * "Standard code to specify quantity of a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity11Choice, Quantity1Code> mmCode = new MMMessageAttribute<Quantity11Choice, Quantity1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity11Choice.mmObject();
@@ -139,6 +140,16 @@ public class Quantity11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Quantity1Code.mmObject();
+		}
+
+		@Override
+		public Quantity1Code getValue(Quantity11Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Quantity11Choice obj, Quantity1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "OrgnlAndCurFaceAmt", required = true)
@@ -175,7 +186,7 @@ public class Quantity11Choice {
 	 * definition} = "Face amount and amortised value of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity11Choice, OriginalAndCurrentQuantities4> mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd<Quantity11Choice, OriginalAndCurrentQuantities4>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity11Choice.mmObject();
@@ -188,6 +199,16 @@ public class Quantity11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalAndCurrentQuantities4.mmObject();
+		}
+
+		@Override
+		public OriginalAndCurrentQuantities4 getValue(Quantity11Choice obj) {
+			return obj.getOriginalAndCurrentFaceAmount();
+		}
+
+		@Override
+		public void setValue(Quantity11Choice obj, OriginalAndCurrentQuantities4 value) {
+			obj.setOriginalAndCurrentFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -226,7 +247,7 @@ public class Quantity11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity11Choice, FinancialInstrumentQuantity15Choice> mmQuantity = new MMMessageAssociationEnd<Quantity11Choice, FinancialInstrumentQuantity15Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity11Choice.mmObject();
@@ -238,7 +259,17 @@ public class Quantity11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(Quantity11Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity11Choice obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 
@@ -287,7 +318,7 @@ public class Quantity11Choice {
 		return quantity;
 	}
 
-	public Quantity11Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice quantity) {
+	public Quantity11Choice setQuantity(FinancialInstrumentQuantity15Choice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

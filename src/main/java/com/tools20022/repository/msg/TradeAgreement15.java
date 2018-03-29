@@ -156,7 +156,7 @@ public class TradeAgreement15 {
 	 * TradeAgreement11.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, ISODate> mmTradeDate = new MMMessageAttribute<TradeAgreement15, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
@@ -169,6 +169,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(TradeAgreement15 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "OrgtrRef", required = true)
@@ -207,7 +217,7 @@ public class TradeAgreement15 {
 	 * TradeAgreement11.mmOriginatorReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginatorReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, Max35Text> mmOriginatorReference = new MMMessageAttribute<TradeAgreement15, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
 			isDerived = false;
@@ -219,6 +229,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TradeAgreement15 obj) {
+			return obj.getOriginatorReference();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, Max35Text value) {
+			obj.setOriginatorReference(value);
 		}
 	};
 	@XmlElement(name = "MtchgSysRef", required = true)
@@ -263,7 +283,7 @@ public class TradeAgreement15 {
 	 * TradeAgreement11.mmMatchingSystemReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchingSystemReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, MatchingSystemReference1Choice> mmMatchingSystemReference = new MMMessageAttribute<TradeAgreement15, MatchingSystemReference1Choice>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmMatchingReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
@@ -276,6 +296,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MatchingSystemReference1Choice.mmObject();
+		}
+
+		@Override
+		public MatchingSystemReference1Choice getValue(TradeAgreement15 obj) {
+			return obj.getMatchingSystemReference();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, MatchingSystemReference1Choice value) {
+			obj.setMatchingSystemReference(value);
 		}
 	};
 	@XmlElement(name = "CmonRef")
@@ -317,7 +347,7 @@ public class TradeAgreement15 {
 	 * TradeAgreement11.mmCommonReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, Optional<Max35Text>> mmCommonReference = new MMMessageAttribute<TradeAgreement15, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
@@ -330,6 +360,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeAgreement15 obj) {
+			return obj.getCommonReference();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, Optional<Max35Text> value) {
+			obj.setCommonReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmdOrCclRsn")
@@ -372,7 +412,7 @@ public class TradeAgreement15 {
 	 * TradeAgreement11.mmAmendOrCancelReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendOrCancelReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, Optional<Max35Text>> mmAmendOrCancelReason = new MMMessageAttribute<TradeAgreement15, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
@@ -385,6 +425,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeAgreement15 obj) {
+			return obj.getAmendOrCancelReason();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, Optional<Max35Text> value) {
+			obj.setAmendOrCancelReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OprTp")
@@ -423,7 +473,7 @@ public class TradeAgreement15 {
 	 * TradeAgreement11.mmOperationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, Optional<Max4Text>> mmOperationType = new MMMessageAttribute<TradeAgreement15, Optional<Max4Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
 			isDerived = false;
@@ -435,6 +485,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(TradeAgreement15 obj) {
+			return obj.getOperationType();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, Optional<Max4Text> value) {
+			obj.setOperationType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OprScp")
@@ -473,7 +533,7 @@ public class TradeAgreement15 {
 	 * TradeAgreement11.mmOperationScope}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperationScope = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, Optional<Max4Text>> mmOperationScope = new MMMessageAttribute<TradeAgreement15, Optional<Max4Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
 			isDerived = false;
@@ -485,6 +545,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max4Text> getValue(TradeAgreement15 obj) {
+			return obj.getOperationScope();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, Optional<Max4Text> value) {
+			obj.setOperationScope(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdctTp")
@@ -523,7 +593,7 @@ public class TradeAgreement15 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProductType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, Optional<Max35Text>> mmProductType = new MMMessageAttribute<TradeAgreement15, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmTypeOfProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
@@ -535,6 +605,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeAgreement15 obj) {
+			return obj.getProductType();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, Optional<Max35Text> value) {
+			obj.setProductType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSsnIdr")
@@ -574,7 +654,7 @@ public class TradeAgreement15 {
 	 * TradeAgreement11.mmSettlementSessionIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementSessionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, Optional<Exact4AlphaNumericText>> mmSettlementSessionIdentifier = new MMMessageAttribute<TradeAgreement15, Optional<Exact4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
 			isDerived = false;
@@ -586,6 +666,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(TradeAgreement15 obj) {
+			return obj.getSettlementSessionIdentifier();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setSettlementSessionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtVrssPmtInd")
@@ -625,7 +715,7 @@ public class TradeAgreement15 {
 	 * TradeAgreement11.mmPaymentVersusPaymentIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentVersusPaymentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeAgreement15, Optional<YesNoIndicator>> mmPaymentVersusPaymentIndicator = new MMMessageAttribute<TradeAgreement15, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeAgreement15.mmObject();
 			isDerived = false;
@@ -637,6 +727,16 @@ public class TradeAgreement15 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(TradeAgreement15 obj) {
+			return obj.getPaymentVersusPaymentIndicator();
+		}
+
+		@Override
+		public void setValue(TradeAgreement15 obj, Optional<YesNoIndicator> value) {
+			obj.setPaymentVersusPaymentIndicator(value.orElse(null));
 		}
 	};
 

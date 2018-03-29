@@ -121,7 +121,7 @@ public class IntraBalanceOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovements = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceOrOperationalError1Choice, List<IntraBalanceMovements1>> mmMovements = new MMMessageAssociationEnd<IntraBalanceOrOperationalError1Choice, List<IntraBalanceMovements1>>() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntraBalanceOrOperationalError1Choice.mmObject();
@@ -134,6 +134,16 @@ public class IntraBalanceOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IntraBalanceMovements1.mmObject();
+		}
+
+		@Override
+		public List<IntraBalanceMovements1> getValue(IntraBalanceOrOperationalError1Choice obj) {
+			return obj.getMovements();
+		}
+
+		@Override
+		public void setValue(IntraBalanceOrOperationalError1Choice obj, List<IntraBalanceMovements1> value) {
+			obj.setMovements(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -172,7 +182,7 @@ public class IntraBalanceOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceOrOperationalError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<IntraBalanceOrOperationalError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IntraBalanceOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -184,6 +194,16 @@ public class IntraBalanceOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(IntraBalanceOrOperationalError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(IntraBalanceOrOperationalError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

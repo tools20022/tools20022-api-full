@@ -108,7 +108,7 @@ public class InvoiceIdentification1 {
 	 * definition} = "Identifies the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInvoiceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceIdentification1, Max35Text> mmInvoiceNumber = new MMMessageAttribute<InvoiceIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceIdentification1.mmObject();
@@ -120,6 +120,16 @@ public class InvoiceIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(InvoiceIdentification1 obj) {
+			return obj.getInvoiceNumber();
+		}
+
+		@Override
+		public void setValue(InvoiceIdentification1 obj, Max35Text value) {
+			obj.setInvoiceNumber(value);
 		}
 	};
 	@XmlElement(name = "IsseDt", required = true)
@@ -156,7 +166,7 @@ public class InvoiceIdentification1 {
 	 * definition} = "Date of issuance of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceIdentification1, ISODate> mmIssueDate = new MMMessageAttribute<InvoiceIdentification1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceIdentification1.mmObject();
@@ -168,6 +178,16 @@ public class InvoiceIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(InvoiceIdentification1 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(InvoiceIdentification1 obj, ISODate value) {
+			obj.setIssueDate(value);
 		}
 	};
 

@@ -126,7 +126,7 @@ public class ActionMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageDestination = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActionMessage1, UserInterface1Code> mmMessageDestination = new MMMessageAttribute<ActionMessage1, UserInterface1Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmObject();
@@ -139,6 +139,16 @@ public class ActionMessage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UserInterface1Code.mmObject();
+		}
+
+		@Override
+		public UserInterface1Code getValue(ActionMessage1 obj) {
+			return obj.getMessageDestination();
+		}
+
+		@Override
+		public void setValue(ActionMessage1 obj, UserInterface1Code value) {
+			obj.setMessageDestination(value);
 		}
 	};
 	@XmlElement(name = "MsgCntt", required = true)
@@ -187,7 +197,7 @@ public class ActionMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageContent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActionMessage1, Max256Text> mmMessageContent = new MMMessageAttribute<ActionMessage1, Max256Text>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmActionMessage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmObject();
@@ -200,6 +210,16 @@ public class ActionMessage1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(ActionMessage1 obj) {
+			return obj.getMessageContent();
+		}
+
+		@Override
+		public void setValue(ActionMessage1 obj, Max256Text value) {
+			obj.setMessageContent(value);
 		}
 	};
 	@XmlElement(name = "MsgCnttSgntr")
@@ -238,7 +258,7 @@ public class ActionMessage1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageContentSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ActionMessage1, Optional<Max70Text>> mmMessageContentSignature = new MMMessageAttribute<ActionMessage1, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ActionMessage1.mmObject();
 			isDerived = false;
@@ -250,6 +270,16 @@ public class ActionMessage1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(ActionMessage1 obj) {
+			return obj.getMessageContentSignature();
+		}
+
+		@Override
+		public void setValue(ActionMessage1 obj, Optional<Max70Text> value) {
+			obj.setMessageContentSignature(value.orElse(null));
 		}
 	};
 

@@ -97,7 +97,7 @@ public class AlgorithmAndDigest1 {
 	 * definition} = "Digest algorithm used to create the digest."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmAndDigest1, Algorithm5Code> mmDigestAlgorithm = new MMMessageAttribute<AlgorithmAndDigest1, Algorithm5Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmAndDigest1.mmObject();
 			isDerived = false;
@@ -108,6 +108,16 @@ public class AlgorithmAndDigest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm5Code.mmObject();
+		}
+
+		@Override
+		public Algorithm5Code getValue(AlgorithmAndDigest1 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmAndDigest1 obj, Algorithm5Code value) {
+			obj.setDigestAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "Dgst", required = true)
@@ -139,7 +149,7 @@ public class AlgorithmAndDigest1 {
 	 * definition} = "Result of data-digesting process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmAndDigest1, Max140Text> mmDigest = new MMMessageAttribute<AlgorithmAndDigest1, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmAndDigest1.mmObject();
 			isDerived = false;
@@ -150,6 +160,16 @@ public class AlgorithmAndDigest1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(AlgorithmAndDigest1 obj) {
+			return obj.getDigest();
+		}
+
+		@Override
+		public void setValue(AlgorithmAndDigest1 obj, Max140Text value) {
+			obj.setDigest(value);
 		}
 	};
 

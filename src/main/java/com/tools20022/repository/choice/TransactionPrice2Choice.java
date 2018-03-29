@@ -113,7 +113,7 @@ public class TransactionPrice2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionPrice2Choice, ActiveOrHistoricCurrencyAndAmount> mmDealPrice = new MMMessageAttribute<TransactionPrice2Choice, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionPrice2Choice.mmObject();
@@ -125,6 +125,16 @@ public class TransactionPrice2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(TransactionPrice2Choice obj) {
+			return obj.getDealPrice();
+		}
+
+		@Override
+		public void setValue(TransactionPrice2Choice obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setDealPrice(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class TransactionPrice2Choice {
 	 * "Proprietary price specification related to the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionPrice2Choice, List<ProprietaryPrice2>> mmProprietary = new MMMessageAssociationEnd<TransactionPrice2Choice, List<ProprietaryPrice2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionPrice2Choice.mmObject();
@@ -173,6 +183,16 @@ public class TransactionPrice2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryPrice2.mmObject();
+		}
+
+		@Override
+		public List<ProprietaryPrice2> getValue(TransactionPrice2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TransactionPrice2Choice obj, List<ProprietaryPrice2> value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -120,7 +120,7 @@ public class PortfolioTransferStatus1Choice {
 	 * AllegementStatus3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PortfolioTransferStatus1Choice, AllegementStatus2Code> mmCode = new MMMessageAttribute<PortfolioTransferStatus1Choice, AllegementStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAllegedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PortfolioTransferStatus1Choice.mmObject();
@@ -134,6 +134,16 @@ public class PortfolioTransferStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AllegementStatus2Code.mmObject();
+		}
+
+		@Override
+		public AllegementStatus2Code getValue(PortfolioTransferStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferStatus1Choice obj, AllegementStatus2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class PortfolioTransferStatus1Choice {
 	 * AllegementStatus3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PortfolioTransferStatus1Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<PortfolioTransferStatus1Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAllegedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PortfolioTransferStatus1Choice.mmObject();
@@ -193,6 +203,16 @@ public class PortfolioTransferStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(PortfolioTransferStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferStatus1Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

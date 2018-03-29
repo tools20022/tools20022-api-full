@@ -116,7 +116,7 @@ public class Tax23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax23, TaxType2Choice> mmType = new MMMessageAssociationEnd<Tax23, TaxType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax23.mmObject();
@@ -130,6 +130,16 @@ public class Tax23 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TaxType2Choice.mmObject();
+		}
+
+		@Override
+		public TaxType2Choice getValue(Tax23 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Tax23 obj, TaxType2Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AmtOrPctg", required = true)
@@ -164,7 +174,7 @@ public class Tax23 {
 	 * definition} = "Specifies the tax as an amount or percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountOrPercentage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax23, AmountOrPercentage2Choice> mmAmountOrPercentage = new MMMessageAssociationEnd<Tax23, AmountOrPercentage2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Tax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax23.mmObject();
@@ -177,6 +187,16 @@ public class Tax23 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountOrPercentage2Choice.mmObject();
+		}
+
+		@Override
+		public AmountOrPercentage2Choice getValue(Tax23 obj) {
+			return obj.getAmountOrPercentage();
+		}
+
+		@Override
+		public void setValue(Tax23 obj, AmountOrPercentage2Choice value) {
+			obj.setAmountOrPercentage(value);
 		}
 	};
 

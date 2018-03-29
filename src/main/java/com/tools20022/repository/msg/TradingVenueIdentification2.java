@@ -108,7 +108,7 @@ public class TradingVenueIdentification2 {
 	 * definition} = "Identification field of the submitting entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueIdentification2, Max50Text> mmIdentification = new MMMessageAttribute<TradingVenueIdentification2, Max50Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueIdentification2.mmObject();
@@ -120,6 +120,16 @@ public class TradingVenueIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
+		}
+
+		@Override
+		public Max50Text getValue(TradingVenueIdentification2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TradingVenueIdentification2 obj, Max50Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -158,7 +168,7 @@ public class TradingVenueIdentification2 {
 	 * "Code list of venues to populate free form text identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueIdentification2, TradingVenue2Code> mmType = new MMMessageAttribute<TradingVenueIdentification2, TradingVenue2Code>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradingVenueIdentification2.mmObject();
@@ -170,6 +180,16 @@ public class TradingVenueIdentification2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradingVenue2Code.mmObject();
+		}
+
+		@Override
+		public TradingVenue2Code getValue(TradingVenueIdentification2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TradingVenueIdentification2 obj, TradingVenue2Code value) {
+			obj.setType(value);
 		}
 	};
 

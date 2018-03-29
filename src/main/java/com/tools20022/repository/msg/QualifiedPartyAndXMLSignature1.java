@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.ElectronicSignature;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.QualifiedPartyIdentification1;
 import com.tools20022.repository.other.SignatureEnvelope;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +121,7 @@ public class QualifiedPartyAndXMLSignature1 {
 	 * definition} = "Identification of the signing party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QualifiedPartyAndXMLSignature1, Optional<QualifiedPartyIdentification1>> mmParty = new MMMessageAssociationEnd<QualifiedPartyAndXMLSignature1, Optional<QualifiedPartyIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1.mmObject();
@@ -132,7 +133,17 @@ public class QualifiedPartyAndXMLSignature1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = false;
-			type_lazy = () -> com.tools20022.repository.msg.QualifiedPartyIdentification1.mmObject();
+			type_lazy = () -> QualifiedPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<QualifiedPartyIdentification1> getValue(QualifiedPartyAndXMLSignature1 obj) {
+			return obj.getParty();
+		}
+
+		@Override
+		public void setValue(QualifiedPartyAndXMLSignature1 obj, Optional<QualifiedPartyIdentification1> value) {
+			obj.setParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sgntr", required = true)
@@ -171,7 +182,7 @@ public class QualifiedPartyAndXMLSignature1 {
 	 * "Digital signature in XML-DSIG format and reference to signing party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignature = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QualifiedPartyAndXMLSignature1, SignatureEnvelope> mmSignature = new MMMessageAttribute<QualifiedPartyAndXMLSignature1, SignatureEnvelope>() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicSignature.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.QualifiedPartyAndXMLSignature1.mmObject();
@@ -183,6 +194,16 @@ public class QualifiedPartyAndXMLSignature1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignatureEnvelope.mmObject();
+		}
+
+		@Override
+		public SignatureEnvelope getValue(QualifiedPartyAndXMLSignature1 obj) {
+			return obj.getSignature();
+		}
+
+		@Override
+		public void setValue(QualifiedPartyAndXMLSignature1 obj, SignatureEnvelope value) {
+			obj.setSignature(value);
 		}
 	};
 
@@ -205,7 +226,7 @@ public class QualifiedPartyAndXMLSignature1 {
 		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public QualifiedPartyAndXMLSignature1 setParty(com.tools20022.repository.msg.QualifiedPartyIdentification1 party) {
+	public QualifiedPartyAndXMLSignature1 setParty(QualifiedPartyIdentification1 party) {
 		this.party = party;
 		return this;
 	}

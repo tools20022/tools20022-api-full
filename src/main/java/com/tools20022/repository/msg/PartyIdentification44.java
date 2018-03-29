@@ -112,7 +112,7 @@ public class PartyIdentification44 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification44, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<PartyIdentification44, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification44.mmObject();
@@ -124,6 +124,16 @@ public class PartyIdentification44 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification44 obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(PartyIdentification44 obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 	@XmlElement(name = "AltrntvIdr")
@@ -162,7 +172,7 @@ public class PartyIdentification44 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternativeIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification44, List<Max35Text>> mmAlternativeIdentifier = new MMMessageAttribute<PartyIdentification44, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification44.mmObject();
@@ -174,6 +184,16 @@ public class PartyIdentification44 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(PartyIdentification44 obj) {
+			return obj.getAlternativeIdentifier();
+		}
+
+		@Override
+		public void setValue(PartyIdentification44 obj, List<Max35Text> value) {
+			obj.setAlternativeIdentifier(value);
 		}
 	};
 

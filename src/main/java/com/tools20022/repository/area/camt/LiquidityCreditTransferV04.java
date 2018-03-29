@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.LiquidityCreditTransfer1;
 import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -106,7 +105,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "LiquidityCreditTransferV04"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -144,7 +143,7 @@ public class LiquidityCreditTransferV04 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<LiquidityCreditTransferV04, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<LiquidityCreditTransferV04, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,12 +154,14 @@ public class LiquidityCreditTransferV04 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return LiquidityCreditTransferV04.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(LiquidityCreditTransferV04 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransferV04 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "LqdtyCdtTrf", required = true)
@@ -188,7 +189,7 @@ public class LiquidityCreditTransferV04 {
 	 * definition} = "Details of the liquidity credit transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmLiquidityCreditTransfer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<LiquidityCreditTransferV04, LiquidityCreditTransfer1> mmLiquidityCreditTransfer = new MMMessageBuildingBlock<LiquidityCreditTransferV04, LiquidityCreditTransfer1>() {
 		{
 			xmlTag = "LqdtyCdtTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,12 +200,14 @@ public class LiquidityCreditTransferV04 {
 			complexType_lazy = () -> LiquidityCreditTransfer1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return LiquidityCreditTransferV04.class.getMethod("getLiquidityCreditTransfer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public LiquidityCreditTransfer1 getValue(LiquidityCreditTransferV04 obj) {
+			return obj.getLiquidityCreditTransfer();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransferV04 obj, LiquidityCreditTransfer1 value) {
+			obj.setLiquidityCreditTransfer(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -234,7 +237,7 @@ public class LiquidityCreditTransferV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<LiquidityCreditTransferV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<LiquidityCreditTransferV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,19 +247,21 @@ public class LiquidityCreditTransferV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return LiquidityCreditTransferV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(LiquidityCreditTransferV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(LiquidityCreditTransferV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityCreditTransferV04";
 				definition = "Scope\r\nThe LiquidityCreditTransfer message is sent by a member to the transaction administrator.\r\nIt is used to request a transfer of funds between two accounts belonging to the same member or the same group of accounts, and being held at the transaction administrator.\r\nUsage\r\nAt any time during the operating hours of the system, and to perform the appropriate liquidity management, the member can request the transaction administrator to execute the transfer of funds between two accounts that the transaction administrator maintains for the member. For instance, this may be an action resulting from a Get/Return Account pair of messages.\r\nThe LiquidityCreditTransfer message can be used when the transactions to/from the member are unbalanced in value for the business day, or to unlock pending transactions at the end of day.\r\nThe member can request the transfer by identifying the accounts stored at the transaction administrator:\r\n- If the accounts involved in the requested transfer are known without doubt to the transaction administrator, it is possible to indicate only the type of the account to be credited.\r\n- If, on the contrary, more clarity is desired, it is possible to identify the accounts from and to which the funds should be transferred.\r\nNote that transfers are processed only when the balance in the account to be debited is sufficient to pass the liquidity transfer instruction and remain positive. Based on the criteria received within the LiquidityCreditTransfer message, the transaction administrator will execute or reject the requested transfer.\r\nIn principle, the transaction administrator may send a Receipt message as a reply to the liquidity transfer request. To verify the outcome of the request, the member may submit a GetTransaction or GetAccount message with the appropriate search criteria.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

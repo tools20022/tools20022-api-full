@@ -100,7 +100,7 @@ public class DateCodeAndTimeFormat2 {
 	 * definition} = "Specifies the type of date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateCodeAndTimeFormat2, DateCode8Choice> mmDateCode = new MMMessageAssociationEnd<DateCodeAndTimeFormat2, DateCode8Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateCodeAndTimeFormat2.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class DateCodeAndTimeFormat2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateCode8Choice.mmObject();
+		}
+
+		@Override
+		public DateCode8Choice getValue(DateCodeAndTimeFormat2 obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateCodeAndTimeFormat2 obj, DateCode8Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 	@XmlElement(name = "Tm", required = true)
@@ -144,7 +154,7 @@ public class DateCodeAndTimeFormat2 {
 	 * definition} = "Specifies the time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateCodeAndTimeFormat2, ISOTime> mmTime = new MMMessageAttribute<DateCodeAndTimeFormat2, ISOTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DateCodeAndTimeFormat2.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class DateCodeAndTimeFormat2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
+		}
+
+		@Override
+		public ISOTime getValue(DateCodeAndTimeFormat2 obj) {
+			return obj.getTime();
+		}
+
+		@Override
+		public void setValue(DateCodeAndTimeFormat2 obj, ISOTime value) {
+			obj.setTime(value);
 		}
 	};
 

@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.RestrictedFINXMax140Text;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalBalanceInformation12;
+import com.tools20022.repository.msg.QuantityBreakdown26;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -142,7 +144,7 @@ public class SubBalanceInformation12 {
 	 * definition} = "Reason for the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceInformation12, SubBalanceType7Choice> mmSubBalanceType = new MMMessageAttribute<SubBalanceInformation12, SubBalanceType7Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation12.mmObject();
@@ -155,6 +157,16 @@ public class SubBalanceInformation12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceType7Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceType7Choice getValue(SubBalanceInformation12 obj) {
+			return obj.getSubBalanceType();
+		}
+
+		@Override
+		public void setValue(SubBalanceInformation12 obj, SubBalanceType7Choice value) {
+			obj.setSubBalanceType(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -195,7 +207,7 @@ public class SubBalanceInformation12 {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceInformation12, SubBalanceQuantity4Choice> mmQuantity = new MMMessageAttribute<SubBalanceInformation12, SubBalanceQuantity4Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation12.mmObject();
@@ -208,6 +220,16 @@ public class SubBalanceInformation12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity4Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceQuantity4Choice getValue(SubBalanceInformation12 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SubBalanceInformation12 obj, SubBalanceQuantity4Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "SubBalAddtlDtls")
@@ -243,7 +265,7 @@ public class SubBalanceInformation12 {
 	 * definition} = "Provides additional subbalance information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubBalanceAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceInformation12, Optional<RestrictedFINXMax140Text>> mmSubBalanceAdditionalDetails = new MMMessageAttribute<SubBalanceInformation12, Optional<RestrictedFINXMax140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation12.mmObject();
 			isDerived = false;
@@ -256,9 +278,19 @@ public class SubBalanceInformation12 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
 		}
+
+		@Override
+		public Optional<RestrictedFINXMax140Text> getValue(SubBalanceInformation12 obj) {
+			return obj.getSubBalanceAdditionalDetails();
+		}
+
+		@Override
+		public void setValue(SubBalanceInformation12 obj, Optional<RestrictedFINXMax140Text> value) {
+			obj.setSubBalanceAdditionalDetails(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "QtyBrkdwn")
-	protected List<com.tools20022.repository.msg.QuantityBreakdown26> quantityBreakdown;
+	protected List<QuantityBreakdown26> quantityBreakdown;
 	/**
 	 * 
 	 <p>
@@ -295,7 +327,7 @@ public class SubBalanceInformation12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubBalanceInformation12, List<QuantityBreakdown26>> mmQuantityBreakdown = new MMMessageAssociationEnd<SubBalanceInformation12, List<QuantityBreakdown26>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation12.mmObject();
@@ -307,11 +339,21 @@ public class SubBalanceInformation12 {
 			definition = "Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown26.mmObject();
+			type_lazy = () -> QuantityBreakdown26.mmObject();
+		}
+
+		@Override
+		public List<QuantityBreakdown26> getValue(SubBalanceInformation12 obj) {
+			return obj.getQuantityBreakdown();
+		}
+
+		@Override
+		public void setValue(SubBalanceInformation12 obj, List<QuantityBreakdown26> value) {
+			obj.setQuantityBreakdown(value);
 		}
 	};
 	@XmlElement(name = "AddtlBalBrkdwnDtls")
-	protected List<com.tools20022.repository.msg.AdditionalBalanceInformation12> additionalBalanceBreakdownDetails;
+	protected List<AdditionalBalanceInformation12> additionalBalanceBreakdownDetails;
 	/**
 	 * 
 	 <p>
@@ -349,7 +391,7 @@ public class SubBalanceInformation12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalBalanceBreakdownDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubBalanceInformation12, List<AdditionalBalanceInformation12>> mmAdditionalBalanceBreakdownDetails = new MMMessageAssociationEnd<SubBalanceInformation12, List<AdditionalBalanceInformation12>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation12.mmObject();
@@ -361,7 +403,17 @@ public class SubBalanceInformation12 {
 			definition = "Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation12.mmObject();
+			type_lazy = () -> AdditionalBalanceInformation12.mmObject();
+		}
+
+		@Override
+		public List<AdditionalBalanceInformation12> getValue(SubBalanceInformation12 obj) {
+			return obj.getAdditionalBalanceBreakdownDetails();
+		}
+
+		@Override
+		public void setValue(SubBalanceInformation12 obj, List<AdditionalBalanceInformation12> value) {
+			obj.setAdditionalBalanceBreakdownDetails(value);
 		}
 	};
 
@@ -421,7 +473,7 @@ public class SubBalanceInformation12 {
 		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public SubBalanceInformation12 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown26> quantityBreakdown) {
+	public SubBalanceInformation12 setQuantityBreakdown(List<QuantityBreakdown26> quantityBreakdown) {
 		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
 		return this;
 	}
@@ -430,7 +482,7 @@ public class SubBalanceInformation12 {
 		return additionalBalanceBreakdownDetails == null ? additionalBalanceBreakdownDetails = new ArrayList<>() : additionalBalanceBreakdownDetails;
 	}
 
-	public SubBalanceInformation12 setAdditionalBalanceBreakdownDetails(List<com.tools20022.repository.msg.AdditionalBalanceInformation12> additionalBalanceBreakdownDetails) {
+	public SubBalanceInformation12 setAdditionalBalanceBreakdownDetails(List<AdditionalBalanceInformation12> additionalBalanceBreakdownDetails) {
 		this.additionalBalanceBreakdownDetails = Objects.requireNonNull(additionalBalanceBreakdownDetails);
 		return this;
 	}

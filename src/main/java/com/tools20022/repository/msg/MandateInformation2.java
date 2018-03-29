@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -171,7 +172,7 @@ public class MandateInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateInformation2, Optional<Max35Text>> mmMandateIdentification = new MMMessageAttribute<MandateInformation2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -183,6 +184,16 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MandateInformation2 obj) {
+			return obj.getMandateIdentification();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<Max35Text> value) {
+			obj.setMandateIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MndtReqId", required = true)
@@ -216,7 +227,7 @@ public class MandateInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMandateRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateInformation2, Max35Text> mmMandateRequestIdentification = new MMMessageAttribute<MandateInformation2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
 			isDerived = false;
@@ -227,6 +238,16 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MandateInformation2 obj) {
+			return obj.getMandateRequestIdentification();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Max35Text value) {
+			obj.setMandateRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -264,7 +285,7 @@ public class MandateInformation2 {
 	 * "Specifies the type of mandate, such as paper, electronic or scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, Optional<MandateTypeInformation1>> mmType = new MMMessageAssociationEnd<MandateInformation2, Optional<MandateTypeInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -276,7 +297,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation1.mmObject();
+			type_lazy = () -> MandateTypeInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<MandateTypeInformation1> getValue(MandateInformation2 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<MandateTypeInformation1> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ocrncs")
@@ -314,7 +345,7 @@ public class MandateInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOccurrences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, Optional<MandateOccurrences1>> mmOccurrences = new MMMessageAssociationEnd<MandateInformation2, Optional<MandateOccurrences1>>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -326,7 +357,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MandateOccurrences1.mmObject();
+			type_lazy = () -> MandateOccurrences1.mmObject();
+		}
+
+		@Override
+		public Optional<MandateOccurrences1> getValue(MandateInformation2 obj) {
+			return obj.getOccurrences();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<MandateOccurrences1> value) {
+			obj.setOccurrences(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ColltnAmt")
@@ -364,7 +405,7 @@ public class MandateInformation2 {
 	 * definition} = "Fixed amount to be collected from the debtor's account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollectionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateInformation2, Optional<ActiveCurrencyAndAmount>> mmCollectionAmount = new MMMessageAttribute<MandateInformation2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmCollectionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -376,6 +417,16 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MandateInformation2 obj) {
+			return obj.getCollectionAmount();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setCollectionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAmt")
@@ -415,7 +466,7 @@ public class MandateInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateInformation2, Optional<ActiveCurrencyAndAmount>> mmMaximumAmount = new MMMessageAttribute<MandateInformation2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmMaximumAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -427,6 +478,16 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MandateInformation2 obj) {
+			return obj.getMaximumAmount();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMaximumAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrSchmeId")
@@ -462,7 +523,7 @@ public class MandateInformation2 {
 	 * definition} = "Credit party that signs the mandate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorSchemeIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, Optional<PartyIdentification32>> mmCreditorSchemeIdentification = new MMMessageAssociationEnd<MandateInformation2, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -474,7 +535,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(MandateInformation2 obj) {
+			return obj.getCreditorSchemeIdentification();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<PartyIdentification32> value) {
+			obj.setCreditorSchemeIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr", required = true)
@@ -511,7 +582,7 @@ public class MandateInformation2 {
 	 * "Party that signs the mandate and to whom an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, PartyIdentification32> mmCreditor = new MMMessageAssociationEnd<MandateInformation2, PartyIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -523,7 +594,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public PartyIdentification32 getValue(MandateInformation2 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, PartyIdentification32 value) {
+			obj.setCreditor(value);
 		}
 	};
 	@XmlElement(name = "CdtrAcct")
@@ -561,7 +642,7 @@ public class MandateInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, Optional<CashAccount16>> mmCreditorAccount = new MMMessageAssociationEnd<MandateInformation2, Optional<CashAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -573,7 +654,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			type_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount16> getValue(MandateInformation2 obj) {
+			return obj.getCreditorAccount();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<CashAccount16> value) {
+			obj.setCreditorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -611,7 +702,7 @@ public class MandateInformation2 {
 	 * "Financial institution servicing an account for the creditor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, Optional<BranchAndFinancialInstitutionIdentification4>> mmCreditorAgent = new MMMessageAssociationEnd<MandateInformation2, Optional<BranchAndFinancialInstitutionIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -623,7 +714,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification4> getValue(MandateInformation2 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<BranchAndFinancialInstitutionIdentification4> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UltmtCdtr")
@@ -659,7 +760,7 @@ public class MandateInformation2 {
 	 * definition} = "Ultimate party to which an amount of money is due."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, Optional<PartyIdentification32>> mmUltimateCreditor = new MMMessageAssociationEnd<MandateInformation2, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -671,7 +772,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(MandateInformation2 obj) {
+			return obj.getUltimateCreditor();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<PartyIdentification32> value) {
+			obj.setUltimateCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dbtr", required = true)
@@ -709,7 +820,7 @@ public class MandateInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, PartyIdentification32> mmDebtor = new MMMessageAssociationEnd<MandateInformation2, PartyIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -721,7 +832,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public PartyIdentification32 getValue(MandateInformation2 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, PartyIdentification32 value) {
+			obj.setDebtor(value);
 		}
 	};
 	@XmlElement(name = "DbtrAcct")
@@ -759,7 +880,7 @@ public class MandateInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, Optional<CashAccount16>> mmDebtorAccount = new MMMessageAssociationEnd<MandateInformation2, Optional<CashAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -771,7 +892,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			type_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount16> getValue(MandateInformation2 obj) {
+			return obj.getDebtorAccount();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<CashAccount16> value) {
+			obj.setDebtorAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DbtrAgt", required = true)
@@ -809,7 +940,7 @@ public class MandateInformation2 {
 	 * "Financial institution servicing an account for the debtor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, BranchAndFinancialInstitutionIdentification4> mmDebtorAgent = new MMMessageAssociationEnd<MandateInformation2, BranchAndFinancialInstitutionIdentification4>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -821,7 +952,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification4.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification4 getValue(MandateInformation2 obj) {
+			return obj.getDebtorAgent();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, BranchAndFinancialInstitutionIdentification4 value) {
+			obj.setDebtorAgent(value);
 		}
 	};
 	@XmlElement(name = "UltmtDbtr")
@@ -859,7 +1000,7 @@ public class MandateInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, Optional<PartyIdentification32>> mmUltimateDebtor = new MMMessageAssociationEnd<MandateInformation2, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -871,7 +1012,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(MandateInformation2 obj) {
+			return obj.getUltimateDebtor();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<PartyIdentification32> value) {
+			obj.setUltimateDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RfrdDoc")
@@ -910,7 +1061,7 @@ public class MandateInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferredDocument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateInformation2, Optional<ReferredDocumentInformation3>> mmReferredDocument = new MMMessageAssociationEnd<MandateInformation2, Optional<ReferredDocumentInformation3>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDocument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateInformation2.mmObject();
@@ -922,7 +1073,17 @@ public class MandateInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmObject();
+			type_lazy = () -> ReferredDocumentInformation3.mmObject();
+		}
+
+		@Override
+		public Optional<ReferredDocumentInformation3> getValue(MandateInformation2 obj) {
+			return obj.getReferredDocument();
+		}
+
+		@Override
+		public void setValue(MandateInformation2 obj, Optional<ReferredDocumentInformation3> value) {
+			obj.setReferredDocument(value.orElse(null));
 		}
 	};
 
@@ -970,7 +1131,7 @@ public class MandateInformation2 {
 		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public MandateInformation2 setType(com.tools20022.repository.msg.MandateTypeInformation1 type) {
+	public MandateInformation2 setType(MandateTypeInformation1 type) {
 		this.type = type;
 		return this;
 	}
@@ -979,7 +1140,7 @@ public class MandateInformation2 {
 		return occurrences == null ? Optional.empty() : Optional.of(occurrences);
 	}
 
-	public MandateInformation2 setOccurrences(com.tools20022.repository.msg.MandateOccurrences1 occurrences) {
+	public MandateInformation2 setOccurrences(MandateOccurrences1 occurrences) {
 		this.occurrences = occurrences;
 		return this;
 	}
@@ -1006,7 +1167,7 @@ public class MandateInformation2 {
 		return creditorSchemeIdentification == null ? Optional.empty() : Optional.of(creditorSchemeIdentification);
 	}
 
-	public MandateInformation2 setCreditorSchemeIdentification(com.tools20022.repository.msg.PartyIdentification32 creditorSchemeIdentification) {
+	public MandateInformation2 setCreditorSchemeIdentification(PartyIdentification32 creditorSchemeIdentification) {
 		this.creditorSchemeIdentification = creditorSchemeIdentification;
 		return this;
 	}
@@ -1015,7 +1176,7 @@ public class MandateInformation2 {
 		return creditor;
 	}
 
-	public MandateInformation2 setCreditor(com.tools20022.repository.msg.PartyIdentification32 creditor) {
+	public MandateInformation2 setCreditor(PartyIdentification32 creditor) {
 		this.creditor = Objects.requireNonNull(creditor);
 		return this;
 	}
@@ -1024,7 +1185,7 @@ public class MandateInformation2 {
 		return creditorAccount == null ? Optional.empty() : Optional.of(creditorAccount);
 	}
 
-	public MandateInformation2 setCreditorAccount(com.tools20022.repository.msg.CashAccount16 creditorAccount) {
+	public MandateInformation2 setCreditorAccount(CashAccount16 creditorAccount) {
 		this.creditorAccount = creditorAccount;
 		return this;
 	}
@@ -1033,7 +1194,7 @@ public class MandateInformation2 {
 		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public MandateInformation2 setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 creditorAgent) {
+	public MandateInformation2 setCreditorAgent(BranchAndFinancialInstitutionIdentification4 creditorAgent) {
 		this.creditorAgent = creditorAgent;
 		return this;
 	}
@@ -1042,7 +1203,7 @@ public class MandateInformation2 {
 		return ultimateCreditor == null ? Optional.empty() : Optional.of(ultimateCreditor);
 	}
 
-	public MandateInformation2 setUltimateCreditor(com.tools20022.repository.msg.PartyIdentification32 ultimateCreditor) {
+	public MandateInformation2 setUltimateCreditor(PartyIdentification32 ultimateCreditor) {
 		this.ultimateCreditor = ultimateCreditor;
 		return this;
 	}
@@ -1051,7 +1212,7 @@ public class MandateInformation2 {
 		return debtor;
 	}
 
-	public MandateInformation2 setDebtor(com.tools20022.repository.msg.PartyIdentification32 debtor) {
+	public MandateInformation2 setDebtor(PartyIdentification32 debtor) {
 		this.debtor = Objects.requireNonNull(debtor);
 		return this;
 	}
@@ -1060,7 +1221,7 @@ public class MandateInformation2 {
 		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public MandateInformation2 setDebtorAccount(com.tools20022.repository.msg.CashAccount16 debtorAccount) {
+	public MandateInformation2 setDebtorAccount(CashAccount16 debtorAccount) {
 		this.debtorAccount = debtorAccount;
 		return this;
 	}
@@ -1069,7 +1230,7 @@ public class MandateInformation2 {
 		return debtorAgent;
 	}
 
-	public MandateInformation2 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 debtorAgent) {
+	public MandateInformation2 setDebtorAgent(BranchAndFinancialInstitutionIdentification4 debtorAgent) {
 		this.debtorAgent = Objects.requireNonNull(debtorAgent);
 		return this;
 	}
@@ -1078,7 +1239,7 @@ public class MandateInformation2 {
 		return ultimateDebtor == null ? Optional.empty() : Optional.of(ultimateDebtor);
 	}
 
-	public MandateInformation2 setUltimateDebtor(com.tools20022.repository.msg.PartyIdentification32 ultimateDebtor) {
+	public MandateInformation2 setUltimateDebtor(PartyIdentification32 ultimateDebtor) {
 		this.ultimateDebtor = ultimateDebtor;
 		return this;
 	}
@@ -1087,7 +1248,7 @@ public class MandateInformation2 {
 		return referredDocument == null ? Optional.empty() : Optional.of(referredDocument);
 	}
 
-	public MandateInformation2 setReferredDocument(com.tools20022.repository.msg.ReferredDocumentInformation3 referredDocument) {
+	public MandateInformation2 setReferredDocument(ReferredDocumentInformation3 referredDocument) {
 		this.referredDocument = referredDocument;
 		return this;
 	}

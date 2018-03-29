@@ -122,7 +122,7 @@ public class MarginCollateral1 {
 	 * "Post haircut market value of all margin collateral held by party A."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHeldByPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmHeldByPartyA = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCollateral1.mmObject();
@@ -134,6 +134,16 @@ public class MarginCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginCollateral1 obj) {
+			return obj.getHeldByPartyA();
+		}
+
+		@Override
+		public void setValue(MarginCollateral1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setHeldByPartyA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HeldByPtyB")
@@ -172,7 +182,7 @@ public class MarginCollateral1 {
 	 * "Post haircut market value of all margin collateral held by party B."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHeldByPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmHeldByPartyB = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmHeldAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCollateral1.mmObject();
@@ -184,6 +194,16 @@ public class MarginCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginCollateral1 obj) {
+			return obj.getHeldByPartyB();
+		}
+
+		@Override
+		public void setValue(MarginCollateral1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setHeldByPartyB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrrAgrdToPtyA")
@@ -223,7 +243,7 @@ public class MarginCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriorAgreedToPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmPriorAgreedToPartyA = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmPriorAgreed;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCollateral1.mmObject();
@@ -235,6 +255,16 @@ public class MarginCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginCollateral1 obj) {
+			return obj.getPriorAgreedToPartyA();
+		}
+
+		@Override
+		public void setValue(MarginCollateral1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setPriorAgreedToPartyA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrrAgrdToPtyB")
@@ -274,7 +304,7 @@ public class MarginCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriorAgreedToPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmPriorAgreedToPartyB = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmPriorAgreed;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCollateral1.mmObject();
@@ -286,6 +316,16 @@ public class MarginCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginCollateral1 obj) {
+			return obj.getPriorAgreedToPartyB();
+		}
+
+		@Override
+		public void setValue(MarginCollateral1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setPriorAgreedToPartyB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InTrnstToPtyA")
@@ -325,7 +365,7 @@ public class MarginCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInTransitToPartyA = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmInTransitToPartyA = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCollateral1.mmObject();
@@ -337,6 +377,16 @@ public class MarginCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginCollateral1 obj) {
+			return obj.getInTransitToPartyA();
+		}
+
+		@Override
+		public void setValue(MarginCollateral1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setInTransitToPartyA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InTrnstToPtyB")
@@ -376,7 +426,7 @@ public class MarginCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInTransitToPartyB = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>> mmInTransitToPartyB = new MMMessageAttribute<MarginCollateral1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralBalance.mmInTransit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCollateral1.mmObject();
@@ -388,6 +438,16 @@ public class MarginCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginCollateral1 obj) {
+			return obj.getInTransitToPartyB();
+		}
+
+		@Override
+		public void setValue(MarginCollateral1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setInTransitToPartyB(value.orElse(null));
 		}
 	};
 

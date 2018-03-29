@@ -111,7 +111,7 @@ public class TransferCancellationStatus2 {
 	 * "Status of the transfer cancellation is accepted or sent to next party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferCancellationStatus2, CancellationStatus2Code> mmStatus = new MMMessageAttribute<TransferCancellationStatus2, CancellationStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmCancellationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationStatus2.mmObject();
@@ -123,6 +123,16 @@ public class TransferCancellationStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationStatus2Code.mmObject();
+		}
+
+		@Override
+		public CancellationStatus2Code getValue(TransferCancellationStatus2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatus2 obj, CancellationStatus2Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -159,7 +169,7 @@ public class TransferCancellationStatus2 {
 	 * definition} = "Reason for the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferCancellationStatus2, Optional<Max350Text>> mmReason = new MMMessageAttribute<TransferCancellationStatus2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferCancellationStatus2.mmObject();
@@ -171,6 +181,16 @@ public class TransferCancellationStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransferCancellationStatus2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(TransferCancellationStatus2 obj, Optional<Max350Text> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 

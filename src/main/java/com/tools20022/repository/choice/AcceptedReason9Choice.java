@@ -123,7 +123,7 @@ public class AcceptedReason9Choice {
 	 * AcceptedReason4Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptedReason9Choice, AcknowledgementReason8Code> mmCode = new MMMessageAttribute<AcceptedReason9Choice, AcknowledgementReason8Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcceptedReason9Choice.mmObject();
@@ -136,6 +136,16 @@ public class AcceptedReason9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AcknowledgementReason8Code.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason8Code getValue(AcceptedReason9Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcceptedReason9Choice obj, AcknowledgementReason8Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -180,7 +190,7 @@ public class AcceptedReason9Choice {
 	 * AcceptedReason4Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptedReason9Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<AcceptedReason9Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcceptedReason9Choice.mmObject();
@@ -193,6 +203,16 @@ public class AcceptedReason9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(AcceptedReason9Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AcceptedReason9Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -141,7 +141,7 @@ public class PartyIdentification15Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICOrBEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification15Choice, AnyBICIdentifier> mmBICOrBEI = new MMMessageAttribute<PartyIdentification15Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification15Choice.mmObject();
@@ -154,6 +154,16 @@ public class PartyIdentification15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(PartyIdentification15Choice obj) {
+			return obj.getBICOrBEI();
+		}
+
+		@Override
+		public void setValue(PartyIdentification15Choice obj, AnyBICIdentifier value) {
+			obj.setBICOrBEI(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -195,7 +205,7 @@ public class PartyIdentification15Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification15Choice, GenericIdentification24> mmProprietaryIdentification = new MMMessageAssociationEnd<PartyIdentification15Choice, GenericIdentification24>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification15Choice.mmObject();
@@ -209,6 +219,16 @@ public class PartyIdentification15Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification24.mmObject();
+		}
+
+		@Override
+		public GenericIdentification24 getValue(PartyIdentification15Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification15Choice obj, GenericIdentification24 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -247,7 +267,7 @@ public class PartyIdentification15Choice {
 	 * definition} = "Name and address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification15Choice, NameAndAddress12> mmNameAndAddress = new MMMessageAssociationEnd<PartyIdentification15Choice, NameAndAddress12>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification15Choice.mmObject();
@@ -261,6 +281,16 @@ public class PartyIdentification15Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NameAndAddress12.mmObject();
+		}
+
+		@Override
+		public NameAndAddress12 getValue(PartyIdentification15Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification15Choice obj, NameAndAddress12 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -302,7 +332,7 @@ public class PartyIdentification15Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification15Choice, CountryCode> mmCountry = new MMMessageAttribute<PartyIdentification15Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PartyIdentification15Choice.mmObject();
@@ -315,6 +345,16 @@ public class PartyIdentification15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PartyIdentification15Choice obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(PartyIdentification15Choice obj, CountryCode value) {
+			obj.setCountry(value);
 		}
 	};
 

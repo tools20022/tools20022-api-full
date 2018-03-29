@@ -52,11 +52,15 @@ public class ConstraintDefaultOptionRule {
 	 */
 	public static final MMConstraint<AgentCANotificationAdviceV01> forAgentCANotificationAdviceV01 = new MMConstraint<AgentCANotificationAdviceV01>() {
 		{
-			validator = ConstraintDefaultOptionRule::checkAgentCANotificationAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionRule";
 			definition = "If the value of CorporateActionGeneralInformation/MandatoryVoluntaryEventType is Mandatory, then CorporateActionDetails/DefaultOptionNumber and CorporateActionDetails/DefaultOptionType must be present.\n.";
 			owner_lazy = () -> AgentCANotificationAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCANotificationAdviceV01 obj) throws Exception {
+			checkAgentCANotificationAdviceV01(obj);
 		}
 	};
 

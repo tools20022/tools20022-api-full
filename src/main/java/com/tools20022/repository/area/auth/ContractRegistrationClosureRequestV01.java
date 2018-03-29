@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.CurrencyControlHeader1;
 import com.tools20022.repository.msg.RegisteredContract2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -120,7 +119,7 @@ public class ContractRegistrationClosureRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ContractRegistrationClosureRequestV01, CurrencyControlHeader1> mmGroupHeader = new MMMessageBuildingBlock<ContractRegistrationClosureRequestV01, CurrencyControlHeader1>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,12 +130,14 @@ public class ContractRegistrationClosureRequestV01 {
 			complexType_lazy = () -> CurrencyControlHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ContractRegistrationClosureRequestV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyControlHeader1 getValue(ContractRegistrationClosureRequestV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(ContractRegistrationClosureRequestV01 obj, CurrencyControlHeader1 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "RegdCtrctClsr", required = true)
@@ -168,7 +169,7 @@ public class ContractRegistrationClosureRequestV01 {
 	 * definition} = "Details on the closure of the registered contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRegisteredContractClosure = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ContractRegistrationClosureRequestV01, List<RegisteredContract2>> mmRegisteredContractClosure = new MMMessageBuildingBlock<ContractRegistrationClosureRequestV01, List<RegisteredContract2>>() {
 		{
 			xmlTag = "RegdCtrctClsr";
 			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "RU-CMPG"}, new String[]{"value", "Deal Passport Closure"}));
@@ -179,12 +180,14 @@ public class ContractRegistrationClosureRequestV01 {
 			complexType_lazy = () -> RegisteredContract2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ContractRegistrationClosureRequestV01.class.getMethod("getRegisteredContractClosure", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<RegisteredContract2> getValue(ContractRegistrationClosureRequestV01 obj) {
+			return obj.getRegisteredContractClosure();
+		}
+
+		@Override
+		public void setValue(ContractRegistrationClosureRequestV01 obj, List<RegisteredContract2> value) {
+			obj.setRegisteredContractClosure(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -214,7 +217,7 @@ public class ContractRegistrationClosureRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ContractRegistrationClosureRequestV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ContractRegistrationClosureRequestV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +227,14 @@ public class ContractRegistrationClosureRequestV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ContractRegistrationClosureRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ContractRegistrationClosureRequestV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ContractRegistrationClosureRequestV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

@@ -127,7 +127,7 @@ public class Counterparty3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty3Choice, PartyIdentificationAndAccount35> mmSeller = new MMMessageAssociationEnd<Counterparty3Choice, PartyIdentificationAndAccount35>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty3Choice.mmObject();
@@ -142,6 +142,16 @@ public class Counterparty3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount35.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount35 getValue(Counterparty3Choice obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(Counterparty3Choice obj, PartyIdentificationAndAccount35 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -190,7 +200,7 @@ public class Counterparty3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty3Choice, PartyIdentificationAndAccount35> mmBuyer = new MMMessageAssociationEnd<Counterparty3Choice, PartyIdentificationAndAccount35>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty3Choice.mmObject();
@@ -205,6 +215,16 @@ public class Counterparty3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount35.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount35 getValue(Counterparty3Choice obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(Counterparty3Choice obj, PartyIdentificationAndAccount35 value) {
+			obj.setBuyer(value);
 		}
 	};
 

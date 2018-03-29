@@ -104,7 +104,7 @@ public class UnableToApplyJustification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnableToApplyJustification1Choice, YesNoIndicator> mmAnyInformation = new MMMessageAttribute<UnableToApplyJustification1Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification1Choice.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class UnableToApplyJustification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(UnableToApplyJustification1Choice obj) {
+			return obj.getAnyInformation();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustification1Choice obj, YesNoIndicator value) {
+			obj.setAnyInformation(value);
 		}
 	};
 	@XmlElement(name = "MssngOrIncrrctInf", required = true)
@@ -146,7 +156,7 @@ public class UnableToApplyJustification1Choice {
 	 * definition} = "Missing or incorrect information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMissingOrIncorrectInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnableToApplyJustification1Choice, MissingOrIncorrectInformation1> mmMissingOrIncorrectInformation = new MMMessageAssociationEnd<UnableToApplyJustification1Choice, MissingOrIncorrectInformation1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification1Choice.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class UnableToApplyJustification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MissingOrIncorrectInformation1.mmObject();
+		}
+
+		@Override
+		public MissingOrIncorrectInformation1 getValue(UnableToApplyJustification1Choice obj) {
+			return obj.getMissingOrIncorrectInformation();
+		}
+
+		@Override
+		public void setValue(UnableToApplyJustification1Choice obj, MissingOrIncorrectInformation1 value) {
+			obj.setMissingOrIncorrectInformation(value);
 		}
 	};
 

@@ -63,13 +63,17 @@ public class ConstraintHoldingCertificateNumberRule {
 	 */
 	public static final MMConstraint<BlockedHoldingDetails1> forBlockedHoldingDetails1 = new MMConstraint<BlockedHoldingDetails1>() {
 		{
-			validator = ConstraintHoldingCertificateNumberRule::checkBlockedHoldingDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingCertificateNumberRule";
 			definition = "If BlockHolding is “CERT” then HoldingCertificateNumber is mandatory.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintHoldingCertificateNumberRule.forBlockedHoldingDetails2);
 			owner_lazy = () -> BlockedHoldingDetails1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldingCertificateNumber</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/BlockedHolding</leftOperand><rightOperand>Certificate</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BlockedHoldingDetails1 obj) throws Exception {
+			checkBlockedHoldingDetails1(obj);
 		}
 	};
 	/**
@@ -104,13 +108,17 @@ public class ConstraintHoldingCertificateNumberRule {
 	 */
 	public static final MMConstraint<BlockedHoldingDetails2> forBlockedHoldingDetails2 = new MMConstraint<BlockedHoldingDetails2>() {
 		{
-			validator = ConstraintHoldingCertificateNumberRule::checkBlockedHoldingDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingCertificateNumberRule";
 			definition = "If BlockHolding is CERT (Certificate) then HoldingCertificateNumber is mandatory.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintHoldingCertificateNumberRule.forBlockedHoldingDetails1;
 			owner_lazy = () -> BlockedHoldingDetails2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/HoldingCertificateNumber</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/BlockedHolding</leftOperand><rightOperand>Certificate</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BlockedHoldingDetails2 obj) throws Exception {
+			checkBlockedHoldingDetails2(obj);
 		}
 	};
 

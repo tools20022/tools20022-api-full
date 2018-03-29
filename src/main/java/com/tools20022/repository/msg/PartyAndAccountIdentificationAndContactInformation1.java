@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvoiceFinancingPartyRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount7;
+import com.tools20022.repository.msg.ContactIdentification1;
+import com.tools20022.repository.msg.PartyIdentification8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +111,7 @@ public class PartyAndAccountIdentificationAndContactInformation1 {
 	 * "Identification of the party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAndAccountIdentificationAndContactInformation1, PartyIdentification8> mmPartyIdentification = new MMMessageAssociationEnd<PartyAndAccountIdentificationAndContactInformation1, PartyIdentification8>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1.mmObject();
@@ -120,7 +123,17 @@ public class PartyAndAccountIdentificationAndContactInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public PartyIdentification8 getValue(PartyAndAccountIdentificationAndContactInformation1 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(PartyAndAccountIdentificationAndContactInformation1 obj, PartyIdentification8 value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -156,7 +169,7 @@ public class PartyAndAccountIdentificationAndContactInformation1 {
 	 * definition} = "Identification of the account owned by the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAndAccountIdentificationAndContactInformation1, Optional<CashAccount7>> mmAccountIdentification = new MMMessageAssociationEnd<PartyAndAccountIdentificationAndContactInformation1, Optional<CashAccount7>>() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingPartyRole.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1.mmObject();
@@ -168,7 +181,17 @@ public class PartyAndAccountIdentificationAndContactInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount7.mmObject();
+			type_lazy = () -> CashAccount7.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount7> getValue(PartyAndAccountIdentificationAndContactInformation1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(PartyAndAccountIdentificationAndContactInformation1 obj, Optional<CashAccount7> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtctInf")
@@ -206,7 +229,7 @@ public class PartyAndAccountIdentificationAndContactInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyAndAccountIdentificationAndContactInformation1, Optional<ContactIdentification1>> mmContactInformation = new MMMessageAssociationEnd<PartyAndAccountIdentificationAndContactInformation1, Optional<ContactIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1.mmObject();
@@ -218,7 +241,17 @@ public class PartyAndAccountIdentificationAndContactInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
+			type_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification1> getValue(PartyAndAccountIdentificationAndContactInformation1 obj) {
+			return obj.getContactInformation();
+		}
+
+		@Override
+		public void setValue(PartyAndAccountIdentificationAndContactInformation1 obj, Optional<ContactIdentification1> value) {
+			obj.setContactInformation(value.orElse(null));
 		}
 	};
 
@@ -241,7 +274,7 @@ public class PartyAndAccountIdentificationAndContactInformation1 {
 		return partyIdentification;
 	}
 
-	public PartyAndAccountIdentificationAndContactInformation1 setPartyIdentification(com.tools20022.repository.msg.PartyIdentification8 partyIdentification) {
+	public PartyAndAccountIdentificationAndContactInformation1 setPartyIdentification(PartyIdentification8 partyIdentification) {
 		this.partyIdentification = Objects.requireNonNull(partyIdentification);
 		return this;
 	}
@@ -250,7 +283,7 @@ public class PartyAndAccountIdentificationAndContactInformation1 {
 		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public PartyAndAccountIdentificationAndContactInformation1 setAccountIdentification(com.tools20022.repository.msg.CashAccount7 accountIdentification) {
+	public PartyAndAccountIdentificationAndContactInformation1 setAccountIdentification(CashAccount7 accountIdentification) {
 		this.accountIdentification = accountIdentification;
 		return this;
 	}
@@ -259,7 +292,7 @@ public class PartyAndAccountIdentificationAndContactInformation1 {
 		return contactInformation == null ? Optional.empty() : Optional.of(contactInformation);
 	}
 
-	public PartyAndAccountIdentificationAndContactInformation1 setContactInformation(com.tools20022.repository.msg.ContactIdentification1 contactInformation) {
+	public PartyAndAccountIdentificationAndContactInformation1 setContactInformation(ContactIdentification1 contactInformation) {
 		this.contactInformation = contactInformation;
 		return this;
 	}

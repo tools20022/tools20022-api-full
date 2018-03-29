@@ -125,7 +125,7 @@ public class MultimodalTransport1 {
 	 * definition} = "Place from where the goods must leave."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDepartureAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MultimodalTransport1, List<AirportName1Choice>> mmDepartureAirport = new MMMessageAssociationEnd<MultimodalTransport1, List<AirportName1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport1.mmObject();
@@ -137,6 +137,16 @@ public class MultimodalTransport1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AirportName1Choice.mmObject();
+		}
+
+		@Override
+		public List<AirportName1Choice> getValue(MultimodalTransport1 obj) {
+			return obj.getDepartureAirport();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport1 obj, List<AirportName1Choice> value) {
+			obj.setDepartureAirport(value);
 		}
 	};
 	@XmlElement(name = "DstnAirprt")
@@ -172,7 +182,7 @@ public class MultimodalTransport1 {
 	 * definition} = "Place where the goods must arrive."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDestinationAirport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MultimodalTransport1, List<AirportName1Choice>> mmDestinationAirport = new MMMessageAssociationEnd<MultimodalTransport1, List<AirportName1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport1.mmObject();
@@ -184,6 +194,16 @@ public class MultimodalTransport1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AirportName1Choice.mmObject();
+		}
+
+		@Override
+		public List<AirportName1Choice> getValue(MultimodalTransport1 obj) {
+			return obj.getDestinationAirport();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport1 obj, List<AirportName1Choice> value) {
+			obj.setDestinationAirport(value);
 		}
 	};
 	@XmlElement(name = "PortOfLoadng")
@@ -221,7 +241,7 @@ public class MultimodalTransport1 {
 	 * "Identifies the port where the goods are loaded on board the ship."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MultimodalTransport1, List<Max35Text>> mmPortOfLoading = new MMMessageAttribute<MultimodalTransport1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport1.mmObject();
@@ -232,6 +252,16 @@ public class MultimodalTransport1 {
 			definition = "Identifies the port where the goods are loaded on board the ship.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(MultimodalTransport1 obj) {
+			return obj.getPortOfLoading();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport1 obj, List<Max35Text> value) {
+			obj.setPortOfLoading(value);
 		}
 	};
 	@XmlElement(name = "PortOfDschrge")
@@ -268,7 +298,7 @@ public class MultimodalTransport1 {
 	 * definition} = "Identifies the port where the goods are discharged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MultimodalTransport1, List<Max35Text>> mmPortOfDischarge = new MMMessageAttribute<MultimodalTransport1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport1.mmObject();
@@ -279,6 +309,16 @@ public class MultimodalTransport1 {
 			definition = "Identifies the port where the goods are discharged.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(MultimodalTransport1 obj) {
+			return obj.getPortOfDischarge();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport1 obj, List<Max35Text> value) {
+			obj.setPortOfDischarge(value);
 		}
 	};
 	@XmlElement(name = "PlcOfRct")
@@ -317,7 +357,7 @@ public class MultimodalTransport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MultimodalTransport1, List<Max35Text>> mmPlaceOfReceipt = new MMMessageAttribute<MultimodalTransport1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport1.mmObject();
@@ -328,6 +368,16 @@ public class MultimodalTransport1 {
 			definition = "Identifies the location where the goods are received for transportation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(MultimodalTransport1 obj) {
+			return obj.getPlaceOfReceipt();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport1 obj, List<Max35Text> value) {
+			obj.setPlaceOfReceipt(value);
 		}
 	};
 	@XmlElement(name = "PlcOfDlvry")
@@ -364,7 +414,7 @@ public class MultimodalTransport1 {
 	 * definition} = "Identifies the location of delivery of the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MultimodalTransport1, List<Max35Text>> mmPlaceOfDelivery = new MMMessageAttribute<MultimodalTransport1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport1.mmObject();
@@ -375,6 +425,16 @@ public class MultimodalTransport1 {
 			definition = "Identifies the location of delivery of the goods.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(MultimodalTransport1 obj) {
+			return obj.getPlaceOfDelivery();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport1 obj, List<Max35Text> value) {
+			obj.setPlaceOfDelivery(value);
 		}
 	};
 	@XmlElement(name = "TakngInChrg")
@@ -413,7 +473,7 @@ public class MultimodalTransport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTakingInCharge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MultimodalTransport1, List<Max35Text>> mmTakingInCharge = new MMMessageAttribute<MultimodalTransport1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport1.mmObject();
@@ -424,6 +484,16 @@ public class MultimodalTransport1 {
 			definition = "Identifies the location where the goods are take in charge for transportation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(MultimodalTransport1 obj) {
+			return obj.getTakingInCharge();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport1 obj, List<Max35Text> value) {
+			obj.setTakingInCharge(value);
 		}
 	};
 	@XmlElement(name = "PlcOfFnlDstn")
@@ -461,7 +531,7 @@ public class MultimodalTransport1 {
 	 * "Identifies the location of the final destination of the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfFinalDestination = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MultimodalTransport1, List<Max35Text>> mmPlaceOfFinalDestination = new MMMessageAttribute<MultimodalTransport1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport1.mmObject();
@@ -472,6 +542,16 @@ public class MultimodalTransport1 {
 			definition = "Identifies the location of the final destination of the goods.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(MultimodalTransport1 obj) {
+			return obj.getPlaceOfFinalDestination();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport1 obj, List<Max35Text> value) {
+			obj.setPlaceOfFinalDestination(value);
 		}
 	};
 

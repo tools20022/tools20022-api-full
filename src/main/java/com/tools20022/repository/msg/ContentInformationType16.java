@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.*;
 import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AuthenticatedData5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -117,7 +118,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ContentInformationType16"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -169,7 +170,7 @@ public class ContentInformationType16 {
 	 * ContentInformationType15.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContentInformationType16, ContentType2Code> mmContentType = new MMMessageAttribute<ContentInformationType16, ContentType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType16.mmObject();
 			isDerived = false;
@@ -181,6 +182,16 @@ public class ContentInformationType16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
+		}
+
+		@Override
+		public ContentType2Code getValue(ContentInformationType16 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(ContentInformationType16 obj, ContentType2Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "AuthntcdData", required = true)
@@ -216,7 +227,7 @@ public class ContentInformationType16 {
 	 * ContentInformationType15.mmAuthenticatedData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContentInformationType16, AuthenticatedData5> mmAuthenticatedData = new MMMessageAssociationEnd<ContentInformationType16, AuthenticatedData5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType16.mmObject();
 			isDerived = false;
@@ -228,7 +239,17 @@ public class ContentInformationType16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData5.mmObject();
+			type_lazy = () -> AuthenticatedData5.mmObject();
+		}
+
+		@Override
+		public AuthenticatedData5 getValue(ContentInformationType16 obj) {
+			return obj.getAuthenticatedData();
+		}
+
+		@Override
+		public void setValue(ContentInformationType16 obj, AuthenticatedData5 value) {
+			obj.setAuthenticatedData(value);
 		}
 	};
 
@@ -242,7 +263,7 @@ public class ContentInformationType16 {
 						AcceptorAuthorisationRequestV07.mmSecurityTrailer, AcceptorReconciliationRequestV07.mmSecurityTrailer, AcceptorDiagnosticResponseV06.mmSecurityTrailer, AcceptorBatchTransferResponseV07.mmSecurityTrailer,
 						AcceptorBatchTransferV07.mmSecurityTrailer, AcceptorCancellationRequestV07.mmSecurityTrailer, AcceptorCancellationAdviceV07.mmSecurityTrailer, AcceptorCurrencyConversionResponseV05.mmSecurityTrailer);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType16";
 				definition = "General cryptographic message syntax (CMS) containing authenticated data.";
 				previousVersion_lazy = () -> ContentInformationType15.mmObject();
@@ -264,7 +285,7 @@ public class ContentInformationType16 {
 		return authenticatedData;
 	}
 
-	public ContentInformationType16 setAuthenticatedData(com.tools20022.repository.msg.AuthenticatedData5 authenticatedData) {
+	public ContentInformationType16 setAuthenticatedData(AuthenticatedData5 authenticatedData) {
 		this.authenticatedData = Objects.requireNonNull(authenticatedData);
 		return this;
 	}

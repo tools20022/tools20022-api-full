@@ -28,6 +28,7 @@ import com.tools20022.repository.choice.TransferCancellationRejectedStatus1Choic
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransferCancellationStatus;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -139,7 +140,7 @@ public class CancellationStatusAndReason {
 	 * definition} = "Status of the transfer cancellation instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatusAndReason, TransferCancellationStatus> mmStatus = new MMMessageAssociationEnd<CancellationStatusAndReason, TransferCancellationStatus>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason.mmObject();
@@ -151,7 +152,17 @@ public class CancellationStatusAndReason {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransferCancellationStatus.mmObject();
+			type_lazy = () -> TransferCancellationStatus.mmObject();
+		}
+
+		@Override
+		public TransferCancellationStatus getValue(CancellationStatusAndReason obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason obj, TransferCancellationStatus value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -188,7 +199,7 @@ public class CancellationStatusAndReason {
 	 * definition} = "Status of transfer cancellation is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatusAndReason, TransferCancellationRejectedStatus1Choice> mmRejected = new MMMessageAssociationEnd<CancellationStatusAndReason, TransferCancellationRejectedStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason.mmObject();
@@ -201,6 +212,16 @@ public class CancellationStatusAndReason {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferCancellationRejectedStatus1Choice.mmObject();
+		}
+
+		@Override
+		public TransferCancellationRejectedStatus1Choice getValue(CancellationStatusAndReason obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason obj, TransferCancellationRejectedStatus1Choice value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "Cmplt", required = true)
@@ -239,7 +260,7 @@ public class CancellationStatusAndReason {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmComplete = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatusAndReason, TransferCancellationCompleteStatusChoice> mmComplete = new MMMessageAssociationEnd<CancellationStatusAndReason, TransferCancellationCompleteStatusChoice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason.mmObject();
@@ -252,6 +273,16 @@ public class CancellationStatusAndReason {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TransferCancellationCompleteStatusChoice.mmObject();
+		}
+
+		@Override
+		public TransferCancellationCompleteStatusChoice getValue(CancellationStatusAndReason obj) {
+			return obj.getComplete();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason obj, TransferCancellationCompleteStatusChoice value) {
+			obj.setComplete(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -288,7 +319,7 @@ public class CancellationStatusAndReason {
 	 * definition} = "Party that initiates the status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatusAndReason, Optional<PartyIdentification1Choice>> mmStatusInitiator = new MMMessageAssociationEnd<CancellationStatusAndReason, Optional<PartyIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason.mmObject();
@@ -301,6 +332,16 @@ public class CancellationStatusAndReason {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification1Choice> getValue(CancellationStatusAndReason obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason obj, Optional<PartyIdentification1Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 	/**
@@ -379,7 +420,7 @@ public class CancellationStatusAndReason {
 		return status;
 	}
 
-	public CancellationStatusAndReason setStatus(com.tools20022.repository.msg.TransferCancellationStatus status) {
+	public CancellationStatusAndReason setStatus(TransferCancellationStatus status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}

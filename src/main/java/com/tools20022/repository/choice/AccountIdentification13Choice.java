@@ -167,7 +167,7 @@ public class AccountIdentification13Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForAllAccounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification13Choice, AccountIdentification10> mmForAllAccounts = new MMMessageAssociationEnd<AccountIdentification13Choice, AccountIdentification10>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification13Choice.mmObject();
@@ -182,6 +182,16 @@ public class AccountIdentification13Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification10.mmObject();
+		}
+
+		@Override
+		public AccountIdentification10 getValue(AccountIdentification13Choice obj) {
+			return obj.getForAllAccounts();
+		}
+
+		@Override
+		public void setValue(AccountIdentification13Choice obj, AccountIdentification10 value) {
+			obj.setForAllAccounts(value);
 		}
 	};
 	@XmlElement(name = "AcctsList", required = true)
@@ -231,7 +241,7 @@ public class AccountIdentification13Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountsList = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification13Choice, List<AccountIdentification15>> mmAccountsList = new MMMessageAssociationEnd<AccountIdentification13Choice, List<AccountIdentification15>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification13Choice.mmObject();
@@ -245,6 +255,16 @@ public class AccountIdentification13Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification15.mmObject();
+		}
+
+		@Override
+		public List<AccountIdentification15> getValue(AccountIdentification13Choice obj) {
+			return obj.getAccountsList();
+		}
+
+		@Override
+		public void setValue(AccountIdentification13Choice obj, List<AccountIdentification15> value) {
+			obj.setAccountsList(value);
 		}
 	};
 

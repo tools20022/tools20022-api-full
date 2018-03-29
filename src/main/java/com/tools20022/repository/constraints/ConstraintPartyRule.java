@@ -55,11 +55,15 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation3> forAdditionalInformation3 = new MMConstraint<AdditionalInformation3>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			owner_lazy = () -> AdditionalInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation3 obj) throws Exception {
+			checkAdditionalInformation3(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation4> forAdditionalInformation4 = new MMConstraint<AdditionalInformation4>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			owner_lazy = () -> AdditionalInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation4 obj) throws Exception {
+			checkAdditionalInformation4(obj);
 		}
 	};
 	/**
@@ -123,12 +131,16 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation7> forAdditionalInformation7 = new MMConstraint<AdditionalInformation7>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartyRule.forAdditionalInformation9);
 			owner_lazy = () -> AdditionalInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation7 obj) throws Exception {
+			checkAdditionalInformation7(obj);
 		}
 	};
 	/**
@@ -154,11 +166,15 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation8> forAdditionalInformation8 = new MMConstraint<AdditionalInformation8>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			owner_lazy = () -> AdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation8 obj) throws Exception {
+			checkAdditionalInformation8(obj);
 		}
 	};
 	/**
@@ -197,13 +213,17 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation9> forAdditionalInformation9 = new MMConstraint<AdditionalInformation9>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartyRule.forAdditionalInformation11);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartyRule.forAdditionalInformation7;
 			owner_lazy = () -> AdditionalInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation9 obj) throws Exception {
+			checkAdditionalInformation9(obj);
 		}
 	};
 	/**
@@ -229,11 +249,15 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation10> forAdditionalInformation10 = new MMConstraint<AdditionalInformation10>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			owner_lazy = () -> AdditionalInformation10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation10 obj) throws Exception {
+			checkAdditionalInformation10(obj);
 		}
 	};
 	/**
@@ -272,13 +296,17 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation11> forAdditionalInformation11 = new MMConstraint<AdditionalInformation11>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartyRule.forAdditionalInformation13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartyRule.forAdditionalInformation9;
 			owner_lazy = () -> AdditionalInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation11 obj) throws Exception {
+			checkAdditionalInformation11(obj);
 		}
 	};
 	/**
@@ -304,11 +332,15 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation12> forAdditionalInformation12 = new MMConstraint<AdditionalInformation12>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			owner_lazy = () -> AdditionalInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation12 obj) throws Exception {
+			checkAdditionalInformation12(obj);
 		}
 	};
 	/**
@@ -339,12 +371,16 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation13> forAdditionalInformation13 = new MMConstraint<AdditionalInformation13>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartyRule.forAdditionalInformation11;
 			owner_lazy = () -> AdditionalInformation13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation13 obj) throws Exception {
+			checkAdditionalInformation13(obj);
 		}
 	};
 	/**
@@ -370,11 +406,15 @@ public class ConstraintPartyRule {
 	 */
 	public static final MMConstraint<AdditionalInformation14> forAdditionalInformation14 = new MMConstraint<AdditionalInformation14>() {
 		{
-			validator = ConstraintPartyRule::checkAdditionalInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyRule";
 			definition = "Investor, DeliveringParty1 and ReceivingParty1 cannot be requested to be modified using the SecuritiesSettlementConditionModificationRequest. These fields are made available in the SecuritiesSettlementConditionModificationRequest to enable the processing of the request vis-a-vis the transaction requested to be modified.";
 			owner_lazy = () -> AdditionalInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation14 obj) throws Exception {
+			checkAdditionalInformation14(obj);
 		}
 	};
 

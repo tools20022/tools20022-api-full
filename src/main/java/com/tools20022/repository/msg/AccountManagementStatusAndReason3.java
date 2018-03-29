@@ -148,7 +148,7 @@ public class AccountManagementStatusAndReason3 {
 	 * AccountManagementStatusAndReason2.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason3, Status14Choice> mmStatus = new MMMessageAttribute<AccountManagementStatusAndReason3, Status14Choice>() {
 		{
 			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason3.mmObject();
@@ -162,6 +162,16 @@ public class AccountManagementStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Status14Choice.mmObject();
+		}
+
+		@Override
+		public Status14Choice getValue(AccountManagementStatusAndReason3 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason3 obj, Status14Choice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -208,7 +218,7 @@ public class AccountManagementStatusAndReason3 {
 	 * AccountManagementStatusAndReason2.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementStatusAndReason3, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<AccountManagementStatusAndReason3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason3.mmObject();
 			isDerived = false;
@@ -221,6 +231,16 @@ public class AccountManagementStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementStatusAndReason3 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 

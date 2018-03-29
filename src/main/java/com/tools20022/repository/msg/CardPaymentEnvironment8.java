@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification32;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class CardPaymentEnvironment8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcquirerParametersVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentEnvironment8, ISODateTime> mmAcquirerParametersVersion = new MMMessageAttribute<CardPaymentEnvironment8, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment8.mmObject();
 			isDerived = false;
@@ -127,6 +128,16 @@ public class CardPaymentEnvironment8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CardPaymentEnvironment8 obj) {
+			return obj.getAcquirerParametersVersion();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment8 obj, ISODateTime value) {
+			obj.setAcquirerParametersVersion(value);
 		}
 	};
 	@XmlElement(name = "MrchntId")
@@ -164,7 +175,7 @@ public class CardPaymentEnvironment8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMerchantIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment8, Optional<GenericIdentification32>> mmMerchantIdentification = new MMMessageAssociationEnd<CardPaymentEnvironment8, Optional<GenericIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment8.mmObject();
@@ -176,7 +187,17 @@ public class CardPaymentEnvironment8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification32> getValue(CardPaymentEnvironment8 obj) {
+			return obj.getMerchantIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment8 obj, Optional<GenericIdentification32> value) {
+			obj.setMerchantIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "POIId", required = true)
@@ -213,7 +234,7 @@ public class CardPaymentEnvironment8 {
 	 * definition} = "Identification of the POI requesting the diagnostic."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentEnvironment8, GenericIdentification32> mmPOIIdentification = new MMMessageAssociationEnd<CardPaymentEnvironment8, GenericIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmPointOfInteraction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment8.mmObject();
@@ -225,7 +246,17 @@ public class CardPaymentEnvironment8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public GenericIdentification32 getValue(CardPaymentEnvironment8 obj) {
+			return obj.getPOIIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentEnvironment8 obj, GenericIdentification32 value) {
+			obj.setPOIIdentification(value);
 		}
 	};
 
@@ -258,7 +289,7 @@ public class CardPaymentEnvironment8 {
 		return merchantIdentification == null ? Optional.empty() : Optional.of(merchantIdentification);
 	}
 
-	public CardPaymentEnvironment8 setMerchantIdentification(com.tools20022.repository.msg.GenericIdentification32 merchantIdentification) {
+	public CardPaymentEnvironment8 setMerchantIdentification(GenericIdentification32 merchantIdentification) {
 		this.merchantIdentification = merchantIdentification;
 		return this;
 	}
@@ -267,7 +298,7 @@ public class CardPaymentEnvironment8 {
 		return pOIIdentification;
 	}
 
-	public CardPaymentEnvironment8 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification32 pOIIdentification) {
+	public CardPaymentEnvironment8 setPOIIdentification(GenericIdentification32 pOIIdentification) {
 		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
 		return this;
 	}

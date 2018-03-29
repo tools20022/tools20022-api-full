@@ -109,7 +109,7 @@ public class BorrowerLendingDeadline4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BorrowerLendingDeadline4, DateFormat49Choice> mmStockLendingDeadline = new MMMessageAssociationEnd<BorrowerLendingDeadline4, DateFormat49Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmStockLendingDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline4.mmObject();
@@ -122,6 +122,16 @@ public class BorrowerLendingDeadline4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat49Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat49Choice getValue(BorrowerLendingDeadline4 obj) {
+			return obj.getStockLendingDeadline();
+		}
+
+		@Override
+		public void setValue(BorrowerLendingDeadline4 obj, DateFormat49Choice value) {
+			obj.setStockLendingDeadline(value);
 		}
 	};
 	@XmlElement(name = "Brrwr", required = true)
@@ -158,7 +168,7 @@ public class BorrowerLendingDeadline4 {
 	 * definition} = "Party who has borrowed stocks on loan."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBorrower = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BorrowerLendingDeadline4, PartyIdentification103Choice> mmBorrower = new MMMessageAssociationEnd<BorrowerLendingDeadline4, PartyIdentification103Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline4.mmObject();
@@ -171,6 +181,16 @@ public class BorrowerLendingDeadline4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification103Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification103Choice getValue(BorrowerLendingDeadline4 obj) {
+			return obj.getBorrower();
+		}
+
+		@Override
+		public void setValue(BorrowerLendingDeadline4 obj, PartyIdentification103Choice value) {
+			obj.setBorrower(value);
 		}
 	};
 

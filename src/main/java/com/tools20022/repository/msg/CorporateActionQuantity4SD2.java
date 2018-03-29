@@ -131,7 +131,7 @@ public class CorporateActionQuantity4SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionQuantity4SD2, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionQuantity4SD2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -142,6 +142,16 @@ public class CorporateActionQuantity4SD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionQuantity4SD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity4SD2 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlandQty")
@@ -174,7 +184,7 @@ public class CorporateActionQuantity4SD2 {
 	 * definition} = "Planned number of shares to be purchased.\r\n 買付予定株式数."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlannedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionQuantity4SD2, Optional<PlannedQuantity1Choice>> mmPlannedQuantity = new MMMessageAttribute<CorporateActionQuantity4SD2, Optional<PlannedQuantity1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -185,6 +195,16 @@ public class CorporateActionQuantity4SD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PlannedQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PlannedQuantity1Choice> getValue(CorporateActionQuantity4SD2 obj) {
+			return obj.getPlannedQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity4SD2 obj, Optional<PlannedQuantity1Choice> value) {
+			obj.setPlannedQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlandXcssPurchsQty")
@@ -217,7 +237,7 @@ public class CorporateActionQuantity4SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlannedExcessPurchaseQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity4SD2, Optional<PlannedQuantity1Choice>> mmPlannedExcessPurchaseQuantity = new MMMessageAssociationEnd<CorporateActionQuantity4SD2, Optional<PlannedQuantity1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -229,6 +249,16 @@ public class CorporateActionQuantity4SD2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PlannedQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PlannedQuantity1Choice> getValue(CorporateActionQuantity4SD2 obj) {
+			return obj.getPlannedExcessPurchaseQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity4SD2 obj, Optional<PlannedQuantity1Choice> value) {
+			obj.setPlannedExcessPurchaseQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinQtyCd")
@@ -263,7 +293,7 @@ public class CorporateActionQuantity4SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumQuantityCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionQuantity4SD2, Optional<SecuritiesQuantity1Code>> mmMinimumQuantityCode = new MMMessageAttribute<CorporateActionQuantity4SD2, Optional<SecuritiesQuantity1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -274,6 +304,16 @@ public class CorporateActionQuantity4SD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesQuantity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesQuantity1Code> getValue(CorporateActionQuantity4SD2 obj) {
+			return obj.getMinimumQuantityCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity4SD2 obj, Optional<SecuritiesQuantity1Code> value) {
+			obj.setMinimumQuantityCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxQtyCd")
@@ -308,7 +348,7 @@ public class CorporateActionQuantity4SD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumQuantityCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionQuantity4SD2, Optional<SecuritiesQuantity1Code>> mmMaximumQuantityCode = new MMMessageAttribute<CorporateActionQuantity4SD2, Optional<SecuritiesQuantity1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -319,6 +359,16 @@ public class CorporateActionQuantity4SD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesQuantity1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesQuantity1Code> getValue(CorporateActionQuantity4SD2 obj) {
+			return obj.getMaximumQuantityCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity4SD2 obj, Optional<SecuritiesQuantity1Code> value) {
+			obj.setMaximumQuantityCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OdShrUnitQty")
@@ -351,7 +401,7 @@ public class CorporateActionQuantity4SD2 {
 	 * definition} = "Old share unit quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOldShareUnitQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionQuantity4SD2, Optional<FinancialInstrumentQuantity15Choice>> mmOldShareUnitQuantity = new MMMessageAttribute<CorporateActionQuantity4SD2, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -362,6 +412,16 @@ public class CorporateActionQuantity4SD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(CorporateActionQuantity4SD2 obj) {
+			return obj.getOldShareUnitQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity4SD2 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setOldShareUnitQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewShrUnitQty")
@@ -393,7 +453,7 @@ public class CorporateActionQuantity4SD2 {
 	 * definition} = "New share unit quantity.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewShareUnitQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionQuantity4SD2, Optional<FinancialInstrumentQuantity15Choice>> mmNewShareUnitQuantity = new MMMessageAssociationEnd<CorporateActionQuantity4SD2, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
@@ -405,6 +465,16 @@ public class CorporateActionQuantity4SD2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(CorporateActionQuantity4SD2 obj) {
+			return obj.getNewShareUnitQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionQuantity4SD2 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setNewShareUnitQuantity(value.orElse(null));
 		}
 	};
 

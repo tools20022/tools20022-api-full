@@ -24,6 +24,7 @@ import com.tools20022.repository.choice.ReversalReason3Choice;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification14;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -106,7 +107,7 @@ public class ReversalReasonInformation4 {
 	 * definition} = "Party issuing the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversalOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReversalReasonInformation4, PartyIdentification14> mmReversalOriginator = new MMMessageAssociationEnd<ReversalReasonInformation4, PartyIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation4.mmObject();
@@ -118,7 +119,17 @@ public class ReversalReasonInformation4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
+			type_lazy = () -> PartyIdentification14.mmObject();
+		}
+
+		@Override
+		public PartyIdentification14 getValue(ReversalReasonInformation4 obj) {
+			return obj.getReversalOriginator();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation4 obj, PartyIdentification14 value) {
+			obj.setReversalOriginator(value);
 		}
 	};
 	@XmlElement(name = "RvslRsn", required = true)
@@ -155,7 +166,7 @@ public class ReversalReasonInformation4 {
 	 * definition} = "Specifies the reason for the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversalReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReversalReasonInformation4, ReversalReason3Choice> mmReversalReason = new MMMessageAssociationEnd<ReversalReasonInformation4, ReversalReason3Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation4.mmObject();
@@ -168,6 +179,16 @@ public class ReversalReasonInformation4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReversalReason3Choice.mmObject();
+		}
+
+		@Override
+		public ReversalReason3Choice getValue(ReversalReasonInformation4 obj) {
+			return obj.getReversalReason();
+		}
+
+		@Override
+		public void setValue(ReversalReasonInformation4 obj, ReversalReason3Choice value) {
+			obj.setReversalReason(value);
 		}
 	};
 
@@ -189,7 +210,7 @@ public class ReversalReasonInformation4 {
 		return reversalOriginator;
 	}
 
-	public ReversalReasonInformation4 setReversalOriginator(com.tools20022.repository.msg.PartyIdentification14 reversalOriginator) {
+	public ReversalReasonInformation4 setReversalOriginator(PartyIdentification14 reversalOriginator) {
 		this.reversalOriginator = Objects.requireNonNull(reversalOriginator);
 		return this;
 	}

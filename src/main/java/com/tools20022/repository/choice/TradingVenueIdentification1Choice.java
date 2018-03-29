@@ -124,7 +124,7 @@ public class TradingVenueIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketIdentificationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueIdentification1Choice, MICIdentifier> mmMarketIdentificationCode = new MMMessageAttribute<TradingVenueIdentification1Choice, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmObject();
@@ -136,6 +136,16 @@ public class TradingVenueIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(TradingVenueIdentification1Choice obj) {
+			return obj.getMarketIdentificationCode();
+		}
+
+		@Override
+		public void setValue(TradingVenueIdentification1Choice obj, MICIdentifier value) {
+			obj.setMarketIdentificationCode(value);
 		}
 	};
 	@XmlElement(name = "NtlCmptntAuthrty", required = true)
@@ -174,7 +184,7 @@ public class TradingVenueIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNationalCompetentAuthority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradingVenueIdentification1Choice, CountryCode> mmNationalCompetentAuthority = new MMMessageAttribute<TradingVenueIdentification1Choice, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmObject();
@@ -186,6 +196,16 @@ public class TradingVenueIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(TradingVenueIdentification1Choice obj) {
+			return obj.getNationalCompetentAuthority();
+		}
+
+		@Override
+		public void setValue(TradingVenueIdentification1Choice obj, CountryCode value) {
+			obj.setNationalCompetentAuthority(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -224,7 +244,7 @@ public class TradingVenueIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradingVenueIdentification1Choice, TradingVenueIdentification2> mmOther = new MMMessageAssociationEnd<TradingVenueIdentification1Choice, TradingVenueIdentification2>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradingVenueIdentification1Choice.mmObject();
@@ -237,6 +257,16 @@ public class TradingVenueIdentification1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradingVenueIdentification2.mmObject();
+		}
+
+		@Override
+		public TradingVenueIdentification2 getValue(TradingVenueIdentification1Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(TradingVenueIdentification1Choice obj, TradingVenueIdentification2 value) {
+			obj.setOther(value);
 		}
 	};
 

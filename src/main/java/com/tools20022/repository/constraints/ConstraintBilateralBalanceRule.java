@@ -54,11 +54,15 @@ public class ConstraintBilateralBalanceRule {
 	 */
 	public static final MMConstraint<CashAccountDetails1> forCashAccountDetails1 = new MMConstraint<CashAccountDetails1>() {
 		{
-			validator = ConstraintBilateralBalanceRule::checkCashAccountDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalanceRule";
 			definition = "If MultilateralBalance is not present, then at least one occurrence of CurrentBilateralLimit/BilateralBalance must be present.\nIf MultilateralBalance is present, then any occurrence of CurrentBilateralLimit/BilateralBalance is optional.";
 			owner_lazy = () -> CashAccountDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountDetails1 obj) throws Exception {
+			checkCashAccountDetails1(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintBilateralBalanceRule {
 	 */
 	public static final MMConstraint<CashAccountDetails3> forCashAccountDetails3 = new MMConstraint<CashAccountDetails3>() {
 		{
-			validator = ConstraintBilateralBalanceRule::checkCashAccountDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalanceRule";
 			definition = "If MultilateralBalance is not present, then at least one occurrence of CurrentBilateralLimit/BilateralBalance must be present.\nIf MultilateralBalance is present, then any occurrence of CurrentBilateralLimit/BilateralBalance is optional.";
 			owner_lazy = () -> CashAccountDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountDetails3 obj) throws Exception {
+			checkCashAccountDetails3(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintBilateralBalanceRule {
 	 */
 	public static final MMConstraint<CashAccountDetails4> forCashAccountDetails4 = new MMConstraint<CashAccountDetails4>() {
 		{
-			validator = ConstraintBilateralBalanceRule::checkCashAccountDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalanceRule";
 			definition = "If MultilateralBalance is not present, then at least one occurrence of CurrentBilateralLimit/BilateralBalance must be present.\nIf MultilateralBalance is present, then any occurrence of CurrentBilateralLimit/BilateralBalance is optional.";
 			owner_lazy = () -> CashAccountDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CashAccountDetails4 obj) throws Exception {
+			checkCashAccountDetails4(obj);
 		}
 	};
 	/**
@@ -155,13 +167,17 @@ public class ConstraintBilateralBalanceRule {
 	 */
 	public static final MMConstraint<CashAccount23> forCashAccount23 = new MMConstraint<CashAccount23>() {
 		{
-			validator = ConstraintBilateralBalanceRule::checkCashAccount23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalanceRule";
 			definition = "If MultilateralBalance is not present, then at least one occurrence of CurrentBilateralLimit/BilateralBalance must be present.\nIf MultilateralBalance is present, then any occurrence of CurrentBilateralLimit/BilateralBalance is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBilateralBalanceRule.forCashAccount35);
 			owner_lazy = () -> CashAccount23.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentBilateralLimit[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentBilateralLimit[1]/BilateralBalance[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/MultilateralBalance[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashAccount23 obj) throws Exception {
+			checkCashAccount23(obj);
 		}
 	};
 	/**
@@ -195,13 +211,17 @@ public class ConstraintBilateralBalanceRule {
 	 */
 	public static final MMConstraint<CashAccount35> forCashAccount35 = new MMConstraint<CashAccount35>() {
 		{
-			validator = ConstraintBilateralBalanceRule::checkCashAccount35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalanceRule";
 			definition = "If MultilateralBalance is not present, then at least one occurrence of CurrentBilateralLimit/BilateralBalance must be present.\nIf MultilateralBalance is present, then any occurrence of CurrentBilateralLimit/BilateralBalance is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBilateralBalanceRule.forCashAccount23;
 			owner_lazy = () -> CashAccount35.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentBilateralLimit[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentBilateralLimit[1]/BilateralBalance[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/MultilateralBalance[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashAccount35 obj) throws Exception {
+			checkCashAccount35(obj);
 		}
 	};
 

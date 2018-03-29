@@ -58,11 +58,15 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationAmendmentV01> forSwitchOrderConfirmationAmendmentV01 = new MMConstraint<SwitchOrderConfirmationAmendmentV01>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility4Rule::checkSwitchOrderConfirmationAmendmentV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility4Rule";
 			definition = "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> SwitchOrderConfirmationAmendmentV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationAmendmentV01 obj) throws Exception {
+			checkSwitchOrderConfirmationAmendmentV01(obj);
 		}
 	};
 	/**
@@ -88,11 +92,15 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmationV03> forSwitchOrderConfirmationV03 = new MMConstraint<SwitchOrderConfirmationV03>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility4Rule::checkSwitchOrderConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility4Rule";
 			definition = "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> SwitchOrderConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmationV03 obj) throws Exception {
+			checkSwitchOrderConfirmationV03(obj);
 		}
 	};
 	/**
@@ -118,11 +126,15 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 */
 	public static final MMConstraint<SwitchOrderV03> forSwitchOrderV03 = new MMConstraint<SwitchOrderV03>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility4Rule::checkSwitchOrderV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility4Rule";
 			definition = "Either SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> SwitchOrderV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderV03 obj) throws Exception {
+			checkSwitchOrderV03(obj);
 		}
 	};
 	/**
@@ -148,11 +160,15 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 */
 	public static final MMConstraint<SwitchOrderInstruction2> forSwitchOrderInstruction2 = new MMConstraint<SwitchOrderInstruction2>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility4Rule::checkSwitchOrderInstruction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility4Rule";
 			definition = "Either SwitchOrderDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchOrderDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> SwitchOrderInstruction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderInstruction2 obj) throws Exception {
+			checkSwitchOrderInstruction2(obj);
 		}
 	};
 	/**
@@ -178,11 +194,15 @@ public class ConstraintOrderOriginatorEligibility4Rule {
 	 */
 	public static final MMConstraint<SwitchOrderConfirmation1> forSwitchOrderConfirmation1 = new MMConstraint<SwitchOrderConfirmation1>() {
 		{
-			validator = ConstraintOrderOriginatorEligibility4Rule::checkSwitchOrderConfirmation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility4Rule";
 			definition = "Either SwitchExecutionDetails/InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of SwitchExecutionDetails/RelatedPartyDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> SwitchOrderConfirmation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SwitchOrderConfirmation1 obj) throws Exception {
+			checkSwitchOrderConfirmation1(obj);
 		}
 	};
 

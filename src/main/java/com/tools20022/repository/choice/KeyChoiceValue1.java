@@ -112,7 +112,7 @@ public class KeyChoiceValue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncryptedKeyValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KeyChoiceValue1, Optional<ContentInformationType10>> mmEncryptedKeyValue = new MMMessageAssociationEnd<KeyChoiceValue1, Optional<ContentInformationType10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.KeyChoiceValue1.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class KeyChoiceValue1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType10> getValue(KeyChoiceValue1 obj) {
+			return obj.getEncryptedKeyValue();
+		}
+
+		@Override
+		public void setValue(KeyChoiceValue1 obj, Optional<ContentInformationType10> value) {
+			obj.setEncryptedKeyValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TRRltdData")
@@ -165,7 +175,7 @@ public class KeyChoiceValue1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTRRelatedData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<KeyChoiceValue1, Optional<TRRelatedData1>> mmTRRelatedData = new MMMessageAssociationEnd<KeyChoiceValue1, Optional<TRRelatedData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.KeyChoiceValue1.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class KeyChoiceValue1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TRRelatedData1.mmObject();
+		}
+
+		@Override
+		public Optional<TRRelatedData1> getValue(KeyChoiceValue1 obj) {
+			return obj.getTRRelatedData();
+		}
+
+		@Override
+		public void setValue(KeyChoiceValue1 obj, Optional<TRRelatedData1> value) {
+			obj.setTRRelatedData(value.orElse(null));
 		}
 	};
 

@@ -98,7 +98,7 @@ public class PriceValueType6FormatChoice {
 	 * definition} = "Standard code to specify the value of a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValueType6FormatChoice, PriceValueType6Code> mmCode = new MMMessageAttribute<PriceValueType6FormatChoice, PriceValueType6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceValueType6FormatChoice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class PriceValueType6FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType6Code.mmObject();
+		}
+
+		@Override
+		public PriceValueType6Code getValue(PriceValueType6FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PriceValueType6FormatChoice obj, PriceValueType6Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class PriceValueType6FormatChoice {
 	 * definition} = "Proprietary code to express the value of a price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValueType6FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<PriceValueType6FormatChoice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceValueType6FormatChoice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class PriceValueType6FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(PriceValueType6FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PriceValueType6FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -121,7 +121,7 @@ public class CorporateActionPrice9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashInLieuOfSharePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPrice9, Optional<PriceFormat5Choice>> mmCashInLieuOfSharePrice = new MMMessageAttribute<CorporateActionPrice9, Optional<PriceFormat5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionPrice.mmCashInLieuOfSharePrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice9.mmObject();
@@ -134,6 +134,16 @@ public class CorporateActionPrice9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceFormat5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriceFormat5Choice> getValue(CorporateActionPrice9 obj) {
+			return obj.getCashInLieuOfSharePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice9 obj, Optional<PriceFormat5Choice> value) {
+			obj.setCashInLieuOfSharePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndctvOrMktPric")
@@ -174,7 +184,7 @@ public class CorporateActionPrice9 {
 	 * "Indicates whether the price is an indicative price or a market price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndicativeOrMarketPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionPrice9, Optional<IndicativeOrMarketPrice2Choice>> mmIndicativeOrMarketPrice = new MMMessageAssociationEnd<CorporateActionPrice9, Optional<IndicativeOrMarketPrice2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPrice.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice9.mmObject();
@@ -188,6 +198,16 @@ public class CorporateActionPrice9 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> IndicativeOrMarketPrice2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<IndicativeOrMarketPrice2Choice> getValue(CorporateActionPrice9 obj) {
+			return obj.getIndicativeOrMarketPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPrice9 obj, Optional<IndicativeOrMarketPrice2Choice> value) {
+			obj.setIndicativeOrMarketPrice(value.orElse(null));
 		}
 	};
 

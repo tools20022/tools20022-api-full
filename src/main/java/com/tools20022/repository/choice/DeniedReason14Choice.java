@@ -120,7 +120,7 @@ public class DeniedReason14Choice {
 	 * DeniedReason8Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeniedReason14Choice, DeniedReason7Code> mmCode = new MMMessageAttribute<DeniedReason14Choice, DeniedReason7Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeniedReason14Choice.mmObject();
@@ -134,6 +134,16 @@ public class DeniedReason14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeniedReason7Code.mmObject();
+		}
+
+		@Override
+		public DeniedReason7Code getValue(DeniedReason14Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DeniedReason14Choice obj, DeniedReason7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class DeniedReason14Choice {
 	 * DeniedReason8Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeniedReason14Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<DeniedReason14Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmDeniedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeniedReason14Choice.mmObject();
@@ -193,6 +203,16 @@ public class DeniedReason14Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(DeniedReason14Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DeniedReason14Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.RejectedReason7Choice;
 import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
@@ -111,7 +112,7 @@ public class RejectedReason8Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedReason8Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RejectedReason8Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedReason8Choice.mmObject();
@@ -124,9 +125,19 @@ public class RejectedReason8Choice {
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
+
+		@Override
+		public NoReasonCode getValue(RejectedReason8Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RejectedReason8Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
+		}
 	};
 	@XmlElement(name = "Rsn", required = true)
-	protected List<com.tools20022.repository.choice.RejectedReason7Choice> reason;
+	protected List<RejectedReason7Choice> reason;
 	/**
 	 * 
 	 <p>
@@ -159,7 +170,7 @@ public class RejectedReason8Choice {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedReason8Choice, List<RejectedReason7Choice>> mmReason = new MMMessageAssociationEnd<RejectedReason8Choice, List<RejectedReason7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedReason8Choice.mmObject();
@@ -170,7 +181,17 @@ public class RejectedReason8Choice {
 			definition = "Reason for the rejected status.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectedReason7Choice.mmObject();
+			type_lazy = () -> RejectedReason7Choice.mmObject();
+		}
+
+		@Override
+		public List<RejectedReason7Choice> getValue(RejectedReason8Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedReason8Choice obj, List<RejectedReason7Choice> value) {
+			obj.setReason(value);
 		}
 	};
 
@@ -201,7 +222,7 @@ public class RejectedReason8Choice {
 		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public RejectedReason8Choice setReason(List<com.tools20022.repository.choice.RejectedReason7Choice> reason) {
+	public RejectedReason8Choice setReason(List<RejectedReason7Choice> reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}

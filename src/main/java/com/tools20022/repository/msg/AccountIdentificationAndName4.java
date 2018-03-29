@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class AccountIdentificationAndName4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationAndName4, CashAccountIdentification1> mmIdentification = new MMMessageAttribute<AccountIdentificationAndName4, CashAccountIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName4.mmObject();
@@ -116,7 +117,17 @@ public class AccountIdentificationAndName4 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CashAccountIdentification1.mmObject();
+			complexType_lazy = () -> CashAccountIdentification1.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification1 getValue(AccountIdentificationAndName4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationAndName4 obj, CashAccountIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 
@@ -138,7 +149,7 @@ public class AccountIdentificationAndName4 {
 		return identification;
 	}
 
-	public AccountIdentificationAndName4 setIdentification(com.tools20022.repository.msg.CashAccountIdentification1 identification) {
+	public AccountIdentificationAndName4 setIdentification(CashAccountIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

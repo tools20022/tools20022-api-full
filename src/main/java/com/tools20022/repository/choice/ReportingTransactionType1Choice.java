@@ -119,7 +119,7 @@ public class ReportingTransactionType1Choice {
 	 * definition} = "Transaction is a newly reported transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNew = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingTransactionType1Choice, SecuritiesTransactionReport4> mmNew = new MMMessageAssociationEnd<ReportingTransactionType1Choice, SecuritiesTransactionReport4>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTransaction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportingTransactionType1Choice.mmObject();
@@ -132,6 +132,16 @@ public class ReportingTransactionType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesTransactionReport4.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionReport4 getValue(ReportingTransactionType1Choice obj) {
+			return obj.getNew();
+		}
+
+		@Override
+		public void setValue(ReportingTransactionType1Choice obj, SecuritiesTransactionReport4 value) {
+			obj.setNew(value);
 		}
 	};
 	@XmlElement(name = "Cxl", required = true)
@@ -168,7 +178,7 @@ public class ReportingTransactionType1Choice {
 	 * definition} = "Transaction is a cancellation transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingTransactionType1Choice, SecuritiesTransactionReport2> mmCancellation = new MMMessageAssociationEnd<ReportingTransactionType1Choice, SecuritiesTransactionReport2>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTransaction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportingTransactionType1Choice.mmObject();
@@ -181,6 +191,16 @@ public class ReportingTransactionType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesTransactionReport2.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionReport2 getValue(ReportingTransactionType1Choice obj) {
+			return obj.getCancellation();
+		}
+
+		@Override
+		public void setValue(ReportingTransactionType1Choice obj, SecuritiesTransactionReport2 value) {
+			obj.setCancellation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -213,7 +233,7 @@ public class ReportingTransactionType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportingTransactionType1Choice, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<ReportingTransactionType1Choice, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReportingTransactionType1Choice.mmObject();
 			isDerived = false;
@@ -224,6 +244,16 @@ public class ReportingTransactionType1Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(ReportingTransactionType1Choice obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ReportingTransactionType1Choice obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

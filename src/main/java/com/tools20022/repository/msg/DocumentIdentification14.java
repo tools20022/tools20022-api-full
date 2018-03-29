@@ -185,7 +185,7 @@ public class DocumentIdentification14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification14, DocumentIdentification1Choice> mmIdentification = new MMMessageAssociationEnd<DocumentIdentification14, DocumentIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification14.mmObject();
@@ -200,6 +200,16 @@ public class DocumentIdentification14 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification1Choice getValue(DocumentIdentification14 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification14 obj, DocumentIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "DocNb")
@@ -242,7 +252,7 @@ public class DocumentIdentification14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDocumentNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification14, Optional<DocumentNumber1Choice>> mmDocumentNumber = new MMMessageAssociationEnd<DocumentIdentification14, Optional<DocumentNumber1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification14.mmObject();
 			isDerived = false;
@@ -256,6 +266,16 @@ public class DocumentIdentification14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber1Choice> getValue(DocumentIdentification14 obj) {
+			return obj.getDocumentNumber();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification14 obj, Optional<DocumentNumber1Choice> value) {
+			obj.setDocumentNumber(value.orElse(null));
 		}
 	};
 

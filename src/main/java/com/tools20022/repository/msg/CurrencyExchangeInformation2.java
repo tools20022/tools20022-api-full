@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyExchangeReport2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -66,7 +67,7 @@ public class CurrencyExchangeInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "CcyXchgRpt", required = true)
-	protected List<com.tools20022.repository.msg.CurrencyExchangeReport2> currencyExchangeReport;
+	protected List<CurrencyExchangeReport2> currencyExchangeReport;
 	/**
 	 * 
 	 <p>
@@ -96,7 +97,7 @@ public class CurrencyExchangeInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyExchangeReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrencyExchangeInformation2, List<CurrencyExchangeReport2>> mmCurrencyExchangeReport = new MMMessageAssociationEnd<CurrencyExchangeInformation2, List<CurrencyExchangeReport2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeInformation2.mmObject();
 			isDerived = false;
@@ -106,7 +107,17 @@ public class CurrencyExchangeInformation2 {
 			definition = "Reports either on currency exchange information or on a business error.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeReport2.mmObject();
+			type_lazy = () -> CurrencyExchangeReport2.mmObject();
+		}
+
+		@Override
+		public List<CurrencyExchangeReport2> getValue(CurrencyExchangeInformation2 obj) {
+			return obj.getCurrencyExchangeReport();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeInformation2 obj, List<CurrencyExchangeReport2> value) {
+			obj.setCurrencyExchangeReport(value);
 		}
 	};
 
@@ -127,7 +138,7 @@ public class CurrencyExchangeInformation2 {
 		return currencyExchangeReport == null ? currencyExchangeReport = new ArrayList<>() : currencyExchangeReport;
 	}
 
-	public CurrencyExchangeInformation2 setCurrencyExchangeReport(List<com.tools20022.repository.msg.CurrencyExchangeReport2> currencyExchangeReport) {
+	public CurrencyExchangeInformation2 setCurrencyExchangeReport(List<CurrencyExchangeReport2> currencyExchangeReport) {
 		this.currencyExchangeReport = Objects.requireNonNull(currencyExchangeReport);
 		return this;
 	}

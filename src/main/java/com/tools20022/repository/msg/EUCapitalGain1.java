@@ -109,7 +109,7 @@ public class EUCapitalGain1 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EUCapitalGain1, EUCapitalGain1Code> mmStructured = new MMMessageAttribute<EUCapitalGain1, EUCapitalGain1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EUCapitalGain1.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class EUCapitalGain1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EUCapitalGain1Code.mmObject();
+		}
+
+		@Override
+		public EUCapitalGain1Code getValue(EUCapitalGain1 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(EUCapitalGain1 obj, EUCapitalGain1Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -150,7 +160,7 @@ public class EUCapitalGain1 {
 	 * definition} = "Additional information about the type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EUCapitalGain1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<EUCapitalGain1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EUCapitalGain1.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class EUCapitalGain1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(EUCapitalGain1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(EUCapitalGain1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

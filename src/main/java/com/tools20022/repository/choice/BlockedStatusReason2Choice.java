@@ -102,7 +102,7 @@ public class BlockedStatusReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockedStatusReason2Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<BlockedStatusReason2Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BlockedStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class BlockedStatusReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(BlockedStatusReason2Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(BlockedStatusReason2Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -145,7 +155,7 @@ public class BlockedStatusReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BlockedStatusReason2Choice, List<BlockedStatusReason2>> mmReason = new MMMessageAssociationEnd<BlockedStatusReason2Choice, List<BlockedStatusReason2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BlockedStatusReason2Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class BlockedStatusReason2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BlockedStatusReason2.mmObject();
+		}
+
+		@Override
+		public List<BlockedStatusReason2> getValue(BlockedStatusReason2Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(BlockedStatusReason2Choice obj, List<BlockedStatusReason2> value) {
+			obj.setReason(value);
 		}
 	};
 

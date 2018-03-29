@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CryptographicKey5;
+import com.tools20022.repository.msg.DataSetIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +131,7 @@ public class TerminalManagementDataSet12 {
 	 * TerminalManagementDataSet8.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalManagementDataSet12, DataSetIdentification4> mmIdentification = new MMMessageAttribute<TerminalManagementDataSet12, DataSetIdentification4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet12.mmObject();
 			isDerived = false;
@@ -141,7 +143,17 @@ public class TerminalManagementDataSet12 {
 			previousVersion_lazy = () -> TerminalManagementDataSet8.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DataSetIdentification4.mmObject();
+			complexType_lazy = () -> DataSetIdentification4.mmObject();
+		}
+
+		@Override
+		public DataSetIdentification4 getValue(TerminalManagementDataSet12 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet12 obj, DataSetIdentification4 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "POIChllng")
@@ -188,7 +200,7 @@ public class TerminalManagementDataSet12 {
 	 * TerminalManagementDataSet8.mmPOIChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOIChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalManagementDataSet12, Optional<Max140Binary>> mmPOIChallenge = new MMMessageAttribute<TerminalManagementDataSet12, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet12.mmObject();
 			isDerived = false;
@@ -201,6 +213,16 @@ public class TerminalManagementDataSet12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(TerminalManagementDataSet12 obj) {
+			return obj.getPOIChallenge();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet12 obj, Optional<Max140Binary> value) {
+			obj.setPOIChallenge(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TMChllng")
@@ -247,7 +269,7 @@ public class TerminalManagementDataSet12 {
 	 * TerminalManagementDataSet8.mmTMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminalManagementDataSet12, Optional<Max140Binary>> mmTMChallenge = new MMMessageAttribute<TerminalManagementDataSet12, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet12.mmObject();
 			isDerived = false;
@@ -260,6 +282,16 @@ public class TerminalManagementDataSet12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(TerminalManagementDataSet12 obj) {
+			return obj.getTMChallenge();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet12 obj, Optional<Max140Binary> value) {
+			obj.setTMChallenge(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SsnKey")
@@ -300,7 +332,7 @@ public class TerminalManagementDataSet12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSessionKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminalManagementDataSet12, Optional<CryptographicKey5>> mmSessionKey = new MMMessageAssociationEnd<TerminalManagementDataSet12, Optional<CryptographicKey5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet12.mmObject();
 			isDerived = false;
@@ -312,7 +344,17 @@ public class TerminalManagementDataSet12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
+			type_lazy = () -> CryptographicKey5.mmObject();
+		}
+
+		@Override
+		public Optional<CryptographicKey5> getValue(TerminalManagementDataSet12 obj) {
+			return obj.getSessionKey();
+		}
+
+		@Override
+		public void setValue(TerminalManagementDataSet12 obj, Optional<CryptographicKey5> value) {
+			obj.setSessionKey(value.orElse(null));
 		}
 	};
 
@@ -336,7 +378,7 @@ public class TerminalManagementDataSet12 {
 		return identification;
 	}
 
-	public TerminalManagementDataSet12 setIdentification(com.tools20022.repository.msg.DataSetIdentification4 identification) {
+	public TerminalManagementDataSet12 setIdentification(DataSetIdentification4 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -363,7 +405,7 @@ public class TerminalManagementDataSet12 {
 		return sessionKey == null ? Optional.empty() : Optional.of(sessionKey);
 	}
 
-	public TerminalManagementDataSet12 setSessionKey(com.tools20022.repository.msg.CryptographicKey5 sessionKey) {
+	public TerminalManagementDataSet12 setSessionKey(CryptographicKey5 sessionKey) {
 		this.sessionKey = sessionKey;
 		return this;
 	}

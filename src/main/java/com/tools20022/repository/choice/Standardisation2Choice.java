@@ -110,7 +110,7 @@ public class Standardisation2Choice {
 	 * Standardisation1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Standardisation2Choice, List<StandardisationCode>> mmCode = new MMMessageAttribute<Standardisation2Choice, List<StandardisationCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Standardisation2Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class Standardisation2Choice {
 			previousVersion_lazy = () -> Standardisation1Choice.mmCode;
 			minOccurs = 0;
 			simpleType_lazy = () -> StandardisationCode.mmObject();
+		}
+
+		@Override
+		public List<StandardisationCode> getValue(Standardisation2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(Standardisation2Choice obj, List<StandardisationCode> value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class Standardisation2Choice {
 	 * Standardisation1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Standardisation2Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<Standardisation2Choice, GenericIdentification30>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Standardisation2Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class Standardisation2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(Standardisation2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(Standardisation2Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -109,7 +109,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementDetailsExtension2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementDetailsExtension2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionOptionSecuritiesMovementDetailsExtension2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementDetailsExtension2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "PyoutNb", required = true)
@@ -155,7 +165,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementDetailsExtension2, Exact3NumericText> mmPayoutNumber = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementDetailsExtension2, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CorporateActionOptionSecuritiesMovementDetailsExtension2 obj) {
+			return obj.getPayoutNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementDetailsExtension2 obj, Exact3NumericText value) {
+			obj.setPayoutNumber(value);
 		}
 	};
 	@XmlElement(name = "DTCPayMtd")
@@ -203,7 +223,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementDetailsExtension2, Optional<Max3Text>> mmDTCPayMethod = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementDetailsExtension2, Optional<Max3Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(CorporateActionOptionSecuritiesMovementDetailsExtension2 obj) {
+			return obj.getDTCPayMethod();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementDetailsExtension2 obj, Optional<Max3Text> value) {
+			obj.setDTCPayMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCPayOrdr")
@@ -251,7 +281,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionOptionSecuritiesMovementDetailsExtension2, Optional<Max3Text>> mmDTCPayOrder = new MMMessageAttribute<CorporateActionOptionSecuritiesMovementDetailsExtension2, Optional<Max3Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
@@ -263,6 +293,16 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(CorporateActionOptionSecuritiesMovementDetailsExtension2 obj) {
+			return obj.getDTCPayOrder();
+		}
+
+		@Override
+		public void setValue(CorporateActionOptionSecuritiesMovementDetailsExtension2 obj, Optional<Max3Text> value) {
+			obj.setDTCPayOrder(value.orElse(null));
 		}
 	};
 

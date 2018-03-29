@@ -126,7 +126,7 @@ public class UnilateralSplit1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnilateralSplit1Choice, SecuritiesTransactionType5Code> mmCode = new MMMessageAttribute<UnilateralSplit1Choice, SecuritiesTransactionType5Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnilateralSplit1Choice.mmObject();
@@ -140,6 +140,16 @@ public class UnilateralSplit1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesTransactionType5Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionType5Code getValue(UnilateralSplit1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(UnilateralSplit1Choice obj, SecuritiesTransactionType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -188,7 +198,7 @@ public class UnilateralSplit1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnilateralSplit1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<UnilateralSplit1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnilateralSplit1Choice.mmObject();
@@ -202,6 +212,16 @@ public class UnilateralSplit1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(UnilateralSplit1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnilateralSplit1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

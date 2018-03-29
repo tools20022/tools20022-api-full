@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Debt;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -145,7 +146,7 @@ public class SecuritiesReferenceDataReport5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReferenceDataReport5, Optional<Max35Text>> mmTechnicalRecordIdentification = new MMMessageAttribute<SecuritiesReferenceDataReport5, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
@@ -156,6 +157,16 @@ public class SecuritiesReferenceDataReport5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SecuritiesReferenceDataReport5 obj) {
+			return obj.getTechnicalRecordIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataReport5 obj, Optional<Max35Text> value) {
+			obj.setTechnicalRecordIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmGnlAttrbts", required = true)
@@ -192,7 +203,7 @@ public class SecuritiesReferenceDataReport5 {
 	 * "Attributes and characteristics of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentGeneralAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesReferenceDataReport5, SecurityInstrumentDescription9> mmFinancialInstrumentGeneralAttributes = new MMMessageAssociationEnd<SecuritiesReferenceDataReport5, SecurityInstrumentDescription9>() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
@@ -204,7 +215,17 @@ public class SecuritiesReferenceDataReport5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityInstrumentDescription9.mmObject();
+			type_lazy = () -> SecurityInstrumentDescription9.mmObject();
+		}
+
+		@Override
+		public SecurityInstrumentDescription9 getValue(SecuritiesReferenceDataReport5 obj) {
+			return obj.getFinancialInstrumentGeneralAttributes();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataReport5 obj, SecurityInstrumentDescription9 value) {
+			obj.setFinancialInstrumentGeneralAttributes(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -242,7 +263,7 @@ public class SecuritiesReferenceDataReport5 {
 	 * definition} = "LEI of Issuer or trading venue operator."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesReferenceDataReport5, LEIIdentifier> mmIssuer = new MMMessageAttribute<SecuritiesReferenceDataReport5, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
@@ -255,9 +276,19 @@ public class SecuritiesReferenceDataReport5 {
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
+
+		@Override
+		public LEIIdentifier getValue(SecuritiesReferenceDataReport5 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataReport5 obj, LEIIdentifier value) {
+			obj.setIssuer(value);
+		}
 	};
 	@XmlElement(name = "TradgVnRltdAttrbts", required = true)
-	protected List<com.tools20022.repository.msg.TradingVenueAttributes1> tradingVenueRelatedAttributes;
+	protected List<TradingVenueAttributes1> tradingVenueRelatedAttributes;
 	/**
 	 * 
 	 <p>
@@ -290,7 +321,7 @@ public class SecuritiesReferenceDataReport5 {
 	 * definition} = "Traded venue related attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingVenueRelatedAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesReferenceDataReport5, List<TradingVenueAttributes1>> mmTradingVenueRelatedAttributes = new MMMessageAssociationEnd<SecuritiesReferenceDataReport5, List<TradingVenueAttributes1>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
@@ -301,7 +332,17 @@ public class SecuritiesReferenceDataReport5 {
 			definition = "Traded venue related attributes.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradingVenueAttributes1.mmObject();
+			type_lazy = () -> TradingVenueAttributes1.mmObject();
+		}
+
+		@Override
+		public List<TradingVenueAttributes1> getValue(SecuritiesReferenceDataReport5 obj) {
+			return obj.getTradingVenueRelatedAttributes();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataReport5 obj, List<TradingVenueAttributes1> value) {
+			obj.setTradingVenueRelatedAttributes(value);
 		}
 	};
 	@XmlElement(name = "DebtInstrmAttrbts")
@@ -336,7 +377,7 @@ public class SecuritiesReferenceDataReport5 {
 	 * definition} = "Attributes specific to debt instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebtInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesReferenceDataReport5, Optional<DebtInstrument2>> mmDebtInstrumentAttributes = new MMMessageAssociationEnd<SecuritiesReferenceDataReport5, Optional<DebtInstrument2>>() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
@@ -348,7 +389,17 @@ public class SecuritiesReferenceDataReport5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DebtInstrument2.mmObject();
+			type_lazy = () -> DebtInstrument2.mmObject();
+		}
+
+		@Override
+		public Optional<DebtInstrument2> getValue(SecuritiesReferenceDataReport5 obj) {
+			return obj.getDebtInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataReport5 obj, Optional<DebtInstrument2> value) {
+			obj.setDebtInstrumentAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DerivInstrmAttrbts")
@@ -384,7 +435,7 @@ public class SecuritiesReferenceDataReport5 {
 	 * definition} = "Attributes specific to derivative instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDerivativeInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesReferenceDataReport5, Optional<DerivativeInstrument5>> mmDerivativeInstrumentAttributes = new MMMessageAssociationEnd<SecuritiesReferenceDataReport5, Optional<DerivativeInstrument5>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmDerivative;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
@@ -396,7 +447,17 @@ public class SecuritiesReferenceDataReport5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
+			type_lazy = () -> DerivativeInstrument5.mmObject();
+		}
+
+		@Override
+		public Optional<DerivativeInstrument5> getValue(SecuritiesReferenceDataReport5 obj) {
+			return obj.getDerivativeInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataReport5 obj, Optional<DerivativeInstrument5> value) {
+			obj.setDerivativeInstrumentAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TechAttrbts")
@@ -427,7 +488,7 @@ public class SecuritiesReferenceDataReport5 {
 	 * definition} = "Technical attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTechnicalAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesReferenceDataReport5, Optional<RecordTechnicalData3>> mmTechnicalAttributes = new MMMessageAssociationEnd<SecuritiesReferenceDataReport5, Optional<RecordTechnicalData3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataReport5.mmObject();
 			isDerived = false;
@@ -438,7 +499,17 @@ public class SecuritiesReferenceDataReport5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
+			type_lazy = () -> RecordTechnicalData3.mmObject();
+		}
+
+		@Override
+		public Optional<RecordTechnicalData3> getValue(SecuritiesReferenceDataReport5 obj) {
+			return obj.getTechnicalAttributes();
+		}
+
+		@Override
+		public void setValue(SecuritiesReferenceDataReport5 obj, Optional<RecordTechnicalData3> value) {
+			obj.setTechnicalAttributes(value.orElse(null));
 		}
 	};
 
@@ -475,7 +546,7 @@ public class SecuritiesReferenceDataReport5 {
 		return financialInstrumentGeneralAttributes;
 	}
 
-	public SecuritiesReferenceDataReport5 setFinancialInstrumentGeneralAttributes(com.tools20022.repository.msg.SecurityInstrumentDescription9 financialInstrumentGeneralAttributes) {
+	public SecuritiesReferenceDataReport5 setFinancialInstrumentGeneralAttributes(SecurityInstrumentDescription9 financialInstrumentGeneralAttributes) {
 		this.financialInstrumentGeneralAttributes = Objects.requireNonNull(financialInstrumentGeneralAttributes);
 		return this;
 	}
@@ -493,7 +564,7 @@ public class SecuritiesReferenceDataReport5 {
 		return tradingVenueRelatedAttributes == null ? tradingVenueRelatedAttributes = new ArrayList<>() : tradingVenueRelatedAttributes;
 	}
 
-	public SecuritiesReferenceDataReport5 setTradingVenueRelatedAttributes(List<com.tools20022.repository.msg.TradingVenueAttributes1> tradingVenueRelatedAttributes) {
+	public SecuritiesReferenceDataReport5 setTradingVenueRelatedAttributes(List<TradingVenueAttributes1> tradingVenueRelatedAttributes) {
 		this.tradingVenueRelatedAttributes = Objects.requireNonNull(tradingVenueRelatedAttributes);
 		return this;
 	}
@@ -502,7 +573,7 @@ public class SecuritiesReferenceDataReport5 {
 		return debtInstrumentAttributes == null ? Optional.empty() : Optional.of(debtInstrumentAttributes);
 	}
 
-	public SecuritiesReferenceDataReport5 setDebtInstrumentAttributes(com.tools20022.repository.msg.DebtInstrument2 debtInstrumentAttributes) {
+	public SecuritiesReferenceDataReport5 setDebtInstrumentAttributes(DebtInstrument2 debtInstrumentAttributes) {
 		this.debtInstrumentAttributes = debtInstrumentAttributes;
 		return this;
 	}
@@ -511,7 +582,7 @@ public class SecuritiesReferenceDataReport5 {
 		return derivativeInstrumentAttributes == null ? Optional.empty() : Optional.of(derivativeInstrumentAttributes);
 	}
 
-	public SecuritiesReferenceDataReport5 setDerivativeInstrumentAttributes(com.tools20022.repository.msg.DerivativeInstrument5 derivativeInstrumentAttributes) {
+	public SecuritiesReferenceDataReport5 setDerivativeInstrumentAttributes(DerivativeInstrument5 derivativeInstrumentAttributes) {
 		this.derivativeInstrumentAttributes = derivativeInstrumentAttributes;
 		return this;
 	}
@@ -520,7 +591,7 @@ public class SecuritiesReferenceDataReport5 {
 		return technicalAttributes == null ? Optional.empty() : Optional.of(technicalAttributes);
 	}
 
-	public SecuritiesReferenceDataReport5 setTechnicalAttributes(com.tools20022.repository.msg.RecordTechnicalData3 technicalAttributes) {
+	public SecuritiesReferenceDataReport5 setTechnicalAttributes(RecordTechnicalData3 technicalAttributes) {
 		this.technicalAttributes = technicalAttributes;
 		return this;
 	}

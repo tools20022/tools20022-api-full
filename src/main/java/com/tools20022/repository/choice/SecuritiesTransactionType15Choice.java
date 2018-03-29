@@ -114,7 +114,7 @@ public class SecuritiesTransactionType15Choice {
 	 * "Securities transaction type expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionType15Choice, SecuritiesTransactionType10Code> mmCode = new MMMessageAttribute<SecuritiesTransactionType15Choice, SecuritiesTransactionType10Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionType15Choice.mmObject();
@@ -127,6 +127,16 @@ public class SecuritiesTransactionType15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesTransactionType10Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionType10Code getValue(SecuritiesTransactionType15Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionType15Choice obj, SecuritiesTransactionType10Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class SecuritiesTransactionType15Choice {
 	 * "Securities transaction type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTransactionType15Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<SecuritiesTransactionType15Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionType15Choice.mmObject();
@@ -181,6 +191,16 @@ public class SecuritiesTransactionType15Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(SecuritiesTransactionType15Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionType15Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

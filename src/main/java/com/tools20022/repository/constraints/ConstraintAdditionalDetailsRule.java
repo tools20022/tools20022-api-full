@@ -62,12 +62,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails25> forSecuritiesTradeDetails25 = new MMConstraint<SecuritiesTradeDetails25>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails32);
 			owner_lazy = () -> SecuritiesTradeDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails25 obj) throws Exception {
+			checkSecuritiesTradeDetails25(obj);
 		}
 	};
 	/**
@@ -93,11 +97,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes8> forFinancialInstrumentAttributes8 = new MMConstraint<FinancialInstrumentAttributes8>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes8 obj) throws Exception {
+			checkFinancialInstrumentAttributes8(obj);
 		}
 	};
 	/**
@@ -123,11 +131,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes20> forFinancialInstrumentAttributes20 = new MMConstraint<FinancialInstrumentAttributes20>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes20 obj) throws Exception {
+			checkFinancialInstrumentAttributes20(obj);
 		}
 	};
 	/**
@@ -161,12 +173,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes35> forFinancialInstrumentAttributes35 = new MMConstraint<FinancialInstrumentAttributes35>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forFinancialInstrumentAttributes64);
 			owner_lazy = () -> FinancialInstrumentAttributes35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes35 obj) throws Exception {
+			checkFinancialInstrumentAttributes35(obj);
 		}
 	};
 	/**
@@ -192,11 +208,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<PartyTextInformation2> forPartyTextInformation2 = new MMConstraint<PartyTextInformation2>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkPartyTextInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if DeclarationlDetails and/or PartyContactDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyTextInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyTextInformation2 obj) throws Exception {
+			checkPartyTextInformation2(obj);
 		}
 	};
 	/**
@@ -230,12 +250,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails26> forSecuritiesTradeDetails26 = new MMConstraint<SecuritiesTradeDetails26>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails34);
 			owner_lazy = () -> SecuritiesTradeDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails26 obj) throws Exception {
+			checkSecuritiesTradeDetails26(obj);
 		}
 	};
 	/**
@@ -261,11 +285,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails27> forSecuritiesTradeDetails27 = new MMConstraint<SecuritiesTradeDetails27>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails27 obj) throws Exception {
+			checkSecuritiesTradeDetails27(obj);
 		}
 	};
 	/**
@@ -291,11 +319,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes41> forFinancialInstrumentAttributes41 = new MMConstraint<FinancialInstrumentAttributes41>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes41 obj) throws Exception {
+			checkFinancialInstrumentAttributes41(obj);
 		}
 	};
 	/**
@@ -321,11 +353,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<PartyTextInformation4> forPartyTextInformation4 = new MMConstraint<PartyTextInformation4>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkPartyTextInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if DeclarationlDetails and/or PartyContactDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> PartyTextInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyTextInformation4 obj) throws Exception {
+			checkPartyTextInformation4(obj);
 		}
 	};
 	/**
@@ -351,11 +387,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails28> forSecuritiesTradeDetails28 = new MMConstraint<SecuritiesTradeDetails28>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails28 obj) throws Exception {
+			checkSecuritiesTradeDetails28(obj);
 		}
 	};
 	/**
@@ -381,11 +421,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes4> forFinancialInstrumentAttributes4 = new MMConstraint<FinancialInstrumentAttributes4>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes4 obj) throws Exception {
+			checkFinancialInstrumentAttributes4(obj);
 		}
 	};
 	/**
@@ -411,11 +455,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails2> forIntraPositionDetails2 = new MMConstraint<IntraPositionDetails2>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails2 obj) throws Exception {
+			checkIntraPositionDetails2(obj);
 		}
 	};
 	/**
@@ -441,11 +489,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes13> forFinancialInstrumentAttributes13 = new MMConstraint<FinancialInstrumentAttributes13>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes13 obj) throws Exception {
+			checkFinancialInstrumentAttributes13(obj);
 		}
 	};
 	/**
@@ -471,11 +523,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails8> forIntraPositionDetails8 = new MMConstraint<IntraPositionDetails8>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails8 obj) throws Exception {
+			checkIntraPositionDetails8(obj);
 		}
 	};
 	/**
@@ -501,11 +557,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes21> forFinancialInstrumentAttributes21 = new MMConstraint<FinancialInstrumentAttributes21>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes21 obj) throws Exception {
+			checkFinancialInstrumentAttributes21(obj);
 		}
 	};
 	/**
@@ -531,11 +591,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails12> forIntraPositionDetails12 = new MMConstraint<IntraPositionDetails12>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails12 obj) throws Exception {
+			checkIntraPositionDetails12(obj);
 		}
 	};
 	/**
@@ -561,11 +625,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes26> forFinancialInstrumentAttributes26 = new MMConstraint<FinancialInstrumentAttributes26>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes26 obj) throws Exception {
+			checkFinancialInstrumentAttributes26(obj);
 		}
 	};
 	/**
@@ -591,11 +659,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails13> forIntraPositionDetails13 = new MMConstraint<IntraPositionDetails13>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails13 obj) throws Exception {
+			checkIntraPositionDetails13(obj);
 		}
 	};
 	/**
@@ -629,12 +701,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes36> forFinancialInstrumentAttributes36 = new MMConstraint<FinancialInstrumentAttributes36>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forFinancialInstrumentAttributes63);
 			owner_lazy = () -> FinancialInstrumentAttributes36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes36 obj) throws Exception {
+			checkFinancialInstrumentAttributes36(obj);
 		}
 	};
 	/**
@@ -660,11 +736,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails22> forIntraPositionDetails22 = new MMConstraint<IntraPositionDetails22>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails22 obj) throws Exception {
+			checkIntraPositionDetails22(obj);
 		}
 	};
 	/**
@@ -690,11 +770,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes42> forFinancialInstrumentAttributes42 = new MMConstraint<FinancialInstrumentAttributes42>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes42 obj) throws Exception {
+			checkFinancialInstrumentAttributes42(obj);
 		}
 	};
 	/**
@@ -720,11 +804,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails26> forIntraPositionDetails26 = new MMConstraint<IntraPositionDetails26>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails26 obj) throws Exception {
+			checkIntraPositionDetails26(obj);
 		}
 	};
 	/**
@@ -758,12 +846,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails27> forIntraPositionDetails27 = new MMConstraint<IntraPositionDetails27>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionDetails34);
 			owner_lazy = () -> IntraPositionDetails27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails27 obj) throws Exception {
+			checkIntraPositionDetails27(obj);
 		}
 	};
 	/**
@@ -789,11 +881,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails29> forIntraPositionDetails29 = new MMConstraint<IntraPositionDetails29>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails29 obj) throws Exception {
+			checkIntraPositionDetails29(obj);
 		}
 	};
 	/**
@@ -819,11 +915,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails1> forIntraPositionMovementDetails1 = new MMConstraint<IntraPositionMovementDetails1>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails1 obj) throws Exception {
+			checkIntraPositionMovementDetails1(obj);
 		}
 	};
 	/**
@@ -849,11 +949,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails2> forIntraPositionMovementDetails2 = new MMConstraint<IntraPositionMovementDetails2>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails2 obj) throws Exception {
+			checkIntraPositionMovementDetails2(obj);
 		}
 	};
 	/**
@@ -879,11 +983,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails5> forIntraPositionMovementDetails5 = new MMConstraint<IntraPositionMovementDetails5>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails5 obj) throws Exception {
+			checkIntraPositionMovementDetails5(obj);
 		}
 	};
 	/**
@@ -909,11 +1017,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes27> forFinancialInstrumentAttributes27 = new MMConstraint<FinancialInstrumentAttributes27>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes27 obj) throws Exception {
+			checkFinancialInstrumentAttributes27(obj);
 		}
 	};
 	/**
@@ -939,11 +1051,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails6> forIntraPositionMovementDetails6 = new MMConstraint<IntraPositionMovementDetails6>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails6 obj) throws Exception {
+			checkIntraPositionMovementDetails6(obj);
 		}
 	};
 	/**
@@ -969,11 +1085,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails7> forIntraPositionMovementDetails7 = new MMConstraint<IntraPositionMovementDetails7>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails7 obj) throws Exception {
+			checkIntraPositionMovementDetails7(obj);
 		}
 	};
 	/**
@@ -999,11 +1119,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails8> forIntraPositionMovementDetails8 = new MMConstraint<IntraPositionMovementDetails8>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails8 obj) throws Exception {
+			checkIntraPositionMovementDetails8(obj);
 		}
 	};
 	/**
@@ -1037,12 +1161,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails9> forIntraPositionMovementDetails9 = new MMConstraint<IntraPositionMovementDetails9>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionMovementDetails11);
 			owner_lazy = () -> IntraPositionMovementDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails9 obj) throws Exception {
+			checkIntraPositionMovementDetails9(obj);
 		}
 	};
 	/**
@@ -1068,11 +1196,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails10> forIntraPositionMovementDetails10 = new MMConstraint<IntraPositionMovementDetails10>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails10 obj) throws Exception {
+			checkIntraPositionMovementDetails10(obj);
 		}
 	};
 	/**
@@ -1098,11 +1230,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes14> forFinancialInstrumentAttributes14 = new MMConstraint<FinancialInstrumentAttributes14>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes14 obj) throws Exception {
+			checkFinancialInstrumentAttributes14(obj);
 		}
 	};
 	/**
@@ -1128,11 +1264,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes30> forFinancialInstrumentAttributes30 = new MMConstraint<FinancialInstrumentAttributes30>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes30 obj) throws Exception {
+			checkFinancialInstrumentAttributes30(obj);
 		}
 	};
 	/**
@@ -1166,12 +1306,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails6> forSecuritiesTradeDetails6 = new MMConstraint<SecuritiesTradeDetails6>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails38);
 			owner_lazy = () -> SecuritiesTradeDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails6 obj) throws Exception {
+			checkSecuritiesTradeDetails6(obj);
 		}
 	};
 	/**
@@ -1197,11 +1341,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails13> forSecuritiesTradeDetails13 = new MMConstraint<SecuritiesTradeDetails13>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails13 obj) throws Exception {
+			checkSecuritiesTradeDetails13(obj);
 		}
 	};
 	/**
@@ -1227,11 +1375,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes28> forFinancialInstrumentAttributes28 = new MMConstraint<FinancialInstrumentAttributes28>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes28 obj) throws Exception {
+			checkFinancialInstrumentAttributes28(obj);
 		}
 	};
 	/**
@@ -1265,12 +1417,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails3> forSecuritiesTradeDetails3 = new MMConstraint<SecuritiesTradeDetails3>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails37);
 			owner_lazy = () -> SecuritiesTradeDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails3 obj) throws Exception {
+			checkSecuritiesTradeDetails3(obj);
 		}
 	};
 	/**
@@ -1296,11 +1452,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails11> forSecuritiesTradeDetails11 = new MMConstraint<SecuritiesTradeDetails11>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails11 obj) throws Exception {
+			checkSecuritiesTradeDetails11(obj);
 		}
 	};
 	/**
@@ -1334,12 +1494,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails2> forSecuritiesTradeDetails2 = new MMConstraint<SecuritiesTradeDetails2>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails31);
 			owner_lazy = () -> SecuritiesTradeDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails2 obj) throws Exception {
+			checkSecuritiesTradeDetails2(obj);
 		}
 	};
 	/**
@@ -1365,11 +1529,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails16> forSecuritiesTradeDetails16 = new MMConstraint<SecuritiesTradeDetails16>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails16 obj) throws Exception {
+			checkSecuritiesTradeDetails16(obj);
 		}
 	};
 	/**
@@ -1403,12 +1571,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails1> forSecuritiesTradeDetails1 = new MMConstraint<SecuritiesTradeDetails1>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails33);
 			owner_lazy = () -> SecuritiesTradeDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails1 obj) throws Exception {
+			checkSecuritiesTradeDetails1(obj);
 		}
 	};
 	/**
@@ -1434,11 +1606,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails15> forSecuritiesTradeDetails15 = new MMConstraint<SecuritiesTradeDetails15>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails15 obj) throws Exception {
+			checkSecuritiesTradeDetails15(obj);
 		}
 	};
 	/**
@@ -1464,11 +1640,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails7> forTransactionDetails7 = new MMConstraint<TransactionDetails7>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails7 obj) throws Exception {
+			checkTransactionDetails7(obj);
 		}
 	};
 	/**
@@ -1494,11 +1674,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails8> forTransactionDetails8 = new MMConstraint<TransactionDetails8>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails8 obj) throws Exception {
+			checkTransactionDetails8(obj);
 		}
 	};
 	/**
@@ -1524,11 +1708,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails16> forTransactionDetails16 = new MMConstraint<TransactionDetails16>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails16 obj) throws Exception {
+			checkTransactionDetails16(obj);
 		}
 	};
 	/**
@@ -1554,11 +1742,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails17> forTransactionDetails17 = new MMConstraint<TransactionDetails17>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails17 obj) throws Exception {
+			checkTransactionDetails17(obj);
 		}
 	};
 	/**
@@ -1584,11 +1776,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails26> forTransactionDetails26 = new MMConstraint<TransactionDetails26>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails26 obj) throws Exception {
+			checkTransactionDetails26(obj);
 		}
 	};
 	/**
@@ -1614,11 +1810,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails25> forTransactionDetails25 = new MMConstraint<TransactionDetails25>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails25 obj) throws Exception {
+			checkTransactionDetails25(obj);
 		}
 	};
 	/**
@@ -1644,11 +1844,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails27> forTransactionDetails27 = new MMConstraint<TransactionDetails27>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails27 obj) throws Exception {
+			checkTransactionDetails27(obj);
 		}
 	};
 	/**
@@ -1674,11 +1878,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails33> forTransactionDetails33 = new MMConstraint<TransactionDetails33>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails33 obj) throws Exception {
+			checkTransactionDetails33(obj);
 		}
 	};
 	/**
@@ -1704,11 +1912,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails39> forTransactionDetails39 = new MMConstraint<TransactionDetails39>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails39 obj) throws Exception {
+			checkTransactionDetails39(obj);
 		}
 	};
 	/**
@@ -1734,11 +1946,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails50> forTransactionDetails50 = new MMConstraint<TransactionDetails50>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails50 obj) throws Exception {
+			checkTransactionDetails50(obj);
 		}
 	};
 	/**
@@ -1772,12 +1988,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails56> forTransactionDetails56 = new MMConstraint<TransactionDetails56>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails62);
 			owner_lazy = () -> TransactionDetails56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails56 obj) throws Exception {
+			checkTransactionDetails56(obj);
 		}
 	};
 	/**
@@ -1803,11 +2023,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails59> forTransactionDetails59 = new MMConstraint<TransactionDetails59>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails59.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails59 obj) throws Exception {
+			checkTransactionDetails59(obj);
 		}
 	};
 	/**
@@ -1833,11 +2057,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails6> forTransactionDetails6 = new MMConstraint<TransactionDetails6>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails6 obj) throws Exception {
+			checkTransactionDetails6(obj);
 		}
 	};
 	/**
@@ -1863,11 +2091,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails18> forTransactionDetails18 = new MMConstraint<TransactionDetails18>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails18 obj) throws Exception {
+			checkTransactionDetails18(obj);
 		}
 	};
 	/**
@@ -1893,11 +2125,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails24> forTransactionDetails24 = new MMConstraint<TransactionDetails24>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails24 obj) throws Exception {
+			checkTransactionDetails24(obj);
 		}
 	};
 	/**
@@ -1923,11 +2159,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails34> forTransactionDetails34 = new MMConstraint<TransactionDetails34>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails34 obj) throws Exception {
+			checkTransactionDetails34(obj);
 		}
 	};
 	/**
@@ -1953,11 +2193,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails37> forTransactionDetails37 = new MMConstraint<TransactionDetails37>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails37 obj) throws Exception {
+			checkTransactionDetails37(obj);
 		}
 	};
 	/**
@@ -1983,11 +2227,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails48> forTransactionDetails48 = new MMConstraint<TransactionDetails48>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails48.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails48 obj) throws Exception {
+			checkTransactionDetails48(obj);
 		}
 	};
 	/**
@@ -2021,12 +2269,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails57> forTransactionDetails57 = new MMConstraint<TransactionDetails57>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails63);
 			owner_lazy = () -> TransactionDetails57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails57 obj) throws Exception {
+			checkTransactionDetails57(obj);
 		}
 	};
 	/**
@@ -2052,11 +2304,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails60> forTransactionDetails60 = new MMConstraint<TransactionDetails60>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails60.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails60 obj) throws Exception {
+			checkTransactionDetails60(obj);
 		}
 	};
 	/**
@@ -2082,11 +2338,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes31> forFinancialInstrumentAttributes31 = new MMConstraint<FinancialInstrumentAttributes31>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes31 obj) throws Exception {
+			checkFinancialInstrumentAttributes31(obj);
 		}
 	};
 	/**
@@ -2112,11 +2372,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes44> forFinancialInstrumentAttributes44 = new MMConstraint<FinancialInstrumentAttributes44>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes44 obj) throws Exception {
+			checkFinancialInstrumentAttributes44(obj);
 		}
 	};
 	/**
@@ -2142,11 +2406,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails1> forIntraPositionDetails1 = new MMConstraint<IntraPositionDetails1>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails1 obj) throws Exception {
+			checkIntraPositionDetails1(obj);
 		}
 	};
 	/**
@@ -2172,11 +2440,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails11> forIntraPositionDetails11 = new MMConstraint<IntraPositionDetails11>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails11 obj) throws Exception {
+			checkIntraPositionDetails11(obj);
 		}
 	};
 	/**
@@ -2202,11 +2474,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails5> forSecuritiesTradeDetails5 = new MMConstraint<SecuritiesTradeDetails5>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails5 obj) throws Exception {
+			checkSecuritiesTradeDetails5(obj);
 		}
 	};
 	/**
@@ -2232,11 +2508,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails2> forSecuritiesFinancingTransactionDetails2 = new MMConstraint<SecuritiesFinancingTransactionDetails2>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails2 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails2(obj);
 		}
 	};
 	/**
@@ -2262,11 +2542,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails8> forSecuritiesFinancingTransactionDetails8 = new MMConstraint<SecuritiesFinancingTransactionDetails8>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails8 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails8(obj);
 		}
 	};
 	/**
@@ -2292,11 +2576,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes15> forFinancialInstrumentAttributes15 = new MMConstraint<FinancialInstrumentAttributes15>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes15 obj) throws Exception {
+			checkFinancialInstrumentAttributes15(obj);
 		}
 	};
 	/**
@@ -2322,11 +2610,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails12> forSecuritiesTradeDetails12 = new MMConstraint<SecuritiesTradeDetails12>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails12 obj) throws Exception {
+			checkSecuritiesTradeDetails12(obj);
 		}
 	};
 	/**
@@ -2352,11 +2644,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails6> forSecuritiesFinancingTransactionDetails6 = new MMConstraint<SecuritiesFinancingTransactionDetails6>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails6 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails6(obj);
 		}
 	};
 	/**
@@ -2382,11 +2678,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails10> forSecuritiesFinancingTransactionDetails10 = new MMConstraint<SecuritiesFinancingTransactionDetails10>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails10 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails10(obj);
 		}
 	};
 	/**
@@ -2421,12 +2721,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails17> forSecuritiesFinancingTransactionDetails17 = new MMConstraint<SecuritiesFinancingTransactionDetails17>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails21);
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails17 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails17(obj);
 		}
 	};
 	/**
@@ -2452,11 +2756,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails18> forSecuritiesFinancingTransactionDetails18 = new MMConstraint<SecuritiesFinancingTransactionDetails18>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails18 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails18(obj);
 		}
 	};
 	/**
@@ -2482,11 +2790,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes29> forFinancialInstrumentAttributes29 = new MMConstraint<FinancialInstrumentAttributes29>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes29 obj) throws Exception {
+			checkFinancialInstrumentAttributes29(obj);
 		}
 	};
 	/**
@@ -2512,11 +2824,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails7> forIntraPositionDetails7 = new MMConstraint<IntraPositionDetails7>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails7 obj) throws Exception {
+			checkIntraPositionDetails7(obj);
 		}
 	};
 	/**
@@ -2542,11 +2858,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails16> forIntraPositionDetails16 = new MMConstraint<IntraPositionDetails16>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails16 obj) throws Exception {
+			checkIntraPositionDetails16(obj);
 		}
 	};
 	/**
@@ -2580,12 +2900,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails21> forIntraPositionDetails21 = new MMConstraint<IntraPositionDetails21>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionDetails33);
 			owner_lazy = () -> IntraPositionDetails21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails21 obj) throws Exception {
+			checkIntraPositionDetails21(obj);
 		}
 	};
 	/**
@@ -2611,11 +2935,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails25> forIntraPositionDetails25 = new MMConstraint<IntraPositionDetails25>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails25 obj) throws Exception {
+			checkIntraPositionDetails25(obj);
 		}
 	};
 	/**
@@ -2641,11 +2969,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails3> forIntraPositionMovementDetails3 = new MMConstraint<IntraPositionMovementDetails3>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails3 obj) throws Exception {
+			checkIntraPositionMovementDetails3(obj);
 		}
 	};
 	/**
@@ -2671,11 +3003,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails4> forIntraPositionMovementDetails4 = new MMConstraint<IntraPositionMovementDetails4>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails4 obj) throws Exception {
+			checkIntraPositionMovementDetails4(obj);
 		}
 	};
 	/**
@@ -2708,12 +3044,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraBalance1> forIntraBalance1 = new MMConstraint<IntraBalance1>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraBalance1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the sender and the receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraBalance3);
 			owner_lazy = () -> IntraBalance1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalance1 obj) throws Exception {
+			checkIntraBalance1(obj);
 		}
 	};
 	/**
@@ -2747,12 +3087,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails51> forTransactionDetails51 = new MMConstraint<TransactionDetails51>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the sender and receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails93);
 			owner_lazy = () -> TransactionDetails51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails51 obj) throws Exception {
+			checkTransactionDetails51(obj);
 		}
 	};
 	/**
@@ -2778,11 +3122,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes2> forFinancialInstrumentAttributes2 = new MMConstraint<FinancialInstrumentAttributes2>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, FinancialInstrumentAttributeAdditionalDetails must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes2 obj) throws Exception {
+			checkFinancialInstrumentAttributes2(obj);
 		}
 	};
 	/**
@@ -2823,13 +3171,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails21> forSecuritiesFinancingTransactionDetails21 = new MMConstraint<SecuritiesFinancingTransactionDetails21>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails17;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails21 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails21(obj);
 		}
 	};
 	/**
@@ -2868,13 +3220,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails62> forTransactionDetails62 = new MMConstraint<TransactionDetails62>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails69);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails56;
 			owner_lazy = () -> TransactionDetails62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails62 obj) throws Exception {
+			checkTransactionDetails62(obj);
 		}
 	};
 	/**
@@ -2913,13 +3269,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails63> forTransactionDetails63 = new MMConstraint<TransactionDetails63>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails78);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails57;
 			owner_lazy = () -> TransactionDetails63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails63 obj) throws Exception {
+			checkTransactionDetails63(obj);
 		}
 	};
 	/**
@@ -2958,13 +3318,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails31> forSecuritiesTradeDetails31 = new MMConstraint<SecuritiesTradeDetails31>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails53);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails2;
 			owner_lazy = () -> SecuritiesTradeDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails31 obj) throws Exception {
+			checkSecuritiesTradeDetails31(obj);
 		}
 	};
 	/**
@@ -3003,13 +3367,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails33> forSecuritiesTradeDetails33 = new MMConstraint<SecuritiesTradeDetails33>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails51);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails1;
 			owner_lazy = () -> SecuritiesTradeDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails33 obj) throws Exception {
+			checkSecuritiesTradeDetails33(obj);
 		}
 	};
 	/**
@@ -3048,13 +3416,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails38> forSecuritiesTradeDetails38 = new MMConstraint<SecuritiesTradeDetails38>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails55);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails6;
 			owner_lazy = () -> SecuritiesTradeDetails38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails38 obj) throws Exception {
+			checkSecuritiesTradeDetails38(obj);
 		}
 	};
 	/**
@@ -3093,13 +3465,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails37> forSecuritiesTradeDetails37 = new MMConstraint<SecuritiesTradeDetails37>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails56);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails3;
 			owner_lazy = () -> SecuritiesTradeDetails37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails37 obj) throws Exception {
+			checkSecuritiesTradeDetails37(obj);
 		}
 	};
 	/**
@@ -3138,13 +3514,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails34> forSecuritiesTradeDetails34 = new MMConstraint<SecuritiesTradeDetails34>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails52);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails26;
 			owner_lazy = () -> SecuritiesTradeDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails34 obj) throws Exception {
+			checkSecuritiesTradeDetails34(obj);
 		}
 	};
 	/**
@@ -3183,13 +3563,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails32> forSecuritiesTradeDetails32 = new MMConstraint<SecuritiesTradeDetails32>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails50);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails25;
 			owner_lazy = () -> SecuritiesTradeDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails32 obj) throws Exception {
+			checkSecuritiesTradeDetails32(obj);
 		}
 	};
 	/**
@@ -3215,11 +3599,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails44> forSecuritiesTradeDetails44 = new MMConstraint<SecuritiesTradeDetails44>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails44 obj) throws Exception {
+			checkSecuritiesTradeDetails44(obj);
 		}
 	};
 	/**
@@ -3245,11 +3633,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails39> forSecuritiesTradeDetails39 = new MMConstraint<SecuritiesTradeDetails39>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails39 obj) throws Exception {
+			checkSecuritiesTradeDetails39(obj);
 		}
 	};
 	/**
@@ -3275,11 +3667,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails43> forSecuritiesTradeDetails43 = new MMConstraint<SecuritiesTradeDetails43>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails43 obj) throws Exception {
+			checkSecuritiesTradeDetails43(obj);
 		}
 	};
 	/**
@@ -3305,11 +3701,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails22> forSecuritiesFinancingTransactionDetails22 = new MMConstraint<SecuritiesFinancingTransactionDetails22>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails22 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails22(obj);
 		}
 	};
 	/**
@@ -3335,11 +3735,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails40> forSecuritiesTradeDetails40 = new MMConstraint<SecuritiesTradeDetails40>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails40 obj) throws Exception {
+			checkSecuritiesTradeDetails40(obj);
 		}
 	};
 	/**
@@ -3365,11 +3769,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails67> forTransactionDetails67 = new MMConstraint<TransactionDetails67>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails67 obj) throws Exception {
+			checkTransactionDetails67(obj);
 		}
 	};
 	/**
@@ -3395,11 +3803,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails68> forTransactionDetails68 = new MMConstraint<TransactionDetails68>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails68 obj) throws Exception {
+			checkTransactionDetails68(obj);
 		}
 	};
 	/**
@@ -3425,11 +3837,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails46> forSecuritiesTradeDetails46 = new MMConstraint<SecuritiesTradeDetails46>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails46 obj) throws Exception {
+			checkSecuritiesTradeDetails46(obj);
 		}
 	};
 	/**
@@ -3455,11 +3871,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails47> forSecuritiesTradeDetails47 = new MMConstraint<SecuritiesTradeDetails47>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails47 obj) throws Exception {
+			checkSecuritiesTradeDetails47(obj);
 		}
 	};
 	/**
@@ -3500,13 +3920,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails24> forSecuritiesFinancingTransactionDetails24 = new MMConstraint<SecuritiesFinancingTransactionDetails24>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails26);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails21;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails24 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails24(obj);
 		}
 	};
 	/**
@@ -3545,13 +3969,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails69> forTransactionDetails69 = new MMConstraint<TransactionDetails69>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails75);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails62;
 			owner_lazy = () -> TransactionDetails69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails69 obj) throws Exception {
+			checkTransactionDetails69(obj);
 		}
 	};
 	/**
@@ -3577,11 +4005,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails25> forSecuritiesFinancingTransactionDetails25 = new MMConstraint<SecuritiesFinancingTransactionDetails25>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails25 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails25(obj);
 		}
 	};
 	/**
@@ -3607,11 +4039,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails72> forTransactionDetails72 = new MMConstraint<TransactionDetails72>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails72.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails72 obj) throws Exception {
+			checkTransactionDetails72(obj);
 		}
 	};
 	/**
@@ -3652,13 +4088,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails26> forSecuritiesFinancingTransactionDetails26 = new MMConstraint<SecuritiesFinancingTransactionDetails26>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails35);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails24;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails26 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails26(obj);
 		}
 	};
 	/**
@@ -3697,13 +4137,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails75> forTransactionDetails75 = new MMConstraint<TransactionDetails75>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails96);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails69;
 			owner_lazy = () -> TransactionDetails75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails75 obj) throws Exception {
+			checkTransactionDetails75(obj);
 		}
 	};
 	/**
@@ -3742,13 +4186,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails78> forTransactionDetails78 = new MMConstraint<TransactionDetails78>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails95);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails63;
 			owner_lazy = () -> TransactionDetails78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails78 obj) throws Exception {
+			checkTransactionDetails78(obj);
 		}
 	};
 	/**
@@ -3787,13 +4235,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes63> forFinancialInstrumentAttributes63 = new MMConstraint<FinancialInstrumentAttributes63>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forFinancialInstrumentAttributes92);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forFinancialInstrumentAttributes36;
 			owner_lazy = () -> FinancialInstrumentAttributes63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes63 obj) throws Exception {
+			checkFinancialInstrumentAttributes63(obj);
 		}
 	};
 	/**
@@ -3824,12 +4276,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails33> forIntraPositionDetails33 = new MMConstraint<IntraPositionDetails33>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionDetails21;
 			owner_lazy = () -> IntraPositionDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails33 obj) throws Exception {
+			checkIntraPositionDetails33(obj);
 		}
 	};
 	/**
@@ -3868,13 +4324,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes64> forFinancialInstrumentAttributes64 = new MMConstraint<FinancialInstrumentAttributes64>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forFinancialInstrumentAttributes91);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forFinancialInstrumentAttributes35;
 			owner_lazy = () -> FinancialInstrumentAttributes64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes64 obj) throws Exception {
+			checkFinancialInstrumentAttributes64(obj);
 		}
 	};
 	/**
@@ -3916,7 +4376,6 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails51> forSecuritiesTradeDetails51 = new MMConstraint<SecuritiesTradeDetails51>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
@@ -3924,6 +4383,11 @@ public class ConstraintAdditionalDetailsRule {
 					com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails73);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails33;
 			owner_lazy = () -> SecuritiesTradeDetails51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails51 obj) throws Exception {
+			checkSecuritiesTradeDetails51(obj);
 		}
 	};
 	/**
@@ -3962,13 +4426,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails53> forSecuritiesTradeDetails53 = new MMConstraint<SecuritiesTradeDetails53>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails76);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails31;
 			owner_lazy = () -> SecuritiesTradeDetails53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails53 obj) throws Exception {
+			checkSecuritiesTradeDetails53(obj);
 		}
 	};
 	/**
@@ -4007,13 +4475,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails55> forSecuritiesTradeDetails55 = new MMConstraint<SecuritiesTradeDetails55>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails74);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails38;
 			owner_lazy = () -> SecuritiesTradeDetails55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails55 obj) throws Exception {
+			checkSecuritiesTradeDetails55(obj);
 		}
 	};
 	/**
@@ -4052,13 +4524,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails56> forSecuritiesTradeDetails56 = new MMConstraint<SecuritiesTradeDetails56>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails77);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails37;
 			owner_lazy = () -> SecuritiesTradeDetails56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails56 obj) throws Exception {
+			checkSecuritiesTradeDetails56(obj);
 		}
 	};
 	/**
@@ -4097,13 +4573,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails34> forIntraPositionDetails34 = new MMConstraint<IntraPositionDetails34>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionDetails41);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionDetails27;
 			owner_lazy = () -> IntraPositionDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails34 obj) throws Exception {
+			checkIntraPositionDetails34(obj);
 		}
 	};
 	/**
@@ -4142,13 +4622,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails52> forSecuritiesTradeDetails52 = new MMConstraint<SecuritiesTradeDetails52>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails79);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails34;
 			owner_lazy = () -> SecuritiesTradeDetails52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails52 obj) throws Exception {
+			checkSecuritiesTradeDetails52(obj);
 		}
 	};
 	/**
@@ -4187,13 +4671,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails11> forIntraPositionMovementDetails11 = new MMConstraint<IntraPositionMovementDetails11>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionMovementDetails13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionMovementDetails9;
 			owner_lazy = () -> IntraPositionMovementDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails11 obj) throws Exception {
+			checkIntraPositionMovementDetails11(obj);
 		}
 	};
 	/**
@@ -4232,13 +4720,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails50> forSecuritiesTradeDetails50 = new MMConstraint<SecuritiesTradeDetails50>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails78);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails32;
 			owner_lazy = () -> SecuritiesTradeDetails50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails50 obj) throws Exception {
+			checkSecuritiesTradeDetails50(obj);
 		}
 	};
 	/**
@@ -4264,11 +4756,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails59> forSecuritiesTradeDetails59 = new MMConstraint<SecuritiesTradeDetails59>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails59.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails59 obj) throws Exception {
+			checkSecuritiesTradeDetails59(obj);
 		}
 	};
 	/**
@@ -4294,11 +4790,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails33> forSecuritiesFinancingTransactionDetails33 = new MMConstraint<SecuritiesFinancingTransactionDetails33>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails33 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails33(obj);
 		}
 	};
 	/**
@@ -4324,11 +4824,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails58> forSecuritiesTradeDetails58 = new MMConstraint<SecuritiesTradeDetails58>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails58 obj) throws Exception {
+			checkSecuritiesTradeDetails58(obj);
 		}
 	};
 	/**
@@ -4354,11 +4858,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes75> forFinancialInstrumentAttributes75 = new MMConstraint<FinancialInstrumentAttributes75>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes75 obj) throws Exception {
+			checkFinancialInstrumentAttributes75(obj);
 		}
 	};
 	/**
@@ -4384,11 +4892,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails35> forIntraPositionDetails35 = new MMConstraint<IntraPositionDetails35>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails35 obj) throws Exception {
+			checkIntraPositionDetails35(obj);
 		}
 	};
 	/**
@@ -4414,11 +4926,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails63> forSecuritiesTradeDetails63 = new MMConstraint<SecuritiesTradeDetails63>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails63 obj) throws Exception {
+			checkSecuritiesTradeDetails63(obj);
 		}
 	};
 	/**
@@ -4444,11 +4960,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails36> forIntraPositionDetails36 = new MMConstraint<IntraPositionDetails36>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails36 obj) throws Exception {
+			checkIntraPositionDetails36(obj);
 		}
 	};
 	/**
@@ -4474,11 +4994,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails62> forSecuritiesTradeDetails62 = new MMConstraint<SecuritiesTradeDetails62>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails62 obj) throws Exception {
+			checkSecuritiesTradeDetails62(obj);
 		}
 	};
 	/**
@@ -4504,11 +5028,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes78> forFinancialInstrumentAttributes78 = new MMConstraint<FinancialInstrumentAttributes78>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes78 obj) throws Exception {
+			checkFinancialInstrumentAttributes78(obj);
 		}
 	};
 	/**
@@ -4534,11 +5062,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails91> forTransactionDetails91 = new MMConstraint<TransactionDetails91>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails91;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails91.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails91 obj) throws Exception {
+			checkTransactionDetails91(obj);
 		}
 	};
 	/**
@@ -4564,11 +5096,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails90> forTransactionDetails90 = new MMConstraint<TransactionDetails90>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails90;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails90.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails90 obj) throws Exception {
+			checkTransactionDetails90(obj);
 		}
 	};
 	/**
@@ -4594,11 +5130,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails12> forIntraPositionMovementDetails12 = new MMConstraint<IntraPositionMovementDetails12>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails12 obj) throws Exception {
+			checkIntraPositionMovementDetails12(obj);
 		}
 	};
 	/**
@@ -4624,11 +5164,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails65> forSecuritiesTradeDetails65 = new MMConstraint<SecuritiesTradeDetails65>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails65 obj) throws Exception {
+			checkSecuritiesTradeDetails65(obj);
 		}
 	};
 	/**
@@ -4654,11 +5198,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails66> forSecuritiesTradeDetails66 = new MMConstraint<SecuritiesTradeDetails66>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails66 obj) throws Exception {
+			checkSecuritiesTradeDetails66(obj);
 		}
 	};
 	/**
@@ -4688,12 +5236,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraBalance3> forIntraBalance3 = new MMConstraint<IntraBalance3>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraBalance3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the sender and the receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraBalance1;
 			owner_lazy = () -> IntraBalance3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalance3 obj) throws Exception {
+			checkIntraBalance3(obj);
 		}
 	};
 	/**
@@ -4732,13 +5284,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails93> forTransactionDetails93 = new MMConstraint<TransactionDetails93>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails93;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the sender and receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails102);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails51;
 			owner_lazy = () -> TransactionDetails93.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails93 obj) throws Exception {
+			checkTransactionDetails93(obj);
 		}
 	};
 	/**
@@ -4777,13 +5333,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails41> forIntraPositionDetails41 = new MMConstraint<IntraPositionDetails41>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionDetails46);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionDetails34;
 			owner_lazy = () -> IntraPositionDetails41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails41 obj) throws Exception {
+			checkIntraPositionDetails41(obj);
 		}
 	};
 	/**
@@ -4822,13 +5382,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails67> forSecuritiesTradeDetails67 = new MMConstraint<SecuritiesTradeDetails67>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails75);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails51;
 			owner_lazy = () -> SecuritiesTradeDetails67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails67 obj) throws Exception {
+			checkSecuritiesTradeDetails67(obj);
 		}
 	};
 	/**
@@ -4860,12 +5424,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails35> forSecuritiesFinancingTransactionDetails35 = new MMConstraint<SecuritiesFinancingTransactionDetails35>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesFinancingTransactionDetails26;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails35 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails35(obj);
 		}
 	};
 	/**
@@ -4904,13 +5472,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails96> forTransactionDetails96 = new MMConstraint<TransactionDetails96>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails96;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails104);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails75;
 			owner_lazy = () -> TransactionDetails96.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails96 obj) throws Exception {
+			checkTransactionDetails96(obj);
 		}
 	};
 	/**
@@ -4949,13 +5521,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails13> forIntraPositionMovementDetails13 = new MMConstraint<IntraPositionMovementDetails13>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionMovementDetails15);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionMovementDetails11;
 			owner_lazy = () -> IntraPositionMovementDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails13 obj) throws Exception {
+			checkIntraPositionMovementDetails13(obj);
 		}
 	};
 	/**
@@ -4994,13 +5570,17 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails95> forTransactionDetails95 = new MMConstraint<TransactionDetails95>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails95;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails103);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails78;
 			owner_lazy = () -> TransactionDetails95.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails95 obj) throws Exception {
+			checkTransactionDetails95(obj);
 		}
 	};
 	/**
@@ -5026,11 +5606,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails43> forIntraPositionDetails43 = new MMConstraint<IntraPositionDetails43>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails43 obj) throws Exception {
+			checkIntraPositionDetails43(obj);
 		}
 	};
 	/**
@@ -5056,11 +5640,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails70> forSecuritiesTradeDetails70 = new MMConstraint<SecuritiesTradeDetails70>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails70 obj) throws Exception {
+			checkSecuritiesTradeDetails70(obj);
 		}
 	};
 	/**
@@ -5086,11 +5674,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails36> forSecuritiesFinancingTransactionDetails36 = new MMConstraint<SecuritiesFinancingTransactionDetails36>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesFinancingTransactionDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If SettlementInstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails36 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails36(obj);
 		}
 	};
 	/**
@@ -5116,11 +5708,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails14> forIntraPositionMovementDetails14 = new MMConstraint<IntraPositionMovementDetails14>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails14 obj) throws Exception {
+			checkIntraPositionMovementDetails14(obj);
 		}
 	};
 	/**
@@ -5146,11 +5742,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails99> forTransactionDetails99 = new MMConstraint<TransactionDetails99>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails99;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails99.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails99 obj) throws Exception {
+			checkTransactionDetails99(obj);
 		}
 	};
 	/**
@@ -5176,11 +5776,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails98> forTransactionDetails98 = new MMConstraint<TransactionDetails98>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails98;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails98.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails98 obj) throws Exception {
+			checkTransactionDetails98(obj);
 		}
 	};
 	/**
@@ -5211,12 +5815,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails102> forTransactionDetails102 = new MMConstraint<TransactionDetails102>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails102;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the sender and receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails93;
 			owner_lazy = () -> TransactionDetails102.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails102 obj) throws Exception {
+			checkTransactionDetails102(obj);
 		}
 	};
 	/**
@@ -5247,12 +5855,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails46> forIntraPositionDetails46 = new MMConstraint<IntraPositionDetails46>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionDetails41;
 			owner_lazy = () -> IntraPositionDetails46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails46 obj) throws Exception {
+			checkIntraPositionDetails46(obj);
 		}
 	};
 	/**
@@ -5283,12 +5895,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails104> forTransactionDetails104 = new MMConstraint<TransactionDetails104>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails104;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails96;
 			owner_lazy = () -> TransactionDetails104.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails104 obj) throws Exception {
+			checkTransactionDetails104(obj);
 		}
 	};
 	/**
@@ -5319,12 +5935,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails103> forTransactionDetails103 = new MMConstraint<TransactionDetails103>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails103;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails95;
 			owner_lazy = () -> TransactionDetails103.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails103 obj) throws Exception {
+			checkTransactionDetails103(obj);
 		}
 	};
 	/**
@@ -5355,12 +5975,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails15> forIntraPositionMovementDetails15 = new MMConstraint<IntraPositionMovementDetails15>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forIntraPositionMovementDetails13;
 			owner_lazy = () -> IntraPositionMovementDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails15 obj) throws Exception {
+			checkIntraPositionMovementDetails15(obj);
 		}
 	};
 	/**
@@ -5391,12 +6015,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails73> forSecuritiesTradeDetails73 = new MMConstraint<SecuritiesTradeDetails73>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails73;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails51;
 			owner_lazy = () -> SecuritiesTradeDetails73.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails73 obj) throws Exception {
+			checkSecuritiesTradeDetails73(obj);
 		}
 	};
 	/**
@@ -5427,12 +6055,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails74> forSecuritiesTradeDetails74 = new MMConstraint<SecuritiesTradeDetails74>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails74;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails55;
 			owner_lazy = () -> SecuritiesTradeDetails74.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails74 obj) throws Exception {
+			checkSecuritiesTradeDetails74(obj);
 		}
 	};
 	/**
@@ -5463,12 +6095,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails75> forSecuritiesTradeDetails75 = new MMConstraint<SecuritiesTradeDetails75>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails67;
 			owner_lazy = () -> SecuritiesTradeDetails75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails75 obj) throws Exception {
+			checkSecuritiesTradeDetails75(obj);
 		}
 	};
 	/**
@@ -5499,12 +6135,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails76> forSecuritiesTradeDetails76 = new MMConstraint<SecuritiesTradeDetails76>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails76;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails53;
 			owner_lazy = () -> SecuritiesTradeDetails76.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails76 obj) throws Exception {
+			checkSecuritiesTradeDetails76(obj);
 		}
 	};
 	/**
@@ -5535,12 +6175,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails77> forSecuritiesTradeDetails77 = new MMConstraint<SecuritiesTradeDetails77>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails77;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails56;
 			owner_lazy = () -> SecuritiesTradeDetails77.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails77 obj) throws Exception {
+			checkSecuritiesTradeDetails77(obj);
 		}
 	};
 	/**
@@ -5571,12 +6215,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails78> forSecuritiesTradeDetails78 = new MMConstraint<SecuritiesTradeDetails78>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails50;
 			owner_lazy = () -> SecuritiesTradeDetails78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails78 obj) throws Exception {
+			checkSecuritiesTradeDetails78(obj);
 		}
 	};
 	/**
@@ -5607,12 +6255,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails79> forSecuritiesTradeDetails79 = new MMConstraint<SecuritiesTradeDetails79>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forSecuritiesTradeDetails52;
 			owner_lazy = () -> SecuritiesTradeDetails79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails79 obj) throws Exception {
+			checkSecuritiesTradeDetails79(obj);
 		}
 	};
 	/**
@@ -5643,12 +6295,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes91> forFinancialInstrumentAttributes91 = new MMConstraint<FinancialInstrumentAttributes91>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes91;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forFinancialInstrumentAttributes64;
 			owner_lazy = () -> FinancialInstrumentAttributes91.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes91 obj) throws Exception {
+			checkFinancialInstrumentAttributes91(obj);
 		}
 	};
 	/**
@@ -5679,12 +6335,16 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes92> forFinancialInstrumentAttributes92 = new MMConstraint<FinancialInstrumentAttributes92>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes92;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forFinancialInstrumentAttributes63;
 			owner_lazy = () -> FinancialInstrumentAttributes92.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes92 obj) throws Exception {
+			checkFinancialInstrumentAttributes92(obj);
 		}
 	};
 	/**
@@ -5710,11 +6370,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes95> forFinancialInstrumentAttributes95 = new MMConstraint<FinancialInstrumentAttributes95>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes95;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes95.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes95 obj) throws Exception {
+			checkFinancialInstrumentAttributes95(obj);
 		}
 	};
 	/**
@@ -5740,11 +6404,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails47> forIntraPositionDetails47 = new MMConstraint<IntraPositionDetails47>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionDetails47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails47 obj) throws Exception {
+			checkIntraPositionDetails47(obj);
 		}
 	};
 	/**
@@ -5770,11 +6438,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementDetails16> forIntraPositionMovementDetails16 = new MMConstraint<IntraPositionMovementDetails16>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkIntraPositionMovementDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if InstructionProcessingAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> IntraPositionMovementDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementDetails16 obj) throws Exception {
+			checkIntraPositionMovementDetails16(obj);
 		}
 	};
 	/**
@@ -5800,11 +6472,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<FinancialInstrumentAttributes97> forFinancialInstrumentAttributes97 = new MMConstraint<FinancialInstrumentAttributes97>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkFinancialInstrumentAttributes97;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if FinancialInstrumentAttributeAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> FinancialInstrumentAttributes97.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrumentAttributes97 obj) throws Exception {
+			checkFinancialInstrumentAttributes97(obj);
 		}
 	};
 	/**
@@ -5830,11 +6506,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails82> forSecuritiesTradeDetails82 = new MMConstraint<SecuritiesTradeDetails82>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails82;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails82.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails82 obj) throws Exception {
+			checkSecuritiesTradeDetails82(obj);
 		}
 	};
 	/**
@@ -5860,11 +6540,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails83> forSecuritiesTradeDetails83 = new MMConstraint<SecuritiesTradeDetails83>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails83;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails83.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails83 obj) throws Exception {
+			checkSecuritiesTradeDetails83(obj);
 		}
 	};
 	/**
@@ -5890,11 +6574,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails86> forSecuritiesTradeDetails86 = new MMConstraint<SecuritiesTradeDetails86>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails86;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails86.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails86 obj) throws Exception {
+			checkSecuritiesTradeDetails86(obj);
 		}
 	};
 	/**
@@ -5920,11 +6608,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails87> forSecuritiesTradeDetails87 = new MMConstraint<SecuritiesTradeDetails87>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails87;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails87.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails87 obj) throws Exception {
+			checkSecuritiesTradeDetails87(obj);
 		}
 	};
 	/**
@@ -5950,11 +6642,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails88> forSecuritiesTradeDetails88 = new MMConstraint<SecuritiesTradeDetails88>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails88 obj) throws Exception {
+			checkSecuritiesTradeDetails88(obj);
 		}
 	};
 	/**
@@ -5980,11 +6676,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails89> forSecuritiesTradeDetails89 = new MMConstraint<SecuritiesTradeDetails89>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails89;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails89.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails89 obj) throws Exception {
+			checkSecuritiesTradeDetails89(obj);
 		}
 	};
 	/**
@@ -6010,11 +6710,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails90> forSecuritiesTradeDetails90 = new MMConstraint<SecuritiesTradeDetails90>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkSecuritiesTradeDetails90;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, If FXAdditionalDetails and/or SettlementInstructionProcessingAdditionalDetails are present, then they must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> SecuritiesTradeDetails90.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails90 obj) throws Exception {
+			checkSecuritiesTradeDetails90(obj);
 		}
 	};
 	/**
@@ -6040,11 +6744,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails111> forTransactionDetails111 = new MMConstraint<TransactionDetails111>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails111;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails111.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails111 obj) throws Exception {
+			checkTransactionDetails111(obj);
 		}
 	};
 	/**
@@ -6070,11 +6778,15 @@ public class ConstraintAdditionalDetailsRule {
 	 */
 	public static final MMConstraint<TransactionDetails112> forTransactionDetails112 = new MMConstraint<TransactionDetails112>() {
 		{
-			validator = ConstraintAdditionalDetailsRule::checkTransactionDetails112;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDetailsRule";
 			definition = "Unless bilaterally agreed between the Sender and Receiver, if TransactionAdditionalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> TransactionDetails112.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails112 obj) throws Exception {
+			checkTransactionDetails112(obj);
 		}
 	};
 

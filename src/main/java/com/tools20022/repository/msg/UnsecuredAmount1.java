@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AmountAndQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class UnsecuredAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefaultedCounterpartyAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnsecuredAmount1, AmountAndDirection6> mmDefaultedCounterpartyAmount = new MMMessageAssociationEnd<UnsecuredAmount1, AmountAndDirection6>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredAmount1.mmObject();
@@ -117,7 +118,17 @@ public class UnsecuredAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(UnsecuredAmount1 obj) {
+			return obj.getDefaultedCounterpartyAmount();
+		}
+
+		@Override
+		public void setValue(UnsecuredAmount1 obj, AmountAndDirection6 value) {
+			obj.setDefaultedCounterpartyAmount(value);
 		}
 	};
 	@XmlElement(name = "NotDfltdCtrPtyAmt", required = true)
@@ -155,7 +166,7 @@ public class UnsecuredAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNotDefaultedCounterpartyAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnsecuredAmount1, AmountAndDirection6> mmNotDefaultedCounterpartyAmount = new MMMessageAssociationEnd<UnsecuredAmount1, AmountAndDirection6>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnsecuredAmount1.mmObject();
@@ -167,7 +178,17 @@ public class UnsecuredAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection6.mmObject();
+			type_lazy = () -> AmountAndDirection6.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection6 getValue(UnsecuredAmount1 obj) {
+			return obj.getNotDefaultedCounterpartyAmount();
+		}
+
+		@Override
+		public void setValue(UnsecuredAmount1 obj, AmountAndDirection6 value) {
+			obj.setNotDefaultedCounterpartyAmount(value);
 		}
 	};
 
@@ -189,7 +210,7 @@ public class UnsecuredAmount1 {
 		return defaultedCounterpartyAmount;
 	}
 
-	public UnsecuredAmount1 setDefaultedCounterpartyAmount(com.tools20022.repository.msg.AmountAndDirection6 defaultedCounterpartyAmount) {
+	public UnsecuredAmount1 setDefaultedCounterpartyAmount(AmountAndDirection6 defaultedCounterpartyAmount) {
 		this.defaultedCounterpartyAmount = Objects.requireNonNull(defaultedCounterpartyAmount);
 		return this;
 	}
@@ -198,7 +219,7 @@ public class UnsecuredAmount1 {
 		return notDefaultedCounterpartyAmount;
 	}
 
-	public UnsecuredAmount1 setNotDefaultedCounterpartyAmount(com.tools20022.repository.msg.AmountAndDirection6 notDefaultedCounterpartyAmount) {
+	public UnsecuredAmount1 setNotDefaultedCounterpartyAmount(AmountAndDirection6 notDefaultedCounterpartyAmount) {
 		this.notDefaultedCounterpartyAmount = Objects.requireNonNull(notDefaultedCounterpartyAmount);
 		return this;
 	}

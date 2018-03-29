@@ -117,7 +117,7 @@ public class RegistrationReason5 {
 	 * RegistrationReason3.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RegistrationReason5, Registration10Choice> mmCode = new MMMessageAssociationEnd<RegistrationReason5, Registration10Choice>() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmRegistrationInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationReason5.mmObject();
@@ -131,6 +131,16 @@ public class RegistrationReason5 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Registration10Choice.mmObject();
+		}
+
+		@Override
+		public Registration10Choice getValue(RegistrationReason5 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RegistrationReason5 obj, Registration10Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -169,7 +179,7 @@ public class RegistrationReason5 {
 	 * RegistrationReason3.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RegistrationReason5, Optional<Max210Text>> mmAdditionalInformation = new MMMessageAttribute<RegistrationReason5, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationReason5.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class RegistrationReason5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(RegistrationReason5 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(RegistrationReason5 obj, Optional<Max210Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

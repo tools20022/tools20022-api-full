@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -133,7 +134,7 @@ public class Report4 {
 	 * definition} = "Sequential number of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Optional<Max5NumericText>> mmReportNumber = new MMMessageAttribute<Report4, Optional<Max5NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -144,6 +145,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5NumericText> getValue(Report4 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Optional<Max5NumericText> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryRef")
@@ -176,7 +187,7 @@ public class Report4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Optional<Max35Text>> mmQueryReference = new MMMessageAttribute<Report4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -187,6 +198,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Report4 obj) {
+			return obj.getQueryReference();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Optional<Max35Text> value) {
+			obj.setQueryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptId")
@@ -217,7 +238,7 @@ public class Report4 {
 	 * definition} = "Unique identification of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Optional<Max35Text>> mmReportIdentification = new MMMessageAttribute<Report4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -228,6 +249,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Report4 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Optional<Max35Text> value) {
+			obj.setReportIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptDtTm", required = true)
@@ -259,7 +290,7 @@ public class Report4 {
 	 * definition} = "Date and time of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, DateAndDateTimeChoice> mmReportDateTime = new MMMessageAttribute<Report4, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -270,6 +301,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(Report4 obj) {
+			return obj.getReportDateTime();
+		}
+
+		@Override
+		public void setValue(Report4 obj, DateAndDateTimeChoice value) {
+			obj.setReportDateTime(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -306,7 +347,7 @@ public class Report4 {
 	 * definition} = "Preparation date and time of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAttribute<Report4, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
@@ -318,6 +359,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(Report4 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRptDtTm")
@@ -349,7 +400,7 @@ public class Report4 {
 	 * definition} = "Previous report date and time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousReportDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Optional<DateAndDateTimeChoice>> mmPreviousReportDateTime = new MMMessageAttribute<Report4, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -360,6 +411,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(Report4 obj) {
+			return obj.getPreviousReportDateTime();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setPreviousReportDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy", required = true)
@@ -391,7 +452,7 @@ public class Report4 {
 	 * definition} = "Specifies the frequency of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Frequency8Choice> mmFrequency = new MMMessageAttribute<Report4, Frequency8Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -402,6 +463,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Frequency8Choice.mmObject();
+		}
+
+		@Override
+		public Frequency8Choice getValue(Report4 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Frequency8Choice value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "UpdTp", required = true)
@@ -434,7 +505,7 @@ public class Report4 {
 	 * "Specifies whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, UpdateType4Choice> mmUpdateType = new MMMessageAttribute<Report4, UpdateType4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -445,6 +516,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UpdateType4Choice.mmObject();
+		}
+
+		@Override
+		public UpdateType4Choice getValue(Report4 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Report4 obj, UpdateType4Choice value) {
+			obj.setUpdateType(value);
 		}
 	};
 	@XmlElement(name = "RptBsis", required = true)
@@ -477,7 +558,7 @@ public class Report4 {
 	 * "Specifies the type of balance on which the report is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, StatementBasis6Choice> mmReportBasis = new MMMessageAttribute<Report4, StatementBasis6Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -488,6 +569,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> StatementBasis6Choice.mmObject();
+		}
+
+		@Override
+		public StatementBasis6Choice getValue(Report4 obj) {
+			return obj.getReportBasis();
+		}
+
+		@Override
+		public void setValue(Report4 obj, StatementBasis6Choice value) {
+			obj.setReportBasis(value);
 		}
 	};
 	@XmlElement(name = "RptPrd")
@@ -519,7 +610,7 @@ public class Report4 {
 	 * definition} = "Period for which the report is given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Optional<DatePeriodDetails>> mmReportPeriod = new MMMessageAttribute<Report4, Optional<DatePeriodDetails>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -529,7 +620,17 @@ public class Report4 {
 			definition = "Period for which the report is given.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
+			complexType_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodDetails> getValue(Report4 obj) {
+			return obj.getReportPeriod();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Optional<DatePeriodDetails> value) {
+			obj.setReportPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptSrc")
@@ -561,7 +662,7 @@ public class Report4 {
 	 * definition} = "Specifies the source of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Optional<StatementSource1Choice>> mmReportSource = new MMMessageAttribute<Report4, Optional<StatementSource1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -572,6 +673,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StatementSource1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<StatementSource1Choice> getValue(Report4 obj) {
+			return obj.getReportSource();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Optional<StatementSource1Choice> value) {
+			obj.setReportSource(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AudtdInd")
@@ -603,7 +714,7 @@ public class Report4 {
 	 * definition} = "Indicates whether the report is audited or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuditedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Optional<YesNoIndicator>> mmAuditedIndicator = new MMMessageAttribute<Report4, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -614,6 +725,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Report4 obj) {
+			return obj.getAuditedIndicator();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Optional<YesNoIndicator> value) {
+			obj.setAuditedIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActvtyInd")
@@ -647,7 +768,7 @@ public class Report4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Report4, Optional<YesNoIndicator>> mmActivityIndicator = new MMMessageAttribute<Report4, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Report4.mmObject();
 			isDerived = false;
@@ -658,6 +779,16 @@ public class Report4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Report4 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(Report4 obj, Optional<YesNoIndicator> value) {
+			obj.setActivityIndicator(value.orElse(null));
 		}
 	};
 
@@ -763,7 +894,7 @@ public class Report4 {
 		return reportPeriod == null ? Optional.empty() : Optional.of(reportPeriod);
 	}
 
-	public Report4 setReportPeriod(com.tools20022.repository.msg.DatePeriodDetails reportPeriod) {
+	public Report4 setReportPeriod(DatePeriodDetails reportPeriod) {
 		this.reportPeriod = reportPeriod;
 		return this;
 	}

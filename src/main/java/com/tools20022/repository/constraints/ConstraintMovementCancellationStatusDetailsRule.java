@@ -51,11 +51,15 @@ public class ConstraintMovementCancellationStatusDetailsRule {
 	 */
 	public static final MMConstraint<AgentCAMovementStatusAdviceV01> forAgentCAMovementStatusAdviceV01 = new MMConstraint<AgentCAMovementStatusAdviceV01>() {
 		{
-			validator = ConstraintMovementCancellationStatusDetailsRule::checkAgentCAMovementStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementCancellationStatusDetailsRule";
 			definition = "If AgentCAMovementCancellationRequestIdentification is present then MovementCancellationStatusDetails must be present.";
 			owner_lazy = () -> AgentCAMovementStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCAMovementStatusAdviceV01 obj) throws Exception {
+			checkAgentCAMovementStatusAdviceV01(obj);
 		}
 	};
 

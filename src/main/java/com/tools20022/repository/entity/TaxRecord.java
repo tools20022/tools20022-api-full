@@ -20,9 +20,10 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Tax;
+import com.tools20022.repository.entity.TaxPeriod;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -142,7 +143,7 @@ public class TaxRecord {
 	 * definition} = "Tax for which tax record information is provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TaxRecord, Optional<Tax>> mmTax = new MMBusinessAssociationEnd<TaxRecord, Optional<Tax>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmTaxAmount, TaxRecord2.mmTaxAmount);
 			isDerived = false;
@@ -152,9 +153,19 @@ public class TaxRecord {
 			definition = "Tax for which tax record information is provided.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmRecord;
+			opposite_lazy = () -> Tax.mmRecord;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
+			type_lazy = () -> Tax.mmObject();
+		}
+
+		@Override
+		public Optional<Tax> getValue(TaxRecord obj) {
+			return obj.getTax();
+		}
+
+		@Override
+		public void setValue(TaxRecord obj, Optional<Tax> value) {
+			obj.setTax(value.orElse(null));
 		}
 	};
 	protected Max35Text taxRecordType;
@@ -191,7 +202,7 @@ public class TaxRecord {
 	 * definition} = "High level code to identify the type of tax details."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTaxRecordType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TaxRecord, Max35Text> mmTaxRecordType = new MMBusinessAttribute<TaxRecord, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmType, TaxRecord2.mmType);
 			isDerived = false;
@@ -204,12 +215,14 @@ public class TaxRecord {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TaxRecord.class.getMethod("getTaxRecordType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TaxRecord obj) {
+			return obj.getTaxRecordType();
+		}
+
+		@Override
+		public void setValue(TaxRecord obj, Max35Text value) {
+			obj.setTaxRecordType(value);
 		}
 	};
 	protected Max35Text category;
@@ -248,7 +261,7 @@ public class TaxRecord {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCategory = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TaxRecord, Max35Text> mmCategory = new MMBusinessAttribute<TaxRecord, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmCategory, TaxRecord2.mmCategory);
 			isDerived = false;
@@ -261,12 +274,14 @@ public class TaxRecord {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TaxRecord.class.getMethod("getCategory", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TaxRecord obj) {
+			return obj.getCategory();
+		}
+
+		@Override
+		public void setValue(TaxRecord obj, Max35Text value) {
+			obj.setCategory(value);
 		}
 	};
 	protected Max35Text status;
@@ -305,7 +320,7 @@ public class TaxRecord {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TaxRecord, Max35Text> mmStatus = new MMBusinessAttribute<TaxRecord, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmDebtorStatus, TaxRecord2.mmDebtorStatus);
 			isDerived = false;
@@ -318,12 +333,14 @@ public class TaxRecord {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TaxRecord.class.getMethod("getStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TaxRecord obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TaxRecord obj, Max35Text value) {
+			obj.setStatus(value);
 		}
 	};
 	protected Max35Text formsCode;
@@ -358,28 +375,30 @@ public class TaxRecord {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Code to identify on which template the tax report is to be provided."</li>
+	 * "Code to identify on which template the tax report is to be provided"</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFormsCode = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TaxRecord, Max35Text> mmFormsCode = new MMBusinessAttribute<TaxRecord, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmFormsCode, TaxRecord2.mmFormsCode);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxRecord.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FormsCode";
-			definition = "Code to identify on which template the tax report is to be provided.";
+			definition = "Code to identify on which template the tax report is to be provided";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TaxRecord.class.getMethod("getFormsCode", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TaxRecord obj) {
+			return obj.getFormsCode();
+		}
+
+		@Override
+		public void setValue(TaxRecord obj, Max35Text value) {
+			obj.setFormsCode(value);
 		}
 	};
 	protected TaxPeriod period;
@@ -424,7 +443,7 @@ public class TaxRecord {
 	 * definition} = "Period of time details related to the tax payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TaxRecord, TaxPeriod> mmPeriod = new MMBusinessAssociationEnd<TaxRecord, TaxPeriod>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxRecord1.mmPeriod, TaxRecord2.mmPeriod);
 			isDerived = false;
@@ -434,9 +453,19 @@ public class TaxRecord {
 			definition = "Period of time details related to the tax payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmTaxRecord;
+			opposite_lazy = () -> TaxPeriod.mmTaxRecord;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
+			type_lazy = () -> TaxPeriod.mmObject();
+		}
+
+		@Override
+		public TaxPeriod getValue(TaxRecord obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(TaxRecord obj, TaxPeriod value) {
+			obj.setPeriod(value);
 		}
 	};
 	protected ActiveCurrencyAndAmount amount;
@@ -482,7 +511,7 @@ public class TaxRecord {
 	 * definition} = "Amount of the tax record."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TaxRecord, ActiveCurrencyAndAmount> mmAmount = new MMBusinessAttribute<TaxRecord, ActiveCurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingServicesTax1.mmHostAmount, BillingServicesTax1.mmPricingAmount, BillingServicesTax2.mmPricingAmount, BillingMethod3.mmServiceTaxPriceAmount);
 			isDerived = false;
@@ -495,12 +524,14 @@ public class TaxRecord {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TaxRecord.class.getMethod("getAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ActiveCurrencyAndAmount getValue(TaxRecord obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(TaxRecord obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	protected Max35Text categoryDescription;
@@ -530,7 +561,7 @@ public class TaxRecord {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCategoryDescription = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TaxRecord, Max35Text> mmCategoryDescription = new MMBusinessAttribute<TaxRecord, Max35Text>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxRecord.mmObject();
@@ -542,12 +573,14 @@ public class TaxRecord {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TaxRecord.class.getMethod("getCategoryDescription", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(TaxRecord obj) {
+			return obj.getCategoryDescription();
+		}
+
+		@Override
+		public void setValue(TaxRecord obj, Max35Text value) {
+			obj.setCategoryDescription(value);
 		}
 	};
 
@@ -558,7 +591,7 @@ public class TaxRecord {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxRecord";
 				definition = "Record of tax details.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Tax.mmRecord, com.tools20022.repository.entity.TaxPeriod.mmTaxRecord);
+				associationDomain_lazy = () -> Arrays.asList(Tax.mmRecord, TaxPeriod.mmTaxRecord);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TaxRecord.mmTax, com.tools20022.repository.entity.TaxRecord.mmTaxRecordType, com.tools20022.repository.entity.TaxRecord.mmCategory,
 						com.tools20022.repository.entity.TaxRecord.mmStatus, com.tools20022.repository.entity.TaxRecord.mmFormsCode, com.tools20022.repository.entity.TaxRecord.mmPeriod, com.tools20022.repository.entity.TaxRecord.mmAmount,
 						com.tools20022.repository.entity.TaxRecord.mmCategoryDescription);
@@ -577,7 +610,7 @@ public class TaxRecord {
 		return tax == null ? Optional.empty() : Optional.of(tax);
 	}
 
-	public TaxRecord setTax(com.tools20022.repository.entity.Tax tax) {
+	public TaxRecord setTax(Tax tax) {
 		this.tax = tax;
 		return this;
 	}
@@ -622,7 +655,7 @@ public class TaxRecord {
 		return period;
 	}
 
-	public TaxRecord setPeriod(com.tools20022.repository.entity.TaxPeriod period) {
+	public TaxRecord setPeriod(TaxPeriod period) {
 		this.period = Objects.requireNonNull(period);
 		return this;
 	}

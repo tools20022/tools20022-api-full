@@ -111,7 +111,7 @@ public class CashSettlementSystem5Choice {
 	 * definition} = "Cash settlement system expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashSettlementSystem5Choice, CashSettlementSystem2Code> mmCode = new MMMessageAttribute<CashSettlementSystem5Choice, CashSettlementSystem2Code>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystem.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashSettlementSystem5Choice.mmObject();
@@ -124,6 +124,16 @@ public class CashSettlementSystem5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashSettlementSystem2Code.mmObject();
+		}
+
+		@Override
+		public CashSettlementSystem2Code getValue(CashSettlementSystem5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CashSettlementSystem5Choice obj, CashSettlementSystem2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class CashSettlementSystem5Choice {
 	 * definition} = "Cash settlement system expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashSettlementSystem5Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<CashSettlementSystem5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystem.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashSettlementSystem5Choice.mmObject();
@@ -177,6 +187,16 @@ public class CashSettlementSystem5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CashSettlementSystem5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CashSettlementSystem5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

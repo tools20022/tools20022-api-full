@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RegistrationReason3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,7 +125,7 @@ public class HoldIndicator4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldIndicator4, YesNoIndicator> mmIndicator = new MMMessageAttribute<HoldIndicator4, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldIndicator4.mmObject();
@@ -138,9 +139,19 @@ public class HoldIndicator4 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(HoldIndicator4 obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(HoldIndicator4 obj, YesNoIndicator value) {
+			obj.setIndicator(value);
+		}
 	};
 	@XmlElement(name = "Rsn")
-	protected List<com.tools20022.repository.msg.RegistrationReason3> reason;
+	protected List<RegistrationReason3> reason;
 	/**
 	 * 
 	 <p>
@@ -178,7 +189,7 @@ public class HoldIndicator4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HoldIndicator4, List<RegistrationReason3>> mmReason = new MMMessageAssociationEnd<HoldIndicator4, List<RegistrationReason3>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldIndicator4.mmObject();
@@ -190,7 +201,17 @@ public class HoldIndicator4 {
 			nextVersions_lazy = () -> Arrays.asList(HoldIndicator6.mmReason);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RegistrationReason3.mmObject();
+			type_lazy = () -> RegistrationReason3.mmObject();
+		}
+
+		@Override
+		public List<RegistrationReason3> getValue(HoldIndicator4 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(HoldIndicator4 obj, List<RegistrationReason3> value) {
+			obj.setReason(value);
 		}
 	};
 
@@ -223,7 +244,7 @@ public class HoldIndicator4 {
 		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public HoldIndicator4 setReason(List<com.tools20022.repository.msg.RegistrationReason3> reason) {
+	public HoldIndicator4 setReason(List<RegistrationReason3> reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}

@@ -117,7 +117,7 @@ public class RejectedStatusReason6 {
 	 * definition} = "Reason for a rejected status in structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatusReason6, RejectedStatusReason5Code> mmStructured = new MMMessageAttribute<RejectedStatusReason6, RejectedStatusReason5Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason6.mmObject();
@@ -129,6 +129,16 @@ public class RejectedStatusReason6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectedStatusReason5Code.mmObject();
+		}
+
+		@Override
+		public RejectedStatusReason5Code getValue(RejectedStatusReason6 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason6 obj, RejectedStatusReason5Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -165,7 +175,7 @@ public class RejectedStatusReason6 {
 	 * definition} = "Reason for a rejected status in free format text."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatusReason6, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<RejectedStatusReason6, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason6.mmObject();
@@ -177,6 +187,16 @@ public class RejectedStatusReason6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(RejectedStatusReason6 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason6 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm11Code;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class Parameter8 {
 	 * Parameter4.mmDigestAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter8, Algorithm11Code> mmDigestAlgorithm = new MMMessageAttribute<Parameter8, Algorithm11Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter8.mmObject();
 			isDerived = false;
@@ -139,6 +140,16 @@ public class Parameter8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm11Code.mmObject();
+		}
+
+		@Override
+		public Algorithm11Code getValue(Parameter8 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter8 obj, Algorithm11Code value) {
+			obj.setDigestAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "MskGnrtrAlgo", required = true)
@@ -184,7 +195,7 @@ public class Parameter8 {
 	 * Parameter4.mmMaskGeneratorAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter8, AlgorithmIdentification12> mmMaskGeneratorAlgorithm = new MMMessageAttribute<Parameter8, AlgorithmIdentification12>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter8.mmObject();
 			isDerived = false;
@@ -196,7 +207,17 @@ public class Parameter8 {
 			previousVersion_lazy = () -> Parameter4.mmMaskGeneratorAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification12.mmObject();
+			complexType_lazy = () -> AlgorithmIdentification12.mmObject();
+		}
+
+		@Override
+		public AlgorithmIdentification12 getValue(Parameter8 obj) {
+			return obj.getMaskGeneratorAlgorithm();
+		}
+
+		@Override
+		public void setValue(Parameter8 obj, AlgorithmIdentification12 value) {
+			obj.setMaskGeneratorAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "SaltLngth", required = true)
@@ -234,7 +255,7 @@ public class Parameter8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSaltLength = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter8, Number> mmSaltLength = new MMMessageAttribute<Parameter8, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter8.mmObject();
 			isDerived = false;
@@ -246,6 +267,16 @@ public class Parameter8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(Parameter8 obj) {
+			return obj.getSaltLength();
+		}
+
+		@Override
+		public void setValue(Parameter8 obj, Number value) {
+			obj.setSaltLength(value);
 		}
 	};
 	@XmlElement(name = "TrlrFld")
@@ -283,7 +314,7 @@ public class Parameter8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTrailerField = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter8, Optional<Number>> mmTrailerField = new MMMessageAttribute<Parameter8, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter8.mmObject();
 			isDerived = false;
@@ -295,6 +326,16 @@ public class Parameter8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Parameter8 obj) {
+			return obj.getTrailerField();
+		}
+
+		@Override
+		public void setValue(Parameter8 obj, Optional<Number> value) {
+			obj.setTrailerField(value.orElse(null));
 		}
 	};
 
@@ -327,7 +368,7 @@ public class Parameter8 {
 		return maskGeneratorAlgorithm;
 	}
 
-	public Parameter8 setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification12 maskGeneratorAlgorithm) {
+	public Parameter8 setMaskGeneratorAlgorithm(AlgorithmIdentification12 maskGeneratorAlgorithm) {
 		this.maskGeneratorAlgorithm = Objects.requireNonNull(maskGeneratorAlgorithm);
 		return this;
 	}

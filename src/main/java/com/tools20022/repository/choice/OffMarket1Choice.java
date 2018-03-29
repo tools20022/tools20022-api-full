@@ -109,7 +109,7 @@ public class OffMarket1Choice {
 	 * definition} = "Indicates that the trade was executed off-exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOffMarketIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OffMarket1Choice, OffMarket1Code> mmOffMarketIndicator = new MMMessageAttribute<OffMarket1Choice, OffMarket1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmOffMarketReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OffMarket1Choice.mmObject();
@@ -121,6 +121,16 @@ public class OffMarket1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OffMarket1Code.mmObject();
+		}
+
+		@Override
+		public OffMarket1Code getValue(OffMarket1Choice obj) {
+			return obj.getOffMarketIndicator();
+		}
+
+		@Override
+		public void setValue(OffMarket1Choice obj, OffMarket1Code value) {
+			obj.setOffMarketIndicator(value);
 		}
 	};
 	@XmlElement(name = "SystmtcIntlr", required = true)
@@ -158,7 +168,7 @@ public class OffMarket1Choice {
 	 * definition} = "Provides the BIC code of the systematic internaliser."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystematicInternaliser = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OffMarket1Choice, AnyBICIdentifier> mmSystematicInternaliser = new MMMessageAttribute<OffMarket1Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OffMarket1Choice.mmObject();
@@ -170,6 +180,16 @@ public class OffMarket1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(OffMarket1Choice obj) {
+			return obj.getSystematicInternaliser();
+		}
+
+		@Override
+		public void setValue(OffMarket1Choice obj, AnyBICIdentifier value) {
+			obj.setSystematicInternaliser(value);
 		}
 	};
 

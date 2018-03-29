@@ -24,6 +24,7 @@ import com.tools20022.repository.area.semt.AccountingStatementOfHoldingsCancella
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -131,7 +132,7 @@ public class AccountingStatementOfHoldings1 {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountingStatementOfHoldings1, Pagination> mmMessagePagination = new MMMessageAssociationEnd<AccountingStatementOfHoldings1, Pagination>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
@@ -142,7 +143,17 @@ public class AccountingStatementOfHoldings1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			type_lazy = () -> Pagination.mmObject();
+		}
+
+		@Override
+		public Pagination getValue(AccountingStatementOfHoldings1 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(AccountingStatementOfHoldings1 obj, Pagination value) {
+			obj.setMessagePagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls")
@@ -174,7 +185,7 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatementGeneralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountingStatementOfHoldings1, Optional<Statement4>> mmStatementGeneralDetails = new MMMessageAssociationEnd<AccountingStatementOfHoldings1, Optional<Statement4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
@@ -185,7 +196,17 @@ public class AccountingStatementOfHoldings1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Statement4.mmObject();
+			type_lazy = () -> Statement4.mmObject();
+		}
+
+		@Override
+		public Optional<Statement4> getValue(AccountingStatementOfHoldings1 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(AccountingStatementOfHoldings1 obj, Optional<Statement4> value) {
+			obj.setStatementGeneralDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctDtls")
@@ -223,7 +244,7 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountingStatementOfHoldings1, Optional<SafekeepingAccount1>> mmAccountDetails = new MMMessageAssociationEnd<AccountingStatementOfHoldings1, Optional<SafekeepingAccount1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmObject();
@@ -235,11 +256,21 @@ public class AccountingStatementOfHoldings1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount1.mmObject();
+			type_lazy = () -> SafekeepingAccount1.mmObject();
+		}
+
+		@Override
+		public Optional<SafekeepingAccount1> getValue(AccountingStatementOfHoldings1 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(AccountingStatementOfHoldings1 obj, Optional<SafekeepingAccount1> value) {
+			obj.setAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalForAcct")
-	protected List<com.tools20022.repository.msg.AggregateBalanceInformation2> balanceForAccount;
+	protected List<AggregateBalanceInformation2> balanceForAccount;
 	/**
 	 * 
 	 <p>
@@ -274,7 +305,7 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceForAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountingStatementOfHoldings1, List<AggregateBalanceInformation2>> mmBalanceForAccount = new MMMessageAssociationEnd<AccountingStatementOfHoldings1, List<AggregateBalanceInformation2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmObject();
@@ -285,11 +316,21 @@ public class AccountingStatementOfHoldings1 {
 			definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation2.mmObject();
+			type_lazy = () -> AggregateBalanceInformation2.mmObject();
+		}
+
+		@Override
+		public List<AggregateBalanceInformation2> getValue(AccountingStatementOfHoldings1 obj) {
+			return obj.getBalanceForAccount();
+		}
+
+		@Override
+		public void setValue(AccountingStatementOfHoldings1 obj, List<AggregateBalanceInformation2> value) {
+			obj.setBalanceForAccount(value);
 		}
 	};
 	@XmlElement(name = "SubAcctDtls")
-	protected List<com.tools20022.repository.msg.SubAccountIdentification2> subAccountDetails;
+	protected List<SubAccountIdentification2> subAccountDetails;
 	/**
 	 * 
 	 <p>
@@ -323,7 +364,7 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountingStatementOfHoldings1, List<SubAccountIdentification2>> mmSubAccountDetails = new MMMessageAssociationEnd<AccountingStatementOfHoldings1, List<SubAccountIdentification2>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmObject();
@@ -334,7 +375,17 @@ public class AccountingStatementOfHoldings1 {
 			definition = "The sub-account of the safekeeping or investment account.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification2.mmObject();
+			type_lazy = () -> SubAccountIdentification2.mmObject();
+		}
+
+		@Override
+		public List<SubAccountIdentification2> getValue(AccountingStatementOfHoldings1 obj) {
+			return obj.getSubAccountDetails();
+		}
+
+		@Override
+		public void setValue(AccountingStatementOfHoldings1 obj, List<SubAccountIdentification2> value) {
+			obj.setSubAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "TtlVals")
@@ -366,7 +417,7 @@ public class AccountingStatementOfHoldings1 {
 	 * definition} = "Value of total holdings reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalValues = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountingStatementOfHoldings1, Optional<TotalValueInPageAndStatement>> mmTotalValues = new MMMessageAssociationEnd<AccountingStatementOfHoldings1, Optional<TotalValueInPageAndStatement>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
@@ -377,11 +428,21 @@ public class AccountingStatementOfHoldings1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TotalValueInPageAndStatement.mmObject();
+			type_lazy = () -> TotalValueInPageAndStatement.mmObject();
+		}
+
+		@Override
+		public Optional<TotalValueInPageAndStatement> getValue(AccountingStatementOfHoldings1 obj) {
+			return obj.getTotalValues();
+		}
+
+		@Override
+		public void setValue(AccountingStatementOfHoldings1 obj, Optional<TotalValueInPageAndStatement> value) {
+			obj.setTotalValues(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -409,7 +470,7 @@ public class AccountingStatementOfHoldings1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountingStatementOfHoldings1, List<Extension1>> mmExtension = new MMMessageAssociationEnd<AccountingStatementOfHoldings1, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountingStatementOfHoldings1.mmObject();
 			isDerived = false;
@@ -419,7 +480,17 @@ public class AccountingStatementOfHoldings1 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(AccountingStatementOfHoldings1 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(AccountingStatementOfHoldings1 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -446,7 +517,7 @@ public class AccountingStatementOfHoldings1 {
 		return messagePagination;
 	}
 
-	public AccountingStatementOfHoldings1 setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+	public AccountingStatementOfHoldings1 setMessagePagination(Pagination messagePagination) {
 		this.messagePagination = Objects.requireNonNull(messagePagination);
 		return this;
 	}
@@ -455,7 +526,7 @@ public class AccountingStatementOfHoldings1 {
 		return statementGeneralDetails == null ? Optional.empty() : Optional.of(statementGeneralDetails);
 	}
 
-	public AccountingStatementOfHoldings1 setStatementGeneralDetails(com.tools20022.repository.msg.Statement4 statementGeneralDetails) {
+	public AccountingStatementOfHoldings1 setStatementGeneralDetails(Statement4 statementGeneralDetails) {
 		this.statementGeneralDetails = statementGeneralDetails;
 		return this;
 	}
@@ -464,7 +535,7 @@ public class AccountingStatementOfHoldings1 {
 		return accountDetails == null ? Optional.empty() : Optional.of(accountDetails);
 	}
 
-	public AccountingStatementOfHoldings1 setAccountDetails(com.tools20022.repository.msg.SafekeepingAccount1 accountDetails) {
+	public AccountingStatementOfHoldings1 setAccountDetails(SafekeepingAccount1 accountDetails) {
 		this.accountDetails = accountDetails;
 		return this;
 	}
@@ -473,7 +544,7 @@ public class AccountingStatementOfHoldings1 {
 		return balanceForAccount == null ? balanceForAccount = new ArrayList<>() : balanceForAccount;
 	}
 
-	public AccountingStatementOfHoldings1 setBalanceForAccount(List<com.tools20022.repository.msg.AggregateBalanceInformation2> balanceForAccount) {
+	public AccountingStatementOfHoldings1 setBalanceForAccount(List<AggregateBalanceInformation2> balanceForAccount) {
 		this.balanceForAccount = Objects.requireNonNull(balanceForAccount);
 		return this;
 	}
@@ -482,7 +553,7 @@ public class AccountingStatementOfHoldings1 {
 		return subAccountDetails == null ? subAccountDetails = new ArrayList<>() : subAccountDetails;
 	}
 
-	public AccountingStatementOfHoldings1 setSubAccountDetails(List<com.tools20022.repository.msg.SubAccountIdentification2> subAccountDetails) {
+	public AccountingStatementOfHoldings1 setSubAccountDetails(List<SubAccountIdentification2> subAccountDetails) {
 		this.subAccountDetails = Objects.requireNonNull(subAccountDetails);
 		return this;
 	}
@@ -491,7 +562,7 @@ public class AccountingStatementOfHoldings1 {
 		return totalValues == null ? Optional.empty() : Optional.of(totalValues);
 	}
 
-	public AccountingStatementOfHoldings1 setTotalValues(com.tools20022.repository.msg.TotalValueInPageAndStatement totalValues) {
+	public AccountingStatementOfHoldings1 setTotalValues(TotalValueInPageAndStatement totalValues) {
 		this.totalValues = totalValues;
 		return this;
 	}
@@ -500,7 +571,7 @@ public class AccountingStatementOfHoldings1 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public AccountingStatementOfHoldings1 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public AccountingStatementOfHoldings1 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

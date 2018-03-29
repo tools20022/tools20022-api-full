@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount19;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -102,7 +103,7 @@ public class SecuritiesAccountRange2 {
 	 * SecuritiesAccountRange1.mmFrom}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountRange2, SecuritiesAccount19> mmFrom = new MMMessageAssociationEnd<SecuritiesAccountRange2, SecuritiesAccount19>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountRange2.mmObject();
 			isDerived = false;
@@ -114,7 +115,17 @@ public class SecuritiesAccountRange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount19 getValue(SecuritiesAccountRange2 obj) {
+			return obj.getFrom();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountRange2 obj, SecuritiesAccount19 value) {
+			obj.setFrom(value);
 		}
 	};
 	@XmlElement(name = "To", required = true)
@@ -151,7 +162,7 @@ public class SecuritiesAccountRange2 {
 	 * SecuritiesAccountRange1.mmTo}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAccountRange2, SecuritiesAccount19> mmTo = new MMMessageAssociationEnd<SecuritiesAccountRange2, SecuritiesAccount19>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountRange2.mmObject();
 			isDerived = false;
@@ -163,7 +174,17 @@ public class SecuritiesAccountRange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			type_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount19 getValue(SecuritiesAccountRange2 obj) {
+			return obj.getTo();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccountRange2 obj, SecuritiesAccount19 value) {
+			obj.setTo(value);
 		}
 	};
 
@@ -185,7 +206,7 @@ public class SecuritiesAccountRange2 {
 		return from;
 	}
 
-	public SecuritiesAccountRange2 setFrom(com.tools20022.repository.msg.SecuritiesAccount19 from) {
+	public SecuritiesAccountRange2 setFrom(SecuritiesAccount19 from) {
 		this.from = Objects.requireNonNull(from);
 		return this;
 	}
@@ -194,7 +215,7 @@ public class SecuritiesAccountRange2 {
 		return to;
 	}
 
-	public SecuritiesAccountRange2 setTo(com.tools20022.repository.msg.SecuritiesAccount19 to) {
+	public SecuritiesAccountRange2 setTo(SecuritiesAccount19 to) {
 		this.to = Objects.requireNonNull(to);
 		return this;
 	}

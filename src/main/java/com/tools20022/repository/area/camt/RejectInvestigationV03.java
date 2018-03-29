@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.Case2;
 import com.tools20022.repository.msg.CaseAssignment2;
 import com.tools20022.repository.msg.InvestigationRejectionJustification1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -143,7 +142,7 @@ public class RejectInvestigationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectInvestigationV03, CaseAssignment2> mmAssignment = new MMMessageBuildingBlock<RejectInvestigationV03, CaseAssignment2>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,12 +153,14 @@ public class RejectInvestigationV03 {
 			complexType_lazy = () -> CaseAssignment2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectInvestigationV03.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment2 getValue(RejectInvestigationV03 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(RejectInvestigationV03 obj, CaseAssignment2 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -185,7 +186,7 @@ public class RejectInvestigationV03 {
 	 * definition} = "Identifies the investigation case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectInvestigationV03, Case2> mmCase = new MMMessageBuildingBlock<RejectInvestigationV03, Case2>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,12 +197,14 @@ public class RejectInvestigationV03 {
 			complexType_lazy = () -> Case2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectInvestigationV03.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case2 getValue(RejectInvestigationV03 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(RejectInvestigationV03 obj, Case2 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Justfn", required = true)
@@ -230,7 +233,7 @@ public class RejectInvestigationV03 {
 	 * "Specifies the reason for the rejection of an investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RejectInvestigationV03, InvestigationRejectionJustification1> mmJustification = new MMMessageBuildingBlock<RejectInvestigationV03, InvestigationRejectionJustification1>() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,12 +244,14 @@ public class RejectInvestigationV03 {
 			complexType_lazy = () -> InvestigationRejectionJustification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RejectInvestigationV03.class.getMethod("getJustification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InvestigationRejectionJustification1 getValue(RejectInvestigationV03 obj) {
+			return obj.getJustification();
+		}
+
+		@Override
+		public void setValue(RejectInvestigationV03 obj, InvestigationRejectionJustification1 value) {
+			obj.setJustification(value);
 		}
 	};
 

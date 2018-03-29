@@ -120,7 +120,7 @@ public class Linkages18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages18, Optional<DocumentNumber4Choice>> mmMessageNumber = new MMMessageAssociationEnd<Linkages18, Optional<DocumentNumber4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages18.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class Linkages18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentNumber4Choice> getValue(Linkages18 obj) {
+			return obj.getMessageNumber();
+		}
+
+		@Override
+		public void setValue(Linkages18 obj, Optional<DocumentNumber4Choice> value) {
+			obj.setMessageNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ref", required = true)
@@ -168,7 +178,7 @@ public class Linkages18 {
 	 * definition} = "Reference to the linked transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages18, IdentificationReference11Choice> mmReference = new MMMessageAssociationEnd<Linkages18, IdentificationReference11Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages18.mmObject();
@@ -181,6 +191,16 @@ public class Linkages18 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IdentificationReference11Choice.mmObject();
+		}
+
+		@Override
+		public IdentificationReference11Choice getValue(Linkages18 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Linkages18 obj, IdentificationReference11Choice value) {
+			obj.setReference(value);
 		}
 	};
 

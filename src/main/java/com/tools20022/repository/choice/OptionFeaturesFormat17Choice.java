@@ -122,7 +122,7 @@ public class OptionFeaturesFormat17Choice {
 	 * OptionFeaturesFormat9Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionFeaturesFormat17Choice, OptionFeatures7Code> mmCode = new MMMessageAttribute<OptionFeaturesFormat17Choice, OptionFeatures7Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmObject();
@@ -135,6 +135,16 @@ public class OptionFeaturesFormat17Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionFeatures7Code.mmObject();
+		}
+
+		@Override
+		public OptionFeatures7Code getValue(OptionFeaturesFormat17Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OptionFeaturesFormat17Choice obj, OptionFeatures7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -178,7 +188,7 @@ public class OptionFeaturesFormat17Choice {
 	 * OptionFeaturesFormat9Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionFeaturesFormat17Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<OptionFeaturesFormat17Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OptionFeaturesFormat17Choice.mmObject();
@@ -192,6 +202,16 @@ public class OptionFeaturesFormat17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(OptionFeaturesFormat17Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OptionFeaturesFormat17Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

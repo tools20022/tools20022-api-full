@@ -22,6 +22,8 @@ import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
+import com.tools20022.repository.msg.SuspendedStatusReason1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -117,7 +119,7 @@ public class SuspendedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatus1, NoReasonCode> mmNoReason = new MMMessageAttribute<SuspendedStatus1, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatus1.mmObject();
@@ -129,6 +131,16 @@ public class SuspendedStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(SuspendedStatus1 obj) {
+			return obj.getNoReason();
+		}
+
+		@Override
+		public void setValue(SuspendedStatus1 obj, NoReasonCode value) {
+			obj.setNoReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -164,7 +176,7 @@ public class SuspendedStatus1 {
 	 * definition} = "Reason for a suspended status in the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SuspendedStatus1, SuspendedStatusReason1> mmReason = new MMMessageAssociationEnd<SuspendedStatus1, SuspendedStatusReason1>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatus1.mmObject();
@@ -176,7 +188,17 @@ public class SuspendedStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason1.mmObject();
+			type_lazy = () -> SuspendedStatusReason1.mmObject();
+		}
+
+		@Override
+		public SuspendedStatusReason1 getValue(SuspendedStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SuspendedStatus1 obj, SuspendedStatusReason1 value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -214,7 +236,7 @@ public class SuspendedStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SuspendedStatus1, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<SuspendedStatus1, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatus1.mmObject();
@@ -226,7 +248,17 @@ public class SuspendedStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(SuspendedStatus1 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(SuspendedStatus1 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	/**
@@ -311,7 +343,7 @@ public class SuspendedStatus1 {
 		return reason;
 	}
 
-	public SuspendedStatus1 setReason(com.tools20022.repository.msg.SuspendedStatusReason1 reason) {
+	public SuspendedStatus1 setReason(SuspendedStatusReason1 reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}
@@ -320,7 +352,7 @@ public class SuspendedStatus1 {
 		return dataSourceScheme;
 	}
 
-	public SuspendedStatus1 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public SuspendedStatus1 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

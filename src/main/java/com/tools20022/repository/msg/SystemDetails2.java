@@ -116,7 +116,7 @@ public class SystemDetails2 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemDetails2, Optional<CashClearingSystem1Code>> mmSystemIdentification = new MMMessageAttribute<SystemDetails2, Optional<CashClearingSystem1Code>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemDetails2.mmObject();
@@ -128,6 +128,16 @@ public class SystemDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CashClearingSystem1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CashClearingSystem1Code> getValue(SystemDetails2 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(SystemDetails2 obj, Optional<CashClearingSystem1Code> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MmbId")
@@ -166,7 +176,7 @@ public class SystemDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemDetails2, Optional<MemberIdentificationChoice>> mmMemberIdentification = new MMMessageAttribute<SystemDetails2, Optional<MemberIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemDetails2.mmObject();
@@ -178,6 +188,16 @@ public class SystemDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<MemberIdentificationChoice> getValue(SystemDetails2 obj) {
+			return obj.getMemberIdentification();
+		}
+
+		@Override
+		public void setValue(SystemDetails2 obj, Optional<MemberIdentificationChoice> value) {
+			obj.setMemberIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -213,7 +233,7 @@ public class SystemDetails2 {
 	 * definition} = "Country in which the system is located."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemDetails2, Optional<CountryCode>> mmCountry = new MMMessageAttribute<SystemDetails2, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemDetails2.mmObject();
@@ -225,6 +245,16 @@ public class SystemDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(SystemDetails2 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(SystemDetails2 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -262,7 +292,7 @@ public class SystemDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemDetails2, Optional<AccountIdentification1Choice>> mmAccountIdentification = new MMMessageAssociationEnd<SystemDetails2, Optional<AccountIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemDetails2.mmObject();
@@ -275,6 +305,16 @@ public class SystemDetails2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1Choice> getValue(SystemDetails2 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SystemDetails2 obj, Optional<AccountIdentification1Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 

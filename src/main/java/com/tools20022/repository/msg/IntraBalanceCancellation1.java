@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.IntraBalanceCancellation2;
+import com.tools20022.repository.msg.SystemPartyIdentification5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -141,7 +144,7 @@ public class IntraBalanceCancellation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceCancellation1, Optional<SystemPartyIdentification5>> mmAccountOwner = new MMMessageAssociationEnd<IntraBalanceCancellation1, Optional<SystemPartyIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation1.mmObject();
@@ -154,7 +157,17 @@ public class IntraBalanceCancellation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
+			type_lazy = () -> SystemPartyIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification5> getValue(IntraBalanceCancellation1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation1 obj, Optional<SystemPartyIdentification5> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -198,7 +211,7 @@ public class IntraBalanceCancellation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceCancellation1, Optional<CashAccount24>> mmCashAccount = new MMMessageAssociationEnd<IntraBalanceCancellation1, Optional<CashAccount24>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation1.mmObject();
@@ -211,7 +224,17 @@ public class IntraBalanceCancellation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount24> getValue(IntraBalanceCancellation1 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation1 obj, Optional<CashAccount24> value) {
+			obj.setCashAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -256,7 +279,7 @@ public class IntraBalanceCancellation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceCancellation1, Optional<ProcessingStatus32Choice>> mmProcessingStatus = new MMMessageAssociationEnd<IntraBalanceCancellation1, Optional<ProcessingStatus32Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation1.mmObject();
@@ -271,9 +294,19 @@ public class IntraBalanceCancellation1 {
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus32Choice.mmObject();
 		}
+
+		@Override
+		public Optional<ProcessingStatus32Choice> getValue(IntraBalanceCancellation1 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation1 obj, Optional<ProcessingStatus32Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Cxl", required = true)
-	protected List<com.tools20022.repository.msg.IntraBalanceCancellation2> cancellation;
+	protected List<IntraBalanceCancellation2> cancellation;
 	/**
 	 * 
 	 <p>
@@ -313,7 +346,7 @@ public class IntraBalanceCancellation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceCancellation1, List<IntraBalanceCancellation2>> mmCancellation = new MMMessageAssociationEnd<IntraBalanceCancellation1, List<IntraBalanceCancellation2>>() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation1.mmObject();
@@ -325,7 +358,17 @@ public class IntraBalanceCancellation1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation3.mmCancellation);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation2.mmObject();
+			type_lazy = () -> IntraBalanceCancellation2.mmObject();
+		}
+
+		@Override
+		public List<IntraBalanceCancellation2> getValue(IntraBalanceCancellation1 obj) {
+			return obj.getCancellation();
+		}
+
+		@Override
+		public void setValue(IntraBalanceCancellation1 obj, List<IntraBalanceCancellation2> value) {
+			obj.setCancellation(value);
 		}
 	};
 
@@ -351,7 +394,7 @@ public class IntraBalanceCancellation1 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public IntraBalanceCancellation1 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+	public IntraBalanceCancellation1 setAccountOwner(SystemPartyIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}
@@ -360,7 +403,7 @@ public class IntraBalanceCancellation1 {
 		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public IntraBalanceCancellation1 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+	public IntraBalanceCancellation1 setCashAccount(CashAccount24 cashAccount) {
 		this.cashAccount = cashAccount;
 		return this;
 	}
@@ -378,7 +421,7 @@ public class IntraBalanceCancellation1 {
 		return cancellation == null ? cancellation = new ArrayList<>() : cancellation;
 	}
 
-	public IntraBalanceCancellation1 setCancellation(List<com.tools20022.repository.msg.IntraBalanceCancellation2> cancellation) {
+	public IntraBalanceCancellation1 setCancellation(List<IntraBalanceCancellation2> cancellation) {
 		this.cancellation = Objects.requireNonNull(cancellation);
 		return this;
 	}

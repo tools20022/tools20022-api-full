@@ -25,8 +25,12 @@ import com.tools20022.repository.choice.SystemStatus2Choice;
 import com.tools20022.repository.codeset.SystemStatus2Code;
 import com.tools20022.repository.entity.SystemStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -60,8 +64,9 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = March 3, 2019</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SystemStatus1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -125,7 +130,7 @@ public class SystemStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemStatus1Choice, SystemStatus2Code> mmCode = new MMMessageAttribute<SystemStatus1Choice, SystemStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatus1Choice.mmObject();
@@ -138,6 +143,16 @@ public class SystemStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemStatus2Code.mmObject();
+		}
+
+		@Override
+		public SystemStatus2Code getValue(SystemStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SystemStatus1Choice obj, SystemStatus2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -181,7 +196,7 @@ public class SystemStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemStatus1Choice, Optional<GenericIdentification1>> mmProprietary = new MMMessageAssociationEnd<SystemStatus1Choice, Optional<GenericIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatus1Choice.mmObject();
@@ -194,7 +209,17 @@ public class SystemStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification1> getValue(SystemStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SystemStatus1Choice obj, Optional<GenericIdentification1> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 
@@ -204,7 +229,14 @@ public class SystemStatus1Choice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemStatus1Choice.mmCode, com.tools20022.repository.msg.SystemStatus1Choice.mmProprietary);
 				trace_lazy = () -> SystemStatus.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("March 3, 2019");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "SystemStatus1Choice";
 				definition = "Status of a system and the period of time during which the status is valid.";
 				nextVersions_lazy = () -> Arrays.asList(SystemStatus2Choice.mmObject());
@@ -226,7 +258,7 @@ public class SystemStatus1Choice {
 		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public SystemStatus1Choice setProprietary(com.tools20022.repository.msg.GenericIdentification1 proprietary) {
+	public SystemStatus1Choice setProprietary(GenericIdentification1 proprietary) {
 		this.proprietary = proprietary;
 		return this;
 	}

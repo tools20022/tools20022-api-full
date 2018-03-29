@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification77;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -100,7 +101,7 @@ public class EnglishNameLocalNameAndAddress1 {
 	 * definition} = "Name."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEnglishName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnglishNameLocalNameAndAddress1, Optional<Max210Text>> mmEnglishName = new MMMessageAttribute<EnglishNameLocalNameAndAddress1, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmObject();
 			isDerived = false;
@@ -111,6 +112,16 @@ public class EnglishNameLocalNameAndAddress1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(EnglishNameLocalNameAndAddress1 obj) {
+			return obj.getEnglishName();
+		}
+
+		@Override
+		public void setValue(EnglishNameLocalNameAndAddress1 obj, Optional<Max210Text> value) {
+			obj.setEnglishName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -141,7 +152,7 @@ public class EnglishNameLocalNameAndAddress1 {
 	 * definition} = "Name and address details of a participant."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EnglishNameLocalNameAndAddress1, PartyIdentification77> mmNameAndAddress = new MMMessageAssociationEnd<EnglishNameLocalNameAndAddress1, PartyIdentification77>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmObject();
 			isDerived = false;
@@ -152,7 +163,17 @@ public class EnglishNameLocalNameAndAddress1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification77.mmObject();
+			type_lazy = () -> PartyIdentification77.mmObject();
+		}
+
+		@Override
+		public PartyIdentification77 getValue(EnglishNameLocalNameAndAddress1 obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(EnglishNameLocalNameAndAddress1 obj, PartyIdentification77 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 	@XmlElement(name = "LngAdrLine")
@@ -186,7 +207,7 @@ public class EnglishNameLocalNameAndAddress1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongAddressLine = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EnglishNameLocalNameAndAddress1, List<Max256Text>> mmLongAddressLine = new MMMessageAttribute<EnglishNameLocalNameAndAddress1, List<Max256Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmObject();
 			isDerived = false;
@@ -197,6 +218,16 @@ public class EnglishNameLocalNameAndAddress1 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public List<Max256Text> getValue(EnglishNameLocalNameAndAddress1 obj) {
+			return obj.getLongAddressLine();
+		}
+
+		@Override
+		public void setValue(EnglishNameLocalNameAndAddress1 obj, List<Max256Text> value) {
+			obj.setLongAddressLine(value);
 		}
 	};
 
@@ -227,7 +258,7 @@ public class EnglishNameLocalNameAndAddress1 {
 		return nameAndAddress;
 	}
 
-	public EnglishNameLocalNameAndAddress1 setNameAndAddress(com.tools20022.repository.msg.PartyIdentification77 nameAndAddress) {
+	public EnglishNameLocalNameAndAddress1 setNameAndAddress(PartyIdentification77 nameAndAddress) {
 		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
 		return this;
 	}

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ChargeType1;
+import com.tools20022.repository.msg.TaxationBasis1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +115,7 @@ public class Charge10 {
 	 * definition} = "Type of service for which a charge is asked or paid."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge10, ChargeType1> mmType = new MMMessageAttribute<Charge10, ChargeType1>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge10.mmObject();
@@ -124,7 +126,17 @@ public class Charge10 {
 			definition = "Type of service for which a charge is asked or paid.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.ChargeType1.mmObject();
+			complexType_lazy = () -> ChargeType1.mmObject();
+		}
+
+		@Override
+		public ChargeType1 getValue(Charge10 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Charge10 obj, ChargeType1 value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "ChrgBsis")
@@ -160,7 +172,7 @@ public class Charge10 {
 	 * definition} = "Method used to calculate a charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge10, Optional<TaxationBasis1>> mmChargeBasis = new MMMessageAttribute<Charge10, Optional<TaxationBasis1>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge10.mmObject();
@@ -171,7 +183,17 @@ public class Charge10 {
 			definition = "Method used to calculate a charge.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TaxationBasis1.mmObject();
+			complexType_lazy = () -> TaxationBasis1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxationBasis1> getValue(Charge10 obj) {
+			return obj.getChargeBasis();
+		}
+
+		@Override
+		public void setValue(Charge10 obj, Optional<TaxationBasis1> value) {
+			obj.setChargeBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -208,7 +230,7 @@ public class Charge10 {
 	 * definition} = "Amount of money asked or paid for the charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge10, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Charge10, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge10.mmObject();
@@ -220,6 +242,16 @@ public class Charge10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(Charge10 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Charge10 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -256,7 +288,7 @@ public class Charge10 {
 	 * definition} = "Rate used to calculate the amount of the charge or fee."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge10, Optional<PercentageRate>> mmRate = new MMMessageAttribute<Charge10, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge10.mmObject();
@@ -268,6 +300,16 @@ public class Charge10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Charge10 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Charge10 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -305,7 +347,7 @@ public class Charge10 {
 	 * "Party entitled to the amount of money resulting from a charge."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge10, Optional<PartyIdentification2Choice>> mmRecipientIdentification = new MMMessageAttribute<Charge10, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge10.mmObject();
@@ -317,6 +359,16 @@ public class Charge10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Charge10 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Charge10 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 
@@ -339,7 +391,7 @@ public class Charge10 {
 		return type;
 	}
 
-	public Charge10 setType(com.tools20022.repository.msg.ChargeType1 type) {
+	public Charge10 setType(ChargeType1 type) {
 		this.type = Objects.requireNonNull(type);
 		return this;
 	}
@@ -348,7 +400,7 @@ public class Charge10 {
 		return chargeBasis == null ? Optional.empty() : Optional.of(chargeBasis);
 	}
 
-	public Charge10 setChargeBasis(com.tools20022.repository.msg.TaxationBasis1 chargeBasis) {
+	public Charge10 setChargeBasis(TaxationBasis1 chargeBasis) {
 		this.chargeBasis = chargeBasis;
 		return this;
 	}

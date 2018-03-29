@@ -112,7 +112,7 @@ public class ConfirmationStatus1Choice {
 	 * definition} = "Status of the order confirmation is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConfirmationRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConfirmationStatus1Choice, List<ConfirmationRejectedStatus2>> mmConfirmationRejected = new MMMessageAssociationEnd<ConfirmationStatus1Choice, List<ConfirmationRejectedStatus2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationStatus1Choice.mmObject();
@@ -125,6 +125,16 @@ public class ConfirmationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ConfirmationRejectedStatus2.mmObject();
+		}
+
+		@Override
+		public List<ConfirmationRejectedStatus2> getValue(ConfirmationStatus1Choice obj) {
+			return obj.getConfirmationRejected();
+		}
+
+		@Override
+		public void setValue(ConfirmationStatus1Choice obj, List<ConfirmationRejectedStatus2> value) {
+			obj.setConfirmationRejected(value);
 		}
 	};
 	@XmlElement(name = "AmdmntRjctd", required = true)
@@ -161,7 +171,7 @@ public class ConfirmationStatus1Choice {
 	 * definition} = "Status of the order confirmation amendment is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmendmentRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConfirmationStatus1Choice, List<ConfirmationRejectedStatus2>> mmAmendmentRejected = new MMMessageAssociationEnd<ConfirmationStatus1Choice, List<ConfirmationRejectedStatus2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationStatus1Choice.mmObject();
@@ -174,6 +184,16 @@ public class ConfirmationStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ConfirmationRejectedStatus2.mmObject();
+		}
+
+		@Override
+		public List<ConfirmationRejectedStatus2> getValue(ConfirmationStatus1Choice obj) {
+			return obj.getAmendmentRejected();
+		}
+
+		@Override
+		public void setValue(ConfirmationStatus1Choice obj, List<ConfirmationRejectedStatus2> value) {
+			obj.setAmendmentRejected(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -213,7 +233,7 @@ public class ConfirmationStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationStatus1Choice, OrderConfirmationStatus1Code> mmStatus = new MMMessageAttribute<ConfirmationStatus1Choice, OrderConfirmationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationStatus1Choice.mmObject();
@@ -225,6 +245,16 @@ public class ConfirmationStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderConfirmationStatus1Code.mmObject();
+		}
+
+		@Override
+		public OrderConfirmationStatus1Code getValue(ConfirmationStatus1Choice obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(ConfirmationStatus1Choice obj, OrderConfirmationStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 

@@ -24,6 +24,9 @@ import com.tools20022.repository.codeset.OrderConfirmationStatus1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ConfirmationRejectedStatus1;
+import com.tools20022.repository.msg.FinancialInstrument10;
+import com.tools20022.repository.msg.InvestmentAccount13;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -170,7 +173,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -183,6 +186,16 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrRef", required = true)
@@ -229,7 +242,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, Max35Text> mmOrderReference = new MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -242,6 +255,16 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, Max35Text value) {
+			obj.setOrderReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -288,7 +311,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, Optional<Max35Text>> mmClientReference = new MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -301,6 +324,16 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, Optional<Max35Text> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealRef")
@@ -347,7 +380,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, Optional<Max35Text>> mmDealReference = new MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -361,9 +394,19 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getDealReference();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, Optional<Max35Text> value) {
+			obj.setDealReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ConfRjctd", required = true)
-	protected List<com.tools20022.repository.msg.ConfirmationRejectedStatus1> confirmationRejected;
+	protected List<ConfirmationRejectedStatus1> confirmationRejected;
 	/**
 	 * 
 	 <p>
@@ -396,7 +439,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * definition} = "Status of the order confirmation is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConfirmationRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, List<ConfirmationRejectedStatus1>> mmConfirmationRejected = new MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, List<ConfirmationRejectedStatus1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -408,11 +451,21 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmObject();
+			type_lazy = () -> ConfirmationRejectedStatus1.mmObject();
+		}
+
+		@Override
+		public List<ConfirmationRejectedStatus1> getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getConfirmationRejected();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, List<ConfirmationRejectedStatus1> value) {
+			obj.setConfirmationRejected(value);
 		}
 	};
 	@XmlElement(name = "AmdmntRjctd", required = true)
-	protected List<com.tools20022.repository.msg.ConfirmationRejectedStatus1> amendmentRejected;
+	protected List<ConfirmationRejectedStatus1> amendmentRejected;
 	/**
 	 * 
 	 <p>
@@ -445,7 +498,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * definition} = "Status of the order confirmation amendment is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmendmentRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, List<ConfirmationRejectedStatus1>> mmAmendmentRejected = new MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, List<ConfirmationRejectedStatus1>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -457,7 +510,17 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus1.mmObject();
+			type_lazy = () -> ConfirmationRejectedStatus1.mmObject();
+		}
+
+		@Override
+		public List<ConfirmationRejectedStatus1> getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getAmendmentRejected();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, List<ConfirmationRejectedStatus1> value) {
+			obj.setAmendmentRejected(value);
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -497,7 +560,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, OrderConfirmationStatus1Code> mmStatus = new MMMessageAttribute<IndividualOrderConfirmationStatusAndReason1, OrderConfirmationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -509,6 +572,16 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderConfirmationStatus1Code.mmObject();
+		}
+
+		@Override
+		public OrderConfirmationStatus1Code getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, OrderConfirmationStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -554,7 +627,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, Optional<PartyIdentification2Choice>> mmStatusInitiator = new MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -568,6 +641,16 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls")
@@ -613,7 +696,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, Optional<InvestmentAccount13>> mmInvestmentAccountDetails = new MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, Optional<InvestmentAccount13>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -626,7 +709,17 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount13.mmObject();
+			type_lazy = () -> InvestmentAccount13.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount13> getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, Optional<InvestmentAccount13> value) {
+			obj.setInvestmentAccountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
@@ -673,7 +766,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, Optional<FinancialInstrument10>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<IndividualOrderConfirmationStatusAndReason1, Optional<FinancialInstrument10>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason1.mmObject();
@@ -686,7 +779,17 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument10.mmObject();
+			type_lazy = () -> FinancialInstrument10.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrument10> getValue(IndividualOrderConfirmationStatusAndReason1 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(IndividualOrderConfirmationStatusAndReason1 obj, Optional<FinancialInstrument10> value) {
+			obj.setFinancialInstrumentDetails(value.orElse(null));
 		}
 	};
 	/**
@@ -807,7 +910,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		return confirmationRejected == null ? confirmationRejected = new ArrayList<>() : confirmationRejected;
 	}
 
-	public IndividualOrderConfirmationStatusAndReason1 setConfirmationRejected(List<com.tools20022.repository.msg.ConfirmationRejectedStatus1> confirmationRejected) {
+	public IndividualOrderConfirmationStatusAndReason1 setConfirmationRejected(List<ConfirmationRejectedStatus1> confirmationRejected) {
 		this.confirmationRejected = Objects.requireNonNull(confirmationRejected);
 		return this;
 	}
@@ -816,7 +919,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		return amendmentRejected == null ? amendmentRejected = new ArrayList<>() : amendmentRejected;
 	}
 
-	public IndividualOrderConfirmationStatusAndReason1 setAmendmentRejected(List<com.tools20022.repository.msg.ConfirmationRejectedStatus1> amendmentRejected) {
+	public IndividualOrderConfirmationStatusAndReason1 setAmendmentRejected(List<ConfirmationRejectedStatus1> amendmentRejected) {
 		this.amendmentRejected = Objects.requireNonNull(amendmentRejected);
 		return this;
 	}
@@ -843,7 +946,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public IndividualOrderConfirmationStatusAndReason1 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount13 investmentAccountDetails) {
+	public IndividualOrderConfirmationStatusAndReason1 setInvestmentAccountDetails(InvestmentAccount13 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
 		return this;
 	}
@@ -852,7 +955,7 @@ public class IndividualOrderConfirmationStatusAndReason1 {
 		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public IndividualOrderConfirmationStatusAndReason1 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument10 financialInstrumentDetails) {
+	public IndividualOrderConfirmationStatusAndReason1 setFinancialInstrumentDetails(FinancialInstrument10 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
 		return this;
 	}

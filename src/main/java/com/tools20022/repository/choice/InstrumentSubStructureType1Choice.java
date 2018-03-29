@@ -124,7 +124,7 @@ public class InstrumentSubStructureType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstrumentSubStructureType1Choice, InstrumentSubStructureType1Code> mmCode = new MMMessageAttribute<InstrumentSubStructureType1Choice, InstrumentSubStructureType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmFinancialInstrumentSubStructure;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstrumentSubStructureType1Choice.mmObject();
@@ -137,6 +137,16 @@ public class InstrumentSubStructureType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+		}
+
+		@Override
+		public InstrumentSubStructureType1Code getValue(InstrumentSubStructureType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InstrumentSubStructureType1Choice obj, InstrumentSubStructureType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class InstrumentSubStructureType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstrumentSubStructureType1Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<InstrumentSubStructureType1Choice, GenericIdentification40>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmFinancialInstrumentSubStructure;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstrumentSubStructureType1Choice.mmObject();
@@ -196,6 +206,16 @@ public class InstrumentSubStructureType1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(InstrumentSubStructureType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InstrumentSubStructureType1Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

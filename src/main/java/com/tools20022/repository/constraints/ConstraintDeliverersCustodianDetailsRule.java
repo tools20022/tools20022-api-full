@@ -52,11 +52,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount1> forDeliveringPartiesAndAccount1 = new MMConstraint<DeliveringPartiesAndAccount1>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediaryDetails is present, then one occurrence of DeliverersCustodianDetails must be present.";
 			owner_lazy = () -> DeliveringPartiesAndAccount1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount1 obj) throws Exception {
+			checkDeliveringPartiesAndAccount1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation2> forDeliverInformation2 = new MMConstraint<DeliverInformation2>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation2 obj) throws Exception {
+			checkDeliverInformation2(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount4> forDeliveringPartiesAndAccount4 = new MMConstraint<DeliveringPartiesAndAccount4>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediaryDetails is present, then DeliverersCustodianDetails must also be present.";
 			owner_lazy = () -> DeliveringPartiesAndAccount4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount4 obj) throws Exception {
+			checkDeliveringPartiesAndAccount4(obj);
 		}
 	};
 	/**
@@ -142,11 +154,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation4> forDeliverInformation4 = new MMConstraint<DeliverInformation4>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation4 obj) throws Exception {
+			checkDeliverInformation4(obj);
 		}
 	};
 	/**
@@ -181,12 +197,16 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount8> forDeliveringPartiesAndAccount8 = new MMConstraint<DeliveringPartiesAndAccount8>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediaryDetails is present, then DeliverersCustodianDetails must also be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount9);
 			owner_lazy = () -> DeliveringPartiesAndAccount8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount8 obj) throws Exception {
+			checkDeliveringPartiesAndAccount8(obj);
 		}
 	};
 	/**
@@ -212,11 +232,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation7> forDeliverInformation7 = new MMConstraint<DeliverInformation7>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation7 obj) throws Exception {
+			checkDeliverInformation7(obj);
 		}
 	};
 	/**
@@ -250,12 +274,16 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation11> forDeliverInformation11 = new MMConstraint<DeliverInformation11>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation12);
 			owner_lazy = () -> DeliverInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation11 obj) throws Exception {
+			checkDeliverInformation11(obj);
 		}
 	};
 	/**
@@ -281,11 +309,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation1> forDeliverInformation1 = new MMConstraint<DeliverInformation1>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation1 obj) throws Exception {
+			checkDeliverInformation1(obj);
 		}
 	};
 	/**
@@ -311,11 +343,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation3> forDeliverInformation3 = new MMConstraint<DeliverInformation3>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation3 obj) throws Exception {
+			checkDeliverInformation3(obj);
 		}
 	};
 	/**
@@ -341,11 +377,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation8> forDeliverInformation8 = new MMConstraint<DeliverInformation8>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation8 obj) throws Exception {
+			checkDeliverInformation8(obj);
 		}
 	};
 	/**
@@ -371,11 +411,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation5> forDeliverInformation5 = new MMConstraint<DeliverInformation5>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation5 obj) throws Exception {
+			checkDeliverInformation5(obj);
 		}
 	};
 	/**
@@ -409,12 +453,16 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation9> forDeliverInformation9 = new MMConstraint<DeliverInformation9>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation13);
 			owner_lazy = () -> DeliverInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation9 obj) throws Exception {
+			checkDeliverInformation9(obj);
 		}
 	};
 	/**
@@ -440,11 +488,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation6> forDeliverInformation6 = new MMConstraint<DeliverInformation6>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation6 obj) throws Exception {
+			checkDeliverInformation6(obj);
 		}
 	};
 	/**
@@ -483,13 +535,17 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation12> forDeliverInformation12 = new MMConstraint<DeliverInformation12>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation14);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation11;
 			owner_lazy = () -> DeliverInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation12 obj) throws Exception {
+			checkDeliverInformation12(obj);
 		}
 	};
 	/**
@@ -528,13 +584,17 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation13> forDeliverInformation13 = new MMConstraint<DeliverInformation13>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation15);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation9;
 			owner_lazy = () -> DeliverInformation13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation13 obj) throws Exception {
+			checkDeliverInformation13(obj);
 		}
 	};
 	/**
@@ -575,13 +635,17 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount9> forDeliveringPartiesAndAccount9 = new MMConstraint<DeliveringPartiesAndAccount9>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediaryDetails is present, then DeliverersCustodianDetails must also be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount8;
 			owner_lazy = () -> DeliveringPartiesAndAccount9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount9 obj) throws Exception {
+			checkDeliveringPartiesAndAccount9(obj);
 		}
 	};
 	/**
@@ -620,13 +684,17 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation15> forDeliverInformation15 = new MMConstraint<DeliverInformation15>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation16);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation13;
 			owner_lazy = () -> DeliverInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation15 obj) throws Exception {
+			checkDeliverInformation15(obj);
 		}
 	};
 	/**
@@ -665,13 +733,17 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation14> forDeliverInformation14 = new MMConstraint<DeliverInformation14>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation17);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation12;
 			owner_lazy = () -> DeliverInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation14 obj) throws Exception {
+			checkDeliverInformation14(obj);
 		}
 	};
 	/**
@@ -710,13 +782,17 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation16> forDeliverInformation16 = new MMConstraint<DeliverInformation16>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation15;
 			owner_lazy = () -> DeliverInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation16 obj) throws Exception {
+			checkDeliverInformation16(obj);
 		}
 	};
 	/**
@@ -755,13 +831,17 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation17> forDeliverInformation17 = new MMConstraint<DeliverInformation17>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation18);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation14;
 			owner_lazy = () -> DeliverInformation17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation17 obj) throws Exception {
+			checkDeliverInformation17(obj);
 		}
 	};
 	/**
@@ -806,7 +886,6 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount14> forDeliveringPartiesAndAccount14 = new MMConstraint<DeliveringPartiesAndAccount14>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present.";
@@ -814,6 +893,11 @@ public class ConstraintDeliverersCustodianDetailsRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount13;
 			owner_lazy = () -> DeliveringPartiesAndAccount14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount14 obj) throws Exception {
+			checkDeliveringPartiesAndAccount14(obj);
 		}
 	};
 	/**
@@ -862,7 +946,6 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount13> forDeliveringPartiesAndAccount13 = new MMConstraint<DeliveringPartiesAndAccount13>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present.";
@@ -871,6 +954,11 @@ public class ConstraintDeliverersCustodianDetailsRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount9;
 			owner_lazy = () -> DeliveringPartiesAndAccount13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount13 obj) throws Exception {
+			checkDeliveringPartiesAndAccount13(obj);
 		}
 	};
 	/**
@@ -901,12 +989,16 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation19> forDeliverInformation19 = new MMConstraint<DeliverInformation19>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation16;
 			owner_lazy = () -> DeliverInformation19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation19 obj) throws Exception {
+			checkDeliverInformation19(obj);
 		}
 	};
 	/**
@@ -937,12 +1029,16 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliverInformation18> forDeliverInformation18 = new MMConstraint<DeliverInformation18>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation17;
 			owner_lazy = () -> DeliverInformation18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DeliverInformation18 obj) throws Exception {
+			checkDeliverInformation18(obj);
 		}
 	};
 	/**
@@ -978,13 +1074,17 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount18> forDeliveringPartiesAndAccount18 = new MMConstraint<DeliveringPartiesAndAccount18>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount14;
 			owner_lazy = () -> DeliveringPartiesAndAccount18.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount18 obj) throws Exception {
+			checkDeliveringPartiesAndAccount18(obj);
 		}
 	};
 	/**
@@ -1020,13 +1120,17 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 */
 	public static final MMConstraint<DeliveringPartiesAndAccount17> forDeliveringPartiesAndAccount17 = new MMConstraint<DeliveringPartiesAndAccount17>() {
 		{
-			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount13;
 			owner_lazy = () -> DeliveringPartiesAndAccount17.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(DeliveringPartiesAndAccount17 obj) throws Exception {
+			checkDeliveringPartiesAndAccount17(obj);
 		}
 	};
 

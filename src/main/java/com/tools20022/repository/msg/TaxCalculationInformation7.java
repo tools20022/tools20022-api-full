@@ -107,7 +107,7 @@ public class TaxCalculationInformation7 {
 	 * definition} = "Calculation basis."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxCalculationBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxCalculationInformation7, Optional<TaxCalculationBasisType1Choice>> mmTaxCalculationBasis = new MMMessageAssociationEnd<TaxCalculationInformation7, Optional<TaxCalculationBasisType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation7.mmObject();
@@ -120,6 +120,16 @@ public class TaxCalculationInformation7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TaxCalculationBasisType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TaxCalculationBasisType1Choice> getValue(TaxCalculationInformation7 obj) {
+			return obj.getTaxCalculationBasis();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation7 obj, Optional<TaxCalculationBasisType1Choice> value) {
+			obj.setTaxCalculationBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxblAmt")
@@ -157,7 +167,7 @@ public class TaxCalculationInformation7 {
 	 * definition} = "Amount of money that it is to be taxed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCalculationInformation7, Optional<ActiveCurrencyAnd13DecimalAmount>> mmTaxableAmount = new MMMessageAttribute<TaxCalculationInformation7, Optional<ActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation7.mmObject();
@@ -169,6 +179,16 @@ public class TaxCalculationInformation7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAnd13DecimalAmount> getValue(TaxCalculationInformation7 obj) {
+			return obj.getTaxableAmount();
+		}
+
+		@Override
+		public void setValue(TaxCalculationInformation7 obj, Optional<ActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setTaxableAmount(value.orElse(null));
 		}
 	};
 

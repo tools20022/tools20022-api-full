@@ -133,7 +133,7 @@ public class ConditionallyAcceptedStatus3Choice {
 	 * ConditionallyAcceptedStatus2.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionallyAcceptedStatus3Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ConditionallyAcceptedStatus3Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmObject();
@@ -147,6 +147,16 @@ public class ConditionallyAcceptedStatus3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ConditionallyAcceptedStatus3Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatus3Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "RsnDtls", required = true)
@@ -200,7 +210,7 @@ public class ConditionallyAcceptedStatus3Choice {
 	 * ConditionallyAcceptedStatus2.mmReasonDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConditionallyAcceptedStatus3Choice, List<ConditionallyAcceptedStatusReason3>> mmReasonDetails = new MMMessageAssociationEnd<ConditionallyAcceptedStatus3Choice, List<ConditionallyAcceptedStatusReason3>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatus3Choice.mmObject();
@@ -215,6 +225,16 @@ public class ConditionallyAcceptedStatus3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ConditionallyAcceptedStatusReason3.mmObject();
+		}
+
+		@Override
+		public List<ConditionallyAcceptedStatusReason3> getValue(ConditionallyAcceptedStatus3Choice obj) {
+			return obj.getReasonDetails();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatus3Choice obj, List<ConditionallyAcceptedStatusReason3> value) {
+			obj.setReasonDetails(value);
 		}
 	};
 

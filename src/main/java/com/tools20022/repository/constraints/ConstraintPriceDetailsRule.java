@@ -54,11 +54,15 @@ public class ConstraintPriceDetailsRule {
 	 */
 	public static final MMConstraint<PriceValuation2> forPriceValuation2 = new MMConstraint<PriceValuation2>() {
 		{
-			validator = ConstraintPriceDetailsRule::checkPriceValuation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetailsRule";
 			definition = "If SuspendedIndicator is \"false\" or \"0\" (No), then PriceDetails must be present. If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.";
 			owner_lazy = () -> PriceValuation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceValuation2 obj) throws Exception {
+			checkPriceValuation2(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintPriceDetailsRule {
 	 */
 	public static final MMConstraint<PriceValuation3> forPriceValuation3 = new MMConstraint<PriceValuation3>() {
 		{
-			validator = ConstraintPriceDetailsRule::checkPriceValuation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetailsRule";
 			definition = "If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"false\" or \"0\" (No), then PriceDetails must be present at least once.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"true\" or \"1\" (Yes), then PriceDetails must be present two or more times and PriceDetails/Type must be present with the values \"BIDE\" and \"OFFR\".";
 			owner_lazy = () -> PriceValuation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceValuation3 obj) throws Exception {
+			checkPriceValuation3(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintPriceDetailsRule {
 	 */
 	public static final MMConstraint<PriceValuation4> forPriceValuation4 = new MMConstraint<PriceValuation4>() {
 		{
-			validator = ConstraintPriceDetailsRule::checkPriceValuation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetailsRule";
 			definition = "If SuspendedIndicator is \"true\" or \"1\" (Yes), then PriceDetails is optional.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"false\" or \"0\" (No), then PriceDetails must be present at least once.\nIf SuspendedIndicator is \"false\" or \"0\" (No), and if FinancialInstrumentDetails /DualFundIndicator is \"true\" or \"1\" (Yes), then PriceDetails must be present two or more times and PriceDetails/Type must be present with the values \"BIDE\" and \"OFFR\".";
 			owner_lazy = () -> PriceValuation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceValuation4 obj) throws Exception {
+			checkPriceValuation4(obj);
 		}
 	};
 

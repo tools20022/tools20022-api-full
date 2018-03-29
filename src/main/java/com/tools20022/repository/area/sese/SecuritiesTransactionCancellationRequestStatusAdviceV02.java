@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactionDetails30;
 import com.tools20022.repository.msg.TransactionIdentifications11;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -175,7 +174,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationRequestReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, Identification1> mmCancellationRequestReference = new MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, Identification1>() {
 		{
 			xmlTag = "CxlReqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,12 +185,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 			complexType_lazy = () -> Identification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionCancellationRequestStatusAdviceV02.class.getMethod("getCancellationRequestReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Identification1 getValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj) {
+			return obj.getCancellationRequestReference();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj, Identification1 value) {
+			obj.setCancellationRequestReference(value);
 		}
 	};
 	@XmlElement(name = "TxId")
@@ -221,7 +222,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, Optional<TransactionIdentifications11>> mmTransactionIdentification = new MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, Optional<TransactionIdentifications11>>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,12 +233,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 			complexType_lazy = () -> TransactionIdentifications11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionCancellationRequestStatusAdviceV02.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransactionIdentifications11> getValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj, Optional<TransactionIdentifications11> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts", required = true)
@@ -266,7 +269,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProcessingStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, ProcessingStatus13Choice> mmProcessingStatus = new MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, ProcessingStatus13Choice>() {
 		{
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,12 +280,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 			complexType_lazy = () -> ProcessingStatus13Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionCancellationRequestStatusAdviceV02.class.getMethod("getProcessingStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ProcessingStatus13Choice getValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj, ProcessingStatus13Choice value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "TxDtls")
@@ -310,7 +315,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 	 * definition} = "Identifies the details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, Optional<TransactionDetails30>> mmTransactionDetails = new MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, Optional<TransactionDetails30>>() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +326,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 			complexType_lazy = () -> TransactionDetails30.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionCancellationRequestStatusAdviceV02.class.getMethod("getTransactionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransactionDetails30> getValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj, Optional<TransactionDetails30> value) {
+			obj.setTransactionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -356,7 +363,7 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<SecuritiesTransactionCancellationRequestStatusAdviceV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -366,12 +373,14 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesTransactionCancellationRequestStatusAdviceV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

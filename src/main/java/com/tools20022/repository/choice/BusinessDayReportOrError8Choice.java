@@ -110,7 +110,7 @@ public class BusinessDayReportOrError8Choice {
 	 * BusinessDayReportOrError6Choice.mmBusinessDayInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessDayInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayReportOrError8Choice, BusinessDay7> mmBusinessDayInformation = new MMMessageAssociationEnd<BusinessDayReportOrError8Choice, BusinessDay7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError8Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class BusinessDayReportOrError8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessDay7.mmObject();
+		}
+
+		@Override
+		public BusinessDay7 getValue(BusinessDayReportOrError8Choice obj) {
+			return obj.getBusinessDayInformation();
+		}
+
+		@Override
+		public void setValue(BusinessDayReportOrError8Choice obj, BusinessDay7 value) {
+			obj.setBusinessDayInformation(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -158,7 +168,7 @@ public class BusinessDayReportOrError8Choice {
 	 * BusinessDayReportOrError6Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessDayReportOrError8Choice, List<ErrorHandling4>> mmBusinessError = new MMMessageAssociationEnd<BusinessDayReportOrError8Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BusinessDayReportOrError8Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class BusinessDayReportOrError8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(BusinessDayReportOrError8Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(BusinessDayReportOrError8Choice obj, List<ErrorHandling4> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

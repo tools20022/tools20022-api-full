@@ -64,13 +64,17 @@ public class ConstraintPartialHoldingUnits1Rule {
 	 */
 	public static final MMConstraint<BlockedHoldingDetails1> forBlockedHoldingDetails1 = new MMConstraint<BlockedHoldingDetails1>() {
 		{
-			validator = ConstraintPartialHoldingUnits1Rule::checkBlockedHoldingDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialHoldingUnits1Rule";
 			definition = "If BlockHolding is “NPRH” then PartialHoldingUnits must not be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialHoldingUnits1Rule.forBlockedHoldingDetails2);
 			owner_lazy = () -> BlockedHoldingDetails1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PartialHoldingUnits</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/BlockedHolding</leftOperand><rightOperand>NonPartialHolding</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BlockedHoldingDetails1 obj) throws Exception {
+			checkBlockedHoldingDetails1(obj);
 		}
 	};
 	/**
@@ -105,13 +109,17 @@ public class ConstraintPartialHoldingUnits1Rule {
 	 */
 	public static final MMConstraint<BlockedHoldingDetails2> forBlockedHoldingDetails2 = new MMConstraint<BlockedHoldingDetails2>() {
 		{
-			validator = ConstraintPartialHoldingUnits1Rule::checkBlockedHoldingDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialHoldingUnits1Rule";
 			definition = "If BlockHolding is NPRH (NonPartialHolding) then PartialHoldingUnits must not be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialHoldingUnits1Rule.forBlockedHoldingDetails1;
 			owner_lazy = () -> BlockedHoldingDetails2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PartialHoldingUnits</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/BlockedHolding</leftOperand><rightOperand>NonPartialHolding</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(BlockedHoldingDetails2 obj) throws Exception {
+			checkBlockedHoldingDetails2(obj);
 		}
 	};
 

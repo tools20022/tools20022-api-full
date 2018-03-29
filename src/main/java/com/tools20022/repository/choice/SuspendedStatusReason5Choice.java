@@ -109,7 +109,7 @@ public class SuspendedStatusReason5Choice {
 	 * ConditionallyAcceptedStatusReason3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReason5Choice, SuspendedStatusReason3Code> mmCode = new MMMessageAttribute<SuspendedStatusReason5Choice, SuspendedStatusReason3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReason5Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class SuspendedStatusReason5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReason3Code.mmObject();
+		}
+
+		@Override
+		public SuspendedStatusReason3Code getValue(SuspendedStatusReason5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason5Choice obj, SuspendedStatusReason3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class SuspendedStatusReason5Choice {
 	 * ConditionallyAcceptedStatusReason3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SuspendedStatusReason5Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<SuspendedStatusReason5Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReason5Choice.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class SuspendedStatusReason5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(SuspendedStatusReason5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReason5Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

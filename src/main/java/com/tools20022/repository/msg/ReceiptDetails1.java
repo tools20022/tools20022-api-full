@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReferences;
+import com.tools20022.repository.msg.RequestHandling;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -95,7 +97,7 @@ public class ReceiptDetails1 {
 	 * definition} = "Reference of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceiptDetails1, AdditionalReferences> mmRelatedReference = new MMMessageAssociationEnd<ReceiptDetails1, AdditionalReferences>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiptDetails1.mmObject();
 			isDerived = false;
@@ -106,7 +108,17 @@ public class ReceiptDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReferences.mmObject();
+			type_lazy = () -> AdditionalReferences.mmObject();
+		}
+
+		@Override
+		public AdditionalReferences getValue(ReceiptDetails1 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(ReceiptDetails1 obj, AdditionalReferences value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "ReqHdlg")
@@ -137,7 +149,7 @@ public class ReceiptDetails1 {
 	 * definition} = "Gives the status of the request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceiptDetails1, Optional<RequestHandling>> mmRequestHandling = new MMMessageAssociationEnd<ReceiptDetails1, Optional<RequestHandling>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiptDetails1.mmObject();
 			isDerived = false;
@@ -148,7 +160,17 @@ public class ReceiptDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequestHandling.mmObject();
+			type_lazy = () -> RequestHandling.mmObject();
+		}
+
+		@Override
+		public Optional<RequestHandling> getValue(ReceiptDetails1 obj) {
+			return obj.getRequestHandling();
+		}
+
+		@Override
+		public void setValue(ReceiptDetails1 obj, Optional<RequestHandling> value) {
+			obj.setRequestHandling(value.orElse(null));
 		}
 	};
 
@@ -169,7 +191,7 @@ public class ReceiptDetails1 {
 		return relatedReference;
 	}
 
-	public ReceiptDetails1 setRelatedReference(com.tools20022.repository.msg.AdditionalReferences relatedReference) {
+	public ReceiptDetails1 setRelatedReference(AdditionalReferences relatedReference) {
 		this.relatedReference = Objects.requireNonNull(relatedReference);
 		return this;
 	}
@@ -178,7 +200,7 @@ public class ReceiptDetails1 {
 		return requestHandling == null ? Optional.empty() : Optional.of(requestHandling);
 	}
 
-	public ReceiptDetails1 setRequestHandling(com.tools20022.repository.msg.RequestHandling requestHandling) {
+	public ReceiptDetails1 setRequestHandling(RequestHandling requestHandling) {
 		this.requestHandling = requestHandling;
 		return this;
 	}

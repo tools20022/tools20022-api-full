@@ -124,7 +124,7 @@ public class IdentificationFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationFormat1Choice, Exact3UpperCaseAlphaNumericText> mmShortIdentification = new MMMessageAttribute<IdentificationFormat1Choice, Exact3UpperCaseAlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat1Choice.mmObject();
 			isDerived = false;
@@ -137,6 +137,16 @@ public class IdentificationFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3UpperCaseAlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact3UpperCaseAlphaNumericText getValue(IdentificationFormat1Choice obj) {
+			return obj.getShortIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationFormat1Choice obj, Exact3UpperCaseAlphaNumericText value) {
+			obj.setShortIdentification(value);
 		}
 	};
 	@XmlElement(name = "LngId", required = true)
@@ -179,7 +189,7 @@ public class IdentificationFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLongIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationFormat1Choice, Max30Text> mmLongIdentification = new MMMessageAttribute<IdentificationFormat1Choice, Max30Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat1Choice.mmObject();
 			isDerived = false;
@@ -192,6 +202,16 @@ public class IdentificationFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Max30Text getValue(IdentificationFormat1Choice obj) {
+			return obj.getLongIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationFormat1Choice obj, Max30Text value) {
+			obj.setLongIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrtryId", required = true)
@@ -231,7 +251,7 @@ public class IdentificationFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationFormat1Choice, GenericIdentification19> mmProprietaryIdentification = new MMMessageAssociationEnd<IdentificationFormat1Choice, GenericIdentification19>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IdentificationFormat1Choice.mmObject();
 			isDerived = false;
@@ -244,6 +264,16 @@ public class IdentificationFormat1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification19.mmObject();
+		}
+
+		@Override
+		public GenericIdentification19 getValue(IdentificationFormat1Choice obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationFormat1Choice obj, GenericIdentification19 value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 

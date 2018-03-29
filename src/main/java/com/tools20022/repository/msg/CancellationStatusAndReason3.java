@@ -27,6 +27,7 @@ import com.tools20022.repository.choice.Status21Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -159,7 +160,7 @@ public class CancellationStatusAndReason3 {
 	 * CancellationStatusAndReason2.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusAndReason3, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<CancellationStatusAndReason3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason3.mmObject();
@@ -173,6 +174,16 @@ public class CancellationStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CancellationStatusAndReason3 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfRef", required = true)
@@ -224,7 +235,7 @@ public class CancellationStatusAndReason3 {
 	 * CancellationStatusAndReason2.mmTransferReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusAndReason3, Max35Text> mmTransferReference = new MMMessageAttribute<CancellationStatusAndReason3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason3.mmObject();
@@ -238,6 +249,16 @@ public class CancellationStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CancellationStatusAndReason3 obj) {
+			return obj.getTransferReference();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason3 obj, Max35Text value) {
+			obj.setTransferReference(value);
 		}
 	};
 	@XmlElement(name = "ClntRef")
@@ -290,7 +311,7 @@ public class CancellationStatusAndReason3 {
 	 * CancellationStatusAndReason2.mmClientReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusAndReason3, Optional<AdditionalReference7>> mmClientReference = new MMMessageAttribute<CancellationStatusAndReason3, Optional<AdditionalReference7>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason3.mmObject();
@@ -303,7 +324,17 @@ public class CancellationStatusAndReason3 {
 			previousVersion_lazy = () -> CancellationStatusAndReason2.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference7.mmObject();
+			complexType_lazy = () -> AdditionalReference7.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference7> getValue(CancellationStatusAndReason3 obj) {
+			return obj.getClientReference();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason3 obj, Optional<AdditionalReference7> value) {
+			obj.setClientReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRef")
@@ -350,7 +381,7 @@ public class CancellationStatusAndReason3 {
 	 * CancellationStatusAndReason2.mmCancellationReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusAndReason3, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<CancellationStatusAndReason3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason3.mmObject();
 			isDerived = false;
@@ -363,6 +394,16 @@ public class CancellationStatusAndReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CancellationStatusAndReason3 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason3 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -405,7 +446,7 @@ public class CancellationStatusAndReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatusAndReason3, Status21Choice> mmStatus = new MMMessageAssociationEnd<CancellationStatusAndReason3, Status21Choice>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason3.mmObject();
@@ -419,6 +460,16 @@ public class CancellationStatusAndReason3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Status21Choice.mmObject();
+		}
+
+		@Override
+		public Status21Choice getValue(CancellationStatusAndReason3 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason3 obj, Status21Choice value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -468,7 +519,7 @@ public class CancellationStatusAndReason3 {
 	 * CancellationStatusAndReason2.mmStatusInitiator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatusAndReason3, Optional<PartyIdentification70Choice>> mmStatusInitiator = new MMMessageAssociationEnd<CancellationStatusAndReason3, Optional<PartyIdentification70Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationStatusAndReason3.mmObject();
@@ -483,6 +534,16 @@ public class CancellationStatusAndReason3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(CancellationStatusAndReason3 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(CancellationStatusAndReason3 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 
@@ -527,7 +588,7 @@ public class CancellationStatusAndReason3 {
 		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public CancellationStatusAndReason3 setClientReference(com.tools20022.repository.msg.AdditionalReference7 clientReference) {
+	public CancellationStatusAndReason3 setClientReference(AdditionalReference7 clientReference) {
 		this.clientReference = clientReference;
 		return this;
 	}

@@ -141,7 +141,7 @@ public class CorporateActionGeneralInformationSD28 {
 	 * CorporateActionGeneralInformationSD23.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD28.mmObject();
 			isDerived = false;
@@ -153,6 +153,16 @@ public class CorporateActionGeneralInformationSD28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionGeneralInformationSD28 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD28 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtGrp")
@@ -193,7 +203,7 @@ public class CorporateActionGeneralInformationSD28 {
 	 * CorporateActionGeneralInformationSD23.mmEventGroup}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventGroup = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<EventGroup1Code>> mmEventGroup = new MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<EventGroup1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD28.mmObject();
 			isDerived = false;
@@ -206,6 +216,16 @@ public class CorporateActionGeneralInformationSD28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventGroup1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EventGroup1Code> getValue(CorporateActionGeneralInformationSD28 obj) {
+			return obj.getEventGroup();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD28 obj, Optional<EventGroup1Code> value) {
+			obj.setEventGroup(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp")
@@ -248,7 +268,7 @@ public class CorporateActionGeneralInformationSD28 {
 	 * CorporateActionGeneralInformationSD23.mmEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<ExtendedEventType6Code>> mmEventType = new MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<ExtendedEventType6Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD28.mmObject();
 			isDerived = false;
@@ -261,6 +281,16 @@ public class CorporateActionGeneralInformationSD28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType6Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExtendedEventType6Code> getValue(CorporateActionGeneralInformationSD28 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD28 obj, Optional<ExtendedEventType6Code> value) {
+			obj.setEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubEvtTp")
@@ -303,7 +333,7 @@ public class CorporateActionGeneralInformationSD28 {
 	 * CorporateActionGeneralInformationSD23.mmSubEventType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<DTCCSubEventType6Code>> mmSubEventType = new MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<DTCCSubEventType6Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD28.mmObject();
 			isDerived = false;
@@ -316,6 +346,16 @@ public class CorporateActionGeneralInformationSD28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType6Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCCSubEventType6Code> getValue(CorporateActionGeneralInformationSD28 obj) {
+			return obj.getSubEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD28 obj, Optional<DTCCSubEventType6Code> value) {
+			obj.setSubEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EDSMsggElgbltyFlg")
@@ -355,7 +395,7 @@ public class CorporateActionGeneralInformationSD28 {
 	 * CorporateActionGeneralInformationSD23.mmEDSMessagingEligibilityFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEDSMessagingEligibilityFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<YesNoIndicator>> mmEDSMessagingEligibilityFlag = new MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD28.mmObject();
 			isDerived = false;
@@ -367,6 +407,16 @@ public class CorporateActionGeneralInformationSD28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionGeneralInformationSD28 obj) {
+			return obj.getEDSMessagingEligibilityFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD28 obj, Optional<YesNoIndicator> value) {
+			obj.setEDSMessagingEligibilityFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RedId")
@@ -406,7 +456,7 @@ public class CorporateActionGeneralInformationSD28 {
 	 * CorporateActionGeneralInformationSD23.mmRedemptionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRedemptionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<Max10NumericText>> mmRedemptionIdentification = new MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<Max10NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD28.mmObject();
 			isDerived = false;
@@ -418,6 +468,16 @@ public class CorporateActionGeneralInformationSD28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max10NumericText> getValue(CorporateActionGeneralInformationSD28 obj) {
+			return obj.getRedemptionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD28 obj, Optional<Max10NumericText> value) {
+			obj.setRedemptionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCFCPElctnFlg")
@@ -457,7 +517,7 @@ public class CorporateActionGeneralInformationSD28 {
 	 * CorporateActionGeneralInformationSD23.mmDTCFCPElectionFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCFCPElectionFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<YesNoIndicator>> mmDTCFCPElectionFlag = new MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD28.mmObject();
 			isDerived = false;
@@ -469,6 +529,16 @@ public class CorporateActionGeneralInformationSD28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionGeneralInformationSD28 obj) {
+			return obj.getDTCFCPElectionFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD28 obj, Optional<YesNoIndicator> value) {
+			obj.setDTCFCPElectionFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsstSvcrPrcgFlg")
@@ -506,7 +576,7 @@ public class CorporateActionGeneralInformationSD28 {
 	 * CorporateActionGeneralInformationSD23.mmAssetServicerProcessingFlag}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssetServicerProcessingFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<YesNoIndicator>> mmAssetServicerProcessingFlag = new MMMessageAttribute<CorporateActionGeneralInformationSD28, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD28.mmObject();
 			isDerived = false;
@@ -518,6 +588,16 @@ public class CorporateActionGeneralInformationSD28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionGeneralInformationSD28 obj) {
+			return obj.getAssetServicerProcessingFlag();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD28 obj, Optional<YesNoIndicator> value) {
+			obj.setAssetServicerProcessingFlag(value.orElse(null));
 		}
 	};
 

@@ -108,7 +108,7 @@ public class LimitOrError3Choice {
 	 * LimitOrError2Choice.mmLimit}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitOrError3Choice, Limit7> mmLimit = new MMMessageAssociationEnd<LimitOrError3Choice, Limit7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitOrError3Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class LimitOrError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Limit7.mmObject();
+		}
+
+		@Override
+		public Limit7 getValue(LimitOrError3Choice obj) {
+			return obj.getLimit();
+		}
+
+		@Override
+		public void setValue(LimitOrError3Choice obj, Limit7 value) {
+			obj.setLimit(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -156,7 +166,7 @@ public class LimitOrError3Choice {
 	 * LimitOrError2Choice.mmBusinessError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitOrError3Choice, List<ErrorHandling4>> mmBusinessError = new MMMessageAssociationEnd<LimitOrError3Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LimitOrError3Choice.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class LimitOrError3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(LimitOrError3Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(LimitOrError3Choice obj, List<ErrorHandling4> value) {
+			obj.setBusinessError(value);
 		}
 	};
 

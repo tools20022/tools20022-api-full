@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ConcentrationAgent1;
 import com.tools20022.repository.msg.SettlementAgent1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,7 +123,7 @@ public class CCPDailyCashFlowsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmConcentrationAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPDailyCashFlowsReportV01, List<ConcentrationAgent1>> mmConcentrationAgent = new MMMessageBuildingBlock<CCPDailyCashFlowsReportV01, List<ConcentrationAgent1>>() {
 		{
 			xmlTag = "CncntrtnAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class CCPDailyCashFlowsReportV01 {
 			complexType_lazy = () -> ConcentrationAgent1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPDailyCashFlowsReportV01.class.getMethod("getConcentrationAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ConcentrationAgent1> getValue(CCPDailyCashFlowsReportV01 obj) {
+			return obj.getConcentrationAgent();
+		}
+
+		@Override
+		public void setValue(CCPDailyCashFlowsReportV01 obj, List<ConcentrationAgent1> value) {
+			obj.setConcentrationAgent(value);
 		}
 	};
 	@XmlElement(name = "SttlmAgt", required = true)
@@ -169,7 +170,7 @@ public class CCPDailyCashFlowsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSettlementAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPDailyCashFlowsReportV01, List<SettlementAgent1>> mmSettlementAgent = new MMMessageBuildingBlock<CCPDailyCashFlowsReportV01, List<SettlementAgent1>>() {
 		{
 			xmlTag = "SttlmAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,12 +180,14 @@ public class CCPDailyCashFlowsReportV01 {
 			complexType_lazy = () -> SettlementAgent1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPDailyCashFlowsReportV01.class.getMethod("getSettlementAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SettlementAgent1> getValue(CCPDailyCashFlowsReportV01 obj) {
+			return obj.getSettlementAgent();
+		}
+
+		@Override
+		public void setValue(CCPDailyCashFlowsReportV01 obj, List<SettlementAgent1> value) {
+			obj.setSettlementAgent(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -214,7 +217,7 @@ public class CCPDailyCashFlowsReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CCPDailyCashFlowsReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CCPDailyCashFlowsReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +227,14 @@ public class CCPDailyCashFlowsReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CCPDailyCashFlowsReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CCPDailyCashFlowsReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CCPDailyCashFlowsReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

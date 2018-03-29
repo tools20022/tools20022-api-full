@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.CashManagementService;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Limit2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,7 +131,7 @@ public class TransactionType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionType1, EntryStatus2Code> mmStatus = new MMMessageAttribute<TransactionType1, EntryStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionType1.mmObject();
@@ -143,6 +144,16 @@ public class TransactionType1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EntryStatus2Code.mmObject();
+		}
+
+		@Override
+		public EntryStatus2Code getValue(TransactionType1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(TransactionType1 obj, EntryStatus2Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -190,7 +201,7 @@ public class TransactionType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionType1, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<TransactionType1, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionType1.mmObject();
@@ -204,9 +215,19 @@ public class TransactionType1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
+
+		@Override
+		public CreditDebitCode getValue(TransactionType1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(TransactionType1 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
+		}
 	};
 	@XmlElement(name = "FlrLmt")
-	protected List<com.tools20022.repository.msg.Limit2> floorLimit;
+	protected List<Limit2> floorLimit;
 	/**
 	 * 
 	 <p>
@@ -247,7 +268,7 @@ public class TransactionType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFloorLimit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionType1, List<Limit2>> mmFloorLimit = new MMMessageAssociationEnd<TransactionType1, List<Limit2>>() {
 		{
 			businessElementTrace_lazy = () -> CashManagementService.mmLiquidityManagementLimit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionType1.mmObject();
@@ -259,7 +280,17 @@ public class TransactionType1 {
 			nextVersions_lazy = () -> Arrays.asList(TransactionType2.mmFloorLimit);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Limit2.mmObject();
+			type_lazy = () -> Limit2.mmObject();
+		}
+
+		@Override
+		public List<Limit2> getValue(TransactionType1 obj) {
+			return obj.getFloorLimit();
+		}
+
+		@Override
+		public void setValue(TransactionType1 obj, List<Limit2> value) {
+			obj.setFloorLimit(value);
 		}
 	};
 
@@ -301,7 +332,7 @@ public class TransactionType1 {
 		return floorLimit == null ? floorLimit = new ArrayList<>() : floorLimit;
 	}
 
-	public TransactionType1 setFloorLimit(List<com.tools20022.repository.msg.Limit2> floorLimit) {
+	public TransactionType1 setFloorLimit(List<Limit2> floorLimit) {
 		this.floorLimit = Objects.requireNonNull(floorLimit);
 		return this;
 	}

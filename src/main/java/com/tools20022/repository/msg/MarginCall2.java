@@ -28,6 +28,9 @@ import com.tools20022.repository.entity.CollateralManagement;
 import com.tools20022.repository.entity.ExpectedCollateralType;
 import com.tools20022.repository.entity.MarginCall;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CollateralAccount2;
+import com.tools20022.repository.msg.MarginCall1;
+import com.tools20022.repository.msg.MarginCallResult3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -140,7 +143,7 @@ public class MarginCall2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall2, Optional<CollateralAccount2>> mmCollateralAccountIdentification = new MMMessageAssociationEnd<MarginCall2, Optional<CollateralAccount2>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall2.mmObject();
@@ -152,7 +155,17 @@ public class MarginCall2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CollateralAccount2.mmObject();
+			type_lazy = () -> CollateralAccount2.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralAccount2> getValue(MarginCall2 obj) {
+			return obj.getCollateralAccountIdentification();
+		}
+
+		@Override
+		public void setValue(MarginCall2 obj, Optional<CollateralAccount2> value) {
+			obj.setCollateralAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrgnCallRslt", required = true)
@@ -188,7 +201,7 @@ public class MarginCall2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginCallResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall2, MarginCallResult3> mmMarginCallResult = new MMMessageAssociationEnd<MarginCall2, MarginCallResult3>() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall2.mmObject();
@@ -200,7 +213,17 @@ public class MarginCall2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarginCallResult3.mmObject();
+			type_lazy = () -> MarginCallResult3.mmObject();
+		}
+
+		@Override
+		public MarginCallResult3 getValue(MarginCall2 obj) {
+			return obj.getMarginCallResult();
+		}
+
+		@Override
+		public void setValue(MarginCall2 obj, MarginCallResult3 value) {
+			obj.setMarginCallResult(value);
 		}
 	};
 	@XmlElement(name = "MrgnDtlDueToA")
@@ -236,7 +259,7 @@ public class MarginCall2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginDetailDueToA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall2, Optional<MarginCall1>> mmMarginDetailDueToA = new MMMessageAssociationEnd<MarginCall2, Optional<MarginCall1>>() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall2.mmObject();
@@ -248,7 +271,17 @@ public class MarginCall2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
+			type_lazy = () -> MarginCall1.mmObject();
+		}
+
+		@Override
+		public Optional<MarginCall1> getValue(MarginCall2 obj) {
+			return obj.getMarginDetailDueToA();
+		}
+
+		@Override
+		public void setValue(MarginCall2 obj, Optional<MarginCall1> value) {
+			obj.setMarginDetailDueToA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrgnDtlDueToB")
@@ -284,7 +317,7 @@ public class MarginCall2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginDetailDueToB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall2, Optional<MarginCall1>> mmMarginDetailDueToB = new MMMessageAssociationEnd<MarginCall2, Optional<MarginCall1>>() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall2.mmObject();
@@ -296,7 +329,17 @@ public class MarginCall2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarginCall1.mmObject();
+			type_lazy = () -> MarginCall1.mmObject();
+		}
+
+		@Override
+		public Optional<MarginCall1> getValue(MarginCall2 obj) {
+			return obj.getMarginDetailDueToB();
+		}
+
+		@Override
+		public void setValue(MarginCall2 obj, Optional<MarginCall1> value) {
+			obj.setMarginDetailDueToB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RqrmntDtlsDueToA")
@@ -334,7 +377,7 @@ public class MarginCall2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequirementDetailsDueToA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall2, Optional<MarginRequirement1Choice>> mmRequirementDetailsDueToA = new MMMessageAssociationEnd<MarginCall2, Optional<MarginRequirement1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralManagement.mmRiskToCover;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall2.mmObject();
@@ -347,6 +390,16 @@ public class MarginCall2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarginRequirement1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarginRequirement1Choice> getValue(MarginCall2 obj) {
+			return obj.getRequirementDetailsDueToA();
+		}
+
+		@Override
+		public void setValue(MarginCall2 obj, Optional<MarginRequirement1Choice> value) {
+			obj.setRequirementDetailsDueToA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RqrmntDtlsDueToB")
@@ -384,7 +437,7 @@ public class MarginCall2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequirementDetailsDueToB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall2, Optional<MarginRequirement1Choice>> mmRequirementDetailsDueToB = new MMMessageAssociationEnd<MarginCall2, Optional<MarginRequirement1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralManagement.mmRiskToCover;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall2.mmObject();
@@ -397,6 +450,16 @@ public class MarginCall2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarginRequirement1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarginRequirement1Choice> getValue(MarginCall2 obj) {
+			return obj.getRequirementDetailsDueToB();
+		}
+
+		@Override
+		public void setValue(MarginCall2 obj, Optional<MarginRequirement1Choice> value) {
+			obj.setRequirementDetailsDueToB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdCollDueToA")
@@ -434,7 +497,7 @@ public class MarginCall2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExpectedCollateralDueToA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall2, Optional<ExpectedCollateral2Choice>> mmExpectedCollateralDueToA = new MMMessageAssociationEnd<MarginCall2, Optional<ExpectedCollateral2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> ExpectedCollateralType.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall2.mmObject();
@@ -447,6 +510,16 @@ public class MarginCall2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ExpectedCollateral2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ExpectedCollateral2Choice> getValue(MarginCall2 obj) {
+			return obj.getExpectedCollateralDueToA();
+		}
+
+		@Override
+		public void setValue(MarginCall2 obj, Optional<ExpectedCollateral2Choice> value) {
+			obj.setExpectedCollateralDueToA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdCollDueToB")
@@ -484,7 +557,7 @@ public class MarginCall2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExpectedCollateralDueToB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCall2, Optional<ExpectedCollateral2Choice>> mmExpectedCollateralDueToB = new MMMessageAssociationEnd<MarginCall2, Optional<ExpectedCollateral2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> ExpectedCollateralType.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCall2.mmObject();
@@ -497,6 +570,16 @@ public class MarginCall2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ExpectedCollateral2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ExpectedCollateral2Choice> getValue(MarginCall2 obj) {
+			return obj.getExpectedCollateralDueToB();
+		}
+
+		@Override
+		public void setValue(MarginCall2 obj, Optional<ExpectedCollateral2Choice> value) {
+			obj.setExpectedCollateralDueToB(value.orElse(null));
 		}
 	};
 
@@ -521,7 +604,7 @@ public class MarginCall2 {
 		return collateralAccountIdentification == null ? Optional.empty() : Optional.of(collateralAccountIdentification);
 	}
 
-	public MarginCall2 setCollateralAccountIdentification(com.tools20022.repository.msg.CollateralAccount2 collateralAccountIdentification) {
+	public MarginCall2 setCollateralAccountIdentification(CollateralAccount2 collateralAccountIdentification) {
 		this.collateralAccountIdentification = collateralAccountIdentification;
 		return this;
 	}
@@ -530,7 +613,7 @@ public class MarginCall2 {
 		return marginCallResult;
 	}
 
-	public MarginCall2 setMarginCallResult(com.tools20022.repository.msg.MarginCallResult3 marginCallResult) {
+	public MarginCall2 setMarginCallResult(MarginCallResult3 marginCallResult) {
 		this.marginCallResult = Objects.requireNonNull(marginCallResult);
 		return this;
 	}
@@ -539,7 +622,7 @@ public class MarginCall2 {
 		return marginDetailDueToA == null ? Optional.empty() : Optional.of(marginDetailDueToA);
 	}
 
-	public MarginCall2 setMarginDetailDueToA(com.tools20022.repository.msg.MarginCall1 marginDetailDueToA) {
+	public MarginCall2 setMarginDetailDueToA(MarginCall1 marginDetailDueToA) {
 		this.marginDetailDueToA = marginDetailDueToA;
 		return this;
 	}
@@ -548,7 +631,7 @@ public class MarginCall2 {
 		return marginDetailDueToB == null ? Optional.empty() : Optional.of(marginDetailDueToB);
 	}
 
-	public MarginCall2 setMarginDetailDueToB(com.tools20022.repository.msg.MarginCall1 marginDetailDueToB) {
+	public MarginCall2 setMarginDetailDueToB(MarginCall1 marginDetailDueToB) {
 		this.marginDetailDueToB = marginDetailDueToB;
 		return this;
 	}

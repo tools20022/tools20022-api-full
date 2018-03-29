@@ -110,7 +110,7 @@ public class Quantity41Choice {
 	 * Quantity21Choice.mmQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity41Choice, LongDecimalNumber> mmQuantity = new MMMessageAttribute<Quantity41Choice, LongDecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity41Choice.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class Quantity41Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LongDecimalNumber.mmObject();
+		}
+
+		@Override
+		public LongDecimalNumber getValue(Quantity41Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity41Choice obj, LongDecimalNumber value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "Desc", required = true)
@@ -158,7 +168,7 @@ public class Quantity41Choice {
 	 * Quantity21Choice.mmProprietaryQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity41Choice, Max52Text> mmDescription = new MMMessageAttribute<Quantity41Choice, Max52Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity41Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class Quantity41Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(Quantity41Choice obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(Quantity41Choice obj, Max52Text value) {
+			obj.setDescription(value);
 		}
 	};
 

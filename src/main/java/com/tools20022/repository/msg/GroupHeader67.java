@@ -123,7 +123,7 @@ public class GroupHeader67 {
 	 * GroupHeader63.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader67, Max35Text> mmMessageIdentification = new MMMessageAttribute<GroupHeader67, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader67.mmObject();
@@ -136,6 +136,16 @@ public class GroupHeader67 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GroupHeader67 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader67 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -176,7 +186,7 @@ public class GroupHeader67 {
 	 * GroupHeader63.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader67, ISODateTime> mmCreationDateTime = new MMMessageAttribute<GroupHeader67, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader67.mmObject();
@@ -189,6 +199,16 @@ public class GroupHeader67 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(GroupHeader67 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(GroupHeader67 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "NbOfTxs", required = true)
@@ -225,7 +245,7 @@ public class GroupHeader67 {
 	 * GroupHeader63.mmNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader67, Exact1Text> mmNumberOfTransactions = new MMMessageAttribute<GroupHeader67, Exact1Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader67.mmObject();
 			isDerived = false;
@@ -237,6 +257,16 @@ public class GroupHeader67 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact1Text.mmObject();
+		}
+
+		@Override
+		public Exact1Text getValue(GroupHeader67 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(GroupHeader67 obj, Exact1Text value) {
+			obj.setNumberOfTransactions(value);
 		}
 	};
 

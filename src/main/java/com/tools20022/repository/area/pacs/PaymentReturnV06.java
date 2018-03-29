@@ -26,8 +26,7 @@ import com.tools20022.repository.msg.GroupHeader72;
 import com.tools20022.repository.msg.OriginalGroupHeader2;
 import com.tools20022.repository.msg.PaymentTransaction65;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ISOArchive;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -76,9 +75,7 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion
- * PaymentsClearingandSettlementISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -206,7 +203,7 @@ public class PaymentReturnV06 {
 	 * PaymentReturnV05.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentReturnV06, GroupHeader72> mmGroupHeader = new MMMessageBuildingBlock<PaymentReturnV06, GroupHeader72>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,12 +216,14 @@ public class PaymentReturnV06 {
 			complexType_lazy = () -> GroupHeader72.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentReturnV06.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader72 getValue(PaymentReturnV06 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(PaymentReturnV06 obj, GroupHeader72 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "OrgnlGrpInf")
@@ -267,7 +266,7 @@ public class PaymentReturnV06 {
 	 * PaymentReturnV05.mmOriginalGroupInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOriginalGroupInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentReturnV06, Optional<OriginalGroupHeader2>> mmOriginalGroupInformation = new MMMessageBuildingBlock<PaymentReturnV06, Optional<OriginalGroupHeader2>>() {
 		{
 			xmlTag = "OrgnlGrpInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,12 +279,14 @@ public class PaymentReturnV06 {
 			complexType_lazy = () -> OriginalGroupHeader2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentReturnV06.class.getMethod("getOriginalGroupInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<OriginalGroupHeader2> getValue(PaymentReturnV06 obj) {
+			return obj.getOriginalGroupInformation();
+		}
+
+		@Override
+		public void setValue(PaymentReturnV06 obj, Optional<OriginalGroupHeader2> value) {
+			obj.setOriginalGroupInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxInf")
@@ -328,7 +329,7 @@ public class PaymentReturnV06 {
 	 * PaymentReturnV05.mmTransactionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentReturnV06, List<PaymentTransaction65>> mmTransactionInformation = new MMMessageBuildingBlock<PaymentReturnV06, List<PaymentTransaction65>>() {
 		{
 			xmlTag = "TxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,12 +341,14 @@ public class PaymentReturnV06 {
 			complexType_lazy = () -> PaymentTransaction65.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentReturnV06.class.getMethod("getTransactionInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentTransaction65> getValue(PaymentReturnV06 obj) {
+			return obj.getTransactionInformation();
+		}
+
+		@Override
+		public void setValue(PaymentReturnV06 obj, List<PaymentTransaction65> value) {
+			obj.setTransactionInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -388,7 +391,7 @@ public class PaymentReturnV06 {
 	 * PaymentReturnV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PaymentReturnV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<PaymentReturnV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -400,12 +403,14 @@ public class PaymentReturnV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentReturnV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(PaymentReturnV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(PaymentReturnV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -425,7 +430,7 @@ public class PaymentReturnV06 {
 				definition = "Scope\r\nThe PaymentReturn message is sent by an agent to the previous agent in the payment chain to undo a payment previously settled.\r\nUsage\r\nThe PaymentReturn message is exchanged between agents to return funds after settlement of credit transfer instructions (i.e. FIToFICustomerCreditTransfer message and FinancialInstitutionCreditTransfer message) or direct debit instructions (FIToFICustomerDirectDebit message).\r\nThe PaymentReturn message should not be used between agents and non-financial institution customers. Non-financial institution customers will be informed about a debit or a credit on their account(s) through a BankToCustomerDebitCreditNotification message ('notification') and/or BankToCustomerAccountReport/BankToCustomerStatement message ('statement').\r\nThe PaymentReturn message can be used to return single instructions or multiple instructions from one or different files.\r\nThe PaymentReturn message can be used in domestic and cross-border scenarios.\r\nThe PaymentReturn message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentReturnV07.mmObject());
 				previousVersion_lazy = () -> PaymentReturnV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOPreviousversion.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "PmtRtr";
 				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();

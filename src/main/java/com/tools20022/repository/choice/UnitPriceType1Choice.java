@@ -121,7 +121,7 @@ public class UnitPriceType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPriceType1Choice, TypeOfPrice13Code> mmType = new MMMessageAttribute<UnitPriceType1Choice, TypeOfPrice13Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitPriceType1Choice.mmObject();
@@ -134,6 +134,16 @@ public class UnitPriceType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPrice13Code.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice13Code getValue(UnitPriceType1Choice obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(UnitPriceType1Choice obj, TypeOfPrice13Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class UnitPriceType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnitPriceType1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<UnitPriceType1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.UnitPriceType1Choice.mmObject();
@@ -192,6 +202,16 @@ public class UnitPriceType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(UnitPriceType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(UnitPriceType1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

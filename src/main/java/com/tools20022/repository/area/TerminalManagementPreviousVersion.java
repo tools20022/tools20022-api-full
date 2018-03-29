@@ -36,22 +36,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageDefinition} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV01
- * MaintenanceDelegationResponseV01}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV03
  * TerminalManagementRejectionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02
- * MaintenanceDelegationRequestV02}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV02
+ * MaintenanceDelegationResponseV02}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05
- * AcceptorConfigurationUpdateV05}</li>
- * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV05
- * StatusReportV05}</li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01
+ * CertificateManagementResponseV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV05
- * ManagementPlanReplacementV05}</li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV01
+ * CertificateManagementRequestV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV06
+ * StatusReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV06
+ * AcceptorConfigurationUpdateV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03
+ * MaintenanceDelegationRequestV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV06
+ * ManagementPlanReplacementV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -82,8 +88,8 @@ public class TerminalManagementPreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Terminal Management - Previous version - master";
 				definition = "Messages that support any card related terminal management services between a Terminal Management System (TMS) and a Point of Interaction (POI) system.";
-				messageDefinition_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV01.mmObject(), TerminalManagementRejectionV03.mmObject(), MaintenanceDelegationRequestV02.mmObject(), AcceptorConfigurationUpdateV05.mmObject(),
-						StatusReportV05.mmObject(), ManagementPlanReplacementV05.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(TerminalManagementRejectionV03.mmObject(), MaintenanceDelegationResponseV02.mmObject(), CertificateManagementResponseV01.mmObject(), CertificateManagementRequestV01.mmObject(),
+						StatusReportV06.mmObject(), AcceptorConfigurationUpdateV06.mmObject(), MaintenanceDelegationRequestV03.mmObject(), ManagementPlanReplacementV06.mmObject());
 				code = "catm";
 			}
 		});

@@ -118,7 +118,7 @@ public class FinancialInstitutionIdentification4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification4Choice, BICIdentifier> mmBIC = new MMMessageAttribute<FinancialInstitutionIdentification4Choice, BICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.mmObject();
@@ -130,6 +130,16 @@ public class FinancialInstitutionIdentification4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public BICIdentifier getValue(FinancialInstitutionIdentification4Choice obj) {
+			return obj.getBIC();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification4Choice obj, BICIdentifier value) {
+			obj.setBIC(value);
 		}
 	};
 	@XmlElement(name = "NmAndAdr", required = true)
@@ -165,7 +175,7 @@ public class FinancialInstitutionIdentification4Choice {
 	 * definition} = "Name and address of an institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstitutionIdentification4Choice, NameAndAddress6> mmNameAndAddress = new MMMessageAssociationEnd<FinancialInstitutionIdentification4Choice, NameAndAddress6>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstitutionIdentification4Choice.mmObject();
@@ -178,6 +188,16 @@ public class FinancialInstitutionIdentification4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NameAndAddress6.mmObject();
+		}
+
+		@Override
+		public NameAndAddress6 getValue(FinancialInstitutionIdentification4Choice obj) {
+			return obj.getNameAndAddress();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification4Choice obj, NameAndAddress6 value) {
+			obj.setNameAndAddress(value);
 		}
 	};
 

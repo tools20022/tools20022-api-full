@@ -106,7 +106,7 @@ public class Rate2 {
 	 * definition} = "Indicates the sign of the rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Rate2, Optional<PlusOrMinusIndicator>> mmSign = new MMMessageAttribute<Rate2, Optional<PlusOrMinusIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class Rate2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<PlusOrMinusIndicator> getValue(Rate2 obj) {
+			return obj.getSign();
+		}
+
+		@Override
+		public void setValue(Rate2 obj, Optional<PlusOrMinusIndicator> value) {
+			obj.setSign(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -155,7 +165,7 @@ public class Rate2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Rate2, PercentageRate> mmRate = new MMMessageAttribute<Rate2, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Rate2.mmObject();
@@ -167,6 +177,16 @@ public class Rate2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(Rate2 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Rate2 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 

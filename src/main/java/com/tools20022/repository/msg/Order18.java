@@ -29,6 +29,7 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -240,7 +241,7 @@ public class Order18 {
 	 * Order16.mmBusinessProcessType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessProcessType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<BusinessProcessType1Choice>> mmBusinessProcessType = new MMMessageAttribute<Order18, Optional<BusinessProcessType1Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -253,6 +254,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> BusinessProcessType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<BusinessProcessType1Choice> getValue(Order18 obj) {
+			return obj.getBusinessProcessType();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<BusinessProcessType1Choice> value) {
+			obj.setBusinessProcessType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrId")
@@ -296,7 +307,7 @@ public class Order18 {
 	 * Order16.mmOrderIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, List<Max35Text>> mmOrderIdentification = new MMMessageAttribute<Order18, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -309,6 +320,16 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmOrderIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(Order18 obj) {
+			return obj.getOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Order18 obj, List<Max35Text> value) {
+			obj.setOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "ClntOrdrId")
@@ -354,7 +375,7 @@ public class Order18 {
 	 * Order16.mmClientOrderIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, List<Max35Text>> mmClientOrderIdentification = new MMMessageAttribute<Order18, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -367,6 +388,16 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmClientOrderIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(Order18 obj) {
+			return obj.getClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Order18 obj, List<Max35Text> value) {
+			obj.setClientOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "ScndryClntOrdrId")
@@ -412,7 +443,7 @@ public class Order18 {
 	 * Order16.mmSecondaryClientOrderIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, List<Max35Text>> mmSecondaryClientOrderIdentification = new MMMessageAttribute<Order18, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmClientOrderIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -425,6 +456,16 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmSecondaryClientOrderIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(Order18 obj) {
+			return obj.getSecondaryClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(Order18 obj, List<Max35Text> value) {
+			obj.setSecondaryClientOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "ListId")
@@ -470,7 +511,7 @@ public class Order18 {
 	 * Order16.mmListIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, List<Max35Text>> mmListIdentification = new MMMessageAttribute<Order18, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -483,6 +524,16 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmListIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(Order18 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(Order18 obj, List<Max35Text> value) {
+			obj.setListIdentification(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmId", required = true)
@@ -525,7 +576,7 @@ public class Order18 {
 	 * Order16.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Order18, SecurityIdentification14> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<Order18, SecurityIdentification14>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -538,7 +589,17 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification14 getValue(Order18 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(Order18 obj, SecurityIdentification14 value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "Sd", required = true)
@@ -581,7 +642,7 @@ public class Order18 {
 	 * {@linkplain com.tools20022.repository.msg.Order16#mmSide Order16.mmSide}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Side3Code> mmSide = new MMMessageAttribute<Order18, Side3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -595,6 +656,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Side3Code.mmObject();
+		}
+
+		@Override
+		public Side3Code getValue(Order18 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Side3Code value) {
+			obj.setSide(value);
 		}
 	};
 	@XmlElement(name = "Pmt")
@@ -642,7 +713,7 @@ public class Order18 {
 	 * Order16.mmPayment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<DeliveryReceiptType2Code>> mmPayment = new MMMessageAttribute<Order18, Optional<DeliveryReceiptType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -656,6 +727,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveryReceiptType2Code> getValue(Order18 obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<DeliveryReceiptType2Code> value) {
+			obj.setPayment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradTxTp")
@@ -698,7 +779,7 @@ public class Order18 {
 	 * Order16.mmTradeTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<TradeType3Choice>> mmTradeTransactionType = new MMMessageAttribute<Order18, Optional<TradeType3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -711,6 +792,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeType3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TradeType3Choice> getValue(Order18 obj) {
+			return obj.getTradeTransactionType();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<TradeType3Choice> value) {
+			obj.setTradeTransactionType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradTxCond")
@@ -757,7 +848,7 @@ public class Order18 {
 	 * Order16.mmTradeTransactionCondition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeTransactionCondition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, List<TradeTransactionCondition4Choice>> mmTradeTransactionCondition = new MMMessageAttribute<Order18, List<TradeTransactionCondition4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -770,6 +861,16 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmTradeTransactionCondition;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeTransactionCondition4Choice.mmObject();
+		}
+
+		@Override
+		public List<TradeTransactionCondition4Choice> getValue(Order18 obj) {
+			return obj.getTradeTransactionCondition();
+		}
+
+		@Override
+		public void setValue(Order18 obj, List<TradeTransactionCondition4Choice> value) {
+			obj.setTradeTransactionCondition(value);
 		}
 	};
 	@XmlElement(name = "PreAdvc")
@@ -807,7 +908,7 @@ public class Order18 {
 	 * Order16.mmPreAdvice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreAdvice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<YesNoIndicator>> mmPreAdvice = new MMMessageAttribute<Order18, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
 			isDerived = false;
@@ -819,6 +920,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Order18 obj) {
+			return obj.getPreAdvice();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<YesNoIndicator> value) {
+			obj.setPreAdvice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfTrad")
@@ -861,7 +972,7 @@ public class Order18 {
 	 * Order16.mmPlaceOfTrade}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<MarketIdentification79>> mmPlaceOfTrade = new MMMessageAttribute<Order18, Optional<MarketIdentification79>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmPlaceOfTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -873,7 +984,17 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmPlaceOfTrade;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification79.mmObject();
+			complexType_lazy = () -> MarketIdentification79.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification79> getValue(Order18 obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<MarketIdentification79> value) {
+			obj.setPlaceOfTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrBookgDt")
@@ -916,7 +1037,7 @@ public class Order18 {
 	 * Order16.mmOrderBookingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderBookingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<ISODate>> mmOrderBookingDate = new MMMessageAttribute<Order18, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -929,6 +1050,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Order18 obj) {
+			return obj.getOrderBookingDate();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<ISODate> value) {
+			obj.setOrderBookingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradOrgtnDt")
@@ -974,7 +1105,7 @@ public class Order18 {
 	 * Order16.mmTradeOriginationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeOriginationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<ISODateTime>> mmTradeOriginationDate = new MMMessageAttribute<Order18, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeOriginationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -988,6 +1119,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Order18 obj) {
+			return obj.getTradeOriginationDate();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<ISODateTime> value) {
+			obj.setTradeOriginationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDt", required = true)
@@ -1032,7 +1173,7 @@ public class Order18 {
 	 * Order16.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, TradeDate4Choice> mmTradeDate = new MMMessageAttribute<Order18, TradeDate4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1046,6 +1187,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
+		}
+
+		@Override
+		public TradeDate4Choice getValue(Order18 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(Order18 obj, TradeDate4Choice value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "PrcgDt")
@@ -1087,7 +1238,7 @@ public class Order18 {
 	 * Order16.mmProcessingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<TradeDate4Choice>> mmProcessingDate = new MMMessageAttribute<Order18, Optional<TradeDate4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmStartDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1100,6 +1251,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TradeDate4Choice> getValue(Order18 obj) {
+			return obj.getProcessingDate();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<TradeDate4Choice> value) {
+			obj.setProcessingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -1145,7 +1306,7 @@ public class Order18 {
 	 * Order16.mmSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, SettlementDate8Choice> mmSettlementDate = new MMMessageAttribute<Order18, SettlementDate8Choice>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1159,6 +1320,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SettlementDate8Choice.mmObject();
+		}
+
+		@Override
+		public SettlementDate8Choice getValue(Order18 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(Order18 obj, SettlementDate8Choice value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "NAVDt")
@@ -1202,7 +1373,7 @@ public class Order18 {
 	 * Order16.mmNAVDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNAVDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<DateAndDateTime1Choice>> mmNAVDate = new MMMessageAttribute<Order18, Optional<DateAndDateTime1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1216,9 +1387,19 @@ public class Order18 {
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<DateAndDateTime1Choice> getValue(Order18 obj) {
+			return obj.getNAVDate();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<DateAndDateTime1Choice> value) {
+			obj.setNAVDate(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "PrtlFillDtls")
-	protected List<com.tools20022.repository.msg.PartialFill2> partialFillDetails;
+	protected List<PartialFill2> partialFillDetails;
 	/**
 	 * 
 	 <p>
@@ -1256,7 +1437,7 @@ public class Order18 {
 	 * Order16.mmPartialFillDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartialFillDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Order18, List<PartialFill2>> mmPartialFillDetails = new MMMessageAssociationEnd<Order18, List<PartialFill2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1268,7 +1449,17 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmPartialFillDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartialFill2.mmObject();
+			type_lazy = () -> PartialFill2.mmObject();
+		}
+
+		@Override
+		public List<PartialFill2> getValue(Order18 obj) {
+			return obj.getPartialFillDetails();
+		}
+
+		@Override
+		public void setValue(Order18 obj, List<PartialFill2> value) {
+			obj.setPartialFillDetails(value);
 		}
 	};
 	@XmlElement(name = "ConfQty", required = true)
@@ -1312,7 +1503,7 @@ public class Order18 {
 	 * Order16.mmConfirmationQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmationQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Quantity6Choice> mmConfirmationQuantity = new MMMessageAttribute<Order18, Quantity6Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1326,9 +1517,19 @@ public class Order18 {
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity6Choice.mmObject();
 		}
+
+		@Override
+		public Quantity6Choice getValue(Order18 obj) {
+			return obj.getConfirmationQuantity();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Quantity6Choice value) {
+			obj.setConfirmationQuantity(value);
+		}
 	};
 	@XmlElement(name = "QtyBrkdwn")
-	protected List<com.tools20022.repository.msg.QuantityBreakdown11> quantityBreakdown;
+	protected List<QuantityBreakdown11> quantityBreakdown;
 	/**
 	 * 
 	 <p>
@@ -1368,7 +1569,7 @@ public class Order18 {
 	 * Order16.mmQuantityBreakdown}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityBreakdown = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, List<QuantityBreakdown11>> mmQuantityBreakdown = new MMMessageAttribute<Order18, List<QuantityBreakdown11>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmLotBreakdown;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1379,7 +1580,17 @@ public class Order18 {
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
 			previousVersion_lazy = () -> Order16.mmQuantityBreakdown;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
+			complexType_lazy = () -> QuantityBreakdown11.mmObject();
+		}
+
+		@Override
+		public List<QuantityBreakdown11> getValue(Order18 obj) {
+			return obj.getQuantityBreakdown();
+		}
+
+		@Override
+		public void setValue(Order18 obj, List<QuantityBreakdown11> value) {
+			obj.setQuantityBreakdown(value);
 		}
 	};
 	@XmlElement(name = "GrssTradAmt")
@@ -1422,7 +1633,7 @@ public class Order18 {
 	 * Order16.mmGrossTradeAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrossTradeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<AmountAndDirection29>> mmGrossTradeAmount = new MMMessageAttribute<Order18, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1434,7 +1645,17 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmGrossTradeAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(Order18 obj) {
+			return obj.getGrossTradeAmount();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<AmountAndDirection29> value) {
+			obj.setGrossTradeAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DealPric", required = true)
@@ -1476,7 +1697,7 @@ public class Order18 {
 	 * Order16.mmDealPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Price4> mmDealPrice = new MMMessageAttribute<Order18, Price4>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1488,7 +1709,17 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmDealPrice;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Price4 getValue(Order18 obj) {
+			return obj.getDealPrice();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Price4 value) {
+			obj.setDealPrice(value);
 		}
 	};
 	@XmlElement(name = "TpOfPric")
@@ -1530,7 +1761,7 @@ public class Order18 {
 	 * Order16.mmTypeOfPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<TypeOfPrice10Choice>> mmTypeOfPrice = new MMMessageAttribute<Order18, Optional<TypeOfPrice10Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1543,6 +1774,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TypeOfPrice10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfPrice10Choice> getValue(Order18 obj) {
+			return obj.getTypeOfPrice();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<TypeOfPrice10Choice> value) {
+			obj.setTypeOfPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshMrgn")
@@ -1589,7 +1830,7 @@ public class Order18 {
 	 * Order16.mmCashMargin}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashMargin = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<CashMarginOrder1Code>> mmCashMargin = new MMMessageAttribute<Order18, Optional<CashMarginOrder1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmCashMargin;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1603,6 +1844,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CashMarginOrder1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CashMarginOrder1Code> getValue(Order18 obj) {
+			return obj.getCashMargin();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<CashMarginOrder1Code> value) {
+			obj.setCashMargin(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Comssn")
@@ -1643,7 +1894,7 @@ public class Order18 {
 	 * Order16.mmCommission}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommission = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Order18, Optional<Commission16>> mmCommission = new MMMessageAssociationEnd<Order18, Optional<Commission16>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1656,7 +1907,17 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Commission16.mmObject();
+			type_lazy = () -> Commission16.mmObject();
+		}
+
+		@Override
+		public Optional<Commission16> getValue(Order18 obj) {
+			return obj.getCommission();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<Commission16> value) {
+			obj.setCommission(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NbOfDaysAcrd")
@@ -1702,7 +1963,7 @@ public class Order18 {
 	 * Order16.mmNumberOfDaysAccrued}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<Max3Number>> mmNumberOfDaysAccrued = new MMMessageAttribute<Order18, Optional<Max3Number>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1716,6 +1977,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Number.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Number> getValue(Order18 obj) {
+			return obj.getNumberOfDaysAccrued();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<Max3Number> value) {
+			obj.setNumberOfDaysAccrued(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GvUpNbOfDays")
@@ -1758,7 +2029,7 @@ public class Order18 {
 	 * Order16.mmGiveUpNumberOfDays}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGiveUpNumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<Max3Number>> mmGiveUpNumberOfDays = new MMMessageAttribute<Order18, Optional<Max3Number>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmGiveUpNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1771,6 +2042,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Number.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Number> getValue(Order18 obj) {
+			return obj.getGiveUpNumberOfDays();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<Max3Number> value) {
+			obj.setGiveUpNumberOfDays(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstTp")
@@ -1813,7 +2094,7 @@ public class Order18 {
 	 * Order16.mmInterestType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<InterestType2Code>> mmInterestType = new MMMessageAttribute<Order18, Optional<InterestType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmTypeOfInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1826,6 +2107,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> InterestType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<InterestType2Code> getValue(Order18 obj) {
+			return obj.getInterestType();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<InterestType2Code> value) {
+			obj.setInterestType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstPctg")
@@ -1868,7 +2159,7 @@ public class Order18 {
 	 * Order16.mmAccruedInterestPercentage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<PercentageRate>> mmAccruedInterestPercentage = new MMMessageAttribute<Order18, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1881,6 +2172,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Order18 obj) {
+			return obj.getAccruedInterestPercentage();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<PercentageRate> value) {
+			obj.setAccruedInterestPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradRgltryCondsTp")
@@ -1922,7 +2223,7 @@ public class Order18 {
 	 * Order16.mmTradeRegulatoryConditionsType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeRegulatoryConditionsType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<TradeRegulatoryConditions1Code>> mmTradeRegulatoryConditionsType = new MMMessageAttribute<Order18, Optional<TradeRegulatoryConditions1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmTradeRegulatoryConditionsType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1935,6 +2236,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TradeRegulatoryConditions1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TradeRegulatoryConditions1Code> getValue(Order18 obj) {
+			return obj.getTradeRegulatoryConditionsType();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<TradeRegulatoryConditions1Code> value) {
+			obj.setTradeRegulatoryConditionsType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CcyToBuyOrSell")
@@ -1981,7 +2292,7 @@ public class Order18 {
 	 * Order16.mmCurrencyToBuyOrSell}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyToBuyOrSell = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<CurrencyToBuyOrSell1Choice>> mmCurrencyToBuyOrSell = new MMMessageAttribute<Order18, Optional<CurrencyToBuyOrSell1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -1995,6 +2306,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CurrencyToBuyOrSell1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyToBuyOrSell1Choice> getValue(Order18 obj) {
+			return obj.getCurrencyToBuyOrSell();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<CurrencyToBuyOrSell1Choice> value) {
+			obj.setCurrencyToBuyOrSell(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrOrgtrElgblty")
@@ -2038,7 +2359,7 @@ public class Order18 {
 	 * Order16.mmOrderOriginatorEligibility}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderOriginatorEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<Eligibility1Code>> mmOrderOriginatorEligibility = new MMMessageAttribute<Order18, Optional<Eligibility1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderOriginatorEligibility;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2051,6 +2372,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Eligibility1Code> getValue(Order18 obj) {
+			return obj.getOrderOriginatorEligibility();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<Eligibility1Code> value) {
+			obj.setOrderOriginatorEligibility(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PosFct")
@@ -2097,7 +2428,7 @@ public class Order18 {
 	 * Order16.mmPositionEffect}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPositionEffect = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<PositionEffect2Code>> mmPositionEffect = new MMMessageAttribute<Order18, Optional<PositionEffect2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmPositionEffect;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2111,6 +2442,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PositionEffect2Code.mmObject();
+		}
+
+		@Override
+		public Optional<PositionEffect2Code> getValue(Order18 obj) {
+			return obj.getPositionEffect();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<PositionEffect2Code> value) {
+			obj.setPositionEffect(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DerivCvrd")
@@ -2157,7 +2498,7 @@ public class Order18 {
 	 * Order16.mmDerivativeCovered}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDerivativeCovered = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<YesNoIndicator>> mmDerivativeCovered = new MMMessageAttribute<Order18, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmDerivativeCovered;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2171,6 +2512,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Order18 obj) {
+			return obj.getDerivativeCovered();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<YesNoIndicator> value) {
+			obj.setDerivativeCovered(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgTaxBsisTp")
@@ -2210,7 +2561,7 @@ public class Order18 {
 	 * Order16.mmChargeTaxBasisType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeTaxBasisType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Order18, Optional<ChargeTaxBasisType1Choice>> mmChargeTaxBasisType = new MMMessageAssociationEnd<Order18, Optional<ChargeTaxBasisType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2224,6 +2575,16 @@ public class Order18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ChargeTaxBasisType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeTaxBasisType1Choice> getValue(Order18 obj) {
+			return obj.getChargeTaxBasisType();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<ChargeTaxBasisType1Choice> value) {
+			obj.setChargeTaxBasisType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CptlGnTp")
@@ -2265,7 +2626,7 @@ public class Order18 {
 	 * Order16.mmCapitalGainType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCapitalGainType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<EUCapitalGainType2Choice>> mmCapitalGainType = new MMMessageAttribute<Order18, Optional<EUCapitalGainType2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2278,6 +2639,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> EUCapitalGainType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<EUCapitalGainType2Choice> getValue(Order18 obj) {
+			return obj.getCapitalGainType();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<EUCapitalGainType2Choice> value) {
+			obj.setCapitalGainType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchSts")
@@ -2322,7 +2693,7 @@ public class Order18 {
 	 * Order16.mmMatchStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<MatchingStatus8Choice>> mmMatchStatus = new MMMessageAttribute<Order18, Optional<MatchingStatus8Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2336,6 +2707,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MatchingStatus8Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus8Choice> getValue(Order18 obj) {
+			return obj.getMatchStatus();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<MatchingStatus8Choice> value) {
+			obj.setMatchStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CallInTp")
@@ -2376,7 +2757,7 @@ public class Order18 {
 	 * Order16.mmCallInType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCallInType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<CallIn1Code>> mmCallInType = new MMMessageAttribute<Order18, Optional<CallIn1Code>>() {
 		{
 			businessElementTrace_lazy = () -> CashManagementService.mmCallInType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2389,6 +2770,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CallIn1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CallIn1Code> getValue(Order18 obj) {
+			return obj.getCallInType();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<CallIn1Code> value) {
+			obj.setCallInType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "YldTp")
@@ -2430,7 +2821,7 @@ public class Order18 {
 	 * Order16.mmYieldType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYieldType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<YieldCalculation2>> mmYieldType = new MMMessageAttribute<Order18, Optional<YieldCalculation2>>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmCalculationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2442,7 +2833,17 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmYieldType;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.YieldCalculation2.mmObject();
+			complexType_lazy = () -> YieldCalculation2.mmObject();
+		}
+
+		@Override
+		public Optional<YieldCalculation2> getValue(Order18 obj) {
+			return obj.getYieldType();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<YieldCalculation2> value) {
+			obj.setYieldType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rptg")
@@ -2488,7 +2889,7 @@ public class Order18 {
 	 * Order16.mmReporting}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReporting = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, List<Reporting5Choice>> mmReporting = new MMMessageAttribute<Order18, List<Reporting5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmReportingType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2501,6 +2902,16 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmReporting;
 			minOccurs = 0;
 			complexType_lazy = () -> Reporting5Choice.mmObject();
+		}
+
+		@Override
+		public List<Reporting5Choice> getValue(Order18 obj) {
+			return obj.getReporting();
+		}
+
+		@Override
+		public void setValue(Order18 obj, List<Reporting5Choice> value) {
+			obj.setReporting(value);
 		}
 	};
 	@XmlElement(name = "AddtlPhysOrRegnDtls")
@@ -2544,7 +2955,7 @@ public class Order18 {
 	 * Order16.mmAdditionalPhysicalOrRegistrationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalPhysicalOrRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<RegistrationParameters3>> mmAdditionalPhysicalOrRegistrationDetails = new MMMessageAttribute<Order18, Optional<RegistrationParameters3>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2556,7 +2967,17 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmAdditionalPhysicalOrRegistrationDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.RegistrationParameters3.mmObject();
+			complexType_lazy = () -> RegistrationParameters3.mmObject();
+		}
+
+		@Override
+		public Optional<RegistrationParameters3> getValue(Order18 obj) {
+			return obj.getAdditionalPhysicalOrRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<RegistrationParameters3> value) {
+			obj.setAdditionalPhysicalOrRegistrationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlTradInstrPrcgInf")
@@ -2594,7 +3015,7 @@ public class Order18 {
 	 * Order16.mmAdditionalTradeInstructionProcessingInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalTradeInstructionProcessingInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<Max350Text>> mmAdditionalTradeInstructionProcessingInformation = new MMMessageAttribute<Order18, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
 			isDerived = false;
@@ -2606,6 +3027,16 @@ public class Order18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(Order18 obj) {
+			return obj.getAdditionalTradeInstructionProcessingInformation();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<Max350Text> value) {
+			obj.setAdditionalTradeInstructionProcessingInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcrdIntrstAmt")
@@ -2652,7 +3083,7 @@ public class Order18 {
 	 * Order16.mmAccruedInterestAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Order18, Optional<AmountAndDirection29>> mmAccruedInterestAmount = new MMMessageAttribute<Order18, Optional<AmountAndDirection29>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Order18.mmObject();
@@ -2665,7 +3096,17 @@ public class Order18 {
 			previousVersion_lazy = () -> Order16.mmAccruedInterestAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection29.mmObject();
+			complexType_lazy = () -> AmountAndDirection29.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection29> getValue(Order18 obj) {
+			return obj.getAccruedInterestAmount();
+		}
+
+		@Override
+		public void setValue(Order18 obj, Optional<AmountAndDirection29> value) {
+			obj.setAccruedInterestAmount(value.orElse(null));
 		}
 	};
 
@@ -2750,7 +3191,7 @@ public class Order18 {
 		return financialInstrumentIdentification;
 	}
 
-	public Order18 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public Order18 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -2804,7 +3245,7 @@ public class Order18 {
 		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public Order18 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification79 placeOfTrade) {
+	public Order18 setPlaceOfTrade(MarketIdentification79 placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
 		return this;
 	}
@@ -2867,7 +3308,7 @@ public class Order18 {
 		return partialFillDetails == null ? partialFillDetails = new ArrayList<>() : partialFillDetails;
 	}
 
-	public Order18 setPartialFillDetails(List<com.tools20022.repository.msg.PartialFill2> partialFillDetails) {
+	public Order18 setPartialFillDetails(List<PartialFill2> partialFillDetails) {
 		this.partialFillDetails = Objects.requireNonNull(partialFillDetails);
 		return this;
 	}
@@ -2885,7 +3326,7 @@ public class Order18 {
 		return quantityBreakdown == null ? quantityBreakdown = new ArrayList<>() : quantityBreakdown;
 	}
 
-	public Order18 setQuantityBreakdown(List<com.tools20022.repository.msg.QuantityBreakdown11> quantityBreakdown) {
+	public Order18 setQuantityBreakdown(List<QuantityBreakdown11> quantityBreakdown) {
 		this.quantityBreakdown = Objects.requireNonNull(quantityBreakdown);
 		return this;
 	}
@@ -2894,7 +3335,7 @@ public class Order18 {
 		return grossTradeAmount == null ? Optional.empty() : Optional.of(grossTradeAmount);
 	}
 
-	public Order18 setGrossTradeAmount(com.tools20022.repository.msg.AmountAndDirection29 grossTradeAmount) {
+	public Order18 setGrossTradeAmount(AmountAndDirection29 grossTradeAmount) {
 		this.grossTradeAmount = grossTradeAmount;
 		return this;
 	}
@@ -2903,7 +3344,7 @@ public class Order18 {
 		return dealPrice;
 	}
 
-	public Order18 setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
+	public Order18 setDealPrice(Price4 dealPrice) {
 		this.dealPrice = Objects.requireNonNull(dealPrice);
 		return this;
 	}
@@ -2930,7 +3371,7 @@ public class Order18 {
 		return commission == null ? Optional.empty() : Optional.of(commission);
 	}
 
-	public Order18 setCommission(com.tools20022.repository.msg.Commission16 commission) {
+	public Order18 setCommission(Commission16 commission) {
 		this.commission = commission;
 		return this;
 	}
@@ -3056,7 +3497,7 @@ public class Order18 {
 		return yieldType == null ? Optional.empty() : Optional.of(yieldType);
 	}
 
-	public Order18 setYieldType(com.tools20022.repository.msg.YieldCalculation2 yieldType) {
+	public Order18 setYieldType(YieldCalculation2 yieldType) {
 		this.yieldType = yieldType;
 		return this;
 	}
@@ -3074,7 +3515,7 @@ public class Order18 {
 		return additionalPhysicalOrRegistrationDetails == null ? Optional.empty() : Optional.of(additionalPhysicalOrRegistrationDetails);
 	}
 
-	public Order18 setAdditionalPhysicalOrRegistrationDetails(com.tools20022.repository.msg.RegistrationParameters3 additionalPhysicalOrRegistrationDetails) {
+	public Order18 setAdditionalPhysicalOrRegistrationDetails(RegistrationParameters3 additionalPhysicalOrRegistrationDetails) {
 		this.additionalPhysicalOrRegistrationDetails = additionalPhysicalOrRegistrationDetails;
 		return this;
 	}
@@ -3092,7 +3533,7 @@ public class Order18 {
 		return accruedInterestAmount == null ? Optional.empty() : Optional.of(accruedInterestAmount);
 	}
 
-	public Order18 setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection29 accruedInterestAmount) {
+	public Order18 setAccruedInterestAmount(AmountAndDirection29 accruedInterestAmount) {
 		this.accruedInterestAmount = accruedInterestAmount;
 		return this;
 	}

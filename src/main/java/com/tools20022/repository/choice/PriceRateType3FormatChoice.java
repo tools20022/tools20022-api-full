@@ -98,7 +98,7 @@ public class PriceRateType3FormatChoice {
 	 * definition} = "Standard code to specify the type of price rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateType3FormatChoice, PriceRateType3Code> mmCode = new MMMessageAttribute<PriceRateType3FormatChoice, PriceRateType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateType3FormatChoice.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class PriceRateType3FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceRateType3Code.mmObject();
+		}
+
+		@Override
+		public PriceRateType3Code getValue(PriceRateType3FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PriceRateType3FormatChoice obj, PriceRateType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -141,7 +151,7 @@ public class PriceRateType3FormatChoice {
 	 * definition} = "Proprietary code to express the type of price rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceRateType3FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<PriceRateType3FormatChoice, GenericIdentification13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceRateType3FormatChoice.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class PriceRateType3FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(PriceRateType3FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PriceRateType3FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

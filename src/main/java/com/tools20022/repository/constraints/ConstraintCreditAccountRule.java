@@ -23,7 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.LiquidityCreditTransfer1;
 
 /**
- * At least CreditAccount or Creditor must be present, ot both.
+ * At least CreditAccount or Creditor must be present, or both.
  */
 public class ConstraintCreditAccountRule {
 
@@ -48,22 +48,26 @@ public class ConstraintCreditAccountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "At least CreditAccount or Creditor must be present, ot both."</li>
+	 * "At least CreditAccount or Creditor must be present, or both."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<LiquidityCreditTransfer1> forLiquidityCreditTransfer1 = new MMConstraint<LiquidityCreditTransfer1>() {
 		{
-			validator = ConstraintCreditAccountRule::checkLiquidityCreditTransfer1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAccountRule";
-			definition = "At least CreditAccount or Creditor must be present, ot both.";
+			definition = "At least CreditAccount or Creditor must be present, or both.";
 			owner_lazy = () -> LiquidityCreditTransfer1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Creditor</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(LiquidityCreditTransfer1 obj) throws Exception {
+			checkLiquidityCreditTransfer1(obj);
 		}
 	};
 
 	/**
-	 * At least CreditAccount or Creditor must be present, ot both.
+	 * At least CreditAccount or Creditor must be present, or both.
 	 */
 	public static void checkLiquidityCreditTransfer1(LiquidityCreditTransfer1 obj) throws Exception {
 		throw new NotImplementedConstraintException();

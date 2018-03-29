@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrument59;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -83,7 +84,7 @@ public class GeneralCollateral3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "FinInstrmId")
-	protected List<com.tools20022.repository.msg.FinancialInstrument59> financialInstrumentIdentification;
+	protected List<FinancialInstrument59> financialInstrumentIdentification;
 	/**
 	 * 
 	 <p>
@@ -116,7 +117,7 @@ public class GeneralCollateral3 {
 	 * "ISINs of allocated securities of general collateral where known.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralCollateral3, List<FinancialInstrument59>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<GeneralCollateral3, List<FinancialInstrument59>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmGenericIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralCollateral3.mmObject();
@@ -127,7 +128,17 @@ public class GeneralCollateral3 {
 			definition = "ISINs of allocated securities of general collateral where known.\r\n";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument59.mmObject();
+			type_lazy = () -> FinancialInstrument59.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrument59> getValue(GeneralCollateral3 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(GeneralCollateral3 obj, List<FinancialInstrument59> value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "ElgblFinInstrmId")
@@ -171,7 +182,7 @@ public class GeneralCollateral3 {
 	 * GeneralCollateral2.mmEligibleFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEligibleFinancialInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralCollateral3, List<ISINOct2015Identifier>> mmEligibleFinancialInstrumentIdentification = new MMMessageAttribute<GeneralCollateral3, List<ISINOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralCollateral3.mmObject();
@@ -183,6 +194,16 @@ public class GeneralCollateral3 {
 			previousVersion_lazy = () -> GeneralCollateral2.mmEligibleFinancialInstrumentIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public List<ISINOct2015Identifier> getValue(GeneralCollateral3 obj) {
+			return obj.getEligibleFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(GeneralCollateral3 obj, List<ISINOct2015Identifier> value) {
+			obj.setEligibleFinancialInstrumentIdentification(value);
 		}
 	};
 
@@ -205,7 +226,7 @@ public class GeneralCollateral3 {
 		return financialInstrumentIdentification == null ? financialInstrumentIdentification = new ArrayList<>() : financialInstrumentIdentification;
 	}
 
-	public GeneralCollateral3 setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.FinancialInstrument59> financialInstrumentIdentification) {
+	public GeneralCollateral3 setFinancialInstrumentIdentification(List<FinancialInstrument59> financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}

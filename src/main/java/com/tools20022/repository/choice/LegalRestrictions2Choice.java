@@ -114,7 +114,7 @@ public class LegalRestrictions2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LegalRestrictions2Choice, LegalRestrictions2Code> mmCode = new MMMessageAttribute<LegalRestrictions2Choice, LegalRestrictions2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalRestrictions2Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class LegalRestrictions2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LegalRestrictions2Code.mmObject();
+		}
+
+		@Override
+		public LegalRestrictions2Code getValue(LegalRestrictions2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LegalRestrictions2Choice obj, LegalRestrictions2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class LegalRestrictions2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LegalRestrictions2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<LegalRestrictions2Choice, GenericIdentification40>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LegalRestrictions2Choice.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class LegalRestrictions2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(LegalRestrictions2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(LegalRestrictions2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -108,7 +108,7 @@ public class RateType8Choice {
 	 * definition} = "Rate expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType8Choice, RateType1Code> mmCode = new MMMessageAttribute<RateType8Choice, RateType1Code>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType8Choice.mmObject();
@@ -120,6 +120,16 @@ public class RateType8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType1Code.mmObject();
+		}
+
+		@Override
+		public RateType1Code getValue(RateType8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateType8Choice obj, RateType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class RateType8Choice {
 	 * definition} = "Rate expressed as an a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateType8Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<RateType8Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType8Choice.mmObject();
@@ -169,6 +179,16 @@ public class RateType8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(RateType8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateType8Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

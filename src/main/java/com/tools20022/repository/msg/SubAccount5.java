@@ -132,7 +132,7 @@ public class SubAccount5 {
 	 * SubAccount1.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccount5, Max35Text> mmIdentification = new MMMessageAttribute<SubAccount5, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmObject();
@@ -146,6 +146,16 @@ public class SubAccount5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SubAccount5 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SubAccount5 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -195,7 +205,7 @@ public class SubAccount5 {
 	 * SubAccount1.mmName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccount5, Optional<Max35Text>> mmName = new MMMessageAttribute<SubAccount5, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmObject();
@@ -209,6 +219,16 @@ public class SubAccount5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SubAccount5 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SubAccount5 obj, Optional<Max35Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Chrtc")
@@ -256,7 +276,7 @@ public class SubAccount5 {
 	 * SubAccount1.mmCharacteristic}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCharacteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccount5, Optional<Max35Text>> mmCharacteristic = new MMMessageAttribute<SubAccount5, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Account.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccount5.mmObject();
@@ -270,6 +290,16 @@ public class SubAccount5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(SubAccount5 obj) {
+			return obj.getCharacteristic();
+		}
+
+		@Override
+		public void setValue(SubAccount5 obj, Optional<Max35Text> value) {
+			obj.setCharacteristic(value.orElse(null));
 		}
 	};
 

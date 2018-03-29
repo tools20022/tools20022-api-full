@@ -127,7 +127,7 @@ public class AssetClassCommodity2Choice {
 	 * definition} = "Code list for agricultural type of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgricultural = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductAgriculturalType1Code> mmAgricultural = new MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductAgriculturalType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity2Choice.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class AssetClassCommodity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductAgriculturalType1Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductAgriculturalType1Code getValue(AssetClassCommodity2Choice obj) {
+			return obj.getAgricultural();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity2Choice obj, AssetClassSubProductAgriculturalType1Code value) {
+			obj.setAgricultural(value);
 		}
 	};
 	@XmlElement(name = "Nrgy", required = true)
@@ -170,7 +180,7 @@ public class AssetClassCommodity2Choice {
 	 * definition} = "Code list for energy type of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEnergy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductEnergyType1Code> mmEnergy = new MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductEnergyType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity2Choice.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class AssetClassCommodity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductEnergyType1Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductEnergyType1Code getValue(AssetClassCommodity2Choice obj) {
+			return obj.getEnergy();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity2Choice obj, AssetClassSubProductEnergyType1Code value) {
+			obj.setEnergy(value);
 		}
 	};
 	@XmlElement(name = "Envttl", required = true)
@@ -213,7 +233,7 @@ public class AssetClassCommodity2Choice {
 	 * definition} = "Code list for environmental type of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEnvironmental = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductEnvironmentalType1Code> mmEnvironmental = new MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductEnvironmentalType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity2Choice.mmObject();
 			isDerived = false;
@@ -224,6 +244,16 @@ public class AssetClassCommodity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductEnvironmentalType1Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductEnvironmentalType1Code getValue(AssetClassCommodity2Choice obj) {
+			return obj.getEnvironmental();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity2Choice obj, AssetClassSubProductEnvironmentalType1Code value) {
+			obj.setEnvironmental(value);
 		}
 	};
 	@XmlElement(name = "Frght", required = true)
@@ -256,7 +286,7 @@ public class AssetClassCommodity2Choice {
 	 * definition} = "Code list for freight type of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFreight = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductFreight1Code> mmFreight = new MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductFreight1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity2Choice.mmObject();
 			isDerived = false;
@@ -267,6 +297,16 @@ public class AssetClassCommodity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductFreight1Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductFreight1Code getValue(AssetClassCommodity2Choice obj) {
+			return obj.getFreight();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity2Choice obj, AssetClassSubProductFreight1Code value) {
+			obj.setFreight(value);
 		}
 	};
 	@XmlElement(name = "Indx", required = true)
@@ -298,7 +338,7 @@ public class AssetClassCommodity2Choice {
 	 * definition} = "Indicates the index type of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndex = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassCommodity2Choice, NoReasonCode> mmIndex = new MMMessageAttribute<AssetClassCommodity2Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity2Choice.mmObject();
 			isDerived = false;
@@ -309,6 +349,16 @@ public class AssetClassCommodity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AssetClassCommodity2Choice obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity2Choice obj, NoReasonCode value) {
+			obj.setIndex(value);
 		}
 	};
 	@XmlElement(name = "Metl", required = true)
@@ -341,7 +391,7 @@ public class AssetClassCommodity2Choice {
 	 * definition} = "Code list for metal type of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMetal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductMetal1Code> mmMetal = new MMMessageAttribute<AssetClassCommodity2Choice, AssetClassSubProductMetal1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity2Choice.mmObject();
 			isDerived = false;
@@ -352,6 +402,16 @@ public class AssetClassCommodity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductMetal1Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductMetal1Code getValue(AssetClassCommodity2Choice obj) {
+			return obj.getMetal();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity2Choice obj, AssetClassSubProductMetal1Code value) {
+			obj.setMetal(value);
 		}
 	};
 	@XmlElement(name = "Extc", required = true)
@@ -383,7 +443,7 @@ public class AssetClassCommodity2Choice {
 	 * definition} = "Indicates the exotic type of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExotic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassCommodity2Choice, NoReasonCode> mmExotic = new MMMessageAttribute<AssetClassCommodity2Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity2Choice.mmObject();
 			isDerived = false;
@@ -394,6 +454,16 @@ public class AssetClassCommodity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AssetClassCommodity2Choice obj) {
+			return obj.getExotic();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity2Choice obj, NoReasonCode value) {
+			obj.setExotic(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -425,7 +495,7 @@ public class AssetClassCommodity2Choice {
 	 * definition} = "Indicates other types of commodities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AssetClassCommodity2Choice, NoReasonCode> mmOther = new MMMessageAttribute<AssetClassCommodity2Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodity2Choice.mmObject();
 			isDerived = false;
@@ -436,6 +506,16 @@ public class AssetClassCommodity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AssetClassCommodity2Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(AssetClassCommodity2Choice obj, NoReasonCode value) {
+			obj.setOther(value);
 		}
 	};
 

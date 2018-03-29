@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.CorporateActionDistribution;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecuritiesAccount9;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -122,7 +124,7 @@ public class CorporateActionSecuritiesMovement2 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSecuritiesMovement2, SecurityIdentification7> mmSecurityIdentification = new MMMessageAttribute<CorporateActionSecuritiesMovement2, SecurityIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmObject();
@@ -133,7 +135,17 @@ public class CorporateActionSecuritiesMovement2 {
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(CorporateActionSecuritiesMovement2 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionSecuritiesMovement2 obj, SecurityIdentification7 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "PstngDtTm")
@@ -171,7 +183,7 @@ public class CorporateActionSecuritiesMovement2 {
 	 * definition} = "Date and time of the posting of the movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSecuritiesMovement2, Optional<DateAndDateTimeChoice>> mmPostingDateTime = new MMMessageAttribute<CorporateActionSecuritiesMovement2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmObject();
@@ -183,6 +195,16 @@ public class CorporateActionSecuritiesMovement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(CorporateActionSecuritiesMovement2 obj) {
+			return obj.getPostingDateTime();
+		}
+
+		@Override
+		public void setValue(CorporateActionSecuritiesMovement2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setPostingDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstngId")
@@ -214,7 +236,7 @@ public class CorporateActionSecuritiesMovement2 {
 	 * definition} = "Posting identification of the securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSecuritiesMovement2, Optional<Max35Text>> mmPostingIdentification = new MMMessageAttribute<CorporateActionSecuritiesMovement2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmObject();
 			isDerived = false;
@@ -225,6 +247,16 @@ public class CorporateActionSecuritiesMovement2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CorporateActionSecuritiesMovement2 obj) {
+			return obj.getPostingIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionSecuritiesMovement2 obj, Optional<Max35Text> value) {
+			obj.setPostingIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstngQty", required = true)
@@ -263,7 +295,7 @@ public class CorporateActionSecuritiesMovement2 {
 	 * "Securities quantity posted as a result of the securities movement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSecuritiesMovement2, UnitOrFaceAmount1Choice> mmPostingQuantity = new MMMessageAttribute<CorporateActionSecuritiesMovement2, UnitOrFaceAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmPostingQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmObject();
@@ -276,9 +308,19 @@ public class CorporateActionSecuritiesMovement2 {
 			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
 		}
+
+		@Override
+		public UnitOrFaceAmount1Choice getValue(CorporateActionSecuritiesMovement2 obj) {
+			return obj.getPostingQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionSecuritiesMovement2 obj, UnitOrFaceAmount1Choice value) {
+			obj.setPostingQuantity(value);
+		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
-	protected List<com.tools20022.repository.msg.SecuritiesAccount9> accountDetails;
+	protected List<SecuritiesAccount9> accountDetails;
 	/**
 	 * 
 	 <p>
@@ -312,7 +354,7 @@ public class CorporateActionSecuritiesMovement2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionSecuritiesMovement2, List<SecuritiesAccount9>> mmAccountDetails = new MMMessageAssociationEnd<CorporateActionSecuritiesMovement2, List<SecuritiesAccount9>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSecuritiesMovement2.mmObject();
@@ -324,7 +366,17 @@ public class CorporateActionSecuritiesMovement2 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount9.mmObject();
+			type_lazy = () -> SecuritiesAccount9.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount9> getValue(CorporateActionSecuritiesMovement2 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionSecuritiesMovement2 obj, List<SecuritiesAccount9> value) {
+			obj.setAccountDetails(value);
 		}
 	};
 
@@ -348,7 +400,7 @@ public class CorporateActionSecuritiesMovement2 {
 		return securityIdentification;
 	}
 
-	public CorporateActionSecuritiesMovement2 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+	public CorporateActionSecuritiesMovement2 setSecurityIdentification(SecurityIdentification7 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}
@@ -384,7 +436,7 @@ public class CorporateActionSecuritiesMovement2 {
 		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public CorporateActionSecuritiesMovement2 setAccountDetails(List<com.tools20022.repository.msg.SecuritiesAccount9> accountDetails) {
+	public CorporateActionSecuritiesMovement2 setAccountDetails(List<SecuritiesAccount9> accountDetails) {
 		this.accountDetails = Objects.requireNonNull(accountDetails);
 		return this;
 	}

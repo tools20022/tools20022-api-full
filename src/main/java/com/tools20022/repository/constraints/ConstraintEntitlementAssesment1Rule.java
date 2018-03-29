@@ -59,11 +59,15 @@ public class ConstraintEntitlementAssesment1Rule {
 	 */
 	public static final MMConstraint<EntitlementAssessment1> forEntitlementAssessment1 = new MMConstraint<EntitlementAssessment1>() {
 		{
-			validator = ConstraintEntitlementAssesment1Rule::checkEntitlementAssessment1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementAssesment1Rule";
 			definition = "At least one message element in the list SecuritiesBlockingDeadline, SecuritiesBlockingMarketDeadline, SecuritiesBlockingSTPDeadline, SecuritiesBlockingPeriodEndDate, EntitlementFixingDate, RegistrationSecuritiesDeadline, RegistrationSecuritiesSTPDeadline, RegistrationSecuritiesMarketDeadline, RegistrationParticipationDeadline, RegistrationParticipationSTPDeadline, RegistrationParticipationMarketDeadline must be present. More than one message element in the list may be present.";
 			owner_lazy = () -> EntitlementAssessment1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EntitlementAssessment1 obj) throws Exception {
+			checkEntitlementAssessment1(obj);
 		}
 	};
 	/**
@@ -97,12 +101,16 @@ public class ConstraintEntitlementAssesment1Rule {
 	 */
 	public static final MMConstraint<EntitlementAssessment2> forEntitlementAssessment2 = new MMConstraint<EntitlementAssessment2>() {
 		{
-			validator = ConstraintEntitlementAssesment1Rule::checkEntitlementAssessment2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementAssesment1Rule";
 			definition = "At least one message element in the list SecuritiesBlockingDeadline, SecuritiesBlockingMarketDeadline, SecuritiesBlockingSTPDeadline, SecuritiesBlockingPeriodEndDate, EntitlementFixingDate, RegistrationSecuritiesDeadline, RegistrationSecuritiesSTPDeadline, RegistrationSecuritiesMarketDeadline, RegistrationParticipationDeadline, RegistrationParticipationSTPDeadline, RegistrationParticipationMarketDeadline must be present. More than one message element in the list may be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEntitlementAssesment1Rule.forEntitlementAssessment3);
 			owner_lazy = () -> EntitlementAssessment2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EntitlementAssessment2 obj) throws Exception {
+			checkEntitlementAssessment2(obj);
 		}
 	};
 	/**
@@ -133,12 +141,16 @@ public class ConstraintEntitlementAssesment1Rule {
 	 */
 	public static final MMConstraint<EntitlementAssessment3> forEntitlementAssessment3 = new MMConstraint<EntitlementAssessment3>() {
 		{
-			validator = ConstraintEntitlementAssesment1Rule::checkEntitlementAssessment3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementAssesment1Rule";
 			definition = "At least one message element in the list SecuritiesBlockingDeadline, SecuritiesBlockingMarketDeadline, SecuritiesBlockingSTPDeadline, SecuritiesBlockingPeriodEndDate, EntitlementFixingDate, RegistrationSecuritiesDeadline, RegistrationSecuritiesSTPDeadline, RegistrationSecuritiesMarketDeadline, RegistrationParticipationDeadline, RegistrationParticipationSTPDeadline, RegistrationParticipationMarketDeadline must be present. More than one message element in the list may be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEntitlementAssesment1Rule.forEntitlementAssessment2;
 			owner_lazy = () -> EntitlementAssessment3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EntitlementAssessment3 obj) throws Exception {
+			checkEntitlementAssessment3(obj);
 		}
 	};
 

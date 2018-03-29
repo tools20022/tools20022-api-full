@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.TerminalManagementAction4Code;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DataSetIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -63,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TMSActionIdentification5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -123,7 +124,7 @@ public class TMSActionIdentification5 {
 	 * TMSActionIdentification4.mmActionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TMSActionIdentification5, TerminalManagementAction4Code> mmActionType = new MMMessageAttribute<TMSActionIdentification5, TerminalManagementAction4Code>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification5.mmObject();
@@ -136,6 +137,16 @@ public class TMSActionIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction4Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction4Code getValue(TMSActionIdentification5 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(TMSActionIdentification5 obj, TerminalManagementAction4Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "DataSetId")
@@ -171,7 +182,7 @@ public class TMSActionIdentification5 {
 	 * TMSActionIdentification4.mmDataSetIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TMSActionIdentification5, Optional<DataSetIdentification7>> mmDataSetIdentification = new MMMessageAssociationEnd<TMSActionIdentification5, Optional<DataSetIdentification7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification5.mmObject();
 			isDerived = false;
@@ -183,7 +194,17 @@ public class TMSActionIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DataSetIdentification7.mmObject();
+			type_lazy = () -> DataSetIdentification7.mmObject();
+		}
+
+		@Override
+		public Optional<DataSetIdentification7> getValue(TMSActionIdentification5 obj) {
+			return obj.getDataSetIdentification();
+		}
+
+		@Override
+		public void setValue(TMSActionIdentification5 obj, Optional<DataSetIdentification7> value) {
+			obj.setDataSetIdentification(value.orElse(null));
 		}
 	};
 
@@ -193,7 +214,7 @@ public class TMSActionIdentification5 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSActionIdentification5.mmActionType, com.tools20022.repository.msg.TMSActionIdentification5.mmDataSetIdentification);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSActionIdentification5";
 				definition = "Result of an individual terminal management action by the point of interaction.";
 				previousVersion_lazy = () -> TMSActionIdentification4.mmObject();
@@ -215,7 +236,7 @@ public class TMSActionIdentification5 {
 		return dataSetIdentification == null ? Optional.empty() : Optional.of(dataSetIdentification);
 	}
 
-	public TMSActionIdentification5 setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification7 dataSetIdentification) {
+	public TMSActionIdentification5 setDataSetIdentification(DataSetIdentification7 dataSetIdentification) {
 		this.dataSetIdentification = dataSetIdentification;
 		return this;
 	}

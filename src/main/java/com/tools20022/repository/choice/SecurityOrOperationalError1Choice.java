@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.SecurityOrBusinessError1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.ArrayList;
@@ -117,7 +118,7 @@ public class SecurityOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecurityReportOrBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityOrOperationalError1Choice, SecurityOrBusinessError1Choice> mmSecurityReportOrBusinessError = new MMMessageAssociationEnd<SecurityOrOperationalError1Choice, SecurityOrBusinessError1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -129,7 +130,17 @@ public class SecurityOrOperationalError1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SecurityOrBusinessError1Choice.mmObject();
+			type_lazy = () -> SecurityOrBusinessError1Choice.mmObject();
+		}
+
+		@Override
+		public SecurityOrBusinessError1Choice getValue(SecurityOrOperationalError1Choice obj) {
+			return obj.getSecurityReportOrBusinessError();
+		}
+
+		@Override
+		public void setValue(SecurityOrOperationalError1Choice obj, SecurityOrBusinessError1Choice value) {
+			obj.setSecurityReportOrBusinessError(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -168,7 +179,7 @@ public class SecurityOrOperationalError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityOrOperationalError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<SecurityOrOperationalError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityOrOperationalError1Choice.mmObject();
 			isDerived = false;
@@ -180,6 +191,16 @@ public class SecurityOrOperationalError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(SecurityOrOperationalError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(SecurityOrOperationalError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 
@@ -202,7 +223,7 @@ public class SecurityOrOperationalError1Choice {
 		return securityReportOrBusinessError;
 	}
 
-	public SecurityOrOperationalError1Choice setSecurityReportOrBusinessError(com.tools20022.repository.choice.SecurityOrBusinessError1Choice securityReportOrBusinessError) {
+	public SecurityOrOperationalError1Choice setSecurityReportOrBusinessError(SecurityOrBusinessError1Choice securityReportOrBusinessError) {
 		this.securityReportOrBusinessError = Objects.requireNonNull(securityReportOrBusinessError);
 		return this;
 	}

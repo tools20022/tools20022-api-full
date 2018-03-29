@@ -102,7 +102,7 @@ public class SecuritiesOptionSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<SecuritiesOptionSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class SecuritiesOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecuritiesOptionSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "MaxOvrsbcptQty")
@@ -148,7 +158,7 @@ public class SecuritiesOptionSD1 {
 	 * definition} = "Maximum oversubscription amount for the option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumOversubscriptionQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD1, Optional<DecimalNumber>> mmMaximumOversubscriptionQuantity = new MMMessageAttribute<SecuritiesOptionSD1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD1.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class SecuritiesOptionSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(SecuritiesOptionSD1 obj) {
+			return obj.getMaximumOversubscriptionQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD1 obj, Optional<DecimalNumber> value) {
+			obj.setMaximumOversubscriptionQuantity(value.orElse(null));
 		}
 	};
 

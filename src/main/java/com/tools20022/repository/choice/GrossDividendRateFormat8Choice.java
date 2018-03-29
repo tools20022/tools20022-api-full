@@ -128,7 +128,7 @@ public class GrossDividendRateFormat8Choice {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GrossDividendRateFormat8Choice, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<GrossDividendRateFormat8Choice, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat8Choice.mmObject();
@@ -141,6 +141,16 @@ public class GrossDividendRateFormat8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(GrossDividendRateFormat8Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat8Choice obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateTpAndAmtAndRateSts", required = true)
@@ -175,7 +185,7 @@ public class GrossDividendRateFormat8Choice {
 	 * definition} = "Specifies different formats for the gross dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GrossDividendRateFormat8Choice, RateTypeAndAmountAndStatus13> mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd<GrossDividendRateFormat8Choice, RateTypeAndAmountAndStatus13>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GrossDividendRateFormat8Choice.mmObject();
 			isDerived = false;
@@ -188,6 +198,16 @@ public class GrossDividendRateFormat8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateTypeAndAmountAndStatus13.mmObject();
+		}
+
+		@Override
+		public RateTypeAndAmountAndStatus13 getValue(GrossDividendRateFormat8Choice obj) {
+			return obj.getRateTypeAndAmountAndRateStatus();
+		}
+
+		@Override
+		public void setValue(GrossDividendRateFormat8Choice obj, RateTypeAndAmountAndStatus13 value) {
+			obj.setRateTypeAndAmountAndRateStatus(value);
 		}
 	};
 

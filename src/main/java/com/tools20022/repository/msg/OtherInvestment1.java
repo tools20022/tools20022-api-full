@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max140Text;
+import com.tools20022.repository.entity.SecuritiesQuantity;
+import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -47,6 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * OtherInvestment1.mmAmount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -81,6 +85,11 @@ public class OtherInvestment1 {
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max140Text
 	 * Max140Text}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.OtherInvestment1
@@ -98,8 +107,9 @@ public class OtherInvestment1 {
 	 * definition} = "Text description of the investment.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherInvestment1, Max140Text> mmDescription = new MMMessageAttribute<OtherInvestment1, Max140Text>() {
 		{
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherInvestment1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
@@ -109,6 +119,16 @@ public class OtherInvestment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(OtherInvestment1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(OtherInvestment1 obj, Max140Text value) {
+			obj.setDescription(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -123,6 +143,11 @@ public class OtherInvestment1 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
 	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesQuantity#mmAmount
+	 * SecuritiesQuantity.mmAmount}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,8 +166,9 @@ public class OtherInvestment1 {
 	 * definition} = "Value of the other investment.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherInvestment1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<OtherInvestment1, ActiveCurrencyAndAmount>() {
 		{
+			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherInvestment1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
@@ -153,12 +179,23 @@ public class OtherInvestment1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(OtherInvestment1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(OtherInvestment1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherInvestment1.mmDescription, com.tools20022.repository.msg.OtherInvestment1.mmAmount);
+				trace_lazy = () -> Security.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherInvestment1";

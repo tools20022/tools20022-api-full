@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.Member3;
 import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,7 +113,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ModifyMemberV03"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -152,7 +151,7 @@ public class ModifyMemberV03 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyMemberV03, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<ModifyMemberV03, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,12 +162,14 @@ public class ModifyMemberV03 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyMemberV03.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(ModifyMemberV03 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ModifyMemberV03 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "MmbId", required = true)
@@ -198,7 +199,7 @@ public class ModifyMemberV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMemberIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyMemberV03, MemberIdentification2Choice> mmMemberIdentification = new MMMessageBuildingBlock<ModifyMemberV03, MemberIdentification2Choice>() {
 		{
 			xmlTag = "MmbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,12 +210,14 @@ public class ModifyMemberV03 {
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyMemberV03.class.getMethod("getMemberIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MemberIdentification2Choice getValue(ModifyMemberV03 obj) {
+			return obj.getMemberIdentification();
+		}
+
+		@Override
+		public void setValue(ModifyMemberV03 obj, MemberIdentification2Choice value) {
+			obj.setMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "NewMmbValSet", required = true)
@@ -241,7 +244,7 @@ public class ModifyMemberV03 {
 	 * definition} = "New member values."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNewMemberValueSet = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyMemberV03, Member3> mmNewMemberValueSet = new MMMessageBuildingBlock<ModifyMemberV03, Member3>() {
 		{
 			xmlTag = "NewMmbValSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -252,12 +255,14 @@ public class ModifyMemberV03 {
 			complexType_lazy = () -> Member3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyMemberV03.class.getMethod("getNewMemberValueSet", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Member3 getValue(ModifyMemberV03 obj) {
+			return obj.getNewMemberValueSet();
+		}
+
+		@Override
+		public void setValue(ModifyMemberV03 obj, Member3 value) {
+			obj.setNewMemberValueSet(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -287,7 +292,7 @@ public class ModifyMemberV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ModifyMemberV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ModifyMemberV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,12 +302,14 @@ public class ModifyMemberV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ModifyMemberV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ModifyMemberV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ModifyMemberV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -310,7 +317,7 @@ public class ModifyMemberV03 {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMandatoryValueRule.forModifyMemberV03);
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModifyMemberV03";
 				definition = "Scope\r\nThe ModifyMember message is sent by a member to the transaction administrator.\r\nIt is used to request modifications to the static data related to the profile of a member that the transaction administrator maintains.\r\nUsage\r\nThe transaction administrator is in charge of providing the members with business information. The term business information covers all information related to the management of the system, that is, not related to the transactions entered into the system. The type of business information available can vary depending on the system. Among other things, it can, refer to information about the membership of the system.\r\nAt any time during the operating hours of the system, the member can request the transaction administrator to modify the information it maintains about the member.\r\nThe member will submit a message requesting modifications in one or more of the following criteria:\r\n- identification of the member\r\n- contact information for the member organization: postal address, e-mail address, telephone or fax number\r\n- identification of contact persons for the member, their role and/or details (postal address, e-mail address, telephone or fax number)\r\nBased on the criteria received within the Modify Member message, the transaction administrator will execute or reject the requested modifications.\r\nIn principle, the transaction administrator may send a Receipt message as a reply to the ModifyMember request. To verify the outcome of the request, the member may submit a GetMember message with the appropriate search criteria.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount19;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +117,7 @@ public class CashMovement2 {
 	 * definition} = "Cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashMovement2, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<CashMovement2, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashMovement2.mmObject();
@@ -129,9 +130,19 @@ public class CashMovement2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CashMovement2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CashMovement2 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
+		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount19> accountDetails;
+	protected List<CashAccount19> accountDetails;
 	/**
 	 * 
 	 <p>
@@ -163,7 +174,7 @@ public class CashMovement2 {
 	 * "Provides information about the account which is debited/credited."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashMovement2, List<CashAccount19>> mmAccountDetails = new MMMessageAssociationEnd<CashMovement2, List<CashAccount19>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashMovement2.mmObject();
@@ -175,7 +186,17 @@ public class CashMovement2 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount19.mmObject();
+			type_lazy = () -> CashAccount19.mmObject();
+		}
+
+		@Override
+		public List<CashAccount19> getValue(CashMovement2 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(CashMovement2 obj, List<CashAccount19> value) {
+			obj.setAccountDetails(value);
 		}
 	};
 
@@ -207,7 +228,7 @@ public class CashMovement2 {
 		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public CashMovement2 setAccountDetails(List<com.tools20022.repository.msg.CashAccount19> accountDetails) {
+	public CashMovement2 setAccountDetails(List<CashAccount19> accountDetails) {
 		this.accountDetails = Objects.requireNonNull(accountDetails);
 		return this;
 	}

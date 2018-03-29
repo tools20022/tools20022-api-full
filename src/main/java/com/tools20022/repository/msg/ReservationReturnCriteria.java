@@ -117,7 +117,7 @@ public class ReservationReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDateTimeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationReturnCriteria, Optional<RequestedIndicator>> mmStartDateTimeIndicator = new MMMessageAttribute<ReservationReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReturnCriteria.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class ReservationReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(ReservationReturnCriteria obj) {
+			return obj.getStartDateTimeIndicator();
+		}
+
+		@Override
+		public void setValue(ReservationReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setStartDateTimeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsInd")
@@ -169,7 +179,7 @@ public class ReservationReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationReturnCriteria, Optional<RequestedIndicator>> mmStatusIndicator = new MMMessageAttribute<ReservationReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationReturnCriteria.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class ReservationReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(ReservationReturnCriteria obj) {
+			return obj.getStatusIndicator();
+		}
+
+		@Override
+		public void setValue(ReservationReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setStatusIndicator(value.orElse(null));
 		}
 	};
 

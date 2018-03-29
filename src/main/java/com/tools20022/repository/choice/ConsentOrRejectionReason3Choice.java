@@ -118,7 +118,7 @@ public class ConsentOrRejectionReason3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConsentOrRejectionReason3Choice, CounterpartyResponseStatusReason1Code> mmCode = new MMMessageAttribute<ConsentOrRejectionReason3Choice, CounterpartyResponseStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmCounterpartyStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentOrRejectionReason3Choice.mmObject();
@@ -131,6 +131,16 @@ public class ConsentOrRejectionReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CounterpartyResponseStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public CounterpartyResponseStatusReason1Code getValue(ConsentOrRejectionReason3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ConsentOrRejectionReason3Choice obj, CounterpartyResponseStatusReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -173,7 +183,7 @@ public class ConsentOrRejectionReason3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConsentOrRejectionReason3Choice, GenericIdentification25> mmProprietary = new MMMessageAttribute<ConsentOrRejectionReason3Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmCounterpartyStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConsentOrRejectionReason3Choice.mmObject();
@@ -186,6 +196,16 @@ public class ConsentOrRejectionReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(ConsentOrRejectionReason3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ConsentOrRejectionReason3Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

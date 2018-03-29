@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -124,7 +125,7 @@ public class MeetingContactPerson2 {
 	 * MeetingContactPerson1.mmContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingContactPerson2, Optional<ContactIdentification1>> mmContactPerson = new MMMessageAssociationEnd<MeetingContactPerson2, Optional<ContactIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingContactPerson2.mmObject();
@@ -137,7 +138,17 @@ public class MeetingContactPerson2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
+			type_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification1> getValue(MeetingContactPerson2 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(MeetingContactPerson2 obj, Optional<ContactIdentification1> value) {
+			obj.setContactPerson(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EmplngPty")
@@ -181,7 +192,7 @@ public class MeetingContactPerson2 {
 	 * MeetingContactPerson1.mmEmployingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MeetingContactPerson2, Optional<PartyIdentification40Choice>> mmEmployingParty = new MMMessageAssociationEnd<MeetingContactPerson2, Optional<PartyIdentification40Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingContactPerson2.mmObject();
@@ -195,6 +206,16 @@ public class MeetingContactPerson2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification40Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification40Choice> getValue(MeetingContactPerson2 obj) {
+			return obj.getEmployingParty();
+		}
+
+		@Override
+		public void setValue(MeetingContactPerson2 obj, Optional<PartyIdentification40Choice> value) {
+			obj.setEmployingParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfListg")
@@ -239,7 +260,7 @@ public class MeetingContactPerson2 {
 	 * MeetingContactPerson1.mmPlaceOfListing}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfListing = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingContactPerson2, Optional<MICIdentifier>> mmPlaceOfListing = new MMMessageAttribute<MeetingContactPerson2, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingContactPerson2.mmObject();
@@ -252,6 +273,16 @@ public class MeetingContactPerson2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(MeetingContactPerson2 obj) {
+			return obj.getPlaceOfListing();
+		}
+
+		@Override
+		public void setValue(MeetingContactPerson2 obj, Optional<MICIdentifier> value) {
+			obj.setPlaceOfListing(value.orElse(null));
 		}
 	};
 
@@ -275,7 +306,7 @@ public class MeetingContactPerson2 {
 		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public MeetingContactPerson2 setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
+	public MeetingContactPerson2 setContactPerson(ContactIdentification1 contactPerson) {
 		this.contactPerson = contactPerson;
 		return this;
 	}

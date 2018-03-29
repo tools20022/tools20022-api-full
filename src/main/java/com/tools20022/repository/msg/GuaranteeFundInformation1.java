@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount24;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -94,7 +96,7 @@ public class GuaranteeFundInformation1 {
 	 * definition} = "Guarantee fund account identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGuaranteeFundAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GuaranteeFundInformation1, CashAccount24> mmGuaranteeFundAccount = new MMMessageAssociationEnd<GuaranteeFundInformation1, CashAccount24>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeFundInformation1.mmObject();
 			isDerived = false;
@@ -105,7 +107,17 @@ public class GuaranteeFundInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public CashAccount24 getValue(GuaranteeFundInformation1 obj) {
+			return obj.getGuaranteeFundAccount();
+		}
+
+		@Override
+		public void setValue(GuaranteeFundInformation1 obj, CashAccount24 value) {
+			obj.setGuaranteeFundAccount(value);
 		}
 	};
 	@XmlElement(name = "GrntFndAcctOwnr", required = true)
@@ -137,7 +149,7 @@ public class GuaranteeFundInformation1 {
 	 * definition} = "Owner identification of the guarantee fund."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGuaranteeFundAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GuaranteeFundInformation1, FinancialInstitutionIdentification9> mmGuaranteeFundAccountOwner = new MMMessageAssociationEnd<GuaranteeFundInformation1, FinancialInstitutionIdentification9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeFundInformation1.mmObject();
 			isDerived = false;
@@ -148,7 +160,17 @@ public class GuaranteeFundInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification9.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification9 getValue(GuaranteeFundInformation1 obj) {
+			return obj.getGuaranteeFundAccountOwner();
+		}
+
+		@Override
+		public void setValue(GuaranteeFundInformation1 obj, FinancialInstitutionIdentification9 value) {
+			obj.setGuaranteeFundAccountOwner(value);
 		}
 	};
 
@@ -169,7 +191,7 @@ public class GuaranteeFundInformation1 {
 		return guaranteeFundAccount;
 	}
 
-	public GuaranteeFundInformation1 setGuaranteeFundAccount(com.tools20022.repository.msg.CashAccount24 guaranteeFundAccount) {
+	public GuaranteeFundInformation1 setGuaranteeFundAccount(CashAccount24 guaranteeFundAccount) {
 		this.guaranteeFundAccount = Objects.requireNonNull(guaranteeFundAccount);
 		return this;
 	}
@@ -178,7 +200,7 @@ public class GuaranteeFundInformation1 {
 		return guaranteeFundAccountOwner;
 	}
 
-	public GuaranteeFundInformation1 setGuaranteeFundAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 guaranteeFundAccountOwner) {
+	public GuaranteeFundInformation1 setGuaranteeFundAccountOwner(FinancialInstitutionIdentification9 guaranteeFundAccountOwner) {
 		this.guaranteeFundAccountOwner = Objects.requireNonNull(guaranteeFundAccountOwner);
 		return this;
 	}

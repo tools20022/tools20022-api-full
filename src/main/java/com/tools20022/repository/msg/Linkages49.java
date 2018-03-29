@@ -104,7 +104,7 @@ public class Linkages49 {
 	 * definition} = "Reference to the linked transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Linkages49, References58Choice> mmReference = new MMMessageAssociationEnd<Linkages49, References58Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages49.mmObject();
@@ -118,6 +118,16 @@ public class Linkages49 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> References58Choice.mmObject();
+		}
+
+		@Override
+		public References58Choice getValue(Linkages49 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Linkages49 obj, References58Choice value) {
+			obj.setReference(value);
 		}
 	};
 

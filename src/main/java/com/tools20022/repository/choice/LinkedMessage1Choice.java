@@ -113,7 +113,7 @@ public class LinkedMessage1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LinkedMessage1Choice, AdditionalReference3> mmPreviousReference = new MMMessageAssociationEnd<LinkedMessage1Choice, AdditionalReference3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LinkedMessage1Choice.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class LinkedMessage1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(LinkedMessage1Choice obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(LinkedMessage1Choice obj, AdditionalReference3 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "OthrRef", required = true)
@@ -164,7 +174,7 @@ public class LinkedMessage1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LinkedMessage1Choice, AdditionalReference3> mmOtherReference = new MMMessageAssociationEnd<LinkedMessage1Choice, AdditionalReference3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LinkedMessage1Choice.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class LinkedMessage1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(LinkedMessage1Choice obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(LinkedMessage1Choice obj, AdditionalReference3 value) {
+			obj.setOtherReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)
@@ -207,7 +227,7 @@ public class LinkedMessage1Choice {
 	 * definition} = "Linked related reference."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LinkedMessage1Choice, AdditionalReference3> mmRelatedReference = new MMMessageAssociationEnd<LinkedMessage1Choice, AdditionalReference3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LinkedMessage1Choice.mmObject();
 			isDerived = false;
@@ -219,6 +239,16 @@ public class LinkedMessage1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public AdditionalReference3 getValue(LinkedMessage1Choice obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(LinkedMessage1Choice obj, AdditionalReference3 value) {
+			obj.setRelatedReference(value);
 		}
 	};
 

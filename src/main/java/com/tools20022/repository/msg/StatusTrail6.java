@@ -28,6 +28,9 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OrganisationIdentification7;
+import com.tools20022.repository.msg.ProprietaryReason4;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -152,7 +155,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmStatusDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusTrail6, ISODateTime> mmStatusDate = new MMMessageAttribute<StatusTrail6, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
@@ -165,6 +168,16 @@ public class StatusTrail6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(StatusTrail6 obj) {
+			return obj.getStatusDate();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, ISODateTime value) {
+			obj.setStatusDate(value);
 		}
 	};
 	@XmlElement(name = "SndgOrgId")
@@ -203,7 +216,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmSendingOrganisationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSendingOrganisationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusTrail6, Optional<OrganisationIdentification7>> mmSendingOrganisationIdentification = new MMMessageAttribute<StatusTrail6, Optional<OrganisationIdentification7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
 			isDerived = false;
@@ -214,7 +227,17 @@ public class StatusTrail6 {
 			previousVersion_lazy = () -> StatusTrail4.mmSendingOrganisationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification7.mmObject();
+			complexType_lazy = () -> OrganisationIdentification7.mmObject();
+		}
+
+		@Override
+		public Optional<OrganisationIdentification7> getValue(StatusTrail6 obj) {
+			return obj.getSendingOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, Optional<OrganisationIdentification7> value) {
+			obj.setSendingOrganisationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsrId")
@@ -252,7 +275,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmUserIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusTrail6, Optional<Max35Text>> mmUserIdentification = new MMMessageAttribute<StatusTrail6, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
 			isDerived = false;
@@ -264,6 +287,16 @@ public class StatusTrail6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(StatusTrail6 obj) {
+			return obj.getUserIdentification();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, Optional<Max35Text> value) {
+			obj.setUserIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgSts")
@@ -304,7 +337,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusTrail6, Optional<ProcessingStatus49Choice>> mmProcessingStatus = new MMMessageAssociationEnd<StatusTrail6, Optional<ProcessingStatus49Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
@@ -318,6 +351,16 @@ public class StatusTrail6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingStatus49Choice> getValue(StatusTrail6 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, Optional<ProcessingStatus49Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts")
@@ -360,7 +403,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmInferredMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusTrail6, Optional<MatchingStatus25Choice>> mmInferredMatchingStatus = new MMMessageAssociationEnd<StatusTrail6, Optional<MatchingStatus25Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
@@ -374,6 +417,16 @@ public class StatusTrail6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus25Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus25Choice> getValue(StatusTrail6 obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, Optional<MatchingStatus25Choice> value) {
+			obj.setInferredMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSts")
@@ -414,7 +467,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmMatchingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusTrail6, Optional<MatchingStatus25Choice>> mmMatchingStatus = new MMMessageAssociationEnd<StatusTrail6, Optional<MatchingStatus25Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
@@ -428,6 +481,16 @@ public class StatusTrail6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus25Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus25Choice> getValue(StatusTrail6 obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, Optional<MatchingStatus25Choice> value) {
+			obj.setMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -468,7 +531,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmSettlementStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusTrail6, Optional<SettlementStatus17Choice>> mmSettlementStatus = new MMMessageAssociationEnd<StatusTrail6, Optional<SettlementStatus17Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
@@ -482,6 +545,16 @@ public class StatusTrail6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus17Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementStatus17Choice> getValue(StatusTrail6 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, Optional<SettlementStatus17Choice> value) {
+			obj.setSettlementStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ModPrcgSts")
@@ -523,7 +596,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmModificationProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModificationProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusTrail6, Optional<ModificationProcessingStatus7Choice>> mmModificationProcessingStatus = new MMMessageAssociationEnd<StatusTrail6, Optional<ModificationProcessingStatus7Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
@@ -537,6 +610,16 @@ public class StatusTrail6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ModificationProcessingStatus7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ModificationProcessingStatus7Choice> getValue(StatusTrail6 obj) {
+			return obj.getModificationProcessingStatus();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, Optional<ModificationProcessingStatus7Choice> value) {
+			obj.setModificationProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlSts")
@@ -577,7 +660,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmCancellationStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusTrail6, Optional<ProcessingStatus53Choice>> mmCancellationStatus = new MMMessageAssociationEnd<StatusTrail6, Optional<ProcessingStatus53Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
@@ -591,6 +674,16 @@ public class StatusTrail6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus53Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingStatus53Choice> getValue(StatusTrail6 obj) {
+			return obj.getCancellationStatus();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, Optional<ProcessingStatus53Choice> value) {
+			obj.setCancellationStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sttld")
@@ -629,7 +722,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmSettled}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusTrail6, Optional<ProprietaryReason4>> mmSettled = new MMMessageAssociationEnd<StatusTrail6, Optional<ProprietaryReason4>>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
@@ -642,11 +735,21 @@ public class StatusTrail6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason4.mmObject();
+			type_lazy = () -> ProprietaryReason4.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryReason4> getValue(StatusTrail6 obj) {
+			return obj.getSettled();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, Optional<ProprietaryReason4> value) {
+			obj.setSettled(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -679,7 +782,7 @@ public class StatusTrail6 {
 	 * StatusTrail4.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusTrail6, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<StatusTrail6, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusTrail6.mmObject();
 			isDerived = false;
@@ -690,7 +793,17 @@ public class StatusTrail6 {
 			previousVersion_lazy = () -> StatusTrail4.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(StatusTrail6 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(StatusTrail6 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -726,7 +839,7 @@ public class StatusTrail6 {
 		return sendingOrganisationIdentification == null ? Optional.empty() : Optional.of(sendingOrganisationIdentification);
 	}
 
-	public StatusTrail6 setSendingOrganisationIdentification(com.tools20022.repository.msg.OrganisationIdentification7 sendingOrganisationIdentification) {
+	public StatusTrail6 setSendingOrganisationIdentification(OrganisationIdentification7 sendingOrganisationIdentification) {
 		this.sendingOrganisationIdentification = sendingOrganisationIdentification;
 		return this;
 	}
@@ -798,7 +911,7 @@ public class StatusTrail6 {
 		return settled == null ? Optional.empty() : Optional.of(settled);
 	}
 
-	public StatusTrail6 setSettled(com.tools20022.repository.msg.ProprietaryReason4 settled) {
+	public StatusTrail6 setSettled(ProprietaryReason4 settled) {
 		this.settled = settled;
 		return this;
 	}
@@ -807,7 +920,7 @@ public class StatusTrail6 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public StatusTrail6 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public StatusTrail6 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

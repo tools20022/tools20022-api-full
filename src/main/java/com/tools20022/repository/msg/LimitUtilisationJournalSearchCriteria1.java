@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SystemPartyIdentification4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -122,7 +123,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * definition} = "Type of limit applied by the system at the present time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitUtilisationJournalSearchCriteria1, List<LimitType4Code>> mmLimitType = new MMMessageAttribute<LimitUtilisationJournalSearchCriteria1, List<LimitType4Code>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmObject();
@@ -133,6 +134,16 @@ public class LimitUtilisationJournalSearchCriteria1 {
 			definition = "Type of limit applied by the system at the present time.";
 			minOccurs = 0;
 			simpleType_lazy = () -> LimitType4Code.mmObject();
+		}
+
+		@Override
+		public List<LimitType4Code> getValue(LimitUtilisationJournalSearchCriteria1 obj) {
+			return obj.getLimitType();
+		}
+
+		@Override
+		public void setValue(LimitUtilisationJournalSearchCriteria1 obj, List<LimitType4Code> value) {
+			obj.setLimitType(value);
 		}
 	};
 	@XmlElement(name = "JrnlActvtyDt", required = true)
@@ -164,7 +175,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * definition} = "Date upon which journal activity takes place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmJournalActivityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitUtilisationJournalSearchCriteria1, ISODate> mmJournalActivityDate = new MMMessageAttribute<LimitUtilisationJournalSearchCriteria1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmObject();
 			isDerived = false;
@@ -175,6 +186,16 @@ public class LimitUtilisationJournalSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(LimitUtilisationJournalSearchCriteria1 obj) {
+			return obj.getJournalActivityDate();
+		}
+
+		@Override
+		public void setValue(LimitUtilisationJournalSearchCriteria1 obj, ISODate value) {
+			obj.setJournalActivityDate(value);
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -213,7 +234,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitUtilisationJournalSearchCriteria1, Optional<AccountIdentification4Choice>> mmAccountIdentification = new MMMessageAssociationEnd<LimitUtilisationJournalSearchCriteria1, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmObject();
@@ -226,6 +247,16 @@ public class LimitUtilisationJournalSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(LimitUtilisationJournalSearchCriteria1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(LimitUtilisationJournalSearchCriteria1 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LmtCcy")
@@ -263,7 +294,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * definition} = "Currency unit used to specify the limit amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitUtilisationJournalSearchCriteria1, Optional<ActiveCurrencyCode>> mmLimitCurrency = new MMMessageAttribute<LimitUtilisationJournalSearchCriteria1, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmObject();
@@ -275,6 +306,16 @@ public class LimitUtilisationJournalSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(LimitUtilisationJournalSearchCriteria1 obj) {
+			return obj.getLimitCurrency();
+		}
+
+		@Override
+		public void setValue(LimitUtilisationJournalSearchCriteria1 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setLimitCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -312,7 +353,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitUtilisationJournalSearchCriteria1, Optional<BICFIIdentifier>> mmAccountOwner = new MMMessageAttribute<LimitUtilisationJournalSearchCriteria1, Optional<BICFIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmObject();
@@ -324,6 +365,16 @@ public class LimitUtilisationJournalSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICFIIdentifier> getValue(LimitUtilisationJournalSearchCriteria1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(LimitUtilisationJournalSearchCriteria1 obj, Optional<BICFIIdentifier> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BilLmtCtrPtyId", required = true)
@@ -362,7 +413,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitUtilisationJournalSearchCriteria1, SystemPartyIdentification4> mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd<LimitUtilisationJournalSearchCriteria1, SystemPartyIdentification4>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1.mmObject();
@@ -374,7 +425,17 @@ public class LimitUtilisationJournalSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification4.mmObject();
+			type_lazy = () -> SystemPartyIdentification4.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification4 getValue(LimitUtilisationJournalSearchCriteria1 obj) {
+			return obj.getBilateralLimitCounterpartyIdentification();
+		}
+
+		@Override
+		public void setValue(LimitUtilisationJournalSearchCriteria1 obj, SystemPartyIdentification4 value) {
+			obj.setBilateralLimitCounterpartyIdentification(value);
 		}
 	};
 
@@ -443,7 +504,7 @@ public class LimitUtilisationJournalSearchCriteria1 {
 		return bilateralLimitCounterpartyIdentification;
 	}
 
-	public LimitUtilisationJournalSearchCriteria1 setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification4 bilateralLimitCounterpartyIdentification) {
+	public LimitUtilisationJournalSearchCriteria1 setBilateralLimitCounterpartyIdentification(SystemPartyIdentification4 bilateralLimitCounterpartyIdentification) {
 		this.bilateralLimitCounterpartyIdentification = Objects.requireNonNull(bilateralLimitCounterpartyIdentification);
 		return this;
 	}

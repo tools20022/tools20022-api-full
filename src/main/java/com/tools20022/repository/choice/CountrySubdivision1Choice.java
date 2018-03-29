@@ -107,7 +107,7 @@ public class CountrySubdivision1Choice {
 	 * definition} = "Country subdivision of jurisdiction.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CountrySubdivision1Choice, Max35Text> mmCode = new MMMessageAttribute<CountrySubdivision1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountyIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CountrySubdivision1Choice.mmObject();
@@ -119,6 +119,16 @@ public class CountrySubdivision1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CountrySubdivision1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CountrySubdivision1Choice obj, Max35Text value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -154,7 +164,7 @@ public class CountrySubdivision1Choice {
 	 * definition} = "Jurisdiction expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CountrySubdivision1Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<CountrySubdivision1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountyIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CountrySubdivision1Choice.mmObject();
@@ -167,6 +177,16 @@ public class CountrySubdivision1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(CountrySubdivision1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CountrySubdivision1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

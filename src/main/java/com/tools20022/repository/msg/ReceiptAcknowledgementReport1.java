@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReferences;
+import com.tools20022.repository.msg.MessageIdentification6;
+import com.tools20022.repository.msg.RequestHandling1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +119,7 @@ public class ReceiptAcknowledgementReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceiptAcknowledgementReport1, AdditionalReferences> mmRelatedReference = new MMMessageAssociationEnd<ReceiptAcknowledgementReport1, AdditionalReferences>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
@@ -128,7 +131,17 @@ public class ReceiptAcknowledgementReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReferences.mmObject();
+			type_lazy = () -> AdditionalReferences.mmObject();
+		}
+
+		@Override
+		public AdditionalReferences getValue(ReceiptAcknowledgementReport1 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(ReceiptAcknowledgementReport1 obj, AdditionalReferences value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "ReqHdlg", required = true)
@@ -167,7 +180,7 @@ public class ReceiptAcknowledgementReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceiptAcknowledgementReport1, RequestHandling1> mmRequestHandling = new MMMessageAssociationEnd<ReceiptAcknowledgementReport1, RequestHandling1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
@@ -179,7 +192,17 @@ public class ReceiptAcknowledgementReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequestHandling1.mmObject();
+			type_lazy = () -> RequestHandling1.mmObject();
+		}
+
+		@Override
+		public RequestHandling1 getValue(ReceiptAcknowledgementReport1 obj) {
+			return obj.getRequestHandling();
+		}
+
+		@Override
+		public void setValue(ReceiptAcknowledgementReport1 obj, RequestHandling1 value) {
+			obj.setRequestHandling(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgId")
@@ -212,7 +235,7 @@ public class ReceiptAcknowledgementReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMessageIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceiptAcknowledgementReport1, Optional<MessageIdentification6>> mmOriginalMessageIdentification = new MMMessageAssociationEnd<ReceiptAcknowledgementReport1, Optional<MessageIdentification6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
@@ -223,7 +246,17 @@ public class ReceiptAcknowledgementReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification6.mmObject();
+			type_lazy = () -> MessageIdentification6.mmObject();
+		}
+
+		@Override
+		public Optional<MessageIdentification6> getValue(ReceiptAcknowledgementReport1 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(ReceiptAcknowledgementReport1 obj, Optional<MessageIdentification6> value) {
+			obj.setOriginalMessageIdentification(value.orElse(null));
 		}
 	};
 
@@ -246,7 +279,7 @@ public class ReceiptAcknowledgementReport1 {
 		return relatedReference;
 	}
 
-	public ReceiptAcknowledgementReport1 setRelatedReference(com.tools20022.repository.msg.AdditionalReferences relatedReference) {
+	public ReceiptAcknowledgementReport1 setRelatedReference(AdditionalReferences relatedReference) {
 		this.relatedReference = Objects.requireNonNull(relatedReference);
 		return this;
 	}
@@ -255,7 +288,7 @@ public class ReceiptAcknowledgementReport1 {
 		return requestHandling;
 	}
 
-	public ReceiptAcknowledgementReport1 setRequestHandling(com.tools20022.repository.msg.RequestHandling1 requestHandling) {
+	public ReceiptAcknowledgementReport1 setRequestHandling(RequestHandling1 requestHandling) {
 		this.requestHandling = Objects.requireNonNull(requestHandling);
 		return this;
 	}
@@ -264,7 +297,7 @@ public class ReceiptAcknowledgementReport1 {
 		return originalMessageIdentification == null ? Optional.empty() : Optional.of(originalMessageIdentification);
 	}
 
-	public ReceiptAcknowledgementReport1 setOriginalMessageIdentification(com.tools20022.repository.msg.MessageIdentification6 originalMessageIdentification) {
+	public ReceiptAcknowledgementReport1 setOriginalMessageIdentification(MessageIdentification6 originalMessageIdentification) {
 		this.originalMessageIdentification = originalMessageIdentification;
 		return this;
 	}

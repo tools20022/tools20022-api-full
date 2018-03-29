@@ -17,7 +17,6 @@
 
 package com.tools20022.repository.area.catm;
 
-import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
@@ -27,7 +26,7 @@ import com.tools20022.repository.msg.ContentInformationType18;
 import com.tools20022.repository.msg.Header27;
 import com.tools20022.repository.msg.ManagementPlan7;
 import com.tools20022.repository.msgset.CAPEMaintenance20172018;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -57,6 +56,9 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
+ * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.CAPEMaintenance20172018
  * CAPEMaintenance20172018}</li>
  * </ul>
@@ -73,12 +75,9 @@ import javax.xml.bind.annotation.*;
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.002.001.07}</li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
- * semanticMarkup} = type=prefix, prefix=DRAFT1</li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ManagementPlanReplacementV07"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -126,7 +125,7 @@ public class ManagementPlanReplacementV07 {
 	 * ManagementPlanReplacementV06.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ManagementPlanReplacementV07, Header27> mmHeader = new MMMessageBuildingBlock<ManagementPlanReplacementV07, Header27>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class ManagementPlanReplacementV07 {
 			complexType_lazy = () -> Header27.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ManagementPlanReplacementV07.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header27 getValue(ManagementPlanReplacementV07 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ManagementPlanReplacementV07 obj, Header27 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "MgmtPlan", required = true)
@@ -177,7 +178,7 @@ public class ManagementPlanReplacementV07 {
 	 * ManagementPlanReplacementV06.mmManagementPlan}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmManagementPlan = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ManagementPlanReplacementV07, ManagementPlan7> mmManagementPlan = new MMMessageBuildingBlock<ManagementPlanReplacementV07, ManagementPlan7>() {
 		{
 			xmlTag = "MgmtPlan";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +190,14 @@ public class ManagementPlanReplacementV07 {
 			complexType_lazy = () -> ManagementPlan7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ManagementPlanReplacementV07.class.getMethod("getManagementPlan", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ManagementPlan7 getValue(ManagementPlanReplacementV07 obj) {
+			return obj.getManagementPlan();
+		}
+
+		@Override
+		public void setValue(ManagementPlanReplacementV07 obj, ManagementPlan7 value) {
+			obj.setManagementPlan(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -228,7 +231,7 @@ public class ManagementPlanReplacementV07 {
 	 * ManagementPlanReplacementV06.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ManagementPlanReplacementV07, Optional<ContentInformationType18>> mmSecurityTrailer = new MMMessageBuildingBlock<ManagementPlanReplacementV07, Optional<ContentInformationType18>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,24 +243,25 @@ public class ManagementPlanReplacementV07 {
 			complexType_lazy = () -> ContentInformationType18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ManagementPlanReplacementV07.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType18> getValue(ManagementPlanReplacementV07 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ManagementPlanReplacementV07 obj, Optional<ContentInformationType18> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT1"}));
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlanReplacementV07";
 				definition = "Terminal maintenance actions to be performed by a point of interaction (POI).";
 				previousVersion_lazy = () -> ManagementPlanReplacementV06.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEMaintenance20172018.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPEMaintenance20172018.mmObject());
 				rootElement = "Document";
 				xmlTag = "MgmtPlanRplcmnt";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

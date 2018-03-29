@@ -114,7 +114,7 @@ public class AffirmationStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AffirmationStatus2Choice, AffirmationStatus1Code> mmCode = new MMMessageAttribute<AffirmationStatus2Choice, AffirmationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationStatus2Choice.mmObject();
@@ -127,6 +127,16 @@ public class AffirmationStatus2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AffirmationStatus1Code.mmObject();
+		}
+
+		@Override
+		public AffirmationStatus1Code getValue(AffirmationStatus2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AffirmationStatus2Choice obj, AffirmationStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -168,7 +178,7 @@ public class AffirmationStatus2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AffirmationStatus2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<AffirmationStatus2Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmAffirmationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AffirmationStatus2Choice.mmObject();
@@ -182,6 +192,16 @@ public class AffirmationStatus2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(AffirmationStatus2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AffirmationStatus2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

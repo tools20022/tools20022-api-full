@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -198,7 +199,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubmitterBaselineIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, DocumentIdentification1> mmSubmitterBaselineIdentification = new MMMessageAssociationEnd<Baseline3, DocumentIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
 			isDerived = false;
@@ -210,7 +211,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification1.mmObject();
+			type_lazy = () -> DocumentIdentification1.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification1 getValue(Baseline3 obj) {
+			return obj.getSubmitterBaselineIdentification();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, DocumentIdentification1 value) {
+			obj.setSubmitterBaselineIdentification(value);
 		}
 	};
 	@XmlElement(name = "SvcCd", required = true)
@@ -250,7 +261,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Baseline3, TradeFinanceService2Code> mmServiceCode = new MMMessageAttribute<Baseline3, TradeFinanceService2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
 			isDerived = false;
@@ -262,6 +273,16 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeFinanceService2Code.mmObject();
+		}
+
+		@Override
+		public TradeFinanceService2Code getValue(Baseline3 obj) {
+			return obj.getServiceCode();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, TradeFinanceService2Code value) {
+			obj.setServiceCode(value);
 		}
 	};
 	@XmlElement(name = "PurchsOrdrRef", required = true)
@@ -306,7 +327,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPurchaseOrderReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, DocumentIdentification7> mmPurchaseOrderReference = new MMMessageAssociationEnd<Baseline3, DocumentIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -319,7 +340,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
+			type_lazy = () -> DocumentIdentification7.mmObject();
+		}
+
+		@Override
+		public DocumentIdentification7 getValue(Baseline3 obj) {
+			return obj.getPurchaseOrderReference();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, DocumentIdentification7 value) {
+			obj.setPurchaseOrderReference(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -362,7 +393,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, PartyIdentification26> mmBuyer = new MMMessageAssociationEnd<Baseline3, PartyIdentification26>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -375,7 +406,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public PartyIdentification26 getValue(Baseline3 obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, PartyIdentification26 value) {
+			obj.setBuyer(value);
 		}
 	};
 	@XmlElement(name = "Sellr", required = true)
@@ -418,7 +459,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, PartyIdentification26> mmSeller = new MMMessageAssociationEnd<Baseline3, PartyIdentification26>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -431,7 +472,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public PartyIdentification26 getValue(Baseline3 obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, PartyIdentification26 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "BuyrBk", required = true)
@@ -474,7 +525,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyerBank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, BICIdentification1> mmBuyerBank = new MMMessageAssociationEnd<Baseline3, BICIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -487,7 +538,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public BICIdentification1 getValue(Baseline3 obj) {
+			return obj.getBuyerBank();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, BICIdentification1 value) {
+			obj.setBuyerBank(value);
 		}
 	};
 	@XmlElement(name = "SellrBk", required = true)
@@ -530,7 +591,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSellerBank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, BICIdentification1> mmSellerBank = new MMMessageAssociationEnd<Baseline3, BICIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -543,11 +604,21 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public BICIdentification1 getValue(Baseline3 obj) {
+			return obj.getSellerBank();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, BICIdentification1 value) {
+			obj.setSellerBank(value);
 		}
 	};
 	@XmlElement(name = "BuyrSdSubmitgBk")
-	protected List<com.tools20022.repository.msg.BICIdentification1> buyerSideSubmittingBank;
+	protected List<BICIdentification1> buyerSideSubmittingBank;
 	/**
 	 * 
 	 <p>
@@ -588,7 +659,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyerSideSubmittingBank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, List<BICIdentification1>> mmBuyerSideSubmittingBank = new MMMessageAssociationEnd<Baseline3, List<BICIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -600,11 +671,21 @@ public class Baseline3 {
 			nextVersions_lazy = () -> Arrays.asList(Baseline4.mmBuyerSideSubmittingBank);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public List<BICIdentification1> getValue(Baseline3 obj) {
+			return obj.getBuyerSideSubmittingBank();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, List<BICIdentification1> value) {
+			obj.setBuyerSideSubmittingBank(value);
 		}
 	};
 	@XmlElement(name = "SellrSdSubmitgBk")
-	protected List<com.tools20022.repository.msg.BICIdentification1> sellerSideSubmittingBank;
+	protected List<BICIdentification1> sellerSideSubmittingBank;
 	/**
 	 * 
 	 <p>
@@ -645,7 +726,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSellerSideSubmittingBank = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, List<BICIdentification1>> mmSellerSideSubmittingBank = new MMMessageAssociationEnd<Baseline3, List<BICIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -657,7 +738,17 @@ public class Baseline3 {
 			nextVersions_lazy = () -> Arrays.asList(Baseline4.mmSellerSideSubmittingBank);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
+			type_lazy = () -> BICIdentification1.mmObject();
+		}
+
+		@Override
+		public List<BICIdentification1> getValue(Baseline3 obj) {
+			return obj.getSellerSideSubmittingBank();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, List<BICIdentification1> value) {
+			obj.setSellerSideSubmittingBank(value);
 		}
 	};
 	@XmlElement(name = "BllTo")
@@ -699,7 +790,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBillTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, Optional<PartyIdentification26>> mmBillTo = new MMMessageAssociationEnd<Baseline3, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -712,7 +803,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(Baseline3 obj) {
+			return obj.getBillTo();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, Optional<PartyIdentification26> value) {
+			obj.setBillTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ShipTo")
@@ -754,7 +855,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmShipTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, Optional<PartyIdentification26>> mmShipTo = new MMMessageAssociationEnd<Baseline3, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -767,7 +868,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(Baseline3 obj) {
+			return obj.getShipTo();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, Optional<PartyIdentification26> value) {
+			obj.setShipTo(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Consgn")
@@ -809,7 +920,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, Optional<PartyIdentification26>> mmConsignee = new MMMessageAssociationEnd<Baseline3, Optional<PartyIdentification26>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -822,7 +933,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification26.mmObject();
+			type_lazy = () -> PartyIdentification26.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification26> getValue(Baseline3 obj) {
+			return obj.getConsignee();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, Optional<PartyIdentification26> value) {
+			obj.setConsignee(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Goods", required = true)
@@ -864,7 +985,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGoods = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, LineItem7> mmGoods = new MMMessageAssociationEnd<Baseline3, LineItem7>() {
 		{
 			businessComponentTrace_lazy = () -> CommercialTrade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -877,11 +998,21 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LineItem7.mmObject();
+			type_lazy = () -> LineItem7.mmObject();
+		}
+
+		@Override
+		public LineItem7 getValue(Baseline3 obj) {
+			return obj.getGoods();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, LineItem7 value) {
+			obj.setGoods(value);
 		}
 	};
 	@XmlElement(name = "PmtTerms", required = true)
-	protected List<com.tools20022.repository.msg.PaymentTerms1> paymentTerms;
+	protected List<PaymentTerms1> paymentTerms;
 	/**
 	 * 
 	 <p>
@@ -920,7 +1051,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, List<PaymentTerms1>> mmPaymentTerms = new MMMessageAssociationEnd<Baseline3, List<PaymentTerms1>>() {
 		{
 			businessElementTrace_lazy = () -> CommercialTrade.mmPaymentObligation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -932,7 +1063,17 @@ public class Baseline3 {
 			nextVersions_lazy = () -> Arrays.asList(Baseline4.mmPaymentTerms);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTerms1.mmObject();
+			type_lazy = () -> PaymentTerms1.mmObject();
+		}
+
+		@Override
+		public List<PaymentTerms1> getValue(Baseline3 obj) {
+			return obj.getPaymentTerms();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, List<PaymentTerms1> value) {
+			obj.setPaymentTerms(value);
 		}
 	};
 	@XmlElement(name = "SttlmTerms")
@@ -976,7 +1117,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, Optional<SettlementTerms2>> mmSettlementTerms = new MMMessageAssociationEnd<Baseline3, Optional<SettlementTerms2>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -989,11 +1130,21 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementTerms2.mmObject();
+			type_lazy = () -> SettlementTerms2.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementTerms2> getValue(Baseline3 obj) {
+			return obj.getSettlementTerms();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, Optional<SettlementTerms2> value) {
+			obj.setSettlementTerms(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtOblgtn")
-	protected List<com.tools20022.repository.msg.PaymentObligation1> paymentObligation;
+	protected List<PaymentObligation1> paymentObligation;
 	/**
 	 * 
 	 <p>
@@ -1034,7 +1185,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentObligation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, List<PaymentObligation1>> mmPaymentObligation = new MMMessageAssociationEnd<Baseline3, List<PaymentObligation1>>() {
 		{
 			businessElementTrace_lazy = () -> CommercialTrade.mmPaymentObligation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
@@ -1046,7 +1197,17 @@ public class Baseline3 {
 			nextVersions_lazy = () -> Arrays.asList(Baseline4.mmPaymentObligation);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentObligation1.mmObject();
+			type_lazy = () -> PaymentObligation1.mmObject();
+		}
+
+		@Override
+		public List<PaymentObligation1> getValue(Baseline3 obj) {
+			return obj.getPaymentObligation();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, List<PaymentObligation1> value) {
+			obj.setPaymentObligation(value);
 		}
 	};
 	@XmlElement(name = "LatstMtchDt")
@@ -1087,7 +1248,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLatestMatchDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Baseline3, Optional<ISODate>> mmLatestMatchDate = new MMMessageAttribute<Baseline3, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
 			isDerived = false;
@@ -1099,6 +1260,16 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(Baseline3 obj) {
+			return obj.getLatestMatchDate();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, Optional<ISODate> value) {
+			obj.setLatestMatchDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ComrclDataSetReqrd", required = true)
@@ -1138,7 +1309,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommercialDataSetRequired = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, RequiredSubmission2> mmCommercialDataSetRequired = new MMMessageAssociationEnd<Baseline3, RequiredSubmission2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
 			isDerived = false;
@@ -1150,7 +1321,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequiredSubmission2.mmObject();
+			type_lazy = () -> RequiredSubmission2.mmObject();
+		}
+
+		@Override
+		public RequiredSubmission2 getValue(Baseline3 obj) {
+			return obj.getCommercialDataSetRequired();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, RequiredSubmission2 value) {
+			obj.setCommercialDataSetRequired(value);
 		}
 	};
 	@XmlElement(name = "TrnsprtDataSetReqrd")
@@ -1190,7 +1371,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransportDataSetRequired = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, Optional<RequiredSubmission2>> mmTransportDataSetRequired = new MMMessageAssociationEnd<Baseline3, Optional<RequiredSubmission2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
 			isDerived = false;
@@ -1202,7 +1383,17 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequiredSubmission2.mmObject();
+			type_lazy = () -> RequiredSubmission2.mmObject();
+		}
+
+		@Override
+		public Optional<RequiredSubmission2> getValue(Baseline3 obj) {
+			return obj.getTransportDataSetRequired();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, Optional<RequiredSubmission2> value) {
+			obj.setTransportDataSetRequired(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InsrncDataSetReqrd")
@@ -1242,7 +1433,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInsuranceDataSetRequired = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, Optional<RequiredSubmission3>> mmInsuranceDataSetRequired = new MMMessageAssociationEnd<Baseline3, Optional<RequiredSubmission3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
 			isDerived = false;
@@ -1254,11 +1445,21 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequiredSubmission3.mmObject();
+			type_lazy = () -> RequiredSubmission3.mmObject();
+		}
+
+		@Override
+		public Optional<RequiredSubmission3> getValue(Baseline3 obj) {
+			return obj.getInsuranceDataSetRequired();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, Optional<RequiredSubmission3> value) {
+			obj.setInsuranceDataSetRequired(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CertDataSetReqrd")
-	protected List<com.tools20022.repository.msg.RequiredSubmission4> certificateDataSetRequired;
+	protected List<RequiredSubmission4> certificateDataSetRequired;
 	/**
 	 * 
 	 <p>
@@ -1294,7 +1495,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCertificateDataSetRequired = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, List<RequiredSubmission4>> mmCertificateDataSetRequired = new MMMessageAssociationEnd<Baseline3, List<RequiredSubmission4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
 			isDerived = false;
@@ -1305,11 +1506,21 @@ public class Baseline3 {
 			nextVersions_lazy = () -> Arrays.asList(Baseline4.mmCertificateDataSetRequired);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequiredSubmission4.mmObject();
+			type_lazy = () -> RequiredSubmission4.mmObject();
+		}
+
+		@Override
+		public List<RequiredSubmission4> getValue(Baseline3 obj) {
+			return obj.getCertificateDataSetRequired();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, List<RequiredSubmission4> value) {
+			obj.setCertificateDataSetRequired(value);
 		}
 	};
 	@XmlElement(name = "OthrCertDataSetReqrd")
-	protected List<com.tools20022.repository.msg.RequiredSubmission5> otherCertificateDataSetRequired;
+	protected List<RequiredSubmission5> otherCertificateDataSetRequired;
 	/**
 	 * 
 	 <p>
@@ -1345,7 +1556,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherCertificateDataSetRequired = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Baseline3, List<RequiredSubmission5>> mmOtherCertificateDataSetRequired = new MMMessageAssociationEnd<Baseline3, List<RequiredSubmission5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
 			isDerived = false;
@@ -1356,7 +1567,17 @@ public class Baseline3 {
 			nextVersions_lazy = () -> Arrays.asList(Baseline4.mmOtherCertificateDataSetRequired);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequiredSubmission5.mmObject();
+			type_lazy = () -> RequiredSubmission5.mmObject();
+		}
+
+		@Override
+		public List<RequiredSubmission5> getValue(Baseline3 obj) {
+			return obj.getOtherCertificateDataSetRequired();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, List<RequiredSubmission5> value) {
+			obj.setOtherCertificateDataSetRequired(value);
 		}
 	};
 	@XmlElement(name = "InttToPayXpctd", required = true)
@@ -1398,7 +1619,7 @@ public class Baseline3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntentToPayExpected = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Baseline3, YesNoIndicator> mmIntentToPayExpected = new MMMessageAttribute<Baseline3, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Baseline3.mmObject();
 			isDerived = false;
@@ -1410,6 +1631,16 @@ public class Baseline3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Baseline3 obj) {
+			return obj.getIntentToPayExpected();
+		}
+
+		@Override
+		public void setValue(Baseline3 obj, YesNoIndicator value) {
+			obj.setIntentToPayExpected(value);
 		}
 	};
 
@@ -1441,7 +1672,7 @@ public class Baseline3 {
 		return submitterBaselineIdentification;
 	}
 
-	public Baseline3 setSubmitterBaselineIdentification(com.tools20022.repository.msg.DocumentIdentification1 submitterBaselineIdentification) {
+	public Baseline3 setSubmitterBaselineIdentification(DocumentIdentification1 submitterBaselineIdentification) {
 		this.submitterBaselineIdentification = Objects.requireNonNull(submitterBaselineIdentification);
 		return this;
 	}
@@ -1459,7 +1690,7 @@ public class Baseline3 {
 		return purchaseOrderReference;
 	}
 
-	public Baseline3 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+	public Baseline3 setPurchaseOrderReference(DocumentIdentification7 purchaseOrderReference) {
 		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
 		return this;
 	}
@@ -1468,7 +1699,7 @@ public class Baseline3 {
 		return buyer;
 	}
 
-	public Baseline3 setBuyer(com.tools20022.repository.msg.PartyIdentification26 buyer) {
+	public Baseline3 setBuyer(PartyIdentification26 buyer) {
 		this.buyer = Objects.requireNonNull(buyer);
 		return this;
 	}
@@ -1477,7 +1708,7 @@ public class Baseline3 {
 		return seller;
 	}
 
-	public Baseline3 setSeller(com.tools20022.repository.msg.PartyIdentification26 seller) {
+	public Baseline3 setSeller(PartyIdentification26 seller) {
 		this.seller = Objects.requireNonNull(seller);
 		return this;
 	}
@@ -1486,7 +1717,7 @@ public class Baseline3 {
 		return buyerBank;
 	}
 
-	public Baseline3 setBuyerBank(com.tools20022.repository.msg.BICIdentification1 buyerBank) {
+	public Baseline3 setBuyerBank(BICIdentification1 buyerBank) {
 		this.buyerBank = Objects.requireNonNull(buyerBank);
 		return this;
 	}
@@ -1495,7 +1726,7 @@ public class Baseline3 {
 		return sellerBank;
 	}
 
-	public Baseline3 setSellerBank(com.tools20022.repository.msg.BICIdentification1 sellerBank) {
+	public Baseline3 setSellerBank(BICIdentification1 sellerBank) {
 		this.sellerBank = Objects.requireNonNull(sellerBank);
 		return this;
 	}
@@ -1504,7 +1735,7 @@ public class Baseline3 {
 		return buyerSideSubmittingBank == null ? buyerSideSubmittingBank = new ArrayList<>() : buyerSideSubmittingBank;
 	}
 
-	public Baseline3 setBuyerSideSubmittingBank(List<com.tools20022.repository.msg.BICIdentification1> buyerSideSubmittingBank) {
+	public Baseline3 setBuyerSideSubmittingBank(List<BICIdentification1> buyerSideSubmittingBank) {
 		this.buyerSideSubmittingBank = Objects.requireNonNull(buyerSideSubmittingBank);
 		return this;
 	}
@@ -1513,7 +1744,7 @@ public class Baseline3 {
 		return sellerSideSubmittingBank == null ? sellerSideSubmittingBank = new ArrayList<>() : sellerSideSubmittingBank;
 	}
 
-	public Baseline3 setSellerSideSubmittingBank(List<com.tools20022.repository.msg.BICIdentification1> sellerSideSubmittingBank) {
+	public Baseline3 setSellerSideSubmittingBank(List<BICIdentification1> sellerSideSubmittingBank) {
 		this.sellerSideSubmittingBank = Objects.requireNonNull(sellerSideSubmittingBank);
 		return this;
 	}
@@ -1522,7 +1753,7 @@ public class Baseline3 {
 		return billTo == null ? Optional.empty() : Optional.of(billTo);
 	}
 
-	public Baseline3 setBillTo(com.tools20022.repository.msg.PartyIdentification26 billTo) {
+	public Baseline3 setBillTo(PartyIdentification26 billTo) {
 		this.billTo = billTo;
 		return this;
 	}
@@ -1531,7 +1762,7 @@ public class Baseline3 {
 		return shipTo == null ? Optional.empty() : Optional.of(shipTo);
 	}
 
-	public Baseline3 setShipTo(com.tools20022.repository.msg.PartyIdentification26 shipTo) {
+	public Baseline3 setShipTo(PartyIdentification26 shipTo) {
 		this.shipTo = shipTo;
 		return this;
 	}
@@ -1540,7 +1771,7 @@ public class Baseline3 {
 		return consignee == null ? Optional.empty() : Optional.of(consignee);
 	}
 
-	public Baseline3 setConsignee(com.tools20022.repository.msg.PartyIdentification26 consignee) {
+	public Baseline3 setConsignee(PartyIdentification26 consignee) {
 		this.consignee = consignee;
 		return this;
 	}
@@ -1549,7 +1780,7 @@ public class Baseline3 {
 		return goods;
 	}
 
-	public Baseline3 setGoods(com.tools20022.repository.msg.LineItem7 goods) {
+	public Baseline3 setGoods(LineItem7 goods) {
 		this.goods = Objects.requireNonNull(goods);
 		return this;
 	}
@@ -1558,7 +1789,7 @@ public class Baseline3 {
 		return paymentTerms == null ? paymentTerms = new ArrayList<>() : paymentTerms;
 	}
 
-	public Baseline3 setPaymentTerms(List<com.tools20022.repository.msg.PaymentTerms1> paymentTerms) {
+	public Baseline3 setPaymentTerms(List<PaymentTerms1> paymentTerms) {
 		this.paymentTerms = Objects.requireNonNull(paymentTerms);
 		return this;
 	}
@@ -1567,7 +1798,7 @@ public class Baseline3 {
 		return settlementTerms == null ? Optional.empty() : Optional.of(settlementTerms);
 	}
 
-	public Baseline3 setSettlementTerms(com.tools20022.repository.msg.SettlementTerms2 settlementTerms) {
+	public Baseline3 setSettlementTerms(SettlementTerms2 settlementTerms) {
 		this.settlementTerms = settlementTerms;
 		return this;
 	}
@@ -1576,7 +1807,7 @@ public class Baseline3 {
 		return paymentObligation == null ? paymentObligation = new ArrayList<>() : paymentObligation;
 	}
 
-	public Baseline3 setPaymentObligation(List<com.tools20022.repository.msg.PaymentObligation1> paymentObligation) {
+	public Baseline3 setPaymentObligation(List<PaymentObligation1> paymentObligation) {
 		this.paymentObligation = Objects.requireNonNull(paymentObligation);
 		return this;
 	}
@@ -1594,7 +1825,7 @@ public class Baseline3 {
 		return commercialDataSetRequired;
 	}
 
-	public Baseline3 setCommercialDataSetRequired(com.tools20022.repository.msg.RequiredSubmission2 commercialDataSetRequired) {
+	public Baseline3 setCommercialDataSetRequired(RequiredSubmission2 commercialDataSetRequired) {
 		this.commercialDataSetRequired = Objects.requireNonNull(commercialDataSetRequired);
 		return this;
 	}
@@ -1603,7 +1834,7 @@ public class Baseline3 {
 		return transportDataSetRequired == null ? Optional.empty() : Optional.of(transportDataSetRequired);
 	}
 
-	public Baseline3 setTransportDataSetRequired(com.tools20022.repository.msg.RequiredSubmission2 transportDataSetRequired) {
+	public Baseline3 setTransportDataSetRequired(RequiredSubmission2 transportDataSetRequired) {
 		this.transportDataSetRequired = transportDataSetRequired;
 		return this;
 	}
@@ -1612,7 +1843,7 @@ public class Baseline3 {
 		return insuranceDataSetRequired == null ? Optional.empty() : Optional.of(insuranceDataSetRequired);
 	}
 
-	public Baseline3 setInsuranceDataSetRequired(com.tools20022.repository.msg.RequiredSubmission3 insuranceDataSetRequired) {
+	public Baseline3 setInsuranceDataSetRequired(RequiredSubmission3 insuranceDataSetRequired) {
 		this.insuranceDataSetRequired = insuranceDataSetRequired;
 		return this;
 	}
@@ -1621,7 +1852,7 @@ public class Baseline3 {
 		return certificateDataSetRequired == null ? certificateDataSetRequired = new ArrayList<>() : certificateDataSetRequired;
 	}
 
-	public Baseline3 setCertificateDataSetRequired(List<com.tools20022.repository.msg.RequiredSubmission4> certificateDataSetRequired) {
+	public Baseline3 setCertificateDataSetRequired(List<RequiredSubmission4> certificateDataSetRequired) {
 		this.certificateDataSetRequired = Objects.requireNonNull(certificateDataSetRequired);
 		return this;
 	}
@@ -1630,7 +1861,7 @@ public class Baseline3 {
 		return otherCertificateDataSetRequired == null ? otherCertificateDataSetRequired = new ArrayList<>() : otherCertificateDataSetRequired;
 	}
 
-	public Baseline3 setOtherCertificateDataSetRequired(List<com.tools20022.repository.msg.RequiredSubmission5> otherCertificateDataSetRequired) {
+	public Baseline3 setOtherCertificateDataSetRequired(List<RequiredSubmission5> otherCertificateDataSetRequired) {
 		this.otherCertificateDataSetRequired = Objects.requireNonNull(otherCertificateDataSetRequired);
 		return this;
 	}

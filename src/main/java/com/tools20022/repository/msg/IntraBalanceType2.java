@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -125,7 +126,7 @@ public class IntraBalanceType2 {
 	 * IntraBalanceType1.mmBalanceFrom}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceType2, Optional<CashSubBalanceTypeAndQuantityBreakdown2>> mmBalanceFrom = new MMMessageAssociationEnd<IntraBalanceType2, Optional<CashSubBalanceTypeAndQuantityBreakdown2>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceType2.mmObject();
@@ -139,7 +140,17 @@ public class IntraBalanceType2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+		}
+
+		@Override
+		public Optional<CashSubBalanceTypeAndQuantityBreakdown2> getValue(IntraBalanceType2 obj) {
+			return obj.getBalanceFrom();
+		}
+
+		@Override
+		public void setValue(IntraBalanceType2 obj, Optional<CashSubBalanceTypeAndQuantityBreakdown2> value) {
+			obj.setBalanceFrom(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalTo")
@@ -184,7 +195,7 @@ public class IntraBalanceType2 {
 	 * IntraBalanceType1.mmBalanceTo}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceType2, Optional<CashSubBalanceTypeAndQuantityBreakdown2>> mmBalanceTo = new MMMessageAssociationEnd<IntraBalanceType2, Optional<CashSubBalanceTypeAndQuantityBreakdown2>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceType2.mmObject();
@@ -198,7 +209,17 @@ public class IntraBalanceType2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+		}
+
+		@Override
+		public Optional<CashSubBalanceTypeAndQuantityBreakdown2> getValue(IntraBalanceType2 obj) {
+			return obj.getBalanceTo();
+		}
+
+		@Override
+		public void setValue(IntraBalanceType2 obj, Optional<CashSubBalanceTypeAndQuantityBreakdown2> value) {
+			obj.setBalanceTo(value.orElse(null));
 		}
 	};
 
@@ -222,7 +243,7 @@ public class IntraBalanceType2 {
 		return balanceFrom == null ? Optional.empty() : Optional.of(balanceFrom);
 	}
 
-	public IntraBalanceType2 setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2 balanceFrom) {
+	public IntraBalanceType2 setBalanceFrom(CashSubBalanceTypeAndQuantityBreakdown2 balanceFrom) {
 		this.balanceFrom = balanceFrom;
 		return this;
 	}
@@ -231,7 +252,7 @@ public class IntraBalanceType2 {
 		return balanceTo == null ? Optional.empty() : Optional.of(balanceTo);
 	}
 
-	public IntraBalanceType2 setBalanceTo(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2 balanceTo) {
+	public IntraBalanceType2 setBalanceTo(CashSubBalanceTypeAndQuantityBreakdown2 balanceTo) {
 		this.balanceTo = balanceTo;
 		return this;
 	}

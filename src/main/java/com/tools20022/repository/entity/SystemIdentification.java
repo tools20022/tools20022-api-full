@@ -22,9 +22,11 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.MarketInfrastructureIdentification1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
+import com.tools20022.repository.entity.GenericIdentification;
+import com.tools20022.repository.entity.System;
+import com.tools20022.repository.entity.SystemName;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -170,7 +172,7 @@ public class SystemIdentification {
 	 * definition} = "System which is identified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmIdentificationForSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SystemIdentification, Optional<System>> mmIdentificationForSystem = new MMBusinessAssociationEnd<SystemIdentification, Optional<System>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AutomatedTellerMachine3.mmIdentification, AutomatedTellerMachine4.mmIdentification, AutomatedTellerMachine10.mmIdentification);
 			isDerived = false;
@@ -180,9 +182,19 @@ public class SystemIdentification {
 			definition = "System which is identified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.System.mmSystemIdentification;
+			opposite_lazy = () -> System.mmSystemIdentification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.System.mmObject();
+			type_lazy = () -> System.mmObject();
+		}
+
+		@Override
+		public Optional<System> getValue(SystemIdentification obj) {
+			return obj.getIdentificationForSystem();
+		}
+
+		@Override
+		public void setValue(SystemIdentification obj, Optional<System> value) {
+			obj.setIdentificationForSystem(value.orElse(null));
 		}
 	};
 	protected Max35Text model;
@@ -222,7 +234,7 @@ public class SystemIdentification {
 	 * definition} = "Identification of a model for a given manufacturer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmModel = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SystemIdentification, Max35Text> mmModel = new MMBusinessAttribute<SystemIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmModel, PointOfInteractionComponent2.mmModel);
 			isDerived = false;
@@ -235,12 +247,14 @@ public class SystemIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemIdentification.class.getMethod("getModel", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SystemIdentification obj) {
+			return obj.getModel();
+		}
+
+		@Override
+		public void setValue(SystemIdentification obj, Max35Text value) {
+			obj.setModel(value);
 		}
 	};
 	protected Max35Text serialNumber;
@@ -283,7 +297,7 @@ public class SystemIdentification {
 	 * definition} = "Serial number of a component."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSerialNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SystemIdentification, Max35Text> mmSerialNumber = new MMBusinessAttribute<SystemIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmSerialNumber, PointOfInteractionComponent2.mmSerialNumber, PointOfInteractionComponentIdentification1.mmSerialNumber);
 			isDerived = false;
@@ -296,12 +310,14 @@ public class SystemIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemIdentification.class.getMethod("getSerialNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SystemIdentification obj) {
+			return obj.getSerialNumber();
+		}
+
+		@Override
+		public void setValue(SystemIdentification obj, Max35Text value) {
+			obj.setSerialNumber(value);
 		}
 	};
 	protected Max70Text approvalNumber;
@@ -343,7 +359,7 @@ public class SystemIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmApprovalNumber = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SystemIdentification, Max70Text> mmApprovalNumber = new MMBusinessAttribute<SystemIdentification, Max70Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent1.mmApprovalNumber, PointOfInteractionComponent2.mmApprovalNumber);
 			isDerived = false;
@@ -356,12 +372,14 @@ public class SystemIdentification {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemIdentification.class.getMethod("getApprovalNumber", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max70Text getValue(SystemIdentification obj) {
+			return obj.getApprovalNumber();
+		}
+
+		@Override
+		public void setValue(SystemIdentification obj, Max70Text value) {
+			obj.setApprovalNumber(value);
 		}
 	};
 	protected Max35Text systemVersion;
@@ -419,7 +437,7 @@ public class SystemIdentification {
 	 * "Version of the system, eg, \"4.0.1\" to indicate version 4.0.1."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSystemVersion = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SystemIdentification, Max35Text> mmSystemVersion = new MMBusinessAttribute<SystemIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteractionComponent2.mmVersionNumber, PointOfInteractionComponentStatus1.mmVersionNumber, PointOfInteractionComponentStatus2.mmVersionNumber,
 					PointOfInteractionComponentStatus3.mmVersionNumber);
@@ -440,15 +458,17 @@ public class SystemIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SystemIdentification.class.getMethod("getSystemVersion", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(SystemIdentification obj) {
+			return obj.getSystemVersion();
+		}
+
+		@Override
+		public void setValue(SystemIdentification obj, Max35Text value) {
+			obj.setSystemVersion(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SystemName> systemName;
+	protected List<SystemName> systemName;
 	/**
 	 * 
 	 <p>
@@ -496,7 +516,7 @@ public class SystemIdentification {
 	 * definition} = "Name by which a system is known."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSystemName = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SystemIdentification, List<SystemName>> mmSystemName = new MMBusinessAssociationEnd<SystemIdentification, List<SystemName>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(AutomatedTellerMachine3.mmSequenceNumber, AutomatedTellerMachine4.mmSequenceNumber, AutomatedTellerMachine10.mmSequenceNumber);
 			isDerived = false;
@@ -505,12 +525,22 @@ public class SystemIdentification {
 			name = "SystemName";
 			definition = "Name by which a system is known.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SystemName.mmSystemIdentification;
+			opposite_lazy = () -> SystemName.mmSystemIdentification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SystemName.mmObject();
+			type_lazy = () -> SystemName.mmObject();
+		}
+
+		@Override
+		public List<SystemName> getValue(SystemIdentification obj) {
+			return obj.getSystemName();
+		}
+
+		@Override
+		public void setValue(SystemIdentification obj, List<SystemName> value) {
+			obj.setSystemName(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.GenericIdentification> identification;
+	protected List<GenericIdentification> identification;
 	/**
 	 * 
 	 <p>
@@ -622,7 +652,7 @@ public class SystemIdentification {
 	 * definition} = "Identification of a system."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SystemIdentification, List<GenericIdentification>> mmIdentification = new MMBusinessAssociationEnd<SystemIdentification, List<GenericIdentification>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ManagementPlan1.mmPOIIdentification, ManagementPlan1.mmTerminalManagerIdentification, ManagementPlan2.mmPOIIdentification, ManagementPlan2.mmTerminalManagerIdentification,
 					CardPaymentTransaction17.mmPOIIdentification, ManagementPlan3.mmPOIIdentification, ManagementPlan3.mmTerminalManagerIdentification, CardPaymentTransaction21.mmPOIIdentification,
@@ -636,9 +666,19 @@ public class SystemIdentification {
 			name = "Identification";
 			definition = "Identification of a system.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmRelatedSystemIdentification;
+			opposite_lazy = () -> GenericIdentification.mmRelatedSystemIdentification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
+			type_lazy = () -> GenericIdentification.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification> getValue(SystemIdentification obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SystemIdentification obj, List<GenericIdentification> value) {
+			obj.setIdentification(value);
 		}
 	};
 
@@ -649,8 +689,7 @@ public class SystemIdentification {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemIdentification";
 				definition = "Parameters that identify a system.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmRelatedSystemIdentification, com.tools20022.repository.entity.System.mmSystemIdentification,
-						com.tools20022.repository.entity.SystemName.mmSystemIdentification);
+				associationDomain_lazy = () -> Arrays.asList(GenericIdentification.mmRelatedSystemIdentification, System.mmSystemIdentification, SystemName.mmSystemIdentification);
 				derivationElement_lazy = () -> Arrays.asList(MarketInfrastructureIdentification1Choice.mmCode, MarketInfrastructureIdentification1Choice.mmProprietary);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemIdentification.mmIdentificationForSystem, com.tools20022.repository.entity.SystemIdentification.mmModel,
 						com.tools20022.repository.entity.SystemIdentification.mmSerialNumber, com.tools20022.repository.entity.SystemIdentification.mmApprovalNumber, com.tools20022.repository.entity.SystemIdentification.mmSystemVersion,
@@ -670,7 +709,7 @@ public class SystemIdentification {
 		return identificationForSystem == null ? Optional.empty() : Optional.of(identificationForSystem);
 	}
 
-	public SystemIdentification setIdentificationForSystem(com.tools20022.repository.entity.System identificationForSystem) {
+	public SystemIdentification setIdentificationForSystem(System identificationForSystem) {
 		this.identificationForSystem = identificationForSystem;
 		return this;
 	}
@@ -715,7 +754,7 @@ public class SystemIdentification {
 		return systemName == null ? systemName = new ArrayList<>() : systemName;
 	}
 
-	public SystemIdentification setSystemName(List<com.tools20022.repository.entity.SystemName> systemName) {
+	public SystemIdentification setSystemName(List<SystemName> systemName) {
 		this.systemName = Objects.requireNonNull(systemName);
 		return this;
 	}
@@ -724,7 +763,7 @@ public class SystemIdentification {
 		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public SystemIdentification setIdentification(List<com.tools20022.repository.entity.GenericIdentification> identification) {
+	public SystemIdentification setIdentification(List<GenericIdentification> identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

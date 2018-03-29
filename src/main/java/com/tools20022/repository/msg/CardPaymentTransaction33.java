@@ -27,6 +27,9 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyConversion1;
+import com.tools20022.repository.msg.GenericIdentification32;
+import com.tools20022.repository.msg.TransactionIdentifier1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +134,7 @@ public class CardPaymentTransaction33 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSaleReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentTransaction33, Optional<Max35Text>> mmSaleReferenceIdentification = new MMMessageAttribute<CardPaymentTransaction33, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction33.mmObject();
 			isDerived = false;
@@ -143,6 +146,16 @@ public class CardPaymentTransaction33 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CardPaymentTransaction33 obj) {
+			return obj.getSaleReferenceIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction33 obj, Optional<Max35Text> value) {
+			obj.setSaleReferenceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -193,7 +206,7 @@ public class CardPaymentTransaction33 {
 	 * CardPaymentTransaction21.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction33, TransactionIdentifier1> mmTransactionIdentification = new MMMessageAssociationEnd<CardPaymentTransaction33, TransactionIdentifier1>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction33.mmObject();
@@ -207,7 +220,17 @@ public class CardPaymentTransaction33 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
+			type_lazy = () -> TransactionIdentifier1.mmObject();
+		}
+
+		@Override
+		public TransactionIdentifier1 getValue(CardPaymentTransaction33 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction33 obj, TransactionIdentifier1 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "POIId", required = true)
@@ -259,7 +282,7 @@ public class CardPaymentTransaction33 {
 	 * CardPaymentTransaction21.mmPOIIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction33, GenericIdentification32> mmPOIIdentification = new MMMessageAssociationEnd<CardPaymentTransaction33, GenericIdentification32>() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction33.mmObject();
@@ -273,7 +296,17 @@ public class CardPaymentTransaction33 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
+			type_lazy = () -> GenericIdentification32.mmObject();
+		}
+
+		@Override
+		public GenericIdentification32 getValue(CardPaymentTransaction33 obj) {
+			return obj.getPOIIdentification();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction33 obj, GenericIdentification32 value) {
+			obj.setPOIIdentification(value);
 		}
 	};
 	@XmlElement(name = "CcyConvs", required = true)
@@ -317,7 +350,7 @@ public class CardPaymentTransaction33 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyConversion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentTransaction33, CurrencyConversion1> mmCurrencyConversion = new MMMessageAssociationEnd<CardPaymentTransaction33, CurrencyConversion1>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction33.mmObject();
@@ -330,7 +363,17 @@ public class CardPaymentTransaction33 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion1.mmObject();
+			type_lazy = () -> CurrencyConversion1.mmObject();
+		}
+
+		@Override
+		public CurrencyConversion1 getValue(CardPaymentTransaction33 obj) {
+			return obj.getCurrencyConversion();
+		}
+
+		@Override
+		public void setValue(CardPaymentTransaction33 obj, CurrencyConversion1 value) {
+			obj.setCurrencyConversion(value);
 		}
 	};
 
@@ -364,7 +407,7 @@ public class CardPaymentTransaction33 {
 		return transactionIdentification;
 	}
 
-	public CardPaymentTransaction33 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+	public CardPaymentTransaction33 setTransactionIdentification(TransactionIdentifier1 transactionIdentification) {
 		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
 		return this;
 	}
@@ -373,7 +416,7 @@ public class CardPaymentTransaction33 {
 		return pOIIdentification;
 	}
 
-	public CardPaymentTransaction33 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification32 pOIIdentification) {
+	public CardPaymentTransaction33 setPOIIdentification(GenericIdentification32 pOIIdentification) {
 		this.pOIIdentification = Objects.requireNonNull(pOIIdentification);
 		return this;
 	}
@@ -382,7 +425,7 @@ public class CardPaymentTransaction33 {
 		return currencyConversion;
 	}
 
-	public CardPaymentTransaction33 setCurrencyConversion(com.tools20022.repository.msg.CurrencyConversion1 currencyConversion) {
+	public CardPaymentTransaction33 setCurrencyConversion(CurrencyConversion1 currencyConversion) {
 		this.currencyConversion = Objects.requireNonNull(currencyConversion);
 		return this;
 	}

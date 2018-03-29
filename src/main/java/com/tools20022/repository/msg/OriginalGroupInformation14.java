@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReversalReasonInformation4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class OriginalGroupInformation14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation14, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalGroupInformation14, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation14.mmObject();
@@ -128,6 +129,16 @@ public class OriginalGroupInformation14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation14 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation14 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -161,7 +172,7 @@ public class OriginalGroupInformation14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation14, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalGroupInformation14, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation14.mmObject();
 			isDerived = false;
@@ -172,6 +183,16 @@ public class OriginalGroupInformation14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation14 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation14 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "RvslRsnInf")
@@ -208,7 +229,7 @@ public class OriginalGroupInformation14 {
 	 * definition} = "Detailed information on the reversal reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReversalReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupInformation14, Optional<ReversalReasonInformation4>> mmReversalReasonInformation = new MMMessageAssociationEnd<OriginalGroupInformation14, Optional<ReversalReasonInformation4>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmTransactionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation14.mmObject();
@@ -220,7 +241,17 @@ public class OriginalGroupInformation14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReversalReasonInformation4.mmObject();
+			type_lazy = () -> ReversalReasonInformation4.mmObject();
+		}
+
+		@Override
+		public Optional<ReversalReasonInformation4> getValue(OriginalGroupInformation14 obj) {
+			return obj.getReversalReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation14 obj, Optional<ReversalReasonInformation4> value) {
+			obj.setReversalReasonInformation(value.orElse(null));
 		}
 	};
 
@@ -261,7 +292,7 @@ public class OriginalGroupInformation14 {
 		return reversalReasonInformation == null ? Optional.empty() : Optional.of(reversalReasonInformation);
 	}
 
-	public OriginalGroupInformation14 setReversalReasonInformation(com.tools20022.repository.msg.ReversalReasonInformation4 reversalReasonInformation) {
+	public OriginalGroupInformation14 setReversalReasonInformation(ReversalReasonInformation4 reversalReasonInformation) {
 		this.reversalReasonInformation = reversalReasonInformation;
 		return this;
 	}

@@ -106,7 +106,7 @@ public class NameAndAddress12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NameAndAddress12, RestrictedFINXMax140Text> mmName = new MMMessageAttribute<NameAndAddress12, RestrictedFINXMax140Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndAddress12.mmObject();
@@ -118,6 +118,16 @@ public class NameAndAddress12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax140Text getValue(NameAndAddress12 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(NameAndAddress12 obj, RestrictedFINXMax140Text value) {
+			obj.setName(value);
 		}
 	};
 

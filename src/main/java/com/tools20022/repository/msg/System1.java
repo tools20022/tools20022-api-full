@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -112,7 +113,7 @@ public class System1 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<System1, Optional<MarketInfrastructureIdentification1Choice>> mmSystemIdentification = new MMMessageAssociationEnd<System1, Optional<MarketInfrastructureIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
@@ -125,6 +126,16 @@ public class System1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketInfrastructureIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketInfrastructureIdentification1Choice> getValue(System1 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(System1 obj, Optional<MarketInfrastructureIdentification1Choice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MmbId")
@@ -162,7 +173,7 @@ public class System1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMemberIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<System1, Optional<BranchAndFinancialInstitutionIdentification5>> mmMemberIdentification = new MMMessageAssociationEnd<System1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
@@ -174,7 +185,17 @@ public class System1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(System1 obj) {
+			return obj.getMemberIdentification();
+		}
+
+		@Override
+		public void setValue(System1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setMemberIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry")
@@ -210,7 +231,7 @@ public class System1 {
 	 * definition} = "Country in which the system is located."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<System1, Optional<CountryCode>> mmCountry = new MMMessageAttribute<System1, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
@@ -222,6 +243,16 @@ public class System1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(System1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(System1 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -259,7 +290,7 @@ public class System1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<System1, Optional<AccountIdentification4Choice>> mmAccountIdentification = new MMMessageAssociationEnd<System1, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.System1.mmObject();
@@ -272,6 +303,16 @@ public class System1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(System1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(System1 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 
@@ -303,7 +344,7 @@ public class System1 {
 		return memberIdentification == null ? Optional.empty() : Optional.of(memberIdentification);
 	}
 
-	public System1 setMemberIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 memberIdentification) {
+	public System1 setMemberIdentification(BranchAndFinancialInstitutionIdentification5 memberIdentification) {
 		this.memberIdentification = memberIdentification;
 		return this;
 	}

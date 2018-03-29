@@ -25,6 +25,7 @@ import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV02
 import com.tools20022.repository.choice.Status2Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Transaction14;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,7 +125,7 @@ public class StatusAndReason7 {
 	 * definition} = "Status and reason for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason7, Status2Choice> mmStatusAndReason = new MMMessageAssociationEnd<StatusAndReason7, Status2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason7.mmObject();
@@ -139,9 +140,19 @@ public class StatusAndReason7 {
 			isComposite = true;
 			type_lazy = () -> Status2Choice.mmObject();
 		}
+
+		@Override
+		public Status2Choice getValue(StatusAndReason7 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(StatusAndReason7 obj, Status2Choice value) {
+			obj.setStatusAndReason(value);
+		}
 	};
 	@XmlElement(name = "Tx")
-	protected List<com.tools20022.repository.msg.Transaction14> transaction;
+	protected List<Transaction14> transaction;
 	/**
 	 * 
 	 <p>
@@ -171,7 +182,7 @@ public class StatusAndReason7 {
 	 * definition} = "Details of the transactions reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason7, List<Transaction14>> mmTransaction = new MMMessageAssociationEnd<StatusAndReason7, List<Transaction14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason7.mmObject();
 			isDerived = false;
@@ -182,7 +193,17 @@ public class StatusAndReason7 {
 			definition = "Details of the transactions reported.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Transaction14.mmObject();
+			type_lazy = () -> Transaction14.mmObject();
+		}
+
+		@Override
+		public List<Transaction14> getValue(StatusAndReason7 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(StatusAndReason7 obj, List<Transaction14> value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -215,7 +236,7 @@ public class StatusAndReason7 {
 		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public StatusAndReason7 setTransaction(List<com.tools20022.repository.msg.Transaction14> transaction) {
+	public StatusAndReason7 setTransaction(List<Transaction14> transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

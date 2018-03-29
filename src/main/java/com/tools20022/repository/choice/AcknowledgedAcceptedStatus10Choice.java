@@ -137,7 +137,7 @@ public class AcknowledgedAcceptedStatus10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgedAcceptedStatus10Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<AcknowledgedAcceptedStatus10Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus10Choice.mmObject();
@@ -151,6 +151,16 @@ public class AcknowledgedAcceptedStatus10Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AcknowledgedAcceptedStatus10Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(AcknowledgedAcceptedStatus10Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -197,7 +207,7 @@ public class AcknowledgedAcceptedStatus10Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcknowledgedAcceptedStatus10Choice, List<AcknowledgementReason2>> mmReason = new MMMessageAssociationEnd<AcknowledgedAcceptedStatus10Choice, List<AcknowledgementReason2>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus10Choice.mmObject();
@@ -211,6 +221,16 @@ public class AcknowledgedAcceptedStatus10Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcknowledgementReason2.mmObject();
+		}
+
+		@Override
+		public List<AcknowledgementReason2> getValue(AcknowledgedAcceptedStatus10Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AcknowledgedAcceptedStatus10Choice obj, List<AcknowledgementReason2> value) {
+			obj.setReason(value);
 		}
 	};
 

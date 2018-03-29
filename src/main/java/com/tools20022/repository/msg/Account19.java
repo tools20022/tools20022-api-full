@@ -169,7 +169,7 @@ public class Account19 {
 	 * Account15.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account19, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<Account19, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account19.mmObject();
@@ -183,6 +183,16 @@ public class Account19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Account19 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Account19 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dsgnt")
@@ -232,7 +242,7 @@ public class Account19 {
 	 * Account15.mmDesignation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account19, Optional<Max35Text>> mmDesignation = new MMMessageAttribute<Account19, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account19.mmObject();
@@ -246,6 +256,16 @@ public class Account19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Account19 obj) {
+			return obj.getDesignation();
+		}
+
+		@Override
+		public void setValue(Account19 obj, Optional<Max35Text> value) {
+			obj.setDesignation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Svcr")
@@ -294,7 +314,7 @@ public class Account19 {
 	 * Account15.mmServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServicer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Account19, Optional<PartyIdentification70Choice>> mmServicer = new MMMessageAssociationEnd<Account19, Optional<PartyIdentification70Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account19.mmObject();
@@ -309,6 +329,16 @@ public class Account19 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(Account19 obj) {
+			return obj.getServicer();
+		}
+
+		@Override
+		public void setValue(Account19 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setServicer(value.orElse(null));
 		}
 	};
 

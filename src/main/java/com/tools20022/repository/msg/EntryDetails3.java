@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BatchInformation2;
+import com.tools20022.repository.msg.EntryTransaction4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -111,7 +113,7 @@ public class EntryDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBatch = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EntryDetails3, Optional<BatchInformation2>> mmBatch = new MMMessageAssociationEnd<EntryDetails3, Optional<BatchInformation2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntryDetails3.mmObject();
 			isDerived = false;
@@ -123,11 +125,21 @@ public class EntryDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BatchInformation2.mmObject();
+			type_lazy = () -> BatchInformation2.mmObject();
+		}
+
+		@Override
+		public Optional<BatchInformation2> getValue(EntryDetails3 obj) {
+			return obj.getBatch();
+		}
+
+		@Override
+		public void setValue(EntryDetails3 obj, Optional<BatchInformation2> value) {
+			obj.setBatch(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDtls")
-	protected List<com.tools20022.repository.msg.EntryTransaction4> transactionDetails;
+	protected List<EntryTransaction4> transactionDetails;
 	/**
 	 * 
 	 <p>
@@ -165,7 +177,7 @@ public class EntryDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<EntryDetails3, List<EntryTransaction4>> mmTransactionDetails = new MMMessageAssociationEnd<EntryDetails3, List<EntryTransaction4>>() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.EntryDetails3.mmObject();
@@ -177,7 +189,17 @@ public class EntryDetails3 {
 			nextVersions_lazy = () -> Arrays.asList(EntryDetails6.mmTransactionDetails);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EntryTransaction4.mmObject();
+			type_lazy = () -> EntryTransaction4.mmObject();
+		}
+
+		@Override
+		public List<EntryTransaction4> getValue(EntryDetails3 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(EntryDetails3 obj, List<EntryTransaction4> value) {
+			obj.setTransactionDetails(value);
 		}
 	};
 
@@ -201,7 +223,7 @@ public class EntryDetails3 {
 		return batch == null ? Optional.empty() : Optional.of(batch);
 	}
 
-	public EntryDetails3 setBatch(com.tools20022.repository.msg.BatchInformation2 batch) {
+	public EntryDetails3 setBatch(BatchInformation2 batch) {
 		this.batch = batch;
 		return this;
 	}
@@ -210,7 +232,7 @@ public class EntryDetails3 {
 		return transactionDetails == null ? transactionDetails = new ArrayList<>() : transactionDetails;
 	}
 
-	public EntryDetails3 setTransactionDetails(List<com.tools20022.repository.msg.EntryTransaction4> transactionDetails) {
+	public EntryDetails3 setTransactionDetails(List<EntryTransaction4> transactionDetails) {
 		this.transactionDetails = Objects.requireNonNull(transactionDetails);
 		return this;
 	}

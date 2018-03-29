@@ -67,13 +67,17 @@ public class ConstraintIdentificationRule {
 	 */
 	public static final MMConstraint<CorrectivePaymentInitiation1> forCorrectivePaymentInitiation1 = new MMConstraint<CorrectivePaymentInitiation1>() {
 		{
-			validator = ConstraintIdentificationRule::checkCorrectivePaymentInitiation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRule";
 			definition = "Either InstructionIdentification or EndToEndIdentification or both must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationRule.forCorrectivePaymentInitiation2);
 			owner_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/EndToEndIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CorrectivePaymentInitiation1 obj) throws Exception {
+			checkCorrectivePaymentInitiation1(obj);
 		}
 	};
 	/**
@@ -103,12 +107,16 @@ public class ConstraintIdentificationRule {
 	 */
 	public static final MMConstraint<CorrectiveInterbankTransaction1> forCorrectiveInterbankTransaction1 = new MMConstraint<CorrectiveInterbankTransaction1>() {
 		{
-			validator = ConstraintIdentificationRule::checkCorrectiveInterbankTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRule";
 			definition = "Either InstructionIdentification, EndToEndIdentification, TransactionIdentification or any combination of the three must be present.";
 			owner_lazy = () -> CorrectiveInterbankTransaction1.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/EndToEndIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CorrectiveInterbankTransaction1 obj) throws Exception {
+			checkCorrectiveInterbankTransaction1(obj);
 		}
 	};
 	/**
@@ -151,7 +159,6 @@ public class ConstraintIdentificationRule {
 	 */
 	public static final MMConstraint<CorrectivePaymentInitiation2> forCorrectivePaymentInitiation2 = new MMConstraint<CorrectivePaymentInitiation2>() {
 		{
-			validator = ConstraintIdentificationRule::checkCorrectivePaymentInitiation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRule";
 			definition = "Either InstructionIdentification or EndToEndIdentification or both must be present.";
@@ -159,6 +166,11 @@ public class ConstraintIdentificationRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIdentificationRule.forCorrectivePaymentInitiation1;
 			owner_lazy = () -> CorrectivePaymentInitiation2.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/EndToEndIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CorrectivePaymentInitiation2 obj) throws Exception {
+			checkCorrectivePaymentInitiation2(obj);
 		}
 	};
 	/**
@@ -193,13 +205,17 @@ public class ConstraintIdentificationRule {
 	 */
 	public static final MMConstraint<CorrectivePaymentInitiation3> forCorrectivePaymentInitiation3 = new MMConstraint<CorrectivePaymentInitiation3>() {
 		{
-			validator = ConstraintIdentificationRule::checkCorrectivePaymentInitiation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationRule";
 			definition = "Either InstructionIdentification or EndToEndIdentification or both must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIdentificationRule.forCorrectivePaymentInitiation2;
 			owner_lazy = () -> CorrectivePaymentInitiation3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><SimpleRule xsi:type=\"SimpleRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructionIdentification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/EndToEndIdentification</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CorrectivePaymentInitiation3 obj) throws Exception {
+			checkCorrectivePaymentInitiation3(obj);
 		}
 	};
 

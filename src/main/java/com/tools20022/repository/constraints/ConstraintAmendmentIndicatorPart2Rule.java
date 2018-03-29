@@ -61,12 +61,16 @@ public class ConstraintAmendmentIndicatorPart2Rule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation4> forMandateRelatedInformation4 = new MMConstraint<MandateRelatedInformation4>() {
 		{
-			validator = ConstraintAmendmentIndicatorPart2Rule::checkMandateRelatedInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorPart2Rule";
 			definition = "ISO20022 Rule: AmendmentIndicatorRule\nIf AmendmentIndicator is true, then AmendementInformationDetails must be present, with amended mandate information.\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.\n\nPart 2 Implements:\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
 			owner_lazy = () -> MandateRelatedInformation4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AmendmentInformationDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AmendmentIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation4 obj) throws Exception {
+			checkMandateRelatedInformation4(obj);
 		}
 	};
 	/**
@@ -96,12 +100,16 @@ public class ConstraintAmendmentIndicatorPart2Rule {
 	 */
 	public static final MMConstraint<MandateRelatedInformation5> forMandateRelatedInformation5 = new MMConstraint<MandateRelatedInformation5>() {
 		{
-			validator = ConstraintAmendmentIndicatorPart2Rule::checkMandateRelatedInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicatorPart2Rule";
 			definition = "ISO20022 Rule: AmendmentIndicatorRule\nIf AmendmentIndicator is true, then AmendementInformationDetails must be present, with amended mandate information.\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.\n\nPart 2 Implements:\nIf AmendmentIndicator is false, then AmendmentInformationDetails is not allowed.";
 			owner_lazy = () -> MandateRelatedInformation5.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AmendmentInformationDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/AmendmentIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(MandateRelatedInformation5 obj) throws Exception {
+			checkMandateRelatedInformation5(obj);
 		}
 	};
 

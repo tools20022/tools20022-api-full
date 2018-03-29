@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.CorporateAction1Choice;
+import com.tools20022.repository.choice.TransactionType2Choice;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.GeneratedRepository;
@@ -106,7 +108,7 @@ public class TransactionType1Choice {
 	 * definition} = "Type of investment fund transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionType1Choice, TransactionType2Choice> mmTransactionType = new MMMessageAssociationEnd<TransactionType1Choice, TransactionType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionType1Choice.mmObject();
@@ -118,7 +120,17 @@ public class TransactionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.TransactionType2Choice.mmObject();
+			type_lazy = () -> TransactionType2Choice.mmObject();
+		}
+
+		@Override
+		public TransactionType2Choice getValue(TransactionType1Choice obj) {
+			return obj.getTransactionType();
+		}
+
+		@Override
+		public void setValue(TransactionType1Choice obj, TransactionType2Choice value) {
+			obj.setTransactionType(value);
 		}
 	};
 	@XmlElement(name = "CorpActnTp", required = true)
@@ -155,7 +167,7 @@ public class TransactionType1Choice {
 	 * definition} = "Type of corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCorporateActionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionType1Choice, CorporateAction1Choice> mmCorporateActionType = new MMMessageAssociationEnd<TransactionType1Choice, CorporateAction1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionType1Choice.mmObject();
@@ -167,7 +179,17 @@ public class TransactionType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CorporateAction1Choice.mmObject();
+			type_lazy = () -> CorporateAction1Choice.mmObject();
+		}
+
+		@Override
+		public CorporateAction1Choice getValue(TransactionType1Choice obj) {
+			return obj.getCorporateActionType();
+		}
+
+		@Override
+		public void setValue(TransactionType1Choice obj, CorporateAction1Choice value) {
+			obj.setCorporateActionType(value);
 		}
 	};
 
@@ -189,7 +211,7 @@ public class TransactionType1Choice {
 		return transactionType;
 	}
 
-	public TransactionType1Choice setTransactionType(com.tools20022.repository.choice.TransactionType2Choice transactionType) {
+	public TransactionType1Choice setTransactionType(TransactionType2Choice transactionType) {
 		this.transactionType = Objects.requireNonNull(transactionType);
 		return this;
 	}
@@ -198,7 +220,7 @@ public class TransactionType1Choice {
 		return corporateActionType;
 	}
 
-	public TransactionType1Choice setCorporateActionType(com.tools20022.repository.choice.CorporateAction1Choice corporateActionType) {
+	public TransactionType1Choice setCorporateActionType(CorporateAction1Choice corporateActionType) {
 		this.corporateActionType = Objects.requireNonNull(corporateActionType);
 		return this;
 	}

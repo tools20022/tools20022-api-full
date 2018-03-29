@@ -19,11 +19,11 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.IntermediaryAgentRole;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentComplementaryInformation;
 import com.tools20022.repository.msg.RequestGroupInformation1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -136,7 +136,7 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 	 * "Specifies the settlement party which is followed by another party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmIntermediaryAgentRole = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<IntermediaryAgentRole, com.tools20022.repository.entity.IntermediaryAgentRole> mmIntermediaryAgentRole = new MMBusinessAssociationEnd<IntermediaryAgentRole, com.tools20022.repository.entity.IntermediaryAgentRole>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
@@ -148,6 +148,16 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmNextParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.IntermediaryAgentRole getValue(IntermediaryAgentRole obj) {
+			return obj.getIntermediaryAgentRole();
+		}
+
+		@Override
+		public void setValue(IntermediaryAgentRole obj, com.tools20022.repository.entity.IntermediaryAgentRole value) {
+			obj.setIntermediaryAgentRole(value);
 		}
 	};
 	protected IntermediaryAgentRole nextParty;
@@ -185,7 +195,7 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 	 * definition} = "Next intermediary in the payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNextParty = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<IntermediaryAgentRole, com.tools20022.repository.entity.IntermediaryAgentRole> mmNextParty = new MMBusinessAssociationEnd<IntermediaryAgentRole, com.tools20022.repository.entity.IntermediaryAgentRole>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
@@ -197,6 +207,16 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmIntermediaryAgentRole;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.IntermediaryAgentRole getValue(IntermediaryAgentRole obj) {
+			return obj.getNextParty();
+		}
+
+		@Override
+		public void setValue(IntermediaryAgentRole obj, com.tools20022.repository.entity.IntermediaryAgentRole value) {
+			obj.setNextParty(value);
 		}
 	};
 	protected Number position;
@@ -227,7 +247,7 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPosition = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<IntermediaryAgentRole, Number> mmPosition = new MMBusinessAttribute<IntermediaryAgentRole, Number>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IntermediaryAgentRole.mmObject();
@@ -239,12 +259,14 @@ public class IntermediaryAgentRole extends PaymentPartyRole {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return IntermediaryAgentRole.class.getMethod("getPosition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(IntermediaryAgentRole obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(IntermediaryAgentRole obj, Number value) {
+			obj.setPosition(value);
 		}
 	};
 

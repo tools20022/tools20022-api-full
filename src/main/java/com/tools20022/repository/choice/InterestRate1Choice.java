@@ -123,7 +123,7 @@ public class InterestRate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFixedInterestRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InterestRate1Choice, PercentageRate> mmFixedInterestRate = new MMMessageAttribute<InterestRate1Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRate1Choice.mmObject();
@@ -136,6 +136,16 @@ public class InterestRate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(InterestRate1Choice obj) {
+			return obj.getFixedInterestRate();
+		}
+
+		@Override
+		public void setValue(InterestRate1Choice obj, PercentageRate value) {
+			obj.setFixedInterestRate(value);
 		}
 	};
 	@XmlElement(name = "VarblIntrstRate", required = true)
@@ -179,7 +189,7 @@ public class InterestRate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmVariableInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InterestRate1Choice, VariableInterest1Rate> mmVariableInterestRate = new MMMessageAssociationEnd<InterestRate1Choice, VariableInterest1Rate>() {
 		{
 			businessComponentTrace_lazy = () -> VariableInterest.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.InterestRate1Choice.mmObject();
@@ -193,6 +203,16 @@ public class InterestRate1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> VariableInterest1Rate.mmObject();
+		}
+
+		@Override
+		public VariableInterest1Rate getValue(InterestRate1Choice obj) {
+			return obj.getVariableInterestRate();
+		}
+
+		@Override
+		public void setValue(InterestRate1Choice obj, VariableInterest1Rate value) {
+			obj.setVariableInterestRate(value);
 		}
 	};
 

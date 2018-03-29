@@ -137,7 +137,7 @@ public class Fee3 {
 	 * definition} = "Type of fee (charge/commission)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee3, Optional<ChargeType5Choice>> mmType = new MMMessageAttribute<Fee3, Optional<ChargeType5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
@@ -149,6 +149,16 @@ public class Fee3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ChargeType5Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeType5Choice> getValue(Fee3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Fee3 obj, Optional<ChargeType5Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RprdStdAmt")
@@ -186,7 +196,7 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRepairedStandardAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee3, Optional<ActiveCurrencyAndAmount>> mmRepairedStandardAmount = new MMMessageAttribute<Fee3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
@@ -198,6 +208,16 @@ public class Fee3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Fee3 obj) {
+			return obj.getRepairedStandardAmount();
+		}
+
+		@Override
+		public void setValue(Fee3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setRepairedStandardAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RprdStdRate")
@@ -235,7 +255,7 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRepairedStandardRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee3, Optional<PercentageRate>> mmRepairedStandardRate = new MMMessageAttribute<Fee3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
@@ -247,6 +267,16 @@ public class Fee3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Fee3 obj) {
+			return obj.getRepairedStandardRate();
+		}
+
+		@Override
+		public void setValue(Fee3 obj, Optional<PercentageRate> value) {
+			obj.setRepairedStandardRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RprdDscntAmt")
@@ -284,7 +314,7 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRepairedDiscountAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee3, Optional<ActiveCurrencyAndAmount>> mmRepairedDiscountAmount = new MMMessageAttribute<Fee3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
@@ -296,6 +326,16 @@ public class Fee3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Fee3 obj) {
+			return obj.getRepairedDiscountAmount();
+		}
+
+		@Override
+		public void setValue(Fee3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setRepairedDiscountAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RprdDscntRate")
@@ -333,7 +373,7 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRepairedDiscountRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee3, Optional<PercentageRate>> mmRepairedDiscountRate = new MMMessageAttribute<Fee3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
@@ -345,6 +385,16 @@ public class Fee3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Fee3 obj) {
+			return obj.getRepairedDiscountRate();
+		}
+
+		@Override
+		public void setValue(Fee3 obj, Optional<PercentageRate> value) {
+			obj.setRepairedDiscountRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RprdReqdAmt")
@@ -382,7 +432,7 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRepairedRequestedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee3, Optional<ActiveCurrencyAndAmount>> mmRepairedRequestedAmount = new MMMessageAttribute<Fee3, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
@@ -394,6 +444,16 @@ public class Fee3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Fee3 obj) {
+			return obj.getRepairedRequestedAmount();
+		}
+
+		@Override
+		public void setValue(Fee3 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setRepairedRequestedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RprdReqdRate")
@@ -431,7 +491,7 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRepairedRequestedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee3, Optional<PercentageRate>> mmRepairedRequestedRate = new MMMessageAttribute<Fee3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
@@ -443,6 +503,16 @@ public class Fee3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Fee3 obj) {
+			return obj.getRepairedRequestedRate();
+		}
+
+		@Override
+		public void setValue(Fee3 obj, Optional<PercentageRate> value) {
+			obj.setRepairedRequestedRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ComrclAgrmtRef")
@@ -479,7 +549,7 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee3, Optional<Max35Text>> mmCommercialAgreementReference = new MMMessageAttribute<Fee3, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
@@ -491,6 +561,16 @@ public class Fee3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Fee3 obj) {
+			return obj.getCommercialAgreementReference();
+		}
+
+		@Override
+		public void setValue(Fee3 obj, Optional<Max35Text> value) {
+			obj.setCommercialAgreementReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NewComrclAgrmtRefInd")
@@ -523,7 +603,7 @@ public class Fee3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewCommercialAgreementReferenceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Fee3, Optional<YesNoIndicator>> mmNewCommercialAgreementReferenceIndicator = new MMMessageAttribute<Fee3, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Fee3.mmObject();
 			isDerived = false;
@@ -534,6 +614,16 @@ public class Fee3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Fee3 obj) {
+			return obj.getNewCommercialAgreementReferenceIndicator();
+		}
+
+		@Override
+		public void setValue(Fee3 obj, Optional<YesNoIndicator> value) {
+			obj.setNewCommercialAgreementReferenceIndicator(value.orElse(null));
 		}
 	};
 

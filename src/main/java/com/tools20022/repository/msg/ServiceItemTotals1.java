@@ -119,7 +119,7 @@ public class ServiceItemTotals1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmItemType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceItemTotals1, Max4AlphaNumericText> mmItemType = new MMMessageAttribute<ServiceItemTotals1, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> ProductCategory.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceItemTotals1.mmObject();
@@ -131,6 +131,16 @@ public class ServiceItemTotals1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(ServiceItemTotals1 obj) {
+			return obj.getItemType();
+		}
+
+		@Override
+		public void setValue(ServiceItemTotals1 obj, Max4AlphaNumericText value) {
+			obj.setItemType(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -167,7 +177,7 @@ public class ServiceItemTotals1 {
 	 * definition} = "Sum of total number units per service item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceItemTotals1, Number> mmQuantity = new MMMessageAttribute<ServiceItemTotals1, Number>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceItemTotals1.mmObject();
@@ -179,6 +189,16 @@ public class ServiceItemTotals1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(ServiceItemTotals1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(ServiceItemTotals1 obj, Number value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "UnitPric")
@@ -216,7 +236,7 @@ public class ServiceItemTotals1 {
 	 * definition} = "Specifies the unit of the service item."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceItemTotals1, Optional<ActiveCurrencyAndAmount>> mmUnitPrice = new MMMessageAttribute<ServiceItemTotals1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceItemTotals1.mmObject();
@@ -228,6 +248,16 @@ public class ServiceItemTotals1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ServiceItemTotals1 obj) {
+			return obj.getUnitPrice();
+		}
+
+		@Override
+		public void setValue(ServiceItemTotals1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setUnitPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlTaxblAmt")
@@ -265,7 +295,7 @@ public class ServiceItemTotals1 {
 	 * definition} = "Total amount subject to tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceItemTotals1, Optional<ActiveCurrencyAndAmount>> mmTotalTaxableAmount = new MMMessageAttribute<ServiceItemTotals1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceItemTotals1.mmObject();
@@ -277,6 +307,16 @@ public class ServiceItemTotals1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ServiceItemTotals1 obj) {
+			return obj.getTotalTaxableAmount();
+		}
+
+		@Override
+		public void setValue(ServiceItemTotals1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalTaxableAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlTaxAmt")
@@ -313,7 +353,7 @@ public class ServiceItemTotals1 {
 	 * definition} = "Sum of all tax amounts related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceItemTotals1, Optional<ActiveCurrencyAndAmount>> mmTotalTaxAmount = new MMMessageAttribute<ServiceItemTotals1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceItemTotals1.mmObject();
@@ -325,6 +365,16 @@ public class ServiceItemTotals1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(ServiceItemTotals1 obj) {
+			return obj.getTotalTaxAmount();
+		}
+
+		@Override
+		public void setValue(ServiceItemTotals1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTotalTaxAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlInvcAmt", required = true)
@@ -364,7 +414,7 @@ public class ServiceItemTotals1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ServiceItemTotals1, ActiveCurrencyAndAmount> mmTotalInvoiceAmount = new MMMessageAttribute<ServiceItemTotals1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceItemTotals1.mmObject();
@@ -376,6 +426,16 @@ public class ServiceItemTotals1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ServiceItemTotals1 obj) {
+			return obj.getTotalInvoiceAmount();
+		}
+
+		@Override
+		public void setValue(ServiceItemTotals1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalInvoiceAmount(value);
 		}
 	};
 

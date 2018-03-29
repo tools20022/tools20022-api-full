@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -162,7 +163,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountCharacteristics1, AccountLevel2Code> mmAccountLevel = new MMMessageAttribute<CashAccountCharacteristics1, AccountLevel2Code>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -175,6 +176,16 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountLevel2Code.mmObject();
+		}
+
+		@Override
+		public AccountLevel2Code getValue(CashAccountCharacteristics1 obj) {
+			return obj.getAccountLevel();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, AccountLevel2Code value) {
+			obj.setAccountLevel(value);
 		}
 	};
 	@XmlElement(name = "CshAcct", required = true)
@@ -217,7 +228,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountCharacteristics1, CashAccount16> mmCashAccount = new MMMessageAssociationEnd<CashAccountCharacteristics1, CashAccount16>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -230,7 +241,17 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			type_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public CashAccount16 getValue(CashAccountCharacteristics1 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, CashAccount16 value) {
+			obj.setCashAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -278,7 +299,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountCharacteristics1, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountServicer = new MMMessageAttribute<CashAccountCharacteristics1, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -290,7 +311,17 @@ public class CashAccountCharacteristics1 {
 			nextVersions_lazy = () -> Arrays.asList(CashAccountCharacteristics2.mmAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			complexType_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(CashAccountCharacteristics1 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrntAcct")
@@ -335,7 +366,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountCharacteristics1, Optional<ParentCashAccount1>> mmParentAccount = new MMMessageAssociationEnd<CashAccountCharacteristics1, Optional<ParentCashAccount1>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmParentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -348,7 +379,17 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ParentCashAccount1.mmObject();
+			type_lazy = () -> ParentCashAccount1.mmObject();
+		}
+
+		@Override
+		public Optional<ParentCashAccount1> getValue(CashAccountCharacteristics1 obj) {
+			return obj.getParentAccount();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, Optional<ParentCashAccount1> value) {
+			obj.setParentAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CompstnMtd", required = true)
@@ -396,7 +437,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCompensationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountCharacteristics1, CompensationMethod1Code> mmCompensationMethod = new MMMessageAttribute<CashAccountCharacteristics1, CompensationMethod1Code>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountService.mmCompensationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -409,6 +450,16 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CompensationMethod1Code.mmObject();
+		}
+
+		@Override
+		public CompensationMethod1Code getValue(CashAccountCharacteristics1 obj) {
+			return obj.getCompensationMethod();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, CompensationMethod1Code value) {
+			obj.setCompensationMethod(value);
 		}
 	};
 	@XmlElement(name = "DbtAcct")
@@ -455,7 +506,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDebitAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountCharacteristics1, Optional<AccountIdentification4Choice>> mmDebitAccount = new MMMessageAssociationEnd<CashAccountCharacteristics1, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -469,6 +520,16 @@ public class CashAccountCharacteristics1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(CashAccountCharacteristics1 obj) {
+			return obj.getDebitAccount();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setDebitAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DelydDbtDt")
@@ -515,7 +576,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelayedDebitDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountCharacteristics1, Optional<ISODate>> mmDelayedDebitDate = new MMMessageAttribute<CashAccountCharacteristics1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -528,6 +589,16 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CashAccountCharacteristics1 obj) {
+			return obj.getDelayedDebitDate();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, Optional<ISODate> value) {
+			obj.setDelayedDebitDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmAdvc")
@@ -569,7 +640,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementAdvice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountCharacteristics1, Optional<Max105Text>> mmSettlementAdvice = new MMMessageAttribute<CashAccountCharacteristics1, Optional<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
 			isDerived = false;
@@ -581,6 +652,16 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(CashAccountCharacteristics1 obj) {
+			return obj.getSettlementAdvice();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, Optional<Max105Text> value) {
+			obj.setSettlementAdvice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctBalCcyCd", required = true)
@@ -626,7 +707,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountBalanceCurrencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountCharacteristics1, ActiveOrHistoricCurrencyCode> mmAccountBalanceCurrencyCode = new MMMessageAttribute<CashAccountCharacteristics1, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmReportingCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -639,6 +720,16 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CashAccountCharacteristics1 obj) {
+			return obj.getAccountBalanceCurrencyCode();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setAccountBalanceCurrencyCode(value);
 		}
 	};
 	@XmlElement(name = "SttlmCcyCd")
@@ -685,7 +776,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountCharacteristics1, Optional<ActiveOrHistoricCurrencyCode>> mmSettlementCurrencyCode = new MMMessageAttribute<CashAccountCharacteristics1, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmSettlementCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -698,6 +789,16 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(CashAccountCharacteristics1 obj) {
+			return obj.getSettlementCurrencyCode();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setSettlementCurrencyCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HstCcyCd")
@@ -744,7 +845,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostCurrencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountCharacteristics1, Optional<ActiveOrHistoricCurrencyCode>> mmHostCurrencyCode = new MMMessageAttribute<CashAccountCharacteristics1, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -757,6 +858,16 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(CashAccountCharacteristics1 obj) {
+			return obj.getHostCurrencyCode();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setHostCurrencyCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tax")
@@ -800,7 +911,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccountCharacteristics1, Optional<AccountTax1>> mmTax = new MMMessageAssociationEnd<CashAccountCharacteristics1, Optional<AccountTax1>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -813,7 +924,17 @@ public class CashAccountCharacteristics1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountTax1.mmObject();
+			type_lazy = () -> AccountTax1.mmObject();
+		}
+
+		@Override
+		public Optional<AccountTax1> getValue(CashAccountCharacteristics1 obj) {
+			return obj.getTax();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, Optional<AccountTax1> value) {
+			obj.setTax(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrCtct", required = true)
@@ -860,7 +981,7 @@ public class CashAccountCharacteristics1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerContact = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountCharacteristics1, ContactDetails3> mmAccountServicerContact = new MMMessageAttribute<CashAccountCharacteristics1, ContactDetails3>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccountCharacteristics1.mmObject();
@@ -872,7 +993,17 @@ public class CashAccountCharacteristics1 {
 			nextVersions_lazy = () -> Arrays.asList(CashAccountCharacteristics2.mmAccountServicerContact);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.ContactDetails3.mmObject();
+			complexType_lazy = () -> ContactDetails3.mmObject();
+		}
+
+		@Override
+		public ContactDetails3 getValue(CashAccountCharacteristics1 obj) {
+			return obj.getAccountServicerContact();
+		}
+
+		@Override
+		public void setValue(CashAccountCharacteristics1 obj, ContactDetails3 value) {
+			obj.setAccountServicerContact(value);
 		}
 	};
 
@@ -910,7 +1041,7 @@ public class CashAccountCharacteristics1 {
 		return cashAccount;
 	}
 
-	public CashAccountCharacteristics1 setCashAccount(com.tools20022.repository.msg.CashAccount16 cashAccount) {
+	public CashAccountCharacteristics1 setCashAccount(CashAccount16 cashAccount) {
 		this.cashAccount = Objects.requireNonNull(cashAccount);
 		return this;
 	}
@@ -919,7 +1050,7 @@ public class CashAccountCharacteristics1 {
 		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public CashAccountCharacteristics1 setAccountServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountServicer) {
+	public CashAccountCharacteristics1 setAccountServicer(BranchAndFinancialInstitutionIdentification5 accountServicer) {
 		this.accountServicer = accountServicer;
 		return this;
 	}
@@ -928,7 +1059,7 @@ public class CashAccountCharacteristics1 {
 		return parentAccount == null ? Optional.empty() : Optional.of(parentAccount);
 	}
 
-	public CashAccountCharacteristics1 setParentAccount(com.tools20022.repository.msg.ParentCashAccount1 parentAccount) {
+	public CashAccountCharacteristics1 setParentAccount(ParentCashAccount1 parentAccount) {
 		this.parentAccount = parentAccount;
 		return this;
 	}
@@ -1000,7 +1131,7 @@ public class CashAccountCharacteristics1 {
 		return tax == null ? Optional.empty() : Optional.of(tax);
 	}
 
-	public CashAccountCharacteristics1 setTax(com.tools20022.repository.msg.AccountTax1 tax) {
+	public CashAccountCharacteristics1 setTax(AccountTax1 tax) {
 		this.tax = tax;
 		return this;
 	}
@@ -1009,7 +1140,7 @@ public class CashAccountCharacteristics1 {
 		return accountServicerContact;
 	}
 
-	public CashAccountCharacteristics1 setAccountServicerContact(com.tools20022.repository.msg.ContactDetails3 accountServicerContact) {
+	public CashAccountCharacteristics1 setAccountServicerContact(ContactDetails3 accountServicerContact) {
 		this.accountServicerContact = Objects.requireNonNull(accountServicerContact);
 		return this;
 	}

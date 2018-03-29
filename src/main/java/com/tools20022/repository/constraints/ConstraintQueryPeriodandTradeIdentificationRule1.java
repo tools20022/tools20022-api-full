@@ -50,11 +50,15 @@ public class ConstraintQueryPeriodandTradeIdentificationRule1 {
 	 */
 	public static final MMConstraint<ForeignExchangeTradeCaptureReportRequestV01> forForeignExchangeTradeCaptureReportRequestV01 = new MMConstraint<ForeignExchangeTradeCaptureReportRequestV01>() {
 		{
-			validator = ConstraintQueryPeriodandTradeIdentificationRule1::checkForeignExchangeTradeCaptureReportRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryPeriodandTradeIdentificationRule1";
 			definition = "Either QueryTradeIdentification or QueryPeriod may be present, but not both.";
 			owner_lazy = () -> ForeignExchangeTradeCaptureReportRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ForeignExchangeTradeCaptureReportRequestV01 obj) throws Exception {
+			checkForeignExchangeTradeCaptureReportRequestV01(obj);
 		}
 	};
 

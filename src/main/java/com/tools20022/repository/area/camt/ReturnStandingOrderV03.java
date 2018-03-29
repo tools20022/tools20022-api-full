@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.StandingOrderOrError3Choice;
 import com.tools20022.repository.msg.MessageHeader6;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -85,7 +84,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReturnStandingOrderV03"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -123,7 +122,7 @@ public class ReturnStandingOrderV03 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnStandingOrderV03, MessageHeader6> mmMessageHeader = new MMMessageBuildingBlock<ReturnStandingOrderV03, MessageHeader6>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class ReturnStandingOrderV03 {
 			complexType_lazy = () -> MessageHeader6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnStandingOrderV03.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader6 getValue(ReturnStandingOrderV03 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ReturnStandingOrderV03 obj, MessageHeader6 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "RptOrErr", required = true)
@@ -167,7 +168,7 @@ public class ReturnStandingOrderV03 {
 	 * definition} = "Reports on standing orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportOrError = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnStandingOrderV03, StandingOrderOrError3Choice> mmReportOrError = new MMMessageBuildingBlock<ReturnStandingOrderV03, StandingOrderOrError3Choice>() {
 		{
 			xmlTag = "RptOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,12 +179,14 @@ public class ReturnStandingOrderV03 {
 			complexType_lazy = () -> StandingOrderOrError3Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnStandingOrderV03.class.getMethod("getReportOrError", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public StandingOrderOrError3Choice getValue(ReturnStandingOrderV03 obj) {
+			return obj.getReportOrError();
+		}
+
+		@Override
+		public void setValue(ReturnStandingOrderV03 obj, StandingOrderOrError3Choice value) {
+			obj.setReportOrError(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -213,7 +216,7 @@ public class ReturnStandingOrderV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReturnStandingOrderV03, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ReturnStandingOrderV03, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,19 +226,21 @@ public class ReturnStandingOrderV03 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReturnStandingOrderV03.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ReturnStandingOrderV03 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ReturnStandingOrderV03 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnStandingOrderV03";
 				definition = "Scope\nThe ReturnStandingOrder message is sent by a transaction administrator to a member.\nIt is used to provide information on the details of one or more standing orders, based on specific request and return criteria.\nin response to a request a on information on standing and predefined orders.\nUsage\nThe ReturnStandingOrder message lists the standing order based on the following possible return criteria: \n- Generic standing order details,\n- Details of a specific predefined or standing liquidity transfer orders,\n- Details on the set to which the standing order belongs to,\n- List of all predefined and standing liquidity transfer standing orders and/or per set,\n- Total amount of predefined and standing liquidity transfer orders defined in the system.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

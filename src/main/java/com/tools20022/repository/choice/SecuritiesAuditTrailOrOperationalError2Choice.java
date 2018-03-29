@@ -111,7 +111,7 @@ public class SecuritiesAuditTrailOrOperationalError2Choice {
 	 * mmSecuritiesAuditTrailReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesAuditTrailReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAuditTrailOrOperationalError2Choice, List<SecuritiesAuditTrailReport2>> mmSecuritiesAuditTrailReport = new MMMessageAssociationEnd<SecuritiesAuditTrailOrOperationalError2Choice, List<SecuritiesAuditTrailReport2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAuditTrailOrOperationalError2Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class SecuritiesAuditTrailOrOperationalError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAuditTrailReport2.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAuditTrailReport2> getValue(SecuritiesAuditTrailOrOperationalError2Choice obj) {
+			return obj.getSecuritiesAuditTrailReport();
+		}
+
+		@Override
+		public void setValue(SecuritiesAuditTrailOrOperationalError2Choice obj, List<SecuritiesAuditTrailReport2> value) {
+			obj.setSecuritiesAuditTrailReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -158,7 +168,7 @@ public class SecuritiesAuditTrailOrOperationalError2Choice {
 	 * SecuritiesAuditTrailOrOperationalError1Choice.mmOperationalError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesAuditTrailOrOperationalError2Choice, List<ErrorHandling4>> mmOperationalError = new MMMessageAssociationEnd<SecuritiesAuditTrailOrOperationalError2Choice, List<ErrorHandling4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAuditTrailOrOperationalError2Choice.mmObject();
 			isDerived = false;
@@ -170,6 +180,16 @@ public class SecuritiesAuditTrailOrOperationalError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling4.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling4> getValue(SecuritiesAuditTrailOrOperationalError2Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(SecuritiesAuditTrailOrOperationalError2Choice obj, List<ErrorHandling4> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

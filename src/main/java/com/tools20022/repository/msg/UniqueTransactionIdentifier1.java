@@ -130,7 +130,7 @@ public class UniqueTransactionIdentifier1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UniqueTransactionIdentifier1, Max105Text> mmUniqueTransactionIdentifier = new MMMessageAttribute<UniqueTransactionIdentifier1, Max105Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier1.mmObject();
@@ -143,6 +143,16 @@ public class UniqueTransactionIdentifier1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Max105Text getValue(UniqueTransactionIdentifier1 obj) {
+			return obj.getUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(UniqueTransactionIdentifier1 obj, Max105Text value) {
+			obj.setUniqueTransactionIdentifier(value);
 		}
 	};
 	@XmlElement(name = "PrrUnqTxIdr")
@@ -189,7 +199,7 @@ public class UniqueTransactionIdentifier1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriorUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UniqueTransactionIdentifier1, Optional<Max105Text>> mmPriorUniqueTransactionIdentifier = new MMMessageAttribute<UniqueTransactionIdentifier1, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier1.mmObject();
@@ -202,6 +212,16 @@ public class UniqueTransactionIdentifier1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(UniqueTransactionIdentifier1 obj) {
+			return obj.getPriorUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(UniqueTransactionIdentifier1 obj, Optional<Max105Text> value) {
+			obj.setPriorUniqueTransactionIdentifier(value.orElse(null));
 		}
 	};
 

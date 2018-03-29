@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification4;
+import com.tools20022.repository.msg.PostalAddress1;
+import com.tools20022.repository.msg.TaxIdentification1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -115,7 +118,7 @@ public class PartyIdentification24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification24, Max70Text> mmName = new MMMessageAttribute<PartyIdentification24, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification24.mmObject();
@@ -127,6 +130,16 @@ public class PartyIdentification24 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PartyIdentification24 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification24 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "PstlAdr")
@@ -162,7 +175,7 @@ public class PartyIdentification24 {
 	 * definition} = "Postal address of a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification24, Optional<PostalAddress1>> mmPostalAddress = new MMMessageAssociationEnd<PartyIdentification24, Optional<PostalAddress1>>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification24.mmObject();
@@ -174,7 +187,17 @@ public class PartyIdentification24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
+			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress1> getValue(PartyIdentification24 obj) {
+			return obj.getPostalAddress();
+		}
+
+		@Override
+		public void setValue(PartyIdentification24 obj, Optional<PostalAddress1> value) {
+			obj.setPostalAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxId")
@@ -212,7 +235,7 @@ public class PartyIdentification24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification24, Optional<TaxIdentification1>> mmTaxIdentification = new MMMessageAssociationEnd<PartyIdentification24, Optional<TaxIdentification1>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification24.mmObject();
@@ -224,11 +247,21 @@ public class PartyIdentification24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxIdentification1.mmObject();
+			type_lazy = () -> TaxIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxIdentification1> getValue(PartyIdentification24 obj) {
+			return obj.getTaxIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification24 obj, Optional<TaxIdentification1> value) {
+			obj.setTaxIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtyId")
-	protected List<com.tools20022.repository.msg.GenericIdentification4> proprietaryIdentification;
+	protected List<GenericIdentification4> proprietaryIdentification;
 	/**
 	 * 
 	 <p>
@@ -261,7 +294,7 @@ public class PartyIdentification24 {
 	 * "Specifies a proprietary identification (type and value) for a party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification24, List<GenericIdentification4>> mmProprietaryIdentification = new MMMessageAssociationEnd<PartyIdentification24, List<GenericIdentification4>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification24.mmObject();
@@ -272,7 +305,17 @@ public class PartyIdentification24 {
 			definition = "Specifies a proprietary identification (type and value) for a party.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
+			type_lazy = () -> GenericIdentification4.mmObject();
+		}
+
+		@Override
+		public List<GenericIdentification4> getValue(PartyIdentification24 obj) {
+			return obj.getProprietaryIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification24 obj, List<GenericIdentification4> value) {
+			obj.setProprietaryIdentification(value);
 		}
 	};
 
@@ -304,7 +347,7 @@ public class PartyIdentification24 {
 		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public PartyIdentification24 setPostalAddress(com.tools20022.repository.msg.PostalAddress1 postalAddress) {
+	public PartyIdentification24 setPostalAddress(PostalAddress1 postalAddress) {
 		this.postalAddress = postalAddress;
 		return this;
 	}
@@ -313,7 +356,7 @@ public class PartyIdentification24 {
 		return taxIdentification == null ? Optional.empty() : Optional.of(taxIdentification);
 	}
 
-	public PartyIdentification24 setTaxIdentification(com.tools20022.repository.msg.TaxIdentification1 taxIdentification) {
+	public PartyIdentification24 setTaxIdentification(TaxIdentification1 taxIdentification) {
 		this.taxIdentification = taxIdentification;
 		return this;
 	}
@@ -322,7 +365,7 @@ public class PartyIdentification24 {
 		return proprietaryIdentification == null ? proprietaryIdentification = new ArrayList<>() : proprietaryIdentification;
 	}
 
-	public PartyIdentification24 setProprietaryIdentification(List<com.tools20022.repository.msg.GenericIdentification4> proprietaryIdentification) {
+	public PartyIdentification24 setProprietaryIdentification(List<GenericIdentification4> proprietaryIdentification) {
 		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
 		return this;
 	}

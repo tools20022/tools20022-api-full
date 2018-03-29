@@ -102,7 +102,7 @@ public class TradeDateCode2Choice {
 	 * definition} = "Trade date expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeDateCode2Choice, DateType3Code> mmCode = new MMMessageAttribute<TradeDateCode2Choice, DateType3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDateCode2Choice.mmObject();
 			isDerived = false;
@@ -114,6 +114,16 @@ public class TradeDateCode2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType3Code.mmObject();
+		}
+
+		@Override
+		public DateType3Code getValue(TradeDateCode2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TradeDateCode2Choice obj, DateType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -148,7 +158,7 @@ public class TradeDateCode2Choice {
 	 * definition} = "Trade date expressed as an proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeDateCode2Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<TradeDateCode2Choice, GenericIdentification25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeDateCode2Choice.mmObject();
 			isDerived = false;
@@ -161,6 +171,16 @@ public class TradeDateCode2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(TradeDateCode2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TradeDateCode2Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

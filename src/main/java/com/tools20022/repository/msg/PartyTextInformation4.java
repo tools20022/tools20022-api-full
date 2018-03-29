@@ -121,7 +121,7 @@ public class PartyTextInformation4 {
 	 * "Provides declaration details narrative relative to the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyTextInformation4, Optional<RestrictedFINXMax350Text>> mmDeclarationDetails = new MMMessageAttribute<PartyTextInformation4, Optional<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmDeclaration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyTextInformation4.mmObject();
@@ -133,6 +133,16 @@ public class PartyTextInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax350Text> getValue(PartyTextInformation4 obj) {
+			return obj.getDeclarationDetails();
+		}
+
+		@Override
+		public void setValue(PartyTextInformation4 obj, Optional<RestrictedFINXMax350Text> value) {
+			obj.setDeclarationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyCtctDtls")
@@ -172,7 +182,7 @@ public class PartyTextInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyTextInformation4, Optional<RestrictedFINXMax140Text>> mmPartyContactDetails = new MMMessageAttribute<PartyTextInformation4, Optional<RestrictedFINXMax140Text>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyTextInformation4.mmObject();
@@ -184,6 +194,16 @@ public class PartyTextInformation4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax140Text> getValue(PartyTextInformation4 obj) {
+			return obj.getPartyContactDetails();
+		}
+
+		@Override
+		public void setValue(PartyTextInformation4 obj, Optional<RestrictedFINXMax140Text> value) {
+			obj.setPartyContactDetails(value.orElse(null));
 		}
 	};
 

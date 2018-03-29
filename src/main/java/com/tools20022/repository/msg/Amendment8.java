@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class Amendment8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amendment8, Max35Text> mmIdentification = new MMMessageAttribute<Amendment8, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmAmendmentIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
@@ -125,6 +126,16 @@ public class Amendment8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Amendment8 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Amendment8 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "SeqNb", required = true)
@@ -158,7 +169,7 @@ public class Amendment8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amendment8, Max4AlphaNumericText> mmSequenceNumber = new MMMessageAttribute<Amendment8, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
 			isDerived = false;
@@ -169,6 +180,16 @@ public class Amendment8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(Amendment8 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(Amendment8 obj, Max4AlphaNumericText value) {
+			obj.setSequenceNumber(value);
 		}
 	};
 	@XmlElement(name = "BnfcryRefNb")
@@ -201,7 +222,7 @@ public class Amendment8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBeneficiaryReferenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amendment8, Optional<Max35Text>> mmBeneficiaryReferenceNumber = new MMMessageAttribute<Amendment8, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
 			isDerived = false;
@@ -212,6 +233,16 @@ public class Amendment8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Amendment8 obj) {
+			return obj.getBeneficiaryReferenceNumber();
+		}
+
+		@Override
+		public void setValue(Amendment8 obj, Optional<Max35Text> value) {
+			obj.setBeneficiaryReferenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -246,7 +277,7 @@ public class Amendment8 {
 	 * definition} = "Party that issues the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Amendment8, PartyIdentification43> mmIssuer = new MMMessageAssociationEnd<Amendment8, PartyIdentification43>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
@@ -258,7 +289,17 @@ public class Amendment8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public PartyIdentification43 getValue(Amendment8 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(Amendment8 obj, PartyIdentification43 value) {
+			obj.setIssuer(value);
 		}
 	};
 
@@ -308,7 +349,7 @@ public class Amendment8 {
 		return issuer;
 	}
 
-	public Amendment8 setIssuer(com.tools20022.repository.msg.PartyIdentification43 issuer) {
+	public Amendment8 setIssuer(PartyIdentification43 issuer) {
 		this.issuer = Objects.requireNonNull(issuer);
 		return this;
 	}

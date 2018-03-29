@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InRepairStatusReason3;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,7 +124,7 @@ public class InRepairStatus2 {
 	 * definition} = "Reason for the in-repair status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InRepairStatus2, InRepairStatusReason3> mmReasonDetails = new MMMessageAssociationEnd<InRepairStatus2, InRepairStatusReason3>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus2.mmObject();
@@ -135,7 +136,17 @@ public class InRepairStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InRepairStatusReason3.mmObject();
+			type_lazy = () -> InRepairStatusReason3.mmObject();
+		}
+
+		@Override
+		public InRepairStatusReason3 getValue(InRepairStatus2 obj) {
+			return obj.getReasonDetails();
+		}
+
+		@Override
+		public void setValue(InRepairStatus2 obj, InRepairStatusReason3 value) {
+			obj.setReasonDetails(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -173,7 +184,7 @@ public class InRepairStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InRepairStatus2, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<InRepairStatus2, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InRepairStatus2.mmObject();
@@ -185,6 +196,16 @@ public class InRepairStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(InRepairStatus2 obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(InRepairStatus2 obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	/**
@@ -257,7 +278,7 @@ public class InRepairStatus2 {
 		return reasonDetails;
 	}
 
-	public InRepairStatus2 setReasonDetails(com.tools20022.repository.msg.InRepairStatusReason3 reasonDetails) {
+	public InRepairStatus2 setReasonDetails(InRepairStatusReason3 reasonDetails) {
 		this.reasonDetails = Objects.requireNonNull(reasonDetails);
 		return this;
 	}

@@ -56,11 +56,15 @@ public class ConstraintCurrencyPredefinedPeriodsRule {
 	 */
 	public static final MMConstraint<ValuationStatistics2> forValuationStatistics2 = new MMConstraint<ValuationStatistics2>() {
 		{
-			validator = ConstraintCurrencyPredefinedPeriodsRule::checkValuationStatistics2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyPredefinedPeriodsRule";
 			definition = "Currency in ByPredefinedTimePeriods/HighestPriceValue12Months/Amount, ByPredefinedTimePeriods/LowestPriceValue12Months/Amount, ByPredefinedTimePeriods/OneYearPriceChange/Amount, ByPredefinedTimePeriods/ThreeYearPriceChange/Amount and ByPredefinedTimePeriods/FiveYearPriceChange/Amount must be the same as Currency.";
 			owner_lazy = () -> ValuationStatistics2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ValuationStatistics2 obj) throws Exception {
+			checkValuationStatistics2(obj);
 		}
 	};
 	/**
@@ -86,11 +90,15 @@ public class ConstraintCurrencyPredefinedPeriodsRule {
 	 */
 	public static final MMConstraint<ValuationStatistics3> forValuationStatistics3 = new MMConstraint<ValuationStatistics3>() {
 		{
-			validator = ConstraintCurrencyPredefinedPeriodsRule::checkValuationStatistics3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyPredefinedPeriodsRule";
 			definition = "Currency in ByPredefinedTimePeriods/HighestPriceValue12Months/Amount, ByPredefinedTimePeriods/LowestPriceValue12Months/Amount, ByPredefinedTimePeriods/OneYearPriceChange/Amount, ByPredefinedTimePeriods/ThreeYearPriceChange/Amount and ByPredefinedTimePeriods/FiveYearPriceChange/Amount must be the same as Currency.";
 			owner_lazy = () -> ValuationStatistics3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ValuationStatistics3 obj) throws Exception {
+			checkValuationStatistics3(obj);
 		}
 	};
 

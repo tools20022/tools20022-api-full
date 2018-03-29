@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericValidationRuleIdentification1;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -149,7 +151,7 @@ public class MoneyMarketTransactionStatus2 {
 	 * MoneyMarketTransactionStatus1.mmUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MoneyMarketTransactionStatus2, Optional<Max105Text>> mmUniqueTransactionIdentifier = new MMMessageAttribute<MoneyMarketTransactionStatus2, Optional<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -162,6 +164,16 @@ public class MoneyMarketTransactionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(MoneyMarketTransactionStatus2 obj) {
+			return obj.getUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(MoneyMarketTransactionStatus2 obj, Optional<Max105Text> value) {
+			obj.setUniqueTransactionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtryTxId", required = true)
@@ -200,7 +212,7 @@ public class MoneyMarketTransactionStatus2 {
 	 * MoneyMarketTransactionStatus1.mmProprietaryTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MoneyMarketTransactionStatus2, Max105Text> mmProprietaryTransactionIdentification = new MMMessageAttribute<MoneyMarketTransactionStatus2, Max105Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -212,6 +224,16 @@ public class MoneyMarketTransactionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Max105Text getValue(MoneyMarketTransactionStatus2 obj) {
+			return obj.getProprietaryTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(MoneyMarketTransactionStatus2 obj, Max105Text value) {
+			obj.setProprietaryTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "BrnchId")
@@ -251,7 +273,7 @@ public class MoneyMarketTransactionStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBranchIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MoneyMarketTransactionStatus2, Optional<LEIIdentifier>> mmBranchIdentification = new MMMessageAttribute<MoneyMarketTransactionStatus2, Optional<LEIIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmObject();
@@ -263,6 +285,16 @@ public class MoneyMarketTransactionStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(MoneyMarketTransactionStatus2 obj) {
+			return obj.getBranchIdentification();
+		}
+
+		@Override
+		public void setValue(MoneyMarketTransactionStatus2 obj, Optional<LEIIdentifier> value) {
+			obj.setBranchIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -308,7 +340,7 @@ public class MoneyMarketTransactionStatus2 {
 	 * MoneyMarketTransactionStatus1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MoneyMarketTransactionStatus2, StatisticalReportingStatus2Code> mmStatus = new MMMessageAttribute<MoneyMarketTransactionStatus2, StatisticalReportingStatus2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -322,9 +354,19 @@ public class MoneyMarketTransactionStatus2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> StatisticalReportingStatus2Code.mmObject();
 		}
+
+		@Override
+		public StatisticalReportingStatus2Code getValue(MoneyMarketTransactionStatus2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(MoneyMarketTransactionStatus2 obj, StatisticalReportingStatus2Code value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "VldtnRule")
-	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
+	protected List<GenericValidationRuleIdentification1> validationRule;
 	/**
 	 * 
 	 <p>
@@ -366,7 +408,7 @@ public class MoneyMarketTransactionStatus2 {
 	 * MoneyMarketTransactionStatus1.mmValidationRule}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MoneyMarketTransactionStatus2, List<GenericValidationRuleIdentification1>> mmValidationRule = new MMMessageAssociationEnd<MoneyMarketTransactionStatus2, List<GenericValidationRuleIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -378,11 +420,21 @@ public class MoneyMarketTransactionStatus2 {
 			previousVersion_lazy = () -> MoneyMarketTransactionStatus1.mmValidationRule;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
+			type_lazy = () -> GenericValidationRuleIdentification1.mmObject();
+		}
+
+		@Override
+		public List<GenericValidationRuleIdentification1> getValue(MoneyMarketTransactionStatus2 obj) {
+			return obj.getValidationRule();
+		}
+
+		@Override
+		public void setValue(MoneyMarketTransactionStatus2 obj, List<GenericValidationRuleIdentification1> value) {
+			obj.setValidationRule(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -424,7 +476,7 @@ public class MoneyMarketTransactionStatus2 {
 	 * MoneyMarketTransactionStatus1.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MoneyMarketTransactionStatus2, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<MoneyMarketTransactionStatus2, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketTransactionStatus2.mmObject();
 			isDerived = false;
@@ -436,7 +488,17 @@ public class MoneyMarketTransactionStatus2 {
 			previousVersion_lazy = () -> MoneyMarketTransactionStatus1.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(MoneyMarketTransactionStatus2 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MoneyMarketTransactionStatus2 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -499,7 +561,7 @@ public class MoneyMarketTransactionStatus2 {
 		return validationRule == null ? validationRule = new ArrayList<>() : validationRule;
 	}
 
-	public MoneyMarketTransactionStatus2 setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+	public MoneyMarketTransactionStatus2 setValidationRule(List<GenericValidationRuleIdentification1> validationRule) {
 		this.validationRule = Objects.requireNonNull(validationRule);
 		return this;
 	}
@@ -508,7 +570,7 @@ public class MoneyMarketTransactionStatus2 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public MoneyMarketTransactionStatus2 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public MoneyMarketTransactionStatus2 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

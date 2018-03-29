@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.LineItem;
 import com.tools20022.repository.entity.Price;
 import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Adjustment4;
+import com.tools20022.repository.msg.InvoiceIdentification1;
+import com.tools20022.repository.msg.ReportLine2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -124,7 +127,7 @@ public class ReportLine4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommercialDocumentReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine4, InvoiceIdentification1> mmCommercialDocumentReference = new MMMessageAttribute<ReportLine4, InvoiceIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmObject();
 			isDerived = false;
@@ -135,11 +138,21 @@ public class ReportLine4 {
 			nextVersions_lazy = () -> Arrays.asList(ReportLine6.mmCommercialDocumentReference);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.InvoiceIdentification1.mmObject();
+			complexType_lazy = () -> InvoiceIdentification1.mmObject();
+		}
+
+		@Override
+		public InvoiceIdentification1 getValue(ReportLine4 obj) {
+			return obj.getCommercialDocumentReference();
+		}
+
+		@Override
+		public void setValue(ReportLine4 obj, InvoiceIdentification1 value) {
+			obj.setCommercialDocumentReference(value);
 		}
 	};
 	@XmlElement(name = "Adjstmnt")
-	protected List<com.tools20022.repository.msg.Adjustment4> adjustment;
+	protected List<Adjustment4> adjustment;
 	/**
 	 * 
 	 <p>
@@ -178,7 +191,7 @@ public class ReportLine4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdjustment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportLine4, List<Adjustment4>> mmAdjustment = new MMMessageAssociationEnd<ReportLine4, List<Adjustment4>>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmPriceAdjustment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmObject();
@@ -190,7 +203,17 @@ public class ReportLine4 {
 			nextVersions_lazy = () -> Arrays.asList(ReportLine6.mmAdjustment);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
+			type_lazy = () -> Adjustment4.mmObject();
+		}
+
+		@Override
+		public List<Adjustment4> getValue(ReportLine4 obj) {
+			return obj.getAdjustment();
+		}
+
+		@Override
+		public void setValue(ReportLine4 obj, List<Adjustment4> value) {
+			obj.setAdjustment(value);
 		}
 	};
 	@XmlElement(name = "NetAmt", required = true)
@@ -234,7 +257,7 @@ public class ReportLine4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine4, CurrencyAndAmount> mmNetAmount = new MMMessageAttribute<ReportLine4, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmNetAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmObject();
@@ -248,9 +271,19 @@ public class ReportLine4 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public CurrencyAndAmount getValue(ReportLine4 obj) {
+			return obj.getNetAmount();
+		}
+
+		@Override
+		public void setValue(ReportLine4 obj, CurrencyAndAmount value) {
+			obj.setNetAmount(value);
+		}
 	};
 	@XmlElement(name = "BrkdwnByPurchsOrdr", required = true)
-	protected List<com.tools20022.repository.msg.ReportLine2> breakdownByPurchaseOrder;
+	protected List<ReportLine2> breakdownByPurchaseOrder;
 	/**
 	 * 
 	 <p>
@@ -287,7 +320,7 @@ public class ReportLine4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBreakdownByPurchaseOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportLine4, List<ReportLine2>> mmBreakdownByPurchaseOrder = new MMMessageAttribute<ReportLine4, List<ReportLine2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportLine4.mmObject();
 			isDerived = false;
@@ -297,7 +330,17 @@ public class ReportLine4 {
 			definition = "Specifies how the net amount to be paid is related to different purchase orders.";
 			nextVersions_lazy = () -> Arrays.asList(ReportLine6.mmBreakdownByPurchaseOrder);
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.ReportLine2.mmObject();
+			complexType_lazy = () -> ReportLine2.mmObject();
+		}
+
+		@Override
+		public List<ReportLine2> getValue(ReportLine4 obj) {
+			return obj.getBreakdownByPurchaseOrder();
+		}
+
+		@Override
+		public void setValue(ReportLine4 obj, List<ReportLine2> value) {
+			obj.setBreakdownByPurchaseOrder(value);
 		}
 	};
 
@@ -321,7 +364,7 @@ public class ReportLine4 {
 		return commercialDocumentReference;
 	}
 
-	public ReportLine4 setCommercialDocumentReference(com.tools20022.repository.msg.InvoiceIdentification1 commercialDocumentReference) {
+	public ReportLine4 setCommercialDocumentReference(InvoiceIdentification1 commercialDocumentReference) {
 		this.commercialDocumentReference = Objects.requireNonNull(commercialDocumentReference);
 		return this;
 	}
@@ -330,7 +373,7 @@ public class ReportLine4 {
 		return adjustment == null ? adjustment = new ArrayList<>() : adjustment;
 	}
 
-	public ReportLine4 setAdjustment(List<com.tools20022.repository.msg.Adjustment4> adjustment) {
+	public ReportLine4 setAdjustment(List<Adjustment4> adjustment) {
 		this.adjustment = Objects.requireNonNull(adjustment);
 		return this;
 	}
@@ -348,7 +391,7 @@ public class ReportLine4 {
 		return breakdownByPurchaseOrder == null ? breakdownByPurchaseOrder = new ArrayList<>() : breakdownByPurchaseOrder;
 	}
 
-	public ReportLine4 setBreakdownByPurchaseOrder(List<com.tools20022.repository.msg.ReportLine2> breakdownByPurchaseOrder) {
+	public ReportLine4 setBreakdownByPurchaseOrder(List<ReportLine2> breakdownByPurchaseOrder) {
 		this.breakdownByPurchaseOrder = Objects.requireNonNull(breakdownByPurchaseOrder);
 		return this;
 	}

@@ -104,7 +104,7 @@ public class TaxType2 {
 	 * definition} = "Structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxType2, TaxType5Code> mmStructured = new MMMessageAttribute<TaxType2, TaxType5Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxType2.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class TaxType2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxType5Code.mmObject();
+		}
+
+		@Override
+		public TaxType5Code getValue(TaxType2 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(TaxType2 obj, TaxType5Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -145,7 +155,7 @@ public class TaxType2 {
 	 * definition} = "Additional information about the type of tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxType2, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<TaxType2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TaxType2.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class TaxType2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TaxType2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(TaxType2 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

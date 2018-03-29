@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max3000Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlgorithmIdentification1;
+import com.tools20022.repository.msg.EncapsulatedContent1;
+import com.tools20022.repository.msg.Signer1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -107,7 +110,7 @@ public class SignedData1 {
 	 * definition} = "Version of the data structure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SignedData1, Optional<Number>> mmVersion = new MMMessageAttribute<SignedData1, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
@@ -119,9 +122,19 @@ public class SignedData1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
 		}
+
+		@Override
+		public Optional<Number> getValue(SignedData1 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(SignedData1 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "DgstAlgo", required = true)
-	protected List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm;
+	protected List<AlgorithmIdentification1> digestAlgorithm;
 	/**
 	 * 
 	 <p>
@@ -149,7 +162,7 @@ public class SignedData1 {
 	 * "Identification of a digest algorithm to apply before signature."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SignedData1, List<AlgorithmIdentification1>> mmDigestAlgorithm = new MMMessageAssociationEnd<SignedData1, List<AlgorithmIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
@@ -159,7 +172,17 @@ public class SignedData1 {
 			definition = "Identification of a digest algorithm to apply before signature.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification1.mmObject();
+			type_lazy = () -> AlgorithmIdentification1.mmObject();
+		}
+
+		@Override
+		public List<AlgorithmIdentification1> getValue(SignedData1 obj) {
+			return obj.getDigestAlgorithm();
+		}
+
+		@Override
+		public void setValue(SignedData1 obj, List<AlgorithmIdentification1> value) {
+			obj.setDigestAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcpsltdCntt", required = true)
@@ -189,7 +212,7 @@ public class SignedData1 {
 	 * definition} = "Data to sign."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SignedData1, EncapsulatedContent1> mmEncapsulatedContent = new MMMessageAssociationEnd<SignedData1, EncapsulatedContent1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
@@ -200,7 +223,17 @@ public class SignedData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent1.mmObject();
+			type_lazy = () -> EncapsulatedContent1.mmObject();
+		}
+
+		@Override
+		public EncapsulatedContent1 getValue(SignedData1 obj) {
+			return obj.getEncapsulatedContent();
+		}
+
+		@Override
+		public void setValue(SignedData1 obj, EncapsulatedContent1 value) {
+			obj.setEncapsulatedContent(value);
 		}
 	};
 	@XmlElement(name = "Cert")
@@ -232,7 +265,7 @@ public class SignedData1 {
 	 * definition} = "Chain of X.509 certificates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SignedData1, List<Max3000Binary>> mmCertificate = new MMMessageAttribute<SignedData1, List<Max3000Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
@@ -243,9 +276,19 @@ public class SignedData1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
 		}
+
+		@Override
+		public List<Max3000Binary> getValue(SignedData1 obj) {
+			return obj.getCertificate();
+		}
+
+		@Override
+		public void setValue(SignedData1 obj, List<Max3000Binary> value) {
+			obj.setCertificate(value);
+		}
 	};
 	@XmlElement(name = "Sgnr", required = true)
-	protected List<com.tools20022.repository.msg.Signer1> signer;
+	protected List<Signer1> signer;
 	/**
 	 * 
 	 <p>
@@ -270,7 +313,7 @@ public class SignedData1 {
 	 * definition} = "Entity who has signed the data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSigner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SignedData1, List<Signer1>> mmSigner = new MMMessageAssociationEnd<SignedData1, List<Signer1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedData1.mmObject();
 			isDerived = false;
@@ -280,7 +323,17 @@ public class SignedData1 {
 			definition = "Entity who has signed the data.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Signer1.mmObject();
+			type_lazy = () -> Signer1.mmObject();
+		}
+
+		@Override
+		public List<Signer1> getValue(SignedData1 obj) {
+			return obj.getSigner();
+		}
+
+		@Override
+		public void setValue(SignedData1 obj, List<Signer1> value) {
+			obj.setSigner(value);
 		}
 	};
 
@@ -312,7 +365,7 @@ public class SignedData1 {
 		return digestAlgorithm == null ? digestAlgorithm = new ArrayList<>() : digestAlgorithm;
 	}
 
-	public SignedData1 setDigestAlgorithm(List<com.tools20022.repository.msg.AlgorithmIdentification1> digestAlgorithm) {
+	public SignedData1 setDigestAlgorithm(List<AlgorithmIdentification1> digestAlgorithm) {
 		this.digestAlgorithm = Objects.requireNonNull(digestAlgorithm);
 		return this;
 	}
@@ -321,7 +374,7 @@ public class SignedData1 {
 		return encapsulatedContent;
 	}
 
-	public SignedData1 setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent1 encapsulatedContent) {
+	public SignedData1 setEncapsulatedContent(EncapsulatedContent1 encapsulatedContent) {
 		this.encapsulatedContent = Objects.requireNonNull(encapsulatedContent);
 		return this;
 	}
@@ -339,7 +392,7 @@ public class SignedData1 {
 		return signer == null ? signer = new ArrayList<>() : signer;
 	}
 
-	public SignedData1 setSigner(List<com.tools20022.repository.msg.Signer1> signer) {
+	public SignedData1 setSigner(List<Signer1> signer) {
 		this.signer = Objects.requireNonNull(signer);
 		return this;
 	}

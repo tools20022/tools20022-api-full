@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class Statement8 {
 	 * definition} = "Reference of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement8, Max35Text> mmReference = new MMMessageAttribute<Statement8, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement8.mmObject();
 			isDerived = false;
@@ -137,6 +138,16 @@ public class Statement8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Statement8 obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(Statement8 obj, Max35Text value) {
+			obj.setReference(value);
 		}
 	};
 	@XmlElement(name = "StmtPrd", required = true)
@@ -168,7 +179,7 @@ public class Statement8 {
 	 * definition} = "Period on which the statement is reporting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement8, DatePeriodDetails> mmStatementPeriod = new MMMessageAttribute<Statement8, DatePeriodDetails>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement8.mmObject();
 			isDerived = false;
@@ -178,7 +189,17 @@ public class Statement8 {
 			definition = "Period on which the statement is reporting.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
+			complexType_lazy = () -> DatePeriodDetails.mmObject();
+		}
+
+		@Override
+		public DatePeriodDetails getValue(Statement8 obj) {
+			return obj.getStatementPeriod();
+		}
+
+		@Override
+		public void setValue(Statement8 obj, DatePeriodDetails value) {
+			obj.setStatementPeriod(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -210,7 +231,7 @@ public class Statement8 {
 	 * definition} = "Creation date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement8, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAttribute<Statement8, Optional<DateAndDateTimeChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement8.mmObject();
 			isDerived = false;
@@ -221,6 +242,16 @@ public class Statement8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(Statement8 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Statement8 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -252,7 +283,7 @@ public class Statement8 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement8, Optional<EventFrequency1Code>> mmFrequency = new MMMessageAttribute<Statement8, Optional<EventFrequency1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement8.mmObject();
 			isDerived = false;
@@ -263,6 +294,16 @@ public class Statement8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EventFrequency1Code> getValue(Statement8 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Statement8 obj, Optional<EventFrequency1Code> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdTp", required = true)
@@ -295,7 +336,7 @@ public class Statement8 {
 	 * "Specifies if the statement is complete or only contains changes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement8, StatementUpdateTypeCode> mmUpdateType = new MMMessageAttribute<Statement8, StatementUpdateTypeCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement8.mmObject();
 			isDerived = false;
@@ -306,6 +347,16 @@ public class Statement8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> StatementUpdateTypeCode.mmObject();
+		}
+
+		@Override
+		public StatementUpdateTypeCode getValue(Statement8 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Statement8 obj, StatementUpdateTypeCode value) {
+			obj.setUpdateType(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -338,7 +389,7 @@ public class Statement8 {
 	 * "Indicates whether there is activity reported in the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement8, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<Statement8, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement8.mmObject();
 			isDerived = false;
@@ -349,6 +400,16 @@ public class Statement8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement8 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(Statement8 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 	@XmlElement(name = "RptNb")
@@ -380,7 +441,7 @@ public class Statement8 {
 	 * definition} = "Sequential number of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement8, Optional<Max5NumericText>> mmReportNumber = new MMMessageAttribute<Statement8, Optional<Max5NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement8.mmObject();
 			isDerived = false;
@@ -391,6 +452,16 @@ public class Statement8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5NumericText> getValue(Statement8 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(Statement8 obj, Optional<Max5NumericText> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 
@@ -423,7 +494,7 @@ public class Statement8 {
 		return statementPeriod;
 	}
 
-	public Statement8 setStatementPeriod(com.tools20022.repository.msg.DatePeriodDetails statementPeriod) {
+	public Statement8 setStatementPeriod(DatePeriodDetails statementPeriod) {
 		this.statementPeriod = Objects.requireNonNull(statementPeriod);
 		return this;
 	}

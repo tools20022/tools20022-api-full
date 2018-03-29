@@ -52,11 +52,15 @@ public class ConstraintTotalAmountYearToDateRule {
 	 */
 	public static final MMConstraint<SubscriptionInformation> forSubscriptionInformation = new MMConstraint<SubscriptionInformation>() {
 		{
-			validator = ConstraintTotalAmountYearToDateRule::checkSubscriptionInformation;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountYearToDateRule";
 			definition = "TotalAmountYearToDate must be equal to the sum of EquityComponent and CashComponent.";
 			owner_lazy = () -> SubscriptionInformation.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionInformation obj) throws Exception {
+			checkSubscriptionInformation(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintTotalAmountYearToDateRule {
 	 */
 	public static final MMConstraint<SubscriptionInformation1> forSubscriptionInformation1 = new MMConstraint<SubscriptionInformation1>() {
 		{
-			validator = ConstraintTotalAmountYearToDateRule::checkSubscriptionInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountYearToDateRule";
 			definition = "TotalAmountYearToDate must be equal to the sum of EquityComponent and CashComponent if present.";
 			owner_lazy = () -> SubscriptionInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionInformation1 obj) throws Exception {
+			checkSubscriptionInformation1(obj);
 		}
 	};
 

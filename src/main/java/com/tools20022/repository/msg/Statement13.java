@@ -137,7 +137,7 @@ public class Statement13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesStatementQueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, Optional<Max35Text>> mmSecuritiesStatementQueryReference = new MMMessageAttribute<Statement13, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -148,6 +148,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Statement13 obj) {
+			return obj.getSecuritiesStatementQueryReference();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, Optional<Max35Text> value) {
+			obj.setSecuritiesStatementQueryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptNb")
@@ -179,7 +189,7 @@ public class Statement13 {
 	 * definition} = "Sequential number of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, Optional<Max5NumericText>> mmReportNumber = new MMMessageAttribute<Statement13, Optional<Max5NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -190,6 +200,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max5NumericText> getValue(Statement13 obj) {
+			return obj.getReportNumber();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, Optional<Max5NumericText> value) {
+			obj.setReportNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtId")
@@ -220,7 +240,7 @@ public class Statement13 {
 	 * definition} = "Reference common to all pages of a statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, Optional<Max35Text>> mmStatementIdentification = new MMMessageAttribute<Statement13, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -231,6 +251,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Statement13 obj) {
+			return obj.getStatementIdentification();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, Optional<Max35Text> value) {
+			obj.setStatementIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StmtDtTm", required = true)
@@ -262,7 +292,7 @@ public class Statement13 {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, DateAndDateTimeChoice> mmStatementDateTime = new MMMessageAttribute<Statement13, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -273,6 +303,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(Statement13 obj) {
+			return obj.getStatementDateTime();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, DateAndDateTimeChoice value) {
+			obj.setStatementDateTime(value);
 		}
 	};
 	@XmlElement(name = "Frqcy", required = true)
@@ -304,7 +344,7 @@ public class Statement13 {
 	 * definition} = "Frequency of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, Frequency2Choice> mmFrequency = new MMMessageAttribute<Statement13, Frequency2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -315,6 +355,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Frequency2Choice.mmObject();
+		}
+
+		@Override
+		public Frequency2Choice getValue(Statement13 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, Frequency2Choice value) {
+			obj.setFrequency(value);
 		}
 	};
 	@XmlElement(name = "UpdTp", required = true)
@@ -347,7 +397,7 @@ public class Statement13 {
 	 * "Indicates whether the report is complete or contains changes only."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, UpdateType1Choice> mmUpdateType = new MMMessageAttribute<Statement13, UpdateType1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -358,6 +408,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UpdateType1Choice.mmObject();
+		}
+
+		@Override
+		public UpdateType1Choice getValue(Statement13 obj) {
+			return obj.getUpdateType();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, UpdateType1Choice value) {
+			obj.setUpdateType(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -391,7 +451,7 @@ public class Statement13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<Statement13, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -402,6 +462,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement13 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 	@XmlElement(name = "StmtBsis", required = true)
@@ -433,7 +503,7 @@ public class Statement13 {
 	 * definition} = "Type of balance on which the statement is prepared."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, StatementBasis1Choice> mmStatementBasis = new MMMessageAttribute<Statement13, StatementBasis1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -444,6 +514,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> StatementBasis1Choice.mmObject();
+		}
+
+		@Override
+		public StatementBasis1Choice getValue(Statement13 obj) {
+			return obj.getStatementBasis();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, StatementBasis1Choice value) {
+			obj.setStatementBasis(value);
 		}
 	};
 	@XmlElement(name = "AudtdInd", required = true)
@@ -475,7 +555,7 @@ public class Statement13 {
 	 * definition} = "Indicate whether the statement is audited or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuditedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, YesNoIndicator> mmAuditedIndicator = new MMMessageAttribute<Statement13, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -486,6 +566,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Statement13 obj) {
+			return obj.getAuditedIndicator();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, YesNoIndicator value) {
+			obj.setAuditedIndicator(value);
 		}
 	};
 	@XmlElement(name = "TaxLotInd")
@@ -518,7 +608,7 @@ public class Statement13 {
 	 * "Indicates whether the statement containes tax lot details."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxLotIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement13, Optional<YesNoIndicator>> mmTaxLotIndicator = new MMMessageAttribute<Statement13, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement13.mmObject();
 			isDerived = false;
@@ -529,6 +619,16 @@ public class Statement13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Statement13 obj) {
+			return obj.getTaxLotIndicator();
+		}
+
+		@Override
+		public void setValue(Statement13 obj, Optional<YesNoIndicator> value) {
+			obj.setTaxLotIndicator(value.orElse(null));
 		}
 	};
 

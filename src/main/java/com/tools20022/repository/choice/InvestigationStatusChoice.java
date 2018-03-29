@@ -134,7 +134,7 @@ public class InvestigationStatusChoice {
 	 * definition} = "Indicates the status of an investigation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatusChoice, InvestigationExecutionConfirmation1Code> mmConfirmation = new MMMessageAttribute<InvestigationStatusChoice, InvestigationExecutionConfirmation1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmInvestigationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatusChoice.mmObject();
@@ -146,6 +146,16 @@ public class InvestigationStatusChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestigationExecutionConfirmation1Code.mmObject();
+		}
+
+		@Override
+		public InvestigationExecutionConfirmation1Code getValue(InvestigationStatusChoice obj) {
+			return obj.getConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatusChoice obj, InvestigationExecutionConfirmation1Code value) {
+			obj.setConfirmation(value);
 		}
 	};
 	@XmlElement(name = "RjctdMod", required = true)
@@ -184,7 +194,7 @@ public class InvestigationStatusChoice {
 	 * "Reason for the rejection of a modification request, in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectedModification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatusChoice, List<PaymentModificationRejection1Code>> mmRejectedModification = new MMMessageAttribute<InvestigationStatusChoice, List<PaymentModificationRejection1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedModification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatusChoice.mmObject();
@@ -196,6 +206,16 @@ public class InvestigationStatusChoice {
 			maxOccurs = 14;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentModificationRejection1Code.mmObject();
+		}
+
+		@Override
+		public List<PaymentModificationRejection1Code> getValue(InvestigationStatusChoice obj) {
+			return obj.getRejectedModification();
+		}
+
+		@Override
+		public void setValue(InvestigationStatusChoice obj, List<PaymentModificationRejection1Code> value) {
+			obj.setRejectedModification(value);
 		}
 	};
 	@XmlElement(name = "RjctdCxl", required = true)
@@ -233,7 +253,7 @@ public class InvestigationStatusChoice {
 	 * "Explains the reason for rejecting a payment cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestigationStatusChoice, RejectedCancellationJustification> mmRejectedCancellation = new MMMessageAssociationEnd<InvestigationStatusChoice, RejectedCancellationJustification>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatusChoice.mmObject();
@@ -246,6 +266,16 @@ public class InvestigationStatusChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedCancellationJustification.mmObject();
+		}
+
+		@Override
+		public RejectedCancellationJustification getValue(InvestigationStatusChoice obj) {
+			return obj.getRejectedCancellation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatusChoice obj, RejectedCancellationJustification value) {
+			obj.setRejectedCancellation(value);
 		}
 	};
 	@XmlElement(name = "DplctOf", required = true)
@@ -282,7 +312,7 @@ public class InvestigationStatusChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDuplicateOf = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestigationStatusChoice, Case> mmDuplicateOf = new MMMessageAssociationEnd<InvestigationStatusChoice, Case>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmDuplicateCase;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatusChoice.mmObject();
@@ -295,6 +325,16 @@ public class InvestigationStatusChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Case.mmObject();
+		}
+
+		@Override
+		public Case getValue(InvestigationStatusChoice obj) {
+			return obj.getDuplicateOf();
+		}
+
+		@Override
+		public void setValue(InvestigationStatusChoice obj, Case value) {
+			obj.setDuplicateOf(value);
 		}
 	};
 	@XmlElement(name = "AssgnmtCxlConf", required = true)
@@ -334,7 +374,7 @@ public class InvestigationStatusChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssignmentCancellationConfirmation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestigationStatusChoice, YesNoIndicator> mmAssignmentCancellationConfirmation = new MMMessageAttribute<InvestigationStatusChoice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmAssignmentCancellationConfirmation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestigationStatusChoice.mmObject();
@@ -346,6 +386,16 @@ public class InvestigationStatusChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestigationStatusChoice obj) {
+			return obj.getAssignmentCancellationConfirmation();
+		}
+
+		@Override
+		public void setValue(InvestigationStatusChoice obj, YesNoIndicator value) {
+			obj.setAssignmentCancellationConfirmation(value);
 		}
 	};
 

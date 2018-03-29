@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BasketDescription3;
@@ -109,7 +110,7 @@ public class FinancialInstrumentIdentification7Choice {
 	 * definition} = "Instrument consists of single instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSingle = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentIdentification7Choice, FinancialInstrumentIdentification6Choice> mmSingle = new MMMessageAssociationEnd<FinancialInstrumentIdentification7Choice, FinancialInstrumentIdentification6Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentifiedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.mmObject();
@@ -121,7 +122,17 @@ public class FinancialInstrumentIdentification7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmObject();
+			type_lazy = () -> FinancialInstrumentIdentification6Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentIdentification6Choice getValue(FinancialInstrumentIdentification7Choice obj) {
+			return obj.getSingle();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentIdentification7Choice obj, FinancialInstrumentIdentification6Choice value) {
+			obj.setSingle(value);
 		}
 	};
 	@XmlElement(name = "Bskt", required = true)
@@ -157,7 +168,7 @@ public class FinancialInstrumentIdentification7Choice {
 	 * definition} = "Instrument consists of multiple instruments."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBasket = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentIdentification7Choice, BasketDescription3> mmBasket = new MMMessageAssociationEnd<FinancialInstrumentIdentification7Choice, BasketDescription3>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentifiedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification7Choice.mmObject();
@@ -170,6 +181,16 @@ public class FinancialInstrumentIdentification7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BasketDescription3.mmObject();
+		}
+
+		@Override
+		public BasketDescription3 getValue(FinancialInstrumentIdentification7Choice obj) {
+			return obj.getBasket();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentIdentification7Choice obj, BasketDescription3 value) {
+			obj.setBasket(value);
 		}
 	};
 
@@ -191,7 +212,7 @@ public class FinancialInstrumentIdentification7Choice {
 		return single;
 	}
 
-	public FinancialInstrumentIdentification7Choice setSingle(com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice single) {
+	public FinancialInstrumentIdentification7Choice setSingle(FinancialInstrumentIdentification6Choice single) {
 		this.single = Objects.requireNonNull(single);
 		return this;
 	}

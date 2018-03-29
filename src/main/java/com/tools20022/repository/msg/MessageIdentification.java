@@ -146,7 +146,7 @@ public class MessageIdentification {
 	 * definition} = "String of characters that uniquely identifies a message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageIdentification, Max35Text> mmIdentification = new MMMessageAttribute<MessageIdentification, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageIdentification.mmObject();
 			isDerived = false;
@@ -157,6 +157,16 @@ public class MessageIdentification {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MessageIdentification obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MessageIdentification obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

@@ -25,7 +25,6 @@ import com.tools20022.repository.area.AuthoritiesPreviousVersion;
 import com.tools20022.repository.choice.ReportingTransactionType1Choice;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -116,7 +115,7 @@ public class FinancialInstrumentReportingTransactionReportV01 {
 	 * "Provides the details of the reported securities transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransaction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingTransactionReportV01, List<ReportingTransactionType1Choice>> mmTransaction = new MMMessageBuildingBlock<FinancialInstrumentReportingTransactionReportV01, List<ReportingTransactionType1Choice>>() {
 		{
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,12 +125,14 @@ public class FinancialInstrumentReportingTransactionReportV01 {
 			complexType_lazy = () -> ReportingTransactionType1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingTransactionReportV01.class.getMethod("getTransaction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ReportingTransactionType1Choice> getValue(FinancialInstrumentReportingTransactionReportV01 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingTransactionReportV01 obj, List<ReportingTransactionType1Choice> value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -161,7 +162,7 @@ public class FinancialInstrumentReportingTransactionReportV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<FinancialInstrumentReportingTransactionReportV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<FinancialInstrumentReportingTransactionReportV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,12 +172,14 @@ public class FinancialInstrumentReportingTransactionReportV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return FinancialInstrumentReportingTransactionReportV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(FinancialInstrumentReportingTransactionReportV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentReportingTransactionReportV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

@@ -179,7 +179,7 @@ public class SecurityIdentification11 {
 	 * definition} = "Identification of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification11, SecurityIdentification11Choice> mmIdentification = new MMMessageAssociationEnd<SecurityIdentification11, SecurityIdentification11Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
@@ -192,6 +192,16 @@ public class SecurityIdentification11 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification11Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification11Choice getValue(SecurityIdentification11 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification11 obj, SecurityIdentification11Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -228,7 +238,7 @@ public class SecurityIdentification11 {
 	 * definition} = "Textual description of a security instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification11, Optional<Max140Text>> mmDescription = new MMMessageAttribute<SecurityIdentification11, Optional<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
@@ -240,6 +250,16 @@ public class SecurityIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(SecurityIdentification11 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification11 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

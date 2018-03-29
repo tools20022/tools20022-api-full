@@ -123,7 +123,7 @@ public class CollateralMovement10 {
 	 * CollateralMovement7.mmAgreedAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgreedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralMovement10, ActiveCurrencyAndAmount> mmAgreedAmount = new MMMessageAttribute<CollateralMovement10, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmAgreedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement10.mmObject();
@@ -136,6 +136,16 @@ public class CollateralMovement10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralMovement10 obj) {
+			return obj.getAgreedAmount();
+		}
+
+		@Override
+		public void setValue(CollateralMovement10 obj, ActiveCurrencyAndAmount value) {
+			obj.setAgreedAmount(value);
 		}
 	};
 	@XmlElement(name = "MvmntDrctn")
@@ -179,7 +189,7 @@ public class CollateralMovement10 {
 	 * CollateralMovement7.mmMovementDirection}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMovementDirection = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralMovement10, List<CollateralMovement5Choice>> mmMovementDirection = new MMMessageAssociationEnd<CollateralMovement10, List<CollateralMovement5Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralProposal.mmProposedCollateralMovement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralMovement10.mmObject();
@@ -192,6 +202,16 @@ public class CollateralMovement10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CollateralMovement5Choice.mmObject();
+		}
+
+		@Override
+		public List<CollateralMovement5Choice> getValue(CollateralMovement10 obj) {
+			return obj.getMovementDirection();
+		}
+
+		@Override
+		public void setValue(CollateralMovement10 obj, List<CollateralMovement5Choice> value) {
+			obj.setMovementDirection(value);
 		}
 	};
 

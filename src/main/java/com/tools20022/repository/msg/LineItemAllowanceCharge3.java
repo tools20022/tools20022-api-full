@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.LineItem;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Quantity16;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -75,7 +76,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "LineItemAllowanceCharge3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -134,7 +135,7 @@ public class LineItemAllowanceCharge3 {
 	 * LineItemAllowanceCharge2.mmChargeIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemAllowanceCharge3, Optional<YesNoIndicator>> mmChargeIndicator = new MMMessageAttribute<LineItemAllowanceCharge3, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge3.mmObject();
@@ -147,6 +148,16 @@ public class LineItemAllowanceCharge3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(LineItemAllowanceCharge3 obj) {
+			return obj.getChargeIndicator();
+		}
+
+		@Override
+		public void setValue(LineItemAllowanceCharge3 obj, Optional<YesNoIndicator> value) {
+			obj.setChargeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlAmt")
@@ -189,7 +200,7 @@ public class LineItemAllowanceCharge3 {
 	 * LineItemAllowanceCharge2.mmActualAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemAllowanceCharge3, List<CurrencyAndAmount>> mmActualAmount = new MMMessageAttribute<LineItemAllowanceCharge3, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge3.mmObject();
@@ -201,6 +212,16 @@ public class LineItemAllowanceCharge3 {
 			previousVersion_lazy = () -> LineItemAllowanceCharge2.mmActualAmount;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(LineItemAllowanceCharge3 obj) {
+			return obj.getActualAmount();
+		}
+
+		@Override
+		public void setValue(LineItemAllowanceCharge3 obj, List<CurrencyAndAmount> value) {
+			obj.setActualAmount(value);
 		}
 	};
 	@XmlElement(name = "BsisQty")
@@ -242,7 +263,7 @@ public class LineItemAllowanceCharge3 {
 	 * LineItemAllowanceCharge2.mmBasisQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasisQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemAllowanceCharge3, Optional<Quantity16>> mmBasisQuantity = new MMMessageAttribute<LineItemAllowanceCharge3, Optional<Quantity16>>() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmBilledQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge3.mmObject();
@@ -254,7 +275,17 @@ public class LineItemAllowanceCharge3 {
 			previousVersion_lazy = () -> LineItemAllowanceCharge2.mmBasisQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Quantity16.mmObject();
+			complexType_lazy = () -> Quantity16.mmObject();
+		}
+
+		@Override
+		public Optional<Quantity16> getValue(LineItemAllowanceCharge3 obj) {
+			return obj.getBasisQuantity();
+		}
+
+		@Override
+		public void setValue(LineItemAllowanceCharge3 obj, Optional<Quantity16> value) {
+			obj.setBasisQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClctnPct")
@@ -297,7 +328,7 @@ public class LineItemAllowanceCharge3 {
 	 * LineItemAllowanceCharge2.mmCalculationPercent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCalculationPercent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemAllowanceCharge3, Optional<PercentageRate>> mmCalculationPercent = new MMMessageAttribute<LineItemAllowanceCharge3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge3.mmObject();
@@ -310,6 +341,16 @@ public class LineItemAllowanceCharge3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(LineItemAllowanceCharge3 obj) {
+			return obj.getCalculationPercent();
+		}
+
+		@Override
+		public void setValue(LineItemAllowanceCharge3 obj, Optional<PercentageRate> value) {
+			obj.setCalculationPercent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeqNb")
@@ -347,7 +388,7 @@ public class LineItemAllowanceCharge3 {
 	 * LineItemAllowanceCharge2.mmSequenceNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemAllowanceCharge3, Optional<Number>> mmSequenceNumber = new MMMessageAttribute<LineItemAllowanceCharge3, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge3.mmObject();
 			isDerived = false;
@@ -359,6 +400,16 @@ public class LineItemAllowanceCharge3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(LineItemAllowanceCharge3 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(LineItemAllowanceCharge3 obj, Optional<Number> value) {
+			obj.setSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -401,7 +452,7 @@ public class LineItemAllowanceCharge3 {
 	 * LineItemAllowanceCharge2.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LineItemAllowanceCharge3, Optional<DiscountOrChargeType1Choice>> mmReason = new MMMessageAttribute<LineItemAllowanceCharge3, Optional<DiscountOrChargeType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge3.mmObject();
@@ -415,6 +466,16 @@ public class LineItemAllowanceCharge3 {
 			minOccurs = 0;
 			complexType_lazy = () -> DiscountOrChargeType1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<DiscountOrChargeType1Choice> getValue(LineItemAllowanceCharge3 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(LineItemAllowanceCharge3 obj, Optional<DiscountOrChargeType1Choice> value) {
+			obj.setReason(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -425,7 +486,7 @@ public class LineItemAllowanceCharge3 {
 						com.tools20022.repository.msg.LineItemAllowanceCharge3.mmSequenceNumber, com.tools20022.repository.msg.LineItemAllowanceCharge3.mmReason);
 				trace_lazy = () -> Adjustment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItemAllowanceCharge3";
 				definition = "Pricing component, such as a service, promotion, allowance or charge, for this line item.";
 				previousVersion_lazy = () -> LineItemAllowanceCharge2.mmObject();
@@ -456,7 +517,7 @@ public class LineItemAllowanceCharge3 {
 		return basisQuantity == null ? Optional.empty() : Optional.of(basisQuantity);
 	}
 
-	public LineItemAllowanceCharge3 setBasisQuantity(com.tools20022.repository.msg.Quantity16 basisQuantity) {
+	public LineItemAllowanceCharge3 setBasisQuantity(Quantity16 basisQuantity) {
 		this.basisQuantity = basisQuantity;
 		return this;
 	}

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorConfiguration4;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header14;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +137,7 @@ public class AcceptorConfigurationUpdateV04 {
 	 * AcceptorConfigurationUpdateV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorConfigurationUpdateV04, Header14> mmHeader = new MMMessageBuildingBlock<AcceptorConfigurationUpdateV04, Header14>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,12 +150,14 @@ public class AcceptorConfigurationUpdateV04 {
 			complexType_lazy = () -> Header14.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorConfigurationUpdateV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header14 getValue(AcceptorConfigurationUpdateV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationUpdateV04 obj, Header14 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "AccptrCfgtn", required = true)
@@ -199,7 +200,7 @@ public class AcceptorConfigurationUpdateV04 {
 	 * AcceptorConfigurationUpdateV03.mmAcceptorConfiguration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAcceptorConfiguration = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorConfigurationUpdateV04, AcceptorConfiguration4> mmAcceptorConfiguration = new MMMessageBuildingBlock<AcceptorConfigurationUpdateV04, AcceptorConfiguration4>() {
 		{
 			xmlTag = "AccptrCfgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +213,14 @@ public class AcceptorConfigurationUpdateV04 {
 			complexType_lazy = () -> AcceptorConfiguration4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorConfigurationUpdateV04.class.getMethod("getAcceptorConfiguration", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorConfiguration4 getValue(AcceptorConfigurationUpdateV04 obj) {
+			return obj.getAcceptorConfiguration();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationUpdateV04 obj, AcceptorConfiguration4 value) {
+			obj.setAcceptorConfiguration(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -259,7 +262,7 @@ public class AcceptorConfigurationUpdateV04 {
 	 * AcceptorConfigurationUpdateV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorConfigurationUpdateV04, ContentInformationType12> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorConfigurationUpdateV04, ContentInformationType12>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +275,14 @@ public class AcceptorConfigurationUpdateV04 {
 			complexType_lazy = () -> ContentInformationType12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorConfigurationUpdateV04.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType12 getValue(AcceptorConfigurationUpdateV04 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorConfigurationUpdateV04 obj, ContentInformationType12 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

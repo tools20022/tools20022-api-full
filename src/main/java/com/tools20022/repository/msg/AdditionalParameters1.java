@@ -101,7 +101,7 @@ public class AdditionalParameters1 {
 	 * definition} = "Specifies the country."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters1, Optional<CountryCode>> mmCountry = new MMMessageAttribute<AdditionalParameters1, Optional<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class AdditionalParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(AdditionalParameters1 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters1 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -144,7 +154,7 @@ public class AdditionalParameters1 {
 	 * definition} = "Specifies the currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters1, Optional<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<AdditionalParameters1, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class AdditionalParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(AdditionalParameters1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters1 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GeoArea")
@@ -188,7 +208,7 @@ public class AdditionalParameters1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGeographicalArea = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalParameters1, Optional<Max35Text>> mmGeographicalArea = new MMMessageAttribute<AdditionalParameters1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
 			isDerived = false;
@@ -199,6 +219,16 @@ public class AdditionalParameters1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AdditionalParameters1 obj) {
+			return obj.getGeographicalArea();
+		}
+
+		@Override
+		public void setValue(AdditionalParameters1 obj, Optional<Max35Text> value) {
+			obj.setGeographicalArea(value.orElse(null));
 		}
 	};
 

@@ -111,7 +111,7 @@ public class SecuritiesBalanceType8Choice {
 	 * definition} = "Sub-balance expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType8Choice, SecuritiesBalanceType11Code> mmCode = new MMMessageAttribute<SecuritiesBalanceType8Choice, SecuritiesBalanceType11Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType8Choice.mmObject();
@@ -124,6 +124,16 @@ public class SecuritiesBalanceType8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType11Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType11Code getValue(SecuritiesBalanceType8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType8Choice obj, SecuritiesBalanceType11Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class SecuritiesBalanceType8Choice {
 	 * definition} = "Sub-balance expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType8Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<SecuritiesBalanceType8Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType8Choice.mmObject();
@@ -177,6 +187,16 @@ public class SecuritiesBalanceType8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(SecuritiesBalanceType8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType8Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

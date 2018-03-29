@@ -124,7 +124,7 @@ public class BorrowerLendingDeadline1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BorrowerLendingDeadline1, DateFormat31Choice> mmStockLendingDeadline = new MMMessageAssociationEnd<BorrowerLendingDeadline1, DateFormat31Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmStockLendingDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline1.mmObject();
@@ -138,6 +138,16 @@ public class BorrowerLendingDeadline1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat31Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat31Choice getValue(BorrowerLendingDeadline1 obj) {
+			return obj.getStockLendingDeadline();
+		}
+
+		@Override
+		public void setValue(BorrowerLendingDeadline1 obj, DateFormat31Choice value) {
+			obj.setStockLendingDeadline(value);
 		}
 	};
 	@XmlElement(name = "Brrwr", required = true)
@@ -182,7 +192,7 @@ public class BorrowerLendingDeadline1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBorrower = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BorrowerLendingDeadline1, PartyIdentification92Choice> mmBorrower = new MMMessageAssociationEnd<BorrowerLendingDeadline1, PartyIdentification92Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline1.mmObject();
@@ -196,6 +206,16 @@ public class BorrowerLendingDeadline1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification92Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification92Choice getValue(BorrowerLendingDeadline1 obj) {
+			return obj.getBorrower();
+		}
+
+		@Override
+		public void setValue(BorrowerLendingDeadline1 obj, PartyIdentification92Choice value) {
+			obj.setBorrower(value);
 		}
 	};
 

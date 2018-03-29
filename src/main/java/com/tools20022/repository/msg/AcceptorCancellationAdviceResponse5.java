@@ -25,6 +25,9 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment46;
+import com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse6;
+import com.tools20022.repository.msg.TMSTrigger1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -144,7 +147,7 @@ public class AcceptorCancellationAdviceResponse5 {
 	 * AcceptorCancellationAdviceResponse4.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCancellationAdviceResponse5, CardPaymentEnvironment46> mmEnvironment = new MMMessageAssociationEnd<AcceptorCancellationAdviceResponse5, CardPaymentEnvironment46>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdviceResponse5.mmObject();
@@ -158,7 +161,17 @@ public class AcceptorCancellationAdviceResponse5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment46.mmObject();
+			type_lazy = () -> CardPaymentEnvironment46.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment46 getValue(AcceptorCancellationAdviceResponse5 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdviceResponse5 obj, CardPaymentEnvironment46 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -209,7 +222,7 @@ public class AcceptorCancellationAdviceResponse5 {
 	 * AcceptorCancellationAdviceResponse4.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCancellationAdviceResponse5, CardPaymentTransactionAdviceResponse6> mmTransaction = new MMMessageAssociationEnd<AcceptorCancellationAdviceResponse5, CardPaymentTransactionAdviceResponse6>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdviceResponse5.mmObject();
@@ -223,7 +236,17 @@ public class AcceptorCancellationAdviceResponse5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse6.mmObject();
+			type_lazy = () -> CardPaymentTransactionAdviceResponse6.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransactionAdviceResponse6 getValue(AcceptorCancellationAdviceResponse5 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdviceResponse5 obj, CardPaymentTransactionAdviceResponse6 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "TMSTrggr")
@@ -273,7 +296,7 @@ public class AcceptorCancellationAdviceResponse5 {
 	 * AcceptorCancellationAdviceResponse4.mmTMSTrigger}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCancellationAdviceResponse5, Optional<TMSTrigger1>> mmTMSTrigger = new MMMessageAssociationEnd<AcceptorCancellationAdviceResponse5, Optional<TMSTrigger1>>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCancellationAdviceResponse5.mmObject();
@@ -287,7 +310,17 @@ public class AcceptorCancellationAdviceResponse5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TMSTrigger1.mmObject();
+			type_lazy = () -> TMSTrigger1.mmObject();
+		}
+
+		@Override
+		public Optional<TMSTrigger1> getValue(AcceptorCancellationAdviceResponse5 obj) {
+			return obj.getTMSTrigger();
+		}
+
+		@Override
+		public void setValue(AcceptorCancellationAdviceResponse5 obj, Optional<TMSTrigger1> value) {
+			obj.setTMSTrigger(value.orElse(null));
 		}
 	};
 
@@ -313,7 +346,7 @@ public class AcceptorCancellationAdviceResponse5 {
 		return environment;
 	}
 
-	public AcceptorCancellationAdviceResponse5 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment46 environment) {
+	public AcceptorCancellationAdviceResponse5 setEnvironment(CardPaymentEnvironment46 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -322,7 +355,7 @@ public class AcceptorCancellationAdviceResponse5 {
 		return transaction;
 	}
 
-	public AcceptorCancellationAdviceResponse5 setTransaction(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse6 transaction) {
+	public AcceptorCancellationAdviceResponse5 setTransaction(CardPaymentTransactionAdviceResponse6 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
@@ -331,7 +364,7 @@ public class AcceptorCancellationAdviceResponse5 {
 		return tMSTrigger == null ? Optional.empty() : Optional.of(tMSTrigger);
 	}
 
-	public AcceptorCancellationAdviceResponse5 setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
+	public AcceptorCancellationAdviceResponse5 setTMSTrigger(TMSTrigger1 tMSTrigger) {
 		this.tMSTrigger = tMSTrigger;
 		return this;
 	}

@@ -121,7 +121,7 @@ public class TransactionActivity3Choice {
 	 * TransactionActivity1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionActivity3Choice, TransactionActivity1Code> mmCode = new MMMessageAttribute<TransactionActivity3Choice, TransactionActivity1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmActivity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionActivity3Choice.mmObject();
@@ -135,6 +135,16 @@ public class TransactionActivity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionActivity1Code.mmObject();
+		}
+
+		@Override
+		public TransactionActivity1Code getValue(TransactionActivity3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TransactionActivity3Choice obj, TransactionActivity1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -180,7 +190,7 @@ public class TransactionActivity3Choice {
 	 * TransactionActivity1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionActivity3Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<TransactionActivity3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmActivity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionActivity3Choice.mmObject();
@@ -194,6 +204,16 @@ public class TransactionActivity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(TransactionActivity3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TransactionActivity3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

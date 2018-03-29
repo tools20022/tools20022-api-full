@@ -108,7 +108,7 @@ public class CurrencySourceTarget1 {
 	 * "Currency of the amount to be converted in a currency conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencySourceTarget1, ActiveOrHistoricCurrencyCode> mmSourceCurrency = new MMMessageAttribute<CurrencySourceTarget1, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencySourceTarget1.mmObject();
@@ -120,6 +120,16 @@ public class CurrencySourceTarget1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CurrencySourceTarget1 obj) {
+			return obj.getSourceCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencySourceTarget1 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setSourceCurrency(value);
 		}
 	};
 	@XmlElement(name = "TrgtCcy", required = true)
@@ -159,7 +169,7 @@ public class CurrencySourceTarget1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencySourceTarget1, ActiveOrHistoricCurrencyCode> mmTargetCurrency = new MMMessageAttribute<CurrencySourceTarget1, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencySourceTarget1.mmObject();
@@ -171,6 +181,16 @@ public class CurrencySourceTarget1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CurrencySourceTarget1 obj) {
+			return obj.getTargetCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencySourceTarget1 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setTargetCurrency(value);
 		}
 	};
 

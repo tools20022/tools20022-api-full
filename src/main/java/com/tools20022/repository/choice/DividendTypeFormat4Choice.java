@@ -111,7 +111,7 @@ public class DividendTypeFormat4Choice {
 	 * "Standard code to specify the frequency of the corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DividendTypeFormat4Choice, CorporateActionFrequencyType2Code> mmCode = new MMMessageAttribute<DividendTypeFormat4Choice, CorporateActionFrequencyType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat4Choice.mmObject();
@@ -123,6 +123,16 @@ public class DividendTypeFormat4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionFrequencyType2Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionFrequencyType2Code getValue(DividendTypeFormat4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat4Choice obj, CorporateActionFrequencyType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class DividendTypeFormat4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DividendTypeFormat4Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<DividendTypeFormat4Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DividendTypeFormat4Choice.mmObject();
@@ -174,6 +184,16 @@ public class DividendTypeFormat4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(DividendTypeFormat4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DividendTypeFormat4Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

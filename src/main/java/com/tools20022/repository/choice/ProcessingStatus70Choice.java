@@ -118,7 +118,7 @@ public class ProcessingStatus70Choice {
 	 * ProcessingStatus30Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProcessingStatus70Choice, TransactionProcessingStatus4Code> mmCode = new MMMessageAttribute<ProcessingStatus70Choice, TransactionProcessingStatus4Code>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus70Choice.mmObject();
@@ -131,6 +131,16 @@ public class ProcessingStatus70Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionProcessingStatus4Code.mmObject();
+		}
+
+		@Override
+		public TransactionProcessingStatus4Code getValue(ProcessingStatus70Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus70Choice obj, TransactionProcessingStatus4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -177,7 +187,7 @@ public class ProcessingStatus70Choice {
 	 * ProcessingStatus30Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProcessingStatus70Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<ProcessingStatus70Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ProcessingStatus70Choice.mmObject();
@@ -192,6 +202,16 @@ public class ProcessingStatus70Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ProcessingStatus70Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ProcessingStatus70Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

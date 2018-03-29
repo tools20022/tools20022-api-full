@@ -22,7 +22,6 @@ import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.OrderStatusAndReason4;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -197,7 +196,7 @@ public class OrderCancellationStatusReportV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderCancellationStatusReportV02, List<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<OrderCancellationStatusReportV02, List<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,12 +207,14 @@ public class OrderCancellationStatusReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderCancellationStatusReportV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(OrderCancellationStatusReportV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(OrderCancellationStatusReportV02 obj, List<AdditionalReference3> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "OthrRef", required = true)
@@ -243,7 +244,7 @@ public class OrderCancellationStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderCancellationStatusReportV02, List<AdditionalReference3>> mmOtherReference = new MMMessageBuildingBlock<OrderCancellationStatusReportV02, List<AdditionalReference3>>() {
 		{
 			xmlTag = "OthrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,12 +255,14 @@ public class OrderCancellationStatusReportV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderCancellationStatusReportV02.class.getMethod("getOtherReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(OrderCancellationStatusReportV02 obj) {
+			return obj.getOtherReference();
+		}
+
+		@Override
+		public void setValue(OrderCancellationStatusReportV02 obj, List<AdditionalReference3> value) {
+			obj.setOtherReference(value);
 		}
 	};
 	@XmlElement(name = "CxlStsRpt", required = true)
@@ -289,7 +292,7 @@ public class OrderCancellationStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationStatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<OrderCancellationStatusReportV02, OrderStatusAndReason4> mmCancellationStatusReport = new MMMessageBuildingBlock<OrderCancellationStatusReportV02, OrderStatusAndReason4>() {
 		{
 			xmlTag = "CxlStsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,12 +303,14 @@ public class OrderCancellationStatusReportV02 {
 			complexType_lazy = () -> OrderStatusAndReason4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return OrderCancellationStatusReportV02.class.getMethod("getCancellationStatusReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OrderStatusAndReason4 getValue(OrderCancellationStatusReportV02 obj) {
+			return obj.getCancellationStatusReport();
+		}
+
+		@Override
+		public void setValue(OrderCancellationStatusReportV02 obj, OrderStatusAndReason4 value) {
+			obj.setCancellationStatusReport(value);
 		}
 	};
 

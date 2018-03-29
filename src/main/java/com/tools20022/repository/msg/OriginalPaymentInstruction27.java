@@ -31,6 +31,9 @@ import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NumberOfTransactionsPerStatus5;
+import com.tools20022.repository.msg.PaymentTransaction92;
+import com.tools20022.repository.msg.StatusReasonInformation11;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -171,7 +174,7 @@ public class OriginalPaymentInstruction27 {
 	 * OriginalPaymentInstruction23.mmOriginalPaymentInformationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalPaymentInformationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction27, Max35Text> mmOriginalPaymentInformationIdentification = new MMMessageAttribute<OriginalPaymentInstruction27, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction27.mmObject();
@@ -184,6 +187,16 @@ public class OriginalPaymentInstruction27 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalPaymentInstruction27 obj) {
+			return obj.getOriginalPaymentInformationIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction27 obj, Max35Text value) {
+			obj.setOriginalPaymentInformationIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlNbOfTxs")
@@ -223,7 +236,7 @@ public class OriginalPaymentInstruction27 {
 	 * OriginalPaymentInstruction23.mmOriginalNumberOfTransactions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction27, Optional<Max15NumericText>> mmOriginalNumberOfTransactions = new MMMessageAttribute<OriginalPaymentInstruction27, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction27.mmObject();
 			isDerived = false;
@@ -235,6 +248,16 @@ public class OriginalPaymentInstruction27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(OriginalPaymentInstruction27 obj) {
+			return obj.getOriginalNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction27 obj, Optional<Max15NumericText> value) {
+			obj.setOriginalNumberOfTransactions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCtrlSum")
@@ -274,7 +297,7 @@ public class OriginalPaymentInstruction27 {
 	 * OriginalPaymentInstruction23.mmOriginalControlSum}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction27, Optional<DecimalNumber>> mmOriginalControlSum = new MMMessageAttribute<OriginalPaymentInstruction27, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction27.mmObject();
 			isDerived = false;
@@ -286,6 +309,16 @@ public class OriginalPaymentInstruction27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(OriginalPaymentInstruction27 obj) {
+			return obj.getOriginalControlSum();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction27 obj, Optional<DecimalNumber> value) {
+			obj.setOriginalControlSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtInfSts")
@@ -328,7 +361,7 @@ public class OriginalPaymentInstruction27 {
 	 * OriginalPaymentInstruction23.mmPaymentInformationStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInformationStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalPaymentInstruction27, Optional<ExternalPaymentGroupStatus1Code>> mmPaymentInformationStatus = new MMMessageAttribute<OriginalPaymentInstruction27, Optional<ExternalPaymentGroupStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction27.mmObject();
@@ -342,9 +375,19 @@ public class OriginalPaymentInstruction27 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalPaymentGroupStatus1Code.mmObject();
 		}
+
+		@Override
+		public Optional<ExternalPaymentGroupStatus1Code> getValue(OriginalPaymentInstruction27 obj) {
+			return obj.getPaymentInformationStatus();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction27 obj, Optional<ExternalPaymentGroupStatus1Code> value) {
+			obj.setPaymentInformationStatus(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "StsRsnInf")
-	protected List<com.tools20022.repository.msg.StatusReasonInformation11> statusReasonInformation;
+	protected List<StatusReasonInformation11> statusReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -382,7 +425,7 @@ public class OriginalPaymentInstruction27 {
 	 * OriginalPaymentInstruction23.mmStatusReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalPaymentInstruction27, List<StatusReasonInformation11>> mmStatusReasonInformation = new MMMessageAssociationEnd<OriginalPaymentInstruction27, List<StatusReasonInformation11>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction27.mmObject();
@@ -394,11 +437,21 @@ public class OriginalPaymentInstruction27 {
 			previousVersion_lazy = () -> OriginalPaymentInstruction23.mmStatusReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation11.mmObject();
+			type_lazy = () -> StatusReasonInformation11.mmObject();
+		}
+
+		@Override
+		public List<StatusReasonInformation11> getValue(OriginalPaymentInstruction27 obj) {
+			return obj.getStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction27 obj, List<StatusReasonInformation11> value) {
+			obj.setStatusReasonInformation(value);
 		}
 	};
 	@XmlElement(name = "NbOfTxsPerSts")
-	protected List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus;
+	protected List<NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus;
 	/**
 	 * 
 	 <p>
@@ -433,7 +486,7 @@ public class OriginalPaymentInstruction27 {
 	 * OriginalPaymentInstruction23.mmNumberOfTransactionsPerStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNumberOfTransactionsPerStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalPaymentInstruction27, List<NumberOfTransactionsPerStatus5>> mmNumberOfTransactionsPerStatus = new MMMessageAssociationEnd<OriginalPaymentInstruction27, List<NumberOfTransactionsPerStatus5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction27.mmObject();
 			isDerived = false;
@@ -444,11 +497,21 @@ public class OriginalPaymentInstruction27 {
 			previousVersion_lazy = () -> OriginalPaymentInstruction23.mmNumberOfTransactionsPerStatus;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus5.mmObject();
+			type_lazy = () -> NumberOfTransactionsPerStatus5.mmObject();
+		}
+
+		@Override
+		public List<NumberOfTransactionsPerStatus5> getValue(OriginalPaymentInstruction27 obj) {
+			return obj.getNumberOfTransactionsPerStatus();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction27 obj, List<NumberOfTransactionsPerStatus5> value) {
+			obj.setNumberOfTransactionsPerStatus(value);
 		}
 	};
 	@XmlElement(name = "TxInfAndSts")
-	protected List<com.tools20022.repository.msg.PaymentTransaction92> transactionInformationAndStatus;
+	protected List<PaymentTransaction92> transactionInformationAndStatus;
 	/**
 	 * 
 	 <p>
@@ -486,7 +549,7 @@ public class OriginalPaymentInstruction27 {
 	 * OriginalPaymentInstruction23.mmTransactionInformationAndStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionInformationAndStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalPaymentInstruction27, List<PaymentTransaction92>> mmTransactionInformationAndStatus = new MMMessageAssociationEnd<OriginalPaymentInstruction27, List<PaymentTransaction92>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction27.mmObject();
@@ -498,7 +561,17 @@ public class OriginalPaymentInstruction27 {
 			previousVersion_lazy = () -> OriginalPaymentInstruction23.mmTransactionInformationAndStatus;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction92.mmObject();
+			type_lazy = () -> PaymentTransaction92.mmObject();
+		}
+
+		@Override
+		public List<PaymentTransaction92> getValue(OriginalPaymentInstruction27 obj) {
+			return obj.getTransactionInformationAndStatus();
+		}
+
+		@Override
+		public void setValue(OriginalPaymentInstruction27 obj, List<PaymentTransaction92> value) {
+			obj.setTransactionInformationAndStatus(value);
 		}
 	};
 
@@ -565,7 +638,7 @@ public class OriginalPaymentInstruction27 {
 		return statusReasonInformation == null ? statusReasonInformation = new ArrayList<>() : statusReasonInformation;
 	}
 
-	public OriginalPaymentInstruction27 setStatusReasonInformation(List<com.tools20022.repository.msg.StatusReasonInformation11> statusReasonInformation) {
+	public OriginalPaymentInstruction27 setStatusReasonInformation(List<StatusReasonInformation11> statusReasonInformation) {
 		this.statusReasonInformation = Objects.requireNonNull(statusReasonInformation);
 		return this;
 	}
@@ -574,7 +647,7 @@ public class OriginalPaymentInstruction27 {
 		return numberOfTransactionsPerStatus == null ? numberOfTransactionsPerStatus = new ArrayList<>() : numberOfTransactionsPerStatus;
 	}
 
-	public OriginalPaymentInstruction27 setNumberOfTransactionsPerStatus(List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus) {
+	public OriginalPaymentInstruction27 setNumberOfTransactionsPerStatus(List<NumberOfTransactionsPerStatus5> numberOfTransactionsPerStatus) {
 		this.numberOfTransactionsPerStatus = Objects.requireNonNull(numberOfTransactionsPerStatus);
 		return this;
 	}
@@ -583,7 +656,7 @@ public class OriginalPaymentInstruction27 {
 		return transactionInformationAndStatus == null ? transactionInformationAndStatus = new ArrayList<>() : transactionInformationAndStatus;
 	}
 
-	public OriginalPaymentInstruction27 setTransactionInformationAndStatus(List<com.tools20022.repository.msg.PaymentTransaction92> transactionInformationAndStatus) {
+	public OriginalPaymentInstruction27 setTransactionInformationAndStatus(List<PaymentTransaction92> transactionInformationAndStatus) {
 		this.transactionInformationAndStatus = Objects.requireNonNull(transactionInformationAndStatus);
 		return this;
 	}

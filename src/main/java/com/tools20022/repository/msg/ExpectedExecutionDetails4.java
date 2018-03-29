@@ -130,7 +130,7 @@ public class ExpectedExecutionDetails4 {
 	 * ExpectedExecutionDetails2.mmExpectedTradeDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedTradeDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails4, Optional<DateAndDateTimeChoice>> mmExpectedTradeDateTime = new MMMessageAttribute<ExpectedExecutionDetails4, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails4.mmObject();
@@ -143,6 +143,16 @@ public class ExpectedExecutionDetails4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(ExpectedExecutionDetails4 obj) {
+			return obj.getExpectedTradeDateTime();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails4 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setExpectedTradeDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdCshSttlmDt")
@@ -184,7 +194,7 @@ public class ExpectedExecutionDetails4 {
 	 * ExpectedExecutionDetails2.mmExpectedCashSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedCashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedExecutionDetails4, Optional<ISODate>> mmExpectedCashSettlementDate = new MMMessageAttribute<ExpectedExecutionDetails4, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedExecutionDetails4.mmObject();
@@ -197,6 +207,16 @@ public class ExpectedExecutionDetails4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ExpectedExecutionDetails4 obj) {
+			return obj.getExpectedCashSettlementDate();
+		}
+
+		@Override
+		public void setValue(ExpectedExecutionDetails4 obj, Optional<ISODate> value) {
+			obj.setExpectedCashSettlementDate(value.orElse(null));
 		}
 	};
 

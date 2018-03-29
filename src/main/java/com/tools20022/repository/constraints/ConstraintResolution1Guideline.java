@@ -69,12 +69,16 @@ public class ConstraintResolution1Guideline {
 	 */
 	public static final MMConstraint<MeetingNotificationV05> forMeetingNotificationV05 = new MMConstraint<MeetingNotificationV05>() {
 		{
-			validator = ConstraintResolution1Guideline::checkMeetingNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Resolution1Guideline";
 			definition = "When an agenda item needs to be linked to a resolution, it is recommended to have the resolution information following directly the agenda item information to which the resolution is linked as illustrated in the following example: \n\nResolution/IssuerLabel = Agenda item 1\nDescription = <Item description.>\nForInformationOnly = True\nType =.\n\nDirectly followed by\n\nResolution/IssuerLabel = Resolution 1\nDescription = <Resolution description.>\nForInformationOnly = False\nType =.\n.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintResolution1Guideline.forMeetingNotificationV04;
 			owner_lazy = () -> MeetingNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingNotificationV05 obj) throws Exception {
+			checkMeetingNotificationV05(obj);
 		}
 	};
 	/**
@@ -108,12 +112,16 @@ public class ConstraintResolution1Guideline {
 	 */
 	public static final MMConstraint<MeetingNotificationV04> forMeetingNotificationV04 = new MMConstraint<MeetingNotificationV04>() {
 		{
-			validator = ConstraintResolution1Guideline::checkMeetingNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Resolution1Guideline";
 			definition = "When an agenda item needs to be linked to a resolution, it is recommended to have the resolution information following directly the agenda item information to which the resolution is linked as illustrated in the following example: \n\nResolution/IssuerLabel = Agenda item 1\nDescription = <Item description.>\nForInformationOnly = True\nType =.\n\nDirectly followed by\n\nResolution/IssuerLabel = Resolution 1\nDescription = <Resolution description.>\nForInformationOnly = False\nType =.\n.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintResolution1Guideline.forMeetingNotificationV05);
 			owner_lazy = () -> MeetingNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingNotificationV04 obj) throws Exception {
+			checkMeetingNotificationV04(obj);
 		}
 	};
 	/**
@@ -139,11 +147,15 @@ public class ConstraintResolution1Guideline {
 	 */
 	public static final MMConstraint<MeetingNotificationV03> forMeetingNotificationV03 = new MMConstraint<MeetingNotificationV03>() {
 		{
-			validator = ConstraintResolution1Guideline::checkMeetingNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Resolution1Guideline";
 			definition = "When an agenda item needs to be linked to a resolution, it is recommended to have the resolution information following directly the agenda item information to which the resolution is linked as illustrated in the following example: \n\nResolution/IssuerLabel = Agenda item 1\nDescription = <Item description.>\nForInformationOnly = True\nType =.\n\nDirectly followed by\n\nResolution/IssuerLabel = Resolution 1\nDescription = <Resolution description.>\nForInformationOnly = False\nType =.\n.";
 			owner_lazy = () -> MeetingNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MeetingNotificationV03 obj) throws Exception {
+			checkMeetingNotificationV03(obj);
 		}
 	};
 

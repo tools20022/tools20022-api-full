@@ -145,7 +145,7 @@ public class CashCollateralResponse2 {
 	 * CashCollateralResponse1.mmResponseType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResponseType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateralResponse2, Status4Code> mmResponseType = new MMMessageAttribute<CashCollateralResponse2, Status4Code>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmResponseStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse2.mmObject();
@@ -158,6 +158,16 @@ public class CashCollateralResponse2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status4Code.mmObject();
+		}
+
+		@Override
+		public Status4Code getValue(CashCollateralResponse2 obj) {
+			return obj.getResponseType();
+		}
+
+		@Override
+		public void setValue(CashCollateralResponse2 obj, Status4Code value) {
+			obj.setResponseType(value);
 		}
 	};
 	@XmlElement(name = "CollId")
@@ -194,7 +204,7 @@ public class CashCollateralResponse2 {
 	 * CashCollateralResponse1.mmCollateralIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateralResponse2, Optional<Max35Text>> mmCollateralIdentification = new MMMessageAttribute<CashCollateralResponse2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse2.mmObject();
 			isDerived = false;
@@ -206,6 +216,16 @@ public class CashCollateralResponse2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CashCollateralResponse2 obj) {
+			return obj.getCollateralIdentification();
+		}
+
+		@Override
+		public void setValue(CashCollateralResponse2 obj, Optional<Max35Text> value) {
+			obj.setCollateralIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsstNb")
@@ -244,7 +264,7 @@ public class CashCollateralResponse2 {
 	 * CashCollateralResponse1.mmAssetNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssetNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateralResponse2, Optional<Max35Text>> mmAssetNumber = new MMMessageAttribute<CashCollateralResponse2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse2.mmObject();
 			isDerived = false;
@@ -256,6 +276,16 @@ public class CashCollateralResponse2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CashCollateralResponse2 obj) {
+			return obj.getAssetNumber();
+		}
+
+		@Override
+		public void setValue(CashCollateralResponse2 obj, Optional<Max35Text> value) {
+			obj.setAssetNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshAcctId")
@@ -299,7 +329,7 @@ public class CashCollateralResponse2 {
 	 * CashCollateralResponse1.mmCashAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashCollateralResponse2, Optional<AccountIdentification4Choice>> mmCashAccountIdentification = new MMMessageAssociationEnd<CashCollateralResponse2, Optional<AccountIdentification4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse2.mmObject();
@@ -313,6 +343,16 @@ public class CashCollateralResponse2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(CashCollateralResponse2 obj) {
+			return obj.getCashAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CashCollateralResponse2 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setCashAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctnRsn")
@@ -357,7 +397,7 @@ public class CashCollateralResponse2 {
 	 * CashCollateralResponse1.mmRejectionReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateralResponse2, Optional<RejectionReasonV021Code>> mmRejectionReason = new MMMessageAttribute<CashCollateralResponse2, Optional<RejectionReasonV021Code>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse2.mmObject();
@@ -370,6 +410,16 @@ public class CashCollateralResponse2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RejectionReasonV021Code.mmObject();
+		}
+
+		@Override
+		public Optional<RejectionReasonV021Code> getValue(CashCollateralResponse2 obj) {
+			return obj.getRejectionReason();
+		}
+
+		@Override
+		public void setValue(CashCollateralResponse2 obj, Optional<RejectionReasonV021Code> value) {
+			obj.setRejectionReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RjctnInf")
@@ -408,7 +458,7 @@ public class CashCollateralResponse2 {
 	 * CashCollateralResponse1.mmRejectionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectionInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashCollateralResponse2, Optional<Max35Text>> mmRejectionInformation = new MMMessageAttribute<CashCollateralResponse2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashCollateralResponse2.mmObject();
 			isDerived = false;
@@ -420,6 +470,16 @@ public class CashCollateralResponse2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CashCollateralResponse2 obj) {
+			return obj.getRejectionInformation();
+		}
+
+		@Override
+		public void setValue(CashCollateralResponse2 obj, Optional<Max35Text> value) {
+			obj.setRejectionInformation(value.orElse(null));
 		}
 	};
 

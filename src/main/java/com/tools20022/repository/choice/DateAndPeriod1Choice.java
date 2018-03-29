@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.Period2Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -100,7 +102,7 @@ public class DateAndPeriod1Choice {
 	 * definition} = "Date of the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndPeriod1Choice, DateAndDateTimeChoice> mmStatementDate = new MMMessageAttribute<DateAndPeriod1Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndPeriod1Choice.mmObject();
 			isDerived = false;
@@ -111,7 +113,17 @@ public class DateAndPeriod1Choice {
 			definition = "Date of the statement.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateAndPeriod1Choice obj) {
+			return obj.getStatementDate();
+		}
+
+		@Override
+		public void setValue(DateAndPeriod1Choice obj, DateAndDateTimeChoice value) {
+			obj.setStatementDate(value);
 		}
 	};
 	@XmlElement(name = "StmtPrd", required = true)
@@ -147,7 +159,7 @@ public class DateAndPeriod1Choice {
 	 * definition} = "Period for the statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateAndPeriod1Choice, Period2Choice> mmStatementPeriod = new MMMessageAttribute<DateAndPeriod1Choice, Period2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndPeriod1Choice.mmObject();
 			isDerived = false;
@@ -158,7 +170,17 @@ public class DateAndPeriod1Choice {
 			definition = "Period for the statement.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.Period2Choice.mmObject();
+			complexType_lazy = () -> Period2Choice.mmObject();
+		}
+
+		@Override
+		public Period2Choice getValue(DateAndPeriod1Choice obj) {
+			return obj.getStatementPeriod();
+		}
+
+		@Override
+		public void setValue(DateAndPeriod1Choice obj, Period2Choice value) {
+			obj.setStatementPeriod(value);
 		}
 	};
 
@@ -179,7 +201,7 @@ public class DateAndPeriod1Choice {
 		return statementDate;
 	}
 
-	public DateAndPeriod1Choice setStatementDate(com.tools20022.repository.choice.DateAndDateTimeChoice statementDate) {
+	public DateAndPeriod1Choice setStatementDate(DateAndDateTimeChoice statementDate) {
 		this.statementDate = Objects.requireNonNull(statementDate);
 		return this;
 	}
@@ -188,7 +210,7 @@ public class DateAndPeriod1Choice {
 		return statementPeriod;
 	}
 
-	public DateAndPeriod1Choice setStatementPeriod(com.tools20022.repository.choice.Period2Choice statementPeriod) {
+	public DateAndPeriod1Choice setStatementPeriod(Period2Choice statementPeriod) {
 		this.statementPeriod = Objects.requireNonNull(statementPeriod);
 		return this;
 	}

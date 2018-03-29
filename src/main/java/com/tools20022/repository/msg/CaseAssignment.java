@@ -160,7 +160,7 @@ public class CaseAssignment {
 	 * definition} = "Identification of an assignment within a case."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseAssignment, Max35Text> mmIdentification = new MMMessageAttribute<CaseAssignment, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCase.mmAssignmentIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment.mmObject();
@@ -172,6 +172,16 @@ public class CaseAssignment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CaseAssignment obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CaseAssignment obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Assgnr", required = true)
@@ -210,7 +220,7 @@ public class CaseAssignment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssigner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseAssignment, AnyBICIdentifier> mmAssigner = new MMMessageAttribute<CaseAssignment, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment.mmObject();
@@ -222,6 +232,16 @@ public class CaseAssignment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(CaseAssignment obj) {
+			return obj.getAssigner();
+		}
+
+		@Override
+		public void setValue(CaseAssignment obj, AnyBICIdentifier value) {
+			obj.setAssigner(value);
 		}
 	};
 	@XmlElement(name = "Assgne", required = true)
@@ -260,7 +280,7 @@ public class CaseAssignment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssignee = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseAssignment, AnyBICIdentifier> mmAssignee = new MMMessageAttribute<CaseAssignment, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment.mmObject();
@@ -272,6 +292,16 @@ public class CaseAssignment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(CaseAssignment obj) {
+			return obj.getAssignee();
+		}
+
+		@Override
+		public void setValue(CaseAssignment obj, AnyBICIdentifier value) {
+			obj.setAssignee(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -307,7 +337,7 @@ public class CaseAssignment {
 	 * definition} = "Date and time at which the assignment was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CaseAssignment, ISODateTime> mmCreationDateTime = new MMMessageAttribute<CaseAssignment, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> InvestigationCase.mmCreationDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CaseAssignment.mmObject();
@@ -319,6 +349,16 @@ public class CaseAssignment {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CaseAssignment obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(CaseAssignment obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 

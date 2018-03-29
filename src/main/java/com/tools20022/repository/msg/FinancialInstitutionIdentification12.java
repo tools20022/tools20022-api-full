@@ -112,7 +112,7 @@ public class FinancialInstitutionIdentification12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBICFI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification12, BICFIIdentifier> mmBICFI = new MMMessageAttribute<FinancialInstitutionIdentification12, BICFIIdentifier>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification12.mmObject();
@@ -124,6 +124,16 @@ public class FinancialInstitutionIdentification12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
+		}
+
+		@Override
+		public BICFIIdentifier getValue(FinancialInstitutionIdentification12 obj) {
+			return obj.getBICFI();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification12 obj, BICFIIdentifier value) {
+			obj.setBICFI(value);
 		}
 	};
 	@XmlElement(name = "LEI")
@@ -157,7 +167,7 @@ public class FinancialInstitutionIdentification12 {
 	 * "Legal entity identification as an alternate identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstitutionIdentification12, Optional<LEIIdentifier>> mmLEI = new MMMessageAttribute<FinancialInstitutionIdentification12, Optional<LEIIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification12.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class FinancialInstitutionIdentification12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<LEIIdentifier> getValue(FinancialInstitutionIdentification12 obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(FinancialInstitutionIdentification12 obj, Optional<LEIIdentifier> value) {
+			obj.setLEI(value.orElse(null));
 		}
 	};
 

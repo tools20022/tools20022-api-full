@@ -107,7 +107,7 @@ public class Quantity23Choice {
 	 * definition} = "Signed face amount and amortised value of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity23Choice, OriginalAndCurrentQuantities7> mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd<Quantity23Choice, OriginalAndCurrentQuantities7>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity23Choice.mmObject();
@@ -120,6 +120,16 @@ public class Quantity23Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalAndCurrentQuantities7.mmObject();
+		}
+
+		@Override
+		public OriginalAndCurrentQuantities7 getValue(Quantity23Choice obj) {
+			return obj.getOriginalAndCurrentFaceAmount();
+		}
+
+		@Override
+		public void setValue(Quantity23Choice obj, OriginalAndCurrentQuantities7 value) {
+			obj.setOriginalAndCurrentFaceAmount(value);
 		}
 	};
 	@XmlElement(name = "SgndQty", required = true)
@@ -150,7 +160,7 @@ public class Quantity23Choice {
 	 * definition} = "Signed quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSignedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity23Choice, SignedQuantityFormat9> mmSignedQuantity = new MMMessageAssociationEnd<Quantity23Choice, SignedQuantityFormat9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity23Choice.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class Quantity23Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(Quantity23Choice obj) {
+			return obj.getSignedQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity23Choice obj, SignedQuantityFormat9 value) {
+			obj.setSignedQuantity(value);
 		}
 	};
 

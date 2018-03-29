@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.TechnicalIdentification1Choice;
 import com.tools20022.repository.codeset.SystemPartyType1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -131,7 +132,7 @@ public class SystemParty1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemParty1, SystemPartyIdentification1> mmIdentification = new MMMessageAssociationEnd<SystemParty1, SystemPartyIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
@@ -142,7 +143,17 @@ public class SystemParty1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification1.mmObject();
+			type_lazy = () -> SystemPartyIdentification1.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification1 getValue(SystemParty1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SystemParty1 obj, SystemPartyIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -173,7 +184,7 @@ public class SystemParty1 {
 	 * "Information that locates and identifies a specific address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemParty1, Optional<PostalAddress10>> mmAddress = new MMMessageAssociationEnd<SystemParty1, Optional<PostalAddress10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
@@ -184,7 +195,17 @@ public class SystemParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PostalAddress10.mmObject();
+			type_lazy = () -> PostalAddress10.mmObject();
+		}
+
+		@Override
+		public Optional<PostalAddress10> getValue(SystemParty1 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(SystemParty1 obj, Optional<PostalAddress10> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OpngDt", required = true)
@@ -215,7 +236,7 @@ public class SystemParty1 {
 	 * definition} = "Specifies the opening date of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemParty1, ISODate> mmOpeningDate = new MMMessageAttribute<SystemParty1, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
@@ -226,6 +247,16 @@ public class SystemParty1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(SystemParty1 obj) {
+			return obj.getOpeningDate();
+		}
+
+		@Override
+		public void setValue(SystemParty1 obj, ISODate value) {
+			obj.setOpeningDate(value);
 		}
 	};
 	@XmlElement(name = "ClsgDt")
@@ -256,7 +287,7 @@ public class SystemParty1 {
 	 * definition} = "Specifies the closing date of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemParty1, Optional<ISODate>> mmClosingDate = new MMMessageAttribute<SystemParty1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
@@ -267,6 +298,16 @@ public class SystemParty1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(SystemParty1 obj) {
+			return obj.getClosingDate();
+		}
+
+		@Override
+		public void setValue(SystemParty1 obj, Optional<ISODate> value) {
+			obj.setClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -298,7 +339,7 @@ public class SystemParty1 {
 	 * definition} = "Specifies the type classification of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemParty1, SystemPartyType1Code> mmType = new MMMessageAttribute<SystemParty1, SystemPartyType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
@@ -309,6 +350,16 @@ public class SystemParty1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemPartyType1Code.mmObject();
+		}
+
+		@Override
+		public SystemPartyType1Code getValue(SystemParty1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SystemParty1 obj, SystemPartyType1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "TechAdr", required = true)
@@ -342,7 +393,7 @@ public class SystemParty1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemParty1, List<TechnicalIdentification1Choice>> mmTechnicalAddress = new MMMessageAttribute<SystemParty1, List<TechnicalIdentification1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
@@ -353,9 +404,19 @@ public class SystemParty1 {
 			minOccurs = 1;
 			complexType_lazy = () -> TechnicalIdentification1Choice.mmObject();
 		}
+
+		@Override
+		public List<TechnicalIdentification1Choice> getValue(SystemParty1 obj) {
+			return obj.getTechnicalAddress();
+		}
+
+		@Override
+		public void setValue(SystemParty1 obj, List<TechnicalIdentification1Choice> value) {
+			obj.setTechnicalAddress(value);
+		}
 	};
 	@XmlElement(name = "MktSpcfcAttr")
-	protected List<com.tools20022.repository.msg.MarketSpecificAttribute1> marketSpecificAttribute;
+	protected List<MarketSpecificAttribute1> marketSpecificAttribute;
 	/**
 	 * 
 	 <p>
@@ -384,7 +445,7 @@ public class SystemParty1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketSpecificAttribute = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemParty1, List<MarketSpecificAttribute1>> mmMarketSpecificAttribute = new MMMessageAssociationEnd<SystemParty1, List<MarketSpecificAttribute1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
@@ -394,7 +455,17 @@ public class SystemParty1 {
 			definition = "Additional attributes defined by a central security depositary for a party.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MarketSpecificAttribute1.mmObject();
+			type_lazy = () -> MarketSpecificAttribute1.mmObject();
+		}
+
+		@Override
+		public List<MarketSpecificAttribute1> getValue(SystemParty1 obj) {
+			return obj.getMarketSpecificAttribute();
+		}
+
+		@Override
+		public void setValue(SystemParty1 obj, List<MarketSpecificAttribute1> value) {
+			obj.setMarketSpecificAttribute(value);
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -425,7 +496,7 @@ public class SystemParty1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemParty1, PartyName1> mmName = new MMMessageAssociationEnd<SystemParty1, PartyName1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
@@ -436,11 +507,21 @@ public class SystemParty1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyName1.mmObject();
+			type_lazy = () -> PartyName1.mmObject();
+		}
+
+		@Override
+		public PartyName1 getValue(SystemParty1 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(SystemParty1 obj, PartyName1 value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Rstrctn")
-	protected List<com.tools20022.repository.msg.SystemRestriction1> restriction;
+	protected List<SystemRestriction1> restriction;
 	/**
 	 * 
 	 <p>
@@ -468,7 +549,7 @@ public class SystemParty1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRestriction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SystemParty1, List<SystemRestriction1>> mmRestriction = new MMMessageAssociationEnd<SystemParty1, List<SystemRestriction1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
@@ -478,7 +559,17 @@ public class SystemParty1 {
 			definition = "Defines the specific processing characteristics for a party to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemRestriction1.mmObject();
+			type_lazy = () -> SystemRestriction1.mmObject();
+		}
+
+		@Override
+		public List<SystemRestriction1> getValue(SystemParty1 obj) {
+			return obj.getRestriction();
+		}
+
+		@Override
+		public void setValue(SystemParty1 obj, List<SystemRestriction1> value) {
+			obj.setRestriction(value);
 		}
 	};
 
@@ -502,7 +593,7 @@ public class SystemParty1 {
 		return identification;
 	}
 
-	public SystemParty1 setIdentification(com.tools20022.repository.msg.SystemPartyIdentification1 identification) {
+	public SystemParty1 setIdentification(SystemPartyIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -511,7 +602,7 @@ public class SystemParty1 {
 		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public SystemParty1 setAddress(com.tools20022.repository.msg.PostalAddress10 address) {
+	public SystemParty1 setAddress(PostalAddress10 address) {
 		this.address = address;
 		return this;
 	}
@@ -556,7 +647,7 @@ public class SystemParty1 {
 		return marketSpecificAttribute == null ? marketSpecificAttribute = new ArrayList<>() : marketSpecificAttribute;
 	}
 
-	public SystemParty1 setMarketSpecificAttribute(List<com.tools20022.repository.msg.MarketSpecificAttribute1> marketSpecificAttribute) {
+	public SystemParty1 setMarketSpecificAttribute(List<MarketSpecificAttribute1> marketSpecificAttribute) {
 		this.marketSpecificAttribute = Objects.requireNonNull(marketSpecificAttribute);
 		return this;
 	}
@@ -565,7 +656,7 @@ public class SystemParty1 {
 		return name;
 	}
 
-	public SystemParty1 setName(com.tools20022.repository.msg.PartyName1 name) {
+	public SystemParty1 setName(PartyName1 name) {
 		this.name = Objects.requireNonNull(name);
 		return this;
 	}
@@ -574,7 +665,7 @@ public class SystemParty1 {
 		return restriction == null ? restriction = new ArrayList<>() : restriction;
 	}
 
-	public SystemParty1 setRestriction(List<com.tools20022.repository.msg.SystemRestriction1> restriction) {
+	public SystemParty1 setRestriction(List<SystemRestriction1> restriction) {
 		this.restriction = Objects.requireNonNull(restriction);
 		return this;
 	}

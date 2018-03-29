@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.InvestmentFundOrderExecution;
 import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SidePocketQuantityAndAmount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +116,7 @@ public class LotDetails1 {
 	 * definition} = "Description of the lot."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LotDetails1, Optional<Max350Text>> mmLotDescription = new MMMessageAttribute<LotDetails1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LotDetails1.mmObject();
@@ -127,6 +128,16 @@ public class LotDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(LotDetails1 obj) {
+			return obj.getLotDescription();
+		}
+
+		@Override
+		public void setValue(LotDetails1 obj, Optional<Max350Text> value) {
+			obj.setLotDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDt", required = true)
@@ -162,7 +173,7 @@ public class LotDetails1 {
 	 * definition} = "Date the units were created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LotDetails1, ISODate> mmTradeDate = new MMMessageAttribute<LotDetails1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LotDetails1.mmObject();
@@ -174,6 +185,16 @@ public class LotDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(LotDetails1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(LotDetails1 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "OrdrRef", required = true)
@@ -211,7 +232,7 @@ public class LotDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LotDetails1, Max35Text> mmOrderReference = new MMMessageAttribute<LotDetails1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LotDetails1.mmObject();
@@ -223,6 +244,16 @@ public class LotDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(LotDetails1 obj) {
+			return obj.getOrderReference();
+		}
+
+		@Override
+		public void setValue(LotDetails1 obj, Max35Text value) {
+			obj.setOrderReference(value);
 		}
 	};
 	@XmlElement(name = "DealRef")
@@ -260,7 +291,7 @@ public class LotDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LotDetails1, Optional<Max35Text>> mmDealReference = new MMMessageAttribute<LotDetails1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LotDetails1.mmObject();
@@ -272,6 +303,16 @@ public class LotDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LotDetails1 obj) {
+			return obj.getDealReference();
+		}
+
+		@Override
+		public void setValue(LotDetails1 obj, Optional<Max35Text> value) {
+			obj.setDealReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotQtyAndAmt")
@@ -307,7 +348,7 @@ public class LotDetails1 {
 	 * definition} = "Quantity of the lot."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotQuantityAndAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LotDetails1, Optional<SidePocketQuantityAndAmount1>> mmLotQuantityAndAmount = new MMMessageAssociationEnd<LotDetails1, Optional<SidePocketQuantityAndAmount1>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LotDetails1.mmObject();
@@ -319,7 +360,17 @@ public class LotDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SidePocketQuantityAndAmount1.mmObject();
+			type_lazy = () -> SidePocketQuantityAndAmount1.mmObject();
+		}
+
+		@Override
+		public Optional<SidePocketQuantityAndAmount1> getValue(LotDetails1 obj) {
+			return obj.getLotQuantityAndAmount();
+		}
+
+		@Override
+		public void setValue(LotDetails1 obj, Optional<SidePocketQuantityAndAmount1> value) {
+			obj.setLotQuantityAndAmount(value.orElse(null));
 		}
 	};
 
@@ -378,7 +429,7 @@ public class LotDetails1 {
 		return lotQuantityAndAmount == null ? Optional.empty() : Optional.of(lotQuantityAndAmount);
 	}
 
-	public LotDetails1 setLotQuantityAndAmount(com.tools20022.repository.msg.SidePocketQuantityAndAmount1 lotQuantityAndAmount) {
+	public LotDetails1 setLotQuantityAndAmount(SidePocketQuantityAndAmount1 lotQuantityAndAmount) {
 		this.lotQuantityAndAmount = lotQuantityAndAmount;
 		return this;
 	}

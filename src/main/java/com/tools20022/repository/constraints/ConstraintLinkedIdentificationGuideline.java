@@ -56,11 +56,15 @@ public class ConstraintLinkedIdentificationGuideline {
 	 */
 	public static final MMConstraint<IdentificationReference8Choice> forIdentificationReference8Choice = new MMConstraint<IdentificationReference8Choice>() {
 		{
-			validator = ConstraintLinkedIdentificationGuideline::checkIdentificationReference8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedIdentificationGuideline";
 			definition = "InstructingPartyTransactionIdentification, ExecutingPartyTransactionIdentification, MarketInfrastructureTransactionIdentification, ClientOrderLinkIdentification, PoolIdentification, BlockIdentification, AllocationIdentification, IndexIdentification, CommonIdentification and ComplianceIdentification must not appear more than once in the message.";
 			owner_lazy = () -> IdentificationReference8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IdentificationReference8Choice obj) throws Exception {
+			checkIdentificationReference8Choice(obj);
 		}
 	};
 	/**
@@ -86,11 +90,15 @@ public class ConstraintLinkedIdentificationGuideline {
 	 */
 	public static final MMConstraint<IdentificationReference11Choice> forIdentificationReference11Choice = new MMConstraint<IdentificationReference11Choice>() {
 		{
-			validator = ConstraintLinkedIdentificationGuideline::checkIdentificationReference11Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedIdentificationGuideline";
 			definition = "InstructingPartyTransactionIdentification, ExecutingPartyTransactionIdentification, MarketInfrastructureTransactionIdentification, ClientOrderLinkIdentification, PoolIdentification, BlockIdentification, AllocationIdentification, IndexIdentification, CommonIdentification, ComplianceIdentification and CancellationRequestIdentification must not appear more than once in the message.";
 			owner_lazy = () -> IdentificationReference11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IdentificationReference11Choice obj) throws Exception {
+			checkIdentificationReference11Choice(obj);
 		}
 	};
 

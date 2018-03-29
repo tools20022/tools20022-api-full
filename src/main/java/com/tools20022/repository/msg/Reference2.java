@@ -100,7 +100,7 @@ public class Reference2 {
 	 * definition} = "Unique identifier for quote request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuoteRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference2, Max35Text> mmQuoteRequestIdentification = new MMMessageAttribute<Reference2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference2.mmObject();
 			isDerived = false;
@@ -112,6 +112,16 @@ public class Reference2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Reference2 obj) {
+			return obj.getQuoteRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Reference2 obj, Max35Text value) {
+			obj.setQuoteRequestIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqForQtReqId")
@@ -145,7 +155,7 @@ public class Reference2 {
 	 * definition} = "Identifier used to identify a request for quote request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestForQuoteRequestIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reference2, Optional<Max35Text>> mmRequestForQuoteRequestIdentification = new MMMessageAttribute<Reference2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reference2.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class Reference2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Reference2 obj) {
+			return obj.getRequestForQuoteRequestIdentification();
+		}
+
+		@Override
+		public void setValue(Reference2 obj, Optional<Max35Text> value) {
+			obj.setRequestForQuoteRequestIdentification(value.orElse(null));
 		}
 	};
 

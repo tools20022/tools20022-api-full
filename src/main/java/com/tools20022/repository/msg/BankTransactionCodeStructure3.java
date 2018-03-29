@@ -111,7 +111,7 @@ public class BankTransactionCodeStructure3 {
 	 * definition} = "Specifies the family within a domain."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BankTransactionCodeStructure3, ExternalBankTransactionFamilyCode> mmCode = new MMMessageAttribute<BankTransactionCodeStructure3, ExternalBankTransactionFamilyCode>() {
 		{
 			businessElementTrace_lazy = () -> BankTransaction.mmFamily;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure3.mmObject();
@@ -123,6 +123,16 @@ public class BankTransactionCodeStructure3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalBankTransactionFamilyCode.mmObject();
+		}
+
+		@Override
+		public ExternalBankTransactionFamilyCode getValue(BankTransactionCodeStructure3 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(BankTransactionCodeStructure3 obj, ExternalBankTransactionFamilyCode value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "SubFmlyCd", required = true)
@@ -161,7 +171,7 @@ public class BankTransactionCodeStructure3 {
 	 * "Specifies the sub-product family within a specific family."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubFamilyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BankTransactionCodeStructure3, ExternalBankTransactionSubFamilyCode> mmSubFamilyCode = new MMMessageAttribute<BankTransactionCodeStructure3, ExternalBankTransactionSubFamilyCode>() {
 		{
 			businessElementTrace_lazy = () -> BankTransaction.mmSubFamily;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure3.mmObject();
@@ -173,6 +183,16 @@ public class BankTransactionCodeStructure3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalBankTransactionSubFamilyCode.mmObject();
+		}
+
+		@Override
+		public ExternalBankTransactionSubFamilyCode getValue(BankTransactionCodeStructure3 obj) {
+			return obj.getSubFamilyCode();
+		}
+
+		@Override
+		public void setValue(BankTransactionCodeStructure3 obj, ExternalBankTransactionSubFamilyCode value) {
+			obj.setSubFamilyCode(value);
 		}
 	};
 

@@ -111,7 +111,7 @@ public class BondDerivative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BondDerivative2, LEIIdentifier> mmIssuer = new MMMessageAttribute<BondDerivative2, LEIIdentifier>() {
 		{
 			businessComponentTrace_lazy = () -> IssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BondDerivative2.mmObject();
@@ -123,6 +123,16 @@ public class BondDerivative2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(BondDerivative2 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(BondDerivative2 obj, LEIIdentifier value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -161,7 +171,7 @@ public class BondDerivative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BondDerivative2, Optional<ISODate>> mmMaturityDate = new MMMessageAttribute<BondDerivative2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BondDerivative2.mmObject();
@@ -173,6 +183,16 @@ public class BondDerivative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(BondDerivative2 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(BondDerivative2 obj, Optional<ISODate> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssncDt")
@@ -204,7 +224,7 @@ public class BondDerivative2 {
 	 * definition} = "Populated with the issuance date of the underlying bond."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuanceDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BondDerivative2, Optional<ISODate>> mmIssuanceDate = new MMMessageAttribute<BondDerivative2, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BondDerivative2.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class BondDerivative2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(BondDerivative2 obj) {
+			return obj.getIssuanceDate();
+		}
+
+		@Override
+		public void setValue(BondDerivative2 obj, Optional<ISODate> value) {
+			obj.setIssuanceDate(value.orElse(null));
 		}
 	};
 

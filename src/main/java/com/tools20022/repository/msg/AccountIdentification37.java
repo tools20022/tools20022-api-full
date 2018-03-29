@@ -131,7 +131,7 @@ public class AccountIdentification37 {
 	 * definition} = "Account where financial instruments are maintained."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification37, RestrictedFINXMax35Text> mmSafekeepingAccount = new MMMessageAttribute<AccountIdentification37, RestrictedFINXMax35Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification37.mmObject();
@@ -144,6 +144,16 @@ public class AccountIdentification37 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(AccountIdentification37 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(AccountIdentification37 obj, RestrictedFINXMax35Text value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -183,7 +193,7 @@ public class AccountIdentification37 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification37, Optional<PartyIdentification103Choice>> mmAccountOwner = new MMMessageAssociationEnd<AccountIdentification37, Optional<PartyIdentification103Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification37.mmObject();
@@ -197,6 +207,16 @@ public class AccountIdentification37 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification103Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification103Choice> getValue(AccountIdentification37 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(AccountIdentification37 obj, Optional<PartyIdentification103Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -237,7 +257,7 @@ public class AccountIdentification37 {
 	 * "Location where the financial instruments are/will be safekept."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification37, Optional<SafekeepingPlaceFormat11Choice>> mmSafekeepingPlace = new MMMessageAssociationEnd<AccountIdentification37, Optional<SafekeepingPlaceFormat11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSafekeepingPlace;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification37.mmObject();
@@ -251,6 +271,16 @@ public class AccountIdentification37 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SafekeepingPlaceFormat11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SafekeepingPlaceFormat11Choice> getValue(AccountIdentification37 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(AccountIdentification37 obj, Optional<SafekeepingPlaceFormat11Choice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ConfdBal", required = true)
@@ -292,7 +322,7 @@ public class AccountIdentification37 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConfirmedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification37, BalanceFormat7Choice> mmConfirmedBalance = new MMMessageAssociationEnd<AccountIdentification37, BalanceFormat7Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification37.mmObject();
@@ -306,6 +336,16 @@ public class AccountIdentification37 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BalanceFormat7Choice.mmObject();
+		}
+
+		@Override
+		public BalanceFormat7Choice getValue(AccountIdentification37 obj) {
+			return obj.getConfirmedBalance();
+		}
+
+		@Override
+		public void setValue(AccountIdentification37 obj, BalanceFormat7Choice value) {
+			obj.setConfirmedBalance(value);
 		}
 	};
 

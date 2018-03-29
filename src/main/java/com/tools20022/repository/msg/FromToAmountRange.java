@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountRangeBoundary1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class FromToAmountRange {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFromAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FromToAmountRange, AmountRangeBoundary1> mmFromAmount = new MMMessageAttribute<FromToAmountRange, AmountRangeBoundary1>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmFromAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FromToAmountRange.mmObject();
@@ -130,7 +131,17 @@ public class FromToAmountRange {
 			nextVersions_lazy = () -> Arrays.asList(FromToAmountRange1.mmFromAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountRangeBoundary1.mmObject();
+			complexType_lazy = () -> AmountRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public AmountRangeBoundary1 getValue(FromToAmountRange obj) {
+			return obj.getFromAmount();
+		}
+
+		@Override
+		public void setValue(FromToAmountRange obj, AmountRangeBoundary1 value) {
+			obj.setFromAmount(value);
 		}
 	};
 	@XmlElement(name = "ToAmt", required = true)
@@ -176,7 +187,7 @@ public class FromToAmountRange {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FromToAmountRange, AmountRangeBoundary1> mmToAmount = new MMMessageAttribute<FromToAmountRange, AmountRangeBoundary1>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmToAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FromToAmountRange.mmObject();
@@ -188,7 +199,17 @@ public class FromToAmountRange {
 			nextVersions_lazy = () -> Arrays.asList(FromToAmountRange1.mmToAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountRangeBoundary1.mmObject();
+			complexType_lazy = () -> AmountRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public AmountRangeBoundary1 getValue(FromToAmountRange obj) {
+			return obj.getToAmount();
+		}
+
+		@Override
+		public void setValue(FromToAmountRange obj, AmountRangeBoundary1 value) {
+			obj.setToAmount(value);
 		}
 	};
 
@@ -211,7 +232,7 @@ public class FromToAmountRange {
 		return fromAmount;
 	}
 
-	public FromToAmountRange setFromAmount(com.tools20022.repository.msg.AmountRangeBoundary1 fromAmount) {
+	public FromToAmountRange setFromAmount(AmountRangeBoundary1 fromAmount) {
 		this.fromAmount = Objects.requireNonNull(fromAmount);
 		return this;
 	}
@@ -220,7 +241,7 @@ public class FromToAmountRange {
 		return toAmount;
 	}
 
-	public FromToAmountRange setToAmount(com.tools20022.repository.msg.AmountRangeBoundary1 toAmount) {
+	public FromToAmountRange setToAmount(AmountRangeBoundary1 toAmount) {
 		this.toAmount = Objects.requireNonNull(toAmount);
 		return this;
 	}

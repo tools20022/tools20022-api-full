@@ -25,7 +25,6 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.Case;
 import com.tools20022.repository.msg.CaseAssignment;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +114,7 @@ public class RequestForDuplicateInstruction {
 	 * name} = "Assignment"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForDuplicateInstruction, CaseAssignment> mmAssignment = new MMMessageBuildingBlock<RequestForDuplicateInstruction, CaseAssignment>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +124,14 @@ public class RequestForDuplicateInstruction {
 			complexType_lazy = () -> CaseAssignment.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForDuplicateInstruction.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment getValue(RequestForDuplicateInstruction obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(RequestForDuplicateInstruction obj, CaseAssignment value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -153,7 +154,7 @@ public class RequestForDuplicateInstruction {
 	 * name} = "Case"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForDuplicateInstruction, Case> mmCase = new MMMessageBuildingBlock<RequestForDuplicateInstruction, Case>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,12 +164,14 @@ public class RequestForDuplicateInstruction {
 			complexType_lazy = () -> Case.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForDuplicateInstruction.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case getValue(RequestForDuplicateInstruction obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(RequestForDuplicateInstruction obj, Case value) {
+			obj.setCase(value);
 		}
 	};
 

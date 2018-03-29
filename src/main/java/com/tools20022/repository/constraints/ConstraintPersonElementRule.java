@@ -52,11 +52,15 @@ public class ConstraintPersonElementRule {
 	 */
 	public static final MMConstraint<IndividualPerson32> forIndividualPerson32 = new MMConstraint<IndividualPerson32>() {
 		{
-			validator = ConstraintPersonElementRule::checkIndividualPerson32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonElementRule";
 			definition = "One of the elements (Name, BirthDate, CountryAndResidentialStatus, OtherIdentification) must be present.";
 			owner_lazy = () -> IndividualPerson32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IndividualPerson32 obj) throws Exception {
+			checkIndividualPerson32(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintPersonElementRule {
 	 */
 	public static final MMConstraint<IndividualPerson31> forIndividualPerson31 = new MMConstraint<IndividualPerson31>() {
 		{
-			validator = ConstraintPersonElementRule::checkIndividualPerson31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonElementRule";
 			definition = "One of the elements (Name, BirthDate, CountryAndResidentialStatus, BeneficiaryCertificationCompletion, OtherIdentification) must be present.";
 			owner_lazy = () -> IndividualPerson31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IndividualPerson31 obj) throws Exception {
+			checkIndividualPerson31(obj);
 		}
 	};
 

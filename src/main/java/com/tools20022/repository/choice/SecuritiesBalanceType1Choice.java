@@ -110,7 +110,7 @@ public class SecuritiesBalanceType1Choice {
 	 * definition} = "Balance reason in structured format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType1Choice, SecuritiesBalanceType1Code> mmStructured = new MMMessageAttribute<SecuritiesBalanceType1Choice, SecuritiesBalanceType1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType1Choice.mmObject();
@@ -122,6 +122,16 @@ public class SecuritiesBalanceType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesBalanceType1Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesBalanceType1Code getValue(SecuritiesBalanceType1Choice obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType1Choice obj, SecuritiesBalanceType1Code value) {
+			obj.setStructured(value);
 		}
 	};
 	@XmlElement(name = "Ustrd", required = true)
@@ -158,7 +168,7 @@ public class SecuritiesBalanceType1Choice {
 	 * definition} = "Balance reason in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesBalanceType1Choice, Max35Text> mmUnstructured = new MMMessageAttribute<SecuritiesBalanceType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesBalanceType1Choice.mmObject();
@@ -170,6 +180,16 @@ public class SecuritiesBalanceType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SecuritiesBalanceType1Choice obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(SecuritiesBalanceType1Choice obj, Max35Text value) {
+			obj.setUnstructured(value);
 		}
 	};
 

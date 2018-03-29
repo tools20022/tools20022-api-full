@@ -110,7 +110,7 @@ public class QueueTransactionIdentification1 {
 	 * QueueTransactionIdentificationDetails.mmQueueIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueueIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QueueTransactionIdentification1, Max16Text> mmQueueIdentification = new MMMessageAttribute<QueueTransactionIdentification1, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransactionIdentification1.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class QueueTransactionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(QueueTransactionIdentification1 obj) {
+			return obj.getQueueIdentification();
+		}
+
+		@Override
+		public void setValue(QueueTransactionIdentification1 obj, Max16Text value) {
+			obj.setQueueIdentification(value);
 		}
 	};
 	@XmlElement(name = "PosInQ", required = true)
@@ -159,7 +169,7 @@ public class QueueTransactionIdentification1 {
 	 * QueueTransactionIdentificationDetails.mmPositionInQueue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPositionInQueue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QueueTransactionIdentification1, Max16Text> mmPositionInQueue = new MMMessageAttribute<QueueTransactionIdentification1, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransactionIdentification1.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class QueueTransactionIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(QueueTransactionIdentification1 obj) {
+			return obj.getPositionInQueue();
+		}
+
+		@Override
+		public void setValue(QueueTransactionIdentification1 obj, Max16Text value) {
+			obj.setPositionInQueue(value);
 		}
 	};
 

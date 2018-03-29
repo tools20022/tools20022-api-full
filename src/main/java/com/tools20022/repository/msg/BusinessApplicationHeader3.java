@@ -116,7 +116,7 @@ public class BusinessApplicationHeader3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessApplicationHeader3, Party29Choice> mmFrom = new MMMessageAssociationEnd<BusinessApplicationHeader3, Party29Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
@@ -128,6 +128,16 @@ public class BusinessApplicationHeader3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party29Choice.mmObject();
+		}
+
+		@Override
+		public Party29Choice getValue(BusinessApplicationHeader3 obj) {
+			return obj.getFrom();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeader3 obj, Party29Choice value) {
+			obj.setFrom(value);
 		}
 	};
 	@XmlElement(name = "To", required = true)
@@ -160,7 +170,7 @@ public class BusinessApplicationHeader3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BusinessApplicationHeader3, Party29Choice> mmTo = new MMMessageAssociationEnd<BusinessApplicationHeader3, Party29Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class BusinessApplicationHeader3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Party29Choice.mmObject();
+		}
+
+		@Override
+		public Party29Choice getValue(BusinessApplicationHeader3 obj) {
+			return obj.getTo();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeader3 obj, Party29Choice value) {
+			obj.setTo(value);
 		}
 	};
 	@XmlElement(name = "BizMsgIdr", required = true)
@@ -205,7 +225,7 @@ public class BusinessApplicationHeader3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessMessageIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessApplicationHeader3, Max35Text> mmBusinessMessageIdentifier = new MMMessageAttribute<BusinessApplicationHeader3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
@@ -216,6 +236,16 @@ public class BusinessApplicationHeader3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BusinessApplicationHeader3 obj) {
+			return obj.getBusinessMessageIdentifier();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeader3 obj, Max35Text value) {
+			obj.setBusinessMessageIdentifier(value);
 		}
 	};
 	@XmlElement(name = "MsgDefIdr", required = true)
@@ -249,7 +279,7 @@ public class BusinessApplicationHeader3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageDefinitionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessApplicationHeader3, Max35Text> mmMessageDefinitionIdentifier = new MMMessageAttribute<BusinessApplicationHeader3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
@@ -260,6 +290,16 @@ public class BusinessApplicationHeader3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(BusinessApplicationHeader3 obj) {
+			return obj.getMessageDefinitionIdentifier();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeader3 obj, Max35Text value) {
+			obj.setMessageDefinitionIdentifier(value);
 		}
 	};
 	@XmlElement(name = "BizSvc")
@@ -293,7 +333,7 @@ public class BusinessApplicationHeader3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessService = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessApplicationHeader3, Optional<Max35Text>> mmBusinessService = new MMMessageAttribute<BusinessApplicationHeader3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
@@ -304,6 +344,16 @@ public class BusinessApplicationHeader3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(BusinessApplicationHeader3 obj) {
+			return obj.getBusinessService();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeader3 obj, Optional<Max35Text> value) {
+			obj.setBusinessService(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDt", required = true)
@@ -338,7 +388,7 @@ public class BusinessApplicationHeader3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BusinessApplicationHeader3, ISONormalisedDateTime> mmCreationDate = new MMMessageAttribute<BusinessApplicationHeader3, ISONormalisedDateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessApplicationHeader3.mmObject();
 			isDerived = false;
@@ -349,6 +399,16 @@ public class BusinessApplicationHeader3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISONormalisedDateTime.mmObject();
+		}
+
+		@Override
+		public ISONormalisedDateTime getValue(BusinessApplicationHeader3 obj) {
+			return obj.getCreationDate();
+		}
+
+		@Override
+		public void setValue(BusinessApplicationHeader3 obj, ISONormalisedDateTime value) {
+			obj.setCreationDate(value);
 		}
 	};
 

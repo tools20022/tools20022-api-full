@@ -51,11 +51,15 @@ public class ConstraintInstructedReimbursementAgentAccountRule {
 	 */
 	public static final MMConstraint<SettlementInformation1> forSettlementInformation1 = new MMConstraint<SettlementInformation1>() {
 		{
-			validator = ConstraintInstructedReimbursementAgentAccountRule::checkSettlementInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentAccountRule";
 			definition = "If InstructedReimbursementAgent is not present, then InstructedReimbursementAgentAccount is not allowed.";
 			owner_lazy = () -> SettlementInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation1 obj) throws Exception {
+			checkSettlementInformation1(obj);
 		}
 	};
 	/**
@@ -85,12 +89,16 @@ public class ConstraintInstructedReimbursementAgentAccountRule {
 	 */
 	public static final MMConstraint<SettlementInformation13> forSettlementInformation13 = new MMConstraint<SettlementInformation13>() {
 		{
-			validator = ConstraintInstructedReimbursementAgentAccountRule::checkSettlementInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentAccountRule";
 			definition = "If InstructedReimbursementAgentAccount is present, then InstructedReimbursementAgent must be present.";
 			owner_lazy = () -> SettlementInformation13.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation13 obj) throws Exception {
+			checkSettlementInformation13(obj);
 		}
 	};
 	/**
@@ -120,12 +128,16 @@ public class ConstraintInstructedReimbursementAgentAccountRule {
 	 */
 	public static final MMConstraint<SettlementInstruction4> forSettlementInstruction4 = new MMConstraint<SettlementInstruction4>() {
 		{
-			validator = ConstraintInstructedReimbursementAgentAccountRule::checkSettlementInstruction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentAccountRule";
 			definition = "If InstructedReimbursementAgentAccount is present, then InstructedReimbursementAgent must be present.";
 			owner_lazy = () -> SettlementInstruction4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInstruction4 obj) throws Exception {
+			checkSettlementInstruction4(obj);
 		}
 	};
 	/**
@@ -155,12 +167,16 @@ public class ConstraintInstructedReimbursementAgentAccountRule {
 	 */
 	public static final MMConstraint<SettlementInstruction1> forSettlementInstruction1 = new MMConstraint<SettlementInstruction1>() {
 		{
-			validator = ConstraintInstructedReimbursementAgentAccountRule::checkSettlementInstruction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentAccountRule";
 			definition = "If InstructedReimbursementAgentAccount is present, then InstructedReimbursementAgent must be present.";
 			owner_lazy = () -> SettlementInstruction1.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInstruction1 obj) throws Exception {
+			checkSettlementInstruction1(obj);
 		}
 	};
 	/**
@@ -190,12 +206,16 @@ public class ConstraintInstructedReimbursementAgentAccountRule {
 	 */
 	public static final MMConstraint<SettlementInformation16> forSettlementInformation16 = new MMConstraint<SettlementInformation16>() {
 		{
-			validator = ConstraintInstructedReimbursementAgentAccountRule::checkSettlementInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentAccountRule";
 			definition = "If InstructedReimbursementAgentAccount is present, then InstructedReimbursementAgent must be present.";
 			owner_lazy = () -> SettlementInformation16.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation16 obj) throws Exception {
+			checkSettlementInformation16(obj);
 		}
 	};
 	/**
@@ -225,12 +245,16 @@ public class ConstraintInstructedReimbursementAgentAccountRule {
 	 */
 	public static final MMConstraint<SettlementInformation15> forSettlementInformation15 = new MMConstraint<SettlementInformation15>() {
 		{
-			validator = ConstraintInstructedReimbursementAgentAccountRule::checkSettlementInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentAccountRule";
 			definition = "If InstructedReimbursementAgentAccount is present, then InstructedReimbursementAgent must be present.";
 			owner_lazy = () -> SettlementInformation15.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation15 obj) throws Exception {
+			checkSettlementInformation15(obj);
 		}
 	};
 	/**
@@ -260,12 +284,16 @@ public class ConstraintInstructedReimbursementAgentAccountRule {
 	 */
 	public static final MMConstraint<SettlementInstruction3> forSettlementInstruction3 = new MMConstraint<SettlementInstruction3>() {
 		{
-			validator = ConstraintInstructedReimbursementAgentAccountRule::checkSettlementInstruction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentAccountRule";
 			definition = "If InstructedReimbursementAgentAccount is present, then InstructedReimbursementAgent must be present.";
 			owner_lazy = () -> SettlementInstruction3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInstruction3 obj) throws Exception {
+			checkSettlementInstruction3(obj);
 		}
 	};
 	/**
@@ -295,12 +323,16 @@ public class ConstraintInstructedReimbursementAgentAccountRule {
 	 */
 	public static final MMConstraint<SettlementInformation6> forSettlementInformation6 = new MMConstraint<SettlementInformation6>() {
 		{
-			validator = ConstraintInstructedReimbursementAgentAccountRule::checkSettlementInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentAccountRule";
 			definition = "If InstructedReimbursementAgent is not present, then InstructedReimbursementAgentAccount is not allowed.";
 			owner_lazy = () -> SettlementInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation6 obj) throws Exception {
+			checkSettlementInformation6(obj);
 		}
 	};
 	/**
@@ -330,12 +362,16 @@ public class ConstraintInstructedReimbursementAgentAccountRule {
 	 */
 	public static final MMConstraint<SettlementInformation8> forSettlementInformation8 = new MMConstraint<SettlementInformation8>() {
 		{
-			validator = ConstraintInstructedReimbursementAgentAccountRule::checkSettlementInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentAccountRule";
 			definition = "If InstructedReimbursementAgent is not present, then InstructedReimbursementAgentAccount is not allowed.";
 			owner_lazy = () -> SettlementInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SettlementInformation8 obj) throws Exception {
+			checkSettlementInformation8(obj);
 		}
 	};
 

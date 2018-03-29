@@ -19,9 +19,9 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ClearingBrokerIdentification1;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -91,7 +91,7 @@ import java.util.Objects;
 public class ClearingBrokerIdentification {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
-	protected List<com.tools20022.repository.entity.TradeIdentification> relatedTradeIdentification;
+	protected List<TradeIdentification> relatedTradeIdentification;
 	/**
 	 * 
 	 <p>
@@ -127,7 +127,7 @@ public class ClearingBrokerIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedTradeIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ClearingBrokerIdentification, List<TradeIdentification>> mmRelatedTradeIdentification = new MMBusinessAssociationEnd<ClearingBrokerIdentification, List<TradeIdentification>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingBrokerIdentification.mmObject();
@@ -135,9 +135,19 @@ public class ClearingBrokerIdentification {
 			name = "RelatedTradeIdentification";
 			definition = "Other identifications of a trade for which clearing broker identifications are provided.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmClearingBrokerIdentification;
+			opposite_lazy = () -> TradeIdentification.mmClearingBrokerIdentification;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
+			type_lazy = () -> TradeIdentification.mmObject();
+		}
+
+		@Override
+		public List<TradeIdentification> getValue(ClearingBrokerIdentification obj) {
+			return obj.getRelatedTradeIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingBrokerIdentification obj, List<TradeIdentification> value) {
+			obj.setRelatedTradeIdentification(value);
 		}
 	};
 	protected Max35Text sideIndicator;
@@ -176,7 +186,7 @@ public class ClearingBrokerIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSideIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ClearingBrokerIdentification, Max35Text> mmSideIndicator = new MMBusinessAttribute<ClearingBrokerIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingBrokerIdentification1.mmSideIndicator);
 			isDerived = false;
@@ -189,12 +199,14 @@ public class ClearingBrokerIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ClearingBrokerIdentification.class.getMethod("getSideIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ClearingBrokerIdentification obj) {
+			return obj.getSideIndicator();
+		}
+
+		@Override
+		public void setValue(ClearingBrokerIdentification obj, Max35Text value) {
+			obj.setSideIndicator(value);
 		}
 	};
 	protected Max35Text identification;
@@ -231,7 +243,7 @@ public class ClearingBrokerIdentification {
 	 * definition} = "Identification assigned by the clearing broker."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<ClearingBrokerIdentification, Max35Text> mmIdentification = new MMBusinessAttribute<ClearingBrokerIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingBrokerIdentification1.mmClearingBrokerIdentification);
 			isDerived = false;
@@ -244,12 +256,14 @@ public class ClearingBrokerIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ClearingBrokerIdentification.class.getMethod("getIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(ClearingBrokerIdentification obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(ClearingBrokerIdentification obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 
@@ -260,7 +274,7 @@ public class ClearingBrokerIdentification {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingBrokerIdentification";
 				definition = "Reference number assigned by the clearing broker. A distinction can be made between the reference for the Central Counterparty (CCP) leg and the reference for the client leg of the transaction.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeIdentification.mmClearingBrokerIdentification);
+				associationDomain_lazy = () -> Arrays.asList(TradeIdentification.mmClearingBrokerIdentification);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingBrokerIdentification.mmRelatedTradeIdentification, com.tools20022.repository.entity.ClearingBrokerIdentification.mmSideIndicator,
 						com.tools20022.repository.entity.ClearingBrokerIdentification.mmIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(ClearingBrokerIdentification1.mmObject());
@@ -278,7 +292,7 @@ public class ClearingBrokerIdentification {
 		return relatedTradeIdentification == null ? relatedTradeIdentification = new ArrayList<>() : relatedTradeIdentification;
 	}
 
-	public ClearingBrokerIdentification setRelatedTradeIdentification(List<com.tools20022.repository.entity.TradeIdentification> relatedTradeIdentification) {
+	public ClearingBrokerIdentification setRelatedTradeIdentification(List<TradeIdentification> relatedTradeIdentification) {
 		this.relatedTradeIdentification = Objects.requireNonNull(relatedTradeIdentification);
 		return this;
 	}

@@ -55,12 +55,16 @@ public class ConstraintAdditionalIncorrectInformationRule {
 	 */
 	public static final MMConstraint<UnableToApplyIncorrect1> forUnableToApplyIncorrect1 = new MMConstraint<UnableToApplyIncorrect1>() {
 		{
-			validator = ConstraintAdditionalIncorrectInformationRule::checkUnableToApplyIncorrect1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIncorrectInformationRule";
 			definition = "If Code is equal to NARR (Narrative), then AdditionalIncorrectInformation must be present.";
 			owner_lazy = () -> UnableToApplyIncorrect1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalIncorrectInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Code</leftOperand><rightOperand>Narrative</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(UnableToApplyIncorrect1 obj) throws Exception {
+			checkUnableToApplyIncorrect1(obj);
 		}
 	};
 

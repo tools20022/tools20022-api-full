@@ -103,7 +103,7 @@ public class CashEntitlement1 {
 	 * definition} = "Entitled cash amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashEntitlement1, ActiveCurrencyAndAmount> mmCashAmount = new MMMessageAttribute<CashEntitlement1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmEntitledCashAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashEntitlement1.mmObject();
@@ -115,6 +115,16 @@ public class CashEntitlement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CashEntitlement1 obj) {
+			return obj.getCashAmount();
+		}
+
+		@Override
+		public void setValue(CashEntitlement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCashAmount(value);
 		}
 	};
 

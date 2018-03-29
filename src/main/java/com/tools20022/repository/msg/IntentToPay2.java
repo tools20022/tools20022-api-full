@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.ObligationFulfilment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SettlementTerms3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class IntentToPay2 {
 	 * "Specifies if breakdown is by purchase order or commercial invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBreakdown = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntentToPay2, BreakDown1Choice> mmBreakdown = new MMMessageAssociationEnd<IntentToPay2, BreakDown1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay2.mmObject();
 			isDerived = false;
@@ -136,6 +137,16 @@ public class IntentToPay2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BreakDown1Choice.mmObject();
+		}
+
+		@Override
+		public BreakDown1Choice getValue(IntentToPay2 obj) {
+			return obj.getBreakdown();
+		}
+
+		@Override
+		public void setValue(IntentToPay2 obj, BreakDown1Choice value) {
+			obj.setBreakdown(value);
 		}
 	};
 	@XmlElement(name = "XpctdPmtDt", required = true)
@@ -176,7 +187,7 @@ public class IntentToPay2 {
 	 * IntentToPay1.mmExpectedPaymentDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpectedPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntentToPay2, ISODate> mmExpectedPaymentDate = new MMMessageAttribute<IntentToPay2, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> ObligationFulfilment.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay2.mmObject();
@@ -189,6 +200,16 @@ public class IntentToPay2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(IntentToPay2 obj) {
+			return obj.getExpectedPaymentDate();
+		}
+
+		@Override
+		public void setValue(IntentToPay2 obj, ISODate value) {
+			obj.setExpectedPaymentDate(value);
 		}
 	};
 	@XmlElement(name = "SttlmTerms")
@@ -228,7 +249,7 @@ public class IntentToPay2 {
 	 * IntentToPay1.mmSettlementTerms}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntentToPay2, Optional<SettlementTerms3>> mmSettlementTerms = new MMMessageAssociationEnd<IntentToPay2, Optional<SettlementTerms3>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntentToPay2.mmObject();
@@ -241,7 +262,17 @@ public class IntentToPay2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementTerms3.mmObject();
+			type_lazy = () -> SettlementTerms3.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementTerms3> getValue(IntentToPay2 obj) {
+			return obj.getSettlementTerms();
+		}
+
+		@Override
+		public void setValue(IntentToPay2 obj, Optional<SettlementTerms3> value) {
+			obj.setSettlementTerms(value.orElse(null));
 		}
 	};
 
@@ -284,7 +315,7 @@ public class IntentToPay2 {
 		return settlementTerms == null ? Optional.empty() : Optional.of(settlementTerms);
 	}
 
-	public IntentToPay2 setSettlementTerms(com.tools20022.repository.msg.SettlementTerms3 settlementTerms) {
+	public IntentToPay2 setSettlementTerms(SettlementTerms3 settlementTerms) {
 		this.settlementTerms = settlementTerms;
 		return this;
 	}

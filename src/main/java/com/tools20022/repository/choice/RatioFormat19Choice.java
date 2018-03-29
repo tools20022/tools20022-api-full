@@ -125,7 +125,7 @@ public class RatioFormat19Choice {
 	 * RatioFormat15Choice.mmQuantityToQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat19Choice, QuantityToQuantityRatio1> mmQuantityToQuantity = new MMMessageAssociationEnd<RatioFormat19Choice, QuantityToQuantityRatio1>() {
 		{
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat19Choice.mmObject();
@@ -140,6 +140,16 @@ public class RatioFormat19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuantityToQuantityRatio1.mmObject();
+		}
+
+		@Override
+		public QuantityToQuantityRatio1 getValue(RatioFormat19Choice obj) {
+			return obj.getQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat19Choice obj, QuantityToQuantityRatio1 value) {
+			obj.setQuantityToQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtToAmt", required = true)
@@ -182,7 +192,7 @@ public class RatioFormat19Choice {
 	 * RatioFormat15Choice.mmAmountToAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat19Choice, AmountToAmountRatio2> mmAmountToAmount = new MMMessageAssociationEnd<RatioFormat19Choice, AmountToAmountRatio2>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat19Choice.mmObject();
@@ -197,6 +207,16 @@ public class RatioFormat19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountToAmountRatio2.mmObject();
+		}
+
+		@Override
+		public AmountToAmountRatio2 getValue(RatioFormat19Choice obj) {
+			return obj.getAmountToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat19Choice obj, AmountToAmountRatio2 value) {
+			obj.setAmountToAmount(value);
 		}
 	};
 	@XmlElement(name = "AmtToQty", required = true)
@@ -236,7 +256,7 @@ public class RatioFormat19Choice {
 	 * definition} = "Ratio expressed as an amount to quantity ratio."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat19Choice, AmountAndQuantityRatio4> mmAmountToQuantity = new MMMessageAssociationEnd<RatioFormat19Choice, AmountAndQuantityRatio4>() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat19Choice.mmObject();
@@ -250,6 +270,16 @@ public class RatioFormat19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndQuantityRatio4.mmObject();
+		}
+
+		@Override
+		public AmountAndQuantityRatio4 getValue(RatioFormat19Choice obj) {
+			return obj.getAmountToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat19Choice obj, AmountAndQuantityRatio4 value) {
+			obj.setAmountToQuantity(value);
 		}
 	};
 	@XmlElement(name = "QtyToAmt", required = true)
@@ -294,7 +324,7 @@ public class RatioFormat19Choice {
 	 * RatioFormat15Choice.mmQuantityToAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat19Choice, AmountAndQuantityRatio4> mmQuantityToAmount = new MMMessageAssociationEnd<RatioFormat19Choice, AmountAndQuantityRatio4>() {
 		{
 			businessComponentTrace_lazy = () -> AmountAndQuantity.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat19Choice.mmObject();
@@ -309,6 +339,16 @@ public class RatioFormat19Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndQuantityRatio4.mmObject();
+		}
+
+		@Override
+		public AmountAndQuantityRatio4 getValue(RatioFormat19Choice obj) {
+			return obj.getQuantityToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat19Choice obj, AmountAndQuantityRatio4 value) {
+			obj.setQuantityToAmount(value);
 		}
 	};
 

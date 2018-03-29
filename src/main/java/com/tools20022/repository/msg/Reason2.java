@@ -131,7 +131,7 @@ public class Reason2 {
 	 * definition} = "Detailed description of the rejection."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reason2, Max140Text> mmDescription = new MMMessageAttribute<Reason2, Max140Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reason2.mmObject();
@@ -143,6 +143,16 @@ public class Reason2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(Reason2 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(Reason2 obj, Max140Text value) {
+			obj.setDescription(value);
 		}
 	};
 

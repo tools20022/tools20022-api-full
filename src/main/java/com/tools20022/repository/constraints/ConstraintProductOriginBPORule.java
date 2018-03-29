@@ -52,11 +52,15 @@ public class ConstraintProductOriginBPORule {
 	 */
 	public static final MMConstraint<LineItemDetails13> forLineItemDetails13 = new MMConstraint<LineItemDetails13>() {
 		{
-			validator = ConstraintProductOriginBPORule::checkLineItemDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductOriginBPORule";
 			definition = "ProductOrigin is mandatory if PaymentObligation (BPO) is used in this transaction.";
 			owner_lazy = () -> LineItemDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItemDetails13 obj) throws Exception {
+			checkLineItemDetails13(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintProductOriginBPORule {
 	 */
 	public static final MMConstraint<LineItemDetails14> forLineItemDetails14 = new MMConstraint<LineItemDetails14>() {
 		{
-			validator = ConstraintProductOriginBPORule::checkLineItemDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductOriginBPORule";
 			definition = "ProductOrigin is mandatory if PaymentObligation (BPO) is used in this transaction.";
 			owner_lazy = () -> LineItemDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItemDetails14 obj) throws Exception {
+			checkLineItemDetails14(obj);
 		}
 	};
 

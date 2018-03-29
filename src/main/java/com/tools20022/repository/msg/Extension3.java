@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExtensionEnvelope2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -100,7 +101,7 @@ public class Extension3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Extension3, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<Extension3, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Extension3.mmObject();
 			isDerived = false;
@@ -111,6 +112,16 @@ public class Extension3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(Extension3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(Extension3 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtnsnEnvlp", required = true)
@@ -140,7 +151,7 @@ public class Extension3 {
 	 * definition} = "Technical element wrapping the extension."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtensionEnvelope = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Extension3, ExtensionEnvelope2> mmExtensionEnvelope = new MMMessageAssociationEnd<Extension3, ExtensionEnvelope2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Extension3.mmObject();
 			isDerived = false;
@@ -151,7 +162,17 @@ public class Extension3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ExtensionEnvelope2.mmObject();
+			type_lazy = () -> ExtensionEnvelope2.mmObject();
+		}
+
+		@Override
+		public ExtensionEnvelope2 getValue(Extension3 obj) {
+			return obj.getExtensionEnvelope();
+		}
+
+		@Override
+		public void setValue(Extension3 obj, ExtensionEnvelope2 value) {
+			obj.setExtensionEnvelope(value);
 		}
 	};
 
@@ -181,7 +202,7 @@ public class Extension3 {
 		return extensionEnvelope;
 	}
 
-	public Extension3 setExtensionEnvelope(com.tools20022.repository.msg.ExtensionEnvelope2 extensionEnvelope) {
+	public Extension3 setExtensionEnvelope(ExtensionEnvelope2 extensionEnvelope) {
 		this.extensionEnvelope = Objects.requireNonNull(extensionEnvelope);
 		return this;
 	}

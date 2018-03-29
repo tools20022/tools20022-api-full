@@ -131,7 +131,7 @@ public class PriceFormatSD1Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormatSD1Choice, AmountPrice5> mmAmountPrice = new MMMessageAssociationEnd<PriceFormatSD1Choice, AmountPrice5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormatSD1Choice.mmObject();
 			isDerived = false;
@@ -144,6 +144,16 @@ public class PriceFormatSD1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPrice5.mmObject();
+		}
+
+		@Override
+		public AmountPrice5 getValue(PriceFormatSD1Choice obj) {
+			return obj.getAmountPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormatSD1Choice obj, AmountPrice5 value) {
+			obj.setAmountPrice(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdPric", required = true)
@@ -187,7 +197,7 @@ public class PriceFormatSD1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormatSD1Choice, PriceValueType10Code> mmNotSpecifiedPrice = new MMMessageAttribute<PriceFormatSD1Choice, PriceValueType10Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormatSD1Choice.mmObject();
 			isDerived = false;
@@ -200,6 +210,16 @@ public class PriceFormatSD1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType10Code.mmObject();
+		}
+
+		@Override
+		public PriceValueType10Code getValue(PriceFormatSD1Choice obj) {
+			return obj.getNotSpecifiedPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormatSD1Choice obj, PriceValueType10Code value) {
+			obj.setNotSpecifiedPrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPricPerFinInstrmQty", required = true)
@@ -244,7 +264,7 @@ public class PriceFormatSD1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormatSD1Choice, AmountPricePerFinancialInstrumentQuantity4> mmAmountPricePerFinancialInstrumentQuantity = new MMMessageAssociationEnd<PriceFormatSD1Choice, AmountPricePerFinancialInstrumentQuantity4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormatSD1Choice.mmObject();
 			isDerived = false;
@@ -258,6 +278,16 @@ public class PriceFormatSD1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPricePerFinancialInstrumentQuantity4.mmObject();
+		}
+
+		@Override
+		public AmountPricePerFinancialInstrumentQuantity4 getValue(PriceFormatSD1Choice obj) {
+			return obj.getAmountPricePerFinancialInstrumentQuantity();
+		}
+
+		@Override
+		public void setValue(PriceFormatSD1Choice obj, AmountPricePerFinancialInstrumentQuantity4 value) {
+			obj.setAmountPricePerFinancialInstrumentQuantity(value);
 		}
 	};
 

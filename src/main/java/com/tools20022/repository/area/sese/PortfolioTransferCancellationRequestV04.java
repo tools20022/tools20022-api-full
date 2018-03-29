@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.Cancellation3Choice;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -155,7 +154,7 @@ public class PortfolioTransferCancellationRequestV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, MessageIdentification1> mmMessageReference = new MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, MessageIdentification1>() {
 		{
 			xmlTag = "MsgRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,12 +166,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferCancellationRequestV04.class.getMethod("getMessageReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(PortfolioTransferCancellationRequestV04 obj) {
+			return obj.getMessageReference();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferCancellationRequestV04 obj, MessageIdentification1 value) {
+			obj.setMessageReference(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -208,7 +209,7 @@ public class PortfolioTransferCancellationRequestV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,12 +221,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferCancellationRequestV04.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PortfolioTransferCancellationRequestV04 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferCancellationRequestV04 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -261,7 +264,7 @@ public class PortfolioTransferCancellationRequestV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, Optional<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,12 +276,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferCancellationRequestV04.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PortfolioTransferCancellationRequestV04 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferCancellationRequestV04 obj, Optional<AdditionalReference3> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -315,7 +320,7 @@ public class PortfolioTransferCancellationRequestV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, Optional<AdditionalReference3>> mmRelatedReference = new MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,12 +332,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferCancellationRequestV04.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PortfolioTransferCancellationRequestV04 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferCancellationRequestV04 obj, Optional<AdditionalReference3> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cxl", required = true)
@@ -369,7 +376,7 @@ public class PortfolioTransferCancellationRequestV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, Cancellation3Choice> mmCancellation = new MMMessageBuildingBlock<PortfolioTransferCancellationRequestV04, Cancellation3Choice>() {
 		{
 			xmlTag = "Cxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,12 +388,14 @@ public class PortfolioTransferCancellationRequestV04 {
 			complexType_lazy = () -> Cancellation3Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferCancellationRequestV04.class.getMethod("getCancellation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Cancellation3Choice getValue(PortfolioTransferCancellationRequestV04 obj) {
+			return obj.getCancellation();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferCancellationRequestV04 obj, Cancellation3Choice value) {
+			obj.setCancellation(value);
 		}
 	};
 

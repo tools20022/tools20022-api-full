@@ -105,7 +105,7 @@ public class AmountOrPercentage1Choice {
 	 * definition} = "Details related to a defined monetary amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefinedAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountOrPercentage1Choice, UndertakingAmount4> mmDefinedAmount = new MMMessageAssociationEnd<AmountOrPercentage1Choice, UndertakingAmount4>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrPercentage1Choice.mmObject();
@@ -118,6 +118,16 @@ public class AmountOrPercentage1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> UndertakingAmount4.mmObject();
+		}
+
+		@Override
+		public UndertakingAmount4 getValue(AmountOrPercentage1Choice obj) {
+			return obj.getDefinedAmount();
+		}
+
+		@Override
+		public void setValue(AmountOrPercentage1Choice obj, UndertakingAmount4 value) {
+			obj.setDefinedAmount(value);
 		}
 	};
 	@XmlElement(name = "PctgAmt", required = true)
@@ -153,7 +163,7 @@ public class AmountOrPercentage1Choice {
 	 * definition} = "Details related to an amount percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPercentageAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountOrPercentage1Choice, Percentage1> mmPercentageAmount = new MMMessageAssociationEnd<AmountOrPercentage1Choice, Percentage1>() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrPercentage1Choice.mmObject();
@@ -166,6 +176,16 @@ public class AmountOrPercentage1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Percentage1.mmObject();
+		}
+
+		@Override
+		public Percentage1 getValue(AmountOrPercentage1Choice obj) {
+			return obj.getPercentageAmount();
+		}
+
+		@Override
+		public void setValue(AmountOrPercentage1Choice obj, Percentage1 value) {
+			obj.setPercentageAmount(value);
 		}
 	};
 

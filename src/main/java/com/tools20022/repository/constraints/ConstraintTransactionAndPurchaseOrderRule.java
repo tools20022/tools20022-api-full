@@ -51,11 +51,15 @@ public class ConstraintTransactionAndPurchaseOrderRule {
 	 */
 	public static final MMConstraint<ReportLine1> forReportLine1 = new MMConstraint<ReportLine1>() {
 		{
-			validator = ConstraintTransactionAndPurchaseOrderRule::checkReportLine1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAndPurchaseOrderRule";
 			definition = "The transaction identification and purchase order must match, that is, the purchase order must be the one contained in the baseline/transaction, identified by the transaction identification.";
 			owner_lazy = () -> ReportLine1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReportLine1 obj) throws Exception {
+			checkReportLine1(obj);
 		}
 	};
 

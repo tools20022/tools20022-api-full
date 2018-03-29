@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification8;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -118,7 +119,7 @@ public class ReturnReasonInformation1 {
 	 * definition} = "Party issuing the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnReasonInformation1, Optional<PartyIdentification8>> mmReturnOriginator = new MMMessageAssociationEnd<ReturnReasonInformation1, Optional<PartyIdentification8>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation1.mmObject();
@@ -130,7 +131,17 @@ public class ReturnReasonInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8> getValue(ReturnReasonInformation1 obj) {
+			return obj.getReturnOriginator();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation1 obj, Optional<PartyIdentification8> value) {
+			obj.setReturnOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RtrRsn")
@@ -166,7 +177,7 @@ public class ReturnReasonInformation1 {
 	 * definition} = "Specifies the reason for the return."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReturnReasonInformation1, Optional<ReturnReason1Choice>> mmReturnReason = new MMMessageAssociationEnd<ReturnReasonInformation1, Optional<ReturnReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation1.mmObject();
@@ -179,6 +190,16 @@ public class ReturnReasonInformation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReturnReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReturnReason1Choice> getValue(ReturnReasonInformation1 obj) {
+			return obj.getReturnReason();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation1 obj, Optional<ReturnReason1Choice> value) {
+			obj.setReturnReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRtrRsnInf")
@@ -210,7 +231,7 @@ public class ReturnReasonInformation1 {
 	 * definition} = "Further details on the return reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReturnReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReturnReasonInformation1, List<Max105Text>> mmAdditionalReturnReasonInformation = new MMMessageAttribute<ReturnReasonInformation1, List<Max105Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnReasonInformation1.mmObject();
 			isDerived = false;
@@ -220,6 +241,16 @@ public class ReturnReasonInformation1 {
 			definition = "Further details on the return reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(ReturnReasonInformation1 obj) {
+			return obj.getAdditionalReturnReasonInformation();
+		}
+
+		@Override
+		public void setValue(ReturnReasonInformation1 obj, List<Max105Text> value) {
+			obj.setAdditionalReturnReasonInformation(value);
 		}
 	};
 
@@ -243,7 +274,7 @@ public class ReturnReasonInformation1 {
 		return returnOriginator == null ? Optional.empty() : Optional.of(returnOriginator);
 	}
 
-	public ReturnReasonInformation1 setReturnOriginator(com.tools20022.repository.msg.PartyIdentification8 returnOriginator) {
+	public ReturnReasonInformation1 setReturnOriginator(PartyIdentification8 returnOriginator) {
 		this.returnOriginator = returnOriginator;
 		return this;
 	}

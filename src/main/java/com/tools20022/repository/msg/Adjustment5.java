@@ -108,7 +108,7 @@ public class Adjustment5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment5, AdjustmentDirection1Code> mmDirection = new MMMessageAttribute<Adjustment5, AdjustmentDirection1Code>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmDirection;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment5.mmObject();
@@ -120,6 +120,16 @@ public class Adjustment5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
+		}
+
+		@Override
+		public AdjustmentDirection1Code getValue(Adjustment5 obj) {
+			return obj.getDirection();
+		}
+
+		@Override
+		public void setValue(Adjustment5 obj, AdjustmentDirection1Code value) {
+			obj.setDirection(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -156,7 +166,7 @@ public class Adjustment5 {
 	 * definition} = "Specifies the monetary amount of the adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Adjustment5, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Adjustment5, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment5.mmObject();
@@ -168,6 +178,16 @@ public class Adjustment5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Adjustment5 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Adjustment5 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

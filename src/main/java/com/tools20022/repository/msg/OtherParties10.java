@@ -133,7 +133,7 @@ public class OtherParties10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties10, Optional<PartyIdentification37Choice>> mmInvestor = new MMMessageAssociationEnd<OtherParties10, Optional<PartyIdentification37Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties10.mmObject();
@@ -148,6 +148,16 @@ public class OtherParties10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification37Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification37Choice> getValue(OtherParties10 obj) {
+			return obj.getInvestor();
+		}
+
+		@Override
+		public void setValue(OtherParties10 obj, Optional<PartyIdentification37Choice> value) {
+			obj.setInvestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StockXchg")
@@ -196,7 +206,7 @@ public class OtherParties10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStockExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties10, Optional<PartyIdentification49Choice>> mmStockExchange = new MMMessageAssociationEnd<OtherParties10, Optional<PartyIdentification49Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties10.mmObject();
@@ -211,6 +221,16 @@ public class OtherParties10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification49Choice> getValue(OtherParties10 obj) {
+			return obj.getStockExchange();
+		}
+
+		@Override
+		public void setValue(OtherParties10 obj, Optional<PartyIdentification49Choice> value) {
+			obj.setStockExchange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradRgltr")
@@ -257,7 +277,7 @@ public class OtherParties10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeRegulator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherParties10, Optional<PartyIdentification49Choice>> mmTradeRegulator = new MMMessageAssociationEnd<OtherParties10, Optional<PartyIdentification49Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherParties10.mmObject();
@@ -272,6 +292,16 @@ public class OtherParties10 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification49Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification49Choice> getValue(OtherParties10 obj) {
+			return obj.getTradeRegulator();
+		}
+
+		@Override
+		public void setValue(OtherParties10 obj, Optional<PartyIdentification49Choice> value) {
+			obj.setTradeRegulator(value.orElse(null));
 		}
 	};
 

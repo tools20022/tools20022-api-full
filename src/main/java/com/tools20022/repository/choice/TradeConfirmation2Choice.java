@@ -105,7 +105,7 @@ public class TradeConfirmation2Choice {
 	 * TradeConfirmation1Choice.mmConfirmed}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConfirmed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeConfirmation2Choice, TradeConfirmation3> mmConfirmed = new MMMessageAssociationEnd<TradeConfirmation2Choice, TradeConfirmation3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeConfirmation2Choice.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class TradeConfirmation2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradeConfirmation3.mmObject();
+		}
+
+		@Override
+		public TradeConfirmation3 getValue(TradeConfirmation2Choice obj) {
+			return obj.getConfirmed();
+		}
+
+		@Override
+		public void setValue(TradeConfirmation2Choice obj, TradeConfirmation3 value) {
+			obj.setConfirmed(value);
 		}
 	};
 	@XmlElement(name = "NonConfd", required = true)
@@ -153,7 +163,7 @@ public class TradeConfirmation2Choice {
 	 * TradeConfirmation1Choice.mmNonConfirmed}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonConfirmed = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TradeConfirmation2Choice, TradeNonConfirmation1> mmNonConfirmed = new MMMessageAssociationEnd<TradeConfirmation2Choice, TradeNonConfirmation1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeConfirmation2Choice.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class TradeConfirmation2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TradeNonConfirmation1.mmObject();
+		}
+
+		@Override
+		public TradeNonConfirmation1 getValue(TradeConfirmation2Choice obj) {
+			return obj.getNonConfirmed();
+		}
+
+		@Override
+		public void setValue(TradeConfirmation2Choice obj, TradeNonConfirmation1 value) {
+			obj.setNonConfirmed(value);
 		}
 	};
 

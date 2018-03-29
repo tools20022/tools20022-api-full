@@ -21,8 +21,8 @@ import com.tools20022.metamodel.MMMessageSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pain.CustomerCreditTransferInitiationV08;
 import com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07;
-import com.tools20022.repository.area.pain.CustomerPaymentReversalV07;
-import com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08;
+import com.tools20022.repository.area.pain.CustomerPaymentReversalV08;
+import com.tools20022.repository.area.pain.CustomerPaymentStatusReportV09;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -44,11 +44,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV07
  * CustomerDirectDebitInitiationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08
- * CustomerPaymentStatusReportV08}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV09
+ * CustomerPaymentStatusReportV09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV07
- * CustomerPaymentReversalV07}</li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV08
+ * CustomerPaymentReversalV08}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,7 +79,7 @@ public class PaymentsInitiationISOLatestversion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Initiation - ISO - Latest version";
 				definition = "Set of messages exchanged between a debtor (or buyer) and its bank or between a creditor (or seller) and its bank to initiate, collect, manage and monitor payments.\r\n";
-				messageDefinition_lazy = () -> Arrays.asList(CustomerCreditTransferInitiationV08.mmObject(), CustomerDirectDebitInitiationV07.mmObject(), CustomerPaymentStatusReportV08.mmObject(), CustomerPaymentReversalV07.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(CustomerCreditTransferInitiationV08.mmObject(), CustomerDirectDebitInitiationV07.mmObject(), CustomerPaymentStatusReportV09.mmObject(), CustomerPaymentReversalV08.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

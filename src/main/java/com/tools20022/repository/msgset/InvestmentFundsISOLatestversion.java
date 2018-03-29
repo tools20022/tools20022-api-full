@@ -95,53 +95,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportV04
  * FundDetailedConfirmedCashForecastReportV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07
- * PortfolioTransferInstructionV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV07
- * ReversalOfTransferOutConfirmationV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV07
- * TransferOutCancellationRequestV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV05
- * AccountHoldingInformationV05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07
- * PortfolioTransferCancellationRequestV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV05
- * TransferInstructionStatusReportV05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV07
- * TransferInConfirmationV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV07
- * TransferOutConfirmationV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV05
- * RequestForTransferStatusReportV05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV07
- * TransferInCancellationRequestV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV07
- * PortfolioTransferConfirmationV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV05
- * TransferCancellationStatusReportV05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV07
- * TransferOutInstructionV07}</li>
- * <li>{@linkplain com.tools20022.repository.area.sese.TransferInInstructionV07
- * TransferInInstructionV07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04
- * AccountHoldingInformationRequestV04}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07
- * ReversalOfTransferInConfirmationV07}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.setr.SubscriptionBulkOrderConfirmationV04
  * SubscriptionBulkOrderConfirmationV04}</li>
  * <li>{@linkplain com.tools20022.repository.area.setr.RedemptionBulkOrderV04
@@ -226,6 +179,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05
  * RequestForAccountManagementStatusReportV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV08
+ * ReversalOfTransferOutConfirmationV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV08
+ * TransferInConfirmationV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08
+ * PortfolioTransferInstructionV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08
+ * PortfolioTransferCancellationRequestV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV08
+ * TransferOutCancellationRequestV08}</li>
+ * <li>{@linkplain com.tools20022.repository.area.sese.TransferInInstructionV08
+ * TransferInInstructionV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08
+ * PortfolioTransferConfirmationV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06
+ * AccountHoldingInformationV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08
+ * TransferOutConfirmationV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV08
+ * TransferInCancellationRequestV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV08
+ * TransferOutInstructionV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV06
+ * TransferCancellationStatusReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05
+ * AccountHoldingInformationRequestV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08
+ * ReversalOfTransferInConfirmationV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV06
+ * RequestForTransferStatusReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06
+ * TransferInstructionStatusReportV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -260,18 +260,18 @@ public class InvestmentFundsISOLatestversion {
 						AccountingStatementOfHoldingsV02.mmObject(), CustodyStatementOfHoldingsV02.mmObject(), AccountingStatementOfHoldingsCancellationV02.mmObject(), CustodyStatementOfHoldingsCancellationV02.mmObject(),
 						FundDetailedEstimatedCashForecastReportV04.mmObject(), FundConfirmedCashForecastReportV04.mmObject(), FundDetailedConfirmedCashForecastReportCancellationV03.mmObject(), FundEstimatedCashForecastReportV04.mmObject(),
 						StatementOfInvestmentFundTransactionsV03.mmObject(), SecuritiesMessageRejectionV03.mmObject(), FundConfirmedCashForecastReportCancellationV03.mmObject(),
-						StatementOfInvestmentFundTransactionsCancellationV03.mmObject(), FundDetailedConfirmedCashForecastReportV04.mmObject(), PortfolioTransferInstructionV07.mmObject(), ReversalOfTransferOutConfirmationV07.mmObject(),
-						TransferOutCancellationRequestV07.mmObject(), AccountHoldingInformationV05.mmObject(), PortfolioTransferCancellationRequestV07.mmObject(), TransferInstructionStatusReportV05.mmObject(),
-						TransferInConfirmationV07.mmObject(), TransferOutConfirmationV07.mmObject(), RequestForTransferStatusReportV05.mmObject(), TransferInCancellationRequestV07.mmObject(), PortfolioTransferConfirmationV07.mmObject(),
-						TransferCancellationStatusReportV05.mmObject(), TransferOutInstructionV07.mmObject(), TransferInInstructionV07.mmObject(), AccountHoldingInformationRequestV04.mmObject(),
-						ReversalOfTransferInConfirmationV07.mmObject(), SubscriptionBulkOrderConfirmationV04.mmObject(), RedemptionBulkOrderV04.mmObject(), SubscriptionBulkOrderCancellationRequestV04.mmObject(),
-						RedemptionOrderV04.mmObject(), SubscriptionOrderCancellationRequestV04.mmObject(), RedemptionBulkOrderConfirmationCancellationInstructionV02.mmObject(), RedemptionBulkOrderConfirmationV04.mmObject(),
-						RedemptionBulkOrderCancellationRequestV04.mmObject(), SwitchOrderConfirmationV04.mmObject(), RequestForOrderStatusReportV04.mmObject(), SubscriptionOrderConfirmationV04.mmObject(),
-						SubscriptionOrderConfirmationCancellationInstructionV02.mmObject(), SwitchOrderCancellationRequestV04.mmObject(), OrderCancellationStatusReportV04.mmObject(), SwitchOrderV04.mmObject(),
-						RedemptionOrderConfirmationCancellationInstructionV02.mmObject(), RedemptionOrderConfirmationV04.mmObject(), OrderInstructionStatusReportV04.mmObject(),
+						StatementOfInvestmentFundTransactionsCancellationV03.mmObject(), FundDetailedConfirmedCashForecastReportV04.mmObject(), SubscriptionBulkOrderConfirmationV04.mmObject(), RedemptionBulkOrderV04.mmObject(),
+						SubscriptionBulkOrderCancellationRequestV04.mmObject(), RedemptionOrderV04.mmObject(), SubscriptionOrderCancellationRequestV04.mmObject(), RedemptionBulkOrderConfirmationCancellationInstructionV02.mmObject(),
+						RedemptionBulkOrderConfirmationV04.mmObject(), RedemptionBulkOrderCancellationRequestV04.mmObject(), SwitchOrderConfirmationV04.mmObject(), RequestForOrderStatusReportV04.mmObject(),
+						SubscriptionOrderConfirmationV04.mmObject(), SubscriptionOrderConfirmationCancellationInstructionV02.mmObject(), SwitchOrderCancellationRequestV04.mmObject(), OrderCancellationStatusReportV04.mmObject(),
+						SwitchOrderV04.mmObject(), RedemptionOrderConfirmationCancellationInstructionV02.mmObject(), RedemptionOrderConfirmationV04.mmObject(), OrderInstructionStatusReportV04.mmObject(),
 						SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmObject(), RedemptionOrderCancellationRequestV04.mmObject(), RequestForOrderConfirmationStatusReportV02.mmObject(), SubscriptionBulkOrderV04.mmObject(),
 						SwitchOrderConfirmationCancellationInstructionV02.mmObject(), OrderConfirmationStatusReportV02.mmObject(), SubscriptionOrderV04.mmObject(), AccountDetailsConfirmationV07.mmObject(),
-						AccountModificationInstructionV07.mmObject(), AccountOpeningInstructionV07.mmObject(), AccountManagementStatusReportV06.mmObject(), RequestForAccountManagementStatusReportV05.mmObject());
+						AccountModificationInstructionV07.mmObject(), AccountOpeningInstructionV07.mmObject(), AccountManagementStatusReportV06.mmObject(), RequestForAccountManagementStatusReportV05.mmObject(),
+						ReversalOfTransferOutConfirmationV08.mmObject(), TransferInConfirmationV08.mmObject(), PortfolioTransferInstructionV08.mmObject(), PortfolioTransferCancellationRequestV08.mmObject(),
+						TransferOutCancellationRequestV08.mmObject(), TransferInInstructionV08.mmObject(), PortfolioTransferConfirmationV08.mmObject(), AccountHoldingInformationV06.mmObject(), TransferOutConfirmationV08.mmObject(),
+						TransferInCancellationRequestV08.mmObject(), TransferOutInstructionV08.mmObject(), TransferCancellationStatusReportV06.mmObject(), AccountHoldingInformationRequestV05.mmObject(),
+						ReversalOfTransferInConfirmationV08.mmObject(), RequestForTransferStatusReportV06.mmObject(), TransferInstructionStatusReportV06.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

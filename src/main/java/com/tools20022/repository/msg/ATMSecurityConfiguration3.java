@@ -132,7 +132,7 @@ public class ATMSecurityConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAsymmetricEncryption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>> mmAsymmetricEncryption = new MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -143,6 +143,16 @@ public class ATMSecurityConfiguration3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMSecurityConfiguration3 obj) {
+			return obj.getAsymmetricEncryption();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration3 obj, Optional<TrueFalseIndicator> value) {
+			obj.setAsymmetricEncryption(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsmmtrcKeyStdId")
@@ -177,7 +187,7 @@ public class ATMSecurityConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAsymmetricKeyStandardIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>> mmAsymmetricKeyStandardIdentification = new MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -188,6 +198,16 @@ public class ATMSecurityConfiguration3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMSecurityConfiguration3 obj) {
+			return obj.getAsymmetricKeyStandardIdentification();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration3 obj, Optional<TrueFalseIndicator> value) {
+			obj.setAsymmetricKeyStandardIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsmmtrcNcrptnAlgo")
@@ -221,7 +241,7 @@ public class ATMSecurityConfiguration3 {
 	 * "Asymmetric encryption algorithm the security module is able to manage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAsymmetricEncryptionAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm7Code>> mmAsymmetricEncryptionAlgorithm = new MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm7Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -231,6 +251,16 @@ public class ATMSecurityConfiguration3 {
 			definition = "Asymmetric encryption algorithm the security module is able to manage.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm7Code.mmObject();
+		}
+
+		@Override
+		public List<Algorithm7Code> getValue(ATMSecurityConfiguration3 obj) {
+			return obj.getAsymmetricEncryptionAlgorithm();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration3 obj, List<Algorithm7Code> value) {
+			obj.setAsymmetricEncryptionAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "SmmtrcTrnsprtKey")
@@ -265,7 +295,7 @@ public class ATMSecurityConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSymmetricTransportKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>> mmSymmetricTransportKey = new MMMessageAttribute<ATMSecurityConfiguration3, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -276,6 +306,16 @@ public class ATMSecurityConfiguration3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ATMSecurityConfiguration3 obj) {
+			return obj.getSymmetricTransportKey();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration3 obj, Optional<TrueFalseIndicator> value) {
+			obj.setSymmetricTransportKey(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SmmtrcTrnsprtKeyAlgo")
@@ -318,7 +358,7 @@ public class ATMSecurityConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSymmetricTransportKeyAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm13Code>> mmSymmetricTransportKeyAlgorithm = new MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm13Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -329,6 +369,16 @@ public class ATMSecurityConfiguration3 {
 			nextVersions_lazy = () -> Arrays.asList(ATMSecurityConfiguration4.mmDigitalSignatureAlgorithm);
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm13Code.mmObject();
+		}
+
+		@Override
+		public List<Algorithm13Code> getValue(ATMSecurityConfiguration3 obj) {
+			return obj.getSymmetricTransportKeyAlgorithm();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration3 obj, List<Algorithm13Code> value) {
+			obj.setSymmetricTransportKeyAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "SmmtrcNcrptnAlgo")
@@ -362,7 +412,7 @@ public class ATMSecurityConfiguration3 {
 	 * "Symmetric encryption algorithm the security module is able to manage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSymmetricEncryptionAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm15Code>> mmSymmetricEncryptionAlgorithm = new MMMessageAttribute<ATMSecurityConfiguration3, List<Algorithm15Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -372,6 +422,16 @@ public class ATMSecurityConfiguration3 {
 			definition = "Symmetric encryption algorithm the security module is able to manage.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Algorithm15Code.mmObject();
+		}
+
+		@Override
+		public List<Algorithm15Code> getValue(ATMSecurityConfiguration3 obj) {
+			return obj.getSymmetricEncryptionAlgorithm();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration3 obj, List<Algorithm15Code> value) {
+			obj.setSymmetricEncryptionAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "NcrptnFrmt")
@@ -406,7 +466,7 @@ public class ATMSecurityConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEncryptionFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMSecurityConfiguration3, List<EncryptionFormat1Code>> mmEncryptionFormat = new MMMessageAttribute<ATMSecurityConfiguration3, List<EncryptionFormat1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration3.mmObject();
 			isDerived = false;
@@ -416,6 +476,16 @@ public class ATMSecurityConfiguration3 {
 			definition = "Format of data before encryption, if the format is not plaintext or implicit.";
 			minOccurs = 0;
 			simpleType_lazy = () -> EncryptionFormat1Code.mmObject();
+		}
+
+		@Override
+		public List<EncryptionFormat1Code> getValue(ATMSecurityConfiguration3 obj) {
+			return obj.getEncryptionFormat();
+		}
+
+		@Override
+		public void setValue(ATMSecurityConfiguration3 obj, List<EncryptionFormat1Code> value) {
+			obj.setEncryptionFormat(value);
 		}
 	};
 

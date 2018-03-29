@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V06;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35;
 import com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36;
@@ -51,6 +52,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.choice.UpdateType28Choice#mmModification
  * UpdateType28Choice.mmModification}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V06#mmUpdateType
+ * SecuritiesSettlementTransactionModificationRequest002V06.mmUpdateType}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,7 +114,7 @@ public class UpdateType28Choice {
 	 * definition} = "Addition of information to the securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType28Choice, SecuritiesSettlementTransactionDetails35> mmAddition = new MMMessageAssociationEnd<UpdateType28Choice, SecuritiesSettlementTransactionDetails35>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType28Choice.mmObject();
 			isDerived = false;
@@ -116,6 +126,16 @@ public class UpdateType28Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesSettlementTransactionDetails35.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlementTransactionDetails35 getValue(UpdateType28Choice obj) {
+			return obj.getAddition();
+		}
+
+		@Override
+		public void setValue(UpdateType28Choice obj, SecuritiesSettlementTransactionDetails35 value) {
+			obj.setAddition(value);
 		}
 	};
 	@XmlElement(name = "Deltn", required = true)
@@ -147,7 +167,7 @@ public class UpdateType28Choice {
 	 * definition} = "Deletion of information in the securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeletion = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType28Choice, SecuritiesSettlementTransactionDetails36> mmDeletion = new MMMessageAssociationEnd<UpdateType28Choice, SecuritiesSettlementTransactionDetails36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType28Choice.mmObject();
 			isDerived = false;
@@ -159,6 +179,16 @@ public class UpdateType28Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesSettlementTransactionDetails36.mmObject();
+		}
+
+		@Override
+		public SecuritiesSettlementTransactionDetails36 getValue(UpdateType28Choice obj) {
+			return obj.getDeletion();
+		}
+
+		@Override
+		public void setValue(UpdateType28Choice obj, SecuritiesSettlementTransactionDetails36 value) {
+			obj.setDeletion(value);
 		}
 	};
 	@XmlElement(name = "Mod", required = true)
@@ -191,7 +221,7 @@ public class UpdateType28Choice {
 	 * "Modification of information in the securities transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmModification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UpdateType28Choice, SecuritiesSettlementTransactionDetails37> mmModification = new MMMessageAssociationEnd<UpdateType28Choice, SecuritiesSettlementTransactionDetails37>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType28Choice.mmObject();
 			isDerived = false;
@@ -204,6 +234,16 @@ public class UpdateType28Choice {
 			isComposite = true;
 			type_lazy = () -> SecuritiesSettlementTransactionDetails37.mmObject();
 		}
+
+		@Override
+		public SecuritiesSettlementTransactionDetails37 getValue(UpdateType28Choice obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(UpdateType28Choice obj, SecuritiesSettlementTransactionDetails37 value) {
+			obj.setModification(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -211,6 +251,7 @@ public class UpdateType28Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType28Choice.mmAddition, com.tools20022.repository.choice.UpdateType28Choice.mmDeletion,
 						com.tools20022.repository.choice.UpdateType28Choice.mmModification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequest002V06.mmUpdateType);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdateType28Choice";

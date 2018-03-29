@@ -126,7 +126,7 @@ public class CashSettlementSystem1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashSettlementSystem1Choice, CashSettlementSystem2Code> mmCode = new MMMessageAttribute<CashSettlementSystem1Choice, CashSettlementSystem2Code>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystem.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashSettlementSystem1Choice.mmObject();
@@ -140,6 +140,16 @@ public class CashSettlementSystem1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashSettlementSystem2Code.mmObject();
+		}
+
+		@Override
+		public CashSettlementSystem2Code getValue(CashSettlementSystem1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CashSettlementSystem1Choice obj, CashSettlementSystem2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -188,7 +198,7 @@ public class CashSettlementSystem1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashSettlementSystem1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<CashSettlementSystem1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystem.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashSettlementSystem1Choice.mmObject();
@@ -202,6 +212,16 @@ public class CashSettlementSystem1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CashSettlementSystem1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CashSettlementSystem1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

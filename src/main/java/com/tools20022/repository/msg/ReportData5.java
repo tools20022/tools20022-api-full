@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PayInCallItem;
+import com.tools20022.repository.msg.Value;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -133,7 +135,7 @@ public class ReportData5 {
 	 * "Identification of the report assigned by the central system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData5, Max35Text> mmMessageIdentification = new MMMessageAttribute<ReportData5, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData5.mmObject();
 			isDerived = false;
@@ -144,6 +146,16 @@ public class ReportData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportData5 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(ReportData5 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "ValDt", required = true)
@@ -179,7 +191,7 @@ public class ReportData5 {
 	 * definition} = "Date by which the amount(s) requested must be settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData5, ISODate> mmValueDate = new MMMessageAttribute<ReportData5, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData5.mmObject();
@@ -191,6 +203,16 @@ public class ReportData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ReportData5 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(ReportData5 obj, ISODate value) {
+			obj.setValueDate(value);
 		}
 	};
 	@XmlElement(name = "DtAndTmStmp", required = true)
@@ -228,7 +250,7 @@ public class ReportData5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateAndTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData5, ISODateTime> mmDateAndTimeStamp = new MMMessageAttribute<ReportData5, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCalculationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData5.mmObject();
@@ -240,6 +262,16 @@ public class ReportData5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ReportData5 obj) {
+			return obj.getDateAndTimeStamp();
+		}
+
+		@Override
+		public void setValue(ReportData5 obj, ISODateTime value) {
+			obj.setDateAndTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -275,7 +307,7 @@ public class ReportData5 {
 	 * definition} = "Specifies the type of the Pay In Call."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData5, CallIn1Code> mmType = new MMMessageAttribute<ReportData5, CallIn1Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData5.mmObject();
@@ -288,9 +320,19 @@ public class ReportData5 {
 			minOccurs = 1;
 			simpleType_lazy = () -> CallIn1Code.mmObject();
 		}
+
+		@Override
+		public CallIn1Code getValue(ReportData5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReportData5 obj, CallIn1Code value) {
+			obj.setType(value);
+		}
 	};
 	@XmlElement(name = "PayInCallAmt")
-	protected List<com.tools20022.repository.msg.PayInCallItem> payInCallAmount;
+	protected List<PayInCallItem> payInCallAmount;
 	/**
 	 * 
 	 <p>
@@ -321,7 +363,7 @@ public class ReportData5 {
 	 * definition} = "Specifies the amount requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPayInCallAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportData5, List<PayInCallItem>> mmPayInCallAmount = new MMMessageAssociationEnd<ReportData5, List<PayInCallItem>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData5.mmObject();
@@ -332,7 +374,17 @@ public class ReportData5 {
 			definition = "Specifies the amount requested.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PayInCallItem.mmObject();
+			type_lazy = () -> PayInCallItem.mmObject();
+		}
+
+		@Override
+		public List<PayInCallItem> getValue(ReportData5 obj) {
+			return obj.getPayInCallAmount();
+		}
+
+		@Override
+		public void setValue(ReportData5 obj, List<PayInCallItem> value) {
+			obj.setPayInCallAmount(value);
 		}
 	};
 	@XmlElement(name = "SttlmSsnIdr")
@@ -366,7 +418,7 @@ public class ReportData5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementSessionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData5, Optional<Exact4AlphaNumericText>> mmSettlementSessionIdentifier = new MMMessageAttribute<ReportData5, Optional<Exact4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData5.mmObject();
 			isDerived = false;
@@ -377,6 +429,16 @@ public class ReportData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(ReportData5 obj) {
+			return obj.getSettlementSessionIdentifier();
+		}
+
+		@Override
+		public void setValue(ReportData5 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setSettlementSessionIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctVal")
@@ -410,7 +472,7 @@ public class ReportData5 {
 	 * definition} = "Specifies the requested amount in multiple currencies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportData5, Optional<Value>> mmAccountValue = new MMMessageAssociationEnd<ReportData5, Optional<Value>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData5.mmObject();
@@ -422,7 +484,17 @@ public class ReportData5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Value.mmObject();
+			type_lazy = () -> Value.mmObject();
+		}
+
+		@Override
+		public Optional<Value> getValue(ReportData5 obj) {
+			return obj.getAccountValue();
+		}
+
+		@Override
+		public void setValue(ReportData5 obj, Optional<Value> value) {
+			obj.setAccountValue(value.orElse(null));
 		}
 	};
 
@@ -484,7 +556,7 @@ public class ReportData5 {
 		return payInCallAmount == null ? payInCallAmount = new ArrayList<>() : payInCallAmount;
 	}
 
-	public ReportData5 setPayInCallAmount(List<com.tools20022.repository.msg.PayInCallItem> payInCallAmount) {
+	public ReportData5 setPayInCallAmount(List<PayInCallItem> payInCallAmount) {
 		this.payInCallAmount = Objects.requireNonNull(payInCallAmount);
 		return this;
 	}
@@ -502,7 +574,7 @@ public class ReportData5 {
 		return accountValue == null ? Optional.empty() : Optional.of(accountValue);
 	}
 
-	public ReportData5 setAccountValue(com.tools20022.repository.msg.Value accountValue) {
+	public ReportData5 setAccountValue(Value accountValue) {
 		this.accountValue = accountValue;
 		return this;
 	}

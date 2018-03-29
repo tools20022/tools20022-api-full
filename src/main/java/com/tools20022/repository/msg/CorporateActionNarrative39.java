@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.UpdatedAdditionalInformation6;
+import com.tools20022.repository.msg.UpdatedURLlnformation3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -84,7 +86,7 @@ public class CorporateActionNarrative39 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Offerr")
-	protected List<com.tools20022.repository.msg.UpdatedAdditionalInformation6> offeror;
+	protected List<UpdatedAdditionalInformation6> offeror;
 	/**
 	 * 
 	 <p>
@@ -122,7 +124,7 @@ public class CorporateActionNarrative39 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOfferor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative39, List<UpdatedAdditionalInformation6>> mmOfferor = new MMMessageAssociationEnd<CorporateActionNarrative39, List<UpdatedAdditionalInformation6>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative39.mmObject();
@@ -134,7 +136,17 @@ public class CorporateActionNarrative39 {
 			definition = "Provides the entity making the offer and is different from the issuing company.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation6.mmObject();
+		}
+
+		@Override
+		public List<UpdatedAdditionalInformation6> getValue(CorporateActionNarrative39 obj) {
+			return obj.getOfferor();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative39 obj, List<UpdatedAdditionalInformation6> value) {
+			obj.setOfferor(value);
 		}
 	};
 	@XmlElement(name = "NewCpnyNm")
@@ -170,7 +182,7 @@ public class CorporateActionNarrative39 {
 	 * "Provides the new name of a company following a name change."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNewCompanyName = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative39, Optional<UpdatedAdditionalInformation6>> mmNewCompanyName = new MMMessageAssociationEnd<CorporateActionNarrative39, Optional<UpdatedAdditionalInformation6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative39.mmObject();
 			isDerived = false;
@@ -182,7 +194,17 @@ public class CorporateActionNarrative39 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6.mmObject();
+			type_lazy = () -> UpdatedAdditionalInformation6.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedAdditionalInformation6> getValue(CorporateActionNarrative39 obj) {
+			return obj.getNewCompanyName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative39 obj, Optional<UpdatedAdditionalInformation6> value) {
+			obj.setNewCompanyName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "URLAdr")
@@ -223,7 +245,7 @@ public class CorporateActionNarrative39 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmURLAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNarrative39, Optional<UpdatedURLlnformation3>> mmURLAddress = new MMMessageAssociationEnd<CorporateActionNarrative39, Optional<UpdatedURLlnformation3>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmDocumentationLocation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative39.mmObject();
@@ -236,7 +258,17 @@ public class CorporateActionNarrative39 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UpdatedURLlnformation3.mmObject();
+			type_lazy = () -> UpdatedURLlnformation3.mmObject();
+		}
+
+		@Override
+		public Optional<UpdatedURLlnformation3> getValue(CorporateActionNarrative39 obj) {
+			return obj.getURLAddress();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative39 obj, Optional<UpdatedURLlnformation3> value) {
+			obj.setURLAddress(value.orElse(null));
 		}
 	};
 
@@ -260,7 +292,7 @@ public class CorporateActionNarrative39 {
 		return offeror == null ? offeror = new ArrayList<>() : offeror;
 	}
 
-	public CorporateActionNarrative39 setOfferor(List<com.tools20022.repository.msg.UpdatedAdditionalInformation6> offeror) {
+	public CorporateActionNarrative39 setOfferor(List<UpdatedAdditionalInformation6> offeror) {
 		this.offeror = Objects.requireNonNull(offeror);
 		return this;
 	}
@@ -269,7 +301,7 @@ public class CorporateActionNarrative39 {
 		return newCompanyName == null ? Optional.empty() : Optional.of(newCompanyName);
 	}
 
-	public CorporateActionNarrative39 setNewCompanyName(com.tools20022.repository.msg.UpdatedAdditionalInformation6 newCompanyName) {
+	public CorporateActionNarrative39 setNewCompanyName(UpdatedAdditionalInformation6 newCompanyName) {
 		this.newCompanyName = newCompanyName;
 		return this;
 	}
@@ -278,7 +310,7 @@ public class CorporateActionNarrative39 {
 		return uRLAddress == null ? Optional.empty() : Optional.of(uRLAddress);
 	}
 
-	public CorporateActionNarrative39 setURLAddress(com.tools20022.repository.msg.UpdatedURLlnformation3 uRLAddress) {
+	public CorporateActionNarrative39 setURLAddress(UpdatedURLlnformation3 uRLAddress) {
 		this.uRLAddress = uRLAddress;
 		return this;
 	}

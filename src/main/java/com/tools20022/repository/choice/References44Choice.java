@@ -128,7 +128,7 @@ public class References44Choice {
 	 * References22Choice.mmOtherTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References44Choice, GenericDocumentIdentification4> mmOtherTransactionIdentification = new MMMessageAssociationEnd<References44Choice, GenericDocumentIdentification4>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References44Choice.mmObject();
@@ -142,6 +142,16 @@ public class References44Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericDocumentIdentification4.mmObject();
+		}
+
+		@Override
+		public GenericDocumentIdentification4 getValue(References44Choice obj) {
+			return obj.getOtherTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References44Choice obj, GenericDocumentIdentification4 value) {
+			obj.setOtherTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesFincgTxId", required = true)
@@ -185,7 +195,7 @@ public class References44Choice {
 	 * References22Choice.mmSecuritiesFinancingTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References44Choice, SettlementTypeAndIdentification18> mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd<References44Choice, SettlementTypeAndIdentification18>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References44Choice.mmObject();
@@ -199,6 +209,16 @@ public class References44Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification18 getValue(References44Choice obj) {
+			return obj.getSecuritiesFinancingTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References44Choice obj, SettlementTypeAndIdentification18 value) {
+			obj.setSecuritiesFinancingTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesSttlmTxId", required = true)
@@ -241,7 +261,7 @@ public class References44Choice {
 	 * References22Choice.mmSecuritiesSettlementTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References44Choice, SettlementTypeAndIdentification18> mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd<References44Choice, SettlementTypeAndIdentification18>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References44Choice.mmObject();
@@ -255,6 +275,16 @@ public class References44Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification18.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification18 getValue(References44Choice obj) {
+			return obj.getSecuritiesSettlementTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References44Choice obj, SettlementTypeAndIdentification18 value) {
+			obj.setSecuritiesSettlementTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntraPosMvmntId", required = true)
@@ -293,7 +323,7 @@ public class References44Choice {
 	 * References22Choice.mmIntraPositionMovementIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraPositionMovementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References44Choice, Max35Text> mmIntraPositionMovementIdentification = new MMMessageAttribute<References44Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References44Choice.mmObject();
 			isDerived = false;
@@ -305,6 +335,16 @@ public class References44Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(References44Choice obj) {
+			return obj.getIntraPositionMovementIdentification();
+		}
+
+		@Override
+		public void setValue(References44Choice obj, Max35Text value) {
+			obj.setIntraPositionMovementIdentification(value);
 		}
 	};
 

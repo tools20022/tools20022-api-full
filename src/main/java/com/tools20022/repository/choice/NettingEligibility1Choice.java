@@ -128,7 +128,7 @@ public class NettingEligibility1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingEligibility1Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<NettingEligibility1Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmNettingEligibility;
 			componentContext_lazy = () -> com.tools20022.repository.choice.NettingEligibility1Choice.mmObject();
@@ -142,6 +142,16 @@ public class NettingEligibility1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(NettingEligibility1Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(NettingEligibility1Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -185,7 +195,7 @@ public class NettingEligibility1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NettingEligibility1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<NettingEligibility1Choice, GenericIdentification20>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NettingEligibility1Choice.mmObject();
 			isDerived = false;
@@ -198,6 +208,16 @@ public class NettingEligibility1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(NettingEligibility1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(NettingEligibility1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

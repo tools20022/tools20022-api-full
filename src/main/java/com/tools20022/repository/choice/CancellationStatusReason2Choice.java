@@ -132,7 +132,7 @@ public class CancellationStatusReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusReason2Choice, PaymentCancellationRejection2Code> mmCode = new MMMessageAttribute<CancellationStatusReason2Choice, PaymentCancellationRejection2Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatusReason2Choice.mmObject();
@@ -145,6 +145,16 @@ public class CancellationStatusReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentCancellationRejection2Code.mmObject();
+		}
+
+		@Override
+		public PaymentCancellationRejection2Code getValue(CancellationStatusReason2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationStatusReason2Choice obj, PaymentCancellationRejection2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -192,7 +202,7 @@ public class CancellationStatusReason2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatusReason2Choice, Max35Text> mmProprietary = new MMMessageAttribute<CancellationStatusReason2Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatusReason2Choice.mmObject();
@@ -205,6 +215,16 @@ public class CancellationStatusReason2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(CancellationStatusReason2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CancellationStatusReason2Choice obj, Max35Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

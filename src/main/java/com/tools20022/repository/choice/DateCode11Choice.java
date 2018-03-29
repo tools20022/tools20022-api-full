@@ -120,7 +120,7 @@ public class DateCode11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateCode11Choice, DateType8Code> mmCode = new MMMessageAttribute<DateCode11Choice, DateType8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateCode11Choice.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class DateCode11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType8Code.mmObject();
+		}
+
+		@Override
+		public DateType8Code getValue(DateCode11Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(DateCode11Choice obj, DateType8Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -175,7 +185,7 @@ public class DateCode11Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateCode11Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<DateCode11Choice, GenericIdentification20>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateCode11Choice.mmObject();
 			isDerived = false;
@@ -189,6 +199,16 @@ public class DateCode11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(DateCode11Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(DateCode11Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

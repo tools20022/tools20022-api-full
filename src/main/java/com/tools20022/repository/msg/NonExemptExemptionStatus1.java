@@ -99,7 +99,7 @@ public class NonExemptExemptionStatus1 {
 	 * "Acknowledgement of the status on non exempt on interest penalties."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcknowledgementOfNonExemptIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<NonExemptExemptionStatus1, YesNoIndicator> mmAcknowledgementOfNonExemptIndicator = new MMMessageAttribute<NonExemptExemptionStatus1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.NonExemptExemptionStatus1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class NonExemptExemptionStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(NonExemptExemptionStatus1 obj) {
+			return obj.getAcknowledgementOfNonExemptIndicator();
+		}
+
+		@Override
+		public void setValue(NonExemptExemptionStatus1 obj, YesNoIndicator value) {
+			obj.setAcknowledgementOfNonExemptIndicator(value);
 		}
 	};
 

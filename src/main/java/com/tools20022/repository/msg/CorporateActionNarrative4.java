@@ -186,7 +186,7 @@ public class CorporateActionNarrative4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>> mmDeclarationDetails = new MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmDeclarationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmObject();
@@ -198,6 +198,16 @@ public class CorporateActionNarrative4 {
 			definition = "Provides declaration details narrative relative to the financial instrument, for example, beneficial ownership.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative4 obj) {
+			return obj.getDeclarationDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4 obj, List<Max350Text> value) {
+			obj.setDeclarationDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlTxt")
@@ -242,7 +252,7 @@ public class CorporateActionNarrative4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>> mmAdditionalText = new MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmObject();
 			isDerived = false;
@@ -254,6 +264,16 @@ public class CorporateActionNarrative4 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative31.mmAdditionalText);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative4 obj) {
+			return obj.getAdditionalText();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4 obj, List<Max350Text> value) {
+			obj.setAdditionalText(value);
 		}
 	};
 	@XmlElement(name = "NrrtvVrsn")
@@ -298,7 +318,7 @@ public class CorporateActionNarrative4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNarrativeVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>> mmNarrativeVersion = new MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmObject();
 			isDerived = false;
@@ -310,6 +330,16 @@ public class CorporateActionNarrative4 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative31.mmNarrativeVersion);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative4 obj) {
+			return obj.getNarrativeVersion();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4 obj, List<Max350Text> value) {
+			obj.setNarrativeVersion(value);
 		}
 	};
 	@XmlElement(name = "RegnDtls")
@@ -349,7 +379,7 @@ public class CorporateActionNarrative4 {
 	 * definition} = "Provides information required for the registration."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>> mmRegistrationDetails = new MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmObject();
@@ -361,6 +391,16 @@ public class CorporateActionNarrative4 {
 			definition = "Provides information required for the registration.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative4 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4 obj, List<Max350Text> value) {
+			obj.setRegistrationDetails(value);
 		}
 	};
 	@XmlElement(name = "InfConds")
@@ -402,7 +442,7 @@ public class CorporateActionNarrative4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>> mmInformationConditions = new MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmInformationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmObject();
@@ -414,6 +454,16 @@ public class CorporateActionNarrative4 {
 			definition = "Provides conditional information related to the event, for example, an offer is subject to 50 percent acceptance, the offeror allows the securities holder to set some conditions.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative4 obj) {
+			return obj.getInformationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4 obj, List<Max350Text> value) {
+			obj.setInformationConditions(value);
 		}
 	};
 	@XmlElement(name = "InfToCmplyWth")
@@ -455,7 +505,7 @@ public class CorporateActionNarrative4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>> mmInformationToComplyWith = new MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmObject();
@@ -467,6 +517,16 @@ public class CorporateActionNarrative4 {
 			definition = "Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or SIL (Sophisticated Investor Letter) to be provided.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative4 obj) {
+			return obj.getInformationToComplyWith();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4 obj, List<Max350Text> value) {
+			obj.setInformationToComplyWith(value);
 		}
 	};
 	@XmlElement(name = "PtyCtctNrrtv")
@@ -516,7 +576,7 @@ public class CorporateActionNarrative4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>> mmPartyContactNarrative = new MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmObject();
@@ -529,6 +589,16 @@ public class CorporateActionNarrative4 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative31.mmPartyContactNarrative);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative4 obj) {
+			return obj.getPartyContactNarrative();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4 obj, List<Max350Text> value) {
+			obj.setPartyContactNarrative(value);
 		}
 	};
 	@XmlElement(name = "TaxtnConds")
@@ -578,7 +648,7 @@ public class CorporateActionNarrative4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxationConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>> mmTaxationConditions = new MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxationConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmObject();
@@ -591,6 +661,16 @@ public class CorporateActionNarrative4 {
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionNarrative31.mmTaxationConditions);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative4 obj) {
+			return obj.getTaxationConditions();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4 obj, List<Max350Text> value) {
+			obj.setTaxationConditions(value);
 		}
 	};
 	@XmlElement(name = "BsktOrIndxInf")
@@ -632,7 +712,7 @@ public class CorporateActionNarrative4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasketOrIndexInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>> mmBasketOrIndexInformation = new MMMessageAttribute<CorporateActionNarrative4, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmBasketOrIndexInformation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative4.mmObject();
@@ -644,6 +724,16 @@ public class CorporateActionNarrative4 {
 			definition = "Provides additional information on the basket or index underlying a security, for example a warrant.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative4 obj) {
+			return obj.getBasketOrIndexInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative4 obj, List<Max350Text> value) {
+			obj.setBasketOrIndexInformation(value);
 		}
 	};
 

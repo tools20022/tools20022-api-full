@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.entity.CashProceedsDefinition;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount19;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -109,7 +110,7 @@ public class CashProceeds1 {
 	 * definition} = "Cash amount which is posted."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashProceeds1, ActiveCurrencyAndAmount> mmPostingAmount = new MMMessageAttribute<CashProceeds1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashProceeds1.mmObject();
@@ -121,6 +122,16 @@ public class CashProceeds1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CashProceeds1 obj) {
+			return obj.getPostingAmount();
+		}
+
+		@Override
+		public void setValue(CashProceeds1 obj, ActiveCurrencyAndAmount value) {
+			obj.setPostingAmount(value);
 		}
 	};
 	@XmlElement(name = "RcncltnDtls")
@@ -151,7 +162,7 @@ public class CashProceeds1 {
 	 * definition} = "Reconciliation information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReconciliationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashProceeds1, Optional<Max350Text>> mmReconciliationDetails = new MMMessageAttribute<CashProceeds1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashProceeds1.mmObject();
 			isDerived = false;
@@ -163,9 +174,19 @@ public class CashProceeds1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max350Text> getValue(CashProceeds1 obj) {
+			return obj.getReconciliationDetails();
+		}
+
+		@Override
+		public void setValue(CashProceeds1 obj, Optional<Max350Text> value) {
+			obj.setReconciliationDetails(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount19> accountDetails;
+	protected List<CashAccount19> accountDetails;
 	/**
 	 * 
 	 <p>
@@ -196,7 +217,7 @@ public class CashProceeds1 {
 	 * "Provides information about the debited securities account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashProceeds1, List<CashAccount19>> mmAccountDetails = new MMMessageAssociationEnd<CashProceeds1, List<CashAccount19>>() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashProceeds1.mmObject();
@@ -208,7 +229,17 @@ public class CashProceeds1 {
 			maxOccurs = 2;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount19.mmObject();
+			type_lazy = () -> CashAccount19.mmObject();
+		}
+
+		@Override
+		public List<CashAccount19> getValue(CashProceeds1 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(CashProceeds1 obj, List<CashAccount19> value) {
+			obj.setAccountDetails(value);
 		}
 	};
 
@@ -249,7 +280,7 @@ public class CashProceeds1 {
 		return accountDetails == null ? accountDetails = new ArrayList<>() : accountDetails;
 	}
 
-	public CashProceeds1 setAccountDetails(List<com.tools20022.repository.msg.CashAccount19> accountDetails) {
+	public CashProceeds1 setAccountDetails(List<CashAccount19> accountDetails) {
 		this.accountDetails = Objects.requireNonNull(accountDetails);
 		return this;
 	}

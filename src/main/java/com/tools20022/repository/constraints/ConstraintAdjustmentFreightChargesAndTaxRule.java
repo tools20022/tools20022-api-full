@@ -52,11 +52,15 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 */
 	public static final MMConstraint<LineItem5> forLineItem5 = new MMConstraint<LineItem5>() {
 		{
-			validator = ConstraintAdjustmentFreightChargesAndTaxRule::checkLineItem5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only.";
 			owner_lazy = () -> LineItem5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem5 obj) throws Exception {
+			checkLineItem5(obj);
 		}
 	};
 	/**
@@ -89,12 +93,16 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 */
 	public static final MMConstraint<LineItem7> forLineItem7 = new MMConstraint<LineItem7>() {
 		{
-			validator = ConstraintAdjustmentFreightChargesAndTaxRule::checkLineItem7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11);
 			owner_lazy = () -> LineItem7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem7 obj) throws Exception {
+			checkLineItem7(obj);
 		}
 	};
 	/**
@@ -119,11 +127,15 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 */
 	public static final MMConstraint<LineItem4> forLineItem4 = new MMConstraint<LineItem4>() {
 		{
-			validator = ConstraintAdjustmentFreightChargesAndTaxRule::checkLineItem4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only.";
 			owner_lazy = () -> LineItem4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem4 obj) throws Exception {
+			checkLineItem4(obj);
 		}
 	};
 	/**
@@ -156,12 +168,16 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 */
 	public static final MMConstraint<LineItem9> forLineItem9 = new MMConstraint<LineItem9>() {
 		{
-			validator = ConstraintAdjustmentFreightChargesAndTaxRule::checkLineItem9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem12);
 			owner_lazy = () -> LineItem9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem9 obj) throws Exception {
+			checkLineItem9(obj);
 		}
 	};
 	/**
@@ -199,13 +215,17 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 */
 	public static final MMConstraint<LineItem11> forLineItem11 = new MMConstraint<LineItem11>() {
 		{
-			validator = ConstraintAdjustmentFreightChargesAndTaxRule::checkLineItem11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem7;
 			owner_lazy = () -> LineItem11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem11 obj) throws Exception {
+			checkLineItem11(obj);
 		}
 	};
 	/**
@@ -243,13 +263,17 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 */
 	public static final MMConstraint<LineItem12> forLineItem12 = new MMConstraint<LineItem12>() {
 		{
-			validator = ConstraintAdjustmentFreightChargesAndTaxRule::checkLineItem12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem15);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem9;
 			owner_lazy = () -> LineItem12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem12 obj) throws Exception {
+			checkLineItem12(obj);
 		}
 	};
 	/**
@@ -279,12 +303,16 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 */
 	public static final MMConstraint<LineItem13> forLineItem13 = new MMConstraint<LineItem13>() {
 		{
-			validator = ConstraintAdjustmentFreightChargesAndTaxRule::checkLineItem13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Adjustments, freight charges and taxes must be entered at this level, or adjustments, freight charges and taxes must be entered at line item level.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem11;
 			owner_lazy = () -> LineItem13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem13 obj) throws Exception {
+			checkLineItem13(obj);
 		}
 	};
 	/**
@@ -314,12 +342,16 @@ public class ConstraintAdjustmentFreightChargesAndTaxRule {
 	 */
 	public static final MMConstraint<LineItem15> forLineItem15 = new MMConstraint<LineItem15>() {
 		{
-			validator = ConstraintAdjustmentFreightChargesAndTaxRule::checkLineItem15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentFreightChargesAndTaxRule";
 			definition = "Either all adjustments, freight charges and taxes must be entered at this level only, or all adjustments, freight charges and taxes must be entered at line item level only.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdjustmentFreightChargesAndTaxRule.forLineItem12;
 			owner_lazy = () -> LineItem15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LineItem15 obj) throws Exception {
+			checkLineItem15(obj);
 		}
 	};
 

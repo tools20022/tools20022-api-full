@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentDetails17;
+import com.tools20022.repository.msg.SecuritiesAccount14;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -147,7 +149,7 @@ public class SubAccountIdentification34 {
 	 * SubAccountIdentification30.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubAccountIdentification34, Optional<PartyIdentification36Choice>> mmAccountOwner = new MMMessageAssociationEnd<SubAccountIdentification34, Optional<PartyIdentification36Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification34.mmObject();
@@ -162,6 +164,16 @@ public class SubAccountIdentification34 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification36Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification36Choice> getValue(SubAccountIdentification34 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification34 obj, Optional<PartyIdentification36Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -210,7 +222,7 @@ public class SubAccountIdentification34 {
 	 * SubAccountIdentification30.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubAccountIdentification34, SecuritiesAccount14> mmSafekeepingAccount = new MMMessageAssociationEnd<SubAccountIdentification34, SecuritiesAccount14>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification34.mmObject();
@@ -224,7 +236,17 @@ public class SubAccountIdentification34 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount14.mmObject();
+			type_lazy = () -> SecuritiesAccount14.mmObject();
+		}
+
+		@Override
+		public SecuritiesAccount14 getValue(SubAccountIdentification34 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification34 obj, SecuritiesAccount14 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -272,7 +294,7 @@ public class SubAccountIdentification34 {
 	 * SubAccountIdentification30.mmActivityIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubAccountIdentification34, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<SubAccountIdentification34, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification34.mmObject();
 			isDerived = false;
@@ -286,9 +308,19 @@ public class SubAccountIdentification34 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(SubAccountIdentification34 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification34 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
+		}
 	};
 	@XmlElement(name = "FinInstrmDtls")
-	protected List<com.tools20022.repository.msg.FinancialInstrumentDetails17> financialInstrumentDetails;
+	protected List<FinancialInstrumentDetails17> financialInstrumentDetails;
 	/**
 	 * 
 	 <p>
@@ -334,7 +366,7 @@ public class SubAccountIdentification34 {
 	 * SubAccountIdentification30.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SubAccountIdentification34, List<FinancialInstrumentDetails17>> mmFinancialInstrumentDetails = new MMMessageAssociationEnd<SubAccountIdentification34, List<FinancialInstrumentDetails17>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification34.mmObject();
@@ -347,7 +379,17 @@ public class SubAccountIdentification34 {
 			previousVersion_lazy = () -> SubAccountIdentification30.mmFinancialInstrumentDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDetails17.mmObject();
+			type_lazy = () -> FinancialInstrumentDetails17.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentDetails17> getValue(SubAccountIdentification34 obj) {
+			return obj.getFinancialInstrumentDetails();
+		}
+
+		@Override
+		public void setValue(SubAccountIdentification34 obj, List<FinancialInstrumentDetails17> value) {
+			obj.setFinancialInstrumentDetails(value);
 		}
 	};
 
@@ -382,7 +424,7 @@ public class SubAccountIdentification34 {
 		return safekeepingAccount;
 	}
 
-	public SubAccountIdentification34 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount14 safekeepingAccount) {
+	public SubAccountIdentification34 setSafekeepingAccount(SecuritiesAccount14 safekeepingAccount) {
 		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
 		return this;
 	}
@@ -400,7 +442,7 @@ public class SubAccountIdentification34 {
 		return financialInstrumentDetails == null ? financialInstrumentDetails = new ArrayList<>() : financialInstrumentDetails;
 	}
 
-	public SubAccountIdentification34 setFinancialInstrumentDetails(List<com.tools20022.repository.msg.FinancialInstrumentDetails17> financialInstrumentDetails) {
+	public SubAccountIdentification34 setFinancialInstrumentDetails(List<FinancialInstrumentDetails17> financialInstrumentDetails) {
 		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
 		return this;
 	}

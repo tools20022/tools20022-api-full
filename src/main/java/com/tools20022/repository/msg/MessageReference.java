@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * "MessageReference"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Message reference of relevance to the present message."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageReference2
+ * MessageReference2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,9 +113,17 @@ public class MessageReference {
 	 * definition} =
 	 * "Business reference of the present message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageReference2#mmReference
+	 * MessageReference2.mmReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MessageReference, Max35Text> mmReference = new MMMessageAttribute<MessageReference, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MessageReference.mmObject();
 			isDerived = false;
@@ -116,9 +131,20 @@ public class MessageReference {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Business reference of the present message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party.";
+			nextVersions_lazy = () -> Arrays.asList(MessageReference2.mmReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MessageReference obj) {
+			return obj.getReference();
+		}
+
+		@Override
+		public void setValue(MessageReference obj, Max35Text value) {
+			obj.setReference(value);
 		}
 	};
 
@@ -131,6 +157,7 @@ public class MessageReference {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageReference";
 				definition = "Message reference of relevance to the present message.";
+				nextVersions_lazy = () -> Arrays.asList(MessageReference2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

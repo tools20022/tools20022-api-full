@@ -110,7 +110,7 @@ public class AcknowledgementReason8 {
 	 * definition} = "Choice of format for the acknowledgement reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason8, AcknowledgementReason10Choice> mmCode = new MMMessageAttribute<AcknowledgementReason8, AcknowledgementReason10Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason8.mmObject();
@@ -122,6 +122,16 @@ public class AcknowledgementReason8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcknowledgementReason10Choice.mmObject();
+		}
+
+		@Override
+		public AcknowledgementReason10Choice getValue(AcknowledgementReason8 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason8 obj, AcknowledgementReason10Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -164,7 +174,7 @@ public class AcknowledgementReason8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementReason8, Optional<RestrictedFINXMax210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AcknowledgementReason8, Optional<RestrictedFINXMax210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcknowledgementReason8.mmObject();
@@ -177,6 +187,16 @@ public class AcknowledgementReason8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax210Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax210Text> getValue(AcknowledgementReason8 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AcknowledgementReason8 obj, Optional<RestrictedFINXMax210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Reservation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ReservationReport2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -73,7 +74,7 @@ public class Reservations2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "CurRsvatn")
-	protected List<com.tools20022.repository.msg.ReservationReport2> currentReservation;
+	protected List<ReservationReport2> currentReservation;
 	/**
 	 * 
 	 <p>
@@ -103,7 +104,7 @@ public class Reservations2 {
 	 * definition} = "Report is given for a current reservation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrentReservation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reservations2, List<ReservationReport2>> mmCurrentReservation = new MMMessageAssociationEnd<Reservations2, List<ReservationReport2>>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reservations2.mmObject();
@@ -114,11 +115,21 @@ public class Reservations2 {
 			definition = "Report is given for a current reservation.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReservationReport2.mmObject();
+			type_lazy = () -> ReservationReport2.mmObject();
+		}
+
+		@Override
+		public List<ReservationReport2> getValue(Reservations2 obj) {
+			return obj.getCurrentReservation();
+		}
+
+		@Override
+		public void setValue(Reservations2 obj, List<ReservationReport2> value) {
+			obj.setCurrentReservation(value);
 		}
 	};
 	@XmlElement(name = "DfltRsvatn")
-	protected List<com.tools20022.repository.msg.ReservationReport2> defaultReservation;
+	protected List<ReservationReport2> defaultReservation;
 	/**
 	 * 
 	 <p>
@@ -148,7 +159,7 @@ public class Reservations2 {
 	 * definition} = "Report is given for a default reservation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDefaultReservation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reservations2, List<ReservationReport2>> mmDefaultReservation = new MMMessageAssociationEnd<Reservations2, List<ReservationReport2>>() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Reservations2.mmObject();
@@ -159,7 +170,17 @@ public class Reservations2 {
 			definition = "Report is given for a default reservation.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReservationReport2.mmObject();
+			type_lazy = () -> ReservationReport2.mmObject();
+		}
+
+		@Override
+		public List<ReservationReport2> getValue(Reservations2 obj) {
+			return obj.getDefaultReservation();
+		}
+
+		@Override
+		public void setValue(Reservations2 obj, List<ReservationReport2> value) {
+			obj.setDefaultReservation(value);
 		}
 	};
 
@@ -181,7 +202,7 @@ public class Reservations2 {
 		return currentReservation == null ? currentReservation = new ArrayList<>() : currentReservation;
 	}
 
-	public Reservations2 setCurrentReservation(List<com.tools20022.repository.msg.ReservationReport2> currentReservation) {
+	public Reservations2 setCurrentReservation(List<ReservationReport2> currentReservation) {
 		this.currentReservation = Objects.requireNonNull(currentReservation);
 		return this;
 	}
@@ -190,7 +211,7 @@ public class Reservations2 {
 		return defaultReservation == null ? defaultReservation = new ArrayList<>() : defaultReservation;
 	}
 
-	public Reservations2 setDefaultReservation(List<com.tools20022.repository.msg.ReservationReport2> defaultReservation) {
+	public Reservations2 setDefaultReservation(List<ReservationReport2> defaultReservation) {
 		this.defaultReservation = Objects.requireNonNull(defaultReservation);
 		return this;
 	}

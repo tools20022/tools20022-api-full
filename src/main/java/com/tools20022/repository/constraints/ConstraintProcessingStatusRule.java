@@ -60,12 +60,16 @@ public class ConstraintProcessingStatusRule {
 	 */
 	public static final MMConstraint<IntraBalanceCancellation1> forIntraBalanceCancellation1 = new MMConstraint<IntraBalanceCancellation1>() {
 		{
-			validator = ConstraintProcessingStatusRule::checkIntraBalanceCancellation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatusRule";
 			definition = "ProcessingStatus must be present or Cancellation(*)/ProcessingStatus must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintProcessingStatusRule.forIntraBalanceCancellation3);
 			owner_lazy = () -> IntraBalanceCancellation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceCancellation1 obj) throws Exception {
+			checkIntraBalanceCancellation1(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintProcessingStatusRule {
 	 */
 	public static final MMConstraint<IntraBalanceModification1> forIntraBalanceModification1 = new MMConstraint<IntraBalanceModification1>() {
 		{
-			validator = ConstraintProcessingStatusRule::checkIntraBalanceModification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatusRule";
 			definition = "ProcessingStatus must be present or Cancellation(*)/ProcessingStatus must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintProcessingStatusRule.forIntraBalanceModification3);
 			owner_lazy = () -> IntraBalanceModification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceModification1 obj) throws Exception {
+			checkIntraBalanceModification1(obj);
 		}
 	};
 	/**
@@ -138,12 +146,16 @@ public class ConstraintProcessingStatusRule {
 	 */
 	public static final MMConstraint<IntraPositionModification1> forIntraPositionModification1 = new MMConstraint<IntraPositionModification1>() {
 		{
-			validator = ConstraintProcessingStatusRule::checkIntraPositionModification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatusRule";
 			definition = "ProcessingStatus must be present or Modification(*)/ProcessingStatus must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintProcessingStatusRule.forIntraPositionModification3);
 			owner_lazy = () -> IntraPositionModification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionModification1 obj) throws Exception {
+			checkIntraPositionModification1(obj);
 		}
 	};
 	/**
@@ -177,12 +189,16 @@ public class ConstraintProcessingStatusRule {
 	 */
 	public static final MMConstraint<IntraPositionCancellation1> forIntraPositionCancellation1 = new MMConstraint<IntraPositionCancellation1>() {
 		{
-			validator = ConstraintProcessingStatusRule::checkIntraPositionCancellation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatusRule";
 			definition = "ProcessingStatus must be present or Cancellation(*)/ProcessingStatus must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintProcessingStatusRule.forIntraPositionCancellation3);
 			owner_lazy = () -> IntraPositionCancellation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionCancellation1 obj) throws Exception {
+			checkIntraPositionCancellation1(obj);
 		}
 	};
 	/**
@@ -213,12 +229,16 @@ public class ConstraintProcessingStatusRule {
 	 */
 	public static final MMConstraint<IntraPositionModification3> forIntraPositionModification3 = new MMConstraint<IntraPositionModification3>() {
 		{
-			validator = ConstraintProcessingStatusRule::checkIntraPositionModification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatusRule";
 			definition = "ProcessingStatus must be present or Modification(*)/ProcessingStatus must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintProcessingStatusRule.forIntraPositionModification1;
 			owner_lazy = () -> IntraPositionModification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionModification3 obj) throws Exception {
+			checkIntraPositionModification3(obj);
 		}
 	};
 	/**
@@ -249,12 +269,16 @@ public class ConstraintProcessingStatusRule {
 	 */
 	public static final MMConstraint<IntraPositionCancellation3> forIntraPositionCancellation3 = new MMConstraint<IntraPositionCancellation3>() {
 		{
-			validator = ConstraintProcessingStatusRule::checkIntraPositionCancellation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatusRule";
 			definition = "ProcessingStatus must be present or Cancellation(*)/ProcessingStatus must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintProcessingStatusRule.forIntraPositionCancellation1;
 			owner_lazy = () -> IntraPositionCancellation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionCancellation3 obj) throws Exception {
+			checkIntraPositionCancellation3(obj);
 		}
 	};
 	/**
@@ -285,12 +309,16 @@ public class ConstraintProcessingStatusRule {
 	 */
 	public static final MMConstraint<IntraBalanceCancellation3> forIntraBalanceCancellation3 = new MMConstraint<IntraBalanceCancellation3>() {
 		{
-			validator = ConstraintProcessingStatusRule::checkIntraBalanceCancellation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatusRule";
 			definition = "ProcessingStatus must be present or Cancellation(*)/ProcessingStatus must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintProcessingStatusRule.forIntraBalanceCancellation1;
 			owner_lazy = () -> IntraBalanceCancellation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceCancellation3 obj) throws Exception {
+			checkIntraBalanceCancellation3(obj);
 		}
 	};
 	/**
@@ -321,12 +349,16 @@ public class ConstraintProcessingStatusRule {
 	 */
 	public static final MMConstraint<IntraBalanceModification3> forIntraBalanceModification3 = new MMConstraint<IntraBalanceModification3>() {
 		{
-			validator = ConstraintProcessingStatusRule::checkIntraBalanceModification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatusRule";
 			definition = "ProcessingStatus must be present or Cancellation(*)/ProcessingStatus must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintProcessingStatusRule.forIntraBalanceModification1;
 			owner_lazy = () -> IntraBalanceModification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraBalanceModification3 obj) throws Exception {
+			checkIntraBalanceModification3(obj);
 		}
 	};
 

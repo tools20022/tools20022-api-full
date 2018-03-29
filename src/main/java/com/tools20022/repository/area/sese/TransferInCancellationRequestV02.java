@@ -21,7 +21,6 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -201,7 +200,7 @@ public class TransferInCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV02, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<TransferInCancellationRequestV02, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +211,14 @@ public class TransferInCancellationRequestV02 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV02.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(TransferInCancellationRequestV02 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV02 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -245,7 +246,7 @@ public class TransferInCancellationRequestV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<AdditionalReference2>> mmPreviousReference = new MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,12 +257,14 @@ public class TransferInCancellationRequestV02 {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(TransferInCancellationRequestV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV02 obj, Optional<AdditionalReference2> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -289,7 +292,7 @@ public class TransferInCancellationRequestV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<AdditionalReference2>> mmPoolReference = new MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,12 +303,14 @@ public class TransferInCancellationRequestV02 {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV02.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(TransferInCancellationRequestV02 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV02 obj, Optional<AdditionalReference2> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -334,7 +339,7 @@ public class TransferInCancellationRequestV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<AdditionalReference2>> mmRelatedReference = new MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -345,12 +350,14 @@ public class TransferInCancellationRequestV02 {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(TransferInCancellationRequestV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV02 obj, Optional<AdditionalReference2> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlByRef")
@@ -378,7 +385,7 @@ public class TransferInCancellationRequestV02 {
 	 * definition} = "Reference of the transfer to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationByReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<TransferReference1>> mmCancellationByReference = new MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<TransferReference1>>() {
 		{
 			xmlTag = "CxlByRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -389,12 +396,14 @@ public class TransferInCancellationRequestV02 {
 			complexType_lazy = () -> TransferReference1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV02.class.getMethod("getCancellationByReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransferReference1> getValue(TransferInCancellationRequestV02 obj) {
+			return obj.getCancellationByReference();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV02 obj, Optional<TransferReference1> value) {
+			obj.setCancellationByReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlByTrfInDtls")
@@ -421,7 +430,7 @@ public class TransferInCancellationRequestV02 {
 	 * definition} = "The transfer in request message to cancel."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationByTransferInDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<TransferIn3>> mmCancellationByTransferInDetails = new MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<TransferIn3>>() {
 		{
 			xmlTag = "CxlByTrfInDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,12 +441,14 @@ public class TransferInCancellationRequestV02 {
 			complexType_lazy = () -> TransferIn3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV02.class.getMethod("getCancellationByTransferInDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransferIn3> getValue(TransferInCancellationRequestV02 obj) {
+			return obj.getCancellationByTransferInDetails();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV02 obj, Optional<TransferIn3> value) {
+			obj.setCancellationByTransferInDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -466,7 +477,7 @@ public class TransferInCancellationRequestV02 {
 	 * "Information provided when the message is a copy of a previous message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<CopyInformation2>> mmCopyDetails = new MMMessageBuildingBlock<TransferInCancellationRequestV02, Optional<CopyInformation2>>() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -477,12 +488,14 @@ public class TransferInCancellationRequestV02 {
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TransferInCancellationRequestV02.class.getMethod("getCopyDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyInformation2> getValue(TransferInCancellationRequestV02 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(TransferInCancellationRequestV02 obj, Optional<CopyInformation2> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 

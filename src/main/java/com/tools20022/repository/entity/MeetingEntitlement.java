@@ -21,9 +21,10 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.Entitlement1Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Number;
+import com.tools20022.repository.entity.MeetingServicing;
+import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -172,11 +173,11 @@ public class MeetingEntitlement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date."
+	 * "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date..."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEntitlementFixingDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<MeetingEntitlement, ISODate> mmEntitlementFixingDate = new MMBusinessAttribute<MeetingEntitlement, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(HoldingBalance2.mmDate, HoldingBalance3.mmDate, EntitlementAssessment1.mmEntitlementFixingDate, HoldingBalance6.mmDate, EntitlementAssessment2.mmEntitlementFixingDate,
 					EligibilityDates1.mmEntitlementFixingDate, EntitlementAssessment3.mmEntitlementFixingDate, HoldingBalance7.mmDate);
@@ -184,18 +185,20 @@ public class MeetingEntitlement {
 			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntitlementFixingDate";
-			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date.";
+			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date...";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingEntitlement.class.getMethod("getEntitlementFixingDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(MeetingEntitlement obj) {
+			return obj.getEntitlementFixingDate();
+		}
+
+		@Override
+		public void setValue(MeetingEntitlement obj, ISODate value) {
+			obj.setEntitlementFixingDate(value);
 		}
 	};
 	protected Number entitlementRatio;
@@ -238,7 +241,7 @@ public class MeetingEntitlement {
 	 * definition} = "Number of votes assigned to one security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEntitlementRatio = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<MeetingEntitlement, Number> mmEntitlementRatio = new MMBusinessAttribute<MeetingEntitlement, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(EntitlementAssessment.mmEntitlementRatio, EntitlementAssessment1.mmEntitlementRatio, Entitlement1Choice.mmEntitlementRatio);
 			isDerived = false;
@@ -251,15 +254,17 @@ public class MeetingEntitlement {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingEntitlement.class.getMethod("getEntitlementRatio", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(MeetingEntitlement obj) {
+			return obj.getEntitlementRatio();
+		}
+
+		@Override
+		public void setValue(MeetingEntitlement obj, Number value) {
+			obj.setEntitlementRatio(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SecuritiesBalance> eligiblePosition;
+	protected List<SecuritiesBalance> eligiblePosition;
 	/**
 	 * 
 	 <p>
@@ -293,7 +298,7 @@ public class MeetingEntitlement {
 	 * definition} = "Amount of securities that are eligible for the vote."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmEligiblePosition = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<MeetingEntitlement, List<SecuritiesBalance>> mmEligiblePosition = new MMBusinessAssociationEnd<MeetingEntitlement, List<SecuritiesBalance>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmObject();
@@ -301,9 +306,19 @@ public class MeetingEntitlement {
 			name = "EligiblePosition";
 			definition = "Amount of securities that are eligible for the vote.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmRelatedMeetingEntitlement;
+			opposite_lazy = () -> SecuritiesBalance.mmRelatedMeetingEntitlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
+			type_lazy = () -> SecuritiesBalance.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesBalance> getValue(MeetingEntitlement obj) {
+			return obj.getEligiblePosition();
+		}
+
+		@Override
+		public void setValue(MeetingEntitlement obj, List<SecuritiesBalance> value) {
+			obj.setEligiblePosition(value);
 		}
 	};
 	protected MeetingServicing relatedServicing;
@@ -340,7 +355,7 @@ public class MeetingEntitlement {
 	 * definition} = "Services which include the entitlement calculation."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedServicing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<MeetingEntitlement, MeetingServicing> mmRelatedServicing = new MMBusinessAssociationEnd<MeetingEntitlement, MeetingServicing>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmObject();
@@ -349,9 +364,19 @@ public class MeetingEntitlement {
 			definition = "Services which include the entitlement calculation.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.MeetingServicing.mmMeetingEntitlement;
+			opposite_lazy = () -> MeetingServicing.mmMeetingEntitlement;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.MeetingServicing.mmObject();
+			type_lazy = () -> MeetingServicing.mmObject();
+		}
+
+		@Override
+		public MeetingServicing getValue(MeetingEntitlement obj) {
+			return obj.getRelatedServicing();
+		}
+
+		@Override
+		public void setValue(MeetingEntitlement obj, MeetingServicing value) {
+			obj.setRelatedServicing(value);
 		}
 	};
 	protected ISODate entitlementCalculationDate;
@@ -380,7 +405,7 @@ public class MeetingEntitlement {
 	 * definition} = "Date at which the positions are calculated."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEntitlementCalculationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<MeetingEntitlement, ISODate> mmEntitlementCalculationDate = new MMBusinessAttribute<MeetingEntitlement, ISODate>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmObject();
@@ -392,12 +417,14 @@ public class MeetingEntitlement {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MeetingEntitlement.class.getMethod("getEntitlementCalculationDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(MeetingEntitlement obj) {
+			return obj.getEntitlementCalculationDate();
+		}
+
+		@Override
+		public void setValue(MeetingEntitlement obj, ISODate value) {
+			obj.setEntitlementCalculationDate(value);
 		}
 	};
 
@@ -408,7 +435,7 @@ public class MeetingEntitlement {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingEntitlement";
 				definition = "Notification of the entitlement that one party has in relation with a specific meeting.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesBalance.mmRelatedMeetingEntitlement, com.tools20022.repository.entity.MeetingServicing.mmMeetingEntitlement);
+				associationDomain_lazy = () -> Arrays.asList(SecuritiesBalance.mmRelatedMeetingEntitlement, MeetingServicing.mmMeetingEntitlement);
 				derivationElement_lazy = () -> Arrays.asList(Entitlement1Choice.mmEntitlementDescription, EntitlementAssessment2.mmEntitlement, EntitlementAssessment3.mmEntitlement, Resolution3.mmEntitlement);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementFixingDate, com.tools20022.repository.entity.MeetingEntitlement.mmEntitlementRatio,
 						com.tools20022.repository.entity.MeetingEntitlement.mmEligiblePosition, com.tools20022.repository.entity.MeetingEntitlement.mmRelatedServicing,
@@ -446,7 +473,7 @@ public class MeetingEntitlement {
 		return eligiblePosition == null ? eligiblePosition = new ArrayList<>() : eligiblePosition;
 	}
 
-	public MeetingEntitlement setEligiblePosition(List<com.tools20022.repository.entity.SecuritiesBalance> eligiblePosition) {
+	public MeetingEntitlement setEligiblePosition(List<SecuritiesBalance> eligiblePosition) {
 		this.eligiblePosition = Objects.requireNonNull(eligiblePosition);
 		return this;
 	}
@@ -455,7 +482,7 @@ public class MeetingEntitlement {
 		return relatedServicing;
 	}
 
-	public MeetingEntitlement setRelatedServicing(com.tools20022.repository.entity.MeetingServicing relatedServicing) {
+	public MeetingEntitlement setRelatedServicing(MeetingServicing relatedServicing) {
 		this.relatedServicing = Objects.requireNonNull(relatedServicing);
 		return this;
 	}

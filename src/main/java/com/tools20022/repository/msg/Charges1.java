@@ -105,7 +105,7 @@ public class Charges1 {
 	 * definition} = "Type of charges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charges1, Optional<ChargeType2FormatChoice>> mmType = new MMMessageAttribute<Charges1, Optional<ChargeType2FormatChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charges1.mmObject();
@@ -117,6 +117,16 @@ public class Charges1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ChargeType2FormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeType2FormatChoice> getValue(Charges1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Charges1 obj, Optional<ChargeType2FormatChoice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -153,7 +163,7 @@ public class Charges1 {
 	 * definition} = "Amount of charges."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charges1, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Charges1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charges1.mmObject();
@@ -165,6 +175,16 @@ public class Charges1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Charges1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Charges1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

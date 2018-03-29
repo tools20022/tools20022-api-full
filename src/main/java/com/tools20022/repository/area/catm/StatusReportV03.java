@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.ContentInformationType9;
 import com.tools20022.repository.msg.Header4;
 import com.tools20022.repository.msg.StatusReport3;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -136,7 +135,7 @@ public class StatusReportV03 {
 	 * StatusReportV02.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusReportV03, Header4> mmHeader = new MMMessageBuildingBlock<StatusReportV03, Header4>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,12 +148,14 @@ public class StatusReportV03 {
 			complexType_lazy = () -> Header4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusReportV03.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header4 getValue(StatusReportV03 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(StatusReportV03 obj, Header4 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "StsRpt", required = true)
@@ -196,7 +197,7 @@ public class StatusReportV03 {
 	 * StatusReportV02.mmStatusReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusReportV03, StatusReport3> mmStatusReport = new MMMessageBuildingBlock<StatusReportV03, StatusReport3>() {
 		{
 			xmlTag = "StsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,12 +210,14 @@ public class StatusReportV03 {
 			complexType_lazy = () -> StatusReport3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusReportV03.class.getMethod("getStatusReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public StatusReport3 getValue(StatusReportV03 obj) {
+			return obj.getStatusReport();
+		}
+
+		@Override
+		public void setValue(StatusReportV03 obj, StatusReport3 value) {
+			obj.setStatusReport(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -256,7 +259,7 @@ public class StatusReportV03 {
 	 * StatusReportV02.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<StatusReportV03, ContentInformationType9> mmSecurityTrailer = new MMMessageBuildingBlock<StatusReportV03, ContentInformationType9>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +272,14 @@ public class StatusReportV03 {
 			complexType_lazy = () -> ContentInformationType9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return StatusReportV03.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType9 getValue(StatusReportV03 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(StatusReportV03 obj, ContentInformationType9 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.PaymentCategoryPurpose1Code;
 import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ServiceLevel4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public class PaymentTypeInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation13, ServiceLevel4> mmServiceLevel = new MMMessageAssociationEnd<PaymentTypeInformation13, ServiceLevel4>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation13.mmObject();
@@ -123,7 +124,17 @@ public class PaymentTypeInformation13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ServiceLevel4.mmObject();
+			type_lazy = () -> ServiceLevel4.mmObject();
+		}
+
+		@Override
+		public ServiceLevel4 getValue(PaymentTypeInformation13 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation13 obj, ServiceLevel4 value) {
+			obj.setServiceLevel(value);
 		}
 	};
 	@XmlElement(name = "CtgyPurp")
@@ -163,7 +174,7 @@ public class PaymentTypeInformation13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation13, Optional<PaymentCategoryPurpose1Code>> mmCategoryPurpose = new MMMessageAttribute<PaymentTypeInformation13, Optional<PaymentCategoryPurpose1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmCategoryPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation13.mmObject();
@@ -175,6 +186,16 @@ public class PaymentTypeInformation13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCategoryPurpose1Code> getValue(PaymentTypeInformation13 obj) {
+			return obj.getCategoryPurpose();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation13 obj, Optional<PaymentCategoryPurpose1Code> value) {
+			obj.setCategoryPurpose(value.orElse(null));
 		}
 	};
 
@@ -196,7 +217,7 @@ public class PaymentTypeInformation13 {
 		return serviceLevel;
 	}
 
-	public PaymentTypeInformation13 setServiceLevel(com.tools20022.repository.msg.ServiceLevel4 serviceLevel) {
+	public PaymentTypeInformation13 setServiceLevel(ServiceLevel4 serviceLevel) {
 		this.serviceLevel = Objects.requireNonNull(serviceLevel);
 		return this;
 	}

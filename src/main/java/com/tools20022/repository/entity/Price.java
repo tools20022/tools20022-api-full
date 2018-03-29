@@ -24,9 +24,9 @@ import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.codeset.UnitOfMeasureCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.datatype.Max15NumericText;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -449,7 +449,7 @@ public class Price {
 	 * definition} = "Price expressed as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Price, CurrencyAndAmount> mmAmount = new MMBusinessAttribute<Price, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriceValue1.mmAmount, PriceValue2.mmAmount, PriceValueChange1.mmAmount, PriceValue5.mmAmount, PriceFormat5Choice.mmAmountPrice, PriceFormat9Choice.mmAmountPrice,
 					PriceFormat17Choice.mmAmountPrice, PriceFormat18Choice.mmAmountPrice, PriceFormat21Choice.mmAmountPrice, PriceFormat24Choice.mmAmountPrice, PriceFormat6Choice.mmAmountPrice, PriceFormat7Choice.mmAmountPrice,
@@ -472,12 +472,14 @@ public class Price {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Price.class.getMethod("getAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Price obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Price obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	protected Option option;
@@ -512,7 +514,7 @@ public class Price {
 	 * definition} = "Option for which a strike price is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Price, Option> mmOption = new MMBusinessAssociationEnd<Price, Option>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
@@ -521,9 +523,19 @@ public class Price {
 			definition = "Option for which a strike price is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Option.mmStrikePrice;
+			opposite_lazy = () -> Option.mmStrikePrice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
+			type_lazy = () -> Option.mmObject();
+		}
+
+		@Override
+		public Option getValue(Price obj) {
+			return obj.getOption();
+		}
+
+		@Override
+		public void setValue(Price obj, Option value) {
+			obj.setOption(value);
 		}
 	};
 	protected Product unitPriceProduct;
@@ -558,7 +570,7 @@ public class Price {
 	 * definition} = "Product for which a unit price is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmUnitPriceProduct = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Price, Optional<Product>> mmUnitPriceProduct = new MMBusinessAssociationEnd<Price, Optional<Product>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
@@ -567,9 +579,19 @@ public class Price {
 			definition = "Product for which a unit price is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmUnitPrice;
+			opposite_lazy = () -> Product.mmUnitPrice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
+			type_lazy = () -> Product.mmObject();
+		}
+
+		@Override
+		public Optional<Product> getValue(Price obj) {
+			return obj.getUnitPriceProduct();
+		}
+
+		@Override
+		public void setValue(Price obj, Optional<Product> value) {
+			obj.setUnitPriceProduct(value.orElse(null));
 		}
 	};
 	protected Product netPriceProduct;
@@ -604,7 +626,7 @@ public class Price {
 	 * definition} = "Product for which a net price is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNetPriceProduct = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Price, Optional<Product>> mmNetPriceProduct = new MMBusinessAssociationEnd<Price, Optional<Product>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
@@ -613,12 +635,22 @@ public class Price {
 			definition = "Product for which a net price is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmNetPrice;
+			opposite_lazy = () -> Product.mmNetPrice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
+			type_lazy = () -> Product.mmObject();
+		}
+
+		@Override
+		public Optional<Product> getValue(Price obj) {
+			return obj.getNetPriceProduct();
+		}
+
+		@Override
+		public void setValue(Price obj, Optional<Product> value) {
+			obj.setNetPriceProduct(value.orElse(null));
 		}
 	};
-	protected List<com.tools20022.repository.entity.Adjustment> priceAdjustment;
+	protected List<Adjustment> priceAdjustment;
 	/**
 	 * 
 	 <p>
@@ -717,7 +749,7 @@ public class Price {
 	 * definition} = "Variance on price for the goods and services."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPriceAdjustment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Price, List<Adjustment>> mmPriceAdjustment = new MMBusinessAssociationEnd<Price, List<Adjustment>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmNetPriceAllowanceCharge, LineItemDetails4.mmAdjustment, LineItem5.mmAdjustment, LineItemDetails7.mmAdjustment, LineItem7.mmAdjustment, LineItemDetails6.mmAdjustment,
 					LineItem4.mmAdjustment, LineItemDetails9.mmAdjustment, LineItem9.mmAdjustment, ReportLine3.mmAdjustment, ReportLine2.mmAdjustment, ReportLine4.mmAdjustment, LineItem11.mmAdjustment, LineItemDetails10.mmAdjustment,
@@ -729,9 +761,19 @@ public class Price {
 			name = "PriceAdjustment";
 			definition = "Variance on price for the goods and services.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Adjustment.mmPrice;
+			opposite_lazy = () -> Adjustment.mmPrice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
+			type_lazy = () -> Adjustment.mmObject();
+		}
+
+		@Override
+		public List<Adjustment> getValue(Price obj) {
+			return obj.getPriceAdjustment();
+		}
+
+		@Override
+		public void setValue(Price obj, List<Adjustment> value) {
+			obj.setPriceAdjustment(value);
 		}
 	};
 	protected Product grossPriceProduct;
@@ -766,7 +808,7 @@ public class Price {
 	 * definition} = "Product for which a gross price is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmGrossPriceProduct = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Price, Optional<Product>> mmGrossPriceProduct = new MMBusinessAssociationEnd<Price, Optional<Product>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
@@ -775,9 +817,19 @@ public class Price {
 			definition = "Product for which a gross price is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Product.mmGrossPrice;
+			opposite_lazy = () -> Product.mmGrossPrice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
+			type_lazy = () -> Product.mmObject();
+		}
+
+		@Override
+		public Optional<Product> getValue(Price obj) {
+			return obj.getGrossPriceProduct();
+		}
+
+		@Override
+		public void setValue(Price obj, Optional<Product> value) {
+			obj.setGrossPriceProduct(value.orElse(null));
 		}
 	};
 	protected UnitOfMeasureCode unitOfMeasure;
@@ -828,7 +880,7 @@ public class Price {
 	 * "Specifies the unit of measurement. For example: kilo, tons."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmUnitOfMeasure = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Price, UnitOfMeasureCode> mmUnitOfMeasure = new MMBusinessAttribute<Price, UnitOfMeasureCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnitPrice8.mmUnitOfMeasureCode, UnitPrice8.mmOtherUnitOfMeasure, UnitPrice9.mmUnitOfMeasureCode, UnitPrice9.mmOtherUnitOfMeasure, UnitPrice18.mmUnitPrice, ContractSize1.mmUnit);
 			isDerived = false;
@@ -841,12 +893,14 @@ public class Price {
 			simpleType_lazy = () -> UnitOfMeasureCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Price.class.getMethod("getUnitOfMeasure", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnitOfMeasureCode getValue(Price obj) {
+			return obj.getUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(Price obj, UnitOfMeasureCode value) {
+			obj.setUnitOfMeasure(value);
 		}
 	};
 	protected Tolerance priceTolerance;
@@ -908,7 +962,7 @@ public class Price {
 	 * definition} = "Variance allowed on the price of goods."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPriceTolerance = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Price, Tolerance> mmPriceTolerance = new MMBusinessAssociationEnd<Price, Tolerance>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItemDetails4.mmPriceTolerance, LineItemDetails7.mmPriceTolerance, LineItemDetails5.mmPriceTolerance, LineItemDetails8.mmPriceTolerance, LineItemDetails10.mmPriceTolerance,
 					LineItemDetails13.mmPriceTolerance, LineItemDetails12.mmPriceTolerance);
@@ -919,9 +973,19 @@ public class Price {
 			definition = "Variance allowed on the price of goods.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Tolerance.mmPrice;
+			opposite_lazy = () -> Tolerance.mmPrice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Tolerance.mmObject();
+			type_lazy = () -> Tolerance.mmObject();
+		}
+
+		@Override
+		public Tolerance getValue(Price obj) {
+			return obj.getPriceTolerance();
+		}
+
+		@Override
+		public void setValue(Price obj, Tolerance value) {
+			obj.setPriceTolerance(value);
 		}
 	};
 	protected CurrencyCode currency;
@@ -962,7 +1026,7 @@ public class Price {
 	 * definition} = "Currency code in which the price is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Price, CurrencyCode> mmCurrency = new MMBusinessAttribute<Price, CurrencyCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingPrice1.mmCurrency, ATMCassetteCounters1.mmCurrency, ATMCassetteCounters3.mmCurrency);
 			isDerived = false;
@@ -975,12 +1039,14 @@ public class Price {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Price.class.getMethod("getCurrency", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyCode getValue(Price obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(Price obj, CurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 	protected Max15NumericText factor;
@@ -1010,7 +1076,7 @@ public class Price {
 	 * "Multiplication factor of measurement values. For example: 36 pieces."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFactor = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Price, Max15NumericText> mmFactor = new MMBusinessAttribute<Price, Max15NumericText>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
@@ -1022,12 +1088,14 @@ public class Price {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Price.class.getMethod("getFactor", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max15NumericText getValue(Price obj) {
+			return obj.getFactor();
+		}
+
+		@Override
+		public void setValue(Price obj, Max15NumericText value) {
+			obj.setFactor(value);
 		}
 	};
 	protected Netting netting;
@@ -1062,7 +1130,7 @@ public class Price {
 	 * definition} = "Netting for which an average price is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNetting = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Price, Optional<Netting>> mmNetting = new MMBusinessAssociationEnd<Price, Optional<Netting>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
@@ -1071,9 +1139,19 @@ public class Price {
 			definition = "Netting for which an average price is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Netting.mmAverageDealPrice;
+			opposite_lazy = () -> Netting.mmAverageDealPrice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Netting.mmObject();
+			type_lazy = () -> Netting.mmObject();
+		}
+
+		@Override
+		public Optional<Netting> getValue(Price obj) {
+			return obj.getNetting();
+		}
+
+		@Override
+		public void setValue(Price obj, Optional<Netting> value) {
+			obj.setNetting(value.orElse(null));
 		}
 	};
 	protected SecuritiesPricing securitiesPricing;
@@ -1198,7 +1276,7 @@ public class Price {
 	 * definition} = "Pricing parameters for a security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSecuritiesPricing = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Price, SecuritiesPricing> mmSecuritiesPricing = new MMBusinessAssociationEnd<Price, SecuritiesPricing>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmStrikePrice, FinancialInstrumentAttributes20.mmStrikePrice, FinancialInstrumentAttributes35.mmStrikePrice, FinancialInstrumentAttributes41.mmStrikePrice,
 					FinancialInstrumentAttributes4.mmStrikePrice, FinancialInstrumentAttributes13.mmStrikePrice, FinancialInstrumentAttributes21.mmStrikePrice, FinancialInstrumentAttributes26.mmStrikePrice,
@@ -1214,9 +1292,19 @@ public class Price {
 			definition = "Pricing parameters for a security.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmPrice;
+			opposite_lazy = () -> SecuritiesPricing.mmPrice;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SecuritiesPricing.mmObject();
+			type_lazy = () -> SecuritiesPricing.mmObject();
+		}
+
+		@Override
+		public SecuritiesPricing getValue(Price obj) {
+			return obj.getSecuritiesPricing();
+		}
+
+		@Override
+		public void setValue(Price obj, SecuritiesPricing value) {
+			obj.setSecuritiesPricing(value);
 		}
 	};
 
@@ -1228,9 +1316,7 @@ public class Price {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Price";
 				definition = "Amount of money for which goods, services or assets are offered, sold, or bought.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmPrice, com.tools20022.repository.entity.Product.mmUnitPrice, com.tools20022.repository.entity.Product.mmNetPrice,
-						com.tools20022.repository.entity.Product.mmGrossPrice, com.tools20022.repository.entity.Adjustment.mmPrice, com.tools20022.repository.entity.Option.mmStrikePrice, com.tools20022.repository.entity.Tolerance.mmPrice,
-						com.tools20022.repository.entity.Netting.mmAverageDealPrice);
+				associationDomain_lazy = () -> Arrays.asList(SecuritiesPricing.mmPrice, Product.mmUnitPrice, Product.mmNetPrice, Product.mmGrossPrice, Adjustment.mmPrice, Option.mmStrikePrice, Tolerance.mmPrice, Netting.mmAverageDealPrice);
 				derivationElement_lazy = () -> Arrays.asList(PriceValuation2.mmPriceDetails, PriceValuation3.mmPriceDetails, OtherPrices1.mmMaximum, OtherPrices1.mmTransaction, OtherPrices1.mmMarkedUp, OtherPrices1.mmMarkedDown,
 						OtherPrices1.mmNetDisclosed, OtherPrices1.mmNetUndisclosed, OtherPrices1.mmNotionalGross, OtherPrices1.mmBenchmarkWeightedAverage, OtherPrices1.mmAllMarketsWeightedAverage, OtherPrices1.mmBenchmark,
 						OtherPrices1.mmOtherPrice, OtherPrices1.mmIndexPrice, OtherPrices1.mmReportedPrice, OtherPrices1.mmReferencePrice, ProprietaryPrice1.mmPrice, ProprietaryPrice2.mmPrice, BillingPrice1.mmUnitPrice,
@@ -1267,7 +1353,7 @@ public class Price {
 		return option;
 	}
 
-	public Price setOption(com.tools20022.repository.entity.Option option) {
+	public Price setOption(Option option) {
 		this.option = Objects.requireNonNull(option);
 		return this;
 	}
@@ -1276,7 +1362,7 @@ public class Price {
 		return unitPriceProduct == null ? Optional.empty() : Optional.of(unitPriceProduct);
 	}
 
-	public Price setUnitPriceProduct(com.tools20022.repository.entity.Product unitPriceProduct) {
+	public Price setUnitPriceProduct(Product unitPriceProduct) {
 		this.unitPriceProduct = unitPriceProduct;
 		return this;
 	}
@@ -1285,7 +1371,7 @@ public class Price {
 		return netPriceProduct == null ? Optional.empty() : Optional.of(netPriceProduct);
 	}
 
-	public Price setNetPriceProduct(com.tools20022.repository.entity.Product netPriceProduct) {
+	public Price setNetPriceProduct(Product netPriceProduct) {
 		this.netPriceProduct = netPriceProduct;
 		return this;
 	}
@@ -1294,7 +1380,7 @@ public class Price {
 		return priceAdjustment == null ? priceAdjustment = new ArrayList<>() : priceAdjustment;
 	}
 
-	public Price setPriceAdjustment(List<com.tools20022.repository.entity.Adjustment> priceAdjustment) {
+	public Price setPriceAdjustment(List<Adjustment> priceAdjustment) {
 		this.priceAdjustment = Objects.requireNonNull(priceAdjustment);
 		return this;
 	}
@@ -1303,7 +1389,7 @@ public class Price {
 		return grossPriceProduct == null ? Optional.empty() : Optional.of(grossPriceProduct);
 	}
 
-	public Price setGrossPriceProduct(com.tools20022.repository.entity.Product grossPriceProduct) {
+	public Price setGrossPriceProduct(Product grossPriceProduct) {
 		this.grossPriceProduct = grossPriceProduct;
 		return this;
 	}
@@ -1321,7 +1407,7 @@ public class Price {
 		return priceTolerance;
 	}
 
-	public Price setPriceTolerance(com.tools20022.repository.entity.Tolerance priceTolerance) {
+	public Price setPriceTolerance(Tolerance priceTolerance) {
 		this.priceTolerance = Objects.requireNonNull(priceTolerance);
 		return this;
 	}
@@ -1348,7 +1434,7 @@ public class Price {
 		return netting == null ? Optional.empty() : Optional.of(netting);
 	}
 
-	public Price setNetting(com.tools20022.repository.entity.Netting netting) {
+	public Price setNetting(Netting netting) {
 		this.netting = netting;
 		return this;
 	}
@@ -1357,7 +1443,7 @@ public class Price {
 		return securitiesPricing;
 	}
 
-	public Price setSecuritiesPricing(com.tools20022.repository.entity.SecuritiesPricing securitiesPricing) {
+	public Price setSecuritiesPricing(SecuritiesPricing securitiesPricing) {
 		this.securitiesPricing = Objects.requireNonNull(securitiesPricing);
 		return this;
 	}

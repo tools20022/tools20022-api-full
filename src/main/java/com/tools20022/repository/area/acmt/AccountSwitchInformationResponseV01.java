@@ -25,7 +25,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.AccountManagementLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.AccountSwitching;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -37,7 +36,9 @@ import javax.xml.bind.annotation.*;
  * The AccountSwitchInformationResponse message is sent by the account servicer
  * that previously held the account to the new account servicer to signal
  * whether the account owner's account can be switched and to pass details of
- * payment arrangements to be transferred to the new account servicer.
+ * payment arrangements to be transferred to the new account servicer if the
+ * account may be switched. Confirmation of the balance transfer window is
+ * permitted by the old account servicer.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -97,7 +98,7 @@ import javax.xml.bind.annotation.*;
  * "AccountSwitchInformationResponseV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AccountSwitchInformationResponse message is sent by the account servicer that previously held the account to the new account servicer to signal whether the account owner's account can be switched and to pass details of payment arrangements to be transferred to the new account servicer."
+ * "The AccountSwitchInformationResponse message is sent by the account servicer that previously held the account to the new account servicer to signal whether the account owner's account can be switched and to pass details of payment arrangements to be transferred to the new account servicer if the account may be switched. Confirmation of the balance transfer window is permitted by the old account servicer."
  * </li>
  * </ul>
  */
@@ -131,7 +132,7 @@ public class AccountSwitchInformationResponseV01 {
 	 * definition} = "Unique identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchInformationResponseV01, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<AccountSwitchInformationResponseV01, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +143,14 @@ public class AccountSwitchInformationResponseV01 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchInformationResponseV01.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(AccountSwitchInformationResponseV01 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(AccountSwitchInformationResponseV01 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSwtchDtls", required = true)
@@ -176,7 +179,7 @@ public class AccountSwitchInformationResponseV01 {
 	 * "Contains information about the details of the account switch."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountSwitchDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchInformationResponseV01, AccountSwitchDetails1> mmAccountSwitchDetails = new MMMessageBuildingBlock<AccountSwitchInformationResponseV01, AccountSwitchDetails1>() {
 		{
 			xmlTag = "AcctSwtchDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,12 +190,14 @@ public class AccountSwitchInformationResponseV01 {
 			complexType_lazy = () -> AccountSwitchDetails1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchInformationResponseV01.class.getMethod("getAccountSwitchDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountSwitchDetails1 getValue(AccountSwitchInformationResponseV01 obj) {
+			return obj.getAccountSwitchDetails();
+		}
+
+		@Override
+		public void setValue(AccountSwitchInformationResponseV01 obj, AccountSwitchDetails1 value) {
+			obj.setAccountSwitchDetails(value);
 		}
 	};
 	@XmlElement(name = "NewAcct", required = true)
@@ -220,7 +225,7 @@ public class AccountSwitchInformationResponseV01 {
 	 * "New account to which the switch will be made (destination account)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNewAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchInformationResponseV01, CashAccount36> mmNewAccount = new MMMessageBuildingBlock<AccountSwitchInformationResponseV01, CashAccount36>() {
 		{
 			xmlTag = "NewAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,12 +236,14 @@ public class AccountSwitchInformationResponseV01 {
 			complexType_lazy = () -> CashAccount36.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchInformationResponseV01.class.getMethod("getNewAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CashAccount36 getValue(AccountSwitchInformationResponseV01 obj) {
+			return obj.getNewAccount();
+		}
+
+		@Override
+		public void setValue(AccountSwitchInformationResponseV01 obj, CashAccount36 value) {
+			obj.setNewAccount(value);
 		}
 	};
 	@XmlElement(name = "OdAcct", required = true)
@@ -265,7 +272,7 @@ public class AccountSwitchInformationResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOldAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchInformationResponseV01, CashAccount36> mmOldAccount = new MMMessageBuildingBlock<AccountSwitchInformationResponseV01, CashAccount36>() {
 		{
 			xmlTag = "OdAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,12 +283,14 @@ public class AccountSwitchInformationResponseV01 {
 			complexType_lazy = () -> CashAccount36.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchInformationResponseV01.class.getMethod("getOldAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CashAccount36 getValue(AccountSwitchInformationResponseV01 obj) {
+			return obj.getOldAccount();
+		}
+
+		@Override
+		public void setValue(AccountSwitchInformationResponseV01 obj, CashAccount36 value) {
+			obj.setOldAccount(value);
 		}
 	};
 	@XmlElement(name = "PmtInstr")
@@ -311,7 +320,7 @@ public class AccountSwitchInformationResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPaymentInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchInformationResponseV01, List<PaymentInstruction24>> mmPaymentInstruction = new MMMessageBuildingBlock<AccountSwitchInformationResponseV01, List<PaymentInstruction24>>() {
 		{
 			xmlTag = "PmtInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,12 +330,14 @@ public class AccountSwitchInformationResponseV01 {
 			complexType_lazy = () -> PaymentInstruction24.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchInformationResponseV01.class.getMethod("getPaymentInstruction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentInstruction24> getValue(AccountSwitchInformationResponseV01 obj) {
+			return obj.getPaymentInstruction();
+		}
+
+		@Override
+		public void setValue(AccountSwitchInformationResponseV01 obj, List<PaymentInstruction24> value) {
+			obj.setPaymentInstruction(value);
 		}
 	};
 	@XmlElement(name = "DrctDbtInstr")
@@ -352,25 +363,27 @@ public class AccountSwitchInformationResponseV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Details of a direct debit Instruction associated with the old account."</li>
+	 * "Details of a direct debit instruction associated with the old account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDirectDebitInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchInformationResponseV01, List<DirectDebitInstructionDetails1>> mmDirectDebitInstruction = new MMMessageBuildingBlock<AccountSwitchInformationResponseV01, List<DirectDebitInstructionDetails1>>() {
 		{
 			xmlTag = "DrctDbtInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebitInstruction";
-			definition = "Details of a direct debit Instruction associated with the old account.";
+			definition = "Details of a direct debit instruction associated with the old account.";
 			minOccurs = 0;
 			complexType_lazy = () -> DirectDebitInstructionDetails1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchInformationResponseV01.class.getMethod("getDirectDebitInstruction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DirectDebitInstructionDetails1> getValue(AccountSwitchInformationResponseV01 obj) {
+			return obj.getDirectDebitInstruction();
+		}
+
+		@Override
+		public void setValue(AccountSwitchInformationResponseV01 obj, List<DirectDebitInstructionDetails1> value) {
+			obj.setDirectDebitInstruction(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -400,7 +413,7 @@ public class AccountSwitchInformationResponseV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountSwitchInformationResponseV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<AccountSwitchInformationResponseV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -410,12 +423,14 @@ public class AccountSwitchInformationResponseV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountSwitchInformationResponseV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(AccountSwitchInformationResponseV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AccountSwitchInformationResponseV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -425,7 +440,7 @@ public class AccountSwitchInformationResponseV01 {
 				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "prefix", new String[]{"prefix", "DRAFT3"}));
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountSwitchInformationResponseV01";
-				definition = "The AccountSwitchInformationResponse message is sent by the account servicer that previously held the account to the new account servicer to signal whether the account owner's account can be switched and to pass details of payment arrangements to be transferred to the new account servicer.";
+				definition = "The AccountSwitchInformationResponse message is sent by the account servicer that previously held the account to the new account servicer to signal whether the account owner's account can be switched and to pass details of payment arrangements to be transferred to the new account servicer if the account may be switched. Confirmation of the balance transfer window is permitted by the old account servicer.";
 				messageSet_lazy = () -> Arrays.asList(AccountSwitching.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctSwtchInfRspn";

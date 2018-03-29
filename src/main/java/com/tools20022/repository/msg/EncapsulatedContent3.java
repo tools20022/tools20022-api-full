@@ -107,7 +107,7 @@ public class EncapsulatedContent3 {
 	 * EncapsulatedContent2.mmContentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EncapsulatedContent3, ContentType2Code> mmContentType = new MMMessageAttribute<EncapsulatedContent3, ContentType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent3.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class EncapsulatedContent3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ContentType2Code.mmObject();
+		}
+
+		@Override
+		public ContentType2Code getValue(EncapsulatedContent3 obj) {
+			return obj.getContentType();
+		}
+
+		@Override
+		public void setValue(EncapsulatedContent3 obj, ContentType2Code value) {
+			obj.setContentType(value);
 		}
 	};
 	@XmlElement(name = "Cntt")
@@ -156,7 +166,7 @@ public class EncapsulatedContent3 {
 	 * EncapsulatedContent2.mmContent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<EncapsulatedContent3, Optional<Max100KBinary>> mmContent = new MMMessageAttribute<EncapsulatedContent3, Optional<Max100KBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent3.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class EncapsulatedContent3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
+		}
+
+		@Override
+		public Optional<Max100KBinary> getValue(EncapsulatedContent3 obj) {
+			return obj.getContent();
+		}
+
+		@Override
+		public void setValue(EncapsulatedContent3 obj, Optional<Max100KBinary> value) {
+			obj.setContent(value.orElse(null));
 		}
 	};
 

@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.GovernanceIdentification1Choice;
 import com.tools20022.repository.datatype.ID;
 import com.tools20022.repository.entity.GovernanceRules;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Location1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -109,7 +110,7 @@ public class GovernanceRules2 {
 	 * definition} = "Local identification to be used in IDREFs."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GovernanceRules2, ID> mmIdentification = new MMMessageAttribute<GovernanceRules2, ID>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GovernanceRules2.mmObject();
 			isDerived = false;
@@ -120,6 +121,16 @@ public class GovernanceRules2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ID.mmObject();
+		}
+
+		@Override
+		public ID getValue(GovernanceRules2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GovernanceRules2 obj, ID value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "RuleId", required = true)
@@ -156,7 +167,7 @@ public class GovernanceRules2 {
 	 * definition} = "Identification of the governance rules."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRuleIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GovernanceRules2, GovernanceIdentification1Choice> mmRuleIdentification = new MMMessageAssociationEnd<GovernanceRules2, GovernanceIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> GovernanceRules.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GovernanceRules2.mmObject();
@@ -169,6 +180,16 @@ public class GovernanceRules2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GovernanceIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public GovernanceIdentification1Choice getValue(GovernanceRules2 obj) {
+			return obj.getRuleIdentification();
+		}
+
+		@Override
+		public void setValue(GovernanceRules2 obj, GovernanceIdentification1Choice value) {
+			obj.setRuleIdentification(value);
 		}
 	};
 	@XmlElement(name = "AplblLaw")
@@ -203,7 +224,7 @@ public class GovernanceRules2 {
 	 * definition} = "Law applicable to the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmApplicableLaw = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GovernanceRules2, Optional<Location1>> mmApplicableLaw = new MMMessageAssociationEnd<GovernanceRules2, Optional<Location1>>() {
 		{
 			businessElementTrace_lazy = () -> GovernanceRules.mmApplicableLaw;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GovernanceRules2.mmObject();
@@ -215,11 +236,21 @@ public class GovernanceRules2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Location1.mmObject();
+			type_lazy = () -> Location1.mmObject();
+		}
+
+		@Override
+		public Optional<Location1> getValue(GovernanceRules2 obj) {
+			return obj.getApplicableLaw();
+		}
+
+		@Override
+		public void setValue(GovernanceRules2 obj, Optional<Location1> value) {
+			obj.setApplicableLaw(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Jursdctn")
-	protected List<com.tools20022.repository.msg.Location1> jurisdiction;
+	protected List<Location1> jurisdiction;
 	/**
 	 * 
 	 <p>
@@ -252,7 +283,7 @@ public class GovernanceRules2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmJurisdiction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GovernanceRules2, List<Location1>> mmJurisdiction = new MMMessageAssociationEnd<GovernanceRules2, List<Location1>>() {
 		{
 			businessElementTrace_lazy = () -> GovernanceRules.mmJurisdiction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GovernanceRules2.mmObject();
@@ -263,7 +294,17 @@ public class GovernanceRules2 {
 			definition = "Place at or system under which any dispute related to the undertaking is to be resolved, such as court or arbitration. This is also known as 'forum'.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Location1.mmObject();
+			type_lazy = () -> Location1.mmObject();
+		}
+
+		@Override
+		public List<Location1> getValue(GovernanceRules2 obj) {
+			return obj.getJurisdiction();
+		}
+
+		@Override
+		public void setValue(GovernanceRules2 obj, List<Location1> value) {
+			obj.setJurisdiction(value);
 		}
 	};
 
@@ -304,7 +345,7 @@ public class GovernanceRules2 {
 		return applicableLaw == null ? Optional.empty() : Optional.of(applicableLaw);
 	}
 
-	public GovernanceRules2 setApplicableLaw(com.tools20022.repository.msg.Location1 applicableLaw) {
+	public GovernanceRules2 setApplicableLaw(Location1 applicableLaw) {
 		this.applicableLaw = applicableLaw;
 		return this;
 	}
@@ -313,7 +354,7 @@ public class GovernanceRules2 {
 		return jurisdiction == null ? jurisdiction = new ArrayList<>() : jurisdiction;
 	}
 
-	public GovernanceRules2 setJurisdiction(List<com.tools20022.repository.msg.Location1> jurisdiction) {
+	public GovernanceRules2 setJurisdiction(List<Location1> jurisdiction) {
 		this.jurisdiction = Objects.requireNonNull(jurisdiction);
 		return this;
 	}

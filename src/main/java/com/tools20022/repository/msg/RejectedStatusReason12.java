@@ -118,7 +118,7 @@ public class RejectedStatusReason12 {
 	 * definition} = "Reason for the rejected status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatusReason12, RejectedReason8Choice> mmReason = new MMMessageAssociationEnd<RejectedStatusReason12, RejectedReason8Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason12.mmObject();
@@ -131,6 +131,16 @@ public class RejectedStatusReason12 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedReason8Choice.mmObject();
+		}
+
+		@Override
+		public RejectedReason8Choice getValue(RejectedStatusReason12 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason12 obj, RejectedReason8Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -162,7 +172,7 @@ public class RejectedStatusReason12 {
 	 * definition} = "Additional information about the processed instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatusReason12, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<RejectedStatusReason12, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedStatusReason12.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class RejectedStatusReason12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(RejectedStatusReason12 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(RejectedStatusReason12 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

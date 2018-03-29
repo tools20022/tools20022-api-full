@@ -119,7 +119,7 @@ public class PersonOrOrganisation2Choice {
 	 * PersonOrOrganisation1Choice.mmLEI}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonOrOrganisation2Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<PersonOrOrganisation2Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmObject();
@@ -132,6 +132,16 @@ public class PersonOrOrganisation2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(PersonOrOrganisation2Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(PersonOrOrganisation2Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "Prsn", required = true)
@@ -172,7 +182,7 @@ public class PersonOrOrganisation2Choice {
 	 * PersonOrOrganisation1Choice.mmPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PersonOrOrganisation2Choice, PersonIdentification10> mmPerson = new MMMessageAssociationEnd<PersonOrOrganisation2Choice, PersonIdentification10>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmObject();
@@ -186,6 +196,16 @@ public class PersonOrOrganisation2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentification10.mmObject();
+		}
+
+		@Override
+		public PersonIdentification10 getValue(PersonOrOrganisation2Choice obj) {
+			return obj.getPerson();
+		}
+
+		@Override
+		public void setValue(PersonOrOrganisation2Choice obj, PersonIdentification10 value) {
+			obj.setPerson(value);
 		}
 	};
 

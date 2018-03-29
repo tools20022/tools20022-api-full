@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caaa.AcceptorBatchTransferResponseV06;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentDataSet18;
+import com.tools20022.repository.msg.TransactionTotals7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -94,7 +96,7 @@ public class CardPaymentBatchTransferResponse5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "TxTtls")
-	protected List<com.tools20022.repository.msg.TransactionTotals7> transactionTotals;
+	protected List<TransactionTotals7> transactionTotals;
 	/**
 	 * 
 	 <p>
@@ -136,7 +138,7 @@ public class CardPaymentBatchTransferResponse5 {
 	 * CardPaymentBatchTransferResponse4.mmTransactionTotals}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionTotals = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentBatchTransferResponse5, List<TransactionTotals7>> mmTransactionTotals = new MMMessageAttribute<CardPaymentBatchTransferResponse5, List<TransactionTotals7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentBatchTransferResponse5.mmObject();
 			isDerived = false;
@@ -147,11 +149,21 @@ public class CardPaymentBatchTransferResponse5 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse6.mmTransactionTotals);
 			previousVersion_lazy = () -> CardPaymentBatchTransferResponse4.mmTransactionTotals;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
+			complexType_lazy = () -> TransactionTotals7.mmObject();
+		}
+
+		@Override
+		public List<TransactionTotals7> getValue(CardPaymentBatchTransferResponse5 obj) {
+			return obj.getTransactionTotals();
+		}
+
+		@Override
+		public void setValue(CardPaymentBatchTransferResponse5 obj, List<TransactionTotals7> value) {
+			obj.setTransactionTotals(value);
 		}
 	};
 	@XmlElement(name = "DataSet")
-	protected List<com.tools20022.repository.msg.CardPaymentDataSet18> dataSet;
+	protected List<CardPaymentDataSet18> dataSet;
 	/**
 	 * 
 	 <p>
@@ -194,7 +206,7 @@ public class CardPaymentBatchTransferResponse5 {
 	 * CardPaymentBatchTransferResponse4.mmDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDataSet = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentBatchTransferResponse5, List<CardPaymentDataSet18>> mmDataSet = new MMMessageAttribute<CardPaymentBatchTransferResponse5, List<CardPaymentDataSet18>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentBatchTransferResponse5.mmObject();
 			isDerived = false;
@@ -205,7 +217,17 @@ public class CardPaymentBatchTransferResponse5 {
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse6.mmDataSet);
 			previousVersion_lazy = () -> CardPaymentBatchTransferResponse4.mmDataSet;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet18.mmObject();
+			complexType_lazy = () -> CardPaymentDataSet18.mmObject();
+		}
+
+		@Override
+		public List<CardPaymentDataSet18> getValue(CardPaymentBatchTransferResponse5 obj) {
+			return obj.getDataSet();
+		}
+
+		@Override
+		public void setValue(CardPaymentBatchTransferResponse5 obj, List<CardPaymentDataSet18> value) {
+			obj.setDataSet(value);
 		}
 	};
 
@@ -229,7 +251,7 @@ public class CardPaymentBatchTransferResponse5 {
 		return transactionTotals == null ? transactionTotals = new ArrayList<>() : transactionTotals;
 	}
 
-	public CardPaymentBatchTransferResponse5 setTransactionTotals(List<com.tools20022.repository.msg.TransactionTotals7> transactionTotals) {
+	public CardPaymentBatchTransferResponse5 setTransactionTotals(List<TransactionTotals7> transactionTotals) {
 		this.transactionTotals = Objects.requireNonNull(transactionTotals);
 		return this;
 	}
@@ -238,7 +260,7 @@ public class CardPaymentBatchTransferResponse5 {
 		return dataSet == null ? dataSet = new ArrayList<>() : dataSet;
 	}
 
-	public CardPaymentBatchTransferResponse5 setDataSet(List<com.tools20022.repository.msg.CardPaymentDataSet18> dataSet) {
+	public CardPaymentBatchTransferResponse5 setDataSet(List<CardPaymentDataSet18> dataSet) {
 		this.dataSet = Objects.requireNonNull(dataSet);
 		return this;
 	}

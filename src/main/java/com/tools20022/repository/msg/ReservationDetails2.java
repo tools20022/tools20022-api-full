@@ -111,7 +111,7 @@ public class ReservationDetails2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationDetails2, Optional<DateAndDateTimeChoice>> mmStartDateTime = new MMMessageAttribute<ReservationDetails2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationDetails2.mmObject();
@@ -123,6 +123,16 @@ public class ReservationDetails2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(ReservationDetails2 obj) {
+			return obj.getStartDateTime();
+		}
+
+		@Override
+		public void setValue(ReservationDetails2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setStartDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -160,7 +170,7 @@ public class ReservationDetails2 {
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationDetails2, AmountChoice> mmAmount = new MMMessageAttribute<ReservationDetails2, AmountChoice>() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationDetails2.mmObject();
@@ -172,6 +182,16 @@ public class ReservationDetails2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountChoice.mmObject();
+		}
+
+		@Override
+		public AmountChoice getValue(ReservationDetails2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ReservationDetails2 obj, AmountChoice value) {
+			obj.setAmount(value);
 		}
 	};
 

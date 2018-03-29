@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -165,7 +164,7 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, Optional<AdditionalReference3>> mmMasterReference = new MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +175,14 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionMultipleOrderConfirmationV02.class.getMethod("getMasterReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(SubscriptionMultipleOrderConfirmationV02 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderConfirmationV02 obj, Optional<AdditionalReference3> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -209,7 +210,7 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,12 +221,14 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionMultipleOrderConfirmationV02.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(SubscriptionMultipleOrderConfirmationV02 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderConfirmationV02 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -253,7 +256,7 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, List<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, List<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,12 +266,14 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionMultipleOrderConfirmationV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<AdditionalReference3> getValue(SubscriptionMultipleOrderConfirmationV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderConfirmationV02 obj, List<AdditionalReference3> value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "RltdRef", required = true)
@@ -297,7 +302,7 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, AdditionalReference3> mmRelatedReference = new MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, AdditionalReference3>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,12 +313,14 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionMultipleOrderConfirmationV02.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference3 getValue(SubscriptionMultipleOrderConfirmationV02 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderConfirmationV02 obj, AdditionalReference3 value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "MltplExctnDtls", required = true)
@@ -342,7 +349,7 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 	 * "General information related to the execution of investment fund order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMultipleExecutionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, SubscriptionMultipleExecution2> mmMultipleExecutionDetails = new MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, SubscriptionMultipleExecution2>() {
 		{
 			xmlTag = "MltplExctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -353,12 +360,14 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 			complexType_lazy = () -> SubscriptionMultipleExecution2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionMultipleOrderConfirmationV02.class.getMethod("getMultipleExecutionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SubscriptionMultipleExecution2 getValue(SubscriptionMultipleOrderConfirmationV02 obj) {
+			return obj.getMultipleExecutionDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderConfirmationV02 obj, SubscriptionMultipleExecution2 value) {
+			obj.setMultipleExecutionDetails(value);
 		}
 	};
 	@XmlElement(name = "IntrmyDtls")
@@ -386,7 +395,7 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 	 * "Confirmation of the information related to an intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIntermediaryDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, List<Intermediary4>> mmIntermediaryDetails = new MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, List<Intermediary4>>() {
 		{
 			xmlTag = "IntrmyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,12 +406,14 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 			complexType_lazy = () -> Intermediary4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionMultipleOrderConfirmationV02.class.getMethod("getIntermediaryDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Intermediary4> getValue(SubscriptionMultipleOrderConfirmationV02 obj) {
+			return obj.getIntermediaryDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderConfirmationV02 obj, List<Intermediary4> value) {
+			obj.setIntermediaryDetails(value);
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -431,7 +442,7 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 	 * "Information provided when the message is a copy of a previous message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, Optional<CopyInformation1>> mmCopyDetails = new MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, Optional<CopyInformation1>>() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -442,12 +453,14 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 			complexType_lazy = () -> CopyInformation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionMultipleOrderConfirmationV02.class.getMethod("getCopyDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyInformation1> getValue(SubscriptionMultipleOrderConfirmationV02 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderConfirmationV02 obj, Optional<CopyInformation1> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -476,7 +489,7 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, List<Extension1>> mmExtension = new MMMessageBuildingBlock<SubscriptionMultipleOrderConfirmationV02, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -486,12 +499,14 @@ public class SubscriptionMultipleOrderConfirmationV02 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SubscriptionMultipleOrderConfirmationV02.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(SubscriptionMultipleOrderConfirmationV02 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(SubscriptionMultipleOrderConfirmationV02 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

@@ -120,7 +120,7 @@ public class TransactionVerificationResult5 {
 	 * TransactionVerificationResult4.mmMethod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult5, AuthenticationMethod7Code> mmMethod = new MMMessageAttribute<TransactionVerificationResult5, AuthenticationMethod7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult5.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class TransactionVerificationResult5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AuthenticationMethod7Code.mmObject();
+		}
+
+		@Override
+		public AuthenticationMethod7Code getValue(TransactionVerificationResult5 obj) {
+			return obj.getMethod();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult5 obj, AuthenticationMethod7Code value) {
+			obj.setMethod(value);
 		}
 	};
 	@XmlElement(name = "VrfctnNtty")
@@ -169,7 +179,7 @@ public class TransactionVerificationResult5 {
 	 * TransactionVerificationResult4.mmVerificationEntity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVerificationEntity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult5, Optional<AuthenticationEntity2Code>> mmVerificationEntity = new MMMessageAttribute<TransactionVerificationResult5, Optional<AuthenticationEntity2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult5.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class TransactionVerificationResult5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AuthenticationEntity2Code.mmObject();
+		}
+
+		@Override
+		public Optional<AuthenticationEntity2Code> getValue(TransactionVerificationResult5 obj) {
+			return obj.getVerificationEntity();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult5 obj, Optional<AuthenticationEntity2Code> value) {
+			obj.setVerificationEntity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rslt")
@@ -218,7 +238,7 @@ public class TransactionVerificationResult5 {
 	 * TransactionVerificationResult4.mmResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult5, Optional<Verification1Code>> mmResult = new MMMessageAttribute<TransactionVerificationResult5, Optional<Verification1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult5.mmObject();
 			isDerived = false;
@@ -230,6 +250,16 @@ public class TransactionVerificationResult5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Verification1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Verification1Code> getValue(TransactionVerificationResult5 obj) {
+			return obj.getResult();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult5 obj, Optional<Verification1Code> value) {
+			obj.setResult(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlRslt")
@@ -266,7 +296,7 @@ public class TransactionVerificationResult5 {
 	 * TransactionVerificationResult4.mmAdditionalResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult5, Optional<Max500Text>> mmAdditionalResult = new MMMessageAttribute<TransactionVerificationResult5, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult5.mmObject();
 			isDerived = false;
@@ -278,6 +308,16 @@ public class TransactionVerificationResult5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(TransactionVerificationResult5 obj) {
+			return obj.getAdditionalResult();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult5 obj, Optional<Max500Text> value) {
+			obj.setAdditionalResult(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthntcnTkn")
@@ -311,7 +351,7 @@ public class TransactionVerificationResult5 {
 	 * "Token provided to the ATM for further proof of authentication."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthenticationToken = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult5, Optional<Max140Binary>> mmAuthenticationToken = new MMMessageAttribute<TransactionVerificationResult5, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult5.mmObject();
 			isDerived = false;
@@ -322,6 +362,16 @@ public class TransactionVerificationResult5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(TransactionVerificationResult5 obj) {
+			return obj.getAuthenticationToken();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult5 obj, Optional<Max140Binary> value) {
+			obj.setAuthenticationToken(value.orElse(null));
 		}
 	};
 

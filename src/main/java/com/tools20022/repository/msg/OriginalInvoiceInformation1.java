@@ -116,7 +116,7 @@ public class OriginalInvoiceInformation1 {
 	 * definition} = "Unique identifier of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalInvoiceInformation1, Max35Text> mmDocumentNumber = new MMMessageAttribute<OriginalInvoiceInformation1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalInvoiceInformation1.mmObject();
@@ -128,6 +128,16 @@ public class OriginalInvoiceInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalInvoiceInformation1 obj) {
+			return obj.getDocumentNumber();
+		}
+
+		@Override
+		public void setValue(OriginalInvoiceInformation1 obj, Max35Text value) {
+			obj.setDocumentNumber(value);
 		}
 	};
 	@XmlElement(name = "TtlInvcAmt", required = true)
@@ -167,7 +177,7 @@ public class OriginalInvoiceInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalInvoiceInformation1, ActiveCurrencyAndAmount> mmTotalInvoiceAmount = new MMMessageAttribute<OriginalInvoiceInformation1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalInvoiceInformation1.mmObject();
@@ -179,6 +189,16 @@ public class OriginalInvoiceInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(OriginalInvoiceInformation1 obj) {
+			return obj.getTotalInvoiceAmount();
+		}
+
+		@Override
+		public void setValue(OriginalInvoiceInformation1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalInvoiceAmount(value);
 		}
 	};
 	@XmlElement(name = "IsseDt", required = true)
@@ -215,7 +235,7 @@ public class OriginalInvoiceInformation1 {
 	 * definition} = "Issue date of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalInvoiceInformation1, ISODate> mmIssueDate = new MMMessageAttribute<OriginalInvoiceInformation1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalInvoiceInformation1.mmObject();
@@ -227,6 +247,16 @@ public class OriginalInvoiceInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(OriginalInvoiceInformation1 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(OriginalInvoiceInformation1 obj, ISODate value) {
+			obj.setIssueDate(value);
 		}
 	};
 	@XmlElement(name = "PmtDueDt", required = true)
@@ -263,7 +293,7 @@ public class OriginalInvoiceInformation1 {
 	 * definition} = "Due date for the payment of the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalInvoiceInformation1, ISODate> mmPaymentDueDate = new MMMessageAttribute<OriginalInvoiceInformation1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalInvoiceInformation1.mmObject();
@@ -275,6 +305,16 @@ public class OriginalInvoiceInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(OriginalInvoiceInformation1 obj) {
+			return obj.getPaymentDueDate();
+		}
+
+		@Override
+		public void setValue(OriginalInvoiceInformation1 obj, ISODate value) {
+			obj.setPaymentDueDate(value);
 		}
 	};
 

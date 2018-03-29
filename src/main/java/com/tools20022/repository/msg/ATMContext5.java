@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMService5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class ATMContext5 {
 	 * ATMContext3.mmSessionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSessionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMContext5, Optional<Max35Text>> mmSessionReference = new MMMessageAttribute<ATMContext5, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMContext5.mmObject();
 			isDerived = false;
@@ -117,6 +118,16 @@ public class ATMContext5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMContext5 obj) {
+			return obj.getSessionReference();
+		}
+
+		@Override
+		public void setValue(ATMContext5 obj, Optional<Max35Text> value) {
+			obj.setSessionReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Svc", required = true)
@@ -152,7 +163,7 @@ public class ATMContext5 {
 	 * ATMContext3.mmService}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmService = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMContext5, ATMService5> mmService = new MMMessageAssociationEnd<ATMContext5, ATMService5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMContext5.mmObject();
 			isDerived = false;
@@ -164,7 +175,17 @@ public class ATMContext5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMService5.mmObject();
+			type_lazy = () -> ATMService5.mmObject();
+		}
+
+		@Override
+		public ATMService5 getValue(ATMContext5 obj) {
+			return obj.getService();
+		}
+
+		@Override
+		public void setValue(ATMContext5 obj, ATMService5 value) {
+			obj.setService(value);
 		}
 	};
 
@@ -195,7 +216,7 @@ public class ATMContext5 {
 		return service;
 	}
 
-	public ATMContext5 setService(com.tools20022.repository.msg.ATMService5 service) {
+	public ATMContext5 setService(ATMService5 service) {
 		this.service = Objects.requireNonNull(service);
 		return this;
 	}

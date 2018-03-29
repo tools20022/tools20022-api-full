@@ -52,11 +52,15 @@ public class ConstraintDigestPresenceRule {
 	 */
 	public static final MMConstraint<QualifiedDocumentInformation1> forQualifiedDocumentInformation1 = new MMConstraint<QualifiedDocumentInformation1>() {
 		{
-			validator = ConstraintDigestPresenceRule::checkQualifiedDocumentInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestPresenceRule";
 			definition = "When a referenced document is part of the element signed by a digital signature and the document is not directly present in the message, the digest of the document SHOULD be used to provide integrity protection.";
 			owner_lazy = () -> QualifiedDocumentInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(QualifiedDocumentInformation1 obj) throws Exception {
+			checkQualifiedDocumentInformation1(obj);
 		}
 	};
 

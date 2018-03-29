@@ -106,7 +106,7 @@ public class QuantityToQuantityRatio2 {
 	 * definition} = "Numerator of the quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity1 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityToQuantityRatio2, RestrictedFINDecimalNumber> mmQuantity1 = new MMMessageAttribute<QuantityToQuantityRatio2, RestrictedFINDecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity1;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio2.mmObject();
@@ -118,6 +118,16 @@ public class QuantityToQuantityRatio2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
+		}
+
+		@Override
+		public RestrictedFINDecimalNumber getValue(QuantityToQuantityRatio2 obj) {
+			return obj.getQuantity1();
+		}
+
+		@Override
+		public void setValue(QuantityToQuantityRatio2 obj, RestrictedFINDecimalNumber value) {
+			obj.setQuantity1(value);
 		}
 	};
 	@XmlElement(name = "Qty2", required = true)
@@ -155,7 +165,7 @@ public class QuantityToQuantityRatio2 {
 	 * definition} = "Denominator of the quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity2 = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityToQuantityRatio2, RestrictedFINDecimalNumber> mmQuantity2 = new MMMessageAttribute<QuantityToQuantityRatio2, RestrictedFINDecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> QuantityRatio.mmQuantity2;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityToQuantityRatio2.mmObject();
@@ -167,6 +177,16 @@ public class QuantityToQuantityRatio2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
+		}
+
+		@Override
+		public RestrictedFINDecimalNumber getValue(QuantityToQuantityRatio2 obj) {
+			return obj.getQuantity2();
+		}
+
+		@Override
+		public void setValue(QuantityToQuantityRatio2 obj, RestrictedFINDecimalNumber value) {
+			obj.setQuantity2(value);
 		}
 	};
 

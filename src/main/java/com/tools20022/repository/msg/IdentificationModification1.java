@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IdentificationInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -129,7 +130,7 @@ public class IdentificationModification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationModification1, Max35Text> mmIdentification = new MMMessageAttribute<IdentificationModification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationModification1.mmObject();
@@ -141,6 +142,16 @@ public class IdentificationModification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IdentificationModification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationModification1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPtyAndAcctId")
@@ -178,7 +189,7 @@ public class IdentificationModification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalPartyAndAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationModification1, Optional<IdentificationInformation1>> mmOriginalPartyAndAccountIdentification = new MMMessageAssociationEnd<IdentificationModification1, Optional<IdentificationInformation1>>() {
 		{
 			businessComponentTrace_lazy = () -> Account.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationModification1.mmObject();
@@ -190,7 +201,17 @@ public class IdentificationModification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IdentificationInformation1.mmObject();
+			type_lazy = () -> IdentificationInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<IdentificationInformation1> getValue(IdentificationModification1 obj) {
+			return obj.getOriginalPartyAndAccountIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationModification1 obj, Optional<IdentificationInformation1> value) {
+			obj.setOriginalPartyAndAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UpdtdPtyAndAcctId", required = true)
@@ -227,7 +248,7 @@ public class IdentificationModification1 {
 	 * "Provides updated party and/or account identification information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdatedPartyAndAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IdentificationModification1, IdentificationInformation1> mmUpdatedPartyAndAccountIdentification = new MMMessageAssociationEnd<IdentificationModification1, IdentificationInformation1>() {
 		{
 			businessComponentTrace_lazy = () -> Account.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationModification1.mmObject();
@@ -239,7 +260,17 @@ public class IdentificationModification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IdentificationInformation1.mmObject();
+			type_lazy = () -> IdentificationInformation1.mmObject();
+		}
+
+		@Override
+		public IdentificationInformation1 getValue(IdentificationModification1 obj) {
+			return obj.getUpdatedPartyAndAccountIdentification();
+		}
+
+		@Override
+		public void setValue(IdentificationModification1 obj, IdentificationInformation1 value) {
+			obj.setUpdatedPartyAndAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -273,7 +304,7 @@ public class IdentificationModification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IdentificationModification1, Optional<Max140Text>> mmAdditionalInformation = new MMMessageAttribute<IdentificationModification1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IdentificationModification1.mmObject();
 			isDerived = false;
@@ -284,6 +315,16 @@ public class IdentificationModification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(IdentificationModification1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(IdentificationModification1 obj, Optional<Max140Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 
@@ -316,7 +357,7 @@ public class IdentificationModification1 {
 		return originalPartyAndAccountIdentification == null ? Optional.empty() : Optional.of(originalPartyAndAccountIdentification);
 	}
 
-	public IdentificationModification1 setOriginalPartyAndAccountIdentification(com.tools20022.repository.msg.IdentificationInformation1 originalPartyAndAccountIdentification) {
+	public IdentificationModification1 setOriginalPartyAndAccountIdentification(IdentificationInformation1 originalPartyAndAccountIdentification) {
 		this.originalPartyAndAccountIdentification = originalPartyAndAccountIdentification;
 		return this;
 	}
@@ -325,7 +366,7 @@ public class IdentificationModification1 {
 		return updatedPartyAndAccountIdentification;
 	}
 
-	public IdentificationModification1 setUpdatedPartyAndAccountIdentification(com.tools20022.repository.msg.IdentificationInformation1 updatedPartyAndAccountIdentification) {
+	public IdentificationModification1 setUpdatedPartyAndAccountIdentification(IdentificationInformation1 updatedPartyAndAccountIdentification) {
 		this.updatedPartyAndAccountIdentification = Objects.requireNonNull(updatedPartyAndAccountIdentification);
 		return this;
 	}

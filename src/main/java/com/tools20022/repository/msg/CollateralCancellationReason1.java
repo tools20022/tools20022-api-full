@@ -124,7 +124,7 @@ public class CollateralCancellationReason1 {
 	 * "Allows to provides additional information on the cancellation reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralCancellationReason1, Optional<Max35Text>> mmAdditionalInformation = new MMMessageAttribute<CollateralCancellationReason1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralCancellationReason1.mmObject();
@@ -136,6 +136,16 @@ public class CollateralCancellationReason1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(CollateralCancellationReason1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CollateralCancellationReason1 obj, Optional<Max35Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRsnCd", required = true)
@@ -174,7 +184,7 @@ public class CollateralCancellationReason1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralCancellationReason1, CollateralCancellationType1Choice> mmCancellationReasonCode = new MMMessageAssociationEnd<CollateralCancellationReason1, CollateralCancellationType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CollateralStatus.mmCollateralManagementCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralCancellationReason1.mmObject();
@@ -187,6 +197,16 @@ public class CollateralCancellationReason1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralCancellationType1Choice.mmObject();
+		}
+
+		@Override
+		public CollateralCancellationType1Choice getValue(CollateralCancellationReason1 obj) {
+			return obj.getCancellationReasonCode();
+		}
+
+		@Override
+		public void setValue(CollateralCancellationReason1 obj, CollateralCancellationType1Choice value) {
+			obj.setCancellationReasonCode(value);
 		}
 	};
 

@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CreditorPaymentActivationRequestISOLatestversion;
 import com.tools20022.repository.msgset.CreditorPaymentActivationRequestMaintenance20162017;
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -144,7 +143,7 @@ public class CreditorPaymentActivationRequestV06 {
 	 * CreditorPaymentActivationRequestV05.mmGroupHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestV06, GroupHeader45> mmGroupHeader = new MMMessageBuildingBlock<CreditorPaymentActivationRequestV06, GroupHeader45>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,12 +155,14 @@ public class CreditorPaymentActivationRequestV06 {
 			complexType_lazy = () -> GroupHeader45.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestV06.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader45 getValue(CreditorPaymentActivationRequestV06 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestV06 obj, GroupHeader45 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "PmtInf", required = true)
@@ -196,7 +197,7 @@ public class CreditorPaymentActivationRequestV06 {
 	 * CreditorPaymentActivationRequestV05.mmPaymentInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPaymentInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestV06, List<PaymentInstruction23>> mmPaymentInformation = new MMMessageBuildingBlock<CreditorPaymentActivationRequestV06, List<PaymentInstruction23>>() {
 		{
 			xmlTag = "PmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,12 +208,14 @@ public class CreditorPaymentActivationRequestV06 {
 			complexType_lazy = () -> PaymentInstruction23.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestV06.class.getMethod("getPaymentInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentInstruction23> getValue(CreditorPaymentActivationRequestV06 obj) {
+			return obj.getPaymentInformation();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestV06 obj, List<PaymentInstruction23> value) {
+			obj.setPaymentInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -247,7 +250,7 @@ public class CreditorPaymentActivationRequestV06 {
 	 * CreditorPaymentActivationRequestV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CreditorPaymentActivationRequestV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,12 +261,14 @@ public class CreditorPaymentActivationRequestV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CreditorPaymentActivationRequestV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

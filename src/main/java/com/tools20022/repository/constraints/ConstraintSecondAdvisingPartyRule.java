@@ -53,12 +53,16 @@ public class ConstraintSecondAdvisingPartyRule {
 	 */
 	public static final MMConstraint<Undertaking1> forUndertaking1 = new MMConstraint<Undertaking1>() {
 		{
-			validator = ConstraintSecondAdvisingPartyRule::checkUndertaking1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingPartyRule";
 			definition = "If SecondAdvisingParty is present, then AdvisingParty must be present.";
 			owner_lazy = () -> Undertaking1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdvisingParty</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondAdvisingParty</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Undertaking1 obj) throws Exception {
+			checkUndertaking1(obj);
 		}
 	};
 	/**
@@ -86,12 +90,16 @@ public class ConstraintSecondAdvisingPartyRule {
 	 */
 	public static final MMConstraint<Undertaking3> forUndertaking3 = new MMConstraint<Undertaking3>() {
 		{
-			validator = ConstraintSecondAdvisingPartyRule::checkUndertaking3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondAdvisingPartyRule";
 			definition = "If SecondAdvisingParty is present, then AdvisingParty must be present.";
 			owner_lazy = () -> Undertaking3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdvisingParty</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondAdvisingParty</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(Undertaking3 obj) throws Exception {
+			checkUndertaking3(obj);
 		}
 	};
 

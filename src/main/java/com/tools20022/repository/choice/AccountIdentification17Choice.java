@@ -116,7 +116,7 @@ public class AccountIdentification17Choice {
 	 * "All safekeeping accounts that own underlying financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForAllAccounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification17Choice, AccountIdentification10> mmForAllAccounts = new MMMessageAssociationEnd<AccountIdentification17Choice, AccountIdentification10>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification17Choice.mmObject();
@@ -130,6 +130,16 @@ public class AccountIdentification17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification10.mmObject();
+		}
+
+		@Override
+		public AccountIdentification10 getValue(AccountIdentification17Choice obj) {
+			return obj.getForAllAccounts();
+		}
+
+		@Override
+		public void setValue(AccountIdentification17Choice obj, AccountIdentification10 value) {
+			obj.setForAllAccounts(value);
 		}
 	};
 	@XmlElement(name = "AcctsList", required = true)
@@ -171,7 +181,7 @@ public class AccountIdentification17Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountsList = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountIdentification17Choice, List<AccountIdentification21>> mmAccountsList = new MMMessageAssociationEnd<AccountIdentification17Choice, List<AccountIdentification21>>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification17Choice.mmObject();
@@ -184,6 +194,16 @@ public class AccountIdentification17Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification21.mmObject();
+		}
+
+		@Override
+		public List<AccountIdentification21> getValue(AccountIdentification17Choice obj) {
+			return obj.getAccountsList();
+		}
+
+		@Override
+		public void setValue(AccountIdentification17Choice obj, List<AccountIdentification21> value) {
+			obj.setAccountsList(value);
 		}
 	};
 

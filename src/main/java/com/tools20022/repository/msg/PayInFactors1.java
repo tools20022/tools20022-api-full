@@ -24,6 +24,7 @@ import com.tools20022.repository.area.camt.PayInScheduleV03;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyFactors1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +114,7 @@ public class PayInFactors1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAggregateShortPositionLimit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PayInFactors1, ActiveCurrencyAndAmount> mmAggregateShortPositionLimit = new MMMessageAttribute<PayInFactors1, ActiveCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayInFactors1.mmObject();
 			isDerived = false;
@@ -125,9 +126,19 @@ public class PayInFactors1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(PayInFactors1 obj) {
+			return obj.getAggregateShortPositionLimit();
+		}
+
+		@Override
+		public void setValue(PayInFactors1 obj, ActiveCurrencyAndAmount value) {
+			obj.setAggregateShortPositionLimit(value);
+		}
 	};
 	@XmlElement(name = "CcyFctrs", required = true)
-	protected List<com.tools20022.repository.msg.CurrencyFactors1> currencyFactors;
+	protected List<CurrencyFactors1> currencyFactors;
 	/**
 	 * 
 	 <p>
@@ -155,7 +166,7 @@ public class PayInFactors1 {
 	 * definition} = "Currency specific pay-in factors."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrencyFactors = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PayInFactors1, List<CurrencyFactors1>> mmCurrencyFactors = new MMMessageAttribute<PayInFactors1, List<CurrencyFactors1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayInFactors1.mmObject();
 			isDerived = false;
@@ -164,7 +175,17 @@ public class PayInFactors1 {
 			name = "CurrencyFactors";
 			definition = "Currency specific pay-in factors.";
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
+			complexType_lazy = () -> CurrencyFactors1.mmObject();
+		}
+
+		@Override
+		public List<CurrencyFactors1> getValue(PayInFactors1 obj) {
+			return obj.getCurrencyFactors();
+		}
+
+		@Override
+		public void setValue(PayInFactors1 obj, List<CurrencyFactors1> value) {
+			obj.setCurrencyFactors(value);
 		}
 	};
 
@@ -196,7 +217,7 @@ public class PayInFactors1 {
 		return currencyFactors == null ? currencyFactors = new ArrayList<>() : currencyFactors;
 	}
 
-	public PayInFactors1 setCurrencyFactors(List<com.tools20022.repository.msg.CurrencyFactors1> currencyFactors) {
+	public PayInFactors1 setCurrencyFactors(List<CurrencyFactors1> currencyFactors) {
 		this.currencyFactors = Objects.requireNonNull(currencyFactors);
 		return this;
 	}

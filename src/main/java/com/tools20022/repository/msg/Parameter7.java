@@ -106,7 +106,7 @@ public class Parameter7 {
 	 * Parameter1.mmInitialisationVector}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitialisationVector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter7, Optional<Max500Binary>> mmInitialisationVector = new MMMessageAttribute<Parameter7, Optional<Max500Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter7.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class Parameter7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Binary> getValue(Parameter7 obj) {
+			return obj.getInitialisationVector();
+		}
+
+		@Override
+		public void setValue(Parameter7 obj, Optional<Max500Binary> value) {
+			obj.setInitialisationVector(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BPddg")
@@ -151,7 +161,7 @@ public class Parameter7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBytePadding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Parameter7, Optional<BytePadding1Code>> mmBytePadding = new MMMessageAttribute<Parameter7, Optional<BytePadding1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter7.mmObject();
 			isDerived = false;
@@ -162,6 +172,16 @@ public class Parameter7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BytePadding1Code.mmObject();
+		}
+
+		@Override
+		public Optional<BytePadding1Code> getValue(Parameter7 obj) {
+			return obj.getBytePadding();
+		}
+
+		@Override
+		public void setValue(Parameter7 obj, Optional<BytePadding1Code> value) {
+			obj.setBytePadding(value.orElse(null));
 		}
 	};
 

@@ -124,7 +124,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeRegulatoryTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<ISODateTime>> mmTradeRegulatoryTimeStamp = new MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class TradeRegulatoryTimeStampGroup {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TradeRegulatoryTimeStampGroup obj) {
+			return obj.getTradeRegulatoryTimeStamp();
+		}
+
+		@Override
+		public void setValue(TradeRegulatoryTimeStampGroup obj, Optional<ISODateTime> value) {
+			obj.setTradeRegulatoryTimeStamp(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradRgltryTmStmpTp")
@@ -172,7 +182,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeRegulatoryTimeStampType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<Max35Text>> mmTradeRegulatoryTimeStampType = new MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -184,6 +194,16 @@ public class TradeRegulatoryTimeStampGroup {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeRegulatoryTimeStampGroup obj) {
+			return obj.getTradeRegulatoryTimeStampType();
+		}
+
+		@Override
+		public void setValue(TradeRegulatoryTimeStampGroup obj, Optional<Max35Text> value) {
+			obj.setTradeRegulatoryTimeStampType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradRgltryTmStmpOrgn", required = true)
@@ -215,7 +235,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * definition} = "Provides the origin of the timestamp."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeRegulatoryTimeStampOrigin = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeRegulatoryTimeStampGroup, Max35Text> mmTradeRegulatoryTimeStampOrigin = new MMMessageAttribute<TradeRegulatoryTimeStampGroup, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -226,6 +246,16 @@ public class TradeRegulatoryTimeStampGroup {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TradeRegulatoryTimeStampGroup obj) {
+			return obj.getTradeRegulatoryTimeStampOrigin();
+		}
+
+		@Override
+		public void setValue(TradeRegulatoryTimeStampGroup obj, Max35Text value) {
+			obj.setTradeRegulatoryTimeStampOrigin(value);
 		}
 	};
 	@XmlElement(name = "DskTp")
@@ -262,7 +292,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeskType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<Max35Text>> mmDeskType = new MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -274,6 +304,16 @@ public class TradeRegulatoryTimeStampGroup {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeRegulatoryTimeStampGroup obj) {
+			return obj.getDeskType();
+		}
+
+		@Override
+		public void setValue(TradeRegulatoryTimeStampGroup obj, Optional<Max35Text> value) {
+			obj.setDeskType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DskTpSrc")
@@ -308,7 +348,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * definition} = "Provides the desk type source, valid value is NASD OATS."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeskTypeSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<Max35Text>> mmDeskTypeSource = new MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -320,6 +360,16 @@ public class TradeRegulatoryTimeStampGroup {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TradeRegulatoryTimeStampGroup obj) {
+			return obj.getDeskTypeSource();
+		}
+
+		@Override
+		public void setValue(TradeRegulatoryTimeStampGroup obj, Optional<Max35Text> value) {
+			obj.setDeskTypeSource(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DskOrdrHdlgInstrs")
@@ -357,7 +407,7 @@ public class TradeRegulatoryTimeStampGroup {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeskOrderHandlingInstructions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<CustomerHandlingInstructionChoice>> mmDeskOrderHandlingInstructions = new MMMessageAttribute<TradeRegulatoryTimeStampGroup, Optional<CustomerHandlingInstructionChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup.mmObject();
 			isDerived = false;
@@ -369,6 +419,16 @@ public class TradeRegulatoryTimeStampGroup {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CustomerHandlingInstructionChoice.mmObject();
+		}
+
+		@Override
+		public Optional<CustomerHandlingInstructionChoice> getValue(TradeRegulatoryTimeStampGroup obj) {
+			return obj.getDeskOrderHandlingInstructions();
+		}
+
+		@Override
+		public void setValue(TradeRegulatoryTimeStampGroup obj, Optional<CustomerHandlingInstructionChoice> value) {
+			obj.setDeskOrderHandlingInstructions(value.orElse(null));
 		}
 	};
 

@@ -50,11 +50,15 @@ public class ConstraintRejectedElementRule {
 	 */
 	public static final MMConstraint<RejectedStatus9> forRejectedStatus9 = new MMConstraint<RejectedStatus9>() {
 		{
-			validator = ConstraintRejectedElementRule::checkRejectedStatus9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedElementRule";
 			definition = "Either Reason or AdditionalInformation must be present. Both may be present.";
 			owner_lazy = () -> RejectedStatus9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectedStatus9 obj) throws Exception {
+			checkRejectedStatus9(obj);
 		}
 	};
 

@@ -109,7 +109,7 @@ public class TerminationReason1Choice {
 	 * definition} = "Termination reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TerminationReason1Choice, TerminationReason1Code> mmCode = new MMMessageAttribute<TerminationReason1Choice, TerminationReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatusReason.mmTerminationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationReason1Choice.mmObject();
@@ -121,6 +121,16 @@ public class TerminationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminationReason1Code.mmObject();
+		}
+
+		@Override
+		public TerminationReason1Code getValue(TerminationReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TerminationReason1Choice obj, TerminationReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class TerminationReason1Choice {
 	 * definition} = "Termination reason expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TerminationReason1Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<TerminationReason1Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingStatusReason.mmTerminationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TerminationReason1Choice.mmObject();
@@ -169,6 +179,16 @@ public class TerminationReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(TerminationReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TerminationReason1Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

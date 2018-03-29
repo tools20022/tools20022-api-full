@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcquirerReversalInitiation1;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header18;
 import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +114,7 @@ public class AcquirerReversalInitiation {
 	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcquirerReversalInitiation, Header18> mmHeader = new MMMessageBuildingBlock<AcquirerReversalInitiation, Header18>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,12 +125,14 @@ public class AcquirerReversalInitiation {
 			complexType_lazy = () -> Header18.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcquirerReversalInitiation.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header18 getValue(AcquirerReversalInitiation obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcquirerReversalInitiation obj, Header18 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "RvslInitn", required = true)
@@ -159,7 +160,7 @@ public class AcquirerReversalInitiation {
 	 * definition} = "Information related to the reversal."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReversalInitiation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcquirerReversalInitiation, AcquirerReversalInitiation1> mmReversalInitiation = new MMMessageBuildingBlock<AcquirerReversalInitiation, AcquirerReversalInitiation1>() {
 		{
 			xmlTag = "RvslInitn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,12 +171,14 @@ public class AcquirerReversalInitiation {
 			complexType_lazy = () -> AcquirerReversalInitiation1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcquirerReversalInitiation.class.getMethod("getReversalInitiation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcquirerReversalInitiation1 getValue(AcquirerReversalInitiation obj) {
+			return obj.getReversalInitiation();
+		}
+
+		@Override
+		public void setValue(AcquirerReversalInitiation obj, AcquirerReversalInitiation1 value) {
+			obj.setReversalInitiation(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -203,7 +206,7 @@ public class AcquirerReversalInitiation {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcquirerReversalInitiation, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<AcquirerReversalInitiation, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,12 +217,14 @@ public class AcquirerReversalInitiation {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcquirerReversalInitiation.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(AcquirerReversalInitiation obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcquirerReversalInitiation obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

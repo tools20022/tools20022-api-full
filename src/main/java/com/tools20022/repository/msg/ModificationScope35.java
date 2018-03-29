@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.acmt.AccountModificationInstructionV07;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditiononalInformation12;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +122,7 @@ public class ModificationScope35 {
 	 * ModificationScope30.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope35, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope35, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope35.mmObject();
 			isDerived = false;
@@ -134,9 +135,19 @@ public class ModificationScope35 {
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope35 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope35 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
+		}
 	};
 	@XmlElement(name = "AddtlInf", required = true)
-	protected List<com.tools20022.repository.msg.AdditiononalInformation12> additionalInformation;
+	protected List<AdditiononalInformation12> additionalInformation;
 	/**
 	 * 
 	 <p>
@@ -171,7 +182,7 @@ public class ModificationScope35 {
 	 * ModificationScope30.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope35, List<AdditiononalInformation12>> mmAdditionalInformation = new MMMessageAssociationEnd<ModificationScope35, List<AdditiononalInformation12>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope35.mmObject();
 			isDerived = false;
@@ -182,7 +193,17 @@ public class ModificationScope35 {
 			previousVersion_lazy = () -> ModificationScope30.mmAdditionalInformation;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditiononalInformation12.mmObject();
+			type_lazy = () -> AdditiononalInformation12.mmObject();
+		}
+
+		@Override
+		public List<AdditiononalInformation12> getValue(ModificationScope35 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ModificationScope35 obj, List<AdditiononalInformation12> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -214,7 +235,7 @@ public class ModificationScope35 {
 		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public ModificationScope35 setAdditionalInformation(List<com.tools20022.repository.msg.AdditiononalInformation12> additionalInformation) {
+	public ModificationScope35 setAdditionalInformation(List<AdditiononalInformation12> additionalInformation) {
 		this.additionalInformation = Objects.requireNonNull(additionalInformation);
 		return this;
 	}

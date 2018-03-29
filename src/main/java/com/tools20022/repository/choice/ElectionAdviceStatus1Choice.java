@@ -117,7 +117,7 @@ public class ElectionAdviceStatus1Choice {
 	 * "Provides information about the processing status of advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ElectionAdviceStatus1Choice, CorporateActionInstructionProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<ElectionAdviceStatus1Choice, CorporateActionInstructionProcessingStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionAdviceStatus1Choice.mmObject();
@@ -130,6 +130,16 @@ public class ElectionAdviceStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionInstructionProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionInstructionProcessingStatus1 getValue(ElectionAdviceStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(ElectionAdviceStatus1Choice obj, CorporateActionInstructionProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -166,7 +176,7 @@ public class ElectionAdviceStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ElectionAdviceStatus1Choice, CorporateActionInstructionRejectionStatus1> mmRejectedStatus = new MMMessageAssociationEnd<ElectionAdviceStatus1Choice, CorporateActionInstructionRejectionStatus1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionAdviceStatus1Choice.mmObject();
@@ -179,6 +189,16 @@ public class ElectionAdviceStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionInstructionRejectionStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionInstructionRejectionStatus1 getValue(ElectionAdviceStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(ElectionAdviceStatus1Choice obj, CorporateActionInstructionRejectionStatus1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

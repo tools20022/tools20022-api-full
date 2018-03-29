@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashInForecast5;
+import com.tools20022.repository.msg.CashOutForecast5;
+import com.tools20022.repository.msg.NetCashForecast4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -115,7 +118,7 @@ public class BreakdownByCurrency2 {
 	 * BreakdownByCurrency1.mmCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BreakdownByCurrency2, ActiveOrHistoricCurrencyCode> mmCurrency = new MMMessageAttribute<BreakdownByCurrency2, ActiveOrHistoricCurrencyCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency2.mmObject();
 			isDerived = false;
@@ -128,9 +131,19 @@ public class BreakdownByCurrency2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(BreakdownByCurrency2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(BreakdownByCurrency2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setCurrency(value);
+		}
 	};
 	@XmlElement(name = "CshOutFcst")
-	protected List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast;
+	protected List<CashOutForecast5> cashOutForecast;
 	/**
 	 * 
 	 <p>
@@ -164,7 +177,7 @@ public class BreakdownByCurrency2 {
 	 * BreakdownByCurrency1.mmCashOutForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByCurrency2, List<CashOutForecast5>> mmCashOutForecast = new MMMessageAssociationEnd<BreakdownByCurrency2, List<CashOutForecast5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency2.mmObject();
 			isDerived = false;
@@ -175,11 +188,21 @@ public class BreakdownByCurrency2 {
 			previousVersion_lazy = () -> BreakdownByCurrency1.mmCashOutForecast;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast5.mmObject();
+			type_lazy = () -> CashOutForecast5.mmObject();
+		}
+
+		@Override
+		public List<CashOutForecast5> getValue(BreakdownByCurrency2 obj) {
+			return obj.getCashOutForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByCurrency2 obj, List<CashOutForecast5> value) {
+			obj.setCashOutForecast(value);
 		}
 	};
 	@XmlElement(name = "CshInFcst")
-	protected List<com.tools20022.repository.msg.CashInForecast5> cashInForecast;
+	protected List<CashInForecast5> cashInForecast;
 	/**
 	 * 
 	 <p>
@@ -213,7 +236,7 @@ public class BreakdownByCurrency2 {
 	 * BreakdownByCurrency1.mmCashInForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByCurrency2, List<CashInForecast5>> mmCashInForecast = new MMMessageAssociationEnd<BreakdownByCurrency2, List<CashInForecast5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency2.mmObject();
 			isDerived = false;
@@ -224,11 +247,21 @@ public class BreakdownByCurrency2 {
 			previousVersion_lazy = () -> BreakdownByCurrency1.mmCashInForecast;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
+			type_lazy = () -> CashInForecast5.mmObject();
+		}
+
+		@Override
+		public List<CashInForecast5> getValue(BreakdownByCurrency2 obj) {
+			return obj.getCashInForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByCurrency2 obj, List<CashInForecast5> value) {
+			obj.setCashInForecast(value);
 		}
 	};
 	@XmlElement(name = "NetCshFcst")
-	protected List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast;
+	protected List<NetCashForecast4> netCashForecast;
 	/**
 	 * 
 	 <p>
@@ -262,7 +295,7 @@ public class BreakdownByCurrency2 {
 	 * BreakdownByCurrency1.mmNetCashForecast}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BreakdownByCurrency2, List<NetCashForecast4>> mmNetCashForecast = new MMMessageAssociationEnd<BreakdownByCurrency2, List<NetCashForecast4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCurrency2.mmObject();
 			isDerived = false;
@@ -273,7 +306,17 @@ public class BreakdownByCurrency2 {
 			previousVersion_lazy = () -> BreakdownByCurrency1.mmNetCashForecast;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast4.mmObject();
+			type_lazy = () -> NetCashForecast4.mmObject();
+		}
+
+		@Override
+		public List<NetCashForecast4> getValue(BreakdownByCurrency2 obj) {
+			return obj.getNetCashForecast();
+		}
+
+		@Override
+		public void setValue(BreakdownByCurrency2 obj, List<NetCashForecast4> value) {
+			obj.setNetCashForecast(value);
 		}
 	};
 
@@ -305,7 +348,7 @@ public class BreakdownByCurrency2 {
 		return cashOutForecast == null ? cashOutForecast = new ArrayList<>() : cashOutForecast;
 	}
 
-	public BreakdownByCurrency2 setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast) {
+	public BreakdownByCurrency2 setCashOutForecast(List<CashOutForecast5> cashOutForecast) {
 		this.cashOutForecast = Objects.requireNonNull(cashOutForecast);
 		return this;
 	}
@@ -314,7 +357,7 @@ public class BreakdownByCurrency2 {
 		return cashInForecast == null ? cashInForecast = new ArrayList<>() : cashInForecast;
 	}
 
-	public BreakdownByCurrency2 setCashInForecast(List<com.tools20022.repository.msg.CashInForecast5> cashInForecast) {
+	public BreakdownByCurrency2 setCashInForecast(List<CashInForecast5> cashInForecast) {
 		this.cashInForecast = Objects.requireNonNull(cashInForecast);
 		return this;
 	}
@@ -323,7 +366,7 @@ public class BreakdownByCurrency2 {
 		return netCashForecast == null ? netCashForecast = new ArrayList<>() : netCashForecast;
 	}
 
-	public BreakdownByCurrency2 setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast) {
+	public BreakdownByCurrency2 setNetCashForecast(List<NetCashForecast4> netCashForecast) {
 		this.netCashForecast = Objects.requireNonNull(netCashForecast);
 		return this;
 	}

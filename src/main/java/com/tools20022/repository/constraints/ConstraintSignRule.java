@@ -47,11 +47,15 @@ public class ConstraintSignRule {
 	 */
 	public static final MMConstraint<Rate2> forRate2 = new MMConstraint<Rate2>() {
 		{
-			validator = ConstraintSignRule::checkRate2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignRule";
 			definition = "When Sign is present, rate must not be zero.";
 			owner_lazy = () -> Rate2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Rate2 obj) throws Exception {
+			checkRate2(obj);
 		}
 	};
 

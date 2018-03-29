@@ -128,7 +128,7 @@ public class ContractType6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractType6, Optional<FinancialInstrumentContractType2Code>> mmContractType = new MMMessageAttribute<ContractType6, Optional<FinancialInstrumentContractType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractType6.mmObject();
@@ -140,6 +140,16 @@ public class ContractType6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FinancialInstrumentContractType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentContractType2Code> getValue(ContractType6 obj) {
+			return obj.getContractType();
+		}
+
+		@Override
+		public void setValue(ContractType6 obj, Optional<FinancialInstrumentContractType2Code> value) {
+			obj.setContractType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AsstClss")
@@ -178,7 +188,7 @@ public class ContractType6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractType6, Optional<ProductType4Code>> mmAssetClass = new MMMessageAttribute<ContractType6, Optional<ProductType4Code>>() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractType6.mmObject();
@@ -190,6 +200,16 @@ public class ContractType6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ProductType4Code.mmObject();
+		}
+
+		@Override
+		public Optional<ProductType4Code> getValue(ContractType6 obj) {
+			return obj.getAssetClass();
+		}
+
+		@Override
+		public void setValue(ContractType6 obj, Optional<ProductType4Code> value) {
+			obj.setAssetClass(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdctClssfctn")
@@ -225,7 +245,7 @@ public class ContractType6 {
 	 * definition} = "Specifies the classification of the derivative product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProductClassification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContractType6, Optional<ProductClassification1Choice>> mmProductClassification = new MMMessageAssociationEnd<ContractType6, Optional<ProductClassification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmAssetClassification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractType6.mmObject();
@@ -238,6 +258,16 @@ public class ContractType6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProductClassification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProductClassification1Choice> getValue(ContractType6 obj) {
+			return obj.getProductClassification();
+		}
+
+		@Override
+		public void setValue(ContractType6 obj, Optional<ProductClassification1Choice> value) {
+			obj.setProductClassification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PdctId")
@@ -273,7 +303,7 @@ public class ContractType6 {
 	 * definition} = "Specifies the identification of the derivative product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProductIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContractType6, Optional<SecurityIdentification18Choice>> mmProductIdentification = new MMMessageAssociationEnd<ContractType6, Optional<SecurityIdentification18Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractType6.mmObject();
@@ -286,6 +316,16 @@ public class ContractType6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification18Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification18Choice> getValue(ContractType6 obj) {
+			return obj.getProductIdentification();
+		}
+
+		@Override
+		public void setValue(ContractType6 obj, Optional<SecurityIdentification18Choice> value) {
+			obj.setProductIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygAsst")
@@ -323,7 +363,7 @@ public class ContractType6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingAsset = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContractType6, Optional<SecurityIdentification19Choice>> mmUnderlyingAsset = new MMMessageAssociationEnd<ContractType6, Optional<SecurityIdentification19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractType6.mmObject();
@@ -336,6 +376,16 @@ public class ContractType6 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification19Choice> getValue(ContractType6 obj) {
+			return obj.getUnderlyingAsset();
+		}
+
+		@Override
+		public void setValue(ContractType6 obj, Optional<SecurityIdentification19Choice> value) {
+			obj.setUnderlyingAsset(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtnlCcyFrstLeg", required = true)
@@ -374,7 +424,7 @@ public class ContractType6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrencyFirstLeg = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractType6, ActiveOrHistoricCurrencyCode> mmNotionalCurrencyFirstLeg = new MMMessageAttribute<ContractType6, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmLegAdditionalInformation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractType6.mmObject();
@@ -386,6 +436,16 @@ public class ContractType6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(ContractType6 obj) {
+			return obj.getNotionalCurrencyFirstLeg();
+		}
+
+		@Override
+		public void setValue(ContractType6 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setNotionalCurrencyFirstLeg(value);
 		}
 	};
 	@XmlElement(name = "NtnlCcyScndLeg")
@@ -424,7 +484,7 @@ public class ContractType6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotionalCurrencySecondLeg = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractType6, Optional<ActiveOrHistoricCurrencyCode>> mmNotionalCurrencySecondLeg = new MMMessageAttribute<ContractType6, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmLegAdditionalInformation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractType6.mmObject();
@@ -436,6 +496,16 @@ public class ContractType6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(ContractType6 obj) {
+			return obj.getNotionalCurrencySecondLeg();
+		}
+
+		@Override
+		public void setValue(ContractType6 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setNotionalCurrencySecondLeg(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmCcy")
@@ -472,7 +542,7 @@ public class ContractType6 {
 	 * definition} = "Specifies the currency to be delivered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ContractType6, Optional<ActiveOrHistoricCurrencyCode>> mmSettlementCurrency = new MMMessageAttribute<ContractType6, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Leg.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContractType6.mmObject();
@@ -484,6 +554,16 @@ public class ContractType6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(ContractType6 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(ContractType6 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setSettlementCurrency(value.orElse(null));
 		}
 	};
 

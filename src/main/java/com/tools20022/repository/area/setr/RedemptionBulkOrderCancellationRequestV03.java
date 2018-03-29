@@ -21,7 +21,6 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.area.SecuritiesTradePreviousVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -239,7 +238,7 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,12 +250,14 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionBulkOrderCancellationRequestV03.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(RedemptionBulkOrderCancellationRequestV03 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(RedemptionBulkOrderCancellationRequestV03 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -292,7 +293,7 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,12 +305,14 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionBulkOrderCancellationRequestV03.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(RedemptionBulkOrderCancellationRequestV03 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(RedemptionBulkOrderCancellationRequestV03 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -345,7 +348,7 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -357,12 +360,14 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionBulkOrderCancellationRequestV03.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(RedemptionBulkOrderCancellationRequestV03 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(RedemptionBulkOrderCancellationRequestV03 obj, Optional<AdditionalReference3> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlByRef")
@@ -390,7 +395,7 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * definition} = "References of the orders to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationByReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<InvestmentFundOrder1>> mmCancellationByReference = new MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<InvestmentFundOrder1>>() {
 		{
 			xmlTag = "CxlByRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -401,12 +406,14 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			complexType_lazy = () -> InvestmentFundOrder1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionBulkOrderCancellationRequestV03.class.getMethod("getCancellationByReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<InvestmentFundOrder1> getValue(RedemptionBulkOrderCancellationRequestV03 obj) {
+			return obj.getCancellationByReference();
+		}
+
+		@Override
+		public void setValue(RedemptionBulkOrderCancellationRequestV03 obj, Optional<InvestmentFundOrder1> value) {
+			obj.setCancellationByReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlByOrdrDtls")
@@ -435,7 +442,7 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * "Common information related to all the orders to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationByOrderDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<RedemptionBulkOrderInstruction2>> mmCancellationByOrderDetails = new MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<RedemptionBulkOrderInstruction2>>() {
 		{
 			xmlTag = "CxlByOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,12 +453,14 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			complexType_lazy = () -> RedemptionBulkOrderInstruction2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionBulkOrderCancellationRequestV03.class.getMethod("getCancellationByOrderDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<RedemptionBulkOrderInstruction2> getValue(RedemptionBulkOrderCancellationRequestV03 obj) {
+			return obj.getCancellationByOrderDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionBulkOrderCancellationRequestV03 obj, Optional<RedemptionBulkOrderInstruction2> value) {
+			obj.setCancellationByOrderDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDtls")
@@ -487,7 +496,7 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCopyDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<CopyInformation2>> mmCopyDetails = new MMMessageBuildingBlock<RedemptionBulkOrderCancellationRequestV03, Optional<CopyInformation2>>() {
 		{
 			xmlTag = "CpyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -499,12 +508,14 @@ public class RedemptionBulkOrderCancellationRequestV03 {
 			complexType_lazy = () -> CopyInformation2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionBulkOrderCancellationRequestV03.class.getMethod("getCopyDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CopyInformation2> getValue(RedemptionBulkOrderCancellationRequestV03 obj) {
+			return obj.getCopyDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionBulkOrderCancellationRequestV03 obj, Optional<CopyInformation2> value) {
+			obj.setCopyDetails(value.orElse(null));
 		}
 	};
 

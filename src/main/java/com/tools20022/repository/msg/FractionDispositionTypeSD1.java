@@ -106,7 +106,7 @@ public class FractionDispositionTypeSD1 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionTypeSD1, Max350Text> mmPlaceAndName = new MMMessageAttribute<FractionDispositionTypeSD1, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FractionDispositionTypeSD1.mmObject();
 			isDerived = false;
@@ -117,6 +117,16 @@ public class FractionDispositionTypeSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(FractionDispositionTypeSD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(FractionDispositionTypeSD1 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "FrctnlSctyRule")
@@ -154,7 +164,7 @@ public class FractionDispositionTypeSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFractionalSecurityRule = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionTypeSD1, Optional<FractionalSecurityRule1Code>> mmFractionalSecurityRule = new MMMessageAttribute<FractionDispositionTypeSD1, Optional<FractionalSecurityRule1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FractionDispositionTypeSD1.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class FractionDispositionTypeSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FractionalSecurityRule1Code.mmObject();
+		}
+
+		@Override
+		public Optional<FractionalSecurityRule1Code> getValue(FractionDispositionTypeSD1 obj) {
+			return obj.getFractionalSecurityRule();
+		}
+
+		@Override
+		public void setValue(FractionDispositionTypeSD1 obj, Optional<FractionalSecurityRule1Code> value) {
+			obj.setFractionalSecurityRule(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RndgFctr")
@@ -203,7 +223,7 @@ public class FractionDispositionTypeSD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionTypeSD1, Optional<DecimalNumber>> mmRoundingFactor = new MMMessageAttribute<FractionDispositionTypeSD1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.FractionDispositionTypeSD1.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class FractionDispositionTypeSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(FractionDispositionTypeSD1 obj) {
+			return obj.getRoundingFactor();
+		}
+
+		@Override
+		public void setValue(FractionDispositionTypeSD1 obj, Optional<DecimalNumber> value) {
+			obj.setRoundingFactor(value.orElse(null));
 		}
 	};
 

@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Debtor3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -116,7 +116,7 @@ public class Debtor3 {
 	 * Debtor2.mmDebtor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debtor3, Optional<PartyIdentification100Choice>> mmDebtor = new MMMessageAttribute<Debtor3, Optional<PartyIdentification100Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debtor3.mmObject();
@@ -129,6 +129,16 @@ public class Debtor3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification100Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification100Choice> getValue(Debtor3 obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(Debtor3 obj, Optional<PartyIdentification100Choice> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -172,7 +182,7 @@ public class Debtor3 {
 	 * Debtor2.mmAccountIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debtor3, Optional<CashAccountIdentification7Choice>> mmAccountIdentification = new MMMessageAttribute<Debtor3, Optional<CashAccountIdentification7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debtor3.mmObject();
@@ -186,6 +196,16 @@ public class Debtor3 {
 			minOccurs = 0;
 			complexType_lazy = () -> CashAccountIdentification7Choice.mmObject();
 		}
+
+		@Override
+		public Optional<CashAccountIdentification7Choice> getValue(Debtor3 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(Debtor3 obj, Optional<CashAccountIdentification7Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -194,7 +214,7 @@ public class Debtor3 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debtor3.mmDebtor, com.tools20022.repository.msg.Debtor3.mmAccountIdentification);
 				trace_lazy = () -> DebtorRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Debtor3";
 				definition = "Information about the debtor.";
 				previousVersion_lazy = () -> Debtor2.mmObject();

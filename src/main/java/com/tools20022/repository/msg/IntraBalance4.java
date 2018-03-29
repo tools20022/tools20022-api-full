@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2;
+import com.tools20022.repository.msg.GenericIdentification37;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +136,7 @@ public class IntraBalance4 {
 	 * IntraBalance2.mmSettledAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettledAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalance4, Optional<Amount2Choice>> mmSettledAmount = new MMMessageAssociationEnd<IntraBalance4, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalance4.mmObject();
@@ -148,6 +150,16 @@ public class IntraBalance4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(IntraBalance4 obj) {
+			return obj.getSettledAmount();
+		}
+
+		@Override
+		public void setValue(IntraBalance4 obj, Optional<Amount2Choice> value) {
+			obj.setSettledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrevslySttldAmt")
@@ -187,7 +199,7 @@ public class IntraBalance4 {
 	 * IntraBalance2.mmPreviouslySettledAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviouslySettledAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalance4, Optional<Amount2Choice>> mmPreviouslySettledAmount = new MMMessageAssociationEnd<IntraBalance4, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalance4.mmObject();
@@ -201,6 +213,16 @@ public class IntraBalance4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(IntraBalance4 obj) {
+			return obj.getPreviouslySettledAmount();
+		}
+
+		@Override
+		public void setValue(IntraBalance4 obj, Optional<Amount2Choice> value) {
+			obj.setPreviouslySettledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RmngSttlmAmt")
@@ -240,7 +262,7 @@ public class IntraBalance4 {
 	 * IntraBalance2.mmRemainingSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRemainingSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalance4, Optional<Amount2Choice>> mmRemainingSettlementAmount = new MMMessageAssociationEnd<IntraBalance4, Optional<Amount2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalance4.mmObject();
@@ -254,6 +276,16 @@ public class IntraBalance4 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Amount2Choice> getValue(IntraBalance4 obj) {
+			return obj.getRemainingSettlementAmount();
+		}
+
+		@Override
+		public void setValue(IntraBalance4 obj, Optional<Amount2Choice> value) {
+			obj.setRemainingSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDt", required = true)
@@ -298,7 +330,7 @@ public class IntraBalance4 {
 	 * IntraBalance2.mmSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalance4, DateAndDateTimeChoice> mmSettlementDate = new MMMessageAttribute<IntraBalance4, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalance4.mmObject();
@@ -312,6 +344,16 @@ public class IntraBalance4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IntraBalance4 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(IntraBalance4 obj, DateAndDateTimeChoice value) {
+			obj.setSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "BalFr", required = true)
@@ -355,7 +397,7 @@ public class IntraBalance4 {
 	 * IntraBalance2.mmBalanceFrom}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalance4, CashSubBalanceTypeAndQuantityBreakdown2> mmBalanceFrom = new MMMessageAssociationEnd<IntraBalance4, CashSubBalanceTypeAndQuantityBreakdown2>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalance4.mmObject();
@@ -369,7 +411,17 @@ public class IntraBalance4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+		}
+
+		@Override
+		public CashSubBalanceTypeAndQuantityBreakdown2 getValue(IntraBalance4 obj) {
+			return obj.getBalanceFrom();
+		}
+
+		@Override
+		public void setValue(IntraBalance4 obj, CashSubBalanceTypeAndQuantityBreakdown2 value) {
+			obj.setBalanceFrom(value);
 		}
 	};
 	@XmlElement(name = "BalTo", required = true)
@@ -413,7 +465,7 @@ public class IntraBalance4 {
 	 * IntraBalance2.mmBalanceTo}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalance4, CashSubBalanceTypeAndQuantityBreakdown2> mmBalanceTo = new MMMessageAssociationEnd<IntraBalance4, CashSubBalanceTypeAndQuantityBreakdown2>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalance4.mmObject();
@@ -427,7 +479,17 @@ public class IntraBalance4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+		}
+
+		@Override
+		public CashSubBalanceTypeAndQuantityBreakdown2 getValue(IntraBalance4 obj) {
+			return obj.getBalanceTo();
+		}
+
+		@Override
+		public void setValue(IntraBalance4 obj, CashSubBalanceTypeAndQuantityBreakdown2 value) {
+			obj.setBalanceTo(value);
 		}
 	};
 	@XmlElement(name = "CshSubBalId")
@@ -467,7 +529,7 @@ public class IntraBalance4 {
 	 * IntraBalance2.mmCashSubBalanceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashSubBalanceIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalance4, Optional<GenericIdentification37>> mmCashSubBalanceIdentification = new MMMessageAssociationEnd<IntraBalance4, Optional<GenericIdentification37>>() {
 		{
 			businessComponentTrace_lazy = () -> CashBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalance4.mmObject();
@@ -480,7 +542,17 @@ public class IntraBalance4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
+			type_lazy = () -> GenericIdentification37.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification37> getValue(IntraBalance4 obj) {
+			return obj.getCashSubBalanceIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalance4 obj, Optional<GenericIdentification37> value) {
+			obj.setCashSubBalanceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrPrcgAddtlDtls")
@@ -521,7 +593,7 @@ public class IntraBalance4 {
 	 * IntraBalance2.mmInstructionProcessingAdditionalDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionProcessingAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalance4, Optional<Max350Text>> mmInstructionProcessingAdditionalDetails = new MMMessageAttribute<IntraBalance4, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalance4.mmObject();
 			isDerived = false;
@@ -534,6 +606,16 @@ public class IntraBalance4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(IntraBalance4 obj) {
+			return obj.getInstructionProcessingAdditionalDetails();
+		}
+
+		@Override
+		public void setValue(IntraBalance4 obj, Optional<Max350Text> value) {
+			obj.setInstructionProcessingAdditionalDetails(value.orElse(null));
 		}
 	};
 
@@ -595,7 +677,7 @@ public class IntraBalance4 {
 		return balanceFrom;
 	}
 
-	public IntraBalance4 setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2 balanceFrom) {
+	public IntraBalance4 setBalanceFrom(CashSubBalanceTypeAndQuantityBreakdown2 balanceFrom) {
 		this.balanceFrom = Objects.requireNonNull(balanceFrom);
 		return this;
 	}
@@ -604,7 +686,7 @@ public class IntraBalance4 {
 		return balanceTo;
 	}
 
-	public IntraBalance4 setBalanceTo(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2 balanceTo) {
+	public IntraBalance4 setBalanceTo(CashSubBalanceTypeAndQuantityBreakdown2 balanceTo) {
 		this.balanceTo = Objects.requireNonNull(balanceTo);
 		return this;
 	}
@@ -613,7 +695,7 @@ public class IntraBalance4 {
 		return cashSubBalanceIdentification == null ? Optional.empty() : Optional.of(cashSubBalanceIdentification);
 	}
 
-	public IntraBalance4 setCashSubBalanceIdentification(com.tools20022.repository.msg.GenericIdentification37 cashSubBalanceIdentification) {
+	public IntraBalance4 setCashSubBalanceIdentification(GenericIdentification37 cashSubBalanceIdentification) {
 		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
 		return this;
 	}

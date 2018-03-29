@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.LocalName;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StatisticsTransparency2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -160,7 +161,7 @@ public class TransparencyDataReport14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport14, Optional<Max35Text>> mmTechnicalRecordIdentification = new MMMessageAttribute<TransparencyDataReport14, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
 			isDerived = false;
@@ -171,6 +172,16 @@ public class TransparencyDataReport14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransparencyDataReport14 obj) {
+			return obj.getTechnicalRecordIdentification();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<Max35Text> value) {
+			obj.setTechnicalRecordIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -208,7 +219,7 @@ public class TransparencyDataReport14 {
 	 * definition} = "Identifies the financial instrument using an ISIN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport14, ISINOct2015Identifier> mmIdentification = new MMMessageAttribute<TransparencyDataReport14, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
@@ -220,6 +231,16 @@ public class TransparencyDataReport14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(TransparencyDataReport14 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, ISINOct2015Identifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "FullNm")
@@ -256,7 +277,7 @@ public class TransparencyDataReport14 {
 	 * definition} = "Full name of the reporting entity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport14, Optional<Max350Text>> mmFullName = new MMMessageAttribute<TransparencyDataReport14, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
@@ -268,6 +289,16 @@ public class TransparencyDataReport14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(TransparencyDataReport14 obj) {
+			return obj.getFullName();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<Max350Text> value) {
+			obj.setFullName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgVn")
@@ -307,7 +338,7 @@ public class TransparencyDataReport14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport14, Optional<MICIdentifier>> mmTradingVenue = new MMMessageAttribute<TransparencyDataReport14, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
@@ -319,6 +350,16 @@ public class TransparencyDataReport14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(TransparencyDataReport14 obj) {
+			return obj.getTradingVenue();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<MICIdentifier> value) {
+			obj.setTradingVenue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptgPrd")
@@ -349,7 +390,7 @@ public class TransparencyDataReport14 {
 	 * definition} = "Period to which the quantitative data fields relate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransparencyDataReport14, Optional<Period4Choice>> mmReportingPeriod = new MMMessageAssociationEnd<TransparencyDataReport14, Optional<Period4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
 			isDerived = false;
@@ -361,6 +402,16 @@ public class TransparencyDataReport14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> Period4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Period4Choice> getValue(TransparencyDataReport14 obj) {
+			return obj.getReportingPeriod();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<Period4Choice> value) {
+			obj.setReportingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lqdty")
@@ -395,7 +446,7 @@ public class TransparencyDataReport14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLiquidity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransparencyDataReport14, Optional<TrueFalseIndicator>> mmLiquidity = new MMMessageAttribute<TransparencyDataReport14, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
 			isDerived = false;
@@ -406,6 +457,16 @@ public class TransparencyDataReport14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(TransparencyDataReport14 obj) {
+			return obj.getLiquidity();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<TrueFalseIndicator> value) {
+			obj.setLiquidity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PreTradLrgInScaleThrshld")
@@ -437,7 +498,7 @@ public class TransparencyDataReport14 {
 	 * definition} = "The pre-trade Large in Scale threshold."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreTradeLargeInScaleThreshold = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransparencyDataReport14, Optional<TonsOrCurrency2Choice>> mmPreTradeLargeInScaleThreshold = new MMMessageAssociationEnd<TransparencyDataReport14, Optional<TonsOrCurrency2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
 			isDerived = false;
@@ -449,6 +510,16 @@ public class TransparencyDataReport14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TonsOrCurrency2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TonsOrCurrency2Choice> getValue(TransparencyDataReport14 obj) {
+			return obj.getPreTradeLargeInScaleThreshold();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<TonsOrCurrency2Choice> value) {
+			obj.setPreTradeLargeInScaleThreshold(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstTradLrgInScaleThrshld")
@@ -480,7 +551,7 @@ public class TransparencyDataReport14 {
 	 * definition} = "The post-trade Large in Scale threshold."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostTradeLargeInScaleThreshold = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransparencyDataReport14, Optional<TonsOrCurrency2Choice>> mmPostTradeLargeInScaleThreshold = new MMMessageAssociationEnd<TransparencyDataReport14, Optional<TonsOrCurrency2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
 			isDerived = false;
@@ -492,6 +563,16 @@ public class TransparencyDataReport14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TonsOrCurrency2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TonsOrCurrency2Choice> getValue(TransparencyDataReport14 obj) {
+			return obj.getPostTradeLargeInScaleThreshold();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<TonsOrCurrency2Choice> value) {
+			obj.setPostTradeLargeInScaleThreshold(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PreTradInstrmSzSpcfcThrshld")
@@ -523,7 +604,7 @@ public class TransparencyDataReport14 {
 	 * definition} = "The pre-trade Size Specific to an Instrument threshold."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreTradeInstrumentSizeSpecificThreshold = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransparencyDataReport14, Optional<TonsOrCurrency2Choice>> mmPreTradeInstrumentSizeSpecificThreshold = new MMMessageAssociationEnd<TransparencyDataReport14, Optional<TonsOrCurrency2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
 			isDerived = false;
@@ -535,6 +616,16 @@ public class TransparencyDataReport14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TonsOrCurrency2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TonsOrCurrency2Choice> getValue(TransparencyDataReport14 obj) {
+			return obj.getPreTradeInstrumentSizeSpecificThreshold();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<TonsOrCurrency2Choice> value) {
+			obj.setPreTradeInstrumentSizeSpecificThreshold(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstTradInstrmSzSpcfcThrshld")
@@ -566,7 +657,7 @@ public class TransparencyDataReport14 {
 	 * definition} = "The post-trade Size Specific to an Instrument threshold."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPostTradeInstrumentSizeSpecificThreshold = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransparencyDataReport14, Optional<TonsOrCurrency2Choice>> mmPostTradeInstrumentSizeSpecificThreshold = new MMMessageAssociationEnd<TransparencyDataReport14, Optional<TonsOrCurrency2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
 			isDerived = false;
@@ -578,6 +669,16 @@ public class TransparencyDataReport14 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TonsOrCurrency2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TonsOrCurrency2Choice> getValue(TransparencyDataReport14 obj) {
+			return obj.getPostTradeInstrumentSizeSpecificThreshold();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<TonsOrCurrency2Choice> value) {
+			obj.setPostTradeInstrumentSizeSpecificThreshold(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sttstcs")
@@ -611,7 +712,7 @@ public class TransparencyDataReport14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatistics = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransparencyDataReport14, Optional<StatisticsTransparency2>> mmStatistics = new MMMessageAssociationEnd<TransparencyDataReport14, Optional<StatisticsTransparency2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport14.mmObject();
 			isDerived = false;
@@ -622,7 +723,17 @@ public class TransparencyDataReport14 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency2.mmObject();
+			type_lazy = () -> StatisticsTransparency2.mmObject();
+		}
+
+		@Override
+		public Optional<StatisticsTransparency2> getValue(TransparencyDataReport14 obj) {
+			return obj.getStatistics();
+		}
+
+		@Override
+		public void setValue(TransparencyDataReport14 obj, Optional<StatisticsTransparency2> value) {
+			obj.setStatistics(value.orElse(null));
 		}
 	};
 
@@ -740,7 +851,7 @@ public class TransparencyDataReport14 {
 		return statistics == null ? Optional.empty() : Optional.of(statistics);
 	}
 
-	public TransparencyDataReport14 setStatistics(com.tools20022.repository.msg.StatisticsTransparency2 statistics) {
+	public TransparencyDataReport14 setStatistics(StatisticsTransparency2 statistics) {
 		this.statistics = statistics;
 		return this;
 	}

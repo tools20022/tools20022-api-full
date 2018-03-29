@@ -111,7 +111,7 @@ public class GenericIdentification17 {
 	 * definition} = "Identification assigned by an institution."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification17, RestrictedFINMax34Text> mmIdentification = new MMMessageAttribute<GenericIdentification17, RestrictedFINMax34Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification17.mmObject();
@@ -123,6 +123,16 @@ public class GenericIdentification17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINMax34Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINMax34Text getValue(GenericIdentification17 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification17 obj, RestrictedFINMax34Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -159,7 +169,7 @@ public class GenericIdentification17 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification17, Max8Text> mmIssuer = new MMMessageAttribute<GenericIdentification17, Max8Text>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification17.mmObject();
@@ -171,6 +181,16 @@ public class GenericIdentification17 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Max8Text getValue(GenericIdentification17 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification17 obj, Max8Text value) {
+			obj.setIssuer(value);
 		}
 	};
 

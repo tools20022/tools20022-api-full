@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.ReceiptV04;
 import com.tools20022.repository.choice.PaymentIdentification5Choice;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalMessageAndIssuer1;
+import com.tools20022.repository.msg.RequestHandling1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -114,7 +116,7 @@ public class Receipt2 {
 	 * Receipt1.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMessageIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Receipt2, OriginalMessageAndIssuer1> mmOriginalMessageIdentification = new MMMessageAssociationEnd<Receipt2, OriginalMessageAndIssuer1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Receipt2.mmObject();
 			isDerived = false;
@@ -126,7 +128,17 @@ public class Receipt2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmObject();
+			type_lazy = () -> OriginalMessageAndIssuer1.mmObject();
+		}
+
+		@Override
+		public OriginalMessageAndIssuer1 getValue(Receipt2 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(Receipt2 obj, OriginalMessageAndIssuer1 value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlPmtId")
@@ -159,7 +171,7 @@ public class Receipt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalPaymentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Receipt2, Optional<PaymentIdentification5Choice>> mmOriginalPaymentIdentification = new MMMessageAssociationEnd<Receipt2, Optional<PaymentIdentification5Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Receipt2.mmObject();
 			isDerived = false;
@@ -172,9 +184,19 @@ public class Receipt2 {
 			isComposite = true;
 			type_lazy = () -> PaymentIdentification5Choice.mmObject();
 		}
+
+		@Override
+		public Optional<PaymentIdentification5Choice> getValue(Receipt2 obj) {
+			return obj.getOriginalPaymentIdentification();
+		}
+
+		@Override
+		public void setValue(Receipt2 obj, Optional<PaymentIdentification5Choice> value) {
+			obj.setOriginalPaymentIdentification(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "ReqHdlg")
-	protected List<com.tools20022.repository.msg.RequestHandling1> requestHandling;
+	protected List<RequestHandling1> requestHandling;
 	/**
 	 * 
 	 <p>
@@ -205,7 +227,7 @@ public class Receipt2 {
 	 * Receipt1.mmRequestHandling}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Receipt2, List<RequestHandling1>> mmRequestHandling = new MMMessageAssociationEnd<Receipt2, List<RequestHandling1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Receipt2.mmObject();
 			isDerived = false;
@@ -216,7 +238,17 @@ public class Receipt2 {
 			previousVersion_lazy = () -> Receipt1.mmRequestHandling;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RequestHandling1.mmObject();
+			type_lazy = () -> RequestHandling1.mmObject();
+		}
+
+		@Override
+		public List<RequestHandling1> getValue(Receipt2 obj) {
+			return obj.getRequestHandling();
+		}
+
+		@Override
+		public void setValue(Receipt2 obj, List<RequestHandling1> value) {
+			obj.setRequestHandling(value);
 		}
 	};
 
@@ -240,7 +272,7 @@ public class Receipt2 {
 		return originalMessageIdentification;
 	}
 
-	public Receipt2 setOriginalMessageIdentification(com.tools20022.repository.msg.OriginalMessageAndIssuer1 originalMessageIdentification) {
+	public Receipt2 setOriginalMessageIdentification(OriginalMessageAndIssuer1 originalMessageIdentification) {
 		this.originalMessageIdentification = Objects.requireNonNull(originalMessageIdentification);
 		return this;
 	}
@@ -258,7 +290,7 @@ public class Receipt2 {
 		return requestHandling == null ? requestHandling = new ArrayList<>() : requestHandling;
 	}
 
-	public Receipt2 setRequestHandling(List<com.tools20022.repository.msg.RequestHandling1> requestHandling) {
+	public Receipt2 setRequestHandling(List<RequestHandling1> requestHandling) {
 		this.requestHandling = Objects.requireNonNull(requestHandling);
 		return this;
 	}

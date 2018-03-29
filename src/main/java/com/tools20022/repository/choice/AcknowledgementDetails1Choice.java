@@ -116,7 +116,7 @@ public class AcknowledgementDetails1Choice {
 	 * "Reference to the pay in schedule that is being acknowledged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayInScheduleReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementDetails1Choice, Max35Text> mmPayInScheduleReference = new MMMessageAttribute<AcknowledgementDetails1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementDetails1Choice.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class AcknowledgementDetails1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AcknowledgementDetails1Choice obj) {
+			return obj.getPayInScheduleReference();
+		}
+
+		@Override
+		public void setValue(AcknowledgementDetails1Choice obj, Max35Text value) {
+			obj.setPayInScheduleReference(value);
 		}
 	};
 	@XmlElement(name = "PayInCallRef", required = true)
@@ -158,7 +168,7 @@ public class AcknowledgementDetails1Choice {
 	 * definition} = "Reference to the pay in call that is being acknowledged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayInCallReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementDetails1Choice, Max35Text> mmPayInCallReference = new MMMessageAttribute<AcknowledgementDetails1Choice, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementDetails1Choice.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class AcknowledgementDetails1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AcknowledgementDetails1Choice obj) {
+			return obj.getPayInCallReference();
+		}
+
+		@Override
+		public void setValue(AcknowledgementDetails1Choice obj, Max35Text value) {
+			obj.setPayInCallReference(value);
 		}
 	};
 

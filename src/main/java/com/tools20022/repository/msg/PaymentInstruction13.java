@@ -133,7 +133,7 @@ public class PaymentInstruction13 {
 	 * PaymentInstruction3.mmRequestedExecutionDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRequestedExecutionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction13, Optional<ISODateTime>> mmRequestedExecutionDateTime = new MMMessageAttribute<PaymentInstruction13, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction13.mmObject();
@@ -146,6 +146,16 @@ public class PaymentInstruction13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(PaymentInstruction13 obj) {
+			return obj.getRequestedExecutionDateTime();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction13 obj, Optional<ISODateTime> value) {
+			obj.setRequestedExecutionDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtTp")
@@ -189,7 +199,7 @@ public class PaymentInstruction13 {
 	 * PaymentInstruction3.mmPaymentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstruction13, Optional<PaymentType4Choice>> mmPaymentType = new MMMessageAttribute<PaymentInstruction13, Optional<PaymentType4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction13.mmObject();
@@ -202,6 +212,16 @@ public class PaymentInstruction13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentType4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentType4Choice> getValue(PaymentInstruction13 obj) {
+			return obj.getPaymentType();
+		}
+
+		@Override
+		public void setValue(PaymentInstruction13 obj, Optional<PaymentType4Choice> value) {
+			obj.setPaymentType(value.orElse(null));
 		}
 	};
 

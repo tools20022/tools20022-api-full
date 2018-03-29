@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification15;
@@ -110,7 +111,7 @@ public class SubBalanceQuantity2Choice {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceQuantity2Choice, FinancialInstrumentQuantity1Choice> mmQuantity = new MMMessageAttribute<SubBalanceQuantity2Choice, FinancialInstrumentQuantity1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity2Choice.mmObject();
@@ -121,7 +122,17 @@ public class SubBalanceQuantity2Choice {
 			definition = "Quantity of securities in the sub-balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1Choice getValue(SubBalanceQuantity2Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SubBalanceQuantity2Choice obj, FinancialInstrumentQuantity1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +170,7 @@ public class SubBalanceQuantity2Choice {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceQuantity2Choice, GenericIdentification15> mmProprietary = new MMMessageAttribute<SubBalanceQuantity2Choice, GenericIdentification15>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity2Choice.mmObject();
@@ -171,6 +182,16 @@ public class SubBalanceQuantity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification15.mmObject();
+		}
+
+		@Override
+		public GenericIdentification15 getValue(SubBalanceQuantity2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SubBalanceQuantity2Choice obj, GenericIdentification15 value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "QtyAndAvlbty", required = true)
@@ -210,7 +231,7 @@ public class SubBalanceQuantity2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityAndAvailability = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SubBalanceQuantity2Choice, QuantityAndAvailability1> mmQuantityAndAvailability = new MMMessageAttribute<SubBalanceQuantity2Choice, QuantityAndAvailability1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity2Choice.mmObject();
@@ -222,6 +243,16 @@ public class SubBalanceQuantity2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityAndAvailability1.mmObject();
+		}
+
+		@Override
+		public QuantityAndAvailability1 getValue(SubBalanceQuantity2Choice obj) {
+			return obj.getQuantityAndAvailability();
+		}
+
+		@Override
+		public void setValue(SubBalanceQuantity2Choice obj, QuantityAndAvailability1 value) {
+			obj.setQuantityAndAvailability(value);
 		}
 	};
 
@@ -244,7 +275,7 @@ public class SubBalanceQuantity2Choice {
 		return quantity;
 	}
 
-	public SubBalanceQuantity2Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice quantity) {
+	public SubBalanceQuantity2Choice setQuantity(FinancialInstrumentQuantity1Choice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

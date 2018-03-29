@@ -120,7 +120,7 @@ public class PartyTextInformation2 {
 	 * "Provides declaration details narrative relative to the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclarationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyTextInformation2, Optional<Max350Text>> mmDeclarationDetails = new MMMessageAttribute<PartyTextInformation2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmDeclaration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyTextInformation2.mmObject();
@@ -132,6 +132,16 @@ public class PartyTextInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(PartyTextInformation2 obj) {
+			return obj.getDeclarationDetails();
+		}
+
+		@Override
+		public void setValue(PartyTextInformation2 obj, Optional<Max350Text> value) {
+			obj.setDeclarationDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyCtctDtls")
@@ -170,7 +180,7 @@ public class PartyTextInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyTextInformation2, Optional<Max140Text>> mmPartyContactDetails = new MMMessageAttribute<PartyTextInformation2, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmContactPoint;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyTextInformation2.mmObject();
@@ -182,6 +192,16 @@ public class PartyTextInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(PartyTextInformation2 obj) {
+			return obj.getPartyContactDetails();
+		}
+
+		@Override
+		public void setValue(PartyTextInformation2 obj, Optional<Max140Text> value) {
+			obj.setPartyContactDetails(value.orElse(null));
 		}
 	};
 

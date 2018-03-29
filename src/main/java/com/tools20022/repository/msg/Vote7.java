@@ -139,7 +139,7 @@ public class Vote7 {
 	 * Vote5.mmIssuerLabel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, Max35Text> mmIssuerLabel = new MMMessageAttribute<Vote7, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Resolution.mmIssuerLabel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -152,6 +152,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Vote7 obj) {
+			return obj.getIssuerLabel();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, Max35Text value) {
+			obj.setIssuerLabel(value);
 		}
 	};
 	@XmlElement(name = "RsltnSts", required = true)
@@ -193,7 +203,7 @@ public class Vote7 {
 	 * Vote5.mmAccepted}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResolutionStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, ResolutionStatus2Code> mmResolutionStatus = new MMMessageAttribute<Vote7, ResolutionStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmMeetingResolutionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -206,6 +216,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ResolutionStatus2Code.mmObject();
+		}
+
+		@Override
+		public ResolutionStatus2Code getValue(Vote7 obj) {
+			return obj.getResolutionStatus();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, ResolutionStatus2Code value) {
+			obj.setResolutionStatus(value);
 		}
 	};
 	@XmlElement(name = "For")
@@ -244,7 +264,7 @@ public class Vote7 {
 	 * Vote5.mmFor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, Optional<Number>> mmFor = new MMMessageAttribute<Vote7, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmFor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -257,6 +277,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Vote7 obj) {
+			return obj.getFor();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, Optional<Number> value) {
+			obj.setFor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Agnst")
@@ -297,7 +327,7 @@ public class Vote7 {
 	 * Vote5.mmAgainst}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAgainst = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, Optional<Number>> mmAgainst = new MMMessageAttribute<Vote7, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmAgainst;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -310,6 +340,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Vote7 obj) {
+			return obj.getAgainst();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, Optional<Number> value) {
+			obj.setAgainst(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Abstn")
@@ -350,7 +390,7 @@ public class Vote7 {
 	 * Vote5.mmAbstain}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAbstain = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, Optional<Number>> mmAbstain = new MMMessageAttribute<Vote7, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmAbstain;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -363,6 +403,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Vote7 obj) {
+			return obj.getAbstain();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, Optional<Number> value) {
+			obj.setAbstain(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Wthhld")
@@ -405,7 +455,7 @@ public class Vote7 {
 	 * Vote5.mmWithhold}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWithhold = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, Optional<Number>> mmWithhold = new MMMessageAttribute<Vote7, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmWithhold;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -418,6 +468,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Vote7 obj) {
+			return obj.getWithhold();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, Optional<Number> value) {
+			obj.setWithhold(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OneYr")
@@ -455,7 +515,7 @@ public class Vote7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOneYear = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, Optional<Number>> mmOneYear = new MMMessageAttribute<Vote7, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmOneYear;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -467,6 +527,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Vote7 obj) {
+			return obj.getOneYear();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, Optional<Number> value) {
+			obj.setOneYear(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TwoYrs")
@@ -504,7 +574,7 @@ public class Vote7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTwoYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, Optional<Number>> mmTwoYears = new MMMessageAttribute<Vote7, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmTwoYears;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -516,6 +586,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Vote7 obj) {
+			return obj.getTwoYears();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, Optional<Number> value) {
+			obj.setTwoYears(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ThreeYrs")
@@ -553,7 +633,7 @@ public class Vote7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmThreeYears = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, Optional<Number>> mmThreeYears = new MMMessageAttribute<Vote7, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmThreeYears;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -565,6 +645,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Vote7 obj) {
+			return obj.getThreeYears();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, Optional<Number> value) {
+			obj.setThreeYears(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NoActn")
@@ -605,7 +695,7 @@ public class Vote7 {
 	 * Vote5.mmNoAction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoAction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Vote7, Optional<Number>> mmNoAction = new MMMessageAttribute<Vote7, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Vote.mmNoAction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Vote7.mmObject();
@@ -618,6 +708,16 @@ public class Vote7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Vote7 obj) {
+			return obj.getNoAction();
+		}
+
+		@Override
+		public void setValue(Vote7 obj, Optional<Number> value) {
+			obj.setNoAction(value.orElse(null));
 		}
 	};
 

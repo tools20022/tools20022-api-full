@@ -112,7 +112,7 @@ public class DeMinimusApplicable1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewIssuePermission = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeMinimusApplicable1, YesNoIndicator> mmNewIssuePermission = new MMMessageAttribute<DeMinimusApplicable1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmNewIssuePermission;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeMinimusApplicable1.mmObject();
@@ -124,6 +124,16 @@ public class DeMinimusApplicable1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(DeMinimusApplicable1 obj) {
+			return obj.getNewIssuePermission();
+		}
+
+		@Override
+		public void setValue(DeMinimusApplicable1 obj, YesNoIndicator value) {
+			obj.setNewIssuePermission(value);
 		}
 	};
 	@XmlElement(name = "Pctg")
@@ -158,7 +168,7 @@ public class DeMinimusApplicable1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DeMinimusApplicable1, Optional<PercentageRate>> mmPercentage = new MMMessageAttribute<DeMinimusApplicable1, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DeMinimusApplicable1.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class DeMinimusApplicable1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(DeMinimusApplicable1 obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(DeMinimusApplicable1 obj, Optional<PercentageRate> value) {
+			obj.setPercentage(value.orElse(null));
 		}
 	};
 

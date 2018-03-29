@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMContext20;
+import com.tools20022.repository.msg.ATMTransaction28;
+import com.tools20022.repository.msg.AutomatedTellerMachine3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +112,7 @@ public class ATMExceptionAcknowledgement1 {
 	 * definition} = "ATM information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmATM = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMExceptionAcknowledgement1, AutomatedTellerMachine3> mmATM = new MMMessageAssociationEnd<ATMExceptionAcknowledgement1, AutomatedTellerMachine3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMExceptionAcknowledgement1.mmObject();
 			isDerived = false;
@@ -120,7 +123,17 @@ public class ATMExceptionAcknowledgement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine3.mmObject();
+			type_lazy = () -> AutomatedTellerMachine3.mmObject();
+		}
+
+		@Override
+		public AutomatedTellerMachine3 getValue(ATMExceptionAcknowledgement1 obj) {
+			return obj.getATM();
+		}
+
+		@Override
+		public void setValue(ATMExceptionAcknowledgement1 obj, AutomatedTellerMachine3 value) {
+			obj.setATM(value);
 		}
 	};
 	@XmlElement(name = "Cntxt", required = true)
@@ -151,7 +164,7 @@ public class ATMExceptionAcknowledgement1 {
 	 * definition} = "Context in which the transaction is performed, if any."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMExceptionAcknowledgement1, ATMContext20> mmContext = new MMMessageAssociationEnd<ATMExceptionAcknowledgement1, ATMContext20>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMExceptionAcknowledgement1.mmObject();
 			isDerived = false;
@@ -162,7 +175,17 @@ public class ATMExceptionAcknowledgement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMContext20.mmObject();
+			type_lazy = () -> ATMContext20.mmObject();
+		}
+
+		@Override
+		public ATMContext20 getValue(ATMExceptionAcknowledgement1 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(ATMExceptionAcknowledgement1 obj, ATMContext20 value) {
+			obj.setContext(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -193,7 +216,7 @@ public class ATMExceptionAcknowledgement1 {
 	 * definition} = "Acknowledgement of the exception advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMExceptionAcknowledgement1, ATMTransaction28> mmTransaction = new MMMessageAssociationEnd<ATMExceptionAcknowledgement1, ATMTransaction28>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMExceptionAcknowledgement1.mmObject();
 			isDerived = false;
@@ -204,7 +227,17 @@ public class ATMExceptionAcknowledgement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction28.mmObject();
+			type_lazy = () -> ATMTransaction28.mmObject();
+		}
+
+		@Override
+		public ATMTransaction28 getValue(ATMExceptionAcknowledgement1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ATMExceptionAcknowledgement1 obj, ATMTransaction28 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -227,7 +260,7 @@ public class ATMExceptionAcknowledgement1 {
 		return aTM;
 	}
 
-	public ATMExceptionAcknowledgement1 setATM(com.tools20022.repository.msg.AutomatedTellerMachine3 aTM) {
+	public ATMExceptionAcknowledgement1 setATM(AutomatedTellerMachine3 aTM) {
 		this.aTM = Objects.requireNonNull(aTM);
 		return this;
 	}
@@ -236,7 +269,7 @@ public class ATMExceptionAcknowledgement1 {
 		return context;
 	}
 
-	public ATMExceptionAcknowledgement1 setContext(com.tools20022.repository.msg.ATMContext20 context) {
+	public ATMExceptionAcknowledgement1 setContext(ATMContext20 context) {
 		this.context = Objects.requireNonNull(context);
 		return this;
 	}
@@ -245,7 +278,7 @@ public class ATMExceptionAcknowledgement1 {
 		return transaction;
 	}
 
-	public ATMExceptionAcknowledgement1 setTransaction(com.tools20022.repository.msg.ATMTransaction28 transaction) {
+	public ATMExceptionAcknowledgement1 setTransaction(ATMTransaction28 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

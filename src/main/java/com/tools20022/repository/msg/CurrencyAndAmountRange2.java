@@ -111,7 +111,7 @@ public class CurrencyAndAmountRange2 {
 	 * definition} = "Specified amount or amount range."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyAndAmountRange2, ImpliedCurrencyAmountRangeChoice> mmAmount = new MMMessageAttribute<CurrencyAndAmountRange2, ImpliedCurrencyAmountRangeChoice>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyAndAmountRange2.mmObject();
@@ -123,6 +123,16 @@ public class CurrencyAndAmountRange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAmountRangeChoice getValue(CurrencyAndAmountRange2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(CurrencyAndAmountRange2 obj, ImpliedCurrencyAmountRangeChoice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -161,7 +171,7 @@ public class CurrencyAndAmountRange2 {
 	 * "Indicates whether the amount is a credited or debited amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyAndAmountRange2, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<CurrencyAndAmountRange2, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyAndAmountRange2.mmObject();
@@ -173,6 +183,16 @@ public class CurrencyAndAmountRange2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(CurrencyAndAmountRange2 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CurrencyAndAmountRange2 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy", required = true)
@@ -210,7 +230,7 @@ public class CurrencyAndAmountRange2 {
 	 * definition} = "Medium of exchange of value, used to qualify an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyAndAmountRange2, ActiveOrHistoricCurrencyCode> mmCurrency = new MMMessageAttribute<CurrencyAndAmountRange2, ActiveOrHistoricCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyAndAmountRange2.mmObject();
@@ -222,6 +242,16 @@ public class CurrencyAndAmountRange2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyCode getValue(CurrencyAndAmountRange2 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyAndAmountRange2 obj, ActiveOrHistoricCurrencyCode value) {
+			obj.setCurrency(value);
 		}
 	};
 

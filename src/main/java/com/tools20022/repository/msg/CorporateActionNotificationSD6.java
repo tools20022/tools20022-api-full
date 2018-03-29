@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +120,7 @@ public class CorporateActionNotificationSD6 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD6, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionNotificationSD6, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -130,6 +131,16 @@ public class CorporateActionNotificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionNotificationSD6 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD6 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "EvtSts")
@@ -165,7 +176,7 @@ public class CorporateActionNotificationSD6 {
 	 * definition} = "Workflow status of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD6, Optional<EventWorkflowStatus1Code>> mmEventStatus = new MMMessageAttribute<CorporateActionNotificationSD6, Optional<EventWorkflowStatus1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -177,6 +188,16 @@ public class CorporateActionNotificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventWorkflowStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EventWorkflowStatus1Code> getValue(CorporateActionNotificationSD6 obj) {
+			return obj.getEventStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD6 obj, Optional<EventWorkflowStatus1Code> value) {
+			obj.setEventStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ApprvdDt")
@@ -212,7 +233,7 @@ public class CorporateActionNotificationSD6 {
 	 * "Date by which the announcement is set to approve event status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApprovedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD6, Optional<ISODate>> mmApprovedDate = new MMMessageAttribute<CorporateActionNotificationSD6, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -224,6 +245,16 @@ public class CorporateActionNotificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionNotificationSD6 obj) {
+			return obj.getApprovedDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD6 obj, Optional<ISODate> value) {
+			obj.setApprovedDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchDt")
@@ -260,7 +291,7 @@ public class CorporateActionNotificationSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD6, Optional<ISODate>> mmMatchDate = new MMMessageAttribute<CorporateActionNotificationSD6, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -272,6 +303,16 @@ public class CorporateActionNotificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionNotificationSD6 obj) {
+			return obj.getMatchDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD6 obj, Optional<ISODate> value) {
+			obj.setMatchDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActvUntilDt")
@@ -308,7 +349,7 @@ public class CorporateActionNotificationSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActiveUntilDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD6, Optional<ISODate>> mmActiveUntilDate = new MMMessageAttribute<CorporateActionNotificationSD6, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -320,6 +361,16 @@ public class CorporateActionNotificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionNotificationSD6 obj) {
+			return obj.getActiveUntilDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD6 obj, Optional<ISODate> value) {
+			obj.setActiveUntilDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcLvlAgrmtPrd")
@@ -354,7 +405,7 @@ public class CorporateActionNotificationSD6 {
 	 * definition} = "Start date and end date of the service level agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceLevelAgreementPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD6, Optional<Period3>> mmServiceLevelAgreementPeriod = new MMMessageAttribute<CorporateActionNotificationSD6, Optional<Period3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -365,7 +416,17 @@ public class CorporateActionNotificationSD6 {
 			definition = "Start date and end date of the service level agreement.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
+			complexType_lazy = () -> Period3.mmObject();
+		}
+
+		@Override
+		public Optional<Period3> getValue(CorporateActionNotificationSD6 obj) {
+			return obj.getServiceLevelAgreementPeriod();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD6 obj, Optional<Period3> value) {
+			obj.setServiceLevelAgreementPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtnNotSpprtdRsn")
@@ -403,7 +464,7 @@ public class CorporateActionNotificationSD6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidationNotSupportedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD6, Optional<Max4AlphaNumericText>> mmValidationNotSupportedReason = new MMMessageAttribute<CorporateActionNotificationSD6, Optional<Max4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD6.mmObject();
 			isDerived = false;
@@ -415,6 +476,16 @@ public class CorporateActionNotificationSD6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(CorporateActionNotificationSD6 obj) {
+			return obj.getValidationNotSupportedReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD6 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setValidationNotSupportedReason(value.orElse(null));
 		}
 	};
 
@@ -483,7 +554,7 @@ public class CorporateActionNotificationSD6 {
 		return serviceLevelAgreementPeriod == null ? Optional.empty() : Optional.of(serviceLevelAgreementPeriod);
 	}
 
-	public CorporateActionNotificationSD6 setServiceLevelAgreementPeriod(com.tools20022.repository.msg.Period3 serviceLevelAgreementPeriod) {
+	public CorporateActionNotificationSD6 setServiceLevelAgreementPeriod(Period3 serviceLevelAgreementPeriod) {
 		this.serviceLevelAgreementPeriod = serviceLevelAgreementPeriod;
 		return this;
 	}

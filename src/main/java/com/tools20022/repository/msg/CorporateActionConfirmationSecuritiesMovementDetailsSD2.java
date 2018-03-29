@@ -161,7 +161,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD1.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 			isDerived = false;
@@ -174,6 +174,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -224,7 +234,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 	 * mmCreditDebitIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, CreditDebitCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 			isDerived = false;
@@ -238,6 +248,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "TxQty")
@@ -289,7 +309,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 	 * mmTransactionQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>> mmTransactionQuantity = new MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 			isDerived = false;
@@ -303,6 +323,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj) {
+			return obj.getTransactionQuantity();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setTransactionQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsnCd")
@@ -351,7 +381,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD1.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<DTCAdjustmentPaymentType2Code>> mmReasonCode = new MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<DTCAdjustmentPaymentType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 			isDerived = false;
@@ -365,6 +395,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAdjustmentPaymentType2Code> getValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj, Optional<DTCAdjustmentPaymentType2Code> value) {
+			obj.setReasonCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubRsnCd")
@@ -405,7 +445,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<DTCAdjustmentPaymentSubReason1Code>> mmSubReasonCode = new MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<DTCAdjustmentPaymentSubReason1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 			isDerived = false;
@@ -417,6 +457,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAdjustmentPaymentSubReason1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAdjustmentPaymentSubReason1Code> getValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj) {
+			return obj.getSubReasonCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj, Optional<DTCAdjustmentPaymentSubReason1Code> value) {
+			obj.setSubReasonCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ContraPtcptNb")
@@ -468,7 +518,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 	 * mmContraParticipantNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<Max8Text>> mmContraParticipantNumber = new MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 			isDerived = false;
@@ -482,6 +532,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj) {
+			return obj.getContraParticipantNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj, Optional<Max8Text> value) {
+			obj.setContraParticipantNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -531,7 +591,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<ISODate>> mmMaturityDate = new MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
@@ -545,6 +605,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj, Optional<ISODate> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PstngDt")
@@ -594,7 +664,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 	 * CorporateActionConfirmationSecuritiesMovementDetailsSD1.mmPostingDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<DateFormat28Choice>> mmPostingDate = new MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<DateFormat28Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 			isDerived = false;
@@ -608,6 +678,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat28Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat28Choice> getValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj) {
+			return obj.getPostingDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj, Optional<DateFormat28Choice> value) {
+			obj.setPostingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxAdjstmntRate")
@@ -651,7 +731,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxAdjustmentRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<PercentageRate>> mmTaxAdjustmentRate = new MMMessageAttribute<CorporateActionConfirmationSecuritiesMovementDetailsSD2, Optional<PercentageRate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD2.mmObject();
 			isDerived = false;
@@ -663,6 +743,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj) {
+			return obj.getTaxAdjustmentRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionConfirmationSecuritiesMovementDetailsSD2 obj, Optional<PercentageRate> value) {
+			obj.setTaxAdjustmentRate(value.orElse(null));
 		}
 	};
 

@@ -55,11 +55,15 @@ public class ConstraintBalanceQall1Rule {
 	 */
 	public static final MMConstraint<SafekeepingAccount3> forSafekeepingAccount3 = new MMConstraint<SafekeepingAccount3>() {
 		{
-			validator = ConstraintBalanceQall1Rule::checkSafekeepingAccount3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceQall1Rule";
 			definition = "If SubAccountDetails/SubAccountIdentification is present, then InstructedBalance/Balance/Code \"QALL\" is not allowed in any occurrence of InstructedBalance.";
 			owner_lazy = () -> SafekeepingAccount3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingAccount3 obj) throws Exception {
+			checkSafekeepingAccount3(obj);
 		}
 	};
 	/**
@@ -97,13 +101,17 @@ public class ConstraintBalanceQall1Rule {
 	 */
 	public static final MMConstraint<SafekeepingAccount4> forSafekeepingAccount4 = new MMConstraint<SafekeepingAccount4>() {
 		{
-			validator = ConstraintBalanceQall1Rule::checkSafekeepingAccount4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceQall1Rule";
 			definition = "If SubAccountDetails/Identification is present, then InstructedBalance/Balance/Code \"QALL\" is not allowed in any occurrence of InstructedBalance.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceQall1Rule.forSafekeepingAccount6);
 			owner_lazy = () -> SafekeepingAccount4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedBalance[*]/Balance/Code</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SubAccountDetails/Identification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SafekeepingAccount4 obj) throws Exception {
+			checkSafekeepingAccount4(obj);
 		}
 	};
 	/**
@@ -138,13 +146,17 @@ public class ConstraintBalanceQall1Rule {
 	 */
 	public static final MMConstraint<SafekeepingAccount6> forSafekeepingAccount6 = new MMConstraint<SafekeepingAccount6>() {
 		{
-			validator = ConstraintBalanceQall1Rule::checkSafekeepingAccount6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceQall1Rule";
 			definition = "If SubAccountDetails/Identification is present, then InstructedBalance/Balance/Code \"QALL\" is not allowed in any occurrence of InstructedBalance.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceQall1Rule.forSafekeepingAccount4;
 			owner_lazy = () -> SafekeepingAccount6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedBalance[*]/Balance/Code</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SubAccountDetails/Identification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(SafekeepingAccount6 obj) throws Exception {
+			checkSafekeepingAccount6(obj);
 		}
 	};
 

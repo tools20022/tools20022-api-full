@@ -118,7 +118,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all authorisation transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals6, Optional<Number>> mmAuthorisation = new MMMessageAttribute<TransactionTotals6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class TransactionTotals6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TransactionTotals6 obj) {
+			return obj.getAuthorisation();
+		}
+
+		@Override
+		public void setValue(TransactionTotals6 obj, Optional<Number> value) {
+			obj.setAuthorisation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AuthstnRvsl")
@@ -160,7 +170,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all reversed authorisation transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisationReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals6, Optional<Number>> mmAuthorisationReversal = new MMMessageAttribute<TransactionTotals6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class TransactionTotals6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TransactionTotals6 obj) {
+			return obj.getAuthorisationReversal();
+		}
+
+		@Override
+		public void setValue(TransactionTotals6 obj, Optional<Number> value) {
+			obj.setAuthorisationReversal(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nqry")
@@ -202,7 +222,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all inquiry transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInquiry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals6, Optional<Number>> mmInquiry = new MMMessageAttribute<TransactionTotals6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
@@ -213,6 +233,16 @@ public class TransactionTotals6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TransactionTotals6 obj) {
+			return obj.getInquiry();
+		}
+
+		@Override
+		public void setValue(TransactionTotals6 obj, Optional<Number> value) {
+			obj.setInquiry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NqryRvsl")
@@ -244,7 +274,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all reversed inquiry transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInquiryReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals6, Optional<Number>> mmInquiryReversal = new MMMessageAttribute<TransactionTotals6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
@@ -255,6 +285,16 @@ public class TransactionTotals6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TransactionTotals6 obj) {
+			return obj.getInquiryReversal();
+		}
+
+		@Override
+		public void setValue(TransactionTotals6 obj, Optional<Number> value) {
+			obj.setInquiryReversal(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pmts")
@@ -288,7 +328,7 @@ public class TransactionTotals6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayments = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals6, Optional<Number>> mmPayments = new MMMessageAttribute<TransactionTotals6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
@@ -299,6 +339,16 @@ public class TransactionTotals6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TransactionTotals6 obj) {
+			return obj.getPayments();
+		}
+
+		@Override
+		public void setValue(TransactionTotals6 obj, Optional<Number> value) {
+			obj.setPayments(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtRvsl")
@@ -332,7 +382,7 @@ public class TransactionTotals6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals6, Optional<Number>> mmPaymentReversal = new MMMessageAttribute<TransactionTotals6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
@@ -343,6 +393,16 @@ public class TransactionTotals6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TransactionTotals6 obj) {
+			return obj.getPaymentReversal();
+		}
+
+		@Override
+		public void setValue(TransactionTotals6 obj, Optional<Number> value) {
+			obj.setPaymentReversal(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trf")
@@ -375,7 +435,7 @@ public class TransactionTotals6 {
 	 * "Sum number of all financial presentment transactions processed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransfer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals6, Optional<Number>> mmTransfer = new MMMessageAttribute<TransactionTotals6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
@@ -386,6 +446,16 @@ public class TransactionTotals6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TransactionTotals6 obj) {
+			return obj.getTransfer();
+		}
+
+		@Override
+		public void setValue(TransactionTotals6 obj, Optional<Number> value) {
+			obj.setTransfer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfRvsl")
@@ -417,7 +487,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all reversal transactions processed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferReversal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals6, Optional<Number>> mmTransferReversal = new MMMessageAttribute<TransactionTotals6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
@@ -428,6 +498,16 @@ public class TransactionTotals6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TransactionTotals6 obj) {
+			return obj.getTransferReversal();
+		}
+
+		@Override
+		public void setValue(TransactionTotals6 obj, Optional<Number> value) {
+			obj.setTransferReversal(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FeeColltn")
@@ -459,7 +539,7 @@ public class TransactionTotals6 {
 	 * definition} = "Sum number of all fee collection transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFeeCollection = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTotals6, Optional<Number>> mmFeeCollection = new MMMessageAttribute<TransactionTotals6, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
 			isDerived = false;
@@ -470,6 +550,16 @@ public class TransactionTotals6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(TransactionTotals6 obj) {
+			return obj.getFeeCollection();
+		}
+
+		@Override
+		public void setValue(TransactionTotals6 obj, Optional<Number> value) {
+			obj.setFeeCollection(value.orElse(null));
 		}
 	};
 

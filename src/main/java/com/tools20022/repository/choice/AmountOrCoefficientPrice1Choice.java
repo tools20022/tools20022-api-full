@@ -99,7 +99,7 @@ public class AmountOrCoefficientPrice1Choice {
 	 * "Provides details of the price when expressed with an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountOrCoefficientPrice1Choice, ImpliedCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountOrCoefficientPrice1Choice, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class AmountOrCoefficientPrice1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(AmountOrCoefficientPrice1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountOrCoefficientPrice1Choice obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Coeff", required = true)
@@ -143,7 +153,7 @@ public class AmountOrCoefficientPrice1Choice {
 	 * "Provides details of the price when expressed with a coefficient."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCoefficient = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountOrCoefficientPrice1Choice, DecimalNumber> mmCoefficient = new MMMessageAttribute<AmountOrCoefficientPrice1Choice, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrCoefficientPrice1Choice.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class AmountOrCoefficientPrice1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(AmountOrCoefficientPrice1Choice obj) {
+			return obj.getCoefficient();
+		}
+
+		@Override
+		public void setValue(AmountOrCoefficientPrice1Choice obj, DecimalNumber value) {
+			obj.setCoefficient(value);
 		}
 	};
 

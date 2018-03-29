@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.IndividualPersonIdentificationChoice;
+import com.tools20022.repository.choice.PartyIdentification5Choice;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
@@ -117,7 +119,7 @@ public class OwnerIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualOwnerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OwnerIdentification1Choice, IndividualPersonIdentificationChoice> mmIndividualOwnerIdentification = new MMMessageAssociationEnd<OwnerIdentification1Choice, IndividualPersonIdentificationChoice>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OwnerIdentification1Choice.mmObject();
@@ -130,7 +132,17 @@ public class OwnerIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.IndividualPersonIdentificationChoice.mmObject();
+			type_lazy = () -> IndividualPersonIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public IndividualPersonIdentificationChoice getValue(OwnerIdentification1Choice obj) {
+			return obj.getIndividualOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(OwnerIdentification1Choice obj, IndividualPersonIdentificationChoice value) {
+			obj.setIndividualOwnerIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgOwnrId", required = true)
@@ -175,7 +187,7 @@ public class OwnerIdentification1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisationOwnerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OwnerIdentification1Choice, PartyIdentification5Choice> mmOrganisationOwnerIdentification = new MMMessageAssociationEnd<OwnerIdentification1Choice, PartyIdentification5Choice>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OwnerIdentification1Choice.mmObject();
@@ -188,7 +200,17 @@ public class OwnerIdentification1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PartyIdentification5Choice.mmObject();
+			type_lazy = () -> PartyIdentification5Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification5Choice getValue(OwnerIdentification1Choice obj) {
+			return obj.getOrganisationOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(OwnerIdentification1Choice obj, PartyIdentification5Choice value) {
+			obj.setOrganisationOwnerIdentification(value);
 		}
 	};
 
@@ -211,7 +233,7 @@ public class OwnerIdentification1Choice {
 		return individualOwnerIdentification;
 	}
 
-	public OwnerIdentification1Choice setIndividualOwnerIdentification(com.tools20022.repository.choice.IndividualPersonIdentificationChoice individualOwnerIdentification) {
+	public OwnerIdentification1Choice setIndividualOwnerIdentification(IndividualPersonIdentificationChoice individualOwnerIdentification) {
 		this.individualOwnerIdentification = Objects.requireNonNull(individualOwnerIdentification);
 		return this;
 	}
@@ -220,7 +242,7 @@ public class OwnerIdentification1Choice {
 		return organisationOwnerIdentification;
 	}
 
-	public OwnerIdentification1Choice setOrganisationOwnerIdentification(com.tools20022.repository.choice.PartyIdentification5Choice organisationOwnerIdentification) {
+	public OwnerIdentification1Choice setOrganisationOwnerIdentification(PartyIdentification5Choice organisationOwnerIdentification) {
 		this.organisationOwnerIdentification = Objects.requireNonNull(organisationOwnerIdentification);
 		return this;
 	}

@@ -116,7 +116,7 @@ public class CloseLink2 {
 	 * CloseLink1.mmSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CloseLink2, ISINOct2015Identifier> mmSecurityIdentification = new MMMessageAttribute<CloseLink2, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmCloseLink;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CloseLink2.mmObject();
@@ -129,6 +129,16 @@ public class CloseLink2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(CloseLink2 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CloseLink2 obj, ISINOct2015Identifier value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "PtyId", required = true)
@@ -166,7 +176,7 @@ public class CloseLink2 {
 	 * CloseLink1.mmPartyIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CloseLink2, SystemPartyIdentification1Choice> mmPartyIdentification = new MMMessageAttribute<CloseLink2, SystemPartyIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CloseLink2.mmObject();
 			isDerived = false;
@@ -178,6 +188,16 @@ public class CloseLink2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification1Choice getValue(CloseLink2 obj) {
+			return obj.getPartyIdentification();
+		}
+
+		@Override
+		public void setValue(CloseLink2 obj, SystemPartyIdentification1Choice value) {
+			obj.setPartyIdentification(value);
 		}
 	};
 

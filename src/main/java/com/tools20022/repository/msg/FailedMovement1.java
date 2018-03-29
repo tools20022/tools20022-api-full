@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.UnitOrFaceAmount1Choice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -126,7 +127,7 @@ public class FailedMovement1 {
 	 * definition} = "Amount of cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailedMovement1, ActiveCurrencyAndAmount> mmCashAmount = new MMMessageAttribute<FailedMovement1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
@@ -138,6 +139,16 @@ public class FailedMovement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(FailedMovement1 obj) {
+			return obj.getCashAmount();
+		}
+
+		@Override
+		public void setValue(FailedMovement1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCashAmount(value);
 		}
 	};
 	@XmlElement(name = "SctiesQty", required = true)
@@ -175,7 +186,7 @@ public class FailedMovement1 {
 	 * definition} = "Quantity of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailedMovement1, UnitOrFaceAmount1Choice> mmSecuritiesQuantity = new MMMessageAttribute<FailedMovement1, UnitOrFaceAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
@@ -187,6 +198,16 @@ public class FailedMovement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitOrFaceAmount1Choice.mmObject();
+		}
+
+		@Override
+		public UnitOrFaceAmount1Choice getValue(FailedMovement1 obj) {
+			return obj.getSecuritiesQuantity();
+		}
+
+		@Override
+		public void setValue(FailedMovement1 obj, UnitOrFaceAmount1Choice value) {
+			obj.setSecuritiesQuantity(value);
 		}
 	};
 	@XmlElement(name = "SctyId")
@@ -224,7 +245,7 @@ public class FailedMovement1 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailedMovement1, Optional<SecurityIdentification7>> mmSecurityIdentification = new MMMessageAttribute<FailedMovement1, Optional<SecurityIdentification7>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
@@ -235,7 +256,17 @@ public class FailedMovement1 {
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification7> getValue(FailedMovement1 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(FailedMovement1 obj, Optional<SecurityIdentification7> value) {
+			obj.setSecurityIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -273,7 +304,7 @@ public class FailedMovement1 {
 	 * definition} = "The reason for the settlement failure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailedMovement1, FailedSettlementReason1FormatChoice> mmReason = new MMMessageAttribute<FailedMovement1, FailedSettlementReason1FormatChoice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmMovementFailureReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FailedMovement1.mmObject();
@@ -285,6 +316,16 @@ public class FailedMovement1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FailedSettlementReason1FormatChoice.mmObject();
+		}
+
+		@Override
+		public FailedSettlementReason1FormatChoice getValue(FailedMovement1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(FailedMovement1 obj, FailedSettlementReason1FormatChoice value) {
+			obj.setReason(value);
 		}
 	};
 	/**
@@ -373,7 +414,7 @@ public class FailedMovement1 {
 		return securityIdentification == null ? Optional.empty() : Optional.of(securityIdentification);
 	}
 
-	public FailedMovement1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+	public FailedMovement1 setSecurityIdentification(SecurityIdentification7 securityIdentification) {
 		this.securityIdentification = securityIdentification;
 		return this;
 	}

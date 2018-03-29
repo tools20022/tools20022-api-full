@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MessageAndBusinessReference10;
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -170,7 +169,7 @@ public class RequestForOrderStatusReportV04 {
 	 * RequestForOrderStatusReportV03.mmMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForOrderStatusReportV04, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<RequestForOrderStatusReportV04, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,12 +181,14 @@ public class RequestForOrderStatusReportV04 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForOrderStatusReportV04.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(RequestForOrderStatusReportV04 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(RequestForOrderStatusReportV04 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReqDtls", required = true)
@@ -222,7 +223,7 @@ public class RequestForOrderStatusReportV04 {
 	 * RequestForOrderStatusReportV03.mmRequestDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRequestDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForOrderStatusReportV04, List<MessageAndBusinessReference10>> mmRequestDetails = new MMMessageBuildingBlock<RequestForOrderStatusReportV04, List<MessageAndBusinessReference10>>() {
 		{
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,12 +234,14 @@ public class RequestForOrderStatusReportV04 {
 			complexType_lazy = () -> MessageAndBusinessReference10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForOrderStatusReportV04.class.getMethod("getRequestDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<MessageAndBusinessReference10> getValue(RequestForOrderStatusReportV04 obj) {
+			return obj.getRequestDetails();
+		}
+
+		@Override
+		public void setValue(RequestForOrderStatusReportV04 obj, List<MessageAndBusinessReference10> value) {
+			obj.setRequestDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -272,7 +275,7 @@ public class RequestForOrderStatusReportV04 {
 	 * RequestForOrderStatusReportV03.mmExtension}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<RequestForOrderStatusReportV04, List<Extension1>> mmExtension = new MMMessageBuildingBlock<RequestForOrderStatusReportV04, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,12 +286,14 @@ public class RequestForOrderStatusReportV04 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RequestForOrderStatusReportV04.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(RequestForOrderStatusReportV04 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(RequestForOrderStatusReportV04 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

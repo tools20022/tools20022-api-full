@@ -127,7 +127,7 @@ public class MatchingReason3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingReason3Choice, List<AllegmentMatchingReason1>> mmReason = new MMMessageAssociationEnd<MatchingReason3Choice, List<AllegmentMatchingReason1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmAllegementReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingReason3Choice.mmObject();
@@ -140,6 +140,16 @@ public class MatchingReason3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AllegmentMatchingReason1.mmObject();
+		}
+
+		@Override
+		public List<AllegmentMatchingReason1> getValue(MatchingReason3Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(MatchingReason3Choice obj, List<AllegmentMatchingReason1> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -188,7 +198,7 @@ public class MatchingReason3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingReason3Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<MatchingReason3Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingReason3Choice.mmObject();
@@ -202,6 +212,16 @@ public class MatchingReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(MatchingReason3Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(MatchingReason3Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

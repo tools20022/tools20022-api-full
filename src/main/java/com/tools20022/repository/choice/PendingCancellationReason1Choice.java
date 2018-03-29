@@ -134,7 +134,7 @@ public class PendingCancellationReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationReason1Choice, PendingCancellationReason4Code> mmCode = new MMMessageAttribute<PendingCancellationReason1Choice, PendingCancellationReason4Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReason1Choice.mmObject();
@@ -148,6 +148,16 @@ public class PendingCancellationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PendingCancellationReason4Code.mmObject();
+		}
+
+		@Override
+		public PendingCancellationReason4Code getValue(PendingCancellationReason1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReason1Choice obj, PendingCancellationReason4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -198,7 +208,7 @@ public class PendingCancellationReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingCancellationReason1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<PendingCancellationReason1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PendingCancellationReason1Choice.mmObject();
@@ -212,6 +222,16 @@ public class PendingCancellationReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(PendingCancellationReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PendingCancellationReason1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

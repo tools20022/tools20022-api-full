@@ -125,7 +125,7 @@ public class InformationQualifierType {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIsFormatted = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InformationQualifierType, Optional<YesNoIndicator>> mmIsFormatted = new MMMessageAttribute<InformationQualifierType, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> InformationQualifier.mmIsFormatted;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InformationQualifierType.mmObject();
@@ -138,6 +138,16 @@ public class InformationQualifierType {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(InformationQualifierType obj) {
+			return obj.getIsFormatted();
+		}
+
+		@Override
+		public void setValue(InformationQualifierType obj, Optional<YesNoIndicator> value) {
+			obj.setIsFormatted(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -183,7 +193,7 @@ public class InformationQualifierType {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InformationQualifierType, Optional<Priority1Code>> mmPriority = new MMMessageAttribute<InformationQualifierType, Optional<Priority1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InformationQualifier.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InformationQualifierType.mmObject();
@@ -196,6 +206,16 @@ public class InformationQualifierType {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Priority1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Priority1Code> getValue(InformationQualifierType obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(InformationQualifierType obj, Optional<Priority1Code> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 

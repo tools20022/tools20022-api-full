@@ -135,7 +135,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLineTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmLineTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmGrossAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
@@ -146,6 +146,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of the line amount total being reported for this settlement.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getLineTotalAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setLineTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "AllwncTtlAmt")
@@ -185,7 +195,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllowanceTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmAllowanceTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Allowance.mmTotalAllowance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
@@ -196,6 +206,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of the allowance total being reported for this settlement.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getAllowanceTotalAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setAllowanceTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "TtlDscntAmt")
@@ -235,7 +255,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalDiscountAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmTotalDiscountAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountAppliedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
@@ -246,6 +266,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of the total discount being reported for this settlement.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getTotalDiscountAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setTotalDiscountAmount(value);
 		}
 	};
 	@XmlElement(name = "ChrgTtlAmt")
@@ -285,7 +315,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmChargeTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalCharge;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
@@ -296,6 +326,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of the charge amount total being reported for this settlement.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getChargeTotalAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setChargeTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "TtlPrepdAmt")
@@ -335,7 +375,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalPrepaidAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmTotalPrepaidAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalPrepaidAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
@@ -346,6 +386,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of the total prepaid amount being reported for this settlement.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getTotalPrepaidAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setTotalPrepaidAmount(value);
 		}
 	};
 	@XmlElement(name = "TaxTtlAmt")
@@ -385,7 +435,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmTaxTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalTaxAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
@@ -396,6 +446,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of the total of all tax basis amounts being reported for this settlement.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getTaxTotalAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setTaxTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "TaxBsisAmt")
@@ -435,7 +495,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTaxBasisAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmTaxBasisAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
@@ -446,6 +506,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of the total of all tax basis amounts being reported for this settlement.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getTaxBasisAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setTaxBasisAmount(value);
 		}
 	};
 	@XmlElement(name = "RndgAmt")
@@ -480,7 +550,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmRoundingAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
@@ -490,6 +560,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of a rounding amount being applied and reported for this settlement.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getRoundingAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setRoundingAmount(value);
 		}
 	};
 	@XmlElement(name = "GrdTtlAmt")
@@ -529,7 +609,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGrandTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmGrandTotalAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
@@ -540,6 +620,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of the grand total being reported for this settlement, to include addition and subtraction of individual summation amounts.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getGrandTotalAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setGrandTotalAmount(value);
 		}
 	};
 	@XmlElement(name = "InfAmt")
@@ -574,7 +664,7 @@ public class SettlementMonetarySummation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>> mmInformationAmount = new MMMessageAttribute<SettlementMonetarySummation1, List<CurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementMonetarySummation1.mmObject();
 			isDerived = false;
@@ -584,6 +674,16 @@ public class SettlementMonetarySummation1 {
 			definition = "Monetary value of an amount being reported as information for this settlement.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<CurrencyAndAmount> getValue(SettlementMonetarySummation1 obj) {
+			return obj.getInformationAmount();
+		}
+
+		@Override
+		public void setValue(SettlementMonetarySummation1 obj, List<CurrencyAndAmount> value) {
+			obj.setInformationAmount(value);
 		}
 	};
 

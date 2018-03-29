@@ -50,11 +50,15 @@ public class ConstraintPlaceOfIssue1Rule {
 	 */
 	public static final MMConstraint<Undertaking3> forUndertaking3 = new MMConstraint<Undertaking3>() {
 		{
-			validator = ConstraintPlaceOfIssue1Rule::checkUndertaking3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfIssue1Rule";
 			definition = "Place of Issue must be specified when the address is different from the address specified for the issuer.";
 			owner_lazy = () -> Undertaking3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Undertaking3 obj) throws Exception {
+			checkUndertaking3(obj);
 		}
 	};
 

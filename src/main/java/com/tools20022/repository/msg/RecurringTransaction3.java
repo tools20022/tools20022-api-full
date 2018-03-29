@@ -116,7 +116,7 @@ public class RecurringTransaction3 {
 	 * definition} = "Date of first transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction3, ISODate> mmStartDate = new MMMessageAttribute<RecurringTransaction3, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmFirstPaymentDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction3.mmObject();
@@ -128,6 +128,16 @@ public class RecurringTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(RecurringTransaction3 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction3 obj, ISODate value) {
+			obj.setStartDate(value);
 		}
 	};
 	@XmlElement(name = "NbOfOcrncs")
@@ -164,7 +174,7 @@ public class RecurringTransaction3 {
 	 * definition} = "Number of transfers to perform."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfOccurrences = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction3, Optional<Number>> mmNumberOfOccurrences = new MMMessageAttribute<RecurringTransaction3, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmTotalNumberOfInstalment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction3.mmObject();
@@ -176,6 +186,16 @@ public class RecurringTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(RecurringTransaction3 obj) {
+			return obj.getNumberOfOccurrences();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction3 obj, Optional<Number> value) {
+			obj.setNumberOfOccurrences(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt", required = true)
@@ -207,7 +227,7 @@ public class RecurringTransaction3 {
 	 * definition} = "Date of last transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction3, ISODate> mmEndDate = new MMMessageAttribute<RecurringTransaction3, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction3.mmObject();
 			isDerived = false;
@@ -218,6 +238,16 @@ public class RecurringTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(RecurringTransaction3 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction3 obj, ISODate value) {
+			obj.setEndDate(value);
 		}
 	};
 	@XmlElement(name = "PrdUnit")
@@ -255,7 +285,7 @@ public class RecurringTransaction3 {
 	 * definition} = "Period of the recurring transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPeriodUnit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction3, Optional<Frequency3Code>> mmPeriodUnit = new MMMessageAttribute<RecurringTransaction3, Optional<Frequency3Code>>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmPeriodUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction3.mmObject();
@@ -267,6 +297,16 @@ public class RecurringTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency3Code.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency3Code> getValue(RecurringTransaction3 obj) {
+			return obj.getPeriodUnit();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction3 obj, Optional<Frequency3Code> value) {
+			obj.setPeriodUnit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrvlDay")
@@ -303,7 +343,7 @@ public class RecurringTransaction3 {
 	 * definition} = "Day of the period when the transfer will be performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntervalDay = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RecurringTransaction3, Optional<Number>> mmIntervalDay = new MMMessageAttribute<RecurringTransaction3, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmNumberOfUnits;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction3.mmObject();
@@ -315,6 +355,16 @@ public class RecurringTransaction3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(RecurringTransaction3 obj) {
+			return obj.getIntervalDay();
+		}
+
+		@Override
+		public void setValue(RecurringTransaction3 obj, Optional<Number> value) {
+			obj.setIntervalDay(value.orElse(null));
 		}
 	};
 

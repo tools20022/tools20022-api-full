@@ -120,7 +120,7 @@ public class RequestDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails3, Max35Text> mmType = new MMMessageAttribute<RequestDetails3, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails3.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class RequestDetails3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RequestDetails3 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(RequestDetails3 obj, Max35Text value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Key")
@@ -171,7 +181,7 @@ public class RequestDetails3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmKey = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestDetails3, Optional<Max35Text>> mmKey = new MMMessageAttribute<RequestDetails3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails3.mmObject();
 			isDerived = false;
@@ -183,6 +193,16 @@ public class RequestDetails3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RequestDetails3 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(RequestDetails3 obj, Optional<Max35Text> value) {
+			obj.setKey(value.orElse(null));
 		}
 	};
 

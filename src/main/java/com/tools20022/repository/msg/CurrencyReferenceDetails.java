@@ -111,7 +111,7 @@ public class CurrencyReferenceDetails {
 	 * "Currency of the amount to be converted in a currency conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyReferenceDetails, CurrencyCode> mmSourceCurrency = new MMMessageAttribute<CurrencyReferenceDetails, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyReferenceDetails.mmObject();
@@ -123,6 +123,16 @@ public class CurrencyReferenceDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CurrencyReferenceDetails obj) {
+			return obj.getSourceCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyReferenceDetails obj, CurrencyCode value) {
+			obj.setSourceCurrency(value);
 		}
 	};
 	@XmlElement(name = "TrgtCcy", required = true)
@@ -161,7 +171,7 @@ public class CurrencyReferenceDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyReferenceDetails, CurrencyCode> mmTargetCurrency = new MMMessageAttribute<CurrencyReferenceDetails, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyReferenceDetails.mmObject();
@@ -173,6 +183,16 @@ public class CurrencyReferenceDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CurrencyReferenceDetails obj) {
+			return obj.getTargetCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyReferenceDetails obj, CurrencyCode value) {
+			obj.setTargetCurrency(value);
 		}
 	};
 

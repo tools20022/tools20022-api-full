@@ -106,7 +106,7 @@ public class MultimodalTransport3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTakingInCharge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MultimodalTransport3, Max35Text> mmTakingInCharge = new MMMessageAttribute<MultimodalTransport3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport3.mmObject();
@@ -118,6 +118,16 @@ public class MultimodalTransport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MultimodalTransport3 obj) {
+			return obj.getTakingInCharge();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport3 obj, Max35Text value) {
+			obj.setTakingInCharge(value);
 		}
 	};
 	@XmlElement(name = "PlcOfFnlDstn", required = true)
@@ -155,7 +165,7 @@ public class MultimodalTransport3 {
 	 * "Identifies the location of the final destination of the goods."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfFinalDestination = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MultimodalTransport3, Max35Text> mmPlaceOfFinalDestination = new MMMessageAttribute<MultimodalTransport3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MultimodalTransport3.mmObject();
@@ -167,6 +177,16 @@ public class MultimodalTransport3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(MultimodalTransport3 obj) {
+			return obj.getPlaceOfFinalDestination();
+		}
+
+		@Override
+		public void setValue(MultimodalTransport3 obj, Max35Text value) {
+			obj.setPlaceOfFinalDestination(value);
 		}
 	};
 

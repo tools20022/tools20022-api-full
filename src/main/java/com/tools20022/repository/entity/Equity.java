@@ -31,7 +31,6 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -205,11 +204,11 @@ public class Equity extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc."
+	 * "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmPreferenceToIncome = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Equity, PreferenceToIncomeCode> mmPreferenceToIncome = new MMBusinessAttribute<Equity, PreferenceToIncomeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PreferenceToIncome1Choice.mmCode, PreferenceToIncome1Choice.mmProprietary, PreferenceToIncome2Choice.mmCode, PreferenceToIncome2Choice.mmProprietary,
 					FinancialInstrumentAttributes8.mmPreferenceToIncome, FinancialInstrumentAttributes20.mmPreferenceToIncome, FinancialInstrumentAttributes4.mmPreferenceToIncome, PreferenceToIncome3Choice.mmCode,
@@ -221,18 +220,20 @@ public class Equity extends Security {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Equity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreferenceToIncome";
-			definition = "Indicates the level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
+			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncomeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Equity.class.getMethod("getPreferenceToIncome", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PreferenceToIncomeCode getValue(Equity obj) {
+			return obj.getPreferenceToIncome();
+		}
+
+		@Override
+		public void setValue(Equity obj, PreferenceToIncomeCode value) {
+			obj.setPreferenceToIncome(value);
 		}
 	};
 	protected YesNoIndicator convertibleIndicator;
@@ -270,7 +271,7 @@ public class Equity extends Security {
 	 * "Indicates whether the investor or the issuer has a conversion option."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmConvertibleIndicator = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Equity, YesNoIndicator> mmConvertibleIndicator = new MMBusinessAttribute<Equity, YesNoIndicator>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmConvertibleIndicator);
 			isDerived = false;
@@ -283,12 +284,14 @@ public class Equity extends Security {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Equity.class.getMethod("getConvertibleIndicator", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(Equity obj) {
+			return obj.getConvertibleIndicator();
+		}
+
+		@Override
+		public void setValue(Equity obj, YesNoIndicator value) {
+			obj.setConvertibleIndicator(value);
 		}
 	};
 	protected CurrencyAndAmount nonPaidAmount;
@@ -328,7 +331,7 @@ public class Equity extends Security {
 	 * definition} = "Nominal amount which is not paid yet."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmNonPaidAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Equity, CurrencyAndAmount> mmNonPaidAmount = new MMBusinessAttribute<Equity, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmNonPaidAmount, Equity2.mmNonPaidAmount, Equity3.mmNonPaidAmount);
 			isDerived = false;
@@ -341,12 +344,14 @@ public class Equity extends Security {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Equity.class.getMethod("getNonPaidAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Equity obj) {
+			return obj.getNonPaidAmount();
+		}
+
+		@Override
+		public void setValue(Equity obj, CurrencyAndAmount value) {
+			obj.setNonPaidAmount(value);
 		}
 	};
 	protected CurrencyAndAmount parValue;
@@ -386,7 +391,7 @@ public class Equity extends Security {
 	 * definition} = "Nominal value of an equity security."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmParValue = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Equity, CurrencyAndAmount> mmParValue = new MMBusinessAttribute<Equity, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmParValue, Equity2.mmParValue, Equity3.mmParValue);
 			isDerived = false;
@@ -399,12 +404,14 @@ public class Equity extends Security {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Equity.class.getMethod("getParValue", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(Equity obj) {
+			return obj.getParValue();
+		}
+
+		@Override
+		public void setValue(Equity obj, CurrencyAndAmount value) {
+			obj.setParValue(value);
 		}
 	};
 	protected Number votingRightsPerShare;
@@ -446,7 +453,7 @@ public class Equity extends Security {
 	 * definition} = "Number of voting rights per share."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmVotingRightsPerShare = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Equity, Number> mmVotingRightsPerShare = new MMBusinessAttribute<Equity, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Equity1.mmVotingRightsPerShare, Equity2.mmVotingRightsPerShare, Equity3.mmVotingRightsPerShare);
 			isDerived = false;
@@ -459,12 +466,14 @@ public class Equity extends Security {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Equity.class.getMethod("getVotingRightsPerShare", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(Equity obj) {
+			return obj.getVotingRightsPerShare();
+		}
+
+		@Override
+		public void setValue(Equity obj, Number value) {
+			obj.setVotingRightsPerShare(value);
 		}
 	};
 

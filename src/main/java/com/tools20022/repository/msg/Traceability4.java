@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification77;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class Traceability4 {
 	 * Traceability2.mmRelayIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelayIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Traceability4, GenericIdentification77> mmRelayIdentification = new MMMessageAssociationEnd<Traceability4, GenericIdentification77>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Traceability4.mmObject();
 			isDerived = false;
@@ -126,7 +127,17 @@ public class Traceability4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification77.mmObject();
+			type_lazy = () -> GenericIdentification77.mmObject();
+		}
+
+		@Override
+		public GenericIdentification77 getValue(Traceability4 obj) {
+			return obj.getRelayIdentification();
+		}
+
+		@Override
+		public void setValue(Traceability4 obj, GenericIdentification77 value) {
+			obj.setRelayIdentification(value);
 		}
 	};
 	@XmlElement(name = "SeqNb")
@@ -159,7 +170,7 @@ public class Traceability4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Traceability4, Optional<Max35Text>> mmSequenceNumber = new MMMessageAttribute<Traceability4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Traceability4.mmObject();
 			isDerived = false;
@@ -170,6 +181,16 @@ public class Traceability4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Traceability4 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(Traceability4 obj, Optional<Max35Text> value) {
+			obj.setSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TracDtTmIn", required = true)
@@ -206,7 +227,7 @@ public class Traceability4 {
 	 * Traceability2.mmTraceDateTimeIn}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTraceDateTimeIn = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Traceability4, ISODateTime> mmTraceDateTimeIn = new MMMessageAttribute<Traceability4, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Traceability4.mmObject();
 			isDerived = false;
@@ -218,6 +239,16 @@ public class Traceability4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Traceability4 obj) {
+			return obj.getTraceDateTimeIn();
+		}
+
+		@Override
+		public void setValue(Traceability4 obj, ISODateTime value) {
+			obj.setTraceDateTimeIn(value);
 		}
 	};
 	@XmlElement(name = "TracDtTmOut", required = true)
@@ -254,7 +285,7 @@ public class Traceability4 {
 	 * Traceability2.mmTraceDateTimeOut}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTraceDateTimeOut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Traceability4, ISODateTime> mmTraceDateTimeOut = new MMMessageAttribute<Traceability4, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Traceability4.mmObject();
 			isDerived = false;
@@ -266,6 +297,16 @@ public class Traceability4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Traceability4 obj) {
+			return obj.getTraceDateTimeOut();
+		}
+
+		@Override
+		public void setValue(Traceability4 obj, ISODateTime value) {
+			obj.setTraceDateTimeOut(value);
 		}
 	};
 
@@ -288,7 +329,7 @@ public class Traceability4 {
 		return relayIdentification;
 	}
 
-	public Traceability4 setRelayIdentification(com.tools20022.repository.msg.GenericIdentification77 relayIdentification) {
+	public Traceability4 setRelayIdentification(GenericIdentification77 relayIdentification) {
 		this.relayIdentification = Objects.requireNonNull(relayIdentification);
 		return this;
 	}

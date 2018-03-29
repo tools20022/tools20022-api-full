@@ -118,7 +118,7 @@ public class HoldingBalance3 {
 	 * "Total quantity of financial instrument for the referenced holding."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldingBalance3, Optional<UnitOrFaceAmountChoice>> mmBalance = new MMMessageAttribute<HoldingBalance3, Optional<UnitOrFaceAmountChoice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldingBalance3.mmObject();
@@ -130,6 +130,16 @@ public class HoldingBalance3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+		}
+
+		@Override
+		public Optional<UnitOrFaceAmountChoice> getValue(HoldingBalance3 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(HoldingBalance3 obj, Optional<UnitOrFaceAmountChoice> value) {
+			obj.setBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalTp")
@@ -169,7 +179,7 @@ public class HoldingBalance3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldingBalance3, Optional<SecuritiesEntryType2Code>> mmBalanceType = new MMMessageAttribute<HoldingBalance3, Optional<SecuritiesEntryType2Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldingBalance3.mmObject();
@@ -181,6 +191,16 @@ public class HoldingBalance3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesEntryType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesEntryType2Code> getValue(HoldingBalance3 obj) {
+			return obj.getBalanceType();
+		}
+
+		@Override
+		public void setValue(HoldingBalance3 obj, Optional<SecuritiesEntryType2Code> value) {
+			obj.setBalanceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -220,7 +240,7 @@ public class HoldingBalance3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldingBalance3, Optional<SafekeepingPlaceFormatChoice>> mmSafekeepingPlace = new MMMessageAttribute<HoldingBalance3, Optional<SafekeepingPlaceFormatChoice>>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldingBalance3.mmObject();
@@ -232,6 +252,16 @@ public class HoldingBalance3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SafekeepingPlaceFormatChoice> getValue(HoldingBalance3 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(HoldingBalance3 obj, Optional<SafekeepingPlaceFormatChoice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dt")
@@ -268,7 +298,7 @@ public class HoldingBalance3 {
 	 * definition} = "Date of the entitlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldingBalance3, Optional<ISODate>> mmDate = new MMMessageAttribute<HoldingBalance3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementFixingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldingBalance3.mmObject();
@@ -280,6 +310,16 @@ public class HoldingBalance3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(HoldingBalance3 obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(HoldingBalance3 obj, Optional<ISODate> value) {
+			obj.setDate(value.orElse(null));
 		}
 	};
 

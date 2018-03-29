@@ -118,7 +118,7 @@ public class OrganisationIdentification27 {
 	 * "Unique and unambiguous identification of the organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrganisationIdentification27, OrganisationIdentification2Choice> mmIdentification = new MMMessageAssociationEnd<OrganisationIdentification27, OrganisationIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification27.mmObject();
@@ -131,6 +131,16 @@ public class OrganisationIdentification27 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification2Choice getValue(OrganisationIdentification27 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification27 obj, OrganisationIdentification2Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -167,7 +177,7 @@ public class OrganisationIdentification27 {
 	 * definition} = "Indicates the name of the reporting counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification27, Optional<Max105Text>> mmName = new MMMessageAttribute<OrganisationIdentification27, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmOrganisationName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification27.mmObject();
@@ -179,6 +189,16 @@ public class OrganisationIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(OrganisationIdentification27 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification27 obj, Optional<Max105Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Dmcl")
@@ -215,7 +235,7 @@ public class OrganisationIdentification27 {
 	 * definition} = "Indicates the domicile of counterparty."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification27, Optional<Max500Text>> mmDomicile = new MMMessageAttribute<OrganisationIdentification27, Optional<Max500Text>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmDomicile;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification27.mmObject();
@@ -227,6 +247,16 @@ public class OrganisationIdentification27 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(OrganisationIdentification27 obj) {
+			return obj.getDomicile();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification27 obj, Optional<Max500Text> value) {
+			obj.setDomicile(value.orElse(null));
 		}
 	};
 

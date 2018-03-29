@@ -194,7 +194,7 @@ public class CorporateActionNarrative10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative10, List<Max350Text>> mmAdditionalText = new MMMessageAttribute<CorporateActionNarrative10, List<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative10.mmObject();
 			isDerived = false;
@@ -205,6 +205,16 @@ public class CorporateActionNarrative10 {
 			definition = "Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative10 obj) {
+			return obj.getAdditionalText();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative10 obj, List<Max350Text> value) {
+			obj.setAdditionalText(value);
 		}
 	};
 	@XmlElement(name = "PtyCtctNrrtv")
@@ -246,7 +256,7 @@ public class CorporateActionNarrative10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative10, List<Max350Text>> mmPartyContactNarrative = new MMMessageAttribute<CorporateActionNarrative10, List<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative10.mmObject();
@@ -258,6 +268,16 @@ public class CorporateActionNarrative10 {
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public List<Max350Text> getValue(CorporateActionNarrative10 obj) {
+			return obj.getPartyContactNarrative();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative10 obj, List<Max350Text> value) {
+			obj.setPartyContactNarrative(value);
 		}
 	};
 

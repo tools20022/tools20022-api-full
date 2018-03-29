@@ -29,7 +29,6 @@ import com.tools20022.repository.msg.TradeData12;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -136,7 +135,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	 * "Information on the status of the trade in the central system.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatusDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeBulkStatusNotificationV04, TradeData12> mmStatusDetails = new MMMessageBuildingBlock<ForeignExchangeTradeBulkStatusNotificationV04, TradeData12>() {
 		{
 			xmlTag = "StsDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,12 +146,14 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			complexType_lazy = () -> TradeData12.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeBulkStatusNotificationV04.class.getMethod("getStatusDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeData12 getValue(ForeignExchangeTradeBulkStatusNotificationV04 obj) {
+			return obj.getStatusDetails();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeBulkStatusNotificationV04 obj, TradeData12 value) {
+			obj.setStatusDetails(value);
 		}
 	};
 	@XmlElement(name = "TradData", required = true)
@@ -181,7 +182,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeBulkStatusNotificationV04, List<TradeData11>> mmTradeData = new MMMessageBuildingBlock<ForeignExchangeTradeBulkStatusNotificationV04, List<TradeData11>>() {
 		{
 			xmlTag = "TradData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,12 +192,14 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			complexType_lazy = () -> TradeData11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeBulkStatusNotificationV04.class.getMethod("getTradeData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<TradeData11> getValue(ForeignExchangeTradeBulkStatusNotificationV04 obj) {
+			return obj.getTradeData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeBulkStatusNotificationV04 obj, List<TradeData11> value) {
+			obj.setTradeData(value);
 		}
 	};
 	@XmlElement(name = "MsgPgntn")
@@ -225,7 +228,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeBulkStatusNotificationV04, Optional<Pagination>> mmMessagePagination = new MMMessageBuildingBlock<ForeignExchangeTradeBulkStatusNotificationV04, Optional<Pagination>>() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,12 +239,14 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeBulkStatusNotificationV04.class.getMethod("getMessagePagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Pagination> getValue(ForeignExchangeTradeBulkStatusNotificationV04 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeBulkStatusNotificationV04 obj, Optional<Pagination> value) {
+			obj.setMessagePagination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -271,7 +276,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ForeignExchangeTradeBulkStatusNotificationV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ForeignExchangeTradeBulkStatusNotificationV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,12 +286,14 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ForeignExchangeTradeBulkStatusNotificationV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ForeignExchangeTradeBulkStatusNotificationV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTradeBulkStatusNotificationV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

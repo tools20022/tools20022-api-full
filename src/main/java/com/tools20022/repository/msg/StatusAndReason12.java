@@ -156,7 +156,7 @@ public class StatusAndReason12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason12, Optional<ProcessingStatus23Choice>> mmProcessingStatus = new MMMessageAssociationEnd<StatusAndReason12, Optional<ProcessingStatus23Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason12.mmObject();
@@ -171,6 +171,16 @@ public class StatusAndReason12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus23Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessingStatus23Choice> getValue(StatusAndReason12 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason12 obj, Optional<ProcessingStatus23Choice> value) {
+			obj.setProcessingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IfrrdMtchgSts")
@@ -220,7 +230,7 @@ public class StatusAndReason12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason12, Optional<MatchingStatus7Choice>> mmInferredMatchingStatus = new MMMessageAssociationEnd<StatusAndReason12, Optional<MatchingStatus7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason12.mmObject();
@@ -235,6 +245,16 @@ public class StatusAndReason12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus7Choice> getValue(StatusAndReason12 obj) {
+			return obj.getInferredMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason12 obj, Optional<MatchingStatus7Choice> value) {
+			obj.setInferredMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtchgSts")
@@ -282,7 +302,7 @@ public class StatusAndReason12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason12, Optional<MatchingStatus7Choice>> mmMatchingStatus = new MMMessageAssociationEnd<StatusAndReason12, Optional<MatchingStatus7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason12.mmObject();
@@ -297,6 +317,16 @@ public class StatusAndReason12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MatchingStatus7Choice> getValue(StatusAndReason12 obj) {
+			return obj.getMatchingStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason12 obj, Optional<MatchingStatus7Choice> value) {
+			obj.setMatchingStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -344,7 +374,7 @@ public class StatusAndReason12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason12, Optional<SettlementStatus7Choice>> mmSettlementStatus = new MMMessageAssociationEnd<StatusAndReason12, Optional<SettlementStatus7Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason12.mmObject();
@@ -359,6 +389,16 @@ public class StatusAndReason12 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus7Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementStatus7Choice> getValue(StatusAndReason12 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(StatusAndReason12 obj, Optional<SettlementStatus7Choice> value) {
+			obj.setSettlementStatus(value.orElse(null));
 		}
 	};
 

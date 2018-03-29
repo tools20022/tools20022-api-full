@@ -24,6 +24,8 @@ import com.tools20022.repository.entity.Consignee;
 import com.tools20022.repository.entity.Consignor;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TradeParty1;
+import com.tools20022.repository.msg.TransportMeans3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +121,7 @@ public class Consignment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsignor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Consignment2, Optional<TradeParty1>> mmConsignor = new MMMessageAssociationEnd<Consignment2, Optional<TradeParty1>>() {
 		{
 			businessComponentTrace_lazy = () -> Consignor.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment2.mmObject();
@@ -132,7 +134,17 @@ public class Consignment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
+			type_lazy = () -> TradeParty1.mmObject();
+		}
+
+		@Override
+		public Optional<TradeParty1> getValue(Consignment2 obj) {
+			return obj.getConsignor();
+		}
+
+		@Override
+		public void setValue(Consignment2 obj, Optional<TradeParty1> value) {
+			obj.setConsignor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Consgn")
@@ -173,7 +185,7 @@ public class Consignment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConsignee = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Consignment2, Optional<TradeParty1>> mmConsignee = new MMMessageAssociationEnd<Consignment2, Optional<TradeParty1>>() {
 		{
 			businessComponentTrace_lazy = () -> Consignee.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment2.mmObject();
@@ -186,11 +198,21 @@ public class Consignment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TradeParty1.mmObject();
+			type_lazy = () -> TradeParty1.mmObject();
+		}
+
+		@Override
+		public Optional<TradeParty1> getValue(Consignment2 obj) {
+			return obj.getConsignee();
+		}
+
+		@Override
+		public void setValue(Consignment2 obj, Optional<TradeParty1> value) {
+			obj.setConsignee(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrnsprtMeans")
-	protected List<com.tools20022.repository.msg.TransportMeans3> transportMeans;
+	protected List<TransportMeans3> transportMeans;
 	/**
 	 * 
 	 <p>
@@ -230,7 +252,7 @@ public class Consignment2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransportMeans = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Consignment2, List<TransportMeans3>> mmTransportMeans = new MMMessageAssociationEnd<Consignment2, List<TransportMeans3>>() {
 		{
 			businessComponentTrace_lazy = () -> Transport.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Consignment2.mmObject();
@@ -242,7 +264,17 @@ public class Consignment2 {
 			nextVersions_lazy = () -> Arrays.asList(Consignment4.mmTransportMeans);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransportMeans3.mmObject();
+			type_lazy = () -> TransportMeans3.mmObject();
+		}
+
+		@Override
+		public List<TransportMeans3> getValue(Consignment2 obj) {
+			return obj.getTransportMeans();
+		}
+
+		@Override
+		public void setValue(Consignment2 obj, List<TransportMeans3> value) {
+			obj.setTransportMeans(value);
 		}
 	};
 
@@ -265,7 +297,7 @@ public class Consignment2 {
 		return consignor == null ? Optional.empty() : Optional.of(consignor);
 	}
 
-	public Consignment2 setConsignor(com.tools20022.repository.msg.TradeParty1 consignor) {
+	public Consignment2 setConsignor(TradeParty1 consignor) {
 		this.consignor = consignor;
 		return this;
 	}
@@ -274,7 +306,7 @@ public class Consignment2 {
 		return consignee == null ? Optional.empty() : Optional.of(consignee);
 	}
 
-	public Consignment2 setConsignee(com.tools20022.repository.msg.TradeParty1 consignee) {
+	public Consignment2 setConsignee(TradeParty1 consignee) {
 		this.consignee = consignee;
 		return this;
 	}
@@ -283,7 +315,7 @@ public class Consignment2 {
 		return transportMeans == null ? transportMeans = new ArrayList<>() : transportMeans;
 	}
 
-	public Consignment2 setTransportMeans(List<com.tools20022.repository.msg.TransportMeans3> transportMeans) {
+	public Consignment2 setTransportMeans(List<TransportMeans3> transportMeans) {
 		this.transportMeans = Objects.requireNonNull(transportMeans);
 		return this;
 	}

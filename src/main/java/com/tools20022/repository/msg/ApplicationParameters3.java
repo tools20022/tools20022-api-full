@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -140,7 +141,7 @@ public class ApplicationParameters3 {
 	 * ApplicationParameters2.mmApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ApplicationParameters3, Max35Text> mmApplicationIdentification = new MMMessageAttribute<ApplicationParameters3, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters3.mmObject();
@@ -154,6 +155,16 @@ public class ApplicationParameters3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ApplicationParameters3 obj) {
+			return obj.getApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(ApplicationParameters3 obj, Max35Text value) {
+			obj.setApplicationIdentification(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -199,7 +210,7 @@ public class ApplicationParameters3 {
 	 * ApplicationParameters2.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ApplicationParameters3, Max16Text> mmVersion = new MMMessageAttribute<ApplicationParameters3, Max16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters3.mmObject();
 			isDerived = false;
@@ -212,6 +223,16 @@ public class ApplicationParameters3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Max16Text getValue(ApplicationParameters3 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(ApplicationParameters3 obj, Max16Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "Params")
@@ -258,7 +279,7 @@ public class ApplicationParameters3 {
 	 * ApplicationParameters2.mmParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ApplicationParameters3, List<Max100KBinary>> mmParameters = new MMMessageAttribute<ApplicationParameters3, List<Max100KBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters3.mmObject();
 			isDerived = false;
@@ -270,6 +291,16 @@ public class ApplicationParameters3 {
 			previousVersion_lazy = () -> ApplicationParameters2.mmParameters;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
+		}
+
+		@Override
+		public List<Max100KBinary> getValue(ApplicationParameters3 obj) {
+			return obj.getParameters();
+		}
+
+		@Override
+		public void setValue(ApplicationParameters3 obj, List<Max100KBinary> value) {
+			obj.setParameters(value);
 		}
 	};
 	@XmlElement(name = "NcrptdParams")
@@ -316,7 +347,7 @@ public class ApplicationParameters3 {
 	 * ApplicationParameters2.mmEncryptedParameters}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEncryptedParameters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ApplicationParameters3, Optional<ContentInformationType7>> mmEncryptedParameters = new MMMessageAssociationEnd<ApplicationParameters3, Optional<ContentInformationType7>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ApplicationParameters3.mmObject();
 			isDerived = false;
@@ -329,7 +360,17 @@ public class ApplicationParameters3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType7.mmObject();
+			type_lazy = () -> ContentInformationType7.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType7> getValue(ApplicationParameters3 obj) {
+			return obj.getEncryptedParameters();
+		}
+
+		@Override
+		public void setValue(ApplicationParameters3 obj, Optional<ContentInformationType7> value) {
+			obj.setEncryptedParameters(value.orElse(null));
 		}
 	};
 
@@ -381,7 +422,7 @@ public class ApplicationParameters3 {
 		return encryptedParameters == null ? Optional.empty() : Optional.of(encryptedParameters);
 	}
 
-	public ApplicationParameters3 setEncryptedParameters(com.tools20022.repository.msg.ContentInformationType7 encryptedParameters) {
+	public ApplicationParameters3 setEncryptedParameters(ContentInformationType7 encryptedParameters) {
 		this.encryptedParameters = encryptedParameters;
 		return this;
 	}

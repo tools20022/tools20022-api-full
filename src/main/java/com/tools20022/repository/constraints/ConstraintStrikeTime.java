@@ -48,11 +48,15 @@ public class ConstraintStrikeTime {
 	 */
 	public static final MMConstraint<Bid1> forBid1 = new MMConstraint<Bid1>() {
 		{
-			validator = ConstraintStrikeTime::checkBid1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikeTime";
 			definition = "Strike time is used when BasisPrice type equals \"Strike\".";
 			owner_lazy = () -> Bid1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Bid1 obj) throws Exception {
+			checkBid1(obj);
 		}
 	};
 

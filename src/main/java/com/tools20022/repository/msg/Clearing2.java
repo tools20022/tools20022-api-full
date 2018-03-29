@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesTradeExecution;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NonGuaranteedTrade2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +139,7 @@ public class Clearing2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementNettingEligibleCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Clearing2, NettingEligible1Code> mmSettlementNettingEligibleCode = new MMMessageAttribute<Clearing2, NettingEligible1Code>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmSettlementNetting;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing2.mmObject();
@@ -151,6 +152,16 @@ public class Clearing2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NettingEligible1Code.mmObject();
+		}
+
+		@Override
+		public NettingEligible1Code getValue(Clearing2 obj) {
+			return obj.getSettlementNettingEligibleCode();
+		}
+
+		@Override
+		public void setValue(Clearing2 obj, NettingEligible1Code value) {
+			obj.setSettlementNettingEligibleCode(value);
 		}
 	};
 	@XmlElement(name = "ClrSgmt")
@@ -197,7 +208,7 @@ public class Clearing2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingSegment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Clearing2, Optional<PartyIdentification35Choice>> mmClearingSegment = new MMMessageAttribute<Clearing2, Optional<PartyIdentification35Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing2.mmObject();
@@ -210,6 +221,16 @@ public class Clearing2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification35Choice> getValue(Clearing2 obj) {
+			return obj.getClearingSegment();
+		}
+
+		@Override
+		public void setValue(Clearing2 obj, Optional<PartyIdentification35Choice> value) {
+			obj.setClearingSegment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrntedTrad")
@@ -256,7 +277,7 @@ public class Clearing2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGuaranteedTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Clearing2, Optional<YesNoIndicator>> mmGuaranteedTrade = new MMMessageAttribute<Clearing2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Clearing.mmGuaranteedTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing2.mmObject();
@@ -269,6 +290,16 @@ public class Clearing2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Clearing2 obj) {
+			return obj.getGuaranteedTrade();
+		}
+
+		@Override
+		public void setValue(Clearing2 obj, Optional<YesNoIndicator> value) {
+			obj.setGuaranteedTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NonGrntedTrad")
@@ -313,7 +344,7 @@ public class Clearing2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonGuaranteedTrade = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Clearing2, Optional<NonGuaranteedTrade2>> mmNonGuaranteedTrade = new MMMessageAssociationEnd<Clearing2, Optional<NonGuaranteedTrade2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmRelatedTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing2.mmObject();
@@ -326,7 +357,17 @@ public class Clearing2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade2.mmObject();
+			type_lazy = () -> NonGuaranteedTrade2.mmObject();
+		}
+
+		@Override
+		public Optional<NonGuaranteedTrade2> getValue(Clearing2 obj) {
+			return obj.getNonGuaranteedTrade();
+		}
+
+		@Override
+		public void setValue(Clearing2 obj, Optional<NonGuaranteedTrade2> value) {
+			obj.setNonGuaranteedTrade(value.orElse(null));
 		}
 	};
 
@@ -378,7 +419,7 @@ public class Clearing2 {
 		return nonGuaranteedTrade == null ? Optional.empty() : Optional.of(nonGuaranteedTrade);
 	}
 
-	public Clearing2 setNonGuaranteedTrade(com.tools20022.repository.msg.NonGuaranteedTrade2 nonGuaranteedTrade) {
+	public Clearing2 setNonGuaranteedTrade(NonGuaranteedTrade2 nonGuaranteedTrade) {
 		this.nonGuaranteedTrade = nonGuaranteedTrade;
 		return this;
 	}

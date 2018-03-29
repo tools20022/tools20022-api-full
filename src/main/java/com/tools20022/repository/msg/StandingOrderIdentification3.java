@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CashStandingOrder;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.CashAccount24;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -108,7 +110,7 @@ public class StandingOrderIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderIdentification3, CashAccount24> mmAccount = new MMMessageAssociationEnd<StandingOrderIdentification3, CashAccount24>() {
 		{
 			businessElementTrace_lazy = () -> CashStandingOrder.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification3.mmObject();
@@ -120,7 +122,17 @@ public class StandingOrderIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
+			type_lazy = () -> CashAccount24.mmObject();
+		}
+
+		@Override
+		public CashAccount24 getValue(StandingOrderIdentification3 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(StandingOrderIdentification3 obj, CashAccount24 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -157,7 +169,7 @@ public class StandingOrderIdentification3 {
 	 * definition} = "Party that legally owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StandingOrderIdentification3, Optional<BranchAndFinancialInstitutionIdentification5>> mmAccountOwner = new MMMessageAssociationEnd<StandingOrderIdentification3, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderIdentification3.mmObject();
@@ -169,7 +181,17 @@ public class StandingOrderIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(StandingOrderIdentification3 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(StandingOrderIdentification3 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 
@@ -191,7 +213,7 @@ public class StandingOrderIdentification3 {
 		return account;
 	}
 
-	public StandingOrderIdentification3 setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+	public StandingOrderIdentification3 setAccount(CashAccount24 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -200,7 +222,7 @@ public class StandingOrderIdentification3 {
 		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public StandingOrderIdentification3 setAccountOwner(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 accountOwner) {
+	public StandingOrderIdentification3 setAccountOwner(BranchAndFinancialInstitutionIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
 		return this;
 	}

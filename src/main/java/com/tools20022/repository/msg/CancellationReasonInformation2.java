@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification32;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -113,7 +114,7 @@ public class CancellationReasonInformation2 {
 	 * definition} = "Party that issues the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationReasonInformation2, Optional<PartyIdentification32>> mmOriginator = new MMMessageAssociationEnd<CancellationReasonInformation2, Optional<PartyIdentification32>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationReasonInformation2.mmObject();
@@ -125,7 +126,17 @@ public class CancellationReasonInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification32.mmObject();
+			type_lazy = () -> PartyIdentification32.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification32> getValue(CancellationReasonInformation2 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(CancellationReasonInformation2 obj, Optional<PartyIdentification32> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -162,7 +173,7 @@ public class CancellationReasonInformation2 {
 	 * definition} = "Specifies the reason for the cancellation request."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationReasonInformation2, MandateReason1Choice> mmReason = new MMMessageAssociationEnd<CancellationReasonInformation2, MandateReason1Choice>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmMandateRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationReasonInformation2.mmObject();
@@ -175,6 +186,16 @@ public class CancellationReasonInformation2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MandateReason1Choice.mmObject();
+		}
+
+		@Override
+		public MandateReason1Choice getValue(CancellationReasonInformation2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancellationReasonInformation2 obj, MandateReason1Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -211,7 +232,7 @@ public class CancellationReasonInformation2 {
 	 * definition} = "Further details on the cancellation request reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationReasonInformation2, List<Max105Text>> mmAdditionalInformation = new MMMessageAttribute<CancellationReasonInformation2, List<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationReasonInformation2.mmObject();
@@ -222,6 +243,16 @@ public class CancellationReasonInformation2 {
 			definition = "Further details on the cancellation request reason.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(CancellationReasonInformation2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CancellationReasonInformation2 obj, List<Max105Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -244,7 +275,7 @@ public class CancellationReasonInformation2 {
 		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public CancellationReasonInformation2 setOriginator(com.tools20022.repository.msg.PartyIdentification32 originator) {
+	public CancellationReasonInformation2 setOriginator(PartyIdentification32 originator) {
 		this.originator = originator;
 		return this;
 	}

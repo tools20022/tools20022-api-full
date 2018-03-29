@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08;
 import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.codeset.ReceiveDelivery1Code;
 import com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code;
@@ -86,6 +87,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07#mmTransactionIdentificationDetails
  * SecuritiesFinancingConfirmation002V07.mmTransactionIdentificationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V08#mmTransactionIdentificationDetails
+ * SecuritiesFinancingConfirmation002V08.mmTransactionIdentificationDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -159,7 +163,7 @@ public class TransactionTypeAndAdditionalParameters19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters19, RestrictedFINXMax16Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters19, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmObject();
@@ -172,6 +176,16 @@ public class TransactionTypeAndAdditionalParameters19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(TransactionTypeAndAdditionalParameters19 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters19 obj, RestrictedFINXMax16Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -214,7 +228,7 @@ public class TransactionTypeAndAdditionalParameters19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters19, Optional<RestrictedFINXMax16Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters19, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmObject();
@@ -227,6 +241,16 @@ public class TransactionTypeAndAdditionalParameters19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(TransactionTypeAndAdditionalParameters19 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters19 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesFincgTxTp", required = true)
@@ -270,7 +294,7 @@ public class TransactionTypeAndAdditionalParameters19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesFinancingTransactionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters19, SecuritiesFinancingTransactionType2Code> mmSecuritiesFinancingTransactionType = new MMMessageAttribute<TransactionTypeAndAdditionalParameters19, SecuritiesFinancingTransactionType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmObject();
@@ -283,6 +307,16 @@ public class TransactionTypeAndAdditionalParameters19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesFinancingTransactionType2Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesFinancingTransactionType2Code getValue(TransactionTypeAndAdditionalParameters19 obj) {
+			return obj.getSecuritiesFinancingTransactionType();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters19 obj, SecuritiesFinancingTransactionType2Code value) {
+			obj.setSecuritiesFinancingTransactionType(value);
 		}
 	};
 	@XmlElement(name = "SctiesMvmntTp", required = true)
@@ -325,7 +359,7 @@ public class TransactionTypeAndAdditionalParameters19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters19, ReceiveDelivery1Code> mmSecuritiesMovementType = new MMMessageAttribute<TransactionTypeAndAdditionalParameters19, ReceiveDelivery1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmObject();
@@ -338,6 +372,16 @@ public class TransactionTypeAndAdditionalParameters19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
+		}
+
+		@Override
+		public ReceiveDelivery1Code getValue(TransactionTypeAndAdditionalParameters19 obj) {
+			return obj.getSecuritiesMovementType();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters19 obj, ReceiveDelivery1Code value) {
+			obj.setSecuritiesMovementType(value);
 		}
 	};
 	@XmlElement(name = "Pmt", required = true)
@@ -380,7 +424,7 @@ public class TransactionTypeAndAdditionalParameters19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters19, DeliveryReceiptType2Code> mmPayment = new MMMessageAttribute<TransactionTypeAndAdditionalParameters19, DeliveryReceiptType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmObject();
@@ -393,6 +437,16 @@ public class TransactionTypeAndAdditionalParameters19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
+		}
+
+		@Override
+		public DeliveryReceiptType2Code getValue(TransactionTypeAndAdditionalParameters19 obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters19 obj, DeliveryReceiptType2Code value) {
+			obj.setPayment(value);
 		}
 	};
 	@XmlElement(name = "CmonId")
@@ -435,7 +489,7 @@ public class TransactionTypeAndAdditionalParameters19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters19, Optional<RestrictedFINXMax16Text>> mmCommonIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters19, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmObject();
@@ -448,6 +502,16 @@ public class TransactionTypeAndAdditionalParameters19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(TransactionTypeAndAdditionalParameters19 obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters19 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCommonIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolId")
@@ -488,7 +552,7 @@ public class TransactionTypeAndAdditionalParameters19 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters19, Optional<RestrictedFINXMax16Text>> mmPoolIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters19, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmObject();
@@ -501,6 +565,16 @@ public class TransactionTypeAndAdditionalParameters19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(TransactionTypeAndAdditionalParameters19 obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters19 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setPoolIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -543,7 +617,7 @@ public class TransactionTypeAndAdditionalParameters19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionTypeAndAdditionalParameters19, Optional<RestrictedFINXMax16Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<TransactionTypeAndAdditionalParameters19, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmObject();
@@ -557,6 +631,16 @@ public class TransactionTypeAndAdditionalParameters19 {
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(TransactionTypeAndAdditionalParameters19 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(TransactionTypeAndAdditionalParameters19 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -567,7 +651,7 @@ public class TransactionTypeAndAdditionalParameters19 {
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmSecuritiesFinancingTransactionType, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmSecuritiesMovementType,
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmCommonIdentification,
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters19.mmCorporateActionEventIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmation002V07.mmTransactionIdentificationDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmation002V07.mmTransactionIdentificationDetails, SecuritiesFinancingConfirmation002V08.mmTransactionIdentificationDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forTransactionTypeAndAdditionalParameters19);

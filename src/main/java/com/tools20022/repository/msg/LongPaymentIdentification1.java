@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -135,7 +136,7 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongPaymentIdentification1, Max35Text> mmTransactionIdentification = new MMMessageAttribute<LongPaymentIdentification1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
@@ -147,6 +148,16 @@ public class LongPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(LongPaymentIdentification1 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(LongPaymentIdentification1 obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmAmt", required = true)
@@ -186,7 +197,7 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterBankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongPaymentIdentification1, ImpliedCurrencyAndAmount> mmInterBankSettlementAmount = new MMMessageAttribute<LongPaymentIdentification1, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
@@ -198,6 +209,16 @@ public class LongPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(LongPaymentIdentification1 obj) {
+			return obj.getInterBankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(LongPaymentIdentification1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setInterBankSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt", required = true)
@@ -236,7 +257,7 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterBankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongPaymentIdentification1, ISODate> mmInterBankSettlementDate = new MMMessageAttribute<LongPaymentIdentification1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
@@ -248,6 +269,16 @@ public class LongPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(LongPaymentIdentification1 obj) {
+			return obj.getInterBankSettlementDate();
+		}
+
+		@Override
+		public void setValue(LongPaymentIdentification1 obj, ISODate value) {
+			obj.setInterBankSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "PmtMtd")
@@ -286,7 +317,7 @@ public class LongPaymentIdentification1 {
 	 * "Message type with which the instruction has been initiated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongPaymentIdentification1, Optional<PaymentOrigin1Choice>> mmPaymentMethod = new MMMessageAttribute<LongPaymentIdentification1, Optional<PaymentOrigin1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
@@ -298,6 +329,16 @@ public class LongPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentOrigin1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentOrigin1Choice> getValue(LongPaymentIdentification1 obj) {
+			return obj.getPaymentMethod();
+		}
+
+		@Override
+		public void setValue(LongPaymentIdentification1 obj, Optional<PaymentOrigin1Choice> value) {
+			obj.setPaymentMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstgAgt", required = true)
@@ -335,7 +376,7 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LongPaymentIdentification1, BranchAndFinancialInstitutionIdentification5> mmInstructingAgent = new MMMessageAssociationEnd<LongPaymentIdentification1, BranchAndFinancialInstitutionIdentification5>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
@@ -347,7 +388,17 @@ public class LongPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification5 getValue(LongPaymentIdentification1 obj) {
+			return obj.getInstructingAgent();
+		}
+
+		@Override
+		public void setValue(LongPaymentIdentification1 obj, BranchAndFinancialInstitutionIdentification5 value) {
+			obj.setInstructingAgent(value);
 		}
 	};
 	@XmlElement(name = "InstdAgt", required = true)
@@ -385,7 +436,7 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LongPaymentIdentification1, BranchAndFinancialInstitutionIdentification5> mmInstructedAgent = new MMMessageAssociationEnd<LongPaymentIdentification1, BranchAndFinancialInstitutionIdentification5>() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
@@ -397,7 +448,17 @@ public class LongPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public BranchAndFinancialInstitutionIdentification5 getValue(LongPaymentIdentification1 obj) {
+			return obj.getInstructedAgent();
+		}
+
+		@Override
+		public void setValue(LongPaymentIdentification1 obj, BranchAndFinancialInstitutionIdentification5 value) {
+			obj.setInstructedAgent(value);
 		}
 	};
 	@XmlElement(name = "NtryTp")
@@ -432,7 +493,7 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongPaymentIdentification1, Optional<EntryTypeIdentifier>> mmEntryType = new MMMessageAttribute<LongPaymentIdentification1, Optional<EntryTypeIdentifier>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
 			isDerived = false;
@@ -443,6 +504,16 @@ public class LongPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EntryTypeIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<EntryTypeIdentifier> getValue(LongPaymentIdentification1 obj) {
+			return obj.getEntryType();
+		}
+
+		@Override
+		public void setValue(LongPaymentIdentification1 obj, Optional<EntryTypeIdentifier> value) {
+			obj.setEntryType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndToEndId")
@@ -481,7 +552,7 @@ public class LongPaymentIdentification1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LongPaymentIdentification1, Optional<Max35Text>> mmEndToEndIdentification = new MMMessageAttribute<LongPaymentIdentification1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
@@ -493,6 +564,16 @@ public class LongPaymentIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LongPaymentIdentification1 obj) {
+			return obj.getEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(LongPaymentIdentification1 obj, Optional<Max35Text> value) {
+			obj.setEndToEndIdentification(value.orElse(null));
 		}
 	};
 
@@ -553,7 +634,7 @@ public class LongPaymentIdentification1 {
 		return instructingAgent;
 	}
 
-	public LongPaymentIdentification1 setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingAgent) {
+	public LongPaymentIdentification1 setInstructingAgent(BranchAndFinancialInstitutionIdentification5 instructingAgent) {
 		this.instructingAgent = Objects.requireNonNull(instructingAgent);
 		return this;
 	}
@@ -562,7 +643,7 @@ public class LongPaymentIdentification1 {
 		return instructedAgent;
 	}
 
-	public LongPaymentIdentification1 setInstructedAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructedAgent) {
+	public LongPaymentIdentification1 setInstructedAgent(BranchAndFinancialInstitutionIdentification5 instructedAgent) {
 		this.instructedAgent = Objects.requireNonNull(instructedAgent);
 		return this;
 	}

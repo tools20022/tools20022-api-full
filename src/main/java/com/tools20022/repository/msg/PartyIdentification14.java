@@ -121,7 +121,7 @@ public class PartyIdentification14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartyIdentification14, Max70Text> mmName = new MMMessageAttribute<PartyIdentification14, Max70Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
@@ -133,6 +133,16 @@ public class PartyIdentification14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(PartyIdentification14 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(PartyIdentification14 obj, Max70Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Id", required = true)
@@ -171,7 +181,7 @@ public class PartyIdentification14 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PartyIdentification14, PartyOrganisation1Choice> mmIdentification = new MMMessageAssociationEnd<PartyIdentification14, PartyOrganisation1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification14.mmObject();
@@ -184,6 +194,16 @@ public class PartyIdentification14 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyOrganisation1Choice.mmObject();
+		}
+
+		@Override
+		public PartyOrganisation1Choice getValue(PartyIdentification14 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(PartyIdentification14 obj, PartyOrganisation1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	/**

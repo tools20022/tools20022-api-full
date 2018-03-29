@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection30;
+import com.tools20022.repository.msg.PriceInformation10;
+import com.tools20022.repository.msg.SecurityIdentification14;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -121,7 +125,7 @@ public class InvestmentFund1 {
 	 * "Identification of the investment fund or investment fund class."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFund1, Optional<SecurityIdentification14>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<InvestmentFund1, Optional<SecurityIdentification14>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
@@ -133,7 +137,17 @@ public class InvestmentFund1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public Optional<SecurityIdentification14> getValue(InvestmentFund1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentFund1 obj, Optional<SecurityIdentification14> value) {
+			obj.setFinancialInstrumentIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ClssTp")
@@ -172,7 +186,7 @@ public class InvestmentFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFund1, Optional<Max35Text>> mmClassType = new MMMessageAttribute<InvestmentFund1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
@@ -184,6 +198,16 @@ public class InvestmentFund1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentFund1 obj) {
+			return obj.getClassType();
+		}
+
+		@Override
+		public void setValue(InvestmentFund1 obj, Optional<Max35Text> value) {
+			obj.setClassType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlUnitsOutsdng")
@@ -223,7 +247,7 @@ public class InvestmentFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalUnitsOutstanding = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFund1, Optional<DecimalNumber>> mmTotalUnitsOutstanding = new MMMessageAttribute<InvestmentFund1, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmOutstandingUnits;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
@@ -235,6 +259,16 @@ public class InvestmentFund1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(InvestmentFund1 obj) {
+			return obj.getTotalUnitsOutstanding();
+		}
+
+		@Override
+		public void setValue(InvestmentFund1 obj, Optional<DecimalNumber> value) {
+			obj.setTotalUnitsOutstanding(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxnlUnits")
@@ -269,7 +303,7 @@ public class InvestmentFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionalUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFund1, Optional<DecimalNumber>> mmTransactionalUnits = new MMMessageAttribute<InvestmentFund1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 			isDerived = false;
@@ -280,6 +314,16 @@ public class InvestmentFund1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(InvestmentFund1 obj) {
+			return obj.getTransactionalUnits();
+		}
+
+		@Override
+		public void setValue(InvestmentFund1 obj, Optional<DecimalNumber> value) {
+			obj.setTransactionalUnits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlVal")
@@ -319,7 +363,7 @@ public class InvestmentFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFund1, Optional<AmountAndDirection30>> mmTotalValue = new MMMessageAttribute<InvestmentFund1, Optional<AmountAndDirection30>>() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
@@ -330,11 +374,21 @@ public class InvestmentFund1 {
 			definition = "Total value of the investment fund or investment fund share class units.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
+			complexType_lazy = () -> AmountAndDirection30.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection30> getValue(InvestmentFund1 obj) {
+			return obj.getTotalValue();
+		}
+
+		@Override
+		public void setValue(InvestmentFund1 obj, Optional<AmountAndDirection30> value) {
+			obj.setTotalValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pric")
-	protected List<com.tools20022.repository.msg.PriceInformation10> price;
+	protected List<PriceInformation10> price;
 	/**
 	 * 
 	 <p>
@@ -368,7 +422,7 @@ public class InvestmentFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFund1, List<PriceInformation10>> mmPrice = new MMMessageAssociationEnd<InvestmentFund1, List<PriceInformation10>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
@@ -379,11 +433,21 @@ public class InvestmentFund1 {
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
+			type_lazy = () -> PriceInformation10.mmObject();
+		}
+
+		@Override
+		public List<PriceInformation10> getValue(InvestmentFund1 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(InvestmentFund1 obj, List<PriceInformation10> value) {
+			obj.setPrice(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -412,7 +476,7 @@ public class InvestmentFund1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InvestmentFund1, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<InvestmentFund1, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 			isDerived = false;
@@ -422,7 +486,17 @@ public class InvestmentFund1 {
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(InvestmentFund1 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(InvestmentFund1 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -446,7 +520,7 @@ public class InvestmentFund1 {
 		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public InvestmentFund1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public InvestmentFund1 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
 		return this;
 	}
@@ -482,7 +556,7 @@ public class InvestmentFund1 {
 		return totalValue == null ? Optional.empty() : Optional.of(totalValue);
 	}
 
-	public InvestmentFund1 setTotalValue(com.tools20022.repository.msg.AmountAndDirection30 totalValue) {
+	public InvestmentFund1 setTotalValue(AmountAndDirection30 totalValue) {
 		this.totalValue = totalValue;
 		return this;
 	}
@@ -491,7 +565,7 @@ public class InvestmentFund1 {
 		return price == null ? price = new ArrayList<>() : price;
 	}
 
-	public InvestmentFund1 setPrice(List<com.tools20022.repository.msg.PriceInformation10> price) {
+	public InvestmentFund1 setPrice(List<PriceInformation10> price) {
 		this.price = Objects.requireNonNull(price);
 		return this;
 	}
@@ -500,7 +574,7 @@ public class InvestmentFund1 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public InvestmentFund1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public InvestmentFund1 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

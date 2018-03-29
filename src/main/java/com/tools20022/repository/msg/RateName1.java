@@ -98,7 +98,7 @@ public class RateName1 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateName1, Optional<Max8Text>> mmIssuer = new MMMessageAttribute<RateName1, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateName1.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class RateName1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(RateName1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(RateName1 obj, Optional<Max8Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RateNm", required = true)
@@ -141,7 +151,7 @@ public class RateName1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateName1, Max35Text> mmRateName = new MMMessageAttribute<RateName1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateName1.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class RateName1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(RateName1 obj) {
+			return obj.getRateName();
+		}
+
+		@Override
+		public void setValue(RateName1 obj, Max35Text value) {
+			obj.setRateName(value);
 		}
 	};
 

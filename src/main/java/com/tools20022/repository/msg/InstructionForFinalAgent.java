@@ -110,7 +110,7 @@ public class InstructionForFinalAgent {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionForFinalAgent, List<Instruction3Code>> mmCode = new MMMessageAttribute<InstructionForFinalAgent, List<Instruction3Code>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructionForCreditorAgent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionForFinalAgent.mmObject();
@@ -122,6 +122,16 @@ public class InstructionForFinalAgent {
 			maxOccurs = 2;
 			minOccurs = 0;
 			simpleType_lazy = () -> Instruction3Code.mmObject();
+		}
+
+		@Override
+		public List<Instruction3Code> getValue(InstructionForFinalAgent obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InstructionForFinalAgent obj, List<Instruction3Code> value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry")
@@ -160,7 +170,7 @@ public class InstructionForFinalAgent {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InstructionForFinalAgent, Optional<Max140Text>> mmProprietary = new MMMessageAttribute<InstructionForFinalAgent, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructionForCreditorAgent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionForFinalAgent.mmObject();
@@ -172,6 +182,16 @@ public class InstructionForFinalAgent {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(InstructionForFinalAgent obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InstructionForFinalAgent obj, Optional<Max140Text> value) {
+			obj.setProprietary(value.orElse(null));
 		}
 	};
 

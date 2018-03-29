@@ -113,7 +113,7 @@ public class AccountIdentificationFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSimpleIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationFormatChoice, AccountIdentification1> mmSimpleIdentification = new MMMessageAttribute<AccountIdentificationFormatChoice, AccountIdentification1>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmObject();
@@ -125,6 +125,16 @@ public class AccountIdentificationFormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(AccountIdentificationFormatChoice obj) {
+			return obj.getSimpleIdentification();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationFormatChoice obj, AccountIdentification1 value) {
+			obj.setSimpleIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdAndPurp", required = true)
@@ -164,7 +174,7 @@ public class AccountIdentificationFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationAndPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationFormatChoice, AccountIdentificationAndPurpose> mmIdentificationAndPurpose = new MMMessageAttribute<AccountIdentificationFormatChoice, AccountIdentificationAndPurpose>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmObject();
@@ -176,6 +186,16 @@ public class AccountIdentificationFormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentificationAndPurpose.mmObject();
+		}
+
+		@Override
+		public AccountIdentificationAndPurpose getValue(AccountIdentificationFormatChoice obj) {
+			return obj.getIdentificationAndPurpose();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationFormatChoice obj, AccountIdentificationAndPurpose value) {
+			obj.setIdentificationAndPurpose(value);
 		}
 	};
 	@XmlElement(name = "IdAsDSS", required = true)
@@ -215,7 +235,7 @@ public class AccountIdentificationFormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentificationAsDSS = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentificationFormatChoice, AccountIdentification3> mmIdentificationAsDSS = new MMMessageAttribute<AccountIdentificationFormatChoice, AccountIdentification3>() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentificationFormatChoice.mmObject();
@@ -227,6 +247,16 @@ public class AccountIdentificationFormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification3.mmObject();
+		}
+
+		@Override
+		public AccountIdentification3 getValue(AccountIdentificationFormatChoice obj) {
+			return obj.getIdentificationAsDSS();
+		}
+
+		@Override
+		public void setValue(AccountIdentificationFormatChoice obj, AccountIdentification3 value) {
+			obj.setIdentificationAsDSS(value);
 		}
 	};
 

@@ -52,11 +52,15 @@ public class ConstraintStatisticsCurrency1Rule {
 	 */
 	public static final MMConstraint<StatisticsByPredefinedTimePeriods1> forStatisticsByPredefinedTimePeriods1 = new MMConstraint<StatisticsByPredefinedTimePeriods1>() {
 		{
-			validator = ConstraintStatisticsCurrency1Rule::checkStatisticsByPredefinedTimePeriods1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatisticsCurrency1Rule";
 			definition = "If present, Currency in HighestPriceValue12Months, LowestPriceValue12Months, OneYearPriceChange, ThreeYearPriceChange and FiveYearPriceChange must be the same.";
 			owner_lazy = () -> StatisticsByPredefinedTimePeriods1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(StatisticsByPredefinedTimePeriods1 obj) throws Exception {
+			checkStatisticsByPredefinedTimePeriods1(obj);
 		}
 	};
 

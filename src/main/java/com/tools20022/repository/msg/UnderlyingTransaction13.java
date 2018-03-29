@@ -24,6 +24,8 @@ import com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalGroupHeader4;
+import com.tools20022.repository.msg.PaymentTransaction62;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -165,7 +167,7 @@ public class UnderlyingTransaction13 {
 	 * UnderlyingTransaction10.mmOriginalGroupInformationAndCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalGroupInformationAndCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction13, Optional<OriginalGroupHeader4>> mmOriginalGroupInformationAndCancellation = new MMMessageAssociationEnd<UnderlyingTransaction13, Optional<OriginalGroupHeader4>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction13.mmObject();
@@ -179,11 +181,21 @@ public class UnderlyingTransaction13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
+			type_lazy = () -> OriginalGroupHeader4.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalGroupHeader4> getValue(UnderlyingTransaction13 obj) {
+			return obj.getOriginalGroupInformationAndCancellation();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction13 obj, Optional<OriginalGroupHeader4> value) {
+			obj.setOriginalGroupInformationAndCancellation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxInf")
-	protected List<com.tools20022.repository.msg.PaymentTransaction62> transactionInformation;
+	protected List<PaymentTransaction62> transactionInformation;
 	/**
 	 * 
 	 <p>
@@ -230,7 +242,7 @@ public class UnderlyingTransaction13 {
 	 * UnderlyingTransaction10.mmTransactionInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction13, List<PaymentTransaction62>> mmTransactionInformation = new MMMessageAssociationEnd<UnderlyingTransaction13, List<PaymentTransaction62>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction13.mmObject();
@@ -243,7 +255,17 @@ public class UnderlyingTransaction13 {
 			previousVersion_lazy = () -> UnderlyingTransaction10.mmTransactionInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransaction62.mmObject();
+			type_lazy = () -> PaymentTransaction62.mmObject();
+		}
+
+		@Override
+		public List<PaymentTransaction62> getValue(UnderlyingTransaction13 obj) {
+			return obj.getTransactionInformation();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction13 obj, List<PaymentTransaction62> value) {
+			obj.setTransactionInformation(value);
 		}
 	};
 
@@ -273,7 +295,7 @@ public class UnderlyingTransaction13 {
 		return originalGroupInformationAndCancellation == null ? Optional.empty() : Optional.of(originalGroupInformationAndCancellation);
 	}
 
-	public UnderlyingTransaction13 setOriginalGroupInformationAndCancellation(com.tools20022.repository.msg.OriginalGroupHeader4 originalGroupInformationAndCancellation) {
+	public UnderlyingTransaction13 setOriginalGroupInformationAndCancellation(OriginalGroupHeader4 originalGroupInformationAndCancellation) {
 		this.originalGroupInformationAndCancellation = originalGroupInformationAndCancellation;
 		return this;
 	}
@@ -282,7 +304,7 @@ public class UnderlyingTransaction13 {
 		return transactionInformation == null ? transactionInformation = new ArrayList<>() : transactionInformation;
 	}
 
-	public UnderlyingTransaction13 setTransactionInformation(List<com.tools20022.repository.msg.PaymentTransaction62> transactionInformation) {
+	public UnderlyingTransaction13 setTransactionInformation(List<PaymentTransaction62> transactionInformation) {
 		this.transactionInformation = Objects.requireNonNull(transactionInformation);
 		return this;
 	}

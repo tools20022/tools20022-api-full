@@ -51,11 +51,15 @@ public class ConstraintDateElementRule {
 	 */
 	public static final MMConstraint<ExpectedExecutionDetails4> forExpectedExecutionDetails4 = new MMConstraint<ExpectedExecutionDetails4>() {
 		{
-			validator = ConstraintDateElementRule::checkExpectedExecutionDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateElementRule";
 			definition = "Either ExpectedTradeDateTime or ExpectedCashSettlementDate must be present. Both may be present.";
 			owner_lazy = () -> ExpectedExecutionDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ExpectedExecutionDetails4 obj) throws Exception {
+			checkExpectedExecutionDetails4(obj);
 		}
 	};
 

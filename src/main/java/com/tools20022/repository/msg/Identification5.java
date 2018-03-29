@@ -154,7 +154,7 @@ public class Identification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, RestrictedFINXMax16Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<Identification5, RestrictedFINXMax16Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -167,6 +167,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(Identification5 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, RestrictedFINXMax16Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -209,7 +219,7 @@ public class Identification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -222,6 +232,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId")
@@ -265,7 +285,7 @@ public class Identification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -278,6 +298,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setMarketInfrastructureTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmonId")
@@ -320,7 +350,7 @@ public class Identification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmCommonIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -333,6 +363,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getCommonIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCommonIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradId")
@@ -375,7 +415,7 @@ public class Identification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, List<RestrictedFINXMax16Text>> mmTradeIdentification = new MMMessageAttribute<Identification5, List<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -387,6 +427,16 @@ public class Identification5 {
 			definition = "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getTradeIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, List<RestrictedFINXMax16Text> value) {
+			obj.setTradeIdentification(value);
 		}
 	};
 	@XmlElement(name = "MstrId")
@@ -429,7 +479,7 @@ public class Identification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmMasterIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -442,6 +492,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getMasterIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setMasterIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BsktId")
@@ -482,7 +542,7 @@ public class Identification5 {
 	 * definition} = "Identification of a basket trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasketIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmBasketIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmBasketIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -495,6 +555,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getBasketIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setBasketIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndxId")
@@ -535,7 +605,7 @@ public class Identification5 {
 	 * definition} = "Reference identifying a index trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmIndexIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -548,6 +618,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getIndexIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setIndexIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ListId")
@@ -590,7 +670,7 @@ public class Identification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmListIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -603,6 +683,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getListIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setListIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrgmId")
@@ -643,7 +733,7 @@ public class Identification5 {
 	 * definition} = "Program reference which identifies a program trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProgramIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmProgramIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmProgramIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -656,6 +746,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getProgramIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setProgramIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolId")
@@ -696,7 +796,7 @@ public class Identification5 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmPoolIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeIdentification.mmPoolIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -709,6 +809,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setPoolIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -751,7 +861,7 @@ public class Identification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<Identification5, Optional<RestrictedFINXMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEventRegistration.mmCorporateActionEventIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification5.mmObject();
@@ -764,6 +874,16 @@ public class Identification5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax16Text> getValue(Identification5 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(Identification5 obj, Optional<RestrictedFINXMax16Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 

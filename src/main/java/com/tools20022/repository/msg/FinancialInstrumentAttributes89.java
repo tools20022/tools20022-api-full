@@ -23,8 +23,13 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.codeset.PhysicalTransferType4Code;
-import com.tools20022.repository.entity.Contract;
+import com.tools20022.repository.entity.CurrencyExchange;
+import com.tools20022.repository.entity.Derivative;
+import com.tools20022.repository.entity.PhysicalDelivery;
+import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContractSize1;
+import com.tools20022.repository.msg.GenericIdentification168;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -57,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
- * trace} = {@linkplain com.tools20022.repository.entity.Contract Contract}</li>
+ * trace} = {@linkplain com.tools20022.repository.entity.Derivative Derivative}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -89,6 +94,11 @@ public class FinancialInstrumentAttributes89 {
 	 * type} = {@linkplain com.tools20022.repository.msg.ContractSize1
 	 * ContractSize1}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes89
@@ -106,8 +116,9 @@ public class FinancialInstrumentAttributes89 {
 	 * definition} = "Quantity of product defined in the contract.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContractSize = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes89, ContractSize1> mmContractSize = new MMMessageAssociationEnd<FinancialInstrumentAttributes89, ContractSize1>() {
 		{
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes89.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctSz";
@@ -117,7 +128,17 @@ public class FinancialInstrumentAttributes89 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContractSize1.mmObject();
+			type_lazy = () -> ContractSize1.mmObject();
+		}
+
+		@Override
+		public ContractSize1 getValue(FinancialInstrumentAttributes89 obj) {
+			return obj.getContractSize();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes89 obj, ContractSize1 value) {
+			obj.setContractSize(value);
 		}
 	};
 	@XmlElement(name = "DlvryTp", required = true)
@@ -132,6 +153,11 @@ public class FinancialInstrumentAttributes89 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code
 	 * PhysicalTransferType4Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.PhysicalDelivery#mmType
+	 * PhysicalDelivery.mmType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -151,8 +177,9 @@ public class FinancialInstrumentAttributes89 {
 	 * "Indicates whether the contract is cash/physical/optional settled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes89, PhysicalTransferType4Code> mmDeliveryType = new MMMessageAttribute<FinancialInstrumentAttributes89, PhysicalTransferType4Code>() {
 		{
+			businessElementTrace_lazy = () -> PhysicalDelivery.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes89.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryTp";
@@ -162,6 +189,16 @@ public class FinancialInstrumentAttributes89 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PhysicalTransferType4Code.mmObject();
+		}
+
+		@Override
+		public PhysicalTransferType4Code getValue(FinancialInstrumentAttributes89 obj) {
+			return obj.getDeliveryType();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes89 obj, PhysicalTransferType4Code value) {
+			obj.setDeliveryType(value);
 		}
 	};
 	@XmlElement(name = "UndrlygId", required = true)
@@ -175,6 +212,11 @@ public class FinancialInstrumentAttributes89 {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification168
 	 * GenericIdentification168}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmIdentification
+	 * Security.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -195,8 +237,9 @@ public class FinancialInstrumentAttributes89 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentAttributes89, GenericIdentification168> mmUnderlyingIdentification = new MMMessageAssociationEnd<FinancialInstrumentAttributes89, GenericIdentification168>() {
 		{
+			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes89.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygId";
@@ -206,7 +249,17 @@ public class FinancialInstrumentAttributes89 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification168.mmObject();
+			type_lazy = () -> GenericIdentification168.mmObject();
+		}
+
+		@Override
+		public GenericIdentification168 getValue(FinancialInstrumentAttributes89 obj) {
+			return obj.getUnderlyingIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes89 obj, GenericIdentification168 value) {
+			obj.setUnderlyingIdentification(value);
 		}
 	};
 	@XmlElement(name = "PricCcy", required = true)
@@ -221,6 +274,11 @@ public class FinancialInstrumentAttributes89 {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.ActiveCurrencyCode
 	 * ActiveCurrencyCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmUnitCurrency
+	 * CurrencyExchange.mmUnitCurrency}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -239,8 +297,9 @@ public class FinancialInstrumentAttributes89 {
 	 * definition} = "Specifies the currency of price of underlying.\r\n\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentAttributes89, ActiveCurrencyCode> mmPriceCurrency = new MMMessageAttribute<FinancialInstrumentAttributes89, ActiveCurrencyCode>() {
 		{
+			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes89.mmObject();
 			isDerived = false;
 			xmlTag = "PricCcy";
@@ -251,6 +310,16 @@ public class FinancialInstrumentAttributes89 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyCode getValue(FinancialInstrumentAttributes89 obj) {
+			return obj.getPriceCurrency();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentAttributes89 obj, ActiveCurrencyCode value) {
+			obj.setPriceCurrency(value);
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -258,7 +327,7 @@ public class FinancialInstrumentAttributes89 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributes89.mmContractSize, com.tools20022.repository.msg.FinancialInstrumentAttributes89.mmDeliveryType,
 						com.tools20022.repository.msg.FinancialInstrumentAttributes89.mmUnderlyingIdentification, com.tools20022.repository.msg.FinancialInstrumentAttributes89.mmPriceCurrency);
-				trace_lazy = () -> Contract.mmObject();
+				trace_lazy = () -> Derivative.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributes89";
@@ -272,7 +341,7 @@ public class FinancialInstrumentAttributes89 {
 		return contractSize;
 	}
 
-	public FinancialInstrumentAttributes89 setContractSize(com.tools20022.repository.msg.ContractSize1 contractSize) {
+	public FinancialInstrumentAttributes89 setContractSize(ContractSize1 contractSize) {
 		this.contractSize = Objects.requireNonNull(contractSize);
 		return this;
 	}
@@ -290,7 +359,7 @@ public class FinancialInstrumentAttributes89 {
 		return underlyingIdentification;
 	}
 
-	public FinancialInstrumentAttributes89 setUnderlyingIdentification(com.tools20022.repository.msg.GenericIdentification168 underlyingIdentification) {
+	public FinancialInstrumentAttributes89 setUnderlyingIdentification(GenericIdentification168 underlyingIdentification) {
 		this.underlyingIdentification = Objects.requireNonNull(underlyingIdentification);
 		return this;
 	}

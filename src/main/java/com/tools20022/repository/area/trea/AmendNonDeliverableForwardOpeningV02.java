@@ -24,7 +24,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TreasuryArchive;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -127,7 +126,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, TradeAgreement2> mmTradeInformation = new MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, TradeAgreement2>() {
 		{
 			xmlTag = "TradInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			complexType_lazy = () -> TradeAgreement2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getTradeInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeAgreement2 getValue(AmendNonDeliverableForwardOpeningV02 obj) {
+			return obj.getTradeInformation();
+		}
+
+		@Override
+		public void setValue(AmendNonDeliverableForwardOpeningV02 obj, TradeAgreement2 value) {
+			obj.setTradeInformation(value);
 		}
 	};
 	@XmlElement(name = "TradgSdId", required = true)
@@ -173,7 +174,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradingSideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, TradePartyIdentification3> mmTradingSideIdentification = new MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, TradePartyIdentification3>() {
 		{
 			xmlTag = "TradgSdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +185,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getTradingSideIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradePartyIdentification3 getValue(AmendNonDeliverableForwardOpeningV02 obj) {
+			return obj.getTradingSideIdentification();
+		}
+
+		@Override
+		public void setValue(AmendNonDeliverableForwardOpeningV02 obj, TradePartyIdentification3 value) {
+			obj.setTradingSideIdentification(value);
 		}
 	};
 	@XmlElement(name = "CtrPtySdId", required = true)
@@ -219,7 +222,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCounterpartySideIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, TradePartyIdentification3> mmCounterpartySideIdentification = new MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, TradePartyIdentification3>() {
 		{
 			xmlTag = "CtrPtySdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +233,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getCounterpartySideIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradePartyIdentification3 getValue(AmendNonDeliverableForwardOpeningV02 obj) {
+			return obj.getCounterpartySideIdentification();
+		}
+
+		@Override
+		public void setValue(AmendNonDeliverableForwardOpeningV02 obj, TradePartyIdentification3 value) {
+			obj.setCounterpartySideIdentification(value);
 		}
 	};
 	@XmlElement(name = "TradAmts", required = true)
@@ -264,7 +269,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 	 * "Specifies the amounts of the non deliverable trade which is amended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeAmounts = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, AmountsAndValueDate1> mmTradeAmounts = new MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, AmountsAndValueDate1>() {
 		{
 			xmlTag = "TradAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,12 +280,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			complexType_lazy = () -> AmountsAndValueDate1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getTradeAmounts", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AmountsAndValueDate1 getValue(AmendNonDeliverableForwardOpeningV02 obj) {
+			return obj.getTradeAmounts();
+		}
+
+		@Override
+		public void setValue(AmendNonDeliverableForwardOpeningV02 obj, AmountsAndValueDate1 value) {
+			obj.setTradeAmounts(value);
 		}
 	};
 	@XmlElement(name = "AgrdRate", required = true)
@@ -308,7 +315,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 	 * "Specifies the rate of the non deliverable trade which is amended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAgreedRate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, AgreedRate1> mmAgreedRate = new MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, AgreedRate1>() {
 		{
 			xmlTag = "AgrdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,12 +326,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			complexType_lazy = () -> AgreedRate1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getAgreedRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AgreedRate1 getValue(AmendNonDeliverableForwardOpeningV02 obj) {
+			return obj.getAgreedRate();
+		}
+
+		@Override
+		public void setValue(AmendNonDeliverableForwardOpeningV02 obj, AgreedRate1 value) {
+			obj.setAgreedRate(value);
 		}
 	};
 	@XmlElement(name = "ValtnConds", required = true)
@@ -354,7 +363,7 @@ public class AmendNonDeliverableForwardOpeningV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmValuationConditions = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, NonDeliverableForwardValuationConditions2> mmValuationConditions = new MMMessageBuildingBlock<AmendNonDeliverableForwardOpeningV02, NonDeliverableForwardValuationConditions2>() {
 		{
 			xmlTag = "ValtnConds";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,12 +374,14 @@ public class AmendNonDeliverableForwardOpeningV02 {
 			complexType_lazy = () -> NonDeliverableForwardValuationConditions2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AmendNonDeliverableForwardOpeningV02.class.getMethod("getValuationConditions", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public NonDeliverableForwardValuationConditions2 getValue(AmendNonDeliverableForwardOpeningV02 obj) {
+			return obj.getValuationConditions();
+		}
+
+		@Override
+		public void setValue(AmendNonDeliverableForwardOpeningV02 obj, NonDeliverableForwardValuationConditions2 value) {
+			obj.setValuationConditions(value);
 		}
 	};
 

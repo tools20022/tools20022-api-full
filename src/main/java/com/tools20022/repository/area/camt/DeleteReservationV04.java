@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.MessageHeader1;
 import com.tools20022.repository.msg.ReservationIdentification1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -78,7 +77,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DeleteReservationV04"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -116,7 +115,7 @@ public class DeleteReservationV04 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeleteReservationV04, MessageHeader1> mmMessageHeader = new MMMessageBuildingBlock<DeleteReservationV04, MessageHeader1>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,12 +126,14 @@ public class DeleteReservationV04 {
 			complexType_lazy = () -> MessageHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeleteReservationV04.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader1 getValue(DeleteReservationV04 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(DeleteReservationV04 obj, MessageHeader1 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "CurRsvatn")
@@ -160,7 +161,7 @@ public class DeleteReservationV04 {
 	 * definition} = "Identifies the current reservation to delete."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCurrentReservation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeleteReservationV04, Optional<ReservationIdentification1>> mmCurrentReservation = new MMMessageBuildingBlock<DeleteReservationV04, Optional<ReservationIdentification1>>() {
 		{
 			xmlTag = "CurRsvatn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,12 +172,14 @@ public class DeleteReservationV04 {
 			complexType_lazy = () -> ReservationIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeleteReservationV04.class.getMethod("getCurrentReservation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ReservationIdentification1> getValue(DeleteReservationV04 obj) {
+			return obj.getCurrentReservation();
+		}
+
+		@Override
+		public void setValue(DeleteReservationV04 obj, Optional<ReservationIdentification1> value) {
+			obj.setCurrentReservation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -206,7 +209,7 @@ public class DeleteReservationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DeleteReservationV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<DeleteReservationV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,19 +219,21 @@ public class DeleteReservationV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DeleteReservationV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(DeleteReservationV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(DeleteReservationV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeleteReservationV04";
 				definition = "Scope\nThe DeleteReservation message is used to request the deletion of one particular reservation by the member and managed by the transaction administrator.\nUsage\nThe deletion of a reservation in the system, will not only reset the reserved liquidity to zero, but also delete the reservation itself from the system: only the default reservation for the current business day remains in the system.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

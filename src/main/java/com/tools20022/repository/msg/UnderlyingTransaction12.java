@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OriginalGroupHeader4;
+import com.tools20022.repository.msg.OriginalPaymentInstruction15;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -167,7 +169,7 @@ public class UnderlyingTransaction12 {
 	 * UnderlyingTransaction11.mmOriginalGroupInformationAndCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalGroupInformationAndCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction12, Optional<OriginalGroupHeader4>> mmOriginalGroupInformationAndCancellation = new MMMessageAssociationEnd<UnderlyingTransaction12, Optional<OriginalGroupHeader4>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction12.mmObject();
@@ -181,11 +183,21 @@ public class UnderlyingTransaction12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
+			type_lazy = () -> OriginalGroupHeader4.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalGroupHeader4> getValue(UnderlyingTransaction12 obj) {
+			return obj.getOriginalGroupInformationAndCancellation();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction12 obj, Optional<OriginalGroupHeader4> value) {
+			obj.setOriginalGroupInformationAndCancellation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlPmtInfAndCxl")
-	protected List<com.tools20022.repository.msg.OriginalPaymentInstruction15> originalPaymentInformationAndCancellation;
+	protected List<OriginalPaymentInstruction15> originalPaymentInformationAndCancellation;
 	/**
 	 * 
 	 <p>
@@ -233,7 +245,7 @@ public class UnderlyingTransaction12 {
 	 * UnderlyingTransaction11.mmOriginalPaymentInformationAndCancellation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalPaymentInformationAndCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<UnderlyingTransaction12, List<OriginalPaymentInstruction15>> mmOriginalPaymentInformationAndCancellation = new MMMessageAssociationEnd<UnderlyingTransaction12, List<OriginalPaymentInstruction15>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction12.mmObject();
@@ -246,7 +258,17 @@ public class UnderlyingTransaction12 {
 			previousVersion_lazy = () -> UnderlyingTransaction11.mmOriginalPaymentInformationAndCancellation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalPaymentInstruction15.mmObject();
+			type_lazy = () -> OriginalPaymentInstruction15.mmObject();
+		}
+
+		@Override
+		public List<OriginalPaymentInstruction15> getValue(UnderlyingTransaction12 obj) {
+			return obj.getOriginalPaymentInformationAndCancellation();
+		}
+
+		@Override
+		public void setValue(UnderlyingTransaction12 obj, List<OriginalPaymentInstruction15> value) {
+			obj.setOriginalPaymentInformationAndCancellation(value);
 		}
 	};
 
@@ -277,7 +299,7 @@ public class UnderlyingTransaction12 {
 		return originalGroupInformationAndCancellation == null ? Optional.empty() : Optional.of(originalGroupInformationAndCancellation);
 	}
 
-	public UnderlyingTransaction12 setOriginalGroupInformationAndCancellation(com.tools20022.repository.msg.OriginalGroupHeader4 originalGroupInformationAndCancellation) {
+	public UnderlyingTransaction12 setOriginalGroupInformationAndCancellation(OriginalGroupHeader4 originalGroupInformationAndCancellation) {
 		this.originalGroupInformationAndCancellation = originalGroupInformationAndCancellation;
 		return this;
 	}
@@ -286,7 +308,7 @@ public class UnderlyingTransaction12 {
 		return originalPaymentInformationAndCancellation == null ? originalPaymentInformationAndCancellation = new ArrayList<>() : originalPaymentInformationAndCancellation;
 	}
 
-	public UnderlyingTransaction12 setOriginalPaymentInformationAndCancellation(List<com.tools20022.repository.msg.OriginalPaymentInstruction15> originalPaymentInformationAndCancellation) {
+	public UnderlyingTransaction12 setOriginalPaymentInformationAndCancellation(List<OriginalPaymentInstruction15> originalPaymentInformationAndCancellation) {
 		this.originalPaymentInformationAndCancellation = Objects.requireNonNull(originalPaymentInformationAndCancellation);
 		return this;
 	}

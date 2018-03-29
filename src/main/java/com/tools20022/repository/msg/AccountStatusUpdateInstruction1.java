@@ -99,7 +99,7 @@ public class AccountStatusUpdateInstruction1 {
 	 * definition} = "Type of status change instructed for the account status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateInstruction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatusUpdateInstruction1, AccountStatusUpdateInstruction1Choice> mmUpdateInstruction = new MMMessageAssociationEnd<AccountStatusUpdateInstruction1, AccountStatusUpdateInstruction1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatusUpdateInstruction1.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class AccountStatusUpdateInstruction1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountStatusUpdateInstruction1Choice.mmObject();
+		}
+
+		@Override
+		public AccountStatusUpdateInstruction1Choice getValue(AccountStatusUpdateInstruction1 obj) {
+			return obj.getUpdateInstruction();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstruction1 obj, AccountStatusUpdateInstruction1Choice value) {
+			obj.setUpdateInstruction(value);
 		}
 	};
 	@XmlElement(name = "UpdInstrRsn")
@@ -142,7 +152,7 @@ public class AccountStatusUpdateInstruction1 {
 	 * definition} = "Reason for the instruction to change the account status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUpdateInstructionReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatusUpdateInstruction1, Optional<AccountStatusUpdateInstructionReason1Choice>> mmUpdateInstructionReason = new MMMessageAssociationEnd<AccountStatusUpdateInstruction1, Optional<AccountStatusUpdateInstructionReason1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountStatusUpdateInstruction1.mmObject();
 			isDerived = false;
@@ -154,6 +164,16 @@ public class AccountStatusUpdateInstruction1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountStatusUpdateInstructionReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountStatusUpdateInstructionReason1Choice> getValue(AccountStatusUpdateInstruction1 obj) {
+			return obj.getUpdateInstructionReason();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstruction1 obj, Optional<AccountStatusUpdateInstructionReason1Choice> value) {
+			obj.setUpdateInstructionReason(value.orElse(null));
 		}
 	};
 

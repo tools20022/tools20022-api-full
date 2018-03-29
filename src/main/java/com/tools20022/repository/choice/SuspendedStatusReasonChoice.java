@@ -112,7 +112,7 @@ public class SuspendedStatusReasonChoice {
 	 * definition} = "Reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReasonChoice, SuspendedStatusReason3Code> mmReason = new MMMessageAttribute<SuspendedStatusReasonChoice, SuspendedStatusReason3Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReasonChoice.mmObject();
@@ -124,6 +124,16 @@ public class SuspendedStatusReasonChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SuspendedStatusReason3Code.mmObject();
+		}
+
+		@Override
+		public SuspendedStatusReason3Code getValue(SuspendedStatusReasonChoice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReasonChoice obj, SuspendedStatusReason3Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -161,7 +171,7 @@ public class SuspendedStatusReasonChoice {
 	 * definition} = "Reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReasonChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<SuspendedStatusReasonChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReasonChoice.mmObject();
@@ -173,6 +183,16 @@ public class SuspendedStatusReasonChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(SuspendedStatusReasonChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReasonChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -210,7 +230,7 @@ public class SuspendedStatusReasonChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatusReasonChoice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<SuspendedStatusReasonChoice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReasonChoice.mmObject();
@@ -222,6 +242,16 @@ public class SuspendedStatusReasonChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(SuspendedStatusReasonChoice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(SuspendedStatusReasonChoice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

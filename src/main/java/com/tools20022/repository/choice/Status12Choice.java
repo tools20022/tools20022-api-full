@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.RejectedReason3Choice;
 import com.tools20022.repository.codeset.AccountManagementStatus1Code;
 import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.entity.StatusReason;
@@ -124,7 +125,7 @@ public class Status12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Status12Choice, AccountManagementStatus1Code> mmStatus = new MMMessageAttribute<Status12Choice, AccountManagementStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmManagementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status12Choice.mmObject();
@@ -138,9 +139,19 @@ public class Status12Choice {
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementStatus1Code.mmObject();
 		}
+
+		@Override
+		public AccountManagementStatus1Code getValue(Status12Choice obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(Status12Choice obj, AccountManagementStatus1Code value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
-	protected List<com.tools20022.repository.choice.RejectedReason3Choice> rejected;
+	protected List<RejectedReason3Choice> rejected;
 	/**
 	 * 
 	 <p>
@@ -181,7 +192,7 @@ public class Status12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Status12Choice, List<RejectedReason3Choice>> mmRejected = new MMMessageAssociationEnd<Status12Choice, List<RejectedReason3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Status12Choice.mmObject();
@@ -194,7 +205,17 @@ public class Status12Choice {
 			maxOccurs = 10;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectedReason3Choice.mmObject();
+			type_lazy = () -> RejectedReason3Choice.mmObject();
+		}
+
+		@Override
+		public List<RejectedReason3Choice> getValue(Status12Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(Status12Choice obj, List<RejectedReason3Choice> value) {
+			obj.setRejected(value);
 		}
 	};
 
@@ -226,7 +247,7 @@ public class Status12Choice {
 		return rejected == null ? rejected = new ArrayList<>() : rejected;
 	}
 
-	public Status12Choice setRejected(List<com.tools20022.repository.choice.RejectedReason3Choice> rejected) {
+	public Status12Choice setRejected(List<RejectedReason3Choice> rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}

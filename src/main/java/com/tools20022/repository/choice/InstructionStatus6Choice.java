@@ -117,7 +117,7 @@ public class InstructionStatus6Choice {
 	 * InstructionStatus4Choice.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionStatus6Choice, InstructionProcessingStatus3> mmProcessingStatus = new MMMessageAssociationEnd<InstructionStatus6Choice, InstructionProcessingStatus3>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmInstructionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus6Choice.mmObject();
@@ -131,6 +131,16 @@ public class InstructionStatus6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InstructionProcessingStatus3.mmObject();
+		}
+
+		@Override
+		public InstructionProcessingStatus3 getValue(InstructionStatus6Choice obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(InstructionStatus6Choice obj, InstructionProcessingStatus3 value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctnSts", required = true)
@@ -171,7 +181,7 @@ public class InstructionStatus6Choice {
 	 * InstructionStatus4Choice.mmRejectionStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionStatus6Choice, AdditionalStatus1> mmRejectionStatus = new MMMessageAssociationEnd<InstructionStatus6Choice, AdditionalStatus1>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmInstructionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionStatus6Choice.mmObject();
@@ -185,6 +195,16 @@ public class InstructionStatus6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AdditionalStatus1.mmObject();
+		}
+
+		@Override
+		public AdditionalStatus1 getValue(InstructionStatus6Choice obj) {
+			return obj.getRejectionStatus();
+		}
+
+		@Override
+		public void setValue(InstructionStatus6Choice obj, AdditionalStatus1 value) {
+			obj.setRejectionStatus(value);
 		}
 	};
 

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RejectedStatus7;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -155,7 +156,7 @@ public class OrderStatusAndReason8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatusAndReason8, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<OrderStatusAndReason8, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason8.mmObject();
@@ -168,6 +169,16 @@ public class OrderStatusAndReason8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OrderStatusAndReason8 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason8 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -205,7 +216,7 @@ public class OrderStatusAndReason8 {
 	 * definition} = "Cancellation status of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderStatusAndReason8, OrderCancellationStatus1Code> mmStatus = new MMMessageAttribute<OrderStatusAndReason8, OrderCancellationStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmCancellationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason8.mmObject();
@@ -217,6 +228,16 @@ public class OrderStatusAndReason8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderCancellationStatus1Code.mmObject();
+		}
+
+		@Override
+		public OrderCancellationStatus1Code getValue(OrderStatusAndReason8 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason8 obj, OrderCancellationStatus1Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -252,7 +273,7 @@ public class OrderStatusAndReason8 {
 	 * definition} = "Status of the order cancellation request is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason8, RejectedStatus7> mmRejected = new MMMessageAssociationEnd<OrderStatusAndReason8, RejectedStatus7>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason8.mmObject();
@@ -264,7 +285,17 @@ public class OrderStatusAndReason8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RejectedStatus7.mmObject();
+			type_lazy = () -> RejectedStatus7.mmObject();
+		}
+
+		@Override
+		public RejectedStatus7 getValue(OrderStatusAndReason8 obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason8 obj, RejectedStatus7 value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "StsInitr")
@@ -310,7 +341,7 @@ public class OrderStatusAndReason8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrderStatusAndReason8, Optional<PartyIdentification2Choice>> mmStatusInitiator = new MMMessageAssociationEnd<OrderStatusAndReason8, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason8.mmObject();
@@ -324,6 +355,16 @@ public class OrderStatusAndReason8 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(OrderStatusAndReason8 obj) {
+			return obj.getStatusInitiator();
+		}
+
+		@Override
+		public void setValue(OrderStatusAndReason8 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setStatusInitiator(value.orElse(null));
 		}
 	};
 	/**
@@ -414,7 +455,7 @@ public class OrderStatusAndReason8 {
 		return rejected;
 	}
 
-	public OrderStatusAndReason8 setRejected(com.tools20022.repository.msg.RejectedStatus7 rejected) {
+	public OrderStatusAndReason8 setRejected(RejectedStatus7 rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}

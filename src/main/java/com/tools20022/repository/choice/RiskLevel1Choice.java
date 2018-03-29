@@ -111,7 +111,7 @@ public class RiskLevel1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RiskLevel1Choice, RiskLevel1Code> mmCode = new MMMessageAttribute<RiskLevel1Choice, RiskLevel1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RiskLevel1Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class RiskLevel1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RiskLevel1Code.mmObject();
+		}
+
+		@Override
+		public RiskLevel1Code getValue(RiskLevel1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RiskLevel1Choice obj, RiskLevel1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class RiskLevel1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RiskLevel1Choice, GenericIdentification41> mmProprietary = new MMMessageAttribute<RiskLevel1Choice, GenericIdentification41>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RiskLevel1Choice.mmObject();
 			isDerived = false;
@@ -175,6 +185,16 @@ public class RiskLevel1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification41.mmObject();
+		}
+
+		@Override
+		public GenericIdentification41 getValue(RiskLevel1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RiskLevel1Choice obj, GenericIdentification41 value) {
+			obj.setProprietary(value);
 		}
 	};
 

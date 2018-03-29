@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Transfer27;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -115,7 +116,7 @@ public class TransferOut13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferOut13, Optional<Max35Text>> mmCancellationReference = new MMMessageAttribute<TransferOut13, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut13.mmObject();
 			isDerived = false;
@@ -128,9 +129,19 @@ public class TransferOut13 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferOut13 obj) {
+			return obj.getCancellationReference();
+		}
+
+		@Override
+		public void setValue(TransferOut13 obj, Optional<Max35Text> value) {
+			obj.setCancellationReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TrfDtls", required = true)
-	protected List<com.tools20022.repository.msg.Transfer27> transferDetails;
+	protected List<Transfer27> transferDetails;
 	/**
 	 * 
 	 <p>
@@ -169,7 +180,7 @@ public class TransferOut13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferOut13, List<Transfer27>> mmTransferDetails = new MMMessageAssociationEnd<TransferOut13, List<Transfer27>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTransfer.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut13.mmObject();
@@ -181,7 +192,17 @@ public class TransferOut13 {
 			nextVersions_lazy = () -> Arrays.asList(TransferOut18.mmTransferDetails);
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Transfer27.mmObject();
+			type_lazy = () -> Transfer27.mmObject();
+		}
+
+		@Override
+		public List<Transfer27> getValue(TransferOut13 obj) {
+			return obj.getTransferDetails();
+		}
+
+		@Override
+		public void setValue(TransferOut13 obj, List<Transfer27> value) {
+			obj.setTransferDetails(value);
 		}
 	};
 
@@ -213,7 +234,7 @@ public class TransferOut13 {
 		return transferDetails == null ? transferDetails = new ArrayList<>() : transferDetails;
 	}
 
-	public TransferOut13 setTransferDetails(List<com.tools20022.repository.msg.Transfer27> transferDetails) {
+	public TransferOut13 setTransferDetails(List<Transfer27> transferDetails) {
 		this.transferDetails = Objects.requireNonNull(transferDetails);
 		return this;
 	}

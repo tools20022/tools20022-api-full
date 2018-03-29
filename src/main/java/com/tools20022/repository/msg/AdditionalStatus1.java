@@ -111,7 +111,7 @@ public class AdditionalStatus1 {
 	 * definition} = "Reason advising the rejection of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AdditionalStatus1, InstructionRejectionStatus1Choice> mmReason = new MMMessageAssociationEnd<AdditionalStatus1, InstructionRejectionStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmInstructionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalStatus1.mmObject();
@@ -124,6 +124,16 @@ public class AdditionalStatus1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InstructionRejectionStatus1Choice.mmObject();
+		}
+
+		@Override
+		public InstructionRejectionStatus1Choice getValue(AdditionalStatus1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AdditionalStatus1 obj, InstructionRejectionStatus1Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -160,7 +170,7 @@ public class AdditionalStatus1 {
 	 * definition} = "Additional information about the reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalStatus1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<AdditionalStatus1, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalStatus1.mmObject();
@@ -172,6 +182,16 @@ public class AdditionalStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(AdditionalStatus1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AdditionalStatus1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

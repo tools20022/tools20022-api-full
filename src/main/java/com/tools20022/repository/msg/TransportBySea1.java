@@ -109,7 +109,7 @@ public class TransportBySea1 {
 	 * "Identifies the port where the goods are loaded on board the ship."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortOfLoading = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportBySea1, List<Max35Text>> mmPortOfLoading = new MMMessageAttribute<TransportBySea1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea1.mmObject();
@@ -120,6 +120,16 @@ public class TransportBySea1 {
 			definition = "Identifies the port where the goods are loaded on board the ship.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(TransportBySea1 obj) {
+			return obj.getPortOfLoading();
+		}
+
+		@Override
+		public void setValue(TransportBySea1 obj, List<Max35Text> value) {
+			obj.setPortOfLoading(value);
 		}
 	};
 	@XmlElement(name = "PortOfDschrge", required = true)
@@ -156,7 +166,7 @@ public class TransportBySea1 {
 	 * definition} = "Identifies the port where the goods are discharged."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPortOfDischarge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportBySea1, List<Max35Text>> mmPortOfDischarge = new MMMessageAttribute<TransportBySea1, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportBySea1.mmObject();
@@ -167,6 +177,16 @@ public class TransportBySea1 {
 			definition = "Identifies the port where the goods are discharged.";
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(TransportBySea1 obj) {
+			return obj.getPortOfDischarge();
+		}
+
+		@Override
+		public void setValue(TransportBySea1 obj, List<Max35Text> value) {
+			obj.setPortOfDischarge(value);
 		}
 	};
 

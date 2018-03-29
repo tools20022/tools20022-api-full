@@ -128,7 +128,7 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice.mmTotalEligibleBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9> mmTotalEligibleBalance = new MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice.mmObject();
 			isDerived = false;
@@ -141,6 +141,16 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(CorporateActionUnallocatedBalanceSD3Choice obj) {
+			return obj.getTotalEligibleBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedBalanceSD3Choice obj, SignedQuantityFormat9 value) {
+			obj.setTotalEligibleBalance(value);
 		}
 	};
 	@XmlElement(name = "BrrwdBal", required = true)
@@ -182,7 +192,7 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice.mmBorrowedBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBorrowedBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9> mmBorrowedBalance = new MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice.mmObject();
 			isDerived = false;
@@ -195,6 +205,16 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(CorporateActionUnallocatedBalanceSD3Choice obj) {
+			return obj.getBorrowedBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedBalanceSD3Choice obj, SignedQuantityFormat9 value) {
+			obj.setBorrowedBalance(value);
 		}
 	};
 	@XmlElement(name = "CollInBal", required = true)
@@ -235,7 +255,7 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice.mmCollateralInBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralInBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9> mmCollateralInBalance = new MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice.mmObject();
 			isDerived = false;
@@ -248,6 +268,16 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(CorporateActionUnallocatedBalanceSD3Choice obj) {
+			return obj.getCollateralInBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedBalanceSD3Choice obj, SignedQuantityFormat9 value) {
+			obj.setCollateralInBalance(value);
 		}
 	};
 	@XmlElement(name = "CollOutBal", required = true)
@@ -288,7 +318,7 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice.mmCollateralOutBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralOutBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9> mmCollateralOutBalance = new MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice.mmObject();
 			isDerived = false;
@@ -301,6 +331,16 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(CorporateActionUnallocatedBalanceSD3Choice obj) {
+			return obj.getCollateralOutBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedBalanceSD3Choice obj, SignedQuantityFormat9 value) {
+			obj.setCollateralOutBalance(value);
 		}
 	};
 	@XmlElement(name = "OnLnBal", required = true)
@@ -342,7 +382,7 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice.mmOnLoanBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOnLoanBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9> mmOnLoanBalance = new MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice.mmObject();
 			isDerived = false;
@@ -355,6 +395,16 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(CorporateActionUnallocatedBalanceSD3Choice obj) {
+			return obj.getOnLoanBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedBalanceSD3Choice obj, SignedQuantityFormat9 value) {
+			obj.setOnLoanBalance(value);
 		}
 	};
 	@XmlElement(name = "PdgDlvryBal", required = true)
@@ -395,7 +445,7 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice.mmPendingDeliveryBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingDeliveryBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9> mmPendingDeliveryBalance = new MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice.mmObject();
 			isDerived = false;
@@ -408,6 +458,16 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(CorporateActionUnallocatedBalanceSD3Choice obj) {
+			return obj.getPendingDeliveryBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedBalanceSD3Choice obj, SignedQuantityFormat9 value) {
+			obj.setPendingDeliveryBalance(value);
 		}
 	};
 	@XmlElement(name = "PdgRctBal", required = true)
@@ -448,7 +508,7 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 	 * CorporateActionUnallocatedBalanceSD2Choice.mmPendingReceiptBalance}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingReceiptBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9> mmPendingReceiptBalance = new MMMessageAttribute<CorporateActionUnallocatedBalanceSD3Choice, SignedQuantityFormat9>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice.mmObject();
 			isDerived = false;
@@ -461,6 +521,16 @@ public class CorporateActionUnallocatedBalanceSD3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat9.mmObject();
+		}
+
+		@Override
+		public SignedQuantityFormat9 getValue(CorporateActionUnallocatedBalanceSD3Choice obj) {
+			return obj.getPendingReceiptBalance();
+		}
+
+		@Override
+		public void setValue(CorporateActionUnallocatedBalanceSD3Choice obj, SignedQuantityFormat9 value) {
+			obj.setPendingReceiptBalance(value);
 		}
 	};
 

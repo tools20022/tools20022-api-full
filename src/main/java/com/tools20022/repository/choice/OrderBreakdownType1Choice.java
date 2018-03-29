@@ -104,7 +104,7 @@ public class OrderBreakdownType1Choice {
 	 * definition} = "Order breakdown type expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderBreakdownType1Choice, FundOrderType5Code> mmCode = new MMMessageAttribute<OrderBreakdownType1Choice, FundOrderType5Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrderBreakdownType1Choice.mmObject();
@@ -116,6 +116,16 @@ public class OrderBreakdownType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FundOrderType5Code.mmObject();
+		}
+
+		@Override
+		public FundOrderType5Code getValue(OrderBreakdownType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OrderBreakdownType1Choice obj, FundOrderType5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -153,7 +163,7 @@ public class OrderBreakdownType1Choice {
 	 * definition} = "Order breakdown type expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderBreakdownType1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<OrderBreakdownType1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrderBreakdownType1Choice.mmObject();
@@ -165,6 +175,16 @@ public class OrderBreakdownType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(OrderBreakdownType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OrderBreakdownType1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

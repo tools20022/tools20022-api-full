@@ -116,7 +116,7 @@ public class OrganisationIdentification3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification3Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<OrganisationIdentification3Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentification3Choice.mmObject();
@@ -128,6 +128,16 @@ public class OrganisationIdentification3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(OrganisationIdentification3Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification3Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "ClntId", required = true)
@@ -165,7 +175,7 @@ public class OrganisationIdentification3Choice {
 	 * "Unique and unambiguous client identification of the organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification3Choice, Max50Text> mmClientIdentification = new MMMessageAttribute<OrganisationIdentification3Choice, Max50Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentification3Choice.mmObject();
@@ -177,6 +187,16 @@ public class OrganisationIdentification3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Text.mmObject();
+		}
+
+		@Override
+		public Max50Text getValue(OrganisationIdentification3Choice obj) {
+			return obj.getClientIdentification();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification3Choice obj, Max50Text value) {
+			obj.setClientIdentification(value);
 		}
 	};
 	@XmlElement(name = "AnyBIC", required = true)
@@ -215,7 +235,7 @@ public class OrganisationIdentification3Choice {
 	 * "Business identifier code used to identify the organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification3Choice, AnyBICIdentifier> mmAnyBIC = new MMMessageAttribute<OrganisationIdentification3Choice, AnyBICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentification3Choice.mmObject();
@@ -227,6 +247,16 @@ public class OrganisationIdentification3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
+		}
+
+		@Override
+		public AnyBICIdentifier getValue(OrganisationIdentification3Choice obj) {
+			return obj.getAnyBIC();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification3Choice obj, AnyBICIdentifier value) {
+			obj.setAnyBIC(value);
 		}
 	};
 

@@ -118,7 +118,7 @@ public class GenericIdentification81 {
 	 * GenericIdentification10.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification81, Max35Text> mmIdentification = new MMMessageAttribute<GenericIdentification81, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification81.mmObject();
@@ -131,6 +131,16 @@ public class GenericIdentification81 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GenericIdentification81 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentification81 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "IdTp", required = true)
@@ -167,7 +177,7 @@ public class GenericIdentification81 {
 	 * definition} = "Type of identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GenericIdentification81, OtherIdentification3Choice> mmIdentificationType = new MMMessageAssociationEnd<GenericIdentification81, OtherIdentification3Choice>() {
 		{
 			businessComponentTrace_lazy = () -> GenericIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification81.mmObject();
@@ -180,6 +190,16 @@ public class GenericIdentification81 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OtherIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public OtherIdentification3Choice getValue(GenericIdentification81 obj) {
+			return obj.getIdentificationType();
+		}
+
+		@Override
+		public void setValue(GenericIdentification81 obj, OtherIdentification3Choice value) {
+			obj.setIdentificationType(value);
 		}
 	};
 

@@ -118,7 +118,7 @@ public class CashBalanceReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceReturnCriteria, RequestedIndicator> mmTypeIndicator = new MMMessageAttribute<CashBalanceReturnCriteria, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class CashBalanceReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(CashBalanceReturnCriteria obj) {
+			return obj.getTypeIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalanceReturnCriteria obj, RequestedIndicator value) {
+			obj.setTypeIndicator(value);
 		}
 	};
 	@XmlElement(name = "StsInd", required = true)
@@ -170,7 +180,7 @@ public class CashBalanceReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceReturnCriteria, RequestedIndicator> mmStatusIndicator = new MMMessageAttribute<CashBalanceReturnCriteria, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class CashBalanceReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(CashBalanceReturnCriteria obj) {
+			return obj.getStatusIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalanceReturnCriteria obj, RequestedIndicator value) {
+			obj.setStatusIndicator(value);
 		}
 	};
 	@XmlElement(name = "ValDtInd", required = true)
@@ -222,7 +242,7 @@ public class CashBalanceReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceReturnCriteria, RequestedIndicator> mmValueDateIndicator = new MMMessageAttribute<CashBalanceReturnCriteria, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
@@ -234,6 +254,16 @@ public class CashBalanceReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(CashBalanceReturnCriteria obj) {
+			return obj.getValueDateIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalanceReturnCriteria obj, RequestedIndicator value) {
+			obj.setValueDateIndicator(value);
 		}
 	};
 	@XmlElement(name = "NbOfPmtsInd", required = true)
@@ -274,7 +304,7 @@ public class CashBalanceReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfPaymentsIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceReturnCriteria, RequestedIndicator> mmNumberOfPaymentsIndicator = new MMMessageAttribute<CashBalanceReturnCriteria, RequestedIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceReturnCriteria.mmObject();
 			isDerived = false;
@@ -286,6 +316,16 @@ public class CashBalanceReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public RequestedIndicator getValue(CashBalanceReturnCriteria obj) {
+			return obj.getNumberOfPaymentsIndicator();
+		}
+
+		@Override
+		public void setValue(CashBalanceReturnCriteria obj, RequestedIndicator value) {
+			obj.setNumberOfPaymentsIndicator(value);
 		}
 	};
 

@@ -143,7 +143,7 @@ public class CorporateActionDate18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmResponseDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>> mmResponseDeadline = new MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmResponseDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate18.mmObject();
@@ -158,6 +158,16 @@ public class CorporateActionDate18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat19Choice> getValue(CorporateActionDate18 obj) {
+			return obj.getResponseDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate18 obj, Optional<DateFormat19Choice> value) {
+			obj.setResponseDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcptCostDbtDt")
@@ -206,7 +216,7 @@ public class CorporateActionDate18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSubscriptionCostDebitDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>> mmSubscriptionCostDebitDate = new MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmSubscriptionCostDebitDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate18.mmObject();
@@ -221,6 +231,16 @@ public class CorporateActionDate18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat19Choice> getValue(CorporateActionDate18 obj) {
+			return obj.getSubscriptionCostDebitDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate18 obj, Optional<DateFormat19Choice> value) {
+			obj.setSubscriptionCostDebitDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktDdln")
@@ -269,7 +289,7 @@ public class CorporateActionDate18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketDeadline = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>> mmMarketDeadline = new MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate18.mmObject();
@@ -284,6 +304,16 @@ public class CorporateActionDate18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat19Choice> getValue(CorporateActionDate18 obj) {
+			return obj.getMarketDeadline();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate18 obj, Optional<DateFormat19Choice> value) {
+			obj.setMarketDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpryDt")
@@ -332,7 +362,7 @@ public class CorporateActionDate18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>> mmExpiryDate = new MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate18.mmObject();
@@ -347,6 +377,16 @@ public class CorporateActionDate18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat19Choice> getValue(CorporateActionDate18 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate18 obj, Optional<DateFormat19Choice> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CoverXprtnDt")
@@ -395,7 +435,7 @@ public class CorporateActionDate18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCoverExpirationDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>> mmCoverExpirationDate = new MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmCoverExpirationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate18.mmObject();
@@ -410,6 +450,16 @@ public class CorporateActionDate18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat19Choice> getValue(CorporateActionDate18 obj) {
+			return obj.getCoverExpirationDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate18 obj, Optional<DateFormat19Choice> value) {
+			obj.setCoverExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctDt")
@@ -458,7 +508,7 @@ public class CorporateActionDate18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>> mmProtectDate = new MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmProtectDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate18.mmObject();
@@ -473,6 +523,16 @@ public class CorporateActionDate18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat19Choice> getValue(CorporateActionDate18 obj) {
+			return obj.getProtectDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate18 obj, Optional<DateFormat19Choice> value) {
+			obj.setProtectDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgDt")
@@ -519,7 +579,7 @@ public class CorporateActionDate18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>> mmTradingDate = new MMMessageAssociationEnd<CorporateActionDate18, Optional<DateFormat19Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmTradingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionDate18.mmObject();
@@ -534,6 +594,16 @@ public class CorporateActionDate18 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat19Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat19Choice> getValue(CorporateActionDate18 obj) {
+			return obj.getTradingDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionDate18 obj, Optional<DateFormat19Choice> value) {
+			obj.setTradingDate(value.orElse(null));
 		}
 	};
 

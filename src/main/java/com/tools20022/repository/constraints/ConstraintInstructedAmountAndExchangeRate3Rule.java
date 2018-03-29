@@ -54,12 +54,16 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<CreditTransferTransactionInformation11> forCreditTransferTransactionInformation11 = new MMConstraint<CreditTransferTransactionInformation11>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkCreditTransferTransactionInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation11.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransactionInformation11 obj) throws Exception {
+			checkCreditTransferTransactionInformation11(obj);
 		}
 	};
 	/**
@@ -88,12 +92,16 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction2> forCreditTransferTransaction2 = new MMConstraint<CreditTransferTransaction2>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkCreditTransferTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
 			owner_lazy = () -> CreditTransferTransaction2.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction2 obj) throws Exception {
+			checkCreditTransferTransaction2(obj);
 		}
 	};
 	/**
@@ -131,13 +139,17 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction7> forCreditTransferTransaction7 = new MMConstraint<CreditTransferTransaction7>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkCreditTransferTransaction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAmountAndExchangeRate3Rule.forCreditTransferTransaction19);
 			owner_lazy = () -> CreditTransferTransaction7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction7 obj) throws Exception {
+			checkCreditTransferTransaction7(obj);
 		}
 	};
 	/**
@@ -166,12 +178,16 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation10> forDirectDebitTransactionInformation10 = new MMConstraint<DirectDebitTransactionInformation10>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkDirectDebitTransactionInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
 			owner_lazy = () -> DirectDebitTransactionInformation10.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation10 obj) throws Exception {
+			checkDirectDebitTransactionInformation10(obj);
 		}
 	};
 	/**
@@ -200,12 +216,16 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation12> forDirectDebitTransactionInformation12 = new MMConstraint<DirectDebitTransactionInformation12>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkDirectDebitTransactionInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
 			owner_lazy = () -> DirectDebitTransactionInformation12.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation12 obj) throws Exception {
+			checkDirectDebitTransactionInformation12(obj);
 		}
 	};
 	/**
@@ -243,13 +263,17 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation14> forDirectDebitTransactionInformation14 = new MMConstraint<DirectDebitTransactionInformation14>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkDirectDebitTransactionInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAmountAndExchangeRate3Rule.forDirectDebitTransactionInformation17);
 			owner_lazy = () -> DirectDebitTransactionInformation14.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation14 obj) throws Exception {
+			checkDirectDebitTransactionInformation14(obj);
 		}
 	};
 	/**
@@ -293,7 +317,6 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction19> forCreditTransferTransaction19 = new MMConstraint<CreditTransferTransaction19>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkCreditTransferTransaction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
@@ -301,6 +324,11 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructedAmountAndExchangeRate3Rule.forCreditTransferTransaction7;
 			owner_lazy = () -> CreditTransferTransaction19.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction19 obj) throws Exception {
+			checkCreditTransferTransaction19(obj);
 		}
 	};
 	/**
@@ -344,7 +372,6 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation17> forDirectDebitTransactionInformation17 = new MMConstraint<DirectDebitTransactionInformation17>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkDirectDebitTransactionInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
@@ -352,6 +379,11 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructedAmountAndExchangeRate3Rule.forDirectDebitTransactionInformation14;
 			owner_lazy = () -> DirectDebitTransactionInformation17.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation17 obj) throws Exception {
+			checkDirectDebitTransactionInformation17(obj);
 		}
 	};
 	/**
@@ -386,13 +418,17 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction25> forCreditTransferTransaction25 = new MMConstraint<CreditTransferTransaction25>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkCreditTransferTransaction25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructedAmountAndExchangeRate3Rule.forCreditTransferTransaction19;
 			owner_lazy = () -> CreditTransferTransaction25.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction25 obj) throws Exception {
+			checkCreditTransferTransaction25(obj);
 		}
 	};
 	/**
@@ -436,7 +472,6 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation20> forDirectDebitTransactionInformation20 = new MMConstraint<DirectDebitTransactionInformation20>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkDirectDebitTransactionInformation20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
@@ -444,6 +479,11 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructedAmountAndExchangeRate3Rule.forDirectDebitTransactionInformation17;
 			owner_lazy = () -> DirectDebitTransactionInformation20.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation20 obj) throws Exception {
+			checkDirectDebitTransactionInformation20(obj);
 		}
 	};
 	/**
@@ -478,13 +518,17 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation21> forDirectDebitTransactionInformation21 = new MMConstraint<DirectDebitTransactionInformation21>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkDirectDebitTransactionInformation21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInstructedAmountAndExchangeRate3Rule.forDirectDebitTransactionInformation20;
 			owner_lazy = () -> DirectDebitTransactionInformation21.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation21 obj) throws Exception {
+			checkDirectDebitTransactionInformation21(obj);
 		}
 	};
 	/**
@@ -513,12 +557,16 @@ public class ConstraintInstructedAmountAndExchangeRate3Rule {
 	 */
 	public static final MMConstraint<CreditTransferTransaction30> forCreditTransferTransaction30 = new MMConstraint<CreditTransferTransaction30>() {
 		{
-			validator = ConstraintInstructedAmountAndExchangeRate3Rule::checkCreditTransferTransaction30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountAndExchangeRate3Rule";
 			definition = "If InstructedAmount is not present, then ExchangeRate is not allowed.";
 			owner_lazy = () -> CreditTransferTransaction30.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction30 obj) throws Exception {
+			checkCreditTransferTransaction30(obj);
 		}
 	};
 

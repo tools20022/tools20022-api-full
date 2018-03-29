@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DeliveryParameters2;
+import com.tools20022.repository.msg.ReceivingPartiesAndAccount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -136,7 +138,7 @@ public class ReceiveInformation1 {
 	 * "Chain of parties involved in the settlement of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementPartiesDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceiveInformation1, ReceivingPartiesAndAccount1> mmSettlementPartiesDetails = new MMMessageAssociationEnd<ReceiveInformation1, ReceivingPartiesAndAccount1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiveInformation1.mmObject();
@@ -148,7 +150,17 @@ public class ReceiveInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ReceivingPartiesAndAccount1.mmObject();
+			type_lazy = () -> ReceivingPartiesAndAccount1.mmObject();
+		}
+
+		@Override
+		public ReceivingPartiesAndAccount1 getValue(ReceiveInformation1 obj) {
+			return obj.getSettlementPartiesDetails();
+		}
+
+		@Override
+		public void setValue(ReceiveInformation1 obj, ReceivingPartiesAndAccount1 value) {
+			obj.setSettlementPartiesDetails(value);
 		}
 	};
 	@XmlElement(name = "PhysTrfInd", required = true)
@@ -188,7 +200,7 @@ public class ReceiveInformation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPhysicalTransferIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReceiveInformation1, YesNoIndicator> mmPhysicalTransferIndicator = new MMMessageAttribute<ReceiveInformation1, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiveInformation1.mmObject();
@@ -200,6 +212,16 @@ public class ReceiveInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(ReceiveInformation1 obj) {
+			return obj.getPhysicalTransferIndicator();
+		}
+
+		@Override
+		public void setValue(ReceiveInformation1 obj, YesNoIndicator value) {
+			obj.setPhysicalTransferIndicator(value);
 		}
 	};
 	@XmlElement(name = "PhysTrfDtls")
@@ -235,7 +257,7 @@ public class ReceiveInformation1 {
 	 * definition} = "Parameters of a physical delivery."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPhysicalTransferDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReceiveInformation1, Optional<DeliveryParameters2>> mmPhysicalTransferDetails = new MMMessageAssociationEnd<ReceiveInformation1, Optional<DeliveryParameters2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiveInformation1.mmObject();
@@ -247,7 +269,17 @@ public class ReceiveInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DeliveryParameters2.mmObject();
+			type_lazy = () -> DeliveryParameters2.mmObject();
+		}
+
+		@Override
+		public Optional<DeliveryParameters2> getValue(ReceiveInformation1 obj) {
+			return obj.getPhysicalTransferDetails();
+		}
+
+		@Override
+		public void setValue(ReceiveInformation1 obj, Optional<DeliveryParameters2> value) {
+			obj.setPhysicalTransferDetails(value.orElse(null));
 		}
 	};
 
@@ -273,7 +305,7 @@ public class ReceiveInformation1 {
 		return settlementPartiesDetails;
 	}
 
-	public ReceiveInformation1 setSettlementPartiesDetails(com.tools20022.repository.msg.ReceivingPartiesAndAccount1 settlementPartiesDetails) {
+	public ReceiveInformation1 setSettlementPartiesDetails(ReceivingPartiesAndAccount1 settlementPartiesDetails) {
 		this.settlementPartiesDetails = Objects.requireNonNull(settlementPartiesDetails);
 		return this;
 	}
@@ -291,7 +323,7 @@ public class ReceiveInformation1 {
 		return physicalTransferDetails == null ? Optional.empty() : Optional.of(physicalTransferDetails);
 	}
 
-	public ReceiveInformation1 setPhysicalTransferDetails(com.tools20022.repository.msg.DeliveryParameters2 physicalTransferDetails) {
+	public ReceiveInformation1 setPhysicalTransferDetails(DeliveryParameters2 physicalTransferDetails) {
 		this.physicalTransferDetails = physicalTransferDetails;
 		return this;
 	}

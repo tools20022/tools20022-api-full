@@ -125,7 +125,7 @@ public class TypeOfPrice4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TypeOfPrice4Choice, TypeOfPrice11Code> mmCode = new MMMessageAttribute<TypeOfPrice4Choice, TypeOfPrice11Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TypeOfPrice4Choice.mmObject();
@@ -139,6 +139,16 @@ public class TypeOfPrice4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfPrice11Code.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice11Code getValue(TypeOfPrice4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TypeOfPrice4Choice obj, TypeOfPrice11Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -187,7 +197,7 @@ public class TypeOfPrice4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TypeOfPrice4Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<TypeOfPrice4Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TypeOfPrice4Choice.mmObject();
@@ -201,6 +211,16 @@ public class TypeOfPrice4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(TypeOfPrice4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TypeOfPrice4Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -25,7 +25,6 @@ import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader45;
 import com.tools20022.repository.msg.PaymentInstruction5;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -132,7 +131,7 @@ public class CreditorPaymentActivationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestV01, GroupHeader45> mmGroupHeader = new MMMessageBuildingBlock<CreditorPaymentActivationRequestV01, GroupHeader45>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +142,14 @@ public class CreditorPaymentActivationRequestV01 {
 			complexType_lazy = () -> GroupHeader45.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestV01.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader45 getValue(CreditorPaymentActivationRequestV01 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestV01 obj, GroupHeader45 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "PmtInf", required = true)
@@ -178,7 +179,7 @@ public class CreditorPaymentActivationRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPaymentInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CreditorPaymentActivationRequestV01, List<PaymentInstruction5>> mmPaymentInformation = new MMMessageBuildingBlock<CreditorPaymentActivationRequestV01, List<PaymentInstruction5>>() {
 		{
 			xmlTag = "PmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,12 +189,14 @@ public class CreditorPaymentActivationRequestV01 {
 			complexType_lazy = () -> PaymentInstruction5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditorPaymentActivationRequestV01.class.getMethod("getPaymentInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PaymentInstruction5> getValue(CreditorPaymentActivationRequestV01 obj) {
+			return obj.getPaymentInformation();
+		}
+
+		@Override
+		public void setValue(CreditorPaymentActivationRequestV01 obj, List<PaymentInstruction5> value) {
+			obj.setPaymentInformation(value);
 		}
 	};
 

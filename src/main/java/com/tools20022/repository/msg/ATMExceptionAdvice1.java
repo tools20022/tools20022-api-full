@@ -22,6 +22,9 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.caam.ATMExceptionAdviceV01;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMContext20;
+import com.tools20022.repository.msg.ATMEnvironment16;
+import com.tools20022.repository.msg.ATMTransaction27;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +110,7 @@ public class ATMExceptionAdvice1 {
 	 * definition} = "Environment of the exception."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMExceptionAdvice1, Optional<ATMEnvironment16>> mmEnvironment = new MMMessageAssociationEnd<ATMExceptionAdvice1, Optional<ATMEnvironment16>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMExceptionAdvice1.mmObject();
 			isDerived = false;
@@ -118,7 +121,17 @@ public class ATMExceptionAdvice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMEnvironment16.mmObject();
+			type_lazy = () -> ATMEnvironment16.mmObject();
+		}
+
+		@Override
+		public Optional<ATMEnvironment16> getValue(ATMExceptionAdvice1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(ATMExceptionAdvice1 obj, Optional<ATMEnvironment16> value) {
+			obj.setEnvironment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cntxt")
@@ -149,7 +162,7 @@ public class ATMExceptionAdvice1 {
 	 * definition} = "Context of the exception."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMExceptionAdvice1, Optional<ATMContext20>> mmContext = new MMMessageAssociationEnd<ATMExceptionAdvice1, Optional<ATMContext20>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMExceptionAdvice1.mmObject();
 			isDerived = false;
@@ -160,7 +173,17 @@ public class ATMExceptionAdvice1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMContext20.mmObject();
+			type_lazy = () -> ATMContext20.mmObject();
+		}
+
+		@Override
+		public Optional<ATMContext20> getValue(ATMExceptionAdvice1 obj) {
+			return obj.getContext();
+		}
+
+		@Override
+		public void setValue(ATMExceptionAdvice1 obj, Optional<ATMContext20> value) {
+			obj.setContext(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -191,7 +214,7 @@ public class ATMExceptionAdvice1 {
 	 * definition} = "Transaction for which the exception is sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMExceptionAdvice1, ATMTransaction27> mmTransaction = new MMMessageAssociationEnd<ATMExceptionAdvice1, ATMTransaction27>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMExceptionAdvice1.mmObject();
 			isDerived = false;
@@ -202,7 +225,17 @@ public class ATMExceptionAdvice1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMTransaction27.mmObject();
+			type_lazy = () -> ATMTransaction27.mmObject();
+		}
+
+		@Override
+		public ATMTransaction27 getValue(ATMExceptionAdvice1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(ATMExceptionAdvice1 obj, ATMTransaction27 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -225,7 +258,7 @@ public class ATMExceptionAdvice1 {
 		return environment == null ? Optional.empty() : Optional.of(environment);
 	}
 
-	public ATMExceptionAdvice1 setEnvironment(com.tools20022.repository.msg.ATMEnvironment16 environment) {
+	public ATMExceptionAdvice1 setEnvironment(ATMEnvironment16 environment) {
 		this.environment = environment;
 		return this;
 	}
@@ -234,7 +267,7 @@ public class ATMExceptionAdvice1 {
 		return context == null ? Optional.empty() : Optional.of(context);
 	}
 
-	public ATMExceptionAdvice1 setContext(com.tools20022.repository.msg.ATMContext20 context) {
+	public ATMExceptionAdvice1 setContext(ATMContext20 context) {
 		this.context = context;
 		return this;
 	}
@@ -243,7 +276,7 @@ public class ATMExceptionAdvice1 {
 		return transaction;
 	}
 
-	public ATMExceptionAdvice1 setTransaction(com.tools20022.repository.msg.ATMTransaction27 transaction) {
+	public ATMExceptionAdvice1 setTransaction(ATMTransaction27 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

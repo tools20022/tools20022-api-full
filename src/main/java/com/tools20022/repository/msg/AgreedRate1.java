@@ -167,7 +167,7 @@ public class AgreedRate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreedRate1, BaseOneRate> mmExchangeRate = new MMMessageAttribute<AgreedRate1, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
@@ -180,6 +180,16 @@ public class AgreedRate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(AgreedRate1 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(AgreedRate1 obj, BaseOneRate value) {
+			obj.setExchangeRate(value);
 		}
 	};
 	@XmlElement(name = "UnitCcy")
@@ -224,7 +234,7 @@ public class AgreedRate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreedRate1, Optional<CurrencyCode>> mmUnitCurrency = new MMMessageAttribute<AgreedRate1, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
@@ -237,6 +247,16 @@ public class AgreedRate1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(AgreedRate1 obj) {
+			return obj.getUnitCurrency();
+		}
+
+		@Override
+		public void setValue(AgreedRate1 obj, Optional<CurrencyCode> value) {
+			obj.setUnitCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QtdCcy")
@@ -282,7 +302,7 @@ public class AgreedRate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AgreedRate1, Optional<CurrencyCode>> mmQuotedCurrency = new MMMessageAttribute<AgreedRate1, Optional<CurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
@@ -295,6 +315,16 @@ public class AgreedRate1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyCode> getValue(AgreedRate1 obj) {
+			return obj.getQuotedCurrency();
+		}
+
+		@Override
+		public void setValue(AgreedRate1 obj, Optional<CurrencyCode> value) {
+			obj.setQuotedCurrency(value.orElse(null));
 		}
 	};
 

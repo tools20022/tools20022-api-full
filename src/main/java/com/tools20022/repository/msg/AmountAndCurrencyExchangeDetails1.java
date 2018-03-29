@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CurrencyExchange3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class AmountAndCurrencyExchangeDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndCurrencyExchangeDetails1, CurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndCurrencyExchangeDetails1, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.mmObject();
@@ -124,6 +125,16 @@ public class AmountAndCurrencyExchangeDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(AmountAndCurrencyExchangeDetails1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndCurrencyExchangeDetails1 obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CcyXchg")
@@ -159,7 +170,7 @@ public class AmountAndCurrencyExchangeDetails1 {
 	 * definition} = "Reports on currency exchange information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountAndCurrencyExchangeDetails1, Optional<CurrencyExchange3>> mmCurrencyExchange = new MMMessageAssociationEnd<AmountAndCurrencyExchangeDetails1, Optional<CurrencyExchange3>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.mmObject();
@@ -171,7 +182,17 @@ public class AmountAndCurrencyExchangeDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyExchange3.mmObject();
+			type_lazy = () -> CurrencyExchange3.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyExchange3> getValue(AmountAndCurrencyExchangeDetails1 obj) {
+			return obj.getCurrencyExchange();
+		}
+
+		@Override
+		public void setValue(AmountAndCurrencyExchangeDetails1 obj, Optional<CurrencyExchange3> value) {
+			obj.setCurrencyExchange(value.orElse(null));
 		}
 	};
 
@@ -202,7 +223,7 @@ public class AmountAndCurrencyExchangeDetails1 {
 		return currencyExchange == null ? Optional.empty() : Optional.of(currencyExchange);
 	}
 
-	public AmountAndCurrencyExchangeDetails1 setCurrencyExchange(com.tools20022.repository.msg.CurrencyExchange3 currencyExchange) {
+	public AmountAndCurrencyExchangeDetails1 setCurrencyExchange(CurrencyExchange3 currencyExchange) {
 		this.currencyExchange = currencyExchange;
 		return this;
 	}

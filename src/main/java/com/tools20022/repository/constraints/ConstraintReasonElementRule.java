@@ -52,11 +52,15 @@ public class ConstraintReasonElementRule {
 	 */
 	public static final MMConstraint<ConfirmationRejectedStatus2> forConfirmationRejectedStatus2 = new MMConstraint<ConfirmationRejectedStatus2>() {
 		{
-			validator = ConstraintReasonElementRule::checkConfirmationRejectedStatus2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonElementRule";
 			definition = "Either Reason or AdditionalInformation must be present. Both may be present.";
 			owner_lazy = () -> ConfirmationRejectedStatus2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ConfirmationRejectedStatus2 obj) throws Exception {
+			checkConfirmationRejectedStatus2(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintReasonElementRule {
 	 */
 	public static final MMConstraint<RejectedStatus10> forRejectedStatus10 = new MMConstraint<RejectedStatus10>() {
 		{
-			validator = ConstraintReasonElementRule::checkRejectedStatus10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonElementRule";
 			definition = "Either Reason or AdditionalInformation must be present. Both may be present.";
 			owner_lazy = () -> RejectedStatus10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RejectedStatus10 obj) throws Exception {
+			checkRejectedStatus10(obj);
 		}
 	};
 	/**
@@ -112,11 +120,15 @@ public class ConstraintReasonElementRule {
 	 */
 	public static final MMConstraint<AccountStatusUpdateInstructionReason1> forAccountStatusUpdateInstructionReason1 = new MMConstraint<AccountStatusUpdateInstructionReason1>() {
 		{
-			validator = ConstraintReasonElementRule::checkAccountStatusUpdateInstructionReason1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonElementRule";
 			definition = "Either Code or AdditionalInformation must be present. Both may be present.";
 			owner_lazy = () -> AccountStatusUpdateInstructionReason1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AccountStatusUpdateInstructionReason1 obj) throws Exception {
+			checkAccountStatusUpdateInstructionReason1(obj);
 		}
 	};
 

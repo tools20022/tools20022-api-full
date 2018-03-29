@@ -141,7 +141,7 @@ public class AmountAndQuantityRatio2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndQuantityRatio2, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<AmountAndQuantityRatio2, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndQuantityRatio2.mmObject();
@@ -155,6 +155,16 @@ public class AmountAndQuantityRatio2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(AmountAndQuantityRatio2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndQuantityRatio2 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -203,7 +213,7 @@ public class AmountAndQuantityRatio2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndQuantityRatio2, DecimalNumber> mmQuantity = new MMMessageAttribute<AmountAndQuantityRatio2, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndQuantity.mmQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndQuantityRatio2.mmObject();
@@ -217,6 +227,16 @@ public class AmountAndQuantityRatio2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(AmountAndQuantityRatio2 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(AmountAndQuantityRatio2 obj, DecimalNumber value) {
+			obj.setQuantity(value);
 		}
 	};
 

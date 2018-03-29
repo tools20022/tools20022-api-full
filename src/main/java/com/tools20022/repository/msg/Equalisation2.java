@@ -113,7 +113,7 @@ public class Equalisation2 {
 	 * "Amount of money resulting from the calculation of the equalisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equalisation2, Optional<ActiveCurrencyAndAmount>> mmAmount = new MMMessageAttribute<Equalisation2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Equalisation.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equalisation2.mmObject();
@@ -125,6 +125,16 @@ public class Equalisation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Equalisation2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Equalisation2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -161,7 +171,7 @@ public class Equalisation2 {
 	 * definition} = "Rate used for calculation of the equalisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equalisation2, Optional<PercentageRate>> mmRate = new MMMessageAttribute<Equalisation2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Equalisation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equalisation2.mmObject();
@@ -173,6 +183,16 @@ public class Equalisation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Equalisation2 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(Equalisation2 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -211,7 +231,7 @@ public class Equalisation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Equalisation2, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<Equalisation2, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Equalisation2.mmObject();
@@ -223,6 +243,16 @@ public class Equalisation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(Equalisation2 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(Equalisation2 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 

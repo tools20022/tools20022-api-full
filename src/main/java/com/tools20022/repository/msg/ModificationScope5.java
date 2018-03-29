@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentPlan3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -102,7 +103,7 @@ public class ModificationScope5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope5, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope5, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope5.mmObject();
 			isDerived = false;
@@ -113,6 +114,16 @@ public class ModificationScope5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope5 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope5 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "InvstmtPlan", required = true)
@@ -145,7 +156,7 @@ public class ModificationScope5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentPlan = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope5, InvestmentPlan3> mmInvestmentPlan = new MMMessageAssociationEnd<ModificationScope5, InvestmentPlan3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope5.mmObject();
 			isDerived = false;
@@ -156,7 +167,17 @@ public class ModificationScope5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentPlan3.mmObject();
+			type_lazy = () -> InvestmentPlan3.mmObject();
+		}
+
+		@Override
+		public InvestmentPlan3 getValue(ModificationScope5 obj) {
+			return obj.getInvestmentPlan();
+		}
+
+		@Override
+		public void setValue(ModificationScope5 obj, InvestmentPlan3 value) {
+			obj.setInvestmentPlan(value);
 		}
 	};
 
@@ -186,7 +207,7 @@ public class ModificationScope5 {
 		return investmentPlan;
 	}
 
-	public ModificationScope5 setInvestmentPlan(com.tools20022.repository.msg.InvestmentPlan3 investmentPlan) {
+	public ModificationScope5 setInvestmentPlan(InvestmentPlan3 investmentPlan) {
 		this.investmentPlan = Objects.requireNonNull(investmentPlan);
 		return this;
 	}

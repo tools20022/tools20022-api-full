@@ -111,7 +111,7 @@ public class QuantityAndAvailability {
 	 * definition} = "Quantity of securities in the sub-balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityAndAvailability, FinancialInstrumentQuantityChoice> mmQuantity = new MMMessageAttribute<QuantityAndAvailability, FinancialInstrumentQuantityChoice>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAvailability.mmObject();
@@ -123,6 +123,16 @@ public class QuantityAndAvailability {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantityChoice getValue(QuantityAndAvailability obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityAndAvailability obj, FinancialInstrumentQuantityChoice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "AvlbtyInd", required = true)
@@ -162,7 +172,7 @@ public class QuantityAndAvailability {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAvailabilityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityAndAvailability, YesNoIndicator> mmAvailabilityIndicator = new MMMessageAttribute<QuantityAndAvailability, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAvailabilityIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAvailability.mmObject();
@@ -174,6 +184,16 @@ public class QuantityAndAvailability {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(QuantityAndAvailability obj) {
+			return obj.getAvailabilityIndicator();
+		}
+
+		@Override
+		public void setValue(QuantityAndAvailability obj, YesNoIndicator value) {
+			obj.setAvailabilityIndicator(value);
 		}
 	};
 

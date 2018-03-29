@@ -130,7 +130,7 @@ public class ForeignExchangeTerms23 {
 	 * ForeignExchangeTerms11.mmUnitCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms23, ActiveCurrencyCode> mmUnitCurrency = new MMMessageAttribute<ForeignExchangeTerms23, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmUnitCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms23.mmObject();
@@ -144,6 +144,16 @@ public class ForeignExchangeTerms23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(ForeignExchangeTerms23 obj) {
+			return obj.getUnitCurrency();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms23 obj, ActiveCurrencyCode value) {
+			obj.setUnitCurrency(value);
 		}
 	};
 	@XmlElement(name = "QtdCcy", required = true)
@@ -191,7 +201,7 @@ public class ForeignExchangeTerms23 {
 	 * ForeignExchangeTerms11.mmQuotedCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms23, ActiveCurrencyCode> mmQuotedCurrency = new MMMessageAttribute<ForeignExchangeTerms23, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms23.mmObject();
@@ -205,6 +215,16 @@ public class ForeignExchangeTerms23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(ForeignExchangeTerms23 obj) {
+			return obj.getQuotedCurrency();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms23 obj, ActiveCurrencyCode value) {
+			obj.setQuotedCurrency(value);
 		}
 	};
 	@XmlElement(name = "XchgRate", required = true)
@@ -251,7 +271,7 @@ public class ForeignExchangeTerms23 {
 	 * ForeignExchangeTerms11.mmExchangeRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms23, BaseOneRate> mmExchangeRate = new MMMessageAttribute<ForeignExchangeTerms23, BaseOneRate>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms23.mmObject();
@@ -265,6 +285,16 @@ public class ForeignExchangeTerms23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public BaseOneRate getValue(ForeignExchangeTerms23 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms23 obj, BaseOneRate value) {
+			obj.setExchangeRate(value);
 		}
 	};
 	@XmlElement(name = "RsltgAmt", required = true)
@@ -310,7 +340,7 @@ public class ForeignExchangeTerms23 {
 	 * ForeignExchangeTerms11.mmResultingAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmResultingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeTerms23, ActiveCurrencyAndAmount> mmResultingAmount = new MMMessageAttribute<ForeignExchangeTerms23, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmResultingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms23.mmObject();
@@ -324,6 +354,16 @@ public class ForeignExchangeTerms23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(ForeignExchangeTerms23 obj) {
+			return obj.getResultingAmount();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeTerms23 obj, ActiveCurrencyAndAmount value) {
+			obj.setResultingAmount(value);
 		}
 	};
 

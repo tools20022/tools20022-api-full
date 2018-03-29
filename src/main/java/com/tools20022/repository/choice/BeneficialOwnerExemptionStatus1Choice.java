@@ -108,7 +108,7 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 * definition} = "Beneficial owner is deceased."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeceased = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BeneficialOwnerExemptionStatus1Choice, DeceasedExemptionStatus1> mmDeceased = new MMMessageAssociationEnd<BeneficialOwnerExemptionStatus1Choice, DeceasedExemptionStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
@@ -121,6 +121,16 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DeceasedExemptionStatus1.mmObject();
+		}
+
+		@Override
+		public DeceasedExemptionStatus1 getValue(BeneficialOwnerExemptionStatus1Choice obj) {
+			return obj.getDeceased();
+		}
+
+		@Override
+		public void setValue(BeneficialOwnerExemptionStatus1Choice obj, DeceasedExemptionStatus1 value) {
+			obj.setDeceased(value);
 		}
 	};
 	@XmlElement(name = "Incmptnt", required = true)
@@ -155,7 +165,7 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 * definition} = "Beneficial owner is incompetent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIncompetent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BeneficialOwnerExemptionStatus1Choice, IncompetentExemptionStatus1> mmIncompetent = new MMMessageAssociationEnd<BeneficialOwnerExemptionStatus1Choice, IncompetentExemptionStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IncompetentExemptionStatus1.mmObject();
+		}
+
+		@Override
+		public IncompetentExemptionStatus1 getValue(BeneficialOwnerExemptionStatus1Choice obj) {
+			return obj.getIncompetent();
+		}
+
+		@Override
+		public void setValue(BeneficialOwnerExemptionStatus1Choice obj, IncompetentExemptionStatus1 value) {
+			obj.setIncompetent(value);
 		}
 	};
 	@XmlElement(name = "NonXmpt", required = true)
@@ -202,7 +222,7 @@ public class BeneficialOwnerExemptionStatus1Choice {
 	 * definition} = "Beneficial owner is non-exempt."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNonExempt = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BeneficialOwnerExemptionStatus1Choice, NonExemptExemptionStatus1> mmNonExempt = new MMMessageAssociationEnd<BeneficialOwnerExemptionStatus1Choice, NonExemptExemptionStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BeneficialOwnerExemptionStatus1Choice.mmObject();
 			isDerived = false;
@@ -215,6 +235,16 @@ public class BeneficialOwnerExemptionStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NonExemptExemptionStatus1.mmObject();
+		}
+
+		@Override
+		public NonExemptExemptionStatus1 getValue(BeneficialOwnerExemptionStatus1Choice obj) {
+			return obj.getNonExempt();
+		}
+
+		@Override
+		public void setValue(BeneficialOwnerExemptionStatus1Choice obj, NonExemptExemptionStatus1 value) {
+			obj.setNonExempt(value);
 		}
 	};
 

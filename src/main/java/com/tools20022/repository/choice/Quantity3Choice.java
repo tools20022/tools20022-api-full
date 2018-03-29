@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.Quantity4Choice;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryQuantity3;
@@ -126,7 +127,7 @@ public class Quantity3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityChoice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity3Choice, Quantity4Choice> mmQuantityChoice = new MMMessageAssociationEnd<Quantity3Choice, Quantity4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.mmObject();
 			isDerived = false;
@@ -138,7 +139,17 @@ public class Quantity3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.Quantity4Choice.mmObject();
+			type_lazy = () -> Quantity4Choice.mmObject();
+		}
+
+		@Override
+		public Quantity4Choice getValue(Quantity3Choice obj) {
+			return obj.getQuantityChoice();
+		}
+
+		@Override
+		public void setValue(Quantity3Choice obj, Quantity4Choice value) {
+			obj.setQuantityChoice(value);
 		}
 	};
 	@XmlElement(name = "PrtryQty", required = true)
@@ -177,7 +188,7 @@ public class Quantity3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Quantity3Choice, ProprietaryQuantity3> mmProprietaryQuantity = new MMMessageAssociationEnd<Quantity3Choice, ProprietaryQuantity3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity3Choice.mmObject();
 			isDerived = false;
@@ -190,6 +201,16 @@ public class Quantity3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryQuantity3.mmObject();
+		}
+
+		@Override
+		public ProprietaryQuantity3 getValue(Quantity3Choice obj) {
+			return obj.getProprietaryQuantity();
+		}
+
+		@Override
+		public void setValue(Quantity3Choice obj, ProprietaryQuantity3 value) {
+			obj.setProprietaryQuantity(value);
 		}
 	};
 
@@ -220,7 +241,7 @@ public class Quantity3Choice {
 		return quantityChoice;
 	}
 
-	public Quantity3Choice setQuantityChoice(com.tools20022.repository.choice.Quantity4Choice quantityChoice) {
+	public Quantity3Choice setQuantityChoice(Quantity4Choice quantityChoice) {
 		this.quantityChoice = Objects.requireNonNull(quantityChoice);
 		return this;
 	}

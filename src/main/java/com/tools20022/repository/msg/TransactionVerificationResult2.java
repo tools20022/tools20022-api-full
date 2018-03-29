@@ -118,7 +118,7 @@ public class TransactionVerificationResult2 {
 	 * definition} = "Result of an e-commerce authentication process."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmElectronicCommerceAuthenticationResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult2, Optional<Max500Text>> mmElectronicCommerceAuthenticationResult = new MMMessageAttribute<TransactionVerificationResult2, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class TransactionVerificationResult2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(TransactionVerificationResult2 obj) {
+			return obj.getElectronicCommerceAuthenticationResult();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult2 obj, Optional<Max500Text> value) {
+			obj.setElectronicCommerceAuthenticationResult(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CSCRslt")
@@ -162,7 +172,7 @@ public class TransactionVerificationResult2 {
 	 * "Result of the printed card security code (CSC) validation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCSCResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult2, Optional<CSCResult1Code>> mmCSCResult = new MMMessageAttribute<TransactionVerificationResult2, Optional<CSCResult1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 			isDerived = false;
@@ -173,6 +183,16 @@ public class TransactionVerificationResult2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CSCResult1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CSCResult1Code> getValue(TransactionVerificationResult2 obj) {
+			return obj.getCSCResult();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult2 obj, Optional<CSCResult1Code> value) {
+			obj.setCSCResult(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrdhldrAdrVrfctnRslt")
@@ -207,7 +227,7 @@ public class TransactionVerificationResult2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardholderAddressVerificationResult = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult2, List<CardholderAddressVerificationResult1Code>> mmCardholderAddressVerificationResult = new MMMessageAttribute<TransactionVerificationResult2, List<CardholderAddressVerificationResult1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 			isDerived = false;
@@ -217,6 +237,16 @@ public class TransactionVerificationResult2 {
 			definition = "Result of the cardholder verification address checks on the street number and the postal code.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CardholderAddressVerificationResult1Code.mmObject();
+		}
+
+		@Override
+		public List<CardholderAddressVerificationResult1Code> getValue(TransactionVerificationResult2 obj) {
+			return obj.getCardholderAddressVerificationResult();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult2 obj, List<CardholderAddressVerificationResult1Code> value) {
+			obj.setCardholderAddressVerificationResult(value);
 		}
 	};
 	@XmlElement(name = "DclndPdctCd")
@@ -248,7 +278,7 @@ public class TransactionVerificationResult2 {
 	 * definition} = "Product code for which the authorisation was declined."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclinedProductCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionVerificationResult2, List<Max70Text>> mmDeclinedProductCode = new MMMessageAttribute<TransactionVerificationResult2, List<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 			isDerived = false;
@@ -258,6 +288,16 @@ public class TransactionVerificationResult2 {
 			definition = "Product code for which the authorisation was declined.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public List<Max70Text> getValue(TransactionVerificationResult2 obj) {
+			return obj.getDeclinedProductCode();
+		}
+
+		@Override
+		public void setValue(TransactionVerificationResult2 obj, List<Max70Text> value) {
+			obj.setDeclinedProductCode(value);
 		}
 	};
 

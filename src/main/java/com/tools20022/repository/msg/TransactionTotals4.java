@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionTotals5;
+import com.tools20022.repository.msg.TransactionTotals6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +113,7 @@ public class TransactionTotals4 {
 	 * definition} = "Total of credit transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalCredit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionTotals4, TransactionTotals5> mmTotalCredit = new MMMessageAssociationEnd<TransactionTotals4, TransactionTotals5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals4.mmObject();
 			isDerived = false;
@@ -122,7 +124,17 @@ public class TransactionTotals4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
+			type_lazy = () -> TransactionTotals5.mmObject();
+		}
+
+		@Override
+		public TransactionTotals5 getValue(TransactionTotals4 obj) {
+			return obj.getTotalCredit();
+		}
+
+		@Override
+		public void setValue(TransactionTotals4 obj, TransactionTotals5 value) {
+			obj.setTotalCredit(value);
 		}
 	};
 	@XmlElement(name = "TtlDbt", required = true)
@@ -153,7 +165,7 @@ public class TransactionTotals4 {
 	 * definition} = "Total of debit transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalDebit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionTotals4, TransactionTotals5> mmTotalDebit = new MMMessageAssociationEnd<TransactionTotals4, TransactionTotals5>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals4.mmObject();
 			isDerived = false;
@@ -164,7 +176,17 @@ public class TransactionTotals4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
+			type_lazy = () -> TransactionTotals5.mmObject();
+		}
+
+		@Override
+		public TransactionTotals5 getValue(TransactionTotals4 obj) {
+			return obj.getTotalDebit();
+		}
+
+		@Override
+		public void setValue(TransactionTotals4 obj, TransactionTotals5 value) {
+			obj.setTotalDebit(value);
 		}
 	};
 	@XmlElement(name = "TtlNb")
@@ -196,7 +218,7 @@ public class TransactionTotals4 {
 	 * "Additional count which may be utilised for reconciliation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTotalNumber = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionTotals4, Optional<TransactionTotals6>> mmTotalNumber = new MMMessageAssociationEnd<TransactionTotals4, Optional<TransactionTotals6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals4.mmObject();
 			isDerived = false;
@@ -207,7 +229,17 @@ public class TransactionTotals4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals6.mmObject();
+			type_lazy = () -> TransactionTotals6.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionTotals6> getValue(TransactionTotals4 obj) {
+			return obj.getTotalNumber();
+		}
+
+		@Override
+		public void setValue(TransactionTotals4 obj, Optional<TransactionTotals6> value) {
+			obj.setTotalNumber(value.orElse(null));
 		}
 	};
 
@@ -220,7 +252,7 @@ public class TransactionTotals4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals4";
 				definition = "Totals of the reconciliation.";
-				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals5.mmObject(), com.tools20022.repository.msg.TransactionTotals6.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(TransactionTotals5.mmObject(), TransactionTotals6.mmObject());
 				previousVersion_lazy = () -> TransactionTotals3.mmObject();
 			}
 		});
@@ -231,7 +263,7 @@ public class TransactionTotals4 {
 		return totalCredit;
 	}
 
-	public TransactionTotals4 setTotalCredit(com.tools20022.repository.msg.TransactionTotals5 totalCredit) {
+	public TransactionTotals4 setTotalCredit(TransactionTotals5 totalCredit) {
 		this.totalCredit = Objects.requireNonNull(totalCredit);
 		return this;
 	}
@@ -240,7 +272,7 @@ public class TransactionTotals4 {
 		return totalDebit;
 	}
 
-	public TransactionTotals4 setTotalDebit(com.tools20022.repository.msg.TransactionTotals5 totalDebit) {
+	public TransactionTotals4 setTotalDebit(TransactionTotals5 totalDebit) {
 		this.totalDebit = Objects.requireNonNull(totalDebit);
 		return this;
 	}
@@ -249,7 +281,7 @@ public class TransactionTotals4 {
 		return totalNumber == null ? Optional.empty() : Optional.of(totalNumber);
 	}
 
-	public TransactionTotals4 setTotalNumber(com.tools20022.repository.msg.TransactionTotals6 totalNumber) {
+	public TransactionTotals4 setTotalNumber(TransactionTotals6 totalNumber) {
 		this.totalNumber = totalNumber;
 		return this;
 	}

@@ -120,7 +120,7 @@ public class GeneralBusinessOrError2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessOrError2Choice, List<ErrorHandling3>> mmBusinessError = new MMMessageAssociationEnd<GeneralBusinessOrError2Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError2Choice.mmObject();
 			isDerived = false;
@@ -132,6 +132,16 @@ public class GeneralBusinessOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(GeneralBusinessOrError2Choice obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessOrError2Choice obj, List<ErrorHandling3> value) {
+			obj.setBusinessError(value);
 		}
 	};
 	@XmlElement(name = "GnlBiz", required = true)
@@ -171,7 +181,7 @@ public class GeneralBusinessOrError2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralBusiness = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessOrError2Choice, GeneralBusinessInformation> mmGeneralBusiness = new MMMessageAssociationEnd<GeneralBusinessOrError2Choice, GeneralBusinessInformation>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneralBusinessOrError2Choice.mmObject();
 			isDerived = false;
@@ -184,6 +194,16 @@ public class GeneralBusinessOrError2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneralBusinessInformation.mmObject();
+		}
+
+		@Override
+		public GeneralBusinessInformation getValue(GeneralBusinessOrError2Choice obj) {
+			return obj.getGeneralBusiness();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessOrError2Choice obj, GeneralBusinessInformation value) {
+			obj.setGeneralBusiness(value);
 		}
 	};
 

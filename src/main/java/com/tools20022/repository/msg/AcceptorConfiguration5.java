@@ -24,6 +24,8 @@ import com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification71;
+import com.tools20022.repository.msg.TerminalManagementDataSet19;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -145,7 +147,7 @@ public class AcceptorConfiguration5 {
 	 * AcceptorConfiguration4.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerminalManagerIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfiguration5, GenericIdentification71> mmTerminalManagerIdentification = new MMMessageAssociationEnd<AcceptorConfiguration5, GenericIdentification71>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration5.mmObject();
@@ -159,11 +161,21 @@ public class AcceptorConfiguration5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification71.mmObject();
+			type_lazy = () -> GenericIdentification71.mmObject();
+		}
+
+		@Override
+		public GenericIdentification71 getValue(AcceptorConfiguration5 obj) {
+			return obj.getTerminalManagerIdentification();
+		}
+
+		@Override
+		public void setValue(AcceptorConfiguration5 obj, GenericIdentification71 value) {
+			obj.setTerminalManagerIdentification(value);
 		}
 	};
 	@XmlElement(name = "DataSet", required = true)
-	protected List<com.tools20022.repository.msg.TerminalManagementDataSet19> dataSet;
+	protected List<TerminalManagementDataSet19> dataSet;
 	/**
 	 * 
 	 <p>
@@ -206,7 +218,7 @@ public class AcceptorConfiguration5 {
 	 * AcceptorConfiguration4.mmDataSet}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSet = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorConfiguration5, List<TerminalManagementDataSet19>> mmDataSet = new MMMessageAssociationEnd<AcceptorConfiguration5, List<TerminalManagementDataSet19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorConfiguration5.mmObject();
 			isDerived = false;
@@ -218,7 +230,17 @@ public class AcceptorConfiguration5 {
 			previousVersion_lazy = () -> AcceptorConfiguration4.mmDataSet;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet19.mmObject();
+			type_lazy = () -> TerminalManagementDataSet19.mmObject();
+		}
+
+		@Override
+		public List<TerminalManagementDataSet19> getValue(AcceptorConfiguration5 obj) {
+			return obj.getDataSet();
+		}
+
+		@Override
+		public void setValue(AcceptorConfiguration5 obj, List<TerminalManagementDataSet19> value) {
+			obj.setDataSet(value);
 		}
 	};
 
@@ -243,7 +265,7 @@ public class AcceptorConfiguration5 {
 		return terminalManagerIdentification;
 	}
 
-	public AcceptorConfiguration5 setTerminalManagerIdentification(com.tools20022.repository.msg.GenericIdentification71 terminalManagerIdentification) {
+	public AcceptorConfiguration5 setTerminalManagerIdentification(GenericIdentification71 terminalManagerIdentification) {
 		this.terminalManagerIdentification = Objects.requireNonNull(terminalManagerIdentification);
 		return this;
 	}
@@ -252,7 +274,7 @@ public class AcceptorConfiguration5 {
 		return dataSet == null ? dataSet = new ArrayList<>() : dataSet;
 	}
 
-	public AcceptorConfiguration5 setDataSet(List<com.tools20022.repository.msg.TerminalManagementDataSet19> dataSet) {
+	public AcceptorConfiguration5 setDataSet(List<TerminalManagementDataSet19> dataSet) {
 		this.dataSet = Objects.requireNonNull(dataSet);
 		return this;
 	}

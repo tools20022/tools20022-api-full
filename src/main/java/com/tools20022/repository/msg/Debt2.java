@@ -30,6 +30,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountOrPercentageRange;
+import com.tools20022.repository.msg.YieldCalculation3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -299,7 +301,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ActiveCurrencyCode>> mmPaymentCurrency = new MMMessageAttribute<Debt2, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -312,6 +314,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(Debt2 obj) {
+			return obj.getPaymentCurrency();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setPaymentCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FaceAmt")
@@ -355,7 +367,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ActiveCurrencyAndAmount>> mmFaceAmount = new MMMessageAttribute<Debt2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -368,6 +380,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Debt2 obj) {
+			return obj.getFaceAmount();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setFaceAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtFrqcy")
@@ -411,7 +433,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Frequency11Choice>> mmPaymentFrequency = new MMMessageAttribute<Debt2, Optional<Frequency11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmPaymentFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -424,6 +446,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Frequency11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency11Choice> getValue(Debt2 obj) {
+			return obj.getPaymentFrequency();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Frequency11Choice> value) {
+			obj.setPaymentFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstFxgDt")
@@ -468,7 +500,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestFixingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmInterestFixingDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmFixingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -481,6 +513,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getInterestFixingDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setInterestFixingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DtdDt")
@@ -527,7 +569,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmDatedDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmDatedDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -541,6 +583,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getDatedDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setDatedDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstPmtDt")
@@ -585,7 +637,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstPaymentDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmFirstPaymentDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFirstPaymentDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -598,6 +650,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getFirstPaymentDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setFirstPaymentDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MtrtyDt")
@@ -643,7 +705,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmMaturityDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -657,6 +719,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getMaturityDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setMaturityDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtCpnDt")
@@ -702,7 +774,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextCouponDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmNextCouponDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> CouponAttached.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -716,6 +788,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getNextCouponDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setNextCouponDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PutblDt")
@@ -760,7 +842,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPutableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmPutableDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPutableDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -773,6 +855,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getPutableDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setPutableDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtCllblDt")
@@ -817,7 +909,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextCallableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmNextCallableDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmNextCallableDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -830,6 +922,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getNextCallableDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setNextCallableDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtFctrDt")
@@ -873,7 +975,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextFactorDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmNextFactorDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmNextFactorDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -886,6 +988,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getNextFactorDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setNextFactorDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XprtnDt")
@@ -930,7 +1042,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExpirationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmExpirationDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -943,6 +1055,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getExpirationDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setExpirationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtDrctnInd")
@@ -989,7 +1111,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDirectionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PaymentDirectionIndicator>> mmPaymentDirectionIndicator = new MMMessageAttribute<Debt2, Optional<PaymentDirectionIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1002,6 +1124,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PaymentDirectionIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentDirectionIndicator> getValue(Debt2 obj) {
+			return obj.getPaymentDirectionIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PaymentDirectionIndicator> value) {
+			obj.setPaymentDirectionIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstRate")
@@ -1050,7 +1182,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmInterestRate = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1064,6 +1196,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getInterestRate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setInterestRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtIntrstRate")
@@ -1109,7 +1251,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextInterestRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmNextInterestRate = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1122,6 +1264,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getNextInterestRate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setNextInterestRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OddCpnInd")
@@ -1167,7 +1319,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOddCouponIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmOddCouponIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmOddCouponIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1180,6 +1332,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getOddCouponIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setOddCouponIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CllblInd")
@@ -1225,7 +1387,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCallableIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmCallableIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmCallableIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1238,6 +1400,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getCallableIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setCallableIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CPPrgm")
@@ -1285,7 +1457,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCPProgram = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Number>> mmCPProgram = new MMMessageAttribute<Debt2, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmCPProgram;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1299,6 +1471,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Debt2 obj) {
+			return obj.getCPProgram();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Number> value) {
+			obj.setCPProgram(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CPRegnTp")
@@ -1344,7 +1526,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCPRegistrationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Max350Text>> mmCPRegistrationType = new MMMessageAttribute<Debt2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmCPRegistrationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1358,6 +1540,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(Debt2 obj) {
+			return obj.getCPRegistrationType();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Max350Text> value) {
+			obj.setCPRegistrationType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstAcrlDt")
@@ -1406,7 +1598,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestAccrualDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ISODateTime>> mmInterestAccrualDate = new MMMessageAttribute<Debt2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestAccrualDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1420,6 +1612,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(Debt2 obj) {
+			return obj.getInterestAccrualDate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ISODateTime> value) {
+			obj.setInterestAccrualDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PutblInd")
@@ -1465,7 +1667,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPutableIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmPutableIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPutableIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1478,6 +1680,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getPutableIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setPutableIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PreFnddInd")
@@ -1523,7 +1735,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreFundedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmPreFundedIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPreFundedIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1536,6 +1748,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getPreFundedIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setPreFundedIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EscrwdInd")
@@ -1581,7 +1803,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEscrowedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmEscrowedIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmEscrowedIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1594,6 +1816,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getEscrowedIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setEscrowedIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PerptlInd")
@@ -1637,7 +1869,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPerpetualIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmPerpetualIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPerpetualIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1650,6 +1882,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getPerpetualIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setPerpetualIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubrdntdInd")
@@ -1695,7 +1937,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubordinatedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmSubordinatedIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmSubordinatedIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1708,6 +1950,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getSubordinatedIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setSubordinatedIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndblInd")
@@ -1754,7 +2006,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendibleIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmExtendibleIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmExtendibleIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1767,6 +2019,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getExtendibleIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setExtendibleIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndblPrd")
@@ -1810,7 +2072,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendiblePeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DateTimePeriodChoice>> mmExtendiblePeriod = new MMMessageAttribute<Debt2, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmExtendiblePeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1823,6 +2085,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(Debt2 obj) {
+			return obj.getExtendiblePeriod();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setExtendiblePeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VarblRateInd")
@@ -1869,7 +2141,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVariableRateIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmVariableRateIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmVariableRateIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1882,6 +2154,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getVariableRateIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setVariableRateIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OverAlltmtAmt")
@@ -1928,7 +2210,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOverAllotmentAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<ActiveCurrencyAndAmount>> mmOverAllotmentAmount = new MMMessageAttribute<Debt2, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmOverAllotmentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1941,6 +2223,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(Debt2 obj) {
+			return obj.getOverAllotmentAmount();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setOverAllotmentAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OverAlltmtRate")
@@ -1986,7 +2278,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOverAllotmentRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmOverAllotmentRate = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmOverAllotmentRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -1999,6 +2291,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getOverAllotmentRate();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setOverAllotmentRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmtsblInd")
@@ -2045,7 +2347,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmortisableIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmAmortisableIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmAmortisableIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2058,6 +2360,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getAmortisableIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setAmortisableIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrstClctnMtd")
@@ -2103,7 +2415,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestCalculationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Max70Text>> mmInterestCalculationMethod = new MMMessageAttribute<Debt2, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmCalculationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2116,6 +2428,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(Debt2 obj) {
+			return obj.getInterestCalculationMethod();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Max70Text> value) {
+			obj.setInterestCalculationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CptlsdIntrst")
@@ -2162,7 +2484,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCapitalisedInterest = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DistributionPolicy1Choice>> mmCapitalisedInterest = new MMMessageAttribute<Debt2, Optional<DistributionPolicy1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmCapitalisedInterest;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2175,6 +2497,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DistributionPolicy1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DistributionPolicy1Choice> getValue(Debt2 obj) {
+			return obj.getCapitalisedInterest();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DistributionPolicy1Choice> value) {
+			obj.setCapitalisedInterest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ActlDnmtnAmt")
@@ -2219,7 +2551,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualDenominationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, List<ActiveCurrencyAndAmount>> mmActualDenominationAmount = new MMMessageAttribute<Debt2, List<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmActualDenominationAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2231,6 +2563,16 @@ public class Debt2 {
 			nextVersions_lazy = () -> Arrays.asList(Debt3.mmActualDenominationAmount);
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public List<ActiveCurrencyAndAmount> getValue(Debt2 obj) {
+			return obj.getActualDenominationAmount();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, List<ActiveCurrencyAndAmount> value) {
+			obj.setActualDenominationAmount(value);
 		}
 	};
 	@XmlElement(name = "CurFctr")
@@ -2276,7 +2618,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmCurrentFactor = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2289,6 +2631,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getCurrentFactor();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setCurrentFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NxtFctr")
@@ -2334,7 +2686,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNextFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmNextFactor = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2347,6 +2699,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getNextFactor();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setNextFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsFctr")
@@ -2392,7 +2754,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmPreviousFactor = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2405,6 +2767,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getPreviousFactor();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setPreviousFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pcs")
@@ -2448,7 +2820,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPieces = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DecimalNumber>> mmPieces = new MMMessageAttribute<Debt2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPieces;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2461,6 +2833,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Debt2 obj) {
+			return obj.getPieces();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DecimalNumber> value) {
+			obj.setPieces(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlsMax")
@@ -2504,7 +2886,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolsMaximum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DecimalNumber>> mmPoolsMaximum = new MMMessageAttribute<Debt2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPoolsMaximum;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2517,6 +2899,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Debt2 obj) {
+			return obj.getPoolsMaximum();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DecimalNumber> value) {
+			obj.setPoolsMaximum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlsPerMln")
@@ -2562,7 +2954,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolsPerMillion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DecimalNumber>> mmPoolsPerMillion = new MMMessageAttribute<Debt2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPoolsPerMillion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2575,6 +2967,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Debt2 obj) {
+			return obj.getPoolsPerMillion();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DecimalNumber> value) {
+			obj.setPoolsPerMillion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlsPerLot")
@@ -2620,7 +3022,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolsPerLot = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DecimalNumber>> mmPoolsPerLot = new MMMessageAttribute<Debt2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPoolsPerLot;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2633,6 +3035,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Debt2 obj) {
+			return obj.getPoolsPerLot();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DecimalNumber> value) {
+			obj.setPoolsPerLot(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlsPerTrad")
@@ -2678,7 +3090,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolsPerTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DecimalNumber>> mmPoolsPerTrade = new MMMessageAttribute<Debt2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPoolsPerTrade;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2691,6 +3103,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Debt2 obj) {
+			return obj.getPoolsPerTrade();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DecimalNumber> value) {
+			obj.setPoolsPerTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstPrePmtPnltyInd")
@@ -2737,7 +3159,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConstantPrePaymentPenaltyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmConstantPrePaymentPenaltyIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmConstantPrePaymentPenalty;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2750,6 +3172,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getConstantPrePaymentPenaltyIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setConstantPrePaymentPenaltyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotId")
@@ -2794,7 +3226,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Max35Text>> mmLotIdentification = new MMMessageAttribute<Debt2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2807,6 +3239,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Debt2 obj) {
+			return obj.getLotIdentification();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Max35Text> value) {
+			obj.setLotIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstPrePmtYld")
@@ -2853,7 +3295,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConstantPrePaymentYield = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmConstantPrePaymentYield = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmConstantPrePaymentYield;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2866,6 +3308,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getConstantPrePaymentYield();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setConstantPrePaymentYield(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WghtdAvrgCpn")
@@ -2912,7 +3364,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWeightedAverageCoupon = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmWeightedAverageCoupon = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmWeightedAverageCoupon;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2925,6 +3377,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getWeightedAverageCoupon();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setWeightedAverageCoupon(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WghtdAvrgLife")
@@ -2971,7 +3433,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWeightedAverageLife = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DecimalNumber>> mmWeightedAverageLife = new MMMessageAttribute<Debt2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmWeightedAverageLife;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -2984,6 +3446,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Debt2 obj) {
+			return obj.getWeightedAverageLife();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DecimalNumber> value) {
+			obj.setWeightedAverageLife(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WghtdAvrgLn")
@@ -3030,7 +3502,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWeightedAverageLoan = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DecimalNumber>> mmWeightedAverageLoan = new MMMessageAttribute<Debt2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmWeightedAverageLoan;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3043,6 +3515,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Debt2 obj) {
+			return obj.getWeightedAverageLoan();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DecimalNumber> value) {
+			obj.setWeightedAverageLoan(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WghtdAvrgMtrty")
@@ -3089,7 +3571,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWeightedAverageMaturity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<DecimalNumber>> mmWeightedAverageMaturity = new MMMessageAttribute<Debt2, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmWeightedAverageMaturity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3102,6 +3584,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(Debt2 obj) {
+			return obj.getWeightedAverageMaturity();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<DecimalNumber> value) {
+			obj.setWeightedAverageMaturity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InsrdInd")
@@ -3147,7 +3639,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInsuredIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmInsuredIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmInsuredIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3160,6 +3652,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getInsuredIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setInsuredIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BkQlfdInd")
@@ -3206,7 +3708,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankQualifiedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmBankQualifiedIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmBankQualified;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3220,9 +3722,19 @@ public class Debt2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getBankQualifiedIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setBankQualifiedIndicator(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "YldClctn")
-	protected List<com.tools20022.repository.msg.YieldCalculation3> yieldCalculation;
+	protected List<YieldCalculation3> yieldCalculation;
 	/**
 	 * 
 	 <p>
@@ -3260,7 +3772,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmYieldCalculation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Debt2, List<YieldCalculation3>> mmYieldCalculation = new MMMessageAssociationEnd<Debt2, List<YieldCalculation3>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmYieldCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3272,7 +3784,17 @@ public class Debt2 {
 			nextVersions_lazy = () -> Arrays.asList(Debt3.mmYieldCalculation);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.YieldCalculation3.mmObject();
+			type_lazy = () -> YieldCalculation3.mmObject();
+		}
+
+		@Override
+		public List<YieldCalculation3> getValue(Debt2 obj) {
+			return obj.getYieldCalculation();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, List<YieldCalculation3> value) {
+			obj.setYieldCalculation(value);
 		}
 	};
 	@XmlElement(name = "IntrstTp")
@@ -3317,7 +3839,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<InterestType3Code>> mmInterestType = new MMMessageAttribute<Debt2, Optional<InterestType3Code>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3330,6 +3852,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> InterestType3Code.mmObject();
+		}
+
+		@Override
+		public Optional<InterestType3Code> getValue(Debt2 obj) {
+			return obj.getInterestType();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<InterestType3Code> value) {
+			obj.setInterestType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrmStrTp")
@@ -3374,7 +3906,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstrumentStructureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<InstrumentSubStructureType1Choice>> mmInstrumentStructureType = new MMMessageAttribute<Debt2, Optional<InstrumentSubStructureType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmFinancialInstrumentSubStructure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3387,6 +3919,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InstrumentSubStructureType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InstrumentSubStructureType1Choice> getValue(Debt2 obj) {
+			return obj.getInstrumentStructureType();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<InstrumentSubStructureType1Choice> value) {
+			obj.setInstrumentStructureType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GblTp")
@@ -3432,7 +3974,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGlobalType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<GlobalNote1Choice>> mmGlobalType = new MMMessageAttribute<Debt2, Optional<GlobalNote1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmIssuance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3445,6 +3987,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> GlobalNote1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<GlobalNote1Choice> getValue(Debt2 obj) {
+			return obj.getGlobalType();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<GlobalNote1Choice> value) {
+			obj.setGlobalType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PotntlEuroSysElgblty")
@@ -3486,7 +4038,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPotentialEuroSystemEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmPotentialEuroSystemEligibility = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
@@ -3498,6 +4050,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getPotentialEuroSystemEligibility();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setPotentialEuroSystemEligibility(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Geogcs")
@@ -3545,7 +4107,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGeographics = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Max35Text>> mmGeographics = new MMMessageAttribute<Debt2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmGeographics;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3559,6 +4121,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Debt2 obj) {
+			return obj.getGeographics();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Max35Text> value) {
+			obj.setGeographics(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "YldRg")
@@ -3602,7 +4174,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYieldRange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<AmountOrPercentageRange>> mmYieldRange = new MMMessageAttribute<Debt2, Optional<AmountOrPercentageRange>>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmYieldRange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3614,7 +4186,17 @@ public class Debt2 {
 			nextVersions_lazy = () -> Arrays.asList(Debt3.mmYieldRange);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountOrPercentageRange.mmObject();
+			complexType_lazy = () -> AmountOrPercentageRange.mmObject();
+		}
+
+		@Override
+		public Optional<AmountOrPercentageRange> getValue(Debt2 obj) {
+			return obj.getYieldRange();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<AmountOrPercentageRange> value) {
+			obj.setYieldRange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpnRg")
@@ -3660,7 +4242,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCouponRange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<AmountOrPercentageRange>> mmCouponRange = new MMMessageAttribute<Debt2, Optional<AmountOrPercentageRange>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmConvertibleIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3672,7 +4254,17 @@ public class Debt2 {
 			nextVersions_lazy = () -> Arrays.asList(Debt3.mmCouponRange);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountOrPercentageRange.mmObject();
+			complexType_lazy = () -> AmountOrPercentageRange.mmObject();
+		}
+
+		@Override
+		public Optional<AmountOrPercentageRange> getValue(Debt2 obj) {
+			return obj.getCouponRange();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<AmountOrPercentageRange> value) {
+			obj.setCouponRange(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Purp")
@@ -3716,7 +4308,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Max256Text>> mmPurpose = new MMMessageAttribute<Debt2, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3729,6 +4321,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(Debt2 obj) {
+			return obj.getPurpose();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Max256Text> value) {
+			obj.setPurpose(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AltrntvMinTaxInd")
@@ -3775,7 +4377,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternativeMinimumTaxIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmAlternativeMinimumTaxIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmAlternativeMinimumTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3788,6 +4390,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getAlternativeMinimumTaxIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setAlternativeMinimumTaxIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AutoRinvstmt")
@@ -3833,7 +4445,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAutoReinvestment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmAutoReinvestment = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmAutoReinvestment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3846,6 +4458,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getAutoReinvestment();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setAutoReinvestment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Hrcut")
@@ -3890,7 +4512,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<PercentageRate>> mmHaircut = new MMMessageAttribute<Debt2, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3903,6 +4525,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Debt2 obj) {
+			return obj.getHaircut();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<PercentageRate> value) {
+			obj.setHaircut(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxConds")
@@ -3949,7 +4581,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionConditions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<TradeTransactionCondition3Choice>> mmTransactionConditions = new MMMessageAttribute<Debt2, Optional<TradeTransactionCondition3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -3962,6 +4594,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeTransactionCondition3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TradeTransactionCondition3Choice> getValue(Debt2 obj) {
+			return obj.getTransactionConditions();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<TradeTransactionCondition3Choice> value) {
+			obj.setTransactionConditions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LookBck")
@@ -4009,7 +4651,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLookBack = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Number>> mmLookBack = new MMMessageAttribute<Debt2, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmLookBack;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4023,6 +4665,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Debt2 obj) {
+			return obj.getLookBack();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Number> value) {
+			obj.setLookBack(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxSbstitn")
@@ -4066,7 +4718,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumSubstitution = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Number>> mmMaximumSubstitution = new MMMessageAttribute<Debt2, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmMaximumSubstitution;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4079,6 +4731,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Debt2 obj) {
+			return obj.getMaximumSubstitution();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Number> value) {
+			obj.setMaximumSubstitution(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinIncrmt")
@@ -4122,7 +4784,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumIncrement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<FinancialInstrumentQuantity1Choice>> mmMinimumIncrement = new MMMessageAttribute<Debt2, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmMinimumIncrement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4135,6 +4797,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(Debt2 obj) {
+			return obj.getMinimumIncrement();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setMinimumIncrement(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinQty")
@@ -4178,7 +4850,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<FinancialInstrumentQuantity1Choice>> mmMinimumQuantity = new MMMessageAttribute<Debt2, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmMinimumTradedNominalQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4191,6 +4863,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(Debt2 obj) {
+			return obj.getMinimumQuantity();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setMinimumQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pdctn")
@@ -4230,7 +4912,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProduction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Max35Text>> mmProduction = new MMMessageAttribute<Debt2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
@@ -4242,6 +4924,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Debt2 obj) {
+			return obj.getProduction();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Max35Text> value) {
+			obj.setProduction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RstrctdInd")
@@ -4287,7 +4979,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRestrictedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmRestrictedIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRestrictedIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4300,6 +4992,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getRestrictedIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setRestrictedIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricFrqcy")
@@ -4345,7 +5047,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Frequency11Choice>> mmPriceFrequency = new MMMessageAttribute<Debt2, Optional<Frequency11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPriceFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4358,6 +5060,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Frequency11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency11Choice> getValue(Debt2 obj) {
+			return obj.getPriceFrequency();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Frequency11Choice> value) {
+			obj.setPriceFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sctr")
@@ -4402,7 +5114,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Max35Text>> mmSector = new MMMessageAttribute<Debt2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSector;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4415,6 +5127,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Debt2 obj) {
+			return obj.getSector();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Max35Text> value) {
+			obj.setSector(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbstitnFrqcy")
@@ -4460,7 +5182,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubstitutionFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Frequency11Choice>> mmSubstitutionFrequency = new MMMessageAttribute<Debt2, Optional<Frequency11Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmSubstitutionFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4473,6 +5195,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Frequency11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency11Choice> getValue(Debt2 obj) {
+			return obj.getSubstitutionFrequency();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Frequency11Choice> value) {
+			obj.setSubstitutionFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbstitnLft")
@@ -4516,7 +5248,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubstitutionLeft = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Number>> mmSubstitutionLeft = new MMMessageAttribute<Debt2, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmSubstitutionLeft;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4529,6 +5261,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Debt2 obj) {
+			return obj.getSubstitutionLeft();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Number> value) {
+			obj.setSubstitutionLeft(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WhlPoolInd")
@@ -4569,7 +5311,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWholePoolIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<YesNoIndicator>> mmWholePoolIndicator = new MMMessageAttribute<Debt2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
@@ -4581,6 +5323,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Debt2 obj) {
+			return obj.getWholePoolIndicator();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<YesNoIndicator> value) {
+			obj.setWholePoolIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricSrc")
@@ -4625,7 +5377,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceSource = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<Max35Text>> mmPriceSource = new MMMessageAttribute<Debt2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
@@ -4638,6 +5390,16 @@ public class Debt2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Debt2 obj) {
+			return obj.getPriceSource();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<Max35Text> value) {
+			obj.setPriceSource(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricRg")
@@ -4678,7 +5440,7 @@ public class Debt2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceRange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Debt2, Optional<AmountOrPercentageRange>> mmPriceRange = new MMMessageAttribute<Debt2, Optional<AmountOrPercentageRange>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
@@ -4689,7 +5451,17 @@ public class Debt2 {
 			nextVersions_lazy = () -> Arrays.asList(Debt3.mmPriceRange);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountOrPercentageRange.mmObject();
+			complexType_lazy = () -> AmountOrPercentageRange.mmObject();
+		}
+
+		@Override
+		public Optional<AmountOrPercentageRange> getValue(Debt2 obj) {
+			return obj.getPriceRange();
+		}
+
+		@Override
+		public void setValue(Debt2 obj, Optional<AmountOrPercentageRange> value) {
+			obj.setPriceRange(value.orElse(null));
 		}
 	};
 
@@ -5197,7 +5969,7 @@ public class Debt2 {
 		return yieldCalculation == null ? yieldCalculation = new ArrayList<>() : yieldCalculation;
 	}
 
-	public Debt2 setYieldCalculation(List<com.tools20022.repository.msg.YieldCalculation3> yieldCalculation) {
+	public Debt2 setYieldCalculation(List<YieldCalculation3> yieldCalculation) {
 		this.yieldCalculation = Objects.requireNonNull(yieldCalculation);
 		return this;
 	}
@@ -5251,7 +6023,7 @@ public class Debt2 {
 		return yieldRange == null ? Optional.empty() : Optional.of(yieldRange);
 	}
 
-	public Debt2 setYieldRange(com.tools20022.repository.msg.AmountOrPercentageRange yieldRange) {
+	public Debt2 setYieldRange(AmountOrPercentageRange yieldRange) {
 		this.yieldRange = yieldRange;
 		return this;
 	}
@@ -5260,7 +6032,7 @@ public class Debt2 {
 		return couponRange == null ? Optional.empty() : Optional.of(couponRange);
 	}
 
-	public Debt2 setCouponRange(com.tools20022.repository.msg.AmountOrPercentageRange couponRange) {
+	public Debt2 setCouponRange(AmountOrPercentageRange couponRange) {
 		this.couponRange = couponRange;
 		return this;
 	}
@@ -5422,7 +6194,7 @@ public class Debt2 {
 		return priceRange == null ? Optional.empty() : Optional.of(priceRange);
 	}
 
-	public Debt2 setPriceRange(com.tools20022.repository.msg.AmountOrPercentageRange priceRange) {
+	public Debt2 setPriceRange(AmountOrPercentageRange priceRange) {
 		this.priceRange = priceRange;
 		return this;
 	}

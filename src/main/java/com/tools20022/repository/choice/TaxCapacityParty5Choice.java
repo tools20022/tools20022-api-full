@@ -112,7 +112,7 @@ public class TaxCapacityParty5Choice {
 	 * definition} = "Party tax capacity expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCapacityParty5Choice, TaxLiability1Code> mmCode = new MMMessageAttribute<TaxCapacityParty5Choice, TaxLiability1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlementPartyRole.mmTaxCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCapacityParty5Choice.mmObject();
@@ -125,6 +125,16 @@ public class TaxCapacityParty5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxLiability1Code.mmObject();
+		}
+
+		@Override
+		public TaxLiability1Code getValue(TaxCapacityParty5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TaxCapacityParty5Choice obj, TaxLiability1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class TaxCapacityParty5Choice {
 	 * definition} = "Party tax capacity expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxCapacityParty5Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<TaxCapacityParty5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlementPartyRole.mmTaxCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxCapacityParty5Choice.mmObject();
@@ -178,6 +188,16 @@ public class TaxCapacityParty5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(TaxCapacityParty5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TaxCapacityParty5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

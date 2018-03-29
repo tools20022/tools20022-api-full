@@ -124,7 +124,7 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>> mmDebtor = new MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
@@ -136,6 +136,16 @@ public class PaymentTransactionParty {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(PaymentTransactionParty obj) {
+			return obj.getDebtor();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionParty obj, Optional<BICIdentifier> value) {
+			obj.setDebtor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstAgt")
@@ -175,7 +185,7 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>> mmFirstAgent = new MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
@@ -187,6 +197,16 @@ public class PaymentTransactionParty {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(PaymentTransactionParty obj) {
+			return obj.getFirstAgent();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionParty obj, Optional<BICIdentifier> value) {
+			obj.setFirstAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstgAgtCrspdt")
@@ -226,7 +246,7 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructingAgentCorrespondent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>> mmInstructingAgentCorrespondent = new MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
@@ -238,6 +258,16 @@ public class PaymentTransactionParty {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(PaymentTransactionParty obj) {
+			return obj.getInstructingAgentCorrespondent();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionParty obj, Optional<BICIdentifier> value) {
+			obj.setInstructingAgentCorrespondent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstdAgtCrspdt")
@@ -277,7 +307,7 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAgentCorrespondent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>> mmInstructedAgentCorrespondent = new MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
@@ -289,6 +319,16 @@ public class PaymentTransactionParty {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(PaymentTransactionParty obj) {
+			return obj.getInstructedAgentCorrespondent();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionParty obj, Optional<BICIdentifier> value) {
+			obj.setInstructedAgentCorrespondent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Intrmy")
@@ -327,7 +367,7 @@ public class PaymentTransactionParty {
 	 * "Party within the settlement chain between the first and final agents."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntermediary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>> mmIntermediary = new MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
@@ -339,6 +379,16 @@ public class PaymentTransactionParty {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(PaymentTransactionParty obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionParty obj, Optional<BICIdentifier> value) {
+			obj.setIntermediary(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlAgt")
@@ -378,7 +428,7 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>> mmFinalAgent = new MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
@@ -390,6 +440,16 @@ public class PaymentTransactionParty {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(PaymentTransactionParty obj) {
+			return obj.getFinalAgent();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionParty obj, Optional<BICIdentifier> value) {
+			obj.setFinalAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Cdtr")
@@ -429,7 +489,7 @@ public class PaymentTransactionParty {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>> mmCreditor = new MMMessageAttribute<PaymentTransactionParty, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
@@ -441,6 +501,16 @@ public class PaymentTransactionParty {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(PaymentTransactionParty obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(PaymentTransactionParty obj, Optional<BICIdentifier> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 

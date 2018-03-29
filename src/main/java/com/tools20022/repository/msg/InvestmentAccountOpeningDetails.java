@@ -137,7 +137,7 @@ public class InvestmentAccountOpeningDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOpeningType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOpeningDetails, AccountOpeningType1Code> mmOpeningType = new MMMessageAttribute<InvestmentAccountOpeningDetails, AccountOpeningType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmObject();
 			isDerived = false;
@@ -149,6 +149,16 @@ public class InvestmentAccountOpeningDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountOpeningType1Code.mmObject();
+		}
+
+		@Override
+		public AccountOpeningType1Code getValue(InvestmentAccountOpeningDetails obj) {
+			return obj.getOpeningType();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOpeningDetails obj, AccountOpeningType1Code value) {
+			obj.setOpeningType(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -190,7 +200,7 @@ public class InvestmentAccountOpeningDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountOpeningDetails, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<InvestmentAccountOpeningDetails, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOpeningDetails.mmObject();
 			isDerived = false;
@@ -202,6 +212,16 @@ public class InvestmentAccountOpeningDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccountOpeningDetails obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountOpeningDetails obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 

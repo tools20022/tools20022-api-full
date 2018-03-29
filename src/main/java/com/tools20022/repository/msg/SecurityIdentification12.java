@@ -109,7 +109,7 @@ public class SecurityIdentification12 {
 	 * definition} = "Identification of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentification12, SecurityIdentification12Choice> mmIdentification = new MMMessageAssociationEnd<SecurityIdentification12, SecurityIdentification12Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification12.mmObject();
@@ -122,6 +122,16 @@ public class SecurityIdentification12 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification12Choice.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification12Choice getValue(SecurityIdentification12 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification12 obj, SecurityIdentification12Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -159,7 +169,7 @@ public class SecurityIdentification12 {
 	 * definition} = "Textual description of a security instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification12, Optional<RestrictedFINXMax140Text>> mmDescription = new MMMessageAttribute<SecurityIdentification12, Optional<RestrictedFINXMax140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification12.mmObject();
@@ -171,6 +181,16 @@ public class SecurityIdentification12 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax140Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINXMax140Text> getValue(SecurityIdentification12 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification12 obj, Optional<RestrictedFINXMax140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

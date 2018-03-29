@@ -124,7 +124,7 @@ public class ReservationSearchCriteria1 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationSearchCriteria1, Optional<SystemIdentificationChoice>> mmSystemIdentification = new MMMessageAttribute<ReservationSearchCriteria1, Optional<SystemIdentificationChoice>>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria1.mmObject();
@@ -136,6 +136,16 @@ public class ReservationSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentificationChoice> getValue(ReservationSearchCriteria1 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria1 obj, Optional<SystemIdentificationChoice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DfltRsvatnTp")
@@ -175,7 +185,7 @@ public class ReservationSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultReservationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationSearchCriteria1, List<ReservationType1Code>> mmDefaultReservationType = new MMMessageAttribute<ReservationSearchCriteria1, List<ReservationType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Reservation.mmReservationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria1.mmObject();
@@ -186,6 +196,16 @@ public class ReservationSearchCriteria1 {
 			definition = "Type of reservation as set by default in the system. The default reservation is applicable by the system unless otherwise instructed.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ReservationType1Code.mmObject();
+		}
+
+		@Override
+		public List<ReservationType1Code> getValue(ReservationSearchCriteria1 obj) {
+			return obj.getDefaultReservationType();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria1 obj, List<ReservationType1Code> value) {
+			obj.setDefaultReservationType(value);
 		}
 	};
 	@XmlElement(name = "CurRsvatnTp")
@@ -224,7 +244,7 @@ public class ReservationSearchCriteria1 {
 	 * "Type of reservation applied by the system at the present time."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentReservationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationSearchCriteria1, List<ReservationType1Code>> mmCurrentReservationType = new MMMessageAttribute<ReservationSearchCriteria1, List<ReservationType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Reservation.mmReservationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria1.mmObject();
@@ -235,6 +255,16 @@ public class ReservationSearchCriteria1 {
 			definition = "Type of reservation applied by the system at the present time.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ReservationType1Code.mmObject();
+		}
+
+		@Override
+		public List<ReservationType1Code> getValue(ReservationSearchCriteria1 obj) {
+			return obj.getCurrentReservationType();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria1 obj, List<ReservationType1Code> value) {
+			obj.setCurrentReservationType(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -272,7 +302,7 @@ public class ReservationSearchCriteria1 {
 	 * definition} = "Owner of the account which is being queried."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReservationSearchCriteria1, Optional<BICIdentifier>> mmAccountOwner = new MMMessageAttribute<ReservationSearchCriteria1, Optional<BICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria1.mmObject();
@@ -284,6 +314,16 @@ public class ReservationSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<BICIdentifier> getValue(ReservationSearchCriteria1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria1 obj, Optional<BICIdentifier> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctId")
@@ -322,7 +362,7 @@ public class ReservationSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReservationSearchCriteria1, Optional<AccountIdentification1Choice>> mmAccountIdentification = new MMMessageAssociationEnd<ReservationSearchCriteria1, Optional<AccountIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria1.mmObject();
@@ -335,6 +375,16 @@ public class ReservationSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification1Choice> getValue(ReservationSearchCriteria1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(ReservationSearchCriteria1 obj, Optional<AccountIdentification1Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 

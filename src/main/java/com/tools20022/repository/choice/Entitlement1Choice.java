@@ -104,7 +104,7 @@ public class Entitlement1Choice {
 	 * definition} = "Number of votes assigned to one security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitlementRatio = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Entitlement1Choice, DecimalNumber> mmEntitlementRatio = new MMMessageAttribute<Entitlement1Choice, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementRatio;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Entitlement1Choice.mmObject();
@@ -116,6 +116,16 @@ public class Entitlement1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(Entitlement1Choice obj) {
+			return obj.getEntitlementRatio();
+		}
+
+		@Override
+		public void setValue(Entitlement1Choice obj, DecimalNumber value) {
+			obj.setEntitlementRatio(value);
 		}
 	};
 	@XmlElement(name = "EntitlmntDesc", required = true)
@@ -154,7 +164,7 @@ public class Entitlement1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitlementDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Entitlement1Choice, Max35Text> mmEntitlementDescription = new MMMessageAttribute<Entitlement1Choice, Max35Text>() {
 		{
 			businessComponentTrace_lazy = () -> MeetingEntitlement.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Entitlement1Choice.mmObject();
@@ -166,6 +176,16 @@ public class Entitlement1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Entitlement1Choice obj) {
+			return obj.getEntitlementDescription();
+		}
+
+		@Override
+		public void setValue(Entitlement1Choice obj, Max35Text value) {
+			obj.setEntitlementDescription(value);
 		}
 	};
 

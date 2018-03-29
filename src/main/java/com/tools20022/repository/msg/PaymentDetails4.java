@@ -120,7 +120,7 @@ public class PaymentDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentDetails4, Optional<Instruction1Code>> mmInstruction = new MMMessageAttribute<PaymentDetails4, Optional<Instruction1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmInstructionForNextAgent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentDetails4.mmObject();
@@ -132,6 +132,16 @@ public class PaymentDetails4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Instruction1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Instruction1Code> getValue(PaymentDetails4 obj) {
+			return obj.getInstruction();
+		}
+
+		@Override
+		public void setValue(PaymentDetails4 obj, Optional<Instruction1Code> value) {
+			obj.setInstruction(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtTp")
@@ -169,7 +179,7 @@ public class PaymentDetails4 {
 	 * definition} = "Type, or nature, of the payment, eg, express payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentDetails4, Optional<PaymentType2Choice>> mmPaymentType = new MMMessageAttribute<PaymentDetails4, Optional<PaymentType2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentDetails4.mmObject();
@@ -181,6 +191,16 @@ public class PaymentDetails4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentType2Choice> getValue(PaymentDetails4 obj) {
+			return obj.getPaymentType();
+		}
+
+		@Override
+		public void setValue(PaymentDetails4 obj, Optional<PaymentType2Choice> value) {
+			obj.setPaymentType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -220,7 +240,7 @@ public class PaymentDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentDetails4, Optional<PriorityCodeChoice>> mmPriority = new MMMessageAttribute<PaymentDetails4, Optional<PriorityCodeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentDetails4.mmObject();
@@ -232,6 +252,16 @@ public class PaymentDetails4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityCodeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<PriorityCodeChoice> getValue(PaymentDetails4 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(PaymentDetails4 obj, Optional<PriorityCodeChoice> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcgVldtyTm")
@@ -271,7 +301,7 @@ public class PaymentDetails4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentDetails4, Optional<DateTimePeriodChoice>> mmProcessingValidityTime = new MMMessageAttribute<PaymentDetails4, Optional<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmProcessingValidityTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentDetails4.mmObject();
@@ -283,6 +313,16 @@ public class PaymentDetails4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodChoice> getValue(PaymentDetails4 obj) {
+			return obj.getProcessingValidityTime();
+		}
+
+		@Override
+		public void setValue(PaymentDetails4 obj, Optional<DateTimePeriodChoice> value) {
+			obj.setProcessingValidityTime(value.orElse(null));
 		}
 	};
 

@@ -116,7 +116,7 @@ public class MemberReport4 {
 	 * MemberReport3.mmMemberIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MemberReport4, MemberIdentification2Choice> mmMemberIdentification = new MMMessageAttribute<MemberReport4, MemberIdentification2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReport4.mmObject();
@@ -129,6 +129,16 @@ public class MemberReport4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public MemberIdentification2Choice getValue(MemberReport4 obj) {
+			return obj.getMemberIdentification();
+		}
+
+		@Override
+		public void setValue(MemberReport4 obj, MemberIdentification2Choice value) {
+			obj.setMemberIdentification(value);
 		}
 	};
 	@XmlElement(name = "MmbOrErr", required = true)
@@ -169,7 +179,7 @@ public class MemberReport4 {
 	 * MemberReport3.mmMemberOrError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMemberOrError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MemberReport4, MemberReportOrError4Choice> mmMemberOrError = new MMMessageAssociationEnd<MemberReport4, MemberReportOrError4Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReport4.mmObject();
@@ -183,6 +193,16 @@ public class MemberReport4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MemberReportOrError4Choice.mmObject();
+		}
+
+		@Override
+		public MemberReportOrError4Choice getValue(MemberReport4 obj) {
+			return obj.getMemberOrError();
+		}
+
+		@Override
+		public void setValue(MemberReport4 obj, MemberReportOrError4Choice value) {
+			obj.setMemberOrError(value);
 		}
 	};
 

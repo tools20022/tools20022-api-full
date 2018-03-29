@@ -53,7 +53,7 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
- * messageBuildingBlock} = List of 652 elements</li>
+ * messageBuildingBlock} = List of 671 elements</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -115,7 +115,7 @@ public class SupplementaryData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SupplementaryData1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<SupplementaryData1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class SupplementaryData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SupplementaryData1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(SupplementaryData1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Envlp", required = true)
@@ -157,7 +167,7 @@ public class SupplementaryData1 {
 	 * definition} = "Technical element wrapping the supplementary data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvelope = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SupplementaryData1, SupplementaryDataEnvelope1> mmEnvelope = new MMMessageAssociationEnd<SupplementaryData1, SupplementaryDataEnvelope1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
 			isDerived = false;
@@ -169,6 +179,16 @@ public class SupplementaryData1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SupplementaryDataEnvelope1.mmObject();
+		}
+
+		@Override
+		public SupplementaryDataEnvelope1 getValue(SupplementaryData1 obj) {
+			return obj.getEnvelope();
+		}
+
+		@Override
+		public void setValue(SupplementaryData1 obj, SupplementaryDataEnvelope1 value) {
+			obj.setEnvelope(value);
 		}
 	};
 

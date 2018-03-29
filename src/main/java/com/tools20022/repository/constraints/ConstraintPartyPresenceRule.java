@@ -50,11 +50,15 @@ public class ConstraintPartyPresenceRule {
 	 */
 	public static final MMConstraint<PartyStatus1> forPartyStatus1 = new MMConstraint<PartyStatus1>() {
 		{
-			validator = ConstraintPartyPresenceRule::checkPartyStatus1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyPresenceRule";
 			definition = "If Status equals 'Completed' then RelatedPartyIdentification must be present and ResponsiblePartyIdentification must be present.";
 			owner_lazy = () -> PartyStatus1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyStatus1 obj) throws Exception {
+			checkPartyStatus1(obj);
 		}
 	};
 

@@ -28,7 +28,7 @@ import com.tools20022.repository.msg.Case4;
 import com.tools20022.repository.msg.CaseAssignment4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance;
-import java.lang.reflect.Method;
+import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -109,6 +109,9 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
+ * ExceptionsandInvestigationsISOLatestversion}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msgset._SR2018_MX_Payments_Maintenance
  * _SR2018_MX_Payments_Maintenance}</li>
  * </ul>
@@ -176,7 +179,7 @@ public class UnableToApplyV06 {
 	 * UnableToApplyV05.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UnableToApplyV06, CaseAssignment4> mmAssignment = new MMMessageBuildingBlock<UnableToApplyV06, CaseAssignment4>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,12 +191,14 @@ public class UnableToApplyV06 {
 			complexType_lazy = () -> CaseAssignment4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnableToApplyV06.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment4 getValue(UnableToApplyV06 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(UnableToApplyV06 obj, CaseAssignment4 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case")
@@ -224,7 +229,7 @@ public class UnableToApplyV06 {
 	 * UnableToApplyV05.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UnableToApplyV06, Optional<Case4>> mmCase = new MMMessageBuildingBlock<UnableToApplyV06, Optional<Case4>>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,12 +241,14 @@ public class UnableToApplyV06 {
 			complexType_lazy = () -> Case4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnableToApplyV06.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Case4> getValue(UnableToApplyV06 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(UnableToApplyV06 obj, Optional<Case4> value) {
+			obj.setCase(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -276,7 +283,7 @@ public class UnableToApplyV06 {
 	 * UnableToApplyV05.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UnableToApplyV06, UnderlyingTransaction4Choice> mmUnderlying = new MMMessageBuildingBlock<UnableToApplyV06, UnderlyingTransaction4Choice>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,12 +295,14 @@ public class UnableToApplyV06 {
 			complexType_lazy = () -> UnderlyingTransaction4Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnableToApplyV06.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnderlyingTransaction4Choice getValue(UnableToApplyV06 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(UnableToApplyV06 obj, UnderlyingTransaction4Choice value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Justfn", required = true)
@@ -328,7 +337,7 @@ public class UnableToApplyV06 {
 	 * UnableToApplyV05.mmJustification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmJustification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UnableToApplyV06, UnableToApplyJustification3Choice> mmJustification = new MMMessageBuildingBlock<UnableToApplyV06, UnableToApplyJustification3Choice>() {
 		{
 			xmlTag = "Justfn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,12 +349,14 @@ public class UnableToApplyV06 {
 			complexType_lazy = () -> UnableToApplyJustification3Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnableToApplyV06.class.getMethod("getJustification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnableToApplyJustification3Choice getValue(UnableToApplyV06 obj) {
+			return obj.getJustification();
+		}
+
+		@Override
+		public void setValue(UnableToApplyV06 obj, UnableToApplyJustification3Choice value) {
+			obj.setJustification(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -380,7 +391,7 @@ public class UnableToApplyV06 {
 	 * UnableToApplyV05.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<UnableToApplyV06, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<UnableToApplyV06, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,12 +402,14 @@ public class UnableToApplyV06 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return UnableToApplyV06.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(UnableToApplyV06 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(UnableToApplyV06 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -407,7 +420,7 @@ public class UnableToApplyV06 {
 				name = "UnableToApplyV06";
 				definition = "Scope\r\nThe Unable To Apply message is sent by a case creator or a case assigner to a case assignee. This message is used to initiate an investigation of a payment instruction that cannot be executed or reconciled.\r\nUsage\r\nThe Unable To Apply case occurs in two situations:\r\n- an agent cannot execute the payment instruction due to missing or incorrect information\r\n- a creditor cannot reconcile the payment entry as it is received unexpectedly, or missing or incorrect information prevents reconciliation\r\nThe Unable To Apply message\r\n- always follows the reverse route of the original payment instruction\r\n- must be forwarded to the preceding agents in the payment processing chain, where appropriate\r\n- covers one and only one payment instruction (or payment entry) at a time; if several payment instructions cannot be executed or several payment entries cannot be reconciled, then multiple Unable To Apply messages must be sent.\r\nDepending on what stage the payment is and what has been done to it, for example incorrect routing, errors/omissions when processing the instruction or even the absence of any error, the unable to apply case may lead to a:\r\n- Additional Payment Information message, sent to the case creator/case assigner, if a truncation or omission in a payment instruction prevented reconciliation.\r\n- Request To Cancel Payment message, sent to the subsequent agent in the payment processing chain, if the original payment instruction has been incorrectly routed through the chain of agents (this also entails a new corrected payment instruction being issued). Prior to sending the payment cancellation request, the agent should first send a resolution indicating that a cancellation will follow (CWFW).\r\n- Request To Modify Payment message, sent to the subsequent agent in the payment processing chain, if a truncation or omission has occurred during the processing of the original payment instruction. Prior to sending the modify payment request, the agent should first send a resolution indicating that a modification will follow (MWFW).\r\n- Debit Authorisation Request message, sent to the case creator/case assigner, if the payment instruction has reached an incorrect creditor.\r\nThe UnableToApply message has the following main characteristics:\r\nThe case creator (the instructed party/creditor of a payment instruction) assigns a unique case identification and optionally the reason code for the Unable To Apply message. This information will be passed unchanged to all subsequent case assignees.\r\nThe case creator specifies the identification of the underlying payment instruction. This identification needs to be updated by the subsequent case assigner(s) in order to match the one used with their case assignee(s).\r\nThe Unable To Apply Justification element allows the assigner to indicate whether a specific element causes the unable to apply situation (incorrect element and/or mismatched element can be listed) or whether any supplementary information needs to be forwarded.";
 				previousVersion_lazy = () -> UnableToApplyV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_Payments_Maintenance.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOLatestversion.mmObject(), _SR2018_MX_Payments_Maintenance.mmObject());
 				rootElement = "Document";
 				xmlTag = "UblToApply";
 				businessArea_lazy = () -> CashManagementLatestVersion.mmObject();

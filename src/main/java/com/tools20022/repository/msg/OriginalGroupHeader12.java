@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentReturnReason4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -136,7 +137,7 @@ public class OriginalGroupHeader12 {
 	 * OriginalGroupHeader2.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader12, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalGroupHeader12, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader12.mmObject();
@@ -149,6 +150,16 @@ public class OriginalGroupHeader12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupHeader12 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader12 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -187,7 +198,7 @@ public class OriginalGroupHeader12 {
 	 * OriginalGroupHeader2.mmOriginalMessageNameIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader12, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalGroupHeader12, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader12.mmObject();
 			isDerived = false;
@@ -199,6 +210,16 @@ public class OriginalGroupHeader12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupHeader12 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader12 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCreDtTm")
@@ -240,7 +261,7 @@ public class OriginalGroupHeader12 {
 	 * OriginalGroupHeader2.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupHeader12, Optional<ISODateTime>> mmOriginalCreationDateTime = new MMMessageAttribute<OriginalGroupHeader12, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader12.mmObject();
@@ -254,9 +275,19 @@ public class OriginalGroupHeader12 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		@Override
+		public Optional<ISODateTime> getValue(OriginalGroupHeader12 obj) {
+			return obj.getOriginalCreationDateTime();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader12 obj, Optional<ISODateTime> value) {
+			obj.setOriginalCreationDateTime(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "RtrRsnInf")
-	protected List<com.tools20022.repository.msg.PaymentReturnReason4> returnReasonInformation;
+	protected List<PaymentReturnReason4> returnReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -293,7 +324,7 @@ public class OriginalGroupHeader12 {
 	 * OriginalGroupHeader2.mmReturnReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupHeader12, List<PaymentReturnReason4>> mmReturnReasonInformation = new MMMessageAssociationEnd<OriginalGroupHeader12, List<PaymentReturnReason4>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader12.mmObject();
@@ -305,7 +336,17 @@ public class OriginalGroupHeader12 {
 			previousVersion_lazy = () -> OriginalGroupHeader2.mmReturnReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentReturnReason4.mmObject();
+			type_lazy = () -> PaymentReturnReason4.mmObject();
+		}
+
+		@Override
+		public List<PaymentReturnReason4> getValue(OriginalGroupHeader12 obj) {
+			return obj.getReturnReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupHeader12 obj, List<PaymentReturnReason4> value) {
+			obj.setReturnReasonInformation(value);
 		}
 	};
 
@@ -357,7 +398,7 @@ public class OriginalGroupHeader12 {
 		return returnReasonInformation == null ? returnReasonInformation = new ArrayList<>() : returnReasonInformation;
 	}
 
-	public OriginalGroupHeader12 setReturnReasonInformation(List<com.tools20022.repository.msg.PaymentReturnReason4> returnReasonInformation) {
+	public OriginalGroupHeader12 setReturnReasonInformation(List<PaymentReturnReason4> returnReasonInformation) {
 		this.returnReasonInformation = Objects.requireNonNull(returnReasonInformation);
 		return this;
 	}

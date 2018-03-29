@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountRestrictions1;
+import com.tools20022.repository.msg.CashAccount25;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -95,7 +97,7 @@ public class DirectoryAccountInformation1 {
 	 * definition} = "Account identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryAccountInformation1, CashAccount25> mmAccount = new MMMessageAssociationEnd<DirectoryAccountInformation1, CashAccount25>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryAccountInformation1.mmObject();
 			isDerived = false;
@@ -106,7 +108,17 @@ public class DirectoryAccountInformation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
+			type_lazy = () -> CashAccount25.mmObject();
+		}
+
+		@Override
+		public CashAccount25 getValue(DirectoryAccountInformation1 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(DirectoryAccountInformation1 obj, CashAccount25 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "AcctRstrctns")
@@ -137,7 +149,7 @@ public class DirectoryAccountInformation1 {
 	 * definition} = "Restrictions on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountRestrictions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DirectoryAccountInformation1, Optional<AccountRestrictions1>> mmAccountRestrictions = new MMMessageAssociationEnd<DirectoryAccountInformation1, Optional<AccountRestrictions1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryAccountInformation1.mmObject();
 			isDerived = false;
@@ -148,7 +160,17 @@ public class DirectoryAccountInformation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
+			type_lazy = () -> AccountRestrictions1.mmObject();
+		}
+
+		@Override
+		public Optional<AccountRestrictions1> getValue(DirectoryAccountInformation1 obj) {
+			return obj.getAccountRestrictions();
+		}
+
+		@Override
+		public void setValue(DirectoryAccountInformation1 obj, Optional<AccountRestrictions1> value) {
+			obj.setAccountRestrictions(value.orElse(null));
 		}
 	};
 
@@ -169,7 +191,7 @@ public class DirectoryAccountInformation1 {
 		return account;
 	}
 
-	public DirectoryAccountInformation1 setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+	public DirectoryAccountInformation1 setAccount(CashAccount25 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -178,7 +200,7 @@ public class DirectoryAccountInformation1 {
 		return accountRestrictions == null ? Optional.empty() : Optional.of(accountRestrictions);
 	}
 
-	public DirectoryAccountInformation1 setAccountRestrictions(com.tools20022.repository.msg.AccountRestrictions1 accountRestrictions) {
+	public DirectoryAccountInformation1 setAccountRestrictions(AccountRestrictions1 accountRestrictions) {
 		this.accountRestrictions = accountRestrictions;
 		return this;
 	}

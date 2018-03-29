@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference3;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -159,7 +160,7 @@ public class RejectionReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason3, MessageRejectedReason1Code> mmReason = new MMMessageAttribute<RejectionReason3, MessageRejectedReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason3.mmObject();
@@ -172,6 +173,16 @@ public class RejectionReason3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MessageRejectedReason1Code.mmObject();
+		}
+
+		@Override
+		public MessageRejectedReason1Code getValue(RejectionReason3 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectionReason3 obj, MessageRejectedReason1Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -216,7 +227,7 @@ public class RejectionReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason3, Optional<Max140Text>> mmAdditionalInformation = new MMMessageAttribute<RejectionReason3, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason3.mmObject();
@@ -229,6 +240,16 @@ public class RejectionReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(RejectionReason3 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(RejectionReason3 obj, Optional<Max140Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkdMsgPrvsRef")
@@ -261,7 +282,7 @@ public class RejectionReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkedMessagePreviousReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionReason3, Optional<AdditionalReference3>> mmLinkedMessagePreviousReference = new MMMessageAssociationEnd<RejectionReason3, Optional<AdditionalReference3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason3.mmObject();
 			isDerived = false;
@@ -272,7 +293,17 @@ public class RejectionReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference3> getValue(RejectionReason3 obj) {
+			return obj.getLinkedMessagePreviousReference();
+		}
+
+		@Override
+		public void setValue(RejectionReason3 obj, Optional<AdditionalReference3> value) {
+			obj.setLinkedMessagePreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkdMsgOthrRef")
@@ -305,7 +336,7 @@ public class RejectionReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkedMessageOtherReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionReason3, Optional<AdditionalReference3>> mmLinkedMessageOtherReference = new MMMessageAssociationEnd<RejectionReason3, Optional<AdditionalReference3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason3.mmObject();
 			isDerived = false;
@@ -316,7 +347,17 @@ public class RejectionReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference3> getValue(RejectionReason3 obj) {
+			return obj.getLinkedMessageOtherReference();
+		}
+
+		@Override
+		public void setValue(RejectionReason3 obj, Optional<AdditionalReference3> value) {
+			obj.setLinkedMessageOtherReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LkdMsgRltdRef")
@@ -349,7 +390,7 @@ public class RejectionReason3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkedMessageRelatedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionReason3, Optional<AdditionalReference3>> mmLinkedMessageRelatedReference = new MMMessageAssociationEnd<RejectionReason3, Optional<AdditionalReference3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RejectionReason3.mmObject();
 			isDerived = false;
@@ -360,7 +401,17 @@ public class RejectionReason3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AdditionalReference3.mmObject();
+			type_lazy = () -> AdditionalReference3.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference3> getValue(RejectionReason3 obj) {
+			return obj.getLinkedMessageRelatedReference();
+		}
+
+		@Override
+		public void setValue(RejectionReason3 obj, Optional<AdditionalReference3> value) {
+			obj.setLinkedMessageRelatedReference(value.orElse(null));
 		}
 	};
 	/**
@@ -461,7 +512,7 @@ public class RejectionReason3 {
 		return linkedMessagePreviousReference == null ? Optional.empty() : Optional.of(linkedMessagePreviousReference);
 	}
 
-	public RejectionReason3 setLinkedMessagePreviousReference(com.tools20022.repository.msg.AdditionalReference3 linkedMessagePreviousReference) {
+	public RejectionReason3 setLinkedMessagePreviousReference(AdditionalReference3 linkedMessagePreviousReference) {
 		this.linkedMessagePreviousReference = linkedMessagePreviousReference;
 		return this;
 	}
@@ -470,7 +521,7 @@ public class RejectionReason3 {
 		return linkedMessageOtherReference == null ? Optional.empty() : Optional.of(linkedMessageOtherReference);
 	}
 
-	public RejectionReason3 setLinkedMessageOtherReference(com.tools20022.repository.msg.AdditionalReference3 linkedMessageOtherReference) {
+	public RejectionReason3 setLinkedMessageOtherReference(AdditionalReference3 linkedMessageOtherReference) {
 		this.linkedMessageOtherReference = linkedMessageOtherReference;
 		return this;
 	}
@@ -479,7 +530,7 @@ public class RejectionReason3 {
 		return linkedMessageRelatedReference == null ? Optional.empty() : Optional.of(linkedMessageRelatedReference);
 	}
 
-	public RejectionReason3 setLinkedMessageRelatedReference(com.tools20022.repository.msg.AdditionalReference3 linkedMessageRelatedReference) {
+	public RejectionReason3 setLinkedMessageRelatedReference(AdditionalReference3 linkedMessageRelatedReference) {
 		this.linkedMessageRelatedReference = linkedMessageRelatedReference;
 		return this;
 	}

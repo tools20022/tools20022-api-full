@@ -140,7 +140,7 @@ public class ConfirmationRejectedStatus2 {
 	 * ConfirmationRejectedStatus1.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationRejectedStatus2, Optional<ConfirmationRejectedReason1Choice>> mmReason = new MMMessageAttribute<ConfirmationRejectedStatus2, Optional<ConfirmationRejectedReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus2.mmObject();
@@ -154,6 +154,16 @@ public class ConfirmationRejectedStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ConfirmationRejectedReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ConfirmationRejectedReason1Choice> getValue(ConfirmationRejectedStatus2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ConfirmationRejectedStatus2 obj, Optional<ConfirmationRejectedReason1Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -185,7 +195,7 @@ public class ConfirmationRejectedStatus2 {
 	 * definition} = "Additional information about the rejected reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConfirmationRejectedStatus2, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<ConfirmationRejectedStatus2, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus2.mmObject();
 			isDerived = false;
@@ -196,6 +206,16 @@ public class ConfirmationRejectedStatus2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ConfirmationRejectedStatus2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(ConfirmationRejectedStatus2 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

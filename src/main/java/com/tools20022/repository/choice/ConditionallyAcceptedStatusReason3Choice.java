@@ -115,7 +115,7 @@ public class ConditionallyAcceptedStatusReason3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ConditionallyAcceptedStatusReason3Choice, ConditionallyAcceptedStatusReason2Code> mmCode = new MMMessageAttribute<ConditionallyAcceptedStatusReason3Choice, ConditionallyAcceptedStatusReason2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class ConditionallyAcceptedStatusReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ConditionallyAcceptedStatusReason2Code.mmObject();
+		}
+
+		@Override
+		public ConditionallyAcceptedStatusReason2Code getValue(ConditionallyAcceptedStatusReason3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatusReason3Choice obj, ConditionallyAcceptedStatusReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class ConditionallyAcceptedStatusReason3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ConditionallyAcceptedStatusReason3Choice, GenericIdentification1> mmProprietary = new MMMessageAssociationEnd<ConditionallyAcceptedStatusReason3Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ConditionallyAcceptedStatusReason3Choice.mmObject();
 			isDerived = false;
@@ -182,6 +192,16 @@ public class ConditionallyAcceptedStatusReason3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(ConditionallyAcceptedStatusReason3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ConditionallyAcceptedStatusReason3Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

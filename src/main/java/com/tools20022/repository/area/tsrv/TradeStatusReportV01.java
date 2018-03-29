@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesLatestVersion;
 import com.tools20022.repository.msg.PartyAndSignature2;
 import com.tools20022.repository.msg.TradeStatusReport1;
 import com.tools20022.repository.msgset.DemandGuaranteesandStandbyLettersofCreditISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +120,7 @@ public class TradeStatusReportV01 {
 	 * definition} = "Details of the trade status report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTradeStatusAdviceDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeStatusReportV01, TradeStatusReport1> mmTradeStatusAdviceDetails = new MMMessageBuildingBlock<TradeStatusReportV01, TradeStatusReport1>() {
 		{
 			xmlTag = "TradStsAdvcDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +131,14 @@ public class TradeStatusReportV01 {
 			complexType_lazy = () -> TradeStatusReport1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeStatusReportV01.class.getMethod("getTradeStatusAdviceDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TradeStatusReport1 getValue(TradeStatusReportV01 obj) {
+			return obj.getTradeStatusAdviceDetails();
+		}
+
+		@Override
+		public void setValue(TradeStatusReportV01 obj, TradeStatusReport1 value) {
+			obj.setTradeStatusAdviceDetails(value);
 		}
 	};
 	@XmlElement(name = "DgtlSgntr")
@@ -165,7 +166,7 @@ public class TradeStatusReportV01 {
 	 * definition} = "Digital signature of the report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDigitalSignature = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<TradeStatusReportV01, Optional<PartyAndSignature2>> mmDigitalSignature = new MMMessageBuildingBlock<TradeStatusReportV01, Optional<PartyAndSignature2>>() {
 		{
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,12 +177,14 @@ public class TradeStatusReportV01 {
 			complexType_lazy = () -> PartyAndSignature2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TradeStatusReportV01.class.getMethod("getDigitalSignature", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyAndSignature2> getValue(TradeStatusReportV01 obj) {
+			return obj.getDigitalSignature();
+		}
+
+		@Override
+		public void setValue(TradeStatusReportV01 obj, Optional<PartyAndSignature2> value) {
+			obj.setDigitalSignature(value.orElse(null));
 		}
 	};
 

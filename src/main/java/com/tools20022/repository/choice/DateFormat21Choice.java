@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.codeset.DateType8Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -100,7 +101,7 @@ public class DateFormat21Choice {
 	 * definition} = "Date expressed as an ISO Date."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat21Choice, DateAndDateTimeChoice> mmDate = new MMMessageAssociationEnd<DateFormat21Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat21Choice.mmObject();
 			isDerived = false;
@@ -112,7 +113,17 @@ public class DateFormat21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat21Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat21Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdDt", required = true)
@@ -148,7 +159,7 @@ public class DateFormat21Choice {
 	 * definition} = "Date not specified, for example, the date is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DateFormat21Choice, DateType8Code> mmNotSpecifiedDate = new MMMessageAttribute<DateFormat21Choice, DateType8Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat21Choice.mmObject();
 			isDerived = false;
@@ -160,6 +171,16 @@ public class DateFormat21Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType8Code.mmObject();
+		}
+
+		@Override
+		public DateType8Code getValue(DateFormat21Choice obj) {
+			return obj.getNotSpecifiedDate();
+		}
+
+		@Override
+		public void setValue(DateFormat21Choice obj, DateType8Code value) {
+			obj.setNotSpecifiedDate(value);
 		}
 	};
 
@@ -180,7 +201,7 @@ public class DateFormat21Choice {
 		return date;
 	}
 
-	public DateFormat21Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat21Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}

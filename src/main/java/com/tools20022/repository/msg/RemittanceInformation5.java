@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StructuredRemittanceInformation7;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -112,7 +113,7 @@ public class RemittanceInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RemittanceInformation5, List<Max140Text>> mmUnstructured = new MMMessageAttribute<RemittanceInformation5, List<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation5.mmObject();
@@ -124,9 +125,19 @@ public class RemittanceInformation5 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
+
+		@Override
+		public List<Max140Text> getValue(RemittanceInformation5 obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation5 obj, List<Max140Text> value) {
+			obj.setUnstructured(value);
+		}
 	};
 	@XmlElement(name = "Strd")
-	protected List<com.tools20022.repository.msg.StructuredRemittanceInformation7> structured;
+	protected List<StructuredRemittanceInformation7> structured;
 	/**
 	 * 
 	 <p>
@@ -160,7 +171,7 @@ public class RemittanceInformation5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStructured = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RemittanceInformation5, List<StructuredRemittanceInformation7>> mmStructured = new MMMessageAssociationEnd<RemittanceInformation5, List<StructuredRemittanceInformation7>>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation5.mmObject();
@@ -171,7 +182,17 @@ public class RemittanceInformation5 {
 			definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StructuredRemittanceInformation7.mmObject();
+			type_lazy = () -> StructuredRemittanceInformation7.mmObject();
+		}
+
+		@Override
+		public List<StructuredRemittanceInformation7> getValue(RemittanceInformation5 obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(RemittanceInformation5 obj, List<StructuredRemittanceInformation7> value) {
+			obj.setStructured(value);
 		}
 	};
 
@@ -202,7 +223,7 @@ public class RemittanceInformation5 {
 		return structured == null ? structured = new ArrayList<>() : structured;
 	}
 
-	public RemittanceInformation5 setStructured(List<com.tools20022.repository.msg.StructuredRemittanceInformation7> structured) {
+	public RemittanceInformation5 setStructured(List<StructuredRemittanceInformation7> structured) {
 		this.structured = Objects.requireNonNull(structured);
 		return this;
 	}

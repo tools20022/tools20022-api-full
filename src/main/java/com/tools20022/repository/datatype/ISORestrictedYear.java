@@ -22,6 +22,10 @@ import com.tools20022.metamodel.MMYear;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * Year represented by YYYY (ISO 8601).
@@ -55,9 +59,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Year represented by YYYY (ISO 8601)."</li>
  * </ul>
  */
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType
 public class ISORestrictedYear {
 
 	final static private AtomicReference<MMYear> mmObject_lazy = new AtomicReference<>();
+	@XmlValue
+	protected String value;
 
 	final static public MMYear mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMYear() {
@@ -72,5 +80,25 @@ public class ISORestrictedYear {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public ISORestrictedYear() {
+	}
+
+	public ISORestrictedYear(String value) {
+		this.value = value;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value == null ? null : value.toString();
 	}
 }

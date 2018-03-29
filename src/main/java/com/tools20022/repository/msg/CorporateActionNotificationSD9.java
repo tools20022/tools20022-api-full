@@ -114,7 +114,7 @@ public class CorporateActionNotificationSD9 {
 	 * CorporateActionNotificationSD3.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD9, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionNotificationSD9, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD9.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class CorporateActionNotificationSD9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionNotificationSD9 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD9 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CretDtAndTm", required = true)
@@ -167,7 +177,7 @@ public class CorporateActionNotificationSD9 {
 	 * CorporateActionNotificationSD3.mmCreateDateAndTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreateDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD9, ISODateTime> mmCreateDateAndTime = new MMMessageAttribute<CorporateActionNotificationSD9, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD9.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class CorporateActionNotificationSD9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(CorporateActionNotificationSD9 obj) {
+			return obj.getCreateDateAndTime();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD9 obj, ISODateTime value) {
+			obj.setCreateDateAndTime(value);
 		}
 	};
 	@XmlElement(name = "UpdDtAndTm")
@@ -221,7 +241,7 @@ public class CorporateActionNotificationSD9 {
 	 * CorporateActionNotificationSD3.mmUpdateDateAndTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUpdateDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD9, Optional<ISODateTime>> mmUpdateDateAndTime = new MMMessageAttribute<CorporateActionNotificationSD9, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD9.mmObject();
 			isDerived = false;
@@ -234,6 +254,16 @@ public class CorporateActionNotificationSD9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(CorporateActionNotificationSD9 obj) {
+			return obj.getUpdateDateAndTime();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD9 obj, Optional<ISODateTime> value) {
+			obj.setUpdateDateAndTime(value.orElse(null));
 		}
 	};
 

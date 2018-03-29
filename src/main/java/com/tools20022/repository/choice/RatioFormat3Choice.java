@@ -138,7 +138,7 @@ public class RatioFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat3Choice, QuantityToQuantityRatio1> mmQuantityToQuantity = new MMMessageAssociationEnd<RatioFormat3Choice, QuantityToQuantityRatio1>() {
 		{
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat3Choice.mmObject();
@@ -153,6 +153,16 @@ public class RatioFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuantityToQuantityRatio1.mmObject();
+		}
+
+		@Override
+		public QuantityToQuantityRatio1 getValue(RatioFormat3Choice obj) {
+			return obj.getQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat3Choice obj, QuantityToQuantityRatio1 value) {
+			obj.setQuantityToQuantity(value);
 		}
 	};
 	@XmlElement(name = "AmtToAmt", required = true)
@@ -198,7 +208,7 @@ public class RatioFormat3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat3Choice, AmountToAmountRatio2> mmAmountToAmount = new MMMessageAssociationEnd<RatioFormat3Choice, AmountToAmountRatio2>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat3Choice.mmObject();
@@ -213,6 +223,16 @@ public class RatioFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountToAmountRatio2.mmObject();
+		}
+
+		@Override
+		public AmountToAmountRatio2 getValue(RatioFormat3Choice obj) {
+			return obj.getAmountToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat3Choice obj, AmountToAmountRatio2 value) {
+			obj.setAmountToAmount(value);
 		}
 	};
 

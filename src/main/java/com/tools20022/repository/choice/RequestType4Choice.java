@@ -112,7 +112,7 @@ public class RequestType4Choice {
 	 * RequestType2Choice.mmPaymentControl}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentControl = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType4Choice, ExternalPaymentControlRequestType1Code> mmPaymentControl = new MMMessageAttribute<RequestType4Choice, ExternalPaymentControlRequestType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType4Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class RequestType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalPaymentControlRequestType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalPaymentControlRequestType1Code getValue(RequestType4Choice obj) {
+			return obj.getPaymentControl();
+		}
+
+		@Override
+		public void setValue(RequestType4Choice obj, ExternalPaymentControlRequestType1Code value) {
+			obj.setPaymentControl(value);
 		}
 	};
 	@XmlElement(name = "Enqry", required = true)
@@ -162,7 +172,7 @@ public class RequestType4Choice {
 	 * RequestType2Choice.mmEnquiry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEnquiry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType4Choice, ExternalEnquiryRequestType1Code> mmEnquiry = new MMMessageAttribute<RequestType4Choice, ExternalEnquiryRequestType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType4Choice.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class RequestType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalEnquiryRequestType1Code.mmObject();
+		}
+
+		@Override
+		public ExternalEnquiryRequestType1Code getValue(RequestType4Choice obj) {
+			return obj.getEnquiry();
+		}
+
+		@Override
+		public void setValue(RequestType4Choice obj, ExternalEnquiryRequestType1Code value) {
+			obj.setEnquiry(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -211,7 +231,7 @@ public class RequestType4Choice {
 	 * RequestType2Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RequestType4Choice, GenericIdentification1> mmProprietary = new MMMessageAttribute<RequestType4Choice, GenericIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RequestType4Choice.mmObject();
 			isDerived = false;
@@ -223,6 +243,16 @@ public class RequestType4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(RequestType4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RequestType4Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

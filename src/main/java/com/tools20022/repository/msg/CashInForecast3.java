@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.entity.FundsCashFlow;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
+import com.tools20022.repository.msg.FundCashInBreakdown2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -136,7 +138,7 @@ public class CashInForecast3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashInForecast3, ISODate> mmCashSettlementDate = new MMMessageAttribute<CashInForecast3, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
@@ -149,6 +151,16 @@ public class CashInForecast3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CashInForecast3 obj) {
+			return obj.getCashSettlementDate();
+		}
+
+		@Override
+		public void setValue(CashInForecast3 obj, ISODate value) {
+			obj.setCashSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "SubTtlAmt")
@@ -195,7 +207,7 @@ public class CashInForecast3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubTotalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashInForecast3, Optional<ActiveOrHistoricCurrencyAndAmount>> mmSubTotalAmount = new MMMessageAttribute<CashInForecast3, Optional<ActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
@@ -208,6 +220,16 @@ public class CashInForecast3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAndAmount> getValue(CashInForecast3 obj) {
+			return obj.getSubTotalAmount();
+		}
+
+		@Override
+		public void setValue(CashInForecast3 obj, Optional<ActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setSubTotalAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubTtlUnitsNb")
@@ -254,7 +276,7 @@ public class CashInForecast3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubTotalUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashInForecast3, Optional<FinancialInstrumentQuantity1>> mmSubTotalUnitsNumber = new MMMessageAttribute<CashInForecast3, Optional<FinancialInstrumentQuantity1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
@@ -266,7 +288,17 @@ public class CashInForecast3 {
 			nextVersions_lazy = () -> Arrays.asList(CashInForecast5.mmSubTotalUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1> getValue(CashInForecast3 obj) {
+			return obj.getSubTotalUnitsNumber();
+		}
+
+		@Override
+		public void setValue(CashInForecast3 obj, Optional<FinancialInstrumentQuantity1> value) {
+			obj.setSubTotalUnitsNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XcptnlCshFlowInd")
@@ -313,7 +345,7 @@ public class CashInForecast3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExceptionalCashFlowIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashInForecast3, Optional<YesNoIndicator>> mmExceptionalCashFlowIndicator = new MMMessageAttribute<CashInForecast3, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> FundsCashFlow.mmExceptionalCashFlowIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
@@ -327,9 +359,19 @@ public class CashInForecast3 {
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CashInForecast3 obj) {
+			return obj.getExceptionalCashFlowIndicator();
+		}
+
+		@Override
+		public void setValue(CashInForecast3 obj, Optional<YesNoIndicator> value) {
+			obj.setExceptionalCashFlowIndicator(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CshInBrkdwnDtls")
-	protected List<com.tools20022.repository.msg.FundCashInBreakdown2> cashInBreakdownDetails;
+	protected List<FundCashInBreakdown2> cashInBreakdownDetails;
 	/**
 	 * 
 	 <p>
@@ -365,7 +407,7 @@ public class CashInForecast3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashInBreakdownDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashInForecast3, List<FundCashInBreakdown2>> mmCashInBreakdownDetails = new MMMessageAssociationEnd<CashInForecast3, List<FundCashInBreakdown2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
 			isDerived = false;
@@ -376,7 +418,17 @@ public class CashInForecast3 {
 			nextVersions_lazy = () -> Arrays.asList(CashInForecast5.mmCashInBreakdownDetails);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
+			type_lazy = () -> FundCashInBreakdown2.mmObject();
+		}
+
+		@Override
+		public List<FundCashInBreakdown2> getValue(CashInForecast3 obj) {
+			return obj.getCashInBreakdownDetails();
+		}
+
+		@Override
+		public void setValue(CashInForecast3 obj, List<FundCashInBreakdown2> value) {
+			obj.setCashInBreakdownDetails(value);
 		}
 	};
 
@@ -419,7 +471,7 @@ public class CashInForecast3 {
 		return subTotalUnitsNumber == null ? Optional.empty() : Optional.of(subTotalUnitsNumber);
 	}
 
-	public CashInForecast3 setSubTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 subTotalUnitsNumber) {
+	public CashInForecast3 setSubTotalUnitsNumber(FinancialInstrumentQuantity1 subTotalUnitsNumber) {
 		this.subTotalUnitsNumber = subTotalUnitsNumber;
 		return this;
 	}
@@ -437,7 +489,7 @@ public class CashInForecast3 {
 		return cashInBreakdownDetails == null ? cashInBreakdownDetails = new ArrayList<>() : cashInBreakdownDetails;
 	}
 
-	public CashInForecast3 setCashInBreakdownDetails(List<com.tools20022.repository.msg.FundCashInBreakdown2> cashInBreakdownDetails) {
+	public CashInForecast3 setCashInBreakdownDetails(List<FundCashInBreakdown2> cashInBreakdownDetails) {
 		this.cashInBreakdownDetails = Objects.requireNonNull(cashInBreakdownDetails);
 		return this;
 	}

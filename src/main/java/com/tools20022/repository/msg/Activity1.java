@@ -96,7 +96,7 @@ public class Activity1 {
 	 * definition} = "Name of the message associated with the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Activity1, Max70Text> mmMessageName = new MMMessageAttribute<Activity1, Max70Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Activity1.mmObject();
 			isDerived = false;
@@ -107,6 +107,16 @@ public class Activity1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Max70Text getValue(Activity1 obj) {
+			return obj.getMessageName();
+		}
+
+		@Override
+		public void setValue(Activity1 obj, Max70Text value) {
+			obj.setMessageName(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -138,7 +148,7 @@ public class Activity1 {
 	 * "Further information on a message associated with the activity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Activity1, Optional<Max140Text>> mmDescription = new MMMessageAttribute<Activity1, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Activity1.mmObject();
 			isDerived = false;
@@ -149,6 +159,16 @@ public class Activity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(Activity1 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(Activity1 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 

@@ -55,12 +55,16 @@ public class ConstraintInterestRequestSequenceRule {
 	 */
 	public static final MMConstraint<InterestAmount1> forInterestAmount1 = new MMConstraint<InterestAmount1>() {
 		{
-			validator = ConstraintInterestRequestSequenceRule::checkInterestAmount1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRequestSequenceRule";
 			definition = "If InterestRequestSequence equals updated, then ReferenceDetails must be present.";
 			owner_lazy = () -> InterestAmount1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReferenceDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/InterestRequestSequence</leftOperand><rightOperand>Updated</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(InterestAmount1 obj) throws Exception {
+			checkInterestAmount1(obj);
 		}
 	};
 

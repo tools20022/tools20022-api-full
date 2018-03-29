@@ -113,7 +113,7 @@ public class MarketTypeFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketTypeFormat1Choice, MarketType3Code> mmCode = new MMMessageAttribute<MarketTypeFormat1Choice, MarketType3Code>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketTypeFormat1Choice.mmObject();
@@ -125,6 +125,16 @@ public class MarketTypeFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarketType3Code.mmObject();
+		}
+
+		@Override
+		public MarketType3Code getValue(MarketTypeFormat1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MarketTypeFormat1Choice obj, MarketType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class MarketTypeFormat1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketTypeFormat1Choice, GenericIdentification20> mmProprietary = new MMMessageAssociationEnd<MarketTypeFormat1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarketTypeFormat1Choice.mmObject();
@@ -176,6 +186,16 @@ public class MarketTypeFormat1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(MarketTypeFormat1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MarketTypeFormat1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

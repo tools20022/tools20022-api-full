@@ -53,11 +53,15 @@ public class ConstraintAmountAndOrRateRule {
 	 */
 	public static final MMConstraint<Tax8> forTax8 = new MMConstraint<Tax8>() {
 		{
-			validator = ConstraintAmountAndOrRateRule::checkTax8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndOrRateRule";
 			definition = "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional.";
 			owner_lazy = () -> Tax8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Tax8 obj) throws Exception {
+			checkTax8(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintAmountAndOrRateRule {
 	 */
 	public static final MMConstraint<PriceValue2> forPriceValue2 = new MMConstraint<PriceValue2>() {
 		{
-			validator = ConstraintAmountAndOrRateRule::checkPriceValue2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndOrRateRule";
 			definition = "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional.";
 			owner_lazy = () -> PriceValue2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceValue2 obj) throws Exception {
+			checkPriceValue2(obj);
 		}
 	};
 	/**
@@ -111,11 +119,15 @@ public class ConstraintAmountAndOrRateRule {
 	 */
 	public static final MMConstraint<Tax17> forTax17 = new MMConstraint<Tax17>() {
 		{
-			validator = ConstraintAmountAndOrRateRule::checkTax17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndOrRateRule";
 			definition = "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional.";
 			owner_lazy = () -> Tax17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Tax17 obj) throws Exception {
+			checkTax17(obj);
 		}
 	};
 	/**
@@ -141,11 +153,15 @@ public class ConstraintAmountAndOrRateRule {
 	 */
 	public static final MMConstraint<PriceValueChange1> forPriceValueChange1 = new MMConstraint<PriceValueChange1>() {
 		{
-			validator = ConstraintAmountAndOrRateRule::checkPriceValueChange1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndOrRateRule";
 			definition = "If Amount is not present, then Rate is mandatory. If Amount is present, then Rate is optional.";
 			owner_lazy = () -> PriceValueChange1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceValueChange1 obj) throws Exception {
+			checkPriceValueChange1(obj);
 		}
 	};
 

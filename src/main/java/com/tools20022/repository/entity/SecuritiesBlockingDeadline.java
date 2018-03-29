@@ -20,10 +20,10 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.MMBusinessAttribute;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +121,7 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmBlockingPeriod = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesBlockingDeadline, DateTimePeriod> mmBlockingPeriod = new MMBusinessAttribute<SecuritiesBlockingDeadline, DateTimePeriod>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmBlockingPeriod, CorporateActionPeriod6.mmBlockingPeriod, CorporateActionPeriod8.mmBlockingPeriod, EligibilityDates.mmBlockingPeriod,
 					CorporateActionPeriod1.mmBlockingPeriod, CorporateActionPeriod10.mmBlockingPeriod, CorporateActionPeriod14.mmBlockingPeriod);
@@ -132,15 +132,17 @@ public class SecuritiesBlockingDeadline extends Deadline {
 			definition = "Period during which the securities are blocked, ie, not available for exchange.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			complexType_lazy = () -> DateTimePeriod.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesBlockingDeadline.class.getMethod("getBlockingPeriod", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public DateTimePeriod getValue(SecuritiesBlockingDeadline obj) {
+			return obj.getBlockingPeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesBlockingDeadline obj, DateTimePeriod value) {
+			obj.setBlockingPeriod(value);
 		}
 	};
 
@@ -167,7 +169,7 @@ public class SecuritiesBlockingDeadline extends Deadline {
 		return blockingPeriod;
 	}
 
-	public SecuritiesBlockingDeadline setBlockingPeriod(com.tools20022.repository.entity.DateTimePeriod blockingPeriod) {
+	public SecuritiesBlockingDeadline setBlockingPeriod(DateTimePeriod blockingPeriod) {
 		this.blockingPeriod = Objects.requireNonNull(blockingPeriod);
 		return this;
 	}

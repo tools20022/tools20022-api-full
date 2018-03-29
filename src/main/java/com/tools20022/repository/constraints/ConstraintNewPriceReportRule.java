@@ -54,12 +54,16 @@ public class ConstraintNewPriceReportRule {
 	 */
 	public static final MMConstraint<PriceReportV04> forPriceReportV04 = new MMConstraint<PriceReportV04>() {
 		{
-			validator = ConstraintNewPriceReportRule::checkPriceReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPriceReportRule";
 			definition = "If Function is \"NEWP\" then CancellationIdentification must not be present.";
 			owner_lazy = () -> PriceReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancellationIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Function</leftOperand><rightOperand>NewPriceReport</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(PriceReportV04 obj) throws Exception {
+			checkPriceReportV04(obj);
 		}
 	};
 

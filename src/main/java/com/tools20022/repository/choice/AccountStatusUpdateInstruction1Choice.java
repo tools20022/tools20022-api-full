@@ -100,7 +100,7 @@ public class AccountStatusUpdateInstruction1Choice {
 	 * "Type of change to the account status expressed as a code.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountStatusUpdateInstruction1Choice, AccountStatusUpdateInstruction1Code> mmCode = new MMMessageAttribute<AccountStatusUpdateInstruction1Choice, AccountStatusUpdateInstruction1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class AccountStatusUpdateInstruction1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountStatusUpdateInstruction1Code.mmObject();
+		}
+
+		@Override
+		public AccountStatusUpdateInstruction1Code getValue(AccountStatusUpdateInstruction1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstruction1Choice obj, AccountStatusUpdateInstruction1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -143,7 +153,7 @@ public class AccountStatusUpdateInstruction1Choice {
 	 * "Type of change to the account status expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountStatusUpdateInstruction1Choice, GenericIdentification36> mmProprietary = new MMMessageAssociationEnd<AccountStatusUpdateInstruction1Choice, GenericIdentification36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AccountStatusUpdateInstruction1Choice.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class AccountStatusUpdateInstruction1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification36.mmObject();
+		}
+
+		@Override
+		public GenericIdentification36 getValue(AccountStatusUpdateInstruction1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AccountStatusUpdateInstruction1Choice obj, GenericIdentification36 value) {
+			obj.setProprietary(value);
 		}
 	};
 

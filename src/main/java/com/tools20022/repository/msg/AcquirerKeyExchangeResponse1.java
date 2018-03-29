@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.cain.KeyExchangeResponse;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardTransaction14;
+import com.tools20022.repository.msg.CardTransactionEnvironment6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +107,7 @@ public class AcquirerKeyExchangeResponse1 {
 	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerKeyExchangeResponse1, CardTransactionEnvironment6> mmEnvironment = new MMMessageAssociationEnd<AcquirerKeyExchangeResponse1, CardTransactionEnvironment6>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerKeyExchangeResponse1.mmObject();
 			isDerived = false;
@@ -116,7 +118,17 @@ public class AcquirerKeyExchangeResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment6.mmObject();
+			type_lazy = () -> CardTransactionEnvironment6.mmObject();
+		}
+
+		@Override
+		public CardTransactionEnvironment6 getValue(AcquirerKeyExchangeResponse1 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcquirerKeyExchangeResponse1 obj, CardTransactionEnvironment6 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -147,7 +159,7 @@ public class AcquirerKeyExchangeResponse1 {
 	 * definition} = "Key exchange transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcquirerKeyExchangeResponse1, CardTransaction14> mmTransaction = new MMMessageAssociationEnd<AcquirerKeyExchangeResponse1, CardTransaction14>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerKeyExchangeResponse1.mmObject();
 			isDerived = false;
@@ -158,7 +170,17 @@ public class AcquirerKeyExchangeResponse1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransaction14.mmObject();
+			type_lazy = () -> CardTransaction14.mmObject();
+		}
+
+		@Override
+		public CardTransaction14 getValue(AcquirerKeyExchangeResponse1 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcquirerKeyExchangeResponse1 obj, CardTransaction14 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -180,7 +202,7 @@ public class AcquirerKeyExchangeResponse1 {
 		return environment;
 	}
 
-	public AcquirerKeyExchangeResponse1 setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment6 environment) {
+	public AcquirerKeyExchangeResponse1 setEnvironment(CardTransactionEnvironment6 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -189,7 +211,7 @@ public class AcquirerKeyExchangeResponse1 {
 		return transaction;
 	}
 
-	public AcquirerKeyExchangeResponse1 setTransaction(com.tools20022.repository.msg.CardTransaction14 transaction) {
+	public AcquirerKeyExchangeResponse1 setTransaction(CardTransaction14 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

@@ -119,7 +119,7 @@ public class SecuritiesTransactionPrice8Choice {
 	 * definition} = "Indicates that price is expressed as a monetary value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMonetaryValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTransactionPrice8Choice, AmountAndDirection54> mmMonetaryValue = new MMMessageAssociationEnd<SecuritiesTransactionPrice8Choice, AmountAndDirection54>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmNetPrice;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice8Choice.mmObject();
@@ -132,6 +132,16 @@ public class SecuritiesTransactionPrice8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndDirection54.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection54 getValue(SecuritiesTransactionPrice8Choice obj) {
+			return obj.getMonetaryValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice8Choice obj, AmountAndDirection54 value) {
+			obj.setMonetaryValue(value);
 		}
 	};
 	@XmlElement(name = "Pctg", required = true)
@@ -170,7 +180,7 @@ public class SecuritiesTransactionPrice8Choice {
 	 * "Indicates that price is expressed as a rate, that is a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice8Choice, PercentageRate> mmPercentage = new MMMessageAttribute<SecuritiesTransactionPrice8Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice8Choice.mmObject();
@@ -182,6 +192,16 @@ public class SecuritiesTransactionPrice8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SecuritiesTransactionPrice8Choice obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice8Choice obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 	@XmlElement(name = "Yld", required = true)
@@ -219,7 +239,7 @@ public class SecuritiesTransactionPrice8Choice {
 	 * definition} = "Indicates that price is expressed as a yield."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice8Choice, PercentageRate> mmYield = new MMMessageAttribute<SecuritiesTransactionPrice8Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmIndex;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice8Choice.mmObject();
@@ -231,6 +251,16 @@ public class SecuritiesTransactionPrice8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SecuritiesTransactionPrice8Choice obj) {
+			return obj.getYield();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice8Choice obj, PercentageRate value) {
+			obj.setYield(value);
 		}
 	};
 	@XmlElement(name = "PdgPric", required = true)
@@ -264,7 +294,7 @@ public class SecuritiesTransactionPrice8Choice {
 	 * "Indicates that price is currently not available, but pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice8Choice, PriceStatus1Code> mmPendingPrice = new MMMessageAttribute<SecuritiesTransactionPrice8Choice, PriceStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice8Choice.mmObject();
 			isDerived = false;
@@ -275,6 +305,16 @@ public class SecuritiesTransactionPrice8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceStatus1Code.mmObject();
+		}
+
+		@Override
+		public PriceStatus1Code getValue(SecuritiesTransactionPrice8Choice obj) {
+			return obj.getPendingPrice();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice8Choice obj, PriceStatus1Code value) {
+			obj.setPendingPrice(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -311,7 +351,7 @@ public class SecuritiesTransactionPrice8Choice {
 	 * "Indicates that price or quanity is expressed in another notation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTransactionPrice8Choice, SecuritiesTransactionPrice4> mmOther = new MMMessageAssociationEnd<SecuritiesTransactionPrice8Choice, SecuritiesTransactionPrice4>() {
 		{
 			businessComponentTrace_lazy = () -> Price.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice8Choice.mmObject();
@@ -324,6 +364,16 @@ public class SecuritiesTransactionPrice8Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesTransactionPrice4.mmObject();
+		}
+
+		@Override
+		public SecuritiesTransactionPrice4 getValue(SecuritiesTransactionPrice8Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice8Choice obj, SecuritiesTransactionPrice4 value) {
+			obj.setOther(value);
 		}
 	};
 

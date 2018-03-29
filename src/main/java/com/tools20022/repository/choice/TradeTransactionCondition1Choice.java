@@ -127,7 +127,7 @@ public class TradeTransactionCondition1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionCondition1Choice, TradeTransactionCondition4Code> mmCode = new MMMessageAttribute<TradeTransactionCondition1Choice, TradeTransactionCondition4Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition1Choice.mmObject();
@@ -141,6 +141,16 @@ public class TradeTransactionCondition1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeTransactionCondition4Code.mmObject();
+		}
+
+		@Override
+		public TradeTransactionCondition4Code getValue(TradeTransactionCondition1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TradeTransactionCondition1Choice obj, TradeTransactionCondition4Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -189,7 +199,7 @@ public class TradeTransactionCondition1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TradeTransactionCondition1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<TradeTransactionCondition1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TradeTransactionCondition1Choice.mmObject();
@@ -203,6 +213,16 @@ public class TradeTransactionCondition1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(TradeTransactionCondition1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TradeTransactionCondition1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

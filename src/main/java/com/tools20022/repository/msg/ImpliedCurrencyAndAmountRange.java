@@ -125,7 +125,7 @@ public class ImpliedCurrencyAndAmountRange {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ImpliedCurrencyAndAmountRange, ImpliedCurrencyAmountRangeChoice> mmAmount = new MMMessageAttribute<ImpliedCurrencyAndAmountRange, ImpliedCurrencyAmountRangeChoice>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmObject();
@@ -138,6 +138,16 @@ public class ImpliedCurrencyAndAmountRange {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAmountRangeChoice getValue(ImpliedCurrencyAndAmountRange obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ImpliedCurrencyAndAmountRange obj, ImpliedCurrencyAmountRangeChoice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -184,7 +194,7 @@ public class ImpliedCurrencyAndAmountRange {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ImpliedCurrencyAndAmountRange, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<ImpliedCurrencyAndAmountRange, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange.mmObject();
@@ -197,6 +207,16 @@ public class ImpliedCurrencyAndAmountRange {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(ImpliedCurrencyAndAmountRange obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(ImpliedCurrencyAndAmountRange obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 

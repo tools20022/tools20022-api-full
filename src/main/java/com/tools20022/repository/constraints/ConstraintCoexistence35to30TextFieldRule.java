@@ -65,12 +65,16 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification4> forMarketIdentification4 = new MMConstraint<MarketIdentification4>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule.forMarketIdentification78);
 			owner_lazy = () -> MarketIdentification4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification4 obj) throws Exception {
+			checkMarketIdentification4(obj);
 		}
 	};
 	/**
@@ -96,11 +100,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification5> forMarketIdentification5 = new MMConstraint<MarketIdentification5>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> MarketIdentification5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification5 obj) throws Exception {
+			checkMarketIdentification5(obj);
 		}
 	};
 	/**
@@ -126,11 +134,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<ClassificationType2Choice> forClassificationType2Choice = new MMConstraint<ClassificationType2Choice>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkClassificationType2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, AlternateClassification identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> ClassificationType2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ClassificationType2Choice obj) throws Exception {
+			checkClassificationType2Choice(obj);
 		}
 	};
 	/**
@@ -156,11 +168,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<Number2Choice> forNumber2Choice = new MMConstraint<Number2Choice>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkNumber2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, (long) number must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’.";
 			owner_lazy = () -> Number2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Number2Choice obj) throws Exception {
+			checkNumber2Choice(obj);
 		}
 	};
 	/**
@@ -186,11 +202,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<SafekeepingPlaceTypeAndText3> forSafekeepingPlaceTypeAndText3 = new MMConstraint<SafekeepingPlaceTypeAndText3>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkSafekeepingPlaceTypeAndText3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’.";
 			owner_lazy = () -> SafekeepingPlaceTypeAndText3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingPlaceTypeAndText3 obj) throws Exception {
+			checkSafekeepingPlaceTypeAndText3(obj);
 		}
 	};
 	/**
@@ -216,11 +236,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<GenericIdentification21> forGenericIdentification21 = new MMConstraint<GenericIdentification21>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkGenericIdentification21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’.";
 			owner_lazy = () -> GenericIdentification21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification21 obj) throws Exception {
+			checkGenericIdentification21(obj);
 		}
 	};
 	/**
@@ -246,11 +270,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<AlternatePartyIdentification2> forAlternatePartyIdentification2 = new MMConstraint<AlternatePartyIdentification2>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkAlternatePartyIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, AlternateIdentification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AlternatePartyIdentification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AlternatePartyIdentification2 obj) throws Exception {
+			checkAlternatePartyIdentification2(obj);
 		}
 	};
 	/**
@@ -276,11 +304,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<SecuritiesCertificate1> forSecuritiesCertificate1 = new MMConstraint<SecuritiesCertificate1>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkSecuritiesCertificate1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, number must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesCertificate1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCertificate1 obj) throws Exception {
+			checkSecuritiesCertificate1(obj);
 		}
 	};
 	/**
@@ -306,11 +338,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification8> forMarketIdentification8 = new MMConstraint<MarketIdentification8>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> MarketIdentification8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification8 obj) throws Exception {
+			checkMarketIdentification8(obj);
 		}
 	};
 	/**
@@ -336,11 +372,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<ClassificationType3Choice> forClassificationType3Choice = new MMConstraint<ClassificationType3Choice>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkClassificationType3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, AlternateClassification identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> ClassificationType3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ClassificationType3Choice obj) throws Exception {
+			checkClassificationType3Choice(obj);
 		}
 	};
 	/**
@@ -366,11 +406,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<Number4Choice> forNumber4Choice = new MMConstraint<Number4Choice>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkNumber4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, (long) number must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Number4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Number4Choice obj) throws Exception {
+			checkNumber4Choice(obj);
 		}
 	};
 	/**
@@ -396,11 +440,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<SafekeepingPlaceTypeAndText4> forSafekeepingPlaceTypeAndText4 = new MMConstraint<SafekeepingPlaceTypeAndText4>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkSafekeepingPlaceTypeAndText4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SafekeepingPlaceTypeAndText4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingPlaceTypeAndText4 obj) throws Exception {
+			checkSafekeepingPlaceTypeAndText4(obj);
 		}
 	};
 	/**
@@ -426,11 +474,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<GenericIdentification26> forGenericIdentification26 = new MMConstraint<GenericIdentification26>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkGenericIdentification26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GenericIdentification26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericIdentification26 obj) throws Exception {
+			checkGenericIdentification26(obj);
 		}
 	};
 	/**
@@ -456,11 +508,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<AlternatePartyIdentification3> forAlternatePartyIdentification3 = new MMConstraint<AlternatePartyIdentification3>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkAlternatePartyIdentification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, AlternateIdentification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AlternatePartyIdentification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AlternatePartyIdentification3 obj) throws Exception {
+			checkAlternatePartyIdentification3(obj);
 		}
 	};
 	/**
@@ -486,11 +542,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<SecuritiesCertificate2> forSecuritiesCertificate2 = new MMConstraint<SecuritiesCertificate2>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkSecuritiesCertificate2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, number must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesCertificate2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesCertificate2 obj) throws Exception {
+			checkSecuritiesCertificate2(obj);
 		}
 	};
 	/**
@@ -516,11 +576,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<SafekeepingPlaceTypeAndText2> forSafekeepingPlaceTypeAndText2 = new MMConstraint<SafekeepingPlaceTypeAndText2>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkSafekeepingPlaceTypeAndText2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SafekeepingPlaceTypeAndText2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingPlaceTypeAndText2 obj) throws Exception {
+			checkSafekeepingPlaceTypeAndText2(obj);
 		}
 	};
 	/**
@@ -546,11 +610,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<SafekeepingPlaceTypeAndText5> forSafekeepingPlaceTypeAndText5 = new MMConstraint<SafekeepingPlaceTypeAndText5>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkSafekeepingPlaceTypeAndText5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, Identification must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two cons\tecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SafekeepingPlaceTypeAndText5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingPlaceTypeAndText5 obj) throws Exception {
+			checkSafekeepingPlaceTypeAndText5(obj);
 		}
 	};
 	/**
@@ -576,11 +644,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification2> forMarketIdentification2 = new MMConstraint<MarketIdentification2>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> MarketIdentification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification2 obj) throws Exception {
+			checkMarketIdentification2(obj);
 		}
 	};
 	/**
@@ -606,11 +678,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification7> forMarketIdentification7 = new MMConstraint<MarketIdentification7>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> MarketIdentification7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification7 obj) throws Exception {
+			checkMarketIdentification7(obj);
 		}
 	};
 	/**
@@ -636,11 +712,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification9> forMarketIdentification9 = new MMConstraint<MarketIdentification9>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> MarketIdentification9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification9 obj) throws Exception {
+			checkMarketIdentification9(obj);
 		}
 	};
 	/**
@@ -666,11 +746,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification6> forMarketIdentification6 = new MMConstraint<MarketIdentification6>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> MarketIdentification6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification6 obj) throws Exception {
+			checkMarketIdentification6(obj);
 		}
 	};
 	/**
@@ -696,11 +780,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification10> forMarketIdentification10 = new MMConstraint<MarketIdentification10>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> MarketIdentification10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification10 obj) throws Exception {
+			checkMarketIdentification10(obj);
 		}
 	};
 	/**
@@ -731,12 +819,16 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification78> forMarketIdentification78 = new MMConstraint<MarketIdentification78>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule.forMarketIdentification4;
 			owner_lazy = () -> MarketIdentification78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification78 obj) throws Exception {
+			checkMarketIdentification78(obj);
 		}
 	};
 	/**
@@ -762,11 +854,15 @@ public class ConstraintCoexistence35to30TextFieldRule {
 	 */
 	public static final MMConstraint<MarketIdentification82> forMarketIdentification82 = new MMConstraint<MarketIdentification82>() {
 		{
-			validator = ConstraintCoexistence35to30TextFieldRule::checkMarketIdentification82;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Coexistence35to30TextFieldRule";
 			definition = "During ISO 15022 – 20022 coexistence, MarketIdentification/Description must be 30 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> MarketIdentification82.mmObject();
+		}
+
+		@Override
+		public void executeValidator(MarketIdentification82 obj) throws Exception {
+			checkMarketIdentification82(obj);
 		}
 	};
 

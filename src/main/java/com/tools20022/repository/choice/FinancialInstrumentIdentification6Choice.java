@@ -113,7 +113,7 @@ public class FinancialInstrumentIdentification6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentIdentification6Choice, ISINOct2015Identifier> mmISIN = new MMMessageAttribute<FinancialInstrumentIdentification6Choice, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmObject();
@@ -125,6 +125,16 @@ public class FinancialInstrumentIdentification6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(FinancialInstrumentIdentification6Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentIdentification6Choice obj, ISINOct2015Identifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "Indx", required = true)
@@ -160,7 +170,7 @@ public class FinancialInstrumentIdentification6Choice {
 	 * definition} = "Index on which the financial instrument is based."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FinancialInstrumentIdentification6Choice, FinancialInstrument58> mmIndex = new MMMessageAssociationEnd<FinancialInstrumentIdentification6Choice, FinancialInstrument58>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentifiedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmObject();
@@ -173,6 +183,16 @@ public class FinancialInstrumentIdentification6Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrument58.mmObject();
+		}
+
+		@Override
+		public FinancialInstrument58 getValue(FinancialInstrumentIdentification6Choice obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentIdentification6Choice obj, FinancialInstrument58 value) {
+			obj.setIndex(value);
 		}
 	};
 

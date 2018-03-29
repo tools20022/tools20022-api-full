@@ -100,7 +100,7 @@ public class Amount3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountWithCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount3Choice, ActiveOrHistoricCurrencyAndAmount> mmAmountWithCurrency = new MMMessageAttribute<Amount3Choice, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Amount3Choice.mmObject();
 			isDerived = false;
@@ -111,6 +111,16 @@ public class Amount3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(Amount3Choice obj) {
+			return obj.getAmountWithCurrency();
+		}
+
+		@Override
+		public void setValue(Amount3Choice obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmountWithCurrency(value);
 		}
 	};
 	@XmlElement(name = "AmtWthtCcy", required = true)
@@ -145,7 +155,7 @@ public class Amount3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountWithoutCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Amount3Choice, ImpliedCurrencyAndAmount> mmAmountWithoutCurrency = new MMMessageAttribute<Amount3Choice, ImpliedCurrencyAndAmount>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.Amount3Choice.mmObject();
 			isDerived = false;
@@ -156,6 +166,16 @@ public class Amount3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(Amount3Choice obj) {
+			return obj.getAmountWithoutCurrency();
+		}
+
+		@Override
+		public void setValue(Amount3Choice obj, ImpliedCurrencyAndAmount value) {
+			obj.setAmountWithoutCurrency(value);
 		}
 	};
 

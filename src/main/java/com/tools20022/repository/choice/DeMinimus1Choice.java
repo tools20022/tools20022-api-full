@@ -106,7 +106,7 @@ public class DeMinimus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeMinimusApplicable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeMinimus1Choice, DeMinimusApplicable1> mmDeMinimusApplicable = new MMMessageAssociationEnd<DeMinimus1Choice, DeMinimusApplicable1>() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmDeMinimusApplicable;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeMinimus1Choice.mmObject();
@@ -119,6 +119,16 @@ public class DeMinimus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DeMinimusApplicable1.mmObject();
+		}
+
+		@Override
+		public DeMinimusApplicable1 getValue(DeMinimus1Choice obj) {
+			return obj.getDeMinimusApplicable();
+		}
+
+		@Override
+		public void setValue(DeMinimus1Choice obj, DeMinimusApplicable1 value) {
+			obj.setDeMinimusApplicable(value);
 		}
 	};
 	@XmlElement(name = "DeMnmsNotAplbl", required = true)
@@ -157,7 +167,7 @@ public class DeMinimus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeMinimusNotApplicable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DeMinimus1Choice, DeMinimusNotApplicable1> mmDeMinimusNotApplicable = new MMMessageAssociationEnd<DeMinimus1Choice, DeMinimusNotApplicable1>() {
 		{
 			businessElementTrace_lazy = () -> Investor.mmDeMinimusApplicable;
 			componentContext_lazy = () -> com.tools20022.repository.choice.DeMinimus1Choice.mmObject();
@@ -170,6 +180,16 @@ public class DeMinimus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DeMinimusNotApplicable1.mmObject();
+		}
+
+		@Override
+		public DeMinimusNotApplicable1 getValue(DeMinimus1Choice obj) {
+			return obj.getDeMinimusNotApplicable();
+		}
+
+		@Override
+		public void setValue(DeMinimus1Choice obj, DeMinimusNotApplicable1 value) {
+			obj.setDeMinimusNotApplicable(value);
 		}
 	};
 

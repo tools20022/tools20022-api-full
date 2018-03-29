@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -158,7 +159,7 @@ public class ReportEntry2 {
 	 * definition} = "Unique reference for the entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportEntry2, Optional<Max35Text>> mmEntryReference = new MMMessageAttribute<ReportEntry2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -170,6 +171,16 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReportEntry2 obj) {
+			return obj.getEntryReference();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<Max35Text> value) {
+			obj.setEntryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -206,7 +217,7 @@ public class ReportEntry2 {
 	 * definition} = "Amount of money in the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportEntry2, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<ReportEntry2, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -218,6 +229,16 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(ReportEntry2 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -255,7 +276,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportEntry2, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<ReportEntry2, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -267,6 +288,16 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(ReportEntry2 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "RvslInd")
@@ -305,7 +336,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReversalIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportEntry2, Optional<TrueFalseIndicator>> mmReversalIndicator = new MMMessageAttribute<ReportEntry2, Optional<TrueFalseIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmReversalIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -317,6 +348,16 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ReportEntry2 obj) {
+			return obj.getReversalIndicator();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<TrueFalseIndicator> value) {
+			obj.setReversalIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts", required = true)
@@ -353,7 +394,7 @@ public class ReportEntry2 {
 	 * definition} = "Status of an entry on the books of the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportEntry2, EntryStatus2Code> mmStatus = new MMMessageAttribute<ReportEntry2, EntryStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -365,6 +406,16 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EntryStatus2Code.mmObject();
+		}
+
+		@Override
+		public EntryStatus2Code getValue(ReportEntry2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, EntryStatus2Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "BookgDt")
@@ -402,7 +453,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBookingDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, Optional<DateAndDateTimeChoice>> mmBookingDate = new MMMessageAssociationEnd<ReportEntry2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -415,6 +466,16 @@ public class ReportEntry2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(ReportEntry2 obj) {
+			return obj.getBookingDate();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setBookingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -452,7 +513,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, Optional<DateAndDateTimeChoice>> mmValueDate = new MMMessageAssociationEnd<ReportEntry2, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -465,6 +526,16 @@ public class ReportEntry2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(ReportEntry2 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrRef")
@@ -502,7 +573,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportEntry2, Optional<Max35Text>> mmAccountServicerReference = new MMMessageAttribute<ReportEntry2, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -515,9 +586,19 @@ public class ReportEntry2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(ReportEntry2 obj) {
+			return obj.getAccountServicerReference();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Avlbty")
-	protected List<com.tools20022.repository.msg.CashBalanceAvailability2> availability;
+	protected List<CashBalanceAvailability2> availability;
 	/**
 	 * 
 	 <p>
@@ -551,7 +632,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, List<CashBalanceAvailability2>> mmAvailability = new MMMessageAssociationEnd<ReportEntry2, List<CashBalanceAvailability2>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAvailability;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -562,7 +643,17 @@ public class ReportEntry2 {
 			definition = "Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest. \n\nUsage: This type of information is used in the US and is linked to particular instruments such as cheques.\nExample: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations).";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmObject();
+			type_lazy = () -> CashBalanceAvailability2.mmObject();
+		}
+
+		@Override
+		public List<CashBalanceAvailability2> getValue(ReportEntry2 obj) {
+			return obj.getAvailability();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, List<CashBalanceAvailability2> value) {
+			obj.setAvailability(value);
 		}
 	};
 	@XmlElement(name = "BkTxCd", required = true)
@@ -600,7 +691,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, BankTransactionCodeStructure4> mmBankTransactionCode = new MMMessageAssociationEnd<ReportEntry2, BankTransactionCodeStructure4>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmBankTransactionCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -612,7 +703,17 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure4.mmObject();
+			type_lazy = () -> BankTransactionCodeStructure4.mmObject();
+		}
+
+		@Override
+		public BankTransactionCodeStructure4 getValue(ReportEntry2 obj) {
+			return obj.getBankTransactionCode();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, BankTransactionCodeStructure4 value) {
+			obj.setBankTransactionCode(value);
 		}
 	};
 	@XmlElement(name = "ComssnWvrInd")
@@ -650,7 +751,7 @@ public class ReportEntry2 {
 	 * "Indicates whether the transaction is exempt from commission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommissionWaiverIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportEntry2, Optional<YesNoIndicator>> mmCommissionWaiverIndicator = new MMMessageAttribute<ReportEntry2, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCommissionWaiverIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -662,6 +763,16 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(ReportEntry2 obj) {
+			return obj.getCommissionWaiverIndicator();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<YesNoIndicator> value) {
+			obj.setCommissionWaiverIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInfInd")
@@ -693,7 +804,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAdditionalInformationIndicator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, Optional<MessageIdentification2>> mmAdditionalInformationIndicator = new MMMessageAssociationEnd<ReportEntry2, Optional<MessageIdentification2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
 			isDerived = false;
@@ -704,7 +815,17 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification2.mmObject();
+			type_lazy = () -> MessageIdentification2.mmObject();
+		}
+
+		@Override
+		public Optional<MessageIdentification2> getValue(ReportEntry2 obj) {
+			return obj.getAdditionalInformationIndicator();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<MessageIdentification2> value) {
+			obj.setAdditionalInformationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmtDtls")
@@ -742,7 +863,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, Optional<AmountAndCurrencyExchange3>> mmAmountDetails = new MMMessageAssociationEnd<ReportEntry2, Optional<AmountAndCurrencyExchange3>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -754,11 +875,21 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndCurrencyExchange3.mmObject();
+			type_lazy = () -> AmountAndCurrencyExchange3.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndCurrencyExchange3> getValue(ReportEntry2 obj) {
+			return obj.getAmountDetails();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<AmountAndCurrencyExchange3> value) {
+			obj.setAmountDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Chrgs")
-	protected List<com.tools20022.repository.msg.ChargesInformation6> charges;
+	protected List<ChargesInformation6> charges;
 	/**
 	 * 
 	 <p>
@@ -791,7 +922,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, List<ChargesInformation6>> mmCharges = new MMMessageAssociationEnd<ReportEntry2, List<ChargesInformation6>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCharges;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -802,7 +933,17 @@ public class ReportEntry2 {
 			definition = "Provides information on the charges included in the entry amount.\n\nUsage: This component is used on entry level in case of batch or aggregate bookings.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
+			type_lazy = () -> ChargesInformation6.mmObject();
+		}
+
+		@Override
+		public List<ChargesInformation6> getValue(ReportEntry2 obj) {
+			return obj.getCharges();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, List<ChargesInformation6> value) {
+			obj.setCharges(value);
 		}
 	};
 	@XmlElement(name = "TechInptChanl")
@@ -835,7 +976,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTechnicalInputChannel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, Optional<TechnicalInputChannel1Choice>> mmTechnicalInputChannel = new MMMessageAssociationEnd<ReportEntry2, Optional<TechnicalInputChannel1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
 			isDerived = false;
@@ -848,9 +989,19 @@ public class ReportEntry2 {
 			isComposite = true;
 			type_lazy = () -> TechnicalInputChannel1Choice.mmObject();
 		}
+
+		@Override
+		public Optional<TechnicalInputChannel1Choice> getValue(ReportEntry2 obj) {
+			return obj.getTechnicalInputChannel();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<TechnicalInputChannel1Choice> value) {
+			obj.setTechnicalInputChannel(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Intrst")
-	protected List<com.tools20022.repository.msg.TransactionInterest2> interest;
+	protected List<TransactionInterest2> interest;
 	/**
 	 * 
 	 <p>
@@ -883,7 +1034,7 @@ public class ReportEntry2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, List<TransactionInterest2>> mmInterest = new MMMessageAssociationEnd<ReportEntry2, List<TransactionInterest2>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -894,11 +1045,21 @@ public class ReportEntry2 {
 			definition = "Set of elements used to provide details of the interest amount included in the entry amount.\n\nUsage: This component is used on entry level in the case of batch or aggregate bookings.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionInterest2.mmObject();
+			type_lazy = () -> TransactionInterest2.mmObject();
+		}
+
+		@Override
+		public List<TransactionInterest2> getValue(ReportEntry2 obj) {
+			return obj.getInterest();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, List<TransactionInterest2> value) {
+			obj.setInterest(value);
 		}
 	};
 	@XmlElement(name = "NtryDtls")
-	protected List<com.tools20022.repository.msg.EntryDetails1> entryDetails;
+	protected List<EntryDetails1> entryDetails;
 	/**
 	 * 
 	 <p>
@@ -928,7 +1089,7 @@ public class ReportEntry2 {
 	 * definition} = "Set of elements used to provide details on the entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEntryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ReportEntry2, List<EntryDetails1>> mmEntryDetails = new MMMessageAssociationEnd<ReportEntry2, List<EntryDetails1>>() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
@@ -939,7 +1100,17 @@ public class ReportEntry2 {
 			definition = "Set of elements used to provide details on the entry.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.EntryDetails1.mmObject();
+			type_lazy = () -> EntryDetails1.mmObject();
+		}
+
+		@Override
+		public List<EntryDetails1> getValue(ReportEntry2 obj) {
+			return obj.getEntryDetails();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, List<EntryDetails1> value) {
+			obj.setEntryDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlNtryInf")
@@ -970,7 +1141,7 @@ public class ReportEntry2 {
 	 * definition} = "Further details of the entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalEntryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportEntry2, Optional<Max500Text>> mmAdditionalEntryInformation = new MMMessageAttribute<ReportEntry2, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry2.mmObject();
 			isDerived = false;
@@ -981,6 +1152,16 @@ public class ReportEntry2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(ReportEntry2 obj) {
+			return obj.getAdditionalEntryInformation();
+		}
+
+		@Override
+		public void setValue(ReportEntry2 obj, Optional<Max500Text> value) {
+			obj.setAdditionalEntryInformation(value.orElse(null));
 		}
 	};
 
@@ -1080,7 +1261,7 @@ public class ReportEntry2 {
 		return availability == null ? availability = new ArrayList<>() : availability;
 	}
 
-	public ReportEntry2 setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability2> availability) {
+	public ReportEntry2 setAvailability(List<CashBalanceAvailability2> availability) {
 		this.availability = Objects.requireNonNull(availability);
 		return this;
 	}
@@ -1089,7 +1270,7 @@ public class ReportEntry2 {
 		return bankTransactionCode;
 	}
 
-	public ReportEntry2 setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure4 bankTransactionCode) {
+	public ReportEntry2 setBankTransactionCode(BankTransactionCodeStructure4 bankTransactionCode) {
 		this.bankTransactionCode = Objects.requireNonNull(bankTransactionCode);
 		return this;
 	}
@@ -1107,7 +1288,7 @@ public class ReportEntry2 {
 		return additionalInformationIndicator == null ? Optional.empty() : Optional.of(additionalInformationIndicator);
 	}
 
-	public ReportEntry2 setAdditionalInformationIndicator(com.tools20022.repository.msg.MessageIdentification2 additionalInformationIndicator) {
+	public ReportEntry2 setAdditionalInformationIndicator(MessageIdentification2 additionalInformationIndicator) {
 		this.additionalInformationIndicator = additionalInformationIndicator;
 		return this;
 	}
@@ -1116,7 +1297,7 @@ public class ReportEntry2 {
 		return amountDetails == null ? Optional.empty() : Optional.of(amountDetails);
 	}
 
-	public ReportEntry2 setAmountDetails(com.tools20022.repository.msg.AmountAndCurrencyExchange3 amountDetails) {
+	public ReportEntry2 setAmountDetails(AmountAndCurrencyExchange3 amountDetails) {
 		this.amountDetails = amountDetails;
 		return this;
 	}
@@ -1125,7 +1306,7 @@ public class ReportEntry2 {
 		return charges == null ? charges = new ArrayList<>() : charges;
 	}
 
-	public ReportEntry2 setCharges(List<com.tools20022.repository.msg.ChargesInformation6> charges) {
+	public ReportEntry2 setCharges(List<ChargesInformation6> charges) {
 		this.charges = Objects.requireNonNull(charges);
 		return this;
 	}
@@ -1143,7 +1324,7 @@ public class ReportEntry2 {
 		return interest == null ? interest = new ArrayList<>() : interest;
 	}
 
-	public ReportEntry2 setInterest(List<com.tools20022.repository.msg.TransactionInterest2> interest) {
+	public ReportEntry2 setInterest(List<TransactionInterest2> interest) {
 		this.interest = Objects.requireNonNull(interest);
 		return this;
 	}
@@ -1152,7 +1333,7 @@ public class ReportEntry2 {
 		return entryDetails == null ? entryDetails = new ArrayList<>() : entryDetails;
 	}
 
-	public ReportEntry2 setEntryDetails(List<com.tools20022.repository.msg.EntryDetails1> entryDetails) {
+	public ReportEntry2 setEntryDetails(List<EntryDetails1> entryDetails) {
 		this.entryDetails = Objects.requireNonNull(entryDetails);
 		return this;
 	}

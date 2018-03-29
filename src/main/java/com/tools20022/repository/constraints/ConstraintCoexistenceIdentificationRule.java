@@ -57,11 +57,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrativeV03> forCorporateActionNarrativeV03 = new MMConstraint<CorporateActionNarrativeV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionNarrativeV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionNarrativeV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrativeV03 obj) throws Exception {
+			checkCorporateActionNarrativeV03(obj);
 		}
 	};
 	/**
@@ -87,11 +91,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesMessageCancellationAdviceV04> forSecuritiesMessageCancellationAdviceV04 = new MMConstraint<SecuritiesMessageCancellationAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesMessageCancellationAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesMessageCancellationAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesMessageCancellationAdviceV04 obj) throws Exception {
+			checkSecuritiesMessageCancellationAdviceV04(obj);
 		}
 	};
 	/**
@@ -117,11 +125,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementInstructionV03> forIntraPositionMovementInstructionV03 = new MMConstraint<IntraPositionMovementInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementInstructionV03 obj) throws Exception {
+			checkIntraPositionMovementInstructionV03(obj);
 		}
 	};
 	/**
@@ -153,12 +165,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV08> forSecuritiesBalanceCustodyReportV08 = new MMConstraint<SecuritiesBalanceCustodyReportV08>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceCustodyReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceCustodyReportV07;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV08 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV08(obj);
 		}
 	};
 	/**
@@ -189,12 +205,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV05> forSecuritiesStatementQueryV05 = new MMConstraint<SecuritiesStatementQueryV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesStatementQueryV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesStatementQueryV04;
 			owner_lazy = () -> SecuritiesStatementQueryV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV05 obj) throws Exception {
+			checkSecuritiesStatementQueryV05(obj);
 		}
 	};
 	/**
@@ -226,12 +246,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV08> forSecuritiesBalanceAccountingReportV08 = new MMConstraint<SecuritiesBalanceAccountingReportV08>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceAccountingReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceAccountingReportV07;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV08 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV08(obj);
 		}
 	};
 	/**
@@ -263,12 +287,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAuditTrailReportV02> forSecuritiesSettlementTransactionAuditTrailReportV02 = new MMConstraint<SecuritiesSettlementTransactionAuditTrailReportV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAuditTrailReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAuditTrailReportV01;
 			owner_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAuditTrailReportV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAuditTrailReportV02(obj);
 		}
 	};
 	/**
@@ -294,11 +322,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV03> forSecuritiesSettlementAllegementRemovalAdviceV03 = new MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementAllegementRemovalAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementAllegementRemovalAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementAllegementRemovalAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementAllegementRemovalAdviceV03(obj);
 		}
 	};
 	/**
@@ -324,11 +356,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV03> forSecuritiesStatusOrStatementQueryStatusAdviceV03 = new MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesStatusOrStatementQueryStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesStatusOrStatementQueryStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatusOrStatementQueryStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesStatusOrStatementQueryStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -354,11 +390,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionStatusQueryV03> forSecuritiesTransactionStatusQueryV03 = new MMConstraint<SecuritiesTransactionStatusQueryV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionStatusQueryV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionStatusQueryV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionStatusQueryV03 obj) throws Exception {
+			checkSecuritiesTransactionStatusQueryV03(obj);
 		}
 	};
 	/**
@@ -390,12 +430,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV04> forSecuritiesTransactionCancellationRequestV04 = new MMConstraint<SecuritiesTransactionCancellationRequestV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionCancellationRequestV03;
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV04 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -427,12 +471,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04> forSecuritiesTransactionCancellationRequestStatusAdviceV04 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionCancellationRequestStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionCancellationRequestStatusAdviceV03;
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -464,12 +512,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV06> forSecuritiesSettlementConditionModificationStatusAdviceV06 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionModificationStatusAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementConditionModificationStatusAdviceV05;
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV06 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV06(obj);
 		}
 	};
 	/**
@@ -504,12 +556,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAuditTrailReportV01> forSecuritiesSettlementTransactionAuditTrailReportV01 = new MMConstraint<SecuritiesSettlementTransactionAuditTrailReportV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAuditTrailReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAuditTrailReportV02);
 			owner_lazy = () -> SecuritiesSettlementTransactionAuditTrailReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAuditTrailReportV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAuditTrailReportV01(obj);
 		}
 	};
 	/**
@@ -535,11 +591,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementConfirmationV01> forIntraPositionMovementConfirmationV01 = new MMConstraint<IntraPositionMovementConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementConfirmationV01 obj) throws Exception {
+			checkIntraPositionMovementConfirmationV01(obj);
 		}
 	};
 	/**
@@ -565,11 +625,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementConfirmationV02> forIntraPositionMovementConfirmationV02 = new MMConstraint<IntraPositionMovementConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementConfirmationV02 obj) throws Exception {
+			checkIntraPositionMovementConfirmationV02(obj);
 		}
 	};
 	/**
@@ -595,11 +659,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementConfirmationV03> forIntraPositionMovementConfirmationV03 = new MMConstraint<IntraPositionMovementConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementConfirmationV03 obj) throws Exception {
+			checkIntraPositionMovementConfirmationV03(obj);
 		}
 	};
 	/**
@@ -625,11 +693,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementConfirmationV04> forIntraPositionMovementConfirmationV04 = new MMConstraint<IntraPositionMovementConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementConfirmationV04 obj) throws Exception {
+			checkIntraPositionMovementConfirmationV04(obj);
 		}
 	};
 	/**
@@ -655,11 +727,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementPostingReportV01> forIntraPositionMovementPostingReportV01 = new MMConstraint<IntraPositionMovementPostingReportV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementPostingReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementPostingReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementPostingReportV01 obj) throws Exception {
+			checkIntraPositionMovementPostingReportV01(obj);
 		}
 	};
 	/**
@@ -685,11 +761,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementPostingReportV02> forIntraPositionMovementPostingReportV02 = new MMConstraint<IntraPositionMovementPostingReportV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementPostingReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementPostingReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementPostingReportV02 obj) throws Exception {
+			checkIntraPositionMovementPostingReportV02(obj);
 		}
 	};
 	/**
@@ -715,11 +795,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementPostingReportV03> forIntraPositionMovementPostingReportV03 = new MMConstraint<IntraPositionMovementPostingReportV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementPostingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementPostingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementPostingReportV03 obj) throws Exception {
+			checkIntraPositionMovementPostingReportV03(obj);
 		}
 	};
 	/**
@@ -745,11 +829,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementPostingReportV04> forIntraPositionMovementPostingReportV04 = new MMConstraint<IntraPositionMovementPostingReportV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementPostingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementPostingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementPostingReportV04 obj) throws Exception {
+			checkIntraPositionMovementPostingReportV04(obj);
 		}
 	};
 	/**
@@ -775,11 +863,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV03> forSecuritiesBalanceAccountingReportV03 = new MMConstraint<SecuritiesBalanceAccountingReportV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceAccountingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV03 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV03(obj);
 		}
 	};
 	/**
@@ -805,11 +897,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV04> forSecuritiesBalanceAccountingReportV04 = new MMConstraint<SecuritiesBalanceAccountingReportV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceAccountingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV04 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV04(obj);
 		}
 	};
 	/**
@@ -835,11 +931,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV05> forSecuritiesBalanceAccountingReportV05 = new MMConstraint<SecuritiesBalanceAccountingReportV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceAccountingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV05 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV05(obj);
 		}
 	};
 	/**
@@ -874,12 +974,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV06> forSecuritiesBalanceAccountingReportV06 = new MMConstraint<SecuritiesBalanceAccountingReportV06>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceAccountingReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceAccountingReportV07);
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV06 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV06(obj);
 		}
 	};
 	/**
@@ -905,11 +1009,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV03> forSecuritiesBalanceCustodyReportV03 = new MMConstraint<SecuritiesBalanceCustodyReportV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceCustodyReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV03 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV03(obj);
 		}
 	};
 	/**
@@ -935,11 +1043,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV04> forSecuritiesBalanceCustodyReportV04 = new MMConstraint<SecuritiesBalanceCustodyReportV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceCustodyReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV04 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV04(obj);
 		}
 	};
 	/**
@@ -965,11 +1077,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV05> forSecuritiesBalanceCustodyReportV05 = new MMConstraint<SecuritiesBalanceCustodyReportV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceCustodyReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV05 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV05(obj);
 		}
 	};
 	/**
@@ -1004,12 +1120,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV06> forSecuritiesBalanceCustodyReportV06 = new MMConstraint<SecuritiesBalanceCustodyReportV06>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceCustodyReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceCustodyReportV07);
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV06 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV06(obj);
 		}
 	};
 	/**
@@ -1035,11 +1155,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesMessageCancellationAdviceV01> forSecuritiesMessageCancellationAdviceV01 = new MMConstraint<SecuritiesMessageCancellationAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesMessageCancellationAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesMessageCancellationAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesMessageCancellationAdviceV01 obj) throws Exception {
+			checkSecuritiesMessageCancellationAdviceV01(obj);
 		}
 	};
 	/**
@@ -1065,11 +1189,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesMessageCancellationAdviceV02> forSecuritiesMessageCancellationAdviceV02 = new MMConstraint<SecuritiesMessageCancellationAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesMessageCancellationAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesMessageCancellationAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesMessageCancellationAdviceV02 obj) throws Exception {
+			checkSecuritiesMessageCancellationAdviceV02(obj);
 		}
 	};
 	/**
@@ -1095,11 +1223,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesMessageCancellationAdviceV03> forSecuritiesMessageCancellationAdviceV03 = new MMConstraint<SecuritiesMessageCancellationAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesMessageCancellationAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesMessageCancellationAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesMessageCancellationAdviceV03 obj) throws Exception {
+			checkSecuritiesMessageCancellationAdviceV03(obj);
 		}
 	};
 	/**
@@ -1125,11 +1257,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV01> forSecuritiesTransactionPendingReportV01 = new MMConstraint<SecuritiesTransactionPendingReportV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPendingReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionPendingReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV01 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV01(obj);
 		}
 	};
 	/**
@@ -1155,11 +1291,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV02> forSecuritiesTransactionPendingReportV02 = new MMConstraint<SecuritiesTransactionPendingReportV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPendingReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionPendingReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV02 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV02(obj);
 		}
 	};
 	/**
@@ -1185,11 +1325,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV03> forSecuritiesTransactionPendingReportV03 = new MMConstraint<SecuritiesTransactionPendingReportV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPendingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionPendingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV03 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV03(obj);
 		}
 	};
 	/**
@@ -1224,12 +1368,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV04> forSecuritiesTransactionPendingReportV04 = new MMConstraint<SecuritiesTransactionPendingReportV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPendingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionPendingReportV05);
 			owner_lazy = () -> SecuritiesTransactionPendingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV04 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV04(obj);
 		}
 	};
 	/**
@@ -1255,11 +1403,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV01> forSecuritiesTransactionPostingReportV01 = new MMConstraint<SecuritiesTransactionPostingReportV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPostingReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionPostingReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV01 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV01(obj);
 		}
 	};
 	/**
@@ -1285,11 +1437,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV02> forSecuritiesTransactionPostingReportV02 = new MMConstraint<SecuritiesTransactionPostingReportV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPostingReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionPostingReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV02 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV02(obj);
 		}
 	};
 	/**
@@ -1315,11 +1471,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV03> forSecuritiesTransactionPostingReportV03 = new MMConstraint<SecuritiesTransactionPostingReportV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPostingReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionPostingReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV03 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV03(obj);
 		}
 	};
 	/**
@@ -1354,12 +1514,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV04> forSecuritiesTransactionPostingReportV04 = new MMConstraint<SecuritiesTransactionPostingReportV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPostingReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionPostingReportV05);
 			owner_lazy = () -> SecuritiesTransactionPostingReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV04 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV04(obj);
 		}
 	};
 	/**
@@ -1385,11 +1549,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementInstructionV01> forIntraPositionMovementInstructionV01 = new MMConstraint<IntraPositionMovementInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementInstructionV01 obj) throws Exception {
+			checkIntraPositionMovementInstructionV01(obj);
 		}
 	};
 	/**
@@ -1415,11 +1583,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementInstructionV02> forIntraPositionMovementInstructionV02 = new MMConstraint<IntraPositionMovementInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementInstructionV02 obj) throws Exception {
+			checkIntraPositionMovementInstructionV02(obj);
 		}
 	};
 	/**
@@ -1445,11 +1617,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementStatusAdviceV01> forIntraPositionMovementStatusAdviceV01 = new MMConstraint<IntraPositionMovementStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementStatusAdviceV01 obj) throws Exception {
+			checkIntraPositionMovementStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -1475,11 +1651,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementStatusAdviceV02> forIntraPositionMovementStatusAdviceV02 = new MMConstraint<IntraPositionMovementStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementStatusAdviceV02 obj) throws Exception {
+			checkIntraPositionMovementStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -1505,11 +1685,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV01> forSecuritiesSettlementTransactionAllegementReportV01 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAllegementReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV01(obj);
 		}
 	};
 	/**
@@ -1535,11 +1719,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV02> forSecuritiesSettlementTransactionAllegementReportV02 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAllegementReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV02(obj);
 		}
 	};
 	/**
@@ -1565,11 +1753,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV01> forSecuritiesStatementQueryV01 = new MMConstraint<SecuritiesStatementQueryV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesStatementQueryV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesStatementQueryV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV01 obj) throws Exception {
+			checkSecuritiesStatementQueryV01(obj);
 		}
 	};
 	/**
@@ -1595,11 +1787,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV02> forSecuritiesStatementQueryV02 = new MMConstraint<SecuritiesStatementQueryV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesStatementQueryV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesStatementQueryV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV02 obj) throws Exception {
+			checkSecuritiesStatementQueryV02(obj);
 		}
 	};
 	/**
@@ -1634,12 +1830,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV03> forSecuritiesSettlementTransactionAllegementReportV03 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAllegementReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAllegementReportV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV03(obj);
 		}
 	};
 	/**
@@ -1673,12 +1873,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV03> forSecuritiesStatementQueryV03 = new MMConstraint<SecuritiesStatementQueryV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesStatementQueryV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesStatementQueryV04);
 			owner_lazy = () -> SecuritiesStatementQueryV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV03 obj) throws Exception {
+			checkSecuritiesStatementQueryV03(obj);
 		}
 	};
 	/**
@@ -1704,11 +1908,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionMovementStatusAdviceV03> forIntraPositionMovementStatusAdviceV03 = new MMConstraint<IntraPositionMovementStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionMovementStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionMovementStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovementStatusAdviceV03 obj) throws Exception {
+			checkIntraPositionMovementStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -1749,13 +1957,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV05> forSecuritiesTransactionPendingReportV05 = new MMConstraint<SecuritiesTransactionPendingReportV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPendingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionPendingReportV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionPendingReportV04;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV05 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV05(obj);
 		}
 	};
 	/**
@@ -1787,12 +1999,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPostingReportV05> forSecuritiesTransactionPostingReportV05 = new MMConstraint<SecuritiesTransactionPostingReportV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPostingReportV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionPostingReportV04;
 			owner_lazy = () -> SecuritiesTransactionPostingReportV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPostingReportV05 obj) throws Exception {
+			checkSecuritiesTransactionPostingReportV05(obj);
 		}
 	};
 	/**
@@ -1833,13 +2049,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceCustodyReportV07> forSecuritiesBalanceCustodyReportV07 = new MMConstraint<SecuritiesBalanceCustodyReportV07>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceCustodyReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceCustodyReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceCustodyReportV06;
 			owner_lazy = () -> SecuritiesBalanceCustodyReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceCustodyReportV07 obj) throws Exception {
+			checkSecuritiesBalanceCustodyReportV07(obj);
 		}
 	};
 	/**
@@ -1880,13 +2100,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesBalanceAccountingReportV07> forSecuritiesBalanceAccountingReportV07 = new MMConstraint<SecuritiesBalanceAccountingReportV07>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesBalanceAccountingReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceAccountingReportV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesBalanceAccountingReportV06;
 			owner_lazy = () -> SecuritiesBalanceAccountingReportV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesBalanceAccountingReportV07 obj) throws Exception {
+			checkSecuritiesBalanceAccountingReportV07(obj);
 		}
 	};
 	/**
@@ -1918,12 +2142,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementReportV04> forSecuritiesSettlementTransactionAllegementReportV04 = new MMConstraint<SecuritiesSettlementTransactionAllegementReportV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAllegementReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAllegementReportV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementReportV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementReportV04(obj);
 		}
 	};
 	/**
@@ -1962,13 +2190,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesStatementQueryV04> forSecuritiesStatementQueryV04 = new MMConstraint<SecuritiesStatementQueryV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesStatementQueryV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesStatementQueryV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesStatementQueryV03;
 			owner_lazy = () -> SecuritiesStatementQueryV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatementQueryV04 obj) throws Exception {
+			checkSecuritiesStatementQueryV04(obj);
 		}
 	};
 	/**
@@ -2000,12 +2232,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionPendingReportV06> forSecuritiesTransactionPendingReportV06 = new MMConstraint<SecuritiesTransactionPendingReportV06>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionPendingReportV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionPendingReportV05;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionPendingReportV06 obj) throws Exception {
+			checkSecuritiesTransactionPendingReportV06(obj);
 		}
 	};
 	/**
@@ -2031,11 +2267,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV01> forSecuritiesFinancingConfirmationV01 = new MMConstraint<SecuritiesFinancingConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV01 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV01(obj);
 		}
 	};
 	/**
@@ -2061,11 +2301,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV02> forSecuritiesFinancingConfirmationV02 = new MMConstraint<SecuritiesFinancingConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV02 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV02(obj);
 		}
 	};
 	/**
@@ -2091,11 +2335,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV03> forSecuritiesFinancingConfirmationV03 = new MMConstraint<SecuritiesFinancingConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV03 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV03(obj);
 		}
 	};
 	/**
@@ -2130,12 +2378,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV04> forSecuritiesFinancingConfirmationV04 = new MMConstraint<SecuritiesFinancingConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingConfirmationV05);
 			owner_lazy = () -> SecuritiesFinancingConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV04 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV04(obj);
 		}
 	};
 	/**
@@ -2161,11 +2413,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV01> forSecuritiesFinancingInstructionV01 = new MMConstraint<SecuritiesFinancingInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV01 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV01(obj);
 		}
 	};
 	/**
@@ -2191,11 +2447,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV02> forSecuritiesFinancingInstructionV02 = new MMConstraint<SecuritiesFinancingInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV02 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV02(obj);
 		}
 	};
 	/**
@@ -2221,11 +2481,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV03> forSecuritiesFinancingInstructionV03 = new MMConstraint<SecuritiesFinancingInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV03 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV03(obj);
 		}
 	};
 	/**
@@ -2251,11 +2515,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV01> forSecuritiesSettlementConditionModificationStatusAdviceV01 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionModificationStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -2281,11 +2549,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV02> forSecuritiesSettlementConditionModificationStatusAdviceV02 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionModificationStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -2311,11 +2583,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV03> forSecuritiesSettlementConditionModificationStatusAdviceV03 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionModificationStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -2350,12 +2626,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV04> forSecuritiesSettlementConditionModificationStatusAdviceV04 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionModificationStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementConditionModificationStatusAdviceV05);
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -2381,11 +2661,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV01> forSecuritiesSettlementConditionsModificationRequestV01 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionsModificationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV01 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV01(obj);
 		}
 	};
 	/**
@@ -2411,11 +2695,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV02> forSecuritiesSettlementConditionsModificationRequestV02 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionsModificationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV02 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV02(obj);
 		}
 	};
 	/**
@@ -2441,11 +2729,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV03> forSecuritiesSettlementConditionsModificationRequestV03 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionsModificationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV03 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV03(obj);
 		}
 	};
 	/**
@@ -2480,12 +2772,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV04> forSecuritiesSettlementConditionsModificationRequestV04 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionsModificationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementConditionsModificationRequestV05);
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV04 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV04(obj);
 		}
 	};
 	/**
@@ -2511,11 +2807,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV01> forSecuritiesSettlementTransactionConfirmationV01 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV01(obj);
 		}
 	};
 	/**
@@ -2541,11 +2841,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV02> forSecuritiesSettlementTransactionConfirmationV02 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV02(obj);
 		}
 	};
 	/**
@@ -2571,11 +2875,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV03> forSecuritiesSettlementTransactionConfirmationV03 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV03(obj);
 		}
 	};
 	/**
@@ -2610,12 +2918,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV04> forSecuritiesSettlementTransactionConfirmationV04 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionConfirmationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV04(obj);
 		}
 	};
 	/**
@@ -2641,11 +2953,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV01> forSecuritiesSettlementTransactionGenerationNotificationV01 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionGenerationNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV01(obj);
 		}
 	};
 	/**
@@ -2671,11 +2987,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV02> forSecuritiesSettlementTransactionGenerationNotificationV02 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionGenerationNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV02(obj);
 		}
 	};
 	/**
@@ -2701,11 +3021,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV03> forSecuritiesSettlementTransactionGenerationNotificationV03 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionGenerationNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV03(obj);
 		}
 	};
 	/**
@@ -2740,12 +3064,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV04> forSecuritiesSettlementTransactionGenerationNotificationV04 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionGenerationNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionGenerationNotificationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV04(obj);
 		}
 	};
 	/**
@@ -2771,11 +3099,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV01> forSecuritiesSettlementTransactionInstructionV01 = new MMConstraint<SecuritiesSettlementTransactionInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV01(obj);
 		}
 	};
 	/**
@@ -2801,11 +3133,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV02> forSecuritiesSettlementTransactionInstructionV02 = new MMConstraint<SecuritiesSettlementTransactionInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV02(obj);
 		}
 	};
 	/**
@@ -2831,11 +3167,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV03> forSecuritiesSettlementTransactionInstructionV03 = new MMConstraint<SecuritiesSettlementTransactionInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV03(obj);
 		}
 	};
 	/**
@@ -2870,12 +3210,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV04> forSecuritiesSettlementTransactionInstructionV04 = new MMConstraint<SecuritiesSettlementTransactionInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionInstructionV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV04(obj);
 		}
 	};
 	/**
@@ -2901,11 +3245,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01> forSecuritiesSettlementTransactionStatusAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -2931,11 +3279,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02> forSecuritiesSettlementTransactionStatusAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -2961,11 +3313,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03> forSecuritiesSettlementTransactionStatusAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -3000,12 +3356,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04> forSecuritiesSettlementTransactionStatusAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionStatusAdviceV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -3040,12 +3400,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV04> forSecuritiesFinancingInstructionV04 = new MMConstraint<SecuritiesFinancingInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingInstructionV05);
 			owner_lazy = () -> SecuritiesFinancingInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV04 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV04(obj);
 		}
 	};
 	/**
@@ -3071,11 +3435,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV01> forPortfolioTransferNotificationV01 = new MMConstraint<PortfolioTransferNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPortfolioTransferNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PortfolioTransferNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV01 obj) throws Exception {
+			checkPortfolioTransferNotificationV01(obj);
 		}
 	};
 	/**
@@ -3101,11 +3469,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV02> forPortfolioTransferNotificationV02 = new MMConstraint<PortfolioTransferNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPortfolioTransferNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PortfolioTransferNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV02 obj) throws Exception {
+			checkPortfolioTransferNotificationV02(obj);
 		}
 	};
 	/**
@@ -3131,11 +3503,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV01> forSecuritiesFinancingModificationInstructionV01 = new MMConstraint<SecuritiesFinancingModificationInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingModificationInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV01 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV01(obj);
 		}
 	};
 	/**
@@ -3161,11 +3537,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV02> forSecuritiesFinancingModificationInstructionV02 = new MMConstraint<SecuritiesFinancingModificationInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingModificationInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV02 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV02(obj);
 		}
 	};
 	/**
@@ -3191,11 +3571,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV01> forSecuritiesFinancingStatusAdviceV01 = new MMConstraint<SecuritiesFinancingStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -3221,11 +3605,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV02> forSecuritiesFinancingStatusAdviceV02 = new MMConstraint<SecuritiesFinancingStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -3251,11 +3639,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV01> forSecuritiesSettlementAllegementRemovalAdviceV01 = new MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementAllegementRemovalAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementAllegementRemovalAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementAllegementRemovalAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementAllegementRemovalAdviceV01(obj);
 		}
 	};
 	/**
@@ -3281,11 +3673,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV02> forSecuritiesSettlementAllegementRemovalAdviceV02 = new MMConstraint<SecuritiesSettlementAllegementRemovalAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementAllegementRemovalAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementAllegementRemovalAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementAllegementRemovalAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementAllegementRemovalAdviceV02(obj);
 		}
 	};
 	/**
@@ -3311,11 +3707,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01> forSecuritiesSettlementTransactionAllegementNotificationV01 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAllegementNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV01(obj);
 		}
 	};
 	/**
@@ -3341,11 +3741,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02> forSecuritiesSettlementTransactionAllegementNotificationV02 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAllegementNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV02(obj);
 		}
 	};
 	/**
@@ -3371,11 +3775,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV01> forSecuritiesSettlementTransactionReversalAdviceV01 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionReversalAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV01 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV01(obj);
 		}
 	};
 	/**
@@ -3401,11 +3809,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV02> forSecuritiesSettlementTransactionReversalAdviceV02 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionReversalAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV02 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV02(obj);
 		}
 	};
 	/**
@@ -3431,11 +3843,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV01> forSecuritiesStatusOrStatementQueryStatusAdviceV01 = new MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesStatusOrStatementQueryStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesStatusOrStatementQueryStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatusOrStatementQueryStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesStatusOrStatementQueryStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -3461,11 +3877,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV02> forSecuritiesStatusOrStatementQueryStatusAdviceV02 = new MMConstraint<SecuritiesStatusOrStatementQueryStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesStatusOrStatementQueryStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesStatusOrStatementQueryStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesStatusOrStatementQueryStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesStatusOrStatementQueryStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -3491,11 +3911,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV01> forSecuritiesTransactionCancellationRequestStatusAdviceV01 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionCancellationRequestStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV01 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -3521,11 +3945,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV02> forSecuritiesTransactionCancellationRequestStatusAdviceV02 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionCancellationRequestStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV02 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -3551,11 +3979,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV01> forSecuritiesTransactionCancellationRequestV01 = new MMConstraint<SecuritiesTransactionCancellationRequestV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV01 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -3581,11 +4013,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV02> forSecuritiesTransactionCancellationRequestV02 = new MMConstraint<SecuritiesTransactionCancellationRequestV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionCancellationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV02 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV02(obj);
 		}
 	};
 	/**
@@ -3611,11 +4047,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionStatusQueryV01> forSecuritiesTransactionStatusQueryV01 = new MMConstraint<SecuritiesTransactionStatusQueryV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionStatusQueryV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionStatusQueryV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionStatusQueryV01 obj) throws Exception {
+			checkSecuritiesTransactionStatusQueryV01(obj);
 		}
 	};
 	/**
@@ -3641,11 +4081,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionStatusQueryV02> forSecuritiesTransactionStatusQueryV02 = new MMConstraint<SecuritiesTransactionStatusQueryV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionStatusQueryV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTransactionStatusQueryV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionStatusQueryV02 obj) throws Exception {
+			checkSecuritiesTransactionStatusQueryV02(obj);
 		}
 	};
 	/**
@@ -3680,12 +4124,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV03> forSecuritiesFinancingModificationInstructionV03 = new MMConstraint<SecuritiesFinancingModificationInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingModificationInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingModificationInstructionV04);
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV03 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV03(obj);
 		}
 	};
 	/**
@@ -3720,12 +4168,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV03> forSecuritiesFinancingStatusAdviceV03 = new MMConstraint<SecuritiesFinancingStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingStatusAdviceV04);
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -3760,12 +4212,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV03> forSecuritiesSettlementTransactionAllegementNotificationV03 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAllegementNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAllegementNotificationV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV03(obj);
 		}
 	};
 	/**
@@ -3800,12 +4256,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV03> forSecuritiesSettlementTransactionReversalAdviceV03 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionReversalAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionReversalAdviceV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV03 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV03(obj);
 		}
 	};
 	/**
@@ -3840,12 +4300,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestV03> forSecuritiesTransactionCancellationRequestV03 = new MMConstraint<SecuritiesTransactionCancellationRequestV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionCancellationRequestV04);
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestV03 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -3880,12 +4344,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV03> forSecuritiesTransactionCancellationRequestStatusAdviceV03 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTransactionCancellationRequestStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionCancellationRequestStatusAdviceV04);
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTransactionCancellationRequestStatusAdviceV03 obj) throws Exception {
+			checkSecuritiesTransactionCancellationRequestStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -3911,11 +4379,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PortfolioTransferNotificationV03> forPortfolioTransferNotificationV03 = new MMConstraint<PortfolioTransferNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPortfolioTransferNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PortfolioTransferNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PortfolioTransferNotificationV03 obj) throws Exception {
+			checkPortfolioTransferNotificationV03(obj);
 		}
 	};
 	/**
@@ -3947,12 +4419,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV04> forSecuritiesSettlementTransactionAllegementNotificationV04 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionAllegementNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionAllegementNotificationV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionAllegementNotificationV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionAllegementNotificationV04(obj);
 		}
 	};
 	/**
@@ -3993,13 +4469,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV04> forSecuritiesFinancingStatusAdviceV04 = new MMConstraint<SecuritiesFinancingStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingStatusAdviceV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingStatusAdviceV03;
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV04 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -4031,12 +4511,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingConfirmationV05> forSecuritiesFinancingConfirmationV05 = new MMConstraint<SecuritiesFinancingConfirmationV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingConfirmationV04;
 			owner_lazy = () -> SecuritiesFinancingConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingConfirmationV05 obj) throws Exception {
+			checkSecuritiesFinancingConfirmationV05(obj);
 		}
 	};
 	/**
@@ -4068,12 +4552,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV05> forSecuritiesSettlementTransactionGenerationNotificationV05 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionGenerationNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionGenerationNotificationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionGenerationNotificationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionGenerationNotificationV05(obj);
 		}
 	};
 	/**
@@ -4105,12 +4593,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionReversalAdviceV04> forSecuritiesSettlementTransactionReversalAdviceV04 = new MMConstraint<SecuritiesSettlementTransactionReversalAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionReversalAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionReversalAdviceV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionReversalAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionReversalAdviceV04 obj) throws Exception {
+			checkSecuritiesSettlementTransactionReversalAdviceV04(obj);
 		}
 	};
 	/**
@@ -4142,12 +4634,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingInstructionV05> forSecuritiesFinancingInstructionV05 = new MMConstraint<SecuritiesFinancingInstructionV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingInstructionV04;
 			owner_lazy = () -> SecuritiesFinancingInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingInstructionV05 obj) throws Exception {
+			checkSecuritiesFinancingInstructionV05(obj);
 		}
 	};
 	/**
@@ -4179,12 +4675,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV05> forSecuritiesSettlementTransactionInstructionV05 = new MMConstraint<SecuritiesSettlementTransactionInstructionV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionInstructionV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionInstructionV05(obj);
 		}
 	};
 	/**
@@ -4216,12 +4716,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV05> forSecuritiesSettlementTransactionConfirmationV05 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionConfirmationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionConfirmationV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionConfirmationV05(obj);
 		}
 	};
 	/**
@@ -4262,13 +4766,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV05> forSecuritiesSettlementConditionModificationStatusAdviceV05 = new MMConstraint<SecuritiesSettlementConditionModificationStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionModificationStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementConditionModificationStatusAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementConditionModificationStatusAdviceV04;
 			owner_lazy = () -> SecuritiesSettlementConditionModificationStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionModificationStatusAdviceV05 obj) throws Exception {
+			checkSecuritiesSettlementConditionModificationStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -4300,12 +4808,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingModificationInstructionV04> forSecuritiesFinancingModificationInstructionV04 = new MMConstraint<SecuritiesFinancingModificationInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingModificationInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingModificationInstructionV03;
 			owner_lazy = () -> SecuritiesFinancingModificationInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingModificationInstructionV04 obj) throws Exception {
+			checkSecuritiesFinancingModificationInstructionV04(obj);
 		}
 	};
 	/**
@@ -4337,12 +4849,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV05> forSecuritiesSettlementConditionsModificationRequestV05 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementConditionsModificationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementConditionsModificationRequestV04;
 			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementConditionsModificationRequestV05 obj) throws Exception {
+			checkSecuritiesSettlementConditionsModificationRequestV05(obj);
 		}
 	};
 	/**
@@ -4383,13 +4899,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05> forSecuritiesSettlementTransactionStatusAdviceV05 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionStatusAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionStatusAdviceV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV05 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -4421,12 +4941,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingStatusAdviceV05> forSecuritiesFinancingStatusAdviceV05 = new MMConstraint<SecuritiesFinancingStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingStatusAdviceV04;
 			owner_lazy = () -> SecuritiesFinancingStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingStatusAdviceV05 obj) throws Exception {
+			checkSecuritiesFinancingStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -4458,12 +4982,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06> forSecuritiesSettlementTransactionStatusAdviceV06 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesSettlementTransactionStatusAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesSettlementTransactionStatusAdviceV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactionStatusAdviceV06 obj) throws Exception {
+			checkSecuritiesSettlementTransactionStatusAdviceV06(obj);
 		}
 	};
 	/**
@@ -4489,11 +5017,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV01> forCorporateActionCancellationAdviceV01 = new MMConstraint<CorporateActionCancellationAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionCancellationAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionCancellationAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV01 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV01(obj);
 		}
 	};
 	/**
@@ -4519,11 +5051,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV02> forCorporateActionCancellationAdviceV02 = new MMConstraint<CorporateActionCancellationAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionCancellationAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionCancellationAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV02 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV02(obj);
 		}
 	};
 	/**
@@ -4549,11 +5085,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV03> forCorporateActionCancellationAdviceV03 = new MMConstraint<CorporateActionCancellationAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionCancellationAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionCancellationAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV03 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV03(obj);
 		}
 	};
 	/**
@@ -4588,12 +5128,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV04> forCorporateActionCancellationAdviceV04 = new MMConstraint<CorporateActionCancellationAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionCancellationAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionCancellationAdviceV05);
 			owner_lazy = () -> CorporateActionCancellationAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV04 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV04(obj);
 		}
 	};
 	/**
@@ -4619,11 +5163,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionEventProcessingStatusAdviceV01> forCorporateActionEventProcessingStatusAdviceV01 = new MMConstraint<CorporateActionEventProcessingStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionEventProcessingStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionEventProcessingStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventProcessingStatusAdviceV01 obj) throws Exception {
+			checkCorporateActionEventProcessingStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -4649,11 +5197,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionEventProcessingStatusAdviceV02> forCorporateActionEventProcessingStatusAdviceV02 = new MMConstraint<CorporateActionEventProcessingStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionEventProcessingStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionEventProcessingStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventProcessingStatusAdviceV02 obj) throws Exception {
+			checkCorporateActionEventProcessingStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -4679,11 +5231,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionEventProcessingStatusAdviceV03> forCorporateActionEventProcessingStatusAdviceV03 = new MMConstraint<CorporateActionEventProcessingStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionEventProcessingStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionEventProcessingStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventProcessingStatusAdviceV03 obj) throws Exception {
+			checkCorporateActionEventProcessingStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -4709,11 +5265,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionEventProcessingStatusAdviceV04> forCorporateActionEventProcessingStatusAdviceV04 = new MMConstraint<CorporateActionEventProcessingStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionEventProcessingStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionEventProcessingStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventProcessingStatusAdviceV04 obj) throws Exception {
+			checkCorporateActionEventProcessingStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -4739,11 +5299,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV01> forCorporateActionInstructionV01 = new MMConstraint<CorporateActionInstructionV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV01 obj) throws Exception {
+			checkCorporateActionInstructionV01(obj);
 		}
 	};
 	/**
@@ -4769,11 +5333,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV02> forCorporateActionInstructionV02 = new MMConstraint<CorporateActionInstructionV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV02 obj) throws Exception {
+			checkCorporateActionInstructionV02(obj);
 		}
 	};
 	/**
@@ -4799,11 +5367,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV03> forCorporateActionInstructionV03 = new MMConstraint<CorporateActionInstructionV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV03 obj) throws Exception {
+			checkCorporateActionInstructionV03(obj);
 		}
 	};
 	/**
@@ -4838,12 +5410,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV04> forCorporateActionInstructionV04 = new MMConstraint<CorporateActionInstructionV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionV05);
 			owner_lazy = () -> CorporateActionInstructionV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV04 obj) throws Exception {
+			checkCorporateActionInstructionV04(obj);
 		}
 	};
 	/**
@@ -4869,11 +5445,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV01> forCorporateActionInstructionCancellationRequestV01 = new MMConstraint<CorporateActionInstructionCancellationRequestV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV01 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV01(obj);
 		}
 	};
 	/**
@@ -4899,11 +5479,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV02> forCorporateActionInstructionCancellationRequestV02 = new MMConstraint<CorporateActionInstructionCancellationRequestV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV02 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV02(obj);
 		}
 	};
 	/**
@@ -4929,11 +5513,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV03> forCorporateActionInstructionCancellationRequestV03 = new MMConstraint<CorporateActionInstructionCancellationRequestV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV03 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV03(obj);
 		}
 	};
 	/**
@@ -4968,12 +5556,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV04> forCorporateActionInstructionCancellationRequestV04 = new MMConstraint<CorporateActionInstructionCancellationRequestV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionCancellationRequestV05);
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV04 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV04(obj);
 		}
 	};
 	/**
@@ -4999,11 +5591,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV01> forCorporateActionInstructionCancellationRequestStatusAdviceV01 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV01 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -5029,11 +5625,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV02> forCorporateActionInstructionCancellationRequestStatusAdviceV02 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV02 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -5059,11 +5659,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV03> forCorporateActionInstructionCancellationRequestStatusAdviceV03 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV03 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -5098,12 +5702,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV04> forCorporateActionInstructionCancellationRequestStatusAdviceV04 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV05);
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV04 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -5129,11 +5737,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV01> forCorporateActionInstructionStatementReportV01 = new MMConstraint<CorporateActionInstructionStatementReportV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatementReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV01 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV01(obj);
 		}
 	};
 	/**
@@ -5159,11 +5771,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV02> forCorporateActionInstructionStatementReportV02 = new MMConstraint<CorporateActionInstructionStatementReportV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatementReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV02 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV02(obj);
 		}
 	};
 	/**
@@ -5189,11 +5805,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV03> forCorporateActionInstructionStatementReportV03 = new MMConstraint<CorporateActionInstructionStatementReportV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatementReportV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV03 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV03(obj);
 		}
 	};
 	/**
@@ -5219,11 +5839,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatementReportV04> forCorporateActionInstructionStatementReportV04 = new MMConstraint<CorporateActionInstructionStatementReportV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatementReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionStatementReportV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatementReportV04 obj) throws Exception {
+			checkCorporateActionInstructionStatementReportV04(obj);
 		}
 	};
 	/**
@@ -5249,11 +5873,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV01> forCorporateActionInstructionStatusAdviceV01 = new MMConstraint<CorporateActionInstructionStatusAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatusAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV01 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV01(obj);
 		}
 	};
 	/**
@@ -5279,11 +5907,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV02> forCorporateActionInstructionStatusAdviceV02 = new MMConstraint<CorporateActionInstructionStatusAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatusAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV02 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV02(obj);
 		}
 	};
 	/**
@@ -5309,11 +5941,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV03> forCorporateActionInstructionStatusAdviceV03 = new MMConstraint<CorporateActionInstructionStatusAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatusAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV03 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV03(obj);
 		}
 	};
 	/**
@@ -5348,12 +5984,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV04> forCorporateActionInstructionStatusAdviceV04 = new MMConstraint<CorporateActionInstructionStatusAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatusAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionStatusAdviceV05);
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV04 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV04(obj);
 		}
 	};
 	/**
@@ -5379,11 +6019,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV01> forCorporateActionMovementConfirmationV01 = new MMConstraint<CorporateActionMovementConfirmationV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementConfirmationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV01 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV01(obj);
 		}
 	};
 	/**
@@ -5409,11 +6053,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV02> forCorporateActionMovementConfirmationV02 = new MMConstraint<CorporateActionMovementConfirmationV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementConfirmationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV02 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV02(obj);
 		}
 	};
 	/**
@@ -5439,11 +6087,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV03> forCorporateActionMovementConfirmationV03 = new MMConstraint<CorporateActionMovementConfirmationV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementConfirmationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV03 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV03(obj);
 		}
 	};
 	/**
@@ -5478,12 +6130,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV04> forCorporateActionMovementConfirmationV04 = new MMConstraint<CorporateActionMovementConfirmationV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementConfirmationV05);
 			owner_lazy = () -> CorporateActionMovementConfirmationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV04 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV04(obj);
 		}
 	};
 	/**
@@ -5509,11 +6165,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV01> forCorporateActionMovementPreliminaryAdviceV01 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV01 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV01(obj);
 		}
 	};
 	/**
@@ -5539,11 +6199,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV02> forCorporateActionMovementPreliminaryAdviceV02 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV02 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV02(obj);
 		}
 	};
 	/**
@@ -5569,11 +6233,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV03> forCorporateActionMovementPreliminaryAdviceV03 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV03 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV03(obj);
 		}
 	};
 	/**
@@ -5608,12 +6276,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV04> forCorporateActionMovementPreliminaryAdviceV04 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementPreliminaryAdviceV05);
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV04 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV04(obj);
 		}
 	};
 	/**
@@ -5639,11 +6311,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV01> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV01 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV01 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV01(obj);
 		}
 	};
 	/**
@@ -5669,11 +6345,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV02> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV02 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV02 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV02(obj);
 		}
 	};
 	/**
@@ -5699,11 +6379,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV03> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV03 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV03(obj);
 		}
 	};
 	/**
@@ -5738,12 +6422,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV04> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV04 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementPreliminaryAdviceCancellationAdviceV05);
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV04 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV04(obj);
 		}
 	};
 	/**
@@ -5769,11 +6457,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV01> forCorporateActionMovementReversalAdviceV01 = new MMConstraint<CorporateActionMovementReversalAdviceV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementReversalAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV01 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV01(obj);
 		}
 	};
 	/**
@@ -5799,11 +6491,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV02> forCorporateActionMovementReversalAdviceV02 = new MMConstraint<CorporateActionMovementReversalAdviceV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementReversalAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV02 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV02(obj);
 		}
 	};
 	/**
@@ -5829,11 +6525,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV03> forCorporateActionMovementReversalAdviceV03 = new MMConstraint<CorporateActionMovementReversalAdviceV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementReversalAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV03 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV03(obj);
 		}
 	};
 	/**
@@ -5868,12 +6568,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV04> forCorporateActionMovementReversalAdviceV04 = new MMConstraint<CorporateActionMovementReversalAdviceV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementReversalAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementReversalAdviceV05);
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV04 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV04(obj);
 		}
 	};
 	/**
@@ -5899,11 +6603,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV01> forCorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV01 obj) throws Exception {
+			checkCorporateActionNotificationV01(obj);
 		}
 	};
 	/**
@@ -5929,11 +6637,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV02> forCorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV02 obj) throws Exception {
+			checkCorporateActionNotificationV02(obj);
 		}
 	};
 	/**
@@ -5959,11 +6671,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV03> forCorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV03 obj) throws Exception {
+			checkCorporateActionNotificationV03(obj);
 		}
 	};
 	/**
@@ -5998,12 +6714,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionNotificationV05);
 			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
+			checkCorporateActionNotificationV04(obj);
 		}
 	};
 	/**
@@ -6029,11 +6749,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrativeV01> forCorporateActionNarrativeV01 = new MMConstraint<CorporateActionNarrativeV01>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionNarrativeV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionNarrativeV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrativeV01 obj) throws Exception {
+			checkCorporateActionNarrativeV01(obj);
 		}
 	};
 	/**
@@ -6059,11 +6783,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionNarrativeV02> forCorporateActionNarrativeV02 = new MMConstraint<CorporateActionNarrativeV02>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionNarrativeV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionNarrativeV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNarrativeV02 obj) throws Exception {
+			checkCorporateActionNarrativeV02(obj);
 		}
 	};
 	/**
@@ -6095,12 +6823,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV05> forCorporateActionMovementPreliminaryAdviceCancellationAdviceV05 = new MMConstraint<CorporateActionMovementPreliminaryAdviceCancellationAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementPreliminaryAdviceCancellationAdviceV04;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceCancellationAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceCancellationAdviceV05 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceCancellationAdviceV05(obj);
 		}
 	};
 	/**
@@ -6132,12 +6864,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionCancellationAdviceV05> forCorporateActionCancellationAdviceV05 = new MMConstraint<CorporateActionCancellationAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionCancellationAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionCancellationAdviceV04;
 			owner_lazy = () -> CorporateActionCancellationAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionCancellationAdviceV05 obj) throws Exception {
+			checkCorporateActionCancellationAdviceV05(obj);
 		}
 	};
 	/**
@@ -6178,13 +6914,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV05> forCorporateActionMovementConfirmationV05 = new MMConstraint<CorporateActionMovementConfirmationV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementConfirmationV04;
 			owner_lazy = () -> CorporateActionMovementConfirmationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV05 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV05(obj);
 		}
 	};
 	/**
@@ -6216,12 +6956,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV05> forCorporateActionNotificationV05 = new MMConstraint<CorporateActionNotificationV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionNotificationV04;
 			owner_lazy = () -> CorporateActionNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV05 obj) throws Exception {
+			checkCorporateActionNotificationV05(obj);
 		}
 	};
 	/**
@@ -6262,13 +7006,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV05> forCorporateActionInstructionStatusAdviceV05 = new MMConstraint<CorporateActionInstructionStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionStatusAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionStatusAdviceV04;
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV05 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -6309,13 +7057,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV05> forCorporateActionMovementPreliminaryAdviceV05 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementPreliminaryAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementPreliminaryAdviceV04;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV05 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV05(obj);
 		}
 	};
 	/**
@@ -6347,12 +7099,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionV05> forCorporateActionInstructionV05 = new MMConstraint<CorporateActionInstructionV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionV04;
 			owner_lazy = () -> CorporateActionInstructionV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionV05 obj) throws Exception {
+			checkCorporateActionInstructionV05(obj);
 		}
 	};
 	/**
@@ -6393,13 +7149,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV05> forCorporateActionMovementReversalAdviceV05 = new MMConstraint<CorporateActionMovementReversalAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementReversalAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementReversalAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementReversalAdviceV04;
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV05 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV05(obj);
 		}
 	};
 	/**
@@ -6431,12 +7191,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestV05> forCorporateActionInstructionCancellationRequestV05 = new MMConstraint<CorporateActionInstructionCancellationRequestV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionCancellationRequestV04;
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestV05 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestV05(obj);
 		}
 	};
 	/**
@@ -6468,12 +7232,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementConfirmationV06> forCorporateActionMovementConfirmationV06 = new MMConstraint<CorporateActionMovementConfirmationV06>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementConfirmationV05;
 			owner_lazy = () -> CorporateActionMovementConfirmationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementConfirmationV06 obj) throws Exception {
+			checkCorporateActionMovementConfirmationV06(obj);
 		}
 	};
 	/**
@@ -6505,12 +7273,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV05> forCorporateActionInstructionCancellationRequestStatusAdviceV05 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV05>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV04;
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionCancellationRequestStatusAdviceV05 obj) throws Exception {
+			checkCorporateActionInstructionCancellationRequestStatusAdviceV05(obj);
 		}
 	};
 	/**
@@ -6542,12 +7314,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionInstructionStatusAdviceV06> forCorporateActionInstructionStatusAdviceV06 = new MMConstraint<CorporateActionInstructionStatusAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionInstructionStatusAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionInstructionStatusAdviceV05;
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionInstructionStatusAdviceV06 obj) throws Exception {
+			checkCorporateActionInstructionStatusAdviceV06(obj);
 		}
 	};
 	/**
@@ -6579,12 +7355,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV06> forCorporateActionMovementPreliminaryAdviceV06 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementPreliminaryAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementPreliminaryAdviceV05;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementPreliminaryAdviceV06 obj) throws Exception {
+			checkCorporateActionMovementPreliminaryAdviceV06(obj);
 		}
 	};
 	/**
@@ -6616,12 +7396,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionMovementReversalAdviceV06> forCorporateActionMovementReversalAdviceV06 = new MMConstraint<CorporateActionMovementReversalAdviceV06>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionMovementReversalAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementReversalAdviceV05;
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionMovementReversalAdviceV06 obj) throws Exception {
+			checkCorporateActionMovementReversalAdviceV06(obj);
 		}
 	};
 	/**
@@ -6647,11 +7431,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification1> forIdentification1 = new MMConstraint<Identification1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Identification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification1 obj) throws Exception {
+			checkIdentification1(obj);
 		}
 	};
 	/**
@@ -6677,11 +7465,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications3> forTransactionIdentifications3 = new MMConstraint<TransactionIdentifications3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications3 obj) throws Exception {
+			checkTransactionIdentifications3(obj);
 		}
 	};
 	/**
@@ -6707,11 +7499,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications10> forTransactionIdentifications10 = new MMConstraint<TransactionIdentifications10>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications10 obj) throws Exception {
+			checkTransactionIdentifications10(obj);
 		}
 	};
 	/**
@@ -6737,11 +7533,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications15> forTransactionIdentifications15 = new MMConstraint<TransactionIdentifications15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications15 obj) throws Exception {
+			checkTransactionIdentifications15(obj);
 		}
 	};
 	/**
@@ -6767,11 +7567,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification4> forIdentification4 = new MMConstraint<Identification4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Identification4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification4 obj) throws Exception {
+			checkIdentification4(obj);
 		}
 	};
 	/**
@@ -6797,11 +7601,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications19> forTransactionIdentifications19 = new MMConstraint<TransactionIdentifications19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications19 obj) throws Exception {
+			checkTransactionIdentifications19(obj);
 		}
 	};
 	/**
@@ -6827,11 +7635,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification3> forSettlementTypeAndIdentification3 = new MMConstraint<SettlementTypeAndIdentification3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification3 obj) throws Exception {
+			checkSettlementTypeAndIdentification3(obj);
 		}
 	};
 	/**
@@ -6857,11 +7669,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification36> forPartyIdentification36 = new MMConstraint<PartyIdentification36>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification36 obj) throws Exception {
+			checkPartyIdentification36(obj);
 		}
 	};
 	/**
@@ -6887,11 +7703,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount16> forPartyIdentificationAndAccount16 = new MMConstraint<PartyIdentificationAndAccount16>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount16 obj) throws Exception {
+			checkPartyIdentificationAndAccount16(obj);
 		}
 	};
 	/**
@@ -6917,11 +7737,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification46> forPartyIdentification46 = new MMConstraint<PartyIdentification46>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification46 obj) throws Exception {
+			checkPartyIdentification46(obj);
 		}
 	};
 	/**
@@ -6947,11 +7771,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount44> forPartyIdentificationAndAccount44 = new MMConstraint<PartyIdentificationAndAccount44>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount44 obj) throws Exception {
+			checkPartyIdentificationAndAccount44(obj);
 		}
 	};
 	/**
@@ -6977,11 +7805,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters6> forSettlementTypeAndAdditionalParameters6 = new MMConstraint<SettlementTypeAndAdditionalParameters6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters6 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters6(obj);
 		}
 	};
 	/**
@@ -7007,11 +7839,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References1Choice> forReferences1Choice = new MMConstraint<References1Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References1Choice obj) throws Exception {
+			checkReferences1Choice(obj);
 		}
 	};
 	/**
@@ -7045,12 +7881,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails25> forSecuritiesTradeDetails25 = new MMConstraint<SecuritiesTradeDetails25>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails32);
 			owner_lazy = () -> SecuritiesTradeDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails25 obj) throws Exception {
+			checkSecuritiesTradeDetails25(obj);
 		}
 	};
 	/**
@@ -7076,11 +7916,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount1> forPartyIdentificationAndAccount1 = new MMConstraint<PartyIdentificationAndAccount1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount1 obj) throws Exception {
+			checkPartyIdentificationAndAccount1(obj);
 		}
 	};
 	/**
@@ -7106,11 +7950,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification2> forPartyIdentification2 = new MMConstraint<PartyIdentification2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification2 obj) throws Exception {
+			checkPartyIdentification2(obj);
 		}
 	};
 	/**
@@ -7136,11 +7984,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount42> forPartyIdentificationAndAccount42 = new MMConstraint<PartyIdentificationAndAccount42>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount42 obj) throws Exception {
+			checkPartyIdentificationAndAccount42(obj);
 		}
 	};
 	/**
@@ -7166,11 +8018,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification48> forPartyIdentification48 = new MMConstraint<PartyIdentification48>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification48.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification48 obj) throws Exception {
+			checkPartyIdentification48(obj);
 		}
 	};
 	/**
@@ -7196,11 +8052,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount19> forPartyIdentificationAndAccount19 = new MMConstraint<PartyIdentificationAndAccount19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount19 obj) throws Exception {
+			checkPartyIdentificationAndAccount19(obj);
 		}
 	};
 	/**
@@ -7226,11 +8086,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount21> forPartyIdentificationAndAccount21 = new MMConstraint<PartyIdentificationAndAccount21>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount21 obj) throws Exception {
+			checkPartyIdentificationAndAccount21(obj);
 		}
 	};
 	/**
@@ -7256,11 +8120,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount40> forPartyIdentificationAndAccount40 = new MMConstraint<PartyIdentificationAndAccount40>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount40 obj) throws Exception {
+			checkPartyIdentificationAndAccount40(obj);
 		}
 	};
 	/**
@@ -7286,11 +8154,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount41> forPartyIdentificationAndAccount41 = new MMConstraint<PartyIdentificationAndAccount41>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount41 obj) throws Exception {
+			checkPartyIdentificationAndAccount41(obj);
 		}
 	};
 	/**
@@ -7316,11 +8188,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount81> forPartyIdentificationAndAccount81 = new MMConstraint<PartyIdentificationAndAccount81>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount81;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount81.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount81 obj) throws Exception {
+			checkPartyIdentificationAndAccount81(obj);
 		}
 	};
 	/**
@@ -7346,11 +8222,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount86> forPartyIdentificationAndAccount86 = new MMConstraint<PartyIdentificationAndAccount86>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount86;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount86.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount86 obj) throws Exception {
+			checkPartyIdentificationAndAccount86(obj);
 		}
 	};
 	/**
@@ -7376,11 +8256,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<RegistrationParameters1> forRegistrationParameters1 = new MMConstraint<RegistrationParameters1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkRegistrationParameters1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> RegistrationParameters1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RegistrationParameters1 obj) throws Exception {
+			checkRegistrationParameters1(obj);
 		}
 	};
 	/**
@@ -7406,11 +8290,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters5> forSettlementTypeAndAdditionalParameters5 = new MMConstraint<SettlementTypeAndAdditionalParameters5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters5 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters5(obj);
 		}
 	};
 	/**
@@ -7444,12 +8332,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails26> forSecuritiesTradeDetails26 = new MMConstraint<SecuritiesTradeDetails26>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails34);
 			owner_lazy = () -> SecuritiesTradeDetails26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails26 obj) throws Exception {
+			checkSecuritiesTradeDetails26(obj);
 		}
 	};
 	/**
@@ -7475,11 +8367,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification13> forSettlementTypeAndIdentification13 = new MMConstraint<SettlementTypeAndIdentification13>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification13 obj) throws Exception {
+			checkSettlementTypeAndIdentification13(obj);
 		}
 	};
 	/**
@@ -7505,11 +8401,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification7> forSettlementTypeAndIdentification7 = new MMConstraint<SettlementTypeAndIdentification7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SettlementTypeAndIdentification7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification7 obj) throws Exception {
+			checkSettlementTypeAndIdentification7(obj);
 		}
 	};
 	/**
@@ -7535,11 +8435,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount43> forPartyIdentificationAndAccount43 = new MMConstraint<PartyIdentificationAndAccount43>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount43 obj) throws Exception {
+			checkPartyIdentificationAndAccount43(obj);
 		}
 	};
 	/**
@@ -7565,11 +8469,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification53> forPartyIdentification53 = new MMConstraint<PartyIdentification53>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification53 obj) throws Exception {
+			checkPartyIdentification53(obj);
 		}
 	};
 	/**
@@ -7595,11 +8503,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount68> forPartyIdentificationAndAccount68 = new MMConstraint<PartyIdentificationAndAccount68>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount68 obj) throws Exception {
+			checkPartyIdentificationAndAccount68(obj);
 		}
 	};
 	/**
@@ -7625,11 +8537,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount75> forPartyIdentificationAndAccount75 = new MMConstraint<PartyIdentificationAndAccount75>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount75 obj) throws Exception {
+			checkPartyIdentificationAndAccount75(obj);
 		}
 	};
 	/**
@@ -7655,11 +8571,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters7> forSettlementTypeAndAdditionalParameters7 = new MMConstraint<SettlementTypeAndAdditionalParameters7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters7 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters7(obj);
 		}
 	};
 	/**
@@ -7685,11 +8605,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References12Choice> forReferences12Choice = new MMConstraint<References12Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences12Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References12Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References12Choice obj) throws Exception {
+			checkReferences12Choice(obj);
 		}
 	};
 	/**
@@ -7715,11 +8639,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails27> forSecuritiesTradeDetails27 = new MMConstraint<SecuritiesTradeDetails27>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails27 obj) throws Exception {
+			checkSecuritiesTradeDetails27(obj);
 		}
 	};
 	/**
@@ -7745,11 +8673,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount63> forPartyIdentificationAndAccount63 = new MMConstraint<PartyIdentificationAndAccount63>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount63 obj) throws Exception {
+			checkPartyIdentificationAndAccount63(obj);
 		}
 	};
 	/**
@@ -7775,11 +8707,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification52> forPartyIdentification52 = new MMConstraint<PartyIdentification52>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification52 obj) throws Exception {
+			checkPartyIdentification52(obj);
 		}
 	};
 	/**
@@ -7805,11 +8741,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount88> forPartyIdentificationAndAccount88 = new MMConstraint<PartyIdentificationAndAccount88>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount88;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount88.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount88 obj) throws Exception {
+			checkPartyIdentificationAndAccount88(obj);
 		}
 	};
 	/**
@@ -7835,11 +8775,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount66> forPartyIdentificationAndAccount66 = new MMConstraint<PartyIdentificationAndAccount66>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount66 obj) throws Exception {
+			checkPartyIdentificationAndAccount66(obj);
 		}
 	};
 	/**
@@ -7865,11 +8809,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount92> forPartyIdentificationAndAccount92 = new MMConstraint<PartyIdentificationAndAccount92>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount92;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount92.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount92 obj) throws Exception {
+			checkPartyIdentificationAndAccount92(obj);
 		}
 	};
 	/**
@@ -7895,11 +8843,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<RegistrationParameters2> forRegistrationParameters2 = new MMConstraint<RegistrationParameters2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkRegistrationParameters2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> RegistrationParameters2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RegistrationParameters2 obj) throws Exception {
+			checkRegistrationParameters2(obj);
 		}
 	};
 	/**
@@ -7925,11 +8877,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References28Choice> forReferences28Choice = new MMConstraint<References28Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences28Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References28Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References28Choice obj) throws Exception {
+			checkReferences28Choice(obj);
 		}
 	};
 	/**
@@ -7955,11 +8911,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters8> forSettlementTypeAndAdditionalParameters8 = new MMConstraint<SettlementTypeAndAdditionalParameters8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters8 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters8(obj);
 		}
 	};
 	/**
@@ -7985,11 +8945,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails28> forSecuritiesTradeDetails28 = new MMConstraint<SecuritiesTradeDetails28>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails28 obj) throws Exception {
+			checkSecuritiesTradeDetails28(obj);
 		}
 	};
 	/**
@@ -8015,11 +8979,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation8> forCorporateActionGeneralInformation8 = new MMConstraint<CorporateActionGeneralInformation8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation8 obj) throws Exception {
+			checkCorporateActionGeneralInformation8(obj);
 		}
 	};
 	/**
@@ -8045,11 +9013,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation20> forCorporateActionGeneralInformation20 = new MMConstraint<CorporateActionGeneralInformation20>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionGeneralInformation20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation20 obj) throws Exception {
+			checkCorporateActionGeneralInformation20(obj);
 		}
 	};
 	/**
@@ -8075,11 +9047,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation25> forCorporateActionGeneralInformation25 = new MMConstraint<CorporateActionGeneralInformation25>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation25 obj) throws Exception {
+			checkCorporateActionGeneralInformation25(obj);
 		}
 	};
 	/**
@@ -8105,11 +9081,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation32> forCorporateActionGeneralInformation32 = new MMConstraint<CorporateActionGeneralInformation32>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation32 obj) throws Exception {
+			checkCorporateActionGeneralInformation32(obj);
 		}
 	};
 	/**
@@ -8135,11 +9115,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation35> forCorporateActionGeneralInformation35 = new MMConstraint<CorporateActionGeneralInformation35>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation35 obj) throws Exception {
+			checkCorporateActionGeneralInformation35(obj);
 		}
 	};
 	/**
@@ -8165,11 +9149,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation43> forCorporateActionGeneralInformation43 = new MMConstraint<CorporateActionGeneralInformation43>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation43 obj) throws Exception {
+			checkCorporateActionGeneralInformation43(obj);
 		}
 	};
 	/**
@@ -8195,11 +9183,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation53> forCorporateActionGeneralInformation53 = new MMConstraint<CorporateActionGeneralInformation53>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation53 obj) throws Exception {
+			checkCorporateActionGeneralInformation53(obj);
 		}
 	};
 	/**
@@ -8225,11 +9217,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation56> forCorporateActionGeneralInformation56 = new MMConstraint<CorporateActionGeneralInformation56>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation56 obj) throws Exception {
+			checkCorporateActionGeneralInformation56(obj);
 		}
 	};
 	/**
@@ -8255,11 +9251,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation57> forCorporateActionGeneralInformation57 = new MMConstraint<CorporateActionGeneralInformation57>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation57 obj) throws Exception {
+			checkCorporateActionGeneralInformation57(obj);
 		}
 	};
 	/**
@@ -8285,11 +9285,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<DocumentIdentification1Choice> forDocumentIdentification1Choice = new MMConstraint<DocumentIdentification1Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkDocumentIdentification1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> DocumentIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentIdentification1Choice obj) throws Exception {
+			checkDocumentIdentification1Choice(obj);
 		}
 	};
 	/**
@@ -8315,11 +9319,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation9> forCorporateActionGeneralInformation9 = new MMConstraint<CorporateActionGeneralInformation9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation9 obj) throws Exception {
+			checkCorporateActionGeneralInformation9(obj);
 		}
 	};
 	/**
@@ -8345,11 +9353,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<DocumentIdentification2Choice> forDocumentIdentification2Choice = new MMConstraint<DocumentIdentification2Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkDocumentIdentification2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> DocumentIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentIdentification2Choice obj) throws Exception {
+			checkDocumentIdentification2Choice(obj);
 		}
 	};
 	/**
@@ -8375,11 +9387,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation13> forCorporateActionGeneralInformation13 = new MMConstraint<CorporateActionGeneralInformation13>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionGeneralInformation13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation13 obj) throws Exception {
+			checkCorporateActionGeneralInformation13(obj);
 		}
 	};
 	/**
@@ -8405,11 +9421,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation34> forCorporateActionGeneralInformation34 = new MMConstraint<CorporateActionGeneralInformation34>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation34 obj) throws Exception {
+			checkCorporateActionGeneralInformation34(obj);
 		}
 	};
 	/**
@@ -8435,11 +9455,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation42> forCorporateActionGeneralInformation42 = new MMConstraint<CorporateActionGeneralInformation42>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation42 obj) throws Exception {
+			checkCorporateActionGeneralInformation42(obj);
 		}
 	};
 	/**
@@ -8465,11 +9489,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation52> forCorporateActionGeneralInformation52 = new MMConstraint<CorporateActionGeneralInformation52>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation52 obj) throws Exception {
+			checkCorporateActionGeneralInformation52(obj);
 		}
 	};
 	/**
@@ -8495,11 +9523,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation58> forCorporateActionGeneralInformation58 = new MMConstraint<CorporateActionGeneralInformation58>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation58 obj) throws Exception {
+			checkCorporateActionGeneralInformation58(obj);
 		}
 	};
 	/**
@@ -8525,11 +9557,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<DocumentIdentification12> forDocumentIdentification12 = new MMConstraint<DocumentIdentification12>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkDocumentIdentification12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> DocumentIdentification12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentIdentification12 obj) throws Exception {
+			checkDocumentIdentification12(obj);
 		}
 	};
 	/**
@@ -8555,11 +9591,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<DocumentIdentification15> forDocumentIdentification15 = new MMConstraint<DocumentIdentification15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkDocumentIdentification15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> DocumentIdentification15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentIdentification15 obj) throws Exception {
+			checkDocumentIdentification15(obj);
 		}
 	};
 	/**
@@ -8585,11 +9625,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionEventReference1Choice> forCorporateActionEventReference1Choice = new MMConstraint<CorporateActionEventReference1Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionEventReference1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionEventReference1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventReference1Choice obj) throws Exception {
+			checkCorporateActionEventReference1Choice(obj);
 		}
 	};
 	/**
@@ -8615,11 +9659,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation6> forCorporateActionGeneralInformation6 = new MMConstraint<CorporateActionGeneralInformation6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation6 obj) throws Exception {
+			checkCorporateActionGeneralInformation6(obj);
 		}
 	};
 	/**
@@ -8645,11 +9693,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<DocumentIdentification18> forDocumentIdentification18 = new MMConstraint<DocumentIdentification18>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkDocumentIdentification18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> DocumentIdentification18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentIdentification18 obj) throws Exception {
+			checkDocumentIdentification18(obj);
 		}
 	};
 	/**
@@ -8675,11 +9727,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<DocumentIdentification19> forDocumentIdentification19 = new MMConstraint<DocumentIdentification19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkDocumentIdentification19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> DocumentIdentification19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentIdentification19 obj) throws Exception {
+			checkDocumentIdentification19(obj);
 		}
 	};
 	/**
@@ -8705,11 +9761,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionEventReference2Choice> forCorporateActionEventReference2Choice = new MMConstraint<CorporateActionEventReference2Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionEventReference2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionEventReference2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionEventReference2Choice obj) throws Exception {
+			checkCorporateActionEventReference2Choice(obj);
 		}
 	};
 	/**
@@ -8735,11 +9795,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation15> forCorporateActionGeneralInformation15 = new MMConstraint<CorporateActionGeneralInformation15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionGeneralInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation15 obj) throws Exception {
+			checkCorporateActionGeneralInformation15(obj);
 		}
 	};
 	/**
@@ -8765,11 +9829,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation21> forCorporateActionGeneralInformation21 = new MMConstraint<CorporateActionGeneralInformation21>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation21 obj) throws Exception {
+			checkCorporateActionGeneralInformation21(obj);
 		}
 	};
 	/**
@@ -8795,11 +9863,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation28> forCorporateActionGeneralInformation28 = new MMConstraint<CorporateActionGeneralInformation28>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation28 obj) throws Exception {
+			checkCorporateActionGeneralInformation28(obj);
 		}
 	};
 	/**
@@ -8825,11 +9897,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation36> forCorporateActionGeneralInformation36 = new MMConstraint<CorporateActionGeneralInformation36>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation36 obj) throws Exception {
+			checkCorporateActionGeneralInformation36(obj);
 		}
 	};
 	/**
@@ -8855,11 +9931,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation44> forCorporateActionGeneralInformation44 = new MMConstraint<CorporateActionGeneralInformation44>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation44 obj) throws Exception {
+			checkCorporateActionGeneralInformation44(obj);
 		}
 	};
 	/**
@@ -8894,12 +9974,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation55> forCorporateActionGeneralInformation55 = new MMConstraint<CorporateActionGeneralInformation55>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionGeneralInformation71);
 			owner_lazy = () -> CorporateActionGeneralInformation55.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation55 obj) throws Exception {
+			checkCorporateActionGeneralInformation55(obj);
 		}
 	};
 	/**
@@ -8925,11 +10009,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation61> forCorporateActionGeneralInformation61 = new MMConstraint<CorporateActionGeneralInformation61>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation61 obj) throws Exception {
+			checkCorporateActionGeneralInformation61(obj);
 		}
 	};
 	/**
@@ -8955,11 +10043,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation7> forCorporateActionGeneralInformation7 = new MMConstraint<CorporateActionGeneralInformation7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation7 obj) throws Exception {
+			checkCorporateActionGeneralInformation7(obj);
 		}
 	};
 	/**
@@ -8985,11 +10077,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation26> forCorporateActionGeneralInformation26 = new MMConstraint<CorporateActionGeneralInformation26>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation26 obj) throws Exception {
+			checkCorporateActionGeneralInformation26(obj);
 		}
 	};
 	/**
@@ -9015,11 +10111,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation33> forCorporateActionGeneralInformation33 = new MMConstraint<CorporateActionGeneralInformation33>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation33 obj) throws Exception {
+			checkCorporateActionGeneralInformation33(obj);
 		}
 	};
 	/**
@@ -9045,11 +10145,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation27> forCorporateActionGeneralInformation27 = new MMConstraint<CorporateActionGeneralInformation27>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation27 obj) throws Exception {
+			checkCorporateActionGeneralInformation27(obj);
 		}
 	};
 	/**
@@ -9075,11 +10179,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation41> forCorporateActionGeneralInformation41 = new MMConstraint<CorporateActionGeneralInformation41>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation41 obj) throws Exception {
+			checkCorporateActionGeneralInformation41(obj);
 		}
 	};
 	/**
@@ -9105,11 +10213,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation49> forCorporateActionGeneralInformation49 = new MMConstraint<CorporateActionGeneralInformation49>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation49 obj) throws Exception {
+			checkCorporateActionGeneralInformation49(obj);
 		}
 	};
 	/**
@@ -9135,11 +10247,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation68> forCorporateActionGeneralInformation68 = new MMConstraint<CorporateActionGeneralInformation68>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation68.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation68 obj) throws Exception {
+			checkCorporateActionGeneralInformation68(obj);
 		}
 	};
 	/**
@@ -9164,11 +10280,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement12> forStatement12 = new MMConstraint<Statement12>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Statement12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement12 obj) throws Exception {
+			checkStatement12(obj);
 		}
 	};
 	/**
@@ -9194,11 +10314,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<NotificationIdentification1> forNotificationIdentification1 = new MMConstraint<NotificationIdentification1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkNotificationIdentification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> NotificationIdentification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NotificationIdentification1 obj) throws Exception {
+			checkNotificationIdentification1(obj);
 		}
 	};
 	/**
@@ -9224,11 +10348,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<EventInformation1> forEventInformation1 = new MMConstraint<EventInformation1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkEventInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> EventInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EventInformation1 obj) throws Exception {
+			checkEventInformation1(obj);
 		}
 	};
 	/**
@@ -9254,11 +10382,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification2> forSettlementTypeAndIdentification2 = new MMConstraint<SettlementTypeAndIdentification2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification2 obj) throws Exception {
+			checkSettlementTypeAndIdentification2(obj);
 		}
 	};
 	/**
@@ -9283,11 +10415,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement30> forStatement30 = new MMConstraint<Statement30>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Statement30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement30 obj) throws Exception {
+			checkStatement30(obj);
 		}
 	};
 	/**
@@ -9313,11 +10449,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<NotificationIdentification2> forNotificationIdentification2 = new MMConstraint<NotificationIdentification2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkNotificationIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> NotificationIdentification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(NotificationIdentification2 obj) throws Exception {
+			checkNotificationIdentification2(obj);
 		}
 	};
 	/**
@@ -9343,11 +10483,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<EventInformation2> forEventInformation2 = new MMConstraint<EventInformation2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkEventInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> EventInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EventInformation2 obj) throws Exception {
+			checkEventInformation2(obj);
 		}
 	};
 	/**
@@ -9373,11 +10517,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification5> forSettlementTypeAndIdentification5 = new MMConstraint<SettlementTypeAndIdentification5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SettlementTypeAndIdentification5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification5 obj) throws Exception {
+			checkSettlementTypeAndIdentification5(obj);
 		}
 	};
 	/**
@@ -9403,11 +10551,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<EventInformation3> forEventInformation3 = new MMConstraint<EventInformation3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkEventInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> EventInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EventInformation3 obj) throws Exception {
+			checkEventInformation3(obj);
 		}
 	};
 	/**
@@ -9433,11 +10585,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<EventInformation4> forEventInformation4 = new MMConstraint<EventInformation4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkEventInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> EventInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EventInformation4 obj) throws Exception {
+			checkEventInformation4(obj);
 		}
 	};
 	/**
@@ -9463,11 +10619,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<EventInformation5> forEventInformation5 = new MMConstraint<EventInformation5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkEventInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> EventInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EventInformation5 obj) throws Exception {
+			checkEventInformation5(obj);
 		}
 	};
 	/**
@@ -9493,11 +10653,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<EventInformation6> forEventInformation6 = new MMConstraint<EventInformation6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkEventInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> EventInformation6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(EventInformation6 obj) throws Exception {
+			checkEventInformation6(obj);
 		}
 	};
 	/**
@@ -9523,11 +10687,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation4> forCorporateActionGeneralInformation4 = new MMConstraint<CorporateActionGeneralInformation4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation4 obj) throws Exception {
+			checkCorporateActionGeneralInformation4(obj);
 		}
 	};
 	/**
@@ -9553,11 +10721,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification35> forPartyIdentification35 = new MMConstraint<PartyIdentification35>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification35 obj) throws Exception {
+			checkPartyIdentification35(obj);
 		}
 	};
 	/**
@@ -9583,11 +10755,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount14> forPartyIdentificationAndAccount14 = new MMConstraint<PartyIdentificationAndAccount14>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount14 obj) throws Exception {
+			checkPartyIdentificationAndAccount14(obj);
 		}
 	};
 	/**
@@ -9613,11 +10789,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount17> forPartyIdentificationAndAccount17 = new MMConstraint<PartyIdentificationAndAccount17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount17 obj) throws Exception {
+			checkPartyIdentificationAndAccount17(obj);
 		}
 	};
 	/**
@@ -9643,11 +10823,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount18> forPartyIdentificationAndAccount18 = new MMConstraint<PartyIdentificationAndAccount18>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount18 obj) throws Exception {
+			checkPartyIdentificationAndAccount18(obj);
 		}
 	};
 	/**
@@ -9673,11 +10857,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation16> forCorporateActionGeneralInformation16 = new MMConstraint<CorporateActionGeneralInformation16>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionGeneralInformation16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation16 obj) throws Exception {
+			checkCorporateActionGeneralInformation16(obj);
 		}
 	};
 	/**
@@ -9703,11 +10891,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification37> forPartyIdentification37 = new MMConstraint<PartyIdentification37>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification37 obj) throws Exception {
+			checkPartyIdentification37(obj);
 		}
 	};
 	/**
@@ -9733,11 +10925,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount22> forPartyIdentificationAndAccount22 = new MMConstraint<PartyIdentificationAndAccount22>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentificationAndAccount22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount22 obj) throws Exception {
+			checkPartyIdentificationAndAccount22(obj);
 		}
 	};
 	/**
@@ -9763,11 +10959,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount23> forPartyIdentificationAndAccount23 = new MMConstraint<PartyIdentificationAndAccount23>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentificationAndAccount23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount23 obj) throws Exception {
+			checkPartyIdentificationAndAccount23(obj);
 		}
 	};
 	/**
@@ -9793,11 +10993,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount24> forPartyIdentificationAndAccount24 = new MMConstraint<PartyIdentificationAndAccount24>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentificationAndAccount24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount24 obj) throws Exception {
+			checkPartyIdentificationAndAccount24(obj);
 		}
 	};
 	/**
@@ -9823,11 +11027,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation24> forCorporateActionGeneralInformation24 = new MMConstraint<CorporateActionGeneralInformation24>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation24 obj) throws Exception {
+			checkCorporateActionGeneralInformation24(obj);
 		}
 	};
 	/**
@@ -9853,11 +11061,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification47> forPartyIdentification47 = new MMConstraint<PartyIdentification47>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification47 obj) throws Exception {
+			checkPartyIdentification47(obj);
 		}
 	};
 	/**
@@ -9883,11 +11095,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount51> forPartyIdentificationAndAccount51 = new MMConstraint<PartyIdentificationAndAccount51>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount51 obj) throws Exception {
+			checkPartyIdentificationAndAccount51(obj);
 		}
 	};
 	/**
@@ -9913,11 +11129,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount52> forPartyIdentificationAndAccount52 = new MMConstraint<PartyIdentificationAndAccount52>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount52.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount52 obj) throws Exception {
+			checkPartyIdentificationAndAccount52(obj);
 		}
 	};
 	/**
@@ -9952,12 +11172,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount54> forPartyIdentificationAndAccount54 = new MMConstraint<PartyIdentificationAndAccount54>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forPartyIdentificationAndAccount101);
 			owner_lazy = () -> PartyIdentificationAndAccount54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount54 obj) throws Exception {
+			checkPartyIdentificationAndAccount54(obj);
 		}
 	};
 	/**
@@ -9983,11 +11207,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation29> forCorporateActionGeneralInformation29 = new MMConstraint<CorporateActionGeneralInformation29>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation29 obj) throws Exception {
+			checkCorporateActionGeneralInformation29(obj);
 		}
 	};
 	/**
@@ -10013,11 +11241,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification49> forPartyIdentification49 = new MMConstraint<PartyIdentification49>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentification49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification49 obj) throws Exception {
+			checkPartyIdentification49(obj);
 		}
 	};
 	/**
@@ -10043,11 +11275,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount56> forPartyIdentificationAndAccount56 = new MMConstraint<PartyIdentificationAndAccount56>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount56 obj) throws Exception {
+			checkPartyIdentificationAndAccount56(obj);
 		}
 	};
 	/**
@@ -10073,11 +11309,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount57> forPartyIdentificationAndAccount57 = new MMConstraint<PartyIdentificationAndAccount57>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount57 obj) throws Exception {
+			checkPartyIdentificationAndAccount57(obj);
 		}
 	};
 	/**
@@ -10103,11 +11343,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount58> forPartyIdentificationAndAccount58 = new MMConstraint<PartyIdentificationAndAccount58>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount58 obj) throws Exception {
+			checkPartyIdentificationAndAccount58(obj);
 		}
 	};
 	/**
@@ -10133,11 +11377,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation39> forCorporateActionGeneralInformation39 = new MMConstraint<CorporateActionGeneralInformation39>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation39 obj) throws Exception {
+			checkCorporateActionGeneralInformation39(obj);
 		}
 	};
 	/**
@@ -10163,11 +11411,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation47> forCorporateActionGeneralInformation47 = new MMConstraint<CorporateActionGeneralInformation47>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation47 obj) throws Exception {
+			checkCorporateActionGeneralInformation47(obj);
 		}
 	};
 	/**
@@ -10202,12 +11454,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation50> forCorporateActionGeneralInformation50 = new MMConstraint<CorporateActionGeneralInformation50>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionGeneralInformation79);
 			owner_lazy = () -> CorporateActionGeneralInformation50.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation50 obj) throws Exception {
+			checkCorporateActionGeneralInformation50(obj);
 		}
 	};
 	/**
@@ -10233,11 +11489,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation62> forCorporateActionGeneralInformation62 = new MMConstraint<CorporateActionGeneralInformation62>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation62 obj) throws Exception {
+			checkCorporateActionGeneralInformation62(obj);
 		}
 	};
 	/**
@@ -10263,11 +11523,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation3> forCorporateActionGeneralInformation3 = new MMConstraint<CorporateActionGeneralInformation3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation3 obj) throws Exception {
+			checkCorporateActionGeneralInformation3(obj);
 		}
 	};
 	/**
@@ -10293,11 +11557,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation17> forCorporateActionGeneralInformation17 = new MMConstraint<CorporateActionGeneralInformation17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionGeneralInformation17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation17 obj) throws Exception {
+			checkCorporateActionGeneralInformation17(obj);
 		}
 	};
 	/**
@@ -10323,11 +11591,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation23> forCorporateActionGeneralInformation23 = new MMConstraint<CorporateActionGeneralInformation23>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation23 obj) throws Exception {
+			checkCorporateActionGeneralInformation23(obj);
 		}
 	};
 	/**
@@ -10353,11 +11625,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation30> forCorporateActionGeneralInformation30 = new MMConstraint<CorporateActionGeneralInformation30>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation30 obj) throws Exception {
+			checkCorporateActionGeneralInformation30(obj);
 		}
 	};
 	/**
@@ -10383,11 +11659,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation38> forCorporateActionGeneralInformation38 = new MMConstraint<CorporateActionGeneralInformation38>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation38 obj) throws Exception {
+			checkCorporateActionGeneralInformation38(obj);
 		}
 	};
 	/**
@@ -10413,11 +11693,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation46> forCorporateActionGeneralInformation46 = new MMConstraint<CorporateActionGeneralInformation46>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation46 obj) throws Exception {
+			checkCorporateActionGeneralInformation46(obj);
 		}
 	};
 	/**
@@ -10452,12 +11736,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation54> forCorporateActionGeneralInformation54 = new MMConstraint<CorporateActionGeneralInformation54>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionGeneralInformation69);
 			owner_lazy = () -> CorporateActionGeneralInformation54.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation54 obj) throws Exception {
+			checkCorporateActionGeneralInformation54(obj);
 		}
 	};
 	/**
@@ -10483,11 +11771,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation64> forCorporateActionGeneralInformation64 = new MMConstraint<CorporateActionGeneralInformation64>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation64.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation64 obj) throws Exception {
+			checkCorporateActionGeneralInformation64(obj);
 		}
 	};
 	/**
@@ -10513,11 +11805,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation63> forCorporateActionGeneralInformation63 = new MMConstraint<CorporateActionGeneralInformation63>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation63.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation63 obj) throws Exception {
+			checkCorporateActionGeneralInformation63(obj);
 		}
 	};
 	/**
@@ -10543,11 +11839,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation11> forCorporateActionGeneralInformation11 = new MMConstraint<CorporateActionGeneralInformation11>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation11 obj) throws Exception {
+			checkCorporateActionGeneralInformation11(obj);
 		}
 	};
 	/**
@@ -10573,11 +11873,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation19> forCorporateActionGeneralInformation19 = new MMConstraint<CorporateActionGeneralInformation19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionGeneralInformation19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation19 obj) throws Exception {
+			checkCorporateActionGeneralInformation19(obj);
 		}
 	};
 	/**
@@ -10603,11 +11907,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation22> forCorporateActionGeneralInformation22 = new MMConstraint<CorporateActionGeneralInformation22>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation22 obj) throws Exception {
+			checkCorporateActionGeneralInformation22(obj);
 		}
 	};
 	/**
@@ -10633,11 +11941,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation31> forCorporateActionGeneralInformation31 = new MMConstraint<CorporateActionGeneralInformation31>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation31 obj) throws Exception {
+			checkCorporateActionGeneralInformation31(obj);
 		}
 	};
 	/**
@@ -10663,11 +11975,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation37> forCorporateActionGeneralInformation37 = new MMConstraint<CorporateActionGeneralInformation37>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation37 obj) throws Exception {
+			checkCorporateActionGeneralInformation37(obj);
 		}
 	};
 	/**
@@ -10693,11 +12009,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation45> forCorporateActionGeneralInformation45 = new MMConstraint<CorporateActionGeneralInformation45>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation45 obj) throws Exception {
+			checkCorporateActionGeneralInformation45(obj);
 		}
 	};
 	/**
@@ -10732,12 +12052,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation51> forCorporateActionGeneralInformation51 = new MMConstraint<CorporateActionGeneralInformation51>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionGeneralInformation70);
 			owner_lazy = () -> CorporateActionGeneralInformation51.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation51 obj) throws Exception {
+			checkCorporateActionGeneralInformation51(obj);
 		}
 	};
 	/**
@@ -10763,11 +12087,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation67> forCorporateActionGeneralInformation67 = new MMConstraint<CorporateActionGeneralInformation67>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation67 obj) throws Exception {
+			checkCorporateActionGeneralInformation67(obj);
 		}
 	};
 	/**
@@ -10793,11 +12121,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters3> forAdditionalParameters3 = new MMConstraint<AdditionalParameters3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters3 obj) throws Exception {
+			checkAdditionalParameters3(obj);
 		}
 	};
 	/**
@@ -10823,11 +12155,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters7> forAdditionalParameters7 = new MMConstraint<AdditionalParameters7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AdditionalParameters7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters7 obj) throws Exception {
+			checkAdditionalParameters7(obj);
 		}
 	};
 	/**
@@ -10853,11 +12189,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters8> forAdditionalParameters8 = new MMConstraint<AdditionalParameters8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters8 obj) throws Exception {
+			checkAdditionalParameters8(obj);
 		}
 	};
 	/**
@@ -10883,11 +12223,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters9> forAdditionalParameters9 = new MMConstraint<AdditionalParameters9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters9 obj) throws Exception {
+			checkAdditionalParameters9(obj);
 		}
 	};
 	/**
@@ -10913,11 +12257,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters10> forAdditionalParameters10 = new MMConstraint<AdditionalParameters10>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters10 obj) throws Exception {
+			checkAdditionalParameters10(obj);
 		}
 	};
 	/**
@@ -10943,11 +12291,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters11> forAdditionalParameters11 = new MMConstraint<AdditionalParameters11>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters11 obj) throws Exception {
+			checkAdditionalParameters11(obj);
 		}
 	};
 	/**
@@ -10972,11 +12324,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement15> forStatement15 = new MMConstraint<Statement15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Statement15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement15 obj) throws Exception {
+			checkStatement15(obj);
 		}
 	};
 	/**
@@ -11002,11 +12358,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References5Choice> forReferences5Choice = new MMConstraint<References5Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References5Choice obj) throws Exception {
+			checkReferences5Choice(obj);
 		}
 	};
 	/**
@@ -11031,11 +12391,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement22> forStatement22 = new MMConstraint<Statement22>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Statement22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement22 obj) throws Exception {
+			checkStatement22(obj);
 		}
 	};
 	/**
@@ -11061,11 +12425,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References11Choice> forReferences11Choice = new MMConstraint<References11Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences11Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References11Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References11Choice obj) throws Exception {
+			checkReferences11Choice(obj);
 		}
 	};
 	/**
@@ -11091,11 +12459,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References19Choice> forReferences19Choice = new MMConstraint<References19Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences19Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References19Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References19Choice obj) throws Exception {
+			checkReferences19Choice(obj);
 		}
 	};
 	/**
@@ -11121,11 +12493,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References21Choice> forReferences21Choice = new MMConstraint<References21Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences21Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References21Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References21Choice obj) throws Exception {
+			checkReferences21Choice(obj);
 		}
 	};
 	/**
@@ -11151,11 +12527,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References27Choice> forReferences27Choice = new MMConstraint<References27Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences27Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References27Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References27Choice obj) throws Exception {
+			checkReferences27Choice(obj);
 		}
 	};
 	/**
@@ -11181,11 +12561,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References33Choice> forReferences33Choice = new MMConstraint<References33Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences33Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References33Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References33Choice obj) throws Exception {
+			checkReferences33Choice(obj);
 		}
 	};
 	/**
@@ -11211,11 +12595,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionTypeAndAdditionalParameters3> forTransactionTypeAndAdditionalParameters3 = new MMConstraint<TransactionTypeAndAdditionalParameters3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionTypeAndAdditionalParameters3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionTypeAndAdditionalParameters3 obj) throws Exception {
+			checkTransactionTypeAndAdditionalParameters3(obj);
 		}
 	};
 	/**
@@ -11241,11 +12629,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters2> forAdditionalParameters2 = new MMConstraint<AdditionalParameters2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters2 obj) throws Exception {
+			checkAdditionalParameters2(obj);
 		}
 	};
 	/**
@@ -11271,11 +12663,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails3> forSecuritiesFinancingTransactionDetails3 = new MMConstraint<SecuritiesFinancingTransactionDetails3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails3 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails3(obj);
 		}
 	};
 	/**
@@ -11301,11 +12697,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionTypeAndAdditionalParameters6> forTransactionTypeAndAdditionalParameters6 = new MMConstraint<TransactionTypeAndAdditionalParameters6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionTypeAndAdditionalParameters6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionTypeAndAdditionalParameters6 obj) throws Exception {
+			checkTransactionTypeAndAdditionalParameters6(obj);
 		}
 	};
 	/**
@@ -11331,11 +12731,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters6> forAdditionalParameters6 = new MMConstraint<AdditionalParameters6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AdditionalParameters6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters6 obj) throws Exception {
+			checkAdditionalParameters6(obj);
 		}
 	};
 	/**
@@ -11361,11 +12765,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails5> forSecuritiesFinancingTransactionDetails5 = new MMConstraint<SecuritiesFinancingTransactionDetails5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails5 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails5(obj);
 		}
 	};
 	/**
@@ -11391,11 +12799,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount26> forPartyIdentificationAndAccount26 = new MMConstraint<PartyIdentificationAndAccount26>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentificationAndAccount26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount26 obj) throws Exception {
+			checkPartyIdentificationAndAccount26(obj);
 		}
 	};
 	/**
@@ -11421,11 +12833,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification4> forPartyIdentification4 = new MMConstraint<PartyIdentification4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification4 obj) throws Exception {
+			checkPartyIdentification4(obj);
 		}
 	};
 	/**
@@ -11451,11 +12867,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount28> forPartyIdentificationAndAccount28 = new MMConstraint<PartyIdentificationAndAccount28>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentificationAndAccount28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount28 obj) throws Exception {
+			checkPartyIdentificationAndAccount28(obj);
 		}
 	};
 	/**
@@ -11481,11 +12901,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount30> forPartyIdentificationAndAccount30 = new MMConstraint<PartyIdentificationAndAccount30>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentificationAndAccount30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount30 obj) throws Exception {
+			checkPartyIdentificationAndAccount30(obj);
 		}
 	};
 	/**
@@ -11511,11 +12935,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount35> forPartyIdentificationAndAccount35 = new MMConstraint<PartyIdentificationAndAccount35>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount35 obj) throws Exception {
+			checkPartyIdentificationAndAccount35(obj);
 		}
 	};
 	/**
@@ -11541,11 +12969,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount36> forPartyIdentificationAndAccount36 = new MMConstraint<PartyIdentificationAndAccount36>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount36 obj) throws Exception {
+			checkPartyIdentificationAndAccount36(obj);
 		}
 	};
 	/**
@@ -11571,11 +13003,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount37> forPartyIdentificationAndAccount37 = new MMConstraint<PartyIdentificationAndAccount37>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount37 obj) throws Exception {
+			checkPartyIdentificationAndAccount37(obj);
 		}
 	};
 	/**
@@ -11601,11 +13037,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount49> forPartyIdentificationAndAccount49 = new MMConstraint<PartyIdentificationAndAccount49>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount49.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount49 obj) throws Exception {
+			checkPartyIdentificationAndAccount49(obj);
 		}
 	};
 	/**
@@ -11631,11 +13071,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount61> forPartyIdentificationAndAccount61 = new MMConstraint<PartyIdentificationAndAccount61>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount61 obj) throws Exception {
+			checkPartyIdentificationAndAccount61(obj);
 		}
 	};
 	/**
@@ -11661,11 +13105,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount62> forPartyIdentificationAndAccount62 = new MMConstraint<PartyIdentificationAndAccount62>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount62.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount62 obj) throws Exception {
+			checkPartyIdentificationAndAccount62(obj);
 		}
 	};
 	/**
@@ -11691,11 +13139,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters12> forAdditionalParameters12 = new MMConstraint<AdditionalParameters12>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters12 obj) throws Exception {
+			checkAdditionalParameters12(obj);
 		}
 	};
 	/**
@@ -11721,11 +13173,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails1> forSecuritiesFinancingTransactionDetails1 = new MMConstraint<SecuritiesFinancingTransactionDetails1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails1 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails1(obj);
 		}
 	};
 	/**
@@ -11751,11 +13207,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails11> forSecuritiesFinancingTransactionDetails11 = new MMConstraint<SecuritiesFinancingTransactionDetails11>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails11 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails11(obj);
 		}
 	};
 	/**
@@ -11781,11 +13241,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters13> forAdditionalParameters13 = new MMConstraint<AdditionalParameters13>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AdditionalParameters13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters13 obj) throws Exception {
+			checkAdditionalParameters13(obj);
 		}
 	};
 	/**
@@ -11811,11 +13275,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails14> forSecuritiesFinancingTransactionDetails14 = new MMConstraint<SecuritiesFinancingTransactionDetails14>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails14 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails14(obj);
 		}
 	};
 	/**
@@ -11841,11 +13309,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters18> forAdditionalParameters18 = new MMConstraint<AdditionalParameters18>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters18 obj) throws Exception {
+			checkAdditionalParameters18(obj);
 		}
 	};
 	/**
@@ -11871,11 +13343,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters19> forAdditionalParameters19 = new MMConstraint<AdditionalParameters19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AdditionalParameters19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters19 obj) throws Exception {
+			checkAdditionalParameters19(obj);
 		}
 	};
 	/**
@@ -11901,11 +13377,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionAndDocumentIdentification1> forTransactionAndDocumentIdentification1 = new MMConstraint<TransactionAndDocumentIdentification1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionAndDocumentIdentification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionAndDocumentIdentification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionAndDocumentIdentification1 obj) throws Exception {
+			checkTransactionAndDocumentIdentification1(obj);
 		}
 	};
 	/**
@@ -11931,11 +13411,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionTypeAndAdditionalParameters1> forTransactionTypeAndAdditionalParameters1 = new MMConstraint<TransactionTypeAndAdditionalParameters1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionTypeAndAdditionalParameters1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionTypeAndAdditionalParameters1 obj) throws Exception {
+			checkTransactionTypeAndAdditionalParameters1(obj);
 		}
 	};
 	/**
@@ -11961,11 +13445,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionAndDocumentIdentification2> forTransactionAndDocumentIdentification2 = new MMConstraint<TransactionAndDocumentIdentification2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionAndDocumentIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionAndDocumentIdentification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionAndDocumentIdentification2 obj) throws Exception {
+			checkTransactionAndDocumentIdentification2(obj);
 		}
 	};
 	/**
@@ -11991,11 +13479,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionTypeAndAdditionalParameters4> forTransactionTypeAndAdditionalParameters4 = new MMConstraint<TransactionTypeAndAdditionalParameters4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionTypeAndAdditionalParameters4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionTypeAndAdditionalParameters4 obj) throws Exception {
+			checkTransactionTypeAndAdditionalParameters4(obj);
 		}
 	};
 	/**
@@ -12021,11 +13513,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails4> forSecuritiesFinancingTransactionDetails4 = new MMConstraint<SecuritiesFinancingTransactionDetails4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails4 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails4(obj);
 		}
 	};
 	/**
@@ -12051,11 +13547,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References14Choice> forReferences14Choice = new MMConstraint<References14Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References14Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References14Choice obj) throws Exception {
+			checkReferences14Choice(obj);
 		}
 	};
 	/**
@@ -12081,11 +13581,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References16Choice> forReferences16Choice = new MMConstraint<References16Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References16Choice obj) throws Exception {
+			checkReferences16Choice(obj);
 		}
 	};
 	/**
@@ -12111,11 +13615,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References25Choice> forReferences25Choice = new MMConstraint<References25Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences25Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References25Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References25Choice obj) throws Exception {
+			checkReferences25Choice(obj);
 		}
 	};
 	/**
@@ -12141,11 +13649,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References32Choice> forReferences32Choice = new MMConstraint<References32Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences32Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References32Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References32Choice obj) throws Exception {
+			checkReferences32Choice(obj);
 		}
 	};
 	/**
@@ -12171,11 +13683,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References3Choice> forReferences3Choice = new MMConstraint<References3Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References3Choice obj) throws Exception {
+			checkReferences3Choice(obj);
 		}
 	};
 	/**
@@ -12201,11 +13717,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails12> forTransactionDetails12 = new MMConstraint<TransactionDetails12>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails12 obj) throws Exception {
+			checkTransactionDetails12(obj);
 		}
 	};
 	/**
@@ -12231,11 +13751,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References9Choice> forReferences9Choice = new MMConstraint<References9Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References9Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References9Choice obj) throws Exception {
+			checkReferences9Choice(obj);
 		}
 	};
 	/**
@@ -12261,11 +13785,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails19> forTransactionDetails19 = new MMConstraint<TransactionDetails19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails19 obj) throws Exception {
+			checkTransactionDetails19(obj);
 		}
 	};
 	/**
@@ -12291,11 +13819,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References18Choice> forReferences18Choice = new MMConstraint<References18Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences18Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References18Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References18Choice obj) throws Exception {
+			checkReferences18Choice(obj);
 		}
 	};
 	/**
@@ -12321,11 +13853,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References20Choice> forReferences20Choice = new MMConstraint<References20Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences20Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References20Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References20Choice obj) throws Exception {
+			checkReferences20Choice(obj);
 		}
 	};
 	/**
@@ -12351,11 +13887,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification14> forSettlementTypeAndIdentification14 = new MMConstraint<SettlementTypeAndIdentification14>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SettlementTypeAndIdentification14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification14 obj) throws Exception {
+			checkSettlementTypeAndIdentification14(obj);
 		}
 	};
 	/**
@@ -12381,11 +13921,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References29Choice> forReferences29Choice = new MMConstraint<References29Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences29Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References29Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References29Choice obj) throws Exception {
+			checkReferences29Choice(obj);
 		}
 	};
 	/**
@@ -12411,11 +13955,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References37Choice> forReferences37Choice = new MMConstraint<References37Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences37Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References37Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References37Choice obj) throws Exception {
+			checkReferences37Choice(obj);
 		}
 	};
 	/**
@@ -12441,11 +13989,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References38Choice> forReferences38Choice = new MMConstraint<References38Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences38Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References38Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References38Choice obj) throws Exception {
+			checkReferences38Choice(obj);
 		}
 	};
 	/**
@@ -12470,11 +14022,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References1> forReferences1 = new MMConstraint<References1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References1 obj) throws Exception {
+			checkReferences1(obj);
 		}
 	};
 	/**
@@ -12500,11 +14056,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References6Choice> forReferences6Choice = new MMConstraint<References6Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References6Choice obj) throws Exception {
+			checkReferences6Choice(obj);
 		}
 	};
 	/**
@@ -12529,11 +14089,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References2> forReferences2 = new MMConstraint<References2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References2 obj) throws Exception {
+			checkReferences2(obj);
 		}
 	};
 	/**
@@ -12559,11 +14123,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References10Choice> forReferences10Choice = new MMConstraint<References10Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References10Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References10Choice obj) throws Exception {
+			checkReferences10Choice(obj);
 		}
 	};
 	/**
@@ -12588,11 +14156,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References7> forReferences7 = new MMConstraint<References7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References7 obj) throws Exception {
+			checkReferences7(obj);
 		}
 	};
 	/**
@@ -12618,11 +14190,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References13Choice> forReferences13Choice = new MMConstraint<References13Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences13Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References13Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References13Choice obj) throws Exception {
+			checkReferences13Choice(obj);
 		}
 	};
 	/**
@@ -12647,11 +14223,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References8> forReferences8 = new MMConstraint<References8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References8 obj) throws Exception {
+			checkReferences8(obj);
 		}
 	};
 	/**
@@ -12677,11 +14257,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References15Choice> forReferences15Choice = new MMConstraint<References15Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References15Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References15Choice obj) throws Exception {
+			checkReferences15Choice(obj);
 		}
 	};
 	/**
@@ -12714,12 +14298,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References9> forReferences9 = new MMConstraint<References9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forReferences16);
 			owner_lazy = () -> References9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References9 obj) throws Exception {
+			checkReferences9(obj);
 		}
 	};
 	/**
@@ -12745,11 +14333,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References24Choice> forReferences24Choice = new MMConstraint<References24Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences24Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References24Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References24Choice obj) throws Exception {
+			checkReferences24Choice(obj);
 		}
 	};
 	/**
@@ -12774,11 +14366,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References13> forReferences13 = new MMConstraint<References13>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References13 obj) throws Exception {
+			checkReferences13(obj);
 		}
 	};
 	/**
@@ -12804,11 +14400,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References31Choice> forReferences31Choice = new MMConstraint<References31Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences31Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References31Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References31Choice obj) throws Exception {
+			checkReferences31Choice(obj);
 		}
 	};
 	/**
@@ -12834,11 +14434,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalInformation3> forAdditionalInformation3 = new MMConstraint<AdditionalInformation3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation3 obj) throws Exception {
+			checkAdditionalInformation3(obj);
 		}
 	};
 	/**
@@ -12864,11 +14468,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount25> forPartyIdentificationAndAccount25 = new MMConstraint<PartyIdentificationAndAccount25>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentificationAndAccount25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount25 obj) throws Exception {
+			checkPartyIdentificationAndAccount25(obj);
 		}
 	};
 	/**
@@ -12894,11 +14502,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalInformation4> forAdditionalInformation4 = new MMConstraint<AdditionalInformation4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AdditionalInformation4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation4 obj) throws Exception {
+			checkAdditionalInformation4(obj);
 		}
 	};
 	/**
@@ -12932,12 +14544,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalInformation7> forAdditionalInformation7 = new MMConstraint<AdditionalInformation7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forAdditionalInformation9);
 			owner_lazy = () -> AdditionalInformation7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation7 obj) throws Exception {
+			checkAdditionalInformation7(obj);
 		}
 	};
 	/**
@@ -12963,11 +14579,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalInformation8> forAdditionalInformation8 = new MMConstraint<AdditionalInformation8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalInformation8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation8 obj) throws Exception {
+			checkAdditionalInformation8(obj);
 		}
 	};
 	/**
@@ -12993,11 +14613,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification1> forSettlementTypeAndIdentification1 = new MMConstraint<SettlementTypeAndIdentification1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification1 obj) throws Exception {
+			checkSettlementTypeAndIdentification1(obj);
 		}
 	};
 	/**
@@ -13031,12 +14655,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails2> forSecuritiesTradeDetails2 = new MMConstraint<SecuritiesTradeDetails2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails31);
 			owner_lazy = () -> SecuritiesTradeDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails2 obj) throws Exception {
+			checkSecuritiesTradeDetails2(obj);
 		}
 	};
 	/**
@@ -13062,11 +14690,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification8> forSettlementTypeAndIdentification8 = new MMConstraint<SettlementTypeAndIdentification8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SettlementTypeAndIdentification8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification8 obj) throws Exception {
+			checkSettlementTypeAndIdentification8(obj);
 		}
 	};
 	/**
@@ -13092,11 +14724,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails16> forSecuritiesTradeDetails16 = new MMConstraint<SecuritiesTradeDetails16>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesTradeDetails16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails16 obj) throws Exception {
+			checkSecuritiesTradeDetails16(obj);
 		}
 	};
 	/**
@@ -13122,11 +14758,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification9> forSettlementTypeAndIdentification9 = new MMConstraint<SettlementTypeAndIdentification9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification9 obj) throws Exception {
+			checkSettlementTypeAndIdentification9(obj);
 		}
 	};
 	/**
@@ -13152,11 +14792,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification11> forSettlementTypeAndIdentification11 = new MMConstraint<SettlementTypeAndIdentification11>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification11 obj) throws Exception {
+			checkSettlementTypeAndIdentification11(obj);
 		}
 	};
 	/**
@@ -13182,11 +14826,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount65> forPartyIdentificationAndAccount65 = new MMConstraint<PartyIdentificationAndAccount65>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount65;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount65.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount65 obj) throws Exception {
+			checkPartyIdentificationAndAccount65(obj);
 		}
 	};
 	/**
@@ -13212,11 +14860,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount67> forPartyIdentificationAndAccount67 = new MMConstraint<PartyIdentificationAndAccount67>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount67.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount67 obj) throws Exception {
+			checkPartyIdentificationAndAccount67(obj);
 		}
 	};
 	/**
@@ -13242,11 +14894,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification15> forSettlementTypeAndIdentification15 = new MMConstraint<SettlementTypeAndIdentification15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification15 obj) throws Exception {
+			checkSettlementTypeAndIdentification15(obj);
 		}
 	};
 	/**
@@ -13272,11 +14928,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification17> forSettlementTypeAndIdentification17 = new MMConstraint<SettlementTypeAndIdentification17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification17 obj) throws Exception {
+			checkSettlementTypeAndIdentification17(obj);
 		}
 	};
 	/**
@@ -13302,11 +14962,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters17> forAdditionalParameters17 = new MMConstraint<AdditionalParameters17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters17 obj) throws Exception {
+			checkAdditionalParameters17(obj);
 		}
 	};
 	/**
@@ -13332,11 +14996,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters20> forAdditionalParameters20 = new MMConstraint<AdditionalParameters20>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AdditionalParameters20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters20 obj) throws Exception {
+			checkAdditionalParameters20(obj);
 		}
 	};
 	/**
@@ -13370,12 +15038,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails1> forSecuritiesTradeDetails1 = new MMConstraint<SecuritiesTradeDetails1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails33);
 			owner_lazy = () -> SecuritiesTradeDetails1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails1 obj) throws Exception {
+			checkSecuritiesTradeDetails1(obj);
 		}
 	};
 	/**
@@ -13401,11 +15073,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails15> forSecuritiesTradeDetails15 = new MMConstraint<SecuritiesTradeDetails15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesTradeDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails15 obj) throws Exception {
+			checkSecuritiesTradeDetails15(obj);
 		}
 	};
 	/**
@@ -13431,11 +15107,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification10> forSettlementTypeAndIdentification10 = new MMConstraint<SettlementTypeAndIdentification10>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification10 obj) throws Exception {
+			checkSettlementTypeAndIdentification10(obj);
 		}
 	};
 	/**
@@ -13461,11 +15141,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification12> forSettlementTypeAndIdentification12 = new MMConstraint<SettlementTypeAndIdentification12>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification12 obj) throws Exception {
+			checkSettlementTypeAndIdentification12(obj);
 		}
 	};
 	/**
@@ -13491,11 +15175,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters1> forSettlementTypeAndAdditionalParameters1 = new MMConstraint<SettlementTypeAndAdditionalParameters1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters1 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters1(obj);
 		}
 	};
 	/**
@@ -13521,11 +15209,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters4> forSettlementTypeAndAdditionalParameters4 = new MMConstraint<SettlementTypeAndAdditionalParameters4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters4 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters4(obj);
 		}
 	};
 	/**
@@ -13551,11 +15243,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters9> forSettlementTypeAndAdditionalParameters9 = new MMConstraint<SettlementTypeAndAdditionalParameters9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters9 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters9(obj);
 		}
 	};
 	/**
@@ -13581,11 +15277,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters10> forSettlementTypeAndAdditionalParameters10 = new MMConstraint<SettlementTypeAndAdditionalParameters10>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters10 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters10(obj);
 		}
 	};
 	/**
@@ -13611,11 +15311,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications2> forTransactionIdentifications2 = new MMConstraint<TransactionIdentifications2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications2 obj) throws Exception {
+			checkTransactionIdentifications2(obj);
 		}
 	};
 	/**
@@ -13641,11 +15345,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails5> forTransactionDetails5 = new MMConstraint<TransactionDetails5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails5 obj) throws Exception {
+			checkTransactionDetails5(obj);
 		}
 	};
 	/**
@@ -13671,11 +15379,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications7> forTransactionIdentifications7 = new MMConstraint<TransactionIdentifications7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionIdentifications7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications7 obj) throws Exception {
+			checkTransactionIdentifications7(obj);
 		}
 	};
 	/**
@@ -13701,11 +15413,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentification38> forPartyIdentification38 = new MMConstraint<PartyIdentification38>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentification38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentification38 obj) throws Exception {
+			checkPartyIdentification38(obj);
 		}
 	};
 	/**
@@ -13731,11 +15447,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails9> forTransactionDetails9 = new MMConstraint<TransactionDetails9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails9 obj) throws Exception {
+			checkTransactionDetails9(obj);
 		}
 	};
 	/**
@@ -13761,11 +15481,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications9> forTransactionIdentifications9 = new MMConstraint<TransactionIdentifications9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications9 obj) throws Exception {
+			checkTransactionIdentifications9(obj);
 		}
 	};
 	/**
@@ -13791,11 +15515,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails22> forTransactionDetails22 = new MMConstraint<TransactionDetails22>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails22 obj) throws Exception {
+			checkTransactionDetails22(obj);
 		}
 	};
 	/**
@@ -13821,11 +15549,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications13> forTransactionIdentifications13 = new MMConstraint<TransactionIdentifications13>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications13 obj) throws Exception {
+			checkTransactionIdentifications13(obj);
 		}
 	};
 	/**
@@ -13851,11 +15583,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails23> forTransactionDetails23 = new MMConstraint<TransactionDetails23>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails23 obj) throws Exception {
+			checkTransactionDetails23(obj);
 		}
 	};
 	/**
@@ -13881,11 +15617,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications16> forTransactionIdentifications16 = new MMConstraint<TransactionIdentifications16>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications16 obj) throws Exception {
+			checkTransactionIdentifications16(obj);
 		}
 	};
 	/**
@@ -13911,11 +15651,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails36> forTransactionDetails36 = new MMConstraint<TransactionDetails36>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails36 obj) throws Exception {
+			checkTransactionDetails36(obj);
 		}
 	};
 	/**
@@ -13941,11 +15685,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications22> forTransactionIdentifications22 = new MMConstraint<TransactionIdentifications22>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications22 obj) throws Exception {
+			checkTransactionIdentifications22(obj);
 		}
 	};
 	/**
@@ -13971,11 +15719,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails47> forTransactionDetails47 = new MMConstraint<TransactionDetails47>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails47 obj) throws Exception {
+			checkTransactionDetails47(obj);
 		}
 	};
 	/**
@@ -14009,12 +15761,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails53> forTransactionDetails53 = new MMConstraint<TransactionDetails53>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransactionDetails61);
 			owner_lazy = () -> TransactionDetails53.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails53 obj) throws Exception {
+			checkTransactionDetails53(obj);
 		}
 	};
 	/**
@@ -14040,11 +15796,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails58> forTransactionDetails58 = new MMConstraint<TransactionDetails58>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails58.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails58 obj) throws Exception {
+			checkTransactionDetails58(obj);
 		}
 	};
 	/**
@@ -14069,11 +15829,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement14> forStatement14 = new MMConstraint<Statement14>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Statement14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement14 obj) throws Exception {
+			checkStatement14(obj);
 		}
 	};
 	/**
@@ -14098,11 +15862,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction7> forTransaction7 = new MMConstraint<Transaction7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction7 obj) throws Exception {
+			checkTransaction7(obj);
 		}
 	};
 	/**
@@ -14127,11 +15895,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction8> forTransaction8 = new MMConstraint<Transaction8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction8 obj) throws Exception {
+			checkTransaction8(obj);
 		}
 	};
 	/**
@@ -14156,11 +15928,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement26> forStatement26 = new MMConstraint<Statement26>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Statement26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement26 obj) throws Exception {
+			checkStatement26(obj);
 		}
 	};
 	/**
@@ -14185,11 +15961,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction9> forTransaction9 = new MMConstraint<Transaction9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Transaction9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction9 obj) throws Exception {
+			checkTransaction9(obj);
 		}
 	};
 	/**
@@ -14214,11 +15994,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction10> forTransaction10 = new MMConstraint<Transaction10>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Transaction10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction10 obj) throws Exception {
+			checkTransaction10(obj);
 		}
 	};
 	/**
@@ -14243,11 +16027,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction14> forTransaction14 = new MMConstraint<Transaction14>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction14 obj) throws Exception {
+			checkTransaction14(obj);
 		}
 	};
 	/**
@@ -14272,11 +16060,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction12> forTransaction12 = new MMConstraint<Transaction12>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction12 obj) throws Exception {
+			checkTransaction12(obj);
 		}
 	};
 	/**
@@ -14301,11 +16093,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction15> forTransaction15 = new MMConstraint<Transaction15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction15 obj) throws Exception {
+			checkTransaction15(obj);
 		}
 	};
 	/**
@@ -14330,11 +16126,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction16> forTransaction16 = new MMConstraint<Transaction16>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction16 obj) throws Exception {
+			checkTransaction16(obj);
 		}
 	};
 	/**
@@ -14359,11 +16159,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction20> forTransaction20 = new MMConstraint<Transaction20>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction20 obj) throws Exception {
+			checkTransaction20(obj);
 		}
 	};
 	/**
@@ -14388,11 +16192,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction19> forTransaction19 = new MMConstraint<Transaction19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction19 obj) throws Exception {
+			checkTransaction19(obj);
 		}
 	};
 	/**
@@ -14417,11 +16225,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction23> forTransaction23 = new MMConstraint<Transaction23>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction23 obj) throws Exception {
+			checkTransaction23(obj);
 		}
 	};
 	/**
@@ -14446,11 +16258,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction22> forTransaction22 = new MMConstraint<Transaction22>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction22 obj) throws Exception {
+			checkTransaction22(obj);
 		}
 	};
 	/**
@@ -14483,12 +16299,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction28> forTransaction28 = new MMConstraint<Transaction28>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction35);
 			owner_lazy = () -> Transaction28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction28 obj) throws Exception {
+			checkTransaction28(obj);
 		}
 	};
 	/**
@@ -14521,12 +16341,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction27> forTransaction27 = new MMConstraint<Transaction27>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction34);
 			owner_lazy = () -> Transaction27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction27 obj) throws Exception {
+			checkTransaction27(obj);
 		}
 	};
 	/**
@@ -14551,11 +16375,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction30> forTransaction30 = new MMConstraint<Transaction30>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction30 obj) throws Exception {
+			checkTransaction30(obj);
 		}
 	};
 	/**
@@ -14580,11 +16408,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction31> forTransaction31 = new MMConstraint<Transaction31>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction31 obj) throws Exception {
+			checkTransaction31(obj);
 		}
 	};
 	/**
@@ -14609,11 +16441,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement11> forStatement11 = new MMConstraint<Statement11>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Statement11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement11 obj) throws Exception {
+			checkStatement11(obj);
 		}
 	};
 	/**
@@ -14638,11 +16474,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction6> forTransaction6 = new MMConstraint<Transaction6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction6 obj) throws Exception {
+			checkTransaction6(obj);
 		}
 	};
 	/**
@@ -14667,11 +16507,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement27> forStatement27 = new MMConstraint<Statement27>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Statement27.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement27 obj) throws Exception {
+			checkStatement27(obj);
 		}
 	};
 	/**
@@ -14696,11 +16540,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction11> forTransaction11 = new MMConstraint<Transaction11>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Transaction11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction11 obj) throws Exception {
+			checkTransaction11(obj);
 		}
 	};
 	/**
@@ -14725,11 +16573,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction13> forTransaction13 = new MMConstraint<Transaction13>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction13 obj) throws Exception {
+			checkTransaction13(obj);
 		}
 	};
 	/**
@@ -14754,11 +16606,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction17> forTransaction17 = new MMConstraint<Transaction17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction17 obj) throws Exception {
+			checkTransaction17(obj);
 		}
 	};
 	/**
@@ -14783,11 +16639,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction18> forTransaction18 = new MMConstraint<Transaction18>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction18 obj) throws Exception {
+			checkTransaction18(obj);
 		}
 	};
 	/**
@@ -14812,11 +16672,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction21> forTransaction21 = new MMConstraint<Transaction21>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction21 obj) throws Exception {
+			checkTransaction21(obj);
 		}
 	};
 	/**
@@ -14849,12 +16713,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction29> forTransaction29 = new MMConstraint<Transaction29>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction36);
 			owner_lazy = () -> Transaction29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction29 obj) throws Exception {
+			checkTransaction29(obj);
 		}
 	};
 	/**
@@ -14879,11 +16747,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction32> forTransaction32 = new MMConstraint<Transaction32>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction32 obj) throws Exception {
+			checkTransaction32(obj);
 		}
 	};
 	/**
@@ -14909,11 +16781,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification2> forIdentification2 = new MMConstraint<Identification2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Identification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification2 obj) throws Exception {
+			checkIdentification2(obj);
 		}
 	};
 	/**
@@ -14939,11 +16815,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails4> forIntraPositionDetails4 = new MMConstraint<IntraPositionDetails4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails4 obj) throws Exception {
+			checkIntraPositionDetails4(obj);
 		}
 	};
 	/**
@@ -14969,11 +16849,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails9> forIntraPositionDetails9 = new MMConstraint<IntraPositionDetails9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails9 obj) throws Exception {
+			checkIntraPositionDetails9(obj);
 		}
 	};
 	/**
@@ -14998,11 +16882,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement19> forStatement19 = new MMConstraint<Statement19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Statement19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement19 obj) throws Exception {
+			checkStatement19(obj);
 		}
 	};
 	/**
@@ -15028,11 +16916,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails7> forSecuritiesTradeDetails7 = new MMConstraint<SecuritiesTradeDetails7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails7 obj) throws Exception {
+			checkSecuritiesTradeDetails7(obj);
 		}
 	};
 	/**
@@ -15058,11 +16950,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails19> forSecuritiesTradeDetails19 = new MMConstraint<SecuritiesTradeDetails19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails19 obj) throws Exception {
+			checkSecuritiesTradeDetails19(obj);
 		}
 	};
 	/**
@@ -15088,11 +16984,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionTypeAndAdditionalParameters2> forTransactionTypeAndAdditionalParameters2 = new MMConstraint<TransactionTypeAndAdditionalParameters2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionTypeAndAdditionalParameters2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionTypeAndAdditionalParameters2 obj) throws Exception {
+			checkTransactionTypeAndAdditionalParameters2(obj);
 		}
 	};
 	/**
@@ -15118,11 +17018,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionTypeAndAdditionalParameters7> forTransactionTypeAndAdditionalParameters7 = new MMConstraint<TransactionTypeAndAdditionalParameters7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionTypeAndAdditionalParameters7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionTypeAndAdditionalParameters7 obj) throws Exception {
+			checkTransactionTypeAndAdditionalParameters7(obj);
 		}
 	};
 	/**
@@ -15148,11 +17052,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications1> forTransactionIdentifications1 = new MMConstraint<TransactionIdentifications1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications1 obj) throws Exception {
+			checkTransactionIdentifications1(obj);
 		}
 	};
 	/**
@@ -15178,11 +17086,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails2> forSecuritiesFinancingTransactionDetails2 = new MMConstraint<SecuritiesFinancingTransactionDetails2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails2 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails2(obj);
 		}
 	};
 	/**
@@ -15208,11 +17120,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails8> forSecuritiesFinancingTransactionDetails8 = new MMConstraint<SecuritiesFinancingTransactionDetails8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails8 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails8(obj);
 		}
 	};
 	/**
@@ -15238,11 +17154,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails13> forTransactionDetails13 = new MMConstraint<TransactionDetails13>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails13 obj) throws Exception {
+			checkTransactionDetails13(obj);
 		}
 	};
 	/**
@@ -15268,11 +17188,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters2> forSettlementTypeAndAdditionalParameters2 = new MMConstraint<SettlementTypeAndAdditionalParameters2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters2 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters2(obj);
 		}
 	};
 	/**
@@ -15298,11 +17222,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails8> forSecuritiesTradeDetails8 = new MMConstraint<SecuritiesTradeDetails8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails8 obj) throws Exception {
+			checkSecuritiesTradeDetails8(obj);
 		}
 	};
 	/**
@@ -15336,12 +17264,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails18> forSecuritiesTradeDetails18 = new MMConstraint<SecuritiesTradeDetails18>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails36);
 			owner_lazy = () -> SecuritiesTradeDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails18 obj) throws Exception {
+			checkSecuritiesTradeDetails18(obj);
 		}
 	};
 	/**
@@ -15367,11 +17299,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails7> forSecuritiesFinancingTransactionDetails7 = new MMConstraint<SecuritiesFinancingTransactionDetails7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails7 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails7(obj);
 		}
 	};
 	/**
@@ -15396,11 +17332,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement17> forStatement17 = new MMConstraint<Statement17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Statement17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement17 obj) throws Exception {
+			checkStatement17(obj);
 		}
 	};
 	/**
@@ -15426,11 +17366,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails4> forSecuritiesTradeDetails4 = new MMConstraint<SecuritiesTradeDetails4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails4 obj) throws Exception {
+			checkSecuritiesTradeDetails4(obj);
 		}
 	};
 	/**
@@ -15456,11 +17400,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails17> forSecuritiesTradeDetails17 = new MMConstraint<SecuritiesTradeDetails17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails17 obj) throws Exception {
+			checkSecuritiesTradeDetails17(obj);
 		}
 	};
 	/**
@@ -15486,11 +17434,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters4> forAdditionalParameters4 = new MMConstraint<AdditionalParameters4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters4 obj) throws Exception {
+			checkAdditionalParameters4(obj);
 		}
 	};
 	/**
@@ -15516,11 +17468,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount45> forPartyIdentificationAndAccount45 = new MMConstraint<PartyIdentificationAndAccount45>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount45.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount45 obj) throws Exception {
+			checkPartyIdentificationAndAccount45(obj);
 		}
 	};
 	/**
@@ -15546,11 +17502,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount46> forPartyIdentificationAndAccount46 = new MMConstraint<PartyIdentificationAndAccount46>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount46 obj) throws Exception {
+			checkPartyIdentificationAndAccount46(obj);
 		}
 	};
 	/**
@@ -15576,11 +17536,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount47> forPartyIdentificationAndAccount47 = new MMConstraint<PartyIdentificationAndAccount47>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount47 obj) throws Exception {
+			checkPartyIdentificationAndAccount47(obj);
 		}
 	};
 	/**
@@ -15606,11 +17570,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification7> forIdentification7 = new MMConstraint<Identification7>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Identification7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification7 obj) throws Exception {
+			checkIdentification7(obj);
 		}
 	};
 	/**
@@ -15636,11 +17604,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<GenericDocumentIdentification1> forGenericDocumentIdentification1 = new MMConstraint<GenericDocumentIdentification1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkGenericDocumentIdentification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> GenericDocumentIdentification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericDocumentIdentification1 obj) throws Exception {
+			checkGenericDocumentIdentification1(obj);
 		}
 	};
 	/**
@@ -15666,11 +17638,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification4> forSettlementTypeAndIdentification4 = new MMConstraint<SettlementTypeAndIdentification4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SettlementTypeAndIdentification4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification4 obj) throws Exception {
+			checkSettlementTypeAndIdentification4(obj);
 		}
 	};
 	/**
@@ -15696,11 +17672,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References4Choice> forReferences4Choice = new MMConstraint<References4Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References4Choice obj) throws Exception {
+			checkReferences4Choice(obj);
 		}
 	};
 	/**
@@ -15726,11 +17706,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications4> forTransactionIdentifications4 = new MMConstraint<TransactionIdentifications4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications4 obj) throws Exception {
+			checkTransactionIdentifications4(obj);
 		}
 	};
 	/**
@@ -15756,11 +17740,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References22Choice> forReferences22Choice = new MMConstraint<References22Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences22Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References22Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References22Choice obj) throws Exception {
+			checkReferences22Choice(obj);
 		}
 	};
 	/**
@@ -15786,11 +17774,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications11> forTransactionIdentifications11 = new MMConstraint<TransactionIdentifications11>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications11 obj) throws Exception {
+			checkTransactionIdentifications11(obj);
 		}
 	};
 	/**
@@ -15816,11 +17808,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References2Choice> forReferences2Choice = new MMConstraint<References2Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References2Choice obj) throws Exception {
+			checkReferences2Choice(obj);
 		}
 	};
 	/**
@@ -15846,11 +17842,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails11> forTransactionDetails11 = new MMConstraint<TransactionDetails11>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails11 obj) throws Exception {
+			checkTransactionDetails11(obj);
 		}
 	};
 	/**
@@ -15876,11 +17876,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification6> forIdentification6 = new MMConstraint<Identification6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Identification6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification6 obj) throws Exception {
+			checkIdentification6(obj);
 		}
 	};
 	/**
@@ -15906,11 +17910,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation10> forCorporateActionGeneralInformation10 = new MMConstraint<CorporateActionGeneralInformation10>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation10 obj) throws Exception {
+			checkCorporateActionGeneralInformation10(obj);
 		}
 	};
 	/**
@@ -15936,11 +17944,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation18> forCorporateActionGeneralInformation18 = new MMConstraint<CorporateActionGeneralInformation18>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionGeneralInformation18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation18 obj) throws Exception {
+			checkCorporateActionGeneralInformation18(obj);
 		}
 	};
 	/**
@@ -15966,11 +17978,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation40> forCorporateActionGeneralInformation40 = new MMConstraint<CorporateActionGeneralInformation40>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation40 obj) throws Exception {
+			checkCorporateActionGeneralInformation40(obj);
 		}
 	};
 	/**
@@ -15996,11 +18012,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation48> forCorporateActionGeneralInformation48 = new MMConstraint<CorporateActionGeneralInformation48>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation48.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation48 obj) throws Exception {
+			checkCorporateActionGeneralInformation48(obj);
 		}
 	};
 	/**
@@ -16026,11 +18046,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionTypeAndAdditionalParameters5> forTransactionTypeAndAdditionalParameters5 = new MMConstraint<TransactionTypeAndAdditionalParameters5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionTypeAndAdditionalParameters5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionTypeAndAdditionalParameters5 obj) throws Exception {
+			checkTransactionTypeAndAdditionalParameters5(obj);
 		}
 	};
 	/**
@@ -16056,11 +18080,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionTypeAndAdditionalParameters8> forTransactionTypeAndAdditionalParameters8 = new MMConstraint<TransactionTypeAndAdditionalParameters8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionTypeAndAdditionalParameters8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionTypeAndAdditionalParameters8 obj) throws Exception {
+			checkTransactionTypeAndAdditionalParameters8(obj);
 		}
 	};
 	/**
@@ -16086,11 +18114,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails19> forSecuritiesFinancingTransactionDetails19 = new MMConstraint<SecuritiesFinancingTransactionDetails19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails19 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails19(obj);
 		}
 	};
 	/**
@@ -16116,11 +18148,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails20> forSecuritiesFinancingTransactionDetails20 = new MMConstraint<SecuritiesFinancingTransactionDetails20>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails20 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails20(obj);
 		}
 	};
 	/**
@@ -16146,11 +18182,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications6> forTransactionIdentifications6 = new MMConstraint<TransactionIdentifications6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionIdentifications6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications6 obj) throws Exception {
+			checkTransactionIdentifications6(obj);
 		}
 	};
 	/**
@@ -16176,11 +18216,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails6> forSecuritiesFinancingTransactionDetails6 = new MMConstraint<SecuritiesFinancingTransactionDetails6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails6 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails6(obj);
 		}
 	};
 	/**
@@ -16206,11 +18250,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails10> forSecuritiesFinancingTransactionDetails10 = new MMConstraint<SecuritiesFinancingTransactionDetails10>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails10 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails10(obj);
 		}
 	};
 	/**
@@ -16245,12 +18293,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails17> forSecuritiesFinancingTransactionDetails17 = new MMConstraint<SecuritiesFinancingTransactionDetails17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingTransactionDetails21);
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails17 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails17(obj);
 		}
 	};
 	/**
@@ -16276,11 +18328,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails18> forSecuritiesFinancingTransactionDetails18 = new MMConstraint<SecuritiesFinancingTransactionDetails18>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails18 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails18(obj);
 		}
 	};
 	/**
@@ -16306,11 +18362,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails21> forTransactionDetails21 = new MMConstraint<TransactionDetails21>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails21 obj) throws Exception {
+			checkTransactionDetails21(obj);
 		}
 	};
 	/**
@@ -16336,11 +18396,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndAdditionalParameters3> forSettlementTypeAndAdditionalParameters3 = new MMConstraint<SettlementTypeAndAdditionalParameters3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndAdditionalParameters3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SettlementTypeAndAdditionalParameters3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndAdditionalParameters3 obj) throws Exception {
+			checkSettlementTypeAndAdditionalParameters3(obj);
 		}
 	};
 	/**
@@ -16366,11 +18430,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails9> forSecuritiesTradeDetails9 = new MMConstraint<SecuritiesTradeDetails9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesTradeDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails9 obj) throws Exception {
+			checkSecuritiesTradeDetails9(obj);
 		}
 	};
 	/**
@@ -16396,11 +18464,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails21> forSecuritiesTradeDetails21 = new MMConstraint<SecuritiesTradeDetails21>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails21 obj) throws Exception {
+			checkSecuritiesTradeDetails21(obj);
 		}
 	};
 	/**
@@ -16426,11 +18498,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails9> forSecuritiesFinancingTransactionDetails9 = new MMConstraint<SecuritiesFinancingTransactionDetails9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails9 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails9(obj);
 		}
 	};
 	/**
@@ -16455,11 +18531,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement28> forStatement28 = new MMConstraint<Statement28>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Statement28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement28 obj) throws Exception {
+			checkStatement28(obj);
 		}
 	};
 	/**
@@ -16485,11 +18565,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails10> forSecuritiesTradeDetails10 = new MMConstraint<SecuritiesTradeDetails10>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesTradeDetails10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails10 obj) throws Exception {
+			checkSecuritiesTradeDetails10(obj);
 		}
 	};
 	/**
@@ -16515,11 +18599,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails22> forSecuritiesTradeDetails22 = new MMConstraint<SecuritiesTradeDetails22>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails22 obj) throws Exception {
+			checkSecuritiesTradeDetails22(obj);
 		}
 	};
 	/**
@@ -16553,12 +18641,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails23> forSecuritiesTradeDetails23 = new MMConstraint<SecuritiesTradeDetails23>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails35);
 			owner_lazy = () -> SecuritiesTradeDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails23 obj) throws Exception {
+			checkSecuritiesTradeDetails23(obj);
 		}
 	};
 	/**
@@ -16584,11 +18676,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails29> forSecuritiesTradeDetails29 = new MMConstraint<SecuritiesTradeDetails29>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails29.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails29 obj) throws Exception {
+			checkSecuritiesTradeDetails29(obj);
 		}
 	};
 	/**
@@ -16614,11 +18710,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentification2> forTransactionIdentification2 = new MMConstraint<TransactionIdentification2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentification2 obj) throws Exception {
+			checkTransactionIdentification2(obj);
 		}
 	};
 	/**
@@ -16644,11 +18744,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentification3> forTransactionIdentification3 = new MMConstraint<TransactionIdentification3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentification3 obj) throws Exception {
+			checkTransactionIdentification3(obj);
 		}
 	};
 	/**
@@ -16682,12 +18786,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications18> forTransactionIdentifications18 = new MMConstraint<TransactionIdentifications18>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransactionIdentifications25);
 			owner_lazy = () -> TransactionIdentifications18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications18 obj) throws Exception {
+			checkTransactionIdentifications18(obj);
 		}
 	};
 	/**
@@ -16713,11 +18821,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications20> forTransactionIdentifications20 = new MMConstraint<TransactionIdentifications20>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications20 obj) throws Exception {
+			checkTransactionIdentifications20(obj);
 		}
 	};
 	/**
@@ -16743,11 +18855,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters5> forAdditionalParameters5 = new MMConstraint<AdditionalParameters5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AdditionalParameters5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters5 obj) throws Exception {
+			checkAdditionalParameters5(obj);
 		}
 	};
 	/**
@@ -16773,11 +18889,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount71> forPartyIdentificationAndAccount71 = new MMConstraint<PartyIdentificationAndAccount71>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount71 obj) throws Exception {
+			checkPartyIdentificationAndAccount71(obj);
 		}
 	};
 	/**
@@ -16803,11 +18923,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount73> forPartyIdentificationAndAccount73 = new MMConstraint<PartyIdentificationAndAccount73>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount73;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount73.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount73 obj) throws Exception {
+			checkPartyIdentificationAndAccount73(obj);
 		}
 	};
 	/**
@@ -16833,11 +18957,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount74> forPartyIdentificationAndAccount74 = new MMConstraint<PartyIdentificationAndAccount74>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount74;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount74.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount74 obj) throws Exception {
+			checkPartyIdentificationAndAccount74(obj);
 		}
 	};
 	/**
@@ -16863,11 +18991,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters14> forAdditionalParameters14 = new MMConstraint<AdditionalParameters14>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalParameters14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters14 obj) throws Exception {
+			checkAdditionalParameters14(obj);
 		}
 	};
 	/**
@@ -16893,11 +19025,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalParameters15> forAdditionalParameters15 = new MMConstraint<AdditionalParameters15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalParameters15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> AdditionalParameters15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalParameters15 obj) throws Exception {
+			checkAdditionalParameters15(obj);
 		}
 	};
 	/**
@@ -16923,11 +19059,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification5> forIdentification5 = new MMConstraint<Identification5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Identification5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification5 obj) throws Exception {
+			checkIdentification5(obj);
 		}
 	};
 	/**
@@ -16953,11 +19093,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification8> forIdentification8 = new MMConstraint<Identification8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Identification8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification8 obj) throws Exception {
+			checkIdentification8(obj);
 		}
 	};
 	/**
@@ -16983,11 +19127,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification11> forIdentification11 = new MMConstraint<Identification11>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Identification11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification11 obj) throws Exception {
+			checkIdentification11(obj);
 		}
 	};
 	/**
@@ -17013,11 +19161,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification13> forIdentification13 = new MMConstraint<Identification13>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Identification13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification13 obj) throws Exception {
+			checkIdentification13(obj);
 		}
 	};
 	/**
@@ -17043,11 +19195,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<GenericDocumentIdentification2> forGenericDocumentIdentification2 = new MMConstraint<GenericDocumentIdentification2>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkGenericDocumentIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> GenericDocumentIdentification2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericDocumentIdentification2 obj) throws Exception {
+			checkGenericDocumentIdentification2(obj);
 		}
 	};
 	/**
@@ -17073,11 +19229,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References8Choice> forReferences8Choice = new MMConstraint<References8Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences8Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References8Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References8Choice obj) throws Exception {
+			checkReferences8Choice(obj);
 		}
 	};
 	/**
@@ -17103,11 +19263,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails15> forTransactionDetails15 = new MMConstraint<TransactionDetails15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails15 obj) throws Exception {
+			checkTransactionDetails15(obj);
 		}
 	};
 	/**
@@ -17133,11 +19297,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<GenericDocumentIdentification3> forGenericDocumentIdentification3 = new MMConstraint<GenericDocumentIdentification3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkGenericDocumentIdentification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> GenericDocumentIdentification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GenericDocumentIdentification3 obj) throws Exception {
+			checkGenericDocumentIdentification3(obj);
 		}
 	};
 	/**
@@ -17163,11 +19331,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References17Choice> forReferences17Choice = new MMConstraint<References17Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences17Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References17Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References17Choice obj) throws Exception {
+			checkReferences17Choice(obj);
 		}
 	};
 	/**
@@ -17193,11 +19365,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount76> forPartyIdentificationAndAccount76 = new MMConstraint<PartyIdentificationAndAccount76>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount76;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount76.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount76 obj) throws Exception {
+			checkPartyIdentificationAndAccount76(obj);
 		}
 	};
 	/**
@@ -17223,11 +19399,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SettlementTypeAndIdentification6> forSettlementTypeAndIdentification6 = new MMConstraint<SettlementTypeAndIdentification6>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSettlementTypeAndIdentification6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SettlementTypeAndIdentification6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SettlementTypeAndIdentification6 obj) throws Exception {
+			checkSettlementTypeAndIdentification6(obj);
 		}
 	};
 	/**
@@ -17253,11 +19433,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References7Choice> forReferences7Choice = new MMConstraint<References7Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences7Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References7Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References7Choice obj) throws Exception {
+			checkReferences7Choice(obj);
 		}
 	};
 	/**
@@ -17283,11 +19467,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications8> forTransactionIdentifications8 = new MMConstraint<TransactionIdentifications8>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionIdentifications8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications8 obj) throws Exception {
+			checkTransactionIdentifications8(obj);
 		}
 	};
 	/**
@@ -17313,11 +19501,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References23Choice> forReferences23Choice = new MMConstraint<References23Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences23Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> References23Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References23Choice obj) throws Exception {
+			checkReferences23Choice(obj);
 		}
 	};
 	/**
@@ -17343,11 +19535,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications14> forTransactionIdentifications14 = new MMConstraint<TransactionIdentifications14>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications14 obj) throws Exception {
+			checkTransactionIdentifications14(obj);
 		}
 	};
 	/**
@@ -17373,11 +19569,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications17> forTransactionIdentifications17 = new MMConstraint<TransactionIdentifications17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications17 obj) throws Exception {
+			checkTransactionIdentifications17(obj);
 		}
 	};
 	/**
@@ -17403,11 +19603,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References30Choice> forReferences30Choice = new MMConstraint<References30Choice>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences30Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References30Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References30Choice obj) throws Exception {
+			checkReferences30Choice(obj);
 		}
 	};
 	/**
@@ -17433,11 +19637,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications23> forTransactionIdentifications23 = new MMConstraint<TransactionIdentifications23>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications23 obj) throws Exception {
+			checkTransactionIdentifications23(obj);
 		}
 	};
 	/**
@@ -17463,11 +19671,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification9> forIdentification9 = new MMConstraint<Identification9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Identification9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification9 obj) throws Exception {
+			checkIdentification9(obj);
 		}
 	};
 	/**
@@ -17493,11 +19705,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications5> forTransactionIdentifications5 = new MMConstraint<TransactionIdentifications5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> TransactionIdentifications5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications5 obj) throws Exception {
+			checkTransactionIdentifications5(obj);
 		}
 	};
 	/**
@@ -17523,11 +19739,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails5> forIntraPositionDetails5 = new MMConstraint<IntraPositionDetails5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> IntraPositionDetails5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails5 obj) throws Exception {
+			checkIntraPositionDetails5(obj);
 		}
 	};
 	/**
@@ -17553,11 +19773,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications12> forTransactionIdentifications12 = new MMConstraint<TransactionIdentifications12>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications12 obj) throws Exception {
+			checkTransactionIdentifications12(obj);
 		}
 	};
 	/**
@@ -17583,11 +19807,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails15> forIntraPositionDetails15 = new MMConstraint<IntraPositionDetails15>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionDetails15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails15 obj) throws Exception {
+			checkIntraPositionDetails15(obj);
 		}
 	};
 	/**
@@ -17613,11 +19841,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails19> forIntraPositionDetails19 = new MMConstraint<IntraPositionDetails19>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionDetails19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails19 obj) throws Exception {
+			checkIntraPositionDetails19(obj);
 		}
 	};
 	/**
@@ -17643,11 +19875,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionDetails23> forIntraPositionDetails23 = new MMConstraint<IntraPositionDetails23>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionDetails23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionDetails23 obj) throws Exception {
+			checkIntraPositionDetails23(obj);
 		}
 	};
 	/**
@@ -17672,11 +19908,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Statement25> forStatement25 = new MMConstraint<Statement25>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkStatement25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> Statement25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Statement25 obj) throws Exception {
+			checkStatement25(obj);
 		}
 	};
 	/**
@@ -17702,11 +19942,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails14> forSecuritiesTradeDetails14 = new MMConstraint<SecuritiesTradeDetails14>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesTradeDetails14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails14 obj) throws Exception {
+			checkSecuritiesTradeDetails14(obj);
 		}
 	};
 	/**
@@ -17732,11 +19976,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails20> forSecuritiesTradeDetails20 = new MMConstraint<SecuritiesTradeDetails20>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails20 obj) throws Exception {
+			checkSecuritiesTradeDetails20(obj);
 		}
 	};
 	/**
@@ -17762,11 +20010,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails24> forSecuritiesTradeDetails24 = new MMConstraint<SecuritiesTradeDetails24>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails24 obj) throws Exception {
+			checkSecuritiesTradeDetails24(obj);
 		}
 	};
 	/**
@@ -17792,11 +20044,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails30> forSecuritiesTradeDetails30 = new MMConstraint<SecuritiesTradeDetails30>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails30 obj) throws Exception {
+			checkSecuritiesTradeDetails30(obj);
 		}
 	};
 	/**
@@ -17822,11 +20078,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation14> forCorporateActionGeneralInformation14 = new MMConstraint<CorporateActionGeneralInformation14>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> CorporateActionGeneralInformation14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation14 obj) throws Exception {
+			checkCorporateActionGeneralInformation14(obj);
 		}
 	};
 	/**
@@ -17852,11 +20112,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPositionReport3> forIntraPositionReport3 = new MMConstraint<IntraPositionReport3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPositionReport3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPositionReport3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionReport3 obj) throws Exception {
+			checkIntraPositionReport3(obj);
 		}
 	};
 	/**
@@ -17881,11 +20145,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction25> forTransaction25 = new MMConstraint<Transaction25>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction25 obj) throws Exception {
+			checkTransaction25(obj);
 		}
 	};
 	/**
@@ -17911,11 +20179,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesReport1> forSecuritiesReport1 = new MMConstraint<SecuritiesReport1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesReport1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesReport1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesReport1 obj) throws Exception {
+			checkSecuritiesReport1(obj);
 		}
 	};
 	/**
@@ -17940,11 +20212,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<IntraPosition4> forIntraPosition4 = new MMConstraint<IntraPosition4>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIntraPosition4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> IntraPosition4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPosition4 obj) throws Exception {
+			checkIntraPosition4(obj);
 		}
 	};
 	/**
@@ -17970,11 +20246,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation12> forCorporateActionGeneralInformation12 = new MMConstraint<CorporateActionGeneralInformation12>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation12.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation12 obj) throws Exception {
+			checkCorporateActionGeneralInformation12(obj);
 		}
 	};
 	/**
@@ -18000,11 +20280,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation5> forCorporateActionGeneralInformation5 = new MMConstraint<CorporateActionGeneralInformation5>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation5 obj) throws Exception {
+			checkCorporateActionGeneralInformation5(obj);
 		}
 	};
 	/**
@@ -18030,11 +20314,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Identification3> forIdentification3 = new MMConstraint<Identification3>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkIdentification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Identification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Identification3 obj) throws Exception {
+			checkIdentification3(obj);
 		}
 	};
 	/**
@@ -18060,11 +20348,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<BillingIdentification1> forBillingIdentification1 = new MMConstraint<BillingIdentification1>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkBillingIdentification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> BillingIdentification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BillingIdentification1 obj) throws Exception {
+			checkBillingIdentification1(obj);
 		}
 	};
 	/**
@@ -18103,13 +20395,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails61> forTransactionDetails61 = new MMConstraint<TransactionDetails61>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransactionDetails70);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransactionDetails53;
 			owner_lazy = () -> TransactionDetails61.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails61 obj) throws Exception {
+			checkTransactionDetails61(obj);
 		}
 	};
 	/**
@@ -18147,13 +20443,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction34> forTransaction34 = new MMConstraint<Transaction34>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction41);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction27;
 			owner_lazy = () -> Transaction34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction34 obj) throws Exception {
+			checkTransaction34(obj);
 		}
 	};
 	/**
@@ -18184,12 +20484,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications25> forTransactionIdentifications25 = new MMConstraint<TransactionIdentifications25>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransactionIdentifications18;
 			owner_lazy = () -> TransactionIdentifications25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications25 obj) throws Exception {
+			checkTransactionIdentifications25(obj);
 		}
 	};
 	/**
@@ -18230,13 +20534,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails21> forSecuritiesFinancingTransactionDetails21 = new MMConstraint<SecuritiesFinancingTransactionDetails21>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingTransactionDetails24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingTransactionDetails17;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails21 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails21(obj);
 		}
 	};
 	/**
@@ -18274,13 +20582,17 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction35> forTransaction35 = new MMConstraint<Transaction35>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction40);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction28;
 			owner_lazy = () -> Transaction35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction35 obj) throws Exception {
+			checkTransaction35(obj);
 		}
 	};
 	/**
@@ -18310,12 +20622,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction36> forTransaction36 = new MMConstraint<Transaction36>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction29;
 			owner_lazy = () -> Transaction36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction36 obj) throws Exception {
+			checkTransaction36(obj);
 		}
 	};
 	/**
@@ -18347,12 +20663,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation71> forCorporateActionGeneralInformation71 = new MMConstraint<CorporateActionGeneralInformation71>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionGeneralInformation55;
 			owner_lazy = () -> CorporateActionGeneralInformation71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation71 obj) throws Exception {
+			checkCorporateActionGeneralInformation71(obj);
 		}
 	};
 	/**
@@ -18384,12 +20704,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation69> forCorporateActionGeneralInformation69 = new MMConstraint<CorporateActionGeneralInformation69>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionGeneralInformation54;
 			owner_lazy = () -> CorporateActionGeneralInformation69.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation69 obj) throws Exception {
+			checkCorporateActionGeneralInformation69(obj);
 		}
 	};
 	/**
@@ -18421,12 +20745,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation70> forCorporateActionGeneralInformation70 = new MMConstraint<CorporateActionGeneralInformation70>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionGeneralInformation51;
 			owner_lazy = () -> CorporateActionGeneralInformation70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation70 obj) throws Exception {
+			checkCorporateActionGeneralInformation70(obj);
 		}
 	};
 	/**
@@ -18457,12 +20785,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails31> forSecuritiesTradeDetails31 = new MMConstraint<SecuritiesTradeDetails31>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails2;
 			owner_lazy = () -> SecuritiesTradeDetails31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails31 obj) throws Exception {
+			checkSecuritiesTradeDetails31(obj);
 		}
 	};
 	/**
@@ -18493,12 +20825,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails33> forSecuritiesTradeDetails33 = new MMConstraint<SecuritiesTradeDetails33>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails1;
 			owner_lazy = () -> SecuritiesTradeDetails33.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails33 obj) throws Exception {
+			checkSecuritiesTradeDetails33(obj);
 		}
 	};
 	/**
@@ -18529,12 +20865,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails35> forSecuritiesTradeDetails35 = new MMConstraint<SecuritiesTradeDetails35>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails23;
 			owner_lazy = () -> SecuritiesTradeDetails35.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails35 obj) throws Exception {
+			checkSecuritiesTradeDetails35(obj);
 		}
 	};
 	/**
@@ -18565,12 +20905,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails36> forSecuritiesTradeDetails36 = new MMConstraint<SecuritiesTradeDetails36>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails18;
 			owner_lazy = () -> SecuritiesTradeDetails36.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails36 obj) throws Exception {
+			checkSecuritiesTradeDetails36(obj);
 		}
 	};
 	/**
@@ -18601,12 +20945,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails34> forSecuritiesTradeDetails34 = new MMConstraint<SecuritiesTradeDetails34>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails26;
 			owner_lazy = () -> SecuritiesTradeDetails34.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails34 obj) throws Exception {
+			checkSecuritiesTradeDetails34(obj);
 		}
 	};
 	/**
@@ -18637,12 +20985,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails32> forSecuritiesTradeDetails32 = new MMConstraint<SecuritiesTradeDetails32>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTradeDetails25;
 			owner_lazy = () -> SecuritiesTradeDetails32.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails32 obj) throws Exception {
+			checkSecuritiesTradeDetails32(obj);
 		}
 	};
 	/**
@@ -18673,12 +21025,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalInformation9> forAdditionalInformation9 = new MMConstraint<AdditionalInformation9>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forAdditionalInformation7;
 			owner_lazy = () -> AdditionalInformation9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation9 obj) throws Exception {
+			checkAdditionalInformation9(obj);
 		}
 	};
 	/**
@@ -18708,12 +21064,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References16> forReferences16 = new MMConstraint<References16>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forReferences9;
 			owner_lazy = () -> References16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References16 obj) throws Exception {
+			checkReferences16(obj);
 		}
 	};
 	/**
@@ -18739,11 +21099,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation78> forCorporateActionGeneralInformation78 = new MMConstraint<CorporateActionGeneralInformation78>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation78.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation78 obj) throws Exception {
+			checkCorporateActionGeneralInformation78(obj);
 		}
 	};
 	/**
@@ -18769,11 +21133,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation77> forCorporateActionGeneralInformation77 = new MMConstraint<CorporateActionGeneralInformation77>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation77;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation77.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation77 obj) throws Exception {
+			checkCorporateActionGeneralInformation77(obj);
 		}
 	};
 	/**
@@ -18799,11 +21167,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation76> forCorporateActionGeneralInformation76 = new MMConstraint<CorporateActionGeneralInformation76>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation76;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation76.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation76 obj) throws Exception {
+			checkCorporateActionGeneralInformation76(obj);
 		}
 	};
 	/**
@@ -18829,11 +21201,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionIdentifications26> forTransactionIdentifications26 = new MMConstraint<TransactionIdentifications26>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionIdentifications26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionIdentifications26.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionIdentifications26 obj) throws Exception {
+			checkTransactionIdentifications26(obj);
 		}
 	};
 	/**
@@ -18859,11 +21235,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails44> forSecuritiesTradeDetails44 = new MMConstraint<SecuritiesTradeDetails44>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesTradeDetails44.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails44 obj) throws Exception {
+			checkSecuritiesTradeDetails44(obj);
 		}
 	};
 	/**
@@ -18889,11 +21269,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails43> forSecuritiesTradeDetails43 = new MMConstraint<SecuritiesTradeDetails43>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> SecuritiesTradeDetails43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails43 obj) throws Exception {
+			checkSecuritiesTradeDetails43(obj);
 		}
 	};
 	/**
@@ -18919,11 +21303,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails41> forSecuritiesTradeDetails41 = new MMConstraint<SecuritiesTradeDetails41>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails41 obj) throws Exception {
+			checkSecuritiesTradeDetails41(obj);
 		}
 	};
 	/**
@@ -18949,11 +21337,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails22> forSecuritiesFinancingTransactionDetails22 = new MMConstraint<SecuritiesFinancingTransactionDetails22>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails22 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails22(obj);
 		}
 	};
 	/**
@@ -18978,11 +21370,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction38> forTransaction38 = new MMConstraint<Transaction38>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction38.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction38 obj) throws Exception {
+			checkTransaction38(obj);
 		}
 	};
 	/**
@@ -19008,11 +21404,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails66> forTransactionDetails66 = new MMConstraint<TransactionDetails66>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails66.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails66 obj) throws Exception {
+			checkTransactionDetails66(obj);
 		}
 	};
 	/**
@@ -19038,11 +21438,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<AdditionalInformation10> forAdditionalInformation10 = new MMConstraint<AdditionalInformation10>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkAdditionalInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> AdditionalInformation10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AdditionalInformation10 obj) throws Exception {
+			checkAdditionalInformation10(obj);
 		}
 	};
 	/**
@@ -19068,11 +21472,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails42> forSecuritiesTradeDetails42 = new MMConstraint<SecuritiesTradeDetails42>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails42 obj) throws Exception {
+			checkSecuritiesTradeDetails42(obj);
 		}
 	};
 	/**
@@ -19097,11 +21505,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<References17> forReferences17 = new MMConstraint<References17>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkReferences17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> References17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(References17 obj) throws Exception {
+			checkReferences17(obj);
 		}
 	};
 	/**
@@ -19126,11 +21538,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction39> forTransaction39 = new MMConstraint<Transaction39>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction39.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction39 obj) throws Exception {
+			checkTransaction39(obj);
 		}
 	};
 	/**
@@ -19156,11 +21572,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails46> forSecuritiesTradeDetails46 = new MMConstraint<SecuritiesTradeDetails46>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails46.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails46 obj) throws Exception {
+			checkSecuritiesTradeDetails46(obj);
 		}
 	};
 	/**
@@ -19186,11 +21606,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesTradeDetails47> forSecuritiesTradeDetails47 = new MMConstraint<SecuritiesTradeDetails47>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesTradeDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesTradeDetails47.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesTradeDetails47 obj) throws Exception {
+			checkSecuritiesTradeDetails47(obj);
 		}
 	};
 	/**
@@ -19215,11 +21639,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction37> forTransaction37 = new MMConstraint<Transaction37>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction37.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction37 obj) throws Exception {
+			checkTransaction37(obj);
 		}
 	};
 	/**
@@ -19251,12 +21679,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails24> forSecuritiesFinancingTransactionDetails24 = new MMConstraint<SecuritiesFinancingTransactionDetails24>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesFinancingTransactionDetails21;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails24 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails24(obj);
 		}
 	};
 	/**
@@ -19286,12 +21718,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction41> forTransaction41 = new MMConstraint<Transaction41>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction34;
 			owner_lazy = () -> Transaction41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction41 obj) throws Exception {
+			checkTransaction41(obj);
 		}
 	};
 	/**
@@ -19322,12 +21758,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails70> forTransactionDetails70 = new MMConstraint<TransactionDetails70>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransactionDetails61;
 			owner_lazy = () -> TransactionDetails70.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails70 obj) throws Exception {
+			checkTransactionDetails70(obj);
 		}
 	};
 	/**
@@ -19357,12 +21797,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction40> forTransaction40 = new MMConstraint<Transaction40>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransaction35;
 			owner_lazy = () -> Transaction40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction40 obj) throws Exception {
+			checkTransaction40(obj);
 		}
 	};
 	/**
@@ -19394,12 +21838,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation79> forCorporateActionGeneralInformation79 = new MMConstraint<CorporateActionGeneralInformation79>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionGeneralInformation50;
 			owner_lazy = () -> CorporateActionGeneralInformation79.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation79 obj) throws Exception {
+			checkCorporateActionGeneralInformation79(obj);
 		}
 	};
 	/**
@@ -19431,12 +21879,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount101> forPartyIdentificationAndAccount101 = new MMConstraint<PartyIdentificationAndAccount101>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forPartyIdentificationAndAccount54;
 			owner_lazy = () -> PartyIdentificationAndAccount101.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount101 obj) throws Exception {
+			checkPartyIdentificationAndAccount101(obj);
 		}
 	};
 	/**
@@ -19462,11 +21914,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation83> forCorporateActionGeneralInformation83 = new MMConstraint<CorporateActionGeneralInformation83>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation83;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation83.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation83 obj) throws Exception {
+			checkCorporateActionGeneralInformation83(obj);
 		}
 	};
 	/**
@@ -19492,11 +21948,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<CorporateActionGeneralInformation82> forCorporateActionGeneralInformation82 = new MMConstraint<CorporateActionGeneralInformation82>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkCorporateActionGeneralInformation82;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> CorporateActionGeneralInformation82.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionGeneralInformation82 obj) throws Exception {
+			checkCorporateActionGeneralInformation82(obj);
 		}
 	};
 	/**
@@ -19522,11 +21982,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<PartyIdentificationAndAccount104> forPartyIdentificationAndAccount104 = new MMConstraint<PartyIdentificationAndAccount104>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPartyIdentificationAndAccount104;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> PartyIdentificationAndAccount104.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PartyIdentificationAndAccount104 obj) throws Exception {
+			checkPartyIdentificationAndAccount104(obj);
 		}
 	};
 	/**
@@ -19551,11 +22015,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction43> forTransaction43 = new MMConstraint<Transaction43>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction43.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction43 obj) throws Exception {
+			checkTransaction43(obj);
 		}
 	};
 	/**
@@ -19581,11 +22049,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<TransactionDetails71> forTransactionDetails71 = new MMConstraint<TransactionDetails71>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransactionDetails71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> TransactionDetails71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(TransactionDetails71 obj) throws Exception {
+			checkTransactionDetails71(obj);
 		}
 	};
 	/**
@@ -19611,11 +22083,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<SecuritiesFinancingTransactionDetails25> forSecuritiesFinancingTransactionDetails25 = new MMConstraint<SecuritiesFinancingTransactionDetails25>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkSecuritiesFinancingTransactionDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesFinancingTransactionDetails25 obj) throws Exception {
+			checkSecuritiesFinancingTransactionDetails25(obj);
 		}
 	};
 	/**
@@ -19640,11 +22116,15 @@ public class ConstraintCoexistenceIdentificationRule {
 	 */
 	public static final MMConstraint<Transaction42> forTransaction42 = new MMConstraint<Transaction42>() {
 		{
-			validator = ConstraintCoexistenceIdentificationRule::checkTransaction42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceIdentificationRule";
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			owner_lazy = () -> Transaction42.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transaction42 obj) throws Exception {
+			checkTransaction42(obj);
 		}
 	};
 

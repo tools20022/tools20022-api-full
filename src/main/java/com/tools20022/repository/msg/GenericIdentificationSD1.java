@@ -116,7 +116,7 @@ public class GenericIdentificationSD1 {
 	 * "Country in which the account owner has one's fiscal domicile."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFiscalDomicile = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentificationSD1, CountryCode> mmFiscalDomicile = new MMMessageAttribute<GenericIdentificationSD1, CountryCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentificationSD1.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class GenericIdentificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(GenericIdentificationSD1 obj) {
+			return obj.getFiscalDomicile();
+		}
+
+		@Override
+		public void setValue(GenericIdentificationSD1 obj, CountryCode value) {
+			obj.setFiscalDomicile(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrId")
@@ -167,7 +177,7 @@ public class GenericIdentificationSD1 {
 	 * "Identification of the document assigned by the account servicer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentificationSD1, Optional<Max35Text>> mmAccountServicerIdentification = new MMMessageAttribute<GenericIdentificationSD1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentificationSD1.mmObject();
@@ -180,6 +190,16 @@ public class GenericIdentificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentificationSD1 obj) {
+			return obj.getAccountServicerIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentificationSD1 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -220,7 +240,7 @@ public class GenericIdentificationSD1 {
 	 * "Identification of the document assigned by the account owner."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentificationSD1, Optional<Max35Text>> mmAccountOwnerIdentification = new MMMessageAttribute<GenericIdentificationSD1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentificationSD1.mmObject();
@@ -233,6 +253,16 @@ public class GenericIdentificationSD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(GenericIdentificationSD1 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(GenericIdentificationSD1 obj, Optional<Max35Text> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
 		}
 	};
 

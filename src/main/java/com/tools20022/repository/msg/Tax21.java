@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.InvestmentFundTax;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TaxCalculationInformation8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +132,7 @@ public class Tax21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax21, TaxType1Choice> mmType = new MMMessageAssociationEnd<Tax21, TaxType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
@@ -145,6 +146,16 @@ public class Tax21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TaxType1Choice.mmObject();
+		}
+
+		@Override
+		public TaxType1Choice getValue(Tax21 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Tax21 obj, TaxType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -192,7 +203,7 @@ public class Tax21 {
 	 * {@linkplain com.tools20022.repository.msg.Tax15#mmAmount Tax15.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax21, ActiveOrHistoricCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Tax21, ActiveOrHistoricCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
@@ -206,6 +217,16 @@ public class Tax21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAnd13DecimalAmount getValue(Tax21 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Tax21 obj, ActiveOrHistoricCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Bsis", required = true)
@@ -248,7 +269,7 @@ public class Tax21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax21, TaxBasis1Choice> mmBasis = new MMMessageAssociationEnd<Tax21, TaxBasis1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
@@ -262,6 +283,16 @@ public class Tax21 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> TaxBasis1Choice.mmObject();
+		}
+
+		@Override
+		public TaxBasis1Choice getValue(Tax21 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(Tax21 obj, TaxBasis1Choice value) {
+			obj.setBasis(value);
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -313,7 +344,7 @@ public class Tax21 {
 	 * Tax15.mmRecipientIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax21, Optional<PartyIdentification2Choice>> mmRecipientIdentification = new MMMessageAttribute<Tax21, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
@@ -327,6 +358,16 @@ public class Tax21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Tax21 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Tax21 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XmptnInd", required = true)
@@ -375,7 +416,7 @@ public class Tax21 {
 	 * Tax15.mmExemptionIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExemptionIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Tax21, YesNoIndicator> mmExemptionIndicator = new MMMessageAttribute<Tax21, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmExemptionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
@@ -389,6 +430,16 @@ public class Tax21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Tax21 obj) {
+			return obj.getExemptionIndicator();
+		}
+
+		@Override
+		public void setValue(Tax21 obj, YesNoIndicator value) {
+			obj.setExemptionIndicator(value);
 		}
 	};
 	@XmlElement(name = "XmptnRsn")
@@ -431,7 +482,7 @@ public class Tax21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExemptionReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax21, Optional<ExemptionReason1Choice>> mmExemptionReason = new MMMessageAssociationEnd<Tax21, Optional<ExemptionReason1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmExemptionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
@@ -445,6 +496,16 @@ public class Tax21 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ExemptionReason1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ExemptionReason1Choice> getValue(Tax21 obj) {
+			return obj.getExemptionReason();
+		}
+
+		@Override
+		public void setValue(Tax21 obj, Optional<ExemptionReason1Choice> value) {
+			obj.setExemptionReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TaxClctnDtls")
@@ -488,7 +549,7 @@ public class Tax21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxCalculationDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Tax21, Optional<TaxCalculationInformation8>> mmTaxCalculationDetails = new MMMessageAssociationEnd<Tax21, Optional<TaxCalculationInformation8>>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundTax.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Tax21.mmObject();
@@ -501,7 +562,17 @@ public class Tax21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation8.mmObject();
+			type_lazy = () -> TaxCalculationInformation8.mmObject();
+		}
+
+		@Override
+		public Optional<TaxCalculationInformation8> getValue(Tax21 obj) {
+			return obj.getTaxCalculationDetails();
+		}
+
+		@Override
+		public void setValue(Tax21 obj, Optional<TaxCalculationInformation8> value) {
+			obj.setTaxCalculationDetails(value.orElse(null));
 		}
 	};
 
@@ -581,7 +652,7 @@ public class Tax21 {
 		return taxCalculationDetails == null ? Optional.empty() : Optional.of(taxCalculationDetails);
 	}
 
-	public Tax21 setTaxCalculationDetails(com.tools20022.repository.msg.TaxCalculationInformation8 taxCalculationDetails) {
+	public Tax21 setTaxCalculationDetails(TaxCalculationInformation8 taxCalculationDetails) {
 		this.taxCalculationDetails = taxCalculationDetails;
 		return this;
 	}

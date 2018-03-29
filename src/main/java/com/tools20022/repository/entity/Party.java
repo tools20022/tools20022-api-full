@@ -19,11 +19,11 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
+import com.tools20022.repository.codeset.CreditQualityCode;
 import com.tools20022.repository.codeset.MoneyLaunderingCheckCode;
-import com.tools20022.repository.entity.RolePlayer;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -61,6 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * Party.mmLocation}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Party#mmCloseLinkSecurity
  * Party.mmCloseLinkSecurity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Party#mmCreditQuality
+ * Party.mmCreditQuality}</li>
  * </ul>
  * </li>
  * <li>
@@ -415,9 +417,6 @@ public class Party extends RolePlayer {
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmContactDetails
 	 * PartyIdentification125.mmContactDetails}</li>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.msg.PartyIdentification126#mmContactDetails
-	 * PartyIdentification126.mmContactDetails}</li>
-	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmContactDetails
 	 * PartyIdentification129.mmContactDetails}</li>
 	 * </ul>
@@ -438,7 +437,7 @@ public class Party extends RolePlayer {
 	 * "Number, physical or virtual address, used for communication."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmContactPoint = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Party, List<ContactPoint>> mmContactPoint = new MMBusinessAssociationEnd<Party, List<ContactPoint>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LocalMarketAnnex.mmLocalOrderDesk, LocalMarketAnnex2.mmLocalOrderDesk, FundProcessingPassport1.mmFundManagementCompany, Organisation2.mmPrimaryCommunicationAddress,
 					Organisation2.mmSecondaryCommunicationAddress, Organisation3.mmPrimaryCommunicationAddress, Organisation3.mmSecondaryCommunicationAddress, PartyIdentification32.mmContactDetails, PartyIdentification43.mmContactDetails,
@@ -449,7 +448,7 @@ public class Party extends RolePlayer {
 					PartyIdentification58.mmContactDetails, AccountTax1.mmNonResidenceCountry, Intermediary16.mmCommunicationInformation, Member1.mmCommunicationAddress, Member2.mmCommunicationAddress,
 					PartyIdentification77.mmContactDetails, PartyIdentification112.mmContactDetails, Organisation27.mmPrimaryCommunicationAddress, Organisation27.mmSecondaryCommunicationAddress,
 					OrganisationIdentification28.mmContactDetails, GeneralInformation5.mmContactInformation, Member3.mmCommunicationAddress, ContactIdentificationAndAddress1.mmCommunicationAddress, Member4.mmCommunicationAddress,
-					PartyIdentification125.mmContactDetails, PartyIdentification126.mmContactDetails, PartyIdentification129.mmContactDetails);
+					PartyIdentification125.mmContactDetails, PartyIdentification129.mmContactDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -460,8 +459,18 @@ public class Party extends RolePlayer {
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 		}
+
+		@Override
+		public List<ContactPoint> getValue(Party obj) {
+			return obj.getContactPoint();
+		}
+
+		@Override
+		public void setValue(Party obj, List<ContactPoint> value) {
+			obj.setContactPoint(value);
+		}
 	};
-	protected List<com.tools20022.repository.entity.PartyIdentificationInformation> identification;
+	protected List<PartyIdentificationInformation> identification;
 	/**
 	 * 
 	 <p>
@@ -497,7 +506,7 @@ public class Party extends RolePlayer {
 	 * definition} = "Specific identification assigned to a party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Party, List<PartyIdentificationInformation>> mmIdentification = new MMBusinessAssociationEnd<Party, List<PartyIdentificationInformation>>() {
 		{
 			derivation_lazy = () -> ListBuilderForParty_00.addElems(new ArrayList<>());
 			isDerived = false;
@@ -506,9 +515,19 @@ public class Party extends RolePlayer {
 			name = "Identification";
 			definition = "Specific identification assigned to a party.";
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedParty;
+			opposite_lazy = () -> PartyIdentificationInformation.mmIdentifiedParty;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
+			type_lazy = () -> PartyIdentificationInformation.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentificationInformation> getValue(Party obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Party obj, List<PartyIdentificationInformation> value) {
+			obj.setIdentification(value);
 		}
 	};
 	protected MoneyLaunderingCheckCode moneyLaunderingCheck;
@@ -610,7 +629,7 @@ public class Party extends RolePlayer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmMoneyLaunderingCheck = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<Party, MoneyLaunderingCheckCode> mmMoneyLaunderingCheck = new MMBusinessAttribute<Party, MoneyLaunderingCheckCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation5.mmMoneyLaunderingCheck, InvestmentAccountOwnershipInformation5.mmExtendedMoneyLaunderingCheck,
 					InvestmentAccountOwnershipInformation2.mmMoneyLaunderingCheck, InvestmentAccountOwnershipInformation2.mmExtendedMoneyLaunderingCheck, MoneyLaunderingCheck1Choice.mmCode, MoneyLaunderingCheck1Choice.mmProprietary,
@@ -629,12 +648,14 @@ public class Party extends RolePlayer {
 			simpleType_lazy = () -> MoneyLaunderingCheckCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return Party.class.getMethod("getMoneyLaunderingCheck", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MoneyLaunderingCheckCode getValue(Party obj) {
+			return obj.getMoneyLaunderingCheck();
+		}
+
+		@Override
+		public void setValue(Party obj, MoneyLaunderingCheckCode value) {
+			obj.setMoneyLaunderingCheck(value);
 		}
 	};
 	protected Tax taxationConditions;
@@ -702,7 +723,7 @@ public class Party extends RolePlayer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmTaxationConditions = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Party, Tax> mmTaxationConditions = new MMBusinessAssociationEnd<Party, Tax>() {
 		{
 			derivation_lazy = () -> Arrays.asList(Tax8.mmCountry, Tax17.mmCountry, Tax16.mmCountry, Tax14.mmCountry, Tax18.mmCountry, Tax19.mmCountry, TaxIdentification1.mmTaxationCountry, TaxIdentification2.mmIssuerCountry,
 					Tax32.mmCountry, Tax30.mmCountry, Tax31.mmCountry, Tax34.mmCountry);
@@ -713,9 +734,19 @@ public class Party extends RolePlayer {
 			definition = "Taxation parameters which apply to an individual person or to an organisation.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Tax.mmTaxableParty;
+			opposite_lazy = () -> Tax.mmTaxableParty;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Tax.mmObject();
+			type_lazy = () -> Tax.mmObject();
+		}
+
+		@Override
+		public Tax getValue(Party obj) {
+			return obj.getTaxationConditions();
+		}
+
+		@Override
+		public void setValue(Party obj, Tax value) {
+			obj.setTaxationConditions(value);
 		}
 	};
 	protected Location domicile;
@@ -766,7 +797,7 @@ public class Party extends RolePlayer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmDomicile = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Party, com.tools20022.repository.entity.Location> mmDomicile = new MMBusinessAssociationEnd<Party, com.tools20022.repository.entity.Location>() {
 		{
 			derivation_lazy = () -> Arrays.asList(BeneficialOwner1.mmDomicileCountry, BeneficialOwner2.mmDomicileCountry, OrganisationIdentification27.mmDomicile);
 			isDerived = false;
@@ -779,6 +810,16 @@ public class Party extends RolePlayer {
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmDomiciledParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Location getValue(Party obj) {
+			return obj.getDomicile();
+		}
+
+		@Override
+		public void setValue(Party obj, com.tools20022.repository.entity.Location value) {
+			obj.setDomicile(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Location> residence;
@@ -826,7 +867,7 @@ public class Party extends RolePlayer {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmResidence = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Party, List<Location>> mmResidence = new MMBusinessAssociationEnd<Party, List<Location>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReportSpecification4.mmBuyerCountry, ReportSpecification4.mmSellerCountry);
 			isDerived = false;
@@ -838,6 +879,16 @@ public class Party extends RolePlayer {
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
+		}
+
+		@Override
+		public List<Location> getValue(Party obj) {
+			return obj.getResidence();
+		}
+
+		@Override
+		public void setValue(Party obj, List<Location> value) {
+			obj.setResidence(value);
 		}
 	};
 	protected PowerOfAttorney powerOfAttorney;
@@ -873,7 +924,7 @@ public class Party extends RolePlayer {
 	 * definition} = "Power of attorney which is held by the party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPowerOfAttorney = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Party, Optional<PowerOfAttorney>> mmPowerOfAttorney = new MMBusinessAssociationEnd<Party, Optional<PowerOfAttorney>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
@@ -885,6 +936,16 @@ public class Party extends RolePlayer {
 			opposite_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmAuthorisedParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.PowerOfAttorney.mmObject();
+		}
+
+		@Override
+		public Optional<PowerOfAttorney> getValue(Party obj) {
+			return obj.getPowerOfAttorney();
+		}
+
+		@Override
+		public void setValue(Party obj, Optional<PowerOfAttorney> value) {
+			obj.setPowerOfAttorney(value.orElse(null));
 		}
 	};
 	protected Location location;
@@ -919,7 +980,7 @@ public class Party extends RolePlayer {
 	 * definition} = "Location of the taxable party."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmLocation = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Party, com.tools20022.repository.entity.Location> mmLocation = new MMBusinessAssociationEnd<Party, com.tools20022.repository.entity.Location>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
@@ -931,6 +992,16 @@ public class Party extends RolePlayer {
 			opposite_lazy = () -> com.tools20022.repository.entity.Location.mmTaxableParty;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Location getValue(Party obj) {
+			return obj.getLocation();
+		}
+
+		@Override
+		public void setValue(Party obj, com.tools20022.repository.entity.Location value) {
+			obj.setLocation(value);
 		}
 	};
 	protected Security closeLinkSecurity;
@@ -966,7 +1037,7 @@ public class Party extends RolePlayer {
 	 * "Security for which a close link with a party is identified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCloseLinkSecurity = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<Party, Security> mmCloseLinkSecurity = new MMBusinessAssociationEnd<Party, Security>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
@@ -975,9 +1046,76 @@ public class Party extends RolePlayer {
 			definition = "Security for which a close link with a party is identified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.Security.mmCloseLink;
+			opposite_lazy = () -> Security.mmCloseLink;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
+			type_lazy = () -> Security.mmObject();
+		}
+
+		@Override
+		public Security getValue(Party obj) {
+			return obj.getCloseLinkSecurity();
+		}
+
+		@Override
+		public void setValue(Party obj, Security value) {
+			obj.setCloseLinkSecurity(value);
+		}
+	};
+	protected CreditQualityCode creditQuality;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.codeset.CreditQualityCode
+	 * CreditQualityCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClearingMember1#mmCreditQuality
+	 * ClearingMember1.mmCreditQuality}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Party
+	 * Party}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditQuality"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Credit quality for the clearing member."</li>
+	 * </ul>
+	 */
+	public static final MMBusinessAttribute<Party, CreditQualityCode> mmCreditQuality = new MMBusinessAttribute<Party, CreditQualityCode>() {
+		{
+			derivation_lazy = () -> Arrays.asList(ClearingMember1.mmCreditQuality);
+			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "CreditQuality";
+			definition = "Credit quality for the clearing member.";
+			maxOccurs = 1;
+			minOccurs = 1;
+			simpleType_lazy = () -> CreditQualityCode.mmObject();
+		}
+
+		@Override
+		public CreditQualityCode getValue(Party obj) {
+			return obj.getCreditQuality();
+		}
+
+		@Override
+		public void setValue(Party obj, CreditQualityCode value) {
+			obj.setCreditQuality(value);
 		}
 	};
 
@@ -988,9 +1126,9 @@ public class Party extends RolePlayer {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Party";
 				definition = "Entity involved in an activity.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmCloseLink, com.tools20022.repository.entity.ContactPoint.mmRelatedParty,
-						com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedParty, com.tools20022.repository.entity.Location.mmDomiciledParty, com.tools20022.repository.entity.Location.mmParty,
-						com.tools20022.repository.entity.Location.mmTaxableParty, com.tools20022.repository.entity.Tax.mmTaxableParty, com.tools20022.repository.entity.PowerOfAttorney.mmAuthorisedParty);
+				associationDomain_lazy = () -> Arrays.asList(Security.mmCloseLink, com.tools20022.repository.entity.ContactPoint.mmRelatedParty, PartyIdentificationInformation.mmIdentifiedParty,
+						com.tools20022.repository.entity.Location.mmDomiciledParty, com.tools20022.repository.entity.Location.mmParty, com.tools20022.repository.entity.Location.mmTaxableParty, Tax.mmTaxableParty,
+						com.tools20022.repository.entity.PowerOfAttorney.mmAuthorisedParty);
 				derivationElement_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation6.mmParty, InvestmentAccountOwnershipInformation7.mmParty, OperationMandate1.mmMandateHolder, PartyAndAuthorisation1.mmPartyOrGroup,
 						PartyAndAuthorisation3.mmPartyOrGroup, Report2.mmNonClearingMember, NetPosition1.mmDepository, InvestmentAccountOwnershipInformation8.mmParty, InvestmentAccountOwnershipInformation9.mmParty,
 						InvestmentAccountOwnershipInformation10.mmParty, InvestmentAccountOwnershipInformation11.mmParty, Report5.mmNonClearingMember, InvestmentAccountOwnershipInformation12.mmParty,
@@ -999,7 +1137,8 @@ public class Party extends RolePlayer {
 				superType_lazy = () -> RolePlayer.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Party.mmContactPoint, com.tools20022.repository.entity.Party.mmIdentification, com.tools20022.repository.entity.Party.mmMoneyLaunderingCheck,
 						com.tools20022.repository.entity.Party.mmTaxationConditions, com.tools20022.repository.entity.Party.mmDomicile, com.tools20022.repository.entity.Party.mmResidence,
-						com.tools20022.repository.entity.Party.mmPowerOfAttorney, com.tools20022.repository.entity.Party.mmLocation, com.tools20022.repository.entity.Party.mmCloseLinkSecurity);
+						com.tools20022.repository.entity.Party.mmPowerOfAttorney, com.tools20022.repository.entity.Party.mmLocation, com.tools20022.repository.entity.Party.mmCloseLinkSecurity,
+						com.tools20022.repository.entity.Party.mmCreditQuality);
 				derivationComponent_lazy = () -> Arrays.asList(Party14Choice.mmObject(), PartyIdentificationAndAccount93.mmObject(), Counterparty1Choice.mmObject(), Counterparty4Choice.mmObject(),
 						PartyIdentificationAndAccount81.mmObject(), PartyIdentificationAndAccount86.mmObject(), Counterparty7Choice.mmObject(), PartyIdentificationAndAccount88.mmObject(), PartyIdentificationAndAccount92.mmObject(),
 						Counterparty2Choice.mmObject(), Counterparty3Choice.mmObject(), Counterparty6Choice.mmObject(), TradingPartyCapacity1Choice.mmObject(), TradingPartyCapacity2Choice.mmObject(), PartyAndSignature1.mmObject(),
@@ -1031,7 +1170,7 @@ public class Party extends RolePlayer {
 		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public Party setIdentification(List<com.tools20022.repository.entity.PartyIdentificationInformation> identification) {
+	public Party setIdentification(List<PartyIdentificationInformation> identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -1049,7 +1188,7 @@ public class Party extends RolePlayer {
 		return taxationConditions;
 	}
 
-	public Party setTaxationConditions(com.tools20022.repository.entity.Tax taxationConditions) {
+	public Party setTaxationConditions(Tax taxationConditions) {
 		this.taxationConditions = Objects.requireNonNull(taxationConditions);
 		return this;
 	}
@@ -1094,8 +1233,17 @@ public class Party extends RolePlayer {
 		return closeLinkSecurity;
 	}
 
-	public Party setCloseLinkSecurity(com.tools20022.repository.entity.Security closeLinkSecurity) {
+	public Party setCloseLinkSecurity(Security closeLinkSecurity) {
 		this.closeLinkSecurity = Objects.requireNonNull(closeLinkSecurity);
+		return this;
+	}
+
+	public CreditQualityCode getCreditQuality() {
+		return creditQuality;
+	}
+
+	public Party setCreditQuality(CreditQualityCode creditQuality) {
+		this.creditQuality = Objects.requireNonNull(creditQuality);
 		return this;
 	}
 }

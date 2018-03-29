@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.RedemptionExecution;
 import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentAccount33;
+import com.tools20022.repository.msg.RedemptionExecution12;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -120,7 +122,7 @@ public class RedemptionMultipleExecution4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution4, Optional<RestrictedFINMax16Text>> mmMasterReference = new MMMessageAttribute<RedemptionMultipleExecution4, Optional<RestrictedFINMax16Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution4.mmObject();
@@ -132,6 +134,16 @@ public class RedemptionMultipleExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax16Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax16Text> getValue(RedemptionMultipleExecution4 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution4 obj, Optional<RestrictedFINMax16Text> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfTrad")
@@ -170,7 +182,7 @@ public class RedemptionMultipleExecution4 {
 	 * "Market in which the advised trade transaction was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RedemptionMultipleExecution4, Optional<PlaceOfTradeIdentification3Choice>> mmPlaceOfTrade = new MMMessageAttribute<RedemptionMultipleExecution4, Optional<PlaceOfTradeIdentification3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution4.mmObject();
@@ -182,6 +194,16 @@ public class RedemptionMultipleExecution4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PlaceOfTradeIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PlaceOfTradeIdentification3Choice> getValue(RedemptionMultipleExecution4 obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution4 obj, Optional<PlaceOfTradeIdentification3Choice> value) {
+			obj.setPlaceOfTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcctDtls", required = true)
@@ -218,7 +240,7 @@ public class RedemptionMultipleExecution4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleExecution4, InvestmentAccount33> mmInvestmentAccountDetails = new MMMessageAssociationEnd<RedemptionMultipleExecution4, InvestmentAccount33>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution4.mmObject();
@@ -230,7 +252,17 @@ public class RedemptionMultipleExecution4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount33.mmObject();
+			type_lazy = () -> InvestmentAccount33.mmObject();
+		}
+
+		@Override
+		public InvestmentAccount33 getValue(RedemptionMultipleExecution4 obj) {
+			return obj.getInvestmentAccountDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution4 obj, InvestmentAccount33 value) {
+			obj.setInvestmentAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "IndvExctnDtls", required = true)
@@ -266,7 +298,7 @@ public class RedemptionMultipleExecution4 {
 	 * definition} = "Execution of a redemption order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndividualExecutionDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionMultipleExecution4, RedemptionExecution12> mmIndividualExecutionDetails = new MMMessageAssociationEnd<RedemptionMultipleExecution4, RedemptionExecution12>() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionExecution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionMultipleExecution4.mmObject();
@@ -278,7 +310,17 @@ public class RedemptionMultipleExecution4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RedemptionExecution12.mmObject();
+			type_lazy = () -> RedemptionExecution12.mmObject();
+		}
+
+		@Override
+		public RedemptionExecution12 getValue(RedemptionMultipleExecution4 obj) {
+			return obj.getIndividualExecutionDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionMultipleExecution4 obj, RedemptionExecution12 value) {
+			obj.setIndividualExecutionDetails(value);
 		}
 	};
 
@@ -319,7 +361,7 @@ public class RedemptionMultipleExecution4 {
 		return investmentAccountDetails;
 	}
 
-	public RedemptionMultipleExecution4 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount33 investmentAccountDetails) {
+	public RedemptionMultipleExecution4 setInvestmentAccountDetails(InvestmentAccount33 investmentAccountDetails) {
 		this.investmentAccountDetails = Objects.requireNonNull(investmentAccountDetails);
 		return this;
 	}
@@ -328,7 +370,7 @@ public class RedemptionMultipleExecution4 {
 		return individualExecutionDetails;
 	}
 
-	public RedemptionMultipleExecution4 setIndividualExecutionDetails(com.tools20022.repository.msg.RedemptionExecution12 individualExecutionDetails) {
+	public RedemptionMultipleExecution4 setIndividualExecutionDetails(RedemptionExecution12 individualExecutionDetails) {
 		this.individualExecutionDetails = Objects.requireNonNull(individualExecutionDetails);
 		return this;
 	}

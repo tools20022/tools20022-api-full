@@ -113,7 +113,7 @@ public class InvestmentFundTransactionOutType1Choice {
 	 * InvestmentFundTransactionInType1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionOutType1Choice, InvestmentFundTransactionOutType1Code> mmCode = new MMMessageAttribute<InvestmentFundTransactionOutType1Choice, InvestmentFundTransactionOutType1Code>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice.mmObject();
@@ -126,6 +126,16 @@ public class InvestmentFundTransactionOutType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundTransactionOutType1Code.mmObject();
+		}
+
+		@Override
+		public InvestmentFundTransactionOutType1Code getValue(InvestmentFundTransactionOutType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionOutType1Choice obj, InvestmentFundTransactionOutType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -168,7 +178,7 @@ public class InvestmentFundTransactionOutType1Choice {
 	 * InvestmentFundTransactionInType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentFundTransactionOutType1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<InvestmentFundTransactionOutType1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InvestmentFundTransactionOutType1Choice.mmObject();
@@ -181,6 +191,16 @@ public class InvestmentFundTransactionOutType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(InvestmentFundTransactionOutType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InvestmentFundTransactionOutType1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

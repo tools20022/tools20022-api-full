@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.entity.TerminalManagementSystem;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CryptographicKey3;
+import com.tools20022.repository.msg.NetworkParameters1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -129,7 +131,7 @@ public class HostCommunicationParameter2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HostCommunicationParameter2, Max35Text> mmHostIdentification = new MMMessageAttribute<HostCommunicationParameter2, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter2.mmObject();
@@ -142,6 +144,16 @@ public class HostCommunicationParameter2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(HostCommunicationParameter2 obj) {
+			return obj.getHostIdentification();
+		}
+
+		@Override
+		public void setValue(HostCommunicationParameter2 obj, Max35Text value) {
+			obj.setHostIdentification(value);
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -185,7 +197,7 @@ public class HostCommunicationParameter2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HostCommunicationParameter2, Optional<NetworkParameters1>> mmAddress = new MMMessageAssociationEnd<HostCommunicationParameter2, Optional<NetworkParameters1>>() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementSystem.mmNetworkAccess;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter2.mmObject();
@@ -198,11 +210,21 @@ public class HostCommunicationParameter2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters1.mmObject();
+			type_lazy = () -> NetworkParameters1.mmObject();
+		}
+
+		@Override
+		public Optional<NetworkParameters1> getValue(HostCommunicationParameter2 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(HostCommunicationParameter2 obj, Optional<NetworkParameters1> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Key")
-	protected List<com.tools20022.repository.msg.CryptographicKey3> key;
+	protected List<CryptographicKey3> key;
 	/**
 	 * 
 	 <p>
@@ -237,7 +259,7 @@ public class HostCommunicationParameter2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HostCommunicationParameter2, List<CryptographicKey3>> mmKey = new MMMessageAssociationEnd<HostCommunicationParameter2, List<CryptographicKey3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.HostCommunicationParameter2.mmObject();
 			isDerived = false;
@@ -248,7 +270,17 @@ public class HostCommunicationParameter2 {
 			nextVersions_lazy = () -> Arrays.asList(HostCommunicationParameter3.mmKey);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CryptographicKey3.mmObject();
+			type_lazy = () -> CryptographicKey3.mmObject();
+		}
+
+		@Override
+		public List<CryptographicKey3> getValue(HostCommunicationParameter2 obj) {
+			return obj.getKey();
+		}
+
+		@Override
+		public void setValue(HostCommunicationParameter2 obj, List<CryptographicKey3> value) {
+			obj.setKey(value);
 		}
 	};
 
@@ -282,7 +314,7 @@ public class HostCommunicationParameter2 {
 		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public HostCommunicationParameter2 setAddress(com.tools20022.repository.msg.NetworkParameters1 address) {
+	public HostCommunicationParameter2 setAddress(NetworkParameters1 address) {
 		this.address = address;
 		return this;
 	}
@@ -291,7 +323,7 @@ public class HostCommunicationParameter2 {
 		return key == null ? key = new ArrayList<>() : key;
 	}
 
-	public HostCommunicationParameter2 setKey(List<com.tools20022.repository.msg.CryptographicKey3> key) {
+	public HostCommunicationParameter2 setKey(List<CryptographicKey3> key) {
 		this.key = Objects.requireNonNull(key);
 		return this;
 	}

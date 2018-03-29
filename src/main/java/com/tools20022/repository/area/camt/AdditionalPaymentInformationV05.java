@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.CaseAssignment3;
 import com.tools20022.repository.msg.PaymentComplementaryInformation4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -190,7 +189,7 @@ public class AdditionalPaymentInformationV05 {
 	 * AdditionalPaymentInformationV04.mmAssignment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV05, CaseAssignment3> mmAssignment = new MMMessageBuildingBlock<AdditionalPaymentInformationV05, CaseAssignment3>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,12 +202,14 @@ public class AdditionalPaymentInformationV05 {
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV05.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment3 getValue(AdditionalPaymentInformationV05 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV05 obj, CaseAssignment3 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -247,7 +248,7 @@ public class AdditionalPaymentInformationV05 {
 	 * AdditionalPaymentInformationV04.mmCase}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV05, Case3> mmCase = new MMMessageBuildingBlock<AdditionalPaymentInformationV05, Case3>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,12 +261,14 @@ public class AdditionalPaymentInformationV05 {
 			complexType_lazy = () -> Case3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV05.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case3 getValue(AdditionalPaymentInformationV05 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV05 obj, Case3 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Undrlyg", required = true)
@@ -306,7 +309,7 @@ public class AdditionalPaymentInformationV05 {
 	 * AdditionalPaymentInformationV04.mmUnderlying}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmUnderlying = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV05, UnderlyingTransaction2Choice> mmUnderlying = new MMMessageBuildingBlock<AdditionalPaymentInformationV05, UnderlyingTransaction2Choice>() {
 		{
 			xmlTag = "Undrlyg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,12 +322,14 @@ public class AdditionalPaymentInformationV05 {
 			complexType_lazy = () -> UnderlyingTransaction2Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV05.class.getMethod("getUnderlying", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public UnderlyingTransaction2Choice getValue(AdditionalPaymentInformationV05 obj) {
+			return obj.getUnderlying();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV05 obj, UnderlyingTransaction2Choice value) {
+			obj.setUnderlying(value);
 		}
 	};
 	@XmlElement(name = "Inf", required = true)
@@ -366,7 +371,7 @@ public class AdditionalPaymentInformationV05 {
 	 * AdditionalPaymentInformationV04.mmInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV05, PaymentComplementaryInformation4> mmInformation = new MMMessageBuildingBlock<AdditionalPaymentInformationV05, PaymentComplementaryInformation4>() {
 		{
 			xmlTag = "Inf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,12 +384,14 @@ public class AdditionalPaymentInformationV05 {
 			complexType_lazy = () -> PaymentComplementaryInformation4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV05.class.getMethod("getInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentComplementaryInformation4 getValue(AdditionalPaymentInformationV05 obj) {
+			return obj.getInformation();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV05 obj, PaymentComplementaryInformation4 value) {
+			obj.setInformation(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -427,7 +434,7 @@ public class AdditionalPaymentInformationV05 {
 	 * AdditionalPaymentInformationV04.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AdditionalPaymentInformationV05, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<AdditionalPaymentInformationV05, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -439,12 +446,14 @@ public class AdditionalPaymentInformationV05 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AdditionalPaymentInformationV05.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(AdditionalPaymentInformationV05 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(AdditionalPaymentInformationV05 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

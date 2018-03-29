@@ -60,12 +60,16 @@ public class ConstraintShortLongNumberRule {
 	 */
 	public static final MMConstraint<DocumentNumber1Choice> forDocumentNumber1Choice = new MMConstraint<DocumentNumber1Choice>() {
 		{
-			validator = ConstraintShortLongNumberRule::checkDocumentNumber1Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongNumberRule";
 			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintShortLongNumberRule.forDocumentNumber5Choice);
 			owner_lazy = () -> DocumentNumber1Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber1Choice obj) throws Exception {
+			checkDocumentNumber1Choice(obj);
 		}
 	};
 	/**
@@ -91,11 +95,15 @@ public class ConstraintShortLongNumberRule {
 	 */
 	public static final MMConstraint<DocumentNumber2Choice> forDocumentNumber2Choice = new MMConstraint<DocumentNumber2Choice>() {
 		{
-			validator = ConstraintShortLongNumberRule::checkDocumentNumber2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongNumberRule";
 			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
 			owner_lazy = () -> DocumentNumber2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber2Choice obj) throws Exception {
+			checkDocumentNumber2Choice(obj);
 		}
 	};
 	/**
@@ -121,11 +129,15 @@ public class ConstraintShortLongNumberRule {
 	 */
 	public static final MMConstraint<DocumentNumber3Choice> forDocumentNumber3Choice = new MMConstraint<DocumentNumber3Choice>() {
 		{
-			validator = ConstraintShortLongNumberRule::checkDocumentNumber3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongNumberRule";
 			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
 			owner_lazy = () -> DocumentNumber3Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber3Choice obj) throws Exception {
+			checkDocumentNumber3Choice(obj);
 		}
 	};
 	/**
@@ -151,11 +163,15 @@ public class ConstraintShortLongNumberRule {
 	 */
 	public static final MMConstraint<DocumentNumber4Choice> forDocumentNumber4Choice = new MMConstraint<DocumentNumber4Choice>() {
 		{
-			validator = ConstraintShortLongNumberRule::checkDocumentNumber4Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongNumberRule";
 			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
 			owner_lazy = () -> DocumentNumber4Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber4Choice obj) throws Exception {
+			checkDocumentNumber4Choice(obj);
 		}
 	};
 	/**
@@ -186,12 +202,16 @@ public class ConstraintShortLongNumberRule {
 	 */
 	public static final MMConstraint<DocumentNumber5Choice> forDocumentNumber5Choice = new MMConstraint<DocumentNumber5Choice>() {
 		{
-			validator = ConstraintShortLongNumberRule::checkDocumentNumber5Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongNumberRule";
 			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintShortLongNumberRule.forDocumentNumber1Choice;
 			owner_lazy = () -> DocumentNumber5Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber5Choice obj) throws Exception {
+			checkDocumentNumber5Choice(obj);
 		}
 	};
 	/**
@@ -217,11 +237,15 @@ public class ConstraintShortLongNumberRule {
 	 */
 	public static final MMConstraint<DocumentNumber6Choice> forDocumentNumber6Choice = new MMConstraint<DocumentNumber6Choice>() {
 		{
-			validator = ConstraintShortLongNumberRule::checkDocumentNumber6Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongNumberRule";
 			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
 			owner_lazy = () -> DocumentNumber6Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber6Choice obj) throws Exception {
+			checkDocumentNumber6Choice(obj);
 		}
 	};
 	/**
@@ -247,11 +271,15 @@ public class ConstraintShortLongNumberRule {
 	 */
 	public static final MMConstraint<DocumentNumber16Choice> forDocumentNumber16Choice = new MMConstraint<DocumentNumber16Choice>() {
 		{
-			validator = ConstraintShortLongNumberRule::checkDocumentNumber16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongNumberRule";
 			definition = "ShortNumber must contain the FIN message type number of the linked message. LongNumber must contain the XML message identifier of the linked message.";
 			owner_lazy = () -> DocumentNumber16Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DocumentNumber16Choice obj) throws Exception {
+			checkDocumentNumber16Choice(obj);
 		}
 	};
 

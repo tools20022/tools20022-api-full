@@ -99,7 +99,7 @@ public class Demand4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand4, Max35Text> mmIdentification = new MMMessageAttribute<Demand4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand4.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class Demand4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Demand4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Demand4 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -146,7 +156,7 @@ public class Demand4 {
 	 * definition} = "Amount and currency of the demand."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Demand4, ActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<Demand4, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Demand.mmDemandAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Demand4.mmObject();
@@ -158,6 +168,16 @@ public class Demand4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Demand4 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Demand4 obj, ActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 

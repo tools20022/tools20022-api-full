@@ -52,11 +52,15 @@ public class ConstraintVariationMarginTextualRule {
 	 */
 	public static final MMConstraint<Margin4> forMargin4 = new MMConstraint<Margin4>() {
 		{
-			validator = ConstraintVariationMarginTextualRule::checkMargin4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMarginTextualRule";
 			definition = "If the margin amount calculation is to be shown in more details (with for example, the MarkToMarketNetted or MarkToMarketGross amounts), then it is recommended to use the element variation margin that is present at a higher level in the message.";
 			owner_lazy = () -> Margin4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Margin4 obj) throws Exception {
+			checkMargin4(obj);
 		}
 	};
 

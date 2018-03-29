@@ -113,7 +113,7 @@ public class RatioFormat23Choice {
 	 * definition} = "Ratio expressed as a quotient of quantities."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat23Choice, QuantityToQuantityRatio2> mmQuantityToQuantity = new MMMessageAssociationEnd<RatioFormat23Choice, QuantityToQuantityRatio2>() {
 		{
 			businessComponentTrace_lazy = () -> QuantityRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat23Choice.mmObject();
@@ -127,6 +127,16 @@ public class RatioFormat23Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> QuantityToQuantityRatio2.mmObject();
+		}
+
+		@Override
+		public QuantityToQuantityRatio2 getValue(RatioFormat23Choice obj) {
+			return obj.getQuantityToQuantity();
+		}
+
+		@Override
+		public void setValue(RatioFormat23Choice obj, QuantityToQuantityRatio2 value) {
+			obj.setQuantityToQuantity(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdRate", required = true)
@@ -162,7 +172,7 @@ public class RatioFormat23Choice {
 	 * definition} = "Value of the ratio not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RatioFormat23Choice, RateValueType7Code> mmNotSpecifiedRate = new MMMessageAttribute<RatioFormat23Choice, RateValueType7Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat23Choice.mmObject();
 			isDerived = false;
@@ -174,6 +184,16 @@ public class RatioFormat23Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateValueType7Code.mmObject();
+		}
+
+		@Override
+		public RateValueType7Code getValue(RatioFormat23Choice obj) {
+			return obj.getNotSpecifiedRate();
+		}
+
+		@Override
+		public void setValue(RatioFormat23Choice obj, RateValueType7Code value) {
+			obj.setNotSpecifiedRate(value);
 		}
 	};
 	@XmlElement(name = "AmtToAmt", required = true)
@@ -211,7 +231,7 @@ public class RatioFormat23Choice {
 	 * definition} = "Ratio expressed as a quotient of amounts."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountToAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RatioFormat23Choice, AmountToAmountRatio3> mmAmountToAmount = new MMMessageAssociationEnd<RatioFormat23Choice, AmountToAmountRatio3>() {
 		{
 			businessComponentTrace_lazy = () -> AmountRatio.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.RatioFormat23Choice.mmObject();
@@ -225,6 +245,16 @@ public class RatioFormat23Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountToAmountRatio3.mmObject();
+		}
+
+		@Override
+		public AmountToAmountRatio3 getValue(RatioFormat23Choice obj) {
+			return obj.getAmountToAmount();
+		}
+
+		@Override
+		public void setValue(RatioFormat23Choice obj, AmountToAmountRatio3 value) {
+			obj.setAmountToAmount(value);
 		}
 	};
 

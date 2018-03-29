@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommonFinancialInstrumentAttributes6;
+import com.tools20022.repository.msg.FinancialInstrument54;
+import com.tools20022.repository.msg.SecurityIdentification19;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -73,7 +76,7 @@ public class SecurityAttributes4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "FinInstrmId")
-	protected List<com.tools20022.repository.msg.SecurityIdentification19> financialInstrumentIdentification;
+	protected List<SecurityIdentification19> financialInstrumentIdentification;
 	/**
 	 * 
 	 <p>
@@ -106,7 +109,7 @@ public class SecurityAttributes4 {
 	 * SecurityAttributes3.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityAttributes4, List<SecurityIdentification19>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<SecurityAttributes4, List<SecurityIdentification19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityAttributes4.mmObject();
 			isDerived = false;
@@ -117,7 +120,17 @@ public class SecurityAttributes4 {
 			previousVersion_lazy = () -> SecurityAttributes3.mmFinancialInstrumentIdentification;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification19> getValue(SecurityAttributes4 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityAttributes4 obj, List<SecurityIdentification19> value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmTp")
@@ -154,7 +167,7 @@ public class SecurityAttributes4 {
 	 * SecurityAttributes3.mmFinancialInstrumentType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityAttributes4, Optional<FinancialInstrument54>> mmFinancialInstrumentType = new MMMessageAssociationEnd<SecurityAttributes4, Optional<FinancialInstrument54>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityAttributes4.mmObject();
 			isDerived = false;
@@ -166,11 +179,21 @@ public class SecurityAttributes4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument54.mmObject();
+			type_lazy = () -> FinancialInstrument54.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrument54> getValue(SecurityAttributes4 obj) {
+			return obj.getFinancialInstrumentType();
+		}
+
+		@Override
+		public void setValue(SecurityAttributes4 obj, Optional<FinancialInstrument54> value) {
+			obj.setFinancialInstrumentType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FinInstrmAttrbts")
-	protected List<com.tools20022.repository.msg.CommonFinancialInstrumentAttributes6> financialInstrumentAttributes;
+	protected List<CommonFinancialInstrumentAttributes6> financialInstrumentAttributes;
 	/**
 	 * 
 	 <p>
@@ -205,7 +228,7 @@ public class SecurityAttributes4 {
 	 * SecurityAttributes3.mmFinancialInstrumentAttributes}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityAttributes4, List<CommonFinancialInstrumentAttributes6>> mmFinancialInstrumentAttributes = new MMMessageAssociationEnd<SecurityAttributes4, List<CommonFinancialInstrumentAttributes6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityAttributes4.mmObject();
 			isDerived = false;
@@ -216,7 +239,17 @@ public class SecurityAttributes4 {
 			previousVersion_lazy = () -> SecurityAttributes3.mmFinancialInstrumentAttributes;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommonFinancialInstrumentAttributes6.mmObject();
+			type_lazy = () -> CommonFinancialInstrumentAttributes6.mmObject();
+		}
+
+		@Override
+		public List<CommonFinancialInstrumentAttributes6> getValue(SecurityAttributes4 obj) {
+			return obj.getFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(SecurityAttributes4 obj, List<CommonFinancialInstrumentAttributes6> value) {
+			obj.setFinancialInstrumentAttributes(value);
 		}
 	};
 
@@ -239,7 +272,7 @@ public class SecurityAttributes4 {
 		return financialInstrumentIdentification == null ? financialInstrumentIdentification = new ArrayList<>() : financialInstrumentIdentification;
 	}
 
-	public SecurityAttributes4 setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification19> financialInstrumentIdentification) {
+	public SecurityAttributes4 setFinancialInstrumentIdentification(List<SecurityIdentification19> financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -248,7 +281,7 @@ public class SecurityAttributes4 {
 		return financialInstrumentType == null ? Optional.empty() : Optional.of(financialInstrumentType);
 	}
 
-	public SecurityAttributes4 setFinancialInstrumentType(com.tools20022.repository.msg.FinancialInstrument54 financialInstrumentType) {
+	public SecurityAttributes4 setFinancialInstrumentType(FinancialInstrument54 financialInstrumentType) {
 		this.financialInstrumentType = financialInstrumentType;
 		return this;
 	}
@@ -257,7 +290,7 @@ public class SecurityAttributes4 {
 		return financialInstrumentAttributes == null ? financialInstrumentAttributes = new ArrayList<>() : financialInstrumentAttributes;
 	}
 
-	public SecurityAttributes4 setFinancialInstrumentAttributes(List<com.tools20022.repository.msg.CommonFinancialInstrumentAttributes6> financialInstrumentAttributes) {
+	public SecurityAttributes4 setFinancialInstrumentAttributes(List<CommonFinancialInstrumentAttributes6> financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = Objects.requireNonNull(financialInstrumentAttributes);
 		return this;
 	}

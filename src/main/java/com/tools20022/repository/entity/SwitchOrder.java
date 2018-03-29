@@ -22,9 +22,10 @@ import com.tools20022.repository.choice.AdditionalAmount1Choice;
 import com.tools20022.repository.choice.SubscriptionOrRedemptionOrSwitchOrderDataChoice;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.entity.InvestmentFundOrder;
+import com.tools20022.repository.entity.SwitchRedemptionLeg;
+import com.tools20022.repository.entity.SwitchSubscriptionLeg;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -205,7 +206,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAdditionalCashIn = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SwitchOrder, CurrencyAndAmount> mmAdditionalCashIn = new MMBusinessAttribute<SwitchOrder, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmAdditionalCashIn, SwitchOrder2.mmAdditionalCashIn, SwitchOrder3.mmAdditionalCashIn, SwitchExecution3.mmAdditionalCashIn, SwitchExecution4.mmAdditionalCashIn,
 					SwitchOrder4.mmAdditionalCashIn, SwitchExecution7.mmAdditionalAmount, SwitchOrder7.mmAdditionalAmount, AdditionalAmount1Choice.mmAdditionalCashIn, FundOrderData6.mmAdditionalAmount);
@@ -219,12 +220,14 @@ public class SwitchOrder extends InvestmentFundOrder {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrder.class.getMethod("getAdditionalCashIn", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SwitchOrder obj) {
+			return obj.getAdditionalCashIn();
+		}
+
+		@Override
+		public void setValue(SwitchOrder obj, CurrencyAndAmount value) {
+			obj.setAdditionalCashIn(value);
 		}
 	};
 	protected CurrencyAndAmount resultingCashOut;
@@ -281,7 +284,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmResultingCashOut = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SwitchOrder, CurrencyAndAmount> mmResultingCashOut = new MMBusinessAttribute<SwitchOrder, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmResultingCashOut, SwitchOrder2.mmResultingCashOut, SwitchOrder3.mmResultingCashOut, SwitchExecution3.mmResultingCashOut, SwitchExecution4.mmResultingCashOut,
 					SwitchOrder4.mmResultingCashOut, AdditionalAmount1Choice.mmResultingCashOut);
@@ -295,12 +298,14 @@ public class SwitchOrder extends InvestmentFundOrder {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrder.class.getMethod("getResultingCashOut", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SwitchOrder obj) {
+			return obj.getResultingCashOut();
+		}
+
+		@Override
+		public void setValue(SwitchOrder obj, CurrencyAndAmount value) {
+			obj.setResultingCashOut(value);
 		}
 	};
 	protected CurrencyAndAmount totalRedemptionAmount;
@@ -354,7 +359,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalRedemptionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SwitchOrder, CurrencyAndAmount> mmTotalRedemptionAmount = new MMBusinessAttribute<SwitchOrder, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmTotalRedemptionAmount, SwitchOrder2.mmTotalRedemptionAmount, SwitchOrder3.mmTotalRedemptionAmount, SwitchExecution3.mmTotalRedemptionAmount,
 					SwitchExecution4.mmTotalRedemptionAmount, SwitchOrder4.mmTotalRedemptionAmount);
@@ -368,12 +373,14 @@ public class SwitchOrder extends InvestmentFundOrder {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrder.class.getMethod("getTotalRedemptionAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SwitchOrder obj) {
+			return obj.getTotalRedemptionAmount();
+		}
+
+		@Override
+		public void setValue(SwitchOrder obj, CurrencyAndAmount value) {
+			obj.setTotalRedemptionAmount(value);
 		}
 	};
 	protected CurrencyAndAmount totalSubscriptionAmount;
@@ -427,7 +434,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTotalSubscriptionAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SwitchOrder, CurrencyAndAmount> mmTotalSubscriptionAmount = new MMBusinessAttribute<SwitchOrder, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FundOrderData2.mmTotalSubscriptionAmount, SwitchOrder2.mmTotalSubscriptionAmount, SwitchOrder3.mmTotalSubscriptionAmount, SwitchExecution3.mmTotalSubscriptionAmount,
 					SwitchExecution4.mmTotalSubscriptionAmount, SwitchOrder4.mmTotalSubscriptionAmount);
@@ -441,15 +448,17 @@ public class SwitchOrder extends InvestmentFundOrder {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrder.class.getMethod("getTotalSubscriptionAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(SwitchOrder obj) {
+			return obj.getTotalSubscriptionAmount();
+		}
+
+		@Override
+		public void setValue(SwitchOrder obj, CurrencyAndAmount value) {
+			obj.setTotalSubscriptionAmount(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SwitchRedemptionLeg> redemptionLeg;
+	protected List<SwitchRedemptionLeg> redemptionLeg;
 	/**
 	 * 
 	 <p>
@@ -503,7 +512,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 * "Part of an investment fund switch order that is a redemption."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRedemptionLeg = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SwitchOrder, List<SwitchRedemptionLeg>> mmRedemptionLeg = new MMBusinessAssociationEnd<SwitchOrder, List<SwitchRedemptionLeg>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SwitchOrder2.mmRedemptionLegDetails, SwitchOrder3.mmRedemptionLegDetails, SwitchOrder4.mmRedemptionLegDetails, SwitchOrder5.mmRedemptionLeg, SwitchOrder7.mmRedemptionLegDetails);
 			isDerived = false;
@@ -512,12 +521,22 @@ public class SwitchOrder extends InvestmentFundOrder {
 			name = "RedemptionLeg";
 			definition = "Part of an investment fund switch order that is a redemption.";
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder;
+			opposite_lazy = () -> SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SwitchRedemptionLeg.mmObject();
+			type_lazy = () -> SwitchRedemptionLeg.mmObject();
+		}
+
+		@Override
+		public List<SwitchRedemptionLeg> getValue(SwitchOrder obj) {
+			return obj.getRedemptionLeg();
+		}
+
+		@Override
+		public void setValue(SwitchOrder obj, List<SwitchRedemptionLeg> value) {
+			obj.setRedemptionLeg(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.SwitchSubscriptionLeg> subscriptionLeg;
+	protected List<SwitchSubscriptionLeg> subscriptionLeg;
 	/**
 	 * 
 	 <p>
@@ -572,7 +591,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 	 * "Part of an investment fund switch order that is a subscription."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSubscriptionLeg = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SwitchOrder, List<SwitchSubscriptionLeg>> mmSubscriptionLeg = new MMBusinessAssociationEnd<SwitchOrder, List<SwitchSubscriptionLeg>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SwitchOrder2.mmSubscriptionLegDetails, SwitchOrder3.mmSubscriptionLegDetails, SwitchOrder4.mmSubscriptionLegDetails, SwitchOrder5.mmSubscriptionLeg, SwitchOrder7.mmSubscriptionLegDetails);
 			isDerived = false;
@@ -581,9 +600,19 @@ public class SwitchOrder extends InvestmentFundOrder {
 			name = "SubscriptionLeg";
 			definition = "Part of an investment fund switch order that is a subscription.";
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SwitchSubscriptionLeg.mmSubscriptionRelatedSwitchOrder;
+			opposite_lazy = () -> SwitchSubscriptionLeg.mmSubscriptionRelatedSwitchOrder;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SwitchSubscriptionLeg.mmObject();
+			type_lazy = () -> SwitchSubscriptionLeg.mmObject();
+		}
+
+		@Override
+		public List<SwitchSubscriptionLeg> getValue(SwitchOrder obj) {
+			return obj.getSubscriptionLeg();
+		}
+
+		@Override
+		public void setValue(SwitchOrder obj, List<SwitchSubscriptionLeg> value) {
+			obj.setSubscriptionLeg(value);
 		}
 	};
 
@@ -594,7 +623,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SwitchOrder";
 				definition = "Transfer from one investment fund/fund class to another investment fund or investment fund class by the investor. A switch is composed of one or several subscription legs, and one or several redemption legs.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder, com.tools20022.repository.entity.SwitchSubscriptionLeg.mmSubscriptionRelatedSwitchOrder);
+				associationDomain_lazy = () -> Arrays.asList(SwitchRedemptionLeg.mmRedemptionRelatedSwitchOrder, SwitchSubscriptionLeg.mmSubscriptionRelatedSwitchOrder);
 				derivationElement_lazy = () -> Arrays.asList(SwitchOrderStatusAndReason1.mmOrderData, SwitchOrderInstruction1.mmSwitchOrderDetails, SwitchOrderInstruction2.mmSwitchOrderDetails,
 						SubscriptionOrRedemptionOrSwitchOrderDataChoice.mmSwitchDetails, SwitchOrderStatusAndReason2.mmOrderData);
 				superType_lazy = () -> InvestmentFundOrder.mmObject();
@@ -653,7 +682,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 		return redemptionLeg == null ? redemptionLeg = new ArrayList<>() : redemptionLeg;
 	}
 
-	public SwitchOrder setRedemptionLeg(List<com.tools20022.repository.entity.SwitchRedemptionLeg> redemptionLeg) {
+	public SwitchOrder setRedemptionLeg(List<SwitchRedemptionLeg> redemptionLeg) {
 		this.redemptionLeg = Objects.requireNonNull(redemptionLeg);
 		return this;
 	}
@@ -662,7 +691,7 @@ public class SwitchOrder extends InvestmentFundOrder {
 		return subscriptionLeg == null ? subscriptionLeg = new ArrayList<>() : subscriptionLeg;
 	}
 
-	public SwitchOrder setSubscriptionLeg(List<com.tools20022.repository.entity.SwitchSubscriptionLeg> subscriptionLeg) {
+	public SwitchOrder setSubscriptionLeg(List<SwitchSubscriptionLeg> subscriptionLeg) {
 		this.subscriptionLeg = Objects.requireNonNull(subscriptionLeg);
 		return this;
 	}

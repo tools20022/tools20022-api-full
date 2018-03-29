@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.entity.ProxyAppointmentCondition;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Proxy3;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -132,7 +133,7 @@ public class ProxyAppointmentInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProxyAppointmentInformation2, Optional<Max350Text>> mmRegistrationMethod = new MMMessageAttribute<ProxyAppointmentInformation2, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> ProxyAppointmentCondition.mmRegistrationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmObject();
@@ -145,6 +146,16 @@ public class ProxyAppointmentInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(ProxyAppointmentInformation2 obj) {
+			return obj.getRegistrationMethod();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation2 obj, Optional<Max350Text> value) {
+			obj.setRegistrationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ddln")
@@ -187,7 +198,7 @@ public class ProxyAppointmentInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProxyAppointmentInformation2, Optional<DateFormat2Choice>> mmDeadline = new MMMessageAttribute<ProxyAppointmentInformation2, Optional<DateFormat2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmObject();
 			isDerived = false;
@@ -199,6 +210,16 @@ public class ProxyAppointmentInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(ProxyAppointmentInformation2 obj) {
+			return obj.getDeadline();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation2 obj, Optional<DateFormat2Choice> value) {
+			obj.setDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "STPDdln")
@@ -241,7 +262,7 @@ public class ProxyAppointmentInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSTPDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProxyAppointmentInformation2, Optional<DateFormat2Choice>> mmSTPDeadline = new MMMessageAttribute<ProxyAppointmentInformation2, Optional<DateFormat2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmObject();
 			isDerived = false;
@@ -253,6 +274,16 @@ public class ProxyAppointmentInformation2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(ProxyAppointmentInformation2 obj) {
+			return obj.getSTPDeadline();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation2 obj, Optional<DateFormat2Choice> value) {
+			obj.setSTPDeadline(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktDdln")
@@ -300,7 +331,7 @@ public class ProxyAppointmentInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketDeadline = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProxyAppointmentInformation2, Optional<DateFormat2Choice>> mmMarketDeadline = new MMMessageAttribute<ProxyAppointmentInformation2, Optional<DateFormat2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmObject();
@@ -314,9 +345,19 @@ public class ProxyAppointmentInformation2 {
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
+
+		@Override
+		public Optional<DateFormat2Choice> getValue(ProxyAppointmentInformation2 obj) {
+			return obj.getMarketDeadline();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation2 obj, Optional<DateFormat2Choice> value) {
+			obj.setMarketDeadline(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "AuthrsdPrxy")
-	protected List<com.tools20022.repository.msg.Proxy3> authorisedProxy;
+	protected List<Proxy3> authorisedProxy;
 	/**
 	 * 
 	 <p>
@@ -351,7 +392,7 @@ public class ProxyAppointmentInformation2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAuthorisedProxy = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProxyAppointmentInformation2, List<Proxy3>> mmAuthorisedProxy = new MMMessageAssociationEnd<ProxyAppointmentInformation2, List<Proxy3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation2.mmObject();
 			isDerived = false;
@@ -363,7 +404,17 @@ public class ProxyAppointmentInformation2 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Proxy3.mmObject();
+			type_lazy = () -> Proxy3.mmObject();
+		}
+
+		@Override
+		public List<Proxy3> getValue(ProxyAppointmentInformation2 obj) {
+			return obj.getAuthorisedProxy();
+		}
+
+		@Override
+		public void setValue(ProxyAppointmentInformation2 obj, List<Proxy3> value) {
+			obj.setAuthorisedProxy(value);
 		}
 	};
 
@@ -424,7 +475,7 @@ public class ProxyAppointmentInformation2 {
 		return authorisedProxy == null ? authorisedProxy = new ArrayList<>() : authorisedProxy;
 	}
 
-	public ProxyAppointmentInformation2 setAuthorisedProxy(List<com.tools20022.repository.msg.Proxy3> authorisedProxy) {
+	public ProxyAppointmentInformation2 setAuthorisedProxy(List<Proxy3> authorisedProxy) {
 		this.authorisedProxy = Objects.requireNonNull(authorisedProxy);
 		return this;
 	}

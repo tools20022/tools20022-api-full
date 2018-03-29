@@ -30,7 +30,6 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CreditDefaultSwapDerivative4;
 import com.tools20022.repository.msg.CreditDefaultSwapIndex2;
 import com.tools20022.repository.msg.CreditDefaultSwapSingleName2;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +110,7 @@ import java.util.Objects;
  * "CreditDefaultSwap"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Credit default swap is a particular type of swap designed to transfer the credit exposure of fixed income products between two or more parties."
+ * "Credit default swap is a particular type of swap designed to transfer the credit exposure of fixed income products between two or more parties. "
  * </li>
  * </ul>
  */
@@ -153,7 +152,7 @@ public class CreditDefaultSwap extends Swaps {
 	 * "Roll date of the underlying asset as established by the asset issuer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRollDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CreditDefaultSwap, ISODate> mmRollDate = new MMBusinessAttribute<CreditDefaultSwap, ISODate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditDefaultSwapIndex2.mmNextRollDate);
 			isDerived = false;
@@ -166,12 +165,14 @@ public class CreditDefaultSwap extends Swaps {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditDefaultSwap.class.getMethod("getRollDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODate getValue(CreditDefaultSwap obj) {
+			return obj.getRollDate();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwap obj, ISODate value) {
+			obj.setRollDate(value);
 		}
 	};
 	protected ISOYearMonth rollMonth;
@@ -202,7 +203,7 @@ public class CreditDefaultSwap extends Swaps {
 	 * "Roll month of the underlying asset as established by the asset issuer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRollMonth = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CreditDefaultSwap, ISOYearMonth> mmRollMonth = new MMBusinessAttribute<CreditDefaultSwap, ISOYearMonth>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CreditDefaultSwap.mmObject();
@@ -214,12 +215,14 @@ public class CreditDefaultSwap extends Swaps {
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditDefaultSwap.class.getMethod("getRollMonth", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISOYearMonth getValue(CreditDefaultSwap obj) {
+			return obj.getRollMonth();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwap obj, ISOYearMonth value) {
+			obj.setRollMonth(value);
 		}
 	};
 	protected Number series;
@@ -257,7 +260,7 @@ public class CreditDefaultSwap extends Swaps {
 	 * "Series number of the composition of the derivative if applicable."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmSeries = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CreditDefaultSwap, Number> mmSeries = new MMBusinessAttribute<CreditDefaultSwap, Number>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditDefaultSwapIndex2.mmSeries);
 			isDerived = false;
@@ -270,12 +273,14 @@ public class CreditDefaultSwap extends Swaps {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CreditDefaultSwap.class.getMethod("getSeries", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Number getValue(CreditDefaultSwap obj) {
+			return obj.getSeries();
+		}
+
+		@Override
+		public void setValue(CreditDefaultSwap obj, Number value) {
+			obj.setSeries(value);
 		}
 	};
 
@@ -285,7 +290,7 @@ public class CreditDefaultSwap extends Swaps {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditDefaultSwap";
-				definition = "Credit default swap is a particular type of swap designed to transfer the credit exposure of fixed income products between two or more parties.";
+				definition = "Credit default swap is a particular type of swap designed to transfer the credit exposure of fixed income products between two or more parties. ";
 				derivationElement_lazy = () -> Arrays.asList(CreditDefaultSwapDerivative4.mmSingleName, Derivative2Choice.mmCredit, CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwap,
 						CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndex, CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwapDerivative, CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndexDerivative);
 				superType_lazy = () -> Swaps.mmObject();

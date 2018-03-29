@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionNarrativeV01;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification11;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class UnderlyingSecurity1 {
 	 * definition} = "Identifies the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingSecurity1, SecurityIdentification11> mmSecurityIdentification = new MMMessageAttribute<UnderlyingSecurity1, SecurityIdentification11>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurity1.mmObject();
@@ -128,7 +129,17 @@ public class UnderlyingSecurity1 {
 			definition = "Identifies the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
+			complexType_lazy = () -> SecurityIdentification11.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification11 getValue(UnderlyingSecurity1 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingSecurity1 obj, SecurityIdentification11 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 
@@ -151,7 +162,7 @@ public class UnderlyingSecurity1 {
 		return securityIdentification;
 	}
 
-	public UnderlyingSecurity1 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification11 securityIdentification) {
+	public UnderlyingSecurity1 setSecurityIdentification(SecurityIdentification11 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}

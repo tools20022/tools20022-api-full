@@ -107,7 +107,7 @@ public class ChargeTypeFormat2Choice {
 	 * definition} = "Specifies the type of charge in free text form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeTypeFormat2Choice, Max35Text> mmUnstructured = new MMMessageAttribute<ChargeTypeFormat2Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeTypeFormat2Choice.mmObject();
@@ -119,6 +119,16 @@ public class ChargeTypeFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ChargeTypeFormat2Choice obj) {
+			return obj.getUnstructured();
+		}
+
+		@Override
+		public void setValue(ChargeTypeFormat2Choice obj, Max35Text value) {
+			obj.setUnstructured(value);
 		}
 	};
 	@XmlElement(name = "Strd", required = true)
@@ -156,7 +166,7 @@ public class ChargeTypeFormat2Choice {
 	 * definition} = "Specifies the type of charge in a structured form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ChargeTypeFormat2Choice, ChargeType4Code> mmStructured = new MMMessageAttribute<ChargeTypeFormat2Choice, ChargeType4Code>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeTypeFormat2Choice.mmObject();
@@ -168,6 +178,16 @@ public class ChargeTypeFormat2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType4Code.mmObject();
+		}
+
+		@Override
+		public ChargeType4Code getValue(ChargeTypeFormat2Choice obj) {
+			return obj.getStructured();
+		}
+
+		@Override
+		public void setValue(ChargeTypeFormat2Choice obj, ChargeType4Code value) {
+			obj.setStructured(value);
 		}
 	};
 

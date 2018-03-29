@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantitySearch1;
@@ -102,7 +103,7 @@ public class QuantitySearch1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantitySearch1Choice, FinancialInstrumentQuantitySearch1Choice> mmQuantity = new MMMessageAssociationEnd<QuantitySearch1Choice, FinancialInstrumentQuantitySearch1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantitySearch1Choice.mmObject();
 			isDerived = false;
@@ -113,7 +114,17 @@ public class QuantitySearch1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantitySearch1Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantitySearch1Choice getValue(QuantitySearch1Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(QuantitySearch1Choice obj, FinancialInstrumentQuantitySearch1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "OrgnlAndCurFace", required = true)
@@ -145,7 +156,7 @@ public class QuantitySearch1Choice {
 	 * definition} = "Original and current value of an asset-back instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalAndCurrentFace = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantitySearch1Choice, FinancialInstrumentQuantitySearch1> mmOriginalAndCurrentFace = new MMMessageAssociationEnd<QuantitySearch1Choice, FinancialInstrumentQuantitySearch1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.QuantitySearch1Choice.mmObject();
 			isDerived = false;
@@ -157,6 +168,16 @@ public class QuantitySearch1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantitySearch1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantitySearch1 getValue(QuantitySearch1Choice obj) {
+			return obj.getOriginalAndCurrentFace();
+		}
+
+		@Override
+		public void setValue(QuantitySearch1Choice obj, FinancialInstrumentQuantitySearch1 value) {
+			obj.setOriginalAndCurrentFace(value);
 		}
 	};
 
@@ -178,7 +199,7 @@ public class QuantitySearch1Choice {
 		return quantity;
 	}
 
-	public QuantitySearch1Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantitySearch1Choice quantity) {
+	public QuantitySearch1Choice setQuantity(FinancialInstrumentQuantitySearch1Choice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Adjustment5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -114,7 +115,7 @@ public class InvoiceTotals1 {
 	 * definition} = "Total amount subject to tax."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTaxableAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceTotals1, ActiveCurrencyAndAmount> mmTotalTaxableAmount = new MMMessageAttribute<InvoiceTotals1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceTotals1.mmObject();
@@ -126,6 +127,16 @@ public class InvoiceTotals1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InvoiceTotals1 obj) {
+			return obj.getTotalTaxableAmount();
+		}
+
+		@Override
+		public void setValue(InvoiceTotals1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalTaxableAmount(value);
 		}
 	};
 	@XmlElement(name = "TtlTaxAmt", required = true)
@@ -161,7 +172,7 @@ public class InvoiceTotals1 {
 	 * definition} = "Sum of all tax amounts related to the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalTaxAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceTotals1, ActiveCurrencyAndAmount> mmTotalTaxAmount = new MMMessageAttribute<InvoiceTotals1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceTotals1.mmObject();
@@ -173,6 +184,16 @@ public class InvoiceTotals1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InvoiceTotals1 obj) {
+			return obj.getTotalTaxAmount();
+		}
+
+		@Override
+		public void setValue(InvoiceTotals1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalTaxAmount(value);
 		}
 	};
 	@XmlElement(name = "Adjstmnt")
@@ -210,7 +231,7 @@ public class InvoiceTotals1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdjustment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceTotals1, Optional<Adjustment5>> mmAdjustment = new MMMessageAttribute<InvoiceTotals1, Optional<Adjustment5>>() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmFinancialAdjustment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceTotals1.mmObject();
@@ -221,7 +242,17 @@ public class InvoiceTotals1 {
 			definition = "Variance on invoice amount taking into account discounts, allowances and charges.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Adjustment5.mmObject();
+			complexType_lazy = () -> Adjustment5.mmObject();
+		}
+
+		@Override
+		public Optional<Adjustment5> getValue(InvoiceTotals1 obj) {
+			return obj.getAdjustment();
+		}
+
+		@Override
+		public void setValue(InvoiceTotals1 obj, Optional<Adjustment5> value) {
+			obj.setAdjustment(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TtlInvcAmt", required = true)
@@ -260,7 +291,7 @@ public class InvoiceTotals1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceTotals1, ActiveCurrencyAndAmount> mmTotalInvoiceAmount = new MMMessageAttribute<InvoiceTotals1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceTotals1.mmObject();
@@ -272,6 +303,16 @@ public class InvoiceTotals1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(InvoiceTotals1 obj) {
+			return obj.getTotalInvoiceAmount();
+		}
+
+		@Override
+		public void setValue(InvoiceTotals1 obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalInvoiceAmount(value);
 		}
 	};
 	@XmlElement(name = "PmtDueDt", required = true)
@@ -307,7 +348,7 @@ public class InvoiceTotals1 {
 	 * definition} = "Due date for the payment of the invoice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvoiceTotals1, ISODate> mmPaymentDueDate = new MMMessageAttribute<InvoiceTotals1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceTotals1.mmObject();
@@ -319,6 +360,16 @@ public class InvoiceTotals1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(InvoiceTotals1 obj) {
+			return obj.getPaymentDueDate();
+		}
+
+		@Override
+		public void setValue(InvoiceTotals1 obj, ISODate value) {
+			obj.setPaymentDueDate(value);
 		}
 	};
 
@@ -359,7 +410,7 @@ public class InvoiceTotals1 {
 		return adjustment == null ? Optional.empty() : Optional.of(adjustment);
 	}
 
-	public InvoiceTotals1 setAdjustment(com.tools20022.repository.msg.Adjustment5 adjustment) {
+	public InvoiceTotals1 setAdjustment(Adjustment5 adjustment) {
 		this.adjustment = adjustment;
 		return this;
 	}

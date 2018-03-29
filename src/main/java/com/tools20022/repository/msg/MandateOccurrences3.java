@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DatePeriodDetails1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -148,7 +149,7 @@ public class MandateOccurrences3 {
 	 * MandateOccurrences2.mmSequenceType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateOccurrences3, SequenceType2Code> mmSequenceType = new MMMessageAttribute<MandateOccurrences3, SequenceType2Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmSequenceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateOccurrences3.mmObject();
@@ -162,6 +163,16 @@ public class MandateOccurrences3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SequenceType2Code.mmObject();
+		}
+
+		@Override
+		public SequenceType2Code getValue(MandateOccurrences3 obj) {
+			return obj.getSequenceType();
+		}
+
+		@Override
+		public void setValue(MandateOccurrences3 obj, SequenceType2Code value) {
+			obj.setSequenceType(value);
 		}
 	};
 	@XmlElement(name = "Frqcy")
@@ -213,7 +224,7 @@ public class MandateOccurrences3 {
 	 * MandateOccurrences2.mmFrequency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateOccurrences3, Optional<Frequency21Choice>> mmFrequency = new MMMessageAttribute<MandateOccurrences3, Optional<Frequency21Choice>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateOccurrences3.mmObject();
@@ -227,6 +238,16 @@ public class MandateOccurrences3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Frequency21Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency21Choice> getValue(MandateOccurrences3 obj) {
+			return obj.getFrequency();
+		}
+
+		@Override
+		public void setValue(MandateOccurrences3 obj, Optional<Frequency21Choice> value) {
+			obj.setFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Drtn")
@@ -277,7 +298,7 @@ public class MandateOccurrences3 {
 	 * MandateOccurrences2.mmDuration}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDuration = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateOccurrences3, Optional<DatePeriodDetails1>> mmDuration = new MMMessageAttribute<MandateOccurrences3, Optional<DatePeriodDetails1>>() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmValidityPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateOccurrences3.mmObject();
@@ -290,7 +311,17 @@ public class MandateOccurrences3 {
 			previousVersion_lazy = () -> MandateOccurrences2.mmDuration;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails1.mmObject();
+			complexType_lazy = () -> DatePeriodDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<DatePeriodDetails1> getValue(MandateOccurrences3 obj) {
+			return obj.getDuration();
+		}
+
+		@Override
+		public void setValue(MandateOccurrences3 obj, Optional<DatePeriodDetails1> value) {
+			obj.setDuration(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrstColltnDt")
@@ -341,7 +372,7 @@ public class MandateOccurrences3 {
 	 * MandateOccurrences2.mmFirstCollectionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFirstCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateOccurrences3, Optional<ISODate>> mmFirstCollectionDate = new MMMessageAttribute<MandateOccurrences3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmFirstCollectionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateOccurrences3.mmObject();
@@ -355,6 +386,16 @@ public class MandateOccurrences3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MandateOccurrences3 obj) {
+			return obj.getFirstCollectionDate();
+		}
+
+		@Override
+		public void setValue(MandateOccurrences3 obj, Optional<ISODate> value) {
+			obj.setFirstCollectionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FnlColltnDt")
@@ -405,7 +446,7 @@ public class MandateOccurrences3 {
 	 * MandateOccurrences2.mmFinalCollectionDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFinalCollectionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MandateOccurrences3, Optional<ISODate>> mmFinalCollectionDate = new MMMessageAttribute<MandateOccurrences3, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmFinalCollectionDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateOccurrences3.mmObject();
@@ -419,6 +460,16 @@ public class MandateOccurrences3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MandateOccurrences3 obj) {
+			return obj.getFinalCollectionDate();
+		}
+
+		@Override
+		public void setValue(MandateOccurrences3 obj, Optional<ISODate> value) {
+			obj.setFinalCollectionDate(value.orElse(null));
 		}
 	};
 
@@ -461,7 +512,7 @@ public class MandateOccurrences3 {
 		return duration == null ? Optional.empty() : Optional.of(duration);
 	}
 
-	public MandateOccurrences3 setDuration(com.tools20022.repository.msg.DatePeriodDetails1 duration) {
+	public MandateOccurrences3 setDuration(DatePeriodDetails1 duration) {
 		this.duration = duration;
 		return this;
 	}

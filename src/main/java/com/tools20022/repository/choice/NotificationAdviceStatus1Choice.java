@@ -108,7 +108,7 @@ public class NotificationAdviceStatus1Choice {
 	 * "Provides information about the processing status of advice."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NotificationAdviceStatus1Choice, NotificationProcessingStatus1> mmProcessedStatus = new MMMessageAssociationEnd<NotificationAdviceStatus1Choice, NotificationProcessingStatus1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NotificationAdviceStatus1Choice.mmObject();
 			isDerived = false;
@@ -120,6 +120,16 @@ public class NotificationAdviceStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NotificationProcessingStatus1.mmObject();
+		}
+
+		@Override
+		public NotificationProcessingStatus1 getValue(NotificationAdviceStatus1Choice obj) {
+			return obj.getProcessedStatus();
+		}
+
+		@Override
+		public void setValue(NotificationAdviceStatus1Choice obj, NotificationProcessingStatus1 value) {
+			obj.setProcessedStatus(value);
 		}
 	};
 	@XmlElement(name = "RjctdSts", required = true)
@@ -151,7 +161,7 @@ public class NotificationAdviceStatus1Choice {
 	 * definition} = "Provides information about the rejection status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<NotificationAdviceStatus1Choice, NotificationRejectionReason1> mmRejectedStatus = new MMMessageAssociationEnd<NotificationAdviceStatus1Choice, NotificationRejectionReason1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.NotificationAdviceStatus1Choice.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class NotificationAdviceStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> NotificationRejectionReason1.mmObject();
+		}
+
+		@Override
+		public NotificationRejectionReason1 getValue(NotificationAdviceStatus1Choice obj) {
+			return obj.getRejectedStatus();
+		}
+
+		@Override
+		public void setValue(NotificationAdviceStatus1Choice obj, NotificationRejectionReason1 value) {
+			obj.setRejectedStatus(value);
 		}
 	};
 

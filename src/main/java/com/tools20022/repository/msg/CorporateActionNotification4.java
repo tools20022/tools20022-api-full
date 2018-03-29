@@ -162,7 +162,7 @@ public class CorporateActionNotification4 {
 	 * CorporateActionNotification3.mmNotificationType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotification4, CorporateActionNotificationType1Code> mmNotificationType = new MMMessageAttribute<CorporateActionNotification4, CorporateActionNotificationType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionNotification.mmNotificationType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification4.mmObject();
@@ -177,6 +177,16 @@ public class CorporateActionNotification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionNotificationType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionNotificationType1Code getValue(CorporateActionNotification4 obj) {
+			return obj.getNotificationType();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotification4 obj, CorporateActionNotificationType1Code value) {
+			obj.setNotificationType(value);
 		}
 	};
 	@XmlElement(name = "PrcgSts", required = true)
@@ -230,7 +240,7 @@ public class CorporateActionNotification4 {
 	 * CorporateActionNotification3.mmProcessingStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionNotification4, CorporateActionProcessingStatus4Choice> mmProcessingStatus = new MMMessageAssociationEnd<CorporateActionNotification4, CorporateActionProcessingStatus4Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification4.mmObject();
@@ -246,6 +256,16 @@ public class CorporateActionNotification4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionProcessingStatus4Choice.mmObject();
+		}
+
+		@Override
+		public CorporateActionProcessingStatus4Choice getValue(CorporateActionNotification4 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotification4 obj, CorporateActionProcessingStatus4Choice value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "ElgblBalInd")
@@ -298,7 +318,7 @@ public class CorporateActionNotification4 {
 	 * CorporateActionNotification3.mmEligibleBalanceIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEligibleBalanceIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotification4, Optional<YesNoIndicator>> mmEligibleBalanceIndicator = new MMMessageAttribute<CorporateActionNotification4, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmEligibleBalanceIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotification4.mmObject();
@@ -312,6 +332,16 @@ public class CorporateActionNotification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(CorporateActionNotification4 obj) {
+			return obj.getEligibleBalanceIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotification4 obj, Optional<YesNoIndicator> value) {
+			obj.setEligibleBalanceIndicator(value.orElse(null));
 		}
 	};
 

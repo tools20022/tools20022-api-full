@@ -25,7 +25,6 @@ import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.GroupHeader43;
 import com.tools20022.repository.msg.ReportingRequest2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,7 +126,7 @@ public class AccountReportingRequestV02 {
 	 * "Set of elements used to provide further details on the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmGroupHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountReportingRequestV02, GroupHeader43> mmGroupHeader = new MMMessageBuildingBlock<AccountReportingRequestV02, GroupHeader43>() {
 		{
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,12 +137,14 @@ public class AccountReportingRequestV02 {
 			complexType_lazy = () -> GroupHeader43.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountReportingRequestV02.class.getMethod("getGroupHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public GroupHeader43 getValue(AccountReportingRequestV02 obj) {
+			return obj.getGroupHeader();
+		}
+
+		@Override
+		public void setValue(AccountReportingRequestV02 obj, GroupHeader43 value) {
+			obj.setGroupHeader(value);
 		}
 	};
 	@XmlElement(name = "RptgReq", required = true)
@@ -173,7 +174,7 @@ public class AccountReportingRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportingRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AccountReportingRequestV02, List<ReportingRequest2>> mmReportingRequest = new MMMessageBuildingBlock<AccountReportingRequestV02, List<ReportingRequest2>>() {
 		{
 			xmlTag = "RptgReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,12 +184,14 @@ public class AccountReportingRequestV02 {
 			complexType_lazy = () -> ReportingRequest2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountReportingRequestV02.class.getMethod("getReportingRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ReportingRequest2> getValue(AccountReportingRequestV02 obj) {
+			return obj.getReportingRequest();
+		}
+
+		@Override
+		public void setValue(AccountReportingRequestV02 obj, List<ReportingRequest2> value) {
+			obj.setReportingRequest(value);
 		}
 	};
 

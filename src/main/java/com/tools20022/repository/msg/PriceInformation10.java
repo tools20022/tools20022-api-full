@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.TypeOfPrice27Choice;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceValueAndRate4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public class PriceInformation10 {
 	 * definition} = "Current value of the price, eg, as a currency and value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrentPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation10, ActiveOrHistoricCurrencyAnd13DecimalAmount> mmCurrentPrice = new MMMessageAttribute<PriceInformation10, ActiveOrHistoricCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
@@ -131,6 +132,16 @@ public class PriceInformation10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAnd13DecimalAmount getValue(PriceInformation10 obj) {
+			return obj.getCurrentPrice();
+		}
+
+		@Override
+		public void setValue(PriceInformation10 obj, ActiveOrHistoricCurrencyAnd13DecimalAmount value) {
+			obj.setCurrentPrice(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -172,7 +183,7 @@ public class PriceInformation10 {
 	 * "Specifies the type of price and information about the price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation10, TypeOfPrice27Choice> mmType = new MMMessageAttribute<PriceInformation10, TypeOfPrice27Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
@@ -185,6 +196,16 @@ public class PriceInformation10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TypeOfPrice27Choice.mmObject();
+		}
+
+		@Override
+		public TypeOfPrice27Choice getValue(PriceInformation10 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(PriceInformation10 obj, TypeOfPrice27Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "PrvsPric")
@@ -226,7 +247,7 @@ public class PriceInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation10, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>> mmPreviousPrice = new MMMessageAttribute<PriceInformation10, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
@@ -239,6 +260,16 @@ public class PriceInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getValue(PriceInformation10 obj) {
+			return obj.getPreviousPrice();
+		}
+
+		@Override
+		public void setValue(PriceInformation10 obj, Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> value) {
+			obj.setPreviousPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmtOfChng")
@@ -281,7 +312,7 @@ public class PriceInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountOfChange = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceInformation10, Optional<PriceValueAndRate4>> mmAmountOfChange = new MMMessageAttribute<PriceInformation10, Optional<PriceValueAndRate4>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
@@ -293,7 +324,17 @@ public class PriceInformation10 {
 			definition = "Difference or change between the previous price value and the current price value.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceValueAndRate4.mmObject();
+			complexType_lazy = () -> PriceValueAndRate4.mmObject();
+		}
+
+		@Override
+		public Optional<PriceValueAndRate4> getValue(PriceInformation10 obj) {
+			return obj.getAmountOfChange();
+		}
+
+		@Override
+		public void setValue(PriceInformation10 obj, Optional<PriceValueAndRate4> value) {
+			obj.setAmountOfChange(value.orElse(null));
 		}
 	};
 
@@ -343,7 +384,7 @@ public class PriceInformation10 {
 		return amountOfChange == null ? Optional.empty() : Optional.of(amountOfChange);
 	}
 
-	public PriceInformation10 setAmountOfChange(com.tools20022.repository.msg.PriceValueAndRate4 amountOfChange) {
+	public PriceInformation10 setAmountOfChange(PriceValueAndRate4 amountOfChange) {
 		this.amountOfChange = amountOfChange;
 		return this;
 	}

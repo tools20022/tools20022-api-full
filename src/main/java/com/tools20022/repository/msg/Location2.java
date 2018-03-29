@@ -115,7 +115,7 @@ public class Location2 {
 	 * Location1.mmCountry}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Location2, Optional<CountryCode>> mmCountry = new MMMessageAttribute<Location2, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Location2.mmObject();
@@ -128,6 +128,16 @@ public class Location2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(Location2 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(Location2 obj, Optional<CountryCode> value) {
+			obj.setCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrySubDvsn")
@@ -171,7 +181,7 @@ public class Location2 {
 	 * Location1.mmCountrySubDivision}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Location2, Optional<CountrySubdivision1Choice>> mmCountrySubDivision = new MMMessageAttribute<Location2, Optional<CountrySubdivision1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountyIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Location2.mmObject();
@@ -184,6 +194,16 @@ public class Location2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CountrySubdivision1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CountrySubdivision1Choice> getValue(Location2 obj) {
+			return obj.getCountrySubDivision();
+		}
+
+		@Override
+		public void setValue(Location2 obj, Optional<CountrySubdivision1Choice> value) {
+			obj.setCountrySubDivision(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Txt")
@@ -219,7 +239,7 @@ public class Location2 {
 	 * Location1.mmText}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Location2, Optional<Max35Text>> mmText = new MMMessageAttribute<Location2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Location2.mmObject();
 			isDerived = false;
@@ -231,6 +251,16 @@ public class Location2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Location2 obj) {
+			return obj.getText();
+		}
+
+		@Override
+		public void setValue(Location2 obj, Optional<Max35Text> value) {
+			obj.setText(value.orElse(null));
 		}
 	};
 

@@ -103,7 +103,7 @@ public class StatusOrStatement4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAdvice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusOrStatement4Choice, DocumentNumber7> mmStatusAdvice = new MMMessageAssociationEnd<StatusOrStatement4Choice, DocumentNumber7>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusOrStatement4Choice.mmObject();
 			isDerived = false;
@@ -115,6 +115,16 @@ public class StatusOrStatement4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber7.mmObject();
+		}
+
+		@Override
+		public DocumentNumber7 getValue(StatusOrStatement4Choice obj) {
+			return obj.getStatusAdvice();
+		}
+
+		@Override
+		public void setValue(StatusOrStatement4Choice obj, DocumentNumber7 value) {
+			obj.setStatusAdvice(value);
 		}
 	};
 	@XmlElement(name = "Stmt", required = true)
@@ -145,7 +155,7 @@ public class StatusOrStatement4Choice {
 	 * definition} = "Identify the statement/report that was requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatement = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusOrStatement4Choice, DocumentNumber3> mmStatement = new MMMessageAssociationEnd<StatusOrStatement4Choice, DocumentNumber3>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.StatusOrStatement4Choice.mmObject();
 			isDerived = false;
@@ -157,6 +167,16 @@ public class StatusOrStatement4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentNumber3.mmObject();
+		}
+
+		@Override
+		public DocumentNumber3 getValue(StatusOrStatement4Choice obj) {
+			return obj.getStatement();
+		}
+
+		@Override
+		public void setValue(StatusOrStatement4Choice obj, DocumentNumber3 value) {
+			obj.setStatement(value);
 		}
 	};
 

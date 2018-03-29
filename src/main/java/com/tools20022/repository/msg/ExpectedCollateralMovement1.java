@@ -123,7 +123,7 @@ public class ExpectedCollateralMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedCollateralMovement1, List<CollateralType1Code>> mmDelivery = new MMMessageAttribute<ExpectedCollateralMovement1, List<CollateralType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> ExpectedCollateralType.mmDelivery;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedCollateralMovement1.mmObject();
@@ -135,6 +135,16 @@ public class ExpectedCollateralMovement1 {
 			nextVersions_lazy = () -> Arrays.asList(ExpectedCollateralMovement2.mmDelivery);
 			minOccurs = 0;
 			simpleType_lazy = () -> CollateralType1Code.mmObject();
+		}
+
+		@Override
+		public List<CollateralType1Code> getValue(ExpectedCollateralMovement1 obj) {
+			return obj.getDelivery();
+		}
+
+		@Override
+		public void setValue(ExpectedCollateralMovement1 obj, List<CollateralType1Code> value) {
+			obj.setDelivery(value);
 		}
 	};
 	@XmlElement(name = "Rtr")
@@ -180,7 +190,7 @@ public class ExpectedCollateralMovement1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReturn = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExpectedCollateralMovement1, List<CollateralType1Code>> mmReturn = new MMMessageAttribute<ExpectedCollateralMovement1, List<CollateralType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> ExpectedCollateralType.mmReturn;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExpectedCollateralMovement1.mmObject();
@@ -192,6 +202,16 @@ public class ExpectedCollateralMovement1 {
 			nextVersions_lazy = () -> Arrays.asList(ExpectedCollateralMovement2.mmReturn);
 			minOccurs = 0;
 			simpleType_lazy = () -> CollateralType1Code.mmObject();
+		}
+
+		@Override
+		public List<CollateralType1Code> getValue(ExpectedCollateralMovement1 obj) {
+			return obj.getReturn();
+		}
+
+		@Override
+		public void setValue(ExpectedCollateralMovement1 obj, List<CollateralType1Code> value) {
+			obj.setReturn(value);
 		}
 	};
 

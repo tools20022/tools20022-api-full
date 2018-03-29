@@ -106,7 +106,7 @@ public class DetailedAmount1 {
 	 * definition} = "Type of amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount1, TypeOfAmount2Code> mmType = new MMMessageAttribute<DetailedAmount1, TypeOfAmount2Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount1.mmObject();
@@ -118,6 +118,16 @@ public class DetailedAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfAmount2Code.mmObject();
+		}
+
+		@Override
+		public TypeOfAmount2Code getValue(DetailedAmount1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(DetailedAmount1 obj, TypeOfAmount2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -155,7 +165,7 @@ public class DetailedAmount1 {
 	 * definition} = "Amount value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount1, ImpliedCurrencyAndAmount> mmValue = new MMMessageAttribute<DetailedAmount1, ImpliedCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmDetailedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount1.mmObject();
@@ -167,6 +177,16 @@ public class DetailedAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ImpliedCurrencyAndAmount getValue(DetailedAmount1 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(DetailedAmount1 obj, ImpliedCurrencyAndAmount value) {
+			obj.setValue(value);
 		}
 	};
 

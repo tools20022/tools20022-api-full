@@ -25,6 +25,9 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentStatus;
 import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment69;
+import com.tools20022.repository.msg.ResponseType5;
+import com.tools20022.repository.msg.TransactionReconciliation4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -73,7 +76,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorReconciliationResponse5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -128,7 +131,7 @@ public class AcceptorReconciliationResponse5 {
 	 * AcceptorReconciliationResponse4.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorReconciliationResponse5, CardPaymentEnvironment69> mmEnvironment = new MMMessageAssociationEnd<AcceptorReconciliationResponse5, CardPaymentEnvironment69>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentStatus.mmCardPayment;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorReconciliationResponse5.mmObject();
@@ -141,7 +144,17 @@ public class AcceptorReconciliationResponse5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment69.mmObject();
+			type_lazy = () -> CardPaymentEnvironment69.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment69 getValue(AcceptorReconciliationResponse5 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationResponse5 obj, CardPaymentEnvironment69 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "TxRspn", required = true)
@@ -183,7 +196,7 @@ public class AcceptorReconciliationResponse5 {
 	 * AcceptorReconciliationResponse4.mmTransactionResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionResponse = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorReconciliationResponse5, ResponseType5> mmTransactionResponse = new MMMessageAssociationEnd<AcceptorReconciliationResponse5, ResponseType5>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorReconciliationResponse5.mmObject();
@@ -196,7 +209,17 @@ public class AcceptorReconciliationResponse5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ResponseType5.mmObject();
+			type_lazy = () -> ResponseType5.mmObject();
+		}
+
+		@Override
+		public ResponseType5 getValue(AcceptorReconciliationResponse5 obj) {
+			return obj.getTransactionResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationResponse5 obj, ResponseType5 value) {
+			obj.setTransactionResponse(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -239,7 +262,7 @@ public class AcceptorReconciliationResponse5 {
 	 * AcceptorReconciliationResponse4.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorReconciliationResponse5, TransactionReconciliation4> mmTransaction = new MMMessageAssociationEnd<AcceptorReconciliationResponse5, TransactionReconciliation4>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmReconciliation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorReconciliationResponse5.mmObject();
@@ -252,7 +275,17 @@ public class AcceptorReconciliationResponse5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionReconciliation4.mmObject();
+			type_lazy = () -> TransactionReconciliation4.mmObject();
+		}
+
+		@Override
+		public TransactionReconciliation4 getValue(AcceptorReconciliationResponse5 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationResponse5 obj, TransactionReconciliation4 value) {
+			obj.setTransaction(value);
 		}
 	};
 
@@ -264,7 +297,7 @@ public class AcceptorReconciliationResponse5 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorReconciliationResponseV06.mmReconciliationResponse);
 				trace_lazy = () -> CardPaymentStatus.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorReconciliationResponse5";
 				definition = "Reconciliation response from the acquirer.";
 				previousVersion_lazy = () -> AcceptorReconciliationResponse4.mmObject();
@@ -277,7 +310,7 @@ public class AcceptorReconciliationResponse5 {
 		return environment;
 	}
 
-	public AcceptorReconciliationResponse5 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment69 environment) {
+	public AcceptorReconciliationResponse5 setEnvironment(CardPaymentEnvironment69 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -286,7 +319,7 @@ public class AcceptorReconciliationResponse5 {
 		return transactionResponse;
 	}
 
-	public AcceptorReconciliationResponse5 setTransactionResponse(com.tools20022.repository.msg.ResponseType5 transactionResponse) {
+	public AcceptorReconciliationResponse5 setTransactionResponse(ResponseType5 transactionResponse) {
 		this.transactionResponse = Objects.requireNonNull(transactionResponse);
 		return this;
 	}
@@ -295,7 +328,7 @@ public class AcceptorReconciliationResponse5 {
 		return transaction;
 	}
 
-	public AcceptorReconciliationResponse5 setTransaction(com.tools20022.repository.msg.TransactionReconciliation4 transaction) {
+	public AcceptorReconciliationResponse5 setTransaction(TransactionReconciliation4 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}

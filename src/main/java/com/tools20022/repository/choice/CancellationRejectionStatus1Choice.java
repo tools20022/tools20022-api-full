@@ -109,7 +109,7 @@ public class CancellationRejectionStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationRejectionStatus1Choice, RejectionReason2Code> mmCode = new MMMessageAttribute<CancellationRejectionStatus1Choice, RejectionReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmInstructionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationRejectionStatus1Choice.mmObject();
@@ -121,6 +121,16 @@ public class CancellationRejectionStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason2Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason2Code getValue(CancellationRejectionStatus1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CancellationRejectionStatus1Choice obj, RejectionReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class CancellationRejectionStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationRejectionStatus1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<CancellationRejectionStatus1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmInstructionRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationRejectionStatus1Choice.mmObject();
@@ -171,6 +181,16 @@ public class CancellationRejectionStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(CancellationRejectionStatus1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CancellationRejectionStatus1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

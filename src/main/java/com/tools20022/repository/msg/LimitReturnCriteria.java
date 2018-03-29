@@ -98,7 +98,7 @@ public class LimitReturnCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDateTimeIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitReturnCriteria, Optional<RequestedIndicator>> mmStartDateTimeIndicator = new MMMessageAttribute<LimitReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReturnCriteria.mmObject();
 			isDerived = false;
@@ -109,6 +109,16 @@ public class LimitReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(LimitReturnCriteria obj) {
+			return obj.getStartDateTimeIndicator();
+		}
+
+		@Override
+		public void setValue(LimitReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setStartDateTimeIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsInd")
@@ -141,7 +151,7 @@ public class LimitReturnCriteria {
 	 * definition} = "Indicates whether the limit status is requested."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitReturnCriteria, Optional<RequestedIndicator>> mmStatusIndicator = new MMMessageAttribute<LimitReturnCriteria, Optional<RequestedIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitReturnCriteria.mmObject();
 			isDerived = false;
@@ -152,6 +162,16 @@ public class LimitReturnCriteria {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<RequestedIndicator> getValue(LimitReturnCriteria obj) {
+			return obj.getStatusIndicator();
+		}
+
+		@Override
+		public void setValue(LimitReturnCriteria obj, Optional<RequestedIndicator> value) {
+			obj.setStatusIndicator(value.orElse(null));
 		}
 	};
 

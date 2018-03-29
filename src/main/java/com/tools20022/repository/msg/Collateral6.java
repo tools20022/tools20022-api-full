@@ -109,7 +109,7 @@ public class Collateral6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPostHaircutValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Collateral6, ActiveCurrencyAndAmount> mmPostHaircutValue = new MMMessageAttribute<Collateral6, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmPostHaircutValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral6.mmObject();
@@ -121,6 +121,16 @@ public class Collateral6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Collateral6 obj) {
+			return obj.getPostHaircutValue();
+		}
+
+		@Override
+		public void setValue(Collateral6 obj, ActiveCurrencyAndAmount value) {
+			obj.setPostHaircutValue(value);
 		}
 	};
 	@XmlElement(name = "MktVal", required = true)
@@ -159,7 +169,7 @@ public class Collateral6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Collateral6, ActiveCurrencyAndAmount> mmMarketValue = new MMMessageAttribute<Collateral6, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral6.mmObject();
@@ -171,6 +181,16 @@ public class Collateral6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(Collateral6 obj) {
+			return obj.getMarketValue();
+		}
+
+		@Override
+		public void setValue(Collateral6 obj, ActiveCurrencyAndAmount value) {
+			obj.setMarketValue(value);
 		}
 	};
 	@XmlElement(name = "CollTp", required = true)
@@ -208,7 +228,7 @@ public class Collateral6 {
 	 * "Provides the type of collateral, such as securities or cash."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Collateral6, CollateralType1Code> mmCollateralType = new MMMessageAttribute<Collateral6, CollateralType1Code>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral6.mmObject();
@@ -220,6 +240,16 @@ public class Collateral6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CollateralType1Code.mmObject();
+		}
+
+		@Override
+		public CollateralType1Code getValue(Collateral6 obj) {
+			return obj.getCollateralType();
+		}
+
+		@Override
+		public void setValue(Collateral6 obj, CollateralType1Code value) {
+			obj.setCollateralType(value);
 		}
 	};
 

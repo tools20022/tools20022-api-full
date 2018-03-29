@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.CardPaymentBatchTransferResponse2;
 import com.tools20022.repository.msg.ContentInformationType9;
 import com.tools20022.repository.msg.Header3;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -137,7 +136,7 @@ public class AcceptorBatchTransferResponseV03 {
 	 * AcceptorBatchTransferResponseV02.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferResponseV03, Header3> mmHeader = new MMMessageBuildingBlock<AcceptorBatchTransferResponseV03, Header3>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,12 +149,14 @@ public class AcceptorBatchTransferResponseV03 {
 			complexType_lazy = () -> Header3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferResponseV03.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header3 getValue(AcceptorBatchTransferResponseV03 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferResponseV03 obj, Header3 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "BtchTrfRspn", required = true)
@@ -197,7 +198,7 @@ public class AcceptorBatchTransferResponseV03 {
 	 * AcceptorBatchTransferResponseV02.mmBatchTransferResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBatchTransferResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferResponseV03, CardPaymentBatchTransferResponse2> mmBatchTransferResponse = new MMMessageBuildingBlock<AcceptorBatchTransferResponseV03, CardPaymentBatchTransferResponse2>() {
 		{
 			xmlTag = "BtchTrfRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +211,14 @@ public class AcceptorBatchTransferResponseV03 {
 			complexType_lazy = () -> CardPaymentBatchTransferResponse2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferResponseV03.class.getMethod("getBatchTransferResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CardPaymentBatchTransferResponse2 getValue(AcceptorBatchTransferResponseV03 obj) {
+			return obj.getBatchTransferResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferResponseV03 obj, CardPaymentBatchTransferResponse2 value) {
+			obj.setBatchTransferResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -257,7 +260,7 @@ public class AcceptorBatchTransferResponseV03 {
 	 * AcceptorBatchTransferResponseV02.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorBatchTransferResponseV03, ContentInformationType9> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorBatchTransferResponseV03, ContentInformationType9>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +273,14 @@ public class AcceptorBatchTransferResponseV03 {
 			complexType_lazy = () -> ContentInformationType9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorBatchTransferResponseV03.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType9 getValue(AcceptorBatchTransferResponseV03 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorBatchTransferResponseV03 obj, ContentInformationType9 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

@@ -108,7 +108,7 @@ public class MarginProductType1Choice {
 	 * "Specifies the underlying product of the margin using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginProductType1Choice, MarginProduct1Code> mmCode = new MMMessageAttribute<MarginProductType1Choice, MarginProduct1Code>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmMarginProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginProductType1Choice.mmObject();
@@ -120,6 +120,16 @@ public class MarginProductType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarginProduct1Code.mmObject();
+		}
+
+		@Override
+		public MarginProduct1Code getValue(MarginProductType1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MarginProductType1Choice obj, MarginProduct1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class MarginProductType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginProductType1Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<MarginProductType1Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmMarginProduct;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MarginProductType1Choice.mmObject();
@@ -171,6 +181,16 @@ public class MarginProductType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(MarginProductType1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MarginProductType1Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

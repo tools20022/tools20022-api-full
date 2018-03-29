@@ -130,7 +130,7 @@ public class Quantity4 {
 	 * "Specifies the unit of measurement. For example, kilo, tons."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitOfMeasureCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity4, UnitOfMeasure4Code> mmUnitOfMeasureCode = new MMMessageAttribute<Quantity4, UnitOfMeasure4Code>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity4.mmObject();
@@ -142,6 +142,16 @@ public class Quantity4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasure4Code.mmObject();
+		}
+
+		@Override
+		public UnitOfMeasure4Code getValue(Quantity4 obj) {
+			return obj.getUnitOfMeasureCode();
+		}
+
+		@Override
+		public void setValue(Quantity4 obj, UnitOfMeasure4Code value) {
+			obj.setUnitOfMeasureCode(value);
 		}
 	};
 	@XmlElement(name = "OthrUnitOfMeasr", required = true)
@@ -178,7 +188,7 @@ public class Quantity4 {
 	 * "Identifies the unit of measure not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherUnitOfMeasure = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity4, Max35Text> mmOtherUnitOfMeasure = new MMMessageAttribute<Quantity4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmUnitOfMeasure;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity4.mmObject();
@@ -190,6 +200,16 @@ public class Quantity4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Quantity4 obj) {
+			return obj.getOtherUnitOfMeasure();
+		}
+
+		@Override
+		public void setValue(Quantity4 obj, Max35Text value) {
+			obj.setOtherUnitOfMeasure(value);
 		}
 	};
 	@XmlElement(name = "Val", required = true)
@@ -235,7 +255,7 @@ public class Quantity4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity4, DecimalNumber> mmValue = new MMMessageAttribute<Quantity4, DecimalNumber>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity4.mmObject();
@@ -248,6 +268,16 @@ public class Quantity4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(Quantity4 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(Quantity4 obj, DecimalNumber value) {
+			obj.setValue(value);
 		}
 	};
 	@XmlElement(name = "Fctr")
@@ -293,7 +323,7 @@ public class Quantity4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Quantity4, Optional<Max15NumericText>> mmFactor = new MMMessageAttribute<Quantity4, Optional<Max15NumericText>>() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Quantity4.mmObject();
@@ -306,6 +336,16 @@ public class Quantity4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(Quantity4 obj) {
+			return obj.getFactor();
+		}
+
+		@Override
+		public void setValue(Quantity4 obj, Optional<Max15NumericText> value) {
+			obj.setFactor(value.orElse(null));
 		}
 	};
 	/**

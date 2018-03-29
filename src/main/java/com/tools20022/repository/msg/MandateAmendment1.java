@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.Mandate;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmendmentReasonInformation1;
+import com.tools20022.repository.msg.MandateInformation3;
+import com.tools20022.repository.msg.OriginalMessageInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -119,7 +122,7 @@ public class MandateAmendment1 {
 	 * "Set of elements used to provide information on the original messsage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAmendment1, Optional<OriginalMessageInformation1>> mmOriginalMessageInformation = new MMMessageAssociationEnd<MandateAmendment1, Optional<OriginalMessageInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment1.mmObject();
 			isDerived = false;
@@ -130,7 +133,17 @@ public class MandateAmendment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
+			type_lazy = () -> OriginalMessageInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalMessageInformation1> getValue(MandateAmendment1 obj) {
+			return obj.getOriginalMessageInformation();
+		}
+
+		@Override
+		public void setValue(MandateAmendment1 obj, Optional<OriginalMessageInformation1> value) {
+			obj.setOriginalMessageInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmdmntRsn", required = true)
@@ -169,7 +182,7 @@ public class MandateAmendment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmendmentReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAmendment1, AmendmentReasonInformation1> mmAmendmentReason = new MMMessageAssociationEnd<MandateAmendment1, AmendmentReasonInformation1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment1.mmObject();
@@ -181,7 +194,17 @@ public class MandateAmendment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmendmentReasonInformation1.mmObject();
+			type_lazy = () -> AmendmentReasonInformation1.mmObject();
+		}
+
+		@Override
+		public AmendmentReasonInformation1 getValue(MandateAmendment1 obj) {
+			return obj.getAmendmentReason();
+		}
+
+		@Override
+		public void setValue(MandateAmendment1 obj, AmendmentReasonInformation1 value) {
+			obj.setAmendmentReason(value);
 		}
 	};
 	@XmlElement(name = "Mndt", required = true)
@@ -218,7 +241,7 @@ public class MandateAmendment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAmendment1, MandateInformation3> mmMandate = new MMMessageAssociationEnd<MandateAmendment1, MandateInformation3>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment1.mmObject();
@@ -230,7 +253,17 @@ public class MandateAmendment1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MandateInformation3.mmObject();
+			type_lazy = () -> MandateInformation3.mmObject();
+		}
+
+		@Override
+		public MandateInformation3 getValue(MandateAmendment1 obj) {
+			return obj.getMandate();
+		}
+
+		@Override
+		public void setValue(MandateAmendment1 obj, MandateInformation3 value) {
+			obj.setMandate(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMndt", required = true)
@@ -267,7 +300,7 @@ public class MandateAmendment1 {
 	 * "Set of elements used to provide the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAmendment1, OriginalMandate1Choice> mmOriginalMandate = new MMMessageAssociationEnd<MandateAmendment1, OriginalMandate1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Mandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment1.mmObject();
@@ -280,6 +313,16 @@ public class MandateAmendment1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalMandate1Choice.mmObject();
+		}
+
+		@Override
+		public OriginalMandate1Choice getValue(MandateAmendment1 obj) {
+			return obj.getOriginalMandate();
+		}
+
+		@Override
+		public void setValue(MandateAmendment1 obj, OriginalMandate1Choice value) {
+			obj.setOriginalMandate(value);
 		}
 	};
 
@@ -303,7 +346,7 @@ public class MandateAmendment1 {
 		return originalMessageInformation == null ? Optional.empty() : Optional.of(originalMessageInformation);
 	}
 
-	public MandateAmendment1 setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+	public MandateAmendment1 setOriginalMessageInformation(OriginalMessageInformation1 originalMessageInformation) {
 		this.originalMessageInformation = originalMessageInformation;
 		return this;
 	}
@@ -312,7 +355,7 @@ public class MandateAmendment1 {
 		return amendmentReason;
 	}
 
-	public MandateAmendment1 setAmendmentReason(com.tools20022.repository.msg.AmendmentReasonInformation1 amendmentReason) {
+	public MandateAmendment1 setAmendmentReason(AmendmentReasonInformation1 amendmentReason) {
 		this.amendmentReason = Objects.requireNonNull(amendmentReason);
 		return this;
 	}
@@ -321,7 +364,7 @@ public class MandateAmendment1 {
 		return mandate;
 	}
 
-	public MandateAmendment1 setMandate(com.tools20022.repository.msg.MandateInformation3 mandate) {
+	public MandateAmendment1 setMandate(MandateInformation3 mandate) {
 		this.mandate = Objects.requireNonNull(mandate);
 		return this;
 	}

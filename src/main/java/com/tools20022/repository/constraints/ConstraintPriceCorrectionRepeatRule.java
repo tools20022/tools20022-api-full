@@ -53,11 +53,15 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 */
 	public static final MMConstraint<PriceReportCorrectionV02> forPriceReportCorrectionV02 = new MMConstraint<PriceReportCorrectionV02>() {
 		{
-			validator = ConstraintPriceCorrectionRepeatRule::checkPriceReportCorrectionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCorrectionRepeatRule";
 			definition = "All information that was sent in a Price Report message should be repeated in the Price Report Correction message. Only price information that has been corrected should be quoted in CorrectedPriceDetails.";
 			owner_lazy = () -> PriceReportCorrectionV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceReportCorrectionV02 obj) throws Exception {
+			checkPriceReportCorrectionV02(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintPriceCorrectionRepeatRule {
 	 */
 	public static final MMConstraint<PriceReportCorrectionV03> forPriceReportCorrectionV03 = new MMConstraint<PriceReportCorrectionV03>() {
 		{
-			validator = ConstraintPriceCorrectionRepeatRule::checkPriceReportCorrectionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCorrectionRepeatRule";
 			definition = "All information that was sent in a Price Report message should be repeated in the Price Report Correction message. Only price information that has been corrected should be quoted in CorrectedPriceDetails.";
 			owner_lazy = () -> PriceReportCorrectionV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PriceReportCorrectionV03 obj) throws Exception {
+			checkPriceReportCorrectionV03(obj);
 		}
 	};
 

@@ -114,7 +114,7 @@ public class MarginCallResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDefaultFundAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarginCallResult1, Optional<ActiveCurrencyAndAmount>> mmDefaultFundAmount = new MMMessageAttribute<MarginCallResult1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> DefaultFundContribution.mmExcessOrDeficitAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCallResult1.mmObject();
@@ -126,6 +126,16 @@ public class MarginCallResult1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(MarginCallResult1 obj) {
+			return obj.getDefaultFundAmount();
+		}
+
+		@Override
+		public void setValue(MarginCallResult1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setDefaultFundAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MrgnCallRslt", required = true)
@@ -163,7 +173,7 @@ public class MarginCallResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarginCallResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarginCallResult1, MarginCallResult1Choice> mmMarginCallResult = new MMMessageAssociationEnd<MarginCallResult1, MarginCallResult1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> MarginCall.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarginCallResult1.mmObject();
@@ -176,6 +186,16 @@ public class MarginCallResult1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarginCallResult1Choice.mmObject();
+		}
+
+		@Override
+		public MarginCallResult1Choice getValue(MarginCallResult1 obj) {
+			return obj.getMarginCallResult();
+		}
+
+		@Override
+		public void setValue(MarginCallResult1 obj, MarginCallResult1Choice value) {
+			obj.setMarginCallResult(value);
 		}
 	};
 

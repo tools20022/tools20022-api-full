@@ -122,7 +122,7 @@ public class BlockedReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockedReason1Choice, BlockedReason1Code> mmReason = new MMMessageAttribute<BlockedReason1Choice, BlockedReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BlockedReason1Choice.mmObject();
@@ -135,6 +135,16 @@ public class BlockedReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BlockedReason1Code.mmObject();
+		}
+
+		@Override
+		public BlockedReason1Code getValue(BlockedReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(BlockedReason1Choice obj, BlockedReason1Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -180,7 +190,7 @@ public class BlockedReason1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BlockedReason1Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<BlockedReason1Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.BlockedReason1Choice.mmObject();
@@ -193,6 +203,16 @@ public class BlockedReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(BlockedReason1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(BlockedReason1Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

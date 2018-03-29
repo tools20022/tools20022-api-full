@@ -120,7 +120,7 @@ public class Identification4 {
 	 * definition} = "Unique identifier of a document, message or transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Identification4, RestrictedFINXMax16Text> mmIdentification = new MMMessageAttribute<Identification4, RestrictedFINXMax16Text>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Identification4.mmObject();
@@ -133,6 +133,16 @@ public class Identification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(Identification4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Identification4 obj, RestrictedFINXMax16Text value) {
+			obj.setIdentification(value);
 		}
 	};
 

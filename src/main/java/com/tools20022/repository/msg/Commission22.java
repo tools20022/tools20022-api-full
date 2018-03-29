@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Commission;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommissionWaiver4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -141,7 +142,7 @@ public class Commission22 {
 	 * Commission17.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission22, CommissionType3Choice> mmType = new MMMessageAssociationEnd<Commission22, CommissionType3Choice>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission22.mmObject();
@@ -156,6 +157,16 @@ public class Commission22 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CommissionType3Choice.mmObject();
+		}
+
+		@Override
+		public CommissionType3Choice getValue(Commission22 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Commission22 obj, CommissionType3Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Bsis")
@@ -204,7 +215,7 @@ public class Commission22 {
 	 * Commission17.mmBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission22, Optional<CommissionBasis1Choice>> mmBasis = new MMMessageAssociationEnd<Commission22, Optional<CommissionBasis1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission22.mmObject();
@@ -219,6 +230,16 @@ public class Commission22 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CommissionBasis1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CommissionBasis1Choice> getValue(Commission22 obj) {
+			return obj.getBasis();
+		}
+
+		@Override
+		public void setValue(Commission22 obj, Optional<CommissionBasis1Choice> value) {
+			obj.setBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -267,7 +288,7 @@ public class Commission22 {
 	 * Commission17.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission22, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<Commission22, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission22.mmObject();
@@ -281,6 +302,16 @@ public class Commission22 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(Commission22 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Commission22 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -331,7 +362,7 @@ public class Commission22 {
 	 * Commission17.mmRecipientIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission22, Optional<PartyIdentification2Choice>> mmRecipientIdentification = new MMMessageAttribute<Commission22, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission22.mmObject();
@@ -345,6 +376,16 @@ public class Commission22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(Commission22 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Commission22 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ComrclAgrmtRef")
@@ -395,7 +436,7 @@ public class Commission22 {
 	 * Commission17.mmCommercialAgreementReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Commission22, Optional<Max35Text>> mmCommercialAgreementReference = new MMMessageAttribute<Commission22, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission22.mmObject();
@@ -409,6 +450,16 @@ public class Commission22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Commission22 obj) {
+			return obj.getCommercialAgreementReference();
+		}
+
+		@Override
+		public void setValue(Commission22 obj, Optional<Max35Text> value) {
+			obj.setCommercialAgreementReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WvgDtls")
@@ -457,7 +508,7 @@ public class Commission22 {
 	 * Commission17.mmWaivingDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmWaivingDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Commission22, Optional<CommissionWaiver4>> mmWaivingDetails = new MMMessageAssociationEnd<Commission22, Optional<CommissionWaiver4>>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionWaiving;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Commission22.mmObject();
@@ -471,7 +522,17 @@ public class Commission22 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommissionWaiver4.mmObject();
+			type_lazy = () -> CommissionWaiver4.mmObject();
+		}
+
+		@Override
+		public Optional<CommissionWaiver4> getValue(Commission22 obj) {
+			return obj.getWaivingDetails();
+		}
+
+		@Override
+		public void setValue(Commission22 obj, Optional<CommissionWaiver4> value) {
+			obj.setWaivingDetails(value.orElse(null));
 		}
 	};
 
@@ -541,7 +602,7 @@ public class Commission22 {
 		return waivingDetails == null ? Optional.empty() : Optional.of(waivingDetails);
 	}
 
-	public Commission22 setWaivingDetails(com.tools20022.repository.msg.CommissionWaiver4 waivingDetails) {
+	public Commission22 setWaivingDetails(CommissionWaiver4 waivingDetails) {
 		this.waivingDetails = waivingDetails;
 		return this;
 	}

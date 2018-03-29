@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.RateAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PercentageRangeBoundary1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -102,7 +103,7 @@ public class FromToPercentageRange1 {
 	 * definition} = "Lower boundary of a range of percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FromToPercentageRange1, PercentageRangeBoundary1> mmFrom = new MMMessageAssociationEnd<FromToPercentageRange1, PercentageRangeBoundary1>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FromToPercentageRange1.mmObject();
@@ -114,7 +115,17 @@ public class FromToPercentageRange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PercentageRangeBoundary1.mmObject();
+			type_lazy = () -> PercentageRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public PercentageRangeBoundary1 getValue(FromToPercentageRange1 obj) {
+			return obj.getFrom();
+		}
+
+		@Override
+		public void setValue(FromToPercentageRange1 obj, PercentageRangeBoundary1 value) {
+			obj.setFrom(value);
 		}
 	};
 	@XmlElement(name = "To", required = true)
@@ -151,7 +162,7 @@ public class FromToPercentageRange1 {
 	 * definition} = "Upper boundary of a range of percentage rates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FromToPercentageRange1, PercentageRangeBoundary1> mmTo = new MMMessageAssociationEnd<FromToPercentageRange1, PercentageRangeBoundary1>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FromToPercentageRange1.mmObject();
@@ -163,7 +174,17 @@ public class FromToPercentageRange1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PercentageRangeBoundary1.mmObject();
+			type_lazy = () -> PercentageRangeBoundary1.mmObject();
+		}
+
+		@Override
+		public PercentageRangeBoundary1 getValue(FromToPercentageRange1 obj) {
+			return obj.getTo();
+		}
+
+		@Override
+		public void setValue(FromToPercentageRange1 obj, PercentageRangeBoundary1 value) {
+			obj.setTo(value);
 		}
 	};
 
@@ -185,7 +206,7 @@ public class FromToPercentageRange1 {
 		return from;
 	}
 
-	public FromToPercentageRange1 setFrom(com.tools20022.repository.msg.PercentageRangeBoundary1 from) {
+	public FromToPercentageRange1 setFrom(PercentageRangeBoundary1 from) {
 		this.from = Objects.requireNonNull(from);
 		return this;
 	}
@@ -194,7 +215,7 @@ public class FromToPercentageRange1 {
 		return to;
 	}
 
-	public FromToPercentageRange1 setTo(com.tools20022.repository.msg.PercentageRangeBoundary1 to) {
+	public FromToPercentageRange1 setTo(PercentageRangeBoundary1 to) {
 		this.to = Objects.requireNonNull(to);
 		return this;
 	}

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.InvestorRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification100;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -125,7 +127,7 @@ public class Intermediary29 {
 	 * definition} = "Unique and unambiguous identifier of the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary29, PartyIdentification100> mmIdentification = new MMMessageAttribute<Intermediary29, PartyIdentification100>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary29.mmObject();
@@ -136,7 +138,17 @@ public class Intermediary29 {
 			definition = "Unique and unambiguous identifier of the intermediary.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
+			complexType_lazy = () -> PartyIdentification100.mmObject();
+		}
+
+		@Override
+		public PartyIdentification100 getValue(Intermediary29 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary29 obj, PartyIdentification100 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Role", required = true)
@@ -172,7 +184,7 @@ public class Intermediary29 {
 	 * definition} = "Function performed by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary29, Role5Choice> mmRole = new MMMessageAttribute<Intermediary29, Role5Choice>() {
 		{
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary29.mmObject();
@@ -184,6 +196,16 @@ public class Intermediary29 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Role5Choice.mmObject();
+		}
+
+		@Override
+		public Role5Choice getValue(Intermediary29 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(Intermediary29 obj, Role5Choice value) {
+			obj.setRole(value);
 		}
 	};
 	@XmlElement(name = "OrdrOrgtrElgblty")
@@ -222,7 +244,7 @@ public class Intermediary29 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderOriginatorEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary29, Optional<OrderOriginatorEligibility1Code>> mmOrderOriginatorEligibility = new MMMessageAttribute<Intermediary29, Optional<OrderOriginatorEligibility1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestorRole.mmCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary29.mmObject();
@@ -235,9 +257,19 @@ public class Intermediary29 {
 			minOccurs = 0;
 			simpleType_lazy = () -> OrderOriginatorEligibility1Code.mmObject();
 		}
+
+		@Override
+		public Optional<OrderOriginatorEligibility1Code> getValue(Intermediary29 obj) {
+			return obj.getOrderOriginatorEligibility();
+		}
+
+		@Override
+		public void setValue(Intermediary29 obj, Optional<OrderOriginatorEligibility1Code> value) {
+			obj.setOrderOriginatorEligibility(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -265,7 +297,7 @@ public class Intermediary29 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary29, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<Intermediary29, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary29.mmObject();
 			isDerived = false;
@@ -275,7 +307,17 @@ public class Intermediary29 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(Intermediary29 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(Intermediary29 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -300,7 +342,7 @@ public class Intermediary29 {
 		return identification;
 	}
 
-	public Intermediary29 setIdentification(com.tools20022.repository.msg.PartyIdentification100 identification) {
+	public Intermediary29 setIdentification(PartyIdentification100 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}
@@ -327,7 +369,7 @@ public class Intermediary29 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public Intermediary29 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public Intermediary29 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

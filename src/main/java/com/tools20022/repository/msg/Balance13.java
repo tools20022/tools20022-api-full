@@ -119,7 +119,7 @@ public class Balance13 {
 	 * Balance9.mmShortLongIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Balance13, Optional<ShortLong1Code>> mmShortLongIndicator = new MMMessageAttribute<Balance13, Optional<ShortLong1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Balance13.mmObject();
@@ -133,6 +133,16 @@ public class Balance13 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ShortLong1Code> getValue(Balance13 obj) {
+			return obj.getShortLongIndicator();
+		}
+
+		@Override
+		public void setValue(Balance13 obj, Optional<ShortLong1Code> value) {
+			obj.setShortLongIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -177,7 +187,7 @@ public class Balance13 {
 	 * Balance9.mmQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Balance13, SubBalanceQuantity7Choice> mmQuantity = new MMMessageAttribute<Balance13, SubBalanceQuantity7Choice>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Balance13.mmObject();
@@ -191,6 +201,16 @@ public class Balance13 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SubBalanceQuantity7Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceQuantity7Choice getValue(Balance13 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(Balance13 obj, SubBalanceQuantity7Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 

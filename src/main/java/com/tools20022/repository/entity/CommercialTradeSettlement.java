@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.entity.Settlement;
+import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.*;
@@ -151,7 +151,7 @@ public class CommercialTradeSettlement extends Settlement {
 	 * definition} = "Settlement of the payment side of a commercial trade."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CommercialTradeSettlement, List<Payment>> mmPayment = new MMBusinessAssociationEnd<CommercialTradeSettlement, List<Payment>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmPaymentMeans);
 			isDerived = false;
@@ -163,6 +163,16 @@ public class CommercialTradeSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmTradeSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+		}
+
+		@Override
+		public List<Payment> getValue(CommercialTradeSettlement obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(CommercialTradeSettlement obj, List<Payment> value) {
+			obj.setPayment(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.Invoice> invoice;
@@ -212,7 +222,7 @@ public class CommercialTradeSettlement extends Settlement {
 	 * definition} = "Specifies for which invoice the settlement takes place."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmInvoice = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CommercialTradeSettlement, List<Invoice>> mmInvoice = new MMBusinessAssociationEnd<CommercialTradeSettlement, List<Invoice>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmMonetarySummation, TradeSettlement1.mmInvoiceReferencedDocument, TradeSettlement1.mmProformaInvoiceReferencedDocument);
 			isDerived = false;
@@ -224,6 +234,16 @@ public class CommercialTradeSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.Invoice.mmTradeSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
+		}
+
+		@Override
+		public List<Invoice> getValue(CommercialTradeSettlement obj) {
+			return obj.getInvoice();
+		}
+
+		@Override
+		public void setValue(CommercialTradeSettlement obj, List<Invoice> value) {
+			obj.setInvoice(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.LetterOfCredit> letterOfCredit;
@@ -261,7 +281,7 @@ public class CommercialTradeSettlement extends Settlement {
 	 * "Written undertaking by a bank to honour a demand for payment."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmLetterOfCredit = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CommercialTradeSettlement, List<LetterOfCredit>> mmLetterOfCredit = new MMBusinessAssociationEnd<CommercialTradeSettlement, List<LetterOfCredit>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
@@ -272,6 +292,16 @@ public class CommercialTradeSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.LetterOfCredit.mmCommercialTradeSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.LetterOfCredit.mmObject();
+		}
+
+		@Override
+		public List<LetterOfCredit> getValue(CommercialTradeSettlement obj) {
+			return obj.getLetterOfCredit();
+		}
+
+		@Override
+		public void setValue(CommercialTradeSettlement obj, List<LetterOfCredit> value) {
+			obj.setLetterOfCredit(value);
 		}
 	};
 	protected List<com.tools20022.repository.entity.ProductDelivery> productDelivery;
@@ -322,7 +352,7 @@ public class CommercialTradeSettlement extends Settlement {
 	 * definition} = "Delivery of the goods or services to the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmProductDelivery = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CommercialTradeSettlement, List<ProductDelivery>> mmProductDelivery = new MMBusinessAssociationEnd<CommercialTradeSettlement, List<ProductDelivery>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CardPaymentInvoice1.mmTradeDelivery, CardPaymentInvoice2.mmTradeDelivery, CardPaymentInvoice3.mmTradeDelivery);
 			isDerived = false;
@@ -334,6 +364,16 @@ public class CommercialTradeSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmTradeSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
+		}
+
+		@Override
+		public List<ProductDelivery> getValue(CommercialTradeSettlement obj) {
+			return obj.getProductDelivery();
+		}
+
+		@Override
+		public void setValue(CommercialTradeSettlement obj, List<ProductDelivery> value) {
+			obj.setProductDelivery(value);
 		}
 	};
 	protected CommercialTrade commercialTrade;
@@ -370,7 +410,7 @@ public class CommercialTradeSettlement extends Settlement {
 	 * definition} = "Specifies the commercial trade which is settled."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CommercialTradeSettlement, Optional<CommercialTrade>> mmCommercialTrade = new MMBusinessAssociationEnd<CommercialTradeSettlement, Optional<CommercialTrade>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
@@ -382,6 +422,16 @@ public class CommercialTradeSettlement extends Settlement {
 			opposite_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmTradeSettlement;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
+		}
+
+		@Override
+		public Optional<CommercialTrade> getValue(CommercialTradeSettlement obj) {
+			return obj.getCommercialTrade();
+		}
+
+		@Override
+		public void setValue(CommercialTradeSettlement obj, Optional<CommercialTrade> value) {
+			obj.setCommercialTrade(value.orElse(null));
 		}
 	};
 

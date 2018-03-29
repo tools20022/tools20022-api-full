@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorReconciliationResponse2;
 import com.tools20022.repository.msg.ContentInformationType6;
 import com.tools20022.repository.msg.Header1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -136,7 +135,7 @@ public class AcceptorReconciliationResponseV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationResponseV02, Header1> mmHeader = new MMMessageBuildingBlock<AcceptorReconciliationResponseV02, Header1>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,12 +147,14 @@ public class AcceptorReconciliationResponseV02 {
 			complexType_lazy = () -> Header1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationResponseV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header1 getValue(AcceptorReconciliationResponseV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationResponseV02 obj, Header1 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "RcncltnRspn", required = true)
@@ -189,7 +190,7 @@ public class AcceptorReconciliationResponseV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReconciliationResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationResponseV02, AcceptorReconciliationResponse2> mmReconciliationResponse = new MMMessageBuildingBlock<AcceptorReconciliationResponseV02, AcceptorReconciliationResponse2>() {
 		{
 			xmlTag = "RcncltnRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,12 +202,14 @@ public class AcceptorReconciliationResponseV02 {
 			complexType_lazy = () -> AcceptorReconciliationResponse2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationResponseV02.class.getMethod("getReconciliationResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorReconciliationResponse2 getValue(AcceptorReconciliationResponseV02 obj) {
+			return obj.getReconciliationResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationResponseV02 obj, AcceptorReconciliationResponse2 value) {
+			obj.setReconciliationResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -242,7 +245,7 @@ public class AcceptorReconciliationResponseV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorReconciliationResponseV02, ContentInformationType6> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorReconciliationResponseV02, ContentInformationType6>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,12 +257,14 @@ public class AcceptorReconciliationResponseV02 {
 			complexType_lazy = () -> ContentInformationType6.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorReconciliationResponseV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType6 getValue(AcceptorReconciliationResponseV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorReconciliationResponseV02 obj, ContentInformationType6 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

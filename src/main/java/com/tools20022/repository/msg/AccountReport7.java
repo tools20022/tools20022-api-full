@@ -22,6 +22,8 @@ import com.tools20022.repository.choice.AccountIdentification1Choice;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashAccountContract;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccountDetails1;
+import com.tools20022.repository.msg.ErrorHandling2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +117,7 @@ public class AccountReport7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountReport7, AccountIdentification1Choice> mmAccountIdentification = new MMMessageAttribute<AccountReport7, AccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport7.mmObject();
@@ -127,6 +129,16 @@ public class AccountReport7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1Choice getValue(AccountReport7 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(AccountReport7 obj, AccountIdentification1Choice value) {
+			obj.setAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "Acct", required = true)
@@ -161,7 +173,7 @@ public class AccountReport7 {
 	 * definition} = "Requested information on the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport7, CashAccountDetails1> mmAccount = new MMMessageAssociationEnd<AccountReport7, CashAccountDetails1>() {
 		{
 			businessElementTrace_lazy = () -> CashAccountContract.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport7.mmObject();
@@ -173,7 +185,17 @@ public class AccountReport7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccountDetails1.mmObject();
+			type_lazy = () -> CashAccountDetails1.mmObject();
+		}
+
+		@Override
+		public CashAccountDetails1 getValue(AccountReport7 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountReport7 obj, CashAccountDetails1 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -203,7 +225,7 @@ public class AccountReport7 {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountReport7, ErrorHandling2> mmBusinessError = new MMMessageAssociationEnd<AccountReport7, ErrorHandling2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountReport7.mmObject();
 			isDerived = false;
@@ -214,7 +236,17 @@ public class AccountReport7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
+			type_lazy = () -> ErrorHandling2.mmObject();
+		}
+
+		@Override
+		public ErrorHandling2 getValue(AccountReport7 obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(AccountReport7 obj, ErrorHandling2 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	/**
@@ -286,7 +318,7 @@ public class AccountReport7 {
 		return account;
 	}
 
-	public AccountReport7 setAccount(com.tools20022.repository.msg.CashAccountDetails1 account) {
+	public AccountReport7 setAccount(CashAccountDetails1 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -295,7 +327,7 @@ public class AccountReport7 {
 		return businessError;
 	}
 
-	public AccountReport7 setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+	public AccountReport7 setBusinessError(ErrorHandling2 businessError) {
 		this.businessError = Objects.requireNonNull(businessError);
 		return this;
 	}

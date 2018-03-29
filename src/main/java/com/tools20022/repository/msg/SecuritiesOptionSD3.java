@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Period3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -142,7 +143,7 @@ public class SecuritiesOptionSD3 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Max350Text> mmPlaceAndName = new MMMessageAttribute<SecuritiesOptionSD3, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -153,6 +154,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(SecuritiesOptionSD3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "DTCPayMtd")
@@ -190,7 +201,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<Max3NumericText>> mmDTCPayMethod = new MMMessageAttribute<SecuritiesOptionSD3, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -202,6 +213,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getDTCPayMethod();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<Max3NumericText> value) {
+			obj.setDTCPayMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCPayOrdr")
@@ -239,7 +260,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<Max3NumericText>> mmDTCPayOrder = new MMMessageAttribute<SecuritiesOptionSD3, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -251,6 +272,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getDTCPayOrder();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<Max3NumericText> value) {
+			obj.setDTCPayOrder(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RinvstmtIncmClssfctn")
@@ -287,7 +318,7 @@ public class SecuritiesOptionSD3 {
 	 * "Income classification of the cash proceeds for dividend reinvestment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReinvestmentIncomeClassification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<ReinvestmentIncomeClassification1Code>> mmReinvestmentIncomeClassification = new MMMessageAttribute<SecuritiesOptionSD3, Optional<ReinvestmentIncomeClassification1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -299,6 +330,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReinvestmentIncomeClassification1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ReinvestmentIncomeClassification1Code> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getReinvestmentIncomeClassification();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<ReinvestmentIncomeClassification1Code> value) {
+			obj.setReinvestmentIncomeClassification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitlmntClctnMtd")
@@ -335,7 +376,7 @@ public class SecuritiesOptionSD3 {
 	 * "Indicates how the entitlements were calculated optional dividends."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitlementCalculationMethod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<DTCEntitlementCalculationMethod1Code>> mmEntitlementCalculationMethod = new MMMessageAttribute<SecuritiesOptionSD3, Optional<DTCEntitlementCalculationMethod1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -347,6 +388,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCEntitlementCalculationMethod1Code> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getEntitlementCalculationMethod();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<DTCEntitlementCalculationMethod1Code> value) {
+			obj.setEntitlementCalculationMethod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FairMktVal")
@@ -384,7 +435,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFairMarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmFairMarketValue = new MMMessageAttribute<SecuritiesOptionSD3, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -396,6 +447,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getFairMarketValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setFairMarketValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PricBsis")
@@ -431,7 +492,7 @@ public class SecuritiesOptionSD3 {
 	 * definition} = "Price is based on either base or disbursed security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriceBasis = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<DTCBaseDisbursed1Code>> mmPriceBasis = new MMMessageAttribute<SecuritiesOptionSD3, Optional<DTCBaseDisbursed1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -443,6 +504,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCBaseDisbursed1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCBaseDisbursed1Code> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getPriceBasis();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<DTCBaseDisbursed1Code> value) {
+			obj.setPriceBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCExitExpltnInd")
@@ -480,7 +551,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCExitExplanationIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<SecuritiesExitReason1Code>> mmDTCExitExplanationIndicator = new MMMessageAttribute<SecuritiesOptionSD3, Optional<SecuritiesExitReason1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -492,6 +563,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesExitReason1Code.mmObject();
+		}
+
+		@Override
+		public Optional<SecuritiesExitReason1Code> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getDTCExitExplanationIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<SecuritiesExitReason1Code> value) {
+			obj.setDTCExitExplanationIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgFlg")
@@ -529,7 +610,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<YesNoIndicator>> mmChargeFlag = new MMMessageAttribute<SecuritiesOptionSD3, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -541,6 +622,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getChargeFlag();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<YesNoIndicator> value) {
+			obj.setChargeFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrtctChrgFlg")
@@ -578,7 +669,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtectChargeFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<YesNoIndicator>> mmProtectChargeFlag = new MMMessageAttribute<SecuritiesOptionSD3, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -590,6 +681,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getProtectChargeFlag();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<YesNoIndicator> value) {
+			obj.setProtectChargeFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EstmtdPricFlg")
@@ -626,7 +727,7 @@ public class SecuritiesOptionSD3 {
 	 * "Indicates whether the price from the offeror is estimated or final."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEstimatedPriceFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<YesNoIndicator>> mmEstimatedPriceFlag = new MMMessageAttribute<SecuritiesOptionSD3, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -638,6 +739,16 @@ public class SecuritiesOptionSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getEstimatedPriceFlag();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<YesNoIndicator> value) {
+			obj.setEstimatedPriceFlag(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCFrctnlShrInstrPrd")
@@ -675,7 +786,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCFractionalShareInstructionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<Period3>> mmDTCFractionalShareInstructionPeriod = new MMMessageAttribute<SecuritiesOptionSD3, Optional<Period3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -686,7 +797,17 @@ public class SecuritiesOptionSD3 {
 			definition = "Time period during which instructions regarding the disposition of fractional entitlements will be accepted at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
+			complexType_lazy = () -> Period3.mmObject();
+		}
+
+		@Override
+		public Optional<Period3> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getDTCFractionalShareInstructionPeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<Period3> value) {
+			obj.setDTCFractionalShareInstructionPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCUSTaxInstrPrd")
@@ -723,7 +844,7 @@ public class SecuritiesOptionSD3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCUSTaxInstructionPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesOptionSD3, Optional<Period3>> mmDTCUSTaxInstructionPeriod = new MMMessageAttribute<SecuritiesOptionSD3, Optional<Period3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD3.mmObject();
 			isDerived = false;
@@ -734,7 +855,17 @@ public class SecuritiesOptionSD3 {
 			definition = "Indicates the period during which the instructions for US Tax service will be accepted at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
+			complexType_lazy = () -> Period3.mmObject();
+		}
+
+		@Override
+		public Optional<Period3> getValue(SecuritiesOptionSD3 obj) {
+			return obj.getDTCUSTaxInstructionPeriod();
+		}
+
+		@Override
+		public void setValue(SecuritiesOptionSD3 obj, Optional<Period3> value) {
+			obj.setDTCUSTaxInstructionPeriod(value.orElse(null));
 		}
 	};
 
@@ -859,7 +990,7 @@ public class SecuritiesOptionSD3 {
 		return dTCFractionalShareInstructionPeriod == null ? Optional.empty() : Optional.of(dTCFractionalShareInstructionPeriod);
 	}
 
-	public SecuritiesOptionSD3 setDTCFractionalShareInstructionPeriod(com.tools20022.repository.msg.Period3 dTCFractionalShareInstructionPeriod) {
+	public SecuritiesOptionSD3 setDTCFractionalShareInstructionPeriod(Period3 dTCFractionalShareInstructionPeriod) {
 		this.dTCFractionalShareInstructionPeriod = dTCFractionalShareInstructionPeriod;
 		return this;
 	}
@@ -868,7 +999,7 @@ public class SecuritiesOptionSD3 {
 		return dTCUSTaxInstructionPeriod == null ? Optional.empty() : Optional.of(dTCUSTaxInstructionPeriod);
 	}
 
-	public SecuritiesOptionSD3 setDTCUSTaxInstructionPeriod(com.tools20022.repository.msg.Period3 dTCUSTaxInstructionPeriod) {
+	public SecuritiesOptionSD3 setDTCUSTaxInstructionPeriod(Period3 dTCUSTaxInstructionPeriod) {
 		this.dTCUSTaxInstructionPeriod = dTCUSTaxInstructionPeriod;
 		return this;
 	}

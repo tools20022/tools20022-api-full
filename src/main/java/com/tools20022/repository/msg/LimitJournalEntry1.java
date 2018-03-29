@@ -124,7 +124,7 @@ public class LimitJournalEntry1 {
 	 * definition} = "Date and time for which the limit journal entry applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmJournalDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LimitJournalEntry1, DateAndDateTimeChoice> mmJournalDate = new MMMessageAssociationEnd<LimitJournalEntry1, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -136,6 +136,16 @@ public class LimitJournalEntry1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(LimitJournalEntry1 obj) {
+			return obj.getJournalDate();
+		}
+
+		@Override
+		public void setValue(LimitJournalEntry1 obj, DateAndDateTimeChoice value) {
+			obj.setJournalDate(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -169,7 +179,7 @@ public class LimitJournalEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitJournalEntry1, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<LimitJournalEntry1, CreditDebitCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class LimitJournalEntry1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(LimitJournalEntry1 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(LimitJournalEntry1 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -212,7 +232,7 @@ public class LimitJournalEntry1 {
 	 * definition} = "Amount of money of individual entry impacting the limit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitJournalEntry1, Amount2Choice> mmAmount = new MMMessageAttribute<LimitJournalEntry1, Amount2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -223,6 +243,16 @@ public class LimitJournalEntry1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Amount2Choice getValue(LimitJournalEntry1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(LimitJournalEntry1 obj, Amount2Choice value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "NtryRef")
@@ -256,7 +286,7 @@ public class LimitJournalEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitJournalEntry1, Optional<Max35Text>> mmEntryReference = new MMMessageAttribute<LimitJournalEntry1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -267,6 +297,16 @@ public class LimitJournalEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LimitJournalEntry1 obj) {
+			return obj.getEntryReference();
+		}
+
+		@Override
+		public void setValue(LimitJournalEntry1 obj, Optional<Max35Text> value) {
+			obj.setEntryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxId")
@@ -300,7 +340,7 @@ public class LimitJournalEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitJournalEntry1, Optional<Max35Text>> mmTransactionIdentification = new MMMessageAttribute<LimitJournalEntry1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -311,6 +351,16 @@ public class LimitJournalEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LimitJournalEntry1 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(LimitJournalEntry1 obj, Optional<Max35Text> value) {
+			obj.setTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcrRef")
@@ -344,7 +394,7 @@ public class LimitJournalEntry1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitJournalEntry1, Optional<Max35Text>> mmAccountServicerReference = new MMMessageAttribute<LimitJournalEntry1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -355,6 +405,16 @@ public class LimitJournalEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LimitJournalEntry1 obj) {
+			return obj.getAccountServicerReference();
+		}
+
+		@Override
+		public void setValue(LimitJournalEntry1 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcrTxId")
@@ -390,7 +450,7 @@ public class LimitJournalEntry1 {
 	 * "Identification of the transaction assigned by the processor."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitJournalEntry1, Optional<Max35Text>> mmProcessorTransactionIdentification = new MMMessageAttribute<LimitJournalEntry1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -402,6 +462,16 @@ public class LimitJournalEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(LimitJournalEntry1 obj) {
+			return obj.getProcessorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(LimitJournalEntry1 obj, Optional<Max35Text> value) {
+			obj.setProcessorTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlNtryInf")
@@ -433,7 +503,7 @@ public class LimitJournalEntry1 {
 	 * definition} = "Further details of the entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalEntryInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LimitJournalEntry1, Optional<Max500Text>> mmAdditionalEntryInformation = new MMMessageAttribute<LimitJournalEntry1, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournalEntry1.mmObject();
 			isDerived = false;
@@ -444,6 +514,16 @@ public class LimitJournalEntry1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(LimitJournalEntry1 obj) {
+			return obj.getAdditionalEntryInformation();
+		}
+
+		@Override
+		public void setValue(LimitJournalEntry1 obj, Optional<Max500Text> value) {
+			obj.setAdditionalEntryInformation(value.orElse(null));
 		}
 	};
 

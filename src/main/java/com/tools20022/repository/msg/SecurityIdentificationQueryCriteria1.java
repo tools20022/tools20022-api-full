@@ -115,7 +115,7 @@ public class SecurityIdentificationQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentificationQueryCriteria1, List<ISINOct2015Identifier>> mmISIN = new MMMessageAttribute<SecurityIdentificationQueryCriteria1, List<ISINOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentificationQueryCriteria1.mmObject();
@@ -126,6 +126,16 @@ public class SecurityIdentificationQueryCriteria1 {
 			definition = "International Securities Identification Number (ISIN). A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public List<ISINOct2015Identifier> getValue(SecurityIdentificationQueryCriteria1 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationQueryCriteria1 obj, List<ISINOct2015Identifier> value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "AltrntvInstrmId")
@@ -164,7 +174,7 @@ public class SecurityIdentificationQueryCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternativeInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentificationQueryCriteria1, List<Max52Text>> mmAlternativeInstrumentIdentification = new MMMessageAttribute<SecurityIdentificationQueryCriteria1, List<Max52Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentificationQueryCriteria1.mmObject();
@@ -175,6 +185,16 @@ public class SecurityIdentificationQueryCriteria1 {
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public List<Max52Text> getValue(SecurityIdentificationQueryCriteria1 obj) {
+			return obj.getAlternativeInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationQueryCriteria1 obj, List<Max52Text> value) {
+			obj.setAlternativeInstrumentIdentification(value);
 		}
 	};
 

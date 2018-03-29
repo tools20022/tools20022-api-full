@@ -135,7 +135,7 @@ public class InvestmentAccountModificationDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountModificationDetails, Optional<Max350Text>> mmModificationReason = new MMMessageAttribute<InvestmentAccountModificationDetails, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmObject();
 			isDerived = false;
@@ -147,6 +147,16 @@ public class InvestmentAccountModificationDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(InvestmentAccountModificationDetails obj) {
+			return obj.getModificationReason();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountModificationDetails obj, Optional<Max350Text> value) {
+			obj.setModificationReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -187,7 +197,7 @@ public class InvestmentAccountModificationDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentAccountModificationDetails, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<InvestmentAccountModificationDetails, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountModificationDetails.mmObject();
 			isDerived = false;
@@ -199,6 +209,16 @@ public class InvestmentAccountModificationDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(InvestmentAccountModificationDetails obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(InvestmentAccountModificationDetails obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 

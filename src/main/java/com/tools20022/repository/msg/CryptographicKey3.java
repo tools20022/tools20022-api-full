@@ -105,7 +105,7 @@ public class CryptographicKey3 {
 	 * definition} = "Name of the cryptographic key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey3, Max140Text> mmIdentification = new MMMessageAttribute<CryptographicKey3, Max140Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey3.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class CryptographicKey3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Max140Text getValue(CryptographicKey3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CryptographicKey3 obj, Max140Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AddtlId")
@@ -149,7 +159,7 @@ public class CryptographicKey3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey3, Optional<Max35Binary>> mmAdditionalIdentification = new MMMessageAttribute<CryptographicKey3, Optional<Max35Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey3.mmObject();
 			isDerived = false;
@@ -160,6 +170,16 @@ public class CryptographicKey3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Binary> getValue(CryptographicKey3 obj) {
+			return obj.getAdditionalIdentification();
+		}
+
+		@Override
+		public void setValue(CryptographicKey3 obj, Optional<Max35Binary> value) {
+			obj.setAdditionalIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -191,7 +211,7 @@ public class CryptographicKey3 {
 	 * definition} = "Version of the cryptographic key."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CryptographicKey3, Exact10Text> mmVersion = new MMMessageAttribute<CryptographicKey3, Exact10Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey3.mmObject();
 			isDerived = false;
@@ -202,6 +222,16 @@ public class CryptographicKey3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact10Text.mmObject();
+		}
+
+		@Override
+		public Exact10Text getValue(CryptographicKey3 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(CryptographicKey3 obj, Exact10Text value) {
+			obj.setVersion(value);
 		}
 	};
 

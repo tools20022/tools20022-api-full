@@ -55,11 +55,15 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 	 */
 	public static final MMConstraint<FIToFICustomerCreditTransferV01> forFIToFICustomerCreditTransferV01 = new MMConstraint<FIToFICustomerCreditTransferV01>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmount1Rule::checkFIToFICustomerCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount1Rule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerCreditTransferV01 obj) throws Exception {
+			checkFIToFICustomerCreditTransferV01(obj);
 		}
 	};
 	/**
@@ -85,11 +89,15 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 	 */
 	public static final MMConstraint<FIToFICustomerDirectDebitV01> forFIToFICustomerDirectDebitV01 = new MMConstraint<FIToFICustomerDirectDebitV01>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmount1Rule::checkFIToFICustomerDirectDebitV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount1Rule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerDirectDebitV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FIToFICustomerDirectDebitV01 obj) throws Exception {
+			checkFIToFICustomerDirectDebitV01(obj);
 		}
 	};
 	/**
@@ -115,11 +123,15 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 	 */
 	public static final MMConstraint<FinancialInstitutionCreditTransferV01> forFinancialInstitutionCreditTransferV01 = new MMConstraint<FinancialInstitutionCreditTransferV01>() {
 		{
-			validator = ConstraintTotalInterbankSettlementAmount1Rule::checkFinancialInstitutionCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount1Rule";
 			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount. \n.";
 			owner_lazy = () -> FinancialInstitutionCreditTransferV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstitutionCreditTransferV01 obj) throws Exception {
+			checkFinancialInstitutionCreditTransferV01(obj);
 		}
 	};
 

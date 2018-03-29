@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Country;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericPersonIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -116,7 +117,7 @@ public class PersonIdentification12 {
 	 * PartyIdentification76.mmCountryOfBranch}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfBranch = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification12, CountryCode> mmCountryOfBranch = new MMMessageAttribute<PersonIdentification12, CountryCode>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification12.mmObject();
@@ -129,6 +130,16 @@ public class PersonIdentification12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public CountryCode getValue(PersonIdentification12 obj) {
+			return obj.getCountryOfBranch();
+		}
+
+		@Override
+		public void setValue(PersonIdentification12 obj, CountryCode value) {
+			obj.setCountryOfBranch(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -172,7 +183,7 @@ public class PersonIdentification12 {
 	 * PartyIdentification76.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PersonIdentification12, GenericPersonIdentification1> mmOther = new MMMessageAssociationEnd<PersonIdentification12, GenericPersonIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification12.mmObject();
@@ -185,7 +196,17 @@ public class PersonIdentification12 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericPersonIdentification1.mmObject();
+			type_lazy = () -> GenericPersonIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericPersonIdentification1 getValue(PersonIdentification12 obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(PersonIdentification12 obj, GenericPersonIdentification1 value) {
+			obj.setOther(value);
 		}
 	};
 
@@ -217,7 +238,7 @@ public class PersonIdentification12 {
 		return other;
 	}
 
-	public PersonIdentification12 setOther(com.tools20022.repository.msg.GenericPersonIdentification1 other) {
+	public PersonIdentification12 setOther(GenericPersonIdentification1 other) {
 		this.other = Objects.requireNonNull(other);
 		return this;
 	}

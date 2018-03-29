@@ -112,7 +112,7 @@ public class Counterparty4Choice {
 	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSeller = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty4Choice, PartyIdentificationAndAccount42> mmSeller = new MMMessageAssociationEnd<Counterparty4Choice, PartyIdentificationAndAccount42>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty4Choice.mmObject();
@@ -126,6 +126,16 @@ public class Counterparty4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount42.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount42 getValue(Counterparty4Choice obj) {
+			return obj.getSeller();
+		}
+
+		@Override
+		public void setValue(Counterparty4Choice obj, PartyIdentificationAndAccount42 value) {
+			obj.setSeller(value);
 		}
 	};
 	@XmlElement(name = "Buyr", required = true)
@@ -166,7 +176,7 @@ public class Counterparty4Choice {
 	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Counterparty4Choice, PartyIdentificationAndAccount42> mmBuyer = new MMMessageAssociationEnd<Counterparty4Choice, PartyIdentificationAndAccount42>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Counterparty4Choice.mmObject();
@@ -180,6 +190,16 @@ public class Counterparty4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentificationAndAccount42.mmObject();
+		}
+
+		@Override
+		public PartyIdentificationAndAccount42 getValue(Counterparty4Choice obj) {
+			return obj.getBuyer();
+		}
+
+		@Override
+		public void setValue(Counterparty4Choice obj, PartyIdentificationAndAccount42 value) {
+			obj.setBuyer(value);
 		}
 	};
 

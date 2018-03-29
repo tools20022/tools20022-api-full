@@ -129,7 +129,7 @@ public class PriceFormat11Choice {
 	 * definition} = "Price expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPercentagePrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat11Choice, PercentagePrice1> mmPercentagePrice = new MMMessageAssociationEnd<PriceFormat11Choice, PercentagePrice1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat11Choice.mmObject();
@@ -143,6 +143,16 @@ public class PriceFormat11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PercentagePrice1.mmObject();
+		}
+
+		@Override
+		public PercentagePrice1 getValue(PriceFormat11Choice obj) {
+			return obj.getPercentagePrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat11Choice obj, PercentagePrice1 value) {
+			obj.setPercentagePrice(value);
 		}
 	};
 	@XmlElement(name = "AmtPric", required = true)
@@ -181,7 +191,7 @@ public class PriceFormat11Choice {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PriceFormat11Choice, AmountPrice3> mmAmountPrice = new MMMessageAssociationEnd<PriceFormat11Choice, AmountPrice3>() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat11Choice.mmObject();
@@ -195,6 +205,16 @@ public class PriceFormat11Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountPrice3.mmObject();
+		}
+
+		@Override
+		public AmountPrice3 getValue(PriceFormat11Choice obj) {
+			return obj.getAmountPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat11Choice obj, AmountPrice3 value) {
+			obj.setAmountPrice(value);
 		}
 	};
 	@XmlElement(name = "NotSpcfdPric", required = true)
@@ -230,7 +250,7 @@ public class PriceFormat11Choice {
 	 * definition} = "Value of the price not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotSpecifiedPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceFormat11Choice, PriceValueType5Code> mmNotSpecifiedPrice = new MMMessageAttribute<PriceFormat11Choice, PriceValueType5Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PriceFormat11Choice.mmObject();
 			isDerived = false;
@@ -242,6 +262,16 @@ public class PriceFormat11Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType5Code.mmObject();
+		}
+
+		@Override
+		public PriceValueType5Code getValue(PriceFormat11Choice obj) {
+			return obj.getNotSpecifiedPrice();
+		}
+
+		@Override
+		public void setValue(PriceFormat11Choice obj, PriceValueType5Code value) {
+			obj.setNotSpecifiedPrice(value);
 		}
 	};
 

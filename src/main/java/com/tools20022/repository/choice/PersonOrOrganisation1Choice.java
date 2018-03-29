@@ -134,7 +134,7 @@ public class PersonOrOrganisation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonOrOrganisation1Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<PersonOrOrganisation1Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmObject();
@@ -147,6 +147,16 @@ public class PersonOrOrganisation1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(PersonOrOrganisation1Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(PersonOrOrganisation1Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "MIC", required = true)
@@ -184,7 +194,7 @@ public class PersonOrOrganisation1Choice {
 	 * definition} = "Market identifier code of the party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMIC = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonOrOrganisation1Choice, MICIdentifier> mmMIC = new MMMessageAttribute<PersonOrOrganisation1Choice, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmObject();
@@ -196,6 +206,16 @@ public class PersonOrOrganisation1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(PersonOrOrganisation1Choice obj) {
+			return obj.getMIC();
+		}
+
+		@Override
+		public void setValue(PersonOrOrganisation1Choice obj, MICIdentifier value) {
+			obj.setMIC(value);
 		}
 	};
 	@XmlElement(name = "Prsn", required = true)
@@ -239,7 +259,7 @@ public class PersonOrOrganisation1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PersonOrOrganisation1Choice, PersonIdentification10> mmPerson = new MMMessageAssociationEnd<PersonOrOrganisation1Choice, PersonIdentification10>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmObject();
@@ -253,6 +273,16 @@ public class PersonOrOrganisation1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentification10.mmObject();
+		}
+
+		@Override
+		public PersonIdentification10 getValue(PersonOrOrganisation1Choice obj) {
+			return obj.getPerson();
+		}
+
+		@Override
+		public void setValue(PersonOrOrganisation1Choice obj, PersonIdentification10 value) {
+			obj.setPerson(value);
 		}
 	};
 	@XmlElement(name = "Intl", required = true)
@@ -290,7 +320,7 @@ public class PersonOrOrganisation1Choice {
 	 * definition} = "Identifies internal party."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInternal = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonOrOrganisation1Choice, InternalPartyRole1Code> mmInternal = new MMMessageAttribute<PersonOrOrganisation1Choice, InternalPartyRole1Code>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation1Choice.mmObject();
@@ -302,6 +332,16 @@ public class PersonOrOrganisation1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InternalPartyRole1Code.mmObject();
+		}
+
+		@Override
+		public InternalPartyRole1Code getValue(PersonOrOrganisation1Choice obj) {
+			return obj.getInternal();
+		}
+
+		@Override
+		public void setValue(PersonOrOrganisation1Choice obj, InternalPartyRole1Code value) {
+			obj.setInternal(value);
 		}
 	};
 

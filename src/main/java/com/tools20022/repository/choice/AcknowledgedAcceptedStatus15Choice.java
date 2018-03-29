@@ -116,7 +116,7 @@ public class AcknowledgedAcceptedStatus15Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgedAcceptedStatus15Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<AcknowledgedAcceptedStatus15Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus15Choice.mmObject();
@@ -129,6 +129,16 @@ public class AcknowledgedAcceptedStatus15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AcknowledgedAcceptedStatus15Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(AcknowledgedAcceptedStatus15Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -166,7 +176,7 @@ public class AcknowledgedAcceptedStatus15Choice {
 	 * definition} = "Specifies the reason of the AcknowledgedAcceptedStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgedAcceptedStatus15Choice, List<AcknowledgementReason8>> mmReason = new MMMessageAttribute<AcknowledgedAcceptedStatus15Choice, List<AcknowledgementReason8>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus15Choice.mmObject();
@@ -177,6 +187,16 @@ public class AcknowledgedAcceptedStatus15Choice {
 			definition = "Specifies the reason of the AcknowledgedAcceptedStatus.";
 			minOccurs = 1;
 			complexType_lazy = () -> AcknowledgementReason8.mmObject();
+		}
+
+		@Override
+		public List<AcknowledgementReason8> getValue(AcknowledgedAcceptedStatus15Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AcknowledgedAcceptedStatus15Choice obj, List<AcknowledgementReason8> value) {
+			obj.setReason(value);
 		}
 	};
 

@@ -107,7 +107,7 @@ public class ForeignExchangeDerivative2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractSubType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ForeignExchangeDerivative2, AssetClassSubProductType19Code> mmContractSubType = new MMMessageAttribute<ForeignExchangeDerivative2, AssetClassSubProductType19Code>() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ForeignExchangeDerivative2.mmObject();
@@ -119,6 +119,16 @@ public class ForeignExchangeDerivative2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType19Code.mmObject();
+		}
+
+		@Override
+		public AssetClassSubProductType19Code getValue(ForeignExchangeDerivative2 obj) {
+			return obj.getContractSubType();
+		}
+
+		@Override
+		public void setValue(ForeignExchangeDerivative2 obj, AssetClassSubProductType19Code value) {
+			obj.setContractSubType(value);
 		}
 	};
 

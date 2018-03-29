@@ -108,7 +108,7 @@ public class SignedQuantityFormat9 {
 	 * definition} = "Sign of the quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SignedQuantityFormat9, ShortLong1Code> mmShortLongPosition = new MMMessageAttribute<SignedQuantityFormat9, ShortLong1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
@@ -120,6 +120,16 @@ public class SignedQuantityFormat9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public ShortLong1Code getValue(SignedQuantityFormat9 obj) {
+			return obj.getShortLongPosition();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat9 obj, ShortLong1Code value) {
+			obj.setShortLongPosition(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -156,7 +166,7 @@ public class SignedQuantityFormat9 {
 	 * definition} = "Quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SignedQuantityFormat9, FinancialInstrumentQuantity15Choice> mmQuantity = new MMMessageAssociationEnd<SignedQuantityFormat9, FinancialInstrumentQuantity15Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
@@ -169,6 +179,16 @@ public class SignedQuantityFormat9 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(SignedQuantityFormat9 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SignedQuantityFormat9 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 

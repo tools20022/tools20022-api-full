@@ -126,7 +126,7 @@ public class CorporateActionEventProcessingType2Choice {
 	 * CorporateActionEventProcessingTypeChoice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventProcessingType2Choice, CorporateActionEventProcessingType1Code> mmCode = new MMMessageAttribute<CorporateActionEventProcessingType2Choice, CorporateActionEventProcessingType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventProcessingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingType2Choice.mmObject();
@@ -140,6 +140,16 @@ public class CorporateActionEventProcessingType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventProcessingType1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventProcessingType1Code getValue(CorporateActionEventProcessingType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventProcessingType2Choice obj, CorporateActionEventProcessingType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -186,7 +196,7 @@ public class CorporateActionEventProcessingType2Choice {
 	 * CorporateActionEventProcessingTypeChoice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionEventProcessingType2Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<CorporateActionEventProcessingType2Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmEventProcessingType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventProcessingType2Choice.mmObject();
@@ -201,6 +211,16 @@ public class CorporateActionEventProcessingType2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CorporateActionEventProcessingType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventProcessingType2Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

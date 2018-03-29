@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.MICIdentifier;
 import com.tools20022.repository.entity.SafekeepingPlace;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -111,7 +112,7 @@ public class FinancialInstrumentDescription3 {
 	 * definition} = "Identifies the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentDescription3, SecurityIdentification7> mmSecurityIdentification = new MMMessageAttribute<FinancialInstrumentDescription3, SecurityIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDescription3.mmObject();
@@ -122,7 +123,17 @@ public class FinancialInstrumentDescription3 {
 			definition = "Identifies the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(FinancialInstrumentDescription3 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDescription3 obj, SecurityIdentification7 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "PlcOfListg")
@@ -161,7 +172,7 @@ public class FinancialInstrumentDescription3 {
 	 * "Place where the referenced financial instrument is listed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfListing = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentDescription3, Optional<MICIdentifier>> mmPlaceOfListing = new MMMessageAttribute<FinancialInstrumentDescription3, Optional<MICIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDescription3.mmObject();
@@ -173,6 +184,16 @@ public class FinancialInstrumentDescription3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<MICIdentifier> getValue(FinancialInstrumentDescription3 obj) {
+			return obj.getPlaceOfListing();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDescription3 obj, Optional<MICIdentifier> value) {
+			obj.setPlaceOfListing(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc")
@@ -210,7 +231,7 @@ public class FinancialInstrumentDescription3 {
 	 * definition} = "Identification of the place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FinancialInstrumentDescription3, Optional<PartyIdentification2Choice>> mmSafekeepingPlace = new MMMessageAttribute<FinancialInstrumentDescription3, Optional<PartyIdentification2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentDescription3.mmObject();
@@ -222,6 +243,16 @@ public class FinancialInstrumentDescription3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(FinancialInstrumentDescription3 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(FinancialInstrumentDescription3 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setSafekeepingPlace(value.orElse(null));
 		}
 	};
 
@@ -244,7 +275,7 @@ public class FinancialInstrumentDescription3 {
 		return securityIdentification;
 	}
 
-	public FinancialInstrumentDescription3 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+	public FinancialInstrumentDescription3 setSecurityIdentification(SecurityIdentification7 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}

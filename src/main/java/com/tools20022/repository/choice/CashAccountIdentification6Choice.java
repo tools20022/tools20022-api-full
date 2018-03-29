@@ -114,7 +114,7 @@ public class CashAccountIdentification6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification6Choice, IBAN2007Identifier> mmIBAN = new MMMessageAttribute<CashAccountIdentification6Choice, IBAN2007Identifier>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification6Choice.mmObject();
@@ -127,6 +127,16 @@ public class CashAccountIdentification6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBAN2007Identifier.mmObject();
+		}
+
+		@Override
+		public IBAN2007Identifier getValue(CashAccountIdentification6Choice obj) {
+			return obj.getIBAN();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification6Choice obj, IBAN2007Identifier value) {
+			obj.setIBAN(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -169,7 +179,7 @@ public class CashAccountIdentification6Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccountIdentification6Choice, RestrictedFINX2Max34Text> mmProprietary = new MMMessageAttribute<CashAccountIdentification6Choice, RestrictedFINX2Max34Text>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CashAccountIdentification6Choice.mmObject();
@@ -182,6 +192,16 @@ public class CashAccountIdentification6Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINX2Max34Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINX2Max34Text getValue(CashAccountIdentification6Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CashAccountIdentification6Choice obj, RestrictedFINX2Max34Text value) {
+			obj.setProprietary(value);
 		}
 	};
 

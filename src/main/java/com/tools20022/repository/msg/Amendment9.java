@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsrv.UndertakingAmendmentResponseNotificationV01;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class Amendment9 {
 	 * "Contents of the related UndertakingAmendmentResponse message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUndertakingAmendmentResponseMessage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Amendment9, UndertakingAmendmentResponseMessage1> mmUndertakingAmendmentResponseMessage = new MMMessageAssociationEnd<Amendment9, UndertakingAmendmentResponseMessage1>() {
 		{
 			businessComponentTrace_lazy = () -> AmendmentOfUndertaking.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment9.mmObject();
@@ -124,7 +125,17 @@ public class Amendment9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1.mmObject();
+			type_lazy = () -> UndertakingAmendmentResponseMessage1.mmObject();
+		}
+
+		@Override
+		public UndertakingAmendmentResponseMessage1 getValue(Amendment9 obj) {
+			return obj.getUndertakingAmendmentResponseMessage();
+		}
+
+		@Override
+		public void setValue(Amendment9 obj, UndertakingAmendmentResponseMessage1 value) {
+			obj.setUndertakingAmendmentResponseMessage(value);
 		}
 	};
 
@@ -147,7 +158,7 @@ public class Amendment9 {
 		return undertakingAmendmentResponseMessage;
 	}
 
-	public Amendment9 setUndertakingAmendmentResponseMessage(com.tools20022.repository.msg.UndertakingAmendmentResponseMessage1 undertakingAmendmentResponseMessage) {
+	public Amendment9 setUndertakingAmendmentResponseMessage(UndertakingAmendmentResponseMessage1 undertakingAmendmentResponseMessage) {
 		this.undertakingAmendmentResponseMessage = Objects.requireNonNull(undertakingAmendmentResponseMessage);
 		return this;
 	}

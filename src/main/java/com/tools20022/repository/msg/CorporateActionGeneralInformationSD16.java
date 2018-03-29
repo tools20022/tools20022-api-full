@@ -26,6 +26,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD2;
+import com.tools20022.repository.msg.SecurityIdentification15;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -136,7 +138,7 @@ public class CorporateActionGeneralInformationSD16 {
 	 * CorporateActionGeneralInformationSD3.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD16, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionGeneralInformationSD16, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmObject();
 			isDerived = false;
@@ -149,6 +151,16 @@ public class CorporateActionGeneralInformationSD16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionGeneralInformationSD16 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD16 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "SctyId", required = true)
@@ -197,7 +209,7 @@ public class CorporateActionGeneralInformationSD16 {
 	 * CorporateActionGeneralInformationSD3.mmSecurityIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD16, SecurityIdentification15> mmSecurityIdentification = new MMMessageAttribute<CorporateActionGeneralInformationSD16, SecurityIdentification15>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmObject();
 			isDerived = false;
@@ -210,7 +222,17 @@ public class CorporateActionGeneralInformationSD16 {
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD3.mmSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
+			complexType_lazy = () -> SecurityIdentification15.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification15 getValue(CorporateActionGeneralInformationSD16 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD16 obj, SecurityIdentification15 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -260,7 +282,7 @@ public class CorporateActionGeneralInformationSD16 {
 	 * CorporateActionUnallocatedDetailsSD1.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionGeneralInformationSD16, RestrictedFINXMax35Text> mmSafekeepingAccount = new MMMessageAttribute<CorporateActionGeneralInformationSD16, RestrictedFINXMax35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmObject();
 			isDerived = false;
@@ -275,9 +297,19 @@ public class CorporateActionGeneralInformationSD16 {
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
+
+		@Override
+		public RestrictedFINXMax35Text getValue(CorporateActionGeneralInformationSD16 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD16 obj, RestrictedFINXMax35Text value) {
+			obj.setSafekeepingAccount(value);
+		}
 	};
 	@XmlElement(name = "UallctdDtls")
-	protected List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD2> unallocatedDetails;
+	protected List<CorporateActionUnallocatedDetailsSD2> unallocatedDetails;
 	/**
 	 * 
 	 <p>
@@ -321,7 +353,7 @@ public class CorporateActionGeneralInformationSD16 {
 	 * CorporateActionGeneralInformationSD3.mmUnallocatedDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnallocatedDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionGeneralInformationSD16, List<CorporateActionUnallocatedDetailsSD2>> mmUnallocatedDetails = new MMMessageAssociationEnd<CorporateActionGeneralInformationSD16, List<CorporateActionUnallocatedDetailsSD2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD16.mmObject();
 			isDerived = false;
@@ -334,7 +366,17 @@ public class CorporateActionGeneralInformationSD16 {
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD3.mmUnallocatedDetails;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD2.mmObject();
+			type_lazy = () -> CorporateActionUnallocatedDetailsSD2.mmObject();
+		}
+
+		@Override
+		public List<CorporateActionUnallocatedDetailsSD2> getValue(CorporateActionGeneralInformationSD16 obj) {
+			return obj.getUnallocatedDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionGeneralInformationSD16 obj, List<CorporateActionUnallocatedDetailsSD2> value) {
+			obj.setUnallocatedDetails(value);
 		}
 	};
 
@@ -367,7 +409,7 @@ public class CorporateActionGeneralInformationSD16 {
 		return securityIdentification;
 	}
 
-	public CorporateActionGeneralInformationSD16 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
+	public CorporateActionGeneralInformationSD16 setSecurityIdentification(SecurityIdentification15 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}
@@ -385,7 +427,7 @@ public class CorporateActionGeneralInformationSD16 {
 		return unallocatedDetails == null ? unallocatedDetails = new ArrayList<>() : unallocatedDetails;
 	}
 
-	public CorporateActionGeneralInformationSD16 setUnallocatedDetails(List<com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD2> unallocatedDetails) {
+	public CorporateActionGeneralInformationSD16 setUnallocatedDetails(List<CorporateActionUnallocatedDetailsSD2> unallocatedDetails) {
 		this.unallocatedDetails = Objects.requireNonNull(unallocatedDetails);
 		return this;
 	}

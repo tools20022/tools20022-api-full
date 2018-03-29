@@ -26,6 +26,9 @@ import com.tools20022.repository.entity.DirectDebitMandate;
 import com.tools20022.repository.entity.Mandate;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Mandate3;
+import com.tools20022.repository.msg.MandateAmendmentReason1;
+import com.tools20022.repository.msg.OriginalMessageInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -125,7 +128,7 @@ public class MandateAmendment2 {
 	 * definition} = "Provides information on the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAmendment2, Optional<OriginalMessageInformation1>> mmOriginalMessageInformation = new MMMessageAssociationEnd<MandateAmendment2, Optional<OriginalMessageInformation1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment2.mmObject();
 			isDerived = false;
@@ -136,7 +139,17 @@ public class MandateAmendment2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
+			type_lazy = () -> OriginalMessageInformation1.mmObject();
+		}
+
+		@Override
+		public Optional<OriginalMessageInformation1> getValue(MandateAmendment2 obj) {
+			return obj.getOriginalMessageInformation();
+		}
+
+		@Override
+		public void setValue(MandateAmendment2 obj, Optional<OriginalMessageInformation1> value) {
+			obj.setOriginalMessageInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmdmntRsn", required = true)
@@ -173,7 +186,7 @@ public class MandateAmendment2 {
 	 * definition} = "Provides detailed information on the amendment reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmendmentReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAmendment2, MandateAmendmentReason1> mmAmendmentReason = new MMMessageAssociationEnd<MandateAmendment2, MandateAmendmentReason1>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment2.mmObject();
@@ -185,7 +198,17 @@ public class MandateAmendment2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.MandateAmendmentReason1.mmObject();
+			type_lazy = () -> MandateAmendmentReason1.mmObject();
+		}
+
+		@Override
+		public MandateAmendmentReason1 getValue(MandateAmendment2 obj) {
+			return obj.getAmendmentReason();
+		}
+
+		@Override
+		public void setValue(MandateAmendment2 obj, MandateAmendmentReason1 value) {
+			obj.setAmendmentReason(value);
 		}
 	};
 	@XmlElement(name = "Mndt", required = true)
@@ -220,7 +243,7 @@ public class MandateAmendment2 {
 	 * definition} = "Provides the amended mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAmendment2, Mandate3> mmMandate = new MMMessageAssociationEnd<MandateAmendment2, Mandate3>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment2.mmObject();
@@ -232,7 +255,17 @@ public class MandateAmendment2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Mandate3.mmObject();
+			type_lazy = () -> Mandate3.mmObject();
+		}
+
+		@Override
+		public Mandate3 getValue(MandateAmendment2 obj) {
+			return obj.getMandate();
+		}
+
+		@Override
+		public void setValue(MandateAmendment2 obj, Mandate3 value) {
+			obj.setMandate(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMndt", required = true)
@@ -268,7 +301,7 @@ public class MandateAmendment2 {
 	 * definition} = "Provides the original mandate data."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MandateAmendment2, OriginalMandate2Choice> mmOriginalMandate = new MMMessageAssociationEnd<MandateAmendment2, OriginalMandate2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Mandate.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment2.mmObject();
@@ -281,6 +314,16 @@ public class MandateAmendment2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OriginalMandate2Choice.mmObject();
+		}
+
+		@Override
+		public OriginalMandate2Choice getValue(MandateAmendment2 obj) {
+			return obj.getOriginalMandate();
+		}
+
+		@Override
+		public void setValue(MandateAmendment2 obj, OriginalMandate2Choice value) {
+			obj.setOriginalMandate(value);
 		}
 	};
 
@@ -305,7 +348,7 @@ public class MandateAmendment2 {
 		return originalMessageInformation == null ? Optional.empty() : Optional.of(originalMessageInformation);
 	}
 
-	public MandateAmendment2 setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+	public MandateAmendment2 setOriginalMessageInformation(OriginalMessageInformation1 originalMessageInformation) {
 		this.originalMessageInformation = originalMessageInformation;
 		return this;
 	}
@@ -314,7 +357,7 @@ public class MandateAmendment2 {
 		return amendmentReason;
 	}
 
-	public MandateAmendment2 setAmendmentReason(com.tools20022.repository.msg.MandateAmendmentReason1 amendmentReason) {
+	public MandateAmendment2 setAmendmentReason(MandateAmendmentReason1 amendmentReason) {
 		this.amendmentReason = Objects.requireNonNull(amendmentReason);
 		return this;
 	}
@@ -323,7 +366,7 @@ public class MandateAmendment2 {
 		return mandate;
 	}
 
-	public MandateAmendment2 setMandate(com.tools20022.repository.msg.Mandate3 mandate) {
+	public MandateAmendment2 setMandate(Mandate3 mandate) {
 		this.mandate = Objects.requireNonNull(mandate);
 		return this;
 	}

@@ -53,11 +53,15 @@ public class ConstraintCounterpartyIdentification1Rule {
 	 */
 	public static final MMConstraint<BalanceDetails2> forBalanceDetails2 = new MMConstraint<BalanceDetails2>() {
 		{
-			validator = ConstraintCounterpartyIdentification1Rule::checkBalanceDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification1Rule";
 			definition = "If at least one occurrence of BalanceType is present and is MULT, then no occurrence of CounterpartyIdentification is allowed.\nIf BalanceType is not present, then any occurrence of CounterpartyIdentification is optional.";
 			owner_lazy = () -> BalanceDetails2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BalanceDetails2 obj) throws Exception {
+			checkBalanceDetails2(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintCounterpartyIdentification1Rule {
 	 */
 	public static final MMConstraint<BalanceDetails3> forBalanceDetails3 = new MMConstraint<BalanceDetails3>() {
 		{
-			validator = ConstraintCounterpartyIdentification1Rule::checkBalanceDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification1Rule";
 			definition = "If at least one occurrence of BalanceType is present and is MULT, then no occurrence of CounterpartyIdentification is allowed.\nIf BalanceType is not present, then any occurrence of CounterpartyIdentification is optional.";
 			owner_lazy = () -> BalanceDetails3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BalanceDetails3 obj) throws Exception {
+			checkBalanceDetails3(obj);
 		}
 	};
 	/**
@@ -113,11 +121,15 @@ public class ConstraintCounterpartyIdentification1Rule {
 	 */
 	public static final MMConstraint<BalanceDetails4> forBalanceDetails4 = new MMConstraint<BalanceDetails4>() {
 		{
-			validator = ConstraintCounterpartyIdentification1Rule::checkBalanceDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification1Rule";
 			definition = "If at least one occurrence of BalanceType is present and is MULT, then no occurrence of CounterpartyIdentification is allowed.\nIf BalanceType is not present, then any occurrence of CounterpartyIdentification is optional.";
 			owner_lazy = () -> BalanceDetails4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(BalanceDetails4 obj) throws Exception {
+			checkBalanceDetails4(obj);
 		}
 	};
 	/**
@@ -154,13 +166,17 @@ public class ConstraintCounterpartyIdentification1Rule {
 	 */
 	public static final MMConstraint<CashBalance4> forCashBalance4 = new MMConstraint<CashBalance4>() {
 		{
-			validator = ConstraintCounterpartyIdentification1Rule::checkCashBalance4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification1Rule";
 			definition = "If at least one occurrence of CounterpartyType is present and is equal to Multilateral (MULT), then no occurrence of CounterpartyIdentification is allowed.\r\nIf CounterpartyType is not present, then any occurrence of CounterpartyIdentification is optional.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCounterpartyIdentification1Rule.forCashBalance9);
 			owner_lazy = () -> CashBalance4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CounterpartyIdentification[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CounterpartyType</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CounterpartyType</leftOperand><rightOperand>Multilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashBalance4 obj) throws Exception {
+			checkCashBalance4(obj);
 		}
 	};
 	/**
@@ -194,13 +210,17 @@ public class ConstraintCounterpartyIdentification1Rule {
 	 */
 	public static final MMConstraint<CashBalance9> forCashBalance9 = new MMConstraint<CashBalance9>() {
 		{
-			validator = ConstraintCounterpartyIdentification1Rule::checkCashBalance9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification1Rule";
 			definition = "If at least one occurrence of CounterpartyType is present and is equal to Multilateral (MULT), then no occurrence of CounterpartyIdentification is allowed.\r\nIf CounterpartyType is not present, then any occurrence of CounterpartyIdentification is optional.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCounterpartyIdentification1Rule.forCashBalance4;
 			owner_lazy = () -> CashBalance9.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CounterpartyIdentification[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CounterpartyType</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CounterpartyType</leftOperand><rightOperand>Multilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(CashBalance9 obj) throws Exception {
+			checkCashBalance9(obj);
 		}
 	};
 

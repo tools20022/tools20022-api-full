@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DataFormat1Choice;
 import com.tools20022.repository.codeset.ReportSortedType1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -99,7 +100,7 @@ public class SortCriteria1Choice {
 	 * "Pre-defined way of indicating how the information is broken down."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPredefined = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SortCriteria1Choice, ReportSortedType1Code> mmPredefined = new MMMessageAttribute<SortCriteria1Choice, ReportSortedType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SortCriteria1Choice.mmObject();
 			isDerived = false;
@@ -110,6 +111,16 @@ public class SortCriteria1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportSortedType1Code.mmObject();
+		}
+
+		@Override
+		public ReportSortedType1Code getValue(SortCriteria1Choice obj) {
+			return obj.getPredefined();
+		}
+
+		@Override
+		public void setValue(SortCriteria1Choice obj, ReportSortedType1Code value) {
+			obj.setPredefined(value);
 		}
 	};
 	@XmlElement(name = "UsrDfnd", required = true)
@@ -143,7 +154,7 @@ public class SortCriteria1Choice {
 	 * "User-defined way of indicating how the information is broken down."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserDefined = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SortCriteria1Choice, DataFormat1Choice> mmUserDefined = new MMMessageAttribute<SortCriteria1Choice, DataFormat1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SortCriteria1Choice.mmObject();
 			isDerived = false;
@@ -153,7 +164,17 @@ public class SortCriteria1Choice {
 			definition = "User-defined way of indicating how the information is broken down.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DataFormat1Choice.mmObject();
+			complexType_lazy = () -> DataFormat1Choice.mmObject();
+		}
+
+		@Override
+		public DataFormat1Choice getValue(SortCriteria1Choice obj) {
+			return obj.getUserDefined();
+		}
+
+		@Override
+		public void setValue(SortCriteria1Choice obj, DataFormat1Choice value) {
+			obj.setUserDefined(value);
 		}
 	};
 
@@ -183,7 +204,7 @@ public class SortCriteria1Choice {
 		return userDefined;
 	}
 
-	public SortCriteria1Choice setUserDefined(com.tools20022.repository.choice.DataFormat1Choice userDefined) {
+	public SortCriteria1Choice setUserDefined(DataFormat1Choice userDefined) {
 		this.userDefined = Objects.requireNonNull(userDefined);
 		return this;
 	}

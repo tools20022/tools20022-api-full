@@ -133,7 +133,7 @@ public class CashAccount24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount24, AccountIdentification4Choice> mmIdentification = new MMMessageAssociationEnd<CashAccount24, AccountIdentification4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
@@ -146,6 +146,16 @@ public class CashAccount24 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public AccountIdentification4Choice getValue(CashAccount24 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount24 obj, AccountIdentification4Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -181,7 +191,7 @@ public class CashAccount24 {
 	 * definition} = "Specifies the nature, or use of the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashAccount24, Optional<CashAccountType2Choice>> mmType = new MMMessageAssociationEnd<CashAccount24, Optional<CashAccountType2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
@@ -194,6 +204,16 @@ public class CashAccount24 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CashAccountType2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccountType2Choice> getValue(CashAccount24 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CashAccount24 obj, Optional<CashAccountType2Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -232,7 +252,7 @@ public class CashAccount24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount24, Optional<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<CashAccount24, Optional<ActiveOrHistoricCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
@@ -244,6 +264,16 @@ public class CashAccount24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveOrHistoricCurrencyCode> getValue(CashAccount24 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CashAccount24 obj, Optional<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm")
@@ -281,7 +311,7 @@ public class CashAccount24 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount24, Optional<Max70Text>> mmName = new MMMessageAttribute<CashAccount24, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
@@ -293,6 +323,16 @@ public class CashAccount24 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(CashAccount24 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(CashAccount24 obj, Optional<Max70Text> value) {
+			obj.setName(value.orElse(null));
 		}
 	};
 

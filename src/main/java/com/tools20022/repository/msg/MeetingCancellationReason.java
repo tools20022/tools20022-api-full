@@ -110,7 +110,7 @@ public class MeetingCancellationReason {
 	 * "Specifies the reason for cancelling a meeting in coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingCancellationReason, MeetingCancellationReason1Code> mmCode = new MMMessageAttribute<MeetingCancellationReason, MeetingCancellationReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatusReason.mmMeetingCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingCancellationReason.mmObject();
@@ -122,6 +122,16 @@ public class MeetingCancellationReason {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingCancellationReason1Code.mmObject();
+		}
+
+		@Override
+		public MeetingCancellationReason1Code getValue(MeetingCancellationReason obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationReason obj, MeetingCancellationReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "CxlRsn")
@@ -159,7 +169,7 @@ public class MeetingCancellationReason {
 	 * "Specifies the reason for cancelling a meeting in free format form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MeetingCancellationReason, Optional<Max140Text>> mmCancellationReason = new MMMessageAttribute<MeetingCancellationReason, Optional<Max140Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingCancellationReason.mmObject();
@@ -171,6 +181,16 @@ public class MeetingCancellationReason {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(MeetingCancellationReason obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(MeetingCancellationReason obj, Optional<Max140Text> value) {
+			obj.setCancellationReason(value.orElse(null));
 		}
 	};
 

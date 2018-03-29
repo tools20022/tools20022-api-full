@@ -56,11 +56,15 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstructionInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is CRDB or MLDB or PUDB or RGDB, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different than Debtor.";
 			owner_lazy = () -> PaymentInstructionInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation1 obj) throws Exception {
+			checkPaymentInstructionInformation1(obj);
 		}
 	};
 	/**
@@ -86,11 +90,15 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation3> forPaymentInstructionInformation3 = new MMConstraint<PaymentInstructionInformation3>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstructionInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is CRDB, MLDB, PUDB or RGDB, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from Debtor.";
 			owner_lazy = () -> PaymentInstructionInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation3 obj) throws Exception {
+			checkPaymentInstructionInformation3(obj);
 		}
 	};
 	/**
@@ -116,11 +124,15 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction6> forPaymentInstruction6 = new MMConstraint<PaymentInstruction6>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is CRDB, MLDB, PUDB or RGDB, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from Debtor.";
 			owner_lazy = () -> PaymentInstruction6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction6 obj) throws Exception {
+			checkPaymentInstruction6(obj);
 		}
 	};
 	/**
@@ -155,12 +167,16 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is CRDB, MLDB, PUDB or RGDB, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from Debtor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction16);
 			owner_lazy = () -> PaymentInstruction9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction9 obj) throws Exception {
+			checkPaymentInstruction9(obj);
 		}
 	};
 	/**
@@ -186,11 +202,15 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction5> forPaymentInstruction5 = new MMConstraint<PaymentInstruction5>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransaction/ChequeInstruction/DeliveryMethod/Code is CRDB or MLDB or PUDB or RGDB, then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than Debtor.";
 			owner_lazy = () -> PaymentInstruction5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction5 obj) throws Exception {
+			checkPaymentInstruction5(obj);
 		}
 	};
 	/**
@@ -216,11 +236,15 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction8> forPaymentInstruction8 = new MMConstraint<PaymentInstruction8>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransaction/ChequeInstruction/DeliveryMethod/Code is CRDB or MLDB or PUDB or RGDB, then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than Debtor.";
 			owner_lazy = () -> PaymentInstruction8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction8 obj) throws Exception {
+			checkPaymentInstruction8(obj);
 		}
 	};
 	/**
@@ -255,12 +279,16 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction11> forPaymentInstruction11 = new MMConstraint<PaymentInstruction11>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransaction/ChequeInstruction/DeliveryMethod/Code is CRDB or MLDB or PUDB or RGDB, then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than Debtor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction17);
 			owner_lazy = () -> PaymentInstruction11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction11 obj) throws Exception {
+			checkPaymentInstruction11(obj);
 		}
 	};
 	/**
@@ -301,13 +329,17 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction16> forPaymentInstruction16 = new MMConstraint<PaymentInstruction16>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is CRDB, MLDB, PUDB or RGDB, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from Debtor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction20);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction9;
 			owner_lazy = () -> PaymentInstruction16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction16 obj) throws Exception {
+			checkPaymentInstruction16(obj);
 		}
 	};
 	/**
@@ -348,13 +380,17 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction17> forPaymentInstruction17 = new MMConstraint<PaymentInstruction17>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransaction/ChequeInstruction/DeliveryMethod/Code is CRDB or MLDB or PUDB or RGDB, then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than Debtor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction11;
 			owner_lazy = () -> PaymentInstruction17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction17 obj) throws Exception {
+			checkPaymentInstruction17(obj);
 		}
 	};
 	/**
@@ -395,13 +431,17 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction19> forPaymentInstruction19 = new MMConstraint<PaymentInstruction19>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransaction/ChequeInstruction/DeliveryMethod/Code is CRDB (CourierToDebtor), MLDB (MailToDebtor), PUDB (PickUpByDebtor) or RGDB (RegisteredMailToDebtor), then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than Debtor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction23);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction17;
 			owner_lazy = () -> PaymentInstruction19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction19 obj) throws Exception {
+			checkPaymentInstruction19(obj);
 		}
 	};
 	/**
@@ -446,7 +486,6 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction20> forPaymentInstruction20 = new MMConstraint<PaymentInstruction20>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is CRDB (CourierToDebtor), MLDB (MailToDebtor), PUDB (PickUpByDebtor) or RGDB (RegisteredMailToDebtor), then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from Debtor.";
@@ -454,6 +493,11 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 					com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction16;
 			owner_lazy = () -> PaymentInstruction20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction20 obj) throws Exception {
+			checkPaymentInstruction20(obj);
 		}
 	};
 	/**
@@ -485,12 +529,16 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction23> forPaymentInstruction23 = new MMConstraint<PaymentInstruction23>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransaction/ChequeInstruction/DeliveryMethod/Code is CRDB (CourierToDebtor), MLDB (MailToDebtor), PUDB (PickUpByDebtor) or RGDB (RegisteredMailToDebtor), then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than Debtor.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction19;
 			owner_lazy = () -> PaymentInstruction23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction23 obj) throws Exception {
+			checkPaymentInstruction23(obj);
 		}
 	};
 	/**
@@ -522,12 +570,16 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is CRDB (CourierToDebtor), MLDB (MailToDebtor), PUDB (PickUpByDebtor) or RGDB (RegisteredMailToDebtor), then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from Debtor.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction22 obj) throws Exception {
+			checkPaymentInstruction22(obj);
 		}
 	};
 	/**
@@ -559,12 +611,16 @@ public class ConstraintChequeInstructionDeliverToDebtorGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction24> forPaymentInstruction24 = new MMConstraint<PaymentInstruction24>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToDebtorGuideline::checkPaymentInstruction24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToDebtorGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and if CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is CRDB (CourierToDebtor), MLDB (MailToDebtor), PUDB (PickUpByDebtor) or RGDB (RegisteredMailToDebtor), then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from Debtor.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToDebtorGuideline.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction24 obj) throws Exception {
+			checkPaymentInstruction24(obj);
 		}
 	};
 

@@ -118,7 +118,7 @@ public class ProprietaryStatusJustification1 {
 	 * ProprietaryStatusJustification.mmProprietaryStatusReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietaryStatusReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryStatusJustification1, Max4AlphaNumericText> mmProprietaryStatusReason = new MMMessageAttribute<ProprietaryStatusJustification1, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusJustification1.mmObject();
@@ -131,6 +131,16 @@ public class ProprietaryStatusJustification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(ProprietaryStatusJustification1 obj) {
+			return obj.getProprietaryStatusReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryStatusJustification1 obj, Max4AlphaNumericText value) {
+			obj.setProprietaryStatusReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -174,7 +184,7 @@ public class ProprietaryStatusJustification1 {
 	 * ProprietaryStatusJustification.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryStatusJustification1, Max256Text> mmReason = new MMMessageAttribute<ProprietaryStatusJustification1, Max256Text>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryStatusJustification1.mmObject();
@@ -187,6 +197,16 @@ public class ProprietaryStatusJustification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(ProprietaryStatusJustification1 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ProprietaryStatusJustification1 obj, Max256Text value) {
+			obj.setReason(value);
 		}
 	};
 

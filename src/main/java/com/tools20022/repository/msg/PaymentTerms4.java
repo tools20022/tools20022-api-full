@@ -121,7 +121,7 @@ public class PaymentTerms4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTerms = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTerms4, PaymentCodeOrOther1Choice> mmPaymentTerms = new MMMessageAssociationEnd<PaymentTerms4, PaymentCodeOrOther1Choice>() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms4.mmObject();
@@ -135,6 +135,16 @@ public class PaymentTerms4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaymentCodeOrOther1Choice.mmObject();
+		}
+
+		@Override
+		public PaymentCodeOrOther1Choice getValue(PaymentTerms4 obj) {
+			return obj.getPaymentTerms();
+		}
+
+		@Override
+		public void setValue(PaymentTerms4 obj, PaymentCodeOrOther1Choice value) {
+			obj.setPaymentTerms(value);
 		}
 	};
 	@XmlElement(name = "AmtOrPctg", required = true)
@@ -173,7 +183,7 @@ public class PaymentTerms4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountOrPercentage = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTerms4, AmountOrPercentage2Choice> mmAmountOrPercentage = new MMMessageAssociationEnd<PaymentTerms4, AmountOrPercentage2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms4.mmObject();
 			isDerived = false;
@@ -186,6 +196,16 @@ public class PaymentTerms4 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountOrPercentage2Choice.mmObject();
+		}
+
+		@Override
+		public AmountOrPercentage2Choice getValue(PaymentTerms4 obj) {
+			return obj.getAmountOrPercentage();
+		}
+
+		@Override
+		public void setValue(PaymentTerms4 obj, AmountOrPercentage2Choice value) {
+			obj.setAmountOrPercentage(value);
 		}
 	};
 

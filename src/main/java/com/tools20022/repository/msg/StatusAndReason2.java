@@ -103,7 +103,7 @@ public class StatusAndReason2 {
 	 * definition} = "Status and reason for the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusAndReason2, Status2Choice> mmStatusAndReason = new MMMessageAssociationEnd<StatusAndReason2, Status2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason2.mmObject();
@@ -117,6 +117,16 @@ public class StatusAndReason2 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Status2Choice.mmObject();
+		}
+
+		@Override
+		public Status2Choice getValue(StatusAndReason2 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(StatusAndReason2 obj, Status2Choice value) {
+			obj.setStatusAndReason(value);
 		}
 	};
 

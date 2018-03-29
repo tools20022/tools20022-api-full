@@ -106,7 +106,7 @@ public class AmountAndRateStatus1 {
 	 * definition} = "Value expressed as an amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndRateStatus1, ActiveCurrencyAnd13DecimalAmount> mmAmount = new MMMessageAttribute<AmountAndRateStatus1, ActiveCurrencyAnd13DecimalAmount>() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndRateStatus1.mmObject();
@@ -118,6 +118,16 @@ public class AmountAndRateStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAnd13DecimalAmount getValue(AmountAndRateStatus1 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndRateStatus1 obj, ActiveCurrencyAnd13DecimalAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "RateSts", required = true)
@@ -155,7 +165,7 @@ public class AmountAndRateStatus1 {
 	 * definition} = "Value expressed as a rate status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRateStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndRateStatus1, RateStatus1Code> mmRateStatus = new MMMessageAttribute<AmountAndRateStatus1, RateStatus1Code>() {
 		{
 			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndRateStatus1.mmObject();
@@ -167,6 +177,16 @@ public class AmountAndRateStatus1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateStatus1Code.mmObject();
+		}
+
+		@Override
+		public RateStatus1Code getValue(AmountAndRateStatus1 obj) {
+			return obj.getRateStatus();
+		}
+
+		@Override
+		public void setValue(AmountAndRateStatus1 obj, RateStatus1Code value) {
+			obj.setRateStatus(value);
 		}
 	};
 

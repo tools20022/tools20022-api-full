@@ -112,7 +112,7 @@ public class OrganisationIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrganisationIdentification5Choice, LEIIdentifier> mmLEI = new MMMessageAttribute<OrganisationIdentification5Choice, LEIIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentification5Choice.mmObject();
@@ -124,6 +124,16 @@ public class OrganisationIdentification5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
+		}
+
+		@Override
+		public LEIIdentifier getValue(OrganisationIdentification5Choice obj) {
+			return obj.getLEI();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification5Choice obj, LEIIdentifier value) {
+			obj.setLEI(value);
 		}
 	};
 	@XmlElement(name = "Othr", required = true)
@@ -162,7 +172,7 @@ public class OrganisationIdentification5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOther = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OrganisationIdentification5Choice, OrganisationIdentification27> mmOther = new MMMessageAssociationEnd<OrganisationIdentification5Choice, OrganisationIdentification27>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.OrganisationIdentification5Choice.mmObject();
@@ -175,6 +185,16 @@ public class OrganisationIdentification5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification27.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification27 getValue(OrganisationIdentification5Choice obj) {
+			return obj.getOther();
+		}
+
+		@Override
+		public void setValue(OrganisationIdentification5Choice obj, OrganisationIdentification27 value) {
+			obj.setOther(value);
 		}
 	};
 

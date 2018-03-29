@@ -108,7 +108,7 @@ public class LocationFormat1Choice {
 	 * definition} = "Specifies physical address of the meeting."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LocationFormat1Choice, PostalAddress1> mmAddress = new MMMessageAssociationEnd<LocationFormat1Choice, PostalAddress1>() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.LocationFormat1Choice.mmObject();
@@ -121,6 +121,16 @@ public class LocationFormat1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PostalAddress1.mmObject();
+		}
+
+		@Override
+		public PostalAddress1 getValue(LocationFormat1Choice obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(LocationFormat1Choice obj, PostalAddress1 value) {
+			obj.setAddress(value);
 		}
 	};
 	@XmlElement(name = "LctnCd", required = true)
@@ -153,7 +163,7 @@ public class LocationFormat1Choice {
 	 * definition} = "Indicates that the location is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLocationCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LocationFormat1Choice, PlaceType1Code> mmLocationCode = new MMMessageAttribute<LocationFormat1Choice, PlaceType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.LocationFormat1Choice.mmObject();
 			isDerived = false;
@@ -164,6 +174,16 @@ public class LocationFormat1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlaceType1Code.mmObject();
+		}
+
+		@Override
+		public PlaceType1Code getValue(LocationFormat1Choice obj) {
+			return obj.getLocationCode();
+		}
+
+		@Override
+		public void setValue(LocationFormat1Choice obj, PlaceType1Code value) {
+			obj.setLocationCode(value);
 		}
 	};
 

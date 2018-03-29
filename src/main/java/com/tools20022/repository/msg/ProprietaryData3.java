@@ -114,7 +114,7 @@ public class ProprietaryData3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAny = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryData3, SkipProcessing> mmAny = new MMMessageAttribute<ProprietaryData3, SkipProcessing>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryData3.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class ProprietaryData3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SkipProcessing.mmObject();
+		}
+
+		@Override
+		public SkipProcessing getValue(ProprietaryData3 obj) {
+			return obj.getAny();
+		}
+
+		@Override
+		public void setValue(ProprietaryData3 obj, SkipProcessing value) {
+			obj.setAny(value);
 		}
 	};
 

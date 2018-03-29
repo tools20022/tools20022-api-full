@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ExchangeRateInformation1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -122,7 +123,7 @@ public class CurrencyReference3 {
 	 * CurrencyReference2.mmTargetCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyReference3, ActiveCurrencyCode> mmTargetCurrency = new MMMessageAttribute<CurrencyReference3, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyReference3.mmObject();
@@ -135,6 +136,16 @@ public class CurrencyReference3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CurrencyReference3 obj) {
+			return obj.getTargetCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyReference3 obj, ActiveCurrencyCode value) {
+			obj.setTargetCurrency(value);
 		}
 	};
 	@XmlElement(name = "SrcCcy", required = true)
@@ -178,7 +189,7 @@ public class CurrencyReference3 {
 	 * CurrencyReference2.mmSourceCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyReference3, ActiveCurrencyCode> mmSourceCurrency = new MMMessageAttribute<CurrencyReference3, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyReference3.mmObject();
@@ -192,9 +203,19 @@ public class CurrencyReference3 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyCode getValue(CurrencyReference3 obj) {
+			return obj.getSourceCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyReference3 obj, ActiveCurrencyCode value) {
+			obj.setSourceCurrency(value);
+		}
 	};
 	@XmlElement(name = "XchgRateInf")
-	protected List<com.tools20022.repository.msg.ExchangeRateInformation1> exchangeRateInformation;
+	protected List<ExchangeRateInformation1> exchangeRateInformation;
 	/**
 	 * 
 	 <p>
@@ -235,7 +256,7 @@ public class CurrencyReference3 {
 	 * CurrencyReference2.mmExchangeRateInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRateInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyReference3, List<ExchangeRateInformation1>> mmExchangeRateInformation = new MMMessageAttribute<CurrencyReference3, List<ExchangeRateInformation1>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyReference3.mmObject();
@@ -246,7 +267,17 @@ public class CurrencyReference3 {
 			definition = "The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
 			previousVersion_lazy = () -> CurrencyReference2.mmExchangeRateInformation;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.ExchangeRateInformation1.mmObject();
+			complexType_lazy = () -> ExchangeRateInformation1.mmObject();
+		}
+
+		@Override
+		public List<ExchangeRateInformation1> getValue(CurrencyReference3 obj) {
+			return obj.getExchangeRateInformation();
+		}
+
+		@Override
+		public void setValue(CurrencyReference3 obj, List<ExchangeRateInformation1> value) {
+			obj.setExchangeRateInformation(value);
 		}
 	};
 
@@ -288,7 +319,7 @@ public class CurrencyReference3 {
 		return exchangeRateInformation == null ? exchangeRateInformation = new ArrayList<>() : exchangeRateInformation;
 	}
 
-	public CurrencyReference3 setExchangeRateInformation(List<com.tools20022.repository.msg.ExchangeRateInformation1> exchangeRateInformation) {
+	public CurrencyReference3 setExchangeRateInformation(List<ExchangeRateInformation1> exchangeRateInformation) {
 		this.exchangeRateInformation = Objects.requireNonNull(exchangeRateInformation);
 		return this;
 	}

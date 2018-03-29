@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.AdditionalReference2;
 import com.tools20022.repository.msg.TransferIn1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -134,7 +133,7 @@ public class ReversalOfTransferInConfirmation {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReversalOfTransferInConfirmation, AdditionalReference2> mmPreviousReference = new MMMessageBuildingBlock<ReversalOfTransferInConfirmation, AdditionalReference2>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,12 +144,14 @@ public class ReversalOfTransferInConfirmation {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReversalOfTransferInConfirmation.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference2 getValue(ReversalOfTransferInConfirmation obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(ReversalOfTransferInConfirmation obj, AdditionalReference2 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -178,7 +179,7 @@ public class ReversalOfTransferInConfirmation {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReversalOfTransferInConfirmation, Optional<AdditionalReference2>> mmPoolReference = new MMMessageBuildingBlock<ReversalOfTransferInConfirmation, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,12 +190,14 @@ public class ReversalOfTransferInConfirmation {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReversalOfTransferInConfirmation.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(ReversalOfTransferInConfirmation obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(ReversalOfTransferInConfirmation obj, Optional<AdditionalReference2> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -223,7 +226,7 @@ public class ReversalOfTransferInConfirmation {
 	 * "Reference to a linked message that was previously received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRelatedReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReversalOfTransferInConfirmation, Optional<AdditionalReference2>> mmRelatedReference = new MMMessageBuildingBlock<ReversalOfTransferInConfirmation, Optional<AdditionalReference2>>() {
 		{
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +237,14 @@ public class ReversalOfTransferInConfirmation {
 			complexType_lazy = () -> AdditionalReference2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReversalOfTransferInConfirmation.class.getMethod("getRelatedReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference2> getValue(ReversalOfTransferInConfirmation obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(ReversalOfTransferInConfirmation obj, Optional<AdditionalReference2> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrfInConfToBeRvsd")
@@ -266,7 +271,7 @@ public class ReversalOfTransferInConfirmation {
 	 * definition} = "Copy of the transfer in confirmation to reverse."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferInConfirmationToBeReversed = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ReversalOfTransferInConfirmation, Optional<TransferIn1>> mmTransferInConfirmationToBeReversed = new MMMessageBuildingBlock<ReversalOfTransferInConfirmation, Optional<TransferIn1>>() {
 		{
 			xmlTag = "TrfInConfToBeRvsd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,12 +282,14 @@ public class ReversalOfTransferInConfirmation {
 			complexType_lazy = () -> TransferIn1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ReversalOfTransferInConfirmation.class.getMethod("getTransferInConfirmationToBeReversed", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransferIn1> getValue(ReversalOfTransferInConfirmation obj) {
+			return obj.getTransferInConfirmationToBeReversed();
+		}
+
+		@Override
+		public void setValue(ReversalOfTransferInConfirmation obj, Optional<TransferIn1> value) {
+			obj.setTransferInConfirmationToBeReversed(value.orElse(null));
 		}
 	};
 

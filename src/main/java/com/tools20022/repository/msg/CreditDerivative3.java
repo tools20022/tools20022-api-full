@@ -127,7 +127,7 @@ public class CreditDerivative3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSeniority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDerivative3, Optional<DebtInstrumentSeniorityType2Code>> mmSeniority = new MMMessageAttribute<CreditDerivative3, Optional<DebtInstrumentSeniorityType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDerivative3.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class CreditDerivative3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DebtInstrumentSeniorityType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DebtInstrumentSeniorityType2Code> getValue(CreditDerivative3 obj) {
+			return obj.getSeniority();
+		}
+
+		@Override
+		public void setValue(CreditDerivative3 obj, Optional<DebtInstrumentSeniorityType2Code> value) {
+			obj.setSeniority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RefPty")
@@ -174,7 +184,7 @@ public class CreditDerivative3 {
 	 * definition} = "Designation of the underlying reference obligation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReferenceParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditDerivative3, Optional<DerivativePartyIdentification1Choice>> mmReferenceParty = new MMMessageAssociationEnd<CreditDerivative3, Optional<DerivativePartyIdentification1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmAssetPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDerivative3.mmObject();
@@ -187,6 +197,16 @@ public class CreditDerivative3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DerivativePartyIdentification1Choice> getValue(CreditDerivative3 obj) {
+			return obj.getReferenceParty();
+		}
+
+		@Override
+		public void setValue(CreditDerivative3 obj, Optional<DerivativePartyIdentification1Choice> value) {
+			obj.setReferenceParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtFrqcy")
@@ -224,7 +244,7 @@ public class CreditDerivative3 {
 	 * definition} = "Frequency of payment of the interest rate or coupon."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentFrequency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDerivative3, Optional<Frequency8Code>> mmPaymentFrequency = new MMMessageAttribute<CreditDerivative3, Optional<Frequency8Code>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmPaymentFrequency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDerivative3.mmObject();
@@ -236,6 +256,16 @@ public class CreditDerivative3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency8Code.mmObject();
+		}
+
+		@Override
+		public Optional<Frequency8Code> getValue(CreditDerivative3 obj) {
+			return obj.getPaymentFrequency();
+		}
+
+		@Override
+		public void setValue(CreditDerivative3 obj, Optional<Frequency8Code> value) {
+			obj.setPaymentFrequency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DayCntBsis")
@@ -272,7 +302,7 @@ public class CreditDerivative3 {
 	 * definition} = "Calculation basis of the interest rate, such as Act/360."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDayCountBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditDerivative3, Optional<InterestComputationMethodFormat6Choice>> mmDayCountBasis = new MMMessageAssociationEnd<CreditDerivative3, Optional<InterestComputationMethodFormat6Choice>>() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmDayCountBasis;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDerivative3.mmObject();
@@ -285,6 +315,16 @@ public class CreditDerivative3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> InterestComputationMethodFormat6Choice.mmObject();
+		}
+
+		@Override
+		public Optional<InterestComputationMethodFormat6Choice> getValue(CreditDerivative3 obj) {
+			return obj.getDayCountBasis();
+		}
+
+		@Override
+		public void setValue(CreditDerivative3 obj, Optional<InterestComputationMethodFormat6Choice> value) {
+			obj.setDayCountBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Srs")
@@ -318,7 +358,7 @@ public class CreditDerivative3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSeries = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDerivative3, Optional<Number>> mmSeries = new MMMessageAttribute<CreditDerivative3, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDerivative3.mmObject();
 			isDerived = false;
@@ -329,6 +369,16 @@ public class CreditDerivative3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CreditDerivative3 obj) {
+			return obj.getSeries();
+		}
+
+		@Override
+		public void setValue(CreditDerivative3 obj, Optional<Number> value) {
+			obj.setSeries(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Vrsn")
@@ -362,7 +412,7 @@ public class CreditDerivative3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDerivative3, Optional<Number>> mmVersion = new MMMessageAttribute<CreditDerivative3, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDerivative3.mmObject();
 			isDerived = false;
@@ -373,6 +423,16 @@ public class CreditDerivative3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CreditDerivative3 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(CreditDerivative3 obj, Optional<Number> value) {
+			obj.setVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IndxFctr")
@@ -412,7 +472,7 @@ public class CreditDerivative3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndexFactor = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CreditDerivative3, Optional<PercentageRate>> mmIndexFactor = new MMMessageAttribute<CreditDerivative3, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIndexFactor;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDerivative3.mmObject();
@@ -424,6 +484,16 @@ public class CreditDerivative3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(CreditDerivative3 obj) {
+			return obj.getIndexFactor();
+		}
+
+		@Override
+		public void setValue(CreditDerivative3 obj, Optional<PercentageRate> value) {
+			obj.setIndexFactor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Trch")
@@ -461,7 +531,7 @@ public class CreditDerivative3 {
 	 * "Indicates whether the derivative contract is tranched or not."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTranche = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CreditDerivative3, Optional<TrancheIndicator2Choice>> mmTranche = new MMMessageAssociationEnd<CreditDerivative3, Optional<TrancheIndicator2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmTranche;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CreditDerivative3.mmObject();
@@ -474,6 +544,16 @@ public class CreditDerivative3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> TrancheIndicator2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TrancheIndicator2Choice> getValue(CreditDerivative3 obj) {
+			return obj.getTranche();
+		}
+
+		@Override
+		public void setValue(CreditDerivative3 obj, Optional<TrancheIndicator2Choice> value) {
+			obj.setTranche(value.orElse(null));
 		}
 	};
 

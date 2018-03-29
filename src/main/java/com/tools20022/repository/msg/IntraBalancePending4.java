@@ -32,6 +32,7 @@ import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -186,7 +187,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmStatusAndReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePending4, Optional<PendingStatusAndReason2>> mmStatusAndReason = new MMMessageAssociationEnd<IntraBalancePending4, Optional<PendingStatusAndReason2>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
@@ -200,7 +201,17 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PendingStatusAndReason2.mmObject();
+			type_lazy = () -> PendingStatusAndReason2.mmObject();
+		}
+
+		@Override
+		public Optional<PendingStatusAndReason2> getValue(IntraBalancePending4 obj) {
+			return obj.getStatusAndReason();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<PendingStatusAndReason2> value) {
+			obj.setStatusAndReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctOwnrTxId", required = true)
@@ -247,7 +258,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmAccountOwnerTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Max35Text> mmAccountOwnerTransactionIdentification = new MMMessageAttribute<IntraBalancePending4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountOwnerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
@@ -261,6 +272,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IntraBalancePending4 obj) {
+			return obj.getAccountOwnerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Max35Text value) {
+			obj.setAccountOwnerTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcrTxId")
@@ -307,7 +328,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmAccountServicerTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>> mmAccountServicerTransactionIdentification = new MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
@@ -321,6 +342,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalancePending4 obj) {
+			return obj.getAccountServicerTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<Max35Text> value) {
+			obj.setAccountServicerTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktInfrstrctrTxId")
@@ -362,7 +393,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmMarketInfrastructureTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>> mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -375,6 +406,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalancePending4 obj) {
+			return obj.getMarketInfrastructureTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<Max35Text> value) {
+			obj.setMarketInfrastructureTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcrTxId")
@@ -412,7 +453,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmProcessorTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessorTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>> mmProcessorTransactionIdentification = new MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -424,6 +465,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalancePending4 obj) {
+			return obj.getProcessorTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<Max35Text> value) {
+			obj.setProcessorTransactionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolId")
@@ -463,7 +514,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmPoolIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>> mmPoolIdentification = new MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -476,6 +527,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalancePending4 obj) {
+			return obj.getPoolIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<Max35Text> value) {
+			obj.setPoolIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnEvtId")
@@ -517,7 +578,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmCorporateActionEventIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCorporateActionEventIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>> mmCorporateActionEventIdentification = new MMMessageAttribute<IntraBalancePending4, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -530,6 +591,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IntraBalancePending4 obj) {
+			return obj.getCorporateActionEventIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<Max35Text> value) {
+			obj.setCorporateActionEventIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BalFr", required = true)
@@ -569,7 +640,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmBalanceFrom}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePending4, CashSubBalanceTypeAndQuantityBreakdown2> mmBalanceFrom = new MMMessageAssociationEnd<IntraBalancePending4, CashSubBalanceTypeAndQuantityBreakdown2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -582,7 +653,17 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+		}
+
+		@Override
+		public CashSubBalanceTypeAndQuantityBreakdown2 getValue(IntraBalancePending4 obj) {
+			return obj.getBalanceFrom();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, CashSubBalanceTypeAndQuantityBreakdown2 value) {
+			obj.setBalanceFrom(value);
 		}
 	};
 	@XmlElement(name = "BalTo", required = true)
@@ -622,7 +703,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmBalanceTo}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePending4, CashSubBalanceTypeAndQuantityBreakdown2> mmBalanceTo = new MMMessageAssociationEnd<IntraBalancePending4, CashSubBalanceTypeAndQuantityBreakdown2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -635,7 +716,17 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+			type_lazy = () -> CashSubBalanceTypeAndQuantityBreakdown2.mmObject();
+		}
+
+		@Override
+		public CashSubBalanceTypeAndQuantityBreakdown2 getValue(IntraBalancePending4 obj) {
+			return obj.getBalanceTo();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, CashSubBalanceTypeAndQuantityBreakdown2 value) {
+			obj.setBalanceTo(value);
 		}
 	};
 	@XmlElement(name = "SttlmAmt", required = true)
@@ -675,7 +766,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Amount2Choice> mmSettlementAmount = new MMMessageAttribute<IntraBalancePending4, Amount2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -687,6 +778,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
+		}
+
+		@Override
+		public Amount2Choice getValue(IntraBalancePending4 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Amount2Choice value) {
+			obj.setSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "IntnddSttlmDt", required = true)
@@ -728,7 +829,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmIntendedSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, DateAndDateTimeChoice> mmIntendedSettlementDate = new MMMessageAttribute<IntraBalancePending4, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -741,6 +842,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(IntraBalancePending4 obj) {
+			return obj.getIntendedSettlementDate();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, DateAndDateTimeChoice value) {
+			obj.setIntendedSettlementDate(value);
 		}
 	};
 	@XmlElement(name = "StsDt")
@@ -780,7 +891,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmStatusDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Optional<ISODateTime>> mmStatusDate = new MMMessageAttribute<IntraBalancePending4, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -793,6 +904,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(IntraBalancePending4 obj) {
+			return obj.getStatusDate();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<ISODateTime> value) {
+			obj.setStatusDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshSubBalId")
@@ -829,7 +950,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmCashSubBalanceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashSubBalanceIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePending4, Optional<GenericIdentification37>> mmCashSubBalanceIdentification = new MMMessageAssociationEnd<IntraBalancePending4, Optional<GenericIdentification37>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -841,11 +962,21 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
+			type_lazy = () -> GenericIdentification37.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification37> getValue(IntraBalancePending4 obj) {
+			return obj.getCashSubBalanceIdentification();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<GenericIdentification37> value) {
+			obj.setCashSubBalanceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Lnkgs")
-	protected List<com.tools20022.repository.msg.Linkages51> linkages;
+	protected List<Linkages51> linkages;
 	/**
 	 * 
 	 <p>
@@ -880,7 +1011,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmLinkages}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLinkages = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, List<Linkages51>> mmLinkages = new MMMessageAttribute<IntraBalancePending4, List<Linkages51>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -890,7 +1021,17 @@ public class IntraBalancePending4 {
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
 			previousVersion_lazy = () -> IntraBalancePending2.mmLinkages;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Linkages51.mmObject();
+			complexType_lazy = () -> Linkages51.mmObject();
+		}
+
+		@Override
+		public List<Linkages51> getValue(IntraBalancePending4 obj) {
+			return obj.getLinkages();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, List<Linkages51> value) {
+			obj.setLinkages(value);
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -933,7 +1074,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmPriority}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Optional<PriorityNumeric4Choice>> mmPriority = new MMMessageAttribute<IntraBalancePending4, Optional<PriorityNumeric4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -946,6 +1087,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityNumeric4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PriorityNumeric4Choice> getValue(IntraBalancePending4 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<PriorityNumeric4Choice> value) {
+			obj.setPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
@@ -983,7 +1134,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmMessageOriginator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePending4, Optional<SystemPartyIdentification6>> mmMessageOriginator = new MMMessageAssociationEnd<IntraBalancePending4, Optional<SystemPartyIdentification6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -995,7 +1146,17 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
+			type_lazy = () -> SystemPartyIdentification6.mmObject();
+		}
+
+		@Override
+		public Optional<SystemPartyIdentification6> getValue(IntraBalancePending4 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<SystemPartyIdentification6> value) {
+			obj.setMessageOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -1035,7 +1196,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, ISODateTime> mmCreationDateTime = new MMMessageAttribute<IntraBalancePending4, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -1048,6 +1209,16 @@ public class IntraBalancePending4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(IntraBalancePending4 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "InstrPrcgAddtlDtls")
@@ -1089,7 +1260,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmInstructionProcessingAdditionalDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionProcessingAdditionalDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalancePending4, Optional<Max350Text>> mmInstructionProcessingAdditionalDetails = new MMMessageAttribute<IntraBalancePending4, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -1103,9 +1274,19 @@ public class IntraBalancePending4 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max350Text> getValue(IntraBalancePending4 obj) {
+			return obj.getInstructionProcessingAdditionalDetails();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, Optional<Max350Text> value) {
+			obj.setInstructionProcessingAdditionalDetails(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -1139,7 +1320,7 @@ public class IntraBalancePending4 {
 	 * IntraBalancePending2.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalancePending4, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<IntraBalancePending4, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalancePending4.mmObject();
 			isDerived = false;
@@ -1150,7 +1331,17 @@ public class IntraBalancePending4 {
 			previousVersion_lazy = () -> IntraBalancePending2.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(IntraBalancePending4 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(IntraBalancePending4 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -1181,7 +1372,7 @@ public class IntraBalancePending4 {
 		return statusAndReason == null ? Optional.empty() : Optional.of(statusAndReason);
 	}
 
-	public IntraBalancePending4 setStatusAndReason(com.tools20022.repository.msg.PendingStatusAndReason2 statusAndReason) {
+	public IntraBalancePending4 setStatusAndReason(PendingStatusAndReason2 statusAndReason) {
 		this.statusAndReason = statusAndReason;
 		return this;
 	}
@@ -1244,7 +1435,7 @@ public class IntraBalancePending4 {
 		return balanceFrom;
 	}
 
-	public IntraBalancePending4 setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2 balanceFrom) {
+	public IntraBalancePending4 setBalanceFrom(CashSubBalanceTypeAndQuantityBreakdown2 balanceFrom) {
 		this.balanceFrom = Objects.requireNonNull(balanceFrom);
 		return this;
 	}
@@ -1253,7 +1444,7 @@ public class IntraBalancePending4 {
 		return balanceTo;
 	}
 
-	public IntraBalancePending4 setBalanceTo(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2 balanceTo) {
+	public IntraBalancePending4 setBalanceTo(CashSubBalanceTypeAndQuantityBreakdown2 balanceTo) {
 		this.balanceTo = Objects.requireNonNull(balanceTo);
 		return this;
 	}
@@ -1289,7 +1480,7 @@ public class IntraBalancePending4 {
 		return cashSubBalanceIdentification == null ? Optional.empty() : Optional.of(cashSubBalanceIdentification);
 	}
 
-	public IntraBalancePending4 setCashSubBalanceIdentification(com.tools20022.repository.msg.GenericIdentification37 cashSubBalanceIdentification) {
+	public IntraBalancePending4 setCashSubBalanceIdentification(GenericIdentification37 cashSubBalanceIdentification) {
 		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
 		return this;
 	}
@@ -1298,7 +1489,7 @@ public class IntraBalancePending4 {
 		return linkages == null ? linkages = new ArrayList<>() : linkages;
 	}
 
-	public IntraBalancePending4 setLinkages(List<com.tools20022.repository.msg.Linkages51> linkages) {
+	public IntraBalancePending4 setLinkages(List<Linkages51> linkages) {
 		this.linkages = Objects.requireNonNull(linkages);
 		return this;
 	}
@@ -1316,7 +1507,7 @@ public class IntraBalancePending4 {
 		return messageOriginator == null ? Optional.empty() : Optional.of(messageOriginator);
 	}
 
-	public IntraBalancePending4 setMessageOriginator(com.tools20022.repository.msg.SystemPartyIdentification6 messageOriginator) {
+	public IntraBalancePending4 setMessageOriginator(SystemPartyIdentification6 messageOriginator) {
 		this.messageOriginator = messageOriginator;
 		return this;
 	}
@@ -1343,7 +1534,7 @@ public class IntraBalancePending4 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public IntraBalancePending4 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public IntraBalancePending4 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

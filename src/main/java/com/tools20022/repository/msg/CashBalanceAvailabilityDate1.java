@@ -136,7 +136,7 @@ public class CashBalanceAvailabilityDate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfDays = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceAvailabilityDate1, Max15PlusSignedNumericText> mmNumberOfDays = new MMMessageAttribute<CashBalanceAvailabilityDate1, Max15PlusSignedNumericText>() {
 		{
 			businessElementTrace_lazy = () -> CashAvailability.mmNumberOfDays;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmObject();
@@ -149,6 +149,16 @@ public class CashBalanceAvailabilityDate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15PlusSignedNumericText.mmObject();
+		}
+
+		@Override
+		public Max15PlusSignedNumericText getValue(CashBalanceAvailabilityDate1 obj) {
+			return obj.getNumberOfDays();
+		}
+
+		@Override
+		public void setValue(CashBalanceAvailabilityDate1 obj, Max15PlusSignedNumericText value) {
+			obj.setNumberOfDays(value);
 		}
 	};
 	@XmlElement(name = "ActlDt", required = true)
@@ -193,7 +203,7 @@ public class CashBalanceAvailabilityDate1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActualDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashBalanceAvailabilityDate1, ISODate> mmActualDate = new MMMessageAttribute<CashBalanceAvailabilityDate1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> CashAvailability.mmDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailabilityDate1.mmObject();
@@ -206,6 +216,16 @@ public class CashBalanceAvailabilityDate1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(CashBalanceAvailabilityDate1 obj) {
+			return obj.getActualDate();
+		}
+
+		@Override
+		public void setValue(CashBalanceAvailabilityDate1 obj, ISODate value) {
+			obj.setActualDate(value);
 		}
 	};
 	/**

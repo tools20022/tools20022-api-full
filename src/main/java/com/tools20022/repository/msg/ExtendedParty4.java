@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.InvestmentAccountPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class ExtendedParty4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedPartyRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExtendedParty4, Extended350Code> mmExtendedPartyRole = new MMMessageAttribute<ExtendedParty4, Extended350Code>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendedParty4.mmObject();
@@ -137,6 +138,16 @@ public class ExtendedParty4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(ExtendedParty4 obj) {
+			return obj.getExtendedPartyRole();
+		}
+
+		@Override
+		public void setValue(ExtendedParty4 obj, Extended350Code value) {
+			obj.setExtendedPartyRole(value);
 		}
 	};
 	@XmlElement(name = "OthrPtyDtls", required = true)
@@ -180,7 +191,7 @@ public class ExtendedParty4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherPartyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExtendedParty4, InvestmentAccountOwnershipInformation7> mmOtherPartyDetails = new MMMessageAssociationEnd<ExtendedParty4, InvestmentAccountOwnershipInformation7>() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendedParty4.mmObject();
@@ -193,7 +204,17 @@ public class ExtendedParty4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7.mmObject();
+			type_lazy = () -> InvestmentAccountOwnershipInformation7.mmObject();
+		}
+
+		@Override
+		public InvestmentAccountOwnershipInformation7 getValue(ExtendedParty4 obj) {
+			return obj.getOtherPartyDetails();
+		}
+
+		@Override
+		public void setValue(ExtendedParty4 obj, InvestmentAccountOwnershipInformation7 value) {
+			obj.setOtherPartyDetails(value);
 		}
 	};
 
@@ -226,7 +247,7 @@ public class ExtendedParty4 {
 		return otherPartyDetails;
 	}
 
-	public ExtendedParty4 setOtherPartyDetails(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7 otherPartyDetails) {
+	public ExtendedParty4 setOtherPartyDetails(InvestmentAccountOwnershipInformation7 otherPartyDetails) {
 		this.otherPartyDetails = Objects.requireNonNull(otherPartyDetails);
 		return this;
 	}

@@ -23,6 +23,10 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV03;
 import com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV04;
+import com.tools20022.repository.choice.AcceptedStatus1Choice;
+import com.tools20022.repository.choice.CancelledStatus3Choice;
+import com.tools20022.repository.choice.PendingCancellationStatus3Choice;
+import com.tools20022.repository.choice.RejectedStatus1Choice;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
 import com.tools20022.repository.entity.StatusReason;
@@ -159,7 +163,7 @@ public class InstructionCancellationRequestStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationCompleted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, CancelledStatus3Choice> mmCancellationCompleted = new MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, CancelledStatus3Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionCancellationRequestStatus5Choice.mmObject();
@@ -173,7 +177,17 @@ public class InstructionCancellationRequestStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CancelledStatus3Choice.mmObject();
+			type_lazy = () -> CancelledStatus3Choice.mmObject();
+		}
+
+		@Override
+		public CancelledStatus3Choice getValue(InstructionCancellationRequestStatus5Choice obj) {
+			return obj.getCancellationCompleted();
+		}
+
+		@Override
+		public void setValue(InstructionCancellationRequestStatus5Choice obj, CancelledStatus3Choice value) {
+			obj.setCancellationCompleted(value);
 		}
 	};
 	@XmlElement(name = "Accptd", required = true)
@@ -223,7 +237,7 @@ public class InstructionCancellationRequestStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, AcceptedStatus1Choice> mmAccepted = new MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, AcceptedStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionCancellationRequestStatus5Choice.mmObject();
@@ -237,7 +251,17 @@ public class InstructionCancellationRequestStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.AcceptedStatus1Choice.mmObject();
+			type_lazy = () -> AcceptedStatus1Choice.mmObject();
+		}
+
+		@Override
+		public AcceptedStatus1Choice getValue(InstructionCancellationRequestStatus5Choice obj) {
+			return obj.getAccepted();
+		}
+
+		@Override
+		public void setValue(InstructionCancellationRequestStatus5Choice obj, AcceptedStatus1Choice value) {
+			obj.setAccepted(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -287,7 +311,7 @@ public class InstructionCancellationRequestStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, RejectedStatus1Choice> mmRejected = new MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, RejectedStatus1Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionCancellationRequestStatus5Choice.mmObject();
@@ -301,7 +325,17 @@ public class InstructionCancellationRequestStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.RejectedStatus1Choice.mmObject();
+			type_lazy = () -> RejectedStatus1Choice.mmObject();
+		}
+
+		@Override
+		public RejectedStatus1Choice getValue(InstructionCancellationRequestStatus5Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(InstructionCancellationRequestStatus5Choice obj, RejectedStatus1Choice value) {
+			obj.setRejected(value);
 		}
 	};
 	@XmlElement(name = "PdgCxl", required = true)
@@ -350,7 +384,7 @@ public class InstructionCancellationRequestStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPendingCancellation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, PendingCancellationStatus3Choice> mmPendingCancellation = new MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, PendingCancellationStatus3Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionCancellationRequestStatus5Choice.mmObject();
@@ -364,7 +398,17 @@ public class InstructionCancellationRequestStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.PendingCancellationStatus3Choice.mmObject();
+			type_lazy = () -> PendingCancellationStatus3Choice.mmObject();
+		}
+
+		@Override
+		public PendingCancellationStatus3Choice getValue(InstructionCancellationRequestStatus5Choice obj) {
+			return obj.getPendingCancellation();
+		}
+
+		@Override
+		public void setValue(InstructionCancellationRequestStatus5Choice obj, PendingCancellationStatus3Choice value) {
+			obj.setPendingCancellation(value);
 		}
 	};
 	@XmlElement(name = "PrtrySts", required = true)
@@ -413,7 +457,7 @@ public class InstructionCancellationRequestStatus5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, ProprietaryStatusAndReason1> mmProprietaryStatus = new MMMessageAssociationEnd<InstructionCancellationRequestStatus5Choice, ProprietaryStatusAndReason1>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionCancellationRequestStatus5Choice.mmObject();
@@ -428,6 +472,16 @@ public class InstructionCancellationRequestStatus5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason1.mmObject();
+		}
+
+		@Override
+		public ProprietaryStatusAndReason1 getValue(InstructionCancellationRequestStatus5Choice obj) {
+			return obj.getProprietaryStatus();
+		}
+
+		@Override
+		public void setValue(InstructionCancellationRequestStatus5Choice obj, ProprietaryStatusAndReason1 value) {
+			obj.setProprietaryStatus(value);
 		}
 	};
 
@@ -455,7 +509,7 @@ public class InstructionCancellationRequestStatus5Choice {
 		return cancellationCompleted;
 	}
 
-	public InstructionCancellationRequestStatus5Choice setCancellationCompleted(com.tools20022.repository.choice.CancelledStatus3Choice cancellationCompleted) {
+	public InstructionCancellationRequestStatus5Choice setCancellationCompleted(CancelledStatus3Choice cancellationCompleted) {
 		this.cancellationCompleted = Objects.requireNonNull(cancellationCompleted);
 		return this;
 	}
@@ -464,7 +518,7 @@ public class InstructionCancellationRequestStatus5Choice {
 		return accepted;
 	}
 
-	public InstructionCancellationRequestStatus5Choice setAccepted(com.tools20022.repository.choice.AcceptedStatus1Choice accepted) {
+	public InstructionCancellationRequestStatus5Choice setAccepted(AcceptedStatus1Choice accepted) {
 		this.accepted = Objects.requireNonNull(accepted);
 		return this;
 	}
@@ -473,7 +527,7 @@ public class InstructionCancellationRequestStatus5Choice {
 		return rejected;
 	}
 
-	public InstructionCancellationRequestStatus5Choice setRejected(com.tools20022.repository.choice.RejectedStatus1Choice rejected) {
+	public InstructionCancellationRequestStatus5Choice setRejected(RejectedStatus1Choice rejected) {
 		this.rejected = Objects.requireNonNull(rejected);
 		return this;
 	}
@@ -482,7 +536,7 @@ public class InstructionCancellationRequestStatus5Choice {
 		return pendingCancellation;
 	}
 
-	public InstructionCancellationRequestStatus5Choice setPendingCancellation(com.tools20022.repository.choice.PendingCancellationStatus3Choice pendingCancellation) {
+	public InstructionCancellationRequestStatus5Choice setPendingCancellation(PendingCancellationStatus3Choice pendingCancellation) {
 		this.pendingCancellation = Objects.requireNonNull(pendingCancellation);
 		return this;
 	}

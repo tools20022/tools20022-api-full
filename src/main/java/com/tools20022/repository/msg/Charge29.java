@@ -123,7 +123,7 @@ public class Charge29 {
 	 * Charge27.mmType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Charge29, ChargeType4Choice> mmType = new MMMessageAssociationEnd<Charge29, ChargeType4Choice>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge29.mmObject();
@@ -137,6 +137,16 @@ public class Charge29 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ChargeType4Choice.mmObject();
+		}
+
+		@Override
+		public ChargeType4Choice getValue(Charge29 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(Charge29 obj, ChargeType4Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -178,7 +188,7 @@ public class Charge29 {
 	 * Charge27.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge29, ActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<Charge29, ActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge29.mmObject();
@@ -191,6 +201,16 @@ public class Charge29 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveOrHistoricCurrencyAndAmount getValue(Charge29 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(Charge29 obj, ActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "ChrgBsis")
@@ -231,7 +251,7 @@ public class Charge29 {
 	 * Charge27.mmChargeBasis}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmChargeBasis = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Charge29, Optional<ChargeBasisType1Choice>> mmChargeBasis = new MMMessageAssociationEnd<Charge29, Optional<ChargeBasisType1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge29.mmObject();
@@ -245,6 +265,16 @@ public class Charge29 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ChargeBasisType1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeBasisType1Choice> getValue(Charge29 obj) {
+			return obj.getChargeBasis();
+		}
+
+		@Override
+		public void setValue(Charge29 obj, Optional<ChargeBasisType1Choice> value) {
+			obj.setChargeBasis(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ChrgBr")
@@ -288,7 +318,7 @@ public class Charge29 {
 	 * Charge27.mmChargeBearer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge29, Optional<ChargeBearer1Code>> mmChargeBearer = new MMMessageAttribute<Charge29, Optional<ChargeBearer1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge29.mmObject();
@@ -301,6 +331,16 @@ public class Charge29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ChargeBearer1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ChargeBearer1Code> getValue(Charge29 obj) {
+			return obj.getChargeBearer();
+		}
+
+		@Override
+		public void setValue(Charge29 obj, Optional<ChargeBearer1Code> value) {
+			obj.setChargeBearer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RcptId")
@@ -343,7 +383,7 @@ public class Charge29 {
 	 * Charge27.mmRecipientIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Charge29, Optional<PartyIdentification70Choice>> mmRecipientIdentification = new MMMessageAttribute<Charge29, Optional<PartyIdentification70Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Charge29.mmObject();
@@ -356,6 +396,16 @@ public class Charge29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(Charge29 obj) {
+			return obj.getRecipientIdentification();
+		}
+
+		@Override
+		public void setValue(Charge29 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setRecipientIdentification(value.orElse(null));
 		}
 	};
 

@@ -108,7 +108,7 @@ public class SecurityIdentificationAndAmount1 {
 	 * definition} = "ISIN of the outright investment.\r\n"</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentificationAndAmount1, ISINOct2015Identifier> mmIdentification = new MMMessageAttribute<SecurityIdentificationAndAmount1, ISINOct2015Identifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentificationAndAmount1.mmObject();
@@ -120,6 +120,16 @@ public class SecurityIdentificationAndAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public ISINOct2015Identifier getValue(SecurityIdentificationAndAmount1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationAndAmount1 obj, ISINOct2015Identifier value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "MktVal", required = true)
@@ -159,7 +169,7 @@ public class SecurityIdentificationAndAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentificationAndAmount1, ActiveCurrencyAndAmount> mmMarketValue = new MMMessageAttribute<SecurityIdentificationAndAmount1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmInvestmentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentificationAndAmount1.mmObject();
@@ -171,6 +181,16 @@ public class SecurityIdentificationAndAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(SecurityIdentificationAndAmount1 obj) {
+			return obj.getMarketValue();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationAndAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setMarketValue(value);
 		}
 	};
 

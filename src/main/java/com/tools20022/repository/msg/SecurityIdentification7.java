@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISINIdentifier;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternateSecurityIdentification3;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -128,7 +129,7 @@ public class SecurityIdentification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification7, ISINIdentifier> mmISIN = new MMMessageAttribute<SecurityIdentification7, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
@@ -140,6 +141,16 @@ public class SecurityIdentification7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(SecurityIdentification7 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification7 obj, ISINIdentifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "OthrId", required = true)
@@ -179,7 +190,7 @@ public class SecurityIdentification7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification7, AlternateSecurityIdentification3> mmOtherIdentification = new MMMessageAttribute<SecurityIdentification7, AlternateSecurityIdentification3>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
@@ -190,7 +201,17 @@ public class SecurityIdentification7 {
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification3.mmObject();
+			complexType_lazy = () -> AlternateSecurityIdentification3.mmObject();
+		}
+
+		@Override
+		public AlternateSecurityIdentification3 getValue(SecurityIdentification7 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification7 obj, AlternateSecurityIdentification3 value) {
+			obj.setOtherIdentification(value);
 		}
 	};
 	@XmlElement(name = "Desc")
@@ -227,7 +248,7 @@ public class SecurityIdentification7 {
 	 * definition} = "Textual description of a security instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification7, Optional<Max140Text>> mmDescription = new MMMessageAttribute<SecurityIdentification7, Optional<Max140Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
@@ -239,6 +260,16 @@ public class SecurityIdentification7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(SecurityIdentification7 obj) {
+			return obj.getDescription();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification7 obj, Optional<Max140Text> value) {
+			obj.setDescription(value.orElse(null));
 		}
 	};
 	/**
@@ -319,7 +350,7 @@ public class SecurityIdentification7 {
 		return otherIdentification;
 	}
 
-	public SecurityIdentification7 setOtherIdentification(com.tools20022.repository.msg.AlternateSecurityIdentification3 otherIdentification) {
+	public SecurityIdentification7 setOtherIdentification(AlternateSecurityIdentification3 otherIdentification) {
 		this.otherIdentification = Objects.requireNonNull(otherIdentification);
 		return this;
 	}

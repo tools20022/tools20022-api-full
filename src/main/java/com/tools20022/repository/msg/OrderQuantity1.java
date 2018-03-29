@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.QuantityOrAmount1Choice;
 import com.tools20022.repository.codeset.OrderQuantityType3Code;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Price1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -112,7 +113,7 @@ public class OrderQuantity1 {
 	 * definition} = "Quantity of financial instrument to be ordered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderQuantity1, QuantityOrAmount1Choice> mmQuantity = new MMMessageAttribute<OrderQuantity1, QuantityOrAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
@@ -125,6 +126,16 @@ public class OrderQuantity1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
+		}
+
+		@Override
+		public QuantityOrAmount1Choice getValue(OrderQuantity1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(OrderQuantity1 obj, QuantityOrAmount1Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "QtyTp")
@@ -164,7 +175,7 @@ public class OrderQuantity1 {
 	 * definition} = "Quantity of financial instrument to be ordered."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderQuantity1, Optional<OrderQuantityType3Code>> mmQuantityType = new MMMessageAttribute<OrderQuantity1, Optional<OrderQuantityType3Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
@@ -177,6 +188,16 @@ public class OrderQuantity1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OrderQuantityType3Code.mmObject();
+		}
+
+		@Override
+		public Optional<OrderQuantityType3Code> getValue(OrderQuantity1 obj) {
+			return obj.getQuantityType();
+		}
+
+		@Override
+		public void setValue(OrderQuantity1 obj, Optional<OrderQuantityType3Code> value) {
+			obj.setQuantityType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pric")
@@ -216,7 +237,7 @@ public class OrderQuantity1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OrderQuantity1, Optional<Price1>> mmPrice = new MMMessageAttribute<OrderQuantity1, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
@@ -228,7 +249,17 @@ public class OrderQuantity1 {
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(OrderQuantity1 obj) {
+			return obj.getPrice();
+		}
+
+		@Override
+		public void setValue(OrderQuantity1 obj, Optional<Price1> value) {
+			obj.setPrice(value.orElse(null));
 		}
 	};
 
@@ -268,7 +299,7 @@ public class OrderQuantity1 {
 		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public OrderQuantity1 setPrice(com.tools20022.repository.msg.Price1 price) {
+	public OrderQuantity1 setPrice(Price1 price) {
 		this.price = price;
 		return this;
 	}

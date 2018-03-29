@@ -108,7 +108,7 @@ public class PersonIdentification6 {
 	 * definition} = "Entity that assigns the identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PersonIdentification6, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<PersonIdentification6, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification6.mmObject();
@@ -120,6 +120,16 @@ public class PersonIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PersonIdentification6 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(PersonIdentification6 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrsnIdTp", required = true)
@@ -156,7 +166,7 @@ public class PersonIdentification6 {
 	 * definition} = "Personal identification type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPersonIdentificationType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PersonIdentification6, PersonIdentificationType1Choice> mmPersonIdentificationType = new MMMessageAssociationEnd<PersonIdentification6, PersonIdentificationType1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification6.mmObject();
@@ -169,6 +179,16 @@ public class PersonIdentification6 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PersonIdentificationType1Choice.mmObject();
+		}
+
+		@Override
+		public PersonIdentificationType1Choice getValue(PersonIdentification6 obj) {
+			return obj.getPersonIdentificationType();
+		}
+
+		@Override
+		public void setValue(PersonIdentification6 obj, PersonIdentificationType1Choice value) {
+			obj.setPersonIdentificationType(value);
 		}
 	};
 

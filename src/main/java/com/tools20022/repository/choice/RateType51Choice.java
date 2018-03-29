@@ -108,7 +108,7 @@ public class RateType51Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateType51Choice, GrossDividendRateType3Code> mmCode = new MMMessageAttribute<RateType51Choice, GrossDividendRateType3Code>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType51Choice.mmObject();
@@ -120,6 +120,16 @@ public class RateType51Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> GrossDividendRateType3Code.mmObject();
+		}
+
+		@Override
+		public GrossDividendRateType3Code getValue(RateType51Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RateType51Choice obj, GrossDividendRateType3Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class RateType51Choice {
 	 * "Proprietary identification of the type of gross dividend rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateType51Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<RateType51Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRateType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RateType51Choice.mmObject();
@@ -170,6 +180,16 @@ public class RateType51Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(RateType51Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RateType51Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -29,6 +29,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.OtherTypeOfCollateral1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -151,7 +152,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLetterOfCreditAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateral1, Optional<ActiveCurrencyAndAmount>> mmLetterOfCreditAmount = new MMMessageAttribute<OtherCollateral1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> LetterOfCredit.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -164,6 +165,16 @@ public class OtherCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(OtherCollateral1 obj) {
+			return obj.getLetterOfCreditAmount();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setLetterOfCreditAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrntAmt")
@@ -209,7 +220,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGuaranteeAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateral1, Optional<ActiveCurrencyAndAmount>> mmGuaranteeAmount = new MMMessageAttribute<OtherCollateral1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Guarantee.mmCoveredAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -222,6 +233,16 @@ public class OtherCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(OtherCollateral1 obj) {
+			return obj.getGuaranteeAmount();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setGuaranteeAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrTpOfColl")
@@ -265,7 +286,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherTypeOfCollateral = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherCollateral1, Optional<OtherTypeOfCollateral1>> mmOtherTypeOfCollateral = new MMMessageAssociationEnd<OtherCollateral1, Optional<OtherTypeOfCollateral1>>() {
 		{
 			businessComponentTrace_lazy = () -> Asset.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -278,7 +299,17 @@ public class OtherCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.OtherTypeOfCollateral1.mmObject();
+			type_lazy = () -> OtherTypeOfCollateral1.mmObject();
+		}
+
+		@Override
+		public Optional<OtherTypeOfCollateral1> getValue(OtherCollateral1 obj) {
+			return obj.getOtherTypeOfCollateral();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, Optional<OtherTypeOfCollateral1> value) {
+			obj.setOtherTypeOfCollateral(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IsseDt", required = true)
@@ -322,7 +353,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssueDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherCollateral1, DateFormat14Choice> mmIssueDate = new MMMessageAssociationEnd<OtherCollateral1, DateFormat14Choice>() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -336,6 +367,16 @@ public class OtherCollateral1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DateFormat14Choice.mmObject();
+		}
+
+		@Override
+		public DateFormat14Choice getValue(OtherCollateral1 obj) {
+			return obj.getIssueDate();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, DateFormat14Choice value) {
+			obj.setIssueDate(value);
 		}
 	};
 	@XmlElement(name = "XpryDt")
@@ -379,7 +420,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExpiryDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherCollateral1, Optional<DateFormat14Choice>> mmExpiryDate = new MMMessageAssociationEnd<OtherCollateral1, Optional<DateFormat14Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -393,6 +434,16 @@ public class OtherCollateral1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat14Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat14Choice> getValue(OtherCollateral1 obj) {
+			return obj.getExpiryDate();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, Optional<DateFormat14Choice> value) {
+			obj.setExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -438,7 +489,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OtherCollateral1, PartyIdentification33Choice> mmIssuer = new MMMessageAssociationEnd<OtherCollateral1, PartyIdentification33Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -452,6 +503,16 @@ public class OtherCollateral1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification33Choice getValue(OtherCollateral1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, PartyIdentification33Choice value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -498,7 +559,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateral1, Optional<ISODate>> mmValueDate = new MMMessageAttribute<OtherCollateral1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -511,6 +572,16 @@ public class OtherCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(OtherCollateral1 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, Optional<ISODate> value) {
+			obj.setValueDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgRate")
@@ -555,7 +626,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateral1, Optional<BaseOneRate>> mmExchangeRate = new MMMessageAttribute<OtherCollateral1, Optional<BaseOneRate>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -568,6 +639,16 @@ public class OtherCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BaseOneRate.mmObject();
+		}
+
+		@Override
+		public Optional<BaseOneRate> getValue(OtherCollateral1 obj) {
+			return obj.getExchangeRate();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, Optional<BaseOneRate> value) {
+			obj.setExchangeRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktVal")
@@ -613,7 +694,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateral1, Optional<ActiveCurrencyAndAmount>> mmMarketValue = new MMMessageAttribute<OtherCollateral1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -626,6 +707,16 @@ public class OtherCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(OtherCollateral1 obj) {
+			return obj.getMarketValue();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMarketValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Hrcut")
@@ -672,7 +763,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateral1, Optional<PercentageRate>> mmHaircut = new MMMessageAttribute<OtherCollateral1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -685,6 +776,16 @@ public class OtherCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(OtherCollateral1 obj) {
+			return obj.getHaircut();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, Optional<PercentageRate> value) {
+			obj.setHaircut(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CollVal", required = true)
@@ -731,7 +832,7 @@ public class OtherCollateral1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OtherCollateral1, ActiveCurrencyAndAmount> mmCollateralValue = new MMMessageAttribute<OtherCollateral1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmRiskAdjustedValue;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OtherCollateral1.mmObject();
@@ -744,6 +845,16 @@ public class OtherCollateral1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(OtherCollateral1 obj) {
+			return obj.getCollateralValue();
+		}
+
+		@Override
+		public void setValue(OtherCollateral1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCollateralValue(value);
 		}
 	};
 
@@ -787,7 +898,7 @@ public class OtherCollateral1 {
 		return otherTypeOfCollateral == null ? Optional.empty() : Optional.of(otherTypeOfCollateral);
 	}
 
-	public OtherCollateral1 setOtherTypeOfCollateral(com.tools20022.repository.msg.OtherTypeOfCollateral1 otherTypeOfCollateral) {
+	public OtherCollateral1 setOtherTypeOfCollateral(OtherTypeOfCollateral1 otherTypeOfCollateral) {
 		this.otherTypeOfCollateral = otherTypeOfCollateral;
 		return this;
 	}

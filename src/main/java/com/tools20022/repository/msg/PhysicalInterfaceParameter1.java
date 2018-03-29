@@ -78,7 +78,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PhysicalInterfaceParameter1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -124,7 +124,7 @@ public class PhysicalInterfaceParameter1 {
 	 * definition} = "Identification of the interface."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterfaceName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PhysicalInterfaceParameter1, Max35Text> mmInterfaceName = new MMMessageAttribute<PhysicalInterfaceParameter1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PhysicalInterfaceParameter1.mmObject();
@@ -136,6 +136,16 @@ public class PhysicalInterfaceParameter1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PhysicalInterfaceParameter1 obj) {
+			return obj.getInterfaceName();
+		}
+
+		@Override
+		public void setValue(PhysicalInterfaceParameter1 obj, Max35Text value) {
+			obj.setInterfaceName(value);
 		}
 	};
 	@XmlElement(name = "IntrfcTp")
@@ -168,7 +178,7 @@ public class PhysicalInterfaceParameter1 {
 	 * definition} = "Identification of the physical link layer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterfaceType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PhysicalInterfaceParameter1, Optional<POICommunicationType2Code>> mmInterfaceType = new MMMessageAttribute<PhysicalInterfaceParameter1, Optional<POICommunicationType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PhysicalInterfaceParameter1.mmObject();
 			isDerived = false;
@@ -179,6 +189,16 @@ public class PhysicalInterfaceParameter1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> POICommunicationType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<POICommunicationType2Code> getValue(PhysicalInterfaceParameter1 obj) {
+			return obj.getInterfaceType();
+		}
+
+		@Override
+		public void setValue(PhysicalInterfaceParameter1 obj, Optional<POICommunicationType2Code> value) {
+			obj.setInterfaceType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UsrNm")
@@ -215,7 +235,7 @@ public class PhysicalInterfaceParameter1 {
 	 * definition} = "Optional user name to provide to use this interface."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUserName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PhysicalInterfaceParameter1, Optional<Max35Text>> mmUserName = new MMMessageAttribute<PhysicalInterfaceParameter1, Optional<Max35Text>>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PhysicalInterfaceParameter1.mmObject();
@@ -227,6 +247,16 @@ public class PhysicalInterfaceParameter1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PhysicalInterfaceParameter1 obj) {
+			return obj.getUserName();
+		}
+
+		@Override
+		public void setValue(PhysicalInterfaceParameter1 obj, Optional<Max35Text> value) {
+			obj.setUserName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AccsCd")
@@ -258,7 +288,7 @@ public class PhysicalInterfaceParameter1 {
 	 * definition} = "Optional access code to provide to use this interface."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccessCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PhysicalInterfaceParameter1, Optional<Max35Binary>> mmAccessCode = new MMMessageAttribute<PhysicalInterfaceParameter1, Optional<Max35Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PhysicalInterfaceParameter1.mmObject();
 			isDerived = false;
@@ -269,6 +299,16 @@ public class PhysicalInterfaceParameter1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Binary> getValue(PhysicalInterfaceParameter1 obj) {
+			return obj.getAccessCode();
+		}
+
+		@Override
+		public void setValue(PhysicalInterfaceParameter1 obj, Optional<Max35Binary> value) {
+			obj.setAccessCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyPrfl")
@@ -302,7 +342,7 @@ public class PhysicalInterfaceParameter1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityProfile = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PhysicalInterfaceParameter1, Optional<Max35Text>> mmSecurityProfile = new MMMessageAttribute<PhysicalInterfaceParameter1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PhysicalInterfaceParameter1.mmObject();
 			isDerived = false;
@@ -313,6 +353,16 @@ public class PhysicalInterfaceParameter1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PhysicalInterfaceParameter1 obj) {
+			return obj.getSecurityProfile();
+		}
+
+		@Override
+		public void setValue(PhysicalInterfaceParameter1 obj, Optional<Max35Text> value) {
+			obj.setSecurityProfile(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlParams")
@@ -344,7 +394,7 @@ public class PhysicalInterfaceParameter1 {
 	 * definition} = "Any other parameters relevant for this interface."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalParameters = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PhysicalInterfaceParameter1, Optional<Max2KBinary>> mmAdditionalParameters = new MMMessageAttribute<PhysicalInterfaceParameter1, Optional<Max2KBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PhysicalInterfaceParameter1.mmObject();
 			isDerived = false;
@@ -356,6 +406,16 @@ public class PhysicalInterfaceParameter1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2KBinary.mmObject();
 		}
+
+		@Override
+		public Optional<Max2KBinary> getValue(PhysicalInterfaceParameter1 obj) {
+			return obj.getAdditionalParameters();
+		}
+
+		@Override
+		public void setValue(PhysicalInterfaceParameter1 obj, Optional<Max2KBinary> value) {
+			obj.setAdditionalParameters(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -366,7 +426,7 @@ public class PhysicalInterfaceParameter1 {
 						com.tools20022.repository.msg.PhysicalInterfaceParameter1.mmSecurityProfile, com.tools20022.repository.msg.PhysicalInterfaceParameter1.mmAdditionalParameters);
 				trace_lazy = () -> TerminalManagementSystem.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PhysicalInterfaceParameter1";
 				definition = "Configuration parameters for physical interface.";
 			}

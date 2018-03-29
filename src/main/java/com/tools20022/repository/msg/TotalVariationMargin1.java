@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ShortLong1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Amount2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -104,7 +105,7 @@ public class TotalVariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TotalVariationMargin1, Optional<ShortLong1Code>> mmShortLongIndicator = new MMMessageAttribute<TotalVariationMargin1, Optional<ShortLong1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalVariationMargin1.mmObject();
 			isDerived = false;
@@ -115,6 +116,16 @@ public class TotalVariationMargin1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ShortLong1Code> getValue(TotalVariationMargin1 obj) {
+			return obj.getShortLongIndicator();
+		}
+
+		@Override
+		public void setValue(TotalVariationMargin1 obj, Optional<ShortLong1Code> value) {
+			obj.setShortLongIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmtDtls", required = true)
@@ -146,7 +157,7 @@ public class TotalVariationMargin1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TotalVariationMargin1, Amount2> mmAmountDetails = new MMMessageAssociationEnd<TotalVariationMargin1, Amount2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TotalVariationMargin1.mmObject();
 			isDerived = false;
@@ -157,7 +168,17 @@ public class TotalVariationMargin1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
+			type_lazy = () -> Amount2.mmObject();
+		}
+
+		@Override
+		public Amount2 getValue(TotalVariationMargin1 obj) {
+			return obj.getAmountDetails();
+		}
+
+		@Override
+		public void setValue(TotalVariationMargin1 obj, Amount2 value) {
+			obj.setAmountDetails(value);
 		}
 	};
 
@@ -187,7 +208,7 @@ public class TotalVariationMargin1 {
 		return amountDetails;
 	}
 
-	public TotalVariationMargin1 setAmountDetails(com.tools20022.repository.msg.Amount2 amountDetails) {
+	public TotalVariationMargin1 setAmountDetails(Amount2 amountDetails) {
 		this.amountDetails = Objects.requireNonNull(amountDetails);
 		return this;
 	}

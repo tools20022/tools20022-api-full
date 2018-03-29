@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FromToQuantityRange2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class TransactionsBin2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionsBin2, Number> mmNumberOfTransactions = new MMMessageAttribute<TransactionsBin2, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionsBin2.mmObject();
 			isDerived = false;
@@ -116,6 +117,16 @@ public class TransactionsBin2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(TransactionsBin2 obj) {
+			return obj.getNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(TransactionsBin2 obj, Number value) {
+			obj.setNumberOfTransactions(value);
 		}
 	};
 	@XmlElement(name = "TtlNtnlAmt", required = true)
@@ -150,7 +161,7 @@ public class TransactionsBin2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalNotionalAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionsBin2, DecimalNumber> mmTotalNotionalAmount = new MMMessageAttribute<TransactionsBin2, DecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionsBin2.mmObject();
 			isDerived = false;
@@ -161,6 +172,16 @@ public class TransactionsBin2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public DecimalNumber getValue(TransactionsBin2 obj) {
+			return obj.getTotalNotionalAmount();
+		}
+
+		@Override
+		public void setValue(TransactionsBin2 obj, DecimalNumber value) {
+			obj.setTotalNotionalAmount(value);
 		}
 	};
 	@XmlElement(name = "Rg", required = true)
@@ -193,7 +214,7 @@ public class TransactionsBin2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionsBin2, FromToQuantityRange2> mmRange = new MMMessageAssociationEnd<TransactionsBin2, FromToQuantityRange2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionsBin2.mmObject();
 			isDerived = false;
@@ -204,7 +225,17 @@ public class TransactionsBin2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FromToQuantityRange2.mmObject();
+			type_lazy = () -> FromToQuantityRange2.mmObject();
+		}
+
+		@Override
+		public FromToQuantityRange2 getValue(TransactionsBin2 obj) {
+			return obj.getRange();
+		}
+
+		@Override
+		public void setValue(TransactionsBin2 obj, FromToQuantityRange2 value) {
+			obj.setRange(value);
 		}
 	};
 
@@ -244,7 +275,7 @@ public class TransactionsBin2 {
 		return range;
 	}
 
-	public TransactionsBin2 setRange(com.tools20022.repository.msg.FromToQuantityRange2 range) {
+	public TransactionsBin2 setRange(FromToQuantityRange2 range) {
 		this.range = Objects.requireNonNull(range);
 		return this;
 	}

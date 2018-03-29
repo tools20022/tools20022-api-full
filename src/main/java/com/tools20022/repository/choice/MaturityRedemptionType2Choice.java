@@ -115,7 +115,7 @@ public class MaturityRedemptionType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MaturityRedemptionType2Choice, MaturityRedemptionType1Code> mmCode = new MMMessageAttribute<MaturityRedemptionType2Choice, MaturityRedemptionType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MaturityRedemptionType2Choice.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class MaturityRedemptionType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MaturityRedemptionType1Code.mmObject();
+		}
+
+		@Override
+		public MaturityRedemptionType1Code getValue(MaturityRedemptionType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MaturityRedemptionType2Choice obj, MaturityRedemptionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class MaturityRedemptionType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MaturityRedemptionType2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<MaturityRedemptionType2Choice, GenericIdentification40>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.MaturityRedemptionType2Choice.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class MaturityRedemptionType2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(MaturityRedemptionType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MaturityRedemptionType2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

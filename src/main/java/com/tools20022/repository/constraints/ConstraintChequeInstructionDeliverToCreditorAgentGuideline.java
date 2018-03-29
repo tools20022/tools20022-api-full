@@ -54,11 +54,15 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstructionInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and is CRFA or MLFA or PUFA or RGFA, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different than CreditTransferTransactionInformation/Creditor.";
 			owner_lazy = () -> PaymentInstructionInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation1 obj) throws Exception {
+			checkPaymentInstructionInformation1(obj);
 		}
 	};
 	/**
@@ -84,11 +88,15 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation3> forPaymentInstructionInformation3 = new MMConstraint<PaymentInstructionInformation3>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstructionInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and is CRFA, MLFA, PUFA or RGFA, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from CreditTransferTransactionInformation/Creditor.";
 			owner_lazy = () -> PaymentInstructionInformation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation3 obj) throws Exception {
+			checkPaymentInstructionInformation3(obj);
 		}
 	};
 	/**
@@ -114,11 +122,15 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction6> forPaymentInstruction6 = new MMConstraint<PaymentInstruction6>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and is CRFA, MLFA, PUFA or RGFA, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from CreditTransferTransactionInformation/Creditor.";
 			owner_lazy = () -> PaymentInstruction6.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction6 obj) throws Exception {
+			checkPaymentInstruction6(obj);
 		}
 	};
 	/**
@@ -153,12 +165,16 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and is CRFA, MLFA, PUFA or RGFA, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from CreditTransferTransactionInformation/Creditor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction16);
 			owner_lazy = () -> PaymentInstruction9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction9 obj) throws Exception {
+			checkPaymentInstruction9(obj);
 		}
 	};
 	/**
@@ -184,11 +200,15 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction5> forPaymentInstruction5 = new MMConstraint<PaymentInstruction5>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and is CRFA or MLFA or PUFA or RGFA, then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than CreditTransferTransaction/Creditor.";
 			owner_lazy = () -> PaymentInstruction5.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction5 obj) throws Exception {
+			checkPaymentInstruction5(obj);
 		}
 	};
 	/**
@@ -214,11 +234,15 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction8> forPaymentInstruction8 = new MMConstraint<PaymentInstruction8>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and is CRFA or MLFA or PUFA or RGFA, then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than CreditTransferTransaction/Creditor.";
 			owner_lazy = () -> PaymentInstruction8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction8 obj) throws Exception {
+			checkPaymentInstruction8(obj);
 		}
 	};
 	/**
@@ -253,12 +277,16 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction11> forPaymentInstruction11 = new MMConstraint<PaymentInstruction11>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and is CRFA or MLFA or PUFA or RGFA, then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than CreditTransferTransaction/Creditor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction17);
 			owner_lazy = () -> PaymentInstruction11.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction11 obj) throws Exception {
+			checkPaymentInstruction11(obj);
 		}
 	};
 	/**
@@ -299,13 +327,17 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction16> forPaymentInstruction16 = new MMConstraint<PaymentInstruction16>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and is CRFA, MLFA, PUFA or RGFA, then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from CreditTransferTransactionInformation/Creditor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction20);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction9;
 			owner_lazy = () -> PaymentInstruction16.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction16 obj) throws Exception {
+			checkPaymentInstruction16(obj);
 		}
 	};
 	/**
@@ -346,13 +378,17 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction17> forPaymentInstruction17 = new MMConstraint<PaymentInstruction17>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and is CRFA or MLFA or PUFA or RGFA, then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than CreditTransferTransaction/Creditor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction11;
 			owner_lazy = () -> PaymentInstruction17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction17 obj) throws Exception {
+			checkPaymentInstruction17(obj);
 		}
 	};
 	/**
@@ -393,13 +429,17 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction19> forPaymentInstruction19 = new MMConstraint<PaymentInstruction19>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and is CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than CreditTransferTransaction/Creditor.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction23);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction17;
 			owner_lazy = () -> PaymentInstruction19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction19 obj) throws Exception {
+			checkPaymentInstruction19(obj);
 		}
 	};
 	/**
@@ -444,7 +484,6 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction20> forPaymentInstruction20 = new MMConstraint<PaymentInstruction20>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and is CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from CreditTransferTransactionInformation/Creditor.";
@@ -452,6 +491,11 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 					com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction16;
 			owner_lazy = () -> PaymentInstruction20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction20 obj) throws Exception {
+			checkPaymentInstruction20(obj);
 		}
 	};
 	/**
@@ -483,12 +527,16 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction23> forPaymentInstruction23 = new MMConstraint<PaymentInstruction23>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransaction/ChequeInstruction/DeliveryMethod is present and is CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransaction/ChequeInstruction/DeliverTo may only be present if different than CreditTransferTransaction/Creditor.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction19;
 			owner_lazy = () -> PaymentInstruction23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction23 obj) throws Exception {
+			checkPaymentInstruction23(obj);
 		}
 	};
 	/**
@@ -520,12 +568,16 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and is CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from CreditTransferTransactionInformation/Creditor.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction22 obj) throws Exception {
+			checkPaymentInstruction22(obj);
 		}
 	};
 	/**
@@ -557,12 +609,16 @@ public class ConstraintChequeInstructionDeliverToCreditorAgentGuideline {
 	 */
 	public static final MMConstraint<PaymentInstruction24> forPaymentInstruction24 = new MMConstraint<PaymentInstruction24>() {
 		{
-			validator = ConstraintChequeInstructionDeliverToCreditorAgentGuideline::checkPaymentInstruction24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeInstructionDeliverToCreditorAgentGuideline";
 			definition = "If CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod is present and is CRFA (CourierToFinalAgent), MLFA (MailToFinalAgent), PUFA (PickUpByFinalAgent) or RGFA (RegisteredMailToFinalAgent), then CreditTransferTransactionInformation/ChequeInstruction/DeliverTo may only be present if different from CreditTransferTransactionInformation/Creditor.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeInstructionDeliverToCreditorAgentGuideline.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction24 obj) throws Exception {
+			checkPaymentInstruction24(obj);
 		}
 	};
 

@@ -116,7 +116,7 @@ public class GeneratedStatus4Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneratedStatus4Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<GeneratedStatus4Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedStatus4Choice.mmObject();
@@ -129,6 +129,16 @@ public class GeneratedStatus4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(GeneratedStatus4Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(GeneratedStatus4Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -167,7 +177,7 @@ public class GeneratedStatus4Choice {
 	 * definition} = "Specifies the reason of the GeneratedStatus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneratedStatus4Choice, List<GeneratedReason2>> mmReason = new MMMessageAssociationEnd<GeneratedStatus4Choice, List<GeneratedReason2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.GeneratedStatus4Choice.mmObject();
@@ -180,6 +190,16 @@ public class GeneratedStatus4Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GeneratedReason2.mmObject();
+		}
+
+		@Override
+		public List<GeneratedReason2> getValue(GeneratedStatus4Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(GeneratedStatus4Choice obj, List<GeneratedReason2> value) {
+			obj.setReason(value);
 		}
 	};
 

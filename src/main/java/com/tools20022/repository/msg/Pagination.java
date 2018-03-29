@@ -376,6 +376,15 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.colr.CollateralAndExposureReportV03#mmPagination
  * CollateralAndExposureReportV03.mmPagination}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V06#mmPagination
+ * CorporateActionNotification002V06.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V07#mmPagination
+ * CorporateActionMovementPreliminaryAdvice002V07.mmPagination}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V05#mmPagination
+ * CorporateActionInstructionStatementReport002V05.mmPagination}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05#mmPagination
  * SecuritiesSettlementTransactionAllegementReport002V05.mmPagination}</li>
  * <li>
@@ -433,20 +442,11 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08#mmPagination
  * SecuritiesTransactionPendingReport002V08.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08#mmPagination
- * CorporateActionMovementPreliminaryAdvice002V08.mmPagination}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06#mmPagination
  * IntraPositionMovementPostingReport002V06.mmPagination}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06#mmPagination
  * SecuritiesSettlementTransactionAllegementReport002V06.mmPagination}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07#mmPagination
- * CorporateActionNotification002V07.mmPagination}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#mmPagination
- * CorporateActionInstructionStatementReport002V06.mmPagination}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07#mmPagination
  * SecuritiesTransactionPostingReport002V07.mmPagination}</li>
@@ -517,7 +517,7 @@ public class Pagination {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPageNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Pagination, Max5NumericText> mmPageNumber = new MMMessageAttribute<Pagination, Max5NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 			isDerived = false;
@@ -529,6 +529,16 @@ public class Pagination {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
+		}
+
+		@Override
+		public Max5NumericText getValue(Pagination obj) {
+			return obj.getPageNumber();
+		}
+
+		@Override
+		public void setValue(Pagination obj, Max5NumericText value) {
+			obj.setPageNumber(value);
 		}
 	};
 	@XmlElement(name = "LastPgInd", required = true)
@@ -568,7 +578,7 @@ public class Pagination {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastPageIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Pagination, YesNoIndicator> mmLastPageIndicator = new MMMessageAttribute<Pagination, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
 			isDerived = false;
@@ -580,6 +590,16 @@ public class Pagination {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(Pagination obj) {
+			return obj.getLastPageIndicator();
+		}
+
+		@Override
+		public void setValue(Pagination obj, YesNoIndicator value) {
+			obj.setLastPageIndicator(value);
 		}
 	};
 
@@ -615,14 +635,14 @@ public class Pagination {
 						PortfolioTransferNotificationV04.mmPagination, SecuritiesTransactionPostingReportV06.mmPagination, IntraPositionMovementPostingReportV05.mmPagination, SecuritiesBalanceAccountingReportV09.mmPagination,
 						SecuritiesSettlementTransactionAllegementReportV05.mmPagination, SecuritiesSettlementTransactionAuditTrailReportV03.mmPagination, SecuritiesTransactionPendingReportV07.mmPagination,
 						CorporateActionMovementPreliminaryAdviceV07.mmPagination, CorporateActionInstructionStatementReportV05.mmPagination, CorporateActionNotificationV06.mmPagination, InterestPaymentStatementV04.mmPagination,
-						CollateralAndExposureReportV03.mmPagination, SecuritiesSettlementTransactionAllegementReport002V05.mmPagination, PortfolioTransferNotification002V04.mmPagination,
-						SecuritiesTransactionPostingReport002V06.mmPagination, IntraPositionMovementPostingReport002V05.mmPagination, SecuritiesSettlementTransactionAuditTrailReport002V03.mmPagination,
-						SecuritiesBalanceAccountingReport002V09.mmPagination, SecuritiesTransactionPendingReport002V07.mmPagination, SecuritiesBalanceCustodyReport002V09.mmPagination, SecuritiesBalanceTransparencyReportV02.mmPagination,
-						SwitchOrderV04.mmMessagePagination, CorporateActionNotificationV07.mmPagination, CorporateActionInstructionStatementReportV06.mmPagination, CorporateActionMovementPreliminaryAdviceV08.mmPagination,
+						CollateralAndExposureReportV03.mmPagination, CorporateActionNotification002V06.mmPagination, CorporateActionMovementPreliminaryAdvice002V07.mmPagination, CorporateActionInstructionStatementReport002V05.mmPagination,
+						SecuritiesSettlementTransactionAllegementReport002V05.mmPagination, PortfolioTransferNotification002V04.mmPagination, SecuritiesTransactionPostingReport002V06.mmPagination,
+						IntraPositionMovementPostingReport002V05.mmPagination, SecuritiesSettlementTransactionAuditTrailReport002V03.mmPagination, SecuritiesBalanceAccountingReport002V09.mmPagination,
+						SecuritiesTransactionPendingReport002V07.mmPagination, SecuritiesBalanceCustodyReport002V09.mmPagination, SecuritiesBalanceTransparencyReportV02.mmPagination, SwitchOrderV04.mmMessagePagination,
+						CorporateActionNotificationV07.mmPagination, CorporateActionInstructionStatementReportV06.mmPagination, CorporateActionMovementPreliminaryAdviceV08.mmPagination,
 						ForeignExchangeTradeBulkStatusNotificationV04.mmMessagePagination, IntraPositionMovementPostingReportV06.mmPagination, SecuritiesSettlementTransactionAllegementReportV06.mmPagination,
-						SecuritiesTransactionPendingReportV08.mmPagination, SecuritiesTransactionPostingReportV07.mmPagination, SecuritiesTransactionPendingReport002V08.mmPagination,
-						CorporateActionMovementPreliminaryAdvice002V08.mmPagination, IntraPositionMovementPostingReport002V06.mmPagination, SecuritiesSettlementTransactionAllegementReport002V06.mmPagination,
-						CorporateActionNotification002V07.mmPagination, CorporateActionInstructionStatementReport002V06.mmPagination, SecuritiesTransactionPostingReport002V07.mmPagination);
+						SecuritiesTransactionPendingReportV08.mmPagination, SecuritiesTransactionPostingReportV07.mmPagination, SecuritiesTransactionPendingReport002V08.mmPagination, IntraPositionMovementPostingReport002V06.mmPagination,
+						SecuritiesSettlementTransactionAllegementReport002V06.mmPagination, SecuritiesTransactionPostingReport002V07.mmPagination);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {

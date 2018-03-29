@@ -113,7 +113,7 @@ public class FractionDispositionType1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionType1FormatChoice, FractionDispositionType1Code> mmCode = new MMMessageAttribute<FractionDispositionType1FormatChoice, FractionDispositionType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FractionDispositionType1FormatChoice.mmObject();
@@ -125,6 +125,16 @@ public class FractionDispositionType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FractionDispositionType1Code.mmObject();
+		}
+
+		@Override
+		public FractionDispositionType1Code getValue(FractionDispositionType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FractionDispositionType1FormatChoice obj, FractionDispositionType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class FractionDispositionType1FormatChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<FractionDispositionType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FractionDispositionType1FormatChoice.mmObject();
@@ -176,6 +186,16 @@ public class FractionDispositionType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(FractionDispositionType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FractionDispositionType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

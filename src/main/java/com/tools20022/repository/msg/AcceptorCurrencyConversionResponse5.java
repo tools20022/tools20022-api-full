@@ -24,6 +24,9 @@ import com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV05
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardPaymentEnvironment69;
+import com.tools20022.repository.msg.CardPaymentTransaction77;
+import com.tools20022.repository.msg.CurrencyConversion16;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -72,7 +75,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorCurrencyConversionResponse5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -126,7 +129,7 @@ public class AcceptorCurrencyConversionResponse5 {
 	 * AcceptorCurrencyConversionResponse4.mmEnvironment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCurrencyConversionResponse5, CardPaymentEnvironment69> mmEnvironment = new MMMessageAssociationEnd<AcceptorCurrencyConversionResponse5, CardPaymentEnvironment69>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5.mmObject();
@@ -139,7 +142,17 @@ public class AcceptorCurrencyConversionResponse5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment69.mmObject();
+			type_lazy = () -> CardPaymentEnvironment69.mmObject();
+		}
+
+		@Override
+		public CardPaymentEnvironment69 getValue(AcceptorCurrencyConversionResponse5 obj) {
+			return obj.getEnvironment();
+		}
+
+		@Override
+		public void setValue(AcceptorCurrencyConversionResponse5 obj, CardPaymentEnvironment69 value) {
+			obj.setEnvironment(value);
 		}
 	};
 	@XmlElement(name = "Tx", required = true)
@@ -182,7 +195,7 @@ public class AcceptorCurrencyConversionResponse5 {
 	 * AcceptorCurrencyConversionResponse4.mmTransaction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCurrencyConversionResponse5, CardPaymentTransaction77> mmTransaction = new MMMessageAssociationEnd<AcceptorCurrencyConversionResponse5, CardPaymentTransaction77>() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5.mmObject();
@@ -195,7 +208,17 @@ public class AcceptorCurrencyConversionResponse5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction77.mmObject();
+			type_lazy = () -> CardPaymentTransaction77.mmObject();
+		}
+
+		@Override
+		public CardPaymentTransaction77 getValue(AcceptorCurrencyConversionResponse5 obj) {
+			return obj.getTransaction();
+		}
+
+		@Override
+		public void setValue(AcceptorCurrencyConversionResponse5 obj, CardPaymentTransaction77 value) {
+			obj.setTransaction(value);
 		}
 	};
 	@XmlElement(name = "CcyConvsRslt", required = true)
@@ -236,7 +259,7 @@ public class AcceptorCurrencyConversionResponse5 {
 	 * AcceptorCurrencyConversionResponse4.mmCurrencyConversionResult}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCurrencyConversionResult = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptorCurrencyConversionResponse5, CurrencyConversion16> mmCurrencyConversionResult = new MMMessageAssociationEnd<AcceptorCurrencyConversionResponse5, CurrencyConversion16>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyExchange;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5.mmObject();
@@ -249,7 +272,17 @@ public class AcceptorCurrencyConversionResponse5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CurrencyConversion16.mmObject();
+			type_lazy = () -> CurrencyConversion16.mmObject();
+		}
+
+		@Override
+		public CurrencyConversion16 getValue(AcceptorCurrencyConversionResponse5 obj) {
+			return obj.getCurrencyConversionResult();
+		}
+
+		@Override
+		public void setValue(AcceptorCurrencyConversionResponse5 obj, CurrencyConversion16 value) {
+			obj.setCurrencyConversionResult(value);
 		}
 	};
 
@@ -261,7 +294,7 @@ public class AcceptorCurrencyConversionResponse5 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponseV05.mmCurrencyConversionResponse);
 				trace_lazy = () -> CardPayment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCurrencyConversionResponse5";
 				definition = "Currency conversion outcome from the service provider.";
 				previousVersion_lazy = () -> AcceptorCurrencyConversionResponse4.mmObject();
@@ -274,7 +307,7 @@ public class AcceptorCurrencyConversionResponse5 {
 		return environment;
 	}
 
-	public AcceptorCurrencyConversionResponse5 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment69 environment) {
+	public AcceptorCurrencyConversionResponse5 setEnvironment(CardPaymentEnvironment69 environment) {
 		this.environment = Objects.requireNonNull(environment);
 		return this;
 	}
@@ -283,7 +316,7 @@ public class AcceptorCurrencyConversionResponse5 {
 		return transaction;
 	}
 
-	public AcceptorCurrencyConversionResponse5 setTransaction(com.tools20022.repository.msg.CardPaymentTransaction77 transaction) {
+	public AcceptorCurrencyConversionResponse5 setTransaction(CardPaymentTransaction77 transaction) {
 		this.transaction = Objects.requireNonNull(transaction);
 		return this;
 	}
@@ -292,7 +325,7 @@ public class AcceptorCurrencyConversionResponse5 {
 		return currencyConversionResult;
 	}
 
-	public AcceptorCurrencyConversionResponse5 setCurrencyConversionResult(com.tools20022.repository.msg.CurrencyConversion16 currencyConversionResult) {
+	public AcceptorCurrencyConversionResponse5 setCurrencyConversionResult(CurrencyConversion16 currencyConversionResult) {
 		this.currencyConversionResult = Objects.requireNonNull(currencyConversionResult);
 		return this;
 	}

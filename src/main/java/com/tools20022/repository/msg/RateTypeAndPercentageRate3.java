@@ -106,7 +106,7 @@ public class RateTypeAndPercentageRate3 {
 	 * definition} = "Value expressed as a rate type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRateType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RateTypeAndPercentageRate3, RateType30Choice> mmRateType = new MMMessageAssociationEnd<RateTypeAndPercentageRate3, RateType30Choice>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmWithholdingTaxType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndPercentageRate3.mmObject();
@@ -119,6 +119,16 @@ public class RateTypeAndPercentageRate3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RateType30Choice.mmObject();
+		}
+
+		@Override
+		public RateType30Choice getValue(RateTypeAndPercentageRate3 obj) {
+			return obj.getRateType();
+		}
+
+		@Override
+		public void setValue(RateTypeAndPercentageRate3 obj, RateType30Choice value) {
+			obj.setRateType(value);
 		}
 	};
 	@XmlElement(name = "Rate", required = true)
@@ -155,7 +165,7 @@ public class RateTypeAndPercentageRate3 {
 	 * definition} = "Value expressed as a rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RateTypeAndPercentageRate3, PercentageRate> mmRate = new MMMessageAttribute<RateTypeAndPercentageRate3, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndPercentageRate3.mmObject();
@@ -167,6 +177,16 @@ public class RateTypeAndPercentageRate3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(RateTypeAndPercentageRate3 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(RateTypeAndPercentageRate3 obj, PercentageRate value) {
+			obj.setRate(value);
 		}
 	};
 

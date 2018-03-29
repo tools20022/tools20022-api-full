@@ -109,7 +109,7 @@ public class OfferType1FormatChoice {
 	 * "Standard code to specify the conditions that apply to the offer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OfferType1FormatChoice, OfferType1Code> mmCode = new MMMessageAttribute<OfferType1FormatChoice, OfferType1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOfferType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OfferType1FormatChoice.mmObject();
@@ -121,6 +121,16 @@ public class OfferType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OfferType1Code.mmObject();
+		}
+
+		@Override
+		public OfferType1Code getValue(OfferType1FormatChoice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OfferType1FormatChoice obj, OfferType1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class OfferType1FormatChoice {
 	 * "Proprietary code to express the conditions that apply to the offer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OfferType1FormatChoice, GenericIdentification13> mmProprietary = new MMMessageAttribute<OfferType1FormatChoice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOfferType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OfferType1FormatChoice.mmObject();
@@ -171,6 +181,16 @@ public class OfferType1FormatChoice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(OfferType1FormatChoice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OfferType1FormatChoice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

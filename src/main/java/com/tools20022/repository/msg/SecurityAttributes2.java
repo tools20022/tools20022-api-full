@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CommonFinancialInstrumentAttributes2;
+import com.tools20022.repository.msg.FinancialInstrument28;
+import com.tools20022.repository.msg.SupplementaryData1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -79,7 +82,7 @@ public class SecurityAttributes2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "FinInstrmTp")
-	protected List<com.tools20022.repository.msg.FinancialInstrument28> financialInstrumentType;
+	protected List<FinancialInstrument28> financialInstrumentType;
 	/**
 	 * 
 	 <p>
@@ -115,7 +118,7 @@ public class SecurityAttributes2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityAttributes2, List<FinancialInstrument28>> mmFinancialInstrumentType = new MMMessageAssociationEnd<SecurityAttributes2, List<FinancialInstrument28>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityAttributes2.mmObject();
 			isDerived = false;
@@ -126,11 +129,21 @@ public class SecurityAttributes2 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityAttributes5.mmFinancialInstrumentType);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument28.mmObject();
+			type_lazy = () -> FinancialInstrument28.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrument28> getValue(SecurityAttributes2 obj) {
+			return obj.getFinancialInstrumentType();
+		}
+
+		@Override
+		public void setValue(SecurityAttributes2 obj, List<FinancialInstrument28> value) {
+			obj.setFinancialInstrumentType(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmAttrbts")
-	protected List<com.tools20022.repository.msg.CommonFinancialInstrumentAttributes2> financialInstrumentAttributes;
+	protected List<CommonFinancialInstrumentAttributes2> financialInstrumentAttributes;
 	/**
 	 * 
 	 <p>
@@ -168,7 +181,7 @@ public class SecurityAttributes2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityAttributes2, List<CommonFinancialInstrumentAttributes2>> mmFinancialInstrumentAttributes = new MMMessageAssociationEnd<SecurityAttributes2, List<CommonFinancialInstrumentAttributes2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityAttributes2.mmObject();
 			isDerived = false;
@@ -179,11 +192,21 @@ public class SecurityAttributes2 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityAttributes5.mmFinancialInstrumentAttributes);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CommonFinancialInstrumentAttributes2.mmObject();
+			type_lazy = () -> CommonFinancialInstrumentAttributes2.mmObject();
+		}
+
+		@Override
+		public List<CommonFinancialInstrumentAttributes2> getValue(SecurityAttributes2 obj) {
+			return obj.getFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(SecurityAttributes2 obj, List<CommonFinancialInstrumentAttributes2> value) {
+			obj.setFinancialInstrumentAttributes(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
-	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
+	protected List<SupplementaryData1> supplementaryData;
 	/**
 	 * 
 	 <p>
@@ -220,7 +243,7 @@ public class SecurityAttributes2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityAttributes2, List<SupplementaryData1>> mmSupplementaryData = new MMMessageAssociationEnd<SecurityAttributes2, List<SupplementaryData1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityAttributes2.mmObject();
 			isDerived = false;
@@ -231,7 +254,17 @@ public class SecurityAttributes2 {
 			nextVersions_lazy = () -> Arrays.asList(SecurityAttributes5.mmSupplementaryData);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
+			type_lazy = () -> SupplementaryData1.mmObject();
+		}
+
+		@Override
+		public List<SupplementaryData1> getValue(SecurityAttributes2 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecurityAttributes2 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -254,7 +287,7 @@ public class SecurityAttributes2 {
 		return financialInstrumentType == null ? financialInstrumentType = new ArrayList<>() : financialInstrumentType;
 	}
 
-	public SecurityAttributes2 setFinancialInstrumentType(List<com.tools20022.repository.msg.FinancialInstrument28> financialInstrumentType) {
+	public SecurityAttributes2 setFinancialInstrumentType(List<FinancialInstrument28> financialInstrumentType) {
 		this.financialInstrumentType = Objects.requireNonNull(financialInstrumentType);
 		return this;
 	}
@@ -263,7 +296,7 @@ public class SecurityAttributes2 {
 		return financialInstrumentAttributes == null ? financialInstrumentAttributes = new ArrayList<>() : financialInstrumentAttributes;
 	}
 
-	public SecurityAttributes2 setFinancialInstrumentAttributes(List<com.tools20022.repository.msg.CommonFinancialInstrumentAttributes2> financialInstrumentAttributes) {
+	public SecurityAttributes2 setFinancialInstrumentAttributes(List<CommonFinancialInstrumentAttributes2> financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = Objects.requireNonNull(financialInstrumentAttributes);
 		return this;
 	}
@@ -272,7 +305,7 @@ public class SecurityAttributes2 {
 		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public SecurityAttributes2 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+	public SecurityAttributes2 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
 		this.supplementaryData = Objects.requireNonNull(supplementaryData);
 		return this;
 	}

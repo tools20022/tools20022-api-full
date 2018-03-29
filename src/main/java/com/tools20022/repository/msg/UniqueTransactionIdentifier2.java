@@ -125,7 +125,7 @@ public class UniqueTransactionIdentifier2 {
 	 * UniqueTransactionIdentifier1.mmUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UniqueTransactionIdentifier2, Max52Text> mmUniqueTransactionIdentifier = new MMMessageAttribute<UniqueTransactionIdentifier2, Max52Text>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmObject();
@@ -138,6 +138,16 @@ public class UniqueTransactionIdentifier2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public Max52Text getValue(UniqueTransactionIdentifier2 obj) {
+			return obj.getUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(UniqueTransactionIdentifier2 obj, Max52Text value) {
+			obj.setUniqueTransactionIdentifier(value);
 		}
 	};
 	@XmlElement(name = "PrrUnqTxIdr")
@@ -181,7 +191,7 @@ public class UniqueTransactionIdentifier2 {
 	 * UniqueTransactionIdentifier1.mmPriorUniqueTransactionIdentifier}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriorUniqueTransactionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UniqueTransactionIdentifier2, List<Max52Text>> mmPriorUniqueTransactionIdentifier = new MMMessageAttribute<UniqueTransactionIdentifier2, List<Max52Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UniqueTransactionIdentifier2.mmObject();
@@ -193,6 +203,16 @@ public class UniqueTransactionIdentifier2 {
 			previousVersion_lazy = () -> UniqueTransactionIdentifier1.mmPriorUniqueTransactionIdentifier;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public List<Max52Text> getValue(UniqueTransactionIdentifier2 obj) {
+			return obj.getPriorUniqueTransactionIdentifier();
+		}
+
+		@Override
+		public void setValue(UniqueTransactionIdentifier2 obj, List<Max52Text> value) {
+			obj.setPriorUniqueTransactionIdentifier(value);
 		}
 	};
 

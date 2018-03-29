@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTimeChoice;
+import com.tools20022.repository.choice.DateCode11Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -114,7 +116,7 @@ public class DateFormat19Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat19Choice, DateAndDateTimeChoice> mmDate = new MMMessageAssociationEnd<DateFormat19Choice, DateAndDateTimeChoice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat19Choice.mmObject();
 			isDerived = false;
@@ -127,7 +129,17 @@ public class DateFormat19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
+			type_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(DateFormat19Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(DateFormat19Choice obj, DateAndDateTimeChoice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -169,7 +181,7 @@ public class DateFormat19Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DateFormat19Choice, DateCode11Choice> mmDateCode = new MMMessageAssociationEnd<DateFormat19Choice, DateCode11Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat19Choice.mmObject();
 			isDerived = false;
@@ -182,7 +194,17 @@ public class DateFormat19Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.DateCode11Choice.mmObject();
+			type_lazy = () -> DateCode11Choice.mmObject();
+		}
+
+		@Override
+		public DateCode11Choice getValue(DateFormat19Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(DateFormat19Choice obj, DateCode11Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -204,7 +226,7 @@ public class DateFormat19Choice {
 		return date;
 	}
 
-	public DateFormat19Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+	public DateFormat19Choice setDate(DateAndDateTimeChoice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -213,7 +235,7 @@ public class DateFormat19Choice {
 		return dateCode;
 	}
 
-	public DateFormat19Choice setDateCode(com.tools20022.repository.choice.DateCode11Choice dateCode) {
+	public DateFormat19Choice setDateCode(DateCode11Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

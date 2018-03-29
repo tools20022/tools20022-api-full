@@ -116,7 +116,7 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, FinancialInstrumentQuantity1> mmUnitsNumber = new MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, FinancialInstrumentQuantity1>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmUnitsNumber;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmObject();
@@ -128,6 +128,16 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity1 getValue(SidePocketUnitsOrAmountOrRate1Choice obj) {
+			return obj.getUnitsNumber();
+		}
+
+		@Override
+		public void setValue(SidePocketUnitsOrAmountOrRate1Choice obj, FinancialInstrumentQuantity1 value) {
+			obj.setUnitsNumber(value);
 		}
 	};
 	@XmlElement(name = "OrdrdAmt", required = true)
@@ -166,7 +176,7 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * "Amount of money to be invested or redeemed into the side pocket."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, ActiveCurrencyAndAmount> mmOrderedAmount = new MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmObject();
@@ -178,6 +188,16 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(SidePocketUnitsOrAmountOrRate1Choice obj) {
+			return obj.getOrderedAmount();
+		}
+
+		@Override
+		public void setValue(SidePocketUnitsOrAmountOrRate1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setOrderedAmount(value);
 		}
 	};
 	@XmlElement(name = "HldgsRate", required = true)
@@ -217,7 +237,7 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingsRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, PercentageRate> mmHoldingsRate = new MMMessageAttribute<SidePocketUnitsOrAmountOrRate1Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmHoldingsRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SidePocketUnitsOrAmountOrRate1Choice.mmObject();
@@ -229,6 +249,16 @@ public class SidePocketUnitsOrAmountOrRate1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SidePocketUnitsOrAmountOrRate1Choice obj) {
+			return obj.getHoldingsRate();
+		}
+
+		@Override
+		public void setValue(SidePocketUnitsOrAmountOrRate1Choice obj, PercentageRate value) {
+			obj.setHoldingsRate(value);
 		}
 	};
 

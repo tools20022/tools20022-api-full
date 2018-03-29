@@ -116,7 +116,7 @@ public class SecuritiesTransactionPrice9Choice {
 	 * definition} = "Indicates that price is expressed as a monetary value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMonetaryValue = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesTransactionPrice9Choice, AmountAndDirection56> mmMonetaryValue = new MMMessageAssociationEnd<SecuritiesTransactionPrice9Choice, AmountAndDirection56>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmNetPrice;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice9Choice.mmObject();
@@ -129,6 +129,16 @@ public class SecuritiesTransactionPrice9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AmountAndDirection56.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection56 getValue(SecuritiesTransactionPrice9Choice obj) {
+			return obj.getMonetaryValue();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice9Choice obj, AmountAndDirection56 value) {
+			obj.setMonetaryValue(value);
 		}
 	};
 	@XmlElement(name = "Pctg", required = true)
@@ -167,7 +177,7 @@ public class SecuritiesTransactionPrice9Choice {
 	 * "Indicates that price is expressed as a rate, that is a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice9Choice, PercentageRate> mmPercentage = new MMMessageAttribute<SecuritiesTransactionPrice9Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice9Choice.mmObject();
@@ -179,6 +189,16 @@ public class SecuritiesTransactionPrice9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SecuritiesTransactionPrice9Choice obj) {
+			return obj.getPercentage();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice9Choice obj, PercentageRate value) {
+			obj.setPercentage(value);
 		}
 	};
 	@XmlElement(name = "Yld", required = true)
@@ -216,7 +236,7 @@ public class SecuritiesTransactionPrice9Choice {
 	 * definition} = "Indicates that price is expressed as a yield."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice9Choice, PercentageRate> mmYield = new MMMessageAttribute<SecuritiesTransactionPrice9Choice, PercentageRate>() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmValue;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice9Choice.mmObject();
@@ -228,6 +248,16 @@ public class SecuritiesTransactionPrice9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public PercentageRate getValue(SecuritiesTransactionPrice9Choice obj) {
+			return obj.getYield();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice9Choice obj, PercentageRate value) {
+			obj.setYield(value);
 		}
 	};
 	@XmlElement(name = "PdgPric", required = true)
@@ -261,7 +291,7 @@ public class SecuritiesTransactionPrice9Choice {
 	 * "Indicates that price is currently not available, but pending."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPendingPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesTransactionPrice9Choice, PriceStatus1Code> mmPendingPrice = new MMMessageAttribute<SecuritiesTransactionPrice9Choice, PriceStatus1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionPrice9Choice.mmObject();
 			isDerived = false;
@@ -272,6 +302,16 @@ public class SecuritiesTransactionPrice9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceStatus1Code.mmObject();
+		}
+
+		@Override
+		public PriceStatus1Code getValue(SecuritiesTransactionPrice9Choice obj) {
+			return obj.getPendingPrice();
+		}
+
+		@Override
+		public void setValue(SecuritiesTransactionPrice9Choice obj, PriceStatus1Code value) {
+			obj.setPendingPrice(value);
 		}
 	};
 

@@ -148,7 +148,7 @@ public class TransportByRail4 {
 	 * TransportByRail2.mmPlaceOfReceipt}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRail4, Max35Text> mmPlaceOfReceipt = new MMMessageAttribute<TransportByRail4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmObject();
@@ -162,6 +162,16 @@ public class TransportByRail4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransportByRail4 obj) {
+			return obj.getPlaceOfReceipt();
+		}
+
+		@Override
+		public void setValue(TransportByRail4 obj, Max35Text value) {
+			obj.setPlaceOfReceipt(value);
 		}
 	};
 	@XmlElement(name = "PlcOfDlvry", required = true)
@@ -211,7 +221,7 @@ public class TransportByRail4 {
 	 * TransportByRail2.mmPlaceOfDelivery}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRail4, Max35Text> mmPlaceOfDelivery = new MMMessageAttribute<TransportByRail4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmObject();
@@ -225,6 +235,16 @@ public class TransportByRail4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TransportByRail4 obj) {
+			return obj.getPlaceOfDelivery();
+		}
+
+		@Override
+		public void setValue(TransportByRail4 obj, Max35Text value) {
+			obj.setPlaceOfDelivery(value);
 		}
 	};
 	@XmlElement(name = "RailCrrierNm")
@@ -276,7 +296,7 @@ public class TransportByRail4 {
 	 * TransportByRail2.mmRailCarrierName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRailCarrierName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRail4, Optional<Max70Text>> mmRailCarrierName = new MMMessageAttribute<TransportByRail4, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmObject();
@@ -290,6 +310,16 @@ public class TransportByRail4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TransportByRail4 obj) {
+			return obj.getRailCarrierName();
+		}
+
+		@Override
+		public void setValue(TransportByRail4 obj, Optional<Max70Text> value) {
+			obj.setRailCarrierName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RailCrrierCtry")
@@ -336,7 +366,7 @@ public class TransportByRail4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRailCarrierCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRail4, Optional<CountryCode>> mmRailCarrierCountry = new MMMessageAttribute<TransportByRail4, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmObject();
@@ -349,6 +379,16 @@ public class TransportByRail4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(TransportByRail4 obj) {
+			return obj.getRailCarrierCountry();
+		}
+
+		@Override
+		public void setValue(TransportByRail4 obj, Optional<CountryCode> value) {
+			obj.setRailCarrierCountry(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrrierAgtNm")
@@ -395,7 +435,7 @@ public class TransportByRail4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCarrierAgentName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRail4, Optional<Max70Text>> mmCarrierAgentName = new MMMessageAttribute<TransportByRail4, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmObject();
@@ -408,6 +448,16 @@ public class TransportByRail4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(TransportByRail4 obj) {
+			return obj.getCarrierAgentName();
+		}
+
+		@Override
+		public void setValue(TransportByRail4 obj, Optional<Max70Text> value) {
+			obj.setCarrierAgentName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CrrierAgtCtry")
@@ -454,7 +504,7 @@ public class TransportByRail4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCarrierAgentCountry = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransportByRail4, Optional<CountryCode>> mmCarrierAgentCountry = new MMMessageAttribute<TransportByRail4, Optional<CountryCode>>() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRail4.mmObject();
@@ -467,6 +517,16 @@ public class TransportByRail4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public Optional<CountryCode> getValue(TransportByRail4 obj) {
+			return obj.getCarrierAgentCountry();
+		}
+
+		@Override
+		public void setValue(TransportByRail4 obj, Optional<CountryCode> value) {
+			obj.setCarrierAgentCountry(value.orElse(null));
 		}
 	};
 

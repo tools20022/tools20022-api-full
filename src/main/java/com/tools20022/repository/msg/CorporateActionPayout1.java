@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CUSIPIdentification1;
+import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -163,7 +165,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Unique number associated with a payout within an option."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Exact3NumericText> mmPayoutNumber = new MMMessageAttribute<CorporateActionPayout1, Exact3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -175,6 +177,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
+		}
+
+		@Override
+		public Exact3NumericText getValue(CorporateActionPayout1 obj) {
+			return obj.getPayoutNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Exact3NumericText value) {
+			obj.setPayoutNumber(value);
 		}
 	};
 	@XmlElement(name = "PyoutTp", required = true)
@@ -210,7 +222,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Describes the type of payout associated with the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayoutType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, DTCCPayoutType2Code> mmPayoutType = new MMMessageAttribute<CorporateActionPayout1, DTCCPayoutType2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -222,6 +234,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DTCCPayoutType2Code.mmObject();
+		}
+
+		@Override
+		public DTCCPayoutType2Code getValue(CorporateActionPayout1 obj) {
+			return obj.getPayoutType();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, DTCCPayoutType2Code value) {
+			obj.setPayoutType(value);
 		}
 	};
 	@XmlElement(name = "DTCCshRate")
@@ -259,7 +281,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCCashRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<DecimalNumber>> mmDTCCashRate = new MMMessageAttribute<CorporateActionPayout1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -271,6 +293,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionPayout1 obj) {
+			return obj.getDTCCashRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<DecimalNumber> value) {
+			obj.setDTCCashRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrjctdAmt")
@@ -306,7 +338,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Projected cash amount based on the entitlement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProjectedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<DecimalNumber>> mmProjectedAmount = new MMMessageAttribute<CorporateActionPayout1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -318,6 +350,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionPayout1 obj) {
+			return obj.getProjectedAmount();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<DecimalNumber> value) {
+			obj.setProjectedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCDsbrsdScty")
@@ -355,7 +397,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCDisbursedSecurity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<CUSIPIdentification1>> mmDTCDisbursedSecurity = new MMMessageAttribute<CorporateActionPayout1, Optional<CUSIPIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -366,7 +408,17 @@ public class CorporateActionPayout1 {
 			definition = "Security identification that DTC (The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CUSIPIdentification1.mmObject();
+			complexType_lazy = () -> CUSIPIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<CUSIPIdentification1> getValue(CorporateActionPayout1 obj) {
+			return obj.getDTCDisbursedSecurity();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<CUSIPIdentification1> value) {
+			obj.setDTCDisbursedSecurity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCDsbrsdSctyDesc")
@@ -405,7 +457,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCDisbursedSecurityDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<RestrictedFINMax31Text>> mmDTCDisbursedSecurityDescription = new MMMessageAttribute<CorporateActionPayout1, Optional<RestrictedFINMax31Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -417,6 +469,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax31Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax31Text> getValue(CorporateActionPayout1 obj) {
+			return obj.getDTCDisbursedSecurityDescription();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<RestrictedFINMax31Text> value) {
+			obj.setDTCDisbursedSecurityDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubRsnCd", required = true)
@@ -452,7 +514,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Sub-reason for the adjustment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubReasonCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Max4AlphaNumericText> mmSubReasonCode = new MMMessageAttribute<CorporateActionPayout1, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -464,6 +526,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(CorporateActionPayout1 obj) {
+			return obj.getSubReasonCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Max4AlphaNumericText value) {
+			obj.setSubReasonCode(value);
 		}
 	};
 	@XmlElement(name = "DTCSctyRate")
@@ -501,7 +573,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCSecurityRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<DecimalNumber>> mmDTCSecurityRate = new MMMessageAttribute<CorporateActionPayout1, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -513,6 +585,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(CorporateActionPayout1 obj) {
+			return obj.getDTCSecurityRate();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<DecimalNumber> value) {
+			obj.setDTCSecurityRate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CshInLieuOfShrPric")
@@ -550,7 +632,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashInLieuOfSharePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmCashInLieuOfSharePrice = new MMMessageAttribute<CorporateActionPayout1, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -562,6 +644,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(CorporateActionPayout1 obj) {
+			return obj.getCashInLieuOfSharePrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setCashInLieuOfSharePrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PngAgt")
@@ -596,7 +688,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Paying agent for this corporate action event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayingAgent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<Max8Text>> mmPayingAgent = new MMMessageAttribute<CorporateActionPayout1, Optional<Max8Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -608,6 +700,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max8Text> getValue(CorporateActionPayout1 obj) {
+			return obj.getPayingAgent();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<Max8Text> value) {
+			obj.setPayingAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyId", required = true)
@@ -643,7 +745,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Identification of the underlying security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, CUSIPIdentification1> mmSecurityIdentification = new MMMessageAttribute<CorporateActionPayout1, CUSIPIdentification1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -654,7 +756,17 @@ public class CorporateActionPayout1 {
 			definition = "Identification of the underlying security.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.CUSIPIdentification1.mmObject();
+			complexType_lazy = () -> CUSIPIdentification1.mmObject();
+		}
+
+		@Override
+		public CUSIPIdentification1 getValue(CorporateActionPayout1 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, CUSIPIdentification1 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctyDesc")
@@ -690,7 +802,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Underlying security description."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityDescription = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<RestrictedFINMax31Text>> mmSecurityDescription = new MMMessageAttribute<CorporateActionPayout1, Optional<RestrictedFINMax31Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -702,6 +814,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINMax31Text.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINMax31Text> getValue(CorporateActionPayout1 obj) {
+			return obj.getSecurityDescription();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<RestrictedFINMax31Text> value) {
+			obj.setSecurityDescription(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCAsstClss")
@@ -739,7 +861,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAssetClass = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<AssetClass1Code>> mmDTCAssetClass = new MMMessageAttribute<CorporateActionPayout1, Optional<AssetClass1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -751,6 +873,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClass1Code.mmObject();
+		}
+
+		@Override
+		public Optional<AssetClass1Code> getValue(CorporateActionPayout1 obj) {
+			return obj.getDTCAssetClass();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<AssetClass1Code> value) {
+			obj.setDTCAssetClass(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCAsstTp")
@@ -788,7 +920,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCAssetType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<DTCAssetType1Code>> mmDTCAssetType = new MMMessageAttribute<CorporateActionPayout1, Optional<DTCAssetType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -800,6 +932,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCAssetType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCAssetType1Code> getValue(CorporateActionPayout1 obj) {
+			return obj.getDTCAssetType();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<DTCAssetType1Code> value) {
+			obj.setDTCAssetType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DclrdPyblDt")
@@ -836,7 +978,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeclaredPayableDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<ISODate>> mmDeclaredPayableDate = new MMMessageAttribute<CorporateActionPayout1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -848,6 +990,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionPayout1 obj) {
+			return obj.getDeclaredPayableDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<ISODate> value) {
+			obj.setDeclaredPayableDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp")
@@ -885,7 +1037,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<ExtendedEventType1Code>> mmEventType = new MMMessageAttribute<CorporateActionPayout1, Optional<ExtendedEventType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -897,6 +1049,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExtendedEventType1Code> getValue(CorporateActionPayout1 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<ExtendedEventType1Code> value) {
+			obj.setEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubEvtTp")
@@ -934,7 +1096,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<DTCCSubEventType1Code>> mmSubEventType = new MMMessageAttribute<CorporateActionPayout1, Optional<DTCCSubEventType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -946,6 +1108,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCCSubEventType1Code> getValue(CorporateActionPayout1 obj) {
+			return obj.getSubEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<DTCCSubEventType1Code> value) {
+			obj.setSubEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Pos")
@@ -982,7 +1154,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<SignedQuantityFormat4>> mmPosition = new MMMessageAttribute<CorporateActionPayout1, Optional<SignedQuantityFormat4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -993,7 +1165,17 @@ public class CorporateActionPayout1 {
 			definition = "Total eligible balance for a particular corporate action.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionPayout1 obj) {
+			return obj.getPosition();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FrctnlPos")
@@ -1029,7 +1211,7 @@ public class CorporateActionPayout1 {
 	 * definition} = "Fractional share quantity."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFractionalPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<SignedQuantityFormat4>> mmFractionalPosition = new MMMessageAttribute<CorporateActionPayout1, Optional<SignedQuantityFormat4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -1040,7 +1222,17 @@ public class CorporateActionPayout1 {
 			definition = "Fractional share quantity.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
+			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
+		}
+
+		@Override
+		public Optional<SignedQuantityFormat4> getValue(CorporateActionPayout1 obj) {
+			return obj.getFractionalPosition();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<SignedQuantityFormat4> value) {
+			obj.setFractionalPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCPosCaptrDt")
@@ -1077,7 +1269,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCPositionCaptureDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<ISODate>> mmDTCPositionCaptureDate = new MMMessageAttribute<CorporateActionPayout1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -1089,6 +1281,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(CorporateActionPayout1 obj) {
+			return obj.getDTCPositionCaptureDate();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<ISODate> value) {
+			obj.setDTCPositionCaptureDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtcptCrossRef")
@@ -1125,7 +1327,7 @@ public class CorporateActionPayout1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParticipantCrossReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPayout1, Optional<Max16Text>> mmParticipantCrossReference = new MMMessageAttribute<CorporateActionPayout1, Optional<Max16Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPayout1.mmObject();
 			isDerived = false;
@@ -1137,6 +1339,16 @@ public class CorporateActionPayout1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max16Text> getValue(CorporateActionPayout1 obj) {
+			return obj.getParticipantCrossReference();
+		}
+
+		@Override
+		public void setValue(CorporateActionPayout1 obj, Optional<Max16Text> value) {
+			obj.setParticipantCrossReference(value.orElse(null));
 		}
 	};
 
@@ -1202,7 +1414,7 @@ public class CorporateActionPayout1 {
 		return dTCDisbursedSecurity == null ? Optional.empty() : Optional.of(dTCDisbursedSecurity);
 	}
 
-	public CorporateActionPayout1 setDTCDisbursedSecurity(com.tools20022.repository.msg.CUSIPIdentification1 dTCDisbursedSecurity) {
+	public CorporateActionPayout1 setDTCDisbursedSecurity(CUSIPIdentification1 dTCDisbursedSecurity) {
 		this.dTCDisbursedSecurity = dTCDisbursedSecurity;
 		return this;
 	}
@@ -1256,7 +1468,7 @@ public class CorporateActionPayout1 {
 		return securityIdentification;
 	}
 
-	public CorporateActionPayout1 setSecurityIdentification(com.tools20022.repository.msg.CUSIPIdentification1 securityIdentification) {
+	public CorporateActionPayout1 setSecurityIdentification(CUSIPIdentification1 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}
@@ -1319,7 +1531,7 @@ public class CorporateActionPayout1 {
 		return position == null ? Optional.empty() : Optional.of(position);
 	}
 
-	public CorporateActionPayout1 setPosition(com.tools20022.repository.msg.SignedQuantityFormat4 position) {
+	public CorporateActionPayout1 setPosition(SignedQuantityFormat4 position) {
 		this.position = position;
 		return this;
 	}
@@ -1328,7 +1540,7 @@ public class CorporateActionPayout1 {
 		return fractionalPosition == null ? Optional.empty() : Optional.of(fractionalPosition);
 	}
 
-	public CorporateActionPayout1 setFractionalPosition(com.tools20022.repository.msg.SignedQuantityFormat4 fractionalPosition) {
+	public CorporateActionPayout1 setFractionalPosition(SignedQuantityFormat4 fractionalPosition) {
 		this.fractionalPosition = fractionalPosition;
 		return this;
 	}

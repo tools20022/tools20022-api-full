@@ -136,7 +136,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD3, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<OptionTransactionDetailsSD3, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -148,6 +148,16 @@ public class OptionTransactionDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxId", required = true)
@@ -186,7 +196,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmTransactionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD3, Max15Text> mmTransactionIdentification = new MMMessageAttribute<OptionTransactionDetailsSD3, Max15Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -198,6 +208,16 @@ public class OptionTransactionDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15Text.mmObject();
+		}
+
+		@Override
+		public Max15Text getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, Max15Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "TxSeqNb")
@@ -237,7 +257,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmTransactionSequenceNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD3, Optional<Max3NumericText>> mmTransactionSequenceNumber = new MMMessageAttribute<OptionTransactionDetailsSD3, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -249,6 +269,16 @@ public class OptionTransactionDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getTransactionSequenceNumber();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, Optional<Max3NumericText> value) {
+			obj.setTransactionSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxIdDt", required = true)
@@ -287,7 +317,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmTransactionIdentificationDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionIdentificationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD3, ISODateTime> mmTransactionIdentificationDate = new MMMessageAttribute<OptionTransactionDetailsSD3, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -299,6 +329,16 @@ public class OptionTransactionDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getTransactionIdentificationDate();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, ISODateTime value) {
+			obj.setTransactionIdentificationDate(value);
 		}
 	};
 	@XmlElement(name = "TxIdQty", required = true)
@@ -337,7 +377,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmTransactionIdentificationQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransactionIdentificationQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD3, FinancialInstrumentQuantity15Choice> mmTransactionIdentificationQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD3, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -350,6 +390,16 @@ public class OptionTransactionDetailsSD3 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getTransactionIdentificationQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setTransactionIdentificationQuantity(value);
 		}
 	};
 	@XmlElement(name = "EntitldAmt")
@@ -387,7 +437,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmEntitledAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEntitledAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD3, Optional<RestrictedFINActiveCurrencyAndAmount>> mmEntitledAmount = new MMMessageAttribute<OptionTransactionDetailsSD3, Optional<RestrictedFINActiveCurrencyAndAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -399,6 +449,16 @@ public class OptionTransactionDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAndAmount> getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getEntitledAmount();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, Optional<RestrictedFINActiveCurrencyAndAmount> value) {
+			obj.setEntitledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EntitldQty")
@@ -436,7 +496,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmEntitledQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEntitledQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD3, Optional<FinancialInstrumentQuantity15Choice>> mmEntitledQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD3, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -449,6 +509,16 @@ public class OptionTransactionDetailsSD3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getEntitledQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setEntitledQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtNtrdQty")
@@ -487,7 +557,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmAgentEnteredQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgentEnteredQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD3, Optional<FinancialInstrumentQuantity15Choice>> mmAgentEnteredQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD3, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -500,6 +570,16 @@ public class OptionTransactionDetailsSD3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getAgentEnteredQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setAgentEnteredQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AgtRmngQty")
@@ -538,7 +618,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmAgentRemainingQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgentRemainingQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OptionTransactionDetailsSD3, Optional<FinancialInstrumentQuantity15Choice>> mmAgentRemainingQuantity = new MMMessageAssociationEnd<OptionTransactionDetailsSD3, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -551,6 +631,16 @@ public class OptionTransactionDetailsSD3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getAgentRemainingQuantity();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setAgentRemainingQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CstmrRefId")
@@ -588,7 +678,7 @@ public class OptionTransactionDetailsSD3 {
 	 * OptionTransactionDetailsSD1.mmCustomerReferenceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCustomerReferenceIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OptionTransactionDetailsSD3, Optional<Max30Text>> mmCustomerReferenceIdentification = new MMMessageAttribute<OptionTransactionDetailsSD3, Optional<Max30Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OptionTransactionDetailsSD3.mmObject();
 			isDerived = false;
@@ -600,6 +690,16 @@ public class OptionTransactionDetailsSD3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max30Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max30Text> getValue(OptionTransactionDetailsSD3 obj) {
+			return obj.getCustomerReferenceIdentification();
+		}
+
+		@Override
+		public void setValue(OptionTransactionDetailsSD3 obj, Optional<Max30Text> value) {
+			obj.setCustomerReferenceIdentification(value.orElse(null));
 		}
 	};
 

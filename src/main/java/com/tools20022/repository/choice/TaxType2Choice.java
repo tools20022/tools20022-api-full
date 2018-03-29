@@ -103,7 +103,7 @@ public class TaxType2Choice {
 	 * definition} = "Type of tax applied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxType2Choice, TaxType9Code> mmType = new MMMessageAttribute<TaxType2Choice, TaxType9Code>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxType2Choice.mmObject();
@@ -115,6 +115,16 @@ public class TaxType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TaxType9Code.mmObject();
+		}
+
+		@Override
+		public TaxType9Code getValue(TaxType2Choice obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(TaxType2Choice obj, TaxType9Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "OthrTaxTp", required = true)
@@ -150,7 +160,7 @@ public class TaxType2Choice {
 	 * definition} = "Specifies types of tax not present in a code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherTaxType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxType2Choice, Max35Text> mmOtherTaxType = new MMMessageAttribute<TaxType2Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxType2Choice.mmObject();
@@ -162,6 +172,16 @@ public class TaxType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(TaxType2Choice obj) {
+			return obj.getOtherTaxType();
+		}
+
+		@Override
+		public void setValue(TaxType2Choice obj, Max35Text value) {
+			obj.setOtherTaxType(value);
 		}
 	};
 

@@ -26,7 +26,6 @@ import com.tools20022.repository.choice.OvernightIndexSwap4Choice;
 import com.tools20022.repository.msg.MoneyMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.MoneyMarketStatisticalReportingISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,7 +126,7 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 	 * MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmReportHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReportHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MoneyMarketOvernightIndexSwapsStatisticalReportV02, MoneyMarketReportHeader1> mmReportHeader = new MMMessageBuildingBlock<MoneyMarketOvernightIndexSwapsStatisticalReportV02, MoneyMarketReportHeader1>() {
 		{
 			xmlTag = "RptHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +138,14 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 			complexType_lazy = () -> MoneyMarketReportHeader1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MoneyMarketOvernightIndexSwapsStatisticalReportV02.class.getMethod("getReportHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MoneyMarketReportHeader1 getValue(MoneyMarketOvernightIndexSwapsStatisticalReportV02 obj) {
+			return obj.getReportHeader();
+		}
+
+		@Override
+		public void setValue(MoneyMarketOvernightIndexSwapsStatisticalReportV02 obj, MoneyMarketReportHeader1 value) {
+			obj.setReportHeader(value);
 		}
 	};
 	@XmlElement(name = "OvrnghtIndxSwpsRpt", required = true)
@@ -180,7 +181,7 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 	 * mmOvernightIndexSwapsReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOvernightIndexSwapsReport = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MoneyMarketOvernightIndexSwapsStatisticalReportV02, OvernightIndexSwap4Choice> mmOvernightIndexSwapsReport = new MMMessageBuildingBlock<MoneyMarketOvernightIndexSwapsStatisticalReportV02, OvernightIndexSwap4Choice>() {
 		{
 			xmlTag = "OvrnghtIndxSwpsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,12 +193,14 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 			complexType_lazy = () -> OvernightIndexSwap4Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MoneyMarketOvernightIndexSwapsStatisticalReportV02.class.getMethod("getOvernightIndexSwapsReport", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public OvernightIndexSwap4Choice getValue(MoneyMarketOvernightIndexSwapsStatisticalReportV02 obj) {
+			return obj.getOvernightIndexSwapsReport();
+		}
+
+		@Override
+		public void setValue(MoneyMarketOvernightIndexSwapsStatisticalReportV02 obj, OvernightIndexSwap4Choice value) {
+			obj.setOvernightIndexSwapsReport(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -232,7 +235,7 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 	 * MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<MoneyMarketOvernightIndexSwapsStatisticalReportV02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<MoneyMarketOvernightIndexSwapsStatisticalReportV02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,12 +246,14 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return MoneyMarketOvernightIndexSwapsStatisticalReportV02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(MoneyMarketOvernightIndexSwapsStatisticalReportV02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(MoneyMarketOvernightIndexSwapsStatisticalReportV02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

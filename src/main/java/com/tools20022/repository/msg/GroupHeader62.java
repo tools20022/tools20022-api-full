@@ -31,6 +31,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -146,7 +148,7 @@ public class GroupHeader62 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader62, Max35Text> mmMessageIdentification = new MMMessageAttribute<GroupHeader62, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader62.mmObject();
@@ -158,6 +160,16 @@ public class GroupHeader62 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GroupHeader62 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader62 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -193,7 +205,7 @@ public class GroupHeader62 {
 	 * definition} = "Date and time at which the message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader62, ISODateTime> mmCreationDateTime = new MMMessageAttribute<GroupHeader62, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader62.mmObject();
@@ -205,6 +217,16 @@ public class GroupHeader62 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(GroupHeader62 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(GroupHeader62 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "Authstn")
@@ -238,7 +260,7 @@ public class GroupHeader62 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader62, List<Authorisation1Choice>> mmAuthorisation = new MMMessageAttribute<GroupHeader62, List<Authorisation1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader62.mmObject();
 			isDerived = false;
@@ -249,6 +271,16 @@ public class GroupHeader62 {
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> Authorisation1Choice.mmObject();
+		}
+
+		@Override
+		public List<Authorisation1Choice> getValue(GroupHeader62 obj) {
+			return obj.getAuthorisation();
+		}
+
+		@Override
+		public void setValue(GroupHeader62 obj, List<Authorisation1Choice> value) {
+			obj.setAuthorisation(value);
 		}
 	};
 	@XmlElement(name = "CpyInd")
@@ -282,7 +314,7 @@ public class GroupHeader62 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader62, Optional<CopyDuplicate1Code>> mmCopyIndicator = new MMMessageAttribute<GroupHeader62, Optional<CopyDuplicate1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader62.mmObject();
 			isDerived = false;
@@ -293,6 +325,16 @@ public class GroupHeader62 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(GroupHeader62 obj) {
+			return obj.getCopyIndicator();
+		}
+
+		@Override
+		public void setValue(GroupHeader62 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InitgPty", required = true)
@@ -329,7 +371,7 @@ public class GroupHeader62 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader62, PartyIdentification43> mmInitiatingParty = new MMMessageAssociationEnd<GroupHeader62, PartyIdentification43>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader62.mmObject();
@@ -341,7 +383,17 @@ public class GroupHeader62 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public PartyIdentification43 getValue(GroupHeader62 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(GroupHeader62 obj, PartyIdentification43 value) {
+			obj.setInitiatingParty(value);
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -373,7 +425,7 @@ public class GroupHeader62 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader62, Optional<PartyIdentification43>> mmMessageRecipient = new MMMessageAssociationEnd<GroupHeader62, Optional<PartyIdentification43>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader62.mmObject();
 			isDerived = false;
@@ -384,7 +436,17 @@ public class GroupHeader62 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(GroupHeader62 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(GroupHeader62 obj, Optional<PartyIdentification43> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FwdgAgt")
@@ -422,7 +484,7 @@ public class GroupHeader62 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForwardingAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader62, Optional<BranchAndFinancialInstitutionIdentification5>> mmForwardingAgent = new MMMessageAssociationEnd<GroupHeader62, Optional<BranchAndFinancialInstitutionIdentification5>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader62.mmObject();
@@ -434,7 +496,17 @@ public class GroupHeader62 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+			type_lazy = () -> BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+
+		@Override
+		public Optional<BranchAndFinancialInstitutionIdentification5> getValue(GroupHeader62 obj) {
+			return obj.getForwardingAgent();
+		}
+
+		@Override
+		public void setValue(GroupHeader62 obj, Optional<BranchAndFinancialInstitutionIdentification5> value) {
+			obj.setForwardingAgent(value.orElse(null));
 		}
 	};
 
@@ -495,7 +567,7 @@ public class GroupHeader62 {
 		return initiatingParty;
 	}
 
-	public GroupHeader62 setInitiatingParty(com.tools20022.repository.msg.PartyIdentification43 initiatingParty) {
+	public GroupHeader62 setInitiatingParty(PartyIdentification43 initiatingParty) {
 		this.initiatingParty = Objects.requireNonNull(initiatingParty);
 		return this;
 	}
@@ -504,7 +576,7 @@ public class GroupHeader62 {
 		return messageRecipient == null ? Optional.empty() : Optional.of(messageRecipient);
 	}
 
-	public GroupHeader62 setMessageRecipient(com.tools20022.repository.msg.PartyIdentification43 messageRecipient) {
+	public GroupHeader62 setMessageRecipient(PartyIdentification43 messageRecipient) {
 		this.messageRecipient = messageRecipient;
 		return this;
 	}
@@ -513,7 +585,7 @@ public class GroupHeader62 {
 		return forwardingAgent == null ? Optional.empty() : Optional.of(forwardingAgent);
 	}
 
-	public GroupHeader62 setForwardingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 forwardingAgent) {
+	public GroupHeader62 setForwardingAgent(BranchAndFinancialInstitutionIdentification5 forwardingAgent) {
 		this.forwardingAgent = forwardingAgent;
 		return this;
 	}

@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.MessageHeader9;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msg.TransactionQuery4;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -115,7 +114,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GetTransactionV07"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -153,7 +152,7 @@ public class GetTransactionV07 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetTransactionV07, MessageHeader9> mmMessageHeader = new MMMessageBuildingBlock<GetTransactionV07, MessageHeader9>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,12 +163,14 @@ public class GetTransactionV07 {
 			complexType_lazy = () -> MessageHeader9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetTransactionV07.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader9 getValue(GetTransactionV07 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(GetTransactionV07 obj, MessageHeader9 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "TxQryDef")
@@ -197,7 +198,7 @@ public class GetTransactionV07 {
 	 * definition} = "Defines the transaction query criteria."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionQueryDefinition = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetTransactionV07, Optional<TransactionQuery4>> mmTransactionQueryDefinition = new MMMessageBuildingBlock<GetTransactionV07, Optional<TransactionQuery4>>() {
 		{
 			xmlTag = "TxQryDef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,12 +209,14 @@ public class GetTransactionV07 {
 			complexType_lazy = () -> TransactionQuery4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetTransactionV07.class.getMethod("getTransactionQueryDefinition", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransactionQuery4> getValue(GetTransactionV07 obj) {
+			return obj.getTransactionQueryDefinition();
+		}
+
+		@Override
+		public void setValue(GetTransactionV07 obj, Optional<TransactionQuery4> value) {
+			obj.setTransactionQueryDefinition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -243,7 +246,7 @@ public class GetTransactionV07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<GetTransactionV07, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<GetTransactionV07, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,19 +256,21 @@ public class GetTransactionV07 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return GetTransactionV07.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(GetTransactionV07 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(GetTransactionV07 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GetTransactionV07";
 				definition = "Scope\r\nThe GetTransaction message is sent by a member to the transaction administrator.\r\nIt is used to request information about payment instructions held at the transaction administrator. Payment instructions are either sent by the member, debiting or crediting its account at the transaction administrator or received by the transaction administrator, crediting or debiting the member's account.\r\nUsage\r\nFollowing normal business flows, transactions registered by the transaction administrator may be queued for later settlement (because of insufficient funds available, or because of risk or liquidity limits, etc.). A transaction may have a series of statuses. These can be transient (such as pending or related types) and final (such as rejected, revoked and/or settled).\r\nMembers of a system need to have information about the payments queue(s) and must have the ability to take action (that is, to cancel or modify the transaction(s) to be settled). Note, however, that actions by a member will always concern transactions in a transient status.\r\nAt any time during the operating hours of the system, the member can query the transaction administrator to get information about transactions, whatever their status.\r\nThese requests will concern either all transactions, all transactions with a particular status or a specific transaction.\r\nThe member can request information about transactions through a series of criteria, corresponding to the known information stored at the transaction administrator, based on the following elements:\r\n- provenance or destination of the payment (payment to/payment from)\r\n- transaction reference\r\n- transfer value date\r\n- payment instruction reference\r\n- payment instruction status, as registered at the transaction administrator\r\n- instructed amount and/or currency\r\n- interbank settlement amount and/or currency\r\n- credit/debit indicator of the payment instruction/transaction\r\n- SWIFT FIN payment message used for the payment instruction\r\n- priority of the payment transaction\r\n- period in which the payment instruction should be processed (processing validity time)\r\n- instructions given, related to the processing of the transaction\r\n- type of payment instructed\r\n- account identification (entries booked to a specific account)\r\n- entry amount and/or currency\r\n- entry debit/credit indicator (if absent, all entries should be reported).";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

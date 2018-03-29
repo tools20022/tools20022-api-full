@@ -21,11 +21,12 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.CodeOrProprietary1Choice;
 import com.tools20022.repository.choice.ProcessingType1Choice;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Account;
+import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BalanceRestrictionType1;
 import com.tools20022.repository.msg.Restriction1;
 import com.tools20022.repository.msg.RestrictionModification1;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -139,7 +140,7 @@ public class AccountRestriction {
 	 * definition} = "Account on which restrictions are specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountRestriction, Optional<Account>> mmAccount = new MMBusinessAssociationEnd<AccountRestriction, Optional<Account>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountRestriction.mmObject();
@@ -148,9 +149,19 @@ public class AccountRestriction {
 			definition = "Account on which restrictions are specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmAccountRestriction;
+			opposite_lazy = () -> Account.mmAccountRestriction;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Account.mmObject();
+			type_lazy = () -> Account.mmObject();
+		}
+
+		@Override
+		public Optional<Account> getValue(AccountRestriction obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountRestriction obj, Optional<Account> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	protected Max35Text restrictionType;
@@ -202,7 +213,7 @@ public class AccountRestriction {
 	 * definition} = "Type of the restriction."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRestrictionType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<AccountRestriction, Max35Text> mmRestrictionType = new MMBusinessAttribute<AccountRestriction, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(ProcessingType1Choice.mmCode, ProcessingType1Choice.mmProprietary, BalanceRestrictionType1.mmType, BalanceRestrictionType1.mmProcessingType, CodeOrProprietary1Choice.mmCode,
 					CodeOrProprietary1Choice.mmProprietary);
@@ -216,15 +227,17 @@ public class AccountRestriction {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AccountRestriction.class.getMethod("getRestrictionType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(AccountRestriction obj) {
+			return obj.getRestrictionType();
+		}
+
+		@Override
+		public void setValue(AccountRestriction obj, Max35Text value) {
+			obj.setRestrictionType(value);
 		}
 	};
-	protected List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod;
+	protected List<DateTimePeriod> validityPeriod;
 	/**
 	 * 
 	 <p>
@@ -258,7 +271,7 @@ public class AccountRestriction {
 	 * definition} = "Period during which the restriction is effective."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<AccountRestriction, List<DateTimePeriod>> mmValidityPeriod = new MMBusinessAssociationEnd<AccountRestriction, List<DateTimePeriod>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountRestriction.mmObject();
@@ -266,9 +279,19 @@ public class AccountRestriction {
 			name = "ValidityPeriod";
 			definition = "Period during which the restriction is effective.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmAccountRestriction;
+			opposite_lazy = () -> DateTimePeriod.mmAccountRestriction;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
+			type_lazy = () -> DateTimePeriod.mmObject();
+		}
+
+		@Override
+		public List<DateTimePeriod> getValue(AccountRestriction obj) {
+			return obj.getValidityPeriod();
+		}
+
+		@Override
+		public void setValue(AccountRestriction obj, List<DateTimePeriod> value) {
+			obj.setValidityPeriod(value);
 		}
 	};
 
@@ -279,7 +302,7 @@ public class AccountRestriction {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountRestriction";
 				definition = "Restriction on capability or operations allowed.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmAccountRestriction, com.tools20022.repository.entity.DateTimePeriod.mmAccountRestriction);
+				associationDomain_lazy = () -> Arrays.asList(Account.mmAccountRestriction, DateTimePeriod.mmAccountRestriction);
 				derivationElement_lazy = () -> Arrays.asList(Restriction1.mmRestrictionType, RestrictionModification1.mmRestriction);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountRestriction.mmAccount, com.tools20022.repository.entity.AccountRestriction.mmRestrictionType,
 						com.tools20022.repository.entity.AccountRestriction.mmValidityPeriod);
@@ -298,7 +321,7 @@ public class AccountRestriction {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public AccountRestriction setAccount(com.tools20022.repository.entity.Account account) {
+	public AccountRestriction setAccount(Account account) {
 		this.account = account;
 		return this;
 	}
@@ -316,7 +339,7 @@ public class AccountRestriction {
 		return validityPeriod == null ? validityPeriod = new ArrayList<>() : validityPeriod;
 	}
 
-	public AccountRestriction setValidityPeriod(List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod) {
+	public AccountRestriction setValidityPeriod(List<DateTimePeriod> validityPeriod) {
 		this.validityPeriod = Objects.requireNonNull(validityPeriod);
 		return this;
 	}

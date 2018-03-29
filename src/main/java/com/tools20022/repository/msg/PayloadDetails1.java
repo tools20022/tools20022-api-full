@@ -105,7 +105,7 @@ public class PayloadDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayloadIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PayloadDetails1, Max35Text> mmPayloadIdentifier = new MMMessageAttribute<PayloadDetails1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDetails1.mmObject();
 			isDerived = false;
@@ -116,6 +116,16 @@ public class PayloadDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(PayloadDetails1 obj) {
+			return obj.getPayloadIdentifier();
+		}
+
+		@Override
+		public void setValue(PayloadDetails1 obj, Max35Text value) {
+			obj.setPayloadIdentifier(value);
 		}
 	};
 	@XmlElement(name = "CreDtAndTm", required = true)
@@ -147,7 +157,7 @@ public class PayloadDetails1 {
 	 * definition} = "Date and time when the file was created by the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateAndTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PayloadDetails1, ISODateTime> mmCreationDateAndTime = new MMMessageAttribute<PayloadDetails1, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDetails1.mmObject();
 			isDerived = false;
@@ -158,6 +168,16 @@ public class PayloadDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(PayloadDetails1 obj) {
+			return obj.getCreationDateAndTime();
+		}
+
+		@Override
+		public void setValue(PayloadDetails1 obj, ISODateTime value) {
+			obj.setCreationDateAndTime(value);
 		}
 	};
 	@XmlElement(name = "PssblDplctFlg")
@@ -192,7 +212,7 @@ public class PayloadDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPossibleDuplicateFlag = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PayloadDetails1, Optional<TrueFalseIndicator>> mmPossibleDuplicateFlag = new MMMessageAttribute<PayloadDetails1, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadDetails1.mmObject();
 			isDerived = false;
@@ -203,6 +223,16 @@ public class PayloadDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(PayloadDetails1 obj) {
+			return obj.getPossibleDuplicateFlag();
+		}
+
+		@Override
+		public void setValue(PayloadDetails1 obj, Optional<TrueFalseIndicator> value) {
+			obj.setPossibleDuplicateFlag(value.orElse(null));
 		}
 	};
 

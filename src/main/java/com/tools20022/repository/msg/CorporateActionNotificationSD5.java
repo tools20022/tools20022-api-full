@@ -114,7 +114,7 @@ public class CorporateActionNotificationSD5 {
 	 * definition} = "xPath to the element that is being extended."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD5, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionNotificationSD5, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD5.mmObject();
 			isDerived = false;
@@ -125,6 +125,16 @@ public class CorporateActionNotificationSD5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionNotificationSD5 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD5 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "EvtGrp")
@@ -160,7 +170,7 @@ public class CorporateActionNotificationSD5 {
 	 * definition} = "DTC processing domain/ category for event types."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventGroup = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD5, Optional<EventGroup1Code>> mmEventGroup = new MMMessageAttribute<CorporateActionNotificationSD5, Optional<EventGroup1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD5.mmObject();
 			isDerived = false;
@@ -172,6 +182,16 @@ public class CorporateActionNotificationSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventGroup1Code.mmObject();
+		}
+
+		@Override
+		public Optional<EventGroup1Code> getValue(CorporateActionNotificationSD5 obj) {
+			return obj.getEventGroup();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD5 obj, Optional<EventGroup1Code> value) {
+			obj.setEventGroup(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EvtTp")
@@ -209,7 +229,7 @@ public class CorporateActionNotificationSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD5, Optional<ExtendedEventType1Code>> mmEventType = new MMMessageAttribute<CorporateActionNotificationSD5, Optional<ExtendedEventType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD5.mmObject();
 			isDerived = false;
@@ -221,6 +241,16 @@ public class CorporateActionNotificationSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExtendedEventType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExtendedEventType1Code> getValue(CorporateActionNotificationSD5 obj) {
+			return obj.getEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD5 obj, Optional<ExtendedEventType1Code> value) {
+			obj.setEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SubEvtTp")
@@ -258,7 +288,7 @@ public class CorporateActionNotificationSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD5, Optional<DTCCSubEventType2Code>> mmSubEventType = new MMMessageAttribute<CorporateActionNotificationSD5, Optional<DTCCSubEventType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD5.mmObject();
 			isDerived = false;
@@ -270,6 +300,16 @@ public class CorporateActionNotificationSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCCSubEventType2Code.mmObject();
+		}
+
+		@Override
+		public Optional<DTCCSubEventType2Code> getValue(CorporateActionNotificationSD5 obj) {
+			return obj.getSubEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD5 obj, Optional<DTCCSubEventType2Code> value) {
+			obj.setSubEventType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DTCMndtryVlntryEvtTp")
@@ -307,7 +347,7 @@ public class CorporateActionNotificationSD5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDTCMandatoryVoluntaryEventType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNotificationSD5, Optional<CorporateActionMandatoryVoluntary1Code>> mmDTCMandatoryVoluntaryEventType = new MMMessageAttribute<CorporateActionNotificationSD5, Optional<CorporateActionMandatoryVoluntary1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD5.mmObject();
 			isDerived = false;
@@ -319,6 +359,16 @@ public class CorporateActionNotificationSD5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CorporateActionMandatoryVoluntary1Code> getValue(CorporateActionNotificationSD5 obj) {
+			return obj.getDTCMandatoryVoluntaryEventType();
+		}
+
+		@Override
+		public void setValue(CorporateActionNotificationSD5 obj, Optional<CorporateActionMandatoryVoluntary1Code> value) {
+			obj.setDTCMandatoryVoluntaryEventType(value.orElse(null));
 		}
 	};
 

@@ -24,6 +24,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount16;
+import com.tools20022.repository.msg.CashAccount20;
+import com.tools20022.repository.msg.NotificationEntry2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -107,7 +110,7 @@ public class AccountNotification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountNotification3, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<AccountNotification3, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification3.mmObject();
 			isDerived = false;
@@ -118,6 +121,16 @@ public class AccountNotification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountNotification3 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(AccountNotification3 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Acct", required = true)
@@ -154,7 +167,7 @@ public class AccountNotification3 {
 	 * "Identifies the account to be credited with the incoming funds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification3, CashAccount20> mmAccount = new MMMessageAssociationEnd<AccountNotification3, CashAccount20>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification3.mmObject();
@@ -166,7 +179,17 @@ public class AccountNotification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount20.mmObject();
+			type_lazy = () -> CashAccount20.mmObject();
+		}
+
+		@Override
+		public CashAccount20 getValue(AccountNotification3 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(AccountNotification3 obj, CashAccount20 value) {
+			obj.setAccount(value);
 		}
 	};
 	@XmlElement(name = "RltdAcct")
@@ -204,7 +227,7 @@ public class AccountNotification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification3, Optional<CashAccount16>> mmRelatedAccount = new MMMessageAssociationEnd<AccountNotification3, Optional<CashAccount16>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification3.mmObject();
@@ -216,11 +239,21 @@ public class AccountNotification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
+			type_lazy = () -> CashAccount16.mmObject();
+		}
+
+		@Override
+		public Optional<CashAccount16> getValue(AccountNotification3 obj) {
+			return obj.getRelatedAccount();
+		}
+
+		@Override
+		public void setValue(AccountNotification3 obj, Optional<CashAccount16> value) {
+			obj.setRelatedAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Itm", required = true)
-	protected List<com.tools20022.repository.msg.NotificationEntry2> item;
+	protected List<NotificationEntry2> item;
 	/**
 	 * 
 	 <p>
@@ -254,7 +287,7 @@ public class AccountNotification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmItem = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountNotification3, List<NotificationEntry2>> mmItem = new MMMessageAssociationEnd<AccountNotification3, List<NotificationEntry2>>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmCashBalanceEntry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountNotification3.mmObject();
@@ -265,7 +298,17 @@ public class AccountNotification3 {
 			definition = "Set of elements used to provide details of the expected amount on the account serviced by the receiver of the message.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NotificationEntry2.mmObject();
+			type_lazy = () -> NotificationEntry2.mmObject();
+		}
+
+		@Override
+		public List<NotificationEntry2> getValue(AccountNotification3 obj) {
+			return obj.getItem();
+		}
+
+		@Override
+		public void setValue(AccountNotification3 obj, List<NotificationEntry2> value) {
+			obj.setItem(value);
 		}
 	};
 
@@ -297,7 +340,7 @@ public class AccountNotification3 {
 		return account;
 	}
 
-	public AccountNotification3 setAccount(com.tools20022.repository.msg.CashAccount20 account) {
+	public AccountNotification3 setAccount(CashAccount20 account) {
 		this.account = Objects.requireNonNull(account);
 		return this;
 	}
@@ -306,7 +349,7 @@ public class AccountNotification3 {
 		return relatedAccount == null ? Optional.empty() : Optional.of(relatedAccount);
 	}
 
-	public AccountNotification3 setRelatedAccount(com.tools20022.repository.msg.CashAccount16 relatedAccount) {
+	public AccountNotification3 setRelatedAccount(CashAccount16 relatedAccount) {
 		this.relatedAccount = relatedAccount;
 		return this;
 	}
@@ -315,7 +358,7 @@ public class AccountNotification3 {
 		return item == null ? item = new ArrayList<>() : item;
 	}
 
-	public AccountNotification3 setItem(List<com.tools20022.repository.msg.NotificationEntry2> item) {
+	public AccountNotification3 setItem(List<NotificationEntry2> item) {
 		this.item = Objects.requireNonNull(item);
 		return this;
 	}

@@ -108,7 +108,7 @@ public class UndertakingAmount4 {
 	 * definition} = "Variation amount and currency."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVariationAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAmount4, ActiveCurrencyAndAmount> mmVariationAmount = new MMMessageAttribute<UndertakingAmount4, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AutomaticVariation.mmVariationAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount4.mmObject();
@@ -120,6 +120,16 @@ public class UndertakingAmount4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(UndertakingAmount4 obj) {
+			return obj.getVariationAmount();
+		}
+
+		@Override
+		public void setValue(UndertakingAmount4 obj, ActiveCurrencyAndAmount value) {
+			obj.setVariationAmount(value);
 		}
 	};
 	@XmlElement(name = "BalAmt")
@@ -159,7 +169,7 @@ public class UndertakingAmount4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalanceAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UndertakingAmount4, Optional<ActiveCurrencyAndAmount>> mmBalanceAmount = new MMMessageAttribute<UndertakingAmount4, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingAmount.mmBalanceAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UndertakingAmount4.mmObject();
@@ -171,6 +181,16 @@ public class UndertakingAmount4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(UndertakingAmount4 obj) {
+			return obj.getBalanceAmount();
+		}
+
+		@Override
+		public void setValue(UndertakingAmount4 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setBalanceAmount(value.orElse(null));
 		}
 	};
 

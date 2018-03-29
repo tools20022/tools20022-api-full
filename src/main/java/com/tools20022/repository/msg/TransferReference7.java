@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransferReference8;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -117,7 +118,7 @@ public class TransferReference7 {
 	 * TransferReference3.mmMasterReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransferReference7, Optional<Max35Text>> mmMasterReference = new MMMessageAttribute<TransferReference7, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference7.mmObject();
@@ -131,9 +132,19 @@ public class TransferReference7 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransferReference7 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(TransferReference7 obj, Optional<Max35Text> value) {
+			obj.setMasterReference(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "TrfRefs", required = true)
-	protected List<com.tools20022.repository.msg.TransferReference8> transferReferences;
+	protected List<TransferReference8> transferReferences;
 	/**
 	 * 
 	 <p>
@@ -165,7 +176,7 @@ public class TransferReference7 {
 	 * TransferReference3.mmTransferReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTransferReferences = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransferReference7, List<TransferReference8>> mmTransferReferences = new MMMessageAssociationEnd<TransferReference7, List<TransferReference8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference7.mmObject();
 			isDerived = false;
@@ -176,7 +187,17 @@ public class TransferReference7 {
 			previousVersion_lazy = () -> TransferReference3.mmTransferReferences;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransferReference8.mmObject();
+			type_lazy = () -> TransferReference8.mmObject();
+		}
+
+		@Override
+		public List<TransferReference8> getValue(TransferReference7 obj) {
+			return obj.getTransferReferences();
+		}
+
+		@Override
+		public void setValue(TransferReference7 obj, List<TransferReference8> value) {
+			obj.setTransferReferences(value);
 		}
 	};
 
@@ -208,7 +229,7 @@ public class TransferReference7 {
 		return transferReferences == null ? transferReferences = new ArrayList<>() : transferReferences;
 	}
 
-	public TransferReference7 setTransferReferences(List<com.tools20022.repository.msg.TransferReference8> transferReferences) {
+	public TransferReference7 setTransferReferences(List<TransferReference8> transferReferences) {
 		this.transferReferences = Objects.requireNonNull(transferReferences);
 		return this;
 	}

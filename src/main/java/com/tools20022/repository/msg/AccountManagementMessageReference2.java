@@ -26,6 +26,7 @@ import com.tools20022.repository.choice.LinkedMessage2Choice;
 import com.tools20022.repository.codeset.AccountManagementType1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InvestmentAccount45;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -154,7 +155,7 @@ public class AccountManagementMessageReference2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLinkedReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountManagementMessageReference2, Optional<LinkedMessage2Choice>> mmLinkedReference = new MMMessageAssociationEnd<AccountManagementMessageReference2, Optional<LinkedMessage2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference2.mmObject();
 			isDerived = false;
@@ -167,6 +168,16 @@ public class AccountManagementMessageReference2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LinkedMessage2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LinkedMessage2Choice> getValue(AccountManagementMessageReference2 obj) {
+			return obj.getLinkedReference();
+		}
+
+		@Override
+		public void setValue(AccountManagementMessageReference2 obj, Optional<LinkedMessage2Choice> value) {
+			obj.setLinkedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StsReqTp", required = true)
@@ -214,7 +225,7 @@ public class AccountManagementMessageReference2 {
 	 * AccountManagementMessageReference1.mmStatusRequestType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusRequestType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementMessageReference2, AccountManagementType1Code> mmStatusRequestType = new MMMessageAttribute<AccountManagementMessageReference2, AccountManagementType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference2.mmObject();
 			isDerived = false;
@@ -227,6 +238,16 @@ public class AccountManagementMessageReference2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AccountManagementType1Code.mmObject();
+		}
+
+		@Override
+		public AccountManagementType1Code getValue(AccountManagementMessageReference2 obj) {
+			return obj.getStatusRequestType();
+		}
+
+		@Override
+		public void setValue(AccountManagementMessageReference2 obj, AccountManagementType1Code value) {
+			obj.setStatusRequestType(value);
 		}
 	};
 	@XmlElement(name = "AcctApplId")
@@ -273,7 +294,7 @@ public class AccountManagementMessageReference2 {
 	 * AccountManagementMessageReference1.mmAccountApplicationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountManagementMessageReference2, Optional<Max35Text>> mmAccountApplicationIdentification = new MMMessageAttribute<AccountManagementMessageReference2, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference2.mmObject();
 			isDerived = false;
@@ -286,6 +307,16 @@ public class AccountManagementMessageReference2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountManagementMessageReference2 obj) {
+			return obj.getAccountApplicationIdentification();
+		}
+
+		@Override
+		public void setValue(AccountManagementMessageReference2 obj, Optional<Max35Text> value) {
+			obj.setAccountApplicationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InvstmtAcct")
@@ -331,7 +362,7 @@ public class AccountManagementMessageReference2 {
 	 * AccountManagementMessageReference1.mmInvestmentAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestmentAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountManagementMessageReference2, Optional<InvestmentAccount45>> mmInvestmentAccount = new MMMessageAssociationEnd<AccountManagementMessageReference2, Optional<InvestmentAccount45>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference2.mmObject();
 			isDerived = false;
@@ -344,7 +375,17 @@ public class AccountManagementMessageReference2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount45.mmObject();
+			type_lazy = () -> InvestmentAccount45.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentAccount45> getValue(AccountManagementMessageReference2 obj) {
+			return obj.getInvestmentAccount();
+		}
+
+		@Override
+		public void setValue(AccountManagementMessageReference2 obj, Optional<InvestmentAccount45> value) {
+			obj.setInvestmentAccount(value.orElse(null));
 		}
 	};
 
@@ -399,7 +440,7 @@ public class AccountManagementMessageReference2 {
 		return investmentAccount == null ? Optional.empty() : Optional.of(investmentAccount);
 	}
 
-	public AccountManagementMessageReference2 setInvestmentAccount(com.tools20022.repository.msg.InvestmentAccount45 investmentAccount) {
+	public AccountManagementMessageReference2 setInvestmentAccount(InvestmentAccount45 investmentAccount) {
 		this.investmentAccount = investmentAccount;
 		return this;
 	}

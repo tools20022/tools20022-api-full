@@ -117,7 +117,7 @@ public class CollateralBalance1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTotalCollateral = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralBalance1Choice, ActiveCurrencyAndAmount> mmTotalCollateral = new MMMessageAttribute<CollateralBalance1Choice, ActiveCurrencyAndAmount>() {
 		{
 			businessComponentTrace_lazy = () -> ExposureCalculation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralBalance1Choice.mmObject();
@@ -129,6 +129,16 @@ public class CollateralBalance1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralBalance1Choice obj) {
+			return obj.getTotalCollateral();
+		}
+
+		@Override
+		public void setValue(CollateralBalance1Choice obj, ActiveCurrencyAndAmount value) {
+			obj.setTotalCollateral(value);
 		}
 	};
 	@XmlElement(name = "CollDtls", required = true)
@@ -166,7 +176,7 @@ public class CollateralBalance1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCollateralDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralBalance1Choice, Collateral1> mmCollateralDetails = new MMMessageAssociationEnd<CollateralBalance1Choice, Collateral1>() {
 		{
 			businessComponentTrace_lazy = () -> ExposureCalculation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralBalance1Choice.mmObject();
@@ -179,6 +189,16 @@ public class CollateralBalance1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Collateral1.mmObject();
+		}
+
+		@Override
+		public Collateral1 getValue(CollateralBalance1Choice obj) {
+			return obj.getCollateralDetails();
+		}
+
+		@Override
+		public void setValue(CollateralBalance1Choice obj, Collateral1 value) {
+			obj.setCollateralDetails(value);
 		}
 	};
 	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
@@ -216,7 +236,7 @@ public class CollateralBalance1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralBalance1Choice, MarginCollateral1> mmSegregatedIndependentAmount = new MMMessageAssociationEnd<CollateralBalance1Choice, MarginCollateral1>() {
 		{
 			businessElementTrace_lazy = () -> ExposureCalculation.mmCurrentSegregatedIndependentAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralBalance1Choice.mmObject();
@@ -229,6 +249,16 @@ public class CollateralBalance1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> MarginCollateral1.mmObject();
+		}
+
+		@Override
+		public MarginCollateral1 getValue(CollateralBalance1Choice obj) {
+			return obj.getSegregatedIndependentAmount();
+		}
+
+		@Override
+		public void setValue(CollateralBalance1Choice obj, MarginCollateral1 value) {
+			obj.setSegregatedIndependentAmount(value);
 		}
 	};
 

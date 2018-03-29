@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.PaymentCategoryPurpose1Code;
 import com.tools20022.repository.codeset.Priority2Code;
 import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ServiceLevel6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class PaymentTypeInformation16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation16, Optional<Priority2Code>> mmInstructionPriority = new MMMessageAttribute<PaymentTypeInformation16, Optional<Priority2Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation16.mmObject();
@@ -133,6 +134,16 @@ public class PaymentTypeInformation16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Priority2Code.mmObject();
+		}
+
+		@Override
+		public Optional<Priority2Code> getValue(PaymentTypeInformation16 obj) {
+			return obj.getInstructionPriority();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation16 obj, Optional<Priority2Code> value) {
+			obj.setInstructionPriority(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SvcLvl", required = true)
@@ -170,7 +181,7 @@ public class PaymentTypeInformation16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation16, ServiceLevel6> mmServiceLevel = new MMMessageAssociationEnd<PaymentTypeInformation16, ServiceLevel6>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation16.mmObject();
@@ -182,7 +193,17 @@ public class PaymentTypeInformation16 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ServiceLevel6.mmObject();
+			type_lazy = () -> ServiceLevel6.mmObject();
+		}
+
+		@Override
+		public ServiceLevel6 getValue(PaymentTypeInformation16 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation16 obj, ServiceLevel6 value) {
+			obj.setServiceLevel(value);
 		}
 	};
 	@XmlElement(name = "LclInstrm")
@@ -221,7 +242,7 @@ public class PaymentTypeInformation16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation16, Optional<LocalInstrument1Choice>> mmLocalInstrument = new MMMessageAssociationEnd<PaymentTypeInformation16, Optional<LocalInstrument1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmLocalInstrument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation16.mmObject();
@@ -234,6 +255,16 @@ public class PaymentTypeInformation16 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> LocalInstrument1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<LocalInstrument1Choice> getValue(PaymentTypeInformation16 obj) {
+			return obj.getLocalInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation16 obj, Optional<LocalInstrument1Choice> value) {
+			obj.setLocalInstrument(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtgyPurp")
@@ -273,7 +304,7 @@ public class PaymentTypeInformation16 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategoryPurpose = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTypeInformation16, Optional<PaymentCategoryPurpose1Code>> mmCategoryPurpose = new MMMessageAttribute<PaymentTypeInformation16, Optional<PaymentCategoryPurpose1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmCategoryPurpose;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation16.mmObject();
@@ -285,6 +316,16 @@ public class PaymentTypeInformation16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PaymentCategoryPurpose1Code.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentCategoryPurpose1Code> getValue(PaymentTypeInformation16 obj) {
+			return obj.getCategoryPurpose();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation16 obj, Optional<PaymentCategoryPurpose1Code> value) {
+			obj.setCategoryPurpose(value.orElse(null));
 		}
 	};
 
@@ -316,7 +357,7 @@ public class PaymentTypeInformation16 {
 		return serviceLevel;
 	}
 
-	public PaymentTypeInformation16 setServiceLevel(com.tools20022.repository.msg.ServiceLevel6 serviceLevel) {
+	public PaymentTypeInformation16 setServiceLevel(ServiceLevel6 serviceLevel) {
 		this.serviceLevel = Objects.requireNonNull(serviceLevel);
 		return this;
 	}

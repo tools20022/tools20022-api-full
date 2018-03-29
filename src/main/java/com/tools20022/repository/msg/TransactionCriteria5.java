@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportIndicator1Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TransactionReturnCriteria3;
+import com.tools20022.repository.msg.TransactionSearchCriteria5;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -140,7 +142,7 @@ public class TransactionCriteria5 {
 	 * TransactionCriteria4.mmNewQueryName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionCriteria5, Optional<Max35Text>> mmNewQueryName = new MMMessageAttribute<TransactionCriteria5, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionCriteria5.mmObject();
 			isDerived = false;
@@ -154,9 +156,19 @@ public class TransactionCriteria5 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(TransactionCriteria5 obj) {
+			return obj.getNewQueryName();
+		}
+
+		@Override
+		public void setValue(TransactionCriteria5 obj, Optional<Max35Text> value) {
+			obj.setNewQueryName(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SchCrit")
-	protected List<com.tools20022.repository.msg.TransactionSearchCriteria5> searchCriteria;
+	protected List<TransactionSearchCriteria5> searchCriteria;
 	/**
 	 * 
 	 <p>
@@ -198,7 +210,7 @@ public class TransactionCriteria5 {
 	 * TransactionCriteria4.mmSearchCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionCriteria5, List<TransactionSearchCriteria5>> mmSearchCriteria = new MMMessageAssociationEnd<TransactionCriteria5, List<TransactionSearchCriteria5>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionCriteria5.mmObject();
 			isDerived = false;
@@ -210,7 +222,17 @@ public class TransactionCriteria5 {
 			previousVersion_lazy = () -> TransactionCriteria4.mmSearchCriteria;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria5.mmObject();
+			type_lazy = () -> TransactionSearchCriteria5.mmObject();
+		}
+
+		@Override
+		public List<TransactionSearchCriteria5> getValue(TransactionCriteria5 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(TransactionCriteria5 obj, List<TransactionSearchCriteria5> value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "StmtRpt")
@@ -256,7 +278,7 @@ public class TransactionCriteria5 {
 	 * TransactionCriteria4.mmStatementReport}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatementReport = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionCriteria5, Optional<ReportIndicator1Code>> mmStatementReport = new MMMessageAttribute<TransactionCriteria5, Optional<ReportIndicator1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionCriteria5.mmObject();
 			isDerived = false;
@@ -269,6 +291,16 @@ public class TransactionCriteria5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReportIndicator1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ReportIndicator1Code> getValue(TransactionCriteria5 obj) {
+			return obj.getStatementReport();
+		}
+
+		@Override
+		public void setValue(TransactionCriteria5 obj, Optional<ReportIndicator1Code> value) {
+			obj.setStatementReport(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RtrCrit")
@@ -313,7 +345,7 @@ public class TransactionCriteria5 {
 	 * TransactionCriteria4.mmReturnCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionCriteria5, Optional<TransactionReturnCriteria3>> mmReturnCriteria = new MMMessageAssociationEnd<TransactionCriteria5, Optional<TransactionReturnCriteria3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionCriteria5.mmObject();
 			isDerived = false;
@@ -326,7 +358,17 @@ public class TransactionCriteria5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TransactionReturnCriteria3.mmObject();
+			type_lazy = () -> TransactionReturnCriteria3.mmObject();
+		}
+
+		@Override
+		public Optional<TransactionReturnCriteria3> getValue(TransactionCriteria5 obj) {
+			return obj.getReturnCriteria();
+		}
+
+		@Override
+		public void setValue(TransactionCriteria5 obj, Optional<TransactionReturnCriteria3> value) {
+			obj.setReturnCriteria(value.orElse(null));
 		}
 	};
 
@@ -360,7 +402,7 @@ public class TransactionCriteria5 {
 		return searchCriteria == null ? searchCriteria = new ArrayList<>() : searchCriteria;
 	}
 
-	public TransactionCriteria5 setSearchCriteria(List<com.tools20022.repository.msg.TransactionSearchCriteria5> searchCriteria) {
+	public TransactionCriteria5 setSearchCriteria(List<TransactionSearchCriteria5> searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}
@@ -378,7 +420,7 @@ public class TransactionCriteria5 {
 		return returnCriteria == null ? Optional.empty() : Optional.of(returnCriteria);
 	}
 
-	public TransactionCriteria5 setReturnCriteria(com.tools20022.repository.msg.TransactionReturnCriteria3 returnCriteria) {
+	public TransactionCriteria5 setReturnCriteria(TransactionReturnCriteria3 returnCriteria) {
 		this.returnCriteria = returnCriteria;
 		return this;
 	}

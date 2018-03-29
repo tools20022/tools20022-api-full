@@ -109,7 +109,7 @@ public class Presentation3 {
 	 * "Format for presentation documents that are submitted electronically."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Presentation3, Optional<DocumentFormat1Choice>> mmFormat = new MMMessageAttribute<Presentation3, Optional<DocumentFormat1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation3.mmObject();
@@ -121,6 +121,16 @@ public class Presentation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentFormat1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentFormat1Choice> getValue(Presentation3 obj) {
+			return obj.getFormat();
+		}
+
+		@Override
+		public void setValue(Presentation3 obj, Optional<DocumentFormat1Choice> value) {
+			obj.setFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Chanl")
@@ -159,7 +169,7 @@ public class Presentation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Presentation3, Optional<Channel1Choice>> mmChannel = new MMMessageAttribute<Presentation3, Optional<Channel1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation3.mmObject();
@@ -171,6 +181,16 @@ public class Presentation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Channel1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Channel1Choice> getValue(Presentation3 obj) {
+			return obj.getChannel();
+		}
+
+		@Override
+		public void setValue(Presentation3 obj, Optional<Channel1Choice> value) {
+			obj.setChannel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Adr")
@@ -208,7 +228,7 @@ public class Presentation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Presentation3, Optional<Max256Text>> mmAddress = new MMMessageAttribute<Presentation3, Optional<Max256Text>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmElectronicPresentationAddress;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Presentation3.mmObject();
@@ -220,6 +240,16 @@ public class Presentation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max256Text> getValue(Presentation3 obj) {
+			return obj.getAddress();
+		}
+
+		@Override
+		public void setValue(Presentation3 obj, Optional<Max256Text> value) {
+			obj.setAddress(value.orElse(null));
 		}
 	};
 

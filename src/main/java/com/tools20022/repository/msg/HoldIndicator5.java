@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.RegistrationReason4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -111,7 +112,7 @@ public class HoldIndicator5 {
 	 * "Specifies whether the transaction is on hold/blocked/frozen."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<HoldIndicator5, YesNoIndicator> mmIndicator = new MMMessageAttribute<HoldIndicator5, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldIndicator5.mmObject();
@@ -124,9 +125,19 @@ public class HoldIndicator5 {
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
+
+		@Override
+		public YesNoIndicator getValue(HoldIndicator5 obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(HoldIndicator5 obj, YesNoIndicator value) {
+			obj.setIndicator(value);
+		}
 	};
 	@XmlElement(name = "Rsn")
-	protected List<com.tools20022.repository.msg.RegistrationReason4> reason;
+	protected List<RegistrationReason4> reason;
 	/**
 	 * 
 	 <p>
@@ -157,7 +168,7 @@ public class HoldIndicator5 {
 	 * definition} = "Specifies the reason of the registration staus."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<HoldIndicator5, List<RegistrationReason4>> mmReason = new MMMessageAssociationEnd<HoldIndicator5, List<RegistrationReason4>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.HoldIndicator5.mmObject();
@@ -168,7 +179,17 @@ public class HoldIndicator5 {
 			definition = "Specifies the reason of the registration staus.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RegistrationReason4.mmObject();
+			type_lazy = () -> RegistrationReason4.mmObject();
+		}
+
+		@Override
+		public List<RegistrationReason4> getValue(HoldIndicator5 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(HoldIndicator5 obj, List<RegistrationReason4> value) {
+			obj.setReason(value);
 		}
 	};
 
@@ -200,7 +221,7 @@ public class HoldIndicator5 {
 		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public HoldIndicator5 setReason(List<com.tools20022.repository.msg.RegistrationReason4> reason) {
+	public HoldIndicator5 setReason(List<RegistrationReason4> reason) {
 		this.reason = Objects.requireNonNull(reason);
 		return this;
 	}

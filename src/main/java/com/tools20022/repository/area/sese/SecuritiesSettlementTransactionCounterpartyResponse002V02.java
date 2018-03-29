@@ -29,7 +29,6 @@ import com.tools20022.repository.msg.TransactionIdentification7;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017ISO15022Variants;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -155,7 +154,7 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 	 * "Provides unambiguous transaction identification information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionCounterpartyResponse002V02, TransactionIdentification7> mmTransactionIdentification = new MMMessageBuildingBlock<SecuritiesSettlementTransactionCounterpartyResponse002V02, TransactionIdentification7>() {
 		{
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,12 +165,14 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 			complexType_lazy = () -> TransactionIdentification7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionCounterpartyResponse002V02.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public TransactionIdentification7 getValue(SecuritiesSettlementTransactionCounterpartyResponse002V02 obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionCounterpartyResponse002V02 obj, TransactionIdentification7 value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "RspnSts", required = true)
@@ -201,7 +202,7 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmResponseStatus = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionCounterpartyResponse002V02, ResponseStatus8Choice> mmResponseStatus = new MMMessageBuildingBlock<SecuritiesSettlementTransactionCounterpartyResponse002V02, ResponseStatus8Choice>() {
 		{
 			xmlTag = "RspnSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +213,14 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 			complexType_lazy = () -> ResponseStatus8Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionCounterpartyResponse002V02.class.getMethod("getResponseStatus", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ResponseStatus8Choice getValue(SecuritiesSettlementTransactionCounterpartyResponse002V02 obj) {
+			return obj.getResponseStatus();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionCounterpartyResponse002V02 obj, ResponseStatus8Choice value) {
+			obj.setResponseStatus(value);
 		}
 	};
 	@XmlElement(name = "TxDtls")
@@ -245,7 +248,7 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 	 * definition} = "Identifies the details of the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransactionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionCounterpartyResponse002V02, Optional<TransactionDetails92>> mmTransactionDetails = new MMMessageBuildingBlock<SecuritiesSettlementTransactionCounterpartyResponse002V02, Optional<TransactionDetails92>>() {
 		{
 			xmlTag = "TxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,12 +259,14 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 			complexType_lazy = () -> TransactionDetails92.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionCounterpartyResponse002V02.class.getMethod("getTransactionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<TransactionDetails92> getValue(SecuritiesSettlementTransactionCounterpartyResponse002V02 obj) {
+			return obj.getTransactionDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionCounterpartyResponse002V02 obj, Optional<TransactionDetails92> value) {
+			obj.setTransactionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -291,7 +296,7 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SecuritiesSettlementTransactionCounterpartyResponse002V02, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<SecuritiesSettlementTransactionCounterpartyResponse002V02, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,12 +306,14 @@ public class SecuritiesSettlementTransactionCounterpartyResponse002V02 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesSettlementTransactionCounterpartyResponse002V02.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(SecuritiesSettlementTransactionCounterpartyResponse002V02 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(SecuritiesSettlementTransactionCounterpartyResponse002V02 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

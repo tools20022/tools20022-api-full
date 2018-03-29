@@ -127,7 +127,7 @@ public class CorporateActionNarrative13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformationToComplyWith = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>> mmInformationToComplyWith = new MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmInformationToComplyWith;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative13.mmObject();
@@ -139,6 +139,16 @@ public class CorporateActionNarrative13 {
 			definition = "Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or Sophisticated Investor Letter (SIL) to be provided.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative13 obj) {
+			return obj.getInformationToComplyWith();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative13 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setInformationToComplyWith(value);
 		}
 	};
 	@XmlElement(name = "DlvryDtls")
@@ -182,7 +192,7 @@ public class CorporateActionNarrative13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDeliveryDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>> mmDeliveryDetails = new MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmCorporateActionProceedsDeliveryInstruction;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative13.mmObject();
@@ -194,6 +204,16 @@ public class CorporateActionNarrative13 {
 			definition = "Provides additional information on the delivery details of the outturned (derived) securities. This narrative is only to be used in case the securities are not eligible at the agent/custodian, and may not be used for settlement instructions.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative13 obj) {
+			return obj.getDeliveryDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative13 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setDeliveryDetails(value);
 		}
 	};
 	@XmlElement(name = "FXInstrsAddtlInf")
@@ -236,7 +256,7 @@ public class CorporateActionNarrative13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForeignExchangeInstructionsAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>> mmForeignExchangeInstructionsAdditionalInformation = new MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmExchangeRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative13.mmObject();
@@ -248,6 +268,16 @@ public class CorporateActionNarrative13 {
 			definition = "Provides additional details pertaining to foreign exchange instructions.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative13 obj) {
+			return obj.getForeignExchangeInstructionsAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative13 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setForeignExchangeInstructionsAdditionalInformation(value);
 		}
 	};
 	@XmlElement(name = "Dsclmr")
@@ -285,7 +315,7 @@ public class CorporateActionNarrative13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisclaimer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>> mmDisclaimer = new MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative13.mmObject();
 			isDerived = false;
@@ -296,6 +326,16 @@ public class CorporateActionNarrative13 {
 			definition = "Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative13 obj) {
+			return obj.getDisclaimer();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative13 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setDisclaimer(value);
 		}
 	};
 	@XmlElement(name = "InstrAddtlInf")
@@ -330,7 +370,7 @@ public class CorporateActionNarrative13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructionAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>> mmInstructionAdditionalInformation = new MMMessageAttribute<CorporateActionNarrative13, List<RestrictedFINXMax350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative13.mmObject();
 			isDerived = false;
@@ -340,6 +380,16 @@ public class CorporateActionNarrative13 {
 			definition = "Provides additional details pertaining to the corporate action instruction.";
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINXMax350Text.mmObject();
+		}
+
+		@Override
+		public List<RestrictedFINXMax350Text> getValue(CorporateActionNarrative13 obj) {
+			return obj.getInstructionAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionNarrative13 obj, List<RestrictedFINXMax350Text> value) {
+			obj.setInstructionAdditionalInformation(value);
 		}
 	};
 

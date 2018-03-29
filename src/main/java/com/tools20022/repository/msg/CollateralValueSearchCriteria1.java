@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification14;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -139,7 +140,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueSearchCriteria1, Optional<AccountIdentification4Choice>> mmAccountIdentification = new MMMessageAssociationEnd<CollateralValueSearchCriteria1, Optional<AccountIdentification4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -152,6 +153,16 @@ public class CollateralValueSearchCriteria1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<AccountIdentification4Choice> getValue(CollateralValueSearchCriteria1 obj) {
+			return obj.getAccountIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralValueSearchCriteria1 obj, Optional<AccountIdentification4Choice> value) {
+			obj.setAccountIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -192,7 +203,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValueSearchCriteria1, List<ActiveOrHistoricCurrencyCode>> mmCurrency = new MMMessageAttribute<CollateralValueSearchCriteria1, List<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -203,6 +214,16 @@ public class CollateralValueSearchCriteria1 {
 			nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmCurrency);
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyCode> getValue(CollateralValueSearchCriteria1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(CollateralValueSearchCriteria1 obj, List<ActiveOrHistoricCurrencyCode> value) {
+			obj.setCurrency(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -243,7 +264,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValueSearchCriteria1, Optional<PartyIdentification71Choice>> mmAccountOwner = new MMMessageAttribute<CollateralValueSearchCriteria1, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -255,6 +276,16 @@ public class CollateralValueSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CollateralValueSearchCriteria1 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(CollateralValueSearchCriteria1 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -297,7 +328,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValueSearchCriteria1, Optional<PartyIdentification71Choice>> mmAccountServicer = new MMMessageAttribute<CollateralValueSearchCriteria1, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -310,9 +341,19 @@ public class CollateralValueSearchCriteria1 {
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CollateralValueSearchCriteria1 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(CollateralValueSearchCriteria1 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "FinInstrmId")
-	protected List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification;
+	protected List<SecurityIdentification14> financialInstrumentIdentification;
 	/**
 	 * 
 	 <p>
@@ -350,7 +391,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CollateralValueSearchCriteria1, List<SecurityIdentification14>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<CollateralValueSearchCriteria1, List<SecurityIdentification14>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -361,7 +402,17 @@ public class CollateralValueSearchCriteria1 {
 			nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmFinancialInstrumentIdentification);
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
+			type_lazy = () -> SecurityIdentification14.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification14> getValue(CollateralValueSearchCriteria1 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(CollateralValueSearchCriteria1 obj, List<SecurityIdentification14> value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesAcctOwnr")
@@ -403,7 +454,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccountOwner = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValueSearchCriteria1, Optional<PartyIdentification71Choice>> mmSecuritiesAccountOwner = new MMMessageAttribute<CollateralValueSearchCriteria1, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -415,6 +466,16 @@ public class CollateralValueSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CollateralValueSearchCriteria1 obj) {
+			return obj.getSecuritiesAccountOwner();
+		}
+
+		@Override
+		public void setValue(CollateralValueSearchCriteria1 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setSecuritiesAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctiesAcctSvcr")
@@ -457,7 +518,7 @@ public class CollateralValueSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralValueSearchCriteria1, Optional<PartyIdentification71Choice>> mmSecuritiesAccountServicer = new MMMessageAttribute<CollateralValueSearchCriteria1, Optional<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueSearchCriteria1.mmObject();
 			isDerived = false;
@@ -469,6 +530,16 @@ public class CollateralValueSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CollateralValueSearchCriteria1 obj) {
+			return obj.getSecuritiesAccountServicer();
+		}
+
+		@Override
+		public void setValue(CollateralValueSearchCriteria1 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setSecuritiesAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -530,7 +601,7 @@ public class CollateralValueSearchCriteria1 {
 		return financialInstrumentIdentification == null ? financialInstrumentIdentification = new ArrayList<>() : financialInstrumentIdentification;
 	}
 
-	public CollateralValueSearchCriteria1 setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification14> financialInstrumentIdentification) {
+	public CollateralValueSearchCriteria1 setFinancialInstrumentIdentification(List<SecurityIdentification14> financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice;
 import com.tools20022.repository.codeset.EmissionAllowanceProductType1Code;
 import com.tools20022.repository.entity.CreditDefaultSwap;
 import com.tools20022.repository.entity.Derivative;
@@ -120,7 +121,7 @@ public class Derivative2Choice {
 	 * definition} = "Details specific for commodity derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommodity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative2Choice, CommodityDerivate4> mmCommodity = new MMMessageAssociationEnd<Derivative2Choice, CommodityDerivate4>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Derivative2Choice.mmObject();
@@ -133,6 +134,16 @@ public class Derivative2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CommodityDerivate4.mmObject();
+		}
+
+		@Override
+		public CommodityDerivate4 getValue(Derivative2Choice obj) {
+			return obj.getCommodity();
+		}
+
+		@Override
+		public void setValue(Derivative2Choice obj, CommodityDerivate4 value) {
+			obj.setCommodity(value);
 		}
 	};
 	@XmlElement(name = "IntrstRate", required = true)
@@ -169,7 +180,7 @@ public class Derivative2Choice {
 	 * definition} = "Details specific for Interest rate."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInterestRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative2Choice, InterestRateDerivative5> mmInterestRate = new MMMessageAssociationEnd<Derivative2Choice, InterestRateDerivative5>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Derivative2Choice.mmObject();
@@ -182,6 +193,16 @@ public class Derivative2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> InterestRateDerivative5.mmObject();
+		}
+
+		@Override
+		public InterestRateDerivative5 getValue(Derivative2Choice obj) {
+			return obj.getInterestRate();
+		}
+
+		@Override
+		public void setValue(Derivative2Choice obj, InterestRateDerivative5 value) {
+			obj.setInterestRate(value);
 		}
 	};
 	@XmlElement(name = "FX", required = true)
@@ -218,7 +239,7 @@ public class Derivative2Choice {
 	 * definition} = "Details specific for Foreign exchange."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchange = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative2Choice, ForeignExchangeDerivative2> mmForeignExchange = new MMMessageAssociationEnd<Derivative2Choice, ForeignExchangeDerivative2>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Derivative2Choice.mmObject();
@@ -231,6 +252,16 @@ public class Derivative2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ForeignExchangeDerivative2.mmObject();
+		}
+
+		@Override
+		public ForeignExchangeDerivative2 getValue(Derivative2Choice obj) {
+			return obj.getForeignExchange();
+		}
+
+		@Override
+		public void setValue(Derivative2Choice obj, ForeignExchangeDerivative2 value) {
+			obj.setForeignExchange(value);
 		}
 	};
 	@XmlElement(name = "Eqty", required = true)
@@ -266,7 +297,7 @@ public class Derivative2Choice {
 	 * definition} = "Details specific for Equity derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEquity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative2Choice, EquityDerivative2> mmEquity = new MMMessageAssociationEnd<Derivative2Choice, EquityDerivative2>() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Derivative2Choice.mmObject();
@@ -279,6 +310,16 @@ public class Derivative2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> EquityDerivative2.mmObject();
+		}
+
+		@Override
+		public EquityDerivative2 getValue(Derivative2Choice obj) {
+			return obj.getEquity();
+		}
+
+		@Override
+		public void setValue(Derivative2Choice obj, EquityDerivative2 value) {
+			obj.setEquity(value);
 		}
 	};
 	@XmlElement(name = "CtrctForDiff", required = true)
@@ -313,7 +354,7 @@ public class Derivative2Choice {
 	 * definition} = "Details specific for Contract for difference (CFDs)."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContractForDifference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative2Choice, ContractForDifference2> mmContractForDifference = new MMMessageAssociationEnd<Derivative2Choice, ContractForDifference2>() {
 		{
 			businessComponentTrace_lazy = () -> Future.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Derivative2Choice.mmObject();
@@ -326,6 +367,16 @@ public class Derivative2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ContractForDifference2.mmObject();
+		}
+
+		@Override
+		public ContractForDifference2 getValue(Derivative2Choice obj) {
+			return obj.getContractForDifference();
+		}
+
+		@Override
+		public void setValue(Derivative2Choice obj, ContractForDifference2 value) {
+			obj.setContractForDifference(value);
 		}
 	};
 	@XmlElement(name = "Cdt", required = true)
@@ -362,7 +413,7 @@ public class Derivative2Choice {
 	 * definition} = "Details specific for a credit derivative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCredit = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Derivative2Choice, CreditDefaultSwapsDerivative3Choice> mmCredit = new MMMessageAssociationEnd<Derivative2Choice, CreditDefaultSwapsDerivative3Choice>() {
 		{
 			businessComponentTrace_lazy = () -> CreditDefaultSwap.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Derivative2Choice.mmObject();
@@ -374,7 +425,17 @@ public class Derivative2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice.mmObject();
+			type_lazy = () -> CreditDefaultSwapsDerivative3Choice.mmObject();
+		}
+
+		@Override
+		public CreditDefaultSwapsDerivative3Choice getValue(Derivative2Choice obj) {
+			return obj.getCredit();
+		}
+
+		@Override
+		public void setValue(Derivative2Choice obj, CreditDefaultSwapsDerivative3Choice value) {
+			obj.setCredit(value);
 		}
 	};
 	@XmlElement(name = "EmssnAllwnc", required = true)
@@ -411,7 +472,7 @@ public class Derivative2Choice {
 	 * definition} = "Details specific for emission allowance derivatives."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEmissionAllowance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Derivative2Choice, EmissionAllowanceProductType1Code> mmEmissionAllowance = new MMMessageAttribute<Derivative2Choice, EmissionAllowanceProductType1Code>() {
 		{
 			businessComponentTrace_lazy = () -> Derivative.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Derivative2Choice.mmObject();
@@ -423,6 +484,16 @@ public class Derivative2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EmissionAllowanceProductType1Code.mmObject();
+		}
+
+		@Override
+		public EmissionAllowanceProductType1Code getValue(Derivative2Choice obj) {
+			return obj.getEmissionAllowance();
+		}
+
+		@Override
+		public void setValue(Derivative2Choice obj, EmissionAllowanceProductType1Code value) {
+			obj.setEmissionAllowance(value);
 		}
 	};
 
@@ -491,7 +562,7 @@ public class Derivative2Choice {
 		return credit;
 	}
 
-	public Derivative2Choice setCredit(com.tools20022.repository.choice.CreditDefaultSwapsDerivative3Choice credit) {
+	public Derivative2Choice setCredit(CreditDefaultSwapsDerivative3Choice credit) {
 		this.credit = Objects.requireNonNull(credit);
 		return this;
 	}

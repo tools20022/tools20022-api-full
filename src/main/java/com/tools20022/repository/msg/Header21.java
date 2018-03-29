@@ -29,6 +29,8 @@ import com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMMessageFunction1;
+import com.tools20022.repository.msg.Traceability4;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -151,7 +153,7 @@ public class Header21 {
 	 * Header20.mmMessageFunction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageFunction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header21, ATMMessageFunction1> mmMessageFunction = new MMMessageAttribute<Header21, ATMMessageFunction1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header21.mmObject();
 			isDerived = false;
@@ -162,7 +164,17 @@ public class Header21 {
 			previousVersion_lazy = () -> Header20.mmMessageFunction;
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.ATMMessageFunction1.mmObject();
+			complexType_lazy = () -> ATMMessageFunction1.mmObject();
+		}
+
+		@Override
+		public ATMMessageFunction1 getValue(Header21 obj) {
+			return obj.getMessageFunction();
+		}
+
+		@Override
+		public void setValue(Header21 obj, ATMMessageFunction1 value) {
+			obj.setMessageFunction(value);
 		}
 	};
 	@XmlElement(name = "PrtcolVrsn", required = true)
@@ -198,7 +210,7 @@ public class Header21 {
 	 * Header20.mmProtocolVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProtocolVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header21, Max6Text> mmProtocolVersion = new MMMessageAttribute<Header21, Max6Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header21.mmObject();
 			isDerived = false;
@@ -210,6 +222,16 @@ public class Header21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
+		}
+
+		@Override
+		public Max6Text getValue(Header21 obj) {
+			return obj.getProtocolVersion();
+		}
+
+		@Override
+		public void setValue(Header21 obj, Max6Text value) {
+			obj.setProtocolVersion(value);
 		}
 	};
 	@XmlElement(name = "XchgId", required = true)
@@ -246,7 +268,7 @@ public class Header21 {
 	 * Header20.mmExchangeIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header21, Max3NumericText> mmExchangeIdentification = new MMMessageAttribute<Header21, Max3NumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header21.mmObject();
 			isDerived = false;
@@ -258,6 +280,16 @@ public class Header21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Max3NumericText getValue(Header21 obj) {
+			return obj.getExchangeIdentification();
+		}
+
+		@Override
+		public void setValue(Header21 obj, Max3NumericText value) {
+			obj.setExchangeIdentification(value);
 		}
 	};
 	@XmlElement(name = "ReTrnsmssnCntr")
@@ -289,7 +321,7 @@ public class Header21 {
 	 * " Retransmission counter of this advice, 0 for the first transmission."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReTransmissionCounter = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header21, Optional<Number>> mmReTransmissionCounter = new MMMessageAttribute<Header21, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header21.mmObject();
 			isDerived = false;
@@ -300,6 +332,16 @@ public class Header21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(Header21 obj) {
+			return obj.getReTransmissionCounter();
+		}
+
+		@Override
+		public void setValue(Header21 obj, Optional<Number> value) {
+			obj.setReTransmissionCounter(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -335,7 +377,7 @@ public class Header21 {
 	 * Header20.mmCreationDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header21, ISODateTime> mmCreationDateTime = new MMMessageAttribute<Header21, ISODateTime>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header21.mmObject();
 			isDerived = false;
@@ -347,6 +389,16 @@ public class Header21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(Header21 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(Header21 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "InitgPty", required = true)
@@ -383,7 +435,7 @@ public class Header21 {
 	 * Header20.mmInitiatingParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInitiatingParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header21, Max35Text> mmInitiatingParty = new MMMessageAttribute<Header21, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header21.mmObject();
 			isDerived = false;
@@ -395,6 +447,16 @@ public class Header21 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(Header21 obj) {
+			return obj.getInitiatingParty();
+		}
+
+		@Override
+		public void setValue(Header21 obj, Max35Text value) {
+			obj.setInitiatingParty(value);
 		}
 	};
 	@XmlElement(name = "RcptPty")
@@ -432,7 +494,7 @@ public class Header21 {
 	 * Header20.mmRecipientParty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRecipientParty = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header21, Optional<Max35Text>> mmRecipientParty = new MMMessageAttribute<Header21, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header21.mmObject();
 			isDerived = false;
@@ -444,6 +506,16 @@ public class Header21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(Header21 obj) {
+			return obj.getRecipientParty();
+		}
+
+		@Override
+		public void setValue(Header21 obj, Optional<Max35Text> value) {
+			obj.setRecipientParty(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrcStat")
@@ -475,7 +547,7 @@ public class Header21 {
 	 * "State of the sender of the message inside the process flow."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessState = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header21, Optional<Max35Text>> mmProcessState = new MMMessageAttribute<Header21, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header21.mmObject();
 			isDerived = false;
@@ -487,9 +559,19 @@ public class Header21 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(Header21 obj) {
+			return obj.getProcessState();
+		}
+
+		@Override
+		public void setValue(Header21 obj, Optional<Max35Text> value) {
+			obj.setProcessState(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Tracblt")
-	protected List<com.tools20022.repository.msg.Traceability4> traceability;
+	protected List<Traceability4> traceability;
 	/**
 	 * 
 	 <p>
@@ -523,7 +605,7 @@ public class Header21 {
 	 * Header20.mmTraceability}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTraceability = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Header21, List<Traceability4>> mmTraceability = new MMMessageAttribute<Header21, List<Traceability4>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Header21.mmObject();
 			isDerived = false;
@@ -533,7 +615,17 @@ public class Header21 {
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
 			previousVersion_lazy = () -> Header20.mmTraceability;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Traceability4.mmObject();
+			complexType_lazy = () -> Traceability4.mmObject();
+		}
+
+		@Override
+		public List<Traceability4> getValue(Header21 obj) {
+			return obj.getTraceability();
+		}
+
+		@Override
+		public void setValue(Header21 obj, List<Traceability4> value) {
+			obj.setTraceability(value);
 		}
 	};
 
@@ -559,7 +651,7 @@ public class Header21 {
 		return messageFunction;
 	}
 
-	public Header21 setMessageFunction(com.tools20022.repository.msg.ATMMessageFunction1 messageFunction) {
+	public Header21 setMessageFunction(ATMMessageFunction1 messageFunction) {
 		this.messageFunction = Objects.requireNonNull(messageFunction);
 		return this;
 	}
@@ -631,7 +723,7 @@ public class Header21 {
 		return traceability == null ? traceability = new ArrayList<>() : traceability;
 	}
 
-	public Header21 setTraceability(List<com.tools20022.repository.msg.Traceability4> traceability) {
+	public Header21 setTraceability(List<Traceability4> traceability) {
 		this.traceability = Objects.requireNonNull(traceability);
 		return this;
 	}

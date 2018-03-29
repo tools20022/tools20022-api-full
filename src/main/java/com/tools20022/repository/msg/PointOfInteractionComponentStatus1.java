@@ -125,7 +125,7 @@ public class PointOfInteractionComponentStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersionNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentStatus1, Optional<Max35Text>> mmVersionNumber = new MMMessageAttribute<PointOfInteractionComponentStatus1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmSystemVersion;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus1.mmObject();
@@ -138,6 +138,16 @@ public class PointOfInteractionComponentStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PointOfInteractionComponentStatus1 obj) {
+			return obj.getVersionNumber();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentStatus1 obj, Optional<Max35Text> value) {
+			obj.setVersionNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -183,7 +193,7 @@ public class PointOfInteractionComponentStatus1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PointOfInteractionComponentStatus1, Optional<POIComponentStatus1Code>> mmStatus = new MMMessageAttribute<PointOfInteractionComponentStatus1, Optional<POIComponentStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentStatus1.mmObject();
@@ -196,6 +206,16 @@ public class PointOfInteractionComponentStatus1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> POIComponentStatus1Code.mmObject();
+		}
+
+		@Override
+		public Optional<POIComponentStatus1Code> getValue(PointOfInteractionComponentStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(PointOfInteractionComponentStatus1 obj, Optional<POIComponentStatus1Code> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 

@@ -28,6 +28,7 @@ import com.tools20022.repository.choice.RestrictionStatus1Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.DateTimePeriodDetails1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -143,7 +144,7 @@ public class AccountRestrictions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLimitation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountRestrictions1, Optional<Max350Text>> mmLimitation = new MMMessageAttribute<AccountRestrictions1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -155,6 +156,16 @@ public class AccountRestrictions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(AccountRestrictions1 obj) {
+			return obj.getLimitation();
+		}
+
+		@Override
+		public void setValue(AccountRestrictions1 obj, Optional<Max350Text> value) {
+			obj.setLimitation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -194,7 +205,7 @@ public class AccountRestrictions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountRestrictions1, Optional<Max350Text>> mmAdditionalInformation = new MMMessageAttribute<AccountRestrictions1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -206,6 +217,16 @@ public class AccountRestrictions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(AccountRestrictions1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AccountRestrictions1 obj, Optional<Max350Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AcctVldtn")
@@ -247,7 +268,7 @@ public class AccountRestrictions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountValidation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountRestrictions1, Optional<Max350Text>> mmAccountValidation = new MMMessageAttribute<AccountRestrictions1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -259,6 +280,16 @@ public class AccountRestrictions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(AccountRestrictions1 obj) {
+			return obj.getAccountValidation();
+		}
+
+		@Override
+		public void setValue(AccountRestrictions1 obj, Optional<Max350Text> value) {
+			obj.setAccountValidation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -298,7 +329,7 @@ public class AccountRestrictions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountRestrictions1, Optional<Max35Text>> mmType = new MMMessageAttribute<AccountRestrictions1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -310,6 +341,16 @@ public class AccountRestrictions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(AccountRestrictions1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(AccountRestrictions1 obj, Optional<Max35Text> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rgltr")
@@ -351,7 +392,7 @@ public class AccountRestrictions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRegulator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountRestrictions1, Optional<PartyIdentification70Choice>> mmRegulator = new MMMessageAssociationEnd<AccountRestrictions1, Optional<PartyIdentification70Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -364,6 +405,16 @@ public class AccountRestrictions1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification70Choice> getValue(AccountRestrictions1 obj) {
+			return obj.getRegulator();
+		}
+
+		@Override
+		public void setValue(AccountRestrictions1 obj, Optional<PartyIdentification70Choice> value) {
+			obj.setRegulator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sts")
@@ -403,7 +454,7 @@ public class AccountRestrictions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountRestrictions1, Optional<RestrictionStatus1Choice>> mmStatus = new MMMessageAssociationEnd<AccountRestrictions1, Optional<RestrictionStatus1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -416,6 +467,16 @@ public class AccountRestrictions1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> RestrictionStatus1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictionStatus1Choice> getValue(AccountRestrictions1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(AccountRestrictions1 obj, Optional<RestrictionStatus1Choice> value) {
+			obj.setStatus(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Prd")
@@ -454,7 +515,7 @@ public class AccountRestrictions1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AccountRestrictions1, Optional<DateTimePeriodDetails1>> mmPeriod = new MMMessageAssociationEnd<AccountRestrictions1, Optional<DateTimePeriodDetails1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
@@ -466,7 +527,17 @@ public class AccountRestrictions1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
+			type_lazy = () -> DateTimePeriodDetails1.mmObject();
+		}
+
+		@Override
+		public Optional<DateTimePeriodDetails1> getValue(AccountRestrictions1 obj) {
+			return obj.getPeriod();
+		}
+
+		@Override
+		public void setValue(AccountRestrictions1 obj, Optional<DateTimePeriodDetails1> value) {
+			obj.setPeriod(value.orElse(null));
 		}
 	};
 
@@ -545,7 +616,7 @@ public class AccountRestrictions1 {
 		return period == null ? Optional.empty() : Optional.of(period);
 	}
 
-	public AccountRestrictions1 setPeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 period) {
+	public AccountRestrictions1 setPeriod(DateTimePeriodDetails1 period) {
 		this.period = period;
 		return this;
 	}

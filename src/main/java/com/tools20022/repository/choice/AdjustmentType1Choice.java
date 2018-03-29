@@ -111,7 +111,7 @@ public class AdjustmentType1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdjustmentType1Choice, AdjustmentType2Code> mmType = new MMMessageAttribute<AdjustmentType1Choice, AdjustmentType2Code>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdjustmentType1Choice.mmObject();
@@ -123,6 +123,16 @@ public class AdjustmentType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdjustmentType2Code.mmObject();
+		}
+
+		@Override
+		public AdjustmentType2Code getValue(AdjustmentType1Choice obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(AdjustmentType1Choice obj, AdjustmentType2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "OthrAdjstmntTp", required = true)
@@ -160,7 +170,7 @@ public class AdjustmentType1Choice {
 	 * "Specifies a type of adjustment not present in the code list."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherAdjustmentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdjustmentType1Choice, Max35Text> mmOtherAdjustmentType = new MMMessageAttribute<AdjustmentType1Choice, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdjustmentType1Choice.mmObject();
@@ -172,6 +182,16 @@ public class AdjustmentType1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(AdjustmentType1Choice obj) {
+			return obj.getOtherAdjustmentType();
+		}
+
+		@Override
+		public void setValue(AdjustmentType1Choice obj, Max35Text value) {
+			obj.setOtherAdjustmentType(value);
 		}
 	};
 

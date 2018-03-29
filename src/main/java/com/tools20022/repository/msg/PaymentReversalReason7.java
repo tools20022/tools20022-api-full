@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification43;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -125,7 +126,7 @@ public class PaymentReversalReason7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentReversalReason7, Optional<PartyIdentification43>> mmOriginator = new MMMessageAssociationEnd<PaymentReversalReason7, Optional<PartyIdentification43>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReversalReason7.mmObject();
@@ -138,7 +139,17 @@ public class PaymentReversalReason7 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
+			type_lazy = () -> PartyIdentification43.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification43> getValue(PaymentReversalReason7 obj) {
+			return obj.getOriginator();
+		}
+
+		@Override
+		public void setValue(PaymentReversalReason7 obj, Optional<PartyIdentification43> value) {
+			obj.setOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rsn")
@@ -182,7 +193,7 @@ public class PaymentReversalReason7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentReversalReason7, Optional<ReversalReason4Choice>> mmReason = new MMMessageAssociationEnd<PaymentReversalReason7, Optional<ReversalReason4Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReversalReason7.mmObject();
@@ -196,6 +207,16 @@ public class PaymentReversalReason7 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ReversalReason4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<ReversalReason4Choice> getValue(PaymentReversalReason7 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(PaymentReversalReason7 obj, Optional<ReversalReason4Choice> value) {
+			obj.setReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -240,7 +261,7 @@ public class PaymentReversalReason7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentReversalReason7, List<Max105Text>> mmAdditionalInformation = new MMMessageAttribute<PaymentReversalReason7, List<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReversalReason7.mmObject();
@@ -252,6 +273,16 @@ public class PaymentReversalReason7 {
 			nextVersions_lazy = () -> Arrays.asList(PaymentReversalReason8.mmAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public List<Max105Text> getValue(PaymentReversalReason7 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(PaymentReversalReason7 obj, List<Max105Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 
@@ -275,7 +306,7 @@ public class PaymentReversalReason7 {
 		return originator == null ? Optional.empty() : Optional.of(originator);
 	}
 
-	public PaymentReversalReason7 setOriginator(com.tools20022.repository.msg.PartyIdentification43 originator) {
+	public PaymentReversalReason7 setOriginator(PartyIdentification43 originator) {
 		this.originator = originator;
 		return this;
 	}

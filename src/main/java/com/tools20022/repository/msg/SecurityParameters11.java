@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.TerminalManagementAction3Code;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CryptographicKey13;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -65,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecurityParameters11"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -118,7 +119,7 @@ public class SecurityParameters11 {
 	 * SecurityParameters6.mmActionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters11, TerminalManagementAction3Code> mmActionType = new MMMessageAttribute<SecurityParameters11, TerminalManagementAction3Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters11.mmObject();
 			isDerived = false;
@@ -130,6 +131,16 @@ public class SecurityParameters11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
+		}
+
+		@Override
+		public TerminalManagementAction3Code getValue(SecurityParameters11 obj) {
+			return obj.getActionType();
+		}
+
+		@Override
+		public void setValue(SecurityParameters11 obj, TerminalManagementAction3Code value) {
+			obj.setActionType(value);
 		}
 	};
 	@XmlElement(name = "Vrsn", required = true)
@@ -166,7 +177,7 @@ public class SecurityParameters11 {
 	 * SecurityParameters6.mmVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters11, Max256Text> mmVersion = new MMMessageAttribute<SecurityParameters11, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters11.mmObject();
 			isDerived = false;
@@ -178,6 +189,16 @@ public class SecurityParameters11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(SecurityParameters11 obj) {
+			return obj.getVersion();
+		}
+
+		@Override
+		public void setValue(SecurityParameters11 obj, Max256Text value) {
+			obj.setVersion(value);
 		}
 	};
 	@XmlElement(name = "POIChllng")
@@ -216,7 +237,7 @@ public class SecurityParameters11 {
 	 * SecurityParameters6.mmPOIChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPOIChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters11, Optional<Max140Binary>> mmPOIChallenge = new MMMessageAttribute<SecurityParameters11, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters11.mmObject();
 			isDerived = false;
@@ -228,6 +249,16 @@ public class SecurityParameters11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Binary> getValue(SecurityParameters11 obj) {
+			return obj.getPOIChallenge();
+		}
+
+		@Override
+		public void setValue(SecurityParameters11 obj, Optional<Max140Binary> value) {
+			obj.setPOIChallenge(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TMChllng")
@@ -266,7 +297,7 @@ public class SecurityParameters11 {
 	 * SecurityParameters6.mmTMChallenge}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters11, Optional<Max140Binary>> mmTMChallenge = new MMMessageAttribute<SecurityParameters11, Optional<Max140Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters11.mmObject();
 			isDerived = false;
@@ -279,9 +310,19 @@ public class SecurityParameters11 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
+
+		@Override
+		public Optional<Max140Binary> getValue(SecurityParameters11 obj) {
+			return obj.getTMChallenge();
+		}
+
+		@Override
+		public void setValue(SecurityParameters11 obj, Optional<Max140Binary> value) {
+			obj.setTMChallenge(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "SctyElmt")
-	protected List<com.tools20022.repository.msg.CryptographicKey13> securityElement;
+	protected List<CryptographicKey13> securityElement;
 	/**
 	 * 
 	 <p>
@@ -317,7 +358,7 @@ public class SecurityParameters11 {
 	 * SecurityParameters6.mmSymmetricKey}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityElement = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityParameters11, List<CryptographicKey13>> mmSecurityElement = new MMMessageAttribute<SecurityParameters11, List<CryptographicKey13>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityParameters11.mmObject();
 			isDerived = false;
@@ -327,7 +368,17 @@ public class SecurityParameters11 {
 			definition = "Key to inject in the point of interaction, protected by the temporary key previously sent.";
 			previousVersion_lazy = () -> SecurityParameters6.mmSymmetricKey;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey13.mmObject();
+			complexType_lazy = () -> CryptographicKey13.mmObject();
+		}
+
+		@Override
+		public List<CryptographicKey13> getValue(SecurityParameters11 obj) {
+			return obj.getSecurityElement();
+		}
+
+		@Override
+		public void setValue(SecurityParameters11 obj, List<CryptographicKey13> value) {
+			obj.setSecurityElement(value);
 		}
 	};
 
@@ -337,7 +388,7 @@ public class SecurityParameters11 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityParameters11.mmActionType, com.tools20022.repository.msg.SecurityParameters11.mmVersion,
 						com.tools20022.repository.msg.SecurityParameters11.mmPOIChallenge, com.tools20022.repository.msg.SecurityParameters11.mmTMChallenge, com.tools20022.repository.msg.SecurityParameters11.mmSecurityElement);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityParameters11";
 				definition = "Parameters related to the security of software application and application protocol.";
 				previousVersion_lazy = () -> SecurityParameters6.mmObject();
@@ -386,7 +437,7 @@ public class SecurityParameters11 {
 		return securityElement == null ? securityElement = new ArrayList<>() : securityElement;
 	}
 
-	public SecurityParameters11 setSecurityElement(List<com.tools20022.repository.msg.CryptographicKey13> securityElement) {
+	public SecurityParameters11 setSecurityElement(List<CryptographicKey13> securityElement) {
 		this.securityElement = Objects.requireNonNull(securityElement);
 		return this;
 	}

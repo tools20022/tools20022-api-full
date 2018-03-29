@@ -108,7 +108,7 @@ public class ATMTotals1 {
 	 * definition} = "Type of media inside the cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMediaType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals1, Optional<ATMMediaType1Code>> mmMediaType = new MMMessageAttribute<ATMTotals1, Optional<ATMMediaType1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals1.mmObject();
 			isDerived = false;
@@ -119,6 +119,16 @@ public class ATMTotals1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ATMMediaType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ATMMediaType1Code> getValue(ATMTotals1 obj) {
+			return obj.getMediaType();
+		}
+
+		@Override
+		public void setValue(ATMTotals1 obj, Optional<ATMMediaType1Code> value) {
+			obj.setMediaType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ccy")
@@ -155,7 +165,7 @@ public class ATMTotals1 {
 	 * definition} = "Currency of the totals."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals1, Optional<ActiveCurrencyCode>> mmCurrency = new MMMessageAttribute<ATMTotals1, Optional<ActiveCurrencyCode>>() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals1.mmObject();
@@ -167,6 +177,16 @@ public class ATMTotals1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyCode> getValue(ATMTotals1 obj) {
+			return obj.getCurrency();
+		}
+
+		@Override
+		public void setValue(ATMTotals1 obj, Optional<ActiveCurrencyCode> value) {
+			obj.setCurrency(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMBal")
@@ -205,7 +225,7 @@ public class ATMTotals1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals1, Optional<ImpliedCurrencyAndAmount>> mmATMBalance = new MMMessageAttribute<ATMTotals1, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmATMBalance;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals1.mmObject();
@@ -217,6 +237,16 @@ public class ATMTotals1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTotals1 obj) {
+			return obj.getATMBalance();
+		}
+
+		@Override
+		public void setValue(ATMTotals1 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setATMBalance(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMCur")
@@ -253,7 +283,7 @@ public class ATMTotals1 {
 	 * definition} = "Available amount for dispense in the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMCurrent = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals1, Optional<ImpliedCurrencyAndAmount>> mmATMCurrent = new MMMessageAttribute<ATMTotals1, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrent;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals1.mmObject();
@@ -265,6 +295,16 @@ public class ATMTotals1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ATMTotals1 obj) {
+			return obj.getATMCurrent();
+		}
+
+		@Override
+		public void setValue(ATMTotals1 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setATMCurrent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMBalNb")
@@ -301,7 +341,7 @@ public class ATMTotals1 {
 	 * "Total number of units for non-valued media, including reject cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMBalanceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals1, Optional<Number>> mmATMBalanceNumber = new MMMessageAttribute<ATMTotals1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmATMBalanceNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals1.mmObject();
@@ -313,6 +353,16 @@ public class ATMTotals1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMTotals1 obj) {
+			return obj.getATMBalanceNumber();
+		}
+
+		@Override
+		public void setValue(ATMTotals1 obj, Optional<Number> value) {
+			obj.setATMBalanceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMCurNb")
@@ -349,7 +399,7 @@ public class ATMTotals1 {
 	 * "Total number of units for non-valued media, excluding reject cassette."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmATMCurrentNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMTotals1, Optional<Number>> mmATMCurrentNumber = new MMMessageAttribute<ATMTotals1, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> ATMTotal.mmATMCurrentNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTotals1.mmObject();
@@ -361,6 +411,16 @@ public class ATMTotals1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ATMTotals1 obj) {
+			return obj.getATMCurrentNumber();
+		}
+
+		@Override
+		public void setValue(ATMTotals1 obj, Optional<Number> value) {
+			obj.setATMCurrentNumber(value.orElse(null));
 		}
 	};
 

@@ -55,12 +55,16 @@ public class ConstraintEffectiveTransferDateRule {
 	 */
 	public static final MMConstraint<TransferInConfirmationV07> forTransferInConfirmationV07 = new MMConstraint<TransferInConfirmationV07>() {
 		{
-			validator = ConstraintEffectiveTransferDateRule::checkTransferInConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTransferDateRule";
 			definition = "If Function is ADVI (Advice) or Function is not present, then EffectiveTransferDate must be present.";
 			owner_lazy = () -> TransferInConfirmationV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransferDetails[*]/EffectiveTransferDate</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Function</leftOperand><rightOperand>Advice</rightOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/Function</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(TransferInConfirmationV07 obj) throws Exception {
+			checkTransferInConfirmationV07(obj);
 		}
 	};
 

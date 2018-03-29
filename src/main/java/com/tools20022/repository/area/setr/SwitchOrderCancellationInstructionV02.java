@@ -25,7 +25,6 @@ import com.tools20022.repository.area.SecuritiesTradeArchive;
 import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.SwitchOrderInstruction1;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -158,7 +157,7 @@ public class SwitchOrderCancellationInstructionV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMasterReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderCancellationInstructionV02, Optional<AdditionalReference3>> mmMasterReference = new MMMessageBuildingBlock<SwitchOrderCancellationInstructionV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,12 +168,14 @@ public class SwitchOrderCancellationInstructionV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderCancellationInstructionV02.class.getMethod("getMasterReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(SwitchOrderCancellationInstructionV02 obj) {
+			return obj.getMasterReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderCancellationInstructionV02 obj, Optional<AdditionalReference3> value) {
+			obj.setMasterReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -202,7 +203,7 @@ public class SwitchOrderCancellationInstructionV02 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderCancellationInstructionV02, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<SwitchOrderCancellationInstructionV02, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,12 +214,14 @@ public class SwitchOrderCancellationInstructionV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderCancellationInstructionV02.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(SwitchOrderCancellationInstructionV02 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderCancellationInstructionV02 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef", required = true)
@@ -246,7 +249,7 @@ public class SwitchOrderCancellationInstructionV02 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderCancellationInstructionV02, AdditionalReference3> mmPreviousReference = new MMMessageBuildingBlock<SwitchOrderCancellationInstructionV02, AdditionalReference3>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,12 +260,14 @@ public class SwitchOrderCancellationInstructionV02 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderCancellationInstructionV02.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference3 getValue(SwitchOrderCancellationInstructionV02 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(SwitchOrderCancellationInstructionV02 obj, AdditionalReference3 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "OrdrToBeCanc")
@@ -291,7 +296,7 @@ public class SwitchOrderCancellationInstructionV02 {
 	 * "Common information related to all the orders to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOrderToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<SwitchOrderCancellationInstructionV02, Optional<SwitchOrderInstruction1>> mmOrderToBeCancelled = new MMMessageBuildingBlock<SwitchOrderCancellationInstructionV02, Optional<SwitchOrderInstruction1>>() {
 		{
 			xmlTag = "OrdrToBeCanc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,12 +307,14 @@ public class SwitchOrderCancellationInstructionV02 {
 			complexType_lazy = () -> SwitchOrderInstruction1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SwitchOrderCancellationInstructionV02.class.getMethod("getOrderToBeCancelled", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<SwitchOrderInstruction1> getValue(SwitchOrderCancellationInstructionV02 obj) {
+			return obj.getOrderToBeCancelled();
+		}
+
+		@Override
+		public void setValue(SwitchOrderCancellationInstructionV02 obj, Optional<SwitchOrderInstruction1> value) {
+			obj.setOrderToBeCancelled(value.orElse(null));
 		}
 	};
 

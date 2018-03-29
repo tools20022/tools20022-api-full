@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMCommand5Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMCommandIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -97,7 +98,7 @@ public class ATMCommand9 {
 	 * definition} = "Type of command to be performed by the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMCommand9, ATMCommand5Code> mmType = new MMMessageAttribute<ATMCommand9, ATMCommand5Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand9.mmObject();
 			isDerived = false;
@@ -108,6 +109,16 @@ public class ATMCommand9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMCommand5Code.mmObject();
+		}
+
+		@Override
+		public ATMCommand5Code getValue(ATMCommand9 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ATMCommand9 obj, ATMCommand5Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "CmdId")
@@ -138,7 +149,7 @@ public class ATMCommand9 {
 	 * definition} = "Identification of the entity issuing the command."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCommandIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMCommand9, Optional<ATMCommandIdentification1>> mmCommandIdentification = new MMMessageAssociationEnd<ATMCommand9, Optional<ATMCommandIdentification1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCommand9.mmObject();
 			isDerived = false;
@@ -149,7 +160,17 @@ public class ATMCommand9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMCommandIdentification1.mmObject();
+			type_lazy = () -> ATMCommandIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ATMCommandIdentification1> getValue(ATMCommand9 obj) {
+			return obj.getCommandIdentification();
+		}
+
+		@Override
+		public void setValue(ATMCommand9 obj, Optional<ATMCommandIdentification1> value) {
+			obj.setCommandIdentification(value.orElse(null));
 		}
 	};
 
@@ -179,7 +200,7 @@ public class ATMCommand9 {
 		return commandIdentification == null ? Optional.empty() : Optional.of(commandIdentification);
 	}
 
-	public ATMCommand9 setCommandIdentification(com.tools20022.repository.msg.ATMCommandIdentification1 commandIdentification) {
+	public ATMCommand9 setCommandIdentification(ATMCommandIdentification1 commandIdentification) {
 		this.commandIdentification = commandIdentification;
 		return this;
 	}

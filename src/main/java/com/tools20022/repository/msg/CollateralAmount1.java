@@ -123,7 +123,7 @@ public class CollateralAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCollateralAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAmount1, ActiveCurrencyAndAmount> mmCollateralAmount = new MMMessageAttribute<CollateralAmount1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAmount1.mmObject();
@@ -135,6 +135,16 @@ public class CollateralAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralAmount1 obj) {
+			return obj.getCollateralAmount();
+		}
+
+		@Override
+		public void setValue(CollateralAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setCollateralAmount(value);
 		}
 	};
 	@XmlElement(name = "RptdCcyAndAmt", required = true)
@@ -174,7 +184,7 @@ public class CollateralAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportedCurrencyAndAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAmount1, ActiveCurrencyAndAmount> mmReportedCurrencyAndAmount = new MMMessageAttribute<CollateralAmount1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmReportedCurrencyAndAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAmount1.mmObject();
@@ -186,6 +196,16 @@ public class CollateralAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralAmount1 obj) {
+			return obj.getReportedCurrencyAndAmount();
+		}
+
+		@Override
+		public void setValue(CollateralAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setReportedCurrencyAndAmount(value);
 		}
 	};
 	@XmlElement(name = "MktValAmt", required = true)
@@ -225,7 +245,7 @@ public class CollateralAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMarketValueAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAmount1, ActiveCurrencyAndAmount> mmMarketValueAmount = new MMMessageAttribute<CollateralAmount1, ActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmMarketValueAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAmount1.mmObject();
@@ -237,6 +257,16 @@ public class CollateralAmount1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public ActiveCurrencyAndAmount getValue(CollateralAmount1 obj) {
+			return obj.getMarketValueAmount();
+		}
+
+		@Override
+		public void setValue(CollateralAmount1 obj, ActiveCurrencyAndAmount value) {
+			obj.setMarketValueAmount(value);
 		}
 	};
 	@XmlElement(name = "AcrdIntrstAmt")
@@ -276,7 +306,7 @@ public class CollateralAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAmount1, Optional<ActiveCurrencyAndAmount>> mmAccruedInterestAmount = new MMMessageAttribute<CollateralAmount1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAmount1.mmObject();
@@ -288,6 +318,16 @@ public class CollateralAmount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CollateralAmount1 obj) {
+			return obj.getAccruedInterestAmount();
+		}
+
+		@Override
+		public void setValue(CollateralAmount1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setAccruedInterestAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FeesAndComssns")
@@ -327,7 +367,7 @@ public class CollateralAmount1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFeesAndCommissions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CollateralAmount1, Optional<ActiveCurrencyAndAmount>> mmFeesAndCommissions = new MMMessageAttribute<CollateralAmount1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CollateralManagement.mmFeesAndCommissions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralAmount1.mmObject();
@@ -339,6 +379,16 @@ public class CollateralAmount1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(CollateralAmount1 obj) {
+			return obj.getFeesAndCommissions();
+		}
+
+		@Override
+		public void setValue(CollateralAmount1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setFeesAndCommissions(value.orElse(null));
 		}
 	};
 

@@ -163,7 +163,7 @@ public class AcceptorRejection2 {
 	 * AcceptorRejection1.mmRejectReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRejectReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorRejection2, RejectReason1Code> mmRejectReason = new MMMessageAttribute<AcceptorRejection2, RejectReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentStatus.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection2.mmObject();
@@ -177,6 +177,16 @@ public class AcceptorRejection2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectReason1Code.mmObject();
+		}
+
+		@Override
+		public RejectReason1Code getValue(AcceptorRejection2 obj) {
+			return obj.getRejectReason();
+		}
+
+		@Override
+		public void setValue(AcceptorRejection2 obj, RejectReason1Code value) {
+			obj.setRejectReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -222,7 +232,7 @@ public class AcceptorRejection2 {
 	 * AcceptorRejection1.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorRejection2, Optional<Max500Text>> mmAdditionalInformation = new MMMessageAttribute<AcceptorRejection2, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection2.mmObject();
 			isDerived = false;
@@ -235,6 +245,16 @@ public class AcceptorRejection2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(AcceptorRejection2 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(AcceptorRejection2 obj, Optional<Max500Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgInErr")
@@ -284,7 +304,7 @@ public class AcceptorRejection2 {
 	 * AcceptorRejection1.mmMessageInError}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageInError = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptorRejection2, Optional<Max100KBinary>> mmMessageInError = new MMMessageAttribute<AcceptorRejection2, Optional<Max100KBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorRejection2.mmObject();
 			isDerived = false;
@@ -297,6 +317,16 @@ public class AcceptorRejection2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
+		}
+
+		@Override
+		public Optional<Max100KBinary> getValue(AcceptorRejection2 obj) {
+			return obj.getMessageInError();
+		}
+
+		@Override
+		public void setValue(AcceptorRejection2 obj, Optional<Max100KBinary> value) {
+			obj.setMessageInError(value.orElse(null));
 		}
 	};
 

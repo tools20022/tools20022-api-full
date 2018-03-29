@@ -154,7 +154,7 @@ public class CashAccount29 {
 	 * CashAccount11.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount29, CashAccountIdentification1Choice> mmIdentification = new MMMessageAttribute<CashAccount29, CashAccountIdentification1Choice>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount29.mmObject();
@@ -168,6 +168,16 @@ public class CashAccount29 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CashAccountIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public CashAccountIdentification1Choice getValue(CashAccount29 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(CashAccount29 obj, CashAccountIdentification1Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -218,7 +228,7 @@ public class CashAccount29 {
 	 * CashAccount11.mmAccountServicer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CashAccount29, Optional<FinancialInstitutionIdentification3Choice>> mmAccountServicer = new MMMessageAttribute<CashAccount29, Optional<FinancialInstitutionIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount29.mmObject();
@@ -232,6 +242,16 @@ public class CashAccount29 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstitutionIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstitutionIdentification3Choice> getValue(CashAccount29 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(CashAccount29 obj, Optional<FinancialInstitutionIdentification3Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 

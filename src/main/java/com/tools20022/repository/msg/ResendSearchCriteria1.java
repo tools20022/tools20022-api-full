@@ -127,7 +127,7 @@ public class ResendSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResendSearchCriteria1, Optional<ISODate>> mmBusinessDate = new MMMessageAttribute<ResendSearchCriteria1, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
@@ -139,6 +139,16 @@ public class ResendSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(ResendSearchCriteria1 obj) {
+			return obj.getBusinessDate();
+		}
+
+		@Override
+		public void setValue(ResendSearchCriteria1 obj, Optional<ISODate> value) {
+			obj.setBusinessDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SeqNb")
@@ -180,7 +190,7 @@ public class ResendSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResendSearchCriteria1, Optional<Max35Text>> mmSequenceNumber = new MMMessageAttribute<ResendSearchCriteria1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
@@ -192,6 +202,16 @@ public class ResendSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ResendSearchCriteria1 obj) {
+			return obj.getSequenceNumber();
+		}
+
+		@Override
+		public void setValue(ResendSearchCriteria1 obj, Optional<Max35Text> value) {
+			obj.setSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId")
@@ -233,7 +253,7 @@ public class ResendSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResendSearchCriteria1, Optional<Max35Text>> mmOriginalMessageNameIdentification = new MMMessageAttribute<ResendSearchCriteria1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
@@ -245,6 +265,16 @@ public class ResendSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ResendSearchCriteria1 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(ResendSearchCriteria1 obj, Optional<Max35Text> value) {
+			obj.setOriginalMessageNameIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FileRef")
@@ -286,7 +316,7 @@ public class ResendSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFileReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ResendSearchCriteria1, Optional<Max35Text>> mmFileReference = new MMMessageAttribute<ResendSearchCriteria1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
@@ -298,6 +328,16 @@ public class ResendSearchCriteria1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ResendSearchCriteria1 obj) {
+			return obj.getFileReference();
+		}
+
+		@Override
+		public void setValue(ResendSearchCriteria1 obj, Optional<Max35Text> value) {
+			obj.setFileReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rcpt", required = true)
@@ -339,7 +379,7 @@ public class ResendSearchCriteria1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ResendSearchCriteria1, PartyIdentification71Choice> mmRecipient = new MMMessageAssociationEnd<ResendSearchCriteria1, PartyIdentification71Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
@@ -352,6 +392,16 @@ public class ResendSearchCriteria1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification71Choice getValue(ResendSearchCriteria1 obj) {
+			return obj.getRecipient();
+		}
+
+		@Override
+		public void setValue(ResendSearchCriteria1 obj, PartyIdentification71Choice value) {
+			obj.setRecipient(value);
 		}
 	};
 

@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.ListTrading;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentAttributes1;
+import com.tools20022.repository.msg.FinancialInstrumentStipulations;
+import com.tools20022.repository.msg.Price1;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -148,7 +152,7 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ListStrikePriceDetails1, Max35Text> mmClientOrderIdentification = new MMMessageAttribute<ListStrikePriceDetails1, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -160,6 +164,16 @@ public class ListStrikePriceDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ListStrikePriceDetails1 obj) {
+			return obj.getClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, Max35Text value) {
+			obj.setClientOrderIdentification(value);
 		}
 	};
 	@XmlElement(name = "StrkPric", required = true)
@@ -197,7 +211,7 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ListStrikePriceDetails1, Price1> mmStrikePrice = new MMMessageAttribute<ListStrikePriceDetails1, Price1>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -208,7 +222,17 @@ public class ListStrikePriceDetails1 {
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Price1 getValue(ListStrikePriceDetails1 obj) {
+			return obj.getStrikePrice();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, Price1 value) {
+			obj.setStrikePrice(value);
 		}
 	};
 	@XmlElement(name = "ScndryClntOrdrId")
@@ -247,7 +271,7 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecondaryClientOrderIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ListStrikePriceDetails1, Optional<Max35Text>> mmSecondaryClientOrderIdentification = new MMMessageAttribute<ListStrikePriceDetails1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -259,6 +283,16 @@ public class ListStrikePriceDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ListStrikePriceDetails1 obj) {
+			return obj.getSecondaryClientOrderIdentification();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, Optional<Max35Text> value) {
+			obj.setSecondaryClientOrderIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsClsgPric")
@@ -296,7 +330,7 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousClosingPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ListStrikePriceDetails1, Optional<Price1>> mmPreviousClosingPrice = new MMMessageAttribute<ListStrikePriceDetails1, Optional<Price1>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -307,7 +341,17 @@ public class ListStrikePriceDetails1 {
 			definition = "Price of a financial instrument at closing time of the exchange in which it is traded.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+			complexType_lazy = () -> Price1.mmObject();
+		}
+
+		@Override
+		public Optional<Price1> getValue(ListStrikePriceDetails1 obj) {
+			return obj.getPreviousClosingPrice();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, Optional<Price1> value) {
+			obj.setPreviousClosingPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Sd")
@@ -344,7 +388,7 @@ public class ListStrikePriceDetails1 {
 	 * definition} = "Coded list to specify the side of the order."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ListStrikePriceDetails1, Optional<Side1Code>> mmSide = new MMMessageAttribute<ListStrikePriceDetails1, Optional<Side1Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -357,9 +401,19 @@ public class ListStrikePriceDetails1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
+
+		@Override
+		public Optional<Side1Code> getValue(ListStrikePriceDetails1 obj) {
+			return obj.getSide();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, Optional<Side1Code> value) {
+			obj.setSide(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "UndrlygFinInstrm")
-	protected List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument;
+	protected List<SecurityIdentification7> underlyingFinancialInstrument;
 	/**
 	 * 
 	 <p>
@@ -394,7 +448,7 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ListStrikePriceDetails1, List<SecurityIdentification7>> mmUnderlyingFinancialInstrument = new MMMessageAssociationEnd<ListStrikePriceDetails1, List<SecurityIdentification7>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -405,7 +459,17 @@ public class ListStrikePriceDetails1 {
 			definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification7> getValue(ListStrikePriceDetails1 obj) {
+			return obj.getUnderlyingFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, List<SecurityIdentification7> value) {
+			obj.setUnderlyingFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "Stiptns")
@@ -443,7 +507,7 @@ public class ListStrikePriceDetails1 {
 	 * "Provides details about the financial instrument stipulations."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ListStrikePriceDetails1, Optional<FinancialInstrumentStipulations>> mmStipulations = new MMMessageAssociationEnd<ListStrikePriceDetails1, Optional<FinancialInstrumentStipulations>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -455,11 +519,21 @@ public class ListStrikePriceDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
+			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentStipulations> getValue(ListStrikePriceDetails1 obj) {
+			return obj.getStipulations();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, Optional<FinancialInstrumentStipulations> value) {
+			obj.setStipulations(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygStiptns")
-	protected List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations;
+	protected List<FinancialInstrumentStipulations> underlyingStipulations;
 	/**
 	 * 
 	 <p>
@@ -494,7 +568,7 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ListStrikePriceDetails1, List<FinancialInstrumentStipulations>> mmUnderlyingStipulations = new MMMessageAssociationEnd<ListStrikePriceDetails1, List<FinancialInstrumentStipulations>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -505,7 +579,17 @@ public class ListStrikePriceDetails1 {
 			definition = "Provides details about the underlying financial instrument stipulations.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
+			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentStipulations> getValue(ListStrikePriceDetails1 obj) {
+			return obj.getUnderlyingStipulations();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, List<FinancialInstrumentStipulations> value) {
+			obj.setUnderlyingStipulations(value);
 		}
 	};
 	@XmlElement(name = "FinInstrmAttrbts")
@@ -543,7 +627,7 @@ public class ListStrikePriceDetails1 {
 	 * "Provides details about the financial instrument attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ListStrikePriceDetails1, Optional<FinancialInstrumentAttributes1>> mmFinancialInstrumentAttributes = new MMMessageAssociationEnd<ListStrikePriceDetails1, Optional<FinancialInstrumentAttributes1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -555,11 +639,21 @@ public class ListStrikePriceDetails1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentAttributes1> getValue(ListStrikePriceDetails1 obj) {
+			return obj.getFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, Optional<FinancialInstrumentAttributes1> value) {
+			obj.setFinancialInstrumentAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygFinInstrmAttrbts")
-	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes;
+	protected List<FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes;
 	/**
 	 * 
 	 <p>
@@ -593,7 +687,7 @@ public class ListStrikePriceDetails1 {
 	 * "Provides details about the underlying financial instrument attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ListStrikePriceDetails1, List<FinancialInstrumentAttributes1>> mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd<ListStrikePriceDetails1, List<FinancialInstrumentAttributes1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -604,7 +698,17 @@ public class ListStrikePriceDetails1 {
 			definition = "Provides details about the underlying financial instrument attributes.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+		}
+
+		@Override
+		public List<FinancialInstrumentAttributes1> getValue(ListStrikePriceDetails1 obj) {
+			return obj.getUnderlyingFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, List<FinancialInstrumentAttributes1> value) {
+			obj.setUnderlyingFinancialInstrumentAttributes(value);
 		}
 	};
 	@XmlElement(name = "FinInstrm", required = true)
@@ -643,7 +747,7 @@ public class ListStrikePriceDetails1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ListStrikePriceDetails1, SecurityIdentification7> mmFinancialInstrument = new MMMessageAssociationEnd<ListStrikePriceDetails1, SecurityIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ListStrikePriceDetails1.mmObject();
@@ -655,7 +759,17 @@ public class ListStrikePriceDetails1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(ListStrikePriceDetails1 obj) {
+			return obj.getFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(ListStrikePriceDetails1 obj, SecurityIdentification7 value) {
+			obj.setFinancialInstrument(value);
 		}
 	};
 
@@ -691,7 +805,7 @@ public class ListStrikePriceDetails1 {
 		return strikePrice;
 	}
 
-	public ListStrikePriceDetails1 setStrikePrice(com.tools20022.repository.msg.Price1 strikePrice) {
+	public ListStrikePriceDetails1 setStrikePrice(Price1 strikePrice) {
 		this.strikePrice = Objects.requireNonNull(strikePrice);
 		return this;
 	}
@@ -709,7 +823,7 @@ public class ListStrikePriceDetails1 {
 		return previousClosingPrice == null ? Optional.empty() : Optional.of(previousClosingPrice);
 	}
 
-	public ListStrikePriceDetails1 setPreviousClosingPrice(com.tools20022.repository.msg.Price1 previousClosingPrice) {
+	public ListStrikePriceDetails1 setPreviousClosingPrice(Price1 previousClosingPrice) {
 		this.previousClosingPrice = previousClosingPrice;
 		return this;
 	}
@@ -727,7 +841,7 @@ public class ListStrikePriceDetails1 {
 		return underlyingFinancialInstrument == null ? underlyingFinancialInstrument = new ArrayList<>() : underlyingFinancialInstrument;
 	}
 
-	public ListStrikePriceDetails1 setUnderlyingFinancialInstrument(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument) {
+	public ListStrikePriceDetails1 setUnderlyingFinancialInstrument(List<SecurityIdentification7> underlyingFinancialInstrument) {
 		this.underlyingFinancialInstrument = Objects.requireNonNull(underlyingFinancialInstrument);
 		return this;
 	}
@@ -736,7 +850,7 @@ public class ListStrikePriceDetails1 {
 		return stipulations == null ? Optional.empty() : Optional.of(stipulations);
 	}
 
-	public ListStrikePriceDetails1 setStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations stipulations) {
+	public ListStrikePriceDetails1 setStipulations(FinancialInstrumentStipulations stipulations) {
 		this.stipulations = stipulations;
 		return this;
 	}
@@ -745,7 +859,7 @@ public class ListStrikePriceDetails1 {
 		return underlyingStipulations == null ? underlyingStipulations = new ArrayList<>() : underlyingStipulations;
 	}
 
-	public ListStrikePriceDetails1 setUnderlyingStipulations(List<com.tools20022.repository.msg.FinancialInstrumentStipulations> underlyingStipulations) {
+	public ListStrikePriceDetails1 setUnderlyingStipulations(List<FinancialInstrumentStipulations> underlyingStipulations) {
 		this.underlyingStipulations = Objects.requireNonNull(underlyingStipulations);
 		return this;
 	}
@@ -754,7 +868,7 @@ public class ListStrikePriceDetails1 {
 		return financialInstrumentAttributes == null ? Optional.empty() : Optional.of(financialInstrumentAttributes);
 	}
 
-	public ListStrikePriceDetails1 setFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 financialInstrumentAttributes) {
+	public ListStrikePriceDetails1 setFinancialInstrumentAttributes(FinancialInstrumentAttributes1 financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
 		return this;
 	}
@@ -763,7 +877,7 @@ public class ListStrikePriceDetails1 {
 		return underlyingFinancialInstrumentAttributes == null ? underlyingFinancialInstrumentAttributes = new ArrayList<>() : underlyingFinancialInstrumentAttributes;
 	}
 
-	public ListStrikePriceDetails1 setUnderlyingFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
+	public ListStrikePriceDetails1 setUnderlyingFinancialInstrumentAttributes(List<FinancialInstrumentAttributes1> underlyingFinancialInstrumentAttributes) {
 		this.underlyingFinancialInstrumentAttributes = Objects.requireNonNull(underlyingFinancialInstrumentAttributes);
 		return this;
 	}
@@ -772,7 +886,7 @@ public class ListStrikePriceDetails1 {
 		return financialInstrument;
 	}
 
-	public ListStrikePriceDetails1 setFinancialInstrument(com.tools20022.repository.msg.SecurityIdentification7 financialInstrument) {
+	public ListStrikePriceDetails1 setFinancialInstrument(SecurityIdentification7 financialInstrument) {
 		this.financialInstrument = Objects.requireNonNull(financialInstrument);
 		return this;
 	}

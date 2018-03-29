@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ATMConfigurationParameter1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -123,7 +124,7 @@ public class ATMEquipment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmManufacturer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment1, Optional<Max35Text>> mmManufacturer = new MMMessageAttribute<ATMEquipment1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 			isDerived = false;
@@ -135,6 +136,16 @@ public class ATMEquipment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment1 obj) {
+			return obj.getManufacturer();
+		}
+
+		@Override
+		public void setValue(ATMEquipment1 obj, Optional<Max35Text> value) {
+			obj.setManufacturer(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mdl")
@@ -172,7 +183,7 @@ public class ATMEquipment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment1, Optional<Max35Text>> mmModel = new MMMessageAttribute<ATMEquipment1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 			isDerived = false;
@@ -184,6 +195,16 @@ public class ATMEquipment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment1 obj) {
+			return obj.getModel();
+		}
+
+		@Override
+		public void setValue(ATMEquipment1 obj, Optional<Max35Text> value) {
+			obj.setModel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SrlNb")
@@ -222,7 +243,7 @@ public class ATMEquipment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment1, Optional<Max35Text>> mmSerialNumber = new MMMessageAttribute<ATMEquipment1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 			isDerived = false;
@@ -234,6 +255,16 @@ public class ATMEquipment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment1 obj) {
+			return obj.getSerialNumber();
+		}
+
+		@Override
+		public void setValue(ATMEquipment1 obj, Optional<Max35Text> value) {
+			obj.setSerialNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ApplPrvdr")
@@ -272,7 +303,7 @@ public class ATMEquipment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationProvider = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment1, Optional<Max35Text>> mmApplicationProvider = new MMMessageAttribute<ATMEquipment1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 			isDerived = false;
@@ -284,6 +315,16 @@ public class ATMEquipment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment1 obj) {
+			return obj.getApplicationProvider();
+		}
+
+		@Override
+		public void setValue(ATMEquipment1 obj, Optional<Max35Text> value) {
+			obj.setApplicationProvider(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ApplNm")
@@ -314,7 +355,7 @@ public class ATMEquipment1 {
 	 * definition} = "Name of the software product."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment1, Optional<Max35Text>> mmApplicationName = new MMMessageAttribute<ATMEquipment1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 			isDerived = false;
@@ -325,6 +366,16 @@ public class ATMEquipment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment1 obj) {
+			return obj.getApplicationName();
+		}
+
+		@Override
+		public void setValue(ATMEquipment1 obj, Optional<Max35Text> value) {
+			obj.setApplicationName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ApplVrsn")
@@ -364,7 +415,7 @@ public class ATMEquipment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApplicationVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment1, Optional<Max35Text>> mmApplicationVersion = new MMMessageAttribute<ATMEquipment1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 			isDerived = false;
@@ -376,6 +427,16 @@ public class ATMEquipment1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment1 obj) {
+			return obj.getApplicationVersion();
+		}
+
+		@Override
+		public void setValue(ATMEquipment1 obj, Optional<Max35Text> value) {
+			obj.setApplicationVersion(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ApprvlNb")
@@ -414,7 +475,7 @@ public class ATMEquipment1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmApprovalNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ATMEquipment1, Optional<Max35Text>> mmApprovalNumber = new MMMessageAttribute<ATMEquipment1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 			isDerived = false;
@@ -427,9 +488,19 @@ public class ATMEquipment1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
+
+		@Override
+		public Optional<Max35Text> getValue(ATMEquipment1 obj) {
+			return obj.getApprovalNumber();
+		}
+
+		@Override
+		public void setValue(ATMEquipment1 obj, Optional<Max35Text> value) {
+			obj.setApprovalNumber(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "CfgtnParam")
-	protected List<com.tools20022.repository.msg.ATMConfigurationParameter1> configurationParameter;
+	protected List<ATMConfigurationParameter1> configurationParameter;
 	/**
 	 * 
 	 <p>
@@ -456,7 +527,7 @@ public class ATMEquipment1 {
 	 * definition} = "Configuration parameter version."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmConfigurationParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ATMEquipment1, List<ATMConfigurationParameter1>> mmConfigurationParameter = new MMMessageAssociationEnd<ATMEquipment1, List<ATMConfigurationParameter1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 			isDerived = false;
@@ -466,7 +537,17 @@ public class ATMEquipment1 {
 			definition = "Configuration parameter version.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ATMConfigurationParameter1.mmObject();
+			type_lazy = () -> ATMConfigurationParameter1.mmObject();
+		}
+
+		@Override
+		public List<ATMConfigurationParameter1> getValue(ATMEquipment1 obj) {
+			return obj.getConfigurationParameter();
+		}
+
+		@Override
+		public void setValue(ATMEquipment1 obj, List<ATMConfigurationParameter1> value) {
+			obj.setConfigurationParameter(value);
 		}
 	};
 
@@ -553,7 +634,7 @@ public class ATMEquipment1 {
 		return configurationParameter == null ? configurationParameter = new ArrayList<>() : configurationParameter;
 	}
 
-	public ATMEquipment1 setConfigurationParameter(List<com.tools20022.repository.msg.ATMConfigurationParameter1> configurationParameter) {
+	public ATMEquipment1 setConfigurationParameter(List<ATMConfigurationParameter1> configurationParameter) {
 		this.configurationParameter = Objects.requireNonNull(configurationParameter);
 		return this;
 	}

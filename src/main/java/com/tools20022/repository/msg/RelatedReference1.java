@@ -110,7 +110,7 @@ public class RelatedReference1 {
 	 * "Unique transaction identifier assigned by the local application."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionUniqueIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedReference1, Optional<Max105Text>> mmTransactionUniqueIdentifier = new MMMessageAttribute<RelatedReference1, Optional<Max105Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedReference1.mmObject();
@@ -122,6 +122,16 @@ public class RelatedReference1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max105Text> getValue(RelatedReference1 obj) {
+			return obj.getTransactionUniqueIdentifier();
+		}
+
+		@Override
+		public void setValue(RelatedReference1 obj, Optional<Max105Text> value) {
+			obj.setTransactionUniqueIdentifier(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgRef")
@@ -159,7 +169,7 @@ public class RelatedReference1 {
 	 * "Message reference assigned by the original message sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RelatedReference1, Optional<Max35Text>> mmMessageReference = new MMMessageAttribute<RelatedReference1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedReference1.mmObject();
@@ -171,6 +181,16 @@ public class RelatedReference1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(RelatedReference1 obj) {
+			return obj.getMessageReference();
+		}
+
+		@Override
+		public void setValue(RelatedReference1 obj, Optional<Max35Text> value) {
+			obj.setMessageReference(value.orElse(null));
 		}
 	};
 

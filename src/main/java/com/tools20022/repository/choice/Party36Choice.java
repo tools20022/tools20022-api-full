@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Party36Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -117,7 +117,7 @@ public class Party36Choice {
 	 * Party10Choice.mmOrganisationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party36Choice, OrganisationIdentification7> mmOrganisationIdentification = new MMMessageAssociationEnd<Party36Choice, OrganisationIdentification7>() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party36Choice.mmObject();
@@ -131,6 +131,16 @@ public class Party36Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OrganisationIdentification7.mmObject();
+		}
+
+		@Override
+		public OrganisationIdentification7 getValue(Party36Choice obj) {
+			return obj.getOrganisationIdentification();
+		}
+
+		@Override
+		public void setValue(Party36Choice obj, OrganisationIdentification7 value) {
+			obj.setOrganisationIdentification(value);
 		}
 	};
 	@XmlElement(name = "PrvtId", required = true)
@@ -172,7 +182,7 @@ public class Party36Choice {
 	 * Party10Choice.mmPrivateIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Party36Choice, PersonIdentification14> mmPrivateIdentification = new MMMessageAssociationEnd<Party36Choice, PersonIdentification14>() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Party36Choice.mmObject();
@@ -187,6 +197,16 @@ public class Party36Choice {
 			isComposite = true;
 			type_lazy = () -> PersonIdentification14.mmObject();
 		}
+
+		@Override
+		public PersonIdentification14 getValue(Party36Choice obj) {
+			return obj.getPrivateIdentification();
+		}
+
+		@Override
+		public void setValue(Party36Choice obj, PersonIdentification14 value) {
+			obj.setPrivateIdentification(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -195,7 +215,7 @@ public class Party36Choice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party36Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party36Choice.mmPrivateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Party36Choice";
 				definition = "Nature or use of the account.";
 				previousVersion_lazy = () -> Party10Choice.mmObject();

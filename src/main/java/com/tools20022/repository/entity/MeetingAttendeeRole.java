@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.MeetingPartyRole;
+import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityPosition1;
 import com.tools20022.repository.msg.SecurityPosition2;
@@ -127,7 +128,7 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 	 * "Specifies the person who is registered to attend a meeting."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPerson = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<MeetingAttendeeRole, List<Person>> mmPerson = new MMBusinessAssociationEnd<MeetingAttendeeRole, List<Person>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendeeRole.mmObject();
@@ -138,6 +139,16 @@ public class MeetingAttendeeRole extends MeetingPartyRole {
 			opposite_lazy = () -> com.tools20022.repository.entity.Person.mmMeetingAttendee;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
+		}
+
+		@Override
+		public List<Person> getValue(MeetingAttendeeRole obj) {
+			return obj.getPerson();
+		}
+
+		@Override
+		public void setValue(MeetingAttendeeRole obj, List<Person> value) {
+			obj.setPerson(value);
 		}
 	};
 

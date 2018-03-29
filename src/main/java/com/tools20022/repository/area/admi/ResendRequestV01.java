@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MessageHeader7;
 import com.tools20022.repository.msg.ResendSearchCriteria2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._T2S_Administration_Function_ForRegistration;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,7 +122,7 @@ public class ResendRequestV01 {
 	 * definition} = "Set of elements to identify the resend message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResendRequestV01, MessageHeader7> mmMessageHeader = new MMMessageBuildingBlock<ResendRequestV01, MessageHeader7>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,12 +133,14 @@ public class ResendRequestV01 {
 			complexType_lazy = () -> MessageHeader7.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResendRequestV01.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader7 getValue(ResendRequestV01 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(ResendRequestV01 obj, MessageHeader7 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "RsndSchCrit", required = true)
@@ -169,7 +170,7 @@ public class ResendRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmResendSearchCriteria = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResendRequestV01, List<ResendSearchCriteria2>> mmResendSearchCriteria = new MMMessageBuildingBlock<ResendRequestV01, List<ResendSearchCriteria2>>() {
 		{
 			xmlTag = "RsndSchCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,12 +180,14 @@ public class ResendRequestV01 {
 			complexType_lazy = () -> ResendSearchCriteria2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResendRequestV01.class.getMethod("getResendSearchCriteria", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ResendSearchCriteria2> getValue(ResendRequestV01 obj) {
+			return obj.getResendSearchCriteria();
+		}
+
+		@Override
+		public void setValue(ResendRequestV01 obj, List<ResendSearchCriteria2> value) {
+			obj.setResendSearchCriteria(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -214,7 +217,7 @@ public class ResendRequestV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ResendRequestV01, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<ResendRequestV01, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +227,14 @@ public class ResendRequestV01 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ResendRequestV01.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(ResendRequestV01 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(ResendRequestV01 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 

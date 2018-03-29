@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header31;
 import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +123,7 @@ public class ATMWithdrawalRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalRequestV02, Header31> mmHeader = new MMMessageBuildingBlock<ATMWithdrawalRequestV02, Header31>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,12 +134,14 @@ public class ATMWithdrawalRequestV02 {
 			complexType_lazy = () -> Header31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalRequestV02.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header31 getValue(ATMWithdrawalRequestV02 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalRequestV02 obj, Header31 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "PrtctdATMWdrwlReq")
@@ -168,7 +169,7 @@ public class ATMWithdrawalRequestV02 {
 	 * definition} = "Encrypted body of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmProtectedATMWithdrawalRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalRequestV02, Optional<ContentInformationType10>> mmProtectedATMWithdrawalRequest = new MMMessageBuildingBlock<ATMWithdrawalRequestV02, Optional<ContentInformationType10>>() {
 		{
 			xmlTag = "PrtctdATMWdrwlReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,12 +180,14 @@ public class ATMWithdrawalRequestV02 {
 			complexType_lazy = () -> ContentInformationType10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalRequestV02.class.getMethod("getProtectedATMWithdrawalRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType10> getValue(ATMWithdrawalRequestV02 obj) {
+			return obj.getProtectedATMWithdrawalRequest();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalRequestV02 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedATMWithdrawalRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ATMWdrwlReq")
@@ -214,7 +217,7 @@ public class ATMWithdrawalRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmATMWithdrawalRequest = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalRequestV02, Optional<ATMWithdrawalRequest2>> mmATMWithdrawalRequest = new MMMessageBuildingBlock<ATMWithdrawalRequestV02, Optional<ATMWithdrawalRequest2>>() {
 		{
 			xmlTag = "ATMWdrwlReq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +228,14 @@ public class ATMWithdrawalRequestV02 {
 			complexType_lazy = () -> ATMWithdrawalRequest2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalRequestV02.class.getMethod("getATMWithdrawalRequest", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ATMWithdrawalRequest2> getValue(ATMWithdrawalRequestV02 obj) {
+			return obj.getATMWithdrawalRequest();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalRequestV02 obj, Optional<ATMWithdrawalRequest2> value) {
+			obj.setATMWithdrawalRequest(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SctyTrlr")
@@ -258,7 +263,7 @@ public class ATMWithdrawalRequestV02 {
 	 * definition} = "Trailer of the message containing a MAC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<ATMWithdrawalRequestV02, Optional<ContentInformationType15>> mmSecurityTrailer = new MMMessageBuildingBlock<ATMWithdrawalRequestV02, Optional<ContentInformationType15>>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +274,14 @@ public class ATMWithdrawalRequestV02 {
 			complexType_lazy = () -> ContentInformationType15.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return ATMWithdrawalRequestV02.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<ContentInformationType15> getValue(ATMWithdrawalRequestV02 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(ATMWithdrawalRequestV02 obj, Optional<ContentInformationType15> value) {
+			obj.setSecurityTrailer(value.orElse(null));
 		}
 	};
 

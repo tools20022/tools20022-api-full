@@ -26,11 +26,9 @@ import com.tools20022.repository.msg.Case3;
 import com.tools20022.repository.msg.CaseAssignment3;
 import com.tools20022.repository.msg.ProprietaryData4;
 import com.tools20022.repository.msg.SupplementaryData1;
-import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion;
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -74,9 +72,6 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion
  * ExceptionsandInvestigationsISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
- * ExceptionsandInvestigationsISOLatestversion}</li>
  * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017
@@ -155,7 +150,7 @@ public class DuplicateV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAssignment = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DuplicateV04, CaseAssignment3> mmAssignment = new MMMessageBuildingBlock<DuplicateV04, CaseAssignment3>() {
 		{
 			xmlTag = "Assgnmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,12 +162,14 @@ public class DuplicateV04 {
 			complexType_lazy = () -> CaseAssignment3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DuplicateV04.class.getMethod("getAssignment", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CaseAssignment3 getValue(DuplicateV04 obj) {
+			return obj.getAssignment();
+		}
+
+		@Override
+		public void setValue(DuplicateV04 obj, CaseAssignment3 value) {
+			obj.setAssignment(value);
 		}
 	};
 	@XmlElement(name = "Case", required = true)
@@ -205,7 +202,7 @@ public class DuplicateV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCase = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DuplicateV04, Case3> mmCase = new MMMessageBuildingBlock<DuplicateV04, Case3>() {
 		{
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,12 +214,14 @@ public class DuplicateV04 {
 			complexType_lazy = () -> Case3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DuplicateV04.class.getMethod("getCase", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Case3 getValue(DuplicateV04 obj) {
+			return obj.getCase();
+		}
+
+		@Override
+		public void setValue(DuplicateV04 obj, Case3 value) {
+			obj.setCase(value);
 		}
 	};
 	@XmlElement(name = "Dplct", required = true)
@@ -258,7 +257,7 @@ public class DuplicateV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDuplicate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DuplicateV04, ProprietaryData4> mmDuplicate = new MMMessageBuildingBlock<DuplicateV04, ProprietaryData4>() {
 		{
 			xmlTag = "Dplct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,12 +269,14 @@ public class DuplicateV04 {
 			complexType_lazy = () -> ProprietaryData4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DuplicateV04.class.getMethod("getDuplicate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ProprietaryData4 getValue(DuplicateV04 obj) {
+			return obj.getDuplicate();
+		}
+
+		@Override
+		public void setValue(DuplicateV04 obj, ProprietaryData4 value) {
+			obj.setDuplicate(value);
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -313,7 +314,7 @@ public class DuplicateV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<DuplicateV04, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<DuplicateV04, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,12 +325,14 @@ public class DuplicateV04 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return DuplicateV04.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(DuplicateV04 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(DuplicateV04 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -341,8 +344,7 @@ public class DuplicateV04 {
 				definition = "Scope\r\nThe Duplicate message is used by financial institutions, with their own offices, and/or with other financial institutions with which they have established bilateral agreements. It allows to exchange duplicate payment instructions.\r\nUsage\r\nThis message must be sent in response to a Request For Duplicate message.\r\nThe Duplicate Data element must contain a well formed XML document. This means XML special characters such as '<' must be used in a way that is consistent with XML well-formedness criteria.\r.";
 				nextVersions_lazy = () -> Arrays.asList(DuplicateV05.mmObject());
 				previousVersion_lazy = () -> DuplicateV03.mmObject();
-				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOPreviousversion.mmObject(), ExceptionsandInvestigationsISOLatestversion.mmObject(), ISOArchive.mmObject(),
-						ExceptionsandInvestigationsMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOPreviousversion.mmObject(), ISOArchive.mmObject(), ExceptionsandInvestigationsMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "Dplct";
 				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();

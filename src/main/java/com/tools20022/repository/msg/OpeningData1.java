@@ -28,6 +28,9 @@ import com.tools20022.repository.entity.NonDeliverableTrade;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AgreedRate1;
+import com.tools20022.repository.msg.AmountsAndValueDate1;
+import com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +129,7 @@ public class OpeningData1 {
 	 * "Date at which the trading parties execute a treasury trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningData1, ISODate> mmTradeDate = new MMMessageAttribute<OpeningData1, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningData1.mmObject();
@@ -138,6 +141,16 @@ public class OpeningData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(OpeningData1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(OpeningData1 obj, ISODate value) {
+			obj.setTradeDate(value);
 		}
 	};
 	@XmlElement(name = "NtfctnId", required = true)
@@ -170,7 +183,7 @@ public class OpeningData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotificationIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningData1, Max35Text> mmNotificationIdentification = new MMMessageAttribute<OpeningData1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningData1.mmObject();
 			isDerived = false;
@@ -181,6 +194,16 @@ public class OpeningData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OpeningData1 obj) {
+			return obj.getNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(OpeningData1 obj, Max35Text value) {
+			obj.setNotificationIdentification(value);
 		}
 	};
 	@XmlElement(name = "CmonRef")
@@ -216,7 +239,7 @@ public class OpeningData1 {
 	 * definition} = "Reference common to the parties of a trade."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningData1, Optional<Max35Text>> mmCommonReference = new MMMessageAttribute<OpeningData1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningData1.mmObject();
@@ -228,6 +251,16 @@ public class OpeningData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OpeningData1 obj) {
+			return obj.getCommonReference();
+		}
+
+		@Override
+		public void setValue(OpeningData1 obj, Optional<Max35Text> value) {
+			obj.setCommonReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -260,7 +293,7 @@ public class OpeningData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningData1, Optional<Max35Text>> mmRelatedReference = new MMMessageAttribute<OpeningData1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningData1.mmObject();
 			isDerived = false;
@@ -271,6 +304,16 @@ public class OpeningData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OpeningData1 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(OpeningData1 obj, Optional<Max35Text> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AmdOrCclRsn")
@@ -302,7 +345,7 @@ public class OpeningData1 {
 	 * "Describes the reason for the cancellation or the amendment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmendOrCancelReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningData1, Optional<Max35Text>> mmAmendOrCancelReason = new MMMessageAttribute<OpeningData1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningData1.mmObject();
 			isDerived = false;
@@ -313,6 +356,16 @@ public class OpeningData1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OpeningData1 obj) {
+			return obj.getAmendOrCancelReason();
+		}
+
+		@Override
+		public void setValue(OpeningData1 obj, Optional<Max35Text> value) {
+			obj.setAmendOrCancelReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradAmts", required = true)
@@ -348,7 +401,7 @@ public class OpeningData1 {
 	 * "Specifies the amounts of the non deliverable trade which is reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTradeAmounts = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OpeningData1, AmountsAndValueDate1> mmTradeAmounts = new MMMessageAssociationEnd<OpeningData1, AmountsAndValueDate1>() {
 		{
 			businessComponentTrace_lazy = () -> ForeignExchangeTrade.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningData1.mmObject();
@@ -360,7 +413,17 @@ public class OpeningData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
+			type_lazy = () -> AmountsAndValueDate1.mmObject();
+		}
+
+		@Override
+		public AmountsAndValueDate1 getValue(OpeningData1 obj) {
+			return obj.getTradeAmounts();
+		}
+
+		@Override
+		public void setValue(OpeningData1 obj, AmountsAndValueDate1 value) {
+			obj.setTradeAmounts(value);
 		}
 	};
 	@XmlElement(name = "AgrdRate", required = true)
@@ -397,7 +460,7 @@ public class OpeningData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAgreedRate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OpeningData1, AgreedRate1> mmAgreedRate = new MMMessageAssociationEnd<OpeningData1, AgreedRate1>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningData1.mmObject();
@@ -409,7 +472,17 @@ public class OpeningData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AgreedRate1.mmObject();
+			type_lazy = () -> AgreedRate1.mmObject();
+		}
+
+		@Override
+		public AgreedRate1 getValue(OpeningData1 obj) {
+			return obj.getAgreedRate();
+		}
+
+		@Override
+		public void setValue(OpeningData1 obj, AgreedRate1 value) {
+			obj.setAgreedRate(value);
 		}
 	};
 	@XmlElement(name = "ValtnConds", required = true)
@@ -447,7 +520,7 @@ public class OpeningData1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuationConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OpeningData1, NonDeliverableForwardValuationConditions1> mmValuationConditions = new MMMessageAssociationEnd<OpeningData1, NonDeliverableForwardValuationConditions1>() {
 		{
 			businessElementTrace_lazy = () -> NonDeliverableTrade.mmFixingConditions;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningData1.mmObject();
@@ -459,7 +532,17 @@ public class OpeningData1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1.mmObject();
+			type_lazy = () -> NonDeliverableForwardValuationConditions1.mmObject();
+		}
+
+		@Override
+		public NonDeliverableForwardValuationConditions1 getValue(OpeningData1 obj) {
+			return obj.getValuationConditions();
+		}
+
+		@Override
+		public void setValue(OpeningData1 obj, NonDeliverableForwardValuationConditions1 value) {
+			obj.setValuationConditions(value);
 		}
 	};
 
@@ -528,7 +611,7 @@ public class OpeningData1 {
 		return tradeAmounts;
 	}
 
-	public OpeningData1 setTradeAmounts(com.tools20022.repository.msg.AmountsAndValueDate1 tradeAmounts) {
+	public OpeningData1 setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
 		this.tradeAmounts = Objects.requireNonNull(tradeAmounts);
 		return this;
 	}
@@ -537,7 +620,7 @@ public class OpeningData1 {
 		return agreedRate;
 	}
 
-	public OpeningData1 setAgreedRate(com.tools20022.repository.msg.AgreedRate1 agreedRate) {
+	public OpeningData1 setAgreedRate(AgreedRate1 agreedRate) {
 		this.agreedRate = Objects.requireNonNull(agreedRate);
 		return this;
 	}
@@ -546,7 +629,7 @@ public class OpeningData1 {
 		return valuationConditions;
 	}
 
-	public OpeningData1 setValuationConditions(com.tools20022.repository.msg.NonDeliverableForwardValuationConditions1 valuationConditions) {
+	public OpeningData1 setValuationConditions(NonDeliverableForwardValuationConditions1 valuationConditions) {
 		this.valuationConditions = Objects.requireNonNull(valuationConditions);
 		return this;
 	}

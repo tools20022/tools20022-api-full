@@ -66,13 +66,17 @@ public class ConstraintChargesAmountGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction19> forCreditTransferTransaction19 = new MMConstraint<CreditTransferTransaction19>() {
 		{
-			validator = ConstraintChargesAmountGuideline::checkCreditTransferTransaction19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
 			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forCreditTransferTransaction25);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountRule.forCreditTransferTransaction7;
 			owner_lazy = () -> CreditTransferTransaction19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction19 obj) throws Exception {
+			checkCreditTransferTransaction19(obj);
 		}
 	};
 	/**
@@ -111,13 +115,17 @@ public class ConstraintChargesAmountGuideline {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation17> forDirectDebitTransactionInformation17 = new MMConstraint<DirectDebitTransactionInformation17>() {
 		{
-			validator = ConstraintChargesAmountGuideline::checkDirectDebitTransactionInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
 			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountRule.forDirectDebitTransactionInformation14;
 			owner_lazy = () -> DirectDebitTransactionInformation17.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation17 obj) throws Exception {
+			checkDirectDebitTransactionInformation17(obj);
 		}
 	};
 	/**
@@ -148,12 +156,16 @@ public class ConstraintChargesAmountGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction25> forCreditTransferTransaction25 = new MMConstraint<CreditTransferTransaction25>() {
 		{
-			validator = ConstraintChargesAmountGuideline::checkCreditTransferTransaction25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
 			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forCreditTransferTransaction19;
 			owner_lazy = () -> CreditTransferTransaction25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction25 obj) throws Exception {
+			checkCreditTransferTransaction25(obj);
 		}
 	};
 	/**
@@ -192,13 +204,17 @@ public class ConstraintChargesAmountGuideline {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation20> forDirectDebitTransactionInformation20 = new MMConstraint<DirectDebitTransactionInformation20>() {
 		{
-			validator = ConstraintChargesAmountGuideline::checkDirectDebitTransactionInformation20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
 			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation21);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation17;
 			owner_lazy = () -> DirectDebitTransactionInformation20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation20 obj) throws Exception {
+			checkDirectDebitTransactionInformation20(obj);
 		}
 	};
 	/**
@@ -229,12 +245,16 @@ public class ConstraintChargesAmountGuideline {
 	 */
 	public static final MMConstraint<DirectDebitTransactionInformation21> forDirectDebitTransactionInformation21 = new MMConstraint<DirectDebitTransactionInformation21>() {
 		{
-			validator = ConstraintChargesAmountGuideline::checkDirectDebitTransactionInformation21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
 			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20;
 			owner_lazy = () -> DirectDebitTransactionInformation21.mmObject();
+		}
+
+		@Override
+		public void executeValidator(DirectDebitTransactionInformation21 obj) throws Exception {
+			checkDirectDebitTransactionInformation21(obj);
 		}
 	};
 	/**
@@ -260,11 +280,15 @@ public class ConstraintChargesAmountGuideline {
 	 */
 	public static final MMConstraint<CreditTransferTransaction30> forCreditTransferTransaction30 = new MMConstraint<CreditTransferTransaction30>() {
 		{
-			validator = ConstraintChargesAmountGuideline::checkCreditTransferTransaction30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
 			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
 			owner_lazy = () -> CreditTransferTransaction30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CreditTransferTransaction30 obj) throws Exception {
+			checkCreditTransferTransaction30(obj);
 		}
 	};
 

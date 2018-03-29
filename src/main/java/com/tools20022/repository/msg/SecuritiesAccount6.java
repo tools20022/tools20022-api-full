@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -121,7 +122,7 @@ public class SecuritiesAccount6 {
 	 * definition} = "Identification of the financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount6, SecurityIdentification7> mmSecurityIdentification = new MMMessageAttribute<SecuritiesAccount6, SecurityIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
@@ -132,7 +133,17 @@ public class SecuritiesAccount6 {
 			definition = "Identification of the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			complexType_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public SecurityIdentification7 getValue(SecuritiesAccount6 obj) {
+			return obj.getSecurityIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount6 obj, SecurityIdentification7 value) {
+			obj.setSecurityIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesAcctId", required = true)
@@ -171,7 +182,7 @@ public class SecuritiesAccount6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount6, Max35Text> mmSecuritiesAccountIdentification = new MMMessageAttribute<SecuritiesAccount6, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
@@ -183,6 +194,16 @@ public class SecuritiesAccount6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(SecuritiesAccount6 obj) {
+			return obj.getSecuritiesAccountIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount6 obj, Max35Text value) {
+			obj.setSecuritiesAccountIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnrId")
@@ -220,7 +241,7 @@ public class SecuritiesAccount6 {
 	 * definition} = "Identification of the party that owns the account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount6, Optional<PartyIdentification2Choice>> mmAccountOwnerIdentification = new MMMessageAttribute<SecuritiesAccount6, Optional<PartyIdentification2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
@@ -232,6 +253,16 @@ public class SecuritiesAccount6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification2Choice> getValue(SecuritiesAccount6 obj) {
+			return obj.getAccountOwnerIdentification();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount6 obj, Optional<PartyIdentification2Choice> value) {
+			obj.setAccountOwnerIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgPlc", required = true)
@@ -269,7 +300,7 @@ public class SecuritiesAccount6 {
 	 * definition} = "Identification of the place of safekeeping."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount6, PartyIdentification2Choice> mmSafekeepingPlace = new MMMessageAttribute<SecuritiesAccount6, PartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
@@ -281,6 +312,16 @@ public class SecuritiesAccount6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(SecuritiesAccount6 obj) {
+			return obj.getSafekeepingPlace();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount6 obj, PartyIdentification2Choice value) {
+			obj.setSafekeepingPlace(value);
 		}
 	};
 	@XmlElement(name = "RegnDtls")
@@ -318,7 +359,7 @@ public class SecuritiesAccount6 {
 	 * "Provides information required for the registration of the security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesAccount6, Optional<Max350Text>> mmRegistrationDetails = new MMMessageAttribute<SecuritiesAccount6, Optional<Max350Text>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount6.mmObject();
@@ -330,6 +371,16 @@ public class SecuritiesAccount6 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(SecuritiesAccount6 obj) {
+			return obj.getRegistrationDetails();
+		}
+
+		@Override
+		public void setValue(SecuritiesAccount6 obj, Optional<Max350Text> value) {
+			obj.setRegistrationDetails(value.orElse(null));
 		}
 	};
 
@@ -353,7 +404,7 @@ public class SecuritiesAccount6 {
 		return securityIdentification;
 	}
 
-	public SecuritiesAccount6 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification7 securityIdentification) {
+	public SecuritiesAccount6 setSecurityIdentification(SecurityIdentification7 securityIdentification) {
 		this.securityIdentification = Objects.requireNonNull(securityIdentification);
 		return this;
 	}

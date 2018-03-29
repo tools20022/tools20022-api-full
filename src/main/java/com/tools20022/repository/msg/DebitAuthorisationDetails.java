@@ -130,7 +130,7 @@ public class DebitAuthorisationDetails {
 	 * definition} = "Indicates the reason for cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisationDetails, CancellationReason1Code> mmCancellationReason = new MMMessageAttribute<DebitAuthorisationDetails, CancellationReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationDetails.mmObject();
@@ -142,6 +142,16 @@ public class DebitAuthorisationDetails {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationReason1Code.mmObject();
+		}
+
+		@Override
+		public CancellationReason1Code getValue(DebitAuthorisationDetails obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationDetails obj, CancellationReason1Code value) {
+			obj.setCancellationReason(value);
 		}
 	};
 	@XmlElement(name = "AmtToDbt")
@@ -181,7 +191,7 @@ public class DebitAuthorisationDetails {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmountToDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisationDetails, Optional<CurrencyAndAmount>> mmAmountToDebit = new MMMessageAttribute<DebitAuthorisationDetails, Optional<CurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmAmountToDebit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationDetails.mmObject();
@@ -193,6 +203,16 @@ public class DebitAuthorisationDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<CurrencyAndAmount> getValue(DebitAuthorisationDetails obj) {
+			return obj.getAmountToDebit();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationDetails obj, Optional<CurrencyAndAmount> value) {
+			obj.setAmountToDebit(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDtToDbt")
@@ -229,7 +249,7 @@ public class DebitAuthorisationDetails {
 	 * definition} = "Value date for debiting the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDateToDebit = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DebitAuthorisationDetails, Optional<ISODate>> mmValueDateToDebit = new MMMessageAttribute<DebitAuthorisationDetails, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> DebitAuthorisation.mmValueDateToDebit;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DebitAuthorisationDetails.mmObject();
@@ -241,6 +261,16 @@ public class DebitAuthorisationDetails {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(DebitAuthorisationDetails obj) {
+			return obj.getValueDateToDebit();
+		}
+
+		@Override
+		public void setValue(DebitAuthorisationDetails obj, Optional<ISODate> value) {
+			obj.setValueDateToDebit(value.orElse(null));
 		}
 	};
 

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.MovementResponseType1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraPositionQueryCriteria4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -110,7 +111,7 @@ public class IntraPositionQueryDefinition4 {
 	 * IntraPositionQueryDefinition3.mmQueryType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraPositionQueryDefinition4, MovementResponseType1Code> mmQueryType = new MMMessageAttribute<IntraPositionQueryDefinition4, MovementResponseType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryDefinition4.mmObject();
 			isDerived = false;
@@ -122,6 +123,16 @@ public class IntraPositionQueryDefinition4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
+		}
+
+		@Override
+		public MovementResponseType1Code getValue(IntraPositionQueryDefinition4 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryDefinition4 obj, MovementResponseType1Code value) {
+			obj.setQueryType(value);
 		}
 	};
 	@XmlElement(name = "SchCrit", required = true)
@@ -160,7 +171,7 @@ public class IntraPositionQueryDefinition4 {
 	 * IntraPositionQueryDefinition3.mmSearchCriteria}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraPositionQueryDefinition4, IntraPositionQueryCriteria4> mmSearchCriteria = new MMMessageAssociationEnd<IntraPositionQueryDefinition4, IntraPositionQueryCriteria4>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryDefinition4.mmObject();
 			isDerived = false;
@@ -172,7 +183,17 @@ public class IntraPositionQueryDefinition4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.IntraPositionQueryCriteria4.mmObject();
+			type_lazy = () -> IntraPositionQueryCriteria4.mmObject();
+		}
+
+		@Override
+		public IntraPositionQueryCriteria4 getValue(IntraPositionQueryDefinition4 obj) {
+			return obj.getSearchCriteria();
+		}
+
+		@Override
+		public void setValue(IntraPositionQueryDefinition4 obj, IntraPositionQueryCriteria4 value) {
+			obj.setSearchCriteria(value);
 		}
 	};
 
@@ -203,7 +224,7 @@ public class IntraPositionQueryDefinition4 {
 		return searchCriteria;
 	}
 
-	public IntraPositionQueryDefinition4 setSearchCriteria(com.tools20022.repository.msg.IntraPositionQueryCriteria4 searchCriteria) {
+	public IntraPositionQueryDefinition4 setSearchCriteria(IntraPositionQueryCriteria4 searchCriteria) {
 		this.searchCriteria = Objects.requireNonNull(searchCriteria);
 		return this;
 	}

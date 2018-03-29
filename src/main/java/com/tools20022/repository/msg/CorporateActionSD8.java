@@ -114,7 +114,7 @@ public class CorporateActionSD8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD8, Max350Text> mmPlaceAndName = new MMMessageAttribute<CorporateActionSD8, Max350Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD8.mmObject();
 			isDerived = false;
@@ -126,6 +126,16 @@ public class CorporateActionSD8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(CorporateActionSD8 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD8 obj, Max350Text value) {
+			obj.setPlaceAndName(value);
 		}
 	};
 	@XmlElement(name = "LtrySeqNb")
@@ -168,7 +178,7 @@ public class CorporateActionSD8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotterySequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionSD8, Optional<Max3NumericText>> mmLotterySequenceNumber = new MMMessageAttribute<CorporateActionSD8, Optional<Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD8.mmObject();
 			isDerived = false;
@@ -180,6 +190,16 @@ public class CorporateActionSD8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max3NumericText> getValue(CorporateActionSD8 obj) {
+			return obj.getLotterySequenceNumber();
+		}
+
+		@Override
+		public void setValue(CorporateActionSD8 obj, Optional<Max3NumericText> value) {
+			obj.setLotterySequenceNumber(value.orElse(null));
 		}
 	};
 

@@ -63,12 +63,16 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 */
 	public static final MMConstraint<SecuredMarketTransaction1> forSecuredMarketTransaction1 = new MMConstraint<SecuredMarketTransaction1>() {
 		{
-			validator = ConstraintTripartyAgentIdentificationRule::checkSecuredMarketTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentIdentificationRule";
 			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction2);
 			owner_lazy = () -> SecuredMarketTransaction1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuredMarketTransaction1 obj) throws Exception {
+			checkSecuredMarketTransaction1(obj);
 		}
 	};
 	/**
@@ -107,13 +111,17 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 */
 	public static final MMConstraint<SecuredMarketTransaction2> forSecuredMarketTransaction2 = new MMConstraint<SecuredMarketTransaction2>() {
 		{
-			validator = ConstraintTripartyAgentIdentificationRule::checkSecuredMarketTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentIdentificationRule";
 			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction3);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction1;
 			owner_lazy = () -> SecuredMarketTransaction2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuredMarketTransaction2 obj) throws Exception {
+			checkSecuredMarketTransaction2(obj);
 		}
 	};
 	/**
@@ -152,13 +160,17 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 */
 	public static final MMConstraint<SecuredMarketTransaction3> forSecuredMarketTransaction3 = new MMConstraint<SecuredMarketTransaction3>() {
 		{
-			validator = ConstraintTripartyAgentIdentificationRule::checkSecuredMarketTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentIdentificationRule";
 			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction4);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction2;
 			owner_lazy = () -> SecuredMarketTransaction3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuredMarketTransaction3 obj) throws Exception {
+			checkSecuredMarketTransaction3(obj);
 		}
 	};
 	/**
@@ -189,12 +201,16 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 */
 	public static final MMConstraint<SecuredMarketTransaction4> forSecuredMarketTransaction4 = new MMConstraint<SecuredMarketTransaction4>() {
 		{
-			validator = ConstraintTripartyAgentIdentificationRule::checkSecuredMarketTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentIdentificationRule";
 			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction3;
 			owner_lazy = () -> SecuredMarketTransaction4.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuredMarketTransaction4 obj) throws Exception {
+			checkSecuredMarketTransaction4(obj);
 		}
 	};
 

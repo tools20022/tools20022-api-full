@@ -113,7 +113,7 @@ public class OpeningClosing4Choice {
 	 * "Opening closing information expressed as an ISO 20022 code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningClosing4Choice, OpeningClosing1Code> mmCode = new MMMessageAttribute<OpeningClosing4Choice, OpeningClosing1Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmOpeningClosingCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningClosing4Choice.mmObject();
@@ -126,6 +126,16 @@ public class OpeningClosing4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OpeningClosing1Code.mmObject();
+		}
+
+		@Override
+		public OpeningClosing1Code getValue(OpeningClosing4Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(OpeningClosing4Choice obj, OpeningClosing1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -167,7 +177,7 @@ public class OpeningClosing4Choice {
 	 * "Opening closing information expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OpeningClosing4Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<OpeningClosing4Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmOpeningClosingCode;
 			componentContext_lazy = () -> com.tools20022.repository.choice.OpeningClosing4Choice.mmObject();
@@ -180,6 +190,16 @@ public class OpeningClosing4Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(OpeningClosing4Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(OpeningClosing4Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

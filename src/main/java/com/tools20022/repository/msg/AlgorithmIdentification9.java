@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm9Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Parameter1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -126,7 +127,7 @@ public class AlgorithmIdentification9 {
 	 * AlgorithmIdentification2.mmAlgorithm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmIdentification9, Algorithm9Code> mmAlgorithm = new MMMessageAttribute<AlgorithmIdentification9, Algorithm9Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification9.mmObject();
 			isDerived = false;
@@ -139,6 +140,16 @@ public class AlgorithmIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm9Code.mmObject();
+		}
+
+		@Override
+		public Algorithm9Code getValue(AlgorithmIdentification9 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification9 obj, Algorithm9Code value) {
+			obj.setAlgorithm(value);
 		}
 	};
 	@XmlElement(name = "Param")
@@ -181,7 +192,7 @@ public class AlgorithmIdentification9 {
 	 * AlgorithmIdentification2.mmParameter}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AlgorithmIdentification9, Optional<Parameter1>> mmParameter = new MMMessageAssociationEnd<AlgorithmIdentification9, Optional<Parameter1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification9.mmObject();
 			isDerived = false;
@@ -194,7 +205,17 @@ public class AlgorithmIdentification9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Parameter1.mmObject();
+			type_lazy = () -> Parameter1.mmObject();
+		}
+
+		@Override
+		public Optional<Parameter1> getValue(AlgorithmIdentification9 obj) {
+			return obj.getParameter();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification9 obj, Optional<Parameter1> value) {
+			obj.setParameter(value.orElse(null));
 		}
 	};
 
@@ -226,7 +247,7 @@ public class AlgorithmIdentification9 {
 		return parameter == null ? Optional.empty() : Optional.of(parameter);
 	}
 
-	public AlgorithmIdentification9 setParameter(com.tools20022.repository.msg.Parameter1 parameter) {
+	public AlgorithmIdentification9 setParameter(Parameter1 parameter) {
 		this.parameter = parameter;
 		return this;
 	}

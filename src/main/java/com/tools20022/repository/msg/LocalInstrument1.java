@@ -107,7 +107,7 @@ public class LocalInstrument1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LocalInstrument1, RestrictedB2BCORECodeText> mmCode = new MMMessageAttribute<LocalInstrument1, RestrictedB2BCORECodeText>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmLocalInstrument;
 			componentContext_lazy = () -> com.tools20022.repository.msg.LocalInstrument1.mmObject();
@@ -119,6 +119,16 @@ public class LocalInstrument1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedB2BCORECodeText.mmObject();
+		}
+
+		@Override
+		public RestrictedB2BCORECodeText getValue(LocalInstrument1 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(LocalInstrument1 obj, RestrictedB2BCORECodeText value) {
+			obj.setCode(value);
 		}
 	};
 

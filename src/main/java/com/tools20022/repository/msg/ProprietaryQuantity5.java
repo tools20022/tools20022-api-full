@@ -127,7 +127,7 @@ public class ProprietaryQuantity5 {
 	 * definition} = "Sign of the quantity of security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity5, Optional<ShortLong1Code>> mmShortLongPosition = new MMMessageAttribute<ProprietaryQuantity5, Optional<ShortLong1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity5.mmObject();
 			isDerived = false;
@@ -138,6 +138,16 @@ public class ProprietaryQuantity5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ShortLong1Code> getValue(ProprietaryQuantity5 obj) {
+			return obj.getShortLongPosition();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity5 obj, Optional<ShortLong1Code> value) {
+			obj.setShortLongPosition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -170,7 +180,7 @@ public class ProprietaryQuantity5 {
 	 * definition} = "Provides the proprietary quantity with a decimal number."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity5, RestrictedFINDecimalNumber> mmQuantity = new MMMessageAttribute<ProprietaryQuantity5, RestrictedFINDecimalNumber>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity5.mmObject();
 			isDerived = false;
@@ -181,6 +191,16 @@ public class ProprietaryQuantity5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
+		}
+
+		@Override
+		public RestrictedFINDecimalNumber getValue(ProprietaryQuantity5 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity5 obj, RestrictedFINDecimalNumber value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "QtyTp", required = true)
@@ -213,7 +233,7 @@ public class ProprietaryQuantity5 {
 	 * definition} = "Identifies the type of proprietary quantity reported."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantityType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity5, Exact4AlphaNumericText> mmQuantityType = new MMMessageAttribute<ProprietaryQuantity5, Exact4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity5.mmObject();
 			isDerived = false;
@@ -224,6 +244,16 @@ public class ProprietaryQuantity5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(ProprietaryQuantity5 obj) {
+			return obj.getQuantityType();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity5 obj, Exact4AlphaNumericText value) {
+			obj.setQuantityType(value);
 		}
 	};
 	@XmlElement(name = "Issr", required = true)
@@ -264,7 +294,7 @@ public class ProprietaryQuantity5 {
 	 * definition} = "Provides information related to issuer in free format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity5, Max4AlphaNumericText> mmIssuer = new MMMessageAttribute<ProprietaryQuantity5, Max4AlphaNumericText>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmPartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity5.mmObject();
@@ -277,6 +307,16 @@ public class ProprietaryQuantity5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(ProprietaryQuantity5 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity5 obj, Max4AlphaNumericText value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "SchmeNm")
@@ -314,7 +354,7 @@ public class ProprietaryQuantity5 {
 	 * definition} = "Name of the identification scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ProprietaryQuantity5, Optional<Max4AlphaNumericText>> mmSchemeName = new MMMessageAttribute<ProprietaryQuantity5, Optional<Max4AlphaNumericText>>() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity5.mmObject();
@@ -326,6 +366,16 @@ public class ProprietaryQuantity5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max4AlphaNumericText> getValue(ProprietaryQuantity5 obj) {
+			return obj.getSchemeName();
+		}
+
+		@Override
+		public void setValue(ProprietaryQuantity5 obj, Optional<Max4AlphaNumericText> value) {
+			obj.setSchemeName(value.orElse(null));
 		}
 	};
 

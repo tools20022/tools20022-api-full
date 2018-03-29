@@ -112,7 +112,7 @@ public class TimeUnit2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeUnit2Choice, TimeUnit1Code> mmCode = new MMMessageAttribute<TimeUnit2Choice, TimeUnit1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TimeUnit2Choice.mmObject();
 			isDerived = false;
@@ -124,6 +124,16 @@ public class TimeUnit2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TimeUnit1Code.mmObject();
+		}
+
+		@Override
+		public TimeUnit1Code getValue(TimeUnit2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TimeUnit2Choice obj, TimeUnit1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -163,7 +173,7 @@ public class TimeUnit2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TimeUnit2Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<TimeUnit2Choice, GenericIdentification40>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.TimeUnit2Choice.mmObject();
 			isDerived = false;
@@ -176,6 +186,16 @@ public class TimeUnit2Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(TimeUnit2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TimeUnit2Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

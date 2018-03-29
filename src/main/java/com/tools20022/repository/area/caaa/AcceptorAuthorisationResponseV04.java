@@ -26,7 +26,6 @@ import com.tools20022.repository.msg.AcceptorAuthorisationResponse4;
 import com.tools20022.repository.msg.ContentInformationType11;
 import com.tools20022.repository.msg.Header10;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -137,7 +136,7 @@ public class AcceptorAuthorisationResponseV04 {
 	 * AcceptorAuthorisationResponseV03.mmHeader}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationResponseV04, Header10> mmHeader = new MMMessageBuildingBlock<AcceptorAuthorisationResponseV04, Header10>() {
 		{
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,12 +149,14 @@ public class AcceptorAuthorisationResponseV04 {
 			complexType_lazy = () -> Header10.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationResponseV04.class.getMethod("getHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Header10 getValue(AcceptorAuthorisationResponseV04 obj) {
+			return obj.getHeader();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponseV04 obj, Header10 value) {
+			obj.setHeader(value);
 		}
 	};
 	@XmlElement(name = "AuthstnRspn", required = true)
@@ -197,7 +198,7 @@ public class AcceptorAuthorisationResponseV04 {
 	 * AcceptorAuthorisationResponseV03.mmAuthorisationResponse}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAuthorisationResponse = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationResponseV04, AcceptorAuthorisationResponse4> mmAuthorisationResponse = new MMMessageBuildingBlock<AcceptorAuthorisationResponseV04, AcceptorAuthorisationResponse4>() {
 		{
 			xmlTag = "AuthstnRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +211,14 @@ public class AcceptorAuthorisationResponseV04 {
 			complexType_lazy = () -> AcceptorAuthorisationResponse4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationResponseV04.class.getMethod("getAuthorisationResponse", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AcceptorAuthorisationResponse4 getValue(AcceptorAuthorisationResponseV04 obj) {
+			return obj.getAuthorisationResponse();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponseV04 obj, AcceptorAuthorisationResponse4 value) {
+			obj.setAuthorisationResponse(value);
 		}
 	};
 	@XmlElement(name = "SctyTrlr", required = true)
@@ -256,7 +259,7 @@ public class AcceptorAuthorisationResponseV04 {
 	 * AcceptorAuthorisationResponseV03.mmSecurityTrailer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<AcceptorAuthorisationResponseV04, ContentInformationType11> mmSecurityTrailer = new MMMessageBuildingBlock<AcceptorAuthorisationResponseV04, ContentInformationType11>() {
 		{
 			xmlTag = "SctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,12 +272,14 @@ public class AcceptorAuthorisationResponseV04 {
 			complexType_lazy = () -> ContentInformationType11.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return AcceptorAuthorisationResponseV04.class.getMethod("getSecurityTrailer", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ContentInformationType11 getValue(AcceptorAuthorisationResponseV04 obj) {
+			return obj.getSecurityTrailer();
+		}
+
+		@Override
+		public void setValue(AcceptorAuthorisationResponseV04 obj, ContentInformationType11 value) {
+			obj.setSecurityTrailer(value);
 		}
 	};
 

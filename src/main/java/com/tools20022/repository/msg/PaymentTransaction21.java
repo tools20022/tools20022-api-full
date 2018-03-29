@@ -119,7 +119,7 @@ public class PaymentTransaction21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransaction21, Optional<PaymentInstrument11Choice>> mmPaymentInstrument = new MMMessageAssociationEnd<PaymentTransaction21, Optional<PaymentInstrument11Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction21.mmObject();
@@ -133,6 +133,16 @@ public class PaymentTransaction21 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentInstrument11Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentInstrument11Choice> getValue(PaymentTransaction21 obj) {
+			return obj.getPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentTransaction21 obj, Optional<PaymentInstrument11Choice> value) {
+			obj.setPaymentInstrument(value.orElse(null));
 		}
 	};
 

@@ -20,10 +20,10 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -676,7 +676,7 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmExecutionIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmExecutionIdentification = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentIdentificationChoice.mmPaymentInstructionReference, PaymentInstructionReferenceDetails3.mmPaymentInstructionReference,
 					PaymentInstructionReferenceDetails2.mmPaymentInstructionReference, PaymentIdentification2Choice.mmPaymentInstructionReference, PaymentInstructionReferenceDetails4.mmPaymentInstructionReference,
@@ -733,12 +733,14 @@ public class PaymentIdentification extends TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentIdentification.class.getMethod("getExecutionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PaymentIdentification obj) {
+			return obj.getExecutionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification obj, Max35Text value) {
+			obj.setExecutionIdentification(value);
 		}
 	};
 	protected Max35Text endToEndIdentification;
@@ -1269,7 +1271,7 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmEndToEndIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmEndToEndIdentification = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LongPaymentIdentification1.mmEndToEndIdentification, PaymentSearch2.mmTransactionReference, PaymentSearch3.mmTransactionReference, PaymentSearch4.mmMessageIdentification,
 					PaymentSearch4.mmEndToEndIdentification, PaymentIdentification1.mmEndToEndIdentification, PaymentDetails6.mmTransactionReference, PaymentInstruction1.mmMessageIdentification,
@@ -1328,12 +1330,14 @@ public class PaymentIdentification extends TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentIdentification.class.getMethod("getEndToEndIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PaymentIdentification obj) {
+			return obj.getEndToEndIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification obj, Max35Text value) {
+			obj.setEndToEndIdentification(value);
 		}
 	};
 	protected Max35Text instructionIdentification;
@@ -1741,7 +1745,7 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmInstructionIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmInstructionIdentification = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstructionReference1Details.mmPaymentInstructionReference, PaymentInstructionReference2Details.mmPaymentInstructionReference, PaymentIdentification1.mmInstructionIdentification,
 					TransactionReferences1.mmInstructionIdentification, TransactionReferences2.mmInstructionIdentification, TransactionReferences3.mmInstructionIdentification,
@@ -1795,12 +1799,14 @@ public class PaymentIdentification extends TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentIdentification.class.getMethod("getInstructionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PaymentIdentification obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification obj, Max35Text value) {
+			obj.setInstructionIdentification(value);
 		}
 	};
 	protected Max35Text transactionIdentification;
@@ -2075,11 +2081,11 @@ public class PaymentIdentification extends TradeIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification assigned by the first instructing agent to unambiguously identify the transaction and passed on, unchanged, throughout the entire interbank chain."
+	 * "Unique identification assigned by the first instructing agent to unambiguously identify the transaction and passed on, unchanged, throughout the entire interbank chain. "
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmTransactionIdentification = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmTransactionIdentification = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(LongPaymentIdentification1.mmTransactionIdentification, PaymentIdentification4Choice.mmTransactionIdentification, PaymentDetails5.mmTransactionReference,
 					PaymentDetails7.mmTransactionReference, PaymentInstruction1.mmTransactionIdentification, TransactionReferences1.mmTransactionIdentification, TransactionReferences2.mmTransactionIdentification,
@@ -2112,18 +2118,20 @@ public class PaymentIdentification extends TradeIdentification {
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionIdentification";
-			definition = "Unique identification assigned by the first instructing agent to unambiguously identify the transaction and passed on, unchanged, throughout the entire interbank chain.";
+			definition = "Unique identification assigned by the first instructing agent to unambiguously identify the transaction and passed on, unchanged, throughout the entire interbank chain. ";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentIdentification.class.getMethod("getTransactionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PaymentIdentification obj) {
+			return obj.getTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification obj, Max35Text value) {
+			obj.setTransactionIdentification(value);
 		}
 	};
 	protected Max35Text clearingSystemReference;
@@ -2327,7 +2335,7 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmClearingSystemReference = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmClearingSystemReference = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionReferences1.mmClearingSystemReference, TransactionReferences2.mmClearingSystemReference, TransactionReferences3.mmClearingSystemReference,
 					PaymentTransactionInformation25.mmClearingSystemReference, PaymentTransaction32.mmClearingSystemReference, PaymentTransaction46.mmClearingSystemReference, PaymentIdentification3.mmClearingSystemReference,
@@ -2355,12 +2363,14 @@ public class PaymentIdentification extends TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentIdentification.class.getMethod("getClearingSystemReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PaymentIdentification obj) {
+			return obj.getClearingSystemReference();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification obj, Max35Text value) {
+			obj.setClearingSystemReference(value);
 		}
 	};
 	protected Max35Text creditorReference;
@@ -2447,7 +2457,7 @@ public class PaymentIdentification extends TradeIdentification {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmCreditorReference = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<PaymentIdentification, Max35Text> mmCreditorReference = new MMBusinessAttribute<PaymentIdentification, Max35Text>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CreditorReferenceInformation1.mmCreditorReference, StructuredRemittanceInformation6.mmCreditorReferenceInformation, CreditorReferenceInformation2.mmReference,
 					StructuredRemittanceInformation7.mmCreditorReferenceInformation, StructuredRemittanceInformation9.mmCreditorReferenceInformation, StructuredRemittanceInformation8.mmCreditorReferenceInformation,
@@ -2464,12 +2474,14 @@ public class PaymentIdentification extends TradeIdentification {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PaymentIdentification.class.getMethod("getCreditorReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PaymentIdentification obj) {
+			return obj.getCreditorReference();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification obj, Max35Text value) {
+			obj.setCreditorReference(value);
 		}
 	};
 	protected Payment payment;
@@ -2505,7 +2517,7 @@ public class PaymentIdentification extends TradeIdentification {
 	 * definition} = "Payment for which identifications are provided."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<PaymentIdentification, com.tools20022.repository.entity.Payment> mmPayment = new MMBusinessAssociationEnd<PaymentIdentification, com.tools20022.repository.entity.Payment>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
@@ -2517,6 +2529,16 @@ public class PaymentIdentification extends TradeIdentification {
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmPaymentRelatedIdentifications;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
+		}
+
+		@Override
+		public com.tools20022.repository.entity.Payment getValue(PaymentIdentification obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(PaymentIdentification obj, com.tools20022.repository.entity.Payment value) {
+			obj.setPayment(value);
 		}
 	};
 

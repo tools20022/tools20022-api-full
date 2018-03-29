@@ -109,7 +109,7 @@ public class StatusReasonInformation10 {
 	 * definition} = "Specifies the reason for the status report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<StatusReasonInformation10, StatusReason6Choice> mmReason = new MMMessageAssociationEnd<StatusReasonInformation10, StatusReason6Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
@@ -122,6 +122,16 @@ public class StatusReasonInformation10 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> StatusReason6Choice.mmObject();
+		}
+
+		@Override
+		public StatusReason6Choice getValue(StatusReasonInformation10 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation10 obj, StatusReason6Choice value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -155,7 +165,7 @@ public class StatusReasonInformation10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<StatusReasonInformation10, Optional<Max140Text>> mmAdditionalInformation = new MMMessageAttribute<StatusReasonInformation10, Optional<Max140Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class StatusReasonInformation10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max140Text> getValue(StatusReasonInformation10 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(StatusReasonInformation10 obj, Optional<Max140Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 

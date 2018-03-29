@@ -126,7 +126,7 @@ public class SystemMember2 {
 	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemMember2, Optional<SystemIdentification2Choice>> mmSystemIdentification = new MMMessageAttribute<SystemMember2, Optional<SystemIdentification2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> CashClearingSystem.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMember2.mmObject();
@@ -138,6 +138,16 @@ public class SystemMember2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<SystemIdentification2Choice> getValue(SystemMember2 obj) {
+			return obj.getSystemIdentification();
+		}
+
+		@Override
+		public void setValue(SystemMember2 obj, Optional<SystemIdentification2Choice> value) {
+			obj.setSystemIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MmbId", required = true)
@@ -176,7 +186,7 @@ public class SystemMember2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemMember2, MemberIdentification2Choice> mmMemberIdentification = new MMMessageAttribute<SystemMember2, MemberIdentification2Choice>() {
 		{
 			businessComponentTrace_lazy = () -> FinancialInstitution.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemMember2.mmObject();
@@ -188,6 +198,16 @@ public class SystemMember2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public MemberIdentification2Choice getValue(SystemMember2 obj) {
+			return obj.getMemberIdentification();
+		}
+
+		@Override
+		public void setValue(SystemMember2 obj, MemberIdentification2Choice value) {
+			obj.setMemberIdentification(value);
 		}
 	};
 

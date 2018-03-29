@@ -28,7 +28,6 @@ import com.tools20022.repository.msg.MessageHeader9;
 import com.tools20022.repository.msg.PaymentCancellationReason4;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset._SR2018_MX_CashManagement_Maintenance;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -107,7 +106,7 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CancelTransactionV07"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -145,7 +144,7 @@ public class CancelTransactionV07 {
 	 * definition} = "Common business identification for the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageHeader = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CancelTransactionV07, MessageHeader9> mmMessageHeader = new MMMessageBuildingBlock<CancelTransactionV07, MessageHeader9>() {
 		{
 			xmlTag = "MsgHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,12 +155,14 @@ public class CancelTransactionV07 {
 			complexType_lazy = () -> MessageHeader9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CancelTransactionV07.class.getMethod("getMessageHeader", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageHeader9 getValue(CancelTransactionV07 obj) {
+			return obj.getMessageHeader();
+		}
+
+		@Override
+		public void setValue(CancelTransactionV07 obj, MessageHeader9 value) {
+			obj.setMessageHeader(value);
 		}
 	};
 	@XmlElement(name = "PmtId", required = true)
@@ -191,7 +192,7 @@ public class CancelTransactionV07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPaymentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CancelTransactionV07, PaymentIdentification5Choice> mmPaymentIdentification = new MMMessageBuildingBlock<CancelTransactionV07, PaymentIdentification5Choice>() {
 		{
 			xmlTag = "PmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,12 +203,14 @@ public class CancelTransactionV07 {
 			complexType_lazy = () -> PaymentIdentification5Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CancelTransactionV07.class.getMethod("getPaymentIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PaymentIdentification5Choice getValue(CancelTransactionV07 obj) {
+			return obj.getPaymentIdentification();
+		}
+
+		@Override
+		public void setValue(CancelTransactionV07 obj, PaymentIdentification5Choice value) {
+			obj.setPaymentIdentification(value);
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -234,7 +237,7 @@ public class CancelTransactionV07 {
 	 * definition} = "Account to or from which a cash entry is made."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCashAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CancelTransactionV07, Optional<CashAccount24>> mmCashAccount = new MMMessageBuildingBlock<CancelTransactionV07, Optional<CashAccount24>>() {
 		{
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,12 +248,14 @@ public class CancelTransactionV07 {
 			complexType_lazy = () -> CashAccount24.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CancelTransactionV07.class.getMethod("getCashAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CashAccount24> getValue(CancelTransactionV07 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(CancelTransactionV07 obj, Optional<CashAccount24> value) {
+			obj.setCashAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CxlRsn")
@@ -279,7 +284,7 @@ public class CancelTransactionV07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CancelTransactionV07, Optional<PaymentCancellationReason4>> mmCancellationReason = new MMMessageBuildingBlock<CancelTransactionV07, Optional<PaymentCancellationReason4>>() {
 		{
 			xmlTag = "CxlRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,12 +295,14 @@ public class CancelTransactionV07 {
 			complexType_lazy = () -> PaymentCancellationReason4.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CancelTransactionV07.class.getMethod("getCancellationReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PaymentCancellationReason4> getValue(CancelTransactionV07 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(CancelTransactionV07 obj, Optional<PaymentCancellationReason4> value) {
+			obj.setCancellationReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -325,7 +332,7 @@ public class CancelTransactionV07 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CancelTransactionV07, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CancelTransactionV07, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,19 +342,21 @@ public class CancelTransactionV07 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CancelTransactionV07.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CancelTransactionV07 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CancelTransactionV07 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CancelTransactionV07";
 				definition = "Scope\r\nThe CancelTransaction message is sent by a member to the transaction administrator.\r\nIt is used to request the cancellation of one payment instruction held at the transaction administrator and sent by the member.\r\nUsage\r\nFollowing normal business flows, transactions registered by the transaction administrator may be queued for later settlement (because of insufficient funds available, because of risk or liquidity limits, etc.). A transaction may have a series of statuses. These can be transient (such as pending or related types), final (such as rejected, revoked and/or settled) or the status may even be defined as a proprietary status.\r\nMembers of a system need to have information about the payments queue(s), and must have the ability to take action (that is, to cancel or modify the transaction(s) to be settled). Note, however, that actions by a member will always concern transactions in a transient status.\r\nFor this reason, at any time during the operating hours of the system, the member can request the cancellation of a transaction that has not received a final status.\r\nThe member will submit a CancelTransaction message containing the identification of the transaction to be cancelled.\r\nBased on the criteria received within the CancelTransaction message, the transaction administrator will execute or reject the requested cancellation.\r\nThe transaction administrator may send a Receipt message as a reply to the CancelTransaction request.\r\nTo verify the outcome of the request, the member may submit a GetTransaction message with the appropriate search criteria.";
 				messageSet_lazy = () -> Arrays.asList(_SR2018_MX_CashManagement_Maintenance.mmObject());

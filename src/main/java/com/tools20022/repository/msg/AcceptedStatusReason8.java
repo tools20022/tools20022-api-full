@@ -128,7 +128,7 @@ public class AcceptedStatusReason8 {
 	 * AcceptedStatusReason4.mmReasonCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptedStatusReason8, AcceptedReason9Choice> mmReasonCode = new MMMessageAssociationEnd<AcceptedStatusReason8, AcceptedReason9Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason8.mmObject();
@@ -142,6 +142,16 @@ public class AcceptedStatusReason8 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcceptedReason9Choice.mmObject();
+		}
+
+		@Override
+		public AcceptedReason9Choice getValue(AcceptedStatusReason8 obj) {
+			return obj.getReasonCode();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason8 obj, AcceptedReason9Choice value) {
+			obj.setReasonCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -184,7 +194,7 @@ public class AcceptedStatusReason8 {
 	 * AcceptedStatusReason4.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptedStatusReason8, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<AcceptedStatusReason8, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptedStatusReason8.mmObject();
@@ -197,6 +207,16 @@ public class AcceptedStatusReason8 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(AcceptedStatusReason8 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(AcceptedStatusReason8 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

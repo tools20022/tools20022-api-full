@@ -122,7 +122,7 @@ public class FractionDispositionType25Choice {
 	 * FractionDispositionType15Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FractionDispositionType25Choice, FractionDispositionType9Code> mmCode = new MMMessageAttribute<FractionDispositionType25Choice, FractionDispositionType9Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FractionDispositionType25Choice.mmObject();
@@ -135,6 +135,16 @@ public class FractionDispositionType25Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FractionDispositionType9Code.mmObject();
+		}
+
+		@Override
+		public FractionDispositionType9Code getValue(FractionDispositionType25Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FractionDispositionType25Choice obj, FractionDispositionType9Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -177,7 +187,7 @@ public class FractionDispositionType25Choice {
 	 * FractionDispositionType15Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FractionDispositionType25Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<FractionDispositionType25Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FractionDispositionType25Choice.mmObject();
@@ -191,6 +201,16 @@ public class FractionDispositionType25Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(FractionDispositionType25Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FractionDispositionType25Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PaymentTokenIdentifiers1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -116,7 +117,7 @@ public class CardPaymentToken4 {
 	 * definition} = "Surrogate value for the PAN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmToken = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentToken4, Optional<Min8Max28NumericText>> mmToken = new MMMessageAttribute<CardPaymentToken4, Optional<Min8Max28NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken4.mmObject();
 			isDerived = false;
@@ -127,6 +128,16 @@ public class CardPaymentToken4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min8Max28NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Min8Max28NumericText> getValue(CardPaymentToken4 obj) {
+			return obj.getToken();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken4 obj, Optional<Min8Max28NumericText> value) {
+			obj.setToken(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardSeqNb")
@@ -160,7 +171,7 @@ public class CardPaymentToken4 {
 	 * "Identify a payment token inside a set of cards with the same PAN."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardSequenceNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentToken4, Optional<Min2Max3NumericText>> mmCardSequenceNumber = new MMMessageAttribute<CardPaymentToken4, Optional<Min2Max3NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken4.mmObject();
 			isDerived = false;
@@ -171,6 +182,16 @@ public class CardPaymentToken4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Min2Max3NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Min2Max3NumericText> getValue(CardPaymentToken4 obj) {
+			return obj.getCardSequenceNumber();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken4 obj, Optional<Min2Max3NumericText> value) {
+			obj.setCardSequenceNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TknXpryDt")
@@ -204,7 +225,7 @@ public class CardPaymentToken4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTokenExpiryDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentToken4, Optional<Max10Text>> mmTokenExpiryDate = new MMMessageAttribute<CardPaymentToken4, Optional<Max10Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken4.mmObject();
 			isDerived = false;
@@ -215,6 +236,16 @@ public class CardPaymentToken4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max10Text> getValue(CardPaymentToken4 obj) {
+			return obj.getTokenExpiryDate();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken4 obj, Optional<Max10Text> value) {
+			obj.setTokenExpiryDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TknChrtc")
@@ -251,7 +282,7 @@ public class CardPaymentToken4 {
 	 * CardPaymentToken3.mmTokenCharacteristic}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTokenCharacteristic = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentToken4, List<Max35Text>> mmTokenCharacteristic = new MMMessageAttribute<CardPaymentToken4, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken4.mmObject();
 			isDerived = false;
@@ -262,6 +293,16 @@ public class CardPaymentToken4 {
 			previousVersion_lazy = () -> CardPaymentToken3.mmTokenCharacteristic;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(CardPaymentToken4 obj) {
+			return obj.getTokenCharacteristic();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken4 obj, List<Max35Text> value) {
+			obj.setTokenCharacteristic(value);
 		}
 	};
 	@XmlElement(name = "TknRqstr")
@@ -298,7 +339,7 @@ public class CardPaymentToken4 {
 	 * CardPaymentToken3.mmTokenRequestor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTokenRequestor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardPaymentToken4, Optional<PaymentTokenIdentifiers1>> mmTokenRequestor = new MMMessageAssociationEnd<CardPaymentToken4, Optional<PaymentTokenIdentifiers1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken4.mmObject();
 			isDerived = false;
@@ -310,7 +351,17 @@ public class CardPaymentToken4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmObject();
+			type_lazy = () -> PaymentTokenIdentifiers1.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTokenIdentifiers1> getValue(CardPaymentToken4 obj) {
+			return obj.getTokenRequestor();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken4 obj, Optional<PaymentTokenIdentifiers1> value) {
+			obj.setTokenRequestor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TknAssrncLvl")
@@ -349,7 +400,7 @@ public class CardPaymentToken4 {
 	 * CardPaymentToken3.mmTokenAssuranceLevel}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTokenAssuranceLevel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentToken4, Optional<Number>> mmTokenAssuranceLevel = new MMMessageAttribute<CardPaymentToken4, Optional<Number>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken4.mmObject();
 			isDerived = false;
@@ -361,6 +412,16 @@ public class CardPaymentToken4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(CardPaymentToken4 obj) {
+			return obj.getTokenAssuranceLevel();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken4 obj, Optional<Number> value) {
+			obj.setTokenAssuranceLevel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TknAssrncData")
@@ -395,7 +456,7 @@ public class CardPaymentToken4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTokenAssuranceData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CardPaymentToken4, Optional<Max500Binary>> mmTokenAssuranceData = new MMMessageAttribute<CardPaymentToken4, Optional<Max500Binary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentToken4.mmObject();
 			isDerived = false;
@@ -406,6 +467,16 @@ public class CardPaymentToken4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Binary.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Binary> getValue(CardPaymentToken4 obj) {
+			return obj.getTokenAssuranceData();
+		}
+
+		@Override
+		public void setValue(CardPaymentToken4 obj, Optional<Max500Binary> value) {
+			obj.setTokenAssuranceData(value.orElse(null));
 		}
 	};
 
@@ -465,7 +536,7 @@ public class CardPaymentToken4 {
 		return tokenRequestor == null ? Optional.empty() : Optional.of(tokenRequestor);
 	}
 
-	public CardPaymentToken4 setTokenRequestor(com.tools20022.repository.msg.PaymentTokenIdentifiers1 tokenRequestor) {
+	public CardPaymentToken4 setTokenRequestor(PaymentTokenIdentifiers1 tokenRequestor) {
 		this.tokenRequestor = tokenRequestor;
 		return this;
 	}

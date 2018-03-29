@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.auth.CCPLiquidityStressTestingResultReportV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CoverTwoDefaulters1;
+import com.tools20022.repository.msg.LiquidityRequiredAndAvailable1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,7 +120,7 @@ public class LiquidityStressTestResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<LiquidityStressTestResult1, Max35Text> mmIdentification = new MMMessageAttribute<LiquidityStressTestResult1, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityStressTestResult1.mmObject();
 			isDerived = false;
@@ -129,6 +131,16 @@ public class LiquidityStressTestResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(LiquidityStressTestResult1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(LiquidityStressTestResult1 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "ScnroDfltrs", required = true)
@@ -160,7 +172,7 @@ public class LiquidityStressTestResult1 {
 	 * "Identification of assumed defaulters under the stress scenario."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmScenarioDefaulters = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityStressTestResult1, CoverTwoDefaulters1> mmScenarioDefaulters = new MMMessageAssociationEnd<LiquidityStressTestResult1, CoverTwoDefaulters1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityStressTestResult1.mmObject();
 			isDerived = false;
@@ -171,11 +183,21 @@ public class LiquidityStressTestResult1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CoverTwoDefaulters1.mmObject();
+			type_lazy = () -> CoverTwoDefaulters1.mmObject();
+		}
+
+		@Override
+		public CoverTwoDefaulters1 getValue(LiquidityStressTestResult1 obj) {
+			return obj.getScenarioDefaulters();
+		}
+
+		@Override
+		public void setValue(LiquidityStressTestResult1 obj, CoverTwoDefaulters1 value) {
+			obj.setScenarioDefaulters(value);
 		}
 	};
 	@XmlElement(name = "LqdtyReqrdAndAvlbl", required = true)
-	protected List<com.tools20022.repository.msg.LiquidityRequiredAndAvailable1> liquidityRequiredAndAvailable;
+	protected List<LiquidityRequiredAndAvailable1> liquidityRequiredAndAvailable;
 	/**
 	 * 
 	 <p>
@@ -205,7 +227,7 @@ public class LiquidityStressTestResult1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLiquidityRequiredAndAvailable = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<LiquidityStressTestResult1, List<LiquidityRequiredAndAvailable1>> mmLiquidityRequiredAndAvailable = new MMMessageAssociationEnd<LiquidityStressTestResult1, List<LiquidityRequiredAndAvailable1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityStressTestResult1.mmObject();
 			isDerived = false;
@@ -216,7 +238,17 @@ public class LiquidityStressTestResult1 {
 			maxOccurs = 7;
 			minOccurs = 7;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.LiquidityRequiredAndAvailable1.mmObject();
+			type_lazy = () -> LiquidityRequiredAndAvailable1.mmObject();
+		}
+
+		@Override
+		public List<LiquidityRequiredAndAvailable1> getValue(LiquidityStressTestResult1 obj) {
+			return obj.getLiquidityRequiredAndAvailable();
+		}
+
+		@Override
+		public void setValue(LiquidityStressTestResult1 obj, List<LiquidityRequiredAndAvailable1> value) {
+			obj.setLiquidityRequiredAndAvailable(value);
 		}
 	};
 
@@ -248,7 +280,7 @@ public class LiquidityStressTestResult1 {
 		return scenarioDefaulters;
 	}
 
-	public LiquidityStressTestResult1 setScenarioDefaulters(com.tools20022.repository.msg.CoverTwoDefaulters1 scenarioDefaulters) {
+	public LiquidityStressTestResult1 setScenarioDefaulters(CoverTwoDefaulters1 scenarioDefaulters) {
 		this.scenarioDefaulters = Objects.requireNonNull(scenarioDefaulters);
 		return this;
 	}
@@ -257,7 +289,7 @@ public class LiquidityStressTestResult1 {
 		return liquidityRequiredAndAvailable == null ? liquidityRequiredAndAvailable = new ArrayList<>() : liquidityRequiredAndAvailable;
 	}
 
-	public LiquidityStressTestResult1 setLiquidityRequiredAndAvailable(List<com.tools20022.repository.msg.LiquidityRequiredAndAvailable1> liquidityRequiredAndAvailable) {
+	public LiquidityStressTestResult1 setLiquidityRequiredAndAvailable(List<LiquidityRequiredAndAvailable1> liquidityRequiredAndAvailable) {
 		this.liquidityRequiredAndAvailable = Objects.requireNonNull(liquidityRequiredAndAvailable);
 		return this;
 	}

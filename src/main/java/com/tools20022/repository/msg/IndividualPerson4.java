@@ -131,7 +131,7 @@ public class IndividualPerson4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson4, Max35Text> mmGivenName = new MMMessageAttribute<IndividualPerson4, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmObject();
@@ -144,6 +144,16 @@ public class IndividualPerson4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(IndividualPerson4 obj) {
+			return obj.getGivenName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson4 obj, Max35Text value) {
+			obj.setGivenName(value);
 		}
 	};
 	@XmlElement(name = "MddlNm")
@@ -188,7 +198,7 @@ public class IndividualPerson4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMiddleName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson4, Optional<Max35Text>> mmMiddleName = new MMMessageAttribute<IndividualPerson4, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmMiddleName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmObject();
@@ -201,6 +211,16 @@ public class IndividualPerson4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(IndividualPerson4 obj) {
+			return obj.getMiddleName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson4 obj, Optional<Max35Text> value) {
+			obj.setMiddleName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Nm", required = true)
@@ -246,7 +266,7 @@ public class IndividualPerson4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson4, Max350Text> mmName = new MMMessageAttribute<IndividualPerson4, Max350Text>() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmBirthName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmObject();
@@ -259,6 +279,16 @@ public class IndividualPerson4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Max350Text getValue(IndividualPerson4 obj) {
+			return obj.getName();
+		}
+
+		@Override
+		public void setValue(IndividualPerson4 obj, Max350Text value) {
+			obj.setName(value);
 		}
 	};
 	@XmlElement(name = "Gndr")
@@ -303,7 +333,7 @@ public class IndividualPerson4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGender = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson4, Optional<GenderCode>> mmGender = new MMMessageAttribute<IndividualPerson4, Optional<GenderCode>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmGender;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmObject();
@@ -316,6 +346,16 @@ public class IndividualPerson4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> GenderCode.mmObject();
+		}
+
+		@Override
+		public Optional<GenderCode> getValue(IndividualPerson4 obj) {
+			return obj.getGender();
+		}
+
+		@Override
+		public void setValue(IndividualPerson4 obj, Optional<GenderCode> value) {
+			obj.setGender(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "BirthDt")
@@ -360,7 +400,7 @@ public class IndividualPerson4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IndividualPerson4, Optional<ISODate>> mmBirthDate = new MMMessageAttribute<IndividualPerson4, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBirthDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson4.mmObject();
@@ -373,6 +413,16 @@ public class IndividualPerson4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(IndividualPerson4 obj) {
+			return obj.getBirthDate();
+		}
+
+		@Override
+		public void setValue(IndividualPerson4 obj, Optional<ISODate> value) {
+			obj.setBirthDate(value.orElse(null));
 		}
 	};
 

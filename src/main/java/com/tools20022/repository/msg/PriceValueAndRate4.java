@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PriceAndDirection1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -104,7 +105,7 @@ public class PriceValueAndRate4 {
 	 * definition} = "Price expressed as a currency and amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValueAndRate4, Optional<PriceAndDirection1>> mmValue = new MMMessageAttribute<PriceValueAndRate4, Optional<PriceAndDirection1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueAndRate4.mmObject();
@@ -115,7 +116,17 @@ public class PriceValueAndRate4 {
 			definition = "Price expressed as a currency and amount.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.PriceAndDirection1.mmObject();
+			complexType_lazy = () -> PriceAndDirection1.mmObject();
+		}
+
+		@Override
+		public Optional<PriceAndDirection1> getValue(PriceValueAndRate4 obj) {
+			return obj.getValue();
+		}
+
+		@Override
+		public void setValue(PriceValueAndRate4 obj, Optional<PriceAndDirection1> value) {
+			obj.setValue(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Rate")
@@ -153,7 +164,7 @@ public class PriceValueAndRate4 {
 	 * definition} = "Price expressed as a percentage."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PriceValueAndRate4, Optional<PercentageRate>> mmRate = new MMMessageAttribute<PriceValueAndRate4, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueAndRate4.mmObject();
@@ -165,6 +176,16 @@ public class PriceValueAndRate4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(PriceValueAndRate4 obj) {
+			return obj.getRate();
+		}
+
+		@Override
+		public void setValue(PriceValueAndRate4 obj, Optional<PercentageRate> value) {
+			obj.setRate(value.orElse(null));
 		}
 	};
 
@@ -186,7 +207,7 @@ public class PriceValueAndRate4 {
 		return value == null ? Optional.empty() : Optional.of(value);
 	}
 
-	public PriceValueAndRate4 setValue(com.tools20022.repository.msg.PriceAndDirection1 value) {
+	public PriceValueAndRate4 setValue(PriceAndDirection1 value) {
 		this.value = value;
 		return this;
 	}

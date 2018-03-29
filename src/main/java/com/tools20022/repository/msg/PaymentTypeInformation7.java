@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ServiceLevel4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -105,7 +106,7 @@ public class PaymentTypeInformation7 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTypeInformation7, ServiceLevel4> mmServiceLevel = new MMMessageAssociationEnd<PaymentTypeInformation7, ServiceLevel4>() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation7.mmObject();
@@ -117,7 +118,17 @@ public class PaymentTypeInformation7 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ServiceLevel4.mmObject();
+			type_lazy = () -> ServiceLevel4.mmObject();
+		}
+
+		@Override
+		public ServiceLevel4 getValue(PaymentTypeInformation7 obj) {
+			return obj.getServiceLevel();
+		}
+
+		@Override
+		public void setValue(PaymentTypeInformation7 obj, ServiceLevel4 value) {
+			obj.setServiceLevel(value);
 		}
 	};
 
@@ -139,7 +150,7 @@ public class PaymentTypeInformation7 {
 		return serviceLevel;
 	}
 
-	public PaymentTypeInformation7 setServiceLevel(com.tools20022.repository.msg.ServiceLevel4 serviceLevel) {
+	public PaymentTypeInformation7 setServiceLevel(ServiceLevel4 serviceLevel) {
 		this.serviceLevel = Objects.requireNonNull(serviceLevel);
 		return this;
 	}

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.SecurityIdentification20Choice;
 import com.tools20022.repository.codeset.NotAvailable1Code;
 import com.tools20022.repository.codeset.NotReported1Code;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
@@ -125,7 +126,7 @@ public class SecurityIdentificationQuery3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentificationQuery3Choice, List<ISINOct2015Identifier>> mmISIN = new MMMessageAttribute<SecurityIdentificationQuery3Choice, List<ISINOct2015Identifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentificationQuery3Choice.mmObject();
@@ -136,6 +137,16 @@ public class SecurityIdentificationQuery3Choice {
 			definition = "International Securities Identification Number (ISIN). A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
+		}
+
+		@Override
+		public List<ISINOct2015Identifier> getValue(SecurityIdentificationQuery3Choice obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationQuery3Choice obj, List<ISINOct2015Identifier> value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "AltrntvInstrmId")
@@ -174,7 +185,7 @@ public class SecurityIdentificationQuery3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlternativeInstrumentIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentificationQuery3Choice, List<Max52Text>> mmAlternativeInstrumentIdentification = new MMMessageAttribute<SecurityIdentificationQuery3Choice, List<Max52Text>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentificationQuery3Choice.mmObject();
@@ -185,6 +196,16 @@ public class SecurityIdentificationQuery3Choice {
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max52Text.mmObject();
+		}
+
+		@Override
+		public List<Max52Text> getValue(SecurityIdentificationQuery3Choice obj) {
+			return obj.getAlternativeInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationQuery3Choice obj, List<Max52Text> value) {
+			obj.setAlternativeInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "NotAvlbl")
@@ -219,7 +240,7 @@ public class SecurityIdentificationQuery3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotAvailable = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentificationQuery3Choice, Optional<NotAvailable1Code>> mmNotAvailable = new MMMessageAttribute<SecurityIdentificationQuery3Choice, Optional<NotAvailable1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentificationQuery3Choice.mmObject();
 			isDerived = false;
@@ -230,6 +251,16 @@ public class SecurityIdentificationQuery3Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NotAvailable1Code.mmObject();
+		}
+
+		@Override
+		public Optional<NotAvailable1Code> getValue(SecurityIdentificationQuery3Choice obj) {
+			return obj.getNotAvailable();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationQuery3Choice obj, Optional<NotAvailable1Code> value) {
+			obj.setNotAvailable(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UnqPdctIdr")
@@ -266,7 +297,7 @@ public class SecurityIdentificationQuery3Choice {
 	 * definition} = "Identification through a unique product identifier."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUniqueProductIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentificationQuery3Choice, List<Max52Text>> mmUniqueProductIdentifier = new MMMessageAttribute<SecurityIdentificationQuery3Choice, List<Max52Text>>() {
 		{
 			businessElementTrace_lazy = () -> Product.mmProductIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentificationQuery3Choice.mmObject();
@@ -278,9 +309,19 @@ public class SecurityIdentificationQuery3Choice {
 			minOccurs = 0;
 			simpleType_lazy = () -> Max52Text.mmObject();
 		}
+
+		@Override
+		public List<Max52Text> getValue(SecurityIdentificationQuery3Choice obj) {
+			return obj.getUniqueProductIdentifier();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationQuery3Choice obj, List<Max52Text> value) {
+			obj.setUniqueProductIdentifier(value);
+		}
 	};
 	@XmlElement(name = "Indx")
-	protected List<com.tools20022.repository.choice.SecurityIdentification20Choice> index;
+	protected List<SecurityIdentification20Choice> index;
 	/**
 	 * 
 	 <p>
@@ -315,7 +356,7 @@ public class SecurityIdentificationQuery3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecurityIdentificationQuery3Choice, List<SecurityIdentification20Choice>> mmIndex = new MMMessageAssociationEnd<SecurityIdentificationQuery3Choice, List<SecurityIdentification20Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentificationQuery3Choice.mmObject();
@@ -326,7 +367,17 @@ public class SecurityIdentificationQuery3Choice {
 			definition = "Identification of the index on which the financial instrument is based.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SecurityIdentification20Choice.mmObject();
+			type_lazy = () -> SecurityIdentification20Choice.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification20Choice> getValue(SecurityIdentificationQuery3Choice obj) {
+			return obj.getIndex();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationQuery3Choice obj, List<SecurityIdentification20Choice> value) {
+			obj.setIndex(value);
 		}
 	};
 	@XmlElement(name = "NotRptd")
@@ -359,7 +410,7 @@ public class SecurityIdentificationQuery3Choice {
 	 * definition} = "Field can be queried for not reported value."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNotReported = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentificationQuery3Choice, Optional<NotReported1Code>> mmNotReported = new MMMessageAttribute<SecurityIdentificationQuery3Choice, Optional<NotReported1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentificationQuery3Choice.mmObject();
 			isDerived = false;
@@ -370,6 +421,16 @@ public class SecurityIdentificationQuery3Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> NotReported1Code.mmObject();
+		}
+
+		@Override
+		public Optional<NotReported1Code> getValue(SecurityIdentificationQuery3Choice obj) {
+			return obj.getNotReported();
+		}
+
+		@Override
+		public void setValue(SecurityIdentificationQuery3Choice obj, Optional<NotReported1Code> value) {
+			obj.setNotReported(value.orElse(null));
 		}
 	};
 
@@ -430,7 +491,7 @@ public class SecurityIdentificationQuery3Choice {
 		return index == null ? index = new ArrayList<>() : index;
 	}
 
-	public SecurityIdentificationQuery3Choice setIndex(List<com.tools20022.repository.choice.SecurityIdentification20Choice> index) {
+	public SecurityIdentificationQuery3Choice setIndex(List<SecurityIdentification20Choice> index) {
 		this.index = Objects.requireNonNull(index);
 		return this;
 	}

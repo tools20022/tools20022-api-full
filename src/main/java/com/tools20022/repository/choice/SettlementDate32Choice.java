@@ -21,6 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.DateAndDateTime2Choice;
+import com.tools20022.repository.choice.SettlementDateCode11Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,7 +103,7 @@ public class SettlementDate32Choice {
 	 * definition} = "Date in ISO format."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDate32Choice, DateAndDateTime2Choice> mmDate = new MMMessageAttribute<SettlementDate32Choice, DateAndDateTime2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDate32Choice.mmObject();
 			isDerived = false;
@@ -112,7 +114,17 @@ public class SettlementDate32Choice {
 			definition = "Date in ISO format.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTime2Choice.mmObject();
+			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTime2Choice getValue(SettlementDate32Choice obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(SettlementDate32Choice obj, DateAndDateTime2Choice value) {
+			obj.setDate(value);
 		}
 	};
 	@XmlElement(name = "DtCd", required = true)
@@ -149,7 +161,7 @@ public class SettlementDate32Choice {
 	 * "Date and time at which the securities are to be delivered or received."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementDate32Choice, SettlementDateCode11Choice> mmDateCode = new MMMessageAttribute<SettlementDate32Choice, SettlementDateCode11Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDate32Choice.mmObject();
 			isDerived = false;
@@ -160,7 +172,17 @@ public class SettlementDate32Choice {
 			definition = "Date and time at which the securities are to be delivered or received.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.SettlementDateCode11Choice.mmObject();
+			complexType_lazy = () -> SettlementDateCode11Choice.mmObject();
+		}
+
+		@Override
+		public SettlementDateCode11Choice getValue(SettlementDate32Choice obj) {
+			return obj.getDateCode();
+		}
+
+		@Override
+		public void setValue(SettlementDate32Choice obj, SettlementDateCode11Choice value) {
+			obj.setDateCode(value);
 		}
 	};
 
@@ -181,7 +203,7 @@ public class SettlementDate32Choice {
 		return date;
 	}
 
-	public SettlementDate32Choice setDate(com.tools20022.repository.choice.DateAndDateTime2Choice date) {
+	public SettlementDate32Choice setDate(DateAndDateTime2Choice date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}
@@ -190,7 +212,7 @@ public class SettlementDate32Choice {
 		return dateCode;
 	}
 
-	public SettlementDate32Choice setDateCode(com.tools20022.repository.choice.SettlementDateCode11Choice dateCode) {
+	public SettlementDate32Choice setDateCode(SettlementDateCode11Choice dateCode) {
 		this.dateCode = Objects.requireNonNull(dateCode);
 		return this;
 	}

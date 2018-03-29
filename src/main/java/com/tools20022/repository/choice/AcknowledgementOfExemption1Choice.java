@@ -106,7 +106,7 @@ public class AcknowledgementOfExemption1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentationWillBeSentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementOfExemption1Choice, YesNoIndicator> mmDocumentationWillBeSentIndicator = new MMMessageAttribute<AcknowledgementOfExemption1Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementOfExemption1Choice.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class AcknowledgementOfExemption1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(AcknowledgementOfExemption1Choice obj) {
+			return obj.getDocumentationWillBeSentIndicator();
+		}
+
+		@Override
+		public void setValue(AcknowledgementOfExemption1Choice obj, YesNoIndicator value) {
+			obj.setDocumentationWillBeSentIndicator(value);
 		}
 	};
 	@XmlElement(name = "DcmnttnWillNotBeSntInd", required = true)
@@ -155,7 +165,7 @@ public class AcknowledgementOfExemption1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentationWillNotBeSentIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcknowledgementOfExemption1Choice, YesNoIndicator> mmDocumentationWillNotBeSentIndicator = new MMMessageAttribute<AcknowledgementOfExemption1Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgementOfExemption1Choice.mmObject();
 			isDerived = false;
@@ -167,6 +177,16 @@ public class AcknowledgementOfExemption1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(AcknowledgementOfExemption1Choice obj) {
+			return obj.getDocumentationWillNotBeSentIndicator();
+		}
+
+		@Override
+		public void setValue(AcknowledgementOfExemption1Choice obj, YesNoIndicator value) {
+			obj.setDocumentationWillNotBeSentIndicator(value);
 		}
 	};
 

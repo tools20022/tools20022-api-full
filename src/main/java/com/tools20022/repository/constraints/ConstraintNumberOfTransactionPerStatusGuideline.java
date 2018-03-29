@@ -52,11 +52,15 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 */
 	public static final MMConstraint<OriginalGroupInformation1> forOriginalGroupInformation1 = new MMConstraint<OriginalGroupInformation1>() {
 		{
-			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			owner_lazy = () -> OriginalGroupInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation1 obj) throws Exception {
+			checkOriginalGroupInformation1(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 */
 	public static final MMConstraint<OriginalGroupInformation20> forOriginalGroupInformation20 = new MMConstraint<OriginalGroupInformation20>() {
 		{
-			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupInformation20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			owner_lazy = () -> OriginalGroupInformation20.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation20 obj) throws Exception {
+			checkOriginalGroupInformation20(obj);
 		}
 	};
 	/**
@@ -120,12 +128,16 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 */
 	public static final MMConstraint<OriginalGroupHeader1> forOriginalGroupHeader1 = new MMConstraint<OriginalGroupHeader1>() {
 		{
-			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupHeader1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupHeader7);
 			owner_lazy = () -> OriginalGroupHeader1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupHeader1 obj) throws Exception {
+			checkOriginalGroupHeader1(obj);
 		}
 	};
 	/**
@@ -160,12 +172,16 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 */
 	public static final MMConstraint<OriginalGroupInformation25> forOriginalGroupInformation25 = new MMConstraint<OriginalGroupInformation25>() {
 		{
-			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupInformation25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupInformation28);
 			owner_lazy = () -> OriginalGroupInformation25.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation25 obj) throws Exception {
+			checkOriginalGroupInformation25(obj);
 		}
 	};
 	/**
@@ -191,11 +207,15 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 */
 	public static final MMConstraint<OriginalGroupInformation15> forOriginalGroupInformation15 = new MMConstraint<OriginalGroupInformation15>() {
 		{
-			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "ISO20022 Rule: \nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			owner_lazy = () -> OriginalGroupInformation15.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation15 obj) throws Exception {
+			checkOriginalGroupInformation15(obj);
 		}
 	};
 	/**
@@ -221,11 +241,15 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 */
 	public static final MMConstraint<OriginalGroupInformation19> forOriginalGroupInformation19 = new MMConstraint<OriginalGroupInformation19>() {
 		{
-			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "ISO20022 Rule: \nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			owner_lazy = () -> OriginalGroupInformation19.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation19 obj) throws Exception {
+			checkOriginalGroupInformation19(obj);
 		}
 	};
 	/**
@@ -265,13 +289,17 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 */
 	public static final MMConstraint<OriginalGroupHeader7> forOriginalGroupHeader7 = new MMConstraint<OriginalGroupHeader7>() {
 		{
-			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupHeader7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupHeader13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupHeader1;
 			owner_lazy = () -> OriginalGroupHeader7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupHeader7 obj) throws Exception {
+			checkOriginalGroupHeader7(obj);
 		}
 	};
 	/**
@@ -303,12 +331,16 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 */
 	public static final MMConstraint<OriginalGroupInformation28> forOriginalGroupInformation28 = new MMConstraint<OriginalGroupInformation28>() {
 		{
-			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupInformation28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupInformation25;
 			owner_lazy = () -> OriginalGroupInformation28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupInformation28 obj) throws Exception {
+			checkOriginalGroupInformation28(obj);
 		}
 	};
 	/**
@@ -339,12 +371,16 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 */
 	public static final MMConstraint<OriginalGroupHeader13> forOriginalGroupHeader13 = new MMConstraint<OriginalGroupHeader13>() {
 		{
-			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupHeader13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupHeader7;
 			owner_lazy = () -> OriginalGroupHeader13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OriginalGroupHeader13 obj) throws Exception {
+			checkOriginalGroupHeader13(obj);
 		}
 	};
 

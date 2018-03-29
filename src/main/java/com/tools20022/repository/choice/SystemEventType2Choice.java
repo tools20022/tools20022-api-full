@@ -105,7 +105,7 @@ public class SystemEventType2Choice {
 	 * "Type of system event that has occurred, expressed in a coded form."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemEventType2Choice, SystemEventType2Code> mmCode = new MMMessageAttribute<SystemEventType2Choice, SystemEventType2Code>() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemEventType2Choice.mmObject();
@@ -117,6 +117,16 @@ public class SystemEventType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemEventType2Code.mmObject();
+		}
+
+		@Override
+		public SystemEventType2Code getValue(SystemEventType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(SystemEventType2Choice obj, SystemEventType2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -156,7 +166,7 @@ public class SystemEventType2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SystemEventType2Choice, GenericIdentification1> mmProprietary = new MMMessageAttribute<SystemEventType2Choice, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SystemEventType2Choice.mmObject();
@@ -168,6 +178,16 @@ public class SystemEventType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(SystemEventType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SystemEventType2Choice obj, GenericIdentification1 value) {
+			obj.setProprietary(value);
 		}
 	};
 

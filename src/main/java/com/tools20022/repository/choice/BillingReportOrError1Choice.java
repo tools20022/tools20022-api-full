@@ -120,7 +120,7 @@ public class BillingReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBillingReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingReportOrError1Choice, BillingReport1> mmBillingReport = new MMMessageAssociationEnd<BillingReportOrError1Choice, BillingReport1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BillingReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -133,6 +133,16 @@ public class BillingReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BillingReport1.mmObject();
+		}
+
+		@Override
+		public BillingReport1 getValue(BillingReportOrError1Choice obj) {
+			return obj.getBillingReport();
+		}
+
+		@Override
+		public void setValue(BillingReportOrError1Choice obj, BillingReport1 value) {
+			obj.setBillingReport(value);
 		}
 	};
 	@XmlElement(name = "CxlRpt", required = true)
@@ -172,7 +182,7 @@ public class BillingReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCancellationReport = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingReportOrError1Choice, BillingCancellationReport1> mmCancellationReport = new MMMessageAssociationEnd<BillingReportOrError1Choice, BillingCancellationReport1>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BillingReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -185,6 +195,16 @@ public class BillingReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BillingCancellationReport1.mmObject();
+		}
+
+		@Override
+		public BillingCancellationReport1 getValue(BillingReportOrError1Choice obj) {
+			return obj.getCancellationReport();
+		}
+
+		@Override
+		public void setValue(BillingReportOrError1Choice obj, BillingCancellationReport1 value) {
+			obj.setCancellationReport(value);
 		}
 	};
 	@XmlElement(name = "OprlErr", required = true)
@@ -225,7 +245,7 @@ public class BillingReportOrError1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BillingReportOrError1Choice, List<ErrorHandling3>> mmOperationalError = new MMMessageAssociationEnd<BillingReportOrError1Choice, List<ErrorHandling3>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.BillingReportOrError1Choice.mmObject();
 			isDerived = false;
@@ -237,6 +257,16 @@ public class BillingReportOrError1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
+		}
+
+		@Override
+		public List<ErrorHandling3> getValue(BillingReportOrError1Choice obj) {
+			return obj.getOperationalError();
+		}
+
+		@Override
+		public void setValue(BillingReportOrError1Choice obj, List<ErrorHandling3> value) {
+			obj.setOperationalError(value);
 		}
 	};
 

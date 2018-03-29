@@ -116,7 +116,7 @@ public class FailingStatus12Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailingStatus12Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<FailingStatus12Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FailingStatus12Choice.mmObject();
@@ -129,6 +129,16 @@ public class FailingStatus12Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(FailingStatus12Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(FailingStatus12Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -167,7 +177,7 @@ public class FailingStatus12Choice {
 	 * definition} = "Specifies the reason of the failing status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FailingStatus12Choice, List<FailingReason10>> mmReason = new MMMessageAssociationEnd<FailingStatus12Choice, List<FailingReason10>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmFailingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FailingStatus12Choice.mmObject();
@@ -180,6 +190,16 @@ public class FailingStatus12Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> FailingReason10.mmObject();
+		}
+
+		@Override
+		public List<FailingReason10> getValue(FailingStatus12Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(FailingStatus12Choice obj, List<FailingReason10> value) {
+			obj.setReason(value);
 		}
 	};
 

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CashSettlement;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryDate1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -124,7 +125,7 @@ public class TransactionDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcceptanceDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDates1, Optional<ISODateTime>> mmAcceptanceDateTime = new MMMessageAttribute<TransactionDates1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmAcceptanceDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
@@ -136,6 +137,16 @@ public class TransactionDates1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TransactionDates1 obj) {
+			return obj.getAcceptanceDateTime();
+		}
+
+		@Override
+		public void setValue(TransactionDates1 obj, Optional<ISODateTime> value) {
+			obj.setAcceptanceDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -172,7 +183,7 @@ public class TransactionDates1 {
 	 * definition} = "Date on which the trade was executed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDates1, Optional<ISODate>> mmTradeDate = new MMMessageAttribute<TransactionDates1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
@@ -184,6 +195,16 @@ public class TransactionDates1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransactionDates1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(TransactionDates1 obj, Optional<ISODate> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmDt")
@@ -222,7 +243,7 @@ public class TransactionDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDates1, Optional<ISODate>> mmInterbankSettlementDate = new MMMessageAttribute<TransactionDates1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
@@ -234,6 +255,16 @@ public class TransactionDates1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransactionDates1 obj) {
+			return obj.getInterbankSettlementDate();
+		}
+
+		@Override
+		public void setValue(TransactionDates1 obj, Optional<ISODate> value) {
+			obj.setInterbankSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "StartDt")
@@ -272,7 +303,7 @@ public class TransactionDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDates1, Optional<ISODate>> mmStartDate = new MMMessageAttribute<TransactionDates1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmStartDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
@@ -284,6 +315,16 @@ public class TransactionDates1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransactionDates1 obj) {
+			return obj.getStartDate();
+		}
+
+		@Override
+		public void setValue(TransactionDates1 obj, Optional<ISODate> value) {
+			obj.setStartDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EndDt")
@@ -322,7 +363,7 @@ public class TransactionDates1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDates1, Optional<ISODate>> mmEndDate = new MMMessageAttribute<TransactionDates1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmEndDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
@@ -334,6 +375,16 @@ public class TransactionDates1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(TransactionDates1 obj) {
+			return obj.getEndDate();
+		}
+
+		@Override
+		public void setValue(TransactionDates1 obj, Optional<ISODate> value) {
+			obj.setEndDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDtTm")
@@ -370,7 +421,7 @@ public class TransactionDates1 {
 	 * definition} = "Date and time of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TransactionDates1, Optional<ISODateTime>> mmTransactionDateTime = new MMMessageAttribute<TransactionDates1, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
@@ -383,9 +434,19 @@ public class TransactionDates1 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		@Override
+		public Optional<ISODateTime> getValue(TransactionDates1 obj) {
+			return obj.getTransactionDateTime();
+		}
+
+		@Override
+		public void setValue(TransactionDates1 obj, Optional<ISODateTime> value) {
+			obj.setTransactionDateTime(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "Prtry")
-	protected List<com.tools20022.repository.msg.ProprietaryDate1> proprietary;
+	protected List<ProprietaryDate1> proprietary;
 	/**
 	 * 
 	 <p>
@@ -412,7 +473,7 @@ public class TransactionDates1 {
 	 * definition} = "Proprietary date related to the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TransactionDates1, List<ProprietaryDate1>> mmProprietary = new MMMessageAssociationEnd<TransactionDates1, List<ProprietaryDate1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDates1.mmObject();
 			isDerived = false;
@@ -422,7 +483,17 @@ public class TransactionDates1 {
 			definition = "Proprietary date related to the underlying transaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryDate1.mmObject();
+			type_lazy = () -> ProprietaryDate1.mmObject();
+		}
+
+		@Override
+		public List<ProprietaryDate1> getValue(TransactionDates1 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TransactionDates1 obj, List<ProprietaryDate1> value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -500,7 +571,7 @@ public class TransactionDates1 {
 		return proprietary == null ? proprietary = new ArrayList<>() : proprietary;
 	}
 
-	public TransactionDates1 setProprietary(List<com.tools20022.repository.msg.ProprietaryDate1> proprietary) {
+	public TransactionDates1 setProprietary(List<ProprietaryDate1> proprietary) {
 		this.proprietary = Objects.requireNonNull(proprietary);
 		return this;
 	}

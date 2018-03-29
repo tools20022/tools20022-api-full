@@ -113,7 +113,7 @@ public class DocumentLineType1 {
 	 * ReferredDocumentType2.mmCodeOrProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCodeOrProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentLineType1, DocumentLineType1Choice> mmCodeOrProprietary = new MMMessageAssociationEnd<DocumentLineType1, DocumentLineType1Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentLineType1.mmObject();
@@ -127,6 +127,16 @@ public class DocumentLineType1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> DocumentLineType1Choice.mmObject();
+		}
+
+		@Override
+		public DocumentLineType1Choice getValue(DocumentLineType1 obj) {
+			return obj.getCodeOrProprietary();
+		}
+
+		@Override
+		public void setValue(DocumentLineType1 obj, DocumentLineType1Choice value) {
+			obj.setCodeOrProprietary(value);
 		}
 	};
 	@XmlElement(name = "Issr")
@@ -170,7 +180,7 @@ public class DocumentLineType1 {
 	 * ReferredDocumentType2.mmIssuer}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentLineType1, Optional<Max35Text>> mmIssuer = new MMMessageAttribute<DocumentLineType1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentLineType1.mmObject();
@@ -183,6 +193,16 @@ public class DocumentLineType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DocumentLineType1 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(DocumentLineType1 obj, Optional<Max35Text> value) {
+			obj.setIssuer(value.orElse(null));
 		}
 	};
 

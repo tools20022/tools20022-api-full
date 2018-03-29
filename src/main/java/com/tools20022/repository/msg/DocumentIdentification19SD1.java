@@ -102,7 +102,7 @@ public class DocumentIdentification19SD1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification19SD1, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<DocumentIdentification19SD1, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification19SD1.mmObject();
 			isDerived = false;
@@ -113,6 +113,16 @@ public class DocumentIdentification19SD1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(DocumentIdentification19SD1 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification19SD1 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsAnncmntDt")
@@ -143,7 +153,7 @@ public class DocumentIdentification19SD1 {
 	 * definition} = "Date of previous announcement(s) to this update."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPreviousAnnouncementDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DocumentIdentification19SD1, Optional<DateFormat22Choice>> mmPreviousAnnouncementDate = new MMMessageAssociationEnd<DocumentIdentification19SD1, Optional<DateFormat22Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification19SD1.mmObject();
 			isDerived = false;
@@ -155,6 +165,16 @@ public class DocumentIdentification19SD1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateFormat22Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateFormat22Choice> getValue(DocumentIdentification19SD1 obj) {
+			return obj.getPreviousAnnouncementDate();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification19SD1 obj, Optional<DateFormat22Choice> value) {
+			obj.setPreviousAnnouncementDate(value.orElse(null));
 		}
 	};
 

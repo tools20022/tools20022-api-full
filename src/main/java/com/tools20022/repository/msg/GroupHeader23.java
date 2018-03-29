@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Pagination;
+import com.tools20022.repository.msg.PartyIdentification8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -138,7 +140,7 @@ public class GroupHeader23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader23, Max35Text> mmMessageIdentification = new MMMessageAttribute<GroupHeader23, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader23.mmObject();
@@ -150,6 +152,16 @@ public class GroupHeader23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GroupHeader23 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(GroupHeader23 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm", required = true)
@@ -187,7 +199,7 @@ public class GroupHeader23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader23, ISODateTime> mmCreationDateTime = new MMMessageAttribute<GroupHeader23, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader23.mmObject();
@@ -199,6 +211,16 @@ public class GroupHeader23 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(GroupHeader23 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(GroupHeader23 obj, ISODateTime value) {
+			obj.setCreationDateTime(value);
 		}
 	};
 	@XmlElement(name = "MsgRcpt")
@@ -230,7 +252,7 @@ public class GroupHeader23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageRecipient = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader23, Optional<PartyIdentification8>> mmMessageRecipient = new MMMessageAssociationEnd<GroupHeader23, Optional<PartyIdentification8>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader23.mmObject();
 			isDerived = false;
@@ -241,7 +263,17 @@ public class GroupHeader23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification8.mmObject();
+			type_lazy = () -> PartyIdentification8.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification8> getValue(GroupHeader23 obj) {
+			return obj.getMessageRecipient();
+		}
+
+		@Override
+		public void setValue(GroupHeader23 obj, Optional<PartyIdentification8> value) {
+			obj.setMessageRecipient(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgPgntn")
@@ -272,7 +304,7 @@ public class GroupHeader23 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GroupHeader23, Optional<Pagination>> mmMessagePagination = new MMMessageAssociationEnd<GroupHeader23, Optional<Pagination>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader23.mmObject();
 			isDerived = false;
@@ -283,7 +315,17 @@ public class GroupHeader23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
+			type_lazy = () -> Pagination.mmObject();
+		}
+
+		@Override
+		public Optional<Pagination> getValue(GroupHeader23 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(GroupHeader23 obj, Optional<Pagination> value) {
+			obj.setMessagePagination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -314,7 +356,7 @@ public class GroupHeader23 {
 	 * definition} = "Further details on the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GroupHeader23, Optional<Max500Text>> mmAdditionalInformation = new MMMessageAttribute<GroupHeader23, Optional<Max500Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader23.mmObject();
 			isDerived = false;
@@ -325,6 +367,16 @@ public class GroupHeader23 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max500Text> getValue(GroupHeader23 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(GroupHeader23 obj, Optional<Max500Text> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 
@@ -366,7 +418,7 @@ public class GroupHeader23 {
 		return messageRecipient == null ? Optional.empty() : Optional.of(messageRecipient);
 	}
 
-	public GroupHeader23 setMessageRecipient(com.tools20022.repository.msg.PartyIdentification8 messageRecipient) {
+	public GroupHeader23 setMessageRecipient(PartyIdentification8 messageRecipient) {
 		this.messageRecipient = messageRecipient;
 		return this;
 	}
@@ -375,7 +427,7 @@ public class GroupHeader23 {
 		return messagePagination == null ? Optional.empty() : Optional.of(messagePagination);
 	}
 
-	public GroupHeader23 setMessagePagination(com.tools20022.repository.msg.Pagination messagePagination) {
+	public GroupHeader23 setMessagePagination(Pagination messagePagination) {
 		this.messagePagination = messagePagination;
 		return this;
 	}

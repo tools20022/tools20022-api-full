@@ -123,7 +123,7 @@ public class FailingReason8Choice {
 	 * FailingReason3Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailingReason8Choice, FailingReason2Code> mmCode = new MMMessageAttribute<FailingReason8Choice, FailingReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmFailingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FailingReason8Choice.mmObject();
@@ -137,6 +137,16 @@ public class FailingReason8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FailingReason2Code.mmObject();
+		}
+
+		@Override
+		public FailingReason2Code getValue(FailingReason8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FailingReason8Choice obj, FailingReason2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class FailingReason8Choice {
 	 * FailingReason3Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FailingReason8Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<FailingReason8Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmFailingReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FailingReason8Choice.mmObject();
@@ -198,6 +208,16 @@ public class FailingReason8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(FailingReason8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FailingReason8Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount120;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount121;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -118,7 +120,7 @@ public class CashParties28 {
 	 * CashParties21.mmCreditor}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties28, Optional<PartyIdentificationAndAccount120>> mmCreditor = new MMMessageAssociationEnd<CashParties28, Optional<PartyIdentificationAndAccount120>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties28.mmObject();
@@ -132,7 +134,17 @@ public class CashParties28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount120.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount120.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount120> getValue(CashParties28 obj) {
+			return obj.getCreditor();
+		}
+
+		@Override
+		public void setValue(CashParties28 obj, Optional<PartyIdentificationAndAccount120> value) {
+			obj.setCreditor(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CdtrAgt")
@@ -177,7 +189,7 @@ public class CashParties28 {
 	 * CashParties21.mmCreditorAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties28, Optional<PartyIdentificationAndAccount121>> mmCreditorAgent = new MMMessageAssociationEnd<CashParties28, Optional<PartyIdentificationAndAccount121>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties28.mmObject();
@@ -191,7 +203,17 @@ public class CashParties28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount121.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount121.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount121> getValue(CashParties28 obj) {
+			return obj.getCreditorAgent();
+		}
+
+		@Override
+		public void setValue(CashParties28 obj, Optional<PartyIdentificationAndAccount121> value) {
+			obj.setCreditorAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MktClmCtrPty")
@@ -237,7 +259,7 @@ public class CashParties28 {
 	 * CashParties21.mmMarketClaimCounterparty}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMarketClaimCounterparty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CashParties28, Optional<PartyIdentificationAndAccount120>> mmMarketClaimCounterparty = new MMMessageAssociationEnd<CashParties28, Optional<PartyIdentificationAndAccount120>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CashParties28.mmObject();
@@ -251,7 +273,17 @@ public class CashParties28 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount120.mmObject();
+			type_lazy = () -> PartyIdentificationAndAccount120.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationAndAccount120> getValue(CashParties28 obj) {
+			return obj.getMarketClaimCounterparty();
+		}
+
+		@Override
+		public void setValue(CashParties28 obj, Optional<PartyIdentificationAndAccount120> value) {
+			obj.setMarketClaimCounterparty(value.orElse(null));
 		}
 	};
 
@@ -275,7 +307,7 @@ public class CashParties28 {
 		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public CashParties28 setCreditor(com.tools20022.repository.msg.PartyIdentificationAndAccount120 creditor) {
+	public CashParties28 setCreditor(PartyIdentificationAndAccount120 creditor) {
 		this.creditor = creditor;
 		return this;
 	}
@@ -284,7 +316,7 @@ public class CashParties28 {
 		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public CashParties28 setCreditorAgent(com.tools20022.repository.msg.PartyIdentificationAndAccount121 creditorAgent) {
+	public CashParties28 setCreditorAgent(PartyIdentificationAndAccount121 creditorAgent) {
 		this.creditorAgent = creditorAgent;
 		return this;
 	}
@@ -293,7 +325,7 @@ public class CashParties28 {
 		return marketClaimCounterparty == null ? Optional.empty() : Optional.of(marketClaimCounterparty);
 	}
 
-	public CashParties28 setMarketClaimCounterparty(com.tools20022.repository.msg.PartyIdentificationAndAccount120 marketClaimCounterparty) {
+	public CashParties28 setMarketClaimCounterparty(PartyIdentificationAndAccount120 marketClaimCounterparty) {
 		this.marketClaimCounterparty = marketClaimCounterparty;
 		return this;
 	}

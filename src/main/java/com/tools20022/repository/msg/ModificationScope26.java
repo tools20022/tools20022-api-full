@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.acmt.AccountModificationInstructionV06;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Intermediary36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -149,7 +150,7 @@ public class ModificationScope26 {
 	 * ModificationScope20.mmModificationScopeIndication}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationScope26, DataModification1Code> mmModificationScopeIndication = new MMMessageAttribute<ModificationScope26, DataModification1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope26.mmObject();
 			isDerived = false;
@@ -163,6 +164,16 @@ public class ModificationScope26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataModification1Code.mmObject();
+		}
+
+		@Override
+		public DataModification1Code getValue(ModificationScope26 obj) {
+			return obj.getModificationScopeIndication();
+		}
+
+		@Override
+		public void setValue(ModificationScope26 obj, DataModification1Code value) {
+			obj.setModificationScopeIndication(value);
 		}
 	};
 	@XmlElement(name = "Intrmy", required = true)
@@ -208,7 +219,7 @@ public class ModificationScope26 {
 	 * ModificationScope20.mmIntermediary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIntermediary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ModificationScope26, Intermediary36> mmIntermediary = new MMMessageAssociationEnd<ModificationScope26, Intermediary36>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope26.mmObject();
 			isDerived = false;
@@ -221,7 +232,17 @@ public class ModificationScope26 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary36.mmObject();
+			type_lazy = () -> Intermediary36.mmObject();
+		}
+
+		@Override
+		public Intermediary36 getValue(ModificationScope26 obj) {
+			return obj.getIntermediary();
+		}
+
+		@Override
+		public void setValue(ModificationScope26 obj, Intermediary36 value) {
+			obj.setIntermediary(value);
 		}
 	};
 
@@ -254,7 +275,7 @@ public class ModificationScope26 {
 		return intermediary;
 	}
 
-	public ModificationScope26 setIntermediary(com.tools20022.repository.msg.Intermediary36 intermediary) {
+	public ModificationScope26 setIntermediary(Intermediary36 intermediary) {
 		this.intermediary = Objects.requireNonNull(intermediary);
 		return this;
 	}

@@ -122,7 +122,7 @@ public class FormOfSecurity5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FormOfSecurity5Choice, FormOfSecurity1Code> mmCode = new MMMessageAttribute<FormOfSecurity5Choice, FormOfSecurity1Code>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FormOfSecurity5Choice.mmObject();
@@ -135,6 +135,16 @@ public class FormOfSecurity5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FormOfSecurity1Code.mmObject();
+		}
+
+		@Override
+		public FormOfSecurity1Code getValue(FormOfSecurity5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(FormOfSecurity5Choice obj, FormOfSecurity1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -179,7 +189,7 @@ public class FormOfSecurity5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FormOfSecurity5Choice, GenericIdentification40> mmProprietary = new MMMessageAssociationEnd<FormOfSecurity5Choice, GenericIdentification40>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistrationForm;
 			componentContext_lazy = () -> com.tools20022.repository.choice.FormOfSecurity5Choice.mmObject();
@@ -193,6 +203,16 @@ public class FormOfSecurity5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification40.mmObject();
+		}
+
+		@Override
+		public GenericIdentification40 getValue(FormOfSecurity5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(FormOfSecurity5Choice obj, GenericIdentification40 value) {
+			obj.setProprietary(value);
 		}
 	};
 

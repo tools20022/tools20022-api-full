@@ -25,9 +25,8 @@ import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
 import com.tools20022.repository.choice.AccountIdentification32Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.msg.*;
-import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
+import com.tools20022.repository.msgset.CorporateActionsISOPreviousversion;
 import com.tools20022.repository.msgset.CorporateActionsMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -136,8 +135,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOLatestversion
- * CorporateActionsISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.CorporateActionsISOPreviousversion
+ * CorporateActionsISOPreviousversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset.CorporateActionsMaintenance20162017
  * CorporateActionsMaintenance20162017}</li>
@@ -252,7 +251,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<Pagination>> mmPagination = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<Pagination>>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,12 +264,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Pagination> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<Pagination> value) {
+			obj.setPagination(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MvmntPrlimryAdvcGnlInf", required = true)
@@ -314,7 +315,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * mmMovementPreliminaryAdviceGeneralInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMovementPreliminaryAdviceGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, CorporateActionPreliminaryAdviceType2> mmMovementPreliminaryAdviceGeneralInformation = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, CorporateActionPreliminaryAdviceType2>() {
 		{
 			xmlTag = "MvmntPrlimryAdvcGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,12 +328,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> CorporateActionPreliminaryAdviceType2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getMovementPreliminaryAdviceGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionPreliminaryAdviceType2 getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getMovementPreliminaryAdviceGeneralInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, CorporateActionPreliminaryAdviceType2 value) {
+			obj.setMovementPreliminaryAdviceGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "PrvsMvmntPrlimryAdvcId")
@@ -377,7 +380,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * mmPreviousMovementPreliminaryAdviceIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousMovementPreliminaryAdviceIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<DocumentIdentification31>> mmPreviousMovementPreliminaryAdviceIdentification = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<DocumentIdentification31>>() {
 		{
 			xmlTag = "PrvsMvmntPrlimryAdvcId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -390,12 +393,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> DocumentIdentification31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getPreviousMovementPreliminaryAdviceIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification31> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getPreviousMovementPreliminaryAdviceIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<DocumentIdentification31> value) {
+			obj.setPreviousMovementPreliminaryAdviceIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "NtfctnId")
@@ -439,7 +444,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmNotificationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<DocumentIdentification31>> mmNotificationIdentification = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<DocumentIdentification31>>() {
 		{
 			xmlTag = "NtfctnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -452,12 +457,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> DocumentIdentification31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getNotificationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification31> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getNotificationIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<DocumentIdentification31> value) {
+			obj.setNotificationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MvmntConfId")
@@ -501,7 +508,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * mmMovementConfirmationIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMovementConfirmationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<DocumentIdentification31>> mmMovementConfirmationIdentification = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<DocumentIdentification31>>() {
 		{
 			xmlTag = "MvmntConfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -514,12 +521,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> DocumentIdentification31.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getMovementConfirmationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification31> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getMovementConfirmationIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<DocumentIdentification31> value) {
+			obj.setMovementConfirmationIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstrId")
@@ -560,7 +569,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmInstructionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstructionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<DocumentIdentification9>> mmInstructionIdentification = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<DocumentIdentification9>>() {
 		{
 			xmlTag = "InstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -573,12 +582,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> DocumentIdentification9.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getInstructionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DocumentIdentification9> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getInstructionIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<DocumentIdentification9> value) {
+			obj.setInstructionIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrDocId")
@@ -622,7 +633,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * }</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherDocumentIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<DocumentIdentification32>> mmOtherDocumentIdentification = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<DocumentIdentification32>>() {
 		{
 			xmlTag = "OthrDocId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -634,12 +645,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> DocumentIdentification32.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getOtherDocumentIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<DocumentIdentification32> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getOtherDocumentIdentification();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, List<DocumentIdentification32> value) {
+			obj.setOtherDocumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "EvtsLkg")
@@ -682,7 +695,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmEventsLinkage}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmEventsLinkage = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<CorporateActionEventReference3>> mmEventsLinkage = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<CorporateActionEventReference3>>() {
 		{
 			xmlTag = "EvtsLkg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -694,12 +707,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> CorporateActionEventReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getEventsLinkage", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CorporateActionEventReference3> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getEventsLinkage();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, List<CorporateActionEventReference3> value) {
+			obj.setEventsLinkage(value);
 		}
 	};
 	@XmlElement(name = "RvslRsn")
@@ -740,7 +755,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmReversalReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmReversalReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<CorporateActionReversalReason3>> mmReversalReason = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<CorporateActionReversalReason3>>() {
 		{
 			xmlTag = "RvslRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -753,12 +768,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> CorporateActionReversalReason3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getReversalReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CorporateActionReversalReason3> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getReversalReason();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<CorporateActionReversalReason3> value) {
+			obj.setReversalReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnGnlInf", required = true)
@@ -801,7 +818,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * mmCorporateActionGeneralInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionGeneralInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, CorporateActionGeneralInformation106> mmCorporateActionGeneralInformation = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, CorporateActionGeneralInformation106>() {
 		{
 			xmlTag = "CorpActnGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -814,12 +831,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> CorporateActionGeneralInformation106.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getCorporateActionGeneralInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CorporateActionGeneralInformation106 getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getCorporateActionGeneralInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, CorporateActionGeneralInformation106 value) {
+			obj.setCorporateActionGeneralInformation(value);
 		}
 	};
 	@XmlElement(name = "AcctDtls", required = true)
@@ -862,7 +881,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmAccountDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, AccountIdentification32Choice> mmAccountDetails = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, AccountIdentification32Choice>() {
 		{
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -875,12 +894,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> AccountIdentification32Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getAccountDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AccountIdentification32Choice getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getAccountDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, AccountIdentification32Choice value) {
+			obj.setAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "CorpActnDtls")
@@ -921,7 +942,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmCorporateActionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<CorporateAction32>> mmCorporateActionDetails = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<CorporateAction32>>() {
 		{
 			xmlTag = "CorpActnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -934,12 +955,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> CorporateAction32.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getCorporateActionDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CorporateAction32> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getCorporateActionDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<CorporateAction32> value) {
+			obj.setCorporateActionDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CorpActnMvmntDtls")
@@ -982,7 +1005,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * mmCorporateActionMovementDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCorporateActionMovementDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<CorporateActionOption129>> mmCorporateActionMovementDetails = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<CorporateActionOption129>>() {
 		{
 			xmlTag = "CorpActnMvmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -994,12 +1017,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> CorporateActionOption129.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getCorporateActionMovementDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<CorporateActionOption129> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getCorporateActionMovementDetails();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, List<CorporateActionOption129> value) {
+			obj.setCorporateActionMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -1040,7 +1065,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmAdditionalInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAdditionalInformation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<CorporateActionNarrative28>> mmAdditionalInformation = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<CorporateActionNarrative28>>() {
 		{
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1053,12 +1078,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> CorporateActionNarrative28.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getAdditionalInformation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<CorporateActionNarrative28> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<CorporateActionNarrative28> value) {
+			obj.setAdditionalInformation(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrAgt")
@@ -1101,7 +1128,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmIssuerAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmIssuerAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>> mmIssuerAgent = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "IssrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1113,12 +1140,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getIssuerAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PartyIdentification71Choice> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getIssuerAgent();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, List<PartyIdentification71Choice> value) {
+			obj.setIssuerAgent(value);
 		}
 	};
 	@XmlElement(name = "PngAgt")
@@ -1161,7 +1190,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmPayingAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPayingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>> mmPayingAgent = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "PngAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1173,12 +1202,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getPayingAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PartyIdentification71Choice> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getPayingAgent();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, List<PartyIdentification71Choice> value) {
+			obj.setPayingAgent(value);
 		}
 	};
 	@XmlElement(name = "SubPngAgt")
@@ -1221,7 +1252,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmSubPayingAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubPayingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>> mmSubPayingAgent = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "SubPngAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1233,12 +1264,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getSubPayingAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PartyIdentification71Choice> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getSubPayingAgent();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, List<PartyIdentification71Choice> value) {
+			obj.setSubPayingAgent(value);
 		}
 	};
 	@XmlElement(name = "Regar")
@@ -1280,7 +1313,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmRegistrar}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmRegistrar = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<PartyIdentification71Choice>> mmRegistrar = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "Regar";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1293,12 +1326,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getRegistrar", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getRegistrar();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setRegistrar(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RsellngAgt")
@@ -1341,7 +1376,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmResellingAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmResellingAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>> mmResellingAgent = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "RsellngAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1353,12 +1388,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getResellingAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PartyIdentification71Choice> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getResellingAgent();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, List<PartyIdentification71Choice> value) {
+			obj.setResellingAgent(value);
 		}
 	};
 	@XmlElement(name = "PhysSctiesAgt")
@@ -1401,7 +1438,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmPhysicalSecuritiesAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPhysicalSecuritiesAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<PartyIdentification71Choice>> mmPhysicalSecuritiesAgent = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "PhysSctiesAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1414,12 +1451,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getPhysicalSecuritiesAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getPhysicalSecuritiesAgent();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setPhysicalSecuritiesAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DrpAgt")
@@ -1462,7 +1501,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmDropAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmDropAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<PartyIdentification71Choice>> mmDropAgent = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "DrpAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1475,12 +1514,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getDropAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getDropAgent();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setDropAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SlctnAgt")
@@ -1523,7 +1564,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmSolicitationAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSolicitationAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>> mmSolicitationAgent = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "SlctnAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1535,12 +1576,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getSolicitationAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PartyIdentification71Choice> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getSolicitationAgent();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, List<PartyIdentification71Choice> value) {
+			obj.setSolicitationAgent(value);
 		}
 	};
 	@XmlElement(name = "InfAgt")
@@ -1583,7 +1626,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmInformationAgent}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInformationAgent = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<PartyIdentification71Choice>> mmInformationAgent = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, Optional<PartyIdentification71Choice>>() {
 		{
 			xmlTag = "InfAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1596,12 +1639,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getInformationAgent", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification71Choice> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getInformationAgent();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, Optional<PartyIdentification71Choice> value) {
+			obj.setInformationAgent(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SplmtryData")
@@ -1644,7 +1689,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 	 * CorporateActionMovementPreliminaryAdviceV07.mmSupplementaryData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSupplementaryData = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<SupplementaryData1>> mmSupplementaryData = new MMMessageBuildingBlock<CorporateActionMovementPreliminaryAdviceV08, List<SupplementaryData1>>() {
 		{
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1656,12 +1701,14 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CorporateActionMovementPreliminaryAdviceV08.class.getMethod("getSupplementaryData", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SupplementaryData1> getValue(CorporateActionMovementPreliminaryAdviceV08 obj) {
+			return obj.getSupplementaryData();
+		}
+
+		@Override
+		public void setValue(CorporateActionMovementPreliminaryAdviceV08 obj, List<SupplementaryData1> value) {
+			obj.setSupplementaryData(value);
 		}
 	};
 
@@ -1679,7 +1726,7 @@ public class CorporateActionMovementPreliminaryAdviceV08 {
 				definition = "Scope\r\nAn account servicer sends the CorporateActionMovementPreliminaryAdvice message to an account owner or its designated agent to pre-advise upcoming posting or reversal of securities and/or cash postings.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV09.mmObject());
 				previousVersion_lazy = () -> CorporateActionMovementPreliminaryAdviceV07.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOLatestversion.mmObject(), CorporateActionsMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOPreviousversion.mmObject(), CorporateActionsMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnMvmntPrlimryAdvc";
 				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();

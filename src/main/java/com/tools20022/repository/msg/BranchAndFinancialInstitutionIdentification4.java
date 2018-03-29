@@ -24,6 +24,8 @@ import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.area.supl.InformationResponseSD1V01;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.BranchData2;
+import com.tools20022.repository.msg.FinancialInstitutionIdentification7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -181,7 +183,7 @@ public class BranchAndFinancialInstitutionIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstitutionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BranchAndFinancialInstitutionIdentification4, FinancialInstitutionIdentification7> mmFinancialInstitutionIdentification = new MMMessageAssociationEnd<BranchAndFinancialInstitutionIdentification4, FinancialInstitutionIdentification7>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
@@ -193,7 +195,17 @@ public class BranchAndFinancialInstitutionIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification7.mmObject();
+			type_lazy = () -> FinancialInstitutionIdentification7.mmObject();
+		}
+
+		@Override
+		public FinancialInstitutionIdentification7 getValue(BranchAndFinancialInstitutionIdentification4 obj) {
+			return obj.getFinancialInstitutionIdentification();
+		}
+
+		@Override
+		public void setValue(BranchAndFinancialInstitutionIdentification4 obj, FinancialInstitutionIdentification7 value) {
+			obj.setFinancialInstitutionIdentification(value);
 		}
 	};
 	@XmlElement(name = "BrnchId")
@@ -231,7 +243,7 @@ public class BranchAndFinancialInstitutionIdentification4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBranchIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BranchAndFinancialInstitutionIdentification4, Optional<BranchData2>> mmBranchIdentification = new MMMessageAssociationEnd<BranchAndFinancialInstitutionIdentification4, Optional<BranchData2>>() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
@@ -243,7 +255,17 @@ public class BranchAndFinancialInstitutionIdentification4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BranchData2.mmObject();
+			type_lazy = () -> BranchData2.mmObject();
+		}
+
+		@Override
+		public Optional<BranchData2> getValue(BranchAndFinancialInstitutionIdentification4 obj) {
+			return obj.getBranchIdentification();
+		}
+
+		@Override
+		public void setValue(BranchAndFinancialInstitutionIdentification4 obj, Optional<BranchData2> value) {
+			obj.setBranchIdentification(value.orElse(null));
 		}
 	};
 
@@ -274,7 +296,7 @@ public class BranchAndFinancialInstitutionIdentification4 {
 		return financialInstitutionIdentification;
 	}
 
-	public BranchAndFinancialInstitutionIdentification4 setFinancialInstitutionIdentification(com.tools20022.repository.msg.FinancialInstitutionIdentification7 financialInstitutionIdentification) {
+	public BranchAndFinancialInstitutionIdentification4 setFinancialInstitutionIdentification(FinancialInstitutionIdentification7 financialInstitutionIdentification) {
 		this.financialInstitutionIdentification = Objects.requireNonNull(financialInstitutionIdentification);
 		return this;
 	}
@@ -283,7 +305,7 @@ public class BranchAndFinancialInstitutionIdentification4 {
 		return branchIdentification == null ? Optional.empty() : Optional.of(branchIdentification);
 	}
 
-	public BranchAndFinancialInstitutionIdentification4 setBranchIdentification(com.tools20022.repository.msg.BranchData2 branchIdentification) {
+	public BranchAndFinancialInstitutionIdentification4 setBranchIdentification(BranchData2 branchIdentification) {
 		this.branchIdentification = branchIdentification;
 		return this;
 	}

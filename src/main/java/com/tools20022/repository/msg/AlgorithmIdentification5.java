@@ -115,7 +115,7 @@ public class AlgorithmIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAlgorithm = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AlgorithmIdentification5, Algorithm5Code> mmAlgorithm = new MMMessageAttribute<AlgorithmIdentification5, Algorithm5Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification5.mmObject();
 			isDerived = false;
@@ -127,6 +127,16 @@ public class AlgorithmIdentification5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Algorithm5Code.mmObject();
+		}
+
+		@Override
+		public Algorithm5Code getValue(AlgorithmIdentification5 obj) {
+			return obj.getAlgorithm();
+		}
+
+		@Override
+		public void setValue(AlgorithmIdentification5 obj, Algorithm5Code value) {
+			obj.setAlgorithm(value);
 		}
 	};
 

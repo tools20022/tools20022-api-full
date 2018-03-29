@@ -111,7 +111,7 @@ public class ClosurePendingStatusReason1Choice {
 	 * ClosedStatusReason1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ClosurePendingStatusReason1Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<ClosurePendingStatusReason1Choice, NoReasonCode>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosurePendingStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class ClosurePendingStatusReason1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(ClosurePendingStatusReason1Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(ClosurePendingStatusReason1Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -159,7 +169,7 @@ public class ClosurePendingStatusReason1Choice {
 	 * ClosedStatusReason1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ClosurePendingStatusReason1Choice, List<ClosurePendingStatusReason1>> mmReason = new MMMessageAssociationEnd<ClosurePendingStatusReason1Choice, List<ClosurePendingStatusReason1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.ClosurePendingStatusReason1Choice.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class ClosurePendingStatusReason1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ClosurePendingStatusReason1.mmObject();
+		}
+
+		@Override
+		public List<ClosurePendingStatusReason1> getValue(ClosurePendingStatusReason1Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(ClosurePendingStatusReason1Choice obj, List<ClosurePendingStatusReason1> value) {
+			obj.setReason(value);
 		}
 	};
 

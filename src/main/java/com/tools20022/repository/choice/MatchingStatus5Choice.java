@@ -112,7 +112,7 @@ public class MatchingStatus5Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MatchingStatus5Choice, MatchingStatus1Code> mmCode = new MMMessageAttribute<MatchingStatus5Choice, MatchingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus5Choice.mmObject();
@@ -125,6 +125,16 @@ public class MatchingStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MatchingStatus1Code.mmObject();
+		}
+
+		@Override
+		public MatchingStatus1Code getValue(MatchingStatus5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(MatchingStatus5Choice obj, MatchingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -164,7 +174,7 @@ public class MatchingStatus5Choice {
 	 * definition} = "Provides the matching status of the instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus5Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<MatchingStatus5Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus5Choice.mmObject();
@@ -178,6 +188,16 @@ public class MatchingStatus5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(MatchingStatus5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus5Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContactIdentification1;
+import com.tools20022.repository.msg.PartyIdentificationSD3;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -113,7 +115,7 @@ public class ContactInformation3 {
 	 * "Identifies a contact person by a name, a given name and an address."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContactInformation3, Optional<ContactIdentification1>> mmContactPerson = new MMMessageAssociationEnd<ContactInformation3, Optional<ContactIdentification1>>() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactInformation3.mmObject();
@@ -126,7 +128,17 @@ public class ContactInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
+			type_lazy = () -> ContactIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<ContactIdentification1> getValue(ContactInformation3 obj) {
+			return obj.getContactPerson();
+		}
+
+		@Override
+		public void setValue(ContactInformation3 obj, Optional<ContactIdentification1> value) {
+			obj.setContactPerson(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "EmplngPty")
@@ -167,7 +179,7 @@ public class ContactInformation3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ContactInformation3, Optional<PartyIdentificationSD3>> mmEmployingParty = new MMMessageAssociationEnd<ContactInformation3, Optional<PartyIdentificationSD3>>() {
 		{
 			businessElementTrace_lazy = () -> Person.mmEmployingParty;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ContactInformation3.mmObject();
@@ -180,7 +192,17 @@ public class ContactInformation3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD3.mmObject();
+			type_lazy = () -> PartyIdentificationSD3.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentificationSD3> getValue(ContactInformation3 obj) {
+			return obj.getEmployingParty();
+		}
+
+		@Override
+		public void setValue(ContactInformation3 obj, Optional<PartyIdentificationSD3> value) {
+			obj.setEmployingParty(value.orElse(null));
 		}
 	};
 
@@ -209,7 +231,7 @@ public class ContactInformation3 {
 		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public ContactInformation3 setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
+	public ContactInformation3 setContactPerson(ContactIdentification1 contactPerson) {
 		this.contactPerson = contactPerson;
 		return this;
 	}
@@ -218,7 +240,7 @@ public class ContactInformation3 {
 		return employingParty == null ? Optional.empty() : Optional.of(employingParty);
 	}
 
-	public ContactInformation3 setEmployingParty(com.tools20022.repository.msg.PartyIdentificationSD3 employingParty) {
+	public ContactInformation3 setEmployingParty(PartyIdentificationSD3 employingParty) {
 		this.employingParty = employingParty;
 		return this;
 	}

@@ -28,6 +28,7 @@ import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -201,7 +202,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmReferences}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferences = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<References35Choice>> mmReferences = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<References35Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -214,9 +215,19 @@ public class SettlementInstructionQueryCriteria2 {
 			minOccurs = 0;
 			complexType_lazy = () -> References35Choice.mmObject();
 		}
+
+		@Override
+		public List<References35Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getReferences();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<References35Choice> value) {
+			obj.setReferences(value);
+		}
 	};
 	@XmlElement(name = "Sts")
-	protected List<com.tools20022.repository.msg.SettlementInstructionQueryStatus2> status;
+	protected List<SettlementInstructionQueryStatus2> status;
 	/**
 	 * 
 	 <p>
@@ -250,7 +261,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmStatus}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<SettlementInstructionQueryStatus2>> mmStatus = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<SettlementInstructionQueryStatus2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -260,7 +271,17 @@ public class SettlementInstructionQueryCriteria2 {
 			definition = "Provides the status of settlement of a transaction.";
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmStatus;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryStatus2.mmObject();
+			complexType_lazy = () -> SettlementInstructionQueryStatus2.mmObject();
+		}
+
+		@Override
+		public List<SettlementInstructionQueryStatus2> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<SettlementInstructionQueryStatus2> value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "SctiesMvmntTp")
@@ -304,7 +325,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSecuritiesMovementType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<ReceiveDelivery1Code>> mmSecuritiesMovementType = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<ReceiveDelivery1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -316,6 +337,16 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmSecuritiesMovementType;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
+		}
+
+		@Override
+		public List<ReceiveDelivery1Code> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSecuritiesMovementType();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<ReceiveDelivery1Code> value) {
+			obj.setSecuritiesMovementType(value);
 		}
 	};
 	@XmlElement(name = "Pmt")
@@ -359,7 +390,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmPayment}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<DeliveryReceiptType2Code>> mmPayment = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<DeliveryReceiptType2Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -371,6 +402,16 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmPayment;
 			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
+		}
+
+		@Override
+		public List<DeliveryReceiptType2Code> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getPayment();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<DeliveryReceiptType2Code> value) {
+			obj.setPayment(value);
 		}
 	};
 	@XmlElement(name = "SctiesTxTp")
@@ -410,7 +451,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSecuritiesTransactionType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesTransactionType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SecuritiesTransactionType18Choice>> mmSecuritiesTransactionType = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SecuritiesTransactionType18Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -424,9 +465,19 @@ public class SettlementInstructionQueryCriteria2 {
 			isComposite = true;
 			type_lazy = () -> SecuritiesTransactionType18Choice.mmObject();
 		}
+
+		@Override
+		public List<SecuritiesTransactionType18Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSecuritiesTransactionType();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<SecuritiesTransactionType18Choice> value) {
+			obj.setSecuritiesTransactionType(value);
+		}
 	};
 	@XmlElement(name = "FinInstrmId")
-	protected List<com.tools20022.repository.msg.SecurityIdentification19> financialInstrumentIdentification;
+	protected List<SecurityIdentification19> financialInstrumentIdentification;
 	/**
 	 * 
 	 <p>
@@ -464,7 +515,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SecurityIdentification19>> mmFinancialInstrumentIdentification = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SecurityIdentification19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -476,7 +527,17 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmFinancialInstrumentIdentification;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
+			type_lazy = () -> SecurityIdentification19.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification19> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getFinancialInstrumentIdentification();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<SecurityIdentification19> value) {
+			obj.setFinancialInstrumentIdentification(value);
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -519,7 +580,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmPriority}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<PriorityNumeric4Choice>> mmPriority = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<PriorityNumeric4Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -532,9 +593,19 @@ public class SettlementInstructionQueryCriteria2 {
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityNumeric4Choice.mmObject();
 		}
+
+		@Override
+		public List<PriorityNumeric4Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<PriorityNumeric4Choice> value) {
+			obj.setPriority(value);
+		}
 	};
 	@XmlElement(name = "SfkpgAcct")
-	protected List<com.tools20022.repository.msg.SecuritiesAccount19> safekeepingAccount;
+	protected List<SecuritiesAccount19> safekeepingAccount;
 	/**
 	 * 
 	 <p>
@@ -568,7 +639,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<SecuritiesAccount19>> mmSafekeepingAccount = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<SecuritiesAccount19>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -578,7 +649,17 @@ public class SettlementInstructionQueryCriteria2 {
 			definition = "Account where financial instruments are maintained.";
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmSafekeepingAccount;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
+			complexType_lazy = () -> SecuritiesAccount19.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesAccount19> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<SecuritiesAccount19> value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "CshAcct")
@@ -616,7 +697,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmCashAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<AccountIdentificationSearchCriteria2Choice>> mmCashAccount = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<AccountIdentificationSearchCriteria2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -627,6 +708,16 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmCashAccount;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
+		}
+
+		@Override
+		public List<AccountIdentificationSearchCriteria2Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getCashAccount();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<AccountIdentificationSearchCriteria2Choice> value) {
+			obj.setCashAccount(value);
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -667,7 +758,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmTradeDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<DateAndDateTimeSearch2Choice>> mmTradeDate = new MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<DateAndDateTimeSearch2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -680,6 +771,16 @@ public class SettlementInstructionQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeSearch2Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, Optional<DateAndDateTimeSearch2Choice> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmQty")
@@ -720,7 +821,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSettlementQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<QuantitySearch1Choice>> mmSettlementQuantity = new MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<QuantitySearch1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -733,6 +834,16 @@ public class SettlementInstructionQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> QuantitySearch1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<QuantitySearch1Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSettlementQuantity();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, Optional<QuantitySearch1Choice> value) {
+			obj.setSettlementQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttldQty")
@@ -773,7 +884,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSettledQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettledQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<QuantitySearch1Choice>> mmSettledQuantity = new MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<QuantitySearch1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -786,6 +897,16 @@ public class SettlementInstructionQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> QuantitySearch1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<QuantitySearch1Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSettledQuantity();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, Optional<QuantitySearch1Choice> value) {
+			obj.setSettledQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmAmt")
@@ -827,7 +948,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSettlementAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, Optional<ActiveCurrencyAndAmountRange2>> mmSettlementAmount = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, Optional<ActiveCurrencyAndAmountRange2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -840,7 +961,17 @@ public class SettlementInstructionQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ActiveCurrencyAndAmountRange2.mmObject();
+			type_lazy = () -> ActiveCurrencyAndAmountRange2.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmountRange2> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, Optional<ActiveCurrencyAndAmountRange2> value) {
+			obj.setSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttldAmt")
@@ -881,7 +1012,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSettledAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettledAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, Optional<ActiveCurrencyAndAmountRange2>> mmSettledAmount = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, Optional<ActiveCurrencyAndAmountRange2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -894,7 +1025,17 @@ public class SettlementInstructionQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ActiveCurrencyAndAmountRange2.mmObject();
+			type_lazy = () -> ActiveCurrencyAndAmountRange2.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmountRange2> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSettledAmount();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, Optional<ActiveCurrencyAndAmountRange2> value) {
+			obj.setSettledAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntnddSttlmDt")
@@ -937,7 +1078,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmIntendedSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<DateAndDateTimeSearch2Choice>> mmIntendedSettlementDate = new MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<DateAndDateTimeSearch2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -950,6 +1091,16 @@ public class SettlementInstructionQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeSearch2Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getIntendedSettlementDate();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, Optional<DateAndDateTimeSearch2Choice> value) {
+			obj.setIntendedSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FctvSttlmDt")
@@ -992,7 +1143,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmEffectiveSettlementDate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<DateAndDateTimeSearch2Choice>> mmEffectiveSettlementDate = new MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<DateAndDateTimeSearch2Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1005,6 +1156,16 @@ public class SettlementInstructionQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeSearch2Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getEffectiveSettlementDate();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, Optional<DateAndDateTimeSearch2Choice> value) {
+			obj.setEffectiveSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmCcy")
@@ -1042,7 +1203,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSettlementCurrency}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<ActiveOrHistoricCurrencyCode>> mmSettlementCurrency = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<ActiveOrHistoricCurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1054,9 +1215,19 @@ public class SettlementInstructionQueryCriteria2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
+
+		@Override
+		public List<ActiveOrHistoricCurrencyCode> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<ActiveOrHistoricCurrencyCode> value) {
+			obj.setSettlementCurrency(value);
+		}
 	};
 	@XmlElement(name = "SfkpgAcctOwnr")
-	protected List<com.tools20022.repository.msg.PartyIdentification91> safekeepingAccountOwner;
+	protected List<PartyIdentification91> safekeepingAccountOwner;
 	/**
 	 * 
 	 <p>
@@ -1088,7 +1259,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSafekeepingAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSafekeepingAccountOwner = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<PartyIdentification91>> mmSafekeepingAccountOwner = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<PartyIdentification91>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1099,11 +1270,21 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmSafekeepingAccountOwner;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification91.mmObject();
+			type_lazy = () -> PartyIdentification91.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification91> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSafekeepingAccountOwner();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<PartyIdentification91> value) {
+			obj.setSafekeepingAccountOwner(value);
 		}
 	};
 	@XmlElement(name = "MsgOrgtr")
-	protected List<com.tools20022.repository.msg.SystemPartyIdentification6> messageOriginator;
+	protected List<SystemPartyIdentification6> messageOriginator;
 	/**
 	 * 
 	 <p>
@@ -1137,7 +1318,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmMessageOriginator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SystemPartyIdentification6>> mmMessageOriginator = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SystemPartyIdentification6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1148,11 +1329,21 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmMessageOriginator;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification6.mmObject();
+			type_lazy = () -> SystemPartyIdentification6.mmObject();
+		}
+
+		@Override
+		public List<SystemPartyIdentification6> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getMessageOriginator();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<SystemPartyIdentification6> value) {
+			obj.setMessageOriginator(value);
 		}
 	};
 	@XmlElement(name = "CntrptSttlmPties")
-	protected List<com.tools20022.repository.msg.SettlementParties40> counterpartSettlementParties;
+	protected List<SettlementParties40> counterpartSettlementParties;
 	/**
 	 * 
 	 <p>
@@ -1184,7 +1375,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmCounterpartSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCounterpartSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SettlementParties40>> mmCounterpartSettlementParties = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SettlementParties40>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1195,11 +1386,21 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmCounterpartSettlementParties;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties40.mmObject();
+			type_lazy = () -> SettlementParties40.mmObject();
+		}
+
+		@Override
+		public List<SettlementParties40> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getCounterpartSettlementParties();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<SettlementParties40> value) {
+			obj.setCounterpartSettlementParties(value);
 		}
 	};
 	@XmlElement(name = "DlvrgSttlmPties")
-	protected List<com.tools20022.repository.msg.SettlementParties40> deliveringSettlementParties;
+	protected List<SettlementParties40> deliveringSettlementParties;
 	/**
 	 * 
 	 <p>
@@ -1234,7 +1435,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmDeliveringSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SettlementParties40>> mmDeliveringSettlementParties = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SettlementParties40>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1246,11 +1447,21 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmDeliveringSettlementParties;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties40.mmObject();
+			type_lazy = () -> SettlementParties40.mmObject();
+		}
+
+		@Override
+		public List<SettlementParties40> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getDeliveringSettlementParties();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<SettlementParties40> value) {
+			obj.setDeliveringSettlementParties(value);
 		}
 	};
 	@XmlElement(name = "RcvgSttlmPties")
-	protected List<com.tools20022.repository.msg.SettlementParties40> receivingSettlementParties;
+	protected List<SettlementParties40> receivingSettlementParties;
 	/**
 	 * 
 	 <p>
@@ -1285,7 +1496,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SettlementParties40>> mmReceivingSettlementParties = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SettlementParties40>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1297,7 +1508,17 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmReceivingSettlementParties;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SettlementParties40.mmObject();
+			type_lazy = () -> SettlementParties40.mmObject();
+		}
+
+		@Override
+		public List<SettlementParties40> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getReceivingSettlementParties();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<SettlementParties40> value) {
+			obj.setReceivingSettlementParties(value);
 		}
 	};
 	@XmlElement(name = "TradTxCond")
@@ -1337,7 +1558,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmTradeTransactionCondition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeTransactionCondition = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<TradeTransactionCondition1Code>> mmTradeTransactionCondition = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<TradeTransactionCondition1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1348,6 +1569,16 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmTradeTransactionCondition;
 			minOccurs = 0;
 			simpleType_lazy = () -> TradeTransactionCondition1Code.mmObject();
+		}
+
+		@Override
+		public List<TradeTransactionCondition1Code> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getTradeTransactionCondition();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<TradeTransactionCondition1Code> value) {
+			obj.setTradeTransactionCondition(value);
 		}
 	};
 	@XmlElement(name = "SctiesTxCond")
@@ -1386,7 +1617,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmSecuritiesTransactionCondition}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesTransactionCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SettlementTransactionCondition16Choice>> mmSecuritiesTransactionCondition = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<SettlementTransactionCondition16Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1398,6 +1629,16 @@ public class SettlementInstructionQueryCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementTransactionCondition16Choice.mmObject();
+		}
+
+		@Override
+		public List<SettlementTransactionCondition16Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getSecuritiesTransactionCondition();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<SettlementTransactionCondition16Choice> value) {
+			obj.setSecuritiesTransactionCondition(value);
 		}
 	};
 	@XmlElement(name = "PrtlSttlmInd")
@@ -1440,7 +1681,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmPartialSettlementIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<SettlementTransactionCondition5Code>> mmPartialSettlementIndicator = new MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<SettlementTransactionCondition5Code>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
@@ -1453,6 +1694,16 @@ public class SettlementInstructionQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SettlementTransactionCondition5Code.mmObject();
+		}
+
+		@Override
+		public Optional<SettlementTransactionCondition5Code> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getPartialSettlementIndicator();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, Optional<SettlementTransactionCondition5Code> value) {
+			obj.setPartialSettlementIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CondlSctiesDlvry")
@@ -1492,7 +1743,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmConditionalSecuritiesDelivery}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConditionalSecuritiesDelivery = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<YesNoIndicator>> mmConditionalSecuritiesDelivery = new MMMessageAttribute<SettlementInstructionQueryCriteria2, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1504,6 +1755,16 @@ public class SettlementInstructionQueryCriteria2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getConditionalSecuritiesDelivery();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, Optional<YesNoIndicator> value) {
+			obj.setConditionalSecuritiesDelivery(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtryOfIsse")
@@ -1545,7 +1806,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmCountryOfIssue}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<CountryCode>> mmCountryOfIssue = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<CountryCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1557,6 +1818,16 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmCountryOfIssue;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
+		}
+
+		@Override
+		public List<CountryCode> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getCountryOfIssue();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<CountryCode> value) {
+			obj.setCountryOfIssue(value);
 		}
 	};
 	@XmlElement(name = "IssrCSD")
@@ -1595,7 +1866,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmIssuerCSD}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<PartyIdentification71Choice>> mmIssuerCSD = new MMMessageAssociationEnd<SettlementInstructionQueryCriteria2, List<PartyIdentification71Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1607,6 +1878,16 @@ public class SettlementInstructionQueryCriteria2 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentification71Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getIssuerCSD();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<PartyIdentification71Choice> value) {
+			obj.setIssuerCSD(value);
 		}
 	};
 	@XmlElement(name = "HldInd")
@@ -1645,7 +1926,7 @@ public class SettlementInstructionQueryCriteria2 {
 	 * SettlementInstructionQueryCriteria1.mmHoldIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SettlementInstructionQueryCriteria2, List<Registration10Choice>> mmHoldIndicator = new MMMessageAttribute<SettlementInstructionQueryCriteria2, List<Registration10Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryCriteria2.mmObject();
 			isDerived = false;
@@ -1656,6 +1937,16 @@ public class SettlementInstructionQueryCriteria2 {
 			previousVersion_lazy = () -> SettlementInstructionQueryCriteria1.mmHoldIndicator;
 			minOccurs = 0;
 			complexType_lazy = () -> Registration10Choice.mmObject();
+		}
+
+		@Override
+		public List<Registration10Choice> getValue(SettlementInstructionQueryCriteria2 obj) {
+			return obj.getHoldIndicator();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionQueryCriteria2 obj, List<Registration10Choice> value) {
+			obj.setHoldIndicator(value);
 		}
 	};
 
@@ -1701,7 +1992,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public SettlementInstructionQueryCriteria2 setStatus(List<com.tools20022.repository.msg.SettlementInstructionQueryStatus2> status) {
+	public SettlementInstructionQueryCriteria2 setStatus(List<SettlementInstructionQueryStatus2> status) {
 		this.status = Objects.requireNonNull(status);
 		return this;
 	}
@@ -1737,7 +2028,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return financialInstrumentIdentification == null ? financialInstrumentIdentification = new ArrayList<>() : financialInstrumentIdentification;
 	}
 
-	public SettlementInstructionQueryCriteria2 setFinancialInstrumentIdentification(List<com.tools20022.repository.msg.SecurityIdentification19> financialInstrumentIdentification) {
+	public SettlementInstructionQueryCriteria2 setFinancialInstrumentIdentification(List<SecurityIdentification19> financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
 		return this;
 	}
@@ -1755,7 +2046,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return safekeepingAccount == null ? safekeepingAccount = new ArrayList<>() : safekeepingAccount;
 	}
 
-	public SettlementInstructionQueryCriteria2 setSafekeepingAccount(List<com.tools20022.repository.msg.SecuritiesAccount19> safekeepingAccount) {
+	public SettlementInstructionQueryCriteria2 setSafekeepingAccount(List<SecuritiesAccount19> safekeepingAccount) {
 		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
 		return this;
 	}
@@ -1800,7 +2091,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return settlementAmount == null ? Optional.empty() : Optional.of(settlementAmount);
 	}
 
-	public SettlementInstructionQueryCriteria2 setSettlementAmount(com.tools20022.repository.msg.ActiveCurrencyAndAmountRange2 settlementAmount) {
+	public SettlementInstructionQueryCriteria2 setSettlementAmount(ActiveCurrencyAndAmountRange2 settlementAmount) {
 		this.settlementAmount = settlementAmount;
 		return this;
 	}
@@ -1809,7 +2100,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return settledAmount == null ? Optional.empty() : Optional.of(settledAmount);
 	}
 
-	public SettlementInstructionQueryCriteria2 setSettledAmount(com.tools20022.repository.msg.ActiveCurrencyAndAmountRange2 settledAmount) {
+	public SettlementInstructionQueryCriteria2 setSettledAmount(ActiveCurrencyAndAmountRange2 settledAmount) {
 		this.settledAmount = settledAmount;
 		return this;
 	}
@@ -1845,7 +2136,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return safekeepingAccountOwner == null ? safekeepingAccountOwner = new ArrayList<>() : safekeepingAccountOwner;
 	}
 
-	public SettlementInstructionQueryCriteria2 setSafekeepingAccountOwner(List<com.tools20022.repository.msg.PartyIdentification91> safekeepingAccountOwner) {
+	public SettlementInstructionQueryCriteria2 setSafekeepingAccountOwner(List<PartyIdentification91> safekeepingAccountOwner) {
 		this.safekeepingAccountOwner = Objects.requireNonNull(safekeepingAccountOwner);
 		return this;
 	}
@@ -1854,7 +2145,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return messageOriginator == null ? messageOriginator = new ArrayList<>() : messageOriginator;
 	}
 
-	public SettlementInstructionQueryCriteria2 setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification6> messageOriginator) {
+	public SettlementInstructionQueryCriteria2 setMessageOriginator(List<SystemPartyIdentification6> messageOriginator) {
 		this.messageOriginator = Objects.requireNonNull(messageOriginator);
 		return this;
 	}
@@ -1863,7 +2154,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return counterpartSettlementParties == null ? counterpartSettlementParties = new ArrayList<>() : counterpartSettlementParties;
 	}
 
-	public SettlementInstructionQueryCriteria2 setCounterpartSettlementParties(List<com.tools20022.repository.msg.SettlementParties40> counterpartSettlementParties) {
+	public SettlementInstructionQueryCriteria2 setCounterpartSettlementParties(List<SettlementParties40> counterpartSettlementParties) {
 		this.counterpartSettlementParties = Objects.requireNonNull(counterpartSettlementParties);
 		return this;
 	}
@@ -1872,7 +2163,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return deliveringSettlementParties == null ? deliveringSettlementParties = new ArrayList<>() : deliveringSettlementParties;
 	}
 
-	public SettlementInstructionQueryCriteria2 setDeliveringSettlementParties(List<com.tools20022.repository.msg.SettlementParties40> deliveringSettlementParties) {
+	public SettlementInstructionQueryCriteria2 setDeliveringSettlementParties(List<SettlementParties40> deliveringSettlementParties) {
 		this.deliveringSettlementParties = Objects.requireNonNull(deliveringSettlementParties);
 		return this;
 	}
@@ -1881,7 +2172,7 @@ public class SettlementInstructionQueryCriteria2 {
 		return receivingSettlementParties == null ? receivingSettlementParties = new ArrayList<>() : receivingSettlementParties;
 	}
 
-	public SettlementInstructionQueryCriteria2 setReceivingSettlementParties(List<com.tools20022.repository.msg.SettlementParties40> receivingSettlementParties) {
+	public SettlementInstructionQueryCriteria2 setReceivingSettlementParties(List<SettlementParties40> receivingSettlementParties) {
 		this.receivingSettlementParties = Objects.requireNonNull(receivingSettlementParties);
 		return this;
 	}

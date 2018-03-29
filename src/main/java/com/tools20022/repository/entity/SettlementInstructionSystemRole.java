@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.CashClearingSystem;
 import com.tools20022.repository.entity.CashSettlementInstructionPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
@@ -97,7 +98,7 @@ import java.util.Objects;
 public class SettlementInstructionSystemRole extends CashSettlementInstructionPartyRole {
 
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
-	protected List<com.tools20022.repository.entity.CashClearingSystem> system;
+	protected List<CashClearingSystem> system;
 	/**
 	 * 
 	 <p>
@@ -558,7 +559,7 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<SettlementInstructionSystemRole, List<CashClearingSystem>> mmSystem = new MMBusinessAssociationEnd<SettlementInstructionSystemRole, List<CashClearingSystem>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementDetails50.mmCashClearingSystem, SettlementDetails51.mmCashClearingSystem, SettlementDetails9.mmCashClearingSystem, SettlementDetails17.mmCashClearingSystem,
 					SettlementDetails30.mmCashClearingSystem, SettlementDetails32.mmCashClearingSystem, SettlementDetails60.mmCashClearingSystem, SettlementDetails64.mmCashClearingSystem, SettlementDetails3.mmCashClearingSystem,
@@ -595,9 +596,19 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 			name = "System";
 			definition = "Specifies the system which plays a role in the settlement of a payment.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmSystemRole;
+			opposite_lazy = () -> CashClearingSystem.mmSystemRole;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CashClearingSystem.mmObject();
+			type_lazy = () -> CashClearingSystem.mmObject();
+		}
+
+		@Override
+		public List<CashClearingSystem> getValue(SettlementInstructionSystemRole obj) {
+			return obj.getSystem();
+		}
+
+		@Override
+		public void setValue(SettlementInstructionSystemRole obj, List<CashClearingSystem> value) {
+			obj.setSystem(value);
 		}
 	};
 
@@ -608,7 +619,7 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementInstructionSystemRole";
 				definition = "Identification of a specific system or set of rules and/or processes to be applied at the settlement place.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashClearingSystem.mmSystemRole);
+				associationDomain_lazy = () -> Arrays.asList(CashClearingSystem.mmSystemRole);
 				derivationElement_lazy = () -> Arrays.asList(SettlementInstruction4.mmClearingSystem, SettlementInstruction1.mmClearingSystem, SettlementInstruction2.mmClearingSystem);
 				superType_lazy = () -> CashSettlementInstructionPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SettlementInstructionSystemRole.mmSystem);
@@ -626,7 +637,7 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 		return system == null ? system = new ArrayList<>() : system;
 	}
 
-	public SettlementInstructionSystemRole setSystem(List<com.tools20022.repository.entity.CashClearingSystem> system) {
+	public SettlementInstructionSystemRole setSystem(List<CashClearingSystem> system) {
 		this.system = Objects.requireNonNull(system);
 		return this;
 	}

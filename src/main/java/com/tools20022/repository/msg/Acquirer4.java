@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.AcquirerRole;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification53;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -115,7 +116,7 @@ public class Acquirer4 {
 	 * Acquirer2.mmIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Acquirer4, Optional<GenericIdentification53>> mmIdentification = new MMMessageAssociationEnd<Acquirer4, Optional<GenericIdentification53>>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer4.mmObject();
@@ -128,7 +129,17 @@ public class Acquirer4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
+			type_lazy = () -> GenericIdentification53.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification53> getValue(Acquirer4 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Acquirer4 obj, Optional<GenericIdentification53> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ParamsVrsn", required = true)
@@ -164,7 +175,7 @@ public class Acquirer4 {
 	 * Acquirer2.mmParametersVersion}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmParametersVersion = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Acquirer4, Max256Text> mmParametersVersion = new MMMessageAttribute<Acquirer4, Max256Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Acquirer4.mmObject();
 			isDerived = false;
@@ -176,6 +187,16 @@ public class Acquirer4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
+		}
+
+		@Override
+		public Max256Text getValue(Acquirer4 obj) {
+			return obj.getParametersVersion();
+		}
+
+		@Override
+		public void setValue(Acquirer4 obj, Max256Text value) {
+			obj.setParametersVersion(value);
 		}
 	};
 
@@ -198,7 +219,7 @@ public class Acquirer4 {
 		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public Acquirer4 setIdentification(com.tools20022.repository.msg.GenericIdentification53 identification) {
+	public Acquirer4 setIdentification(GenericIdentification53 identification) {
 		this.identification = identification;
 		return this;
 	}

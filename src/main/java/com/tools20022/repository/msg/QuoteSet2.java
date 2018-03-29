@@ -27,6 +27,10 @@ import com.tools20022.repository.entity.Quote;
 import com.tools20022.repository.entity.SecuritiesQuoteVariable;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.FinancialInstrumentAttributes1;
+import com.tools20022.repository.msg.FinancialInstrumentStipulations;
+import com.tools20022.repository.msg.QuoteEntry2;
+import com.tools20022.repository.msg.SecurityIdentification7;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -115,7 +119,7 @@ public class QuoteSet2 {
 	 * definition} = "Identification of a set of quotes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteSet2, Max35Text> mmIdentification = new MMMessageAttribute<QuoteSet2, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
 			isDerived = false;
@@ -126,6 +130,16 @@ public class QuoteSet2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(QuoteSet2 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(QuoteSet2 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "VldUntilDtTm")
@@ -161,7 +175,7 @@ public class QuoteSet2 {
 	 * definition} = "Expresses the validity of a set of quotes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuoteSet2, Optional<ISODateTime>> mmValidUntilDateTime = new MMMessageAttribute<QuoteSet2, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
@@ -174,9 +188,19 @@ public class QuoteSet2 {
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
+
+		@Override
+		public Optional<ISODateTime> getValue(QuoteSet2 obj) {
+			return obj.getValidUntilDateTime();
+		}
+
+		@Override
+		public void setValue(QuoteSet2 obj, Optional<ISODateTime> value) {
+			obj.setValidUntilDateTime(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "QtNtryDtls")
-	protected List<com.tools20022.repository.msg.QuoteEntry2> quoteEntryDetails;
+	protected List<QuoteEntry2> quoteEntryDetails;
 	/**
 	 * 
 	 <p>
@@ -207,7 +231,7 @@ public class QuoteSet2 {
 	 * definition} = "Details of the quote."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuoteEntryDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteSet2, List<QuoteEntry2>> mmQuoteEntryDetails = new MMMessageAssociationEnd<QuoteSet2, List<QuoteEntry2>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesQuoteVariable.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
@@ -218,11 +242,21 @@ public class QuoteSet2 {
 			definition = "Details of the quote.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.QuoteEntry2.mmObject();
+			type_lazy = () -> QuoteEntry2.mmObject();
+		}
+
+		@Override
+		public List<QuoteEntry2> getValue(QuoteSet2 obj) {
+			return obj.getQuoteEntryDetails();
+		}
+
+		@Override
+		public void setValue(QuoteSet2 obj, List<QuoteEntry2> value) {
+			obj.setQuoteEntryDetails(value);
 		}
 	};
 	@XmlElement(name = "UndrlygFinInstrm", required = true)
-	protected List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument;
+	protected List<SecurityIdentification7> underlyingFinancialInstrument;
 	/**
 	 * 
 	 <p>
@@ -255,7 +289,7 @@ public class QuoteSet2 {
 	 * "Provides details about the underlying financial instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteSet2, List<SecurityIdentification7>> mmUnderlyingFinancialInstrument = new MMMessageAssociationEnd<QuoteSet2, List<SecurityIdentification7>>() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
@@ -266,7 +300,17 @@ public class QuoteSet2 {
 			definition = "Provides details about the underlying financial instrument.";
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
+			type_lazy = () -> SecurityIdentification7.mmObject();
+		}
+
+		@Override
+		public List<SecurityIdentification7> getValue(QuoteSet2 obj) {
+			return obj.getUnderlyingFinancialInstrument();
+		}
+
+		@Override
+		public void setValue(QuoteSet2 obj, List<SecurityIdentification7> value) {
+			obj.setUnderlyingFinancialInstrument(value);
 		}
 	};
 	@XmlElement(name = "UndrlygFinInstrmAttrbts")
@@ -303,7 +347,7 @@ public class QuoteSet2 {
 	 * "Provides details about the underlying financial instrument attributes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteSet2, Optional<FinancialInstrumentAttributes1>> mmUnderlyingFinancialInstrumentAttributes = new MMMessageAssociationEnd<QuoteSet2, Optional<FinancialInstrumentAttributes1>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuotedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
@@ -315,7 +359,17 @@ public class QuoteSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes1.mmObject();
+			type_lazy = () -> FinancialInstrumentAttributes1.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentAttributes1> getValue(QuoteSet2 obj) {
+			return obj.getUnderlyingFinancialInstrumentAttributes();
+		}
+
+		@Override
+		public void setValue(QuoteSet2 obj, Optional<FinancialInstrumentAttributes1> value) {
+			obj.setUnderlyingFinancialInstrumentAttributes(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "UndrlygStiptns")
@@ -353,7 +407,7 @@ public class QuoteSet2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnderlyingStipulations = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuoteSet2, Optional<FinancialInstrumentStipulations>> mmUnderlyingStipulations = new MMMessageAssociationEnd<QuoteSet2, Optional<FinancialInstrumentStipulations>>() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuotedSecurity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteSet2.mmObject();
@@ -365,7 +419,17 @@ public class QuoteSet2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
+			type_lazy = () -> FinancialInstrumentStipulations.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentStipulations> getValue(QuoteSet2 obj) {
+			return obj.getUnderlyingStipulations();
+		}
+
+		@Override
+		public void setValue(QuoteSet2 obj, Optional<FinancialInstrumentStipulations> value) {
+			obj.setUnderlyingStipulations(value.orElse(null));
 		}
 	};
 
@@ -407,7 +471,7 @@ public class QuoteSet2 {
 		return quoteEntryDetails == null ? quoteEntryDetails = new ArrayList<>() : quoteEntryDetails;
 	}
 
-	public QuoteSet2 setQuoteEntryDetails(List<com.tools20022.repository.msg.QuoteEntry2> quoteEntryDetails) {
+	public QuoteSet2 setQuoteEntryDetails(List<QuoteEntry2> quoteEntryDetails) {
 		this.quoteEntryDetails = Objects.requireNonNull(quoteEntryDetails);
 		return this;
 	}
@@ -416,7 +480,7 @@ public class QuoteSet2 {
 		return underlyingFinancialInstrument == null ? underlyingFinancialInstrument = new ArrayList<>() : underlyingFinancialInstrument;
 	}
 
-	public QuoteSet2 setUnderlyingFinancialInstrument(List<com.tools20022.repository.msg.SecurityIdentification7> underlyingFinancialInstrument) {
+	public QuoteSet2 setUnderlyingFinancialInstrument(List<SecurityIdentification7> underlyingFinancialInstrument) {
 		this.underlyingFinancialInstrument = Objects.requireNonNull(underlyingFinancialInstrument);
 		return this;
 	}
@@ -425,7 +489,7 @@ public class QuoteSet2 {
 		return underlyingFinancialInstrumentAttributes == null ? Optional.empty() : Optional.of(underlyingFinancialInstrumentAttributes);
 	}
 
-	public QuoteSet2 setUnderlyingFinancialInstrumentAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes1 underlyingFinancialInstrumentAttributes) {
+	public QuoteSet2 setUnderlyingFinancialInstrumentAttributes(FinancialInstrumentAttributes1 underlyingFinancialInstrumentAttributes) {
 		this.underlyingFinancialInstrumentAttributes = underlyingFinancialInstrumentAttributes;
 		return this;
 	}
@@ -434,7 +498,7 @@ public class QuoteSet2 {
 		return underlyingStipulations == null ? Optional.empty() : Optional.of(underlyingStipulations);
 	}
 
-	public QuoteSet2 setUnderlyingStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations underlyingStipulations) {
+	public QuoteSet2 setUnderlyingStipulations(FinancialInstrumentStipulations underlyingStipulations) {
 		this.underlyingStipulations = underlyingStipulations;
 		return this;
 	}

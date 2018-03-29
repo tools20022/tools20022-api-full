@@ -143,7 +143,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumInitialSubscriptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<ActiveCurrencyAndAmount>> mmMinimumInitialSubscriptionAmount = new MMMessageAttribute<InvestmentRestrictions, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -155,6 +155,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(InvestmentRestrictions obj) {
+			return obj.getMinimumInitialSubscriptionAmount();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMinimumInitialSubscriptionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinInitlSbcptUnits")
@@ -193,7 +203,7 @@ public class InvestmentRestrictions {
 	 * "Minimum initial number of units/shares that must be purchased."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumInitialSubscriptionUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<Number>> mmMinimumInitialSubscriptionUnits = new MMMessageAttribute<InvestmentRestrictions, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionUnits;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -205,6 +215,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(InvestmentRestrictions obj) {
+			return obj.getMinimumInitialSubscriptionUnits();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<Number> value) {
+			obj.setMinimumInitialSubscriptionUnits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinSbsqntSbcptAmt")
@@ -245,7 +265,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumSubsequentSubscriptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<ActiveCurrencyAndAmount>> mmMinimumSubsequentSubscriptionAmount = new MMMessageAttribute<InvestmentRestrictions, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumSubscriptionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -257,6 +277,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(InvestmentRestrictions obj) {
+			return obj.getMinimumSubsequentSubscriptionAmount();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMinimumSubsequentSubscriptionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinSbsqntSbcptUnits")
@@ -295,7 +325,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumSubsequentSubscriptionUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<Number>> mmMinimumSubsequentSubscriptionUnits = new MMMessageAttribute<InvestmentRestrictions, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumSubscriptionUnits;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -307,6 +337,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(InvestmentRestrictions obj) {
+			return obj.getMinimumSubsequentSubscriptionUnits();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<Number> value) {
+			obj.setMinimumSubsequentSubscriptionUnits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxRedAmt")
@@ -346,7 +386,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumRedemptionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<ActiveCurrencyAndAmount>> mmMaximumRedemptionAmount = new MMMessageAttribute<InvestmentRestrictions, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMaximumRedemptionAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -358,6 +398,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(InvestmentRestrictions obj) {
+			return obj.getMaximumRedemptionAmount();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMaximumRedemptionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxRedUnits")
@@ -396,7 +446,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumRedemptionUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<Number>> mmMaximumRedemptionUnits = new MMMessageAttribute<InvestmentRestrictions, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMaximumRedemptionUnits;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -408,6 +458,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(InvestmentRestrictions obj) {
+			return obj.getMaximumRedemptionUnits();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<Number> value) {
+			obj.setMaximumRedemptionUnits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrRedRstrctns")
@@ -441,7 +501,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherRedemptionRestrictions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<Max350Text>> mmOtherRedemptionRestrictions = new MMMessageAttribute<InvestmentRestrictions, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
 			isDerived = false;
@@ -452,6 +512,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(InvestmentRestrictions obj) {
+			return obj.getOtherRedemptionRestrictions();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<Max350Text> value) {
+			obj.setOtherRedemptionRestrictions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinHldgAmt")
@@ -491,7 +561,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumHoldingAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<ActiveCurrencyAndAmount>> mmMinimumHoldingAmount = new MMMessageAttribute<InvestmentRestrictions, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -503,6 +573,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(InvestmentRestrictions obj) {
+			return obj.getMinimumHoldingAmount();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setMinimumHoldingAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinHldgUnits")
@@ -542,7 +622,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumHoldingUnits = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<DecimalNumber>> mmMinimumHoldingUnits = new MMMessageAttribute<InvestmentRestrictions, Optional<DecimalNumber>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingUnits;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -554,6 +634,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(InvestmentRestrictions obj) {
+			return obj.getMinimumHoldingUnits();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<DecimalNumber> value) {
+			obj.setMinimumHoldingUnits(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MinHldgPrd")
@@ -592,7 +682,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMinimumHoldingPeriod = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, Optional<Max70Text>> mmMinimumHoldingPeriod = new MMMessageAttribute<InvestmentRestrictions, Optional<Max70Text>>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingPeriod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -604,6 +694,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(InvestmentRestrictions obj) {
+			return obj.getMinimumHoldingPeriod();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, Optional<Max70Text> value) {
+			obj.setMinimumHoldingPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HldgTrfblInd", required = true)
@@ -644,7 +744,7 @@ public class InvestmentRestrictions {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHoldingTransferableIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InvestmentRestrictions, YesNoIndicator> mmHoldingTransferableIndicator = new MMMessageAttribute<InvestmentRestrictions, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmHoldingTransferableIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions.mmObject();
@@ -656,6 +756,16 @@ public class InvestmentRestrictions {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(InvestmentRestrictions obj) {
+			return obj.getHoldingTransferableIndicator();
+		}
+
+		@Override
+		public void setValue(InvestmentRestrictions obj, YesNoIndicator value) {
+			obj.setHoldingTransferableIndicator(value);
 		}
 	};
 

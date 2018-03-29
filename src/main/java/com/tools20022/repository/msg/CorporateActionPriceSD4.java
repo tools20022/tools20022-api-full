@@ -110,7 +110,7 @@ public class CorporateActionPriceSD4 {
 	 * CorporateActionPriceSD3.mmPlaceAndName}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPriceSD4, Optional<Max350Text>> mmPlaceAndName = new MMMessageAttribute<CorporateActionPriceSD4, Optional<Max350Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPriceSD4.mmObject();
 			isDerived = false;
@@ -122,6 +122,16 @@ public class CorporateActionPriceSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max350Text> getValue(CorporateActionPriceSD4 obj) {
+			return obj.getPlaceAndName();
+		}
+
+		@Override
+		public void setValue(CorporateActionPriceSD4 obj, Optional<Max350Text> value) {
+			obj.setPlaceAndName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SbcptPric")
@@ -164,7 +174,7 @@ public class CorporateActionPriceSD4 {
 	 * CorporateActionPriceSD3.mmSubscriptionPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSubscriptionPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionPriceSD4, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>> mmSubscriptionPrice = new MMMessageAttribute<CorporateActionPriceSD4, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPriceSD4.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class CorporateActionPriceSD4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getValue(CorporateActionPriceSD4 obj) {
+			return obj.getSubscriptionPrice();
+		}
+
+		@Override
+		public void setValue(CorporateActionPriceSD4 obj, Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> value) {
+			obj.setSubscriptionPrice(value.orElse(null));
 		}
 	};
 

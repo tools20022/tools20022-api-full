@@ -124,7 +124,7 @@ public class PendingReason16 {
 	 * PendingReason2.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PendingReason16, PendingReason28Choice> mmCode = new MMMessageAssociationEnd<PendingReason16, PendingReason28Choice>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingReason16.mmObject();
@@ -139,6 +139,16 @@ public class PendingReason16 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PendingReason28Choice.mmObject();
+		}
+
+		@Override
+		public PendingReason28Choice getValue(PendingReason16 obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PendingReason16 obj, PendingReason28Choice value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "AddtlRsnInf")
@@ -185,7 +195,7 @@ public class PendingReason16 {
 	 * PendingReason2.mmAdditionalReasonInformation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PendingReason16, Optional<Max210Text>> mmAdditionalReasonInformation = new MMMessageAttribute<PendingReason16, Optional<Max210Text>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PendingReason16.mmObject();
@@ -199,6 +209,16 @@ public class PendingReason16 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(PendingReason16 obj) {
+			return obj.getAdditionalReasonInformation();
+		}
+
+		@Override
+		public void setValue(PendingReason16 obj, Optional<Max210Text> value) {
+			obj.setAdditionalReasonInformation(value.orElse(null));
 		}
 	};
 

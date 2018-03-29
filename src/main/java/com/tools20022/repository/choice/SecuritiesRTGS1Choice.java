@@ -125,7 +125,7 @@ public class SecuritiesRTGS1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesRTGS1Choice, YesNoIndicator> mmIndicator = new MMMessageAttribute<SecuritiesRTGS1Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesRTGS1Choice.mmObject();
@@ -139,6 +139,16 @@ public class SecuritiesRTGS1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(SecuritiesRTGS1Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(SecuritiesRTGS1Choice obj, YesNoIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -188,7 +198,7 @@ public class SecuritiesRTGS1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesRTGS1Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<SecuritiesRTGS1Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesRTGS1Choice.mmObject();
@@ -202,6 +212,16 @@ public class SecuritiesRTGS1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(SecuritiesRTGS1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(SecuritiesRTGS1Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

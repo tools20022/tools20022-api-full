@@ -114,7 +114,7 @@ public class PaymentDirection3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentDirection3Choice, PaymentDirectionIndicator> mmIndicator = new MMMessageAttribute<PaymentDirection3Choice, PaymentDirectionIndicator>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentDirection3Choice.mmObject();
@@ -127,6 +127,16 @@ public class PaymentDirection3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentDirectionIndicator.mmObject();
+		}
+
+		@Override
+		public PaymentDirectionIndicator getValue(PaymentDirection3Choice obj) {
+			return obj.getIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentDirection3Choice obj, PaymentDirectionIndicator value) {
+			obj.setIndicator(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -166,7 +176,7 @@ public class PaymentDirection3Choice {
 	 * definition} = "Payment direction expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentDirection3Choice, GenericIdentification25> mmProprietary = new MMMessageAssociationEnd<PaymentDirection3Choice, GenericIdentification25>() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentDirection3Choice.mmObject();
@@ -180,6 +190,16 @@ public class PaymentDirection3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification25.mmObject();
+		}
+
+		@Override
+		public GenericIdentification25 getValue(PaymentDirection3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(PaymentDirection3Choice obj, GenericIdentification25 value) {
+			obj.setProprietary(value);
 		}
 	};
 

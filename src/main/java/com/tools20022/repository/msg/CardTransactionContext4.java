@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardTransactionCondition1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -74,7 +75,7 @@ public class CardTransactionContext4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "SpclConds")
-	protected List<com.tools20022.repository.msg.CardTransactionCondition1> specialConditions;
+	protected List<CardTransactionCondition1> specialConditions;
 	/**
 	 * 
 	 <p>
@@ -109,7 +110,7 @@ public class CardTransactionContext4 {
 	 * CardTransactionContext2.mmSpecialConditions}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSpecialConditions = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CardTransactionContext4, List<CardTransactionCondition1>> mmSpecialConditions = new MMMessageAssociationEnd<CardTransactionContext4, List<CardTransactionCondition1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CardTransactionContext4.mmObject();
 			isDerived = false;
@@ -120,7 +121,17 @@ public class CardTransactionContext4 {
 			previousVersion_lazy = () -> CardTransactionContext2.mmSpecialConditions;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CardTransactionCondition1.mmObject();
+			type_lazy = () -> CardTransactionCondition1.mmObject();
+		}
+
+		@Override
+		public List<CardTransactionCondition1> getValue(CardTransactionContext4 obj) {
+			return obj.getSpecialConditions();
+		}
+
+		@Override
+		public void setValue(CardTransactionContext4 obj, List<CardTransactionCondition1> value) {
+			obj.setSpecialConditions(value);
 		}
 	};
 
@@ -143,7 +154,7 @@ public class CardTransactionContext4 {
 		return specialConditions == null ? specialConditions = new ArrayList<>() : specialConditions;
 	}
 
-	public CardTransactionContext4 setSpecialConditions(List<com.tools20022.repository.msg.CardTransactionCondition1> specialConditions) {
+	public CardTransactionContext4 setSpecialConditions(List<CardTransactionCondition1> specialConditions) {
 		this.specialConditions = Objects.requireNonNull(specialConditions);
 		return this;
 	}

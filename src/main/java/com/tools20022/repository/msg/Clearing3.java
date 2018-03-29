@@ -28,6 +28,7 @@ import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.entity.Clearing;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentificationAndAccount78;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -91,7 +92,7 @@ public class Clearing3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "ClrMmb", required = true)
-	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount78> clearingMember;
+	protected List<PartyIdentificationAndAccount78> clearingMember;
 	/**
 	 * 
 	 <p>
@@ -125,7 +126,7 @@ public class Clearing3 {
 	 * "Provides details about the clearing member identification and account."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingMember = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Clearing3, List<PartyIdentificationAndAccount78>> mmClearingMember = new MMMessageAttribute<Clearing3, List<PartyIdentificationAndAccount78>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing3.mmObject();
@@ -135,7 +136,17 @@ public class Clearing3 {
 			name = "ClearingMember";
 			definition = "Provides details about the clearing member identification and account.";
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmObject();
+			complexType_lazy = () -> PartyIdentificationAndAccount78.mmObject();
+		}
+
+		@Override
+		public List<PartyIdentificationAndAccount78> getValue(Clearing3 obj) {
+			return obj.getClearingMember();
+		}
+
+		@Override
+		public void setValue(Clearing3 obj, List<PartyIdentificationAndAccount78> value) {
+			obj.setClearingMember(value);
 		}
 	};
 	@XmlElement(name = "ClrSgmt")
@@ -174,7 +185,7 @@ public class Clearing3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmClearingSegment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Clearing3, Optional<PartyIdentification35Choice>> mmClearingSegment = new MMMessageAttribute<Clearing3, Optional<PartyIdentification35Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing3.mmObject();
@@ -186,6 +197,16 @@ public class Clearing3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification35Choice> getValue(Clearing3 obj) {
+			return obj.getClearingSegment();
+		}
+
+		@Override
+		public void setValue(Clearing3 obj, Optional<PartyIdentification35Choice> value) {
+			obj.setClearingSegment(value.orElse(null));
 		}
 	};
 
@@ -209,7 +230,7 @@ public class Clearing3 {
 		return clearingMember == null ? clearingMember = new ArrayList<>() : clearingMember;
 	}
 
-	public Clearing3 setClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount78> clearingMember) {
+	public Clearing3 setClearingMember(List<PartyIdentificationAndAccount78> clearingMember) {
 		this.clearingMember = Objects.requireNonNull(clearingMember);
 		return this;
 	}

@@ -60,12 +60,16 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<IntraPositionMovements1> forIntraPositionMovements1 = new MMConstraint<IntraPositionMovements1>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkIntraPositionMovements1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Movement(*)/SafekeepingAccount must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forIntraPositionMovements2);
 			owner_lazy = () -> IntraPositionMovements1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovements1 obj) throws Exception {
+			checkIntraPositionMovements1(obj);
 		}
 	};
 	/**
@@ -99,12 +103,16 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactions1> forSecuritiesSettlementTransactions1 = new MMConstraint<SecuritiesSettlementTransactions1>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkSecuritiesSettlementTransactions1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Transaction(*)/SafekeepingAccount must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forSecuritiesSettlementTransactions2);
 			owner_lazy = () -> SecuritiesSettlementTransactions1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactions1 obj) throws Exception {
+			checkSecuritiesSettlementTransactions1(obj);
 		}
 	};
 	/**
@@ -138,12 +146,16 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<IntraPositionModification1> forIntraPositionModification1 = new MMConstraint<IntraPositionModification1>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkIntraPositionModification1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Modification(*)/SafekeepingAccount must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forIntraPositionModification3);
 			owner_lazy = () -> IntraPositionModification1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionModification1 obj) throws Exception {
+			checkIntraPositionModification1(obj);
 		}
 	};
 	/**
@@ -177,12 +189,16 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<IntraPositionCancellation1> forIntraPositionCancellation1 = new MMConstraint<IntraPositionCancellation1>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkIntraPositionCancellation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Cancellation(*)/SafekeepingAccount must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forIntraPositionCancellation3);
 			owner_lazy = () -> IntraPositionCancellation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionCancellation1 obj) throws Exception {
+			checkIntraPositionCancellation1(obj);
 		}
 	};
 	/**
@@ -213,12 +229,16 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<IntraPositionModification3> forIntraPositionModification3 = new MMConstraint<IntraPositionModification3>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkIntraPositionModification3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Modification(*)/SafekeepingAccount must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forIntraPositionModification1;
 			owner_lazy = () -> IntraPositionModification3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionModification3 obj) throws Exception {
+			checkIntraPositionModification3(obj);
 		}
 	};
 	/**
@@ -257,13 +277,17 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<IntraPositionMovements2> forIntraPositionMovements2 = new MMConstraint<IntraPositionMovements2>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkIntraPositionMovements2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Movement(*)/SafekeepingAccount must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forIntraPositionMovements3);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forIntraPositionMovements1;
 			owner_lazy = () -> IntraPositionMovements2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovements2 obj) throws Exception {
+			checkIntraPositionMovements2(obj);
 		}
 	};
 	/**
@@ -302,13 +326,17 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactions2> forSecuritiesSettlementTransactions2 = new MMConstraint<SecuritiesSettlementTransactions2>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkSecuritiesSettlementTransactions2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Transaction(*)/SafekeepingAccount must be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forSecuritiesSettlementTransactions3);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forSecuritiesSettlementTransactions1;
 			owner_lazy = () -> SecuritiesSettlementTransactions2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactions2 obj) throws Exception {
+			checkSecuritiesSettlementTransactions2(obj);
 		}
 	};
 	/**
@@ -339,12 +367,16 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<IntraPositionCancellation3> forIntraPositionCancellation3 = new MMConstraint<IntraPositionCancellation3>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkIntraPositionCancellation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Cancellation(*)/SafekeepingAccount must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forIntraPositionCancellation1;
 			owner_lazy = () -> IntraPositionCancellation3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionCancellation3 obj) throws Exception {
+			checkIntraPositionCancellation3(obj);
 		}
 	};
 	/**
@@ -375,12 +407,16 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<IntraPositionMovements3> forIntraPositionMovements3 = new MMConstraint<IntraPositionMovements3>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkIntraPositionMovements3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Movement(*)/SafekeepingAccount must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forIntraPositionMovements2;
 			owner_lazy = () -> IntraPositionMovements3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(IntraPositionMovements3 obj) throws Exception {
+			checkIntraPositionMovements3(obj);
 		}
 	};
 	/**
@@ -411,12 +447,16 @@ public class ConstraintSafekeepingAccountRule {
 	 */
 	public static final MMConstraint<SecuritiesSettlementTransactions3> forSecuritiesSettlementTransactions3 = new MMConstraint<SecuritiesSettlementTransactions3>() {
 		{
-			validator = ConstraintSafekeepingAccountRule::checkSecuritiesSettlementTransactions3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountRule";
 			definition = "SafekeepingAccount must be present or Transaction(*)/SafekeepingAccount must be present, but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingAccountRule.forSecuritiesSettlementTransactions2;
 			owner_lazy = () -> SecuritiesSettlementTransactions3.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesSettlementTransactions3 obj) throws Exception {
+			checkSecuritiesSettlementTransactions3(obj);
 		}
 	};
 

@@ -24,6 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.PaymentCard;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ContentInformationType10;
+import com.tools20022.repository.msg.PlainCardData15;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -149,7 +151,7 @@ public class PaymentCard21 {
 	 * PaymentCard9.mmProtectedCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProtectedCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCard21, Optional<ContentInformationType10>> mmProtectedCardData = new MMMessageAssociationEnd<PaymentCard21, Optional<ContentInformationType10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -162,7 +164,17 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
+			type_lazy = () -> ContentInformationType10.mmObject();
+		}
+
+		@Override
+		public Optional<ContentInformationType10> getValue(PaymentCard21 obj) {
+			return obj.getProtectedCardData();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<ContentInformationType10> value) {
+			obj.setProtectedCardData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlainCardData")
@@ -206,7 +218,7 @@ public class PaymentCard21 {
 	 * PaymentCard9.mmPlainCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPlainCardData = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentCard21, Optional<PlainCardData15>> mmPlainCardData = new MMMessageAssociationEnd<PaymentCard21, Optional<PlainCardData15>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -219,7 +231,17 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PlainCardData15.mmObject();
+			type_lazy = () -> PlainCardData15.mmObject();
+		}
+
+		@Override
+		public Optional<PlainCardData15> getValue(PaymentCard21 obj) {
+			return obj.getPlainCardData();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<PlainCardData15> value) {
+			obj.setPlainCardData(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtAcctRef")
@@ -260,7 +282,7 @@ public class PaymentCard21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentAccountReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, Optional<Max70Text>> mmPaymentAccountReference = new MMMessageAttribute<PaymentCard21, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -272,6 +294,16 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(PaymentCard21 obj) {
+			return obj.getPaymentAccountReference();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<Max70Text> value) {
+			obj.setPaymentAccountReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IssrBIN")
@@ -316,7 +348,7 @@ public class PaymentCard21 {
 	 * PaymentCard9.mmIssuerBIN}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuerBIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, Optional<Max15NumericText>> mmIssuerBIN = new MMMessageAttribute<PaymentCard21, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -329,6 +361,16 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(PaymentCard21 obj) {
+			return obj.getIssuerBIN();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<Max15NumericText> value) {
+			obj.setIssuerBIN(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardCtryCd")
@@ -377,7 +419,7 @@ public class PaymentCard21 {
 	 * PaymentCard9.mmCardCountryCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardCountryCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, Optional<Max3Text>> mmCardCountryCode = new MMMessageAttribute<PaymentCard21, Optional<Max3Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCardCountryCode;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
@@ -391,6 +433,16 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max3Text> getValue(PaymentCard21 obj) {
+			return obj.getCardCountryCode();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<Max3Text> value) {
+			obj.setCardCountryCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardCcyCd")
@@ -436,7 +488,7 @@ public class PaymentCard21 {
 	 * PaymentCard9.mmCardCurrencyCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardCurrencyCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, Optional<Exact3AlphaNumericText>> mmCardCurrencyCode = new MMMessageAttribute<PaymentCard21, Optional<Exact3AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -449,6 +501,16 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact3AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact3AlphaNumericText> getValue(PaymentCard21 obj) {
+			return obj.getCardCurrencyCode();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<Exact3AlphaNumericText> value) {
+			obj.setCardCurrencyCode(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardPdctPrfl")
@@ -494,7 +556,7 @@ public class PaymentCard21 {
 	 * PaymentCard9.mmCardProductProfile}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardProductProfile = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, Optional<Max35Text>> mmCardProductProfile = new MMMessageAttribute<PaymentCard21, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -507,6 +569,16 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentCard21 obj) {
+			return obj.getCardProductProfile();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<Max35Text> value) {
+			obj.setCardProductProfile(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CardBrnd")
@@ -554,7 +626,7 @@ public class PaymentCard21 {
 	 * PaymentCard9.mmCardBrand}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCardBrand = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, Optional<Max35Text>> mmCardBrand = new MMMessageAttribute<PaymentCard21, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentCard.mmCardBrand;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
@@ -568,6 +640,16 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentCard21 obj) {
+			return obj.getCardBrand();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<Max35Text> value) {
+			obj.setCardBrand(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrnlCard")
@@ -607,7 +689,7 @@ public class PaymentCard21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInternationalCard = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, Optional<TrueFalseIndicator>> mmInternationalCard = new MMMessageAttribute<PaymentCard21, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -619,6 +701,16 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(PaymentCard21 obj) {
+			return obj.getInternationalCard();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<TrueFalseIndicator> value) {
+			obj.setInternationalCard(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AllwdPdct")
@@ -657,7 +749,7 @@ public class PaymentCard21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAllowedProduct = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, List<Max70Text>> mmAllowedProduct = new MMMessageAttribute<PaymentCard21, List<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -668,6 +760,16 @@ public class PaymentCard21 {
 			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmAllowedProduct);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public List<Max70Text> getValue(PaymentCard21 obj) {
+			return obj.getAllowedProduct();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, List<Max70Text> value) {
+			obj.setAllowedProduct(value);
 		}
 	};
 	@XmlElement(name = "SvcOptn")
@@ -706,7 +808,7 @@ public class PaymentCard21 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmServiceOption = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, Optional<Max35Text>> mmServiceOption = new MMMessageAttribute<PaymentCard21, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -718,6 +820,16 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(PaymentCard21 obj) {
+			return obj.getServiceOption();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<Max35Text> value) {
+			obj.setServiceOption(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlCardData")
@@ -761,7 +873,7 @@ public class PaymentCard21 {
 	 * PaymentCard9.mmAdditionalCardData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalCardData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentCard21, Optional<Max70Text>> mmAdditionalCardData = new MMMessageAttribute<PaymentCard21, Optional<Max70Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentCard21.mmObject();
 			isDerived = false;
@@ -774,6 +886,16 @@ public class PaymentCard21 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max70Text> getValue(PaymentCard21 obj) {
+			return obj.getAdditionalCardData();
+		}
+
+		@Override
+		public void setValue(PaymentCard21 obj, Optional<Max70Text> value) {
+			obj.setAdditionalCardData(value.orElse(null));
 		}
 	};
 
@@ -801,7 +923,7 @@ public class PaymentCard21 {
 		return protectedCardData == null ? Optional.empty() : Optional.of(protectedCardData);
 	}
 
-	public PaymentCard21 setProtectedCardData(com.tools20022.repository.msg.ContentInformationType10 protectedCardData) {
+	public PaymentCard21 setProtectedCardData(ContentInformationType10 protectedCardData) {
 		this.protectedCardData = protectedCardData;
 		return this;
 	}
@@ -810,7 +932,7 @@ public class PaymentCard21 {
 		return plainCardData == null ? Optional.empty() : Optional.of(plainCardData);
 	}
 
-	public PaymentCard21 setPlainCardData(com.tools20022.repository.msg.PlainCardData15 plainCardData) {
+	public PaymentCard21 setPlainCardData(PlainCardData15 plainCardData) {
 		this.plainCardData = plainCardData;
 		return this;
 	}

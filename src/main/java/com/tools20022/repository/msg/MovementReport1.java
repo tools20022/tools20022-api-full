@@ -117,7 +117,7 @@ public class MovementReport1 {
 	 * "Identification of the Query message sent to request this statement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MovementReport1, Optional<Max35Text>> mmQueryReference = new MMMessageAttribute<MovementReport1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementReport1.mmObject();
 			isDerived = false;
@@ -129,6 +129,16 @@ public class MovementReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MovementReport1 obj) {
+			return obj.getQueryReference();
+		}
+
+		@Override
+		public void setValue(MovementReport1 obj, Optional<Max35Text> value) {
+			obj.setQueryReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RptId")
@@ -160,7 +170,7 @@ public class MovementReport1 {
 	 * definition} = "Reference common to all pages of a report."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MovementReport1, Optional<Max35Text>> mmReportIdentification = new MMMessageAttribute<MovementReport1, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementReport1.mmObject();
 			isDerived = false;
@@ -171,6 +181,16 @@ public class MovementReport1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MovementReport1 obj) {
+			return obj.getReportIdentification();
+		}
+
+		@Override
+		public void setValue(MovementReport1 obj, Optional<Max35Text> value) {
+			obj.setReportIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QryTp", required = true)
@@ -206,7 +226,7 @@ public class MovementReport1 {
 	 * definition} = "Defines the type of query."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MovementReport1, MovementResponseType1Code> mmQueryType = new MMMessageAttribute<MovementReport1, MovementResponseType1Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementReport1.mmObject();
 			isDerived = false;
@@ -218,6 +238,16 @@ public class MovementReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
+		}
+
+		@Override
+		public MovementResponseType1Code getValue(MovementReport1 obj) {
+			return obj.getQueryType();
+		}
+
+		@Override
+		public void setValue(MovementReport1 obj, MovementResponseType1Code value) {
+			obj.setQueryType(value);
 		}
 	};
 	@XmlElement(name = "ActvtyInd", required = true)
@@ -255,7 +285,7 @@ public class MovementReport1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MovementReport1, YesNoIndicator> mmActivityIndicator = new MMMessageAttribute<MovementReport1, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MovementReport1.mmObject();
 			isDerived = false;
@@ -267,6 +297,16 @@ public class MovementReport1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(MovementReport1 obj) {
+			return obj.getActivityIndicator();
+		}
+
+		@Override
+		public void setValue(MovementReport1 obj, YesNoIndicator value) {
+			obj.setActivityIndicator(value);
 		}
 	};
 

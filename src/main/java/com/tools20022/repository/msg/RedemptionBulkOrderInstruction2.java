@@ -24,6 +24,9 @@ import com.tools20022.repository.area.setr.RedemptionBulkOrderCancellationReques
 import com.tools20022.repository.entity.RedemptionOrder;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Extension1;
+import com.tools20022.repository.msg.Intermediary8;
+import com.tools20022.repository.msg.RedemptionBulkOrder3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -127,7 +130,7 @@ public class RedemptionBulkOrderInstruction2 {
 	 * definition} = "Common information related to all the orders."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBulkOrderDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionBulkOrderInstruction2, RedemptionBulkOrder3> mmBulkOrderDetails = new MMMessageAssociationEnd<RedemptionBulkOrderInstruction2, RedemptionBulkOrder3>() {
 		{
 			businessComponentTrace_lazy = () -> RedemptionOrder.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionBulkOrderInstruction2.mmObject();
@@ -139,11 +142,21 @@ public class RedemptionBulkOrderInstruction2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.RedemptionBulkOrder3.mmObject();
+			type_lazy = () -> RedemptionBulkOrder3.mmObject();
+		}
+
+		@Override
+		public RedemptionBulkOrder3 getValue(RedemptionBulkOrderInstruction2 obj) {
+			return obj.getBulkOrderDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionBulkOrderInstruction2 obj, RedemptionBulkOrder3 value) {
+			obj.setBulkOrderDetails(value);
 		}
 	};
 	@XmlElement(name = "RltdPtyDtls")
-	protected List<com.tools20022.repository.msg.Intermediary8> relatedPartyDetails;
+	protected List<Intermediary8> relatedPartyDetails;
 	/**
 	 * 
 	 <p>
@@ -175,7 +188,7 @@ public class RedemptionBulkOrderInstruction2 {
 	 * definition} = "Information about parties related to the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRelatedPartyDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionBulkOrderInstruction2, List<Intermediary8>> mmRelatedPartyDetails = new MMMessageAssociationEnd<RedemptionBulkOrderInstruction2, List<Intermediary8>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionBulkOrderInstruction2.mmObject();
@@ -187,11 +200,21 @@ public class RedemptionBulkOrderInstruction2 {
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Intermediary8.mmObject();
+			type_lazy = () -> Intermediary8.mmObject();
+		}
+
+		@Override
+		public List<Intermediary8> getValue(RedemptionBulkOrderInstruction2 obj) {
+			return obj.getRelatedPartyDetails();
+		}
+
+		@Override
+		public void setValue(RedemptionBulkOrderInstruction2 obj, List<Intermediary8> value) {
+			obj.setRelatedPartyDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
-	protected List<com.tools20022.repository.msg.Extension1> extension;
+	protected List<Extension1> extension;
 	/**
 	 * 
 	 <p>
@@ -219,7 +242,7 @@ public class RedemptionBulkOrderInstruction2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RedemptionBulkOrderInstruction2, List<Extension1>> mmExtension = new MMMessageAssociationEnd<RedemptionBulkOrderInstruction2, List<Extension1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionBulkOrderInstruction2.mmObject();
 			isDerived = false;
@@ -229,7 +252,17 @@ public class RedemptionBulkOrderInstruction2 {
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
+			type_lazy = () -> Extension1.mmObject();
+		}
+
+		@Override
+		public List<Extension1> getValue(RedemptionBulkOrderInstruction2 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(RedemptionBulkOrderInstruction2 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 
@@ -254,7 +287,7 @@ public class RedemptionBulkOrderInstruction2 {
 		return bulkOrderDetails;
 	}
 
-	public RedemptionBulkOrderInstruction2 setBulkOrderDetails(com.tools20022.repository.msg.RedemptionBulkOrder3 bulkOrderDetails) {
+	public RedemptionBulkOrderInstruction2 setBulkOrderDetails(RedemptionBulkOrder3 bulkOrderDetails) {
 		this.bulkOrderDetails = Objects.requireNonNull(bulkOrderDetails);
 		return this;
 	}
@@ -263,7 +296,7 @@ public class RedemptionBulkOrderInstruction2 {
 		return relatedPartyDetails == null ? relatedPartyDetails = new ArrayList<>() : relatedPartyDetails;
 	}
 
-	public RedemptionBulkOrderInstruction2 setRelatedPartyDetails(List<com.tools20022.repository.msg.Intermediary8> relatedPartyDetails) {
+	public RedemptionBulkOrderInstruction2 setRelatedPartyDetails(List<Intermediary8> relatedPartyDetails) {
 		this.relatedPartyDetails = Objects.requireNonNull(relatedPartyDetails);
 		return this;
 	}
@@ -272,7 +305,7 @@ public class RedemptionBulkOrderInstruction2 {
 		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public RedemptionBulkOrderInstruction2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+	public RedemptionBulkOrderInstruction2 setExtension(List<Extension1> extension) {
 		this.extension = Objects.requireNonNull(extension);
 		return this;
 	}

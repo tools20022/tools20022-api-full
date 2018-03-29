@@ -122,7 +122,7 @@ public class Obligation1 {
 	 * "Defines one of the entities associated with the collateral agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Obligation1, PartyIdentification33Choice> mmPartyA = new MMMessageAssociationEnd<Obligation1, PartyIdentification33Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
@@ -135,6 +135,16 @@ public class Obligation1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification33Choice getValue(Obligation1 obj) {
+			return obj.getPartyA();
+		}
+
+		@Override
+		public void setValue(Obligation1 obj, PartyIdentification33Choice value) {
+			obj.setPartyA(value);
 		}
 	};
 	@XmlElement(name = "SvcgPtyA")
@@ -172,7 +182,7 @@ public class Obligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServicingPartyA = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Obligation1, Optional<PartyIdentification33Choice>> mmServicingPartyA = new MMMessageAssociationEnd<Obligation1, Optional<PartyIdentification33Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
@@ -185,6 +195,16 @@ public class Obligation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification33Choice> getValue(Obligation1 obj) {
+			return obj.getServicingPartyA();
+		}
+
+		@Override
+		public void setValue(Obligation1 obj, Optional<PartyIdentification33Choice> value) {
+			obj.setServicingPartyA(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PtyB", required = true)
@@ -221,7 +241,7 @@ public class Obligation1 {
 	 * "Defines the other entity associated with the collateral agreement."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPartyB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Obligation1, PartyIdentification33Choice> mmPartyB = new MMMessageAssociationEnd<Obligation1, PartyIdentification33Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
@@ -234,6 +254,16 @@ public class Obligation1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification33Choice getValue(Obligation1 obj) {
+			return obj.getPartyB();
+		}
+
+		@Override
+		public void setValue(Obligation1 obj, PartyIdentification33Choice value) {
+			obj.setPartyB(value);
 		}
 	};
 	@XmlElement(name = "SvcgPtyB")
@@ -271,7 +301,7 @@ public class Obligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmServicingPartyB = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Obligation1, Optional<PartyIdentification33Choice>> mmServicingPartyB = new MMMessageAssociationEnd<Obligation1, Optional<PartyIdentification33Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
@@ -284,6 +314,16 @@ public class Obligation1 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification33Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification33Choice> getValue(Obligation1 obj) {
+			return obj.getServicingPartyB();
+		}
+
+		@Override
+		public void setValue(Obligation1 obj, Optional<PartyIdentification33Choice> value) {
+			obj.setServicingPartyB(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpsrTp")
@@ -322,7 +362,7 @@ public class Obligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExposureType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Obligation1, Optional<ExposureType1Code>> mmExposureType = new MMMessageAttribute<Obligation1, Optional<ExposureType1Code>>() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmExposureType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
@@ -334,6 +374,16 @@ public class Obligation1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExposureType1Code.mmObject();
+		}
+
+		@Override
+		public Optional<ExposureType1Code> getValue(Obligation1 obj) {
+			return obj.getExposureType();
+		}
+
+		@Override
+		public void setValue(Obligation1 obj, Optional<ExposureType1Code> value) {
+			obj.setExposureType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValtnDt", required = true)
@@ -372,7 +422,7 @@ public class Obligation1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Obligation1, DateAndDateTimeChoice> mmValuationDate = new MMMessageAttribute<Obligation1, DateAndDateTimeChoice>() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmMarginCallValuationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Obligation1.mmObject();
@@ -384,6 +434,16 @@ public class Obligation1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public DateAndDateTimeChoice getValue(Obligation1 obj) {
+			return obj.getValuationDate();
+		}
+
+		@Override
+		public void setValue(Obligation1 obj, DateAndDateTimeChoice value) {
+			obj.setValuationDate(value);
 		}
 	};
 

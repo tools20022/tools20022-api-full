@@ -55,11 +55,15 @@ public class ConstraintElectionType2Rule {
 	 */
 	public static final MMConstraint<AgentCAElectionAdviceV01> forAgentCAElectionAdviceV01 = new MMConstraint<AgentCAElectionAdviceV01>() {
 		{
-			validator = ConstraintElectionType2Rule::checkAgentCAElectionAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionType2Rule";
 			definition = "If ElectionAdviceTypeAndLinkages/ElectionType is CHAN, then ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionNumber, ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionType, ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionNumber and ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionType must be present.";
 			owner_lazy = () -> AgentCAElectionAdviceV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(AgentCAElectionAdviceV01 obj) throws Exception {
+			checkAgentCAElectionAdviceV01(obj);
 		}
 	};
 

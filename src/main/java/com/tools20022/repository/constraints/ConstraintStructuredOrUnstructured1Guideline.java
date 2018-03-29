@@ -48,11 +48,15 @@ public class ConstraintStructuredOrUnstructured1Guideline {
 	 */
 	public static final MMConstraint<LongPostalAddress2Choice> forLongPostalAddress2Choice = new MMConstraint<LongPostalAddress2Choice>() {
 		{
-			validator = ConstraintStructuredOrUnstructured1Guideline::checkLongPostalAddress2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredOrUnstructured1Guideline";
 			definition = "It is recommended that Structured be used.";
 			owner_lazy = () -> LongPostalAddress2Choice.mmObject();
+		}
+
+		@Override
+		public void executeValidator(LongPostalAddress2Choice obj) throws Exception {
+			checkLongPostalAddress2Choice(obj);
 		}
 	};
 

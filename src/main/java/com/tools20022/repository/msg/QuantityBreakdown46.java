@@ -28,6 +28,8 @@ import com.tools20022.repository.choice.TypeOfPrice29Choice;
 import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification37;
+import com.tools20022.repository.msg.Price7;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -133,7 +135,7 @@ public class QuantityBreakdown46 {
 	 * QuantityBreakdown30.mmLotNumber}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityBreakdown46, Optional<GenericIdentification37>> mmLotNumber = new MMMessageAttribute<QuantityBreakdown46, Optional<GenericIdentification37>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown46.mmObject();
@@ -146,7 +148,17 @@ public class QuantityBreakdown46 {
 			previousVersion_lazy = () -> QuantityBreakdown30.mmLotNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
+			complexType_lazy = () -> GenericIdentification37.mmObject();
+		}
+
+		@Override
+		public Optional<GenericIdentification37> getValue(QuantityBreakdown46 obj) {
+			return obj.getLotNumber();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown46 obj, Optional<GenericIdentification37> value) {
+			obj.setLotNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotQty")
@@ -192,7 +204,7 @@ public class QuantityBreakdown46 {
 	 * QuantityBreakdown30.mmLotQuantity}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityBreakdown46, Optional<FinancialInstrumentQuantity1Choice>> mmLotQuantity = new MMMessageAssociationEnd<QuantityBreakdown46, Optional<FinancialInstrumentQuantity1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown46.mmObject();
@@ -207,6 +219,16 @@ public class QuantityBreakdown46 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity1Choice> getValue(QuantityBreakdown46 obj) {
+			return obj.getLotQuantity();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown46 obj, Optional<FinancialInstrumentQuantity1Choice> value) {
+			obj.setLotQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotDtTm")
@@ -252,7 +274,7 @@ public class QuantityBreakdown46 {
 	 * QuantityBreakdown30.mmLotDateTime}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLotDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityBreakdown46, Optional<DateAndDateTime2Choice>> mmLotDateTime = new MMMessageAttribute<QuantityBreakdown46, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown46.mmObject();
@@ -266,6 +288,16 @@ public class QuantityBreakdown46 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTime2Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(QuantityBreakdown46 obj) {
+			return obj.getLotDateTime();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown46 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setLotDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LotPric")
@@ -308,7 +340,7 @@ public class QuantityBreakdown46 {
 	 * QuantityBreakdown30.mmLotPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLotPrice = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<QuantityBreakdown46, Optional<Price7>> mmLotPrice = new MMMessageAssociationEnd<QuantityBreakdown46, Optional<Price7>>() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown46.mmObject();
@@ -322,7 +354,17 @@ public class QuantityBreakdown46 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Price7.mmObject();
+			type_lazy = () -> Price7.mmObject();
+		}
+
+		@Override
+		public Optional<Price7> getValue(QuantityBreakdown46 obj) {
+			return obj.getLotPrice();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown46 obj, Optional<Price7> value) {
+			obj.setLotPrice(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TpOfPric")
@@ -369,7 +411,7 @@ public class QuantityBreakdown46 {
 	 * QuantityBreakdown30.mmTypeOfPrice}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTypeOfPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<QuantityBreakdown46, Optional<TypeOfPrice29Choice>> mmTypeOfPrice = new MMMessageAttribute<QuantityBreakdown46, Optional<TypeOfPrice29Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown46.mmObject();
@@ -383,6 +425,16 @@ public class QuantityBreakdown46 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TypeOfPrice29Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TypeOfPrice29Choice> getValue(QuantityBreakdown46 obj) {
+			return obj.getTypeOfPrice();
+		}
+
+		@Override
+		public void setValue(QuantityBreakdown46 obj, Optional<TypeOfPrice29Choice> value) {
+			obj.setTypeOfPrice(value.orElse(null));
 		}
 	};
 
@@ -406,7 +458,7 @@ public class QuantityBreakdown46 {
 		return lotNumber == null ? Optional.empty() : Optional.of(lotNumber);
 	}
 
-	public QuantityBreakdown46 setLotNumber(com.tools20022.repository.msg.GenericIdentification37 lotNumber) {
+	public QuantityBreakdown46 setLotNumber(GenericIdentification37 lotNumber) {
 		this.lotNumber = lotNumber;
 		return this;
 	}
@@ -433,7 +485,7 @@ public class QuantityBreakdown46 {
 		return lotPrice == null ? Optional.empty() : Optional.of(lotPrice);
 	}
 
-	public QuantityBreakdown46 setLotPrice(com.tools20022.repository.msg.Price7 lotPrice) {
+	public QuantityBreakdown46 setLotPrice(Price7 lotPrice) {
 		this.lotPrice = lotPrice;
 		return this;
 	}

@@ -95,7 +95,7 @@ public class UpdatedDate {
 	 * definition} = "Date of last revision."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UpdatedDate, ISODate> mmDate = new MMMessageAttribute<UpdatedDate, ISODate>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedDate.mmObject();
 			isDerived = false;
@@ -106,6 +106,16 @@ public class UpdatedDate {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(UpdatedDate obj) {
+			return obj.getDate();
+		}
+
+		@Override
+		public void setValue(UpdatedDate obj, ISODate value) {
+			obj.setDate(value);
 		}
 	};
 

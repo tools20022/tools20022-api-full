@@ -61,12 +61,50 @@ public class ConstraintNameChangeRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV08> forCorporateActionNotificationV08 = new MMConstraint<CorporateActionNotificationV08>() {
 		{
-			validator = ConstraintNameChangeRule::checkCorporateActionNotificationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameChangeRule";
 			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNameChangeRule.forCorporateActionNotificationV07;
 			owner_lazy = () -> CorporateActionNotificationV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV08 obj) throws Exception {
+			checkCorporateActionNotificationV08(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V08
+	 * CorporateActionNotification002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NameChangeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotification002V08> forCorporateActionNotification002V08 = new MMConstraint<CorporateActionNotification002V08>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NameChangeRule";
+			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10).";
+			owner_lazy = () -> CorporateActionNotification002V08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotification002V08 obj) throws Exception {
+			checkCorporateActionNotification002V08(obj);
 		}
 	};
 	/**
@@ -105,7 +143,6 @@ public class ConstraintNameChangeRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV07> forCorporateActionNotificationV07 = new MMConstraint<CorporateActionNotificationV07>() {
 		{
-			validator = ConstraintNameChangeRule::checkCorporateActionNotificationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameChangeRule";
 			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10).";
@@ -113,35 +150,10 @@ public class ConstraintNameChangeRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNameChangeRule.forCorporateActionNotificationV06;
 			owner_lazy = () -> CorporateActionNotificationV07.mmObject();
 		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07
-	 * CorporateActionNotification002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NameChangeRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10)."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotification002V07> forCorporateActionNotification002V07 = new MMConstraint<CorporateActionNotification002V07>() {
-		{
-			validator = ConstraintNameChangeRule::checkCorporateActionNotification002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NameChangeRule";
-			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10).";
-			owner_lazy = () -> CorporateActionNotification002V07.mmObject();
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV07 obj) throws Exception {
+			checkCorporateActionNotificationV07(obj);
 		}
 	};
 	/**
@@ -167,11 +179,15 @@ public class ConstraintNameChangeRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV01> forCorporateActionNotificationV01 = new MMConstraint<CorporateActionNotificationV01>() {
 		{
-			validator = ConstraintNameChangeRule::checkCorporateActionNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameChangeRule";
 			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11).";
 			owner_lazy = () -> CorporateActionNotificationV01.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV01 obj) throws Exception {
+			checkCorporateActionNotificationV01(obj);
 		}
 	};
 	/**
@@ -197,11 +213,15 @@ public class ConstraintNameChangeRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV02> forCorporateActionNotificationV02 = new MMConstraint<CorporateActionNotificationV02>() {
 		{
-			validator = ConstraintNameChangeRule::checkCorporateActionNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameChangeRule";
 			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11).";
 			owner_lazy = () -> CorporateActionNotificationV02.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV02 obj) throws Exception {
+			checkCorporateActionNotificationV02(obj);
 		}
 	};
 	/**
@@ -227,11 +247,15 @@ public class ConstraintNameChangeRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV03> forCorporateActionNotificationV03 = new MMConstraint<CorporateActionNotificationV03>() {
 		{
-			validator = ConstraintNameChangeRule::checkCorporateActionNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameChangeRule";
 			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11).";
 			owner_lazy = () -> CorporateActionNotificationV03.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV03 obj) throws Exception {
+			checkCorporateActionNotificationV03(obj);
 		}
 	};
 	/**
@@ -265,12 +289,16 @@ public class ConstraintNameChangeRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV04> forCorporateActionNotificationV04 = new MMConstraint<CorporateActionNotificationV04>() {
 		{
-			validator = ConstraintNameChangeRule::checkCorporateActionNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameChangeRule";
 			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNameChangeRule.forCorporateActionNotificationV05);
 			owner_lazy = () -> CorporateActionNotificationV04.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV04 obj) throws Exception {
+			checkCorporateActionNotificationV04(obj);
 		}
 	};
 	/**
@@ -309,13 +337,17 @@ public class ConstraintNameChangeRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV05> forCorporateActionNotificationV05 = new MMConstraint<CorporateActionNotificationV05>() {
 		{
-			validator = ConstraintNameChangeRule::checkCorporateActionNotificationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameChangeRule";
 			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN must be present and CorporateActionDetails/ChangeType/Code value NAME must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C11).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNameChangeRule.forCorporateActionNotificationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNameChangeRule.forCorporateActionNotificationV04;
 			owner_lazy = () -> CorporateActionNotificationV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV05 obj) throws Exception {
+			checkCorporateActionNotificationV05(obj);
 		}
 	};
 	/**
@@ -354,13 +386,51 @@ public class ConstraintNameChangeRule {
 	 */
 	public static final MMConstraint<CorporateActionNotificationV06> forCorporateActionNotificationV06 = new MMConstraint<CorporateActionNotificationV06>() {
 		{
-			validator = ConstraintNameChangeRule::checkCorporateActionNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameChangeRule";
 			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNameChangeRule.forCorporateActionNotificationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNameChangeRule.forCorporateActionNotificationV05;
 			owner_lazy = () -> CorporateActionNotificationV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotificationV06 obj) throws Exception {
+			checkCorporateActionNotificationV06(obj);
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V06
+	 * CorporateActionNotification002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NameChangeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotification002V06> forCorporateActionNotification002V06 = new MMConstraint<CorporateActionNotification002V06>() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NameChangeRule";
+			definition = "If CorporateActionDetails/AdditionalInformation/NewCompanyName/AdditionalInformation is present, then CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must be present and CorporateActionDetails/ChangeType/Code value NAME (Name) must be present in at least one occurrence of CorporateActionDetails/ChangeType.\r\n(MT 564 NVR C10).";
+			owner_lazy = () -> CorporateActionNotification002V06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CorporateActionNotification002V06 obj) throws Exception {
+			checkCorporateActionNotification002V06(obj);
 		}
 	};
 
@@ -386,7 +456,7 @@ public class ConstraintNameChangeRule {
 	 * CorporateActionDetails/ChangeType.<br>
 	 * (MT 564 NVR C10).
 	 */
-	public static void checkCorporateActionNotificationV07(CorporateActionNotificationV07 obj) throws Exception {
+	public static void checkCorporateActionNotification002V08(CorporateActionNotification002V08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -399,7 +469,7 @@ public class ConstraintNameChangeRule {
 	 * CorporateActionDetails/ChangeType.<br>
 	 * (MT 564 NVR C10).
 	 */
-	public static void checkCorporateActionNotification002V07(CorporateActionNotification002V07 obj) throws Exception {
+	public static void checkCorporateActionNotificationV07(CorporateActionNotificationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -473,6 +543,19 @@ public class ConstraintNameChangeRule {
 	 * (MT 564 NVR C10).
 	 */
 	public static void checkCorporateActionNotificationV06(CorporateActionNotificationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionDetails/AdditionalInformation/NewCompanyName/
+	 * AdditionalInformation is present, then
+	 * CorporateActionGeneralInformation/EventType/Code value CHAN (Change) must
+	 * be present and CorporateActionDetails/ChangeType/Code value NAME (Name)
+	 * must be present in at least one occurrence of
+	 * CorporateActionDetails/ChangeType.<br>
+	 * (MT 564 NVR C10).
+	 */
+	public static void checkCorporateActionNotification002V06(CorporateActionNotification002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

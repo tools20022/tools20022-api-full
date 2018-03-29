@@ -52,11 +52,15 @@ public class ConstraintUnitizedRule {
 	 */
 	public static final MMConstraint<RedemptionExecution10> forRedemptionExecution10 = new MMConstraint<RedemptionExecution10>() {
 		{
-			validator = ConstraintUnitizedRule::checkRedemptionExecution10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitizedRule";
 			definition = "If HedgeFundOrderType is not present or is not \"NUNI\" in at least one occurrence, then DealingPriceDetails must be present.";
 			owner_lazy = () -> RedemptionExecution10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution10 obj) throws Exception {
+			checkRedemptionExecution10(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintUnitizedRule {
 	 */
 	public static final MMConstraint<SubscriptionExecution7> forSubscriptionExecution7 = new MMConstraint<SubscriptionExecution7>() {
 		{
-			validator = ConstraintUnitizedRule::checkSubscriptionExecution7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitizedRule";
 			definition = "If HedgeFundOrderType is not present or is not \"NUNI\" in at least one occurrence, then DealingPriceDetails must be present.";
 			owner_lazy = () -> SubscriptionExecution7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution7 obj) throws Exception {
+			checkSubscriptionExecution7(obj);
 		}
 	};
 

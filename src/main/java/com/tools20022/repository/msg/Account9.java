@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.PartyIdentification10Choice;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AccountIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -113,7 +114,7 @@ public class Account9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account9, AccountIdentification1> mmIdentification = new MMMessageAttribute<Account9, AccountIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account9.mmObject();
@@ -125,7 +126,17 @@ public class Account9 {
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentification1.mmObject();
+			complexType_lazy = () -> AccountIdentification1.mmObject();
+		}
+
+		@Override
+		public AccountIdentification1 getValue(Account9 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Account9 obj, AccountIdentification1 value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "AcctSvcr")
@@ -164,7 +175,7 @@ public class Account9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Account9, Optional<PartyIdentification10Choice>> mmAccountServicer = new MMMessageAttribute<Account9, Optional<PartyIdentification10Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Account9.mmObject();
@@ -176,6 +187,16 @@ public class Account9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();
+		}
+
+		@Override
+		public Optional<PartyIdentification10Choice> getValue(Account9 obj) {
+			return obj.getAccountServicer();
+		}
+
+		@Override
+		public void setValue(Account9 obj, Optional<PartyIdentification10Choice> value) {
+			obj.setAccountServicer(value.orElse(null));
 		}
 	};
 
@@ -197,7 +218,7 @@ public class Account9 {
 		return identification;
 	}
 
-	public Account9 setIdentification(com.tools20022.repository.msg.AccountIdentification1 identification) {
+	public Account9 setIdentification(AccountIdentification1 identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

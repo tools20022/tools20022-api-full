@@ -247,7 +247,7 @@ public class DocumentIdentification11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification11, Max35Text> mmIdentification = new MMMessageAttribute<DocumentIdentification11, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification11.mmObject();
@@ -260,6 +260,16 @@ public class DocumentIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(DocumentIdentification11 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification11 obj, Max35Text value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "CreDtTm")
@@ -307,7 +317,7 @@ public class DocumentIdentification11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification11, Optional<DateAndDateTimeChoice>> mmCreationDateTime = new MMMessageAttribute<DocumentIdentification11, Optional<DateAndDateTimeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification11.mmObject();
@@ -320,6 +330,16 @@ public class DocumentIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndDateTimeChoice> getValue(DocumentIdentification11 obj) {
+			return obj.getCreationDateTime();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification11 obj, Optional<DateAndDateTimeChoice> value) {
+			obj.setCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyDplct")
@@ -367,7 +387,7 @@ public class DocumentIdentification11 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DocumentIdentification11, Optional<CopyDuplicate1Code>> mmCopyDuplicate = new MMMessageAttribute<DocumentIdentification11, Optional<CopyDuplicate1Code>>() {
 		{
 			businessElementTrace_lazy = () -> Document.mmCopyDuplicate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification11.mmObject();
@@ -380,6 +400,16 @@ public class DocumentIdentification11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
+		}
+
+		@Override
+		public Optional<CopyDuplicate1Code> getValue(DocumentIdentification11 obj) {
+			return obj.getCopyDuplicate();
+		}
+
+		@Override
+		public void setValue(DocumentIdentification11 obj, Optional<CopyDuplicate1Code> value) {
+			obj.setCopyDuplicate(value.orElse(null));
 		}
 	};
 

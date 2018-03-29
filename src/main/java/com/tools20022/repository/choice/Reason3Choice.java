@@ -122,7 +122,7 @@ public class Reason3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Reason3Choice, List<ProprietaryReason3>> mmReason = new MMMessageAssociationEnd<Reason3Choice, List<ProprietaryReason3>>() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason3Choice.mmObject();
@@ -135,6 +135,16 @@ public class Reason3Choice {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason3.mmObject();
+		}
+
+		@Override
+		public List<ProprietaryReason3> getValue(Reason3Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(Reason3Choice obj, List<ProprietaryReason3> value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -183,7 +193,7 @@ public class Reason3Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Reason3Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<Reason3Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Reason3Choice.mmObject();
@@ -197,6 +207,16 @@ public class Reason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(Reason3Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(Reason3Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 

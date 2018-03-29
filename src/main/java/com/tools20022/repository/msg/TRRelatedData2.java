@@ -106,7 +106,7 @@ public class TRRelatedData2 {
 	 * TRRelatedData1.mmTR34Command}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTR34Command = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TRRelatedData2, Optional<TR34Command1Code>> mmTR34Command = new MMMessageAttribute<TRRelatedData2, Optional<TR34Command1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TRRelatedData2.mmObject();
 			isDerived = false;
@@ -118,6 +118,16 @@ public class TRRelatedData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TR34Command1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TR34Command1Code> getValue(TRRelatedData2 obj) {
+			return obj.getTR34Command();
+		}
+
+		@Override
+		public void setValue(TRRelatedData2 obj, Optional<TR34Command1Code> value) {
+			obj.setTR34Command(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TRBlck")
@@ -154,7 +164,7 @@ public class TRRelatedData2 {
 	 * TRRelatedData1.mmTRBlock}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTRBlock = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TRRelatedData2, Optional<Max100KBinary>> mmTRBlock = new MMMessageAttribute<TRRelatedData2, Optional<Max100KBinary>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.TRRelatedData2.mmObject();
 			isDerived = false;
@@ -166,6 +176,16 @@ public class TRRelatedData2 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
+		}
+
+		@Override
+		public Optional<Max100KBinary> getValue(TRRelatedData2 obj) {
+			return obj.getTRBlock();
+		}
+
+		@Override
+		public void setValue(TRRelatedData2 obj, Optional<Max100KBinary> value) {
+			obj.setTRBlock(value.orElse(null));
 		}
 	};
 

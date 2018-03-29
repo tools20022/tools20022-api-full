@@ -111,7 +111,7 @@ public class ModificationReason5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationReason5Choice, ModifiedStatusReason1Code> mmCode = new MMMessageAttribute<ModificationReason5Choice, ModifiedStatusReason1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmModifiedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationReason5Choice.mmObject();
@@ -123,6 +123,16 @@ public class ModificationReason5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ModifiedStatusReason1Code.mmObject();
+		}
+
+		@Override
+		public ModifiedStatusReason1Code getValue(ModificationReason5Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ModificationReason5Choice obj, ModifiedStatusReason1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -165,7 +175,7 @@ public class ModificationReason5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ModificationReason5Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<ModificationReason5Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatusReason.mmModifiedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ModificationReason5Choice.mmObject();
@@ -178,6 +188,16 @@ public class ModificationReason5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(ModificationReason5Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ModificationReason5Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

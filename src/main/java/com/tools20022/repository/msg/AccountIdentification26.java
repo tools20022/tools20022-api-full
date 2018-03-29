@@ -26,6 +26,7 @@ import com.tools20022.repository.area.reda.StandingSettlementInstructionStatusAd
 import com.tools20022.repository.area.reda.StandingSettlementInstructionV01;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SimpleIdentificationInformation4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -131,7 +132,7 @@ public class AccountIdentification26 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AccountIdentification26, SimpleIdentificationInformation4> mmProprietary = new MMMessageAttribute<AccountIdentification26, SimpleIdentificationInformation4>() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification26.mmObject();
@@ -142,7 +143,17 @@ public class AccountIdentification26 {
 			definition = "Unique identifier for an account. It is assigned by the account servicer using a proprietary identification scheme.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.SimpleIdentificationInformation4.mmObject();
+			complexType_lazy = () -> SimpleIdentificationInformation4.mmObject();
+		}
+
+		@Override
+		public SimpleIdentificationInformation4 getValue(AccountIdentification26 obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AccountIdentification26 obj, SimpleIdentificationInformation4 value) {
+			obj.setProprietary(value);
 		}
 	};
 
@@ -167,7 +178,7 @@ public class AccountIdentification26 {
 		return proprietary;
 	}
 
-	public AccountIdentification26 setProprietary(com.tools20022.repository.msg.SimpleIdentificationInformation4 proprietary) {
+	public AccountIdentification26 setProprietary(SimpleIdentificationInformation4 proprietary) {
 		this.proprietary = Objects.requireNonNull(proprietary);
 		return this;
 	}

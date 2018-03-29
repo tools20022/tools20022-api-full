@@ -65,13 +65,17 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation6> forAdditionalBalanceInformation6 = new MMConstraint<AdditionalBalanceInformation6>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEligibleForCollateralPurposesRule.forAdditionalBalanceInformation14);
 			owner_lazy = () -> AdditionalBalanceInformation6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation6 obj) throws Exception {
+			checkAdditionalBalanceInformation6(obj);
 		}
 	};
 	/**
@@ -101,12 +105,16 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation7> forAdditionalBalanceInformation7 = new MMConstraint<AdditionalBalanceInformation7>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			owner_lazy = () -> AdditionalBalanceInformation7.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation7 obj) throws Exception {
+			checkAdditionalBalanceInformation7(obj);
 		}
 	};
 	/**
@@ -136,12 +144,16 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation5> forAdditionalBalanceInformation5 = new MMConstraint<AdditionalBalanceInformation5>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			owner_lazy = () -> AdditionalBalanceInformation5.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation5 obj) throws Exception {
+			checkAdditionalBalanceInformation5(obj);
 		}
 	};
 	/**
@@ -171,12 +183,16 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation8> forAdditionalBalanceInformation8 = new MMConstraint<AdditionalBalanceInformation8>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			owner_lazy = () -> AdditionalBalanceInformation8.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation8 obj) throws Exception {
+			checkAdditionalBalanceInformation8(obj);
 		}
 	};
 	/**
@@ -206,12 +222,16 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation9> forAdditionalBalanceInformation9 = new MMConstraint<AdditionalBalanceInformation9>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			owner_lazy = () -> AdditionalBalanceInformation9.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation9 obj) throws Exception {
+			checkAdditionalBalanceInformation9(obj);
 		}
 	};
 	/**
@@ -241,12 +261,16 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation10> forAdditionalBalanceInformation10 = new MMConstraint<AdditionalBalanceInformation10>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			owner_lazy = () -> AdditionalBalanceInformation10.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation10 obj) throws Exception {
+			checkAdditionalBalanceInformation10(obj);
 		}
 	};
 	/**
@@ -285,13 +309,17 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation11> forAdditionalBalanceInformation11 = new MMConstraint<AdditionalBalanceInformation11>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEligibleForCollateralPurposesRule.forAdditionalBalanceInformation15);
 			owner_lazy = () -> AdditionalBalanceInformation11.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation11 obj) throws Exception {
+			checkAdditionalBalanceInformation11(obj);
 		}
 	};
 	/**
@@ -321,12 +349,16 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation12> forAdditionalBalanceInformation12 = new MMConstraint<AdditionalBalanceInformation12>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			owner_lazy = () -> AdditionalBalanceInformation12.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation12 obj) throws Exception {
+			checkAdditionalBalanceInformation12(obj);
 		}
 	};
 	/**
@@ -362,13 +394,17 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation15> forAdditionalBalanceInformation15 = new MMConstraint<AdditionalBalanceInformation15>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEligibleForCollateralPurposesRule.forAdditionalBalanceInformation11;
 			owner_lazy = () -> AdditionalBalanceInformation15.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation15 obj) throws Exception {
+			checkAdditionalBalanceInformation15(obj);
 		}
 	};
 	/**
@@ -404,13 +440,17 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation14> forAdditionalBalanceInformation14 = new MMConstraint<AdditionalBalanceInformation14>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEligibleForCollateralPurposesRule.forAdditionalBalanceInformation6;
 			owner_lazy = () -> AdditionalBalanceInformation14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation14 obj) throws Exception {
+			checkAdditionalBalanceInformation14(obj);
 		}
 	};
 	/**
@@ -440,12 +480,16 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation16> forAdditionalBalanceInformation16 = new MMConstraint<AdditionalBalanceInformation16>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			owner_lazy = () -> AdditionalBalanceInformation16.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation16 obj) throws Exception {
+			checkAdditionalBalanceInformation16(obj);
 		}
 	};
 	/**
@@ -475,12 +519,16 @@ public class ConstraintEligibleForCollateralPurposesRule {
 	 */
 	public static final MMConstraint<AdditionalBalanceInformation17> forAdditionalBalanceInformation17 = new MMConstraint<AdditionalBalanceInformation17>() {
 		{
-			validator = ConstraintEligibleForCollateralPurposesRule::checkAdditionalBalanceInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleForCollateralPurposesRule";
 			definition = "If Subbalance type is EligibleForCollateralPurposes, then QuantityAndAvailability cannot be used.";
 			owner_lazy = () -> AdditionalBalanceInformation17.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Quantity/Quantity/QuantityAndAvailability</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SubBalanceType/Code</leftOperand><rightOperand>EligibleForCollateralPurposes</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(AdditionalBalanceInformation17 obj) throws Exception {
+			checkAdditionalBalanceInformation17(obj);
 		}
 	};
 

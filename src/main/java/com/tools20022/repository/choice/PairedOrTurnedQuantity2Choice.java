@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.entity.PairOff;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
@@ -126,7 +127,7 @@ public class PairedOrTurnedQuantity2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPairedOffQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PairedOrTurnedQuantity2Choice, Optional<FinancialInstrumentQuantity15Choice>> mmPairedOffQuantity = new MMMessageAssociationEnd<PairedOrTurnedQuantity2Choice, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PairOff.mmPairedOffQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmObject();
@@ -139,7 +140,17 @@ public class PairedOrTurnedQuantity2Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(PairedOrTurnedQuantity2Choice obj) {
+			return obj.getPairedOffQuantity();
+		}
+
+		@Override
+		public void setValue(PairedOrTurnedQuantity2Choice obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setPairedOffQuantity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TrndQty")
@@ -181,7 +192,7 @@ public class PairedOrTurnedQuantity2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTurnedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PairedOrTurnedQuantity2Choice, Optional<FinancialInstrumentQuantity15Choice>> mmTurnedQuantity = new MMMessageAssociationEnd<PairedOrTurnedQuantity2Choice, Optional<FinancialInstrumentQuantity15Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTurnedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.choice.PairedOrTurnedQuantity2Choice.mmObject();
@@ -194,7 +205,17 @@ public class PairedOrTurnedQuantity2Choice {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmObject();
+			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public Optional<FinancialInstrumentQuantity15Choice> getValue(PairedOrTurnedQuantity2Choice obj) {
+			return obj.getTurnedQuantity();
+		}
+
+		@Override
+		public void setValue(PairedOrTurnedQuantity2Choice obj, Optional<FinancialInstrumentQuantity15Choice> value) {
+			obj.setTurnedQuantity(value.orElse(null));
 		}
 	};
 
@@ -224,7 +245,7 @@ public class PairedOrTurnedQuantity2Choice {
 		return pairedOffQuantity == null ? Optional.empty() : Optional.of(pairedOffQuantity);
 	}
 
-	public PairedOrTurnedQuantity2Choice setPairedOffQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice pairedOffQuantity) {
+	public PairedOrTurnedQuantity2Choice setPairedOffQuantity(FinancialInstrumentQuantity15Choice pairedOffQuantity) {
 		this.pairedOffQuantity = pairedOffQuantity;
 		return this;
 	}
@@ -233,7 +254,7 @@ public class PairedOrTurnedQuantity2Choice {
 		return turnedQuantity == null ? Optional.empty() : Optional.of(turnedQuantity);
 	}
 
-	public PairedOrTurnedQuantity2Choice setTurnedQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice turnedQuantity) {
+	public PairedOrTurnedQuantity2Choice setTurnedQuantity(FinancialInstrumentQuantity15Choice turnedQuantity) {
 		this.turnedQuantity = turnedQuantity;
 		return this;
 	}

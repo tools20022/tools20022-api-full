@@ -130,7 +130,7 @@ public class ReportData4 {
 	 * definition} = "Identification of the report as assigned by the sender."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData4, Max35Text> mmMessageIdentification = new MMMessageAttribute<ReportData4, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
 			isDerived = false;
@@ -141,6 +141,16 @@ public class ReportData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(ReportData4 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(ReportData4 obj, Max35Text value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "ValDt", required = true)
@@ -176,7 +186,7 @@ public class ReportData4 {
 	 * definition} = "Value date for which the pay-in schedule is generated."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData4, ISODate> mmValueDate = new MMMessageAttribute<ReportData4, ISODate>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
@@ -188,6 +198,16 @@ public class ReportData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public ISODate getValue(ReportData4 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(ReportData4 obj, ISODate value) {
+			obj.setValueDate(value);
 		}
 	};
 	@XmlElement(name = "DtAndTmStmp", required = true)
@@ -225,7 +245,7 @@ public class ReportData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDateAndTimeStamp = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData4, ISODateTime> mmDateAndTimeStamp = new MMMessageAttribute<ReportData4, ISODateTime>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmCalculationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
@@ -237,6 +257,16 @@ public class ReportData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public ISODateTime getValue(ReportData4 obj) {
+			return obj.getDateAndTimeStamp();
+		}
+
+		@Override
+		public void setValue(ReportData4 obj, ISODateTime value) {
+			obj.setDateAndTimeStamp(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -272,7 +302,7 @@ public class ReportData4 {
 	 * definition} = "Type of pay-in schedule."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData4, Entry2Code> mmType = new MMMessageAttribute<ReportData4, Entry2Code>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
@@ -284,6 +314,16 @@ public class ReportData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Entry2Code.mmObject();
+		}
+
+		@Override
+		public Entry2Code getValue(ReportData4 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(ReportData4 obj, Entry2Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "SchdlTp", required = true)
@@ -317,7 +357,7 @@ public class ReportData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmScheduleType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData4, Exact4AlphaNumericText> mmScheduleType = new MMMessageAttribute<ReportData4, Exact4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
 			isDerived = false;
@@ -328,6 +368,16 @@ public class ReportData4 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(ReportData4 obj) {
+			return obj.getScheduleType();
+		}
+
+		@Override
+		public void setValue(ReportData4 obj, Exact4AlphaNumericText value) {
+			obj.setScheduleType(value);
 		}
 	};
 	@XmlElement(name = "SttlmSsnIdr")
@@ -361,7 +411,7 @@ public class ReportData4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementSessionIdentifier = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReportData4, Optional<Exact4AlphaNumericText>> mmSettlementSessionIdentifier = new MMMessageAttribute<ReportData4, Optional<Exact4AlphaNumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ReportData4.mmObject();
 			isDerived = false;
@@ -372,6 +422,16 @@ public class ReportData4 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Exact4AlphaNumericText> getValue(ReportData4 obj) {
+			return obj.getSettlementSessionIdentifier();
+		}
+
+		@Override
+		public void setValue(ReportData4 obj, Optional<Exact4AlphaNumericText> value) {
+			obj.setSettlementSessionIdentifier(value.orElse(null));
 		}
 	};
 

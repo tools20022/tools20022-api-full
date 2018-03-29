@@ -51,11 +51,15 @@ public class ConstraintNameRule {
 	 */
 	public static final MMConstraint<FinancialInstrument18> forFinancialInstrument18 = new MMConstraint<FinancialInstrument18>() {
 		{
-			validator = ConstraintNameRule::checkFinancialInstrument18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameRule";
 			definition = "If the ISINIdentifier contradicts the Name, the ISIN Identifier is used as the identification of the instrument and the name is ignored.";
 			owner_lazy = () -> FinancialInstrument18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(FinancialInstrument18 obj) throws Exception {
+			checkFinancialInstrument18(obj);
 		}
 	};
 

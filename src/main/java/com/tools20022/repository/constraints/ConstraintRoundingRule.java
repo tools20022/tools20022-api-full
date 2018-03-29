@@ -49,11 +49,15 @@ public class ConstraintRoundingRule {
 	 */
 	public static final MMConstraint<Transfer10> forTransfer10 = new MMConstraint<Transfer10>() {
 		{
-			validator = ConstraintRoundingRule::checkTransfer10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingRule";
 			definition = "Rounding may only be present if PortfolioTransferOutRate is present.";
 			owner_lazy = () -> Transfer10.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer10 obj) throws Exception {
+			checkTransfer10(obj);
 		}
 	};
 	/**
@@ -77,11 +81,15 @@ public class ConstraintRoundingRule {
 	 */
 	public static final MMConstraint<Transfer14> forTransfer14 = new MMConstraint<Transfer14>() {
 		{
-			validator = ConstraintRoundingRule::checkTransfer14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingRule";
 			definition = "Rounding may only be present if PortfolioTransferOutRate is present.";
 			owner_lazy = () -> Transfer14.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer14 obj) throws Exception {
+			checkTransfer14(obj);
 		}
 	};
 	/**
@@ -105,11 +113,15 @@ public class ConstraintRoundingRule {
 	 */
 	public static final MMConstraint<Transfer24> forTransfer24 = new MMConstraint<Transfer24>() {
 		{
-			validator = ConstraintRoundingRule::checkTransfer24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingRule";
 			definition = "Rounding may only be present if PortfolioTransferOutRate is present.";
 			owner_lazy = () -> Transfer24.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer24 obj) throws Exception {
+			checkTransfer24(obj);
 		}
 	};
 	/**
@@ -133,11 +145,15 @@ public class ConstraintRoundingRule {
 	 */
 	public static final MMConstraint<Transfer13> forTransfer13 = new MMConstraint<Transfer13>() {
 		{
-			validator = ConstraintRoundingRule::checkTransfer13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingRule";
 			definition = "Rounding may only be present if PortfolioTransferOutRate is present.";
 			owner_lazy = () -> Transfer13.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer13 obj) throws Exception {
+			checkTransfer13(obj);
 		}
 	};
 	/**
@@ -169,12 +185,16 @@ public class ConstraintRoundingRule {
 	 */
 	public static final MMConstraint<Transfer23> forTransfer23 = new MMConstraint<Transfer23>() {
 		{
-			validator = ConstraintRoundingRule::checkTransfer23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingRule";
 			definition = "Rounding may only be present if PortfolioTransferOutRate is present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRoundingRule.forTransfer28);
 			owner_lazy = () -> Transfer23.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer23 obj) throws Exception {
+			checkTransfer23(obj);
 		}
 	};
 	/**
@@ -211,13 +231,17 @@ public class ConstraintRoundingRule {
 	 */
 	public static final MMConstraint<Transfer28> forTransfer28 = new MMConstraint<Transfer28>() {
 		{
-			validator = ConstraintRoundingRule::checkTransfer28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingRule";
 			definition = "Rounding may only be present if PortfolioTransferOutRate is present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRoundingRule.forTransfer31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRoundingRule.forTransfer23;
 			owner_lazy = () -> Transfer28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer28 obj) throws Exception {
+			checkTransfer28(obj);
 		}
 	};
 	/**
@@ -246,12 +270,16 @@ public class ConstraintRoundingRule {
 	 */
 	public static final MMConstraint<Transfer31> forTransfer31 = new MMConstraint<Transfer31>() {
 		{
-			validator = ConstraintRoundingRule::checkTransfer31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingRule";
 			definition = "Rounding may only be present if PortfolioTransferOutRate is present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRoundingRule.forTransfer28;
 			owner_lazy = () -> Transfer31.mmObject();
+		}
+
+		@Override
+		public void executeValidator(Transfer31 obj) throws Exception {
+			checkTransfer31(obj);
 		}
 	};
 

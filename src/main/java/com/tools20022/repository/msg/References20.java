@@ -26,6 +26,7 @@ import com.tools20022.repository.area.sese.TransferInCancellationRequestV07;
 import com.tools20022.repository.area.sese.TransferOutCancellationRequestV07;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AdditionalReference6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Optional;
@@ -136,7 +137,7 @@ public class References20 {
 	 * References15.mmPoolReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPoolReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References20, Optional<AdditionalReference6>> mmPoolReference = new MMMessageAttribute<References20, Optional<AdditionalReference6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References20.mmObject();
 			isDerived = false;
@@ -147,7 +148,17 @@ public class References20 {
 			previousVersion_lazy = () -> References15.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
+			complexType_lazy = () -> AdditionalReference6.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference6> getValue(References20 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(References20 obj, Optional<AdditionalReference6> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -185,7 +196,7 @@ public class References20 {
 	 * References15.mmPreviousReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviousReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References20, Optional<AdditionalReference6>> mmPreviousReference = new MMMessageAttribute<References20, Optional<AdditionalReference6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References20.mmObject();
 			isDerived = false;
@@ -196,7 +207,17 @@ public class References20 {
 			previousVersion_lazy = () -> References15.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
+			complexType_lazy = () -> AdditionalReference6.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference6> getValue(References20 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(References20 obj, Optional<AdditionalReference6> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -234,7 +255,7 @@ public class References20 {
 	 * References15.mmRelatedReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References20, Optional<AdditionalReference6>> mmRelatedReference = new MMMessageAttribute<References20, Optional<AdditionalReference6>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.References20.mmObject();
 			isDerived = false;
@@ -245,7 +266,17 @@ public class References20 {
 			previousVersion_lazy = () -> References15.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference6.mmObject();
+			complexType_lazy = () -> AdditionalReference6.mmObject();
+		}
+
+		@Override
+		public Optional<AdditionalReference6> getValue(References20 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(References20 obj, Optional<AdditionalReference6> value) {
+			obj.setRelatedReference(value.orElse(null));
 		}
 	};
 
@@ -271,7 +302,7 @@ public class References20 {
 		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public References20 setPoolReference(com.tools20022.repository.msg.AdditionalReference6 poolReference) {
+	public References20 setPoolReference(AdditionalReference6 poolReference) {
 		this.poolReference = poolReference;
 		return this;
 	}
@@ -280,7 +311,7 @@ public class References20 {
 		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public References20 setPreviousReference(com.tools20022.repository.msg.AdditionalReference6 previousReference) {
+	public References20 setPreviousReference(AdditionalReference6 previousReference) {
 		this.previousReference = previousReference;
 		return this;
 	}
@@ -289,7 +320,7 @@ public class References20 {
 		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public References20 setRelatedReference(com.tools20022.repository.msg.AdditionalReference6 relatedReference) {
+	public References20 setRelatedReference(AdditionalReference6 relatedReference) {
 		this.relatedReference = relatedReference;
 		return this;
 	}

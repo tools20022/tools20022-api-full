@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.Quantity11Choice;
 import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
@@ -123,7 +124,7 @@ public class InstructedOrQuantityToReceive2Choice {
 	 * "Quantity of underlying securities to which this instruction applies."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructedQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructedOrQuantityToReceive2Choice, Quantity11Choice> mmInstructedQuantity = new MMMessageAssociationEnd<InstructedOrQuantityToReceive2Choice, Quantity11Choice>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice.mmObject();
@@ -135,7 +136,17 @@ public class InstructedOrQuantityToReceive2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.Quantity11Choice.mmObject();
+			type_lazy = () -> Quantity11Choice.mmObject();
+		}
+
+		@Override
+		public Quantity11Choice getValue(InstructedOrQuantityToReceive2Choice obj) {
+			return obj.getInstructedQuantity();
+		}
+
+		@Override
+		public void setValue(InstructedOrQuantityToReceive2Choice obj, Quantity11Choice value) {
+			obj.setInstructedQuantity(value);
 		}
 	};
 	@XmlElement(name = "QtyToRcv", required = true)
@@ -176,7 +187,7 @@ public class InstructedOrQuantityToReceive2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantityToReceive = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<InstructedOrQuantityToReceive2Choice, Quantity11Choice> mmQuantityToReceive = new MMMessageAssociationEnd<InstructedOrQuantityToReceive2Choice, Quantity11Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmQuantityToReceive;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InstructedOrQuantityToReceive2Choice.mmObject();
@@ -189,7 +200,17 @@ public class InstructedOrQuantityToReceive2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.Quantity11Choice.mmObject();
+			type_lazy = () -> Quantity11Choice.mmObject();
+		}
+
+		@Override
+		public Quantity11Choice getValue(InstructedOrQuantityToReceive2Choice obj) {
+			return obj.getQuantityToReceive();
+		}
+
+		@Override
+		public void setValue(InstructedOrQuantityToReceive2Choice obj, Quantity11Choice value) {
+			obj.setQuantityToReceive(value);
 		}
 	};
 
@@ -221,7 +242,7 @@ public class InstructedOrQuantityToReceive2Choice {
 		return instructedQuantity;
 	}
 
-	public InstructedOrQuantityToReceive2Choice setInstructedQuantity(com.tools20022.repository.choice.Quantity11Choice instructedQuantity) {
+	public InstructedOrQuantityToReceive2Choice setInstructedQuantity(Quantity11Choice instructedQuantity) {
 		this.instructedQuantity = Objects.requireNonNull(instructedQuantity);
 		return this;
 	}
@@ -230,7 +251,7 @@ public class InstructedOrQuantityToReceive2Choice {
 		return quantityToReceive;
 	}
 
-	public InstructedOrQuantityToReceive2Choice setQuantityToReceive(com.tools20022.repository.choice.Quantity11Choice quantityToReceive) {
+	public InstructedOrQuantityToReceive2Choice setQuantityToReceive(Quantity11Choice quantityToReceive) {
 		this.quantityToReceive = Objects.requireNonNull(quantityToReceive);
 		return this;
 	}

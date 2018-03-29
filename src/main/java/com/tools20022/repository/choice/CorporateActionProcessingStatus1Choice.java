@@ -146,7 +146,7 @@ public class CorporateActionProcessingStatus1Choice {
 	 * definition} = "Specifies the status of the details of the event."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmEventStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionProcessingStatus1Choice, CorporateActionEventStatus1> mmEventStatus = new MMMessageAssociationEnd<CorporateActionProcessingStatus1Choice, CorporateActionEventStatus1>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmObject();
@@ -160,6 +160,16 @@ public class CorporateActionProcessingStatus1Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CorporateActionEventStatus1.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventStatus1 getValue(CorporateActionProcessingStatus1Choice obj) {
+			return obj.getEventStatus();
+		}
+
+		@Override
+		public void setValue(CorporateActionProcessingStatus1Choice obj, CorporateActionEventStatus1 value) {
+			obj.setEventStatus(value);
 		}
 	};
 	@XmlElement(name = "ForInfOnlyInd", required = true)
@@ -197,7 +207,7 @@ public class CorporateActionProcessingStatus1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmForInformationOnlyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionProcessingStatus1Choice, YesNoIndicator> mmForInformationOnlyIndicator = new MMMessageAttribute<CorporateActionProcessingStatus1Choice, YesNoIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionProcessingStatus1Choice.mmObject();
 			isDerived = false;
@@ -209,6 +219,16 @@ public class CorporateActionProcessingStatus1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(CorporateActionProcessingStatus1Choice obj) {
+			return obj.getForInformationOnlyIndicator();
+		}
+
+		@Override
+		public void setValue(CorporateActionProcessingStatus1Choice obj, YesNoIndicator value) {
+			obj.setForInformationOnlyIndicator(value);
 		}
 	};
 

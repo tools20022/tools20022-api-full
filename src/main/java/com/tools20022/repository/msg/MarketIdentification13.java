@@ -143,7 +143,7 @@ public class MarketIdentification13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification13, Optional<MarketIdentification3Choice>> mmIdentification = new MMMessageAssociationEnd<MarketIdentification13, Optional<MarketIdentification3Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification13.mmObject();
@@ -158,6 +158,16 @@ public class MarketIdentification13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketIdentification3Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification3Choice> getValue(MarketIdentification13 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MarketIdentification13 obj, Optional<MarketIdentification3Choice> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Tp")
@@ -204,7 +214,7 @@ public class MarketIdentification13 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification13, Optional<MarketType12Choice>> mmType = new MMMessageAssociationEnd<MarketIdentification13, Optional<MarketType12Choice>>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification13.mmObject();
@@ -219,6 +229,16 @@ public class MarketIdentification13 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MarketType12Choice.mmObject();
+		}
+
+		@Override
+		public Optional<MarketType12Choice> getValue(MarketIdentification13 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MarketIdentification13 obj, Optional<MarketType12Choice> value) {
+			obj.setType(value.orElse(null));
 		}
 	};
 

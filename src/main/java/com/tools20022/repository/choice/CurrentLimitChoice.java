@@ -116,7 +116,7 @@ public class CurrentLimitChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRiskManagementCurrentLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrentLimitChoice, RiskManagementLimitIdentificationDetails> mmRiskManagementCurrentLimitIdentification = new MMMessageAssociationEnd<CurrentLimitChoice, RiskManagementLimitIdentificationDetails>() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentLimitChoice.mmObject();
@@ -129,6 +129,16 @@ public class CurrentLimitChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
+		}
+
+		@Override
+		public RiskManagementLimitIdentificationDetails getValue(CurrentLimitChoice obj) {
+			return obj.getRiskManagementCurrentLimitIdentification();
+		}
+
+		@Override
+		public void setValue(CurrentLimitChoice obj, RiskManagementLimitIdentificationDetails value) {
+			obj.setRiskManagementCurrentLimitIdentification(value);
 		}
 	};
 	@XmlElement(name = "LqdtyMgmtCurLmtId", required = true)
@@ -167,7 +177,7 @@ public class CurrentLimitChoice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmLiquidityManagementCurrentLimitIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CurrentLimitChoice, LiquidityManagementLimitIdentificationDetails> mmLiquidityManagementCurrentLimitIdentification = new MMMessageAssociationEnd<CurrentLimitChoice, LiquidityManagementLimitIdentificationDetails>() {
 		{
 			businessComponentTrace_lazy = () -> LiquidityManagementLimit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentLimitChoice.mmObject();
@@ -180,6 +190,16 @@ public class CurrentLimitChoice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LiquidityManagementLimitIdentificationDetails.mmObject();
+		}
+
+		@Override
+		public LiquidityManagementLimitIdentificationDetails getValue(CurrentLimitChoice obj) {
+			return obj.getLiquidityManagementCurrentLimitIdentification();
+		}
+
+		@Override
+		public void setValue(CurrentLimitChoice obj, LiquidityManagementLimitIdentificationDetails value) {
+			obj.setLiquidityManagementCurrentLimitIdentification(value);
 		}
 	};
 

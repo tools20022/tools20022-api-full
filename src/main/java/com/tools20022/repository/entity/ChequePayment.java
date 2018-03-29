@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.PaymentInstrument17Choice;
 import com.tools20022.repository.choice.PaymentInstrument18Choice;
 import com.tools20022.repository.choice.PaymentInstrument6Choice;
+import com.tools20022.repository.entity.Cheque;
 import com.tools20022.repository.entity.IndividualPayment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PaymentInstrument7;
@@ -147,7 +148,7 @@ public class ChequePayment extends IndividualPayment {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmCheque = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<ChequePayment, List<Cheque>> mmCheque = new MMBusinessAssociationEnd<ChequePayment, List<Cheque>>() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentInstrument6Choice.mmChequeDetails);
 			isDerived = false;
@@ -159,6 +160,16 @@ public class ChequePayment extends IndividualPayment {
 			opposite_lazy = () -> com.tools20022.repository.entity.Cheque.mmRelatedPayment;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.Cheque.mmObject();
+		}
+
+		@Override
+		public List<Cheque> getValue(ChequePayment obj) {
+			return obj.getCheque();
+		}
+
+		@Override
+		public void setValue(ChequePayment obj, List<Cheque> value) {
+			obj.setCheque(value);
 		}
 	};
 

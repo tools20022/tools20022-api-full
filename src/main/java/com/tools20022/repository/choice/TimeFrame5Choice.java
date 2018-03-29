@@ -110,7 +110,7 @@ public class TimeFrame5Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradePlus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeFrame5Choice, Number> mmTradePlus = new MMMessageAttribute<TimeFrame5Choice, Number>() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmTradePlus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame5Choice.mmObject();
@@ -122,6 +122,16 @@ public class TimeFrame5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(TimeFrame5Choice obj) {
+			return obj.getTradePlus();
+		}
+
+		@Override
+		public void setValue(TimeFrame5Choice obj, Number value) {
+			obj.setTradePlus(value);
 		}
 	};
 	@XmlElement(name = "Prepmt", required = true)
@@ -159,7 +169,7 @@ public class TimeFrame5Choice {
 	 * definition} = "Indicates whether pre-payment is necessary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPrepayment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TimeFrame5Choice, YesNoIndicator> mmPrepayment = new MMMessageAttribute<TimeFrame5Choice, YesNoIndicator>() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmPrepayment;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame5Choice.mmObject();
@@ -171,6 +181,16 @@ public class TimeFrame5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(TimeFrame5Choice obj) {
+			return obj.getPrepayment();
+		}
+
+		@Override
+		public void setValue(TimeFrame5Choice obj, YesNoIndicator value) {
+			obj.setPrepayment(value);
 		}
 	};
 

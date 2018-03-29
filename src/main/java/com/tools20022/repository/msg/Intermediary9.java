@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.InvestorRole;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Account7;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -183,7 +184,7 @@ public class Intermediary9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary9, PartyIdentification2Choice> mmIdentification = new MMMessageAttribute<Intermediary9, PartyIdentification2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary9.mmObject();
@@ -196,6 +197,16 @@ public class Intermediary9 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification2Choice getValue(Intermediary9 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(Intermediary9 obj, PartyIdentification2Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Acct")
@@ -238,7 +249,7 @@ public class Intermediary9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Intermediary9, Optional<Account7>> mmAccount = new MMMessageAssociationEnd<Intermediary9, Optional<Account7>>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary9.mmObject();
@@ -251,7 +262,17 @@ public class Intermediary9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.Account7.mmObject();
+			type_lazy = () -> Account7.mmObject();
+		}
+
+		@Override
+		public Optional<Account7> getValue(Intermediary9 obj) {
+			return obj.getAccount();
+		}
+
+		@Override
+		public void setValue(Intermediary9 obj, Optional<Account7> value) {
+			obj.setAccount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrdrOrgtrElgblty")
@@ -298,7 +319,7 @@ public class Intermediary9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOrderOriginatorEligibility = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary9, Optional<OrderOriginatorEligibility1Code>> mmOrderOriginatorEligibility = new MMMessageAttribute<Intermediary9, Optional<OrderOriginatorEligibility1Code>>() {
 		{
 			businessElementTrace_lazy = () -> InvestorRole.mmCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary9.mmObject();
@@ -311,6 +332,16 @@ public class Intermediary9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OrderOriginatorEligibility1Code.mmObject();
+		}
+
+		@Override
+		public Optional<OrderOriginatorEligibility1Code> getValue(Intermediary9 obj) {
+			return obj.getOrderOriginatorEligibility();
+		}
+
+		@Override
+		public void setValue(Intermediary9 obj, Optional<OrderOriginatorEligibility1Code> value) {
+			obj.setOrderOriginatorEligibility(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TradgPtyCpcty")
@@ -355,7 +386,7 @@ public class Intermediary9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradingPartyCapacity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary9, Optional<TradingCapacity2Code>> mmTradingPartyCapacity = new MMMessageAttribute<Intermediary9, Optional<TradingCapacity2Code>>() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary9.mmObject();
@@ -368,6 +399,16 @@ public class Intermediary9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TradingCapacity2Code.mmObject();
+		}
+
+		@Override
+		public Optional<TradingCapacity2Code> getValue(Intermediary9 obj) {
+			return obj.getTradingPartyCapacity();
+		}
+
+		@Override
+		public void setValue(Intermediary9 obj, Optional<TradingCapacity2Code> value) {
+			obj.setTradingPartyCapacity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Role")
@@ -411,7 +452,7 @@ public class Intermediary9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary9, Optional<InvestmentFundRole2Code>> mmRole = new MMMessageAttribute<Intermediary9, Optional<InvestmentFundRole2Code>>() {
 		{
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary9.mmObject();
@@ -424,6 +465,16 @@ public class Intermediary9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> InvestmentFundRole2Code.mmObject();
+		}
+
+		@Override
+		public Optional<InvestmentFundRole2Code> getValue(Intermediary9 obj) {
+			return obj.getRole();
+		}
+
+		@Override
+		public void setValue(Intermediary9 obj, Optional<InvestmentFundRole2Code> value) {
+			obj.setRole(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XtndedRole")
@@ -460,7 +511,7 @@ public class Intermediary9 {
 	 * definition} = "Function performed by the intermediary."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedRole = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Intermediary9, Optional<Extended350Code>> mmExtendedRole = new MMMessageAttribute<Intermediary9, Optional<Extended350Code>>() {
 		{
 			businessComponentTrace_lazy = () -> TradePartyRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.Intermediary9.mmObject();
@@ -472,6 +523,16 @@ public class Intermediary9 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Optional<Extended350Code> getValue(Intermediary9 obj) {
+			return obj.getExtendedRole();
+		}
+
+		@Override
+		public void setValue(Intermediary9 obj, Optional<Extended350Code> value) {
+			obj.setExtendedRole(value.orElse(null));
 		}
 	};
 	/**
@@ -556,7 +617,7 @@ public class Intermediary9 {
 		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public Intermediary9 setAccount(com.tools20022.repository.msg.Account7 account) {
+	public Intermediary9 setAccount(Account7 account) {
 		this.account = account;
 		return this;
 	}

@@ -22,6 +22,9 @@ import com.tools20022.repository.codeset.ActiveCurrencyCode;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashAccount4;
+import com.tools20022.repository.msg.DirectDebitMandate4;
+import com.tools20022.repository.msg.PaymentCard2;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,7 +138,7 @@ public class PaymentInstrument8 {
 	 * definition} = "Currency associated with the payment instrument."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument8, ActiveCurrencyCode> mmSettlementCurrency = new MMMessageAttribute<PaymentInstrument8, ActiveCurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument8.mmObject();
@@ -148,9 +151,19 @@ public class PaymentInstrument8 {
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
+
+		@Override
+		public ActiveCurrencyCode getValue(PaymentInstrument8 obj) {
+			return obj.getSettlementCurrency();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument8 obj, ActiveCurrencyCode value) {
+			obj.setSettlementCurrency(value);
+		}
 	};
 	@XmlElement(name = "CshAcctDtls", required = true)
-	protected List<com.tools20022.repository.msg.CashAccount4> cashAccountDetails;
+	protected List<CashAccount4> cashAccountDetails;
 	/**
 	 * 
 	 <p>
@@ -184,7 +197,7 @@ public class PaymentInstrument8 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashAccountDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument8, List<CashAccount4>> mmCashAccountDetails = new MMMessageAssociationEnd<PaymentInstrument8, List<CashAccount4>>() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument8.mmObject();
@@ -196,7 +209,17 @@ public class PaymentInstrument8 {
 			maxOccurs = 3;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashAccount4.mmObject();
+			type_lazy = () -> CashAccount4.mmObject();
+		}
+
+		@Override
+		public List<CashAccount4> getValue(PaymentInstrument8 obj) {
+			return obj.getCashAccountDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument8 obj, List<CashAccount4> value) {
+			obj.setCashAccountDetails(value);
 		}
 	};
 	@XmlElement(name = "PmtCardDtls", required = true)
@@ -232,7 +255,7 @@ public class PaymentInstrument8 {
 	 * definition} = "Settlement instructions for a payment by card."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentCardDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument8, PaymentCard2> mmPaymentCardDetails = new MMMessageAssociationEnd<PaymentInstrument8, PaymentCard2>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument8.mmObject();
@@ -244,7 +267,17 @@ public class PaymentInstrument8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentCard2.mmObject();
+			type_lazy = () -> PaymentCard2.mmObject();
+		}
+
+		@Override
+		public PaymentCard2 getValue(PaymentInstrument8 obj) {
+			return obj.getPaymentCardDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument8 obj, PaymentCard2 value) {
+			obj.setPaymentCardDetails(value);
 		}
 	};
 	@XmlElement(name = "DrctDbtDtls", required = true)
@@ -279,7 +312,7 @@ public class PaymentInstrument8 {
 	 * definition} = "Settlement instructions for a payment by direct debit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDirectDebitDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentInstrument8, DirectDebitMandate4> mmDirectDebitDetails = new MMMessageAssociationEnd<PaymentInstrument8, DirectDebitMandate4>() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument8.mmObject();
@@ -291,7 +324,17 @@ public class PaymentInstrument8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.DirectDebitMandate4.mmObject();
+			type_lazy = () -> DirectDebitMandate4.mmObject();
+		}
+
+		@Override
+		public DirectDebitMandate4 getValue(PaymentInstrument8 obj) {
+			return obj.getDirectDebitDetails();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument8 obj, DirectDebitMandate4 value) {
+			obj.setDirectDebitDetails(value);
 		}
 	};
 	@XmlElement(name = "Chq", required = true)
@@ -329,7 +372,7 @@ public class PaymentInstrument8 {
 	 * definition} = "Indicates whether the payment is done via cheque."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCheque = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument8, YesNoIndicator> mmCheque = new MMMessageAttribute<PaymentInstrument8, YesNoIndicator>() {
 		{
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument8.mmObject();
@@ -341,6 +384,16 @@ public class PaymentInstrument8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PaymentInstrument8 obj) {
+			return obj.getCheque();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument8 obj, YesNoIndicator value) {
+			obj.setCheque(value);
 		}
 	};
 	@XmlElement(name = "BkrsDrft", required = true)
@@ -378,7 +431,7 @@ public class PaymentInstrument8 {
 	 * definition} = "Indicates whether the payment is done via draft."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBankersDraft = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentInstrument8, YesNoIndicator> mmBankersDraft = new MMMessageAttribute<PaymentInstrument8, YesNoIndicator>() {
 		{
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument8.mmObject();
@@ -390,6 +443,16 @@ public class PaymentInstrument8 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public YesNoIndicator getValue(PaymentInstrument8 obj) {
+			return obj.getBankersDraft();
+		}
+
+		@Override
+		public void setValue(PaymentInstrument8 obj, YesNoIndicator value) {
+			obj.setBankersDraft(value);
 		}
 	};
 	/**
@@ -487,7 +550,7 @@ public class PaymentInstrument8 {
 		return cashAccountDetails == null ? cashAccountDetails = new ArrayList<>() : cashAccountDetails;
 	}
 
-	public PaymentInstrument8 setCashAccountDetails(List<com.tools20022.repository.msg.CashAccount4> cashAccountDetails) {
+	public PaymentInstrument8 setCashAccountDetails(List<CashAccount4> cashAccountDetails) {
 		this.cashAccountDetails = Objects.requireNonNull(cashAccountDetails);
 		return this;
 	}
@@ -496,7 +559,7 @@ public class PaymentInstrument8 {
 		return paymentCardDetails;
 	}
 
-	public PaymentInstrument8 setPaymentCardDetails(com.tools20022.repository.msg.PaymentCard2 paymentCardDetails) {
+	public PaymentInstrument8 setPaymentCardDetails(PaymentCard2 paymentCardDetails) {
 		this.paymentCardDetails = Objects.requireNonNull(paymentCardDetails);
 		return this;
 	}
@@ -505,7 +568,7 @@ public class PaymentInstrument8 {
 		return directDebitDetails;
 	}
 
-	public PaymentInstrument8 setDirectDebitDetails(com.tools20022.repository.msg.DirectDebitMandate4 directDebitDetails) {
+	public PaymentInstrument8 setDirectDebitDetails(DirectDebitMandate4 directDebitDetails) {
 		this.directDebitDetails = Objects.requireNonNull(directDebitDetails);
 		return this;
 	}

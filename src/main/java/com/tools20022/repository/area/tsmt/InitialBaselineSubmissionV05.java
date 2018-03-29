@@ -25,7 +25,6 @@ import com.tools20022.repository.area.TradeServicesManagementLatestVersion;
 import com.tools20022.repository.choice.BankContactPerson1Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -162,7 +161,7 @@ public class InitialBaselineSubmissionV05 {
 	 * InitialBaselineSubmissionV04.mmSubmissionIdentification}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubmissionIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InitialBaselineSubmissionV05, MessageIdentification1> mmSubmissionIdentification = new MMMessageBuildingBlock<InitialBaselineSubmissionV05, MessageIdentification1>() {
 		{
 			xmlTag = "SubmissnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,12 +173,14 @@ public class InitialBaselineSubmissionV05 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InitialBaselineSubmissionV05.class.getMethod("getSubmissionIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(InitialBaselineSubmissionV05 obj) {
+			return obj.getSubmissionIdentification();
+		}
+
+		@Override
+		public void setValue(InitialBaselineSubmissionV05 obj, MessageIdentification1 value) {
+			obj.setSubmissionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SubmitrTxRef", required = true)
@@ -213,7 +214,7 @@ public class InitialBaselineSubmissionV05 {
 	 * InitialBaselineSubmissionV04.mmSubmitterTransactionReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSubmitterTransactionReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InitialBaselineSubmissionV05, SimpleIdentificationInformation> mmSubmitterTransactionReference = new MMMessageBuildingBlock<InitialBaselineSubmissionV05, SimpleIdentificationInformation>() {
 		{
 			xmlTag = "SubmitrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,12 +226,14 @@ public class InitialBaselineSubmissionV05 {
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InitialBaselineSubmissionV05.class.getMethod("getSubmitterTransactionReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SimpleIdentificationInformation getValue(InitialBaselineSubmissionV05 obj) {
+			return obj.getSubmitterTransactionReference();
+		}
+
+		@Override
+		public void setValue(InitialBaselineSubmissionV05 obj, SimpleIdentificationInformation value) {
+			obj.setSubmitterTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "Instr", required = true)
@@ -265,7 +268,7 @@ public class InitialBaselineSubmissionV05 {
 	 * InitialBaselineSubmissionV04.mmInstruction}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmInstruction = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InitialBaselineSubmissionV05, InstructionType1> mmInstruction = new MMMessageBuildingBlock<InitialBaselineSubmissionV05, InstructionType1>() {
 		{
 			xmlTag = "Instr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,12 +280,14 @@ public class InitialBaselineSubmissionV05 {
 			complexType_lazy = () -> InstructionType1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InitialBaselineSubmissionV05.class.getMethod("getInstruction", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public InstructionType1 getValue(InitialBaselineSubmissionV05 obj) {
+			return obj.getInstruction();
+		}
+
+		@Override
+		public void setValue(InitialBaselineSubmissionV05 obj, InstructionType1 value) {
+			obj.setInstruction(value);
 		}
 	};
 	@XmlElement(name = "Baseln", required = true)
@@ -315,7 +320,7 @@ public class InitialBaselineSubmissionV05 {
 	 * InitialBaselineSubmissionV04.mmBaseline}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBaseline = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InitialBaselineSubmissionV05, Baseline5> mmBaseline = new MMMessageBuildingBlock<InitialBaselineSubmissionV05, Baseline5>() {
 		{
 			xmlTag = "Baseln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,12 +332,14 @@ public class InitialBaselineSubmissionV05 {
 			complexType_lazy = () -> Baseline5.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InitialBaselineSubmissionV05.class.getMethod("getBaseline", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Baseline5 getValue(InitialBaselineSubmissionV05 obj) {
+			return obj.getBaseline();
+		}
+
+		@Override
+		public void setValue(InitialBaselineSubmissionV05 obj, Baseline5 value) {
+			obj.setBaseline(value);
 		}
 	};
 	@XmlElement(name = "BuyrCtctPrsn")
@@ -365,7 +372,7 @@ public class InitialBaselineSubmissionV05 {
 	 * InitialBaselineSubmissionV04.mmBuyerContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBuyerContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InitialBaselineSubmissionV05, List<ContactIdentification1>> mmBuyerContactPerson = new MMMessageBuildingBlock<InitialBaselineSubmissionV05, List<ContactIdentification1>>() {
 		{
 			xmlTag = "BuyrCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -376,12 +383,14 @@ public class InitialBaselineSubmissionV05 {
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InitialBaselineSubmissionV05.class.getMethod("getBuyerContactPerson", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ContactIdentification1> getValue(InitialBaselineSubmissionV05 obj) {
+			return obj.getBuyerContactPerson();
+		}
+
+		@Override
+		public void setValue(InitialBaselineSubmissionV05 obj, List<ContactIdentification1> value) {
+			obj.setBuyerContactPerson(value);
 		}
 	};
 	@XmlElement(name = "SellrCtctPrsn")
@@ -415,7 +424,7 @@ public class InitialBaselineSubmissionV05 {
 	 * InitialBaselineSubmissionV04.mmSellerContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSellerContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InitialBaselineSubmissionV05, List<ContactIdentification1>> mmSellerContactPerson = new MMMessageBuildingBlock<InitialBaselineSubmissionV05, List<ContactIdentification1>>() {
 		{
 			xmlTag = "SellrCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -426,12 +435,14 @@ public class InitialBaselineSubmissionV05 {
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InitialBaselineSubmissionV05.class.getMethod("getSellerContactPerson", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ContactIdentification1> getValue(InitialBaselineSubmissionV05 obj) {
+			return obj.getSellerContactPerson();
+		}
+
+		@Override
+		public void setValue(InitialBaselineSubmissionV05 obj, List<ContactIdentification1> value) {
+			obj.setSellerContactPerson(value);
 		}
 	};
 	@XmlElement(name = "BkCtctPrsn", required = true)
@@ -465,7 +476,7 @@ public class InitialBaselineSubmissionV05 {
 	 * InitialBaselineSubmissionV04.mmBankContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmBankContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InitialBaselineSubmissionV05, BankContactPerson1Choice> mmBankContactPerson = new MMMessageBuildingBlock<InitialBaselineSubmissionV05, BankContactPerson1Choice>() {
 		{
 			xmlTag = "BkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -477,12 +488,14 @@ public class InitialBaselineSubmissionV05 {
 			complexType_lazy = () -> BankContactPerson1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InitialBaselineSubmissionV05.class.getMethod("getBankContactPerson", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public BankContactPerson1Choice getValue(InitialBaselineSubmissionV05 obj) {
+			return obj.getBankContactPerson();
+		}
+
+		@Override
+		public void setValue(InitialBaselineSubmissionV05 obj, BankContactPerson1Choice value) {
+			obj.setBankContactPerson(value);
 		}
 	};
 	@XmlElement(name = "OthrBkCtctPrsn")
@@ -516,7 +529,7 @@ public class InitialBaselineSubmissionV05 {
 	 * InitialBaselineSubmissionV04.mmOtherBankContactPerson}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmOtherBankContactPerson = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<InitialBaselineSubmissionV05, List<ContactIdentification3>> mmOtherBankContactPerson = new MMMessageBuildingBlock<InitialBaselineSubmissionV05, List<ContactIdentification3>>() {
 		{
 			xmlTag = "OthrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -527,12 +540,14 @@ public class InitialBaselineSubmissionV05 {
 			complexType_lazy = () -> ContactIdentification3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return InitialBaselineSubmissionV05.class.getMethod("getOtherBankContactPerson", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<ContactIdentification3> getValue(InitialBaselineSubmissionV05 obj) {
+			return obj.getOtherBankContactPerson();
+		}
+
+		@Override
+		public void setValue(InitialBaselineSubmissionV05 obj, List<ContactIdentification3> value) {
+			obj.setOtherBankContactPerson(value);
 		}
 	};
 

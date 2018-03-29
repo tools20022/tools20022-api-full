@@ -29,6 +29,7 @@ import com.tools20022.repository.codeset.TradingVenue1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CountryCodeAndName3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -162,7 +163,7 @@ public class MarketIdentification92 {
 	 * definition} = "Operating MIC of the venue."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOperating = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, MICIdentifier> mmOperating = new MMMessageAttribute<MarketIdentification92, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> Market.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
@@ -174,6 +175,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(MarketIdentification92 obj) {
+			return obj.getOperating();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, MICIdentifier value) {
+			obj.setOperating(value);
 		}
 	};
 	@XmlElement(name = "Sgmt", required = true)
@@ -212,7 +223,7 @@ public class MarketIdentification92 {
 	 * "Segment MIC of the venue where it exists, otherwise the Operating MIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSegment = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, MICIdentifier> mmSegment = new MMMessageAttribute<MarketIdentification92, MICIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> Market.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
@@ -224,6 +235,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
+		}
+
+		@Override
+		public MICIdentifier getValue(MarketIdentification92 obj) {
+			return obj.getSegment();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, MICIdentifier value) {
+			obj.setSegment(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -262,7 +283,7 @@ public class MarketIdentification92 {
 	 * "Define the type of Market Identification Code that is being supplied."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, MarketIdentification1Code> mmType = new MMMessageAttribute<MarketIdentification92, MarketIdentification1Code>() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmPartyType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
@@ -274,6 +295,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarketIdentification1Code.mmObject();
+		}
+
+		@Override
+		public MarketIdentification1Code getValue(MarketIdentification92 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, MarketIdentification1Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Ctgy")
@@ -311,7 +342,7 @@ public class MarketIdentification92 {
 	 * definition} = "Provides the category of market the venue operates in."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<TradingVenue1Code>> mmCategory = new MMMessageAttribute<MarketIdentification92, Optional<TradingVenue1Code>>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
@@ -323,6 +354,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TradingVenue1Code.mmObject();
+		}
+
+		@Override
+		public Optional<TradingVenue1Code> getValue(MarketIdentification92 obj) {
+			return obj.getCategory();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<TradingVenue1Code> value) {
+			obj.setCategory(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "InstnNm", required = true)
@@ -360,7 +401,7 @@ public class MarketIdentification92 {
 	 * "The name or description of the institution, market, or infrastructure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstitutionName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Max450Text> mmInstitutionName = new MMMessageAttribute<MarketIdentification92, Max450Text>() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
@@ -372,6 +413,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max450Text.mmObject();
+		}
+
+		@Override
+		public Max450Text getValue(MarketIdentification92 obj) {
+			return obj.getInstitutionName();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Max450Text value) {
+			obj.setInstitutionName(value);
 		}
 	};
 	@XmlElement(name = "Acrnm")
@@ -404,7 +455,7 @@ public class MarketIdentification92 {
 	 * "Known acronym of the institution, market, or infrastructure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAcronym = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<Max35Text>> mmAcronym = new MMMessageAttribute<MarketIdentification92, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
 			isDerived = false;
@@ -415,6 +466,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MarketIdentification92 obj) {
+			return obj.getAcronym();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<Max35Text> value) {
+			obj.setAcronym(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "City")
@@ -452,7 +513,7 @@ public class MarketIdentification92 {
 	 * "City where the institution, market, or infrastructure operates."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<Max35Text>> mmCity = new MMMessageAttribute<MarketIdentification92, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
@@ -464,6 +525,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(MarketIdentification92 obj) {
+			return obj.getCity();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<Max35Text> value) {
+			obj.setCity(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Ctry", required = true)
@@ -500,7 +571,7 @@ public class MarketIdentification92 {
 	 * "Two character country code and country name as per ISO 3166."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCountry = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification92, CountryCodeAndName3> mmCountry = new MMMessageAssociationEnd<MarketIdentification92, CountryCodeAndName3>() {
 		{
 			businessElementTrace_lazy = () -> Market.mmCountry;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
@@ -512,7 +583,17 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CountryCodeAndName3.mmObject();
+			type_lazy = () -> CountryCodeAndName3.mmObject();
+		}
+
+		@Override
+		public CountryCodeAndName3 getValue(MarketIdentification92 obj) {
+			return obj.getCountry();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, CountryCodeAndName3 value) {
+			obj.setCountry(value);
 		}
 	};
 	@XmlElement(name = "AuthrtyNm")
@@ -550,7 +631,7 @@ public class MarketIdentification92 {
 	 * "The name of the national competent authority associated with the MIC."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAuthorityName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<Max450Text>> mmAuthorityName = new MMMessageAttribute<MarketIdentification92, Optional<Max450Text>>() {
 		{
 			businessComponentTrace_lazy = () -> RegulatoryAuthorityRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
@@ -562,6 +643,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max450Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max450Text> getValue(MarketIdentification92 obj) {
+			return obj.getAuthorityName();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<Max450Text> value) {
+			obj.setAuthorityName(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "WebSite")
@@ -594,7 +685,7 @@ public class MarketIdentification92 {
 	 * "Website URI of the institution, market, or infrastructure."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmWebSite = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<Max210Text>> mmWebSite = new MMMessageAttribute<MarketIdentification92, Optional<Max210Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
 			isDerived = false;
@@ -605,6 +696,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max210Text> getValue(MarketIdentification92 obj) {
+			return obj.getWebSite();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<Max210Text> value) {
+			obj.setWebSite(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Note")
@@ -637,7 +738,7 @@ public class MarketIdentification92 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNote = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<Max450Text>> mmNote = new MMMessageAttribute<MarketIdentification92, Optional<Max450Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
 			isDerived = false;
@@ -648,6 +749,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max450Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max450Text> getValue(MarketIdentification92 obj) {
+			return obj.getNote();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<Max450Text> value) {
+			obj.setNote(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Mod")
@@ -682,7 +793,7 @@ public class MarketIdentification92 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmModification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<Modification1Code>> mmModification = new MMMessageAttribute<MarketIdentification92, Optional<Modification1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
 			isDerived = false;
@@ -693,6 +804,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Modification1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Modification1Code> getValue(MarketIdentification92 obj) {
+			return obj.getModification();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<Modification1Code> value) {
+			obj.setModification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CreDt")
@@ -724,7 +845,7 @@ public class MarketIdentification92 {
 	 * definition} = "First date of the MIC issuance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreationDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<ISODate>> mmCreationDate = new MMMessageAttribute<MarketIdentification92, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
 			isDerived = false;
@@ -735,6 +856,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MarketIdentification92 obj) {
+			return obj.getCreationDate();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<ISODate> value) {
+			obj.setCreationDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "VldtyPrd", required = true)
@@ -765,7 +896,7 @@ public class MarketIdentification92 {
 	 * definition} = "Details the validity of the specific record."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification92, Period4Choice> mmValidityPeriod = new MMMessageAssociationEnd<MarketIdentification92, Period4Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
 			isDerived = false;
@@ -777,6 +908,16 @@ public class MarketIdentification92 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> Period4Choice.mmObject();
+		}
+
+		@Override
+		public Period4Choice getValue(MarketIdentification92 obj) {
+			return obj.getValidityPeriod();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Period4Choice value) {
+			obj.setValidityPeriod(value);
 		}
 	};
 	@XmlElement(name = "StsDt")
@@ -809,7 +950,7 @@ public class MarketIdentification92 {
 	 * "Date when the market identification code was last modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<ISODate>> mmStatusDate = new MMMessageAttribute<MarketIdentification92, Optional<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
 			isDerived = false;
@@ -820,6 +961,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(MarketIdentification92 obj) {
+			return obj.getStatusDate();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<ISODate> value) {
+			obj.setStatusDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "LastUpdtdDt")
@@ -851,7 +1002,7 @@ public class MarketIdentification92 {
 	 * definition} = "Date when this record was last modified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLastUpdatedDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification92, Optional<ISODateTime>> mmLastUpdatedDate = new MMMessageAttribute<MarketIdentification92, Optional<ISODateTime>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification92.mmObject();
 			isDerived = false;
@@ -862,6 +1013,16 @@ public class MarketIdentification92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(MarketIdentification92 obj) {
+			return obj.getLastUpdatedDate();
+		}
+
+		@Override
+		public void setValue(MarketIdentification92 obj, Optional<ISODateTime> value) {
+			obj.setLastUpdatedDate(value.orElse(null));
 		}
 	};
 
@@ -952,7 +1113,7 @@ public class MarketIdentification92 {
 		return country;
 	}
 
-	public MarketIdentification92 setCountry(com.tools20022.repository.msg.CountryCodeAndName3 country) {
+	public MarketIdentification92 setCountry(CountryCodeAndName3 country) {
 		this.country = Objects.requireNonNull(country);
 		return this;
 	}

@@ -122,7 +122,7 @@ public class ReplacementProcessingStatus8Choice {
 	 * ReplacementProcessingStatus1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReplacementProcessingStatus8Choice, ReplacementProcessingStatus1Code> mmCode = new MMMessageAttribute<ReplacementProcessingStatus8Choice, ReplacementProcessingStatus1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReplacementProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus8Choice.mmObject();
@@ -136,6 +136,16 @@ public class ReplacementProcessingStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReplacementProcessingStatus1Code.mmObject();
+		}
+
+		@Override
+		public ReplacementProcessingStatus1Code getValue(ReplacementProcessingStatus8Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus8Choice obj, ReplacementProcessingStatus1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -182,7 +192,7 @@ public class ReplacementProcessingStatus8Choice {
 	 * ReplacementProcessingStatus1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ReplacementProcessingStatus8Choice, GenericIdentification30> mmProprietary = new MMMessageAttribute<ReplacementProcessingStatus8Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmAgentStandingInstructionStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus8Choice.mmObject();
@@ -196,6 +206,16 @@ public class ReplacementProcessingStatus8Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(ReplacementProcessingStatus8Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(ReplacementProcessingStatus8Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

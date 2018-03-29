@@ -55,12 +55,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<RedemptionOrder14> forRedemptionOrder14 = new MMConstraint<RedemptionOrder14>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkRedemptionOrder14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> RedemptionOrder14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder14 obj) throws Exception {
+			checkRedemptionOrder14(obj);
 		}
 	};
 	/**
@@ -90,12 +94,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<SwitchSubscriptionLegOrder6> forSwitchSubscriptionLegOrder6 = new MMConstraint<SwitchSubscriptionLegOrder6>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkSwitchSubscriptionLegOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> SwitchSubscriptionLegOrder6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SwitchSubscriptionLegOrder6 obj) throws Exception {
+			checkSwitchSubscriptionLegOrder6(obj);
 		}
 	};
 	/**
@@ -125,12 +133,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<SubscriptionExecution13> forSubscriptionExecution13 = new MMConstraint<SubscriptionExecution13>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkSubscriptionExecution13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> SubscriptionExecution13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution13 obj) throws Exception {
+			checkSubscriptionExecution13(obj);
 		}
 	};
 	/**
@@ -160,12 +172,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<SubscriptionExecution12> forSubscriptionExecution12 = new MMConstraint<SubscriptionExecution12>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkSubscriptionExecution12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> SubscriptionExecution12.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SubscriptionExecution12 obj) throws Exception {
+			checkSubscriptionExecution12(obj);
 		}
 	};
 	/**
@@ -195,12 +211,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<SubscriptionOrder15> forSubscriptionOrder15 = new MMConstraint<SubscriptionOrder15>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkSubscriptionOrder15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> SubscriptionOrder15.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder15 obj) throws Exception {
+			checkSubscriptionOrder15(obj);
 		}
 	};
 	/**
@@ -230,12 +250,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<SwitchRedemptionLegOrder6> forSwitchRedemptionLegOrder6 = new MMConstraint<SwitchRedemptionLegOrder6>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkSwitchRedemptionLegOrder6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> SwitchRedemptionLegOrder6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SwitchRedemptionLegOrder6 obj) throws Exception {
+			checkSwitchRedemptionLegOrder6(obj);
 		}
 	};
 	/**
@@ -265,12 +289,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<RedemptionOrder15> forRedemptionOrder15 = new MMConstraint<RedemptionOrder15>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkRedemptionOrder15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> RedemptionOrder15.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(RedemptionOrder15 obj) throws Exception {
+			checkRedemptionOrder15(obj);
 		}
 	};
 	/**
@@ -300,12 +328,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<RedemptionExecution16> forRedemptionExecution16 = new MMConstraint<RedemptionExecution16>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkRedemptionExecution16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> RedemptionExecution16.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution16 obj) throws Exception {
+			checkRedemptionExecution16(obj);
 		}
 	};
 	/**
@@ -340,13 +372,17 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<SubscriptionOrder14> forSubscriptionOrder14 = new MMConstraint<SubscriptionOrder14>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkSubscriptionOrder14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalDeliveryDetailsRule.forSubscriptionOrder8;
 			owner_lazy = () -> SubscriptionOrder14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SubscriptionOrder14 obj) throws Exception {
+			checkSubscriptionOrder14(obj);
 		}
 	};
 	/**
@@ -376,12 +412,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<SwitchSubscriptionLegExecution4> forSwitchSubscriptionLegExecution4 = new MMConstraint<SwitchSubscriptionLegExecution4>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkSwitchSubscriptionLegExecution4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> SwitchSubscriptionLegExecution4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SwitchSubscriptionLegExecution4 obj) throws Exception {
+			checkSwitchSubscriptionLegExecution4(obj);
 		}
 	};
 	/**
@@ -411,12 +451,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<RedemptionExecution15> forRedemptionExecution15 = new MMConstraint<RedemptionExecution15>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkRedemptionExecution15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> RedemptionExecution15.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(RedemptionExecution15 obj) throws Exception {
+			checkRedemptionExecution15(obj);
 		}
 	};
 	/**
@@ -446,12 +490,16 @@ public class ConstraintPhysicalDeliveryDetails1Rule {
 	 */
 	public static final MMConstraint<SwitchRedemptionLegExecution4> forSwitchRedemptionLegExecution4 = new MMConstraint<SwitchRedemptionLegExecution4>() {
 		{
-			validator = ConstraintPhysicalDeliveryDetails1Rule::checkSwitchRedemptionLegExecution4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalDeliveryDetails1Rule";
 			definition = "If PhysicalDeliveryIndicator is \"false\" or \"0\" (No), then PhysicalDeliveryDetails is not allowed.";
 			owner_lazy = () -> SwitchRedemptionLegExecution4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PhysicalDeliveryDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>false</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PhysicalDeliveryIndicator</leftOperand><rightOperand>0</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+
+		@Override
+		public void executeValidator(SwitchRedemptionLegExecution4 obj) throws Exception {
+			checkSwitchRedemptionLegExecution4(obj);
 		}
 	};
 

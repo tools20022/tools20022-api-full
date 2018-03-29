@@ -140,7 +140,7 @@ public class CorporateActionEventType15Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventType15Choice, CorporateActionEventType14Code> mmCode = new MMMessageAttribute<CorporateActionEventType15Choice, CorporateActionEventType14Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType15Choice.mmObject();
@@ -154,6 +154,16 @@ public class CorporateActionEventType15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventType14Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionEventType14Code getValue(CorporateActionEventType15Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventType15Choice obj, CorporateActionEventType14Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -203,7 +213,7 @@ public class CorporateActionEventType15Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionEventType15Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<CorporateActionEventType15Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionEventType15Choice.mmObject();
@@ -217,6 +227,16 @@ public class CorporateActionEventType15Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(CorporateActionEventType15Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionEventType15Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

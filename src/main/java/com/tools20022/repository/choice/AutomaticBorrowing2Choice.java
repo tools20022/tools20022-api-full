@@ -127,7 +127,7 @@ public class AutomaticBorrowing2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticBorrowing2Choice, AutoBorrowing2Code> mmCode = new MMMessageAttribute<AutomaticBorrowing2Choice, AutoBorrowing2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing2Choice.mmObject();
@@ -141,6 +141,16 @@ public class AutomaticBorrowing2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AutoBorrowing2Code.mmObject();
+		}
+
+		@Override
+		public AutoBorrowing2Code getValue(AutomaticBorrowing2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AutomaticBorrowing2Choice obj, AutoBorrowing2Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -190,7 +200,7 @@ public class AutomaticBorrowing2Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AutomaticBorrowing2Choice, GenericIdentification20> mmProprietary = new MMMessageAttribute<AutomaticBorrowing2Choice, GenericIdentification20>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AutomaticBorrowing2Choice.mmObject();
@@ -204,6 +214,16 @@ public class AutomaticBorrowing2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
+		}
+
+		@Override
+		public GenericIdentification20 getValue(AutomaticBorrowing2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AutomaticBorrowing2Choice obj, GenericIdentification20 value) {
+			obj.setProprietary(value);
 		}
 	};
 

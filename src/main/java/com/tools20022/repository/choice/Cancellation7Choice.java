@@ -143,7 +143,7 @@ public class Cancellation7Choice {
 	 * Cancellation6Choice.mmCancellationByTransferInstructionDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationByTransferInstructionDetails = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation7Choice, ISATransfer19> mmCancellationByTransferInstructionDetails = new MMMessageAttribute<Cancellation7Choice, ISATransfer19>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmTransferOperation;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation7Choice.mmObject();
@@ -157,6 +157,16 @@ public class Cancellation7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ISATransfer19.mmObject();
+		}
+
+		@Override
+		public ISATransfer19 getValue(Cancellation7Choice obj) {
+			return obj.getCancellationByTransferInstructionDetails();
+		}
+
+		@Override
+		public void setValue(Cancellation7Choice obj, ISATransfer19 value) {
+			obj.setCancellationByTransferInstructionDetails(value);
 		}
 	};
 	@XmlElement(name = "CxlByRef", required = true)
@@ -207,7 +217,7 @@ public class Cancellation7Choice {
 	 * Cancellation6Choice.mmCancellationByReference}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCancellationByReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Cancellation7Choice, TransferReference7> mmCancellationByReference = new MMMessageAttribute<Cancellation7Choice, TransferReference7>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
 			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation7Choice.mmObject();
@@ -221,6 +231,16 @@ public class Cancellation7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransferReference7.mmObject();
+		}
+
+		@Override
+		public TransferReference7 getValue(Cancellation7Choice obj) {
+			return obj.getCancellationByReference();
+		}
+
+		@Override
+		public void setValue(Cancellation7Choice obj, TransferReference7 value) {
+			obj.setCancellationByReference(value);
 		}
 	};
 

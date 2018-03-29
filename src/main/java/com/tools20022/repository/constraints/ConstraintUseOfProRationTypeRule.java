@@ -51,11 +51,15 @@ public class ConstraintUseOfProRationTypeRule {
 	 */
 	public static final MMConstraint<OptionFeaturesFormat8SD1> forOptionFeaturesFormat8SD1 = new MMConstraint<OptionFeaturesFormat8SD1>() {
 		{
-			validator = ConstraintUseOfProRationTypeRule::checkOptionFeaturesFormat8SD1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UseOfProRationTypeRule";
 			definition = "ProRationType should only be used when the corporate action event type code is TEND or BIDS.";
 			owner_lazy = () -> OptionFeaturesFormat8SD1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(OptionFeaturesFormat8SD1 obj) throws Exception {
+			checkOptionFeaturesFormat8SD1(obj);
 		}
 	};
 

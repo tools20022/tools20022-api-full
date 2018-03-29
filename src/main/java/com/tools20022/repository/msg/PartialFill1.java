@@ -27,6 +27,8 @@ import com.tools20022.repository.choice.QuantityOrAmount1Choice;
 import com.tools20022.repository.choice.TradeDate4Choice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.MarketIdentification13;
+import com.tools20022.repository.msg.Price4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -151,7 +153,7 @@ public class PartialFill1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmConfirmationQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartialFill1, Quantity6Choice> mmConfirmationQuantity = new MMMessageAttribute<PartialFill1, Quantity6Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
@@ -165,6 +167,16 @@ public class PartialFill1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Quantity6Choice.mmObject();
+		}
+
+		@Override
+		public Quantity6Choice getValue(PartialFill1 obj) {
+			return obj.getConfirmationQuantity();
+		}
+
+		@Override
+		public void setValue(PartialFill1 obj, Quantity6Choice value) {
+			obj.setConfirmationQuantity(value);
 		}
 	};
 	@XmlElement(name = "DealPric", required = true)
@@ -208,7 +220,7 @@ public class PartialFill1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartialFill1, Price4> mmDealPrice = new MMMessageAttribute<PartialFill1, Price4>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
@@ -220,7 +232,17 @@ public class PartialFill1 {
 			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmDealPrice);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
+			complexType_lazy = () -> Price4.mmObject();
+		}
+
+		@Override
+		public Price4 getValue(PartialFill1 obj) {
+			return obj.getDealPrice();
+		}
+
+		@Override
+		public void setValue(PartialFill1 obj, Price4 value) {
+			obj.setDealPrice(value);
 		}
 	};
 	@XmlElement(name = "TradDt")
@@ -267,7 +289,7 @@ public class PartialFill1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartialFill1, Optional<TradeDate4Choice>> mmTradeDate = new MMMessageAttribute<PartialFill1, Optional<TradeDate4Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
@@ -281,6 +303,16 @@ public class PartialFill1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeDate4Choice.mmObject();
+		}
+
+		@Override
+		public Optional<TradeDate4Choice> getValue(PartialFill1 obj) {
+			return obj.getTradeDate();
+		}
+
+		@Override
+		public void setValue(PartialFill1 obj, Optional<TradeDate4Choice> value) {
+			obj.setTradeDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PlcOfTrad")
@@ -329,7 +361,7 @@ public class PartialFill1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartialFill1, Optional<MarketIdentification13>> mmPlaceOfTrade = new MMMessageAttribute<PartialFill1, Optional<MarketIdentification13>>() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
@@ -342,7 +374,17 @@ public class PartialFill1 {
 			nextVersions_lazy = () -> Arrays.asList(PartialFill2.mmPlaceOfTrade);
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification13.mmObject();
+			complexType_lazy = () -> MarketIdentification13.mmObject();
+		}
+
+		@Override
+		public Optional<MarketIdentification13> getValue(PartialFill1 obj) {
+			return obj.getPlaceOfTrade();
+		}
+
+		@Override
+		public void setValue(PartialFill1 obj, Optional<MarketIdentification13> value) {
+			obj.setPlaceOfTrade(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlOrdrdQty", required = true)
@@ -390,7 +432,7 @@ public class PartialFill1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalOrderedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartialFill1, QuantityOrAmount1Choice> mmOriginalOrderedQuantity = new MMMessageAttribute<PartialFill1, QuantityOrAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
@@ -404,6 +446,16 @@ public class PartialFill1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
+		}
+
+		@Override
+		public QuantityOrAmount1Choice getValue(PartialFill1 obj) {
+			return obj.getOriginalOrderedQuantity();
+		}
+
+		@Override
+		public void setValue(PartialFill1 obj, QuantityOrAmount1Choice value) {
+			obj.setOriginalOrderedQuantity(value);
 		}
 	};
 	@XmlElement(name = "PrevslyExctdQty", required = true)
@@ -452,7 +504,7 @@ public class PartialFill1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPreviouslyExecutedQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartialFill1, QuantityOrAmount1Choice> mmPreviouslyExecutedQuantity = new MMMessageAttribute<PartialFill1, QuantityOrAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
@@ -466,6 +518,16 @@ public class PartialFill1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
+		}
+
+		@Override
+		public QuantityOrAmount1Choice getValue(PartialFill1 obj) {
+			return obj.getPreviouslyExecutedQuantity();
+		}
+
+		@Override
+		public void setValue(PartialFill1 obj, QuantityOrAmount1Choice value) {
+			obj.setPreviouslyExecutedQuantity(value);
 		}
 	};
 	@XmlElement(name = "RmngQty", required = true)
@@ -514,7 +576,7 @@ public class PartialFill1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRemainingQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartialFill1, QuantityOrAmount1Choice> mmRemainingQuantity = new MMMessageAttribute<PartialFill1, QuantityOrAmount1Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmRemainingQuantity;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
@@ -528,6 +590,16 @@ public class PartialFill1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
+		}
+
+		@Override
+		public QuantityOrAmount1Choice getValue(PartialFill1 obj) {
+			return obj.getRemainingQuantity();
+		}
+
+		@Override
+		public void setValue(PartialFill1 obj, QuantityOrAmount1Choice value) {
+			obj.setRemainingQuantity(value);
 		}
 	};
 	@XmlElement(name = "MtchIncrmtQty")
@@ -577,7 +649,7 @@ public class PartialFill1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMatchIncrementQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PartialFill1, Optional<QuantityOrAmount1Choice>> mmMatchIncrementQuantity = new MMMessageAttribute<PartialFill1, Optional<QuantityOrAmount1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmMatchIncrement;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PartialFill1.mmObject();
@@ -591,6 +663,16 @@ public class PartialFill1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<QuantityOrAmount1Choice> getValue(PartialFill1 obj) {
+			return obj.getMatchIncrementQuantity();
+		}
+
+		@Override
+		public void setValue(PartialFill1 obj, Optional<QuantityOrAmount1Choice> value) {
+			obj.setMatchIncrementQuantity(value.orElse(null));
 		}
 	};
 
@@ -625,7 +707,7 @@ public class PartialFill1 {
 		return dealPrice;
 	}
 
-	public PartialFill1 setDealPrice(com.tools20022.repository.msg.Price4 dealPrice) {
+	public PartialFill1 setDealPrice(Price4 dealPrice) {
 		this.dealPrice = Objects.requireNonNull(dealPrice);
 		return this;
 	}
@@ -643,7 +725,7 @@ public class PartialFill1 {
 		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public PartialFill1 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification13 placeOfTrade) {
+	public PartialFill1 setPlaceOfTrade(MarketIdentification13 placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
 		return this;
 	}

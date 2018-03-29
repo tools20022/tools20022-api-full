@@ -22,12 +22,14 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V07;
 import com.tools20022.repository.choice.DateAndDateTime2Choice;
 import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.RestrictedFINActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ForeignExchangeTerms27;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -66,6 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
  * SecuritiesSettlement}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V07#mmSettlementAmount
+ * SecuritiesSettlementTransactionAllegementNotification002V07.
+ * mmSettlementAmount}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -126,7 +138,7 @@ public class AmountAndDirection92 {
 	 * definition} = "Amount of money in the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection92, RestrictedFINActiveCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection92, RestrictedFINActiveCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection92.mmObject();
@@ -139,6 +151,16 @@ public class AmountAndDirection92 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveCurrencyAndAmount getValue(AmountAndDirection92 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection92 obj, RestrictedFINActiveCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd", required = true)
@@ -179,7 +201,7 @@ public class AmountAndDirection92 {
 	 * definition} = "Indicates whether an entry is a credit or a debit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection92, CreditDebitCode> mmCreditDebitIndicator = new MMMessageAttribute<AmountAndDirection92, CreditDebitCode>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection92.mmObject();
@@ -192,6 +214,16 @@ public class AmountAndDirection92 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public CreditDebitCode getValue(AmountAndDirection92 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection92 obj, CreditDebitCode value) {
+			obj.setCreditDebitIndicator(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCcyAndOrdrdAmt")
@@ -234,7 +266,7 @@ public class AmountAndDirection92 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection92, Optional<RestrictedFINActiveOrHistoricCurrencyAndAmount>> mmOriginalCurrencyAndOrderedAmount = new MMMessageAttribute<AmountAndDirection92, Optional<RestrictedFINActiveOrHistoricCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection92.mmObject();
@@ -247,6 +279,16 @@ public class AmountAndDirection92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<RestrictedFINActiveOrHistoricCurrencyAndAmount> getValue(AmountAndDirection92 obj) {
+			return obj.getOriginalCurrencyAndOrderedAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection92 obj, Optional<RestrictedFINActiveOrHistoricCurrencyAndAmount> value) {
+			obj.setOriginalCurrencyAndOrderedAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FXDtls")
@@ -286,7 +328,7 @@ public class AmountAndDirection92 {
 	 * "Information needed to process a currency exchange or conversion."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountAndDirection92, Optional<ForeignExchangeTerms27>> mmForeignExchangeDetails = new MMMessageAssociationEnd<AmountAndDirection92, Optional<ForeignExchangeTerms27>>() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmAgreedRate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection92.mmObject();
@@ -299,7 +341,17 @@ public class AmountAndDirection92 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms27.mmObject();
+			type_lazy = () -> ForeignExchangeTerms27.mmObject();
+		}
+
+		@Override
+		public Optional<ForeignExchangeTerms27> getValue(AmountAndDirection92 obj) {
+			return obj.getForeignExchangeDetails();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection92 obj, Optional<ForeignExchangeTerms27> value) {
+			obj.setForeignExchangeDetails(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "ValDt")
@@ -341,7 +393,7 @@ public class AmountAndDirection92 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AmountAndDirection92, Optional<DateAndDateTime2Choice>> mmValueDate = new MMMessageAssociationEnd<AmountAndDirection92, Optional<DateAndDateTime2Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection92.mmObject();
@@ -356,6 +408,16 @@ public class AmountAndDirection92 {
 			isComposite = true;
 			type_lazy = () -> DateAndDateTime2Choice.mmObject();
 		}
+
+		@Override
+		public Optional<DateAndDateTime2Choice> getValue(AmountAndDirection92 obj) {
+			return obj.getValueDate();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection92 obj, Optional<DateAndDateTime2Choice> value) {
+			obj.setValueDate(value.orElse(null));
+		}
 	};
 
 	final static public MMMessageComponent mmObject() {
@@ -364,6 +426,7 @@ public class AmountAndDirection92 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection92.mmAmount, com.tools20022.repository.msg.AmountAndDirection92.mmCreditDebitIndicator,
 						com.tools20022.repository.msg.AmountAndDirection92.mmOriginalCurrencyAndOrderedAmount, com.tools20022.repository.msg.AmountAndDirection92.mmForeignExchangeDetails,
 						com.tools20022.repository.msg.AmountAndDirection92.mmValueDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotification002V07.mmSettlementAmount);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -405,7 +468,7 @@ public class AmountAndDirection92 {
 		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public AmountAndDirection92 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms27 foreignExchangeDetails) {
+	public AmountAndDirection92 setForeignExchangeDetails(ForeignExchangeTerms27 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
 		return this;
 	}

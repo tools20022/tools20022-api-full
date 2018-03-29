@@ -73,13 +73,17 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV07> forCustomerPaymentReversalV07 = new MMConstraint<CustomerPaymentReversalV07>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkCustomerPaymentReversalV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV06;
 			owner_lazy = () -> CustomerPaymentReversalV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV07 obj) throws Exception {
+			checkCustomerPaymentReversalV07(obj);
 		}
 	};
 	/**
@@ -111,12 +115,16 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV08> forCustomerPaymentReversalV08 = new MMConstraint<CustomerPaymentReversalV08>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkCustomerPaymentReversalV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV07;
 			owner_lazy = () -> CustomerPaymentReversalV08.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV08 obj) throws Exception {
+			checkCustomerPaymentReversalV08(obj);
 		}
 	};
 	/**
@@ -157,13 +165,17 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV05> forCustomerPaymentReversalV05 = new MMConstraint<CustomerPaymentReversalV05>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkCustomerPaymentReversalV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule.forCustomerPaymentReversalV04;
 			owner_lazy = () -> CustomerPaymentReversalV05.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV05 obj) throws Exception {
+			checkCustomerPaymentReversalV05(obj);
 		}
 	};
 	/**
@@ -204,13 +216,17 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<CustomerPaymentReversalV06> forCustomerPaymentReversalV06 = new MMConstraint<CustomerPaymentReversalV06>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkCustomerPaymentReversalV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV05;
 			owner_lazy = () -> CustomerPaymentReversalV06.mmObject();
+		}
+
+		@Override
+		public void executeValidator(CustomerPaymentReversalV06 obj) throws Exception {
+			checkCustomerPaymentReversalV06(obj);
 		}
 	};
 	/**
@@ -235,11 +251,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader8> forGroupHeader8 = new MMConstraint<GroupHeader8>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader8.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader8 obj) throws Exception {
+			checkGroupHeader8(obj);
 		}
 	};
 	/**
@@ -264,11 +284,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader40> forGroupHeader40 = new MMConstraint<GroupHeader40>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader40.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader40 obj) throws Exception {
+			checkGroupHeader40(obj);
 		}
 	};
 	/**
@@ -302,12 +326,16 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader56> forGroupHeader56 = new MMConstraint<GroupHeader56>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader75);
 			owner_lazy = () -> GroupHeader56.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader56 obj) throws Exception {
+			checkGroupHeader56(obj);
 		}
 	};
 	/**
@@ -332,11 +360,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader9> forGroupHeader9 = new MMConstraint<GroupHeader9>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader9.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader9 obj) throws Exception {
+			checkGroupHeader9(obj);
 		}
 	};
 	/**
@@ -361,11 +393,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader41> forGroupHeader41 = new MMConstraint<GroupHeader41>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader41.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader41 obj) throws Exception {
+			checkGroupHeader41(obj);
 		}
 	};
 	/**
@@ -399,12 +435,16 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader57> forGroupHeader57 = new MMConstraint<GroupHeader57>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader71);
 			owner_lazy = () -> GroupHeader57.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader57 obj) throws Exception {
+			checkGroupHeader57(obj);
 		}
 	};
 	/**
@@ -429,11 +469,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader22> forGroupHeader22 = new MMConstraint<GroupHeader22>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader22.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader22 obj) throws Exception {
+			checkGroupHeader22(obj);
 		}
 	};
 	/**
@@ -458,11 +502,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader28> forGroupHeader28 = new MMConstraint<GroupHeader28>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader28.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader28 obj) throws Exception {
+			checkGroupHeader28(obj);
 		}
 	};
 	/**
@@ -487,11 +535,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader18> forGroupHeader18 = new MMConstraint<GroupHeader18>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "ISO20022 Rule: \nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader18.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader18 obj) throws Exception {
+			checkGroupHeader18(obj);
 		}
 	};
 	/**
@@ -516,11 +568,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader30> forGroupHeader30 = new MMConstraint<GroupHeader30>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "ISO20022 Rule: \nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader30.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader30 obj) throws Exception {
+			checkGroupHeader30(obj);
 		}
 	};
 	/**
@@ -551,12 +607,16 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader71> forGroupHeader71 = new MMConstraint<GroupHeader71>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader57;
 			owner_lazy = () -> GroupHeader71.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader71 obj) throws Exception {
+			checkGroupHeader71(obj);
 		}
 	};
 	/**
@@ -587,12 +647,16 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 */
 	public static final MMConstraint<GroupHeader75> forGroupHeader75 = new MMConstraint<GroupHeader75>() {
 		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader56;
 			owner_lazy = () -> GroupHeader75.mmObject();
+		}
+
+		@Override
+		public void executeValidator(GroupHeader75 obj) throws Exception {
+			checkGroupHeader75(obj);
 		}
 	};
 

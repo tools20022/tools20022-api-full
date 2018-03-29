@@ -56,12 +56,16 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInformation4> forOriginalPaymentInformation4 = new MMConstraint<OriginalPaymentInformation4>() {
 		{
-			validator = ConstraintPaymentInformationOrTransactionCaseRule::checkOriginalPaymentInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationOrTransactionCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
 			owner_lazy = () -> OriginalPaymentInformation4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInformation4 obj) throws Exception {
+			checkOriginalPaymentInformation4(obj);
 		}
 	};
 	/**
@@ -91,12 +95,16 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction4> forOriginalPaymentInstruction4 = new MMConstraint<OriginalPaymentInstruction4>() {
 		{
-			validator = ConstraintPaymentInformationOrTransactionCaseRule::checkOriginalPaymentInstruction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationOrTransactionCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
 			owner_lazy = () -> OriginalPaymentInstruction4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction4 obj) throws Exception {
+			checkOriginalPaymentInstruction4(obj);
 		}
 	};
 	/**
@@ -135,13 +143,17 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction8> forOriginalPaymentInstruction8 = new MMConstraint<OriginalPaymentInstruction8>() {
 		{
-			validator = ConstraintPaymentInformationOrTransactionCaseRule::checkOriginalPaymentInstruction8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationOrTransactionCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPaymentInformationOrTransactionCaseRule.forOriginalPaymentInstruction13);
 			owner_lazy = () -> OriginalPaymentInstruction8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction8 obj) throws Exception {
+			checkOriginalPaymentInstruction8(obj);
 		}
 	};
 	/**
@@ -186,7 +198,6 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction13> forOriginalPaymentInstruction13 = new MMConstraint<OriginalPaymentInstruction13>() {
 		{
-			validator = ConstraintPaymentInformationOrTransactionCaseRule::checkOriginalPaymentInstruction13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationOrTransactionCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
@@ -194,6 +205,11 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationOrTransactionCaseRule.forOriginalPaymentInstruction8;
 			owner_lazy = () -> OriginalPaymentInstruction13.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction13 obj) throws Exception {
+			checkOriginalPaymentInstruction13(obj);
 		}
 	};
 	/**
@@ -238,7 +254,6 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction15> forOriginalPaymentInstruction15 = new MMConstraint<OriginalPaymentInstruction15>() {
 		{
-			validator = ConstraintPaymentInformationOrTransactionCaseRule::checkOriginalPaymentInstruction15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationOrTransactionCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
@@ -246,6 +261,11 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationOrTransactionCaseRule.forOriginalPaymentInstruction13;
 			owner_lazy = () -> OriginalPaymentInstruction15.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction15 obj) throws Exception {
+			checkOriginalPaymentInstruction15(obj);
 		}
 	};
 	/**
@@ -290,7 +310,6 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction20> forOriginalPaymentInstruction20 = new MMConstraint<OriginalPaymentInstruction20>() {
 		{
-			validator = ConstraintPaymentInformationOrTransactionCaseRule::checkOriginalPaymentInstruction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationOrTransactionCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
@@ -298,6 +317,11 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationOrTransactionCaseRule.forOriginalPaymentInstruction15;
 			owner_lazy = () -> OriginalPaymentInstruction20.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction20 obj) throws Exception {
+			checkOriginalPaymentInstruction20(obj);
 		}
 	};
 	/**
@@ -333,13 +357,17 @@ public class ConstraintPaymentInformationOrTransactionCaseRule {
 	 */
 	public static final MMConstraint<OriginalPaymentInstruction29> forOriginalPaymentInstruction29 = new MMConstraint<OriginalPaymentInstruction29>() {
 		{
-			validator = ConstraintPaymentInformationOrTransactionCaseRule::checkOriginalPaymentInstruction29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationOrTransactionCaseRule";
 			definition = "Case may be present at either Case, OriginalGroupInformationAndCancellation, OriginalPaymentInformationAndCancellation or TransactionInformation level.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPaymentInformationOrTransactionCaseRule.forOriginalPaymentInstruction20;
 			owner_lazy = () -> OriginalPaymentInstruction29.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/Case</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Case</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(OriginalPaymentInstruction29 obj) throws Exception {
+			checkOriginalPaymentInstruction29(obj);
 		}
 	};
 

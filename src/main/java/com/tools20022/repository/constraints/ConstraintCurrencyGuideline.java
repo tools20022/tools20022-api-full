@@ -53,11 +53,15 @@ public class ConstraintCurrencyGuideline {
 	 */
 	public static final MMConstraint<ReturnTransactionV07> forReturnTransactionV07 = new MMConstraint<ReturnTransactionV07>() {
 		{
-			validator = ConstraintCurrencyGuideline::checkReturnTransactionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyGuideline";
 			definition = "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro).";
 			owner_lazy = () -> ReturnTransactionV07.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReturnTransactionV07 obj) throws Exception {
+			checkReturnTransactionV07(obj);
 		}
 	};
 	/**
@@ -83,11 +87,15 @@ public class ConstraintCurrencyGuideline {
 	 */
 	public static final MMConstraint<ReturnTransactionCopy1> forReturnTransactionCopy1 = new MMConstraint<ReturnTransactionCopy1>() {
 		{
-			validator = ConstraintCurrencyGuideline::checkReturnTransactionCopy1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyGuideline";
 			definition = "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro).";
 			owner_lazy = () -> ReturnTransactionCopy1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ReturnTransactionCopy1 obj) throws Exception {
+			checkReturnTransactionCopy1(obj);
 		}
 	};
 

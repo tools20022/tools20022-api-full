@@ -27,6 +27,7 @@ import com.tools20022.repository.area.seev.MeetingVoteExecutionConfirmationV02;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -143,7 +144,7 @@ public class SecurityIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification3, ISINIdentifier> mmISIN = new MMMessageAttribute<SecurityIdentification3, ISINIdentifier>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
@@ -155,6 +156,16 @@ public class SecurityIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
+		}
+
+		@Override
+		public ISINIdentifier getValue(SecurityIdentification3 obj) {
+			return obj.getISIN();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification3 obj, ISINIdentifier value) {
+			obj.setISIN(value);
 		}
 	};
 	@XmlElement(name = "TckrSymb")
@@ -194,7 +205,7 @@ public class SecurityIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification3, Optional<TickerIdentifier>> mmTickerSymbol = new MMMessageAttribute<SecurityIdentification3, Optional<TickerIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmTickerSymbol;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
@@ -206,6 +217,16 @@ public class SecurityIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TickerIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<TickerIdentifier> getValue(SecurityIdentification3 obj) {
+			return obj.getTickerSymbol();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification3 obj, Optional<TickerIdentifier> value) {
+			obj.setTickerSymbol(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CUSIP")
@@ -245,7 +266,7 @@ public class SecurityIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCUSIP = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification3, Optional<CUSIPIdentifier>> mmCUSIP = new MMMessageAttribute<SecurityIdentification3, Optional<CUSIPIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCUSIP;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
@@ -257,6 +278,16 @@ public class SecurityIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<CUSIPIdentifier> getValue(SecurityIdentification3 obj) {
+			return obj.getCUSIP();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification3 obj, Optional<CUSIPIdentifier> value) {
+			obj.setCUSIP(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SEDOL")
@@ -296,7 +327,7 @@ public class SecurityIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSEDOL = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification3, Optional<SEDOLIdentifier>> mmSEDOL = new MMMessageAttribute<SecurityIdentification3, Optional<SEDOLIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSEDOL;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
@@ -308,6 +339,16 @@ public class SecurityIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<SEDOLIdentifier> getValue(SecurityIdentification3 obj) {
+			return obj.getSEDOL();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification3 obj, Optional<SEDOLIdentifier> value) {
+			obj.setSEDOL(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "QUICK")
@@ -347,7 +388,7 @@ public class SecurityIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQUICK = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification3, Optional<QUICKIdentifier>> mmQUICK = new MMMessageAttribute<SecurityIdentification3, Optional<QUICKIdentifier>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmQUICK;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
@@ -359,6 +400,16 @@ public class SecurityIdentification3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QUICKIdentifier.mmObject();
+		}
+
+		@Override
+		public Optional<QUICKIdentifier> getValue(SecurityIdentification3 obj) {
+			return obj.getQUICK();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification3 obj, Optional<QUICKIdentifier> value) {
+			obj.setQUICK(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OthrId")
@@ -398,7 +449,7 @@ public class SecurityIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOtherIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecurityIdentification3, Optional<AlternateFinancialInstrumentIdentification1>> mmOtherIdentification = new MMMessageAttribute<SecurityIdentification3, Optional<AlternateFinancialInstrumentIdentification1>>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
@@ -409,7 +460,17 @@ public class SecurityIdentification3 {
 			definition = "Proprietary identification of a security assigned by an institution or organisation.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			complexType_lazy = () -> com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1.mmObject();
+			complexType_lazy = () -> AlternateFinancialInstrumentIdentification1.mmObject();
+		}
+
+		@Override
+		public Optional<AlternateFinancialInstrumentIdentification1> getValue(SecurityIdentification3 obj) {
+			return obj.getOtherIdentification();
+		}
+
+		@Override
+		public void setValue(SecurityIdentification3 obj, Optional<AlternateFinancialInstrumentIdentification1> value) {
+			obj.setOtherIdentification(value.orElse(null));
 		}
 	};
 
@@ -480,7 +541,7 @@ public class SecurityIdentification3 {
 		return otherIdentification == null ? Optional.empty() : Optional.of(otherIdentification);
 	}
 
-	public SecurityIdentification3 setOtherIdentification(com.tools20022.repository.msg.AlternateFinancialInstrumentIdentification1 otherIdentification) {
+	public SecurityIdentification3 setOtherIdentification(AlternateFinancialInstrumentIdentification1 otherIdentification) {
 		this.otherIdentification = otherIdentification;
 		return this;
 	}

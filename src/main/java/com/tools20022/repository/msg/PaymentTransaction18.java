@@ -116,7 +116,7 @@ public class PaymentTransaction18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransaction18, Optional<ActiveCurrencyAndAmount>> mmSettlementAmount = new MMMessageAttribute<PaymentTransaction18, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction18.mmObject();
@@ -128,6 +128,16 @@ public class PaymentTransaction18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(PaymentTransaction18 obj) {
+			return obj.getSettlementAmount();
+		}
+
+		@Override
+		public void setValue(PaymentTransaction18 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setSettlementAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SttlmDt")
@@ -166,7 +176,7 @@ public class PaymentTransaction18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentTransaction18, Optional<ISODate>> mmSettlementDate = new MMMessageAttribute<PaymentTransaction18, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction18.mmObject();
@@ -178,6 +188,16 @@ public class PaymentTransaction18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(PaymentTransaction18 obj) {
+			return obj.getSettlementDate();
+		}
+
+		@Override
+		public void setValue(PaymentTransaction18 obj, Optional<ISODate> value) {
+			obj.setSettlementDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PmtInstrm", required = true)
@@ -215,7 +235,7 @@ public class PaymentTransaction18 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentInstrument = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentTransaction18, PaymentInstrument7Choice> mmPaymentInstrument = new MMMessageAssociationEnd<PaymentTransaction18, PaymentInstrument7Choice>() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction18.mmObject();
@@ -228,6 +248,16 @@ public class PaymentTransaction18 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PaymentInstrument7Choice.mmObject();
+		}
+
+		@Override
+		public PaymentInstrument7Choice getValue(PaymentTransaction18 obj) {
+			return obj.getPaymentInstrument();
+		}
+
+		@Override
+		public void setValue(PaymentTransaction18 obj, PaymentInstrument7Choice value) {
+			obj.setPaymentInstrument(value);
 		}
 	};
 

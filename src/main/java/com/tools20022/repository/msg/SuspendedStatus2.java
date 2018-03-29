@@ -23,6 +23,7 @@ import com.tools20022.repository.codeset.NoReasonCode;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.SuspendedStatusReason2;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -123,7 +124,7 @@ public class SuspendedStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SuspendedStatus2, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<SuspendedStatus2, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatus2.mmObject();
@@ -136,9 +137,19 @@ public class SuspendedStatus2 {
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
+
+		@Override
+		public NoReasonCode getValue(SuspendedStatus2 obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(SuspendedStatus2 obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
+		}
 	};
 	@XmlElement(name = "RsnDtls", required = true)
-	protected List<com.tools20022.repository.msg.SuspendedStatusReason2> reasonDetails;
+	protected List<SuspendedStatusReason2> reasonDetails;
 	/**
 	 * 
 	 <p>
@@ -170,7 +181,7 @@ public class SuspendedStatus2 {
 	 * definition} = "Reason for the suspended status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SuspendedStatus2, List<SuspendedStatusReason2>> mmReasonDetails = new MMMessageAssociationEnd<SuspendedStatus2, List<SuspendedStatusReason2>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmSuspendedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SuspendedStatus2.mmObject();
@@ -182,7 +193,17 @@ public class SuspendedStatus2 {
 			maxOccurs = 5;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SuspendedStatusReason2.mmObject();
+			type_lazy = () -> SuspendedStatusReason2.mmObject();
+		}
+
+		@Override
+		public List<SuspendedStatusReason2> getValue(SuspendedStatus2 obj) {
+			return obj.getReasonDetails();
+		}
+
+		@Override
+		public void setValue(SuspendedStatus2 obj, List<SuspendedStatusReason2> value) {
+			obj.setReasonDetails(value);
 		}
 	};
 	/**
@@ -264,7 +285,7 @@ public class SuspendedStatus2 {
 		return reasonDetails == null ? reasonDetails = new ArrayList<>() : reasonDetails;
 	}
 
-	public SuspendedStatus2 setReasonDetails(List<com.tools20022.repository.msg.SuspendedStatusReason2> reasonDetails) {
+	public SuspendedStatus2 setReasonDetails(List<SuspendedStatusReason2> reasonDetails) {
 		this.reasonDetails = Objects.requireNonNull(reasonDetails);
 		return this;
 	}

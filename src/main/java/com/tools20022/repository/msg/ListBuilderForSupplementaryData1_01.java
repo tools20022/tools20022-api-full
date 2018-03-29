@@ -31,9 +31,12 @@ import com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV02;
 import com.tools20022.repository.area.pacs.PaymentReturnV08;
 import com.tools20022.repository.area.pain.CustomerPaymentReversalV08;
 import com.tools20022.repository.area.pain.CustomerPaymentStatusReportV09;
+import com.tools20022.repository.area.pain.MandateCopyRequestV01;
 import com.tools20022.repository.area.reda.*;
 import com.tools20022.repository.area.seev.*;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V07;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07;
+import com.tools20022.repository.area.semt.IntraPositionMovementStatusAdvice002V05;
 import com.tools20022.repository.area.sese.*;
 import java.util.List;
 
@@ -41,20 +44,20 @@ class ListBuilderForSupplementaryData1_01 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
+		list.add((T) MandateCopyRequestV01.mmSupplementaryData);
+		list.add((T) IntraPositionMovementConfirmation002V06.mmSupplementaryData);
+		list.add((T) IntraPositionMovementStatusAdvice002V05.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionAllegementNotification002V06.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionInstruction002V07.mmSupplementaryData);
+		list.add((T) CorporateActionInstructionCancellationRequest002V07.mmSupplementaryData);
 		list.add((T) CorporateActionEventProcessingStatusAdvice002V06.mmSupplementaryData);
 		list.add((T) SecuritiesFinancingConfirmation002V07.mmSupplementaryData);
 		list.add((T) SecuritiesFinancingStatusAdvice002V07.mmSupplementaryData);
 		list.add((T) SecuritiesSettlementConditionsModificationRequest002V07.mmSupplementaryData);
-		list.add((T) CorporateActionInstructionCancellationRequestStatusAdvice002V07.mmSupplementaryData);
-		list.add((T) CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07.mmSupplementaryData);
-		list.add((T) CorporateActionNotification002V07.mmSupplementaryData);
 		list.add((T) SecuritiesSettlementTransactionStatusAdvice002V08.mmSupplementaryData);
-		list.add((T) CorporateActionInstructionStatementReport002V06.mmSupplementaryData);
 		list.add((T) SecuritiesFinancingInstruction002V07.mmSupplementaryData);
-		list.add((T) CorporateActionInstructionStatusAdvice002V08.mmSupplementaryData);
 		list.add((T) SecuritiesSettlementTransactionGenerationNotification002V07.mmSupplementaryData);
 		list.add((T) SecuritiesFinancingModificationInstruction002V06.mmSupplementaryData);
-		list.add((T) CorporateActionMovementConfirmation002V08.mmSupplementaryData);
 		list.add((T) SecuritiesSettlementTransactionConfirmation002V07.mmSupplementaryData);
 		list.add((T) SecuritiesSettlementTransactionReversalAdvice002V06.mmSupplementaryData);
 		list.add((T) MoneyMarketUnsecuredMarketStatisticalReportV02.mmSupplementaryData);
@@ -181,6 +184,25 @@ class ListBuilderForSupplementaryData1_01 {
 		list.add((T) CustomerPaymentCancellationRequestV07.mmSupplementaryData);
 		list.add((T) CustomerPaymentReversalV08.mmSupplementaryData);
 		list.add((T) FIToFIPaymentStatusRequestV02.mmSupplementaryData);
+		list.add((T) CorporateActionCancellationAdvice002V08.mmSupplementaryData);
+		list.add((T) CorporateActionInstructionCancellationRequestStatusAdvice002V08.mmSupplementaryData);
+		list.add((T) CorporateActionInstructionStatementReport002V07.mmSupplementaryData);
+		list.add((T) CorporateActionInstructionStatusAdvice002V09.mmSupplementaryData);
+		list.add((T) CorporateActionInstruction002V08.mmSupplementaryData);
+		list.add((T) CorporateActionMovementConfirmation002V09.mmSupplementaryData);
+		list.add((T) CorporateActionMovementPreliminaryAdviceCancellationAdvice002V08.mmSupplementaryData);
+		list.add((T) CorporateActionMovementPreliminaryAdvice002V09.mmSupplementaryData);
+		list.add((T) CorporateActionMovementReversalAdvice002V09.mmSupplementaryData);
+		list.add((T) CorporateActionNotification002V08.mmSupplementaryData);
+		list.add((T) IntraPositionMovementConfirmation002V07.mmSupplementaryData);
+		list.add((T) SecuritiesFinancingConfirmation002V08.mmSupplementaryData);
+		list.add((T) SecuritiesFinancingInstruction002V08.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionAllegementNotification002V07.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionConfirmation002V08.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionGenerationNotification002V08.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionInstruction002V08.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionReversalAdvice002V07.mmSupplementaryData);
+		list.add((T) SecuritiesSettlementTransactionStatusAdvice002V09.mmSupplementaryData);
 		list.add((T) PartyAuditTrailQueryV01.mmSupplementaryData);
 		list.add((T) PartyActivityAdviceV01.mmSupplementaryData);
 		list.add((T) PartyCreationRequestV01.mmSupplementaryData);

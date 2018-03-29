@@ -142,7 +142,7 @@ public class RejectedStatus9Choice {
 	 * RejectedStatus1Choice.mmNoSpecifiedReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectedStatus9Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<RejectedStatus9Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatus9Choice.mmObject();
@@ -157,6 +157,16 @@ public class RejectedStatus9Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(RejectedStatus9Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus9Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -208,7 +218,7 @@ public class RejectedStatus9Choice {
 	 * RejectedStatus1Choice.mmReason}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectedStatus9Choice, List<RejectedStatusReason10>> mmReason = new MMMessageAssociationEnd<RejectedStatus9Choice, List<RejectedStatusReason10>>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectedStatus9Choice.mmObject();
@@ -223,6 +233,16 @@ public class RejectedStatus9Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedStatusReason10.mmObject();
+		}
+
+		@Override
+		public List<RejectedStatusReason10> getValue(RejectedStatus9Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(RejectedStatus9Choice obj, List<RejectedStatusReason10> value) {
+			obj.setReason(value);
 		}
 	};
 

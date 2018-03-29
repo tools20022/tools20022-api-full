@@ -111,7 +111,7 @@ public class RejectionReason3Choice {
 	 * definition} = "Rejection reason is defined using a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<RejectionReason3Choice, RejectionReason5Code> mmCode = new MMMessageAttribute<RejectionReason3Choice, RejectionReason5Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason3Choice.mmObject();
@@ -123,6 +123,16 @@ public class RejectionReason3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason5Code.mmObject();
+		}
+
+		@Override
+		public RejectionReason5Code getValue(RejectionReason3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(RejectionReason3Choice obj, RejectionReason5Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -159,7 +169,7 @@ public class RejectionReason3Choice {
 	 * definition} = "Rejection reason is defined using a data source scheme."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<RejectionReason3Choice, GenericIdentification13> mmProprietary = new MMMessageAssociationEnd<RejectionReason3Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason3Choice.mmObject();
@@ -172,6 +182,16 @@ public class RejectionReason3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(RejectionReason3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(RejectionReason3Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

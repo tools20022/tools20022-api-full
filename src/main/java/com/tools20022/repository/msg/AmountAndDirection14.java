@@ -108,7 +108,7 @@ public class AmountAndDirection14 {
 	 * definition} = "Amount of money in the cash entry."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection14, RestrictedFINActiveOrHistoricCurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountAndDirection14, RestrictedFINActiveOrHistoricCurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
@@ -120,6 +120,16 @@ public class AmountAndDirection14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveOrHistoricCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public RestrictedFINActiveOrHistoricCurrencyAndAmount getValue(AmountAndDirection14 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection14 obj, RestrictedFINActiveOrHistoricCurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "Sgn", required = true)
@@ -152,7 +162,7 @@ public class AmountAndDirection14 {
 	 * definition} = "Indicates that the amount value is positive or negative."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountAndDirection14, PlusOrMinusIndicator> mmSign = new MMMessageAttribute<AmountAndDirection14, PlusOrMinusIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection14.mmObject();
 			isDerived = false;
@@ -163,6 +173,16 @@ public class AmountAndDirection14 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
+		}
+
+		@Override
+		public PlusOrMinusIndicator getValue(AmountAndDirection14 obj) {
+			return obj.getSign();
+		}
+
+		@Override
+		public void setValue(AmountAndDirection14 obj, PlusOrMinusIndicator value) {
+			obj.setSign(value);
 		}
 	};
 

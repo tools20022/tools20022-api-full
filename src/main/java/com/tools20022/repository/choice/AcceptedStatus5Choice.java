@@ -118,7 +118,7 @@ public class AcceptedStatus5Choice {
 	 * definition} = "Reason not specified."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AcceptedStatus5Choice, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<AcceptedStatus5Choice, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcceptedStatus5Choice.mmObject();
@@ -131,6 +131,16 @@ public class AcceptedStatus5Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(AcceptedStatus5Choice obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(AcceptedStatus5Choice obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	@XmlElement(name = "Rsn", required = true)
@@ -169,7 +179,7 @@ public class AcceptedStatus5Choice {
 	 * definition} = "Reason for the accepted status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<AcceptedStatus5Choice, List<AcceptedStatusReason5>> mmReason = new MMMessageAssociationEnd<AcceptedStatus5Choice, List<AcceptedStatusReason5>>() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatusReason.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.AcceptedStatus5Choice.mmObject();
@@ -182,6 +192,16 @@ public class AcceptedStatus5Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AcceptedStatusReason5.mmObject();
+		}
+
+		@Override
+		public List<AcceptedStatusReason5> getValue(AcceptedStatus5Choice obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(AcceptedStatus5Choice obj, List<AcceptedStatusReason5> value) {
+			obj.setReason(value);
 		}
 	};
 

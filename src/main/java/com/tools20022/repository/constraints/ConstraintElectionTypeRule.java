@@ -51,11 +51,15 @@ public class ConstraintElectionTypeRule {
 	 */
 	public static final MMConstraint<ElectionAdviceFunction1> forElectionAdviceFunction1 = new MMConstraint<ElectionAdviceFunction1>() {
 		{
-			validator = ConstraintElectionTypeRule::checkElectionAdviceFunction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionTypeRule";
 			definition = "If ElectionType is CHAN, then PreviousAgentCAElectionAdviceIdentification and AgentCAElectionStatusAdviceIdentification are mandatory.";
 			owner_lazy = () -> ElectionAdviceFunction1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(ElectionAdviceFunction1 obj) throws Exception {
+			checkElectionAdviceFunction1(obj);
 		}
 	};
 

@@ -21,6 +21,8 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ErrorHandling2;
+import com.tools20022.repository.msg.GeneralBusinessInformation;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -121,7 +123,7 @@ public class GeneralBusinessReport {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBusinessInformationReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GeneralBusinessReport, Max35Text> mmBusinessInformationReference = new MMMessageAttribute<GeneralBusinessReport, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport.mmObject();
@@ -133,6 +135,16 @@ public class GeneralBusinessReport {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(GeneralBusinessReport obj) {
+			return obj.getBusinessInformationReference();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessReport obj, Max35Text value) {
+			obj.setBusinessInformationReference(value);
 		}
 	};
 	@XmlElement(name = "BizErr", required = true)
@@ -163,7 +175,7 @@ public class GeneralBusinessReport {
 	 * definition} = "Reason the requested business information is not given."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessReport, ErrorHandling2> mmBusinessError = new MMMessageAssociationEnd<GeneralBusinessReport, ErrorHandling2>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport.mmObject();
 			isDerived = false;
@@ -174,7 +186,17 @@ public class GeneralBusinessReport {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ErrorHandling2.mmObject();
+			type_lazy = () -> ErrorHandling2.mmObject();
+		}
+
+		@Override
+		public ErrorHandling2 getValue(GeneralBusinessReport obj) {
+			return obj.getBusinessError();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessReport obj, ErrorHandling2 value) {
+			obj.setBusinessError(value);
 		}
 	};
 	@XmlElement(name = "GnlBizInf", required = true)
@@ -211,7 +233,7 @@ public class GeneralBusinessReport {
 	 * definition} = "Requested business information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmGeneralBusinessInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<GeneralBusinessReport, GeneralBusinessInformation> mmGeneralBusinessInformation = new MMMessageAssociationEnd<GeneralBusinessReport, GeneralBusinessInformation>() {
 		{
 			businessComponentTrace_lazy = () -> SystemBusinessInformation.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport.mmObject();
@@ -223,7 +245,17 @@ public class GeneralBusinessReport {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformation.mmObject();
+			type_lazy = () -> GeneralBusinessInformation.mmObject();
+		}
+
+		@Override
+		public GeneralBusinessInformation getValue(GeneralBusinessReport obj) {
+			return obj.getGeneralBusinessInformation();
+		}
+
+		@Override
+		public void setValue(GeneralBusinessReport obj, GeneralBusinessInformation value) {
+			obj.setGeneralBusinessInformation(value);
 		}
 	};
 	/**
@@ -306,7 +338,7 @@ public class GeneralBusinessReport {
 		return businessError;
 	}
 
-	public GeneralBusinessReport setBusinessError(com.tools20022.repository.msg.ErrorHandling2 businessError) {
+	public GeneralBusinessReport setBusinessError(ErrorHandling2 businessError) {
 		this.businessError = Objects.requireNonNull(businessError);
 		return this;
 	}
@@ -315,7 +347,7 @@ public class GeneralBusinessReport {
 		return generalBusinessInformation;
 	}
 
-	public GeneralBusinessReport setGeneralBusinessInformation(com.tools20022.repository.msg.GeneralBusinessInformation generalBusinessInformation) {
+	public GeneralBusinessReport setGeneralBusinessInformation(GeneralBusinessInformation generalBusinessInformation) {
 		this.generalBusinessInformation = Objects.requireNonNull(generalBusinessInformation);
 		return this;
 	}

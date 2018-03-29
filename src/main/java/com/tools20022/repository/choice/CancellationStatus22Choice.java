@@ -106,7 +106,7 @@ public class CancellationStatus22Choice {
 	 * definition} = "Status of the order cancellation request is cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancellationStatus22Choice, OrderCancellationStatus2Code> mmStatus = new MMMessageAttribute<CancellationStatus22Choice, OrderCancellationStatus2Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmCancellationStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus22Choice.mmObject();
@@ -118,6 +118,16 @@ public class CancellationStatus22Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderCancellationStatus2Code.mmObject();
+		}
+
+		@Override
+		public OrderCancellationStatus2Code getValue(CancellationStatus22Choice obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CancellationStatus22Choice obj, OrderCancellationStatus2Code value) {
+			obj.setStatus(value);
 		}
 	};
 	@XmlElement(name = "Rjctd", required = true)
@@ -153,7 +163,7 @@ public class CancellationStatus22Choice {
 	 * definition} = "Status of the order cancellation request is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancellationStatus22Choice, RejectedStatus10> mmRejected = new MMMessageAssociationEnd<CancellationStatus22Choice, RejectedStatus10>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectedStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus22Choice.mmObject();
@@ -166,6 +176,16 @@ public class CancellationStatus22Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectedStatus10.mmObject();
+		}
+
+		@Override
+		public RejectedStatus10 getValue(CancellationStatus22Choice obj) {
+			return obj.getRejected();
+		}
+
+		@Override
+		public void setValue(CancellationStatus22Choice obj, RejectedStatus10 value) {
+			obj.setRejected(value);
 		}
 	};
 

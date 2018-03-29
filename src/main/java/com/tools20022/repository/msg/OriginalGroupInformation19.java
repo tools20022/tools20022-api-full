@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.NumberOfTransactionsPerStatus1;
+import com.tools20022.repository.msg.StatusReasonInformation7;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -158,7 +160,7 @@ public class OriginalGroupInformation19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation19, Max35Text> mmOriginalMessageIdentification = new MMMessageAttribute<OriginalGroupInformation19, Max35Text>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
@@ -170,6 +172,16 @@ public class OriginalGroupInformation19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation19 obj) {
+			return obj.getOriginalMessageIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, Max35Text value) {
+			obj.setOriginalMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "NtwkFileNm", required = true)
@@ -203,7 +215,7 @@ public class OriginalGroupInformation19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNetworkFileName = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation19, Max35Text> mmNetworkFileName = new MMMessageAttribute<OriginalGroupInformation19, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
 			isDerived = false;
@@ -214,6 +226,16 @@ public class OriginalGroupInformation19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation19 obj) {
+			return obj.getNetworkFileName();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, Max35Text value) {
+			obj.setNetworkFileName(value);
 		}
 	};
 	@XmlElement(name = "OrgnlMsgNmId", required = true)
@@ -247,7 +269,7 @@ public class OriginalGroupInformation19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation19, Max35Text> mmOriginalMessageNameIdentification = new MMMessageAttribute<OriginalGroupInformation19, Max35Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
 			isDerived = false;
@@ -258,6 +280,16 @@ public class OriginalGroupInformation19 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Max35Text getValue(OriginalGroupInformation19 obj) {
+			return obj.getOriginalMessageNameIdentification();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, Max35Text value) {
+			obj.setOriginalMessageNameIdentification(value);
 		}
 	};
 	@XmlElement(name = "OrgnlCreDtTm")
@@ -294,7 +326,7 @@ public class OriginalGroupInformation19 {
 	 * definition} = "Date and time at which the original message was created."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation19, Optional<ISODateTime>> mmOriginalCreationDateTime = new MMMessageAttribute<OriginalGroupInformation19, Optional<ISODateTime>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
@@ -306,6 +338,16 @@ public class OriginalGroupInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+
+		@Override
+		public Optional<ISODateTime> getValue(OriginalGroupInformation19 obj) {
+			return obj.getOriginalCreationDateTime();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, Optional<ISODateTime> value) {
+			obj.setOriginalCreationDateTime(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "FileOrgtr")
@@ -339,7 +381,7 @@ public class OriginalGroupInformation19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmFileOriginator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation19, Optional<Max35Text>> mmFileOriginator = new MMMessageAttribute<OriginalGroupInformation19, Optional<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
 			isDerived = false;
@@ -350,6 +392,16 @@ public class OriginalGroupInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(OriginalGroupInformation19 obj) {
+			return obj.getFileOriginator();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, Optional<Max35Text> value) {
+			obj.setFileOriginator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlNbOfTxs")
@@ -383,7 +435,7 @@ public class OriginalGroupInformation19 {
 	 * "Number of individual transactions contained in the original message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalNumberOfTransactions = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation19, Optional<Max15NumericText>> mmOriginalNumberOfTransactions = new MMMessageAttribute<OriginalGroupInformation19, Optional<Max15NumericText>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
 			isDerived = false;
@@ -394,6 +446,16 @@ public class OriginalGroupInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+
+		@Override
+		public Optional<Max15NumericText> getValue(OriginalGroupInformation19 obj) {
+			return obj.getOriginalNumberOfTransactions();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, Optional<Max15NumericText> value) {
+			obj.setOriginalNumberOfTransactions(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "OrgnlCtrlSum")
@@ -428,7 +490,7 @@ public class OriginalGroupInformation19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmOriginalControlSum = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation19, Optional<DecimalNumber>> mmOriginalControlSum = new MMMessageAttribute<OriginalGroupInformation19, Optional<DecimalNumber>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
 			isDerived = false;
@@ -439,6 +501,16 @@ public class OriginalGroupInformation19 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+
+		@Override
+		public Optional<DecimalNumber> getValue(OriginalGroupInformation19 obj) {
+			return obj.getOriginalControlSum();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, Optional<DecimalNumber> value) {
+			obj.setOriginalControlSum(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "GrpSts")
@@ -476,7 +548,7 @@ public class OriginalGroupInformation19 {
 	 * definition} = "Specifies the status of a group of transactions."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmGroupStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<OriginalGroupInformation19, Optional<TransactionGroupStatus1Code>> mmGroupStatus = new MMMessageAttribute<OriginalGroupInformation19, Optional<TransactionGroupStatus1Code>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
@@ -489,9 +561,19 @@ public class OriginalGroupInformation19 {
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionGroupStatus1Code.mmObject();
 		}
+
+		@Override
+		public Optional<TransactionGroupStatus1Code> getValue(OriginalGroupInformation19 obj) {
+			return obj.getGroupStatus();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, Optional<TransactionGroupStatus1Code> value) {
+			obj.setGroupStatus(value.orElse(null));
+		}
 	};
 	@XmlElement(name = "StsRsnInf")
-	protected List<com.tools20022.repository.msg.StatusReasonInformation7> statusReasonInformation;
+	protected List<StatusReasonInformation7> statusReasonInformation;
 	/**
 	 * 
 	 <p>
@@ -524,7 +606,7 @@ public class OriginalGroupInformation19 {
 	 * definition} = "Detailed information on the status reason."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReasonInformation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupInformation19, List<StatusReasonInformation7>> mmStatusReasonInformation = new MMMessageAssociationEnd<OriginalGroupInformation19, List<StatusReasonInformation7>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
@@ -535,11 +617,21 @@ public class OriginalGroupInformation19 {
 			definition = "Detailed information on the status reason.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation7.mmObject();
+			type_lazy = () -> StatusReasonInformation7.mmObject();
+		}
+
+		@Override
+		public List<StatusReasonInformation7> getValue(OriginalGroupInformation19 obj) {
+			return obj.getStatusReasonInformation();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, List<StatusReasonInformation7> value) {
+			obj.setStatusReasonInformation(value);
 		}
 	};
 	@XmlElement(name = "NbOfTxsPerSts")
-	protected List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus1> numberOfTransactionsPerStatus;
+	protected List<NumberOfTransactionsPerStatus1> numberOfTransactionsPerStatus;
 	/**
 	 * 
 	 <p>
@@ -569,7 +661,7 @@ public class OriginalGroupInformation19 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmNumberOfTransactionsPerStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<OriginalGroupInformation19, List<NumberOfTransactionsPerStatus1>> mmNumberOfTransactionsPerStatus = new MMMessageAssociationEnd<OriginalGroupInformation19, List<NumberOfTransactionsPerStatus1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupInformation19.mmObject();
 			isDerived = false;
@@ -579,7 +671,17 @@ public class OriginalGroupInformation19 {
 			definition = "Detailed information on the number of transactions for each identical individual transaction status.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus1.mmObject();
+			type_lazy = () -> NumberOfTransactionsPerStatus1.mmObject();
+		}
+
+		@Override
+		public List<NumberOfTransactionsPerStatus1> getValue(OriginalGroupInformation19 obj) {
+			return obj.getNumberOfTransactionsPerStatus();
+		}
+
+		@Override
+		public void setValue(OriginalGroupInformation19 obj, List<NumberOfTransactionsPerStatus1> value) {
+			obj.setNumberOfTransactionsPerStatus(value);
 		}
 	};
 	/**
@@ -731,7 +833,7 @@ public class OriginalGroupInformation19 {
 		return statusReasonInformation == null ? statusReasonInformation = new ArrayList<>() : statusReasonInformation;
 	}
 
-	public OriginalGroupInformation19 setStatusReasonInformation(List<com.tools20022.repository.msg.StatusReasonInformation7> statusReasonInformation) {
+	public OriginalGroupInformation19 setStatusReasonInformation(List<StatusReasonInformation7> statusReasonInformation) {
 		this.statusReasonInformation = Objects.requireNonNull(statusReasonInformation);
 		return this;
 	}
@@ -740,7 +842,7 @@ public class OriginalGroupInformation19 {
 		return numberOfTransactionsPerStatus == null ? numberOfTransactionsPerStatus = new ArrayList<>() : numberOfTransactionsPerStatus;
 	}
 
-	public OriginalGroupInformation19 setNumberOfTransactionsPerStatus(List<com.tools20022.repository.msg.NumberOfTransactionsPerStatus1> numberOfTransactionsPerStatus) {
+	public OriginalGroupInformation19 setNumberOfTransactionsPerStatus(List<NumberOfTransactionsPerStatus1> numberOfTransactionsPerStatus) {
 		this.numberOfTransactionsPerStatus = Objects.requireNonNull(numberOfTransactionsPerStatus);
 		return this;
 	}

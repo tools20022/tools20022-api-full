@@ -19,11 +19,11 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ISOTime;
+import com.tools20022.repository.entity.SystemAvailability;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TimePeriod1;
 import com.tools20022.repository.msg.TimePeriodDetails;
 import com.tools20022.repository.msg.TimePeriodDetails1;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -123,7 +123,7 @@ public class TimePeriod {
 	 * definition} = "System for which a session period is specified."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmSystemAvailability = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<TimePeriod, SystemAvailability> mmSystemAvailability = new MMBusinessAssociationEnd<TimePeriod, SystemAvailability>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TimePeriod.mmObject();
@@ -132,9 +132,19 @@ public class TimePeriod {
 			definition = "System for which a session period is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmAvailableSessionPeriod;
+			opposite_lazy = () -> SystemAvailability.mmAvailableSessionPeriod;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
+			type_lazy = () -> SystemAvailability.mmObject();
+		}
+
+		@Override
+		public SystemAvailability getValue(TimePeriod obj) {
+			return obj.getSystemAvailability();
+		}
+
+		@Override
+		public void setValue(TimePeriod obj, SystemAvailability value) {
+			obj.setSystemAvailability(value);
 		}
 	};
 	protected ISOTime fromTime;
@@ -175,7 +185,7 @@ public class TimePeriod {
 	 * definition} = "Time at which the time span starts."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmFromTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TimePeriod, ISOTime> mmFromTime = new MMBusinessAttribute<TimePeriod, ISOTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimePeriodDetails.mmFromTime, TimePeriodDetails1.mmFromTime, TimePeriod1.mmFromTime);
 			isDerived = false;
@@ -188,12 +198,14 @@ public class TimePeriod {
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimePeriod.class.getMethod("getFromTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISOTime getValue(TimePeriod obj) {
+			return obj.getFromTime();
+		}
+
+		@Override
+		public void setValue(TimePeriod obj, ISOTime value) {
+			obj.setFromTime(value);
 		}
 	};
 	protected ISOTime toTime;
@@ -233,7 +245,7 @@ public class TimePeriod {
 	 * definition} = "Time at which the time span ends."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmToTime = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<TimePeriod, ISOTime> mmToTime = new MMBusinessAttribute<TimePeriod, ISOTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(TimePeriodDetails.mmToTime, TimePeriodDetails1.mmToTime, TimePeriod1.mmToTime);
 			isDerived = false;
@@ -246,12 +258,14 @@ public class TimePeriod {
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return TimePeriod.class.getMethod("getToTime", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISOTime getValue(TimePeriod obj) {
+			return obj.getToTime();
+		}
+
+		@Override
+		public void setValue(TimePeriod obj, ISOTime value) {
+			obj.setToTime(value);
 		}
 	};
 
@@ -262,7 +276,7 @@ public class TimePeriod {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimePeriod";
 				definition = "Particular time span specified between a start time and an end time. The time period cannot exceed 24 hours.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemAvailability.mmAvailableSessionPeriod);
+				associationDomain_lazy = () -> Arrays.asList(SystemAvailability.mmAvailableSessionPeriod);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TimePeriod.mmSystemAvailability, com.tools20022.repository.entity.TimePeriod.mmFromTime, com.tools20022.repository.entity.TimePeriod.mmToTime);
 				derivationComponent_lazy = () -> Arrays.asList(TimePeriodDetails.mmObject(), TimePeriodDetails1.mmObject(), TimePeriod1.mmObject());
 			}
@@ -279,7 +293,7 @@ public class TimePeriod {
 		return systemAvailability;
 	}
 
-	public TimePeriod setSystemAvailability(com.tools20022.repository.entity.SystemAvailability systemAvailability) {
+	public TimePeriod setSystemAvailability(SystemAvailability systemAvailability) {
 		this.systemAvailability = Objects.requireNonNull(systemAvailability);
 		return this;
 	}

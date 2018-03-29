@@ -29,7 +29,6 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -175,7 +174,7 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<PriceReportCancellationV04, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,12 +185,14 @@ public class PriceReportCancellationV04 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(PriceReportCancellationV04 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -219,7 +220,7 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<PriceReportCancellationV04, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +231,14 @@ public class PriceReportCancellationV04 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PriceReportCancellationV04 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef")
@@ -263,7 +266,7 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, Optional<AdditionalReference3>> mmPreviousReference = new MMMessageBuildingBlock<PriceReportCancellationV04, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,12 +277,14 @@ public class PriceReportCancellationV04 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PriceReportCancellationV04 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, Optional<AdditionalReference3> value) {
+			obj.setPreviousReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MsgPgntn", required = true)
@@ -306,7 +311,7 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, Pagination> mmMessagePagination = new MMMessageBuildingBlock<PriceReportCancellationV04, Pagination>() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,12 +322,14 @@ public class PriceReportCancellationV04 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getMessagePagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(PriceReportCancellationV04 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, Pagination value) {
+			obj.setMessagePagination(value);
 		}
 	};
 	@XmlElement(name = "PricRptId", required = true)
@@ -351,7 +358,7 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPriceReportIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, Max35Text> mmPriceReportIdentification = new MMMessageBuildingBlock<PriceReportCancellationV04, Max35Text>() {
 		{
 			xmlTag = "PricRptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -362,12 +369,14 @@ public class PriceReportCancellationV04 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getPriceReportIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PriceReportCancellationV04 obj) {
+			return obj.getPriceReportIdentification();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, Max35Text value) {
+			obj.setPriceReportIdentification(value);
 		}
 	};
 	@XmlElement(name = "CxlId", required = true)
@@ -396,7 +405,7 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, Max35Text> mmCancellationIdentification = new MMMessageBuildingBlock<PriceReportCancellationV04, Max35Text>() {
 		{
 			xmlTag = "CxlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -407,12 +416,14 @@ public class PriceReportCancellationV04 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getCancellationIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Max35Text getValue(PriceReportCancellationV04 obj) {
+			return obj.getCancellationIdentification();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, Max35Text value) {
+			obj.setCancellationIdentification(value);
 		}
 	};
 	@XmlElement(name = "CxlRsn")
@@ -439,7 +450,7 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Reason for the cancellation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancellationReason = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, Optional<Max350Text>> mmCancellationReason = new MMMessageBuildingBlock<PriceReportCancellationV04, Optional<Max350Text>>() {
 		{
 			xmlTag = "CxlRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -450,12 +461,14 @@ public class PriceReportCancellationV04 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getCancellationReason", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<Max350Text> getValue(PriceReportCancellationV04 obj) {
+			return obj.getCancellationReason();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, Optional<Max350Text> value) {
+			obj.setCancellationReason(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XpctdPricCrrctnDt")
@@ -483,7 +496,7 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Date or date and time the price will be corrected."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExpectedPriceCorrectionDate = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, Optional<DateAndDateTime1Choice>> mmExpectedPriceCorrectionDate = new MMMessageBuildingBlock<PriceReportCancellationV04, Optional<DateAndDateTime1Choice>>() {
 		{
 			xmlTag = "XpctdPricCrrctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -494,12 +507,14 @@ public class PriceReportCancellationV04 {
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getExpectedPriceCorrectionDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<DateAndDateTime1Choice> getValue(PriceReportCancellationV04 obj) {
+			return obj.getExpectedPriceCorrectionDate();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, Optional<DateAndDateTime1Choice> value) {
+			obj.setExpectedPriceCorrectionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CmpltPricCxl", required = true)
@@ -529,7 +544,7 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCompletePriceCancellation = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, YesNoIndicator> mmCompletePriceCancellation = new MMMessageBuildingBlock<PriceReportCancellationV04, YesNoIndicator>() {
 		{
 			xmlTag = "CmpltPricCxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -540,12 +555,14 @@ public class PriceReportCancellationV04 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getCompletePriceCancellation", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public YesNoIndicator getValue(PriceReportCancellationV04 obj) {
+			return obj.getCompletePriceCancellation();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, YesNoIndicator value) {
+			obj.setCompletePriceCancellation(value);
 		}
 	};
 	@XmlElement(name = "CancPricValtnDtls")
@@ -572,7 +589,7 @@ public class PriceReportCancellationV04 {
 	 * definition} = "Details of prices to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmCancelledPriceValuationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, List<PriceReport3>> mmCancelledPriceValuationDetails = new MMMessageBuildingBlock<PriceReportCancellationV04, List<PriceReport3>>() {
 		{
 			xmlTag = "CancPricValtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -582,12 +599,14 @@ public class PriceReportCancellationV04 {
 			complexType_lazy = () -> PriceReport3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getCancelledPriceValuationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<PriceReport3> getValue(PriceReportCancellationV04 obj) {
+			return obj.getCancelledPriceValuationDetails();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, List<PriceReport3> value) {
+			obj.setCancelledPriceValuationDetails(value);
 		}
 	};
 	@XmlElement(name = "Xtnsn")
@@ -616,7 +635,7 @@ public class PriceReportCancellationV04 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmExtension = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV04, List<Extension1>> mmExtension = new MMMessageBuildingBlock<PriceReportCancellationV04, List<Extension1>>() {
 		{
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -626,12 +645,14 @@ public class PriceReportCancellationV04 {
 			complexType_lazy = () -> Extension1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV04.class.getMethod("getExtension", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<Extension1> getValue(PriceReportCancellationV04 obj) {
+			return obj.getExtension();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV04 obj, List<Extension1> value) {
+			obj.setExtension(value);
 		}
 	};
 

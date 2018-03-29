@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.MarketType1Code;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.TradingMarket;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.PartyIdentification6Choice;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -109,7 +110,7 @@ public class MarketIdentification1 {
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MarketIdentification1, PartyIdentification6Choice> mmIdentification = new MMMessageAssociationEnd<MarketIdentification1, PartyIdentification6Choice>() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification1.mmObject();
@@ -121,7 +122,17 @@ public class MarketIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification6Choice.mmObject();
+			type_lazy = () -> PartyIdentification6Choice.mmObject();
+		}
+
+		@Override
+		public PartyIdentification6Choice getValue(MarketIdentification1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(MarketIdentification1 obj, PartyIdentification6Choice value) {
+			obj.setIdentification(value);
 		}
 	};
 	@XmlElement(name = "Tp", required = true)
@@ -159,7 +170,7 @@ public class MarketIdentification1 {
 	 * definition} = "Nature of a market in which transactions take place."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<MarketIdentification1, MarketType1Code> mmType = new MMMessageAttribute<MarketIdentification1, MarketType1Code>() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification1.mmObject();
@@ -171,6 +182,16 @@ public class MarketIdentification1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MarketType1Code.mmObject();
+		}
+
+		@Override
+		public MarketType1Code getValue(MarketIdentification1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(MarketIdentification1 obj, MarketType1Code value) {
+			obj.setType(value);
 		}
 	};
 
@@ -192,7 +213,7 @@ public class MarketIdentification1 {
 		return identification;
 	}
 
-	public MarketIdentification1 setIdentification(com.tools20022.repository.msg.PartyIdentification6Choice identification) {
+	public MarketIdentification1 setIdentification(PartyIdentification6Choice identification) {
 		this.identification = Objects.requireNonNull(identification);
 		return this;
 	}

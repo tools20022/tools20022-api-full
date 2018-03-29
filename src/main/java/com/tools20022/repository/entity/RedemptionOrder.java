@@ -25,7 +25,6 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -314,7 +313,7 @@ public class RedemptionOrder extends InvestmentFundOrder {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmHoldingsRedemptionRate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<RedemptionOrder, PercentageRate> mmHoldingsRedemptionRate = new MMBusinessAttribute<RedemptionOrder, PercentageRate>() {
 		{
 			derivation_lazy = () -> Arrays.asList(FundOrderData1.mmHoldingsRedemptionRate, RedemptionOrder3.mmHoldingsRedemptionRate, RedemptionOrder5.mmHoldingsRedemptionRate, RedemptionExecution3.mmHoldingsRedemptionRate,
 					RedemptionExecution5.mmHoldingsRedemptionRate, RedemptionOrder7.mmHoldingsRedemptionRate, RedemptionOrder4.mmHoldingsRedemptionRate, RedemptionOrder6.mmHoldingsRedemptionRate,
@@ -332,12 +331,14 @@ public class RedemptionOrder extends InvestmentFundOrder {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return RedemptionOrder.class.getMethod("getHoldingsRedemptionRate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public PercentageRate getValue(RedemptionOrder obj) {
+			return obj.getHoldingsRedemptionRate();
+		}
+
+		@Override
+		public void setValue(RedemptionOrder obj, PercentageRate value) {
+			obj.setHoldingsRedemptionRate(value);
 		}
 	};
 

@@ -115,7 +115,7 @@ public class Document10 {
 	 * definition} = "Type of document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document10, UndertakingDocumentType2Choice> mmDocumentType = new MMMessageAttribute<Document10, UndertakingDocumentType2Choice>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmDocumentType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
@@ -127,6 +127,16 @@ public class Document10 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UndertakingDocumentType2Choice.mmObject();
+		}
+
+		@Override
+		public UndertakingDocumentType2Choice getValue(Document10 obj) {
+			return obj.getDocumentType();
+		}
+
+		@Override
+		public void setValue(Document10 obj, UndertakingDocumentType2Choice value) {
+			obj.setDocumentType(value);
 		}
 	};
 	@XmlElement(name = "PresntnChanl")
@@ -163,7 +173,7 @@ public class Document10 {
 	 * definition} = "Channel through which the document should be presented."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPresentationChannel = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document10, Optional<Channel1Choice>> mmPresentationChannel = new MMMessageAttribute<Document10, Optional<Channel1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
@@ -175,6 +185,16 @@ public class Document10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Channel1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<Channel1Choice> getValue(Document10 obj) {
+			return obj.getPresentationChannel();
+		}
+
+		@Override
+		public void setValue(Document10 obj, Optional<Channel1Choice> value) {
+			obj.setPresentationChannel(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "DocFrmt")
@@ -211,7 +231,7 @@ public class Document10 {
 	 * definition} = "Format of the document."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDocumentFormat = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document10, Optional<DocumentFormat1Choice>> mmDocumentFormat = new MMMessageAttribute<Document10, Optional<DocumentFormat1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
@@ -223,6 +243,16 @@ public class Document10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentFormat1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DocumentFormat1Choice> getValue(Document10 obj) {
+			return obj.getDocumentFormat();
+		}
+
+		@Override
+		public void setValue(Document10 obj, Optional<DocumentFormat1Choice> value) {
+			obj.setDocumentFormat(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CpyInd")
@@ -261,7 +291,7 @@ public class Document10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document10, Optional<YesNoIndicator>> mmCopyIndicator = new MMMessageAttribute<Document10, Optional<YesNoIndicator>>() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmCopyIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
@@ -273,6 +303,16 @@ public class Document10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Document10 obj) {
+			return obj.getCopyIndicator();
+		}
+
+		@Override
+		public void setValue(Document10 obj, Optional<YesNoIndicator> value) {
+			obj.setCopyIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SgndInd")
@@ -304,7 +344,7 @@ public class Document10 {
 	 * definition} = "Indication whether the document must be signed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSignedIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Document10, Optional<YesNoIndicator>> mmSignedIndicator = new MMMessageAttribute<Document10, Optional<YesNoIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
 			isDerived = false;
@@ -315,6 +355,16 @@ public class Document10 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<YesNoIndicator> getValue(Document10 obj) {
+			return obj.getSignedIndicator();
+		}
+
+		@Override
+		public void setValue(Document10 obj, Optional<YesNoIndicator> value) {
+			obj.setSignedIndicator(value.orElse(null));
 		}
 	};
 

@@ -118,7 +118,7 @@ public class Collateral18 {
 	 * Collateral14.mmValuation}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmValuation = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Collateral18, SecuredCollateral2Choice> mmValuation = new MMMessageAssociationEnd<Collateral18, SecuredCollateral2Choice>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmValuation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral18.mmObject();
@@ -132,6 +132,16 @@ public class Collateral18 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuredCollateral2Choice.mmObject();
+		}
+
+		@Override
+		public SecuredCollateral2Choice getValue(Collateral18 obj) {
+			return obj.getValuation();
+		}
+
+		@Override
+		public void setValue(Collateral18 obj, SecuredCollateral2Choice value) {
+			obj.setValuation(value);
 		}
 	};
 	@XmlElement(name = "Hrcut")
@@ -175,7 +185,7 @@ public class Collateral18 {
 	 * Collateral14.mmHaircut}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Collateral18, Optional<PercentageRate>> mmHaircut = new MMMessageAttribute<Collateral18, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral18.mmObject();
@@ -188,6 +198,16 @@ public class Collateral18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(Collateral18 obj) {
+			return obj.getHaircut();
+		}
+
+		@Override
+		public void setValue(Collateral18 obj, Optional<PercentageRate> value) {
+			obj.setHaircut(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SpclCollInd")
@@ -231,7 +251,7 @@ public class Collateral18 {
 	 * Collateral14.mmSpecialCollateralIndicator}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSpecialCollateralIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Collateral18, Optional<SpecialCollateral2Code>> mmSpecialCollateralIndicator = new MMMessageAttribute<Collateral18, Optional<SpecialCollateral2Code>>() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral18.mmObject();
@@ -244,6 +264,16 @@ public class Collateral18 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SpecialCollateral2Code.mmObject();
+		}
+
+		@Override
+		public Optional<SpecialCollateral2Code> getValue(Collateral18 obj) {
+			return obj.getSpecialCollateralIndicator();
+		}
+
+		@Override
+		public void setValue(Collateral18 obj, Optional<SpecialCollateral2Code> value) {
+			obj.setSpecialCollateralIndicator(value.orElse(null));
 		}
 	};
 

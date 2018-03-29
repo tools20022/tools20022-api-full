@@ -122,7 +122,7 @@ public class UnderlyingTradeTransaction1 {
 	 * "Type of underlying transaction such as a tender, order, contract."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingTradeTransaction1, UnderlyingTradeTransactionType1Choice> mmType = new MMMessageAttribute<UnderlyingTradeTransaction1, UnderlyingTradeTransactionType1Choice>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingTransaction.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmObject();
@@ -134,6 +134,16 @@ public class UnderlyingTradeTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnderlyingTradeTransactionType1Choice.mmObject();
+		}
+
+		@Override
+		public UnderlyingTradeTransactionType1Choice getValue(UnderlyingTradeTransaction1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(UnderlyingTradeTransaction1 obj, UnderlyingTradeTransactionType1Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Id")
@@ -170,7 +180,7 @@ public class UnderlyingTradeTransaction1 {
 	 * definition} = "Identification of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingTradeTransaction1, Optional<Max35Text>> mmIdentification = new MMMessageAttribute<UnderlyingTradeTransaction1, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingTransaction.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmObject();
@@ -182,6 +192,16 @@ public class UnderlyingTradeTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(UnderlyingTradeTransaction1 obj) {
+			return obj.getIdentification();
+		}
+
+		@Override
+		public void setValue(UnderlyingTradeTransaction1 obj, Optional<Max35Text> value) {
+			obj.setIdentification(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxDt")
@@ -218,7 +238,7 @@ public class UnderlyingTradeTransaction1 {
 	 * definition} = "Date the underlying transaction was issued or awarded."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingTradeTransaction1, Optional<ISODate>> mmTransactionDate = new MMMessageAttribute<UnderlyingTradeTransaction1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingTransaction.mmIssueDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmObject();
@@ -230,6 +250,16 @@ public class UnderlyingTradeTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(UnderlyingTradeTransaction1 obj) {
+			return obj.getTransactionDate();
+		}
+
+		@Override
+		public void setValue(UnderlyingTradeTransaction1 obj, Optional<ISODate> value) {
+			obj.setTransactionDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TndrClsgDt")
@@ -266,7 +296,7 @@ public class UnderlyingTradeTransaction1 {
 	 * definition} = "Date the tender closes."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTenderClosingDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingTradeTransaction1, Optional<ISODate>> mmTenderClosingDate = new MMMessageAttribute<UnderlyingTradeTransaction1, Optional<ISODate>>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingTransaction.mmTenderClosingDate;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmObject();
@@ -278,6 +308,16 @@ public class UnderlyingTradeTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public Optional<ISODate> getValue(UnderlyingTradeTransaction1 obj) {
+			return obj.getTenderClosingDate();
+		}
+
+		@Override
+		public void setValue(UnderlyingTradeTransaction1 obj, Optional<ISODate> value) {
+			obj.setTenderClosingDate(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TxAmt")
@@ -315,7 +355,7 @@ public class UnderlyingTradeTransaction1 {
 	 * definition} = "Amount of the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingTradeTransaction1, Optional<ActiveCurrencyAndAmount>> mmTransactionAmount = new MMMessageAttribute<UnderlyingTradeTransaction1, Optional<ActiveCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingTransaction.mmTotalAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmObject();
@@ -327,6 +367,16 @@ public class UnderlyingTradeTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ActiveCurrencyAndAmount> getValue(UnderlyingTradeTransaction1 obj) {
+			return obj.getTransactionAmount();
+		}
+
+		@Override
+		public void setValue(UnderlyingTradeTransaction1 obj, Optional<ActiveCurrencyAndAmount> value) {
+			obj.setTransactionAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "CtrctAmtPctg")
@@ -365,7 +415,7 @@ public class UnderlyingTradeTransaction1 {
 	 * "Percentage of the underlying contract covered by the undertaking."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmContractAmountPercentage = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingTradeTransaction1, Optional<PercentageRate>> mmContractAmountPercentage = new MMMessageAttribute<UnderlyingTradeTransaction1, Optional<PercentageRate>>() {
 		{
 			businessElementTrace_lazy = () -> UnderlyingTransaction.mmContractAmountPercentage;
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmObject();
@@ -377,6 +427,16 @@ public class UnderlyingTradeTransaction1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+
+		@Override
+		public Optional<PercentageRate> getValue(UnderlyingTradeTransaction1 obj) {
+			return obj.getContractAmountPercentage();
+		}
+
+		@Override
+		public void setValue(UnderlyingTradeTransaction1 obj, Optional<PercentageRate> value) {
+			obj.setContractAmountPercentage(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "AddtlInf")
@@ -409,7 +469,7 @@ public class UnderlyingTradeTransaction1 {
 	 * "Additional information related to the underlying transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<UnderlyingTradeTransaction1, List<Max2000Text>> mmAdditionalInformation = new MMMessageAttribute<UnderlyingTradeTransaction1, List<Max2000Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTradeTransaction1.mmObject();
 			isDerived = false;
@@ -420,6 +480,16 @@ public class UnderlyingTradeTransaction1 {
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();
+		}
+
+		@Override
+		public List<Max2000Text> getValue(UnderlyingTradeTransaction1 obj) {
+			return obj.getAdditionalInformation();
+		}
+
+		@Override
+		public void setValue(UnderlyingTradeTransaction1 obj, List<Max2000Text> value) {
+			obj.setAdditionalInformation(value);
 		}
 	};
 

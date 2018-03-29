@@ -20,9 +20,10 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.CollateralSubstitutionTypeCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
+import com.tools20022.repository.entity.Collateral;
+import com.tools20022.repository.entity.CollateralManagement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -174,7 +175,7 @@ public class CollateralSubstitution {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CollateralSubstitution, CollateralSubstitutionTypeCode> mmType = new MMBusinessAttribute<CollateralSubstitution, CollateralSubstitutionTypeCode>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralSubstitution1.mmCollateralSubstitutionType, CollateralSubstitution2.mmCollateralSubstitutionType, CollateralSubstitution3.mmCollateralSubstitutionType,
 					CollateralSubstitution5.mmCollateralSubstitutionType, CollateralSubstitution4.mmCollateralSubstitutionType);
@@ -188,12 +189,14 @@ public class CollateralSubstitution {
 			simpleType_lazy = () -> CollateralSubstitutionTypeCode.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralSubstitution.class.getMethod("getType", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CollateralSubstitutionTypeCode getValue(CollateralSubstitution obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitution obj, CollateralSubstitutionTypeCode value) {
+			obj.setType(value);
 		}
 	};
 	protected CurrencyAndAmount acceptedAmount;
@@ -231,7 +234,7 @@ public class CollateralSubstitution {
 	 * definition} = "Provides the accepted collateral substitution amount."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmAcceptedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CollateralSubstitution, CurrencyAndAmount> mmAcceptedAmount = new MMBusinessAttribute<CollateralSubstitution, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralSubstitutionResponse1.mmAcceptedAmount);
 			isDerived = false;
@@ -244,12 +247,14 @@ public class CollateralSubstitution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralSubstitution.class.getMethod("getAcceptedAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(CollateralSubstitution obj) {
+			return obj.getAcceptedAmount();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitution obj, CurrencyAndAmount value) {
+			obj.setAcceptedAmount(value);
 		}
 	};
 	protected CurrencyAndAmount rejectedAmount;
@@ -288,7 +293,7 @@ public class CollateralSubstitution {
 	 * "Specifies the collateral substitution amount that is rejected."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRejectedAmount = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<CollateralSubstitution, CurrencyAndAmount> mmRejectedAmount = new MMBusinessAttribute<CollateralSubstitution, CurrencyAndAmount>() {
 		{
 			derivation_lazy = () -> Arrays.asList(CollateralSubstitutionResponse2.mmRejectedAmount);
 			isDerived = false;
@@ -301,12 +306,14 @@ public class CollateralSubstitution {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return CollateralSubstitution.class.getMethod("getRejectedAmount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public CurrencyAndAmount getValue(CollateralSubstitution obj) {
+			return obj.getRejectedAmount();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitution obj, CurrencyAndAmount value) {
+			obj.setRejectedAmount(value);
 		}
 	};
 	protected CollateralManagement relatedManagementProcess;
@@ -345,7 +352,7 @@ public class CollateralSubstitution {
 	 * "Process which groups the activities related to collateral."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmRelatedManagementProcess = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralSubstitution, Optional<CollateralManagement>> mmRelatedManagementProcess = new MMBusinessAssociationEnd<CollateralSubstitution, Optional<CollateralManagement>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralSubstitution.mmObject();
@@ -354,12 +361,22 @@ public class CollateralSubstitution {
 			definition = "Process which groups the activities related to collateral.";
 			maxOccurs = 1;
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmCollateralSubstitution;
+			opposite_lazy = () -> CollateralManagement.mmCollateralSubstitution;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
+			type_lazy = () -> CollateralManagement.mmObject();
+		}
+
+		@Override
+		public Optional<CollateralManagement> getValue(CollateralSubstitution obj) {
+			return obj.getRelatedManagementProcess();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitution obj, Optional<CollateralManagement> value) {
+			obj.setRelatedManagementProcess(value.orElse(null));
 		}
 	};
-	protected List<com.tools20022.repository.entity.Collateral> newCollateral;
+	protected List<Collateral> newCollateral;
 	/**
 	 * 
 	 <p>
@@ -394,7 +411,7 @@ public class CollateralSubstitution {
 	 * "Specifies the collateral which is replacing the returned one."</li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmNewCollateral = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd<CollateralSubstitution, List<Collateral>> mmNewCollateral = new MMBusinessAssociationEnd<CollateralSubstitution, List<Collateral>>() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralSubstitution.mmObject();
@@ -402,9 +419,19 @@ public class CollateralSubstitution {
 			name = "NewCollateral";
 			definition = "Specifies the collateral which is replacing the returned one.";
 			minOccurs = 0;
-			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.mmRelatedCollateralSubstitution;
+			opposite_lazy = () -> Collateral.mmRelatedCollateralSubstitution;
 			aggregation = MMAggregation.NONE;
-			type_lazy = () -> com.tools20022.repository.entity.Collateral.mmObject();
+			type_lazy = () -> Collateral.mmObject();
+		}
+
+		@Override
+		public List<Collateral> getValue(CollateralSubstitution obj) {
+			return obj.getNewCollateral();
+		}
+
+		@Override
+		public void setValue(CollateralSubstitution obj, List<Collateral> value) {
+			obj.setNewCollateral(value);
 		}
 	};
 
@@ -415,7 +442,7 @@ public class CollateralSubstitution {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralSubstitution";
 				definition = "Substitution of collateral by specifying the collateral to be returned and proposing the new type(s) of collateral to be delivered.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Collateral.mmRelatedCollateralSubstitution, com.tools20022.repository.entity.CollateralManagement.mmCollateralSubstitution);
+				associationDomain_lazy = () -> Arrays.asList(Collateral.mmRelatedCollateralSubstitution, CollateralManagement.mmCollateralSubstitution);
 				derivationElement_lazy = () -> Arrays.asList(SubstitutionResponse1.mmCollateralSubstitutionAcceptanceDetails, SubstitutionResponse1.mmCollateralSubstitutionRejectionDetails);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CollateralSubstitution.mmType, com.tools20022.repository.entity.CollateralSubstitution.mmAcceptedAmount,
 						com.tools20022.repository.entity.CollateralSubstitution.mmRejectedAmount, com.tools20022.repository.entity.CollateralSubstitution.mmRelatedManagementProcess,
@@ -463,7 +490,7 @@ public class CollateralSubstitution {
 		return relatedManagementProcess == null ? Optional.empty() : Optional.of(relatedManagementProcess);
 	}
 
-	public CollateralSubstitution setRelatedManagementProcess(com.tools20022.repository.entity.CollateralManagement relatedManagementProcess) {
+	public CollateralSubstitution setRelatedManagementProcess(CollateralManagement relatedManagementProcess) {
 		this.relatedManagementProcess = relatedManagementProcess;
 		return this;
 	}
@@ -472,7 +499,7 @@ public class CollateralSubstitution {
 		return newCollateral == null ? newCollateral = new ArrayList<>() : newCollateral;
 	}
 
-	public CollateralSubstitution setNewCollateral(List<com.tools20022.repository.entity.Collateral> newCollateral) {
+	public CollateralSubstitution setNewCollateral(List<Collateral> newCollateral) {
 		this.newCollateral = Objects.requireNonNull(newCollateral);
 		return this;
 	}

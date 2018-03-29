@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection41;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public class DetailedAmount11 {
 	 * definition} = "Type or class of amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount11, TypeOfAmount7Code> mmType = new MMMessageAttribute<DetailedAmount11, TypeOfAmount7Code>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount11.mmObject();
@@ -136,6 +137,16 @@ public class DetailedAmount11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TypeOfAmount7Code.mmObject();
+		}
+
+		@Override
+		public TypeOfAmount7Code getValue(DetailedAmount11 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(DetailedAmount11 obj, TypeOfAmount7Code value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "AddtlTp")
@@ -177,7 +188,7 @@ public class DetailedAmount11 {
 	 * DetailedAmount10.mmAdditionalType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAdditionalType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DetailedAmount11, Optional<Max35Text>> mmAdditionalType = new MMMessageAttribute<DetailedAmount11, Optional<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmAmountQualifier;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount11.mmObject();
@@ -190,6 +201,16 @@ public class DetailedAmount11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public Optional<Max35Text> getValue(DetailedAmount11 obj) {
+			return obj.getAdditionalType();
+		}
+
+		@Override
+		public void setValue(DetailedAmount11 obj, Optional<Max35Text> value) {
+			obj.setAdditionalType(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -238,7 +259,7 @@ public class DetailedAmount11 {
 	 * DetailedAmount10.mmAmount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedAmount11, AmountAndDirection41> mmAmount = new MMMessageAssociationEnd<DetailedAmount11, AmountAndDirection41>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount11.mmObject();
@@ -252,7 +273,17 @@ public class DetailedAmount11 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
+			type_lazy = () -> AmountAndDirection41.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection41 getValue(DetailedAmount11 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(DetailedAmount11 obj, AmountAndDirection41 value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "OrgnlAmt")
@@ -288,7 +319,7 @@ public class DetailedAmount11 {
 	 * definition} = "Original value of the amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOriginalAmount = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<DetailedAmount11, Optional<AmountAndDirection41>> mmOriginalAmount = new MMMessageAssociationEnd<DetailedAmount11, Optional<AmountAndDirection41>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.DetailedAmount11.mmObject();
@@ -300,7 +331,17 @@ public class DetailedAmount11 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection41.mmObject();
+			type_lazy = () -> AmountAndDirection41.mmObject();
+		}
+
+		@Override
+		public Optional<AmountAndDirection41> getValue(DetailedAmount11 obj) {
+			return obj.getOriginalAmount();
+		}
+
+		@Override
+		public void setValue(DetailedAmount11 obj, Optional<AmountAndDirection41> value) {
+			obj.setOriginalAmount(value.orElse(null));
 		}
 	};
 
@@ -343,7 +384,7 @@ public class DetailedAmount11 {
 		return amount;
 	}
 
-	public DetailedAmount11 setAmount(com.tools20022.repository.msg.AmountAndDirection41 amount) {
+	public DetailedAmount11 setAmount(AmountAndDirection41 amount) {
 		this.amount = Objects.requireNonNull(amount);
 		return this;
 	}
@@ -352,7 +393,7 @@ public class DetailedAmount11 {
 		return originalAmount == null ? Optional.empty() : Optional.of(originalAmount);
 	}
 
-	public DetailedAmount11 setOriginalAmount(com.tools20022.repository.msg.AmountAndDirection41 originalAmount) {
+	public DetailedAmount11 setOriginalAmount(AmountAndDirection41 originalAmount) {
 		this.originalAmount = originalAmount;
 		return this;
 	}

@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.SystemPartyIdentification1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -95,7 +96,7 @@ public class IssuerOrInvestor1Choice {
 	 * definition} = "CSD Issuer of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IssuerOrInvestor1Choice, SystemPartyIdentification1Choice> mmIssuerCSD = new MMMessageAssociationEnd<IssuerOrInvestor1Choice, SystemPartyIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IssuerOrInvestor1Choice.mmObject();
 			isDerived = false;
@@ -106,7 +107,17 @@ public class IssuerOrInvestor1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
+			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification1Choice getValue(IssuerOrInvestor1Choice obj) {
+			return obj.getIssuerCSD();
+		}
+
+		@Override
+		public void setValue(IssuerOrInvestor1Choice obj, SystemPartyIdentification1Choice value) {
+			obj.setIssuerCSD(value);
 		}
 	};
 	@XmlElement(name = "InvstrCSD", required = true)
@@ -138,7 +149,7 @@ public class IssuerOrInvestor1Choice {
 	 * definition} = "CSD Investor of a security."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInvestorCSD = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IssuerOrInvestor1Choice, SystemPartyIdentification1Choice> mmInvestorCSD = new MMMessageAssociationEnd<IssuerOrInvestor1Choice, SystemPartyIdentification1Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.IssuerOrInvestor1Choice.mmObject();
 			isDerived = false;
@@ -149,7 +160,17 @@ public class IssuerOrInvestor1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
+			type_lazy = () -> SystemPartyIdentification1Choice.mmObject();
+		}
+
+		@Override
+		public SystemPartyIdentification1Choice getValue(IssuerOrInvestor1Choice obj) {
+			return obj.getInvestorCSD();
+		}
+
+		@Override
+		public void setValue(IssuerOrInvestor1Choice obj, SystemPartyIdentification1Choice value) {
+			obj.setInvestorCSD(value);
 		}
 	};
 
@@ -170,7 +191,7 @@ public class IssuerOrInvestor1Choice {
 		return issuerCSD;
 	}
 
-	public IssuerOrInvestor1Choice setIssuerCSD(com.tools20022.repository.choice.SystemPartyIdentification1Choice issuerCSD) {
+	public IssuerOrInvestor1Choice setIssuerCSD(SystemPartyIdentification1Choice issuerCSD) {
 		this.issuerCSD = Objects.requireNonNull(issuerCSD);
 		return this;
 	}
@@ -179,7 +200,7 @@ public class IssuerOrInvestor1Choice {
 		return investorCSD;
 	}
 
-	public IssuerOrInvestor1Choice setInvestorCSD(com.tools20022.repository.choice.SystemPartyIdentification1Choice investorCSD) {
+	public IssuerOrInvestor1Choice setInvestorCSD(SystemPartyIdentification1Choice investorCSD) {
 		this.investorCSD = Objects.requireNonNull(investorCSD);
 		return this;
 	}

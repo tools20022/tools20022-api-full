@@ -25,7 +25,6 @@ import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.EligibilityDates;
 import com.tools20022.repository.msg.EntitlementAssessment;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -107,7 +106,7 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAttribute mmRegistrationDate = new MMBusinessAttribute() {
+	public static final MMBusinessAttribute<SecuritiesRegistrationDeadline, ISODateTime> mmRegistrationDate = new MMBusinessAttribute<SecuritiesRegistrationDeadline, ISODateTime>() {
 		{
 			derivation_lazy = () -> Arrays.asList(EntitlementAssessment.mmSecuritiesRegistrationDate, EligibilityDates.mmSecuritiesRegistrationDate);
 			isDerived = false;
@@ -120,12 +119,14 @@ public class SecuritiesRegistrationDeadline extends Deadline {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return SecuritiesRegistrationDeadline.class.getMethod("getRegistrationDate", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public ISODateTime getValue(SecuritiesRegistrationDeadline obj) {
+			return obj.getRegistrationDate();
+		}
+
+		@Override
+		public void setValue(SecuritiesRegistrationDeadline obj, ISODateTime value) {
+			obj.setRegistrationDate(value);
 		}
 	};
 

@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V09;
+import com.tools20022.repository.choice.UnmatchedStatus21Choice;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason5;
@@ -73,6 +75,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08#mmMatchingStatus
  * SecuritiesSettlementTransactionStatusAdvice002V08.mmMatchingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V09#mmInferredMatchingStatus
+ * SecuritiesSettlementTransactionStatusAdvice002V09.mmInferredMatchingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V09#mmMatchingStatus
+ * SecuritiesSettlementTransactionStatusAdvice002V09.mmMatchingStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,7 +136,7 @@ public class MatchingStatus32Choice {
 	 * definition} = "Status is matched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmMatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus32Choice, ProprietaryReason5> mmMatched = new MMMessageAssociationEnd<MatchingStatus32Choice, ProprietaryReason5>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmMatchingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus32Choice.mmObject();
@@ -141,6 +149,16 @@ public class MatchingStatus32Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryReason5.mmObject();
+		}
+
+		@Override
+		public ProprietaryReason5 getValue(MatchingStatus32Choice obj) {
+			return obj.getMatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus32Choice obj, ProprietaryReason5 value) {
+			obj.setMatched(value);
 		}
 	};
 	@XmlElement(name = "Umtchd", required = true)
@@ -177,7 +195,7 @@ public class MatchingStatus32Choice {
 	 * definition} = "Status is unmatched."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmUnmatched = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus32Choice, UnmatchedStatus21Choice> mmUnmatched = new MMMessageAssociationEnd<MatchingStatus32Choice, UnmatchedStatus21Choice>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmReason;
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus32Choice.mmObject();
@@ -189,7 +207,17 @@ public class MatchingStatus32Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.choice.UnmatchedStatus21Choice.mmObject();
+			type_lazy = () -> UnmatchedStatus21Choice.mmObject();
+		}
+
+		@Override
+		public UnmatchedStatus21Choice getValue(MatchingStatus32Choice obj) {
+			return obj.getUnmatched();
+		}
+
+		@Override
+		public void setValue(MatchingStatus32Choice obj, UnmatchedStatus21Choice value) {
+			obj.setUnmatched(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -226,7 +254,7 @@ public class MatchingStatus32Choice {
 	 * definition} = "Proprietary status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<MatchingStatus32Choice, ProprietaryStatusAndReason7> mmProprietary = new MMMessageAssociationEnd<MatchingStatus32Choice, ProprietaryStatusAndReason7>() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatus.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.choice.MatchingStatus32Choice.mmObject();
@@ -240,6 +268,16 @@ public class MatchingStatus32Choice {
 			isComposite = true;
 			type_lazy = () -> ProprietaryStatusAndReason7.mmObject();
 		}
+
+		@Override
+		public ProprietaryStatusAndReason7 getValue(MatchingStatus32Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(MatchingStatus32Choice obj, ProprietaryStatusAndReason7 value) {
+			obj.setProprietary(value);
+		}
 	};
 
 	final static public MMChoiceComponent mmObject() {
@@ -248,7 +286,8 @@ public class MatchingStatus32Choice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus32Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus32Choice.mmUnmatched,
 						com.tools20022.repository.choice.MatchingStatus32Choice.mmProprietary);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdvice002V07.mmInferredMatchingStatus, SecuritiesSettlementTransactionStatusAdvice002V07.mmMatchingStatus,
-						SecuritiesSettlementTransactionStatusAdvice002V08.mmInferredMatchingStatus, SecuritiesSettlementTransactionStatusAdvice002V08.mmMatchingStatus);
+						SecuritiesSettlementTransactionStatusAdvice002V08.mmInferredMatchingStatus, SecuritiesSettlementTransactionStatusAdvice002V08.mmMatchingStatus,
+						SecuritiesSettlementTransactionStatusAdvice002V09.mmInferredMatchingStatus, SecuritiesSettlementTransactionStatusAdvice002V09.mmMatchingStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -272,7 +311,7 @@ public class MatchingStatus32Choice {
 		return unmatched;
 	}
 
-	public MatchingStatus32Choice setUnmatched(com.tools20022.repository.choice.UnmatchedStatus21Choice unmatched) {
+	public MatchingStatus32Choice setUnmatched(UnmatchedStatus21Choice unmatched) {
 		this.unmatched = Objects.requireNonNull(unmatched);
 		return this;
 	}

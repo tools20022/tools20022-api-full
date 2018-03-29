@@ -106,7 +106,7 @@ public class AmountPrice1Choice {
 	 * definition} = "Amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPrice1Choice, CurrencyAndAmount> mmAmount = new MMMessageAttribute<AmountPrice1Choice, CurrencyAndAmount>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndPrice.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountPrice1Choice.mmObject();
@@ -118,6 +118,16 @@ public class AmountPrice1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public CurrencyAndAmount getValue(AmountPrice1Choice obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(AmountPrice1Choice obj, CurrencyAndAmount value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "UnitPric", required = true)
@@ -154,7 +164,7 @@ public class AmountPrice1Choice {
 	 * definition} = "Amount expressed as a unit price."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnitPrice = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AmountPrice1Choice, UnitPrice4> mmUnitPrice = new MMMessageAttribute<AmountPrice1Choice, UnitPrice4>() {
 		{
 			businessElementTrace_lazy = () -> AmountAndPrice.mmPrice;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AmountPrice1Choice.mmObject();
@@ -166,6 +176,16 @@ public class AmountPrice1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UnitPrice4.mmObject();
+		}
+
+		@Override
+		public UnitPrice4 getValue(AmountPrice1Choice obj) {
+			return obj.getUnitPrice();
+		}
+
+		@Override
+		public void setValue(AmountPrice1Choice obj, UnitPrice4 value) {
+			obj.setUnitPrice(value);
 		}
 	};
 

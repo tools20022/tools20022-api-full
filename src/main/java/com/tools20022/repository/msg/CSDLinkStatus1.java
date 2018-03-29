@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.StatusReasonInformation10;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -104,7 +105,7 @@ public class CSDLinkStatus1 {
 	 * definition} = "Status of the party maintenance instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CSDLinkStatus1, Status6Code> mmStatus = new MMMessageAttribute<CSDLinkStatus1, Status6Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CSDLinkStatus1.mmObject();
 			isDerived = false;
@@ -116,9 +117,19 @@ public class CSDLinkStatus1 {
 			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
+
+		@Override
+		public Status6Code getValue(CSDLinkStatus1 obj) {
+			return obj.getStatus();
+		}
+
+		@Override
+		public void setValue(CSDLinkStatus1 obj, Status6Code value) {
+			obj.setStatus(value);
+		}
 	};
 	@XmlElement(name = "StsRsn")
-	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
+	protected List<StatusReasonInformation10> statusReason;
 	/**
 	 * 
 	 <p>
@@ -146,7 +157,7 @@ public class CSDLinkStatus1 {
 	 * "Underlying reason related to the creation of a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CSDLinkStatus1, List<StatusReasonInformation10>> mmStatusReason = new MMMessageAssociationEnd<CSDLinkStatus1, List<StatusReasonInformation10>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CSDLinkStatus1.mmObject();
 			isDerived = false;
@@ -156,7 +167,17 @@ public class CSDLinkStatus1 {
 			definition = "Underlying reason related to the creation of a transaction.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
+			type_lazy = () -> StatusReasonInformation10.mmObject();
+		}
+
+		@Override
+		public List<StatusReasonInformation10> getValue(CSDLinkStatus1 obj) {
+			return obj.getStatusReason();
+		}
+
+		@Override
+		public void setValue(CSDLinkStatus1 obj, List<StatusReasonInformation10> value) {
+			obj.setStatusReason(value);
 		}
 	};
 
@@ -187,7 +208,7 @@ public class CSDLinkStatus1 {
 		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public CSDLinkStatus1 setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+	public CSDLinkStatus1 setStatusReason(List<StatusReasonInformation10> statusReason) {
 		this.statusReason = Objects.requireNonNull(statusReason);
 		return this;
 	}

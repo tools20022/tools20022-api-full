@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.msg.*;
-import com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion;
+import com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion;
 import com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.*;
@@ -84,8 +83,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOLatestversion
- * SettlementAndReconciliationISOLatestversion}</li>
+ * {@linkplain com.tools20022.repository.msgset.SettlementAndReconciliationISOPreviousversion
+ * SettlementAndReconciliationISOPreviousversion}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msgset.SettlementandReconciliationMaintenance20162017
  * SettlementandReconciliationMaintenance20162017}</li>
@@ -179,7 +178,7 @@ public class PortfolioTransferNotificationV04 {
 	 * PortfolioTransferNotificationV03.mmPagination}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV04, Pagination> mmPagination = new MMMessageBuildingBlock<PortfolioTransferNotificationV04, Pagination>() {
 		{
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,12 +191,14 @@ public class PortfolioTransferNotificationV04 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV04.class.getMethod("getPagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(PortfolioTransferNotificationV04 obj) {
+			return obj.getPagination();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV04 obj, Pagination value) {
+			obj.setPagination(value);
 		}
 	};
 	@XmlElement(name = "StmtGnlDtls", required = true)
@@ -237,7 +238,7 @@ public class PortfolioTransferNotificationV04 {
 	 * PortfolioTransferNotificationV03.mmStatementGeneralDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV04, Statement46> mmStatementGeneralDetails = new MMMessageBuildingBlock<PortfolioTransferNotificationV04, Statement46>() {
 		{
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,12 +251,14 @@ public class PortfolioTransferNotificationV04 {
 			complexType_lazy = () -> Statement46.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV04.class.getMethod("getStatementGeneralDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Statement46 getValue(PortfolioTransferNotificationV04 obj) {
+			return obj.getStatementGeneralDetails();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV04 obj, Statement46 value) {
+			obj.setStatementGeneralDetails(value);
 		}
 	};
 	@XmlElement(name = "AcctOwnr")
@@ -296,7 +299,7 @@ public class PortfolioTransferNotificationV04 {
 	 * PortfolioTransferNotificationV03.mmAccountOwner}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmAccountOwner = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV04, Optional<PartyIdentification98>> mmAccountOwner = new MMMessageBuildingBlock<PortfolioTransferNotificationV04, Optional<PartyIdentification98>>() {
 		{
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,12 +312,14 @@ public class PortfolioTransferNotificationV04 {
 			complexType_lazy = () -> PartyIdentification98.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV04.class.getMethod("getAccountOwner", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PartyIdentification98> getValue(PortfolioTransferNotificationV04 obj) {
+			return obj.getAccountOwner();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV04 obj, Optional<PartyIdentification98> value) {
+			obj.setAccountOwner(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "SfkpgAcct", required = true)
@@ -355,7 +360,7 @@ public class PortfolioTransferNotificationV04 {
 	 * PortfolioTransferNotificationV03.mmSafekeepingAccount}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmSafekeepingAccount = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV04, SecuritiesAccount19> mmSafekeepingAccount = new MMMessageBuildingBlock<PortfolioTransferNotificationV04, SecuritiesAccount19>() {
 		{
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,12 +373,14 @@ public class PortfolioTransferNotificationV04 {
 			complexType_lazy = () -> SecuritiesAccount19.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV04.class.getMethod("getSafekeepingAccount", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public SecuritiesAccount19 getValue(PortfolioTransferNotificationV04 obj) {
+			return obj.getSafekeepingAccount();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV04 obj, SecuritiesAccount19 value) {
+			obj.setSafekeepingAccount(value);
 		}
 	};
 	@XmlElement(name = "TrfNtfctnDtls")
@@ -414,7 +421,7 @@ public class PortfolioTransferNotificationV04 {
 	 * PortfolioTransferNotificationV03.mmTransferNotificationDetails}</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmTransferNotificationDetails = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PortfolioTransferNotificationV04, List<SecuritiesTradeDetails48>> mmTransferNotificationDetails = new MMMessageBuildingBlock<PortfolioTransferNotificationV04, List<SecuritiesTradeDetails48>>() {
 		{
 			xmlTag = "TrfNtfctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -426,12 +433,14 @@ public class PortfolioTransferNotificationV04 {
 			complexType_lazy = () -> SecuritiesTradeDetails48.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PortfolioTransferNotificationV04.class.getMethod("getTransferNotificationDetails", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public List<SecuritiesTradeDetails48> getValue(PortfolioTransferNotificationV04 obj) {
+			return obj.getTransferNotificationDetails();
+		}
+
+		@Override
+		public void setValue(PortfolioTransferNotificationV04 obj, List<SecuritiesTradeDetails48> value) {
+			obj.setTransferNotificationDetails(value);
 		}
 	};
 
@@ -444,7 +453,7 @@ public class PortfolioTransferNotificationV04 {
 				definition = "Scope\r\nAn account servicer sends a PortfolioTransferNotification to another account servicer to exchange transfer settlement details information during a retail or institutional client portfolio transfer.\r\nThe account servicers will typically be local agents or global custodians acting on behalf of an investment management institution, a broker/dealer or a retail client.\r\n\r\nUsage\r\nBy exchange of transfer settlement details, it is understood the providing, by the delivering account servicer to the receiving account servicer, of the settlement details (trade date, settlement date, delivering settlement chain, quantities, etc.) of the individual transfers that will take place during a full or partial portfolio transfer. This delivering account servicer message may also include, for validation, the receiving settlement chain as provided by the client. In case the receiving settlement chain is not available to the delivering account servicer, the receiving account servicer may in return provide to the delivering account servicer the receiving settlement chain using the same message.\r\n\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
 				nextVersions_lazy = () -> Arrays.asList(PortfolioTransferNotificationV05.mmObject());
 				previousVersion_lazy = () -> PortfolioTransferNotificationV03.mmObject();
-				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOLatestversion.mmObject(), SettlementandReconciliationMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOPreviousversion.mmObject(), SettlementandReconciliationMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "PrtflTrfNtfctn";
 				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();

@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.ProcessingStatus33Choice;
 import com.tools20022.repository.choice.SettlementStatus1Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProprietaryReason1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -125,7 +126,7 @@ public class IntraBalanceStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceStatusType1, List<ProcessingStatus33Choice>> mmProcessingStatus = new MMMessageAttribute<IntraBalanceStatusType1, List<ProcessingStatus33Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusType1.mmObject();
@@ -137,6 +138,16 @@ public class IntraBalanceStatusType1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceStatusType2.mmProcessingStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus33Choice.mmObject();
+		}
+
+		@Override
+		public List<ProcessingStatus33Choice> getValue(IntraBalanceStatusType1 obj) {
+			return obj.getProcessingStatus();
+		}
+
+		@Override
+		public void setValue(IntraBalanceStatusType1 obj, List<ProcessingStatus33Choice> value) {
+			obj.setProcessingStatus(value);
 		}
 	};
 	@XmlElement(name = "SttlmSts")
@@ -182,7 +193,7 @@ public class IntraBalanceStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
+	public static final MMMessageAttribute<IntraBalanceStatusType1, List<SettlementStatus1Choice>> mmSettlementStatus = new MMMessageAttribute<IntraBalanceStatusType1, List<SettlementStatus1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmSettlementStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusType1.mmObject();
@@ -194,6 +205,16 @@ public class IntraBalanceStatusType1 {
 			nextVersions_lazy = () -> Arrays.asList(IntraBalanceStatusType2.mmSettlementStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementStatus1Choice.mmObject();
+		}
+
+		@Override
+		public List<SettlementStatus1Choice> getValue(IntraBalanceStatusType1 obj) {
+			return obj.getSettlementStatus();
+		}
+
+		@Override
+		public void setValue(IntraBalanceStatusType1 obj, List<SettlementStatus1Choice> value) {
+			obj.setSettlementStatus(value);
 		}
 	};
 	@XmlElement(name = "Sttld")
@@ -237,7 +258,7 @@ public class IntraBalanceStatusType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<IntraBalanceStatusType1, Optional<ProprietaryReason1>> mmSettled = new MMMessageAssociationEnd<IntraBalanceStatusType1, Optional<ProprietaryReason1>>() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceStatusType1.mmObject();
@@ -250,7 +271,17 @@ public class IntraBalanceStatusType1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProprietaryReason1.mmObject();
+			type_lazy = () -> ProprietaryReason1.mmObject();
+		}
+
+		@Override
+		public Optional<ProprietaryReason1> getValue(IntraBalanceStatusType1 obj) {
+			return obj.getSettled();
+		}
+
+		@Override
+		public void setValue(IntraBalanceStatusType1 obj, Optional<ProprietaryReason1> value) {
+			obj.setSettled(value.orElse(null));
 		}
 	};
 
@@ -292,7 +323,7 @@ public class IntraBalanceStatusType1 {
 		return settled == null ? Optional.empty() : Optional.of(settled);
 	}
 
-	public IntraBalanceStatusType1 setSettled(com.tools20022.repository.msg.ProprietaryReason1 settled) {
+	public IntraBalanceStatusType1 setSettled(ProprietaryReason1 settled) {
 		this.settled = settled;
 		return this;
 	}

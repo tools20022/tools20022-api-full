@@ -29,6 +29,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InstructionStatusSearch3;
+import com.tools20022.repository.msg.PaymentTransactionParty;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -182,7 +184,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransactionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<Max35Text>> mmTransactionReference = new MMMessageAttribute<PaymentSearch3, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -193,6 +195,16 @@ public class PaymentSearch3 {
 			definition = "Unique and unambiguous identifier for a payment transaction, as assigned by the originator. The payment transaction reference is used for reconciliation or to link tasks relating to the payment transaction.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(PaymentSearch3 obj) {
+			return obj.getTransactionReference();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<Max35Text> value) {
+			obj.setTransactionReference(value);
 		}
 	};
 	@XmlElement(name = "TrfValDt")
@@ -226,7 +238,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTransferValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<DateAndDateTimeSearchChoice>> mmTransferValueDate = new MMMessageAttribute<PaymentSearch3, List<DateAndDateTimeSearchChoice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
 			isDerived = false;
@@ -236,6 +248,16 @@ public class PaymentSearch3 {
 			definition = "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.";
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
+		}
+
+		@Override
+		public List<DateAndDateTimeSearchChoice> getValue(PaymentSearch3 obj) {
+			return obj.getTransferValueDate();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<DateAndDateTimeSearchChoice> value) {
+			obj.setTransferValueDate(value);
 		}
 	};
 	@XmlElement(name = "InstrRef")
@@ -273,7 +295,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionReference = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentSearch3, List<PaymentIdentification3Choice>> mmInstructionReference = new MMMessageAssociationEnd<PaymentSearch3, List<PaymentIdentification3Choice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -286,9 +308,19 @@ public class PaymentSearch3 {
 			isComposite = true;
 			type_lazy = () -> PaymentIdentification3Choice.mmObject();
 		}
+
+		@Override
+		public List<PaymentIdentification3Choice> getValue(PaymentSearch3 obj) {
+			return obj.getInstructionReference();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<PaymentIdentification3Choice> value) {
+			obj.setInstructionReference(value);
+		}
 	};
 	@XmlElement(name = "InstrSts")
-	protected List<com.tools20022.repository.msg.InstructionStatusSearch3> instructionStatus;
+	protected List<InstructionStatusSearch3> instructionStatus;
 	/**
 	 * 
 	 <p>
@@ -320,7 +352,7 @@ public class PaymentSearch3 {
 	 * definition} = "Detailed information about the status of a transfer."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmInstructionStatus = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentSearch3, List<InstructionStatusSearch3>> mmInstructionStatus = new MMMessageAssociationEnd<PaymentSearch3, List<InstructionStatusSearch3>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmStatus;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -331,7 +363,17 @@ public class PaymentSearch3 {
 			definition = "Detailed information about the status of a transfer.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InstructionStatusSearch3.mmObject();
+			type_lazy = () -> InstructionStatusSearch3.mmObject();
+		}
+
+		@Override
+		public List<InstructionStatusSearch3> getValue(PaymentSearch3 obj) {
+			return obj.getInstructionStatus();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<InstructionStatusSearch3> value) {
+			obj.setInstructionStatus(value);
 		}
 	};
 	@XmlElement(name = "InstdAmt")
@@ -369,7 +411,7 @@ public class PaymentSearch3 {
 	 * "Specifies the instructed amount(s) on which the query is performed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<AmountRangeChoice>> mmInstructedAmount = new MMMessageAttribute<PaymentSearch3, List<AmountRangeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -380,6 +422,16 @@ public class PaymentSearch3 {
 			definition = "Specifies the instructed amount(s) on which the query is performed.";
 			minOccurs = 0;
 			complexType_lazy = () -> AmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public List<AmountRangeChoice> getValue(PaymentSearch3 obj) {
+			return obj.getInstructedAmount();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<AmountRangeChoice> value) {
+			obj.setInstructedAmount(value);
 		}
 	};
 	@XmlElement(name = "InstdAmtCcy")
@@ -411,7 +463,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstructedAmountCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<CurrencyCode>> mmInstructedAmountCurrency = new MMMessageAttribute<PaymentSearch3, List<CurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
 			isDerived = false;
@@ -421,6 +473,16 @@ public class PaymentSearch3 {
 			definition = "The Currency in which the instructed amount is expressed.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<CurrencyCode> getValue(PaymentSearch3 obj) {
+			return obj.getInstructedAmountCurrency();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<CurrencyCode> value) {
+			obj.setInstructedAmountCurrency(value);
 		}
 	};
 	@XmlElement(name = "CdtDbtInd")
@@ -458,7 +520,7 @@ public class PaymentSearch3 {
 	 * "Indicates whether the payment instruction is a debit or a credit."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, Optional<CreditDebitCode>> mmCreditDebitIndicator = new MMMessageAttribute<PaymentSearch3, Optional<CreditDebitCode>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -470,6 +532,16 @@ public class PaymentSearch3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
+		}
+
+		@Override
+		public Optional<CreditDebitCode> getValue(PaymentSearch3 obj) {
+			return obj.getCreditDebitIndicator();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, Optional<CreditDebitCode> value) {
+			obj.setCreditDebitIndicator(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmAmt")
@@ -508,7 +580,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<AmountRangeChoice>> mmInterbankSettlementAmount = new MMMessageAttribute<PaymentSearch3, List<AmountRangeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -519,6 +591,16 @@ public class PaymentSearch3 {
 			definition = "Specifies the interbank settlement amount(s) on which the query is performed.";
 			minOccurs = 0;
 			complexType_lazy = () -> AmountRangeChoice.mmObject();
+		}
+
+		@Override
+		public List<AmountRangeChoice> getValue(PaymentSearch3 obj) {
+			return obj.getInterbankSettlementAmount();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<AmountRangeChoice> value) {
+			obj.setInterbankSettlementAmount(value);
 		}
 	};
 	@XmlElement(name = "IntrBkSttlmAmtCcy")
@@ -550,7 +632,7 @@ public class PaymentSearch3 {
 	 * "Currency in which the interbank settlement amount is expressed."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankSettlementAmountCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<CurrencyCode>> mmInterbankSettlementAmountCurrency = new MMMessageAttribute<PaymentSearch3, List<CurrencyCode>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
 			isDerived = false;
@@ -560,6 +642,16 @@ public class PaymentSearch3 {
 			definition = "Currency in which the interbank settlement amount is expressed.";
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public List<CurrencyCode> getValue(PaymentSearch3 obj) {
+			return obj.getInterbankSettlementAmountCurrency();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<CurrencyCode> value) {
+			obj.setInterbankSettlementAmountCurrency(value);
 		}
 	};
 	@XmlElement(name = "PmtMtd")
@@ -597,7 +689,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentSearch3, List<PaymentOrigin1Choice>> mmPaymentMethod = new MMMessageAssociationEnd<PaymentSearch3, List<PaymentOrigin1Choice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCreditMethod;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -609,6 +701,16 @@ public class PaymentSearch3 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PaymentOrigin1Choice.mmObject();
+		}
+
+		@Override
+		public List<PaymentOrigin1Choice> getValue(PaymentSearch3 obj) {
+			return obj.getPaymentMethod();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<PaymentOrigin1Choice> value) {
+			obj.setPaymentMethod(value);
 		}
 	};
 	@XmlElement(name = "Prty")
@@ -647,7 +749,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<PriorityCodeChoice>> mmPriority = new MMMessageAttribute<PaymentSearch3, List<PriorityCodeChoice>>() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -658,6 +760,16 @@ public class PaymentSearch3 {
 			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.";
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityCodeChoice.mmObject();
+		}
+
+		@Override
+		public List<PriorityCodeChoice> getValue(PaymentSearch3 obj) {
+			return obj.getPriority();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<PriorityCodeChoice> value) {
+			obj.setPriority(value);
 		}
 	};
 	@XmlElement(name = "PrcgVldtyTm")
@@ -696,7 +808,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<DateTimePeriodChoice>> mmProcessingValidityTime = new MMMessageAttribute<PaymentSearch3, List<DateTimePeriodChoice>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmProcessingValidityTime;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -707,6 +819,16 @@ public class PaymentSearch3 {
 			definition = "Date and time range within which the payment instruction must be processed.";
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
+		}
+
+		@Override
+		public List<DateTimePeriodChoice> getValue(PaymentSearch3 obj) {
+			return obj.getProcessingValidityTime();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<DateTimePeriodChoice> value) {
+			obj.setProcessingValidityTime(value);
 		}
 	};
 	@XmlElement(name = "Instr")
@@ -740,7 +862,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInstruction = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<Instruction1Code>> mmInstruction = new MMMessageAttribute<PaymentSearch3, List<Instruction1Code>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
 			isDerived = false;
@@ -750,6 +872,16 @@ public class PaymentSearch3 {
 			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Instruction1Code.mmObject();
+		}
+
+		@Override
+		public List<Instruction1Code> getValue(PaymentSearch3 obj) {
+			return obj.getInstruction();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<Instruction1Code> value) {
+			obj.setInstruction(value);
 		}
 	};
 	@XmlElement(name = "PmtTp")
@@ -788,7 +920,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<PaymentType2Choice>> mmPaymentType = new MMMessageAttribute<PaymentSearch3, List<PaymentType2Choice>>() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -799,6 +931,16 @@ public class PaymentSearch3 {
 			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.";
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentType2Choice.mmObject();
+		}
+
+		@Override
+		public List<PaymentType2Choice> getValue(PaymentSearch3 obj) {
+			return obj.getPaymentType();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<PaymentType2Choice> value) {
+			obj.setPaymentType(value);
 		}
 	};
 	@XmlElement(name = "PmtInstrRef")
@@ -836,7 +978,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmPaymentInstructionReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<Max35Text>> mmPaymentInstructionReference = new MMMessageAttribute<PaymentSearch3, List<Max35Text>>() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
@@ -847,6 +989,16 @@ public class PaymentSearch3 {
 			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(PaymentSearch3 obj) {
+			return obj.getPaymentInstructionReference();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<Max35Text> value) {
+			obj.setPaymentInstructionReference(value);
 		}
 	};
 	@XmlElement(name = "IntrBkValDt")
@@ -879,7 +1031,7 @@ public class PaymentSearch3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInterbankValueDate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<ISODate>> mmInterbankValueDate = new MMMessageAttribute<PaymentSearch3, List<ISODate>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
 			isDerived = false;
@@ -889,6 +1041,16 @@ public class PaymentSearch3 {
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		@Override
+		public List<ISODate> getValue(PaymentSearch3 obj) {
+			return obj.getInterbankValueDate();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<ISODate> value) {
+			obj.setInterbankValueDate(value);
 		}
 	};
 	@XmlElement(name = "RltdRef")
@@ -920,7 +1082,7 @@ public class PaymentSearch3 {
 	 * "The related reference as stipulated in the payment instruction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PaymentSearch3, List<Max35Text>> mmRelatedReference = new MMMessageAttribute<PaymentSearch3, List<Max35Text>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
 			isDerived = false;
@@ -930,6 +1092,16 @@ public class PaymentSearch3 {
 			definition = "The related reference as stipulated in the payment instruction.";
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+
+		@Override
+		public List<Max35Text> getValue(PaymentSearch3 obj) {
+			return obj.getRelatedReference();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, List<Max35Text> value) {
+			obj.setRelatedReference(value);
 		}
 	};
 	@XmlElement(name = "PmtTxPty")
@@ -960,7 +1132,7 @@ public class PaymentSearch3 {
 	 * definition} = "Defines the party fields used to search for a payment."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmPaymentTransactionParty = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<PaymentSearch3, Optional<PaymentTransactionParty>> mmPaymentTransactionParty = new MMMessageAssociationEnd<PaymentSearch3, Optional<PaymentTransactionParty>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch3.mmObject();
 			isDerived = false;
@@ -971,7 +1143,17 @@ public class PaymentSearch3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty.mmObject();
+			type_lazy = () -> PaymentTransactionParty.mmObject();
+		}
+
+		@Override
+		public Optional<PaymentTransactionParty> getValue(PaymentSearch3 obj) {
+			return obj.getPaymentTransactionParty();
+		}
+
+		@Override
+		public void setValue(PaymentSearch3 obj, Optional<PaymentTransactionParty> value) {
+			obj.setPaymentTransactionParty(value.orElse(null));
 		}
 	};
 
@@ -1038,7 +1220,7 @@ public class PaymentSearch3 {
 		return instructionStatus == null ? instructionStatus = new ArrayList<>() : instructionStatus;
 	}
 
-	public PaymentSearch3 setInstructionStatus(List<com.tools20022.repository.msg.InstructionStatusSearch3> instructionStatus) {
+	public PaymentSearch3 setInstructionStatus(List<InstructionStatusSearch3> instructionStatus) {
 		this.instructionStatus = Objects.requireNonNull(instructionStatus);
 		return this;
 	}
@@ -1164,7 +1346,7 @@ public class PaymentSearch3 {
 		return paymentTransactionParty == null ? Optional.empty() : Optional.of(paymentTransactionParty);
 	}
 
-	public PaymentSearch3 setPaymentTransactionParty(com.tools20022.repository.msg.PaymentTransactionParty paymentTransactionParty) {
+	public PaymentSearch3 setPaymentTransactionParty(PaymentTransactionParty paymentTransactionParty) {
 		this.paymentTransactionParty = paymentTransactionParty;
 		return this;
 	}

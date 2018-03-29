@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ProcessTiming2;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -140,7 +141,7 @@ public class ExchangeConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangePolicy = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration3, List<ExchangePolicy1Code>> mmExchangePolicy = new MMMessageAttribute<ExchangeConfiguration3, List<ExchangePolicy1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmExchangePolicy;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration3.mmObject();
@@ -152,6 +153,16 @@ public class ExchangeConfiguration3 {
 			nextVersions_lazy = () -> Arrays.asList(ExchangeConfiguration5.mmExchangePolicy);
 			minOccurs = 1;
 			simpleType_lazy = () -> ExchangePolicy1Code.mmObject();
+		}
+
+		@Override
+		public List<ExchangePolicy1Code> getValue(ExchangeConfiguration3 obj) {
+			return obj.getExchangePolicy();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration3 obj, List<ExchangePolicy1Code> value) {
+			obj.setExchangePolicy(value);
 		}
 	};
 	@XmlElement(name = "MaxNb")
@@ -196,7 +207,7 @@ public class ExchangeConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration3, Optional<Number>> mmMaximumNumber = new MMMessageAttribute<ExchangeConfiguration3, Optional<Number>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumNumber;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration3.mmObject();
@@ -209,6 +220,16 @@ public class ExchangeConfiguration3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Optional<Number> getValue(ExchangeConfiguration3 obj) {
+			return obj.getMaximumNumber();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration3 obj, Optional<Number> value) {
+			obj.setMaximumNumber(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "MaxAmt")
@@ -255,7 +276,7 @@ public class ExchangeConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration3, Optional<ImpliedCurrencyAndAmount>> mmMaximumAmount = new MMMessageAttribute<ExchangeConfiguration3, Optional<ImpliedCurrencyAndAmount>>() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmMaximumAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration3.mmObject();
@@ -268,6 +289,16 @@ public class ExchangeConfiguration3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
+		}
+
+		@Override
+		public Optional<ImpliedCurrencyAndAmount> getValue(ExchangeConfiguration3 obj) {
+			return obj.getMaximumAmount();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration3 obj, Optional<ImpliedCurrencyAndAmount> value) {
+			obj.setMaximumAmount(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "TmCond")
@@ -306,7 +337,7 @@ public class ExchangeConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTimeCondition = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ExchangeConfiguration3, Optional<ProcessTiming2>> mmTimeCondition = new MMMessageAssociationEnd<ExchangeConfiguration3, Optional<ProcessTiming2>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration3.mmObject();
 			isDerived = false;
@@ -318,7 +349,17 @@ public class ExchangeConfiguration3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.ProcessTiming2.mmObject();
+			type_lazy = () -> ProcessTiming2.mmObject();
+		}
+
+		@Override
+		public Optional<ProcessTiming2> getValue(ExchangeConfiguration3 obj) {
+			return obj.getTimeCondition();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration3 obj, Optional<ProcessTiming2> value) {
+			obj.setTimeCondition(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgFaild")
@@ -359,7 +400,7 @@ public class ExchangeConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeFailed = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration3, Optional<TrueFalseIndicator>> mmExchangeFailed = new MMMessageAttribute<ExchangeConfiguration3, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration3.mmObject();
 			isDerived = false;
@@ -371,6 +412,16 @@ public class ExchangeConfiguration3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ExchangeConfiguration3 obj) {
+			return obj.getExchangeFailed();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration3 obj, Optional<TrueFalseIndicator> value) {
+			obj.setExchangeFailed(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "XchgDclnd")
@@ -411,7 +462,7 @@ public class ExchangeConfiguration3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExchangeDeclined = new MMMessageAttribute() {
+	public static final MMMessageAttribute<ExchangeConfiguration3, Optional<TrueFalseIndicator>> mmExchangeDeclined = new MMMessageAttribute<ExchangeConfiguration3, Optional<TrueFalseIndicator>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration3.mmObject();
 			isDerived = false;
@@ -423,6 +474,16 @@ public class ExchangeConfiguration3 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public Optional<TrueFalseIndicator> getValue(ExchangeConfiguration3 obj) {
+			return obj.getExchangeDeclined();
+		}
+
+		@Override
+		public void setValue(ExchangeConfiguration3 obj, Optional<TrueFalseIndicator> value) {
+			obj.setExchangeDeclined(value.orElse(null));
 		}
 	};
 
@@ -475,7 +536,7 @@ public class ExchangeConfiguration3 {
 		return timeCondition == null ? Optional.empty() : Optional.of(timeCondition);
 	}
 
-	public ExchangeConfiguration3 setTimeCondition(com.tools20022.repository.msg.ProcessTiming2 timeCondition) {
+	public ExchangeConfiguration3 setTimeCondition(ProcessTiming2 timeCondition) {
 		this.timeCondition = timeCondition;
 		return this;
 	}

@@ -27,7 +27,6 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.PriceReport2;
 import com.tools20022.repository.msgset.ISOArchive;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -146,7 +145,7 @@ public class PriceReportCancellationV03 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessageIdentification = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV03, MessageIdentification1> mmMessageIdentification = new MMMessageBuildingBlock<PriceReportCancellationV03, MessageIdentification1>() {
 		{
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,12 +156,14 @@ public class PriceReportCancellationV03 {
 			complexType_lazy = () -> MessageIdentification1.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV03.class.getMethod("getMessageIdentification", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public MessageIdentification1 getValue(PriceReportCancellationV03 obj) {
+			return obj.getMessageIdentification();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV03 obj, MessageIdentification1 value) {
+			obj.setMessageIdentification(value);
 		}
 	};
 	@XmlElement(name = "PoolRef")
@@ -190,7 +191,7 @@ public class PriceReportCancellationV03 {
 	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPoolReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV03, Optional<AdditionalReference3>> mmPoolReference = new MMMessageBuildingBlock<PriceReportCancellationV03, Optional<AdditionalReference3>>() {
 		{
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,12 +202,14 @@ public class PriceReportCancellationV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV03.class.getMethod("getPoolReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<AdditionalReference3> getValue(PriceReportCancellationV03 obj) {
+			return obj.getPoolReference();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV03 obj, Optional<AdditionalReference3> value) {
+			obj.setPoolReference(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "PrvsRef", required = true)
@@ -234,7 +237,7 @@ public class PriceReportCancellationV03 {
 	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV03, AdditionalReference3> mmPreviousReference = new MMMessageBuildingBlock<PriceReportCancellationV03, AdditionalReference3>() {
 		{
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,12 +248,14 @@ public class PriceReportCancellationV03 {
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV03.class.getMethod("getPreviousReference", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public AdditionalReference3 getValue(PriceReportCancellationV03 obj) {
+			return obj.getPreviousReference();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV03 obj, AdditionalReference3 value) {
+			obj.setPreviousReference(value);
 		}
 	};
 	@XmlElement(name = "MsgPgntn", required = true)
@@ -277,7 +282,7 @@ public class PriceReportCancellationV03 {
 	 * definition} = "Pagination of the message."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmMessagePagination = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV03, Pagination> mmMessagePagination = new MMMessageBuildingBlock<PriceReportCancellationV03, Pagination>() {
 		{
 			xmlTag = "MsgPgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,12 +293,14 @@ public class PriceReportCancellationV03 {
 			complexType_lazy = () -> Pagination.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV03.class.getMethod("getMessagePagination", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Pagination getValue(PriceReportCancellationV03 obj) {
+			return obj.getMessagePagination();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV03 obj, Pagination value) {
+			obj.setMessagePagination(value);
 		}
 	};
 	@XmlElement(name = "PricRptToBeCanc")
@@ -321,7 +328,7 @@ public class PriceReportCancellationV03 {
 	 * "Common information related to all the price reports to be cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMMessageBuildingBlock mmPriceReportToBeCancelled = new MMMessageBuildingBlock() {
+	public static final MMMessageBuildingBlock<PriceReportCancellationV03, Optional<PriceReport2>> mmPriceReportToBeCancelled = new MMMessageBuildingBlock<PriceReportCancellationV03, Optional<PriceReport2>>() {
 		{
 			xmlTag = "PricRptToBeCanc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,12 +339,14 @@ public class PriceReportCancellationV03 {
 			complexType_lazy = () -> PriceReport2.mmObject();
 		}
 
-		public Method getGetterMethod() {
-			try {
-				return PriceReportCancellationV03.class.getMethod("getPriceReportToBeCancelled", new Class[]{});
-			} catch (NoSuchMethodException e) {
-				throw new RuntimeException(e);
-			}
+		@Override
+		public Optional<PriceReport2> getValue(PriceReportCancellationV03 obj) {
+			return obj.getPriceReportToBeCancelled();
+		}
+
+		@Override
+		public void setValue(PriceReportCancellationV03 obj, Optional<PriceReport2> value) {
+			obj.setPriceReportToBeCancelled(value.orElse(null));
 		}
 	};
 

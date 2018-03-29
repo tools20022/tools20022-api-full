@@ -135,7 +135,7 @@ public class References7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmOtherTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References7Choice, GenericDocumentIdentification2> mmOtherTransactionIdentification = new MMMessageAssociationEnd<References7Choice, GenericDocumentIdentification2>() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References7Choice.mmObject();
@@ -149,6 +149,16 @@ public class References7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericDocumentIdentification2.mmObject();
+		}
+
+		@Override
+		public GenericDocumentIdentification2 getValue(References7Choice obj) {
+			return obj.getOtherTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References7Choice obj, GenericDocumentIdentification2 value) {
+			obj.setOtherTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesFincgTxId", required = true)
@@ -190,7 +200,7 @@ public class References7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References7Choice, SettlementTypeAndIdentification6> mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd<References7Choice, SettlementTypeAndIdentification6>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References7Choice.mmObject();
@@ -204,6 +214,16 @@ public class References7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification6.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification6 getValue(References7Choice obj) {
+			return obj.getSecuritiesFinancingTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References7Choice obj, SettlementTypeAndIdentification6 value) {
+			obj.setSecuritiesFinancingTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "SctiesSttlmTxId", required = true)
@@ -244,7 +264,7 @@ public class References7Choice {
 	 * "Unambiguous identification of the securities settlement transaction."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<References7Choice, SettlementTypeAndIdentification6> mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd<References7Choice, SettlementTypeAndIdentification6>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
 			componentContext_lazy = () -> com.tools20022.repository.choice.References7Choice.mmObject();
@@ -258,6 +278,16 @@ public class References7Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SettlementTypeAndIdentification6.mmObject();
+		}
+
+		@Override
+		public SettlementTypeAndIdentification6 getValue(References7Choice obj) {
+			return obj.getSecuritiesSettlementTransactionIdentification();
+		}
+
+		@Override
+		public void setValue(References7Choice obj, SettlementTypeAndIdentification6 value) {
+			obj.setSecuritiesSettlementTransactionIdentification(value);
 		}
 	};
 	@XmlElement(name = "IntraPosMvmntId", required = true)
@@ -295,7 +325,7 @@ public class References7Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIntraPositionMovementIdentification = new MMMessageAttribute() {
+	public static final MMMessageAttribute<References7Choice, RestrictedFINXMax16Text> mmIntraPositionMovementIdentification = new MMMessageAttribute<References7Choice, RestrictedFINXMax16Text>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.References7Choice.mmObject();
 			isDerived = false;
@@ -307,6 +337,16 @@ public class References7Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
+		}
+
+		@Override
+		public RestrictedFINXMax16Text getValue(References7Choice obj) {
+			return obj.getIntraPositionMovementIdentification();
+		}
+
+		@Override
+		public void setValue(References7Choice obj, RestrictedFINXMax16Text value) {
+			obj.setIntraPositionMovementIdentification(value);
 		}
 	};
 

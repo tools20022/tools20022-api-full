@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
 import com.tools20022.repository.codeset.SecuritiesQuantity2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -100,7 +101,7 @@ public class PlannedQuantity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlannedQuantity1Choice, FinancialInstrumentQuantity15Choice> mmQuantity = new MMMessageAttribute<PlannedQuantity1Choice, FinancialInstrumentQuantity15Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlannedQuantity1Choice.mmObject();
 			isDerived = false;
@@ -110,7 +111,17 @@ public class PlannedQuantity1Choice {
 			definition = "Planned quantity of financial instrument or lot of rights/warrants to be purchased.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmObject();
+			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
+		}
+
+		@Override
+		public FinancialInstrumentQuantity15Choice getValue(PlannedQuantity1Choice obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(PlannedQuantity1Choice obj, FinancialInstrumentQuantity15Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 	@XmlElement(name = "Cd", required = true)
@@ -145,7 +156,7 @@ public class PlannedQuantity1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<PlannedQuantity1Choice, SecuritiesQuantity2Code> mmCode = new MMMessageAttribute<PlannedQuantity1Choice, SecuritiesQuantity2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.choice.PlannedQuantity1Choice.mmObject();
 			isDerived = false;
@@ -156,6 +167,16 @@ public class PlannedQuantity1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesQuantity2Code.mmObject();
+		}
+
+		@Override
+		public SecuritiesQuantity2Code getValue(PlannedQuantity1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(PlannedQuantity1Choice obj, SecuritiesQuantity2Code value) {
+			obj.setCode(value);
 		}
 	};
 
@@ -176,7 +197,7 @@ public class PlannedQuantity1Choice {
 		return quantity;
 	}
 
-	public PlannedQuantity1Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice quantity) {
+	public PlannedQuantity1Choice setQuantity(FinancialInstrumentQuantity15Choice quantity) {
 		this.quantity = Objects.requireNonNull(quantity);
 		return this;
 	}

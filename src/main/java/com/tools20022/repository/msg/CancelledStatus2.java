@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Extended350Code;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.GenericIdentification1;
 import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -130,7 +131,7 @@ public class CancelledStatus2 {
 	 * definition} = "Reason for the cancelled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatus2, CancelledStatusReason2Code> mmReason = new MMMessageAttribute<CancelledStatus2, CancelledStatusReason2Code>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatus2.mmObject();
@@ -142,6 +143,16 @@ public class CancelledStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancelledStatusReason2Code.mmObject();
+		}
+
+		@Override
+		public CancelledStatusReason2Code getValue(CancelledStatus2 obj) {
+			return obj.getReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatus2 obj, CancelledStatusReason2Code value) {
+			obj.setReason(value);
 		}
 	};
 	@XmlElement(name = "XtndedRsn", required = true)
@@ -174,7 +185,7 @@ public class CancelledStatus2 {
 	 * definition} = "Reason for the cancelled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmExtendedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatus2, Extended350Code> mmExtendedReason = new MMMessageAttribute<CancelledStatus2, Extended350Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatus2.mmObject();
 			isDerived = false;
@@ -185,6 +196,16 @@ public class CancelledStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Extended350Code.mmObject();
+		}
+
+		@Override
+		public Extended350Code getValue(CancelledStatus2 obj) {
+			return obj.getExtendedReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatus2 obj, Extended350Code value) {
+			obj.setExtendedReason(value);
 		}
 	};
 	@XmlElement(name = "DataSrcSchme", required = true)
@@ -221,7 +242,7 @@ public class CancelledStatus2 {
 	 * "Proprietary identification of the reason for the cancelled status."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CancelledStatus2, GenericIdentification1> mmDataSourceScheme = new MMMessageAssociationEnd<CancelledStatus2, GenericIdentification1>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatus2.mmObject();
@@ -233,7 +254,17 @@ public class CancelledStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
+			type_lazy = () -> GenericIdentification1.mmObject();
+		}
+
+		@Override
+		public GenericIdentification1 getValue(CancelledStatus2 obj) {
+			return obj.getDataSourceScheme();
+		}
+
+		@Override
+		public void setValue(CancelledStatus2 obj, GenericIdentification1 value) {
+			obj.setDataSourceScheme(value);
 		}
 	};
 	@XmlElement(name = "NoSpcfdRsn", required = true)
@@ -271,7 +302,7 @@ public class CancelledStatus2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CancelledStatus2, NoReasonCode> mmNoSpecifiedReason = new MMMessageAttribute<CancelledStatus2, NoReasonCode>() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CancelledStatus2.mmObject();
@@ -283,6 +314,16 @@ public class CancelledStatus2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
+		}
+
+		@Override
+		public NoReasonCode getValue(CancelledStatus2 obj) {
+			return obj.getNoSpecifiedReason();
+		}
+
+		@Override
+		public void setValue(CancelledStatus2 obj, NoReasonCode value) {
+			obj.setNoSpecifiedReason(value);
 		}
 	};
 	/**
@@ -381,7 +422,7 @@ public class CancelledStatus2 {
 		return dataSourceScheme;
 	}
 
-	public CancelledStatus2 setDataSourceScheme(com.tools20022.repository.msg.GenericIdentification1 dataSourceScheme) {
+	public CancelledStatus2 setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
 		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
 		return this;
 	}

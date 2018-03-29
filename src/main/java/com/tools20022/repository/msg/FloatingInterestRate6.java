@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Index;
 import com.tools20022.repository.entity.Spread;
 import com.tools20022.repository.entity.VariableInterest;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.InterestRateContractTerm2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
@@ -122,7 +123,7 @@ public class FloatingInterestRate6 {
 	 * FloatingInterestRate4.mmReferenceRate}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmReferenceRate = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FloatingInterestRate6, BenchmarkCurveName6Choice> mmReferenceRate = new MMMessageAttribute<FloatingInterestRate6, BenchmarkCurveName6Choice>() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIdentification;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate6.mmObject();
@@ -135,6 +136,16 @@ public class FloatingInterestRate6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BenchmarkCurveName6Choice.mmObject();
+		}
+
+		@Override
+		public BenchmarkCurveName6Choice getValue(FloatingInterestRate6 obj) {
+			return obj.getReferenceRate();
+		}
+
+		@Override
+		public void setValue(FloatingInterestRate6 obj, BenchmarkCurveName6Choice value) {
+			obj.setReferenceRate(value);
 		}
 	};
 	@XmlElement(name = "Term", required = true)
@@ -178,7 +189,7 @@ public class FloatingInterestRate6 {
 	 * FloatingInterestRate4.mmTerm}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTerm = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<FloatingInterestRate6, InterestRateContractTerm2> mmTerm = new MMMessageAssociationEnd<FloatingInterestRate6, InterestRateContractTerm2>() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmDurationCalculation;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate6.mmObject();
@@ -191,7 +202,17 @@ public class FloatingInterestRate6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm2.mmObject();
+			type_lazy = () -> InterestRateContractTerm2.mmObject();
+		}
+
+		@Override
+		public InterestRateContractTerm2 getValue(FloatingInterestRate6 obj) {
+			return obj.getTerm();
+		}
+
+		@Override
+		public void setValue(FloatingInterestRate6 obj, InterestRateContractTerm2 value) {
+			obj.setTerm(value);
 		}
 	};
 	@XmlElement(name = "BsisPtSprd", required = true)
@@ -235,7 +256,7 @@ public class FloatingInterestRate6 {
 	 * FloatingInterestRate4.mmBasisPointSpread}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBasisPointSpread = new MMMessageAttribute() {
+	public static final MMMessageAttribute<FloatingInterestRate6, Max5Number> mmBasisPointSpread = new MMMessageAttribute<FloatingInterestRate6, Max5Number>() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmBasisPointSpread;
 			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate6.mmObject();
@@ -248,6 +269,16 @@ public class FloatingInterestRate6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max5Number.mmObject();
+		}
+
+		@Override
+		public Max5Number getValue(FloatingInterestRate6 obj) {
+			return obj.getBasisPointSpread();
+		}
+
+		@Override
+		public void setValue(FloatingInterestRate6 obj, Max5Number value) {
+			obj.setBasisPointSpread(value);
 		}
 	};
 
@@ -280,7 +311,7 @@ public class FloatingInterestRate6 {
 		return term;
 	}
 
-	public FloatingInterestRate6 setTerm(com.tools20022.repository.msg.InterestRateContractTerm2 term) {
+	public FloatingInterestRate6 setTerm(InterestRateContractTerm2 term) {
 		this.term = Objects.requireNonNull(term);
 		return this;
 	}

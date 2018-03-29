@@ -107,7 +107,7 @@ public class CommissionType3Choice {
 	 * definition} = "Type of commission expressed as a code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CommissionType3Choice, CommissionType7Code> mmCode = new MMMessageAttribute<CommissionType3Choice, CommissionType7Code>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommissionType3Choice.mmObject();
@@ -119,6 +119,16 @@ public class CommissionType3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CommissionType7Code.mmObject();
+		}
+
+		@Override
+		public CommissionType7Code getValue(CommissionType3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CommissionType3Choice obj, CommissionType7Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -155,7 +165,7 @@ public class CommissionType3Choice {
 	 * definition} = "Type of commission expressed as a proprietary code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CommissionType3Choice, GenericIdentification47> mmProprietary = new MMMessageAssociationEnd<CommissionType3Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CommissionType3Choice.mmObject();
@@ -168,6 +178,16 @@ public class CommissionType3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(CommissionType3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CommissionType3Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

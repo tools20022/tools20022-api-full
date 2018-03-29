@@ -127,7 +127,7 @@ public class CurrencyExchangeSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchangeSearchCriteria, CurrencyCode> mmSourceCurrency = new MMMessageAttribute<CurrencyExchangeSearchCriteria, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.mmObject();
@@ -140,6 +140,16 @@ public class CurrencyExchangeSearchCriteria {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CurrencyExchangeSearchCriteria obj) {
+			return obj.getSourceCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeSearchCriteria obj, CurrencyCode value) {
+			obj.setSourceCurrency(value);
 		}
 	};
 	@XmlElement(name = "TrgtCcy", required = true)
@@ -186,7 +196,7 @@ public class CurrencyExchangeSearchCriteria {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CurrencyExchangeSearchCriteria, CurrencyCode> mmTargetCurrency = new MMMessageAttribute<CurrencyExchangeSearchCriteria, CurrencyCode>() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
 			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchangeSearchCriteria.mmObject();
@@ -199,6 +209,16 @@ public class CurrencyExchangeSearchCriteria {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
+		}
+
+		@Override
+		public CurrencyCode getValue(CurrencyExchangeSearchCriteria obj) {
+			return obj.getTargetCurrency();
+		}
+
+		@Override
+		public void setValue(CurrencyExchangeSearchCriteria obj, CurrencyCode value) {
+			obj.setTargetCurrency(value);
 		}
 	};
 

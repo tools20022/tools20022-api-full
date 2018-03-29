@@ -111,7 +111,7 @@ public class GenericIdentification6 {
 	 * definition} = "Entity that assigns the identification."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification6, Max8Text> mmIssuer = new MMMessageAttribute<GenericIdentification6, Max8Text>() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification6.mmObject();
@@ -123,6 +123,16 @@ public class GenericIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max8Text.mmObject();
+		}
+
+		@Override
+		public Max8Text getValue(GenericIdentification6 obj) {
+			return obj.getIssuer();
+		}
+
+		@Override
+		public void setValue(GenericIdentification6 obj, Max8Text value) {
+			obj.setIssuer(value);
 		}
 	};
 	@XmlElement(name = "Inf", required = true)
@@ -157,7 +167,7 @@ public class GenericIdentification6 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmInformation = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification6, Exact4AlphaNumericText> mmInformation = new MMMessageAttribute<GenericIdentification6, Exact4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification6.mmObject();
 			isDerived = false;
@@ -168,6 +178,16 @@ public class GenericIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Exact4AlphaNumericText getValue(GenericIdentification6 obj) {
+			return obj.getInformation();
+		}
+
+		@Override
+		public void setValue(GenericIdentification6 obj, Exact4AlphaNumericText value) {
+			obj.setInformation(value);
 		}
 	};
 	@XmlElement(name = "Bal", required = true)
@@ -199,7 +219,7 @@ public class GenericIdentification6 {
 	 * definition} = "Value of the balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
+	public static final MMMessageAttribute<GenericIdentification6, Number> mmBalance = new MMMessageAttribute<GenericIdentification6, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification6.mmObject();
 			isDerived = false;
@@ -210,6 +230,16 @@ public class GenericIdentification6 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(GenericIdentification6 obj) {
+			return obj.getBalance();
+		}
+
+		@Override
+		public void setValue(GenericIdentification6 obj, Number value) {
+			obj.setBalance(value);
 		}
 	};
 

@@ -107,7 +107,7 @@ public class AdditionalRightCode1Choice {
 	 * definition} = "Identifies the additional right code."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalRightCode1Choice, AdditionalRight1Code> mmCode = new MMMessageAttribute<AdditionalRightCode1Choice, AdditionalRight1Code>() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalRightCode1Choice.mmObject();
@@ -119,6 +119,16 @@ public class AdditionalRightCode1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AdditionalRight1Code.mmObject();
+		}
+
+		@Override
+		public AdditionalRight1Code getValue(AdditionalRightCode1Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(AdditionalRightCode1Choice obj, AdditionalRight1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -157,7 +167,7 @@ public class AdditionalRightCode1Choice {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<AdditionalRightCode1Choice, GenericIdentification13> mmProprietary = new MMMessageAttribute<AdditionalRightCode1Choice, GenericIdentification13>() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalRightCode1Choice.mmObject();
@@ -169,6 +179,16 @@ public class AdditionalRightCode1Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
+		}
+
+		@Override
+		public GenericIdentification13 getValue(AdditionalRightCode1Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(AdditionalRightCode1Choice obj, GenericIdentification13 value) {
+			obj.setProprietary(value);
 		}
 	};
 

@@ -109,7 +109,7 @@ public class Statement57 {
 	 * Statement35.mmDateOrPeriod}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDateOrPeriod = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<Statement57, Optional<DateAndPeriod1Choice>> mmDateOrPeriod = new MMMessageAssociationEnd<Statement57, Optional<DateAndPeriod1Choice>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement57.mmObject();
 			isDerived = false;
@@ -123,6 +123,16 @@ public class Statement57 {
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> DateAndPeriod1Choice.mmObject();
+		}
+
+		@Override
+		public Optional<DateAndPeriod1Choice> getValue(Statement57 obj) {
+			return obj.getDateOrPeriod();
+		}
+
+		@Override
+		public void setValue(Statement57 obj, Optional<DateAndPeriod1Choice> value) {
+			obj.setDateOrPeriod(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "HstrcData", required = true)
@@ -164,7 +174,7 @@ public class Statement57 {
 	 * Statement35.mmHistoricData}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmHistoricData = new MMMessageAttribute() {
+	public static final MMMessageAttribute<Statement57, TrueFalseIndicator> mmHistoricData = new MMMessageAttribute<Statement57, TrueFalseIndicator>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.Statement57.mmObject();
 			isDerived = false;
@@ -177,6 +187,16 @@ public class Statement57 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+
+		@Override
+		public TrueFalseIndicator getValue(Statement57 obj) {
+			return obj.getHistoricData();
+		}
+
+		@Override
+		public void setValue(Statement57 obj, TrueFalseIndicator value) {
+			obj.setHistoricData(value);
 		}
 	};
 

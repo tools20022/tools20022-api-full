@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.Balance;
 import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.AmountAndDirection31;
+import com.tools20022.repository.msg.BalanceDetails6;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -119,7 +121,7 @@ public class BalanceDetails5 {
 	 * definition} = "Balance type."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails5, BalanceType6Choice> mmType = new MMMessageAttribute<BalanceDetails5, BalanceType6Choice>() {
 		{
 			businessElementTrace_lazy = () -> Balance.mmType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails5.mmObject();
@@ -131,6 +133,16 @@ public class BalanceDetails5 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BalanceType6Choice.mmObject();
+		}
+
+		@Override
+		public BalanceType6Choice getValue(BalanceDetails5 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(BalanceDetails5 obj, BalanceType6Choice value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Urlsd")
@@ -168,7 +180,7 @@ public class BalanceDetails5 {
 	 * definition} = "Unrealised gain or loss."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmUnrealised = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails5, Optional<Unrealised1Code>> mmUnrealised = new MMMessageAttribute<BalanceDetails5, Optional<Unrealised1Code>>() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmUnrealisedType;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails5.mmObject();
@@ -180,6 +192,16 @@ public class BalanceDetails5 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Unrealised1Code.mmObject();
+		}
+
+		@Override
+		public Optional<Unrealised1Code> getValue(BalanceDetails5 obj) {
+			return obj.getUnrealised();
+		}
+
+		@Override
+		public void setValue(BalanceDetails5 obj, Optional<Unrealised1Code> value) {
+			obj.setUnrealised(value.orElse(null));
 		}
 	};
 	@XmlElement(name = "Amt", required = true)
@@ -217,7 +239,7 @@ public class BalanceDetails5 {
 	 * definition} = "Balance amount."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
+	public static final MMMessageAttribute<BalanceDetails5, AmountAndDirection31> mmAmount = new MMMessageAttribute<BalanceDetails5, AmountAndDirection31>() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails5.mmObject();
@@ -228,11 +250,21 @@ public class BalanceDetails5 {
 			definition = "Balance amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
+			complexType_lazy = () -> AmountAndDirection31.mmObject();
+		}
+
+		@Override
+		public AmountAndDirection31 getValue(BalanceDetails5 obj) {
+			return obj.getAmount();
+		}
+
+		@Override
+		public void setValue(BalanceDetails5 obj, AmountAndDirection31 value) {
+			obj.setAmount(value);
 		}
 	};
 	@XmlElement(name = "DtldBal")
-	protected List<com.tools20022.repository.msg.BalanceDetails6> detailedBalance;
+	protected List<BalanceDetails6> detailedBalance;
 	/**
 	 * 
 	 <p>
@@ -263,7 +295,7 @@ public class BalanceDetails5 {
 	 * definition} = "Detailed balance information."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmDetailedBalance = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<BalanceDetails5, List<BalanceDetails6>> mmDetailedBalance = new MMMessageAssociationEnd<BalanceDetails5, List<BalanceDetails6>>() {
 		{
 			businessComponentTrace_lazy = () -> Balance.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.BalanceDetails5.mmObject();
@@ -274,7 +306,17 @@ public class BalanceDetails5 {
 			definition = "Detailed balance information.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.BalanceDetails6.mmObject();
+			type_lazy = () -> BalanceDetails6.mmObject();
+		}
+
+		@Override
+		public List<BalanceDetails6> getValue(BalanceDetails5 obj) {
+			return obj.getDetailedBalance();
+		}
+
+		@Override
+		public void setValue(BalanceDetails5 obj, List<BalanceDetails6> value) {
+			obj.setDetailedBalance(value);
 		}
 	};
 
@@ -316,7 +358,7 @@ public class BalanceDetails5 {
 		return amount;
 	}
 
-	public BalanceDetails5 setAmount(com.tools20022.repository.msg.AmountAndDirection31 amount) {
+	public BalanceDetails5 setAmount(AmountAndDirection31 amount) {
 		this.amount = Objects.requireNonNull(amount);
 		return this;
 	}
@@ -325,7 +367,7 @@ public class BalanceDetails5 {
 		return detailedBalance == null ? detailedBalance = new ArrayList<>() : detailedBalance;
 	}
 
-	public BalanceDetails5 setDetailedBalance(List<com.tools20022.repository.msg.BalanceDetails6> detailedBalance) {
+	public BalanceDetails5 setDetailedBalance(List<BalanceDetails6> detailedBalance) {
 		this.detailedBalance = Objects.requireNonNull(detailedBalance);
 		return this;
 	}

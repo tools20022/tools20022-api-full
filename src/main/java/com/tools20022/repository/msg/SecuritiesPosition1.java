@@ -99,7 +99,7 @@ public class SecuritiesPosition1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<SecuritiesPosition1, Max4AlphaNumericText> mmType = new MMMessageAttribute<SecuritiesPosition1, Max4AlphaNumericText>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesPosition1.mmObject();
 			isDerived = false;
@@ -110,6 +110,16 @@ public class SecuritiesPosition1 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
+		}
+
+		@Override
+		public Max4AlphaNumericText getValue(SecuritiesPosition1 obj) {
+			return obj.getType();
+		}
+
+		@Override
+		public void setValue(SecuritiesPosition1 obj, Max4AlphaNumericText value) {
+			obj.setType(value);
 		}
 	};
 	@XmlElement(name = "Qty", required = true)
@@ -141,7 +151,7 @@ public class SecuritiesPosition1 {
 	 * definition} = "Specifies the quantity of a position or a balance."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<SecuritiesPosition1, SubBalanceQuantity2Choice> mmQuantity = new MMMessageAssociationEnd<SecuritiesPosition1, SubBalanceQuantity2Choice>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesPosition1.mmObject();
 			isDerived = false;
@@ -153,6 +163,16 @@ public class SecuritiesPosition1 {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SubBalanceQuantity2Choice.mmObject();
+		}
+
+		@Override
+		public SubBalanceQuantity2Choice getValue(SecuritiesPosition1 obj) {
+			return obj.getQuantity();
+		}
+
+		@Override
+		public void setValue(SecuritiesPosition1 obj, SubBalanceQuantity2Choice value) {
+			obj.setQuantity(value);
 		}
 	};
 

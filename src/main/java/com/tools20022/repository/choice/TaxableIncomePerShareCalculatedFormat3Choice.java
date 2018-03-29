@@ -122,7 +122,7 @@ public class TaxableIncomePerShareCalculatedFormat3Choice {
 	 * TaxableIncomePerShareCalculatedFormat1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<TaxableIncomePerShareCalculatedFormat3Choice, CorporateActionTaxableIncomePerShareCalculated1Code> mmCode = new MMMessageAttribute<TaxableIncomePerShareCalculatedFormat3Choice, CorporateActionTaxableIncomePerShareCalculated1Code>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice.mmObject();
@@ -135,6 +135,16 @@ public class TaxableIncomePerShareCalculatedFormat3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionTaxableIncomePerShareCalculated1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionTaxableIncomePerShareCalculated1Code getValue(TaxableIncomePerShareCalculatedFormat3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(TaxableIncomePerShareCalculatedFormat3Choice obj, CorporateActionTaxableIncomePerShareCalculated1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -178,7 +188,7 @@ public class TaxableIncomePerShareCalculatedFormat3Choice {
 	 * TaxableIncomePerShareCalculatedFormat1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<TaxableIncomePerShareCalculatedFormat3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<TaxableIncomePerShareCalculatedFormat3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmTaxableIncomePerShareCalculated;
 			componentContext_lazy = () -> com.tools20022.repository.choice.TaxableIncomePerShareCalculatedFormat3Choice.mmObject();
@@ -192,6 +202,16 @@ public class TaxableIncomePerShareCalculatedFormat3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(TaxableIncomePerShareCalculatedFormat3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(TaxableIncomePerShareCalculatedFormat3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

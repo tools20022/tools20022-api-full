@@ -23,6 +23,9 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.AgentCAMovementInstructionV01;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CashProceeds1;
+import com.tools20022.repository.msg.SecuritiesProceeds1;
+import com.tools20022.repository.msg.TaxVoucher1;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -79,7 +82,7 @@ public class ProceedsMovement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "CshPrcdsMvmntDtls")
-	protected List<com.tools20022.repository.msg.CashProceeds1> cashProceedsMovementDetails;
+	protected List<CashProceeds1> cashProceedsMovementDetails;
 	/**
 	 * 
 	 <p>
@@ -107,7 +110,7 @@ public class ProceedsMovement1 {
 	 * "Provides information about the movement of the cash proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmCashProceedsMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProceedsMovement1, List<CashProceeds1>> mmCashProceedsMovementDetails = new MMMessageAssociationEnd<ProceedsMovement1, List<CashProceeds1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProceedsMovement1.mmObject();
 			isDerived = false;
@@ -117,11 +120,21 @@ public class ProceedsMovement1 {
 			definition = "Provides information about the movement of the cash proceeds.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.CashProceeds1.mmObject();
+			type_lazy = () -> CashProceeds1.mmObject();
+		}
+
+		@Override
+		public List<CashProceeds1> getValue(ProceedsMovement1 obj) {
+			return obj.getCashProceedsMovementDetails();
+		}
+
+		@Override
+		public void setValue(ProceedsMovement1 obj, List<CashProceeds1> value) {
+			obj.setCashProceedsMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "SctiesPrcdsMvmntDtls")
-	protected List<com.tools20022.repository.msg.SecuritiesProceeds1> securitiesProceedsMovementDetails;
+	protected List<SecuritiesProceeds1> securitiesProceedsMovementDetails;
 	/**
 	 * 
 	 <p>
@@ -149,7 +162,7 @@ public class ProceedsMovement1 {
 	 * "Provides information about the movement of the securities proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmSecuritiesProceedsMovementDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProceedsMovement1, List<SecuritiesProceeds1>> mmSecuritiesProceedsMovementDetails = new MMMessageAssociationEnd<ProceedsMovement1, List<SecuritiesProceeds1>>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProceedsMovement1.mmObject();
 			isDerived = false;
@@ -159,7 +172,17 @@ public class ProceedsMovement1 {
 			definition = "Provides information about the movement of the securities proceeds.";
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.SecuritiesProceeds1.mmObject();
+			type_lazy = () -> SecuritiesProceeds1.mmObject();
+		}
+
+		@Override
+		public List<SecuritiesProceeds1> getValue(ProceedsMovement1 obj) {
+			return obj.getSecuritiesProceedsMovementDetails();
+		}
+
+		@Override
+		public void setValue(ProceedsMovement1 obj, List<SecuritiesProceeds1> value) {
+			obj.setSecuritiesProceedsMovementDetails(value);
 		}
 	};
 	@XmlElement(name = "TaxDtls")
@@ -195,7 +218,7 @@ public class ProceedsMovement1 {
 	 * definition} = "Provides information about the tax voucher."</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmTaxDetails = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<ProceedsMovement1, Optional<TaxVoucher1>> mmTaxDetails = new MMMessageAssociationEnd<ProceedsMovement1, Optional<TaxVoucher1>>() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferTax;
 			componentContext_lazy = () -> com.tools20022.repository.msg.ProceedsMovement1.mmObject();
@@ -207,7 +230,17 @@ public class ProceedsMovement1 {
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
-			type_lazy = () -> com.tools20022.repository.msg.TaxVoucher1.mmObject();
+			type_lazy = () -> TaxVoucher1.mmObject();
+		}
+
+		@Override
+		public Optional<TaxVoucher1> getValue(ProceedsMovement1 obj) {
+			return obj.getTaxDetails();
+		}
+
+		@Override
+		public void setValue(ProceedsMovement1 obj, Optional<TaxVoucher1> value) {
+			obj.setTaxDetails(value.orElse(null));
 		}
 	};
 
@@ -230,7 +263,7 @@ public class ProceedsMovement1 {
 		return cashProceedsMovementDetails == null ? cashProceedsMovementDetails = new ArrayList<>() : cashProceedsMovementDetails;
 	}
 
-	public ProceedsMovement1 setCashProceedsMovementDetails(List<com.tools20022.repository.msg.CashProceeds1> cashProceedsMovementDetails) {
+	public ProceedsMovement1 setCashProceedsMovementDetails(List<CashProceeds1> cashProceedsMovementDetails) {
 		this.cashProceedsMovementDetails = Objects.requireNonNull(cashProceedsMovementDetails);
 		return this;
 	}
@@ -239,7 +272,7 @@ public class ProceedsMovement1 {
 		return securitiesProceedsMovementDetails == null ? securitiesProceedsMovementDetails = new ArrayList<>() : securitiesProceedsMovementDetails;
 	}
 
-	public ProceedsMovement1 setSecuritiesProceedsMovementDetails(List<com.tools20022.repository.msg.SecuritiesProceeds1> securitiesProceedsMovementDetails) {
+	public ProceedsMovement1 setSecuritiesProceedsMovementDetails(List<SecuritiesProceeds1> securitiesProceedsMovementDetails) {
 		this.securitiesProceedsMovementDetails = Objects.requireNonNull(securitiesProceedsMovementDetails);
 		return this;
 	}
@@ -248,7 +281,7 @@ public class ProceedsMovement1 {
 		return taxDetails == null ? Optional.empty() : Optional.of(taxDetails);
 	}
 
-	public ProceedsMovement1 setTaxDetails(com.tools20022.repository.msg.TaxVoucher1 taxDetails) {
+	public ProceedsMovement1 setTaxDetails(TaxVoucher1 taxDetails) {
 		this.taxDetails = taxDetails;
 		return this;
 	}

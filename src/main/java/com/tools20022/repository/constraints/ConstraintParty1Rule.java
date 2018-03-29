@@ -51,11 +51,15 @@ public class ConstraintParty1Rule {
 	 */
 	public static final MMConstraint<SafekeepingPlaceAsCodeAndPartyIdentification> forSafekeepingPlaceAsCodeAndPartyIdentification = new MMConstraint<SafekeepingPlaceAsCodeAndPartyIdentification>() {
 		{
-			validator = ConstraintParty1Rule::checkSafekeepingPlaceAsCodeAndPartyIdentification;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party1Rule";
 			definition = "If PlaceSafekeeping is not SHHE, then Party is mandatory. If PlaceSafekeeping is SHHE, then Party is optional.";
 			owner_lazy = () -> SafekeepingPlaceAsCodeAndPartyIdentification.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SafekeepingPlaceAsCodeAndPartyIdentification obj) throws Exception {
+			checkSafekeepingPlaceAsCodeAndPartyIdentification(obj);
 		}
 	};
 

@@ -126,7 +126,7 @@ public class CorporateActionMandatoryVoluntary3Choice {
 	 * CorporateActionMandatoryVoluntary1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<CorporateActionMandatoryVoluntary3Choice, CorporateActionMandatoryVoluntary1Code> mmCode = new MMMessageAttribute<CorporateActionMandatoryVoluntary3Choice, CorporateActionMandatoryVoluntary1Code>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMandatoryVoluntary3Choice.mmObject();
@@ -140,6 +140,16 @@ public class CorporateActionMandatoryVoluntary3Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
+		}
+
+		@Override
+		public CorporateActionMandatoryVoluntary1Code getValue(CorporateActionMandatoryVoluntary3Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(CorporateActionMandatoryVoluntary3Choice obj, CorporateActionMandatoryVoluntary1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -184,7 +194,7 @@ public class CorporateActionMandatoryVoluntary3Choice {
 	 * CorporateActionMandatoryVoluntary1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
+	public static final MMMessageAssociationEnd<CorporateActionMandatoryVoluntary3Choice, GenericIdentification30> mmProprietary = new MMMessageAssociationEnd<CorporateActionMandatoryVoluntary3Choice, GenericIdentification30>() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmMandatoryVoluntaryEventType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMandatoryVoluntary3Choice.mmObject();
@@ -199,6 +209,16 @@ public class CorporateActionMandatoryVoluntary3Choice {
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> GenericIdentification30.mmObject();
+		}
+
+		@Override
+		public GenericIdentification30 getValue(CorporateActionMandatoryVoluntary3Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(CorporateActionMandatoryVoluntary3Choice obj, GenericIdentification30 value) {
+			obj.setProprietary(value);
 		}
 	};
 

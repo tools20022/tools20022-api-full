@@ -116,7 +116,7 @@ public class InsuranceType2Choice {
 	 * InsuranceType1Choice.mmCode}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InsuranceType2Choice, Insurance1Code> mmCode = new MMMessageAttribute<InsuranceType2Choice, Insurance1Code>() {
 		{
 			businessElementTrace_lazy = () -> InsuranceCertificate.mmInsuranceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InsuranceType2Choice.mmObject();
@@ -129,6 +129,16 @@ public class InsuranceType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Insurance1Code.mmObject();
+		}
+
+		@Override
+		public Insurance1Code getValue(InsuranceType2Choice obj) {
+			return obj.getCode();
+		}
+
+		@Override
+		public void setValue(InsuranceType2Choice obj, Insurance1Code value) {
+			obj.setCode(value);
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -172,7 +182,7 @@ public class InsuranceType2Choice {
 	 * InsuranceType1Choice.mmProprietary}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
+	public static final MMMessageAttribute<InsuranceType2Choice, GenericIdentification47> mmProprietary = new MMMessageAttribute<InsuranceType2Choice, GenericIdentification47>() {
 		{
 			businessElementTrace_lazy = () -> InsuranceCertificate.mmInsuranceType;
 			componentContext_lazy = () -> com.tools20022.repository.choice.InsuranceType2Choice.mmObject();
@@ -185,6 +195,16 @@ public class InsuranceType2Choice {
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
+		}
+
+		@Override
+		public GenericIdentification47 getValue(InsuranceType2Choice obj) {
+			return obj.getProprietary();
+		}
+
+		@Override
+		public void setValue(InsuranceType2Choice obj, GenericIdentification47 value) {
+			obj.setProprietary(value);
 		}
 	};
 

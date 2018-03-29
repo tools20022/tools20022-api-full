@@ -51,11 +51,15 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation1> forPaymentInstructionInformation1 = new MMConstraint<PaymentInstructionInformation1>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstructionInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			owner_lazy = () -> PaymentInstructionInformation1.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation1 obj) throws Exception {
+			checkPaymentInstructionInformation1(obj);
 		}
 	};
 	/**
@@ -85,12 +89,16 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation3> forPaymentInstructionInformation3 = new MMConstraint<PaymentInstructionInformation3>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstructionInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			owner_lazy = () -> PaymentInstructionInformation3.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation3 obj) throws Exception {
+			checkPaymentInstructionInformation3(obj);
 		}
 	};
 	/**
@@ -120,12 +128,16 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction6> forPaymentInstruction6 = new MMConstraint<PaymentInstruction6>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			owner_lazy = () -> PaymentInstruction6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction6 obj) throws Exception {
+			checkPaymentInstruction6(obj);
 		}
 	};
 	/**
@@ -163,13 +175,17 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction9> forPaymentInstruction9 = new MMConstraint<PaymentInstruction9>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstruction16);
 			owner_lazy = () -> PaymentInstruction9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction9 obj) throws Exception {
+			checkPaymentInstruction9(obj);
 		}
 	};
 	/**
@@ -195,11 +211,15 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation2> forPaymentInstructionInformation2 = new MMConstraint<PaymentInstructionInformation2>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstructionInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			owner_lazy = () -> PaymentInstructionInformation2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation2 obj) throws Exception {
+			checkPaymentInstructionInformation2(obj);
 		}
 	};
 	/**
@@ -229,12 +249,16 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstructionInformation4> forPaymentInstructionInformation4 = new MMConstraint<PaymentInstructionInformation4>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstructionInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			owner_lazy = () -> PaymentInstructionInformation4.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstructionInformation4 obj) throws Exception {
+			checkPaymentInstructionInformation4(obj);
 		}
 	};
 	/**
@@ -264,12 +288,16 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction7> forPaymentInstruction7 = new MMConstraint<PaymentInstruction7>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			owner_lazy = () -> PaymentInstruction7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction7 obj) throws Exception {
+			checkPaymentInstruction7(obj);
 		}
 	};
 	/**
@@ -307,13 +335,17 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction10> forPaymentInstruction10 = new MMConstraint<PaymentInstruction10>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstruction15);
 			owner_lazy = () -> PaymentInstruction10.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction10 obj) throws Exception {
+			checkPaymentInstruction10(obj);
 		}
 	};
 	/**
@@ -356,7 +388,6 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction16> forPaymentInstruction16 = new MMConstraint<PaymentInstruction16>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
@@ -364,6 +395,11 @@ public class ConstraintChargesAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstruction9;
 			owner_lazy = () -> PaymentInstruction16.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction16 obj) throws Exception {
+			checkPaymentInstruction16(obj);
 		}
 	};
 	/**
@@ -406,7 +442,6 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction15> forPaymentInstruction15 = new MMConstraint<PaymentInstruction15>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
@@ -414,6 +449,11 @@ public class ConstraintChargesAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstruction10;
 			owner_lazy = () -> PaymentInstruction15.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction15 obj) throws Exception {
+			checkPaymentInstruction15(obj);
 		}
 	};
 	/**
@@ -456,7 +496,6 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction18> forPaymentInstruction18 = new MMConstraint<PaymentInstruction18>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
@@ -464,6 +503,11 @@ public class ConstraintChargesAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstruction15;
 			owner_lazy = () -> PaymentInstruction18.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction18 obj) throws Exception {
+			checkPaymentInstruction18(obj);
 		}
 	};
 	/**
@@ -509,7 +553,6 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction20> forPaymentInstruction20 = new MMConstraint<PaymentInstruction20>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
@@ -517,6 +560,11 @@ public class ConstraintChargesAccountRule {
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstruction16;
 			owner_lazy = () -> PaymentInstruction20.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction20 obj) throws Exception {
+			checkPaymentInstruction20(obj);
 		}
 	};
 	/**
@@ -551,13 +599,17 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction21> forPaymentInstruction21 = new MMConstraint<PaymentInstruction21>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstruction18;
 			owner_lazy = () -> PaymentInstruction21.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction21 obj) throws Exception {
+			checkPaymentInstruction21(obj);
 		}
 	};
 	/**
@@ -592,13 +644,17 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction22> forPaymentInstruction22 = new MMConstraint<PaymentInstruction22>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction22.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction22 obj) throws Exception {
+			checkPaymentInstruction22(obj);
 		}
 	};
 	/**
@@ -633,13 +689,17 @@ public class ConstraintChargesAccountRule {
 	 */
 	public static final MMConstraint<PaymentInstruction24> forPaymentInstruction24 = new MMConstraint<PaymentInstruction24>() {
 		{
-			validator = ConstraintChargesAccountRule::checkPaymentInstruction24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountRule";
 			definition = "If ChargesAccountAgent is present, then ChargesAccount must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAccountRule.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesAccountAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+
+		@Override
+		public void executeValidator(PaymentInstruction24 obj) throws Exception {
+			checkPaymentInstruction24(obj);
 		}
 	};
 

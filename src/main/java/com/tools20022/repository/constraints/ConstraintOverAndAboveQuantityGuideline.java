@@ -52,11 +52,15 @@ public class ConstraintOverAndAboveQuantityGuideline {
 	 */
 	public static final MMConstraint<SecuritiesOption2> forSecuritiesOption2 = new MMConstraint<SecuritiesOption2>() {
 		{
-			validator = ConstraintOverAndAboveQuantityGuideline::checkSecuritiesOption2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverAndAboveQuantityGuideline";
 			definition = "OverAndAboveNormalEnsuredEntitlementQuantity defines the quantity to receive on top of the normal entitlement, not the combined quantity.";
 			owner_lazy = () -> SecuritiesOption2.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption2 obj) throws Exception {
+			checkSecuritiesOption2(obj);
 		}
 	};
 	/**
@@ -82,11 +86,15 @@ public class ConstraintOverAndAboveQuantityGuideline {
 	 */
 	public static final MMConstraint<SecuritiesOption7> forSecuritiesOption7 = new MMConstraint<SecuritiesOption7>() {
 		{
-			validator = ConstraintOverAndAboveQuantityGuideline::checkSecuritiesOption7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverAndAboveQuantityGuideline";
 			definition = "OverAndAboveNormalEnsuredEntitlementQuantity defines the quantity to receive on top of the normal entitlement, not the combined quantity.";
 			owner_lazy = () -> SecuritiesOption7.mmObject();
+		}
+
+		@Override
+		public void executeValidator(SecuritiesOption7 obj) throws Exception {
+			checkSecuritiesOption7(obj);
 		}
 	};
 

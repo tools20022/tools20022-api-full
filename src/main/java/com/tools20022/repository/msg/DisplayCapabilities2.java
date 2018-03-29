@@ -118,7 +118,7 @@ public class DisplayCapabilities2 {
 	 * DisplayCapabilities1.mmDisplayType}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmDisplayType = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayCapabilities2, UserInterface2Code> mmDisplayType = new MMMessageAttribute<DisplayCapabilities2, UserInterface2Code>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities2.mmObject();
 			isDerived = false;
@@ -130,6 +130,16 @@ public class DisplayCapabilities2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UserInterface2Code.mmObject();
+		}
+
+		@Override
+		public UserInterface2Code getValue(DisplayCapabilities2 obj) {
+			return obj.getDisplayType();
+		}
+
+		@Override
+		public void setValue(DisplayCapabilities2 obj, UserInterface2Code value) {
+			obj.setDisplayType(value);
 		}
 	};
 	@XmlElement(name = "NbOfLines", required = true)
@@ -174,7 +184,7 @@ public class DisplayCapabilities2 {
 	 * DisplayCapabilities1.mmNumberOfLines}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmNumberOfLines = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayCapabilities2, Number> mmNumberOfLines = new MMMessageAttribute<DisplayCapabilities2, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities2.mmObject();
 			isDerived = false;
@@ -187,6 +197,16 @@ public class DisplayCapabilities2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(DisplayCapabilities2 obj) {
+			return obj.getNumberOfLines();
+		}
+
+		@Override
+		public void setValue(DisplayCapabilities2 obj, Number value) {
+			obj.setNumberOfLines(value);
 		}
 	};
 	@XmlElement(name = "LineWidth", required = true)
@@ -231,7 +251,7 @@ public class DisplayCapabilities2 {
 	 * DisplayCapabilities1.mmLineWidth}</li>
 	 * </ul>
 	 */
-	public static final MMMessageAttribute mmLineWidth = new MMMessageAttribute() {
+	public static final MMMessageAttribute<DisplayCapabilities2, Number> mmLineWidth = new MMMessageAttribute<DisplayCapabilities2, Number>() {
 		{
 			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities2.mmObject();
 			isDerived = false;
@@ -244,6 +264,16 @@ public class DisplayCapabilities2 {
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
+		}
+
+		@Override
+		public Number getValue(DisplayCapabilities2 obj) {
+			return obj.getLineWidth();
+		}
+
+		@Override
+		public void setValue(DisplayCapabilities2 obj, Number value) {
+			obj.setLineWidth(value);
 		}
 	};
 
